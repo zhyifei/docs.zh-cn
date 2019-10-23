@@ -4,12 +4,12 @@ description: 了解如何使用 .NET 可移植性分析器工具，评估代码�
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 246c1d25a99e61d7e2f69f1b65ae3534d22571ba
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a3979d792b4cfd1f7949a3c8e14c6f856e9e3e21
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054005"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320118"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 可移植性分析器
 
@@ -29,14 +29,14 @@ ms.locfileid: "71054005"
 
 若要开始在 Visual Studio 中使用 .NET 可移植性分析器，必须先从 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) 下载扩展并进行安装。 它适用于 Visual Studio 2017 及更高版本。 可以通过 Visual Studio 中的“分析” > “可移植性分析器设置”对其进行配置，并选择目标平台，即选择 .NET 平台/版本，用于评估与当前程序集构建的平台/版本相比的可移植性差距   。
 
-![可移植性屏幕截图](./media/portability-analyzer/portability-screenshot.png)
+![可移植性分析器的屏幕截图。](./media/portability-analyzer/portability-screenshot.png)
 
 还可以使用 ApiPort 控制台应用程序，可从 [ApiPort 存储库](https://aka.ms/apiportdownload)进行下载。 可以使用 `listTargets` 命令选项以显示可用的目标列表，然后通过指定 `-t` 或 `--target` 命令选项来选择目标平台。 
 
 ### <a name="analyze-portability"></a>分析可移植性
 若要在 Visual Studio 中分析整个项目，请在“解决方案资源管理器”中右键单击该项目，然后选择“分析程序集可移植性”   。 也可以转到“分析”菜单，选择“分析程序集可移植性”。   在该位置选择项目的可执行文件或 DLL。
 
-![解决方案资源管理器中的可移植性分析器](./media/portability-analyzer/portability-solution-explorer.png)
+![解决方案资源管理器中的可移植性分析器的屏幕截图。](./media/portability-analyzer/portability-solution-explorer.png)
 
 还可以使用 [ApiPort 控制台应用](https://aka.ms/apiportdownload)。 
 
@@ -52,13 +52,13 @@ ms.locfileid: "71054005"
 
 #### <a name="portability-summary"></a>可移植性摘要 
 
-![可移植性摘要](./media/portability-analyzer/portabilitysummary.png)
+![可移植性摘要的屏幕截图。](./media/portability-analyzer/api-catalog-portablility-summary.png)
 
 报表的“可移植性摘要”部分显示运行中包含的每个程序集的可移植性百分比。 在上述示例中，`svcutil` 应用中使用的 71.24% 的 .NET Framework API 在 .NET Core + Platform Extensions 中可用。 如果针对多个程序集运行 .NET 可移植性分析器工具，则每个程序集在“可移植性摘要”报表中都应有一行。
 
 #### <a name="details"></a>详细信息
 
-![可移植性详细信息](./media/portability-analyzer/portabilitydetails.png)
+![可移植性详细信息的屏幕截图。](./media/portability-analyzer/api-catalog-portablility-details.png)
 
 报表的“详细信息”  部分列出了任意选定目标平台缺少的 API  。 
 
@@ -70,7 +70,7 @@ ms.locfileid: "71054005"
 
 #### <a name="missing-assemblies"></a>缺少程序集
 
-![可移植性详细信息](./media/portability-analyzer/missingassemblies.png)
+![缺少的程序集的屏幕截图。](./media/portability-analyzer/api-catalog-missing-assemblies.png)
 
 可以在报表中找到“缺少程序集”部分。 它告诉你，此程序集列表由分析的程序集引用，但不对其进行分析。 如果它是你自己拥有的程序集，请将其包含在 API 可移植性分析器运行过程中，以便你可以获得 API 级别的详细可移植性报表。 如果它是第三方库，则查找是否有支持自己的目标平台的最新版本。 如果有，请考虑转而使用最新版本。 最终，你希望此列表包含应用所依赖的所有第三方程序集，并确认其具有支持自己的目标平台的版本。  
 

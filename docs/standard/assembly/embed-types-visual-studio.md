@@ -5,12 +5,12 @@ ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 1f32bd840efa97b62097a2d051c25d519785b381
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1a37a3bcc3b1bc352d6a2f59691819e0b2403d3d
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972731"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523898"
 ---
 # <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>演练：在 Visual Studio 中嵌入托管程序集中的类型
 
@@ -323,8 +323,8 @@ ms.locfileid: "70972731"
 
 ## <a name="see-also"></a>请参阅
 
-- [/link（C# 编译器选项）](../../csharp/language-reference/compiler-options/link-compiler-option.md)
-- [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
+- [-link（C# 编译器选项）](../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
 - [C# 编程指南](../../csharp/programming-guide/index.md)
 - [编程概念 (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)
 - [使用程序集编程](program.md)

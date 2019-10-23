@@ -2,12 +2,12 @@
 title: 整体式应用程序
 description: 了解容器化整体式应用程序的核心概念。
 ms.date: 02/15/2019
-ms.openlocfilehash: a67015452fb1245ef4b24a8dc50a4b33d3f9f32e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1d4b54017e431bd9775bf2aee8c88f56e0489367
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673594"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394679"
 ---
 # <a name="monolithic-applications"></a>整体式应用程序
 
@@ -17,11 +17,11 @@ ms.locfileid: "68673594"
 
 遵循“一个容器在一个进程中做一件事”的原则，整体模式会产生冲突。 如图 4-1 中所示，可以在每个容器内添加多个组件/库或内部层。
 
-![整体式应用在单个进程或容器中具有其全部或大部分功能，并且它在内部层或库中进行组件化。](./media/image1.png)
+![显示通过克隆应用进行横向扩展的单一应用的示意图。](./media/monolithic-applications/monolithic-application-architecture-example.png)
 
 **图 4-1**。 整体式应用程序体系结构示例
 
-这种方法的缺点是应用程序增长时，需要将它进行缩放。 如果整个应用程序都已缩放，这就不是问题了。 但在大多数情况下，应用程序中只有一小部分是瓶颈，需要进行缩放，而其他组件使用较少。
+整体式应用在单个进程或容器中具有其全部或大部分功能，并且它在内部层或库中进行组件化。 这种方法的缺点是应用程序增长时，需要将它进行缩放。 如果整个应用程序都已缩放，这就不是问题了。 但在大多数情况下，应用程序中只有一小部分是瓶颈，需要进行缩放，而其他组件使用较少。
 
 在典型的电子商务示例中，可能需要缩放产品信息组件。 众多客户浏览产品，但并不购买它们。 使用购物车的顾客比使用付款管道的多。 较少的顾客会评论或查看购买记录。 而且你可能只需要少量的员工（在一个区域内）管理货物和营销活动。 通过缩放整体式设计，可多次部署所有代码。
 
@@ -31,7 +31,7 @@ ms.locfileid: "68673594"
 
 从基础结构的角度来看，每台服务器可以在同一台主机上运行多个应用程序，在资源使用率中具有可接受的效率比率，如图 4-2 所示。
 
-![单个主机可以在单独的容器中运行多个应用。](./media/image2.png)
+![显示一个在单独容器中具有多个应用的主机的示意图。](./media/monolithic-applications/host-with-multiple-apps-containers.png)
 
 **图 4-2**。 运行多个应用/容器的主机
 
@@ -43,9 +43,9 @@ ms.locfileid: "68673594"
 
 可以将多个 VM 部署为 Docker 主机，并为每个 VM 运行任意数量的容器。 然后，通过使用 Azure 负载均衡器（如图 4-3 所示），可以管理缩放。
 
-![整体式应用可以横向扩展到不同主机，其中每个主机都在容器中运行应用。](./media/image3.png)
+![显示单一应用横向扩展到不同主机的示意图。](./media/monolithic-applications/multiple-hosts-from-single-docker-container.png)
 
-**图 4-3**。 多个主机横向扩展单个 Docker 应用程序应用/容器
+**图 4-3**。 多个主机横向扩展单个 Docker 应用程序
 
 可以通过传统部署技术管理主机本身的部署。
 
@@ -71,7 +71,7 @@ ms.locfileid: "68673594"
 
 现在，如图 4-4 所示，在使用 Visual Studio 2017 时，Azure 应用服务中的容器支持使你能够在应用环境中包含任何所需内容。 如果在应用中添加了依赖项，由于在容器中运行它，因此可以在 Dockerfile 或 Docker 映像中包含这些依赖项。
 
-![要发布到 Azure 应用服务的 Visual Studio 向导视图，突出显示了容器注册表的选择器。](./media/image4.png)
+![显示容器注册表的“创建应用服务”对话框的屏幕截图。](./media/monolithic-applications/publish-azure-app-service-container.png)
 
 **图 4-4**。 从 Visual Studio 应用/容器将容器发布到 Azure 应用服务
 

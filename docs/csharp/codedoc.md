@@ -3,12 +3,12 @@ title: 使用 XML 注释来记录代码
 description: 了解如何使用 XML 文档注释来记录代码和在编译时生成 XML 文档文件。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: b6744921f4703f53a16b6bdadcfbf375c2fb3332
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 048546407dbf94f274dd8c9c39e83c103efd75e1
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104776"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521167"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>使用 XML 注释来记录代码
 
@@ -34,7 +34,7 @@ XML 文档注释是一种特殊注释，添加在任何用户定义的类型或�
 
 - 如果使用 Visual Studio 开发应用程序，右键单击项目并选择“属性”  。 在属性对话框中，选择“生成”  选项卡，然后选中“XML 文档文件”  。 还可以更改编译器写入文件的位置。
 
-- 如果是从命令行编译 .NET Framework 应用程序，编译时请添加 [/doc 编译器选项](language-reference/compiler-options/doc-compiler-option.md)。  
+- 如果是从命令行编译 .NET Framework 应用程序，编译时请添加 [-doc 编译器选项](language-reference/compiler-options/doc-compiler-option.md)。  
 
 XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 例如:
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 9e26fb36b77e38c81273ccda370a203dd3388e5c
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 9efd7a7581a1e8bd2cb5f544edd1b4c965aa1866
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291691"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395940"
 ---
 # <a name="systemiopipelines-in-net"></a>.NET 中的 System.IO.Pipelines
 
@@ -23,6 +23,7 @@ ms.locfileid: "72291691"
 <a name="solve"></a>
 
 ## <a name="what-problem-does-systemiopipelines-solve"></a>System.IO.Pipelines 解决什么问题
+
 <!-- corner case doesn't MT (machine translate)   -->
 分析流数据的应用由样板代码组成，后者由许多专门且不寻常的代码流组成。 样板代码和特殊情况代码很复杂且难以进行维护。
 
@@ -38,7 +39,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 {
     var buffer = new byte[1024];
     await stream.ReadAsync(buffer, 0, buffer.Length);
-    
+
     // Process a single line from the buffer
     ProcessLine(buffer);
 }
@@ -55,7 +56,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 
 * 缓冲传入的数据，直到找到新行。
 * 分析缓冲区中返回的所有行。
-* 该行可能大于 1KB（1024 字节）。 找到需要调整输入缓冲区大小的代码（一行完整的代码）。
+* 该行可能大于 1KB（1024 字节）。 此代码需要调整输入缓冲区的大小，直到找到分隔符后，才能在缓冲区内容纳完整行。
 
   * 如果调整缓冲区的大小，当输入中出现较长的行时，将生成更多缓冲区副本。
   * 压缩用于读取行的缓冲区，以减少空余。
@@ -97,7 +98,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 * 返回包含两条重要信息的 <xref:System.IO.Pipelines.ReadResult>：
 
   * 以 `ReadOnlySequence<byte>` 形式读取的数据。
-  * 布尔值 `IsCompleted`，指示是否已到达数据结尾 (EOF)。 
+  * 布尔值 `IsCompleted`，指示是否已到达数据结尾 (EOF)。
 
 找到行尾 (EOL) 分隔符并分析该行后：
 
@@ -304,7 +305,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 ## <a name="pipewriter"></a>PipeWriter
 
-<xref:System.IO.Pipelines.PipeWriter> 管理用于代表调用方写入的缓冲区。 `PipeWriter` 实现[`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter`1)。 `IBufferWriter<byte>` 使得无需额外的缓冲区副本就可以访问缓冲区来执行写入操作。
+<xref:System.IO.Pipelines.PipeWriter> 管理用于代表调用方写入的缓冲区。 `PipeWriter` 实现[`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter%601)。 `IBufferWriter<byte>` 使得无需额外的缓冲区副本就可以访问缓冲区来执行写入操作。
 
 [!code-csharp[MyPipeWriter](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet)]
 

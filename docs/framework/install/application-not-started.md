@@ -4,12 +4,12 @@ description: 了解在出现“无法启动此应用程序”对话框时如何�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/05/2019
-ms.openlocfilehash: 2534979e8dea886c2d7298c57e12b66d7a962c69
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8fa8381f1b05445f259b4e4af5cc17fa487b2ce0
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71401280"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319169"
 ---
 # <a name="troubleshooting-a-this-application-could-not-be-started-error-message"></a>排查“无法启动此应用程序”错误消息
 
@@ -37,7 +37,7 @@ ms.locfileid: "71401280"
 
 1. 如果应用程序成功运行，请选择“完成”  按钮。 否则，请选择“下一步”  按钮。
 
-1. 如果选择了“下一步”  按钮，则 .NET Framework Repair Tool 会显示如下所示的对话框。 选择“完成”  按钮，将诊断信息发送给 Microsoft。
+1. 如果选择了“下一步”  按钮，则 .NET Framework 修复工具会显示如下所示的对话框。 选择“完成”  按钮，将诊断信息发送给 Microsoft。
 
    ![无法解决问题](media/application-not-started/repair-tool-no-resolution.png)
 
@@ -53,7 +53,7 @@ ms.locfileid: "71401280"
    |Windows Vista SP2|[.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=48130)|
 
    > [!NOTE]
-   >  .NET Framework 4.8 预安装在 Windows 10 2019 年 5 月更新上。
+   > .NET Framework 4.8 预安装在 Windows 10 2019 年 5 月更新上。
 
 1. 尝试启动应用程序。
 

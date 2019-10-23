@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a3e5f8dd9cfac809aafc2533463390cd5a64e0d6
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58759867"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395447"
 ---
 # <a name="how-to-compare-strings-in-c"></a>如何：比较 C\# 中的字符串
 
@@ -29,19 +29,19 @@ ms.locfileid: "58759867"
 
 ## <a name="default-ordinal-comparisons"></a>默认的序号比较
 
-最常见的操作：
+默认情况下，最常见的操作：
 
 - <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
 - <xref:System.String.Equals%2A?displayProperty=nameWithType>
-- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 和 <xref:System.String.op_Inequality%2A?displayProperty=nameWithType>（即，分别为[相等运算符 `==` 和 `!=`](../language-reference/operators/equality-operators.md#string-equality)）
 
-使用序号比较（一种区分大小写的比较）并使用当前区域性。 结果如下例所示：
+执行区分大小写的序号比较，并在需要的情况下使用当前区域性。 下面的示例演示了这一操作：
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 
-默认序号比较在比较字符串时不会考虑语义规则。 它会比较两个字符串中每个 <xref:System.Char> 对象的二进制值。 因此，默认的序号比较也是区分大小写的。 
+默认序号比较在比较字符串时不会考虑语义规则。 它会比较两个字符串中每个 <xref:System.Char> 对象的二进制值。 因此，默认的序号比较也是区分大小写的。
 
-请注意，使用 <xref:System.String.Equals%2A?displayProperty=nameWithType> 和 <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 的相等性测试不同于使用 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 和 <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> 方法的字符串比较。 虽然相等性测试执行区分大小写的序号比较，但比较方法使用当前区域性执行区分大小写、区分区域性的比较。 由于默认比较方法通常执行不同类型的比较，因此建议始终调用显式指定要执行的比较类型的重载，确保代码意图明确。
+请注意，使用 <xref:System.String.Equals%2A?displayProperty=nameWithType> 以及 `==` 和 `!=` 运算符的相等性测试不同于使用 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 和 <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> 方法的字符串比较。 虽然相等性测试执行区分大小写的序号比较，但比较方法使用当前区域性执行区分大小写、区分区域性的比较。 由于默认比较方法通常执行不同类型的比较，因此建议始终调用显式指定要执行的比较类型的重载，确保代码意图明确。
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>不区分大小写的序号比较
 
@@ -122,7 +122,7 @@ ms.locfileid: "58759867"
 
 ## <a name="reference-equality-and-string-interning"></a>引用相等性和字符串集中
 
-这些示例都没有使用 <xref:System.Object.ReferenceEquals%2A>。 此方法确定两个字符串是否为相同的对象。 这可能会在字符串比较中产生不一致的结果。 以下示例演示了 C# 中的字符串集中功能。 如果程序声明了 2 个或多个相同的字符串变量，则编译器会将其存储在同一位置。 通过调用 <xref:System.Object.ReferenceEquals%2A> 方法，可以看到这两个字符串实际上引用的是内存中的同一对象。 使用 <xref:System.String.Copy%2A?displayProperty=nameWithType> 方法可避免集中。 创建副本后，两个字符串存储在不同位置（即使它们具有相同的值）。 运行下列示例以显示字符串 `a` 和 `b` 是集中的，也就是说它们共享相同的存储。 字符串 `a` 和 `c` 不是。
+这些示例都没有使用 <xref:System.Object.ReferenceEquals%2A>。 此方法确定两个字符串是否为相同的对象。 这可能会在字符串比较中产生不一致的结果。 以下示例演示了 C# 中的字符串集中功能  。 如果程序声明了 2 个或多个相同的字符串变量，则编译器会将其存储在同一位置。 通过调用 <xref:System.Object.ReferenceEquals%2A> 方法，可以看到这两个字符串实际上引用的是内存中的同一对象。 使用 <xref:System.String.Copy%2A?displayProperty=nameWithType> 方法可避免集中。 创建副本后，两个字符串存储在不同位置（即使它们具有相同的值）。 运行下列示例以显示字符串 `a` 和 `b` 是集中的，也就是说它们共享相同的存储  。 字符串 `a` 和 `c` 不是。
 
 [!code-csharp-interactive[Demonstrating string interning](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#9)]
 

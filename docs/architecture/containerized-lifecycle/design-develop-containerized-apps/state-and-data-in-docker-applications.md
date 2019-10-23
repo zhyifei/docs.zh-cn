@@ -2,12 +2,12 @@
 title: Docker 应用程序中的状态和数据
 description: 了解在容器化应用程序中用于保存状态的可用选项。
 ms.date: 02/15/2019
-ms.openlocfilehash: bc171a419632f2ac61c7c9bf6b201b84e0691c3a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b2368efb0eff2bdce48b77b2addcc4de89822c74
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673554"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394647"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 应用程序中的状态和数据
 
@@ -47,7 +47,7 @@ ms.locfileid: "68673554"
 
 如图 4-5 所示，常规 Docker 卷可以存储在容器本身之外，但是在主机服务器或 VM 的物理边界内。 但是，Docker 容器不能从一个主机服务器或 VM 访问另一个主机服务器或 VM 的卷。 换而言之，如果使用这些卷，那么不能管理在不同 Docker 主机上运行的容器之间共享的数据，尽管可通过支持远程主机的卷驱动程序来实现这一功能。
 
-![卷可在容器之间共享，但仅限于同一台主机，除非使用支持远程主机的远程驱动程序。 ](./media/image5.png)
+![显示存储在容器外部的 Docker 卷的示意图。](./media/state-and-data-in-docker-applications/container-based-application-external-data-sources.png)
 
 **图 4-5**。 基于容器的应用程序的卷和外部数据源
 
@@ -61,7 +61,7 @@ Azure 存储。  业务数据通常需要放在外部资源或数据库中，如
 
 - 文件存储使用标准 SMB 协议为旧版应用程序提供共享存储。 Azure 虚拟机和云服务可以通过装载的共享在应用程序组件之间共享文件数据。 本地应用程序可以通过文件服务 REST API 访问共享中的文件数据。
 
-- 表存储可存储结构化数据集。 表存储是 NoSQL 键属性数据存储，它允许快速开发和快速访问大量数据。
+- 表存储存储结构化数据集。 表存储是 NoSQL 键属性数据存储，它允许快速开发和快速访问大量数据。
 
 关系数据库和 NoSQL 数据库。  外部数据库有很多选择，包括关系数据库（如 SQL Server、PostgreSQL、Oracle）或 NoSQL 数据库（如 Azure Cosmos DB、MongoDB）等。本指南不会对这些数据库加以解释，因为它们完全是不同的主题。
 

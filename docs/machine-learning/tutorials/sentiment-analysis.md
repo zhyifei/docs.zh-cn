@@ -4,12 +4,12 @@ description: 本教程演示如何创建 .NET Core 控制台应用程序，该�
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: c6b9d51a8ab91b4365c909993211f11ab3436808
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: e241ae8c0d39e6573b40c69611985f7095114629
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700863"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320147"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>教程：在 ML.NET 中使用二元分类分析网站评论的情绪
 
@@ -61,26 +61,21 @@ ms.locfileid: "71700863"
 
     [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#AddUsings "Add necessary usings")]
 
-2. 创建两个全局字段来存储最近下载的数据集文件路径和已保存的模型文件路径：
-
-    - `_dataPath` 具有用于定型模型的数据集路径。
-    - `_modelPath` 具有在其中保存定型模型的路径。
-
-3. 将以下代码添加到 `Main` 方法正上方的行中，以指定路径：
+1. 将以下代码添加到 `Main` 方法正上方的行中，以创建字段来保存最近下载的数据集文件路径：
 
     [!code-csharp[Declare global variables](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
-4. 接下来，为输入数据和预测结果创建类。 向项目添加一个新类：
+1. 接下来，为输入数据和预测结果创建类。 向项目添加一个新类：
 
     - 在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新项”  。
 
     - 在“添加新项”  对话框中，选择“类”  并将“名称”  字段更改为“SentimentData.cs”  。 然后，选择“添加”  按钮。
 
-5. “SentimentData.cs”  文件随即在代码编辑器中打开。 将下面的 `using` 语句添加到 SentimentData.cs  的顶部：
+1. “SentimentData.cs”  文件随即在代码编辑器中打开。 将下面的 `using` 语句添加到 SentimentData.cs  的顶部：
 
     [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#AddUsings "Add necessary usings")]
 
-6. 删除现有类定义并向“SentimentData.cs”  文件添加以下代码，其中有两个类 `SentimentData` 和 `SentimentPrediction`：
+1. 删除现有类定义并向“SentimentData.cs”  文件添加以下代码，其中有两个类 `SentimentData` 和 `SentimentPrediction`：
 
     [!code-csharp[DeclareTypes](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#DeclareTypes "Declare data record types")]
 

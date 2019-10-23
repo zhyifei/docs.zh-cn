@@ -2,18 +2,18 @@
 title: 将容器作为 DevOps 协作的基础
 description: 了解容器在简化 DevOps 方面的关键作用。
 ms.date: 02/15/2019
-ms.openlocfilehash: 37faf00f270414df363f36894317f31f81a2937e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 16cccef0545f0da14128e31dc8f7ad78369cf23a
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672764"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394819"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>将容器作为 DevOps 协作的基础
 
 根据容器和 Docker 技术的本质，开发人员可以轻松地与 IT 操作和生产环境共享他们的软件和依赖项，同时消除典型的“适用于计算机”的借口。 容器可解决不同环境之间的应用程序冲突。 容器和 Docker 间接地将开发人员和 IT 运营更紧密地结合在一起，使他们更能高效地协作。 采用容器工作流可为许多客户提供他们所寻求的 DevOps 连续性，但之前必须通过更复杂的配置来实现发布和生成管道。 容器可简化 DevOps 中的生成/测试/部署管道。
 
-![Docker 为开发人员和架构师在开发/设计工作负载和运行/监视/管理工作负载中的 IT 运营方面提供了便利。](./media/image1.png)
+![显示 Docker 应用生命周期的所有权的关系图。](./media/containers-foundation-for-devops-collaboration/persona-workloads-docker-container-lifecycle.png)
 
 **图 2-1.** 容器化 Docker 应用程序生命周期中每个“角色”的主要工作负载
 
@@ -57,7 +57,7 @@ DevOps 支柱使用代码存储库中提供的 Dockerfile 定义构建 - 持续�
 
 图 2-2 详细介绍了 Docker 应用程序生命周期工作流，在本示例中，重点介绍了特定 DevOps 活动和资产。
 
-![下图显示了 DevOps 的“外部循环”。 将代码推送到存储库时，将启动 CI 管道，然后启动 CD 管道，在该管道中部署应用程序。 从已部署的应用程序中收集的指标将反馈到在其中发生“内部循环”的开发工作负载中，因此开发团队拥有实际数据来响应用户和业务需求。](./media/image2.png)
+![显示 Docker 应用的一般端到端生命周期的关系图。](./media/containers-foundation-for-devops-collaboration/generic-end-to-enddpcker-app-life-cycle.png)
 
 **图 2-2。** Docker 容器化应用程序生命周期的高级工作流
 

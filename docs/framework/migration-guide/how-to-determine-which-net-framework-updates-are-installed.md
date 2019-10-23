@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4c505c679c46494f7dc2534c2bbe9f50243a7dd
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1c69d4bb370087dddafbfed41cbfb1fef229677c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790062"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318951"
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>如何：确定安装了哪些 .NET Framework 安全更新和修补程序
 
@@ -29,7 +29,7 @@ ms.locfileid: "70790062"
 
 安装在计算机上的各个版本 .NET Framework 的已安装安全更新和修补程序都列在 Windows 注册表中。 可以使用注册表编辑器 (regedit.exe) 程序查看此信息  。
 
-1. 打开程序 **regedit.exe**。 在 Windows 8 和更高版本中，右键单击“开始”![Windows 徽标](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo")，然后选择“运行”   。 在“打开”对话框中，输入“regedit.exe”并选择“确定”    。
+1. 打开程序 **regedit.exe**。 在 Windows 8 和更高版本中，右键单击“开始”![Windows 徽标键徽标的屏幕截图。](./media/how-to-determine-which-net-framework-updates-are-installed/windows-keyboard-logo.png "Windowskeyboardlogo")，然后选择“运行”   。 在“打开”对话框中，输入“regedit.exe”并选择“确定”    。
 
 2. 在注册表编辑器中，打开以下子项：
 

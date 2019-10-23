@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: 586e50818fc8ceaad5ca1925c0636b31015d81d4
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: d5e087647adced0b41cc6e42fcf534b274c70592
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925374"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395153"
 ---
 # <a name="virtual-c-reference"></a>virtual（C# 参考）
 
@@ -34,11 +34,11 @@ public virtual double Area()
 
 默认情况下，方法是非虚拟的。 不能替代非虚方法。
 
-`virtual` 修饰符不能与 `static`、`abstract`、`private` 或 `override` 修饰符一起使用。 以下示例显示了虚拟属性：
+`virtual` 修饰符不能与 `static`、`abstract``private` 或 `override` 修饰符一起使用。 以下示例显示了虚拟属性：
 
 [!code-csharp[csrefKeywordsModifiers#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#26)]
 
-除声明和调用语法不同外，虚拟属性的行为与抽象方法相似。
+除声明和调用语法不同外，虚拟属性的行为与虚拟方法相似。
 
 - 在静态属性上使用 `virtual` 修饰符是错误的。
 
@@ -48,7 +48,7 @@ public virtual double Area()
 
 在该示例中，`Shape` 类包含 `x`、`y` 两个坐标和 `Area()` 虚拟方法。 不同的形状类（如 `Circle`、`Cylinder` 和 `Sphere`）继承 `Shape` 类，并为每个图形计算表面积。 每个派生类都有各自的 `Area()` 替代实现。
 
-请注意，继承的类 `Circle`、`Sphere` 和 `Cylinder` 均使用初始化基类的构造函数，如下面的声明中所示。
+请注意，继承的类 `Circle``Sphere` 和 `Cylinder` 均使用初始化基类的构造函数，如下面的声明中所示。
 
 ```csharp
 public Cylinder(double r, double h): base(r, h) {}

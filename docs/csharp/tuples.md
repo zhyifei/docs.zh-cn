@@ -3,12 +3,12 @@ title: 元组类型 - C# 指南
 description: 了解 C# 中的未命名元组类型和命名元组类型
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 00330af38044b07128551b7dc74c7d831c7a5626
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 7e5df8c20dbbddbe84a56883a6d2a027f32d8ff7
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105896"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319761"
 ---
 # <a name="c-tuple-types"></a>C# 元组类型
 
@@ -282,6 +282,20 @@ if (("Althea", "Goodwin") == p)
 ```
 
 `Deconstruct` 方法无法将 `Person` 对象 `p` 转换为包含两个字符串的元组，但它在相等测试上下文中不适用。
+
+## <a name="tuples-as-out-parameters"></a>元组作为 out 参数
+
+元组自身可用作 out 参数  。 不要与前面提到的[析构函数](#deconstruction)部分中的任何多义性混淆。 在方法调用中，只需描述元组的形状：
+
+[!code-csharp[TuplesAsOutParameters](~/samples/snippets/csharp/tuples/program.cs#01_TupleAsOutVariable "Tuples as out parameters")]
+
+另外，还可以使用 [unnamed  ](#named-and-unnamed-tuples) 元组，并将其字段作为 `Item1` 和 `Item2` 引用：
+
+```csharp
+dict.TryGetValue(2, out (int, string) pair);
+// ...
+Console.WriteLine($"{pair.Item1}: {pair.Item2}");
+```
 
 ## <a name="conclusion"></a>结束语 
 

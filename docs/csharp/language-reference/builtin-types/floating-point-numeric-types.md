@@ -1,7 +1,7 @@
 ---
 title: 浮点数值类型 - C# 引用
 description: 内置 C# 浮点类型概述
-ms.date: 06/30/2019
+ms.date: 10/18/2019
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 17ae154780679dd1f42f43f1ec345cdc722815d3
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: fa6cbb869d90113414cc6f8ffe231386c3596b1d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002190"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579374"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>浮点数值类型（C# 引用）
 
-“浮点类型”是“简单类型”的子集，可以使用[文本](#floating-point-literals)**进行初始化**   。 所有浮点类型也是值类型。 所有浮点数值类型都支持[算术](../operators/arithmetic-operators.md)、[比较和相等](../operators/equality-operators.md)运算符。
+“浮点类型”是“简单类型”的子集，可以使用[文本](#real-literals)**进行初始化**   。 所有浮点类型也是值类型。 所有浮点数值类型都支持[算术](../operators/arithmetic-operators.md)、[比较](../operators/comparison-operators.md)和[相等](../operators/equality-operators.md)运算符。
 
 ## <a name="characteristics-of-the-floating-point-types"></a>浮点类型的特征
 
@@ -52,8 +52,8 @@ System.Double b = 12.3;
 
 可以在表达式中混合使用[整型](integral-numeric-types.md)类型和浮点类型。 在这种情况下，整数类型将转换为浮点类型。 根据以下规则对表达式求值：
 
-- 如果其中一个浮点类型是 `double`，该表达式在关系比较或相等比较中求值类型为 `double` 或 [bool](../keywords/bool.md)。
-- 如果表达式中没有 `double` 类型，则表达式在关系比较或相等比较中求值类型为 `float` 或 [bool](../keywords/bool.md)。
+- 如果其中一个浮点类型是 `double`，该表达式在关系比较和相等比较中求值类型为 `double` 或 [bool](../keywords/bool.md)。
+- 如果表达式中没有 `double` 类型，则表达式在关系比较和相等比较中求值类型为 `float` 或 [bool](../keywords/bool.md)。
 
 浮点表达式可以包含下列值集：
 
@@ -66,23 +66,41 @@ System.Double b = 12.3;
 
 可以使用[标准数字格式字符串](../../../standard/base-types/standard-numeric-format-strings.md)或[自定义数字格式字符串](../../../standard/base-types/custom-numeric-format-strings.md)设置浮点值的格式。
 
-## <a name="floating-point-literals"></a>浮点文本
+## <a name="real-literals"></a>真实文本
 
-默认情况下，赋值运算符右侧的浮点数值文本被视为 `double`。 后缀可用于将浮点或整型文本转换为特定类型：
+真实文本的类型由其后缀确定，如下所示：
 
-- `d` 或 `D` 后缀用于将文本转换为 `double`。
-- `f` 或 `F` 后缀用于将文本转换为 `float`。
-- `m` 或 `M` 后缀用于将文本转换为 `decimal`。
+- 不带后缀的文本或带有 `d` 或 `D` 后缀的文本的类型为 `double`
+- 带有 `f` 或 `F` 后缀的文本的类型为 `float`
+- 带有 `m` 或 `M` 后缀的文本的类型为 `decimal`
 
-下面的示例显示了每种后缀：
+下面的代码演示每种类型的示例：
 
 ```csharp
 double d = 3D;
 d = 4d;
-float f = 3.5F;
+d = 3.934_001;
+
+float f = 3_000.5F;
 f = 5.4f;
-decimal myMoney = 300.5m;
+
+decimal myMoney = 3_000.5m;
 myMoney = 400.75M;
+```
+
+前面的示例还演示了如何将 `_` 用作*数字分隔符*（从 C# 7.0 开始支持）。 可以将数字分隔符用于所有类型的数字文本。
+
+还可以使用科学记数法，即指定真实文本的指数部分，如以下示例所示：
+
+```csharp-interactive
+double d = 0.42e2;
+Console.WriteLine(d);  // output 42;
+
+float f = 134.45E-2f;
+Console.WriteLine(f);  // output: 1.3445
+
+decimal m = 1.5E6m;
+Console.WriteLine(m);  // output: 1500000
 ```
 
 ## <a name="conversions"></a>转换
@@ -95,6 +113,14 @@ myMoney = 400.75M;
 
 有关显式数值转换的详细信息，请参阅[显式数值转换表](../keywords/explicit-numeric-conversions-table.md)。
 
+## <a name="c-language-specification"></a>C# 语言规范
+
+有关更多信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的以下部分：
+
+- [浮点类型](~/_csharplang/spec/types.md#floating-point-types)
+- [十进制类型](~/_csharplang/spec/types.md#the-decimal-type)
+- [真实文本](~/_csharplang/spec/lexical-structure.md#real-literals)
+
 ## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
@@ -102,8 +128,6 @@ myMoney = 400.75M;
 - [内置类型表](../keywords/built-in-types-table.md)
 - [.NET 中的数字](../../../standard/numerics.md)
 - [强制转换和类型转换](../../programming-guide/types/casting-and-type-conversions.md)
-- [隐式数值转换表](../keywords/implicit-numeric-conversions-table.md)
-- [显式数值转换表](../keywords/explicit-numeric-conversions-table.md)
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>
 - [设置数值结果表的格式](../keywords/formatting-numeric-results-table.md)
-- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)
+- [标准数字格式字符串](../../../standard/base-types/standard-numeric-format-strings.md)

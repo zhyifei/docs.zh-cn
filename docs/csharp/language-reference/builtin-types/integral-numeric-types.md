@@ -1,7 +1,7 @@
 ---
 title: 整型数值类型 - C# 参考
 description: 了解每种整型数值类型的范围、存储大小和用途。
-ms.date: 06/25/2019
+ms.date: 10/18/2019
 f1_keywords:
 - byte
 - byte_CSharpKeyword
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: dfb1298abaff0cfe8eae7536f94511a30012a4a9
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 3d4f3164d67a000123417619f3be6be455d5ab87
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68236080"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579186"
 ---
 # <a name="integral-numeric-types--c-reference"></a>整型数值类型（C# 参考）
 
-“整型数值类型”是“简单类型”的子集，可以使用[文本](#integral-literals)**进行初始化**   。 所有整型类型同时也是值类型。 所有整型数值类型都支持[算术](../operators/arithmetic-operators.md)、[位逻辑](../operators/bitwise-and-shift-operators.md)、[比较和相等](../operators/equality-operators.md)运算符。
+“整型数值类型”是“简单类型”的子集，可以使用[文本](#integer-literals)**进行初始化**   。 所有整型类型同时也是值类型。 所有整型数值类型都支持[算术](../operators/arithmetic-operators.md)、[位逻辑](../operators/bitwise-and-shift-operators.md)、[比较](../operators/comparison-operators.md)和[相等](../operators/equality-operators.md)运算符。
 
 ## <a name="characteristics-of-the-integral-types"></a>整型类型的特征
 
@@ -49,7 +49,7 @@ C# 支持以下预定义整型类型：
 
 |C# 类型/关键字|范围|大小|.NET 类型|
 |----------|-----------|----------|-------------|
-|`sbyte`|-128 到 127|有符号的 8 位整数|<xref:System.SByte?displayProperty=nameWithType>|
+|`sbyte`|-128 到 127|8 位带符号整数|<xref:System.SByte?displayProperty=nameWithType>|
 |`byte`|0 到 255|无符号的 8 位整数|<xref:System.Byte?displayProperty=nameWithType>|
 |`short`|-32,768 到 32,767|有符号 16 位整数|<xref:System.Int16?displayProperty=nameWithType>|
 |`ushort`|0 到 65,535|无符号 16 位整数|<xref:System.UInt16?displayProperty=nameWithType>|
@@ -69,9 +69,15 @@ System.Int32 b = 123;
 
 <xref:System.Numerics.BigInteger?displayProperty=nameWithType> 结构用于表示没有上限或下限的带符号整数。
 
-## <a name="integral-literals"></a>整型文本
+## <a name="integer-literals"></a>整数文本
 
-整型文本可以指定为十进制文本、十六进制文本或二进制文本    。 每种文本的示例如下所示：
+整数文本可以是
+
+-  十进制：不使用任何前缀
+-  十六进制：使用 `0x` 或 `0X` 前缀
+-  二进制：使用 `0b` 或 `0B` 前缀（在 C# 7.0 和更高版本中可用）
+
+下面的代码演示每种类型的示例：
 
 ```csharp
 var decimalLiteral = 42;
@@ -79,38 +85,35 @@ var hexLiteral = 0x2A;
 var binaryLiteral = 0b_0010_1010;
 ```
 
-十进制文本不需要任何前缀。 `x` 或 `X` 前缀表示十六进制文本  。 `b` 或 `B` 前缀表示二进制文本  。 `binaryLiteral` 的声明演示将 `_` 用作数字分隔符  。 数字分隔符可以与所有数值文本一起使用。 C# 7.0 及以后版本均支持二进制文本和数字分隔符 `_`。
+前面的示例还演示了如何将 `_` 用作数字分隔符  （从 C# 7.0 开始提供支持）。 可以将数字分隔符用于所有类型的数字文本。
 
-### <a name="literal-suffixes"></a>文本后缀
+整数文本的类型由其后缀确定，如下所示：
 
-`l` 或 `L` 后缀指定整型文本应为 `long` 类型。 `ul` 或 `UL` 后缀指定 `ulong` 类型。 如果对大于 9,223,372,036,854,775,807（`long` 的最大值）的文本使用 `L` 后缀，则该值将转换为 `ulong` 类型。 如果整型文本表示的值超出了 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>，就会出现编译器错误 [CS1021](../../misc/cs1021.md)。 
+- 如果文本没有后缀，则其类型为以下类型中可表示其值的第一个类型：`int`、`uint`、`long`、`ulong`。
+- 如果文本以 `U` 或 `u` 为后缀，则其类型为以下类型中可表示其值的第一个类型：`uint`、`ulong`。
+- 如果文本以 `L` 或 `l` 为后缀，则其类型为以下类型中可表示其值的第一个类型：`long`、`ulong`。
 
-> [!NOTE]
-> 也可用小写字母“l”作后缀。 但是，字母“l”容易与数字“1”混淆，因此会生成编译器警告。 为清楚起见，请使用“L”。
+  > [!NOTE]
+  > 可以使用小写字母 `l` 作为后缀。 但是，这会生成一个编译器警告，因为字母 `l` 可能与数字 `1` 混淆。 为清楚起见，请使用 `L`。
 
-### <a name="type-of-an-integral-literal"></a>整型文本类型
+- 如果文本的后缀为 `UL`、`Ul`、`uL`、`ul`、`LU`、`Lu`、`lU` 或 `lu`，则其类型为 `ulong`。
 
-如果整型文本没有后缀，则其类型为以下类型中可表示其值的第一个类型：
+如果由整数字面量所表示的值超出了 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>，则将出现编译器错误 [CS1021](../../misc/cs1021.md)。
 
-1. `int`
-1. `uint`
-1. `long`
-1. `ulong`
-
-可以通过赋值或强制转换，将整型文本转换为范围小于默认值的类型：
+整数文本所表示的值可以隐式转换为范围比确定的文本类型小的类型。 当值处于目标类型的范围内时，可能会出现这种情况：
 
 ```csharp
-byte byteVariable = 42; // type is byte
-var signedByte = (sbyte)42; // type is sbyte.
+byte a = 17;
+byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
 ```
 
-可以通过赋值、强制转换或文本后缀将整型文本转换为范围大于默认值的类型：
+如前面的示例所示，如果文本的值不在目标类型的范围内，则发生编译器错误 [CS0031](../../misc/cs0031.md)。
+
+还可以使用强制转换将整数文本所表示的值转换为除确定的文本类型之外的类型：
 
 ```csharp
-var unsignedLong = 42UL;
-var longVariable = 42L;
-ulong anotherUnsignedLong = 42;
-var anotherLong = (long)42;
+var signedByte = (sbyte)42;
+var longVariable = (long)42;
 ```
 
 ## <a name="conversions"></a>转换
@@ -119,9 +122,15 @@ var anotherLong = (long)42;
 
 如果未定义源类型到目标类型的隐式转换，必须使用显式强制转换将整型类型转换为其他整型类型。 这称为收缩转换  。 由于转换可能导致数据丢失，因此必须使用显式用例。
 
+## <a name="c-language-specification"></a>C# 语言规范
+
+有关更多信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的以下部分：
+
+- [整型类型](~/_csharplang/spec/types.md#integral-types)
+- [整数文本](~/_csharplang/spec/lexical-structure.md#integer-literals)
+
 ## <a name="see-also"></a>请参阅
 
-- [C# 语言规范 - 整型类型](~/_csharplang/spec/types.md#integral-types)
 - [C# 参考](../index.md)
 - [浮点类型](floating-point-numeric-types.md)
 - [默认值表](../keywords/default-values-table.md)

@@ -2,12 +2,12 @@
 title: Docker 应用的内部循环开发工作流
 description: 了解 Docker 应用程序开发的“内部循环”工作流。
 ms.date: 02/15/2019
-ms.openlocfilehash: 565852511f3a837066d5da5cf0e3ab0a902dd7da
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 5f534b23f5e0042e68343deb0c1e9e0ee2e64600
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956485"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394781"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 应用的内部循环开发工作流
 
@@ -266,7 +266,7 @@ docker-machine {IP} {YOUR-CONTAINER-NAME}
 使用 Visual Studio for Windows or Visual Studio for Mac 时，还可以在 Docker 中调试 .NET Core 或 .NET Framework 容器，如下一节所述。
 
 > [!TIP]
-> 如需了解有关调试 Node.js Docker 容器的详细信息，请转到 <https://blog.docker.com/2016/07/live-debugging-docker/> 和 <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/>。
+> 如需了解有关调试 Node.js Docker 容器的详细信息，请参阅 <https://blog.docker.com/2016/07/live-debugging-docker/> 和 <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/>。
 
 >[!div class="step-by-step"]
 >[上一页](docker-apps-development-environment.md)

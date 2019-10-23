@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 0f14cc6486e53cad8c3cbadc404d22d7e5458e84
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 11e48c54ba82b51268b34d6db01d2f9d4ae61ad7
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991268"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523572"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>演练：Office 编程（C# 和 Visual Basic）
 
@@ -114,7 +114,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]
 
-     这些新增内容介绍了 C# 中的另一功能：处理从 COM 主机返回的 `Object` 值（如 Office），就像它们具有 [dynamic](../../language-reference/keywords/dynamic.md) 类型一样。 当“嵌入互操作类型”  设置为其默认值 `True` 时，或者由 [/link](../../language-reference/compiler-options/link-compiler-option.md) 编译器选项引用程序集时，自动发生这种情况。 键入 `dynamic` 允许后期绑定（Visual Basic 已提供该功能）并可避免 C# 3.0 以及早期版本的语言中要求的显式强制转换。
+     这些新增内容介绍了 C# 中的另一功能：处理从 COM 主机返回的 `Object` 值（如 Office），就像它们具有 [dynamic](../../language-reference/keywords/dynamic.md) 类型一样。 当“嵌入互操作类型”  设置为其默认值 `True` 时，或者由 [-link](../../language-reference/compiler-options/link-compiler-option.md) 编译器选项引用程序集时，自动发生这种情况。 键入 `dynamic` 允许后期绑定（Visual Basic 已提供该功能）并可避免 C# 3.0 以及早期版本的语言中要求的显式强制转换。
 
      例如，`excelApp.Columns[1]` 返回`Object`，并且 `AutoFit` 是 Excel [Range](<xref:Microsoft.Office.Interop.Excel.Range>) 方法。 如果没有 `dynamic`，你必须将 `excelApp.Columns[1]` 返回的对象强制转换为 `Range` 的实例，然后才能调用 `AutoFit` 方法。
 

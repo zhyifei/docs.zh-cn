@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: d286cc811c87f2d45d5a9e6d4e8acd9c430ff346
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 64f8d536212cd379337ad437c1e15ae356890ddb
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835253"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581961"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新增功能
 
@@ -26,34 +26,49 @@ Visual Basic 16.0/Visual Studio 2019 版本 16.0
 
 ## <a name="previous-versions"></a>早期版本
 
-Visual Basic 15.8 / Visual Studio 2017 版本 15.8 有关新功能，请参阅 [Visual Basic 15.8](#visual-basic-158)。
+Visual Basic 15.8/Visual Studio 2017 版本 15.8  
+有关新功能，请参阅 [Visual Basic 15.8](#visual-basic-158)。
 
-Visual Basic 15.5 / Visual Studio 2017 版本 15.5 有关新功能，请参阅 [Visual Basic 15.5](#visual-basic-155)。
+Visual Basic 15.5/Visual Studio 2017 版本 15.5  
+有关新功能，请参阅 [Visual Basic 15.5](#visual-basic-155)。
 
-Visual Basic 15.3 / Visual Studio 2017 版本 15.3 有关新功能，请参阅 [Visual Basic 15.3](#visual-basic-153)。
+Visual Basic 15.3/Visual Studio 2017 版本 15.3  
+有关新功能，请参阅 [Visual Basic 15.3](#visual-basic-153)。
 
-Visual Basic 2017 / Visual Studio 2017 有关新功能，请参阅 [Visual Basic 2017](#visual-basic-2017)。
+Visual Basic 2017/Visual Studio 2017  
+有关新功能，请参阅 [Visual Basic 2017](#visual-basic-2017)。
 
-Visual Basic / Visual Studio 2015 有关新功能，请参阅 [Visual Basic 14](#visual-basic-14)。
+Visual Basic/Visual Studio 2015  
+有关新功能，请参阅 [Visual Basic 14](#visual-basic-14)。
 
-Visual Basic / Visual Studio 2013 .NET Compiler Platform 的技术预览版 (“Roslyn”)
+Visual Basic/Visual Studio 2013  
+.NET Compiler Platform (“Roslyn”) 的技术预览
 
-Visual Basic / Visual Studio 2012 `Async` 和 `await` 关键字、迭代器、调用方信息特性
+Visual Basic/Visual Studio 2012  
+`Async` 和 `await` 关键字、迭代器、调用方信息特性
 
-Visual Basic、Visual Studio 2010 自动实现的属性、集合初始值设定项、隐式续行符、动态、泛型协变/逆变、全局命名空间访问
+Visual Basic, Visual Studio 2010  
+自动实现的属性、集合初始值设定项、隐式行继续符、动态、泛型协变/逆变、全局命名空间访问
 
-Visual Basic / Visual Studio 2008 语言集成查询 (LINQ)、XML 文本、本地类型推断、对象初始值设定项、匿名类型、扩展方法、本地 `var` 类型推断、lambda 表达式、`if` 运算符、分部方法，可为 null 的值类型
+Visual Basic/Visual Studio 2008  
+语言集成查询 (LINQ)、XML 文本、本地类型推断、对象初始值设定项、匿名类型、扩展方法、本地 `var` 类型推断、lambda 表达式、`if` 运算符、分部方法、可以为 null 的值类型
 
-Visual Basic / Visual Studio 2005 `My` 类型和帮助程序类型（对应用、计算机、文件系统、网络的访问）
+Visual Basic/Visual Studio 2005  
+`My` 类型和帮助程序类型（对应用、计算机、文件系统、网络的访问）
 
-Visual Basic / Visual Studio .NET 2003 移位运算符、循环变量声明
+Visual Basic/Visual Studio .NET 2003  
+移位运算符、循环变量声明
 
-Visual Basic / Visual Studio .NET 2002 初版 Visual Basic .NET
+Visual Basic/Visual Studio .NET 2002  
+Visual Basic.NET 的首次发布
 
 ## <a name="visual-basic-160"></a>Visual Basic 16.0
-Visual Basic 16.0 侧重于向 .NET Core 提供 Visual Basic 运行时 (microsoft.visualbasic.dll) 的更多功能，这是 Visual Basic 侧重于 .NET Core 的第一个版本。 Visual Basic 运行时的许多部分都依赖于 WinForms，它们将添加到 Visual Basic 的更高版本中。 
 
-**允许在语句中的更多位置进行注释** 在 Visual Basic 15.8 及更早版本中，只允许在空行上、语句末尾或在语句中允许使用隐式行继续符的特定位置进行注释。 从 Visual Basic 16.0 开始，还允许在显式行继续符之后以及以空格开头后跟下划线的行上的语句中进行注释。
+Visual Basic 16.0 侧重于向 .NET Core 提供 Visual Basic 运行时 (microsoft.visualbasic.dll) 的更多功能，这是 Visual Basic 侧重于 .NET Core 的第一个版本。 Visual Basic 运行时的许多部分都依赖于 WinForms，它们将添加到 Visual Basic 的更高版本中。
+
+**允许在语句中的更多位置进行注释**
+
+在 Visual Basic 15.8 及更早版本中，只允许在空行上、语句末尾或在语句中允许使用隐式行继续符的特定位置进行注释。 从 Visual Basic 16.0 开始，还允许在显式行继续符之后以及以空格开头后跟下划线的行上的语句中进行注释。
 
 ```vb
 Public Sub Main()

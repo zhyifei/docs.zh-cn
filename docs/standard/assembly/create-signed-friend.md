@@ -5,12 +5,12 @@ ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 19c301c6b96e1070447401af9105fba2e0f0837f
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 3bf71adc694f3c6e072990717198b4f2003cd503
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972809"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523883"
 ---
 # <a name="how-to-create-signed-friend-assemblies"></a>如何：创建已签名的友元程序集
 本示例演示如何将友元程序集和具有强名称的程序集一起使用。 这两种程序集必须都使用强名称。 尽管本示例中的两种程序集使用相同的密钥，但可以对这两种程序集使用不同的密钥。  
@@ -132,7 +132,7 @@ ms.locfileid: "70972809"
 - [.NET 中的程序集](index.md)
 - [友元程序集](friend.md)
 - [如何：创建未签名的友元程序集](create-unsigned-friend.md)
-- [/keyfile (C#)](../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
+- [-keyfile (C#)](../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
 - [-keyfile (Visual Basic)](../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [Sn.exe（强名称工具）](../../framework/tools/sn-exe-strong-name-tool.md)
 - [创建和使用具有强名称的程序集](create-use-strong-named.md)

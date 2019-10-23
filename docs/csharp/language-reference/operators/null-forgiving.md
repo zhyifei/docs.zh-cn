@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: cf941e5e3fa3fc6313ef8b2ff5c176aec68c1e6b
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 865e55a28e2f3db85d50a81f6ab29c354ee3c62a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291679"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319094"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! （null 包容）运算符（C# 参考）
 
@@ -37,13 +37,17 @@ null 包容运算符的一个用例是测试参数验证逻辑。 例如，请�
 
 [!code-csharp[Use null-forgiving operator](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#UseNullForgiving)]
 
-如果没有 null 包容运算符，编译器将为 `p.Name` 代码生成以下警告：`Warning CS8602: Dereference of a possibly null reference.`。
+如果没有 null 包容运算符，编译器将为 `p.Name` 代码生成以下警告：`Warning CS8602: Dereference of a possibly null reference`。
 
 如果可以修改 `IsValid` 方法，则可使用 [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute) 属性让编译器知道，当方法返回 `true` 时，`IsValid` 方法的参数不能是 `null`：
 
 [!code-csharp[Use an attribute](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#UseAttribute)]
 
 在前面的例子中，不需要使用 null 包容运算符，因为编译器有足够的信息来发现 `p` 不能是 `if` 语句中的 `null`。 如需深入了解允许你指定有关变量 null 状态的其他信息的属性，请参阅[使用属性升级 API 以定义 null 期望值](../../nullable-attributes.md)。
+
+## <a name="c-language-specification"></a>C# 语言规范
+
+有关详细信息，请参阅[可为空的引用类型规范草案](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)的 [null 包容性运算符](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator)部分。
 
 ## <a name="see-also"></a>请参阅
 

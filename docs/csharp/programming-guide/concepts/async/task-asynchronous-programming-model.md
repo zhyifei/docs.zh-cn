@@ -2,12 +2,12 @@
 title: 使用 Async和 Await 的任务异步编程模型 (TAP) (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 3ced168bada4167418bf27861c5b8666b02aa70e
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 644830ac62a4df23f22d8f91e9b3c768dd611451
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291337"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395695"
 ---
 # <a name="task-asynchronous-programming-model"></a>异步编程模型
 
@@ -46,7 +46,7 @@ C# 中的 [Async](../../../language-reference/keywords/async.md) 和 [Await](../
 
 ```csharp
 async Task<int> AccessTheWebAsync()
-{ 
+{
     // You need to add a reference to System.Net.Http to declare client.
     var client = new HttpClient();
 
@@ -60,7 +60,7 @@ async Task<int> AccessTheWebAsync()
     // The await operator suspends AccessTheWebAsync.
     //  - AccessTheWebAsync can't continue until getStringTask is complete.
     //  - Meanwhile, control returns to the caller of AccessTheWebAsync.
-    //  - Control resumes here when getStringTask is complete. 
+    //  - Control resumes here when getStringTask is complete.
     //  - The await operator then retrieves the string result from getStringTask.
     string urlContents = await getStringTask;
 
@@ -259,7 +259,7 @@ Windows 运行时编程中的异步 API 具有下列返回类型之一（类似�
 
 下面的代码来自于本文介绍的 WPF 应用程序的“MainWindow.xaml.cs”文件  。 可以从[异步示例：“使用 Async 和 Await 的异步编程”示例](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-cs/)下载此示例。
 
-[!code-csharp[async](~/samples/async/async-and-await/cs/MainWindow.xaml.cs)] 
+[!code-csharp[async](~/samples/async/async-and-await/cs/MainWindow.xaml.cs)]
 
 ## <a name="see-also"></a>请参阅
 
@@ -267,4 +267,3 @@ Windows 运行时编程中的异步 API 具有下列返回类型之一（类似�
 - [await](../../../language-reference/operators/await.md)
 - [异步编程](../../../async.md)
 - [异步概述](../../../../standard/async.md)
- 

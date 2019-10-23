@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f05f66af71b86ccaefe19c0ddce2bfe7572f1084
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d993042cbb435826b92bbcc62f1320a310a02627
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567570"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320010"
 ---
 # <a name="net-framework-application-essentials"></a>.NET Framework 应用程序要点
 .NET Framework 文档的此部分提供了有关 .NET Framework 中的基本应用程序开发任务的信息。  
@@ -54,8 +54,7 @@ ms.locfileid: "33567570"
  [全球化和本地化](../../docs/standard/globalization-localization/index.md)  
  提供可帮助你设计和开发全球通用应用程序的信息。  
   
- 可访问性  
- 提供有关 Microsoft UI 自动化的信息，Microsoft UI 自动化是一个辅助功能框架，它通过提供对用户界面 (UI) 相关信息的编程访问满足了辅助技术产品和自动化测试框架的需求。  
+ [辅助功能](../../docs/framework/ui-automation/index.md)提供有关 Microsoft UI 自动化的信息，Microsoft UI 自动化是一个辅助功能框架，它通过提供对用户界面 (UI) 相关信息的编程访问满足了辅助技术产品和自动化测试框架的需求。  
   
  [特性](../../docs/standard/attributes/index.md)  
  描述如何使用特性自定义元数据。  

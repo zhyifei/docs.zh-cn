@@ -1,16 +1,16 @@
 ---
 title: using 语句 - C# 参考
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 10/15/2019
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: e1a1a960fa69be593ea01cab51be576b0055fd5e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7e6d1b663007d430f71f81923f343f1c43f5dd2d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632902"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579179"
 ---
 # <a name="using-statement-c-reference"></a>using 语句（C# 参考）
 
@@ -22,6 +22,10 @@ ms.locfileid: "65632902"
 
 [!code-csharp[csrefKeywordsNamespace#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#4)]
 
+从 C# 8.0 开始，可以对不需要使用大括号的 `using` 语句使用以下替代语法：
+
+[!code-csharp[csrefKeywordsNamespace#New](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#ModernUsing)]
+
 ## <a name="remarks"></a>备注
 
 <xref:System.IO.File> 和 <xref:System.Drawing.Font> 是访问非托管资源（本例中为文件句柄和设备上下文）的托管类型的示例。 有许多其他类别的非托管资源和封装这些资源的类库类型。 所有此类类型都必须实现 <xref:System.IDisposable> 接口。
@@ -32,11 +36,17 @@ ms.locfileid: "65632902"
 
 [!code-csharp[csrefKeywordsNamespace#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#5)]
 
+较新的 `using` 语句语法转换为非常类似的代码。 `try` 块在声明变量的位置打开。 `finally` 块添加在封闭块的末尾，通常是在方法的末尾。
+
 有关 `try`-`finally` 语句的详细信息，请参阅 [try-finally](try-finally.md) 主题。
 
 可在 `using` 语句中声明一个类型的多个实例，如下面的示例中所示：
 
 [!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#6)]
+
+可以使用与 C# 8 一起引入的新语法，合并同一类型的多个声明。 下面的示例对此进行了演示：
+
+[!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#MultipleUsing)]
 
 可以实例化资源对象，然后将变量传递到 `using` 语句，但这不是最佳做法。 在这种情况下，控件退出 `using` 块以后，对象保留在作用域中，但是可能没有访问其未托管资源的权限。 换而言之，它不再是完全初始化的。 如果尝试在 `using` 块外部使用该对象，则可能导致引发异常。 因此，通常最好在 `using` 语句中实例化该对象并将其范围限制在 `using` 块中。
 
@@ -57,3 +67,4 @@ ms.locfileid: "65632902"
 - [垃圾回收](../../../standard/garbage-collection/index.md)
 - [使用实现 IDisposable 的对象](../../../standard/garbage-collection/using-objects.md)
 - [IDisposable 接口](xref:System.IDisposable)
+- [C# 8.0 中的 using 语句](~/_csharplang/proposals/csharp-8.0/using.md)

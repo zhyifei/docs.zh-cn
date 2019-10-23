@@ -3,12 +3,12 @@ title: 生成和使用异步流
 description: 本高级教程演示了生成和使用异步流提供一种更自然的方式来处理可能以异步方式生成的数据序列的场景。
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: 04c4fe1c7e33138273c5b49c6985efc60767a724
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 6c013d1b589367b77c6f77f88334317a6f3bc657
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216549"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579223"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>教程：使用 C# 8.0 和 .NET Core 3.0 生成和使用异步流
 
@@ -135,7 +135,7 @@ namespace System
 
 ## <a name="run-the-finished-application"></a>运行完成的应用程序
 
-再次运行该应用程序。 将其行为与初学者应用程序的行为进行对比。 会在结果的第一页可用立即对其进行枚举。 在请求和检索每个新页面时都会有一个可观察到的暂停，然后快速枚举下一页结果。 不需要 `try` / `catch` 块来处理取消：调用者可以停止枚举集合。 由于异步流在下载每个页面时生成结果，因此可以清楚地报告进度。
+再次运行该应用程序。 将其行为与初学者应用程序的行为进行对比。 会在结果的第一页可用立即对其进行枚举。 在请求和检索每个新页面时都会有一个可观察到的暂停，然后快速枚举下一页结果。 不需要 `try` / `catch` 块来处理取消：调用者可以停止枚举集合。 由于异步流在下载每个页面时生成结果，因此可以清楚地报告进度。 返回的每个问题的状态都无缝包含在 `await foreach` 循环中。 不需要回调对象即可跟踪进度。
 
 通过检查代码，可以看到内存使用方面的改进。 不再需要在枚举所有结果之前分配一个集合来存储它们。 调用者可以决定如何使用结果，以及是否需要存储集合。
 

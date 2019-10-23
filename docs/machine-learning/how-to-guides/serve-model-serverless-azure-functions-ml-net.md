@@ -5,12 +5,12 @@ ms.date: 09/12/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 2abd8588aa314b630c995e0c78b5869ec00a89df
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 31169116abdda7308ed216902b335a6b77fbcfc4
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179374"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321280"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>将模型部署到 Azure Functions
 
@@ -75,7 +75,7 @@ ms.locfileid: "72179374"
     ```csharp
     public class AnalyzeSentiment
     {
-    
+
     }
     ```
 
@@ -85,7 +85,7 @@ ms.locfileid: "72179374"
 
 1. 在项目中创建“DataModels”  目录，用于保存数据模型：在“解决方案资源管理器”中，右键单击项目，并依次选择“添加”>“新文件夹”  。 键入“DataModels”，再按 Enter。
 2. 在“解决方案资源管理器”中，右键单击“DataModels”  目录，再依次选择“添加”>“新项”  。
-3. 在“添加新项”  对话框中，选择“类”  并将“名称”  字段更改为“SentimentData.cs”  。 然后，选择“添加”  按钮。 
+3. 在“添加新项”  对话框中，选择“类”  并将“名称”  字段更改为“SentimentData.cs”  。 然后，选择“添加”  按钮。
 
     “SentimentData.cs”  文件随即在代码编辑器中打开。 将以下 using 语句添加到 SentimentData.cs  顶部：
 
@@ -113,7 +113,7 @@ ms.locfileid: "72179374"
 若要详细了解[依赖项注入](https://en.wikipedia.org/wiki/Dependency_injection)，请单击下面的链接。
 
 1. 在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新项”  。
-1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“Startup.cs”     。 然后，选择“添加”  按钮。 
+1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“Startup.cs”     。 然后，选择“添加”  按钮。
 
     此时，*Startup.cs* 文件在代码编辑器中打开。 将以下 using 语句添加到 *Startup.cs* 的顶部：
 
@@ -141,13 +141,13 @@ ms.locfileid: "72179374"
     }
     ```
 
-概括地讲，此代码在应用程序请求时自动初始化对象和服务供以后使用，无需手动执行初始化。 
+概括地讲，此代码在应用程序请求时自动初始化对象和服务供以后使用，无需手动执行初始化。
 
-机器学习模型不是静态的。 随着新的训练数据变得可用，模型将重新训练和重新部署。 将最新版本的模型引入应用程序的一种方法是重新部署整个应用程序。 但这会导致应用程序关闭。 `PredictionEnginePool` 服务提供了一种机制，用于在不使应用程序关闭的情况下重新加载已更新的模型。 
+机器学习模型不是静态的。 随着新的训练数据变得可用，模型将重新训练和重新部署。 将最新版本的模型引入应用程序的一种方法是重新部署整个应用程序。 但这会导致应用程序关闭。 `PredictionEnginePool` 服务提供了一种机制，用于在不使应用程序关闭的情况下重新加载已更新的模型。
 
 将 `watchForChanges` 参数设置为 `true`，则 `PredictionEnginePool` 会启动 [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher)，用于侦听文件系统更改通知并在文件发生更改时引发事件。 这会提示 `PredictionEnginePool` 自动重新加载模型。
 
-模型由 `modelName` 参数标识，因此更改时可以重新加载每个应用程序的多个模型。 
+模型由 `modelName` 参数标识，因此更改时可以重新加载每个应用程序的多个模型。
 
 > [!TIP]
 > 或者，如果使用远程存储的模型，则可以使用 `FromUri` 方法。 `FromUri` 会轮询远程位置以获取更改，而不是监视文件更改事件。 轮询间隔默认为 5 分钟。 你可以根据应用程序的要求，增加或减少轮询间隔。 在下面的代码示例中，`PredictionEnginePool` 每分钟轮询存储在指定 URI 中的模型。
@@ -209,7 +209,7 @@ ILogger log)
     ```
 
     如果成功，输出文本应如下所示：
-    
+
     ```powershell
     Negative
     ```

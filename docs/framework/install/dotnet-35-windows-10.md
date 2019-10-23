@@ -4,12 +4,12 @@ description: 了解如何在 Windows 10、Windows 8.1 和 Windows 8 上安装 .N
 author: rlander
 ms.author: mairaw
 ms.date: 07/16/2018
-ms.openlocfilehash: 7b3b7ca5709008260ea284602a3ed8d2b288c410
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 949f73febe2eb2ad7155bddd2b7b7514eddfe6c9
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515190"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319143"
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>在 Windows 10、Windows 8.1 和 Windows 8 上安装 .NET Framework 3.5
 
@@ -17,9 +17,9 @@ ms.locfileid: "43515190"
 
 ## <a name="install-the-net-framework-35-on-demand"></a>按需安装.NET Framework 3.5
 
-如果尝试运行的应用要求安装 .NET Framework 3.5，则会看到以下配置对话框。 选择“安装此功能”，启用 .NET Framework 3.5。 此选项需要 Internet 连接。
+如果尝试运行的应用要求安装 .NET Framework 3.5，则会看到以下配置对话框。 选择“安装此功能”  ，启用 .NET Framework 3.5。 此选项需要 Internet 连接。
 
-![.NET Framework 安装对话框](./media/dotnet-framework-installation-dialog.jpg)
+![.NET Framework 安装对话框的屏幕截图。](./media/dotnet-35-windows-10/dotnet-framework-installation-dialog.png)
 
 ### <a name="why-am-i-getting-this-pop-up"></a>为什么我会看到此弹出项？
 
@@ -29,17 +29,17 @@ ms.locfileid: "43515190"
 
 可以通过 Windows 控制面板启用 .NET Framework 3.5。 此选项需要 Internet 连接。
 
-1. 按键盘上的 Windows 键 ![Windows 徽标](https://i-msdn.sec.s-msft.com/dynimg/IC721376.jpeg)，键入“Windows 功能”，然后按 Enter。 随即显示“打开或关闭 Windows 功能”对话框。
+1. 按下键盘上的 Windows 徽标键 ![Windows 徽标键徽标的屏幕截图](./media/dotnet-35-windows-10/windows-keyboard-logo.png)， 键入“Windows 功能”，然后按 Enter。 随即显示“打开或关闭 Windows 功能”对话框  。
 
-2. 如果弹出提示，选择“.NET Framework 3.5 (包括 .NET 2.0 和 3.0)” 复选框，选择“确定”，然后重启计算机。
+2. 如果弹出提示，选择“.NET Framework 3.5 (包括 .NET 2.0 和 3.0)” 复选框，选择“确定”，然后重启计算机   。
 
-   ![使用控制面板安装 .NET](./media/dotnet-control-panel.png)
+   ![显示通过控制面板安装 .NET 的屏幕截图。](./media/dotnet-35-windows-10/dotnet-control-panel.png)
 
-   无需选择“Windows Communication Foundation (WCF) HTTP 激活”和“Windows Communication Foundation (WCF) 非 HTTP 激活”的子项，除非是需要使用此功能的开发者或服务器管理员。
+   无需选择“Windows Communication Foundation (WCF) HTTP 激活”  和“Windows Communication Foundation (WCF) 非 HTTP 激活”  的子项，除非是需要使用此功能的开发者或服务器管理员。
 
 ## <a name="troubleshoot-the-installation-of-the-net-framework-35"></a>.NET Framework 3.5 安装疑难解答
 
-安装过程中，你可能会遇到错误 0x800f0906、0x800f0907、0x800f081f 或 0x800F0922，此时请参阅 [.NET Framework 3.5 安装错误：0x800f0906、0x800f0907 或 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09)，了解如何解决这些问题。
+在安装过程中，你可能会遇到错误 0x800f0906、0x800f0907、0x800f081f 或 0x800F0922，如果遇到这些错误，请参阅 [.NET Framework 3.5 安装错误：0x800f0906、0x800f0907 或 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09)，了解如何解决这些问题。
 
 如果仍无法解决安装问题，或未连接到 Internet，可以尝试使用 Windows 安装介质进行安装。 有关详细信息，请参阅[使用部署映像服务和管理 (DISM) 部署 .NET Framework 3.5](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism)。 如果没有安装媒体，请参阅[创建适用于 Windows 的安装媒体](https://support.microsoft.com/help/15088/windows-create-installation-media)。
 
