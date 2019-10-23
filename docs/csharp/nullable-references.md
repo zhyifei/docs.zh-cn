@@ -1,13 +1,13 @@
 ---
 title: 可为空引用类型
-description: 本文概述了在 C# 8 中添加的可为空引用类型。 你将了解该功能如何为新项目和现有项目提供针对空引用异常的安全性。
+description: 本文概述了在 C# 8.0 中添加的可为空引用类型。 你将了解该功能如何为新项目和现有项目提供针对空引用异常的安全性。
 ms.date: 02/19/2019
-ms.openlocfilehash: 213f0e3d9ad84628dab02a1dc483513783b2ad6e
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: a108c73064b40171a58df0796d4a0b75eddebbff
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699961"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319057"
 ---
 # <a name="nullable-reference-types"></a>可为空引用类型
 
@@ -35,13 +35,11 @@ string? name;
 
 未将 `?` 附加到类型名称的任何变量都是“不可为空引用类型”  。 这包括启用此功能时现有代码中的所有引用类型变量。
 
-编译器使用静态分析来确定可为空引用是否为非 null。 如果你在一个可为空引用可能是 null 时对其取消引用，编译器将向你发出警告。 可以通过使用 NULL 包容运算符 `!` 后跟变量名称来替代此行为。  例如，若知道 `name` 变量不为 null 但编译器仍发出警告，则可以编写以下代码来覆盖编译器的分析：
+编译器使用静态分析来确定可为空引用是否为非 null。 如果你在一个可为空引用可能是 null 时对其取消引用，编译器将向你发出警告。 可以通过使用 [NULL 包容运算符](language-reference/operators/null-forgiving.md) `!` 后跟变量名称来替代此行为。 例如，若知道 `name` 变量不为 null 但编译器仍发出警告，则可以编写以下代码来覆盖编译器的分析：
 
 ```csharp
 name!.Length;
 ```
-
-你可以在 GitHub 上的[可为空引用类型草稿](../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator)规范提案中阅读有关此运算符的详细信息。
 
 ## <a name="nullability-of-types"></a>类型为 Null 性
 
@@ -49,14 +47,14 @@ name!.Length;
 
 - *不可为空*：无法将 null 分配给此类型的变量。 在取消引用之前，无需对此类型的变量进行 null 检查。
 - *可为空*：可将 null 分配给此类型的变量。 在不首先检查 `null` 的情况下取消引用此类型的变量时发出警告。
-- *无视*：这是 C# 8 之前版本的状态。 可以取消引用或分配此类型的变量而不发出警告。
+- *无视*：这是 C# 8.0 之前版本的状态。 可以取消引用或分配此类型的变量而不发出警告。
 - *未知*：这通常针对类型参数，约束不告知编译器类型是否必须是“可为空”或“不可为空”   。
 
 变量声明中类型的为 Null 性由声明变量的“可为空上下文”控制  。
 
 ## <a name="nullable-contexts"></a>可为空上下文
 
-可为空上下文可以对编译器如何解释引用类型变量进行精细控制。 任何给定源代码行的“可为空注释上下文”为 `enabled` 或 `disabled`  。 你可以将 C# 8 之前的编译器视为在 `disabled` 可为空上下文中编译所有代码：任何引用类型都可以为 null。 “可为空警告上下文”可以设置为 `enabled` 或 `disabled`  。 可为空警告上下文指定编译器使用其流分析生成的警告。
+可为空上下文可以对编译器如何解释引用类型变量进行精细控制。 可以启用或禁用任何给定源代码行的“可为空注释上下文”  。 可以将 C# 8.0 之前的编译器视为在禁用的可为空上下文中编译所有代码：任何引用类型都可以为空。 还可以启用或禁用可为空警告上下文  。 可为空警告上下文指定编译器使用其流分析生成的警告。
 
 可以使用 .csproj 文件中的 `Nullable` 元素为项目设置可为空注释上下文和可为空警告上下文。  此元素配置编译器如何解释类型的为 Null 性以及生成哪些警告。 有效设置如下：
 
@@ -81,7 +79,7 @@ name!.Length;
 - `#nullable enable annotations`：将可为空注释上下文设置为“启用”  。
 - `#nullable restore annotations`：将注释警告上下文还原到项目设置。
 
-默认的可为空注释和警告上下文为 `disabled`。 该决定意味着无需更改现有代码即可进行编译，并且不会生成任何新警告。
+默认情况下，可为空注释和警告上下文处于禁用状态  。 这意味着无需更改现有代码即可进行编译，并且不会生成任何新警告。
 
 ## <a name="nullable-annotation-context"></a>可为空注释上下文
 
@@ -110,10 +108,10 @@ name!.Length;
 1. 该变量已明确分配给非 null 值。
 1. 在取消引用之前，已检查变量或表达式是否为 null。
 
-如果可为空警告上下文为 `enabled`，只要取消引用“可能为 null”状态的变量或表达式，编译器就会生成警告  。 此外，当可为空注释上下文为 `enabled` 且将“可能为 null”变量或表达式分配给不可为空引用类型时，将生成警告  。
+当可为空警告上下文处于启用状态时，只要取消引用“可能为 null”状态的变量或表达式，编译器就会生成警告  。 此外，在将“可能为 null”变量或表达式分配给已启用的可为空注释上下文中的不可为空引用类型时，将生成警告  。
 
-## <a name="learn-more"></a>了解详细信息
+## <a name="see-also"></a>请参阅
 
-- [可为空引用规范草案](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/nullable-reference-types-specification.md)
+- [可为空引用类型规范草案](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)
 - [可为空引用教程简介](tutorials/nullable-reference-types.md)
 - [将现有代码库迁移到可为空引用](tutorials/upgrade-to-nullable-references.md)

@@ -298,10 +298,10 @@ RUN dotnet restore
 
 ### <a name="additional-resources"></a>其他资源
 
-- 多体系结构 .NET Core 映像  。
+- **多体系结构 .NET Core 映像**。\
   <https://github.com/dotnet/announcements/issues/14>
 
-- **创建基础映像**。 请查看官方 Docker 文档。
+- **创建基础映像**。 请查看官方 Docker 文档。\
   <https://docs.docker.com/develop/develop-images/baseimages/>
 
 ![3 - 创建在 Dockerfile 中定义的映像](./media/image7.png)
@@ -548,7 +548,7 @@ docker-compose.yml 文件不仅指定正在使用的容器，还指定如何单�
 
 ### <a name="additional-resources"></a>其他资源
 
-- 使用 Visual Studio 2017 进行 Steve Lasker .NET docker 开发   \
+- **使用 Visual Studio 2017 进行 Steve Lasker .NET docker 开发** \
   <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111>
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>在 DockerFile 中使用 PowerShell 命令来设置 Windows 容器
@@ -570,7 +570,7 @@ RUN powershell add-windowsfeature web-asp-net45
 
 ### <a name="additional-resources"></a>其他资源
 
-- **aspnet-docker/Dockerfile。** 在 dockerfiles 中运行以包含 Windows 功能的 Powershell 命令示例。
+- **aspnet-docker/Dockerfile。** 在 dockerfiles 中运行以包含 Windows 功能的 Powershell 命令示例。\
   <https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile>
 
 >[!div class="step-by-step"]

@@ -289,7 +289,7 @@ public class CatalogController : ControllerBase
 
 ### <a name="additional-resources"></a>其他资源
 
-- **Scott Hanselman.ASP.NET Core RESTful Web API versioning made easy** \（简化 ASP.NET Core RESTful Web API 版本控制）
+- **Scott Hanselman.ASP.NET Core RESTful Web API versioning made easy**（简化 ASP.NET Core RESTful Web API 版本控制） \
   <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
 - **RESTful Web API 版本控制** \

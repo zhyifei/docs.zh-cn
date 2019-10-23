@@ -83,25 +83,25 @@ ms.locfileid: "71834449"
 
 ## <a name="additional-resources"></a>其他资源
 
-- **The CAP Theorem** \（CAP 定理）
+- **The CAP Theorem**（CAP 定理） \
   <https://en.wikipedia.org/wiki/CAP_theorem>
 
-- **Eventual Consistency** \（最终一致性）
+- **Eventual Consistency**（最终一致性） \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Data Consistency Primer** \（数据一致性入门指南）
+- **Data Consistency Primer**（数据一致性入门指南） \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **Martin Fowler。CQRS (Command and Query Responsibility Segregation)**  \（CQRS [命令和查询责任分离]）
+- **Martin Fowler。CQRS (Command and Query Responsibility Segregation)** （CQRS [命令和查询责任分离]） \
   <https://martinfowler.com/bliki/CQRS.html>
 
-- **Materialized View** \（具体化视图）
+- **Materialized View**（具体化视图） \
   <https://docs.microsoft.com/azure/architecture/patterns/materialized-view>
 
 - **Charles Row.ACID vs.BASE：数据库事务处理不断变化的 pH** \
   <https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/>
 
-- **Compensating Transaction** \（补偿事务）
+- **Compensating Transaction**（补偿事务） \
   <https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction>
 
 - **Udi Dahan.面向服务的组合** \

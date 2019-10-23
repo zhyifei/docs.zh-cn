@@ -45,10 +45,10 @@ eShopOnContainers 应用程序提供在启动时在数据库中设定数据，�
 
 #### <a name="additional-resources"></a>其他资源
 
-- **Run the SQL Server Docker image on Linux, Mac, or Windows** \（在 Linux、Mac 或 Windows 上运行 SQL Server Docker 映像）
+- **Run the SQL Server Docker image on Linux, Mac, or Windows**（在 Linux、Mac 或 Windows 上运行 SQL Server Docker 映像） \
     [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](/sql/linux/sql-server-linux-setup-docker)
 
-- **Connect and query SQL Server on Linux with sqlcmd** \（使用 sqlcmd 连接和查询 Linux 上的 SQL Server）
+- **Connect and query SQL Server on Linux with sqlcmd**（使用 sqlcmd 连接和查询 Linux 上的 SQL Server） \
     [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>在 Web 应用程序启动时设定测试数据
