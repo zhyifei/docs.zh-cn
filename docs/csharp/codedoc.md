@@ -3,224 +3,224 @@ title: 使用 XML 注释来记录代码
 description: 了解如何使用 XML 文档注释来记录代码和在编译时生成 XML 文档文件。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: b6744921f4703f53a16b6bdadcfbf375c2fb3332
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 048546407dbf94f274dd8c9c39e83c103efd75e1
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104776"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521167"
 ---
-# <a name="documenting-your-code-with-xml-comments"></a><span data-ttu-id="379a0-103">使用 XML 注释来记录代码</span><span class="sxs-lookup"><span data-stu-id="379a0-103">Documenting your code with XML comments</span></span>
+# <a name="documenting-your-code-with-xml-comments"></a><span data-ttu-id="39d1e-103">使用 XML 注释来记录代码</span><span class="sxs-lookup"><span data-stu-id="39d1e-103">Documenting your code with XML comments</span></span>
 
-<span data-ttu-id="379a0-104">XML 文档注释是一种特殊注释，添加在任何用户定义的类型或成员的定义上方。</span><span class="sxs-lookup"><span data-stu-id="379a0-104">XML documentation comments are a special kind of comment, added above the definition of any user-defined type or member.</span></span>
-<span data-ttu-id="379a0-105">其特殊之处在于其可由编译器处理，由此在编译时生成 XML 文档文件。</span><span class="sxs-lookup"><span data-stu-id="379a0-105">They are special because they can be processed by the compiler to generate an XML documentation file at compile time.</span></span>
-<span data-ttu-id="379a0-106">编译器生成的 XML 文件可以与 .NET 程序集一起分发，以便 Visual Studio 和其他 IDE 可使用 IntelliSense 显示关于类型或成员的快速信息。</span><span class="sxs-lookup"><span data-stu-id="379a0-106">The compiler generated XML file can be distributed alongside your .NET assembly so that Visual Studio and other IDEs can use IntelliSense to show quick information about types or members.</span></span> <span data-ttu-id="379a0-107">此外，可以通过 [DocFX](https://dotnet.github.io/docfx/) 和 [Sandcastle](https://github.com/EWSoftware/SHFB) 等工具运行 XML 文件，由此生成 API 引用网站。</span><span class="sxs-lookup"><span data-stu-id="379a0-107">Additionally, the XML file can be run through tools like [DocFX](https://dotnet.github.io/docfx/) and [Sandcastle](https://github.com/EWSoftware/SHFB) to generate API reference websites.</span></span>
+<span data-ttu-id="39d1e-104">XML 文档注释是一种特殊注释，添加在任何用户定义的类型或成员的定义上方。</span><span class="sxs-lookup"><span data-stu-id="39d1e-104">XML documentation comments are a special kind of comment, added above the definition of any user-defined type or member.</span></span>
+<span data-ttu-id="39d1e-105">其特殊之处在于其可由编译器处理，由此在编译时生成 XML 文档文件。</span><span class="sxs-lookup"><span data-stu-id="39d1e-105">They are special because they can be processed by the compiler to generate an XML documentation file at compile time.</span></span>
+<span data-ttu-id="39d1e-106">编译器生成的 XML 文件可以与 .NET 程序集一起分发，以便 Visual Studio 和其他 IDE 可使用 IntelliSense 显示关于类型或成员的快速信息。</span><span class="sxs-lookup"><span data-stu-id="39d1e-106">The compiler generated XML file can be distributed alongside your .NET assembly so that Visual Studio and other IDEs can use IntelliSense to show quick information about types or members.</span></span> <span data-ttu-id="39d1e-107">此外，可以通过 [DocFX](https://dotnet.github.io/docfx/) 和 [Sandcastle](https://github.com/EWSoftware/SHFB) 等工具运行 XML 文件，由此生成 API 引用网站。</span><span class="sxs-lookup"><span data-stu-id="39d1e-107">Additionally, the XML file can be run through tools like [DocFX](https://dotnet.github.io/docfx/) and [Sandcastle](https://github.com/EWSoftware/SHFB) to generate API reference websites.</span></span>
 
-<span data-ttu-id="379a0-108">编译器会忽略 XML 文档注释，与对待其他注释一样。</span><span class="sxs-lookup"><span data-stu-id="379a0-108">XML documentation comments, like all other comments, are ignored by the compiler.</span></span>
+<span data-ttu-id="39d1e-108">编译器会忽略 XML 文档注释，与对待其他注释一样。</span><span class="sxs-lookup"><span data-stu-id="39d1e-108">XML documentation comments, like all other comments, are ignored by the compiler.</span></span>
 
-<span data-ttu-id="379a0-109">可通过执行下列操作之一在编译时生成 XML 文件：</span><span class="sxs-lookup"><span data-stu-id="379a0-109">You can generate the XML file at compile time by doing one of the following:</span></span>
+<span data-ttu-id="39d1e-109">可通过执行下列操作之一在编译时生成 XML 文件：</span><span class="sxs-lookup"><span data-stu-id="39d1e-109">You can generate the XML file at compile time by doing one of the following:</span></span>
 
-- <span data-ttu-id="379a0-110">如果要使用 .NET Core 从命令行开发应用程序，可以将 [DocumentationFile 元素](/visualstudio/msbuild/common-msbuild-project-properties)添加到 .csproj 项目文件的 `<PropertyGroup>` 部分。</span><span class="sxs-lookup"><span data-stu-id="379a0-110">If you are developing an application with .NET Core from the command line, you can add a [DocumentationFile element](/visualstudio/msbuild/common-msbuild-project-properties) to the `<PropertyGroup>` section of your .csproj project file.</span></span> <span data-ttu-id="379a0-111">下面的示例使用与程序集相同的根文件夹名在项目目录中生成 XML 文件：</span><span class="sxs-lookup"><span data-stu-id="379a0-111">The following example generates an XML file in the project directory with the same root filename as the assembly:</span></span>
+- <span data-ttu-id="39d1e-110">如果要使用 .NET Core 从命令行开发应用程序，可以将 [DocumentationFile 元素](/visualstudio/msbuild/common-msbuild-project-properties)添加到 .csproj 项目文件的 `<PropertyGroup>` 部分。</span><span class="sxs-lookup"><span data-stu-id="39d1e-110">If you are developing an application with .NET Core from the command line, you can add a [DocumentationFile element](/visualstudio/msbuild/common-msbuild-project-properties) to the `<PropertyGroup>` section of your .csproj project file.</span></span> <span data-ttu-id="39d1e-111">下面的示例使用与程序集相同的根文件夹名在项目目录中生成 XML 文件：</span><span class="sxs-lookup"><span data-stu-id="39d1e-111">The following example generates an XML file in the project directory with the same root filename as the assembly:</span></span>
 
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
    ```
 
-   <span data-ttu-id="379a0-112">还可以精确指定 XML 文件的绝对或相对路径及名称。</span><span class="sxs-lookup"><span data-stu-id="379a0-112">You can also specify the exact absolute or relative path and name of the XML file.</span></span> <span data-ttu-id="379a0-113">下面的示例在与调试版本的应用程序相同的目录中生成 XML 文件：</span><span class="sxs-lookup"><span data-stu-id="379a0-113">The following example generates the XML file in the same directory as the debug version of an application:</span></span>
+   <span data-ttu-id="39d1e-112">还可以精确指定 XML 文件的绝对或相对路径及名称。</span><span class="sxs-lookup"><span data-stu-id="39d1e-112">You can also specify the exact absolute or relative path and name of the XML file.</span></span> <span data-ttu-id="39d1e-113">下面的示例在与调试版本的应用程序相同的目录中生成 XML 文件：</span><span class="sxs-lookup"><span data-stu-id="39d1e-113">The following example generates the XML file in the same directory as the debug version of an application:</span></span>
 
    ```xml
    <DocumentationFile>bin\Debug\netcoreapp2.1\App.xml</DocumentationFile>
    ```
 
-- <span data-ttu-id="379a0-114">如果使用 Visual Studio 开发应用程序，右键单击项目并选择“属性”  。</span><span class="sxs-lookup"><span data-stu-id="379a0-114">If you are developing an application using Visual Studio, right-click on the project and select **Properties**.</span></span> <span data-ttu-id="379a0-115">在属性对话框中，选择“生成”  选项卡，然后选中“XML 文档文件”  。</span><span class="sxs-lookup"><span data-stu-id="379a0-115">In the properties dialog, select the **Build** tab, and check **XML documentation file**.</span></span> <span data-ttu-id="379a0-116">还可以更改编译器写入文件的位置。</span><span class="sxs-lookup"><span data-stu-id="379a0-116">You can also change the location to which the compiler writes the file.</span></span>
+- <span data-ttu-id="39d1e-114">如果使用 Visual Studio 开发应用程序，右键单击项目并选择“属性”  。</span><span class="sxs-lookup"><span data-stu-id="39d1e-114">If you are developing an application using Visual Studio, right-click on the project and select **Properties**.</span></span> <span data-ttu-id="39d1e-115">在属性对话框中，选择“生成”  选项卡，然后选中“XML 文档文件”  。</span><span class="sxs-lookup"><span data-stu-id="39d1e-115">In the properties dialog, select the **Build** tab, and check **XML documentation file**.</span></span> <span data-ttu-id="39d1e-116">还可以更改编译器写入文件的位置。</span><span class="sxs-lookup"><span data-stu-id="39d1e-116">You can also change the location to which the compiler writes the file.</span></span>
 
-- <span data-ttu-id="379a0-117">如果是从命令行编译 .NET Framework 应用程序，编译时请添加 [/doc 编译器选项](language-reference/compiler-options/doc-compiler-option.md)。</span><span class="sxs-lookup"><span data-stu-id="379a0-117">If you are compiling a .NET Framework application from the command line, add the [/doc compiler option](language-reference/compiler-options/doc-compiler-option.md) when compiling.</span></span>  
+- <span data-ttu-id="39d1e-117">如果是从命令行编译 .NET Framework 应用程序，编译时请添加 [-doc 编译器选项](language-reference/compiler-options/doc-compiler-option.md)。</span><span class="sxs-lookup"><span data-stu-id="39d1e-117">If you are compiling a .NET Framework application from the command line, add the [-doc compiler option](language-reference/compiler-options/doc-compiler-option.md) when compiling.</span></span>  
 
-<span data-ttu-id="379a0-118">XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。</span><span class="sxs-lookup"><span data-stu-id="379a0-118">XML documentation comments use triple forward slashes (`///`) and an XML formatted comment body.</span></span> <span data-ttu-id="379a0-119">例如:</span><span class="sxs-lookup"><span data-stu-id="379a0-119">For example:</span></span>
+<span data-ttu-id="39d1e-118">XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。</span><span class="sxs-lookup"><span data-stu-id="39d1e-118">XML documentation comments use triple forward slashes (`///`) and an XML formatted comment body.</span></span> <span data-ttu-id="39d1e-119">例如:</span><span class="sxs-lookup"><span data-stu-id="39d1e-119">For example:</span></span>
 
 [!code-csharp[XML Documentation Comment](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
 
-## <a name="walkthrough"></a><span data-ttu-id="379a0-120">演练</span><span class="sxs-lookup"><span data-stu-id="379a0-120">Walkthrough</span></span>
+## <a name="walkthrough"></a><span data-ttu-id="39d1e-120">演练</span><span class="sxs-lookup"><span data-stu-id="39d1e-120">Walkthrough</span></span>
 
-<span data-ttu-id="379a0-121">现在来演练针对一个十分基本的数学库进行文档编制，以使新手开发人员能够容易地理解/参与，以及使第三方开发人员能够轻松使用。</span><span class="sxs-lookup"><span data-stu-id="379a0-121">Let's walk through documenting a very basic math library to make it easy for new developers to understand/contribute and for third party developers to use.</span></span>
+<span data-ttu-id="39d1e-121">现在来演练针对一个十分基本的数学库进行文档编制，以使新手开发人员能够容易地理解/参与，以及使第三方开发人员能够轻松使用。</span><span class="sxs-lookup"><span data-stu-id="39d1e-121">Let's walk through documenting a very basic math library to make it easy for new developers to understand/contribute and for third party developers to use.</span></span>
 
-<span data-ttu-id="379a0-122">下面是简单数学库的代码：</span><span class="sxs-lookup"><span data-stu-id="379a0-122">Here's code for the simple math library:</span></span>
+<span data-ttu-id="39d1e-122">下面是简单数学库的代码：</span><span class="sxs-lookup"><span data-stu-id="39d1e-122">Here's code for the simple math library:</span></span>
 
 [!code-csharp[Sample Library](../../samples/snippets/csharp/concepts/codedoc/sample-library.cs)]
 
-<span data-ttu-id="379a0-123">示例库支持 `int` 和 `double` 数据类型的四种主要算术运算：`add`、`subtract`、`multiply` 和 `divide`。</span><span class="sxs-lookup"><span data-stu-id="379a0-123">The sample library supports four major arithmetic operations `add`, `subtract`, `multiply` and `divide` on `int` and `double` data types.</span></span>
+<span data-ttu-id="39d1e-123">示例库支持 `int` 和 `double` 数据类型的四种主要算术运算：`add`、`subtract`、`multiply` 和 `divide`。</span><span class="sxs-lookup"><span data-stu-id="39d1e-123">The sample library supports four major arithmetic operations `add`, `subtract`, `multiply` and `divide` on `int` and `double` data types.</span></span>
 
-<span data-ttu-id="379a0-124">现在，希望能够从代码中为使用库但无源代码访问权限的第三方开发人员创建 API 引用文档。</span><span class="sxs-lookup"><span data-stu-id="379a0-124">Now you want to be able to create an API reference document from your code for third party developers who use your library but don't have access to the source code.</span></span>
-<span data-ttu-id="379a0-125">如前面所述，XML 文档标记可用于实现此目的。</span><span class="sxs-lookup"><span data-stu-id="379a0-125">As mentioned earlier XML documentation tags can be used to achieve this.</span></span> <span data-ttu-id="379a0-126">现在介绍 C# 编译器支持的标准 XML 标记。</span><span class="sxs-lookup"><span data-stu-id="379a0-126">You will now be introduced to the standard XML tags the C# compiler supports.</span></span>
+<span data-ttu-id="39d1e-124">现在，希望能够从代码中为使用库但无源代码访问权限的第三方开发人员创建 API 引用文档。</span><span class="sxs-lookup"><span data-stu-id="39d1e-124">Now you want to be able to create an API reference document from your code for third party developers who use your library but don't have access to the source code.</span></span>
+<span data-ttu-id="39d1e-125">如前面所述，XML 文档标记可用于实现此目的。</span><span class="sxs-lookup"><span data-stu-id="39d1e-125">As mentioned earlier XML documentation tags can be used to achieve this.</span></span> <span data-ttu-id="39d1e-126">现在介绍 C# 编译器支持的标准 XML 标记。</span><span class="sxs-lookup"><span data-stu-id="39d1e-126">You will now be introduced to the standard XML tags the C# compiler supports.</span></span>
 
-## <a name="summary"></a><span data-ttu-id="379a0-127">\<summary></span><span class="sxs-lookup"><span data-stu-id="379a0-127">\<summary></span></span>
+## <a name="summary"></a><span data-ttu-id="39d1e-127">\<summary></span><span class="sxs-lookup"><span data-stu-id="39d1e-127">\<summary></span></span>
 
-<span data-ttu-id="379a0-128">`<summary>` 标记可添加关于类型或成员的信息摘要。</span><span class="sxs-lookup"><span data-stu-id="379a0-128">The `<summary>` tag adds brief information about a type or member.</span></span>
-<span data-ttu-id="379a0-129">这里通过将其添加到 `Math` 类定义和第一个 `Add` 方法来演示其用法。</span><span class="sxs-lookup"><span data-stu-id="379a0-129">I'll demonstrate its use by adding it to the `Math` class definition and the first `Add` method.</span></span> <span data-ttu-id="379a0-130">可随意将其应用于代码的其余部分。</span><span class="sxs-lookup"><span data-stu-id="379a0-130">Feel free to apply it to the rest of your code.</span></span>
+<span data-ttu-id="39d1e-128">`<summary>` 标记可添加关于类型或成员的信息摘要。</span><span class="sxs-lookup"><span data-stu-id="39d1e-128">The `<summary>` tag adds brief information about a type or member.</span></span>
+<span data-ttu-id="39d1e-129">这里通过将其添加到 `Math` 类定义和第一个 `Add` 方法来演示其用法。</span><span class="sxs-lookup"><span data-stu-id="39d1e-129">I'll demonstrate its use by adding it to the `Math` class definition and the first `Add` method.</span></span> <span data-ttu-id="39d1e-130">可随意将其应用于代码的其余部分。</span><span class="sxs-lookup"><span data-stu-id="39d1e-130">Feel free to apply it to the rest of your code.</span></span>
 
 [!code-csharp[Summary Tag](../../samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
-<span data-ttu-id="379a0-131">`<summary>` 标记非常重要，建议包含，因为其内容是 IntelliSense 或 API 参考文档中的类型或成员信息的主要来源。</span><span class="sxs-lookup"><span data-stu-id="379a0-131">The `<summary>` tag is very important, and we recommend that you include it because its content is the primary source of type or member information in IntelliSense or an API reference document.</span></span>
+<span data-ttu-id="39d1e-131">`<summary>` 标记非常重要，建议包含，因为其内容是 IntelliSense 或 API 参考文档中的类型或成员信息的主要来源。</span><span class="sxs-lookup"><span data-stu-id="39d1e-131">The `<summary>` tag is very important, and we recommend that you include it because its content is the primary source of type or member information in IntelliSense or an API reference document.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="379a0-132">\<remarks></span><span class="sxs-lookup"><span data-stu-id="379a0-132">\<remarks></span></span>
+## <a name="remarks"></a><span data-ttu-id="39d1e-132">\<remarks></span><span class="sxs-lookup"><span data-stu-id="39d1e-132">\<remarks></span></span>
 
-<span data-ttu-id="379a0-133">`<remarks>`标记可补充关于 `<summary>` 标记提供的类型或成员的信息。</span><span class="sxs-lookup"><span data-stu-id="379a0-133">The `<remarks>` tag supplements the information about types or members that the `<summary>` tag provides.</span></span> <span data-ttu-id="379a0-134">在此示例中，只需将其添加到类。</span><span class="sxs-lookup"><span data-stu-id="379a0-134">In this example, you'll just add it to the class.</span></span>
+<span data-ttu-id="39d1e-133">`<remarks>`标记可补充关于 `<summary>` 标记提供的类型或成员的信息。</span><span class="sxs-lookup"><span data-stu-id="39d1e-133">The `<remarks>` tag supplements the information about types or members that the `<summary>` tag provides.</span></span> <span data-ttu-id="39d1e-134">在此示例中，只需将其添加到类。</span><span class="sxs-lookup"><span data-stu-id="39d1e-134">In this example, you'll just add it to the class.</span></span>
 
 [!code-csharp[Remarks Tag](../../samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
 
-## <a name="returns"></a><span data-ttu-id="379a0-135">\<returns></span><span class="sxs-lookup"><span data-stu-id="379a0-135">\<returns></span></span>
+## <a name="returns"></a><span data-ttu-id="39d1e-135">\<returns></span><span class="sxs-lookup"><span data-stu-id="39d1e-135">\<returns></span></span>
 
-<span data-ttu-id="379a0-136">`<returns>` 标记描述方法声明的返回值。</span><span class="sxs-lookup"><span data-stu-id="379a0-136">The `<returns>` tag describes the return value of a method declaration.</span></span>
-<span data-ttu-id="379a0-137">与以前一样，下面的示例展示第一个 `Add` 方法上的 `<returns>` 标记。</span><span class="sxs-lookup"><span data-stu-id="379a0-137">As before, the following example illustrates the `<returns>` tag on the first `Add` method.</span></span> <span data-ttu-id="379a0-138">可以对其他方法执行相同操作。</span><span class="sxs-lookup"><span data-stu-id="379a0-138">You can do the same on other methods.</span></span>
+<span data-ttu-id="39d1e-136">`<returns>` 标记描述方法声明的返回值。</span><span class="sxs-lookup"><span data-stu-id="39d1e-136">The `<returns>` tag describes the return value of a method declaration.</span></span>
+<span data-ttu-id="39d1e-137">与以前一样，下面的示例展示第一个 `Add` 方法上的 `<returns>` 标记。</span><span class="sxs-lookup"><span data-stu-id="39d1e-137">As before, the following example illustrates the `<returns>` tag on the first `Add` method.</span></span> <span data-ttu-id="39d1e-138">可以对其他方法执行相同操作。</span><span class="sxs-lookup"><span data-stu-id="39d1e-138">You can do the same on other methods.</span></span>
 
 [!code-csharp[Returns Tag](../../samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
 
-## <a name="value"></a><span data-ttu-id="379a0-139">\<value></span><span class="sxs-lookup"><span data-stu-id="379a0-139">\<value></span></span>
+## <a name="value"></a><span data-ttu-id="39d1e-139">\<value></span><span class="sxs-lookup"><span data-stu-id="39d1e-139">\<value></span></span>
 
-<span data-ttu-id="379a0-140">`<value>` 标记类似于 `<returns>` 标记，只不过前者用于属性。</span><span class="sxs-lookup"><span data-stu-id="379a0-140">The `<value>` tag is similar to the `<returns>` tag, except that you use it for properties.</span></span>
-<span data-ttu-id="379a0-141">假设 `Math` 库有一个名为 `PI` 的静态属性，下面是此标记的用法：</span><span class="sxs-lookup"><span data-stu-id="379a0-141">Assuming your `Math` library had a static property called `PI`, here's how you'd use this tag:</span></span>
+<span data-ttu-id="39d1e-140">`<value>` 标记类似于 `<returns>` 标记，只不过前者用于属性。</span><span class="sxs-lookup"><span data-stu-id="39d1e-140">The `<value>` tag is similar to the `<returns>` tag, except that you use it for properties.</span></span>
+<span data-ttu-id="39d1e-141">假设 `Math` 库有一个名为 `PI` 的静态属性，下面是此标记的用法：</span><span class="sxs-lookup"><span data-stu-id="39d1e-141">Assuming your `Math` library had a static property called `PI`, here's how you'd use this tag:</span></span>
 
 [!code-csharp[Value Tag](../../samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
 
-## <a name="example"></a><span data-ttu-id="379a0-142">\<example></span><span class="sxs-lookup"><span data-stu-id="379a0-142">\<example></span></span>
+## <a name="example"></a><span data-ttu-id="39d1e-142">\<example></span><span class="sxs-lookup"><span data-stu-id="39d1e-142">\<example></span></span>
 
-<span data-ttu-id="379a0-143">使用 `<example>` 标记可在 XML 文档中包含一个示例。</span><span class="sxs-lookup"><span data-stu-id="379a0-143">You use the `<example>` tag to include an example in your XML documentation.</span></span>
-<span data-ttu-id="379a0-144">此操作包括使用子 `<code>` 标记。</span><span class="sxs-lookup"><span data-stu-id="379a0-144">This involves using the child `<code>` tag.</span></span>
+<span data-ttu-id="39d1e-143">使用 `<example>` 标记可在 XML 文档中包含一个示例。</span><span class="sxs-lookup"><span data-stu-id="39d1e-143">You use the `<example>` tag to include an example in your XML documentation.</span></span>
+<span data-ttu-id="39d1e-144">此操作包括使用子 `<code>` 标记。</span><span class="sxs-lookup"><span data-stu-id="39d1e-144">This involves using the child `<code>` tag.</span></span>
 
 [!code-csharp[Example Tag](../../samples/snippets/csharp/concepts/codedoc/example-tag.cs)]
 
-<span data-ttu-id="379a0-145">`code` 标记保留较长示例的换行符和缩进。</span><span class="sxs-lookup"><span data-stu-id="379a0-145">The `code` tag preserves line breaks and indentation for longer examples.</span></span>
+<span data-ttu-id="39d1e-145">`code` 标记保留较长示例的换行符和缩进。</span><span class="sxs-lookup"><span data-stu-id="39d1e-145">The `code` tag preserves line breaks and indentation for longer examples.</span></span>
 
-## <a name="para"></a><span data-ttu-id="379a0-146">\<para></span><span class="sxs-lookup"><span data-stu-id="379a0-146">\<para></span></span>
+## <a name="para"></a><span data-ttu-id="39d1e-146">\<para></span><span class="sxs-lookup"><span data-stu-id="39d1e-146">\<para></span></span>
 
-<span data-ttu-id="379a0-147">`<para>` 标记可用于设置其父标记内的内容的格式。</span><span class="sxs-lookup"><span data-stu-id="379a0-147">You use the `<para>` tag to format the content within its parent tag.</span></span> <span data-ttu-id="379a0-148">`<para>` 通常在标记内使用，如 `<remarks>` 或 `<returns>`，作用是将文本分成段落。</span><span class="sxs-lookup"><span data-stu-id="379a0-148">`<para>` is usually used inside a tag, such as `<remarks>` or `<returns>`, to divide text into paragraphs.</span></span>
-<span data-ttu-id="379a0-149">可以为类定义设置 `<remarks>` 标记的内容的格式。</span><span class="sxs-lookup"><span data-stu-id="379a0-149">You can format the contents of the `<remarks>` tag for your class definition.</span></span>
+<span data-ttu-id="39d1e-147">`<para>` 标记可用于设置其父标记内的内容的格式。</span><span class="sxs-lookup"><span data-stu-id="39d1e-147">You use the `<para>` tag to format the content within its parent tag.</span></span> <span data-ttu-id="39d1e-148">`<para>` 通常在标记内使用，如 `<remarks>` 或 `<returns>`，作用是将文本分成段落。</span><span class="sxs-lookup"><span data-stu-id="39d1e-148">`<para>` is usually used inside a tag, such as `<remarks>` or `<returns>`, to divide text into paragraphs.</span></span>
+<span data-ttu-id="39d1e-149">可以为类定义设置 `<remarks>` 标记的内容的格式。</span><span class="sxs-lookup"><span data-stu-id="39d1e-149">You can format the contents of the `<remarks>` tag for your class definition.</span></span>
 
 [!code-csharp[Para Tag](../../samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
 
-## <a name="c"></a><span data-ttu-id="379a0-150">\<c></span><span class="sxs-lookup"><span data-stu-id="379a0-150">\<c></span></span>
+## <a name="c"></a><span data-ttu-id="39d1e-150">\<c></span><span class="sxs-lookup"><span data-stu-id="39d1e-150">\<c></span></span>
 
-<span data-ttu-id="379a0-151">还是关于格式设置，使用 `<c>` 标记可将部分文本标记为代码。</span><span class="sxs-lookup"><span data-stu-id="379a0-151">Still on the topic of formatting, you use the `<c>` tag for marking part of text as code.</span></span>
-<span data-ttu-id="379a0-152">与 `<code>` 标记类似，但是内联的。</span><span class="sxs-lookup"><span data-stu-id="379a0-152">It's like the `<code>` tag but inline.</span></span> <span data-ttu-id="379a0-153">想要显示快速代码示例并将其作为标记内容一部分时，这很有帮助。</span><span class="sxs-lookup"><span data-stu-id="379a0-153">It's useful when you want to show a quick code example as part of a tag's content.</span></span>
-<span data-ttu-id="379a0-154">现在来更新 `Math` 类的文档。</span><span class="sxs-lookup"><span data-stu-id="379a0-154">Let's update the documentation for the `Math` class.</span></span>
+<span data-ttu-id="39d1e-151">还是关于格式设置，使用 `<c>` 标记可将部分文本标记为代码。</span><span class="sxs-lookup"><span data-stu-id="39d1e-151">Still on the topic of formatting, you use the `<c>` tag for marking part of text as code.</span></span>
+<span data-ttu-id="39d1e-152">与 `<code>` 标记类似，但是内联的。</span><span class="sxs-lookup"><span data-stu-id="39d1e-152">It's like the `<code>` tag but inline.</span></span> <span data-ttu-id="39d1e-153">想要显示快速代码示例并将其作为标记内容一部分时，这很有帮助。</span><span class="sxs-lookup"><span data-stu-id="39d1e-153">It's useful when you want to show a quick code example as part of a tag's content.</span></span>
+<span data-ttu-id="39d1e-154">现在来更新 `Math` 类的文档。</span><span class="sxs-lookup"><span data-stu-id="39d1e-154">Let's update the documentation for the `Math` class.</span></span>
 
 [!code-csharp[C Tag](../../samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
 
-## <a name="exception"></a><span data-ttu-id="379a0-155">\<exception></span><span class="sxs-lookup"><span data-stu-id="379a0-155">\<exception></span></span>
+## <a name="exception"></a><span data-ttu-id="39d1e-155">\<exception></span><span class="sxs-lookup"><span data-stu-id="39d1e-155">\<exception></span></span>
 
-<span data-ttu-id="379a0-156">通过使用 `<exception>` 标记，可以让开发人员了解到，方法有可能引发特定异常。</span><span class="sxs-lookup"><span data-stu-id="379a0-156">By using the `<exception>` tag, you let your developers know that a method can throw specific exceptions.</span></span>
-<span data-ttu-id="379a0-157">查看 `Math` 库，可以看到，如果满足特定条件，两个 `Add` 方法都会引发异常。</span><span class="sxs-lookup"><span data-stu-id="379a0-157">Looking at your `Math` library, you can see that both `Add` methods throw an exception if a certain condition is met.</span></span> <span data-ttu-id="379a0-158">如果 `b` 参数为零，则 `Divide` 方法也会引发异常，尽管不是很常见。</span><span class="sxs-lookup"><span data-stu-id="379a0-158">Not so obvious, though, is that integer `Divide` method throws as well if the `b` parameter is zero.</span></span> <span data-ttu-id="379a0-159">现在将异常文档添加到此方法。</span><span class="sxs-lookup"><span data-stu-id="379a0-159">Now add exception documentation to this method.</span></span>
+<span data-ttu-id="39d1e-156">通过使用 `<exception>` 标记，可以让开发人员了解到，方法有可能引发特定异常。</span><span class="sxs-lookup"><span data-stu-id="39d1e-156">By using the `<exception>` tag, you let your developers know that a method can throw specific exceptions.</span></span>
+<span data-ttu-id="39d1e-157">查看 `Math` 库，可以看到，如果满足特定条件，两个 `Add` 方法都会引发异常。</span><span class="sxs-lookup"><span data-stu-id="39d1e-157">Looking at your `Math` library, you can see that both `Add` methods throw an exception if a certain condition is met.</span></span> <span data-ttu-id="39d1e-158">如果 `b` 参数为零，则 `Divide` 方法也会引发异常，尽管不是很常见。</span><span class="sxs-lookup"><span data-stu-id="39d1e-158">Not so obvious, though, is that integer `Divide` method throws as well if the `b` parameter is zero.</span></span> <span data-ttu-id="39d1e-159">现在将异常文档添加到此方法。</span><span class="sxs-lookup"><span data-stu-id="39d1e-159">Now add exception documentation to this method.</span></span>
 
 [!code-csharp[Exception Tag](../../samples/snippets/csharp/concepts/codedoc/exception-tag.cs)]
 
-<span data-ttu-id="379a0-160">`cref` 属性表示可从当前编译环境中实现的异常引用。</span><span class="sxs-lookup"><span data-stu-id="379a0-160">The `cref` attribute represents a reference to an exception that is available from the current compilation environment.</span></span>
-<span data-ttu-id="379a0-161">其类型可为项目中或引用的程序集中定义的任何类型。</span><span class="sxs-lookup"><span data-stu-id="379a0-161">This can be any type defined in the project or a referenced assembly.</span></span> <span data-ttu-id="379a0-162">如果无法解析编译器的值，则该编译器将发出一条警告。</span><span class="sxs-lookup"><span data-stu-id="379a0-162">The compiler will issue a warning if its value cannot be resolved.</span></span>
+<span data-ttu-id="39d1e-160">`cref` 属性表示可从当前编译环境中实现的异常引用。</span><span class="sxs-lookup"><span data-stu-id="39d1e-160">The `cref` attribute represents a reference to an exception that is available from the current compilation environment.</span></span>
+<span data-ttu-id="39d1e-161">其类型可为项目中或引用的程序集中定义的任何类型。</span><span class="sxs-lookup"><span data-stu-id="39d1e-161">This can be any type defined in the project or a referenced assembly.</span></span> <span data-ttu-id="39d1e-162">如果无法解析编译器的值，则该编译器将发出一条警告。</span><span class="sxs-lookup"><span data-stu-id="39d1e-162">The compiler will issue a warning if its value cannot be resolved.</span></span>
 
-## <a name="see"></a><span data-ttu-id="379a0-163">\<see></span><span class="sxs-lookup"><span data-stu-id="379a0-163">\<see></span></span>
+## <a name="see"></a><span data-ttu-id="39d1e-163">\<see></span><span class="sxs-lookup"><span data-stu-id="39d1e-163">\<see></span></span>
 
-<span data-ttu-id="379a0-164">使用 `<see>` 标记，可以创建可单击的链接，指向另一个代码元素的文档页面。</span><span class="sxs-lookup"><span data-stu-id="379a0-164">The `<see>` tag lets you create a clickable link to a documentation page for another code element.</span></span> <span data-ttu-id="379a0-165">在下一个示例中，将创建两个 `Add` 方法之间的可单击的链接。</span><span class="sxs-lookup"><span data-stu-id="379a0-165">In our next example, we'll create a clickable link between the two `Add` methods.</span></span>
+<span data-ttu-id="39d1e-164">使用 `<see>` 标记，可以创建可单击的链接，指向另一个代码元素的文档页面。</span><span class="sxs-lookup"><span data-stu-id="39d1e-164">The `<see>` tag lets you create a clickable link to a documentation page for another code element.</span></span> <span data-ttu-id="39d1e-165">在下一个示例中，将创建两个 `Add` 方法之间的可单击的链接。</span><span class="sxs-lookup"><span data-stu-id="39d1e-165">In our next example, we'll create a clickable link between the two `Add` methods.</span></span>
 
 [!code-csharp[See Tag](../../samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
 
-<span data-ttu-id="379a0-166">`cref` 是表示可从当前编译环境引用的类型或其成员的**必需**属性。</span><span class="sxs-lookup"><span data-stu-id="379a0-166">The `cref` is a **required** attribute that represents a reference to a type or its member that is available from the current compilation environment.</span></span>
-<span data-ttu-id="379a0-167">其类型可为项目中或引用的程序集中定义的任何类型。</span><span class="sxs-lookup"><span data-stu-id="379a0-167">This can be any type defined in the project or a referenced assembly.</span></span>
+<span data-ttu-id="39d1e-166">`cref` 是表示可从当前编译环境引用的类型或其成员的**必需**属性。</span><span class="sxs-lookup"><span data-stu-id="39d1e-166">The `cref` is a **required** attribute that represents a reference to a type or its member that is available from the current compilation environment.</span></span>
+<span data-ttu-id="39d1e-167">其类型可为项目中或引用的程序集中定义的任何类型。</span><span class="sxs-lookup"><span data-stu-id="39d1e-167">This can be any type defined in the project or a referenced assembly.</span></span>
 
-## <a name="seealso"></a><span data-ttu-id="379a0-168">\<seealso></span><span class="sxs-lookup"><span data-stu-id="379a0-168">\<seealso></span></span>
+## <a name="seealso"></a><span data-ttu-id="39d1e-168">\<seealso></span><span class="sxs-lookup"><span data-stu-id="39d1e-168">\<seealso></span></span>
 
-<span data-ttu-id="379a0-169">可以通过使用 `<see>` 标记的方式使用 `<seealso>`标记。</span><span class="sxs-lookup"><span data-stu-id="379a0-169">You use the `<seealso>` tag in the same way you do the `<see>` tag.</span></span> <span data-ttu-id="379a0-170">唯一的区别是其内容通常位于“另请参见”部分。</span><span class="sxs-lookup"><span data-stu-id="379a0-170">The only difference is that its content is typically placed in a "See Also" section.</span></span> <span data-ttu-id="379a0-171">以下将在整数 `Add` 方法上添加 `seealso` 标记，从而在接受整数参数的类中引用其他方法：</span><span class="sxs-lookup"><span data-stu-id="379a0-171">Here we'll add a `seealso` tag on the integer `Add` method to reference other methods in the class that accept integer parameters:</span></span>
+<span data-ttu-id="39d1e-169">可以通过使用 `<see>` 标记的方式使用 `<seealso>`标记。</span><span class="sxs-lookup"><span data-stu-id="39d1e-169">You use the `<seealso>` tag in the same way you do the `<see>` tag.</span></span> <span data-ttu-id="39d1e-170">唯一的区别是其内容通常位于“另请参见”部分。</span><span class="sxs-lookup"><span data-stu-id="39d1e-170">The only difference is that its content is typically placed in a "See Also" section.</span></span> <span data-ttu-id="39d1e-171">以下将在整数 `Add` 方法上添加 `seealso` 标记，从而在接受整数参数的类中引用其他方法：</span><span class="sxs-lookup"><span data-stu-id="39d1e-171">Here we'll add a `seealso` tag on the integer `Add` method to reference other methods in the class that accept integer parameters:</span></span>
 
 [!code-csharp[Seealso Tag](../../samples/snippets/csharp/concepts/codedoc/seealso-tag.cs)]
 
-<span data-ttu-id="379a0-172">`cref` 属性表示可从当前编译环境进行的对类型或其成员的引用。</span><span class="sxs-lookup"><span data-stu-id="379a0-172">The `cref` attribute represents a reference to a type or its member that is available from the current compilation environment.</span></span>
-<span data-ttu-id="379a0-173">其类型可为项目中或引用的程序集中定义的任何类型。</span><span class="sxs-lookup"><span data-stu-id="379a0-173">This can be any type defined in the project or a referenced assembly.</span></span>
+<span data-ttu-id="39d1e-172">`cref` 属性表示可从当前编译环境进行的对类型或其成员的引用。</span><span class="sxs-lookup"><span data-stu-id="39d1e-172">The `cref` attribute represents a reference to a type or its member that is available from the current compilation environment.</span></span>
+<span data-ttu-id="39d1e-173">其类型可为项目中或引用的程序集中定义的任何类型。</span><span class="sxs-lookup"><span data-stu-id="39d1e-173">This can be any type defined in the project or a referenced assembly.</span></span>
 
-## <a name="param"></a><span data-ttu-id="379a0-174">\<param></span><span class="sxs-lookup"><span data-stu-id="379a0-174">\<param></span></span>
+## <a name="param"></a><span data-ttu-id="39d1e-174">\<param></span><span class="sxs-lookup"><span data-stu-id="39d1e-174">\<param></span></span>
 
-<span data-ttu-id="379a0-175">使用 `<param>` 标记来描述方法的参数。</span><span class="sxs-lookup"><span data-stu-id="379a0-175">You use the `<param>` tag to describe a method's parameters.</span></span> <span data-ttu-id="379a0-176">以下是关于双 `Add` 方法的示例：标记描述的参数在所需的 `name` 属性中指定  。</span><span class="sxs-lookup"><span data-stu-id="379a0-176">Here's an example on the double `Add` method: The parameter the tag describes is specified in the **required** `name` attribute.</span></span>
+<span data-ttu-id="39d1e-175">使用 `<param>` 标记来描述方法的参数。</span><span class="sxs-lookup"><span data-stu-id="39d1e-175">You use the `<param>` tag to describe a method's parameters.</span></span> <span data-ttu-id="39d1e-176">以下是关于双 `Add` 方法的示例：标记描述的参数在所需的 `name` 属性中指定  。</span><span class="sxs-lookup"><span data-stu-id="39d1e-176">Here's an example on the double `Add` method: The parameter the tag describes is specified in the **required** `name` attribute.</span></span>
 
 [!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
-## <a name="typeparam"></a><span data-ttu-id="379a0-177">\<typeparam></span><span class="sxs-lookup"><span data-stu-id="379a0-177">\<typeparam></span></span>
+## <a name="typeparam"></a><span data-ttu-id="39d1e-177">\<typeparam></span><span class="sxs-lookup"><span data-stu-id="39d1e-177">\<typeparam></span></span>
 
-<span data-ttu-id="379a0-178">`<typeparam>` 标记的用法与 `<param>` 标记一样，但前者由泛型类型或方法声明用来描述泛型参数。</span><span class="sxs-lookup"><span data-stu-id="379a0-178">You use `<typeparam>` tag just like the `<param>` tag but for generic type or method declarations to describe a generic parameter.</span></span>
-<span data-ttu-id="379a0-179">将快速泛型方法添加到 `Math` 类，以检查某个数量是否大于另一个数量。</span><span class="sxs-lookup"><span data-stu-id="379a0-179">Add a quick generic method to your `Math` class to check if one quantity is greater than another.</span></span>
+<span data-ttu-id="39d1e-178">`<typeparam>` 标记的用法与 `<param>` 标记一样，但前者由泛型类型或方法声明用来描述泛型参数。</span><span class="sxs-lookup"><span data-stu-id="39d1e-178">You use `<typeparam>` tag just like the `<param>` tag but for generic type or method declarations to describe a generic parameter.</span></span>
+<span data-ttu-id="39d1e-179">将快速泛型方法添加到 `Math` 类，以检查某个数量是否大于另一个数量。</span><span class="sxs-lookup"><span data-stu-id="39d1e-179">Add a quick generic method to your `Math` class to check if one quantity is greater than another.</span></span>
 
 [!code-csharp[Typeparam Tag](../../samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
 
-## <a name="paramref"></a><span data-ttu-id="379a0-180">\<paramref></span><span class="sxs-lookup"><span data-stu-id="379a0-180">\<paramref></span></span>
+## <a name="paramref"></a><span data-ttu-id="39d1e-180">\<paramref></span><span class="sxs-lookup"><span data-stu-id="39d1e-180">\<paramref></span></span>
 
-<span data-ttu-id="379a0-181">有时可能正在通过一个 `<summary>` 标记描述一个方法的作用，并且想要引用一个参数。</span><span class="sxs-lookup"><span data-stu-id="379a0-181">Sometimes you might be in the middle of describing what a method does in what could be a `<summary>` tag, and you might want to make a reference to a parameter.</span></span> <span data-ttu-id="379a0-182">这时 `<paramref>` 标记就很适合用来实现这一目的。</span><span class="sxs-lookup"><span data-stu-id="379a0-182">The `<paramref>` tag is great for just this.</span></span> <span data-ttu-id="379a0-183">现在来更新双基 `Add` 方法的摘要。</span><span class="sxs-lookup"><span data-stu-id="379a0-183">Let's update the summary of our double based `Add` method.</span></span> <span data-ttu-id="379a0-184">与 `<param>` 标记一样，参数名称在**必需**的 `name` 属性中指定。</span><span class="sxs-lookup"><span data-stu-id="379a0-184">Like the `<param>` tag the parameter name is specified in the **required** `name` attribute.</span></span>
+<span data-ttu-id="39d1e-181">有时可能正在通过一个 `<summary>` 标记描述一个方法的作用，并且想要引用一个参数。</span><span class="sxs-lookup"><span data-stu-id="39d1e-181">Sometimes you might be in the middle of describing what a method does in what could be a `<summary>` tag, and you might want to make a reference to a parameter.</span></span> <span data-ttu-id="39d1e-182">这时 `<paramref>` 标记就很适合用来实现这一目的。</span><span class="sxs-lookup"><span data-stu-id="39d1e-182">The `<paramref>` tag is great for just this.</span></span> <span data-ttu-id="39d1e-183">现在来更新双基 `Add` 方法的摘要。</span><span class="sxs-lookup"><span data-stu-id="39d1e-183">Let's update the summary of our double based `Add` method.</span></span> <span data-ttu-id="39d1e-184">与 `<param>` 标记一样，参数名称在**必需**的 `name` 属性中指定。</span><span class="sxs-lookup"><span data-stu-id="39d1e-184">Like the `<param>` tag the parameter name is specified in the **required** `name` attribute.</span></span>
 
 [!code-csharp[Paramref Tag](../../samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
-## <a name="typeparamref"></a><span data-ttu-id="379a0-185">\<typeparamref></span><span class="sxs-lookup"><span data-stu-id="379a0-185">\<typeparamref></span></span>
+## <a name="typeparamref"></a><span data-ttu-id="39d1e-185">\<typeparamref></span><span class="sxs-lookup"><span data-stu-id="39d1e-185">\<typeparamref></span></span>
 
-<span data-ttu-id="379a0-186">`<typeparamref>` 标记的用法与 `<paramref>` 标记一样，但前者由泛型类型或方法声明用来描述泛型参数。</span><span class="sxs-lookup"><span data-stu-id="379a0-186">You use `<typeparamref>` tag just like the `<paramref>` tag but for generic type or method declarations to describe a generic parameter.</span></span>
-<span data-ttu-id="379a0-187">可以使用之前创建的那个泛型方法。</span><span class="sxs-lookup"><span data-stu-id="379a0-187">You can use the same generic method you previously created.</span></span>
+<span data-ttu-id="39d1e-186">`<typeparamref>` 标记的用法与 `<paramref>` 标记一样，但前者由泛型类型或方法声明用来描述泛型参数。</span><span class="sxs-lookup"><span data-stu-id="39d1e-186">You use `<typeparamref>` tag just like the `<paramref>` tag but for generic type or method declarations to describe a generic parameter.</span></span>
+<span data-ttu-id="39d1e-187">可以使用之前创建的那个泛型方法。</span><span class="sxs-lookup"><span data-stu-id="39d1e-187">You can use the same generic method you previously created.</span></span>
 
 [!code-csharp[Typeparamref Tag](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
 
-## <a name="list"></a><span data-ttu-id="379a0-188">\<list></span><span class="sxs-lookup"><span data-stu-id="379a0-188">\<list></span></span>
+## <a name="list"></a><span data-ttu-id="39d1e-188">\<list></span><span class="sxs-lookup"><span data-stu-id="39d1e-188">\<list></span></span>
 
-<span data-ttu-id="379a0-189">使用 `<list>` 标记可将文档信息格式化为有序列表、无序列表或表格。</span><span class="sxs-lookup"><span data-stu-id="379a0-189">You use the `<list>` tag to format documentation information as an ordered list, unordered list or table.</span></span>
-<span data-ttu-id="379a0-190">制作 `Math` 库支持的所有数学操作的无序列表。</span><span class="sxs-lookup"><span data-stu-id="379a0-190">Make an unordered list of every math operation your `Math` library supports.</span></span>
+<span data-ttu-id="39d1e-189">使用 `<list>` 标记可将文档信息格式化为有序列表、无序列表或表格。</span><span class="sxs-lookup"><span data-stu-id="39d1e-189">You use the `<list>` tag to format documentation information as an ordered list, unordered list or table.</span></span>
+<span data-ttu-id="39d1e-190">制作 `Math` 库支持的所有数学操作的无序列表。</span><span class="sxs-lookup"><span data-stu-id="39d1e-190">Make an unordered list of every math operation your `Math` library supports.</span></span>
 
 [!code-csharp[List Tag](../../samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
-<span data-ttu-id="379a0-191">可以通过将 `type` 属性分别改为 `number` 或 `table` 来制作有序列表或表格。</span><span class="sxs-lookup"><span data-stu-id="379a0-191">You can make an ordered list or table by changing the `type` attribute to `number` or `table`, respectively.</span></span>
+<span data-ttu-id="39d1e-191">可以通过将 `type` 属性分别改为 `number` 或 `table` 来制作有序列表或表格。</span><span class="sxs-lookup"><span data-stu-id="39d1e-191">You can make an ordered list or table by changing the `type` attribute to `number` or `table`, respectively.</span></span>
 
-### <a name="putting-it-all-together"></a><span data-ttu-id="379a0-192">配合使用</span><span class="sxs-lookup"><span data-stu-id="379a0-192">Putting it all together</span></span>
+### <a name="putting-it-all-together"></a><span data-ttu-id="39d1e-192">配合使用</span><span class="sxs-lookup"><span data-stu-id="39d1e-192">Putting it all together</span></span>
 
-<span data-ttu-id="379a0-193">如果已按照本教程的操作方法将标记应用于代码中的所需位置，则代码现应如下所示：</span><span class="sxs-lookup"><span data-stu-id="379a0-193">If you've followed this tutorial and applied the tags to your code where necessary, your code should now look similar to the following:</span></span>
+<span data-ttu-id="39d1e-193">如果已按照本教程的操作方法将标记应用于代码中的所需位置，则代码现应如下所示：</span><span class="sxs-lookup"><span data-stu-id="39d1e-193">If you've followed this tutorial and applied the tags to your code where necessary, your code should now look similar to the following:</span></span>
 
 [!code-csharp[Tagged Library](../../samples/snippets/csharp/concepts/codedoc/tagged-library.cs)]
 
-<span data-ttu-id="379a0-194">可从代码中生成包括可单击的交叉引用的详细文档网站。</span><span class="sxs-lookup"><span data-stu-id="379a0-194">From your code, you can generate a detailed documentation website complete with clickable cross-references.</span></span> <span data-ttu-id="379a0-195">但将面临另一问题：代码变得难以阅读。</span><span class="sxs-lookup"><span data-stu-id="379a0-195">But you're faced with another problem: your code has become hard to read.</span></span>
-<span data-ttu-id="379a0-196">需要筛查的信息浩如烟海，这对任何要参与此代码编写的开发人员都是噩梦。</span><span class="sxs-lookup"><span data-stu-id="379a0-196">There's so much information to sift through that this is going to be a nightmare for any developer who wants to contribute to this code.</span></span>
-<span data-ttu-id="379a0-197">幸好有一个 XML 标记，可帮助解决这个问题：</span><span class="sxs-lookup"><span data-stu-id="379a0-197">Thankfully there's an XML tag that can help you deal with this:</span></span>
+<span data-ttu-id="39d1e-194">可从代码中生成包括可单击的交叉引用的详细文档网站。</span><span class="sxs-lookup"><span data-stu-id="39d1e-194">From your code, you can generate a detailed documentation website complete with clickable cross-references.</span></span> <span data-ttu-id="39d1e-195">但将面临另一问题：代码变得难以阅读。</span><span class="sxs-lookup"><span data-stu-id="39d1e-195">But you're faced with another problem: your code has become hard to read.</span></span>
+<span data-ttu-id="39d1e-196">需要筛查的信息浩如烟海，这对任何要参与此代码编写的开发人员都是噩梦。</span><span class="sxs-lookup"><span data-stu-id="39d1e-196">There's so much information to sift through that this is going to be a nightmare for any developer who wants to contribute to this code.</span></span>
+<span data-ttu-id="39d1e-197">幸好有一个 XML 标记，可帮助解决这个问题：</span><span class="sxs-lookup"><span data-stu-id="39d1e-197">Thankfully there's an XML tag that can help you deal with this:</span></span>
 
-## <a name="include"></a><span data-ttu-id="379a0-198">\<include></span><span class="sxs-lookup"><span data-stu-id="379a0-198">\<include></span></span>
+## <a name="include"></a><span data-ttu-id="39d1e-198">\<include></span><span class="sxs-lookup"><span data-stu-id="39d1e-198">\<include></span></span>
 
-<span data-ttu-id="379a0-199">使用 `<include>` 标记，可以引用单独的 XML 文件中的注释（该文件描述源代码中的类型和成员），而不是将文档注释直接放入源代码文件中。</span><span class="sxs-lookup"><span data-stu-id="379a0-199">The `<include>` tag lets you refer to comments in a separate XML file that describe the types and members in your source code, as opposed to placing documentation comments directly in your source code file.</span></span>
+<span data-ttu-id="39d1e-199">使用 `<include>` 标记，可以引用单独的 XML 文件中的注释（该文件描述源代码中的类型和成员），而不是将文档注释直接放入源代码文件中。</span><span class="sxs-lookup"><span data-stu-id="39d1e-199">The `<include>` tag lets you refer to comments in a separate XML file that describe the types and members in your source code, as opposed to placing documentation comments directly in your source code file.</span></span>
 
-<span data-ttu-id="379a0-200">现在，要将所有 XML 标记移到名为 `docs.xml` 的单独的 XML 文件中。</span><span class="sxs-lookup"><span data-stu-id="379a0-200">Now you're going to move all your XML tags into a separate XML file named `docs.xml`.</span></span> <span data-ttu-id="379a0-201">可随时重新命名该文件。</span><span class="sxs-lookup"><span data-stu-id="379a0-201">Feel free to name the file whatever you want.</span></span>
+<span data-ttu-id="39d1e-200">现在，要将所有 XML 标记移到名为 `docs.xml` 的单独的 XML 文件中。</span><span class="sxs-lookup"><span data-stu-id="39d1e-200">Now you're going to move all your XML tags into a separate XML file named `docs.xml`.</span></span> <span data-ttu-id="39d1e-201">可随时重新命名该文件。</span><span class="sxs-lookup"><span data-stu-id="39d1e-201">Feel free to name the file whatever you want.</span></span>
 
 [!code-xml[Sample XML](../../samples/snippets/csharp/concepts/codedoc/include.xml)]
 
-<span data-ttu-id="379a0-202">在上面的 XML 中，每个成员的文档注释将直接显示在按其作用命名的标记中。</span><span class="sxs-lookup"><span data-stu-id="379a0-202">In the above XML, each member's documentation comments appear directly inside a tag named after what they do.</span></span> <span data-ttu-id="379a0-203">可选择自己的策略。</span><span class="sxs-lookup"><span data-stu-id="379a0-203">You can choose your own strategy.</span></span>
-<span data-ttu-id="379a0-204">现在一个单独的文件中已具有 XML 注释，接下来来看看如何通过使用 `<include>` 标记使代码更易于阅读：</span><span class="sxs-lookup"><span data-stu-id="379a0-204">Now that you have your XML comments in a separate file, let's see how your code can be made more readable by using the `<include>` tag:</span></span>
+<span data-ttu-id="39d1e-202">在上面的 XML 中，每个成员的文档注释将直接显示在按其作用命名的标记中。</span><span class="sxs-lookup"><span data-stu-id="39d1e-202">In the above XML, each member's documentation comments appear directly inside a tag named after what they do.</span></span> <span data-ttu-id="39d1e-203">可选择自己的策略。</span><span class="sxs-lookup"><span data-stu-id="39d1e-203">You can choose your own strategy.</span></span>
+<span data-ttu-id="39d1e-204">现在一个单独的文件中已具有 XML 注释，接下来来看看如何通过使用 `<include>` 标记使代码更易于阅读：</span><span class="sxs-lookup"><span data-stu-id="39d1e-204">Now that you have your XML comments in a separate file, let's see how your code can be made more readable by using the `<include>` tag:</span></span>
 
 [!code-csharp[Include Tag](../../samples/snippets/csharp/concepts/codedoc/include-tag.cs)]
 
-<span data-ttu-id="379a0-205">现在好了，代码又变得可读了，并且未丢失任何文档信息。</span><span class="sxs-lookup"><span data-stu-id="379a0-205">And there you have it: our code is back to being readable, and no documentation information has been lost.</span></span>
+<span data-ttu-id="39d1e-205">现在好了，代码又变得可读了，并且未丢失任何文档信息。</span><span class="sxs-lookup"><span data-stu-id="39d1e-205">And there you have it: our code is back to being readable, and no documentation information has been lost.</span></span>
 
-<span data-ttu-id="379a0-206">`file` 属性表示包含文档的 XML 文件的名称。</span><span class="sxs-lookup"><span data-stu-id="379a0-206">The `file` attribute represents the name of the XML file containing the documentation.</span></span>
+<span data-ttu-id="39d1e-206">`file` 属性表示包含文档的 XML 文件的名称。</span><span class="sxs-lookup"><span data-stu-id="39d1e-206">The `file` attribute represents the name of the XML file containing the documentation.</span></span>
 
-<span data-ttu-id="379a0-207">`path` 属性表示一个 [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) 查询，该查询的对象为指定的 `file` 中的 `tag name`。</span><span class="sxs-lookup"><span data-stu-id="379a0-207">The `path` attribute represents an [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) query to the `tag name` present in the specified `file`.</span></span>
+<span data-ttu-id="39d1e-207">`path` 属性表示一个 [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) 查询，该查询的对象为指定的 `file` 中的 `tag name`。</span><span class="sxs-lookup"><span data-stu-id="39d1e-207">The `path` attribute represents an [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) query to the `tag name` present in the specified `file`.</span></span>
 
-<span data-ttu-id="379a0-208">`name` 属性表示位于注释前的标记中的名称说明符。</span><span class="sxs-lookup"><span data-stu-id="379a0-208">The `name` attribute represents the name specifier in the tag that precedes the comments.</span></span>
+<span data-ttu-id="39d1e-208">`name` 属性表示位于注释前的标记中的名称说明符。</span><span class="sxs-lookup"><span data-stu-id="39d1e-208">The `name` attribute represents the name specifier in the tag that precedes the comments.</span></span>
 
-<span data-ttu-id="379a0-209">可用于替换 `name` 的 `id` 属性表示位于注释前的标记的 ID。</span><span class="sxs-lookup"><span data-stu-id="379a0-209">The `id` attribute which can be used in place of `name` represents the ID for the tag that precedes the comments.</span></span>
+<span data-ttu-id="39d1e-209">可用于替换 `name` 的 `id` 属性表示位于注释前的标记的 ID。</span><span class="sxs-lookup"><span data-stu-id="39d1e-209">The `id` attribute which can be used in place of `name` represents the ID for the tag that precedes the comments.</span></span>
 
-### <a name="user-defined-tags"></a><span data-ttu-id="379a0-210">用户定义的标记</span><span class="sxs-lookup"><span data-stu-id="379a0-210">User Defined Tags</span></span>
+### <a name="user-defined-tags"></a><span data-ttu-id="39d1e-210">用户定义的标记</span><span class="sxs-lookup"><span data-stu-id="39d1e-210">User Defined Tags</span></span>
 
-<span data-ttu-id="379a0-211">上述所有标记均表示由 C# 编译器识别的标记。</span><span class="sxs-lookup"><span data-stu-id="379a0-211">All the tags outlined above represent those that are recognized by the C# compiler.</span></span> <span data-ttu-id="379a0-212">但用户可随意定义自己的标记。</span><span class="sxs-lookup"><span data-stu-id="379a0-212">However, a user is free to define their own tags.</span></span>
-<span data-ttu-id="379a0-213">Sandcastle 等工具支持其他标记，如 [`<event>`](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm)、 [`<note>`](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm)，甚至支持[编制命名空间文档](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm)。</span><span class="sxs-lookup"><span data-stu-id="379a0-213">Tools like Sandcastle bring support for extra tags like [`<event>`](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm), [`<note>`](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm) and even support [documenting namespaces](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).</span></span>
-<span data-ttu-id="379a0-214">自定义或内部文档生成工具也可与标准标记配合使用，并支持 HTML 到 PDF 等多种输出格式。</span><span class="sxs-lookup"><span data-stu-id="379a0-214">Custom or in-house documentation generation tools can also be used with the standard tags and multiple output formats from HTML to PDF can be supported.</span></span>
+<span data-ttu-id="39d1e-211">上述所有标记均表示由 C# 编译器识别的标记。</span><span class="sxs-lookup"><span data-stu-id="39d1e-211">All the tags outlined above represent those that are recognized by the C# compiler.</span></span> <span data-ttu-id="39d1e-212">但用户可随意定义自己的标记。</span><span class="sxs-lookup"><span data-stu-id="39d1e-212">However, a user is free to define their own tags.</span></span>
+<span data-ttu-id="39d1e-213">Sandcastle 等工具支持其他标记，如 [`<event>`](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm)、 [`<note>`](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm)，甚至支持[编制命名空间文档](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm)。</span><span class="sxs-lookup"><span data-stu-id="39d1e-213">Tools like Sandcastle bring support for extra tags like [`<event>`](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm), [`<note>`](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm) and even support [documenting namespaces](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).</span></span>
+<span data-ttu-id="39d1e-214">自定义或内部文档生成工具也可与标准标记配合使用，并支持 HTML 到 PDF 等多种输出格式。</span><span class="sxs-lookup"><span data-stu-id="39d1e-214">Custom or in-house documentation generation tools can also be used with the standard tags and multiple output formats from HTML to PDF can be supported.</span></span>
 
-## <a name="recommendations"></a><span data-ttu-id="379a0-215">建议</span><span class="sxs-lookup"><span data-stu-id="379a0-215">Recommendations</span></span>
+## <a name="recommendations"></a><span data-ttu-id="39d1e-215">建议</span><span class="sxs-lookup"><span data-stu-id="39d1e-215">Recommendations</span></span>
 
-<span data-ttu-id="379a0-216">出于多种原因，建议编制代码文档。</span><span class="sxs-lookup"><span data-stu-id="379a0-216">Documenting code is recommended for many reasons.</span></span> <span data-ttu-id="379a0-217">接下来将介绍一些最佳做法、常规使用方案，以及在 C# 代码中使用 XML 文档标记时的需知内容。</span><span class="sxs-lookup"><span data-stu-id="379a0-217">What follows are some best practices, general use case scenarios, and things that you should know when using XML documentation tags in your C# code.</span></span>
+<span data-ttu-id="39d1e-216">出于多种原因，建议编制代码文档。</span><span class="sxs-lookup"><span data-stu-id="39d1e-216">Documenting code is recommended for many reasons.</span></span> <span data-ttu-id="39d1e-217">接下来将介绍一些最佳做法、常规使用方案，以及在 C# 代码中使用 XML 文档标记时的需知内容。</span><span class="sxs-lookup"><span data-stu-id="39d1e-217">What follows are some best practices, general use case scenarios, and things that you should know when using XML documentation tags in your C# code.</span></span>
 
-- <span data-ttu-id="379a0-218">为保持一致性，应编制所有公共可见类型及其成员的文档。</span><span class="sxs-lookup"><span data-stu-id="379a0-218">For the sake of consistency, all publicly visible types and their members should be documented.</span></span> <span data-ttu-id="379a0-219">如果必须这么做，请完整全面地完成这一操作。</span><span class="sxs-lookup"><span data-stu-id="379a0-219">If you must do it, do it all.</span></span>
-- <span data-ttu-id="379a0-220">还可使用 XML 注释编制私有成员的文档。</span><span class="sxs-lookup"><span data-stu-id="379a0-220">Private members can also be documented using XML comments.</span></span> <span data-ttu-id="379a0-221">但这会公开库的内部（很可能是机密的）运作情况。</span><span class="sxs-lookup"><span data-stu-id="379a0-221">However, this exposes the inner (potentially confidential) workings of your library.</span></span>
-- <span data-ttu-id="379a0-222">但至少类型及其成员应具有 `<summary>` 标记，因为其内容是 IntelliSense 所需要的。</span><span class="sxs-lookup"><span data-stu-id="379a0-222">At a bare minimum, types and their members should have a `<summary>` tag because its content is needed for IntelliSense.</span></span>
-- <span data-ttu-id="379a0-223">应使用句号结尾的完整句子编写文档文本。</span><span class="sxs-lookup"><span data-stu-id="379a0-223">Documentation text should be written using complete sentences ending with full stops.</span></span>
-- <span data-ttu-id="379a0-224">完全支持部分类，并且该类型的文档信息将串联为单个条目。</span><span class="sxs-lookup"><span data-stu-id="379a0-224">Partial classes are fully supported, and documentation information will be concatenated into a single entry for that type.</span></span>
-- <span data-ttu-id="379a0-225">编译器验证 `<exception>`、`<include>`、`<param>`、`<see>`、`<seealso>` 和 `<typeparam>` 标记的语法。</span><span class="sxs-lookup"><span data-stu-id="379a0-225">The compiler verifies the syntax of the `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>` and `<typeparam>` tags.</span></span>
-- <span data-ttu-id="379a0-226">编译器验证某些参数，这些参数包含文件路径和对代码其余部分的引用。</span><span class="sxs-lookup"><span data-stu-id="379a0-226">The compiler validates the parameters that contain file paths and references to other parts of the code.</span></span>
+- <span data-ttu-id="39d1e-218">为保持一致性，应编制所有公共可见类型及其成员的文档。</span><span class="sxs-lookup"><span data-stu-id="39d1e-218">For the sake of consistency, all publicly visible types and their members should be documented.</span></span> <span data-ttu-id="39d1e-219">如果必须这么做，请完整全面地完成这一操作。</span><span class="sxs-lookup"><span data-stu-id="39d1e-219">If you must do it, do it all.</span></span>
+- <span data-ttu-id="39d1e-220">还可使用 XML 注释编制私有成员的文档。</span><span class="sxs-lookup"><span data-stu-id="39d1e-220">Private members can also be documented using XML comments.</span></span> <span data-ttu-id="39d1e-221">但这会公开库的内部（很可能是机密的）运作情况。</span><span class="sxs-lookup"><span data-stu-id="39d1e-221">However, this exposes the inner (potentially confidential) workings of your library.</span></span>
+- <span data-ttu-id="39d1e-222">但至少类型及其成员应具有 `<summary>` 标记，因为其内容是 IntelliSense 所需要的。</span><span class="sxs-lookup"><span data-stu-id="39d1e-222">At a bare minimum, types and their members should have a `<summary>` tag because its content is needed for IntelliSense.</span></span>
+- <span data-ttu-id="39d1e-223">应使用句号结尾的完整句子编写文档文本。</span><span class="sxs-lookup"><span data-stu-id="39d1e-223">Documentation text should be written using complete sentences ending with full stops.</span></span>
+- <span data-ttu-id="39d1e-224">完全支持部分类，并且该类型的文档信息将串联为单个条目。</span><span class="sxs-lookup"><span data-stu-id="39d1e-224">Partial classes are fully supported, and documentation information will be concatenated into a single entry for that type.</span></span>
+- <span data-ttu-id="39d1e-225">编译器验证 `<exception>`、`<include>`、`<param>`、`<see>`、`<seealso>` 和 `<typeparam>` 标记的语法。</span><span class="sxs-lookup"><span data-stu-id="39d1e-225">The compiler verifies the syntax of the `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>` and `<typeparam>` tags.</span></span>
+- <span data-ttu-id="39d1e-226">编译器验证某些参数，这些参数包含文件路径和对代码其余部分的引用。</span><span class="sxs-lookup"><span data-stu-id="39d1e-226">The compiler validates the parameters that contain file paths and references to other parts of the code.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="379a0-227">请参阅</span><span class="sxs-lookup"><span data-stu-id="379a0-227">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="39d1e-227">请参阅</span><span class="sxs-lookup"><span data-stu-id="39d1e-227">See also</span></span>
 
-- [<span data-ttu-id="379a0-228">XML 文档注释（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="379a0-228">XML Documentation Comments (C# Programming Guide)</span></span>](programming-guide/xmldoc/index.md)
-- [<span data-ttu-id="379a0-229">建议的文档注释标记（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="379a0-229">Recommended Tags for Documentation Comments (C# Programming Guide)</span></span>](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="39d1e-228">XML 文档注释（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="39d1e-228">XML Documentation Comments (C# Programming Guide)</span></span>](programming-guide/xmldoc/index.md)
+- [<span data-ttu-id="39d1e-229">建议的文档注释标记（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="39d1e-229">Recommended Tags for Documentation Comments (C# Programming Guide)</span></span>](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
