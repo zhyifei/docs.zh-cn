@@ -3,20 +3,20 @@ title: Windows Workflow Foundation 4 性能
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
 ms.openlocfilehash: c656d1e23c7314cfd7b772faef842296d03e4af1
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
+ms.lasthandoff: 10/22/2019
 ms.locfileid: "70989585"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 性能
 
- Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]包括了 Windows Workflow Foundation （WF）的主要修订版，具有高性能投资。  与 .NET Framework 3.0 和 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中附带的前两版 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 相比，新修订版在设计上进行了重大的更改。 新版本对编程模型内核、运行时和工具均重新进行了架构设计，从而极大地提升了性能和可用性。 本主题会展示这些修订版的重要性能特征，并将它们与之前的版本进行比较。
+ Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 包含高性能投资的 Windows Workflow Foundation （WF）的主要修订版。  与 .NET Framework 3.0 和 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中附带的前两版 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 相比，新修订版在设计上进行了重大的更改。 新版本对编程模型内核、运行时和工具均重新进行了架构设计，从而极大地提升了性能和可用性。 本主题会展示这些修订版的重要性能特征，并将它们与之前的版本进行比较。
 
  在 WF3 和 WF4 之间，单个工作流组件的性能也都得到了几个数量级的提升。  这使得手动编码 Windows Communication Foundation （WCF）服务和 WCF 工作流服务之间的差距非常小。  在 WF4 中，工作流延迟也得到了显著的降低。  暂留性能提高了 2.5 至 3.0 倍。  采用工作流跟踪方式的运行状况监视显著降低了开销。  这些就是迁移到或在应用程序中采用 WF4 的令人心动的原因。
 
 ## <a name="terminology"></a>术语
- 在本文的剩余部分，[!INCLUDE[wf1](../../../includes/wf1-md.md)] 中推出的 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 版本将称作 WF4。  [!INCLUDE[wf1](../../../includes/wf1-md.md)]是在 .net 3.0 中引入的，并且通过[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] SP1 有一些次要修订版。 在本文的剩余部分，Workflow Foundation 的 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 版本将称作 WF3。 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中同时附带了 WF3 和 WF4。 有关将 WF3 项目迁移到 WF4 的详细信息，请参阅：[Windows Workflow Foundation 4 迁移指南](https://go.microsoft.com/fwlink/?LinkID=153313)
+ 在本文的剩余部分，[!INCLUDE[wf1](../../../includes/wf1-md.md)] 中推出的 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 版本将称作 WF4。  [!INCLUDE[wf1](../../../includes/wf1-md.md)] 是在 .NET 3.0 中引入的，并且通过 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] SP1 有一些次要修订版。 在本文的剩余部分，Workflow Foundation 的 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 版本将称作 WF3。 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中同时附带了 WF3 和 WF4。 有关将 WF3 项目迁移到 WF4 的详细信息，请参阅： [Windows Workflow Foundation 4 迁移指南](https://go.microsoft.com/fwlink/?LinkID=153313)
 
  Windows Communication Foundation （WCF）是 Microsoft 用于构建面向服务的应用程序的统一编程模型。 它最初是作为 .NET 3.0 的一部分引入的，它是 WF3 的一部分，现在是 .NET Framework 的关键组件之一。
 
@@ -49,7 +49,7 @@ ms.locfileid: "70989585"
  使用异步编程时，应用程序对长时间运行的阻止操作（如 I/O）或分布式计算操作通常会表现出更佳的性能和可伸缩性。 WF4 通过基础活动类型 <xref:System.Activities.AsyncCodeActivity> 和 <xref:System.Activities.AsyncCodeActivity%601> 提供异步支持。 运行时本身就了解异步活动，因此可以在异步工作未处理时，自动将实例放入非持久性区域中。 自定义活动可以从这些类型派生，从而无需保留工作流计划程序线程和阻止能够并行运行的任何活动，即可执行异步工作。
 
 ### <a name="messaging"></a>消息
- 最初，WF3 通过外部事件或 Web 服务调用提供相当有限的消息传送支持。 在 .net 3.5 中，工作流可以作为 wcf 客户端实现，也可以通过<xref:System.Workflow.Activities.SendActivity>和<xref:System.Workflow.Activities.ReceiveActivity>公开为 wcf 服务。 在 WF4 中，基于工作流的消息传递编程的概念通过将 WCF 消息传递逻辑紧密集成到 WF 中，进一步增强了这一概念。
+ 最初，WF3 通过外部事件或 Web 服务调用提供相当有限的消息传送支持。 在 .NET 3.5 中，工作流可以作为 WCF 客户端实现，也可以通过 <xref:System.Workflow.Activities.SendActivity> 和 <xref:System.Workflow.Activities.ReceiveActivity> 作为 WCF 服务公开。 在 WF4 中，基于工作流的消息传递编程的概念通过将 WCF 消息传递逻辑紧密集成到 WF 中，进一步增强了这一概念。
 
  .NET 4 的 WCF 中提供的统一消息处理管道可帮助 WF4 服务获得比 WF3 更好的性能和可伸缩性。 WF4 还提供了更丰富的消息传送编程支持，可以对复杂消息交换模式 (MEP) 进行建模。 开发人员可以使用类型化的服务协定实现简单的编程，也可以使用非类型化的服务协定获得更好的性能，而无需付出序列化成本。 WF4 中通过 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 类提供的客户端通道缓存支持可帮助开发人员以最小的工作量构建快速应用程序。 有关详细信息，请参阅[更改发送活动的缓存共享级别](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)。
 
@@ -62,7 +62,7 @@ ms.locfileid: "70989585"
  WF4 的完全声明性编程和支持对于大型工作流的设计时性能明确提出了更高的需求。 与 WF3 相比，WF4 中的工作流设计器对于大型工作流来说，具有更佳的可伸缩性。 有了 UI 虚拟化支持，设计器在几秒钟内就能轻松加载包括 1000 个活动的大型工作流，而在 WF3 设计器中，加载包括数百个活动的工作流几乎都是件不可能完成的任务。
 
 ## <a name="component-level-performance-comparisons"></a>组件级性能比较
- 本节包括对 WF3 和 WF4 工作流中的单个活动进行直接比较的相关数据。  与单个活动组件相比，暂留这样的关键方面对于性能的影响更加深远。  但是，因为 WF4 中单个组件目前的速度足以与手工编码的业务流程逻辑相媲美，所以这些组件的性能改进也非常重要。  下一节中介绍了的一个示例："服务组合方案"。
+ 本节包括对 WF3 和 WF4 工作流中的单个活动进行直接比较的相关数据。  与单个活动组件相比，暂留这样的关键方面对于性能的影响更加深远。  但是，因为 WF4 中单个组件目前的速度足以与手工编码的业务流程逻辑相媲美，所以这些组件的性能改进也非常重要。  下一节中介绍了的一个示例： "服务组合方案"。
 
 ### <a name="environment-setup"></a>环境设置
  ![工作流性能度量的环境设置](./media/performance/performance-test-environment.gif)
@@ -138,7 +138,7 @@ class WorkScope :
     }
 ```
 
- 错误处理程序以活动`WorkScope`为目标。 WF4 工作流同样简单。  <xref:System.Activities.Statements.CompensableActivity> 有一个 Body 和一个补偿处理程序。  序列中随后是一个显式的补偿。  Body 活动和补偿处理程序活动都是空实现：
+ 错误处理程序以 `WorkScope` 活动为目标。 WF4 工作流同样简单。  <xref:System.Activities.Statements.CompensableActivity> 有一个 Body 和一个补偿处理程序。  序列中随后是一个显式的补偿。  Body 活动和补偿处理程序活动都是空实现：
 
 ```csharp
 public sealed class CompensableActivityEmptyCompensation : CodeActivity
@@ -174,7 +174,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  除事务范围测试外，会以秒为单位在工作流中测量所有测试。  如上文所见，[!INCLUDE[wf1](../../../includes/wf1-md.md)] 运行时性能已得到全面提升，特别是在像 while 循环这样需要多次执行同一活动的方面。
 
 ## <a name="service-composition-scenario"></a>服务撰写方案
- 如前面的 "组件级性能比较" 一节中所示，WF3 与 WF4 之间的开销显著降低。  Wcf 工作流服务现在可以与手动编码的 wcf 服务的性能几乎匹配，但仍具有[!INCLUDE[wf1](../../../includes/wf1-md.md)]运行时的所有优势。  此测试方案将 WCF 服务与 WF4 中的 WCF 工作流服务进行比较。
+ 如前面的 "组件级性能比较" 一节中所示，WF3 与 WF4 之间的开销显著降低。  WCF 工作流服务现在可以与手动编码的 WCF 服务的性能几乎匹配，但仍具有 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 运行时的所有优势。  此测试方案将 WCF 服务与 WF4 中的 WCF 工作流服务进行比较。
 
 ### <a name="online-store-service"></a>在线商店服务
  Windows Workflow Foundation 的优点之一是能够使用多个服务来编写进程。  本例为一个在线商店服务，该服务会协调两个服务调用以采购订单。  第一步是使用订单验证服务验证订单。  第二步是使用仓库服务填写订单。
@@ -189,7 +189,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 ### <a name="performance"></a>性能
 ![显示在线商店服务性能的柱形图](./media/performance/online-store-performance-graph.gif)
 
- 如果连接后端 TCP 服务时不使用通道池，则 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 服务对吞吐量有 17.2% 的影响。  如果使用通道池，则损失大约为 23.8%。  对于 HTTP，影响大大减少：如果池为 4.3%，但池为 8.1%。  另外要特别注意的是，使用 HTTP 时通道池提供的好处比较少。
+ 如果连接后端 TCP 服务时不使用通道池，则 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 服务对吞吐量有 17.2% 的影响。  如果使用通道池，则损失大约为 23.8%。  对于 HTTP，影响要少得多：不使用池时为 4.3%，使用池时为 8.1%。  另外要特别注意的是，使用 HTTP 时通道池提供的好处比较少。
 
  虽然 WF4 运行时的开销与此测试中的手动编码的 WCF 服务相比，但可能会将其视为最糟糕的情况。  此测试中的两个后端服务执行的工作很少。  在实际的端到端方案中，这些服务将会执行更加昂贵的操作，如数据库调用，使传输层的性能影响显得更加微小。  再加上 WF4 所提供功能的优点，使 Workflow Foundation 成为创建业务流程服务的可行选择。
 
@@ -217,10 +217,10 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  ![显示 WCF 工作流服务的冷和预热延迟的柱形图，使用 WF3 和 WF4](./media/performance/latency-results-graph.gif)
 
- 在上图中，"冷" 指的是给定工作流没有现有<xref:System.ServiceModel.WorkflowServiceHost>的情况。  换言之，冷延迟是第一次使用工作流和需要编译 XOML 或 XAML 的时间。  热延迟是当工作流类型已经编译时创建新工作流实例的时间。  在 WF4 中，工作流的复杂程度只有细微的变化，但在 WF3 中，则呈现线性发展态势。
+ 在上图中，"冷" 指的是给定工作流没有现有 <xref:System.ServiceModel.WorkflowServiceHost> 的情况。  换言之，冷延迟是第一次使用工作流和需要编译 XOML 或 XAML 的时间。  热延迟是当工作流类型已经编译时创建新工作流实例的时间。  在 WF4 中，工作流的复杂程度只有细微的变化，但在 WF3 中，则呈现线性发展态势。
 
 #### <a name="correlation-throughput"></a>相关吞吐量
- WF4 采用一种新的基于内容的相关功能。  WF3 只提供基于上下文的相关。  基于上下文的关联只能通过特定的 WCF 通道绑定完成。  使用这些绑定时，工作流 ID 会插入消息标头。  WF3 运行时只能通过工作流 ID 来识别工作流。使用基于内容的相关，工作流作者可以从相关数据片段（如帐号或客户 ID 等）创建相关键。
+ WF4 采用一种新的基于内容的相关功能。  WF3 只提供基于上下文的相关。  基于上下文的关联只能通过特定的 WCF 通道绑定完成。  使用这些绑定时，工作流 ID 会插入消息标头。  WF3 运行时只能按其 Id 识别工作流。 使用基于内容的相关，工作流作者可以从相关数据片段（如帐号或客户 Id）创建相关键。
 
  基于上下文的相关的性能优势在于，相关键位于消息标头中。  无需反序列化或复制消息，就可以从消息中读取键。  在基于内容的相关中，相关键存储在消息正文中。  会使用 XPath 表达式来定位键。  这一额外处理所需的成本取决于消息的大小、键在正文中的深度和键的数量。  此测试比较基于上下文的相关和基于内容的相关，并显示使用多个键时的性能下降。
 
@@ -300,11 +300,11 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  需要注意此图形中一个明显的趋势，即在 WF3 和 WF4 中，嵌套对内存使用量的影响都相对较低。  最大的内存影响来自给定工作流中的活动数。  若采用序列 1000 的数据，复杂深度 5、序列 5，复杂深度 7、序列 1 这两个变体，如果活动数达到几千时，则内存使用量会出现明显的增长。  在有大约 29000 个活动的极端情况下（深度 7、序列 1），WF4 使用的内存几乎要比 WF3 少 79%。
 
 ### <a name="multiple-workflow-definitions-test"></a>多个工作流定义测试
- 测量每个工作流定义的内存分为两个不同的测试，原因是 WF3 和 WF4 中可用于承载工作流的选项有所不同。  这些测试与工作流复杂程度测试采用不同的运行方式，给定工作流对于每个定义只实例化和执行一次。  这是因为工作流定义和它的主机在 AppDomain 的生存期内会保留在内存中。  运行给定的工作流实例使用的内存应当在垃圾回收期间清理。  WF4 的迁移指南包含承载选项的更多详细信息。 有关详细信息，请[参阅 WF 迁移指南：工作流](https://go.microsoft.com/fwlink/?LinkID=153313)托管。
+ 测量每个工作流定义的内存分为两个不同的测试，原因是 WF3 和 WF4 中可用于承载工作流的选项有所不同。  这些测试与工作流复杂程度测试采用不同的运行方式，给定工作流对于每个定义只实例化和执行一次。  这是因为工作流定义和它的主机在 AppDomain 的生存期内会保留在内存中。  运行给定的工作流实例使用的内存应当在垃圾回收期间清理。  WF4 的迁移指南包含承载选项的更多详细信息。 有关详细信息，请参阅[WF 迁移手册：工作流托管](https://go.microsoft.com/fwlink/?LinkID=153313)。
 
  为工作流定义测试创建多个工作流定义，可以通过多种方式完成。  例如，可以使用代码生成创建一组除名称外完全相同的 1000 个工作流，并将这些工作流中的每一个都保存到单独的文件中。  对于控制台承载的测试采取了这种方法。  在 WF3 中，<xref:System.Workflow.Runtime.WorkflowRuntime>类用于运行工作流定义。  WF4 可使用 <xref:System.Activities.WorkflowApplication> 创建单个工作流实例，也可以直接使用 <xref:System.Activities.WorkflowInvoker> 运行活动，如同它是方法调用一样。  <xref:System.Activities.WorkflowApplication> 是单个工作流实例的主机，并与 <xref:System.Workflow.Runtime.WorkflowRuntime> 具有相近功能，所以在此测试中进行了使用。
 
- 在 IIS 中承载工作流时，可以使用 <xref:System.Web.Hosting.VirtualPathProvider> 创建新的 <xref:System.ServiceModel.WorkflowServiceHost>，而不是生成所有 XAMLX 或 XOML 文件。  <xref:System.Web.Hosting.VirtualPathProvider>处理传入的请求并使用可从数据库加载的 "虚拟文件" 进行响应，在这种情况下，会动态生成该文件。  这样就不必创建 1000 个物理文件了。
+ 在 IIS 中承载工作流时，可以使用 <xref:System.Web.Hosting.VirtualPathProvider> 创建新的 <xref:System.ServiceModel.WorkflowServiceHost>，而不是生成所有 XAMLX 或 XOML 文件。  @No__t_0 处理传入的请求，并使用可从数据库加载的 "虚拟文件" （在此情况下为动态生成的）来响应。  这样就不必创建 1000 个物理文件了。
 
  在控制台测试中使用的工作流定义是具有单个活动的简单顺序工作流。  单个活动对于 WF3 是空 <xref:System.Workflow.Activities.CodeActivity>，对于 WF4 是 `Comment` 活动。  IIS 承载情况下使用的工作流在接收消息时启动，在发送回复时结束：
 
@@ -319,7 +319,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 |控制台应用程序承载的工作流|18 MB|9 MB|
 |IIS 承载的工作流服务|446 MB|364 MB|
 
- 由于、详细的<xref:System.ServiceModel.WorkflowServiceHost>WCF 服务项目和与宿主关联的消息处理逻辑，在 IIS 中承载工作流定义会消耗更多内存。
+ 在 IIS 中承载工作流定义会消耗更多内存，因为 <xref:System.ServiceModel.WorkflowServiceHost>、详细的 WCF 服务项目和与宿主关联的消息处理逻辑。
 
  对于 WF3 中的控制台承载，工作流在代码中实现，而不是在 XOML 中实现。  在 WF4 中，默认为使用 XAML。  XAML 作为嵌入资源存储在程序集中并在运行时期间编译，以提供工作流的实现。  此过程会有一些相关的开销。  为了在 WF3 和 WF4 之间进行公平比较，使用的是编码的工作流，而不是 XAML。  下面显示了一个 WF4 工作流示例：
 
@@ -376,21 +376,21 @@ public class Workflow1 : Activity
 
  注意，WF4 SQL 暂留提供程序在数据库层会执行较多的工作。  由于 SQL 数据库可能成为瓶颈，所以务必要监视该处的 CPU 和磁盘使用情况。  在对工作流应用程序进行性能测试时，务必包括 SQL 数据库中的下列性能计数器：
 
-- PhysicalDisk\\磁盘读取时间百分比
+- PhysicalDisk \\ 磁盘读取时间百分比
 
-- PhysicalDisk\\磁盘时间百分比
+- PhysicalDisk \\ 磁盘时间百分比
 
-- PhysicalDisk\\磁盘写入时间百分比
+- PhysicalDisk \\ 磁盘写入时间百分比
 
-- PhysicalDisk\\% AvgDisk Queue Length
+- PhysicalDisk \\% Avg. Disk Queue Length
 
-- PhysicalDisk\Avg.Disk Read Queue Length
+- PhysicalDisk\Avg. 磁盘读取队列长度
 
-- PhysicalDisk\Avg.Disk Write Queue Length
+- PhysicalDisk\Avg. 磁盘写入队列长度
 
 - PhysicalDisk\Current Disk Queue Length
 
-- 处理器信息\\处理器时间百分比
+- 处理器信息 \\ 处理器时间百分比
 
 - SQLServer:Latches\Average Latch Wait Time (ms)
 
@@ -451,4 +451,4 @@ public class Workflow1 : Activity
  可以注意到，使用 Interop 与直接使用 WF3 相比有显著的性能提升。  但是，与 WF4 活动比较后，增加则可以忽略不计。
 
 ## <a name="summary"></a>总结
- WF4 对性能的巨大投资在许多重要的方面得到了回报。  由于更接近 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 运行时，所以 WF4 中单个工作流组件性能在某些情况下能比 WF3 快数百倍。  延迟数字也得到显著改善。  这意味着，使用[!INCLUDE[wf1](../../../includes/wf1-md.md)]而不是手动编码 WCF 业务流程服务的性能损失非常小，因为这样做的好处在于使用。 [!INCLUDE[wf1](../../../includes/wf1-md.md)]  暂留性能提高了 2.5 至 3.0 倍。  采用工作流跟踪方式的运行状况监视目前的开销非常低。  我们为那些考虑从 WF3 迁移到 WF4 的用户提供了一套全面的迁集指南。  所有这些使 WF4 成为您编写复杂应用程序的必备之选。
+ WF4 对性能的巨大投资在许多重要的方面得到了回报。  由于更接近 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 运行时，所以 WF4 中单个工作流组件性能在某些情况下能比 WF3 快数百倍。  延迟数字也得到显著改善。  这意味着使用 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 而不是手动编码 WCF 业务流程服务的性能损失非常小，因为使用 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 带来了更大的优势。  暂留性能提高了 2.5 至 3.0 倍。  采用工作流跟踪方式的运行状况监视目前的开销非常低。  我们为那些考虑从 WF3 迁移到 WF4 的用户提供了一套全面的迁集指南。  所有这些使 WF4 成为您编写复杂应用程序的必备之选。
