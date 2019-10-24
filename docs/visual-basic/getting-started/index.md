@@ -5,21 +5,22 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: bb1ce118bd46b2db840138a7ca13e9d1f5d75231
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: e07ded52d76e027127ad41c14c39730648c0ca12
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053655"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775182"
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic 入门
-文档的本节内容将帮助你了解  Visual Basic  应用程序开发的入门知识。  
-  
+
+文档的本节内容将帮助你了解  Visual Basic  应用程序开发的入门知识。
+
 ## <a name="get-started-with-visual-basic-and-net-core"></a>Visual Basic 和.NET Core 入门
 
 [使用 Visual Studio 2017 生成 Visual Basic .NET Core Hello World 应用程序](../../core/tutorials/vb-with-visual-studio.md)
 
-[使用 Visual Studio 2017 生成 Visual Basic 和 .NET Core 类库](../../core/tutorials/vb-library-with-visual-studio.md)  
+[使用 Visual Studio 2017 生成 Visual Basic 和 .NET Core 类库](../../core/tutorials/vb-library-with-visual-studio.md)
 
 ## <a name="additional-information"></a>其他信息
 
@@ -34,11 +35,8 @@ ms.locfileid: "66053655"
 
 ## <a name="see-also"></a>请参阅
 
-- [获得 Visual Basic](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)\
+- [获得 Visual Basic](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)  
 提供包含 Visual Basic 支持的 Visual Studio 版本（包括免费版本）的下载链接。
-
-- [面向零基础初学者的 Visual Basic 基础知识](https://mva.microsoft.com/en-us/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)\
-教授 Visual Basic 编程基础知识的 Microsoft Virtual Academy 课程。
 
 - [面向对象的编程](../programming-guide/concepts/object-oriented-programming.md)\
 提供指向一些页面的链接，这些页面介绍面向对象的编程并描述如何创建您自己的对象以及如何使用对象来简化代码过程。
@@ -49,7 +47,7 @@ ms.locfileid: "66053655"
 - [演练](../../visual-basic/walkthroughs.md)\
 提供阐示 Visual Basic 语言的各个方面的帮助页列表。
 
-- [与我们交流](/visualstudio/ide/talk-to-us)\
+- [Visual Studio 反馈选项](/visualstudio/ide/feedback-options)\
 介绍如何得到支持和提供反馈。
 
 - [Visual Studio](/visualstudio/)\

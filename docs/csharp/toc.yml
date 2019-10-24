@@ -1298,14 +1298,16 @@
               items:
                 - name: 值类型的功能
                   href: language-reference/keywords/value-types.md
-                - name: bool
-                  href: language-reference/keywords/bool.md
                 - name: 整型数值类型
-                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                   href: language-reference/builtin-types/integral-numeric-types.md
                 - name: 浮点型数值类型
-                  displayName: 'float, decimal, double, rational, real'
+                  displayName: 'float, decimal, double, rational, real, literal'
                   href: language-reference/builtin-types/floating-point-numeric-types.md
+                - name: 内置数值转换
+                  href: language-reference/builtin-types/numeric-conversions.md
+                - name: bool
+                  href: language-reference/keywords/bool.md
                 - name: char
                   href: language-reference/keywords/char.md
                 - name: enum
@@ -1316,11 +1318,11 @@
               items:
                 - name: 引用类型的功能
                   href: language-reference/keywords/reference-types.md
-                - name: class
-                  href: language-reference/keywords/class.md
                 - name: 内置引用类型
                   displayName: 'object, delegate, dynamic, string'
                   href: language-reference/builtin-types/reference-types.md
+                - name: class
+                  href: language-reference/keywords/class.md
                 - name: interface
                   href: language-reference/keywords/interface.md
             - name: void
@@ -1337,10 +1339,6 @@
                   href: language-reference/keywords/value-types-table.md
                 - name: 默认值表
                   href: language-reference/keywords/default-values-table.md
-                - name: 隐式数值转换表
-                  href: language-reference/keywords/implicit-numeric-conversions-table.md
-                - name: 显式数值转换表
-                  href: language-reference/keywords/explicit-numeric-conversions-table.md
                 - name: 设置数值结果表的格式
                   href: language-reference/keywords/formatting-numeric-results-table.md
         - name: 修饰符

@@ -3,12 +3,12 @@ title: C# 介绍 - C# 指南
 description: 刚开始接触 C#？ 了解 C# 语言的基础知识。
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: eaaa5a259f0776a2749ed899d0406aee041a8442
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: b497ff05b29ce349fe2be3f8b9bc1a8697d6b30b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105652"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774077"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# 语言介绍
 
@@ -20,21 +20,21 @@ C# 是一种面向对象的语言。不仅如此，C# 还进一步支持***面�
 
 C# 采用***统一的类型系统***。 所有 C# 类型（包括 `int` 和 `double` 等基元类型）均继承自一个根 `object` 类型。 因此，所有类型共用一组通用运算，任何类型的值都可以一致地进行存储、传输和处理。 此外，C# 还支持用户定义的引用类型和值类型，从而支持对象动态分配以及轻量级结构的内嵌式存储。
 
-为了确保 C# 程序和库能够随着时间的推移以兼容的方式发展，C# 设计更强调***版本控制***。 许多编程语言很少关注这个问题，因此，当引入新版依赖库时，用这些语言编写的程序会出现更多不必要的中断现象。 由于更强调版本控制，直接受影响的 C# 设计方面包括单独的 `virtual` 和 `override` 修饰符、关于方法重载决策的规则，以及对显式接口成员声明的支持。
+为了确保 C# 程序和库能够持续兼容，C# 设计非常注重***版本控制***。 许多编程语言很少关注这个问题，因此，当引入新版依赖库时，用这些语言编写的程序会出现更多不必要的中断现象。 C# 设计中受版本控制加强直接影响的方面包括：单独的 `virtual` 和 `override` 修饰符，关于方法重载决策的规则，以及对显式接口成员声明的支持。
 
 ## <a name="hello-world"></a>Hello world
 
 “Hello, World”程序历来都用于介绍编程语言。 下面展示了此程序的 C# 代码：
 
-[!code-csharp[Hello World](../../../samples/snippets/csharp/tour/hello/Program.cs#L1-L8)]
+[!code-csharp[Hello World](~/samples/snippets/csharp/tour/hello/Program.cs)]
 
-C# 源文件的文件扩展名通常为 `.cs`。 假设“Hello, World”程序存储在文件 `hello.cs` 中，则可以使用下列命令行编译此程序：
+C# 源文件的文件扩展名通常为 `.cs`。 假设“Hello, World”程序存储在文件 hello.cs  中，则可以使用下列命令行编译此程序：
 
 ```console
 csc hello.cs
 ```
 
-这会生成 hello.exe 可执行程序集。 运行此应用程序生成以下输出：
+这会生成名为 hello.exe  的可执行程序集。 运行此应用程序生成以下输出：
 
 ```console
 Hello, World
@@ -49,7 +49,7 @@ Hello, World
 
 程序的输出是由 `System` 命名空间中 `Console` 类的 `WriteLine` 方法生成。 此类由标准类库提供。默认情况下，编译器会自动引用标准类库。
 
-关于 C#，要介绍的内容还有很多。  下面各主题概述了 C# 语言元素。 通过这些概述，可以了解 C# 语言所有元素的基本信息，并获得深入了解 C# 语言元素所需的信息：
+关于 C#，要介绍的内容还有很多。 下面各主题概述了 C# 语言元素。 通过这些概述，可以了解 C# 语言所有元素的基本信息，并获得深入了解 C# 语言元素所需的信息：
 
 - [程序结构](program-structure.md)
   - 了解 C# 语言中的关键组织概念：***程序***、***命名空间***、***类型***、***成员***和***程序集***。

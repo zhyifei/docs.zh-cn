@@ -8,17 +8,19 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: df56287d161f7760e136eb80aa1a9171966df794
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 4fed33272dbed50100a37aa9fcd30befc46435f9
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275799"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771842"
 ---
 # <a name="c-reference"></a>C# 参考
+
 此部分收录了有关 C# 关键字、运算符、特殊字符、预处理器指令、编译器选项以及编译器错误与警告的参考资料。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本节内容
+
  [C# 关键字](./keywords/index.md)  
  提供指向有关 C# 关键字和语法的信息的链接。  
   
