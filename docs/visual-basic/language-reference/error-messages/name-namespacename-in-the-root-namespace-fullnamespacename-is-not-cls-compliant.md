@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
-ms.openlocfilehash: faed46eaf21513945ef4eb0c76d36780e960d380
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 821044d3ee359a052fa6a763e9c5a89da5d6f607
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592029"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775571"
 ---
-# <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>名称\<命名空间名称 > 的根命名空间\<fullnamespacename > 不符合 cls 的
-程序集标记为`<CLSCompliant(True)>`，但名称以下划线开头的根命名空间名称元素 (`_`)。  
+# <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>根命名空间中 > 名称 \<namespacename \<fullnamespacename > 不符合 CLS
+程序集标记为 `<CLSCompliant(True)>`，但根命名空间名称的元素以下划线（`_`）开头。  
   
- 编程元素可以包含一个或多个下划线，但要符合[语言独立性和与语言无关的组件](../../../standard/language-independence-and-language-independent-components.md)(CLS)，它必须不以下划线开头。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+ 编程元素可以包含一个或多个下划线，但要符合[语言独立性和与语言无关的组件](../../../standard/language-independence-and-language-independent-components.md)（CLS），它不能以下划线开头。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
  当将 <xref:System.CLSCompliantAttribute> 应用到编程元素中时，需要将该特性的 `isCompliant` 参数设置为 `True` 或 `False` 来指示符合或不符合性。 此参数没有默认值，必须为其提供一个值。  
   
@@ -25,19 +25,19 @@ ms.locfileid: "64592029"
   
  默认情况下，此消息是一个警告。 有关隐藏警告或将警告视为错误的信息，请参见 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
- **错误 ID:** BC40039  
+ **错误 ID：** BC40039  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-- 如果你需要 CLS 符合性，更改根命名空间名称，以便无其元素以下划线开头。  
+- 如果需要符合 CLS，请更改根命名空间名称，使其所有元素都不以下划线开头。  
   
-- 如果你需要命名空间名称保持不变，然后删除<xref:System.CLSCompliantAttribute>从程序集或将其标记为`<CLSCompliant(False)>`。  
+- 如果要求命名空间名称保持不变，则从程序集删除 <xref:System.CLSCompliantAttribute>，或将其标记为 `<CLSCompliant(False)>`。  
   
 ## <a name="see-also"></a>请参阅
 
 - [Namespace 语句](../../../visual-basic/language-reference/statements/namespace-statement.md)
-- [在 Visual Basic 中的命名空间](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [/rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)
+- [Visual Basic 中的命名空间](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)
 - [“项目设计器”->“应用程序”页 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [已声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Visual Basic 命名约定](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

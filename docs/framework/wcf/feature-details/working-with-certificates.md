@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: bbe9341b1fb50985c235bd7f34961f1718f46bc0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ac69b38df3439932be7f65d871c64700585538cb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045217"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774288"
 ---
 # <a name="working-with-certificates"></a>使用证书
 
 对 Windows Communication Foundation (WCF) 安全性进行编程时，通常使用 X.509 数字证书对客户端和服务器进行身份验证，以及对消息进行加密和数字签名。 本主题将简要说明 X.509 数字证书的功能以及如何在 WCF 中使用它们，并提供一些主题的链接，这些主题对这些概念进行了深入说明，或揭示了如何使用 WCF 和证书来完成常见任务。
 
-简言之，数字证书是公钥基础结构 (PKI) 的一部分，而公钥基础结构是数字证书、证书颁发机构和其他注册机构的系统，它使用公钥加密对电子事务所涉及的每一方的有效性进行确认和身份验证。 证书颁发机构颁发证书，每个证书都具有一组包含数据的字段，例如“使用者”（向其颁发证书的实体）、有效日期（证书的有效日期）、证书颁发者（颁发证书的实体）和公钥。 在 WCF 中，这些属性中的每一个都作为 <xref:System.IdentityModel.Claims.Claim> 进行处理，而每个声明又进一步分为两种类型：标识和权限。 有关 X.509 证书的详细信息，请参阅 [X.509 公钥证书](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)。 有关 WCF 中的声明和授权的详细信息，请参阅[使用标识模型管理声明和授权](managing-claims-and-authorization-with-the-identity-model.md)。 有关实现 PKI 的详细信息, 请参阅[企业 PKI 和 Windows Server 2012 R2 Active Directory 证书服务](https://blogs.technet.microsoft.com/yungchou/2013/10/21/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2/)。
+简言之，数字证书是公钥基础结构 (PKI) 的一部分，而公钥基础结构是数字证书、证书颁发机构和其他注册机构的系统，它使用公钥加密对电子事务所涉及的每一方的有效性进行确认和身份验证。 证书颁发机构颁发证书，每个证书都具有一组包含数据的字段，例如“使用者”（向其颁发证书的实体）、有效日期（证书的有效日期）、证书颁发者（颁发证书的实体）和公钥。 在 WCF 中，这些属性中的每一个都作为 <xref:System.IdentityModel.Claims.Claim> 进行处理，而每个声明又进一步分为两种类型：标识和权限。 有关 X.509 证书的详细信息，请参阅 [X.509 公钥证书](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)。 有关 WCF 中的声明和授权的详细信息，请参阅[使用标识模型管理声明和授权](managing-claims-and-authorization-with-the-identity-model.md)。 有关实现 PKI 的详细信息，请参阅[企业 PKI 和 Windows Server 2012 R2 Active Directory 证书服务](https://blogs.technet.microsoft.com/yungchou/2013/10/21/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2/)。
 
 证书的主要功能是向其他各方验证证书所有者的身份。 证书包含所有者的公钥，所有者保留着私钥。 公钥可用来对发送给证书所有者的消息进行加密。 只有所有者才能访问私钥，因此，只有所有者才能解密这些消息。
 
@@ -26,13 +26,13 @@ ms.locfileid: "70045217"
 
 ## <a name="viewing-certificates"></a>查看证书
 
-若要使用证书，通常需要查看证书并检查其属性。 使用 Microsoft 管理控制台 (MMC) 管理单元工具，很容易实现这一任务。 有关详细信息，请参阅[如何：用 MMC 管理单元](how-to-view-certificates-with-the-mmc-snap-in.md)查看证书。
+若要使用证书，通常需要查看证书并检查其属性。 使用 Microsoft 管理控制台 (MMC) 管理单元工具，很容易实现这一任务。 有关详细信息，请参阅[如何：使用 MMC 管理单元查看证书](how-to-view-certificates-with-the-mmc-snap-in.md)。
 
 ## <a name="certificate-stores"></a>证书存储区
 
 证书存放在存储区中。 主要的存储区位置有两个，它们进一步分为子存储区。 如果您是计算机的管理员，就可以使用 MMC 管理单元工具查看这两个主要存储区。 非管理员只能查看当前用户存储区。
 
-- **本地计算机存储区**。 这包含由计算机进程 (如 ASP.NET) 访问的证书。 此位置用于存储向客户端验证服务器身份的证书。
+- **本地计算机存储区**。 这包含由计算机进程（如 ASP.NET）访问的证书。 此位置用于存储向客户端验证服务器身份的证书。
 
 - **当前用户存储区**。 交互式应用程序通常将证书放在此位置，供计算机的当前用户使用。 如果要创建客户端应用程序，通常会将向服务验证用户身份的证书放在此处。
 
@@ -57,13 +57,13 @@ ms.locfileid: "70045217"
 
 ### <a name="accessing-stores"></a>访问存储区
 
-与计算机上的文件夹一样，存储区也受访问控制列表 (ACL) 保护。 创建由 Internet Information Services (IIS) 承载的服务时, ASP.NET 进程将在 ASP.NET 帐户下运行。 该帐户必须有权访问包含服务所用证书的存储区。 每个主要存储区都由一个默认访问列表保护，但这些列表是可以修改的。 如果创建一个单独的角色访问存储区，则必须向该角色授予访问权限。 若要了解如何使用 winhttpcertconfig.exe 工具修改访问列表, 请参阅[如何:创建在开发](how-to-create-temporary-certificates-for-use-during-development.md)期间使用的临时证书。 有关在 IIS 中使用客户端证书的详细信息，请参阅 [How to call a Web service by using a client certificate for authentication in an ASP.NET Web application](https://support.microsoft.com/en-us/help/901183/how-to-call-a-web-service-by-using-a-client-certificate-for-authentica)（如何在 ASP.NET Web 应用程序中通过使用客户端证书进行身份验证来调用 Web 服务）。
+与计算机上的文件夹一样，存储区也受访问控制列表 (ACL) 保护。 创建由 Internet Information Services （IIS）承载的服务时，ASP.NET 进程将在 ASP.NET 帐户下运行。 该帐户必须有权访问包含服务所用证书的存储区。 每个主要存储区都由一个默认访问列表保护，但这些列表是可以修改的。 如果创建一个单独的角色访问存储区，则必须向该角色授予访问权限。 要了解如何使用 WinHttpCertConfig.exe 工具修改访问列表，请参阅[如何：创建开发期间使用的临时证书](how-to-create-temporary-certificates-for-use-during-development.md)。
 
 ## <a name="chain-trust-and-certificate-authorities"></a>链信任和证书颁发机构
 
-证书是在某种层次结构中创建的，其中每个证书都链接到颁发该证书的 CA。 该链接指向 CA 的证书。 然后, CA 的证书链接到颁发了原始 CA 证书的 CA。 这一过程不断重复，直至到达根 CA 的证书。 根 CA 的证书将以继承方式受到信任。
+证书是在某种层次结构中创建的，其中每个证书都链接到颁发该证书的 CA。 该链接指向 CA 的证书。 然后，CA 的证书链接到颁发了原始 CA 证书的 CA。 这一过程不断重复，直至到达根 CA 的证书。 根 CA 的证书将以继承方式受到信任。
 
-使用数字证书对实体进行身份验证时就依赖这一层次结构，它也称为信任链。 在 MMC 管理单元中，双击任何证书，再单击“证书路径”选项卡，可以查看任何证书链。有关导入证书颁发机构的证书链的详细信息, [请参阅如何:指定用于验证签名](specify-the-certificate-authority-chain-verify-signatures-wcf.md)的证书颁发机构证书链。
+使用数字证书对实体进行身份验证时就依赖这一层次结构，它也称为信任链。 通过双击任何证书，然后单击 "**证书路径**" 选项卡，可以使用 MMC 管理单元查看任何证书链。有关导入证书颁发机构的证书链的详细信息，请参阅[如何：指定用于验证签名的证书颁发机构证书链](specify-the-certificate-authority-chain-verify-signatures-wcf.md)。
 
 > [!NOTE]
 > 通过将颁发机构的证书放入受信任的根颁发机构证书存储区中，可以向任何颁发机构指定受信任的根颁发机构。
@@ -72,7 +72,7 @@ ms.locfileid: "70045217"
 
 在创建新服务时，可能会使用不是由受信任的根证书颁发的证书，或者颁发证书本身可能不在受信任的根证书颁发机构存储区中。 如果仅为了开发目的，可以暂时禁用检查证书信任链的机制。 为此，需要将 `CertificateValidationMode` 属性设置为 `PeerTrust` 或 `PeerOrChainTrust`。 这两种模式都指定，证书可以是自行颁发的（对等信任），也可以是信任链的一部分。 在下列所有类上，都可以设置此属性。
 
-|类|Property|
+|实例|Property|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -95,17 +95,17 @@ ms.locfileid: "70045217"
 
 ## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>使用 PowerShell New-selfsignedcertificate Cmdlet 构建证书链
 
-PowerShell New-selfsignedcertificate cmdlet 创建 x.509 证书和私钥/公钥对。 可以将私钥保存在磁盘上，然后用它来颁发和签名新证书，从而模拟链状证书的层次结构。 此 cmdlet 仅用作开发服务时的辅助手段, 不应用于创建用于实际部署的证书。 在开发 WCF 服务时, 请使用以下步骤通过 New-selfsignedcertificate cmdlet 生成信任链。
+PowerShell New-selfsignedcertificate cmdlet 创建 x.509 证书和私钥/公钥对。 可以将私钥保存在磁盘上，然后用它来颁发和签名新证书，从而模拟链状证书的层次结构。 此 cmdlet 仅用作开发服务时的辅助手段，不应用于创建用于实际部署的证书。 在开发 WCF 服务时，请使用以下步骤通过 New-selfsignedcertificate cmdlet 生成信任链。
 
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>使用 New-selfsignedcertificate cmdlet 构建信任链
 
-1. 使用 New-selfsignedcertificate cmdlet 创建临时根证书颁发机构 (自签名) 证书。 将私钥保存到磁盘上。
+1. 使用 New-selfsignedcertificate cmdlet 创建临时根证书颁发机构（自签名）证书。 将私钥保存到磁盘上。
 
 2. 使用此新证书颁发另一个包含公钥的证书。
 
 3. 将根颁发机构证书导入到受信任的根证书颁发机构存储区中。
 
-4. 有关分步说明, 请参阅[如何:创建在开发](how-to-create-temporary-certificates-for-use-during-development.md)期间使用的临时证书。
+4. 有关分步说明，请参阅[如何：创建开发期间使用的临时证书](how-to-create-temporary-certificates-for-use-during-development.md)。
 
 ## <a name="which-certificate-to-use"></a>要使用哪个证书？
 
@@ -113,9 +113,9 @@ PowerShell New-selfsignedcertificate cmdlet 创建 x.509 证书和私钥/公钥�
 
 ### <a name="service-certificates"></a>服务证书
 
-服务证书的主要任务是向客户端验证服务器的身份。 客户端对服务器进行身份验证时所进行的初始检查之一是将“使用者”字段的值与用来联系服务的统一资源标识符 (URI) 进行比较：二者的 DNS 必须匹配。 例如, 如果服务的 URI 为`http://www.contoso.com/endpoint/` , 则 "**使用者**" 字段还必须包含值。 `www.contoso.com`
+服务证书的主要任务是向客户端验证服务器的身份。 客户端对服务器进行身份验证时所进行的初始检查之一是将“使用者”字段的值与用来联系服务的统一资源标识符 (URI) 进行比较：二者的 DNS 必须匹配。 例如，如果 `http://www.contoso.com/endpoint/` 服务的 URI，则 "**使用者**" 字段还必须包含 `www.contoso.com` 值。
 
-请注意，该字段可以包含多个值，每个值都以一个起始值前缀来指示其值。 最常见的情况是, 初始化为公用名 "CN", 例如`CN = www.contoso.com`。 “使用者”字段还可能为空白，这种情况下，“使用者可选名称”字段可以包含“DNS 名称”值。
+请注意，该字段可以包含多个值，每个值都以一个起始值前缀来指示其值。 最常见的情况是，初始化为公用名 "CN"，例如 `CN = www.contoso.com`。 “使用者”字段还可能为空白，这种情况下，“使用者可选名称”字段可以包含“DNS 名称”值。
 
 另请注意，证书“预期目的”字段的值应包含一个适当的值，例如“服务器身份验证”或“客户端身份验证”。
 
@@ -141,7 +141,7 @@ PowerShell New-selfsignedcertificate cmdlet 创建 x.509 证书和私钥/公钥�
 
 在 WCF 中，必须经常指定一个或一组证书，供服务或客户端用来对消息进行身份验证、加密或数字签名。 使用表示 X.509 证书的各个类的 `SetCertificate` 方法，可以以编程方式实现这一操作。 下面的类使用 `SetCertificate` 方法指定一个证书。
 
-|类|方法|
+|实例|方法|
 |-----------|------------|
 |<xref:System.ServiceModel.Security.PeerCredential>|<xref:System.ServiceModel.Security.PeerCredential.SetCertificate%2A>|
 |<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>|
