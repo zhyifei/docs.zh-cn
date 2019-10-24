@@ -2,12 +2,12 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 7a27b05a12017a3c0de6b0d036f480b3e7fdeda7
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 9de4a195f34b0daedcfb3687dbb36495b985092d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392740"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775263"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 
@@ -16,13 +16,13 @@ XML 架构定义 (Xsd.exe) 工具从 XDR、XML 和 XSD 文件或者从运行时�
 ## <a name="syntax"></a>语法
 
 ```console
-xsd file.xdr [/outputdir:directory][/parameters:file.xml]
-xsd file.xml [/outputdir:directory] [/parameters:file.xml]
+xsd file.xdr [-outputdir:directory][/parameters:file.xml]
+xsd file.xml [-outputdir:directory] [/parameters:file.xml]
 xsd file.xsd {/classes | /dataset} [/element:element]
              [/enableLinqDataSet] [/language:language]
-                          [/namespace:namespace] [/outputdir:directory] [URI:uri]
+                          [/namespace:namespace] [-outputdir:directory] [URI:uri]
                           [/parameters:file.xml]
-xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/parameters:file.xml]
+xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/parameters:file.xml]
 ```
 
 ## <a name="argument"></a>参数
@@ -35,39 +35,39 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 
 |选项|描述|
 |------------|-----------------|
-|**/h @ no__t-1elp @ no__t-2**|显示该工具的命令语法和选项。|
-|**/o @ no__t-1utputdir @ no__t-2：** _directory_|指定输出文件的目录。 此参数只能出现一次。 默认值为当前目录。|
+|**/h \[elp \]**|显示该工具的命令语法和选项。|
+|**/o \[utputdir \]：** _目录_|指定输出文件的目录。 此参数只能出现一次。 默认为当前目录。|
 |**/?**|显示该工具的命令语法和选项。|
-|**/p\[arameters\]:** _file.xml_|从指定的 .xml 文件读取各种操作模式的选项。 缩写形式为 `/p:`。 有关详细信息，请参阅 "[备注](#remarks)" 部分。|
+|**/p \[arameters \]：** _file .xml_|从指定的 .xml 文件读取各种操作模式的选项。 缩写形式为 `/p:`。 有关详细信息，请参阅 "[备注](#remarks)" 部分。|
 
 ## <a name="xsd-file-options"></a>XSD 文件选项
  必须为 xsd 文件仅指定下列选项中的一个。
 
 |选项|描述|
 |------------|-----------------|
-|**/c\[lasses\]**|生成与指定架构相对应的类。 若要将 XML 数据读入对象中，请使用 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType> 方法。|
-|**/d\[ataset\]**|生成一个从 <xref:System.Data.DataSet> 派生的类，该类与指定的架构相对应。 若要将 XML 数据读入派生类中，请使用 <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType> 方法。|
+|**/c \[lasses \]**|生成与指定架构相对应的类。 若要将 XML 数据读入对象中，请使用 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType> 方法。|
+|**/d \[ataset \]**|生成一个从 <xref:System.Data.DataSet> 派生的类，该类与指定的架构相对应。 若要将 XML 数据读入派生类中，请使用 <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType> 方法。|
 
  还可以为 .xsd 文件指定下列任何选项。
 
 |选项|描述|
 |------------|-----------------|
-|**/e @ no__t-1lement @ no__t-2：** _element_|指定架构中要为其生成代码的元素。 默认情况下，键入所有元素。 可以多次指定该参数。|
+|**/e \[lement \]：** _元素_|指定架构中要为其生成代码的元素。 默认情况下，键入所有元素。 可以多次指定该参数。|
 |**/enableDataBinding**|在所有生成的类型上实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口以启用数据绑定。 缩写形式为 `/edb`。|
-|**/enableLinqDataSet**|（缩写形式：`/eld`。）指定可使用 LINQ to DataSet 查询的生成的数据集。 此选项在同时指定 /dataset 选项的情况下使用。 有关详细信息，请参阅 [LINQ to DataSet 概述](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)和[查询类型化数据集](../../../docs/framework/data/adonet/querying-typed-datasets.md)。 有关使用 LINQ 的一般信息，请参阅[语言集成查询（linq C# ）](../../csharp/programming-guide/concepts/linq/index.md)或[语言集成查询（linq）-Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)。|
-|**/f\[ields\]**|生成字段，而不是生成属性。 默认情况下生成属性。|
-|**/l @ no__t-1anguage @ no__t-2：** _language_|指定要使用的编程语言。 从 `CS`（默认情况下为 C#）、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#) 中进行选择。 也可指定实现 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 的类的完全限定名|
-|**/n\[amespace\]:** _namespace_|为生成的类型指定运行时命名空间。 默认命名空间为 `Schemas`。|
+|**/enableLinqDataSet**|（短格式： `/eld`。）指定可以使用 LINQ to DataSet 查询生成的数据集。 此选项在同时指定 /dataset 选项的情况下使用。 有关详细信息，请参阅 [LINQ to DataSet 概述](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)和[查询类型化数据集](../../../docs/framework/data/adonet/querying-typed-datasets.md)。 有关使用 LINQ 的一般信息，请参阅[语言集成查询（linq C# ）](../../csharp/programming-guide/concepts/linq/index.md)或[语言集成查询（linq）-Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)。|
+|**/f \[ields \]**|生成字段，而不是生成属性。 默认情况下生成属性。|
+|**/l \[anguage \]：** _language_|指定要使用的编程语言。 从 `CS`（默认情况下为 C#）、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#) 中进行选择。 也可指定实现 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 的类的完全限定名|
+|**/n \[amespace \]：** _命名空间_|为生成的类型指定运行时命名空间。 默认命名空间为 `Schemas`。|
 |**/nologo**|取消显示版权标志。|
 |**/order**|在所有粒子成员上生成显式顺序标识符。|
-|**/o @ no__t-1ut @ no__t-2：** _directoryName_|指定用来放置文件的输出目录。 默认值为当前目录。|
-|**/u @ no__t-1ri @ no__t-2：** _uri_|为架构中要为其生成代码的元素指定 URI。 该 URI（如果存在）应用于使用 `/element` 选项指定的所有元素。|
+|**/o \[ut \]：** _directoryName_|指定用来放置文件的输出目录。 默认为当前目录。|
+|**/u \[ri \]：** _uri_|为架构中要为其生成代码的元素指定 URI。 该 URI（如果存在）应用于使用 `/element` 选项指定的所有元素。|
 
 ## <a name="dll-and-exe-file-options"></a>DLL 和 EXE 文件选项
 
 |选项|描述|
 |------------|-----------------|
-|**/t\[ype\]:** _typename_|指定要为其创建架构的类型的名称。 可以指定多个类型参数。 如果 typename 不指定一个命名空间，则 Xsd.exe 将程序集中的所有类型与指定类型相匹配。 如果 typename 指定一个命名空间，则仅匹配那个类型。 如果 typename 以星号字符 (\*) 结尾，则此工具匹配所有以 \* 前的字符串开头的类型。 如果省略 `/type` 选项，则 Xsd.exe 为程序集中的所有类型生成架构。|
+|**/t \[ype \]：** _typename_|指定要为其创建架构的类型的名称。 可以指定多个类型参数。 如果 typename 不指定一个命名空间，则 Xsd.exe 将程序集中的所有类型与指定类型相匹配。 如果 typename 指定一个命名空间，则仅匹配那个类型。 如果 typename 以星号字符 (\*) 结尾，则此工具匹配所有以 \* 前的字符串开头的类型。 如果省略 `/type` 选项，则 Xsd.exe 为程序集中的所有类型生成架构。|
 
 ## <a name="remarks"></a>备注
 
@@ -79,7 +79,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |XML 到 XSD|使用 XML 文件生成 XML 架构。|
 |XSD 到 DataSet|使用 XSD 架构文件生成公共语言运行时 <xref:System.Data.DataSet> 类。 生成的类为规则 XML 数据提供复杂对象模型。|
 |XSD 到类|使用 XSD 架构文件生成运行时类。 生成的类可以与 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 一起使用，来读写遵循该架构的 XML 代码。|
-|类到 XSD| 使用运行时程序集文件中的一个或多个类型生成 XML 架构。 生成的架构定义 <xref:System.Xml.Serialization.XmlSerializer> 所使用的 XML 格式。|
+|类到 XSD| 使用运行时程序集文件中的一个或多个类型生成 XML 架构。 生成的架构定义 <xref:System.Xml.Serialization.XmlSerializer> 使用的 XML 格式。|
 
  Xsd.exe 只允许操作遵循由万维网联合会 (W3C) 提议的 XML 架构定义 (XSD) 语言的 XML 架构。 有关 XML 架构定义提议或 XML 标准的详细信息，请参阅 <https://w3.org>。
 
@@ -150,11 +150,11 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 
 |特性|描述|
 |---------------|-----------------|
-|language|指定要使用的编程语言。 从 `CS`（默认情况下为 C#）、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#) 中进行选择。 也可指定实现 <xref:System.CodeDom.Compiler.CodeDomProvider> 的类的完全限定名。|
+|语言|指定要使用的编程语言。 从 `CS`（默认情况下为 C#）、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#) 中进行选择。 也可指定实现 <xref:System.CodeDom.Compiler.CodeDomProvider> 的类的完全限定名。|
 |namespace|为生成的代码指定命名空间。 命名空间必须符合 CLR 标准（例如，没有空格或反斜杠字符）。|
-|options|以下值之一：`none`、`properties`（生成属性而不是公共字段）、`order` 或 `enableDataBinding`（请参见前面“XSD 文件选项”一节的 `/order` 和 `/enableDataBinding` 开关）。|
+|选项|以下值之一：`none`、`properties`（生成属性而不是公共字段）、`order` 或 `enableDataBinding`（请参见前面“XSD 文件选项”一节的 `/order` 和 `/enableDataBinding` 开关）。|
 
- 使用 `DataSet` 元素还可以控制如何生成 `<generateDataSet>` 代码。 下面的 XML 指定生成的代码使用 `DataSet` 结构（如 @no__t 1 类）为指定元素创建 Visual Basic 代码。 生成的数据集结构将支持 LINQ 查询。
+ 使用 `DataSet` 元素还可以控制如何生成 `<generateDataSet>` 代码。 下面的 XML 指定生成的代码使用 `DataSet` 结构（如 <xref:System.Data.DataTable> 类）为指定元素创建 Visual Basic 代码。 生成的数据集结构将支持 LINQ 查询。
 
  ```xml
  <xsd xmlns='http://microsoft.com/dotnet/tools/xsd/'>
@@ -174,7 +174,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 |特性|描述|
 |---------------|-----------------|
 |enableLinqDataSet|指定可使用 LINQ to DataSet 查询的生成的数据集。 默认值为 False。|
-|language|指定要使用的编程语言。 从 `CS`（默认情况下为 C#）、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#) 中进行选择。 也可指定实现 <xref:System.CodeDom.Compiler.CodeDomProvider> 的类的完全限定名。|
+|语言|指定要使用的编程语言。 从 `CS`（默认情况下为 C#）、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#) 中进行选择。 也可指定实现 <xref:System.CodeDom.Compiler.CodeDomProvider> 的类的完全限定名。|
 |namespace|为生成的代码指定命名空间。 命名空间必须符合 CLR 标准（例如，没有空格或反斜杠字符）。|
 
  有些特性可在顶级 `<xsd>` 元素上设置。 这些选项可用于任何子元素（`<generateSchemas>`、`<generateClasses>` 或 `<generateDataSet>`）。 下面的 XML 代码在名为“MyOutputDirectory”的输出目录中为名为“IDItems”的元素生成代码。

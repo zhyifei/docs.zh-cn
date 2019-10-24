@@ -7,12 +7,12 @@ helpviewer_keywords:
 - refout compiler option [Visual Basic]
 - /refout compiler option [Visual Basic]
 - -refout compiler option [Visual Basic]
-ms.openlocfilehash: c11d83ff37da41faa3dc6b66a87e2c52c5f6c7ac
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 552e611f222bfcc3ce12520ecdb891fd7b8b21de
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582875"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775545"
 ---
 # <a name="-refout-visual-basic"></a>-refout （Visual Basic）
 
@@ -35,9 +35,7 @@ ms.locfileid: "72582875"
 
 从15.3 版开始 Visual Basic 支持 `-refout` 开关。
 
-引用程序集是仅包含元数据的元数据程序集，但没有实现代码。 它们包括匿名类型之外的所有内容的类型和成员信息。 使用单个 `throw null` 语句替换其方法体。 使用 `throw null` 方法主体（而不是主体）的原因是，Peverify.exe 可以运行并通过（从而验证元数据的完整性）。
-
-引用程序集包括程序集级别的[ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute)特性。 可以在源中指定此属性（之后编译器就不需要进行合成）。 由于此属性，运行时将拒绝加载引用程序集以便执行（但仍可以在只反射上下文中加载它们）。 反射程序集的工具需要确保它们将引用程序集作为仅反射加载;否则，运行时会引发 <xref:System.BadImageFormatException>。
+引用程序集是一种特殊类型的程序集，该程序集只包含表示库的公共 API 图面所需的最少元数据量。 它们包括在生成工具中引用程序集时所有重要成员的声明，但不包括对其 API 协定没有明显影响的私有成员的所有成员实现和声明。 有关详细信息，请参阅 .NET 中的[引用程序集](../../../standard/assembly/reference-assemblies.md)指南。
 
 `-refout` 和 [`-refonly`](refonly-compiler-option.md) 选项互斥。
 

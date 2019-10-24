@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 552fbcf920be609de83708a995a87761f6080220
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 8f144dbd9376f15ac92e283472dac786a6972045
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005269"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775606"
 ---
 # <a name="-reference-visual-basic"></a>-reference （Visual Basic）
 使编译器使指定程序集中的类型信息可供当前正在编译的项目使用。  
@@ -31,14 +31,14 @@ ms.locfileid: "72005269"
 -r:fileList  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
   
 |术语|定义|  
 |---|---|  
-|`fileList`|必需。 程序集文件名的逗号分隔列表。 如果文件名包含空格，则将名称括在引号内。|  
+|`fileList`|必须的。 程序集文件名的逗号分隔列表。 如果文件名包含空格，则将名称括在引号内。|  
   
 ## <a name="remarks"></a>备注  
- 导入的文件必须包含程序集元数据。 仅公共类型在程序集外可见。 [/Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)选项从模块导入元数据。  
+ 导入的文件必须包含程序集元数据。 仅公共类型在程序集外可见。 [-Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)选项从模块导入元数据。  
   
  如果引用本身引用另一个程序集（程序集 B）的程序集（程序集 A），则需要在以下情况下引用程序集 B：  
   
@@ -55,7 +55,7 @@ ms.locfileid: "72005269"
  `-reference` 的缩写形式是 `/r`。  
   
 ## <a name="example"></a>示例  
- 下面的命令编译源文件 @no__t 0 和引用程序集，从 `Metad1.dll` 和 `Metad2.dll` 生成 @no__t 3。  
+ 以下命令将源文件 `Input.vb` 和引用程序集从 `Metad1.dll` 和 `Metad2.dll` 编译为生成 `Out.exe`。  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  
@@ -66,5 +66,5 @@ vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb
 - [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [-target （Visual Basic）](../../../visual-basic/reference/command-line-compiler/target.md)
-- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+- [COMClassAttribute](../../../visual-basic/language-reference/modifiers/public.md)
 - [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -25,65 +25,65 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: b5a26a8b68a2f786213aa49f30247d692b3de2f7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd5b0032ca63ccb2f2cc30d72a5b3f3c7eb3c346
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649650"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775735"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>重载过程注意事项 (Visual Basic)
-重载的过程，您必须使用不同*签名*为每个重载版本。 这通常意味着每个版本必须指定不同的参数列表。 详细信息，请参阅"不同的签名"中[过程重载](./procedure-overloading.md)。  
+重载过程时，必须为每个重载版本使用不同的*签名*。 这通常意味着每个版本都必须指定不同的参数列表。 有关详细信息，请参阅[过程重载](./procedure-overloading.md)中的 "不同签名"。  
   
- 可重载`Function`过程使用`Sub`过程中，反之亦然，只要它们具有不同的签名和。 仅在于其中一个的返回值，另一个不，不能区分两个重载。  
+ 您可以使用 `Sub` 过程重载 `Function` 过程，反之亦然，前提是它们具有不同的签名。 两个重载只能不同于有一个返回值，而另一个没有返回值。  
   
- 可重载属性相同的方式重载的过程，并采用相同的限制。 但是，不能重载的过程与属性，反之亦然。  
+ 您可以重载属性，方法与重载过程的方法相同，并且具有相同的限制。 但是，不能使用属性重载过程，反之亦然。  
   
-## <a name="alternatives-to-overloaded-versions"></a>重载版本的替代方法  
- 尤其是在的参数是可选的参数或其数量可变时，有时必须重载版本的替代方法。  
+## <a name="alternatives-to-overloaded-versions"></a>重载版本的替代项  
+ 有时会有一些重载版本的替代方法，特别是在有可选参数时，或参数的数目是可变的。  
   
- 请记住，可选参数不是支持的所有语言和参数数组限制为 Visual Basic。 如果你正在编写很可能在任何几种不同语言编写的代码中调用的过程，重载版本的产品/服务最大的灵活性。  
+ 请记住，可选参数并不一定支持所有语言，参数数组仅限 Visual Basic。 如果要编写的过程可能会从用多种不同语言的任意语言编写的代码中调用，则重载版本提供最大的灵活性。  
   
-### <a name="overloads-and-optional-arguments"></a>重载和可选自变量  
- 当调用代码可以根据需要提供或省略一个或多个自变量时，可以定义多个重载的版本，或使用可选参数。  
+### <a name="overloads-and-optional-arguments"></a>重载和可选参数  
+ 如果调用代码可以选择提供或忽略一个或多个参数，则可以定义多个重载版本或使用可选参数。  
   
-#### <a name="when-to-use-overloaded-versions"></a>何时使用重载的版本  
- 您可以考虑在以下情况下定义一系列的重载版本：  
+#### <a name="when-to-use-overloaded-versions"></a>何时使用重载版本  
+ 可以考虑在以下情况下定义一系列重载版本：  
   
-- 在过程代码中的逻辑是具体取决于是否调用代码提供的可选参数，或不明显不同。  
+- 过程代码中的逻辑明显不同，具体取决于调用代码是否提供可选参数。  
   
-- 过程代码不能可靠地测试是否调用代码已提供的可选参数。 这种情况，例如，如果没有备选的默认值对于调用的代码可能不需要提供。  
+- 过程代码无法可靠地测试调用代码是否提供了可选参数。 例如，如果不能提供调用代码预期无法提供的默认值，则会出现这种情况。  
   
 #### <a name="when-to-use-optional-parameters"></a>何时使用可选参数  
- 你可能希望在以下情况下的一个或多个可选参数：  
+ 在以下情况下，你可能更倾向于使用一个或多个可选参数：  
   
-- 唯一所需的操作时调用的代码不会提供一个可选参数是将参数设置为默认值。 在这种情况下，过程代码可以降低复杂程度如果定义一个或多个与单个版本`Optional`参数。  
+- 调用代码未提供可选参数时唯一必需的操作是将参数设置为默认值。 在这种情况下，如果使用一个或多个 `Optional` 参数定义单个版本，则过程代码可能会比较复杂。  
   
  有关详细信息，请参阅[可选参数](./optional-parameters.md)。  
   
-### <a name="overloads-and-paramarrays"></a>参数和重载  
- 如果调用代码可以通过数目可变的参数，可以定义多个重载的版本，或使用参数数组。  
+### <a name="overloads-and-paramarrays"></a>重载和 ParamArrays  
+ 当调用代码可以传递可变数量的参数时，可以定义多个重载版本或使用参数数组。  
   
-#### <a name="when-to-use-overloaded-versions"></a>何时使用重载的版本  
- 您可以考虑在以下情况下定义一系列的重载版本：  
+#### <a name="when-to-use-overloaded-versions"></a>何时使用重载版本  
+ 可以考虑在以下情况下定义一系列重载版本：  
   
-- 您知道，调用代码永远不会将传递数超过了小的值给参数数组。  
+- 您知道，调用代码永远不会向参数数组传递超过少量的值。  
   
-- 在过程代码中的逻辑是明显不同，具体取决于调用代码传递的多少个值。  
+- 过程代码中的逻辑明显不同，具体取决于调用代码传递的值的数量。  
   
-- 调用代码可以通过不同的数据类型的值。  
+- 调用代码可以传递不同数据类型的值。  
   
 #### <a name="when-to-use-a-parameter-array"></a>何时使用参数数组  
- 你会更好`ParamArray`在以下情况下的参数：  
+ 在以下情况下，你可以使用 `ParamArray` 参数提供更好的服务：  
   
-- 您不能预测多少个值调用代码可以将传递给参数数组，它可能是大量。  
+- 您无法预测调用代码可传递给参数数组的值数量，并且它可能是一个较大的数值。  
   
-- 过程逻辑本身适于循环访问所有通过调用代码，执行的每个值实质上是相同的操作的值。  
+- 过程逻辑适合于循环访问调用代码所通过的所有值，实际上对每个值执行相同的操作。  
   
  有关详细信息，请参阅[参数数组](./parameter-arrays.md)。  
   
 ## <a name="implicit-overloads-for-optional-parameters"></a>可选参数的隐式重载  
- 使用过程[可选](../../../../visual-basic/language-reference/modifiers/optional.md)参数相当于两个重载过程，一个具有可选参数，而无需它的一个。 不能重载带有对应于任何一种方法的参数列表的此类的过程。 下面的声明说明这一点。  
+ 带有[可选](../../../../visual-basic/language-reference/modifiers/optional.md)参数的过程等效于两个重载过程，其中一个参数具有可选参数，一个参数不包含它。 不能使用与上述任一方法对应的参数列表重载此类过程。 以下声明阐释了这一点。  
   
  [!code-vb[VbVbcnProcedures#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#58)]  
   
@@ -91,35 +91,35 @@ ms.locfileid: "64649650"
   
  [!code-vb[VbVbcnProcedures#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#61)]  
   
- 对于具有多个可选参数的过程，没有隐式重载，到达由逻辑类似于前面的示例中的一组。  
+ 对于具有多个可选参数的过程，有一组隐式重载，它们与前面示例中的逻辑类似。  
   
 ## <a name="implicit-overloads-for-a-paramarray-parameter"></a>ParamArray 参数的隐式重载  
- 编译器会考虑使用为过程[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)参数具有无限数目的重载，不同于彼此中调用代码传递的内容到参数的数组，如下所示：  
+ 编译器将具有[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)参数的过程视为具有无限数目的重载，这些重载在调用代码传递给参数数组的内容中彼此不同，如下所示：  
   
-- 调用代码未提供的参数的一个重载 `ParamArray`  
+- 调用代码未向 `ParamArray` 提供参数时的一个重载  
   
-- 调用代码时提供的一维数组的一个重载`ParamArray`元素类型  
+- 如果调用代码提供一维 `ParamArray` 元素类型的数组，则为一个重载  
   
-- 对于每个正整数，其中一个重载的调用代码提供该数量的参数，每个时`ParamArray`元素类型  
+- 对于每个正整数，调用代码提供该数量的参数时的一个重载，每个 `ParamArray` 元素类型  
   
- 下面的声明演示了这些隐式重载。  
+ 以下声明阐释了这些隐式重载。  
   
  [!code-vb[VbVbcnProcedures#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#68)]  
   
  [!code-vb[VbVbcnProcedures#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#70)]  
   
- 不能重载采用一维数组的参数数组的参数列表的此类的过程。 但是，可以使用其他隐式重载的签名。 下面的声明说明这一点。  
+ 不能使用参数列表重载此类过程，该参数列表采用一维数组作为参数数组。 但是，可以使用其他隐式重载的签名。 以下声明阐释了这一点。  
   
  [!code-vb[VbVbcnProcedures#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#71)]  
   
-## <a name="typeless-programming-as-an-alternative-to-overloading"></a>作为一种替代方法重载无类型编程  
- 如果你想要允许调用代码将传递给参数的不同数据类型，另一种方法是无类型编程。 可以设置类型检查开关`Off`带有[Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)或[/optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md)编译器选项。 然后无需声明参数的数据类型。 但是，这种方法具有以下缺点相比重载：  
+## <a name="typeless-programming-as-an-alternative-to-overloading"></a>作为重载替代的替代方法  
+ 如果要允许调用代码将不同数据类型传递给参数，则可以使用一种无类型编程方法。 您可以通过[Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)或[-optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md)编译器选项将类型检查开关设置为 `Off`。 然后不必声明参数的数据类型。 不过，与重载相比，此方法具有以下缺点：  
   
-- 无类型编程生成效率较低的执行代码。  
+- 无程序编程产生的执行代码效率较低。  
   
-- 该过程必须测试预期将传递的每个数据类型。  
+- 此过程必须测试其预期要传递的每个数据类型。  
   
-- 如果调用代码传递过程不支持的数据类型，编译器不能发出错误信号。  
+- 如果调用代码传递了过程不支持的数据类型，则编译器无法发出错误信号。  
   
 ## <a name="see-also"></a>请参阅
 
@@ -127,8 +127,8 @@ ms.locfileid: "64649650"
 - [过程参数和自变量](./procedure-parameters-and-arguments.md)
 - [过程疑难解答](./troubleshooting-procedures.md)
 - [如何：定义一个过程的多个版本](./how-to-define-multiple-versions-of-a-procedure.md)
-- [如何：调用重载的过程](./how-to-call-an-overloaded-procedure.md)
+- [如何：调用重载过程](./how-to-call-an-overloaded-procedure.md)
 - [如何：重载带有可选参数的过程](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [如何：重载的参数数量不确定的过程](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [如何：重载参数数量不确定的过程](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [重载决策](./overload-resolution.md)
 - [重载](../../../../visual-basic/language-reference/modifiers/overloads.md)

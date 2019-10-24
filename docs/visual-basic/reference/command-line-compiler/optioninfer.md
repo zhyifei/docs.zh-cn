@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: c6fc7e9dcfbce938ad75b0f357c2bfa9cd10703a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: d7209e431b84e52e487bccbf73bd633a346efde0
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005323"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775622"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 允许在变量声明中使用局部类型推理。  
@@ -24,7 +24,7 @@ ms.locfileid: "72005323"
 -optioninfer[+ | -]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
   
 |术语|定义|  
 |---|---|  
@@ -60,5 +60,5 @@ vbc -optioninfer+ test.vb
 - [局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [“选项”对话框 ->“项目”->“Visual Basic 默认值”](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
 - [“项目设计器”->“编译”页 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
-- [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
+- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)

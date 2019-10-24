@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 52da5d059369f8f5a85c23d1ed5ade97523a0e78
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4dcca0f0ed9989577ded27bab7cf3b16f3036964
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582633"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775456"
 ---
 # <a name="option-infer-statement"></a>Option Infer 语句
 
@@ -62,7 +62,7 @@ Option Infer { On | Off }
 
 ## <a name="when-an-option-infer-statement-is-not-present"></a>当 Option Infer 语句不存在时
 
-如果源代码不包含 `Option Infer` 语句，则使用 "编译" 页上的 "推断设置"**选项**，将使用 "[项目设计器" （Visual Basic）](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 。 如果使用命令行编译器，则使用[/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)编译器选项。
+如果源代码不包含 `Option Infer` 语句，则使用 "编译" 页上的 "推断设置"**选项**，将使用 "[项目设计器" （Visual Basic）](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 。 如果使用命令行编译器，则使用[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)编译器选项。
 
 #### <a name="to-set-option-infer-in-the-ide"></a>若要在 IDE 中设置 Option Infer
 
@@ -76,7 +76,7 @@ Option Infer { On | Off }
 
 #### <a name="to-set-option-infer-on-the-command-line"></a>若要设置命令行上的 Option Infer
 
-在**vbc**命令中包含[/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)编译器选项。
+在**vbc**命令中包含[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)编译器选项。
 
 ## <a name="default-data-types-and-values"></a>默认数据类型和值
 
@@ -109,5 +109,5 @@ Option Infer { On | Off }
 - [Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [“选项”对话框 ->“项目”->“Visual Basic 默认值”](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
-- [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [装箱和取消装箱](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
