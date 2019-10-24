@@ -2,12 +2,12 @@
 title: 处理异步应用中的重新进入（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 199b7ce2cb8b3f3b8e220f9e2bab7e9c39a8d033
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 466ff3ba4cdb627143b3ffc988ae4a16348e6ca6
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351986"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775528"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>处理异步应用中的重新进入（Visual Basic）
 
@@ -15,6 +15,9 @@ ms.locfileid: "71351986"
 
 > [!NOTE]
 > 若要运行该示例，计算机上必须安装 Visual Studio 2012 或更高版本和 .NET Framework 4.5 或更高版本。
+
+> [!NOTE]
+> 传输层安全性（TLS）版本1.2 现在是要在应用程序开发中使用的最低版本。 如果你的应用面向早于4.7 的 .NET framework 版本，请参阅以下文章，了解[.NET Framework 的传输层安全性（TLS）最佳做法](../../../../framework/network-programming/tls.md) 
 
 ## <a name="BKMK_RecognizingReentrancy"></a>识别重新进入
 
@@ -94,7 +97,7 @@ TOTAL bytes returned:  890591
 
 可以通过在 `StartButton_Click` 事件处理程序顶部禁用“开始”按钮，在操作运行期间阻止该按钮。 随后可以在操作完成时从 `Finally` 块中重新启用中该按钮，以便用户可以再次运行应用。
 
-下面的代码演示了这些更改（使用星号标记）。 你可以在本主题末尾添加对代码所做的更改，或者可以从 @no__t 0Async 示例下载完成的应用程序：.NET 桌面应用中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下载压缩文件。 项目名是 DisableStartButton。
+下面的代码演示了这些更改（使用星号标记）。 可以将更改添加到本主题末尾的代码中，或从[异步示例：.NET 桌面应用中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下载已完成的应用。 项目名是 DisableStartButton。
 
 ```vb
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
@@ -125,7 +128,7 @@ End Sub
 
 有关取消的详细信息，请参阅[微调异步应用程序（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)。
 
-若要设置此方案，请对[检查并运行示例应用](#BKMD_SettingUpTheExample)中提供的基本代码进行以下更改。 还可以从[异步示例：.NET 桌面应用中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下载压缩文件。 此项目的名称是 CancelAndRestart。
+若要设置此方案，请对[检查并运行示例应用](#BKMD_SettingUpTheExample)中提供的基本代码进行以下更改。 还可以从[异步示例：.NET 桌面应用中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下载已完成的应用。 此项目的名称是 CancelAndRestart。
 
 1. 声明 <xref:System.Threading.CancellationTokenSource> 变量 `cts`，它处于所有方法的范围内。
 
@@ -136,7 +139,7 @@ End Sub
         Dim cts As CancellationTokenSource
     ```
 
-2. 在 `StartButton_Click` 中，确定操作是否已在进行。 如果 `cts` 的值 @no__t 为-1，则没有任何操作处于活动状态。 如果值不 `Nothing`，则取消已在运行的操作。
+2. 在 `StartButton_Click` 中，确定操作是否已在进行。 如果 `cts` 的值 `Nothing`，则没有任何操作处于活动状态。 如果值不 `Nothing`，则取消已在运行的操作。
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -153,7 +156,7 @@ End Sub
     cts = newCTS
     ```
 
-4. 在 `StartButton_Click` 结束时，当前进程完成，因此将 @no__t 的值设置回 `Nothing`。
+4. 在 `StartButton_Click` 结束时，当前进程完成，因此将 `cts` 的值设置为 "`Nothing`"。
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -513,7 +516,7 @@ End Function
   TOTAL bytes returned:  915908
   ```
 
-- @No__t-0 任务仅在第一次 `FinishOneGroupAsync` 的开头 @no__t 为组 A。 组 A 在它到达 `FinishOneGroupAsync` 时尚未尚未完成 await 表达式。 因此，控制权未返回给 `AccessTheWebAsync`，对 `pendingWork` 的第一个分配尚未发生。
+- @No__t_0 任务仅在 `FinishOneGroupAsync` 的开头 `Nothing`，后者首先启动。 组 A 在它到达 `FinishOneGroupAsync` 时尚未尚未完成 await 表达式。 因此，控制权未返回给 `AccessTheWebAsync`，对 `pendingWork` 的第一个分配尚未发生。
 
 - 下面两行始终在输出中一起显示。 该代码从不会在于 `StartButton_Click` 中启动组操作与将组的任务分配给 `pendingWork` 之间中断。
 
@@ -553,7 +556,7 @@ End Function
 
 1. 启动 Visual Studio。
 
-2. 在菜单栏上，依次选择“文件”、“新建”、“项目”。
+2. 在菜单栏上，依次选择 **“文件”** 、 **“新建”** 、 **“项目”** 。
 
      **“新建项目”** 对话框随即打开。
 
@@ -561,7 +564,7 @@ End Function
 
 4. 在项目类型列表中，选择“WPF 应用程序”。
 
-5. 将项目命名为 `WebsiteDownloadWPF`，然后选择“确定”按钮。
+5. 将项目命名为 `WebsiteDownloadWPF`，选择4.6 或更高版本的 .NET Framework 版本，然后单击 **"确定"** 按钮。
 
      新项目将出现在“解决方案资源管理器”中。
 
@@ -589,7 +592,9 @@ End Function
 
      MainWindow.xaml 的“设计”视图中将显示一个简单的窗口，其中包含一个文本框和一个按钮。
 
-8. 对 <xref:System.Net.Http> 添加引用。
+8. 在**解决方案资源管理器**中，右键单击 "**引用**"，然后选择 "**添加引用**"。
+
+     为 <xref:System.Net.Http> 添加引用（如果尚未选择）。
 
 9. 在**解决方案资源管理器**中，打开 mainwindow.xaml 的快捷菜单，然后选择 "**查看代码**"。
 
@@ -603,6 +608,8 @@ End Function
     Class MainWindow
 
         Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
+            System.Net.ServicePointManager.SecurityProtocol = System.Net.ServicePointManager.SecurityProtocol Or System.Net.SecurityProtocolType.Tls12
+
             ' This line is commented out to make the results clearer in the output.
             'ResultsTextBox.Text = ""
 
@@ -677,5 +684,5 @@ End Function
 
 ## <a name="see-also"></a>请参阅
 
-- [演练：使用 Async 和 Await 访问 Web （Visual Basic） ](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [演练：使用 Async 和 Await 访问 Web (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

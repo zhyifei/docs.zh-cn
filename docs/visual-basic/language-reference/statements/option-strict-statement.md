@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: afe2181e031a651767e6a6eec0397300b03fce50
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 8b7dfcfa394ed2c45adec9661ee1ea5823435223
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582560"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775442"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 将隐式数据类型转换限制为仅进行扩大转换，不允许后期绑定，而不允许导致 `Object` 类型的隐式类型转换。  
@@ -104,7 +104,7 @@ Option Strict { On | Off }
 ## <a name="when-an-option-strict-statement-is-not-present"></a>当 Option Strict 语句不存在时  
  如果源代码不包含 `Option Strict` 语句，则使用 "编译" 页上的 " **Option strict** " 设置[，"项目设计器" （Visual Basic）](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 。 "**编译" 页**中的设置提供对生成错误的条件的更多控制。  
   
- 如果使用的是命令行编译器，则可以使用[/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)编译器选项指定 `Option Strict` 的设置。  
+ 如果使用的是命令行编译器，可以使用[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)编译器选项指定 `Option Strict` 的设置。  
   
 ### <a name="to-set-option-strict-in-the-ide"></a>在 IDE 中设置 Option Strict  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -132,7 +132,7 @@ Option Strict { On | Off }
  若要在此对话框中设置 `Option Strict`，请在 "**工具**" 菜单上单击 "**选项**"。 在“选项”对话框中，展开“项目和解决方案”，然后单击“VB 默认值”。 默认情况下， **VB**默认设置中的初始默认设置为 `Off`。  
   
 ### <a name="to-set-option-strict-on-the-command-line"></a>在命令行上设置 Option Strict  
- 在**vbc**命令中包含[/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)编译器选项。  
+ 在**vbc**命令中包含[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)编译器选项。  
   
 ## <a name="example"></a>示例  
  下面的示例演示由收缩转换的隐式类型转换导致的编译时错误。 此类别的错误对应于 "**编译" 页**上的**隐式转换**条件。  
@@ -162,5 +162,5 @@ Option Strict { On | Off }
 - [XML 中的嵌入式表达式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
 - [宽松委托转换](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
 - [Office 解决方案中的晚期绑定](/visualstudio/vsto/late-binding-in-office-solutions)
-- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [“选项”对话框 ->“项目”->“Visual Basic 默认值”](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
