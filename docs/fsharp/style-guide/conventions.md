@@ -1,32 +1,32 @@
 ---
 title: F# 编码约定
-description: 了解一般指导原则和习惯用语，编写时F#代码。
-ms.date: 05/14/2018
-ms.openlocfilehash: c8df654cbb94fff1ef7ffb909655439398f30bf5
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+description: 编写F#代码时，请了解一般准则和惯例。
+ms.date: 10/22/2019
+ms.openlocfilehash: 6700f64aa61308cbfc0b7a38724d69a281a088db
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402367"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72799101"
 ---
 # <a name="f-coding-conventions"></a>F# 编码约定
 
-以下约定表述从处理较大的体验F#代码库。 [良好的五个原则F#代码](index.md#five-principles-of-good-f-code)是每个建议的基础。 与相关[F#组件设计准则](component-design-guidelines.md)，但不适用于任何F#的代码，而不仅仅是组件，例如库。
+以下约定是从使用大型F#基本代码的经验中制定的。 [好F#代码的五大原则](index.md#five-principles-of-good-f-code)是每个建议的基础。 它们与[ F#组件设计准则](component-design-guidelines.md)相关，但适用于任何F#代码，不仅仅是库等组件。
 
 ## <a name="organizing-code"></a>组织代码
 
-F#两种主要方法来组织代码的功能： 模块和命名空间。 这些相似，但存在以下差异：
+F#提供两种主要方法来组织代码：模块和命名空间。 这与此类似，但有以下差异：
 
-* 命名空间被编译为.NET 命名空间。 静态类作为编译模块。
-* 命名空间始终是最高级别。 模块可以是顶级和嵌套在其他模块。
+* 命名空间编译为 .NET 命名空间。 模块编译为静态类。
+* 命名空间始终为顶级。 模块可以是顶级的，也可以嵌套在其他模块中。
 * 命名空间可以跨多个文件。 模块不能。
-* 模块可以使用修饰`[<RequireQualifiedAccess>]`和`[<AutoOpen>]`。
+* 可以通过 `[<RequireQualifiedAccess>]` 和 `[<AutoOpen>]`修饰模块。
 
-以下准则将帮助您使用这些来组织你的代码。
+以下准则将帮助你使用它们来组织你的代码。
 
-### <a name="prefer-namespaces-at-the-top-level"></a>更喜欢在顶层命名空间
+### <a name="prefer-namespaces-at-the-top-level"></a>首选顶级命名空间
 
-对于任何公开使用的代码，命名空间是优先于模块的顶层。 作为.NET 命名空间对它们进行编译，因为它们是可使用 C# 中不存在问题。
+对于任何公开的可执行代码，命名空间优先于顶层的模块。 由于这些命名空间被编译为 .NET 命名空间，因此C#它们可从中利用，无问题。
 
 ```fsharp
 // Good!
@@ -36,7 +36,7 @@ type MyClass() =
     ...
 ```
 
-使用顶级模块可能不会显示不同时只能从名为F#，但对于C#使用者，调用方可能想不到无需限定`MyClass`与`MyCode`模块。
+仅从F#调用时，使用顶级模块可能不会出现差异，但是对于C#使用者来说，必须使用`MyCode`模块限定`MyClass`。
 
 ```fsharp
 // Bad!
@@ -46,11 +46,11 @@ type MyClass() =
     ...
 ```
 
-### <a name="carefully-apply-autoopen"></a>请仔细应用 `[<AutoOpen>]`
+### <a name="carefully-apply-autoopen"></a>仔细应用 `[<AutoOpen>]`
 
-`[<AutoOpen>]`构造可以污染，调用方提供的功能范围和内容来自的答案是"神奇"。 这通常不是一件好事。 此规则的例外是F#核心库本身 （不过这一事实也是一点存在争议）。
+`[<AutoOpen>]` 构造可以污染可供调用方使用的作用域，并且从何处获得答案是 "神奇的"。 这通常不是件好事。 此规则的例外情况是F#核心库本身（尽管这种情况也有争议）。
 
-但是，如果你有一个公共 API，你想要组织单独从该公共 API 帮助程序功能是提供了便利。
+但是，如果你想要从该公共 API 单独组织的公共 API 具有 helper 功能，则此功能非常方便。
 
 ```fsharp
 module MyAPI =
@@ -66,15 +66,15 @@ module MyAPI =
         helper1 x y z
 ```
 
-这样可以从一个函数的公共 API 完全不同的实现详细信息而无需完全限定程序的帮助程序每次调用它。
+这使你可以从函数的公共 API 中完全分离实现详细信息，而无需在每次调用时都对其进行完全限定。
 
-此外，公开的扩展方法和表达式生成器的命名空间级别可以巧妙地表示与`[<AutoOpen>]`。
+此外，还可以在命名空间级别公开扩展方法和表达式生成器，以 `[<AutoOpen>]`。
 
-### <a name="use-requirequalifiedaccess-whenever-names-could-conflict-or-you-feel-it-helps-with-readability"></a>使用`[<RequireQualifiedAccess>]`时可能发生名称冲突或您认为它有助于提高可读性
+### <a name="use-requirequalifiedaccess-whenever-names-could-conflict-or-you-feel-it-helps-with-readability"></a>当名称可能发生冲突时使用 `[<RequireQualifiedAccess>]`，你觉得这有助于提高可读性
 
-添加`[<RequireQualifiedAccess>]`对模块的特性指示模块不能打开，并且对模块的元素的引用需要显式限定访问权限。 例如，`Microsoft.FSharp.Collections.List`模块具有此属性。
+将 `[<RequireQualifiedAccess>]` 特性添加到模块指示可能未打开该模块，并且对该模块中的元素的引用需要显式限定访问权限。 例如，`Microsoft.FSharp.Collections.List` 模块具有此属性。
 
-当函数和模块中的值具有名称可能与其他模块中的名称发生冲突时，这很有用。 需要限定的访问可以极大地提高的长期可维护性和可进化性的库。
+当模块中的函数和值有可能与其他模块中的名称冲突的名称时，这将非常有用。 要求限定访问权限可大大增加库的长期可维护性和可进化性。
 
 ```fsharp
 [<RequireQualifiedAccess>]
@@ -87,15 +87,15 @@ let s = getAString()
 let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 ```
 
-### <a name="sort-open-statements-topologically"></a>排序`open`语句拓扑结构上
+### <a name="sort-open-statements-topologically"></a>Sort `open` 语句界定闭合
 
-在F#，声明相关问题，包括使用的顺序`open`语句。 这是与 C# 中，其中的效果`using`和`using static`无关的文件中这些语句的顺序。
+在F#中，声明的顺序很重要，包括 `open`语句。 这不同于C#，`using`和`using static`的影响与文件中这些语句的排序无关。
 
-在F#，打开到作用域的元素都可隐藏其他人已存在。 这意味着重新排序`open`语句无法更改代码的含义。 因此，任何任意排序的所有`open`语句 （例如，根据） 通常不建议，避免生成您所料的不同行为。
+在F#中，在范围中打开的元素可以隐藏已存在的其他元素。 这意味着重新排序 `open` 语句可能会改变代码的含义。 因此，通常不建议对所有 `open` 语句（例如 alphanumerically）进行任意排序，避免会生成您可能需要的不同行为。
 
-相反，我们建议，您对其进行排序[拓扑结构上](https://en.wikipedia.org/wiki/Topological_sorting); 即，排序你`open`语句中的顺序_层_系统的定义。 也可以考虑不同的拓扑图层内的排序字母数字。
+相反，我们建议对它们进行排序[界定闭合](https://en.wikipedia.org/wiki/Topological_sorting);也就是说，按定义系统_层_的顺序对 `open` 语句排序。 还可以考虑在不同的拓扑层中执行字母数字排序。
 
-例如，下面是对拓扑进行排序F#编译器服务公共 API 文件：
+例如，下面是针对F#编译器服务公共 API 文件的拓扑排序：
 
 ```fsharp
 namespace Microsoft.FSharp.Compiler.SourceCodeServices
@@ -141,11 +141,11 @@ open Internal.Utilities
 open Internal.Utilities.Collections
 ```
 
-请注意，一个分行符将分开的拓扑图层，与正在排序根据之后每个层。 这完全可以将代码组织而不会意外地隐藏值中。
+请注意，分行符分隔拓扑层，每个层将在 alphanumerically 之后进行排序。 这将完全组织代码，而不会意外地隐藏值。
 
 ## <a name="use-classes-to-contain-values-that-have-side-effects"></a>使用类来包含具有副作用的值
 
-有很多时候时初始化一个值，可能会有副作用，如实例化到的数据库或其他远程资源的上下文。 它很容易初始化模块这类问题，并将其用于后续函数：
+在许多情况下，初始化某个值可能会有副作用，如将上下文实例化到数据库或其他远程资源。 在模块中初始化此类东西并在后续函数中使用它非常有吸引力：
 
 ```fsharp
 // This is bad!
@@ -160,15 +160,15 @@ module MyApi =
     let function2 arg = doSutffWith dep1 dep2 dep3 arg
 ```
 
-这通常是一个好主意几个原因：
+出于以下几个原因，这通常是一种不好的做法：
 
-首先，应用程序配置推送到的基本代码`dep1`和`dep2`。 这将很难维护中较大代码库。
+首先，将应用程序配置推送到带有 `dep1` 和 `dep2`的基本代码。 这在更大的基本代码中很难维护。
 
-第二个，将以静态方式初始化数据不应包含不是线程安全，如果你的组件本身会使用多个线程的值。 显然，这违反了`dep3`。
+其次，静态初始化的数据不应包含不是线程安全的值（如果组件自身将使用多个线程）。 `dep3`清楚地违反了此情况。
 
-最后，初始化模块编译到静态构造函数在整个编译单元。 如果该模块中的 let 绑定值初始化中出现任何错误，它表现为`TypeInitializationException`然后应用程序的整个生存期内缓存。 这可能很难诊断。 通常是内部异常，您可以尝试推断，但如果没有，则根本原因无法区分。
+最后，模块初始化为整个编译单元编译为静态构造函数。 如果在该模块中的 let 绑定值初始化中出现任何错误，则会将其视为一个 `TypeInitializationException`，然后在应用程序的整个生存期内对其进行缓存。 这可能很难诊断。 通常情况下，你可以尝试原因，但如果没有，则不会告诉根本原因是什么。
 
-相反，只需使用一个简单的类来保存依赖项：
+相反，只需使用简单的类来保存依赖项：
 
 ```fsharp
 type MyParametricApi(dep1, dep2, dep3) =
@@ -176,20 +176,20 @@ type MyParametricApi(dep1, dep2, dep3) =
     member __.Function2 arg2 = doStuffWith dep1 dep2 dep3 arg2
 ```
 
-这可实现以下目的：
+这会启用以下功能：
 
-1. 将推送 API 本身之外的任何依赖于状态。
-2. 现在可以外部 API 完成配置。
-3. 初始化为因变量值中的错误不是可能会表现为`TypeInitializationException`。
-4. 该 API 是现在可以轻松地测试。
+1. 将任何依赖状态推送到 API 自身之外。
+2. 现在可以在 API 外完成配置。
+3. 依赖值初始化中的错误不可能作为 `TypeInitializationException`清单。
+4. API 现在更易于测试。
 
 ## <a name="error-management"></a>错误管理
 
-大型系统中的错误管理是一项复杂且能体现细微差别工作，并且没有确保您的系统中的项目符号是容错的和的行为也没有 silver。 以下指南应提供导航此困难空间中的指导。
+大型系统中的错误管理是一项复杂且微妙的工作，在确保系统容错和行为良好的情况下没有任何银的项目符号。 以下准则应提供有关导航此困难空间的指导。
 
-### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>表示错误情况和你的域中的内部类型中的非法状态
+### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>表示域内部类型的错误事例和非法状态
 
-与[可区分联合](../language-reference/discriminated-unions.md)，F#使你能够在类型系统中表示发生故障的程序状态。 例如：
+利用可[区分联合](../language-reference/discriminated-unions.md)， F#可以在类型系统中表示有问题的程序状态。 例如:
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -199,7 +199,7 @@ type MoneyWithdrawalResult =
     | UndisclosedFailure
 ```
 
-在这种情况下，有三种已知的方式从银行帐户提取资金可能会失败。 每个错误用例表示在类型中，并因此地进行处理安全地在整个程序。
+在这种情况下，有三种已知的方法可以取出银行帐户的资金。 每个错误事例均以类型表示，因而可在整个程序中安全地处理。
 
 ```fsharp
 let handleWithdrawal amount =
@@ -211,35 +211,35 @@ let handleWithdrawal amount =
     | UndisclosedFailure -> printfn "Failed: unknown"
 ```
 
-一般情况下，如果您可以建立模型的不同方法的内容可以**失败**中你的域，然后处理错误的代码不再视为必须处理常规程序流除了的内容。 它是只需正常程序流的一部分，不会被视为**异常**。 有这两个主要好处：
+通常情况下，如果可以在域中对某些可能会**失败**的方法建模，则不再将错误处理代码视为除常规程序流之外必须处理的内容。 它只是正常程序流程的一部分，不被视为**例外**。 此操作主要有两个优点：
 
-1. 更轻松地根据你的域更改随着时间的推移维护它。
-2. 错误情况下是容易进行单元测试。
+1. 随着域的不断变化，更易于维护。
+2. 错误事例更易于进行单元测试。
 
-### <a name="use-exceptions-when-errors-cannot-be-represented-with-types"></a>当错误不能表示的类型时使用异常
+### <a name="use-exceptions-when-errors-cannot-be-represented-with-types"></a>当错误无法用类型表示时使用异常
 
-并非所有的错误可表示问题域中。 这些类型的故障*出色*在本质上，因此能够引发和捕获异常中的F#。
+不是所有的错误都可以在问题域中表示。 这些类型的错误在本质上是不*例外*的，因此能够在中F#引发和捕获异常。
 
-首先，建议先阅读[异常设计准则](../../standard/design-guidelines/exceptions.md)。 这些是还适用于F#。
+首先，建议您阅读[异常设计准则](../../standard/design-guidelines/exceptions.md)。 它们还适用于F#。
 
-主构造中可用F#中引发的异常应视为按以下顺序的首选项：
+中F#可用于引发异常的主构造应按以下优先顺序考虑：
 
-| 函数 | 语法 | 用途 |
+| 函数 | 语法 | 目标 |
 |----------|--------|---------|
-| `nullArg` | `nullArg "argumentName"` | 引发`System.ArgumentNullException`与指定的参数名称。 |
-| `invalidArg` | `invalidArg "argumentName" "message"` | 引发`System.ArgumentException`使用指定的参数名称和消息。 |
-| `invalidOp` | `invalidOp "message"` | 引发`System.InvalidOperationException`使用指定的消息。 |
-|`raise`| `raise (ExceptionType("message"))` | 引发异常的通用机制。 |
-| `failwith` | `failwith "message"` | 引发`System.Exception`使用指定的消息。 |
-| `failwithf` | `failwithf "format string" argForFormatString` | 引发`System.Exception`由格式字符串和其输入一条消息。 |
+| `nullArg` | `nullArg "argumentName"` | 使用指定的参数名引发 `System.ArgumentNullException`。 |
+| `invalidArg` | `invalidArg "argumentName" "message"` | 使用指定的参数名称和消息引发 `System.ArgumentException`。 |
+| `invalidOp` | `invalidOp "message"` | 使用指定的消息引发 `System.InvalidOperationException`。 |
+|`raise`| `raise (ExceptionType("message"))` | 用于引发异常的通用机制。 |
+| `failwith` | `failwith "message"` | 使用指定的消息引发 `System.Exception`。 |
+| `failwithf` | `failwithf "format string" argForFormatString` | 使用由格式字符串及其输入确定的消息引发 `System.Exception`。 |
 
-使用`nullArg`，`invalidArg`并`invalidOp`作为机制引发`ArgumentNullException`，`ArgumentException`和`InvalidOperationException`在适当的时候。
+使用 `nullArg`、`invalidArg` 和 `invalidOp` 作为在适当的情况下引发 `ArgumentNullException`、`ArgumentException` 和 `InvalidOperationException` 的机制。
 
-`failwith`并`failwithf`应通常避免函数，因为它们会引发基`Exception`类型，不特定的异常。 为每个[异常设计准则](../../standard/design-guidelines/exceptions.md)，你想要时可以引发更具体的异常。
+通常应避免使用 `failwith` 和 `failwithf` 函数，因为它们会引发基 `Exception` 类型，而不是特定异常。 根据[异常设计准则](../../standard/design-guidelines/exceptions.md)，你希望在可以时引发更具体的异常。
 
 ### <a name="using-exception-handling-syntax"></a>使用异常处理语法
 
-F#支持通过异常模式`try...with`语法：
+F#通过`try...with`语法支持异常模式：
 
 ```fsharp
 try
@@ -249,25 +249,25 @@ with
 | :? System.Security.SecurityException as e -> // Do something with it here
 ```
 
-协调遇到模式匹配的异常时执行的功能可能需要一些技巧，如果你想要保持代码干净。 一种此类方法来处理这种情况是使用[活动模式](../language-reference/active-patterns.md)作为一种方式对组功能围绕本身出现异常错误情况。 例如，您可能要使用的 API 时将引发异常，异常元数据中包含有价值的信息。 解包捕获的异常活动模式在正文中有用的值和返回值可以在某些情况下有用。
+如果要使代码更清晰，则在面对具有模式匹配的异常时协调要执行的功能可能有点棘手。 处理此问题的一种方法是使用[活动模式](../language-reference/active-patterns.md)作为一种将错误情况的功能分组，并引发异常本身。 例如，你可能正在使用一个 API，该 API 在引发异常时，将有价值的信息包含在异常元数据中。 将有用的值解包到活动模式内捕获的异常的正文中，并在某些情况下返回该值会很有用。
 
-### <a name="do-not-use-monadic-error-handling-to-replace-exceptions"></a>不使用一元错误处理程序来替换异常
+### <a name="do-not-use-monadic-error-handling-to-replace-exceptions"></a>不要使用一元错误处理来替换异常
 
-异常被视为某种程度上禁忌在函数式编程。 实际上，异常违反纯度，以便安全地将其视为不完全正常工作。 但是，这会忽略代码必须运行的位置和该运行时，可能会发生错误的实际的情况。 一般情况下，假定大多数内容都是纯和总，尽量少的意外事件都不编写代码。
+在函数编程中，异常会被视为有点 taboo。 事实上，例外违反了纯度，因此可以放心地将其视为不太有效。 但是，这会忽略必须运行代码的事实，并且可能会发生运行时错误。 一般情况下，编写代码假设大多数功能都既不是纯也不是总计，以最大程度减少意外的意外情况。
 
-请务必考虑以下核心优势/方面的异常相对于其相关性和.NET 运行时和跨语言生态系统中作为一个整体的适合程度：
+在 .NET 运行时和跨语言生态系统中，请务必考虑以下有关异常的核心优势/方面：
 
-1. 它们包含详细的诊断信息，这一点非常有用，调试问题时。
-2. 它们是由运行时和其他.NET 语言易于理解。
-3. 它们可以减少大量样板与超出其方法的代码相比*避免*通过 ad hoc 基础上实现它们的语义的某个子集的异常。
+1. 它们包含详细的诊断信息，这在调试问题时非常有用。
+2. 它们非常易于由运行时和其他 .NET 语言使用。
+3. 与代码相比，在临时实现其语义的某些子集时，它们可以减少重大的样本，以*避免*异常。
 
-此第三个点至关重要。 对于重要的复杂操作，无法使用异常会导致处理此类结构：
+这第三个要点非常重要。 对于重要复杂的操作，无法使用异常可能导致处理如下结构：
 
 ```fsharp
 Result<Result<MyType, string>, string list>
 ```
 
-这很容易导致脆弱的模式匹配的"stringly 类型化"错误代码：
+这可以轻松地在 "stringly 类型" 错误上导致类似模式的代码，如模式匹配：
 
 ```fsharp
 let result = doStuff()
@@ -279,7 +279,7 @@ match result with
     else ... // Who knows?
 ```
 
-此外，它可以是很吸引人，但在返回的"更好"类型的"简单"函数所需的任何异常：
+此外，在吞并返回 "更好" 类型的 "简单" 函数所需的任何异常时，可能会很有吸引力。
 
 ```fsharp
 // This is bad!
@@ -288,7 +288,7 @@ let tryReadAllText (path : string) =
     with _ -> None
 ```
 
-遗憾的是，`tryReadAllText`可能会引发大量异常基于在文件系统中，可以发生的事情的各种和此代码会立即丢弃有关可能实际上发生哪些错误在您的环境中的任何信息。 如果此代码替换为结果类型，然后您返回到"stringly 类型化"错误消息分析：
+遗憾的是，`tryReadAllText` 可能会根据在文件系统上可能发生的许多事情引发许多异常，而此代码放弃了有关环境中实际出现错误的任何信息。 如果将此代码替换为结果类型，则返回 "stringly 类型" 错误消息分析：
 
 ```fsharp
 // This is bad!
@@ -304,9 +304,9 @@ match r with
     else ...
 ```
 
-并将放入异常对象本身中`Error`构造函数只是强制您能够正确处理在调用站点，而不是在函数中的异常类型。 执行此操作有效地创建选中是众所周知 unfun 作为 API 的调用方处理的异常。
+然后，将异常对象本身放置在 `Error` 构造函数中，只会强制在调用站点（而非函数）正确处理异常类型。 这样做会有效地创建检查的异常，这是一项非常 unfun 的操作，可以作为 API 的调用方处理。
 
-与上述示例的良好替代方法是捕捉*特定*异常并返回该异常的上下文中有意义的值。 如果你修改`tryReadAllText`函数，如下所示，`None`具有更多的含义：
+在上述示例中，一种很好的替代方法是捕获*特定*的异常，并在该异常的上下文中返回有意义的值。 如果按如下所述修改 `tryReadAllText` 函数，`None` 具有更多含义：
 
 ```fsharp
 let tryReadAllTextIfPresent (path : string) =
@@ -314,21 +314,21 @@ let tryReadAllTextIfPresent (path : string) =
     with :? FileNotFoundException -> None
 ```
 
-而不是作为万法归宗正常运行，此函数现在正确地处理这种情况时文件找不到，并将该含义分配给返回。 此返回值可以将映射到错误这种情况下，不放弃任何上下文信息或强制调用方不得不面临可能无法在该点在代码中相关的用例时。
+此函数现在会正确地处理找不到文件的情况，并将这种含义赋给返回，而不是作为全部捕获。 此返回值可以映射到该错误情况，同时不会丢弃任何上下文信息或强制调用方处理可能在代码中不相关的情况。
 
-类型，如`Result<'Success, 'Error>`是适用于基本操作，它们不嵌套，和F#可选类型非常适合用于表示当内容无法返回*内容*或*nothing*. 它们也不能取代有关例外情况，但是，和参数不应尝试使用，以替换异常。 相反，它们应当应用明智地到地址的异常和错误管理策略的特定方面中目标的方式。
+诸如 `Result<'Success, 'Error>` 之类的类型适用于不在其中嵌套的基本操作， F#可选类型适用于在某些情况下可能返回*内容*或不返回*任何*内容。 尽管它们不是异常的替代项，但不应在尝试替换异常时使用。 相反，它们应该谨慎地按目标方式处理异常和错误管理策略的特定方面。
 
-## <a name="partial-application-and-point-free-programming"></a>部分应用程序和无点的编程
+## <a name="partial-application-and-point-free-programming"></a>部分应用和无点编程
 
-F#无点的方式支持部分应用程序，因此，不同的方法来计划。 这会很有用的代码重用在模块或实现的操作，但它通常不是要公开的内容。 一般情况下，无点的编程有益本身并不是，并可以添加一个巨大的认知障碍不沉浸在样式中的人员。
+F#支持部分应用程序，并因此使用各种方法来编程无点样式。 这对于模块内的代码重用或某些内容的实现非常有用，但通常不是公开公开的内容。 通常情况下，无点编程不是本身，也不能为不沉浸样式的人员添加重要认知障碍。
 
-### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>不要使用部分应用程序和科中的公共 Api
+### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>不要在公共 Api 中使用部分应用程序和 currying
 
-有一些例外，在公共 Api 中的部分应用程序的用法容易混淆的使用者。 通常情况下，`let`的绑定中的值F#代码是**值**，而不**函数值**。 值和函数值，将混合在一起可能会导致保存少量的几行代码来交换一小段认知开销，尤其是与运算符结合使用如`>>`编写函数。
+几乎不例外，在公共 Api 中使用部分应用程序可能会给使用者造成混淆。 通常，代码中F# `let`绑定值是**值**而不是**函数值**。 混合值和函数值可能会导致在 exchange 中保存少量的代码行，以实现很多认知开销，尤其是在与运算符（如 `>>` 结合使用以编写函数时）。
 
-### <a name="consider-the-tooling-implications-for-point-free-programming"></a>请考虑无点的编程的工具含义
+### <a name="consider-the-tooling-implications-for-point-free-programming"></a>考虑无点编程的工具含义
 
-扩充的函数未标记其参数。 这会产生工具产生影响。 请考虑以下两个函数：
+扩充函数不会标记其参数。 这会影响工具。 请考虑以下两个函数：
 
 ```fsharp
 let func name age =
@@ -338,7 +338,7 @@ let funcWithApplication =
     printfn "My name is %s and I am %d years old!"
 ```
 
-两者都是有效的函数，但`funcWithApplication`是扩充的函数。 当鼠标悬停在其类型在编辑器中时，会看到此：
+两者都是有效的函数，但 `funcWithApplication` 是一个扩充函数。 当你将鼠标悬停在编辑器中的类型上时，将看到以下内容：
 
 ```fsharp
 val func : name:string -> age:int -> unit
@@ -346,17 +346,17 @@ val func : name:string -> age:int -> unit
 val funcWithApplication : (string -> int -> unit)
 ```
 
-在调用站点，如 Visual Studio 工具中的工具提示将不提供有意义信息关于什么`string`和`int`实际上表示输入的类型。
+在调用站点，工具（如 Visual Studio）中的工具提示将不会向你显示 `string` 和 `int` 输入类型实际表示的内容的有用信息。
 
-如果遇到类似的点无代码`funcWithApplication`公开使用，建议执行完全的 η 扩展，以便工具可以选择在有意义的自变量的名称。
+如果遇到可公开使用的无点代码（如 `funcWithApplication`），则建议执行完全η的扩展，以便工具可以获取有意义的参数名称。
 
-此外，调试无点的代码可能相当困难，如果不是不可能。 调试工具依赖于绑定到名称的值 (例如，`let`绑定)，以便您可以检查中间值中途执行。 当你的代码具有没有要检查的值时，要调试。 将来，调试工具可能会发展为合成基于以前执行路径，这些值，但并不在草木皆兵你一个好办法*潜在*调试功能。
+而且，如果不可能，调试无点代码可能会很难。 调试工具依赖于绑定到名称（例如 `let` 绑定）的值，以便您可以在执行中间检查中间值。 如果你的代码没有要检查的值，则没有要调试的内容。 将来，调试工具可以根据以前执行的路径来合成这些值，但不是最好地将您的匹配情况篱到*可能*的调试功能。
 
-### <a name="consider-partial-application-as-a-technique-to-reduce-internal-boilerplate"></a>请考虑部分应用程序作为一种技术来减少内部样本
+### <a name="consider-partial-application-as-a-technique-to-reduce-internal-boilerplate"></a>考虑使用部分应用程序作为一项技术来减少内部样本
 
-与以前的点，部分应用程序是非常棒的工具减少内部应用程序或 API 的更深层次的内部的样本。 它可以是有用的单元测试更复杂的 Api，样板通常非常困难不得不面临的实现。 例如，下面的代码演示如何可以完成哪些最模拟框架为您提供无需在此类框架使外部依赖关系，而无需了解相关订购 API。
+与前一个要点相比，部分应用程序是一种非常棒的工具，可用于减少应用程序内的样本或 API 的更深层次使用。 它对于实现更复杂的 Api 的单元测试非常有用，在这种情况下，样板通常是处理问题的难点。 例如，下面的代码演示了如何实现最模拟的框架，而无需对此类框架进行外部依赖并了解相关的订购 API。
 
-例如，考虑以下解决方案拓扑：
+例如，请考虑以下解决方案拓扑：
 
 ```
 MySolution.sln
@@ -365,7 +365,7 @@ MySolution.sln
 |_/API.fsproj
 ```
 
-`ImplementationLogic.fsproj` 例如，可能会公开代码：
+`ImplementationLogic.fsproj` 可能会公开如下代码：
 
 ```fsharp
 module Transactions =
@@ -378,7 +378,7 @@ type Transactor(ctx, currentBalance) =
         ...
 ```
 
-单元测试`Transactions.doTransaction`在`ImplementationLogic.Tests.fsproj`很简单：
+`ImplementationLogic.Tests.fsproj` 中的单元测试 `Transactions.doTransaction` 很简单：
 
 ```fsharp
 namespace TransactionsTestingUtil
@@ -389,7 +389,7 @@ module TransactionsTestable =
     let getTestableTransactionRoutine mockContext = Transactions.doTransaction mockContext
 ```
 
-部分应用`doTransaction`与模拟上下文对象，而无需每次构造模拟的上下文中的所有单元测试都调用该函数可以：
+使用模拟上下文对象部分应用 `doTransaction`，可以在所有单元测试中调用函数，而无需每次都构造模拟上下文：
 
 ```fsharp
 namespace TransactionTests
@@ -413,43 +413,43 @@ let ``Test withdrawal transaction with 0.0 for balance``() =
     Assert.Equal(expected, actual)
 ```
 
-不应将此技术普遍应用到整个代码库，但它是以减少样本的复杂的内部机制和单元测试这些内部结构的好方法。
+不应将此方法广泛应用于整个基本代码，但这是减少复杂内部和这些内部测试单元的样本的好办法。
 
 ## <a name="access-control"></a>访问控制
 
-F#具有多个选项[访问控制](../language-reference/access-control.md)继承从所用的.NET 运行时中可用。 这些不是只可用于类型-您也可以使用它们对于函数。
+F#具有多个用于[访问控制](../language-reference/access-control.md)的选项，这些选项是从 .net 运行时中的可用项继承而来的。 这些类型不仅可用于类型，还可以将它们用于函数。
 
-* 更喜欢非`public`类型和成员，直到需要它们是公开使用。 这还可以尽量降低到哪些使用者几。
-* 尽量保证所有帮助器功能`private`。
-* 请考虑使用`[<AutoOpen>]`上的帮助器函数，如果它们可以大量专用模块。
+* 首选非`public` 类型和成员，直到你需要它们可公开使用。 这还可以最大程度地减少使用者。
+* 努力保持所有帮助程序功能 `private`。
+* 如果在 helper 函数的私有模块上使用 `[<AutoOpen>]`，请考虑使用这些功能。
 
-## <a name="type-inference-and-generics"></a>类型推断和泛型
+## <a name="type-inference-and-generics"></a>类型推理和泛型
 
-类型推断可以将保存您键入了大量的样板。 和中的自动泛化F#编译器可帮助你编写您的更为通用的代码几乎没有任何额外的工作量。 但是，这些功能不是普遍很好的。
+类型推理可以省去您键入大量样板。 编译器中的F#自动泛化可帮助你编写更通用的代码，几乎不需要额外的工作。 不过，这些功能并不是普遍适用的。
 
-* 考虑标签与公共 Api 中的显式类型的参数名称并不依赖此类型推断。
+* 考虑在公共 Api 中用显式类型标记参数名称，并且不要依赖于此的类型推理。
 
-    这样做的原因在于**您**应在你的 API，编译器不该形状的控制。 虽然编译器可以执行在推断类型为您的正常作业，就可能有的 API 更改形状，如果它依赖于内部已更改类型。 这可能是你想的但几乎可以肯定会导致重大 API 变化的下游使用者然后需要处理。 相反，如果您显式控制公共 API 的形状，则可以控制这些重大更改。 在 DDD 术语中，这可以认为的防损层。
+    原因在于，**您**应该控制 API 的形状，而不是编译器的形式。 尽管编译器可以在推断类型时执行精细作业，但是，如果它依赖的内部机制已更改类型，则可能会更改 API 的形状。 这可能是你想要的，但几乎肯定会导致下游使用者需要处理的重大 API 更改。 相反，如果你显式控制公共 API 的形状，则可以控制这些重大更改。 在 DDD 术语中，这可以被视为反损坏层。
 
-* 请考虑为泛型参数指定有意义的名称。
+* 请考虑为泛型参数提供有意义的名称。
 
-    除非你正在编写不是特定于特定域的真正泛型代码，有意义的名称可帮助了解的域处于其他程序员。 例如，名为的类型参数`'Document`与文档交互的上下文中数据库中可更清晰通用文档类型，可以接受由函数或正在使用的成员。
+    除非您正在编写不特定于特定域的真正的泛型代码，否则，有意义的名称可以帮助其他程序员了解他们所使用的域。 例如，在与文档数据库交互的上下文中，名为 `'Document` 的类型参数使你可以更清楚地了解你正在使用的函数或成员可以接受的通用文档类型。
 
-* 请考虑命名使用 pascal 命名法的泛型类型参数。
+* 考虑将泛型类型参数命名为 PascalCase。
 
-    这是常规的方法进行某些操作在.NET 中，因此建议使用 pascal 命名法而不是 snake_case 或驼峰式大小写。
+    这是在 .NET 中执行操作的常规方法，因此建议使用 PascalCase 而不是 snake_case 或 camelCase。
 
-最后，自动泛化并不总是出现重大突破人员的新F#或大型代码库。 在使用都是泛型方法的组件则认知开销。 此外，如果自动对不同的输入类型 (let 单独如果他们要这种情况下使用) 不使用通用的函数，就是在该点在时间没有实际的好处。 应始终考虑是否你正在编写的代码将实际上是受益泛型。
+最后，对于新的F#或大的基本代码，自动通用化并非始终是 boon 的。 使用通用组件时存在认知开销。 此外，如果自动通用化的函数不用于不同的输入类型（如果打算将其用作这样的类型），则这些函数在该时间点是泛型的。 如果要编写的代码实际上是泛型的，则应始终考虑。
 
 ## <a name="performance"></a>性能
 
-F#默认情况下，你可以避免某些 bug （特别是那些涉及并发和并行度） 的类不可变的有效值。 但是，在某些情况下，为了实现最佳 （或甚至合理） 高效的执行时间或内存分配的工作范围可能最实现使用就地变化的状态。 这可在与选择的基础F#与`mutable`关键字。
+F#默认情况下，值是不可变的，这使你可以避免某些类 bug （尤其是涉及并发和并行的类）。 但是，在某些情况下，为了实现执行时间或内存分配的最佳（甚至合理）的效率，可以通过使用状态的就地转变来最佳地实现一段工作量。 这可以通过F#使用`mutable`关键字来选择。
 
-但是，利用`mutable`在F#可能会觉得促使功能纯度。 这是没问题，如果调整到纯度上的预期[引用透明度](https://en.wikipedia.org/wiki/Referential_transparency)。 引用透明度-不纯度的编写时的最终目标F#函数。 这可以通过性能关键代码的变化基于实现编写功能的接口。
+但是，在中F#使用 `mutable` 可能会受到功能纯度的干扰。 如果将期望值从纯度调整到[引用透明度](https://en.wikipedia.org/wiki/Referential_transparency)，则这种情况很好。 引用透明度-非纯度-编写F#函数时的最终目标。 这样，便可以在性能关键代码的基于变化的实现上编写功能接口。
 
-### <a name="wrap-mutable-code-in-immutable-interfaces"></a>可变代码包装在不可变接口
+### <a name="wrap-mutable-code-in-immutable-interfaces"></a>在不可变接口中包装可变代码
 
-作为一个目标的引用透明度，与编写代码，不会公开性能关键功能可变 underbelly 至关重要。 例如，下面的代码实现`Array.contains`函数，在F#核心库：
+使用引用透明度作为目标，编写不公开性能关键函数的可变 underbelly 的代码至关重要。 例如，下面的代码实现F#核心库中的 `Array.contains` 函数：
 
 ```fsharp
 [<CompiledName("Contains")>]
@@ -463,11 +463,11 @@ let inline contains value (array:'T[]) =
     state
 ```
 
-多次调用此函数不会更改基础数组，也不要求您维护中使用它的任何可变状态。 它是引用透明的即使的几乎每行代码在其中使用变化。
+多次调用此函数不会更改基础数组，也不需要您维护任何使用它的可变状态。 尽管几乎每个代码行都使用变化，但它是引用的。
 
-### <a name="consider-encapsulating-mutable-data-in-classes"></a>请考虑封装在类中的可变数据
+### <a name="consider-encapsulating-mutable-data-in-classes"></a>考虑在类中封装可变数据
 
-前面的示例使用单个函数来封装操作使用可变的数据。 这并不总是能够满足更复杂的数据集。 请考虑以下几组函数：
+前面的示例使用了一个函数来封装使用可变数据的操作。 对于更复杂的数据集，这并不总是足够的。 请考虑以下几组函数：
 
 ```fsharp
 open System.Collections.Generic
@@ -486,7 +486,7 @@ let closureTableContains (key, value) (t: Dictionary<_, HashSet<_>>) =
     | (false, _) -> false
 ```
 
-此代码是高性能，但它会公开调用方负责维护基于变化的数据结构。 这可以不包含可以更改任何基础成员类内部包装：
+此代码具有高性能，但它公开了调用方负责维护的基于变化的数据结构。 这可以包装在类的内部，没有可更改的基础成员：
 
 ```fsharp
 open System.Collections.Generic
@@ -509,11 +509,11 @@ type Closure1Table() =
         | (false, _) -> false
 ```
 
-`Closure1Table` 封装基础的基于变化的数据结构，从而不强制调用方可以维护基础数据结构。 类是封装数据和例程，而无需公开给调用方的详细信息是基于变化的一种强大方法。
+`Closure1Table` 封装基于变化的基础数据结构，因此不强制调用方维护基础数据结构。 类是一种强大的方法，用于封装基于变化的数据和例程，而不会向调用方公开详细信息。
 
-### <a name="prefer-let-mutable-to-reference-cells"></a>更喜欢`let mutable`到引用单元格
+### <a name="prefer-let-mutable-to-reference-cells"></a>首选 `let mutable` 引用单元格
 
-引用单元格是一种方法来表示对一个值，而不是值本身的引用。 虽然它们可以用于性能关键代码，但它们通常不建议。 请看下面的示例：
+引用单元是表示对值（而不是值本身）的引用的一种方法。 尽管它们可用于性能关键代码，但通常不建议这样做。 请看下面的示例：
 
 ```fsharp
 let kernels =
@@ -527,7 +527,7 @@ let kernels =
     !acc |> Seq.toList
 ```
 
-使用引用单元格现在"破坏"与无需取消引用和重新引用基础数据的所有后续代码。 相反，应考虑`let mutable`:
+现在，使用引用单元格 "pollutes" 的所有后续代码都必须取消引用并重新引用基础数据。 相反，请考虑 `let mutable`：
 
 ```fsharp
 let kernels =
@@ -541,49 +541,49 @@ let kernels =
     acc |> Seq.toList
 ```
 
-除了在 lambda 表达式中间的变化的单个点，所有其他代码的接触`acc`可以在没有任何差别的普通的使用情况的方式操作`let`-绑定不变的值。 这将使更轻松地随时间而变化。
+除了 lambda 表达式中间的单点变化外，接触 `acc` 的所有其他代码都可以通过与正常的 `let`绑定不可变值的使用不相同的方式来实现此目的。 这可以更轻松地随时间推移而变化。
 
 ## <a name="object-programming"></a>对象编程
 
-F#具有对对象和面向对象的 (OO) 概念的完整支持。 尽管许多 OO 概念是功能强大且有用，但并非所有这些都使用的理想之选。 以下列表提供类别在高级别 OO 功能的指导。
+F#完全支持对象和面向对象的（OO）概念。 尽管许多 OO 概念非常强大且有用，但并非所有这些概念都是理想使用。 以下列表提供了有关高级别 OO 功能的指南。
 
-**请考虑在许多情况下使用这些功能：**
+**在许多情况下，请考虑使用这些功能：**
 
-* 点表示法 (`x.Length`)
+* 点表示法（`x.Length`）
 * 实例成员
 * 隐式构造函数
 * 静态成员
-* 索引器表示法 (`arr.[x]`)
-* 命名实参和可选实参
+* 索引器表示法（`arr.[x]`）
+* 命名参数和可选参数
 * 接口和接口实现
 
-**不会到达这些功能的第一次，但请谨慎应用它们时才可以方便地解决问题：**
+**不要首先接触这些功能，但在解决问题时，请慎用这些功能：**
 
 * 方法重载
 * 封装的可变数据
-* 类型运算符
+* 类型上的运算符
 * 自动属性
-* 实现`IDisposable`和 `IEnumerable`
+* 实现 `IDisposable` 和 `IEnumerable`
 * 类型扩展
 * 事件
 * 结构
 * 委托
 * 枚举
 
-**除非您必须将它们通常避免这些功能：**
+**通常，请避免使用这些功能，除非您必须使用这些功能：**
 
 * 基于继承的类型层次结构和实现继承
-* Null 值和 `Unchecked.defaultof<_>`
+* Null 和 `Unchecked.defaultof<_>`
 
-### <a name="prefer-composition-over-inheritance"></a>组合为首继承
+### <a name="prefer-composition-over-inheritance"></a>优先使用继承
 
-[通过继承复合](https://en.wikipedia.org/wiki/Composition_over_inheritance)非常棒的长期存在的惯用语法F#代码可以遵守。 基本原则是，不应公开的基类，强制调用方继承该基类可以实现功能。
+[继承性之上的组合](https://en.wikipedia.org/wiki/Composition_over_inheritance)是一种长期可供使用F#的代码。 基本原则是，不应公开基类并强制调用方从该基类继承以获得功能。
 
-### <a name="use-object-expressions-to-implement-interfaces-if-you-dont-need-a-class"></a>使用对象表达式实现接口，如果您不需要一个类
+### <a name="use-object-expressions-to-implement-interfaces-if-you-dont-need-a-class"></a>如果不需要类，请使用对象表达式来实现接口
 
-[对象表达式](../language-reference/object-expressions.md)可用于快速实现接口在无需执行此操作类内部实现的接口绑定到的值。 这很方便，尤其是当您_仅_需要实现接口并不需要完整的类。
+[对象表达式](../language-reference/object-expressions.md)允许您动态实现接口，将实现的接口绑定到一个值，而无需在类中执行此操作。 这非常方便，尤其是在_只_需要实现接口且无需完整类的情况下。
 
-例如，下面是在中运行的代码[Ionide](http://ionide.io/)提供的代码修复操作，如果你已添加没有的符号`open`语句：
+例如，如果添加了一个没有 `open` 语句的符号，则在[ionide 入门](http://ionide.io/)中运行的代码可提供代码修复操作：
 
 ```fsharp
     let private createProvider () =
@@ -607,11 +607,11 @@ F#具有对对象和面向对象的 (OO) 概念的完整支持。 尽管许多 O
         }
 ```
 
-由于没有为类无需与 Visual Studio Code API 进行交互时，对象表达式是对此的理想工具。 它们也是有价值的单元测试，如果想要进行存根处理出测试例程的接口中特别的方式。
+由于与 Visual Studio Code API 交互时不需要类，因此对象表达式是适用于此的理想工具。 如果要以即席方式使用测试例程来围绕某个接口，则它们对于单元测试也很有用。
 
-## <a name="type-abbreviations"></a>类型缩写
+## <a name="consider-type-abbreviations-to-shorten-signatures"></a>考虑键入缩写以缩短签名
 
-[类型缩写，用](../language-reference/type-abbreviations.md)是要将标签分配到另一个类型，例如函数签名或更复杂类型的简便方法。 例如，以下别名将标签分配给所需定义与计算[CNTK](https://docs.microsoft.com/cognitive-toolkit/)、 深度学习库：
+[类型缩写](../language-reference/type-abbreviations.md)是将标签分配给其他类型的一种简便方法，例如函数签名或更复杂的类型。 例如，以下别名为使用[CNTK](https://docs.microsoft.com/cognitive-toolkit/)（深度学习库）定义计算所需的内容分配一个标签：
 
 ```fsharp
 open CNTK
@@ -620,30 +620,46 @@ open CNTK
 type Computation = DeviceDescriptor -> Variable -> Function
 ```
 
-`Computation`名称是以表示它是别名的签名匹配的任何函数的简便方法。 使用此类类型缩写方便，且允许更简洁的代码。
+`Computation` 名称是一种方便的方法，用于表示与它所别名的签名相匹配的任何函数。 使用类似于这样的类型缩写词是非常方便的，可实现更简洁的代码。
 
-### <a name="avoid-using-type-abbreviations-to-represent-your-domain"></a>避免使用类型缩写来表示你的域
+### <a name="avoid-using-type-abbreviations-to-represent-your-domain"></a>避免使用类型缩写来表示域
 
-尽管类型缩写便于到函数签名中提供一个名称，但它们可以是令人困惑时缩写加上其他类型。 请考虑此缩写：
+尽管类型缩写词在为函数签名提供名称时很方便，但在 abbreviating 其他类型时可能会造成混淆。 请考虑此缩写：
 
 ```fsharp
 // Does not actually abstract integers.
 type BufferSize = int
 ```
 
-这可以是令人困惑，在多个方面：
+这可能会造成混淆：
 
-* `BufferSize` 不是一个抽象概念。它是整数的只是另一个名称。
-* 如果`BufferSize`公开在公共 API 中，它可以轻松地被错误地解释不止是表示`int`。 通常情况下，域类型具有多个属性到它们并不是基元类型，如`int`。 此缩写违反了这种假设。
-* 大小写`BufferSize`（pascal 命名法） 意味着此类型包含更多的数据。
-* 此别名不提供与提供的函数的命名的参数进行比较时会更加的明确。
-* 缩写不将清单中已编译 IL;它是只是一个整数，此别名是编译时构造。
+* `BufferSize` 不是抽象;它只是一个整数的另一个名称。
+* 如果 `BufferSize` 在公共 API 中公开，则可以轻松地对其进行误解，使其只是 `int`。 通常，域类型具有多个属性，而不是基元类型，如 `int`。 此缩写违反了假设。
+* `BufferSize` 的大小写（PascalCase）表示此类型包含更多数据。
+* 与为函数提供命名参数相比，此别名不会提高清晰度。
+* 缩写词不会在编译的 IL 中列出;它只是一个整数，而此别名是编译时构造。
 
 ```fsharp
 module Networking =
     ...
-    let send data (bufferSize: int) =
-        ...
+    let send data (bufferSize: int) = ...
 ```
 
-总之，与类型缩写缺陷是它们**不**抽象概念通过它们缩写加上的类型。 在上一示例中，`BufferSize`只是`int`事实上，与任何其他数据，也不从除了什么类型系统的任何权益`int`已有。
+总而言之，类型缩写的缺陷在于它们**不**是其所 abbreviating 的类型的抽象。 在上面的示例中，`BufferSize` 只是覆盖下的 `int`，不包含任何其他数据，也不包括 `int` 已有的任何权益。
+
+使用类型缩写来表示域的另一种方法是使用单个用例可区分联合。 前面的示例可以建模，如下所示：
+
+```fsharp
+type BufferSize = BufferSize of int
+```
+
+如果你编写的代码在 `BufferSize` 及其基础值的基础上运行，则需要构造一个，而不是传入任意整数：
+
+```fsharp
+module Networking =
+    ...
+    let send data (BufferSize size) =
+    ...
+```
+
+这会减少错误地将任意整数传递到 `send` 函数的可能性，因为调用方必须构造 `BufferSize` 类型以在调用函数之前包装值。

@@ -1,25 +1,25 @@
 ---
-title: 切片 (F#)
-description: 了解如何使用现有F#数据类型的切片, 以及如何为其他数据类型定义自己的切片。
+title: 切片（F#）
+description: 了解如何使用现有F#数据类型的切片，以及如何为其他数据类型定义自己的切片。
 ms.date: 01/22/2019
-ms.openlocfilehash: 3067982c2b4249312c7e9365bbfb994be840911d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cbff1b055ea99ef708f9db191be49275e630ee90
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627144"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798905"
 ---
 # <a name="slices"></a>切片
 
-在F#中, 切片是数据类型的子集。 为了能够从数据类型中获取切片, 数据类型必须定义一个`GetSlice`方法或在范围内的[类型扩展](type-extensions.md)中。 本文介绍如何从现有F#类型获取切片以及如何定义切片。
+在F#中，切片是数据类型的子集。 为了能够从数据类型中获取切片，数据类型必须定义 `GetSlice` 方法或在范围内的[类型扩展](type-extensions.md)中。 本文介绍如何从现有F#类型获取切片以及如何定义切片。
 
-切片与[索引器](./members/indexed-properties.md)相似, 但它不是从基础数据结构产生单个值, 而是生成多个值。
+切片与[索引器](./members/indexed-properties.md)相似，但它不是从基础数据结构产生单个值，而是生成多个值。
 
 F#目前对切片字符串、列表、数组和二维数组的内部支持。
 
 ## <a name="basic-slicing-with-f-lists-and-arrays"></a>具有列表和F#数组的基本切片
 
-切片最常见的数据类型为F# "列表" 和 "数组"。 下面的示例演示如何通过列表执行此操作:
+切片最常见的数据类型为F# "列表" 和 "数组"。 下面的示例演示如何通过列表执行此操作：
 
 ```fsharp
 // Generate a list of 100 integers
@@ -38,7 +38,7 @@ let unboundedEnd = fullList.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-切片数组与切片列表类似:
+切片数组与切片列表类似：
 
 ```fsharp
 // Generate an array of 100 integers
@@ -59,9 +59,9 @@ printfn "Unbounded end slice: %A" unboundedEnd
 
 ## <a name="slicing-multidimensional-arrays"></a>切片多维数组
 
-F#支持F#核心库中的多维数组。 与一维数组一样, 多维数组的切片也很有用。 但是, 附加维度的引入要求使用略微不同的语法, 以便能够获取特定行和列的切片。
+F#支持F#核心库中的多维数组。 与一维数组一样，多维数组的切片也很有用。 但是，附加维度的引入要求使用略微不同的语法，以便能够获取特定行和列的切片。
 
-下面的示例演示如何切分二维数组:
+下面的示例演示如何切分二维数组：
 
 ```fsharp
 // Generate a 3x3 2D matrix
@@ -89,19 +89,19 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-F#核心库不为3d 阵列`GetSlice`定义。 如果要对其他维度的数组或其他数组进行切片, 则必须自行定义`GetSlice`成员。
+F#核心库未定义三维数组`GetSlice`。 如果要对其他维度的数组或其他数组进行切片，则必须自行定义 `GetSlice` 成员。
 
 ## <a name="defining-slices-for-other-data-structures"></a>为其他数据结构定义切片
 
-F#核心库定义了有限类型集的切片。 如果要定义更多数据类型的切片, 可以在类型定义本身或类型扩展中执行此操作。
+F#核心库定义了有限类型集的切片。 如果要定义更多数据类型的切片，可以在类型定义本身或类型扩展中执行此操作。
 
-例如, 下面介绍了<xref:System.ArraySegment%601>如何为类定义切片, 以方便进行数据操作:
+例如，下面介绍了如何为 <xref:System.ArraySegment%601> 类定义切片，以便方便地进行数据操作：
 
 ```fsharp
 open System
 
 type ArraySegment<'TItem> with
-    member segment.GetSlice(?start, ?finish) =
+    member segment.GetSlice(start, finish) =
         let start = defaultArg start 0
         let finish = defaultArg finish segment.Count
         ArraySegment(segment.Array, segment.Offset + start, finish - start)
@@ -110,9 +110,9 @@ let arr = ArraySegment [| 1 .. 10 |]
 let slice = arr.[2..5] //[ 3; 4; 5]
 ```
 
-### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>如果需要, 请使用内联来避免装箱
+### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>如果需要，请使用内联来避免装箱
 
-如果要为实际为结构的类型定义切片, 我们建议你`inline`使用`GetSlice`成员。 F#编译器消除了可选参数, 避免了切片的任何分配。 这对于切片构造极其重要<xref:System.Span%601> , 例如无法在堆上分配。
+如果要为实际为结构的类型定义切片，我们建议您 `inline` `GetSlice` 成员。 F#编译器消除了可选参数，避免了切片的任何分配。 对于无法在堆上分配的切片构造（如 <xref:System.Span%601>），这一点非常重要。
 
 ```fsharp
 open System
