@@ -3,12 +3,12 @@ title: 排查 .NET Core 工具使用问题
 description: 发现运行 .NET Core 工具出现的常见问题及可能的解决方案。
 author: kdollard
 ms.date: 09/23/2019
-ms.openlocfilehash: eb769550493e5a25d4380cd543a3bbec880b38e9
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: fc6c520ab57235c78148a6b77717cbd80a989451
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332949"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318287"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>排查 .NET Core 工具使用问题
 
@@ -19,7 +19,7 @@ ms.locfileid: "71332949"
 当 .NET Core 工具未能运行时，你最可能遇到下述问题之一：
 
 * 找不到工具的可执行文件。
-* 找不到 .NET Core 运行时的正确版本。 
+* 找不到 .NET Core 运行时的正确版本。
 
 ### <a name="executable-file-not-found"></a>找不到可执行文件
 
@@ -58,18 +58,18 @@ Possible reasons for this include:
   * 如果要使用 macOS 10.14“Mojave”或更低版本，并且已使用 .tar.gz 文件（而非 .pkg）安装 .NET Core SDK   。
   * 如果已安装 .NET Core 3.0 SDK，并且已将 `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` 环境变量设置为 `false`。
   * 如果已安装 .NET Core 2.2 SDK 或更低版本，并且已将 `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` 环境变量设置为 `true`。
-  
+
   有关全局工具的详细信息，请参阅 [.NET Core 全局工具概述](global-tools.md)。
 
 * 本地工具
 
   如果要尝试运行本地工具，请验证当前目录或其任何父目录中是否存在一个名为 dotnet-tools.json 的清单文件  。 此文件还可位于项目文件夹层次结构中任意位置的 .config 文件夹下，而不是位于根文件夹中  。 如果存在 dotnet-tools.json，请将其打开，检查是否存在你要尝试运行的工具  。 如果该文件不包含 `"isRoot": true` 的条目，则还要进一步检查文件层次结构中是否存在其他工具清单文件。
 
-    如果要尝试运行已通过指定的路径安装的 .NET Core 工具，则需要在使用该工具时包含该路径。 下面是使用安装了工具路径的工具的示例：
+  如果要尝试运行已通过指定的路径安装的 .NET Core 工具，则需要在使用该工具时包含该路径。 下面是使用安装了工具路径的工具的示例：
 
-   ```console
-   ..\<toolDirectory>\dotnet-<toolName>
-    ```
+  ```console
+  ..\<toolDirectory>\dotnet-<toolName>
+  ```
 
 ### <a name="runtime-not-found"></a>找不到运行时
 
@@ -146,7 +146,7 @@ dotnet tool install -g --version 1.1.0-pre <toolName>
 
 如果尝试安装是常规 NuGet 包（而非 .NET Core 工具）的 NuGet 包，你将看到如下所示的错误：
 
-`NU1212: Invalid project-package combination for `<ToolName>`. DotnetToolReference project style can only contain references of the DotnetTool type.`
+> NU1212：`<ToolName>` 的项目包组合无效。 DotnetToolReference 项目类型仅可包含 DotnetTool 类型的引用。
 
 ### <a name="nuget-feed-cant-be-accessed"></a>无法访问 NuGet 源
 
@@ -161,4 +161,5 @@ dotnet tool install -g --version 1.1.0-pre <toolName>
 常见的失败原因是工具名称不正确。 原因可能是拼写错误，或者工具已移动或已被弃用。 对于 NuGet.org 上的工具，确保名称正确的一种方式是在 NuGet.org 处搜索该工具并复制安装命令。
 
 ## <a name="see-also"></a>请参阅
+
 * [.NET Core 全局工具概述](global-tools.md)

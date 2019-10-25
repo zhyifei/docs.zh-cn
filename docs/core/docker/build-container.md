@@ -4,12 +4,12 @@ description: 在本教程中，你将了解如何使用 Docker 容器化 .NET Co
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 5e05fd2a38770ce348fbbfcfaa88267217b806bf
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: b344731c7d356f3705d9909b6901234f91ec7d6d
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116559"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521885"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>教程：使 .NET Core 应用程序容器化
 
@@ -19,10 +19,10 @@ ms.locfileid: "71116559"
 
 > [!div class="checklist"]
 >
-> * 创建并发布简单的 .NET Core 应用
-> * 创建并配置用于 .NET Core 的 Dockerfile
-> * 生成 Docker 映像
-> * 创建并运行 Docker 容器
+> - 创建并发布简单的 .NET Core 应用
+> - 创建并配置用于 .NET Core 的 Dockerfile
+> - 生成 Docker 映像
+> - 创建并运行 Docker 容器
 
 你将了解用于 .NET Core 应用的 Docker 容器生成和部署任务。 Docker 平台  使用 Docker 引擎  快速生成应用，并将应用打包为 Docker 映像  。 这些映像采用 Dockerfile  格式编写，以供在分层容器中部署和运行。
 
@@ -30,16 +30,16 @@ ms.locfileid: "71116559"
 
 安装以下必备组件：
 
-* [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download)\
+- [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download)\
 如果已安装 .NET Core，请使用 `dotnet --info` 命令来确定使用的是哪个 SDK。
 
-* [Docker 社区版](https://www.docker.com/products/docker-desktop)
+- [Docker 社区版](https://www.docker.com/products/docker-desktop)
 
-* Dockerfile 和 .NET Core 示例应用的临时工作文件夹  。 在本教程中，`docker-working` 用作工作文件夹的名称。
+- Dockerfile 和 .NET Core 示例应用的临时工作文件夹  。 在本教程中，`docker-working` 用作工作文件夹的名称。
 
 ### <a name="use-sdk-version-22"></a>使用 SDK 版本 2.2
 
-如果使用的是更高版本 SDK（如 3.0），请务必强制应用使用 SDK 2.2。 在工作文件夹中创建名为 `global.json` 的文件，并粘贴以下 json 代码：
+如果使用的是更高版本 SDK（如 3.0），请务必强制应用使用 SDK 2.2。 在工作文件夹中创建名为 global.json  的文件，并粘贴以下 JSON 代码：
 
 ```json
 {
@@ -53,7 +53,7 @@ ms.locfileid: "71116559"
 
 ## <a name="create-net-core-app"></a>创建 .Net Core 应用
 
-需要有可供 Docker 容器运行的 .NET Core 应用。 打开终端、创建工作文件夹（如果尚没有），然后进入该文件夹。 在工作文件夹中，运行下面的命令，在名为“应用”的子目录中新建一个项目：
+需要有可供 Docker 容器运行的 .NET Core 应用。 打开终端、创建工作文件夹（如果尚没有），然后进入该文件夹。 在工作文件夹中，运行下面的命令，在名为“app”的子目录中新建一个项目  ：
 
 ```dotnetcli
 dotnet new console -o app -n myapp
@@ -113,7 +113,7 @@ namespace myapp
         {
             var counter = 0;
             var max = args.Length != 0 ? Convert.ToInt32(args[0]) : -1;
-            while(max == -1 || counter < max)
+            while (max == -1 || counter < max)
             {
                 counter++;
                 Console.WriteLine($"Counter: {counter}");
@@ -124,7 +124,7 @@ namespace myapp
 }
 ```
 
-保存此文件，并使用 `dotnet run` 再次测试程序。 请注意，此应用无限期运行。 使用取消命令 <kbd>CTRL + C</kbd> 可以停止运行。 输出如下：
+保存此文件，并使用 `dotnet run` 再次测试程序。 请注意，此应用无限期运行。 使用取消命令 <kbd>CTRL</kbd>+<kbd>C</kbd> 可以停止运行。 输出如下：
 
 ```console
 > dotnet run
@@ -289,7 +289,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 0e8f3c2ca32c        myimage             "dotnet app/myapp.dll"   7 minutes ago       Up 8 seconds           boring_matsumoto
 ```
 
-同样，`docker stop` 命令会停止容器。 下面的示例使用 `docker stop` 命令来停止容器，然后使用 `docker ps` 命令来显示没有正在运行的容器。
+同样，`docker stop` 命令会停止容器。 下面的示例使用 `docker stop` 命令来停止容器，然后使用 `docker ps` 命令来显示未在运行的容器：
 
 ```console
 > docker stop boring_matsumoto
@@ -370,7 +370,8 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 使用 `docker run` 命令，还可以修改 Dockerfile  中的 `ENTRYPOINT` 命令，并运行其他内容，但只能针对相应容器。 例如，使用以下命令来运行 `bash` 或 `cmd.exe`。 根据需要，编辑此命令。
 
 #### <a name="windows"></a>Windows
-在本例中，`ENTRYPOINT` 更改为 `cmd.exe`。 通过按下 <kbd>CTRL + C</kbd> 来结束进程并停止容器。
+
+在本例中，`ENTRYPOINT` 更改为 `cmd.exe`。 通过按下 <kbd>CTRL</kbd>+<kbd>C</kbd> 来结束进程并停止容器。
 
 ```console
 > docker run -it --rm --entrypoint "cmd.exe" myimage
@@ -411,13 +412,13 @@ exit
 
 Docker 有许多不同的命令，可用于执行你要对容器和映像执行的操作。 下面这些 Docker 命令对于管理容器来说至关重要：
 
-* [docker build](https://docs.docker.com/engine/reference/commandline/build/)
-* [docker run](https://docs.docker.com/engine/reference/commandline/run/)
-* [docker ps](https://docs.docker.com/engine/reference/commandline/ps/)
-* [docker stop](https://docs.docker.com/engine/reference/commandline/stop/)
-* [docker rm](https://docs.docker.com/engine/reference/commandline/rm/)
-* [docker rmi](https://docs.docker.com/engine/reference/commandline/rmi/)
-* [docker image](https://docs.docker.com/engine/reference/commandline/image/)
+- [docker build](https://docs.docker.com/engine/reference/commandline/build/)
+- [docker run](https://docs.docker.com/engine/reference/commandline/run/)
+- [docker ps](https://docs.docker.com/engine/reference/commandline/ps/)
+- [docker stop](https://docs.docker.com/engine/reference/commandline/stop/)
+- [docker rm](https://docs.docker.com/engine/reference/commandline/rm/)
+- [docker rmi](https://docs.docker.com/engine/reference/commandline/rmi/)
+- [docker image](https://docs.docker.com/engine/reference/commandline/image/)
 
 ## <a name="clean-up-resources"></a>清理资源
 
@@ -455,7 +456,7 @@ docker rmi mcr.microsoft.com/dotnet/core/runtime:2.2
 
 ## <a name="next-steps"></a>后续步骤
 
-* [试学“ASP.NET Core 微服务”教程。](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
-* [查看支持容器的 Azure 服务。](https://azure.microsoft.com/overview/containers/)
-* [了解 Dockerfile 命令。](https://docs.docker.com/engine/reference/builder/)
-* [了解用于 Visual Studio 的容器工具](/visualstudio/containers/overview)
+- [试学“ASP.NET Core 微服务”教程。](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
+- [查看支持容器的 Azure 服务。](https://azure.microsoft.com/overview/containers/)
+- [了解 Dockerfile 命令。](https://docs.docker.com/engine/reference/builder/)
+- [了解用于 Visual Studio 的容器工具](/visualstudio/containers/overview)

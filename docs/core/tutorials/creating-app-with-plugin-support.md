@@ -3,26 +3,26 @@ title: 使用插件创建 .NET Core 应用程序
 description: 了解如何创建支持插件的 .NET Core 应用程序。
 author: jkoritzinsky
 ms.author: jekoritz
-ms.date: 01/28/2019
-ms.openlocfilehash: 54f616a7b2b20b7682963e9f5d503878bb512c90
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.date: 10/16/2019
+ms.openlocfilehash: 5267a56d0742d8e1cae4a81c058bc4ee05e83b4e
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250162"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579506"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>使用插件创建 .NET Core 应用程序
 
-本教程介绍了如何：
+本教程展示了如何创建自定义的 <xref:System.Runtime.Loader.AssemblyLoadContext> 来加载插件。 <xref:System.Runtime.Loader.AssemblyDependencyResolver> 用于解析插件的依赖项。 该教程正确地将插件依赖项与主机应用程序隔离开来。 你将了解如何：
 
 - 构建支持插件的项目。
 - 创建自定义 <xref:System.Runtime.Loader.AssemblyLoadContext> 加载每个插件。
-- 使用 `System.Runtime.Loader.AssemblyDependencyResolver` 类型允许插件具有依赖项。
+- 使用 <xref:System.Runtime.Loader.AssemblyDependencyResolver?displayProperty=fullName> 类型允许插件具有依赖项。
 - 只需复制生成项目就可以轻松部署的作者插件。
 
 ## <a name="prerequisites"></a>系统必备
 
-- 安装 [.NET Core 3.0](https://dotnet.microsoft.com/download) 或更新版本。
+- 安装 [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) 或更高版本。
 
 ## <a name="create-the-application"></a>创建应用程序
 
@@ -213,7 +213,7 @@ static Assembly LoadPlugin(string relativePath)
 
 通过为每个插件使用不同的 `PluginLoadContext` 实例，插件可以具有不同的甚至冲突的依赖项，而不会出现问题。
 
-## <a name="create-a-simple-plugin-with-no-dependencies"></a>创建不具有依赖项的简单插件
+## <a name="simple-plugin-with-no-dependencies"></a>不具有依赖项的简单插件
 
 返回到根文件夹，执行以下步骤：
 
@@ -256,19 +256,19 @@ static Assembly LoadPlugin(string relativePath)
 </ItemGroup>
 ```
 
-`<Private>false</Private>` 元素非常重要。 它告知 MSBuild 不要将 PluginBase.dll 复制到 HelloPlugin 的输出目录  。 如果 PluginBase.dll 程序集出现在输出目录中，`PluginLoadContext` 将在那里查找到该程序集并在加载 HelloPlugin.dll 程序集时加载它   。 此时，`HelloPlugin.HelloCommand` 类型将从 `HelloPlugin` 项目的输出目录中的 PluginBase.dll 实现 `ICommand` 接口，而不是加载到默认加载上下文中的 `ICommand` 接口  。 因为运行时将这两种类型视为不同程序集的不同类型，所以 `AppWithPlugin.Program.CreateCommands` 方法将找不到命令。 因此，对包含插件接口的程序集的引用需要 `<Private>false</Private>` 元数据。
+`<Private>false</Private>` 元素很重要。 它告知 MSBuild 不要将 PluginBase.dll 复制到 HelloPlugin 的输出目录  。 如果 PluginBase.dll 程序集出现在输出目录中，`PluginLoadContext` 将在那里查找到该程序集并在加载 HelloPlugin.dll 程序集时加载它   。 此时，`HelloPlugin.HelloCommand` 类型将从 `HelloPlugin` 项目的输出目录中的 PluginBase.dll 实现 `ICommand` 接口，而不是加载到默认加载上下文中的 `ICommand` 接口  。 因为运行时将这两种类型视为不同程序集的不同类型，所以 `AppWithPlugin.Program.CreateCommands` 方法找不到命令。 因此，对包含插件接口的程序集的引用需要 `<Private>false</Private>` 元数据。
 
 因为 `HelloPlugin` 项目已完成，所以我们应该更新 `AppWithPlugin` 项目，以确认可以找到 `HelloPlugin` 插件的位置。 在 `// Paths to plugins to load` 注释之后，添加 `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` 作为 `pluginPaths` 数组的元素。
 
-## <a name="create-a-plugin-with-library-dependencies"></a>创建具有库依赖项的插件
+## <a name="plugin-with-library-dependencies"></a>具有库依赖项的插件
 
-几乎所有插件都比简单的“Hello World”更复杂，而且许多插件都具有其他库上的依赖项。 示例中的 `JsonPlugin` 和 `OldJson` 插件项目显示了具有 `Newtonsoft.Json` 上的 NuGet 包依赖项的两个插件示例。 项目文件本身没有关于项目引用的任何特殊信息，并且（在将插件路径添加到 `pluginPaths` 数组之后）即使是在 AppWithPlugin 应用的同一执行中运行，插件也能完美运行。 但是，这些项目不会将引用的程序集复制到它们的输出目录中，因此需要将这些程序集呈递到用户的计算机上，以便插件能够正常工作。 解决此问题有两种方法。 第一种是使用 `dotnet publish` 命令发布类库。 或者，如果希望能够将 `dotnet build` 的输出用于插件，可以在插件的项目文件中的 `<PropertyGroup>` 标记之间添加 `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>` 属性。 有关示例，请参阅 `XcopyablePlugin` 插件项目。
+几乎所有插件都比简单的“Hello World”更复杂，而且许多插件都具有其他库上的依赖项。 示例中的 `JsonPlugin` 和 `OldJson` 插件项目显示了具有 `Newtonsoft.Json` 上的 NuGet 包依赖项的两个插件示例。 项目文件本身没有关于项目引用的任何特殊信息，并且（在将插件路径添加到 `pluginPaths` 数组之后）即使是在 AppWithPlugin 应用的同一执行中运行，插件也能完美运行。 但是，这些项目不会将引用的程序集复制到它们的输出目录中，因此需要将这些程序集显示在用户的计算机上，以便插件能够正常工作。 解决此问题有两种方法。 第一种是使用 `dotnet publish` 命令发布类库。 或者，如果希望能够将 `dotnet build` 的输出用于插件，可以在插件的项目文件中的 `<PropertyGroup>` 标记之间添加 `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>` 属性。 有关示例，请参阅 `XcopyablePlugin` 插件项目。
 
-## <a name="other-plugin-examples-in-the-sample"></a>示例中的其他插件示例
+## <a name="other-examples-in-the-sample"></a>示例中的其他示例
 
 可以在 [dotnet/samples 存储库](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)中找到本教程的完整源代码。 完成的示例包括 `AssemblyDependencyResolver` 行为的一些其他示例。 例如，`AssemblyDependencyResolver` 对象还可以解析本机库和 NuGet 包中所包含的已本地化的附属程序集。 示例存储库中的 `UVPlugin` 和 `FrenchPlugin` 演示了这些方案。
 
-## <a name="how-to-reference-a-plugin-interface-assembly-defined-in-a-nuget-package"></a>如何引用 NuGet 包中定义的插件接口程序集
+## <a name="reference-a-plugin-from-a-nuget-package"></a>从 NuGet 包引用插件
 
 假设存在应用 A，它具有 NuGet 包（名为 `A.PluginBase`）中定义的插件接口。 如何在插件项目中正确引用包？ 对于项目引用，使用项目文件的 `ProjectReference` 元素上的 `<Private>false</Private>` 元数据会阻止将 dll 复制到输出。
 

@@ -4,13 +4,13 @@ description: 在 macOS 计算机上开发、部署和运行 .NET Core 应用程�
 author: thraka
 ms.author: adegeo
 ms.custom: updateeachvsrelease
-ms.date: 09/27/2019
-ms.openlocfilehash: 13eea0043be9cf5d5574d6b38f144853c22e8d07
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.date: 10/11/2019
+ms.openlocfilehash: 2d4fc0b37be08988440325db8b507124c36bf053
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591685"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318315"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>macOS 上 .NET Core 的先决条件
 
@@ -45,6 +45,17 @@ ms.locfileid: "71591685"
 有关已知问题的列表，请参阅 [.NET Core 已知问题](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-known-issues.md)。
 
 ---
+
+## <a name="libgdiplus"></a>libgdiplus
+
+使用 System.Drawing.Common  程序集的 .NET Core 应用程序要求安装 libgdiplus。
+
+获取 libgdiplus 的一个简单方法是使用适用于 macOS 的 [Homebrew (“brew”)](https://brew.sh/) 包。 在安装 brew 后，通过在终端（命令）提示符处执行以下命令来安装 libgdiplus  ：
+
+```console
+brew update
+brew install libgdiplus
+```
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio for Mac
 

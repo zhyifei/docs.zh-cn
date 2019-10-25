@@ -4,12 +4,12 @@ description: 了解如何将 .NET for Apache Spark 应用程序部署到 Databri
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 035a3c36337413153ee0370aec154d48b84a4711
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 55fa9b42e04a540deb245887d601e6cce0e6e623
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957250"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583525"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>将 .NET for Apache Spark 应用程序部署到 Databricks
 
@@ -19,17 +19,17 @@ ms.locfileid: "71957250"
 
 > [!div class="checklist"]
 >
-> - 准备 Microsoft.Spark.Worker
-> - 发布 Spark .NET 应用
-> - 将应用部署到 Databricks
-> - 运行你的应用
+> * 准备 Microsoft.Spark.Worker
+> * 发布 Spark .NET 应用
+> * 将应用部署到 Databricks
+> * 运行你的应用
 
 ## <a name="prerequisites"></a>系统必备
 
 开始之前，请执行以下操作：
 
-- 下载 [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html)。
-- 将 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 下载到本地计算机。 这是稍后用于将 .NET for Apache Spark 依赖文件复制到 Spark 群集的工作器节点的帮助程序脚本。
+* 下载 [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html)。
+* 将 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 下载到本地计算机。 这是稍后用于将 .NET for Apache Spark 依赖文件复制到 Spark 群集的工作器节点的帮助程序脚本。
 
 ## <a name="prepare-worker-dependencies"></a>准备辅助角色依赖项
 
@@ -63,15 +63,15 @@ Microsoft.Spark.Worker 是后端组件，位于 Spark 群集的单个工作器�
 
 4. 将以下内容上传到群集具有访问权限的分布式文件系统（如 DBFS）：
 
-   - `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`：此 jar 作为 [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet 包的一部分包含在内，并且并置在应用的生成输出目录中。
-   - `<your app>.zip`
-   - 要放在每个执行程序的工作目录中的文件（如每位工作人员都可以访问的依赖文件或公共数据）或程序集（如包含应用所依赖的用户定义的函数或库的 DLL）。
+   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`：此 jar 作为 [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet 包的一部分包含在内，并且并置在应用的生成输出目录中。
+   * `<your app>.zip`
+   * 要放在每个执行程序的工作目录中的文件（如每位工作人员都可以访问的依赖文件或公共数据）或程序集（如包含应用所依赖的用户定义的函数或库的 DLL）。
 
 ## <a name="deploy-to-databricks"></a>部署到 Databricks
 
 [Databricks](https://databricks.com) 是一个使用 Apache Spark 提供基于云的大数据处理的平台。
 
-> [!Note] 
+> [!NOTE]
 > [Azure Databricks](https://azure.microsoft.com/services/databricks/) 和 [AWS Databricks](https://databricks.com/aws) 都基于 Linux。 因此，如果要将应用部署到 Databricks，请确保应用与 .NET Standard 兼容，并且使用 [.NET Core 编译器](https://dotnet.microsoft.com/download)编译应用。
 
 通过 Databricks，可以将 .NET for Apache Spark 应用提交到现有的有效群集，或在每次启动作业时创建新群集。 这就需要先安装 Microsoft.Spark.Worker  再提交 .NET for Apache Spark 应用。
@@ -103,7 +103,7 @@ Microsoft.Spark.Worker 是后端组件，位于 Spark 群集的单个工作器�
 
    ![脚本操作图像](./media/databricks-deployment/deployment-databricks-init-script.png)
 
-## <a name="run-your-app"></a>运行你的应用 
+## <a name="run-your-app"></a>运行你的应用
 
 可使用 `set JAR` 或 `spark-submit` 将作业提交到 Databricks。
 
@@ -122,7 +122,7 @@ Microsoft.Spark.Worker 是后端组件，位于 Spark 群集的单个工作器�
    | 参数   | 值                                                |
    |-------------|------------------------------------------------------|
    | Main 类  | org.apache.spark.deploy.dotnet.DotnetRunner          |
-   | 自变量   | /dbfs/apps/<your-app-name>.zip <your-app-main-class> |
+   | 自变量   | /dbfs/apps/\<your-app-name>.zip \<your-app-main-class> |
 
 4. 将“群集”配置为指向上一部分中为其创建“Init 脚本”的现有群集   。
 
@@ -130,28 +130,28 @@ Microsoft.Spark.Worker 是后端组件，位于 Spark 群集的单个工作器�
 
 1. 使用 [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html) 将应用程序上传到 Databricks 群集。
 
-      ```bash
-      cd <path-to-your-app-publish-directory>
-      databricks fs cp <your-app-name>.zip dbfs:/apps/<your-app-name>.zip
-      ```
+    ```bash
+    cd <path-to-your-app-publish-directory>
+    databricks fs cp <your-app-name>.zip dbfs:/apps/<your-app-name>.zip
+    ```
 
 2. 只有当应用程序集（例如包含用户定义的函数及其依赖项的 DLL）需要放置在每个 Microsoft.Spark.Worker 的工作目录中时，才需要执行此步骤  。
 
-   - 将应用程序集上传到 Databricks 群集
-      
+   * 将应用程序集上传到 Databricks 群集
+
       ```bash
       cd <path-to-your-app-publish-directory>
       databricks fs cp <assembly>.dll dbfs:/apps/dependencies
       ```
 
-   - 取消评论并将 [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) 中的应用依赖项部分修改为指向应用依赖项路径，并上传到 Databricks 群集。
-   
+   * 取消评论并将 [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) 中的应用依赖项部分修改为指向应用依赖项路径，并上传到 Databricks 群集。
+
       ```bash
       cd <path-to-db-init-and-install-worker>
       databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
       ```
-   
-   - 重启群集。
+
+   * 重启群集。
 
 3. 在 Databricks 工作区中转到 Databricks 群集。 在“作业”下，选择作业，然后选择“立即运行”以运行作业   。
 
@@ -163,9 +163,9 @@ Microsoft.Spark.Worker 是后端组件，位于 Spark 群集的单个工作器�
 
 2. 使用以下参数配置 `spark-submit`：
 
-      ```bash
-      ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
-      ```
+    ```bash
+    ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
+    ```
 
 3. 在 Databricks 工作区中转到 Databricks 群集。 在“作业”下，选择作业，然后选择“立即运行”以运行作业   。
 

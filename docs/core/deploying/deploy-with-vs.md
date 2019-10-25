@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 4e8fbfa14c241c79f8708dfc2b288eeff2899891
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: e905d48da31bb5a2e16a645620f2c4f57dda4413
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216241"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522801"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 应用
 
@@ -194,7 +194,7 @@ ms.locfileid: "71216241"
   
 1. 选择 Visual Studio 发布应用程序的位置。
 
-   如果仅发布到单个平台，则可以在“选择文件夹”文本框中接受默认值；这会将应用程序的依赖框架的部署发布到 *\<project-directory>\bin\Release\netcoreapp2.1\publish\* 目录  。
+   如果仅发布到单个平台，则可以在“选择文件夹”文本框中接受默认值；这会将应用程序的依赖框架的部署发布到 \<project-directory>\bin\Release\netcoreapp2.1\publish 目录   。
 
    如果要发布到多个平台，请附加标识目标平台的字符串。 例如，如果将字符串“linux”追加到文件路径，Visual Studio 将应用程序的依赖框架的部署发布到 \<project-directory>\bin\Release\netcoreapp2.1\publish\linux 目录  。
 

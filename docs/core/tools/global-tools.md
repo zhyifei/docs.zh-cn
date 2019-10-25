@@ -4,12 +4,12 @@ description: 概述：介绍 .NET Core 全局工具及其适用的 .NET Core CLI
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 40a0aabcf523e8dac9a3ad226064bbb3c1b3ce5b
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 116739f80d5157632a8e44a19cbef6ba7971d339
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332019"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318299"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core 全局工具概述
 
@@ -31,13 +31,12 @@ ms.locfileid: "71332019"
 
 ## <a name="find-a-net-core-global-tool"></a>查找 .NET Core 全局工具
 
-目前，.NET Core 命令行接口 (CLI) 中没有全局工具搜索功能。
+目前，.NET Core 命令行接口 (CLI) 中没有全局工具搜索功能。 下面提供有关如何查找工具的一些建议：
 
-可在 [NuGet](https://www.nuget.org) 上查找 .NET Core 全局工具。 但是 NuGet 尚不能专门针对 .NET Core 全局工具进行搜索。
-
-还可在博客文章或 [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub 存储库中找到工具建议。
-
-也可以在 [aspnet/DotNetTools](https://github.com/aspnet/DotNetTools/) GitHub 存储库查看 ASP.NET 团队创建的全局工具的源代码。
+* 可在 [NuGet](https://www.nuget.org) 上查找 .NET Core 全局工具。 但是 NuGet 尚不能专门针对 .NET Core 全局工具进行搜索。
+* 可在博客文章或 [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub 存储库中找到工具建议。
+* 可以在 [aspnet/DotNetTools](https://github.com/aspnet/DotNetTools/) GitHub 存储库查看 ASP.NET 团队创建的全局工具的源代码。
+* 可以在 [.NET Core dotnet 诊断全局工具](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools)中了解诊断工具。
 
 ## <a name="check-the-author-and-statistics"></a>查看作者和统计信息
 

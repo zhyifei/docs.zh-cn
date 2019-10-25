@@ -2,12 +2,12 @@
 title: .NET Core 的 csproj 格式的新增内容
 description: 了解现有文件和 .NET Core csproj 文件之间的区别
 ms.date: 04/08/2019
-ms.openlocfilehash: 2ec1aaff88754848d844a56b1744beb2efa4cd89
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: d7fca40caaeb83152b8ae5260bf918981362d2c3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291232"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522799"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core 的 csproj 格式的新增内容
 
@@ -33,11 +33,11 @@ ms.locfileid: "72291232"
 
 由于隐式引用了 `Microsoft.NETCore.App` 或 `NETStandard.Library` 元包，以下是建议的最佳做法：
 
-* 面向 .NET Core 或 .NET Standard 时，绝不通过项目文件中的 `<PackageReference>` 项，对 `Microsoft.NETCore.App` 或 `NETStandard.Library` 元包进行显式引用。
-* 面向 .NET Core 时，如果需要特定版本的运行时，应使用项目中的 `<RuntimeFrameworkVersion>` 属性（例如，`1.0.4`），而不是引用元包。
-  * 例如，如果使用[独立部署](../deploying/index.md#self-contained-deployments-scd)且需要 1.0.0 LTS 运行时的特定修补程序版本，可能会发生这种情况。
-* 面向 .NET Standard 时，如果需要特定版本的 `NETStandard.Library` 元包，可以使用 `<NetStandardImplicitPackageVersion>` 属性并设置所需版本。
-* 请勿在 .NET Framework 项目中显式添加或更新对 `Microsoft.NETCore.App` 或 `NETStandard.Library` 元包的引用。 使用基于 .NET Standard 的 NuGet 包时，如果需要任意版本的 `NETStandard.Library`，NuGet 可自动安装该版本。
+- 面向 .NET Core 或 .NET Standard 时，绝不通过项目文件中的 `<PackageReference>` 项，对 `Microsoft.NETCore.App` 或 `NETStandard.Library` 元包进行显式引用。
+- 面向 .NET Core 时，如果需要特定版本的运行时，应使用项目中的 `<RuntimeFrameworkVersion>` 属性（例如，`1.0.4`），而不是引用元包。
+  - 例如，如果使用[独立部署](../deploying/index.md#self-contained-deployments-scd)且需要 1.0.0 LTS 运行时的特定修补程序版本，可能会发生这种情况。
+- 面向 .NET Standard 时，如果需要特定版本的 `NETStandard.Library` 元包，可以使用 `<NetStandardImplicitPackageVersion>` 属性并设置所需版本。
+- 请勿在 .NET Framework 项目中显式添加或更新对 `Microsoft.NETCore.App` 或 `NETStandard.Library` 元包的引用。 使用基于 .NET Standard 的 NuGet 包时，如果需要任意版本的 `NETStandard.Library`，NuGet 可自动安装该版本。
 
 ## <a name="implicit-version-for-some-package-references"></a>一些包引用的隐式版本
 
@@ -59,8 +59,8 @@ ms.locfileid: "72291232"
 
 如果指定  版本，这会被视为框架依赖部署的 ASP.NET Core 共享框架的最低  版本，并被视为独立式部署的确切  版本。 这可能会导致以下后果：
 
-* 如果服务器上安装的 ASP.NET Core 版本低于 PackageReference 中指定的版本，.NET Core 进程便会无法启动。 元包更新通常先可用于 NuGet.org，再可用于托管环境（如 Azure）。 将 PackageReference 中的版本更新为 ASP.NET Core 可能会导致部署的应用失败。
-* 如果应用部署为[独立式部署](../deploying/index.md#self-contained-deployments-scd)，应用可能不包含 .NET Core 的最新安全更新程序。 如果未指定版本，SDK 可以自动在独立式部署中包含 ASP.NET Core 的最新版本。
+- 如果服务器上安装的 ASP.NET Core 版本低于 PackageReference 中指定的版本，.NET Core 进程便会无法启动。 元包更新通常先可用于 NuGet.org，再可用于托管环境（如 Azure）。 将 PackageReference 中的版本更新为 ASP.NET Core 可能会导致部署的应用失败。
+- 如果应用部署为[独立式部署](../deploying/index.md#self-contained-deployments-scd)，应用可能不包含 .NET Core 的最新安全更新程序。 如果未指定版本，SDK 可以自动在独立式部署中包含 ASP.NET Core 的最新版本。
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>.NET Core 项目中默认包含的编译项
 
@@ -160,19 +160,20 @@ ms.locfileid: "72291232"
 
 这些属性可以包含以下一个或多个项，如果列出多个项，则用分号 `;` 字符进行分隔：
 
-* `Compile` - 可对 lib 文件夹内容进行编译。
-* `Runtime` - 分发运行时文件夹内容。
-* `ContentFiles` - 使用 *contentfiles* 文件夹的内容。
-* `Build` - 使用生成文件夹中的属性/目标。
-* `Native` - 将本机资产内容复制到运行时输出文件夹。
-* `Analyzers` - 使用分析器。
+- `Compile` - 可对 lib 文件夹的内容进行编译  。
+- `Runtime` - 分发 runtime 文件夹的内容  。
+- `ContentFiles` - 使用 *contentfiles* 文件夹的内容。
+- `Build` - 使用 build 文件夹中的属性/目标  。
+- `Native` - 将本机资产内容复制到 output 文件夹  以供运行时使用。
+- `Analyzers` - 使用分析器。
 
 此属性也可以包含：
 
-* `None` - 不使用任何资产。
-* `All` - 使用所有资产。
+- `None` - 不使用任何资产。
+- `All` - 使用所有资产。
 
 ### <a name="dotnetclitoolreference"></a>DotNetCliToolReference
+
 `<DotNetCliToolReference>` 项元素指定用户想要在项目的上下文中还原的 CLI 工具。 在 *project.json* 中，它可以替换 `tools` 节点。
 
 ```xml
@@ -224,7 +225,7 @@ RID 允许发布独立部署。
 
 ## <a name="nuget-metadata-properties"></a>NugetMetadataProperties
 
-迁移到 MSBuild 后，我们已将在打包 NuGet 包时使用的输入元数据从 project.json 移到 .csproj 文件中   。 输入为 MSBuild 属性，因此它们必须转到 `<PropertyGroup>` 组中。 下面列出了在使用 `dotnet pack` 命令或属于 SDK 的 `Pack` MSBuild 目标时，用作打包进程的输入的属性。
+迁移到 MSBuild 后，我们已将在打包 NuGet 包时使用的输入元数据从 project.json 移到 .csproj 文件中   。 输入为 MSBuild 属性，因此它们必须转到 `<PropertyGroup>` 组中。 下面列出了在使用 `dotnet pack` 命令或属于 SDK 的 `Pack` MSBuild 目标时，用作打包进程的输入的属性：
 
 ### <a name="ispackable"></a>IsPackable
 
@@ -416,11 +417,11 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 注意：
 
-* `AssemblyVersion` 和 `FileVersion` 默认采用 `$(Version)` 的值而不带后缀。 例如，如果 `$(Version)` 为 `1.2.3-beta.4`，则值将为 `1.2.3`。
-* `InformationalVersion` 默认是 `$(Version)` 的值。
-* 如果存在此属性，则 `InformationalVersion` 附加 `$(SourceRevisionId)`。 可以使用 `IncludeSourceRevisionInInformationalVersion` 来禁用它。
-* `Copyright` 和 `Description` 属性也可用于 NuGet 元数据。
-* `Configuration` 与所有生成过程共享，并通过 `dotnet` 命令的 `--configuration` 参数进行设置。
+- `AssemblyVersion` 和 `FileVersion` 默认采用 `$(Version)` 的值而不带后缀。 例如，如果 `$(Version)` 为 `1.2.3-beta.4`，则值将为 `1.2.3`。
+- `InformationalVersion` 默认是 `$(Version)` 的值。
+- 如果存在此属性，则 `InformationalVersion` 附加 `$(SourceRevisionId)`。 可以使用 `IncludeSourceRevisionInInformationalVersion` 来禁用它。
+- `Copyright` 和 `Description` 属性也可用于 NuGet 元数据。
+- `Configuration` 与所有生成过程共享，并通过 `dotnet` 命令的 `--configuration` 参数进行设置。
 
 ### <a name="generateassemblyinfo"></a>GenerateAssemblyInfo
 

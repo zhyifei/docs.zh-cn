@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 4a9c24455136fe4ccd13379d05c16d6b7cbf85de
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 403651978667c8cf531c3f87f1156f67206fb490
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117016"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522819"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>在 .NET Core 上使用 Microsoft XML 序列化程序生成器
 
@@ -18,11 +18,11 @@ ms.locfileid: "71117016"
 
 > [!div class="checklist"]
 >
-> * 如何创建 .NET Core 应用
-> * 如何向 Microsoft.XmlSerializer.Generator 包中添加引用
-> * 如何编辑 MyApp.csproj 以添加依赖项
-> * 如何添加类和 XmlSerializer
-> * 如何生成并运行应用程序
+> - 如何创建 .NET Core 应用
+> - 如何向 Microsoft.XmlSerializer.Generator 包中添加引用
+> - 如何编辑 MyApp.csproj 以添加依赖项
+> - 如何添加类和 XmlSerializer
+> - 如何生成并运行应用程序
 
 正如适用于 .NET Framework 的 [Xml Serializer Generator (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md)，[Microsoft.XmlSerializer.Generator NuGet 包](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) 是适用于 .NET Core 和 .NET 标准项目的等效项。 它为程序集中包含的类型创建 XML 序列化程序集，从而提高使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化或反序列化这些类型对象时，XML 序列化的启动性能。
 
@@ -30,8 +30,8 @@ ms.locfileid: "71117016"
 
 完成本教程：
 
-* [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更高版本
-* 最喜爱的代码编辑器。
+- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更高版本。
+- 最喜爱的代码编辑器。
 
 > [!TIP]
 > 需要安装代码编辑器？ 试用 [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)！
@@ -122,14 +122,14 @@ dotnet run
 祝贺你！ 你刚才已完成：
 > [!div class="checklist"]
 >
-> * 创建 .NET Core 应用。
-> * 向 Microsoft.XmlSerializer.Generator 包中添加引用。
-> * 编辑 MyApp.csproj 以添加依赖项。
-> * 添加类和 XmlSerializer。
-> * 生成和运行应用程序。
+> - 创建 .NET Core 应用。
+> - 向 Microsoft.XmlSerializer.Generator 包中添加引用。
+> - 编辑 MyApp.csproj 以添加依赖项。
+> - 添加类和 XmlSerializer。
+> - 生成和运行应用程序。
 
 ## <a name="related-resources"></a>相关资源
 
-* [XML 序列化简介](../../standard/serialization/introducing-xml-serialization.md)
-* [如何：使用 XmlSerializer (C#) 进行序列化](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
-* [如何：使用 XmlSerializer (Visual Basic) 进行序列化](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [XML 序列化简介](../../standard/serialization/introducing-xml-serialization.md)
+- [如何：使用 XmlSerializer (C#) 进行序列化](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [如何：使用 XmlSerializer (Visual Basic) 进行序列化](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
