@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 5484dfeb8cf5292fb43393bb39b9878114119d29
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 608918828bf72369a1bd48e2391e2423078e9df0
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991199"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846839"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>如何：创建发行者策略
 
@@ -26,7 +26,7 @@ ms.locfileid: "70991199"
 
 3. 将发行者策略程序集添加到全局程序集缓存中。
 
-[重定向程序集版本](redirect-assembly-versions.md)中介绍了发行者策略的架构。 下面的示例演示一个发行者策略文件，该文件将的`myAssembly`一个版本重定向到另一个版本。
+[重定向程序集版本](redirect-assembly-versions.md)中介绍了发行者策略的架构。 下面的示例演示一个发行者策略文件，该文件将一个 `myAssembly` 版本重定向到另一个版本。
 
 ```xml
 <configuration>
@@ -55,7 +55,7 @@ ms.locfileid: "70991199"
 
 在命令提示符下键入以下命令：
 
-**al/link：** *publisherPolicyFile* **/out：** *publisherPolicyAssemblyFile* **/keyfile：** *keyPairFile* **/platform：** *processorArchitecture*
+**al/link：** *publisherPolicyFile* **/Out：** *publisherPolicyAssemblyFile* **/keyfile：** *keyPairFile* **/platform：** *processorArchitecture*
 
 在此命令中：
 
@@ -63,7 +63,7 @@ ms.locfileid: "70991199"
 
 - *PublisherPolicyAssemblyFile*参数是通过此命令生成的发行者策略程序集的名称。 程序集文件名必须采用以下格式：
 
-  **政策.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**
+  **政策.** *majorNumber* **。** *minorNumber* **。** *mainAssemblyName*
 
 - *KeyPairFile*参数是包含密钥对的文件的名称。 必须用相同的密钥对对程序集和发行者策略程序集进行签名。
 
@@ -72,13 +72,13 @@ ms.locfileid: "70991199"
   > [!NOTE]
   > 从 .NET Framework 2.0 开始，可以获得特定处理器体系结构的目标功能。
 
-从 .NET Framework 2.0 开始，可以获得特定处理器体系结构的目标。下面的命令从名`policy.1.0.myAssembly` `pub.config`为的发行者策略文件创建名为的发行者策略程序集，并将强名称分配给程序集，该程序集在`sgKey.snk`文件中使用密钥对，并指定该程序集面向 x86 处理器体系结构。
+从 .NET Framework 2.0 开始，可以获得特定处理器体系结构的目标功能。 下面的命令从名为 `pub.config`的发行者策略文件中创建名为 `policy.1.0.myAssembly` 的发行者策略程序集，并使用 `sgKey.snk` 文件中的密钥对将强名称分配给程序集，并指定该程序集面向 x86 处理器种.
 
 ```
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
 ```
 
-发行者策略程序集必须与它所应用到的程序集的处理器体系结构匹配。 因此，如果程序集<xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A>的<xref:System.Reflection.ProcessorArchitecture.MSIL>值为，则该程序集的发行者策略程序集必须使用`/platform:anycpu`创建。 必须为每个处理器特定的程序集提供单独的发行者策略程序集。
+发行者策略程序集必须与它所应用到的程序集的处理器体系结构匹配。 因此，如果程序集的 <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> 值为 <xref:System.Reflection.ProcessorArchitecture.MSIL>，则必须使用 `/platform:anycpu`创建该程序集的发行者策略程序集。 必须为每个处理器特定的程序集提供单独的发行者策略程序集。
 
 此规则的结果是，若要更改程序集的处理器体系结构，必须更改版本号的主要或次要组件，以便可以使用正确的处理器体系结构提供新的发行者策略程序集。 如果程序集具有不同的处理器体系结构，则旧的发行者策略程序集无法为程序集提供服务。
 
@@ -92,9 +92,9 @@ al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:
 
 在命令提示符下键入以下命令：
 
-**gacutil.exe/i**  *publisherPolicyAssemblyFile*
+**gacutil.exe/I**  *publisherPolicyAssemblyFile*
 
-下面的命令将`policy.1.0.myAssembly.dll`添加到全局程序集缓存中。
+以下命令将 `policy.1.0.myAssembly.dll` 添加到全局程序集缓存中。
 
 ```
 gacutil /i policy.1.0.myAssembly.dll

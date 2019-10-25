@@ -6,34 +6,34 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 3433819761c19b616a7c9c19fe52e250b0f028dc
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5bc6e6d805d74bcf01044a16d94d6b3fc0ccf881
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929193"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846853"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>演练：在 Win32 中承载 WPF 内容
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，当你对 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 代码有大量投入时，向应用程序添加 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能（而不是重写原始代码）可能更有效。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供了一种简单的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]机制, 用于[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]在窗口中承载内容。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，当你对 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 代码有大量投入时，向应用程序添加 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能（而不是重写原始代码）可能更有效。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一种直接的机制，用于在 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 窗口中承载 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容。  
   
- 本教程介绍如何编写示例应用程序,[在 Win32 窗口示例](https://go.microsoft.com/fwlink/?LinkID=160004) [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]中承载 WPF 内容。 你可以扩展此示例，使其可托管任何 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 窗口。 由于它涉及混合托管代码和非托管代码，因此该应用C++程序是以/cli 编写的。  
+ 本教程介绍如何编写示例应用程序，[在 Win32 窗口示例中承载 WPF 内容](https://go.microsoft.com/fwlink/?LinkID=160004)，该示例在 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 窗口中承载 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容。 你可以扩展此示例，使其可托管任何 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 窗口。 由于它涉及混合托管代码和非托管代码，因此该应用C++程序是以/cli 编写的。  
 
 <a name="requirements"></a>   
 ## <a name="requirements"></a>要求  
- 本教程假定你已基本熟悉 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 编程。 有关[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]编程的基本简介, 请参阅[入门](../getting-started/index.md)。 有关[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]编程的简介, 你应该在主题*上通过 Charles* Petzold 引用任意多个书籍中的任何书籍。  
+ 本教程假定你已基本熟悉 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 编程。 有关 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 编程的基本简介，请参阅[入门](../getting-started/index.md)。 如需 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 编程的简介，你应该通过 Charles Petzold 在特定*编程窗口*中引用主题中的任何一本书。  
   
  由于本教程随附的示例是在/Cli 中C++实现的，因此本教程假定你熟悉使用C++来对 Windows API 进行编程，并了解托管代码编程。 熟悉C++/cli 非常有用，但不是必需的。  
   
 > [!NOTE]
-> 本教程包括来自相关示例的一些代码示例。 但是，出于可读性考虑，不包括完整的示例代码。 有关完整的示例代码, 请参阅[在 Win32 窗口中承载 WPF 内容示例](https://go.microsoft.com/fwlink/?LinkID=160004)。  
+> 本教程包括来自相关示例的一些代码示例。 但是，出于可读性考虑，不包括完整的示例代码。 有关完整的示例代码，请参阅[在 Win32 窗口中承载 WPF 内容示例](https://go.microsoft.com/fwlink/?LinkID=160004)。  
   
 <a name="basic_procedure"></a>   
 ## <a name="the-basic-procedure"></a>基本过程  
- 本部分概述了用于[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]在窗口中承载内容的基本过程。 其余章节说明每个步骤的详细内容。  
+ 本部分概述了用于在 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 窗口中承载 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容的基本过程。 其余章节说明每个步骤的详细内容。  
   
- 在窗口中承载[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容的关键是<xref:System.Windows.Interop.HwndSource>类。 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 此类[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]在窗口中包装内容, 从而使其可以[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]作为子窗口合并到中。 以下方法在单个应用程序中合并 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
+ 在 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 窗口中承载 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容的关键是 <xref:System.Windows.Interop.HwndSource> 类。 此类将 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容包装在 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 窗口中，从而使其可以作为子窗口合并到您的 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中。 以下方法在单个应用程序中合并 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
   
-1. 将你[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的内容作为托管类实现。  
+1. 将 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容作为托管类实现。  
   
 2. 使用C++/Cli 实现 Windows 应用程序 如果从现有应用程序和非托管C++代码开始，你通常可以通过更改项目设置以包括`/clr`编译器标志来使其可以调用托管代码。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "70929193"
   
     2. 创建 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容类的一个实例。  
   
-    3. 向的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 属性分配<xref:System.Windows.Interop.HwndSource.RootVisual%2A>对内容对象的引用。 <xref:System.Windows.Interop.HwndSource>  
+    3. 将对 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容对象的引用分配给 <xref:System.Windows.Interop.HwndSource>的 <xref:System.Windows.Interop.HwndSource.RootVisual%2A> 属性。  
   
     4. 获取该内容的 HWND。 <xref:System.Windows.Interop.HwndSource.Handle%2A> 对象的 <xref:System.Windows.Interop.HwndSource> 属性包含窗口句柄 (HWND)。 要获取可在应用程序的非托管部分中使用的 HWND，需将 `Handle.ToPointer()` 强制装换为 HWND。  
   
@@ -53,16 +53,16 @@ ms.locfileid: "70929193"
   
 6. 向静态字段分配 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容。  
   
-7. 通过将处理程序[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]附加到一个或多个[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件来从内容接收通知。  
+7. 通过将处理程序附加到一个或多个 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件，从 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容接收通知。  
   
 8. 通过使用存储在静态字段中用于设置属性等的引用来与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容通信。  
   
 > [!NOTE]
-> 你还可以使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]来[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]实现内容。 但是，您必须将其单独编译为动态链接库（DLL），并从[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]应用程序引用该 DLL。 该过程的其余部分与上述相似。
+> 你还可以使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 来实现你的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容。 但是，您必须将其单独编译为动态链接库（DLL），并从您的 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 应用程序引用该 DLL。 该过程的其余部分与上述相似。
 
 <a name="implementing_the_application"></a>
 ## <a name="implementing-the-host-application"></a>实现主机应用程序
- 本部分介绍如何在基本[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]的应用程序中托管内容。 内容本身在/Cli 中C++作为托管类实现。 大多数情况下，它是简单的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 编程。 内容实现的主要方面在[实现 WPF 内容](#implementing_the_wpf_page)中进行了讨论。
+ 本部分介绍如何在基本 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 应用程序中承载 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容。 内容本身在/Cli 中C++作为托管类实现。 大多数情况下，它是简单的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 编程。 内容实现的主要方面在[实现 WPF 内容](#implementing_the_wpf_page)中进行了讨论。
 
 - [基本应用程序](#the_basic_application)
 
@@ -76,13 +76,13 @@ ms.locfileid: "70929193"
 ### <a name="the-basic-application"></a>基本应用程序
  主机应用程序的起点是创建 Visual Studio 2005 模板。
 
-1. 打开 Visual Studio 2005, 然后从 "**文件**" 菜单中选择 "**新建项目**"。
+1. 打开 Visual Studio 2005，然后从 "**文件**" 菜单中选择 "**新建项目**"。
 
-2. 从 [!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)]项目类型列表中选择 "Win32"。 如果默认语言不C++是，你将在 "**其他语言**" 下找到这些项目类型。
+2. 从 Visual C++项目类型列表中选择 "Win32"。 如果默认语言不C++是，你将在 "**其他语言**" 下找到这些项目类型。
 
-3. 选择 " **Win32 项目**" 模板, 为项目分配一个名称, 然后单击 **"确定"** 以启动 " **Win32 应用程序向导**"。
+3. 选择 " **Win32 项目**" 模板，为项目分配一个名称，然后单击 **"确定"** 以启动 " **Win32 应用程序向导**"。
 
-4. 接受向导的默认设置, 然后单击 "**完成**" 以启动项目。
+4. 接受向导的默认设置，然后单击 "**完成**" 以启动项目。
 
  该模板将创建一个基本的 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 应用程序，包括：
 
@@ -92,47 +92,47 @@ ms.locfileid: "70929193"
 
 - 包含**文件**和**帮助**标题的菜单。 "**文件**" 菜单具有用于关闭应用程序的 "**退出**" 项。 "**帮助**" 菜单具有用于启动一个简单对话框的 "**关于**" 项。
 
- 在开始编写代码以托管[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容之前, 需要对基本模板进行两次修改。
+ 在开始编写代码以承载 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容之前，需要对基本模板进行两次修改。
 
  第一项是将项目作为托管代码进行编译。 默认情况下，项目将作为非托管代码进行编译。 但是，由于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 是在托管代码中实现的，因此必须将项目进行相应编译。
 
-1. 在**解决方案资源管理器**中右键单击项目名称, 然后从上下文菜单中选择 "**属性**" 以启动 "**属性页**" 对话框。
+1. 在**解决方案资源管理器**中右键单击项目名称，然后从上下文菜单中选择 "**属性**" 以启动 "**属性页**" 对话框。
 
 2. 从左窗格中的树视图中选择 "**配置属性**"。
 
 3. 从右窗格中的 "**项目默认值**" 列表中选择 "**公共语言运行时**支持"。
 
-4. 从下拉列表框中选择 "**公共语言运行时支持 (/clr)** "。
+4. 从下拉列表框中选择 "**公共语言运行时支持（/clr）** "。
 
 > [!NOTE]
 > 此编译器标志使你能够在应用程序中使用托管代码，但非托管代码将仍将像以前一样进行编译。
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用单线程单元 (STA) 线程处理模型。 若要正常使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容代码, 必须通过对入口点应用特性, 将应用程序的线程模型设置为 STA。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用单线程单元 (STA) 线程处理模型。 若要正确处理 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的内容代码，必须通过对入口点应用特性，将应用程序的线程模型设置为 STA。
 
  [!code-cpp[Win32HostingWPFPage#WinMain](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#winmain)]
 
 <a name="hosting_the_wpf_page"></a>
 ### <a name="hosting-the-wpf-content"></a>承载 WPF 内容
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容是一个简单的地址条目应用程序。 它包含若干个 <xref:System.Windows.Controls.TextBox> 控件，这些控件用于获得用户名称、地址等。 还有两个<xref:System.Windows.Controls.Button>控件, 即 **"确定" 和 "** **取消**"。 当用户单击 **"确定**" 时, 按钮<xref:System.Windows.Controls.Primitives.ButtonBase.Click>的事件处理程序将从<xref:System.Windows.Controls.TextBox>控件中收集数据, 将其分配给相应的属性`OnButtonClicked`, 并引发自定义事件。 当用户单击 "**取消**" 时, 处理程序`OnButtonClicked`将直接引发。 `OnButtonClicked` 的事件参数对象包含布尔型字段，用于指示被单击的按钮。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容是一个简单的地址条目应用程序。 它包含若干个 <xref:System.Windows.Controls.TextBox> 控件，这些控件用于获得用户名称、地址等。 还有两个 <xref:System.Windows.Controls.Button> 控件： **"确定" 和 "** **取消**"。 当用户单击 **"确定**" 时，按钮的 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件处理程序将从 <xref:System.Windows.Controls.TextBox> 控件中收集数据，将其分配给相应的属性，并引发自定义事件 `OnButtonClicked`。 当用户单击 "**取消**" 时，处理程序将只引发 `OnButtonClicked`。 `OnButtonClicked` 的事件参数对象包含布尔型字段，用于指示被单击的按钮。
 
- 用于托管[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容的代码在主机窗口上的[WM_CREATE](/windows/desktop/winmsg/wm-create)通知的处理程序中实现。
+ 用于承载 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容的代码在主机窗口上的[WM_CREATE](/windows/desktop/winmsg/wm-create)通知的处理程序中实现。
 
  [!code-cpp[Win32HostingWPFPage#WMCreate](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wmcreate)]
 
- 方法使用大小和位置信息以及父窗口句柄并返回所承载[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容的窗口句柄。 `GetHwnd`
+ `GetHwnd` 方法使用大小和位置信息以及父窗口句柄，并返回寄宿的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容的窗口句柄。
 
 > [!NOTE]
 > 无法对 `#using` 命名空间使用 `System::Windows::Interop` 指令。 如果进行此操作，将造成该命名空间中的 <xref:System.Windows.Interop.MSG> 结构和在 winuser.h 中声明的 MSG 结构之间的名称冲突。 必须使用完全限定名来访问该命名空间的内容。
 
  [!code-cpp[Win32HostingWPFPage#GetHwnd](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#gethwnd)]
 
- 你不能直接[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]在应用程序窗口中托管内容。 从而，首先创建 <xref:System.Windows.Interop.HwndSource> 对象以包装 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容。 此对象基本上是设计用于托管[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容的窗口。 通过将<xref:System.Windows.Interop.HwndSource>对象作为应用程序的一部分的[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]窗口的子窗口来创建, 可以将该对象承载于父窗口中。 <xref:System.Windows.Interop.HwndSource> 构造函数参数所包含的信息与创建 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 子窗口时要传递给 CreateWindow 的信息基本相同。
+ 不能直接在应用程序窗口中承载 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容。 从而，首先创建 <xref:System.Windows.Interop.HwndSource> 对象以包装 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容。 此对象基本上是一个窗口，旨在承载 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容。 在父窗口中承载 <xref:System.Windows.Interop.HwndSource> 对象，方法是将该对象创建为作为应用程序一部分的 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 窗口的子级。 <xref:System.Windows.Interop.HwndSource> 构造函数参数所包含的信息与创建 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 子窗口时要传递给 CreateWindow 的信息基本相同。
 
- 接下来, 创建[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容对象的实例。 在这种情况下[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ，将使用C++/cli 将内容作为单独`WPFPage`的类实现 还可以使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 内容。 但是，若要执行此操作，需要设置一个单独的项目，并[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]将内容构建为 DLL。 可以向项目中添加对该 DLL 的引用，并使用该引用创建[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容的实例。
+ 接下来，创建 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容对象的实例。 在这种情况下，使用C++/cli 将 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容作为单独的类实现 `WPFPage` 还可以使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 内容。 但是，若要执行此操作，需要设置一个单独的项目，并将 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容构建为 DLL。 您可以向您的项目中添加对该 DLL 的引用，并使用该引用创建 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容的实例。
 
- 通过向的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Interop.HwndSource.RootVisual%2A>属性[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 分配对内容的引用,可在子窗口中显示内容。<xref:System.Windows.Interop.HwndSource>
+ 通过将对 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容的引用分配给 <xref:System.Windows.Interop.HwndSource>的 <xref:System.Windows.Interop.HwndSource.RootVisual%2A> 属性，可在子窗口中显示 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容。
 
- 代码的下一行将一个事件处理程序 `WPFButtonClicked` 附加到 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容 `OnButtonClicked` 事件。 当用户单击 **"确定" 或 "** **取消**" 按钮时, 将调用此处理程序。 有关此事件处理程序的进一步讨论，请参阅[与 wpf 内容](#communicating_with_the_page)。
+ 代码的下一行将一个事件处理程序 `WPFButtonClicked` 附加到 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容 `OnButtonClicked` 事件。 当用户单击 **"确定" 或 "** **取消**" 按钮时，将调用此处理程序。 有关此事件处理程序的进一步讨论，请参阅[与 wpf 内容](#communicating_with_the_page)。
 
  代码显示的最后一行返回与 <xref:System.Windows.Interop.HwndSource> 对象关联的窗口句柄 (HWND)。 可以从 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 代码使用此句柄，将消息发送到托管窗口，尽管该示例并未执行这一操作。 每当 <xref:System.Windows.Interop.HwndSource> 对象收到一条消息时就会引发一个事件。 若要处理消息，请调用 <xref:System.Windows.Interop.HwndSource.AddHook%2A> 方法来附加消息处理程序，然后在此处理程序中处理消息。
 
@@ -148,15 +148,15 @@ ms.locfileid: "70929193"
 
 <a name="communicating_with_the_page"></a>
 ### <a name="communicating-with-the-wpf-content"></a>与 WPF 内容通信
- 与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容的通信有两种类型。 当用户单击[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] **"确定" 或 "** **取消**" 按钮时, 应用程序接收来自内容的信息。 该应用程序还具有 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，使用户可以更改各种 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容属性，例如背景色或默认字体大小。
+ 与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容的通信有两种类型。 当用户单击 **"确定" 或 "** **取消**" 按钮时，应用程序将从 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容接收信息。 该应用程序还具有 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，使用户可以更改各种 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容属性，例如背景色或默认字体大小。
 
- 如上所述，用户单击任一按钮时，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容将引发 `OnButtonClicked` 事件。 该应用程序将一个处理程序附加到此事件以接收这些通知。 如果单击 **"确定"** 按钮, 则处理程序将从[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容获取用户信息并将其显示在一组静态控件中。
+ 如上所述，用户单击任一按钮时，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容将引发 `OnButtonClicked` 事件。 该应用程序将一个处理程序附加到此事件以接收这些通知。 如果单击 **"确定"** 按钮，则处理程序将从 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容获取用户信息并将其显示在一组静态控件中。
 
  [!code-cpp[Win32HostingWPFPage#WPFButtonClicked](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wpfbuttonclicked)]
 
- 该处理程序从 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容接收到一个自定义事件参数对象 `MyPageEventArgs`。 `IsOK`如果单击 **"确定"** 按钮, `true`则对象的属性设置为, 如果单击"取消"按钮,则设置`false`为。
+ 该处理程序从 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容接收到一个自定义事件参数对象 `MyPageEventArgs`。 如果单击 **"确定"** 按钮，则对象的 `IsOK` 属性设置为 `true`，如果单击 "**取消**" 按钮，则 `false`。
 
- 如果单击了 **"确定"** 按钮, 则处理程序将从容器类[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]获取对内容的引用。 然后它会收集由关联的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容属性保存的用户信息，并使用静态控件在父窗口上显示该信息。 由于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容数据的形式为托管字符串，因此必须对其进行封送处理以供 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 控件使用。 如果单击了 "**取消**" 按钮, 处理程序将清除静态控件中的数据。
+ 如果单击 **"确定"** 按钮，则处理程序将从容器类获取对 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容的引用。 然后它会收集由关联的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容属性保存的用户信息，并使用静态控件在父窗口上显示该信息。 由于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容数据的形式为托管字符串，因此必须对其进行封送处理以供 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 控件使用。 如果单击了 "**取消**" 按钮，处理程序将清除静态控件中的数据。
 
  应用程序 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 提供一组单选按钮，允许用户修改 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容的背景色和若干与字体相关的属性。 下面的示例是应用程序的窗口过程 (WndProc) 的一段摘录及其消息处理功能，通过该功能可设置不同消息上的各种属性，包括背景色。 其他内容与此类似，将不进行展示。 请查看完整示例了解详细信息和上下文。
 
@@ -166,7 +166,7 @@ ms.locfileid: "70929193"
 
 <a name="implementing_the_wpf_page"></a>
 ## <a name="implementing-the-wpf-page"></a>实现 WPF 页
- 你可以在不了解实际[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]实现的情况下托管和使用内容。 如果内容[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]已打包在单独的 DLL 中，则可能是以任何公共语言运行时（CLR）语言生成的。 下面是示例中使用的C++/cli 实现的简短演练。 本节包含下列子节。
+ 你可以在不了解实际实现的情况下托管和使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容。 如果 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容已打包到一个单独的 DLL 中，则可能是以任何公共语言运行时（CLR）语言生成的。 下面是示例中使用的C++/cli 实现的简短演练。 本节包含下列子节。
 
 - [布局](#page_layout)
 
@@ -176,11 +176,11 @@ ms.locfileid: "70929193"
 
 <a name="page_layout"></a>
 ### <a name="layout"></a>布局
- 内容中的<xref:System.Windows.Controls.TextBox> 元素由<xref:System.Windows.Controls.Label>五个控件组成, 它们具有关联控件: [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Name、Address、City、State 和 Zip。 还有两个<xref:System.Windows.Controls.Button>控件, 即 **"确定" 和 "** **取消**"
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容中的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素由五个 <xref:System.Windows.Controls.TextBox> 控件组成，其中包含关联的 <xref:System.Windows.Controls.Label> 控件：名称、地址、城市、州和邮政编码。 还有两个 <xref:System.Windows.Controls.Button> 控件、 **"确定" 和 "** **取消**"
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容在 `WPFPage` 类中实现。 布局通过 <xref:System.Windows.Controls.Grid> 布局元素进行处理。 该类继承自实际使其成为 <xref:System.Windows.Controls.Grid> 内容根元素的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。
 
- 内容构造函数采用所需的宽度和高度, 并<xref:System.Windows.Controls.Grid>相应地调整大小。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 然后, 它通过创建一组<xref:System.Windows.Controls.ColumnDefinition>和<xref:System.Windows.Controls.RowDefinition>对象<xref:System.Windows.Controls.Grid>并将它们分别添加到对象基<xref:System.Windows.Controls.Grid.ColumnDefinitions%2A>和<xref:System.Windows.Controls.Grid.RowDefinitions%2A>集合来定义基本布局。 这将定义具有 5 行和 7 列的网格，该网格具有单元内容定义的维度。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容构造函数采用所需的宽度和高度，并相应地调整 <xref:System.Windows.Controls.Grid> 的大小。 然后，它通过创建一组 <xref:System.Windows.Controls.ColumnDefinition> 和 <xref:System.Windows.Controls.RowDefinition> 对象，并分别将它们添加到 <xref:System.Windows.Controls.Grid> 对象基 <xref:System.Windows.Controls.Grid.ColumnDefinitions%2A> 和 <xref:System.Windows.Controls.Grid.RowDefinitions%2A> 集合来定义基本布局。 这将定义具有 5 行和 7 列的网格，该网格具有单元内容定义的维度。
 
  [!code-cpp[Win32HostingWPFPage#WPFPageCtorToGridDef](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectortogriddef)]
 
@@ -196,13 +196,13 @@ ms.locfileid: "70929193"
 
  [!code-cpp[Win32HostingWPFPage#WPFPageCreateHelpers](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagecreatehelpers)]
 
- 最后, 该示例添加 **"确定" 和 "** **取消**" 按钮, 并将事件<xref:System.Windows.Controls.Primitives.ButtonBase.Click>处理程序附加到其事件。
+ 最后，该示例添加 **"确定" 和 "** **取消**" 按钮，并将事件处理程序附加到其 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件。
 
  [!code-cpp[Win32HostingWPFPage#WPFPageCtorButtonsEvents](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectorbuttonsevents)]
 
 <a name="returning_data_to_window"></a>
 ### <a name="returning-the-data-to-the-host-window"></a>将数据返回到主机窗口
- 单击任一按钮后，将引发其 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件。 主机窗口只需将处理程序附加到这些事件，然后直接从 <xref:System.Windows.Controls.TextBox> 控件获取数据。 此示例使用的是不太直接的方法。 它在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容<xref:System.Windows.Controls.Primitives.ButtonBase.Click>中处理, 然后引发自定义[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件`OnButtonClicked`以通知内容。 这使[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容能够在通知主机之前执行某些参数验证。 该处理程序从 <xref:System.Windows.Controls.TextBox> 控件获取文本，然后将其分配给公共属性（主机可从其中检索信息）。
+ 单击任一按钮后，将引发其 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件。 主机窗口只需将处理程序附加到这些事件，然后直接从 <xref:System.Windows.Controls.TextBox> 控件获取数据。 此示例使用的是不太直接的方法。 它在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容中处理 <xref:System.Windows.Controls.Primitives.ButtonBase.Click>，然后引发自定义事件 `OnButtonClicked`，以通知 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容。 这允许 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的内容在通知主机之前执行某些参数验证。 该处理程序从 <xref:System.Windows.Controls.TextBox> 控件获取文本，然后将其分配给公共属性（主机可从其中检索信息）。
 
  WPFPage.h 中的事件声明：
 
@@ -214,7 +214,7 @@ ms.locfileid: "70929193"
 
 <a name="set_page_properties"></a>
 ### <a name="setting-the-wpf-properties"></a>设置 WPF 属性
- 宿主允许用户更改多个[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容属性。 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 就 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 端而言，这只是更改属性的问题。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容类中的实现从某种意义上来说更加复杂，因为不存在控制所有控件的字体的单个全局属性。 相反，每个控件的相应属性均是在属性的 set 访问器中进行更改的。 下面的示例演示`DefaultFontFamily`属性的代码。 设置属性将调用专用方法，该方法依次又将为各控件设置 <xref:System.Windows.Controls.Control.FontFamily%2A> 属性。
+ [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 主机允许用户更改多个 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容属性。 就 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 端而言，这只是更改属性的问题。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容类中的实现从某种意义上来说更加复杂，因为不存在控制所有控件的字体的单个全局属性。 相反，每个控件的相应属性均是在属性的 set 访问器中进行更改的。 下面的示例演示了 `DefaultFontFamily` 属性的代码。 设置属性将调用专用方法，该方法依次又将为各控件设置 <xref:System.Windows.Controls.Control.FontFamily%2A> 属性。
 
  从 WPFPage.h：
 

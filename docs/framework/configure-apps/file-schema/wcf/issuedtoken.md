@@ -2,21 +2,21 @@
 title: <issuedToken>
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-ms.openlocfilehash: b5ab3c3ad070499d686ea74b9fd459e89f380cfa
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 56439748926ada642018f48a5787634a50d0f180
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397965"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846861"
 ---
-# <a name="issuedtoken"></a>\<issuedToken>
+# <a name="issuedtoken"></a>\<issuedToken >
 指定用于向服务验证客户端身份的自定义令牌。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behaviors.md)\
+\<system &nbsp; &nbsp;[ **>** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为**](behaviors.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **&nbsp;&nbsp;\<** ](behavior-of-endpointbehaviors.md) >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<issuedToken >**  
   
@@ -50,19 +50,19 @@ ms.locfileid: "70397965"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<localIssuer>](localissuer.md)|指定令牌的本地颁发者地址以及用于与终结点进行通信的绑定。|  
-|[\<issuerChannelBehaviors>](issuerchannelbehaviors-element.md)|指定当联系本地颁发者时所使用的终结点行为。|  
+|[\<localIssuer >](localissuer.md)|指定令牌的本地颁发者地址以及用于与终结点进行通信的绑定。|  
+|[\<issuerChannelBehaviors >](issuerchannelbehaviors-element.md)|指定当联系本地颁发者时所使用的终结点行为。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<clientCredentials>](clientcredentials.md)|指定用于向服务验证客户端身份的凭据。|  
+|[\<clientCredentials >](clientcredentials.md)|指定用于向服务验证客户端身份的凭据。|  
   
 ## <a name="remarks"></a>备注  
- 例如，颁发的令牌是在使用联合方案中的安全令牌服务 (STS) 进行身份验证时所使用的自定义凭据类型。 默认情况下，该令牌为 SAML 令牌。 有关详细信息，请参阅[联合和颁发的令牌](../../../wcf/feature-details/federation-and-issued-tokens.md)。 以及[联合和颁发的令牌](../../../wcf/feature-details/federation-and-issued-tokens.md)。  
+ 例如，颁发的令牌是在使用联合方案中的安全令牌服务 (STS) 进行身份验证时所使用的自定义凭据类型。 默认情况下，该令牌为 SAML 令牌。 有关详细信息，请参阅[联合和颁发的令牌](../../../wcf/feature-details/federation-and-issued-tokens.md)以及[联合和颁发的令牌](../../../wcf/feature-details/federation-and-issued-tokens.md)。  
   
- 本节包含用于配置本地令牌颁发者的元素，或者与安全令牌服务一起使用的行为。 有关将客户端配置为使用本地颁发者的说明， [请参阅如何：配置本地颁发者](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)。  
+ 本节包含用于配置本地令牌颁发者的元素，或者与安全令牌服务一起使用的行为。 有关将客户端配置为使用本地颁发者的说明，请参阅[如何：配置本地颁发者](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)。  
   
 ## <a name="see-also"></a>请参阅
 
@@ -77,5 +77,5 @@ ms.locfileid: "70397965"
 - [联合令牌与颁发的令牌](../../../wcf/feature-details/federation-and-issued-tokens.md)
 - [保护客户端](../../../wcf/securing-clients.md)
 - [如何：创建联合客户端](../../../wcf/feature-details/how-to-create-a-federated-client.md)
-- [如何：配置本地颁发者](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [如何：配置本地证书颁发者](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
 - [联合令牌与颁发的令牌](../../../wcf/feature-details/federation-and-issued-tokens.md)

@@ -10,12 +10,12 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: 809ac026244b24aee69ec0d6c40c10a1248c234c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4b47847e9d6e9424d4442d655c40a637383c7229
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579113"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72847084"
 ---
 # <a name="additional-class-libraries-and-apis"></a>其他类库和 API
 
@@ -57,18 +57,22 @@ ms.locfileid: "72579113"
 * [SqlTypes. SqlStreamChars. SetLength 方法](system.data.sqltypes.sqlstreamchars.setlength.md)
 * [SqlTypes. SqlStreamChars 方法](system.data.sqltypes.sqlstreamchars.write.md)
 * [系统 .Net. 连接类](connection.md)
-* [系统 \_WriteList 字段](m_writelist.md)
+* [系统\_WriteList 字段](m_writelist.md)
 * [ConnectionGroup 类](connectiongroup.md)
-* [系统 ConnectionGroup \_ConnectionList 字段](m_connectionlist.md)
+* [ConnectionGroup\_ConnectionList 字段](m_connectionlist.md)
+* [系统 ConnectStream 属性](system.net.connectstream.connection.md)
 * [CoreResponseData 类](coreresponsedata.md)
-* [系统 CoreResponseData \_ResponseHeaders 字段](coreresponsedata_m_responseheaders.md)
-* [系统 CoreResponseData \_StatusCode 字段](coreresponsedata_m_statuscode.md)
-* [系统 \_AutoRedirects 字段 HttpWebRequest](_autoredirects.md)
-* [系统 \_CoreResponse 字段 HttpWebRequest](httpwebrequest__coreresponse.md)
-* [系统 \_HttpResponse 字段 HttpWebRequest](_httpresponse.md)
-* [系统 ServicePoint \_ConnectionGroupList 字段](m_connectiongrouplist.md)
-* [系统 \_ServicePointTable 字段 ServicePointManager](s_servicepointtable.md)
-* ["VisualDiagnostics" \_isDebuggerCheckDisabledForTestPurposes 字段](s-isdebuggercheckdisabledfortestpurposes-field.md)
+* [CoreResponseData\_ResponseHeaders 字段](coreresponsedata_m_responseheaders.md)
+* [系统 CoreResponseData\_StatusCode 字段](coreresponsedata_m_statuscode.md)
+* [HttpWebRequest.\_AutoRedirects 字段](_autoredirects.md)
+* [HttpWebRequest.\_CoreResponse 字段](httpwebrequest__coreresponse.md)
+* [HttpWebRequest.\_Httpresponse.cache 字段](_httpresponse.md)
+* [PooledStream. NetworkStream 属性](system.net.pooledstream.networkstream.md)
+* [ServicePoint\_ConnectionGroupList 字段](m_connectiongrouplist.md)
+* [ServicePointManager\_ServicePointTable 字段](s_servicepointtable.md)
+* [TlsStream. m_Worker 字段](system.net.tlsstream.m_worker.md)
+* [SslState. SslProtocol 属性](system.net.security.sslstate.sslprotocol.md)
+* [VisualDiagnostics\_"isDebuggerCheckDisabledForTestPurposes" 字段](s-isdebuggercheckdisabledfortestpurposes-field.md)
 * ["DataMemberFieldEditor" 类](datamemberfieldeditor-class.md)
 * ["DataMemberListEditor" 类](datamemberlisteditor-class.md)
 * [System.web. CreateSqlReader 方法](system.xml.xmlreader.createsqlreader.md)
