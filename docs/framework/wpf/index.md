@@ -14,18 +14,24 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF]
 - WPF [WPF]
 ms.assetid: f667bd15-2134-41e9-b4af-5ced6fafab5d
-ms.openlocfilehash: 35a936cbc34bf10219099090e1af8c145d7fb23d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69cdae86a295793c8da6b7f663b22846ae2c32b2
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764538"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919367"
 ---
-# <a name="windows-presentation-foundation"></a><span data-ttu-id="9415c-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="9415c-102">Windows Presentation Foundation</span></span>
-<span data-ttu-id="9415c-103">在 Visual Studio 中的 Windows Presentation Foundation (WPF) 为开发人员提供了一个统一的编程模型构建业务线 Windows 桌面应用程序。</span><span class="sxs-lookup"><span data-stu-id="9415c-103">Windows Presentation Foundation (WPF) in Visual Studio provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>  
-  
- [<span data-ttu-id="9415c-104">使用 Windows Presentation Foundation 创建桌面应用程序</span><span class="sxs-lookup"><span data-stu-id="9415c-104">Create Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+# <a name="windows-presentation-foundation"></a><span data-ttu-id="bd217-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="bd217-102">Windows Presentation Foundation</span></span>
 
- [<span data-ttu-id="9415c-105">在 Visual Studio 和 Blend for Visual Studio 中设计 XAML</span><span class="sxs-lookup"><span data-stu-id="9415c-105">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
-  
- [<span data-ttu-id="9415c-106">获取 Visual Studio</span><span class="sxs-lookup"><span data-stu-id="9415c-106">Get Visual Studio</span></span>](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+<span data-ttu-id="bd217-103">Windows Presentation Foundation （WPF）为开发人员提供了一个统一的编程模型，用于在 Windows 上构建业务线桌面应用程序。</span><span class="sxs-lookup"><span data-stu-id="bd217-103">Windows Presentation Foundation (WPF) provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>
+
+- [<span data-ttu-id="bd217-104">WPF 介绍</span><span class="sxs-lookup"><span data-stu-id="bd217-104">Introduction to WPF</span></span>](introduction-to-wpf.md)
+- [<span data-ttu-id="bd217-105">入门</span><span class="sxs-lookup"><span data-stu-id="bd217-105">Getting Started</span></span>](getting-started/index.md)
+- [<span data-ttu-id="bd217-106">应用程序开发</span><span class="sxs-lookup"><span data-stu-id="bd217-106">Application Development</span></span>](app-development/index.md)
+- [<span data-ttu-id="bd217-107">高级</span><span class="sxs-lookup"><span data-stu-id="bd217-107">Advanced</span></span>](advanced/index.md)
+- [<span data-ttu-id="bd217-108">控件</span><span class="sxs-lookup"><span data-stu-id="bd217-108">Controls</span></span>](controls/index.md)
+- [<span data-ttu-id="bd217-109">Data</span><span class="sxs-lookup"><span data-stu-id="bd217-109">Data</span></span>](data/index.md)
+- [<span data-ttu-id="bd217-110">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="bd217-110">Graphics and Multimedia</span></span>](graphics-multimedia/index.md)
+- [<span data-ttu-id="bd217-111">Security</span><span class="sxs-lookup"><span data-stu-id="bd217-111">Security</span></span>](security-wpf.md)
+- [<span data-ttu-id="bd217-112">WPF 示例</span><span class="sxs-lookup"><span data-stu-id="bd217-112">WPF Samples</span></span>](wpf-samples.md)
+- [<span data-ttu-id="bd217-113">类库</span><span class="sxs-lookup"><span data-stu-id="bd217-113">Class Library</span></span>](class-library-wpf.md)

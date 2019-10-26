@@ -6,24 +6,24 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: b598b55c72096daac2487e4c52584abf9735f257
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 3b6e30a612c87880121c227c85c4bd6a7ef31f40
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991462"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920231"
 ---
-# <a name="hosting-win32-content-in-wpf"></a><span data-ttu-id="2cf7a-102">在 WPF 中承载 Win32 内容</span><span class="sxs-lookup"><span data-stu-id="2cf7a-102">Hosting Win32 Content in WPF</span></span>
+# <a name="hosting-win32-content-in-wpf"></a><span data-ttu-id="569ca-102">在 WPF 中承载 Win32 内容</span><span class="sxs-lookup"><span data-stu-id="569ca-102">Hosting Win32 Content in WPF</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="2cf7a-103">系统必备</span><span class="sxs-lookup"><span data-stu-id="2cf7a-103">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="569ca-103">Prerequisites</span><span class="sxs-lookup"><span data-stu-id="569ca-103">Prerequisites</span></span>
 
-<span data-ttu-id="2cf7a-104">请参阅[WPF 和 Win32 互操作](wpf-and-win32-interoperation.md)。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-104">See [WPF and Win32 Interoperation](wpf-and-win32-interoperation.md).</span></span>
+<span data-ttu-id="569ca-104">请参阅[WPF 和 Win32 互操作](wpf-and-win32-interoperation.md)。</span><span class="sxs-lookup"><span data-stu-id="569ca-104">See [WPF and Win32 Interoperation](wpf-and-win32-interoperation.md).</span></span>
 
-## <a name="a-walkthrough-of-win32-inside-windows-presentation-framework-hwndhost"></a><span data-ttu-id="2cf7a-105">Windows Presentation Framework 中的 Win32 演练（System.windows.interop.hwndhost>）</span><span class="sxs-lookup"><span data-stu-id="2cf7a-105">A Walkthrough of Win32 Inside Windows Presentation Framework (HwndHost)</span></span>
+## <a name="a-walkthrough-of-win32-inside-windows-presentation-framework-hwndhost"></a><span data-ttu-id="569ca-105">Windows Presentation Framework 中的 Win32 演练（System.windows.interop.hwndhost>）</span><span class="sxs-lookup"><span data-stu-id="569ca-105">A Walkthrough of Win32 Inside Windows Presentation Framework (HwndHost)</span></span>
 
-<span data-ttu-id="2cf7a-106">若要[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]重用应用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]程序内的<xref:System.Windows.Interop.HwndHost>内容，请使用，这是使 hwnd 看[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]起来像内容的控件。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-106">To reuse [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] content inside [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications, use <xref:System.Windows.Interop.HwndHost>, which is a control that makes HWNDs look like [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] content.</span></span> <span data-ttu-id="2cf7a-107">与<xref:System.Windows.Interop.HwndSource>类似<xref:System.Windows.Interop.HwndHost> ，简单易用：派生自<xref:System.Windows.Interop.HwndHost> `BuildWindowCore` `DestroyWindowCore` 并实现[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]和方法，然后实例化派生类并将其放置在<xref:System.Windows.Interop.HwndHost>程序.</span><span class="sxs-lookup"><span data-stu-id="2cf7a-107">Like <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost> is straightforward to use: derive from <xref:System.Windows.Interop.HwndHost> and implement `BuildWindowCore` and `DestroyWindowCore` methods, then instantiate your <xref:System.Windows.Interop.HwndHost> derived class and place it inside your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.</span></span>
+<span data-ttu-id="569ca-106">若要重复使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序内部 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 内容，请使用 <xref:System.Windows.Interop.HwndHost>，这是使 Hwnd 看起来像 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容的控件。</span><span class="sxs-lookup"><span data-stu-id="569ca-106">To reuse [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] content inside [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications, use <xref:System.Windows.Interop.HwndHost>, which is a control that makes HWNDs look like [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] content.</span></span> <span data-ttu-id="569ca-107">与 <xref:System.Windows.Interop.HwndSource>一样，<xref:System.Windows.Interop.HwndHost> 简单易用：从 <xref:System.Windows.Interop.HwndHost> 派生并实现 `BuildWindowCore` 和 `DestroyWindowCore` 方法，然后实例化 <xref:System.Windows.Interop.HwndHost> 派生类并将其放置在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序内。</span><span class="sxs-lookup"><span data-stu-id="569ca-107">Like <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost> is straightforward to use: derive from <xref:System.Windows.Interop.HwndHost> and implement `BuildWindowCore` and `DestroyWindowCore` methods, then instantiate your <xref:System.Windows.Interop.HwndHost> derived class and place it inside your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.</span></span>
 
-<span data-ttu-id="2cf7a-108">如果已[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]将你的逻辑打包为一个控件， `BuildWindowCore`则实现方式几乎不会调用`CreateWindow`。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-108">If your [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] logic is already packaged as a control, then your `BuildWindowCore` implementation is little more than a call to `CreateWindow`.</span></span> <span data-ttu-id="2cf7a-109">例如，若要在中[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] C++创建 LISTBOX 控件：</span><span class="sxs-lookup"><span data-stu-id="2cf7a-109">For example, to create a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] LISTBOX control in C++:</span></span>
+<span data-ttu-id="569ca-108">如果已将 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 逻辑打包为控件，则 `BuildWindowCore` 实现几乎不会调用 `CreateWindow`。</span><span class="sxs-lookup"><span data-stu-id="569ca-108">If your [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] logic is already packaged as a control, then your `BuildWindowCore` implementation is little more than a call to `CreateWindow`.</span></span> <span data-ttu-id="569ca-109">例如，若要在中C++创建 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] LISTBOX 控件：</span><span class="sxs-lookup"><span data-stu-id="569ca-109">For example, to create a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] LISTBOX control in C++:</span></span>
 
 ```cpp
 virtual HandleRef BuildWindowCore(HandleRef hwndParent) override {
@@ -46,46 +46,46 @@ virtual void DestroyWindowCore(HandleRef hwnd) override {
 }
 ```
 
-<span data-ttu-id="2cf7a-110">但是，假设[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]代码不是很容易自包含？</span><span class="sxs-lookup"><span data-stu-id="2cf7a-110">But suppose the [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] code is not quite so self-contained?</span></span> <span data-ttu-id="2cf7a-111">如果是这样，您可以创建[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]一个对话框，并将其内容嵌入到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]更大的应用程序中。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-111">If so, you can create a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] dialog box and embed its contents into a larger [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.</span></span> <span data-ttu-id="2cf7a-112">此示例在[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]和C++中显示了这种情况，虽然也可以使用不同的语言或在命令行中执行此操作。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-112">The sample shows this in [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] and C++, although it is also possible to do this in a different language or at the command line.</span></span>
+<span data-ttu-id="569ca-110">但假如 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 代码不是很是自包含的呢？</span><span class="sxs-lookup"><span data-stu-id="569ca-110">But suppose the [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] code is not quite so self-contained?</span></span> <span data-ttu-id="569ca-111">如果是这样，您可以创建 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 对话框，并将其内容嵌入更大的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序。</span><span class="sxs-lookup"><span data-stu-id="569ca-111">If so, you can create a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] dialog box and embed its contents into a larger [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.</span></span> <span data-ttu-id="569ca-112">此示例在 Visual Studio 和C++中显示了这种情况，虽然也可以使用不同的语言或在命令行中执行此操作。</span><span class="sxs-lookup"><span data-stu-id="569ca-112">The sample shows this in Visual Studio and C++, although it is also possible to do this in a different language or at the command line.</span></span>
 
-<span data-ttu-id="2cf7a-113">首先，使用一个简单的对话框，该对话框编译C++为 DLL 项目。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-113">Start with a simple dialog, which is compiled into a C++ DLL project.</span></span>
+<span data-ttu-id="569ca-113">首先，使用一个简单的对话框，该对话框编译C++为 DLL 项目。</span><span class="sxs-lookup"><span data-stu-id="569ca-113">Start with a simple dialog, which is compiled into a C++ DLL project.</span></span>
 
-<span data-ttu-id="2cf7a-114">接下来，将对话框引入到更[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]大的应用程序：</span><span class="sxs-lookup"><span data-stu-id="2cf7a-114">Next, introduce the dialog into the larger [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application:</span></span>
+<span data-ttu-id="569ca-114">接下来，将对话框引入更大的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序：</span><span class="sxs-lookup"><span data-stu-id="569ca-114">Next, introduce the dialog into the larger [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application:</span></span>
 
-- <span data-ttu-id="2cf7a-115">将 DLL 编译为托管（`/clr`）</span><span class="sxs-lookup"><span data-stu-id="2cf7a-115">Compile the DLL as managed (`/clr`)</span></span>
+- <span data-ttu-id="569ca-115">将 DLL 编译为托管（`/clr`）</span><span class="sxs-lookup"><span data-stu-id="569ca-115">Compile the DLL as managed (`/clr`)</span></span>
 
-- <span data-ttu-id="2cf7a-116">将对话框变为控件</span><span class="sxs-lookup"><span data-stu-id="2cf7a-116">Turn the dialog into a control</span></span>
+- <span data-ttu-id="569ca-116">将对话框变为控件</span><span class="sxs-lookup"><span data-stu-id="569ca-116">Turn the dialog into a control</span></span>
 
-- <span data-ttu-id="2cf7a-117"><xref:System.Windows.Interop.HwndHost> 用`BuildWindowCore`和方法`DestroyWindowCore`定义的派生类</span><span class="sxs-lookup"><span data-stu-id="2cf7a-117">Define the derived class of <xref:System.Windows.Interop.HwndHost> with `BuildWindowCore` and `DestroyWindowCore` methods</span></span>
+- <span data-ttu-id="569ca-117">用 `BuildWindowCore` 和 `DestroyWindowCore` 方法定义 <xref:System.Windows.Interop.HwndHost> 的派生类</span><span class="sxs-lookup"><span data-stu-id="569ca-117">Define the derived class of <xref:System.Windows.Interop.HwndHost> with `BuildWindowCore` and `DestroyWindowCore` methods</span></span>
 
-- <span data-ttu-id="2cf7a-118">重`TranslateAccelerator`写方法以处理对话框键</span><span class="sxs-lookup"><span data-stu-id="2cf7a-118">Override `TranslateAccelerator` method to handle dialog keys</span></span>
+- <span data-ttu-id="569ca-118">重写 `TranslateAccelerator` 方法来处理对话框键</span><span class="sxs-lookup"><span data-stu-id="569ca-118">Override `TranslateAccelerator` method to handle dialog keys</span></span>
 
-- <span data-ttu-id="2cf7a-119">重`TabInto`写方法以支持 tab 键</span><span class="sxs-lookup"><span data-stu-id="2cf7a-119">Override `TabInto` method to support tabbing</span></span>
+- <span data-ttu-id="569ca-119">重写 `TabInto` 方法以支持 tab 键</span><span class="sxs-lookup"><span data-stu-id="569ca-119">Override `TabInto` method to support tabbing</span></span>
 
-- <span data-ttu-id="2cf7a-120">重`OnMnemonic`写方法以支持助记键</span><span class="sxs-lookup"><span data-stu-id="2cf7a-120">Override `OnMnemonic` method to support mnemonics</span></span>
+- <span data-ttu-id="569ca-120">重写 `OnMnemonic` 方法以支持助记键</span><span class="sxs-lookup"><span data-stu-id="569ca-120">Override `OnMnemonic` method to support mnemonics</span></span>
 
-- <span data-ttu-id="2cf7a-121">实例化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]子类，并将其放在右元素下<xref:System.Windows.Interop.HwndHost></span><span class="sxs-lookup"><span data-stu-id="2cf7a-121">Instantiate the <xref:System.Windows.Interop.HwndHost> subclass and put it under the right [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] element</span></span>
+- <span data-ttu-id="569ca-121">实例化 <xref:System.Windows.Interop.HwndHost> 子类，并将其放在右侧 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素的下方</span><span class="sxs-lookup"><span data-stu-id="569ca-121">Instantiate the <xref:System.Windows.Interop.HwndHost> subclass and put it under the right [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] element</span></span>
 
-### <a name="turn-the-dialog-into-a-control"></a><span data-ttu-id="2cf7a-122">将对话框变为控件</span><span class="sxs-lookup"><span data-stu-id="2cf7a-122">Turn the Dialog into a Control</span></span>
+### <a name="turn-the-dialog-into-a-control"></a><span data-ttu-id="569ca-122">将对话框变为控件</span><span class="sxs-lookup"><span data-stu-id="569ca-122">Turn the Dialog into a Control</span></span>
 
-<span data-ttu-id="2cf7a-123">您可以使用 WS_CHILD 和 DS_CONTROL 样式将对话框转换为子 HWND。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-123">You can turn a dialog box into a child HWND using the WS_CHILD and DS_CONTROL styles.</span></span> <span data-ttu-id="2cf7a-124">进入对话框定义的资源文件（.rc），并找到对话框定义的开头：</span><span class="sxs-lookup"><span data-stu-id="2cf7a-124">Go into the resource file (.rc) where the dialog is defined, and find the beginning of the definition of the dialog:</span></span>
+<span data-ttu-id="569ca-123">您可以使用 WS_CHILD 和 DS_CONTROL 样式将对话框转换为子 HWND。</span><span class="sxs-lookup"><span data-stu-id="569ca-123">You can turn a dialog box into a child HWND using the WS_CHILD and DS_CONTROL styles.</span></span> <span data-ttu-id="569ca-124">进入对话框定义的资源文件（.rc），并找到对话框定义的开头：</span><span class="sxs-lookup"><span data-stu-id="569ca-124">Go into the resource file (.rc) where the dialog is defined, and find the beginning of the definition of the dialog:</span></span>
 
 ```text
 IDD_DIALOG1 DIALOGEX 0, 0, 303, 121
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 ```
 
-<span data-ttu-id="2cf7a-125">将第二行更改为：</span><span class="sxs-lookup"><span data-stu-id="2cf7a-125">Change the second line to:</span></span>
+<span data-ttu-id="569ca-125">将第二行更改为：</span><span class="sxs-lookup"><span data-stu-id="569ca-125">Change the second line to:</span></span>
 
 ```text
 STYLE DS_SETFONT | WS_CHILD | WS_BORDER | DS_CONTROL
 ```
 
-<span data-ttu-id="2cf7a-126">此操作不会将其完全打包到独立的控件中;你仍需要调用`IsDialogMessage()` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]来处理某些消息，但控制更改的确提供了将这些控件放在其他 HWND 中的一种简单方法。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-126">This action does not fully package it into a self-contained control; you still need to call `IsDialogMessage()` so [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] can process certain messages, but the control change does provide a straightforward way of putting those controls inside another HWND.</span></span>
+<span data-ttu-id="569ca-126">此操作不会将其完全打包到独立的控件中;你仍需要调用 `IsDialogMessage()` 以便 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 可以处理某些消息，但是控件更改的确提供了将这些控件放在其他 HWND 中的一种简单方法。</span><span class="sxs-lookup"><span data-stu-id="569ca-126">This action does not fully package it into a self-contained control; you still need to call `IsDialogMessage()` so [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] can process certain messages, but the control change does provide a straightforward way of putting those controls inside another HWND.</span></span>
 
-## <a name="subclass-hwndhost"></a><span data-ttu-id="2cf7a-127">子类 System.windows.interop.hwndhost></span><span class="sxs-lookup"><span data-stu-id="2cf7a-127">Subclass HwndHost</span></span>
+## <a name="subclass-hwndhost"></a><span data-ttu-id="569ca-127">子类 System.windows.interop.hwndhost></span><span class="sxs-lookup"><span data-stu-id="569ca-127">Subclass HwndHost</span></span>
 
-<span data-ttu-id="2cf7a-128">导入下列命名空间：</span><span class="sxs-lookup"><span data-stu-id="2cf7a-128">Import the following namespaces:</span></span>
+<span data-ttu-id="569ca-128">导入下列命名空间：</span><span class="sxs-lookup"><span data-stu-id="569ca-128">Import the following namespaces:</span></span>
 
 ```cpp
 namespace ManagedCpp
@@ -98,7 +98,7 @@ namespace ManagedCpp
     using namespace System::Runtime::InteropServices;
 ```
 
-<span data-ttu-id="2cf7a-129">然后创建的<xref:System.Windows.Interop.HwndHost>派生类，并重`BuildWindowCore`写和`DestroyWindowCore`方法：</span><span class="sxs-lookup"><span data-stu-id="2cf7a-129">Then create a derived class of <xref:System.Windows.Interop.HwndHost> and override the `BuildWindowCore` and `DestroyWindowCore` methods:</span></span>
+<span data-ttu-id="569ca-129">然后创建 <xref:System.Windows.Interop.HwndHost> 的派生类，并重写 `BuildWindowCore` 和 `DestroyWindowCore` 方法：</span><span class="sxs-lookup"><span data-stu-id="569ca-129">Then create a derived class of <xref:System.Windows.Interop.HwndHost> and override the `BuildWindowCore` and `DestroyWindowCore` methods:</span></span>
 
 ```cpp
 public ref class MyHwndHost : public HwndHost, IKeyboardInputSink {
@@ -120,7 +120,7 @@ public ref class MyHwndHost : public HwndHost, IKeyboardInputSink {
         }
 ```
 
-<span data-ttu-id="2cf7a-130">在这里，您`CreateDialog`将使用创建真正是控件的对话框。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-130">Here you use the `CreateDialog` to create the dialog box that is really a control.</span></span> <span data-ttu-id="2cf7a-131">由于这是在 DLL 中调用的第一个方法，因此还[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]应该通过调用稍后定义的函数（称为： `InitializeGlobals()`</span><span class="sxs-lookup"><span data-stu-id="2cf7a-131">Since this is one of the first methods called inside the DLL, you should also do some standard [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] initialization by calling a function you will define later, called `InitializeGlobals()`:</span></span>
+<span data-ttu-id="569ca-130">在这里，可以使用 `CreateDialog` 创建真正是控件的对话框。</span><span class="sxs-lookup"><span data-stu-id="569ca-130">Here you use the `CreateDialog` to create the dialog box that is really a control.</span></span> <span data-ttu-id="569ca-131">由于这是在 DLL 中调用的第一个方法，因此还应该通过调用稍后定义的函数（称为 `InitializeGlobals()`）来执行一些标准 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 初始化：</span><span class="sxs-lookup"><span data-stu-id="569ca-131">Since this is one of the first methods called inside the DLL, you should also do some standard [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] initialization by calling a function you will define later, called `InitializeGlobals()`:</span></span>
 
 ```cpp
 bool initialized = false;
@@ -138,9 +138,9 @@ bool initialized = false;
         MyRegisterClass(hInstance);
 ```
 
-### <a name="override-translateaccelerator-method-to-handle-dialog-keys"></a><span data-ttu-id="2cf7a-132">重写 TranslateAccelerator 方法以处理对话框键</span><span class="sxs-lookup"><span data-stu-id="2cf7a-132">Override TranslateAccelerator Method to Handle Dialog Keys</span></span>
+### <a name="override-translateaccelerator-method-to-handle-dialog-keys"></a><span data-ttu-id="569ca-132">重写 TranslateAccelerator 方法以处理对话框键</span><span class="sxs-lookup"><span data-stu-id="569ca-132">Override TranslateAccelerator Method to Handle Dialog Keys</span></span>
 
-<span data-ttu-id="2cf7a-133">如果现在运行此示例，您将看到一个对话框控件，该控件将显示，但会忽略使对话框成为功能对话框的所有键盘处理。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-133">If you ran this sample now, you would get a dialog control that displays, but it would ignore all of the keyboard processing that makes a dialog box a functional dialog box.</span></span> <span data-ttu-id="2cf7a-134">现在应重写`TranslateAccelerator`实现（ `IKeyboardInputSink`来自<xref:System.Windows.Interop.HwndHost>实现的接口）。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-134">You should now override the `TranslateAccelerator` implementation (which comes from `IKeyboardInputSink`, an interface that <xref:System.Windows.Interop.HwndHost> implements).</span></span> <span data-ttu-id="2cf7a-135">当应用程序接收到 WM_KEYDOWN 和 WM_SYSKEYDOWN 时，将调用此方法。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-135">This method gets called when the application receives WM_KEYDOWN and WM_SYSKEYDOWN.</span></span>
+<span data-ttu-id="569ca-133">如果现在运行此示例，您将看到一个对话框控件，该控件将显示，但会忽略使对话框成为功能对话框的所有键盘处理。</span><span class="sxs-lookup"><span data-stu-id="569ca-133">If you ran this sample now, you would get a dialog control that displays, but it would ignore all of the keyboard processing that makes a dialog box a functional dialog box.</span></span> <span data-ttu-id="569ca-134">你现在应该重写 `TranslateAccelerator` 实现（来自 `IKeyboardInputSink`，这是 <xref:System.Windows.Interop.HwndHost> 实现的接口）。</span><span class="sxs-lookup"><span data-stu-id="569ca-134">You should now override the `TranslateAccelerator` implementation (which comes from `IKeyboardInputSink`, an interface that <xref:System.Windows.Interop.HwndHost> implements).</span></span> <span data-ttu-id="569ca-135">当应用程序接收到 WM_KEYDOWN 和 WM_SYSKEYDOWN 时，将调用此方法。</span><span class="sxs-lookup"><span data-stu-id="569ca-135">This method gets called when the application receives WM_KEYDOWN and WM_SYSKEYDOWN.</span></span>
 
 ```cpp
 #undef TranslateAccelerator
@@ -193,15 +193,15 @@ bool initialized = false;
         }
 ```
 
-<span data-ttu-id="2cf7a-136">这是一个部分中的大量代码，因此它可以使用一些更详细的解释。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-136">This is a lot of code in one piece, so it could use some more detailed explanations.</span></span> <span data-ttu-id="2cf7a-137">首先，使用C++和C++宏的代码;需要注意，已存在一个名`TranslateAccelerator`为的宏，该宏是在 winuser.h 中定义的：</span><span class="sxs-lookup"><span data-stu-id="2cf7a-137">First, the code using C++ and C++ macros; you need to be aware that there is already a macro named `TranslateAccelerator`, which is defined in winuser.h:</span></span>
+<span data-ttu-id="569ca-136">这是一个部分中的大量代码，因此它可以使用一些更详细的解释。</span><span class="sxs-lookup"><span data-stu-id="569ca-136">This is a lot of code in one piece, so it could use some more detailed explanations.</span></span> <span data-ttu-id="569ca-137">首先，使用C++和C++宏的代码;需要注意的是在 winuser.h 中定义的名为`TranslateAccelerator`的宏：</span><span class="sxs-lookup"><span data-stu-id="569ca-137">First, the code using C++ and C++ macros; you need to be aware that there is already a macro named `TranslateAccelerator`, which is defined in winuser.h:</span></span>
 
 ```cpp
 #define TranslateAccelerator  TranslateAcceleratorW
 ```
 
-<span data-ttu-id="2cf7a-138">因此，请确保定义`TranslateAccelerator`方法而不是`TranslateAcceleratorW`方法。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-138">So make sure to define a `TranslateAccelerator` method and not a `TranslateAcceleratorW` method.</span></span>
+<span data-ttu-id="569ca-138">因此，请确保定义 `TranslateAccelerator` 方法，而不是 `TranslateAcceleratorW` 方法。</span><span class="sxs-lookup"><span data-stu-id="569ca-138">So make sure to define a `TranslateAccelerator` method and not a `TranslateAcceleratorW` method.</span></span>
 
-<span data-ttu-id="2cf7a-139">同样，还存在非托管的 winuser.h 消息和托管`Microsoft::Win32::MSG`结构。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-139">Similarly, there is both the unmanaged winuser.h MSG and the managed `Microsoft::Win32::MSG` struct.</span></span> <span data-ttu-id="2cf7a-140">C++ 使用`::`运算符可以区分二者之间的歧义。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-140">You can disambiguate between the two using the C++ `::` operator.</span></span>
+<span data-ttu-id="569ca-139">同样，还存在非托管的 winuser.h 消息和托管 `Microsoft::Win32::MSG` 结构。</span><span class="sxs-lookup"><span data-stu-id="569ca-139">Similarly, there is both the unmanaged winuser.h MSG and the managed `Microsoft::Win32::MSG` struct.</span></span> <span data-ttu-id="569ca-140">您可以使用C++`::`运算符来消除这两者之间的歧义。</span><span class="sxs-lookup"><span data-stu-id="569ca-140">You can disambiguate between the two using the C++ `::` operator.</span></span>
 
 ```cpp
 virtual bool TranslateAccelerator(System::Windows::Interop::MSG% msg,
@@ -231,7 +231,7 @@ Both MSGs have the same data, but sometimes it is easier to work with the unmana
 }
 ```
 
-<span data-ttu-id="2cf7a-141">返回到`TranslateAccelerator`。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-141">Back to `TranslateAccelerator`.</span></span> <span data-ttu-id="2cf7a-142">基本原则是调用[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函数`IsDialogMessage`来执行尽可能多的工作，但`IsDialogMessage`不能访问对话框以外的任何内容。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-142">The basic principle is to call the [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] function `IsDialogMessage` to do as much work as possible, but `IsDialogMessage` does not have access to anything outside the dialog.</span></span> <span data-ttu-id="2cf7a-143">在对话框周围的 "用户" 选项卡上，当 tab 键在对话框中的最后一个控件之后运行时，需要[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]通过调用`IKeyboardInputSite::OnNoMoreStops`将焦点设置到该部分。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-143">As a user tab around the dialog, when tabbing runs past the last control in our dialog, you need to set focus to the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] portion by calling `IKeyboardInputSite::OnNoMoreStops`.</span></span>
+<span data-ttu-id="569ca-141">返回 `TranslateAccelerator`。</span><span class="sxs-lookup"><span data-stu-id="569ca-141">Back to `TranslateAccelerator`.</span></span> <span data-ttu-id="569ca-142">基本原则是调用 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 函数 `IsDialogMessage` 来执行尽可能多的工作，但 `IsDialogMessage` 不能访问对话框以外的任何内容。</span><span class="sxs-lookup"><span data-stu-id="569ca-142">The basic principle is to call the [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] function `IsDialogMessage` to do as much work as possible, but `IsDialogMessage` does not have access to anything outside the dialog.</span></span> <span data-ttu-id="569ca-143">在对话框周围的 "用户" 选项卡上，当 tab 键在对话框中的最后一个控件之后运行时，需要通过调用 `IKeyboardInputSite::OnNoMoreStops`将焦点设置到 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 部分。</span><span class="sxs-lookup"><span data-stu-id="569ca-143">As a user tab around the dialog, when tabbing runs past the last control in our dialog, you need to set focus to the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] portion by calling `IKeyboardInputSite::OnNoMoreStops`.</span></span>
 
 ```cpp
 // Win32's IsDialogMessage() will handle most of the tabbing, but doesn't know
@@ -253,7 +253,7 @@ if (m.message == WM_KEYDOWN && m.wParam == VK_TAB) {
 }
 ```
 
-<span data-ttu-id="2cf7a-144">最后，调用 `IsDialogMessage`。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-144">Finally, call `IsDialogMessage`.</span></span> <span data-ttu-id="2cf7a-145">但`TranslateAccelerator`方法的责任之一就是指出[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]是否已处理击键。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-145">But one of the responsibilities of a `TranslateAccelerator` method is telling [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] whether you handled the keystroke or not.</span></span> <span data-ttu-id="2cf7a-146">如果未处理，输入事件可以通过应用程序的其余部分进行隧道和冒泡。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-146">If you did not handle it, the input event can tunnel and bubble through the rest of the application.</span></span> <span data-ttu-id="2cf7a-147">在[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]这里，你将公开奇怪的键盘 messange 处理和输入体系结构的特性。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-147">Here, you will expose a quirk of keyboard messange handling and the nature of the input architecture in [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].</span></span> <span data-ttu-id="2cf7a-148">遗憾的`IsDialogMessage`是，不会以任何方式返回，无论是否处理特定的击键。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-148">Unfortunately, `IsDialogMessage` does not return in any way whether it handles a particular keystroke.</span></span> <span data-ttu-id="2cf7a-149">更糟的是，它`DispatchMessage()`会调用它不应处理的击键！</span><span class="sxs-lookup"><span data-stu-id="2cf7a-149">Even worse, it will call `DispatchMessage()` on keystrokes it should not handle!</span></span>  <span data-ttu-id="2cf7a-150">因此，你将需要进行反向工程`IsDialogMessage`，并且仅为你知道它将处理的密钥调用它：</span><span class="sxs-lookup"><span data-stu-id="2cf7a-150">So you will have to reverse-engineer `IsDialogMessage`, and only call it for the keys you know it will handle:</span></span>
+<span data-ttu-id="569ca-144">最后，调用 `IsDialogMessage`。</span><span class="sxs-lookup"><span data-stu-id="569ca-144">Finally, call `IsDialogMessage`.</span></span> <span data-ttu-id="569ca-145">但 `TranslateAccelerator` 方法的责任之一就是告诉 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 是否已处理击键。</span><span class="sxs-lookup"><span data-stu-id="569ca-145">But one of the responsibilities of a `TranslateAccelerator` method is telling [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] whether you handled the keystroke or not.</span></span> <span data-ttu-id="569ca-146">如果未处理，输入事件可以通过应用程序的其余部分进行隧道和冒泡。</span><span class="sxs-lookup"><span data-stu-id="569ca-146">If you did not handle it, the input event can tunnel and bubble through the rest of the application.</span></span> <span data-ttu-id="569ca-147">[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]在这里，您将公开奇怪的键盘 messange 处理和输入体系结构的性质。</span><span class="sxs-lookup"><span data-stu-id="569ca-147">Here, you will expose a quirk of keyboard messange handling and the nature of the input architecture in [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].</span></span> <span data-ttu-id="569ca-148">遗憾的是，`IsDialogMessage` 不会以任何方式返回，无论是否处理特定的击键。</span><span class="sxs-lookup"><span data-stu-id="569ca-148">Unfortunately, `IsDialogMessage` does not return in any way whether it handles a particular keystroke.</span></span> <span data-ttu-id="569ca-149">更糟的是，它会对它不应处理的击键调用 `DispatchMessage()`！</span><span class="sxs-lookup"><span data-stu-id="569ca-149">Even worse, it will call `DispatchMessage()` on keystrokes it should not handle!</span></span>  <span data-ttu-id="569ca-150">因此，你必须对 `IsDialogMessage`进行反向工程处理，并且仅为你知道它将处理的密钥调用它：</span><span class="sxs-lookup"><span data-stu-id="569ca-150">So you will have to reverse-engineer `IsDialogMessage`, and only call it for the keys you know it will handle:</span></span>
 
 ```cpp
 // Only call IsDialogMessage for keys it will do something with.
@@ -276,9 +276,9 @@ if (msg.message == WM_SYSKEYDOWN || msg.message == WM_KEYDOWN) {
     }
 ```
 
-### <a name="override-tabinto-method-to-support-tabbing"></a><span data-ttu-id="2cf7a-151">重写 TabInto 方法以支持 Tab 键</span><span class="sxs-lookup"><span data-stu-id="2cf7a-151">Override TabInto Method to Support Tabbing</span></span>
+### <a name="override-tabinto-method-to-support-tabbing"></a><span data-ttu-id="569ca-151">重写 TabInto 方法以支持 Tab 键</span><span class="sxs-lookup"><span data-stu-id="569ca-151">Override TabInto Method to Support Tabbing</span></span>
 
-<span data-ttu-id="2cf7a-152">现在，你已经实现`TranslateAccelerator`了，用户可以在对话框内按 tab 键，然后将其移到更大[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的应用程序中。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-152">Now that you have implemented `TranslateAccelerator`, a user can tab around inside the dialog box and tab out of it into the greater [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.</span></span> <span data-ttu-id="2cf7a-153">但是，用户不能通过 tab 键返回到对话框。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-153">But a user cannot tab back into the dialog box.</span></span> <span data-ttu-id="2cf7a-154">若要解决此情况， `TabInto`请重写：</span><span class="sxs-lookup"><span data-stu-id="2cf7a-154">To solve that, you override `TabInto`:</span></span>
+<span data-ttu-id="569ca-152">现在，你已实现 `TranslateAccelerator`，用户可以在对话框内按 tab 键，然后将其移到更大的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序中。</span><span class="sxs-lookup"><span data-stu-id="569ca-152">Now that you have implemented `TranslateAccelerator`, a user can tab around inside the dialog box and tab out of it into the greater [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.</span></span> <span data-ttu-id="569ca-153">但是，用户不能通过 tab 键返回到对话框。</span><span class="sxs-lookup"><span data-stu-id="569ca-153">But a user cannot tab back into the dialog box.</span></span> <span data-ttu-id="569ca-154">若要解决此情况，请重写 `TabInto`：</span><span class="sxs-lookup"><span data-stu-id="569ca-154">To solve that, you override `TabInto`:</span></span>
 
 ```cpp
 public:
@@ -295,11 +295,11 @@ public:
     }
 ```
 
-<span data-ttu-id="2cf7a-155">`TraversalRequest`参数告诉您选项卡操作是制表符还是 shift 选项卡。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-155">The `TraversalRequest` parameter tells you whether the tab action is a tab or shift tab.</span></span>
+<span data-ttu-id="569ca-155">`TraversalRequest` 参数告诉您选项卡操作是制表符还是 shift 选项卡。</span><span class="sxs-lookup"><span data-stu-id="569ca-155">The `TraversalRequest` parameter tells you whether the tab action is a tab or shift tab.</span></span>
 
-### <a name="override-onmnemonic-method-to-support-mnemonics"></a><span data-ttu-id="2cf7a-156">重写 OnMnemonic 方法以支持助记键</span><span class="sxs-lookup"><span data-stu-id="2cf7a-156">Override OnMnemonic Method to Support Mnemonics</span></span>
+### <a name="override-onmnemonic-method-to-support-mnemonics"></a><span data-ttu-id="569ca-156">重写 OnMnemonic 方法以支持助记键</span><span class="sxs-lookup"><span data-stu-id="569ca-156">Override OnMnemonic Method to Support Mnemonics</span></span>
 
-<span data-ttu-id="2cf7a-157">键盘处理几乎完成，但有一件事丢失–助记键不起作用。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-157">Keyboard handling is almost complete, but there is one thing missing – mnemonics do not work.</span></span> <span data-ttu-id="2cf7a-158">如果用户按下 alt-F，焦点将无法跳到 "First name：" 编辑框。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-158">If a user presses alt-F, focus doe not jump to the "First name:" edit box.</span></span> <span data-ttu-id="2cf7a-159">因此，请重写`OnMnemonic`方法：</span><span class="sxs-lookup"><span data-stu-id="2cf7a-159">So, you override the `OnMnemonic` method:</span></span>
+<span data-ttu-id="569ca-157">键盘处理几乎完成，但有一件事丢失–助记键不起作用。</span><span class="sxs-lookup"><span data-stu-id="569ca-157">Keyboard handling is almost complete, but there is one thing missing – mnemonics do not work.</span></span> <span data-ttu-id="569ca-158">如果用户按下 alt-F，焦点将无法跳到 "First name：" 编辑框。</span><span class="sxs-lookup"><span data-stu-id="569ca-158">If a user presses alt-F, focus doe not jump to the "First name:" edit box.</span></span> <span data-ttu-id="569ca-159">因此，请重写 `OnMnemonic` 方法：</span><span class="sxs-lookup"><span data-stu-id="569ca-159">So, you override the `OnMnemonic` method:</span></span>
 
 ```cpp
 virtual bool OnMnemonic(System::Windows::Interop::MSG% msg, ModifierKeys modifiers) override {
@@ -329,11 +329,11 @@ virtual bool OnMnemonic(System::Windows::Interop::MSG% msg, ModifierKeys modifie
 };
 ```
 
-<span data-ttu-id="2cf7a-160">为什么不在`IsDialogMessage`此处调用？</span><span class="sxs-lookup"><span data-stu-id="2cf7a-160">Why not call `IsDialogMessage` here?</span></span>  <span data-ttu-id="2cf7a-161">你遇到的问题与以前相同，你需要能够通知[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]代码你的代码是否已处理击键，而`IsDialogMessage`不能执行此操作。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-161">You have the same issue as before--you need to be able to inform [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] code whether your code handled the keystroke or not, and `IsDialogMessage` cannot do that.</span></span> <span data-ttu-id="2cf7a-162">还有另一个问题，因为`IsDialogMessage`如果焦点的 HWND 不在对话框内，拒绝处理助记键。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-162">There is also a second issue, because `IsDialogMessage` refuses to process the mnemonic if the focused HWND is not inside the dialog box.</span></span>
+<span data-ttu-id="569ca-160">为什么不在此处调用 `IsDialogMessage`？</span><span class="sxs-lookup"><span data-stu-id="569ca-160">Why not call `IsDialogMessage` here?</span></span>  <span data-ttu-id="569ca-161">你的问题与以前相同，你需要能够通知 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 代码你的代码是否已处理击键，`IsDialogMessage` 无法执行此操作。</span><span class="sxs-lookup"><span data-stu-id="569ca-161">You have the same issue as before--you need to be able to inform [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] code whether your code handled the keystroke or not, and `IsDialogMessage` cannot do that.</span></span> <span data-ttu-id="569ca-162">还有另一个问题，因为如果重点 HWND 不在对话框内，`IsDialogMessage` 会拒绝处理助记键。</span><span class="sxs-lookup"><span data-stu-id="569ca-162">There is also a second issue, because `IsDialogMessage` refuses to process the mnemonic if the focused HWND is not inside the dialog box.</span></span>
 
-### <a name="instantiate-the-hwndhost-derived-class"></a><span data-ttu-id="2cf7a-163">实例化 System.windows.interop.hwndhost> 派生类</span><span class="sxs-lookup"><span data-stu-id="2cf7a-163">Instantiate the HwndHost Derived Class</span></span>
+### <a name="instantiate-the-hwndhost-derived-class"></a><span data-ttu-id="569ca-163">实例化 System.windows.interop.hwndhost> 派生类</span><span class="sxs-lookup"><span data-stu-id="569ca-163">Instantiate the HwndHost Derived Class</span></span>
 
-<span data-ttu-id="2cf7a-164">最后，既然已准备好所有键和选项卡支持，你可以将添加<xref:System.Windows.Interop.HwndHost>到更大[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的应用程序中。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-164">Finally, now that all the key and tab support is in place, you can put your <xref:System.Windows.Interop.HwndHost> into the larger [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.</span></span> <span data-ttu-id="2cf7a-165">如果主要应用程序是用编写[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]的，则将其放在正确的位置的最简单方法是将<xref:System.Windows.Controls.Border>空元素保留在要放置的<xref:System.Windows.Interop.HwndHost>位置。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-165">If the main application is written in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], the easiest way to put it in the right place is to leave an empty <xref:System.Windows.Controls.Border> element where you want to put the <xref:System.Windows.Interop.HwndHost>.</span></span> <span data-ttu-id="2cf7a-166">在此处创建一个<xref:System.Windows.Controls.Border>名`insertHwndHostHere`为的：</span><span class="sxs-lookup"><span data-stu-id="2cf7a-166">Here you create a <xref:System.Windows.Controls.Border> named `insertHwndHostHere`:</span></span>
+<span data-ttu-id="569ca-164">最后，既然已准备好所有键和选项卡支持，你可以将 <xref:System.Windows.Interop.HwndHost> 放入更大的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序。</span><span class="sxs-lookup"><span data-stu-id="569ca-164">Finally, now that all the key and tab support is in place, you can put your <xref:System.Windows.Interop.HwndHost> into the larger [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.</span></span> <span data-ttu-id="569ca-165">如果主要应用程序是以 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]编写的，则将其放在正确的位置的最简单方法是将空 <xref:System.Windows.Controls.Border> 元素保留在要放置 <xref:System.Windows.Interop.HwndHost>的位置。</span><span class="sxs-lookup"><span data-stu-id="569ca-165">If the main application is written in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], the easiest way to put it in the right place is to leave an empty <xref:System.Windows.Controls.Border> element where you want to put the <xref:System.Windows.Interop.HwndHost>.</span></span> <span data-ttu-id="569ca-166">在此处创建一个名为 `insertHwndHostHere`的 <xref:System.Windows.Controls.Border>：</span><span class="sxs-lookup"><span data-stu-id="569ca-166">Here you create a <xref:System.Windows.Controls.Border> named `insertHwndHostHere`:</span></span>
 
 ```xaml
 <Window x:Class="WPFApplication1.Window1"
@@ -350,7 +350,7 @@ virtual bool OnMnemonic(System::Windows::Interop::MSG% msg, ModifierKeys modifie
 </Window>
 ```
 
-<span data-ttu-id="2cf7a-167">接下来要做的就是在代码序列中找到一个合适的位置<xref:System.Windows.Interop.HwndHost>来实例化，并<xref:System.Windows.Controls.Border>将其连接到。</span><span class="sxs-lookup"><span data-stu-id="2cf7a-167">Then all that remains is to find a good place in code sequence to instantiate the <xref:System.Windows.Interop.HwndHost> and connect it to the <xref:System.Windows.Controls.Border>.</span></span> <span data-ttu-id="2cf7a-168">在此示例中，将其放在<xref:System.Windows.Window>派生类的构造函数中：</span><span class="sxs-lookup"><span data-stu-id="2cf7a-168">In this example, you will put it inside the constructor for the <xref:System.Windows.Window> derived class:</span></span>
+<span data-ttu-id="569ca-167">接下来要做的就是在代码序列中查找一个很好的位置来实例化 <xref:System.Windows.Interop.HwndHost> 并将其连接到 <xref:System.Windows.Controls.Border>。</span><span class="sxs-lookup"><span data-stu-id="569ca-167">Then all that remains is to find a good place in code sequence to instantiate the <xref:System.Windows.Interop.HwndHost> and connect it to the <xref:System.Windows.Controls.Border>.</span></span> <span data-ttu-id="569ca-168">在此示例中，将其放在 <xref:System.Windows.Window> 派生类的构造函数中：</span><span class="sxs-lookup"><span data-stu-id="569ca-168">In this example, you will put it inside the constructor for the <xref:System.Windows.Window> derived class:</span></span>
 
 ```csharp
 public partial class Window1 : Window {
@@ -364,10 +364,10 @@ public partial class Window1 : Window {
 }
 ```
 
-<span data-ttu-id="2cf7a-169">这为你提供：</span><span class="sxs-lookup"><span data-stu-id="2cf7a-169">Which gives you:</span></span>
+<span data-ttu-id="569ca-169">这为你提供：</span><span class="sxs-lookup"><span data-stu-id="569ca-169">Which gives you:</span></span>
 
 ![运行的 WPF 应用程序的屏幕截图。](./media/hosting-win32-content-in-wpf/windows-presentation-foundation-application.png)
 
-## <a name="see-also"></a><span data-ttu-id="2cf7a-171">请参阅</span><span class="sxs-lookup"><span data-stu-id="2cf7a-171">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="569ca-171">请参阅</span><span class="sxs-lookup"><span data-stu-id="569ca-171">See also</span></span>
 
-- [<span data-ttu-id="2cf7a-172">WPF 和 Win32 互操作</span><span class="sxs-lookup"><span data-stu-id="2cf7a-172">WPF and Win32 Interoperation</span></span>](wpf-and-win32-interoperation.md)
+- [<span data-ttu-id="569ca-172">WPF 和 Win32 互操作</span><span class="sxs-lookup"><span data-stu-id="569ca-172">WPF and Win32 Interoperation</span></span>](wpf-and-win32-interoperation.md)
