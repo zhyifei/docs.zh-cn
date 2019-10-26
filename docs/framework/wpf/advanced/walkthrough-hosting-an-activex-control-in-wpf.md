@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: 0181093de1c40889110ab7eae75a3847a17845a9
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 395081640815f00ce4ae8e83f25b37de567adc01
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859938"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920202"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>演练：在 WPF 中承载 ActiveX 控件
-若要启用改进与浏览器交互，可以使用中的 Microsoft ActiveX 控件在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-基于应用程序。 本演练演示如何可以承载[!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)]上的控件作为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]页。
+若要实现与浏览器的更好交互，可以在基于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的应用程序中使用 Microsoft ActiveX 控件。 本演练演示如何在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 页上以控件的形式承载 [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)]。
 
  本演练涉及以下任务：
 
@@ -24,14 +24,14 @@ ms.locfileid: "67859938"
 
 - 创建 ActiveX 控件。
 
-- 承载 WPF 页上的 ActiveX 控件。
+- 在 WPF 页上承载 ActiveX 控件。
 
- 完成本演练后，您将了解如何使用 Microsoft ActiveX 控件中的你[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-基于应用程序。
+ 完成本演练后，你将了解如何在基于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的应用程序中使用 Microsoft ActiveX 控件。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>Prerequisites
  你需要以下组件来完成本演练：
 
-- [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 安装 Visual Studio 的计算机上安装。
+- [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 安装在安装了 Visual Studio 的计算机上。
 
 - Visual Studio 2010。
 
@@ -39,66 +39,66 @@ ms.locfileid: "67859938"
 
 ### <a name="to-create-and-set-up-the-project"></a>创建并设置项目
 
-1. 创建一个名为的 WPF 应用程序项目`HostingAxInWpf`。
+1. 创建一个名为 `HostingAxInWpf`的 WPF 应用程序项目。
 
-2. 将 Windows 窗体控件库项目添加到解决方案，并将项目命名`WmpAxLib`。
+2. 将 Windows 窗体控件库项目添加到解决方案，并将项目命名为 `WmpAxLib`。
 
-3. 在 WmpAxLib 项目中，将添加到名为 wmp.dll 的 Windows Media Player 程序集的引用。
+3. 在 WmpAxLib 项目中，添加对 Windows Media Player 程序集的引用，该程序集名为 wmp .dll。
 
 4. 打开**工具箱**。
 
-5. 在中右击**工具箱**，然后单击**选择项**。
+5. 右键单击 "**工具箱**"，然后单击 "**选择项**"。
 
-6. 单击**COM 组件**选项卡上，选择**Windows Media Player**控件，，然后单击**确定**。
+6. 单击 " **COM 组件**" 选项卡，选择**Windows Media Player**控件，然后单击 **"确定"** 。
 
-     Windows Media Player 控件添加到**工具箱**。
+     将 Windows Media Player 控件添加到 "**工具箱**"。
 
-7. 在解决方案资源管理器中右键单击**UserControl1**文件，，然后单击**重命名**。
+7. 在解决方案资源管理器中，右键单击**UserControl1**文件，然后单击 "**重命名**"。
 
-8. 将名称更改为`WmpAxControl.vb`或`WmpAxControl.cs`，取决于语言。
+8. 根据语言，将名称更改为 `WmpAxControl.vb` 或 `WmpAxControl.cs`。
 
-9. 如果系统提示重命名所有引用，请单击**是**。
+9. 如果系统提示您重命名所有引用，请单击 **"是"** 。
 
 ## <a name="creating-the-activex-control"></a>创建 ActiveX 控件
- [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 自动生成<xref:System.Windows.Forms.AxHost>Microsoft ActiveX 控件时，该控件添加到设计图面上的包装类。 以下过程创建名为 AxInterop.WMPLib.dll 托管程序集。
+当将控件添加到设计图面时，Visual Studio 会自动为 Microsoft ActiveX 控件生成一个 <xref:System.Windows.Forms.AxHost> 包装器类。 下面的过程创建一个名为 AxInterop. WMPLib 的托管程序集。
 
-### <a name="to-create-the-activex-control"></a>若要创建 ActiveX 控件
+### <a name="to-create-the-activex-control"></a>创建 ActiveX 控件
 
-1. 在 Windows 窗体设计器中打开 WmpAxControl.vb 或 WmpAxControl.cs。
+1. 在 Windows 窗体设计器中打开 WmpAxControl 或 WmpAxControl.cs。
 
-2. 从**工具箱**，将 Windows Media Player 控件添加到设计图面。
+2. 从 "**工具箱**" 中，将 "Windows Media Player" 控件添加到设计图面。
 
-3. 在属性窗口中，将 Windows Media Player 控件的值设置<xref:System.Windows.Forms.Control.Dock%2A>属性设置为<xref:System.Windows.Forms.DockStyle.Fill>。
+3. 在属性窗口中，将 Windows Media Player 控件的 <xref:System.Windows.Forms.Control.Dock%2A> 属性的值设置为 "<xref:System.Windows.Forms.DockStyle.Fill>"。
 
 4. 生成 WmpAxLib 控件库项目。
 
-## <a name="hosting-the-activex-control-on-a-wpf-page"></a>承载 WPF 页上的 ActiveX 控件
+## <a name="hosting-the-activex-control-on-a-wpf-page"></a>在 WPF 页上承载 ActiveX 控件
 
-### <a name="to-host-the-activex-control"></a>若要承载 ActiveX 控件
+### <a name="to-host-the-activex-control"></a>承载 ActiveX 控件
 
-1. 在 HostingAxInWpf 项目中，添加对生成的 ActiveX 互操作性程序集的引用。
+1. 在 HostingAxInWpf 项目中，添加对生成的 ActiveX 互操作程序集的引用。
 
-     此程序集名为 AxInterop.WMPLib.dll 和时导入 Windows Media Player 控件添加到 WmpAxLib 项目的调试文件夹。
+     此程序集命名为 AxInterop，并在导入 Windows Media Player 控件时添加到 WmpAxLib 项目的 Debug 文件夹中。
 
-2. 添加对 WindowsFormsIntegration 程序集，它名为 WindowsFormsIntegration.dll 的引用。
+2. 添加对 WindowsFormsIntegration 程序集的引用，该程序集名为 WindowsFormsIntegration。
 
-3. 添加对引用[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]名为 system.windows.forms.dll 的引用的程序集。
+3. 添加对 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 程序集的引用，该程序集名为 System.object。
 
-4. 在 WPF 设计器中打开 MainWindow.xaml。
+4. 在 WPF 设计器中打开 Mainwindow.xaml。
 
-5. 名称<xref:System.Windows.Controls.Grid>元素`grid1`。
+5. 将 <xref:System.Windows.Controls.Grid> 元素命名为 `grid1`。
 
      [!code-xaml[HostingAxInWpf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingAxInWpf/CSharp/HostingAxInWpf/window1.xaml#1)]
 
-6. 在设计视图或 XAML 视图中，选择<xref:System.Windows.Window>元素。
+6. 在设计视图或 XAML 视图中，选择 <xref:System.Windows.Window> 元素。
 
-7. 在属性窗口中，单击**事件**选项卡。
+7. 在属性窗口中，单击 "**事件**" 选项卡。
 
-8. 双击<xref:System.Windows.FrameworkElement.Loaded>事件。
+8. 双击 "<xref:System.Windows.FrameworkElement.Loaded>" 事件。
 
-9. 插入以下代码以处理<xref:System.Windows.FrameworkElement.Loaded>事件。
+9. 插入以下代码来处理 <xref:System.Windows.FrameworkElement.Loaded> 事件。
 
-     此代码创建的实例<xref:System.Windows.Forms.Integration.WindowsFormsHost>控件，添加的实例`AxWindowsMediaPlayer`作为其子级的控件。
+     此代码将创建 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 控件的实例，并将 `AxWindowsMediaPlayer` 控件的一个实例添加为其子级。
 
      [!code-csharp[HostingAxInWpf#11](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingAxInWpf/CSharp/HostingAxInWpf/window1.xaml.cs#11)]
      [!code-vb[HostingAxInWpf#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingAxInWpf/VisualBasic/HostingAxInWpf/window1.xaml.vb#11)]  
@@ -110,5 +110,5 @@ ms.locfileid: "67859938"
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [演练：承载在 WPF 中的 Windows 窗体复合控件](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [演练：承载 WPF 复合控件在 Windows 窗体中](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [演练：在 WPF 中托管 Windows 窗体复合控件](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [演练：在 Windows 窗体中承载 WPF 复合控件](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

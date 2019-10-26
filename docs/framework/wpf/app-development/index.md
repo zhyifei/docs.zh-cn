@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 405a8d3c8b922d0f74e522e85ea3096d989c478e
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 85218bd4b6e900bd4508a5c90132419a07846f2c
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582505"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920211"
 ---
 # <a name="application-development"></a>应用程序开发
 <a name="introduction"></a>Windows Presentation Foundation （WPF）是一个演示框架，可用于开发以下类型的应用程序：  
@@ -74,7 +74,7 @@ ms.locfileid: "72582505"
   
  <xref:System.Windows.Window> 支持用于创建被称为对话框的特殊窗口类型的功能。 可以创建两种类型的对话框，即模式和无模式对话框。  
   
- 为方便起见，并提供可重用性和跨应用程序的一致用户体验的优点，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 公开了三个常见的 Windows 对话框： <xref:Microsoft.Win32.OpenFileDialog>、<xref:Microsoft.Win32.SaveFileDialog> 和 <xref:System.Windows.Controls.PrintDialog>。  
+ 为方便起见，并提供可重用性和跨应用程序的一致用户体验的优点，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 公开了三个常见的 Windows 对话框： <xref:Microsoft.Win32.OpenFileDialog>、<xref:Microsoft.Win32.SaveFileDialog>和 <xref:System.Windows.Controls.PrintDialog>。  
   
  消息框是一种特殊类型的对话框，用于向用户显示重要的文本信息并询问简单的“是/否/确定/取消”问题。 使用 <xref:System.Windows.MessageBox> 类创建并显示消息框。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "72582505"
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>生成和部署  
- 尽管简单的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序可以在命令提示符下使用命令行编译器来生成，但 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 仍与 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 实现了集成以提供简化了开发和生成过程的额外支持。 有关详细信息，请参阅[生成 WPF 应用程序](building-a-wpf-application-wpf.md)。  
+ 尽管可以使用命令行编译器在命令提示符下构建简单的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 与 Visual Studio 集成，以提供简化开发和生成过程的额外支持。 有关详细信息，请参阅[生成 WPF 应用程序](building-a-wpf-application-wpf.md)。  
   
  根据所生成的应用程序类型，会有一个或多个部署选项可供选择。 有关详细信息，请参阅[部署 WPF 应用程序](deploying-a-wpf-application-wpf.md)。  
   

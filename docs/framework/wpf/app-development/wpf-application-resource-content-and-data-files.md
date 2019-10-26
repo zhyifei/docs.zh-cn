@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 2bf815a5b34726b8316eea53786811abec00f5bb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: e50f542086aadc2f61412fe409d7df0f49422718
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581732"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920367"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 应用程序资源、内容和数据文件
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 应用程序通常依赖于包含不可执行的数据的文件，如 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、图像、视频和音频。 Windows Presentation Foundation （WPF）为配置、标识和使用这些类型的数据文件（称为应用程序数据文件）提供特殊支持。 这种支持主要针对一组特定的应用程序数据文件类型，包括：  
@@ -55,7 +55,7 @@ ms.locfileid: "72581732"
 > 本节中所述的资源文件不同于[XAML 资源](../advanced/xaml-resources.md)中所述的资源文件，与[管理应用程序资源（.net）](/visualstudio/ide/managing-application-resources-dotnet)中所述的嵌入或链接的资源不同。  
   
 ### <a name="configuring-resource-files"></a>配置资源文件  
- 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中，资源文件是作为 `Resource` 项包含在 Microsoft 生成引擎（MSBuild）项目中的文件。  
+ 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中，资源文件是作为 `Resource` 项包含在 Microsoft 生成引擎（MSBuild）项目中的文件。  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -68,7 +68,7 @@ ms.locfileid: "72581732"
 ```  
   
 > [!NOTE]
-> 在 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 中，可以通过将文件添加到项目并将其 `Build Action` 设置为 `Resource` 来创建资源文件。  
+> 在 Visual Studio 中，可以通过将文件添加到项目并将其 `Build Action` 设置为 `Resource`来创建资源文件。  
   
  生成项目时，MSBuild 会将资源编译到程序集中。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "72581732"
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadapageresourcefilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadapageresourcefilemanuallycode)]  
   
- 当调用 <xref:System.Windows.Application.GetResourceStream%2A> 使你能够访问 <xref:System.IO.Stream> 时，需要执行其他工作，将其转换为你要将其设置到的属性的类型。 相反，您可以让 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 通过使用代码将资源文件直接加载到类型的属性中来打开和转换 <xref:System.IO.Stream>。  
+ 当调用 <xref:System.Windows.Application.GetResourceStream%2A> 使你能够访问 <xref:System.IO.Stream>时，需要执行其他工作，将其转换为你要将其设置到的属性的类型。 相反，您可以让 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 通过使用代码将资源文件直接加载到类型的属性中来打开和转换 <xref:System.IO.Stream>。  
   
  下面的示例演示如何使用代码将 <xref:System.Windows.Controls.Page> 直接加载到 <xref:System.Windows.Controls.Frame> （`pageFrame`）。  
   
@@ -109,12 +109,12 @@ ms.locfileid: "72581732"
 ```  
   
 > [!NOTE]
-> 在 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 中，将新的 <xref:System.Windows.Window>、<xref:System.Windows.Navigation.NavigationWindow>、<xref:System.Windows.Controls.Page>、<xref:System.Windows.Documents.FlowDocument> 或 <xref:System.Windows.ResourceDictionary> 添加到项目，标记文件的 `Build Action` 默认为 `Page`。  
+> 在 Visual Studio 中，向项目添加新的 <xref:System.Windows.Window>、<xref:System.Windows.Navigation.NavigationWindow>、<xref:System.Windows.Controls.Page>、<xref:System.Windows.Documents.FlowDocument>或 <xref:System.Windows.ResourceDictionary> 时，标记文件的 `Build Action` 默认为 `Page`。  
   
  在编译具有 `Page` 项的项目时，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 项将转换为二进制格式，并编译到关联的程序集中。 因此，可以像使用典型的资源文件一样使用这些文件。  
   
 > [!NOTE]
-> 如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件配置为 `Resource` 项，但没有代码隐藏文件，则原始 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 会编译为程序集，而不是原始 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的二进制版本。  
+> 如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件配置为 `Resource` 项，但没有代码隐藏文件，则原始 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 会编译为程序集，而不是原始 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]的二进制版本。  
   
 <a name="Content_Files"></a>   
 ## <a name="content-files"></a>内容文件  
@@ -140,17 +140,17 @@ ms.locfileid: "72581732"
 ```  
   
 > [!NOTE]
-> 在 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 中，可以通过将文件添加到项目并将其 `Build Action` 设置为 `Content` 来创建内容文件，并将其 `Copy to Output Directory` 设置为 `Copy always` （与 `Always` 相同）和 `Copy if newer` （与 `PreserveNewest` 相同）。  
+> 在 Visual Studio 中，你可以通过将文件添加到项目并将其 `Build Action` 设置为 `Content`来创建内容文件，并将其 `Copy to Output Directory` 设置为 `Copy always` （与 `Always`相同）和 `Copy if newer` （与 `PreserveNewest`相同）。  
   
  生成项目时，会将 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 属性编译到每个内容文件的程序集的元数据中。  
   
  `[assembly: AssemblyAssociatedContentFile("ContentFile.xaml")]`  
   
- @No__t_0 的值表示内容文件相对于其在项目中的位置的路径。 例如，如果内容文件位于项目子文件夹中，则其他路径信息将合并到 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 值中。  
+ <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 的值表示内容文件相对于其在项目中的位置的路径。 例如，如果内容文件位于项目子文件夹中，则其他路径信息将合并到 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 值中。  
   
  `[assembly: AssemblyAssociatedContentFile("Resources/ContentFile.xaml")]`  
   
- @No__t_0 值也是内容文件在生成输出文件夹中的路径的值。  
+ <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 值也是内容文件在生成输出文件夹中的路径的值。  
   
 ### <a name="using-content-files"></a>使用内容文件  
  若要加载内容文件，可以调用 <xref:System.Windows.Application> 类的 <xref:System.Windows.Application.GetContentStream%2A> 方法，同时传递标识所需内容文件的包 URI。 <xref:System.Windows.Application.GetContentStream%2A> 返回一个 <xref:System.Windows.Resources.StreamResourceInfo> 对象，该对象将内容文件作为 <xref:System.IO.Stream> 公开，并描述其内容类型。  
@@ -160,7 +160,7 @@ ms.locfileid: "72581732"
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadapagecontentfilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadapagecontentfilemanuallycode)]  
   
- 当调用 <xref:System.Windows.Application.GetContentStream%2A> 使你能够访问 <xref:System.IO.Stream> 时，需要执行其他工作，将其转换为你要将其设置到的属性的类型。 相反，您可以让 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 通过使用代码将资源文件直接加载到类型的属性中来打开和转换 <xref:System.IO.Stream>。  
+ 当调用 <xref:System.Windows.Application.GetContentStream%2A> 使你能够访问 <xref:System.IO.Stream>时，需要执行其他工作，将其转换为你要将其设置到的属性的类型。 相反，您可以让 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 通过使用代码将资源文件直接加载到类型的属性中来打开和转换 <xref:System.IO.Stream>。  
   
  下面的示例演示如何使用代码将 <xref:System.Windows.Controls.Page> 直接加载到 <xref:System.Windows.Controls.Frame> （`pageFrame`）。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "72581732"
   
  [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
   
- 但是，file:/// 和 http:// 方案要求应用程序具有完全信任。 如果你的应用程序是从 Internet 或 intranet 启动的 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]，并且该应用程序只请求从这些位置启动的应用程序允许的权限集，则只能从应用程序的源站点加载松散文件（启动位置）。 此类文件称为*源站点*文件。  
+ 但是，file:/// 和 http:// 方案要求应用程序具有完全信任。 如果你的应用程序是从 Internet 或 intranet 启动的 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]，并且该应用程序只请求从这些位置启动的应用程序允许的权限集，则只能从应用程序源站点加载松散文件（启动位置）。 此类文件称为*源站点*文件。  
   
  虽然源站点文件并不仅限于部分信任应用程序，但这些文件是部分信任应用程序的唯一选择。 完全信任应用程序可能仍然需要加载它们在生成时所不知道的应用程序数据文件；但是完全信任应用程序可以使用 file:///，应用程序数据文件很可能将安装在该应用程序程序集所在的文件夹或其子文件夹中。 在此情况下，使用源站点引用比使用 file:/// 更加容易，因为使用 file:/// 需要找出文件的完整路径。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "72581732"
 ```  
   
 > [!NOTE]
-> 在 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 中，可以通过将文件添加到项目并将其 `Build Action` 设置为 `None` 来创建源站点文件。  
+> 在 Visual Studio 中，你可以通过将文件添加到项目并将其 `Build Action` 设置为 `None`来创建源站点文件。  
   
  生成项目时，MSBuild 会将指定的文件复制到生成输出文件夹。  
   
@@ -222,7 +222,7 @@ ms.locfileid: "72581732"
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadapagesoofilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadapagesoofilemanuallycode)]  
   
- 当调用 <xref:System.Windows.Application.GetRemoteStream%2A> 使你能够访问 <xref:System.IO.Stream> 时，需要执行其他工作，将其转换为你要将其设置到的属性的类型。 相反，您可以让 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 通过使用代码将资源文件直接加载到类型的属性中来打开和转换 <xref:System.IO.Stream>。  
+ 当调用 <xref:System.Windows.Application.GetRemoteStream%2A> 使你能够访问 <xref:System.IO.Stream>时，需要执行其他工作，将其转换为你要将其设置到的属性的类型。 相反，您可以让 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 通过使用代码将资源文件直接加载到类型的属性中来打开和转换 <xref:System.IO.Stream>。  
   
  下面的示例演示如何使用代码将 <xref:System.Windows.Controls.Page> 直接加载到 <xref:System.Windows.Controls.Frame> （`pageFrame`）。  
   

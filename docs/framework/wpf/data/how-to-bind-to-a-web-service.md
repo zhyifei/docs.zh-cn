@@ -9,41 +9,41 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 2c3bc1f2142f07aba3df2da6c46117d3907443a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 72638101b73e6b43fa225885b2e1f27d87b22826
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954279"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920150"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>如何：绑定到 Web 服务
-此示例演示如何将绑定到由 Web 服务方法调用返回的对象。  
+此示例演示如何绑定到由 Web 服务方法调用返回的对象。  
   
 ## <a name="example"></a>示例  
- 此示例使用[MSDN/TechNet 发布系统 (MTPS) Content Service](https://go.microsoft.com/fwlink/?LinkId=95677)检索支持指定的文档的语言的列表。  
+ 此示例使用[MSDN/TechNet 发布系统（MTPS）内容服务](https://go.microsoft.com/fwlink/?LinkId=95677)检索指定文档支持的语言列表。  
   
- 在调用 Web 服务之前，需要创建对它的引用。 若要创建对 MTPS 服务使用的 Web 引用[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，请执行以下步骤：  
+ 在调用 Web 服务之前，需要创建对它的引用。 若要使用 Visual Studio 创建对 MTPS 服务的 Web 引用，请执行以下步骤：  
   
-1. 在 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 中打开项目。  
+1. 在 Visual Studio 中打开项目。  
   
-2. 从**项目**菜单上，单击**添加 Web 引用**。  
+2. 从 "**项目**" 菜单中，单击 "**添加 Web 引用**"。  
   
-3. 在对话框中，将 **URL** 设置为 [http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl)。  
+3. 在对话框中，将**URL**设置为[http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl)。  
   
-4. 按“转到”，然后按“添加引用”。  
+4. 按 "**开始**"，然后单击 "**添加引用**"。  
   
- 接下来，调用 Web 服务方法并将相应控件或窗口的 <xref:System.Windows.FrameworkElement.DataContext%2A> 设置为返回的对象。 MTPS 服务的  **GetContent** 方法将引用 **getContentRequest** 对象。 因此，下面的示例首先设置请求对象：  
+ 接下来，将调用 Web 服务方法，并将相应控件或窗口的 <xref:System.Windows.FrameworkElement.DataContext%2A> 设置为返回的对象。 MTPS 服务的**GetContent**方法获取对**getContentRequest**对象的引用。 因此，以下示例首先设置 request 对象：  
   
  [!code-csharp[BindToWebService#Namespace](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#namespace)]
  [!code-vb[BindToWebService#Namespace](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#namespace)]  
 [!code-csharp[BindToWebService#WebServiceCall](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#webservicecall)]
 [!code-vb[BindToWebService#WebServiceCall](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#webservicecall)]  
   
- <xref:System.Windows.FrameworkElement.DataContext%2A> 设置完成后，即可创建对特定对象（已将 <xref:System.Windows.FrameworkElement.DataContext%2A> 设置为此对象）的属性的绑定。 在此示例中，<xref:System.Windows.FrameworkElement.DataContext%2A> 设置为 **GetContent** 方法返回的 **getContentResponse** 对象。 在以下示例中，<xref:System.Windows.Controls.ItemsControl> 绑定到 **getContentResponse** 的 **availableVersionsAndLocales** 的 **locale** 值并显示这些值。  
+ 设置 <xref:System.Windows.FrameworkElement.DataContext%2A> 后，可以创建对 <xref:System.Windows.FrameworkElement.DataContext%2A> 已设置为的对象的属性的绑定。 在此示例中，将 <xref:System.Windows.FrameworkElement.DataContext%2A> 设置为**GetContent**方法返回的**getContentResponse**对象。 在下面的示例中，<xref:System.Windows.Controls.ItemsControl> 将绑定到，并显示**getContentResponse**的**availableVersionsAndLocales**的**区域设置**值。  
   
  [!code-xaml[BindToWebService#Binding](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml#binding)]  
   
- 有关 **getContentResponse** 结构的信息，请参阅[内容服务文档](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx)。  
+ 有关**getContentResponse**结构的信息，请参阅[内容服务文档](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx)。  
   
 ## <a name="see-also"></a>请参阅
 

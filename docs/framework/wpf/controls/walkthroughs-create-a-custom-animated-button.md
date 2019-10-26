@@ -6,36 +6,30 @@ helpviewer_keywords:
 - buttons [WPF]
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
-ms.openlocfilehash: 3c601641a0eb1024722b4f449f0ab23e54fe93dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf75677ee6a6a607a8779edf5af5e63f5c92b230
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024464"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920177"
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>演练：创建自定义的动画按钮
-顾名思义，Windows Presentation Foundation (WPF) 非常适用于为客户进行丰富的演示体验。 这些演练演示如何自定义外观和行为 （包括动画） 按钮。 完成此自定义，以便您可以应用此自定义按钮轻松于任何按钮在应用程序中使用的样式和模板。 下图显示了您将创建的自定义的按钮。  
-  
- ![您将创建的自定义的按钮](./media/custom-button-blend-intro.jpg "custom_button_blend_Intro")  
-  
- 通过使用创建构成了按钮的外观的向量图形[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 但它是更功能强大且可扩展，则是与 HTML 类似。 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 可以键入中手动使用 Microsoft Visual Studio 或记事本，或者可以使用 Microsoft Expression Blend 之类的可视化设计工具。 在 expression Blend 的工作原理是创建基础[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]代码，因此这两种方法创建相同的图形。  
-  
-## <a name="in-this-section"></a>本节内容  
- [使用 Microsoft Expression Blend 创建按钮](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
- 演示如何创建具有自定义行为的按钮，通过使用 Expression Blend 的设计器功能。  
-  
- [使用 XAML 创建按钮](walkthrough-create-a-button-by-using-xaml.md)  
- 演示如何使用具有自定义行为创建按钮[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]和 Visual Studio。  
-  
-## <a name="related-sections"></a>相关章节  
- [样式设置和模板化](styling-and-templating.md)  
- 介绍如何使用样式和模板来确定的外观和行为的控件。  
-  
- [动画概述](../graphics-multimedia/animation-overview.md)  
- 描述了可以如何在使用动态显示对象[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]动画和计时系统。  
-  
- [使用纯色和渐变进行绘制概述](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- 介绍如何使用画笔对象用纯色、 线性渐变和径向渐变进行绘制。  
-  
- [位图效果概述](../graphics-multimedia/bitmap-effects-overview.md)  
- 介绍支持的位图效果[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]并说明如何将其应用。
+顾名思义，Windows Presentation Foundation （WPF）非常适合为客户提供丰富的演示体验。 这些演练说明了如何自定义按钮的外观和行为（包括动画）。 此自定义通过使用样式和模板来完成，因此你可以轻松地将此自定义按钮应用于应用程序中的任何按钮。 下图显示了您将创建的自定义按钮。
+
+ ![你将创建的自定义按钮](./media/custom-button-blend-intro.jpg "custom_button_blend_Intro")
+
+ 构成按钮外观的矢量图形是使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]创建的。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 类似于 HTML，但其功能更强大且可扩展。 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 可以使用 Visual Studio 或记事本手动键入，也可以使用可视化设计工具（如 Blend for Visual Studio）。 通过创建基础 XAML 代码来混合工作，因此这两种方法都创建相同的图形。
+
+## <a name="in-this-section"></a>本节内容
+ [使用 Microsoft Expression Blend 创建按钮](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)演示如何使用 Expression Blend 的设计器功能创建具有自定义行为的按钮。
+
+ [使用 XAML 创建按钮](walkthrough-create-a-button-by-using-xaml.md)演示如何使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 和 Visual Studio 创建具有自定义行为的按钮。
+
+## <a name="related-sections"></a>相关章节
+ [样式设置和模板化](styling-and-templating.md)介绍如何使用样式和模板来确定控件的外观和行为。
+
+ [动画概述](../graphics-multimedia/animation-overview.md)介绍如何使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 动画和计时系统对对象进行动画处理。
+
+ [用纯色和渐变进行绘制概述](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)介绍如何使用画笔对象绘制纯色、线性渐变和径向梯度。
+
+ [位图效果概述](../graphics-multimedia/bitmap-effects-overview.md)介绍 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支持的位图效果，并说明如何应用它们。

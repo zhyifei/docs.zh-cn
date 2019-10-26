@@ -6,19 +6,19 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: 497cd520731d9a0c96ed2b7cb35fa9f53ba25245
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 10342d97abc2e3c158f93171f5fe5cd560f9b7e4
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053467"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920256"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>演练：使用 Microsoft Expression Blend 创建按钮
 
-本演练将指导你完成使用 Microsoft Expression Blend [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]创建自定义按钮的过程。
+本演练逐步介绍如何使用 Microsoft Expression Blend 创建 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 自定义按钮。
 
 > [!IMPORTANT]
-> Microsoft Expression Blend 的工作方式[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]是生成，然后将其编译为生成可执行程序。 如果你希望直接使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ，则有另一个演练使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Visual Studio （而不是 Blend）创建与此应用程序相同的应用程序。 有关详细信息，请参阅[使用 XAML 创建按钮](walkthrough-create-a-button-by-using-xaml.md)。
+> Microsoft Expression Blend 的工作方式是生成 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，然后将编译这些来生成可执行程序。 如果你希望直接使用 XAML，则还有另一个演练，它使用 XAML 和 Visual Studio （而不是 Blend）创建与此应用程序相同的应用程序。 有关详细信息，请参阅[使用 XAML 创建按钮](walkthrough-create-a-button-by-using-xaml.md)。
 
 下图显示了您将创建的自定义按钮。
 
@@ -38,13 +38,13 @@ ms.locfileid: "71053467"
 
 4. 选择**标准应用程序（.exe）** 。
 
-5. 为项目`CustomButton`命名并按 **"确定"** 。
+5. 将项目命名为 `CustomButton`，然后按 **"确定"** 。
 
-此时，您有一个空[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]项目。 可以按 F5 运行该应用程序。 正如您所料，应用程序只包含一个空白窗口。 接下来，创建一个圆角矩形，并将其转换为按钮。
+此时，您有一个空白 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 项目。 可以按 F5 运行该应用程序。 正如您所料，应用程序只包含一个空白窗口。 接下来，创建一个圆角矩形，并将其转换为按钮。
 
 ### <a name="to-convert-a-rectangle-to-a-button"></a>将矩形转换为按钮
 
-1. **将窗口背景属性设置为黑色：** 选择窗口，单击 "**属性" 选项卡**，然后将<xref:System.Windows.Controls.Control.Background%2A>属性设置`Black`为。
+1. **将窗口背景属性设置为黑色：** 选择窗口，单击 "**属性" 选项卡**，然后将 "<xref:System.Windows.Controls.Control.Background%2A>" 属性设置为 "`Black`"。
 
     ![如何将按钮的背景设置为黑色](./media/custom-button-blend-changebackground.png)
 
@@ -52,7 +52,7 @@ ms.locfileid: "71053467"
 
     ![如何绘制矩形](./media/custom-button-blend-drawrect.png)
 
-3. **将矩形的角取整：** 拖动矩形的控制点或直接设置<xref:System.Windows.Shapes.Rectangle.RadiusX%2A>和<xref:System.Windows.Shapes.Rectangle.RadiusY%2A>属性。 将<xref:System.Windows.Shapes.Rectangle.RadiusX%2A> 和<xref:System.Windows.Shapes.Rectangle.RadiusY%2A>的值设置为20。
+3. 将**矩形的角取整：** 拖动矩形的控制点，或直接设置 "<xref:System.Windows.Shapes.Rectangle.RadiusX%2A>" 和 "<xref:System.Windows.Shapes.Rectangle.RadiusY%2A>" 属性。 将 <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> 和 <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> 的值设置为20。
 
     ![如何使矩形的角变为圆角](./media/custom-button-blend-roundcorners.png)
 
@@ -76,19 +76,19 @@ ms.locfileid: "71053467"
 
     ![如何编辑模板](./media/custom-button-blend-edittemplate.jpg)
 
-    请注意，在模板编辑器中，按钮现在分隔为<xref:System.Windows.Shapes.Rectangle> <xref:System.Windows.Controls.ContentPresenter>和。 <xref:System.Windows.Controls.ContentPresenter>用于显示按钮中的内容（例如，字符串 "按钮"）。 矩形和<xref:System.Windows.Controls.ContentPresenter>都在内<xref:System.Windows.Controls.Grid>进行布局。
+    请注意，在模板编辑器中，按钮现在被分隔到 <xref:System.Windows.Shapes.Rectangle> 和 <xref:System.Windows.Controls.ContentPresenter>中。 <xref:System.Windows.Controls.ContentPresenter> 用于显示按钮中的内容（例如，字符串 "按钮"）。 矩形和 <xref:System.Windows.Controls.ContentPresenter> 都在 <xref:System.Windows.Controls.Grid>内进行布局。
 
     ![用于展示矩形的组件](./media/custom-button-blend-templatepanel.png)
 
-2. **更改模板组件的名称：** 右键单击模板清单中的矩形，将<xref:System.Windows.Shapes.Rectangle>名称从 "[rectangle]" 更改为 "outerRectangle"，并将 "[system.windows.controls.contentpresenter>]" 更改为 "myContentPresenter"。
+2. **更改模板组件的名称：** 右键单击模板清单中的矩形，将 <xref:System.Windows.Shapes.Rectangle> 名称从 "[矩形]" 更改为 "outerRectangle"，并将 "[System.windows.controls.contentpresenter>]" 更改为 "myContentPresenter"。
 
     ![如何重命名模板的组件](./media/custom-button-blend-renamecomponents.png)
 
-3. **更改矩形，使其在内部（如环形）为空：** 选择**outerRectangle**并将<xref:System.Windows.Shapes.Shape.Fill%2A>设置为 "透明" <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> ，并设置为5。
+3. **更改矩形，使其在内部（如环形）为空：** 选择**outerRectangle**并将 <xref:System.Windows.Shapes.Shape.Fill%2A> 设置为 "透明"，并将 <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> 设置为5。
 
     ![如何使矩形为空](./media/custom-button-blend-changerectproperties.png)
 
-    然后，将<xref:System.Windows.Shapes.Shape.Stroke%2A>设置为模板的任何颜色。 为此，请单击 "**笔划**" 旁边的小白色框，选择 " **CustomExpression**"，然后在对话框中键入 "{TemplateBinding Background}"。
+    然后，将 <xref:System.Windows.Shapes.Shape.Stroke%2A> 设置为模板的所有颜色。 为此，请单击 "**笔划**" 旁边的小白色框，选择 " **CustomExpression**"，然后在对话框中键入 "{TemplateBinding Background}"。
 
     ![如何设置和使用模板的颜色](./media/custom-button-blend-templatestroke.png)
 
@@ -106,7 +106,7 @@ ms.locfileid: "71053467"
 
     ![如何将一个按钮移到另一个按钮的上面](./media/custom-button-blend-innerrectangle2.png)
 
-6. **更改 innerRectangle 的外观：** <xref:System.Windows.Shapes.Rectangle.RadiusX%2A>将、 <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>和值设置为20。<xref:System.Windows.Shapes.Shape.StrokeThickness%2A> 此外，使用自定义<xref:System.Windows.Shapes.Shape.Fill%2A>表达式 "{TemplateBinding background}" 将设置为模板的背景，并将设置<xref:System.Windows.Shapes.Shape.Stroke%2A>为 "透明"。 <xref:System.Windows.Shapes.Shape.Fill%2A>请注意， <xref:System.Windows.Shapes.Shape.Stroke%2A>和的**innerRectangle**的设置与**outerRectangle**的设置相反。
+6. **更改 innerRectangle 的外观：** 将 <xref:System.Windows.Shapes.Rectangle.RadiusX%2A>、<xref:System.Windows.Shapes.Rectangle.RadiusY%2A>和 <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> 值设置为20。 此外，使用自定义表达式 "{TemplateBinding Background}" 将 <xref:System.Windows.Shapes.Shape.Fill%2A> 设置为模板的背景，并将 <xref:System.Windows.Shapes.Shape.Stroke%2A> 设置为 "透明"。 请注意， **innerRectangle**的 <xref:System.Windows.Shapes.Shape.Fill%2A> 和 <xref:System.Windows.Shapes.Shape.Stroke%2A> 的设置与**outerRectangle**的设置相反。
 
     ![如何更改矩形的外观](./media/custom-button-blend-glassrectangleproperties1.png)
 
@@ -114,21 +114,21 @@ ms.locfileid: "71053467"
 
 8. **如有必要，重定位 glassCube：** 如果**glassCube**尚未定位，使其覆盖整个按钮，请将其拖动到位置。
 
-9. **为 glassCube 指定一个与 outerRectangle 略有不同的形状：** 更改**glassCube**的属性。 首先将<xref:System.Windows.Shapes.Rectangle.RadiusX%2A>和<xref:System.Windows.Shapes.Rectangle.RadiusY%2A>属性更改为10，将<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>更改为2。
+9. **为 glassCube 指定一个与 outerRectangle 略有不同的形状：** 更改**glassCube**的属性。 首先，将 "<xref:System.Windows.Shapes.Rectangle.RadiusX%2A>" 和 "<xref:System.Windows.Shapes.Rectangle.RadiusY%2A>" 属性更改为10，将 <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> 更改为 "2"。
 
     ![glassCube 的外观设置](./media/custom-button-blend-glasscubeappearance.gif)
 
-10. **使 glassCube 看起来像玻璃：** 通过使用线性渐变（75% 不透明）将设置为glassy外观，在大约均匀间隔的时间段内，在白色和透明之间交替变化。<xref:System.Windows.Shapes.Shape.Fill%2A> 这是将梯度停止点设置为：
+10. **使 glassCube 看起来像玻璃：** 使用线性渐变将 <xref:System.Windows.Shapes.Shape.Fill%2A> 设置为 glassy 的外观，该渐变为75% 不透明，并在大约平均间隔的时间间隔内的颜色白色和透明之间交替。 这是将梯度停止点设置为：
 
-    - 梯度停止点1：白色，Alpha 值为 75%
+    - 梯度停止点1：白色，Alpha 值为75%
 
     - 梯度停止点2：透明
 
-    - 梯度停止点3：白色，Alpha 值为 75%
+    - 梯度停止点3：白色，Alpha 值为75%
 
     - 梯度停止点4：透明
 
-    - 梯度停止点5：白色，Alpha 值为 75%
+    - 梯度停止点5：白色，Alpha 值为75%
 
     - 梯度停止点6：透明
 
@@ -136,7 +136,7 @@ ms.locfileid: "71053467"
 
     ![看起来像玻璃的矩形](./media/custom-button-blend-glassrectangleproperties2.png)
 
-11. **隐藏玻璃层：** 现在，你已经了解了 glassy 层的外观，接下来请进入 "**属性" 面板**的 "**外观" 窗格**，并将不透明度设置为 0% 以隐藏它。 在前面的部分中，我们将使用属性触发器和事件来显示和操作玻璃层。
+11. **隐藏玻璃层：** 现在，你已经了解了 glassy 层的外观，接下来请进入 "**属性" 面板**的 "**外观" 窗格**，并将不透明度设置为0% 以隐藏它。 在前面的部分中，我们将使用属性触发器和事件来显示和操作玻璃层。
 
     ![如何隐藏玻璃矩形](./media/custom-button-glassrectangleproperties3.gif)
 
@@ -148,48 +148,48 @@ ms.locfileid: "71053467"
 
 1. **创建新的属性触发器：** 选择**glassCube**后，在 "**触发器**" 面板中单击 " **+ 属性**" （请参阅下一步后面的图）。 这将创建一个具有默认属性触发器的属性触发器。
 
-2. **将 System.windows.uielement.ismouseover 用作触发器使用的属性：** 将属性更改为<xref:System.Windows.UIElement.IsMouseOver%2A>。 当<xref:System.Windows.UIElement.IsMouseOver%2A>属性为`true`时（当用户用鼠标指向按钮时），这会使属性触发器激活。
+2. **将 system.windows.uielement.ismouseover 用作触发器使用的属性：** 将属性更改为 <xref:System.Windows.UIElement.IsMouseOver%2A>。 当 `true` <xref:System.Windows.UIElement.IsMouseOver%2A> 属性时（当用户用鼠标指向按钮时），这会使属性触发器激活。
 
     ![如何在属性上设置触发器](./media/custom-button-blend-ismousedoverpropertytrigger.png)
 
-3. **System.windows.uielement.ismouseover 触发 glassCube 的 100% 的不透明度：** 请注意，**触发器记录已打开**（请参阅上图）。 这意味着，在记录时对**glassCube**属性值所做的任何更改都将成为在为<xref:System.Windows.UIElement.IsMouseOver%2A> `true`时进行的操作。 录制时，将<xref:System.Windows.UIElement.Opacity%2A> **glassCube**的更改为 100%。
+3. **System.windows.uielement.ismouseover 触发 glassCube 的100% 的不透明度：** 请注意，**触发器记录已打开**（请参阅上图）。 这意味着，在记录时对**glassCube**属性值所做的任何更改都将成为 `true`<xref:System.Windows.UIElement.IsMouseOver%2A> 时发生的操作。 录制时，将**glassCube**的 <xref:System.Windows.UIElement.Opacity%2A> 更改为100%。
 
     ![如何设置按钮的不透明度](./media/custom-button-blend-ismousedoverpropertytrigger2.gif)
 
-    现在，您已创建了第一个属性触发器。 请注意，编辑器的 "**触发器" 面板**已<xref:System.Windows.UIElement.Opacity%2A>将更改为 100%。
+    现在，您已创建了第一个属性触发器。 请注意，编辑器的 "**触发器" 面板**已将 <xref:System.Windows.UIElement.Opacity%2A> 更改为100%。
 
     ![“触发器”面板](./media/custom-button-blend-propertytriggerinfo.png)
 
     按 F5 运行应用程序，并将鼠标指针移到按钮的上方和下方。 当鼠标悬停在按钮上并在指针离开时消失时，应会看到玻璃层。
 
-4. **System.windows.uielement.ismouseover 触发器笔划值更改：** 让我们将其他一些操作与<xref:System.Windows.UIElement.IsMouseOver%2A>触发器相关联。 录制继续时，请将所选内容从**glassCube**切换到**outerRectangle**。 然后，将<xref:System.Windows.Shapes.Shape.Stroke%2A> **outerRectangle**的设置为自定义表达式 "{DynamicResource {x:Static SystemColors. HighlightBrushKey}}"。 这会将<xref:System.Windows.Shapes.Shape.Stroke%2A>设置为按钮所使用的典型突出显示颜色。 当鼠标悬停在按钮上时，请按 F5 查看效果。
+4. **System.windows.uielement.ismouseover 触发器笔划值更改：** 让我们将其他一些操作与 <xref:System.Windows.UIElement.IsMouseOver%2A> 触发器相关联。 录制继续时，请将所选内容从**glassCube**切换到**outerRectangle**。 然后，将**outerRectangle**的 "<xref:System.Windows.Shapes.Shape.Stroke%2A>" 设置为 "{DynamicResource {x:Static SystemColors. HighlightBrushKey}}" 的自定义表达式。 这会将 <xref:System.Windows.Shapes.Shape.Stroke%2A> 设置为按钮所使用的典型突出显示颜色。 当鼠标悬停在按钮上时，请按 F5 查看效果。
 
     ![如何将笔画设置为突出显示颜色](./media/custom-button-blend-ismousedoverpropertytrigger3.png)
 
-5. **System.windows.uielement.ismouseover 触发模糊文本：** 让我们将另一个操作与<xref:System.Windows.UIElement.IsMouseOver%2A>属性触发器关联起来。 当玻璃出现在屏幕上时，使该按钮的内容看起来很模糊。 为此，我们可以将模糊<xref:System.Windows.Media.Effects.BitmapEffect>应用<xref:System.Windows.Controls.ContentPresenter>到（**myContentPresenter**）。
+5. **System.windows.uielement.ismouseover 触发模糊文本：** 让我们将另一个操作关联到 <xref:System.Windows.UIElement.IsMouseOver%2A> 属性触发器。 当玻璃出现在屏幕上时，使该按钮的内容看起来很模糊。 为此，我们可以将模糊 <xref:System.Windows.Media.Effects.BitmapEffect> 应用到 <xref:System.Windows.Controls.ContentPresenter> （**myContentPresenter**）。
 
     ![如何使按钮内容变得模糊](./media/custom-button-blend-propertytriggerwithbitmapeffect.png)
 
     > [!NOTE]
-    > 若要在执行<xref:System.Windows.Media.Effects.BitmapEffect>搜索之前返回 "**属性" 面板**，请清除**搜索框**中的文本。
+    > 若要在执行 <xref:System.Windows.Media.Effects.BitmapEffect>搜索之前返回 "**属性" 面板**，请清除**搜索框**中的文本。
 
-    此时，我们使用了具有多个相关操作的属性触发器来创建鼠标指针进入和离开按钮区域时的突出显示行为。 按钮的另一种典型行为是在焦点突出显示时突出显示。 可以通过为<xref:System.Windows.UIElement.IsFocused%2A>属性添加另一个属性触发器来添加此类行为。
+    此时，我们使用了具有多个相关操作的属性触发器来创建鼠标指针进入和离开按钮区域时的突出显示行为。 按钮的另一种典型行为是在焦点突出显示时突出显示。 可以通过为 <xref:System.Windows.UIElement.IsFocused%2A> 属性添加另一个属性触发器来添加此类行为。
 
-6. **为 IsFocused 创建属性触发器：** 使用与相同的<xref:System.Windows.UIElement.IsMouseOver%2A>过程（请参阅本部分的第一步），为<xref:System.Windows.UIElement.IsFocused%2A>属性创建另一个属性触发器。 当**触发器记录为 on**时，将以下操作添加到触发器：
+6. **为 IsFocused 创建属性触发器：** 使用与 <xref:System.Windows.UIElement.IsMouseOver%2A> 相同的过程（请参阅本部分的第一步），为 <xref:System.Windows.UIElement.IsFocused%2A> 属性创建另一个属性触发器。 当**触发器记录为 on**时，将以下操作添加到触发器：
 
-    - **glassCube**获取<xref:System.Windows.UIElement.Opacity%2A> 100% 的。
+    - **glassCube**获取100% 的 <xref:System.Windows.UIElement.Opacity%2A>。
 
-    - **outerRectangle**获取<xref:System.Windows.Shapes.Shape.Stroke%2A>自定义表达式值 "{DynamicResource {x:Static SystemColors. HighlightBrushKey}}"。
+    - **outerRectangle**获取 <xref:System.Windows.Shapes.Shape.Stroke%2A> 自定义表达式值 "{DynamicResource {x:Static SystemColors. HighlightBrushKey}}"。
 
-作为本演练的最后一步，我们将向按钮添加动画。 这些动画将由事件（具体而言<xref:System.Windows.UIElement.MouseEnter>是和<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件）触发。
+作为本演练的最后一步，我们将向按钮添加动画。 这些动画将由事件（具体来说是 <xref:System.Windows.UIElement.MouseEnter> 和 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件）触发。
 
 ### <a name="to-use-event-triggers-and-animations-to-add-interactivity"></a>使用事件触发器和动画添加交互性
 
-1. **创建 MouseEnter 事件触发器：** 添加新的事件触发器，并<xref:System.Windows.UIElement.MouseEnter>选择作为要在触发器中使用的事件。
+1. **创建 MouseEnter 事件触发器：** 添加新的事件触发器，并选择 "<xref:System.Windows.UIElement.MouseEnter>" 作为要在触发器中使用的事件。
 
      ![如何创建 MouseEnter 事件触发器](./media/custom-button-blend-mouseovereventtrigger.png)
 
-2. **创建动画时间线：** 接下来，将动画时间线与<xref:System.Windows.UIElement.MouseEnter>事件关联。
+2. **创建动画时间线：** 接下来，将动画时间线与 <xref:System.Windows.UIElement.MouseEnter> 事件关联。
 
     ![如何向事件添加动画时间线](./media/custom-button-blend-mouseovereventtrigger2.png)
 
@@ -204,7 +204,7 @@ ms.locfileid: "71053467"
 
     ![如何创建关键帧](./media/custom-button-blend-mouseovereventtrigger4.png)
 
-4. **收缩此关键帧中的 glassCube：** 选择第二个关键帧后，使用**大小转换**将**glassCube**的大小缩小到其完整大小的 90%。
+4. **收缩此关键帧中的 glassCube：** 选择第二个关键帧后，使用**大小转换**将**glassCube**的大小缩小到其完整大小的90%。
 
     ![如何缩小按钮](./media/custom-button-blend-sizetransform.png)
 
@@ -212,9 +212,9 @@ ms.locfileid: "71053467"
 
 5. **创建另一个事件触发器并将不同的动画与之关联：** 让我们再添加一个动画。 使用类似的过程来创建上一个事件触发器动画：
 
-    1. 使用<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件创建新的事件触发器。
+    1. 使用 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件创建新的事件触发器。
 
-    2. 将新时间线与<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件关联。
+    2. 将新时间线与 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件关联。
 
         ![如何创建新的时间线](./media/custom-button-blend-clickeventtrigger1.png)
 
@@ -222,11 +222,11 @@ ms.locfileid: "71053467"
 
     4. 突出显示处于0.3 秒的关键帧后，将**旋转变换角度**设置为360度。
 
-        ![如何创建旋转转换](./media/custom-button-blend-rotatetransform.gif)
+        ![如何创建旋转变换](./media/custom-button-blend-rotatetransform.gif)
 
     5. 按 F5 运行该应用程序。 单击按钮。 请注意，玻璃层会旋转。
 
-## <a name="conclusion"></a>结束语
+## <a name="conclusion"></a>结论
 
 已完成自定义按钮。 使用应用于应用程序中所有按钮的按钮模板执行此操作。 如果你退出模板编辑模式（请参阅下图）并创建更多按钮，你将看到它们的外观和行为类似于自定义按钮，而不像 "默认" 按钮。
 
@@ -236,7 +236,7 @@ ms.locfileid: "71053467"
 
 按 F5 运行该应用程序。 单击按钮，并注意它们的行为方式如何。
 
-请记住，在自定义模板时，可以将<xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Shape.Stroke%2A> **innerRectangle**的属性和**outerRectangle**属性设置为模板背景（{TemplateBinding background}）。 因此，在设置各个按钮的背景色时，设置的背景将用于各自的属性。 立即尝试更改背景。 在下图中，使用了不同的渐变。 因此，尽管模板对控件（如按钮）的整体自定义很有用，但仍可以修改具有模板的控件，使其看起来彼此不同。
+请记住，在自定义模板时，可以将**innerRectangle**的 <xref:System.Windows.Shapes.Shape.Fill%2A> 属性和 <xref:System.Windows.Shapes.Shape.Stroke%2A> 属性**outerRectangle**设置为模板背景（{TemplateBinding background}）。 因此，在设置各个按钮的背景色时，设置的背景将用于各自的属性。 立即尝试更改背景。 在下图中，使用了不同的渐变。 因此，尽管模板对控件（如按钮）的整体自定义很有用，但仍可以修改具有模板的控件，使其看起来彼此不同。
 
 ![具有相同模板的按钮外观](./media/custom-button-blend-blendconclusion.jpg "custom_button_blend_BlendConclusion")
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 925250a2284a47d0f9caf93158e2e23d9283aef3
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: fdeb40f1e092f8c7e96e9d59e1b07673201fbe9d
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774735"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920379"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 安全策略 - 平台安全性
 虽然 Windows Presentation Foundation （WPF）提供各种安全服务，但它还利用基础平台（包括操作系统、CLR 和 Internet Explorer）的安全功能。 这些层组合在一起旨在提供 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 强大且深层防御的安全模型，尝试避免任何单点故障，如下图所示：  
@@ -165,7 +165,7 @@ Windows Vista 上的 WPF 用户将受益于操作系统的附加安全增强功�
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce 部署  
- ClickOnce 是一种全面的部署技术，.NET Framework 附带，并与 [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] 集成（有关详细信息，请参阅[ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)）。 独立 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序可使用 ClickOnce 进行部署，而浏览器承载的应用程序必须使用 ClickOnce 进行部署。  
+ ClickOnce 是一种全面的部署技术，随 .NET Framework 提供，并与 Visual Studio 集成（有关详细信息，请参阅[ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)）。 独立 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序可使用 ClickOnce 进行部署，而浏览器承载的应用程序必须使用 ClickOnce 进行部署。  
   
  使用 ClickOnce 部署的应用程序在代码访问安全性（CAS）上给予了附加的安全层;实质上，ClickOnce 部署的应用程序会请求所需的权限。 如果它们不超过在其中部署应用程序的区域的权限集，几乎仅授予它们这些权限。 通过将权限集减少到仅需要的权限集，即使它们小于启动区域的权限集提供的权限集，应用程序有权访问的资源数也会降至最低。 因此，如果截获到应用程序，将可以降低对客户端计算机的潜在损坏几率。  
   
@@ -179,7 +179,7 @@ Windows Vista 上的 WPF 用户将受益于操作系统的附加安全增强功�
   
 <a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer 安全  
- 除减少安全问题和简化安全配置外，Microsoft Internet Explorer 6 （SP2）还包含一些安全改进功能，这些功能增强了 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] 的用户的安全性。 这些功能的主旨是尝试允许用户更好地控制它们的浏览体验。  
+ 除减少安全问题和简化安全配置外，Microsoft Internet Explorer 6 （SP2）还包含一些安全改进功能，这些功能增强了 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]的用户的安全性。 这些功能的主旨是尝试允许用户更好地控制它们的浏览体验。  
   
  在 IE6 SP2 之前，用户可能会受到以下任意一项操作：  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: 707e77ac69878c1c7fb8e975c1f90ad657228d1a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 541d71efa66d14855704797892cac68799215159
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696389"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919759"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>混合应用程序疑难解答
 <a name="introduction"></a>本主题列出了在创作同时使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]技术的混合应用程序时可能发生的一些常见问题。  
@@ -25,11 +25,11 @@ ms.locfileid: "61696389"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中承载的 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件总是出现在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容之上。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容中托管<xref:System.Windows.Forms.Integration.ElementHost>控件显示在 z 顺序<xref:System.Windows.Forms.Integration.ElementHost>控件。 可以重叠<xref:System.Windows.Forms.Integration.ElementHost>控件，但所承载[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容不会组合或交互。  
+ <xref:System.Windows.Forms.Integration.ElementHost> 控件中承载 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容以 <xref:System.Windows.Forms.Integration.ElementHost> 控件的 z 顺序显示。 可以重叠 <xref:System.Windows.Forms.Integration.ElementHost> 控件，但承载的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容不会合并或交互。  
   
 <a name="child_property"></a>   
 ## <a name="child-property"></a>子属性  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>和<xref:System.Windows.Forms.Integration.ElementHost>类只能承载单个子控件或元素。 若要承载多个控件或元素，则必须使用容器作为子内容。 例如，可以添加[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]按钮和复选框控件<xref:System.Windows.Forms.Panel?displayProperty=nameWithType>控件，然后再将分配到面板<xref:System.Windows.Forms.Integration.WindowsFormsHost>控件的<xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A>属性。 但是，您不能按钮和复选框控件将分别添加到相同<xref:System.Windows.Forms.Integration.WindowsFormsHost>控件。  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost> 和 <xref:System.Windows.Forms.Integration.ElementHost> 类只能承载一个子控件或元素。 若要承载多个控件或元素，则必须使用容器作为子内容。 例如，您可以将 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 按钮和复选框控件添加到 <xref:System.Windows.Forms.Panel?displayProperty=nameWithType> 控件，然后将面板分配给 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 控件的 <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> 属性。 但是，不能将按钮和复选框控件分别添加到同一个 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 控件。  
   
 <a name="scaling"></a>   
 ## <a name="scaling"></a>缩放  
@@ -37,17 +37,17 @@ ms.locfileid: "61696389"
   
 <a name="adapter"></a>   
 ## <a name="adapter"></a>适配器  
- 处理时可能会发生混乱<xref:System.Windows.Forms.Integration.WindowsFormsHost>和<xref:System.Windows.Forms.Integration.ElementHost>类，因为它们包含一个隐藏的容器。 同时<xref:System.Windows.Forms.Integration.WindowsFormsHost>并<xref:System.Windows.Forms.Integration.ElementHost>类具有名为的隐藏的容器*适配器*，它用来托管内容。 有关<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素，该适配器派生<xref:System.Windows.Forms.ContainerControl?displayProperty=nameWithType>类。 有关<xref:System.Windows.Forms.Integration.ElementHost>控件，该适配器派生<xref:System.Windows.Controls.DockPanel>元素。 如果你发现其他互操作主题中提到了适配器，那么所讨论的就是此容器。  
+ 在处理 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 和 <xref:System.Windows.Forms.Integration.ElementHost> 类时可能会产生混淆，因为它们包含隐藏容器。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 和 <xref:System.Windows.Forms.Integration.ElementHost> 类都有一个称为*适配器*的隐藏容器，用来承载内容。 对于 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素，适配器从 <xref:System.Windows.Forms.ContainerControl?displayProperty=nameWithType> 类派生。 对于 <xref:System.Windows.Forms.Integration.ElementHost> 控件，适配器派生自 <xref:System.Windows.Controls.DockPanel> 元素。 如果你发现其他互操作主题中提到了适配器，那么所讨论的就是此容器。  
   
 <a name="nesting"></a>   
 ## <a name="nesting"></a>嵌套  
- 嵌套<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素内的<xref:System.Windows.Forms.Integration.ElementHost>控件不支持。 嵌套<xref:System.Windows.Forms.Integration.ElementHost>控件内部<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素也不支持。  
+ 不支持在 <xref:System.Windows.Forms.Integration.ElementHost> 控件内嵌套 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素。 也不支持在 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素中嵌套 <xref:System.Windows.Forms.Integration.ElementHost> 控件。  
   
 <a name="focus"></a>   
 ## <a name="focus"></a>焦点  
- 焦点在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]中的工作方式是不同的，这意味着混合应用程序中可能发生焦点问题。 例如，如果内部具有焦点<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素，并且你可以最小化和还原页面或显示模式对话框，重点放在<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素可能会丢失。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素仍具有焦点，但其内部的控件可能不会。  
+ 焦点在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]中的工作方式是不同的，这意味着混合应用程序中可能发生焦点问题。 例如，如果焦点位于 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素内，并且最小化和还原页面或显示模式对话框，则 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素中的焦点可能会丢失。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素仍具有焦点，但它内部的控件可能不具有焦点。  
   
- 焦点还会影响数据验证。 验证适用于<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素，但它不能按你按 tab 键离开<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素，或两个不同<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素。  
+ 焦点还会影响数据验证。 验证在 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素中有效，但当您从 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素中或在两个不同的 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素之间切换时，它不起作用。  
   
 <a name="property_mapping"></a>   
 ## <a name="property-mapping"></a>属性映射  
@@ -55,9 +55,9 @@ ms.locfileid: "61696389"
   
 <a name="layoutrelated_properties_on_hosted_content"></a>   
 ## <a name="layout-related-properties-on-hosted-content"></a>所承载内容上的布局相关属性  
- 当<xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A?displayProperty=nameWithType>或<xref:System.Windows.Forms.Integration.ElementHost.Child%2A?displayProperty=nameWithType>分配属性，将自动设置所承载内容上的多个布局相关属性。 更改这些内容属性可能会导致意外的布局行为。  
+ 分配 <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A?displayProperty=nameWithType> 或 <xref:System.Windows.Forms.Integration.ElementHost.Child%2A?displayProperty=nameWithType> 属性时，将自动设置托管内容上的多个与布局相关的属性。 更改这些内容属性可能会导致意外的布局行为。  
   
- 停靠所承载的内容来填充<xref:System.Windows.Forms.Integration.WindowsFormsHost>和<xref:System.Windows.Forms.Integration.ElementHost>父级。 为了启用此填充行为，在设置子属性时，将设置多个属性。 下表列出了由设置内容属性<xref:System.Windows.Forms.Integration.ElementHost>和<xref:System.Windows.Forms.Integration.WindowsFormsHost>类。  
+ 承载的内容将停靠，以填充 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 和 <xref:System.Windows.Forms.Integration.ElementHost> 父级。 为了启用此填充行为，在设置子属性时，将设置多个属性。 下表列出了 <xref:System.Windows.Forms.Integration.ElementHost> 和 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 类设置哪些内容属性。  
   
 |宿主类|内容属性|  
 |----------------|------------------------|  
@@ -68,57 +68,57 @@ ms.locfileid: "61696389"
   
 <a name="navigation_applications"></a>   
 ## <a name="navigation-applications"></a>导航应用程序  
- 导航应用程序不能保持用户状态。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素导航应用程序中使用时重新创建其控件。 当用户导航操作离开承载的页面重新创建子控件时发生<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素，然后又返回到它。 用户已经键入的所有内容都将丢失。  
+ 导航应用程序不能保持用户状态。 在导航应用程序中使用 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素时，将重新创建其控件。 当用户离开承载 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素的页面，然后返回到该控件时，将会重新创建子控件。 用户已经键入的所有内容都将丢失。  
   
 <a name="message_loop_interoperation"></a>   
 ## <a name="message-loop-interoperation"></a>消息循环互操作  
- 在使用 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]消息循环时，可能无法按照预期方式处理消息。 <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>方法由调用<xref:System.Windows.Forms.Integration.WindowsFormsHost>构造函数。 此方法将向 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 消息循环中添加消息筛选器。 此筛选器会调用<xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType>方法如果<xref:System.Windows.Forms.Control?displayProperty=nameWithType>是消息的目标和转换/调度该消息。  
+ 在使用 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]消息循环时，可能无法按照预期方式处理消息。 <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> 方法由 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 构造函数调用。 此方法将向 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 消息循环中添加消息筛选器。 如果 <xref:System.Windows.Forms.Control?displayProperty=nameWithType> 是消息的目标，则此筛选器调用 <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> 方法，并转换/调度该消息。  
   
- 如果显示<xref:System.Windows.Window>中[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]具有消息循环<xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>，您不能键入任何内容，除非调用<xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>方法。 <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>方法采用<xref:System.Windows.Window>，并添加<xref:System.Windows.Forms.IMessageFilter?displayProperty=nameWithType>，其中修复重新路由到与键相关的消息[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]消息循环。 有关详细信息，请参阅 [Windows 窗体和 WPF 互操作性输入体系结构](windows-forms-and-wpf-interoperability-input-architecture.md)。  
+ 如果在具有 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>的 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 消息循环中显示 <xref:System.Windows.Window>，则除非调用 <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> 方法，否则不能键入任何内容。 <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> 方法采用 <xref:System.Windows.Window> 并添加 <xref:System.Windows.Forms.IMessageFilter?displayProperty=nameWithType>，这会将与键相关的消息重排到 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 消息循环中。 有关详细信息，请参阅 [Windows 窗体和 WPF 互操作性输入体系结构](windows-forms-and-wpf-interoperability-input-architecture.md)。  
   
 <a name="opacity_and_layering"></a>   
 ## <a name="opacity-and-layering"></a>不透明度和分层  
- <xref:System.Windows.Interop.HwndHost>类不支持分层。 这意味着该设置<xref:System.Windows.UIElement.Opacity%2A>上的属性<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素不起作用，并且没有值混合处理会与其他[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]窗口产生<xref:System.Windows.Window.AllowsTransparency%2A>设置为`true`。  
+ <xref:System.Windows.Interop.HwndHost> 类不支持分层。 这意味着，在 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素上设置 <xref:System.Windows.UIElement.Opacity%2A> 属性不起作用，并且其他 <xref:System.Windows.Window.AllowsTransparency%2A> 设置为 `true`的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 窗口不会进行混合。  
   
 <a name="dispose"></a>   
 ## <a name="dispose"></a>释放  
- 未正确释放类可能会泄漏资源。 在混合应用程序，请确保<xref:System.Windows.Forms.Integration.WindowsFormsHost>和<xref:System.Windows.Forms.Integration.ElementHost>释放类，或可能会泄漏资源。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 释放<xref:System.Windows.Forms.Integration.ElementHost>控制其非模式<xref:System.Windows.Forms.Form>父级关闭。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 释放<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素时关闭应用程序。 可以显示<xref:System.Windows.Forms.Integration.WindowsFormsHost>中的元素<xref:System.Windows.Window>中[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]消息循环。 在这种情况下，代码可能不会收到应用程序正在关闭的通知。  
+ 未正确释放类可能会泄漏资源。 在混合应用程序中，请确保已释放 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 和 <xref:System.Windows.Forms.Integration.ElementHost> 类，否则可能会泄漏资源。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 在其非模式 <xref:System.Windows.Forms.Form> 父项关闭时释放 <xref:System.Windows.Forms.Integration.ElementHost> 控件。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 在应用程序关闭时释放 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素。 可以在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 消息循环的 <xref:System.Windows.Window> 中显示 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素。 在这种情况下，代码可能不会收到应用程序正在关闭的通知。  
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>启用视觉样式  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件上的 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 视觉样式可能未启用。 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>方法调用的模板中[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]应用程序。 尽管默认情况下不会调用此方法，但如果使用 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 创建项目，并且 Comctl32.dll 版本 6.0 可用，将会获得控件的 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 视觉样式。 必须调用<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法之前在线程上创建句柄。 有关详细信息，请参阅[如何：混合应用程序中启用视觉样式](how-to-enable-visual-styles-in-a-hybrid-application.md)。  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件上的 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 视觉样式可能未启用。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 应用程序的模板中调用 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 方法。 尽管默认情况下不会调用此方法，但如果你使用 Visual Studio 创建项目，则当 Comctl32.dll 版本6.0 可用时，你将获得控件 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 视觉样式。 在线程上创建句柄之前，必须先调用 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 方法。 有关详细信息，请参阅[如何：在混合应用程序中启用视觉样式](how-to-enable-visual-styles-in-a-hybrid-application.md)。  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>授权控件  
  授权的 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件会在消息框中向用户显示许可信息，对于混合应用程序，这可能会导致意外行为。 某些授权控件会显示一个对话框来响应创建句柄的操作。 例如，授权控件可能会通知用户需要许可证，或者用户还可以试用该控件三次。  
   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素派生自<xref:System.Windows.Interop.HwndHost>内创建类和子控件的句柄<xref:System.Windows.Forms.Integration.WindowsFormsHost.BuildWindowCore%2A>方法。 <xref:System.Windows.Interop.HwndHost>类不允许在处理消息<xref:System.Windows.Forms.Integration.WindowsFormsHost.BuildWindowCore%2A>方法，但显示对话框会导致消息发送。 若要启用此许可方案，请调用<xref:System.Windows.Forms.Control.CreateControl%2A?displayProperty=nameWithType>方法之前将其作为分配在控件上的<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素的子级。  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素派生自 <xref:System.Windows.Interop.HwndHost> 类，子控件的句柄是在 <xref:System.Windows.Forms.Integration.WindowsFormsHost.BuildWindowCore%2A> 方法中创建的。 <xref:System.Windows.Interop.HwndHost> 类不允许在 <xref:System.Windows.Forms.Integration.WindowsFormsHost.BuildWindowCore%2A> 方法中处理消息，但显示一个对话框会导致发送消息。 若要启用此授权方案，请先对控件调用 <xref:System.Windows.Forms.Control.CreateControl%2A?displayProperty=nameWithType> 方法，然后再将其分配为 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素的子元素。  
   
 <a name="wpf_designer"></a>   
 ## <a name="wpf-designer"></a>WPF 设计器  
  可以使用 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 设计你的 WPF 内容。 以下部分列出了在使用 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] 创作混合应用程序时可能发生的一些常见问题。  
   
 ### <a name="backcolortransparent-is-ignored-at-design-time"></a>在设计时忽略 BackColorTransparent  
- <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A>按预期方式在设计时属性可能无法工作。  
+ 在设计时，<xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> 属性可能不会按预期方式工作。  
   
- 如果 WPF 控件不可见的父级上，WPF 运行时将忽略<xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A>值。 原因，<xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A>可能会忽略其原因在于<xref:System.Windows.Forms.Integration.ElementHost>中单独创建对象时<xref:System.AppDomain>。 但是，当运行该应用程序，<xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A>按预期方式工作原理。  
+ 如果 WPF 控件不在可见父级上，WPF 运行时将忽略 <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> 值。 <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> 可能被忽略的原因是因为 <xref:System.Windows.Forms.Integration.ElementHost> 对象是在单独的 <xref:System.AppDomain>中创建的。 但是，当你运行应用程序时，<xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> 会按预期方式工作。  
   
 ### <a name="design-time-error-list-appears-when-the-obj-folder-is-deleted"></a>删除 obj 文件夹时出现设计时错误列表  
  如果删除 obj 文件夹，会出现设计时错误列表。  
   
- 当您使用设计时<xref:System.Windows.Forms.Integration.ElementHost>，Windows 窗体设计器使用您的项目的 obj 文件夹内 Debug 或 Release 文件夹中生成的文件。 如果删除这些文件，将出现设计时错误列表。 若要解决此问题，请重新生成项目。 有关详细信息，请参阅 [Windows 窗体设计器中的设计时错误](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)。  
+ 当你使用 <xref:System.Windows.Forms.Integration.ElementHost>进行设计时，Windows 窗体设计器将在项目的 obj 文件夹内的 "调试" 或 "发布" 文件夹中使用生成的文件。 如果删除这些文件，将出现设计时错误列表。 若要解决此问题，请重新生成项目。 有关详细信息，请参阅 [Windows 窗体设计器中的设计时错误](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)。  
   
 <a name="elementhost_and_ime"></a>   
 ## <a name="elementhost-and-ime"></a>ElementHost 和 IME  
- WPF 控件中托管<xref:System.Windows.Forms.Integration.ElementHost>目前不支持<xref:System.Windows.Forms.Control.ImeMode%2A>属性。 将更改为<xref:System.Windows.Forms.Control.ImeMode%2A>所承载的控件将被忽略。  
+ <xref:System.Windows.Forms.Integration.ElementHost> 中承载的 WPF 控件当前不支持 <xref:System.Windows.Forms.Control.ImeMode%2A> 属性。 所承载的控件将忽略对 <xref:System.Windows.Forms.Control.ImeMode%2A> 所做的更改。  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [在 WPF 设计器中的互操作性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628658(v=vs.100))
+- [WPF 设计器中的互操作性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628658(v=vs.100))
 - [Windows 窗体和 WPF 互操作性输入体系结构](windows-forms-and-wpf-interoperability-input-architecture.md)
-- [如何：混合应用程序中启用视觉样式](how-to-enable-visual-styles-in-a-hybrid-application.md)
+- [如何：在混合应用程序中启用视觉对象样式](how-to-enable-visual-styles-in-a-hybrid-application.md)
 - [WindowsFormsHost 元素的布局注意事项](layout-considerations-for-the-windowsformshost-element.md)
 - [Windows 窗体和 WPF 属性映射](windows-forms-and-wpf-property-mapping.md)
 - [Windows 窗体设计器中的设计时错误](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
