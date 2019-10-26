@@ -67,7 +67,7 @@ ms.locfileid: "71045890"
 
 以 .NET Framework 4 开始，公共语言运行时从若干方面确定一个类型或成员的透明度级别，包括程序集和应用程序域的信任级别。 反射提供了 <xref:System.Type.IsSecurityCritical%2A>、<xref:System.Type.IsSecuritySafeCritical%2A> 和 <xref:System.Type.IsSecurityTransparent%2A> 属性，以使你能够发现类型的透明度级别。 下表显示了这些属性的有效组合。
 
-|安全级别|IsSecurityCritical|IsSecurityCritical|IsSecurityTransparent|
+|安全级别|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|
 |--------------------|------------------------|----------------------------|---------------------------|
 |严重|`true`|`false`|`false`|
 |安全-关键|`true`|`true`|`false`|
