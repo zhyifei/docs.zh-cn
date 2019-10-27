@@ -184,8 +184,6 @@
           href: deploying-wcf-applications-with-clickonce.md
     - name: 管理和诊断
       href: diagnostics/
-    - name: 系统要求
-      href: wcf-system-requirements.md
     - name: WCF 所要求的操作系统资源
       href: operating-system-resources-required-by-wcf.md
     - name: 安装问题疑难解答
