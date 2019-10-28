@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b420fb451bf1bb2078a4419a648a1407c39ad178
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 63e70ae8cd110786ad7d2069088dbfdfde736a28
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044745"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846748"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe（CorFlags 转换工具）
 利用 CorFlags 转换工具，你配置可移植可执行映像标头的 CorFlags 部分。  
@@ -35,19 +35,19 @@ CorFlags.exe assembly [options]
 |`assembly`|要为其配置 CorFlags 的程序集的名称。|  
   
 |选项|说明|  
-|------------|-----------------|  
-|/32BIT[REQ]+ |设置 32BITREQUIRED 标志。|  
-|/32BIT[REQ]- |清除 32BITREQUIRED 标志。|  
-|/32BITPREF+ |设置 32BITPREFERRED 标志。 该应用程序甚至可以作为 32 位进程在 64 位平台上运行。 仅在 EXE 文件中设置此标志。 如果在 DLL 上设置此标志，则 DLL 将无法在 64 位进程中加载，并引发 <xref:System.BadImageFormatException> 异常。 具有此标志的 EXE 文件可以加载到 64 位进程中。<br /><br /> .NET Framework 4.5 中的新增功能。|  
-|/32BITPREF- |清除 32BITPREFERRED 标志。<br /><br /> .NET Framework 4.5 中的新增功能。|  
-|**/?**|显示该工具的命令语法和选项。|  
-|/Force |强制执行更新，即使程序集具有强名称也是如此。 **重要提示：** 如果更新具有强名称的程序集，则必须在执行其代码之前再次对其签名。|  
-|**/help**|显示该工具的命令语法和选项。|  
-|/ILONLY+ |设置 ILONLY 标志。|  
-|/ILONLY- |清除 ILONLY 标志。|  
-|**/nologo**|取消显示 Microsoft 启动版权标志。|  
-|/RevertCLRHeader |将 CLR 标头版本还原到 2.0。|  
-|/UpgradeCLRHeader |将 CLR 标头版本升级到 2.5。 **注意：** 程序集必须具有 2.5 版或更高版本的 CLR 标头才能在本机运行。|  
+|:------------|-----------------|  
+|`-32BIT[REQ]+`|设置 32BITREQUIRED 标志。|  
+|`-32BIT[REQ]-`|清除 32BITREQUIRED 标志。|  
+|`-32BITPREF+`|设置 32BITPREFERRED 标志。 该应用程序甚至可以作为 32 位进程在 64 位平台上运行。 仅在 EXE 文件中设置此标志。 如果在 DLL 上设置此标志，则 DLL 将无法在 64 位进程中加载，并引发 <xref:System.BadImageFormatException> 异常。 具有此标志的 EXE 文件可以加载到 64 位进程中。<br /><br /> .NET Framework 4.5 中的新增功能。|  
+|`-32BITPREF-`|清除 32BITPREFERRED 标志。<br /><br /> .NET Framework 4.5 中的新增功能。|  
+|`-?`|显示该工具的命令语法和选项。|  
+|`-Force`|强制执行更新，即使程序集具有强名称也是如此。 **重要提示：** 如果更新具有强名称的程序集，则必须在执行其代码之前再次对其签名。|  
+|`-help`|显示该工具的命令语法和选项。|  
+|`-ILONLY+`|设置 ILONLY 标志。|  
+|`-ILONLY-`|清除 ILONLY 标志。|  
+|`-nologo`|取消显示 Microsoft 启动版权标志。|  
+|`-RevertCLRHeader`|将 CLR 标头版本还原到 2.0。|  
+|`-UpgradeCLRHeader`|将 CLR 标头版本升级到 2.5。 **注意：** 程序集必须具有 2.5 版或更高版本的 CLR 标头才能在本机运行。|  
   
 ## <a name="remarks"></a>备注  
  如果未指定任何选项，则 CorFlags 转换工具将显示指定程序集的标志。  

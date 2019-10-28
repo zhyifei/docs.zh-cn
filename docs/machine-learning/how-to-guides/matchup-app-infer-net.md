@@ -3,12 +3,12 @@ title: 使用 Infer.NET 和概率性编程创建游戏匹配列表
 description: 了解如何使用概率性编程和 Infer.NET 创建基于简化版 TrueSkill 的游戏匹配列表应用。
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: f6f91aecfe7fdeffb7e8913309046c7942ecbab7
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 69515c7b3518c35bf84335c453408b1466f93f34
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957217"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774543"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>使用 Infer.NET 和概率性编程创建游戏匹配列表
 
@@ -45,7 +45,7 @@ dotnet add package Microsoft.ML.Probabilistic.Compiler
 
 ## <a name="design-your-model"></a>设计模型
 
-该示例采用在办公室中进行的乒乓球或桌上足球比赛。 你具有参赛者的信息和每场比赛的结果。  你想要通过此数据推断玩家的实力。 假设每位玩家的潜在实力呈正态分布，且他们在给定比赛中的表现是此实力受干扰后的状态。 此数据会将胜者的表现约束在优于败者表现的水平上。 这是常见 [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/) 模型的简化版，此模型也支持团队、平局及其他扩展项。 热销的 Halo 和 Gears of War 游戏中的比赛安排使用了此模型的[高级版](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/)。
+该示例采用在办公室中进行的乒乓球或桌上足球比赛。 你具有参赛者的信息和每场比赛的结果。  你想要通过此数据推断玩家的实力。 假设每位玩家的潜在实力呈正态分布，且他们在给定比赛中的表现是此实力受干扰后的状态。 此数据会将胜者的表现约束在优于败者表现的水平上。 这是常见 [TrueSkill](https://www.microsoft.com/research/project/trueskill-ranking-system/) 模型的简化版，此模型也支持团队、平局及其他扩展项。 热销的 Halo 和 Gears of War 游戏中的比赛安排使用了此模型的[高级版](https://www.microsoft.com/research/publication/trueskill-2-improved-bayesian-skill-rating-system/)。
 
 需要列出所推断玩家的实力及其方差（实力不确定性的度量值）。
 
