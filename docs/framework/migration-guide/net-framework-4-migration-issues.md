@@ -94,7 +94,7 @@ ms.locfileid: "71699081"
 
 | 功能 | 与 3.5 SP1 的差异 | 建议的更改 |
 | ------- | ------------------------ | ------------------- |
-| **区域性名称** | 以下名称更改影响德语、第维埃语和非洲语区域性：<br><br>* <xref:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName>：德语（瑞士）(de-CH) 区域性的货币名称已从“sFr.”更改 为“Fr.”。<br>* <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern>：第维埃语（马尔代夫）(dv-MV) 区域性的长日期模式已从“dd/MMMM/yyyy”更改为“dd/MM/yyyy”。<br>* <xref:System.Globalization.DateTimeFormatInfo.PMDesignator>：此 南非荷兰语（南非）(af-ZA) 区域性的 P.M. 指示符已从“nm”更改为“PM”。 | 注意区域性名称更改。 |
+| **区域性名称** | 以下名称更改影响德语、迪维希语和非洲语区域性：<br><br>* <xref:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName>：德语（瑞士）(de-CH) 区域性的货币名称已从“sFr.”更改 为“Fr.”。<br>* <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern>：迪维希语（马尔代夫）(dv-MV) 区域性的长日期模式已从“dd/MMMM/yyyy”更改为“dd/MM/yyyy”。<br>* <xref:System.Globalization.DateTimeFormatInfo.PMDesignator>：此 南非荷兰语（南非）(af-ZA) 区域性的 P.M. 指示符已从“nm”更改为“PM”。 | 注意区域性名称更改。 |
 | **LCID 参数** | 为了与自动化服务器设置中的预期行为保持一致，CLR 不再将 `LCID` 参数的当前区域性传递给基于 COM 的非托管应用程序。 而是为区域性传递 1033 (en-us)。 | 无需进行任何修改，只不过本机应用程序需要指定的区域性。 |
 | **已过时的区域性类型** | <xref:System.Globalization.CultureTypes> 和 <xref:System.Globalization.CultureTypes> 区域性类型现已过时。<br><br>为了实现向后兼容，<xref:System.Globalization.CultureTypes> 现返回 .NET Framework 早期版本中附带的非特定区域性和特定区域性，而 <xref:System.Globalization.CultureTypes> 现返回一个空列表。 | 使用 <xref:System.Globalization.CultureTypes> 枚举的其他值。 |
 | **检索区域性** | 自 Windows 7 开始，.NET Framework 4 从操作系统检索区域性信息，而不是存储数据本身。 此外，.NET Framework 与 Windows 同步，以便对数据进行排序并设置其大小写。 | 无。 |
