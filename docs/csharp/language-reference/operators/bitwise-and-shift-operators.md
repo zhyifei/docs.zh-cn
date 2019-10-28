@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: c18a06971887049a443f0bd1af7c77610a787a27
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 0a251e8d04f31a736ee6acbf4b8e913cfb8ca6df
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609942"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771721"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>位运算符和移位运算符（C# 参考）
 
@@ -158,7 +158,7 @@ x = x op y
 
 ## <a name="shift-count-of-the-shift-operators"></a>移位运算符的移位计数
 
-对于移位运算符 `<<` 和 `>>`，右侧操作数的类型必须为 [int](../builtin-types/integral-numeric-types.md) 或具有[预定义隐式数值转换](../keywords/implicit-numeric-conversions-table.md) 为 `int` 的类型。
+对于移位运算符 `<<` 和 `>>`，右侧操作数的类型必须为 [int](../builtin-types/integral-numeric-types.md) 或具有[预定义隐式数值转换](../builtin-types/numeric-conversions.md#implicit-numeric-conversions) 为 `int` 的类型。
 
 对于 `x << count` 和 `x >> count` 表达式，实际移位计数取决于 `x` 的类型，如下所示：
 

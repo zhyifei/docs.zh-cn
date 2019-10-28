@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: eb4b1571b4d00d90034148f7b595f4499859ce4b
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: c3c4927a4afbf69f2101aa2596389e6f94cea243
+  ms.sourcegitcommit: 4aeac5d588ded58246f58030919e56b70a7674e4
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850955"
+  ms.lasthandoff: 10/27/2019
+  ms.locfileid: "72966968"
 items:
 - durationInMinutes: 2
   content: >
@@ -54,7 +54,39 @@ items:
     > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - title: 包含不同的数据类型
   durationInMinutes: 5
-  content: "上一步使用了字符串内插将一个字符串插入到了另一字符串中。 不过，作为内插字符串表达式一部分的各个内插表达式可以是任何数据类型。 下面让我们在内插字符串中添加多种数据类型表达式的值。\n\n在以下示例中，我们首先定义了具有 `Name`、`Price` 和 `perPackage` 成员的 [tuple](../../tuples.md)。 在交互式窗口中运行以下代码：\n\n```csharp\nvar item = (Name: \"eggplant\", Price: 1.99m, perPackage: 3);\nvar date = DateTime.Now;\nConsole.WriteLine($\"On {date}, the price of {item.Name} was {item.Price:C2} per {item.perPackage} items.\");\n```\n\n注意，内插字符串中的内插表达式 `item.Price` 会解析为结果字符串中的“1.99”文本。 这是因为，当表达式结果的类型不是字符串时，会按照以下方式将其解析为字符串：\n\n- 如果内插表达式的计算结果为 `null`，则会使用一个空字符串（\"\" 或 <xref:System.String.Empty?displayProperty=nameWithType>）。\n\n- 如果内插表达式的计算结果不是 `null`，通常会调用结果表达式的 `ToString` 方法。 \n\n在此示例的输出中，日期过于精确（eggplant 的价格不会以秒为单位变化），且价格值没有标明货币单位。 下一步将介绍如何通过控制表达式结果的字符串表示形式来解决这些问题。\n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"
+  content: >
+    上一步使用了字符串内插将一个字符串插入到了另一字符串中。 不过，作为内插字符串表达式一部分的各个内插表达式可以是任何数据类型。 下面让我们在内插字符串中添加多种数据类型表达式的值。
+
+
+    在以下示例中，我们首先定义了具有 `Name`、`Price` 和 `perPackage` 成员的 [tuple](../../tuples.md)。 在交互式窗口中运行以下代码：
+
+
+    ```csharp
+
+    var item = (Name: "eggplant", Price: 1.99m, perPackage: 3);
+
+    var date = DateTime.Now;
+
+    Console.WriteLine($"On {date}, the price of {item.Name} was {item.Price:C2} per {item.perPackage} items.");
+
+    ```
+
+
+    注意，内插字符串中的内插表达式 `item.Price` 会解析为结果字符串中的“1.99”文本。 这是因为，当表达式结果的类型不是字符串时，会按照以下方式将其解析为字符串：
+
+
+    - 如果内插表达式的计算结果为 `null`，则会使用一个空字符串（"" 或 <xref:System.String.Empty?displayProperty=nameWithType>）。
+
+
+    - 如果内插表达式的计算结果不是 `null`，通常会调用结果表达式的 `ToString` 方法。
+
+
+    在此示例的输出中，日期过于精确（eggplant 的价格不会以秒为单位变化），且价格值没有标明货币单位。 下一步将介绍如何通过控制表达式结果的字符串表示形式来解决这些问题。
+
+
+    > [!NOTE]
+
+    > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - title: 控制内插表达式的格式
   durationInMinutes: 5
   content: >
@@ -71,7 +103,7 @@ items:
     可通过在内插表达式后接冒号（“:”）和格式字符串来指定格式字符串。 “d”是[标准日期和时间格式字符串](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier)，表示短日期格式。 “C2”是[标准数值格式字符串](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier)，用数字表示货币值（精确到小数点后两位）。
 
 
-    .NET 库中的许多类型支持一组预定义的格式字符串。 这些格式字符串包括所有数值类型以及日期和时间类型。 有关支持格式字符串的完整类型列表，请参阅 [.NET 中的格式化类型](../../../standard/base-types/formatting-types.md)文章中的[格式字符串和. NET 类库类型](../../../standard/base-types/formatting-types.md#stringRef)。
+    .NET 库中的许多类型支持一组预定义的格式字符串。 这些格式字符串包括所有数值类型以及日期和时间类型。 有关支持格式字符串的完整类型列表，请参阅 [.NET 中的格式化类型](../../../standard/base-types/formatting-types.md)文章中的[格式字符串和. NET 类库类型](../../../standard/base-types/formatting-types.md#format-strings-and-net-types)。
 
 
     尝试修改示例中的格式字符串，查看更改如何影响日期、时间和数值的格式。 将 `{date:d}` 中的“d”更改为“t”（显示短时间格式）、“y”（显示年份和月份）和“yyyy”（显示四位数年份）。 将 `{price:C2}` 中的“C2”更改为“e”（用于指数计数法）和“F3”（使数值在小数点后保持三位数字）。
@@ -125,7 +157,7 @@ items:
 
     > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - content: >-
-    你已完成“字符串内插”交互式教程。 可单击下方的“C# 中的集合”链接开始下一个交互式教程，或者可访问 [.NET 站点](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)下载 .NET Core SDK，在计算机上创建项目，并继续编码。 请通过“后续步骤”部分返回到这些教程。
+    你已完成“字符串内插”交互式教程。 可以访问 [.NET 站点](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)下载 .NET Core SDK，在计算机上创建项目，并继续编码。
 
 
     有关详细信息，请参阅[字符串内插](../../language-reference/tokens/interpolated.md)。
