@@ -497,7 +497,7 @@
         - name: 演练：创建自定义的动画按钮
           href: walkthroughs-create-a-custom-animated-button.md
           items:
-            - name: 使用 Microsoft Expression Blend 创建按钮
+            - name: 使用 Blend 创建按钮
               href: walkthrough-create-a-button-by-using-microsoft-expression-blend.md
             - name: 使用 XAML 创建按钮
               href: walkthrough-create-a-button-by-using-xaml.md
