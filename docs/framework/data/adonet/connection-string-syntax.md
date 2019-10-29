@@ -2,12 +2,12 @@
 title: 连接字符串语法
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 00b8dc4c7592daa200f1a2a6c3c7fa9a3c587087
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9e9e330b7195e5c04b6e9e2d086a04209e1c0e13
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784914"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040146"
 ---
 # <a name="connection-string-syntax"></a>连接字符串语法
 每个 .NET Framework 数据提供程序都有一个继承自 `Connection` 的 <xref:System.Data.Common.DbConnection> 对象，以及一个提供程序特定的 <xref:System.Data.Common.DbConnection.ConnectionString%2A> 属性。 每个提供程序的特定连接字符串语法记录在其 `ConnectionString` 属性中。 下表列出了 .NET Framework 中包含的四个数据提供程序。  
@@ -35,7 +35,7 @@ ms.locfileid: "70784914"
 ## <a name="windows-authentication"></a>Windows 身份验证  
  建议使用 Windows 身份验证（有时称为*集成安全性*）连接到支持该身份验证的数据源。 连接字符串中使用的语法根据提供程序的不同而不同。 下表演示用于 .NET Framework 数据提供程序的 Windows 身份验证语法。  
   
-|提供程序|语法|  
+|Provider|语法|  
 |--------------|------------|  
 |`SqlClient`|`Integrated Security=true;`<br /><br /> `-- or --`<br /><br /> `Integrated Security=SSPI;`|  
 |`OleDb`|`Integrated Security=SSPI;`|  
@@ -49,12 +49,12 @@ ms.locfileid: "70784914"
 <xref:System.Data.SqlClient.SqlConnection> 连接字符串的语法记录在 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 属性中。 您可以使用 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 属性来获取或设置 SQL Server 数据库的连接字符串。 如果您需要连接到早期版本的 SQL Server，则必须使用适用于 OleDb 的 .NET Framework 数据提供程序 (<xref:System.Data.OleDb>)。 大多数连接字符串关键字还会在 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 中映射为属性。  
 
 > [!IMPORTANT]
-> `Persist Security Info`关键字的默认设置为`false`。 如果将其设置为 `true` 或 `yes`，则允许在打开连接后通过连接获取安全敏感信息（包括用户 ID 和密码）。 保持`Persist Security Info`设置为`false` ，以确保不受信任的源无法访问敏感的连接字符串信息。  
+> `false``Persist Security Info` 关键字的默认设置。 如果将其设置为 `true` 或 `yes`，则允许在打开连接后通过连接获取安全敏感信息（包括用户 ID 和密码）。 将 `Persist Security Info` 设置为 `false`，以确保不受信任的源不能访问敏感的连接字符串信息。  
 
 ### <a name="windows-authentication-with-sqlclient"></a>Windows 身份验证和 SqlClient 
  以下每种形式的语法都使用 Windows 身份验证连接到本地服务器上的**AdventureWorks**数据库。  
   
-```  
+```csharp  
 "Persist Security Info=False;Integrated Security=true;  
     Initial Catalog=AdventureWorks;Server=MSSQL1"  
 "Persist Security Info=False;Integrated Security=SSPI;  
@@ -66,11 +66,11 @@ ms.locfileid: "70784914"
 ### <a name="sql-server-authentication-with-sqlclient"></a>通过 SqlClient 进行 SQL Server 身份验证   
  Windows 身份验证是用于连接到 SQL Server 的首选方法。 但是，如果需要 SQL Server 身份验证，请使用下列语法来指定用户名和密码。 在此示例中，星号用来表示有效用户名和密码。  
   
-```  
+```csharp  
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
 
-当你连接到 azure sql 数据库或 azure sql 数据仓库并提供格式`user@servername`的登录时，请确保登录名中的`servername`值与为`Server=`提供的值相匹配。
+连接到 Azure SQL 数据库或 Azure SQL 数据仓库并提供格式 `user@servername`的登录名时，请确保登录名中的 `servername` 值与 `Server=`提供的值相匹配。
 
 > [!NOTE]
 > Windows 身份验证优先于 SQL Server 登录。 如果您同时指定 Integrated Security=true 以及用户名和密码，将忽略用户名和密码，而使用 Windows 身份验证。  
@@ -78,14 +78,14 @@ ms.locfileid: "70784914"
 ### <a name="connect-to-a-named-instance-of-sql-server"></a>连接到 SQL Server 的命名实例
 若要连接到 SQL Server 的命名实例，请使用*Server 名称 \ 实例 name*语法。  
   
+```csharp  
+"Data Source=MySqlServer\MSSQL1;"  
 ```  
-Data Source=MySqlServer\MSSQL1;"  
-```  
- 
+
 在生成连接字符串时，您还可以将 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> 的 `SqlConnectionStringBuilder` 属性设置为实例名。 <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> 对象的 <xref:System.Data.SqlClient.SqlConnection> 属性是只读的。  
   
 ### <a name="type-system-version-changes"></a>类型系统版本更改  
- 中的`Type System Version`关键字指定SQLServer类型的客户端表示形式。<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 有关 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 关键字的更多信息，请参见 `Type System Version`。  
+ <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 中的 `Type System Version` 关键字指定 SQL Server 类型的客户端表示形式。 有关 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 关键字的更多信息，请参见 `Type System Version`。  
   
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>连接并附加到 SQL Server Express 用户实例  
  用户实例是 SQL Server Express 中的一个功能。 它们允许以最低权限的本地 Windows 帐户运行的用户附加并运行 SQL Server 数据库，而无需具有管理权限。 使用用户 Windows 凭据执行用户实例，而不是作为服务执行用户实例。  
@@ -93,10 +93,10 @@ Data Source=MySqlServer\MSSQL1;"
  有关使用用户实例的详细信息，请参阅[SQL Server Express 用户实例](./sql/sql-server-express-user-instances.md)。  
   
 ## <a name="using-trustservercertificate"></a>使用 TrustServerCertificate  
- 仅`TrustServerCertificate`当使用有效证书连接到 SQL Server 实例时，关键字才有效。 当 `TrustServerCertificate` 设置为 `true` 时，传输层将使用 SSL 来加密通道并跳过证书链以验证信任。  
+ 仅当使用有效证书连接到 SQL Server 实例时，`TrustServerCertificate` 关键字才有效。 当 `TrustServerCertificate` 设置为 `true` 时，传输层将使用 SSL 来加密通道并跳过证书链以验证信任。  
   
-```  
-"TrustServerCertificate=true;"   
+```csharp  
+"TrustServerCertificate=true;"
 ```  
   
 > [!NOTE]
@@ -105,7 +105,7 @@ Data Source=MySqlServer\MSSQL1;"
 ### <a name="enabling-encryption"></a>启用加密  
  若要在服务器上未设置证书时启用加密，则必须在 SQL Server 配置管理器中设置 "**强制协议加密**" 和 "**信任服务器证书**" 选项。 在此情况下，如果未向服务器提供可验证的证书，加密将使用未经验证的自签名服务器证书。  
   
- 应用程序设置无法降低在 SQL Server 中配置的安全级别，但可以增强安全级别。 应用程序可以通过`TrustServerCertificate`将和`Encrypt`关键字设置为来`true`请求加密，从而确保在未设置服务器证书和**强制协议加密**的情况下进行加密为客户端配置的。 但是，如果未在客户端配置中启用 `TrustServerCertificate`，则仍需要提供服务器证书。  
+ 应用程序设置无法降低在 SQL Server 中配置的安全级别，但可以增强安全级别。 应用程序可以通过将 `TrustServerCertificate` 和 `Encrypt` 关键字设置为 "`true`" 来请求加密，从而确保即使尚未设置服务器证书并且尚未配置 "**强制协议加密**"，也会进行加密对于客户端。 但是，如果未在客户端配置中启用 `TrustServerCertificate`，则仍需要提供服务器证书。  
   
  下表描述了各种情况。  
   
@@ -127,13 +127,13 @@ Data Source=MySqlServer\MSSQL1;"
 ### <a name="oledb-connection-string-syntax"></a>OleDb 连接字符串语法  
  必须为 <xref:System.Data.OleDb.OleDbConnection> 连接字符串指定提供程序名称。 下列连接字符串使用 Jet 提供程序连接到 Microsoft Access 数据库。 请注意，如果数据库未受到保护（默认值），可选择 `User ID` 和 `Password` 关键字。  
   
-```   
-Provider=Microsoft.Jet.OLEDB.4.0; Data Source=d:\Northwind.mdb;User ID=Admin;Password=;   
+```csharp
+Provider=Microsoft.Jet.OLEDB.4.0; Data Source=d:\Northwind.mdb;User ID=Admin;Password=;
 ```  
   
  如果使用用户级安全保护 Jet 数据库，则必须提供工作组信息文件 (.mdw) 的位置。 工作组信息文件用于验证连接字符串中显示的凭据。  
   
-```  
+```csharp
 Provider=Microsoft.Jet.OLEDB.4.0;Data Source=d:\Northwind.mdb;Jet OLEDB:System Database=d:\NorthwindSystem.mdw;User ID=*****;Password=*****;  
 ```  
   
@@ -143,7 +143,7 @@ Provider=Microsoft.Jet.OLEDB.4.0;Data Source=d:\Northwind.mdb;Jet OLEDB:System D
 ### <a name="using-datadirectory-to-connect-to-accessjet"></a>使用 DataDirectory 连接到 Access/Jet  
  `DataDirectory` 不是 `SqlClient` 独占的。 它还可以用于 <xref:System.Data.OleDb> 和 <xref:System.Data.Odbc> .NET 数据提供程序。 下面的 <xref:System.Data.OleDb.OleDbConnection> 字符串示例演示连接到应用程序 app_data 文件夹中的 Northwind.mdb 所需的语法。 系统数据库 (System.mdw) 也存储在该位置。  
   
-```  
+```csharp  
 "Provider=Microsoft.Jet.OLEDB.4.0;  
 Data Source=|DataDirectory|\Northwind.mdb;  
 Jet OLEDB:System Database=|DataDirectory|\System.mdw;"  
@@ -155,7 +155,7 @@ Jet OLEDB:System Database=|DataDirectory|\System.mdw;"
 ### <a name="connecting-to-excel"></a>连接到 Excel  
  Microsoft Jet 提供程序用于连接到 Excel 工作簿。 下列连接字符串中的 `Extended Properties` 关键字会设置特定于 Excel 的属性。 “HDR=Yes;”指示第一行包含列名称，但不包含数据；“IMEX=1;”指示驱动程序始终将“intermixed”数据列作为文本进行读取。  
   
-```  
+```csharp 
 Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\MyExcel.xls;Extended Properties=""Excel 8.0;HDR=Yes;IMEX=1""  
 ```  
   
@@ -164,7 +164,7 @@ Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\MyExcel.xls;Extended Properties=
 ### <a name="data-shape-provider-connection-string-syntax"></a>Data Shape 提供程序连接字符串语法  
  在使用 Microsoft Data Shape 提供程序时，请同时使用 `Provider` 和 `Data Provider` 关键字。 下面的示例使用 Shape 提供程序连接到 SQL Server 的本地实例。  
   
-```  
+```csharp  
 "Provider=MSDataShape;Data Provider=SQLOLEDB;Data Source=(local);Initial Catalog=pubs;Integrated Security=SSPI;"   
 ```  
   
@@ -173,14 +173,14 @@ Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\MyExcel.xls;Extended Properties=
   
  下列连接字符串使用 Microsoft 文本驱动程序。  
   
-```  
+```csharp  
 Driver={Microsoft Text Driver (*.txt; *.csv)};DBQ=d:\bin  
 ```  
   
 ### <a name="using-datadirectory-to-connect-to-visual-foxpro"></a>使用 DataDirectory 连接到 Visual FoxPro  
  下面的 <xref:System.Data.Odbc.OdbcConnection> 连接字符串示例演示如何使用 `DataDirectory` 连接到 Microsoft Visual FoxPro 文件。  
   
-```  
+```csharp  
 "Driver={Microsoft Visual FoxPro Driver};  
 SourceDB=|DataDirectory|\MyData.DBC;SourceType=DBC;"  
 ```  
@@ -188,7 +188,7 @@ SourceDB=|DataDirectory|\MyData.DBC;SourceType=DBC;"
 ## <a name="oracle-connection-strings"></a>Oracle 连接字符串  
  <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> 的 <xref:System.Data.OracleClient.OracleConnection> 属性允许您获取或设置 OLE DB 数据源的连接字符串或。 <xref:System.Data.OracleClient.OracleConnectionStringBuilder> 也支持 Oracle 连接字符串。  
   
-```  
+```csharp 
 Data Source=Oracle9i;User ID=*****;Password=*****;  
 ```  
   

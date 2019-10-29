@@ -2,12 +2,12 @@
 title: 性能注意事项（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: eb46b183ec1e930dfe5c4a1eea237024033c357d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2b116a22c0f422377246d8cc0b2d647fd78a289b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854602"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039854"
 ---
 # <a name="performance-considerations-entity-framework"></a>性能注意事项（实体框架）
 本主题介绍 ADO.NET 实体框架的性能特征，并提供一些注意事项帮助改善实体框架应用程序的性能。  
@@ -20,7 +20,7 @@ ms.locfileid: "70854602"
 |加载元数据|中等|在每个应用程序域中一次。|实体框架使用的模型和映射元数据加载到 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 中。 此元数据全局缓存，并可用于同一个应用程序域中的其他 <xref:System.Data.Objects.ObjectContext> 实例。|  
 |打开数据库连接|中等<sup>1</sup>|根据需要。|由于与数据库的开放式连接会占用宝贵的资源，因此实体框架会根据需要打开和关闭数据库连接。 还可以显式打开连接。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。|  
 |生成视图|高|在每个应用程序域中一次。 （可以预生成。）|在实体框架可以针对概念模型执行查询或将更改保存到数据源之前，它必须生成一组本地查询视图才能访问数据库。 由于生成这些视图会产生很高的成本，因此，您可以在设计时预生成视图并将它们添加到项目。 有关详细信息，请参阅[如何：预生成视图以提高查询性能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))。|  
-|准备查询|中等<sup>2</sup>|每个唯一查询一次。|包括编写查询命令、基于模型和映射元数据生成命令树和定义所返回数据的形状的成本。 因为实体 SQL查询命令和 LINQ 查询现已缓存，所以，以后执行相同查询所需的时间较少。 您仍可以使用已编译的 LINQ 查询来降低后续执行中的这一开销，编译的查询比自动缓存的 LINQ 查询效率更高。 有关详细信息，请参阅[已编译的查询（LINQ to Entities）](./language-reference/compiled-queries-linq-to-entities.md)。 有关 LINQ 查询执行的常规信息，请参阅[LINQ to Entities](./language-reference/linq-to-entities.md)。 **注意：** 不自动缓存将 `Enumerable.Contains` 运算符应用到内存中集合的 LINQ to Entities 查询。 此外，不允许在已编译的 LINQ 查询中参数化内存中的集合。|  
+|准备查询|中等<sup>2</sup>|每个唯一查询一次。|包括编写查询命令、基于模型和映射元数据生成命令树和定义所返回数据的形状的成本。 因为实体 SQL查询命令和 LINQ 查询现已缓存，所以，以后执行相同查询所需的时间较少。 您仍可以使用已编译的 LINQ 查询来降低后续执行中的这一开销，编译的查询比自动缓存的 LINQ 查询效率更高。 有关详细信息，请参阅[已编译的查询（LINQ to Entities）](./language-reference/compiled-queries-linq-to-entities.md)。 有关 LINQ 查询执行的常规信息，请参阅[LINQ to Entities](./language-reference/linq-to-entities.md)。 **注意：** 将 `Enumerable.Contains` 运算符应用于内存中集合的 LINQ to Entities 查询不会自动缓存。 此外，不允许在已编译的 LINQ 查询中参数化内存中的集合。|  
 |执行查询|低<sup>2</sup>|每个查询一次。|使用 ADO.NET 数据提供程序对数据源执行命令的成本。 因为大多数数据源缓存查询计划，所以，以后执行相同查询所需的时间可能较少。|  
 |加载和验证类型|低<sup>3</sup>|每个 <xref:System.Data.Objects.ObjectContext> 实例一次。|将加载类型，并针对概念模型定义的类型对其进行验证。|  
 |跟踪|低<sup>3</sup>|对于查询返回的每个对象执行一次。 <sup>4</sup>|如果查询使用 <xref:System.Data.Objects.MergeOption.NoTracking> 合并选项，则此阶段不影响性能。<br /><br /> 如果查询使用 <xref:System.Data.Objects.MergeOption.AppendOnly>、<xref:System.Data.Objects.MergeOption.PreserveChanges> 或 <xref:System.Data.Objects.MergeOption.OverwriteChanges> 合并选项，则将在 <xref:System.Data.Objects.ObjectStateManager> 中跟踪查询结果。 将为查询返回的每个跟踪对象生成一个 <xref:System.Data.EntityKey>，并用于在 <xref:System.Data.Objects.ObjectStateEntry> 中创建 <xref:System.Data.Objects.ObjectStateManager>。 如果对于 <xref:System.Data.Objects.ObjectStateEntry> 可以找到现有 <xref:System.Data.EntityKey>，则返回现有对象。 如果使用 <xref:System.Data.Objects.MergeOption.PreserveChanges> 或 <xref:System.Data.Objects.MergeOption.OverwriteChanges> 选项，则首先更新对象，然后返回此对象。<br /><br /> 有关详细信息，请参阅[标识解析、状态管理和更改跟踪](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896269(v=vs.100))。|  
@@ -32,7 +32,7 @@ ms.locfileid: "70854602"
   
  <sup>3</sup>总成本随着查询返回的对象数的增加而增加。  
   
- <sup>4</sup> EntityClient 查询不需要此开销，因为 EntityClient 查询返回<xref:System.Data.EntityClient.EntityDataReader>的是而不是对象。 有关详细信息，请参阅[实体框架的 EntityClient Provider](entityclient-provider-for-the-entity-framework.md)。  
+ <sup>4</sup> EntityClient 查询不需要此开销，因为 EntityClient 查询返回 <xref:System.Data.EntityClient.EntityDataReader> 而不是对象。 有关详细信息，请参阅[实体框架的 EntityClient Provider](entityclient-provider-for-the-entity-framework.md)。  
   
 ## <a name="additional-considerations"></a>其他注意事项  
  下面是可能影响实体框架应用程序的性能的其他注意事项。  
@@ -64,7 +64,7 @@ ms.locfileid: "70854602"
   
      下面是投影子句中嵌套查询的示例：  
   
-    ```  
+    ```sql  
     SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2   
         FROM AdventureWorksModel.JobCandidate AS c  ) As Inner1   
         FROM AdventureWorksModel.EmployeeDepartmentHistory AS c  
@@ -72,7 +72,7 @@ ms.locfileid: "70854602"
   
      此外，此类查询还会导致查询管道生成单个查询并在各嵌套查询间复制对象。 因此，单一列可能会复制多次。 在某些数据库（包括 SQL Server）中，这可能导致 TempDB 表增长过大，而降低服务器性能。 当执行嵌套查询时，应务必小心。  
   
-- 如果客户端执行的操作所消耗的资源与结果集的大小成正比，则返回大量数据的任何查询都可能导致性能下降。 在此类情况下，应考虑限制查询返回的数据量。 有关详细信息，请参阅[如何：查看查询结果](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))。  
+- 如果客户端执行的操作所消耗的资源与结果集的大小成正比，则返回大量数据的任何查询都可能导致性能下降。 在此类情况下，应考虑限制查询返回的数据量。 有关详细信息，请参阅[如何：对查询结果进行分页](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))。  
   
  实体框架自动生成的任何命令都可能比数据库开发人员显式编写的类似命令更复杂。 如果您需要对针对数据源执行的命令进行显式控制，请考虑对表值函数或存储过程定义映射。  
   
@@ -131,18 +131,18 @@ ms.locfileid: "70854602"
  .NET 元数据格式将一个给定的二进制文件中的用户字符串字符数限定为 16,777,215 (0xFFFFFF)。 如果你正在为非常大的模型生成视图，并且该视图文件达到此大小限制，则你将收到 "没有剩余的逻辑空间来创建更多用户字符串。" 编译错误。 此大小限制适用于所有托管二进制文件。 有关详细信息，请参阅[博客](https://go.microsoft.com/fwlink/?LinkId=201476)，其中演示了在处理大型和复杂模型时如何避免此错误。  
   
 #### <a name="consider-using-the-notracking-merge-option-for-queries"></a>考虑对查询使用 NoTracking 合并选项  
- 跟踪对象上下文中返回的对象会引发成本。 检测对象更改以及确保对于同一个逻辑实体的多个请求返回相同的对象实例均要求将对象附加到 <xref:System.Data.Objects.ObjectContext> 实例。 如果不打算对对象进行更新或删除操作，并且不需要标识管理，请考虑在执行查询<xref:System.Data.Objects.MergeOption.NoTracking>时使用合并选项。  
+ 跟踪对象上下文中返回的对象会引发成本。 检测对象更改以及确保对于同一个逻辑实体的多个请求返回相同的对象实例均要求将对象附加到 <xref:System.Data.Objects.ObjectContext> 实例。 如果不打算对对象进行更新或删除操作，并且不需要标识管理，请考虑在执行查询时使用 <xref:System.Data.Objects.MergeOption.NoTracking> 合并选项。  
   
 #### <a name="return-the-correct-amount-of-data"></a>返回正确的数据量  
  在某些方案下，使用 <xref:System.Data.Objects.ObjectQuery%601.Include%2A> 方法指定查询路径要快得多，因为它要求与数据库之间的往返次数较少。 然而，在其他方案中，加载相关对象时增加与数据库之间的往返次数可能会更快，因为联接较少的较为简单的查询会使数据冗余程度下降。 因此，我们建议你测试用于检索相关对象的不同方法的性能。 有关详细信息，请参阅[加载相关对象](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896272(v=vs.100))。  
   
- 为了避免在单个查询中返回过多的数据，请考虑将查询结果分页为多个可管理的组。 有关详细信息，请参阅[如何：查看查询结果](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))。  
+ 为了避免在单个查询中返回过多的数据，请考虑将查询结果分页为多个可管理的组。 有关详细信息，请参阅[如何：对查询结果进行分页](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))。  
   
 #### <a name="limit-the-scope-of-the-objectcontext"></a>限制 ObjectContext 的作用域  
  在大多数情况下，应在 <xref:System.Data.Objects.ObjectContext> 语句（在 Visual Basic 中为 `using`）内创建一个 `Using…End Using` 实例。 这样，通过确保当代码退出语句块时自动释放与对象上下文关联的资源，可以提高性能。 但是，当控制权绑定到由对象上下文管理的对象时，只要需要绑定并手动释放它，就应维护 <xref:System.Data.Objects.ObjectContext> 实例。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
   
 #### <a name="consider-opening-the-database-connection-manually"></a>考虑手动打开数据库连接  
- 当应用程序执行一系列对象查询或频繁调用<xref:System.Data.Objects.ObjectContext.SaveChanges%2A>来持续对数据源执行创建、更新和删除操作时，实体框架必须连续打开并关闭与数据源的连接。 在这类情况下，请考虑在开始这些操作时手动打开连接，并在操作完成后关闭或释放连接。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
+ 当你的应用程序执行一系列对象查询或频繁调用 <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> 以将创建、更新和删除操作持久保存到数据源时，实体框架必须持续打开并关闭与数据源的连接。 在这类情况下，请考虑在开始这些操作时手动打开连接，并在操作完成后关闭或释放连接。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
   
 ## <a name="performance-data"></a>性能数据  
  [ADO.NET 团队博客](https://go.microsoft.com/fwlink/?LinkId=91905)上的以下文章中发布了实体框架的一些性能数据：  

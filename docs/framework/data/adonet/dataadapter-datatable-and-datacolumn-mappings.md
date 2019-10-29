@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: 357812aa95ea731fe86fbe49b2cb1b2806e3915a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a9c81c8554c0fb393c10ed69f84c8b2d936ec1e6
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784861"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040132"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter 数据表和 DataColumn 映射
-**DataAdapter**在其 TableMappings 属性中包含零个<xref:System.Data.Common.DataTableMapping>或多个对象的集合。 **DataTableMapping**提供了针对数据源的查询返回的数据与<xref:System.Data.DataTable>之间的主映射。 可以将**DataTableMapping**名称替换为将**DataTable**名称替换为**DataAdapter**的**Fill**方法。 下面的示例为**Authors**表创建名为**AuthorsMapping**的**DataTableMapping** 。  
+**DataAdapter**在其**TableMappings**属性中包含零个或多个 <xref:System.Data.Common.DataTableMapping> 对象的集合。 **DataTableMapping**提供了针对数据源的查询返回的数据与 <xref:System.Data.DataTable>之间的主映射。 可以将**DataTableMapping**名称替换为将**DataTable**名称替换为**DataAdapter**的**Fill**方法。 下面的示例为**Authors**表创建名为**AuthorsMapping**的**DataTableMapping** 。  
   
 ```vb  
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors")  
@@ -27,7 +27,7 @@ workAdapter.TableMappings.Add("AuthorsMapping", "Authors");
   
  如果在调用**dataadapter**的**Fill**或**Update**方法时未指定**TableName**或**DataTableMapping**名称，则**dataadapter**将查找名为 "Table" 的**DataTableMapping** 。 如果该**DataTableMapping**不存在，则**DataTable**的**TableName**为 "Table"。 可以通过创建名称为 "Table" 的**DataTableMapping**来指定默认**DataTableMapping** 。  
   
- 下面的代码示例从<xref:System.Data.Common>命名空间创建**DataTableMapping** ，并通过将其命名为 "Table" 使其成为指定**DataAdapter**的默认映射。 然后，该示例将查询结果中的第一个表（ **northwind**数据库的**Customers**表）中的列映射到的<xref:System.Data.DataSet> **Northwind Customers**表中的一组更易于用户使用的名称。 对于未映射的列，将使用数据源中的列名称。  
+ 下面的代码示例创建**DataTableMapping** （来自 <xref:System.Data.Common> 命名空间），并通过将其命名为 "Table" 使其成为指定**DataAdapter**的默认映射。 然后，该示例将查询结果（ **northwind**数据库的**Customers**表）中的第一个表中的列映射到 <xref:System.Data.DataSet>中**Northwind Customers**表中的一组更易于用户使用的名称。 对于未映射的列，将使用数据源中的列名称。  
   
 ```vb  
 Dim mapping As DataTableMapping = _  
@@ -86,16 +86,25 @@ adapter.Fill(custDS, "Customers");
 ## <a name="handling-multiple-result-sets"></a>处理多个结果集  
  如果**SelectCommand**返回多个表，则**填充**会自动为**数据集中**的表生成表名称，并以指定的表名称开头，并以**TableName**形式继续*N*，从**TableName1**开始。 您可以使用表映射将自动生成的表名称映射到要在**数据集中**为表指定的名称。 例如，对于返回两个表（ **Customers**和**Orders**）的**SelectCommand** ，请发出以下调用以进行**填充**。  
   
-```  
+```vb  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
-  
- 在**数据集中**创建两个表：**客户**和**Customers1**。 可以使用表映射确保第二个表的名称为**Orders** ，而不是**Customers1**。 为此，请将**Customers1**的源表映射到**数据集**表**Orders**，如以下示例中所示。  
-  
+
+```csharp  
+adapter.Fill(customersDataSet, "Customers");  
 ```  
+
+ 在**数据集中**创建两个表： **Customers**和**Customers1**。 可以使用表映射确保第二个表的名称为**Orders** ，而不是**Customers1**。 为此，请将**Customers1**的源表映射到**数据集**表**Orders**，如以下示例中所示。  
+  
+```vb  
 adapter.TableMappings.Add("Customers1", "Orders")  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
+
+```csharp  
+adapter.TableMappings.Add("Customers1", "Orders");  
+adapter.Fill(customersDataSet, "Customers");  
+```
   
 ## <a name="see-also"></a>请参阅
 

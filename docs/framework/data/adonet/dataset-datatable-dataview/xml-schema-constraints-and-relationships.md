@@ -2,12 +2,12 @@
 title: XML 架构约束和关系
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 76af1c2e9d85d18a68b8c0a947dfba3b3291326c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 47b1a3e81cfbc4eb58531b1633dd29becbe497a2
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784185"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040035"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>XML 架构约束和关系
 在 XML 架构定义语言（XSD）架构中，可以指定约束（唯一、键和 keyref 约束）和关系（使用**msdata： Relationship**批注）。 本主题说明如何解释在 XML 架构中指定的约束和关系，以生成 <xref:System.Data.DataSet>。  
@@ -15,7 +15,7 @@ ms.locfileid: "70784185"
  通常，在 XML 架构中，如果只想在**DataSet**中生成关系，则可指定**msdata： Relationship**批注。 有关详细信息，请参阅[从 XML 架构生成数据集关系（XSD）](generating-dataset-relations-from-xml-schema-xsd.md)。 如果要在**DataSet**中生成约束，请指定约束（唯一、键和 keyref）。 请注意，如本主题稍后所述，键和 keyref 约束也可用于生成关系。  
   
 ## <a name="generating-a-relationship-from-key-and-keyref-constraints"></a>从键和 keyref 约束生成关系  
- 您可以不指定**msdata： Relationship**批注，而是指定在 XML 架构映射过程中使用的键和 keyref 约束，以便不仅生成约束，还生成**数据集中**的关系。 但是，如果在`msdata:ConstraintOnly="true"` **keyref**元素中指定，则**数据集会**只包含约束，而不包括关系。  
+ 您可以不指定**msdata： Relationship**批注，而是指定在 XML 架构映射过程中使用的键和 keyref 约束，以便不仅生成约束，还生成**数据集中**的关系。 但是，如果在**keyref**元素中指定 `msdata:ConstraintOnly="true"`，则**数据集会**只包含约束，而不包括关系。  
   
  下面的示例显示一个 XML 架构，该架构包含不嵌套的**Order**和**OrderDetail**元素。 该架构还指定键约束和 keyref 约束。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "70784185"
   
  在 XML 架构映射过程中生成的**数据集**包含**Order**和**OrderDetail**表。 此外，**数据集**还包括关系和约束。 以下示例将显示这些关系和约束。 请注意，架构未指定**msdata： Relationship**批注;相反，键和 keyref 约束用于生成关系。  
   
-```  
+```text
 ....ConstraintName: OrderNumberKey  
 ....Type: UniqueConstraint  
 ....Table: Order  
@@ -131,14 +131,14 @@ ms.locfileid: "70784185"
   
  XML 架构映射过程中生成的**数据集**包括两个表：  
   
-```  
+```text  
 Order(OrderNumber, EmpNumber, Order_Id)  
 OrderDetail(OrderNumber, ItemNumber, Order_Id)  
 ```  
   
  **数据集**还包括两个关系（一个基于**msdata： relationship**批注，另一个基于键和 keyref 约束）和各种约束。 以下示例将显示这些关系和约束。  
   
-```  
+```text
 ..RelationName: Order_OrderDetail  
 ..ParentTable: Order  
 ..ParentColumns: Order_Id  

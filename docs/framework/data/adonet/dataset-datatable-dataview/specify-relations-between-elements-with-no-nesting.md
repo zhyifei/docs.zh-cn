@@ -2,12 +2,12 @@
 title: 指定无嵌套的元素之间的关系
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: d6cd6f04a9fdeafe7c419b40023af6c71d553ac7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3aa9976ccde426eeda1d869164409c5235a629fe
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784279"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040051"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>指定无嵌套的元素之间的关系
 当元素不嵌套时，将不创建任何隐式关系。 但是，可以使用**msdata： Relationship**批注显式指定未嵌套的元素之间的关系。  
@@ -53,9 +53,9 @@ ms.locfileid: "70784279"
 </xs:schema>  
 ```  
   
- XML 架构定义语言（XSD）架构映射过程创建一个<xref:System.Data.DataSet> with **Order**和**OrderDetail**表以及这两个表之间指定的关系，如下所示。  
+ XML 架构定义语言（XSD）架构映射过程创建了一个 <xref:System.Data.DataSet>，其中包含**Order**和**OrderDetail**表以及这两个表之间指定的关系，如下所示。  
   
-```  
+```text  
 RelationName: OrdOrderDetailRelation  
 ParentTable: Order  
 ParentColumns: OrderNumber   

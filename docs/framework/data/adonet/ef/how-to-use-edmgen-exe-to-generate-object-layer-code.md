@@ -2,12 +2,12 @@
 title: 如何：使用 EdmGen.exe 生成对象层代码
 ms.date: 03/30/2017
 ms.assetid: c44d2ebe-f66f-42cb-9741-4a3f0c2dcffb
-ms.openlocfilehash: b85bacff093c268cd35dca2ede36e6ceb74ca4d1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9182f815a502488f955f64f6c19aad7865d0c7c6
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251409"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039983"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-object-layer-code"></a>如何：使用 EdmGen.exe 生成对象层代码
 本主题演示如何使用[EDM 生成器（edmgen.exe）](edm-generator-edmgen-exe.md)工具基于 csdl 文件生成对象层代码。  
@@ -20,7 +20,7 @@ ms.locfileid: "70251409"
   
 3. 在命令提示符下执行以下命令（无换行符）：  
   
-    ```  
+    ```console  
     "%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:EntityClassGeneration   
     /incsdl:.\School.csdl /outobjectlayer:.\School.Objects.vb /language:VB  
     ```  
@@ -33,7 +33,7 @@ ms.locfileid: "70251409"
   
 3. 在命令提示符下执行以下命令（无换行符）：  
   
-    ```  
+    ```console  
     "%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:EntityClassGeneration   
     /incsdl:.\School.csdl /outobjectlayer:.\School.Objects.cs /language:CSharp  
     ```  
@@ -44,4 +44,4 @@ ms.locfileid: "70251409"
 - [如何：手动配置实体框架项目](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
 - [ADO.NET 实体数据模型工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
 - [如何：预生成视图以提高查询性能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
-- [如何：使用 Edmgen.exe 生成模型和映射文件](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)
+- [如何：使用 EdmGen.exe 生成模型和映射文件](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)

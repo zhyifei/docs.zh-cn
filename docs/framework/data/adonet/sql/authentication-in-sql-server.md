@@ -2,12 +2,12 @@
 title: SQL Server 中的身份验证
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 49835ebf8ebe4d5bd200ed771477edc8af580b7d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 09f7825fd6b4f852b24142ea297c078bd8a1e221
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794291"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040273"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server 中的身份验证
 SQL Server 支持两种身份验证模式，Windows 身份验证模式和混合模式。  
@@ -19,10 +19,10 @@ SQL Server 支持两种身份验证模式，Windows 身份验证模式和混合�
 > [!IMPORTANT]
 > 我们建议尽可能使用 Windows 身份验证。 Windows 身份验证使用一系列加密消息验证 SQL Server 中的用户。 使用 SQL Server 登录名时，将在网络上传递 SQL Server 登录名和加密密码，从而降低其安全性。  
   
- 使用 Windows 身份验证，已经登录到 Windows 的用户不必再单独登录到 SQL Server。 下面`SqlConnection.ConnectionString`指定了 Windows 身份验证，无需用户提供用户名或密码。  
+ 使用 Windows 身份验证，已经登录到 Windows 的用户不必再单独登录到 SQL Server。 以下 `SqlConnection.ConnectionString` 指定 Windows 身份验证，而无需用户提供用户名或密码。  
   
-```  
-"Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;  
+```csharp  
+"Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;"
 ```  
   
 > [!NOTE]
@@ -66,7 +66,7 @@ SQL Server 支持两种身份验证模式，Windows 身份验证模式和混合�
 > [!IMPORTANT]
 > SQL Server 使用名为 `sa`（“系统管理员”的缩写）的 SQL Server 登录进行安装。 为 `sa` 登录分配一个强密码，并且不要在应用程序中使用 `sa` 登录。 `sa` 登录名会映射到 `sysadmin` 固定服务器角色，它对整个服务器有不能撤销的管理凭据。 如果攻击者以系统管理员的身份获取了访问权限，则可能造成的危害是无法预计的。 默认情况下，Windows `BUILTIN\Administrators` 组（本地管理员组）的所有成员均为 `sysadmin` 角色的成员，但可以从该角色中移除这些成员。  
   
- SQL Server 提供在或更高版本上[!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)]运行时 SQL Server 登录名的 Windows 密码策略机制。 密码复杂性策略通过增加可能密码的数量来阻止强力攻击。 SQL Server 可以将中[!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)]使用的相同的复杂性和到期策略应用于 SQL Server 内使用的密码。  
+ SQL Server 在 [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] 或更高版本上运行时，提供 SQL Server 登录名的 Windows 密码策略机制。 密码复杂性策略通过增加可能密码的数量来阻止强力攻击。 SQL Server 可以将 [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] 中使用的相同的复杂性和到期策略应用到 SQL Server 内使用的密码。  
   
 > [!IMPORTANT]
 > 连接来自用户输入的连接字符串会使您遭受连接字符串注入攻击。 可使用 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 在运行时创建语法构成有效的连接字符串。 有关详细信息，请参阅[连接字符串生成器](../connection-string-builders.md)。  

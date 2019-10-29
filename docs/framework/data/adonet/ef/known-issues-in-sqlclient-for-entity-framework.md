@@ -2,12 +2,12 @@
 title: SqlClient 中的已知问题（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 0938c57f48a062082fe973a670eb6a9b9fc4ed3c
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: f42ef8dfa1c3041faf7179665cced3c2b9fcf3a6
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395522"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039976"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>SqlClient 中的已知问题（实体框架）
 本节介绍与 SQL Server .NET Framework 数据提供程序 (SqlClient) 有关的已知问题。  
@@ -38,12 +38,12 @@ ms.locfileid: "72395522"
 ## <a name="skip-operator"></a>SKIP 运算符  
  如果使用的是 SQL Server 2000，则对非键列使用带有 ORDER BY 的 SKIP 可能会返回不正确的结果。 如果非键列中有重复数据，那么跳过的行数可能多于指定的行数。 这是因为如何为 SQL Server 2000 转换 SKIP。 例如，在下面的查询中，如果 `E.NonKeyColumn` 有重复值，则跳过的行可能超过 5 行：  
   
-```  
+```sql  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  
 ```  
   
 ## <a name="targeting-the-correct-sql-server-version"></a>以正确的 SQL Server 版本为目标  
- 实体框架根据存储模型（ssdl）文件中 Schema 元素的 `ProviderManifestToken` 特性中指定的 SQL Server 版本来面向 Transact-sql 查询。 您实际连接到的 SQL Server 的版本可能不是这一版本。 例如，如果使用 SQL Server 2005，但 `ProviderManifestToken` 特性设置为2008，则生成的 Transact-sql 查询可能无法在服务器上执行。 例如，在 SQL Server 的早期版本上，无法执行使用了 SQL Server 2008 所引入的新日期时间类型的查询。 如果你使用的是 SQL Server 2005，但你的 @no__t 属性设置为2000，则生成的 Transact-sql 查询可能比较少，或者你可能会收到一个异常，指出不支持该查询。 有关详细信息，请参阅本主题前面的 "跨和外部 APPLY 运算符" 部分。  
+ 实体框架根据存储模型（ssdl）文件中 Schema 元素的 `ProviderManifestToken` 特性中指定的 SQL Server 版本来面向 Transact-sql 查询。 您实际连接到的 SQL Server 的版本可能不是这一版本。 例如，如果使用 SQL Server 2005，但 `ProviderManifestToken` 特性设置为2008，则生成的 Transact-sql 查询可能无法在服务器上执行。 例如，在 SQL Server 的早期版本上，无法执行使用了 SQL Server 2008 所引入的新日期时间类型的查询。 如果使用 SQL Server 2005，但 `ProviderManifestToken` 属性设置为2000，则生成的 Transact-sql 查询可能比较少，或者可能会出现异常，指出不支持该查询。 有关详细信息，请参阅本主题前面的 "跨和外部 APPLY 运算符" 部分。  
   
  某些数据库行为取决于为数据库设置的兼容级别。 如果 `ProviderManifestToken` 特性设置为2005，并且你的 SQL Server 版本为2005，但数据库的兼容级别设置为 "80" （SQL Server 2000），则生成的 Transact-sql 将面向 SQL Server 2005，但可能无法按预期执行，因为兼容级别设置。 例如，如果 ORDER BY 列表中的列名与选择器中的列名相同，则可能会丢失排序信息。  
   
@@ -52,7 +52,7 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
   
  下面是投影子句中嵌套查询的示例：  
   
-```  
+```sql  
 SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2 FROM AdventureWorksModel.JobCandidate AS c  ) As Inner1 FROM AdventureWorksModel.EmployeeDepartmentHistory AS c  
 ```  
   

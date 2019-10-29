@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 72638101b73e6b43fa225885b2e1f27d87b22826
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: d752f4815de16daa466302881116e80aceec6edf
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920150"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040905"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>如何：绑定到 Web 服务
 此示例演示如何绑定到由 Web 服务方法调用返回的对象。  
@@ -32,18 +32,18 @@ ms.locfileid: "72920150"
   
 4. 按 "**开始**"，然后单击 "**添加引用**"。  
   
- 接下来，将调用 Web 服务方法，并将相应控件或窗口的 <xref:System.Windows.FrameworkElement.DataContext%2A> 设置为返回的对象。 MTPS 服务的**GetContent**方法获取对**getContentRequest**对象的引用。 因此，以下示例首先设置 request 对象：  
+ 接下来，将调用 Web 服务方法，并将相应控件或窗口的 <xref:System.Windows.FrameworkElement.DataContext%2A> 设置为返回的对象。 MTPS 服务的 `GetContent` 方法采用对 `getContentRequest` 对象的引用。 因此，以下示例首先设置 request 对象：  
   
  [!code-csharp[BindToWebService#Namespace](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#namespace)]
  [!code-vb[BindToWebService#Namespace](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#namespace)]  
 [!code-csharp[BindToWebService#WebServiceCall](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#webservicecall)]
 [!code-vb[BindToWebService#WebServiceCall](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#webservicecall)]  
   
- 设置 <xref:System.Windows.FrameworkElement.DataContext%2A> 后，可以创建对 <xref:System.Windows.FrameworkElement.DataContext%2A> 已设置为的对象的属性的绑定。 在此示例中，将 <xref:System.Windows.FrameworkElement.DataContext%2A> 设置为**GetContent**方法返回的**getContentResponse**对象。 在下面的示例中，<xref:System.Windows.Controls.ItemsControl> 将绑定到，并显示**getContentResponse**的**availableVersionsAndLocales**的**区域设置**值。  
+ 设置 <xref:System.Windows.FrameworkElement.DataContext%2A> 后，可以创建对 <xref:System.Windows.FrameworkElement.DataContext%2A> 已设置为的对象的属性的绑定。 在此示例中，<xref:System.Windows.FrameworkElement.DataContext%2A> 设置为 `GetContent` 方法返回的 `getContentResponse` 对象。 在下面的示例中，<xref:System.Windows.Controls.ItemsControl> 绑定到，并显示 `getContentResponse``availableVersionsAndLocales` 的 `locale` 值。  
   
  [!code-xaml[BindToWebService#Binding](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml#binding)]  
   
- 有关**getContentResponse**结构的信息，请参阅[内容服务文档](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx)。  
+ 有关 `getContentResponse`结构的信息，请参阅[内容服务文档](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx)。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 7826bbfca09cce7508d7352c647bafae93504e58
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: df9c66d47d1f5e345858ae08b3d926d0e938a255
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395844"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038325"
 ---
 # <a name="globalization-for-wpf"></a>WPF 的全球化
-本主题介绍编写全局市场 @no__t 0 应用程序时应注意的问题。 在 <xref:System.Globalization> 命名空间的 .NET 中定义全球化编程元素。
+本主题介绍编写全局市场 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序时应注意的问题。 在 <xref:System.Globalization> 命名空间的 .NET 中定义全球化编程元素。
 
 <a name="xaml_globalization"></a>
 ## <a name="xaml-globalization"></a>XAML 全球化
- Extensible Application Markup Language （XAML）基于 @no__t 0，并利用了 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 规范中定义的全球化支持。 以下各节介绍你应注意的一些 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 功能。
+ Extensible Application Markup Language （XAML）基于 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 并且充分利用在 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 规范中定义的全球化支持。 以下部分介绍了一些您应该注意的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 功能。
 
 <a name="char_reference"></a>
 ### <a name="character-references"></a>字符引用
@@ -37,7 +37,7 @@ ms.locfileid: "72395844"
 
 <a name="encoding"></a>
 ### <a name="encoding"></a>编码
- @No__t 支持的编码为 ASCII、Unicode UTF-16 和 UTF-8。 编码语句位于 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文档的开头。 如果不存在编码特性，并且没有任何字节顺序，则分析器默认为 UTF-8。 UTF-8 和 UTF-16 都是首选编码。 不支持 UTF-7。 下面的示例演示如何在 @no__t 0 文件中指定 UTF-8 编码。
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 支持的编码为 ASCII、Unicode UTF-16 和 UTF-8。 编码语句位于 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文档的开头。 如果不存在编码特性，并且没有任何字节顺序，则分析器默认为 UTF-8。 UTF-8 和 UTF-16 都是首选编码。 不支持 UTF-7。 下面的示例演示如何在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件中指定 UTF-8 编码。
 
 ```xaml
 ?xml encoding="UTF-8"?
@@ -45,11 +45,11 @@ ms.locfileid: "72395844"
 
 <a name="lang_attrib"></a>
 ### <a name="language-attribute"></a>语言特性
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 使用[xml： lang](../../xaml-services/xml-lang-handling-in-xaml.md)表示元素的 language 特性。  若要利用 @no__t 0 类，language 特性值需要是由 @no__t 预定义的区域性名称之一。 [xml:lang](../../xaml-services/xml-lang-handling-in-xaml.md) 在元素树中可继承（可按 XML 规则继承，但并不一定这样继承，因为存在依赖属性继承）；在未明确赋值的情况下，其默认值为空字符串。
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 使用[xml： lang](../../xaml-services/xml-lang-handling-in-xaml.md)表示元素的 language 特性。  若要利用 <xref:System.Globalization.CultureInfo> 类，language 特性值需要是由 <xref:System.Globalization.CultureInfo>预定义的区域性名称之一。 [xml:lang](../../xaml-services/xml-lang-handling-in-xaml.md) 在元素树中可继承（可按 XML 规则继承，但并不一定这样继承，因为存在依赖属性继承）；在未明确赋值的情况下，其默认值为空字符串。
 
  语言特性对指定方言非常有用。 例如，法语在法国、魁北克、比利时和瑞士的拼写、词汇和发音各不相同。 同时，中文、日语和朝鲜语使用 Unicode 共享码位，但表意形状不同，它们使用完全不同的字体。
 
- 以下 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 示例使用 @no__t 语言特性指定加拿大法语。
+ 以下 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 示例使用 `fr-CA` language 特性指定加拿大法语。
 
 ```xaml
 <TextBlock xml:lang="fr-CA">Découvrir la France</TextBlock>
@@ -57,7 +57,7 @@ ms.locfileid: "72395844"
 
 <a name="unicode"></a>
 ### <a name="unicode"></a>Unicode
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 支持所有 Unicode 功能，包括代理项。 只要字符集可以映射到 Unicode，就支持该字符集。 例如，GB18030 中引入了某些可映射到中文、日语和朝鲜语 (CFK) 扩展 A 和 B 以及代理项对的字符，因此完全受支持。 @No__t-0 应用程序可以使用 <xref:System.Globalization.StringInfo> 来处理字符串，而无需了解它们是否具有代理项对或组合字符。
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 支持所有 Unicode 功能，包括代理项。 只要字符集可以映射到 Unicode，就支持该字符集。 例如，GB18030 中引入了某些可映射到中文、日语和朝鲜语 (CFK) 扩展 A 和 B 以及代理项对的字符，因此完全受支持。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序可以使用 <xref:System.Globalization.StringInfo> 操作字符串，而无需了解它们是否具有代理项对或组合字符。
 
 <a name="design_intl_ui_with_xaml"></a>
 ## <a name="designing-an-international-user-interface-with-xaml"></a>使用 XAML 设计国际用户界面
@@ -65,7 +65,7 @@ ms.locfileid: "72395844"
 
 <a name="intl_text"></a>
 ### <a name="international-text"></a>国际化文本
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括所有 Microsoft .NET 框架支持的书写系统的内置处理。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括针对所有 Microsoft .NET Framework 支持的书写系统的内置处理。
 
  目前支持以下脚本：
 
@@ -127,7 +127,7 @@ ms.locfileid: "72395844"
 
  OpenType 字体允许使用 Unicode 编码处理大字形集。 这种编码享有广泛的国际支持，并支持版式字形变体。
 
- @no__t 0 文本呈现由支持分辨率独立性的 Microsoft ClearType 子像素技术提供支持。 这极大地提高了可读性，并为所有脚本提供了支持高质量杂志样式文档的功能。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文本呈现由支持分辨率独立性的 Microsoft ClearType 子像素技术提供支持。 这极大地提高了可读性，并为所有脚本提供了支持高质量杂志样式文档的功能。
 
 <a name="intl_layout"></a>
 ### <a name="international-layout"></a>国际化布局
@@ -143,20 +143,20 @@ ms.locfileid: "72395844"
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>多语言用户界面
- 多语言用户界面（MUI）是用于将用户界面从一种语言切换到另一种语言的 Microsoft 支持。 @No__t-0 应用程序使用程序集模型来支持 MUI。 一个应用程序包含非特定语言程序集和与语言相关的附属资源程序集。 入口点是主程序集中的托管 .EXE。  @no__t，资源加载器利用第 1 @no__t 资源管理器来支持资源查找和回退。 多个语言附属程序集使用同一个主程序集。 加载的资源程序集取决于当前线程的 @no__t 0。
+ 多语言用户界面（MUI）是用于将用户界面从一种语言切换到另一种语言的 Microsoft 支持。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序使用程序集模型来支持 MUI。 一个应用程序包含非特定语言程序集和与语言相关的附属资源程序集。 入口点是主程序集中的托管 .EXE。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 资源加载器利用 [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]的资源管理器来支持资源查找和回退。 多个语言附属程序集使用同一个主程序集。 加载的资源程序集取决于当前线程的 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A>。
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>可本地化的用户界面
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序使用 @no__t 来定义其 @no__t。 通过 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，开发人员可使用一组属性和逻辑指定对象的层次结构。 @No__t 的主要用途是开发 @no__t 应用程序，但它可用于指定任何公共语言运行时（CLR）对象的层次结构。 大多数开发人员都使用 @no__t 0 来指定其应用程序的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，并使用编程语言C# （例如）来响应用户交互。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 来定义其 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 通过 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，开发人员可使用一组属性和逻辑指定对象的层次结构。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的主要用途是开发 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序，但它可用于指定任何公共语言运行时（CLR）对象的层次结构。 大多数开发人员都使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 来指定应用程序的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，并使用编程语言C# （例如）来响应用户交互。
 
- 从资源角度来看，用于描述依赖于语言的 @no__t 的 @no__t 0 文件是一个资源元素，因此，其最终分发格式必须可本地化以支持国际语言。 由于 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 无法处理事件，许多 @no__t 应用程序包含用于执行此操作的代码块。 有关详细信息，请参阅[XAML 概述（WPF）](xaml-overview-wpf.md)。 将 @no__t 0 文件标记为 XAML 的 BAML 形式后，代码会被去除并编译到不同的二进制文件中。 BAML 形式的 XAML 文件、图像以及其他类型的托管资源对象将嵌入附属资源程序集中，该程序集可本地化为其他语言，如果不需要进行本地化，以上各项就会嵌入主程序集中。
+ 从资源的角度来看，旨在描述依赖于语言的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件是一个资源元素，因此，其最终分发格式必须可本地化以支持国际语言。 由于 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 无法处理事件，许多 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 应用程序包含执行此操作的代码块。 有关详细信息，请参阅[XAML 概述（WPF）](xaml-overview-wpf.md)。 将 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件标记为 XAML 的 BAML 形式后，代码会被去除并编译到不同的二进制文件中。 BAML 形式的 XAML 文件、图像以及其他类型的托管资源对象将嵌入附属资源程序集中，该程序集可本地化为其他语言，如果不需要进行本地化，以上各项就会嵌入主程序集中。
 
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序支持所有 @no__t 1CLR 的资源，包括字符串表、图像等。
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序支持所有 [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]的 CLR 资源，包括字符串表、图像等。
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>生成可本地化的应用程序
- 本地化意味着将 @no__t 0 调整到不同的区域性。 若要使 @no__t 0 的应用程序可本地化，开发人员需要将所有可本地化的资源生成到一个资源程序集中。 资源程序集本地化为不同的语言，代码隐藏使用资源管理 API 进行加载。 @No__t-0 应用程序所需的文件之一是项目文件（proj）。 应用程序中使用的所有资源都应包括在项目文件中。 以下 .csproj 文件示例演示如何执行此操作。
+ 本地化意味着将 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 改编为不同的文化。 若要使 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的应用程序可本地化，开发人员需要将所有可本地化的资源生成到一个资源程序集中。 资源程序集本地化为不同的语言，代码隐藏使用资源管理 API 进行加载。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序所需的文件之一是项目文件（proj）。 应用程序中使用的所有资源都应包括在项目文件中。 以下 .csproj 文件示例演示如何执行此操作。
 
 ```xml
 <Resource Include="data\picture1.jpg"/>
@@ -169,9 +169,9 @@ ms.locfileid: "72395844"
 
 <a name="using_clickonce"></a>
 ## <a name="using-clickonce-with-localized-applications"></a>在本地化的应用程序中使用 ClickOnce
- ClickOnce 是 Visual Studio 2005 附带的一种新的 Windows 窗体部署技术。 通过该技术可安装应用程序和升级 Web 应用程序。 对使用 ClickOnce 部署的应用程序进行本地化后，只能在本地化的区域性中查看该应用程序。 例如，如果已部署的应用程序本地化为日语，则只能在日语 @no__t 上查看，而不能在英语 Windows 上查看。 这会带来一个问题，因为它是日语用户运行英语版本的 Windows 的常见方案。
+ ClickOnce 是 Visual Studio 2005 附带的一种新的 Windows 窗体部署技术。 通过该技术可安装应用程序和升级 Web 应用程序。 对使用 ClickOnce 部署的应用程序进行本地化后，只能在本地化的区域性中查看该应用程序。 例如，如果已部署的应用程序本地化为日语，则只能在日语版 Microsoft Windows 上查看该应用程序。 这会带来一个问题，因为它是日语用户运行英语版本的 Windows 的常见方案。
 
- 此问题的解决方案是设置非特定语言回退特性。 应用程序开发人员可选择从主程序集中删除资源，并指定可在特定区域性对应的附属程序集中找到该资源。 若要控制此过程，请使用 <xref:System.Resources.NeutralResourcesLanguageAttribute>。 @No__t 为0的类的构造函数具有两个签名，其中一个参数使用 <xref:System.Resources.UltimateResourceFallbackLocation> 参数来指定 <xref:System.Resources.ResourceManager> 应提取回退资源的位置：主程序集或附属程序集。 下面的示例演示如何使用此特性。 对于最终回退位置，代码会导致 <xref:System.Resources.ResourceManager> 查找当前正在执行的程序集的目录的 "de" 子目录中的资源。
+ 此问题的解决方案是设置非特定语言回退特性。 应用程序开发人员可选择从主程序集中删除资源，并指定可在特定区域性对应的附属程序集中找到该资源。 若要控制此过程，请使用 <xref:System.Resources.NeutralResourcesLanguageAttribute>。 <xref:System.Resources.NeutralResourcesLanguageAttribute> 类的构造函数具有两个签名，一个签名采用 <xref:System.Resources.UltimateResourceFallbackLocation> 参数来指定 <xref:System.Resources.ResourceManager> 应提取回退资源的位置：主程序集或附属程序集。 下面的示例演示如何使用此特性。 对于最终回退位置，代码会导致 <xref:System.Resources.ResourceManager> 查找当前正在执行的程序集的目录的 "de" 子目录中的资源。
 
 ```csharp
 [assembly: NeutralResourcesLanguageAttribute(

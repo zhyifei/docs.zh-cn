@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: fdeb40f1e092f8c7e96e9d59e1b07673201fbe9d
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 7559c7ec9aef8f95336d53e62ca9bf5861a9b22f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920379"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040724"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 安全策略 - 平台安全性
 虽然 Windows Presentation Foundation （WPF）提供各种安全服务，但它还利用基础平台（包括操作系统、CLR 和 Internet Explorer）的安全功能。 这些层组合在一起旨在提供 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 强大且深层防御的安全模型，尝试避免任何单点故障，如下图所示：  
@@ -31,17 +31,15 @@ ms.locfileid: "72920379"
   
  本主题的其余部分主要讨论与 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 相关的各个层。  
 
-<a name="Operating_System_Security"></a>   
 ## <a name="operating-system-security"></a>操作系统安全  
 Windows 的核心提供了几种安全功能，这些功能构成了所有 Windows 应用程序（包括用 WPF 构建的应用程序）的安全基础。 本主题讨论了对 WPF 重要的这些安全功能的广度，以及 WPF 如何与它们集成以提供进一步的深层防御。  
   
-<a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
  除了对 Windows 进行一般检查和强化外，本主题还将讨论 [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] 三个关键功能：  
   
 - /GS 编译  
   
-- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)]  
+- Microsoft Windows 更新。  
   
 #### <a name="gs-compilation"></a>/GS 编译  
  [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] 通过重新编译许多核心系统库（包括所有 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 依赖项（如 CLR）来提供保护，以帮助缓解缓冲区溢出。 通过使用/GS 形参和 C/C++ 命令行编译器可实现这一点。 虽然应显式避免缓冲区溢出，但 /GS 编译针对由它们无意或恶意创建的潜在漏洞提供了深层防御示例。  
@@ -52,10 +50,6 @@ Windows 的核心提供了几种安全功能，这些功能构成了所有 Windo
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 已使用/GS 标志进行编译，旨在对 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序增加另一层防御。  
   
-#### <a name="microsoft-windows-update-enhancements"></a>Microsoft Windows Update 增强功能  
- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)] 也对 [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] 进行了改进，以简化用于下载和安装更新的过程。 这些更改通过帮助确保其系统（尤其是设计到安全更新）处于最新状态，显著地增强了 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 客户的安全。  
-  
-<a name="Windows_Vista"></a>   
 ### <a name="windows-vista"></a>Windows Vista  
 Windows Vista 上的 WPF 用户将受益于操作系统的附加安全增强功能，其中包括 "最小特权用户访问权限"、代码完整性检查和特权隔离。  
   
@@ -72,8 +66,7 @@ Windows Vista 上的 WPF 用户将受益于操作系统的附加安全增强功�
   
 #### <a name="code-integrity-checks"></a>代码完整性检查  
  Windows Vista 合并了更深入的代码完整性检查，以帮助防止恶意代码在负载/运行时注入到系统文件或内核中。 这超出了系统文件保护。  
-  
-<a name="Limited_Rights_Process_for_Browser_Hosted_Applications"></a>   
+   
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>浏览器承载的应用程序的受限权限进程  
  浏览器承载的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序在 Internet 区域沙箱内执行。 与 Microsoft Internet Explorer [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 集成将此保护扩展到其他支持。  
   
@@ -81,11 +74,9 @@ Windows Vista 上的 WPF 用户将受益于操作系统的附加安全增强功�
   
  请参阅[使用最低权限的用户帐户](https://docs.microsoft.com/previous-versions/tn-archive/cc700846%28v=technet.10%29)。  
   
-<a name="Common_Language_Runtime_Security"></a>   
 ## <a name="common-language-runtime-security"></a>公共语言运行时的安全性  
  公共语言运行时（CLR）提供了许多重要的安全优势，包括验证和验证、代码访问安全性（CAS）和安全关键方法。  
-  
-<a name="Validation_and_Verification"></a>   
+    
 ### <a name="validation-and-verification"></a>确认和验证  
  为了提供程序集隔离和完整性，CLR 使用验证过程。 CLR 验证通过验证指向程序集外部地址的可移植可执行（PE）文件格式来确保程序集的隔离。 CLR 验证还验证嵌入到程序集内的元数据的完整性。  
   
@@ -103,7 +94,6 @@ Windows Vista 上的 WPF 用户将受益于操作系统的附加安全增强功�
   
  可验证代码的优点是 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 在 .NET Framework 上构建的主要原因。 从使用验证代码而言，利用潜在漏洞的可能性明显降低。  
   
-<a name="Code_Access_Security"></a>   
 ### <a name="code-access-security"></a>代码访问安全性  
  客户端计算机公开了托管应用程序可以访问的各种资源，包括文件系统、注册表、打印服务、用户界面、反射和环境变量。 在托管应用程序可以访问客户端计算机上的任何资源之前，它必须具有 .NET Framework 的权限。 CA 中的权限是 <xref:System.Security.CodeAccessPermission> 的子类;CA 为托管应用程序可以访问的每个资源实现一个子类。  
   
@@ -163,13 +153,11 @@ Windows Vista 上的 WPF 用户将受益于操作系统的附加安全增强功�
   
  从平台的角度来看，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 负责正确使用**Assert** ;**断言**的使用不当可能导致恶意代码提升特权。 因此，只需在需要时调用**断言**，并确保沙盒限制保持不变，这一点非常重要。 例如，禁止沙盒代码打开任意文件，但允许其使用字体。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 使沙盒应用程序能够通过调用**Assert**来使用字体功能，并使 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 可以代表经过沙箱处理的应用程序读取已知包含这些字体的文件。  
   
-<a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce 部署  
  ClickOnce 是一种全面的部署技术，随 .NET Framework 提供，并与 Visual Studio 集成（有关详细信息，请参阅[ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)）。 独立 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序可使用 ClickOnce 进行部署，而浏览器承载的应用程序必须使用 ClickOnce 进行部署。  
   
  使用 ClickOnce 部署的应用程序在代码访问安全性（CAS）上给予了附加的安全层;实质上，ClickOnce 部署的应用程序会请求所需的权限。 如果它们不超过在其中部署应用程序的区域的权限集，几乎仅授予它们这些权限。 通过将权限集减少到仅需要的权限集，即使它们小于启动区域的权限集提供的权限集，应用程序有权访问的资源数也会降至最低。 因此，如果截获到应用程序，将可以降低对客户端计算机的潜在损坏几率。  
   
-<a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>安全-关键方法  
  使用权限启用用于 XBAP 应用程序的 Internet 区域沙盒的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 代码必须保持最高的安全审核和控制度。 为了满足此要求，.NET Framework 为管理提升特权的代码提供了新支持。 具体而言，CLR 使你能够识别提升特权的代码并将其标记为 <xref:System.Security.SecurityCriticalAttribute>;任何未标记为 <xref:System.Security.SecurityCriticalAttribute> 的代码都将使用此方法变得*透明*。 反之，禁止未标有 <xref:System.Security.SecurityCriticalAttribute> 的托管代码提升特权。  
   
@@ -177,7 +165,6 @@ Windows Vista 上的 WPF 用户将受益于操作系统的附加安全增强功�
   
  请注意，.NET Framework 允许受信任的代码通过允许开发人员编写标记为 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> （APTCA）并部署到用户的全局程序集缓存（GAC）的托管程序集来扩展 XBAP Internet 区域沙盒。 将程序集标记为 APTCA 是高度敏感的安全操作，因为它允许任何代码调用该程序集，包括来自 Internet 的恶意代码。 执行此操作时，要特别注意并且必须采用最佳做法，用户必须选择信任该软件才能完成安装。  
   
-<a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer 安全  
  除减少安全问题和简化安全配置外，Microsoft Internet Explorer 6 （SP2）还包含一些安全改进功能，这些功能增强了 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]的用户的安全性。 这些功能的主旨是尝试允许用户更好地控制它们的浏览体验。  
   

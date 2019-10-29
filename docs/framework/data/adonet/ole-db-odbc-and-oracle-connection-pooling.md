@@ -2,12 +2,12 @@
 title: OLE DB、ODBC 和 Oracle 连接池
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: b83b53550964b3149f3bc711eaf119e749d1834b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4b801032e67d1c4c51fed8556ff1fea05c214aff
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794692"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039836"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB、ODBC 和 Oracle 连接池
 池连接可以显著提高应用程序的性能和可缩放性。 本节介绍用于 OLE DB、ODBC 和 Oracle 的 .NET Framework 数据提供程序的连接池。  
@@ -15,7 +15,7 @@ ms.locfileid: "70794692"
 ## <a name="connection-pooling-for-oledb"></a>OleDb 连接池  
  OLE DB .NET Framework 数据提供程序使用 OLE DB 会话池自动管理连接池。 连接字符串自变量可用于启用或禁用包括池在内的 OLE DB 服务。 例如，以下连接字符串禁用 OLE DB 会话池和自动事务登记。  
   
-```  
+```csharp
 Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=SSPI;  
 ```  
   
@@ -60,7 +60,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  下表描述了可用于调整连接池行为的 <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> 值。  
   
-|name|默认|描述|  
+|“属性”|Default|描述|  
 |----------|-------------|-----------------|  
 |`Connection Lifetime`|0|连接返回到池中后，创建时间将与当前时间进行比较，如果时间跨度（秒）超过 `Connection Lifetime` 指定的值，该连接将被破坏。 在聚集配置中可以使用它来强制在运行服务器和刚联机的服务器之间达到负载平衡。<br /><br /> 如果值为零 (0)，则将使池连接具有最大的超时期限。|  
 |`Enlist`|'true'|当为 `true` 时，如果存在事务上下文，池管理程序将自动在创建线程的当前事务上下文中登记连接。|  

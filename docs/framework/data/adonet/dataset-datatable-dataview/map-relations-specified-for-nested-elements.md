@@ -2,12 +2,12 @@
 title: 映射为嵌套元素指定的关系
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: e8cdf73b6277abdaab1256ca87e615a5e25e7336
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 138fbbc3ccaa90096a15fa87544e5c29f66beb08
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786082"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040062"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>映射为嵌套元素指定的关系
 架构可以包含**msdata： Relationship**批注，以显式指定架构中任意两个元素之间的映射。 **Msdata： Relationship**中指定的两个元素可以嵌套在架构中，但不必是。 映射过程使用架构中的**msdata： Relationship**来生成两个列之间的主键/外键关系。  
@@ -56,14 +56,14 @@ ms.locfileid: "70786082"
   
 - **Order**和**OrderDetail**表。  
   
-    ```  
+    ```text  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
 - **Order**表和**OrderDetail**表之间的关系。 此关系的**嵌套**属性设置为**True** ，因为**Order**和**OrderDetail**元素嵌套在架构中。  
   
-    ```  
+    ```text  
     ParentTable: Order  
     ParentColumns: OrderNumber   
     ChildTable: OrderDetail  

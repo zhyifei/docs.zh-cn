@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 351175b96d354a264a9280018ce21de8870beda2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: df6da84dfc120e3f6c3cb0e46729ca2cecc9fe3a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784803"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040402"
 ---
 # <a name="annotating-typed-datasets"></a>为类型化的数据集进行批注
 批注使您能够在不修改基础架构的情况下修改类型化 <xref:System.Data.DataSet> 中元素的名称。 修改基础架构中元素的名称将导致类型化**数据集**引用数据源中不存在的对象，并丢失对数据源中存在的对象的引用。  
   
- 使用批注，你可以使用更有意义的名称来自定义类型化**数据集中**的对象的名称，从而使代码更易于阅读，并且你的类型化**数据集**更易于供客户端使用，同时保持基础架构不变。 例如， **Northwind**数据库的**Customers**表的以下 schema 元素会导致**DataRow**对象<xref:System.Data.DataRowCollection>名称**CustomersRow**和命名**客户**。  
+ 使用批注，你可以使用更有意义的名称来自定义类型化**数据集中**的对象的名称，从而使代码更易于阅读，并且你的类型化**数据集**更易于供客户端使用，同时保持基础架构不变。 例如， **Northwind**数据库的**Customers**表的以下 Schema 元素会导致**DataRow**对象名为**CustomersRow** ，名为**customers**<xref:System.Data.DataRowCollection>。  
   
 ```xml  
 <xs:element name="Customers">  
@@ -62,7 +62,7 @@ ms.locfileid: "70784803"
   
  下表显示了类型化**数据集中**的对象的默认值和可用的批注。  
   
-|对象/方法/事件|默认|批注|  
+|对象/方法/事件|Default|批注|  
 |---------------------------|-------------|----------------|  
 |**DataTable**|TableNameDataTable|typedPlural|  
 |**DataTable**方法|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
@@ -74,9 +74,9 @@ ms.locfileid: "70784803"
 |**父项**者|TableNameRow|typedParent|  
 |**数据集**事件|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- 若要使用类型化**数据集**批注，您必须在 XML 架构定义语言（XSD）架构中包含下面的**xmlns**引用。 若要从数据库表创建 xsd，请<xref:System.Data.DataSet.WriteXmlSchema%2A>参阅或[使用 Visual Studio 中的数据集](/visualstudio/data-tools/dataset-tools-in-visual-studio)。  
+ 若要使用类型化**数据集**批注，您必须在 XML 架构定义语言（XSD）架构中包含下面的**xmlns**引用。 若要从数据库表创建 xsd，请参阅 <xref:System.Data.DataSet.WriteXmlSchema%2A> 或[使用 Visual Studio 中的数据集](/visualstudio/data-tools/dataset-tools-in-visual-studio)。  
   
-```  
+```xml  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
@@ -134,7 +134,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- 下面的代码示例使用从示例架构创建的强类型化**数据集**。 它使用一个<xref:System.Data.SqlClient.SqlDataAdapter>填充**Customers**表，另一个<xref:System.Data.SqlClient.SqlDataAdapter>用于填充**Orders**表。 强类型化**数据集**定义**datarelation**。  
+ 下面的代码示例使用从示例架构创建的强类型化**数据集**。 它使用一个 <xref:System.Data.SqlClient.SqlDataAdapter> 填充**Customers**表，并使用另一个 <xref:System.Data.SqlClient.SqlDataAdapter> 填充**Orders**表。 强类型化**数据集**定义**datarelation**。  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: fc0ae67c0ebc11a0428ffc18c8db103b619e27ec
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: aaf5a95edb9cba9726163be3925b006a7641597c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524803"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040860"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
 
-@No__t_0 修饰符指示它修改的方法或[lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)是异步的。 此类方法称为*异步方法*。
+`Async` 修饰符指示它修改的方法或[lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)是异步的。 此类方法称为*异步方法*。
 
 异步方法提供了一种简便方式来完成可能需要长时间运行的工作，而不必阻止调用方的线程。 异步方法的调用方可以恢复其工作，而无需等待异步方法完成。
 
@@ -43,13 +43,13 @@ Public Async Function ExampleMethodAsync() As Task(Of Integer)
 End Function
 ```
 
-通常，由 `Async` 关键字修改的方法包含至少一个[Await](../../../visual-basic/language-reference/modifiers/async.md)表达式或语句。 方法同步运行，直至到达第一个 `Await`，此时暂停，直到等待的任务完成。 同时，控制权返回给方法的调用方。 如果方法不包含 `Await` 表达式或语句，则不会像同步方法一样挂起并执行。 编译器警告将通知你不包含 `Await` 的任何异步方法，因为该情况可能表示存在错误。 有关详细信息，请参阅[编译器错误](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md)。
+通常，由 `Async` 关键字修改的方法包含至少一个[Await](../../../visual-basic/language-reference/modifiers/async.md)表达式或语句。 方法同步运行，直至到达第一个 `Await`，此时暂停，直到等待的任务完成。 同时，控制权返回给方法的调用方。 如果该方法不包含 `Await` 表达式或语句，则该方法将不会被挂起并作为同步方法执行。 编译器警告将通知你不包含 `Await` 的任何异步方法，因为该情况可能表示存在错误。 有关详细信息，请参阅[编译器错误](../error-messages/bc42358.md)。
 
 `Async` 关键字是一个非保留的关键字。 在修饰方法或 lambda 表达式时，它是关键字。 在所有其他上下文中，都会将其解释为标识符。
 
 ## <a name="return-types"></a>返回类型
 
-异步方法可以是[Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)过程，也可以是返回类型为 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 的[函数](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)过程。 方法不能声明任何[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)参数。
+异步方法可以是[Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)过程，也可以是返回类型为 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>的[函数](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)过程。 方法不能声明任何[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)参数。
 
 如果方法的[返回](../../../visual-basic/language-reference/statements/return-statement.md)语句具有类型为 TResult 的操作数，则为异步方法的返回类型指定 `Task(Of TResult)`。 如果当方法完成时未返回有意义的值，则应使用 `Task`。 即对方法的调用返回 `Task`，但 `Task` 完成时，等待 `Await` 的任何 `Task` 语句不会产生结果值。
 

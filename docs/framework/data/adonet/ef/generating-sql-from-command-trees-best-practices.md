@@ -2,12 +2,12 @@
 title: 从命令目录树生成 SQL - 最佳做法
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 9859c7df941ae6681c991001e0d1e5a50c7ffc60
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 869722b91550855a184a74e706271c3e2d417b84
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855012"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040000"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>从命令目录树生成 SQL - 最佳做法
 
@@ -31,7 +31,7 @@ ORDER BY …
 
 例如，考虑下面的查询命令目录树
 
-```
+```csharp
 Project (
 a.x,
    a = Filter(
@@ -68,7 +68,7 @@ WHERE b.y = 5
 
 左侧刺联接（显示为另一个联接的左侧子级的联接）可以更加轻松地平展成单个 SQL SELECT 语句。 例如，考虑以下查询命令目录树：
 
-```
+```csharp
 InnerJoin(
    a = LeftOuterJoin(
    b = Extent("TableA")
@@ -90,7 +90,7 @@ INNER JOIN TableC as d ON b.y = d.z
 
 但是，非左侧刺联接无法轻松地平展，而且您也不应尝试去平展它们。 例如，以下查询命令目录树中的联接：
 
-```
+```csharp
 InnerJoin(
    a = Extent("TableA")
    b = LeftOuterJoin(
@@ -145,7 +145,7 @@ ON b.y = d.z
 
 ## <a name="mapping-primitive-types"></a>映射基元类型
 
-在将概念 (EDM) 类型映射到提供程序类型时，应映射到最宽的类型 (Int32)，以便适合所有可能的值。 另外，请避免映射到不能用于许多操作的类型（例如 BLOB 类型）（例如， `ntext`在 SQL Server 中）。
+在将概念 (EDM) 类型映射到提供程序类型时，应映射到最宽的类型 (Int32)，以便适合所有可能的值。 另外，请避免映射到不能用于许多操作的类型（例如 BLOB 类型），例如，在 SQL Server 中 `ntext`。
 
 ## <a name="see-also"></a>请参阅
 

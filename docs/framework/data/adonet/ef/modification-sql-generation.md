@@ -2,12 +2,12 @@
 title: 修改 SQL 生成
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 94b6c3c97e8255db2dc4d72bae6c6c12905d9710
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b6c1b71effba17d33c035d0f1df386bf56d405b5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854292"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039887"
 ---
 # <a name="modification-sql-generation"></a>修改 SQL 生成
 
@@ -62,9 +62,7 @@ Returning 值指定基于已插入或已更新的行返回结果投影。 它仅
 
 SetClauses 指定插入或更新集子句的列表，这些子句定义插入或更新操作。
 
-```
-The elements of the list are specified as type DbModificationClause, which specifies a single clause in an insert or update modification operation. DbSetClause inherits from DbModificationClause and specifies the clause in a modification operation that sets the value of a property. Beginning in version 3.5 of the .NET Framework, all elements in SetClauses are of type SetClause.
-```
+此列表的元素指定为类型 DbModificationClause，它在插入或更新修改操作中指定单个子句。 DbSetClause 继承自 DbModificationClause，并在用于设置属性值的修改操作中指定该子句。 从 .NET Framework 版本3.5 开始，SetClauses 中的所有元素均为 SetClause 类型。
 
 Property 指定应进行更新的属性。 它始终是 DbPropertyExpression 并且位于表示对相应 DbModificationCommandTree 的 Target 的引用的 DbVariableReferenceExpression 之上。
 
@@ -94,7 +92,7 @@ Predicate 指定用于确定应更新或删除目标集合中的哪些成员的�
 
 该示例提供程序的修改 SQL 生成模块（位于 SQL Generation\DmlSqlGenerator.cs 文件中）采用一个输入 DbModificationCommandTree，并且生成可能带有 SELECT 语句的单个修改 SQL 语句以返回一个读取器（如果 DbModificationCommandTree 指定了读取器）。 请注意，生成的命令的形式受目标 SQL Server 数据库影响。
 
-### <a name="helper-classes-expressiontranslator"></a>Helper 类：ExpressionTranslator
+### <a name="helper-classes-expressiontranslator"></a>帮助器类：ExpressionTranslator
 
 ExpressionTranslator 用作一个适用于 DbExpression 类型的所有修改命令目录树属性的通用轻型转换器。 它支持仅转换修改命令目录树的属性所限于使用的表达式类型，而且它在构建时应用了特定约束。
 
@@ -116,7 +114,7 @@ ExpressionTranslator 用作一个适用于 DbExpression 类型的所有修改命
 
 对于示例提供程序中给定的 DbInsertCommandTree，生成的插入命令跟在下面两个插入模板中的一个后面。
 
-第一个模板包含一个命令来执行插入操作（假定值在 SetClauses 列表中）以及一个 SELECT 语句来为插入的行返回在 Returning 属性中指定的属性（如果 Returning 属性不为 null）。 如果插入行，\@则谓词元素 "@ROWCOUNT > 0" 为 true。 仅当 Scope_identity 是存储生成的&#124;键时，谓词元素 "KeyMemberI = keyValueI scope_identity （）" 才采用形状 "keyMemberI = keyMemberI （）"，因为 scope_identity （）返回插入到标识中的最后一个标识值（存储区生成的）列。
+第一个模板包含一个命令来执行插入操作（假定值在 SetClauses 列表中）以及一个 SELECT 语句来为插入的行返回在 Returning 属性中指定的属性（如果 Returning 属性不为 null）。 如果插入行，则谓词元素 "\@@ROWCOUNT > 0" 为 true。 仅当 Scope_identity 是存储生成的&#124;键时，谓词元素 "KeyMemberI = keyValueI scope_identity （）" 才采用形状 "keyMemberI = keyMemberI （）"，因为 scope_identity （）返回插入到标识中的最后一个标识值（存储区生成的）列。
 
 ```sql
 -- first insert Template
@@ -160,7 +158,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 此代码生成以下传递给提供程序的命令目录树:
 
-```
+```output
 DbInsertCommandTree
 |_Parameters
 |_Target : 'target'
@@ -212,7 +210,7 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]
 ```
 
-仅当未指定 set 子句时，set 子句@i才具有伪 set 子句（"= 0"）。 这将确保重新计算所有存储计算的列。
+仅当未指定 set 子句时，set 子句才具有伪 set 子句（"@i = 0"）。 这将确保重新计算所有存储计算的列。
 
 仅当 Returning 属性不为 null 时，才生成 SELECT 语句以返回在 Returning 属性中指定的属性。
 
@@ -230,7 +228,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 此用户代码生成以下传递给提供程序的命令树：
 
-```
+```output
 DbUpdateCommandTree
 |_Parameters
 |_Target : 'target'
@@ -281,7 +279,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 此用户代码生成以下传递给提供程序的命令树。
 
-```
+```output
 DbDeleteCommandTree
 |_Parameters
 |_Target : 'target'

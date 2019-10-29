@@ -2,12 +2,12 @@
 title: 演练：SQL 生成
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 09b5a3c2dea5cd0483d617ee8064b41dc19c3374
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 2684acd39ae9651407023e8b5c73f02eadb97547
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248289"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040501"
 ---
 # <a name="walkthrough-sql-generation"></a>演练：SQL 生成
 
@@ -24,7 +24,7 @@ INNER JOIN (SELECT OD.ProductId, OD.Order.ShipCountry as ShipCountry
 
 此查询生成以下传递给提供程序的输出命令目录树：
 
-```
+```output
 DbQueryCommandTree
 |_Parameters
 |_Query : Collection{Record['C1'=Edm.Int32, 'ProductID'=Edm.Int32, 'ProductName'=Edm.String, 'CategoryName'=Edm.String, 'ShipCountry'=Edm.String, 'ProductID1'=Edm.Int32]}
@@ -110,11 +110,11 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
 
 下图说明访问者的初始空状态。  本主题只演示与演练说明相关的属性。
 
-![Diagram](./media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")
+![关系图](./media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")
 
 访问 Project 节点时，将通过其输入 (Join4) 调用 VisitInputExpression，这将触发通过 VisitJoinExpression 方法访问 Join4。 由于这是最顶端联接，因此 IsParentAJoin 返回 false，在 SELECT 语句堆栈上创建并推送新的 SqlSelectStatement(SelectStatement0)。 此外，在符号表中输入一个新范围 (scope0)。 在访问该联接的第一个（左侧）输入之前，将在 IsParentAJoin 堆栈上推送“true”。 下图中显示了刚好在访问作为 Join4 的左输入的 Join1 之前的那一刻访问者的状态。
 
-![Diagram](./media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44ea-8e74-c5001d5d5d79")
+![关系图](./media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44ea-8e74-c5001d5d5d79")
 
 通过 Join4 调用联接访问方法时，IsParentAJoin 为 true，因此它重用当前的选择语句 SelectStatement0。 输入一个新范围 (scope1)。 在访问该联接的左侧子级 Extent1 之前，将在 IsParentAJoin 堆栈上推送另一个“true”。
 
@@ -122,23 +122,23 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
 
 在访问 Join1 的右侧输入之前，将“LEFT OUTER JOIN”添加到 SelectStatement0 的 From 子句。 由于右侧输入是一个 Scan 表达式，因此再一次将 true 推送到 IsParentAJoin 堆栈。 下图显示了在访问右侧输入之前的状态。
 
-![Diagram](./media/ca62c31b-7ff6-4836-b209-e16166304fdc.gif "ca62c31b-7ff6-4836-b209-e16166304fdc")
+![关系图](./media/ca62c31b-7ff6-4836-b209-e16166304fdc.gif "ca62c31b-7ff6-4836-b209-e16166304fdc")
 
 按照处理左侧输入的相同方式处理右侧输入。 下图显示了访问右侧输入之后的状态。
 
-![Diagram](./media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")
+![关系图](./media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")
 
-在 IsParentAJoin 堆栈上推送下一个“false”，并处理联接条件 Var(Extent1).CategoryID == Var(Extent2).CategoryID。 在符号表中查找之后， \<Var （Extent1）解析为 symbol_Extent1 >。 由于处理 Var （Extent1）的结果，实例被解析为简单的符号。类别 id，使用\<symbol1 > 的 SqlBuilder。 "类别 Id "。 比较的另一侧也采用类似方式处理，将访问联接条件的结果追加到 SelectStatement1 的 FROM 子句，并从 IsParentAJoin 堆栈中弹出“false”值。
+在 IsParentAJoin 堆栈上推送下一个“false”，并处理联接条件 Var(Extent1).CategoryID == Var(Extent2).CategoryID。 在符号表中进行查找之后，Var （Extent1）解析为 \<symbol_Extent1 >。 由于处理 Var （Extent1）的结果，实例被解析为简单的符号。类别 Id，具有 \<symbol1 > 的 SqlBuilder。 "类别 Id "。 比较的另一侧也采用类似方式处理，将访问联接条件的结果追加到 SelectStatement1 的 FROM 子句，并从 IsParentAJoin 堆栈中弹出“false”值。
 
 就这样完成了对 Join1 的全部处理，并从符号表中弹出一个范围。
 
-控制权将返回给正在处理的 Join4，即 Join1 的父级。 因为子元素重复使用 Select 语句，所以 Join1 区会替换为单个联接符号\<j o >。 此外，还会将一个新项添加到符号表中， \<以便将 Join1 与 j o > 相关联。
+控制权将返回给正在处理的 Join4，即 Join1 的父级。 由于子元素重复使用 Select 语句，因此 Join1 的区将替换为单个联接符号 \<J o >。 另外，还会将一个新项添加到符号表中，以便将 Join1 与 \<J o > 相关联。
 
 下一个要处理的节点是 Join3，即 Join4 的第二个子级。 由于 Join3 是右侧子级，因此将“false”推送到 IsParentAJoin 堆栈。 下图中说明了访问者此时的状态。
 
-![Diagram](./media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")
+![关系图](./media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")
 
-对于 Join3，IsParentAJoin 返回 false，并需要启动一个新的 SqlSelectStatement (SelectStatement1)，将其推送到堆栈上。 按照处理前面的联接的方式继续处理，将一个新范围推送到堆栈上，并处理子级。 左侧的子级是一个范围（Extent3），而右子是一个联接（Join2），该联接还需要启动新的 SqlSelectStatement：SelectStatement2. Join2 上的子级也是 Extent，并聚合成 SelectStatement2。
+对于 Join3，IsParentAJoin 返回 false，并需要启动一个新的 SqlSelectStatement (SelectStatement1)，将其推送到堆栈上。 按照处理前面的联接的方式继续处理，将一个新范围推送到堆栈上，并处理子级。 左侧子级是一个 Extent (Extent3)，右侧子级是一个还需要启动新的 SqlSelectStatement (SelectStatement2) 的联接 (Join2)。 Join2 上的子级也是 Extent，并聚合成 SelectStatement2。
 
 下图显示了刚好在访问 Join2 之后但在完成其后续处理 (ProcessJoinInputResult) 之前的那一刻访问者的状态：
 
@@ -150,17 +150,17 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
 
 下图显示了刚好在处理 DbPropertyExpression "Var(Join2).Extent4.OrderID" 之前的那一刻访问者的状态。
 
-下面来看一下如何访问“Var(Join2).Extent4.OrderID”。 首先，访问实例属性“Var(Join2).Extent4”，它是另一个 DbPropertyExpression，并首先访问其实例“Var(Join2)”。 在符号表的最顶端范围中，"Join2" 解析为\<joinSymbol_join2 >。 在 DbPropertyExpression 的处理“Var(Join2).Extent4”的访问方法中，请注意，当需要访问实例并进行平展时返回的是一个联接符号。
+下面来看一下如何访问“Var(Join2).Extent4.OrderID”。 首先，访问实例属性“Var(Join2).Extent4”，它是另一个 DbPropertyExpression，并首先访问其实例“Var(Join2)”。 在符号表的最顶端范围中，"Join2" 解析为 \<joinSymbol_join2 >。 在 DbPropertyExpression 的处理“Var(Join2).Extent4”的访问方法中，请注意，当需要访问实例并进行平展时返回的是一个联接符号。
 
-由于它是嵌套联接，我们将在联接符号的 NameToExtent 字典中查找属性 ".extent4.orderid"，将其解析为\<symbol_Extent4 > 并返回一个新的 SymbolPair （\<joinSymbol_join2 >， \<symbol_Extent4>）。 由于符号对是从实例的 "Var" （Join2）的处理返回的.Extent4.orderid "，则从该符号对的 ColumnPart （\<symbol_Extent4 >）中解析属性" 订单 id "，它具有它所表示的范围的列列表。 那么，"Var （Join2）.Extent4.orderid "解析为 { \<joinSymbol_Join2 >，". "， \<d >}。
+由于它是嵌套联接，我们将在联接符号的 NameToExtent 字典中查找属性 ".Extent4.orderid"，将其解析为 \<symbol_Extent4 > 并返回新 SymbolPair （\<joinSymbol_join2 >，\<symbol_Extent4 >）。 由于符号对是从实例的 "Var" （Join2）的处理返回的.Extent4.orderid "，则从该符号对的 ColumnPart （\<symbol_Extent4 >）解析属性" 订单 Id "，其中包含它所表示的范围的列的列表。 那么，"Var （Join2）.Extent4.orderid "解析为 {\<joinSymbol_Join2 >，". "，\<d >}。
 
 Join4 的联接条件将采用类似方式处理。 控制权返回给处理最顶端项目的 VisitInputExpression 方法。 让我们看一下返回的 SelectStatement0 的 FromExtents：输入标识为一个联接，移除原始范围，并替换为一个仅带有联接符号的新范围。 此外，还更新符号表，然后处理 Project 的投影部分。 如前面所述，对属性进行解析并对联接范围进行平展。
 
-![Diagram](./media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9-ea2e-40ae-accc-a10e18e28b81")
+![关系图](./media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9-ea2e-40ae-accc-a10e18e28b81")
 
 最后，生成下面的 SqlSelectStatement：
 
-```
+```sql
 SELECT:
   "1", " AS ", "[C1]",
   <symbol_Extent1>, ".", "[ProductID]", " AS ", "[ProductID]",
@@ -198,7 +198,7 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 
 第二阶段生成符号的实际名称，我们只关注表示名为“OrderID”的列的符号，因为在本例中需要解决冲突。 SqlSelectStatement 中突出显示了这些符号。 请注意，图中使用的后缀仅强调这些符号是不同的实例，而不表示任何新的名称，因为在此阶段还未指派它们的最终名称，这些最终名称很可能与原始名称不同。
 
-找到的需要重命名的第一个符号是\<d >。 为它指派的新名称为“OrderID1”，标记 1 表示为“OrderID”使用的最后一个后缀，该符号标记为不需要重命名。 接下来，找到\<symbol_OrderID_2 > 的第一次使用。 将它重命名为使用下一个可用的后缀“OrderID2”，同样将其标记为不需要重命名，以便在下一次使用它时不需要再进行重命名。 这也适用于\<symbol_OrderID_3 >。
+找到的需要重命名的第一个符号是 \<d >。 为它指派的新名称为“OrderID1”，标记 1 表示为“OrderID”使用的最后一个后缀，该符号标记为不需要重命名。 接下来，找到 \<symbol_OrderID_2 > 的第一次使用。 将它重命名为使用下一个可用的后缀“OrderID2”，同样将其标记为不需要重命名，以便在下一次使用它时不需要再进行重命名。 这也适用于 \<symbol_OrderID_3 >。
 
 在第二阶段结束时，将生成最后的 SQL 语句。
 

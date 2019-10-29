@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: b9aa3f4e386ca5de79fe028b10d0d68343aba06b
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: e62825a88858a63984860cbc8a1c570f784f663f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920024"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040867"
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows 概述
 用户通过 Windows 与 Windows Presentation Foundation （WPF）独立应用程序交互。 窗口的主要用途是托管使数据可视化并使用户能够与数据交互的内容。 独立 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序通过使用 <xref:System.Windows.Window> 类提供其自己的窗口。 本主题介绍了 <xref:System.Windows.Window>，然后介绍在独立应用程序中创建和管理 windows 的基本原理。  
@@ -442,7 +442,7 @@ ms.locfileid: "72920024"
  [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
   
 #### <a name="non-rectangular-window-style"></a>非矩形窗口样式  
- 在某些情况下，<xref:System.Windows.Window.WindowStyle%2A> 允许你使用的边框样式并不够。 例如，你可能想要创建一个具有非矩形边框的应用程序，如 [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 使用。  
+ 在某些情况下，<xref:System.Windows.Window.WindowStyle%2A> 允许你使用的边框样式并不够。 例如，你可能想要创建一个具有非矩形边框的应用程序，如 Microsoft Windows Media Player 使用。  
   
  例如，请看下图中显示的语音气泡窗口：  
   

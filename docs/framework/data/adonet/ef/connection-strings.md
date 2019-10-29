@@ -2,12 +2,12 @@
 title: ADO.NET 中的连接字符串实体框架
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 8c583d74dd3b1b8322fa8ea884092f8eb893af6a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 392e51022dc0f98b9fad656b9f950cd25588f31a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251655"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040334"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>ADO.NET 中的连接字符串实体框架
 
@@ -28,7 +28,7 @@ ms.locfileid: "70251655"
 |关键字|描述|
 |-------------|-----------------|
 |`Provider`|此关键字在未指定 `Name` 关键字时是必需的。 提供程序名称，用于检索基础提供程序的 <xref:System.Data.Common.DbProviderFactory> 对象。 该值为常量。<br /><br /> 如果实体连接字符串中未包含 `Name` 关键字，则需要一个非空 `Provider` 关键字值。 此关键字与 `Name` 关键字互斥。|
-|`Provider Connection String`|可选。 指定要传递给基础数据源的提供程序特定的连接字符串。 此连接字符串包含数据提供程序的有效关键字/值对。 如果 `Provider Connection String` 无效，则当数据源计算此字符串时，将导致运行时错误。<br /><br /> 此关键字与 `Name` 关键字互斥。<br /><br /> 请确保根据[ADO.NET 连接字符串](../connection-strings.md)的一般语法来转义值。 例如，下面的连接字符串： `Server=serverName; User ID = userID`。 必须对其进行转义，因为它包含分号。 由于它不包含双引号，因此它们可以用于转义：<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|
+|`Provider Connection String`|可选。 指定要传递给基础数据源的提供程序特定的连接字符串。 此连接字符串包含数据提供程序的有效关键字/值对。 如果 `Provider Connection String` 无效，则当数据源计算此字符串时，将导致运行时错误。<br /><br /> 此关键字与 `Name` 关键字互斥。<br /><br /> 请确保根据[ADO.NET 连接字符串](../connection-strings.md)的一般语法来转义值。 例如，请考虑以下连接字符串： `Server=serverName; User ID = userID`。 必须对其进行转义，因为它包含分号。 由于它不包含双引号，因此它们可以用于转义：<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|
 |`Metadata`|此关键字在未指定 `Name` 关键字时是必需的。 一个由竖线分隔的目录、文件和资源位置的列表，供查找元数据和映射信息使用。 下面是一个示例：<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> 竖线分隔符两侧的空格将被忽略。<br /><br /> 此关键字与 `Name` 关键字互斥。|
 |`Name`|应用程序可以选择在应用程序配置文件中指定连接名称，以用于提供所需的关键字/值连接字符串值。 在此情况下，无法在连接字符串中直接提供这些值。 配置文件中不允许出现 `Name` 关键字。<br /><br /> 如果连接字符串中未包含 `Name` 关键字，则需要一个非空的 Provider 关键字值。<br /><br /> 此关键字与所有其他连接字符串关键字互斥。|
 
@@ -40,15 +40,13 @@ ms.locfileid: "70251655"
 
 嵌入资源按如下方式指定：
 
-```
-Metadata=res://<assemblyFullName>/<resourceName>.
-```
+`Metadata=res://<assemblyFullName>/<resourceName>`
 
 下列选项用于定义嵌入资源的位置：
 
 |选项|描述|
 |-|-|
-|`assemblyFullName`|包含嵌入资源的程序集的完整名称。 该名称包含简单名称、版本名称、支持的区域性以及公钥，如下所示：<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> 资源可嵌入到应用程序能够访问的任何程序集中。<br /><br /> 如果为\* `assemblyFullName`指定通配符（），则实体框架运行时将按以下顺序搜索以下位置中的资源：<br /><br /> 1.调用程序集。<br />2.引用的程序集。<br />3.应用程序的 bin 目录中的程序集。<br /><br /> 如果文件不在这些位置，则引发异常。 **注意：** 如果使用通配符 (*)，则实体框架将在所有程序集中查找具有正确名称的资源。 若要提高性能，请指定程序集名称而不使用通配符。|
+|`assemblyFullName`|包含嵌入资源的程序集的完整名称。 该名称包含简单名称、版本名称、支持的区域性以及公钥，如下所示：<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> 资源可嵌入到应用程序能够访问的任何程序集中。<br /><br /> 如果为 `assemblyFullName`指定了通配符（\*），则实体框架运行时将按以下顺序搜索以下位置中的资源：<br /><br /> 1. 调用程序集。<br />2. 引用的程序集。<br />3. 应用程序的 bin 目录中的程序集。<br /><br /> 如果文件不在这些位置，则引发异常。 **注意：** 使用通配符（*）时，实体框架必须查看具有正确名称的资源的所有程序集。 若要提高性能，请指定程序集名称而不使用通配符。|
 |`resourceName`|所包含的资源的名称，如 Adventureworksmodel.edmx。 元数据服务仅查找具有以下任一扩展名的文件或资源：.csdl、.ssdl、或 .msl。 如果未指定 `resourceName`，则将加载所有元数据资源。 资源应在程序集中具有唯一的名称。 如果在程序集中的不同目录中为多个文件定义了相同的名称，则 `resourceName` 必须在资源名称前面包含文件夹结构，例如 FolderName.FileName.csdl。<br /><br /> 如果为 `resourceName` 指定通配符 (*)，则无需指定 `assemblyFullName`。|
 
 > [!NOTE]
@@ -56,19 +54,19 @@ Metadata=res://<assemblyFullName>/<resourceName>.
 
 下面的示例加载应用程序 bin 目录中的调用程序集、引用程序集、以及其他程序集中的所有模型和映射文件。
 
-```
+```csharp
 Metadata=res://*/
 ```
 
 下面的示例从 AdventureWorks 程序集加载 model.csdl 文件，并从正在运行的应用程序的默认目录加载 model.ssdl 和 model.msl 文件。
 
-```
+```csharp
 Metadata=res://AdventureWorks, 1.0.0.0, neutral, a14f3033def15840/model.csdl|model.ssdl|model.msl
 ```
 
 下面的示例从特定程序集加载三个指定的资源。
 
-```
+```csharp
 Metadata=res://AdventureWorks, 1.0.0.0, neutral, a14f3033def15840/model.csdl|
 res://AdventureWorks, 1.0.0.0, neutral, a14f3033def15840/model.ssdl|
 res://AdventureWorks, 1.0.0.0, neutral, a14f3033def15840/model.msl
@@ -76,29 +74,29 @@ res://AdventureWorks, 1.0.0.0, neutral, a14f3033def15840/model.msl
 
 下面的示例从程序集中加载所有扩展名为 .csdl、.msl 和 .ssdl 的嵌入资源。
 
-```
+```csharp
 Metadata=res://AdventureWorks, 1.0.0.0, neutral, a14f3033def15840/
 ```
 
-下面的示例从已加载的程序集位置加载相对文件路径和\\"datadir\metadata" 中的所有资源。
+下面的示例从已加载的程序集位置加载相对文件路径和 "datadir\metadata\\" 中的所有资源。
 
-```
+```csharp
 Metadata=datadir\metadata\
 ```
 
 下面的示例从已加载程序集的位置加载相对文件路径中的所有资源。
 
-```
+```csharp
 Metadata=.\
 ```
 
 ## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>支持&#124;DataDirectory&#124;替换字符串和 Web 应用程序根目录运算符（~）
 
-`DataDirectory`和 ~ 运算符<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>作为`Metadata`和`Provider Connection String`关键字的一部分在中使用。 <xref:System.Data.EntityClient.EntityConnection> 将 `DataDirectory` 和 ~ 运算符分别转发给 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 和存储提供程序。
+`DataDirectory` 和 ~ 运算符作为 `Metadata` 和 `Provider Connection String` 关键字的一部分在 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> 中使用。 <xref:System.Data.EntityClient.EntityConnection> 将 `DataDirectory` 和 ~ 运算符分别转发给 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 和存储提供程序。
 
 |术语|描述|
 |----------|-----------------|
-|`&#124;DataDirectory&#124;`|解析为映射和元数据文件的相对路径。 这是通过 `AppDomain.SetData("DataDirectory", objValue)` 方法设置的值。 `DataDirectory`替换字符串必须由竖线字符括起来，其名称和管道字符之间不能有任何空格。 `DataDirectory` 名称不区分大小写。<br /><br /> 如果名为 "DataDirectory" 的物理目录必须作为元数据路径列表的成员进行传递，请在名称的两侧或两侧添加空白。 例如：`Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`。 ASP.NET 应用程序将&#124;DataDirectory&#124;解析为 "\<application root >/app_data" 文件夹。|
+|`&#124;DataDirectory&#124;`|解析为映射和元数据文件的相对路径。 这是通过 `AppDomain.SetData("DataDirectory", objValue)` 方法设置的值。 `DataDirectory` 替换字符串必须由竖线字符括起来，并且其名称和管道字符之间不能有任何空格。 `DataDirectory` 名称不区分大小写。<br /><br /> 如果名为 "DataDirectory" 的物理目录必须作为元数据路径列表的成员进行传递，请在名称的两侧或两侧添加空白。 例如：`Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`。 ASP.NET 应用程序将&#124;DataDirectory&#124;解析为 "\<应用程序根 >/app_data" 文件夹。|
 |~|解析为 Web 应用程序根目录。 位于开头的 ~ 字符总是被解释为 Web 应用程序根目录运算符 (~)，不过它也可以表示有效的本地子目录。 若要引用这样的本地子目录，用户应显示传递 `./~`。|
 
 `DataDirectory` 和 ~ 运算符仅应指定在路径的开头，放在任何其他位置将得不到解析。 实体框架将尝试解析 `~/data`，但会将 `/data/~` 视为物理路径。

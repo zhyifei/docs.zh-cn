@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 988e868b1a1698d00a6d77fd715b2a76b1790132
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: f8fe5c5e0afac071ce7e036ceccd0b66351b0e1d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321268"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040880"
 ---
 # <a name="securing-clients"></a>保证客户端的安全
 在 Windows Communication Foundation （WCF）中，该服务为客户端规定了安全要求。 即，由服务指定要使用的安全模式以及客户端是否必须提供凭据。 因此，保证客户端安全的过程非常简单：使用从服务那里获得的元数据（如果已发布）来生成客户端。 元数据指定如何配置客户端。 如果服务要求客户端提供凭据，您必须获得能够满足要求的凭据。 本主题进一步详细讨论此过程。 有关创建安全服务的详细信息，请参阅[保护服务](securing-services.md)。  
@@ -40,7 +40,7 @@ ms.locfileid: "72321268"
 ### <a name="determining-the-client-credential-type"></a>确定客户端凭据类型  
  如果已生成 Svcutil.exe 工具的配置文件，请检查[\<bindings >](../configure-apps/file-schema/wcf/bindings.md)部分，以确定所需的客户端凭据类型。 该节包含指定安全需求的绑定元素。 具体而言，请检查每个绑定的 \<security > 元素。 该元素包含 `mode` 属性，该属性可设置为以下三个可能的值之一：`Message`、`Transport` 或 `TransportWithMessageCredential`。 该属性的值确定模式，而模式则确定哪个子元素有效。  
   
- @No__t_0 元素可以包含 `<transport>` 或 `<message>` 元素，或同时包含两者。 有效元素是指与安全模式匹配的那个元素。 例如，下面的代码指定安全模式为 `"Message"`，`<message>` 元素的客户端凭据类型为 `"Certificate"`。 在这种情况下，`<transport>` 元素可以忽略。 但是，`<message>` 元素指定必须提供 X.509 证书。  
+ `<security>` 元素可以包含 `<transport>` 或 `<message>` 元素，或同时包含两者。 有效元素是指与安全模式匹配的那个元素。 例如，下面的代码指定安全模式为 `"Message"`，`<message>` 元素的客户端凭据类型为 `"Certificate"`。 在这种情况下，`<transport>` 元素可以忽略。 但是，`<message>` 元素指定必须提供 X.509 证书。  
 
 ```xml  
 <wsHttpBinding>  
@@ -95,14 +95,15 @@ ms.locfileid: "72321268"
 <configuration>  
   <system.serviceModel>  
     <behaviors>  
-      <endpointBehaviors>  
+      <endpointBehaviors>
         <behavior name="myEndpointBehavior">  
           <clientCredentials>  
             <clientCertificate findvalue="myMachineName"   
             storeLocation="Current" X509FindType="FindBySubjectName" />  
           </clientCredentials>  
-        </behavior>              
-    </behaviors>  
+        </behavior>
+      </endpointBehaviors>
+    </behaviors>
   </system.serviceModel>  
 </configuration>  
 ```  

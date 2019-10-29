@@ -2,15 +2,15 @@
 title: 安全注意事项（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 1865afb384cfff41ede953c00f01cc96aea9a080
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d9adf4ed9e340ff589117f160e370c7d1595a207
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854259"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039868"
 ---
 # <a name="security-considerations-entity-framework"></a>安全注意事项（实体框架）
-本主题介绍特定于开发、部署和运行实体框架应用程序的安全注意事项。 还应遵循创建安全 .NET Framework 应用程序的建议。 有关详细信息, 请参阅[安全性概述](../security-overview.md)。  
+本主题介绍特定于开发、部署和运行实体框架应用程序的安全注意事项。 还应遵循创建安全 .NET Framework 应用程序的建议。 有关详细信息，请参阅[安全性概述](../security-overview.md)。  
   
 ## <a name="general-security-considerations"></a>一般安全注意事项  
  以下安全注意事项适用于所有使用实体框架的应用程序。  
@@ -73,7 +73,7 @@ ms.locfileid: "70854259"
   
 - <xref:System.Security.Permissions.SecurityPermission>：使用 <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> 以通过 <xref:System.Runtime.Serialization.ISerializable> 接口对异常进行序列化。  
   
-- 打开数据库连接和对数据库执行命令<xref:System.Data.SqlClient.SqlClientPermission>的权限，例如，对于 SQL Server 数据库。  
+- 打开数据库连接和对数据库执行命令的权限，如 SQL Server 数据库的 <xref:System.Data.SqlClient.SqlClientPermission>。  
   
  有关更多信息，请参见 [Code Access Security and ADO.NET](../code-access-security.md)。  
   
@@ -81,9 +81,9 @@ ms.locfileid: "70854259"
  实体框架不会强制实施任何安全权限，并将在进程中调用任何用户提供的数据对象代码，而不管它是否受信任。 确保数据存储和应用程序执行客户端身份验证和授权。  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>限制对所有配置文件的访问。  
- 管理员必须限制对指定应用程序配置的所有文件的写访问权限，包括 enterprisesec、security .config、machine.config 和应用程序配置文件\<*应用程序*>。exe。  
+ 管理员必须限制对指定应用程序配置的所有文件的写访问权限，包括 enterprisesec、security .config、machine.config 和应用程序配置文件 \<*应用程序*>。exe。  
   
- 提供程序固定名称可在 app.config 中修改。客户端应用程序必须保证使用强名称，通过标准提供程序工厂模型访问基础提供程序。  
+ 可在 app.config 中修改提供程序固定名称。客户端应用程序必须负责使用强名称通过标准提供程序工厂模型访问基础提供程序。  
   
 #### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>限制对模型和映射文件的访问权限。  
  管理员必须将对模型和映射文件（.edmx、.csdl、.ssdl 和 .msl）的写访问权限仅分配给负责修改模型或映射的用户。 实体框架只需要在运行时对这些文件具有读取权限。 管理员还应限制对由实体数据模型工具生成的对象层和预编译的查看源代码文件的访问权限。  
@@ -102,7 +102,7 @@ ms.locfileid: "70854259"
   
 - LINQ to Entities 注入攻击：  
   
-     尽管可以在 LINQ to Entities 中进行查询撰写，但它是通过对象模型 API 执行的。 与[!INCLUDE[esql](../../../../../includes/esql-md.md)]查询不同，LINQ to Entities 查询不是通过使用字符串操作或串联来撰写的，它们不容易受到传统的 SQL 注入式攻击。  
+     尽管可以在 LINQ to Entities 中进行查询撰写，但它是通过对象模型 API 执行的。 与 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查询不同，LINQ to Entities 查询不是通过使用字符串操作或串联来撰写的，它们不容易受到传统的 SQL 注入式攻击。  
   
 #### <a name="prevent-very-large-result-sets"></a>避免结果集过大。  
  如果客户端执行的操作所消耗的资源与结果集的大小成正比，则过大的结果集会导致客户端系统关闭。 在下列情况下可能发生意外的过大结果集：  
@@ -113,18 +113,18 @@ ms.locfileid: "70854259"
   
 - 嵌套的 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查询。  
   
- 如果接受用户输入，则必须确保输入内容不会导致结果集过大以致超出系统的处理能力。 你还可以使用 LINQ to Entities [!INCLUDE[esql](../../../../../includes/esql-md.md)]中的<xref:System.Linq.Queryable.Take%2A>方法或中 的 [LIMIT](./language-reference/limit-entity-sql.md) 运算符来限制结果集的大小。  
+ 如果接受用户输入，则必须确保输入内容不会导致结果集过大以致超出系统的处理能力。 你还可以使用中的 <xref:System.Linq.Queryable.Take%2A> 方法 LINQ to Entities 或 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 中的[limit](./language-reference/limit-entity-sql.md)运算符来限制结果集的大小。  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>避免在将方法公开给可能不受信任的调用方时返回 IQueryable 结果。  
  避免公开给可能不受信任的调用方的方法返回 <xref:System.Linq.IQueryable%601> 类型的原因如下：  
   
 - 公开 <xref:System.Linq.IQueryable%601> 类型的查询的使用方可以对公开安全数据或增大结果集大小的结果调用方法。 例如，请考虑使用以下方法签名：  
   
-    ```  
+    ```csharp  
     public IQueryable<Customer> GetCustomer(int customerId)  
     ```  
   
-     此查询的使用方可以对返回的 `.Include("Orders")` 调用 `IQueryable<Customer>`，以检索查询不打算公开的数据。 通过将方法的返回类型更改为 <xref:System.Collections.Generic.IEnumerable%601> 并调用具体化结果的方法（如 `.ToList()`），可以避免此问题。  
+    此查询的使用方可以对返回的 `.Include("Orders")` 调用 `IQueryable<Customer>`，以检索查询不打算公开的数据。 通过将方法的返回类型更改为 <xref:System.Collections.Generic.IEnumerable%601> 并调用具体化结果的方法（如 `.ToList()`），可以避免此问题。  
   
 - 由于 <xref:System.Linq.IQueryable%601> 查询在循环访问结果时执行，因此公开 <xref:System.Linq.IQueryable%601> 类型的查询的使用方可能会捕捉引发的异常。 这些异常可能包含不适用于使用方的信息。  
   
@@ -145,13 +145,13 @@ ms.locfileid: "70854259"
 在 ASP.NET 应用程序中使用路径时，应考虑以下事项。  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>检验主机是否执行路径检查。  
- 如果使用`|DataDirectory|` （包含在管道符号中）替代字符串，则 ADO.NET 将验证是否支持解析的路径。 例如，`DataDirectory` 后面不允许出现“..”。 用于解析 Web 应用程序根运算符（`~`）的相同检查由托管 ASP.NET 的进程执行。 IIS 执行此检查;但是，除 IIS 以外的主机不能验证是否支持解析的路径。 你应该知道要在其上部署实体框架应用程序的主机的行为。  
+ 当使用 `|DataDirectory|` （包含在管道符号中）替换字符串时，ADO.NET 将验证是否支持解析的路径。 例如，`DataDirectory` 后面不允许出现“..”。 用于解析 Web 应用程序根运算符（`~`）的相同检查由托管 ASP.NET 的进程执行。 IIS 执行此检查;但是，除 IIS 以外的主机不能验证是否支持解析的路径。 你应该知道要在其上部署实体框架应用程序的主机的行为。  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>不要对解析的路径名称做任何假定。  
- 尽管在应用程序运行时，根运算符`~`（） `DataDirectory`和替换字符串解析到的值应保持不变，但实体框架不会限制主机修改这些值。  
+ 尽管根运算符（`~`）和 `DataDirectory` 替换字符串解析的值在应用程序的运行时中应保持不变，但实体框架不会限制主机修改这些值。  
   
 #### <a name="verify-the-path-length-before-deployment"></a>部署前检查路径长度。  
- 在部署实体框架应用程序之前，应确保根运算符（~）和`DataDirectory`替代字符串的值没有超出操作系统中路径长度的限制。 ADO.NET 数据访问接口不确保路径长度超出有效限制。  
+ 在部署实体框架应用程序之前，应确保根运算符（~）和 `DataDirectory` 替换字符串的值不超过操作系统中路径长度的限制。 ADO.NET 数据访问接口不确保路径长度超出有效限制。  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>有关 ADO.NET 元数据的安全注意事项  
  生成和处理模型和映射文件时应考虑下列安全注意事项。  

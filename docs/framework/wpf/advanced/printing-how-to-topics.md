@@ -5,19 +5,19 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: db40213bd6e20468706afda8a11d76e5a5a3c4e0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9ca812948926f80d9f8ec5b8cead4538d09fa7a1
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254266"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035633"
 ---
 # <a name="printing-how-to-topics"></a>打印帮助主题
-本节中的主题演示如何使用附带[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的打印和打印系统管理功能，以及新的 XML 纸张规范（XPS）打印路径。  
+本节中的主题演示如何使用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 附带的打印和打印系统管理功能，以及新的 XML 纸张规范（XPS）打印路径。  
   
 ## <a name="in-this-section"></a>本节内容  
  [调用打印对话框](how-to-invoke-a-print-dialog.md)  
- 说明如何使用 XAML 标记声明[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]打印对话框对象并使用代码从 Windows Presentation Foundation （WPF）应用程序中调用对话框。  
+ 说明如何使用 XAML 标记声明 Microsoft Windows 打印对话框对象并使用代码从 Windows Presentation Foundation （WPF）应用程序中调用该对话框。  
   
  [克隆打印机](how-to-clone-a-printer.md)  
  说明如何安装与现有打印队列具有完全相同属性的第二个打印队列。  
@@ -35,7 +35,7 @@ ms.locfileid: "70254266"
  有关如何发现运行时打印系统对象的属性及其类型的说明。  
   
  [以编程方式打印 XPS 文件](how-to-programmatically-print-xps-files.md)  
- 用于快速打印 XML 纸张规范（XPS）文件而无需[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]的说明。  
+ 用于快速打印 XML 纸张规范（XPS）文件而无需 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]的说明。  
   
  [远程调查打印机的状态](how-to-remotely-survey-the-status-of-printers.md)  
  有关创建实用工具的说明，该实用程序将调查打印机以发现出现卡纸或其他问题的打印机。  

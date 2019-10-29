@@ -2,19 +2,19 @@
 title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: 79544f4180313a008669c56c4f2740c889043c6d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7c1e02d44c674bf262f92df1c43bec6e9f2143c5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251255"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039931"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
 求出一组 `Boolean` 表达式的值以确定结果。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```csharp  
 CASE  
      WHEN Boolean_expression THEN result_expression   
     [ ...n ]   
@@ -41,7 +41,7 @@ END
  从 `result_expression` 和可选 `else_result_expression`的类型集中返回优先级最高的类型。  
   
 ## <a name="remarks"></a>备注  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Case 表达式类似于 transact-sql case 表达式。 可以使用 case 表达式进行一系列条件测试，以确定哪个表达式将产生正确的结果。 这种格式的 case 表达式应用于由一个或多个 `Boolean` 表达式组成的一组表达式，以确定正确的结果表达式。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] case 表达式类似于 Transact-sql case 表达式。 可以使用 case 表达式进行一系列条件测试，以确定哪个表达式将产生正确的结果。 这种格式的 case 表达式应用于由一个或多个 `Boolean` 表达式组成的一组表达式，以确定正确的结果表达式。  
   
  CASE 函数以指定的顺序为每个 WHEN 子句计算 `Boolean_expression` 的值，然后返回首个满足 `result_expression` = `Boolean_expression` 的 `true`。 而不对剩下的表达式求值。 如果没有任何 `Boolean_expression` 的计算结果为 `true`，则当指定了 ELSE 子句时，数据库引擎将返回 `else_result_expression` ；如果未指定 ELSE 子句，则返回空值。  
   
@@ -50,7 +50,7 @@ END
 ## <a name="example"></a>示例  
  以下 Entity SQL 查询使用 CASE 表达式计算一组 `Boolean` 表达式以确定结果。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1. [按照如何：执行返回 PrimitiveType 结果](../how-to-execute-a-query-that-returns-primitivetype-results.md)的查询。  
+1. 按照[如何：执行返回 PrimitiveType 结果的查询](../how-to-execute-a-query-that-returns-primitivetype-results.md)中的过程进行操作。  
   
 2. 将以下查询作为参数传递给 `ExecutePrimitiveTypeQuery` 方法：  
   

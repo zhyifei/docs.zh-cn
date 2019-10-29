@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 26b7e3a287c00f103129632ae8b0db882d468ef3
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a634667ec8d963ef52abbdbe517a57d10e4a60fa
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352979"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040222"
 ---
 # <a name="handling-null-values"></a>处理 Null 值
 在列中的值未知或缺失时，在关系数据库中使用空值。 空既不是空字符串（对于 character 或 datetime 数据类型），也不是零值（对于 numeric 数据类型）。 ANSI SQL-92 规范规定，空必须对于所有数据类型均相同，以便以一致的方式处理所有空。 <xref:System.Data.SqlTypes> 命名空间通过实现 <xref:System.Data.SqlTypes.INullable> 接口，提供空语义。 <xref:System.Data.SqlTypes> 中的每种数据类型都有其自己的 `IsNull` 属性和可分配给该数据类型的实例的 `Null` 值。  
@@ -35,23 +35,23 @@ ms.locfileid: "71352979"
  ![事实数据表](./media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansi_nulls-option"></a>理解 ANSI_NULLS 选项  
- <xref:System.Data.SqlTypes> 提供与在 SQL Server 中设置 ANSI_NULLS 选项时相同的语义。 所有算术运算符（+、-、\*、/、%）、位运算符（~、&、\|）和大多数函数都返回 null，如果任何操作数或参数为 null，则属性 `IsNull` 除外。  
+ <xref:System.Data.SqlTypes> 提供与在 SQL Server 中设置 ANSI_NULLS 选项时相同的语义。 如果任何操作数或参数为 null，则所有算术运算符（+、-、\*、/、%）、位运算符（~、&、\|）和大多数函数都返回 null，但属性 `IsNull`除外。  
   
  ANSI SQL-92 标准不支持 WHERE 子句中的*columnName* = NULL。 在 SQL Server 中，ANSI_NULLS 选项既控制数据库中的默认可空性，也控制对空值的比较计算。 如果启用 ANSI_NULLS（这是默认设置），则在测试空值时在表达式中必须使用 IS NULL 运算符。 例如，在 ANSI_NULLS 为 on 时，以下比较始终生成 unknown：  
   
-```  
+```sql
 colname > NULL  
 ```  
   
  与包含空值的变量的比较也生成 unknown：  
   
-```  
+```sql
 colname > @MyVariable  
 ```  
   
  使用 IS NULL 或 IS NOT NULL 谓词来测试是否有空值。 这可能会增加 WHERE 子句的复杂性。 例如，AdventureWorks 客户表中的 TerritoryID 列允许 null 值。 如果 SELECT 语句用于测试是否有空值以及测试其他内容，则它必须包含 IS NULL 谓词：  
   
-```  
+```sql
 SELECT CustomerID, AccountNumber, TerritoryID  
 FROM AdventureWorks.Sales.Customer  
 WHERE TerritoryID IN (1, 2, 3)  
@@ -87,7 +87,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  此外，下面的规则适用于 `DataRow.["columnName"]` null 赋值的实例：  
   
-1. 默认*默认*值为除强类型 null 列外的所有默认值 `DbNull.Value`，其中为适当的强类型 null 值。  
+1. 默认*默认*值为除强类型 null 列外的所有默认 `DbNull.Value` 值，其中为适当的强类型 null 值。  
   
 2. 在序列化为 XML 文件（如在“xsi:nil”中）期间，永远不写出空值。  
   
@@ -112,7 +112,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  此示例显示以下结果：  
   
-```  
+```output
 isColumnNull=False, ID=123, Description=Side Mirror  
 isColumnNull=True, ID=Null, Description=Null  
 ```  
@@ -127,7 +127,7 @@ isColumnNull=True, ID=Null, Description=Null
   
  此代码生成以下输出内容：  
   
-```  
+```output
 SqlString.Equals shared/static method:  
   Two nulls=Null  
   

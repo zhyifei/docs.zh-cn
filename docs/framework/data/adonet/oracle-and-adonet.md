@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: ccfe40f218e3f09de53d6cb596a31b2520d9ff9b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a49634f712e32f873df8e47fbcb0c91dbe33fa94
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783469"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039828"
 ---
 # <a name="oracle-and-adonet"></a>Oracle 和 ADO.NET
 > [!NOTE]
@@ -20,7 +20,7 @@ ms.locfileid: "70783469"
   
  用于 Oracle 的 .NET Framework 数据提供程序使用 oracle 客户端软件提供的 Oracle 调用接口（OCI）来访问 Oracle 数据库。 数据提供程序的功能与 SQL Server、OLE DB 和 ODBC 的 .NET Framework 数据提供程序的功能类似。  
   
- 若要使用适用于 Oracle 的 .NET Framework 数据提供程序，应用程序<xref:System.Data.OracleClient>必须引用命名空间，如下所示：  
+ 若要使用适用于 Oracle 的 .NET Framework 数据提供程序，应用程序必须引用 <xref:System.Data.OracleClient> 命名空间，如下所示：  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -32,7 +32,7 @@ using System.Data.OracleClient;
   
  在编译代码时还必须包括对该 DLL 的引用。 例如，如果编译的是 C# 程序，命令行中应包括：  
   
-```  
+```console
 csc /r:System.Data.OracleClient.dll  
 ```  
   

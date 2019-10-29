@@ -2,12 +2,12 @@
 title: 使用 DependentTransaction 管理并发
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
-ms.openlocfilehash: 62cbb8825171628b29a5519ca9e3ae31c2058a03
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8de7cc6257317ff7128f25968a9dcf80ae5af89d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662965"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040421"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>使用 DependentTransaction 管理并发
 <xref:System.Transactions.Transaction> 对象是使用 <xref:System.Transactions.Transaction.DependentClone%2A> 方法创建的。 该对象的唯一目的是保证当某他一些代码段（如辅助线程）还在事务上工作时，不能提交事务。 当在克隆的事务中执行的工作最终完成并可以提交时，该对象可以使用 <xref:System.Transactions.DependentTransaction.Complete%2A> 方法通知事务的创建者。 因而您就可以保持数据的一致性和正确性。  
@@ -17,7 +17,7 @@ ms.locfileid: "64662965"
 ## <a name="creating-a-dependent-clone"></a>创建依赖的克隆  
  若要创建依赖的事务，请调用 <xref:System.Transactions.Transaction.DependentClone%2A> 方法并将 <xref:System.Transactions.DependentCloneOption> 枚举作为参数传递。 此参数定义在依赖的克隆指示可以提交事务（通过调用 `Commit` 方法）之前，对父事务调用 <xref:System.Transactions.DependentTransaction.Complete%2A> 时的事务行为。 下面列出了此参数的有效值：  
   
-- <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> 创建出，或直到阻止父事务超时父事务的提交过程的依赖事务<xref:System.Transactions.DependentTransaction.Complete%2A>上指示完成的所有依赖项调用。 当客户端希望在依赖事务完成后再提交父事务时，这一点十分有用。 如果父事务的工作比该依赖事务早完成，并在此时对该依赖事务调用了 <xref:System.Transactions.CommittableTransaction.Commit%2A>，则提交进程会被阻止（在该状态下可在依赖事务上执行其他工作并可创建新登记），直到所有依赖事务都调用 <xref:System.Transactions.DependentTransaction.Complete%2A> 为止。 只要所有依赖事务完成了工作并调用了 <xref:System.Transactions.DependentTransaction.Complete%2A>，就会立即启动事务的提交进程。  
+- <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> 创建一个依赖事务，该事务将阻止父事务的提交过程，直到父事务超时，或直到对所有依赖项调用 <xref:System.Transactions.DependentTransaction.Complete%2A> 以指示它们完成。 当客户端希望在依赖事务完成后再提交父事务时，这一点十分有用。 如果父事务的工作比该依赖事务早完成，并在此时对该依赖事务调用了 <xref:System.Transactions.CommittableTransaction.Commit%2A>，则提交进程会被阻止（在该状态下可在依赖事务上执行其他工作并可创建新登记），直到所有依赖事务都调用 <xref:System.Transactions.DependentTransaction.Complete%2A> 为止。 只要所有依赖事务完成了工作并调用了 <xref:System.Transactions.DependentTransaction.Complete%2A>，就会立即启动事务的提交进程。  
   
 - 另一方面，在调用 <xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete> 之前对父事务调用 <xref:System.Transactions.CommittableTransaction.Commit%2A> 时，<xref:System.Transactions.DependentTransaction.Complete%2A> 会创建一个自动中止的依赖事务。 在这种情况下，在该依赖事务中执行的所有工作在一个事务生存期内都保持不变，并且根本无法只提交其中的一部分。  
   
@@ -70,7 +70,7 @@ using(TransactionScope scope = new TransactionScope())
   
  `ThreadMethod` 方法将在新线程上执行。 客户端会启动一个新线程，以将该依赖事务作为 `ThreadMethod` 参数传递。  
   
- 由于依赖事务是用 <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> 创建的，因此应保证第二个线程上的所有事务工作都完成并对该依赖事务调用 <xref:System.Transactions.DependentTransaction.Complete%2A> 后才能提交事务。 这意味着，如果客户端的范围结束 (当它尝试释放事务对象的末尾**使用**语句) 之前的新的线程调用<xref:System.Transactions.DependentTransaction.Complete%2A>该依赖事务，客户端代码阻止，直到<xref:System.Transactions.DependentTransaction.Complete%2A>依赖项调用。 这样，事务就可完成提交或中止。  
+ 由于依赖事务是用 <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> 创建的，因此应保证第二个线程上的所有事务工作都完成并对该依赖事务调用 <xref:System.Transactions.DependentTransaction.Complete%2A> 后才能提交事务。 这意味着如果客户端的范围在新线程对该依赖事务调用 `using` 之前结束（客户端尝试在 <xref:System.Transactions.DependentTransaction.Complete%2A> 语句结束处释放事务对象时），则客户端代码会一直被阻止，直到对该依赖事务调用 <xref:System.Transactions.DependentTransaction.Complete%2A> 为止。 这样，事务就可完成提交或中止。  
   
 ## <a name="concurrency-issues"></a>并发问题  
  使用 <xref:System.Transactions.DependentTransaction> 类时，存在其他一些需要了解的并发问题。  

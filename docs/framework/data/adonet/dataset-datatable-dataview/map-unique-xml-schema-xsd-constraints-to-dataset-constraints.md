@@ -2,12 +2,12 @@
 title: 将唯一 XML 架构 (XSD) 约束映射到数据集约束
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-ms.openlocfilehash: 4aa94dfaf088a2a934c8901e2720f166d3a38dae
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6b847aba31aa75f7be3bd6a11b6bcb8231c06bc4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784410"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040365"
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>将唯一 XML 架构 (XSD) 约束映射到数据集约束
 在 XML 架构定义语言（XSD）架构中， **unique**元素指定元素或属性的唯一性约束。 在将 XML 架构转换为关系架构的过程中，对 XML 架构中的元素或属性指定的唯一约束将映射到所生成的相应 <xref:System.Data.DataTable> 中的 <xref:System.Data.DataSet> 中的唯一约束。  
@@ -16,8 +16,8 @@ ms.locfileid: "70784410"
   
 |特性名|描述|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|如果指定了该属性，它的值将用作约束名。 否则， **name**属性提供约束名称的值。|  
-|**msdata:PrimaryKey**|如果`PrimaryKey="true"`在**unique**元素中存在，则将创建一个唯一约束，并将**IsPrimaryKey**属性设置为**true**。|  
+|**msdata： ConstraintName**|如果指定了该属性，它的值将用作约束名。 否则， **name**属性提供约束名称的值。|  
+|**msdata： PrimaryKey**|如果 `PrimaryKey="true"` 在**unique**元素中存在，则将创建一个唯一约束，并将**IsPrimaryKey**属性设置为**true**。|  
   
  下面的示例演示一个使用**unique**元素指定唯一性约束的 XML 架构。  
   
@@ -50,13 +50,13 @@ ms.locfileid: "70784410"
   
  架构中的**unique**元素指定对于文档实例中的所有**Customers**元素， **CustomerID**子元素的值必须是唯一的。 在生成**数据集**时，映射过程将读取此架构并生成下表：  
   
-```  
+```text  
 Customers (CustomerID, CompanyName, Phone)  
 ```  
   
  映射过程还会在**CustomerID**列上创建唯一约束，如下面的**数据集**中所示。 （为简便起见，只显示相关属性。）  
   
-```  
+```text  
       DataSetName: MyDataSet  
 TableName: Customers  
   ColumnName: CustomerID  
@@ -64,7 +64,7 @@ TableName: Customers
       Unique: True  
   ConstraintName: UcustID       Type: UniqueConstraint  
       Table: Customers  
-      Columns: CustomerID   
+      Columns: CustomerID
       IsPrimaryKey: False  
 ```  
   
@@ -86,10 +86,10 @@ TableName: Customers
   
  这是在生成的**数据集中**创建的约束。  
   
-```  
+```text  
 ConstraintName: SomeName  
   Table: Customers  
-  Columns: CustomerID CompanyName   
+  Columns: CustomerID CompanyName
   IsPrimaryKey: False  
 ```  
   

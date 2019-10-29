@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 608918828bf72369a1bd48e2391e2423078e9df0
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 346671d4febd5f3999f1f4fbf2fe4b7e475ae5fa
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846839"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040191"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>如何：创建发行者策略
 
@@ -55,26 +55,28 @@ ms.locfileid: "72846839"
 
 在命令提示符下键入以下命令：
 
-**al/link：** *publisherPolicyFile* **/Out：** *publisherPolicyAssemblyFile* **/keyfile：** *keyPairFile* **/platform：** *processorArchitecture*
+```console
+al /link:publisherPolicyFile /out:publisherPolicyAssemblyFile /keyfile:keyPairFile /platform:processorArchitecture
+```
 
 在此命令中：
 
-- *PublisherPolicyFile*参数是发行者策略文件的名称。
+- `publisherPolicyFile` 参数是发行者策略文件的名称。
 
-- *PublisherPolicyAssemblyFile*参数是通过此命令生成的发行者策略程序集的名称。 程序集文件名必须采用以下格式：
+- `publisherPolicyAssemblyFile` 参数是通过此命令生成的发行者策略程序集的名称。 程序集文件名必须采用以下格式：
 
-  **政策.** *majorNumber* **。** *minorNumber* **。** *mainAssemblyName*
+  "majorNumber. minorNumber. mainAssemblyName"
 
-- *KeyPairFile*参数是包含密钥对的文件的名称。 必须用相同的密钥对对程序集和发行者策略程序集进行签名。
+- `keyPairFile` 参数是包含密钥对的文件的名称。 必须用相同的密钥对对程序集和发行者策略程序集进行签名。
 
-- *ProcessorArchitecture*参数标识特定于处理器的程序集的目标平台。
+- `processorArchitecture` 参数标识特定于处理器的程序集的目标平台。
 
   > [!NOTE]
   > 从 .NET Framework 2.0 开始，可以获得特定处理器体系结构的目标功能。
 
 从 .NET Framework 2.0 开始，可以获得特定处理器体系结构的目标功能。 下面的命令从名为 `pub.config`的发行者策略文件中创建名为 `policy.1.0.myAssembly` 的发行者策略程序集，并使用 `sgKey.snk` 文件中的密钥对将强名称分配给程序集，并指定该程序集面向 x86 处理器种.
 
-```
+```console
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
 ```
 
@@ -92,11 +94,13 @@ al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:
 
 在命令提示符下键入以下命令：
 
-**gacutil.exe/I**  *publisherPolicyAssemblyFile*
+```console
+gacutil /i publisherPolicyAssemblyFile
+```
 
 以下命令将 `policy.1.0.myAssembly.dll` 添加到全局程序集缓存中。
 
-```
+```console
 gacutil /i policy.1.0.myAssembly.dll
 ```
 

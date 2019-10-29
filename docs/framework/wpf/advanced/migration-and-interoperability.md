@@ -13,15 +13,15 @@ helpviewer_keywords:
 - WPF [WPF], interoperability
 - migration [WPF]
 ms.assetid: d655de05-bf63-4814-bc64-6b3be01c70a2
-ms.openlocfilehash: 7576c8631a39a6dcf234f15b93fd5714f493276e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fcb7ece1081ae0858148cef883429b205478689b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053318"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040894"
 ---
 # <a name="migration-and-interoperability"></a>迁移和互操作性
-此页面包含指向讨论如何实现之间的互操作的文档[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序和其他类型的[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]应用程序。  
+此页面包含讨论如何实现 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序和其他类型的 Microsoft Windows 应用程序之间的互操作的文档的链接。  
   
 ## <a name="in-this-section"></a>本节内容  
  [WPF 和 Windows 窗体互操作](wpf-and-windows-forms-interoperation.md)  
@@ -32,10 +32,10 @@ ms.locfileid: "62053318"
   
 |术语|定义|  
 |----------|----------------|  
-|<xref:System.Windows.Forms.Integration.WindowsFormsHost>|可以使用一个元素到主机[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件的元素作为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]页。|  
-|<xref:System.Windows.Forms.Integration.ElementHost>|一个[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]可以使用的控件承载[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]控件。|  
-|<xref:System.Windows.Interop.HwndSource>|主机[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]区域内的[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]应用程序。|  
-|<xref:System.Windows.Interop.HwndHost>|基类<xref:System.Windows.Forms.Integration.WindowsFormsHost>，定义所有基于 HWND 的技术使用由托管时，某些基本功能[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。 子类这来承载[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]窗口内的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。|  
-|<xref:System.Windows.Interop.BrowserInteropHelper>|帮助器类，用于报告的浏览器环境条件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的浏览器承载的应用程序。|  
+|<xref:System.Windows.Forms.Integration.WindowsFormsHost>|可用于将 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件作为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 页的元素进行承载的元素。|  
+|<xref:System.Windows.Forms.Integration.ElementHost>|可用于承载 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 控件的 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件。|  
+|<xref:System.Windows.Interop.HwndSource>|在 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 应用程序中承载 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 区域。|  
+|<xref:System.Windows.Interop.HwndHost>|<xref:System.Windows.Forms.Integration.WindowsFormsHost>的基类，定义了在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序承载时，所有基于 HWND 的技术均使用的基本功能。 将此子类用于在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序内承载 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 窗口。|  
+|<xref:System.Windows.Interop.BrowserInteropHelper>|一个帮助器类，用于报告浏览器承载的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的浏览器环境的条件。|  
   
 ## <a name="related-sections"></a>相关章节

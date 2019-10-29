@@ -2,12 +2,12 @@
 title: 提供程序清单规范
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: cc58bbc82f3930f087b5da0c64afb4f9f03e905b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: bef4868ccc52d287baaceca32c4943723be7531f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854500"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040496"
 ---
 # <a name="provider-manifest-specification"></a>提供程序清单规范
 本节讨论数据存储提供程序如何可以支持数据存储中的类型和功能。  
@@ -54,7 +54,7 @@ ms.locfileid: "70854500"
   
  编写具有两部分的 XML 文件：  
   
-- 以 EDM 术语表示的提供程序类型的列表，并定义两个方向的映射：EDM 到提供程序和提供程序到 EDM。  
+- 用 EDM 术语表示的提供程序类型的列表，其中定义了两个方向的映射：EDM 到提供程序的映射和提供程序到 EDM 的映射。  
   
 - 提供程序支持的函数列表，其中的参数和返回类型用 EDM 术语表示。  
   
@@ -77,13 +77,13 @@ ms.locfileid: "70854500"
 ## <a name="provider-manifest-programming-model"></a>提供程序清单编程模型  
  提供程序派生自 <xref:System.Data.Common.DbXmlEnabledProviderManifest>，这使得它们可以通过声明方式指定其清单。 下图显示了提供程序的类层次结构：  
   
- ![None](./media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
+ ![无](./media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
   
 ### <a name="discoverability-api"></a>可发现性 API  
  通过使用数据存储连接或提供程序清单标记，存储元数据加载程序 (StoreItemCollection) 可加载提供程序清单。  
   
 #### <a name="using-a-data-store-connection"></a>使用数据存储连接  
- 如果数据存储连接可用，则调用<xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType>以返回传递<xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A>给方法的标记，该标记将返回<xref:System.Data.Common.DbProviderManifest>。 此方法委托给提供程序的实现`GetDbProviderManifestToken`。  
+ 如果数据存储连接可用，则调用 <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> 以返回传递给 <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> 方法的令牌，该令牌返回 <xref:System.Data.Common.DbProviderManifest>。 此方法委托给提供程序的 `GetDbProviderManifestToken`实现。  
   
 ```csharp
 public string GetProviderManifestToken(DbConnection connection);  
@@ -93,7 +93,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 #### <a name="using-a-provider-manifest-token"></a>使用提供程序清单标记  
  对于脱机方案，此标记从 SSDL 表示形式中选取。 SSDL 允许您指定 ProviderManifestToken （有关详细信息，请参阅[Schema 元素（SSDL）](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) ）。 例如，如果无法打开某个连接，则 SSDL 会具有一个提供程序清单标记，用于指定有关清单的信息。  
   
-```  
+```csharp  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  
   
@@ -248,36 +248,36 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
  为了在提供程序清单中表示此类型信息，每个 TypeInformation 声明必须为每个 Type 定义几个方面的说明：  
   
-|特性名|数据类型|必填|Default Value|描述|  
+|特性名|数据类型|必需|默认值|描述|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|name|String|是|n/a|提供程序特定的数据类型名称|  
-|PrimitiveTypeKind|PrimitiveTypeKind|是|n/a|EDM 类型名称|  
+|“属性”|字符串|是|不可用|提供程序特定的数据类型名称|  
+|PrimitiveTypeKind|PrimitiveTypeKind|是|不可用|EDM 类型名称|  
   
 ###### <a name="function-node"></a>Function 节点  
  每个 Function 定义一个可通过提供程序使用的函数。  
   
-|特性名|数据类型|必需|Default Value|描述|  
+|特性名|数据类型|必需|默认值|描述|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|name|String|是|n/a|函数的标识符/名称|  
-|ReturnType|String|No|Void|函数的 EDM 返回类型|  
-|聚合|Boolean|No|False|如果函数为聚合函数，则为 True。|  
-|BuiltIn|Boolean|No|True|如果函数内置于数据存储中，则返回 True|  
-|StoreFunctionName|String|No|\<名称 >|数据存储中的函数名称。  考虑了函数名称的重定向级别。|  
-|NiladicFunction|Boolean|No|False|如果函数不需要任何参数且在调用时不使用任何参数，则返回 True。|  
-|ParameterType<br /><br /> 语义|ParameterSemantics|No|AllowImplicit<br /><br /> 转换|有关查询管道应如何处理参数类型替换的选项：<br /><br /> -   ExactMatchOnly<br />- AllowImplicitPromotion<br />- AllowImplicitConversion|  
+|“属性”|字符串|是|不可用|函数的标识符/名称|  
+|ReturnType|字符串|No|Void|函数的 EDM 返回类型|  
+|聚合|布尔值|No|False|如果函数为聚合函数，则为 True。|  
+|BuiltIn|布尔值|No|True|如果函数内置于数据存储中，则返回 True|  
+|StoreFunctionName|字符串|No|\<名称 >|数据存储中的函数名称。  考虑了函数名称的重定向级别。|  
+|NiladicFunction|布尔值|No|False|如果函数不需要任何参数且在调用时不使用任何参数，则返回 True。|  
+|ParameterType<br /><br /> 语义|ParameterSemantics|No|AllowImplicit<br /><br /> 转换|有关查询管道应如何处理参数类型替换的选项：<br /><br /> - ExactMatchOnly<br />- AllowImplicitPromotion<br />- AllowImplicitConversion|  
   
  **Parameters 节点**  
   
  每个函数都具有包含一个或多个 Parameter 节点的集合。  
   
-|特性名|数据类型|必填|Default Value|描述|  
+|特性名|数据类型|必需|默认值|描述|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|name|String|是|n/a|参数的标识符/名称。|  
-|类型|String|是|n/a|参数的 EDM 类型。|  
-|模式|参数<br /><br /> 方向|是|n/a|参数的方向：<br /><br /> -在中<br />-out<br />-inout|  
+|“属性”|字符串|是|不可用|参数的标识符/名称。|  
+|键入|字符串|是|不可用|参数的 EDM 类型。|  
+|模式|参数<br /><br /> 方向|是|不可用|参数的方向：<br /><br /> -在中<br />-out<br />-inout|  
   
 ##### <a name="namespace-attribute"></a>Namespace 属性  
- 每个数据存储提供程序必须为清单中定义的信息定义一个命名空间或一组命名空间。 此命名空间可在 Entity SQL 查询中用来解析函数和类型的名称。 例如：SqlServer. 此命名空间必须与规范命名空间 EDM 不同，EDM 是由实体服务为 Entity SQL 查询要支持的标准函数定义的。  
+ 每个数据存储提供程序必须为清单中定义的信息定义一个命名空间或一组命名空间。 此命名空间可在 Entity SQL 查询中用来解析函数和类型的名称。 例如，SqlServer。 此命名空间必须与规范命名空间 EDM 不同，EDM 是由实体服务为 Entity SQL 查询要支持的标准函数定义的。  
   
 ## <a name="see-also"></a>请参阅
 

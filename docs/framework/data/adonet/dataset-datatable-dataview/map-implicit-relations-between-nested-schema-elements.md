@@ -2,12 +2,12 @@
 title: 映射嵌套架构元素之间的隐式关系
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: f4b1b9e45f0cda976719b991c336463e0af05f12
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 25fc2c427727273038f7b4267376d6ba6446b811
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784434"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040389"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>映射嵌套架构元素之间的隐式关系
 XML 架构定义语言 (XSD) 架构可以具有相互嵌套的复杂类型。 在这种情况下，映射过程将应用默认映射并在 <xref:System.Data.DataSet> 中创建以下内容：  
@@ -16,7 +16,7 @@ XML 架构定义语言 (XSD) 架构可以具有相互嵌套的复杂类型。 �
   
 - 如果父代中不存在唯一约束，则每个表定义都有一个名为*tablename*_Id 的附加主键列，其中*TableName*是父表的名称。  
   
-- 父表上的主键约束，将附加列标识为主键（通过将**IsPrimaryKey**属性设置为**True**）。 该约束以 Constraint\# 的形式来命名，其中 \# 为 1、2、3。 例如，第一个约束的默认名称为 Constraint1。  
+- 父表上的主键约束，将附加列标识为主键（通过将**IsPrimaryKey**属性设置为**True**）。 该约束以 Constraint\# 的形式来命名，其中 \# 为 1、2、3...。 例如，第一个约束的默认名称为 Constraint1。  
   
 - 在子表上创建外键约束，该约束将附加列标识为引用父表主键的外键。 约束名为*ParentTable_ChildTable* ，其中*ParentTable*是父表的名称， *ChildTable*是子表的名称。  
   
@@ -58,14 +58,14 @@ XML 架构定义语言 (XSD) 架构可以具有相互嵌套的复杂类型。 �
   
 - **Order**和**OrderDetail**表。  
   
-    ```  
+    ```text  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
 - **Order**表的唯一约束。 请注意， **IsPrimaryKey**属性设置为**True**。  
   
-    ```  
+    ```text  
     ConstraintName: Constraint1  
     Type: UniqueConstraint  
     Table: Order  
@@ -75,7 +75,7 @@ XML 架构定义语言 (XSD) 架构可以具有相互嵌套的复杂类型。 �
   
 - **OrderDetail**表的外键约束。  
   
-    ```  
+    ```text  
     ConstraintName: Order_OrderDetail  
     Type: ForeignKeyConstraint  
     Table: OrderDetail  
@@ -86,7 +86,7 @@ XML 架构定义语言 (XSD) 架构可以具有相互嵌套的复杂类型。 �
   
 - **Order**表和**OrderDetail**表之间的关系。 此关系的**嵌套**属性设置为**True** ，因为**Order**和**OrderDetail**元素嵌套在架构中。  
   
-    ```  
+    ```text  
     ParentTable: Order  
     ParentColumns: Order_Id   
     ChildTable: OrderDetail  
