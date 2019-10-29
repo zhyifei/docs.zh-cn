@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/17/2019
 ms.locfileid: "72522775"
 ---
-# <a name="dotnet-build"></a>dotnet 生成
+# <a name="dotnet-build"></a>dotnet build
 
 **本文适用于：✓** .NET Core 1.x SDK 及更高版本
 
