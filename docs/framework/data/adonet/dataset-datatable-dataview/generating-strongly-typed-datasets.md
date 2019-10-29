@@ -5,35 +5,35 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: ce7e5ad53f7aa5dad457ca1aa6ab76716086c0c3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 25419f8a810b52103e6b862cfe2fe6ab5a1fd981
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833990"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040092"
 ---
-# <a name="generating-strongly-typed-datasets"></a><span data-ttu-id="e08be-102">生成强类型化数据集</span><span class="sxs-lookup"><span data-stu-id="e08be-102">Generating Strongly Typed DataSets</span></span>
-<span data-ttu-id="e08be-103">给定符合 XML 架构定义语言（XSD）标准的 XML 架构后，可以使用随 Windows 软件开发工具包（SDK）提供的 XSD.EXE 工具来生成强类型 <xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="e08be-103">Given an XML Schema that complies with the XML Schema definition language (XSD) standard, you can generate a strongly typed <xref:System.Data.DataSet> using the XSD.exe tool provided with the Windows Software Development Kit (SDK).</span></span>  
+# <a name="generating-strongly-typed-datasets"></a><span data-ttu-id="569a3-102">生成强类型化数据集</span><span class="sxs-lookup"><span data-stu-id="569a3-102">Generating Strongly Typed DataSets</span></span>
+<span data-ttu-id="569a3-103">给定符合 XML 架构定义语言（XSD）标准的 XML 架构后，可以使用随 Windows 软件开发工具包（SDK）提供的 XSD.EXE 工具生成强类型 <xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="569a3-103">Given an XML Schema that complies with the XML Schema definition language (XSD) standard, you can generate a strongly typed <xref:System.Data.DataSet> using the XSD.exe tool provided with the Windows Software Development Kit (SDK).</span></span>  
   
- <span data-ttu-id="e08be-104">（若要创建数据库表中的 xsd，请参阅 <xref:System.Data.DataSet.WriteXmlSchema%2A> 或使用[Visual Studio 中的数据集](/visualstudio/data-tools/dataset-tools-in-visual-studio)）。</span><span class="sxs-lookup"><span data-stu-id="e08be-104">(To create an xsd from database tables, see <xref:System.Data.DataSet.WriteXmlSchema%2A> or [Working with Datasets in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)).</span></span>  
+ <span data-ttu-id="569a3-104">（若要创建数据库表中的 xsd，请参阅 <xref:System.Data.DataSet.WriteXmlSchema%2A> 或[使用 Visual Studio 中的数据集](/visualstudio/data-tools/dataset-tools-in-visual-studio)）。</span><span class="sxs-lookup"><span data-stu-id="569a3-104">(To create an xsd from database tables, see <xref:System.Data.DataSet.WriteXmlSchema%2A> or [Working with Datasets in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)).</span></span>  
   
- <span data-ttu-id="e08be-105">下面的代码演示了使用此工具生成**数据集**的语法。</span><span class="sxs-lookup"><span data-stu-id="e08be-105">The following code shows the syntax for generating a **DataSet** using this tool.</span></span>  
+ <span data-ttu-id="569a3-105">下面的代码演示了使用此工具生成**数据集**的语法。</span><span class="sxs-lookup"><span data-stu-id="569a3-105">The following code shows the syntax for generating a **DataSet** using this tool.</span></span>  
   
-```  
+```console  
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- <span data-ttu-id="e08be-106">在此语法中，`/d` 指令告诉工具生成**数据集**，`/l:` 告诉工具使用哪种语言（例如， C#或 Visual Basic .net）。</span><span class="sxs-lookup"><span data-stu-id="e08be-106">In this syntax, the `/d` directive tells the tool to generate a **DataSet**, and the `/l:` tells the tool what language to use (for example, C# or Visual Basic .NET).</span></span> <span data-ttu-id="e08be-107">可选 `/eld` 指令指定您可以使用 LINQ to DataSet 来针对生成的**数据集**进行查询。</span><span class="sxs-lookup"><span data-stu-id="e08be-107">The optional `/eld` directive specifies that you can use LINQ to DataSet to query against the generated **DataSet.**</span></span> <span data-ttu-id="e08be-108">当同时指定 `/d` 选项时可使用此选项。</span><span class="sxs-lookup"><span data-stu-id="e08be-108">This option is used when the `/d` option is also specified.</span></span> <span data-ttu-id="e08be-109">有关详细信息，请参阅[查询类型化数据集](../querying-typed-datasets.md)。</span><span class="sxs-lookup"><span data-stu-id="e08be-109">For more information, see [Querying Typed DataSets](../querying-typed-datasets.md).</span></span> <span data-ttu-id="e08be-110">可选的 `/n:` 指令指示该工具还生成一个名为**XSDSchema**的**数据集**的命名空间。</span><span class="sxs-lookup"><span data-stu-id="e08be-110">The optional `/n:` directive tells the tool to also generate a namespace for the **DataSet** called **XSDSchema.Namespace**.</span></span> <span data-ttu-id="e08be-111">命令的输出为 XSDSchemaFileName.cs，该输出可以在 ADO.NET 应用程序中编译和使用。</span><span class="sxs-lookup"><span data-stu-id="e08be-111">The output of the command is XSDSchemaFileName.cs, which can be compiled and used in an ADO.NET application.</span></span> <span data-ttu-id="e08be-112">所生成的代码可以编译成库或模块。</span><span class="sxs-lookup"><span data-stu-id="e08be-112">The generated code can be compiled as a library or a module.</span></span>  
+ <span data-ttu-id="569a3-106">在此语法中，`/d` 指令会告诉工具生成**数据集**，`/l:` 会告诉工具使用哪种语言（例如， C#或 Visual Basic .net）。</span><span class="sxs-lookup"><span data-stu-id="569a3-106">In this syntax, the `/d` directive tells the tool to generate a **DataSet**, and the `/l:` tells the tool what language to use (for example, C# or Visual Basic .NET).</span></span> <span data-ttu-id="569a3-107">可选的 `/eld` 指令指定可以使用 LINQ to DataSet 来针对生成的**数据集**进行查询。</span><span class="sxs-lookup"><span data-stu-id="569a3-107">The optional `/eld` directive specifies that you can use LINQ to DataSet to query against the generated **DataSet.**</span></span> <span data-ttu-id="569a3-108">当同时指定 `/d` 选项时可使用此选项。</span><span class="sxs-lookup"><span data-stu-id="569a3-108">This option is used when the `/d` option is also specified.</span></span> <span data-ttu-id="569a3-109">有关详细信息，请参阅[查询类型化数据集](../querying-typed-datasets.md)。</span><span class="sxs-lookup"><span data-stu-id="569a3-109">For more information, see [Querying Typed DataSets](../querying-typed-datasets.md).</span></span> <span data-ttu-id="569a3-110">可选的 `/n:` 指令通知工具还会生成一个名为**XSDSchema**的**数据集**的命名空间。</span><span class="sxs-lookup"><span data-stu-id="569a3-110">The optional `/n:` directive tells the tool to also generate a namespace for the **DataSet** called **XSDSchema.Namespace**.</span></span> <span data-ttu-id="569a3-111">命令的输出为 XSDSchemaFileName.cs，该输出可以在 ADO.NET 应用程序中编译和使用。</span><span class="sxs-lookup"><span data-stu-id="569a3-111">The output of the command is XSDSchemaFileName.cs, which can be compiled and used in an ADO.NET application.</span></span> <span data-ttu-id="569a3-112">所生成的代码可以编译成库或模块。</span><span class="sxs-lookup"><span data-stu-id="569a3-112">The generated code can be compiled as a library or a module.</span></span>  
   
- <span data-ttu-id="e08be-113">以下代码显示使用 C# 编译器 (csc.exe) 将生成的代码编译成库的语法。</span><span class="sxs-lookup"><span data-stu-id="e08be-113">The following code shows the syntax for compiling the generated code as a library using the C# compiler (csc.exe).</span></span>  
+ <span data-ttu-id="569a3-113">以下代码显示使用 C# 编译器 (csc.exe) 将生成的代码编译成库的语法。</span><span class="sxs-lookup"><span data-stu-id="569a3-113">The following code shows the syntax for compiling the generated code as a library using the C# compiler (csc.exe).</span></span>  
   
-```  
+```console  
 csc.exe /t:library XSDSchemaFileName.cs /r:System.dll /r:System.Data.dll  
 ```  
   
- <span data-ttu-id="e08be-114">`/t:` 指令指示该工具编译成库，`/r:` 指令指定进行编译所需的依赖库。</span><span class="sxs-lookup"><span data-stu-id="e08be-114">The `/t:` directive tells the tool to compile to a library, and the `/r:` directives specify dependent libraries required to compile.</span></span> <span data-ttu-id="e08be-115">该命令的输出为 XSDSchemaFileName.dll，它可以在使用 `/r:` 指令编译 ADO.NET 应用程序时传递给编译器。</span><span class="sxs-lookup"><span data-stu-id="e08be-115">The output of the command is XSDSchemaFileName.dll, which can be passed to the compiler when compiling an ADO.NET application with the `/r:` directive.</span></span>  
+ <span data-ttu-id="569a3-114">`/t:` 指令指示该工具编译成库，`/r:` 指令指定进行编译所需的依赖库。</span><span class="sxs-lookup"><span data-stu-id="569a3-114">The `/t:` directive tells the tool to compile to a library, and the `/r:` directives specify dependent libraries required to compile.</span></span> <span data-ttu-id="569a3-115">该命令的输出为 XSDSchemaFileName.dll，它可以在使用 `/r:` 指令编译 ADO.NET 应用程序时传递给编译器。</span><span class="sxs-lookup"><span data-stu-id="569a3-115">The output of the command is XSDSchemaFileName.dll, which can be passed to the compiler when compiling an ADO.NET application with the `/r:` directive.</span></span>  
   
- <span data-ttu-id="e08be-116">以下代码显示访问向 ADO.NET 应用程序中的 XSD.exe 传递的命名空间的语法。</span><span class="sxs-lookup"><span data-stu-id="e08be-116">The following code shows the syntax for accessing the namespace passed to XSD.exe in an ADO.NET application.</span></span>  
+ <span data-ttu-id="569a3-116">以下代码显示访问向 ADO.NET 应用程序中的 XSD.exe 传递的命名空间的语法。</span><span class="sxs-lookup"><span data-stu-id="569a3-116">The following code shows the syntax for accessing the namespace passed to XSD.exe in an ADO.NET application.</span></span>  
   
 ```vb  
 Imports XSDSchema.Namespace  
@@ -43,7 +43,7 @@ Imports XSDSchema.Namespace
 using XSDSchema.Namespace;  
 ```  
   
- <span data-ttu-id="e08be-117">下面的代码示例使用名为**CustomerDataSet**的类型化**数据集**从**Northwind**数据库加载客户列表。</span><span class="sxs-lookup"><span data-stu-id="e08be-117">The following code example uses a typed **DataSet** named **CustomerDataSet** to load a list of customers from the **Northwind** database.</span></span> <span data-ttu-id="e08be-118">使用**Fill**方法加载数据后，该示例会使用类型化**CustomersRow** （**DataRow**）对象循环通过**Customers**表中的每个客户。</span><span class="sxs-lookup"><span data-stu-id="e08be-118">Once the data is loaded using the **Fill** method, the example loops through each customer in the **Customers** table using the typed **CustomersRow** (**DataRow**) object.</span></span> <span data-ttu-id="e08be-119">这提供了对**CustomerID**列的直接访问，而不是通过**DataColumnCollection**。</span><span class="sxs-lookup"><span data-stu-id="e08be-119">This provides direct access to the **CustomerID** column, as opposed to through the **DataColumnCollection**.</span></span>  
+ <span data-ttu-id="569a3-117">下面的代码示例使用名为**CustomerDataSet**的类型化**数据集**从**Northwind**数据库加载客户列表。</span><span class="sxs-lookup"><span data-stu-id="569a3-117">The following code example uses a typed **DataSet** named **CustomerDataSet** to load a list of customers from the **Northwind** database.</span></span> <span data-ttu-id="569a3-118">使用**Fill**方法加载数据后，该示例会使用类型化**CustomersRow** （**DataRow**）对象循环通过**Customers**表中的每个客户。</span><span class="sxs-lookup"><span data-stu-id="569a3-118">Once the data is loaded using the **Fill** method, the example loops through each customer in the **Customers** table using the typed **CustomersRow** (**DataRow**) object.</span></span> <span data-ttu-id="569a3-119">这提供了对**CustomerID**列的直接访问，而不是通过**DataColumnCollection**。</span><span class="sxs-lookup"><span data-stu-id="569a3-119">This provides direct access to the **CustomerID** column, as opposed to through the **DataColumnCollection**.</span></span>  
   
 ```vb  
 Dim customers As CustomerDataSet= New CustomerDataSet()  
@@ -73,7 +73,7 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
   Console.WriteLine(customerRow.CustomerID);  
 ```  
   
- <span data-ttu-id="e08be-120">下面是用于示例的 XML 架构：</span><span class="sxs-lookup"><span data-stu-id="e08be-120">The following is the XML Schema used for the example:</span></span>
+ <span data-ttu-id="569a3-120">下面是用于示例的 XML 架构：</span><span class="sxs-lookup"><span data-stu-id="569a3-120">The following is the XML Schema used for the example:</span></span>
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -94,10 +94,10 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e08be-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="e08be-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="569a3-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="569a3-121">See also</span></span>
 
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
-- [<span data-ttu-id="e08be-122">类型化数据集</span><span class="sxs-lookup"><span data-stu-id="e08be-122">Typed DataSets</span></span>](typed-datasets.md)
-- [<span data-ttu-id="e08be-123">数据集、数据表和数据视图</span><span class="sxs-lookup"><span data-stu-id="e08be-123">DataSets, DataTables, and DataViews</span></span>](index.md)
-- [<span data-ttu-id="e08be-124">ADO.NET 概述</span><span class="sxs-lookup"><span data-stu-id="e08be-124">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="569a3-122">类型化数据集</span><span class="sxs-lookup"><span data-stu-id="569a3-122">Typed DataSets</span></span>](typed-datasets.md)
+- [<span data-ttu-id="569a3-123">数据集、数据表和数据视图</span><span class="sxs-lookup"><span data-stu-id="569a3-123">DataSets, DataTables, and DataViews</span></span>](index.md)
+- [<span data-ttu-id="569a3-124">ADO.NET 概述</span><span class="sxs-lookup"><span data-stu-id="569a3-124">ADO.NET Overview</span></span>](../ado-net-overview.md)
