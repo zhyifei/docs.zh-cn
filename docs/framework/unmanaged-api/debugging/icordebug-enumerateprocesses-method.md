@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: ba25d166-1d28-4f1d-aca2-de298bbca669
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e1a4da6df58c928582a830ef92d286437cb5003c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 09a8a2bb38378f5d4a32d7b00b68d02f1aa4c054
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738214"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110716"
 ---
-# <a name="icordebugenumerateprocesses-method"></a><span data-ttu-id="ea084-102">ICorDebug::EnumerateProcesses 方法</span><span class="sxs-lookup"><span data-stu-id="ea084-102">ICorDebug::EnumerateProcesses Method</span></span>
-<span data-ttu-id="ea084-103">获取正在调试的进程的枚举数。</span><span class="sxs-lookup"><span data-stu-id="ea084-103">Gets an enumerator for the processes that are being debugged.</span></span>  
+# <a name="icordebugenumerateprocesses-method"></a><span data-ttu-id="745c8-102">ICorDebug::EnumerateProcesses 方法</span><span class="sxs-lookup"><span data-stu-id="745c8-102">ICorDebug::EnumerateProcesses Method</span></span>
+<span data-ttu-id="745c8-103">获取正在调试的进程的枚举器。</span><span class="sxs-lookup"><span data-stu-id="745c8-103">Gets an enumerator for the processes that are being debugged.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ea084-104">语法</span><span class="sxs-lookup"><span data-stu-id="ea084-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="745c8-104">语法</span><span class="sxs-lookup"><span data-stu-id="745c8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumerateProcesses (  
@@ -35,19 +33,19 @@ HRESULT EnumerateProcesses (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ea084-105">参数</span><span class="sxs-lookup"><span data-stu-id="ea084-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="745c8-105">参数</span><span class="sxs-lookup"><span data-stu-id="745c8-105">Parameters</span></span>  
  `ppProcess`  
- <span data-ttu-id="ea084-106">指向一个 ICorDebugProcessEnum 对象，它正在调试的进程的枚举器的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="ea084-106">A pointer to the address of an ICorDebugProcessEnum object that is the enumerator for the processes being debugged.</span></span>  
+ <span data-ttu-id="745c8-106">指向 ICorDebugProcessEnum 对象地址的指针，该对象是正在调试的进程的枚举器。</span><span class="sxs-lookup"><span data-stu-id="745c8-106">A pointer to the address of an ICorDebugProcessEnum object that is the enumerator for the processes being debugged.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ea084-107">要求</span><span class="sxs-lookup"><span data-stu-id="ea084-107">Requirements</span></span>  
- <span data-ttu-id="ea084-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ea084-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="745c8-107">要求</span><span class="sxs-lookup"><span data-stu-id="745c8-107">Requirements</span></span>  
+ <span data-ttu-id="745c8-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="745c8-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ea084-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ea084-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="745c8-109">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="745c8-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ea084-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ea084-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="745c8-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="745c8-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ea084-111">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ea084-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="745c8-111">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="745c8-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ea084-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="ea084-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="745c8-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="745c8-112">See also</span></span>
 
-- [<span data-ttu-id="ea084-113">ICorDebug 接口</span><span class="sxs-lookup"><span data-stu-id="ea084-113">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [<span data-ttu-id="745c8-113">ICorDebug 接口</span><span class="sxs-lookup"><span data-stu-id="745c8-113">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 97e493f5-3a62-4ec7-b42f-4af57bf71f57
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd8f71ca75a795ab86c61140eacbbcfb0a18b590
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 166f6bb50849df8550871958d7034fdf2a841abb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737813"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089119"
 ---
-# <a name="icordebugappdomain2getarrayorpointertype-method"></a><span data-ttu-id="3865a-102">ICorDebugAppDomain2::GetArrayOrPointerType 方法</span><span class="sxs-lookup"><span data-stu-id="3865a-102">ICorDebugAppDomain2::GetArrayOrPointerType Method</span></span>
-<span data-ttu-id="3865a-103">获取指定的类型或指针或引用为指定类型的数组。</span><span class="sxs-lookup"><span data-stu-id="3865a-103">Gets an array of the specified type, or a pointer or reference to the specified type.</span></span>  
+# <a name="icordebugappdomain2getarrayorpointertype-method"></a><span data-ttu-id="18de9-102">ICorDebugAppDomain2::GetArrayOrPointerType 方法</span><span class="sxs-lookup"><span data-stu-id="18de9-102">ICorDebugAppDomain2::GetArrayOrPointerType Method</span></span>
+<span data-ttu-id="18de9-103">获取指定类型的数组，或指定类型的指针或引用。</span><span class="sxs-lookup"><span data-stu-id="18de9-103">Gets an array of the specified type, or a pointer or reference to the specified type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3865a-104">语法</span><span class="sxs-lookup"><span data-stu-id="3865a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="18de9-104">语法</span><span class="sxs-lookup"><span data-stu-id="18de9-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetArrayOrPointerType (  
@@ -38,35 +36,35 @@ HRESULT GetArrayOrPointerType (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3865a-105">参数</span><span class="sxs-lookup"><span data-stu-id="3865a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="18de9-105">参数</span><span class="sxs-lookup"><span data-stu-id="18de9-105">Parameters</span></span>  
  `elementType`  
- <span data-ttu-id="3865a-106">[in]CorElementType 枚举，用于指定基础本机类型 （数组、 指针或引用） 若要创建一个值。</span><span class="sxs-lookup"><span data-stu-id="3865a-106">[in] A value of the CorElementType enumeration that specifies the underlying native type (an array, pointer, or reference) to be created.</span></span>  
+ <span data-ttu-id="18de9-106">中CorElementType 枚举的一个值，该值指定要创建的基础本机类型（数组、指针或引用）。</span><span class="sxs-lookup"><span data-stu-id="18de9-106">[in] A value of the CorElementType enumeration that specifies the underlying native type (an array, pointer, or reference) to be created.</span></span>  
   
  `nRank`  
- <span data-ttu-id="3865a-107">[in]数组的秩 （即维数）。</span><span class="sxs-lookup"><span data-stu-id="3865a-107">[in] The rank (that is, number of dimensions) of the array.</span></span> <span data-ttu-id="3865a-108">此值必须为 0，如果`elementType`指定指针或引用类型。</span><span class="sxs-lookup"><span data-stu-id="3865a-108">This value must be 0 if `elementType` specifies a pointer or reference type.</span></span>  
+ <span data-ttu-id="18de9-107">中数组的秩（即维度的数目）。</span><span class="sxs-lookup"><span data-stu-id="18de9-107">[in] The rank (that is, number of dimensions) of the array.</span></span> <span data-ttu-id="18de9-108">如果 `elementType` 指定指针或引用类型，则此值必须为0。</span><span class="sxs-lookup"><span data-stu-id="18de9-108">This value must be 0 if `elementType` specifies a pointer or reference type.</span></span>  
   
  `pTypeArg`  
- <span data-ttu-id="3865a-109">[in]指向一个 ICorDebugType 对象，表示数组的类型、 指针或引用要创建。</span><span class="sxs-lookup"><span data-stu-id="3865a-109">[in] A pointer to an ICorDebugType object that represents the type of array, pointer, or reference to be created.</span></span>  
+ <span data-ttu-id="18de9-109">中指向 ICorDebugType 对象的指针，该对象表示要创建的数组、指针或引用的类型。</span><span class="sxs-lookup"><span data-stu-id="18de9-109">[in] A pointer to an ICorDebugType object that represents the type of array, pointer, or reference to be created.</span></span>  
   
  `ppType`  
- <span data-ttu-id="3865a-110">[out]指向的地址的指针`ICorDebugType`表示构造的数组、 指针类型或引用的对象类型。</span><span class="sxs-lookup"><span data-stu-id="3865a-110">[out] A pointer to the address of an `ICorDebugType` object that represents the constructed array, pointer type, or reference type.</span></span>  
+ <span data-ttu-id="18de9-110">弄指向表示构造的数组、指针类型或引用类型的 `ICorDebugType` 对象地址的指针。</span><span class="sxs-lookup"><span data-stu-id="18de9-110">[out] A pointer to the address of an `ICorDebugType` object that represents the constructed array, pointer type, or reference type.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3865a-111">备注</span><span class="sxs-lookup"><span data-stu-id="3865a-111">Remarks</span></span>  
- <span data-ttu-id="3865a-112">值*elementType*必须是以下值之一：</span><span class="sxs-lookup"><span data-stu-id="3865a-112">The value of *elementType* must be one of the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="18de9-111">备注</span><span class="sxs-lookup"><span data-stu-id="18de9-111">Remarks</span></span>  
+ <span data-ttu-id="18de9-112">*ElementType*的值必须是下列值之一：</span><span class="sxs-lookup"><span data-stu-id="18de9-112">The value of *elementType* must be one of the following:</span></span>  
   
-- <span data-ttu-id="3865a-113">ELEMENT_TYPE_PTR</span><span class="sxs-lookup"><span data-stu-id="3865a-113">ELEMENT_TYPE_PTR</span></span>  
+- <span data-ttu-id="18de9-113">ELEMENT_TYPE_PTR</span><span class="sxs-lookup"><span data-stu-id="18de9-113">ELEMENT_TYPE_PTR</span></span>  
   
-- <span data-ttu-id="3865a-114">ELEMENT_TYPE_BYREF</span><span class="sxs-lookup"><span data-stu-id="3865a-114">ELEMENT_TYPE_BYREF</span></span>  
+- <span data-ttu-id="18de9-114">ELEMENT_TYPE_BYREF</span><span class="sxs-lookup"><span data-stu-id="18de9-114">ELEMENT_TYPE_BYREF</span></span>  
   
-- <span data-ttu-id="3865a-115">ELEMENT_TYPE_ARRAY 或 ELEMENT_TYPE_SZARRAY</span><span class="sxs-lookup"><span data-stu-id="3865a-115">ELEMENT_TYPE_ARRAY or ELEMENT_TYPE_SZARRAY</span></span>  
+- <span data-ttu-id="18de9-115">ELEMENT_TYPE_ARRAY 或 ELEMENT_TYPE_SZARRAY</span><span class="sxs-lookup"><span data-stu-id="18de9-115">ELEMENT_TYPE_ARRAY or ELEMENT_TYPE_SZARRAY</span></span>  
   
- <span data-ttu-id="3865a-116">如果的值*elementType* ELEMENT_TYPE_PTR 或 ELEMENT_TYPE_BYREF， *nRank*必须为零。</span><span class="sxs-lookup"><span data-stu-id="3865a-116">If the value of *elementType* is ELEMENT_TYPE_PTR or ELEMENT_TYPE_BYREF, *nRank* must be zero.</span></span>  
+ <span data-ttu-id="18de9-116">如果*elementType*的值为 ELEMENT_TYPE_PTR 或 ELEMENT_TYPE_BYREF，则*nRank*必须为零。</span><span class="sxs-lookup"><span data-stu-id="18de9-116">If the value of *elementType* is ELEMENT_TYPE_PTR or ELEMENT_TYPE_BYREF, *nRank* must be zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3865a-117">要求</span><span class="sxs-lookup"><span data-stu-id="3865a-117">Requirements</span></span>  
- <span data-ttu-id="3865a-118">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3865a-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="18de9-117">要求</span><span class="sxs-lookup"><span data-stu-id="18de9-117">Requirements</span></span>  
+ <span data-ttu-id="18de9-118">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="18de9-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3865a-119">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3865a-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="18de9-119">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="18de9-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3865a-120">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3865a-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="18de9-120">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="18de9-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3865a-121">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3865a-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="18de9-121">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="18de9-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
