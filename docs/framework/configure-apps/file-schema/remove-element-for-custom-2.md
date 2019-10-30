@@ -1,5 +1,5 @@
 ---
-title: <remove>NameValueSectionHandler 和 DictionarySectionHandler 的元素
+title: NameValueSectionHandler 和 DictionarySectionHandler 的 <remove> 元素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/remove
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd338ff2d613be31ab1524f6baed6107f803a688
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dc1519a794e24e04074dd2a674ecc2c0f3666521
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920952"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118563"
 ---
 # <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<删除 NameValueSectionHandler 和 DictionarySectionHandler 的 > 元素
 
 删除以前定义的设置。
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<sectionName>** ](custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**
+&nbsp;&nbsp;[ **\<sectionName >** ](custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<删除 >**
 
 ## <a name="syntax"></a>语法
 
@@ -40,11 +40,11 @@ ms.locfileid: "69920952"
 
 | 元素 | 描述 |
 | ------- | ------------|
-| [ **sectionName>\<** 元素](custom-element-2.md) | 定义使用<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>类的自定义配置节的设置。 |
+| [ **\<sectionName >** Element](custom-element-2.md) | 定义使用 <xref:System.Configuration.NameValueSectionHandler> 和 <xref:System.Configuration.DictionarySectionHandler> 类的自定义配置节的设置。 |
 
 ## <a name="child-elements"></a>子元素
 
-无
+None
 
 ## <a name="remarks"></a>备注
 
@@ -54,7 +54,7 @@ ms.locfileid: "69920952"
 
 下面的示例演示如何使用应用程序配置文件中的 **\<remove >** 元素删除以前在计算机配置文件中定义的设置。
 
-以下计算机配置文件代码声明 **\<> mySection**节, 并向其中`key1`添加`key2`两个设置:
+以下计算机配置文件代码声明 **\<mySection >** 部分，并将两个设置（`key1` 和 `key2`）添加到其中：
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ ms.locfileid: "69920952"
 </configuration>
 ```
 
-以下应用程序配置文件代码将从`key2`  **\<mySection**中删除设置 >:
+以下应用程序配置文件代码将从 **\<mySection >** 中删除 `key2` 设置：
 
 ```xml
 <!--Application configuration file -->
@@ -82,7 +82,7 @@ ms.locfileid: "69920952"
 
 ## <a name="configuration-file"></a>配置文件
 
-此元素可用于应用程序配置文件、计算机配置文件 (*machine.config*) 和不在应用程序目录级别的 web.config 文件。
+此元素可用于应用程序配置文件、计算机配置文件（*machine.config*）和不在应用程序目录级别的*web.config 文件。*
 
 ## <a name="see-also"></a>请参阅
 

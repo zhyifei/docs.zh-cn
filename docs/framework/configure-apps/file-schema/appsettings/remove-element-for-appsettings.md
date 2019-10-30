@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 121b1c4b124ba07ff3bd312fd3832d3da592f486
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0695d5638589d1afe48553fe32b8d070e3938353
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921280"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119204"
 ---
-# <a name="remove-element-for-appsettings"></a>\<删除 appSettings > 的\<> 元素
+# <a name="remove-element-for-appsettings"></a>\<删除 \<appSettings > 元素 >
 
 删除自定义应用程序设置。
 
 [ **\<configuration>** ](../configuration-element.md)   
 &nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<删除 >**
 
 ## <a name="syntax"></a>语法
 
@@ -46,11 +46,11 @@ ms.locfileid: "69921280"
 
 ## <a name="child-elements"></a>子元素
 
-无
+None
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何删除的`ApplicationName`自定义配置设置:
+下面的示例演示如何删除 `ApplicationName`的自定义配置设置：
 
 ```xml
 <appSettings>

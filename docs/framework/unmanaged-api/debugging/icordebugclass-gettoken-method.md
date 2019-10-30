@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee5c848a-eac4-4462-b07a-07ccd76a75df
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b944112ce0b00e84da6243e2e48917e2318b0f1c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6964c931307a40f384ad8a8e355cab0aad575ec6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746842"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125776"
 ---
 # <a name="icordebugclassgettoken-method"></a>ICorDebugClass::GetToken 方法
-获取`TypeDef`元数据标记所引用的此类定义。  
+获取引用此类的定义的 `TypeDef` 元数据标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,12 +35,12 @@ HRESULT GetToken (
   
 ## <a name="parameters"></a>参数  
  `pTypeDef`  
- [out]一个指向`mdTypeDef`引用此类定义的令牌。  
+ 弄指向引用此类的定义的 `mdTypeDef` 标记的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

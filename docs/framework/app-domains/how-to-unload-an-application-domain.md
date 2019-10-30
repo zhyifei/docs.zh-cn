@@ -10,14 +10,12 @@ helpviewer_keywords:
 - application domains, unloading
 - unloading application domains
 ms.assetid: f356116d-e415-4f7c-a332-6e6a60227192
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f7419725f3822622a8e4210d4f3f5d8e9e59dbdd
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4d5f98229c3a9da69a350ae325cd42e8deb6b7bc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053133"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119849"
 ---
 # <a name="how-to-unload-an-application-domain"></a>如何：卸载应用程序域
 完成使用应用程序域时，可使用 <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> 方法将其卸载。 **Unload** 方法会正常关闭指定的应用程序域。 卸载过程中，任何新线程都无法访问该应用程序域，并且会释放所有特性于应用程序域的数据结构。  

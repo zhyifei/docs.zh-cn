@@ -10,14 +10,12 @@ helpviewer_keywords:
 - retrieving setup information
 - application domains, retrieving setup information
 ms.assetid: 5cdb12ae-1e37-4a62-8ec7-93d6dcc6e8d9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 719ea15de135d8bbeb7bb88ea3d5b5874e30b5d6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4d06a8a3ccfa35af283323478ee44a7da63d896d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053104"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119734"
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a>从应用程序域中检索安装信息
 应用程序域的每个实例由属性和 <xref:System.AppDomainSetup> 信息组成。 可使用 <xref:System.AppDomain?displayProperty=nameWithType> 类从应用程序域中检索安装信息。 此类提供多个成员，可用于检索应用程序域的相关配置信息。  

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: cfe4b634-18bf-44b8-9773-d94fb7e8a480
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 08247c1ec5b868055e4836b3c0fb520a536374e8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ca428d680df1710d8e74441d9945d4c3545b0482
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798917"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121144"
 ---
 # <a name="strongnamesignatureverificationex-function"></a>StrongNameSignatureVerificationEx 函数
 获取一个值，该值指示提供的路径中的程序集清单是否包含强名称签名。  
@@ -44,23 +42,23 @@ BOOLEAN StrongNameSignatureVerificationEx (
  中要验证的程序集的可移植可执行文件（.exe 或 .dll）文件的路径。  
   
  `fForceVerification`  
- 中如果需要重写注册表设置，则为; `false`否则为。 `true`  
+ [in] `true` 执行验证，即使需要重写注册表设置，否则，`false`。  
   
  `pfWasVerified`  
- 弄如果验证强名称签名， `false`则为; 否则为。 `true` `pfWasVerified`如果验证因为注册表`false`设置而成功，则也会设置为。  
+ [out] 如果验证强名称签名，则 `true`;否则，`false`。 如果验证因为注册表设置而成功，则也会将 `pfWasVerified` 设置为 `false`。  
   
 ## <a name="return-value"></a>返回值  
- `true`如果验证成功，则为;否则为`false`。  
+ 如果验证成功，则 `true`;否则，`false`。  
   
 ## <a name="remarks"></a>备注  
- `StrongNameSignatureVerificationEx`提供与[StrongNameSignatureVerification](strongnamesignatureverification-function.md)函数相似的功能。 但是，的第二个输入参数和输出参数`StrongNameSignatureVerificationEx`的类型`BOOLEAN`为，而`DWORD`不是。  
+ `StrongNameSignatureVerificationEx` 提供类似于[StrongNameSignatureVerification](strongnamesignatureverification-function.md)函数的功能。 但 `StrongNameSignatureVerificationEx` 的第二个输入参数和输出参数类型 `BOOLEAN` 而不是 `DWORD`。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Stackexchange.redis.strongname  
   
- **类库**作为资源包括在 mscoree.dll 中  
+ **库：** 作为资源包括在 mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
