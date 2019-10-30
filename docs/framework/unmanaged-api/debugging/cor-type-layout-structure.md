@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43a7addd-f25a-4049-9907-abec3eb17af2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6bd274b1eb14532629580e777288317186544912
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 12c594f157c803d5fc179e09a8ca6c0ef40f3f44
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274168"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099023"
 ---
 # <a name="cor_type_layout-structure"></a>COR_TYPE_LAYOUT 结构
 提供有关内存中某个对象的布局的信息。  
@@ -38,25 +36,25 @@ typedef struct COR_TYPE_LAYOUT {
 } COR_TYPE_LAYOUT;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`parentID`|此类型的父类型的标识符。 如果类型 id 对应<xref:System.Object?displayProperty=nameWithType>于，则此值将为 NULL 类型 id （token1 = 0，token2 = 0）。|  
+|`parentID`|此类型的父类型的标识符。 如果类型 id 与 <xref:System.Object?displayProperty=nameWithType>相对应，则此值将为 NULL 类型 id （token1 = 0，token2 = 0）。|  
 |`objectSize`|此类型的对象的基大小。 这是非变量大小对象的总大小。|  
 |`numFields`|此类型的对象中包含的字段数。|  
 |`boxOffset`|如果此类型为装箱，则为对象字段的开始偏移量。 此字段仅对基元和结构等值类型有效。|  
 |`type`|此类型所属的 CorElementType。|  
   
 ## <a name="remarks"></a>备注  
- 如果`numFields`大于零，则可以调用[ICorDebugProcess5：： GetTypeFields](icordebugprocess5-gettypefields-method.md)方法来获取有关此类型中的字段的信息。 如果`type`为 `ELEMENT_TYPE_STRING`、`ELEMENT_TYPE_ARRAY` 或`ELEMENT_TYPE_SZARRAY`，则此类型的对象的大小是可变的，你可以将 [COR_TYPEID](cor-typeid-structure.md) 结构传递到[ICorDebugProcess5：： GetArrayLayout](icordebugprocess5-getarraylayout-method.md)方法。  
+ 如果 `numFields` 大于零，则可以调用[ICorDebugProcess5：： GetTypeFields](icordebugprocess5-gettypefields-method.md)方法来获取有关此类型中的字段的信息。 如果 `type` `ELEMENT_TYPE_STRING`、`ELEMENT_TYPE_ARRAY`或 `ELEMENT_TYPE_SZARRAY`，则此类型的对象大小是可变的，你可以将[COR_TYPEID](cor-typeid-structure.md)结构传递到[ICorDebugProcess5：： GetArrayLayout](icordebugprocess5-getarraylayout-method.md)方法。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl，Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

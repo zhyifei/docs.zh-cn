@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 23682ca0-1bcf-48e6-996e-69f7ba337682
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ef8d1c47275d3cbd69c1516b788b950f8535513
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0369cc6d98736542b764e5914d733a9341753b24
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737719"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088877"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs 方法
-获取在基于其接口标识符的应用程序域中已缓存的 Windows 运行时类型的枚举器。  
+基于其接口标识符获取应用程序域中缓存的 Windows 运行时类型的枚举器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,21 +37,21 @@ HRESULT GetCachedWinRTTypesForIIDs (
   
 ## <a name="parameters"></a>参数  
  `cReqTypes`  
- [in]所需类型的数目。  
+ 中所需类型的数目。  
   
  `iidsToResolve`  
- [in]指向包含对应于要检索的 Windows 运行时类型的托管表示形式的接口标识符的数组的指针。  
+ 中指向数组的指针，该数组包含与要检索的 Windows 运行时类型的托管表示形式对应的接口标识符。  
   
  `ppTypesEnum`  
- [out]检索到允许的缓存托管表示形式的 Windows 运行时类型的枚举的"ICorDebugTypeEnum"接口对象地址的指针，根据中的接口标识符`iidsToResolve`。  
+ 弄一个指向 "ICorDebugTypeEnum" 接口对象地址的指针，该对象允许基于 `iidsToResolve`中的接口标识符枚举检索到的 Windows 运行时类型的缓存托管表示形式。  
   
 ## <a name="remarks"></a>备注  
- 如果该方法无法检索特定的接口标识符的信息，"ICorDebugTypeEnum"集合中的相应项将具有类型`ELEMENT_TYPE_END`的数据检索问题导致的错误或`ELEMENT_TYPE_VOID`未知接口标识符。  
+ 如果该方法无法检索特定接口标识符的信息，则 "ICorDebugTypeEnum" 集合中的对应条目将有一种类型的 `ELEMENT_TYPE_END` 用于错误，这是由于数据检索问题或未知接口标识符 `ELEMENT_TYPE_VOID` 的。  
   
 ## <a name="requirements"></a>要求  
  **平台：** Windows 运行时  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

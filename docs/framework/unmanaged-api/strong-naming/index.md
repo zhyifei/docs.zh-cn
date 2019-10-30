@@ -6,14 +6,12 @@ helpviewer_keywords:
 - native API reference [.NET Framework], strong naming
 - unmanaged API reference [.NET Framework], strong naming
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a697d96864f336982c05b5bcc7c48efef2df0f6a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7d18513450111d58b5d26fd834addd465cfc4267
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799200"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140631"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>强命名（非托管 API 参考）
 强命名 API 允许客户端管理程序集的强名称签名。  

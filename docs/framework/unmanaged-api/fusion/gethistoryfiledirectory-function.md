@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 93232222-926e-42ac-b85d-8a6d33977672
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: adbbf94dc36c6d82360ed532b283cd666a1a52ed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1aabfad14ee2eb35916bbf115631602276cd1fc3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796848"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109896"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory 函数
 检索应用程序历史记录目录的路径。  
@@ -48,17 +46,17 @@ HRESULT GetHistoryFileDirectory (
 |返回代码|描述|  
 |-----------------|-----------------|  
 |S_OK|该方法已成功完成。|  
-|E_INVALIDARG|`wzDir`或`pdwSize`为 null，或者版本字符串不正确。|  
+|E_INVALIDARG|`wzDir` 或 `pdwSize` 为 null，或者版本字符串不正确。|  
   
 ## <a name="remarks"></a>备注  
- 成功完成后， `pdwSize`参数设置为路径字符串的长度。  
+ 成功完成后，`pdwSize` 参数设置为路径字符串的长度。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 合成。h  
   
- **类库**合成 .dll 和 Mscorwks.dll。 使用 Mscorwks.dll 而不是来确保目标为正确的 .NET Framework 版本。  
+ **库：** 合成 .dll 和 Mscorwks.dll。 使用 Mscorwks.dll 而不是来确保目标为正确的 .NET Framework 版本。  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
