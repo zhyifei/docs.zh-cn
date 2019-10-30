@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: b3e7d0c2-3baa-4ef8-8e3f-b865cf252940
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 00adc852a0940766cdd4188ffa5d6be2b472e51f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 86fa44b609b4b89cfaa28f0bfa7bbdce6217623f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744886"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122860"
 ---
-# <a name="icordebugassemblyenumnext-method"></a><span data-ttu-id="b702b-102">ICorDebugAssemblyEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="b702b-102">ICorDebugAssemblyEnum::Next Method</span></span>
-<span data-ttu-id="b702b-103">从集合中，从当前光标位置开始获取指定的数目的程序集。</span><span class="sxs-lookup"><span data-stu-id="b702b-103">Gets the specified number of assemblies from the collection, starting at the current cursor position.</span></span>  
+# <a name="icordebugassemblyenumnext-method"></a><span data-ttu-id="eee4a-102">ICorDebugAssemblyEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="eee4a-102">ICorDebugAssemblyEnum::Next Method</span></span>
+<span data-ttu-id="eee4a-103">从当前游标位置开始，从集合中获取指定数目的程序集。</span><span class="sxs-lookup"><span data-stu-id="eee4a-103">Gets the specified number of assemblies from the collection, starting at the current cursor position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b702b-104">语法</span><span class="sxs-lookup"><span data-stu-id="b702b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eee4a-104">语法</span><span class="sxs-lookup"><span data-stu-id="eee4a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Next (  
@@ -38,21 +36,21 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b702b-105">参数</span><span class="sxs-lookup"><span data-stu-id="b702b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="eee4a-105">参数</span><span class="sxs-lookup"><span data-stu-id="eee4a-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="b702b-106">[in]要检索的程序集的数量。</span><span class="sxs-lookup"><span data-stu-id="b702b-106">[in] The number of assemblies to be retrieved.</span></span>  
+ <span data-ttu-id="eee4a-106">中要检索的程序集的数目。</span><span class="sxs-lookup"><span data-stu-id="eee4a-106">[in] The number of assemblies to be retrieved.</span></span>  
   
  `values`  
- <span data-ttu-id="b702b-107">[out]一个指针数组，其中每个指向一个 icor 调试程序集对象，表示程序集。</span><span class="sxs-lookup"><span data-stu-id="b702b-107">[out] An array of pointers, each of which points to an ICorDebugAssembly object that represents an assembly.</span></span>  
+ <span data-ttu-id="eee4a-107">弄指针的数组，其中每个都指向表示程序集的 ICorDebugAssembly 对象。</span><span class="sxs-lookup"><span data-stu-id="eee4a-107">[out] An array of pointers, each of which points to an ICorDebugAssembly object that represents an assembly.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="b702b-108">[out]一个指向实际返回的程序集的数量。</span><span class="sxs-lookup"><span data-stu-id="b702b-108">[out] A pointer to the number of assemblies actually returned.</span></span> <span data-ttu-id="b702b-109">此值可能为 null 如果`celt`是其中一个。</span><span class="sxs-lookup"><span data-stu-id="b702b-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="eee4a-108">弄一个指针，指向实际返回的程序集的数目。</span><span class="sxs-lookup"><span data-stu-id="eee4a-108">[out] A pointer to the number of assemblies actually returned.</span></span> <span data-ttu-id="eee4a-109">如果 `celt` 为1，则此值可以为 null。</span><span class="sxs-lookup"><span data-stu-id="eee4a-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b702b-110">要求</span><span class="sxs-lookup"><span data-stu-id="b702b-110">Requirements</span></span>  
- <span data-ttu-id="b702b-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b702b-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eee4a-110">要求</span><span class="sxs-lookup"><span data-stu-id="eee4a-110">Requirements</span></span>  
+ <span data-ttu-id="eee4a-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="eee4a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b702b-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b702b-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="eee4a-112">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="eee4a-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b702b-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b702b-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="eee4a-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eee4a-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b702b-114">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b702b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="eee4a-114">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eee4a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
