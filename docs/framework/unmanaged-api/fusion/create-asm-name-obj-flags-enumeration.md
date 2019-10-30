@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a5ed2fd0-c7d2-4603-aaca-5d0caad92675
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9897e396424b9076da8f30c61b5a14cfa9539690
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f6abb59c3aaec40a4e7b228b8c69147a2d454431
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795419"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108880"
 ---
 # <a name="create_asm_name_obj_flags-enumeration"></a>CREATE_ASM_NAME_OBJ_FLAGS 枚举
 指定[IAssemblyName 接口](iassemblyname-interface.md)对象在由[CreateAssemblyNameObject](createassemblynameobject-function.md)函数构建时的特性。  
@@ -40,17 +38,17 @@ typedef enum {
 } CREATE_ASM_NAME_OBJ_FLAGS;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
 |`CANOF_PARSE_DISPLAY_NAME`|指示传递的参数是文本标识。|  
 |`CANOF_SET_DEFAULT_VALUES`|设置几个默认值。|  
 |`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|验证友元程序集规则（仅名称和公钥）。 此成员仅供内部使用。|  
-|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|`CANOF_PARSE_DISPLAY_NAME` 和`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`标志的组合。 此成员仅供内部使用。|  
+|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|`CANOF_PARSE_DISPLAY_NAME` 和 `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` 标志的组合。 此成员仅供内部使用。|  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 合成。h  
   
