@@ -6,16 +6,16 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: a2cc7cb1b6da860a2c27bc8d2fe74e0ffde5f5e1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 950a74dd663249b2a59bf746d02b5992733d0ce9
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053267"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039340"
 ---
 # <a name="interfaces-c-programming-guide"></a>接口（C# 编程指南）
 
-接口包含[类](../../language-reference/keywords/class.md)或[结构](../../language-reference/keywords/struct.md)可以实现的一组相关功能的定义。
+接口包含非抽象[类](../../language-reference/keywords/class.md)或[结构](../../language-reference/keywords/struct.md)必须实现的一组相关功能的定义。
   
 例如，使用接口可以在类中包括来自多个源的行为。 该功能在 C# 中十分重要，因为该语言不支持类的多重继承。 此外，如果要模拟结构的继承，也必须使用接口，因为它们无法实际从另一个结构或类继承。  
   

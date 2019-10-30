@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7d69528804cf0cee1302fd62fa2301e06076897a
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 78233b9a18f4369ebb086f2016af3f945b6a654a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579207"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039017"
 ---
 # <a name="c-operators-c-reference"></a>C# 运算符（C# 参考）
 
@@ -85,7 +85,7 @@ Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
 |`a / b + c * d`|a, b, /, c, d, *, +|
 |`a / (b + c) * d`|a, b, c, +, /, d, *|
 
-通常，会计算所有运算符操作数。 某些运算符有条件地计算操作数。 也就是说，此类运算符的第一个操作数的值定义了是否应计算其他操作数，或计算其他哪些操作数。 这些运算符有条件逻辑 [AND (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) 和 [OR (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) 运算符、[null 合并运算符 `??` 和 `??=`](null-coalescing-operator.md)、[null 条件运算符 `?.` 和 `?[]`](member-access-operators.md#null-conditional-operators--and-) 以及[条件运算符`?:`](conditional-operator.md)。 有关更多详细信息，请参阅每个运算符的说明。
+通常，会计算所有运算符操作数。 但是，某些运算符有条件地计算操作数。 也就是说，此类运算符的最左侧操作数的值定义了是否应计算其他操作数，或计算其他哪些操作数。 这些运算符有条件逻辑 [AND (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) 和 [OR (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) 运算符、[null 合并运算符 `??` 和 `??=`](null-coalescing-operator.md)、[null 条件运算符 `?.` 和 `?[]`](member-access-operators.md#null-conditional-operators--and-) 以及[条件运算符`?:`](conditional-operator.md)。 有关详细信息，请参阅每个运算符的说明。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
