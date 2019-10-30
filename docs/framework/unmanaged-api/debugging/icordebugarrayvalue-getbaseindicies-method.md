@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 868b339b-acdb-4fe0-91c7-b85f4fba99eb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f4ecb700a19a4e06f9f0056881fe3cdb9753aae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e103401b85626e53db53e1894c22b161774e5163
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737604"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088692"
 ---
 # <a name="icordebugarrayvaluegetbaseindicies-method"></a>ICorDebugArrayValue::GetBaseIndicies 方法
-获取数组中的每个维的基索引。  
+获取数组中每个维的基索引。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,15 +37,15 @@ HRESULT GetBaseIndicies (
   
 ## <a name="parameters"></a>参数  
  `cdim`  
- [in]此维度的数目`ICorDebugArrayValue`对象。 该值也为的大小`indicies`由于其大小为维数的数组`ICorDebugArrayValue`对象。  
+ 中此 `ICorDebugArrayValue` 对象的维度数。 此值也是 `indicies` 数组的大小，因为其大小等于 `ICorDebugArrayValue` 对象的维度数。  
   
  `indicies`  
- [out]一个整数数组，其中每个是此维度的基索引 （也就是说的起始索引）`ICorDebugArrayValue`对象。  
+ 弄整数数组，其中每个整数都是此 `ICorDebugArrayValue` 对象的维度的基本索引（即起始索引）。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

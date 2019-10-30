@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00c64533-15dd-47f4-bb97-fe80a1ebadef
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a58a62dbcd69d1847ab5a0b0109fe4eea53a4f3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9f54fdfe16bc24394503ba6f5a9b906a32ec2c8b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754226"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091093"
 ---
 # <a name="icordebugexceptionobjectvalueenumerateexceptioncallstack-method"></a>ICorDebugExceptionObjectValue::EnumerateExceptionCallStack 方法
-获取嵌入异常对象中的调用堆栈的枚举器。  
+获取一个枚举器，该枚举器指向嵌入到异常对象中的调用堆栈。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,17 +35,17 @@ HRESULT EnumerateExceptionCallStack(
   
 ## <a name="parameters"></a>参数  
  ppCallStackEnum  
- [out]指向的地址的指针[ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)是托管的异常对象的堆栈跟踪枚举器的接口对象。  
+ 弄指向[ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)接口对象地址的指针，该对象是托管异常对象的堆栈跟踪枚举器。  
   
 ## <a name="remarks"></a>备注  
- 如果没有调用堆栈信息不可用，该方法返回`S_OK`，并[ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)是长度为 0 的有效枚举器。 如果该方法不能检索堆栈跟踪信息，返回值是`E_FAIL`并返回任何枚举器。  
+ 如果没有可用的调用堆栈信息，该方法将返回 `S_OK`， [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)是长度为0的有效枚举器。 如果该方法无法检索堆栈跟踪信息，将 `E_FAIL` 返回值，并且不返回任何枚举器。  
   
- [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)对象负责的堆栈跟踪数据解码`_stackTrace`异常对象的字段。  
+ [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)对象负责从 exception 对象的 `_stackTrace` 字段解码堆栈跟踪数据。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

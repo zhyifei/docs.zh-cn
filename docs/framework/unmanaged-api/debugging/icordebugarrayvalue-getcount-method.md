@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44cd98cf-2127-4d46-8c6a-da4e857bb6b0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e45f49d17a5b71abfb58ff8c0126abad49322c5b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f33225eae4b62f2d5f0793212ae7dcc70e97f508
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737587"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088535"
 ---
 # <a name="icordebugarrayvaluegetcount-method"></a>ICorDebugArrayValue::GetCount 方法
 获取数组中的元素总数。  
@@ -37,12 +35,12 @@ HRESULT GetCount (
   
 ## <a name="parameters"></a>参数  
  `pnCount`  
- [out]指向数组中的元素总数的指针。  
+ 弄指向数组中元素总数的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

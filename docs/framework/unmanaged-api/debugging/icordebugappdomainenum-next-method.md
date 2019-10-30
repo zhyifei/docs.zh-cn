@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8d1def7-0ebc-4314-a3a2-fd36a75973e7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 12787382686cc056c157ed7a6e8e4984ab93588f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 55e331ff4e6ada73dc92bb2e880f555887639714
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737614"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088794"
 ---
 # <a name="icordebugappdomainenumnext-method"></a>ICorDebugAppDomainEnum::Next 方法
-从集合中，从当前光标位置开始获取指定的数目的应用程序域。  
+从当前游标位置开始，获取集合中指定数量的应用程序域。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,18 +38,18 @@ HRESULT Next (
   
 ## <a name="parameters"></a>参数  
  `celt`  
- [in]要检索的应用程序域数。  
+ 中要检索的应用程序域的数量。  
   
  `values`  
- [out]一个指针数组，其中每个指向一个 ICorDebugAppDomain 对象，表示应用程序域。  
+ 弄指针的数组，其中每个都指向表示应用程序域的 ICorDebugAppDomain 对象。  
   
  `pceltFetched`  
- [out]指向实际返回的应用程序域数的指针。 此值可能为 null 如果`celt`是其中一个。  
+ 弄一个指针，指向实际返回的应用程序域的数量。 如果 `celt` 为1，则此值可以为 null。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

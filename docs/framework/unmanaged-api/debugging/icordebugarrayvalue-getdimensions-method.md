@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6c116592-134b-4ef2-a319-680e92d013aa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9c0f4836a3dc848b52ee7fe6947f350e6fab787f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c5199794098e4d83588728eeb165aee5f81fe4c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737568"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088504"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a>ICorDebugArrayValue::GetDimensions 方法
 获取此数组的每个维度中的元素数。  
@@ -39,17 +37,17 @@ HRESULT GetDimensions (
   
 ## <a name="parameters"></a>参数  
  `cdim`  
- [in]此 ICorDebugArrayValue 对象的维度数。  
+ 中此 ICorDebugArrayValue 对象的维度数。  
   
- 该值也为的大小`dims`由于其大小为维数的数组`ICorDebugArrayValue`对象。  
+ 此值也是 `dims` 数组的大小，因为其大小等于 `ICorDebugArrayValue` 对象的维度数。  
   
  `dims`  
- [out]一个整数数组，其中每个指定的元素数，在此维度中`ICorDebugArrayValue`对象。  
+ 弄一个整数数组，其中每个整数指定此 `ICorDebugArrayValue` 对象中维度中的元素数。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

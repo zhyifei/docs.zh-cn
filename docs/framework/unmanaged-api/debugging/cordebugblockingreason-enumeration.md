@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a6ac2531-ddfe-46fd-88fe-8b1eabe0b255
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 99fcf160b3e3b2b238520e3db5ba2e74b270380a
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: bc488e55bf64468eb62e2dc6eaedca62ebde3310
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274131"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098988"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>CorDebugBlockingReason 枚举
 指定线程可能在给定对象上受到阻塞的原因。  
@@ -37,23 +35,23 @@ Typedef enum CorDebugBlockingReason
 }  CorDebugBlockingReason;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
 |`BLOCKING_NONE`|仅限内部使用。|  
-|`BLOCKING_MONITOR_CRITICAL_SECTION`|线程尝试获取与对象上的监视器锁关联的临界区。 通常，在调用<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>或<xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>方法之一时，会发生这种情况。|  
-|`BLOCKING_MONITOR_EVENT`|线程正在等待与对象的监视器锁关联的事件。 通常情况下，当调用其中一个<xref:System.Threading.Monitor?displayProperty=nameWithType> `Wait`方法时，会发生这种情况。|  
+|`BLOCKING_MONITOR_CRITICAL_SECTION`|线程尝试获取与对象上的监视器锁关联的临界区。 通常，当调用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> 方法之一时，会发生这种情况。|  
+|`BLOCKING_MONITOR_EVENT`|线程正在等待与对象的监视器锁关联的事件。 通常，当调用 <xref:System.Threading.Monitor?displayProperty=nameWithType>`Wait` 方法之一时，会发生这种情况。|  
   
 ## <a name="remarks"></a>备注  
- 当在[CorDebugBlockingObject](cordebugblockingobject-structure.md)结构中使用`pBlockingObject` `BLOCKING_MONITOR_EVENT`或成员时，结构的成员指向一个 "ICorDebugValue" 接口，该接口表示正在输入的对象。 `BLOCKING_MONITOR_CRITICAL_SECTION` 还保证实现[ICorDebugHeapValue3](icordebugheapvalue3-interface.md)接口。  
+ 当在[CorDebugBlockingObject](cordebugblockingobject-structure.md)结构中使用 `BLOCKING_MONITOR_CRITICAL_SECTION` 或 `BLOCKING_MONITOR_EVENT` 成员时，结构的 `pBlockingObject` 成员指向一个 "ICorDebugValue" 接口，该接口表示正在输入的对象。 还保证实现[ICorDebugHeapValue3](icordebugheapvalue3-interface.md)接口。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl，Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

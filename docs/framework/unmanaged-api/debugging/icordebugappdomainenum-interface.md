@@ -14,24 +14,22 @@ helpviewer_keywords:
 ms.assetid: e9226e6e-ca2c-428e-bb38-0c099210f507
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c48c222a34e2e78f29c33e49da331d97d409bae1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6cc3ec1c802c28b74248380aa7f686e675a92f1d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949751"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088844"
 ---
 # <a name="icordebugappdomainenum-interface"></a>ICorDebugAppDomainEnum 接口
 
-提供方法, 该方法从枚举中的下`ICorDebugAppDomainEnum`一个位置开始返回指定数目的值。 `Next` 此接口是 "ICorDebugEnum" 的子类。  
+提供 `Next` 方法，该方法从枚举中的下一个位置开始返回指定数目的 `ICorDebugAppDomainEnum` 值。 此接口是 "ICorDebugEnum" 的子类。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|从当前游标位置开始, 获取集合中指定数量的应用程序域。|  
+|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|从当前游标位置开始，获取集合中指定数量的应用程序域。|  
   
 ## <a name="remarks"></a>备注  
   
@@ -39,11 +37,11 @@ ms.locfileid: "69949751"
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl, Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

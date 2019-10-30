@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ed16bb7f-4206-43a8-b9e9-c5737b69e3af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fe45322808a0a756b31f27f9f5c1549ece348e11
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 79f24b3ccacd84037042a883d3a034bb7b4d200a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770113"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092092"
 ---
 # <a name="iclrtaskmanagersetlocale-method"></a>ICLRTaskManager::SetLocale 方法
-通知公共语言运行时 (CLR) 主机已修改当前正在执行的任务的区域设置标识符 （可映射到地理区域性和语言） 的值。  
+通知公共语言运行时（CLR）宿主已经修改了当前正在执行的任务的区域设置标识符的值（映射到地理区域和语言）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,28 +35,28 @@ HRESULT SetLocale (
   
 ## <a name="parameters"></a>参数  
  `lcid`  
- [in]映射到新分配的地理区域性和语言区域设置标识符值。  
+ 中映射到新分配的地理区域和语言的区域设置标识符值。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|该方法成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|CLR 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。|  
-|HOST_E_TIMEOUT|呼叫已超时。|  
+|S_OK|方法已成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|事件已取消时被阻塞的线程或纤程正在等待它。|  
-|E_FAIL|发生未知的灾难性故障。 如果某方法返回 E_FAIL，CLR 不再在进程内可用。 对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
+|E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>备注  
- `SetLocale` 使宿主有机会执行同步的区域设置可能具有的任何机制。  
+ `SetLocale` 使宿主有机会执行它可能对区域设置进行同步的任何机制。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

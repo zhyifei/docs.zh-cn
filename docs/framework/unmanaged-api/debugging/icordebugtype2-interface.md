@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 376fb03f-f1ef-4107-baa4-4d9d55884862
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c2f2c1e4c95c61eab4c9da6103d4ac479b4bbdb4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7b56f0f3ba62efb48ac8d79aad4480b5f22771ba
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936058"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110217"
 ---
 # <a name="icordebugtype2-interface"></a>ICorDebugType2 接口
-扩展 ICorDebugType 接口以检索基类型或复杂 (用户定义) 类型的类型标识符。  
+扩展 ICorDebugType 接口以检索基类型或复杂（用户定义）类型的类型标识符。  
   
 ## <a name="methods"></a>方法  
   
@@ -39,7 +37,7 @@ ms.locfileid: "69936058"
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="example"></a>示例  
- 下面的代码段演示了如何使用[ICorDebugType2:: GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)方法。  
+ 下面的代码段演示了如何使用[ICorDebugType2：： GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)方法。  
   
 ```cpp  
 // (error checking omitted for brevity)  
@@ -55,11 +53,11 @@ pType2->GetTypeID(&id);
 ```  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl, Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   

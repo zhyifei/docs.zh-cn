@@ -2,14 +2,12 @@
 title: ICorDebugAppDomain4::GetObjectForCCW 方法
 ms.date: 03/30/2017
 ms.assetid: 2cacdb85-e7b8-42e7-b310-c3e8c22e5d33
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7ab4905c55a1395e9ae5cba8343e6b832622005d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8b046eb5926bb9aa4738e8fff8e61b0b7c23a3aa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737639"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088831"
 ---
 # <a name="icordebugappdomain4getobjectforccw-method"></a>ICorDebugAppDomain4::GetObjectForCCW 方法
 从 COM 可调用包装器 (CCW) 指针获取托管对象。  
@@ -28,14 +26,14 @@ HRESULT GetObjectForCCW(
  [in] COM 可调用包装器 (CCW) 指针。  
   
  `ppManagedObject`  
- [out]指向表示给定 CCW 指针相对应的托管的对象的"ICorDebugValue"对象的地址的指针。  
+ 弄一个指向 "ICorDebugValue" 对象地址的指针，该对象表示与给定的 CCW 指针相对应的托管对象。  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
