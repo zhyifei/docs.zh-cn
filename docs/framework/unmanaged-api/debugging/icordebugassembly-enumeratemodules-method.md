@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c7ba51a1-0dd5-4452-b471-232febe0f897
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e1d8d76084bcf0b5951c6431c6f21f352406050b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b55bd41039fce84a21c5d651d93b56f5d84b7611
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737366"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088184"
 ---
-# <a name="icordebugassemblyenumeratemodules-method"></a><span data-ttu-id="58ba0-102">ICorDebugAssembly::EnumerateModules 方法</span><span class="sxs-lookup"><span data-stu-id="58ba0-102">ICorDebugAssembly::EnumerateModules Method</span></span>
-<span data-ttu-id="58ba0-103">获取一个枚举器模块中包含`ICorDebugAssembly`。</span><span class="sxs-lookup"><span data-stu-id="58ba0-103">Gets an enumerator for the modules contained in the `ICorDebugAssembly`.</span></span>  
+# <a name="icordebugassemblyenumeratemodules-method"></a><span data-ttu-id="6b29f-102">ICorDebugAssembly::EnumerateModules 方法</span><span class="sxs-lookup"><span data-stu-id="6b29f-102">ICorDebugAssembly::EnumerateModules Method</span></span>
+<span data-ttu-id="6b29f-103">获取 `ICorDebugAssembly`中包含的模块的枚举器。</span><span class="sxs-lookup"><span data-stu-id="6b29f-103">Gets an enumerator for the modules contained in the `ICorDebugAssembly`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="58ba0-104">语法</span><span class="sxs-lookup"><span data-stu-id="58ba0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6b29f-104">语法</span><span class="sxs-lookup"><span data-stu-id="6b29f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumerateModules (  
@@ -35,15 +33,15 @@ HRESULT EnumerateModules (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="58ba0-105">参数</span><span class="sxs-lookup"><span data-stu-id="58ba0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6b29f-105">参数</span><span class="sxs-lookup"><span data-stu-id="6b29f-105">Parameters</span></span>  
  `ppModules`  
- <span data-ttu-id="58ba0-106">[out]ICorDebugModuleEnum 接口的枚举器的地址指针。</span><span class="sxs-lookup"><span data-stu-id="58ba0-106">[out] A pointer to the address of the ICorDebugModuleEnum interface that is the enumerator.</span></span>  
+ <span data-ttu-id="6b29f-106">弄一个指针，指向作为枚举器的 ICorDebugModuleEnum 接口的地址。</span><span class="sxs-lookup"><span data-stu-id="6b29f-106">[out] A pointer to the address of the ICorDebugModuleEnum interface that is the enumerator.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="58ba0-107">要求</span><span class="sxs-lookup"><span data-stu-id="58ba0-107">Requirements</span></span>  
- <span data-ttu-id="58ba0-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="58ba0-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6b29f-107">要求</span><span class="sxs-lookup"><span data-stu-id="6b29f-107">Requirements</span></span>  
+ <span data-ttu-id="6b29f-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6b29f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="58ba0-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="58ba0-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6b29f-109">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6b29f-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="58ba0-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="58ba0-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6b29f-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6b29f-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="58ba0-111">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="58ba0-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="6b29f-111">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6b29f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
