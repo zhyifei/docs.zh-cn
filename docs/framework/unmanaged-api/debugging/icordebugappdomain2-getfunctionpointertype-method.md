@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0aba6096-5b38-435c-a72a-86d35db4daef
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f0643ba9e750e7c64d2dae8eb5744df7bc26931
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a6e0b009674ff52595aaa0ae4a060f1cdfd1398
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737802"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089049"
 ---
 # <a name="icordebugappdomain2getfunctionpointertype-method"></a>ICorDebugAppDomain2::GetFunctionPointerType 方法
-获取一个指向具有给定的签名的函数。  
+获取一个指针，该指针指向具有给定签名的函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,18 +37,18 @@ HRESULT GetFunctionPointerType (
   
 ## <a name="parameters"></a>参数  
  `nTypeArgs`  
- [in]该函数的类型参数的数目。  
+ 中函数的类型参数的数目。  
   
  `ppTypeArgs`  
- [in]一个指针数组，其中每个指向对象的表示函数的类型参数。 第一个元素是返回类型;每个其他元素是参数类型。  
+ 中指针的数组，其中每个都指向表示函数类型参数的 ICorDebugType 对象。 第一个元素是返回类型;其他每个元素都是一个参数类型。  
   
  `ppType`  
- [out]指向的地址的指针`ICorDebugType`对象表示该函数的指针。  
+ 弄指向表示指向函数的指针的 `ICorDebugType` 对象地址的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
