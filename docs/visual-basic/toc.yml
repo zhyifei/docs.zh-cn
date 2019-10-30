@@ -961,10 +961,10 @@
           href: language-reference/error-messages/bad-file-name-or-number.md
         - name: 错误的记录长度
           href: language-reference/error-messages/bad-record-length.md
-        - name: 由于不等待此调用，因此在调用完成之前，当前方法将继续运行
-          href: language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md
-        - name: 无法将匿名类型转换为表达式树，因为它包含用于初始化另一个字段的字段
-          href: language-reference/error-messages/cannot-convert-anonymous-type-to-expression-tree.md
+        - name: 在调用完成之前，会继续执行当前方法，原因是此调用不处于等待状态
+          href: language-reference/error-messages/bc42358.md
+        - name: 无法将匿名类型转换为表达式树，因为此类型的属性用于初始化其他属性
+          href: language-reference/error-messages/bc36548.md
         - name: 无法创建 ActiveX 组件
           href: language-reference/error-messages/cannot-create-activex-component.md
         - name: “<name>”是使用“System.MarshalByRefObject”作为基类的类“<name>”的值类型字段“<classname>”的成员，无法引用

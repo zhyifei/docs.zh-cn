@@ -30,6 +30,8 @@
         - name: 推荐影片（矩阵因子分解）
           href: tutorials/movie-recommendation.md
         - name: 图像分类（传输学习）
+          href: tutorials/image-classification-api-transfer-learning.md
+        - name: 对图像进行分类（模型组合）
           href: tutorials/image-classification.md
         - name: 产品销售分析（异常情况检测）
           href: tutorials/sales-anomaly-detection.md
@@ -93,6 +95,8 @@
               href: how-to-guides/serve-model-web-api-ml-net.md
     - name: 工具
       items:
+        - name: 将数据加载到模型生成器中
+          href: how-to-guides/load-data-model-builder.md
         - name: 安装模型生成器
           href: how-to-guides/install-model-builder.md
         - name: 安装 CLI
