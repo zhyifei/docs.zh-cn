@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fae3673fe72d036802cb1a8366aaa2430c38884
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac2d01121e81b545556fb082fa7b82c31cccf9da
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927505"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118838"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>SingleTagSectionHandler 的自定义元素
 
-定义自定义配置节中的设置, 该部分由\<> 元素的部分定义, <xref:System.Configuration.SingleTagSectionHandler>并使用类。
+定义自定义配置节中由 \<节 > 元素定义并使用 <xref:System.Configuration.SingleTagSectionHandler> 类的设置。
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; *\<sectionName>*
+&nbsp;&nbsp; *\<sectionName >*
 
 ## <a name="syntax"></a>语法
 
@@ -40,15 +40,15 @@ ms.locfileid: "69927505"
 
 ## <a name="child-elements"></a>子元素
 
-无
+None
 
 ## <a name="remarks"></a>备注
 
-[ **\<** ](section-element.md)  **SectionName>元素是configSections>元素中>标记\<** 部分定义的自定义元素。 [ **\<** ](configsections-element-for-configuration.md) <xref:System.Collections.IDictionary> 调用<xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>时, 配置系统返回对象。
+**\<sectionName >** 元素是一个自定义元素，该元素由[ **\<节 >** ](section-element.md)标记在[ **\<configSections >** ](configsections-element-for-configuration.md)元素中定义。 调用 <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>时，配置系统将返回 <xref:System.Collections.IDictionary> 对象。
 
 ## <a name="example"></a>示例
 
-下面的示例声明一个名<xref:System.Configuration.SingleTagSectionHandler>  **\<为 sampleSection >** 的自定义元素, 该元素包含由类读取的设置:
+下面的示例声明一个名为 **\<sampleSection >** 的自定义元素，该元素包含由 <xref:System.Configuration.SingleTagSectionHandler> 类读取的设置：
 
 ```xml
 <configuration>
@@ -64,7 +64,7 @@ ms.locfileid: "69927505"
 
 ## <a name="configuration-file"></a>配置文件
 
-此元素可用于应用程序配置文件、计算机配置文件 (*machine.config*) 和不在应用程序目录级别的 web.config 文件。
+此元素可用于应用程序配置文件、计算机配置文件（*machine.config*）和不在应用程序目录级别的*web.config 文件。*
 
 ## <a name="see-also"></a>请参阅
 

@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: c94b1b61-045a-4695-bacd-0f18c5acc246
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f67f3ef57b4996eb4a956c596b76fb94b1bdfd7a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb158b35165fb229fc78169e2508679b6749752e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738884"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122952"
 ---
 # <a name="getstartupnotificationevent-function"></a>GetStartupNotificationEvent 函数
 创建或打开一个事件句柄，由在指定目标进程中加载的公共语言运行时 (CLR) 对其发出信号。  
@@ -61,10 +59,10 @@ HRESULT GetStartupNotificationEvent
  在发出信号通知事件的 CLR 执行任何托管代码之前，对该事件发出了信号。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** dbgshim.h  
+ **标头：** dbgshim.dll  
   
  **库：** dbgshim.dll  
   
- **.NET framework 版本：** 3.5 SP1
+ **.NET Framework 版本：** 3.5 SP1

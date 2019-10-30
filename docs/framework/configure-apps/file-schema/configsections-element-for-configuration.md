@@ -7,25 +7,25 @@ helpviewer_keywords:
 - configSections Element
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31b53837e24029fc7ff0b576d95c0213041a434e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6024144b6f12df22369366f04c3cbad02c5011d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927671"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119018"
 ---
-# <a name="configsections-element-for-configuration"></a>\<用于配置 > 的\<configSections > 元素
+# <a name="configsections-element-for-configuration"></a>\<配置 \<configSections > 元素 >
 
 包含配置节和命名空间声明。
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; **\<configSections>**
+&nbsp;&nbsp; **\<configSections >**
 
 ## <a name="attributes"></a>特性
 
-无
+None
 
 ## <a name="parent-element"></a>父元素
 
@@ -37,18 +37,18 @@ ms.locfileid: "69927671"
 
 |     | 描述 |
 | --- | ----------- |
-| [ **\<节 >** ](section-element.md) | 包含配置节声明。 |
-| [ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md) | 定义配置节的命名空间。 |
+| [ **\<部分 >** ](section-element.md) | 包含配置节声明。 |
+| [ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md) | 定义配置节的命名空间。 |
 | [ **\<remove>** ](remove-element-for-configsections.md) | 删除预定义的节或节组。 |
 | [ **\<clear>** ](clear-element-for-configsections.md) | 清除所有之前定义的部分和节组。 |
 
 ## <a name="remarks"></a>备注
 
-如果此元素在配置文件中, 则它必须是 **\<配置 >** 元素的第一个子元素。
+如果此元素在配置文件中，则它必须是 **\<配置 >** 元素的第一个子元素。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何定义配置节并定义该部分的设置:
+下面的示例演示如何定义配置节并定义该部分的设置：
 
 ```xml
 <configuration>
@@ -64,7 +64,7 @@ ms.locfileid: "69927671"
 
 ## <a name="configuration-file"></a>配置文件
 
-此元素可用于应用程序配置文件、计算机配置文件 (*machine.config*) 和不在应用程序目录级别的 web.config 文件。
+此元素可用于应用程序配置文件、计算机配置文件（*machine.config*）和不在应用程序目录级别的*web.config 文件。*
 
 ## <a name="see-also"></a>请参阅
 

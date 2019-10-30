@@ -14,50 +14,48 @@ helpviewer_keywords:
 ms.assetid: c3be2cbd-2d93-438b-9888-9a0251b63c03
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a2c71f32dfd190e188bb28aad5d51c72160eb4bc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b7cc41848e41976f388e38bf22c9ea0f90abbae
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603237"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121482"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager 接口
-提供方法，以允许访问和控制当前正在执行的线程的安全上下文。  
+提供允许访问和控制当前正在执行的线程的安全上下文的方法。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetSecurityContext 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)|获取所请求[IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)从主机。|  
-|[ImpersonateLoggedOnUser 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md)|请求的代码在执行使用当前用户标识的凭据。|  
-|[OpenThreadToken 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-openthreadtoken-method.md)|将打开与当前线程关联的自由访问令牌。|  
-|[RevertToSelf 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-reverttoself-method.md)|终止模拟当前用户标识，并返回原始线程标记。|  
-|[SetSecurityContext 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setsecuritycontext-method.md)|设置当前执行线程的安全上下文。|  
-|[SetThreadToken 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setthreadtoken-method.md)|设置当前执行线程的句柄。|  
+|[GetSecurityContext 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)|从主机获取请求的[IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) 。|  
+|[ImpersonateLoggedOnUser 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md)|请求使用当前用户标识的凭据执行代码。|  
+|[OpenThreadToken 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-openthreadtoken-method.md)|打开与当前线程关联的自由访问标记。|  
+|[RevertToSelf 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-reverttoself-method.md)|终止当前用户标识的模拟并返回原始线程标记。|  
+|[SetSecurityContext 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setsecuritycontext-method.md)|设置当前正在执行的线程的安全上下文。|  
+|[SetThreadToken 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setthreadtoken-method.md)|设置当前正在执行的线程的句柄。|  
   
 ## <a name="remarks"></a>备注  
- 主机可以控制由公共语言运行时 (CLR) 和用户代码对线程令牌的所有代码访问权限。 它还可确保完整的安全跨异步操作或具有受限制的代码访问权限的代码点传递上下文信息。 `IHostSecurityContext` 封装此安全上下文信息，这是不透明的 CLR。  
+ 宿主可以通过公共语言运行时（CLR）和用户代码控制对线程标记的所有代码访问。 它还可以确保在异步操作或代码点之间跨受限制的代码访问传递完整的安全上下文信息。 `IHostSecurityContext` 封装此安全上下文信息，这对于 CLR 是不透明的。  
   
- CLR 会在内部处理托管的线程上下文。 它会查询特定于进程的`IHostSecurityManager`在以下情况下：  
+ CLR 在内部处理托管线程上下文。 它在以下情况下查询特定于进程的 `IHostSecurityManager`：  
   
-- 在终结器执行期间的终结器线程。  
+- 终结器线程上的终结器执行期间。  
   
-- 在类和模块构造函数执行。  
+- 在类和模块构造函数执行期间。  
   
-- 在对的调用中，在辅助线程上异步点[ihostthreadpoolmanager:: Queueuserworkitem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md)方法。  
+- 在工作线程上的异步点，调用[IHostThreadPoolManager：： QueueUserWorkItem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md)方法。  
   
-- 处于维护的 I/O 完成端口。  
+- 用于 i/o 完成端口的服务。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, about interoperation
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: edec95ea729fdf26e384b6658c241ca307e60851
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cdd8d2781331956289d2b74162e653ba1ee8fad6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643109"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114229"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>与非托管代码进行交互操作
 
@@ -49,7 +47,7 @@ ms.locfileid: "61643109"
 介绍如何在程序集中嵌入 COM 类型的类型信息，以及公共语言运行时如何确定嵌入的 COM 类型的等效性。
 
 [如何：使用 Tlbimp.exe 生成主互操作程序集](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
-介绍如何使用 Tlbimp.exe （类型库导入程序）生成主要互操作程序集。
+介绍如何使用 Tlbimp.exe  （类型库导入程序）生成主要互操作程序集。
 
 [如何：注册主互操作程序集](how-to-register-primary-interop-assemblies.md)  
 介绍如何注册主互操作程序集，然后才能在项目中引用它们。

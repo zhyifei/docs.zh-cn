@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22d2e339-f174-40b5-a478-0b744501566f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 489ea22e17178398f53e103da04a47e8fe15a936
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 693ec07176f80711709cd9b85c6886bea8be74b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738932"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122969"
 ---
 # <a name="iclrdataenummemoryregionsenummemoryregions-method"></a>ICLRDataEnumMemoryRegions::EnumMemoryRegions 方法
 枚举指定的内存区域。  
@@ -39,23 +37,23 @@ HRESULT EnumMemoryRegions (
   
 ## <a name="parameters"></a>参数  
  `callback`  
- [in]一个指向[ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md)调用此方法对于枚举通知调试器结果的每个内存区域的实例。  
+ 中指向[ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md)实例的指针，此方法为每个要枚举的内存区域调用此方法，以通知调试器结果。  
   
- 即使该回调指示失败，将继续内存区域的枚举。  
+ 即使回调指示失败，内存区域的枚举仍将继续。  
   
  `miniDumpFlags`  
- [in]不使用。  
+ 中不使用。  
   
  `clrFlags`  
- [in]值为[CLRDataEnumMemoryFlags](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md)枚举，用于指定要枚举的内存区域。  
+ 中[CLRDataEnumMemoryFlags](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md)枚举的一个值，该值指定要枚举的内存区域。  
   
 ## <a name="remarks"></a>备注  
- 此方法使用指定[ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md)实例，以通知调用方的结果。  
+ 此方法使用指定的[ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md)实例将结果通知给调用方。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** ClrData.idl, ClrData.h  
+ **标头：** ClrData，ClrData  
   
  **库：** CorGuids.lib  
   

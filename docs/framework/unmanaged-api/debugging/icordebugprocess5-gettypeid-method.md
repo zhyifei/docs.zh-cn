@@ -17,17 +17,15 @@ helpviewer_keywords:
 ms.assetid: 47dbaea4-8857-462e-93ba-fff880fc9e50
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 07c23a32037e83a878bb3136c48176f19249b207
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c159780b9019127d166e8437ea4ed214284011f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948689"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121266"
 ---
 # <a name="icordebugprocess5gettypeid-method"></a>ICorDebugProcess5::GetTypeID 方法
-将转换的对象地址[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)标识符。  
+将对象地址转换为[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)标识符。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,21 +38,21 @@ HRESULT GetTypeID(
   
 ## <a name="parameters"></a>参数  
  `obj`  
- [in]对象的地址。  
+ 中对象地址。  
   
  `pId`  
- 一个指向[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)标识的对象的值。  
+ 一个指针，指向用于标识对象的[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)值。  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

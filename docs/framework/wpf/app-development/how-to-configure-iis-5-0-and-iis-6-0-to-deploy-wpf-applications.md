@@ -1,5 +1,5 @@
 ---
-title: 如何：将 IIS 5.0 和 IIS 6.0 配置为部署 WPF 应用程序
+title: 如何：配置 IIS 5.0 和 IIS 6.0 以部署 WPF 应用程序
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MIME types [WPF], registering
@@ -13,21 +13,21 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-ms.openlocfilehash: 3a9bf79a9d505fef53b62cb589920adcf95ae92a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a731dc49556a73c585c6201a80ea3ea77c15cb11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611500"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124416"
 ---
-# <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>如何：将 IIS 5.0 和 IIS 6.0 配置为部署 WPF 应用程序
+# <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>如何：配置 IIS 5.0 和 IIS 6.0 以部署 WPF 应用程序
 
-你可以从大多数[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Web 服务器部署应用程序, 前提是这些服务器是使用适当的多用途 Internet 邮件扩展 (MIME) 类型配置的。 默认情况下, Microsoft Internet Information Services (IIS) 7.0 配置了这些 MIME 类型, 但 Microsoft Internet Information Services (IIS) 5.0 和 Microsoft Internet Information Services (IIS) 6.0 不是。
+你可以从大多数 Web 服务器部署 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序，前提是这些服务器是使用适当的多用途 Internet 邮件扩展（MIME）类型配置的。 默认情况下，Microsoft Internet Information Services （IIS）7.0 配置了这些 MIME 类型，但 Microsoft Internet Information Services （IIS）5.0 和 Microsoft Internet Information Services （IIS）6.0 不是。
 
-本主题介绍如何配置 microsoft Internet Information Services (iis) 5.0 和 microsoft Internet Information Services (iis) 6.0 以部署[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。
+本主题介绍如何配置 Microsoft Internet Information Services （IIS）5.0 和 Microsoft Internet Information Services （IIS）6.0 以部署 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序。
 
 > [!NOTE]
-> 你可以在注册表中检查*UserAgent*字符串, 以确定系统是否安装了 .NET Framework。 有关详细信息和检查*UserAgent*字符串以确定系统是否安装了 .NET Framework 的脚本, 请参阅[检测是否安装了 .NET Framework 3.0](how-to-detect-whether-the-net-framework-3-0-is-installed.md)。
+> 你可以在注册表中检查*UserAgent*字符串，以确定系统是否安装了 .NET Framework。 有关详细信息和检查*UserAgent*字符串以确定系统是否安装了 .NET Framework 的脚本，请参阅[检测是否安装了 .NET Framework 3.0](how-to-detect-whether-the-net-framework-3-0-is-installed.md)。
 
 <a name="content_expiration"></a>
 
@@ -37,7 +37,7 @@ ms.locfileid: "69611500"
 
 1. 单击“开始”菜单，指向“管理工具”，然后单击“Internet Information Services (IIS) 管理器”。 还可以使用“%systemroot%\system32\inetsrv\iis.msc”从命令行启动此应用程序。
 
-2. 展开 IIS 树, 直到找到 "**默认**网站" 节点。
+2. 展开 IIS 树，直到找到 "**默认**网站" 节点。
 
 3. 右键单击“默认网站”，然后从上下文菜单中选择“属性”。
 
@@ -49,7 +49,7 @@ ms.locfileid: "69611500"
 
 ## <a name="register-mime-types-and-file-extensions"></a>注册 MIME 类型和文件扩展名
 
-必须注册多个 MIME 类型和文件扩展名, 以便客户端系统上的浏览器可以加载正确的处理程序。 需要添加以下类型：
+必须注册多个 MIME 类型和文件扩展名，以便客户端系统上的浏览器可以加载正确的处理程序。 需要添加以下类型：
 
 |扩展名|MIME 类型|
 |---------------|---------------|
@@ -61,9 +61,9 @@ ms.locfileid: "69611500"
 |.xps|application/vnd.ms-xpsdocument|
 
 > [!NOTE]
-> 无需在客户端系统上注册 MIME 类型或文件扩展名。 当你安装 Microsoft .NET Framework 时, 它们会自动注册。
+> 无需在客户端系统上注册 MIME 类型或文件扩展名。 当你安装 Microsoft .NET Framework 时，它们会自动注册。
 
-以下 Microsoft Visual Basic Scripting Edition (VBScript) 示例自动将所需的 MIME 类型添加到 IIS。 若要使用该脚本，请将代码复制到服务器上的 .vbs 文件。 然后，通过从命令行运行该文件或在 [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)] 中双击该文件来运行脚本。
+以下 Microsoft Visual Basic Scripting Edition （VBScript）示例自动将所需的 MIME 类型添加到 IIS。 若要使用该脚本，请将代码复制到服务器上的 .vbs 文件。 然后，通过从命令行运行该文件或在 Microsoft Windows 资源管理器中双击该文件来运行该脚本。
 
 ```vb
 ' This script adds the necessary Windows Presentation Foundation MIME types
@@ -126,9 +126,9 @@ End Sub
 ```
 
 > [!NOTE]
-> 多次运行此脚本会在 Microsoft Internet Information Services (IIS) 5.0 或 Microsoft Internet Information Services (IIS) 6.0 元数据库中创建多个 MIME 映射条目。
+> 多次运行此脚本会在 Microsoft Internet Information Services （IIS）5.0 或 Microsoft Internet Information Services （IIS）6.0 元数据库中创建多个 MIME 映射条目。
 
-运行此脚本后, 你可能看不到 Microsoft Internet Information Services (IIS) 5.0 或 Microsoft Internet Information Services (IIS) 6.0 Microsoft 管理控制台 (MMC) 中的其他 MIME 类型。 不过, 这些 MIME 类型已添加到 Microsoft Internet Information Services (IIS) 5.0 或 Microsoft Internet Information Services (IIS) 6.0 元数据库中。 以下脚本将显示 Microsoft Internet Information Services (IIS) 5.0 或 Microsoft Internet Information Services (IIS) 6.0 元数据库中的所有 MIME 类型。
+运行此脚本后，你可能看不到 Microsoft Internet Information Services （IIS）5.0 或 Microsoft Internet Information Services （IIS） 6.0 Microsoft 管理控制台（MMC）中的其他 MIME 类型。 不过，这些 MIME 类型已添加到 Microsoft Internet Information Services （IIS）5.0 或 Microsoft Internet Information Services （IIS）6.0 元数据库中。 以下脚本将显示 Microsoft Internet Information Services （IIS）5.0 或 Microsoft Internet Information Services （IIS）6.0 元数据库中的所有 MIME 类型。
 
 ```vb
 ' This script lists the MIME types for an IIS Server.

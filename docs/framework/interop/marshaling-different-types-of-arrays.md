@@ -8,17 +8,15 @@ helpviewer_keywords:
 - marshaling, Arrays sample
 - data marshaling, Arrays sample
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8cbc904b56237d3c875566ee1276c121dae70c4c
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 1490171c4dd423baa3b6c5f5e00cf133c2584cae
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151748"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124397"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>封送处理不同类型的数组
-数组是包含有一个或多个相同类型的元素的托管代码中的引用类型。 尽管数组是引用类型，但它们却作为 In 参数传递到非托管函数。 此行为与托管数组传递到托管对象的方式不一致，数组作为 In/Out 参数进行传递。 有关其他详细信息，请参阅 [复制和锁定](copying-and-pinning.md)。  
+数组是包含有一个或多个相同类型的元素的托管代码中的引用类型。 尽管数组是引用类型，但它们却作为 In 参数传递到非托管函数。 此行为与托管数组传递到托管对象的方式不一致，数组作为 In/Out 参数进行传递。 有关其他详细信息，请参阅[复制和固定](copying-and-pinning.md)。  
   
  下表列出了数组的封送处理选项，并描述了它们的用法。  
   
@@ -86,7 +84,7 @@ ms.locfileid: "71151748"
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 是一个自定义的非托管库，它包含之前列出的函数、两个结构变量（ **MYPOINT** 和 **MYPERSON**）的实现。 此结构包含以下元素：  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 是一个自定义的非托管库，它包含之前列出的函数、两个结构变量（MYPOINT 和 MYPERSON）的实现。 此结构包含以下元素：  
   
 ```cpp
 typedef struct _MYPOINT  
