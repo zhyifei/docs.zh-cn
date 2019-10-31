@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 13be0299-df0d-4951-aabf-0676a30b385f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1aa4ab44fc8ef1033dcef1a9b36d7487da86cd58
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d39ad45e143026f40ffcf1339e923837f9e812c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779354"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195848"
 ---
 # <a name="ihostmemorymanagervirtualprotect-method"></a>IHostMemoryManager::VirtualProtect 方法
-充当相应的 Win32 函数的逻辑包装。 Win32 实现`VirtualProtect`更改调用进程的虚拟地址空间中已提交页面区域上的保护。  
+用作相应 Win32 函数的逻辑包装。 的 Win32 实现 `VirtualProtect` 在调用进程的虚拟地址空间中更改已提交页区域的保护。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,37 +38,37 @@ HRESULT VirtualProtect (
   
 ## <a name="parameters"></a>参数  
  `lpAddress`  
- [in]指向其保护属性是要更改虚拟内存的基址的指针。  
+ 中指向要更改其保护属性的虚拟内存基址的指针。  
   
  `dwSize`  
- [in]以字节为单位的内存页，若要更改的区域的大小。  
+ 中要更改的内存页区域的大小（以字节为单位）。  
   
  `flNewProtect`  
- [in]要应用的内存保护的类型。  
+ 中要应用的内存保护的类型。  
   
  `pflOldProtect`  
- [out]指向上一个内存保护值的指针。  
+ 弄指向上一个内存保护值的指针。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`VirtualProtect` 已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。|  
-|HOST_E_TIMEOUT|呼叫已超时。|  
+|S_OK|`VirtualProtect` 成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|事件已取消时被阻塞的线程或纤程正在等待它。|  
-|E_FAIL|发生未知的灾难性故障。 如果某方法返回 E_FAIL，CLR 不再在进程内可用。 对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
+|E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>备注  
- 此实现`VirtualProtect`返回 HRESULT 值，而 Win32 实现返回一个非零值来指示进程成功，而零值以指示失败。 有关详细信息，请参阅 Windows 平台文档。  
+ 此 `VirtualProtect` 实现返回一个 HRESULT 值，而 Win32 实现返回非零值以指示成功，并返回一个零值以指示失败。 有关详细信息，请参阅 Windows 平台文档。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

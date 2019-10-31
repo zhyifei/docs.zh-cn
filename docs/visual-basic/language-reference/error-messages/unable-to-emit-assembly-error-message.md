@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 530aaee40be92bf72ee4b83b4141108e9b81c8a1
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5776755a57fbc2b0086b1c9b6cfbb2f2b7eb03fa
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70968854"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197277"
 ---
 # <a name="unable-to-emit-assembly-error-message"></a>无法发出程序集： \<错误消息 >
 
@@ -64,4 +64,4 @@ Visual Basic 编译器调用程序集链接器（*al.exe*，也称为 Alink）�
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Sn.exe（强名称工具）](../../../framework/tools/sn-exe-strong-name-tool.md)
 - [如何：创建公钥/私钥对](../../../standard/assembly/create-public-private-key-pair.md)
-- [与我们交流](/visualstudio/ide/talk-to-us)
+- [与我们交流](/visualstudio/ide/feedback-options)

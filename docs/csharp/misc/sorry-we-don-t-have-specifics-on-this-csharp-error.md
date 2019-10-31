@@ -677,12 +677,12 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: f60c2e3caec215c60851e669eabf554617149096
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 68ea00c6f5f97e61adaeb53aed8464cf874814e7
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002163"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196226"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>很抱歉，我们没有关于此 C# 错误的具体信息
 
@@ -691,7 +691,7 @@ ms.locfileid: "72002163"
  [Msdn 论坛-视觉对象C#](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
  提供了论坛，讨论有关 Visual C#的问题以及其他论坛中未讨论的问题。  
 
- [堆栈溢出](https://stackoverflow.com/questions/tagged/c%23)  
+ [Stack Overflow](https://stackoverflow.com/questions/tagged/c%23)  
 提供 QA 网站，以了解有关视觉对象C#的问题和问题。  
 
  另请参见：  
@@ -701,4 +701,4 @@ ms.locfileid: "72002163"
 
 - [C# 编程指南](../programming-guide/index.md)
 - [C# 参考](../language-reference/index.md)
-- [与我们交流](/visualstudio/ide/talk-to-us)
+- [与我们交流](/visualstudio/ide/feedback-options)

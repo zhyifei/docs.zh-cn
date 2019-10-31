@@ -15,21 +15,21 @@ helpviewer_keywords:
 - WPF [WPF], about Windows Presentation Foundation
 - 3-D rendering [WPF]
 ms.assetid: 582a314e-e23d-4144-b45b-acbbd5579252
-ms.openlocfilehash: d2a0cdb7e49fb584d0824edcefe710313ba21d4a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 893f9cd881b841409829d8f6a0513ee4368535ab
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934675"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197591"
 ---
 # <a name="introduction-to-wpf-in-visual-studio"></a>Visual Studio 中的 WPF 简介
-在 Visual Studio 中的 Windows Presentation Foundation (WPF) 为开发人员提供了一个统一的编程模型构建业务线 Windows 桌面应用程序。  
+Visual Studio 中的 Windows Presentation Foundation （WPF）为开发人员提供了一个统一的编程模型，用于在 Windows 上构建业务线桌面应用程序。  
   
- [使用 Windows Presentation Foundation 创建桌面应用程序](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+ [创建具有 Windows Presentation Foundation 的桌面应用程序](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 
  [在 Visual Studio 和 Blend for Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [WPF 介绍](/visualstudio/designers/introduction-to-wpf)  
+ [WPF 介绍](/dotnet/framework/wpf/introduction-to-wpf)  
   
  [.NET Framework 中的 WPF](../index.md)  
   

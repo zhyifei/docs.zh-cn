@@ -9,24 +9,24 @@ ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 287ed08db8a4266e5044a81d47a697949257e113
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8b9e2c5c05f1a4b263890c2d8ca8474abe07d836
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658487"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197412"
 ---
 # <a name="walkthrough-style-wpf-content"></a>演练：样式 WPF 内容
 
-本文介绍如何将样式应用于 Windows 窗体上承载的 Windows Presentation Foundation (WPF) 控件。
+本文介绍如何将样式应用于 Windows 窗体上承载的 Windows Presentation Foundation （WPF）控件。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>Prerequisites
 
 若要完成本演练，必须具有 Visual Studio。
 
 ## <a name="create-the-project"></a>创建项目
 
-打开 Visual Studio, 并在 Visual Basic 或视觉对象C#中创建一个名为`StylingWpfContent`的新 Windows 窗体应用程序项目。
+打开 Visual Studio，并在 Visual Basic 或视觉对象C#命名 `StylingWpfContent`中创建新的 Windows 窗体应用程序项目。
 
 > [!NOTE]
 > 承载 WPF 内容时，仅支持 C# 和 Visual Basic 项目。
@@ -35,15 +35,15 @@ ms.locfileid: "69658487"
 
 将 WPF 控件类型添加到项目后，就可在 <xref:System.Windows.Forms.Integration.ElementHost> 控件中托管它。
 
-1. 将新的 WPF <xref:System.Windows.Controls.UserControl> 项目添加到解决方案。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参见[演练：在设计时](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)在 Windows 窗体上创建新的 WPF 内容。
+1. 将新的 WPF <xref:System.Windows.Controls.UserControl> 项目添加到解决方案。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参阅[演练：在设计时在 Windows 窗体上创建新的 WPF 内容](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。
 
 2. 在设计视图中，请确保已选中 `UserControl1`。
 
-3. 在 "**属性**" 窗口中, 将<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>属性的值设置为**200**。
+3. 在 "**属性**" 窗口中，将 "<xref:System.Windows.FrameworkElement.Width%2A>" 和 "<xref:System.Windows.FrameworkElement.Height%2A>" 属性的值设置为**200**。
 
-4. 向添加<xref:System.Windows.Controls.Button?displayProperty=nameWithType>一个控件<xref:System.Windows.Controls.UserControl> , 并将属性的值设置<xref:System.Windows.Controls.ContentControl.Content%2A>为 "**取消**"。
+4. 向 <xref:System.Windows.Controls.UserControl> 中添加 <xref:System.Windows.Controls.Button?displayProperty=nameWithType> 控件，并将 <xref:System.Windows.Controls.ContentControl.Content%2A> 属性的值设置为 "**取消**"。
 
-5. 将第二<xref:System.Windows.Controls.Button?displayProperty=nameWithType>个控件添加<xref:System.Windows.Controls.UserControl>到, 并<xref:System.Windows.Controls.ContentControl.Content%2A>将属性的值设置为 **"确定"** 。
+5. 将第二个 <xref:System.Windows.Controls.Button?displayProperty=nameWithType> 控件添加到 <xref:System.Windows.Controls.UserControl> 并将 <xref:System.Windows.Controls.ContentControl.Content%2A> 属性的值设置为 **"确定"** 。
 
 6. 生成项目。
 
@@ -53,13 +53,13 @@ ms.locfileid: "69658487"
 
 1. 在 Windows 窗体设计器中打开 `Form1`。
 
-1. 在 "**工具箱**" 中, 双击`UserControl1`在窗体上创建`UserControl1`的实例。
+1. 在 "**工具箱**" 中，双击 "`UserControl1`" 以在窗体上创建 `UserControl1` 的实例。
 
    `UserControl1` 的实例托管在名为 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。
 
-1. 在的智能标记面板`elementHost1`中, 单击下拉列表中的 "**编辑托管内容**"。
+1. 在 `elementHost1`的智能标记面板中，单击下拉列表中的 "**编辑承载的内容**"。
 
-   `UserControl1`在 WPF 设计器中打开。
+   `UserControl1` 在 WPF 设计器中打开。
 
 1. 在 XAML 视图中，将以下 XAML 插到 `<UserControl>` 开始标记后面。 此 XAML 创建具有对比渐变边框的渐变。 单击此控件后，将更改渐变以生成按下按钮的外观。 有关详细信息，请参阅[样式设置和模板化](../../wpf/controls/styling-and-templating.md)。
 
@@ -111,13 +111,13 @@ ms.locfileid: "69658487"
    </UserControl.Resources>
    ```
 
-1. 通过在 "**取消**" 按钮的`<Button>`标记中插入以下 XAML, 将上一步中定义的样式应用于"取消"按钮。`SimpleButton`
+1. 通过在 "**取消**" 按钮的 `<Button>` 标记中插入以下 XAML，将上一步中定义的 `SimpleButton` 样式应用到 "取消" 按钮。
 
    ```xaml
    Style="{StaticResource SimpleButton}
    ```
 
-   按钮声明将类似于以下 XAML:
+   按钮声明将类似于以下 XAML：
 
    ```xaml
    <Button Height="23" Margin="41,52,98,0" Name="button1" VerticalAlignment="Top"
@@ -130,9 +130,9 @@ ms.locfileid: "69658487"
 
 1. 将新样式应用到按钮控件中。
 
-1. 从 "**调试**" 菜单中, 选择 "**启动调试**" 以运行应用程序。
+1. 从 "**调试**" 菜单中，选择 "**启动调试**" 以运行应用程序。
 
-1. 单击 **"确定" 和 "** **取消**" 按钮, 查看不同之处。
+1. 单击 **"确定" 和 "** **取消**" 按钮，查看不同之处。
 
 ## <a name="see-also"></a>请参阅
 
@@ -140,6 +140,6 @@ ms.locfileid: "69658487"
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [迁移和互操作性](../../wpf/advanced/migration-and-interoperability.md)
 - [使用 WPF 控件](using-wpf-controls.md)
-- [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [在 Visual Studio 中设计 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [XAML 概述 (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
 - [样式设置和模板化](../../wpf/controls/styling-and-templating.md)

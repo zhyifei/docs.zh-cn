@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c0b82a9f-edc6-4878-9c81-48de53c02142
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9996b1a84a5f095cf12d74d0c6f594911e7a7788
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a57610d1b41d80d54a245b9744aafd78a1e88177
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770207"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195908"
 ---
 # <a name="iclrtaskmanagergetcurrenttask-method"></a>ICLRTaskManager::GetCurrentTask 方法
-获取[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)方法调用产生的操作系统线程当前正在运行的实例。  
+获取当前在该方法调用所源自的操作系统线程上运行的[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,28 +35,28 @@ HRESULT GetCurrentTask (
   
 ## <a name="parameters"></a>参数  
  `ppTask`  
- [out]指向的地址的指针`ICLRTask`从中发起调用，在操作系统线程当前正在执行的实例或如果没有任何任务当前正在此线程上执行，则为 null。  
+ 弄一个指针，指向从其发出调用的操作系统线程上当前正在执行的 `ICLRTask` 实例的地址; 如果此线程上当前未执行任何任务，则为 null。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|该方法成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。|  
-|HOST_E_TIMEOUT|呼叫已超时。|  
+|S_OK|方法已成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|事件已取消时被阻塞的线程或纤程正在等待它。|  
-|E_FAIL|发生未知的灾难性故障。 如果某方法返回 E_FAIL，CLR 不再在进程内可用。 对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
+|E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>备注  
- `ICLRTask`实例的`ppTask`参数指向表示当前执行的任务的 clr。 `ICLRTask`实例都与相应关联[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)表示任务主机的实例。  
+ `ppTask` 参数指向的 `ICLRTask` 实例表示 CLR 当前正在执行的任务。 `ICLRTask` 实例与表示宿主任务的相应[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)实例相关联。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID440
 ms.assetid: 2c4be5c5-2f0d-4a2b-96fe-d1b24f08fc4c
-ms.openlocfilehash: 8370f744b916ce4a797c808ed58c5fc9580e6278
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 25c3b71eb818223c58ab17d9be885033a5d4ded0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935286"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197031"
 ---
 # <a name="automation-error"></a>自动错误
 执行方法或者获取或设置对象变量的属性时发生错误。 错误由创建该对象的应用程序报告。  
@@ -23,4 +23,4 @@ ms.locfileid: "61935286"
 ## <a name="see-also"></a>请参阅
 
 - [错误类型](../../../visual-basic/programming-guide/language-features/error-types.md)
-- [与我们交流](/visualstudio/ide/talk-to-us)
+- [与我们交流](/visualstudio/ide/feedback-options)

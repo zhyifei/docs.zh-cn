@@ -7,18 +7,18 @@ helpviewer_keywords:
 - localization [Windows Forms], bi-directional support in Windows
 - bi-directional language support [Windows Forms], Windows applications
 - Windows Forms, bi-directional support
-ms.openlocfilehash: 3bf90636bf1fc4b20b23c61fdd90033b3da35ddd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0b99dcdb9549a2319efe8a78eb4bca33f40f2cb0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141195"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197491"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows 窗体应用程序的双向支持
 可以使用 Visual Studio 创建支持双向（从右向左）语言（如阿拉伯语和希伯来语）的基于 Windows 的应用程序。 这包括标准窗体、对话框、MDI 窗体以及可在这些窗体中使用的所有控件 — 即，<xref:System.Windows.Forms.Control> 命名空间中的所有对象。
 
 ## <a name="culture-support"></a>区域性支持
- 区域性和 UI 区域性设置确定应用程序如何使用日期、时间、货币和其他信息。 区域性和 UI 区域性对双向语言的支持与对其他所有语言的支持相同。 有关详细信息，请参阅[适用于全局 Windows 窗体和 web 窗体的区域性特定类](/visualstudio/ide/culture-specific-classes-for-global-windows-forms-and-web-forms)。
+ 区域性和 UI 区域性设置确定应用程序如何使用日期、时间、货币和其他信息。 区域性和 UI 区域性对双向语言的支持与对其他所有语言的支持相同。 有关详细信息，请参阅[适用于全局 Windows 窗体和 web 窗体的区域性特定类](/visualstudio/ide/globalizing-and-localizing-applications)。
 
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>RightToLeft 和 RightToLeftLayout 属性
  可派生设备的 <xref:System.Windows.Forms.Control> 基类包含可设置用于更改窗体及其控件阅读顺序的 <xref:System.Windows.Forms.Control.RightToLeft%2A> 属性。 如果设置窗体的 <xref:System.Windows.Forms.Control.RightToLeft%2A> 属性，则默认情况下窗体上的控件将继承此设置。 但是，也可在大多数控件上单独设置 <xref:System.Windows.Forms.Control.RightToLeft%2A> 属性。 另请参阅[如何：为全球化在 Windows 窗体中按从右到左的顺序显示文本](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100))。

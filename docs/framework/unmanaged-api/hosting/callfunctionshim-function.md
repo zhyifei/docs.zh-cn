@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 37118465-ddf3-41f0-bf27-335b72777e63
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31d93ac427ec67726c9456d623aeb683c9029ccd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d39e15a2ba71ba0c0147482259f5618dcb5d298b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773771"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192097"
 ---
 # <a name="callfunctionshim-function"></a>CallFunctionShim 函数
-将指定的库中具有指定的名称和参数的函数调用。  
+对指定库中具有指定名称和参数的函数进行调用。  
   
- .NET Framework 4 中已弃用此函数。  
+ 此函数已在 .NET Framework 4 中弃用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,29 +41,29 @@ HRESULT CallFunctionShim (
   
 ## <a name="parameters"></a>参数  
  `szDllName`  
- [in]包含该函数的库的名称。  
+ 中包含函数的库的名称。  
   
  `szFunctionName`  
- [in]函数的名称。  
+ 中函数的名称。  
   
  `lpvArgument1`  
- [in]要传递给函数的第一个参数。  
+ 中要传递给函数的第一个参数。  
   
  `lpvArgument2`  
- [in]要传递给函数的第二个参数。  
+ 中要传递给函数的第二个参数。  
   
  `szVersion`  
- [in]包含该函数的库的版本。  
+ 中包含函数的库的版本。  
   
  `pvReserved`  
- [in]保留供将来使用。 此参数中传递零。  
+ 中保留供将来使用。 在此参数中传递零。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** MSCorEE.dll  
+ **库：** Mscoree.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

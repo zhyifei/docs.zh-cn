@@ -1,5 +1,5 @@
 ---
-title: 演练：在设计时在 Windows 窗体上分配 WPF 内容
+title: 演练：设计时在 Windows 窗体上分配 WPF 内容
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF content [Windows Forms], assigning at design time
@@ -11,24 +11,24 @@ ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: bc5f5e2d8808c0a60df721bf2c0ed76b45ef49a0
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 0fc7cf40acb141d698f59a1b7fbe6c32269ea61d
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666251"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197436"
 ---
-# <a name="walkthrough-assign-wpf-content-on-windows-forms-at-design-time"></a>演练：在设计时 Windows 窗体上分配 WPF 内容
+# <a name="walkthrough-assign-wpf-content-on-windows-forms-at-design-time"></a>演练：在设计时在 Windows 窗体上分配 WPF 内容
 
-本文介绍如何选择要在窗体上显示的 Windows Presentation Foundation (WPF) 控件类型。 可选择项目中包含的任何 WPF 控件类型。
+本文介绍如何选择要在窗体上显示的 Windows Presentation Foundation （WPF）控件类型。 可选择项目中包含的任何 WPF 控件类型。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>Prerequisites
 
 若要完成本演练，必须具有 Visual Studio。
 
 ## <a name="create-the-project"></a>创建项目
 
-打开 Visual Studio, 并在 Visual Basic 或视觉对象C#中创建一个名为`SelectingWpfContent`的新 Windows 窗体应用程序项目。
+打开 Visual Studio，并在 Visual Basic 或视觉对象C#命名 `SelectingWpfContent`中创建新的 Windows 窗体应用程序项目。
 
 > [!NOTE]
 > 承载 WPF 内容时，仅支持 C# 和 Visual Basic 项目。
@@ -37,19 +37,19 @@ ms.locfileid: "69666251"
 
 将 WPF 控件类型添加到项目后，可将其托管到不同的 <xref:System.Windows.Forms.Integration.ElementHost> 控件。
 
-1. 将新的 WPF <xref:System.Windows.Controls.UserControl> 项目添加到解决方案。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参见[演练：在设计时](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)在 Windows 窗体上创建新的 WPF 内容。
+1. 将新的 WPF <xref:System.Windows.Controls.UserControl> 项目添加到解决方案。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参阅[演练：在设计时在 Windows 窗体上创建新的 WPF 内容](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。
 
 2. 在设计视图中，请确保已选中 `UserControl1`。
 
-3. 在 "**属性**" 窗口中, 将<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>属性的值设置为**200**。
+3. 在 "**属性**" 窗口中，将 "<xref:System.Windows.FrameworkElement.Width%2A>" 和 "<xref:System.Windows.FrameworkElement.Height%2A>" 属性的值设置为**200**。
 
-4. 向添加<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>一个控件, <xref:System.Windows.Controls.UserControl>并将该<xref:System.Windows.Controls.TextBox.Text%2A>属性的值设置为 "**托管内容**"。
+4. 向 <xref:System.Windows.Controls.UserControl> 中添加 <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> 控件，并将 <xref:System.Windows.Controls.TextBox.Text%2A> 属性的值设置为 "**托管内容**"。
 
 5. 将第二个 WPF <xref:System.Windows.Controls.UserControl> 添加到项目。 使用控件类型的默认名称，`UserControl2.xaml`。
 
-6. 在 "**属性**" 窗口中, 将<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>属性的值设置为**200**。
+6. 在 "**属性**" 窗口中，将 "<xref:System.Windows.FrameworkElement.Width%2A>" 和 "<xref:System.Windows.FrameworkElement.Height%2A>" 属性的值设置为**200**。
 
-7. 向添加<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>一个控件, <xref:System.Windows.Controls.UserControl>并将该<xref:System.Windows.Controls.TextBox.Text%2A>属性的值设置为 "**托管内容 2**"。
+7. 将 <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> 控件添加到 <xref:System.Windows.Controls.UserControl> 并将 <xref:System.Windows.Controls.TextBox.Text%2A> 属性的值设置为 "**寄宿内容 2**"。
 
    > [!NOTE]
    > 一般情况下，你应承载更复杂的 WPF 内容。 此处，<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> 控件仅为了便于说明。
@@ -62,23 +62,23 @@ ms.locfileid: "69666251"
 
 1. 在 Windows 窗体设计器中打开 `Form1`。
 
-2. 在 "**工具箱**" 中, 双击`UserControl1`在窗体上创建`UserControl1`的实例。
+2. 在 "**工具箱**" 中，双击 "`UserControl1`" 以在窗体上创建 `UserControl1` 的实例。
 
    `UserControl1` 的实例托管在名为 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。
 
-3. 在的智能标记面板`elementHost1`中, 打开 "**选择承载的内容**" 下拉列表。
+3. 在 `elementHost1`的智能标记面板中，打开 "**选择所承载的内容**" 下拉列表。
 
 4. 从下拉列表框中选择 " **UserControl2** "。
 
    `elementHost1` 控件现承载 `UserControl2` 类型的实例。
 
-5. 在 "**属性**" 窗口中, 确认<xref:System.Windows.Forms.Integration.ElementHost.Child%2A> "属性" 设置为 " **UserControl2**"。
+5. 在 "**属性**" 窗口中，确认 "<xref:System.Windows.Forms.Integration.ElementHost.Child%2A>" 属性设置为 " **UserControl2**"。
 
-6. 从 "**工具箱**" 的 " **WPF 互操作性**" 组<xref:System.Windows.Forms.Integration.ElementHost>中, 将控件拖到窗体上。
+6. 从 "**工具箱**" 的 " **WPF 互操作性**" 组中，将 <xref:System.Windows.Forms.Integration.ElementHost> 控件拖到窗体上。
 
    新控件的默认名称是 `elementHost2`。
 
-7. 在的智能标记面板`elementHost2`中, 打开 "**选择承载的内容**" 下拉列表。
+7. 在 `elementHost2`的智能标记面板中，打开 "**选择所承载的内容**" 下拉列表。
 
 8. 从下拉列表中选择 " **UserControl1** "。
 
@@ -90,4 +90,4 @@ ms.locfileid: "69666251"
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [迁移和互操作性](../../wpf/advanced/migration-and-interoperability.md)
 - [使用 WPF 控件](using-wpf-controls.md)
-- [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [在 Visual Studio 中设计 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)

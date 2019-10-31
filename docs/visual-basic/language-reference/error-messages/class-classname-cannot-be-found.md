@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC31098
 ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
-ms.openlocfilehash: e1a33a56d196b2a8731f2ddb5c632b0de147db3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec7ce5ddcfe647088393042dd2ada52d283535f7
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649915"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197540"
 ---
-# <a name="class-classname-cannot-be-found"></a>类的\<类名 > 找不到
-类的\<类名 > 找不到。 这种情况通常是“Microsoft.VisualBasic.dll”不匹配的结果。  
+# <a name="class-classname-cannot-be-found"></a>找不到类 "\<classname >"
+找不到类 "\<classname >"。 这种情况通常是“Microsoft.VisualBasic.dll”不匹配的结果。  
   
  未能找到定义的成员。  
   
- **错误 ID:** BC31098  
+ **错误 ID：** BC31098  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
 1. 再次编译此程序以查看错误是否重复出现。  
   
-2. 如果错误重复出现，保存所做的工作并重新启动 Visual Studio。  
+2. 如果错误重复出现，请保存你的工作并重启 Visual Studio。  
   
 3. 如果错误仍然存在，请重新安装 Visual Basic。  
   
@@ -33,4 +33,4 @@ ms.locfileid: "61649915"
   
 ## <a name="see-also"></a>请参阅
 
-- [与我们交流](/visualstudio/ide/talk-to-us)
+- [与我们交流](/visualstudio/ide/feedback-options)

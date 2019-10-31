@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC31020
 ms.assetid: 23996dca-250f-4320-8211-1560e90172df
-ms.openlocfilehash: 510488e9dd18d8bf274a8fe5cd00666c4c26fcf5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65e63ddf15534ac83480bca3a9a01c97b629ee08
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787369"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198164"
 ---
 # <a name="unable-to-write-output-to-memory"></a>无法将输出写入内存
 将输出写入内存时出现问题。  
   
- **错误 ID:** BC31020  
+ **错误 ID：** BC31020  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
 1. 再次编译此程序以查看错误是否重复出现。  
   
-2. 如果错误仍然存在，保存所做的工作并重新启动 Visual Studio。  
+2. 如果错误仍然存在，请保存你的工作并重启 Visual Studio。  
   
 3. 如果错误重复出现，请重新安装 Visual Basic。  
   
@@ -31,4 +31,4 @@ ms.locfileid: "61787369"
   
 ## <a name="see-also"></a>请参阅
 
-- [与我们交流](/visualstudio/ide/talk-to-us)
+- [与我们交流](/visualstudio/ide/feedback-options)

@@ -2,12 +2,12 @@
 title: 使用 LINQ to XML 进行 WPF 数据绑定
 ms.date: 10/22/2019
 ms.topic: conceptual
-ms.openlocfilehash: 53bc5e09d3c837b69c8f215b1b5c61d1b745f683
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 53aba3295b98ae4a476b321cb585e1bbbdd45dad
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139798"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197389"
 ---
 # <a name="overview-of-wpf-data-binding-with-linq-to-xml"></a>与 LINQ to XML 的 WPF 数据绑定概述
 
@@ -36,7 +36,7 @@ WPF 数据绑定可使 UI 元素将其一个属性与一个数据源相关联。
 |绑定源|提供给 UI 元素以便进行显示的一个或多个值的源对象。 WPF 自动支持以下类型作为绑定源：CLR 对象、ADO.NET 数据对象、XML 数据（来自 XPath 或 LINQ to XML 查询）或其他 <xref:System.Windows.DependencyObject>。|
 |源路径|绑定源的属性，可解析为要绑定的一个或一组值。|
 
-依赖项属性是特定于 WPF 的概念，它表示 UI 元素的动态计算的属性。 例如，依赖项属性通常具有默认值或具有由父元素提供的值。 <xref:System.Windows.DependencyProperty> 类的实例（而不是支持标准属性的字段）支持这些特殊属性。 有关详细信息，请参阅[依赖项属性概述](/dotnet/framework/wpf/advanced/dependency-properties-overview)。
+依赖项属性是特定于 WPF 的概念，它表示 UI 元素的动态计算的属性。 例如，依赖项属性通常具有默认值或具有由父元素提供的值。 <xref:System.Windows.DependencyProperty> 类的实例（而不是支持标准属性的字段）支持这些特殊属性。 有关详细信息，请参阅[依赖项属性概述](../advanced/dependency-properties-overview.md)。
 
 ### <a name="dynamic-data-binding-in-wpf"></a>WPF 中的动态数据绑定
 
@@ -89,6 +89,6 @@ WPF 数据绑定可使 UI 元素将其一个属性与一个数据源相关联。
 
 - [使用 LINQ to XML 进行 WPF 数据绑定](wpf-data-binding-with-linq-to-xml-overview.md)
 - [LINQ to XML 动态属性](linq-to-xml-dynamic-properties.md)
-- [WPF 中的 XAML](/dotnet/framework/wpf/advanced/xaml-in-wpf)
+- [WPF 中的 XAML](../advanced/xaml-in-wpf.md)
 - [数据绑定 (WPF)](/dotnet/framework/wpf/data/data-binding-wpf)
 - [使用工作流标记](https://go.microsoft.com/fwlink/?LinkId=98685)

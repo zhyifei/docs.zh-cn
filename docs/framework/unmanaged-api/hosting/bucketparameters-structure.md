@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9432487e-f276-45d6-9a13-9a68024dbd46
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96fee259b31938ddec5820bc1b8d72a96b50c8d8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 80623bdec939b0ae5fc13008c1c4001c613ac435
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773882"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195963"
 ---
 # <a name="bucketparameters-structure"></a>BucketParameters 结构
-存储与事件相关联的当前异常的事件和参数的类型名称。  
+存储事件的类型名称和与事件关联的当前异常的参数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,18 +34,18 @@ typedef struct _BucketParameters {
 } BucketParameters;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`fInited`|`true`此结构的其余部分是否有效，则为否则为`false`。|  
+|`fInited`|如果此结构的其余部分有效，则 `true`;否则，`false`。|  
 |`pszEventTypeName`|事件类型的名称。|  
-|`pszParams`|一个字符串数组，其中每个指定与事件相关联的当前异常的参数。|  
+|`pszParams`|一个字符串数组，其中每个字符串都为与事件关联的当前异常指定一个参数。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.idl  
+ **标头：** Mscoree.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

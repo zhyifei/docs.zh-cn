@@ -2,12 +2,12 @@
 title: LINQ to XML 动态属性引用
 ms.date: 10/22/2019
 ms.topic: reference
-ms.openlocfilehash: ca3684716f9b562d0e6a006c26730a1d1a28f8b1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 48b51e92eb78786b2cc189e3e7daa00875b41585
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72921214"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197051"
 ---
 # <a name="linq-to-xml-dynamic-properties"></a>LINQ to XML 动态属性
 
@@ -21,7 +21,7 @@ ms.locfileid: "72921214"
 
 - 解析为索引器类型的索引值，如 [Elements](elements-xelement-dynamic-property.md) 和 <xref:System.Xml.Linq.XElement> 的 [Descendants](descendants-xelement-dynamic-property.md) 属性。 对于要解析为所需值或集合的索引器类型，必须为其传递展开名称参数。
 
-返回 <xref:System.Collections.Generic.IEnumerable%601> 类型索引值的所有动态属性都使用延迟执行。 有关延迟执行的详细信息，请参阅 [LINQ 查询简介 (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)。
+返回 <xref:System.Collections.Generic.IEnumerable%601> 类型索引值的所有动态属性都使用延迟执行。 有关延迟执行的详细信息，请参阅 [LINQ 查询简介 (C#)](../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。
 
 ## <a name="reference"></a>参考
 
@@ -33,4 +33,4 @@ ms.locfileid: "72921214"
 
 - [使用 LINQ to XML 进行 WPF 数据绑定](wpf-data-binding-with-linq-to-xml-overview.md)
 - [使用 LINQ to XML 进行 WPF 数据绑定概述](wpf-data-binding-with-linq-to-xml-overview.md)
-- [LINQ 查询简介 (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)
+- [LINQ 查询简介 (C#)](../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)

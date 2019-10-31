@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
-ms.openlocfilehash: 5585da7f2ccf7d5d3ec8db281ab9534249020a63
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 04ceec4839d07ba959c39af8c4f582c7abfe7d6b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619850"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198125"
 ---
 # <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>此单实例应用程序未能连接到原始实例
 此单实例应用程序未能连接到原始实例。 一些可能导致此问题的原因包括：  
   
 - 原始实例停止了响应。  
   
-- 应用程序没有创建内核对象的权限。 有关内核对象的详细信息，请参阅[Mutex](../../standard/threading/mutexes.md)。  
+- 应用程序没有创建内核对象的权限。 有关内核对象的详细信息，请参阅[mutex](../../standard/threading/mutexes.md)。  
   
      内核对象的基名称是通过串联程序集的 GUID、主版本号和次版本号得到的。 例如，基名称可能是 `3639f15d-9547-43da-8145-60da347829915.1`。  
   
@@ -34,4 +34,4 @@ ms.locfileid: "64619850"
   
 ## <a name="see-also"></a>请参阅
 
-- [调试器基础知识](/visualstudio/debugger/debugger-basics)
+- [调试器基础知识](/visualstudio/debugger/debugger-feature-tour)

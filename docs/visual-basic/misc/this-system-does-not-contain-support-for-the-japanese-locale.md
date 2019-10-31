@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_JPNNotSupported
 ms.assetid: 986d0379-c9d1-4004-b9ac-8d3bd95dfe85
-ms.openlocfilehash: f1a4e02d66d2073fd5172616214533bf4358422a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7b8f5e50c5a59a946724b817eb8979eb520b30b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942631"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198114"
 ---
 # <a name="this-system-does-not-contain-support-for-the-japanese-locale"></a>此系统不包含对日文区域设置的支持
 你正尝试使用 `VbStrConv.Japanese` 枚举成员，但你的系统不支持日文区域设置。  
@@ -22,4 +22,4 @@ ms.locfileid: "61942631"
 
 - <xref:System.Globalization>
 
-- [基于 .NET Framework 的国际应用程序简介](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+- [开发全球化和本地化应用](/visualstudio/ide/globalizing-and-localizing-applications)

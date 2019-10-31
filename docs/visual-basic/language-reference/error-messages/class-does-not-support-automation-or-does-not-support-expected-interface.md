@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID430
 ms.assetid: d985bb7e-e48e-443e-86f2-ddb86758757c
-ms.openlocfilehash: 4545c6d3bc302dba0c37e5ae6ebefa8939b0cff9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d249648748249af438ee6228cccc8e74f68407fb
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649902"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197529"
 ---
 # <a name="class-does-not-support-automation-or-does-not-support-expected-interface"></a>类不支持自动化或不支持所需的接口
 在 `GetObject` 或 `CreateObject` 函数调用中所指定的类尚未公开可编程接口，或者将项目从 .dll 更改为 .exe 或相反。  
@@ -23,4 +23,4 @@ ms.locfileid: "61649902"
 ## <a name="see-also"></a>请参阅
 
 - [错误类型](../../../visual-basic/programming-guide/language-features/error-types.md)
-- [与我们交流](/visualstudio/ide/talk-to-us)
+- [与我们交流](/visualstudio/ide/feedback-options)

@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: e0a00c4f57e45d65ff46fb9487a603a67d5a9e5c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 087735722fcd4dd789e25aacf6eeefffb490dac5
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620602"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198194"
 ---
-# <a name="unable-to-write-to-output-file-filename-error"></a>无法写入输出文件\<文件名 >:\<错误 >
+# <a name="unable-to-write-to-output-file-filename-error"></a>无法写入输出文件 "\<filename >"： \<错误 >
 创建文件时出现问题。  
   
  无法打开输出文件以进行写入。 文件（或包含该文件的文件夹）可能由另一个进程打开以供独占使用，或者可能设置了只读特性。  
@@ -27,13 +27,13 @@ ms.locfileid: "64620602"
   
  即使是项目输出文件中只有一个被标记为只读，也将会引发此异常。  
   
- **错误 ID:** BC31019  
+ **错误 ID：** BC31019  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
 1. 再次编译此程序以查看错误是否重复出现。  
   
-2. 如果错误仍然存在，保存所做的工作并重新启动 Visual Studio。  
+2. 如果错误仍然存在，请保存你的工作并重启 Visual Studio。  
   
 3. 如果仍出现错误，请重新启动计算机。  
   
@@ -45,18 +45,18 @@ ms.locfileid: "64620602"
   
 1. 打开你感兴趣的文件夹。  
   
-2. 单击**视图**图标，然后选择**详细信息**。  
+2. 单击 "**视图**" 图标，然后选择 "**详细信息**"。  
   
-3. 右键单击列标题，然后选择**属性**从下拉列表。  
+3. 右键单击列标题，然后从下拉列表中选择 "**属性**"。  
   
 ### <a name="to-change-the-attributes-of-a-file-or-folder"></a>更改文件或文件夹的特性  
   
-1. 在中**文件资源管理器**，右键单击文件或文件夹，然后选择**属性**。  
+1. 在**文件资源管理器**中，右键单击文件或文件夹，然后选择 "**属性**"。  
   
-2. 在**特性**一部分**常规**选项卡上，清除**只读**框。  
+2. 在 "**常规**" 选项卡的 "**属性**" 部分中，清除 "**只读**" 复选框。  
   
 3. 按“确定”。  
   
 ## <a name="see-also"></a>请参阅
 
-- [与我们交流](/visualstudio/ide/talk-to-us)
+- [与我们交流](/visualstudio/ide/feedback-options)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c71e95b3fd1276d2fae4268ed59818e5fafc8a79
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9e1b8d5cb25445ffc3ce08e8c73e1d3742067e21
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052244"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196717"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>跟踪应用程序和在应用程序中插入检测点
 跟踪是指应用程序正在运行时监视其执行情况的方式。 可在开发 .NET Framework 应用程序时向其添加跟踪和调试检测，也可在开发应用程序时或在部署此应用程序之后使用此检测。 可使用 <xref:System.Diagnostics.Trace?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug?displayProperty=nameWithType>和 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 类将错误和应用程序执行的相关信息记录在日志、文本文件或其他设备中，以供将来分析。  
@@ -29,7 +29,7 @@ ms.locfileid: "71052244"
   
 - 代码跟踪 - 接收运行时有关应用程序执行的信息性消息。  
   
-- 调试 - 跟踪并修复开发中的应用程序的编程错误。 有关详细信息，请参阅[调试](/visualstudio/debugger/debugging-in-visual-studio)。  
+- 调试 - 跟踪并修复开发中的应用程序的编程错误。 有关详细信息，请参阅[调试](/visualstudio/debugger/debugger-feature-tour)。  
   
 - 性能计数器 - 可用于跟踪应用程序性能的组件。 有关更多信息，请参阅[性能计数器](performance-counters.md)。  
   
@@ -58,11 +58,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  上述每个示例将在“输出窗口”中显示“Hello World!” 当应用程序在调试器中运行时。  
   
- 由此，你可以根据应用程序在测试环境中的行为对它进行调试并优化其性能。 在调试版本中调试应用程序时，可以打开 <xref:System.Diagnostics.Debug> 条件特性，以便接收所有调试输出。 当您的应用程序准备好发布时，可以在关闭 <xref:System.Diagnostics.Debug> 条件特性的情况下编译您的发布版本，使编译器不会在最终可执行文件中包含调试代码。 有关详细信息，请参阅[如何：使用跟踪和调试执行有条件编译](how-to-compile-conditionally-with-trace-and-debug.md)。 有关应用程序的不同生成配置的详细信息，请参阅[编译和生成](/visualstudio/ide/compiling-and-building-in-visual-studio)。  
+ 由此，你可以根据应用程序在测试环境中的行为对它进行调试并优化其性能。 在调试版本中调试应用程序时，可以打开 <xref:System.Diagnostics.Debug> 条件特性，以便接收所有调试输出。 当您的应用程序准备好发布时，可以在关闭 <xref:System.Diagnostics.Debug> 条件特性的情况下编译您的发布版本，使编译器不会在最终可执行文件中包含调试代码。 有关详细信息，请参阅[如何：使用跟踪和调试进行条件编译](how-to-compile-conditionally-with-trace-and-debug.md)。 有关应用程序的不同生成配置的详细信息，请参阅[编译和生成](/visualstudio/ide/compiling-and-building-in-visual-studio)。  
   
  你也可以使用 <xref:System.Diagnostics.Trace> 类的方法来跟踪已安装的应用程序中的代码执行情况。 通过将[跟踪开关](trace-switches.md)置于代码中，可控制是否执行跟踪以及执行的范围。 这使你可以监视应用程序在生产环境中的状态。 对使用在多台计算机上运行的多个组件的业务应用程序而言，这一点尤其重要。 可通过配置文件控制如何在部署后使用开关。 有关详细信息，请参阅[如何：创建、初始化和配置跟踪开关](how-to-create-initialize-and-configure-trace-switches.md)。  
   
- 开发要对其使用跟踪的应用程序时，应用程序代码中通常要包含跟踪和调试消息。 准备好部署应用程序时，无需打开“调试”条件属性就可编译发布版本。 但是，也可以打开“跟踪”条件属性，以便编译器将跟踪代码包括到可执行文件中。 有关详细信息，请参阅[如何：使用跟踪和调试执行有条件编译](how-to-compile-conditionally-with-trace-and-debug.md)。  
+ 开发要对其使用跟踪的应用程序时，应用程序代码中通常要包含跟踪和调试消息。 准备好部署应用程序时，无需打开“调试”条件属性就可编译发布版本。 但是，也可以打开“跟踪”条件属性，以便编译器将跟踪代码包括到可执行文件中。 有关详细信息，请参阅[如何：使用跟踪和调试进行条件编译](how-to-compile-conditionally-with-trace-and-debug.md)。  
   
 ### <a name="phases-of-code-tracing"></a>代码跟踪的阶段  
  代码跟踪有 3 个阶段：  
@@ -111,7 +111,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  借助跟踪语句，可避免执行以下艰难任务：检查原始源代码、对其进行修改、重新编译以及试图在调试环境中生成运行时错误。 请记住，检测应用程序这一操作可用于显示错误以及监视性能。  
   
 ## <a name="strategic-placement-of-trace-statements"></a>将跟踪语句置于关键位置  
- 放置供运行时期间使用的跟踪语句时，必须特别小心。 注意考虑部署的应用程序中可能需要什么跟踪信息，以便充分涵盖所有可能的跟踪方案。 然而，使用跟踪的应用程序差别很大，因此关于将跟踪置于关键位置，没有通用准则。 有关放置跟踪语句的详细信息，请[参阅如何：向应用程序代码](how-to-add-trace-statements-to-application-code.md)添加跟踪语句。  
+ 放置供运行时期间使用的跟踪语句时，必须特别小心。 注意考虑部署的应用程序中可能需要什么跟踪信息，以便充分涵盖所有可能的跟踪方案。 然而，使用跟踪的应用程序差别很大，因此关于将跟踪置于关键位置，没有通用准则。 有关放置跟踪语句的详细信息，请参阅[如何：向应用程序代码添加跟踪语句](how-to-add-trace-statements-to-application-code.md)。  
   
 ## <a name="output-from-tracing"></a>跟踪的输出  
  跟踪输出由名为“侦听器”的对象收集。 侦听器是接收跟踪输出，并将它写入输出设备（通常为窗口、日志或文本文件）的对象。 跟踪侦听器在创建后，通常会被添加到 <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> 集合中，这样侦听器就可以接收所有跟踪输出。  
@@ -133,10 +133,10 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  可通过实现自己的侦听器生成自定义结果。 例如，自定义跟踪侦听器可能将消息显示给消息框，或连接到数据库以将消息添加到表中。 所有自定义侦听器都应支持上述 6 种方法。 有关创建开发人员定义的侦听器的详细信息，请参阅 .NET Framework 参考中的 <xref:System.Diagnostics.TraceListener>。  
   
- “Write”和“WriteLine”方法始终写入指定的文本。 “Assert”、“WriteIf”和“WriteLineIf”需要布尔型自变量，该自变量控制它们是否写入指定的文本；只有在表达式为“true”（对于“WriteIf”和“WriteLineIf”），或“false”（对于“Assert”）时，它们才会写入指定的文本。 “Fail”方法始终写入指定的文本。 有关详细信息，请参阅[如何：将跟踪语句添加到应用](how-to-add-trace-statements-to-application-code.md)程序代码和 .NET Framework 引用。  
+ “Write”和“WriteLine”方法始终写入指定的文本。 “Assert”、“WriteIf”和“WriteLineIf”需要布尔型自变量，该自变量控制它们是否写入指定的文本；只有在表达式为“true”（对于“WriteIf”和“WriteLineIf”），或“false”（对于“Assert”）时，它们才会写入指定的文本。 “Fail”方法始终写入指定的文本。 有关详细信息，请参阅[如何：向应用程序代码添加跟踪语句](how-to-add-trace-statements-to-application-code.md)和 .NET Framework 参考。  
   
 ## <a name="security-concerns"></a>安全问题  
- 如果在部署 ASP.NET 应用程序之前未禁用跟踪和调试，你的应用程序可能会泄漏自身的相关信息，从而被恶意程序利用。 有关详细信息，请参阅[如何：通过跟踪和调试](how-to-compile-conditionally-with-trace-and-debug.md)、[编译和生成](/visualstudio/ide/compiling-and-building-in-visual-studio)进行条件编译， [以及如何：创建、初始化和配置跟踪开关](how-to-create-initialize-and-configure-trace-switches.md)。 也可通过 Internet 信息服务 (IIS) 配置调试。  
+ 如果在部署 ASP.NET 应用程序之前未禁用跟踪和调试，你的应用程序可能会泄漏自身的相关信息，从而被恶意程序利用。 有关详细信息，请参阅[如何：使用跟踪和调试进行条件编译](how-to-compile-conditionally-with-trace-and-debug.md)、[编译和生成](/visualstudio/ide/compiling-and-building-in-visual-studio)和[如何：创建、初始化和配置跟踪开关](how-to-create-initialize-and-configure-trace-switches.md)。 也可通过 Internet 信息服务 (IIS) 配置调试。  
   
 ## <a name="see-also"></a>请参阅
 
@@ -145,7 +145,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 - [代码协定](code-contracts.md)
 - [C#, F#, and Visual Basic Project Types](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)（C#、F# 和 Visual Basic 项目类型）
 - [如何：向应用程序代码添加跟踪语句](how-to-add-trace-statements-to-application-code.md)
-- [如何：使用跟踪和调试执行有条件编译](how-to-compile-conditionally-with-trace-and-debug.md)
+- [如何：使用跟踪和调试进行条件编译](how-to-compile-conditionally-with-trace-and-debug.md)
 - [如何：创建、初始化和配置跟踪开关](how-to-create-initialize-and-configure-trace-switches.md)
 - [如何：创建和初始化跟踪源](how-to-create-and-initialize-trace-sources.md)
 - [如何：将 TraceSource 和筛选器与跟踪侦听器一起使用](how-to-use-tracesource-and-filters-with-trace-listeners.md)
