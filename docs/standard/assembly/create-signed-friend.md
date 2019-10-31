@@ -5,37 +5,37 @@ ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 3bf71adc694f3c6e072990717198b4f2003cd503
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 52ecfbae11c7be125d0e60a0fce6a05182e2db9e
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523883"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774353"
 ---
-# <a name="how-to-create-signed-friend-assemblies"></a><span data-ttu-id="6b9b4-102">如何：创建已签名的友元程序集</span><span class="sxs-lookup"><span data-stu-id="6b9b4-102">How to: Create signed friend assemblies</span></span>
-<span data-ttu-id="6b9b4-103">本示例演示如何将友元程序集和具有强名称的程序集一起使用。</span><span class="sxs-lookup"><span data-stu-id="6b9b4-103">This example shows how to use friend assemblies with assemblies that have strong names.</span></span> <span data-ttu-id="6b9b4-104">这两种程序集必须都使用强名称。</span><span class="sxs-lookup"><span data-stu-id="6b9b4-104">Both assemblies must be strong named.</span></span> <span data-ttu-id="6b9b4-105">尽管本示例中的两种程序集使用相同的密钥，但可以对这两种程序集使用不同的密钥。</span><span class="sxs-lookup"><span data-stu-id="6b9b4-105">Although both assemblies in this example use the same keys, you could use different keys for two assemblies.</span></span>  
+# <a name="how-to-create-signed-friend-assemblies"></a><span data-ttu-id="688ed-102">如何：创建已签名的友元程序集</span><span class="sxs-lookup"><span data-stu-id="688ed-102">How to: Create signed friend assemblies</span></span>
+<span data-ttu-id="688ed-103">本示例演示如何将友元程序集和具有强名称的程序集一起使用。</span><span class="sxs-lookup"><span data-stu-id="688ed-103">This example shows how to use friend assemblies with assemblies that have strong names.</span></span> <span data-ttu-id="688ed-104">这两种程序集必须都使用强名称。</span><span class="sxs-lookup"><span data-stu-id="688ed-104">Both assemblies must be strong named.</span></span> <span data-ttu-id="688ed-105">尽管本示例中的两种程序集使用相同的密钥，但可以对这两种程序集使用不同的密钥。</span><span class="sxs-lookup"><span data-stu-id="688ed-105">Although both assemblies in this example use the same keys, you could use different keys for two assemblies.</span></span>  
   
-## <a name="create-a-signed-assembly-and-a-friend-assembly"></a><span data-ttu-id="6b9b4-106">创建已签名的程序集和友元程序集</span><span class="sxs-lookup"><span data-stu-id="6b9b4-106">Create a signed assembly and a friend assembly</span></span>  
+## <a name="create-a-signed-assembly-and-a-friend-assembly"></a><span data-ttu-id="688ed-106">创建已签名的程序集和友元程序集</span><span class="sxs-lookup"><span data-stu-id="688ed-106">Create a signed assembly and a friend assembly</span></span>  
   
-1. <span data-ttu-id="6b9b4-107">打开命令提示。</span><span class="sxs-lookup"><span data-stu-id="6b9b4-107">Open a command prompt.</span></span>  
+1. <span data-ttu-id="688ed-107">打开命令提示。</span><span class="sxs-lookup"><span data-stu-id="688ed-107">Open a command prompt.</span></span>  
   
-2. <span data-ttu-id="6b9b4-108">使用强名称工具，通过以下命令序列生成 keyfile 并显示其公钥。</span><span class="sxs-lookup"><span data-stu-id="6b9b4-108">Use the following sequence of commands with the Strong Name tool to generate a keyfile and to display its public key.</span></span> <span data-ttu-id="6b9b4-109">有关详细信息，请参阅 [Sn.exe（强名称工具）](../../framework/tools/sn-exe-strong-name-tool.md)。</span><span class="sxs-lookup"><span data-stu-id="6b9b4-109">For more information, see [Sn.exe (Strong Name tool)](../../framework/tools/sn-exe-strong-name-tool.md).</span></span>  
+2. <span data-ttu-id="688ed-108">使用强名称工具，通过以下命令序列生成 keyfile 并显示其公钥。</span><span class="sxs-lookup"><span data-stu-id="688ed-108">Use the following sequence of commands with the Strong Name tool to generate a keyfile and to display its public key.</span></span> <span data-ttu-id="688ed-109">有关详细信息，请参阅 [Sn.exe（强名称工具）](../../framework/tools/sn-exe-strong-name-tool.md)。</span><span class="sxs-lookup"><span data-stu-id="688ed-109">For more information, see [Sn.exe (Strong Name tool)](../../framework/tools/sn-exe-strong-name-tool.md).</span></span>  
   
-    1. <span data-ttu-id="6b9b4-110">生成此示例的强名称密钥，并将其存储在 FriendAssemblies.snk 文件中  ：</span><span class="sxs-lookup"><span data-stu-id="6b9b4-110">Generate a strong-name key for this example and store it in the file *FriendAssemblies.snk*:</span></span>  
+    1. <span data-ttu-id="688ed-110">生成此示例的强名称密钥，并将其存储在 FriendAssemblies.snk 文件中  ：</span><span class="sxs-lookup"><span data-stu-id="688ed-110">Generate a strong-name key for this example and store it in the file *FriendAssemblies.snk*:</span></span>  
   
          `sn -k FriendAssemblies.snk`  
   
-    2. <span data-ttu-id="6b9b4-111">从 FriendAssemblies.snk 文件中提取公钥，将其放入 FriendAssemblies.publickey 中   ：</span><span class="sxs-lookup"><span data-stu-id="6b9b4-111">Extract the public key from *FriendAssemblies.snk* and put it into *FriendAssemblies.publickey*:</span></span>  
+    2. <span data-ttu-id="688ed-111">从 FriendAssemblies.snk 文件中提取公钥，将其放入 FriendAssemblies.publickey 中   ：</span><span class="sxs-lookup"><span data-stu-id="688ed-111">Extract the public key from *FriendAssemblies.snk* and put it into *FriendAssemblies.publickey*:</span></span>  
   
          `sn -p FriendAssemblies.snk FriendAssemblies.publickey`  
   
-    3. <span data-ttu-id="6b9b4-112">显示存储在 FriendAssemblies.publickey 文件中的公钥  ：</span><span class="sxs-lookup"><span data-stu-id="6b9b4-112">Display the public key stored in the file *FriendAssemblies.publickey*:</span></span>  
+    3. <span data-ttu-id="688ed-112">显示存储在 FriendAssemblies.publickey 文件中的公钥  ：</span><span class="sxs-lookup"><span data-stu-id="688ed-112">Display the public key stored in the file *FriendAssemblies.publickey*:</span></span>  
   
          `sn -tp FriendAssemblies.publickey`  
   
-3. <span data-ttu-id="6b9b4-113">创建名为 friend_signed_A 的 C# 或 Visual Basic 文件，其中包含以下代码  。</span><span class="sxs-lookup"><span data-stu-id="6b9b4-113">Create a C# or Visual Basic file named *friend_signed_A* that contains the following code.</span></span> <span data-ttu-id="6b9b4-114">该代码使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性将 friend_signed_B 声明为友元程序集  。</span><span class="sxs-lookup"><span data-stu-id="6b9b4-114">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare *friend_signed_B* as a friend assembly.</span></span>  
+3. <span data-ttu-id="688ed-113">创建名为 friend_signed_A 的 C# 或 Visual Basic 文件，其中包含以下代码  。</span><span class="sxs-lookup"><span data-stu-id="688ed-113">Create a C# or Visual Basic file named *friend_signed_A* that contains the following code.</span></span> <span data-ttu-id="688ed-114">该代码使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性将 friend_signed_B 声明为友元程序集  。</span><span class="sxs-lookup"><span data-stu-id="688ed-114">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare *friend_signed_B* as a friend assembly.</span></span>  
    
-   <span data-ttu-id="6b9b4-115">强名称工具在每次运行时生成新的公钥。</span><span class="sxs-lookup"><span data-stu-id="6b9b4-115">The Strong Name tool generates a new public key every time it runs.</span></span> <span data-ttu-id="6b9b4-116">因此，必须将以下代码中的公钥替换为刚生成的公钥，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="6b9b4-116">Therefore, you must replace the public key in the following code with the public key you just generated, as shown in the following example.</span></span>  
+   <span data-ttu-id="688ed-115">强名称工具在每次运行时生成新的公钥。</span><span class="sxs-lookup"><span data-stu-id="688ed-115">The Strong Name tool generates a new public key every time it runs.</span></span> <span data-ttu-id="688ed-116">因此，必须将以下代码中的公钥替换为刚生成的公钥，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="688ed-116">Therefore, you must replace the public key in the following code with the public key you just generated, as shown in the following example.</span></span>  
    
    ```csharp  
    // friend_signed_A.cs  
@@ -69,7 +69,7 @@ ms.locfileid: "72523883"
    End Class  
    ```  
    
-4. <span data-ttu-id="6b9b4-117">使用以下命令编译 friend_signed_A 并为其签名  。</span><span class="sxs-lookup"><span data-stu-id="6b9b4-117">Compile and sign *friend_signed_A* by using the following command.</span></span>  
+4. <span data-ttu-id="688ed-117">使用以下命令编译 friend_signed_A 并为其签名  。</span><span class="sxs-lookup"><span data-stu-id="688ed-117">Compile and sign *friend_signed_A* by using the following command.</span></span>  
    
    ```csharp
    csc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.cs  
@@ -79,7 +79,7 @@ ms.locfileid: "72523883"
    Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
    ```  
    
-5. <span data-ttu-id="6b9b4-118">创建名为 friend_signed_B 的 C# 或 Visual Basic 文件，其中包含以下代码  。</span><span class="sxs-lookup"><span data-stu-id="6b9b4-118">Create a C# or Visual Basic file named *friend_signed_B* that contains the following code.</span></span> <span data-ttu-id="6b9b4-119">由于 friend_signed_A 将 friend_signed_B 指定为友元程序集，因此 friend_signed_B 中的代码可以访问 friend_signed_A 中的 `internal` (C#) 或 `Friend` (Visual Basic) 类型和成员     。</span><span class="sxs-lookup"><span data-stu-id="6b9b4-119">Because *friend_signed_A* specifies *friend_signed_B* as a friend assembly, the code in *friend_signed_B* can access `internal` (C#) or `Friend` (Visual Basic) types and members from *friend_signed_A*.</span></span> <span data-ttu-id="6b9b4-120">文件包含以下代码。</span><span class="sxs-lookup"><span data-stu-id="6b9b4-120">The file contains the following code.</span></span>  
+5. <span data-ttu-id="688ed-118">创建名为 friend_signed_B 的 C# 或 Visual Basic 文件，其中包含以下代码  。</span><span class="sxs-lookup"><span data-stu-id="688ed-118">Create a C# or Visual Basic file named *friend_signed_B* that contains the following code.</span></span> <span data-ttu-id="688ed-119">由于 friend_signed_A 将 friend_signed_B 指定为友元程序集，因此 friend_signed_B 中的代码可以访问 friend_signed_A 中的 `internal` (C#) 或 `Friend` (Visual Basic) 类型和成员     。</span><span class="sxs-lookup"><span data-stu-id="688ed-119">Because *friend_signed_A* specifies *friend_signed_B* as a friend assembly, the code in *friend_signed_B* can access `internal` (C#) or `Friend` (Visual Basic) types and members from *friend_signed_A*.</span></span> <span data-ttu-id="688ed-120">文件包含以下代码。</span><span class="sxs-lookup"><span data-stu-id="688ed-120">The file contains the following code.</span></span>  
    
    ```csharp  
    // friend_signed_B.cs  
@@ -107,7 +107,7 @@ ms.locfileid: "72523883"
    End Module  
    ```  
    
-6. <span data-ttu-id="6b9b4-121">使用以下命令编译 friend_signed_B 并为其签名  。</span><span class="sxs-lookup"><span data-stu-id="6b9b4-121">Compile and sign *friend_signed_B* by using the following command.</span></span>  
+6. <span data-ttu-id="688ed-121">使用以下命令编译 friend_signed_B 并为其签名  。</span><span class="sxs-lookup"><span data-stu-id="688ed-121">Compile and sign *friend_signed_B* by using the following command.</span></span>  
    
    ```csharp
    csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
@@ -117,24 +117,24 @@ ms.locfileid: "72523883"
    vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
    ```  
    
-   <span data-ttu-id="6b9b4-122">编译器生成的程序集的名称必须与传递给 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性的友元程序集的名称匹配。</span><span class="sxs-lookup"><span data-stu-id="6b9b4-122">The name of the assembly generated by the compiler must match the friend assembly name passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="6b9b4-123">必须使用 `/out` 编译器选项显式指定输出程序集（.exe 或 .dll）的名称   。</span><span class="sxs-lookup"><span data-stu-id="6b9b4-123">You must explicitly specify the name of the output assembly (*.exe* or *.dll*) by using the `/out` compiler option.</span></span> <span data-ttu-id="6b9b4-124">有关详细信息，请参阅 [/out（C# 编译器选项）](../../csharp/language-reference/compiler-options/out-compiler-option.md)或 [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md)。</span><span class="sxs-lookup"><span data-stu-id="6b9b4-124">For more information, see [/out (C# compiler options)](../../csharp/language-reference/compiler-options/out-compiler-option.md) or [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).</span></span>  
+   <span data-ttu-id="688ed-122">编译器生成的程序集的名称必须与传递给 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性的友元程序集的名称匹配。</span><span class="sxs-lookup"><span data-stu-id="688ed-122">The name of the assembly generated by the compiler must match the friend assembly name passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="688ed-123">必须使用 `-out` 编译器选项显式指定输出程序集（.exe 或 .dll）的名称   。</span><span class="sxs-lookup"><span data-stu-id="688ed-123">You must explicitly specify the name of the output assembly (*.exe* or *.dll*) by using the `-out` compiler option.</span></span> <span data-ttu-id="688ed-124">有关详细信息，请参阅 [-out（C# 编译器选项）](../../csharp/language-reference/compiler-options/out-compiler-option.md)或 [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md)。</span><span class="sxs-lookup"><span data-stu-id="688ed-124">For more information, see [-out (C# compiler options)](../../csharp/language-reference/compiler-options/out-compiler-option.md) or [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).</span></span>  
    
-7. <span data-ttu-id="6b9b4-125">运行 friend_signed_B.exe 文件  。</span><span class="sxs-lookup"><span data-stu-id="6b9b4-125">Run the *friend_signed_B.exe* file.</span></span>  
+7. <span data-ttu-id="688ed-125">运行 friend_signed_B.exe 文件  。</span><span class="sxs-lookup"><span data-stu-id="688ed-125">Run the *friend_signed_B.exe* file.</span></span>  
    
-   <span data-ttu-id="6b9b4-126">程序将输出字符串“Class1.Test”  。</span><span class="sxs-lookup"><span data-stu-id="6b9b4-126">The program outputs the string **Class1.Test**.</span></span>  
+   <span data-ttu-id="688ed-126">程序将输出字符串“Class1.Test”  。</span><span class="sxs-lookup"><span data-stu-id="688ed-126">The program outputs the string **Class1.Test**.</span></span>  
   
-## <a name="net-security"></a><span data-ttu-id="6b9b4-127">.NET 安全性</span><span class="sxs-lookup"><span data-stu-id="6b9b4-127">.NET security</span></span>  
- <span data-ttu-id="6b9b4-128"><xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 类之间具有相似之处。</span><span class="sxs-lookup"><span data-stu-id="6b9b4-128">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="6b9b4-129">主要区别是，<xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全权限来运行一段特定代码，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性控制 `internal` (C#) 和 `Friend` (Visual Basic) 类型和成员的可见性。</span><span class="sxs-lookup"><span data-stu-id="6b9b4-129">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `internal` (C#) or `Friend` (Visual Basic) types and members.</span></span>  
+## <a name="net-security"></a><span data-ttu-id="688ed-127">.NET 安全性</span><span class="sxs-lookup"><span data-stu-id="688ed-127">.NET security</span></span>  
+ <span data-ttu-id="688ed-128"><xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 类之间具有相似之处。</span><span class="sxs-lookup"><span data-stu-id="688ed-128">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="688ed-129">主要区别是，<xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全权限来运行一段特定代码，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性控制 `internal` (C#) 和 `Friend` (Visual Basic) 类型和成员的可见性。</span><span class="sxs-lookup"><span data-stu-id="688ed-129">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `internal` (C#) or `Friend` (Visual Basic) types and members.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6b9b4-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="6b9b4-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="688ed-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="688ed-130">See also</span></span>
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [<span data-ttu-id="6b9b4-131">.NET 中的程序集</span><span class="sxs-lookup"><span data-stu-id="6b9b4-131">Assemblies in .NET</span></span>](index.md)
-- [<span data-ttu-id="6b9b4-132">友元程序集</span><span class="sxs-lookup"><span data-stu-id="6b9b4-132">Friend assemblies</span></span>](friend.md)
-- [<span data-ttu-id="6b9b4-133">如何：创建未签名的友元程序集</span><span class="sxs-lookup"><span data-stu-id="6b9b4-133">How to: Create unsigned friend assemblies</span></span>](create-unsigned-friend.md)
-- [<span data-ttu-id="6b9b4-134">-keyfile (C#)</span><span class="sxs-lookup"><span data-stu-id="6b9b4-134">-keyfile (C#)</span></span>](../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
-- [<span data-ttu-id="6b9b4-135">-keyfile (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6b9b4-135">-keyfile (Visual Basic)</span></span>](../../visual-basic/reference/command-line-compiler/keyfile.md)
-- [<span data-ttu-id="6b9b4-136">Sn.exe（强名称工具）</span><span class="sxs-lookup"><span data-stu-id="6b9b4-136">Sn.exe (Strong Name tool)</span></span>](../../framework/tools/sn-exe-strong-name-tool.md)
-- [<span data-ttu-id="6b9b4-137">创建和使用具有强名称的程序集</span><span class="sxs-lookup"><span data-stu-id="6b9b4-137">Create and use strong-named assemblies</span></span>](create-use-strong-named.md)
-- [<span data-ttu-id="6b9b4-138">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="6b9b4-138">C# programming guide</span></span>](../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="6b9b4-139">编程概念 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6b9b4-139">Programming concepts (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/index.md)
+- [<span data-ttu-id="688ed-131">.NET 中的程序集</span><span class="sxs-lookup"><span data-stu-id="688ed-131">Assemblies in .NET</span></span>](index.md)
+- [<span data-ttu-id="688ed-132">友元程序集</span><span class="sxs-lookup"><span data-stu-id="688ed-132">Friend assemblies</span></span>](friend.md)
+- [<span data-ttu-id="688ed-133">如何：创建未签名的友元程序集</span><span class="sxs-lookup"><span data-stu-id="688ed-133">How to: Create unsigned friend assemblies</span></span>](create-unsigned-friend.md)
+- [<span data-ttu-id="688ed-134">-keyfile (C#)</span><span class="sxs-lookup"><span data-stu-id="688ed-134">-keyfile (C#)</span></span>](../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
+- [<span data-ttu-id="688ed-135">-keyfile (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="688ed-135">-keyfile (Visual Basic)</span></span>](../../visual-basic/reference/command-line-compiler/keyfile.md)
+- [<span data-ttu-id="688ed-136">Sn.exe（强名称工具）</span><span class="sxs-lookup"><span data-stu-id="688ed-136">Sn.exe (Strong Name tool)</span></span>](../../framework/tools/sn-exe-strong-name-tool.md)
+- [<span data-ttu-id="688ed-137">创建和使用具有强名称的程序集</span><span class="sxs-lookup"><span data-stu-id="688ed-137">Create and use strong-named assemblies</span></span>](create-use-strong-named.md)
+- [<span data-ttu-id="688ed-138">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="688ed-138">C# programming guide</span></span>](../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="688ed-139">编程概念 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="688ed-139">Programming concepts (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/index.md)

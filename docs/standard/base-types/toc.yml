@@ -118,7 +118,7 @@
                   href: how-to-extract-a-protocol-and-port-number-from-a-url.md
                 - name: 如何：从字符串中剥离无效字符
                   href: how-to-strip-invalid-characters-from-a-string.md
-                - name: 如何：验证字符串是否为有效的电子邮件格式
+                - name: 如何确认字符串是有效的电子邮件格式
                   href: how-to-verify-that-strings-are-in-valid-email-format.md
         - name: .NET 中的字符编码
           href: character-encoding.md
