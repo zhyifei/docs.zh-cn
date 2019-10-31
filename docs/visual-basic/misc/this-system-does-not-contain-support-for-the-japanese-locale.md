@@ -4,22 +4,22 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_JPNNotSupported
 ms.assetid: 986d0379-c9d1-4004-b9ac-8d3bd95dfe85
-ms.openlocfilehash: f1a4e02d66d2073fd5172616214533bf4358422a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7b8f5e50c5a59a946724b817eb8979eb520b30b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942631"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198114"
 ---
-# <a name="this-system-does-not-contain-support-for-the-japanese-locale"></a><span data-ttu-id="558ed-102">此系统不包含对日文区域设置的支持</span><span class="sxs-lookup"><span data-stu-id="558ed-102">This system does not contain support for the Japanese locale</span></span>
-<span data-ttu-id="558ed-103">你正尝试使用 `VbStrConv.Japanese` 枚举成员，但你的系统不支持日文区域设置。</span><span class="sxs-lookup"><span data-stu-id="558ed-103">You are attempting to use the `VbStrConv.Japanese` enumeration member, but your system does not support the Japanese locale.</span></span>  
+# <a name="this-system-does-not-contain-support-for-the-japanese-locale"></a><span data-ttu-id="83164-102">此系统不包含对日文区域设置的支持</span><span class="sxs-lookup"><span data-stu-id="83164-102">This system does not contain support for the Japanese locale</span></span>
+<span data-ttu-id="83164-103">你正尝试使用 `VbStrConv.Japanese` 枚举成员，但你的系统不支持日文区域设置。</span><span class="sxs-lookup"><span data-stu-id="83164-103">You are attempting to use the `VbStrConv.Japanese` enumeration member, but your system does not support the Japanese locale.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="558ed-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="558ed-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="83164-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="83164-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="558ed-105">升级计算机以支持日文区域设置，或在支持该区域设置的计算机上运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="558ed-105">Upgrade the machine to support the Japanese locale, or run the application on a machine that supports the locale.</span></span>  
+1. <span data-ttu-id="83164-105">升级计算机以支持日文区域设置，或在支持该区域设置的计算机上运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="83164-105">Upgrade the machine to support the Japanese locale, or run the application on a machine that supports the locale.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="558ed-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="558ed-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="83164-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="83164-106">See also</span></span>
 
 - <xref:System.Globalization>
 
-- [<span data-ttu-id="558ed-107">基于 .NET Framework 的国际应用程序简介</span><span class="sxs-lookup"><span data-stu-id="558ed-107">Introduction to International Applications Based on the .NET Framework</span></span>](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+- [<span data-ttu-id="83164-107">开发全球化和本地化应用</span><span class="sxs-lookup"><span data-stu-id="83164-107">Develop globalized and localized apps</span></span>](/visualstudio/ide/globalizing-and-localizing-applications)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 13be0299-df0d-4951-aabf-0676a30b385f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1aa4ab44fc8ef1033dcef1a9b36d7487da86cd58
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d39ad45e143026f40ffcf1339e923837f9e812c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779354"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195848"
 ---
-# <a name="ihostmemorymanagervirtualprotect-method"></a><span data-ttu-id="ede68-102">IHostMemoryManager::VirtualProtect 方法</span><span class="sxs-lookup"><span data-stu-id="ede68-102">IHostMemoryManager::VirtualProtect Method</span></span>
-<span data-ttu-id="ede68-103">充当相应的 Win32 函数的逻辑包装。</span><span class="sxs-lookup"><span data-stu-id="ede68-103">Serves as a logical wrapper for the corresponding Win32 function.</span></span> <span data-ttu-id="ede68-104">Win32 实现`VirtualProtect`更改调用进程的虚拟地址空间中已提交页面区域上的保护。</span><span class="sxs-lookup"><span data-stu-id="ede68-104">The Win32 implementation of `VirtualProtect` changes the protection on a region of committed pages in the virtual address space of the calling process.</span></span>  
+# <a name="ihostmemorymanagervirtualprotect-method"></a><span data-ttu-id="23293-102">IHostMemoryManager::VirtualProtect 方法</span><span class="sxs-lookup"><span data-stu-id="23293-102">IHostMemoryManager::VirtualProtect Method</span></span>
+<span data-ttu-id="23293-103">用作相应 Win32 函数的逻辑包装。</span><span class="sxs-lookup"><span data-stu-id="23293-103">Serves as a logical wrapper for the corresponding Win32 function.</span></span> <span data-ttu-id="23293-104">的 Win32 实现 `VirtualProtect` 在调用进程的虚拟地址空间中更改已提交页区域的保护。</span><span class="sxs-lookup"><span data-stu-id="23293-104">The Win32 implementation of `VirtualProtect` changes the protection on a region of committed pages in the virtual address space of the calling process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ede68-105">语法</span><span class="sxs-lookup"><span data-stu-id="ede68-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="23293-105">语法</span><span class="sxs-lookup"><span data-stu-id="23293-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT VirtualProtect (  
@@ -38,42 +36,42 @@ HRESULT VirtualProtect (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ede68-106">参数</span><span class="sxs-lookup"><span data-stu-id="ede68-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="23293-106">参数</span><span class="sxs-lookup"><span data-stu-id="23293-106">Parameters</span></span>  
  `lpAddress`  
- <span data-ttu-id="ede68-107">[in]指向其保护属性是要更改虚拟内存的基址的指针。</span><span class="sxs-lookup"><span data-stu-id="ede68-107">[in] A pointer to the base address of the virtual memory whose protection attributes are to be changed.</span></span>  
+ <span data-ttu-id="23293-107">中指向要更改其保护属性的虚拟内存基址的指针。</span><span class="sxs-lookup"><span data-stu-id="23293-107">[in] A pointer to the base address of the virtual memory whose protection attributes are to be changed.</span></span>  
   
  `dwSize`  
- <span data-ttu-id="ede68-108">[in]以字节为单位的内存页，若要更改的区域的大小。</span><span class="sxs-lookup"><span data-stu-id="ede68-108">[in] The size, in bytes, of the region of memory pages to be changed.</span></span>  
+ <span data-ttu-id="23293-108">中要更改的内存页区域的大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="23293-108">[in] The size, in bytes, of the region of memory pages to be changed.</span></span>  
   
  `flNewProtect`  
- <span data-ttu-id="ede68-109">[in]要应用的内存保护的类型。</span><span class="sxs-lookup"><span data-stu-id="ede68-109">[in] The type of memory protection to apply.</span></span>  
+ <span data-ttu-id="23293-109">中要应用的内存保护的类型。</span><span class="sxs-lookup"><span data-stu-id="23293-109">[in] The type of memory protection to apply.</span></span>  
   
  `pflOldProtect`  
- <span data-ttu-id="ede68-110">[out]指向上一个内存保护值的指针。</span><span class="sxs-lookup"><span data-stu-id="ede68-110">[out] A pointer to the previous memory protection value.</span></span>  
+ <span data-ttu-id="23293-110">弄指向上一个内存保护值的指针。</span><span class="sxs-lookup"><span data-stu-id="23293-110">[out] A pointer to the previous memory protection value.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ede68-111">返回值</span><span class="sxs-lookup"><span data-stu-id="ede68-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="23293-111">返回值</span><span class="sxs-lookup"><span data-stu-id="23293-111">Return Value</span></span>  
   
-|<span data-ttu-id="ede68-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ede68-112">HRESULT</span></span>|<span data-ttu-id="ede68-113">描述</span><span class="sxs-lookup"><span data-stu-id="ede68-113">Description</span></span>|  
+|<span data-ttu-id="23293-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="23293-112">HRESULT</span></span>|<span data-ttu-id="23293-113">描述</span><span class="sxs-lookup"><span data-stu-id="23293-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="ede68-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="ede68-114">S_OK</span></span>|<span data-ttu-id="ede68-115">`VirtualProtect` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="ede68-115">`VirtualProtect` returned successfully.</span></span>|  
-|<span data-ttu-id="ede68-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="ede68-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="ede68-117">公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="ede68-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="ede68-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="ede68-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="ede68-119">呼叫已超时。</span><span class="sxs-lookup"><span data-stu-id="ede68-119">The call timed out.</span></span>|  
-|<span data-ttu-id="ede68-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="ede68-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="ede68-121">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="ede68-121">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="ede68-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="ede68-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="ede68-123">事件已取消时被阻塞的线程或纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="ede68-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="ede68-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="ede68-124">E_FAIL</span></span>|<span data-ttu-id="ede68-125">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="ede68-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="ede68-126">如果某方法返回 E_FAIL，CLR 不再在进程内可用。</span><span class="sxs-lookup"><span data-stu-id="ede68-126">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="ede68-127">对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="ede68-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="23293-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="23293-114">S_OK</span></span>|<span data-ttu-id="23293-115">`VirtualProtect` 成功返回。</span><span class="sxs-lookup"><span data-stu-id="23293-115">`VirtualProtect` returned successfully.</span></span>|  
+|<span data-ttu-id="23293-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="23293-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="23293-117">公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="23293-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="23293-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="23293-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="23293-119">调用超时。</span><span class="sxs-lookup"><span data-stu-id="23293-119">The call timed out.</span></span>|  
+|<span data-ttu-id="23293-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="23293-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="23293-121">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="23293-121">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="23293-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="23293-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="23293-123">已阻止的线程或纤程正在等待某个事件时，该事件被取消。</span><span class="sxs-lookup"><span data-stu-id="23293-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="23293-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="23293-124">E_FAIL</span></span>|<span data-ttu-id="23293-125">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="23293-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="23293-126">当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。</span><span class="sxs-lookup"><span data-stu-id="23293-126">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="23293-127">对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="23293-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ede68-128">备注</span><span class="sxs-lookup"><span data-stu-id="ede68-128">Remarks</span></span>  
- <span data-ttu-id="ede68-129">此实现`VirtualProtect`返回 HRESULT 值，而 Win32 实现返回一个非零值来指示进程成功，而零值以指示失败。</span><span class="sxs-lookup"><span data-stu-id="ede68-129">This implementation of `VirtualProtect` returns an HRESULT value, while the Win32 implementation returns a non-zero value to indicate success, and a zero value to indicate failure.</span></span> <span data-ttu-id="ede68-130">有关详细信息，请参阅 Windows 平台文档。</span><span class="sxs-lookup"><span data-stu-id="ede68-130">For more information, see the Windows Platform documentation.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="23293-128">备注</span><span class="sxs-lookup"><span data-stu-id="23293-128">Remarks</span></span>  
+ <span data-ttu-id="23293-129">此 `VirtualProtect` 实现返回一个 HRESULT 值，而 Win32 实现返回非零值以指示成功，并返回一个零值以指示失败。</span><span class="sxs-lookup"><span data-stu-id="23293-129">This implementation of `VirtualProtect` returns an HRESULT value, while the Win32 implementation returns a non-zero value to indicate success, and a zero value to indicate failure.</span></span> <span data-ttu-id="23293-130">有关详细信息，请参阅 Windows 平台文档。</span><span class="sxs-lookup"><span data-stu-id="23293-130">For more information, see the Windows Platform documentation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ede68-131">要求</span><span class="sxs-lookup"><span data-stu-id="ede68-131">Requirements</span></span>  
- <span data-ttu-id="ede68-132">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ede68-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="23293-131">要求</span><span class="sxs-lookup"><span data-stu-id="23293-131">Requirements</span></span>  
+ <span data-ttu-id="23293-132">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="23293-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ede68-133">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ede68-133">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="23293-133">**标头：** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="23293-133">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ede68-134">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="ede68-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="23293-134">**库：** 作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="23293-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ede68-135">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ede68-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="23293-135">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="23293-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ede68-136">请参阅</span><span class="sxs-lookup"><span data-stu-id="ede68-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="23293-136">请参阅</span><span class="sxs-lookup"><span data-stu-id="23293-136">See also</span></span>
 
-- [<span data-ttu-id="ede68-137">IHostMemoryManager 接口</span><span class="sxs-lookup"><span data-stu-id="ede68-137">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [<span data-ttu-id="23293-137">IHostMemoryManager 接口</span><span class="sxs-lookup"><span data-stu-id="23293-137">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

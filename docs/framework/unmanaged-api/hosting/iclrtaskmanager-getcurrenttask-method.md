@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c0b82a9f-edc6-4878-9c81-48de53c02142
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9996b1a84a5f095cf12d74d0c6f594911e7a7788
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a57610d1b41d80d54a245b9744aafd78a1e88177
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770207"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195908"
 ---
-# <a name="iclrtaskmanagergetcurrenttask-method"></a><span data-ttu-id="205be-102">ICLRTaskManager::GetCurrentTask 方法</span><span class="sxs-lookup"><span data-stu-id="205be-102">ICLRTaskManager::GetCurrentTask Method</span></span>
-<span data-ttu-id="205be-103">获取[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)方法调用产生的操作系统线程当前正在运行的实例。</span><span class="sxs-lookup"><span data-stu-id="205be-103">Gets the [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instance that is currently running on the operating system thread from which the method call originated.</span></span>  
+# <a name="iclrtaskmanagergetcurrenttask-method"></a><span data-ttu-id="1c689-102">ICLRTaskManager::GetCurrentTask 方法</span><span class="sxs-lookup"><span data-stu-id="1c689-102">ICLRTaskManager::GetCurrentTask Method</span></span>
+<span data-ttu-id="1c689-103">获取当前在该方法调用所源自的操作系统线程上运行的[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)实例。</span><span class="sxs-lookup"><span data-stu-id="1c689-103">Gets the [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instance that is currently running on the operating system thread from which the method call originated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="205be-104">语法</span><span class="sxs-lookup"><span data-stu-id="205be-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1c689-104">语法</span><span class="sxs-lookup"><span data-stu-id="1c689-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCurrentTask (  
@@ -35,36 +33,36 @@ HRESULT GetCurrentTask (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="205be-105">参数</span><span class="sxs-lookup"><span data-stu-id="205be-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1c689-105">参数</span><span class="sxs-lookup"><span data-stu-id="1c689-105">Parameters</span></span>  
  `ppTask`  
- <span data-ttu-id="205be-106">[out]指向的地址的指针`ICLRTask`从中发起调用，在操作系统线程当前正在执行的实例或如果没有任何任务当前正在此线程上执行，则为 null。</span><span class="sxs-lookup"><span data-stu-id="205be-106">[out] A pointer to the address of an `ICLRTask` instance that is currently executing on the operating system thread from which the call originated, or null if no task is currently executing on this thread.</span></span>  
+ <span data-ttu-id="1c689-106">弄一个指针，指向从其发出调用的操作系统线程上当前正在执行的 `ICLRTask` 实例的地址; 如果此线程上当前未执行任何任务，则为 null。</span><span class="sxs-lookup"><span data-stu-id="1c689-106">[out] A pointer to the address of an `ICLRTask` instance that is currently executing on the operating system thread from which the call originated, or null if no task is currently executing on this thread.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="205be-107">返回值</span><span class="sxs-lookup"><span data-stu-id="205be-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1c689-107">返回值</span><span class="sxs-lookup"><span data-stu-id="1c689-107">Return Value</span></span>  
   
-|<span data-ttu-id="205be-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="205be-108">HRESULT</span></span>|<span data-ttu-id="205be-109">描述</span><span class="sxs-lookup"><span data-stu-id="205be-109">Description</span></span>|  
+|<span data-ttu-id="1c689-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="1c689-108">HRESULT</span></span>|<span data-ttu-id="1c689-109">描述</span><span class="sxs-lookup"><span data-stu-id="1c689-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="205be-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="205be-110">S_OK</span></span>|<span data-ttu-id="205be-111">该方法成功返回。</span><span class="sxs-lookup"><span data-stu-id="205be-111">The method returned successfully.</span></span>|  
-|<span data-ttu-id="205be-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="205be-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="205be-113">公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="205be-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="205be-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="205be-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="205be-115">呼叫已超时。</span><span class="sxs-lookup"><span data-stu-id="205be-115">The call timed out.</span></span>|  
-|<span data-ttu-id="205be-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="205be-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="205be-117">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="205be-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="205be-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="205be-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="205be-119">事件已取消时被阻塞的线程或纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="205be-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="205be-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="205be-120">E_FAIL</span></span>|<span data-ttu-id="205be-121">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="205be-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="205be-122">如果某方法返回 E_FAIL，CLR 不再在进程内可用。</span><span class="sxs-lookup"><span data-stu-id="205be-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="205be-123">对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="205be-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="1c689-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="1c689-110">S_OK</span></span>|<span data-ttu-id="1c689-111">方法已成功返回。</span><span class="sxs-lookup"><span data-stu-id="1c689-111">The method returned successfully.</span></span>|  
+|<span data-ttu-id="1c689-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="1c689-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="1c689-113">公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="1c689-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="1c689-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="1c689-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="1c689-115">调用超时。</span><span class="sxs-lookup"><span data-stu-id="1c689-115">The call timed out.</span></span>|  
+|<span data-ttu-id="1c689-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="1c689-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="1c689-117">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="1c689-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="1c689-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="1c689-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="1c689-119">已阻止的线程或纤程正在等待某个事件时，该事件被取消。</span><span class="sxs-lookup"><span data-stu-id="1c689-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="1c689-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="1c689-120">E_FAIL</span></span>|<span data-ttu-id="1c689-121">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="1c689-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="1c689-122">当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。</span><span class="sxs-lookup"><span data-stu-id="1c689-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="1c689-123">对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="1c689-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="205be-124">备注</span><span class="sxs-lookup"><span data-stu-id="205be-124">Remarks</span></span>  
- <span data-ttu-id="205be-125">`ICLRTask`实例的`ppTask`参数指向表示当前执行的任务的 clr。</span><span class="sxs-lookup"><span data-stu-id="205be-125">The `ICLRTask` instance that the `ppTask` parameter points to represents the currently executing task for the CLR.</span></span> <span data-ttu-id="205be-126">`ICLRTask`实例都与相应关联[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)表示任务主机的实例。</span><span class="sxs-lookup"><span data-stu-id="205be-126">The `ICLRTask` instance is associated with a corresponding [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance that represents the task for the host.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1c689-124">备注</span><span class="sxs-lookup"><span data-stu-id="1c689-124">Remarks</span></span>  
+ <span data-ttu-id="1c689-125">`ppTask` 参数指向的 `ICLRTask` 实例表示 CLR 当前正在执行的任务。</span><span class="sxs-lookup"><span data-stu-id="1c689-125">The `ICLRTask` instance that the `ppTask` parameter points to represents the currently executing task for the CLR.</span></span> <span data-ttu-id="1c689-126">`ICLRTask` 实例与表示宿主任务的相应[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)实例相关联。</span><span class="sxs-lookup"><span data-stu-id="1c689-126">The `ICLRTask` instance is associated with a corresponding [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance that represents the task for the host.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="205be-127">要求</span><span class="sxs-lookup"><span data-stu-id="205be-127">Requirements</span></span>  
- <span data-ttu-id="205be-128">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="205be-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1c689-127">要求</span><span class="sxs-lookup"><span data-stu-id="1c689-127">Requirements</span></span>  
+ <span data-ttu-id="1c689-128">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1c689-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="205be-129">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="205be-129">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="1c689-129">**标头：** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="1c689-129">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="205be-130">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="205be-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="1c689-130">**库：** 作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="1c689-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="205be-131">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="205be-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1c689-131">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1c689-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="205be-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="205be-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1c689-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="1c689-132">See also</span></span>
 
-- [<span data-ttu-id="205be-133">ICLRTask 接口</span><span class="sxs-lookup"><span data-stu-id="205be-133">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="205be-134">ICLRTaskManager 接口</span><span class="sxs-lookup"><span data-stu-id="205be-134">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="205be-135">IHostTask 接口</span><span class="sxs-lookup"><span data-stu-id="205be-135">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="205be-136">IHostTaskManager 接口</span><span class="sxs-lookup"><span data-stu-id="205be-136">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="1c689-133">ICLRTask 接口</span><span class="sxs-lookup"><span data-stu-id="1c689-133">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="1c689-134">ICLRTaskManager 接口</span><span class="sxs-lookup"><span data-stu-id="1c689-134">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="1c689-135">IHostTask 接口</span><span class="sxs-lookup"><span data-stu-id="1c689-135">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="1c689-136">IHostTaskManager 接口</span><span class="sxs-lookup"><span data-stu-id="1c689-136">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

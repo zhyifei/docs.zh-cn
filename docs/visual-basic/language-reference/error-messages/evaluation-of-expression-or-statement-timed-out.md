@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30722
 ms.assetid: 6f452da8-6ef8-41fd-9ab8-6f681cf7d433
-ms.openlocfilehash: 7a3b460e7abb0e673457ca6abee2a195912715ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0600c7acdb138e363dcbece392bf4b8122cb250
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803371"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191922"
 ---
-# <a name="evaluation-of-expression-or-statement-timed-out"></a><span data-ttu-id="500da-102">表达式或语句的计算已超时</span><span class="sxs-lookup"><span data-stu-id="500da-102">Evaluation of expression or statement timed out</span></span>
-<span data-ttu-id="500da-103">表达式的计算未及时完成。</span><span class="sxs-lookup"><span data-stu-id="500da-103">The evaluation of an expression did not complete in a timely manner.</span></span>  
+# <a name="evaluation-of-expression-or-statement-timed-out"></a><span data-ttu-id="86347-102">表达式或语句的计算已超时</span><span class="sxs-lookup"><span data-stu-id="86347-102">Evaluation of expression or statement timed out</span></span>
+<span data-ttu-id="86347-103">表达式的计算未及时完成。</span><span class="sxs-lookup"><span data-stu-id="86347-103">The evaluation of an expression did not complete in a timely manner.</span></span>  
   
- <span data-ttu-id="500da-104">**错误 ID:** BC30722</span><span class="sxs-lookup"><span data-stu-id="500da-104">**Error ID:** BC30722</span></span>  
+ <span data-ttu-id="86347-104">**错误 ID：** BC30722</span><span class="sxs-lookup"><span data-stu-id="86347-104">**Error ID:** BC30722</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="500da-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="500da-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="86347-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="86347-105">To correct this error</span></span>  
   
-1. <span data-ttu-id="500da-106">验证输入的代码正确。</span><span class="sxs-lookup"><span data-stu-id="500da-106">Verify that the entered code is correct.</span></span>  
+1. <span data-ttu-id="86347-106">验证输入的代码是否正确。</span><span class="sxs-lookup"><span data-stu-id="86347-106">Verify that the entered code is correct.</span></span>  
   
-2. <span data-ttu-id="500da-107">简化你的表达式，使花费更少的时间来执行。</span><span class="sxs-lookup"><span data-stu-id="500da-107">Simplify your expression so that it takes less time to execute.</span></span>  
+2. <span data-ttu-id="86347-107">简化表达式，使其执行时间更少。</span><span class="sxs-lookup"><span data-stu-id="86347-107">Simplify your expression so that it takes less time to execute.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="500da-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="500da-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="86347-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="86347-108">See also</span></span>
 
-- [<span data-ttu-id="500da-109">在 Visual Studio 中进行调试</span><span class="sxs-lookup"><span data-stu-id="500da-109">Debugging in Visual Studio</span></span>](/visualstudio/debugger/debugging-in-visual-studio)
+- [<span data-ttu-id="86347-109">在 Visual Studio 中进行调试</span><span class="sxs-lookup"><span data-stu-id="86347-109">Debugging in Visual Studio</span></span>](/visualstudio/debugger/debugger-feature-tour)
