@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80dbbbf8-54fc-4894-b74a-0179d3201083
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d696326ff8861ed8496474f76e9eaf89b4ead3e8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f089769f854bad5d3e572e0307734e06e72ca89c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795402"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108569"
 ---
 # <a name="createinstallreferenceenum-function"></a>CreateInstallReferenceEnum 函数
 获取一个指针，该指针指向表示应用程序对指定程序集的引用列表的[IInstallReferenceEnum](iinstallreferenceenum-interface.md)实例。  
@@ -41,7 +39,7 @@ HRESULT CreateInstallReferenceEnum (
   
 ## <a name="parameters"></a>参数  
  `ppRefEnum`  
- 弄返回`IInstallReferenceEnum`的指针。  
+ 弄返回的 `IInstallReferenceEnum` 指针。  
   
  `pName`  
  中标识要枚举其引用的程序集的[IAssemblyName](iassemblyname-interface.md) 。  
@@ -50,14 +48,14 @@ HRESULT CreateInstallReferenceEnum (
  中影响枚举器行为的标志。  
   
  `pvReserved`  
- 中保留以供将来进行扩展。 `pvReserved`必须为空引用。  
+ 中保留以供将来进行扩展。 `pvReserved` 必须为空引用。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 合成。h  
   
- **类库**合成 .dll 和 Mscorwks.dll。 使用 Mscorwks.dll 而不是来确保目标为正确的 .NET Framework 版本。  
+ **库：** 合成 .dll 和 Mscorwks.dll。 使用 Mscorwks.dll 而不是来确保目标为正确的 .NET Framework 版本。  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

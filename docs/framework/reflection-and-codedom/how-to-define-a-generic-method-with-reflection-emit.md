@@ -9,14 +9,12 @@ helpviewer_keywords:
 - reflection emit, generic methods
 - generics [.NET Framework], dynamic types
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 857bad224d1a88c7011a42d0595b17b1810381aa
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d16f6728b01583fe3ffb8d892522f3892444c537
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046058"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130174"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>如何：用反射发出定义泛型方法
 
@@ -27,7 +25,7 @@ ms.locfileid: "71046058"
 第三个过程演示如何调用泛型方法。
 
 > [!IMPORTANT]
-> 某方法只要属于泛型类型，且使用该类型的类型参数，就不是泛型方法。 只有当方法有属于自己的类型参数列表时才是泛型方法。 泛型方法可在非泛型类型上出现，如本示例中所示。 有关泛型类型上的非泛型方法示例，请参阅[如何：使用反射发出定义泛型类型](how-to-define-a-generic-type-with-reflection-emit.md)。
+> 某方法只要属于泛型类型，且使用该类型的类型参数，就不是泛型方法。 只有当方法有属于自己的类型参数列表时才是泛型方法。 泛型方法可在非泛型类型上出现，如本示例中所示。 有关泛型类型上的非泛型方法示例，请参阅[如何：用反射发出定义泛型类型](how-to-define-a-generic-type-with-reflection-emit.md)。
 
 ### <a name="to-define-a-generic-method"></a>定义泛型方法
 
@@ -119,7 +117,7 @@ ms.locfileid: "71046058"
 
 6. 发出该循环的代码。 第一步是通过 `loopAgain` 标签调用 <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A>，标记循环的顶部。 使用该标签的分支语句现在将分支到代码中的这个点。 下一步是将强制转换为 `ICollection(Of TInput)` 的 `TOutput` 对象推入堆栈。 无需立即进行此操作，但需要在调用 `Add` 方法之前完成。 接下来，依次将输入数组和包含该数组的当前索引的 `index` 变量推入堆栈。 <xref:System.Reflection.Emit.OpCodes.Ldelem> 操作码从堆栈中弹出该索引和数组，然后将索引数组元素推入堆栈。 堆栈现已准备好调用 <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType> 方法，该方法从堆栈中弹出集合和新元素，并将该元素添加到该集合中。
 
-    循环中的其余代码会递增索引并测试以查看循环是否已完成：将索引和 32 位整数 1 压入堆栈并添加，将总和留在堆栈上；总和存储在 `index` 中。 调用 <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A>，将该点设置为循环的入口点。 再次加载该索引。 将输入数组推入堆栈，然后发出 <xref:System.Reflection.Emit.OpCodes.Ldlen>，获取其长度。 索引和长度现位于堆栈中，发出 <xref:System.Reflection.Emit.OpCodes.Clt> 对二者进行比较。 如果索引小于该长度，<xref:System.Reflection.Emit.OpCodes.Brtrue_S> 会从分支返回到循环的起始点。
+    循环中的其他代码会递增索引，并通过测试查看循环是否完成：将索引和 32 位整数 1 推入堆栈并相加，在堆栈上保留总和；将总和存储在 `index`。 调用 <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A>，将该点设置为循环的入口点。 再次加载该索引。 将输入数组推入堆栈，然后发出 <xref:System.Reflection.Emit.OpCodes.Ldlen>，获取其长度。 索引和长度现位于堆栈中，发出 <xref:System.Reflection.Emit.OpCodes.Clt> 对二者进行比较。 如果索引小于该长度，<xref:System.Reflection.Emit.OpCodes.Brtrue_S> 会从分支返回到循环的起始点。
 
     [!code-csharp[GenericMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#13)]
     [!code-vb[GenericMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#13)]
@@ -169,4 +167,4 @@ ms.locfileid: "71046058"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Reflection.Emit.MethodBuilder>
-- [如何：使用反射发出定义泛型类型](how-to-define-a-generic-type-with-reflection-emit.md)
+- [如何：使用 Reflection Emit 定义泛型类型](how-to-define-a-generic-type-with-reflection-emit.md)

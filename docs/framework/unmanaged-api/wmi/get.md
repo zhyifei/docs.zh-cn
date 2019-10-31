@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Get function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17304dc8330e4f8571f25b8544f1049dff229f2b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 60f29b91000fd3c07efea88dcc319eb283a4af78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798589"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120325"
 ---
 # <a name="get-function"></a>Get 函数
 
@@ -58,25 +56,25 @@ HRESULT Get (
 [in] 保留。 此参数必须为0。
 
 `pVal`\
-弄如果函数成功返回，则包含`wszName`属性的值。 为`pval`该参数分配了正确的限定符类型和值。
+弄如果函数成功返回，则包含 `wszName` 属性的值。 为限定符的 `pval` 参数分配了正确的类型和值。
 
 `pvtType`\
-弄如果该函数成功返回，则包含一个指示该属性类型的[CIM 类型常量](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration)。 它的值还可以`null`为。 
+弄如果该函数成功返回，则包含一个指示该属性类型的[CIM 类型常量](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration)。 还可以 `null`其值。 
 
 `plFlavor`\
-弄如果函数成功返回，则接收有关属性的源的信息。 其值可以是`null`，也可以是在*WbemCli*头文件中定义的以下 WBEM_FLAVOR_TYPE 常数之一： 
+弄如果函数成功返回，则接收有关属性的源的信息。 它的值可以是 `null`或*WbemCli*头文件中定义的以下 WBEM_FLAVOR_TYPE 常数之一： 
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | 属性为标准系统属性。 |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 对于类：该属性是从父类继承的。 <br> 对于实例：从父类继承的属性未被实例修改。  |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 对于类：属性是从父类继承的。 <br> 对于实例：从父类继承的属性未被实例修改。  |
 | `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 对于类：属性属于派生类。 <br> 对于实例：属性由实例进行修改;也就是说，提供了一个值，或者添加或修改了限定符。 |
 
 ## <a name="return-value"></a>返回值
 
 此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 出现一般错误。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 一个或多个参数无效。 |
@@ -88,15 +86,15 @@ HRESULT Get (
 
 此函数包装对[IWbemClassObject：： Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get)方法的调用。
 
-`Get`函数还可以返回系统属性。
+`Get` 函数还可以返回系统属性。
 
-为 `pVal` 参数分配了正确的限定符类型和值以及 COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) 函数
+为限定符和 COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit)函数分配了正确的类型和值的 `pVal` 参数
 
 ## <a name="requirements"></a>要求
 
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。
 
- **标头：** WMINet_Utils.idl
+ **标头：** WMINet_Utils .idl
 
  **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

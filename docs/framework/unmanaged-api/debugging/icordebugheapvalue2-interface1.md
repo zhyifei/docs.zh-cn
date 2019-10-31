@@ -14,24 +14,22 @@ helpviewer_keywords:
 ms.assetid: 87360a52-90b1-4ada-80c0-589a556116d8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fa872453ed72a3095c135aa25e81284610ad2436
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8ae788094def566b4dc3a17d0a08d657cc27468f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910212"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138380"
 ---
 # <a name="icordebugheapvalue2-interface"></a>ICorDebugHeapValue2 接口
 
-为公共语言运行时 (CLR) 句柄提供支持的 ICorDebugHeapValue 扩展。  
+为公共语言运行时（CLR）句柄提供支持的 ICorDebugHeapValue 扩展。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[CreateHandle 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|为此`ICorDebugHeapValue2`对象创建指定类型的句柄。|  
+|[CreateHandle 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|为此 `ICorDebugHeapValue2` 对象创建指定类型的句柄。|  
   
 ## <a name="remarks"></a>备注  
   
@@ -39,11 +37,11 @@ ms.locfileid: "69910212"
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl, Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 36c2ed5529151a7ea18ccaffc2202ad6c69bcbd9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 312b8b005998da44feb5ae24ab4a0a17bb948a3f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910233"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138571"
 ---
 # <a name="icordebuggenericvalue-interface"></a>ICorDebugGenericValue 接口
 
-"ICorDebugValue" 的子类, 适用于所有值。 此接口可为值提供 Get 和 Set 方法。  
+"ICorDebugValue" 的子类，适用于所有值。 此接口可为值提供 Get 和 Set 方法。  
   
 ## <a name="methods"></a>方法  
   
@@ -35,9 +33,9 @@ ms.locfileid: "69910233"
 |[SetValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)|从指定的缓冲区复制新值。|  
   
 ## <a name="remarks"></a>备注  
- `ICorDebugGenericValue`是子接口, 因为它是不可远程处理的。  
+ `ICorDebugGenericValue` 是子接口，因为它是不可远程处理的。  
   
- 对于引用类型, 该值是引用而不是引用的内容。  
+ 对于引用类型，该值是引用而不是引用的内容。  
   
  此接口不支持跨计算机或跨进程远程调用。  
   
@@ -45,11 +43,11 @@ ms.locfileid: "69910233"
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl, Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

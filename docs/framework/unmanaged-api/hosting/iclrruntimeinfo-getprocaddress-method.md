@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a7732bfc-689a-4926-88fd-4f81e6f9ed78
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c196eafbc2ff1d851471355a630b860c7c02ba1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cedda39aeebc62c6bf43f42ae2daf6f6f515fd27
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765538"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120270"
 ---
 # <a name="iclrruntimeinfogetprocaddress-method"></a>ICLRRuntimeInfo::GetProcAddress 方法
-获取指定的函数导出从公共语言运行时 (CLR) 与此接口关联的地址。  
+获取从与此接口关联的公共语言运行时（CLR）导出的指定函数的地址。  
   
- 此方法取代[GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md)函数。  
+ 此方法取代了[GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md)函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,10 +37,10 @@ HRESULT GetProcAddress(
   
 ## <a name="parameters"></a>参数  
  `pszProcName`  
- [in]导出函数的名称。  
+ 中导出的函数的名称。  
   
  `ppProc`  
- [out]导出函数的地址。  
+ 弄导出函数的地址。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
@@ -51,17 +49,17 @@ HRESULT GetProcAddress(
 |-------------|-----------------|  
 |S_OK|该方法已成功完成。|  
 |E_POINTER|`pszProcName` 或 `ppProc` 为 null。|  
-|CLR_E_SHIM_RUNTIMEEXPORT|指定的函数不是导出的函数。|  
+|CLR_E_SHIM_RUNTIMEEXPORT|指定的函数不是已导出的函数。|  
   
 ## <a name="remarks"></a>备注  
- 此方法会导致 CLR 加载，但未初始化。  
+ 此方法导致加载但不初始化 CLR。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MetaHost.h  
+ **标头：** MetaHost  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

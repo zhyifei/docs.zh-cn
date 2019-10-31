@@ -23,14 +23,12 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17465b07172788f18a432784653afadda18467fe
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2ab4fc990e0c524e0c77fa0bdedd7c263edb21b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045687"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129963"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>创建桌面应用程序的附属程序集
 
@@ -198,7 +196,7 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
 
 ### <a name="installing-a-satellite-assembly-in-the-global-assembly-cache"></a>在全局程序集缓存中安装附属程序集
 
-运行时在资源回退进程中搜索资源时，首先会在[全局程序集缓存](../app-domains/gac.md)中查找。 （有关详细信息，请参阅[打包和部署资源](packaging-and-deploying-resources-in-desktop-apps.md)主题中的“资源回退进程”部分。）只要使用强名称对附属程序集签名，就可以使用[全局程序集缓存工具 (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) 在全局程序集缓存中安装该程序集。
+运行时在资源回退进程中搜索资源时，首先会在[全局程序集缓存](../app-domains/gac.md)中查找。 （有关详细信息，请参阅[打包和部署资源](packaging-and-deploying-resources-in-desktop-apps.md)主题中的 "资源回退进程" 一节。）使用强名称对附属程序集进行签名后，即可使用[全局程序集缓存工具（gacutil.exe）](../tools/gacutil-exe-gac-tool.md)将其安装在全局程序集缓存中。
 
 下面的 Gacutil.exe 命令在全局程序集缓存中安装了 StringLibrary.resources.dll：
 

@@ -2,14 +2,12 @@
 title: <Type>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7ffe37540fe089bfd1e0eca1958498e725eb9b5b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4e88b49b82513079ddcf6f0bafe02d44235a406a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049152"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091856"
 ---
 # <a name="type-element-net-native"></a>\<类型 > 元素（.NET Native）
 
@@ -53,13 +51,13 @@ ms.locfileid: "71049152"
 
 ## <a name="name-attribute"></a>Name 特性
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |type_name|类型名称。 如果此 `<Type>` 元素是 [\<Namespace>](namespace-element-net-native.md) 元素或另一个 `<Type>` 元素的子元素，type_name 可能包括类型名称而不包括其命名空间。 否则，type_name 必须包含完全限定的类型名称。|
 
 ## <a name="all-other-attributes"></a>所有其他特性
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |policy_setting|该设置将应用到这种策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|
 
@@ -102,11 +100,11 @@ ms.locfileid: "71049152"
 
 ## <a name="example"></a>示例
 
-以下实例使用反射来展示 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 类的字段、属性和方法。 示例中`b`的变量是一个<xref:Windows.UI.Xaml.Controls.TextBlock>控件。 因为实例仅仅检索了类型信息，元数据的可用性是由 `Browse` 策略设置控制的。
+以下实例使用反射来展示 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 类的字段、属性和方法。 示例中的变量 `b` 是 <xref:Windows.UI.Xaml.Controls.TextBlock> 控件。 因为实例仅仅检索了类型信息，元数据的可用性是由 `Browse` 策略设置控制的。
 
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]
 
- 由于<xref:System.Collections.Generic.List%601>类的元数据不会由 .NET Native 工具链自动包含，因此该示例在运行时无法显示请求的成员信息。 为提供所需的元数据，将以下 `<Type>` 元素添加到运行时指令文件。 注意，因为我们已经提供了父 [<Namespace\>](namespace-element-net-native.md) 元素，因此不必在 `<Type>` 元素中提供完全限定的类型名称。
+ 由于 <xref:System.Collections.Generic.List%601> 类的元数据不是由 .NET Native 工具链自动包含的，因此该示例在运行时无法显示请求的成员信息。 为提供所需的元数据，将以下 `<Type>` 元素添加到运行时指令文件。 注意，因为我们已经提供了父 [<Namespace\>](namespace-element-net-native.md) 元素，因此不必在 `<Type>` 元素中提供完全限定的类型名称。
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -120,11 +118,11 @@ ms.locfileid: "71049152"
 ```
 
 ## <a name="example"></a>示例
- 以下实例使用了反射来检索一个代表 <xref:System.Reflection.PropertyInfo> 属性的 <xref:System.String.Chars%2A?displayProperty=nameWithType> 对象。 它使用 <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法来检索一个字符串中的七个字符的值，并在该字符串中显示所有字符。 示例中`b`的变量是一个<xref:Windows.UI.Xaml.Controls.TextBlock>控件。
+ 以下实例使用了反射来检索一个代表 <xref:System.Reflection.PropertyInfo> 属性的 <xref:System.String.Chars%2A?displayProperty=nameWithType> 对象。 它使用 <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法来检索一个字符串中的七个字符的值，并在该字符串中显示所有字符。 示例中的变量 `b` 是 <xref:Windows.UI.Xaml.Controls.TextBlock> 控件。
 
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]
 
- 由于<xref:System.String>对象的元数据不可用，因此在使用 .NET Native <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>工具链编译<xref:System.NullReferenceException>时，对方法的调用会在运行时引发异常。 要消除异常并提供必需的元数据，请将以下 `<Type>` 元素添加到运行时指令文件：
+ 由于 <xref:System.String> 对象的元数据不可用，因此，在使用 .NET Native 工具链编译时，对 <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法的调用会在运行时引发 <xref:System.NullReferenceException> 异常。 要消除异常并提供必需的元数据，请将以下 `<Type>` 元素添加到运行时指令文件：
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">

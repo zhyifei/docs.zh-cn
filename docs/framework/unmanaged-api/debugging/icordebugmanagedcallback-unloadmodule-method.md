@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b12bfcd9-1e29-48bf-9a3d-44bfae5df5e8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8826644ae3bdfbef76e9143de5f8f449c1555095
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 70aaf32b9da751b49571ab98a95e432b7f84caa9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761213"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130640"
 ---
 # <a name="icordebugmanagedcallbackunloadmodule-method"></a>ICorDebugManagedCallback::UnloadModule 方法
-通知调试器已卸载了公共语言运行时模块 (DLL)。  
+通知调试器已卸载了公共语言运行时模块（DLL）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,18 +36,18 @@ HRESULT UnloadModule (
   
 ## <a name="parameters"></a>参数  
  `pAppDomain`  
- [in]指向一个 ICorDebugAppDomain 对象，表示包含该模块的应用程序域的指针。  
+ 中指向 ICorDebugAppDomain 对象的指针，该对象表示包含模块的应用程序域。  
   
  `pModule`  
- [in]指向一个 icor 调试模块对象，表示该模块的指针。  
+ 中指向表示模块的 ICorDebugModule 对象的指针。  
   
 ## <a name="remarks"></a>备注  
- 不应进行此调用后使用该模块。  
+ 此调用之后不应使用该模块。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

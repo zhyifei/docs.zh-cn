@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed8364eb-f01b-46f6-b5e3-5dda9cae2dfe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c57b13b05522614ff066b93cb9f6a437cb340576
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3ca062231fd482c1f0d888935e882513461838ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962686"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137591"
 ---
 # <a name="icordebugstepper-interface"></a>ICorDebugStepper 接口
 表示在代码执行过程中由调试器执行的一个步骤。此步骤作为命令颁发和完成之间的标识符使用，可以实现取消对某个步骤的执行。  
@@ -30,37 +28,37 @@ ms.locfileid: "69962686"
   
 |方法|描述|  
 |------------|-----------------|  
-|[Deactivate 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md)|使此`ICorDebugStepper`方法取消它收到的最后一个步骤命令。|  
-|[IsActive 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-isactive-method.md)|获取一个值, 该值指示此`ICorDebugStepper`是否当前正在执行步骤。|  
-|[SetInterceptMask 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md)|设置一个 CorDebugIntercept 值, 该值指定要单步执行的代码的类型。|  
-|[SetRangeIL 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)|设置一个值, 该值指示是否对[ICorDebugStepper:: StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)的调用传递参数值, 这些值相对于本机代码或要逐步处理的方法的 Microsoft 中间语言 (MSIL) 代码。|  
-|[SetUnmappedStopMask 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)|设置一个 CorDebugUnmappedStop 值, 该值指定将在其中停止执行的未映射代码的类型。|  
-|[Step 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)|使此`ICorDebugStepper`单步执行其包含线程, 并根据需要继续单步执行线程中调用的函数。|  
-|[StepOut 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-stepout-method.md)|使此`ICorDebugStepper`在其包含线程中单步执行, 并在当前帧将控件返回到调用帧时完成。|  
-|[StepRange 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)|使此`ICorDebugStepper`操作在其包含线程中单步执行, 并在到达指定范围最后一个以上的代码时返回。|  
+|[Deactivate 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md)|使此 `ICorDebugStepper` 取消其收到的最后一个步骤命令。|  
+|[IsActive 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-isactive-method.md)|获取一个值，该值指示此 `ICorDebugStepper` 当前是否正在执行步骤。|  
+|[SetInterceptMask 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md)|设置一个 CorDebugIntercept 值，该值指定要单步执行的代码的类型。|  
+|[SetRangeIL 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)|设置一个值，该值指示是否对[ICorDebugStepper：： StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)的调用传递参数值，这些值相对于本机代码或要逐步处理的方法的 Microsoft 中间语言（MSIL）代码。|  
+|[SetUnmappedStopMask 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)|设置一个 CorDebugUnmappedStop 值，该值指定将在其中停止执行的未映射代码的类型。|  
+|[Step 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)|使此 `ICorDebugStepper` 单步执行其包含线程，并根据需要继续单步执行线程中调用的函数。|  
+|[StepOut 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-stepout-method.md)|使此 `ICorDebugStepper` 单步执行其包含线程，并在当前帧将控件返回到调用帧时完成。|  
+|[StepRange 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)|使此 `ICorDebugStepper` 单步执行其包含线程，并在到达指定范围内的最后一个代码时返回。|  
   
 ## <a name="remarks"></a>备注  
- `ICorDebugStepper`接口具有以下用途:  
+ `ICorDebugStepper` 接口具有以下用途：  
   
 - 它充当发出的步骤命令与完成该命令之间的标识符。  
   
-- 它提供一个中心接口, 用于封装可执行的所有单步执行。  
+- 它提供一个中心接口，用于封装可执行的所有单步执行。  
   
 - 它提供了一种提前取消单步执行操作的方法。  
   
- 每个线程可以有多个分档器。 例如, 在单步执行某个函数时可能会命中断点, 用户可能希望在该函数中启动新的单步执行操作。 调试器负责确定如何处理这种情况。 调试器可能需要取消原始单步执行操作或嵌套两个操作。 `ICorDebugStepper`接口支持这两种选择。  
+ 每个线程可以有多个分档器。 例如，在单步执行某个函数时可能会命中断点，用户可能希望在该函数中启动新的单步执行操作。 调试器负责确定如何处理这种情况。 调试器可能需要取消原始单步执行操作或嵌套两个操作。 `ICorDebugStepper` 接口支持这两种选择。  
   
- 如果公共语言运行时 (CLR) 发出跨线程的已封送调用, 则分档器可以在线程之间迁移。  
+ 如果公共语言运行时（CLR）发出跨线程的已封送调用，则分档器可以在线程之间迁移。  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl, Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

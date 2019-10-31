@@ -6,12 +6,12 @@ helpviewer_keywords:
 - List Item control type
 - UI Automation, List Item control type
 ms.assetid: 34f533bf-fc14-4e78-8fee-fb7107345fab
-ms.openlocfilehash: 64431150969c25da9781871ad8dcd30e029cd62e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c2b1406519c80368cd00a888c541ec9abfce7faa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039440"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123078"
 ---
 # <a name="ui-automation-support-for-the-listitem-control-type"></a>UI 自动化对 ListItem 控件类型的支持
 > [!NOTE]
@@ -65,7 +65,7 @@ ms.locfileid: "73039440"
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|视情况而定|如果可以操作项以显示或隐藏信息，则必须实现此控件模式。|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|视情况而定|如果可以编辑项，则必须实现此控件模式。 更改列表项控件将导致对 <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>和 <xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>的值进行更改。|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|视情况而定|如果在列表容器内支持项之间的空间导航，并且容器按行和列排列，则必须实现 Grid Item 控件模式。|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|视情况而定|如果项具有可以对其执行的命令（独立于所选内容），则必须实现此模式。 这通常是与双击列表项控件相关联的操作。 示例将从 [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]启动文档，或在 Microsoft Windows Media Player 中播放音乐文件。|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|视情况而定|如果项具有可以对其执行的命令（独立于所选内容），则必须实现此模式。 这通常是与双击列表项控件相关联的操作。 示例将从 Microsoft Windows 资源管理器中启动文档，或者在 Microsoft Windows Media Player 中播放音乐文件。|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  

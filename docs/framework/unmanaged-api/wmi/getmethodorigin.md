@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetMethodOrigin function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9cea7251353dae093f64448c8d84157917fa74c5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1f669d5721a7bd9434f0ce4b1e2290c0633e1b46
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798556"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102530"
 ---
 # <a name="getmethodorigin-function"></a>GetMethodOrigin 函数
 确定声明方法的类。
@@ -57,7 +55,7 @@ HRESULT GetMethodOrigin (
 
 此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的方法。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 一个或多个参数无效。 |
@@ -69,12 +67,12 @@ HRESULT GetMethodOrigin (
 
 由于类可以从一个或多个基类继承方法，因此开发人员通常需要确定定义给定方法的类。
 
-在`pstrClassName`调用函数之前，参数必须指向`BSTR`有效的，因为这是一个`out`参数; 在函数返回后，不释放此指针。
+`pstrClassName` 参数在调用函数之前不能指向有效 `BSTR`，因为这是 `out` 参数;在函数返回后，不释放此指针。
 
 ## <a name="requirements"></a>要求  
-**适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标头：** WMINet_Utils.idl  
+ **标头：** WMINet_Utils .idl  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

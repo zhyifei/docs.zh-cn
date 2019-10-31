@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d627e8b7-a605-40ac-b9bb-da9a3f1b66d9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a0ad4b7e907412aced911d7869ffce81eb867448
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6b4303163140c9c5553d02855c64dd2a3f5b134
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738516"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73112734"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>ICLRDataTarget::WriteVirtual 方法
-将数据从指定的缓冲区写入到指定的虚拟内存地址。  
+将数据从指定的缓冲区写入指定的虚拟内存地址。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,21 +39,21 @@ HRESULT WriteVirtual (
   
 ## <a name="parameters"></a>参数  
  `address`  
- [in]存储的虚拟内存地址 CLRDATA_ADDRESS。  
+ 中存储虚拟内存地址的 CLRDATA_ADDRESS。  
   
  `buffer`  
- [in]指向存储的数据要写入的缓冲区的指针。  
+ 中指向存储要写入的数据的缓冲区的指针。  
   
  `bytesRequested`  
- [in]要写入的字节数。  
+ 中要写入的字节数。  
   
  `bytesWritten`  
- [out]指向实际写入的字节数的指针。  
+ 弄指向已写入的实际字节数的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** ClrData.idl, ClrData.h  
+ **标头：** ClrData，ClrData  
   
  **库：** CorGuids.lib  
   

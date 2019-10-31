@@ -14,14 +14,12 @@ helpviewer_keywords:
 - DeleteMethod function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4db81c4c7e123eed82b3092912b8d871edb54618
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: db360584dacf250be2f35e5e6666f8332b39a8dd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798656"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120651"
 ---
 # <a name="deletemethod-function"></a>DeleteMethod 函数
 从 CIM 类定义中删除指定的方法。
@@ -47,13 +45,13 @@ HRESULT Delete (
 中指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例的指针。
 
 `wszName`  
-中要从类表中删除的方法的名称。 `wszName`必须是指向有效`LPCWSTR`的的指针。
+中要从类表中删除的方法的名称。 `wszName` 必须是指向有效 `LPCWSTR`的指针。
 
 ## <a name="return-value"></a>返回值
 
 此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_E_NOT_FOUND` | 0x80041002 | 指定的方法不存在。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存来完成此操作。 |
@@ -66,9 +64,9 @@ HRESULT Delete (
 指向 CIM 实例的[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指针不支持方法删除。
 
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标头：** WMINet_Utils.idl  
+ **标头：** WMINet_Utils .idl  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

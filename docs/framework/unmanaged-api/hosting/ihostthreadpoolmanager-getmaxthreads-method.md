@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: db268876-6178-4a81-aca3-318ee7f96001
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1d5b865906f797c25783c4d8a306dc91769ef9a9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e53265556de026e84af7ca345a5f82be3c5ff812
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749287"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122060"
 ---
 # <a name="ihostthreadpoolmanagergetmaxthreads-method"></a>IHostThreadPoolManager::GetMaxThreads 方法
-在线程池中同时获取的最大主机维护的线程数。  
+获取主机在线程池中并发维护的最大线程数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,31 +35,31 @@ HRESULT GetMaxThreads (
   
 ## <a name="parameters"></a>参数  
  `pdwMaxWorkerThreads`  
- [out]指向的最大主机将在线程池中的线程数的指针。  
+ 弄一个指针，它指向主机在线程池中维护的最大线程数。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`GetMaxThreads` 已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR (尚未加载到进程，或在 CLR 处于状态它不能运行托管的代码或过程调用已成功。|  
-|HOST_E_TIMEOUT|呼叫已超时。|  
+|S_OK|`GetMaxThreads` 成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR （尚未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|事件已取消时被阻塞的线程或纤程正在等待它。|  
-|E_FAIL|发生未知的灾难性故障。 如果某方法返回 E_FAIL，CLR 不再在进程内可用。 对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。|  
-|E_NOTIMPL|主机未提供的实现`GetMaxThreads`。|  
+|HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
+|E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
+|E_NOTIMPL|宿主不提供 `GetMaxThreads`的实现。|  
   
 ## <a name="remarks"></a>备注  
- CLR 调用`GetMaxThreads`来确定线程池中线程的总数。 [GetAvailableThreads](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getavailablethreads-method.md)方法获取当前不在处理工作项的线程数。 返回值的所有请求`pdwMaxWorkerThreads`参数保持排队状态，直到线程变为可用。  
+ CLR 调用 `GetMaxThreads` 来确定线程池中线程的总数。 [GetAvailableThreads](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getavailablethreads-method.md)方法获取当前未处理工作项的线程数。 超过 `pdwMaxWorkerThreads` 参数返回值的所有请求将保持排队状态，直到线程变为可用。  
   
- 如果主机未提供的实现`GetMaxThreads`，它应返回 E_NOTIMPL HRESULT 值。  
+ 如果主机未提供 `GetMaxThreads`的实现，它应返回 E_NOTIMPL 的 HRESULT 值。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

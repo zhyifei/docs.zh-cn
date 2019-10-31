@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 103c8502-81fe-40d7-9c1e-9008d8fb19e1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: edd70dd4cfc2e26b30ee0deec79b7d126d1f76a1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cceafc8358ce2b0eafa62a3855c4eb1e96adae11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738586"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113317"
 ---
 # <a name="iclrdatatargetsetthreadcontext-method"></a>ICLRDataTarget::SetThreadContext 方法
-目标进程中设置指定线程的当前的上下文。 由公共语言运行时 (CLR) 数据访问服务调用此方法。  
+设置目标进程中指定线程的当前上下文。 此方法由公共语言运行时（CLR）数据访问服务调用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,23 +38,23 @@ HRESULT SetThreadContext (
   
 ## <a name="parameters"></a>参数  
  `threadID`  
- [in]目标进程中线程的操作系统的系统标识符。  
+ 中目标进程中的线程的操作系统标识符。  
   
  `contextSize`  
- [in]上下文的大小。  
+ 中上下文的大小。  
   
  `context`  
- [in]指向包含上下文的缓冲区的指针。  
+ 中指向包含上下文的缓冲区的指针。  
   
- 中的数据`context`缓冲区将以 Win32 格式`CONTEXT`结构。 上下文指定特定于处理器的寄存器数据，因此定义的 Win32`CONTEXT`结构取决于处理器的体系结构。 请参阅 WinNT.h 中的标头文件定义的 Win32`CONTEXT`结构。  
+ `context` 缓冲区中的数据将采用 Win32 `CONTEXT` 结构的格式。 上下文指定处理器特定的寄存器数据，因此 Win32 `CONTEXT` 结构的定义取决于处理器的体系结构。 有关 Win32 `CONTEXT` 结构的定义，请参阅 WinNT .h 头文件。  
   
 ## <a name="remarks"></a>备注  
  此方法由调试应用程序的编写器实现。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** ClrData.idl, ClrData.h  
+ **标头：** ClrData，ClrData  
   
  **库：** CorGuids.lib  
   

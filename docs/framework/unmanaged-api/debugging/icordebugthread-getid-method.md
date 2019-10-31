@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1de4584-92df-42f3-9da4-fca03a1c6821
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 11e21e913e4749705ba6c7f91016be21b4de1712
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 48d2af96b50bf77347256b3d5860405e460a09d3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769964"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133454"
 ---
 # <a name="icordebugthreadgetid-method"></a>ICorDebugThread::GetID 方法
 获取此 ICorDebugThread 的活动部分的当前操作系统标识符。  
@@ -37,15 +35,15 @@ HRESULT GetID (
   
 ## <a name="parameters"></a>参数  
  `pdwThreadId`  
- [out]线程的标识符。  
+ 弄线程的标识符。  
   
 ## <a name="remarks"></a>备注  
- 操作系统识别符的过程中，执行过程中可能会更改，并且可以在线程的不同部分的不同值。  
+ 操作系统标识符在进程执行期间可能会发生更改，并且可以是线程的不同部分的不同值。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: d079131b-685b-4869-95be-826b88d28bd2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 90eb63b277f5c40053ecc3939890c87adc145251
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 88a007654646ba42ebcaf1b42e002282a1040c7f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738116"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134056"
 ---
 # <a name="icordebugsetmanagedhandler-method"></a>ICorDebug::SetManagedHandler 方法
 指定托管事件的事件处理程序对象。  
@@ -37,17 +35,17 @@ HRESULT SetManagedHandler (
   
 ## <a name="parameters"></a>参数  
  `pCallback`  
- [in]一个指向[ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)对象，它是事件处理程序对象。  
+ 中指向[ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)对象的指针，该对象为事件处理程序对象。  
   
 ## <a name="remarks"></a>备注  
- `SetManagedHandler` 必须在创建时调用。  
+ 必须在创建时调用 `SetManagedHandler`。  
   
- 如果`ICorDebugManagedCallback`实现不包含足够的接口来处理正在调试的应用程序的调试事件`SetManagedHandler`返回 E_NOINTERFACE HRESULT。  
+ 如果 `ICorDebugManagedCallback` 实现未包含足够的接口来处理要调试的应用程序的调试事件，`SetManagedHandler` 将返回 E_NOINTERFACE 的 HRESULT。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

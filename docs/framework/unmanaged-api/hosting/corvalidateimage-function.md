@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a6f1d76ef5cf36bcbab29a33647520663f822798
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 42da5bb761ba8ce388bd41d46e8fdc4561ad0290
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770041"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136873"
 ---
-# <a name="corvalidateimage-function"></a>_CorValidateImage 函数
-验证托管的模块映像，并已加载后通知操作系统加载程序。  
+# <a name="_corvalidateimage-function"></a>_CorValidateImage 函数
+验证托管模块映像，并在加载后通知操作系统加载程序。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,48 +35,48 @@ STDAPI _CorValidateImage (
   
 ## <a name="parameters"></a>参数  
  `ImageBase`  
- [in]指向要作为验证的图像的起始位置的托管代码。 该映像必须已加载到内存中。  
+ 中一个指针，指向要作为托管代码验证的图像的起始位置。 必须已将该映像加载到内存中。  
   
  `FileName`  
- [in]图像的文件名。  
+ 中图像的文件名。  
   
 ## <a name="return-value"></a>返回值  
- 此函数返回的标准值`E_INVALIDARG`， `E_OUTOFMEMORY`， `E_UNEXPECTED`，和`E_FAIL`，以及以下值。  
+ 此函数将返回标准值 `E_INVALIDARG`、`E_OUTOFMEMORY`、`E_UNEXPECTED`和 `E_FAIL`以及以下值。  
   
 |返回值|描述|  
 |------------------|-----------------|  
-|`STATUS_INVALID_IMAGE_FORMAT`|映像是无效的。 此值具有 HRESULT 0xC000007BL。|  
-|`STATUS_SUCCESS`|映像是有效的。 此值具有 HRESULT 0x00000000L。|  
+|`STATUS_INVALID_IMAGE_FORMAT`|图像无效。 此值具有 HRESULT 0xC000007BL。|  
+|`STATUS_SUCCESS`|图像有效。 此值具有 HRESULT 0x00000000L。|  
   
 ## <a name="remarks"></a>备注  
- 在 Windows XP 和更高版本中，操作系统加载程序通过检查通用对象文件格式 (COFF) 标头中的 COM 描述符目录位检查托管模块。 一个设置位指示托管的模块。 如果加载程序检测到托管的模块时，它将加载 MsCorEE.dll 并调用`_CorValidateImage`，该文件将执行以下操作：  
+ 在 Windows XP 和更高版本中，操作系统加载程序通过检查通用对象文件格式（COFF）标头中的 COM 描述符目录位检查托管模块。 设置位表示托管模块。 如果加载程序检测到托管模块，它将加载 Mscoree.dll 并调用 `_CorValidateImage`，这会执行以下操作：  
   
-- 确认该图像是有效的托管的模块。  
+- 确认映像是有效的托管模块。  
   
-- 在图中的入口点更改为公共语言运行时 (CLR) 中的入口点。  
+- 将映像中的入口点更改为公共语言运行时（CLR）中的入口点。  
   
-- 对于 64 位版本的 Windows，修改在内存中是通过将其从 PE32 转换为 PE32 + 格式的图像。  
+- 对于64位版本的 Windows，通过将其从 PE32 转换为 PE32 + 格式修改内存中的映像。  
   
-- 返回到加载程序加载托管的模块映像时。  
+- 加载托管模块映像时返回到加载程序。  
   
- 对于可执行映像，操作系统加载程序然后调用[_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)函数，而不考虑可执行文件中指定的入口点。 对于 DLL 程序集图像加载程序调用[_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)函数。  
+ 对于可执行映像，操作系统加载程序将调用[_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)函数，而不考虑可执行文件中指定的入口点。 对于 DLL 程序集映像，加载程序将调用[_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)函数。  
   
- `_CorExeMain` 或`_CorDllMain`将执行以下操作：  
+ `_CorExeMain` 或 `_CorDllMain` 执行以下操作：  
   
 - 初始化 CLR。  
   
-- 查找程序集的 CLR 标头中的托管的入口点。  
+- 定位程序集的 CLR 头中的托管入口点。  
   
 - 开始执行。  
   
- 加载程序调用[_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md)函数时托管模块映像都会被卸载。 但是，此函数不执行任何操作;它只是返回。  
+ 卸载托管模块映像时，加载程序将调用[_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md)函数。 但是，此函数不执行任何操作;它仅返回。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **标头：** Cor  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

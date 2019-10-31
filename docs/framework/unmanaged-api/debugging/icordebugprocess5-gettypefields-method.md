@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6a0ad3ee-dacb-47e9-abae-4536bcc4804b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2d413b17da0b6f241f9078bfeb3bd035d4d07a81
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0045285a3da22f468c2426bb3b9c4ae7e3e1d7c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767631"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132673"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>ICorDebugProcess5::GetTypeFields 方法
-提供有关属于一种类型的字段信息。  
+提供有关属于类型的字段的信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,24 +38,24 @@ HRESULT GetTypeFields(
   
 ## <a name="parameters"></a>参数  
  `id`  
- [in]检索其字段信息的类型的标识符。  
+ 中检索其字段信息的类型的标识符。  
   
  `celt`  
- [in]数[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)其字段信息是要检索的对象。  
+ 中要检索其字段信息的[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)对象的数目。  
   
  `fields`  
- [out]一个数组[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)对象，它提供有关属于该类型的字段的信息。  
+ 弄[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)对象的数组，这些对象提供有关属于类型的字段的信息。  
   
  `pceltNeeded`  
- [out]指向数[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)中包含的对象`fields`。  
+ 弄一个指针，指向 `fields`中包含的[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)对象的数目。  
   
 ## <a name="remarks"></a>备注  
- `celt`参数，用于指定该方法用来填充其字段信息的字段数目`fields`，应与对应的值`COR_TYPE_LAYOUT::numFields`字段。  
+ `celt` 参数，它指定方法用来填充 `fields`的字段信息的字段数，应与 `COR_TYPE_LAYOUT::numFields` 字段的值相对应。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: ae181ec8-36bf-4ed1-9a02-ca27d417c80b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9e81fb7c99b9fd03a69456a84f2191770f40121d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3859752fd92a76f3fef1ceced0e792109b65106a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795343"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108281"
 ---
 # <a name="fusion_install_reference-structure"></a>FUSION_INSTALL_REFERENCE 结构
 表示应用程序对应用程序已安装在全局程序集缓存中的程序集进行的引用。  
@@ -38,18 +36,18 @@ typedef struct _FUSION_INSTALL_REFERENCE_ {
 } FUSION_INSTALL_REFERENCE, *LPFUSION_INSTALL_REFERENCE;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
 |`cbSize`|结构的大小（以字节为单位）。|  
 |`dwFlags`|保留以供将来进行扩展。 此值必须为0（零）。|  
-|`guidScheme`|添加引用的实体。 此字段可以具有以下值之一：<br /><br /> - FUSION_REFCOUNT_MSI_GUID:此程序集由使用 Microsoft Windows Installer 安装的应用程序引用。 该`szIdentifier`字段设置为`MSI`，并且该`szNonCanonicalData`字段设置为`Windows Installer`。 此方案用于 Windows 并行程序集。<br />- FUSION_REFCOUNT_UNINSTALL_SUBKEY_GUID:程序集由出现在 "**添加/删除程序**" 界面中的应用程序引用。 字段提供了用于将应用程序注册到 "**添加/删除程序**" 界面的令牌。 `szIdentifier`<br />- FUSION_REFCOUNT_FILEPATH_GUID:程序集由文件系统中的文件所表示的应用程序引用。 `szIdentifier`字段提供此文件的路径。<br />- FUSION_REFCOUNT_OPAQUE_STRING_GUID:此程序集由仅由不透明字符串表示的应用程序引用。 `szIdentifier`字段提供了此不透明字符串。 删除此值时，全局程序集缓存不会检查不透明引用是否存在。<br />- FUSION_REFCOUNT_OSINSTALL_GUID:此值为保留值。|  
-|`szIdentifier`|标识在全局程序集缓存中安装程序集的应用程序的唯一字符串。 其值取决于`guidScheme`字段的值。|  
+|`guidScheme`|添加引用的实体。 此字段可以具有以下值之一：<br /><br /> -FUSION_REFCOUNT_MSI_GUID：程序集由使用 Microsoft Windows Installer 安装的应用程序引用。 "`szIdentifier`" 字段设置为 "`MSI`"，`szNonCanonicalData` 字段设置为 "`Windows Installer`"。 此方案用于 Windows 并行程序集。<br />-FUSION_REFCOUNT_UNINSTALL_SUBKEY_GUID：程序集由在 "**添加/删除程序**" 界面中显示的应用程序引用。 "`szIdentifier`" 字段提供用于将应用程序注册到 "**添加/删除程序**" 界面的令牌。<br />-FUSION_REFCOUNT_FILEPATH_GUID：程序集由文件系统中的文件所表示的应用程序引用。 `szIdentifier` 字段提供此文件的路径。<br />-FUSION_REFCOUNT_OPAQUE_STRING_GUID：程序集由仅由不透明字符串表示的应用程序引用。 `szIdentifier` 字段提供了此不透明字符串。 删除此值时，全局程序集缓存不会检查不透明引用是否存在。<br />-FUSION_REFCOUNT_OSINSTALL_GUID：保留此值。|  
+|`szIdentifier`|标识在全局程序集缓存中安装程序集的应用程序的唯一字符串。 其值取决于 "`guidScheme`" 字段的值。|  
 |`szNonCanonicalData`|仅由添加了引用的实体识别的字符串。 全局程序集缓存存储此字符串，但不使用它。|  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 合成。h  
   

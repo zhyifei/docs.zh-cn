@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbd2f662-208b-4174-b301-5c99af91040f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 32d6f3040cbb2070433ad5e3b6117d4b0b212656
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3e4181cbd14674336133314acdcd6cdcf0c9ff6b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765869"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134933"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationex-method"></a>ICLRStrongName::StrongNameSignatureVerificationEx 方法
-获取一个值，该值指示是否在提供的路径处的程序集清单包含强名称签名。  
+获取一个值，该值指示所提供的路径处的程序集清单是否包含强名称签名。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,26 +37,26 @@ HRESULT StrongNameSignatureVerificationEx (
   
 ## <a name="parameters"></a>参数  
  `wszFilePath`  
- [in]要验证的程序集的可移植可执行 （.exe 或.dll） 文件的路径。  
+ 中要验证的程序集的可移植可执行文件（.exe 或 .dll）文件的路径。  
   
  `fForceVerification`  
- [in]`true`来执行验证，即使它是必须重写注册表设置; 否则为`false`。  
+ [in] `true` 执行验证，即使需要重写注册表设置，否则，`false`。  
   
  `pfWasVerified`  
- [out]`true`强名称签名是否已验证; 否则为`false`。 `pfWasVerified` 此外将设置为`false`如果验证成功由于注册表设置。  
+ [out] 如果验证强名称签名，则 `true`;否则，`false`。 如果验证因为注册表设置而成功，则也会将 `pfWasVerified` 设置为 `false`。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK` 如果验证成功;否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。  
+ 如果验证成功，则 `S_OK`;否则，表示失败的 HRESULT 值（请参阅列表的[常见 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
   
 ## <a name="remarks"></a>备注  
- [Iclrstrongname:: Strongnamesignatureverificationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)方法提供的功能类似于[iclrstrongname:: Strongnamesignatureverification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)方法。 但是，第二个输入参数和输出参数[iclrstrongname:: Strongnamesignatureverificationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)属于类型`BOOLEAN`而不是`DWORD`。  
+ [ICLRStrongName：： StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)方法提供类似于[ICLRStrongName：： StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)方法的功能。 但是， [ICLRStrongName：： StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)的第二个输入参数和输出参数的类型为 `BOOLEAN`，而不是 `DWORD`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MetaHost.h  
+ **标头：** MetaHost  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

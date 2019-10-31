@@ -11,14 +11,12 @@ helpviewer_keywords:
 - profiling applications
 - Performance Console
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 163022256dfbeb303a500d9c1d574054c5b550d7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: daa2ae4fbbed78bda4648b4b3077fa7d96a9b3f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052302"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121563"
 ---
 # <a name="runtime-profiling"></a>运行时分析
 分析是用于在任何开发或部署方案中收集性能数据的方法。 本节面向想要收集有关应用程序性能的信息的开发人员和系统管理员。  
@@ -46,7 +44,7 @@ ms.locfileid: "71052302"
   
      在“选定对象的实例” 列表框中，单击要监视该应用程序的性能计数器的应用程序的名称。  
   
-     若要区分运行时的多个版本，或消除具有相同名称的多个应用程序的歧义，还必须修改注册表项。 有关详细信息，请参阅 [性能计数器和进程内并行应用程序](performance-counters-and-in-process-side-by-side-applications.md)。  
+     若要区分运行时的多个版本，或消除具有相同名称的多个应用程序的歧义，还必须修改注册表项。 有关详细信息，请参阅 [Performance Counters and In-Process Side-By-Side Applications](performance-counters-and-in-process-side-by-side-applications.md)。  
   
 > [!NOTE]
 > 如果在性能控制台正在运行时安装新的性能计数器，请在停止后再重启性能控制台，以便显示新的计数器。  
@@ -59,7 +57,7 @@ ms.locfileid: "71052302"
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>以编程方式读取和创建性能计数器  
  .NET Framework 提供了一些类，可用于以编程方式访问性能控制台中提供的相同性能信息。 另外，还可以使用这些类创建自定义性能计数器。 下表描述了 .NET Framework 中提供的某些性能监视类。  
   
-|类|描述|  
+|实例|描述|  
 |-----------|-----------------|  
 |<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>|表示 Windows NT 性能计数器组件。 使用此类可读取现有预定义或自定义计数器，并向自定义计数器发布（写入）性能数据。|  
 |<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=nameWithType>|提供与计数器交互的几种方法以及计算机上计数器的类别。|  

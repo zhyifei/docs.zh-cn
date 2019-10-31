@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fa21dc7b-5da7-440b-b59e-9180e5181f9d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f6dc1254261197583f2369587a61b5e179d760b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e3f2429462b4454e87690d98ad9fb446574add91
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779646"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141034"
 ---
 # <a name="iclrhostprotectionmanagersetprotectedcategories-method"></a>ICLRHostProtectionManager::SetProtectedCategories 方法
-指定的类别的托管的类型和成员应禁止在部分受信任的代码中运行。  
+指定应阻止在部分受信任代码中运行的托管类型和成员的类别。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,28 +35,28 @@ HRESULT SetProtectedCategories (
   
 ## <a name="parameters"></a>参数  
  `categories`  
- [in]组合[EApiCategories](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md)值，指示哪些类别的托管的类型和成员应禁止在部分受信任的代码中运行。  
+ 中[EApiCategories](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md)值的组合，指示应阻止托管类型和成员的哪些类别在部分受信任的代码中运行。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`SetProtectedCategories` 已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。|  
-|HOST_E_TIMEOUT|呼叫已超时。|  
+|S_OK|`SetProtectedCategories` 成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|事件已取消时被阻塞的线程或纤程正在等待它。|  
-|E_FAIL|发生未知的灾难性故障。 方法返回 E_FAIL 后，CLR 不再在进程中使用。 对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
+|E_FAIL|发生未知的灾难性故障。 方法返回 E_FAIL 后，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>备注  
- 每个`EApiCategories`值指的托管的类型和成员的列表。 `EApiCategories`枚举和`SetProtectedCategories`方法并直接关系到托管<xref:System.Security.Permissions.HostProtectionAttribute>类，该类用于将标记公开功能与通过所述的类别相对应的托管的类型和成员`EApiCategories`。 有关详细信息，请参阅<xref:System.Security.Permissions.HostProtectionAttribute>并<xref:System.Security.Permissions.HostProtectionResource>枚举，它直接对应于`EApiCategories`。  
+ 每个 `EApiCategories` 值都是指托管类型和成员的列表。 `EApiCategories` 枚举和 `SetProtectedCategories` 方法与托管 <xref:System.Security.Permissions.HostProtectionAttribute> 类直接相关，该类用于标记公开与 `EApiCategories`所述的类别对应的功能的托管类型和成员。 有关详细信息，请参阅 <xref:System.Security.Permissions.HostProtectionAttribute> 和 <xref:System.Security.Permissions.HostProtectionResource> 枚举，这与 `EApiCategories`直接对应。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

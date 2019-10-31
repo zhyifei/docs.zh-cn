@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bbb8d1b-bbc4-47b0-b1b1-2d54cc0be291
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 894f74f12de7ed0754dcca34eacb815efc33c766
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2a6ca9f4d74c508ac0a2af68c2a5b0a3e6d6b217
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752574"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139186"
 ---
 # <a name="logswitchcallreason-enumeration"></a>LogSwitchCallReason 枚举
 指示已对调试/跟踪开关执行的操作。  
@@ -36,18 +34,18 @@ typedef enum LogSwitchCallReason {
 } LogSwitchCallReason;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`SWITCH_CREATE`|创建调试/跟踪开关。|  
-|`SWITCH_MODIFY`|调试/跟踪开关进行了修改。|  
-|`SWITCH_DELETE`|调试/跟踪开关已删除。|  
+|`SWITCH_CREATE`|已创建调试/跟踪开关。|  
+|`SWITCH_MODIFY`|已修改调试/跟踪开关。|  
+|`SWITCH_DELETE`|已删除调试/跟踪开关。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bdb7f047-1e90-40fc-9e3b-d44a16509073
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9fe678dbf47141c31fb0870f1364983bc2ad69fc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cf6d84e483188ea7ed3376ba9b28906a38913fd4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770407"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124627"
 ---
 # <a name="iclrtasksettaskidentifier-method"></a>ICLRTask::SetTaskIdentifier 方法
-指示公共语言运行时 (CLR) 将指定的标识符值与表示由当前的任务相关联[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)实例。  
+指示公共语言运行时（CLR）将指定标识符值与当前[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)实例表示的任务相关联。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,28 +35,28 @@ HRESULT SetTaskIdentifier (
   
 ## <a name="parameters"></a>参数  
  `Asked`  
- [in]公共语言运行时能够表示由当前的任务相关联的唯一标识符`ICLRTask`实例。  
+ 中与当前 `ICLRTask` 实例表示的任务关联的公共语言运行时的唯一标识符。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`SetTaskIdentifier` 已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|CLR 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。|  
-|HOST_E_TIMEOUT|呼叫已超时。|  
+|S_OK|`SetTaskIdentifier` 成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|事件已取消时被阻塞的线程或纤程正在等待它。|  
-|E_FAIL|发生未知的灾难性故障。 如果某方法返回 E_FAIL，CLR 不再在进程内可用。 对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
+|E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>备注  
- 主机可以将标识符关联的任务，以便帮助集成 CLR 和调试环境中的主机。 该标识符具有对 CLR 没有意义。 CLR 仅将它传递到调试器应用程序。 调试器可以使用此标识符将 CLR 调用堆栈与主机调用堆栈，相关联，并启用它们各自的跟踪信息时在调试器的用户界面中查看统一。  
+ 宿主可以将标识符与任务相关联，以帮助在调试环境中集成 CLR 和宿主。 标识符对于 CLR 没有意义。 CLR 将其传递到调试器应用程序。 调试器可以使用此标识符将 CLR 调用堆栈与宿主调用堆栈相关联，并使其各自的跟踪信息在调试器的用户界面中查看时能够统一。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

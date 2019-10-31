@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0b67ea03-d474-4605-acaa-57455790250c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b6d5ea24e40357205051188b68de8b973d2cec18
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3fd9efd3961be1d6e6e91b881327628c598e364e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748245"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092727"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfile-method"></a>ICLRStrongName::GetHashFromAssemblyFile 方法
 使用指定的哈希算法获取指定程序集文件的哈希。  
@@ -41,29 +39,29 @@ HRESULT GetHashFromAssemblyFile (
   
 ## <a name="parameters"></a>参数  
  `szFilePath`  
- [in]要进行哈希处理的文件路径。  
+ 中要进行哈希处理的文件的路径。  
   
  `piHashAlg`  
- [in、 out]一个常量，它指定哈希算法。 使用默认哈希算法为零。  
+ [in，out]指定哈希算法的常量。 使用零作为默认哈希算法。  
   
  `pbHash`  
- [out]返回的哈希缓冲区中。  
+ 弄返回的哈希缓冲区。  
   
  `cchHash`  
- [in]请求的最大大小的`pbHash`。  
+ 中请求的最大 `pbHash`大小。  
   
  `pchHash`  
- [out]返回的大小，以字节为单位， `pbHash`。  
+ 弄返回 `pbHash`的大小（以字节为单位）。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK` 如果成功，则完成的方法否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。  
+ 如果方法已成功完成，则 `S_OK`;否则，表示失败的 HRESULT 值（请参阅列表的[常见 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MetaHost.h  
+ **标头：** MetaHost  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

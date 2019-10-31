@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8111502-5a20-447f-9dc2-76e8acd7ed5a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ec3dc37984228565b4a3fcc560d3857a1c1e46d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4d297023d96de83965c3d04ca9efe2613fd54d0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767328"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084447"
 ---
 # <a name="icordebugprocess5getobject-method"></a>ICorDebugProcess5::GetObject 方法
-将对象地址转换为"ICorDebugObjectValue"对象。  
+将对象地址转换为 "ICorDebugObjectValue" 对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,18 +36,18 @@ HRESULT GetObject(
   
 ## <a name="parameters"></a>参数  
  `addr`  
- [in]对象的地址。  
+ 中对象地址。  
   
  `ppObject`  
- [out]指向"ICorDebugObjectValue"对象的地址的指针。  
+ 弄一个指向 "ICorDebugObjectValue" 对象地址的指针。  
   
 ## <a name="remarks"></a>备注  
- 如果`addr`不指向有效的托管对象，`GetObject`方法将返回`E_FAIL`。  
+ 如果 `addr` 未指向有效的托管对象，则 `GetObject` 方法返回 `E_FAIL`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

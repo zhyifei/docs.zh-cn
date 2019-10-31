@@ -1,17 +1,15 @@
 ---
-title: ICorDebugVariableSymbol::GetSlotIndex 方法
+title: ICorDebugVariableSymbol：： GetSlotIndex 方法
 ms.date: 03/30/2017
 ms.assetid: 09c19f5f-afc4-4e0c-bffe-cd7147bc7a43
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58bb2cc63f2336ca9cfbed8ebeac0d607c18b2c4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a7a7ecf7d3e3d0d2125b03d3604c44138a2be0cc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968162"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120976"
 ---
-# <a name="icordebugvariablesymbolgetslotindex-method"></a>ICorDebugVariableSymbol::GetSlotIndex 方法
+# <a name="icordebugvariablesymbolgetslotindex-method"></a>ICorDebugVariableSymbol：： GetSlotIndex 方法
 获取本地变量的托管槽索引。  
   
 ## <a name="syntax"></a>语法  
@@ -36,11 +34,11 @@ HRESULT GetSlotIndex(
 > 此方法仅适用于 .NET Native。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl, Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

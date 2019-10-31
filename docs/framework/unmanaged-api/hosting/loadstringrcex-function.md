@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: bc789636-ca14-4f07-8f77-9305874d7495
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4a0cac77d7bf7611acf6042298bfe6814d8f4352
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 68332aee895f012bcf6ab6a72936c8dddc7f28a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768450"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122036"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx 函数
-将转换为相应的错误消息为指定的区域性的 HRESULT 值。  
+将 HRESULT 值转换为指定区域性的适当错误消息。  
   
- .NET Framework 4 中已弃用此函数。  
+ 此函数已在 .NET Framework 4 中弃用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,40 +41,40 @@ HRESULT LoadStringRCEx (
   
 ## <a name="parameters"></a>参数  
  `lcid`  
- [in]区域性标识符。 传递-1`lcid`若要使用默认区域性。  
+ 中区域性标识符。 传递-1，以便 `lcid` 使用默认区域性。  
   
  `iResourceID`  
- [in]HRESULT。  
+ 中HRESULT。  
   
  `szBuffer`  
- [out]包含成功完成后的错误消息的缓冲区。  
+ 弄一个缓冲区，其中包含成功完成后的错误消息。  
   
  `iMax`  
- [in]错误消息缓冲区的大小。  
+ 中错误消息缓冲区的大小。  
   
  `bQuiet`  
- [in]忽略。  
+ 中掉.  
   
  `pcwchUsed`  
- [out]指向错误消息的长度的指针。  
+ 弄指向错误消息长度的指针。  
   
 ## <a name="return-value"></a>返回值  
- 此方法返回标准 COM 错误代码，定义在 WinError.h，除了以下值。  
+ 除以下值外，此方法还返回 Winerror.h 中定义的标准 COM 错误代码。  
   
 |返回代码|描述|  
 |-----------------|-----------------|  
 |S_OK|该方法已成功完成。|  
-|E_INVALIDARG|`szBuffer` 为 null，或`iMax`为零 (0)。|  
+|E_INVALIDARG|`szBuffer` 为 null 或 `iMax` 为零（0）。|  
   
 ## <a name="remarks"></a>备注  
- 如果该方法不成功，完成`szBuffer`包含空字符串。  
+ 如果该方法未成功完成，`szBuffer` 将包含空字符串。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** MSCorEE.dll  
+ **库：** Mscoree.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

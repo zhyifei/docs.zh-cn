@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - application domains, creating
 ms.assetid: ba1fa43e-49f5-47d9-bd7f-3024af16f4ba
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7f42f85adf3e9b0874df6c0360bea25b07facc0d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 83bf0ad96b352ed5c015723dd89aee7913d2a88e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053150"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119877"
 ---
 # <a name="how-to-create-an-application-domain"></a>如何：创建应用程序域
 需要应用程序域时，公共语言运行时主机会自动创建它们。 但是，可以创建自己的应用程序域并将其加载到需要亲自管理的程序集中。 也可以创建从中执行代码的应用程序域。  

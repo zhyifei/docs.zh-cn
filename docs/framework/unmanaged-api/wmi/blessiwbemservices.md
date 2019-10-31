@@ -14,14 +14,12 @@ helpviewer_keywords:
 - BlessIWbemServices function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e00197b72ca7fc8941475ae51159351d53da12d3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 946d29892052ea69c2a8a3bf11e7be7a1b2d7068
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855970"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138779"
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices 函数
 指示用户凭据是否允许访问指定的[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)类。   
@@ -50,7 +48,7 @@ HRESULT BlessIWbemServices (
 中用户名。
 
 `strPassword`\
-中与`strUser`关联的密码。
+中与 `strUser`关联的密码。
 
 `strAuthority`\
 中用户的域名。 有关详细信息，请参阅[ConnectServerWmi](connectserverwmi.md)函数。
@@ -65,7 +63,7 @@ HRESULT BlessIWbemServices (
 
 此函数返回的以下值是在*winerror.h*头文件中定义的，也可以在代码中将它们定义为常量：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | 一个或多个参数无效。 |
 | `E_POINTER` | 0x80004003 | `pIWbemServices` 为 `null`。 | 
@@ -75,9 +73,9 @@ HRESULT BlessIWbemServices (
 
 ## <a name="requirements"></a>要求  
 
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标头：** WMINet_Utils.idl  
+ **标头：** WMINet_Utils .idl  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

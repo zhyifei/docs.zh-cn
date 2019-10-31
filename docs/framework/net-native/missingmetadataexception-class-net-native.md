@@ -2,14 +2,12 @@
 title: 丢失元数据异常类 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 251d63fe8e025fe73b148c7deb368ab95ca3b1f7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d73d66529bc30358c946eb0a7072f0cb8910b19a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049472"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128292"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>丢失元数据异常类 (.NET Native)
 
@@ -17,10 +15,10 @@ ms.locfileid: "71049472"
 
 当反射用于检索不存在的元数据时会引起此异常。
 
-**命名空间：** System.Reflection
+命名空间：System.Reflection
 
 > [!IMPORTANT]
-> `MissingMetadataException`类仅供 .NET Native 工具链内部使用。 它不用于在第三方代码中使用，也不应用它处理应用程序代码中的异常。 相反，你可以通过将条目添加到[运行时指令文件](runtime-directives-rd-xml-configuration-file-reference.md)来消除异常。 有关详细信息，请参阅“备注”部分。
+> `MissingMetadataException` 类仅供 .NET Native 工具链内部使用。 它不用于在第三方代码中使用，也不应用它处理应用程序代码中的异常。 相反，你可以通过将条目添加到[运行时指令文件](runtime-directives-rd-xml-configuration-file-reference.md)来消除异常。 有关详细信息，请参阅“备注”部分。
 
 ## <a name="syntax"></a>语法
 
@@ -39,7 +37,7 @@ ms.locfileid: "71049472"
 
 ## <a name="properties"></a>属性
 
-|属性|描述|
+|Property|描述|
 |--------------|-----------------|
 |`public IDictionary Data { get; }`|获取提供有关异常的其他用户定义信息的键/值对集合。 （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|
 |`public string HelpLink { get; set; }`|获取或设置指向与此异常关联的帮助文件链接。 （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|
@@ -57,7 +55,7 @@ ms.locfileid: "71049472"
 |------------|-----------------|
 |`public bool Equals(Object obj)`|确定指定的对象是否等于当前对象。  （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|
 |`protected void Finalize()`|在垃圾回收将某一对象回收前允许该对象尝试释放资源并执行其他清理操作。 （从 <xref:System.Object> 继承。）|
-|`public Exception GetBaseException()`|返回是一个或多个后续异常的根源的异常。 （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|
+|`public Exception GetBaseException()`|返回是一个或多个后续异常的根本原因的异常。 （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|
 |`public int GetHashCode()`|为 `MissingMetadataException` 实例返回一个哈希代码。   （从 <xref:System.Object> 继承。）|
 |`public void GetObjectData(SerializationInfo info, StreamingContext context)`|设置一个包含有关异常信息的 <xref:System.Runtime.Serialization.SerializationInfo> 对象。  （从 <xref:System.TypeLoadException> 继承。）|
 |`public Type GetType()`|获取当前实例的运行时类型。 （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|
@@ -66,7 +64,7 @@ ms.locfileid: "71049472"
 
 ## <a name="events"></a>事件
 
-|Event|描述|
+|Event — 事件|描述|
 |-----------|-----------------|
 |`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|当异常被序列化用来创建包含有关该异常的徐列出数据的异常状态对象时会出现该问题。 （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|
 
@@ -74,7 +72,7 @@ ms.locfileid: "71049472"
 
 当反射用于访问程序集中不可用的元数据时，会引起 `MissingMetadataException` 异常。
 
-在运行时可用于应用程序的元数据由运行时指令（XML 配置）文件（ \*web.config）定义。 为防止应用引发此异常，应该修改\*.rd.xml 来定义在运行时间必须存在的元数据。 有关 \*.rd.xml 文件的格式信息，请参阅[运行时指令 (rd.xml) 配置文件参考](runtime-directives-rd-xml-configuration-file-reference.md)。
+在运行时可用于应用的元数据由运行时指令（XML 配置）文件 \*。 为防止应用引发此异常，应该修改\*.rd.xml 来定义在运行时间必须存在的元数据。 有关 \*.rd.xml 文件的格式信息，请参阅[运行时指令 (rd.xml) 配置文件参考](runtime-directives-rd-xml-configuration-file-reference.md)。
 
 > [!IMPORTANT]
 > 由于此异常表示应用程序需要的元数据在运行时间不可用，因此不应在 `try`/`catch` 块中处理此异常。 相反，你应该诊断引起此异常的原因并通过使用运行时指令文件删除它。 若要获取可以添加到可消除异常的运行时指令文件的项，有两个疑难解答程序可供使用：

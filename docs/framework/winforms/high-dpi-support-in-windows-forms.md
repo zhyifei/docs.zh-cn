@@ -1,5 +1,5 @@
 ---
-title: 在 Windows 窗体中的高 DPI 支持
+title: Windows 窗体中的高 DPI 支持
 ms.date: 05/16/2017
 helpviewer_keywords:
 - High DPI in Windows Forms
@@ -7,36 +7,34 @@ helpviewer_keywords:
 - Windows Forms layout
 - Windows Forms dynamic resizing
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1641702c7b1c3d3b0e83c59a96529de70f699d17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9183b15da24f70b6fceaa90f718c5af93a3cdda
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966932"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139080"
 ---
-# <a name="high-dpi-support-in-windows-forms"></a>在 Windows 窗体中的高 DPI 支持
+# <a name="high-dpi-support-in-windows-forms"></a>Windows 窗体中的高 DPI 支持
 
-从.NET Framework 4.7 开始，Windows 窗体包括增强功能的常见高 DPI 和动态 DPI 方案。 这些问题包括：
+从 .NET Framework 4.7 开始，Windows 窗体包括常见高 DPI 和动态 DPI 方案的增强功能。 这些方法包括：
 
-- 改进的缩放和多个 Windows 窗体的布局控件，如<xref:System.Windows.Forms.MonthCalendar>控件和<xref:System.Windows.Forms.CheckedListBox>控件。
+- 改进了许多 Windows 窗体控件（如 <xref:System.Windows.Forms.MonthCalendar> 控件和 <xref:System.Windows.Forms.CheckedListBox> 控件）的缩放和布局。
 
-- 单次传递缩放。  在.NET Framework 4.6 和更早版本中，通过多个通过，这导致一些控件，以扩展超过需要执行缩放。
+- 单步缩放。  在 .NET Framework 4.6 及更早版本中，缩放是通过多个走刀执行的，这会导致某些控件的缩放比例超出了必需。
 
-- 对 Windows 窗体应用程序已启动后在用户更改 DPI 或缩放系数的动态 DPI 方案的支持。
+- 支持动态 DPI 方案，在此方案中，用户在启动 Windows 窗体应用程序后更改了 DPI 或缩放系数。
 
-在版本的.NET Framework 从.NET Framework 4.7 开始，增强了高 DPI 支持是可选功能。 必须配置应用程序以充分利用它。
+从 .NET Framework 4.7 开始 .NET Framework 版本中，增强的高 DPI 支持是一项可选功能。 您必须将应用程序配置为利用它。
 
-## <a name="configuring-your-windows-forms-app-for-high-dpi-support"></a>高 DPI 支持在 Windows 窗体应用中配置
+## <a name="configuring-your-windows-forms-app-for-high-dpi-support"></a>配置 Windows 窗体应用以实现高 DPI 支持
 
-支持高 DPI 识别的新 Windows 窗体功能是仅在面向.NET Framework 4.7 和从 Windows 10 创意者更新的 Windows 操作系统上运行的应用程序中可用。
+支持高 DPI 感知的新 Windows 窗体功能仅在面向 .NET Framework 4.7 的应用程序中提供，并且在从 Windows 10 创意者更新开始的 Windows 操作系统上运行。
 
 此外，若要在 Windows 窗体应用程序中配置高 DPI 支持，必须执行以下操作：
 
 - 声明与 Windows 10 的兼容性。
 
-  若要执行此操作，以下代码添加到清单文件：
+  为此，请将以下内容添加到清单文件中：
 
   ```xml
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
@@ -47,9 +45,9 @@ ms.locfileid: "61966932"
   </compatibility>
   ```
 
-- 启用中的每监视器 DPI 感知*app.config*文件。
+- 启用*app.config*文件中的按监视器 DPI 感知。
 
-  Windows 窗体引入了一个新[ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md)元素以支持新功能和自定义项添加从.NET Framework 4.7 开始。 若要充分利用支持高 DPI 的新功能，以下代码添加到应用程序配置文件。
+  Windows 窗体引入了新的[`<System.Windows.Forms.ApplicationConfigurationSection>`](../configure-apps/file-schema/winforms/index.md)元素，以支持从 .NET Framework 4.7 开始添加的新功能和自定义项。 若要利用支持高 DPI 的新功能，请将以下项添加到应用程序配置文件中。
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
@@ -58,11 +56,11 @@ ms.locfileid: "61966932"
   ```
 
   > [!IMPORTANT]
-  > 在以前版本的.NET Framework，您可以使用清单添加高 DPI 支持。 不再建议使用此方法，因为它会替代 app.config 文件中定义的设置。
+  > 在以前版本的 .NET Framework 中，你使用了清单来添加高 DPI 支持。 不再建议使用此方法，因为它会覆盖对 app.config 文件定义的设置。
 
-- 调用静态<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法。
+- 调用静态 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 方法。
 
-  这应该是应用程序的入口点中的第一个方法调用。 例如：
+  这应该是应用程序入口点中的第一个方法调用。 例如:
 
   ```csharp
   static void Main()
@@ -73,9 +71,9 @@ ms.locfileid: "61966932"
   }
   ```
 
-## <a name="opting-out-of-individual-high-dpi-features"></a>选择退出各个高 DPI 功能
+## <a name="opting-out-of-individual-high-dpi-features"></a>退出单个高 DPI 功能
 
-设置`DpiAwareness`值设为`PerMonitorV2`使支持的.NET Framework 版本从.NET Framework 4.7 开始的所有高 DPI 感知功能。 通常情况下，这是适合大多数 Windows 窗体应用程序。 但是，你可能想要选择退出一个或多个单独的功能。 执行此操作的最重要的原因是，现有的应用程序代码已处理该功能。  例如，如果你的应用程序处理自动缩放，你可能想要禁用自动调整大小功能，如下所示：
+将 `DpiAwareness` 值设置为 "`PerMonitorV2` 将启用从 .NET Framework 4.7 开始 .NET Framework 版本支持的所有高 DPI 感知功能。 通常，这适用于大多数 Windows 窗体应用程序。 但是，你可能想要选择不提供一个或多个单独的功能。 执行此操作的最重要的原因是您的现有应用程序代码已经处理了该功能。  例如，如果你的应用程序处理自动缩放，则你可能想要禁用自动调整大小功能，如下所示：
 
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
@@ -86,29 +84,29 @@ ms.locfileid: "61966932"
 
 有关各个键及其值的列表，请参阅[Windows 窗体添加配置元素](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)。
 
-## <a name="new-dpi-change-events"></a>新 DPI 更改事件
+## <a name="new-dpi-change-events"></a>新的 DPI 更改事件
 
-从.NET Framework 4.7 开始，三个新事件使您能够以编程方式处理动态 DPI 更改：
+从 .NET Framework 4.7 开始，三个新事件允许以编程方式处理动态 DPI 更改：
 
-- <xref:System.Windows.Forms.Control.DpiChangedAfterParent>其父控件的 DPI 更改事件之后以编程方式更改控件的 DPI 设置或窗体已发生时激发。
-- <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>这在其父控件的 DPI 更改事件之前以编程方式更改控件的 DPI 设置或窗体已发生时被激发。
-- <xref:System.Windows.Forms.Form.DpiChanged>这当前显示窗体的显示设备上的 DPI 设置更改时激发。
+- <xref:System.Windows.Forms.Control.DpiChangedAfterParent>，当控件的 DPI 设置在其父控件或窗体的 DPI 更改事件发生后以编程方式发生更改时，将激发此事件。
+- <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>，当控件的 DPI 设置在其父控件或窗体的 DPI 更改事件发生之前以编程方式进行更改时，将激发此事件。
+- <xref:System.Windows.Forms.Form.DpiChanged>，在当前显示窗体的显示设备上的 DPI 设置更改时激发。
 
 ## <a name="new-helper-methods-and-properties"></a>新的帮助器方法和属性
 
-.NET Framework 4.7 也将添加大量新的帮助器方法和属性，提供有关 DPI 缩放信息，可用于执行 DPI 缩放。 这些问题包括：
+.NET Framework 4.7 还添加了一些新的帮助器方法和属性，这些方法和属性提供了有关 DPI 缩放的信息，并允许您执行 DPI 缩放。 这些方法包括：
 
-- <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>其中将一个值，从逻辑转换为设备像素为单位。
+- <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>，它将值从逻辑到设备像素转换。
 
-- <xref:System.Windows.Forms.Control.ScaleBitmapLogicalToDevice%2A>这可以扩展到设备的逻辑 DPI 的位图图像。
+- <xref:System.Windows.Forms.Control.ScaleBitmapLogicalToDevice%2A>，它将位图图像缩放为设备的逻辑 DPI。
 
-- <xref:System.Windows.Forms.Control.DeviceDpi%2A>它将返回当前设备的 DPI。
+- <xref:System.Windows.Forms.Control.DeviceDpi%2A>，它返回当前设备的 DPI。
 
-## <a name="versioning-considerations"></a>版本控制考虑事项
+## <a name="versioning-considerations"></a>版本控制注意事项
 
-除了.NET Framework 4.7 和 Windows 10 创意者更新上运行，你的应用程序还可能会运行它不与高 DPI 改进兼容的环境中。 在这种情况下，你将需要开发的应用程序回退。 你可以执行[自定义绘图](./controls/user-drawn-controls.md)来处理缩放。
+除了在 .NET Framework 4.7 和 Windows 10 创意者更新上运行以外，应用程序还可以在与高 DPI 改进不兼容的环境中运行。 在这种情况下，需要为应用程序开发回退。 你可以执行此操作来执行[自定义绘图](./controls/user-drawn-controls.md)来处理缩放。
 
-若要执行此操作，还需要确定您的应用程序正在其运行的操作系统。 可以使用如下所示的代码执行的操作：
+为此，还需要确定运行应用的操作系统。 可以用如下代码来实现：
 
 ```csharp
 // Create a reference to the OS version of Windows 10 Creators Update.
@@ -122,9 +120,9 @@ Console.WriteLine(Environment.OSVersion.VersionString);
 Console.WriteLine(Environment.OSVersion.Version.CompareTo(OsMinVersion));
 ```
 
-请注意，是否未列出的应用程序清单中受支持的操作系统，你的应用程序不会成功检测 Windows 10。
+请注意，如果 Windows 10 未在应用程序清单中列出为受支持的操作系统，则你的应用程序不会成功检测到它。
 
-此外可以检查生成应用程序时所针对的.NET framework 版本：
+你还可以查看生成应用程序所针对的 .NET Framework 的版本：
 
 ```csharp
 Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);

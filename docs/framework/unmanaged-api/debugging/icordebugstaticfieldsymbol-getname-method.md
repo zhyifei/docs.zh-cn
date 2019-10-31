@@ -1,17 +1,15 @@
 ---
-title: ICorDebugStaticFieldSymbol::GetName 方法
+title: ICorDebugStaticFieldSymbol：： GetName 方法
 ms.date: 03/30/2017
 ms.assetid: e2be4af2-15d1-4e6a-8b68-1d78c93294a4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2187a205b41388d191ad4f06db6d6caa86971e13
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e961ae064bd5bb2c97175b4506ddd8c0f17d3b32
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913418"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131782"
 ---
-# <a name="icordebugstaticfieldsymbolgetname-method"></a>ICorDebugStaticFieldSymbol::GetName 方法
+# <a name="icordebugstaticfieldsymbolgetname-method"></a>ICorDebugStaticFieldSymbol：： GetName 方法
 获取静态字段的名称。  
   
 ## <a name="syntax"></a>语法  
@@ -40,11 +38,11 @@ HRESULT GetName(
 > 此方法仅适用于 .NET Native。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl, Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

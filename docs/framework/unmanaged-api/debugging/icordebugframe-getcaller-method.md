@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bfdc946b-8238-4eb9-8a85-884049fb0fd4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a637cebb9e1aef20c600353eb14fe900ad7513c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 843399b7e3de522e2c4574963897430aa60a5a50
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754170"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114796"
 ---
 # <a name="icordebugframegetcaller-method"></a>ICorDebugFrame::GetCaller 方法
-获取一个指针指向 ICorDebugFrame 对象中调用此帧的当前链。  
+获取一个指针，该指针指向当前链中调用此帧的 ICorDebugFrame 对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,12 +35,12 @@ HRESULT GetCaller (
   
 ## <a name="parameters"></a>参数  
  `ppFrame`  
- [out]指向的地址的指针`ICorDebugFrame`对象，表示调用的帧。 此值为 null，如果调用的帧是当前的链中的最外层帧。  
+ 弄指向表示调用帧的 `ICorDebugFrame` 对象地址的指针。 如果被调用的帧是当前链中最外层的帧，则此值为 null。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

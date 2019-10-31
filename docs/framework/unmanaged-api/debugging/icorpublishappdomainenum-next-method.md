@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38e4bd55a52cdbb3c242b8c3e5ff21f970b93ac0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0553d8b07e3a16dc31474b5470ba2dd8ba365cb2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765025"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140511"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next 方法
-在过程中，从当前位置开始获取指定的当前存在的应用程序域数。  
+从当前位置开始，获取进程中当前存在的指定数量的应用程序域。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,18 +38,18 @@ HRESULT Next (
   
 ## <a name="parameters"></a>参数  
  `celt`  
- [in]要检索的元素数。  
+ 中要检索的元素的数目。  
   
  `objects`  
- [out]检索到的数组的指针[ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)对象，其中每个表示应用程序域。  
+ 弄一个指针，指向检索到的[ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)对象的数组，其中每个对象都表示一个应用程序域。  
   
  `pceltFetched`  
- [out]指向实际返回的应用程序域数。 此值可能为 null 如果`celt`是其中一个。  
+ 弄一个指针，指向实际返回的应用程序域的数量。 如果 `celt` 为1，则此值可以为 null。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorPub.idl CorPub.h  
+ **标头：** CorPub，CorPub  
   
  **库：** CorGuids.lib  
   

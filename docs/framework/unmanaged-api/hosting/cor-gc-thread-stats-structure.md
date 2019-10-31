@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 01f9a59b-7679-4d42-9ced-4a8981625c3d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3f56ceca5269ebffb29908c63e698ce794027d8a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 37da471aaa8e9f802a8430d7b3289b375ff1b40a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768058"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136985"
 ---
-# <a name="corgcthreadstats-structure"></a>COR_GC_THREAD_STATS 结构
-包含有关垃圾回收的每个线程统计信息。  
+# <a name="cor_gc_thread_stats-structure"></a>COR_GC_THREAD_STATS 结构
+包含与垃圾回收相关的每个线程的统计信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,22 +33,22 @@ typedef struct _COR_GC_THREAD_STATS {
 } COR_GC_THREAD_STATS;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`PerThreadAllocation`|与当前相关联的线程上分配的内存字节数`COR_GC_THREAD_STATS`实例。 此数字将清零每次生成零垃圾回收发生时。|  
-|`Flags`|提升的字节数为更高版本生成的最新的垃圾回收。|  
+|`PerThreadAllocation`|与当前 `COR_GC_THREAD_STATS` 实例相关联的线程上分配的内存字节数。 每次发生零代垃圾回收时，此数字会被清除为零。|  
+|`Flags`|最近一次垃圾回收后提升为较高代的字节数。|  
   
 ## <a name="remarks"></a>备注  
- [Iclrtask:: Getmemstats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md)需要使用输出参数的类型`COR_GC_THREAD_STATS`。  
+ [ICLRTask：： GetMemStats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md)使用 `COR_GC_THREAD_STATS`类型的输出参数。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** GCHost.idl  
+ **标头：** GCHost .idl  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

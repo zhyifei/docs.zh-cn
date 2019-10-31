@@ -1,17 +1,15 @@
 ---
-title: 'ICorDebugMergedAssemblyRecord:: GetPublicKey 方法'
+title: ICorDebugMergedAssemblyRecord：： GetPublicKey 方法
 ms.date: 03/30/2017
 ms.assetid: 6f4e78ba-082b-489d-8b58-4c35fbcc7a5b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e08b1edcef3e93caa82be3a4342c6a0264734bea
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9cf5f6b6d12303b3f59588c5fb663c457da79cb9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940024"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131399"
 ---
-# <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>ICorDebugMergedAssemblyRecord:: GetPublicKey 方法
+# <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>ICorDebugMergedAssemblyRecord：： GetPublicKey 方法
 获取程序集的公钥。  
   
 ## <a name="syntax"></a>语法  
@@ -39,11 +37,11 @@ HRESULT GetPublicKey(
 > 此方法仅适用于 .NET Native。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl, Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

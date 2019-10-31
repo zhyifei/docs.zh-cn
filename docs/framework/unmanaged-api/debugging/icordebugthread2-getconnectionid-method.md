@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c76b587-f941-4fa1-8b86-f3494fb10c8e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc4963dcf686fe62f473aea1af86868df03718df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a81842132769934a6f5f34e6dc462bba77b3854a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768972"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138690"
 ---
 # <a name="icordebugthread2getconnectionid-method"></a>ICorDebugThread2::GetConnectionID 方法
 获取此 ICorDebugThread2 对象的连接标识符。  
@@ -37,17 +35,17 @@ HRESULT GetConnectionID (
   
 ## <a name="parameters"></a>参数  
  `pdwConnectionId`  
- [out]一个`CONNID`表示的连接标识符。  
+ 弄一个表示连接标识符的 `CONNID`。  
   
 ## <a name="remarks"></a>备注  
- `GetConnectionID`方法将返回 0 中的`pdwConnectionId`参数，如果此线程不是连接的一部分。  
+ 如果此线程不是连接的一部分，则 `GetConnectionID` 方法将在 `pdwConnectionId` 参数中返回零。  
   
- 如果此线程连接到实例的 Microsoft SQL Server 2005 Analysis Services (SSAS)，`CONNID`映射到服务器进程标识符 (SPID)。  
+ 如果此线程连接到 Microsoft SQL Server 2005 Analysis Services （SSAS）的实例，`CONNID` 将映射到服务器进程标识符（SPID）。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 02c596d7-00b0-4e2c-856b-5425158fcefd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 535d94688d02a7315529d17fae555fba457bbb86
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2c9aa6792885c685195049948a540453b1f5235e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737869"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110312"
 ---
 # <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName 方法
 获取应用程序域的名称。  
@@ -40,21 +38,21 @@ HRESULT GetName (
   
 ## <a name="parameters"></a>参数  
  `cchName`  
- [in] `szName` 数组的大小。 将此值设置为零，以将此方法放在查询模式下。  
+ [in] `szName` 数组的大小。 将此值设置为零可以在查询模式下放置此方法。  
   
  `pcchName`  
- [out]名称或中实际返回的字符数的大小的指针`szName`。 在查询模式下，此值允许调用方知道的缓冲区大小分配的名称。  
+ 弄一个指针，指向 `szName`中实际返回的名称的大小或字符数。 在查询模式下，此值允许调用方了解要为名称分配的缓冲区大小。  
   
  `szName`  
- [out]存储应用程序域的名称数组。  
+ 弄一个数组，该数组存储应用程序域的名称。  
   
 ## <a name="remarks"></a>备注  
- 调试器将调用`GetName`方法一次，以获取所需的名称的缓冲区的大小。 调试器分配缓冲区，，然后调用该方法的第二个时间可填充缓冲区。 第一次调用，以获取名称的大小被称为*查询模式下*。  
+ 调试器调用一次 `GetName` 方法，以获取该名称所需的缓冲区大小。 调试器将分配缓冲区，然后再次调用方法来填充缓冲区。 要获取名称大小的第一次调用称为*查询模式*。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

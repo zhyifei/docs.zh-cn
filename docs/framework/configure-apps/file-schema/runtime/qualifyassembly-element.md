@@ -9,22 +9,20 @@ helpviewer_keywords:
 - <qualifyAssembly> element
 - qualifyAssembly element
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 581b19cf74dcb5c2d5c4a549847629503fe0b6ff
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 17cfe9fc39d65f146beef5d02c701f5e3e2fbbe1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252369"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115786"
 ---
 # <a name="qualifyassembly-element"></a>\<B l y > 元素
 指定使用部分名称时应动态加载的程序集全名。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<qualifyAssembly>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<b l y >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -56,12 +54,12 @@ ms.locfileid: "70252369"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 使用部分程序集名称调用方法会导致公共语言运行时仅查找应用程序基目录中的程序集。<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 使用应用程序配置文件中的 **\<b l y >** 元素可提供完整的程序集信息（名称、版本、公钥标记和区域性），并导致公共语言运行时在全局程序集缓存。  
+ 使用部分程序集名称调用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法会导致公共语言运行时仅查找应用程序基目录中的程序集。 使用应用程序配置文件中的 **\<b l y >** 元素提供完整程序集信息（名称、版本、公钥标记和区域性），并导致公共语言运行时在全局中搜索程序集程序集缓存。  
   
- **FullName**特性必须包含程序集标识的四个字段：名称、版本、公钥标记和区域性。 **PartialName**属性必须部分引用程序集。 必须至少指定程序集的文本名称（最常见的情况），但也可以包括版本、公钥标记或区域性（或四个（但不是全部四个）的任意组合。 **PartialName**必须与在调用中指定的名称相匹配。 例如，你不能在`"math"`配置文件中将指定为**partialName**属性，然后`Assembly.Load("math, Version=3.3.3.3")`在代码中调用。  
+ **FullName**特性必须包含程序集标识的四个字段：名称、版本、公钥标记和区域性。 **PartialName**属性必须部分引用程序集。 必须至少指定程序集的文本名称（最常见的情况），但也可以包括版本、公钥标记或区域性（或四个（但不是全部四个）的任意组合。 **PartialName**必须与在调用中指定的名称相匹配。 例如，不能将 `"math"` 指定为配置文件中的**partialName**属性，并在代码中调用 `Assembly.Load("math, Version=3.3.3.3")`。  
   
 ## <a name="example"></a>示例  
- 下面的示例以逻辑方式将`Assembly.Load("math")`调用`Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`转换为。  
+ 下面的示例以逻辑方式将调用 `Assembly.Load("math")` 到 `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`中。  
   
 ```xml  
 <configuration>  

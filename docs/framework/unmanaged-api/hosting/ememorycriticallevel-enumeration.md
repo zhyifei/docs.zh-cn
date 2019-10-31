@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2ca8a7a2-7b54-4ba3-8e73-277c7df485f3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 26b3761ab49f36c5f687ff2c62882667e044d299
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8364d38f7ab81b73fd8b47d2251bc0ff1b2c71e8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774220"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138246"
 ---
 # <a name="ememorycriticallevel-enumeration"></a>EMemoryCriticalLevel 枚举
-包含指示失败的影响，何时已请求特定的内存分配但是却无法满足的值。  
+包含一些值，这些值指示在请求特定内存分配但无法满足时，失败所造成的影响。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,23 +34,23 @@ typedef enum {
 } EMemoryCriticalLevel;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`eAppDomainCritical`|指示分配已请求分配在域中执行托管的代码的关键。 如果无法分配内存，CLR 不能保证域仍可使用。 主机决定要执行不能满足分配时的操作。 它可以指示 CLR 中止`AppDomain`自动，或允许其继续运行通过调用方法[ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)。|  
-|`eProcessCritical`|指示此分配是关键的过程中的托管代码执行。 使用此值是在启动期间和运行终结器时。 如果无法分配内存，CLR 不能在过程中运行。 如果分配失败时，CLR 会有效地禁用。 到 CLR 中的所有后续调用失败，并 HOST_E_CLRNOTAVAILABLE。|  
-|`eTaskCritical`|指示此分配是关键到正在运行的已请求分配的任务。 如果无法分配内存，则 CLR 不能保证可以执行该任务。 出现故障时，CLR 将引发<xref:System.Threading.ThreadAbortException>物理操作系统线程上。|  
+|`eAppDomainCritical`|指示分配对于在已请求分配的域中执行托管代码是至关重要的。 如果无法分配内存，则 CLR 无法保证域仍可用。 主机决定当无法满足分配时要执行的操作。 它可以指示 CLR 自动中止 `AppDomain`，或通过在[ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)上调用方法来使其保持运行。|  
+|`eProcessCritical`|指示分配对于进程中的托管代码执行至关重要。 此值在启动和运行终结器时使用。 如果无法分配内存，则 CLR 无法在进程中运行。 如果分配失败，则会有效地禁用 CLR。 对 CLR 的所有后续调用都将失败，并出现 HOST_E_CLRNOTAVAILABLE。|  
+|`eTaskCritical`|指示分配对于运行已请求分配的任务至关重要。 如果无法分配内存，则 CLR 无法保证任务能够执行。 发生故障时，CLR 将在物理操作系统线程上引发 <xref:System.Threading.ThreadAbortException>。|  
   
 ## <a name="remarks"></a>备注  
- 在中定义的内存分配方法[IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)并[IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)接口执行此类型的参数。 根据失败的严重性，主机可以决定是否要立即失败分配请求，或等待，直到可以满足。  
+ [IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)和[IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)接口中定义的内存分配方法采用此类型的参数。 根据故障的严重性，主机可以决定是立即对分配请求进行故障转移还是要等待，直到它得以满足。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** MSCorEE.dll  
+ **库：** Mscoree.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

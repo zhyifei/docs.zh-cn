@@ -8,33 +8,31 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e536e61a8d812e442e1e54188c99d6a1d4586757
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4516c8f9673052b521c1f0f594978236fef1e0ec
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049721"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136453"
 ---
 # <a name="icorprofilercallback8-interface"></a>ICorProfilerCallback8 接口
-[.NET Framework 4.7 和更高版本中受支持]  
+[.NET Framework 4.7 及更高版本中支持]  
 
- 子类[ICorProfilerCallback7](icorprofilercallback7-interface.md)提供公共语言运行时用于通知探查器中的动态方法的 JIT 编译已启动和完成的回调方法。 
+ 提供回调方法的[ICorProfilerCallback7](icorprofilercallback7-interface.md)的子类，公共语言运行时使用该方法通知探查器动态方法的 JIT 编译已开始和完成。 
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[DynamicMethodJITCompilationStarted 方法](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)|通知探查器已启动的动态方法的 JIT 编译。|  
-|[DynamicMethodJITCompilationFinished 方法](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)|通知探查器已完成的动态方法的 JIT 编译。|  
+|[DynamicMethodJITCompilationStarted 方法](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)|通知探查器已经开始对动态方法进行 JIT 编译。|  
+|[DynamicMethodJITCompilationFinished 方法](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)|通知探查器已完成动态方法的 JIT 编译。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
-**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>请参阅
 

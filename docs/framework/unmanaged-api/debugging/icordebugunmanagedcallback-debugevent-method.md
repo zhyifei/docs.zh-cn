@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: be9cab04-65ec-44d5-a39a-f90709fdd043
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1c75e1844fca4e592faa924a55432dd42fa7355
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d865f837d38894e8449af671e2d12e7676dd040
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772618"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129135"
 ---
 # <a name="icordebugunmanagedcallbackdebugevent-method"></a>ICorDebugUnmanagedCallback::DebugEvent 方法
-通知调试器已触发本机事件。  
+通知调试器已激发本机事件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,24 +36,24 @@ HRESULT DebugEvent (
   
 ## <a name="parameters"></a>参数  
  `pDebugEvent`  
- [in]指向本机事件的指针。  
+ 中指向本机事件的指针。  
   
  `fOutOfBand`  
- [in]`true`，如果与托管的进程状态的交互是不可能的非托管的事件发生，直到该调试器将调用后[icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md); 否则为`false`。  
+ [in] `true`，如果在非托管事件发生后无法与托管进程状态交互，则在调试器调用[ICorDebugController：： Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)之前，否则，`false`。  
   
 ## <a name="remarks"></a>备注  
- 如果正在调试的线程是 Win32 线程，则不要使用调试接口的 Win32 任何成员。 您可以调用`ICorDebugController::Continue`仅在 Win32 线程上且仅当过去的带事件继续执行。  
+ 如果正在调试的线程是 Win32 线程，请不要使用 Win32 调试接口的任何成员。 只能在 Win32 线程上调用 `ICorDebugController::Continue`，且仅当在带外事件继续时才调用。  
   
- `DebugEvent`回调不遵循标准规则进行回调。 当您调用`DebugEvent`，过程将在原始操作系统调试停止状态。 该过程将不会同步。 它会自动进入同步的状态时需满足的托管代码，这可能会导致其他嵌套有关的信息的请求`DebugEvent`回调。  
+ `DebugEvent` 回调不遵循用于回调的标准规则。 调用 `DebugEvent`时，该进程将处于原始的 OS 调试停止状态。 将不同步该进程。 它将在必要时自动进入 "已同步" 状态以满足有关托管代码的信息请求，这可能会导致其他嵌套 `DebugEvent` 回调。  
   
- 调用[icordebugprocess:: Clearcurrentexception](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-clearcurrentexception-method.md)的过程将继续过程之前忽略异常事件。 调用此方法将工作表上继续请求，而不是 DBG_EXCEPTION_NOT_HANDLED DBG_CONTINUE 和带的断点和单步异常，会自动清除。 即使正在调试的应用程序看上去已停止和未完成的带内事件已存在时，可以在任何时候，来自带外事件。  
+ 在进程上调用[ICorDebugProcess：： ClearCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-clearcurrentexception-method.md) ，以忽略异常事件，然后继续此过程。 调用此方法将在 CONTINUE 请求上发送 DBG_CONTINUE 而不是 DBG_EXCEPTION_NOT_HANDLED，并自动清除带外断点和单步例外。 即使在要调试的应用程序出现停止和已有的带内事件已存在时，也可以随时发出带外事件。  
   
- 在.NET Framework 2.0 版中，调试程序应立即继续通过带外断点事件。 应使用调试器[ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)并[ICorDebugProcess2::ClearUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-clearunmanagedbreakpoint-method.md)方法来添加和删除断点。 这些方法将自动跳过任何带的断点。 因此，调度仅带外断点应已在指令流，如调用 Win32 中的原始断点`DebugBreak`函数。 不要尝试使用`ICorDebugProcess::ClearCurrentException`， [icordebugprocess:: Getthreadcontext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthreadcontext-method.md)， [icordebugprocess:: Setthreadcontext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-setthreadcontext-method.md)，或任何其他成员[调试 API](../../../../docs/framework/unmanaged-api/debugging/index.md)。  
+ 在 .NET Framework 版本2.0 中，调试程序应立即继续越过带外断点事件。 调试器应使用[ICorDebugProcess2：： SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)和[ICorDebugProcess2：： ClearUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-clearunmanagedbreakpoint-method.md)方法添加和移除断点。 这些方法将自动跳过任何带外断点。 因此，调度的唯一的带外断点应该是已在指令流中的原始断点，如调用 Win32 `DebugBreak` 函数。 请勿尝试使用 `ICorDebugProcess::ClearCurrentException`、 [ICorDebugProcess：： GetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthreadcontext-method.md)、 [ICorDebugProcess：： SETTHREADCONTEXT](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-setthreadcontext-method.md)或[调试 API](../../../../docs/framework/unmanaged-api/debugging/index.md)的任何其他成员。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

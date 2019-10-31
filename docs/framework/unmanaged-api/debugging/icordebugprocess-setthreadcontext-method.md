@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a7b50175-2bf1-40be-8f65-64aec7aa1247
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7b949961e854facf8414c81c47f995b2ac57af3f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3c57021061c1566b369cdd43847e3994cf54e2da
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755381"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139670"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a>ICorDebugProcess::SetThreadContext 方法
-在此过程中设置给定线程的上下文。  
+设置此进程中给定线程的上下文。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,27 +37,27 @@ HRESULT SetThreadContext(
   
 ## <a name="parameters"></a>参数  
  `threadID`  
- [in]若要设置上下文的线程的 ID。  
+ 中要为其设置上下文的线程的 ID。  
   
  `contextSize`  
  [in] `context` 数组的大小。  
   
  `context`  
- [in]一个描述在线程的上下文的字节数组。  
+ 中用于描述线程上下文的字节数组。  
   
- 上下文指定在其执行该线程的处理器体系的结构。  
+ 上下文指定正在执行线程的处理器的体系结构。  
   
 ## <a name="remarks"></a>备注  
- 调试程序应调用此方法，而不是 Win32`SetThreadContext`函数，因为线程实际上可能是在"被劫持"状态下，在其中其上下文已被暂时更改。 仅当线程在本机代码中时，才应使用此方法。 使用[ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)托管代码中的线程。 您应永远不会需要在带外 (OOB) 调试事件期间修改线程的上下文。  
+ 调试器应调用此方法而不是 Win32 `SetThreadContext` 函数，因为该线程实际可能处于 "被劫持" 状态，在该状态下，其上下文已暂时发生更改。 仅当线程在本机代码中时，才应使用此方法。 在托管代码中对线程使用[ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) 。 在带外（OOB）调试事件期间，你永远不需要修改线程的上下文。  
   
  传递的数据必须是当前平台的上下文结构。  
   
- 如果使用不当，则此方法会损坏运行时。  
+ 如果使用不当，此方法可能会损坏运行时。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

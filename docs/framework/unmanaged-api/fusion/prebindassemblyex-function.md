@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd285233-a4a2-4b52-bbca-0025a60e4864
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8aa2d174200db76f5c7a6db43e14bb6904604226
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: db3ba3380d1fc30a8f34683618b5cc326d7d1906
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796338"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123055"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx 函数
 获取程序集的策略后显示名称。  
@@ -58,17 +56,17 @@ HRESULT PreBindAssemblyEx (
  弄包含策略后显示名称。  
   
  `pvReserved`  
- 中保留以供将来进行扩展。 `pvReserved`必须为空引用。  
+ 中保留以供将来进行扩展。 `pvReserved` 必须为空引用。  
   
 ## <a name="remarks"></a>备注  
- 仅当函数返回 HRESULT FUSION_E_REF_DEF_MISMATCH 时才设置output参数。`ppNamePostPolicy` 否则为 null。  
+ 仅当函数返回 HRESULT FUSION_E_REF_DEF_MISMATCH 时才设置 `ppNamePostPolicy` output 参数。 否则为 null。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 合成。h  
   
- **类库**作为资源包括在 Mscoree.dll 中  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

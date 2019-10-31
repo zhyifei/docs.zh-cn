@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: f91d0f89-f356-49ac-aafb-50fad963c13d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4839f098a41e0d2b8e87616791b69ffd83e139f0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c9adcc252fe16c95da8b2afca45bb2ee5dc545a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748202"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135209"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>ICLRStrongName::GetHashFromBlob 方法
 使用指定的哈希算法获取指定内存地址处的程序集的哈希。  
@@ -42,32 +40,32 @@ HRESULT GetHashFromBlob (
   
 ## <a name="parameters"></a>参数  
  `pbBlob`  
- [in]指向要进行哈希处理的内存块的地址的指针。  
+ 中一个指针，指向要进行哈希处理的内存块的地址。  
   
  `cchBlob`  
- [in]内存块的长度，以字节为单位。  
+ 中内存块的长度（以字节为单位）。  
   
  `piHashAlg`  
- [in、 out]一个常量，它指定哈希算法。 使用默认的算法为零。  
+ [in，out]指定哈希算法的常量。 对于默认算法，使用零。  
   
  `pbHash`  
- [out]返回的哈希缓冲区中。  
+ 弄返回的哈希缓冲区。  
   
  `cchHash`  
- [in]请求的最大大小的`pbHash`。  
+ 中请求的最大 `pbHash`大小。  
   
  `pchHash`  
- [out]大小 （字节），则返回的`pbHash`。  
+ 弄返回 `pbHash`的大小（以字节为单位）。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK` 如果成功，则完成的方法否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。  
+ 如果方法已成功完成，则 `S_OK`;否则，表示失败的 HRESULT 值（请参阅列表的[常见 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MetaHost.h  
+ **标头：** MetaHost  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

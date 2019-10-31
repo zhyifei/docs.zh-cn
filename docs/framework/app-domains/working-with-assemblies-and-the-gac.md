@@ -8,14 +8,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), benefits
 - access control lists [.NET Framework]
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0331e0ad30743d5f0bba125e8e61e636e1c2a5be
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 330555f907a5ee2ef9cfc11b0b5659a392c0dec7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053027"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119708"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>使用程序集和全局程序集缓存
 

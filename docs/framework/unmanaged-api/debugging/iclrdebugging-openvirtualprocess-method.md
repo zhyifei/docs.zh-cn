@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e8ab7c41-d508-4ed9-8a31-ead072b5a314
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4c460bc644017f32fdb96d35e5f42981ac09f825
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cd43dce995c2bc9a45a0c8134a91b20cb1dec26e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738381"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111429"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess 方法
-获取对应于在进程中加载了公共语言运行时 (CLR) 模块的 ICorDebugProcess 接口。  
+获取与进程中加载的公共语言运行时（CLR）模块相对应的 ICorDebugProcess 接口。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,30 +41,30 @@ HRESULT OpenVirtualProcess(
   
 ## <a name="parameters"></a>参数  
  `moduleBaseAddress`  
- [in]目标进程中的模块基址。 如果指定的模块不是 CLR 模块，将返回 COR_E_NOT_CLR。  
+ 中目标进程中的模块的基址。 如果指定的模块不是 CLR 模块，则将返回 COR_E_NOT_CLR。  
   
  `pDataTarget`  
- [in]数据目标抽象，让托管的调试器要检查进程状态。 调试器必须实现[ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)接口。 应实现[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)接口以支持方案的 CLR 正在调试的是本地计算机未安装。  
+ 中一种数据目标抽象，允许托管调试器检查进程状态。 调试器必须实现[ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)接口。 应该实现[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)接口以支持在计算机上未本地安装正在调试的 CLR 的情况。  
   
  `pLibraryProvider`  
- [in]允许特定于版本的调试库，根据需要定位和加载上一个库提供程序回调接口。 此参数是必需的仅当`ppProcess`或`pFlags`不是`null`。  
+ 中一种库提供程序回调接口，允许根据需要定位和加载特定于版本的调试库。 仅当不 `null``ppProcess` 或 `pFlags` 时，此参数才是必需的。  
   
  `pMaxDebuggerSupportedVersion`  
- [in]此调试器可以调试 CLR 最高版本。 应指定主要、 次要和内部版本的最新的 CLR 版本，此调试器支持，并设置为 65535 以容纳将来的就地 CLR 服务版本的修订号。  
+ 中此调试器可以调试的 CLR 的最高版本。 你应从该调试器支持的最新 CLR 版本中指定主版本、次版本和内部版本，并将修订号设置为65535，以适应未来的就地 CLR 服务版本。  
   
  `riidProcess`  
- [in]要检索的 ICorDebugProcess 接口 ID。 目前，唯一接受的值为 IID_CORDEBUGPROCESS3、 IID_CORDEBUGPROCESS2 和 IID_CORDEBUGPROCESS。  
+ 中要检索的 ICorDebugProcess 接口的 ID。 目前，唯一接受的值是 IID_CORDEBUGPROCESS3、IID_CORDEBUGPROCESS2 和 IID_CORDEBUGPROCESS。  
   
  `ppProcess`  
- [out]指向由标识的 COM 接口的指针`riidProcess`。  
+ 弄指向由 `riidProcess`标识的 COM 接口的指针。  
   
  `pVersion`  
- [in、 out]CLR 的版本。 在输入时，此值可以是`null`。 它也可以指向[CLR_DEBUGGING_VERSION](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md)结构，这种情况下，该结构的`wStructVersion`字段必须初始化为 0 （零）。  
+ [in，out]CLR 的版本。 对于输入，可以 `null`此值。 它还可以指向[CLR_DEBUGGING_VERSION](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md)结构，在这种情况下，结构的 `wStructVersion` 字段必须初始化为0（零）。  
   
- 在输出时，返回`CLR_DEBUGGING_VERSION`将使用 CLR 的版本信息填充结构。  
+ 输出时，将用 CLR 的版本信息填充返回的 `CLR_DEBUGGING_VERSION` 结构。  
   
  `pdwFlags`  
- [out]有关指定的运行时的信息性标志。 请参阅[CLR_DEBUGGING_PROCESS_FLAGS](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md)的标志的说明的主题。  
+ 弄有关指定运行时的信息性标志。 有关标志的说明，请参阅[CLR_DEBUGGING_PROCESS_FLAGS](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md)主题。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
@@ -76,21 +74,21 @@ HRESULT OpenVirtualProcess(
 |S_OK|该方法已成功完成。|  
 |E_POINTER|`pDataTarget` 为 `null`。|  
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)回调返回错误或未提供有效的句柄。|  
-|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` 未实现此版本的运行时所需的数据目标接口。|  
-|CORDBG_E_NOT_CLR|所指示的模块不是 CLR 模块。 不能检测到的 CLR 模块，因为内存损坏、 不可用，该模块或 CLR 版本晚于填充程序版本时，也会返回此 HRESULT。|  
-|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|此运行时版本不支持此调试模型。 目前，.NET Framework 4 之前的 CLR 版本不支持调试模型。 `pwszVersion`输出参数仍将设置为正确的值后此错误。|  
-|CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|CLR 的版本高于此调试器声明，以便支持的版本。 `pwszVersion`输出参数仍将设置为正确的值后此错误。|  
-|E_NO_INTERFACE|`riidProcess`接口不可用。|  
-|CORDBG_E_UNSUPPORTED_VERSION_STRUCT|`CLR_DEBUGGING_VERSION`结构不具有可识别的值为`wStructVersion`。 此时唯一接受的值为 0。|  
+|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` 不会为此版本的运行时实现所需的数据目标接口。|  
+|CORDBG_E_NOT_CLR|指示的模块不是 CLR 模块。 当由于内存已损坏、该模块不可用或 CLR 版本高于填充码版本而无法检测到 CLR 模块时，也会返回此 HRESULT。|  
+|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|此运行时版本不支持此调试模型。 目前，CLR 版本在 .NET Framework 4 之前不支持调试模型。 此错误后，`pwszVersion` 输出参数仍设置为正确的值。|  
+|CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|CLR 的版本高于此调试器支持的版本。 此错误后，`pwszVersion` 输出参数仍设置为正确的值。|  
+|E_NO_INTERFACE|`riidProcess` 接口不可用。|  
+|CORDBG_E_UNSUPPORTED_VERSION_STRUCT|`CLR_DEBUGGING_VERSION` 结构没有可识别的 `wStructVersion`值。 此时唯一接受的值为0。|  
   
-## <a name="exceptions"></a>Exceptions  
+## <a name="exceptions"></a>异常  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

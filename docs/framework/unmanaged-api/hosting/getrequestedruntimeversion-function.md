@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 82f596a4-483d-4509-b0c5-a84c53c3da1b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4083440903e6147ae645f2d6420f19160471841c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: be7d6ce29a9c9c4e3e530df40432b1a4c3b2d389
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779576"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136346"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion 函数
-获取公共语言运行时 (CLR) 请求指定的应用程序的版本号。 如果未安装该版本，获取所请求的版本之前已安装的最新版本。  
+获取指定应用程序请求的公共语言运行时（CLR）的版本号。 如果未安装该版本，则获取在请求版本之前安装的最新版本。  
   
- .NET Framework 4 中已弃用此函数。  
+ 此函数已在 .NET Framework 4 中弃用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,32 +40,32 @@ HRESULT GetRequestedRuntimeVersion (
   
 ## <a name="parameters"></a>参数  
  `pExe`  
- [in]应用程序的名称。  
+ 中应用程序的名称。  
   
  `pVersion`  
- [out]包含成功完成后的版本字符串的缓冲区。  
+ 弄一个缓冲区，其中包含成功完成后的版本号字符串。  
   
  `cchBuffer`  
- [in]版本缓冲区的长度。  
+ 中版本缓冲区的长度。  
   
  `pdwLength`  
- [out]指向的版本号字符串长度的指针。  
+ 弄指向版本号字符串长度的指针。  
   
 ## <a name="return-value"></a>返回值  
- 此方法返回标准的组件对象模型 (COM) 错误代码，定义在 WinError.h，除了以下值。  
+ 除以下值外，此方法还返回 Winerror.h 中定义的标准组件对象模型（COM）错误代码。  
   
 |返回代码|描述|  
 |-----------------|-----------------|  
 |S_OK|该方法已成功完成。|  
-|ERROR_INSUFFICIENT_BUFFER|版本缓冲区不足够空间来存储的版本字符串。|  
+|ERROR_INSUFFICIENT_BUFFER|版本缓冲区不够大，无法存储版本字符串。|  
 |E_POINTER|`pdwLength` 为 null。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** MSCorEE.dll  
+ **库：** Mscoree.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

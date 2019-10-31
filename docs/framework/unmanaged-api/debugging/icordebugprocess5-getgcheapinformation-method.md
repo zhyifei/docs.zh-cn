@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9538ceb-230a-4079-9cb2-903dbf5c1848
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e94034fcdcd8d86f34c61af30a7729a80c913fac
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3aa9fe884b16a239f5105dd262edeb8fc3e4abaa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767346"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084402"
 ---
 # <a name="icordebugprocess5getgcheapinformation-method"></a>ICorDebugProcess5::GetGCHeapInformation 方法
-提供有关垃圾回收堆，包括它当前可枚举的常规信息。  
+提供有关垃圾回收堆的常规信息，包括当前是否可枚举。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,15 +35,15 @@ HRESULT GetGCHeapInformation(
   
 ## <a name="parameters"></a>参数  
  `pHeapInfo`  
- [out]一个指向[COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md)提供有关垃圾回收堆的常规信息的值。  
+ 弄指向[COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md)值的指针，该值提供有关垃圾回收堆的常规信息。  
   
 ## <a name="remarks"></a>备注  
- `ICorDebugProcess5::GetGCHeapInformation`枚举堆之前，必须调用方法或单个堆的区域，以确保垃圾回收结构在进程中当前有效值。 集合正在进行时，不能遍历垃圾回收堆。 否则，该枚举可能会捕获垃圾回收结构无效。  
+ 必须先调用 `ICorDebugProcess5::GetGCHeapInformation` 方法，然后才能枚举堆或单独的堆区域，以确保进程中的垃圾回收结构当前有效。 当集合正在进行时，无法遍历垃圾回收堆。 否则，枚举可能会捕获无效的垃圾回收结构。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

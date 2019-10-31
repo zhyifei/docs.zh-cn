@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 18217ba1-1776-4297-a3b9-f77e64b0fead
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4d7eca3c2825707c9190436377bba7e4bb0d5447
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7e1605eede55360e72d65da6744bc1dcce4f107f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757971"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130995"
 ---
 # <a name="icordebugilframegetip-method"></a>ICorDebugILFrame::GetIP 方法
-获取指令指针的值和一个说明如何获取指令指针的值的按位组合值。  
+获取指令指针的值和按位组合值，它描述如何获取指令指针的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,20 +36,20 @@ HRESULT GetIP (
   
 ## <a name="parameters"></a>参数  
  `pnOffset`  
- [out]指令指针的值。  
+ 弄指令指针的值。  
   
  `pMappingResult`  
- [out]指向介绍如何获取指令指针的值的 CorDebugMappingResult 枚举值的按位组合的指针。  
+ 弄一个指针，指向 CorDebugMappingResult 枚举值的按位组合，这些枚举值描述如何获取指令指针的值。  
   
 ## <a name="remarks"></a>备注  
- 指令指针的值是函数的 Microsoft 中间语言 (MSIL) 代码中的堆栈帧的偏移量位置。 如果堆栈帧处于活动状态，此地址将是下一步要执行的指令。 如果堆栈帧未处于活动状态，此地址是执行堆栈帧重新激活时的下一个指令。  
+ 指令指针的值是堆栈帧偏移函数的 Microsoft 中间语言（MSIL）代码的偏移量。 如果堆栈帧处于活动状态，则此地址为要执行的下一条指令。 如果堆栈帧不处于活动状态，则该地址是在重新激活堆栈帧时要执行的下一条指令。  
   
- 如果此帧中实时 (JIT) 编译的帧，指令指针的值将确定通过向后将映射从实际的本机指令指针，因此该值可能只是近似。  
+ 如果此框架是实时（JIT）编译的帧，则会通过从实际的本机指令指针反向映射来确定指令指针的值，因此该值可能只是近似的。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

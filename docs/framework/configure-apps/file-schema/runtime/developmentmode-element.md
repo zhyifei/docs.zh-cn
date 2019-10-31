@@ -9,21 +9,19 @@ helpviewer_keywords:
 - container tags, <developmentMode> element
 - <developmentMode> element
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0253c3ced52b575097fe5d18abb8ce188c0164fb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4a062da31740edb8f0c7a4f4db8b09800c687587
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252686"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117629"
 ---
 # <a name="developmentmode-element"></a>\<developmentMode > 元素
 指定运行时是否搜索由 DEVPATH 环境变量指定的目录中的程序集。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<developmentMode>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<developmentMode >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +40,7 @@ ms.locfileid: "70252686"
   
 ## <a name="developerinstallation-attribute"></a>developerInstallation 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |**true**|在由 DEVPATH 环境变量指定的目录中搜索程序集。|  
 |**false**|不搜索由 DEVPATH 环境变量指定的目录中的程序集。 这是默认值|  

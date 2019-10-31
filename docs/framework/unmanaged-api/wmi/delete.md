@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Delete function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a1bf9bd5d93d1affee649588138456269411d280
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6b8f287be831702dd31a8335f9b2f6447bcee540
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798667"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127665"
 ---
 # <a name="delete-function"></a>Delete 函数
 
@@ -48,13 +46,13 @@ HRESULT Delete (
 中指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例的指针。
 
 `wszName`\
-中要删除的属性的名称。 `wszName`必须是指向有效`LPCWSTR`的的指针。
+中要删除的属性的名称。 `wszName` 必须是指向有效 `LPCWSTR`的指针。
 
 ## <a name="return-value"></a>返回值
 
 此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 发生了未指定的错误。 |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | 不能删除该属性。 |
@@ -72,9 +70,9 @@ HRESULT Delete (
 
 ## <a name="requirements"></a>要求
 
-**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。
 
-**标头：** WMINet_Utils.idl
+**标头：** WMINet_Utils .idl
 
 **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

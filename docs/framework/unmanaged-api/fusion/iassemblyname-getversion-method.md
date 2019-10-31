@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 42230928-2c33-41fd-9519-d96efef6c7af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58919936bdc62d52437f429146f04c66d49294b2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c0a43dc1640bdaa0ae104832eb4d1f8eb15b0392
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796578"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134331"
 ---
 # <a name="iassemblynamegetversion-method"></a>IAssemblyName::GetVersion 方法
 获取此[IAssemblyName](iassemblyname-interface.md)对象所引用的程序集的版本信息。  
@@ -44,7 +42,7 @@ HRESULT GetVersion (
  弄版本的低32位。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 合成。h  
   

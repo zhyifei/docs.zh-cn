@@ -5,21 +5,19 @@ helpviewer_keywords:
 - <PreferComInsteadOfManagedRemoting> element
 - PreferComInsteadOfManagedRemoting element
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d793c8d84a15f554ada78f3c0dd1f0e936893fd4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 47c568a8d6e89a195414552b3db5953ee61d1e55
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252409"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116018"
 ---
 # <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting > 元素
 指定运行时是否将对跨应用程序域边界的所有调用使用 COM 互操作而不是远程处理。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<PreferComInsteadOfManagedRemoting>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<PreferComInsteadOfManagedRemoting >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,7 +36,7 @@ ms.locfileid: "70252409"
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`false`|运行时将跨应用程序域边界使用远程处理。 这是默认设置。|  
 |`true`|运行时将跨应用程序域边界使用 COM 互操作。|  
@@ -54,11 +52,11 @@ ms.locfileid: "70252409"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 将`enabled`属性设置为`true`时，运行时的行为如下所示：  
+ 将 `enabled` 特性设置为 `true`时，运行时的行为如下所示：  
   
 - 当[iunknown](https://go.microsoft.com/fwlink/?LinkId=148003)接口通过 COM 接口进入域时，运行时不为[IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md)接口调用[iunknown：： QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) 。 相反，它会在对象周围构造一个[运行时可调用包装](../../../../standard/native-interop/runtime-callable-wrapper.md)器（RCW）。  
   
-- 运行时在接收到`QueryInterface`已在此域中创建的任何 COM 可[调用包装](../../../../standard/native-interop/com-callable-wrapper.md)器（CCW）的[IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md)接口调用时，将返回 E_NOINTERFACE。  
+- 当运行时为已在此域中创建的任何[COM 可调用包装](../../../../standard/native-interop/com-callable-wrapper.md)器（CCW）接收针对[IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md)接口的 `QueryInterface` 调用时，将返回 E_NOINTERFACE。  
   
  这两个行为确保跨应用程序域边界在托管对象之间对 COM 接口进行的所有调用均使用 COM 和 COM 互操作，而不是远程处理。  
   

@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4275af0c-b5a7-4e4c-97c9-7e41f36b2dd8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ee1c30809567097e67b6b1e40f5534429d748abd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fb8cfb2d1c5902ecd0d5858ef21ba48b65b12506
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964372"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125330"
 ---
 # <a name="icordebugcontrollerterminate-method"></a>ICorDebugController::Terminate 方法
 用指定的退出代码终止进程。  
   
 > [!NOTE]
-> 此方法是 Win32 `TerminateProcess`函数的包装器。 因此, `Terminate`使用退出代码的方式与 Win32 `TerminateProcess`函数使用的方式相同。  
+> 此方法是 Win32 `TerminateProcess` 函数的包装器。 因此，`Terminate` 以 Win32 `TerminateProcess` 函数使用的相同方式使用退出代码。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,17 +41,17 @@ HRESULT Terminate (
  中一个表示退出代码的数字值。 有效的数值是在 Winbase.h 中定义的。  
   
 ## <a name="remarks"></a>备注  
- 如果在调用时`Terminate`停止该进程, 则应使用[ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)方法继续此过程, 以便调试器通过[ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)或[ICorDebugManagedCallback:: ExitAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md)回调。  
+ 如果在调用 `Terminate` 时停止该进程，则应使用[ICorDebugController：： Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)方法继续此过程，以便调试器通过[ICorDebugManagedCallback：：ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)或[ICorDebugManagedCallback：： ExitAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md)回调。  
   
 > [!NOTE]
-> 此方法不是由应用程序域实现的。 也就是说, 它不是在<xref:System.AppDomain>级别实现的。  
+> 此方法不是由应用程序域实现的。 也就是说，它不是在 <xref:System.AppDomain> 级别实现的。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl, Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

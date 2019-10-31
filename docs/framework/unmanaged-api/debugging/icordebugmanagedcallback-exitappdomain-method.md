@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d815486e-b3bd-4fe8-ba28-02abdb4d67ba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1e045c475b57f863071eb81194868b7db3c5a3c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5ba6ce4e59057442a9f17338ec7bfff787bd5d05
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755795"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130791"
 ---
 # <a name="icordebugmanagedcallbackexitappdomain-method"></a>ICorDebugManagedCallback::ExitAppDomain 方法
-通知调试器已退出应用程序域。  
+通知调试器应用程序域已退出。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,15 +36,15 @@ HRESULT ExitAppDomain (
   
 ## <a name="parameters"></a>参数  
  `pProcess`  
- [in]指向表示包含给定的应用程序域的流程 ICorDebugProcess 对象的指针。  
+ 中指向 ICorDebugProcess 对象的指针，该对象表示包含给定应用程序域的进程。  
   
  `pAppDomain`  
- [in]指向表示已退出应用程序域的 ICorDebugAppDomain 对象的指针。  
+ 中指向 ICorDebugAppDomain 对象的指针，该对象表示已退出的应用程序域。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

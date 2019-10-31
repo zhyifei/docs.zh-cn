@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: fdab0ade-7f56-4fa2-b3ef-f7a1d2852bba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fe94203d315c32b62a191adf294a9c1310fe28e0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5b988b110100cd159b8e262573df409847d635c6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738260"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134127"
 ---
 # <a name="icordebugdebugactiveprocess-method"></a>ICorDebug::DebugActiveProcess 方法
 将调试器附加到现有进程。  
@@ -39,21 +37,21 @@ HRESULT DebugActiveProcess (
   
 ## <a name="parameters"></a>参数  
  `id`  
- [in]调试程序要附加的进程 ID。  
+ 中调试器要附加到的进程的 ID。  
   
  `win32Attach`  
- [in]布尔值，设置为该值`true`如果调试程序应将用作 Win32 调试器进程和调度的非托管的回叫; 否则为`false`。  
+ 中如果调试器应该表现为进程的 Win32 调试器并调度非托管回调，则设置为 `true` 的布尔值;否则，`false`。  
   
  `ppProcess`  
- [out]指向表示调试器已附加到进程"ICorDebugProcess"对象的地址的指针。  
+ 弄一个指向 "ICorDebugProcess" 对象地址的指针，该对象表示调试器已附加到的进程。  
   
 ## <a name="remarks"></a>备注  
- 不支持 Win9x 和非 x86 平台，例如基于 IA-64 和 AMD64 基于平台进行互操作调试。  
+ Win9x 和非 x86 平台都不支持互操作调试，如基于 IA-64 和基于 AMD64 的平台。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

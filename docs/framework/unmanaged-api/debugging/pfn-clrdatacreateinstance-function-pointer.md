@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5c66ac57-d751-4de5-af9f-26ceb949af8b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 81fcc99a739d5e673d1d01d5efb801ba4930bdee
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 426a8acf2e9319725cf592db00dc97c8960bca4f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752555"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139166"
 ---
-# <a name="pfnclrdatacreateinstance-function-pointer"></a>PFN_CLRDataCreateInstance 函数指针
-指向一个函数来创建一个接口对象，用于指定的目标项。  
+# <a name="pfn_clrdatacreateinstance-function-pointer"></a>PFN_CLRDataCreateInstance 函数指针
+指向一个函数，该函数为指定的目标项创建接口对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,21 +36,21 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
   
 ## <a name="parameters"></a>参数  
  `iid`  
- [in]若要实例化的接口的标识符。  
+ 中要实例化的接口的标识符。  
   
  `target`  
- [in]指向用户实现的指针[ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)对象，表示要为其创建的接口对象的目标项。  
+ 中一个指向用户实现的[ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)对象的指针，该对象表示要为其创建 interface 对象的目标项。  
   
  `iface`  
- [out]指向返回的接口对象的地址的指针。  
+ 弄指向返回的接口对象地址的指针。  
   
 ## <a name="remarks"></a>备注  
- `ICLRDataTarget`对象由调试应用程序的编写器实现。 实现取决于所表示的目标项的类型。 目标项可能是进程、 内存转储、 远程计算机，等等。  
+ `ICLRDataTarget` 对象由调试应用程序的编写器实现。 实现取决于所表示的目标项的类型。 目标项可以是进程、内存转储、远程计算机，等等。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** ClrData.idl  
+ **标头：** ClrData .idl  
   
  **库：** CorGuids.lib  
   

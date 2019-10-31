@@ -7,14 +7,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], placement
 - assemblies [.NET Framework], location
 ms.assetid: ff8d48bc-f606-484f-9fe1-d0af264269fb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6281a0f68fa0ce81b4763d8d0e8f17b47771d2ff
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5eb7b5c35bb40d5a58390ccbd4619cbed4e06c52
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053205"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119961"
 ---
 # <a name="assembly-placement"></a>程序集位置
 对于大多数 .NET Framework 应用程序而言，您可以在以下位置找到构成该应用程序的程序集，这些位置包括：该应用程序的目录中，该应用程序目录的子目录中，或全局程序集缓存中（如果该程序集是共享的话）。 可以通过在配置文件中使用 [\<codeBase> 元素](../configure-apps/file-schema/runtime/codebase-element.md)替代公共语言运行时查找某一程序集的位置。 如果程序集没有强名称，则使用 [\<codeBase> 元素](../configure-apps/file-schema/runtime/codebase-element.md)指定的位置限制为应用程序目录或子目录。 如果程序集具有强名称，则 [\<codeBase> 元素](../configure-apps/file-schema/runtime/codebase-element.md)能够指定计算机或网络上的任意位置。  

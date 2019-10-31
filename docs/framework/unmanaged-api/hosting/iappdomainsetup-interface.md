@@ -14,46 +14,44 @@ helpviewer_keywords:
 ms.assetid: 1844da85-c031-40bf-bea4-1a3d12a36c8c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bbde873481aea9de94862117a99079301965f33c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fab64c31d4a73995c16d21767f4569f21c7df9a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970022"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126874"
 ---
 # <a name="iappdomainsetup-interface"></a>IAppDomainSetup 接口
-提供允许主机配置的属性<xref:System.AppDomain?displayProperty=nameWithType>类型，然后再调用[icorruntimehost:: Createdomainex](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)方法来创建它。  
+提供属性，这些属性使宿主可以在调用[ICorRuntimeHost：： CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)方法来创建它之前配置 <xref:System.AppDomain?displayProperty=nameWithType> 类型。  
   
 ## <a name="properties"></a>属性  
   
-|属性|描述|  
+|Property|描述|  
 |--------------|-----------------|  
-|<xref:System.AppDomainSetup.ApplicationBase%2A>|获取或设置包含的应用程序的目录的名称。|  
+|<xref:System.AppDomainSetup.ApplicationBase%2A>|获取或设置包含该应用程序的目录的名称。|  
 |<xref:System.AppDomainSetup.ApplicationName%2A>|获取或设置应用程序的名称。|  
-|<xref:System.AppDomainSetup.CachePath%2A>|获取或设置特定于应用程序的、 文件的卷影复制的位置使用某个区域的名称。|  
+|<xref:System.AppDomainSetup.CachePath%2A>|获取或设置特定于应用程序的区域的名称，在该区域中对文件进行卷影复制。|  
 |<xref:System.AppDomainSetup.ConfigurationFile%2A>|获取或设置应用程序的配置文件的名称。|  
-|<xref:System.AppDomainSetup.DynamicBase%2A>|获取或设置在其中存储和访问动态生成的文件的目录的名称。|  
-|<xref:System.AppDomainSetup.LicenseFile%2A>|获取或设置与此域相关联的许可证文件的路径。|  
-|<xref:System.AppDomainSetup.PrivateBinPath%2A>|获取或设置结合使用的目录列表<xref:System.AppDomainSetup.ApplicationBase%2A>目录来探测专用程序集。|  
-|<xref:System.AppDomainSetup.PrivateBinPathProbe%2A>|获取或设置一个字符串值，包含或排除<xref:System.AppDomainSetup.ApplicationBase%2A>应用程序的搜索路径中。|  
-|<xref:System.AppDomainSetup.ShadowCopyDirectories%2A>|获取或设置包含要进行卷影复制程序集的目录的名称。|  
-|<xref:System.AppDomainSetup.ShadowCopyFiles%2A>|获取或设置一个字符串，指示是否将卷影复制打开或关闭。 有效值为"true"或"false"。|  
+|<xref:System.AppDomainSetup.DynamicBase%2A>|获取或设置用于存储和访问动态生成的文件的目录的名称。|  
+|<xref:System.AppDomainSetup.LicenseFile%2A>|获取或设置与此域关联的许可证文件的路径。|  
+|<xref:System.AppDomainSetup.PrivateBinPath%2A>|获取或设置目录列表，该列表与要探测其专用程序集的 <xref:System.AppDomainSetup.ApplicationBase%2A> 目录组合在一起。|  
+|<xref:System.AppDomainSetup.PrivateBinPathProbe%2A>|获取或设置一个字符串值，该值包含或排除从应用程序的搜索路径 <xref:System.AppDomainSetup.ApplicationBase%2A>。|  
+|<xref:System.AppDomainSetup.ShadowCopyDirectories%2A>|获取或设置目录的名称，这些目录包含要进行卷影复制的程序集。|  
+|<xref:System.AppDomainSetup.ShadowCopyFiles%2A>|获取或设置一个字符串，该字符串指示阴影复制是打开还是关闭。 有效值为 "true" 或 "false"。|  
   
 ## <a name="remarks"></a>备注  
- `IAppDomainSetup`接口对应于托管<xref:System.IAppDomainSetup>接口，该接口<xref:System.AppDomainSetup>类型实现。 请参阅<xref:System.IAppDomainSetup?displayProperty=nameWithType>有关其属性的详细说明。  
+ `IAppDomainSetup` 接口对应于 <xref:System.AppDomainSetup> 类型实现的托管 <xref:System.IAppDomainSetup> 接口。 有关其属性的详细说明，请参阅 <xref:System.IAppDomainSetup?displayProperty=nameWithType>。  
   
- `IAppDomainSetup` 表示可以添加到的程序集绑定信息<xref:System.AppDomain>之前创建的实例。 例如，主机可以设置<xref:System.AppDomainSetup.ApplicationBase%2A>属性来建立公共语言运行时 (CLR) 探测程序的根目录，托管程序集。  
+ `IAppDomainSetup` 表示可以在创建之前添加到 <xref:System.AppDomain> 实例的程序集绑定信息。 例如，主机可以设置 <xref:System.AppDomainSetup.ApplicationBase%2A> 属性来建立根目录，公共语言运行时（CLR）会探测托管程序集。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

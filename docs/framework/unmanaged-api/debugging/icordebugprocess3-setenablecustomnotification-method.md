@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: afd88ee9-2589-4461-a75a-9b6fe55a2525
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58e50a0c02f15590e5bbbcadaabeaa7e3886b74b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec60274648315c4fa38f3832d8d39c1a269956b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736821"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129707"
 ---
 # <a name="icordebugprocess3setenablecustomnotification-method"></a>ICorDebugProcess3::SetEnableCustomNotification 方法
-启用和禁用的指定类型的自定义调试器通知。  
+启用和禁用指定类型的自定义调试器通知。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,20 +34,20 @@ HRESULT SetEnableCustomNotification(ICorDebugClass * pClass,
   
 ## <a name="parameters"></a>参数  
  `pClass`  
- [in]指定自定义调试器通知类型。  
+ 中指定自定义调试器通知的类型。  
   
  `fEnable`  
- [in]`true`以启用自定义调试器通知;`false`禁用通知。 默认值为 `false`。  
+ [in] 用于启用自定义调试器通知的 `true`;`false` 禁用通知。 默认值为 `false`。  
   
 ## <a name="remarks"></a>备注  
- 当`fEnable`设置为`true`，调用<xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType>方法触发器[ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md)回调。 默认情况下; 禁用通知因此，调试器必须指定它知道有关，并想要处理的任何通知类型。 因为[ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)类的范围由应用程序域，调试器必须调用`SetEnableCustomNotification`的每个应用程序域中的过程，如果想要在整个进程接收通知。  
+ 将 `fEnable` 设置为 `true`时，对 <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> 方法的调用会触发[ICorDebugManagedCallback3：： CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md)回调。 默认情况下禁用通知;因此，调试器必须指定它知道的任何通知类型并想要处理。 由于[ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)类的作用域由应用程序域确定，因此，如果要在整个过程中接收通知，则调试器必须为进程中的每个应用程序域调用 `SetEnableCustomNotification`。  
   
- 从.NET Framework 4 开始，唯一支持的通知是一个跨线程依赖项通知。  
+ 从 .NET Framework 4 开始，唯一受支持的通知是跨线程依赖项通知。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

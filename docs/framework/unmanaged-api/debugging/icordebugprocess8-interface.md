@@ -2,19 +2,17 @@
 title: ICorDebugProcess8 接口
 ms.date: 03/30/2017
 ms.assetid: 7ab1a70f-ec11-46ff-8869-cd8ca679cc51
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a6db1bc7e87750a36415439707777fed99e358ea
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: dc7de361386b9ee21d6cf05c36a7f63c3e1c25f7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300534"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123369"
 ---
 # <a name="icordebugprocess8-interface"></a>ICorDebugProcess8 接口
-[.NET Framework 4.6 和更高版本中受支持]  
+[.NET Framework 4.6 及更高版本中支持]  
   
- 合理扩展 ICorDebugProcess 接口来启用或禁用某些类型的[ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)异常回调。  
+ 对 ICorDebugProcess 接口进行逻辑扩展，以启用或禁用某些类型的[ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)异常回调。  
   
 ## <a name="methods"></a>方法  
   
@@ -25,9 +23,9 @@ ms.locfileid: "66300534"
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

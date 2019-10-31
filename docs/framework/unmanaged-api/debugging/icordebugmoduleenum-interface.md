@@ -14,24 +14,22 @@ helpviewer_keywords:
 ms.assetid: 2fb93cd6-6d47-4fdc-a9a0-047726fd03a1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 682fe190126d4f40013678d996804e9f3481bc02
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eaf00369cf77aaa1ba16879bae1b74aba2eb9eab
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965086"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123530"
 ---
 # <a name="icordebugmoduleenum-interface"></a>ICorDebugModuleEnum 接口
 
-实现 ICorDebugEnum 方法, 并枚举 ICorDebugModule 数组。  
+实现 ICorDebugEnum 方法，并枚举 ICorDebugModule 数组。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduleenum-next-method.md)|从当前位置开始, 从`ICorDebugModule`枚举中获取指定数目的实例。|  
+|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduleenum-next-method.md)|从当前位置开始，从枚举中获取指定数目的 `ICorDebugModule` 实例。|  
   
 ## <a name="remarks"></a>备注  
   
@@ -39,11 +37,11 @@ ms.locfileid: "69965086"
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl, Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

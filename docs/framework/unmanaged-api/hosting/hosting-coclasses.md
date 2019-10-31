@@ -6,30 +6,28 @@ helpviewer_keywords:
 - unmanaged coclasses [.NET Framework], hosting
 - coclasses [.NET Framework hosting]
 ms.assetid: e32d8667-58ee-4760-814f-d22963881622
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8dbe16c1bd9293cd109e9ce7f1211d6651551bc5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f23d2c9828a2ccce058fbb4829a41f1af5b25a11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946076"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127015"
 ---
 # <a name="hosting-coclasses"></a>承载 Coclass
-本节描述承载 API 使用的非托管的 API 组件类。  
+本部分介绍宿主 API 使用的非托管 API 组件类。  
   
 ## <a name="in-this-section"></a>本节内容  
  [CLRRuntimeHost 组件类](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)  
- 提供用于管理由运行时执行代码的接口。  
+ 提供用于管理运行时执行的代码的接口。  
   
  [ComCallUnmarshal 组件类](../../../../docs/framework/unmanaged-api/hosting/comcallunmarshal-coclass.md)  
- 提供用于管理的接口指针的封送的接口。  
+ 提供用于管理接口指针的封送处理的接口。  
   
  [CorRuntimeHost 组件类](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)  
- 提供用于管理应用程序正在执行公共语言运行时的接口。  
+ 提供用于管理由公共语言运行时执行的应用程序的接口。  
   
  [TypeNameFactory 组件类](../../../../docs/framework/unmanaged-api/hosting/typenamefactory-coclass.md)  
- 用于管理类型名称的析构函数中提供的接口。  
+ 提供用于管理类型名称的析构的接口。  
   
 ## <a name="related-sections"></a>相关章节  
  [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  

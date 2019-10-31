@@ -1,5 +1,5 @@
 ---
-title: ICorDebugType2::GetTypeID 方法
+title: ICorDebugType2：： GetTypeID 方法
 ms.date: 03/30/2017
 api_name:
 - ICorDebugType2.GetTypeID
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b933686-226e-4373-92b7-fac579ee7b1a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3098911bab2878876b93ee1ce23d9794d7e6cdbd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 944313893d88b8eff97291d2517e4863a5ae958a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772467"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092764"
 ---
-# <a name="icordebugtype2gettypeid-method"></a>ICorDebugType2::GetTypeID 方法
-获取[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)此类型。  
+# <a name="icordebugtype2gettypeid-method"></a>ICorDebugType2：： GetTypeID 方法
+获取此类型的[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,26 +35,26 @@ HRESULT GetTypeID(
   
 ## <a name="parameters"></a>参数  
  `id`  
- [out]一个指向[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)此 icordebugtype。  
+ 弄指向此 ICorDebugType 的[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)的指针。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回值是 `S_OK`；如果失败，则返回失败 `HRESULT` 代码。 `HRESULT`代码如下：  
+ 如果成功，则返回值是 `S_OK`；如果失败，则返回失败 `HRESULT` 代码。 `HRESULT` 代码包括以下内容：  
   
 |返回代码|描述|  
 |-----------------|-----------------|  
-|`S_OK`|方法成功。 该方法是否已检索的有效[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)。|  
-|`CORDBG_E_CLASS_NOT_LOADED`|尚未加载该类型。|  
-|`CORDBG_E_UNSUPPORTED`|不支持的类型。|  
+|`S_OK`|方法成功。 方法已检索到有效的[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)。|  
+|`CORDBG_E_CLASS_NOT_LOADED`|尚未加载类型。|  
+|`CORDBG_E_UNSUPPORTED`|类型不受支持。|  
   
 ## <a name="remarks"></a>备注  
- 此方法提供 ICorDebugType，表示可能或可能不具有已加载到运行时，为的类型从映射[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)，该类用作一个不透明处理标识在运行时加载的类型。  
+ 此方法提供了从 ICorDebugType （表示可能已加载到运行时中的类型）到[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)的映射，该映射用作标识加载到运行时中的类型的不透明句柄。  
   
- 当 ICorDebugType 表示的类型尚未被加载，此方法返回`CORDBG_E_CLASS_NOT_LOADED`。  如果不支持的类型，它将返回`CORDBG_E_UNSUPPORTED`。  
+ 如果尚未加载 ICorDebugType 所表示的类型，则此方法将返回 `CORDBG_E_CLASS_NOT_LOADED`。  如果该类型不受支持，它将返回 `CORDBG_E_UNSUPPORTED`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

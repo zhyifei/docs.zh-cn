@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e5422ac-afa1-403d-a894-2d7348673e38
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a2213c146374033c5a985a714352edad04f178a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 83192fd2d24e740ab470988531db823b34df4494
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762021"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131428"
 ---
 # <a name="icordebugmanagedcallback3customnotification-method"></a>ICorDebugManagedCallback3::CustomNotification 方法
 指示已引发自定义调试器通知。  
@@ -36,10 +34,10 @@ HRESULT CustomNotification(ICorDebugThread *    pThread,
   
 ## <a name="parameters"></a>参数  
  `pThread`  
- [in]指向引发通知的线程的指针。  
+ 中指向引发通知的线程的指针。  
   
  `pAppDomain`  
- [in]指向包含引发通知的线程的应用程序域的指针。  
+ 中一个指针，指向包含引发通知的线程的应用程序域。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
@@ -48,17 +46,17 @@ HRESULT CustomNotification(ICorDebugThread *    pThread,
 |-------------|-----------------|  
 |S_OK|该方法已成功完成。|  
   
-## <a name="exceptions"></a>Exceptions  
+## <a name="exceptions"></a>异常  
   
 ## <a name="remarks"></a>备注  
- 随后调用[ICorDebugThread4::GetCurrentCustomDebuggerNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-getcurrentcustomdebuggernotification-method.md)方法检索线程的对象传递给<xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType>方法。 线程对象的类型必须之前已启用通过调用[ICorDebugProcess3::SetEnableCustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)方法。 调试器可以从线程对象的字段读取特定于类型的参数，并可以将响应存储到字段。  
+ 对[ICorDebugThread4：： GetCurrentCustomDebuggerNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-getcurrentcustomdebuggernotification-method.md)方法的后续调用检索传递到 <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> 方法的线程对象。 线程对象的类型必须以前已通过调用[ICorDebugProcess3：： SetEnableCustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)方法启用。 调试器可以从 thread 对象的字段中读取特定于类型的参数，并可以将响应存储在字段中。  
   
- [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)接口施加的通知或其内容类型上没有策略和通知的语义是严格的调试器、 应用程序和.NET Framework 之间的协定。  
+ [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)接口不对通知类型或其内容施加任何策略，并且通知的语义严格地是调试器、应用程序和 .NET Framework 之间的协定。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

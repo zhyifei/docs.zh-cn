@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: a30102ff-c52e-48c9-b3a9-aa14286a42b2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 948e97064d12dc5b2044faf35aa374e5ba5f2592
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d67bee3ea0e57080179b3fbb7e0b4193860c44d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764779"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103291"
 ---
 # <a name="initdbgtransportmanager-function"></a>InitDbgTransportManager 函数
 初始化传输管理器以连接到进程和运行时枚举的远程目标。  
@@ -45,10 +43,10 @@ HRESULT InitDbgTransportManager ();
  其他故障。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CoreClrRemoteDebuggingInterfaces.h  
+ **标头：** CoreClrRemoteDebuggingInterfaces  
   
- **库：** mscordbi_macx86.dll  
+ **库：** mscordbi_macx86  
   
- **.NET framework 版本：** 3.5 SP1
+ **.NET Framework 版本：** 3.5 SP1

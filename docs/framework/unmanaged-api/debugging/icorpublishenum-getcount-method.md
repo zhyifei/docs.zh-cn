@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d228f684-2be3-4029-93ae-31fe02213c1f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1465a667763c12593c4bc89148d70f85371fcc67
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a03b06143c0bd92425c7bfc13af6e374dc629f10
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775555"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140476"
 ---
 # <a name="icorpublishenumgetcount-method"></a>ICorPublishEnum::GetCount 方法
-枚举中获取项的数目。  
+获取枚举中的项数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,12 +35,12 @@ HRESULT GetCount (
   
 ## <a name="parameters"></a>参数  
  `pcelt`  
- [out]一个指向枚举中的项的数目。  
+ 弄一个指针，指向枚举中的项数。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorPub.idl CorPub.h  
+ **标头：** CorPub，CorPub  
   
  **库：** CorGuids.lib  
   

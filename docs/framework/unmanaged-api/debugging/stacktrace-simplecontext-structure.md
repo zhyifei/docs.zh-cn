@@ -15,16 +15,14 @@ helpviewer_keywords:
 ms.assetid: d4cef11f-a8ca-49bc-a1b8-6631f9e28f3e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc0fc18e31b89b22ffd30d99a8b079ed7b87fa1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1cd3c34fc292e4a050fa8a75078283e34425fc8f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752498"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139133"
 ---
-# <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext 结构
+# <a name="stacktrace_simplecontext-structure"></a>StackTrace_SimpleContext 结构
 提供可用于代替完整的 `CONTEXT` 结构的简单上下文。  
   
 ## <a name="syntax"></a>语法  
@@ -38,21 +36,21 @@ struct StackTrace_SimpleContext
 };  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`StackOffset`|堆栈指针或在 x86 上的 enter 堆栈指针 (ESP) 平台。|  
-|`FrameOffset`|帧偏移量或在 x86 上的 EBP 寄存器平台。|  
-|`InstructionOffset`|指令指针或在 x86 上的输入指令指针 (EIP) 平台。|  
+|`StackOffset`|堆栈指针或 x86 平台上的进入堆栈指针（ESP）。|  
+|`FrameOffset`|X86 平台上的帧偏移量或 EBP 寄存器。|  
+|`InstructionOffset`|指令指针，或 x86 平台上的输入指令指针（EIP）。|  
   
 ## <a name="remarks"></a>备注  
- 由于堆栈跟踪函数通常需要返回地址、 帧偏移量和堆栈地址，因此你可以选择使用`SimpleContext`而不是一个较大的结构`CONTEXT`结构。  
+ 因为堆栈跟踪函数通常只需要返回地址、帧偏移量和堆栈地址，所以，您可以选择使用 `SimpleContext` 结构而不是大型 `CONTEXT` 结构。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** SOS_Stacktrace.h  
+ **标头：** SOS_Stacktrace  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

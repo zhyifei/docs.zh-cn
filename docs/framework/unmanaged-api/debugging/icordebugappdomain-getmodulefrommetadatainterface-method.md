@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: f35225b3-5dda-4d5a-913d-b3373e9ab81e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 48249bb634c301b7fda2c360c3b793e9206a759a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c8469c9aa875e7d567229e9949d83083cbe54987
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737900"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110347"
 ---
 # <a name="icordebugappdomaingetmodulefrommetadatainterface-method"></a>ICorDebugAppDomain::GetModuleFromMetaDataInterface 方法
 获取与给定的元数据接口相对应的模块。  
@@ -38,15 +36,15 @@ HRESULT GetModuleFromMetaDataInterface (
   
 ## <a name="parameters"></a>参数  
  `pIMetaData`  
- [in]指向一个对象，它的一个[元数据接口](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)。  
+ 中指向对象的指针，该对象为[元数据接口](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)之一。  
   
  `ppModule`  
- [out]指向 icor 调试模块对象表示的给定元数据接口相对应的模块地址的指针。  
+ 弄指向 ICorDebugModule 对象的地址的指针，该对象表示与给定的元数据接口相对应的模块。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

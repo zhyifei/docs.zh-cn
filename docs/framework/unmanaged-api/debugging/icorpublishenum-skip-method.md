@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1680ec06-4ab0-447e-93ad-cdb8693fde5c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9be0c3b931130e0ea86766b5134ca514478f0201
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eb9e5bdf85c6d487fd82422522854076c03e2288
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764940"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140453"
 ---
 # <a name="icorpublishenumskip-method"></a>ICorPublishEnum::Skip 方法
-将光标向前移动在枚举中指定数目的项。  
+按指定的项数在枚举中向前移动光标。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,12 +35,12 @@ HRESULT Skip (
   
 ## <a name="parameters"></a>参数  
  `celt`  
- [in]要向前移动游标的项的数目。  
+ 中游标向前移动的项数。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorPub.idl CorPub.h  
+ **标头：** CorPub，CorPub  
   
  **库：** CorGuids.lib  
   

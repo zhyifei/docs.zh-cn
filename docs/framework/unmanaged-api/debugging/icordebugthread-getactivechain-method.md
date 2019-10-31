@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f50de1f7-40ef-4949-b542-1d9a61f7bfef
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 59328c8b7e86694610de20ade72a98a4280b439d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 99a617ef21ee3c3319b1ebe7d3ab8367659b6ef8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762629"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133552"
 ---
 # <a name="icordebugthreadgetactivechain-method"></a>ICorDebugThread::GetActiveChain 方法
-获取此 ICorDebugThread 对象上活动的 （最新的） 堆栈链的接口指针。  
+获取一个接口指针，该指针指向此 ICorDebugThread 对象上的活动（最新）堆栈链。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,15 +35,15 @@ HRESULT GetActiveChain (
   
 ## <a name="parameters"></a>参数  
  `ppChain`  
- [out]指向一个 ICorDebugChain 对象，表示堆栈链的地址的指针。  
+ 弄指向表示堆栈链的 ICorDebugChain 对象地址的指针。  
   
 ## <a name="remarks"></a>备注  
- `ppChain`参数为 null，如果没有堆栈链是当前处于活动状态。  
+ 如果当前没有堆栈链处于活动状态，则 `ppChain` 参数为 null。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

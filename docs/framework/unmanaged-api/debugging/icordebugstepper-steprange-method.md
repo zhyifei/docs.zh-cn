@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9776112-6e6d-4708-892a-8873db02e16f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7e1ace501bf5de741ea110fe4d3bb4bc44843bf8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ca4542fe42fab0b5ff54b23b9492d3906698c10
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760535"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120624"
 ---
 # <a name="icordebugsteppersteprange-method"></a>ICorDebugStepper::StepRange 方法
-导致此 ICorDebugStepper 单步执行其包含的线程，并返回到达超出指定范围的最后一个代码时。  
+使此 ICorDebugStepper 单步执行其包含线程，并在到达指定范围内的最后一个代码时返回。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,25 +37,25 @@ HRESULT StepRange (
   
 ## <a name="parameters"></a>参数  
  `bStepIn`  
- [in]设置为`true`来单步执行的线程内调用的函数。 设置为`false`到逐过程执行函数。  
+ 中设置为单步执行在线程中调用的函数的 `true`。 设置为 `false` 以逐过程执行函数。  
   
  `ranges`  
- [in]COR_DEBUG_STEP_RANGE 结构数组，其中每个指定的范围。  
+ 中COR_DEBUG_STEP_RANGE 结构的数组，其中每个结构指定一个范围。  
   
  `cRangeCount`  
  [in] `ranges` 数组的大小。  
   
 ## <a name="remarks"></a>备注  
- `StepRange`方法的工作方式类似于[icordebugstepper:: Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)达到方法，只不过它给定范围之外的代码之前，无法完成。  
+ `StepRange` 方法的工作方式类似于[ICorDebugStepper：： Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)方法，但直到到达给定范围之外的代码时才会完成。  
   
- 这可以是单步执行一次一条指令比效率更高。 范围被指定为从一开始单步调试器的帧的偏移量对的列表。  
+ 这比单步执行一次指令更有效。 范围指定为自分档器帧开头的偏移量对的列表。  
   
- 范围是相对于一种方法的 Microsoft 中间语言 (MSIL) 代码。 调用[icordebugstepper:: Setrangeil](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)与`false`以便相对于一种方法的本机代码的范围。  
+ 范围相对于方法的 Microsoft 中间语言（MSIL）代码。 调用[ICorDebugStepper：： SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)与 `false` 以使范围相对于方法的本机代码。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

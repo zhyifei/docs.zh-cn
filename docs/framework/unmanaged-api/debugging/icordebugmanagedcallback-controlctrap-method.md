@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0500854e-2121-43d9-a028-64312da35258
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1e0217019aa9b8ff85716c62c27c0f4d5547074a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da35db8a943fda5fb3fbf4126684bb9cb7243001
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759797"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137430"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>ICorDebugManagedCallback::ControlCTrap 方法
-通知调试器 CTRL + C 正在调试的进程中捕获。  
+通知调试器在被调试的进程中捕获了 CTRL + C。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,22 +35,22 @@ HRESULT ControlCTrap (
   
 ## <a name="parameters"></a>参数  
  `pProcess`  
- [in]指向表示在其中捕获 CTRL + C 流程 ICorDebugProcess 对象的指针。  
+ 中指向 ICorDebugProcess 对象的指针，该对象表示在其中捕获 CTRL + C 的进程。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|调试器将处理 CTRL + C 陷阱。|  
-|S_FALSE|调试器不会处理 CTRL + C 陷阱。|  
+|S_FALSE|调试器将不会处理 CTRL + C 陷阱。|  
   
 ## <a name="remarks"></a>备注  
- 此回调的情况下，进程内的所有应用程序域都已停止。  
+ 此回调的进程中的所有应用程序域都已停止。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - EndMethodEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cdcf49bd748a423b1cebfba88644aa961f1c7b65
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 174cf76d4b0ddf07e67e02bff20a983dca08819a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799352"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132022"
 ---
 # <a name="endmethodenumeration-function"></a>EndMethodEnumeration 函数
 终止使用对[BeginMethodEnumeration 函数](beginmethodenumeration.md)的调用启动的枚举序列。  
@@ -49,7 +47,7 @@ HRESULT EndMethodEnumeration (
 
 此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_UNEXPECTED` | 0x8004101d | 发生内部错误。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
@@ -58,12 +56,12 @@ HRESULT EndMethodEnumeration (
 
 此函数包装对[IWbemClassObject：： EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration)方法的调用。
 
-调用方使用[BeginMethodEnumeration 函数](beginmethodenumeration.md)开始枚举序列，然后调用[NextMethod 函数](nextmethod.md )，直到该方法返回`WBEM_S_NO_MORE_DATA`。 调用方可以通过调用`EndMethodEnumeration`来完成序列。 调用方可以在任何时间通过调用`EndMethodEnumeration`来提前终止枚举。
+调用方使用[BeginMethodEnumeration 函数](beginmethodenumeration.md)开始枚举序列，然后调用[NextMethod 函数](nextmethod.md )，直到该方法返回 `WBEM_S_NO_MORE_DATA`。 调用方可以通过调用 `EndMethodEnumeration`来完成序列。 调用方可以在任何时间通过调用 `EndMethodEnumeration` 来提前终止枚举。
 
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标头：** WMINet_Utils.idl  
+ **标头：** WMINet_Utils .idl  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

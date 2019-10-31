@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CreateInstanceEnumWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b7709d9c50a494013ece2f91b3acc213278f0e57
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9ffa718be0e8b67471fdf8cb277df201388d2840
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798904"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130406"
 ---
 # <a name="createinstanceenumwmi-function"></a>CreateInstanceEnumWmi 函数
 
@@ -54,7 +52,7 @@ HRESULT CreateInstanceEnumWmi (
 `lFlags`\
 中影响此函数的行为的标志的组合。 以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 如果设置，则函数将检索存储在当前连接的区域设置的本地化命名空间中的已修改限定符。 <br/> 如果未设置，则函数仅检索直接命名空间中存储的限定符。 |
 | `WBEM_FLAG_DEEP` | 0 | 枚举包括此层次结构中的此和所有子类。 |
@@ -63,10 +61,10 @@ HRESULT CreateInstanceEnumWmi (
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | 函数返回一个只进枚举器。 通常，只进枚举器比传统枚举器更快，使用的内存更少，但它们不允许调用[克隆](clone.md)。 |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI 保留指向枚举中的对象的指针，直到它们被释放。 |
 
-建议的标志`WBEM_FLAG_RETURN_IMMEDIATELY`为， `WBEM_FLAG_FORWARD_ONLY`为获得最佳性能。
+为了获得最佳性能，建议使用 `WBEM_FLAG_RETURN_IMMEDIATELY` 和 `WBEM_FLAG_FORWARD_ONLY`。
 
 `pCtx`\
-中通常，此值为`null`。 否则，它是指向提供请求实例的提供程序可能使用的[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)实例的指针。
+中通常，此值是 `null`的。 否则，它是指向提供请求实例的提供程序可能使用的[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)实例的指针。
 
 `ppEnum`\
 弄接收指向枚举器的指针。
@@ -93,7 +91,7 @@ HRESULT CreateInstanceEnumWmi (
 
 此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | 用户不具有查看指定类的实例的权限。 |
 | `WBEM_E_FAILED` | 0x80041001 | 发生了未指定的错误。 |
@@ -114,9 +112,9 @@ HRESULT CreateInstanceEnumWmi (
 
 ## <a name="requirements"></a>要求
 
-**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。
 
-**标头：** WMINet_Utils.idl
+**标头：** WMINet_Utils .idl
 
 **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

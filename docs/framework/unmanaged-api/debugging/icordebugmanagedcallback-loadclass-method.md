@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e58dac7b-85c3-41ca-b9aa-3a7fc9ae6680
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5619dea17b9a7140238fd559d2f6b1a5d190ac33
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d23b695550c8444264934f7aca4fa185064e89c5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761896"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130732"
 ---
 # <a name="icordebugmanagedcallbackloadclass-method"></a>ICorDebugManagedCallback::LoadClass 方法
-通知调试器已加载的类。  
+通知调试器已加载某个类。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,20 +36,20 @@ HRESULT LoadClass (
   
 ## <a name="parameters"></a>参数  
  `pAppDomain`  
- [in]指向一个 ICorDebugAppDomain 对象，表示应用程序域已在其中加载类的指针。  
+ 中指向 ICorDebugAppDomain 对象的指针，该对象表示要将该类加载到其中的应用程序域。  
   
  `c`  
- [in]指向一个 ICorDebugClass 对象，表示类的指针。  
+ 中指向 ICorDebugClass 对象的指针，该对象表示类。  
   
 ## <a name="remarks"></a>备注  
- 仅当类加载已启用包含的类的模块，会发生此回调。 类加载始终启用的动态模块。  
+ 只有在为包含类的模块启用了类加载的情况下，才会发生此回调。 对于动态模块，始终启用类加载。  
   
- `LoadClass`回调提供适当的时候若要将断点绑定到动态模块中新生成的类。  
+ `LoadClass` 回调提供适当的时间将断点绑定到动态模块中新生成的类。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

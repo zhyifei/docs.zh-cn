@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e7885a6-d17a-4bfc-a4c6-23cbb7337ad5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d9dbaac5b08cf3f700b5f2581c60d0cb7bf3f545
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8d651f19b7d4cb0cbe163c2fa59e1ef07ceb480
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986669"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140332"
 ---
 # <a name="icorpublishappdomain-interface"></a>ICorPublishAppDomain 接口
 表示并提供关于应用程序域的信息。  
@@ -30,17 +28,17 @@ ms.locfileid: "61986669"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetID 方法](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|获取此唯一标识符`ICorPublishAppDomain`。|  
-|[GetName 方法](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|获取此引用的应用程序域的名称`ICorPublishAppDomain`。|  
+|[GetID 方法](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|获取此 `ICorPublishAppDomain`的唯一标识符。|  
+|[GetName 方法](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|获取此 `ICorPublishAppDomain`引用的应用程序域的名称。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorPub.idl CorPub.h  
+ **标头：** CorPub，CorPub  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

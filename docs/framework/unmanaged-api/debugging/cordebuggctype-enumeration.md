@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 880ca92a-42d4-42a5-9b9c-c2848eb39c6a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f101fe2a84a26efb23f57bac3aaf4f0e64a4d36c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b954aa0e4db10fd4b3bde951c7f27d18b8634f5a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740028"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132188"
 ---
 # <a name="cordebuggctype-enumeration"></a>CorDebugGCType 枚举
 指示垃圾回收器是在工作站还是服务器上运行。  
@@ -37,19 +35,19 @@ typedef enum CorDebugGCType {
   
 ## <a name="parameters"></a>参数  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员名称|描述|  
 |-----------------|-----------------|  
-|`CorDebugWorkstationGC`|垃圾回收器运行在工作站上。|  
-|`CorDebugServerGC`|垃圾回收器服务器上运行。|  
+|`CorDebugWorkstationGC`|垃圾回收器正在工作站上运行。|  
+|`CorDebugServerGC`|垃圾回收器正在服务器上运行。|  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

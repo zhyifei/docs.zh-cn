@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3d9dc94689083d79858319387747eb9dafe8b2f6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c73afb00cbd104cff3d310d1369097b459c131e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739560"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133678"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason 枚举
 指示一个单步执行的结果。  
@@ -40,22 +38,22 @@ typedef enum CorDebugStepReason {
 } CorDebugStepReason;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`STEP_NORMAL`|单步执行已完成正常情况下，同一函数中。|  
-|`STEP_RETURN`|继续单步执行通常情况下，该函数返回后。|  
-|`STEP_CALL`|新被调用函数的开头通常情况下，继续单步执行。|  
-|`STEP_EXCEPTION_FILTER`|生成了异常，控制已传递给异常筛选器。|  
-|`STEP_EXCEPTION_HANDLER`|生成了异常，控制已传递到异常处理程序。|  
-|`STEP_INTERCEPT`|控件传递到侦听器。|  
-|`STEP_EXIT`|线程退出之前完成该步骤。|  
+|`STEP_NORMAL`|单步执行在同一函数内正常完成。|  
+|`STEP_RETURN`|在函数返回后，按正常方式继续执行。|  
+|`STEP_CALL`|在新调用的函数开始时以正常方式继续执行。|  
+|`STEP_EXCEPTION_FILTER`|已生成异常，并已将控制权传递给异常筛选器。|  
+|`STEP_EXCEPTION_HANDLER`|已生成异常，并已将控制权传递给异常处理程序。|  
+|`STEP_INTERCEPT`|控件已传递给侦听器。|  
+|`STEP_EXIT`|线程在步骤完成之前退出。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

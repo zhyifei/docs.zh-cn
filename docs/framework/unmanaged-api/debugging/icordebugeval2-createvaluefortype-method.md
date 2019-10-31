@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea38ae20-7e0a-427a-be77-d78fae719d82
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9ffddb8242b6627239a99bd9223b98762910b831
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20315dfc426b63f2d526f3481756e165b388b41e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753234"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137613"
 ---
 # <a name="icordebugeval2createvaluefortype-method"></a>ICorDebugEval2::CreateValueForType 方法
-获取一个指向指定类型的新 ICorDebugValue 其初始值为零或 null。  
+获取一个指针，该指针指向指定类型的新 ICorDebugValue，其初始值为零或 null。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,20 +36,20 @@ HRESULT CreateValueForType (
   
 ## <a name="parameters"></a>参数  
  `pType`  
- [in]指向 ICorDebugType 对象表示的类型的指针。  
+ 中指向表示该类型的 ICorDebugType 对象的指针。  
   
  `ppValue`  
- [out]指向的地址指针`ICorDebugValue`表示的值的对象。  
+ 弄指向表示值的 `ICorDebugValue` 对象的地址的指针。  
   
 ## <a name="remarks"></a>备注  
- `CreateValueForType` 对进行了一般化[icordebugeval:: Createvalue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md)通过允许您指定的任意对象类型，包括构造类型如`List<int>`。 此方法的唯一用途是生成一个值，可以传递给函数求值。  
+ `CreateValueForType` 通用化[ICorDebugEval：： CreateValue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) ，允许指定任意对象类型，包括构造类型，如 `List<int>`。 此方法的唯一目的是生成一个可传递给函数计算的值。  
   
- 类型必须是一个类或值类型。 此方法不能用于创建数组值或字符串值。  
+ 类型必须是类或值类型。 不能使用此方法创建数组值或字符串值。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

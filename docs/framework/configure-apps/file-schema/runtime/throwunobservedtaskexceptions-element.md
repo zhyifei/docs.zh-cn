@@ -8,21 +8,19 @@ helpviewer_keywords:
 - ThrowUnobservedTaskExceptions element
 - <ThrowUnobservedTaskExceptions> element
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3ed1e66c4aadab656455686a7a1e5028b035676a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 99eef6b8c264e21df7f4ecf9fc79dc607d484a0a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252267"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115424"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > 元素
 指定未经处理的任务异常是否应终止正在运行的进程。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<ThrowUnobservedTaskExceptions>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<ThrowUnobservedTaskExceptions >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +40,7 @@ ms.locfileid: "70252267"
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`false`|对于未处理的任务异常，不会终止正在运行的进程。 这是默认设置。|  
 |`true`|终止正在运行的进程的未处理任务异常。|  
@@ -59,17 +57,17 @@ ms.locfileid: "70252267"
 |||  
   
 ## <a name="remarks"></a>备注  
- 如果未观察到与关联的<xref:System.Threading.Tasks.Task>异常，则不会进行任何<xref:System.Threading.Tasks.Task.Wait%2A>操作，也不会附加父级，并且该<xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType>属性不会被视为未观察到。  
+ 如果未观察到与 <xref:System.Threading.Tasks.Task> 关联的异常，则没有 <xref:System.Threading.Tasks.Task.Wait%2A> 操作，未附加父级，并且未读取 <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> 属性。任务异常被视为未观察到。  
   
- 在 .NET Framework 4 中，默认情况下，如果<xref:System.Threading.Tasks.Task>存在未观察到异常的，则终结器将引发异常并终止进程。 进程终止由垃圾回收和终止的时间决定。  
+ 在 .NET Framework 4 中，默认情况下，如果具有未观察到异常的 <xref:System.Threading.Tasks.Task> 被回收，则终结器将引发异常并终止进程。 进程终止由垃圾回收和终止的时间决定。  
   
- 为了使开发人员可以更轻松地根据任务编写异步代码，.NET Framework 4.5 更改未观察到异常的此默认行为。 未观察到异常仍会<xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>引发事件，但在默认情况下，进程不会终止。 相反，引发事件后将忽略此异常，而不管事件处理程序是否观察到该异常。  
+ 为了使开发人员可以更轻松地根据任务编写异步代码，.NET Framework 4.5 更改未观察到异常的此默认行为。 未观察到异常仍会引发 <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> 事件，但在默认情况下，该进程不会终止。 相反，引发事件后将忽略此异常，而不管事件处理程序是否观察到该异常。  
   
- 在 .NET Framework 4.5 中，可以使用应用程序配置文件中的[ \<ThrowUnobservedTaskExceptions > 元素](throwunobservedtaskexceptions-element.md)来启用引发异常的 .NET Framework 4 行为。  
+ 在 .NET Framework 4.5 中，可以使用应用程序配置文件中的[\<ThrowUnobservedTaskExceptions > 元素](throwunobservedtaskexceptions-element.md)来启用引发异常的 .NET Framework 4 行为。  
   
  还可以通过以下方式之一指定异常行为：  
   
-- 通过设置环境变量`COMPlus_ThrowUnobservedTaskExceptions` （`set COMPlus_ThrowUnobservedTaskExceptions=1`）。  
+- 通过设置环境变量 `COMPlus_ThrowUnobservedTaskExceptions` （`set COMPlus_ThrowUnobservedTaskExceptions=1`）。  
   
 - 通过在 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\中设置注册表 DWORD 值 ThrowUnobservedTaskExceptions = 1.Netframework 键。  
   

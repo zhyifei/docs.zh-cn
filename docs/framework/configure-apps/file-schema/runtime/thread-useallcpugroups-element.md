@@ -2,21 +2,19 @@
 title: <Thread_UseAllCpuGroups> 元素
 ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e964f1b2861926803b0449be06cbfd9567ac74a3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a3a612c0ffbcb211157b9623d298ce8ad7a13e94
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252274"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115400"
 ---
 # <a name="thread_useallcpugroups-element"></a>\<Thread_UseAllCpuGroups > 元素
 
 指定运行时是否跨所有 CPU 组分发托管的线程。
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
 &nbsp;&nbsp;&nbsp;&nbsp; **\<Thread_UseAllCpuGroups >**  
 
 ## <a name="syntax"></a>语法
@@ -38,10 +36,10 @@ ms.locfileid: "70252274"
 
 ## <a name="enabled-attribute"></a>enabled 特性
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |`false`|运行时不会跨多个 CPU 组分发托管线程。 这是默认设置。|
-|`true`|如果计算机具有多个 cpu 组并且启用了[ \<GCCpuGroup >](gccpugroup-element.md)元素，则运行时将跨多个 cpu 组分发托管线程。|
+|`true`|如果计算机具有多个 CPU 组并且启用了[\<GCCpuGroup >](gccpugroup-element.md)元素，则运行时将跨多个 cpu 组分发托管线程。|
 
 ### <a name="child-elements"></a>子元素
 
@@ -56,7 +54,7 @@ ms.locfileid: "70252274"
 
 ## <a name="remarks"></a>备注
 
-如果计算机具有多个 CPU 组，则启用此元素会使运行时将托管线程分散到所有 CPU 组。 若要使用此功能，还必须启用[ \<GCCpuGroup >](gccpugroup-element.md)元素，该元素将垃圾回收扩展到所有 CPU 组，并在创建和平衡堆时考虑所有核心。 启用 GCCpuGroup [ >元素需要启用r>元素。\<](gccpugroup-element.md) [ \<](gcserver-element.md) 如果未启用这些元素，则`<Thread_UseAllCpuGroups>`启用元素不起作用。
+如果计算机具有多个 CPU 组，则启用此元素会使运行时将托管线程分散到所有 CPU 组。 若要使用此功能，还必须启用[\<GCCpuGroup >](gccpugroup-element.md)元素，该元素将垃圾回收扩展到所有 CPU 组，并在创建和平衡堆时考虑所有核心。 启用[\<GCCpuGroup >](gccpugroup-element.md)元素需要启用[\<r >](gcserver-element.md)元素。 如果未启用这些元素，则启用 `<Thread_UseAllCpuGroups>` 元素不起作用。
 
 ## <a name="example"></a>示例
 

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8d4ff73e-739b-40f6-9349-359fbc99c2f9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1085bec812d797d3fbe4ea63ef447d4c466149f2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 12c00ed009e0e57436a71aed256b07a58ba68a32
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965058"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138351"
 ---
 # <a name="cor_gc_stats-structure"></a>COR_GC_STATS 结构
-提供有关公共语言运行时 (CLR) 的垃圾回收机制的统计信息。  
+提供有关公共语言运行时（CLR）的垃圾回收机制的统计信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +42,7 @@ typedef struct _COR_GC_STATS {
 } COR_GC_STATS;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
@@ -53,23 +51,23 @@ typedef struct _COR_GC_STATS {
 |`GenCollectionsTaken`|指示为每个代执行的垃圾回收数。|  
 |`CommittedKBytes`|所有堆中提交的总千字节数。|  
 |`ReservedKBytes`|所有堆中保留的总千字节数。|  
-|`Gen0HeapSizeKBytes`|代零堆的大小 (以 kb 为单位)。|  
-|`Gen1HeapSizeKBytes`|第一代堆的大小 (以 kb 为单位)。|  
-|`Gen2HeapSizeKBytes`|第二代堆的大小 (以 kb 为单位)。|  
-|`LargeObjectHeapSizeKBytes`|大型对象堆的大小 (以 kb 为单位)。|  
-|`KBytesPromotedFromGen0`|从零代升级到第1代的对象的大小 (以 kb 为单位)。|  
-|`KBytesPromotedFromGen1`|从第一代升级到第二代的对象的大小 (以 kb 为单位)。|  
+|`Gen0HeapSizeKBytes`|代零堆的大小（以 kb 为单位）。|  
+|`Gen1HeapSizeKBytes`|第一代堆的大小（以 kb 为单位）。|  
+|`Gen2HeapSizeKBytes`|第二代堆的大小（以 kb 为单位）。|  
+|`LargeObjectHeapSizeKBytes`|大型对象堆的大小（以 kb 为单位）。|  
+|`KBytesPromotedFromGen0`|从零代升级到第1代的对象的大小（以 kb 为单位）。|  
+|`KBytesPromotedFromGen1`|从第一代升级到第二代的对象的大小（以 kb 为单位）。|  
   
 ## <a name="remarks"></a>备注  
- [ICLRGCManager:: GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md)方法要求`Flags`将`COR_GC_STATS`结构的字段设置为一个或多个[COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)枚举的值, 以指定要设置的统计信息。  
+ [ICLRGCManager：： GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md)方法要求将 `COR_GC_STATS` 结构的 `Flags` 字段设置为[COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)枚举的一个或多个值，以指定要设置的统计信息。  
   
- 下表将此结构提供的统计信息映射到两个[COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)枚举值`COR_GC_COUNTS`和`COR_GC_MEMORYUSAGE`。  
+ 下表将此结构提供的统计信息映射到两个[COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)枚举值，`COR_GC_COUNTS` 和 `COR_GC_MEMORYUSAGE`。  
   
 |由 COR_GC_COUNTS 指定|由 COR_GC_MEMORYUSAGE 指定|  
 |----------------------------------|---------------------------------------|  
 |`ExplicitGCCount`<br /><br /> `GenCollectionsTaken`|`CommittedKBytes`<br /><br /> `ReservedKBytes`<br /><br /> `Gen0HeapSizeKBytes`<br /><br /> `Gen1HeapSizeKBytes`<br /><br /> `Gen2HeapSizeKBytes`<br /><br /> `LargeObjectHeapSizeKBytes`<br /><br /> `KBytesPromotedFromGen0`<br /><br /> `KBytesPromotedFromGen1`|  
   
- 用法的示例如下所示:  
+ 用法的示例如下所示：  
   
 ```cpp  
 COR_GC_STATS GCStats;  
@@ -78,11 +76,11 @@ pCLRGCManager->GetStats(&GCStats);
 ```  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** GCHost.idl  
+ **标头：** GCHost .idl  
   
- **类库**作为资源包括在 Mscoree.dll 中  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

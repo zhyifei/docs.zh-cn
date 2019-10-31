@@ -5,21 +5,19 @@ f1_keywords:
 - Crst_DisableSpinWait
 helpviewer_keywords:
 - Crst_DisableSpinWait element
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8a91e21120ecebbe7af2fb93798bc68d274fa92c
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0683081183081e249b2a9c89e1a6a15f638fb339
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252716"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117641"
 ---
 # <a name="crst_disablespinwait-element"></a>\<Crst_DisableSpinWait > 元素
 
 指定是否在争用时禁用临界区等待。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
 &nbsp;&nbsp;&nbsp;&nbsp; **\<Crst_DisableSpinWait >**  
   
 ## <a name="syntax"></a>语法  
@@ -36,14 +34,14 @@ ms.locfileid: "70252716"
   
 |特性|描述|  
 |---------------|-----------------|  
-|**enabled**|指定禁用已争用的关键部分时，是否旋转等待。|  
+|**能够**|指定禁用已争用的关键部分时，是否旋转等待。|  
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |1|禁用在无法获取关键部分时等待自旋。|  
-|0|不要在无法获取关键节时禁用自旋等待。 这是默认值。|  
+|0|不要在无法获取关键节时禁用自旋等待。 此为默认值。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  

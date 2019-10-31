@@ -8,21 +8,19 @@ helpviewer_keywords:
 - alwaysFlowImpersonationPolicy element
 - <alwaysFlowImpersonationPolicy> element
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 164492eb1abc7329481f158963118b47d2c4aebc
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 06e91ea6989dcdf0b2a179e7d6ce79b8d9aaff03
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252864"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118342"
 ---
 # <a name="alwaysflowimpersonationpolicy-element"></a>\<alwaysFlowImpersonationPolicy > 元素
 指定 Windows 标识始终流经异步点，而不考虑执行模拟的方式。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<alwaysFlowImpersonationPolicy>** \  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<alwaysFlowImpersonationPolicy >** \  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,9 +40,9 @@ ms.locfileid: "70252864"
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
-|`false`|Windows 标识不流经异步点，除非模拟是通过托管方法（如） <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>执行的。 这是默认设置。|  
+|`false`|Windows 标识不流经异步点，除非模拟是通过托管方法（如 <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>）执行的。 这是默认设置。|  
 |`true`|无论模拟的执行方式如何，Windows 标识始终流经异步点。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -58,22 +56,22 @@ ms.locfileid: "70252864"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 在 .NET Framework 版本1.0 和1.1 中，Windows 标识不流经异步点。 在 .NET Framework 版本2.0 中，有一个<xref:System.Threading.ExecutionContext>对象包含当前正在执行的线程的相关信息，并在应用程序域中的异步点之间流动。 如果<xref:System.Security.Principal.WindowsIdentity>通过使用托管方法（如） <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>而不是通过其他方式（例如，平台调用到本机方法）来实现模拟，则还会将流作为流过异步点的信息的一部分。 此元素用于指定无论如何实现模拟，Windows 标识都将流经异步点。  
+ 在 .NET Framework 版本1.0 和1.1 中，Windows 标识不流经异步点。 在 .NET Framework 版本2.0 中，有一个 <xref:System.Threading.ExecutionContext> 对象，其中包含当前正在执行的线程的相关信息，并在应用程序域中的异步点之间流动。 <xref:System.Security.Principal.WindowsIdentity> 还将作为流过异步点的信息的一部分进行传递，前提是通过使用托管方法（如 <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>）实现模拟，而不是通过其他方式（例如，平台调用到本机方法）实现的。 此元素用于指定无论如何实现模拟，Windows 标识都将流经异步点。  
   
  可以通过两种其他方式更改此默认行为：  
   
 1. 在托管代码中，在每个线程的基础上。  
   
-     <xref:System.Threading.ExecutionContext>通过使用、或<xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType> <xref:System.Security.SecurityContext> 方法修改和设置，可以在每个线程上禁止显示流。<xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>  
+     您可以通过使用 <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>、<xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>或 <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> 方法修改 <xref:System.Threading.ExecutionContext> 和 <xref:System.Security.SecurityContext> 设置来禁用每个线程的流。  
   
 2. 在调用非托管承载接口以加载公共语言运行时（CLR）。  
   
-     如果使用非托管宿主接口（而不是简单的托管可执行文件）加载 CLR，则可以在调用[CorBindToRuntimeEx 函数](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)函数时指定特殊标志。 若要为整个进程启用兼容模式，请将`flags` [CorBindToRuntimeEx 函数](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)的参数设置为`STARTUP_ALWAYSFLOW_IMPERSONATION`。  
+     如果使用非托管宿主接口（而不是简单的托管可执行文件）加载 CLR，则可以在调用[CorBindToRuntimeEx 函数](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)函数时指定特殊标志。 若要为整个进程启用兼容模式，请将[CorBindToRuntimeEx 函数](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)的 `flags` 参数设置为 `STARTUP_ALWAYSFLOW_IMPERSONATION`。  
   
 ## <a name="configuration-file"></a>配置文件  
  在 .NET Framework 应用程序中，此元素只能在应用程序配置文件中使用。  
   
- 对于 ASP.NET 应用程序，可以在\<Windows 文件夹 > \Microsoft.NET\Framework\vx.x.xxxx 目录中找到的 aspnet .config 文件中配置模拟流。  
+ 对于 ASP.NET 应用程序，可以在 \<Windows 文件夹 > \Microsoft.NET\Framework\vx.x.xxxx 目录中找到的 aspnet .config 文件中配置模拟流。  
   
  默认情况下，ASP.NET 使用以下配置设置禁用 aspnet 文件中的模拟流：  
   

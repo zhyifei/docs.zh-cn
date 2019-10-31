@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 1588fe7b-c378-4f4b-9c4b-48647f1119cc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8597b68b75d2b5f77f68fc13c3fb78bfdae46178
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 661eb758e1651901bb56810640a68f0de0b4e851
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736289"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136481"
 ---
 # <a name="getcorrequiredversion-function"></a>GetCORRequiredVersion 函数
-获取所需的公共语言运行时 (CLR) 版本数量。  
+获取所需的公共语言运行时（CLR）版本号。  
   
- .NET Framework 4 中已弃用此函数。  
+ 此函数已在 .NET Framework 4 中弃用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,20 +38,20 @@ HRESULT GetCORRequiredVersion (
   
 ## <a name="parameters"></a>参数  
  `pbuffer`  
- [out]包含指定的版本号的字符串的缓冲区。  
+ 弄包含指定版本号的字符串的缓冲区。  
   
  `cchBuffer`  
- [in]以字节为单位的缓冲区的大小。  
+ 中缓冲区的大小（以字节为单位）。  
   
  `dwLength`  
- [out]在缓冲区中返回的字节数。  
+ 弄缓冲区中返回的字节数。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** MSCorEE.dll  
+ **库：** Mscoree.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

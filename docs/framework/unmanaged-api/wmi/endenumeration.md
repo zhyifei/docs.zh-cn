@@ -14,14 +14,12 @@ helpviewer_keywords:
 - EndEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0065dcd25430e102b965d5598c7e9a04c7857eb3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b9fd1f094c8fb56c94421a07437aa25a3549c487
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798812"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132047"
 ---
 # <a name="endenumeration-function"></a>EndEnumeration 函数
 
@@ -50,7 +48,7 @@ HRESULT EndEnumeration (
 
 此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 出现一般错误。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
@@ -59,13 +57,13 @@ HRESULT EndEnumeration (
 
 此函数包装对[IWbemClassObject：： beginenumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)方法的调用。
 
-不需要调用`EndEnumeration`函数，但建议使用它，因为它释放与枚举关联的资源。 但是，在启动下一个枚举或释放该对象时，将自动释放资源。
+不需要调用 `EndEnumeration` 函数，但建议使用，因为它释放与枚举关联的资源。 但是，在启动下一个枚举或释放该对象时，将自动释放资源。
 
 ## <a name="requirements"></a>要求
 
-**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。
 
-**标头：** WMINet_Utils.idl
+**标头：** WMINet_Utils .idl
 
 **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

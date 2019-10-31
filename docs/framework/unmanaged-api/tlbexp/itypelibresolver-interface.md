@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: edaaed1d-0d26-40f0-83f1-48efc0ded1c6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ebc885e000f902670dbf74d5ecc11fd956f8c81
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 28a750846407a2b035e42533765eb83a87bfce3c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798879"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104111"
 ---
 # <a name="itypelibresolver-interface"></a>ITypeLibResolver 接口
 提供[ResolveTypeLib 方法](resolvetypelib-method.md)，该方法解析类型库的文件路径。  
@@ -33,11 +31,11 @@ ms.locfileid: "70798879"
 |[ResolveTypeLib 方法](resolvetypelib-method.md)|通过返回类型库的完全限定路径来解析该类型库的简单名称。|  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** TlbRef，TlbRef  
   
- **类库**TlbRef.lib  
+ **库：** TlbRef  
   
  **.NET Framework 版本：** 4、3.5、3.0、2。0  
   

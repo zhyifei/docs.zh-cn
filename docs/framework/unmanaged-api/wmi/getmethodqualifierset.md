@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetMethodQualifierSet function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 86a7788736c3c12cfcfd405de88dfadfb14c1eca
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1a36200fd214d013a10ed21c22e1f652de2cbf17
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798525"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102576"
 ---
 # <a name="getmethodqualifierset-function"></a>GetMethodQualifierSet 函数
 
@@ -49,19 +47,19 @@ HRESULT GetMethodQualifierSet (
 中指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例的指针。
 
 `wszMethod`\
-中方法名称。 `wszMethod`必须指向有效`LPCWSTR`的。
+中方法名称。 `wszMethod` 必须指向有效 `LPCWSTR`。
 
 `ppQualSet`\
-弄接收接口指针，该指针允许访问方法的限定符。 `ppQualSet` 不能为 `null`。 如果发生错误，则不会返回新的对象，并且将指针设置为指向`null`。
+弄接收接口指针，该指针允许访问方法的限定符。 `ppQualSet` 不能为 `null`。 如果发生错误，则不会返回新的对象，并且将指针设置为指向 `null`。
 
 ## <a name="return-value"></a>返回值
 
 此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 指定的方法不存在。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数为`null`。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数 `null`。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
 
 ## <a name="remarks"></a>备注
@@ -74,9 +72,9 @@ HRESULT GetMethodQualifierSet (
 
 ## <a name="requirements"></a>要求
 
-**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。
 
-**标头：** WMINet_Utils.idl
+**标头：** WMINet_Utils .idl
 
 **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

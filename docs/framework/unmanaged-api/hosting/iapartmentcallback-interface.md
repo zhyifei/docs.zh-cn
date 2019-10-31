@@ -14,32 +14,30 @@ helpviewer_keywords:
 ms.assetid: 57c33c58-bf0b-4533-b569-e6a682d02cba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db933716cc0602ecda5da8a72726408ae4910179
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4424509c16dd1d9f83db117ae7343fa03995297e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985500"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126910"
 ---
 # <a name="iapartmentcallback-interface"></a>IApartmentCallback 接口
-提供用于在单元内使回调方法。 *单元*是个对象共享相同的线程访问要求进程内的逻辑容器。  
+提供用于在单元中进行回调的方法。 *单元*是进程内共享相同线程访问要求的对象的逻辑容器。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[DoCallback 方法](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-docallback-method.md)|执行单元内的指定的函数。|  
+|[DoCallback 方法](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-docallback-method.md)|在单元内执行指定的函数。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

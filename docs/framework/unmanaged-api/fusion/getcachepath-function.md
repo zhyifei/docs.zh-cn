@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: d977ad29-6619-42e1-b0be-bc25ea950e80
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1c28f32a4b24393483241bd2d7d6f550b8b65ba
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 13e1468ef5a48f18910c1f8082cdd7c4849da14a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796903"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132695"
 ---
 # <a name="getcachepath-function"></a>GetCachePath 函数
 使用指定的标志获取缓存的程序集的路径。  
@@ -46,10 +44,10 @@ HRESULT GetCachePath (
  弄指向路径的返回指针。  
   
  `pcchPath`  
- [in，out]请求的最大长度`pwzCachePath`，返回时为的实际`pwzCachePath`长度。  
+ [in，out]请求的 `pwzCachePath`的最大长度，返回时为 `pwzCachePath`的实际长度。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 合成。h  
   

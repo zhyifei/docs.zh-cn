@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 855f4199-b62d-40ce-998e-1eb4a1772142
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b577e915422814fbd0060fdda53b9e2bf7cd091a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1d75897e00c36bd5c484e837ee68e54443168e77
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760728"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131753"
 ---
 # <a name="icordebugstepperdeactivate-method"></a>ICorDebugStepper::Deactivate 方法
-导致此 ICorDebugStepper 取消它收到的最后一个步骤命令。  
+使此 ICorDebugStepper 取消其收到的最后一个步骤命令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,12 +32,12 @@ HRESULT Deactivate ();
 ```  
   
 ## <a name="remarks"></a>备注  
- 已取消最近收到的步骤命令后，可以发出新的单步执行命令。  
+ 在取消最近收到的步骤命令后，可能会发出新的单步执行命令。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4dc6c80d-b694-480b-a378-d5b18420ce17
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 45b6b8593331801dd237d0a730afbd5a6a714bbf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 786ff6895383fc18dcfedb26fab344f80f04c1df
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774176"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138210"
 ---
 # <a name="esymbolreadingpolicy-enumeration"></a>ESymbolReadingPolicy 枚举
-包含读取程序数据库 (PDB) 文件的策略设置的值。  
+包含设置用于读取程序数据库（PDB）文件的策略的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,23 +34,23 @@ typedef enum {
 } ESymbolReadingPolicy;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
 |`eSymbolReadingAlways`|指定调试器应始终读取 PDB 文件。|  
-|`eSymbolReadingFullTrustOnly`|指定调试器应读取与完全信任程序集相关联的 PDB 文件。|  
-|`eSymbolReadingNever`|指定调试器应永远不会读取 PDB 文件。|  
+|`eSymbolReadingFullTrustOnly`|指定调试器只应读取与完全信任程序集关联的 PDB 文件。|  
+|`eSymbolReadingNever`|指定调试器不应读取 PDB 文件。|  
   
 ## <a name="remarks"></a>备注  
- `ESymbolReadingPolicy`枚举用于[iclrdebugmanager:: Setsymbolreadingpolicy](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md)方法。  
+ `ESymbolReadingPolicy` 枚举与[ICLRDebugManager：： SetSymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md)方法一起使用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** MSCorEE.dll  
+ **库：** Mscoree.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

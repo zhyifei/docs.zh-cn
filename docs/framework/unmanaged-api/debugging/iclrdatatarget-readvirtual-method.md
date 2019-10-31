@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: da3769eb-1828-4aa1-b9ed-db4842136a43
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f7911d09c97c5401bff827ca5fb0a8766933778f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c26a2df3f73af5ebd1f8b735d7662bb23ba4228
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738667"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134164"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>ICLRDataTarget::ReadVirtual 方法
-从指定的虚拟内存地址数据读入指定的缓冲区。  
+将数据从指定的虚拟内存地址读入指定的缓冲区。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,21 +39,21 @@ HRESULT ReadVirtual (
   
 ## <a name="parameters"></a>参数  
  `address`  
- [in]存储的虚拟内存地址 CLRDATA_ADDRESS。  
+ 中存储虚拟内存地址的 CLRDATA_ADDRESS。  
   
  `buffer`  
- [out]指向接收数据的缓冲区的指针。  
+ 弄指向接收数据的缓冲区的指针。  
   
  `bytesRequested`  
- [in]缓冲区的长度。  
+ 中缓冲区的长度。  
   
  `bytesRead`  
- [out]指向返回的字节数的指针。  
+ 弄指向返回的字节数的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** ClrData.idl, ClrData.h  
+ **标头：** ClrData，ClrData  
   
  **库：** CorGuids.lib  
   

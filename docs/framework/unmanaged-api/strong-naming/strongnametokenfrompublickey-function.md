@@ -18,14 +18,12 @@ helpviewer_keywords:
 ms.assetid: 997e9e57-abb2-4217-bf20-1df621a75add
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 197504cbb0dd66c0cf43dee718026fc63e918d60
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b95c96efeb666f25d04118aa8cb9b0da3a2e7924
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798853"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104164"
 ---
 # <a name="strongnametokenfrompublickey-function"></a>StrongNameTokenFromPublicKey 函数
 获取表示公钥的令牌。 强名称标记是公钥的缩写形式。  
@@ -48,28 +46,28 @@ BOOLEANStrongNameTokenFromPublicKey (
  中[PublicKeyBlob](publickeyblob-structure.md)类型的结构，它包含用于生成强名称签名的密钥对的公共部分。  
   
  `cbPublicKeyBlob`  
- 中的`pbPublicKeyBlob`大小（以字节为单位）。  
+ 中`pbPublicKeyBlob`的大小（以字节为单位）。  
   
  `ppbStrongNameToken`  
- 弄与传入`pbPublicKeyBlob`的密钥对应的强名称标记。 公共语言运行时分配要在其中返回标记的内存。 调用方必须通过使用[StrongNameFreeBuffer](strongnamefreebuffer-function.md)函数来释放此内存。  
+ 弄与 `pbPublicKeyBlob`中传递的密钥对应的强名称令牌。 公共语言运行时分配要在其中返回标记的内存。 调用方必须通过使用[StrongNameFreeBuffer](strongnamefreebuffer-function.md)函数来释放此内存。  
   
  `pcbStrongNameToken`  
  弄返回的强名称标记的大小（以字节为单位）。  
   
 ## <a name="return-value"></a>返回值  
- `true`成功完成时;否则为`false`。  
+ 成功完成后 `true`;否则，`false`。  
   
 ## <a name="remarks"></a>备注  
  强名称标记是在元数据中存储密钥信息时用于节省空间的公钥的缩写形式。 具体而言，强名称令牌在程序集引用中用于引用依赖程序集。  
   
- 如果`StrongNameTokenFromPublicKey`函数未成功完成，请调用 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 函数来检索上次生成的错误。  
+ 如果 `StrongNameTokenFromPublicKey` 函数未成功完成，请调用[StrongNameErrorInfo](strongnameerrorinfo-function.md)函数以检索上次生成的错误。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Stackexchange.redis.strongname  
   
- **类库**作为资源包括在 mscoree.dll 中  
+ **库：** 作为资源包括在 mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 989762c4-3d15-4485-b8ee-69e0fa8ec895
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8ee602c85a2f591365d40984184780f70e8532bf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 29c9d9dde4776ef729c0bbae7b644171a265e3ec
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762701"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137464"
 ---
 # <a name="icordebugmodulegetassembly-method"></a>ICorDebugModule::GetAssembly 方法
 获取包含此模块的程序集。  
@@ -37,12 +35,12 @@ HRESULT GetAssembly(
   
 ## <a name="parameters"></a>参数  
  `ppAssembly`  
- [out]指向一个 icor 调试程序集对象，表示包含此模块的程序集的指针。  
+ 弄指向 ICorDebugAssembly 对象的指针，该对象表示包含此模块的程序集。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

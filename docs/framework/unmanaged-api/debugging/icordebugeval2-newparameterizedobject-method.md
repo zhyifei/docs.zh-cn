@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d705463-e640-4249-8036-4e8206d03cfe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aae5f4c79acd6f92d42c2890ba64fa66e1b4bfbe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d01ab0b6b5d489b2181056129e22661a50108a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753587"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084848"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>ICorDebugEval2::NewParameterizedObject 方法
-实例化一个新的参数化的类型对象并调用该对象的构造函数方法。  
+实例化一个新的参数化类型对象，并调用该对象的构造函数方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,27 +39,27 @@ HRESULT NewParameterizedObject (
   
 ## <a name="parameters"></a>参数  
  `pConstructor`  
- [in]指向一个 ICorDebugFunction 对象，表示要进行实例化的对象的构造函数的指针。  
+ 中指向 ICorDebugFunction 对象的指针，该对象表示要实例化的对象的构造函数。  
   
  `nTypeArgs`  
- [in]传递的类型参数的数目。  
+ 中传递的类型参数的数目。  
   
  `ppTypeArgs`  
- [in]一个指针数组，其中每个指向一个 ICorDebugType 对象，表示要实例化的对象的类型参数。  
+ 中指针的数组，其中每个都指向一个 ICorDebugType 对象，该对象表示要实例化的对象的类型参数。  
   
  `nArgs`  
- [in]传递给构造函数的参数数目。  
+ 中传递给构造函数的参数的数目。  
   
  `ppArgs`  
- [in]一个指针数组，其中每个指向一个 ICorDebugValue 对象，表示传递给构造函数的参数值。  
+ 中指针的数组，其中每个都指向表示传递给构造函数的参数值的 ICorDebugValue 对象。  
   
 ## <a name="remarks"></a>备注  
- 对象的构造函数可采用<xref:System.Type>参数。  
+ 对象的构造函数可能采用 <xref:System.Type> 参数。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

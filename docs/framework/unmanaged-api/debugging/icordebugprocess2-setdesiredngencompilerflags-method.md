@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 98320175-7c5e-4dbb-8683-86fa82e2641f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3582ebf2acee02d49aabafb03604c84249c4ce13
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9313fc58dec8099f42dbff07685ca14791fa324f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747372"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137165"
 ---
 # <a name="icordebugprocess2setdesiredngencompilerflags-method"></a>ICorDebugProcess2::SetDesiredNGENCompilerFlags 方法
-设置必须按顺序运行时便会将该映像加载到当前进程的预编译映像中嵌入的标志。  
+设置必须嵌入到预编译的映像中的标志，使运行时能够将该图像加载到当前进程。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,19 +35,19 @@ HRESULT SetDesiredNGENCompilerFlags (
   
 ## <a name="parameters"></a>参数  
  `pdwFlags`  
- [in]值为[CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)枚举，用于指定编译器标志用于选择正确的预编译的映像。  
+ 中[CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)枚举的一个值，该值指定用于选择正确预编译图像的编译器标志。  
   
 ## <a name="remarks"></a>备注  
- `SetDesiredNGENCompilerFlags`方法指定，以便在运行时将该图像加载到此过程必须预编译的图像中嵌入的标志。 此方法设置的标志仅用于选择正确的预编译的映像。 如果不存在任何此类映像，在运行时将加载 Microsoft 中间语言 (MSIL) 映像，并在实时 (JIT) 编译器。 在这种情况下，仍必须使用调试器[ICorDebugModule2::SetJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md)方法以根据需要进行 JIT 编译设置标志。  
+ `SetDesiredNGENCompilerFlags` 方法指定必须嵌入到预编译的映像中的标志，以使运行时将该图像加载到此进程中。 此方法设置的标志仅用于选择正确的预编译映像。 如果不存在这样的图像，则运行时将改为加载 Microsoft 中间语言（MSIL）映像和实时（JIT）编译器。 在这种情况下，调试器仍必须使用[ICorDebugModule2：： SetJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md)方法根据需要为 JIT 编译设置标志。  
   
- 如果已加载图像，但某些 JIT 编译，则必须执行对该映像 （这也是如此，如果映像包含泛型），由指定的编译器标志`SetDesiredNGENCompilerFlags`方法将应用到额外的 JIT 编译。  
+ 如果加载了某个映像，但对于该映像必须进行一些 JIT 编译（如果该映像包含泛型，则会出现这种情况），`SetDesiredNGENCompilerFlags` 方法指定的编译器标志将应用于额外的 JIT 编译。  
   
- `SetDesiredNGENCompilerFlags`必须在调用方法[icordebugmanagedcallback:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)回调。 尝试调用`SetDesiredNGENCompilerFlags`方法之后将失败。 此外，尝试设置标志，也可以定义在`CorDebugJITCompilerFlags`枚举或不合法给定进程将失败。  
+ 在[ICorDebugManagedCallback：： CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)回调过程中必须调用 `SetDesiredNGENCompilerFlags` 方法。 以后尝试调用 `SetDesiredNGENCompilerFlags` 方法将失败。 另外，尝试设置未在 `CorDebugJITCompilerFlags` 枚举中定义的标志，或者对给定进程不合法的标志将失败。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

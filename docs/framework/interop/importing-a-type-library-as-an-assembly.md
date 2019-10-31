@@ -15,14 +15,12 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db9571a2d07bcdf9830ef93cd07a5dae912f4677
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e1a21175bcabc72b86a328d4f73ecec37140c304
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051710"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107589"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>将类型库当作程序集导入
 
@@ -46,7 +44,7 @@ COM 类型库可以是扩展名名 .tlb 的独立文件，例如 Loanlib.tlb。 
 
 - Visual Studio
 
-  Visual Studio 将类型库中的 COM 类型自动转换为程序集中的元数据。 有关说明，请参阅[如何：添加对类型库的引用](how-to-add-references-to-type-libraries.md)中所述。
+  Visual Studio 将类型库中的 COM 类型自动转换为程序集中的元数据。 有关说明，请参阅[如何：添加对类型库的引用](how-to-add-references-to-type-libraries.md)。
 
 - [类型库导入程序 (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md)
 

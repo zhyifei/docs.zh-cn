@@ -2,14 +2,12 @@
 title: 常见数据类型（非托管 API 参考）
 ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5b0a27eae744fb22c87634aaf6a0274a9825d981
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 86f3886b96d0156ec2f0431369c7a54954cd4cad
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70776463"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132441"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>常见数据类型（非托管 API 参考）
 本主题列出了由 C/C++ `typedef` 语句定义的 .NET Framework 的非托管 API 所使用的简单数据类型。 这些数据类型通常是 C/C++ 基元数据类型的别名。 通常，这些数据类型的值是不透明的；即它们由特定的函数或方法返回，以便可以将它们传递给其他函数或方法，而无需修改。  
@@ -19,7 +17,7 @@ ms.locfileid: "70776463"
 |AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|应用程序域的标识符。|  
 |AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|程序集的标识符。|  
 |ClassID|`typedef UINT_PTR ClassID;`|corprof.h|托管类的标识符。|  
-|CLRDATA_ADDRESS|`typedef ULONG64 CLRDATA_ADDRESS;`|clrdata.h|64位的内存地址。|
+|CLRDATA_ADDRESS|`typedef ULONG64 CLRDATA_ADDRESS;`|clrdata|64位的内存地址。|
 |CLRDATA_ENUM|`typedef ULONG64 CLRDATA_ADDRESS;`|不可用|64位的内存地址。|
 |CONNID|`typedef DWORD CONNID;`|cordebug.h、mscoree.h|已连接到 Microsoft SQL Server 实例的线程的连接标识符。|  
 |ContextID|`typedef UINT_PTR ContextID;`|corprof.h|与特定托管线程关联的上下文的标识符。|  

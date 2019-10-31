@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 41e2d503-e1f1-407b-abe0-6a29adb3e0d1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c0dbdee35e6c73fbf2d73edd8a6c479e2f2882ea
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 284a74823b01305f8c6e025f70bb9209c8607b7b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764311"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137078"
 ---
 # <a name="icordebugvaluegettype-method"></a>ICorDebugValue::GetType 方法
-获取此"ICorDebugValue"对象的基元类型。  
+获取此 "ICorDebugValue" 对象的基元类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,17 +35,17 @@ HRESULT GetType (
   
 ## <a name="parameters"></a>参数  
  `pType`  
- [out]指向"CorElementType"枚举，指示值的类型的值的指针。  
+ 弄一个指针，指向 "CorElementType" 枚举的值，该值指示值的类型。  
   
 ## <a name="remarks"></a>备注  
- 如果对象是复杂的运行时类型，该类型可能检查通过适当的子类`ICorDebugValue`接口。 例如，"ICorDebugObjectValue"，该类继承自`ICorDebugValue`，表示复杂类型。  
+ 如果对象是复杂的运行时类型，则可以通过 `ICorDebugValue` 接口的相应子类检查该类型。 例如，从 `ICorDebugValue`继承的 "ICorDebugObjectValue" 表示复杂类型。  
   
- `GetType`并[icordebugobjectvalue:: Getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md)方法均返回一个值的类型有关的信息。 它们所取代的识别泛型[ICorDebugValue2::GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)方法。  
+ `GetType` 和[ICorDebugObjectValue：： GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md)方法都返回有关值类型的信息。 它们都是由识别泛型的[ICorDebugValue2：： GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)方法取代的。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

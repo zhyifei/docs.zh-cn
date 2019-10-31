@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7da621fc-e7d0-4c00-9439-5c93619d7414
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c614afee18824e1672b378dd468cb11c9c173d9f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aa76bf511ff1e1710a7ff86ad2ac97665969f2bf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764956"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140440"
 ---
 # <a name="icorpublishprocessenumappdomains-method"></a>ICorPublishProcess::EnumAppDomains 方法
-获取可枚举的应用程序域中引用此进程[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)。  
+获取此[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)引用的进程中的应用程序域的枚举器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,17 +35,17 @@ HRESULT EnumAppDomains (
   
 ## <a name="parameters"></a>参数  
  `ppEnum`  
- [out]指向的地址的指针[ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)允许遍历此过程中的应用程序域的集合的实例。  
+ 弄一个指针，指向允许在此进程中通过应用程序域集合进行迭代的[ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)实例的地址。  
   
 ## <a name="remarks"></a>备注  
- 应用程序域的列表取决于存在的应用程序域的快照时`EnumAppDomains`调用方法。 若要创建新的最新列表，可能会超过一次调用此方法。 此方法的后续调用不会影响现有列表。  
+ 应用程序域的列表基于在调用 `EnumAppDomains` 方法时存在的应用程序域的快照。 可以多次调用此方法来创建新的最新列表。 此方法的后续调用将不会影响现有列表。  
   
- 如果进程已终止，`EnumAppDomains`将因 CORDBG_E_PROCESS_TERMINATED 的 HRESULT 值。  
+ 如果进程已终止，`EnumAppDomains` 将失败，HRESULT 值为 CORDBG_E_PROCESS_TERMINATED。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorPub.idl CorPub.h  
+ **标头：** CorPub，CorPub  
   
  **库：** CorGuids.lib  
   

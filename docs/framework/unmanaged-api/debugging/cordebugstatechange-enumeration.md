@@ -10,14 +10,12 @@ api_type:
 ms.assetid: 1d4424ab-5143-4e50-a84a-ceeb4ddf3bba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 676489880cb30ca540cb78d70797dbf4eedf7395
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 239e3a82df0e6010278669f9f429bfad0d163319
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739594"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133722"
 ---
 # <a name="cordebugstatechange-enumeration"></a>“Cor调试状态已更改”枚举
 
@@ -33,7 +31,7 @@ typedef enum CorDebugStateChange
 } CorDebugStateChange;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 | 成员            | 描述                                                              |
 | ----------------- | ------------------------------------------------------------------------ |
@@ -42,13 +40,13 @@ typedef enum CorDebugStateChange
 
 ## <a name="remarks"></a>备注
 
- 成员`CorDebugStateChange`调试程序调用时，作为参数提供枚举`ProcessStateChanged`方法使用[ICorDebugProcess4::ProcessStateChanged](icordebugprocess4-processstatechanged-method.md)或[ICorDebugProcess6::进程状态已更改](icordebugprocess6-processstatechanged-method.md)
+ 当调试器使用[ICorDebugProcess4：:P rocessstatechanged](icordebugprocess4-processstatechanged-method.md)或[ICorDebugProcess6：:P rocessstatechanged](icordebugprocess6-processstatechanged-method.md)调用 `ProcessStateChanged` 方法时，`CorDebugStateChange` 枚举的成员作为参数提供。
 
 ## <a name="requirements"></a>要求
 
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
 
- **标头：** CorDebug.idl、 CorDebug.h
+ **标头**：CorDebug.idl、CorDebug.h
 
  **库：** CorGuids.lib
 

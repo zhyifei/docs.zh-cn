@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 57784a51-c76d-48f8-9392-584d0e1946d9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc442e0bcd8d392041284269e46821e0642d0891
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1d978cab0817af68356d95d635f8d2bfa3fd546a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765893"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096738"
 ---
 # <a name="icordebugnativeframesetip-method"></a>ICorDebugNativeFrame::SetIP 方法
-在本机代码中，指令指针设置为指定的偏移量位置。  
+将指令指针设置为本机代码中的指定偏移位置。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,19 +35,19 @@ HRESULT SetIP (
   
 ## <a name="parameters"></a>参数  
  `nOffset`  
- [in]本机代码中的偏移量的位置。  
+ 中本机代码中的偏移位置。  
   
 ## <a name="remarks"></a>备注  
- 调用`SetIP`立即使所有帧和当前线程的链都无效。 如果调试器需要后调用的帧信息`SetIP`，则必须执行新的堆栈跟踪。  
+ 对 `SetIP` 的调用会立即使当前线程的所有帧和链无效。 如果调试器在调用 `SetIP`之后需要帧信息，则它必须执行新的堆栈跟踪。  
   
- [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)将尝试在有效状态中保留的堆栈帧。 但是，即使在帧处于有效状态，就而言，运行时，仍可能有问题，例如未初始化的局部变量，依次类推。 调用方负责确保正在运行的程序的一致性。  
+ [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)将尝试保持堆栈帧处于有效状态。 但是，即使帧处于有效状态，在运行时也是如此，但仍存在一些问题，如未初始化的局部变量等。 调用方负责确保正在运行的程序的一致性。  
   
- 在 64 位平台上不能共移动指令指针`catch`或`finally`块。 如果`SetIP`称为若要使这种移动 64 位平台上的，它将返回一个 HRESULT，指示失败。  
+ 在64位平台上，无法将指令指针移出 `catch` 或 `finally` 块。 如果调用 `SetIP` 以便在64位平台上进行此类移动，则它将返回一个指示失败的 HRESULT。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

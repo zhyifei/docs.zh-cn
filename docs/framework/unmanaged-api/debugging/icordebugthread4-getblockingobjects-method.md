@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a7e6c54e-7be9-4e52-bbb4-95f52458e8e4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d83f9c0b187ad8b2955bc12ff168e0c4f26b909
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4d5582b7a3df16db58ea0ed001dcbffcdcaab79
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765226"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122451"
 ---
 # <a name="icordebugthread4getblockingobjects-method"></a>ICorDebugThread4::GetBlockingObjects 方法
-提供的有序的枚举[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)结构，并提供线程阻塞信息。  
+提供[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)结构的有序枚举，这些结构提供线程阻塞信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,23 +34,23 @@ HRESULT GetBlockingObjects (
   
 ## <a name="parameters"></a>参数  
  `ppBlockingObjectEnum`  
- [out]指向的有序枚举[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)结构。  
+ 弄指向[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)结构的有序枚举的指针。  
   
 ## <a name="remarks"></a>备注  
- 返回枚举中的第一个元素对应于阻止线程的第一个结构。 第二个元素对应于时阻止在第一天，并因此在运行异步过程调用 (APC) 时遇到的阻碍性项。  
+ 返回的枚举中的第一个元素对应于阻塞线程的第一个结构。 第二个元素对应于在第一个时运行异步过程调用（APC）时遇到的阻塞项，依此类推。  
   
- 枚举的有效期仅为当前同步状态的持续时间。  
+ 枚举仅在当前已同步状态的持续时间内有效。  
   
- 调试对象处于同步状态时，必须调用此方法。  
+ 当调试对象处于已同步状态时，必须调用此方法。  
   
- 如果`ppBlockingObjectEnum`不是有效的指针，则结果不可确定。  
+ 如果 `ppBlockingObjectEnum` 不是有效的指针，则结果是不确定的。  
   
- 如果线程被阻塞，并且不能确定该错误，该方法返回一个 HRESULT，指示故障;否则，它会返回 S_OK。  
+ 如果某个线程被阻止并且无法确定该错误，则该方法将返回一个指示失败的 HRESULT;否则，它会返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

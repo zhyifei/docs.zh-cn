@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2644f48b-db3c-429f-ae62-76f1c98a1af5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bd68df77adafb8b21e7684b28fe978722ca37e16
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3a895f432ed640cc35a492df0c91cece34893062
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736791"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122368"
 ---
 # <a name="icordebugtypegetclass-method"></a>ICorDebugType::GetClass 方法
-获取表示未实例化泛型类型 ICorDebugClass 接口指针。  
+获取一个接口指针，该指针指向表示未实例化的泛型类型的 ICorDebugClass。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,15 +35,15 @@ HRESULT GetClass (
   
 ## <a name="parameters"></a>参数  
  `ppClass`  
- [out]指向的地址的指针`ICorDebugClass`表示未实例化泛型类型的接口。  
+ 弄一个指针，指向表示非实例化泛型类型的 `ICorDebugClass` 接口的地址。  
   
 ## <a name="remarks"></a>备注  
- `GetClass` 可以仅在某些情况下调用。 调用[icordebugtype:: Gettype](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)然后才能调用`GetClass`。 如果`ICorDebugType::GetType`返回 ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE，CorElementType 值`GetClass`可以调用以获取泛型类型实例化的类型。  
+ 只能在某些条件下调用 `GetClass`。 调用[ICorDebugType：： GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) ，然后调用 `GetClass`。 如果 `ICorDebugType::GetType` 返回 ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE 的 CorElementType 值，则可以调用 `GetClass` 来获取泛型类型的未实例化类型。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 496c3add-f60b-4073-943f-d1bcf33330cb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17e96f56c57d896397489e27bcc072d8e7df05ec
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ffa1fa2f5e141728a56f1b598a1aae9602b2ac86
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796541"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108222"
 ---
 # <a name="iassemblynamesetproperty-method"></a>IAssemblyName::SetProperty 方法
 设置由指定的属性标识符引用的属性的值。  
@@ -42,13 +40,13 @@ HRESULT SetProperty (
  中将设置其值的属性的唯一标识符。  
   
  `pvProperty`  
- 中要将引用`PropertyId`的属性设置为的值。  
+ 中要将 `PropertyId`引用的属性设置为的值。  
   
  `cbProperty`  
- 中的`pvProperty`大小（以字节为单位）。  
+ 中`pvProperty`的大小（以字节为单位）。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 合成。h  
   

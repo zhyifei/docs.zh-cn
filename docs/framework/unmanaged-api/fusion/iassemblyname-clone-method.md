@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b345e08-5e16-4e3d-a044-4e19d0892943
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c71616d261f145574d580b68793ec91bb4ea3f42
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1236a574a85c01e3e1be5df9644bd04bbf0753ea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796639"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134406"
 ---
 # <a name="iassemblynameclone-method"></a>IAssemblyName::Clone 方法
 创建此[IAssemblyName](iassemblyname-interface.md)对象的浅表副本。  
@@ -37,10 +35,10 @@ HRESULT Clone (
   
 ## <a name="parameters"></a>参数  
  `pName`  
- 弄此`IAssemblyName`对象的返回副本。  
+ 弄此 `IAssemblyName` 对象的返回副本。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 合成。h  
   

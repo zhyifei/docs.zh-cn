@@ -14,14 +14,12 @@ helpviewer_keywords:
 - ExecNotificationQueryWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5cfe54c7c9b7ae707b2d3591afbd830bac171f0b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3d8a7683eef52a5e91bf7aa84d5aa7db7dbdac8d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798643"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130440"
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi 函数
 
@@ -58,13 +56,13 @@ HRESULT ExecNotificationQueryWmi (
 `lFlags`\
 中影响此函数的行为的以下两个标志的组合。 这些值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量。
 
-| 返回的常量 | 值  | 描述  |
+| 返回的常量 | “值”  | 描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | 标志导致半同步调用。 如果未设置此标志，则调用失败。 这是因为事件连续接收，这意味着用户必须轮询返回的枚举器。 无限期地阻止此调用会导致无法做到这一点。 |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | 函数返回一个只进枚举器。 通常，只进枚举器比传统枚举器更快，使用的内存更少，但它们不允许调用[克隆](clone.md)。 |
 
 `pCtx`\
-中通常，此值为`null`。 否则，它是指向提供请求事件的提供程序可以使用的[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)实例的指针。
+中通常，此值是 `null`的。 否则，它是指向提供请求事件的提供程序可以使用的[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)实例的指针。
 
 `ppEnum`\
 弄如果未发生错误，则接收指向枚举器的指针，该枚举器允许调用方检索查询结果集中的实例。 有关详细信息，请参阅 "[备注](#remarks)" 部分。
@@ -91,14 +89,14 @@ HRESULT ExecNotificationQueryWmi (
 
 此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | 用户无权查看函数可以返回的一个或多个类。 |
 | `WBEM_E_FAILED` | 0x80041001 | 发生了未指定的错误。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数无效。 |
 | `WBEM_E_INVALID_CLASS` | 0x80041010 | 查询指定了一个不存在的类。 |
 | `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | 请求传递事件的精度太多。 必须指定较大的轮询容差。 |
-| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | 查询请求的信息比 Windows 管理提供的信息多。 当`HRESULT`事件查询导致请求轮询命名空间中的所有对象时，将返回此项。 |
+| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | 查询请求的信息比 Windows 管理提供的信息多。 当事件查询导致请求轮询命名空间中的所有对象时，将返回此 `HRESULT`。 |
 | `WBEM_E_INVALID_QUERY` | 0x80041017 | 查询具有语法错误。 |
 | `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | 不支持请求的查询语言。 |
 | `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | 查询太复杂。 |
@@ -112,17 +110,17 @@ HRESULT ExecNotificationQueryWmi (
 
 此函数包装对[IWbemServices：： ExecNotificationQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execnotificationquery)方法的调用。
 
-函数返回后，调用方定期将返回`ppEnum`的对象传递给[下一个](next.md)函数，以查看是否有可用的事件。
+函数返回后，调用方定期将返回的 `ppEnum` 对象传递到[下一个](next.md)函数，以查看是否有可用的事件。
 
-可在 WQL 查询中使用的`AND`和`OR`关键字的数量有限制。 复杂查询中使用大量的 WQL 关键字可能会导致 WMI 以`WBEM_E_QUOTA_VIOLATION` `HRESULT`值的形式返回（或0x8004106c）错误代码。 WQL 关键字的限制取决于查询的复杂程度。
+可用于 WQL 查询的 `AND` 和 `OR` 关键字的数量有限制。 复杂查询中使用大量的 WQL 关键字可能导致 WMI 以 `HRESULT` 值的形式返回 `WBEM_E_QUOTA_VIOLATION` （或0x8004106c）错误代码。 WQL 关键字的限制取决于查询的复杂程度。
 
 如果函数调用失败，可以通过调用[GetErrorInfo](geterrorinfo.md)函数获取其他错误信息。
 
 ## <a name="requirements"></a>要求
 
-**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。
 
-**标头：** WMINet_Utils.idl
+**标头：** WMINet_Utils .idl
 
 **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

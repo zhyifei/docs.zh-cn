@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 72dd76ba-239e-45ac-9ded-318fb07d6c6d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 404cd5513a1cbd353faed41030a80ec2abef235f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eaba6b2166a82cfe825ffb98db515e24d4656462
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774207"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138235"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction 枚举
-描述主机可以为通过所述的操作设置的策略操作[EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)和所描述的失败[EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)。  
+描述主机可为[EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)描述的操作设置的策略操作以及[EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)描述的故障。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,30 +41,30 @@ typedef enum {
 } EPolicyAction;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`eAbortThread`|指定公共语言运行时 (CLR) 应正常中止线程。 包括正常中止： 尝试运行所有`finally`阻止任何`catch`块与线程中止和终结器。|  
-|`eDisableRuntime`|指定 CLR 应进入禁用的状态。 无需再在受影响的过程中，执行托管的代码和线程被阻止进入 CLR。|  
-|`eExitProcess`|指定 CLR 应尝试的进程，包括运行终结器和执行清理和日志记录操作正常退出。|  
-|`eFastExitProcess`|指定的 CLR 应立即退出进程，而无需运行终结器或执行清理和日志记录操作。 但是，将通知发送到调试器。|  
-|`eNoAction`|指定应执行任何操作。|  
-|`eRudeAbortThread`|指定 CLR 应执行强制中止线程。 只有那些`catch`并`finally`块标记为<xref:System.EnterpriseServices.MustRunInClientContextAttribute>执行。|  
-|`eRudeExitProcess`|指定 CLR 应退出进程，而无需运行终结器或日志记录操作。|  
-|`eRudeUnloadAppDomain`|指定 CLR 应执行的强制卸载<xref:System.AppDomain>。 唯一的终结器标记为<xref:System.EnterpriseServices.MustRunInClientContextAttribute>执行。 同样，所有线程与此<xref:System.AppDomain>其堆栈中接收`ThreadAbortException`，而只能`catch`并`finally`块标记为<xref:System.EnterpriseServices.MustRunInClientContextAttribute>执行。|  
-|`eThrowException`|指定应引发异常的条件，例如内存不足，缓冲区溢出等，适合。|  
-|`eUnloadAppDomain`|指定<xref:System.AppDomain>应卸载。 CLR 会试图运行终结器。|  
+|`eAbortThread`|指定公共语言运行时（CLR）应正常中止线程。 正常中止包括尝试运行所有 `finally` 块、与线程中止相关的任何 `catch` 块和终结器。|  
+|`eDisableRuntime`|指定 CLR 应进入禁用状态。 在受影响的进程中，不能再执行其他托管代码，并且阻止线程进入 CLR。|  
+|`eExitProcess`|指定 CLR 应尝试正常退出进程，包括运行终结器并执行清理和日志记录操作。|  
+|`eFastExitProcess`|指定 CLR 应立即退出进程，而无需运行终结器或执行清理和日志记录操作。 但是，通知将发送到调试器。|  
+|`eNoAction`|指定不执行任何操作。|  
+|`eRudeAbortThread`|指定 CLR 应执行强制的线程中止。 只会执行标记为 <xref:System.EnterpriseServices.MustRunInClientContextAttribute> 的 `catch` 和 `finally` 块。|  
+|`eRudeExitProcess`|指定 CLR 应退出进程，而不运行终结器或日志记录操作。|  
+|`eRudeUnloadAppDomain`|指定 CLR 应执行 <xref:System.AppDomain>的强制卸载。 仅执行标记为 <xref:System.EnterpriseServices.MustRunInClientContextAttribute> 的终结器。 同样，具有此 <xref:System.AppDomain> 在其堆栈中的所有线程都接收到 `ThreadAbortException`，但仅执行标记为 <xref:System.EnterpriseServices.MustRunInClientContextAttribute> 的 `catch` 和 `finally` 块。|  
+|`eThrowException`|指定应引发适用于条件的异常，例如内存不足、缓冲区溢出，等等。|  
+|`eUnloadAppDomain`|指定应卸载 <xref:System.AppDomain>。 CLR 尝试运行终结器。|  
   
 ## <a name="remarks"></a>备注  
- 主机设置的策略操作是通过调用的方法[ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)接口。 有关原始和正常中止的信息，请参阅[EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)枚举。  
+ 宿主通过调用[ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)接口的方法来设置策略操作。 有关 "强制" 和 "正常中止" 的信息，请参阅[EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)枚举。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** MSCorEE.dll  
+ **库：** Mscoree.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

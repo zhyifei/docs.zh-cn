@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ac5c1245-9acf-4271-9c08-3d9b7c670df3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c535d3d73b6d3d0165ea2d744ef625a16bd76cd4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4f3574e282d24fa11ffa2f85463f682c42098ae7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747829"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135041"
 ---
 # <a name="iclrstrongnamestrongnamekeygen-method"></a>ICLRStrongName::StrongNameKeyGen 方法
 创建新的公钥/私钥对，以便强名称使用。  
@@ -40,33 +38,33 @@ HRESULT StrongNameKeyGen (
   
 ## <a name="parameters"></a>参数  
  `wszKeyContainer`  
- [in]请求的密钥容器名称。 `wszKeyContainer` 必须非空字符串或 null 可生成一个临时名称。  
+ 中请求的密钥容器名称。 `wszKeyContainer` 必须为非空字符串或 null，才能生成临时名称。  
   
  `dwFlags`  
- [in]一个值，指定是否保留注册密钥。 支持以下值：  
+ 中一个值，该值指定是否保留注册的密钥。 支持以下值：  
   
-- 0x00000000-时使用`wszKeyContainer`为 null 以生成一个临时密钥容器名称。  
+- 0x00000000-在 `wszKeyContainer` 为 null 时使用，以生成临时密钥容器名称。  
   
-- 0x00000001 (`SN_LEAVE_KEY`)-指定应保持注册密钥。  
+- 0x00000001 （`SN_LEAVE_KEY`）-指定密钥应为 "已注册"。  
   
  `ppbKeyBlob`  
- [out]返回的公共/专用密钥对。  
+ 弄返回的公钥/私钥对。  
   
  `pcbKeyBlob`  
- [out]大小，以字节为单位的`ppbKeyBlob`。  
+ 弄`ppbKeyBlob`的大小（以字节为单位）。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK` 如果成功，则完成的方法否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。  
+ 如果方法已成功完成，则 `S_OK`;否则，表示失败的 HRESULT 值（请参阅列表的[常见 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
   
 ## <a name="remarks"></a>备注  
- [Iclrstrongname:: Strongnamekeygen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)方法创建一个 1024年位密钥。 正在检索密钥后，应调用[iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法，以释放已分配的内存。  
+ [ICLRStrongName：： StrongNameKeyGen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)方法创建1024位键。 检索到密钥后，应调用[ICLRStrongName：： StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法来释放已分配的内存。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MetaHost.h  
+ **标头：** MetaHost  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

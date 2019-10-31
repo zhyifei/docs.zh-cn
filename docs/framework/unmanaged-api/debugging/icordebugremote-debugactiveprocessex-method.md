@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b0df5c5d-9a2e-47bf-894c-6f8a9fe24a1f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 13371d15c8b29f9ef93cc4af87acf85029404644
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 83cc4eadca7c337c06c5fbf9f0e74306c2b9cb99
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744763"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131277"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>ICorDebugRemote::DebugActiveProcessEx 方法
-将启动在调试器下远程计算机上的进程。  
+在调试器下的远程计算机上启动进程。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,16 +38,16 @@ HRESULT DebugActiveProcessEx (
   
 ## <a name="parameters"></a>参数  
  `pRemoteTarget`  
- [in]指向[ICorDebugRemoteTarget 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)。 此参数用于确定在其运行进程的计算机。  
+ 中指向[ICorDebugRemoteTarget 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)的指针。 此参数用于确定正在运行进程的计算机。  
   
  `id`  
- [in]调试程序要附加的进程 ID。  
+ 中调试器要附加到的进程的 ID。  
   
  `win32Attach`  
- [in]`true`如果调试程序应将用作 Win32 调试器进程和调度的非托管的回叫; 否则为`false`。  
+ [in] 如果调试器应该表现为进程的 Win32 调试器并调度非托管回调，则 `true`;否则，`false`。  
   
  `ppProcess`  
- [out]指向表示调试器已附加到进程"ICorDebugProcess"对象的地址的指针。  
+ 弄一个指向 "ICorDebugProcess" 对象地址的指针，该对象表示调试器已附加到的进程。  
   
 ## <a name="return-value"></a>返回值  
  S_OK  
@@ -59,16 +57,16 @@ HRESULT DebugActiveProcessEx (
  无法附加到远程计算机上的进程。  
   
 ## <a name="remarks"></a>备注  
- Silverlight 不支持混合模式调试。  
+ Silverlight 中不支持混合模式调试。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** 4.5，4，3.5 SP1  
+ **.NET Framework 版本：** 4.5、4、3.5 SP1  
   
 ## <a name="see-also"></a>请参阅
 

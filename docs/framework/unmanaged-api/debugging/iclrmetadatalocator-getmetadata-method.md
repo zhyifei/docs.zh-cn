@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 704a8893-ac56-43b4-90ea-715f38ccb40e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 235b93f4176858372a83331730ddea8b97179cc8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f28a4b4acd9d6050d33b9824aa49a9b9041b59b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738374"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111247"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>ICLRMetadataLocator::GetMetadata 方法
-调用由公共语言运行时 (CLR) 数据访问服务检索的图像的元数据。  
+由公共语言运行时（CLR）数据访问服务调用以检索图像的元数据。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,39 +44,39 @@ HRESULT GetMetadata(
   
 ## <a name="parameters"></a>参数  
  `imagePath`  
- [in]一个字符串，指定图像文件的路径。  
+ 中一个字符串，指定图像文件的路径。  
   
  `imageTimestamp`  
- [in]图像文件的时间戳。  
+ 中图像文件的时间戳。  
   
  `imageSize`  
- [in]图像文件的大小。  
+ 中图像文件的大小。  
   
  `mvid`  
- [in]图像的全局唯一标识符。  
+ 中图像的全局唯一标识符。  
   
  `mdRva`  
- [in]相对虚拟地址 (RVA) 的元数据。 此地址是相对于映像的基址。  
+ 中元数据的相对虚拟地址（RVA）。 地址相对于映像基址。  
   
  `flags`  
- [in]保留供将来使用。  
+ 中保留供将来使用。  
   
  `bufferSize`  
- [in]要在其中放置元数据的缓冲区的大小。  
+ 中要在其中放置元数据的缓冲区的大小。  
   
  `buffer`  
- [out]要在其中放置元数据缓冲区。  
+ 弄要在其中放置元数据的缓冲区。  
   
  `dataSize`  
- [out]返回的元数据的大小。  
+ 弄返回的元数据的大小。  
   
 ## <a name="remarks"></a>备注  
  此方法由调试应用程序的编写器实现。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** ClrData.idl, ClrData.h  
+ **标头：** ClrData，ClrData  
   
  **库：** CorGuids.lib  
   

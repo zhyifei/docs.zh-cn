@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45efb8ba-c4de-4109-945f-e734d376b43c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 973f975885bbbf5cbed74adef7b9f4f423c42583
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9476bcc9706e89fd3d7e0abc14031f70a0aa0ad0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753651"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084837"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>ICorDebugEval2::NewParameterizedArray 方法
-分配的指定的元素类型和维度的一个新数组。  
+分配指定元素类型和维度的新数组。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,24 +38,24 @@ HRESULT NewParameterizedArray(
   
 ## <a name="parameters"></a>参数  
  `pElementType`  
- [in]指向一个 ICorDebugType 对象，表示存储在数组中元素的类型的指针。  
+ 中指向 ICorDebugType 对象的指针，该对象表示存储在数组中的元素的类型。  
   
  `rank`  
- [in]数组的维度数。 在.NET Framework 2.0 版中，此值必须为 1。  
+ 中数组的维数。 在 .NET Framework 版本2.0 中，此值必须为1。  
   
  `dims`  
- [in]以字节为单位，每个维度的数组大小。  
+ 中数组每个维度的大小（以字节为单位）。  
   
  `lowBounds`  
- [in] 可选。 数组的每个维度的下限。 如果省略此值，下限为零则假定为每个维度。  
+ [in] 可选。 数组的每个维度的下限。 如果省略此值，则假定每个维度的下限为零。  
   
 ## <a name="remarks"></a>备注  
- 数组的元素可能是泛型类型的实例。 始终在线程当前运行的应用程序域中创建数组。 在.NET Framework 2.0 中，值`rank`必须为 1。  
+ 数组的元素可以是泛型类型的实例。 始终在当前运行线程的应用程序域中创建数组。 在 .NET Framework 2.0 中，`rank` 的值必须为1。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

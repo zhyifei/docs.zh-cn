@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7105a6c8-6e4e-48de-ac3d-74ac75e5de2e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95b4e1762e5f7701bfce2edc4f7bd4f8cecb28b3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ebbbdf02837cb1257ec4756c9d67f5a1ac0136fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747407"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131182"
 ---
 # <a name="ecustomdumpitemkind-enumeration"></a>ECustomDumpItemKind 枚举
-保留供将来的扩展[CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)结构。  
+保留以供将来扩展[CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)结构。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,18 +32,18 @@ typedef enum {
 } ECustomDumpItemKind;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
 |`DUMP_ITEM_None`|留待将来使用。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** MSCorEE.dll  
+ **库：** Mscoree.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

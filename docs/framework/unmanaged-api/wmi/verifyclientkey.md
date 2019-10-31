@@ -14,14 +14,12 @@ helpviewer_keywords:
 - VerifyClientKey function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b674e959ab93cf76b84e2af41e875a50b7d115f4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0a0680651eb192e2798ede00048599c5130e63f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798188"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107364"
 ---
 # <a name="verifyclientkey-function"></a>VerifyClientKey 函数
 确保客户端密钥具有正确的安全性。  
@@ -36,14 +34,14 @@ LONG VerifyClientKey();
 
 ## <a name="return-value"></a>返回值
 
-如果该函数成功，则返回值为`ERROR_SUCCESS` （0）。
+如果该函数成功，则返回值为 `ERROR_SUCCESS` （0）。
 
 如果函数失败，则返回值为*winerror.h*中定义的非零错误代码。
 
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标头：** WMINet_Utils.def  
+ **标头：** WMINet_Utils  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66a89acf-8c32-44c0-8787-960c99c7b3ec
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2710d14d6e73879fd17a6b58659463ea205f2384
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 80979f0424469bb1d4771ad6507bb8c9d5364ab4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795376"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108607"
 ---
 # <a name="createhistoryreader-function"></a>CreateHistoryReader 函数
 为指定的文件创建历史记录读取器。  
@@ -48,12 +46,12 @@ HRESULT CreateHistoryReader (
 |返回代码|描述|  
 |-----------------|-----------------|  
 |S_OK|指示该方法已成功完成。|  
-|E_INVALIDARG|`wzFilePath`指示或`ppHistoryReader`设置为空引用。|  
+|E_INVALIDARG|指示 `wzFilePath` 或 `ppHistoryReader` 设置为空引用。|  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **类库**合成 .dll  
+ **库：** 合成 .dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -13,17 +13,15 @@ helpviewer_keywords:
 - IsStarted method [.NET Framework hosting]
 - ICLRRuntimeInfo::IsStarted method [.NET Framework hosting]
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5b064f0b1cec07f29058300041711285bde66697
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 34590744407b25d7d53c06c452fff5bac2a95246
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748399"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136388"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>ICLRRuntimeInfo::IsStarted 方法
-指示是否已启动运行时 (即，是否[iclrruntimehost:: Start 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)已调用并已成功)。  
+指示运行时是否已启动（即是否已调用[ICLRRuntimeHost：： Start 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)并且已成功）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,10 +33,10 @@ HRESULT IsStarted(
   
 ## <a name="parameters"></a>参数  
  `pbStarted`  
- [out]`true`如果此运行时已启动; 否则为`false`。  
+ [out] 如果此运行时已启动，则 `true`;否则，`false`。  
   
  `pdwStartupFlags`  
- [out]返回用来启动运行时的标志。  
+ 弄返回用于启动运行时的标志。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
@@ -46,17 +44,17 @@ HRESULT IsStarted(
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|该方法已成功完成。|  
-|E_NOTIMPL|公共语言运行时 (CLR) 版本是.NET Framework 4 中的 CLR 版本。|  
+|E_NOTIMPL|公共语言运行时（CLR）的版本早于 .NET Framework 4 的 CLR 版本。|  
   
 ## <a name="remarks"></a>备注  
- 此方法并不适用于 CLR 版本早于.NET Framework 4 中的 CLR 版本。  
+ 此方法不适用于 CLR 版本早于 .NET Framework 4 的 CLR 版本。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MetaHost.h  
+ **标头：** MetaHost  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc9a0a6c-d592-4fb7-86ed-62684da3b0e1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 45a409bda8861701e68d3ea1a956a4c35ce88ddd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ccb5cda11a2466496a4b3981e8185cbb7130f66f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738785"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122900"
 ---
 # <a name="iclrdatatargetgetcurrentthreadid-method"></a>ICLRDataTarget::GetCurrentThreadID 方法
-获取当前线程的操作系统识别符。  
+获取当前线程的操作系统标识符。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,15 +35,15 @@ HRESULT GetCurrentThreadID (
   
 ## <a name="parameters"></a>参数  
  `threadID`  
- [out]指向目标进程的当前线程的操作系统识别符的指针。  
+ 弄指向目标进程的当前线程的操作系统标识符的指针。  
   
 ## <a name="remarks"></a>备注  
- 如果目标进程中，没有当前线程`GetCurrentThreadID`方法可能会失败。  
+ 如果目标进程没有当前线程，`GetCurrentThreadID` 方法可能会失败。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** ClrData.idl, ClrData.h  
+ **标头：** ClrData，ClrData  
   
  **库：** CorGuids.lib  
   

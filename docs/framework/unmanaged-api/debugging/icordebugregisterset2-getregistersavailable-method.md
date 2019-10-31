@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3ed344b-0d3a-44e8-8000-2a97e0805a2c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5d4ab49aaccd77fac497bd86413915e82c99ed3e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d0b6960a24e246c7a538e8ffc59fa380a4b8e2a7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744910"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131372"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable 方法
-获取提供的可用寄存器位图的字节数组。  
+获取提供可用寄存器的位图的字节数组。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,23 +39,23 @@ HRESULT GetRegistersAvailable (
  [in] `availableRegChunks` 数组的大小。  
   
  `availableRegChunks`  
- [out]一个字节数组，其中每位对应于寄存器。 如果可用的寄存器，寄存器的对应位设置。  
+ 弄字节数组，其中每个位对应于寄存器。 如果寄存器可用，则会设置寄存器的相应位。  
   
 ## <a name="remarks"></a>备注  
- CorDebugRegister 枚举的值指定不同的微处理器的寄存器。 每个值的上限五位均为中的索引`availableRegChunks`的字节数组。 每个值的三个低位标识内的索引的字节的位位置。 给定`CorDebugRegister`值，该值指定特定寄存器中，掩码中的寄存器的位置确定，如下所示：  
+ CorDebugRegister 枚举的值指定不同微处理器的寄存器。 每个值的上限为 `availableRegChunks` 字节数组中的索引。 每个值的下三位标识索引字节内的位位置。 给定一个指定特定寄存器的 `CorDebugRegister` 值时，将按如下所示确定此寄存器在掩码中的位置：  
   
-1. 提取访问中的正确字节所需的索引`availableRegChunks`数组：  
+1. 提取访问 `availableRegChunks` 数组中正确字节所需的索引：  
   
-     `CorDebugRegister` 值 >> 3  
+     `CorDebugRegister` 值 > > 3  
   
-2. 提取其中位零是最低有效位的位位置内的索引的字节：  
+2. 提取索引字节内的位位置，其中位零是最小有效位：  
   
-     `CorDebugRegister` 值和 7  
+     `CorDebugRegister` 值 & 7  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

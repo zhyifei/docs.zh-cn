@@ -2,14 +2,12 @@
 title: ICorDebugLoadedModule 接口
 ms.date: 03/30/2017
 ms.assetid: 34be6369-2e75-4a95-a538-3b29ac97cf6d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a9da6aba61382381fc25fe70615976cd0e744ee1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9fe36497844b9c33cefcf8c63711941196847525
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910009"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122618"
 ---
 # <a name="icordebugloadedmodule-interface"></a>ICorDebugLoadedModule 接口
 提供有关已加载模块的信息。  
@@ -29,11 +27,11 @@ ms.locfileid: "69910009"
 > 此接口仅适用于 .NET Native。 如果在 .NET Native 外为 ICorDebug 方案实现此接口，则公共语言运行时将忽略此接口。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl, Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 12ed0fff-7f0e-4d7a-bb70-b3376371f36c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9fb566ff2e5e2b0bcb096cead243ed65a904a914
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8377ead42c752d8ebe9813d9e00662b94339f8a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736973"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137246"
 ---
 # <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a>ICorDebugProcess2::ClearUnmanagedBreakpoint 方法
-移除先前设置在给定地址断点。  
+删除给定地址上先前设置的断点。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,19 +35,19 @@ HRESULT ClearUnmanagedBreakpoint (
   
 ## <a name="parameters"></a>参数  
  `address`  
- [in]一个`CORDB_ADDRESS`值，该值指定在其中设置断点的地址。  
+ 中一个 `CORDB_ADDRESS` 值，该值指定设置断点的地址。  
   
 ## <a name="remarks"></a>备注  
- 指定的断点将之前尚未设置到的早期调用[ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)。  
+ 之前调用[ICorDebugProcess2：： SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)之前已设置了指定的断点。  
   
- `ClearUnmanagedBreakpoint`正在调试的进程正在运行时，可以调用方法。  
+ 当正在调试的进程正在运行时，可以调用 `ClearUnmanagedBreakpoint` 方法。  
   
- `ClearUnmanagedBreakpoint`方法返回了失败代码，如果仅托管模式附加调试器，或指定地址处不存在任何断点。  
+ 如果在仅限托管模式下附加调试器，则 `ClearUnmanagedBreakpoint` 方法返回失败代码; 如果指定地址处不存在任何断点，则返回。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

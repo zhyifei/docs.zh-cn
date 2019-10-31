@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7d78a301-82b3-43b2-9d65-3cda3285ae97
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 621c5b1e32a1a21c2b0b883249c3b65fadceb5f2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: efc9de050e34867c14f8e85e091e2b959c30f213
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632352"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122587"
 ---
 # <a name="icordebugmanagedcallbackbreak-method"></a>ICorDebugManagedCallback::Break 方法
 
-通知调试器时<xref:System.Reflection.Emit.OpCodes.Break>执行代码流中的指令。
+当执行代码流中的 <xref:System.Reflection.Emit.OpCodes.Break> 指令时，通知调试器。
 
 ## <a name="syntax"></a>语法
 
@@ -40,20 +38,20 @@ HRESULT Break (
 ## <a name="parameters"></a>参数
 
 `pAppDomain`\
-[in]指向一个 ICorDebugAppDomain 对象，表示包含 break 指令的应用程序域的指针。
+中指向 ICorDebugAppDomain 对象的指针，该对象表示包含中断指令的应用程序域。
 
 `thread`\
-[in]指向表示，包含 break 指令的线程的 ICorDebugThread 对象的指针。
+中指向 ICorDebugThread 对象的指针，该对象表示包含中断指令的线程。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
 
-**标头：** CorDebug.idl、 CorDebug.h
+**标头**：CorDebug.idl、CorDebug.h
 
 **库：** CorGuids.lib
 
-**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>请参阅
 

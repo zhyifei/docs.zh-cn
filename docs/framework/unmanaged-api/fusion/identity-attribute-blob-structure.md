@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: af14ae5f-d226-47dd-ba90-8fc6e6605d4d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58ee2764d2e2c4c4e21effa3e0c3551a2e145f40
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 212a9f46dd33f98abd31e7a78c7a830cb3386cb6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796502"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108012"
 ---
 # <a name="identity_attribute_blob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 结构
-包含有关程序集中单个属性的信息，其中包含三个`DWORD`。 每`DWORD`个都是`CurrentIntoBuffer`由[IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)接口的方法生成的字符缓冲区的偏移量。  
+包含有关程序集中单个属性的信息，由三个 `DWORD`组成。 每个 `DWORD` 都是由[IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)接口的 `CurrentIntoBuffer` 方法生成的字符缓冲区的偏移量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,7 +36,7 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 }   IDENTITY_ATTRIBUTE_BLOB;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
@@ -47,15 +45,15 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 |`ofsValue`|字符缓冲区中的第三个偏移量。 此位置标记属性值的开头。|  
   
 ## <a name="sample"></a>示例  
- 下面的示例演示了几个基本步骤，这些步骤最终会`IDENTITY_ATTRIBUTE_BLOB`生成一个填充的结构：  
+ 下面的示例演示了几个基本步骤，这些步骤最终会生成 `IDENTITY_ATTRIBUTE_BLOB` 结构：  
   
 1. 获取程序集的[IReferenceIdentity](ireferenceidentity-interface.md) 。  
   
-2. 调用 `IReferenceIdentity::EnumAttributes` 方法，并获取 [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)。  
+2. 调用 `IReferenceIdentity::EnumAttributes` 方法，并获取[IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)。  
   
-3. 创建字符缓冲区，并将其转换为`IDENTITY_ATTRIBUTE_BLOB`结构。  
+3. 创建一个字符缓冲区，并将其转换为 `IDENTITY_ATTRIBUTE_BLOB` 结构。  
   
-4. 调用接口`IEnumIDENTITY_ATTRIBUTE`的方法。 `CurrentIntoBuffer` 此方法将属性`Namespace`、 `Name`和`Value`复制到字符缓冲区。 这三个字符串的偏移量在`IDENTITY_ATTRIBUTE_BLOB`结构中将变为可用。  
+4. 调用 `IEnumIDENTITY_ATTRIBUTE` 接口的 `CurrentIntoBuffer` 方法。 此方法会将属性 `Namespace`、`Name`和 `Value` 复制到字符缓冲区。 这三个字符串的偏移量在 `IDENTITY_ATTRIBUTE_BLOB` 结构中将变为可用。  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -236,7 +234,7 @@ Exit:
  Version = 2.0.0。0  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 隔离。h  
   

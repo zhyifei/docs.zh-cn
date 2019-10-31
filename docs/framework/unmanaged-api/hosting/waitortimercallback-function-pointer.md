@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 1fec4aef-0a06-4df0-bae7-d31a9ef9603d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65af5303468904ee40da4d567381782af70bfb38
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db6a20dee21b6c8bbd55fa9b52a159a00fe310d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776496"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092035"
 ---
 # <a name="waitortimercallback-function-pointer"></a>WAITORTIMERCALLBACK 函数指针
-指向通知主机等待句柄的函数 (<xref:System.Threading.WaitHandle>) 已发出信号或操作已超时。  
+指向一个函数，该函数通知宿主等待句柄（<xref:System.Threading.WaitHandle>）已发出信号或超时。  
   
- .NET Framework 4 中已弃用此函数指针。  
+ 此函数指针在 .NET Framework 4 中已弃用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,20 +37,20 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
   
 ## <a name="parameters"></a>参数  
  `lpParameter`  
- [in]指向包含由主机定义的信息的对象的指针。  
+ 中指向对象的指针，该对象包含由宿主定义的信息。  
   
  `TimerOrWaitFired`  
- [in]`true`如果等待句柄已超时，或`false`如果其终止。  
+ [in] `true` 等待句柄超时，则为; 如果等待句柄已终止，则为 `false`。  
   
 ## <a name="remarks"></a>备注  
- 该函数`WAITORTIMERCALLBACK`点是回调函数，必须由主机应用程序的编写器实现。  
+ `WAITORTIMERCALLBACK` 点的函数是回调函数，并且必须由宿主应用程序的编写器实现。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** MSCorWks.dll  
+ **库：** Mscorwks.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

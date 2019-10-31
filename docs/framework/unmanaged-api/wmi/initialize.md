@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Initialize function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1bc3688b30180bdcde0a87027955a789de749f90
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b1f96b6285911b12d72ac136127d736b75d44023
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798437"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127396"
 ---
 # <a name="initialize-function"></a>Initialize 函数
 
@@ -41,17 +39,17 @@ HRESULT Initialize(
 
 `bAllowIManagementObjectQI`
 
-中`true`表示允许对 WMI 对象上的 QueryInterface 的调用;`false`否则为。
+[in] `true` 以指示允许调用 WMI 对象上的 QueryInterface;否则 `false`。
 
 ## <a name="return-value"></a>返回值
 
-函数始终返回`S_OK` （0）。
+函数始终返回 `S_OK` （0）。
 
 ## <a name="requirements"></a>要求
 
-**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。
 
-**标头：** WMINet_Utils.def
+**标头：** WMINet_Utils
 
 **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

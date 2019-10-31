@@ -1,17 +1,15 @@
 ---
-title: ICorDebugSymbolProvider2::GetGenericDictionaryInfo 方法
+title: ICorDebugSymbolProvider2：： GetGenericDictionaryInfo 方法
 ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65407fca73971546725d9457d25bf1270d2001e2
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: c9f7206cac54d64c28eb50d81fea00a6f3c494d4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662537"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133635"
 ---
-# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2::GetGenericDictionaryInfo 方法
+# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2：： GetGenericDictionaryInfo 方法
 
 检索泛型字典映射。
 
@@ -26,7 +24,7 @@ HRESULT GetGenericDictionaryInfo(
 ## <a name="parameters"></a>参数
 
 `ppMemoryBuffer`\
-[out]指向的地址的指针[ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)对象，其中包含泛型字典映射。 有关详细信息，请参阅备注部分。
+弄指向包含泛型字典映射的[ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)对象地址的指针。 有关详细信息，请参阅备注部分。
 
 ## <a name="remarks"></a>备注
 
@@ -35,9 +33,9 @@ HRESULT GetGenericDictionaryInfo(
 
 该映射由两个顶级部分组成：
 
-- 一个[directory](#Directory)包含在此映射中包括的所有字典的相对虚拟地址 (RVA)。
+- 一个[目录](#Directory)，其中包含此映射中包含的所有字典的相对虚拟地址（RVA）。
 
-- 一个字节对齐[堆](#Heap)包含的对象实例化信息。 在最后一个目录输入后立即开始。
+- 一个字节对齐的[堆](#Heap)，其中包含对象实例化信息。 在最后一个目录输入后立即开始。
 
 <a name="Directory"></a>
 
@@ -47,13 +45,13 @@ HRESULT GetGenericDictionaryInfo(
 
 泛型字典映射的目录部分具有以下结构：
 
-- 前 4 个字节包含字典条目的数量（也就是说，字典中的相对虚拟地址数）。 我们将把此值作为*N*。如果设置了高位，则按相对虚拟地址以升序对条目排序。
+- 前 4 个字节包含字典条目的数量（也就是说，字典中的相对虚拟地址数）。 我们将此值称为*N*。如果设置了高位，则按相对虚拟地址（升序）对项进行排序。
 
-- *N*的目录项，请执行。 每个条目由 8 个字节（两个 4 字节段）构成：
+- *N*目录项跟随。 每个条目由 8 个字节（两个 4 字节段）构成：
 
-  - 字节 0-3:RVA;字典的相对虚拟地址。
+  - 字节 0-3：RVA；字典的相对虚拟地址。
 
-  - 字节 4-7:偏移量;相对于堆开始的偏移量。
+  - 字节 4-7：偏移量；相对于堆开始的偏移量。
 
 <a name="Heap"></a>
 
@@ -71,17 +69,17 @@ Heap Size = Stream.Length – (Directory Size + 4)
 
 - 此实例化信息项的长度（采用压缩 ECMA 元数据格式，以字节为单位）。 该值不包括此长度信息。
 
-- 泛型实例化类型的数目或*T*，采用压缩 ECMA 元数据格式。
+- 采用压缩 ECMA 元数据格式的泛型实例化类型或*T*的数目。
 
-- *T*每个以 ECMA 类型签名格式表示的类型。
+- *T*类型，每个类型都以 ECMA 类型签名格式表示。
 
 包含每个堆元素的长度使目录部分实现简单排序，而不对堆造成影响。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
 
-**标头：** CorDebug.idl、 CorDebug.h
+**标头**：CorDebug.idl、CorDebug.h
 
 **库：** CorGuids.lib
 

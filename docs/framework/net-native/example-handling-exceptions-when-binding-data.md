@@ -1,17 +1,15 @@
 ---
-title: 示例：处理绑定数据时出现的异常
+title: 实例：处理绑定数据时出现的异常
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f7c40d1a179c29c3b92ca37848db6d1383e5d2d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7ab5477257bd6d32d901ad01518f7a75081d2a10
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049894"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128459"
 ---
-# <a name="example-handling-exceptions-when-binding-data"></a>示例：处理绑定数据时出现的异常
+# <a name="example-handling-exceptions-when-binding-data"></a>实例：处理绑定数据时出现的异常
 > [!NOTE]
 > 该主题是指 .NET Native 开发者预览版这款预发布软件。 可从 [Microsoft Connect 网站](https://go.microsoft.com/fwlink/?LinkId=394611)（需要注册）下载该预览版。  
   
@@ -39,7 +37,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="what-was-the-app-doing"></a>应用过去在执行什么操作？  
- 在堆栈的基础上， <xref:Windows.UI.Xaml?displayProperty=nameWithType>命名空间中的帧指示 XAML 呈现引擎正在运行。   对 <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> 方法的显示了属性值的基于反射的查找，该值位于元数据遭到删除的类型上。  
+ 在堆栈的基础上，<xref:Windows.UI.Xaml?displayProperty=nameWithType> 命名空间中的帧指示 XAML 呈现引擎正在运行。   对 <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> 方法的显示了属性值的基于反射的查找，该值位于元数据遭到删除的类型上。  
   
  第一步是提供一个元数据指令，将其添加到该类型的 `serialize` 元数据，使其所有属性都可访问：  
   
@@ -57,9 +55,9 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>代码能够重新，改为不使用反射吗？  
  因为数据绑定是反射密集型的，更改代码以避免反射是不可行的。  
   
- 然而，有几种方法可以指定 `ViewModel` 到 XAML 页面，从而让工具链在汇编时间可以将属性绑定与正确的类型关联起来并保存元数据，而不必使用运行时指令。  例如，可以在属性上应用<xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType>特性。 这会使得 XAML 编译器生成所需的查找信息并避免在 Default.rd.xml 文件中要求一个运行时指令。  
+ 然而，有几种方法可以指定 `ViewModel` 到 XAML 页面，从而让工具链在汇编时间可以将属性绑定与正确的类型关联起来并保存元数据，而不必使用运行时指令。  例如，可以在属性上应用 <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> 特性。 这会使得 XAML 编译器生成所需的查找信息并避免在 Default.rd.xml 文件中要求一个运行时指令。  
   
 ## <a name="see-also"></a>请参阅
 
 - [入门](getting-started-with-net-native.md)
-- 示例：[动态编程疑难解答](example-troubleshooting-dynamic-programming.md)
+- [示例：故障诊断动态编程](example-troubleshooting-dynamic-programming.md)

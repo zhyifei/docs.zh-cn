@@ -9,22 +9,20 @@ helpviewer_keywords:
 - dependentAssembly element
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a0604161ed6e7c3ead4a2e518daebc8414689af
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 33309ed89b4d31580da5de3aeb38e9e1fd8ae4d0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252709"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117585"
 ---
 # <a name="dependentassembly-element"></a>\<dependentAssembly > 元素
-封装每个程序集的绑定策略和程序集位置。 为每`dependentAssembly`个程序集使用一个元素。  
+封装每个程序集的绑定策略和程序集位置。 为每个程序集使用一个 `dependentAssembly` 元素。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dependentAssembly>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dependentAssembly >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +41,7 @@ ms.locfileid: "70252709"
   
 |元素|描述|  
 |-------------|-----------------|  
-|`assemblyIdentity`|包含有关程序集的标识信息。 此元素必须包含在每个`dependentAssembly`元素中。|  
+|`assemblyIdentity`|包含有关程序集的标识信息。 每个 `dependentAssembly` 元素中必须包含此元素。|  
 |`codeBase`|指定运行时在计算机上未安装共享程序集的情况下可以找到该程序集的位置。|  
 |`bindingRedirect`|将一个程序集版本重定向到另一个版本。|  
 |`publisherPolicy`|指定运行时是否应用此程序集的发布服务器策略。|  

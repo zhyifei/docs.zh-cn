@@ -1,5 +1,5 @@
 ---
-title: IcorDebugVariableHome::GetLiveRange 方法
+title: IcorDebugVariableHome：： GetLiveRange 方法
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetLiveRange
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 87277e1a-1595-4729-9e25-d1c3ac18ce5f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b293a3e166bb2614b5d0b064485178f5a569db48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a8b8955d2f4c164031974f0d9021fb766ff2c030
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774140"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125119"
 ---
-# <a name="icordebugvariablehomegetliverange-method"></a>IcorDebugVariableHome::GetLiveRange 方法
-获取对其此变量是实时的本机范围。  
+# <a name="icordebugvariablehomegetliverange-method"></a>IcorDebugVariableHome：： GetLiveRange 方法
+获取此变量的生存期的本机范围。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,15 +36,15 @@ HRESULT GetLiveRange(
   
 ## <a name="parameters"></a>参数  
  `pStartOffset`  
- [out]在该变量是第一个实时逻辑偏移量。  
+ 弄变量首次处于活动状态的逻辑偏移量。  
   
  `pEndOffset`  
- [out]立即后的变量是最后一个实时的点的逻辑偏移量。  
+ 弄紧跟在变量上一次生存点之后的逻辑偏移量。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

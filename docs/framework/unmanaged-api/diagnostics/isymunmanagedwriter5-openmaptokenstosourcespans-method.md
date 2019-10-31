@@ -2,17 +2,15 @@
 title: ISymUnmanagedWriter5::OpenMapTokensToSourceSpans 方法
 ms.date: 03/30/2017
 ms.assetid: 93ad2517-b0dc-464c-8688-a58a30eda18d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 82dc2ced988f7277c994eb9449e7c26efa5450b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 004e1ddae8a6c0262846422a2eeb4314a4c82f65
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968579"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121612"
 ---
 # <a name="isymunmanagedwriter5openmaptokenstosourcespans-method"></a>ISymUnmanagedWriter5::OpenMapTokensToSourceSpans 方法
-打开一个特殊的自定义数据分区发出令牌源范围映射到的信息。 方法已打开，或反之，是错误时，请打开此部分。  
+打开一个特殊的自定义数据部分，将令牌到源范围的映射信息发送到。 如果方法已打开（或相反），则打开此节是错误的。  
   
 ## <a name="syntax"></a>语法  
   
@@ -24,7 +22,7 @@ HRESULT OpenMapTokensToSourceSpans();
  返回 `HRESULT`。  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>请参阅
 

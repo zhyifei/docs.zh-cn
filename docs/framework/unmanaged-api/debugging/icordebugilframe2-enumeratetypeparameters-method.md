@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 722d0d74-e0df-491f-98c4-62d501dfaf6f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f2e53bfb46579cc51b7ad88ef7de2b9f8d2f9390
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 715ff5d4a06b53361d550f04e5154023d0b641bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758767"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095112"
 ---
 # <a name="icordebugilframe2enumeratetypeparameters-method"></a>ICorDebugILFrame2::EnumerateTypeParameters 方法
-获取一个包含 ICorDebugTypeEnum 对象<xref:System.Type>此帧中的参数。  
+获取一个 ICorDebugTypeEnum 对象，该对象包含此帧中的 <xref:System.Type> 参数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,19 +35,19 @@ HRESULT EnumerateTypeParameters (
   
 ## <a name="parameters"></a>参数  
  `ppTyParEnum`  
- 指向一个允许的类型参数的枚举的 ICorDebugTypeEnum 接口对象的地址的指针。  
+ 指向允许枚举类型参数的 ICorDebugTypeEnum 接口对象地址的指针。  
   
- 类型参数列表包含的类类型参数 （如果有） 后接方法类型参数 （如果有）。  
+ 类型参数列表包含类类型参数（如果有），后跟方法类型参数（如果有）。  
   
 ## <a name="remarks"></a>备注  
- 使用[IMetaDataImport2::EnumGenericParams](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md)方法，以确定多少个类类型参数和方法键入此列表包含的参数。  
+ 使用[IMetaDataImport2：： EnumGenericParams](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md)方法确定此列表包含多少类类型参数和方法类型参数。  
   
- 类型参数并不总是可用。  
+ 类型参数并非始终可用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

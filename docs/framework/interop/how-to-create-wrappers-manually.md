@@ -1,19 +1,17 @@
 ---
-title: 如何：手动创建包装器
+title: 如何：手动创建包装
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5db0ec9050c74b27d3ee25a99dcf8e2319835ffb
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
-ms.translationtype: HT
+ms.openlocfilehash: a647e4b434d0c38a2a84e9faec1d603d2bc4bb11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894216"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123928"
 ---
-# <a name="how-to-create-wrappers-manually"></a>如何：手动创建包装器
+# <a name="how-to-create-wrappers-manually"></a>如何：手动创建包装
 如果决定在托管源代码中手动声明 COM 类型，则最佳的着手点是现有的接口定义语言 (IDL) 文件或类型库。 不具备 IDL 文件或无法生成类型库文件时，可以通过创建托管的声明并将生成的程序集导出到类型库来模拟 COM 类型。  
   
 ### <a name="to-simulate-com-types-from-managed-source"></a>从托管源模拟 COM 类型  

@@ -2,14 +2,12 @@
 title: 利用反射的 API
 ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d120dcf49f1c9097eee04434062a0363a7e144a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7329ac339912042fc5d2fb335faa3bf74ed03b8d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049964"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128529"
 ---
 # <a name="apis-that-rely-on-reflection"></a>利用反射的 API
 在某些情况下，在代码中使用反射并不明显，因此 .NET Native 工具链不会保留运行时所需的元数据。 该主题介绍了一些常见的 API 或常见编程模式，它们不被视为是反射 API 的一部分，而依赖反射成功执行。 如果在源代码中使用了它们，可以将有关它们的信息添加到运行时指令 (.rd.xml) 文件，以便对这些 API 的调用不会在运行时内引发 [MissingMetadataException](missingmetadataexception-class-net-native.md) 异常或某种其他异常。  
@@ -31,7 +29,7 @@ ms.locfileid: "71049964"
   
 由于性能原因，已删除以下类型的元数据，因此无法执行此操作：  
   
-`App1.AppClass`1 < System.object > "。  
+`App1.AppClass`1 < > "。  
   
  你可以将以下运行时指令添加到运行时指令文件，从而为 `Activate` 的位于 `AppClass<T>` 上的特定实例化添加 <xref:System.Int32?displayProperty=nameWithType> 元数据。  
   
@@ -74,7 +72,7 @@ ms.locfileid: "71049964"
   
  [!code-csharp[ProjectN#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/array1.cs#3)]  
   
- 如果不存在数组元数据，以下错误会导致：  
+ 如果不存在阵列元数据，以下错误会导致：  
   
 ```output
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:  
@@ -84,7 +82,7 @@ App1.Class1[]
 Unfortunately, no further information is available.  
 ```  
   
- 需要数组类型的 `Browse` 元数据才能将其动态实例化。  以下运行时指令允许对 `Class1[]` 的进行动态实例化。  
+ 需要阵列类型的 `Browse` 元数据才能将其动态实例化。  以下运行时指令允许对 `Class1[]` 的进行动态实例化。  
   
 ```xml  
 <Type Name="App1.Class1[]" Browse="Required Public" />  

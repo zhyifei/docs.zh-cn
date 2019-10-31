@@ -2,16 +2,14 @@
 title: <Event>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7fb0245c50677da0397ba9c4918f171dcb217ba6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6966caede63faafa718b760be879f6bc6cbd3ab9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049849"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128494"
 ---
-# <a name="event-element-net-native"></a>\<Event > 元素（.NET Native）
+# <a name="event-element-net-native"></a>\<事件 > 元素（.NET Native）
 将运行时反射策略应用到一个事件。  
   
 ## <a name="syntax"></a>语法  
@@ -35,13 +33,13 @@ ms.locfileid: "71049849"
   
 ## <a name="name-attribute"></a>Name 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |method_name|事件名称。 该事件的类型是由 [\<Type>](type-element-net-native.md) 或 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 父元素定义的。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |policy_setting|该设置将应用到这个事件的策略类型。 可能值为 `Auto`、`Excluded`、`Included` 和 `Required`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   

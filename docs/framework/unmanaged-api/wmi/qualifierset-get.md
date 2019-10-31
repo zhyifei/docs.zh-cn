@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Get function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 751694985248346187eff016ef7a4a8054cb1212
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dc09cd30c43647fa00cccc1dc00da4f8de367e84
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798314"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127275"
 ---
 # <a name="qualifierset_get-function"></a>QualifierSet_Get 函数
 获取指定的命名限定符。  
@@ -56,16 +54,16 @@ HRESULT QualifierSet_Get (
 [in] 保留。 此参数必须为0。
 
 `pVal`   
-弄如果成功，则为限定符的正确类型和值。 如果函数失败， `VARIANT`则不会修改指向的。 `pVal` 如果此参数为`null`，则忽略参数。
+弄如果成功，则为限定符的正确类型和值。 如果函数失败，则不会修改 `pVal` 指向的 `VARIANT`。 如果 `null`此参数，则忽略参数。
 
 `plFlavor`   
-弄一个指向 LONG 的指针，它接收所请求限定符的限定符风格位。 如果不需要口味信息，此参数可以为`null`。 
+弄一个指向 LONG 的指针，它接收所请求限定符的限定符风格位。 如果不需要口味信息，可以 `null`此参数。 
 
 ## <a name="return-value"></a>返回值
 
 此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数无效。 |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 指定的限定符不存在。 |
@@ -76,9 +74,9 @@ HRESULT QualifierSet_Get (
 此函数包装对[IWbemQualifierSet：： Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get)方法的调用。
 
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标头：** WMINet_Utils.idl  
+ **标头：** WMINet_Utils .idl  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

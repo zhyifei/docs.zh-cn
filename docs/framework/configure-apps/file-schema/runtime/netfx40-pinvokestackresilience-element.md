@@ -5,21 +5,19 @@ helpviewer_keywords:
 - <NetFx40_PInvokeStackResilience> element
 - NetFx40_PInvokeStackResilience element
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f4dffe5428ccb7541055fa4f3f335f57deaf2ec
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 86f50aafe0b21d5080288e09ac7118ca1e4c939a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252433"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116163"
 ---
 # <a name="netfx40_pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > 元素
 
 指定运行时是否以减慢托管和非托管代码之间的转换速度为代价，在运行时自动修复不正确的平台调用声明。
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
 &nbsp;&nbsp;&nbsp;&nbsp; **\<NetFx40_PInvokeStackResilience >**  
 
 ## <a name="syntax"></a>语法
@@ -40,7 +38,7 @@ ms.locfileid: "70252433"
 
 ## <a name="enabled-attribute"></a>enabled 特性
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |`0`|运行时使用 .NET Framework 4 中引入的更快互操作封送处理体系结构，该体系结构不会检测并修复不正确的平台调用声明。 这是默认设置。|
 |`1`|运行时使用检测并修复不正确的平台调用声明的慢速转换。|
@@ -64,7 +62,7 @@ ms.locfileid: "70252433"
 
 为了便于在开发期间检测到不正确的声明，Visual Studio 调试体验也得到了改进。 当应用程序在附加调试器中运行时， [pInvokeStackImbalance](../../../debug-trace-profile/pinvokestackimbalance-mda.md)托管调试助手（MDA）将通知您不正确的平台调用声明。
 
-若要解决您的应用程序使用无法重新编译的组件，并且具有不正确的平台调用声明的情况， `NetFx40_PInvokeStackResilience`可以使用元素。 将此元素添加到应用程序配置文件`enabled="1"`中，并将其 "导入" 到兼容模式，并且具有较早版本的 .NET Framework 的行为，代价是慢于转换。 已针对早期版本的 .NET Framework 编译的程序集会自动选择进入此兼容模式，并且不需要此元素。
+若要解决您的应用程序使用无法重新编译的组件以及平台调用声明不正确的情况，可以使用 `NetFx40_PInvokeStackResilience` 元素。 通过将此元素添加到应用程序配置文件中，`enabled="1"` 会将其导入到兼容模式，并具有 .NET Framework 早期版本的行为，降低转换的成本。 已针对早期版本的 .NET Framework 编译的程序集会自动选择进入此兼容模式，并且不需要此元素。
 
 ## <a name="configuration-file"></a>配置文件
 

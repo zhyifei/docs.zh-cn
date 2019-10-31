@@ -7,14 +7,12 @@ helpviewer_keywords:
 - DLR
 - IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e6b6de8f0a178914c46ba5a65dfb56795cf23c71
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f0bd28823c5b8efc0b773ad588f2f232f8a41502
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046127"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130277"
 ---
 # <a name="dynamic-language-runtime-overview"></a>动态语言运行时概述
 
@@ -76,7 +74,7 @@ DLR 与 CLR一样，也属于 .NET Framework，并随 .NET Framework 和 Visual 
 ## <a name="dlr-architecture"></a>DLR 体系结构
  下图显示了动态语言运行时的体系结构。
 
- ![动态语言运行时体系结构概述](./media/dlr-archoverview.png "DLR_ArchOverview") DLR 体系结构
+ ![动态语言运行时体系结构概述](./media/dlr-archoverview.png "DLR_ArchOverview")DLR 体系结构
 
  DLR 向 CLR 添加了一组服务，以便更好地支持动态语言。 这些服务包括：
 

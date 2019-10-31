@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6562bbe7-0d67-4c50-a958-3a18cf680375
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 94deb4eaeeec2400aebf397d391ce4b67c16989e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: de264135450190fd028eb8cf12017d94cc65ffac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763882"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134726"
 ---
 # <a name="ihostcontrolsetappdomainmanager-method"></a>IHostControl::SetAppDomainManager 方法
-通知主机应用程序域已创建。  
+通知宿主已创建应用程序域。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,33 +36,33 @@ HRESULT SetAppDomainManager (
   
 ## <a name="parameters"></a>参数  
  `dwAppDomainID`  
- [in]所选的数字标识符<xref:System.AppDomain>。  
+ 中所选 <xref:System.AppDomain>的数值标识符。  
   
  `pUnkAppDomainManager`  
- [in]一个指向<xref:System.AppDomainManager>对象，它作为实现主机`IUnknown`。  
+ 中指向宿主作为 `IUnknown`实现的 <xref:System.AppDomainManager> 对象的指针。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`SetAppDomainManager` 已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。|  
-|HOST_E_TIMEOUT|呼叫已超时。|  
+|S_OK|`SetAppDomainManager` 成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|事件已取消时被阻塞的线程或纤程正在等待它。|  
-|E_FAIL|发生未知的灾难性故障。 如果某方法返回 E_FAIL，CLR 不再在进程内可用。 对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
+|E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>备注  
- <xref:System.AppDomainManager>为主机提供了一种机制，用于引导到托管代码和以控制创建和设置的每个<xref:System.AppDomain>。 <xref:System.AppDomainManager>加载到每个<xref:System.AppDomain>时，<xref:System.AppDomain>创建。 如果选择，CLR 通知主机应用程序域是否已创建的值设置`pUnkAppDomainManager`参数。  
+ <xref:System.AppDomainManager> 向宿主提供一种机制，用于启动到托管代码，并控制每个 <xref:System.AppDomain>的创建和设置。 创建该 <xref:System.AppDomain> 时，将 <xref:System.AppDomainManager> 加载到每个 <xref:System.AppDomain> 中。 如果选择此选项，CLR 将通过设置 `pUnkAppDomainManager` 参数的值，通知宿主已创建应用程序域。  
   
- 在其实现`SetAppDomainManager`方法，主机可以设置的程序集名称和类型应用程序域管理器。  
+ 在其 `SetAppDomainManager` 方法的实现中，宿主可以设置应用程序域管理器的程序集名称和类型。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

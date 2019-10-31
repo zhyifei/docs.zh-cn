@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5ae4c5743b01c4a9087323678d315473631cb32f
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: c37f039d9636854c464e7981693c573bd60deab9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274042"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132342"
 ---
 # <a name="cor_il_map-structure"></a>COR_IL_MAP 结构
 指定函数的相对偏移量的更改。  
@@ -36,16 +34,16 @@ typedef struct _COR_IL_MAP {
 } COR_IL_MAP;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
 |`oldOffset`|相对于函数开头的旧 Microsoft 中间语言（MSIL）偏移量。|  
 |`newOffset`|相对于函数开头的新 MSIL 偏移量。|  
-|`fAccurate`|`true`如果已知正确的映射，则为;否则为`false`。|  
+|`fAccurate`|如果已知映射准确无误，则 `true`;否则，`false`。|  
   
 ## <a name="remarks"></a>备注  
- 图的格式如下所示：调试器将假设`oldOffset`是在原始的、未修改的 msil 代码内引用 msil 偏移量。 `newOffset`参数引用新的、经过检测的代码中的相应 MSIL 偏移量。  
+ 映射的格式如下所示：调试器将假定 `oldOffset` 引用原始的、未修改的 MSIL 代码内的 MSIL 偏移量。 `newOffset` 参数引用新的、经过检测的代码中的相应 MSIL 偏移量。  
   
  若要单步执行，应满足以下要求：  
   
@@ -82,11 +80,11 @@ typedef struct _COR_IL_MAP {
 - 20或更高的新偏移量将映射到旧偏移量9。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cordebug.idl、Corprof.idl  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -2,14 +2,12 @@
 title: <Library>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc3c85ab99574c96d8a68d4221f218a1340e4122
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f94bfe047fa7a95b6f24264bae0b27112c589dfd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049647"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128368"
 ---
 # <a name="library-element-net-native"></a>\<库 > 元素（.NET Native）
 定义包含元数据在运行时间可以用于反射的类型和类型成员的程序集。  
@@ -34,7 +32,7 @@ ms.locfileid: "71049647"
   
 ## <a name="name-attribute"></a>Name 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |assembly_name|程序集的简单名称，不要包含文件扩展名。 此特性对应 <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> 属性。 例如，一个名为 Extensions.dll 的程序集的名称为“Extensions”。 参阅“备注”部分，了解支持对来自程序集的元数据有条件包含的 assembly_name 的一种特殊形式。|  
   
@@ -58,7 +56,7 @@ ms.locfileid: "71049647"
   
  `<Library>` 元素充当容器，用来定义其元数据在运行时间需要存在的程序元素；此元素不表示策略。 在编译时间，编译器工具仅搜索由 `<Library>` 元素指定的库，以查找其子元素识别出的程序元素。 相比而言，编译器工具搜索 .NET Framework 核心库等所有库，以查找由 [\<Application>](application-element-net-native.md) 元素识别出的子元素。  
   
- `<Library>` 指令可以有条件地使用。 如果`<Library>`元素的名称以星号（\*）开头和结尾，则`<Library>`只有当应用引用星号之间指定的程序集时，指令才会生效。 例如，仅当应用程序引用了实用工具 .dll 程序集时，以下运行时指令才适用。  
+ `<Library>` 指令可以有条件地使用。 如果 `<Library>` 元素的名称以星号（\*）开头和结尾，则只有当应用引用星号之间指定的程序集时，`<Library>` 指令才会生效。 例如，仅当应用程序引用了实用工具 .dll 程序集时，以下运行时指令才适用。  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

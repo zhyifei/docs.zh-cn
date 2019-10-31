@@ -2,14 +2,12 @@
 title: 运行时指令元素
 ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 062f13ad92f37bb7ae29ed34dcf88f99f98e7612
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c900516382c8e526a6b0021bb2b681486283f3ab
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049270"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128174"
 ---
 # <a name="runtime-directive-elements"></a>运行时指令元素
 运行时指令 (rd.xml) 文件格式支持以下运行时指令元素。 请参阅[运行时指令 (rd.xml) 配置文件参考](runtime-directives-rd-xml-configuration-file-reference.md)了解分层表示形式。  

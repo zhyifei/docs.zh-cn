@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29e7a14b-d50e-4852-bfda-011b76c0c9ee
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 50a18f435063b74b837dbfe9e4f1d986bb735039
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a5d421bf0eb8ec5a34fe21d6efc79bbe56c294c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753343"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137646"
 ---
 # <a name="icordebugevalnewstring-method"></a>ICorDebugEval::NewString 方法
-分配新的字符串实例具有指定的内容。  
+分配具有指定内容的新字符串实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,15 +35,15 @@ HRESULT NewString (
   
 ## <a name="parameters"></a>参数  
  `string`  
- [in]指向字符串的内容。  
+ 中指向字符串内容的指针。  
   
 ## <a name="remarks"></a>备注  
- 始终在线程当前执行的应用程序域中创建的字符串。  
+ 始终在当前执行线程的应用程序域中创建字符串。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

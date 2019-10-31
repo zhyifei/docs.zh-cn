@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2709f18f-3eee-497f-bc33-3ab7a485599b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8edd2a42ed1b826e1b6ea09e92165bc9fa967a8b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 970468bc2f50144c62c6e3cbcf9c00c2027f7663
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760247"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138184"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>FExecuteInAppDomainCallback 函数指针
-指向以公共语言运行时 (CLR) 以执行托管的代码调用的函数。  
+指向由公共语言运行时（CLR）调用以执行托管代码的函数。  
   
- .NET Framework 4 中已弃用此函数指针。  
+ 此函数指针在 .NET Framework 4 中已弃用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,16 +36,16 @@ typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (
   
 ## <a name="parameters"></a>参数  
  `cookie`  
- [in]指向包含要执行的托管的代码的不透明调用方分配的内存的指针。  
+ 中指向包含要执行的托管代码的不透明调用方分配的内存的指针。  
   
- 分配和此内存的生存期由调用方 (CLR) 控制。 这不是 CLR 托管堆内存。  
+ 此内存的分配和生存期由调用方（即 CLR）控制。 这不是 CLR 托管堆内存。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** MSCorWks.dll  
+ **库：** Mscorwks.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

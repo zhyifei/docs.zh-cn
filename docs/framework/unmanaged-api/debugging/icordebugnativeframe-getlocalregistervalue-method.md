@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5ccb74f3-f891-430c-b70a-e370624edde2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d287305934c7884d5474935e50de3d26e225975
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 132e0868426670ba61d8ee12ba7007be1a8a52de
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746160"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139407"
 ---
 # <a name="icordebugnativeframegetlocalregistervalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterValue 方法
-获取参数或指定注册到此本机帧中存储的本地变量的值。  
+获取为此本机帧存储在指定寄存器中的参数或局部变量的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,24 +38,24 @@ HRESULT GetLocalRegisterValue (
   
 ## <a name="parameters"></a>参数  
  `reg`  
- [in]"CorDebugRegister"枚举，指定包含值的寄存器的值。  
+ 中"CorDebugRegister" 枚举的一个值，它指定包含该值的寄存器。  
   
  `cbSigBlob`  
- [in]一个整数，指定的二进制元数据签名的由引用大小`pvSigBlob`参数。  
+ 中一个整数，指定 `pvSigBlob` 参数引用的二进制元数据签名的大小。  
   
  `pvSigBlob`  
- [in]一个`PCCOR_SIGNATURE`指向值类型的二进制元数据签名的值。  
+ 中一个 `PCCOR_SIGNATURE` 值，该值指向值类型的二进制元数据签名。  
   
  `ppValue`  
- [out]指向表示检索到的值存储在指定的寄存器中的"ICorDebugValue"对象的地址的指针。  
+ 弄一个指向 "ICorDebugValue" 对象地址的指针，该对象表示存储在指定寄存器中的检索到的值。  
   
 ## <a name="remarks"></a>备注  
- `GetLocalRegisterValue`在本机帧或在实时 (JIT) 中，可以使用方法的编译的框架。  
+ `GetLocalRegisterValue` 方法可在本机框架或实时（JIT）编译的框架中使用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

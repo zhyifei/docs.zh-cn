@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9929817e-acc9-40b7-960c-598664e04b60
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e7312a50137ab8a5c066d5e140a1742ee1918b44
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 90474a61b16d65565889bd69ef75616804d8bc60
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776557"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140881"
 ---
 # <a name="iclrmetahostquerylegacyv2runtimebinding-method"></a>ICLRMetaHost::QueryLegacyV2RuntimeBinding 方法
-返回表示旧式激活策略具有已绑定到，例如，使用的运行时的接口`useLegacyV2RuntimeActivationPolicy`特性，可以在[\<启动 > 元素](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)直接使用配置文件条目旧激活 Api 或通过调用[ICLRRuntimeInfo::BindAsLegacyV2Runtime](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md)方法。  
+返回一个接口，该接口表示已绑定旧式激活策略的运行时，例如，通过使用[\<启动 > 元素](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)配置文件项上的 `useLegacyV2RuntimeActivationPolicy` 特性，直接使用旧的激活 api，或调用[ICLRRuntimeInfo：： BindAsLegacyV2Runtime](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,10 +35,10 @@ HRESULT QueryLegacyV2RuntimeBinding (
   
 ## <a name="parameters"></a>参数  
  `riid`  
- [in]此参数的唯一有效的值是的 Required.Currently `IID_ICLRRuntimeInfo`。  
+ 中必需。目前 `IID_ICLRRuntimeInfo`唯一有效的值。  
   
  `ppUnk`  
- [out] 必需。 此方法返回时，包含一个指向[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)表示已绑定到旧式激活策略的运行时的接口。  
+ [out] 必需。 此方法返回时，包含一个指向[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)接口的指针，该接口表示已绑定到旧版激活策略的运行时。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
@@ -54,11 +52,11 @@ HRESULT QueryLegacyV2RuntimeBinding (
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MetaHost.h  
+ **标头：** MetaHost  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

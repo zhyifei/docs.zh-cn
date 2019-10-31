@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 21ceed9e-62b2-4024-b027-6d095109955a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 61f4e057a487462feb385ca0e3ca977fdd165f56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9bcc03cc97a62b4c1cadacd7c0b2bc46b9fec470
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739091"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134131"
 ---
-# <a name="efngetmanagedexcepstack-function"></a>\_EFN\_GetManagedExcepStack Function
+# <a name="_efn_getmanagedexcepstack-function"></a>\_EFN\_GetManagedExcepStack 函数
 给定托管的异常对象地址后，将返回其中包含的堆栈跟踪的字符串版本。  
   
 ## <a name="syntax"></a>语法  
@@ -39,26 +37,26 @@ HRESULT _EFN_GetManagedExcepStack(
   
 ## <a name="parameters"></a>参数  
  `Client`  
- [in]正在调试客户端。  
+ 中正在调试的客户端。  
   
  `StackObjAddr`  
- [in]托管的对象指针，派生自<xref:System.Exception>。  
+ 中派生自 <xref:System.Exception>的托管对象指针。  
   
  szStackString  
- [out]返回的字符串。  
+ 弄返回的字符串。  
   
  `cbString`  
- [out]字符串缓冲区中有可用的字符数。  
+ 弄字符串缓冲区中的可用字符数。  
   
 ## <a name="remarks"></a>备注  
- 如果没有任何托管的代码的线程上当前上下文中，该函数返回 HRESULT SOS_E_NOMANAGEDCODE 0xa0 设施值和错误代码为 0x1000。  
+ 如果当前在上下文中的线程上没有托管代码，则该函数将返回 HRESULT SOS_E_NOMANAGEDCODE，其设施值为0xa0，错误代码为0x1000。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** SOS_Stacktrace.h  
+ **标头：** SOS_Stacktrace  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

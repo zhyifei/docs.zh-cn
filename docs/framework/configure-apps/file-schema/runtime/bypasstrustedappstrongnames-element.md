@@ -7,22 +7,20 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - <bypassTrustedAppStrongNames> element
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 35b4c6201b5181b8d7241906f60a731e4175d523
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 50e67e97d74b896a680cc18270d32aa7a8eb8035
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991226"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118180"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> 元素
 
-指定是否在加载到完全信任<xref:System.AppDomain>的完全信任程序集上绕过强名称验证。
+指定是否绕过对加载到完全信任的 <xref:System.AppDomain>中的完全信任程序集的强名称的验证。
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<bypassTrustedAppStrongNames>**
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<bypasstrustedappstrongnames> element >**
 
 ## <a name="syntax"></a>语法
 
@@ -43,10 +41,10 @@ ms.locfileid: "70991226"
 
 ## <a name="enabled-attribute"></a>enabled 特性
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
-|`true`|将程序集加载到完全信任<xref:System.AppDomain>时，不会验证完全信任程序集上的强名称签名。 这是默认设置。|
-|`false`|将程序集加载到完全信任<xref:System.AppDomain>时，会验证完全信任程序集上的强名称签名。 仅对签名正确性检查强名称签名;与另一个匹配的强名称没有比较。|
+|`true`|将程序集加载到完全信任 <xref:System.AppDomain>中时，不会验证完全信任程序集上的强名称签名。 这是默认设置。|
+|`false`|将程序集加载到完全信任的 <xref:System.AppDomain>时，会验证完全信任程序集上的强名称签名。 仅对签名正确性检查强名称签名;与另一个匹配的强名称没有比较。|
 
 ### <a name="child-elements"></a>子元素
 
@@ -65,7 +63,7 @@ ms.locfileid: "70991226"
 
 跳过功能适用于使用强名称进行签名及具有以下特征的任何程序集：
 
-- 完全受信任， <xref:System.Security.Policy.StrongName>无需证据（如具有`MyComputer`区域证据）。
+- 完全受信任，无 <xref:System.Security.Policy.StrongName> 证据（例如，具有 `MyComputer` 区域证据）。
 
 - 加载到完全受信任的 <xref:System.AppDomain>。
 
@@ -74,7 +72,7 @@ ms.locfileid: "70991226"
 - 签名没有延迟。
 
 > [!NOTE]
-> 如果对计算机上的所有应用程序使用注册表项关闭了绕过功能，则此配置文件设置将不起作用。 有关详细信息，请参阅[如何：禁用强名称绕过功能](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)。
+> 如果对计算机上的所有应用程序使用注册表项关闭了绕过功能，则此配置文件设置将不起作用。 有关详细信息，请参阅[如何：禁用强名称跳过功能](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)。
 
 ## <a name="example"></a>示例
 

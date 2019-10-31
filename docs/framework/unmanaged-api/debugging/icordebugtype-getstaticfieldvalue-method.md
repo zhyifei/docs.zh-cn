@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 62eb5d55-53ee-4fb3-8d47-7b6c96808f9e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1054c7c977a487bb5a4bbf464322a65bcc039608
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 95183701987d3ddec3835a17c5d256c25c2c4c64
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755731"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132070"
 ---
 # <a name="icordebugtypegetstaticfieldvalue-method"></a>ICorDebugType::GetStaticFieldValue 方法
-获取包含由指定的字段引用的静态字段的值的 ICorDebugValue 对象的接口指针令牌中指定的堆栈帧。  
+获取一个指向 ICorDebugValue 对象的接口指针，该对象包含指定的堆栈帧中指定字段标记所引用的静态字段的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,28 +37,28 @@ HRESULT GetStaticFieldValue (
   
 ## <a name="parameters"></a>参数  
  `fieldDef`  
- [in]`mdFieldDef`指定的静态字段的令牌。  
+ 中指定静态字段的 `mdFieldDef` 标记。  
   
  `pFrame`  
- [in]指向表示堆栈帧 ICorDebugFrame 的指针。  
+ 中指向表示堆栈帧的 ICorDebugFrame 的指针。  
   
  `ppValue`  
- [out]指向的地址的指针`ICorDebugValue`，其中包含静态字段的值。  
+ 弄一个指针，指向包含静态字段值的 `ICorDebugValue` 的地址。  
   
 ## <a name="remarks"></a>备注  
- `GetStaticFieldValue`方法可能仅当使用该类型是 ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE，由[icordebugtype:: Gettype](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)方法。  
+ 仅当类型为 ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE 时，才可以使用 `GetStaticFieldValue` 方法，如[ICorDebugType：： GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)方法所示。  
   
- 对于非泛型类型，由执行该操作`GetStaticFieldValue`等同于调用[icordebugclass:: Getstaticfieldvalue](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md) ICorDebugClass 对象返回的[icordebugtype:: Getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md).  
+ 对于非泛型类型，`GetStaticFieldValue` 执行的操作与对[ICorDebugType：： GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)返回的 ICorDebugClass 对象调用[ICorDebugClass：： GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md)完全相同。  
   
- 泛型类型的静态字段的值将相对于特定的实例化。 此外，如果静态字段可能是相对于一个线程、 上下文或应用程序域，堆栈帧将有助于确定适当的值在调试器。  
+ 对于泛型类型，静态字段值将与特定实例化相关。 此外，如果静态字段可能是相对于线程、上下文或应用程序域的，则堆栈帧将有助于调试器确定正确的值。  
   
 ## <a name="remarks"></a>备注  
- `GetStaticFieldValue` 可以使用仅在调用`ICorDebugType::GetType`返回 ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE 的值。  
+ 仅当对 `ICorDebugType::GetType` 的调用返回 ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE 的值时，才能使用 `GetStaticFieldValue`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

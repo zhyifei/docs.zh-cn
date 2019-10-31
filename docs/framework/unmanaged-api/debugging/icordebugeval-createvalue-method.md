@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9a1c0b47-6f10-4fcb-844a-4ab2d7990140
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3ada3a06a2beb8f21c3e24665c0f1f8e7c48515f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4bb04ba090be9cab551bc39d8d9f1be974c747d3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752956"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085138"
 ---
 # <a name="icordebugevalcreatevalue-method"></a>ICorDebugEval::CreateValue 方法
-创建指定类型的值与初始值为零或 null。  
+创建指定类型的值，其初始值为零或 null。  
   
- 此方法是在.NET Framework 2.0 版中已过时。 使用[ICorDebugEval2::CreateValueForType](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md)相反。  
+ 此方法在 .NET Framework 版本2.0 中已过时。 改[为使用 ICorDebugEval2：： CreateValueForType](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,29 +39,29 @@ HRESULT CreateValue (
   
 ## <a name="parameters"></a>参数  
  `elementType`  
- [in]值为[CorElementType](../../../../docs/framework/unmanaged-api/metadata/corelementtype-enumeration.md)枚举，用于指定值的类型。  
+ 中[CorElementType](../../../../docs/framework/unmanaged-api/metadata/corelementtype-enumeration.md)枚举的一个值，该值指定值的类型。  
   
  `pElementClass`  
- [in]指向[ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)对象，如果类型不是基元类型指定的值的类。  
+ 中指向[ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)对象的指针，该对象指定值的类（如果该类型不是基元类型）。  
   
  `ppValue`  
- [out]表示的值"ICorDebugValue"对象的地址指针。  
+ 弄指向表示值的 "ICorDebugValue" 对象地址的指针。  
   
 ## <a name="remarks"></a>备注  
- `CreateValue` 创建`ICorDebugValue`使用函数求值的唯一目的的给定类型的对象。 此值对象可以用于将用户常量作为参数传递。  
+ `CreateValue` 创建给定类型的 `ICorDebugValue` 对象，目的是在函数求值中使用它。 此值对象可用于将用户常数作为参数传递。  
   
- 如果值的类型是基元类型，其初始值为零或 null。 使用[icordebuggenericvalue:: Setvalue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)将基元类型的值。  
+ 如果值的类型为基元类型，则其初始值为零或 null。 使用[ICorDebugGenericValue：： SetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)设置基元类型的值。  
   
- 如果的值`elementType`是 ELEMENT_TYPE_CLASS，获取"ICorDebugReferenceValue"(在中返回`ppValue`) 表示空对象引用。 此对象可用于将 null 传递给函数求值的对象引用参数。 不能设置`ICorDebugValue`到任何内容; 它始终保留为 null。  
+ 如果 `elementType` 的值为 ELEMENT_TYPE_CLASS，则会收到表示 null 对象引用的 "ICorDebugReferenceValue" （在 `ppValue`中返回）。 您可以使用此对象将 null 传递给具有对象引用参数的函数求值。 不能将 `ICorDebugValue` 设置为任何内容;它始终为 null。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** 1.1, 1.0  
+ **.NET Framework 版本：** 1.1、1。0  
   
 ## <a name="see-also"></a>请参阅
 

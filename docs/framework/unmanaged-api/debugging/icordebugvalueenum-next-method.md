@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f5ef94dd-dfee-49d3-a398-b110f8906dd8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ae09b4f1cd069edf81be583c7c4226717736094
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 09394acb07b8595f99d9ecc873eb0985cdd79316
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764271"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134587"
 ---
 # <a name="icordebugvalueenumnext-method"></a>ICorDebugValueEnum::Next 方法
-从当前位置开始枚举中获取指定的数量的"ICorDebugValue"实例。  
+从当前位置开始，从枚举中获取指定的 "ICorDebugValue" 实例数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,18 +38,18 @@ HRESULT Next (
   
 ## <a name="parameters"></a>参数  
  `celt`  
- [in]数`ICorDebugValue`要检索的实例。  
+ 中要检索的 `ICorDebugValue` 实例的数目。  
   
  `values`  
- [out]一个指针，其中每个指向数组`ICorDebugValue`对象。  
+ 弄指针的数组，其中每个都指向一个 `ICorDebugValue` 对象。  
   
  `pceltFetched`  
- [out]指向数`ICorDebugValue`实际返回的实例。 此值可能为 null 如果`celt`是其中一个。  
+ 弄一个指针，指向实际返回的 `ICorDebugValue` 实例的数目。 如果 `celt` 为1，则此值可以为 null。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

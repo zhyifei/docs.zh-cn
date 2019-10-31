@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetPropertyOrigin function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c2d0f23f3dd2d52f73f09c32d4e3118a9ed5ea3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6cab3765f0359f5dd18831acaaa1aefce3fe1081
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798496"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101855"
 ---
 # <a name="getpropertyorigin-function"></a>GetPropertyOrigin 函数
 
@@ -58,7 +56,7 @@ HRESULT GetPropertyOrigin (
 
 此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 出现一般错误。 |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的属性。 |
@@ -72,13 +70,13 @@ HRESULT GetPropertyOrigin (
 
 由于类可以从一个或多个基类继承属性，因此开发人员通常需要确定定义给定方法的属性。
 
-在`pstrClassName`调用函数之前，参数必须指向`BSTR`有效的，因为这是一个`out`参数; 在函数返回后，不释放此指针。
+`pstrClassName` 参数在调用函数之前不能指向有效 `BSTR`，因为这是 `out` 参数;在函数返回后，不释放此指针。
 
 ## <a name="requirements"></a>要求
 
-**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。
 
-**标头：** WMINet_Utils.idl
+**标头：** WMINet_Utils .idl
 
 **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7e7c2d0-e58c-4650-b40c-47b2be2cda45
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c43c2259d5b899f05e42437aa121dde57ce4b0c8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c060e4883335a8318970b5fbd74bf72c9e13f5bf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766480"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134865"
 ---
 # <a name="igchostsetvirtualmemlimit-method"></a>IGCHost::SetVirtualMemLimit 方法
 设置运行时的虚拟内存的最大大小。  
@@ -37,17 +35,17 @@ HRESULT SetVirtualMemLimit (
   
 ## <a name="parameters"></a>参数  
  `sztMaxVirtualMemMB`  
- [in]最大大小，以兆字节为单位的运行时的虚拟内存。  
+ 中运行时虚拟内存的最大大小（以 mb 为单位）。  
   
 ## <a name="remarks"></a>备注  
  可以动态更改运行时的虚拟内存的最大大小。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** GCHost.idl GCHost.h  
+ **标头：** GCHost，GCHost  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

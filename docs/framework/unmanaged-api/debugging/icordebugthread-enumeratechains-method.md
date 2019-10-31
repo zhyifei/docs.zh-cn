@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ec00bc21-117e-4acd-9301-2cfafd5be8d3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a6f0ed843f72d3f1e1575da15776a94a9097fd02
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 38fe50f5a6608bb27d7a7818dee4784a7f8113ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771097"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133605"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>ICorDebugThread::EnumerateChains 方法
-获取包含此 ICorDebugThread 对象中的所有堆栈链的 ICorDebugChainEnum 枚举器的接口指针。  
+获取一个接口指针，该指针指向包含此 ICorDebugThread 对象中所有堆栈链的 ICorDebugChainEnum 枚举器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,25 +35,25 @@ HRESULT EnumerateChains (
   
 ## <a name="parameters"></a>参数  
  `ppChains`  
- [out]指向的地址的指针`ICorDebugChainEnum`允许所有堆栈的枚举对象链接在此线程开始活动 （即，最新的） 链中。  
+ 弄指向 `ICorDebugChainEnum` 对象地址的指针，该对象允许枚举此线程中的所有堆栈链，从活动（即最近的）链开始。  
   
 ## <a name="remarks"></a>备注  
- 堆栈链表示在线程的物理调用堆栈。 在以下情况下创建一个堆栈链边界：  
+ 堆栈链表示线程的物理调用堆栈。 以下情况会创建堆栈链边界：  
   
-- 托管到非托管或非托管到托管的转换。  
+- 托管到非托管或非托管的转换。  
   
 - 上下文切换。  
   
-- 一个调试器用户线程进行的攻击。  
+- 用户线程的调试器劫持。  
   
- 在单一上下文中运行纯托管的代码的线程的简单情况下，线程和堆栈链之间存在一对一的对应关系。  
+ 在单个上下文中运行纯托管代码的线程的简单情况下，线程与堆栈链之间存在一对一的对应关系。  
   
- 调试程序可能想要为逻辑调用堆栈中重新排列的所有线程的物理调用堆栈。 这通常需要对所有线程的链由其调用方/被调用方关系进行排序并重新分组。  
+ 调试器可能需要将所有线程的物理调用堆栈重新排列为逻辑调用堆栈。 这涉及到通过其调用方/被调用方关系对所有线程链进行排序并 regrouping 它们。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

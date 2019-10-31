@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4322a7e23c7085dadb3b2df6c1f72125aa685cef
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec265525d01dab0669939569501fce91b500a900
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756600"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127495"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock 方法
-返回拥有此对象的监视器锁的托管的线程。  
+返回拥有此对象的监视器锁的托管线程。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,10 +36,10 @@ HRESULT GetThreadOwningMonitorLock (
   
 ## <a name="parameters"></a>参数  
  `ppThread`  
- [out]拥有此对象的监视器锁的托管的线程。  
+ 弄拥有此对象的监视器锁的托管线程。  
   
  `pAcquisitionCount`  
- [out]此线程必须返回到正在没有所有者之前释放锁次数。  
+ 弄此线程在返回为无所有者之前必须释放该锁的次数。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
@@ -49,27 +47,27 @@ HRESULT GetThreadOwningMonitorLock (
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|该方法已成功完成。|  
-|S_FALSE|没有任何托管的线程拥有对此对象的监视器锁。|  
+|S_FALSE|没有托管线程拥有此对象的监视器锁。|  
   
-## <a name="exceptions"></a>Exceptions  
+## <a name="exceptions"></a>异常  
   
 ## <a name="remarks"></a>备注  
- 如果托管的线程拥有对此对象的监视器锁：  
+ 如果托管线程拥有此对象的监视器锁：  
   
-- 该方法返回 S_OK。  
+- 方法返回 S_OK。  
   
-- 在线程退出之前的线程对象有效。  
+- 线程对象在线程退出之前有效。  
   
- 如果没有任何托管的线程拥有对此对象的监视器锁`ppThread`和`pAcquisitionCount`保持不变，并且该方法返回 S_FALSE。  
+ 如果没有托管线程拥有此对象的监视器锁，`ppThread` 和 `pAcquisitionCount` 会保持不变，并且方法将返回 S_FALSE。  
   
- 如果`ppThread`或`pAcquisitionCount`不是有效的指针，则结果不可确定。  
+ 如果 `ppThread` 或 `pAcquisitionCount` 不是有效的指针，则结果是不确定的。  
   
- 出错时，不能确定，如果有，线程拥有对此对象的监视器锁的方法将返回一个 HRESULT，指示失败。  
+ 如果发生错误，因此无法确定线程（如果有）线程拥有此对象的监视器锁，则方法将返回指示失败的 HRESULT。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0af312af-98e9-415e-b182-42e80a1aee51
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7cb58593a30b855c9fabf55a6ca0a50886dc371f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1e1d63ab28276f69e5b3a762520db8f8300d05bc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779487"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134761"
 ---
 # <a name="igcthreadcontrolsuspensionstarting-method"></a>IGCThreadControl::SuspensionStarting 方法
-通知垃圾回收的线程挂起或其他挂起开始运行时主机。  
+通知宿主运行时正在为垃圾回收或其他挂起开始线程挂起。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,14 +32,14 @@ HRESULT SuspensionStarting ( );
 ```  
   
 ## <a name="remarks"></a>备注  
- 不重新计划在任何线程`SuspensionStarting`回调。  
+ 请勿在 `SuspensionStarting` 回调期间重新计划任何线程。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

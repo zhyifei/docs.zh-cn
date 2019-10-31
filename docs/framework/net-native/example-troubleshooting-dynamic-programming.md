@@ -1,17 +1,15 @@
 ---
-title: 示例：动态编程疑难解答
+title: 示例：排查动态编程问题
 ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 866ec425fd66ee8b3b62263180ac7e6d776108f0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ff179854066d024a89cb5a84a19d0b9bb054d6e5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049807"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128442"
 ---
-# <a name="example-troubleshooting-dynamic-programming"></a>示例：动态编程疑难解答
+# <a name="example-troubleshooting-dynamic-programming"></a>示例：排查动态编程问题
 > [!NOTE]
 > 该主题是指 .NET Native 开发者预览版这款预发布软件。 可从 [Microsoft Connect 网站](https://go.microsoft.com/fwlink/?LinkId=394611)（需要注册）下载该预览版。  
   
@@ -50,7 +48,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
   
  在这种情况下，添加一个运行时指令让 `App.Core.ViewModels` 解决这一问题。 根本原因在于 API 调用了返回 null 的 <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> 方法，且该应用默认忽略这一问题直到发生故障。  
   
- 在动态编程中，在 .NET Native 下使用反射 api 是一种很好的<xref:System.Type.GetType%2A?displayProperty=nameWithType>做法，就是使用在失败时引发异常的重载。  
+ 在动态编程中，在 .NET Native 下使用反射 Api 是一种很好的做法，就是使用在失败时引发异常的 <xref:System.Type.GetType%2A?displayProperty=nameWithType> 重载。  
   
 ## <a name="is-this-an-isolated-case"></a>这是一个孤立情形吗？  
  当使用 `App.Core.ViewModels` 时，可能也会出现其他问题。  你必须决定是否值得确定并修复每个丢失的元数据异常，或节省时间并为类型的一个更大类添加指令。  此处，为 `dynamic` 添加 `App.Core.ViewModels` 元数据可能最好的方法，前提是输出的二进制代码变大不会产生问题。  
@@ -61,4 +59,4 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 ## <a name="see-also"></a>请参阅
 
 - [入门](getting-started-with-net-native.md)
-- 示例：[在绑定数据时处理异常](example-handling-exceptions-when-binding-data.md)
+- [示例：处理绑定数据时出现的异常](example-handling-exceptions-when-binding-data.md)

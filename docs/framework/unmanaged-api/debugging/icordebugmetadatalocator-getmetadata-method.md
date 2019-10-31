@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9b0ff22-54db-45eb-9cc3-508000a3141d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9b761d31e640063e11c1e549966bb372449fe743
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e4f11de423d1ab6b66aca40e671607a383a4413
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762271"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136632"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData 方法
 要求调试器返回模块（完成该调试器请求的操作需要其元数据）的完整路径。  
@@ -43,10 +41,10 @@ HRESULT GetMetaData(
   
 ## <a name="parameters"></a>参数  
  `wszImagePath`  
- [in] 以 null 结尾的字符串，表示文件的完整路径。 如果不可用，完整路径的名称和扩展名的文件 (*文件名*。*扩展*)。  
+ [in] 以 null 结尾的字符串，表示文件的完整路径。 如果完整路径不可用，则为该文件的名称和扩展名（*文件名*）。*扩展名*）。  
   
  `dwImageTimeStamp`  
- [in] 来自图像 PE 文件头的时间戳。 此参数可潜在用于符号服务器 ([SymSrv](/windows/desktop/debug/using-symsrv)) 查找。  
+ [in] 来自图像 PE 文件头的时间戳。 此参数可能用于符号服务器（[SymSrv](/windows/desktop/debug/using-symsrv)）查找。  
   
  `dwImageSize`  
  [in] PE 文件头中的图像大小。 此参数可能可以用于 SymSrv 查找。  
@@ -62,7 +60,7 @@ HRESULT GetMetaData(
  `wszPathBuffer`  
  [out] 指向一个缓冲区的指针，调试器会将包含请求的元数据的文件的完整路径复制到该缓冲区中。  
   
- `ofReadOnly`标志，从[CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)枚举用于请求对此文件中的元数据的只读访问权限。  
+ [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)枚举中的 `ofReadOnly` 标志用于请求对此文件中元数据的只读访问。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。 所有其他失败的 HRESULT 均指示文件不可检索。  
@@ -76,9 +74,9 @@ HRESULT GetMetaData(
  如果 `wszImagePath` 包含转储中模块的完整路径，则它从收集转储的计算机指定路径。 文件可能不位于此位置，或者具有相同名称的不正确文件可能存储在该路径上。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

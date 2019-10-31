@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bac0b156-31a3-4e7f-be4d-ab21789c81f1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d6eb97fc70fec25f4b225c3fd5bad1e780091f7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 90156152a2c133446dedbe22426785ab63f8dfb9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771033"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131816"
 ---
 # <a name="icordebugstackwalksetcontext-method"></a>ICorDebugStackWalk::SetContext 方法
-集[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)到有效的线程的上下文对象的当前上下文。  
+将[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)对象的当前上下文设置为线程的有效上下文。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,37 +35,37 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
   
 ## <a name="parameters"></a>参数  
  `flag`  
- [in]一个[CorDebugSetContextFlag](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md)指示上下文是从活动堆栈帧，还是通过展开堆栈获取上下文的标志。  
+ 中[CorDebugSetContextFlag](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md)标志，用于指示上下文是否来自堆栈上的活动帧，或通过展开堆栈获取的上下文。  
   
  `contextSize`  
- [in]已分配的大小`CONTEXT`缓冲区。  
+ 中`CONTEXT` 缓冲区的已分配大小。  
   
  `context`  
- [in]`CONTEXT`缓冲区。  
+ 中`CONTEXT` 缓冲区。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`ICorDebugStackWalk`已成功设置对象的上下文。|  
-|E_FAIL|`ICorDebugStackWalk`未设置对象的上下文。|  
+|S_OK|已成功设置 `ICorDebugStackWalk` 对象的上下文。|  
+|E_FAIL|未设置 `ICorDebugStackWalk` 对象的上下文。|  
 |E_INVALIDARG|上下文为 null。|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|上下文缓冲区因过小。|  
+|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|上下文缓冲区太小。|  
   
-## <a name="exceptions"></a>Exceptions  
+## <a name="exceptions"></a>异常  
   
 ## <a name="remarks"></a>备注  
  此方法不会更改线程的当前上下文。  
   
- 从堆栈查看器，将当前上下文设置为无效的上下文可能会导致不可预知的结果。  
+ 将当前上下文设置为无效上下文可能会导致堆栈查看程序产生不可预知的结果。  
   
- 可以通过立即调用检索此上下文中的一个精确的按位副本[icordebugstackwalk:: Getcontext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)方法。  
+ 可以通过立即调用[ICorDebugStackWalk：： GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)方法来检索此上下文的精确按位副本。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

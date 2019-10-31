@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f74ab4eb-cd1b-407c-a66d-8ec0d85647f3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a874646a6746a9b2fc8ce597e6c1ca47340c199a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d52c19f8663a776215241ddb16f3aa9ba00c0d36
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759642"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137343"
 ---
 # <a name="icordebugmanagedcallbackevalcomplete-method"></a>ICorDebugManagedCallback::EvalComplete 方法
-通知调试器已完成评估。  
+通知调试器已完成计算。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,18 +37,18 @@ HRESULT EvalComplete (
   
 ## <a name="parameters"></a>参数  
  `pAppDomain`  
- [in]指向一个 ICorDebugAppDomain 对象，表示在其中执行计算的应用程序域的指针。  
+ 中指向 ICorDebugAppDomain 对象的指针，该对象表示在其中执行计算的应用程序域。  
   
  `pThread`  
- [in]指向一个 ICorDebugThread 对象，表示在其中执行计算的线程的指针。  
+ 中指向 ICorDebugThread 对象的指针，该对象表示在其中执行计算的线程。  
   
  `pEval`  
- [in]指向一个 ICorDebugEval 对象，表示执行计算的代码的指针。  
+ 中指向 ICorDebugEval 对象的指针，该对象表示执行计算的代码。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

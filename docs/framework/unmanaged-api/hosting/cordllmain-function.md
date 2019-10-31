@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: bc7b51cf-39d3-48ec-a5cb-2f179fbefff8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a02a899fd6fbffd04ef25913adb6a65ade27177
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f60f159ab4770023cee7123b39109040243e1ccd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755657"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136968"
 ---
-# <a name="cordllmain-function"></a>\_CorDllMain 函数
+# <a name="_cordllmain-function"></a>\_CorDllMain 函数
 
-初始化公共语言运行时 (CLR) 中，查找托管的入口点 DLL 程序集 CLR 头中，并开始执行。  
+初始化公共语言运行时（CLR），定位 DLL 程序集的 CLR 头中的托管入口点，然后开始执行。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,33 +37,33 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
   
 ## <a name="parameters"></a>参数  
  `hInst`  
- [in]已加载的模块实例句柄。  
+ 中加载的模块的实例句柄。  
   
  `dwReason`  
- [in]指示调用 DLL 入口点函数。 此参数可以是下列值之一：DLL\_PROCESS_ATTACH、 DLL\_线程\_附加、 DLL\_线程\_附加或 DLL\_过程\_分离。 有关这些值的说明，请参阅`DllMain`Platform SDK 中的文档。  
+ 中指示调用 DLL 入口点函数的原因。 此参数可以是下列值之一： DLL\_PROCESS_ATTACH、DLL\_线程\_ATTACH、DLL\_线程\_ATTACH 或 DLL\_进程\_分离。 有关这些值的说明，请参阅 Platform SDK 中的 `DllMain` 文档。  
   
  `lpReserved`  
- [in]未使用。  
+ 中用.  
   
 ## <a name="return-value"></a>返回值  
- 此方法返回`true`成功和`false`如果发生错误。  
+ 如果发生错误，此方法将返回成功 `true`，并 `false`。  
   
 ## <a name="remarks"></a>备注  
- DLL 程序集由操作系统加载程序调用此函数。 对于可执行程序集，加载程序将调用[ \_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)函数。  
+ 此函数由 DLL 程序集的操作系统加载程序调用。 对于可执行程序集，加载程序将改为调用[\_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)函数。  
   
- 操作系统加载程序调用此方法而不考虑 DLL 文件中指定的入口点。  
+ 操作系统加载程序将调用此方法，而不考虑 DLL 文件中指定的入口点。  
   
-`_CorDllMain`由操作系统加载程序直接调用函数。
+`_CorDllMain` 函数是由操作系统加载程序直接调用的。
   
- 有关其他信息，请参阅中的备注部分[ \_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)主题。  
+ 有关其他信息，请参阅[\_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)主题中的 "备注" 部分。  
   
 ## <a name="requirements"></a>要求  
 
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **标头：** Cor  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

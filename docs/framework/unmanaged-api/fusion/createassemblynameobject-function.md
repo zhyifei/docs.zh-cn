@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55c8b41e-fbe4-4ae0-aa29-68fbb2311691
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fb53014a28fb291b8463535addfb61e62d32d7d6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 00345f6c95c67f0494aa721c662f56a9e98cdd7f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795353"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108712"
 ---
 # <a name="createassemblynameobject-function"></a>CreateAssemblyNameObject 函数
 获取一个接口指针，该指针指向表示具有指定名称的程序集的唯一标识的[IAssemblyName](iassemblyname-interface.md)实例。  
@@ -41,23 +39,23 @@ HRESULT CreateAssemblyNameObject (
   
 ## <a name="parameters"></a>参数  
  `ppAssemblyNameObj`  
- 弄返回`IAssemblyName`的。  
+ 弄返回的 `IAssemblyName`。  
   
  `szAssemblyName`  
- 中要为其创建新`IAssemblyName`实例的程序集的名称。  
+ 中要为其创建新 `IAssemblyName` 实例的程序集的名称。  
   
  `dwFlags`  
  中要传递给对象构造函数的标志。  
   
  `pvReserved`  
- 中保留以供将来进行扩展。 `pvReserved`必须为空引用。  
+ 中保留以供将来进行扩展。 `pvReserved` 必须为空引用。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 合成。h  
   
- **类库**作为资源包括在 Mscoree.dll 中  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5aef6808-5aac-4b2f-a2c7-fee1575c55ed
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 01b000ed3d75ddb6a7882cb8f03ff2cec64fb9fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6becc44b061ff2baac63437b6a72375d1c3735b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767873"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131165"
 ---
 # <a name="eclroperation-enumeration"></a>EClrOperation 枚举
-介绍的一组操作主机可以为其应用策略的操作。  
+描述主机可对其应用策略操作的一组操作。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,33 +38,33 @@ typedef enum {
 } EClrOperation;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`OPR_AppDomainRudeUnload`|主机可以指定策略操作时所要采取<xref:System.AppDomain>卸载非正常 （强制） 的方式。|  
-|`OPR_AppDomainUnload`|主机可以指定策略操作时所要采取<xref:System.AppDomain>卸载。|  
-|`OPR_FinalizerRun`|主机可以指定要执行终结器运行时策略操作。|  
-|`OPR_ProcessExit`|主机可以指定在进程退出时要执行的策略操作。|  
-|`OPR_ThreadAbort`|主机可以指定当线程被中止时要采取的策略操作。|  
-|`OPR_ThreadRudeAbortInCriticalRegion`|主机可以指定策略强制中止线程代码的关键区域中发生时所采取的操作。|  
-|`OPR_ThreadRudeAbortInNonCriticalRegion`|主机可以指定强制中止线程发生在非关键代码区域中时所采取的策略操作。|  
+|`OPR_AppDomainRudeUnload`|当以非正常（强制）方式卸载 <xref:System.AppDomain> 时，主机可以指定要执行的策略操作。|  
+|`OPR_AppDomainUnload`|宿主可以指定卸载 <xref:System.AppDomain> 时要执行的策略操作。|  
+|`OPR_FinalizerRun`|主机可以指定在终结器运行时执行的策略操作。|  
+|`OPR_ProcessExit`|宿主可以指定在进程退出时要执行的策略操作。|  
+|`OPR_ThreadAbort`|宿主可以指定在线程中止时要执行的策略操作。|  
+|`OPR_ThreadRudeAbortInCriticalRegion`|宿主可以指定在关键代码区域发生强制线程中止时要执行的策略操作。|  
+|`OPR_ThreadRudeAbortInNonCriticalRegion`|宿主可以指定在非关键代码区域发生强制线程中止时要执行的策略操作。|  
   
 ## <a name="remarks"></a>备注  
- 公共语言运行时 (CLR) 可靠性基础结构可区分中止和资源的代码和非关键的代码区域中发生的关键区域中发生的分配失败。 这一区别旨在允许设置不同的策略，具体取决于代码中发生故障的主机。  
+ 公共语言运行时（CLR）可靠性基础结构区分关键代码区域发生的中止和资源分配失败，以及在非关键代码区域发生的失败。 这种区别旨在允许主机根据代码中发生故障的位置设置不同的策略。  
   
- 一个*的代码的关键区域*是任何区域，CLR 不能保证该中止任务或无法完成请求的资源将会影响当前的任务。 例如，如果任务持有的锁，并且收到一个 HRESULT，指示在使内存分配请求时失败，其不足，只是无法中止该任务以确保的稳定性<xref:System.AppDomain>，这是因为<xref:System.AppDomain>可能包含其他为同一个锁等待的任务。 若要放弃了当前任务可能会导致这些其他任务停止响应。 在这种情况下，宿主需要能够卸载整个<xref:System.AppDomain>而不是风险潜在的不稳定性。  
+ *关键代码区域*是指 CLR 无法保证中止任务或未能完成资源请求的任何空间都将只影响当前任务。 例如，如果某个任务持有锁，并且收到一个 HRESULT，指示在发出内存分配请求时失败，则只需中止该任务以确保 <xref:System.AppDomain>的稳定性，因为 <xref:System.AppDomain> 可能包含其他任务正在等待相同的锁。 放弃当前任务可能会导致其他任务停止响应。 在这种情况下，主机需要能够卸载整个 <xref:System.AppDomain> 而不是风险潜在的不稳定。  
   
- 一个*的代码的非关键区域*后，就是，CLR 可以保证以中止或失败，会影响仅在其出错的任务的区域。  
+ 另一方面，*非关键的代码区域*是一个区域，在此区域中，CLR 可以保证中止或失败只会影响发生错误的任务。  
   
- CLR 还可区分中止正常和不正常 （强制） 中止。 一般情况下，正常中止会竭尽全力中止任务，而强制中止则没有此类保证之前运行异常处理例程和终结器。  
+ CLR 还可以区分正常和不正常（强制）中止。 通常情况下，正常或正常中止会使每个工作在中止任务之前运行异常处理例程和终结器，而强制中止则不会有这样的保证。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** MSCorEE.dll  
+ **库：** Mscoree.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

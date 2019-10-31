@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e2aae09-49cb-4fbd-81e5-e29cd864a88b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 550d25e995bdfe010fb1aa664a7c9882a775f4d5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 539fa612234c4cc37bed5a8fd4b1e727a35b1d6f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757170"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096389"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>ICorDebugNativeFrame2::IsChild 方法
 确定当前帧是否为子框架。  
@@ -35,26 +33,26 @@ HRESULT IsChild([out] BOOL * pIsChild);
   
 ## <a name="parameters"></a>参数  
  `pIsChild`  
- [out]一个布尔值，该值指定当前帧是否为子框架。  
+ 弄指定当前帧是否为子框架的布尔值。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|成功地返回子状态。|  
-|E_FAIL|不会返回子状态。|  
+|S_OK|已成功返回子状态。|  
+|E_FAIL|无法返回子状态。|  
 |E_INVALIDARG|`pIsChild` 为 null。|  
   
-## <a name="exceptions"></a>Exceptions  
+## <a name="exceptions"></a>异常  
   
 ## <a name="remarks"></a>备注  
- `IsChild`方法将返回`true`框架对象调用该方法是否是另一个帧的子级。 如果这种情况，请使用[IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)方法来检查帧是否作为其父级。  
+ 如果调用方法的帧对象是另一帧的子对象，则 `IsChild` 方法返回 `true`。 如果是这种情况，请使用[IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)方法检查帧是否为其父级。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

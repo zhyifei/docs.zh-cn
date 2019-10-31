@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 3b93bcff-62a4-47b2-babc-6bcf4216119a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1de0b3b05d38c1fec38b9436c653973dfaa4136
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b68f24908a5b214d507da8e8a4636a7c55259604
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739011"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123016"
 ---
-# <a name="efngetmanagedobjectfieldinfo-function"></a>\_EFN\_GetManagedObjectFieldInfo Function
+# <a name="_efn_getmanagedobjectfieldinfo-function"></a>\_EFN\_GetManagedObjectFieldInfo 函数
 使用提供的对象指针和字段名，获取从对象的开头到字段和字段值的偏移量。  
   
 ## <a name="syntax"></a>语法  
@@ -40,31 +38,31 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
   
 ## <a name="parameters"></a>参数  
  `Client`  
- [in]指向调试客户端的指针。  
+ 中指向调试客户端的指针。  
   
  `objAddr`  
- [in]托管的对象指针。  
+ 中托管对象指针。  
   
  szFieldName  
- [in]指向字段名称的托管的对象指针。  
+ 中指向字段名称的托管对象指针。  
   
  `pValue`  
- [out]字段值中。 此参数可以为 null。  
+ 弄字段值。 此参数可以为 null。  
   
  `pOffset`  
- [out]从偏移量`objAddr`的字段。 此参数可以为 null。  
+ 弄从 `objAddr` 到字段的偏移量。 此参数可以为 null。  
   
 ## <a name="remarks"></a>备注  
- 如果偏移量为 0，则编写没有偏移量。  
+ 如果偏移量为0，则不写入偏移量。  
   
- 如果没有任何托管的代码的线程上当前上下文中，该函数返回 HRESULT SOS_E_NOMANAGEDCODE 0xa0 设施值和错误代码为 0x1000。  
+ 如果当前在上下文中的线程上没有托管代码，则该函数将返回 HRESULT SOS_E_NOMANAGEDCODE，其设施值为0xa0，错误代码为0x1000。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** SOS_Stacktrace.h  
+ **标头：** SOS_Stacktrace  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

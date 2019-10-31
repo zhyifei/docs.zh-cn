@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e3226230-964b-47fb-9f53-d6fdbeda1e9e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 92eff65078f05557f542c64c1be7d4f6eca43eb5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7640f7fafd0bf52a302ac0da1e5df39b5da22d68
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738471"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091146"
 ---
 # <a name="iclrdatatarget2allocvirtual-method"></a>ICLRDataTarget2::AllocVirtual 方法
-调用由公共语言运行时 (CLR) 数据访问服务分配此目标进程的地址空间中的内存。  
+由公共语言运行时（CLR）数据访问服务调用，以在此目标进程的地址空间中分配内存。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,29 +39,29 @@ HRESULT AllocVirtual(
   
 ## <a name="parameters"></a>参数  
  `addr`  
- [in]一个`CLRDATA_ADDRESS`值，该值指定要分配的内存请求的起始地址。  
+ 中一个 `CLRDATA_ADDRESS` 值，该值指定要分配的内存的起始地址。  
   
  `size`  
- [in]以字节为单位，并将其分配的内存的大小。  
+ 中要分配的内存的大小（以字节为单位）。  
   
  `typeFlags`  
- [in]控制的内存分配的标志。 请参阅 Win32`VirtualAlloc`函数。  
+ 中控制内存分配的标志。 请参阅 Win32 `VirtualAlloc` 函数。  
   
  `protectFlags`  
- [in]已分配的内存保护属性。 请参阅 Win32`VirtualAlloc`函数。  
+ 中已分配内存的保护特性。 请参阅 Win32 `VirtualAlloc` 函数。  
   
  `virt`  
- [out]一个指向`CLRDATA_ADDRESS`值，该值指定已分配的内存的实际起始地址。  
+ 弄一个指向 `CLRDATA_ADDRESS` 值的指针，该值指定分配的内存的实际起始地址。  
   
 ## <a name="remarks"></a>备注  
- `AllocVirtual`方法用作逻辑包装为 Win32`VirtualAlloc`函数。  
+ `AllocVirtual` 方法用作 Win32 `VirtualAlloc` 函数的逻辑包装。  
   
  此方法由调试应用程序的编写器实现。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** ClrData.idl, ClrData.h  
+ **标头：** ClrData，ClrData  
   
  **库：** CorGuids.lib  
   

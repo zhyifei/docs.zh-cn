@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d218554a-bf42-4d88-833d-ede30de67a53
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 14b10b94f66a6b5434befeac1cd9562cb8a0f27f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d95662167dbc8fcda049fb6a7b3e6ff1dfb6e736
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761555"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130710"
 ---
 # <a name="icordebugmanagedcallbacklogmessage-method"></a>ICorDebugManagedCallback::LogMessage 方法
-通知调试器公共语言运行时 (CLR) 托管线程已调用的一个方法<xref:System.Diagnostics.EventLog>类来记录事件。  
+通知调试器公共语言运行时（CLR）托管线程在 <xref:System.Diagnostics.EventLog> 类中调用了方法来记录事件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,24 +39,24 @@ HRESULT LogMessage (
   
 ## <a name="parameters"></a>参数  
  `pAppDomain`  
- [in]指向一个 ICorDebugAppDomain 对象，表示包含托管的线程记录事件的应用程序域的指针。  
+ 中指向 ICorDebugAppDomain 对象的指针，该对象表示包含记录事件的托管线程的应用程序域。  
   
  `pThread`  
- [in]指向表示托管的线程的 ICorDebugThread 对象的指针。  
+ 中指向 ICorDebugThread 对象的指针，该对象表示托管线程。  
   
  `lLevel`  
- [in]值为[LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md)枚举，指示已写入事件日志的描述性消息的严重性级别。  
+ 中[LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md)枚举的一个值，该值指示写入事件日志的描述性消息的严重性级别。  
   
  `pLogSwitchName`  
- [in]一个指向跟踪开关的名称。  
+ 中指向跟踪开关名称的指针。  
   
  `pMessage`  
- [in]指向已写入事件日志的消息的指针。  
+ 中指向写入事件日志的消息的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

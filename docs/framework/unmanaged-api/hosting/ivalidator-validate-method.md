@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d68666a-fb73-4455-bebd-908d49a16abc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 840a3779ca5692787c2c352db60a29d6a4d4ba4f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8ae47eac713fbee30ea543538957b12460b8e1fc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768587"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123271"
 ---
 # <a name="ivalidatorvalidate-method"></a>IValidator::Validate 方法
-验证指定的可移植可执行 (PE) 或 Microsoft 中间语言 (MSIL) 文件。  
+验证指定的可移植可执行（PE）或 Microsoft 中间语言（MSIL）文件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,34 +42,34 @@ HRESULT Validate (
   
 ## <a name="parameters"></a>参数  
  `veh`  
- [in]一个指向`IVEHandler`处理验证错误的实例。  
+ 中指向处理验证错误的 `IVEHandler` 实例的指针。  
   
  `pAppDomain`  
- [in]指向在其中加载的文件的应用程序域的指针。  
+ 中一个指针，指向要在其中加载文件的应用程序域。  
   
  `ulFlags`  
- [in]按位组合[ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md)值，指示应执行的验证。  
+ 中[ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md)值的按位组合，指示应执行的验证。  
   
  `ulMaxError`  
- [in]最大允许在退出验证之前的错误数。  
+ 中在退出验证之前允许的最大错误数。  
   
  `token`  
- [in]不使用。  
+ 中不使用。  
   
  `fileName`  
- [in]一个字符串，指定要验证的文件的名称。  
+ 中一个字符串，指定要验证的文件的名称。  
   
  `pe`  
- [in]指向在其中存储文件的内存缓冲区的指针。  
+ 中指向存储文件的内存缓冲区的指针。  
   
  `ulSize`  
- [in]以字节为单位，要验证的文件的大小。  
+ 中要验证的文件的大小（以字节为单位）。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** IValidator.idl, IValidator.h  
+ **标头：** IValidator，IValidator  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

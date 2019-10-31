@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a746a849-463c-44f5-a2f0-9e812ed8bcc3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fe34ffded73e8305e4ade3bb9b402b1d8e1bcc49
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e23dfb86c2129a02a0ca95de8c89d8294e97ad81
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764675"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136839"
 ---
 # <a name="createdebugginginterfacefromversion-function"></a>CreateDebuggingInterfaceFromVersion 函数
-创建[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)对象根据指定的版本信息。  
+基于指定的版本信息创建[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)对象。  
   
- 此函数是.NET Framework 4 中已过时。 相反，若要获取公共语言运行时 (CLR) 2.0 接口，请使用[iclrruntimeinfo:: Getinterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)方法并指定类标识符 CLSID_CLRDebuggingLegacy 和 IID_ICorDebug 的接口标识符。 若要获取接口供 CLR 4 或更高版本，调用[CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)函数并指定类标识符 CLSID_CLRDebugging 和 IID_ICLRDebugging 的接口标识符。  
+ 此函数在 .NET Framework 4 中已过时。 相反，若要获取公共语言运行时（CLR）2.0 的接口，请使用[ICLRRuntimeInfo：： GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)方法并指定类标识符 CLSID_CLRDebuggingLegacy 和 Interface 标识符 IID_ICorDebug。 若要获取 CLR 4 或更高版本的接口，请调用[CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)函数并指定类标识符 CLSID_CLRDebugging 和 Interface 标识符 IID_ICLRDebugging。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,31 +39,31 @@ HRESULT CreateDebuggingInterfaceFromVersion (
   
 ## <a name="parameters"></a>参数  
  `iDebuggerVersion`  
- [in]版本的`ICorDebug`这预期的调试器。 请参阅[CorDebugInterfaceVersion](../../../../docs/framework/unmanaged-api/debugging/cordebuginterfaceversion-enumeration.md)枚举为有效的值。  
+ 中调试器所需 `ICorDebug` 的版本。 有关有效值，请参阅[CorDebugInterfaceVersion](../../../../docs/framework/unmanaged-api/debugging/cordebuginterfaceversion-enumeration.md)枚举。  
   
  `szDebuggeeVersion`  
- [in]与要调试的应用程序或进程关联的公共语言运行时版本。 请参阅[GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)或[GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)检索此值的信息的方法。  
+ 中与要调试的应用程序或进程关联的公共语言运行时版本。 有关检索此值的信息，请参阅[GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)或[GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)方法。  
   
  `ppCordb`  
- [out]接收指向指针的位置`ICorDebug`对象。  
+ 弄接收指向 `ICorDebug` 对象的指针的位置。  
   
 ## <a name="return-value"></a>返回值  
- 除了以下值在 WinError.h 文件中定义时，此方法将返回标准 COM 错误代码。  
+ 除以下值外，此方法还返回 Winerror.h 文件中定义的标准 COM 错误代码。  
   
 |返回代码|描述|  
 |-----------------|-----------------|  
 |S_OK|该方法已成功完成。|  
-|E_INVALIDARG|`szDebuggeeVersion` 或`ppCordb`是 null 或版本字符串不正确。|  
+|E_INVALIDARG|`szDebuggeeVersion` 或 `ppCordb` 为 null，或者版本字符串不正确。|  
   
 ## <a name="remarks"></a>备注  
- `szDebuggeeVersion`参数将映射到 MSCorDbi.dll 的相应版本。  
+ `szDebuggeeVersion` 参数将映射到 Mscordbi.dll 的相应版本。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** MSCorEE.dll  
+ **库：** Mscoree.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

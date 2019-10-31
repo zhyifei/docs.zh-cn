@@ -11,14 +11,12 @@ helpviewer_keywords:
 - viewing type information
 - reflection, viewing type information
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a5417f330040c2b6ce08a53920f9a92117624a80
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bf119ff547df59cd369d688fd81ab058893614f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045761"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130019"
 ---
 # <a name="viewing-type-information"></a>查看类型信息
 <xref:System.Type?displayProperty=nameWithType> 类是反射的中心。 当反射提出请求时，公共语言运行时为已加载的类型创建 Type。 可使用 Type 对象的方法、字段、属性和嵌套类来查找该类型的任何信息。  
@@ -26,7 +24,7 @@ ms.locfileid: "71045761"
  使用 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> 从尚未加载的程序集中获取 Type对象，传入所需类型的名称。 使用 <xref:System.Type.GetType%2A?displayProperty=nameWithType> 从已加载的程序集中获取 Type 对象。 使用 <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType> 获取模块 Type 对象。  
   
 > [!NOTE]
-> 要检查和操纵泛型类型及方法，请参阅[反射类型和泛型类型](reflection-and-generic-types.md)和[如何：使用反射检查和实例化泛型类型](how-to-examine-and-instantiate-generic-types-with-reflection.md)中提供的其他信息。  
+> 若要检查和操纵泛型类型及方法，请参阅[反射类型和泛型类型](reflection-and-generic-types.md)和[如何：使用反射检查和实例化泛型类型](how-to-examine-and-instantiate-generic-types-with-reflection.md)中提供的其他信息。  
   
  下列示例演示获取程序集的 <xref:System.Reflection.Assembly> 对象和模块所必需的语法。  
   

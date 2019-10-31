@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 27fae01a-ecec-423a-973e-24f8de55826c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fdf3998d7430348cb71af8e7dd75cf2203d380ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9b9a301714ea60b4e3220eb75721e56e39bd9659
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769029"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139928"
 ---
 # <a name="icordebugthread2getactivefunctions-method"></a>ICorDebugThread2::GetActiveFunctions 方法
-在每个此线程的帧中获取有关活动函数的信息。  
+获取有关此线程的每个帧中的活动函数的信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,22 +41,22 @@ HRESULT GetActiveFunctions (
  [in] `pFunctions` 数组的大小。  
   
  `pcFunctions`  
- [out]指向中返回的对象数的`pFunctions`数组。 返回的对象数目将等于在堆栈上的托管帧数。  
+ 弄一个指针，指向 `pFunctions` 数组中返回的对象数。 返回的对象数将等于堆栈上托管帧的数目。  
   
  `pFunctions`  
- [in、 out]COR_ACTIVE_FUNCTION 对象数组，其中每个包含有关此线程的帧中的活动函数的信息。  
+ [in，out]COR_ACTIVE_FUNCTION 对象的数组，其中每个对象都包含有关此线程的帧中的活动函数的信息。  
   
- 第一个元素将用于叶帧，因此，在返回到堆栈的根。  
+ 第一个元素将用于叶帧，并回到堆栈的根目录。  
   
 ## <a name="remarks"></a>备注  
- 如果`pFunctions`的输入，为 null`GetActiveFunctions`只返回数的函数的堆栈上。 也就是说，如果`pFunctions`的输入，为 null`GetActiveFunctions`返回的值仅在`pcFunctions`。  
+ 如果 `pFunctions` 在输入时为 null，`GetActiveFunctions` 只返回堆栈上的函数数。 也就是说，如果在输入 `pFunctions` 为 null，则 `GetActiveFunctions` 仅在 `pcFunctions`中返回值。  
   
- `GetActiveFunctions`方法旨在作为一种优化，通过从堆栈跟踪中的帧中获取相同信息并包括，则必须 ICorDebugILFrame 对象为其完整的堆栈跟踪中的帧。  
+ `GetActiveFunctions` 方法旨在优化堆栈跟踪中的帧获取相同的信息，并且仅包含在完整堆栈跟踪中具有 ICorDebugILFrame 对象的帧。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

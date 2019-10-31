@@ -14,14 +14,12 @@ helpviewer_keywords:
 - ExecQueryWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b8547d306819e85b838f1160d9912dd43e42f2f3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3c6ea58eca5ac635893a24b57ade261e04a69721
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798684"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130437"
 ---
 # <a name="execquerywmi-function"></a>ExecQueryWmi 函数
 
@@ -58,20 +56,20 @@ HRESULT ExecQueryWmi (
 `lFlags`\
 中影响此函数的行为的标志的组合。 以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
-| 返回的常量 | 值  | 描述  |
+| 返回的常量 | “值”  | 描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 如果设置，则函数将检索存储在当前连接的区域设置的本地化命名空间中的已修改限定符。 <br/> 如果未设置，则函数仅检索直接命名空间中存储的限定符。 |
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | 标志导致半同步调用。 |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | 函数返回一个只进枚举器。 通常，只进枚举器比传统枚举器更快，使用的内存更少，但它们不允许调用[克隆](clone.md)。 |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI 保留指向枚举中的对象的指针，直到它们被释放。 |
-| `WBEM_FLAG_ENSURE_LOCATABLE` | 0x100 | 确保返回的任何对象都有足够的信息， `null`以便不能使用系统属性，例如 **__PATH**、 **__RELPATH**和 **__SERVER**。 |
+| `WBEM_FLAG_ENSURE_LOCATABLE` | 0x100 | 确保返回的任何对象都有足够的信息，以便不 `null`系统属性，如 **__PATH**、 **__RELPATH**和 **__SERVER**。 |
 | `WBEM_FLAG_PROTOTYPE` | 2 | 此标志用于原型制作。 它不执行查询，而是返回类似于典型结果对象的对象。 |
 | `WBEM_FLAG_DIRECT_READ` | 0x200 | 导致为指定的类直接访问提供程序，而不考虑其父类或任何子类。 |
 
-建议的标志`WBEM_FLAG_RETURN_IMMEDIATELY`为， `WBEM_FLAG_FORWARD_ONLY`为获得最佳性能。
+为了获得最佳性能，建议使用 `WBEM_FLAG_RETURN_IMMEDIATELY` 和 `WBEM_FLAG_FORWARD_ONLY`。
 
 `pCtx`\
-中通常，此值为`null`。 否则，它是指向提供请求的类的提供程序可以使用的[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)实例的指针。
+中通常，此值是 `null`的。 否则，它是指向提供请求的类的提供程序可以使用的[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)实例的指针。
 
 `ppEnum`\
 弄如果未发生错误，则接收指向枚举器的指针，该枚举器允许调用方检索查询结果集中的实例。 查询的结果集可以为零。 有关详细信息，请参阅 "[备注](#remarks)" 部分。
@@ -98,7 +96,7 @@ HRESULT ExecQueryWmi (
 
 此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | 用户无权查看函数可以返回的一个或多个类。 |
 | `WBEM_E_FAILED` | 0x80041001 | 发生了未指定的错误。 |
@@ -116,17 +114,17 @@ HRESULT ExecQueryWmi (
 
 此函数包装对[IWbemServices：： ExecQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execquery)方法的调用。
 
-此函数处理`strQuery`参数中指定的查询，并创建一个枚举器，调用方可以通过该枚举器访问查询结果。 枚举器是指向[IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject)接口的指针;查询结果是通过[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)接口提供的类对象的实例。
+此函数处理在 `strQuery` 参数中指定的查询，并创建一个枚举器，调用方可以通过该枚举器访问查询结果。 枚举器是指向[IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject)接口的指针;查询结果是通过[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)接口提供的类对象的实例。
 
-可在 WQL 查询中使用的`AND`和`OR`关键字的数量有限制。 复杂查询中使用大量的 WQL 关键字可能会导致 WMI 以`WBEM_E_QUOTA_VIOLATION` `HRESULT`值的形式返回（或0x8004106c）错误代码。 WQL 关键字的限制取决于查询的复杂程度。
+可用于 WQL 查询的 `AND` 和 `OR` 关键字的数量有限制。 复杂查询中使用大量的 WQL 关键字可能导致 WMI 以 `HRESULT` 值的形式返回 `WBEM_E_QUOTA_VIOLATION` （或0x8004106c）错误代码。 WQL 关键字的限制取决于查询的复杂程度。
 
 如果函数调用失败，可以通过调用[GetErrorInfo](geterrorinfo.md)函数获取其他错误信息。
 
 ## <a name="requirements"></a>要求
 
-**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。
 
-**标头：** WMINet_Utils.idl
+**标头：** WMINet_Utils .idl
 
 **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

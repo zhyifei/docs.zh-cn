@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: c853bb58-c9c5-476b-8e80-608aa53ea18d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 14266f02dd402e81928b72d155f224e10e910592
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c0f236bf6b4d9280945270ada36545cbf0c8a5dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781235"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141432"
 ---
 # <a name="typenamefactory-coclass"></a>TypeNameFactory 组件类
-用于管理类型名称的析构函数中提供的接口。  
+提供用于管理类型名称的析构的接口。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,11 +39,11 @@ coclass TypeNameFactory {
 |[ITypeNameFactory 接口](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)|此接口支持 .NET Framework 基础结构，但不适合直接在代码中使用。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.idl  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

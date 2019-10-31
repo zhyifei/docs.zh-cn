@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c68375d-145d-46ef-a7c8-2dc4257472de
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 46ee21a9fd7b9267672a14107c1706af5d5cdcc5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 402a0e8808b51fd4c09b254114292d4c851b2760
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763573"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129515"
 ---
 # <a name="icordebugmodulegetsize-method"></a>ICorDebugModule::GetSize 方法
-获取用字节表示，该模块的大小。  
+获取模块的大小（以字节为单位）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,14 +35,14 @@ HRESULT GetSize(
   
 ## <a name="parameters"></a>参数  
  `pcBytes`  
- [out]以字节为单位的模块的大小。  
+ 弄模块的大小（以字节为单位）。  
   
- 如果该模块通过本机映像生成器 (NGen.exe) 生成的该模块的大小将为零。  
+ 如果该模块是通过本机映像生成器（Ngen.exe）生成的，则该模块的大小将为零。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

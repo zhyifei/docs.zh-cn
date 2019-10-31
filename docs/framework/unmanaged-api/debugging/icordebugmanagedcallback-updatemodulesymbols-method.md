@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0863f644-58e8-45a0-b0c3-a28e99b20938
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7a15e3ab0d50763ad53b1caa921035239868fec1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f5b413ffbbc8fccbea38f23d8c87d40e010dd37
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761228"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130620"
 ---
 # <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a>ICorDebugManagedCallback::UpdateModuleSymbols 方法
-通知调试器已更改了公共语言运行时模块的符号。  
+通知调试器公共语言运行时模块的符号已发生更改。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,25 +37,25 @@ HRESULT UpdateModuleSymbols (
   
 ## <a name="parameters"></a>参数  
  `pAppDomain`  
- [in]指向一个 ICorDebugAppDomain 对象，表示包含的模块的符号已发生更改的应用程序域的指针。  
+ 中指向 ICorDebugAppDomain 对象的指针，该对象表示包含已更改符号的模块的应用程序域。  
   
  `pModule`  
- [in]指向表示的模块的符号已发生更改的 icor 调试模块对象的指针。  
+ 中指向 ICorDebugModule 对象的指针，该对象表示符号已更改的模块。  
   
  `pSymbolStream`  
- [in]一个指向 Win32 COM`IStream`对象，其中包含已修改的符号。  
+ 中指向 Win32 COM `IStream` 对象的指针，该对象包含已修改的符号。  
   
 ## <a name="remarks"></a>备注  
- 此方法提供了通过调用更新模块的符号的调试器的视图的机会[isymunmanagedreader:: Updatesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)或[isymunmanagedreader:: Replacesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md)。  
+ 此方法通过调用[ISymUnmanagedReader：： UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)或[ISymUnmanagedReader：： ReplaceSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md)，提供更新模块的符号的调试器视图的机会。  
   
- 此回调可多次出现相同的模块。  
+ 对于同一个模块，此回调可能发生多次。  
   
- 调试程序应尝试绑定未绑定的源级别断点。  
+ 调试器应尝试绑定未绑定的源级断点。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

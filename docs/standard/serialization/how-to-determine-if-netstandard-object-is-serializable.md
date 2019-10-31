@@ -1,6 +1,6 @@
 ---
-title: 如何确定.NET 标准对象是否可序列化
-description: 演示如何确定在运行时是否可以序列化.NET Standard 的类型。
+title: 如何确定 .NET Standard 对象是否可以序列化
+description: 演示如何在运行时确定是否可以序列化 .NET Standard 类型。
 ms.date: 10/20/2017
 dev_langs:
 - csharp
@@ -8,27 +8,25 @@ dev_langs:
 helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 196e99ab1f1a0baae53c6a1dc295b135e36fbfe0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87bf863b158fe3b2c03c7a6d23462bc2aabf9966
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018747"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106622"
 ---
-# <a name="how-to-determine-if-a-net-standard-object-is-serializable"></a>如何确定.NET 标准对象是否可序列化
+# <a name="how-to-determine-if-a-net-standard-object-is-serializable"></a>如何确定 .NET Standard 对象是否可以序列化
 
-.NET Standard 是标准的定义的类型和特定于该版本符合的.NET 实现必须存在的成员的规范。 但是，.NET Standard 未定义是否可序列化类型。 在.NET Standard 库中定义的类型不会标记有<xref:System.SerializableAttribute>属性。 相反，特定的.NET 实现，如.NET Framework 和.NET Core 是可用来确定特定类型是否为可序列化。  
+.NET Standard 是一种规范，用于定义符合该标准版本的特定 .NET 实现上必须存在的类型和成员。 但 .NET Standard 不会定义某个类型是否可序列化。 .NET Standard 库中定义的类型未标记 <xref:System.SerializableAttribute> 特性。 具体的 .NET 实现（如 .NET Framework 和 .NET Core）可随意确定特定类型是否可序列化。 
 
-如果你面向的.NET Standard 开发了一个库，你的库可供任何支持.NET Standard 的.NET 实现。 这意味着，您无法事先知道特定类型是否是可序列化;仅可以确定是否可序列化在运行时使用它。
+如果你已开发了面向 .NET Standard 的库，则支持 .NET Standard 的任何 .NET 实现都可以使用你的库。 这意味着你不会提前知道特定类型是否可序列化;只能在运行时确定它是否可序列化。
 
-您可以确定某个对象是否可序列化在运行时检索的值来<xref:System.Type.IsSerializable>属性的<xref:System.Type>对象，表示该对象的类型。 下面的示例提供了一种实现。 它定义`IsSerializable(Object)`扩展方法，该值指示是否有任何<xref:System.Object>实例可序列化。
+可以通过检索表示对象类型的 <xref:System.Type> 对象的 <xref:System.Type.IsSerializable> 属性的值，来确定对象在运行时是否可以序列化。 下面的示例提供了一个实现。 它定义了一个 `IsSerializable(Object)` 扩展方法，用于指示是否可以序列化任何 <xref:System.Object> 实例。
 
 [!code-csharp[is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/csharp/program.cs#2)]
 [!code-vb[is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/vb/library.vb#2)]
 
-然后可以将任何对象传递给该方法以确定它是否可以进行序列化和上当前的.NET 实现中，将如以下示例所示的反序列化：
+然后，可以将任何对象传递给方法，以确定是否可以在当前 .NET 实现上对其进行序列化和反序列化，如下例所示：
 
 [!code-csharp[test-is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/csharp/program.cs#1)]
 [!code-vb[test-is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/vb/program.vb#1)]

@@ -2,14 +2,12 @@
 title: <Namespace>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7be004776d2a2fd3b4c41fb21b3ac244946f2166
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b6d7a45de14d0fb8eb2e27a02c86510f630be9e1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049418"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128267"
 ---
 # <a name="namespace-element-net-native"></a>\<命名空间 > 元素（.NET Native）
 将运行时反射策略应用到一个指定的命名空间中的所有类型。  
@@ -51,13 +49,13 @@ ms.locfileid: "71049418"
   
 ## <a name="name-attribute"></a>Name 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |namespace_name|命名空间名称。 如果 \<Namespace> 元素是 [\<Application>](application-element-net-native.md)、[\<Library>](library-element-net-native.md) 或 [\<Assembly>](assembly-element-net-native.md) 元素的子元素，namespace_name 必须是一个完全限定的命名空间名称。 如果 \<Namespace> 元素是另一个 \<Namespace> 元素的子元素，则 namespace_name 必须是一个相对的命名空间名称。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |policy_setting|该设置将应用这个策略类型到该命名空间的所有类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   

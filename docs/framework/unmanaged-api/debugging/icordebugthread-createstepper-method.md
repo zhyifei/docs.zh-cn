@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4657443f-dd12-431b-a648-175c23f13c83
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95a00e8646589e7897636c1698b7c2647cd233fd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d1b058aef66ed32c2cadcc3cfd72320dd8eb7729
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771805"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133595"
 ---
 # <a name="icordebugthreadcreatestepper-method"></a>ICorDebugThread::CreateStepper 方法
-创建允许逐句通过此 ICorDebugThread 活动帧的 ICorDebugStepper 对象。  
+创建一个 ICorDebugStepper 对象，该对象允许单步执行此 ICorDebugThread 的活动框架。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,17 +35,17 @@ HRESULT CreateStepper (
   
 ## <a name="parameters"></a>参数  
  `ppStepper`  
- [out]指向的地址的指针`ICorDebugStepper`对象，它允许通过此线程的活动帧的单步执行。  
+ 弄指向允许单步执行此线程的活动帧的 `ICorDebugStepper` 对象地址的指针。  
   
 ## <a name="remarks"></a>备注  
- 活动帧可能为非托管的代码。  
+ 活动框架可能是非托管代码。  
   
- `ICorDebugStepper`必须使用接口来执行实际单步执行。  
+ 必须使用 `ICorDebugStepper` 接口来执行实际步进。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

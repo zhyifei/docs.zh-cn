@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b8e15ca-3c72-4685-a937-da4c739cb9e9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38ff08fa7e7db986006c4e0e09b1ac9cf1be801e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 583819e8e7ab16a8ac1ce72892f4353e3043ce3d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767152"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129686"
 ---
 # <a name="icordebugprocess5enablengenpolicy-method"></a>ICorDebugProcess5::EnableNGENPolicy 方法
-设置一个值，确定如何将应用程序加载托管调试器下运行时的本机映像。  
+设置一个值，该值确定应用程序在托管调试器下运行时如何加载本机映像。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,17 +35,17 @@ HRESULT EnableNGENPolicy(
   
 ## <a name="parameters"></a>参数  
  `ePolicy`  
- [in]一个[CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)常量，它确定如何将应用程序加载托管调试器下运行时的本机映像。  
+ 中确定应用程序在托管调试器下运行时如何加载本机映像的[CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)常量。  
   
 ## <a name="remarks"></a>备注  
- 如果已成功设置了策略，该方法返回`S_OK`。 如果`ePolicy`超出定义的枚举值的范围[CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)，该方法将返回`E_INVALIDARG`和方法调用不起作用。 如果无法更新的本机映像生成器 (Ngen.exe) 策略，该方法返回`E_FAIL`。  
+ 如果策略设置成功，则该方法将返回 `S_OK`。 如果 `ePolicy` 超出[CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)定义的枚举值的范围，则该方法将返回 `E_INVALIDARG` 并且方法调用不起作用。 如果无法更新本机映像生成器（Ngen.exe）的策略，该方法将返回 `E_FAIL`。  
   
- `ICorDebugProcess5::EnableNGenPolicy`进程的生存期内随时可以调用方法。 该策略将生效后的策略设置加载的任何模块。  
+ 在进程的生存期内，可以随时调用 `ICorDebugProcess5::EnableNGenPolicy` 方法。 此策略对设置策略后加载的任何模块有效。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

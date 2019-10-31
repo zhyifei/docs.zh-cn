@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 734dc4d1-0a76-4736-b5ac-cb4253b3dd49
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d269414346d8dcf4212fb5ee546cf22228cdd2b0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6b473466aefc06dc83526e65f8ee9e37703ba9e4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765896"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134954"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverification-method"></a>ICLRStrongName::StrongNameSignatureVerification 方法
-获取一个值，该值指示是否在提供的路径处的程序集清单包含强名称签名，验证根据指定的标志。  
+获取一个值，该值指示所提供的路径处的程序集清单是否包含强名称签名，该签名根据指定的标志进行验证。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,37 +37,37 @@ HRESULT StrongNameSignatureVerification (
   
 ## <a name="parameters"></a>参数  
  `wszFilePath`  
- [in]要验证的程序集的可移植可执行文件 （.dll 或.exe） 文件路径。  
+ 中要验证的程序集的可移植可执行文件（.dll 或 .exe）的路径。  
   
  `dwInFlags`  
- [in]若要修改的验证行为的标志。 支持以下值：  
+ 中用于修改验证行为的标志。 支持以下值：  
   
-- `SN_INFLAG_FORCE_VER` (0x00000001)-强制实施验证，即使需要重写注册表设置。  
+- `SN_INFLAG_FORCE_VER` （0x00000001）-即使需要重写注册表设置，也强制进行验证。  
   
-- `SN_INFLAG_INSTALL` (0x00000002)-指定这是首次验证清单。  
+- `SN_INFLAG_INSTALL` （0x00000002）-指定这是第一次验证清单。  
   
-- `SN_INFLAG_ADMIN_ACCESS` (0x00000004)-指定缓存将允许仅对具有管理权限的用户的访问。  
+- `SN_INFLAG_ADMIN_ACCESS` （0x00000004）-指定缓存只允许具有管理权限的用户访问。  
   
-- `SN_INFLAG_USER_ACCESS` (0x00000008)-指定程序集可以访问仅向当前用户。  
+- `SN_INFLAG_USER_ACCESS` （0x00000008）-指定只有当前用户才能访问该程序集。  
   
-- `SN_INFLAG_ALL_ACCESS` (0x00000010)-指定缓存将提供不保证其访问限制。  
+- `SN_INFLAG_ALL_ACCESS` （0x00000010）-指定缓存将不提供访问限制。  
   
-- `SN_INFLAG_RUNTIME` (0x80000000)-保留以用于内部调试。  
+- `SN_INFLAG_RUNTIME` （0x80000000）-保留用于内部调试。  
   
  `pdwOutFlags`  
- [out]标志，该值指示是否已验证强名称签名。 支持以下值：  
+ 弄指示强名称签名是否已验证的标志。 支持以下值：  
   
-- `SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-此值设置为`false`指定注册表设置使验证成功。  
+- `SN_OUTFLAG_WAS_VERIFIED` （0x00000001）-此值设置为 `false` 以指定验证是否已成功（因为注册表设置）。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK` 如果成功，则完成的方法否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。  
+ 如果方法已成功完成，则 `S_OK`;否则，表示失败的 HRESULT 值（请参阅列表的[常见 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MetaHost.h  
+ **标头：** MetaHost  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

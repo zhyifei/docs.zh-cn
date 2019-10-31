@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4401546e-4d48-453f-a1fb-b2ebda54df5c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2455c896ebdc12f2bb92a30d55745f7bd5bc308a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b0a2e5f259fe1ee566f9cc25152b2d2a1f740bea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765529"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120340"
 ---
 # <a name="iclrruntimeinfogetruntimedirectory-method"></a>ICLRRuntimeInfo::GetRuntimeDirectory 方法
-获取与此接口关联的公共语言运行时 (CLR) 的安装目录。  
+获取与此接口关联的公共语言运行时（CLR）的安装目录。  
   
- 此方法取代[GetCORSystemDirectory](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md)在.NET Framework 版本 2.0、 3.0 和 3.5 中提供的函数。  
+ 此方法取代了2.0、3.0 和 3.5 .NET Framework 版本中提供的[GetCORSystemDirectory](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md)函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,10 +37,10 @@ HRESULT GetRuntimeDirectory(
   
 ## <a name="parameters"></a>参数  
  `pwzBuffer`  
- [out]返回 CLR 安装目录。 安装路径是完全限定的;例如，"c:\windows\microsoft.net\framework\v1.0.3705\\"。  
+ 弄返回 CLR 安装目录。 安装路径是完全限定的;例如，"c:\windows\microsoft.net\framework\v1.0.3705\\"。  
   
  `pchBuffer`  
- [in、 out]指定的大小`pwzBuffer`以避免缓冲区溢出。 如果`pwzBuffer`为 null，`pchBuffer`返回的所需的大小`pwzBuffer`。  
+ [in，out]指定 `pwzBuffer` 的大小以避免缓冲区溢出。 如果 `pwzBuffer` 为 null，`pchBuffer` 将返回所需的 `pwzBuffer`大小。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
@@ -55,11 +53,11 @@ HRESULT GetRuntimeDirectory(
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MetaHost.h  
+ **标头：** MetaHost  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

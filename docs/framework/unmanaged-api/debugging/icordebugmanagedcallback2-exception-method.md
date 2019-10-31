@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78b0f14f-2fae-4e63-8412-4df119ee8468
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd707685dfff31644565db18e72dc153d25781f4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f40030a2034057e83de51a21655a686f30b9ee88
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761074"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137446"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception 方法
-通知调试器的异常处理程序的搜索已启动。  
+通知调试器已开始搜索异常处理程序。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,41 +40,41 @@ HRESULT Exception (
   
 ## <a name="parameters"></a>参数  
  `pAppDomain`  
- [in]指向一个 ICorDebugAppDomain 对象，表示包含引发异常的线程的应用程序域的指针。  
+ 中指向 ICorDebugAppDomain 对象的指针，该对象表示包含引发异常的线程的应用程序域。  
   
  `pThread`  
- [in]指向一个 ICorDebugThread 对象，表示引发异常的线程的指针。  
+ 中指向 ICorDebugThread 对象的指针，该对象表示引发异常的线程。  
   
  `pFrame`  
- [in]指向 ICorDebugFrame 对象表示框架，由`dwEventType`参数。 有关详细信息，请参阅备注部分中的表。  
+ 中指向 ICorDebugFrame 对象的指针，该对象表示一个帧，由 `dwEventType` 参数确定。 有关详细信息，请参阅 "备注" 部分中的表。  
   
  `nOffset`  
- [in]一个整数，由指定偏移量，`dwEventType`参数。 有关详细信息，请参阅备注部分中的表。  
+ 中一个整数，指定由 `dwEventType` 参数确定的偏移量。 有关详细信息，请参阅 "备注" 部分中的表。  
   
  `dwEventType`  
- [in]CorDebugExceptionCallbackType 枚举，指定此异常回调类型的值。  
+ 中CorDebugExceptionCallbackType 枚举的一个值，该值指定此异常回调的类型。  
   
  `dwFlags`  
- [in]值为[CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)枚举，用于指定有关异常的其他信息  
+ 中[CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)枚举的一个值，该值指定有关异常的其他信息  
   
 ## <a name="remarks"></a>备注  
- `Exception`异常处理过程在搜索阶段在不同的时间点调用回调。 即，它可以调用多个一次而展开异常。  
+ 在异常处理过程的搜索阶段，会在不同的点调用 `Exception` 回调。 也就是说，可以在展开异常时多次调用它。  
   
- 正在处理的异常可以从所引用的 ICorDebugThread 对象检索`pThread`参数。  
+ 可以从 `pThread` 参数所引用的 ICorDebugThread 对象中检索正在处理的异常。  
   
- 特定帧和偏移量由`dwEventType`参数，如下所示：  
+ 特定的帧和偏移由 `dwEventType` 参数确定，如下所示：  
   
 |`dwEventType` 的值|`pFrame` 的值|`nOffset` 的值|  
 |----------------------------|-----------------------|------------------------|  
-|DEBUG_EXCEPTION_FIRST_CHANCE|引发了异常帧。|在帧中的指令指针。|  
-|DEBUG_EXCEPTION_USER_FIRST_CHANCE|引发的异常点最接近的用户代码帧。|在帧中的指令指针。|  
-|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|包含 catch 处理程序的帧。|开始 catch 处理程序的 Microsoft 中间语言 (MSIL) 偏移量。|  
-|DEBUG_EXCEPTION_UNHANDLED|NULL|未定义。|  
+|DEBUG_EXCEPTION_FIRST_CHANCE|引发异常的帧。|帧中的指令指针。|  
+|DEBUG_EXCEPTION_USER_FIRST_CHANCE|最接近引发的异常点的用户代码框架。|帧中的指令指针。|  
+|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|包含 catch 处理程序的帧。|Catch 处理程序开头的 Microsoft 中间语言（MSIL）偏移量。|  
+|DEBUG_EXCEPTION_UNHANDLED|NULL|尚未.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

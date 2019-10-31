@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6fae3b23-5c9f-47c0-85d8-6bb75e050786
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 80465c8d1f1f9e09c0675de1667b999b332b9f6b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a5cda98cac0bc3fc6fb101fd0404b062224cb578
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738144"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134085"
 ---
 # <a name="icordebuginitialize-method"></a>ICorDebug::Initialize 方法
 初始化 `ICorDebug` 对象。  
@@ -34,12 +32,12 @@ HRESULT Initialize ();
 ```  
   
 ## <a name="remarks"></a>备注  
- 调试器必须调用`Initialize`在创建时时间来初始化调试服务。 必须在任何其他方法之前调用此方法`ICorDebug`调用。  
+ 调试器必须在创建时调用 `Initialize`，才能初始化调试服务。 在调用 `ICorDebug` 上的任何其他方法之前，必须先调用此方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

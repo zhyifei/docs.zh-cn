@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 24a8fcce-317e-48ff-aefc-d86123ada935
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 100688ece4ebb984d3d03823ab01bbaae7d395db
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3fd1686eb268b9d4e347fe28e067a5321327dbd3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760270"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137392"
 ---
 # <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a>ICorDebugManagedCallback::EditAndContinueRemap 方法
-此方法已被否决。 它通知调试器已被重新映射事件发送到集成的开发环境 (IDE)。  
+此方法已被否决。 它通知调试器已将重新映射事件发送到集成开发环境（IDE）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,12 +37,12 @@ HRESULT EditAndContinueRemap (
 ```  
   
 ## <a name="remarks"></a>备注  
- `EditAndContinueRemap`尝试在旧版本的更新函数中的代码执行时调用方法。 公共语言运行时调用`EditAndContinueRemap`方法将重新映射事件发送到 IDE。  
+ 当尝试在旧版本的更新函数中执行代码时，将调用 `EditAndContinueRemap` 方法。 公共语言运行时调用 `EditAndContinueRemap` 方法将重新映射事件发送到 IDE。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

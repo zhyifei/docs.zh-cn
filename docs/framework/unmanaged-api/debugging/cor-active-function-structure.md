@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed86185f-2152-459c-961f-10c06d62e83f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 50dd4acece43628b20b6bc50a539ee197e865855
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: cbc272070e9eb6810b34ec1f3fdc9e944c624cd3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274144"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132385"
 ---
 # <a name="cor_active_function-structure"></a>COR_ACTIVE_FUNCTION 结构
 包含有关在线程框架中当前处于活动状态的函数的信息。 此结构由[ICorDebugThread2：： GetActiveFunctions](icordebugthread2-getactivefunctions-method.md)方法使用。  
@@ -38,22 +36,22 @@ typedef struct  _COR_ACTIVE_FUNCTION {
 } COR_ACTIVE_FUNCTION;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`pAppDomain`|指向`ilOffset`字段的应用程序域所有者的指针。|  
-|`pModule`|指向`ilOffset`字段的模块所有者的指针。|  
-|`pFunction`|指向`ilOffset`字段的函数所有者的指针。|  
+|`pAppDomain`|指向 `ilOffset` 字段的应用程序域所有者的指针。|  
+|`pModule`|指向 `ilOffset` 字段的模块所有者的指针。|  
+|`pFunction`|指向 `ilOffset` 字段的函数所有者的指针。|  
 |`ilOffset`|帧的 Microsoft 中间语言（MSIL）偏移量。|  
 |`flags`|保留以供将来进行扩展。|  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl  
+ **标头：** Cordebug.idl .idl  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

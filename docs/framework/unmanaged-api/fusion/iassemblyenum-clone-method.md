@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0014bb66-590c-486c-9ade-f2133905cd99
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 141e6e303933c46a85adf08339856f8964b21f4e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 34b5f3bd5908d3833a2223b078f8d796234641be
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796693"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134454"
 ---
 # <a name="iassemblyenumclone-method"></a>IAssemblyEnum::Clone 方法
 创建此[IAssemblyEnum](iassemblyenum-interface.md)对象的浅表副本。  
@@ -40,7 +38,7 @@ HRESULT Clone (
  弄指向复制的指针。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 合成。h  
   

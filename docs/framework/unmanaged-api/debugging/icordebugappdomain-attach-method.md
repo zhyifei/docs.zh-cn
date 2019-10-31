@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0358b84a-4236-4c34-945b-4babff7df570
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d30b6cb083cc2f92bcbe089bf8e990fedd8e8f7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 66ec64b1a855a3d31f14f3ef29dde0b82361f5d7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738090"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133987"
 ---
 # <a name="icordebugappdomainattach-method"></a>ICorDebugAppDomain::Attach 方法
 将调试器附加到应用程序域。  
@@ -34,12 +32,12 @@ HRESULT Attach ();
 ```  
   
 ## <a name="remarks"></a>备注  
- 调试器必须附加到应用程序域才能接收事件，并以启用调试的应用程序域。  
+ 调试器必须附加到应用程序域，才能接收事件和启用应用程序域的调试。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

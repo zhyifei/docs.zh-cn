@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetQualifierSet function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 845d5ea93a06859840c87c65b415ead0f846d538
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 489e240af3f26e82f2459ac4b4dbd944639f78fc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798462"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127438"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet 函数
 检索类实例或类定义的限定符集。
@@ -53,12 +51,12 @@ HRESULT GetQualifierSet (
 
 此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 出现一般错误。 |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 指定的方法不存在。 |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存可用来完成此操作。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数为`null`。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数 `null`。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
   
 ## <a name="remarks"></a>备注
@@ -68,9 +66,9 @@ HRESULT GetQualifierSet (
 通过[IWbemQualifierSet 指针](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)，调用方可以添加、编辑或删除这些限定符。 此类添加的、编辑或删除的限定符应用于整个实例或类定义。
 
 ## <a name="requirements"></a>要求  
-**适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标头：** WMINet_Utils.idl  
+ **标头：** WMINet_Utils .idl  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

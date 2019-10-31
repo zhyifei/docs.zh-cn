@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1bdeccb6-0698-4c97-ad69-eae2b69e59f1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e2735d3e0bbcb6326ca8ea87a3358824bca81108
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 277c13895374116eb67f6515f45df638f61b0453
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951190"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140853"
 ---
 # <a name="iclrmetahostpolicy-interface"></a>ICLRMetaHostPolicy 接口
-提供[GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)方法, 该方法根据策略条件、托管程序集、版本和配置文件返回指向公共语言运行时 (CLR) 接口的指针。  
+提供[GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)方法，该方法根据策略条件、托管程序集、版本和配置文件返回指向公共语言运行时（CLR）接口的指针。  
   
 ## <a name="methods"></a>方法  
   
@@ -33,7 +31,7 @@ ms.locfileid: "69951190"
 |[GetRequestedRuntime 方法](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)|提供基于策略标准、托管程序集、版本和配置文件的首选 CLR 接口。|  
   
 ## <a name="remarks"></a>备注  
- 可以通过调用[CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)函数获取对此接口的引用, 如以下代码所示:  
+ 可以通过调用[CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)函数获取对此接口的引用，如以下代码所示：  
   
 ```cpp  
 ICLRMetaHostPolicy *pMetaHostPolicy = NULL;  
@@ -42,16 +40,16 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHostPolicy,
 ```  
   
 > [!NOTE]
-> 此接口实际上不会加载或激活 CLR, 只是根据安装或加载的可用版本返回首选 CLR 版本。  
+> 此接口实际上不会加载或激活 CLR，只是根据安装或加载的可用版本返回首选 CLR 版本。  
   
- .NET Framework 4 托管 API 合并了策略, 因此具有特定需求的主机可以使用基本功能, 而不会产生意外的处罚。 例如, 许多 Mscoree.dll 导出将绑定到特定的 CLR, 不过, 方法可能不会在逻辑上要求它。 [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)枚举提供大部分主机所共有的绑定策略。  
+ .NET Framework 4 托管 API 合并了策略，因此具有特定需求的主机可以使用基本功能，而不会产生意外的处罚。 例如，许多 Mscoree.dll 导出将绑定到特定的 CLR，不过，方法可能不会在逻辑上要求它。 [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)枚举提供大部分主机所共有的绑定策略。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MetaHost.h  
+ **标头：** MetaHost  
   
- **类库**作为资源包括在 Mscoree.dll 中  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

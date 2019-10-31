@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 542cdd81-5ae7-4361-b0ef-1ae4775df258
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5cd2add7e96a8edaff8509563ae1846e80132001
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: faa2082d31c5fa47b87e2238017066b477fdc191
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740097"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132174"
 ---
 # <a name="cordebugexceptionobjectstackframe-structure"></a>CorDebugExceptionObjectStackFrame 结构
 表示异常对象中的堆栈帧信息。  
@@ -37,22 +35,22 @@ typedef struct CorDebugExceptionObjectStackFrame {
 } CorDebugExceptionObjectStackFrame;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`pModule`|指向当前帧的 icor 调试模块对象的指针。|  
-|`ip`|指令指针 (EIP/RIP) 当前帧的值。|  
-|`methodDef`|用于当前帧的方法标记。|  
-|`isLastForeignExceptionFrame`|一个值，指示框架是否外异常中的最后一帧。|  
+|`pModule`|指向当前帧的 ICorDebugModule 对象的指针。|  
+|`ip`|当前帧的指令指针（EIP/裂缝）的值。|  
+|`methodDef`|当前帧的方法标记。|  
+|`isLastForeignExceptionFrame`|一个值，该值指示帧是否为外部异常中的最后一个帧。|  
   
 ## <a name="remarks"></a>备注  
- 不能再使用后，调用方必须释放 icor 调试模块对象的指针。  
+ 当不再使用 ICorDebugModule 对象时，调用方必须释放指向该对象的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

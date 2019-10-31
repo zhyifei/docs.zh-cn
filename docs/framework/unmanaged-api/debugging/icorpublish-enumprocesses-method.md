@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ae765f0-93b2-4b6f-aea1-7b0cf44e04a7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1804a14c1197148afbffb5ec2cb4f29cb9ff019e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f0dd814ad5adfa1b0dd7199530a3f993634a548
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774565"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121794"
 ---
 # <a name="icorpublishenumprocesses-method"></a>ICorPublish::EnumProcesses 方法
-获取此计算机上运行的托管进程的枚举数。  
+获取在此计算机上运行的托管进程的枚举器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,20 +36,20 @@ HRESULT EnumProcesses (
   
 ## <a name="parameters"></a>参数  
  `Type`  
- 值为[COR_PUB_ENUMPROCESS](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md)枚举，用于指定要检索的进程的类型。 在最新版本，仅 COR_PUB_MANAGEDONLY 是有效的。  
+ [COR_PUB_ENUMPROCESS](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md)枚举的一个值，该值指定要检索的进程的类型。 在当前版本中，只有 COR_PUB_MANAGEDONLY 是有效的。  
   
  `ppIEnum`  
- 指向的地址的指针[ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)是进程的枚举器的实例。  
+ 一个指针，指向作为进程枚举器的[ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)实例的地址。  
   
 ## <a name="remarks"></a>备注  
- 枚举器的进程集合基于时正在运行的进程的快照`EnumProcesses`调用方法。 枚举器将不包括任何进程，终止之前或之后开始`EnumProcesses`调用。  
+ 枚举器的进程集合基于在调用 `EnumProcesses` 方法时正在运行的进程的快照。 枚举器将不包含在调用 `EnumProcesses` 之后终止或启动的任何进程。  
   
- `EnumProcesses`不止一次调用方法时可能会对此[ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)实例以创建新的进程的最新集合。 后续调用将不会影响现有集合`EnumProcesses`方法。  
+ 在此[ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)实例上，可以多次调用 `EnumProcesses` 方法，以创建新的最新进程集合。 `EnumProcesses` 方法的后续调用将不会影响现有集合。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorPub.idl CorPub.h  
+ **标头：** CorPub，CorPub  
   
  **库：** CorGuids.lib  
   

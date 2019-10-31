@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36605067-33d3-4579-9c72-fb0e551ab0f1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 41bd4c0bb4e84b6d6f267e24808baafa57f71882
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c622e0eba27f501446d2b7d9d264ee0834e869c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771117"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133621"
 ---
 # <a name="icordebugthreadcreateeval-method"></a>ICorDebugThread::CreateEval 方法
-创建一个 ICorDebugEval 对象，可收集和公开此 ICorDebugThread 的功能。  
+创建一个 ICorDebugEval 对象，该对象收集并公开此 ICorDebugThread 的功能。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,15 +35,15 @@ HRESULT CreateEval (
   
 ## <a name="parameters"></a>参数  
  `ppEval`  
- [out]指向的地址的指针`ICorDebugEval`对象，可收集和公开此线程的功能。  
+ 弄指向收集并公开此线程功能的 `ICorDebugEval` 对象地址的指针。  
   
 ## <a name="remarks"></a>备注  
- 计算对象进行推送新链的线程上执行计算之前。 这会中断当前正在执行的线程上计算完成前计算。  
+ 计算对象在计算之前会在线程上推送新的链。 这会中断当前正在线程上执行的计算，直到完成计算。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

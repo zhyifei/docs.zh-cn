@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4fde4cd0-f53e-4411-a2fe-fc5c54472f95
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38f98b971e430a2c35a4c484f4f9c4bf387c640c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a8856790b655f071df704879a247169f456ae2f5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798953"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130878"
 ---
 # <a name="strongnamesignaturesize-function"></a>StrongNameSignatureSize 函数
-返回强名称签名的大小。 `StrongNameSignatureSize`通常由编译器用来确定在创建延迟签名程序集时要在文件中保留多少空间。  
+返回强名称签名的大小。 当创建延迟签名程序集时，编译器通常使用 `StrongNameSignatureSize` 来确定文件中要保留的空间量。  
   
  此函数已弃用。 改为使用[ICLRStrongName：： StrongNameSignatureSize](../hosting/iclrstrongname-strongnamesignaturesize-method.md)方法。  
   
@@ -43,23 +41,23 @@ BOOLEAN StrongNameSignatureSize (
  中[PublicKeyBlob](publickeyblob-structure.md)类型的结构，它包含用于生成强名称签名的密钥对的公共部分。  
   
  `cbPublicKeyBlob`  
- 中的`pbPublicKeyBlob`大小（以字节为单位）。  
+ 中`pbPublicKeyBlob`的大小（以字节为单位）。  
   
  `pcbSize`  
  中存储强名称签名所需的字节数。  
   
 ## <a name="return-value"></a>返回值  
- `true`成功完成时;否则为`false`。  
+ 成功完成后 `true`;否则，`false`。  
   
 ## <a name="remarks"></a>备注  
- 如果`StrongNameSignatureSize`函数未成功完成，请调用 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 函数来检索上次生成的错误。  
+ 如果 `StrongNameSignatureSize` 函数未成功完成，请调用[StrongNameErrorInfo](strongnameerrorinfo-function.md)函数以检索上次生成的错误。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Stackexchange.redis.strongname  
   
- **类库**作为资源包括在 Mscoree.dll 中  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

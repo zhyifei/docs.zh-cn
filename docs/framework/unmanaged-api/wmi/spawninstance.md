@@ -14,14 +14,12 @@ helpviewer_keywords:
 - SpawnInstance function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 529905bd9286520a8e09479bfc95ef0b614f53e9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f93b4fbd5429ed2bdae8fb707e61df024cd8fd6e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798218"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107514"
 ---
 # <a name="spawninstance-function"></a>SpawnInstance 函数
 创建类的新实例。    
@@ -50,15 +48,15 @@ HRESULT SpawnInstance (
 [in] 保留。 此参数必须为0。
 
 `ppNewInstance`  
-弄接收指向类的新实例的指针。 如果发生错误，则不会返回新的对象， `ppNewInstance`也不会将其保持不变。
+弄接收指向类的新实例的指针。 如果发生错误，则不会返回新的对象，并且 `ppNewInstance` 不会被修改。
 
 ## <a name="return-value"></a>返回值
 
 此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr`不是有效的类定义，无法生成新的实例。 此方法可能是不完整的，也可能是通过调用[PutClassWmi](putclasswmi.md)在 Windows 管理中注册的。 |
+| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` 不是有效的类定义，不能生成新的实例。 此方法可能是不完整的，也可能是通过调用[PutClassWmi](putclasswmi.md)在 Windows 管理中注册的。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存可用来完成此操作。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` 为 `null`。 |
 | `WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
@@ -67,14 +65,14 @@ HRESULT SpawnInstance (
 
 此函数包装对[IWbemClassObject：： SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance)方法的调用。
 
-`ptr`必须是从 Windows Management 获取的类定义。 （请注意，支持从实例生成实例，但返回的实例为空。）然后，使用此类定义来创建新的实例。 如果要将实例写入 Windows 管理，则需要调用[PutInstanceWmi](putinstancewmi.md)函数。
+`ptr` 必须是从 Windows 管理获取的类定义。 （请注意，支持从实例生成实例，但返回的实例为空。）然后，使用此类定义来创建新的实例。 如果要将实例写入 Windows 管理，则需要调用[PutInstanceWmi](putinstancewmi.md)函数。
 
-返回的新对象将`ppNewClass`自动成为当前对象的子类。 不能重写此行为。 没有其他方法可用于创建子类（派生类）。
+`ppNewClass` 中返回的新对象将自动成为当前对象的子类。 不能重写此行为。 没有其他方法可用于创建子类（派生类）。
 
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标头：** WMINet_Utils.idl  
+ **标头：** WMINet_Utils .idl  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

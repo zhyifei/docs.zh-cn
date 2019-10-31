@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ae0cfd73-8ead-4d36-9310-dccaac9db0bd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f7d3325c8aee44849ff1fb7a6cc06a0ed7c2c6f8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f3511ff5ee9b9221037c64a5e17d61f6bf52e5f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769105"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133414"
 ---
 # <a name="icordebugthreadgetuserstate-method"></a>ICorDebugThread::GetUserState 方法
 获取此 ICorDebugThread 的当前用户状态。  
@@ -37,15 +35,15 @@ HRESULT GetUserState (
   
 ## <a name="parameters"></a>参数  
  `pState`  
- [out]一个指向 CorDebugUserState 枚举值，用于描述此线程的当前用户状态的按位组合。  
+ 弄一个指针，指向用于描述此线程当前用户状态的 CorDebugUserState 枚举值的按位组合。  
   
 ## <a name="remarks"></a>备注  
- 用户状态的线程时由正在调试的程序对其进行检查，将线程的状态。 线程可能有多个状态位设置。  
+ 线程的用户状态是由正在调试的程序检查的线程的状态。 线程可能会设置多个状态位。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

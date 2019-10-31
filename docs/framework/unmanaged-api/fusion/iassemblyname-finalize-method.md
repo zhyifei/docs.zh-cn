@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 610e792d-98ef-411f-90b0-5b9a3813f547
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1f2f7ba822507a30fe8cd5303f53406d34661833
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 15c421471704ffc085da2af6ac74350bd099fdb0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796616"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134363"
 ---
 # <a name="iassemblynamefinalize-method"></a>IAssemblyName::Finalize 方法
 允许此[IAssemblyName](iassemblyname-interface.md)对象在调用其析构函数之前释放资源并执行其他清理操作。  
@@ -34,7 +32,7 @@ HRESULT Finalize ();
 ```  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 合成。h  
   

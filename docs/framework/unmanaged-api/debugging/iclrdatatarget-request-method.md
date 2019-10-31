@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4723bd1c-eddb-4ed2-897a-010024a47e01
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5f6926d66a438cfc4fd97d7120e359b737212dde
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e5d7a6b9826a734363d6beeb2e3fab8422964558
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738630"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113357"
 ---
 # <a name="iclrdatatargetrequest-method"></a>ICLRDataTarget::Request 方法
-调用由公共语言运行时 (CLR) 数据访问服务以请求操作，如由实现定义。  
+由公共语言运行时（CLR）数据访问服务调用，用来请求操作，如实现所定义。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,29 +41,29 @@ HRESULT Request (
   
 ## <a name="parameters"></a>参数  
  `reqCode`  
- [in]用户定义。  
+ 中用户定义的。  
   
  `inBufferSize`  
- [in]用于传入请求的输入缓冲区的大小。  
+ 中输入缓冲区的大小，该大小用于传入的请求。  
   
  `inBuffer`  
- [in]包含请求的缓冲区。  
+ 中包含请求的缓冲区。  
   
  `outBufferSize`  
- [in]用于响应的输出缓冲区的大小。  
+ 中用于响应的输出缓冲区的大小。  
   
  `outBuffer`  
- [out]包含响应的缓冲区。  
+ 弄包含响应的缓冲区。  
   
 ## <a name="remarks"></a>备注  
- `Request`方法方便了添加的未指定自定义操作。 也就是说，此方法提供可扩展性而不需要的接口定义的修订版本。  
+ `Request` 方法便于添加未指定的自定义操作。 也就是说，此方法提供了扩展性，无需版本的接口定义。  
   
  此方法由调试应用程序的编写器实现。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** ClrData.idl, ClrData.h  
+ **标头：** ClrData，ClrData  
   
  **库：** CorGuids.lib  
   

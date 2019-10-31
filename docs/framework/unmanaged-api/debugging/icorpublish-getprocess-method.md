@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5143805-2eb7-45b8-85ed-c8fb34df1084
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b2dcdaed34044122dd2a61c9e0b5bb02f8cc0d9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a9d28243e9907fcc6320b2e09a49312bf35a70b4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774271"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121776"
 ---
 # <a name="icorpublishgetprocess-method"></a>ICorPublish::GetProcess 方法
-获取[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)实例，它表示具有指定标识符的进程。  
+获取一个表示具有指定标识符的进程的[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,18 +36,18 @@ HRESULT GetProcess(
   
 ## <a name="parameters"></a>参数  
  `pid`  
- [in]进程的标识符。  
+ 中进程的标识符。  
   
  `ppProcess`  
- [out]指向的地址的指针`ICorPublishProcess`表示进程的实例。  
+ 弄一个指针，指向表示进程的 `ICorPublishProcess` 实例的地址。  
   
 ## <a name="remarks"></a>备注  
- `GetProcess` 如果进程不存在，或不是可调试由当前用户的托管的进程将失败。  
+ 如果进程不存在，或者当前用户无法调试托管进程，则 `GetProcess` 会失败。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorPub.idl CorPub.h  
+ **标头：** CorPub，CorPub  
   
  **库：** CorGuids.lib  
   

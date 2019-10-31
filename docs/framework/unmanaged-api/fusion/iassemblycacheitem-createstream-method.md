@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 697ab0f4-470c-4baa-a415-4a975c42d0d5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5af7dc4e1694b66fc4a5ce37e515c71e9fa3db49
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0660621f465f2ba3610e06bd1df38baa1bc5c907
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796739"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134474"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>IAssemblyCacheItem::CreateStream 方法
 
@@ -59,11 +57,11 @@ HRESULT CreateStream (
 弄指向返回的[IStream](/windows/desktop/api/objidl/nn-objidl-istream)实例的地址的指针。
 
 `puliMaxSize`\
-[in，可选]引用的流的最大大小`ppIStream`。
+[in，可选]`ppIStream`引用的流的最大大小。
 
 ## <a name="requirements"></a>要求
 
-**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。
 
 **标头：** 合成。h
 

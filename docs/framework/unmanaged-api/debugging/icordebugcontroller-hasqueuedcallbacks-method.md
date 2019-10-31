@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d6a1cd9-370b-4462-adbf-e3980e897ea7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d17f51867b64780fca9b21c5f48c88db36343af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 51ee8b3631bffe9fd7fef4351e0aa67d1cbbe2c9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748780"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125389"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a>ICorDebugController::HasQueuedCallbacks 方法
-获取一个值，该值指示是否为指定的线程当前正在排队任何托管的回调。  
+获取一个值，该值指示当前是否为指定线程排队任何托管回调。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,22 +36,22 @@ HRESULT HasQueuedCallbacks (
   
 ## <a name="parameters"></a>参数  
  `pThread`  
- [in]指向一个"ICorDebugThread"对象，表示在线程的指针。  
+ 中指向表示线程的 "ICorDebugThread" 对象的指针。  
   
  `pbQueued`  
- [out]指向一个值，则该值`true`如果任何托管的回调当前都是对指定线程排队; 否则为`false`。  
+ 弄指向一个值的指针，该值在当前为指定线程排队时 `true` 的值;否则，`false`。  
   
- 如果为指定 null`pThread`参数，`HasQueuedCallbacks`将返回`true`托管的回调如果当前排队等待任何线程。  
+ 如果为 `pThread` 参数指定了 null，则如果当前存在托管的回调，则 `HasQueuedCallbacks` 会返回 `true`。  
   
 ## <a name="remarks"></a>备注  
- 回调将是一次，每次执行一个调度[icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)调用。 如果它想要报告同时发生的多个调试事件，则调试器可以检查此标志。  
+ 每次都将调度一个回调，每次调用[ICorDebugController：： Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) 。 如果要报告同时发生的多个调试事件，则调试器可以检查此标志。  
   
- 调试事件排队时，它们已发生了，因此调试器必须清空的调试对象的状态以确保整个队列。 (调用`ICorDebugController::Continue`以清空队列。)例如，如果队列中包含两个线程上的调试事件*X*，调试器将暂停线程*X*后第一个调试事件，然后调用`ICorDebugController::Continue`，调试的第二个事件线程*X*将被调度，尽管线程被挂起。  
+ 调试事件排队后，它们已发生，因此调试器必须释放整个队列，才能确保调试对象的状态。 （调用 `ICorDebugController::Continue` 以排出队列。）例如，如果队列在线程*x*上包含两个调试事件，并且调试器在第一个调试事件之后挂起线程*x* ，然后调用 `ICorDebugController::Continue`，则将调度线程*x*的第二个调试事件，但线程已暂停。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

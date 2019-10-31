@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9be27b0c-1d99-4722-b0d4-40cf6753ce5c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0baabbb736365b138d1754e68070207b4310bf57
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f054f8f2bd7c322e722a1e17290ba6fbad9e37b0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762457"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133508"
 ---
 # <a name="icordebugthreadgetdebugstate-method"></a>ICorDebugThread::GetDebugState 方法
 获取此 ICorDebugThread 对象的当前调试状态。  
@@ -37,15 +35,15 @@ HRESULT GetDebugState (
   
 ## <a name="parameters"></a>参数  
  `pState`  
- [out]指向 CorDebugThreadState 枚举值的按位组合，用于描述此线程的当前调试状态的指针。  
+ 弄一个指针，指向用于描述此线程当前调试状态的 CorDebugThreadState 枚举值的按位组合。  
   
 ## <a name="remarks"></a>备注  
- 如果该进程当前已停止，`pState`表示将存在此线程的进程是否要继续，不该线程的实际当前状态的调试状态。  
+ 如果进程当前已停止，`pState` 表示此线程的调试状态（如果进程继续），而不是此线程的实际当前状态。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

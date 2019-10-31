@@ -8,14 +8,12 @@ helpviewer_keywords:
 - .NET Native
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5993cfdb0f50d8e474a4f18280d181d9ec2fdfa4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1f176e81905fe68c6d740a13240fe814659a7a59
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049659"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128378"
 ---
 # <a name="compiling-apps-with-net-native"></a>使用 .NET Native 编译引用
 
@@ -65,9 +63,9 @@ ms.locfileid: "71049659"
 
 要查看有关带有 .NET Native 代码编译的应用开发的信息，请参阅以下主题：
 
-- [与 .NET Native 代码编译入门：开发人员体验演练](getting-started-with-net-native.md)
+- [.NET Native 代码编译入门：开发者经验介绍](getting-started-with-net-native.md)
 
-- [.NET Native 和编译：](net-native-and-compilation.md).NET Native 如何将项目编译为本机代码。
+- [.NET 本机和编译：](net-native-and-compilation.md) .NET 本机如何将你的项目编译为本机代码。
 
 - [反射和 .NET Native](reflection-and-net-native.md)
 

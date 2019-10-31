@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a247c792-45e1-4538-9e1f-b46acca4a463
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5dc29663153f837b660262eae51b6f032617d027
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 906ca2540e421953b3ce39300aa7b2376f789929
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765067"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137100"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>ICorDebugValue::GetAddress 方法
-获取此"ICorDebugValue"对象，它是正在调试的过程中的地址。  
+获取此 "ICorDebugValue" 对象的地址，该对象处于调试过程中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,15 +35,15 @@ HRESULT GetAddress (
   
 ## <a name="parameters"></a>参数  
  `pAddress`  
- [out]指向`CORDB_ADDRESS`对象，它指定此值对象的地址。  
+ 弄指向 `CORDB_ADDRESS` 对象的指针，该对象指定此值对象的地址。  
   
 ## <a name="remarks"></a>备注  
- 如果值为不可用，则返回 0 （零）。 这可能是如果值为至少一部分在寄存器中或存储在垃圾回收器句柄 (`GCHandle`)。  
+ 如果值不可用，则返回0（零）。 如果值至少部分位于寄存器中或存储在垃圾回收器句柄（`GCHandle`）中，则可能会发生这种情况。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 09daac08-005a-46b2-beab-408d0820c5e5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9659dd835bb60adf8471f73ed45b6588cf15126f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 01e1eafd9955a0876f77e34eb73c2a3fc6d815c2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752596"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139205"
 ---
 # <a name="logginglevelenum-enumeration"></a>LoggingLevelEnum 枚举
 指示在托管线程记录事件时写入事件日志的描述性消息的严重级别。  
@@ -46,31 +44,31 @@ typedef enum LoggingLevelEnum {
 } LoggingLevelEnum;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`LTraceLevel0`|该消息是跟踪级别 0。|  
-|`LTraceLevel1`|该消息是跟踪级别 1。|  
-|`LTraceLevel2`|该消息是跟踪级别 2。|  
-|`LTraceLevel3`|该消息是跟踪级别 3。|  
-|`LTraceLevel4`|该消息是跟踪级别 4。|  
-|`LStatusLevel0`|该消息为状态级别 0。|  
-|`LStatusLevel1`|该消息是状态级别 1。|  
-|`LStatusLevel2`|该消息是状态级别 2。|  
-|`LStatusLevel3`|该消息是状态级别 3。|  
-|`LStatusLevel4`|该消息是状态级别 4。|  
-|`LWarningLevel`|该消息是警告级别。|  
-|`LErrorLevel`|该消息是错误级别。|  
-|`LPanicLevel`|该消息是 panic 级别。|  
+|`LTraceLevel0`|消息为跟踪级别0。|  
+|`LTraceLevel1`|消息为跟踪级别1。|  
+|`LTraceLevel2`|消息为跟踪级别2。|  
+|`LTraceLevel3`|消息为跟踪级别3。|  
+|`LTraceLevel4`|消息为跟踪级别4。|  
+|`LStatusLevel0`|消息为状态级别0。|  
+|`LStatusLevel1`|消息为状态级别1。|  
+|`LStatusLevel2`|消息为状态等级2。|  
+|`LStatusLevel3`|消息为状态级别3。|  
+|`LStatusLevel4`|消息为状态等级4。|  
+|`LWarningLevel`|消息为警告等级。|  
+|`LErrorLevel`|消息为错误级别。|  
+|`LPanicLevel`|消息是一个紧急级别。|  
   
 ## <a name="remarks"></a>备注  
- 公共语言运行时 (CLR) 调用[icordebugmanagedcallback:: Logmessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md)方法以通知调试器托管的线程记录事件。 CLR 将传递的值为`LoggingLevelEnum`枚举来指示托管的线程已写入到事件日志的消息的严重性级别。  
+ 公共语言运行时（CLR）调用[ICorDebugManagedCallback：： LogMessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md)方法来通知调试器，托管线程已记录事件。 CLR 传递一个 `LoggingLevelEnum` 枚举的值，以指示托管线程写入事件日志的消息的严重性级别。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

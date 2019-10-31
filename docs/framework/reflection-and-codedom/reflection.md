@@ -21,14 +21,12 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57f0a13a5e57898add667082d670de39431f940f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1768acd65b738af068cf98a8b8340c3179e9b885
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045876"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130050"
 ---
 # <a name="reflection-in-net"></a>.NET 中的反射
 
@@ -82,7 +80,7 @@ ms.locfileid: "71045876"
 |[如何：将程序集加载到仅反射上下文中](how-to-load-assemblies-into-the-reflection-only-context.md)|描述仅反射的加载上下文。 显示如何加载程序集、如何测试上下文以及如何检查应用到仅反射上下文中的程序集。|  
 |[访问自定义属性](accessing-custom-attributes.md)|演示如何使用反射来查询特性的存在和值。|  
 |[指定完全限定的类型名称](specifying-fully-qualified-type-names.md)|描述 Backus-Naur 形式 (BNF) 的完全限定类型名称的格式，以及指定特殊字符、程序集名称、指针、引用和数组所需的语法。|  
-|[如何：使用反射将委托挂钩](how-to-hook-up-a-delegate-using-reflection.md)|说明如何创建方法的委托并将委托挂钩到事件。 说明如何使用 <xref:System.Reflection.Emit.DynamicMethod> 在运行时创建事件处理方法。|  
+|[如何：使用反射连接委托](how-to-hook-up-a-delegate-using-reflection.md)|说明如何创建方法的委托并将委托挂钩到事件。 说明如何使用 <xref:System.Reflection.Emit.DynamicMethod> 在运行时创建事件处理方法。|  
 |[发出动态方法和程序集](emitting-dynamic-methods-and-assemblies.md)|说明如何生成动态程序集和动态方法。|  
   
 ## <a name="reference"></a>参考  

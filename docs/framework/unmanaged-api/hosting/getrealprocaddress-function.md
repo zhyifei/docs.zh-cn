@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: f1f2fab1-400b-488f-95f2-d49c4fca3556
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0027514392dfbb93ab4189eb7c66a380fb77c1ae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9dffc3d197b05bb71443aa60c101260daabadadd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778161"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136396"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress 函数
-获取指定从最新的安装公共语言运行时 (CLR) 版本导出的函数的地址。  
+获取从最新安装的公共语言运行时（CLR）版本导出的指定函数的地址。  
   
- .NET Framework 4 中已弃用此函数。  
+ 此函数已在 .NET Framework 4 中弃用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,26 +37,26 @@ HRESULT GetRealProcAddress (
   
 ## <a name="parameters"></a>参数  
  `pwszProcName`  
- [in]函数的名称。  
+ 中函数的名称。  
   
  `ppv`  
- [out]接收指向函数的地址的位置。  
+ 弄接收指向函数地址的指针的位置。  
   
 ## <a name="return-value"></a>返回值  
- 此方法返回标准的组件对象模型 (COM) 错误代码，定义在 WinError.h，除了 CorError.h 中定义的以下值。  
+ 除了在 CorError 中定义的以下值，此方法还返回 Winerror.h 中定义的标准组件对象模型（COM）错误代码。  
   
 |返回代码|描述|  
 |-----------------|-----------------|  
 |S_OK|该方法已成功完成。|  
 |E_POINTER|`ppv` 无效。|  
-|CLR_E_SHIM_RUNTIMEEXPORT|不会在运行时中导出函数。|  
+|CLR_E_SHIM_RUNTIMEEXPORT|不从运行时导出函数。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** MSCorEE.dll  
+ **库：** Mscoree.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

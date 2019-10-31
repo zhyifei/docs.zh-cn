@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1dee9781-1cf3-48a9-a376-d18ea1f73280
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e471ee99af57ef980850c0a5d3e4f5f2973967ac
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5f758d76d779cff7db119e69dc1cf3342071f1c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796601"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134339"
 ---
 # <a name="iassemblynamegetname-method"></a>IAssemblyName::GetName 方法
 获取此[IAssemblyName](iassemblyname-interface.md)对象所引用的程序集的简单、未加密名称。  
@@ -38,13 +36,13 @@ HRESULT GetName (
   
 ## <a name="parameters"></a>参数  
  `lpcwBuffer`  
- [in，out]宽字符的`pwzName`大小，包括 null 终止符。  
+ [in，out]宽字符 `pwzName` 的大小，包括 null 终止符。  
   
  `pwzName`  
  弄用于保存所引用程序集的名称的缓冲区。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 合成。h  
   

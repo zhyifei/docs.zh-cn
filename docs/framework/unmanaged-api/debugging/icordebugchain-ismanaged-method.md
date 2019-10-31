@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 17b389a0-1a4d-4e8a-8613-9bc1769930f9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7e14ff1cd85810a0b2f9e14c3ab4c8d12d883d17
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 481f6d08e11a5f315c64b3d58df4ab291fa42e78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745623"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123850"
 ---
 # <a name="icordebugchainismanaged-method"></a>ICorDebugChain::IsManaged 方法
-获取一个值，该值指示此链是否正在运行托管的代码。  
+获取一个值，该值指示此链是否正在运行托管代码。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,12 +35,12 @@ HRESULT IsManaged (
   
 ## <a name="parameters"></a>参数  
  `pManaged`  
- [out]`true`如果此链正在运行托管的代码; 否则为`false`。  
+ [out] 如果此链正在运行托管代码，则 `true`;否则，`false`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

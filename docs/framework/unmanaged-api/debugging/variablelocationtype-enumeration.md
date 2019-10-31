@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8635ee3a-c84b-4626-876c-416bee54f787
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2093466c78b039a06a01e2d850b88ff4543d0ab3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 861d5daa481132d3d6527e8d5fbccfab6436c5fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752459"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139116"
 ---
 # <a name="variablelocationtype-enumeration"></a>VariableLocationType 枚举
 指示变量的本机位置类型。  
@@ -37,21 +35,21 @@ typedef enum VariableLocationType
 } VariableLocationType;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`VLT_REGISTER`|该变量是在寄存器中。|  
-|`VLT_REGISTER_RELATIVE`|该变量是在寄存器相对内存位置。|  
-|`VLT_INVALID`|该变量不存储在寄存器或寄存器相对内存位置。|  
+|`VLT_REGISTER`|变量在寄存器中。|  
+|`VLT_REGISTER_RELATIVE`|变量在寄存器相对内存位置。|  
+|`VLT_INVALID`|变量不存储在寄存器或寄存器相对内存位置中。|  
   
 ## <a name="remarks"></a>备注  
- 成员`VariableLocationType`枚举返回的[ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)方法。  
+ `VariableLocationType` 枚举的成员由[ICorDebugVariableHome：： GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)方法返回。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

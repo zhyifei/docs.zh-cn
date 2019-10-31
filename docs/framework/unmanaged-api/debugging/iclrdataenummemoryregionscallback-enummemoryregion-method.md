@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9bb93fab-57e8-4f9a-9ef3-1794504fa896
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c5c03b7010418f75aff984102d7fa4fb089c4d59
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ebe7ef37fb072e3688cc4dcfa5ed89832e886e9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738817"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122937"
 ---
 # <a name="iclrdataenummemoryregionscallbackenummemoryregion-method"></a>ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion 方法
-调用[iclrdataenummemoryregions:: Enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)向调试器报告尝试枚举指定的内存区域的结果。  
+由[ICLRDataEnumMemoryRegions：： EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)调用，以向调试器报告尝试枚举指定的内存区域的结果。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,20 +36,20 @@ HRESULT EnumMemoryRegion (
   
 ## <a name="parameters"></a>参数  
  `address`  
- [in]是要枚举的内存区域的起始地址。  
+ 中要枚举的内存区域的起始地址。  
   
  `size`  
- [in]以字节为单位的内存区域的大小。  
+ 中内存区域的大小（以字节为单位）。  
   
 ## <a name="remarks"></a>备注  
- `ICLRDataEnumMemoryRegions::EnumMemoryRegions`方法将枚举内存区域的每次尝试后调用此回调方法。 即使此方法返回一个 HRESULT，指示失败，将继续枚举。  
+ `ICLRDataEnumMemoryRegions::EnumMemoryRegions` 方法将在每次尝试枚举内存区域后调用此回调方法。 即使此方法返回一个指示失败的 HRESULT，枚举也将继续。  
   
- 报告此回调的区域可能是重复或重叠区域。  
+ 此回调报告的区域可能是重复区域或重叠区域。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** ClrData.idl, ClrData.h  
+ **标头：** ClrData，ClrData  
   
  **库：** CorGuids.lib  
   

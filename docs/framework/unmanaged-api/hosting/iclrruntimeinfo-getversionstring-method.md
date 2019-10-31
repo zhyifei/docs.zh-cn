@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 98b097ef-2276-4dd9-8551-b03c972e8179
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a886106e5da49e7124dac5c8ea7416859aa441da
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0b6ac83cdd0c88e87fdfd552c76c906a334f8928
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929847"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120304"
 ---
 # <a name="iclrruntimeinfogetversionstring-method"></a>ICLRRuntimeInfo::GetVersionString 方法
-获取与给定的[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)接口相关联的公共语言运行时 (CLR) 版本信息。  
+获取与给定的[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)接口相关联的公共语言运行时（CLR）版本信息。  
   
- 此方法取代了以下函数:  
+ 此方法取代了以下函数：  
   
 - [GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
   
@@ -43,15 +41,15 @@ HRESULT GetVersionString(
   
 ## <a name="parameters"></a>参数  
  `pwzBuffer`  
- 弄"V*A*" 格式的 .NET Framework 编译版本。*B*[.*X*] "。 *A*、 *B*和*X*是与主版本、次版本和生成号对应的十进制数字。 *X*是可选的。 如果*X*不存在, 则没有尾随句点。  
+ 弄"V*A*" 格式的 .NET Framework 编译版本。*B.* [。*X*] "。 *A*、 *B*和*X*是与主版本、次版本和生成号对应的十进制数字。 *X*是可选的。 如果*X*不存在，则没有尾随句点。  
   
 > [!NOTE]
-> 此参数必须匹配 .NET Framework 版本的目录名称, 因为它显示在 C:\Windows\Microsoft.NET\Framework. 下。  
+> 此参数必须匹配 .NET Framework 版本的目录名称，因为它显示在 C:\Windows\Microsoft.NET\Framework. 下。  
   
- 示例值为 "v1.0.3705"、"v 1.1.4322"、"v 2.0.50727" 和 "v4.0"。*x*", 其中*x*依赖于安装的生成号。 请注意, "v" 前缀是必需的。  
+ 示例值为 "v1.0.3705"、"v 1.1.4322"、"v 2.0.50727" 和 "v4.0"。*x*"，其中*x*依赖于安装的生成号。 请注意，"v" 前缀是必需的。  
   
  `pchBuffer`  
- [in, out]指定的大小`pwzBuffer`以避免缓冲区溢出。 如果`pwzBuffer`为`null` `pwzBuffer` ,则返回`pchBuffer`所需的大小以允许预先分配。  
+ [in，out]指定 `pwzBuffer` 的大小以避免缓冲区溢出。 如果 `null``pwzBuffer`，`pchBuffer` 将返回所需的 `pwzBuffer` 大小以允许预先分配。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
@@ -62,11 +60,11 @@ HRESULT GetVersionString(
 |E_POINTER|`pwzBuffer` 或 `pchBuffer` 为 null。|  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MetaHost.h  
+ **标头：** MetaHost  
   
- **类库**作为资源包括在 Mscoree.dll 中  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
