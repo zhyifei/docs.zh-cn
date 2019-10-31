@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: e1968f0b-2675-4dc2-8507-46164e1df154
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 33729e9efa999eb276140ddd2571a4844e15dd6d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8151531e470b149012b2dd4fca918c8937f13918
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770829"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133340"
 ---
-# <a name="icorruntimehostswitchoutlogicalthreadstate-method"></a><span data-ttu-id="dba40-102">ICorRuntimeHost::SwitchOutLogicalThreadState 方法</span><span class="sxs-lookup"><span data-stu-id="dba40-102">ICorRuntimeHost::SwitchOutLogicalThreadState Method</span></span>
-<span data-ttu-id="dba40-103">此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="dba40-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icorruntimehostswitchoutlogicalthreadstate-method"></a><span data-ttu-id="935ad-102">ICorRuntimeHost::SwitchOutLogicalThreadState 方法</span><span class="sxs-lookup"><span data-stu-id="935ad-102">ICorRuntimeHost::SwitchOutLogicalThreadState Method</span></span>
+<span data-ttu-id="935ad-103">此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="935ad-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dba40-104">语法</span><span class="sxs-lookup"><span data-stu-id="dba40-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="935ad-104">语法</span><span class="sxs-lookup"><span data-stu-id="935ad-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SwitchOutLogicalThreadState(  
@@ -35,19 +33,19 @@ HRESULT SwitchOutLogicalThreadState(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="dba40-105">参数</span><span class="sxs-lookup"><span data-stu-id="dba40-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="935ad-105">参数</span><span class="sxs-lookup"><span data-stu-id="935ad-105">Parameters</span></span>  
  `pFiberCookie`  
- <span data-ttu-id="dba40-106">[out]指示被切换出纤程 cookie。</span><span class="sxs-lookup"><span data-stu-id="dba40-106">[out] Cookie that indicates the fiber being switched out.</span></span>  
+ <span data-ttu-id="935ad-106">弄指示要交换的纤程的 Cookie。</span><span class="sxs-lookup"><span data-stu-id="935ad-106">[out] Cookie that indicates the fiber being switched out.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dba40-107">要求</span><span class="sxs-lookup"><span data-stu-id="dba40-107">Requirements</span></span>  
- <span data-ttu-id="dba40-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dba40-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="935ad-107">要求</span><span class="sxs-lookup"><span data-stu-id="935ad-107">Requirements</span></span>  
+ <span data-ttu-id="935ad-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="935ad-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dba40-109">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="dba40-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="935ad-109">**标头：** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="935ad-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="dba40-110">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="dba40-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="935ad-110">**库：** 作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="935ad-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="dba40-111">**.NET framework 版本：** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="dba40-111">**.NET Framework Version:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="935ad-111">**.NET Framework 版本：** 1.0、1。1</span><span class="sxs-lookup"><span data-stu-id="935ad-111">**.NET Framework Version:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dba40-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="dba40-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="935ad-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="935ad-112">See also</span></span>
 
-- [<span data-ttu-id="dba40-113">ICorRuntimeHost 接口</span><span class="sxs-lookup"><span data-stu-id="dba40-113">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="935ad-113">ICorRuntimeHost 接口</span><span class="sxs-lookup"><span data-stu-id="935ad-113">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

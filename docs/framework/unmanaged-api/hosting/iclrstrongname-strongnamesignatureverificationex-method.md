@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: dbd2f662-208b-4174-b301-5c99af91040f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 32d6f3040cbb2070433ad5e3b6117d4b0b212656
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3e4181cbd14674336133314acdcd6cdcf0c9ff6b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765869"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134933"
 ---
-# <a name="iclrstrongnamestrongnamesignatureverificationex-method"></a><span data-ttu-id="8f47c-102">ICLRStrongName::StrongNameSignatureVerificationEx 方法</span><span class="sxs-lookup"><span data-stu-id="8f47c-102">ICLRStrongName::StrongNameSignatureVerificationEx Method</span></span>
-<span data-ttu-id="8f47c-103">获取一个值，该值指示是否在提供的路径处的程序集清单包含强名称签名。</span><span class="sxs-lookup"><span data-stu-id="8f47c-103">Gets a value that indicates whether the assembly manifest at the supplied path contains a strong name signature.</span></span>  
+# <a name="iclrstrongnamestrongnamesignatureverificationex-method"></a><span data-ttu-id="194ca-102">ICLRStrongName::StrongNameSignatureVerificationEx 方法</span><span class="sxs-lookup"><span data-stu-id="194ca-102">ICLRStrongName::StrongNameSignatureVerificationEx Method</span></span>
+<span data-ttu-id="194ca-103">获取一个值，该值指示所提供的路径处的程序集清单是否包含强名称签名。</span><span class="sxs-lookup"><span data-stu-id="194ca-103">Gets a value that indicates whether the assembly manifest at the supplied path contains a strong name signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8f47c-104">语法</span><span class="sxs-lookup"><span data-stu-id="8f47c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="194ca-104">语法</span><span class="sxs-lookup"><span data-stu-id="194ca-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT StrongNameSignatureVerificationEx (  
@@ -37,32 +35,32 @@ HRESULT StrongNameSignatureVerificationEx (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8f47c-105">参数</span><span class="sxs-lookup"><span data-stu-id="8f47c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="194ca-105">参数</span><span class="sxs-lookup"><span data-stu-id="194ca-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="8f47c-106">[in]要验证的程序集的可移植可执行 （.exe 或.dll） 文件的路径。</span><span class="sxs-lookup"><span data-stu-id="8f47c-106">[in] The path to the portable executable (.exe or .dll) file for the assembly to be verified.</span></span>  
+ <span data-ttu-id="194ca-106">中要验证的程序集的可移植可执行文件（.exe 或 .dll）文件的路径。</span><span class="sxs-lookup"><span data-stu-id="194ca-106">[in] The path to the portable executable (.exe or .dll) file for the assembly to be verified.</span></span>  
   
  `fForceVerification`  
- <span data-ttu-id="8f47c-107">[in]`true`来执行验证，即使它是必须重写注册表设置; 否则为`false`。</span><span class="sxs-lookup"><span data-stu-id="8f47c-107">[in] `true` to perform verification, even if it is necessary to override registry settings; otherwise, `false`.</span></span>  
+ <span data-ttu-id="194ca-107">[in] `true` 执行验证，即使需要重写注册表设置，否则，`false`。</span><span class="sxs-lookup"><span data-stu-id="194ca-107">[in] `true` to perform verification, even if it is necessary to override registry settings; otherwise, `false`.</span></span>  
   
  `pfWasVerified`  
- <span data-ttu-id="8f47c-108">[out]`true`强名称签名是否已验证; 否则为`false`。</span><span class="sxs-lookup"><span data-stu-id="8f47c-108">[out] `true` if the strong name signature was verified; otherwise, `false`.</span></span> <span data-ttu-id="8f47c-109">`pfWasVerified` 此外将设置为`false`如果验证成功由于注册表设置。</span><span class="sxs-lookup"><span data-stu-id="8f47c-109">`pfWasVerified` is also set to `false` if the verification was successful due to registry settings.</span></span>  
+ <span data-ttu-id="194ca-108">[out] 如果验证强名称签名，则 `true`;否则，`false`。</span><span class="sxs-lookup"><span data-stu-id="194ca-108">[out] `true` if the strong name signature was verified; otherwise, `false`.</span></span> <span data-ttu-id="194ca-109">如果验证因为注册表设置而成功，则也会将 `pfWasVerified` 设置为 `false`。</span><span class="sxs-lookup"><span data-stu-id="194ca-109">`pfWasVerified` is also set to `false` if the verification was successful due to registry settings.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8f47c-110">返回值</span><span class="sxs-lookup"><span data-stu-id="8f47c-110">Return Value</span></span>  
- <span data-ttu-id="8f47c-111">`S_OK` 如果验证成功;否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。</span><span class="sxs-lookup"><span data-stu-id="8f47c-111">`S_OK` if the verification was successful; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="194ca-110">返回值</span><span class="sxs-lookup"><span data-stu-id="194ca-110">Return Value</span></span>  
+ <span data-ttu-id="194ca-111">如果验证成功，则 `S_OK`;否则，表示失败的 HRESULT 值（请参阅列表的[常见 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。</span><span class="sxs-lookup"><span data-stu-id="194ca-111">`S_OK` if the verification was successful; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8f47c-112">备注</span><span class="sxs-lookup"><span data-stu-id="8f47c-112">Remarks</span></span>  
- <span data-ttu-id="8f47c-113">[Iclrstrongname:: Strongnamesignatureverificationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)方法提供的功能类似于[iclrstrongname:: Strongnamesignatureverification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="8f47c-113">The [ICLRStrongName::StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) method provides a capability similar to the [ICLRStrongName::StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) method.</span></span> <span data-ttu-id="8f47c-114">但是，第二个输入参数和输出参数[iclrstrongname:: Strongnamesignatureverificationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)属于类型`BOOLEAN`而不是`DWORD`。</span><span class="sxs-lookup"><span data-stu-id="8f47c-114">However, the second input parameter and the output parameter for [ICLRStrongName::StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) are of type `BOOLEAN` instead of `DWORD`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="194ca-112">备注</span><span class="sxs-lookup"><span data-stu-id="194ca-112">Remarks</span></span>  
+ <span data-ttu-id="194ca-113">[ICLRStrongName：： StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)方法提供类似于[ICLRStrongName：： StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)方法的功能。</span><span class="sxs-lookup"><span data-stu-id="194ca-113">The [ICLRStrongName::StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) method provides a capability similar to the [ICLRStrongName::StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) method.</span></span> <span data-ttu-id="194ca-114">但是， [ICLRStrongName：： StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)的第二个输入参数和输出参数的类型为 `BOOLEAN`，而不是 `DWORD`。</span><span class="sxs-lookup"><span data-stu-id="194ca-114">However, the second input parameter and the output parameter for [ICLRStrongName::StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) are of type `BOOLEAN` instead of `DWORD`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8f47c-115">要求</span><span class="sxs-lookup"><span data-stu-id="8f47c-115">Requirements</span></span>  
- <span data-ttu-id="8f47c-116">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8f47c-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="194ca-115">要求</span><span class="sxs-lookup"><span data-stu-id="194ca-115">Requirements</span></span>  
+ <span data-ttu-id="194ca-116">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="194ca-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8f47c-117">**标头：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="8f47c-117">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="194ca-117">**标头：** MetaHost</span><span class="sxs-lookup"><span data-stu-id="194ca-117">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="8f47c-118">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="8f47c-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="194ca-118">**库：** 作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="194ca-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="8f47c-119">**.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8f47c-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="194ca-119">**.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="194ca-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8f47c-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="8f47c-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="194ca-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="194ca-120">See also</span></span>
 
-- [<span data-ttu-id="8f47c-121">StrongNameSignatureVerification 方法</span><span class="sxs-lookup"><span data-stu-id="8f47c-121">StrongNameSignatureVerification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)
-- [<span data-ttu-id="8f47c-122">ICLRStrongName 接口</span><span class="sxs-lookup"><span data-stu-id="8f47c-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="194ca-121">StrongNameSignatureVerification 方法</span><span class="sxs-lookup"><span data-stu-id="194ca-121">StrongNameSignatureVerification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)
+- [<span data-ttu-id="194ca-122">ICLRStrongName 接口</span><span class="sxs-lookup"><span data-stu-id="194ca-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

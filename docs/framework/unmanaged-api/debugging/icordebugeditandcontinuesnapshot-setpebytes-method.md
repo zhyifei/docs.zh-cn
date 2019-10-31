@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7235c225-cb6e-49e9-a95b-09a646579841
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b331c3da4b09798c22efa2acfbf711e1f701d990
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fcef35bac71bab49e15eb85baed9c20b7ce5271
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989090"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130419"
 ---
-# <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a><span data-ttu-id="22fdb-102">ICorDebugEditAndContinueSnapshot::SetPEBytes 方法</span><span class="sxs-lookup"><span data-stu-id="22fdb-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Method</span></span>
-<span data-ttu-id="22fdb-103">`SetPEBytes` 已过时。</span><span class="sxs-lookup"><span data-stu-id="22fdb-103">`SetPEBytes` is obsolete.</span></span> <span data-ttu-id="22fdb-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="22fdb-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a><span data-ttu-id="427b3-102">ICorDebugEditAndContinueSnapshot::SetPEBytes 方法</span><span class="sxs-lookup"><span data-stu-id="427b3-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Method</span></span>
+<span data-ttu-id="427b3-103">`SetPEBytes` 已过时。</span><span class="sxs-lookup"><span data-stu-id="427b3-103">`SetPEBytes` is obsolete.</span></span> <span data-ttu-id="427b3-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="427b3-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="22fdb-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="22fdb-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="427b3-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="427b3-105">See also</span></span>
 
-- [<span data-ttu-id="22fdb-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="22fdb-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="427b3-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="427b3-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -12,19 +12,17 @@ f1_keywords:
 helpviewer_keywords:
 - EInitializeNewDomainFlags enumeration [.NET Framework hosting]
 ms.assetid: 3a120ab2-f5ef-4c9b-8595-d3ed7247c342
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d69b12404459de5dbc1c7748deee6ca09c1e5182
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3693285e13d0650f7662e2187471027cc4c40704
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772411"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129418"
 ---
-# <a name="einitializenewdomainflags-enumeration"></a><span data-ttu-id="7ce81-102">EInitializeNewDomainFlags 枚举</span><span class="sxs-lookup"><span data-stu-id="7ce81-102">EInitializeNewDomainFlags Enumeration</span></span>
-<span data-ttu-id="7ce81-103">使宿主能够在运行时提供的应用程序域初始化信息。</span><span class="sxs-lookup"><span data-stu-id="7ce81-103">Enables the host to provide the runtime with information about the initialization of an application domain.</span></span>  
+# <a name="einitializenewdomainflags-enumeration"></a><span data-ttu-id="0e778-102">EInitializeNewDomainFlags 枚举</span><span class="sxs-lookup"><span data-stu-id="0e778-102">EInitializeNewDomainFlags Enumeration</span></span>
+<span data-ttu-id="0e778-103">使宿主能够向运行时提供有关应用程序域初始化的信息。</span><span class="sxs-lookup"><span data-stu-id="0e778-103">Enables the host to provide the runtime with information about the initialization of an application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7ce81-104">语法</span><span class="sxs-lookup"><span data-stu-id="7ce81-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0e778-104">语法</span><span class="sxs-lookup"><span data-stu-id="0e778-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -33,26 +31,26 @@ typedef enum {
 } EInitializeNewDomainFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="7ce81-105">成员</span><span class="sxs-lookup"><span data-stu-id="7ce81-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="0e778-105">Members</span><span class="sxs-lookup"><span data-stu-id="0e778-105">Members</span></span>  
   
-|<span data-ttu-id="7ce81-106">成员</span><span class="sxs-lookup"><span data-stu-id="7ce81-106">Member</span></span>|<span data-ttu-id="7ce81-107">描述</span><span class="sxs-lookup"><span data-stu-id="7ce81-107">Description</span></span>|  
+|<span data-ttu-id="0e778-106">成员</span><span class="sxs-lookup"><span data-stu-id="0e778-106">Member</span></span>|<span data-ttu-id="0e778-107">描述</span><span class="sxs-lookup"><span data-stu-id="0e778-107">Description</span></span>|  
 |------------|-----------------|  
-|`eInitializeNewDomainFlags_None`|<span data-ttu-id="7ce81-108">无标志。</span><span class="sxs-lookup"><span data-stu-id="7ce81-108">No flags.</span></span>|  
-|`eInitializeNewDomainFlags_NoSecurityChanges`|<span data-ttu-id="7ce81-109">通知公共语言运行时 (CLR) 主机中的应用程序域的安全状态将不进行更改<xref:System.AppDomainManager.InitializeNewDomain%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="7ce81-109">Informs the common language runtime (CLR) that the host will not make changes to the security state of the application domain in the <xref:System.AppDomainManager.InitializeNewDomain%2A> method.</span></span>|  
+|`eInitializeNewDomainFlags_None`|<span data-ttu-id="0e778-108">无标志。</span><span class="sxs-lookup"><span data-stu-id="0e778-108">No flags.</span></span>|  
+|`eInitializeNewDomainFlags_NoSecurityChanges`|<span data-ttu-id="0e778-109">通知公共语言运行时（CLR）宿主不会在 <xref:System.AppDomainManager.InitializeNewDomain%2A> 方法中更改应用程序域的安全状态。</span><span class="sxs-lookup"><span data-stu-id="0e778-109">Informs the common language runtime (CLR) that the host will not make changes to the security state of the application domain in the <xref:System.AppDomainManager.InitializeNewDomain%2A> method.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7ce81-110">备注</span><span class="sxs-lookup"><span data-stu-id="7ce81-110">Remarks</span></span>  
- <span data-ttu-id="7ce81-111">[Iclrdomainmanager:: Setappdomainmanagertype](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md)方法采用一个参数类型`EInitializeNewDomainFlags`。</span><span class="sxs-lookup"><span data-stu-id="7ce81-111">The [ICLRDomainManager::SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) method takes a parameter of type `EInitializeNewDomainFlags`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0e778-110">备注</span><span class="sxs-lookup"><span data-stu-id="0e778-110">Remarks</span></span>  
+ <span data-ttu-id="0e778-111">[ICLRDomainManager：： SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md)方法使用 `EInitializeNewDomainFlags`类型的参数。</span><span class="sxs-lookup"><span data-stu-id="0e778-111">The [ICLRDomainManager::SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) method takes a parameter of type `EInitializeNewDomainFlags`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7ce81-112">要求</span><span class="sxs-lookup"><span data-stu-id="7ce81-112">Requirements</span></span>  
- <span data-ttu-id="7ce81-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7ce81-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0e778-112">要求</span><span class="sxs-lookup"><span data-stu-id="0e778-112">Requirements</span></span>  
+ <span data-ttu-id="0e778-113">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0e778-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7ce81-114">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="7ce81-114">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="0e778-114">**标头：** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="0e778-114">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="7ce81-115">**库：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7ce81-115">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="0e778-115">**库：** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="0e778-115">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="7ce81-116">**.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7ce81-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="0e778-116">**.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0e778-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7ce81-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="7ce81-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0e778-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="0e778-117">See also</span></span>
 
-- [<span data-ttu-id="7ce81-118">承载枚举</span><span class="sxs-lookup"><span data-stu-id="7ce81-118">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
-- [<span data-ttu-id="7ce81-119">SetAppDomainManagerType 方法</span><span class="sxs-lookup"><span data-stu-id="7ce81-119">SetAppDomainManagerType Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md)
+- [<span data-ttu-id="0e778-118">承载枚举</span><span class="sxs-lookup"><span data-stu-id="0e778-118">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="0e778-119">SetAppDomainManagerType 方法</span><span class="sxs-lookup"><span data-stu-id="0e778-119">SetAppDomainManagerType Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md)

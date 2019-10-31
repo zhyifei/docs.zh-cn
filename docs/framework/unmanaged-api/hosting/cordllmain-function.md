@@ -14,20 +14,18 @@ helpviewer_keywords:
 ms.assetid: bc7b51cf-39d3-48ec-a5cb-2f179fbefff8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a02a899fd6fbffd04ef25913adb6a65ade27177
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f60f159ab4770023cee7123b39109040243e1ccd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755657"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136968"
 ---
-# <a name="cordllmain-function"></a><span data-ttu-id="b6e69-102">\_CorDllMain 函数</span><span class="sxs-lookup"><span data-stu-id="b6e69-102">\_CorDllMain Function</span></span>
+# <a name="_cordllmain-function"></a><span data-ttu-id="47966-102">\_CorDllMain 函数</span><span class="sxs-lookup"><span data-stu-id="47966-102">\_CorDllMain Function</span></span>
 
-<span data-ttu-id="b6e69-103">初始化公共语言运行时 (CLR) 中，查找托管的入口点 DLL 程序集 CLR 头中，并开始执行。</span><span class="sxs-lookup"><span data-stu-id="b6e69-103">Initializes the common language runtime (CLR), locates the managed entry point in the DLL assembly's CLR header, and begins execution.</span></span>  
+<span data-ttu-id="47966-103">初始化公共语言运行时（CLR），定位 DLL 程序集的 CLR 头中的托管入口点，然后开始执行。</span><span class="sxs-lookup"><span data-stu-id="47966-103">Initializes the common language runtime (CLR), locates the managed entry point in the DLL assembly's CLR header, and begins execution.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b6e69-104">语法</span><span class="sxs-lookup"><span data-stu-id="b6e69-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="47966-104">语法</span><span class="sxs-lookup"><span data-stu-id="47966-104">Syntax</span></span>  
   
 ```cpp  
 BOOL STDMETHODCALLTYPE _CorDllMain (  
@@ -37,38 +35,38 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b6e69-105">参数</span><span class="sxs-lookup"><span data-stu-id="b6e69-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="47966-105">参数</span><span class="sxs-lookup"><span data-stu-id="47966-105">Parameters</span></span>  
  `hInst`  
- <span data-ttu-id="b6e69-106">[in]已加载的模块实例句柄。</span><span class="sxs-lookup"><span data-stu-id="b6e69-106">[in] The instance handle of the loaded module.</span></span>  
+ <span data-ttu-id="47966-106">中加载的模块的实例句柄。</span><span class="sxs-lookup"><span data-stu-id="47966-106">[in] The instance handle of the loaded module.</span></span>  
   
  `dwReason`  
- <span data-ttu-id="b6e69-107">[in]指示调用 DLL 入口点函数。</span><span class="sxs-lookup"><span data-stu-id="b6e69-107">[in]Indicates why the DLL entry-point function is being called.</span></span> <span data-ttu-id="b6e69-108">此参数可以是下列值之一：DLL\_PROCESS_ATTACH、 DLL\_线程\_附加、 DLL\_线程\_附加或 DLL\_过程\_分离。</span><span class="sxs-lookup"><span data-stu-id="b6e69-108">This parameter can be one of the following values: DLL\_PROCESS_ATTACH, DLL\_THREAD\_ATTACH, DLL\_THREAD\_ATTACH, or DLL\_PROCESS\_DETACH.</span></span> <span data-ttu-id="b6e69-109">有关这些值的说明，请参阅`DllMain`Platform SDK 中的文档。</span><span class="sxs-lookup"><span data-stu-id="b6e69-109">For descriptions of these values, see the `DllMain` documentation in the Platform SDK.</span></span>  
+ <span data-ttu-id="47966-107">中指示调用 DLL 入口点函数的原因。</span><span class="sxs-lookup"><span data-stu-id="47966-107">[in]Indicates why the DLL entry-point function is being called.</span></span> <span data-ttu-id="47966-108">此参数可以是下列值之一： DLL\_PROCESS_ATTACH、DLL\_线程\_ATTACH、DLL\_线程\_ATTACH 或 DLL\_进程\_分离。</span><span class="sxs-lookup"><span data-stu-id="47966-108">This parameter can be one of the following values: DLL\_PROCESS_ATTACH, DLL\_THREAD\_ATTACH, DLL\_THREAD\_ATTACH, or DLL\_PROCESS\_DETACH.</span></span> <span data-ttu-id="47966-109">有关这些值的说明，请参阅 Platform SDK 中的 `DllMain` 文档。</span><span class="sxs-lookup"><span data-stu-id="47966-109">For descriptions of these values, see the `DllMain` documentation in the Platform SDK.</span></span>  
   
  `lpReserved`  
- <span data-ttu-id="b6e69-110">[in]未使用。</span><span class="sxs-lookup"><span data-stu-id="b6e69-110">[in] Unused.</span></span>  
+ <span data-ttu-id="47966-110">中用.</span><span class="sxs-lookup"><span data-stu-id="47966-110">[in] Unused.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b6e69-111">返回值</span><span class="sxs-lookup"><span data-stu-id="b6e69-111">Return Value</span></span>  
- <span data-ttu-id="b6e69-112">此方法返回`true`成功和`false`如果发生错误。</span><span class="sxs-lookup"><span data-stu-id="b6e69-112">This method returns `true` for success and `false` if an error occurs.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="47966-111">返回值</span><span class="sxs-lookup"><span data-stu-id="47966-111">Return Value</span></span>  
+ <span data-ttu-id="47966-112">如果发生错误，此方法将返回成功 `true`，并 `false`。</span><span class="sxs-lookup"><span data-stu-id="47966-112">This method returns `true` for success and `false` if an error occurs.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b6e69-113">备注</span><span class="sxs-lookup"><span data-stu-id="b6e69-113">Remarks</span></span>  
- <span data-ttu-id="b6e69-114">DLL 程序集由操作系统加载程序调用此函数。</span><span class="sxs-lookup"><span data-stu-id="b6e69-114">This function is called by the operating system loader for DLL assemblies.</span></span> <span data-ttu-id="b6e69-115">对于可执行程序集，加载程序将调用[ \_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)函数。</span><span class="sxs-lookup"><span data-stu-id="b6e69-115">For executable assemblies, the loader calls the [\_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) function instead.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="47966-113">备注</span><span class="sxs-lookup"><span data-stu-id="47966-113">Remarks</span></span>  
+ <span data-ttu-id="47966-114">此函数由 DLL 程序集的操作系统加载程序调用。</span><span class="sxs-lookup"><span data-stu-id="47966-114">This function is called by the operating system loader for DLL assemblies.</span></span> <span data-ttu-id="47966-115">对于可执行程序集，加载程序将改为调用[\_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)函数。</span><span class="sxs-lookup"><span data-stu-id="47966-115">For executable assemblies, the loader calls the [\_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) function instead.</span></span>  
   
- <span data-ttu-id="b6e69-116">操作系统加载程序调用此方法而不考虑 DLL 文件中指定的入口点。</span><span class="sxs-lookup"><span data-stu-id="b6e69-116">The operating system loader calls this method regardless of the entry point specified in the DLL file.</span></span>  
+ <span data-ttu-id="47966-116">操作系统加载程序将调用此方法，而不考虑 DLL 文件中指定的入口点。</span><span class="sxs-lookup"><span data-stu-id="47966-116">The operating system loader calls this method regardless of the entry point specified in the DLL file.</span></span>  
   
-<span data-ttu-id="b6e69-117">`_CorDllMain`由操作系统加载程序直接调用函数。</span><span class="sxs-lookup"><span data-stu-id="b6e69-117">The `_CorDllMain` function is called directly by the operating system loader.</span></span>
+<span data-ttu-id="47966-117">`_CorDllMain` 函数是由操作系统加载程序直接调用的。</span><span class="sxs-lookup"><span data-stu-id="47966-117">The `_CorDllMain` function is called directly by the operating system loader.</span></span>
   
- <span data-ttu-id="b6e69-118">有关其他信息，请参阅中的备注部分[ \_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)主题。</span><span class="sxs-lookup"><span data-stu-id="b6e69-118">For additional information, see the Remarks section in the [\_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) topic.</span></span>  
+ <span data-ttu-id="47966-118">有关其他信息，请参阅[\_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)主题中的 "备注" 部分。</span><span class="sxs-lookup"><span data-stu-id="47966-118">For additional information, see the Remarks section in the [\_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) topic.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b6e69-119">要求</span><span class="sxs-lookup"><span data-stu-id="b6e69-119">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="47966-119">要求</span><span class="sxs-lookup"><span data-stu-id="47966-119">Requirements</span></span>  
 
- <span data-ttu-id="b6e69-120">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b6e69-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="47966-120">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="47966-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b6e69-121">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b6e69-121">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="47966-121">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="47966-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b6e69-122">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="b6e69-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="47966-122">**库：** 作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="47966-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b6e69-123">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b6e69-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="47966-123">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="47966-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b6e69-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="b6e69-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="47966-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="47966-124">See also</span></span>
 
-- [<span data-ttu-id="b6e69-125">元数据全局静态函数</span><span class="sxs-lookup"><span data-stu-id="b6e69-125">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [<span data-ttu-id="47966-125">元数据全局静态函数</span><span class="sxs-lookup"><span data-stu-id="47966-125">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

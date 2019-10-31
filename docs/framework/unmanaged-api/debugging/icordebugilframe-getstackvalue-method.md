@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 397a4d72-6a87-4f0b-8813-af31af91d68f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5bcc70fd048a2eb90ff9e0a98f3c7b08126dd633
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cb2d6b03af6e7f0b05c595640710850fd446142f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758485"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095126"
 ---
-# <a name="icordebugilframegetstackvalue-method"></a><span data-ttu-id="d3f17-102">ICorDebugILFrame::GetStackValue 方法</span><span class="sxs-lookup"><span data-stu-id="d3f17-102">ICorDebugILFrame::GetStackValue Method</span></span>
-<span data-ttu-id="d3f17-103">此方法尚未实现。</span><span class="sxs-lookup"><span data-stu-id="d3f17-103">This method has not been implemented.</span></span>  
+# <a name="icordebugilframegetstackvalue-method"></a><span data-ttu-id="8c0ef-102">ICorDebugILFrame::GetStackValue 方法</span><span class="sxs-lookup"><span data-stu-id="8c0ef-102">ICorDebugILFrame::GetStackValue Method</span></span>
+<span data-ttu-id="8c0ef-103">此方法尚未实现。</span><span class="sxs-lookup"><span data-stu-id="8c0ef-103">This method has not been implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d3f17-104">语法</span><span class="sxs-lookup"><span data-stu-id="d3f17-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8c0ef-104">语法</span><span class="sxs-lookup"><span data-stu-id="8c0ef-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetStackValue (  
@@ -36,5 +34,5 @@ HRESULT GetStackValue (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="d3f17-105">要求</span><span class="sxs-lookup"><span data-stu-id="d3f17-105">Requirements</span></span>  
- <span data-ttu-id="d3f17-106">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d3f17-106">**Header:** CorDebug.idl, CorDebug.h</span></span>
+## <a name="requirements"></a><span data-ttu-id="8c0ef-105">要求</span><span class="sxs-lookup"><span data-stu-id="8c0ef-105">Requirements</span></span>  
+ <span data-ttu-id="8c0ef-106">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8c0ef-106">**Header:** CorDebug.idl, CorDebug.h</span></span>

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4322a7e23c7085dadb3b2df6c1f72125aa685cef
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec265525d01dab0669939569501fce91b500a900
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756600"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127495"
 ---
-# <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a><span data-ttu-id="7050d-102">ICorDebugHeapValue3::GetThreadOwningMonitorLock 方法</span><span class="sxs-lookup"><span data-stu-id="7050d-102">ICorDebugHeapValue3::GetThreadOwningMonitorLock Method</span></span>
-<span data-ttu-id="7050d-103">返回拥有此对象的监视器锁的托管的线程。</span><span class="sxs-lookup"><span data-stu-id="7050d-103">Returns the managed thread that owns the monitor lock on this object.</span></span>  
+# <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a><span data-ttu-id="10ef0-102">ICorDebugHeapValue3::GetThreadOwningMonitorLock 方法</span><span class="sxs-lookup"><span data-stu-id="10ef0-102">ICorDebugHeapValue3::GetThreadOwningMonitorLock Method</span></span>
+<span data-ttu-id="10ef0-103">返回拥有此对象的监视器锁的托管线程。</span><span class="sxs-lookup"><span data-stu-id="10ef0-103">Returns the managed thread that owns the monitor lock on this object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7050d-104">语法</span><span class="sxs-lookup"><span data-stu-id="7050d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="10ef0-104">语法</span><span class="sxs-lookup"><span data-stu-id="10ef0-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetThreadOwningMonitorLock (  
@@ -36,46 +34,46 @@ HRESULT GetThreadOwningMonitorLock (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7050d-105">参数</span><span class="sxs-lookup"><span data-stu-id="7050d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="10ef0-105">参数</span><span class="sxs-lookup"><span data-stu-id="10ef0-105">Parameters</span></span>  
  `ppThread`  
- <span data-ttu-id="7050d-106">[out]拥有此对象的监视器锁的托管的线程。</span><span class="sxs-lookup"><span data-stu-id="7050d-106">[out] The managed thread that owns the monitor lock on this object.</span></span>  
+ <span data-ttu-id="10ef0-106">弄拥有此对象的监视器锁的托管线程。</span><span class="sxs-lookup"><span data-stu-id="10ef0-106">[out] The managed thread that owns the monitor lock on this object.</span></span>  
   
  `pAcquisitionCount`  
- <span data-ttu-id="7050d-107">[out]此线程必须返回到正在没有所有者之前释放锁次数。</span><span class="sxs-lookup"><span data-stu-id="7050d-107">[out] The number of times this thread would have to release the lock before it returns to being unowned.</span></span>  
+ <span data-ttu-id="10ef0-107">弄此线程在返回为无所有者之前必须释放该锁的次数。</span><span class="sxs-lookup"><span data-stu-id="10ef0-107">[out] The number of times this thread would have to release the lock before it returns to being unowned.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7050d-108">返回值</span><span class="sxs-lookup"><span data-stu-id="7050d-108">Return Value</span></span>  
- <span data-ttu-id="7050d-109">此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。</span><span class="sxs-lookup"><span data-stu-id="7050d-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="10ef0-108">返回值</span><span class="sxs-lookup"><span data-stu-id="10ef0-108">Return Value</span></span>  
+ <span data-ttu-id="10ef0-109">此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。</span><span class="sxs-lookup"><span data-stu-id="10ef0-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="7050d-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7050d-110">HRESULT</span></span>|<span data-ttu-id="7050d-111">描述</span><span class="sxs-lookup"><span data-stu-id="7050d-111">Description</span></span>|  
+|<span data-ttu-id="10ef0-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="10ef0-110">HRESULT</span></span>|<span data-ttu-id="10ef0-111">描述</span><span class="sxs-lookup"><span data-stu-id="10ef0-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="7050d-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="7050d-112">S_OK</span></span>|<span data-ttu-id="7050d-113">该方法已成功完成。</span><span class="sxs-lookup"><span data-stu-id="7050d-113">The method completed successfully.</span></span>|  
-|<span data-ttu-id="7050d-114">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="7050d-114">S_FALSE</span></span>|<span data-ttu-id="7050d-115">没有任何托管的线程拥有对此对象的监视器锁。</span><span class="sxs-lookup"><span data-stu-id="7050d-115">No managed thread owns the monitor lock on this object.</span></span>|  
+|<span data-ttu-id="10ef0-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="10ef0-112">S_OK</span></span>|<span data-ttu-id="10ef0-113">该方法已成功完成。</span><span class="sxs-lookup"><span data-stu-id="10ef0-113">The method completed successfully.</span></span>|  
+|<span data-ttu-id="10ef0-114">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="10ef0-114">S_FALSE</span></span>|<span data-ttu-id="10ef0-115">没有托管线程拥有此对象的监视器锁。</span><span class="sxs-lookup"><span data-stu-id="10ef0-115">No managed thread owns the monitor lock on this object.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="7050d-116">Exceptions</span><span class="sxs-lookup"><span data-stu-id="7050d-116">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="10ef0-116">异常</span><span class="sxs-lookup"><span data-stu-id="10ef0-116">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7050d-117">备注</span><span class="sxs-lookup"><span data-stu-id="7050d-117">Remarks</span></span>  
- <span data-ttu-id="7050d-118">如果托管的线程拥有对此对象的监视器锁：</span><span class="sxs-lookup"><span data-stu-id="7050d-118">If a managed thread owns the monitor lock on this object:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="10ef0-117">备注</span><span class="sxs-lookup"><span data-stu-id="10ef0-117">Remarks</span></span>  
+ <span data-ttu-id="10ef0-118">如果托管线程拥有此对象的监视器锁：</span><span class="sxs-lookup"><span data-stu-id="10ef0-118">If a managed thread owns the monitor lock on this object:</span></span>  
   
-- <span data-ttu-id="7050d-119">该方法返回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="7050d-119">The method returns S_OK.</span></span>  
+- <span data-ttu-id="10ef0-119">方法返回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="10ef0-119">The method returns S_OK.</span></span>  
   
-- <span data-ttu-id="7050d-120">在线程退出之前的线程对象有效。</span><span class="sxs-lookup"><span data-stu-id="7050d-120">The thread object is valid until the thread exits.</span></span>  
+- <span data-ttu-id="10ef0-120">线程对象在线程退出之前有效。</span><span class="sxs-lookup"><span data-stu-id="10ef0-120">The thread object is valid until the thread exits.</span></span>  
   
- <span data-ttu-id="7050d-121">如果没有任何托管的线程拥有对此对象的监视器锁`ppThread`和`pAcquisitionCount`保持不变，并且该方法返回 S_FALSE。</span><span class="sxs-lookup"><span data-stu-id="7050d-121">If no managed thread owns the monitor lock on this object, `ppThread` and `pAcquisitionCount` are unchanged, and the method returns S_FALSE.</span></span>  
+ <span data-ttu-id="10ef0-121">如果没有托管线程拥有此对象的监视器锁，`ppThread` 和 `pAcquisitionCount` 会保持不变，并且方法将返回 S_FALSE。</span><span class="sxs-lookup"><span data-stu-id="10ef0-121">If no managed thread owns the monitor lock on this object, `ppThread` and `pAcquisitionCount` are unchanged, and the method returns S_FALSE.</span></span>  
   
- <span data-ttu-id="7050d-122">如果`ppThread`或`pAcquisitionCount`不是有效的指针，则结果不可确定。</span><span class="sxs-lookup"><span data-stu-id="7050d-122">If `ppThread` or `pAcquisitionCount` is not a valid pointer, the result is undefined.</span></span>  
+ <span data-ttu-id="10ef0-122">如果 `ppThread` 或 `pAcquisitionCount` 不是有效的指针，则结果是不确定的。</span><span class="sxs-lookup"><span data-stu-id="10ef0-122">If `ppThread` or `pAcquisitionCount` is not a valid pointer, the result is undefined.</span></span>  
   
- <span data-ttu-id="7050d-123">出错时，不能确定，如果有，线程拥有对此对象的监视器锁的方法将返回一个 HRESULT，指示失败。</span><span class="sxs-lookup"><span data-stu-id="7050d-123">If an error occurs such that it cannot be determined which, if any, thread owns the monitor lock on this object, the method returns an HRESULT that indicates failure.</span></span>  
+ <span data-ttu-id="10ef0-123">如果发生错误，因此无法确定线程（如果有）线程拥有此对象的监视器锁，则方法将返回指示失败的 HRESULT。</span><span class="sxs-lookup"><span data-stu-id="10ef0-123">If an error occurs such that it cannot be determined which, if any, thread owns the monitor lock on this object, the method returns an HRESULT that indicates failure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7050d-124">要求</span><span class="sxs-lookup"><span data-stu-id="7050d-124">Requirements</span></span>  
- <span data-ttu-id="7050d-125">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7050d-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="10ef0-124">要求</span><span class="sxs-lookup"><span data-stu-id="10ef0-124">Requirements</span></span>  
+ <span data-ttu-id="10ef0-125">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="10ef0-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7050d-126">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7050d-126">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="10ef0-126">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="10ef0-126">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="7050d-127">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7050d-127">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="10ef0-127">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="10ef0-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7050d-128">**.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7050d-128">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="10ef0-128">**.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="10ef0-128">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7050d-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="7050d-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="10ef0-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="10ef0-129">See also</span></span>
 
-- [<span data-ttu-id="7050d-130">调试接口</span><span class="sxs-lookup"><span data-stu-id="7050d-130">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="7050d-131">调试</span><span class="sxs-lookup"><span data-stu-id="7050d-131">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="10ef0-130">调试接口</span><span class="sxs-lookup"><span data-stu-id="10ef0-130">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="10ef0-131">调试</span><span class="sxs-lookup"><span data-stu-id="10ef0-131">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

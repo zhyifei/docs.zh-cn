@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: b419dcc9-e8aa-484b-af0d-0f40358edb99
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 523f90966501e06994fb0e11b3c77aa62c378eef
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 37c02b878cd52034603ab6cafe4d8aaca594cbe9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770461"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126886"
 ---
-# <a name="iappdomainbindingonappdomain-method"></a><span data-ttu-id="5da5a-102">IAppDomainBinding::OnAppDomain 方法</span><span class="sxs-lookup"><span data-stu-id="5da5a-102">IAppDomainBinding::OnAppDomain Method</span></span>
-<span data-ttu-id="5da5a-103">由公共语言运行时 (CLR)，用于通知宿主已创建的应用程序域调用。</span><span class="sxs-lookup"><span data-stu-id="5da5a-103">Called by the common language runtime (CLR) to notify the host that an application domain has been created.</span></span>  
+# <a name="iappdomainbindingonappdomain-method"></a><span data-ttu-id="47db6-102">IAppDomainBinding::OnAppDomain 方法</span><span class="sxs-lookup"><span data-stu-id="47db6-102">IAppDomainBinding::OnAppDomain Method</span></span>
+<span data-ttu-id="47db6-103">由公共语言运行时（CLR）调用，用于通知主机已创建应用程序域。</span><span class="sxs-lookup"><span data-stu-id="47db6-103">Called by the common language runtime (CLR) to notify the host that an application domain has been created.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5da5a-104">语法</span><span class="sxs-lookup"><span data-stu-id="5da5a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="47db6-104">语法</span><span class="sxs-lookup"><span data-stu-id="47db6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT OnAppDomain (  
@@ -35,19 +33,19 @@ HRESULT OnAppDomain (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5da5a-105">参数</span><span class="sxs-lookup"><span data-stu-id="5da5a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="47db6-105">参数</span><span class="sxs-lookup"><span data-stu-id="47db6-105">Parameters</span></span>  
  `pAppdomain`  
- <span data-ttu-id="5da5a-106">[in]一个指向[IUnknown](/cpp/atl/iunknown)接口对象，表示新的应用程序域。</span><span class="sxs-lookup"><span data-stu-id="5da5a-106">[in] A pointer to an [IUnknown](/cpp/atl/iunknown) interface object that represents the new application domain.</span></span>  
+ <span data-ttu-id="47db6-106">中指向[IUnknown](/cpp/atl/iunknown)接口对象的指针，该对象表示新的应用程序域。</span><span class="sxs-lookup"><span data-stu-id="47db6-106">[in] A pointer to an [IUnknown](/cpp/atl/iunknown) interface object that represents the new application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5da5a-107">要求</span><span class="sxs-lookup"><span data-stu-id="5da5a-107">Requirements</span></span>  
- <span data-ttu-id="5da5a-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5da5a-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="47db6-107">要求</span><span class="sxs-lookup"><span data-stu-id="47db6-107">Requirements</span></span>  
+ <span data-ttu-id="47db6-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="47db6-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5da5a-109">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5da5a-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="47db6-109">**标头：** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="47db6-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="5da5a-110">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="5da5a-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="47db6-110">**库：** 作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="47db6-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="5da5a-111">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5da5a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="47db6-111">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="47db6-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5da5a-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="5da5a-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="47db6-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="47db6-112">See also</span></span>
 
-- [<span data-ttu-id="5da5a-113">IAppDomainBinding 接口</span><span class="sxs-lookup"><span data-stu-id="5da5a-113">IAppDomainBinding Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-interface.md)
+- [<span data-ttu-id="47db6-113">IAppDomainBinding 接口</span><span class="sxs-lookup"><span data-stu-id="47db6-113">IAppDomainBinding Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-interface.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7212d9f4-989b-44e3-b8d4-ffc35922f6a0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 88277be93d3a0e445e97217655d3d524962dd01d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1216629fc7e1c3e720d5f296b9293b3c4b7f8721
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764219"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127897"
 ---
-# <a name="icordebugmodule2getjitcompilerflags-method"></a><span data-ttu-id="d1271-102">ICorDebugModule2::GetJITCompilerFlags 方法</span><span class="sxs-lookup"><span data-stu-id="d1271-102">ICorDebugModule2::GetJITCompilerFlags Method</span></span>
-<span data-ttu-id="d1271-103">获取控制此 ICorDebugModule2 实时 (JIT) 编译的标志。</span><span class="sxs-lookup"><span data-stu-id="d1271-103">Gets the flags that control the just-in-time (JIT) compilation of this ICorDebugModule2.</span></span>  
+# <a name="icordebugmodule2getjitcompilerflags-method"></a><span data-ttu-id="a9885-102">ICorDebugModule2::GetJITCompilerFlags 方法</span><span class="sxs-lookup"><span data-stu-id="a9885-102">ICorDebugModule2::GetJITCompilerFlags Method</span></span>
+<span data-ttu-id="a9885-103">获取用于控制此 ICorDebugModule2 的实时（JIT）编译的标志。</span><span class="sxs-lookup"><span data-stu-id="a9885-103">Gets the flags that control the just-in-time (JIT) compilation of this ICorDebugModule2.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d1271-104">语法</span><span class="sxs-lookup"><span data-stu-id="d1271-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a9885-104">语法</span><span class="sxs-lookup"><span data-stu-id="a9885-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetJITCompilerFlags (  
@@ -35,15 +33,15 @@ HRESULT GetJITCompilerFlags (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d1271-105">参数</span><span class="sxs-lookup"><span data-stu-id="d1271-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a9885-105">参数</span><span class="sxs-lookup"><span data-stu-id="a9885-105">Parameters</span></span>  
  `pdwFlags`  
- <span data-ttu-id="d1271-106">[out]指向的值的指针[CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)控制 JIT 编译的枚举。</span><span class="sxs-lookup"><span data-stu-id="d1271-106">[out] A pointer to a value of the [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeration that controls the JIT compilation.</span></span>  
+ <span data-ttu-id="a9885-106">弄指向控制 JIT 编译的[CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)枚举的值的指针。</span><span class="sxs-lookup"><span data-stu-id="a9885-106">[out] A pointer to a value of the [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeration that controls the JIT compilation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d1271-107">要求</span><span class="sxs-lookup"><span data-stu-id="d1271-107">Requirements</span></span>  
- <span data-ttu-id="d1271-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d1271-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a9885-107">要求</span><span class="sxs-lookup"><span data-stu-id="a9885-107">Requirements</span></span>  
+ <span data-ttu-id="a9885-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a9885-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d1271-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d1271-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a9885-109">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a9885-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d1271-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d1271-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a9885-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a9885-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d1271-111">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d1271-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="a9885-111">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a9885-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

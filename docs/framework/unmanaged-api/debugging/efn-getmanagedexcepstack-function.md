@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 21ceed9e-62b2-4024-b027-6d095109955a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 61f4e057a487462feb385ca0e3ca977fdd165f56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9bcc03cc97a62b4c1cadacd7c0b2bc46b9fec470
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739091"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134131"
 ---
-# <a name="efngetmanagedexcepstack-function"></a><span data-ttu-id="d5e19-102">\_EFN\_GetManagedExcepStack Function</span><span class="sxs-lookup"><span data-stu-id="d5e19-102">\_EFN\_GetManagedExcepStack Function</span></span>
-<span data-ttu-id="d5e19-103">给定托管的异常对象地址后，将返回其中包含的堆栈跟踪的字符串版本。</span><span class="sxs-lookup"><span data-stu-id="d5e19-103">Given a managed exception object address, returns a string version of the stack trace contained inside.</span></span>  
+# <a name="_efn_getmanagedexcepstack-function"></a><span data-ttu-id="34562-102">\_EFN\_GetManagedExcepStack 函数</span><span class="sxs-lookup"><span data-stu-id="34562-102">\_EFN\_GetManagedExcepStack Function</span></span>
+<span data-ttu-id="34562-103">给定托管的异常对象地址后，将返回其中包含的堆栈跟踪的字符串版本。</span><span class="sxs-lookup"><span data-stu-id="34562-103">Given a managed exception object address, returns a string version of the stack trace contained inside.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d5e19-104">语法</span><span class="sxs-lookup"><span data-stu-id="d5e19-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="34562-104">语法</span><span class="sxs-lookup"><span data-stu-id="34562-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT _EFN_GetManagedExcepStack(  
@@ -37,29 +35,29 @@ HRESULT _EFN_GetManagedExcepStack(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d5e19-105">参数</span><span class="sxs-lookup"><span data-stu-id="d5e19-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="34562-105">参数</span><span class="sxs-lookup"><span data-stu-id="34562-105">Parameters</span></span>  
  `Client`  
- <span data-ttu-id="d5e19-106">[in]正在调试客户端。</span><span class="sxs-lookup"><span data-stu-id="d5e19-106">[in] The client being debugged.</span></span>  
+ <span data-ttu-id="34562-106">中正在调试的客户端。</span><span class="sxs-lookup"><span data-stu-id="34562-106">[in] The client being debugged.</span></span>  
   
  `StackObjAddr`  
- <span data-ttu-id="d5e19-107">[in]托管的对象指针，派生自<xref:System.Exception>。</span><span class="sxs-lookup"><span data-stu-id="d5e19-107">[in] A managed object pointer, derived from <xref:System.Exception>.</span></span>  
+ <span data-ttu-id="34562-107">中派生自 <xref:System.Exception>的托管对象指针。</span><span class="sxs-lookup"><span data-stu-id="34562-107">[in] A managed object pointer, derived from <xref:System.Exception>.</span></span>  
   
- <span data-ttu-id="d5e19-108">szStackString</span><span class="sxs-lookup"><span data-stu-id="d5e19-108">szStackString</span></span>  
- <span data-ttu-id="d5e19-109">[out]返回的字符串。</span><span class="sxs-lookup"><span data-stu-id="d5e19-109">[out] The returned string.</span></span>  
+ <span data-ttu-id="34562-108">szStackString</span><span class="sxs-lookup"><span data-stu-id="34562-108">szStackString</span></span>  
+ <span data-ttu-id="34562-109">弄返回的字符串。</span><span class="sxs-lookup"><span data-stu-id="34562-109">[out] The returned string.</span></span>  
   
  `cbString`  
- <span data-ttu-id="d5e19-110">[out]字符串缓冲区中有可用的字符数。</span><span class="sxs-lookup"><span data-stu-id="d5e19-110">[out] The number of characters available in the string buffer.</span></span>  
+ <span data-ttu-id="34562-110">弄字符串缓冲区中的可用字符数。</span><span class="sxs-lookup"><span data-stu-id="34562-110">[out] The number of characters available in the string buffer.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d5e19-111">备注</span><span class="sxs-lookup"><span data-stu-id="d5e19-111">Remarks</span></span>  
- <span data-ttu-id="d5e19-112">如果没有任何托管的代码的线程上当前上下文中，该函数返回 HRESULT SOS_E_NOMANAGEDCODE 0xa0 设施值和错误代码为 0x1000。</span><span class="sxs-lookup"><span data-stu-id="d5e19-112">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="34562-111">备注</span><span class="sxs-lookup"><span data-stu-id="34562-111">Remarks</span></span>  
+ <span data-ttu-id="34562-112">如果当前在上下文中的线程上没有托管代码，则该函数将返回 HRESULT SOS_E_NOMANAGEDCODE，其设施值为0xa0，错误代码为0x1000。</span><span class="sxs-lookup"><span data-stu-id="34562-112">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d5e19-113">要求</span><span class="sxs-lookup"><span data-stu-id="d5e19-113">Requirements</span></span>  
- <span data-ttu-id="d5e19-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d5e19-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="34562-113">要求</span><span class="sxs-lookup"><span data-stu-id="34562-113">Requirements</span></span>  
+ <span data-ttu-id="34562-114">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="34562-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d5e19-115">**标头：** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="d5e19-115">**Header:** SOS_Stacktrace.h</span></span>  
+ <span data-ttu-id="34562-115">**标头：** SOS_Stacktrace</span><span class="sxs-lookup"><span data-stu-id="34562-115">**Header:** SOS_Stacktrace.h</span></span>  
   
- <span data-ttu-id="d5e19-116">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d5e19-116">**.NET Framework Version:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="34562-116">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="34562-116">**.NET Framework Version:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d5e19-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="d5e19-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="34562-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="34562-117">See also</span></span>
 
-- [<span data-ttu-id="d5e19-118">调试全局静态函数</span><span class="sxs-lookup"><span data-stu-id="d5e19-118">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [<span data-ttu-id="34562-118">调试全局静态函数</span><span class="sxs-lookup"><span data-stu-id="34562-118">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

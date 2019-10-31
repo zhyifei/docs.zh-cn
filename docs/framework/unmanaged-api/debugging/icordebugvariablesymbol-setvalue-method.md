@@ -1,20 +1,18 @@
 ---
-title: ICorDebugVariableSymbol::SetValue 方法
+title: ICorDebugVariableSymbol：： SetValue 方法
 ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5436f56d3dcad7de3df2296485b0a36e5b3cfd79
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbd3d617e3448730241ccfda7bd26b65d17b694d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967968"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121883"
 ---
-# <a name="icordebugvariablesymbolsetvalue-method"></a><span data-ttu-id="1e925-102">ICorDebugVariableSymbol::SetValue 方法</span><span class="sxs-lookup"><span data-stu-id="1e925-102">ICorDebugVariableSymbol::SetValue Method</span></span>
-<span data-ttu-id="1e925-103">将字节数组的值分配给变量。</span><span class="sxs-lookup"><span data-stu-id="1e925-103">Assigns the value of a byte array to a variable.</span></span>  
+# <a name="icordebugvariablesymbolsetvalue-method"></a><span data-ttu-id="fc0fa-102">ICorDebugVariableSymbol：： SetValue 方法</span><span class="sxs-lookup"><span data-stu-id="fc0fa-102">ICorDebugVariableSymbol::SetValue Method</span></span>
+<span data-ttu-id="fc0fa-103">将字节数组的值分配给变量。</span><span class="sxs-lookup"><span data-stu-id="fc0fa-103">Assigns the value of a byte array to a variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1e925-104">语法</span><span class="sxs-lookup"><span data-stu-id="1e925-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fc0fa-104">语法</span><span class="sxs-lookup"><span data-stu-id="fc0fa-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetValue(  
@@ -27,40 +25,40 @@ HRESULT SetValue(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1e925-105">参数</span><span class="sxs-lookup"><span data-stu-id="1e925-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fc0fa-105">参数</span><span class="sxs-lookup"><span data-stu-id="fc0fa-105">Parameters</span></span>  
  `offset`  
- <span data-ttu-id="1e925-106">[in] 设置值时变量中的起始偏移量。</span><span class="sxs-lookup"><span data-stu-id="1e925-106">[in] The starting offset in the variable at which to set the value.</span></span> <span data-ttu-id="1e925-107">在对象中写入成员字段时，则使用此参数。</span><span class="sxs-lookup"><span data-stu-id="1e925-107">This parameter is used when writing to member fields in an object.</span></span>  
+ <span data-ttu-id="fc0fa-106">[in] 设置值时变量中的起始偏移量。</span><span class="sxs-lookup"><span data-stu-id="fc0fa-106">[in] The starting offset in the variable at which to set the value.</span></span> <span data-ttu-id="fc0fa-107">在对象中写入成员字段时，则使用此参数。</span><span class="sxs-lookup"><span data-stu-id="fc0fa-107">This parameter is used when writing to member fields in an object.</span></span>  
   
  `threadID`  
- <span data-ttu-id="1e925-108">[in] 其上下文必须更新以反映新值的线程的线程标识符。</span><span class="sxs-lookup"><span data-stu-id="1e925-108">[in] The thread identifier of the thread whose context must be updated to reflect the new value.</span></span>  
+ <span data-ttu-id="fc0fa-108">[in] 其上下文必须更新以反映新值的线程的线程标识符。</span><span class="sxs-lookup"><span data-stu-id="fc0fa-108">[in] The thread identifier of the thread whose context must be updated to reflect the new value.</span></span>  
   
  `cbContext`  
- <span data-ttu-id="1e925-109">[in] 线程上下文的大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="1e925-109">[in] The size in bytes of the thread context.</span></span>  
+ <span data-ttu-id="fc0fa-109">[in] 线程上下文的大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="fc0fa-109">[in] The size in bytes of the thread context.</span></span>  
   
  `context`  
- <span data-ttu-id="1e925-110">[in] 用于写入值的线程上下文。</span><span class="sxs-lookup"><span data-stu-id="1e925-110">[in] The thread context used to write the value.</span></span>  
+ <span data-ttu-id="fc0fa-110">[in] 用于写入值的线程上下文。</span><span class="sxs-lookup"><span data-stu-id="fc0fa-110">[in] The thread context used to write the value.</span></span>  
   
  `cbValue`  
- <span data-ttu-id="1e925-111">[in] `pValue` 缓冲区的大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="1e925-111">[in] The size in bytes of the `pValue` buffer.</span></span>  
+ <span data-ttu-id="fc0fa-111">[in] `pValue` 缓冲区的大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="fc0fa-111">[in] The size in bytes of the `pValue` buffer.</span></span>  
   
  `pValue`  
- <span data-ttu-id="1e925-112">[in] 包含要设置的值的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="1e925-112">[in] The buffer that contains the value to set.</span></span>  
+ <span data-ttu-id="fc0fa-112">[in] 包含要设置的值的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="fc0fa-112">[in] The buffer that contains the value to set.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1e925-113">备注</span><span class="sxs-lookup"><span data-stu-id="1e925-113">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fc0fa-113">备注</span><span class="sxs-lookup"><span data-stu-id="fc0fa-113">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="1e925-114">此方法仅适用于 .NET Native。</span><span class="sxs-lookup"><span data-stu-id="1e925-114">This method is available with .NET Native only.</span></span>  
+> <span data-ttu-id="fc0fa-114">此方法仅适用于 .NET Native。</span><span class="sxs-lookup"><span data-stu-id="fc0fa-114">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1e925-115">要求</span><span class="sxs-lookup"><span data-stu-id="1e925-115">Requirements</span></span>  
- <span data-ttu-id="1e925-116">**适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1e925-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fc0fa-115">要求</span><span class="sxs-lookup"><span data-stu-id="fc0fa-115">Requirements</span></span>  
+ <span data-ttu-id="fc0fa-116">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fc0fa-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1e925-117">**标头：** Cordebug.idl, Cordebug.idl</span><span class="sxs-lookup"><span data-stu-id="1e925-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="fc0fa-117">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fc0fa-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1e925-118">**类库**CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1e925-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fc0fa-118">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fc0fa-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1e925-119">**.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1e925-119">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="fc0fa-119">**.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fc0fa-119">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1e925-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="1e925-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fc0fa-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="fc0fa-120">See also</span></span>
 
-- [<span data-ttu-id="1e925-121">ICorDebugVariableSymbol 接口</span><span class="sxs-lookup"><span data-stu-id="1e925-121">ICorDebugVariableSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
-- [<span data-ttu-id="1e925-122">调试接口</span><span class="sxs-lookup"><span data-stu-id="1e925-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="fc0fa-121">ICorDebugVariableSymbol 接口</span><span class="sxs-lookup"><span data-stu-id="fc0fa-121">ICorDebugVariableSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
+- [<span data-ttu-id="fc0fa-122">调试接口</span><span class="sxs-lookup"><span data-stu-id="fc0fa-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

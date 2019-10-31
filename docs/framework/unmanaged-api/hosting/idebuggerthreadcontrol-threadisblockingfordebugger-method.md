@@ -15,38 +15,36 @@ helpviewer_keywords:
 ms.assetid: d4d7cb2d-69da-48b3-879a-1a8a68c9bfa8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9324e1596913fdafb13239dbefd631cbe3c6ffe4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 067d4e844055206543e5c7fb409296b0d0a7a549
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780493"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134944"
 ---
-# <a name="idebuggerthreadcontrolthreadisblockingfordebugger-method"></a><span data-ttu-id="1e3b5-102">IDebuggerThreadControl::ThreadIsBlockingForDebugger 方法</span><span class="sxs-lookup"><span data-stu-id="1e3b5-102">IDebuggerThreadControl::ThreadIsBlockingForDebugger Method</span></span>
-<span data-ttu-id="1e3b5-103">通知主机有关的发送此回调的线程到块中的调试服务。</span><span class="sxs-lookup"><span data-stu-id="1e3b5-103">Notifies the host that the thread that is sending this callback is about to block within the debugging services.</span></span>  
+# <a name="idebuggerthreadcontrolthreadisblockingfordebugger-method"></a><span data-ttu-id="f9427-102">IDebuggerThreadControl::ThreadIsBlockingForDebugger 方法</span><span class="sxs-lookup"><span data-stu-id="f9427-102">IDebuggerThreadControl::ThreadIsBlockingForDebugger Method</span></span>
+<span data-ttu-id="f9427-103">向宿主通知发送此回调的线程即将在调试服务中阻止。</span><span class="sxs-lookup"><span data-stu-id="f9427-103">Notifies the host that the thread that is sending this callback is about to block within the debugging services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1e3b5-104">语法</span><span class="sxs-lookup"><span data-stu-id="1e3b5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f9427-104">语法</span><span class="sxs-lookup"><span data-stu-id="f9427-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ThreadIsBlockingForDebugger ( );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="1e3b5-105">备注</span><span class="sxs-lookup"><span data-stu-id="1e3b5-105">Remarks</span></span>  
- <span data-ttu-id="1e3b5-106">`ThreadIsBlockingForDebugger`将始终在运行时线程上调用方法。</span><span class="sxs-lookup"><span data-stu-id="1e3b5-106">The `ThreadIsBlockingForDebugger` method will always be called on a runtime thread.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f9427-105">备注</span><span class="sxs-lookup"><span data-stu-id="f9427-105">Remarks</span></span>  
+ <span data-ttu-id="f9427-106">在运行时线程上将始终调用 `ThreadIsBlockingForDebugger` 方法。</span><span class="sxs-lookup"><span data-stu-id="f9427-106">The `ThreadIsBlockingForDebugger` method will always be called on a runtime thread.</span></span>  
   
- <span data-ttu-id="1e3b5-107">`ThreadIsBlockingForDebugger`方法使主机能够执行其他操作，而此线程受到阻止。</span><span class="sxs-lookup"><span data-stu-id="1e3b5-107">The `ThreadIsBlockingForDebugger` method gives the host an opportunity to perform another action while the thread blocks.</span></span>  
+ <span data-ttu-id="f9427-107">`ThreadIsBlockingForDebugger` 方法使宿主有机会在线程阻塞时执行另一个操作。</span><span class="sxs-lookup"><span data-stu-id="f9427-107">The `ThreadIsBlockingForDebugger` method gives the host an opportunity to perform another action while the thread blocks.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1e3b5-108">要求</span><span class="sxs-lookup"><span data-stu-id="1e3b5-108">Requirements</span></span>  
- <span data-ttu-id="1e3b5-109">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1e3b5-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f9427-108">要求</span><span class="sxs-lookup"><span data-stu-id="f9427-108">Requirements</span></span>  
+ <span data-ttu-id="f9427-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f9427-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1e3b5-110">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1e3b5-110">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f9427-110">**标头：** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="f9427-110">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="1e3b5-111">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="1e3b5-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f9427-111">**库：** 作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="f9427-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="1e3b5-112">**NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1e3b5-112">**NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f9427-112">**NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9427-112">**NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1e3b5-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="1e3b5-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f9427-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="f9427-113">See also</span></span>
 
-- [<span data-ttu-id="1e3b5-114">IDebuggerThreadControl 接口</span><span class="sxs-lookup"><span data-stu-id="1e3b5-114">IDebuggerThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)
+- [<span data-ttu-id="f9427-114">IDebuggerThreadControl 接口</span><span class="sxs-lookup"><span data-stu-id="f9427-114">IDebuggerThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)

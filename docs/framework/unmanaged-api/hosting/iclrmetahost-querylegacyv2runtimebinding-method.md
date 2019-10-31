@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9929817e-acc9-40b7-960c-598664e04b60
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e7312a50137ab8a5c066d5e140a1742ee1918b44
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 90474a61b16d65565889bd69ef75616804d8bc60
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776557"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140881"
 ---
-# <a name="iclrmetahostquerylegacyv2runtimebinding-method"></a><span data-ttu-id="aef2d-102">ICLRMetaHost::QueryLegacyV2RuntimeBinding 方法</span><span class="sxs-lookup"><span data-stu-id="aef2d-102">ICLRMetaHost::QueryLegacyV2RuntimeBinding Method</span></span>
-<span data-ttu-id="aef2d-103">返回表示旧式激活策略具有已绑定到，例如，使用的运行时的接口`useLegacyV2RuntimeActivationPolicy`特性，可以在[\<启动 > 元素](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)直接使用配置文件条目旧激活 Api 或通过调用[ICLRRuntimeInfo::BindAsLegacyV2Runtime](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="aef2d-103">Returns an interface that represents a runtime to which legacy activation policy has been bound, for example, by using the `useLegacyV2RuntimeActivationPolicy` attribute on the [\<startup> element](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) configuration file entry, by direct use of the legacy activation APIs, or by calling the [ICLRRuntimeInfo::BindAsLegacyV2Runtime](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md) method.</span></span>  
+# <a name="iclrmetahostquerylegacyv2runtimebinding-method"></a><span data-ttu-id="49d25-102">ICLRMetaHost::QueryLegacyV2RuntimeBinding 方法</span><span class="sxs-lookup"><span data-stu-id="49d25-102">ICLRMetaHost::QueryLegacyV2RuntimeBinding Method</span></span>
+<span data-ttu-id="49d25-103">返回一个接口，该接口表示已绑定旧式激活策略的运行时，例如，通过使用[\<启动 > 元素](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)配置文件项上的 `useLegacyV2RuntimeActivationPolicy` 特性，直接使用旧的激活 api，或调用[ICLRRuntimeInfo：： BindAsLegacyV2Runtime](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="49d25-103">Returns an interface that represents a runtime to which legacy activation policy has been bound, for example, by using the `useLegacyV2RuntimeActivationPolicy` attribute on the [\<startup> element](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) configuration file entry, by direct use of the legacy activation APIs, or by calling the [ICLRRuntimeInfo::BindAsLegacyV2Runtime](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aef2d-104">语法</span><span class="sxs-lookup"><span data-stu-id="aef2d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="49d25-104">语法</span><span class="sxs-lookup"><span data-stu-id="49d25-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT QueryLegacyV2RuntimeBinding (  
@@ -35,34 +33,34 @@ HRESULT QueryLegacyV2RuntimeBinding (
     [out, iid_is(riid), retval] LPVOID *ppUnk);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="aef2d-105">参数</span><span class="sxs-lookup"><span data-stu-id="aef2d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="49d25-105">参数</span><span class="sxs-lookup"><span data-stu-id="49d25-105">Parameters</span></span>  
  `riid`  
- <span data-ttu-id="aef2d-106">[in]此参数的唯一有效的值是的 Required.Currently `IID_ICLRRuntimeInfo`。</span><span class="sxs-lookup"><span data-stu-id="aef2d-106">[in] Required.Currently the only valid value for this parameter is `IID_ICLRRuntimeInfo`.</span></span>  
+ <span data-ttu-id="49d25-106">中必需。目前 `IID_ICLRRuntimeInfo`唯一有效的值。</span><span class="sxs-lookup"><span data-stu-id="49d25-106">[in] Required.Currently the only valid value for this parameter is `IID_ICLRRuntimeInfo`.</span></span>  
   
  `ppUnk`  
- <span data-ttu-id="aef2d-107">[out] 必需。</span><span class="sxs-lookup"><span data-stu-id="aef2d-107">[out] Required.</span></span> <span data-ttu-id="aef2d-108">此方法返回时，包含一个指向[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)表示已绑定到旧式激活策略的运行时的接口。</span><span class="sxs-lookup"><span data-stu-id="aef2d-108">When this method returns, contains a pointer to the [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface that represents a runtime that has been bound to legacy activation policy.</span></span>  
+ <span data-ttu-id="49d25-107">[out] 必需。</span><span class="sxs-lookup"><span data-stu-id="49d25-107">[out] Required.</span></span> <span data-ttu-id="49d25-108">此方法返回时，包含一个指向[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)接口的指针，该接口表示已绑定到旧版激活策略的运行时。</span><span class="sxs-lookup"><span data-stu-id="49d25-108">When this method returns, contains a pointer to the [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface that represents a runtime that has been bound to legacy activation policy.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="aef2d-109">返回值</span><span class="sxs-lookup"><span data-stu-id="aef2d-109">Return Value</span></span>  
- <span data-ttu-id="aef2d-110">此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。</span><span class="sxs-lookup"><span data-stu-id="aef2d-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="49d25-109">返回值</span><span class="sxs-lookup"><span data-stu-id="49d25-109">Return Value</span></span>  
+ <span data-ttu-id="49d25-110">此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。</span><span class="sxs-lookup"><span data-stu-id="49d25-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="aef2d-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="aef2d-111">HRESULT</span></span>|<span data-ttu-id="aef2d-112">描述</span><span class="sxs-lookup"><span data-stu-id="aef2d-112">Description</span></span>|  
+|<span data-ttu-id="49d25-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="49d25-111">HRESULT</span></span>|<span data-ttu-id="49d25-112">描述</span><span class="sxs-lookup"><span data-stu-id="49d25-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="aef2d-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="aef2d-113">S_OK</span></span>|<span data-ttu-id="aef2d-114">该方法已成功完成，并返回一个绑定到旧式激活策略的运行时。</span><span class="sxs-lookup"><span data-stu-id="aef2d-114">The method completed successfully and returned a runtime that was bound to legacy activation policy.</span></span>|  
-|<span data-ttu-id="aef2d-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="aef2d-115">S_FALSE</span></span>|<span data-ttu-id="aef2d-116">该方法已成功完成，但尚未绑定旧式运行时。</span><span class="sxs-lookup"><span data-stu-id="aef2d-116">The method completed successfully, but a legacy runtime has not yet been bound.</span></span>|  
-|<span data-ttu-id="aef2d-117">E_NOINTERFACE</span><span class="sxs-lookup"><span data-stu-id="aef2d-117">E_NOINTERFACE</span></span>|<span data-ttu-id="aef2d-118">该方法找到了绑定到旧式激活策略的运行时，但该运行时不支持 `riid`。</span><span class="sxs-lookup"><span data-stu-id="aef2d-118">The method found a runtime that was bound to legacy activation policy, but `riid` is not supported by that runtime.</span></span>|  
+|<span data-ttu-id="49d25-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="49d25-113">S_OK</span></span>|<span data-ttu-id="49d25-114">该方法已成功完成，并返回一个绑定到旧式激活策略的运行时。</span><span class="sxs-lookup"><span data-stu-id="49d25-114">The method completed successfully and returned a runtime that was bound to legacy activation policy.</span></span>|  
+|<span data-ttu-id="49d25-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="49d25-115">S_FALSE</span></span>|<span data-ttu-id="49d25-116">该方法已成功完成，但尚未绑定旧式运行时。</span><span class="sxs-lookup"><span data-stu-id="49d25-116">The method completed successfully, but a legacy runtime has not yet been bound.</span></span>|  
+|<span data-ttu-id="49d25-117">E_NOINTERFACE</span><span class="sxs-lookup"><span data-stu-id="49d25-117">E_NOINTERFACE</span></span>|<span data-ttu-id="49d25-118">该方法找到了绑定到旧式激活策略的运行时，但该运行时不支持 `riid`。</span><span class="sxs-lookup"><span data-stu-id="49d25-118">The method found a runtime that was bound to legacy activation policy, but `riid` is not supported by that runtime.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="aef2d-119">备注</span><span class="sxs-lookup"><span data-stu-id="aef2d-119">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="49d25-119">备注</span><span class="sxs-lookup"><span data-stu-id="49d25-119">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="aef2d-120">要求</span><span class="sxs-lookup"><span data-stu-id="aef2d-120">Requirements</span></span>  
- <span data-ttu-id="aef2d-121">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="aef2d-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="49d25-120">要求</span><span class="sxs-lookup"><span data-stu-id="49d25-120">Requirements</span></span>  
+ <span data-ttu-id="49d25-121">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="49d25-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="aef2d-122">**标头：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="aef2d-122">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="49d25-122">**标头：** MetaHost</span><span class="sxs-lookup"><span data-stu-id="49d25-122">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="aef2d-123">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="aef2d-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="49d25-123">**库：** 作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="49d25-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="aef2d-124">**.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aef2d-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="49d25-124">**.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="49d25-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aef2d-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="aef2d-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="49d25-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="49d25-125">See also</span></span>
 
-- [<span data-ttu-id="aef2d-126">ICLRMetaHost 接口</span><span class="sxs-lookup"><span data-stu-id="aef2d-126">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
-- [<span data-ttu-id="aef2d-127">承载</span><span class="sxs-lookup"><span data-stu-id="aef2d-127">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="49d25-126">ICLRMetaHost 接口</span><span class="sxs-lookup"><span data-stu-id="49d25-126">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [<span data-ttu-id="49d25-127">承载</span><span class="sxs-lookup"><span data-stu-id="49d25-127">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

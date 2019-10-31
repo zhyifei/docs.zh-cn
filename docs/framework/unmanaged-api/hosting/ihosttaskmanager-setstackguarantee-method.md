@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6dcc4a4b-3a78-4369-bcc7-c0be6dde57d4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 62e78ca9b842d4554e933d3f09f008f68559b0c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d76fbb727386c84f2419ceaeecc6756514c2f124
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749378"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132969"
 ---
-# <a name="ihosttaskmanagersetstackguarantee-method"></a><span data-ttu-id="ba5ab-102">IHostTaskManager::SetStackGuarantee 方法</span><span class="sxs-lookup"><span data-stu-id="ba5ab-102">IHostTaskManager::SetStackGuarantee Method</span></span>
-<span data-ttu-id="ba5ab-103">保留以仅供内部使用。</span><span class="sxs-lookup"><span data-stu-id="ba5ab-103">Reserved for internal use only.</span></span>  
+# <a name="ihosttaskmanagersetstackguarantee-method"></a><span data-ttu-id="2278b-102">IHostTaskManager::SetStackGuarantee 方法</span><span class="sxs-lookup"><span data-stu-id="2278b-102">IHostTaskManager::SetStackGuarantee Method</span></span>
+<span data-ttu-id="2278b-103">保留以仅供内部使用。</span><span class="sxs-lookup"><span data-stu-id="2278b-103">Reserved for internal use only.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ba5ab-104">语法</span><span class="sxs-lookup"><span data-stu-id="ba5ab-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2278b-104">语法</span><span class="sxs-lookup"><span data-stu-id="2278b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetStackGuarantee(  
@@ -35,16 +33,16 @@ HRESULT SetStackGuarantee(
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="ba5ab-105">要求</span><span class="sxs-lookup"><span data-stu-id="ba5ab-105">Requirements</span></span>  
- <span data-ttu-id="ba5ab-106">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ba5ab-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2278b-105">要求</span><span class="sxs-lookup"><span data-stu-id="2278b-105">Requirements</span></span>  
+ <span data-ttu-id="2278b-106">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2278b-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ba5ab-107">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ba5ab-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="2278b-107">**标头：** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="2278b-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ba5ab-108">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="ba5ab-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="2278b-108">**库：** 作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="2278b-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ba5ab-109">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ba5ab-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2278b-109">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2278b-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ba5ab-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="ba5ab-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2278b-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="2278b-110">See also</span></span>
 
-- [<span data-ttu-id="ba5ab-111">GetStackGuarantee 方法</span><span class="sxs-lookup"><span data-stu-id="ba5ab-111">GetStackGuarantee Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getstackguarantee-method.md)
-- [<span data-ttu-id="ba5ab-112">IHostTaskManager 接口</span><span class="sxs-lookup"><span data-stu-id="ba5ab-112">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="2278b-111">GetStackGuarantee 方法</span><span class="sxs-lookup"><span data-stu-id="2278b-111">GetStackGuarantee Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getstackguarantee-method.md)
+- [<span data-ttu-id="2278b-112">IHostTaskManager 接口</span><span class="sxs-lookup"><span data-stu-id="2278b-112">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

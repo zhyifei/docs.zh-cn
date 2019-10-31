@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2e6bbaea-79ba-448c-a0e3-7c90fc7c2939
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 87249dae0eff4ea4899a63c0d13e79c266df453a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d29576c6f073f1d0e8e0aea417fc38c09a8327c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745004"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122748"
 ---
-# <a name="icordebugbreakpointenumnext-method"></a><span data-ttu-id="c3ef5-102">ICorDebugBreakpointEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="c3ef5-102">ICorDebugBreakpointEnum::Next Method</span></span>
-<span data-ttu-id="c3ef5-103">从当前位置开始枚举中获取指定的数量的 ICorDebugBreakpoint 实例。</span><span class="sxs-lookup"><span data-stu-id="c3ef5-103">Gets the specified number of ICorDebugBreakpoint instances from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugbreakpointenumnext-method"></a><span data-ttu-id="2b640-102">ICorDebugBreakpointEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="2b640-102">ICorDebugBreakpointEnum::Next Method</span></span>
+<span data-ttu-id="2b640-103">从当前位置开始，从枚举中获取指定数量的 ICorDebugBreakpoint 实例。</span><span class="sxs-lookup"><span data-stu-id="2b640-103">Gets the specified number of ICorDebugBreakpoint instances from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c3ef5-104">语法</span><span class="sxs-lookup"><span data-stu-id="c3ef5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2b640-104">语法</span><span class="sxs-lookup"><span data-stu-id="2b640-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Next (  
@@ -38,21 +36,21 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c3ef5-105">参数</span><span class="sxs-lookup"><span data-stu-id="c3ef5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2b640-105">参数</span><span class="sxs-lookup"><span data-stu-id="2b640-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="c3ef5-106">[in]数`ICorDebugBreakpoint`要检索的实例。</span><span class="sxs-lookup"><span data-stu-id="c3ef5-106">[in] The number of `ICorDebugBreakpoint` instances to be retrieved.</span></span>  
+ <span data-ttu-id="2b640-106">中要检索的 `ICorDebugBreakpoint` 实例的数目。</span><span class="sxs-lookup"><span data-stu-id="2b640-106">[in] The number of `ICorDebugBreakpoint` instances to be retrieved.</span></span>  
   
  `breakpoints`  
- <span data-ttu-id="c3ef5-107">[out]一个指针，其中每个指向数组`ICorDebugBreakpoint`表示断点的对象。</span><span class="sxs-lookup"><span data-stu-id="c3ef5-107">[out] An array of pointers, each of which points to an `ICorDebugBreakpoint` object that represents a breakpoint.</span></span>  
+ <span data-ttu-id="2b640-107">弄指针的数组，其中每个都指向表示断点的 `ICorDebugBreakpoint` 对象。</span><span class="sxs-lookup"><span data-stu-id="2b640-107">[out] An array of pointers, each of which points to an `ICorDebugBreakpoint` object that represents a breakpoint.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="c3ef5-108">[out]指向数`ICorDebugBreakpoint`实际返回的实例。</span><span class="sxs-lookup"><span data-stu-id="c3ef5-108">[out] A pointer to the number of `ICorDebugBreakpoint` instances actually returned.</span></span> <span data-ttu-id="c3ef5-109">此值可能为 null 如果`celt`是其中一个。</span><span class="sxs-lookup"><span data-stu-id="c3ef5-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="2b640-108">弄一个指针，指向实际返回的 `ICorDebugBreakpoint` 实例的数目。</span><span class="sxs-lookup"><span data-stu-id="2b640-108">[out] A pointer to the number of `ICorDebugBreakpoint` instances actually returned.</span></span> <span data-ttu-id="2b640-109">如果 `celt` 为1，则此值可以为 null。</span><span class="sxs-lookup"><span data-stu-id="2b640-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c3ef5-110">要求</span><span class="sxs-lookup"><span data-stu-id="c3ef5-110">Requirements</span></span>  
- <span data-ttu-id="c3ef5-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c3ef5-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2b640-110">要求</span><span class="sxs-lookup"><span data-stu-id="2b640-110">Requirements</span></span>  
+ <span data-ttu-id="2b640-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2b640-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c3ef5-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c3ef5-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2b640-112">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2b640-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c3ef5-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c3ef5-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2b640-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2b640-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c3ef5-114">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3ef5-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="2b640-114">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b640-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

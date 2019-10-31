@@ -1,21 +1,19 @@
 ---
-title: ICorDebugSymbolProvider2::GetGenericDictionaryInfo 方法
+title: ICorDebugSymbolProvider2：： GetGenericDictionaryInfo 方法
 ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65407fca73971546725d9457d25bf1270d2001e2
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: c9f7206cac54d64c28eb50d81fea00a6f3c494d4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662537"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133635"
 ---
-# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a><span data-ttu-id="090b0-102">ICorDebugSymbolProvider2::GetGenericDictionaryInfo 方法</span><span class="sxs-lookup"><span data-stu-id="090b0-102">ICorDebugSymbolProvider2::GetGenericDictionaryInfo Method</span></span>
+# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a><span data-ttu-id="8b760-102">ICorDebugSymbolProvider2：： GetGenericDictionaryInfo 方法</span><span class="sxs-lookup"><span data-stu-id="8b760-102">ICorDebugSymbolProvider2::GetGenericDictionaryInfo Method</span></span>
 
-<span data-ttu-id="090b0-103">检索泛型字典映射。</span><span class="sxs-lookup"><span data-stu-id="090b0-103">Retrieves a generic dictionary map.</span></span>
+<span data-ttu-id="8b760-103">检索泛型字典映射。</span><span class="sxs-lookup"><span data-stu-id="8b760-103">Retrieves a generic dictionary map.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="090b0-104">语法</span><span class="sxs-lookup"><span data-stu-id="090b0-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="8b760-104">语法</span><span class="sxs-lookup"><span data-stu-id="8b760-104">Syntax</span></span>
 
 ```cpp
 HRESULT GetGenericDictionaryInfo(
@@ -23,71 +21,71 @@ HRESULT GetGenericDictionaryInfo(
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="090b0-105">参数</span><span class="sxs-lookup"><span data-stu-id="090b0-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="8b760-105">参数</span><span class="sxs-lookup"><span data-stu-id="8b760-105">Parameters</span></span>
 
 `ppMemoryBuffer`\
-<span data-ttu-id="090b0-106">[out]指向的地址的指针[ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)对象，其中包含泛型字典映射。</span><span class="sxs-lookup"><span data-stu-id="090b0-106">[out] A pointer to the address of an [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) object containing the generic dictionary map.</span></span> <span data-ttu-id="090b0-107">有关详细信息，请参阅备注部分。</span><span class="sxs-lookup"><span data-stu-id="090b0-107">See the Remarks section for more information.</span></span>
+<span data-ttu-id="8b760-106">弄指向包含泛型字典映射的[ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)对象地址的指针。</span><span class="sxs-lookup"><span data-stu-id="8b760-106">[out] A pointer to the address of an [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) object containing the generic dictionary map.</span></span> <span data-ttu-id="8b760-107">有关详细信息，请参阅备注部分。</span><span class="sxs-lookup"><span data-stu-id="8b760-107">See the Remarks section for more information.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="090b0-108">备注</span><span class="sxs-lookup"><span data-stu-id="090b0-108">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="8b760-108">备注</span><span class="sxs-lookup"><span data-stu-id="8b760-108">Remarks</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="090b0-109">此方法仅适用于 .NET Native。</span><span class="sxs-lookup"><span data-stu-id="090b0-109">This method is available with .NET Native only.</span></span>
+> <span data-ttu-id="8b760-109">此方法仅适用于 .NET Native。</span><span class="sxs-lookup"><span data-stu-id="8b760-109">This method is available with .NET Native only.</span></span>
 
-<span data-ttu-id="090b0-110">该映射由两个顶级部分组成：</span><span class="sxs-lookup"><span data-stu-id="090b0-110">The map consists of two top-level sections:</span></span>
+<span data-ttu-id="8b760-110">该映射由两个顶级部分组成：</span><span class="sxs-lookup"><span data-stu-id="8b760-110">The map consists of two top-level sections:</span></span>
 
-- <span data-ttu-id="090b0-111">一个[directory](#Directory)包含在此映射中包括的所有字典的相对虚拟地址 (RVA)。</span><span class="sxs-lookup"><span data-stu-id="090b0-111">A [directory](#Directory) containing the relative virtual addresses (RVA) of all dictionaries included in this map.</span></span>
+- <span data-ttu-id="8b760-111">一个[目录](#Directory)，其中包含此映射中包含的所有字典的相对虚拟地址（RVA）。</span><span class="sxs-lookup"><span data-stu-id="8b760-111">A [directory](#Directory) containing the relative virtual addresses (RVA) of all dictionaries included in this map.</span></span>
 
-- <span data-ttu-id="090b0-112">一个字节对齐[堆](#Heap)包含的对象实例化信息。</span><span class="sxs-lookup"><span data-stu-id="090b0-112">A byte-aligned [heap](#Heap) that contains object instantiation information.</span></span> <span data-ttu-id="090b0-113">在最后一个目录输入后立即开始。</span><span class="sxs-lookup"><span data-stu-id="090b0-113">It starts immediately after the last directory entry.</span></span>
+- <span data-ttu-id="8b760-112">一个字节对齐的[堆](#Heap)，其中包含对象实例化信息。</span><span class="sxs-lookup"><span data-stu-id="8b760-112">A byte-aligned [heap](#Heap) that contains object instantiation information.</span></span> <span data-ttu-id="8b760-113">在最后一个目录输入后立即开始。</span><span class="sxs-lookup"><span data-stu-id="8b760-113">It starts immediately after the last directory entry.</span></span>
 
 <a name="Directory"></a>
 
-## <a name="the-directory"></a><span data-ttu-id="090b0-114">目录</span><span class="sxs-lookup"><span data-stu-id="090b0-114">The Directory</span></span>
+## <a name="the-directory"></a><span data-ttu-id="8b760-114">目录</span><span class="sxs-lookup"><span data-stu-id="8b760-114">The Directory</span></span>
 
-<span data-ttu-id="090b0-115">目录中的每个条目引用堆内的偏移量；也就是说，它是相对于堆开始的偏移量。</span><span class="sxs-lookup"><span data-stu-id="090b0-115">Each entry in the directory refers to an offset inside the heap; that is, it is an offset that is relative to the start of the heap.</span></span> <span data-ttu-id="090b0-116">单独条目的值不一定是唯一的；在堆中多个目录条目有可能指向相同的偏移量。</span><span class="sxs-lookup"><span data-stu-id="090b0-116">The value of individual entries is not necessarily unique; it is possible for multiple directory entries to point to the same offset in the heap.</span></span>
+<span data-ttu-id="8b760-115">目录中的每个条目引用堆内的偏移量；也就是说，它是相对于堆开始的偏移量。</span><span class="sxs-lookup"><span data-stu-id="8b760-115">Each entry in the directory refers to an offset inside the heap; that is, it is an offset that is relative to the start of the heap.</span></span> <span data-ttu-id="8b760-116">单独条目的值不一定是唯一的；在堆中多个目录条目有可能指向相同的偏移量。</span><span class="sxs-lookup"><span data-stu-id="8b760-116">The value of individual entries is not necessarily unique; it is possible for multiple directory entries to point to the same offset in the heap.</span></span>
 
-<span data-ttu-id="090b0-117">泛型字典映射的目录部分具有以下结构：</span><span class="sxs-lookup"><span data-stu-id="090b0-117">The directory portion of the generic dictionary map has the following structure:</span></span>
+<span data-ttu-id="8b760-117">泛型字典映射的目录部分具有以下结构：</span><span class="sxs-lookup"><span data-stu-id="8b760-117">The directory portion of the generic dictionary map has the following structure:</span></span>
 
-- <span data-ttu-id="090b0-118">前 4 个字节包含字典条目的数量（也就是说，字典中的相对虚拟地址数）。</span><span class="sxs-lookup"><span data-stu-id="090b0-118">The first 4 bytes contains the number of dictionary entries (that is, the number of relative virtual addresses in the dictionary).</span></span> <span data-ttu-id="090b0-119">我们将把此值作为*N*。如果设置了高位，则按相对虚拟地址以升序对条目排序。</span><span class="sxs-lookup"><span data-stu-id="090b0-119">We will refer to this value as *N*. If the high bit is set, the entries are sorted by relative virtual address in ascending order.</span></span>
+- <span data-ttu-id="8b760-118">前 4 个字节包含字典条目的数量（也就是说，字典中的相对虚拟地址数）。</span><span class="sxs-lookup"><span data-stu-id="8b760-118">The first 4 bytes contains the number of dictionary entries (that is, the number of relative virtual addresses in the dictionary).</span></span> <span data-ttu-id="8b760-119">我们将此值称为*N*。如果设置了高位，则按相对虚拟地址（升序）对项进行排序。</span><span class="sxs-lookup"><span data-stu-id="8b760-119">We will refer to this value as *N*. If the high bit is set, the entries are sorted by relative virtual address in ascending order.</span></span>
 
-- <span data-ttu-id="090b0-120">*N*的目录项，请执行。</span><span class="sxs-lookup"><span data-stu-id="090b0-120">The *N* directory entries follow.</span></span> <span data-ttu-id="090b0-121">每个条目由 8 个字节（两个 4 字节段）构成：</span><span class="sxs-lookup"><span data-stu-id="090b0-121">Each entry consists of 8 bytes, in two 4-byte segments:</span></span>
+- <span data-ttu-id="8b760-120">*N*目录项跟随。</span><span class="sxs-lookup"><span data-stu-id="8b760-120">The *N* directory entries follow.</span></span> <span data-ttu-id="8b760-121">每个条目由 8 个字节（两个 4 字节段）构成：</span><span class="sxs-lookup"><span data-stu-id="8b760-121">Each entry consists of 8 bytes, in two 4-byte segments:</span></span>
 
-  - <span data-ttu-id="090b0-122">字节 0-3:RVA;字典的相对虚拟地址。</span><span class="sxs-lookup"><span data-stu-id="090b0-122">Bytes 0-3: RVA; the dictionary's relative virtual address.</span></span>
+  - <span data-ttu-id="8b760-122">字节 0-3：RVA；字典的相对虚拟地址。</span><span class="sxs-lookup"><span data-stu-id="8b760-122">Bytes 0-3: RVA; the dictionary's relative virtual address.</span></span>
 
-  - <span data-ttu-id="090b0-123">字节 4-7:偏移量;相对于堆开始的偏移量。</span><span class="sxs-lookup"><span data-stu-id="090b0-123">Bytes 4-7: Offset; an offset relative to the start of the heap.</span></span>
+  - <span data-ttu-id="8b760-123">字节 4-7：偏移量；相对于堆开始的偏移量。</span><span class="sxs-lookup"><span data-stu-id="8b760-123">Bytes 4-7: Offset; an offset relative to the start of the heap.</span></span>
 
 <a name="Heap"></a>
 
-## <a name="the-heap"></a><span data-ttu-id="090b0-124">堆</span><span class="sxs-lookup"><span data-stu-id="090b0-124">The Heap</span></span>
+## <a name="the-heap"></a><span data-ttu-id="8b760-124">堆</span><span class="sxs-lookup"><span data-stu-id="8b760-124">The Heap</span></span>
 
-<span data-ttu-id="090b0-125">可用流读取器计算堆的大小，计算方法是目录大小 + 4 再减去流的长度。</span><span class="sxs-lookup"><span data-stu-id="090b0-125">The heap’s size can be computed by a stream reader by subtracting the length of the stream from the directory size + 4.</span></span> <span data-ttu-id="090b0-126">换句话说：</span><span class="sxs-lookup"><span data-stu-id="090b0-126">In other words:</span></span>
+<span data-ttu-id="8b760-125">可用流读取器计算堆的大小，计算方法是目录大小 + 4 再减去流的长度。</span><span class="sxs-lookup"><span data-stu-id="8b760-125">The heap’s size can be computed by a stream reader by subtracting the length of the stream from the directory size + 4.</span></span> <span data-ttu-id="8b760-126">换句话说：</span><span class="sxs-lookup"><span data-stu-id="8b760-126">In other words:</span></span>
 
 ```csharp
 Heap Size = Stream.Length – (Directory Size + 4)
 ```
 
-<span data-ttu-id="090b0-127">其中，目录大小为 `N * 8`。</span><span class="sxs-lookup"><span data-stu-id="090b0-127">where the directory size is `N * 8`.</span></span>
+<span data-ttu-id="8b760-127">其中，目录大小为 `N * 8`。</span><span class="sxs-lookup"><span data-stu-id="8b760-127">where the directory size is `N * 8`.</span></span>
 
-<span data-ttu-id="090b0-128">在堆上每个实例化信息项的格式为：</span><span class="sxs-lookup"><span data-stu-id="090b0-128">The format for each instantiation information item on the heap is:</span></span>
+<span data-ttu-id="8b760-128">在堆上每个实例化信息项的格式为：</span><span class="sxs-lookup"><span data-stu-id="8b760-128">The format for each instantiation information item on the heap is:</span></span>
 
-- <span data-ttu-id="090b0-129">此实例化信息项的长度（采用压缩 ECMA 元数据格式，以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="090b0-129">The length of this instantiation information item in bytes in compressed ECMA metadata format.</span></span> <span data-ttu-id="090b0-130">该值不包括此长度信息。</span><span class="sxs-lookup"><span data-stu-id="090b0-130">The value excludes this length information.</span></span>
+- <span data-ttu-id="8b760-129">此实例化信息项的长度（采用压缩 ECMA 元数据格式，以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="8b760-129">The length of this instantiation information item in bytes in compressed ECMA metadata format.</span></span> <span data-ttu-id="8b760-130">该值不包括此长度信息。</span><span class="sxs-lookup"><span data-stu-id="8b760-130">The value excludes this length information.</span></span>
 
-- <span data-ttu-id="090b0-131">泛型实例化类型的数目或*T*，采用压缩 ECMA 元数据格式。</span><span class="sxs-lookup"><span data-stu-id="090b0-131">The number of generic instantiation types, or *T*, in compressed ECMA metadata format.</span></span>
+- <span data-ttu-id="8b760-131">采用压缩 ECMA 元数据格式的泛型实例化类型或*T*的数目。</span><span class="sxs-lookup"><span data-stu-id="8b760-131">The number of generic instantiation types, or *T*, in compressed ECMA metadata format.</span></span>
 
-- <span data-ttu-id="090b0-132">*T*每个以 ECMA 类型签名格式表示的类型。</span><span class="sxs-lookup"><span data-stu-id="090b0-132">*T* types, each represented in ECMA type signature format.</span></span>
+- <span data-ttu-id="8b760-132">*T*类型，每个类型都以 ECMA 类型签名格式表示。</span><span class="sxs-lookup"><span data-stu-id="8b760-132">*T* types, each represented in ECMA type signature format.</span></span>
 
-<span data-ttu-id="090b0-133">包含每个堆元素的长度使目录部分实现简单排序，而不对堆造成影响。</span><span class="sxs-lookup"><span data-stu-id="090b0-133">The inclusion of the length for each heap element enables simple sorting of the directory section without affecting the heap.</span></span>
+<span data-ttu-id="8b760-133">包含每个堆元素的长度使目录部分实现简单排序，而不对堆造成影响。</span><span class="sxs-lookup"><span data-stu-id="8b760-133">The inclusion of the length for each heap element enables simple sorting of the directory section without affecting the heap.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="090b0-134">要求</span><span class="sxs-lookup"><span data-stu-id="090b0-134">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="8b760-134">要求</span><span class="sxs-lookup"><span data-stu-id="8b760-134">Requirements</span></span>
 
-<span data-ttu-id="090b0-135">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="090b0-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+<span data-ttu-id="8b760-135">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8b760-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
 
-<span data-ttu-id="090b0-136">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="090b0-136">**Header:** CorDebug.idl, CorDebug.h</span></span>
+<span data-ttu-id="8b760-136">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8b760-136">**Header:** CorDebug.idl, CorDebug.h</span></span>
 
-<span data-ttu-id="090b0-137">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="090b0-137">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="8b760-137">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8b760-137">**Library:** CorGuids.lib</span></span>
 
-<span data-ttu-id="090b0-138">**.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="090b0-138">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>
+<span data-ttu-id="8b760-138">**.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8b760-138">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="090b0-139">请参阅</span><span class="sxs-lookup"><span data-stu-id="090b0-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8b760-139">请参阅</span><span class="sxs-lookup"><span data-stu-id="8b760-139">See also</span></span>
 
-- [<span data-ttu-id="090b0-140">ICorDebugSymbolProvider2 接口</span><span class="sxs-lookup"><span data-stu-id="090b0-140">ICorDebugSymbolProvider2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
-- [<span data-ttu-id="090b0-141">调试接口</span><span class="sxs-lookup"><span data-stu-id="090b0-141">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="8b760-140">ICorDebugSymbolProvider2 接口</span><span class="sxs-lookup"><span data-stu-id="8b760-140">ICorDebugSymbolProvider2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
+- [<span data-ttu-id="8b760-141">调试接口</span><span class="sxs-lookup"><span data-stu-id="8b760-141">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

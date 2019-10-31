@@ -6,23 +6,21 @@ helpviewer_keywords:
 - global static functions [.NET Framework hosting], version 4
 - .NET Framework 4, hosting global static functions
 ms.assetid: 07a1a6e1-db73-4555-81df-bc4054c51492
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6cb46d3684e36ca203b3ea5b58491150af4ffd58
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 58b2b6faaf96a8c4f0c0422f2092c3752fbe822f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490143"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133713"
 ---
-# <a name="net-framework-4-hosting-global-static-functions"></a><span data-ttu-id="1edbf-102">.NET Framework 4 承载全局静态函数</span><span class="sxs-lookup"><span data-stu-id="1edbf-102">.NET Framework 4 Hosting Global Static Functions</span></span>
-<span data-ttu-id="1edbf-103">.NET Framework 4 引入了一种新的导出的方法，在 MSCorEE.dll 中：[CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)。</span><span class="sxs-lookup"><span data-stu-id="1edbf-103">The .NET Framework 4 introduces one new exported method in MSCorEE.dll: [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md).</span></span>  
+# <a name="net-framework-4-hosting-global-static-functions"></a><span data-ttu-id="c6c44-102">.NET Framework 4 承载全局静态函数</span><span class="sxs-lookup"><span data-stu-id="c6c44-102">.NET Framework 4 Hosting Global Static Functions</span></span>
+<span data-ttu-id="c6c44-103">.NET Framework 4 在 Mscoree.dll： [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)中引入了一个新的导出方法。</span><span class="sxs-lookup"><span data-stu-id="c6c44-103">The .NET Framework 4 introduces one new exported method in MSCorEE.dll: [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1edbf-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="1edbf-104">In This Section</span></span>  
- [<span data-ttu-id="1edbf-105">CLRCreateInstance 函数</span><span class="sxs-lookup"><span data-stu-id="1edbf-105">CLRCreateInstance Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)  
- <span data-ttu-id="1edbf-106">提供了三个接口之一：[ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)， [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)，或[ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="1edbf-106">Provides one of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="c6c44-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="c6c44-104">In This Section</span></span>  
+ [<span data-ttu-id="c6c44-105">CLRCreateInstance 函数</span><span class="sxs-lookup"><span data-stu-id="c6c44-105">CLRCreateInstance Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)  
+ <span data-ttu-id="c6c44-106">提供以下三个接口之一： [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)、 [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)或[ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="c6c44-106">Provides one of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1edbf-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="1edbf-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c6c44-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="c6c44-107">See also</span></span>
 
-- [<span data-ttu-id="1edbf-108">承载全局静态函数</span><span class="sxs-lookup"><span data-stu-id="1edbf-108">Hosting Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)
-- [<span data-ttu-id="1edbf-109">承载</span><span class="sxs-lookup"><span data-stu-id="1edbf-109">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="c6c44-108">承载全局静态函数</span><span class="sxs-lookup"><span data-stu-id="c6c44-108">Hosting Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)
+- [<span data-ttu-id="c6c44-109">承载</span><span class="sxs-lookup"><span data-stu-id="c6c44-109">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

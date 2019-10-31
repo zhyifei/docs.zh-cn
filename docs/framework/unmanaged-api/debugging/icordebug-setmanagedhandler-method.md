@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: d079131b-685b-4869-95be-826b88d28bd2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 90eb63b277f5c40053ecc3939890c87adc145251
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 88a007654646ba42ebcaf1b42e002282a1040c7f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738116"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134056"
 ---
-# <a name="icordebugsetmanagedhandler-method"></a><span data-ttu-id="af9e2-102">ICorDebug::SetManagedHandler 方法</span><span class="sxs-lookup"><span data-stu-id="af9e2-102">ICorDebug::SetManagedHandler Method</span></span>
-<span data-ttu-id="af9e2-103">指定托管事件的事件处理程序对象。</span><span class="sxs-lookup"><span data-stu-id="af9e2-103">Specifies the event handler object for managed events.</span></span>  
+# <a name="icordebugsetmanagedhandler-method"></a><span data-ttu-id="14d11-102">ICorDebug::SetManagedHandler 方法</span><span class="sxs-lookup"><span data-stu-id="14d11-102">ICorDebug::SetManagedHandler Method</span></span>
+<span data-ttu-id="14d11-103">指定托管事件的事件处理程序对象。</span><span class="sxs-lookup"><span data-stu-id="14d11-103">Specifies the event handler object for managed events.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="af9e2-104">语法</span><span class="sxs-lookup"><span data-stu-id="af9e2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="14d11-104">语法</span><span class="sxs-lookup"><span data-stu-id="14d11-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetManagedHandler (  
@@ -35,24 +33,24 @@ HRESULT SetManagedHandler (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="af9e2-105">参数</span><span class="sxs-lookup"><span data-stu-id="af9e2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="14d11-105">参数</span><span class="sxs-lookup"><span data-stu-id="14d11-105">Parameters</span></span>  
  `pCallback`  
- <span data-ttu-id="af9e2-106">[in]一个指向[ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)对象，它是事件处理程序对象。</span><span class="sxs-lookup"><span data-stu-id="af9e2-106">[in] A pointer to an [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) object, which is the event handler object.</span></span>  
+ <span data-ttu-id="14d11-106">中指向[ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)对象的指针，该对象为事件处理程序对象。</span><span class="sxs-lookup"><span data-stu-id="14d11-106">[in] A pointer to an [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) object, which is the event handler object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="af9e2-107">备注</span><span class="sxs-lookup"><span data-stu-id="af9e2-107">Remarks</span></span>  
- <span data-ttu-id="af9e2-108">`SetManagedHandler` 必须在创建时调用。</span><span class="sxs-lookup"><span data-stu-id="af9e2-108">`SetManagedHandler` must be called at creation time.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="14d11-107">备注</span><span class="sxs-lookup"><span data-stu-id="14d11-107">Remarks</span></span>  
+ <span data-ttu-id="14d11-108">必须在创建时调用 `SetManagedHandler`。</span><span class="sxs-lookup"><span data-stu-id="14d11-108">`SetManagedHandler` must be called at creation time.</span></span>  
   
- <span data-ttu-id="af9e2-109">如果`ICorDebugManagedCallback`实现不包含足够的接口来处理正在调试的应用程序的调试事件`SetManagedHandler`返回 E_NOINTERFACE HRESULT。</span><span class="sxs-lookup"><span data-stu-id="af9e2-109">If the `ICorDebugManagedCallback` implementation does not contain sufficient interfaces to handle debugging events for the application that is being debugged, `SetManagedHandler` returns an HRESULT of E_NOINTERFACE.</span></span>  
+ <span data-ttu-id="14d11-109">如果 `ICorDebugManagedCallback` 实现未包含足够的接口来处理要调试的应用程序的调试事件，`SetManagedHandler` 将返回 E_NOINTERFACE 的 HRESULT。</span><span class="sxs-lookup"><span data-stu-id="14d11-109">If the `ICorDebugManagedCallback` implementation does not contain sufficient interfaces to handle debugging events for the application that is being debugged, `SetManagedHandler` returns an HRESULT of E_NOINTERFACE.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="af9e2-110">要求</span><span class="sxs-lookup"><span data-stu-id="af9e2-110">Requirements</span></span>  
- <span data-ttu-id="af9e2-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="af9e2-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="14d11-110">要求</span><span class="sxs-lookup"><span data-stu-id="14d11-110">Requirements</span></span>  
+ <span data-ttu-id="14d11-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="14d11-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="af9e2-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="af9e2-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="14d11-112">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="14d11-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="af9e2-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="af9e2-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="14d11-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="14d11-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="af9e2-114">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="af9e2-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="14d11-114">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="14d11-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="af9e2-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="af9e2-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="14d11-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="14d11-115">See also</span></span>
 
-- [<span data-ttu-id="af9e2-116">ICorDebug 接口</span><span class="sxs-lookup"><span data-stu-id="af9e2-116">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [<span data-ttu-id="14d11-116">ICorDebug 接口</span><span class="sxs-lookup"><span data-stu-id="14d11-116">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

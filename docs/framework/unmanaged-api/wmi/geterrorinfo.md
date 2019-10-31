@@ -14,41 +14,39 @@ helpviewer_keywords:
 - GetErrorInfo function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ab801ec7899403f568d953535fcd430a862a2fd8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 062dc62dfe53af3bf5158cb1add0897eccc1df60
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798582"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102616"
 ---
-# <a name="geterrorinfo-function"></a><span data-ttu-id="d99b7-103">GetErrorInfo 函数</span><span class="sxs-lookup"><span data-stu-id="d99b7-103">GetErrorInfo function</span></span>
-<span data-ttu-id="d99b7-104">从上一个函数调用中检索错误信息。</span><span class="sxs-lookup"><span data-stu-id="d99b7-104">Retrieves error information from the previous function call.</span></span>  
+# <a name="geterrorinfo-function"></a><span data-ttu-id="11740-103">GetErrorInfo 函数</span><span class="sxs-lookup"><span data-stu-id="11740-103">GetErrorInfo function</span></span>
+<span data-ttu-id="11740-104">从上一个函数调用中检索错误信息。</span><span class="sxs-lookup"><span data-stu-id="11740-104">Retrieves error information from the previous function call.</span></span>  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="d99b7-105">语法</span><span class="sxs-lookup"><span data-stu-id="d99b7-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="11740-105">语法</span><span class="sxs-lookup"><span data-stu-id="11740-105">Syntax</span></span>  
   
 ```cpp  
 IErrorInfo* GetErrorInfo(); 
 ```  
 
-## <a name="return-value"></a><span data-ttu-id="d99b7-106">返回值</span><span class="sxs-lookup"><span data-stu-id="d99b7-106">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="11740-106">返回值</span><span class="sxs-lookup"><span data-stu-id="11740-106">Return value</span></span>
 
-<span data-ttu-id="d99b7-107">如果函数调用成功 ， 则为指向 [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) 对象的指针; 否则为`null`。</span><span class="sxs-lookup"><span data-stu-id="d99b7-107">An pointer to an [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) object if the function call succeeds, or `null` if it fails.</span></span>
+<span data-ttu-id="11740-107">如果函数调用成功，则为指向[IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)对象的指针; 如果失败，则为 `null`。</span><span class="sxs-lookup"><span data-stu-id="11740-107">An pointer to an [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) object if the function call succeeds, or `null` if it fails.</span></span>
   
-## <a name="remarks"></a><span data-ttu-id="d99b7-108">备注</span><span class="sxs-lookup"><span data-stu-id="d99b7-108">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="11740-108">备注</span><span class="sxs-lookup"><span data-stu-id="11740-108">Remarks</span></span>
 
-<span data-ttu-id="d99b7-109">此函数包装对[IComThreadingInfo：： GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype)方法的调用。</span><span class="sxs-lookup"><span data-stu-id="d99b7-109">This function wraps a call to the [IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) method.</span></span>
+<span data-ttu-id="11740-109">此函数包装对[IComThreadingInfo：： GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype)方法的调用。</span><span class="sxs-lookup"><span data-stu-id="11740-109">This function wraps a call to the [IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="d99b7-110">要求</span><span class="sxs-lookup"><span data-stu-id="d99b7-110">Requirements</span></span>  
- <span data-ttu-id="d99b7-111">**适用**请参阅[系统需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d99b7-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="11740-110">要求</span><span class="sxs-lookup"><span data-stu-id="11740-110">Requirements</span></span>  
+ <span data-ttu-id="11740-111">**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="11740-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d99b7-112">**标头：** WMINet_Utils.def</span><span class="sxs-lookup"><span data-stu-id="d99b7-112">**Header:** WMINet_Utils.def</span></span>  
+ <span data-ttu-id="11740-112">**标头：** WMINet_Utils</span><span class="sxs-lookup"><span data-stu-id="11740-112">**Header:** WMINet_Utils.def</span></span>  
   
- <span data-ttu-id="d99b7-113">**.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="d99b7-113">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="11740-113">**.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="11740-113">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d99b7-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="d99b7-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="11740-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="11740-114">See also</span></span>
 
-- [<span data-ttu-id="d99b7-115">WMI 和性能计数器（非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="d99b7-115">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="11740-115">WMI 和性能计数器（非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="11740-115">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

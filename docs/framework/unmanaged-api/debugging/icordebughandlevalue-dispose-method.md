@@ -15,29 +15,27 @@ helpviewer_keywords:
 ms.assetid: c1542811-0a7f-4235-bcfd-b24370d6f24b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d21703aa911b5222fff71282e6da26aa5c0e2853
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 957035591090fb5a6a615662c4840ff16509ee20
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756853"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138508"
 ---
-# <a name="icordebughandlevaluedispose-method"></a><span data-ttu-id="4fe4c-102">ICorDebugHandleValue::Dispose 方法</span><span class="sxs-lookup"><span data-stu-id="4fe4c-102">ICorDebugHandleValue::Dispose Method</span></span>
-<span data-ttu-id="4fe4c-103">释放此 ICorDebugHandleValue 对象而无需显式地释放接口指针引用的句柄。</span><span class="sxs-lookup"><span data-stu-id="4fe4c-103">Releases the handle referenced by this ICorDebugHandleValue object without explicitly releasing the interface pointer.</span></span>  
+# <a name="icordebughandlevaluedispose-method"></a><span data-ttu-id="84ace-102">ICorDebugHandleValue::Dispose 方法</span><span class="sxs-lookup"><span data-stu-id="84ace-102">ICorDebugHandleValue::Dispose Method</span></span>
+<span data-ttu-id="84ace-103">释放此 ICorDebugHandleValue 对象引用的句柄，无需显式释放接口指针。</span><span class="sxs-lookup"><span data-stu-id="84ace-103">Releases the handle referenced by this ICorDebugHandleValue object without explicitly releasing the interface pointer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4fe4c-104">语法</span><span class="sxs-lookup"><span data-stu-id="4fe4c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="84ace-104">语法</span><span class="sxs-lookup"><span data-stu-id="84ace-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Dispose ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="4fe4c-105">要求</span><span class="sxs-lookup"><span data-stu-id="4fe4c-105">Requirements</span></span>  
- <span data-ttu-id="4fe4c-106">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4fe4c-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="84ace-105">要求</span><span class="sxs-lookup"><span data-stu-id="84ace-105">Requirements</span></span>  
+ <span data-ttu-id="84ace-106">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="84ace-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4fe4c-107">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4fe4c-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="84ace-107">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="84ace-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4fe4c-108">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4fe4c-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="84ace-108">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="84ace-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4fe4c-109">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4fe4c-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="84ace-109">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="84ace-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

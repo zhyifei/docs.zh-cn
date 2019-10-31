@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9ff3fcd6-38fe-41f8-bfd3-f0ab6c7d77ca
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b052aac7a71308486676aa688fd5ad655c2015f3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c4262c18e4efcbbca1b3e2a327fec7d4b609a31
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765293"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096931"
 ---
-# <a name="icordebugmoduleenumnext-method"></a><span data-ttu-id="707d9-102">ICorDebugModuleEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="707d9-102">ICorDebugModuleEnum::Next Method</span></span>
-<span data-ttu-id="707d9-103">获取由指定的"icor 调试模块"实例数`celt`枚举，从当前位置开始。</span><span class="sxs-lookup"><span data-stu-id="707d9-103">Gets the number of "ICorDebugModule" instances specified by `celt` from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugmoduleenumnext-method"></a><span data-ttu-id="94aba-102">ICorDebugModuleEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="94aba-102">ICorDebugModuleEnum::Next Method</span></span>
+<span data-ttu-id="94aba-103">从当前位置开始，获取从枚举 `celt` 指定的 "ICorDebugModule" 实例的数目。</span><span class="sxs-lookup"><span data-stu-id="94aba-103">Gets the number of "ICorDebugModule" instances specified by `celt` from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="707d9-104">语法</span><span class="sxs-lookup"><span data-stu-id="707d9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="94aba-104">语法</span><span class="sxs-lookup"><span data-stu-id="94aba-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Next (  
@@ -38,23 +36,23 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="707d9-105">参数</span><span class="sxs-lookup"><span data-stu-id="707d9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="94aba-105">参数</span><span class="sxs-lookup"><span data-stu-id="94aba-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="707d9-106">[in]数`ICorDebugModule`要检索的实例。</span><span class="sxs-lookup"><span data-stu-id="707d9-106">[in] The number of `ICorDebugModule` instances to be retrieved.</span></span>  
+ <span data-ttu-id="94aba-106">中要检索的 `ICorDebugModule` 实例的数目。</span><span class="sxs-lookup"><span data-stu-id="94aba-106">[in] The number of `ICorDebugModule` instances to be retrieved.</span></span>  
   
  `modules`  
- <span data-ttu-id="707d9-107">[out]一个指针，其中每个指向数组`ICorDebugModule`对象。</span><span class="sxs-lookup"><span data-stu-id="707d9-107">[out] An array of pointers, each of which points to an `ICorDebugModule` object.</span></span>  
+ <span data-ttu-id="94aba-107">弄指针的数组，其中每个都指向一个 `ICorDebugModule` 对象。</span><span class="sxs-lookup"><span data-stu-id="94aba-107">[out] An array of pointers, each of which points to an `ICorDebugModule` object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="707d9-108">[out]指向数`ICorDebugModule`实际返回的实例。</span><span class="sxs-lookup"><span data-stu-id="707d9-108">[out] Pointer to the number of `ICorDebugModule` instances actually returned.</span></span> <span data-ttu-id="707d9-109">此值可能为 null 如果`celt`是其中一个。</span><span class="sxs-lookup"><span data-stu-id="707d9-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="94aba-108">弄一个指针，指向实际返回的 `ICorDebugModule` 实例的数目。</span><span class="sxs-lookup"><span data-stu-id="94aba-108">[out] Pointer to the number of `ICorDebugModule` instances actually returned.</span></span> <span data-ttu-id="94aba-109">如果 `celt` 为1，则此值可以为 null。</span><span class="sxs-lookup"><span data-stu-id="94aba-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="707d9-110">要求</span><span class="sxs-lookup"><span data-stu-id="707d9-110">Requirements</span></span>  
- <span data-ttu-id="707d9-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="707d9-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="94aba-110">要求</span><span class="sxs-lookup"><span data-stu-id="94aba-110">Requirements</span></span>  
+ <span data-ttu-id="94aba-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="94aba-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="707d9-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="707d9-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="94aba-112">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="94aba-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="707d9-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="707d9-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="94aba-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="94aba-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="707d9-114">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="707d9-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="94aba-114">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="94aba-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="707d9-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="707d9-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="94aba-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="94aba-115">See also</span></span>

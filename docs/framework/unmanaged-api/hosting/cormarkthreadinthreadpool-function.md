@@ -14,33 +14,31 @@ helpviewer_keywords:
 ms.assetid: 3f958d41-e82e-4ec3-ae6f-16c7b3b31e3e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3da22faa5e8863275cdfa8d03b980a5cbb55e87d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 15ce6b589beb6c8b30ff4e8b16440c8110cc466b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758345"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136896"
 ---
-# <a name="cormarkthreadinthreadpool-function"></a><span data-ttu-id="3c6a6-102">CorMarkThreadInThreadPool 函数</span><span class="sxs-lookup"><span data-stu-id="3c6a6-102">CorMarkThreadInThreadPool Function</span></span>
-<span data-ttu-id="3c6a6-103">将标记为托管代码的执行当前正在执行的线程池线程。</span><span class="sxs-lookup"><span data-stu-id="3c6a6-103">Marks the currently executing thread-pool thread for the execution of managed code.</span></span> <span data-ttu-id="3c6a6-104">从.NET Framework 2.0 版开始，此函数没有任何影响。</span><span class="sxs-lookup"><span data-stu-id="3c6a6-104">Starting with the .NET Framework version 2.0, this function has no effect.</span></span> <span data-ttu-id="3c6a6-105">它不是必需的并可以从你的代码。</span><span class="sxs-lookup"><span data-stu-id="3c6a6-105">It is not required, and can be removed from your code.</span></span> <span data-ttu-id="3c6a6-106">.NET Framework 4 中已弃用此函数。</span><span class="sxs-lookup"><span data-stu-id="3c6a6-106">This function is deprecated in the .NET Framework 4.</span></span>  
+# <a name="cormarkthreadinthreadpool-function"></a><span data-ttu-id="948eb-102">CorMarkThreadInThreadPool 函数</span><span class="sxs-lookup"><span data-stu-id="948eb-102">CorMarkThreadInThreadPool Function</span></span>
+<span data-ttu-id="948eb-103">标记当前正在执行的线程池线程以执行托管代码。</span><span class="sxs-lookup"><span data-stu-id="948eb-103">Marks the currently executing thread-pool thread for the execution of managed code.</span></span> <span data-ttu-id="948eb-104">从 .NET Framework 版本2.0 开始，此函数不起作用。</span><span class="sxs-lookup"><span data-stu-id="948eb-104">Starting with the .NET Framework version 2.0, this function has no effect.</span></span> <span data-ttu-id="948eb-105">这不是必需的，并且可以从代码中删除。</span><span class="sxs-lookup"><span data-stu-id="948eb-105">It is not required, and can be removed from your code.</span></span> <span data-ttu-id="948eb-106">此函数在 .NET Framework 4 中已弃用。</span><span class="sxs-lookup"><span data-stu-id="948eb-106">This function is deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3c6a6-107">语法</span><span class="sxs-lookup"><span data-stu-id="3c6a6-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="948eb-107">语法</span><span class="sxs-lookup"><span data-stu-id="948eb-107">Syntax</span></span>  
   
 ```cpp  
 void CorMarkThreadInThreadPool ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="3c6a6-108">要求</span><span class="sxs-lookup"><span data-stu-id="3c6a6-108">Requirements</span></span>  
- <span data-ttu-id="3c6a6-109">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3c6a6-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="948eb-108">要求</span><span class="sxs-lookup"><span data-stu-id="948eb-108">Requirements</span></span>  
+ <span data-ttu-id="948eb-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="948eb-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3c6a6-110">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3c6a6-110">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="948eb-110">**标头：** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="948eb-110">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="3c6a6-111">**库：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3c6a6-111">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="948eb-111">**库：** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="948eb-111">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3c6a6-112">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3c6a6-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="948eb-112">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="948eb-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3c6a6-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="3c6a6-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="948eb-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="948eb-113">See also</span></span>
 
-- [<span data-ttu-id="3c6a6-114">弃用的 CLR 承载函数</span><span class="sxs-lookup"><span data-stu-id="3c6a6-114">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="948eb-114">弃用的 CLR 承载函数</span><span class="sxs-lookup"><span data-stu-id="948eb-114">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

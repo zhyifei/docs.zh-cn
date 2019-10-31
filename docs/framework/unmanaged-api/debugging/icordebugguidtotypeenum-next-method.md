@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c9937666-8e18-484d-9fe0-b9ac95199530
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9f334b4a28b0573fa938c2fda340c0c03175ff18
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f6f190cd5b2f208df5a4ed88b650af671f2e6c5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756874"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138516"
 ---
-# <a name="icordebugguidtotypeenumnext-method"></a><span data-ttu-id="c5ef9-102">ICorDebugGuidToTypeEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="c5ef9-102">ICorDebugGuidToTypeEnum::Next Method</span></span>
-<span data-ttu-id="c5ef9-103">获取指定的数目的[CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md)映射 Guid 类型信息的实例。</span><span class="sxs-lookup"><span data-stu-id="c5ef9-103">Gets the specified number of [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) instances that map GUIDs to type information.</span></span>  
+# <a name="icordebugguidtotypeenumnext-method"></a><span data-ttu-id="7cee4-102">ICorDebugGuidToTypeEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="7cee4-102">ICorDebugGuidToTypeEnum::Next Method</span></span>
+<span data-ttu-id="7cee4-103">获取指定数量的[CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md)实例，这些实例将 guid 映射到类型信息。</span><span class="sxs-lookup"><span data-stu-id="7cee4-103">Gets the specified number of [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) instances that map GUIDs to type information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c5ef9-104">语法</span><span class="sxs-lookup"><span data-stu-id="c5ef9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7cee4-104">语法</span><span class="sxs-lookup"><span data-stu-id="7cee4-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Next(  
@@ -37,28 +35,28 @@ HRESULT Next(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c5ef9-105">参数</span><span class="sxs-lookup"><span data-stu-id="c5ef9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7cee4-105">参数</span><span class="sxs-lookup"><span data-stu-id="7cee4-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="c5ef9-106">[in]要检索的 GUID 类型映射对象的数目。</span><span class="sxs-lookup"><span data-stu-id="c5ef9-106">[in] The number of GUID-to-type mapping objects to be retrieved.</span></span>  
+ <span data-ttu-id="7cee4-106">中要检索的 GUID 到类型的映射对象的数量。</span><span class="sxs-lookup"><span data-stu-id="7cee4-106">[in] The number of GUID-to-type mapping objects to be retrieved.</span></span>  
   
  `values`  
- <span data-ttu-id="c5ef9-107">[out]一个指针，其中每个指向数组[CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md)将 Windows 运行时 GUID 映射到其相应的 ICorDebugType 对象的对象。</span><span class="sxs-lookup"><span data-stu-id="c5ef9-107">[out] An array of pointers, each of which points to a [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) object that maps a Windows Runtime GUID to its corresponding ICorDebugType object.</span></span>  
+ <span data-ttu-id="7cee4-107">弄指针的数组，其中每个都指向将 Windows 运行时 GUID 映射到其对应 ICorDebugType 对象的[CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md)对象。</span><span class="sxs-lookup"><span data-stu-id="7cee4-107">[out] An array of pointers, each of which points to a [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) object that maps a Windows Runtime GUID to its corresponding ICorDebugType object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="c5ef9-108">[out]指向数[CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md)对象中实际返回`values`。</span><span class="sxs-lookup"><span data-stu-id="c5ef9-108">[out] A pointer to the number of [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) objects actually returned in `values`.</span></span>  
+ <span data-ttu-id="7cee4-108">弄一个指针，指向 `values`中实际返回的[CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md)对象的数目。</span><span class="sxs-lookup"><span data-stu-id="7cee4-108">[out] A pointer to the number of [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) objects actually returned in `values`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c5ef9-109">备注</span><span class="sxs-lookup"><span data-stu-id="c5ef9-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7cee4-109">备注</span><span class="sxs-lookup"><span data-stu-id="7cee4-109">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c5ef9-110">要求</span><span class="sxs-lookup"><span data-stu-id="c5ef9-110">Requirements</span></span>  
- <span data-ttu-id="c5ef9-111">**平台：** Windows 运行时</span><span class="sxs-lookup"><span data-stu-id="c5ef9-111">**Platforms:** Windows Runtime</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7cee4-110">要求</span><span class="sxs-lookup"><span data-stu-id="7cee4-110">Requirements</span></span>  
+ <span data-ttu-id="7cee4-111">**平台：** Windows 运行时</span><span class="sxs-lookup"><span data-stu-id="7cee4-111">**Platforms:** Windows Runtime</span></span>  
   
- <span data-ttu-id="c5ef9-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c5ef9-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7cee4-112">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7cee4-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c5ef9-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c5ef9-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7cee4-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7cee4-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c5ef9-114">**.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c5ef9-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="7cee4-114">**.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7cee4-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c5ef9-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="c5ef9-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7cee4-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="7cee4-115">See also</span></span>
 
-- [<span data-ttu-id="c5ef9-116">ICorDebugGuidToTypeEnum 接口</span><span class="sxs-lookup"><span data-stu-id="c5ef9-116">ICorDebugGuidToTypeEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)
-- [<span data-ttu-id="c5ef9-117">调试接口</span><span class="sxs-lookup"><span data-stu-id="c5ef9-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="7cee4-116">ICorDebugGuidToTypeEnum 接口</span><span class="sxs-lookup"><span data-stu-id="7cee4-116">ICorDebugGuidToTypeEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)
+- [<span data-ttu-id="7cee4-117">调试接口</span><span class="sxs-lookup"><span data-stu-id="7cee4-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

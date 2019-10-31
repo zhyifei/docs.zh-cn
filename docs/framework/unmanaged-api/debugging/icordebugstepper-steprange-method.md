@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: b9776112-6e6d-4708-892a-8873db02e16f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7e1ace501bf5de741ea110fe4d3bb4bc44843bf8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ca4542fe42fab0b5ff54b23b9492d3906698c10
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760535"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120624"
 ---
-# <a name="icordebugsteppersteprange-method"></a><span data-ttu-id="05fe5-102">ICorDebugStepper::StepRange 方法</span><span class="sxs-lookup"><span data-stu-id="05fe5-102">ICorDebugStepper::StepRange Method</span></span>
-<span data-ttu-id="05fe5-103">导致此 ICorDebugStepper 单步执行其包含的线程，并返回到达超出指定范围的最后一个代码时。</span><span class="sxs-lookup"><span data-stu-id="05fe5-103">Causes this ICorDebugStepper to single-step through its containing thread, and to return when it reaches code beyond the last of the specified ranges.</span></span>  
+# <a name="icordebugsteppersteprange-method"></a><span data-ttu-id="29db4-102">ICorDebugStepper::StepRange 方法</span><span class="sxs-lookup"><span data-stu-id="29db4-102">ICorDebugStepper::StepRange Method</span></span>
+<span data-ttu-id="29db4-103">使此 ICorDebugStepper 单步执行其包含线程，并在到达指定范围内的最后一个代码时返回。</span><span class="sxs-lookup"><span data-stu-id="29db4-103">Causes this ICorDebugStepper to single-step through its containing thread, and to return when it reaches code beyond the last of the specified ranges.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="05fe5-104">语法</span><span class="sxs-lookup"><span data-stu-id="05fe5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="29db4-104">语法</span><span class="sxs-lookup"><span data-stu-id="29db4-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT StepRange (  
@@ -37,28 +35,28 @@ HRESULT StepRange (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="05fe5-105">参数</span><span class="sxs-lookup"><span data-stu-id="05fe5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="29db4-105">参数</span><span class="sxs-lookup"><span data-stu-id="29db4-105">Parameters</span></span>  
  `bStepIn`  
- <span data-ttu-id="05fe5-106">[in]设置为`true`来单步执行的线程内调用的函数。</span><span class="sxs-lookup"><span data-stu-id="05fe5-106">[in] Set to `true` to step into a function that is called within the thread.</span></span> <span data-ttu-id="05fe5-107">设置为`false`到逐过程执行函数。</span><span class="sxs-lookup"><span data-stu-id="05fe5-107">Set to `false` to step over the function.</span></span>  
+ <span data-ttu-id="29db4-106">中设置为单步执行在线程中调用的函数的 `true`。</span><span class="sxs-lookup"><span data-stu-id="29db4-106">[in] Set to `true` to step into a function that is called within the thread.</span></span> <span data-ttu-id="29db4-107">设置为 `false` 以逐过程执行函数。</span><span class="sxs-lookup"><span data-stu-id="29db4-107">Set to `false` to step over the function.</span></span>  
   
  `ranges`  
- <span data-ttu-id="05fe5-108">[in]COR_DEBUG_STEP_RANGE 结构数组，其中每个指定的范围。</span><span class="sxs-lookup"><span data-stu-id="05fe5-108">[in] An array of COR_DEBUG_STEP_RANGE structures, each of which specifies a range.</span></span>  
+ <span data-ttu-id="29db4-108">中COR_DEBUG_STEP_RANGE 结构的数组，其中每个结构指定一个范围。</span><span class="sxs-lookup"><span data-stu-id="29db4-108">[in] An array of COR_DEBUG_STEP_RANGE structures, each of which specifies a range.</span></span>  
   
  `cRangeCount`  
- <span data-ttu-id="05fe5-109">[in] `ranges` 数组的大小。</span><span class="sxs-lookup"><span data-stu-id="05fe5-109">[in] The size of the `ranges` array.</span></span>  
+ <span data-ttu-id="29db4-109">[in] `ranges` 数组的大小。</span><span class="sxs-lookup"><span data-stu-id="29db4-109">[in] The size of the `ranges` array.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="05fe5-110">备注</span><span class="sxs-lookup"><span data-stu-id="05fe5-110">Remarks</span></span>  
- <span data-ttu-id="05fe5-111">`StepRange`方法的工作方式类似于[icordebugstepper:: Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)达到方法，只不过它给定范围之外的代码之前，无法完成。</span><span class="sxs-lookup"><span data-stu-id="05fe5-111">The `StepRange` method works like the [ICorDebugStepper::Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md) method, except that it does not complete until code outside the given range is reached.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="29db4-110">备注</span><span class="sxs-lookup"><span data-stu-id="29db4-110">Remarks</span></span>  
+ <span data-ttu-id="29db4-111">`StepRange` 方法的工作方式类似于[ICorDebugStepper：： Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)方法，但直到到达给定范围之外的代码时才会完成。</span><span class="sxs-lookup"><span data-stu-id="29db4-111">The `StepRange` method works like the [ICorDebugStepper::Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md) method, except that it does not complete until code outside the given range is reached.</span></span>  
   
- <span data-ttu-id="05fe5-112">这可以是单步执行一次一条指令比效率更高。</span><span class="sxs-lookup"><span data-stu-id="05fe5-112">This can be more efficient than stepping one instruction at a time.</span></span> <span data-ttu-id="05fe5-113">范围被指定为从一开始单步调试器的帧的偏移量对的列表。</span><span class="sxs-lookup"><span data-stu-id="05fe5-113">Ranges are specified as a list of offset pairs from the start of the stepper's frame.</span></span>  
+ <span data-ttu-id="29db4-112">这比单步执行一次指令更有效。</span><span class="sxs-lookup"><span data-stu-id="29db4-112">This can be more efficient than stepping one instruction at a time.</span></span> <span data-ttu-id="29db4-113">范围指定为自分档器帧开头的偏移量对的列表。</span><span class="sxs-lookup"><span data-stu-id="29db4-113">Ranges are specified as a list of offset pairs from the start of the stepper's frame.</span></span>  
   
- <span data-ttu-id="05fe5-114">范围是相对于一种方法的 Microsoft 中间语言 (MSIL) 代码。</span><span class="sxs-lookup"><span data-stu-id="05fe5-114">Ranges are relative to the Microsoft intermediate language (MSIL) code of a method.</span></span> <span data-ttu-id="05fe5-115">调用[icordebugstepper:: Setrangeil](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)与`false`以便相对于一种方法的本机代码的范围。</span><span class="sxs-lookup"><span data-stu-id="05fe5-115">Call [ICorDebugStepper::SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md) with `false` to make the ranges relative to the native code of a method.</span></span>  
+ <span data-ttu-id="29db4-114">范围相对于方法的 Microsoft 中间语言（MSIL）代码。</span><span class="sxs-lookup"><span data-stu-id="29db4-114">Ranges are relative to the Microsoft intermediate language (MSIL) code of a method.</span></span> <span data-ttu-id="29db4-115">调用[ICorDebugStepper：： SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)与 `false` 以使范围相对于方法的本机代码。</span><span class="sxs-lookup"><span data-stu-id="29db4-115">Call [ICorDebugStepper::SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md) with `false` to make the ranges relative to the native code of a method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="05fe5-116">要求</span><span class="sxs-lookup"><span data-stu-id="05fe5-116">Requirements</span></span>  
- <span data-ttu-id="05fe5-117">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="05fe5-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="29db4-116">要求</span><span class="sxs-lookup"><span data-stu-id="29db4-116">Requirements</span></span>  
+ <span data-ttu-id="29db4-117">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="29db4-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="05fe5-118">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="05fe5-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="29db4-118">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="29db4-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="05fe5-119">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="05fe5-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="29db4-119">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="29db4-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="05fe5-120">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05fe5-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="29db4-120">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="29db4-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

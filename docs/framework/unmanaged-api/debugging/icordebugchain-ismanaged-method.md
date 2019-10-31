@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 17b389a0-1a4d-4e8a-8613-9bc1769930f9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7e14ff1cd85810a0b2f9e14c3ab4c8d12d883d17
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 481f6d08e11a5f315c64b3d58df4ab291fa42e78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745623"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123850"
 ---
-# <a name="icordebugchainismanaged-method"></a><span data-ttu-id="74513-102">ICorDebugChain::IsManaged 方法</span><span class="sxs-lookup"><span data-stu-id="74513-102">ICorDebugChain::IsManaged Method</span></span>
-<span data-ttu-id="74513-103">获取一个值，该值指示此链是否正在运行托管的代码。</span><span class="sxs-lookup"><span data-stu-id="74513-103">Gets a value that indicates whether this chain is running managed code.</span></span>  
+# <a name="icordebugchainismanaged-method"></a><span data-ttu-id="7dd95-102">ICorDebugChain::IsManaged 方法</span><span class="sxs-lookup"><span data-stu-id="7dd95-102">ICorDebugChain::IsManaged Method</span></span>
+<span data-ttu-id="7dd95-103">获取一个值，该值指示此链是否正在运行托管代码。</span><span class="sxs-lookup"><span data-stu-id="7dd95-103">Gets a value that indicates whether this chain is running managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="74513-104">语法</span><span class="sxs-lookup"><span data-stu-id="74513-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7dd95-104">语法</span><span class="sxs-lookup"><span data-stu-id="7dd95-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT IsManaged (  
@@ -35,15 +33,15 @@ HRESULT IsManaged (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="74513-105">参数</span><span class="sxs-lookup"><span data-stu-id="74513-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7dd95-105">参数</span><span class="sxs-lookup"><span data-stu-id="7dd95-105">Parameters</span></span>  
  `pManaged`  
- <span data-ttu-id="74513-106">[out]`true`如果此链正在运行托管的代码; 否则为`false`。</span><span class="sxs-lookup"><span data-stu-id="74513-106">[out] `true` if this chain is running managed code; otherwise, `false`.</span></span>  
+ <span data-ttu-id="7dd95-106">[out] 如果此链正在运行托管代码，则 `true`;否则，`false`。</span><span class="sxs-lookup"><span data-stu-id="7dd95-106">[out] `true` if this chain is running managed code; otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="74513-107">要求</span><span class="sxs-lookup"><span data-stu-id="74513-107">Requirements</span></span>  
- <span data-ttu-id="74513-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="74513-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7dd95-107">要求</span><span class="sxs-lookup"><span data-stu-id="7dd95-107">Requirements</span></span>  
+ <span data-ttu-id="7dd95-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7dd95-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="74513-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="74513-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7dd95-109">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7dd95-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="74513-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="74513-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7dd95-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7dd95-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="74513-111">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="74513-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="7dd95-111">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7dd95-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

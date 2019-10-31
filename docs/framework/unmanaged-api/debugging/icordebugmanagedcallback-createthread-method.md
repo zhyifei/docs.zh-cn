@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6b961728-21c4-4e8d-ae81-197458be62f4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2192b5d3b240211c8982eab7539896ea3626a072
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 401cb41d8231e78b8657513e1a755a50814e463b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759678"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137394"
 ---
-# <a name="icordebugmanagedcallbackcreatethread-method"></a><span data-ttu-id="15ae7-102">ICorDebugManagedCallback::CreateThread 方法</span><span class="sxs-lookup"><span data-stu-id="15ae7-102">ICorDebugManagedCallback::CreateThread Method</span></span>
-<span data-ttu-id="15ae7-103">通知调试器线程已开始执行托管的代码。</span><span class="sxs-lookup"><span data-stu-id="15ae7-103">Notifies the debugger that a thread has started executing managed code.</span></span>  
+# <a name="icordebugmanagedcallbackcreatethread-method"></a><span data-ttu-id="8b8cd-102">ICorDebugManagedCallback::CreateThread 方法</span><span class="sxs-lookup"><span data-stu-id="8b8cd-102">ICorDebugManagedCallback::CreateThread Method</span></span>
+<span data-ttu-id="8b8cd-103">通知调试器线程已开始执行托管代码。</span><span class="sxs-lookup"><span data-stu-id="8b8cd-103">Notifies the debugger that a thread has started executing managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="15ae7-104">语法</span><span class="sxs-lookup"><span data-stu-id="15ae7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8b8cd-104">语法</span><span class="sxs-lookup"><span data-stu-id="8b8cd-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateThread (  
@@ -36,25 +34,25 @@ HRESULT CreateThread (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="15ae7-105">参数</span><span class="sxs-lookup"><span data-stu-id="15ae7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8b8cd-105">参数</span><span class="sxs-lookup"><span data-stu-id="8b8cd-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="15ae7-106">[in]指向一个 ICorDebugAppDomain 对象，表示包含在线程的应用程序域的指针。</span><span class="sxs-lookup"><span data-stu-id="15ae7-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contains the thread.</span></span>  
+ <span data-ttu-id="8b8cd-106">中指向 ICorDebugAppDomain 对象的指针，该对象表示包含线程的应用程序域。</span><span class="sxs-lookup"><span data-stu-id="8b8cd-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contains the thread.</span></span>  
   
  `thread`  
- <span data-ttu-id="15ae7-107">[in]指向一个 ICorDebugThread 对象，表示在线程的指针。</span><span class="sxs-lookup"><span data-stu-id="15ae7-107">[in] A pointer to an ICorDebugThread object that represents the thread.</span></span>  
+ <span data-ttu-id="8b8cd-107">中指向表示线程的 ICorDebugThread 对象的指针。</span><span class="sxs-lookup"><span data-stu-id="8b8cd-107">[in] A pointer to an ICorDebugThread object that represents the thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="15ae7-108">备注</span><span class="sxs-lookup"><span data-stu-id="15ae7-108">Remarks</span></span>  
- <span data-ttu-id="15ae7-109">该线程将定位在要执行的第一个托管的代码指令。</span><span class="sxs-lookup"><span data-stu-id="15ae7-109">The thread will be positioned at the first managed code instruction to be executed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8b8cd-108">备注</span><span class="sxs-lookup"><span data-stu-id="8b8cd-108">Remarks</span></span>  
+ <span data-ttu-id="8b8cd-109">线程将定位在要执行的第一个托管代码指令上。</span><span class="sxs-lookup"><span data-stu-id="8b8cd-109">The thread will be positioned at the first managed code instruction to be executed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="15ae7-110">要求</span><span class="sxs-lookup"><span data-stu-id="15ae7-110">Requirements</span></span>  
- <span data-ttu-id="15ae7-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="15ae7-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8b8cd-110">要求</span><span class="sxs-lookup"><span data-stu-id="8b8cd-110">Requirements</span></span>  
+ <span data-ttu-id="8b8cd-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8b8cd-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="15ae7-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="15ae7-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8b8cd-112">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8b8cd-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="15ae7-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="15ae7-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8b8cd-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8b8cd-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="15ae7-114">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15ae7-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="8b8cd-114">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8b8cd-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15ae7-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="15ae7-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8b8cd-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="8b8cd-115">See also</span></span>
 
-- [<span data-ttu-id="15ae7-116">ICorDebugManagedCallback 接口</span><span class="sxs-lookup"><span data-stu-id="15ae7-116">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="8b8cd-116">ICorDebugManagedCallback 接口</span><span class="sxs-lookup"><span data-stu-id="8b8cd-116">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
