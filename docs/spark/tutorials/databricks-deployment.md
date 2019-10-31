@@ -4,170 +4,221 @@ description: 了解如何将 .NET for Apache Spark 应用程序部署到 Databri
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 55fa9b42e04a540deb245887d601e6cce0e6e623
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9e338886c68845d5f95e7beb0cd7ac3a729d3281
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583525"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72961112"
 ---
-# <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>将 .NET for Apache Spark 应用程序部署到 Databricks
+# <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>教程：将 .NET for Apache Spark 应用程序部署到 Databricks
 
-本教程介绍如何将 .NET for Apache Spark 应用程序部署到 Databricks。
+本教程介绍如何使用 Azure Databricks 将应用部署到云。Azure Databricks 是一种基于 Apache Spark 的分析平台，包含一键设置、经过简化的工作流以及支持协作的交互式工作区。
 
 在本教程中，你将了解：
 
 > [!div class="checklist"]
->
-> * 准备 Microsoft.Spark.Worker
-> * 发布 Spark .NET 应用
-> * 将应用部署到 Databricks
-> * 运行你的应用
+> 创建 Azure Databricks 工作区。
+> 发布 .NET for Apache Spark 应用。
+> 创建 Spark 作业和 Spark 群集。
+> 在 Spark 群集上运行应用。
 
 ## <a name="prerequisites"></a>系统必备
 
-开始之前，请执行以下操作：
+开始之前，请完成以下任务：
 
-* 下载 [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html)。
-* 将 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 下载到本地计算机。 这是稍后用于将 .NET for Apache Spark 依赖文件复制到 Spark 群集的工作器节点的帮助程序脚本。
+* 如果没有 Azure 帐户，请创建一个[免费帐户](https://azure.microsoft.com/free/)。
+* 登录 [Azure 门户](https://portal.azure.com/)。
+* 完成 [.NET for Apache Spark - 10 分钟入门](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)教程。
 
-## <a name="prepare-worker-dependencies"></a>准备辅助角色依赖项
+## <a name="create-an-azure-databricks-workspace"></a>创建 Azure Databricks 工作区
 
-Microsoft.Spark.Worker 是后端组件，位于 Spark 群集的单个工作器节点上  。 想要执行 C# UDF（用户定义的函数），Spark 需要了解如何启动 .NET CLR 以执行 UDF。 Microsoft.Spark.Worker 向 Spark 提供启用此功能的类集合  。
+> [!Note]
+> 不能使用 Azure 免费试用订阅完成本教程  。
+> 如果你有免费帐户，请转到个人资料并将订阅更改为“即用即付”  。 有关详细信息，请参阅 [Azure 免费帐户](https://azure.microsoft.com/free/)。 然后，[移除支出限制](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit)，并为你所在区域的 vCPU [请求增加配额](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request)。 创建 Azure Databricks 工作区时，可以选择“试用版(高级 - 14天免费 DBU)”  定价层，让工作区访问免费的高级 Azure Databricks DBU 14 天。
 
-1. 选择要在群集上部署的 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp 版本。
+在本部分，使用 Azure 门户创建 Azure Databricks 工作区。
 
-   例如，如果需要使用 `netcoreapp2.1` 的 `.NET for Apache Spark v0.1.0`，则下载 [Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz)。
+1. 在 Azure 门户中，选择“创建资源”   >   “分析” >   “Azure Databricks”。
 
-2. 将 `Microsoft.Spark.Worker.<release>.tar.gz` 和 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 上传到群集具有访问权限的分布式文件系统（如 DBFS）。
+   ![在 Azure 门户中创建 Azure Databricks 资源](./media/databricks-deployment/create-databricks-resource.png)
 
-## <a name="prepare-your-net-for-apache-spark-app"></a>准备 .NET for Apache Spark 应用
+2. 在“Azure Databricks 服务”  下，提供所需的值以创建 Databricks 工作区。
+    
+    |属性  |说明  |
+    |---------|---------|
+    |**工作区名称**     | 为 Databricks 工作区提供一个名称。        |
+    |**订阅**     | 从下拉列表中选择自己的 Azure 订阅。        |
+    |**资源组**     | 指定是要创建新的资源组还是使用现有的资源组。 资源组是用于保存 Azure 解决方案相关资源的容器。 有关详细信息，请参阅 [Azure 资源组概述](/azure/azure-databricks/azure-resource-manager/resource-group-overview)。 |
+    |**位置**     | 选择首选区域。 有关可用区域的信息，请参阅[各区域推出的 Azure 服务](https://azure.microsoft.com/regions/services/)。        |
+    |**定价层**     |  在“标准”、“高级”和“试用”之间进行选择。    有关这些层的详细信息，请参阅 [Databricks 价格页](https://azure.microsoft.com/pricing/details/databricks/)。       |
+    |**虚拟网络**     |   No       |
 
-1. 按照[入门](get-started.md)教程来生成应用。
+3. 选择“创建”  。 创建工作区需要几分钟时间。 创建工作区时，可以在“通知”中查看部署状态。 
 
-2. 发布独立的 Spark .NET 应用。
+## <a name="install-azure-databricks-tools"></a>安装 Azure Databricks 工具
 
-   可在 Linux 上运行以下命令。
+可使用 Databricks CLI 连接到 Azure Databricks 群集，然后将文件从本地计算机上传到这些群集  。 Databricks 群集通过 DBFS（Databricks 文件系统）访问文件。 
 
-   ```dotnetcli
-   dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
-   ```
+1. Databricks CLI 需要使用 Python 3.6 或更高版本。 如果已安装 Python，则可以跳过此步骤。
+ 
+   **对于 Windows：**
 
-3. 为已发布的文件生成 `<your app>.zip`。
+   [下载适用于 Windows 的 Python](https://www.python.org/ftp/python/3.7.4/python-3.7.4.exe)
 
-   可使用 `zip` 在 Linux 上运行以下命令。
-
-   ```bash
-   zip -r <your app>.zip .
-   ```
-
-4. 将以下内容上传到群集具有访问权限的分布式文件系统（如 DBFS）：
-
-   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`：此 jar 作为 [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet 包的一部分包含在内，并且并置在应用的生成输出目录中。
-   * `<your app>.zip`
-   * 要放在每个执行程序的工作目录中的文件（如每位工作人员都可以访问的依赖文件或公共数据）或程序集（如包含应用所依赖的用户定义的函数或库的 DLL）。
-
-## <a name="deploy-to-databricks"></a>部署到 Databricks
-
-[Databricks](https://databricks.com) 是一个使用 Apache Spark 提供基于云的大数据处理的平台。
-
-> [!NOTE]
-> [Azure Databricks](https://azure.microsoft.com/services/databricks/) 和 [AWS Databricks](https://databricks.com/aws) 都基于 Linux。 因此，如果要将应用部署到 Databricks，请确保应用与 .NET Standard 兼容，并且使用 [.NET Core 编译器](https://dotnet.microsoft.com/download)编译应用。
-
-通过 Databricks，可以将 .NET for Apache Spark 应用提交到现有的有效群集，或在每次启动作业时创建新群集。 这就需要先安装 Microsoft.Spark.Worker  再提交 .NET for Apache Spark 应用。
-
-### <a name="deploy-microsoftsparkworker"></a>部署 Microsoft.Spark.Worker
-
-对于群集，此步骤只需执行一次。
-
-1. 将 [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) 和 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh
-) 下载到本地计算机。
-
-2. 将 db-init.sh 修改为指向要下载并安装在群集上的 Microsoft.Spark.Worker 版本   。
-
-3. 安装 [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html)。
-
-4. [设置 Databricks CLI 的身份验证](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#set-up-authentication)详细信息。
-
-5. 使用以下命令将文件上传到 Databricks 群集：
+   **对于 Linux：** 大多数 Linux 发行版上都预安装了 Python。 要查看已安装的版本，请运行以下命令：
 
    ```bash
-   cd <path-to-db-init-and-install-worker>
+   python3 --version
+   ```
+
+2. 使用 pip 安装 Databricks CLI。 Python 3.4 及更高版本默认包含 pip。 使用适用于 Python 3 的 pip3。 运行下面的命令：
+
+   ```bash
+   pip3 install databricks-cli
+   ```
+
+3. 安装 Databricks CLI 后，打开一个新的命令提示符并运行命令 `databricks`。 如果收到“[databricks] 未被识别为内部或外部命令错误”，请确认是否打开了新的命令提示符  。
+
+## <a name="set-up-azure-databricks"></a>设置 Azure Databricks
+
+Databricks CLI 安装完毕之后，接下来需要设置身份验证详细信息。
+
+1. 运行 Databricks CLI 命令 `databricks configure --token`。
+
+2. 运行配置命令后，系统会提示你进入主机。 主机 URL 使用以下格式： https://<\Location>.azuredatabricks.net  。 例如，如果在创建 Azure Databricks 服务期间选择了“eastus2”，则主机将为 https://eastus2.azuredatabricks.net   。
+
+3. 进入主机之后，系统会提示你输入令牌。 在 Azure 门户中，选择“启动工作区”以启动 Azure Databricks 工作区  。
+
+   ![启动 Azure Databricks 工作区](./media/databricks-deployment/launch-databricks-workspace.png)
+
+4. 在工作区主页上，选择“用户设置”  。
+
+   ![Azure Databricks 工作区中的“用户设置”](./media/databricks-deployment/databricks-user-settings.png)
+
+5. 在“用户设置”页上，可以生成新的令牌。 复制生成的令牌，并将其粘贴回命令提示符。
+
+   ![在 Azure Databricks 工作区中生成新的访问令牌](./media/databricks-deployment/generate-token.png)
+
+现在，应可以访问创建的任何 Azure Databricks 群集，并将文件上传到 DBFS。
+
+## <a name="download-worker-dependencies"></a>下载辅助角色依赖项
+
+1. Microsoft.Spark.Worker 可帮助 Apache Spark 执行你的应用，例如你可能已编写的任何用户定义函数 (UDF)。 下载 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz)。
+
+2. install-worker.sh 是一个脚本，可使用该脚本将 .NET for Apache Spark 依赖项文件复制到群集的节点中  。 
+
+   在本地计算机上创建一个名为 install-worker.sh 的新文件，并粘贴位于 GitHub 上的 [install-worker.sh 内容](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)  。 
+
+3. db-init.sh 是用于将依赖项安装到 Databricks Spark 群集上的脚本  。
+
+   在本地计算机上创建一个名为 db-init.sh 的新文件，并粘贴位于 GitHub 上的 [db-init.sh 内容](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh)  。 
+   
+   在刚刚创建的文件中，将 `DOTNET_SPARK_RELEASE` 变量设置为 `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz`。 按原样保留 db-init.sh 文件的其余部分  。
+
+> [!Note]
+> 如果使用 Windows，请验证 install-worker.sh 中的行尾和 db-init.sh 脚本是否为 Unix 样式 (LF)   。 可通过文本编辑器（例如，记事本++ 和 Atom）更改行尾。
+
+## <a name="publish-your-app"></a>发布你的应用
+
+接下来，发布在 [.NET for Apache Spark - 10 分钟入门](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)教程中创建的 mySparkApp，以确保 Spark 群集可以访问运行应用所需的所有文件  。 
+
+1. 运行以下命令以发布 mySparkApp  ：
+
+   在 Windows 上： 
+
+   ```console
+   cd mySparkApp
+   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x6
+   ```
+
+   **在 Linux 上：**
+
+   ```bash
+   cd mySparkApp
+   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
+   ```
+
+2. 执行以下任务以压缩已发布的应用文件，以便你可以轻松地将其上传到 Databricks Spark 群集。
+
+   在 Windows 上： 
+
+   导航到 mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64。 然后，右键单击“发布”文件夹，再选择“发送到”>“压缩文件夹”   。 将新文件夹命名为“publish.zip”  。
+
+   **在 Linux 上，运行以下命令：**
+
+   ```bash
+   zip -r publish.zip .
+   ```
+
+## <a name="upload-files"></a>上传文件
+
+在本部分中，将多个文件上传到 DBFS，以便群集拥有在云中运行应用所需的一切。 每次将文件上传到 DBFS 时，请确保你位于该文件所在的计算机目录中。
+
+1. 运行以下命令，以将 db-init.sh、install-worker.sh 和 Microsoft.Spark.Worker 上传到 DBFS    ：
+
+   ```console
    databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
    databricks fs cp install-worker.sh dbfs:/spark-dotnet/install-worker.sh
+   databricks fs cp Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/   Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
    ```
 
-6. 转到该 Databricks 工作区。 选择左侧菜单的“群集”，然后选择“创建群集”   。
+2. 运行以下命令以上传群集运行应用所需的其余文件：已压缩的发布文件夹、input.txt 和 microsoft-spark-2.4.x-0.3.0.jar   。 
 
-7. 正确配置群集之后，设置“Init 脚本”并创建群集  。
+   ```console
+   cd mySparkApp 
+   databricks fs cp input.txt dbfs:/input.txt
+   
+   cd mySparkApp\bin\Release\netcoreapp3.0\ubuntu.16.04-x64 directory 
+   databricks fs cp mySparkApp.zip dbfs:/spark-dotnet/publish.zip
+   databricks fs cp microsoft-spark-2.4.x-0.6.0.jar dbfs:/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar
+   ```
 
-   ![脚本操作图像](./media/databricks-deployment/deployment-databricks-init-script.png)
+## <a name="create-a-job"></a>创建作业
+
+应用通过运行 spark-submit（用于运行 .NET for Apache Spark 作业的命令）的作业在 Azure Databricks 上运行  。
+
+1. 在 Azure Databricks 工作区中，选择“作业”图标，然后选择“+ 创建作业”   。 
+
+   ![创建 Azure Databricks 作业](./media/databricks-deployment/create-job.png)
+
+2. 选择作业的标题，然后选择“配置 spark-submit”  。
+
+   ![为 Databricks 作业配置 spark-submit](./media/databricks-deployment/configure-spark-submit.png)
+
+3. 在作业配置中粘贴以下参数。 然后，选择“确认”  。
+
+   ```
+   ["--class","org.apache.spark.deploy.DotnetRunner","/dbfs/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar","/dbfs/spark-dotnet/publish.zip","mySparkApp"]
+   ```
+
+## <a name="create-a-cluster"></a>创建群集
+
+1. 导航到作业并选择“编辑”以配置作业的群集  。
+
+2. 将群集设置为“Spark 2.4.1”  。 然后，选择“高级选项” > “Init 脚本”   。 将 Init 脚本路径设置为 `dbfs:/spark-dotnet/db-init.sh`。 
+
+   ![在 Azure Databricks 中配置 Spark 群集](./media/databricks-deployment/cluster-config.png)
+
+3. 选择“确认”以确认群集设置  。
 
 ## <a name="run-your-app"></a>运行你的应用
 
-可使用 `set JAR` 或 `spark-submit` 将作业提交到 Databricks。
+1. 导航到作业并选择“立即运行”，在新配置的 Spark 群集上运行作业  。
 
-### <a name="use-set-jar"></a>使用 Set JAR
+2. 创建作业的群集需要几分钟时间。 一旦创建完成，你的作业就会被提交，你可以查看输出。
 
-通过 [Set JAR](https://docs.databricks.com/user-guide/jobs.html#create-a-job)，可将作业提交到现有的有效群集。
+3. 从左侧菜单中选择“群集”，然后选择“名称”并运行作业  。 
 
-#### <a name="one-time-setup"></a>一次性设置
+4. 选择“驱动程序日志”以查看作业的输出  。 应用执行完毕后，你将在写入标准输出控制台的入门本地运行中看到相同的字数表。
 
-1. 转到 Databricks 群集并选择左侧菜单的“作业”  。 然后选择“Set JAR”  。
+   ![Azure Databricks 作业输出表](./media/databricks-deployment/table-output.png)
 
-2. 上传正确的 `microsoft-spark-<spark-version>-<spark-dotnet-version>.jar` 文件。
+   恭喜，你已在云中运行了第一个 .NET for Apache Spark 应用程序！
 
-3. 正确设置参数。
+## <a name="clean-up-resources"></a>清理资源
 
-   | 参数   | 值                                                |
-   |-------------|------------------------------------------------------|
-   | Main 类  | org.apache.spark.deploy.dotnet.DotnetRunner          |
-   | 自变量   | /dbfs/apps/\<your-app-name>.zip \<your-app-main-class> |
-
-4. 将“群集”配置为指向上一部分中为其创建“Init 脚本”的现有群集   。
-
-#### <a name="publish-and-run-your-app"></a>发布并运行应用
-
-1. 使用 [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html) 将应用程序上传到 Databricks 群集。
-
-    ```bash
-    cd <path-to-your-app-publish-directory>
-    databricks fs cp <your-app-name>.zip dbfs:/apps/<your-app-name>.zip
-    ```
-
-2. 只有当应用程序集（例如包含用户定义的函数及其依赖项的 DLL）需要放置在每个 Microsoft.Spark.Worker 的工作目录中时，才需要执行此步骤  。
-
-   * 将应用程序集上传到 Databricks 群集
-
-      ```bash
-      cd <path-to-your-app-publish-directory>
-      databricks fs cp <assembly>.dll dbfs:/apps/dependencies
-      ```
-
-   * 取消评论并将 [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) 中的应用依赖项部分修改为指向应用依赖项路径，并上传到 Databricks 群集。
-
-      ```bash
-      cd <path-to-db-init-and-install-worker>
-      databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
-      ```
-
-   * 重启群集。
-
-3. 在 Databricks 工作区中转到 Databricks 群集。 在“作业”下，选择作业，然后选择“立即运行”以运行作业   。
-
-### <a name="use-spark-submit"></a>使用 spark-submit
-
-使用 [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) 命令，可将作业提交到新群集。
-
-1. [创建作业](https://docs.databricks.com/user-guide/jobs.html)并选择“配置 spark-submit”  。
-
-2. 使用以下参数配置 `spark-submit`：
-
-    ```bash
-    ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
-    ```
-
-3. 在 Databricks 工作区中转到 Databricks 群集。 在“作业”下，选择作业，然后选择“立即运行”以运行作业   。
+如果不再需要 Databricks 工作区，可在 Azure 门户中删除 Azure Databricks 资源。 还可以选择资源组名称来打开“资源组”页，然后选择“删除资源组”  。
 
 ## <a name="next-steps"></a>后续步骤
 

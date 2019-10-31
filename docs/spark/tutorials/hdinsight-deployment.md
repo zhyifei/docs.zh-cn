@@ -4,133 +4,183 @@ description: 了解如何将 .NET for Apache Spark 应用程序部署到 HDInsig
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 2e8da5497035a83fde75bf91a7d21437d510b480
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 2cb91032e0ce1d320b266772e8f9f1431df4a298
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117977"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72960960"
 ---
-# <a name="deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>将 .NET for Apache Spark 应用程序部署到 Azure HDInsight
+# <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>教程：将 .NET for Apache Spark 应用程序部署到 Azure HDInsight
 
-本教程介绍如何将 .NET for Apache Spark 应用程序部署到 Azure HDInsight。
+本教程介绍如何通过 Azure HDInsight 群集将 .NET for Apache Spark 应用部署到云中。 由于 HDInsight 中的 Spark 群集与 Azure 存储和 Azure Data Lake Storage 兼容，因此使用 HDInsight，你可以更加容易地在 Azure 中创建和配置 Spark 群集。 
 
 在本教程中，你将了解：
 
 > [!div class="checklist"]
 >
-> * 准备 Microsoft.Spark.Worker
-> * 发布 Spark .NET 应用
-> * 将应用部署到 Azure HDInsight
-> * 运行你的应用
+> * 使用 Azure 存储资源管理器访问存储帐户。
+> * 创建 Azure HDInsight 群集。
+> * 发布 .NET for Apache Spark 应用。
+> * 创建并运行 HDInsight 脚本操作。
+> * 在 HDInsight 群集上运行 .NET for Apache Spark 应用。
 
 ## <a name="prerequisites"></a>系统必备
 
-开始之前，请执行以下操作：
+开始之前，请完成以下任务：
 
-* 下载 [Azure 存储资源管理器](https://azure.microsoft.com/features/storage-explorer/)。
-* 将 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 下载到本地计算机。 这是稍后用于将 .NET for Apache Spark 依赖文件复制到 Spark 群集的工作器节点的帮助程序脚本。
+* 如果还没有 Azure 订阅，可以创建一个[免费帐户](https://azure.microsoft.com/free/)。
+* 登录 [Azure 门户](https://portal.azure.com/)。
+* 在 [Windows](https://go.microsoft.com/fwlink/?LinkId=708343&clcid=0x409)、[Linux](https://go.microsoft.com/fwlink/?LinkId=722418&clcid=0x409) 或 [MacOS](https://go.microsoft.com/fwlink/?LinkId=708342&clcid=0x409) 计算机上安装 Azure 存储资源管理器。
+* 完成 [.NET for Apache Spark - 10 分钟入门](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)教程。
 
-## <a name="prepare-worker-dependencies"></a>准备辅助角色依赖项
+## <a name="access-your-storage-accounts"></a>访问存储帐户
 
-Microsoft.Spark.Worker 是后端组件，位于 Spark 群集的单个工作器节点上  。 想要执行 C# UDF（用户定义的函数），Spark 需要了解如何启动 .NET CLR 以执行 UDF。 Microsoft.Spark.Worker 向 Spark 提供启用此功能的类集合  。
+1. 打开 Azure 存储资源管理器。
 
-1. 选择要在群集上部署的 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp 版本。
+2. 在左侧菜单上选择“添加帐户”，并登录到 Azure 帐户  。
 
-   例如，如果需要使用 `netcoreapp2.1` 的 `.NET for Apache Spark v0.1.0`，则下载 [Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz)。
+    ![从存储资源管理器登录 Azure 帐户](./media/hdinsight-deployment/signin-azure-storage-explorer.png)
 
-2. 将 `Microsoft.Spark.Worker.<release>.tar.gz` 和 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 上传到群集具有访问权限的分布式文件系统（如 HDFS、WASB、ADLS）。
+   登录后，应会看到你所拥有的所有存储帐户以及上传到存储帐户的所有资源。
 
-## <a name="prepare-your-net-for-apache-spark-app"></a>准备 .NET for Apache Spark 应用
+## <a name="create-an-hdinsight-cluster"></a>创建 HDInsight 群集
 
-1. 按照[入门](get-started.md)教程来生成应用。
+> [!IMPORTANT]  
+> HDInsight 群集基于分钟按比例收费，即使你未使用它们也是如此。 请务必在使用完之后删除群集。 有关详细信息，请参阅本教程的[清理资源](#clean-up-resources)部分。
 
-2. 发布独立的 Spark .NET 应用。
+1. 访问 [Azure 门户](https://portal.azure.com)。
 
-   可在 Linux 上运行以下命令。
+2. 选择“+ 创建资源”。  然后，从“Analytics”类别中选择“HDInsight”   。
 
-   ```dotnetcli
-   dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
+    ![从 Azure 门户创建 HDInsight 资源](./media/hdinsight-deployment/create-hdinsight-resource.png)
+
+3. 在“基本”下，提供以下值  ：
+
+    |属性  |说明  |
+    |---------|---------|
+    |订阅  | 从下拉列表中选择一个可用 Azure 订阅。 |
+    |资源组 | 指定是要创建新的资源组还是使用现有的资源组。 资源组是用于保存 Azure 解决方案相关资源的容器。 |
+    |群集名称 | 为 HDInsight Spark 群集命名。|
+    |位置   | 选择资源组的位置。 模板将此位置用于创建群集，以及用于默认群集存储。 |
+    |群集类型| 选择“Spark”作为群集类型。 |
+    |群集版本|选择群集类型后，此字段中将自动填充默认版本。 选择 2.3 或 2.4 版本的 Spark。|
+    |群集登录用户名| 输入群集登录用户名。  默认名称为 *admin*。 |
+    |群集登录密码| 输入任何登录密码。 |
+    |安全外壳 (SSH) 用户名| 输入 SSH 用户名。 默认情况下，此帐户的密码与群集登录用户名帐户的密码相同  。 |
+
+4. 在完成时选择“下一步:  存储 >>”转到“存储”页  。 在“存储”下，提供以下值  ：
+
+    |属性  |说明  |
+    |---------|---------|
+    |主存储类型|使用默认值“Azure 存储”。 |
+    |选择方法|使用默认值“从列表中选择”。 |
+    |主存储帐户|选择订阅以及该订阅中的可用存储帐户。|
+    |容器|此容器是存储帐户中特定的 blob 容器，群集在该容器中查找文件以在云中运行应用。 可使用任何可用名称为其命名。|
+
+5. 在“查看 + 创建”下，选择“创建”。   创建群集大约需要 20 分钟时间。 必须先创建群集，才能继续执行下一步。
+
+## <a name="publish-your-app"></a>发布你的应用
+
+接下来，发布在 [.NET for Apache Spark - 10 分钟入门](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)教程中创建的 mySparkApp，以便 Spark 群集可以访问运行应用所需的所有文件  。 
+
+1. 运行以下命令以发布 mySparkApp  ：
+
+   在 Windows 上： 
+
+   ```console
+   cd mySparkApp
+   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x6
    ```
 
-3. 为已发布的文件生成 `<your app>.zip`。
-
-   可使用 `zip` 在 Linux 上运行以下命令。
+   **在 Linux 上：**
 
    ```bash
-   zip -r <your app>.zip .
+   cd mySparkApp
+   foo@bar:~/path/to/app$ dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
    ```
 
-4. 将以下内容上传到群集具有访问权限的分布式文件系统（如 HDFS、WASB、ADLS）：
+2. 执行以下任务以压缩已发布的应用文件，以便你可以轻松地将其上传到 HDInsight 群集。
 
-   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`：此 jar 作为 [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet 包的一部分包含在内，并且并置在应用的生成输出目录中。
-   * `<your app>.zip`
-   * 要放在每个执行程序的工作目录中的文件（如每位工作人员都可以访问的依赖文件或公共数据）或程序集（如包含 `app` 所依赖的用户定义的函数或库的 DLL）。
+   在 Windows 上： 
 
-## <a name="deploy-to-azure-hdinsight-spark"></a>部署到 Azure HDInsight Spark
+   导航到 mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64  。 然后，右键单击“发布”文件夹，再选择“发送到”>“压缩文件夹”   。 将新文件夹命名为“publish.zip”  。
 
-[Azure HDInsight Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-overview) 是允许用户在 Azure 中启动和配置 Spark 群集的云中 Apache Spark 的 Microsoft 实现。 可以使用 HDInsight Spark 群集来处理存储在 [Azure 存储](https://azure.microsoft.com/services/storage/)或 [Azure Data Lake Storage](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-use-data-lake-storage-gen2) 中的数据。
+   **在 Linux 上，运行以下命令：**
 
-> [!NOTE]
-> Azure HDInsight Spark 基于 Linux。 如果要将应用部署到 Azure HDInsight Spark，请确保应用与 .NET Standard 兼容，并且使用 [.NET Core 编译器](https://dotnet.microsoft.com/download)编译应用。
+   ```bash
+   zip -r publish.zip
+   ```
 
-### <a name="deploy-microsoftsparkworker"></a>部署 Microsoft.Spark.Worker
+## <a name="upload-files-to-azure"></a>将文件上传到 Azure
 
-对于群集，此步骤只需执行一次。
+接下来，使用 Azure 存储资源管理器将以下五个文件上传到为群集存储选择的 blob 容器中： 
 
-使用 [HDInsight 脚本操作](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)运行群集上的 `install-worker.sh`。
+* Microsoft.Spark.Worker
+* install-worker.sh
+* publish.zip
+* microsoft-spark-2.3.x-0.3.0.jar
+* input.txt。
 
-|设置|值|
-|-------|-----|
-|脚本类型|自定义|
-|name|安装 Microsoft.Spark.Worker|
-|Bash 脚本 URI|向其上传 `install-worker.sh` 的 URI。 例如，`abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/install-worker.sh`|
-|节点类型|辅助角色|
-|参数|`install-worker.sh` 的参数。 例如，如果已将 `install-worker.sh` 上传到 Azure Data Lake Gen 2，那么它将为 `azure abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/Microsoft.Spark.Worker.<release>.tar.gz /usr/local/bin`。|
+1. 打开 Azure 存储资源管理器，然后从左侧菜单导航到存储帐户。 在存储帐户中的“Blob 容器”下，向下钻取到群集的 blob 容器  。
 
-![脚本操作图像](./media/hdinsight-deployment/deployment-hdi-action-script.png)
+2. Microsoft.Spark.Worker 可帮助 Apache Spark 执行你的应用，例如你可能已编写的任何用户定义函数 (UDF)  。 下载 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.3.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.3.0.tar.gz)。 然后，在 Azure 存储资源管理器中选择“上传”以上传辅助角色  。
+
+   ![将文件上传到 Azure 存储资源管理器](./media/hdinsight-deployment/upload-files-to-storage.png)
+
+3. install-worker.sh 是一个脚本，可使用该脚本将 .NET for Apache Spark 依赖项文件复制到群集的节点中  。 
+
+   在本地计算机上创建一个名为 install-worker.sh 的新文件，并粘贴位于 GitHub 上的 [install-worker.sh 内容](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)  。 然后，将 install-worker.sh 上传到 blob 容器中  。
+
+4. 群集需要 publish.zip 文件，后者包含应用的已发布文件。 导航到已发布文件夹“mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64”，并找到“publish.zip”   。 然后，将 publish.zip 上传到 blob 容器  。
+
+5. 群集需要已打包到 jar 文件中的应用程序代码。 导航到已发布文件夹“mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64”，并找到“microsoft-spark-2.3.x-0.3.0.jar”   。 然后，将 jar 文件上传到 blob 容器。
+
+   对于 2.3.x 和 2.4.x 版的 Spark，可能存在多个 .jar 文件。 你需要选择与在群集创建期间选择的 Spark 版本相匹配的 .jar 文件。 例如，如果在群集创建期间选择了 Spark 2.3.2，请选择 microsoft-spark-2.3.x-0.3.0.jar  。
+
+6. 群集需要应用的输入。 导航到 mySparkApp 目录，并找到“input.txt”   。 将输入文件上传到 blob 容器中的 user/sshuser 目录  。 你将通过 ssh 连接到群集，群集将在此文件夹中查找其输入。 input.txt 文件是上传到特定目录的唯一文件  。
+
+## <a name="run-the-hdinsight-script-action"></a>运行 HDInsight 脚本操作
+
+群集运行并将文件上传到 Azure 后，可在群集上运行 install-worker.sh 脚本  。 
+
+1. 导航到 Azure 门户中的 HDInsight Spark 群集，然后选择“脚本操作”  。
+
+2. 选择“+ 提交新脚本”并提供以下值  ：
+
+   |属性  |说明  |
+   |---------|---------|
+   | 脚本类型 |自定义|
+   | name | 安装辅助角色|
+   | Bash 脚本 URI |https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh </br> 要确认此 URI，请在 Azure 存储资源管理器中右键单击“install-worker.sh”，然后选择“属性”。 |
+   | 节点类型| 辅助角色|
+   | 参数 | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin 
+
+3. 选择“创建”，提交脚本  。
 
 ## <a name="run-your-app"></a>运行你的应用
 
-可以使用 `spark-submit` 或 Apache Livy 将作业提交到 Azure HDInsight。
+1. 导航到 Azure 门户中的 HDInsight Spark 群集，然后选择“SSH + 群集登录名”  。
 
-### <a name="use-spark-submit"></a>使用 spark-submit
+2. 复制 ssh 登录信息，并将登录名粘贴到终端。 使用在群集创建期间设置的密码登录到群集。 应会看到“欢迎使用 Ubuntu 和 Spark”的消息。
 
-可以使用 [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) 命令将 .NET for Apache Spark 作业提交到 Azure HDInsight。
- 
-1. 群集中的某个头节点的 `ssh`。
-
-1. 运行 `spark-submit`：
+3. 使用 spark-submit 命令在 HDInsight 群集上运行应用  。 请记得将示例脚本中的 mycontainer 和 mystorageaccount 替换为 blob 容器和存储帐户的实际名称   。
 
    ```bash
-   spark-submit \
+   $SPARK_HOME/bin/spark-submit \
    --master yarn \
-   --class org.apache.spark.deploy.dotnet.DotnetRunner \
-   --files <comma-separated list of assemblies that contain UDF definitions, if any> \
-   abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar \
-   abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<your app>.zip <your app> <app arg 1> <app arg 2> ... <app arg n>
+   --class org.apache.spark.deploy.DotnetRunner \
+   wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-2.3.x-0.6.0.jar \
+   wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```
 
-### <a name="use-apache-livy"></a>使用 Apache Livy
+   应用运行时，你将在写入控制台的“本地运行入门”中看到相同的字数表。 恭喜，你已在云中运行了第一个 .NET for Apache Spark 应用程序！
 
-可以使用 [Apache Livy](https://livy.incubator.apache.org/)（即 Apache Spark REST API）将 .NET for Apache Spark 作业提交到 Azure HDInsight Spark 群集。 有关详细信息，请参阅[使用 Apache Livy 提交远程作业](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-livy-rest-interface)。
+## <a name="clean-up-resources"></a>清理资源
 
-可使用 `curl` 在 Linux 上运行以下命令：
+HDInsight 将数据保存在 Azure 存储中，因此可以在不使用群集时放心将其删除。 此外，还需要为 HDInsight 群集付费，即使不用也是如此。 由于群集费用数倍于存储空间费用，因此在群集不用时删除群集可以节省费用。
 
-```bash
-curl -k -v -X POST "https://<your spark cluster>.azurehdinsight.net/livy/batches" \
--u "<hdinsight username>:<hdinsight password>" \
--H "Content-Type: application/json" \
--H "X-Requested-By: <hdinsight username>" \
--d @- << EOF
-{
-    "file":"abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar",
-    "className":"org.apache.spark.deploy.dotnet.DotnetRunner",
-    "files":["abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<udf assembly>", "abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<file>"],
-    "args":["abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<your app>.zip","<your app>","<app arg 1>","<app arg 2>,"...","<app arg n>"]
-}
-EOF
-```
+还可以选择资源组名称来打开“资源组”页，然后选择“删除资源组”  。 通过删除资源组，可以删除 HDInsight Spark 群集和默认存储帐户。
 
 ## <a name="next-steps"></a>后续步骤
 

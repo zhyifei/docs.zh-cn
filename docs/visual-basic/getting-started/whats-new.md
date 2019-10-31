@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 64f8d536212cd379337ad437c1e15ae356890ddb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: f5630f7947125dd5eb8a5b58e79add1aec4c689b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581961"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774923"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新增功能
 
@@ -21,45 +21,45 @@ ms.locfileid: "72581961"
 
 ## <a name="current-version"></a>当前版本
 
-Visual Basic 16.0/Visual Studio 2019 版本 16.0  
+Visual Basic 16.0/Visual Studio 2019 版本 16.0\
 有关新功能，请参阅 [Visual Basic 16.0](#visual-basic-160)。
 
 ## <a name="previous-versions"></a>早期版本
 
-Visual Basic 15.8/Visual Studio 2017 版本 15.8  
+Visual Basic 15.8/Visual Studio 2017 版本 15.8\
 有关新功能，请参阅 [Visual Basic 15.8](#visual-basic-158)。
 
-Visual Basic 15.5/Visual Studio 2017 版本 15.5  
+Visual Basic 15.5/Visual Studio 2017 版本 15.5\
 有关新功能，请参阅 [Visual Basic 15.5](#visual-basic-155)。
 
-Visual Basic 15.3/Visual Studio 2017 版本 15.3  
+Visual Basic 15.3/Visual Studio 2017 版本 15.3\
 有关新功能，请参阅 [Visual Basic 15.3](#visual-basic-153)。
 
-Visual Basic 2017/Visual Studio 2017  
+Visual Basic 2017/Visual Studio 2017\
 有关新功能，请参阅 [Visual Basic 2017](#visual-basic-2017)。
 
-Visual Basic/Visual Studio 2015  
+Visual Basic/Visual Studio 2015\
 有关新功能，请参阅 [Visual Basic 14](#visual-basic-14)。
 
-Visual Basic/Visual Studio 2013  
+Visual Basic/Visual Studio 2013\
 .NET Compiler Platform (“Roslyn”) 的技术预览
 
-Visual Basic/Visual Studio 2012  
+Visual Basic/Visual Studio 2012\
 `Async` 和 `await` 关键字、迭代器、调用方信息特性
 
-Visual Basic, Visual Studio 2010  
+Visual Basic、Visual Studio 2010\
 自动实现的属性、集合初始值设定项、隐式行继续符、动态、泛型协变/逆变、全局命名空间访问
 
-Visual Basic/Visual Studio 2008  
+Visual Basic/Visual Studio 2008\
 语言集成查询 (LINQ)、XML 文本、本地类型推断、对象初始值设定项、匿名类型、扩展方法、本地 `var` 类型推断、lambda 表达式、`if` 运算符、分部方法、可以为 null 的值类型
 
-Visual Basic/Visual Studio 2005  
+Visual Basic/Visual Studio 2005\
 `My` 类型和帮助程序类型（对应用、计算机、文件系统、网络的访问）
 
-Visual Basic/Visual Studio .NET 2003  
+Visual Basic/Visual Studio .NET 2003\
 移位运算符、循环变量声明
 
-Visual Basic/Visual Studio .NET 2002  
+Visual Basic/Visual Studio .NET 2002\
 Visual Basic.NET 的首次发布
 
 ## <a name="visual-basic-160"></a>Visual Basic 16.0
@@ -108,7 +108,6 @@ Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
 Dim s1 AS Short = CShort(Math.Truncate(s))     ' Result: 173
 Dim i2 As Integer = CInt(Math.Ceiling(d))      ' Result: 174
 Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
-
 ```
 
 请注意，这会截断而不是舍入浮点值。
@@ -237,7 +236,7 @@ Visual Basic 命令行编译器现在支持 [-refout](../reference/command-line-
 
 **只读接口属性**
 
-可以使用读写属性实现只读接口属性。  该接口可保证最小功能，不会阻止实现类允许设置属性。
+可以使用读写属性实现只读接口属性。 该接口可保证最小功能，不会阻止实现类允许设置属性。
 
 [TypeOf \<表达式> IsNot \<类型>](../../visual-basic/language-reference/operators/typeof-operator.md)
 

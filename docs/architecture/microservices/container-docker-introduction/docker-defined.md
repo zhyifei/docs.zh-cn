@@ -2,12 +2,12 @@
 title: 什么是 Docker？
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 什么是 Docker？
 ms.date: 08/31/2018
-ms.openlocfilehash: 7f7844f51e96914c1432332d9b641ea65bf48f07
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6fb08157a78bfaee48e0bf919fc5942eadf0f287
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674854"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771347"
 ---
 # <a name="what-is-docker"></a>什么是 Docker？
 
@@ -37,7 +37,7 @@ Docker 映像容器可以在 Linux 和 Windows 上本机运行。 但是，Windo
 
 | 虚拟机 | Docker 容器 |
 | -----------------| ------------------|
-|![对于 VM，在主机服务器中有三个基本层，从底部向上依次为：基础结构、主机操作系统和虚拟机监控程序，在所有这些层的顶部，每个 VM 都有其自己的 OS 和所有必需的库。](./media/image3.png)|![对于 Docker，主机服务器仅有基础结构和 OS，在其顶部是容器引擎，它将容器隔离，但共享基础 OS 服务。](./media/image4.png)|
+|![对于 VM，在主机服务器中有三个基本层，从底部向上依次为：基础结构、主机操作系统和虚拟机监控程序，在所有这些层的顶部，每个 VM 都有其自己的 OS 和所有必需的库。](./media/image3.png)|![对于 Docker，主机服务器仅包含基础结构和 OS，除此以外，就是用于隔离容器但共享基础 OS 服务的容器引擎。](./media/image4.png)|
 |虚拟机包括应用程序、必需的库或二进制文件以及完整的来宾操作系统。 与比容器化相比，完全虚拟化需要更多资源。 | 容器包括应用程序及其所有依赖项。 但是，它们与其他容器共享 OS 内核，在主机操作系统上的用户空间中作为独立进程运行。 （Hyper-V 容器例外，其中的每个容器都在各容器特定虚拟机内部运行。） |
 
 **图 2-3**。 比较传统虚拟机与 Docker 容器

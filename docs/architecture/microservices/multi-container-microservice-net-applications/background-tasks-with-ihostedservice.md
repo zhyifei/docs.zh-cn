@@ -2,12 +2,12 @@
 title: 使用 IHostedService 和 BackgroundService 类在微服务中实现后台任务
 description: 用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解使用 IHostedService 和 BackgroundService 在微服务 .NET Core 中实现后台任务的新选项。
 ms.date: 01/07/2019
-ms.openlocfilehash: ad91268925ad36d5b60d5d0601eee7544b79ab2e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 2d0b41bc7853dc616284c46462efe96ca1a9d296
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318684"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770125"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>使用 IHostedService 和 BackgroundService 类在微服务中实现后台任务
 
@@ -45,7 +45,7 @@ SignalR 是使用托管服务的项目的一个示例，但也可以将其用于
 
 基本上，可以将所有这些操作卸载至基于 IHostedService 的后台任务。
 
-向 `WebHost` 或 `Host` 添加一个或多个 `IHostedServices` 的方式是，通过 ASP.NET Core `WebHost`（或 .NET Core 2.1 及更高版本中的 `Host`）中的标准 DI（依赖项注入）对它们进行注册。 基本上，必须在常见的 `Startup` 类的 `ConfigureServices()` 方法中注册托管服务，如以下典型的 ASP.NET WebHost 中的代码所示。
+向 `WebHost` 或 `Host` 添加一个或多个 `IHostedServices` 的方式是，通过 ASP.NET Core `WebHost`（或 .NET Core 2.1 及更高版本中的 `Host`）中的 <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A>  扩展方法对它们进行注册。 基本上，必须在常见的 `Startup` 类的 `ConfigureServices()` 方法中注册托管服务，如以下典型的 ASP.NET WebHost 中的代码所示。
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -53,9 +53,9 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
     //Other DI registrations;
 
     // Register Hosted Services
-    services.AddSingleton<IHostedService, GracePeriodManagerService>();
-    services.AddSingleton<IHostedService, MyHostedServiceB>();
-    services.AddSingleton<IHostedService, MyHostedServiceC>();
+    services.AddHostedService<GracePeriodManagerService>();
+    services.AddHostedService<MyHostedServiceB>();
+    services.AddHostedService<MyHostedServiceC>();
     //...
 }
 ```
@@ -232,19 +232,19 @@ WebHost.CreateDefaultBuilder(args)
 
 请务必注意，部署 ASP.NET Core `WebHost` 或 .NET Core `Host` 的方式可能会影响最终解决方案。 例如，如果在 IIS 或常规 Azure 应用服务上部署 `WebHost`，由于应用池回收，主机可能会被关闭。 但是，如果将主机作为容器部署到 Kubernetes 或 Service Fabric 等业务流程协调程序中，则可以控制主机的实时实例数量。 此外，还可以考虑云中专门针对这些方案的其他方法，例如 Azure Functions。 最后，如果需要服务一直处于运行状态并在 Windows Server 上部署，可以使用 Windows 服务。
 
-但即使对于部署到应用池中的 `WebHost`，也存在如重新填充或刷新应用程序内存中的缓存这样的方案，这仍然适用。
+但即使对于部署到应用池中的 `WebHost`，也存在如重新填充或刷新应用程序的内存中缓存这样的情况，这仍然适用。
 
 `IHostedService` 接口为在 ASP.NET Core Web 应用程序（在 .NET Core 2.0 中）或任何进程/主机（从使用 `IHost` 的 .NET Core 2.1 开始）中启动后台任务提供了一种便捷方式。 其主要优势在于，当主机本身将要关闭时，可以有机会进行正常取消以清理后台任务的代码。
 
 ## <a name="additional-resources"></a>其他资源
 
-- **Building a scheduled task in ASP.NET Core/Standard 2.0**（在 ASP.NET Core/Standard 2.0 中构建计划任务）  
-  <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
+- **Building a scheduled task in ASP.NET Core/Standard 2.0**
+  <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>（在 ASP.NET Core/Standard 2.0 中构建计划任务）
 
-- **Implementing IHostedService in ASP.NET Core 2.0**（在 ASP.NET Core 2.0 中实现 IHostedService）  
-  <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
+- **Implementing IHostedService in ASP.NET Core 2.0**
+  <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>（在 ASP.NET Core 2.0 中实现 IHostedService）
 
-- **使用 ASP.NET Core 2.1 的 GenericHost 示例**  
+- **使用 ASP.NET Core 2.1 的 GenericHost 示例**
   <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
 >[!div class="step-by-step"]

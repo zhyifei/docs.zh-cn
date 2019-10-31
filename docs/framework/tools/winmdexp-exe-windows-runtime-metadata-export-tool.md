@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b3cf60d670e7fdfa624599bc0eeddc99219c202
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0ce98912e579e0dd570822c1f7c2133bb05ed491
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044020"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773964"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe（Windows 运行时元数据导出工具）
 Windows 运行时元数据导出工具 (Winmdexp.exe) 可将 .NET Framework 模块转换为包含 Windows 运行时元数据的文件。 尽管 .NET Framework 程序集和 Windows 运行时元数据文件使用相同的物理格式，但元数据表的内容有差别，这意味着 .NET Framework 程序集不可自动用作 Windows 运行时组件。 将 .NET Framework 模块转换为 Windows 运行时组件的过程称为“导出”  。 在 .NET Framework 4.5 和 .NET Framework 4.5.1 中，生成的 Windows 元数据 (.winmd) 文件同时包含元数据和实现。  
@@ -33,7 +33,7 @@ winmdexp [options] winmdmodule
   
 |自变量或选项|说明|  
 |------------------------|-----------------|  
-|`winmdmodule`|指定要导出的模块 (.winmdobj)。 仅允许一个模块。 若要创建此模块，请将 `/target` 编译器选项与 `winmdobj` 目标一起使用。 请参阅 [/target:winmdobj（C# 编译器选项）](../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)或 [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)。|  
+|`winmdmodule`|指定要导出的模块 (.winmdobj)。 仅允许一个模块。 若要创建此模块，请将 `/target` 编译器选项与 `winmdobj` 目标一起使用。 请参阅 [-target:winmdobj（C# 编译器选项）](../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)或 [-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)。|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|指定 Winmdexp.exe 将生成的输出 XML 文档文件。 在 .NET Framework 4.5 中，输出文件实质上与输入 XML 文档文件相同。|  
 |`/moduledoc:` `docfile`<br /><br /> `/md:` `docfile`|指定编译器使用 `winmdmodule` 生成的 XML 文档文件的名称。|  
 |`/modulepdb:` `symbolfile`<br /><br /> `/mp:` `symbolfile`|指定包含 `winmdmodule` 的符号的程序数据库 (PDB) 文件的名称。|  

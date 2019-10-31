@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c0fa0e2c59856beda65ec5804b8896352db98b3
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 2c1b73108227160aaff28525beeca7f3bd4cb5f8
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180195"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775323"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>垃圾回收的基本知识
 
@@ -125,7 +125,7 @@ ms.locfileid: "72180195"
 
 垃圾回收中未回收的对象也称为幸存者，并会被提升到下一代。 在第 0 代垃圾回收中幸存的对象将被提升到第 1 代；在第 1 代垃圾回收中幸存的对象将被提升到第 2 代；而在第 2 代垃圾回收中幸存的对象将仍为第 2 代。
 
-当垃圾回收器检测到某个代中的幸存率很高时，它会增加该代的分配阈值，因此下一次回收将会获取一个非常大的回收内存。 CLR 会在以下两个优先级别之前进行平衡：不允许应用程序的工作集获取太大内存以及不允许垃圾回收花费太多时间。
+当垃圾回收器检测到某个代中的幸存率很高时，它会增加该代的分配阈值，因此下一次回收将会获取一个非常大的回收内存。 CLR 持续在以下两个优先级之间进行平衡：不允许通过延迟垃圾回收，让应用程序的工作集获取太大内存，以及不允许垃圾回收过于频繁地运行。
 
 ### <a name="ephemeral-generations-and-segments"></a>暂时代和暂时段
 
@@ -176,7 +176,7 @@ ms.locfileid: "72180195"
 
 下图演示了触发垃圾回收并导致其他线程挂起的线程。
 
-![当线程触发垃圾回收时](../../../docs/standard/garbage-collection/media/gc-triggered.png "When a thread triggers a Garbage Collection")
+![线程触发垃圾回收时](../../../docs/standard/garbage-collection/media/gc-triggered.png "线程触发垃圾回收时")
 
 [返回页首](#top)
 
@@ -208,7 +208,7 @@ ms.locfileid: "72180195"
 
 下图演示了服务器上执行垃圾回收的专用线程。
 
-![服务器垃圾回收线程](../../../docs/standard/garbage-collection/media/gc-server.png "Server Garbage Collection Threads")
+![服务器垃圾回收线程](../../../docs/standard/garbage-collection/media/gc-server.png "服务器垃圾回收线程")
 
 ### <a name="configuring-garbage-collection"></a>配置垃圾回收
 
@@ -262,7 +262,7 @@ ms.locfileid: "72180195"
 
 下图演示了在单独的专用线程上执行的并发垃圾回收。
 
-![并发垃圾回收线程](../../../docs/standard/garbage-collection/media/gc-concurrent.png "Concurrent Garbage Collection Threads")
+![并发垃圾回收线程](../../../docs/standard/garbage-collection/media/gc-concurrent.png "并发垃圾回收线程")
 
 [返回页首](#top)
 
@@ -283,7 +283,7 @@ ms.locfileid: "72180195"
 
 下图显示对工作站上的独立专用线程执行的后台垃圾回收：
 
-![显示后台工作站垃圾回收的图。](./media/fundamentals/background-workstation-garbage-collection.png "Diagram that shows background workstation garbage collection.")
+![显示后台工作站垃圾回收的图。](./media/fundamentals/background-workstation-garbage-collection.png "显示后台工作站垃圾回收的图。")
 
 [返回页首](#top)
 
@@ -295,7 +295,7 @@ ms.locfileid: "72180195"
 
 下图显示对服务器上的独立专用线程执行的后台垃圾回收：
 
-![显示后台服务器垃圾回收的图。](./media/fundamentals/background-server-garbage-collection.png "Diagram that shows background server garbage collection.")
+![显示后台服务器垃圾回收的图。](./media/fundamentals/background-server-garbage-collection.png "显示后台服务器垃圾回收的图。")
 
 ## <a name="see-also"></a>请参阅
 

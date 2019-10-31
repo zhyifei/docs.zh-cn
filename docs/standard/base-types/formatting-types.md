@@ -27,93 +27,57 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82dc1e36ae5a0eede7099c8e13ac9a2393bbb904
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e9d53e7a75463e481b667a7ad84b68cb225e7f7c
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253984"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774323"
 ---
-# <a name="formatting-types-in-net"></a>设置 .NET 中类型的格式
+# <a name="format-types-in-net"></a>.NET 中的格式类型
 
 格式设置是指将类、结构或枚举值的实例转换为其字符串表示形式的过程，通常使得最终的字符串可以显示给用户，或者进行反序列化以还原为原始数据类型。 此转换可能面临一系列挑战：
 
-- 在内部存储值的方式不一定反映用户想要查看它们的方式。 例如，电话号码可以存储为 8009999999 格式，但此格式并非是用户友好的格式。 该电话号码应显示为 800-999-9999。 有关以这种方式设置数字格式的示例，请参见 [自定义格式字符串](#customStrings) 一节。
+- 在内部存储值的方式不一定反映用户想要查看它们的方式。 例如，电话号码可以存储为 8009999999 格式，但此格式并非是用户友好的格式。 该电话号码应显示为 800-999-9999。 有关以这种方式设置数字格式的示例，请参见 [自定义格式字符串](#custom-format-strings) 一节。
 
-- 有时对象到其字符串表示形式的转换不是直观的。 例如，不清楚 Temperature 对象或 Person 对象的字符串表示形式应如何显示。 有关以各种方式设置 Temperature 对象格式的示例，请参见 [标准格式字符串](#standardStrings) 一节。
+- 有时对象到其字符串表示形式的转换不是直观的。 例如，不清楚 Temperature 对象或 Person 对象的字符串表示形式应如何显示。 有关以各种方式设置 Temperature 对象格式的示例，请参见 [标准格式字符串](#standard-format-strings) 一节。
 
-- 值通常需要区分区域性的格式。 例如，在使用数字表示货币值的应用程序中，数字字符串应包括当前区域性的货币符号、组分隔符（在大多数区域性中，组分隔符为千位分隔符）和小数点符号。 有关示例，请参见 [使用格式提供程序和 IFormatProvider 接口进行区分区域性的格式设置](#FormatProviders) 一节。
+- 值通常需要区分区域性的格式。 例如，在使用数字表示货币值的应用程序中，数字字符串应包括当前区域性的货币符号、组分隔符（在大多数区域性中，组分隔符为千位分隔符）和小数点符号。 有关示例，请参阅[使用格式提供程序进行区分区域性的格式设置](#culture-sensitive-formatting-with-format-providers)部分。
 
-- 应用程序可能需要以不同方式显示相同的值。 例如，应用程序可能通过显示名称的字符串表示形式来表示一个枚举成员，或通过显示基础值来表示该枚举成员。 有关以不同方式设置 <xref:System.DayOfWeek> 枚举成员格式的示例，请参见 [标准格式字符串](#standardStrings) 一节。
+- 应用程序可能需要以不同方式显示相同的值。 例如，应用程序可能通过显示名称的字符串表示形式来表示一个枚举成员，或通过显示基础值来表示该枚举成员。 有关以不同方式设置 <xref:System.DayOfWeek> 枚举成员格式的示例，请参见 [标准格式字符串](#standard-format-strings) 一节。
 
 > [!NOTE]
 > 格式设置将类型的值转换为字符串表示形式。 分析是格式设置的反向操作。 分析操作根据数据类型的字符串表示形式创建该数据类型的实例。 有关将字符串转换成其他数据类型的信息，请参见 [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)。
 
 .NET 提供了丰富的格式设置支持，使得开发人员可以满足这些要求。
 
-本概述包含以下几节：
-
-- [.NET 中的格式设置](#NetFormatting)
-
-- [使用 ToString 方法的默认格式设置](#DefaultToString)
-
-- [重写 ToString 方法](#OverrideToString)
-
-- [ToString 方法和格式字符串](#FormatStrings)
-
-  - [标准格式字符串](#standardStrings)
-
-  - [自定义格式字符串](#customStrings)
-
-  - [格式字符串和 .NET 类库类型](#stringRef)
-
-- [使用格式提供程序和 IFormatProvider 接口进行区分区域性的格式设置](#FormatProviders)
-
-  - [数值的区分区域性的格式设置](#numericCulture)
-
-  - [日期和时间值的区分区域性的格式设置](#dateCulture)
-
-- [IFormattable 接口](#IFormattable)
-
-- [复合格式设置](#CompositeFormatting)
-
-- [使用 ICustomFormatter 进行自定义格式设置](#Custom)
-
-- [相关主题](#RelatedTopics)
-
-- [引用](#Reference)
-
-<a name="NetFormatting"></a>
-
 ## <a name="formatting-in-net"></a>.NET 中的格式设置
 
-格式设置的基本机制是 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法的默认实现。有关信息，请参阅本主题稍后将介绍的[使用 ToString 方法的默认格式设置](#DefaultToString)部分。 不过，.NET 提供了几种方法来修改和扩展其默认格式设置支持。 其中包括：
+格式设置的基本机制是 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法的默认实现。有关信息，请参阅本主题稍后将介绍的[使用 ToString 方法的默认格式设置](#default-formatting-using-the-tostring-method)部分。 不过，.NET 提供了几种方法来修改和扩展其默认格式设置支持。 其中包括：
 
-- 重写 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法以定义对象值的自定义字符串表示形式。 有关更多信息，请参见本主题后面的 [重写 ToString 方法](#OverrideToString) 部分。
+- 重写 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法以定义对象值的自定义字符串表示形式。 有关详细信息，请参见本主题后面的[重写 ToString 方法](#override-the-tostring-method)部分。
 
 - 定义格式说明符，格式说明符允许对象值的字符串表示形式采用多种形式。 例如，以下语句中的“X”格式说明符将整数转换为十六进制值的字符串表示形式。
 
      [!code-csharp[Conceptual.Formatting.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/specifier1.cs#3)]
      [!code-vb[Conceptual.Formatting.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/specifier1.vb#3)]
 
-     有关格式说明符的更多信息，请参见 [ToString 方法和格式字符串](#FormatStrings) 部分。
+     有关格式说明符的更多信息，请参见 [ToString 方法和格式字符串](#the-tostring-method-and-format-strings) 部分。
 
 - 使用格式提供程序以利用特定区域性的格式设置约定。 例如，以下语句通过使用 en-US 区域性的格式设置约定来显示货币值。
 
      [!code-csharp[Conceptual.Formatting.Overview#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/specifier1.cs#10)]
      [!code-vb[Conceptual.Formatting.Overview#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/specifier1.vb#10)]
 
-     有关使用格式提供程序进行格式设置的更多信息，请参见 [格式提供程序和 IFormatProvider 接口](#FormatProviders) 部分。
+     有关使用格式提供程序进行格式设置的详细信息，请参阅[格式提供程序](#culture-sensitive-formatting-with-format-providers)部分。
 
-- 实现 <xref:System.IFormattable> 接口可以支持使用 <xref:System.Convert> 类的字符串转换以及复合格式设置。 有关更多信息，请参见 [IFormattable 接口](#IFormattable) 部分。
+- 实现 <xref:System.IFormattable> 接口可以支持使用 <xref:System.Convert> 类的字符串转换以及复合格式设置。 有关更多信息，请参见 [IFormattable 接口](#the-iformattable-interface) 部分。
 
-- 使用复合格式设置来嵌入较大字符串中值的字符串表示形式。 有关更多信息，请参见 [复合格式设置](#CompositeFormatting) 部分。
+- 使用复合格式设置来嵌入较大字符串中值的字符串表示形式。 有关更多信息，请参见 [复合格式设置](#composite-formatting) 部分。
 
-- 实现 <xref:System.ICustomFormatter> 和 <xref:System.IFormatProvider> 可以提供完全自定义的格式设置解决方案。 有关更多信息，请参见 [使用 ICustomFormatter 进行自定义格式设置](#Custom) 部分。
+- 实现 <xref:System.ICustomFormatter> 和 <xref:System.IFormatProvider> 可以提供完全自定义的格式设置解决方案。 有关更多信息，请参见 [使用 ICustomFormatter 进行自定义格式设置](#custom-formatting-with-icustomformatter) 部分。
 
 以下各部分分别使用这些方法来将对象转换为其字符串表示形式。
-
-<a name="DefaultToString"></a>
 
 ## <a name="default-formatting-using-the-tostring-method"></a>使用 ToString 方法的默认格式设置
 
@@ -130,9 +94,7 @@ ms.locfileid: "70253984"
 > [!NOTE]
 > 结构继承自 <xref:System.ValueType>，而后者又派生自 <xref:System.Object>。 虽然 <xref:System.ValueType> 会重写 <xref:System.Object.ToString%2A?displayProperty=nameWithType>，但是其实现是相同的。
 
-<a name="OverrideToString"></a>
-
-## <a name="overriding-the-tostring-method"></a>重写 ToString 方法
+## <a name="override-the-tostring-method"></a>重写 ToString 方法
 
 显示类型的名称这一用法往往有限，它不允许类型使用者区分实例。 但是，你可以重写 `ToString` 方法，以提供更有用的对象值表示形式。 下面的示例定义 `Temperature` 对象并重写其 `ToString` 方法，以便以摄氏度显示温度。
 
@@ -158,8 +120,6 @@ ms.locfileid: "70253984"
 |<xref:System.UInt32>|调用 `UInt32.ToString("G", NumberFormatInfo.CurrentInfo)` 可以为当前区域性设置 <xref:System.UInt32> 值的格式。|
 |<xref:System.UInt64>|调用 `UInt64.ToString("G", NumberFormatInfo.CurrentInfo)` 可以为当前区域性设置 <xref:System.UInt64> 值的格式。|
 
-<a name="FormatStrings"></a>
-
 ## <a name="the-tostring-method-and-format-strings"></a>ToString 方法和格式字符串
 
 对象具有单一字符串表示形式时，可以依赖于默认 `ToString` 方法或重写 `ToString` 。 但是，对象的值通常具有多种表示形式。 例如，温度可以用华氏度、摄氏度或开氏度来表示。 同样，整数值 10 可以表示为多种形式，包括 10、10.0、1.0e01 或 $10.00。
@@ -167,8 +127,6 @@ ms.locfileid: "70253984"
 为了允许单个值具有多种字符串表示形式，.NET 使用格式字符串。 格式字符串是包含一个或多个预定义格式说明符的字符串，这些格式说明符是单一字符或字符组，用于定义 `ToString` 方法应如何设置其输出格式。 然后将格式字符串作为参数传递给对象的 `ToString` 方法，并确定应如何显示该对象值的字符串表示形式。
 
 .NET 中的所有数字类型、日期和时间类型以及枚举类型都支持一组预定义的格式说明符。 还可以使用格式字符串定义你应用程序所定义的数据类型的多种字符串表示形式。
-
-<a name="standardStrings"></a>
 
 ### <a name="standard-format-strings"></a>标准格式字符串
 
@@ -212,7 +170,7 @@ ms.locfileid: "70253984"
 
 有关标准数字格式字符串的更多信息，请参见 [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)。
 
-日期和时间值的标准格式字符串是由特定 <xref:System.Globalization.DateTimeFormatInfo> 属性存储的自定义格式字符串的别名。 例如，如果使用“D”格式说明符调用日期和时间值的 `ToString` 方法，则使用当前区域性的 <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> 属性中存储的自定义格式字符串来显示日期和时间。 （若要详细了解自定义格式字符串，请参阅[下一部分](#customStrings)。）下面的示例阐释了此关系。
+日期和时间值的标准格式字符串是由特定 <xref:System.Globalization.DateTimeFormatInfo> 属性存储的自定义格式字符串的别名。 例如，如果使用“D”格式说明符调用日期和时间值的 `ToString` 方法，则使用当前区域性的 <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> 属性中存储的自定义格式字符串来显示日期和时间。 （若要详细了解自定义格式字符串，请参阅[下一部分](#custom-format-strings)。）下面的示例阐释了此关系。
 
 [!code-csharp[Conceptual.Formatting.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/alias1.cs#5)]
 [!code-vb[Conceptual.Formatting.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/alias1.vb#5)]
@@ -229,8 +187,6 @@ ms.locfileid: "70253984"
 
 [!code-csharp[Conceptual.Formatting.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/appstandard1.cs#7)]
 [!code-vb[Conceptual.Formatting.Overview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/appstandard1.vb#7)]
-
-<a name="customStrings"></a>
 
 ### <a name="custom-format-strings"></a>自定义格式字符串
 
@@ -253,8 +209,6 @@ ms.locfileid: "70253984"
 
 尽管标准格式字符串一般可以满足应用程序定义的类型的大多数格式设置需求，但你还可以定义自定义格式说明符来设置类型的格式。
 
-<a name="stringRef"></a>
-
 ### <a name="format-strings-and-net-types"></a>格式字符串和 .NET 类型
 
 所有数字类型（即 <xref:System.Byte>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64> 和 <xref:System.Numerics.BigInteger>）以及 <xref:System.DateTime>、<xref:System.DateTimeOffset>、<xref:System.TimeSpan>、<xref:System.Guid> 和所有枚举类型都支持使用格式字符串设置格式。 有关各类型支持的特定格式字符串的信息，请参见下列主题：
@@ -270,9 +224,7 @@ ms.locfileid: "70253984"
 |[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|描述用于创建枚举值的字符串表示形式的标准格式字符串。|
 |<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|描述 <xref:System.Guid> 值的标准格式字符串。|
 
-<a name="FormatProviders"></a>
-
-## <a name="culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface"></a>使用格式提供程序和 IFormatProvider 接口进行区分区域性的格式设置
+## <a name="culture-sensitive-formatting-with-format-providers"></a>使用格式提供程序进行区分区域性的格式设置
 
 尽管格式说明符允许你自定义对象的格式设置，但是生成有意义的对象字符串表示形式通常需要附加格式设置信息。 例如，通过使用“C”标准格式字符串或自定义格式字符串（如“$ #,#.00”）来将数字格式设置为货币值至少需要提供有关正确的货币符号、组分隔符和小数点分隔符的信息，以便包括在带有格式的字符串中。 在 .NET 中，此附加格式设置信息通过 <xref:System.IFormatProvider> 接口提供，具体是以参数形式提供给数字类型以及日期和时间类型的 `ToString` 方法的一个或多个重载。 <xref:System.IFormatProvider> 实现在 .NET 中用于支持区域性专用格式设置。 下面的示例演示在使用三个代表不同区域的 <xref:System.IFormatProvider> 对象设置某个对象的格式时，该对象的字符串表示形式将如何变化。
 
@@ -305,8 +257,6 @@ ms.locfileid: "70253984"
 
 你还可以实现自己的格式提供程序来替换上述任意一个类。 但是，如果你的实现的 <xref:System.IFormatProvider.GetFormat%2A> 方法必须向 `ToString` 方法提供格式设置信息，则它必须返回上表中列出的相应类型的对象。
 
-<a name="numericCulture"></a>
-
 ### <a name="culture-sensitive-formatting-of-numeric-values"></a>数值的区分区域性的格式设置
 
 默认情况下，数值的格式设置是区分区域性的。 如果在调用格式设置方法时不指定区域性，则将使用当前线程区域性的格式设置约定。 下面的示例演示了这一点，其中对当前线程区域性进行了四次更改，随后调用了 <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> 方法。 每次更改后，结果字符串均反映当前区域性的格式设置约定。 这是因为 `ToString` 和 `ToString(String)` 方法会包装对每个数值类型的 `ToString(String, IFormatProvider)` 方法的调用。
@@ -324,8 +274,6 @@ ms.locfileid: "70253984"
 
 [!code-csharp[Conceptual.Formatting.Overview#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific4.cs#20)]
 [!code-vb[Conceptual.Formatting.Overview#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific4.vb#20)]
-
-<a name="dateCulture"></a>
 
 ### <a name="culture-sensitive-formatting-of-date-and-time-values"></a>日期和时间值的区分区域性的格式设置
 
@@ -345,8 +293,6 @@ ms.locfileid: "70253984"
 [!code-csharp[Conceptual.Formatting.Overview#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific2.cs#18)]
 [!code-vb[Conceptual.Formatting.Overview#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific2.vb#18)]
 
-<a name="IFormattable"></a>
-
 ## <a name="the-iformattable-interface"></a>IFormattable 接口
 
 通常，使用格式字符串和一个 `ToString` 参数来重载 <xref:System.IFormatProvider> 方法的类型还实现 <xref:System.IFormattable> 接口。 此接口具有一个成员 <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>，该成员同时将格式字符串和格式提供程序作为参数。
@@ -355,7 +301,7 @@ ms.locfileid: "70253984"
 
 - 支持使用 <xref:System.Convert> 类进行字符串转换。 对 <xref:System.Convert.ToString%28System.Object%29?displayProperty=nameWithType> 和 <xref:System.Convert.ToString%28System.Object%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法的调用会自动调用 <xref:System.IFormattable> 实现。
 
-- 支持复合格式设置。 如果使用包含格式字符串的格式项设置自定义类型的格式，则公共语言运行时自动调用 <xref:System.IFormattable> 实现，并向其传递该格式字符串。 有关采用 <xref:System.String.Format%2A?displayProperty=nameWithType> 或 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>等方法进行复合格式设置的更多信息，请参见 [复合格式设置](#CompositeFormatting) 部分。
+- 支持复合格式设置。 如果使用包含格式字符串的格式项设置自定义类型的格式，则公共语言运行时自动调用 <xref:System.IFormattable> 实现，并向其传递该格式字符串。 有关采用 <xref:System.String.Format%2A?displayProperty=nameWithType> 或 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>等方法进行复合格式设置的更多信息，请参见 [复合格式设置](#composite-formatting) 部分。
 
 下面的示例定义一个实现 `Temperature` 接口的 <xref:System.IFormattable> 类。 它支持“C”或“G”格式说明符（用于以摄氏度显示温度）、“F”格式说明符（用于以华氏度显示温度）和“K”格式说明符（用于以开氏度显示温度）。
 
@@ -366,8 +312,6 @@ ms.locfileid: "70253984"
 
 [!code-csharp[Conceptual.Formatting.Overview#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/iformattable.cs#13)]
 [!code-vb[Conceptual.Formatting.Overview#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/iformattable.vb#13)]
-
-<a name="CompositeFormatting"></a>
 
 ## <a name="composite-formatting"></a>复合格式设置
 
@@ -389,8 +333,6 @@ ms.locfileid: "70253984"
 
 有关复合格式的更多信息，请参见 [Composite Formatting](../../../docs/standard/base-types/composite-formatting.md)。
 
-<a name="Custom"></a>
-
 ## <a name="custom-formatting-with-icustomformatter"></a>使用 ICustomFormatter 进行自定义格式设置
 
 两种复合格式设置方法（ <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder.AppendFormat%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>）包括一个支持自定义格式设置的格式提供程序。 当调用其中一种格式设置方法时，该方法会将表示 <xref:System.Type> 接口的 <xref:System.ICustomFormatter> 对象传递到格式提供程序的 <xref:System.IFormatProvider.GetFormat%2A> 方法。 <xref:System.IFormatProvider.GetFormat%2A> 方法然后负责返回提供自定义格式设置功能的 <xref:System.ICustomFormatter> 实现。
@@ -407,8 +349,6 @@ ms.locfileid: "70253984"
 [!code-csharp[Conceptual.Formatting.Overview#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#16)]
 [!code-vb[Conceptual.Formatting.Overview#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#16)]
 
-<a name="RelatedTopics"></a>
-
 ## <a name="related-topics"></a>相关主题
 
 |Title|定义|
@@ -423,8 +363,6 @@ ms.locfileid: "70253984"
 |[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)|描述如何将一个或多个设置了格式的值嵌入字符串。 然后该字符串可以显示在控制台上或被写至流。|
 |[执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)|列出分步说明如何执行特定的格式设置操作的主题。|
 |[Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)|描述如何将对象初始化为这些对象的字符串表示形式所描述的值。 分析是格式化的反向操作。|
-
-<a name="Reference"></a>
 
 ## <a name="reference"></a>参考
 

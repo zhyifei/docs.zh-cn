@@ -3,12 +3,12 @@ title: C# 中的数字 - C# 教程简介
 description: 通过浏览数字类型、其属性和方法了解 C#。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 731824fefcf4966a885c53be8f71e77140541383
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: e9d8b09bde6e87edf9f483c0c296dbb256343f58
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834090"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774023"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>处理 C\# 中的整数和浮点数
 
@@ -320,8 +320,6 @@ Console.WriteLine(c / d);
 
 可以参阅下面的主题，详细了解 C# 中的数字：
 
-- [整型类型](../../language-reference/builtin-types/integral-numeric-types.md)
-- [浮点型表](../../language-reference/builtin-types/floating-point-numeric-types.md)
-- [内置类型表](../../language-reference/keywords/built-in-types-table.md)
-- [隐式数值转换表](../../language-reference/keywords/implicit-numeric-conversions-table.md)
-- [显式数值转换表](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+- [整型数值类型](../../language-reference/builtin-types/integral-numeric-types.md)
+- [浮点型数值类型](../../language-reference/builtin-types/floating-point-numeric-types.md)
+- [内置数值转换](../../language-reference/builtin-types/numeric-conversions.md)

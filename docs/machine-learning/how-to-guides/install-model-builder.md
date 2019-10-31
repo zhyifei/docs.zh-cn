@@ -5,12 +5,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.date: 06/21/2019
 ms.custom: mvc, how-to
-ms.openlocfilehash: b0d45ab7807bf84b98c58e85580d5aa04d0c5f7d
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: a1034d294012b8df5ec778fc40602fe52223961d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306330"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774568"
 ---
 # <a name="how-to-install-mlnet-model-builder"></a>如何安装 ML.NET 模型生成器
 
@@ -21,7 +21,7 @@ ms.locfileid: "71306330"
 
 ## <a name="pre-requisites"></a>先决条件
 
-- Visual Studio 2017 15.9.12 或更高版本 / Visual Studio 2019
+- Visual Studio 2017 版本 15.9.12 或更高版本/Visual Studio 2019
 - .NET Core 2.1 或更高版本的 SDK
 
 ## <a name="limitations"></a>限制
@@ -33,7 +33,7 @@ ms.locfileid: "71306330"
 
 ## <a name="install"></a>安装
 
-可通过 Visual Studio Marketplace 或从 Visual Studio 中安装 ML.NET 模型生成器。 
+可通过 Visual Studio Marketplace 或从 Visual Studio 中安装 ML.NET 模型生成器。
 
 ### <a name="visual-studio-marketplace"></a>Visual Studio Marketplace
 

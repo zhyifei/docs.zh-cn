@@ -2,18 +2,17 @@
 title: .NET Framework 技术在 .NET Core 上不可用
 description: 了解在 .NET Core 上不可用的 .NET Framework 技术
 author: cartermp
-ms.author: mairaw
 ms.date: 04/30/2019
-ms.openlocfilehash: 87c3dd337ad44fd21b255afa7c03b528cd8a42ad
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e5626d7b3e402848e2e84c49d4e98e109f62982d
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660601"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846816"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Framework 技术在 .NET Core 上不可用
 
-一些适用于 .NET Framework 库的技术不可用于 .NET Core，例如 AppDomains、远程处理、代码访问安全性 (CAS) 和安全透明度。 如果库依赖于这些技术中的一个或多个，请考虑使用下面所述的替代方法。 有关 API 兼容性的详细信息，CoreFX 团队在 GitHub 上列出了[行为更改/兼容性破坏和弃用的/旧 API 列表](https://github.com/dotnet/corefx/wiki/ApiCompat)。
+一些适用于 .NET Framework 库的技术不可用于 .NET Core，例如 AppDomains、远程处理、代码访问安全性 (CAS) 和安全透明度。 如果库依赖于这些技术中的一个或多个，请考虑使用下面所述的替代方法。 有关 API 兼容性的详细信息，请参阅 [.NET Core 中断性变更](../compatibility/breaking-changes.md)一文。
 
 当前未实现某个 API 或技术并不因此意味着有意不对其提供支持。 应该首先在 GitHub 存储库中搜索 .NET Core，以确定遇到的特定问题是否为有意设计，但是如果找不到这样的指示符，请在 GitHub 的 [dotnet/corefx 存储库问题](https://github.com/dotnet/corefx/issues)中提交问题，以请求特定 API 和技术。 [问题中的移植请求](https://github.com/dotnet/corefx/labels/port-to-core)已标有 `port-to-core` 标签。
 

@@ -3,12 +3,12 @@ title: 事件介绍
 description: 本概述中介绍 .NET Core 中的事件和事件的语言设计目标。
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: e2944100d648d90e7aa5ea5798a351b8fd382cf7
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: b1fd2ebe2ae91b55c9179f280d8894f6b40ced9b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051944"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771917"
 ---
 # <a name="introduction-to-events"></a>事件介绍
 
@@ -49,7 +49,7 @@ public event EventHandler<FileListArgs> Progress;
 
 该事件（在此示例中，为 `EventHandler<FileListArgs>`）的类型必须为委托类型。 声明事件时，应遵循许多约定。 通常情况下，事件委托类型具有无效的返回。
 事件声明应为谓词或谓词短语。
-当事件报告已发生的事情时，请使用过去时（如下例所示）。 使用现在时谓词（例如 `Closing`）报告将要发生的事情。 通常，使用现在时表示类支持某种类型的自定义行为。 最常见的方案之一是支持取消。 例如，`Closing` 事件可能包括指示是否应继续执行关闭操作的参数。  其他方案可能会允许调用方通过更新事件参数的属性来修改行为。 你可以引发一个事件以指示算法将采取的建议的下一步操作。 事件处理程序可以通过修改事件参数的属性授权不同的操作。
+当事件报告已发生的事情时，请使用过去时。 使用现在时谓词（例如 `Closing`）报告将要发生的事情。 通常，使用现在时表示类支持某种类型的自定义行为。 最常见的方案之一是支持取消。 例如，`Closing` 事件可能包括指示是否应继续执行关闭操作的参数。  其他方案可能会允许调用方通过更新事件参数的属性来修改行为。 你可以引发一个事件以指示算法将采取的建议的下一步操作。 事件处理程序可以通过修改事件参数的属性授权不同的操作。
 
 想要引发事件时，使用委托调用语法调用事件处理程序：
 

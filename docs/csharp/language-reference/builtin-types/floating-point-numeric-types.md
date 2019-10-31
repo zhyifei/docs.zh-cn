@@ -1,7 +1,7 @@
 ---
 title: 浮点数值类型 - C# 引用
 description: 内置 C# 浮点类型概述
-ms.date: 10/18/2019
+ms.date: 10/22/2019
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: fa6cbb869d90113414cc6f8ffe231386c3596b1d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4d71f7eea3f574e483dc4250f5c87e1ffd551f2f
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579374"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771907"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>浮点数值类型（C# 引用）
 
@@ -88,7 +88,7 @@ decimal myMoney = 3_000.5m;
 myMoney = 400.75M;
 ```
 
-前面的示例还演示了如何将 `_` 用作*数字分隔符*（从 C# 7.0 开始支持）。 可以将数字分隔符用于所有类型的数字文本。
+前面的示例还演示了如何将 `_` 用作数字分隔符  （从 C# 7.0 开始提供支持）。 可以将数字分隔符用于所有类型的数字文本。
 
 还可以使用科学记数法，即指定真实文本的指数部分，如以下示例所示：
 
@@ -105,13 +105,7 @@ Console.WriteLine(m);  // output: 1500000
 
 ## <a name="conversions"></a>转换
 
-存在从 `float` 到 `double` 的隐式转换（称为扩大转换），因为 `float` 值的范围是 `double` 的正确子集，并且从 `float` 到 `double` 不会丢失精度  。
-
-未定义从源类型到目标类型的隐式转换时，必须使用显式强制转换将一个浮点类型转换为另一个浮点类型。 这称为收缩转换  。 由于转换可能导致数据丢失，因此必须使用显式用例。 其他浮点类型与 `decimal` 类型之间不存在隐式转换，因为 `decimal` 类型的精度高于 `float` 或 `double`。
-
-有关隐式数值转换的详细信息，请参阅[隐式数值转换表](../keywords/implicit-numeric-conversions-table.md)。
-
-有关显式数值转换的详细信息，请参阅[显式数值转换表](../keywords/explicit-numeric-conversions-table.md)。
+浮点数值类型之间只有一种隐式转换：从 `float` 到 `double`。 但是，可以使用[显式强制转换](../operators/type-testing-and-cast.md#cast-operator-)将任何浮点类型转换为任何其他浮点类型。 有关详细信息，请参阅[内置数值转换](numeric-conversions.md)。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
@@ -124,10 +118,9 @@ Console.WriteLine(m);  // output: 1500000
 ## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
-- [整型类型](integral-numeric-types.md)
 - [内置类型表](../keywords/built-in-types-table.md)
-- [.NET 中的数字](../../../standard/numerics.md)
-- [强制转换和类型转换](../../programming-guide/types/casting-and-type-conversions.md)
-- <xref:System.Numerics.Complex?displayProperty=nameWithType>
+- [整型类型](integral-numeric-types.md)
 - [设置数值结果表的格式](../keywords/formatting-numeric-results-table.md)
 - [标准数字格式字符串](../../../standard/base-types/standard-numeric-format-strings.md)
+- [.NET 中的数字](../../../standard/numerics.md)
+- <xref:System.Numerics.Complex?displayProperty=nameWithType>

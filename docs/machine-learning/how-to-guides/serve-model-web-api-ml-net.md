@@ -5,12 +5,12 @@ ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 42f8d51f2547cd6f3240a05420b2da10b7cf52e3
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: b85d77900c5d9227ecc6fe81b8a8d68171dd9ef5
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179395"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774512"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>在 ASP.NET Core Web API 中部署模型
 
@@ -21,7 +21,7 @@ ms.locfileid: "72179395"
 
 ## <a name="prerequisites"></a>系统必备
 
-- 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
+- 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
 - PowerShell。
 - 预先定型的模型。 使用 [ML.NET 情绪分析教程](../tutorials/sentiment-analysis.md)生成自己的模型，或下载此[预先训练的情绪分析机器学习模型](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)
 
@@ -62,9 +62,9 @@ ms.locfileid: "72179395"
     ```csharp
     using Microsoft.ML.Data;
     ```
-    
+
     删除现有类定义，并将以下代码添加到 SentimentData.cs  文件：
-    
+
     ```csharp
     public class SentimentData
     {
@@ -83,9 +83,9 @@ ms.locfileid: "72179395"
     ```csharp
     using Microsoft.ML.Data;
     ```
-    
+
     删除现有类定义，并将以下代码添加到 SentimentPrediction.cs  文件：
-    
+
     ```csharp
     public class SentimentPrediction : SentimentData
     {
@@ -99,7 +99,7 @@ ms.locfileid: "72179395"
     }
     ```
 
-    `SentimentPrediction` 继承自 `SentimentData`。 这样可以更轻松地查看 `SentimentText` 属性中的原始数据以及模型生成的输出。 
+    `SentimentPrediction` 继承自 `SentimentData`。 这样可以更轻松地查看 `SentimentText` 属性中的原始数据以及模型生成的输出。
 
 ## <a name="register-predictionenginepool-for-use-in-the-application"></a>注册 PredictionEnginePool 用于应用程序
 
@@ -130,22 +130,22 @@ ms.locfileid: "72179395"
     }
     ```
 
-概括地讲，此代码在应用程序请求时自动初始化对象和服务以供稍后使用，你无需手动执行初始化。 
+概括地讲，此代码在应用程序请求时自动初始化对象和服务以供稍后使用，你无需手动执行初始化。
 
-机器学习模型不是静态的。 随着新的训练数据变得可用，模型将重新训练和重新部署。 将最新版本的模型引入应用程序的一种方法是重新部署整个应用程序。 但这会导致应用程序关闭。 `PredictionEnginePool` 服务提供了一种机制，用于在不使应用程序关闭的情况下重新加载已更新的模型。 
+机器学习模型不是静态的。 随着新的训练数据变得可用，模型将重新训练和重新部署。 将最新版本的模型引入应用程序的一种方法是重新部署整个应用程序。 但这会导致应用程序关闭。 `PredictionEnginePool` 服务提供了一种机制，用于在不使应用程序关闭的情况下重新加载已更新的模型。
 
 将 `watchForChanges` 参数设置为 `true`，则 `PredictionEnginePool` 会启动 [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher)，用于侦听文件系统更改通知并在文件发生更改时引发事件。 这会提示 `PredictionEnginePool` 自动重新加载模型。
 
-模型由 `modelName` 参数标识，因此更改时可以重新加载每个应用程序的多个模型。 
+模型由 `modelName` 参数标识，因此更改时可以重新加载每个应用程序的多个模型。
 
 > [!TIP]
 > 或者，如果使用远程存储的模型，则可以使用 `FromUri` 方法。 `FromUri` 会轮询远程位置以获取更改，而不是监视文件更改事件。 轮询间隔默认为 5 分钟。 你可以根据应用程序的要求，增加或减少轮询间隔。 在下面的代码示例中，`PredictionEnginePool` 每分钟轮询存储在指定 URI 中的模型。
->    
+>
 >```csharp
 >builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
 >   .FromUri(
->       modelName: "SentimentAnalysisModel", 
->       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip", 
+>       modelName: "SentimentAnalysisModel",
+>       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip",
 >       period: TimeSpan.FromMinutes(1));
 >```
 
@@ -165,7 +165,7 @@ ms.locfileid: "72179395"
     ```
 
     删除现有类定义，并将以下代码添加到 PredictController.cs  文件：
-    
+
     ```csharp
     public class PredictController : ControllerBase
     {
@@ -207,7 +207,7 @@ ms.locfileid: "72179395"
     ```
 
     如果成功，输出文本应如下所示：
-    
+
     ```powershell
     Negative
     ```

@@ -2,12 +2,12 @@
 title: 处理异步应用中的重新进入 (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 3b6c5e29559a5350bdce7ad8bcf971281bb79994
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 9a6189624eff988ec6b0ac8a93330d591ed46a8c
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204297"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772028"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>处理异步应用中的重新进入 (C#)
 
@@ -29,6 +29,9 @@ ms.locfileid: "70204297"
 
 > [!NOTE]
 > 若要运行该示例，计算机上必须安装 Visual Studio 2012 或更高版本和 .NET Framework 4.5 或更高版本。
+
+> [!NOTE]
+> 传输层安全性 (TLS) 版本 1.2 现在是在应用开发中使用的最低版本。 如果应用面向低于 4.7 的 .NET Framework 版本，请参阅以下文章，了解 [.NET Framework 传输层安全性 (TLS) 的最佳做法](../../../../framework/network-programming/tls.md) 
 
 ## <a name="BKMK_RecognizingReentrancy"></a>识别重新进入
 
@@ -581,7 +584,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 4. 在项目类型列表中，选择“WPF 应用程序”  。
 
-5. 将项目命名为 `WebsiteDownloadWPF`，然后选择“确定”  按钮。
+5. 将项目命名为 `WebsiteDownloadWPF`，选择 .NET Framework 版本 4.6 或更高版本，然后单击“确定”按钮  。
 
      新项目将出现在“解决方案资源管理器”  中。
 
@@ -609,7 +612,9 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
      MainWindow.xaml 的“设计”  视图中将显示一个简单的窗口，其中包含一个文本框和一个按钮。
 
-8. 对 <xref:System.Net.Http> 添加引用。
+8. 在“解决方案资源管理器”中，右键单击“引用”并选择“添加引用”    。
+
+     如果尚未选择，请为 <xref:System.Net.Http> 添加引用。
 
 9. 在“解决方案资源管理器”  中，打开 MainWindow.xaml.cs 的快捷菜单，然后选择“查看代码”  。
 
@@ -641,6 +646,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
         {
             public MainWindow()
             {
+                System.Net.ServicePointManager.SecurityProtocol |= System.Net.SecurityProtocolType.Tls12;
                 InitializeComponent();
             }
 

@@ -3,12 +3,12 @@ title: 元组类型 - C# 指南
 description: 了解 C# 中的未命名元组类型和命名元组类型
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 7e5df8c20dbbddbe84a56883a6d2a027f32d8ff7
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 3c8d4acfe231be63e1d70d467cbb72ecfa4f767d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319761"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774063"
 ---
 # <a name="c-tuple-types"></a>C# 元组类型
 
@@ -77,7 +77,7 @@ C# 元组是使用轻量语法定义的类型。 其优点包括：更简单的�
 
 在以下两种情况下，不会将候选字段名称投影到元组字段：
 
-1. 候选名称是保留元组名称时。 示例包括 `Item3`、`ToString`、 或 `Rest`。
+1. 候选名称是保留元组名称时。 示例包括 `Item3`、`ToString` 或 `Rest`。
 1. 候选名称重复了另一元组的显式或隐式字段名称时。
 
 这两个条件可避免多义性。 如果这些名称已用作元组中某字段的字段名称，它们将导致多义。 这两个条件都不会导致编译时错误。 但不会向没有投影名称的元素投影语义名称。  以下示例说明了这两个条件：

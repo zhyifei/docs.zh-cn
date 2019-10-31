@@ -3,12 +3,12 @@ title: 如何使用 ML.NET 自动化 ML API
 description: ML.NET 自动化 ML API 可自动化模型生成过程并生成可供部署的模型。 了解可用于配置自动化机器学习任务的选项。
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: a7057337fb6ff19a1e402d7bf74a766b246ea3c1
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: bb1cd66e7341f2ada57d533d8b2dcbb48f08f726
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332722"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774554"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>如何使用 ML.NET 自动化机器学习 API
 
@@ -89,7 +89,7 @@ using Microsoft.ML.AutoML;
     ```
 
 1. `CacheDirectory` 设置是指向目录的指针，执行 AutoML 任务期间训练的所有模型都将保存在该目录中。 如果 `CacheDirectory` 设置为 null，则模型将保留在内存中，而不是写入磁盘。
- 
+
     ```csharp
     experimentSettings.CacheDirectory = null;
     ```
@@ -128,7 +128,7 @@ using Microsoft.ML.AutoML;
 ## <a name="data-pre-processing-and-featurization"></a>数据预处理和特征化
 
 > [!NOTE]
-> 特征列仅支持 [`Boolean`](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)、[`Single`](https://docs.microsoft.com/en-us/dotnet/api/system.single) 和 [`String`](https://docs.microsoft.com/en-us/dotnet/api/system.string) 类型。
+> 特征列仅支持 <xref:System.Boolean>、<xref:System.Single> 和 <xref:System.String> 类型。
 
 默认情况下会进行数据预处理，并会自动执行以下步骤：
 
@@ -141,9 +141,9 @@ using Microsoft.ML.AutoML;
     使用数据类型的默认值填充缺少值的单元格。 使用与输入列数量相同的插槽数追加指示特征。 如果输入列中缺少值，则追加的指示特征中的值为 `1`，否则为 `0`。
 
 1. 生成其他特征
-    
+
     对于文本特征：使用一元语法和三元语法的词袋特征。
-    
+
     对于分类特征：用于低基数特征的单热编码，以及用于高基数分类特征的单热哈希编码。
 
 1. 转换和编码
@@ -191,7 +191,7 @@ ExperimentResult<RegressionMetrics> experimentResult = experiment
 AutoML 提供重载试验执行方法，该方法允许提供训练数据。 在内部，自动化 ML 将数据划分为训练-验证拆分。
 
 ```csharp
-experiment.Execute(trainDataView);   
+experiment.Execute(trainDataView);
 ```
 
 ### <a name="custom-validation-dataset"></a>自定义验证数据集
@@ -199,7 +199,7 @@ experiment.Execute(trainDataView);
 如果随机拆分不可接受（时序数据通常如此），则使用自定义验证数据集。 可以指定自己的验证数据集。 将根据指定的验证数据集而不是一个或多个随机数据集评估模型。
 
 ```csharp
-experiment.Execute(trainDataView, validationDataView);   
+experiment.Execute(trainDataView, validationDataView);
 ```
 
 ## <a name="explore-model-metrics"></a>探索模型指标

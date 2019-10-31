@@ -5,12 +5,12 @@ ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 9d5699f772dba994b10408d15422faa3c5931f45
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: d8fdc3061067d85498dc5bbed7bf324f99169a36
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991681"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774350"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies"></a>如何：创建未签名的友元程序集
 
@@ -136,7 +136,7 @@ ms.locfileid: "70991681"
    vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb
    ```
 
-   编译器生成的程序集的名称必须与传递给 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性的友元程序集的名称匹配。 必须使用 `/out` 编译器选项显式指定输出程序集（.exe 或 .dll）的名称   。 有关详细信息，请参阅 [/out（C# 编译器选项）](../../csharp/language-reference/compiler-options/out-compiler-option.md)或 [out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md)。
+   编译器生成的程序集的名称必须与传递给 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性的友元程序集的名称匹配。 必须使用 `-out` 编译器选项显式指定输出程序集（.exe 或 .dll）的名称   。 有关详细信息，请参阅 [-out（C# 编译器选项）](../../csharp/language-reference/compiler-options/out-compiler-option.md)或 [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md)。
 
 6. 运行 friend_unsigned_B.exe 文件  。
 

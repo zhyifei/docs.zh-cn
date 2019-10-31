@@ -2,12 +2,12 @@
 title: 设计面向微服务的应用程序
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解面向微服务的应用程序的优点和缺点，以便可以采取明智的决策。
 ms.date: 10/02/2018
-ms.openlocfilehash: dc3c8ccd95505cb828383f499b9bf950e7c12a30
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1c2fe341c62111e915df35aab818b8a980004834
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039816"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772060"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>设计面向微服务的应用程序
 
@@ -65,7 +65,7 @@ ms.locfileid: "71039816"
 
 该应用程序包含多个子系统，包括多个应用商店 UI 前端（一个 Web 应用程序和本机移动应用），以及用于所有所需服务器端操作的后端微服务和容器（将多个 API 网关作为合并入口点）。 图 6-1 显示了参考应用程序的体系结构。
 
-![移动和 SPA 客户端与单一 API 网关终结点进行通信，后者随后与微服务进行通信。 传统 Web 客户端与 MVC 微服务进行通信，后者与微服务进行通信](./media/image1.png)
+![移动和 SPA 客户端与单一 API 网关终结点进行通信，然后再与微服务进行通信。 传统 Web 客户端与 MVC 微服务进行通信，后者与微服务进行通信](./media/image1.png)
 
 **图 6-1**. 开发环境的 eShopOnContainers 参考应用程序体系结构
 

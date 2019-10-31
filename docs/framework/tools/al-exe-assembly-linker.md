@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e46934d9156bf3adebc010fb99ade10a1a35e09
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 746abee0861b32900e757f030ab6165f297b83ed
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523803"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774215"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe（程序集链接器）
 
 程序集链接器从一个或多个文件（这些文件可以是模块或资源文件）生成一个具有程序集清单的文件。 模块是不含程序集清单的中间语言 (IL) 文件。
 
 > [!NOTE]
-> 从 Visual Studio 2008 开始，C# 和 Visual Basic 编译器都自动将 Win32 清单嵌入到程序集中。 有关详细信息，请参阅 [/win32manifest（C# 编译器选项）](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md)。
+> 从 Visual Studio 2008 开始，C# 和 Visual Basic 编译器都自动将 Win32 清单嵌入到程序集中。 有关详细信息，请参阅 [-win32manifest（C# 编译器选项）](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md)。
 
 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。
 

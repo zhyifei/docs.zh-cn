@@ -4,12 +4,12 @@ description: 了解如何在 Windows 上使用 .NET Core 运行 .NET for Apache 
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c4dbce74d0d8c0a682250a8021d983ef2990971f
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 19efc8412d834d73069c61e1cc1ccd9e5eb8593b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250315"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774373"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>教程：.NET for Apache Spark 入门
 
@@ -44,9 +44,9 @@ ms.locfileid: "72250315"
     * 使用 PowerShell 命令 `java -version` 以验证安装。
 
 4. 安装 [Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)。
-    * 下载 [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip)。
-    * 提取到本地目录。 例如 `c:\bin\apache-maven-3.6.0\`。
-    * 将 Apache Maven 添加到 [PATH 环境变量](https://www.java.com/en/download/help/path.xml)。 如果已提取到 `c:\bin\apache-maven-3.6.0\`，则需将 `c:\bin\apache-maven-3.6.0\bin` 添加到路径。
+    * 下载 [Apache Maven 3.6.2](http://mirror.metrocast.net/apache/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.zip)。
+    * 提取到本地目录。 例如 `c:\bin\apache-maven-3.6.2\`。
+    * 将 Apache Maven 添加到 [PATH 环境变量](https://www.java.com/en/download/help/path.xml)。 如果已提取到 `c:\bin\apache-maven-3.6.2\`，则需将 `c:\bin\apache-maven-3.6.2\bin` 添加到路径。
     * 使用 PowerShell 命令 `mvn -version` 以验证安装。
 
 5. 安装 [Apache Spark 2.3+](https://spark.apache.org/downloads.html)。 不支持 Apache Spark 2.4 及以上版本。

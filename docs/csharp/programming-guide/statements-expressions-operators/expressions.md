@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 1a0e94f40a9dc861b32e6a1c12935faadda9921b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2db08bd89b5e0fc612599f83cb02178aef5ee5fb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921810"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774171"
 ---
 # <a name="expressions-c-programming-guide"></a>表达式（C# 编程指南）
 
@@ -33,7 +33,7 @@ System.Convert.ToInt32("35");
   
 ## <a name="overflows"></a>溢出
 
- 如果值大于值类型的最大值，数值表达式可能导致溢出。 有关详细信息，请参阅 [Checked 和 Unchecked](../../language-reference/keywords/checked-and-unchecked.md) 和[显式数值转换表](../../language-reference/keywords/explicit-numeric-conversions-table.md)。  
+ 如果值大于值类型的最大值，数值表达式可能导致溢出。 有关详细信息，请参阅[内置数值转换](../../language-reference/builtin-types/numeric-conversions.md)一文的 [Checked 和 Unchecked](../../language-reference/keywords/checked-and-unchecked.md) 和[显式数值转换](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions)部分。
   
 ## <a name="operator-precedence-and-associativity"></a>运算符优先级和关联性
 

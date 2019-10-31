@@ -2,12 +2,12 @@
 title: 什么是 Docker？
 description: 深入了解 Docker，这里的一个简单类比可能会对你有所帮助。
 ms.date: 02/15/2019
-ms.openlocfilehash: 7747c4985af27be0a073fad2f22622f697f4ce27
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7fd3c599afda2d59e0d56756bd61495f2d0370a0
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673424"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770721"
 ---
 # <a name="what-is-docker"></a>什么是 Docker？
 
@@ -35,7 +35,7 @@ Docker 映像容器可以在 Linux 和 Windows 上本机运行。 但是，Windo
 
 图 1-3 显示了 VM 和 Docker 容器之间的比较。
 
-![对于 VM，在主机服务器中有三个基本层，从底部向上依次为：基础结构、主机操作系统和虚拟机监控程序，在所有这些层的顶部，每个 VM 都有其自己的 OS 和所有必需的库。 另一方面，对于 Docker，主机服务器仅有基础结构和 OS，在其顶部是容器引擎，它将容器隔离，但共享基础 OS 服务。](./media/image3.png)
+![对于 VM，在主机服务器中有三个基本层，从底部向上依次为：基础结构、主机操作系统和虚拟机监控程序，在所有这些层的顶部，每个 VM 都有其自己的 OS 和所有必需的库。 另一方面，对于 Docker，主机服务器仅包含基础结构和 OS，除此以外，就是用于隔离容器但共享基础 OS 服务的容器引擎。](./media/image3.png)
 
 **图 1-3**。 比较传统虚拟机与 Docker 容器
 

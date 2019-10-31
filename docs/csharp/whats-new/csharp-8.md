@@ -2,12 +2,12 @@
 title: C# 8.0 中的新增功能 - C# 指南
 description: 简要介绍 C# 8.0 中提供的新功能。
 ms.date: 09/20/2019
-ms.openlocfilehash: 12e41a3bca981d04f7b29970eba1f737254f2b58
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: e6a2357f4405b4eb31b12a1e3faa6896a31c21a1
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579138"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72960820"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 中的新增功能
 
@@ -28,7 +28,7 @@ C# 8.0 向 C# 语言添加了以下功能和增强功能：
 - [索引和范围](#indices-and-ranges)
 - [Null 合并赋值](#null-coalescing-assignment)
 - [非托管构造类型](#unmanaged-constructed-types)
-- [嵌套表达式中的 stackalloc](#stackalloc-in-nested-expressions)
+- [嵌套表达式中的 Stackalloc](#stackalloc-in-nested-expressions)
 - [内插逐字字符串的增强功能](#enhancement-of-interpolated-verbatim-strings)
 
 本文的剩余部分将简要介绍这些功能。 如果有详细讲解的文章，则将提供指向这些教程和概述的链接。 可以使用 `dotnet try` 全局工具在环境中浏览这些功能：
@@ -40,7 +40,7 @@ C# 8.0 向 C# 语言添加了以下功能和增强功能：
 
 ## <a name="readonly-members"></a>Readonly 成员
 
-可将 `readonly` 修饰符应用于结构的任何成员。 它指示该成员不会修改状态。 这比将 `readonly` 修饰符应用于 `struct` 声明更精细。  请考虑以下可变结构：
+可将 `readonly` 修饰符应用于结构的成员。 它指示该成员不会修改状态。 这比将 `readonly` 修饰符应用于 `struct` 声明更精细。  请考虑以下可变结构：
 
 ```csharp
 public struct Point
@@ -54,14 +54,14 @@ public struct Point
 }
 ```
 
-像大多数结构一样， `ToString()` 方法不会修改状态。 可以通过将 `readonly` 修饰符添加到 `ToString()` 的声明来对此进行指示：
+与大多数结构一样，`ToString()` 方法不会修改状态。 可以通过将 `readonly` 修饰符添加到 `ToString()` 的声明来对此进行指示：
 
 ```csharp
 public readonly override string ToString() =>
     $"({X}, {Y}) is {Distance} from the origin";
 ```
 
-上述更改会生成编译器警告，因为 `ToString` 访问 `Distance` 属性，该属性未标记为 `readonly`：
+上述更改会生成编译器警告，因为 `ToString` 访问未标记为 `readonly` 的 `Distance` 属性：
 
 ```console
 warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
@@ -73,7 +73,9 @@ warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonl
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-请注意，`readonly` 修饰符对于只读属性是必需的。 编译器不会假设 `get` 访问器不修改状态；必须明确声明 `readonly`。 编译器会强制实施以下规则：`readonly` 成员不修改状态。 除非删除 `readonly` 修饰符，否则不会编译以下方法：
+请注意，`readonly` 修饰符对于只读属性是必需的。 编译器会假设 `get` 访问器可以修改状态；必须显式声明 `readonly`。 自动实现的属性是一个例外；编译器将所有自动实现的 Getter 视为 readonly，因此，此处无需向 `X` 和 `Y` 属性添加 `readonly` 修饰符。
+
+编译器确实会强制执行 `readonly` 成员不修改状态的规则。 除非删除 `readonly` 修饰符，否则不会编译以下方法：
 
 ```csharp
 public readonly void Translate(int xOffset, int yOffset)
@@ -83,7 +85,7 @@ public readonly void Translate(int xOffset, int yOffset)
 }
 ```
 
-通过此功能，可以指定设计意图，使编译器可以强制执行该意图，并基于该意图进行优化。
+通过此功能，可以指定设计意图，使编译器可以强制执行该意图，并基于该意图进行优化。 有关详细信息，请参阅有关 [`readonly`](../language-reference/keywords/readonly.md#readonly-member-examples) 的语言参考文章中的 readonly 成员。
 
 ## <a name="default-interface-methods"></a>默认接口方法
 
@@ -99,7 +101,7 @@ C# 8.0 扩展了此词汇表，这样就可以在代码中的更多位置使用�
 
 除了可以在新位置使用新模式之外，C# 8.0 还添加了“递归模式”  。 任何模式表达式的结果都是一个表达式。 递归模式只是应用于另一个模式表达式输出的模式表达式。
 
-### <a name="switch-expressions"></a>Switch 表达式
+### <a name="switch-expressions"></a>switch 表达式
 
 通常情况下，[`switch`](../language-reference/keywords/switch.md) 语句在其每个 `case` 块中生成一个值。 借助 Switch 表达式  ，可以使用更简洁的表达式语法。 只有些许重复的 `case` 和 `break` 关键字和大括号。  以下面列出彩虹颜色的枚举为例：
 
@@ -311,7 +313,7 @@ static int WriteLinesToFile(IEnumerable<string> lines)
 
 在前面的示例中，当到达与 `using` 语句关联的右括号时，将对该文件进行处理。
 
-在这两种情况下，编译器将生成对 `Dispose()` 的调用。 如果 `using` 语句中的表达式不可处置，编译器将生成一个错误。
+在这两种情况下，编译器将生成对 `Dispose()` 的调用。 如果 `using` 语句中的表达式不可用，编译器将生成一个错误。
 
 ## <a name="static-local-functions"></a>静态本地函数
 
@@ -345,7 +347,7 @@ int M()
 
 ## <a name="disposable-ref-structs"></a>可处置的 ref 结构
 
-用 `ref` 修饰符声明的 `struct` 可能无法实现任何接口，因此无法实现 <xref:System.IDisposable>。 因此，要能够处理 `ref struct`，它必须有一个可访问的 `void Dispose()` 方法。 这同样适用于 `readonly ref struct` 声明。
+用 `ref` 修饰符声明的 `struct` 可能无法实现任何接口，因此无法实现 <xref:System.IDisposable>。 因此，要能够处理 `ref struct`，它必须有一个可访问的 `void Dispose()` 方法。 此功能同样适用于 `readonly ref struct` 声明。
 
 ## <a name="nullable-reference-types"></a>可为空引用类型
 
@@ -402,7 +404,7 @@ await foreach (var number in GenerateSequence())
 
 让我们从索引规则开始。 请考虑数组 `sequence`。 `0` 索引与 `sequence[0]` 相同。 `^0` 索引与 `sequence[sequence.Length]` 相同。 请注意，`sequence[^0]` 不会引发异常，就像 `sequence[sequence.Length]` 一样。 对于任何数字 `n`，索引 `^n` 与 `sequence.Length - n` 相同。
 
-范围指定范围的开始和末尾   。 包括此范围的开始，但不包括此范围的末尾，这表示此范围包含开始但不包含末尾。   范围 `[0..^0]` 表示整个范围，就像 `[0..sequence.Length]` 表示整个范围。
+范围指定范围的开始和末尾   。 包括此范围的开始，但不包括此范围的末尾，这表示此范围包含开始但不包含末尾   。 范围 `[0..^0]` 表示整个范围，就像 `[0..sequence.Length]` 表示整个范围。
 
 请看以下几个示例。 请考虑以下数组，用其顺数索引和倒数索引进行注释：
 
@@ -429,13 +431,13 @@ Console.WriteLine($"The last word is {words[^1]}");
 // writes "dog"
 ```
 
-以下代码创建了一个包含单词“quick”、“brown”和“fox”的子范围。 它包括 `words[1]` 到 `words[3]`。 元素 `words[4]` 不在此范围内。
+以下代码创建了一个包含单词“quick”、“brown”和“fox”的子范围。 它包括 `words[1]` 到 `words[3]`。 元素 `words[4]` 不在该范围内。
 
 ```csharp
 var quickBrownFox = words[1..4];
 ```
 
-以下代码使用“lazy”和“dog”创建一个子范围。 它包括 `words[^2]` 和 `words[^1]`。 不包括结束索引 `words[^0]`：
+以下代码使用“lazy”和“dog”创建一个子范围。 它包括 `words[^2]` 和 `words[^1]`。 末尾索引 `words[^0]` 不包括在内：
 
 ```csharp
 var lazyDog = words[^2..^0];
@@ -485,7 +487,7 @@ Console.WriteLine(i);  // output: 17
 
 ## <a name="unmanaged-constructed-types"></a>非托管构造类型
 
-在 C# 7.3 和更早版本中，构造类型（包含至少一个类型参数的类型）不能为[非托管类型](../language-reference/builtin-types/unmanaged-types.md)。 从 C# 8.0 开始，如果构造的值类型仅包含非托管类型的字段，则该类型不受管理。
+在 C# 7.3 及更低版本中，构造类型（包含至少一个类型参数的类型）不能为[非托管类型](../language-reference/builtin-types/unmanaged-types.md)。 从 C# 8.0 开始，如果构造的值类型仅包含非托管类型的字段，则该类型不受管理。
 
 例如，假设泛型 `Coords<T>` 类型有以下定义：
 

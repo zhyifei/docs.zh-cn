@@ -1,7 +1,7 @@
 ---
 title: 整型数值类型 - C# 参考
 description: 了解每种整型数值类型的范围、存储大小和用途。
-ms.date: 10/18/2019
+ms.date: 10/22/2019
 f1_keywords:
 - byte
 - byte_CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 3d4f3164d67a000123417619f3be6be455d5ab87
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c255711e4b165fdca27d50c6bd0f2debfe15ae25
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579186"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773870"
 ---
 # <a name="integral-numeric-types--c-reference"></a>整型数值类型（C# 参考）
 
@@ -100,7 +100,7 @@ var binaryLiteral = 0b_0010_1010;
 
 如果由整数字面量所表示的值超出了 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>，则将出现编译器错误 [CS1021](../../misc/cs1021.md)。
 
-整数文本所表示的值可以隐式转换为范围比确定的文本类型小的类型。 当值处于目标类型的范围内时，可能会出现这种情况：
+如果确定的整数文本的类型为 `int` 且值位于目标类型的范围内，则文本所表示的值可以隐式转换为 `sbyte`、`byte`、`short`、`ushort`、`uint` 或 `ulong`：
 
 ```csharp
 byte a = 17;
@@ -118,9 +118,7 @@ var longVariable = (long)42;
 
 ## <a name="conversions"></a>转换
 
-任何两个整型类型之间均可进行隐式转换（称为扩大转换），在转换中，目标类型可以存储源类型的所有值  。 例如，`int` 可隐式转换为 `long`，因为 `int` 值的范围是 `long` 的真子集。 小型无符号整型类型可隐式转换为大型带符号整型类型。 任何整型类型都可隐式转换为任何浮点类型。  任何带符号整型类型无法隐式转换为任何无符号整型类型。
-
-如果未定义源类型到目标类型的隐式转换，必须使用显式强制转换将整型类型转换为其他整型类型。 这称为收缩转换  。 由于转换可能导致数据丢失，因此必须使用显式用例。
+可以将任何整型数值类型转换为其他整数数值类型。 如果目标类型可以存储源类型的所有值，则转换是隐式的。 否则，必须使用[强制转换运算符 `()`](../operators/type-testing-and-cast.md#cast-operator-) 来调用显式转换。 有关详细信息，请参阅[内置数值转换](numeric-conversions.md)。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
@@ -132,8 +130,7 @@ var longVariable = (long)42;
 ## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
-- [浮点类型](floating-point-numeric-types.md)
-- [默认值表](../keywords/default-values-table.md)
-- [设置数值结果表的格式](../keywords/formatting-numeric-results-table.md)
 - [内置类型表](../keywords/built-in-types-table.md)
+- [浮点类型](floating-point-numeric-types.md)
+- [设置数值结果表的格式](../keywords/formatting-numeric-results-table.md)
 - [.NET 中的数字](../../../standard/numerics.md)

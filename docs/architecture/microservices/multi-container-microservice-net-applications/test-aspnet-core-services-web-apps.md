@@ -2,12 +2,12 @@
 title: 测试 ASP.NET Core 服务和 Web 应用
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 探索用于在容器中测试 ASP.NET Core 服务和 Web 应用的体系结构。
 ms.date: 10/02/2018
-ms.openlocfilehash: 042f7a6171a88025d3d4a8e37c4deceb416e5711
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 278d12b8215195351673a41149db5af6fcecddfb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291282"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772020"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>测试 ASP.NET Core 服务和 Web 应用
 
@@ -138,9 +138,9 @@ compose 应用程序运行后，如果运行 Visual Studio，可利用断点和�
 
 2. 微服务功能/集成测试  ，具有涉及每个微服务的基础结构但相互独立的测试用例，包含在 {MicroserviceName}.FunctionalTests  项目中。
 
-3. 应用程序功能/集成测试  ，侧重于微服务集成，具有执行多个微服务的测试用例。 这些测试位于项目 Application.FunctionalTests  中。
+3. **应用程序功能/集成测试**，侧重于微服务集成，具有执行多个微服务的测试用例。 这些测试位于项目 Application.FunctionalTests  中。
 
-4. 负载测试  ，侧重于每个微服务的响应时间。 这些测试位于项目 LoadTest  中，需要 Visual Studio 2017 Enterprise Edition。
+4. **负载测试**，侧重于每个微服务的响应时间。 这些测试位于项目 LoadTest  中，需要 Visual Studio 2017 Enterprise Edition。
 
 每个微服务的单元和集成测试包含在每个微服务的测试文件夹中，应用程序负载测试包含在解决方案文件夹中的测试文件夹下，如图 6-25 所示。
 

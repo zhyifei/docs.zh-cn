@@ -5,12 +5,12 @@ f1_keywords:
 - NETSDK1045
 ms.custom: updateeachvsrelease
 ms.date: 09/20/2019
-ms.openlocfilehash: b1557e6910cb6d0b6d7e2b3ce2aec97d3715fec7
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 6885f6c853efb0dcb2cb64b83f07e12b1dc2e3cf
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591674"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771955"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的先决条件
 
@@ -51,7 +51,7 @@ ms.locfileid: "71591674"
 > 除 KB2999226 以外，请确保还安装了 [KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot)。 如果没有安装此更新，则在启动 .NET Core 应用程序时会看到如下错误：`The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`。
 
 ## <a name="prerequisites-to-develop-net-core-apps-with-visual-studio"></a>有关使用 Visual Studio 开发 .NET Core 应用的先决条件
-    
+
 尽管可使用任意编辑器结合 .NET Core SDK 来开发 .NET Core 应用程序，但 Visual Studio 2017 及更高版本对 Windows 上的 .NET Core 应用提供了一个集成开发环境。
 
 <a name="vs-mapping"></a>
@@ -86,7 +86,7 @@ ms.locfileid: "71591674"
 
 ![Visual Studio 2019 安装的屏幕截图，其中勾选了“.NET Core 跨平台开发”工作负荷](./media/windows-prerequisites/vs-2019-workloads.jpg)
 
-在安装上述任何工作负荷后，Visual Studio 2019 16.3 默认使用 .NET Core 3.0 SDK。
+在安装上述任何工作负载后，Visual Studio 2019 版本 16.3 默认使用 .NET Core 3.0 SDK。
 
 如果希望现有项目使用最新的 .NET Core 运行时，请按照下述说明将每个现有的 .NET Core 项目重定目标到 .NET Core 3.0：
 
@@ -111,7 +111,7 @@ ms.locfileid: "71591674"
 ![选中“.NET Core 跨平台开发”工作负荷的 Visual Studio 2017 安装的屏幕截图](./media/windows-prerequisites/vs-2017-workloads.jpg)
 
 安装“.NET Core 跨平台开发”  工具集后，Visual Studio 通常会安装以前版本的 .NET Core SDK。
-例如，Visual Studio 2017 15.9 在安装工作负载后默认使用 .NET Core 2.1 SDK。
+例如，Visual Studio 2017 版本 15.9 在安装工作负载后默认使用 .NET Core 2.1 SDK。
 
 若要更新 Visual Studio 以使用 .NET Core 2.2 SDK：
 

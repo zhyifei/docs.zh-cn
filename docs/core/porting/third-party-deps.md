@@ -2,28 +2,40 @@
 title: 分析依赖项将代码移植到 .NET Core
 description: 了解如何分析外部依赖项，以便将项目从 .NET Framework 移植到 .NET Core。
 author: cartermp
-ms.date: 12/07/2018
+ms.date: 10/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 36d1c1d2090a0fb9e6f48fe519d15897579df2d5
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 5fa5a20e9a2b5427401835a0c1c6e1845d86c3ef
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521471"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798793"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>分析依赖项将代码移植到 .NET Core
 
-若要将代码移植到 .NET Core 或.NET Standard，必须了解依赖项。 外部依赖项是在项目中引用但没有构建的 [NuGet 包](#analyze-referenced-nuget-packages-in-your-projects)或 [Dll](#analyze-dependencies-that-arent-nuget-packages)。 评估每个依赖项并为与 .NET Core 不兼容的依赖项制定应变计划。 下面介绍了如何确定依赖项是否与 .NET Core 兼容。
+若要将代码移植到 .NET Core 或.NET Standard，必须了解依赖项。 外部依赖项是在项目中引用但没有自行构建的 NuGet 包或 `.dll`。
 
-## <a name="analyze-referenced-nuget-packages-in-your-projects"></a>分析项目中引用的 NuGet 包
+## <a name="migrate-your-nuget-packages-to-packagereference"></a>将 NuGet 包迁移到 `PackageReference`
 
-如果在项目中引用 NuGet 包，需要验证它们是否与 .NET Core 兼容。
-可通过两种方式来实现此目的：
+.NET Core 使用 [PackageReference](/nuget/consume-packages/package-references-in-project-files) 来指定包依赖项。 如果使用 [packages.config](/nuget/reference/packages-config) 在项目中指定包，则需要将其转换为 `PackageReference` 格式，因为 .NET Core 不支持 `packages.config`。
 
-- [使用 NuGet 包资源管理器应用](#analyze-nuget-packages-using-nuget-package-explorer)
-- [使用 nuget.org 站点](#analyze-nuget-packages-using-nugetorg)
+如需了解如何迁移，请参阅[从 packages.config 迁移到 PackageReference](/nuget/reference/migrate-packages-config-to-package-reference)一文。
 
-分析包后，如果它们与 .NET Core 不兼容并且仅面向 .NET Framework，则可检查 [.NET Framework 兼容性模式](#net-framework-compatibility-mode)是否能有助于移植过程。
+## <a name="upgrade-your-nuget-packages"></a>升级 NuGet 包
+
+将项目迁移为 `PackageReference` 格式后，需要验证包是否与 .NET Core 兼容。
+
+首先，请将包升级到可以使用的最新版本。 可通过 Visual Studio 中的 NuGet 包管理器 UI 完成此操作。 包依赖项的较新版本可能已经与 .NET Core 兼容。
+
+## <a name="analyze-your-package-dependencies"></a>分析包依赖项
+
+如果尚未验证转换和升级后的包依赖项是否适用于 .NET Core，可通过以下几种方法实现此目的：
+
+### <a name="analyze-nuget-packages-using-nugetorg"></a>使用 nuget.org 分析 NuGet 包
+
+可以在包页面“依赖项”部分的 [nuget.org](https://www.nuget.org/) 上查看每个包所支持的目标框架名字对象 (TFM)  。
+
+尽管使用站点验证兼容性是一种比较简单的方法，但站点上并未提供所有包的“依赖项”信息  。
 
 ### <a name="analyze-nuget-packages-using-nuget-package-explorer"></a>使用 NuGet 包资源管理器分析 NuGet 包
 
@@ -37,27 +49,7 @@ NuGet 包本身就是一组包含特定于平台的程序集的文件夹。 所�
 4. 从搜索结果中选择包的名称，然后点击“打开”  。
 5. 展开右侧的“lib”文件夹并查看文件夹名称  。
 
-查找具有以下任意名称的文件夹：
-
-```
-netstandard1.0
-netstandard1.1
-netstandard1.2
-netstandard1.3
-netstandard1.4
-netstandard1.5
-netstandard1.6
-netstandard2.0
-netcoreapp1.0
-netcoreapp1.1
-netcoreapp2.0
-netcoreapp2.1
-netcoreapp2.2
-portable-net45-win8
-portable-win8-wpa8
-portable-net451-win81
-portable-net45-win8-wpa8-wpa81
-```
+使用以下模式之一查找具有名称的文件夹：`netstandardX.Y` 或 `netcoreappX.Y`。
 
 这些值是映射到 [.NET Standard](../../standard/net-standard.md) 版本的[目标框架名字对象 (TFM)](../../standard/frameworks.md)、.NET Core 以及与 .NET Core 兼容的传统可移植类库 (PCL) 配置文件。
 
@@ -65,15 +57,9 @@ portable-net45-win8-wpa8-wpa81
 > 查看包支持的 TFM 时，请注意 `netcoreapp*`，它在兼容时，仅适用于 .NET Core 项目，不适用于 .NET Standard 项目。
 > 仅面向 `netcoreapp*` 而不是 `netstandard*` 的库只能用于其他 .NET Core 应用。
 
-### <a name="analyze-nuget-packages-using-nugetorg"></a>使用 nuget.org 分析 NuGet 包
+## <a name="net-framework-compatibility-mode"></a>.NET Framework 兼容性模式
 
-或者，可在包页面“依赖项”部分下的 [nuget.org](https://www.nuget.org/) 上查看每个包支持的 TFM  。
-
-尽管使用该站点可以比较简单地验证兼容性，但站点上并未提供所有包的“依赖项”信息  。
-
-### <a name="net-framework-compatibility-mode"></a>.NET Framework 兼容性模式
-
-在分析完 NuGet 包之后，你可能会发现它们仅面向 .NET Framework，就像大多数 NuGet 包一样。
+在分析完 NuGet 包之后，你可能会发现它们仅面向 .NET Framework。
 
 从 .NET Standard 2.0 开始，引入了 .NET Framework 兼容性模式。 此兼容性模式允许 .NET Standard 和 .NET Core 项目引用 .NET Framework 库。 引用 .NET Framework 库不适用于所有项目（如库使用 Windows Presentation Foundation (WPF) API 时），但它的开启了很多移植方案。
 
@@ -92,12 +78,6 @@ portable-net45-win8-wpa8-wpa81
 ```
 
 有关如何在 Visual Studio 中取消编译器警告的详细信息，请参阅[取消 NuGet 包的警告](/visualstudio/ide/how-to-suppress-compiler-warnings#suppress-warnings-for-nuget-packages)。
-
-## <a name="port-your-packages-to-packagereference"></a>将包移植到 `PackageReference`
-
-.NET Core 使用 [PackageReference](/nuget/consume-packages/package-references-in-project-files) 来指定包依赖项。 如果使用 [packages.config](/nuget/reference/packages-config) 来指定包，将需要转换为 `PackageReference`。
-
-有关详细信息，请参阅[从 packages.config 迁移到 PackageReference](/nuget/reference/migrate-packages-config-to-package-reference)。
 
 ## <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>NuGet 包依赖项未在.NET Core 上运行时应执行的操作
 

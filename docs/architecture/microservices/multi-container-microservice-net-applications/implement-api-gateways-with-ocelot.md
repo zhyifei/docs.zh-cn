@@ -2,12 +2,12 @@
 title: 通过 Ocelot 实现 API 网关
 description: 了解如何通过 Ocelot 实现 API 网关以及如何在基于容器的环境中使用 Ocelot。
 ms.date: 10/02/2018
-ms.openlocfilehash: 2a1c7b0f4baa979864ac32d555f65397531884b8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cb452c330712ecf536cdf09f41fdbf828a4e9314
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676184"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771175"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>通过 Ocelot 实现 API 网关
 
@@ -390,7 +390,7 @@ webmarketingapigw:
 
 进一步放大视图，在下图的“购物”业务区中，可以看到在使用 API 网关中的聚合器服务时，客户端应用和微服务之间的干扰减少了。
 
-![放大 eShopOnContainers 体系结构，显示聚合器服务，该服务“组装”某个响应“正在联接”，联接来自多个微服务的响应，以减少与最终客户端之间的干扰。](./media/image38.png)
+![放大 eShopOnContainers 体系结构，显示聚合器服务，该服务“组合”响应“加入”来自多个微服务的响应，以减少与最终客户端之间的干扰。](./media/image38.png)
 
 图 6-38  。 聚合器服务的放大影像
 

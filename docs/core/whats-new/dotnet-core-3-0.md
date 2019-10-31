@@ -7,18 +7,18 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 09/22/2019
-ms.openlocfilehash: c10023cf8cee358db41a3b90a9a0a1020c5462eb
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 758c8fd30fbd2e5ce8ace997005b91d6872a06d1
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395439"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773885"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新增功能
 
 本文介绍了 .NET Core 3.0 中的新增功能。 最大的增强功能之一是对 Windows 桌面应用程序的支持（仅限 Windows）。 通过使用 .NET Core 3.0 SDK Windows 桌面组件，可移植 Windows 窗体和 Windows Presentation Foundation (WPF) 应用程序。 明确地说，只有在 Windows 上才支持和包含 Windows 桌面组件。 有关详细信息，请参阅本文后面的 [Windows 桌面](#windows-desktop)部分。
 
-.NET Core 3.0 添加了对 C#8.0 的支持。 强烈建议使用 [Visual Studio 2019 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)、[Visual Studio for Mac 8.3](/visualstudio/mac/install-preview) 或 [Visual Studio Code](https://code.visualstudio.com/) 处理 C# 扩展  。
+.NET Core 3.0 添加了对 C#8.0 的支持。 强烈建议使用 [Visual Studio 2019 版本 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或更高版本、[Visual Studio for Mac 8.3](/visualstudio/mac/install-preview) 或更高版本，或具有最新 C# 扩展的 [Visual Studio Code](https://code.visualstudio.com/)  。
 
 立即在 Windows、macOS 或 Linux 上[下载并开始使用 .NET Core 3.0](https://aka.ms/netcore3download)。
 

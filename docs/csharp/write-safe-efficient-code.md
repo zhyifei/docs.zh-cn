@@ -3,12 +3,12 @@ title: 编写安全有效的 C# 代码
 description: 通过 C# 语言最新增强功能，可以编写可验证的安全代码，这些代码的性能以前与不安全代码相关联。
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: 73ad7a84d2ad47f0e0242825d250247ffb39928e
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 89a0bcf28c3c398865082e120ca9c16fe2c00651
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832946"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72960844"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>编写安全有效的 C# 代码
 
@@ -21,9 +21,10 @@ ms.locfileid: "66832946"
 本文重点介绍以下资源管理技术：
 
 - 声明 [`readonly struct`](language-reference/keywords/readonly.md#readonly-struct-example) 表示类型为“不可变”，并使编译器在使用 [`in`](language-reference/keywords/in-parameter-modifier.md) 参数时保存副本  。
+- 如果类型是可变的，请声明 `struct` 成员 `readonly`，以表示该成员不修改状态。
 - 当返回值 `struct` 大于 <xref:System.IntPtr.Size?displayProperty=nameWithType> 且存储生存期大于返回值的方法时，请使用 [`ref readonly`](language-reference/keywords/ref.md#reference-return-values) 返回。
 - 当 `readonly struct` 的大小大于 <xref:System.IntPtr.Size?displayProperty=nameWithType> 时，出于性能原因，应将其作为 `in` 参数传递。
-- 切勿将 `struct` 作为 `in` 参数传递，除非它使用 `readonly` 修饰符声明，因为它可能会对性能产生负面影响并可能导致模糊行为。
+- 除非使用 `readonly` 修饰符声明 `struct`或方法仅调用该结构的 `readonly` 成员，否则切勿将其作为 `in` 参数传递。 不遵守该指南可能会对性能产生负面影响，并可能导致不明确的行为。
 - 使用 [`ref struct`](language-reference/keywords/ref.md#ref-struct-types) 或 `readonly ref struct`（例如 <xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601>）将内存用作字节序列。
 
 这些技术迫使你在“引用”和“值”方面平衡两个相互竞争的目标   。 属于[引用类型](programming-guide/types/index.md#reference-types)的变量包含对内存中位置的引用。 属于[值类型](programming-guide/types/index.md#value-types)的变量直接包含它们的值。 这些差异突出了对管理内存资源非常重要的关键差异。 通常在将“值类型”传递给方法或从方法返回时将其复制  。 此行为包括在调用值类型的成员时复制 `this` 的值。 副本的成本与类型的大小有关。 托管堆上分配了“引用类型”  。 每个新对象都需要一个新的分配，并且随后必须回收。 这两种操作都需要花些时间。 将引用类型作为参数传递给方法或从方法返回时，将复制引用。
@@ -67,6 +68,51 @@ readonly public struct ReadonlyPoint3D
 ```
 
 只要你的设计意图是创建不可变值类型，就请遵循此建议。 任何性能改进都是额外权益。 `readonly struct` 清楚地表达了你的设计意图。
+
+## <a name="declare-readonly-members-when-a-struct-cant-be-immutable"></a>结构可变时声明 readonly 成员
+
+在 C# 8.0 及更高版本中，结构类型为可变类型时，应将不会引起变化的成员声明为 `readonly`。 例如，以下是三维点结构的可变变体：
+
+```csharp
+public struct Point3D
+{
+    public Point3D(double x, double y, double z)
+    {
+        this.X = x;
+        this.Y = y;
+        this.Z = z;
+    }
+
+    private double _x;
+    public double X 
+    { 
+        readonly get { return _x;}; 
+        set { _x = value; }
+    }
+    
+    private double _y;
+    public double Y 
+    { 
+        readonly get { return _y;}; 
+        set { _y = value; }
+    }
+
+    private double _z;
+    public double Z 
+    { 
+        readonly get { return _z;}; 
+        set { _z = value; }
+    }
+
+    public readonly double Distance => Math.Sqrt(X * X + Y * Y + Z * Z);
+
+    public readonly override string ToString() => $"{X, Y, Z }";
+}
+```
+
+前面的示例介绍了可在其中应用 `readonly` 修饰符的许多位置：方法、属性和属性访问器。 如果使用自动实现的属性，则编译器会将 `readonly` 修饰符添加到 `get` 访问器以获取读写属性。 对于仅具有 `get` 访问器的属性，编译器会将 `readonly` 修饰符添加到自动实现的属性声明中。
+
+向不改变状态的成员添加 `readonly` 修饰符有两个相关的好处。 首先，编译器会强制执行你的意图。 该成员不能改变结构的状态，也不能访问未标记为 `readonly` 的成员。 其次，访问 `readonly` 成员时，编译器不会创建 `in` 参数的防御性副本。 编译器可以安全地进行此优化，因为它可以保证 `readonly` 成员不会修改 `struct`。
 
 ## <a name="use-ref-readonly-return-statements-for-large-structures-when-possible"></a>尽可能对大型结构使用 `ref readonly return` 语句
 
@@ -181,7 +227,7 @@ public struct Point3D
 
 当你调用 `readonly struct` 的成员时，编译器会生成更有效的代码：`this` 引用始终是按引用成员方法传递的 `in` 参数，而不是接收器的副本。 将 `readonly struct` 用作 `in` 参数时，此优化可以减少复制操作。
 
-不应将可以为 null 的值类型作为 `in` 参数传递。 <xref:System.Nullable%601> 类型未声明为只读结构。 这意味着编译器必须为使用参数声明中的 `in` 修饰符传递到方法的任何可以为 null 的值类型参数生成防御性副本。
+不应将可为 null 的值类型作为 `in` 参数传递。 <xref:System.Nullable%601> 类型未声明为只读结构。 这意味着编译器必须为使用参数声明中的 `in` 修饰符传递到方法的任何可以为 null 的值类型参数生成防御性副本。
 
 你可以在 GitHub 上的[示例存储库](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark)中看到使用 [Benchmark.net](https://www.nuget.org/packages/BenchmarkDotNet/) 演示性能差异的示例程序。 它对按值和按引用传递可变结构与按值和按引用传递不可变结构进行了比较。 使用不可变结构并按引用传递是最快的。
 

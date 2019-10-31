@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: ac04ba72ed0c25aa576bf10150fc80410890eda0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 9760be0fcfe29d2c11cbb1f4d4d81c5a79261a0d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608371"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771738"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算术运算符（C# 参考）
 
@@ -47,7 +47,7 @@ ms.locfileid: "69608371"
 
 一元增量运算符 `++` 按 1 递增其操作数。 操作数必须是变量、[属性](../../programming-guide/classes-and-structs/properties.md)访问或[索引器](../../programming-guide/indexers/index.md)访问。
 
-支持两种形式的增量运算符：后缀增量运算符 `x++` 和前缀增量运算符 `++x`。
+增量运算符以两种形式进行支持：后缀增量运算符 `x++` 和前缀增量运算符 `++x`。
 
 ### <a name="postfix-increment-operator"></a>后缀递增运算符
 
@@ -65,7 +65,7 @@ ms.locfileid: "69608371"
 
 一元减量运算符 `--` 按 1 递减其操作数。 操作数必须是变量、[属性](../../programming-guide/classes-and-structs/properties.md)访问或[索引器](../../programming-guide/indexers/index.md)访问。
 
-支持两种形式的减量运算符：后缀减量运算符`x--` 和前缀减量运算符 `--x`。
+减量运算符以两种形式进行支持：后缀减量运算符`x--` 和前缀减量运算符 `--x`。
 
 ### <a name="postfix-decrement-operator"></a>后缀递减运算符
 
@@ -115,7 +115,7 @@ ms.locfileid: "69608371"
 
 [!code-csharp-interactive[floating-point division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#FloatingPointDivision)]
 
-如果操作数之一为 `decimal`，那么另一个操作数不得为 `float` 和 `double`，因为 `float` 和 `double` 都无法隐式转换为 `decimal`。 必须将 `float` 或 `double` 操作数显式转换为 `decimal` 类型。 若要详细了解数值类型之间的隐式转换，请参阅[隐式数值转换表](../keywords/implicit-numeric-conversions-table.md)。
+如果操作数之一为 `decimal`，那么另一个操作数不得为 `float` 和 `double`，因为 `float` 和 `double` 都无法隐式转换为 `decimal`。 必须将 `float` 或 `double` 操作数显式转换为 `decimal` 类型。 如需详细了解数值类型之间的转换，请参阅[内置数值转换](../builtin-types/numeric-conversions.md)。
 
 ## <a name="remainder-operator-"></a>余数运算符 %
 
@@ -191,7 +191,7 @@ x = x op y
 
 ## <a name="operator-precedence-and-associativity"></a>运算符优先级和关联性
 
-以下列表按优先级由高到低的顺序对算术运算符进行排序：
+以下列表对优先级由高到低的顺序对算术运算符进行排序：
 
 - 后缀增量 `x++` 和减量 `x--` 运算符
 - 前缀增量 `++x` 和减量 `--x` 以及一元 `+` 和 `-` 运算符

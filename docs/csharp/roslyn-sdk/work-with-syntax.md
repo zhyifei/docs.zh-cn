@@ -3,47 +3,47 @@ title: 使用 .NET Compiler Platform SDK 语法模型
 description: 此概述介绍了用于理解和操作语法节点的类型。
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: a48d48168dffdb439c984f5b4209019514b3b970
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 940d2756ef7735ee96d38d0286f99fadf7b81dc6
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353294"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774105"
 ---
 # <a name="work-with-syntax"></a>使用语法
 
-“语法树”是一种由编译器 API 公开的基础数据结构。 这些树表示源代码的词法和语法结构。 它们有两个重要用途：
+“语法树”  是一种由编译器 API 公开的基础数据结构。 这些树表示源代码的词法和语法结构。 它们有两个重要用途：
 
 1. 支持使用工具（如 IDE、加载项、代码分析工具和重构）查看和处理用户项目中源代码的语法结构。
 2. 支持使用工具（如重构和 IDE）以自然的方式创建、修改和重新排列源代码，而无需直接编辑文本。 通过创建和操作语法树，可轻松使用工具创建和重新排列源代码。
 
 ## <a name="syntax-trees"></a>语法树
 
-语法树是用于编译、代码分析、绑定、重构、IDE 功能和代码生成的主要结构。 要理解任意部分的源代码，都必须先加以识别，然后将其分类为众多已知结构化语言元素之一。 
+语法树是用于编译、代码分析、绑定、重构、IDE 功能和代码生成的主要结构。 要理解任意部分的源代码，都必须先加以识别，然后将其分类为众多已知结构化语言元素之一。
 
-语法树具有三个关键特性。 第一个特性是语法树完全保真地保留所有源代码信息。 这意味着语法树包含可在源文本中找到的每份信息、每个语法结构、每个词法标记，以及它们之间的所有其他内容，包括空格、注释和预处理器指令。 例如，源中提及的所有文本都完全按照键入的形式表示。 语法树还可在程序不完整或格式错误时表示源代码中的错误，方法是在语法树中表示已跳过或缺少的标记。  
+语法树具有三个关键特性。 第一个特性是语法树完全保真地保留所有源代码信息。 这意味着语法树包含可在源文本中找到的每份信息、每个语法结构、每个词法标记，以及它们之间的所有其他内容，包括空格、注释和预处理器指令。 例如，源中提及的所有文本都完全按照键入的形式表示。 语法树还可在程序不完整或格式错误时表示源代码中的错误，方法是在语法树中表示已跳过或缺少的标记。
 
-这造就了语法树的第二个特性。 从分析程序获取的语法树可生成从中分析出该语法树的确切文本。 可从任何语法节点获取以该节点为根的子树的文本表示形式。 这意味着语法树可以用作一种构造和编辑源文本的方法。 创建树即会隐式创建等效文本，编辑语法树会创建新的树，而不会更改现有树，通过这些操作，可高效编辑文本。 
+这造就了语法树的第二个特性。 从分析程序获取的语法树可生成从中分析出该语法树的确切文本。 可从任何语法节点获取以该节点为根的子树的文本表示形式。 这意味着语法树可以用作一种构造和编辑源文本的方法。 创建树即会隐式创建等效文本，编辑语法树会创建新的树，而不会更改现有树，通过这些操作，可高效编辑文本。
 
 语法树的第三个特性是它们是恒定不变的，也是线程安全的。  这意味着获取的树是代码当前状态的快照，不会更改。 这可让多个用户同时在不同线程中与同一语法树进行交互，而不会锁定或重复。 由于语法树恒定不变，并且不可直接对其进行修改，因此工厂方法可通过创建树的另一个快照来帮助创建和修改语法树。 语法树可高效重用基础节点，因此几乎无需使用额外的内存便可快速重新生成新版本。
 
-语法树实际上是一个树形数据结构，其中非终端结构化元素是其他元素的父元素。 每个语法树都由节点、标记和琐碎内容组成。  
+语法树实际上是一个树形数据结构，其中非终端结构化元素是其他元素的父元素。 每个语法树都由节点、标记和琐碎内容组成。
 
 ## <a name="syntax-nodes"></a>语法节点
 
-语法节点是语法树的一个主要元素。 这些节点表示声明、语句、子句和表达式等语法构造。 语法节点的每个类别都由派生自 <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType> 的单独类表示。 节点类集是不可扩展的。 
+语法节点是语法树的一个主要元素。 这些节点表示声明、语句、子句和表达式等语法构造。 语法节点的每个类别都由派生自 <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType> 的单独类表示。 节点类集是不可扩展的。
 
-所有语法节点都是语法树中的非终端节点，这意味着这些节点始终有其他节点和标记作为子元素。 作为另一个节点的子级，每个节点都具有可通过 <xref:Microsoft.CodeAnalysis.SyntaxNode.Parent?displayProperty=nameWithType> 属性访问的父节点。 由于节点和树恒定不变，因此节点的父节点永远不会更改。 树的根以 null 为父级。  
+所有语法节点都是语法树中的非终端节点，这意味着这些节点始终有其他节点和标记作为子元素。 作为另一个节点的子级，每个节点都具有可通过 <xref:Microsoft.CodeAnalysis.SyntaxNode.Parent?displayProperty=nameWithType> 属性访问的父节点。 由于节点和树恒定不变，因此节点的父节点永远不会更改。 树的根以 null 为父级。
 
-每个节点都包含 <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType> 方法，可根据子节点在源文本中的位置按顺序返回子节点列表。 此列表中不包含标记。 每个节点还包含用于检查子代的方法，如 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>、<xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A> 或 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A> - 表示包含以该节点为根的子树中存在的所有节点、标记或琐碎内容的列表。  
+每个节点都包含 <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType> 方法，可根据子节点在源文本中的位置按顺序返回子节点列表。 此列表中不包含标记。 每个节点还包含用于检查子代的方法（例如，<xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>、<xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A> 或 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A>），这些子代表示以该节点为根的子树中存在的所有节点、标记或琐碎内容的列表。
 
 此外，每个语法节点子类通过强类型属性公开所有相同的子级。 例如，<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> 节点类具有三个特定于二元运算符的其他属性：<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>、<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> 和 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>。 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> 和 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax> 的类型为 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>，<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> 的类型为 <xref:Microsoft.CodeAnalysis.SyntaxToken>。
 
-某些语法节点具有可选子级。 例如，<xref:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax> 具有可选的 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ElseClauseSyntax>。 如果没有子级，则该属性返回 null。 
+某些语法节点具有可选子级。 例如，<xref:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax> 具有可选的 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ElseClauseSyntax>。 如果没有子级，则该属性返回 null。
 
 ## <a name="syntax-tokens"></a>语法标记
 
-语法标记是语言语法的终端，表示代码的最小语法片段。 它们从不作为其他节点或标记的父级。 语法标记包含关键字、标识符、文本和标点。 
+语法标记是语言语法的终端，表示代码的最小语法片段。 它们从不作为其他节点或标记的父级。 语法标记包含关键字、标识符、文本和标点。
 
 为了提高效率，<xref:Microsoft.CodeAnalysis.SyntaxToken> 类型为 CLR 值类型。 因此，与语法节点不同，所有类型的标记都采用同一结构，但包含各种属性，这些属性的意义取决于表示的标记类型。
 
@@ -65,13 +65,13 @@ ms.locfileid: "33353294"
 
 每个节点、标记或琐碎内容都知道其在源文本内的位置和包含的字符数。 文本位置表示为一个 32 位整数，是一个从零开始的 `char` 索引。 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 对象表示开始位置和字符计数，都表示为整数。 如果 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 的长度为零，则其表示两个字符之间的位置。
 
-每个节点具有两个 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 属性：<xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> 和 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>。 
+每个节点具有两个 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 属性：<xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> 和 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>。
 
 <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> 属性表示从节点子树中第一个标记的开头到最后一个标记末尾的文本范围。 此范围不包括任何前导或尾随琐碎内容。
 
 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*> 属性表示的文本范围包括节点的正常范围，加上任何前导或尾随琐碎内容的范围。
 
-例如: 
+例如:
 
 ``` csharp
       if (x > 3)
@@ -87,7 +87,7 @@ ms.locfileid: "33353294"
 
 每个节点、标记或琐碎内容都具有 <xref:System.Int32?displayProperty=nameWithType> 类型的 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 属性，标识所表示的确切语法元素。 此值可强制转换为特定语言枚举；每种语言（C# 或 VB）都具有单个 `SyntaxKind` 枚举（分别为 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> 和 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>），列出了语法中所有可能的节点、标记和琐碎内容。 可通过访问 <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> 或 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> 扩展方法自动完成此转换。
 
-<xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> 属性可轻松消除共享同一节点类的语法节点类型的歧义。 对于标记和琐碎内容，此属性是区分不同元素类型的唯一方法。 
+<xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> 属性可轻松消除共享同一节点类的语法节点类型的歧义。 对于标记和琐碎内容，此属性是区分不同元素类型的唯一方法。
 
 例如，一个 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> 类具有 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>、<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> 和 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> 作为子级。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*> 属性可辨别它是 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>、<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> 还是 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> 类型的语法节点。
 

@@ -2,12 +2,12 @@
 title: Docker 容器、映像和注册表
 description: 了解注册表在部署应用程序的 Docker 方式中扮演的关键角色。
 ms.date: 02/15/2019
-ms.openlocfilehash: 32240ac4f6dec67531d8e618cff153d235c073c7
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: bfef21cab7be89abaf33b89366d7cff2115a7cc6
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394607"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770921"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker 容器、映像和注册表
 
@@ -15,7 +15,7 @@ ms.locfileid: "72394607"
 
 若要运行应用或服务，应用的映像会实例化，以创建一个在 Docker 主机上运行的容器。 最初，会在开发环境或 PC 中测试容器。
 
-将映像存储在注册表中，该注册表充当映像库。 部署到生产业务流程协调程序时需要一个注册表。 Docker 通过 [Docker Hub](https://hub.docker.com/)维护一个公共注册表；其他供应商为不同映像集合提供注册表，包括 [Azure 容器注册表](https://azure.microsoft.com/services/container-registry/)。 或者，企业可本地拥有一个专用注册表，用于其 Docker 映像。
+将映像存储在充当映像库的注册表中。 部署到生产业务流程协调程序时需要一个注册表。 Docker 通过 [Docker Hub](https://hub.docker.com/)维护一个公共注册表；其他供应商为不同映像集合提供注册表，包括 [Azure 容器注册表](https://azure.microsoft.com/services/container-registry/)。 或者，企业可本地拥有一个专用注册表，用于其 Docker 映像。
 
 图 1-4 显示了 Docker 中的映像和注册表与其他组件相关联的方式。 还显示了供应商推出的多种注册表产品/服务。
 

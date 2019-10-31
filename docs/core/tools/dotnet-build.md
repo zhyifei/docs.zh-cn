@@ -1,15 +1,15 @@
 ---
 title: dotnet build 命令
 description: dotnet build 命令可生成项目及其所有依赖项。
-ms.date: 10/07/2019
-ms.openlocfilehash: 0a3e2c0e441cfdd1cb8266bc77dc1aba08af84d6
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.date: 10/14/2019
+ms.openlocfilehash: fe2135c150be46997699f756f7f0c9bc18bbb529
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522775"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846829"
 ---
-# <a name="dotnet-build"></a>dotnet build
+# <a name="dotnet-build"></a>dotnet 生成
 
 **本文适用于：✓** .NET Core 1.x SDK 及更高版本
 
@@ -32,9 +32,17 @@ dotnet build [-h|--help]
 
 ## <a name="description"></a>说明
 
-`dotnet build` 命令将项目及其依赖项生成为一组二进制文件。 二进制文件包括中间语言 (IL) 文件（带 *.dll* 扩展名）和用于调试的符号文件（带 *.pdb* 扩展名）中的项目的代码。 生成依赖项 JSON 文件 (.deps.json  )，该文件列出了应用程序的依赖项。 生成 .runtimeconfig.json  文件，该文件指定应用程序的共享运行时及其版本。
+`dotnet build` 命令将项目及其依赖项生成为一组二进制文件。 二进制文件包括扩展名为 .dll 的中间语言 (IL) 文件中的项目代码  。  根据项目类型和设置，可能会包含其他文件，例如：
 
-如果项目有第三方依赖项（如来自 NuGet 的库），将从 NuGet 缓存解析这些依赖项，并且它们不适用于项目的生成输出。 考虑到这一点，`dotnet build` 的产品还未准备好转移到另一台计算机进行运行。 这与 .NET Framework 的行为相反，后者在构建可执行项目（一个应用程序）时，将生成可在任何已安装 .NET Framework 的计算机上运行的输出。 为了能够获得相似的 .NET Core 使用体验，需要使用 [dotnet publish](dotnet-publish.md) 命令。 有关详细信息，请参阅 [.NET Core 应用程序部署](../deploying/index.md)。
+- 可用于运行应用程序的可执行文件（如果项目类型是面向 .NET Core 3.0 或更高版本的可执行文件）。
+- 用于调试的扩展名为 .pdb  的符号文件。
+- 列出了应用程序或库的依赖项的 .deps.json  文件。
+- 用于指定应用程序的共享运行时及其版本的 .runtimeconfig.json  文件。
+- 项目通过项目引用或 NuGet 包引用所依赖的其他库。
+
+对于目标版本低于 .NET Core 3.0 的可执行项目，通常不会将 NuGet 中的库依赖项复制到输出文件夹。  而是在运行时从 NuGet 全局包文件夹中对其进行解析。 考虑到这一点，`dotnet build` 的产品还未准备好转移到另一台计算机进行运行。 要创建可部署的应用程序版本，需要发布该应用程序（例如，使用 [dotnet publish](dotnet-publish.md) 命令）。 有关详细信息，请参阅 [.NET Core 应用程序部署](../deploying/index.md)。
+
+对于面向 .NET Core 3.0 及更高版本的可执行项目，库依赖项会被复制到输出文件夹。 这意味着如果没有其他任何特定于发布的逻辑（例如，Web 项目具有的逻辑），则应可部署生成输出。
 
 构建需要 *project.assets.json* 文件，该文件列出了你的应用程序的依赖项。 此文件在 [`dotnet restore`](dotnet-restore.md) 执行时创建。 如果资产文件未就位，那么工具将无法解析引用程序集，进而导致错误生成。 使用 .NET Core 1.x SDK，需要在运行 `dotnet build` 之前显式运行 `dotnet restore`。 自 .NET Core 2.0 SDK 起，`dotnet restore` 在 `dotnet build` 运行时隐式运行。 若要在运行 build 命令时禁用隐式还原，可以传递 `--no-restore` 选项。
 
@@ -48,7 +56,7 @@ dotnet build [-h|--help]
 </PropertyGroup>
 ```
 
-若要生成库，请省略 `<OutputType>` 属性。 生成输出中的主要区别在于，针对某个库的 IL DLL 不包含入口点，并且不能执行。
+要生成库，请省略 `<OutputType>` 属性或将其值更改为 `Library`。 库的 IL DLL 不包含入口点，因此无法执行。
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -56,7 +64,7 @@ dotnet build [-h|--help]
 
 除其自己的选项外，`dotnet build` 命令也接受 MSBuild 选项，如用来设置属性的 `-p` 或用来定义记录器的 `-l`。 有关这些选项的详细信息，请参阅 [MSBuild 命令行参考](/visualstudio/msbuild/msbuild-command-line-reference)。 或者也可以使用 [dotnet msbuild](dotnet-msbuild.md) 命令。
 
-运行 `dotnet build` 相当于 `dotnet msbuild -restore -target:Build`。
+运行 `dotnet build` 等同于运行 `dotnet msbuild -restore`；但是，输出的默认详细程度不同。
 
 ## <a name="arguments"></a>自变量
 
@@ -104,7 +112,7 @@ dotnet build [-h|--help]
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  放置生成二进制文件的目录。 指定此选项时还需要定义 `--framework`。 如果未指定，则默认路径为 `./bin/<configuration>/<framework>/`。
+  放置生成二进制文件的目录。 如果未指定，则默认路径为 `./bin/<configuration>/<framework>/`。  对于具有多个目标框架的项目（通过 `TargetFrameworks` 属性），在指定此选项时还需要定义 `--framework`。
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
