@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 27967230-144f-40d3-9e23-961d0241abd9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 218818097846709ec92e20f33a0707314edd562a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 887d207aea3de9296107c041816606b2f5947406
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754739"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124033"
 ---
-# <a name="icordebugfunctiongetclass-method"></a><span data-ttu-id="085fd-102">ICorDebugFunction::GetClass 方法</span><span class="sxs-lookup"><span data-stu-id="085fd-102">ICorDebugFunction::GetClass Method</span></span>
-<span data-ttu-id="085fd-103">获取一个 ICorDebugClass 对象，表示此函数的类。</span><span class="sxs-lookup"><span data-stu-id="085fd-103">Gets an ICorDebugClass object that represents the class this function is a member of.</span></span>  
+# <a name="icordebugfunctiongetclass-method"></a><span data-ttu-id="f9b48-102">ICorDebugFunction::GetClass 方法</span><span class="sxs-lookup"><span data-stu-id="f9b48-102">ICorDebugFunction::GetClass Method</span></span>
+<span data-ttu-id="f9b48-103">获取一个 ICorDebugClass 对象，该对象表示此函数所属的类。</span><span class="sxs-lookup"><span data-stu-id="f9b48-103">Gets an ICorDebugClass object that represents the class this function is a member of.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="085fd-104">语法</span><span class="sxs-lookup"><span data-stu-id="085fd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f9b48-104">语法</span><span class="sxs-lookup"><span data-stu-id="f9b48-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetClass (  
@@ -35,15 +33,15 @@ HRESULT GetClass (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="085fd-105">参数</span><span class="sxs-lookup"><span data-stu-id="085fd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f9b48-105">参数</span><span class="sxs-lookup"><span data-stu-id="f9b48-105">Parameters</span></span>  
  `ppClass`  
- <span data-ttu-id="085fd-106">[out]指向的地址的指针`ICorDebugClass`对象，表示的类或为 null，如果此函数不是类的成员。</span><span class="sxs-lookup"><span data-stu-id="085fd-106">[out] A pointer to the address of the `ICorDebugClass` object that represents the class, or null, if this function is not a member of a class.</span></span>  
+ <span data-ttu-id="f9b48-106">弄指向表示类的 `ICorDebugClass` 对象地址的指针; 如果此函数不是类的成员，则为 null。</span><span class="sxs-lookup"><span data-stu-id="f9b48-106">[out] A pointer to the address of the `ICorDebugClass` object that represents the class, or null, if this function is not a member of a class.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="085fd-107">要求</span><span class="sxs-lookup"><span data-stu-id="085fd-107">Requirements</span></span>  
- <span data-ttu-id="085fd-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="085fd-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f9b48-107">要求</span><span class="sxs-lookup"><span data-stu-id="f9b48-107">Requirements</span></span>  
+ <span data-ttu-id="f9b48-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f9b48-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="085fd-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="085fd-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f9b48-109">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f9b48-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="085fd-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="085fd-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f9b48-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f9b48-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="085fd-111">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="085fd-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="f9b48-111">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9b48-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

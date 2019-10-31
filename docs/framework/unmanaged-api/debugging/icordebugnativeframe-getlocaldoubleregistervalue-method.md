@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1f838215-ac8a-434f-8ce6-03021d3098d9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ed7436ff73fa9cc19790859581930875f39e499e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a45061b6a3105565fdbb36173731b3c3dfe5aa4f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746283"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137299"
 ---
-# <a name="icordebugnativeframegetlocaldoubleregistervalue-method"></a><span data-ttu-id="3a966-102">ICorDebugNativeFrame::GetLocalDoubleRegisterValue 方法</span><span class="sxs-lookup"><span data-stu-id="3a966-102">ICorDebugNativeFrame::GetLocalDoubleRegisterValue Method</span></span>
-<span data-ttu-id="3a966-103">获取参数或此本机框架的两个指定寄存器中存储的本地变量的值。</span><span class="sxs-lookup"><span data-stu-id="3a966-103">Gets the value of an argument or local variable that is stored in the two specified registers for this native frame.</span></span>  
+# <a name="icordebugnativeframegetlocaldoubleregistervalue-method"></a><span data-ttu-id="d1d53-102">ICorDebugNativeFrame::GetLocalDoubleRegisterValue 方法</span><span class="sxs-lookup"><span data-stu-id="d1d53-102">ICorDebugNativeFrame::GetLocalDoubleRegisterValue Method</span></span>
+<span data-ttu-id="d1d53-103">获取此本机帧存储在两个指定寄存器中的参数或局部变量的值。</span><span class="sxs-lookup"><span data-stu-id="d1d53-103">Gets the value of an argument or local variable that is stored in the two specified registers for this native frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3a966-104">语法</span><span class="sxs-lookup"><span data-stu-id="3a966-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d1d53-104">语法</span><span class="sxs-lookup"><span data-stu-id="d1d53-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetLocalDoubleRegisterValue (  
@@ -39,32 +37,32 @@ HRESULT GetLocalDoubleRegisterValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3a966-105">参数</span><span class="sxs-lookup"><span data-stu-id="3a966-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d1d53-105">参数</span><span class="sxs-lookup"><span data-stu-id="d1d53-105">Parameters</span></span>  
  `highWordReg`  
- <span data-ttu-id="3a966-106">[in]"CorDebugRegister"枚举，指定包含值的高位字的寄存器的值。</span><span class="sxs-lookup"><span data-stu-id="3a966-106">[in] A value of the "CorDebugRegister" enumeration that specifies the register containing the high word of the value.</span></span>  
+ <span data-ttu-id="d1d53-106">中"CorDebugRegister" 枚举的一个值，它指定包含值高位字的寄存器。</span><span class="sxs-lookup"><span data-stu-id="d1d53-106">[in] A value of the "CorDebugRegister" enumeration that specifies the register containing the high word of the value.</span></span>  
   
  `lowWordReg`  
- <span data-ttu-id="3a966-107">[in]值为`CorDebugRegister`枚举，用于指定包含值的低位字的寄存器。</span><span class="sxs-lookup"><span data-stu-id="3a966-107">[in] A value of the `CorDebugRegister` enumeration that specifies the register containing the low word of the value.</span></span>  
+ <span data-ttu-id="d1d53-107">中一个 `CorDebugRegister` 枚举的值，该值指定包含值的低位字的寄存器。</span><span class="sxs-lookup"><span data-stu-id="d1d53-107">[in] A value of the `CorDebugRegister` enumeration that specifies the register containing the low word of the value.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="3a966-108">[in]一个整数，指定的二进制元数据签名的由引用大小`pvSigBlob`参数。</span><span class="sxs-lookup"><span data-stu-id="3a966-108">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
+ <span data-ttu-id="d1d53-108">中一个整数，指定 `pvSigBlob` 参数引用的二进制元数据签名的大小。</span><span class="sxs-lookup"><span data-stu-id="d1d53-108">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="3a966-109">[in]一个`PCCOR_SIGNATURE`指向值类型的二进制元数据签名的值。</span><span class="sxs-lookup"><span data-stu-id="3a966-109">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
+ <span data-ttu-id="d1d53-109">中一个 `PCCOR_SIGNATURE` 值，该值指向值类型的二进制元数据签名。</span><span class="sxs-lookup"><span data-stu-id="d1d53-109">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="3a966-110">[out]指向表示检索到的值存储在指定寄存器中的"ICorDebugValue"对象的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="3a966-110">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified registers.</span></span>  
+ <span data-ttu-id="d1d53-110">弄一个指向 "ICorDebugValue" 对象地址的指针，该对象表示存储在指定寄存器中的检索到的值。</span><span class="sxs-lookup"><span data-stu-id="d1d53-110">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified registers.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3a966-111">备注</span><span class="sxs-lookup"><span data-stu-id="3a966-111">Remarks</span></span>  
- <span data-ttu-id="3a966-112">`GetLocalDoubleRegisterValue`在本机帧或在实时 (JIT) 中，可以使用方法的编译的框架。</span><span class="sxs-lookup"><span data-stu-id="3a966-112">The `GetLocalDoubleRegisterValue` method can be used either in a native frame or a just-in-time (JIT)-compiled frame.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d1d53-111">备注</span><span class="sxs-lookup"><span data-stu-id="d1d53-111">Remarks</span></span>  
+ <span data-ttu-id="d1d53-112">`GetLocalDoubleRegisterValue` 方法可在本机框架或实时（JIT）编译的框架中使用。</span><span class="sxs-lookup"><span data-stu-id="d1d53-112">The `GetLocalDoubleRegisterValue` method can be used either in a native frame or a just-in-time (JIT)-compiled frame.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3a966-113">要求</span><span class="sxs-lookup"><span data-stu-id="3a966-113">Requirements</span></span>  
- <span data-ttu-id="3a966-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3a966-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d1d53-113">要求</span><span class="sxs-lookup"><span data-stu-id="d1d53-113">Requirements</span></span>  
+ <span data-ttu-id="d1d53-114">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d1d53-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3a966-115">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3a966-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d1d53-115">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d1d53-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3a966-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3a966-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d1d53-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d1d53-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3a966-117">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3a966-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d1d53-117">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d1d53-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3a966-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="3a966-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d1d53-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="d1d53-118">See also</span></span>

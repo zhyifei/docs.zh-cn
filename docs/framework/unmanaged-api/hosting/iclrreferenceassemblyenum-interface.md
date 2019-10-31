@@ -14,35 +14,33 @@ helpviewer_keywords:
 ms.assetid: 8adbf092-c3ba-4bee-b25b-0de6e43a4ce5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 32f27d6c15a99282eee20d2563a4ca741238d846
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 466b0ceec8ce9c9800393f96055730ecafc153b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638510"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120549"
 ---
-# <a name="iclrreferenceassemblyenum-interface"></a><span data-ttu-id="05e74-102">ICLRReferenceAssemblyEnum 接口</span><span class="sxs-lookup"><span data-stu-id="05e74-102">ICLRReferenceAssemblyEnum Interface</span></span>
-<span data-ttu-id="05e74-103">提供了使宿主可以操作该集由文件或流使用程序集标识数据，而无需创建或了解这些标识是公共语言运行时 (CLR) 的内部引用的程序集的方法。</span><span class="sxs-lookup"><span data-stu-id="05e74-103">Provides methods that allow the host to manipulate the set of assemblies referenced by a file or stream using assembly identity data that is internal to the common language runtime (CLR), without needing to create or understand those identities.</span></span>  
+# <a name="iclrreferenceassemblyenum-interface"></a><span data-ttu-id="f2027-102">ICLRReferenceAssemblyEnum 接口</span><span class="sxs-lookup"><span data-stu-id="f2027-102">ICLRReferenceAssemblyEnum Interface</span></span>
+<span data-ttu-id="f2027-103">提供一些方法，这些方法使宿主可以使用公共语言运行时（CLR）内部的程序集标识数据来操作由文件或流引用的程序集集，而无需创建或了解这些标识。</span><span class="sxs-lookup"><span data-stu-id="f2027-103">Provides methods that allow the host to manipulate the set of assemblies referenced by a file or stream using assembly identity data that is internal to the common language runtime (CLR), without needing to create or understand those identities.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="05e74-104">方法</span><span class="sxs-lookup"><span data-stu-id="05e74-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="f2027-104">方法</span><span class="sxs-lookup"><span data-stu-id="f2027-104">Methods</span></span>  
   
-|<span data-ttu-id="05e74-105">方法</span><span class="sxs-lookup"><span data-stu-id="05e74-105">Method</span></span>|<span data-ttu-id="05e74-106">描述</span><span class="sxs-lookup"><span data-stu-id="05e74-106">Description</span></span>|  
+|<span data-ttu-id="f2027-105">方法</span><span class="sxs-lookup"><span data-stu-id="f2027-105">Method</span></span>|<span data-ttu-id="f2027-106">描述</span><span class="sxs-lookup"><span data-stu-id="f2027-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="05e74-107">Get 方法</span><span class="sxs-lookup"><span data-stu-id="05e74-107">Get Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-get-method.md)|<span data-ttu-id="05e74-108">提供的索引处获取程序集标识。</span><span class="sxs-lookup"><span data-stu-id="05e74-108">Gets the assembly identity at the supplied index.</span></span>|  
+|[<span data-ttu-id="f2027-107">Get 方法</span><span class="sxs-lookup"><span data-stu-id="f2027-107">Get Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-get-method.md)|<span data-ttu-id="f2027-108">获取所提供索引处的程序集标识。</span><span class="sxs-lookup"><span data-stu-id="f2027-108">Gets the assembly identity at the supplied index.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="05e74-109">要求</span><span class="sxs-lookup"><span data-stu-id="05e74-109">Requirements</span></span>  
- <span data-ttu-id="05e74-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="05e74-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f2027-109">要求</span><span class="sxs-lookup"><span data-stu-id="f2027-109">Requirements</span></span>  
+ <span data-ttu-id="f2027-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f2027-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="05e74-111">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="05e74-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f2027-111">**标头：** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="f2027-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="05e74-112">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="05e74-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f2027-112">**库：** 作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="f2027-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="05e74-113">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05e74-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f2027-113">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f2027-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="05e74-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="05e74-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f2027-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="f2027-114">See also</span></span>
 
-- [<span data-ttu-id="05e74-115">ICLRAssemblyIdentityManager 接口</span><span class="sxs-lookup"><span data-stu-id="05e74-115">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [<span data-ttu-id="05e74-116">ICLRAssemblyReferenceList 接口</span><span class="sxs-lookup"><span data-stu-id="05e74-116">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [<span data-ttu-id="05e74-117">承载接口</span><span class="sxs-lookup"><span data-stu-id="05e74-117">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="f2027-115">ICLRAssemblyIdentityManager 接口</span><span class="sxs-lookup"><span data-stu-id="f2027-115">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="f2027-116">ICLRAssemblyReferenceList 接口</span><span class="sxs-lookup"><span data-stu-id="f2027-116">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [<span data-ttu-id="f2027-117">承载接口</span><span class="sxs-lookup"><span data-stu-id="f2027-117">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -10,63 +10,61 @@ helpviewer_keywords:
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9ee68d0da3b7f23d4de0192da076ef6f71d6d222
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0db1cd8d75b45f6d718168793c873e5867028269
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051638"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125177"
 ---
-# <a name="specifying-a-character-set"></a><span data-ttu-id="575d9-102">指定字符集</span><span class="sxs-lookup"><span data-stu-id="575d9-102">Specifying a Character Set</span></span>
-<span data-ttu-id="575d9-103"><xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 字段控制字符串封送，并确定平台调用在 DLL 中查找函数名的方式。</span><span class="sxs-lookup"><span data-stu-id="575d9-103">The <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> field controls string marshaling and determines how platform invoke finds function names in a DLL.</span></span> <span data-ttu-id="575d9-104">本主题将介绍这两种行为。</span><span class="sxs-lookup"><span data-stu-id="575d9-104">This topic describes both behaviors.</span></span>  
+# <a name="specifying-a-character-set"></a><span data-ttu-id="bedb3-102">指定字符集</span><span class="sxs-lookup"><span data-stu-id="bedb3-102">Specifying a Character Set</span></span>
+<span data-ttu-id="bedb3-103"><xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 字段控制字符串封送，并确定平台调用在 DLL 中查找函数名的方式。</span><span class="sxs-lookup"><span data-stu-id="bedb3-103">The <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> field controls string marshaling and determines how platform invoke finds function names in a DLL.</span></span> <span data-ttu-id="bedb3-104">本主题将介绍这两种行为。</span><span class="sxs-lookup"><span data-stu-id="bedb3-104">This topic describes both behaviors.</span></span>  
   
- <span data-ttu-id="575d9-105">某些 API 导出采用字符串自变量的函数的两个版本：窄版 (ANSI) 和宽版 (Unicode)。</span><span class="sxs-lookup"><span data-stu-id="575d9-105">Some APIs export two versions of functions that take string arguments: narrow (ANSI) and wide (Unicode).</span></span> <span data-ttu-id="575d9-106">例如，Windows API 包含 MessageBox 函数的以下入口点名称：</span><span class="sxs-lookup"><span data-stu-id="575d9-106">The Windows API, for instance, includes the following entry-point names for the **MessageBox** function:</span></span>  
+ <span data-ttu-id="bedb3-105">某些 API 导出采用字符串自变量的函数的两个版本：窄版 (ANSI) 和宽版 (Unicode)。</span><span class="sxs-lookup"><span data-stu-id="bedb3-105">Some APIs export two versions of functions that take string arguments: narrow (ANSI) and wide (Unicode).</span></span> <span data-ttu-id="bedb3-106">例如，Windows API 包含 MessageBox 函数的以下入口点名称：</span><span class="sxs-lookup"><span data-stu-id="bedb3-106">The Windows API, for instance, includes the following entry-point names for the **MessageBox** function:</span></span>  
   
-- <span data-ttu-id="575d9-107">**MessageBoxA**</span><span class="sxs-lookup"><span data-stu-id="575d9-107">**MessageBoxA**</span></span>  
+- <span data-ttu-id="bedb3-107">**MessageBoxA**</span><span class="sxs-lookup"><span data-stu-id="bedb3-107">**MessageBoxA**</span></span>  
   
-     <span data-ttu-id="575d9-108">提供 ANSI 格式的 1 字节字符，由附加到入口点名称后的“A”区分。</span><span class="sxs-lookup"><span data-stu-id="575d9-108">Provides 1-byte character ANSI formatting, distinguished by an "A" appended to the entry-point name.</span></span> <span data-ttu-id="575d9-109">调用 MessageBoxA 始终以 ANSI 格式封送字符串。</span><span class="sxs-lookup"><span data-stu-id="575d9-109">Calls to **MessageBoxA** always marshal strings in ANSI format.</span></span>  
+     <span data-ttu-id="bedb3-108">提供 ANSI 格式的 1 字节字符，由附加到入口点名称后的“A”区分。</span><span class="sxs-lookup"><span data-stu-id="bedb3-108">Provides 1-byte character ANSI formatting, distinguished by an "A" appended to the entry-point name.</span></span> <span data-ttu-id="bedb3-109">调用 MessageBoxA 始终以 ANSI 格式封送字符串。</span><span class="sxs-lookup"><span data-stu-id="bedb3-109">Calls to **MessageBoxA** always marshal strings in ANSI format.</span></span>  
   
-- <span data-ttu-id="575d9-110">**MessageBoxW**</span><span class="sxs-lookup"><span data-stu-id="575d9-110">**MessageBoxW**</span></span>  
+- <span data-ttu-id="bedb3-110">**MessageBoxW**</span><span class="sxs-lookup"><span data-stu-id="bedb3-110">**MessageBoxW**</span></span>  
   
-     <span data-ttu-id="575d9-111">提供 Unicode 格式的 2 字节字符，由附加到入口点名称后的“W”区分。</span><span class="sxs-lookup"><span data-stu-id="575d9-111">Provides 2-byte character Unicode formatting, distinguished by a "W" appended to the entry-point name.</span></span> <span data-ttu-id="575d9-112">调用 MessageBoxW 始终以 Unicode 格式封送字符串。</span><span class="sxs-lookup"><span data-stu-id="575d9-112">Calls to **MessageBoxW** always marshal strings in Unicode format.</span></span>  
+     <span data-ttu-id="bedb3-111">提供 Unicode 格式的 2 字节字符，由附加到入口点名称后的“W”区分。</span><span class="sxs-lookup"><span data-stu-id="bedb3-111">Provides 2-byte character Unicode formatting, distinguished by a "W" appended to the entry-point name.</span></span> <span data-ttu-id="bedb3-112">调用 MessageBoxW 始终以 Unicode 格式封送字符串。</span><span class="sxs-lookup"><span data-stu-id="bedb3-112">Calls to **MessageBoxW** always marshal strings in Unicode format.</span></span>  
   
-## <a name="string-marshaling-and-name-matching"></a><span data-ttu-id="575d9-113">字符串封送和名称匹配</span><span class="sxs-lookup"><span data-stu-id="575d9-113">String Marshaling and Name Matching</span></span>  
- <span data-ttu-id="575d9-114">`CharSet` 字段接受以下值：</span><span class="sxs-lookup"><span data-stu-id="575d9-114">The `CharSet` field accepts the following values:</span></span>  
+## <a name="string-marshaling-and-name-matching"></a><span data-ttu-id="bedb3-113">字符串封送和名称匹配</span><span class="sxs-lookup"><span data-stu-id="bedb3-113">String Marshaling and Name Matching</span></span>  
+ <span data-ttu-id="bedb3-114">`CharSet` 字段接受以下值：</span><span class="sxs-lookup"><span data-stu-id="bedb3-114">The `CharSet` field accepts the following values:</span></span>  
   
- <span data-ttu-id="575d9-115"><xref:System.Runtime.InteropServices.CharSet.Ansi>（默认值）</span><span class="sxs-lookup"><span data-stu-id="575d9-115"><xref:System.Runtime.InteropServices.CharSet.Ansi> (default value)</span></span>  
+ <span data-ttu-id="bedb3-115"><xref:System.Runtime.InteropServices.CharSet.Ansi>（默认值）</span><span class="sxs-lookup"><span data-stu-id="bedb3-115"><xref:System.Runtime.InteropServices.CharSet.Ansi> (default value)</span></span>  
   
-- <span data-ttu-id="575d9-116">字符串封送</span><span class="sxs-lookup"><span data-stu-id="575d9-116">String marshaling</span></span>  
+- <span data-ttu-id="bedb3-116">字符串封送</span><span class="sxs-lookup"><span data-stu-id="bedb3-116">String marshaling</span></span>  
   
-     <span data-ttu-id="575d9-117">平台调用将字符串从托管格式 (Unicode) 封送为 ANSI 格式。</span><span class="sxs-lookup"><span data-stu-id="575d9-117">Platform invoke marshals strings from their managed format (Unicode) to ANSI format.</span></span>  
+     <span data-ttu-id="bedb3-117">平台调用将字符串从托管格式 (Unicode) 封送为 ANSI 格式。</span><span class="sxs-lookup"><span data-stu-id="bedb3-117">Platform invoke marshals strings from their managed format (Unicode) to ANSI format.</span></span>  
   
-- <span data-ttu-id="575d9-118">名称匹配</span><span class="sxs-lookup"><span data-stu-id="575d9-118">Name matching</span></span>  
+- <span data-ttu-id="bedb3-118">名称匹配</span><span class="sxs-lookup"><span data-stu-id="bedb3-118">Name matching</span></span>  
   
-     <span data-ttu-id="575d9-119">如果 <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> 字段为 `true`（Visual Basic 中默认为此值），平台调用仅搜索指定的名称。</span><span class="sxs-lookup"><span data-stu-id="575d9-119">When the <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> field is `true`, as it is by default in Visual Basic, platform invoke searches only for the name you specify.</span></span> <span data-ttu-id="575d9-120">例如，如果指定“MessageBox”，则平台调用搜索“MessageBox”，如果无法找到精确拼写，则将失败。</span><span class="sxs-lookup"><span data-stu-id="575d9-120">For example, if you specify **MessageBox**, platform invoke searches for **MessageBox** and fails when it cannot locate the exact spelling.</span></span>  
+     <span data-ttu-id="bedb3-119">如果 <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> 字段为 `true`（Visual Basic 中默认为此值），平台调用仅搜索指定的名称。</span><span class="sxs-lookup"><span data-stu-id="bedb3-119">When the <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> field is `true`, as it is by default in Visual Basic, platform invoke searches only for the name you specify.</span></span> <span data-ttu-id="bedb3-120">例如，如果指定“MessageBox”，则平台调用搜索“MessageBox”，如果无法找到精确拼写，则将失败。</span><span class="sxs-lookup"><span data-stu-id="bedb3-120">For example, if you specify **MessageBox**, platform invoke searches for **MessageBox** and fails when it cannot locate the exact spelling.</span></span>  
   
-     <span data-ttu-id="575d9-121">如果 `ExactSpelling` 字段为 `false`（C++ 和 C# 中默认为此值），平台调用先搜索未修饰的别名 (MessageBox)，如果找不到未修饰的别名，再搜索修饰后的名称 (MessageBoxA)。</span><span class="sxs-lookup"><span data-stu-id="575d9-121">When the `ExactSpelling` field is `false`, as it is by default in C++ and C#, platform invoke searches for the unmangled alias first (**MessageBox**), then the mangled name (**MessageBoxA**) if the unmangled alias is not found.</span></span> <span data-ttu-id="575d9-122">请注意，ANSI 名称匹配行为与 Unicode 名称匹配行为不同。</span><span class="sxs-lookup"><span data-stu-id="575d9-122">Notice that ANSI name-matching behavior differs from Unicode name-matching behavior.</span></span>  
+     <span data-ttu-id="bedb3-121">如果 `ExactSpelling` 字段为 `false`（C++ 和 C# 中默认为此值），平台调用先搜索未修饰的别名 (MessageBox)，如果找不到未修饰的别名，再搜索修饰后的名称 (MessageBoxA)。</span><span class="sxs-lookup"><span data-stu-id="bedb3-121">When the `ExactSpelling` field is `false`, as it is by default in C++ and C#, platform invoke searches for the unmangled alias first (**MessageBox**), then the mangled name (**MessageBoxA**) if the unmangled alias is not found.</span></span> <span data-ttu-id="bedb3-122">请注意，ANSI 名称匹配行为与 Unicode 名称匹配行为不同。</span><span class="sxs-lookup"><span data-stu-id="bedb3-122">Notice that ANSI name-matching behavior differs from Unicode name-matching behavior.</span></span>  
   
  <xref:System.Runtime.InteropServices.CharSet.Unicode>  
   
-- <span data-ttu-id="575d9-123">字符串封送</span><span class="sxs-lookup"><span data-stu-id="575d9-123">String marshaling</span></span>  
+- <span data-ttu-id="bedb3-123">字符串封送</span><span class="sxs-lookup"><span data-stu-id="bedb3-123">String marshaling</span></span>  
   
-     <span data-ttu-id="575d9-124">平台调用将字符串从托管格式 (Unicode) 复制为 Unicode 格式。</span><span class="sxs-lookup"><span data-stu-id="575d9-124">Platform invoke copies strings from their managed format (Unicode) to Unicode format.</span></span>  
+     <span data-ttu-id="bedb3-124">平台调用将字符串从托管格式 (Unicode) 复制为 Unicode 格式。</span><span class="sxs-lookup"><span data-stu-id="bedb3-124">Platform invoke copies strings from their managed format (Unicode) to Unicode format.</span></span>  
   
-- <span data-ttu-id="575d9-125">名称匹配</span><span class="sxs-lookup"><span data-stu-id="575d9-125">Name matching</span></span>  
+- <span data-ttu-id="bedb3-125">名称匹配</span><span class="sxs-lookup"><span data-stu-id="bedb3-125">Name matching</span></span>  
   
-     <span data-ttu-id="575d9-126">如果 `ExactSpelling` 字段为 `true`（Visual Basic 中默认为此值），平台调用仅搜索指定的名称。</span><span class="sxs-lookup"><span data-stu-id="575d9-126">When the `ExactSpelling` field is `true`, as it is by default in Visual Basic, platform invoke searches only for the name you specify.</span></span> <span data-ttu-id="575d9-127">例如，如果指定“MessageBox”，则平台调用搜索“MessageBox”，如果无法找到精确拼写，则将失败。</span><span class="sxs-lookup"><span data-stu-id="575d9-127">For example, if you specify **MessageBox**, platform invoke searches for **MessageBox** and fails if it cannot locate the exact spelling.</span></span>  
+     <span data-ttu-id="bedb3-126">如果 `ExactSpelling` 字段为 `true`（Visual Basic 中默认为此值），平台调用仅搜索指定的名称。</span><span class="sxs-lookup"><span data-stu-id="bedb3-126">When the `ExactSpelling` field is `true`, as it is by default in Visual Basic, platform invoke searches only for the name you specify.</span></span> <span data-ttu-id="bedb3-127">例如，如果指定“MessageBox”，则平台调用搜索“MessageBox”，如果无法找到精确拼写，则将失败。</span><span class="sxs-lookup"><span data-stu-id="bedb3-127">For example, if you specify **MessageBox**, platform invoke searches for **MessageBox** and fails if it cannot locate the exact spelling.</span></span>  
   
-     <span data-ttu-id="575d9-128">如果 `ExactSpelling` 字段为 `false`（C++ 和 C# 中默认为此值），平台调用先搜索修饰的名称 (MessageBoxW)，如果找不到修饰的名称，再搜索未修饰的别名 (MessageBox)。</span><span class="sxs-lookup"><span data-stu-id="575d9-128">When the `ExactSpelling` field is `false`, as it is by default in C++ and C#, platform invoke searches for the mangled name first (**MessageBoxW**), then the unmangled alias (**MessageBox**) if the mangled name is not found.</span></span> <span data-ttu-id="575d9-129">请注意，Unicode 名称匹配行为与 ANSI 名称匹配行为不同。</span><span class="sxs-lookup"><span data-stu-id="575d9-129">Notice that Unicode name-matching behavior differs from ANSI name-matching behavior.</span></span>  
+     <span data-ttu-id="bedb3-128">如果 `ExactSpelling` 字段为 `false`（C++ 和 C# 中默认为此值），平台调用先搜索修饰的名称 (MessageBoxW)，如果找不到修饰的名称，再搜索未修饰的别名 (MessageBox)。</span><span class="sxs-lookup"><span data-stu-id="bedb3-128">When the `ExactSpelling` field is `false`, as it is by default in C++ and C#, platform invoke searches for the mangled name first (**MessageBoxW**), then the unmangled alias (**MessageBox**) if the mangled name is not found.</span></span> <span data-ttu-id="bedb3-129">请注意，Unicode 名称匹配行为与 ANSI 名称匹配行为不同。</span><span class="sxs-lookup"><span data-stu-id="bedb3-129">Notice that Unicode name-matching behavior differs from ANSI name-matching behavior.</span></span>  
   
  <xref:System.Runtime.InteropServices.CharSet.Auto>  
   
-- <span data-ttu-id="575d9-130">平台调用在运行时根据目标平台在 ANSI 和 Unicode 格式之间进行选择。</span><span class="sxs-lookup"><span data-stu-id="575d9-130">Platform invoke chooses between ANSI and Unicode formats at run time, based on the target platform.</span></span>  
+- <span data-ttu-id="bedb3-130">平台调用在运行时根据目标平台在 ANSI 和 Unicode 格式之间进行选择。</span><span class="sxs-lookup"><span data-stu-id="bedb3-130">Platform invoke chooses between ANSI and Unicode formats at run time, based on the target platform.</span></span>  
   
-## <a name="specifying-a-character-set-in-visual-basic"></a><span data-ttu-id="575d9-131">在 Visual Basic 中指定字符集</span><span class="sxs-lookup"><span data-stu-id="575d9-131">Specifying a Character Set in Visual Basic</span></span>  
- <span data-ttu-id="575d9-132">以下示例声明“MessageBox”函数三次，每次使用不同的字符集行为。</span><span class="sxs-lookup"><span data-stu-id="575d9-132">The following example declares the **MessageBox** function three times, each time with different character-set behavior.</span></span> <span data-ttu-id="575d9-133">通过将“Ansi”、“Unicode”或“Auto”关键字添加到声明语句中，就可以在 Visual Basic 中指定字符集行为。</span><span class="sxs-lookup"><span data-stu-id="575d9-133">You can specify character-set behavior in Visual Basic by adding the **Ansi**, **Unicode**, or **Auto** keyword to the declaration statement.</span></span>  
+## <a name="specifying-a-character-set-in-visual-basic"></a><span data-ttu-id="bedb3-131">在 Visual Basic 中指定字符集</span><span class="sxs-lookup"><span data-stu-id="bedb3-131">Specifying a Character Set in Visual Basic</span></span>  
+ <span data-ttu-id="bedb3-132">以下示例声明“MessageBox”函数三次，每次使用不同的字符集行为。</span><span class="sxs-lookup"><span data-stu-id="bedb3-132">The following example declares the **MessageBox** function three times, each time with different character-set behavior.</span></span> <span data-ttu-id="bedb3-133">通过将“Ansi”、“Unicode”或“Auto”关键字添加到声明语句中，就可以在 Visual Basic 中指定字符集行为。</span><span class="sxs-lookup"><span data-stu-id="bedb3-133">You can specify character-set behavior in Visual Basic by adding the **Ansi**, **Unicode**, or **Auto** keyword to the declaration statement.</span></span>  
   
- <span data-ttu-id="575d9-134">如果省略字符集关键字，正如在第一个声明语句中那样，则 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 字段默认为 ANSI 字符集。</span><span class="sxs-lookup"><span data-stu-id="575d9-134">If you omit the character-set keyword, as is done in the first declaration statement, the <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> field defaults to the ANSI character set.</span></span> <span data-ttu-id="575d9-135">示例中的第二个和第三个语句使用关键字显式指定字符集。</span><span class="sxs-lookup"><span data-stu-id="575d9-135">The second and third statements in the example explicitly specify a character set with a keyword.</span></span>  
+ <span data-ttu-id="bedb3-134">如果省略字符集关键字，正如在第一个声明语句中那样，则 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 字段默认为 ANSI 字符集。</span><span class="sxs-lookup"><span data-stu-id="bedb3-134">If you omit the character-set keyword, as is done in the first declaration statement, the <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> field defaults to the ANSI character set.</span></span> <span data-ttu-id="bedb3-135">示例中的第二个和第三个语句使用关键字显式指定字符集。</span><span class="sxs-lookup"><span data-stu-id="bedb3-135">The second and third statements in the example explicitly specify a character set with a keyword.</span></span>  
   
 ```vb
 Friend Class NativeMethods
@@ -90,8 +88,8 @@ Friend Class NativeMethods
 End Class
 ```
   
-## <a name="specifying-a-character-set-in-c-and-c"></a><span data-ttu-id="575d9-136">在 C# 和 C++ 中指定字符集</span><span class="sxs-lookup"><span data-stu-id="575d9-136">Specifying a Character Set in C# and C++</span></span>  
- <span data-ttu-id="575d9-137"><xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 字段将基础字符集标识为 ANSI 或 Unicode。</span><span class="sxs-lookup"><span data-stu-id="575d9-137">The <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> field identifies the underlying character set as ANSI or Unicode.</span></span> <span data-ttu-id="575d9-138">字符集控制应如何封送方法的字符串自变量。</span><span class="sxs-lookup"><span data-stu-id="575d9-138">The character set controls how string arguments to a method should be marshaled.</span></span> <span data-ttu-id="575d9-139">使用以下形式之一来指示字符集：</span><span class="sxs-lookup"><span data-stu-id="575d9-139">Use one of the following forms to indicate the character set:</span></span>  
+## <a name="specifying-a-character-set-in-c-and-c"></a><span data-ttu-id="bedb3-136">在 C# 和 C++ 中指定字符集</span><span class="sxs-lookup"><span data-stu-id="bedb3-136">Specifying a Character Set in C# and C++</span></span>  
+ <span data-ttu-id="bedb3-137"><xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 字段将基础字符集标识为 ANSI 或 Unicode。</span><span class="sxs-lookup"><span data-stu-id="bedb3-137">The <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> field identifies the underlying character set as ANSI or Unicode.</span></span> <span data-ttu-id="bedb3-138">字符集控制应如何封送方法的字符串自变量。</span><span class="sxs-lookup"><span data-stu-id="bedb3-138">The character set controls how string arguments to a method should be marshaled.</span></span> <span data-ttu-id="bedb3-139">使用以下形式之一来指示字符集：</span><span class="sxs-lookup"><span data-stu-id="bedb3-139">Use one of the following forms to indicate the character set:</span></span>  
   
 ```csharp
 [DllImport("DllName", CharSet = CharSet.Ansi)]
@@ -105,7 +103,7 @@ End Class
 [DllImport("DllName", CharSet = CharSet::Auto)]
 ```
   
- <span data-ttu-id="575d9-140">以下示例显示“MessageBox”函数的三个托管定义，它们是指定字符集的结果。</span><span class="sxs-lookup"><span data-stu-id="575d9-140">The following example shows three managed definitions of the **MessageBox** function attributed to specify a character set.</span></span> <span data-ttu-id="575d9-141">在第一个定义中，通过省略，`CharSet` 字段默认为 ANSI 字符集。</span><span class="sxs-lookup"><span data-stu-id="575d9-141">In the first definition, by its omission, the `CharSet` field defaults to the ANSI character set.</span></span>  
+ <span data-ttu-id="bedb3-140">以下示例显示“MessageBox”函数的三个托管定义，它们是指定字符集的结果。</span><span class="sxs-lookup"><span data-stu-id="bedb3-140">The following example shows three managed definitions of the **MessageBox** function attributed to specify a character set.</span></span> <span data-ttu-id="bedb3-141">在第一个定义中，通过省略，`CharSet` 字段默认为 ANSI 字符集。</span><span class="sxs-lookup"><span data-stu-id="bedb3-141">In the first definition, by its omission, the `CharSet` field defaults to the ANSI character set.</span></span>  
   
 ```csharp  
 using System;
@@ -146,9 +144,9 @@ extern "C" int MessageBox(
     HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
 ```
   
-## <a name="see-also"></a><span data-ttu-id="575d9-142">请参阅</span><span class="sxs-lookup"><span data-stu-id="575d9-142">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bedb3-142">请参阅</span><span class="sxs-lookup"><span data-stu-id="bedb3-142">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
-- [<span data-ttu-id="575d9-143">在托管代码中创建原型</span><span class="sxs-lookup"><span data-stu-id="575d9-143">Creating Prototypes in Managed Code</span></span>](creating-prototypes-in-managed-code.md)
-- [<span data-ttu-id="575d9-144">平台调用示例</span><span class="sxs-lookup"><span data-stu-id="575d9-144">Platform Invoke Examples</span></span>](platform-invoke-examples.md)
-- [<span data-ttu-id="575d9-145">用平台调用封送数据</span><span class="sxs-lookup"><span data-stu-id="575d9-145">Marshaling Data with Platform Invoke</span></span>](marshaling-data-with-platform-invoke.md)
+- [<span data-ttu-id="bedb3-143">在托管代码中创建原型</span><span class="sxs-lookup"><span data-stu-id="bedb3-143">Creating Prototypes in Managed Code</span></span>](creating-prototypes-in-managed-code.md)
+- [<span data-ttu-id="bedb3-144">平台调用示例</span><span class="sxs-lookup"><span data-stu-id="bedb3-144">Platform Invoke Examples</span></span>](platform-invoke-examples.md)
+- [<span data-ttu-id="bedb3-145">用平台调用封送数据</span><span class="sxs-lookup"><span data-stu-id="bedb3-145">Marshaling Data with Platform Invoke</span></span>](marshaling-data-with-platform-invoke.md)

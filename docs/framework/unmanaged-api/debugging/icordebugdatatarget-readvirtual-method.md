@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 55e57640-b3d2-413d-b4f4-fbc27fb8e37c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c9d42c85502c12d4d77694626a533c69af97da67
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87316b20c5835d9b887355a1f9374fa5f2156e5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750261"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122170"
 ---
-# <a name="icordebugdatatargetreadvirtual-method"></a><span data-ttu-id="729e3-102">ICorDebugDataTarget::ReadVirtual 方法</span><span class="sxs-lookup"><span data-stu-id="729e3-102">ICorDebugDataTarget::ReadVirtual Method</span></span>
-<span data-ttu-id="729e3-103">获取从指定地址处开始的连续内存块，并返回它所提供的缓冲区中。</span><span class="sxs-lookup"><span data-stu-id="729e3-103">Gets a block of contiguous memory starting at the specified address, and returns it in the supplied buffer.</span></span>  
+# <a name="icordebugdatatargetreadvirtual-method"></a><span data-ttu-id="4537d-102">ICorDebugDataTarget::ReadVirtual 方法</span><span class="sxs-lookup"><span data-stu-id="4537d-102">ICorDebugDataTarget::ReadVirtual Method</span></span>
+<span data-ttu-id="4537d-103">获取从指定地址开始的连续内存块，并将其返回到提供的缓冲区中。</span><span class="sxs-lookup"><span data-stu-id="4537d-103">Gets a block of contiguous memory starting at the specified address, and returns it in the supplied buffer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="729e3-104">语法</span><span class="sxs-lookup"><span data-stu-id="729e3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4537d-104">语法</span><span class="sxs-lookup"><span data-stu-id="4537d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ReadVirtual(  
@@ -38,33 +36,33 @@ HRESULT ReadVirtual(
     [out] ULONG32 *  pBytesRead);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="729e3-105">参数</span><span class="sxs-lookup"><span data-stu-id="729e3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4537d-105">参数</span><span class="sxs-lookup"><span data-stu-id="4537d-105">Parameters</span></span>  
  `address`  
- <span data-ttu-id="729e3-106">[in]起始地址的请求的内存。</span><span class="sxs-lookup"><span data-stu-id="729e3-106">[in] The start address of requested memory.</span></span>  
+ <span data-ttu-id="4537d-106">中请求的内存的开始地址。</span><span class="sxs-lookup"><span data-stu-id="4537d-106">[in] The start address of requested memory.</span></span>  
   
  `pbuffer`  
- <span data-ttu-id="729e3-107">[out]将在其中存储内存缓冲区。</span><span class="sxs-lookup"><span data-stu-id="729e3-107">[out] The buffer where the memory will be stored.</span></span>  
+ <span data-ttu-id="4537d-107">弄内存将存储到的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="4537d-107">[out] The buffer where the memory will be stored.</span></span>  
   
  `bytesRequested`  
- <span data-ttu-id="729e3-108">[in]要从目标地址中获取的字节数。</span><span class="sxs-lookup"><span data-stu-id="729e3-108">[in] The number of bytes to get from the target address.</span></span>  
+ <span data-ttu-id="4537d-108">中要从目标地址获取的字节数。</span><span class="sxs-lookup"><span data-stu-id="4537d-108">[in] The number of bytes to get from the target address.</span></span>  
   
  `pBytesRead`  
- <span data-ttu-id="729e3-109">[out]从目标地址实际读取的字节数。</span><span class="sxs-lookup"><span data-stu-id="729e3-109">[out] The number of bytes actually read from the target address.</span></span> <span data-ttu-id="729e3-110">这可以是少于`bytesRequested`。</span><span class="sxs-lookup"><span data-stu-id="729e3-110">This can be fewer than `bytesRequested`.</span></span>  
+ <span data-ttu-id="4537d-109">弄实际从目标地址中读取的字节数。</span><span class="sxs-lookup"><span data-stu-id="4537d-109">[out] The number of bytes actually read from the target address.</span></span> <span data-ttu-id="4537d-110">这可以少于 `bytesRequested`。</span><span class="sxs-lookup"><span data-stu-id="4537d-110">This can be fewer than `bytesRequested`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="729e3-111">备注</span><span class="sxs-lookup"><span data-stu-id="729e3-111">Remarks</span></span>  
- <span data-ttu-id="729e3-112">如果可以读取 （在指定的开始地址） 的第一个字节，则调用应返回成功 （若要支持高效读取的数据结构使用自我描述长度，类似于以 null 结尾的字符串）。</span><span class="sxs-lookup"><span data-stu-id="729e3-112">If the first byte (at the specified start address) can be read, the call should return success (to support efficient reading of data structures with self-describing length, like null-terminated strings).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4537d-111">备注</span><span class="sxs-lookup"><span data-stu-id="4537d-111">Remarks</span></span>  
+ <span data-ttu-id="4537d-112">如果可以读取第一个字节（在指定的起始地址），则调用应返回 success （以支持通过自描述长度（例如，以 null 结尾的字符串）进行数据结构的有效读取。</span><span class="sxs-lookup"><span data-stu-id="4537d-112">If the first byte (at the specified start address) can be read, the call should return success (to support efficient reading of data structures with self-describing length, like null-terminated strings).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="729e3-113">要求</span><span class="sxs-lookup"><span data-stu-id="729e3-113">Requirements</span></span>  
- <span data-ttu-id="729e3-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="729e3-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4537d-113">要求</span><span class="sxs-lookup"><span data-stu-id="4537d-113">Requirements</span></span>  
+ <span data-ttu-id="4537d-114">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4537d-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="729e3-115">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="729e3-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4537d-115">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4537d-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="729e3-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="729e3-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4537d-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4537d-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="729e3-117">**.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="729e3-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="4537d-117">**.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4537d-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="729e3-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="729e3-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4537d-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="4537d-118">See also</span></span>
 
-- [<span data-ttu-id="729e3-119">ICorDebugDataTarget 接口</span><span class="sxs-lookup"><span data-stu-id="729e3-119">ICorDebugDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
-- [<span data-ttu-id="729e3-120">调试接口</span><span class="sxs-lookup"><span data-stu-id="729e3-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="729e3-121">调试</span><span class="sxs-lookup"><span data-stu-id="729e3-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="4537d-119">ICorDebugDataTarget 接口</span><span class="sxs-lookup"><span data-stu-id="4537d-119">ICorDebugDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
+- [<span data-ttu-id="4537d-120">调试接口</span><span class="sxs-lookup"><span data-stu-id="4537d-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="4537d-121">调试</span><span class="sxs-lookup"><span data-stu-id="4537d-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

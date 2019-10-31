@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 590647c5-499f-44c3-b56c-0e1945088d3a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ab2a1c0c3f280f115a408adc81a46196eb5a804c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e30c3dada4466cabed40a63e1c98d1c27e33f011
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989139"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120698"
 ---
-# <a name="icordebugeditandcontinueerrorinfogettoken-method"></a><span data-ttu-id="696c5-102">ICorDebugEditAndContinueErrorInfo::GetToken 方法</span><span class="sxs-lookup"><span data-stu-id="696c5-102">ICorDebugEditAndContinueErrorInfo::GetToken Method</span></span>
-<span data-ttu-id="696c5-103">`GetToken` 已过时。</span><span class="sxs-lookup"><span data-stu-id="696c5-103">`GetToken` is obsolete.</span></span> <span data-ttu-id="696c5-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="696c5-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogettoken-method"></a><span data-ttu-id="7357e-102">ICorDebugEditAndContinueErrorInfo::GetToken 方法</span><span class="sxs-lookup"><span data-stu-id="7357e-102">ICorDebugEditAndContinueErrorInfo::GetToken Method</span></span>
+<span data-ttu-id="7357e-103">`GetToken` 已过时。</span><span class="sxs-lookup"><span data-stu-id="7357e-103">`GetToken` is obsolete.</span></span> <span data-ttu-id="7357e-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="7357e-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="696c5-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="696c5-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7357e-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="7357e-105">See also</span></span>
 
-- [<span data-ttu-id="696c5-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="696c5-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="7357e-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="7357e-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

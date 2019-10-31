@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 72e38e61-3d56-4ae3-b8f6-0ab7922aaf11
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 93b52e0faef0fa3cc22283d6b46c5fe5153c3eb2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f43ee6d9a3832fca1766ec27c9f02d1aab2f5b8d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779860"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127763"
 ---
-# <a name="icorconfigurationsetgcthreadcontrol-method"></a><span data-ttu-id="b430c-102">ICorConfiguration::SetGCThreadControl 方法</span><span class="sxs-lookup"><span data-stu-id="b430c-102">ICorConfiguration::SetGCThreadControl Method</span></span>
-<span data-ttu-id="b430c-103">设置回调接口来调度线程，以防止因阻塞而垃圾回收的非运行时任务。</span><span class="sxs-lookup"><span data-stu-id="b430c-103">Sets the callback interface for scheduling threads for non-runtime tasks that would otherwise be blocked for a garbage collection.</span></span>  
+# <a name="icorconfigurationsetgcthreadcontrol-method"></a><span data-ttu-id="e2117-102">ICorConfiguration::SetGCThreadControl 方法</span><span class="sxs-lookup"><span data-stu-id="e2117-102">ICorConfiguration::SetGCThreadControl Method</span></span>
+<span data-ttu-id="e2117-103">设置回调接口，用于为非运行时任务计划线程，否则将阻止垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="e2117-103">Sets the callback interface for scheduling threads for non-runtime tasks that would otherwise be blocked for a garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b430c-104">语法</span><span class="sxs-lookup"><span data-stu-id="b430c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e2117-104">语法</span><span class="sxs-lookup"><span data-stu-id="e2117-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetGCThreadControl (  
@@ -35,22 +33,22 @@ HRESULT SetGCThreadControl (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b430c-105">参数</span><span class="sxs-lookup"><span data-stu-id="b430c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e2117-105">参数</span><span class="sxs-lookup"><span data-stu-id="e2117-105">Parameters</span></span>  
  `pGCThreadControl`  
- <span data-ttu-id="b430c-106">[in]一个指向[IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)通知主机有关非运行时任务的线程的挂起的对象。</span><span class="sxs-lookup"><span data-stu-id="b430c-106">[in] A pointer to an [IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md) object that notifies the host about the suspension of threads for non-runtime tasks.</span></span>  
+ <span data-ttu-id="e2117-106">中指向[IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)对象的指针，该对象向宿主通知非运行时任务的线程挂起。</span><span class="sxs-lookup"><span data-stu-id="e2117-106">[in] A pointer to an [IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md) object that notifies the host about the suspension of threads for non-runtime tasks.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b430c-107">备注</span><span class="sxs-lookup"><span data-stu-id="b430c-107">Remarks</span></span>  
- <span data-ttu-id="b430c-108">主机可能选择内[igcthreadcontrol:: Threadisblockingforsuspension](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md)回调是否要重新计划一个线程。</span><span class="sxs-lookup"><span data-stu-id="b430c-108">The host may choose within the [IGCThreadControl::ThreadIsBlockingForSuspension](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md) callback whether to reschedule a thread.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e2117-107">备注</span><span class="sxs-lookup"><span data-stu-id="e2117-107">Remarks</span></span>  
+ <span data-ttu-id="e2117-108">宿主可以在[IGCThreadControl：： ThreadIsBlockingForSuspension](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md)回调中选择是否重新计划线程。</span><span class="sxs-lookup"><span data-stu-id="e2117-108">The host may choose within the [IGCThreadControl::ThreadIsBlockingForSuspension](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md) callback whether to reschedule a thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b430c-109">要求</span><span class="sxs-lookup"><span data-stu-id="b430c-109">Requirements</span></span>  
- <span data-ttu-id="b430c-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b430c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e2117-109">要求</span><span class="sxs-lookup"><span data-stu-id="e2117-109">Requirements</span></span>  
+ <span data-ttu-id="e2117-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e2117-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b430c-111">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b430c-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="e2117-111">**标头：** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="e2117-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="b430c-112">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="b430c-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="e2117-112">**库：** 作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="e2117-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b430c-113">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b430c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e2117-113">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e2117-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b430c-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="b430c-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e2117-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="e2117-114">See also</span></span>
 
-- [<span data-ttu-id="b430c-115">ICorConfiguration 接口</span><span class="sxs-lookup"><span data-stu-id="b430c-115">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)
+- [<span data-ttu-id="e2117-115">ICorConfiguration 接口</span><span class="sxs-lookup"><span data-stu-id="e2117-115">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)

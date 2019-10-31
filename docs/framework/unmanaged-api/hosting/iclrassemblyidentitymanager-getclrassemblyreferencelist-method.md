@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: cb5ffae5-287b-4a87-9ca8-7ce3ae0601b7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 72bfb896ccff23938a4fc218fb1f95eebcf5bb93
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 54c11e78438ae97e1fc0c715c9161361784b3be6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773502"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126723"
 ---
-# <a name="iclrassemblyidentitymanagergetclrassemblyreferencelist-method"></a><span data-ttu-id="c7ff0-102">ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList 方法</span><span class="sxs-lookup"><span data-stu-id="c7ff0-102">ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList Method</span></span>
-<span data-ttu-id="c7ff0-103">获取到的接口指针[ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)从提供的列表的部分程序集标识的实例。</span><span class="sxs-lookup"><span data-stu-id="c7ff0-103">Gets an interface pointer to an [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) instance from the supplied list of partial assembly identities.</span></span>  
+# <a name="iclrassemblyidentitymanagergetclrassemblyreferencelist-method"></a><span data-ttu-id="40a81-102">ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList 方法</span><span class="sxs-lookup"><span data-stu-id="40a81-102">ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList Method</span></span>
+<span data-ttu-id="40a81-103">从提供的部分程序集标识列表中获取指向[ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)实例的接口指针。</span><span class="sxs-lookup"><span data-stu-id="40a81-103">Gets an interface pointer to an [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) instance from the supplied list of partial assembly identities.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c7ff0-104">语法</span><span class="sxs-lookup"><span data-stu-id="c7ff0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="40a81-104">语法</span><span class="sxs-lookup"><span data-stu-id="40a81-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT  GetCLRAssemblyReferenceList (  
@@ -37,37 +35,37 @@ HRESULT  GetCLRAssemblyReferenceList (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c7ff0-105">参数</span><span class="sxs-lookup"><span data-stu-id="c7ff0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="40a81-105">参数</span><span class="sxs-lookup"><span data-stu-id="40a81-105">Parameters</span></span>  
  `ppwzAssemblyReferences`  
- <span data-ttu-id="c7ff0-106">[in]数组以 null 结尾的字符串，在窗体中的"名称属性 = 值..."指定部分程序集标识的列表。</span><span class="sxs-lookup"><span data-stu-id="c7ff0-106">[in] An array of null-terminated strings in the form "name, property=value..." that specify a list of partial assembly identities.</span></span>  
+ <span data-ttu-id="40a81-106">中以 null 结尾的字符串数组，格式为 "name，property = value ..."，它指定部分程序集标识的列表。</span><span class="sxs-lookup"><span data-stu-id="40a81-106">[in] An array of null-terminated strings in the form "name, property=value..." that specify a list of partial assembly identities.</span></span>  
   
  `dwNumOfReferences`  
- <span data-ttu-id="c7ff0-107">[in]中的项数`ppwzAssemblyReferences`。</span><span class="sxs-lookup"><span data-stu-id="c7ff0-107">[in] The number of items in `ppwzAssemblyReferences`.</span></span>  
+ <span data-ttu-id="40a81-107">中`ppwzAssemblyReferences`中的项数。</span><span class="sxs-lookup"><span data-stu-id="40a81-107">[in] The number of items in `ppwzAssemblyReferences`.</span></span>  
   
  `ppReferenceList`  
- <span data-ttu-id="c7ff0-108">[out]接口指针`ICLRAssemblyReferenceList`对象，其中包含列表中指定的程序集的程序集标识数据`ppwzAssemblyReferences`。</span><span class="sxs-lookup"><span data-stu-id="c7ff0-108">[out] An interface pointer to an `ICLRAssemblyReferenceList` object that contains the assembly identity data for the list of assemblies specified in `ppwzAssemblyReferences`.</span></span>  
+ <span data-ttu-id="40a81-108">弄一个指向 `ICLRAssemblyReferenceList` 对象的接口指针，该对象包含 `ppwzAssemblyReferences`中指定的程序集列表的程序集标识数据。</span><span class="sxs-lookup"><span data-stu-id="40a81-108">[out] An interface pointer to an `ICLRAssemblyReferenceList` object that contains the assembly identity data for the list of assemblies specified in `ppwzAssemblyReferences`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c7ff0-109">返回值</span><span class="sxs-lookup"><span data-stu-id="c7ff0-109">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="40a81-109">返回值</span><span class="sxs-lookup"><span data-stu-id="40a81-109">Return Value</span></span>  
   
-|<span data-ttu-id="c7ff0-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c7ff0-110">HRESULT</span></span>|<span data-ttu-id="c7ff0-111">描述</span><span class="sxs-lookup"><span data-stu-id="c7ff0-111">Description</span></span>|  
+|<span data-ttu-id="40a81-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="40a81-110">HRESULT</span></span>|<span data-ttu-id="40a81-111">描述</span><span class="sxs-lookup"><span data-stu-id="40a81-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="c7ff0-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="c7ff0-112">S_OK</span></span>|<span data-ttu-id="c7ff0-113">该方法成功返回。</span><span class="sxs-lookup"><span data-stu-id="c7ff0-113">The method returned successfully.</span></span>|  
-|<span data-ttu-id="c7ff0-114">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="c7ff0-114">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="c7ff0-115">公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="c7ff0-115">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="c7ff0-116">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="c7ff0-116">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="c7ff0-117">呼叫已超时。</span><span class="sxs-lookup"><span data-stu-id="c7ff0-117">The call timed out.</span></span>|  
-|<span data-ttu-id="c7ff0-118">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="c7ff0-118">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="c7ff0-119">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="c7ff0-119">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="c7ff0-120">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="c7ff0-120">HOST_E_ABANDONED</span></span>|<span data-ttu-id="c7ff0-121">事件已取消时被阻塞的线程或纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="c7ff0-121">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="c7ff0-122">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="c7ff0-122">E_FAIL</span></span>|<span data-ttu-id="c7ff0-123">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="c7ff0-123">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="c7ff0-124">如果方法返回 E_FAIL，CLR 不再在该过程中可用。</span><span class="sxs-lookup"><span data-stu-id="c7ff0-124">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="c7ff0-125">对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="c7ff0-125">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="40a81-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="40a81-112">S_OK</span></span>|<span data-ttu-id="40a81-113">方法已成功返回。</span><span class="sxs-lookup"><span data-stu-id="40a81-113">The method returned successfully.</span></span>|  
+|<span data-ttu-id="40a81-114">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="40a81-114">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="40a81-115">公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="40a81-115">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="40a81-116">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="40a81-116">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="40a81-117">调用超时。</span><span class="sxs-lookup"><span data-stu-id="40a81-117">The call timed out.</span></span>|  
+|<span data-ttu-id="40a81-118">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="40a81-118">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="40a81-119">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="40a81-119">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="40a81-120">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="40a81-120">HOST_E_ABANDONED</span></span>|<span data-ttu-id="40a81-121">已阻止的线程或纤程正在等待某个事件时，该事件被取消。</span><span class="sxs-lookup"><span data-stu-id="40a81-121">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="40a81-122">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="40a81-122">E_FAIL</span></span>|<span data-ttu-id="40a81-123">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="40a81-123">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="40a81-124">如果某个方法返回 E_FAIL，则 CLR 在该进程内将不再可用。</span><span class="sxs-lookup"><span data-stu-id="40a81-124">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="40a81-125">对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="40a81-125">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c7ff0-126">要求</span><span class="sxs-lookup"><span data-stu-id="c7ff0-126">Requirements</span></span>  
- <span data-ttu-id="c7ff0-127">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c7ff0-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="40a81-126">要求</span><span class="sxs-lookup"><span data-stu-id="40a81-126">Requirements</span></span>  
+ <span data-ttu-id="40a81-127">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="40a81-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c7ff0-128">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c7ff0-128">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="40a81-128">**标头：** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="40a81-128">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c7ff0-129">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="c7ff0-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="40a81-129">**库：** 作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="40a81-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c7ff0-130">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c7ff0-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="40a81-130">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="40a81-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c7ff0-131">请参阅</span><span class="sxs-lookup"><span data-stu-id="c7ff0-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="40a81-131">请参阅</span><span class="sxs-lookup"><span data-stu-id="40a81-131">See also</span></span>
 
-- [<span data-ttu-id="c7ff0-132">ICLRAssemblyIdentityManager 接口</span><span class="sxs-lookup"><span data-stu-id="c7ff0-132">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [<span data-ttu-id="c7ff0-133">ICLRAssemblyReferenceList 接口</span><span class="sxs-lookup"><span data-stu-id="c7ff0-133">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [<span data-ttu-id="40a81-132">ICLRAssemblyIdentityManager 接口</span><span class="sxs-lookup"><span data-stu-id="40a81-132">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="40a81-133">ICLRAssemblyReferenceList 接口</span><span class="sxs-lookup"><span data-stu-id="40a81-133">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)

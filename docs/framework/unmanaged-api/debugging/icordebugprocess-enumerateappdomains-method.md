@@ -15,37 +15,35 @@ helpviewer_keywords:
 ms.assetid: d508981f-e2b2-445b-a649-69951c22702d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d3c0f20cc93b02e048c9d1952188af3d21d37221
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e09e25503ad00ab3542f0c4f50221b6014b25561
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766117"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128883"
 ---
-# <a name="icordebugprocessenumerateappdomains-method"></a><span data-ttu-id="ffddd-102">ICorDebugProcess::EnumerateAppDomains 方法</span><span class="sxs-lookup"><span data-stu-id="ffddd-102">ICorDebugProcess::EnumerateAppDomains Method</span></span>
-<span data-ttu-id="ffddd-103">枚举在此过程中的所有应用程序域。</span><span class="sxs-lookup"><span data-stu-id="ffddd-103">Enumerates all the application domains in this process.</span></span>  
+# <a name="icordebugprocessenumerateappdomains-method"></a><span data-ttu-id="e5cae-102">ICorDebugProcess::EnumerateAppDomains 方法</span><span class="sxs-lookup"><span data-stu-id="e5cae-102">ICorDebugProcess::EnumerateAppDomains Method</span></span>
+<span data-ttu-id="e5cae-103">枚举此进程中的所有应用程序域。</span><span class="sxs-lookup"><span data-stu-id="e5cae-103">Enumerates all the application domains in this process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ffddd-104">语法</span><span class="sxs-lookup"><span data-stu-id="ffddd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e5cae-104">语法</span><span class="sxs-lookup"><span data-stu-id="e5cae-104">Syntax</span></span>  
   
 ``` cpp 
 HRESULT EnumerateAppDomains(  
     [out] ICorDebugAppDomainEnum **ppAppDomains);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ffddd-105">参数</span><span class="sxs-lookup"><span data-stu-id="ffddd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e5cae-105">参数</span><span class="sxs-lookup"><span data-stu-id="e5cae-105">Parameters</span></span>  
  `ppAppDomains`  
- <span data-ttu-id="ffddd-106">[out]指向的地址的指针[ICorDebugAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md) ，它是此过程中的应用程序域的枚举器。</span><span class="sxs-lookup"><span data-stu-id="ffddd-106">[out] A pointer to the address of an [ICorDebugAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md) that is an enumerator for the application domains in this process.</span></span>  
+ <span data-ttu-id="e5cae-106">弄一个指针，指向[ICorDebugAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md)的地址，该地址是此进程中的应用程序域的枚举器。</span><span class="sxs-lookup"><span data-stu-id="e5cae-106">[out] A pointer to the address of an [ICorDebugAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md) that is an enumerator for the application domains in this process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ffddd-107">备注</span><span class="sxs-lookup"><span data-stu-id="ffddd-107">Remarks</span></span>  
- <span data-ttu-id="ffddd-108">可以使用此方法之前[icordebugmanagedcallback:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)回调。</span><span class="sxs-lookup"><span data-stu-id="ffddd-108">This method can be used before the [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e5cae-107">备注</span><span class="sxs-lookup"><span data-stu-id="e5cae-107">Remarks</span></span>  
+ <span data-ttu-id="e5cae-108">此方法可在[ICorDebugManagedCallback：： CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)回调之前使用。</span><span class="sxs-lookup"><span data-stu-id="e5cae-108">This method can be used before the [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ffddd-109">要求</span><span class="sxs-lookup"><span data-stu-id="ffddd-109">Requirements</span></span>  
- <span data-ttu-id="ffddd-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ffddd-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e5cae-109">要求</span><span class="sxs-lookup"><span data-stu-id="e5cae-109">Requirements</span></span>  
+ <span data-ttu-id="e5cae-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e5cae-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ffddd-111">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ffddd-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e5cae-111">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e5cae-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ffddd-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ffddd-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e5cae-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e5cae-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ffddd-113">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ffddd-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="e5cae-113">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e5cae-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

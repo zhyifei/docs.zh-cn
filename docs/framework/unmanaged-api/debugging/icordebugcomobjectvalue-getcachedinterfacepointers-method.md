@@ -13,19 +13,17 @@ helpviewer_keywords:
 ms.assetid: 08dbd558-bd39-4263-94c2-71e70687aaf0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bdbec0101de269b3d5b09e750d552c993a0198ab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c1e2b557a5e5794c50986b1af8ec39faba845cc9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748481"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125512"
 ---
-# <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a><span data-ttu-id="c6141-102">ICorDebugComObjectValue::GetCachedInterfacePointers 方法</span><span class="sxs-lookup"><span data-stu-id="c6141-102">ICorDebugComObjectValue::GetCachedInterfacePointers Method</span></span>
-<span data-ttu-id="c6141-103">获取缓存在当前运行时可调用包装 (RCW) 上的原始接口指针。</span><span class="sxs-lookup"><span data-stu-id="c6141-103">Gets the raw interface pointers cached on the current runtime callable wrapper (RCW).</span></span>  
+# <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a><span data-ttu-id="b2ffb-102">ICorDebugComObjectValue::GetCachedInterfacePointers 方法</span><span class="sxs-lookup"><span data-stu-id="b2ffb-102">ICorDebugComObjectValue::GetCachedInterfacePointers Method</span></span>
+<span data-ttu-id="b2ffb-103">获取缓存在当前运行时可调用包装器（RCW）上的原始接口指针。</span><span class="sxs-lookup"><span data-stu-id="b2ffb-103">Gets the raw interface pointers cached on the current runtime callable wrapper (RCW).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c6141-104">语法</span><span class="sxs-lookup"><span data-stu-id="c6141-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b2ffb-104">语法</span><span class="sxs-lookup"><span data-stu-id="b2ffb-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCachedInterfacePointers(  
@@ -35,31 +33,31 @@ HRESULT GetCachedInterfacePointers(
     [out, size_is(celt), length_is(*pceltFetched) CORDB_ADDRESS *ptrs);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c6141-105">参数</span><span class="sxs-lookup"><span data-stu-id="c6141-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b2ffb-105">参数</span><span class="sxs-lookup"><span data-stu-id="b2ffb-105">Parameters</span></span>  
  `bIInspectableOnly`  
- <span data-ttu-id="c6141-106">[in]一个值，指示该方法是否将返回唯一的 Windows 运行时接口 (`IInspectable`接口) 或所有缓存的运行时可调用包装 (RCW) 的 COM 接口。</span><span class="sxs-lookup"><span data-stu-id="c6141-106">[in] A value that indicates whether the method will return only Windows Runtime interfaces (`IInspectable` interfaces) or all COM interfaces that are cached by the runtime callable wrapper (RCW).</span></span>  
+ <span data-ttu-id="b2ffb-106">中一个值，该值指示方法是只返回 Windows 运行时接口（`IInspectable` 接口）还是运行时可调用包装器（RCW）缓存的所有 COM 接口。</span><span class="sxs-lookup"><span data-stu-id="b2ffb-106">[in] A value that indicates whether the method will return only Windows Runtime interfaces (`IInspectable` interfaces) or all COM interfaces that are cached by the runtime callable wrapper (RCW).</span></span>  
   
  `celt`  
- <span data-ttu-id="c6141-107">[in]要从中检索其地址的对象数。</span><span class="sxs-lookup"><span data-stu-id="c6141-107">[in] The number of objects whose addresses are to be retrieved.</span></span>  
+ <span data-ttu-id="b2ffb-107">中要检索其地址的对象的数目。</span><span class="sxs-lookup"><span data-stu-id="b2ffb-107">[in] The number of objects whose addresses are to be retrieved.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="c6141-108">[out]指向数`CORDB_ADDRESS`中实际返回的值`ptrs`。</span><span class="sxs-lookup"><span data-stu-id="c6141-108">[out] A pointer to the number of `CORDB_ADDRESS` values actually returned in `ptrs`.</span></span>  
+ <span data-ttu-id="b2ffb-108">弄一个指针，指向 `ptrs`中实际返回 `CORDB_ADDRESS` 值的数量。</span><span class="sxs-lookup"><span data-stu-id="b2ffb-108">[out] A pointer to the number of `CORDB_ADDRESS` values actually returned in `ptrs`.</span></span>  
   
  `ptrs`  
- <span data-ttu-id="c6141-109">指向数组的起始地址的指针`CORDB_ADDRESS`包含的地址的值缓存接口的对象。</span><span class="sxs-lookup"><span data-stu-id="c6141-109">A pointer to the starting address of an array of `CORDB_ADDRESS` values that contain the addresses of cached interface objects.</span></span>  
+ <span data-ttu-id="b2ffb-109">一个指针，指向包含缓存接口对象地址的 `CORDB_ADDRESS` 值数组的起始地址。</span><span class="sxs-lookup"><span data-stu-id="b2ffb-109">A pointer to the starting address of an array of `CORDB_ADDRESS` values that contain the addresses of cached interface objects.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c6141-110">备注</span><span class="sxs-lookup"><span data-stu-id="c6141-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b2ffb-110">备注</span><span class="sxs-lookup"><span data-stu-id="b2ffb-110">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c6141-111">要求</span><span class="sxs-lookup"><span data-stu-id="c6141-111">Requirements</span></span>  
- <span data-ttu-id="c6141-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c6141-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b2ffb-111">要求</span><span class="sxs-lookup"><span data-stu-id="b2ffb-111">Requirements</span></span>  
+ <span data-ttu-id="b2ffb-112">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b2ffb-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c6141-113">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c6141-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b2ffb-113">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b2ffb-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c6141-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c6141-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b2ffb-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b2ffb-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c6141-115">**.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c6141-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="b2ffb-115">**.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b2ffb-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c6141-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="c6141-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b2ffb-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="b2ffb-116">See also</span></span>
 
-- [<span data-ttu-id="c6141-117">ICorDebugComObjectValue 接口</span><span class="sxs-lookup"><span data-stu-id="c6141-117">ICorDebugComObjectValue Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-interface.md)
-- [<span data-ttu-id="c6141-118">调试接口</span><span class="sxs-lookup"><span data-stu-id="c6141-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="b2ffb-117">ICorDebugComObjectValue 接口</span><span class="sxs-lookup"><span data-stu-id="b2ffb-117">ICorDebugComObjectValue Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-interface.md)
+- [<span data-ttu-id="b2ffb-118">调试接口</span><span class="sxs-lookup"><span data-stu-id="b2ffb-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

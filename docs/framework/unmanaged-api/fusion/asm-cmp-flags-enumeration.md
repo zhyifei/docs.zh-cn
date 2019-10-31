@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 4d1e6700-d4be-4fbd-8796-bfb4c07abbc8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a56785d84a07122080efda22d41ec43721474789
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: aae122b6cf94e1205671dc7bbc0231c7d265b932
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795260"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109318"
 ---
-# <a name="asm_cmp_flags-enumeration"></a><span data-ttu-id="cfcfc-102">ASM_CMP_FLAGS 枚举</span><span class="sxs-lookup"><span data-stu-id="cfcfc-102">ASM_CMP_FLAGS Enumeration</span></span>
-<span data-ttu-id="cfcfc-103">指示由[IAssemblyName：： IsEqual](iassemblyname-isequal-method.md)方法进行比较的两个程序集的版本、生成、区域性、签名等。</span><span class="sxs-lookup"><span data-stu-id="cfcfc-103">Indicates the version, build, culture, signature, and so on, of two assemblies to be compared by the [IAssemblyName::IsEqual](iassemblyname-isequal-method.md) method.</span></span>  
+# <a name="asm_cmp_flags-enumeration"></a><span data-ttu-id="35d61-102">ASM_CMP_FLAGS 枚举</span><span class="sxs-lookup"><span data-stu-id="35d61-102">ASM_CMP_FLAGS Enumeration</span></span>
+<span data-ttu-id="35d61-103">指示由[IAssemblyName：： IsEqual](iassemblyname-isequal-method.md)方法进行比较的两个程序集的版本、生成、区域性、签名等。</span><span class="sxs-lookup"><span data-stu-id="35d61-103">Indicates the version, build, culture, signature, and so on, of two assemblies to be compared by the [IAssemblyName::IsEqual](iassemblyname-isequal-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cfcfc-104">语法</span><span class="sxs-lookup"><span data-stu-id="cfcfc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="35d61-104">语法</span><span class="sxs-lookup"><span data-stu-id="35d61-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -67,16 +65,16 @@ typedef enum {
 } ASM_CMP_FLAGS;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="cfcfc-105">要求</span><span class="sxs-lookup"><span data-stu-id="cfcfc-105">Requirements</span></span>  
- <span data-ttu-id="cfcfc-106">**适用**请参阅[系统需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cfcfc-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="35d61-105">要求</span><span class="sxs-lookup"><span data-stu-id="35d61-105">Requirements</span></span>  
+ <span data-ttu-id="35d61-106">**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="35d61-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cfcfc-107">**标头：** 合成。h</span><span class="sxs-lookup"><span data-stu-id="cfcfc-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="35d61-107">**标头：** 合成。h</span><span class="sxs-lookup"><span data-stu-id="35d61-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="cfcfc-108">**类库**作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="cfcfc-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="35d61-108">**库：** 作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="35d61-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="cfcfc-109">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cfcfc-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="35d61-109">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="35d61-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cfcfc-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="cfcfc-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="35d61-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="35d61-110">See also</span></span>
 
-- [<span data-ttu-id="cfcfc-111">IAssemblyName 接口</span><span class="sxs-lookup"><span data-stu-id="cfcfc-111">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
-- [<span data-ttu-id="cfcfc-112">合成枚举</span><span class="sxs-lookup"><span data-stu-id="cfcfc-112">Fusion Enumerations</span></span>](fusion-enumerations.md)
+- [<span data-ttu-id="35d61-111">IAssemblyName 接口</span><span class="sxs-lookup"><span data-stu-id="35d61-111">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
+- [<span data-ttu-id="35d61-112">合成枚举</span><span class="sxs-lookup"><span data-stu-id="35d61-112">Fusion Enumerations</span></span>](fusion-enumerations.md)

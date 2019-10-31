@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 210a2f02-2678-4555-bc4a-78a0408764c8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d64773aa0d35f2e97232576d145dfcba624812ec
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: e419ebb6ffd404368baf32e591e08c4a70645127
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395532"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121120"
 ---
-# <a name="icordebugcode2getcodechunks-method"></a><span data-ttu-id="735be-102">ICorDebugCode2::GetCodeChunks 方法</span><span class="sxs-lookup"><span data-stu-id="735be-102">ICorDebugCode2::GetCodeChunks Method</span></span>
+# <a name="icordebugcode2getcodechunks-method"></a><span data-ttu-id="65db6-102">ICorDebugCode2::GetCodeChunks 方法</span><span class="sxs-lookup"><span data-stu-id="65db6-102">ICorDebugCode2::GetCodeChunks Method</span></span>
 
-<span data-ttu-id="735be-103">获取包含此代码对象的代码块。</span><span class="sxs-lookup"><span data-stu-id="735be-103">Gets the chunks of code that this code object is composed of.</span></span>
+<span data-ttu-id="65db6-103">获取包含此代码对象的代码块。</span><span class="sxs-lookup"><span data-stu-id="65db6-103">Gets the chunks of code that this code object is composed of.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="735be-104">语法</span><span class="sxs-lookup"><span data-stu-id="735be-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="65db6-104">语法</span><span class="sxs-lookup"><span data-stu-id="65db6-104">Syntax</span></span>
 
 ```cpp
 HRESULT GetCodeChunks (
@@ -39,27 +37,27 @@ HRESULT GetCodeChunks (
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="735be-105">参数</span><span class="sxs-lookup"><span data-stu-id="735be-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="65db6-105">参数</span><span class="sxs-lookup"><span data-stu-id="65db6-105">Parameters</span></span>
 
 `cbufSize`  
-<span data-ttu-id="735be-106">中@No__t-0 数组的大小。</span><span class="sxs-lookup"><span data-stu-id="735be-106">[in] Size of the `chunks` array.</span></span>
+<span data-ttu-id="65db6-106">中`chunks` 数组的大小。</span><span class="sxs-lookup"><span data-stu-id="65db6-106">[in] Size of the `chunks` array.</span></span>
 
 `pcnumChunks`  
-<span data-ttu-id="735be-107">弄@No__t-0 数组中返回的块区数。</span><span class="sxs-lookup"><span data-stu-id="735be-107">[out] The number of chunks returned in the `chunks` array.</span></span>
+<span data-ttu-id="65db6-107">弄`chunks` 数组中返回的块区数。</span><span class="sxs-lookup"><span data-stu-id="65db6-107">[out] The number of chunks returned in the `chunks` array.</span></span>
 
 `chunks`  
-<span data-ttu-id="735be-108">弄"CodeChunkInfo" 结构的数组，其中每个结构都表示一个代码块。</span><span class="sxs-lookup"><span data-stu-id="735be-108">[out] An array of "CodeChunkInfo" structures, each of which represents a single chunk of code.</span></span> <span data-ttu-id="735be-109">如果 @no__t 的值为0，则此参数可以为 null。</span><span class="sxs-lookup"><span data-stu-id="735be-109">If the value of `cbufSize` is 0, this parameter can be null.</span></span>
+<span data-ttu-id="65db6-108">弄"CodeChunkInfo" 结构的数组，其中每个结构都表示一个代码块。</span><span class="sxs-lookup"><span data-stu-id="65db6-108">[out] An array of "CodeChunkInfo" structures, each of which represents a single chunk of code.</span></span> <span data-ttu-id="65db6-109">如果 `cbufSize` 的值为0，则此参数可以为 null。</span><span class="sxs-lookup"><span data-stu-id="65db6-109">If the value of `cbufSize` is 0, this parameter can be null.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="735be-110">备注</span><span class="sxs-lookup"><span data-stu-id="735be-110">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="65db6-110">备注</span><span class="sxs-lookup"><span data-stu-id="65db6-110">Remarks</span></span>
 
-<span data-ttu-id="735be-111">代码块将永远不会重叠，它们将遵循[ICorDebugCode：： GetCode](icordebugcode-getcode-method.md)连接的顺序。</span><span class="sxs-lookup"><span data-stu-id="735be-111">The code chunks will never overlap, and they will follow the order in which they would have been concatenated by [ICorDebugCode::GetCode](icordebugcode-getcode-method.md).</span></span> <span data-ttu-id="735be-112">.NET Framework 版本2.0 中的 Microsoft 中间语言（MSIL）代码对象将包含一个代码块。</span><span class="sxs-lookup"><span data-stu-id="735be-112">A Microsoft intermediate language (MSIL) code object in the .NET Framework version 2.0 will comprise a single code chunk.</span></span>
+<span data-ttu-id="65db6-111">代码块将永远不会重叠，它们将遵循[ICorDebugCode：： GetCode](icordebugcode-getcode-method.md)连接的顺序。</span><span class="sxs-lookup"><span data-stu-id="65db6-111">The code chunks will never overlap, and they will follow the order in which they would have been concatenated by [ICorDebugCode::GetCode](icordebugcode-getcode-method.md).</span></span> <span data-ttu-id="65db6-112">.NET Framework 版本2.0 中的 Microsoft 中间语言（MSIL）代码对象将包含一个代码块。</span><span class="sxs-lookup"><span data-stu-id="65db6-112">A Microsoft intermediate language (MSIL) code object in the .NET Framework version 2.0 will comprise a single code chunk.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="735be-113">要求</span><span class="sxs-lookup"><span data-stu-id="735be-113">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="65db6-113">要求</span><span class="sxs-lookup"><span data-stu-id="65db6-113">Requirements</span></span>
 
-<span data-ttu-id="735be-114">**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="735be-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>
+<span data-ttu-id="65db6-114">**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="65db6-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>
 
-<span data-ttu-id="735be-115">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="735be-115">**Header:** CorDebug.idl, CorDebug.h</span></span>
+<span data-ttu-id="65db6-115">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="65db6-115">**Header:** CorDebug.idl, CorDebug.h</span></span>
 
-<span data-ttu-id="735be-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="735be-116">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="65db6-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="65db6-116">**Library:** CorGuids.lib</span></span>
 
-<span data-ttu-id="735be-117">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="735be-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+<span data-ttu-id="65db6-117">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="65db6-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

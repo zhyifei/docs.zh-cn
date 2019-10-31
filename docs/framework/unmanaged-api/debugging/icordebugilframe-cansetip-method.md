@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 16caf02f-c71e-486c-90b0-f0e54357d8f0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 75b28dafae2861a2d33363f95a46bf1abf4cda35
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57d83d1f301cbfd43f8f553d9aef4beb3baf95f8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756579"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131087"
 ---
-# <a name="icordebugilframecansetip-method"></a><span data-ttu-id="58c10-102">ICorDebugILFrame::CanSetIP 方法</span><span class="sxs-lookup"><span data-stu-id="58c10-102">ICorDebugILFrame::CanSetIP Method</span></span>
-<span data-ttu-id="58c10-103">获取一个 HRESULT，指示它是否可以安全地将指令指针设置为 Microsoft 中间语言 (MSIL) 代码中的指定偏移量位置。</span><span class="sxs-lookup"><span data-stu-id="58c10-103">Gets an HRESULT that indicates whether it is safe to set the instruction pointer to the specified offset location in Microsoft Intermediate Language (MSIL) code.</span></span>  
+# <a name="icordebugilframecansetip-method"></a><span data-ttu-id="d1273-102">ICorDebugILFrame::CanSetIP 方法</span><span class="sxs-lookup"><span data-stu-id="d1273-102">ICorDebugILFrame::CanSetIP Method</span></span>
+<span data-ttu-id="d1273-103">获取 HRESULT，它指示在 Microsoft 中间语言（MSIL）代码中将指令指针设置为指定的偏移位置是安全的。</span><span class="sxs-lookup"><span data-stu-id="d1273-103">Gets an HRESULT that indicates whether it is safe to set the instruction pointer to the specified offset location in Microsoft Intermediate Language (MSIL) code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="58c10-104">语法</span><span class="sxs-lookup"><span data-stu-id="58c10-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d1273-104">语法</span><span class="sxs-lookup"><span data-stu-id="d1273-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CanSetIP (  
@@ -35,18 +33,18 @@ HRESULT CanSetIP (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="58c10-105">参数</span><span class="sxs-lookup"><span data-stu-id="58c10-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d1273-105">参数</span><span class="sxs-lookup"><span data-stu-id="d1273-105">Parameters</span></span>  
  `nOffset`  
- <span data-ttu-id="58c10-106">[in]指令指针所需的设置。</span><span class="sxs-lookup"><span data-stu-id="58c10-106">[in] The desired setting for the instruction pointer.</span></span>  
+ <span data-ttu-id="d1273-106">中指令指针所需的设置。</span><span class="sxs-lookup"><span data-stu-id="d1273-106">[in] The desired setting for the instruction pointer.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="58c10-107">备注</span><span class="sxs-lookup"><span data-stu-id="58c10-107">Remarks</span></span>  
- <span data-ttu-id="58c10-108">使用`CanSetIP`方法之前调用[icordebugilframe:: Setip](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="58c10-108">Use the `CanSetIP` method before calling the [ICorDebugILFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) method.</span></span> <span data-ttu-id="58c10-109">如果`CanSetIP`返回任何 HRESULT，则为 S_OK，以外还可调用`ICorDebugILFrame::SetIP`，但不能保证，调试器将继续被调试代码的安全和正确执行。</span><span class="sxs-lookup"><span data-stu-id="58c10-109">If `CanSetIP` returns any HRESULT other than S_OK, you can still invoke `ICorDebugILFrame::SetIP`, but there is no guarantee that the debugger will continue the safe and correct execution of the code being debugged.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d1273-107">备注</span><span class="sxs-lookup"><span data-stu-id="d1273-107">Remarks</span></span>  
+ <span data-ttu-id="d1273-108">在调用[ICorDebugILFrame：： SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md)方法之前，请使用 `CanSetIP` 方法。</span><span class="sxs-lookup"><span data-stu-id="d1273-108">Use the `CanSetIP` method before calling the [ICorDebugILFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) method.</span></span> <span data-ttu-id="d1273-109">如果 `CanSetIP` 返回 S_OK 以外的任何 HRESULT，则仍可调用 `ICorDebugILFrame::SetIP`，但不保证调试器将继续安全且正确执行正在调试的代码。</span><span class="sxs-lookup"><span data-stu-id="d1273-109">If `CanSetIP` returns any HRESULT other than S_OK, you can still invoke `ICorDebugILFrame::SetIP`, but there is no guarantee that the debugger will continue the safe and correct execution of the code being debugged.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="58c10-110">要求</span><span class="sxs-lookup"><span data-stu-id="58c10-110">Requirements</span></span>  
- <span data-ttu-id="58c10-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="58c10-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d1273-110">要求</span><span class="sxs-lookup"><span data-stu-id="d1273-110">Requirements</span></span>  
+ <span data-ttu-id="d1273-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d1273-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="58c10-112">**标头：** CorDebug.idl，CorDebug，h</span><span class="sxs-lookup"><span data-stu-id="58c10-112">**Header:** CorDebug.idl, CorDebug,h</span></span>  
+ <span data-ttu-id="d1273-112">**标头：** Cordebug.idl、Cordebug.idl、h</span><span class="sxs-lookup"><span data-stu-id="d1273-112">**Header:** CorDebug.idl, CorDebug,h</span></span>  
   
- <span data-ttu-id="58c10-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="58c10-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d1273-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d1273-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="58c10-114">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="58c10-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="d1273-114">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d1273-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

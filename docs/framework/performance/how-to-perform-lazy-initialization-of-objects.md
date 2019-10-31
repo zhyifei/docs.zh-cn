@@ -7,20 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6fba47c0ff6425a375715dcd4c08d62e0f7f598c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6efc89e5c22f53d9b2c48e535c783d488df16462
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046468"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130327"
 ---
-# <a name="how-to-perform-lazy-initialization-of-objects"></a><span data-ttu-id="12fa4-102">如何：执行对象的延迟初始化</span><span class="sxs-lookup"><span data-stu-id="12fa4-102">How to: Perform Lazy Initialization of Objects</span></span>
-<span data-ttu-id="12fa4-103"><xref:System.Lazy%601?displayProperty=nameWithType> 类可简化执行迟缓初始化和对象实例化的工作。</span><span class="sxs-lookup"><span data-stu-id="12fa4-103">The <xref:System.Lazy%601?displayProperty=nameWithType> class simplifies the work of performing lazy initialization and instantiation of objects.</span></span> <span data-ttu-id="12fa4-104">通过以迟缓方式初始化对象，可在不需要对象的情况下避免创建所有对象，或可在首次访问对象之后再进行迟缓初始化。</span><span class="sxs-lookup"><span data-stu-id="12fa4-104">By initializing objects in a lazy manner, you can avoid having to create them at all if they are never needed, or you can postpone their initialization until they are first accessed.</span></span> <span data-ttu-id="12fa4-105">若要了解详细信息，请参阅[迟缓初始化](lazy-initialization.md)</span><span class="sxs-lookup"><span data-stu-id="12fa4-105">For more information, see [Lazy Initialization](lazy-initialization.md).</span></span>  
+# <a name="how-to-perform-lazy-initialization-of-objects"></a><span data-ttu-id="fa3db-102">如何：执行对象的延迟初始化</span><span class="sxs-lookup"><span data-stu-id="fa3db-102">How to: Perform Lazy Initialization of Objects</span></span>
+<span data-ttu-id="fa3db-103"><xref:System.Lazy%601?displayProperty=nameWithType> 类可简化执行迟缓初始化和对象实例化的工作。</span><span class="sxs-lookup"><span data-stu-id="fa3db-103">The <xref:System.Lazy%601?displayProperty=nameWithType> class simplifies the work of performing lazy initialization and instantiation of objects.</span></span> <span data-ttu-id="fa3db-104">通过以迟缓方式初始化对象，可在不需要对象的情况下避免创建所有对象，或可在首次访问对象之后再进行迟缓初始化。</span><span class="sxs-lookup"><span data-stu-id="fa3db-104">By initializing objects in a lazy manner, you can avoid having to create them at all if they are never needed, or you can postpone their initialization until they are first accessed.</span></span> <span data-ttu-id="fa3db-105">若要了解详细信息，请参阅[迟缓初始化](lazy-initialization.md)</span><span class="sxs-lookup"><span data-stu-id="fa3db-105">For more information, see [Lazy Initialization](lazy-initialization.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="12fa4-106">示例</span><span class="sxs-lookup"><span data-stu-id="12fa4-106">Example</span></span>  
- <span data-ttu-id="12fa4-107">以下示例演示如何使用 <xref:System.Lazy%601> 初始化值。</span><span class="sxs-lookup"><span data-stu-id="12fa4-107">The following example shows how to initialize a value with <xref:System.Lazy%601>.</span></span> <span data-ttu-id="12fa4-108">假定可能不需要迟缓变量，这取决于将 `someCondition` 变量设置为 true 或 false 的一些其他代码。</span><span class="sxs-lookup"><span data-stu-id="12fa4-108">Assume that the lazy variable might not be needed, depending on some other code that sets the `someCondition` variable to true or false.</span></span>  
+## <a name="example"></a><span data-ttu-id="fa3db-106">示例</span><span class="sxs-lookup"><span data-stu-id="fa3db-106">Example</span></span>  
+ <span data-ttu-id="fa3db-107">以下示例演示如何使用 <xref:System.Lazy%601> 初始化值。</span><span class="sxs-lookup"><span data-stu-id="fa3db-107">The following example shows how to initialize a value with <xref:System.Lazy%601>.</span></span> <span data-ttu-id="fa3db-108">假定可能不需要迟缓变量，这取决于将 `someCondition` 变量设置为 true 或 false 的一些其他代码。</span><span class="sxs-lookup"><span data-stu-id="fa3db-108">Assume that the lazy variable might not be needed, depending on some other code that sets the `someCondition` variable to true or false.</span></span>  
   
 ```vb  
 Dim someCondition As Boolean = False  
@@ -70,13 +68,13 @@ End Sub
   }  
 ```  
   
-## <a name="example"></a><span data-ttu-id="12fa4-109">示例</span><span class="sxs-lookup"><span data-stu-id="12fa4-109">Example</span></span>  
- <span data-ttu-id="12fa4-110">以下示例演示如何使用 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 类初始化仅对当前线程上的当前对象实例可见的类型。</span><span class="sxs-lookup"><span data-stu-id="12fa4-110">The following example shows how to use the <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> class to initialize a type that is visible only to the current object instance on the current thread.</span></span>  
+## <a name="example"></a><span data-ttu-id="fa3db-109">示例</span><span class="sxs-lookup"><span data-stu-id="fa3db-109">Example</span></span>  
+ <span data-ttu-id="fa3db-110">以下示例演示如何使用 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 类初始化仅对当前线程上的当前对象实例可见的类型。</span><span class="sxs-lookup"><span data-stu-id="fa3db-110">The following example shows how to use the <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> class to initialize a type that is visible only to the current object instance on the current thread.</span></span>  
   
  [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]
  [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
   
-## <a name="see-also"></a><span data-ttu-id="12fa4-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="12fa4-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fa3db-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="fa3db-111">See also</span></span>
 
 - <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
-- [<span data-ttu-id="12fa4-112">迟缓初始化</span><span class="sxs-lookup"><span data-stu-id="12fa4-112">Lazy Initialization</span></span>](lazy-initialization.md)
+- [<span data-ttu-id="fa3db-112">迟缓初始化</span><span class="sxs-lookup"><span data-stu-id="fa3db-112">Lazy Initialization</span></span>](lazy-initialization.md)

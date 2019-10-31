@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6b791351-bcc5-4ddd-9cab-eff2f7dd5142
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b4e8b1a76bcc56424e61991d36c94c5f2dfab8aa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3c11a0547ad5acc5613324d7e9d7439d44549dbc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745609"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125816"
 ---
-# <a name="icordebugchainenumnext-method"></a><span data-ttu-id="4e9be-102">ICorDebugChainEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="4e9be-102">ICorDebugChainEnum::Next Method</span></span>
-<span data-ttu-id="4e9be-103">从当前位置开始枚举中获取指定的数量的 ICorDebugChain 实例。</span><span class="sxs-lookup"><span data-stu-id="4e9be-103">Gets the specified number of ICorDebugChain instances from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugchainenumnext-method"></a><span data-ttu-id="ab4a3-102">ICorDebugChainEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="ab4a3-102">ICorDebugChainEnum::Next Method</span></span>
+<span data-ttu-id="ab4a3-103">从当前位置开始，从枚举中获取指定数量的 ICorDebugChain 实例。</span><span class="sxs-lookup"><span data-stu-id="ab4a3-103">Gets the specified number of ICorDebugChain instances from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4e9be-104">语法</span><span class="sxs-lookup"><span data-stu-id="4e9be-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ab4a3-104">语法</span><span class="sxs-lookup"><span data-stu-id="ab4a3-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Next (  
@@ -38,21 +36,21 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4e9be-105">参数</span><span class="sxs-lookup"><span data-stu-id="4e9be-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ab4a3-105">参数</span><span class="sxs-lookup"><span data-stu-id="ab4a3-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="4e9be-106">[in]数`ICorDebugChain`要检索的实例。</span><span class="sxs-lookup"><span data-stu-id="4e9be-106">[in] The number of `ICorDebugChain` instances to be retrieved.</span></span>  
+ <span data-ttu-id="ab4a3-106">中要检索的 `ICorDebugChain` 实例的数目。</span><span class="sxs-lookup"><span data-stu-id="ab4a3-106">[in] The number of `ICorDebugChain` instances to be retrieved.</span></span>  
   
  `chains`  
- <span data-ttu-id="4e9be-107">[out]一个指针，其中每个指向数组`ICorDebugChain`对象，表示链。</span><span class="sxs-lookup"><span data-stu-id="4e9be-107">[out] An array of pointers, each of which points to an `ICorDebugChain` object that represents a chain.</span></span>  
+ <span data-ttu-id="ab4a3-107">弄一个指针数组，其中每个指针指向一个表示链的 `ICorDebugChain` 对象。</span><span class="sxs-lookup"><span data-stu-id="ab4a3-107">[out] An array of pointers, each of which points to an `ICorDebugChain` object that represents a chain.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="4e9be-108">[out]指向数`ICorDebugChain`实际返回的实例。</span><span class="sxs-lookup"><span data-stu-id="4e9be-108">[out] A pointer to the number of `ICorDebugChain` instances actually returned.</span></span> <span data-ttu-id="4e9be-109">此值可能为 null 如果`celt`是其中一个。</span><span class="sxs-lookup"><span data-stu-id="4e9be-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="ab4a3-108">弄一个指针，指向实际返回的 `ICorDebugChain` 实例的数目。</span><span class="sxs-lookup"><span data-stu-id="ab4a3-108">[out] A pointer to the number of `ICorDebugChain` instances actually returned.</span></span> <span data-ttu-id="ab4a3-109">如果 `celt` 为1，则此值可以为 null。</span><span class="sxs-lookup"><span data-stu-id="ab4a3-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4e9be-110">要求</span><span class="sxs-lookup"><span data-stu-id="4e9be-110">Requirements</span></span>  
- <span data-ttu-id="4e9be-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4e9be-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ab4a3-110">要求</span><span class="sxs-lookup"><span data-stu-id="ab4a3-110">Requirements</span></span>  
+ <span data-ttu-id="ab4a3-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ab4a3-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4e9be-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4e9be-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ab4a3-112">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ab4a3-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4e9be-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4e9be-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ab4a3-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ab4a3-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4e9be-114">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4e9be-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="ab4a3-114">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab4a3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

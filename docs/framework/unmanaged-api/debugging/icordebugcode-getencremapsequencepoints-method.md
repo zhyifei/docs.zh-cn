@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 8463a98a-de4a-418e-beb0-9611885ae6b0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65218eb6b5ba26bfb1cbee4f1f276c39e8623c5d
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 83801f7133df6ffb4bdf4a816142849f40baeb53
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700704"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125652"
 ---
-# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="4c67d-102">ICorDebugCode::GetEnCRemapSequencePoints 方法</span><span class="sxs-lookup"><span data-stu-id="4c67d-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
+# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="77f0a-102">ICorDebugCode::GetEnCRemapSequencePoints 方法</span><span class="sxs-lookup"><span data-stu-id="77f0a-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
 
-<span data-ttu-id="4c67d-103">在 .NET Framework 的当前版本中未实现此方法。</span><span class="sxs-lookup"><span data-stu-id="4c67d-103">This method is not implemented in the current version of the .NET Framework.</span></span>
+<span data-ttu-id="77f0a-103">在 .NET Framework 的当前版本中未实现此方法。</span><span class="sxs-lookup"><span data-stu-id="77f0a-103">This method is not implemented in the current version of the .NET Framework.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="4c67d-104">语法</span><span class="sxs-lookup"><span data-stu-id="4c67d-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="77f0a-104">语法</span><span class="sxs-lookup"><span data-stu-id="77f0a-104">Syntax</span></span>
 
 ```cpp
 HRESULT GetEnCRemapSequencePoints(
