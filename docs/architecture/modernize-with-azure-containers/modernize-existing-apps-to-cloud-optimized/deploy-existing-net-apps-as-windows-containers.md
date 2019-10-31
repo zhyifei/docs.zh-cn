@@ -2,12 +2,12 @@
 title: 将现有 .NET 应用部署为 Windows 容器
 description: 通过 Azure 云和 Windows 容器实现现有 .NET 应用程序的现代化 |将现有 .NET 应用部署为 Windows 容器
 ms.date: 04/29/2018
-ms.openlocfilehash: 997b32e51272be2126bd824de1f8f026d77ca203
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 28568ca363bfc8100f78b100f8a7f0242c4f04c9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318653"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089563"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>将现有 .NET 应用部署为 Windows 容器
 
@@ -53,7 +53,7 @@ ms.locfileid: "72318653"
 
 ![显示 Docker 如何在混合云中部署容器的关系图。](./media/deploy-existing-net-apps-as-windows-containers/docker-deploys-containers-all-layers.png)
 
-**图4-6。** Docker 在混合云的所有层上部署容器
+**图4-6。** Docker 在混合云的所有层部署容器
 
 对于熟悉虚拟机的人而言，容器可能看起来非常相似。 容器运行操作系统，具有文件系统，并且可以通过网络访问，就像物理或虚拟计算机系统一样。 不过，容器背后的技术和概念与虚拟机截然不同。 从开发人员的角度来看，容器必须处理得更像是一个过程。 事实上，容器具有一个进程的单一入口点。
 
@@ -65,17 +65,17 @@ Docker 容器（对于简单起见，*容器*）可以在 Linux 和 Windows 上�
 
 使用 Windows 容器的好处从根本上与容器的优点相同。 使用 Windows 容器可大大提高灵活性、可移植性和控制能力。
 
-现有的 .NET 应用程序引用使用 .NET Framework 创建的那些应用程序。 例如，它们可能是传统的 ASP.NET web 应用程序-不使用.NET Core，后者是较新，并运行跨平台在 Linux、 Windows 和 MacOS 上。
+现有的 .NET 应用程序引用使用 .NET Framework 创建的那些应用程序。 例如，它们可能是传统的 ASP.NET web 应用程序，它们不使用 .NET Core，它是较新的，并在 Linux、Windows 和 MacOS 上跨平台运行。
 
 .NET Framework 中的主要依赖项为 Windows。 它还具有辅助依赖项（如 IIS）和传统 ASP.NET 中的 system.web。
 
-必须在 Windows、period 上运行 .NET Framework 应用程序。 如果你想要化现有.NET Framework 应用程序并且你不能或不希望投资迁移到.NET Core （"如果它能正常工作，不将其迁移"），你有针对容器是唯一选择是使用 Windows 容器。
+必须在 Windows、period 上运行 .NET Framework 应用程序。 如果你想要容器化现有 .NET Framework 应用程序，并且不能或不想投入到 .NET Core 的迁移（"如果它正常工作，不迁移它"），则容器的唯一选择是使用 Windows 容器。
 
 因此，Windows 容器的一个主要优点是，它们为你提供了一种方法来现代化在 Windows 上运行的现有 .NET Framework 应用程序（通过容器化）。 最终，Windows 容器通过使用容器获得所需的优势-灵活性、可移植性和更好的控制。
 
 ## <a name="choose-an-os-to-target-with-net-based-containers"></a>选择要作为目标的操作系统。基于网络的容器
 
-给定的操作系统支持 Docker，以及.NET Framework 和.NET Core 之间的差异的多样性，应针对特定操作系统和基于正在使用的 framework 的特定版本。
+考虑到 Docker 支持的各种操作系统，以及 .NET Framework 与 .NET Core 之间的差异，你应根据所使用的框架以特定的 OS 和特定版本为目标。
 
 对于 Windows，可使用 Windows Server Core 或 Windows Nano Server。 这些 Windows 版本提供 .NET Framework 或 .NET Core 应用程序可能需要的不同特性（例如 IIS）和自承载 web 服务器（如 Kestrel）。
 
@@ -93,19 +93,19 @@ Docker 容器（对于简单起见，*容器*）可以在 Linux 和 Windows 上�
 
 > | **符** | **系统和版本** |
 > |---|---|
-> | **microsoft/dotnet-framework:4.x-windowsservercore** | Windows Server Core 上的 .NET Framework 4。x |
-> | **microsoft/aspnet:4.x-windowsservercore** | Windows Server Core 上的 .NET Framework ASP.NET 的附加自定义设置 |
+> | **microsoft/dotnet： windowsservercore-** | Windows Server Core 上的 .NET Framework 4。x |
+> | **microsoft/aspnet： 4.x-windowsservercore** | Windows Server Core 上的 .NET Framework ASP.NET 的附加自定义设置 |
 
-为.NET Core （适用于 Linux 和 Windows 跨平台），标记将如下所示：
+对于 .NET Core （适用于 Linux 和 Windows 的跨平台），标记如下所示：
 
 > | **符** | **系统和版本**
 > |---|---|
-> | **microsoft/dotnet:2.0.0-runtime** | .NET Core 2.0 仅运行时在 Linux 上 |
-> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET Core 2.0 仅运行时在 Windows Nano Server 上 |
+> | **microsoft/dotnet： 2.0.0-运行时** | .NET Core 2.0 运行时-仅适用于 Linux |
+> | **microsoft/dotnet： 2.0.0-nanoserver** | .NET Core 2.0 运行时-仅在 Windows Nano Server 上运行 |
 
 ### <a name="multi-arch-images"></a>多个三维图像
 
-从 2017 中旬开始，你还可以使用新功能在 Docker 调用中[多体系结构](https://github.com/moby/moby/issues/15866)映像。 .NET Core Docker 映像可以使用多 arch 标记。 Dockerfile 不再文件需定义你面向的操作系统。 使用多 arch 功能，用于跨多个计算机配置的单个标记。 例如，多体系结构，您可以使用一个通用的标签： **microsoft/dotnet:2.0.0-runtime**。 如果请求 Linux 容器环境中的使用该标记时，获取基于 Debian 的映像。 如果请求 Windows 容器环境中使用该标记时，获取基于 Nano Server 的映像。
+从2017年开始，你还可以在 Docker 中使用一项新功能，称为[多个](https://github.com/moby/moby/issues/15866)图像。 .NET Core Docker 映像可使用多个标记。 你的 Dockerfile 文件不再需要定义你的目标操作系统。 多个 "多个" 功能允许跨多个计算机配置使用单个标记。 例如，对于多个标准，你可以使用一个常见标记： **microsoft/dotnet： 2.0.0**。 如果从 Linux 容器环境拉取该标记，则会获得基于 Debian 的映像。 如果从 Windows 容器环境拉取该标记，则会获得基于 Nano Server 的映像。
 
 对于 .NET Framework 映像，因为传统 .NET Framework 仅支持 Windows，所以不能使用多核功能。
 
@@ -129,7 +129,7 @@ Docker 容器（对于简单起见，*容器*）可以在 Linux 和 Windows 上�
 
     <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
-- **Infographic：Microsoft 和容器 @ no__t-0
+- **信息图： Microsoft 和容器**
 
     <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
@@ -144,7 +144,7 @@ Docker 容器（对于简单起见，*容器*）可以在 Linux 和 Windows 上�
 
 在 Azure 中的容器生态系统中，以下产品支持被视为基础结构的容器：
 
-- **Azure 容器实例 (ACI)**
+- **Azure 容器实例（ACI）**
 - **Azure 虚拟机**（包含容器的支持）
 - **Azure 虚拟机规模集**（包含容器的支持）
 
@@ -154,11 +154,11 @@ Azure 中支持容器的产品，这些容器在 PaaS （平台即服务）级�
 
 - **Azure 应用服务**
 - **Azure Kubernetes 服务（AKS 和 ACS）**
-- **Azure Batch** 
+- **Azure Batch**
 
 接下来，Azure 容器注册表是 Azure 中托管的高度可缩放容器注册表，可在注册和部署自定义容器映像时在以前的所有产品中使用。
 
-此外，在容器中，可以在 azure 中使用其他托管服务，如 Azure SQL 数据库、Azure Redis 缓存、Azure Cosmos DB 等。 此外还有 Azure Marketplace 中提供的第三方解决方案/平台，如 Cloud Foundry 和 OpenShift，还可以在 Azure 中使用容器。 
+此外，在容器中，可以在 azure 中使用其他托管服务，如 Azure SQL 数据库、Azure Redis 缓存、Azure Cosmos DB 等。 此外还有 Azure Marketplace 中提供的第三方解决方案/平台，如 Cloud Foundry 和 OpenShift，还可以在 Azure 中使用容器。
 
 在接下来的部分中，你可以浏览 Microsoft 的建议，这些建议针对的是在面向 Windows 容器时特别使用的每个 Azure 产品和解决方案。
 

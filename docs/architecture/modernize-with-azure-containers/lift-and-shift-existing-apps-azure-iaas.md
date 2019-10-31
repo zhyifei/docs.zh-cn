@@ -2,16 +2,16 @@
 title: 将现有 .NET 应用程序直接迁移到 Azure IaaS （云基础结构就绪）
 description: 利用 Azure 云和 Windows 容器实现现有 .NET 应用程序的现代化。
 ms.date: 04/28/2018
-ms.openlocfilehash: ae181784e7de5f66b34d2dc38c6e9ec2e004a0c3
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: c7638a034dbb27baea1b097bdb66175bfb5a71f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373986"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089635"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>将现有 .NET 应用程序直接迁移到 Azure IaaS （云基础结构就绪）
 
-> 愿景：作为第一步，若要减少本地投资和硬件和网络维护的总成本，只需将现有应用程序 rehost 到云中。
+> 远景：作为第一步，若要减少本地投资和硬件和网络维护的总成本，只需将现有应用程序 rehost 到云中。
 
 在*介绍如何*将现有应用程序迁移到 azure 基础结构即服务（IaaS）平台之前，请务必分析要直接迁移到 azure 中的 IaaS*的原因。* 此现代化成熟度级别的方案实质上是开始在云中使用 Vm，而不是继续使用当前的本地基础结构。
 
@@ -35,11 +35,11 @@ ms.locfileid: "70373986"
 
 ## <a name="when-to-migrate-to-iaas-instead-of-to-paas"></a>何时迁移到 IaaS 而不是迁移到 PaaS
 
-接下来的部分讨论基于 PaaS 平台和服务的云优化应用程序。 这些应用为你带来了迁移到云的最大好处。 
+接下来的部分讨论基于 PaaS 平台和服务的云优化应用程序。 这些应用为你带来了迁移到云的最大好处。
 
-如果你的目标只是将现有应用程序迁移到云，请先确定现有应用程序，这些应用程序不需要进行大量修改即可在 Azure App Service 中运行。 这些应用应是云优化的第一个候选项。 
+如果你的目标只是将现有应用程序迁移到云，请先确定现有应用程序，这些应用程序不需要进行大量修改即可在 Azure App Service 中运行。 这些应用应是云优化的第一个候选项。
 
-然后，对于仍无法移至 Windows 容器和 PaaS 的应用（如 Azure Kubernetes Service），请将其迁移到简单的普通 Vm （IaaS）。 
+然后，对于仍无法移至 Windows 容器和 PaaS 的应用（如 Azure Kubernetes Service），请将其迁移到简单的普通 Vm （IaaS）。
 
 但请记住，正确配置、保护和维护 Vm 需要比在 Azure 中使用 PaaS 服务更多的时间和 IT 专业知识。 如果考虑使用 Azure 虚拟机，请确保将修补、更新和管理 VM 环境所需的日常维护工作纳入考虑。 Azure 虚拟机为 IaaS。
 

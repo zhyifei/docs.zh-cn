@@ -2,16 +2,16 @@
 title: 将关系数据库迁移到 azure
 description: 通过 Azure 云和 Windows 容器实现现有 .NET 应用程序的现代化 |将关系数据库迁移到 azure
 ms.date: 04/28/2018
-ms.openlocfilehash: b2153e65a12706b97fae11c5f23846c83bcd6642
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: efd1548c3f74fc27450f4949d71a1c4d61907ba5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374098"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093617"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>将关系数据库迁移到 azure
 
-愿景：Azure 提供最全面的数据库迁移。
+视觉： Azure 提供最全面的数据库迁移。
 
 在 Azure 中，可以直接将数据库服务器迁移到 IaaS Vm （纯粹的直接迁移），也可以迁移到 Azure SQL 数据库，以获得更多好处。 Azure SQL 数据库提供托管实例和完整的数据库即服务（DBaaS）选项。 图3-1 显示了 Azure 中提供的多个关系数据库迁移路径。
 
@@ -21,7 +21,7 @@ ms.locfileid: "70374098"
 
 ## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>何时迁移到 Azure SQL 数据库托管实例
 
-在大多数情况下，在将数据迁移到 Azure 时，Azure SQL 数据库托管实例是要考虑的最佳选择。 如果要迁移 SQL Server 数据库，并且需要几乎 100% 的保证，而无需重塑应用程序或更改数据或数据访问代码，请选择 Azure SQL 数据库的托管实例功能。
+在大多数情况下，在将数据迁移到 Azure 时，Azure SQL 数据库托管实例是要考虑的最佳选择。 如果要迁移 SQL Server 数据库，并且需要几乎100% 的保证，而无需重塑应用程序或更改数据或数据访问代码，请选择 Azure SQL 数据库的托管实例功能。
 
 如果对 SQL Server 实例级别的功能或除了标准 Azure SQL 数据库（单一数据库模型）中提供的功能之外的隔离要求有其他要求，Azure SQL 数据库托管实例是最佳选项。 这最后一种方法是最适合 PaaS 的选择，但它并不提供与传统 SQL server 相同的功能。 迁移可能会摩擦。
 
@@ -47,7 +47,7 @@ Azure SQL 数据库中的托管实例具有以下特征：
 
   - 本机备份和还原以及日志传送
 
-借助这些功能，在将现有应用程序数据库迁移到 Azure SQL 数据库时，托管实例模型为 SQL Server 的 PaaS 提供将近 100% 的好处。 托管实例是一种 SQL Server 环境，在此环境中，你可以继续使用实例级功能，而无需更改应用程序设计。
+借助这些功能，在将现有应用程序数据库迁移到 Azure SQL 数据库时，托管实例模型为 SQL Server 的 PaaS 提供将近100% 的好处。 托管实例是一种 SQL Server 环境，在此环境中，你可以继续使用实例级功能，而无需更改应用程序设计。
 
 托管实例可能最适合当前正在使用 SQL Server 并且需要在云中的网络安全灵活性的企业。 这就像是为 SQL 数据库提供专用虚拟网络。
 
@@ -90,7 +90,7 @@ Azure SQL 数据库具有以下优势：
 
 在某些情况下，你可能仍需要迁移到作为常规 VM SQL Server。 例如，如果需要使用 SQL Server Reporting Services，则会出现这种情况。 但在大多数情况下，Azure SQL 数据库托管实例可以提供从本地 SQL server 迁移所需的所有内容，因此，要尝试迁移到 SQL Server VM。
 
-## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>使用 Azure 数据库迁移服务将关系数据库迁移到 Azure 
+## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>使用 Azure 数据库迁移服务将关系数据库迁移到 Azure
 
 你可以使用 Azure 数据库迁移服务将 SQL Server、Oracle 和 MySQL 等关系数据库迁移到 Azure，无论目标数据库是 Azure SQL 数据库、Azure SQL 数据库托管实例还是 Azure VM 上的 SQL Server。
 
@@ -104,7 +104,7 @@ Azure SQL 数据库具有以下优势：
 
 ## <a name="additional-resources"></a>其他资源
 
-- **选择云 SQL Server 选项：Azure 虚拟机上的 azure SQL 数据库（PaaS）或 SQL Server （IaaS）**
+- **选择云 SQL Server 选项： azure SQL 数据库（PaaS）或 Azure VM 上的 SQL Server （IaaS）**
 
     <https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas>
 

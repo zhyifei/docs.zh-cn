@@ -2,12 +2,12 @@
 title: 将现有 .NET 应用现代化到云优化应用程序的原因
 description: 通过 Azure 云和 Windows 容器实现现有 .NET 应用程序的现代化 |将现有 .NET 应用现代化到云优化应用程序的原因
 ms.date: 04/28/2018
-ms.openlocfilehash: 3154f9a9e11b42330fcc753ffd961316e4ada335
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 55eb3fb9b0b6c91e25bcdb23056a8a8e51463ef7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522935"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093633"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>将现有 .NET 应用现代化到云优化应用程序的原因
 
@@ -19,7 +19,7 @@ ms.locfileid: "72522935"
 
 最后一行是，当组织构建并管理云优化的应用程序时，它可以更快地将解决方案推向客户，并在市场上向市场带来新的见解。
 
-## <a name="cloud-optimized-application-principles-and-tenets"></a>云优化应用程序原则和原则 
+## <a name="cloud-optimized-application-principles-and-tenets"></a>云优化应用程序原则和原则
 
 云中的改进主要侧重于满足两个目标：通过提高灵活性降低成本并提高业务增长。 这些目标是通过在发布和交付应用程序时简化进程和减少摩擦来实现的。
 
