@@ -10,14 +10,12 @@ helpviewer_keywords:
 - reflection, adding event-handler delegates
 - delegates [.NET Framework], adding event handlers with reflection
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 937dca59be8b83526ebf6cd4c369532b1a8b9afe
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 14a9694708b36b23ecef453d530ad3b939a046ba
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045981"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130118"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>如何：使用反射将委托挂钩
 使用反射加载和运行程序集时，不能使用 C# `+=` 运算符或 Visual Basic [AddHandler 语句](../../visual-basic/language-reference/statements/addhandler-statement.md)等语言功能将事件挂钩。 以下过程介绍如何通过反射获取所需的全部类型来将现有方法挂钩到事件，以及如何使用反射发出以创建动态方法并将其挂钩到事件。  

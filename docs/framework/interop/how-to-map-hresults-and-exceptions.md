@@ -11,14 +11,12 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 60173739842835a705a72da4e7ab442cacfc08d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 13dcca5f35750ad3e8bd6ea4f6dd443fe9a8ee94
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306542"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123869"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>如何：映射 HRESULT 和异常
 COM 方法通过返回 HRESULT 来报告错误；NET 方法通过引发异常来报告错误。 运行时处理这两者之间的转换。 NET Framework 中的每个异常类都将映射到 HRESULT。  
@@ -136,7 +134,7 @@ CMyClass::MethodThatThrows
 |**HelpLink**|如果 IErrorInfo-> HelpContext 为非零值，字符串通过串联 IErrorInfo-> GetHelpFile 和“#”以及 IErrorInfo-> GetHelpContext 形成。 否则，字符串将从 IErrorInfo-> GetHelpFile 返回。|  
 |**InnerException**|通常为 null 引用（在 Visual Basic 中为 Nothing）。|  
 |**消息**|从 IErrorInfo->GetDescription 返回的字符串。|  
-|**源**|从 IErrorInfo->GetSource 返回的字符串。|  
+|**Source**|从 IErrorInfo->GetSource 返回的字符串。|  
 |**StackTrace**|堆栈跟踪。|  
 |**TargetSite**|返回出现故障的 HRESULT 的方法的名称。|  
   

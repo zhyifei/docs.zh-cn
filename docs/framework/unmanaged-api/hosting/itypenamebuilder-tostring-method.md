@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6372aca7-869a-4af6-ba2b-0eb1047ef5c0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b4e8237d2841863c73989c34a46da61033e111ba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 531bd3ffe00c12ef580e8341cd6ad1f7d3924717
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765442"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123349"
 ---
 # <a name="itypenamebuildertostring-method"></a>ITypeNameBuilder::ToString 方法
 此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。  
@@ -36,11 +34,11 @@ HRESULT ToString (
 ```  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0339af16-ee1d-48ec-837d-a79d9a9c89f8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d70f7dd872cefbadce56c577ce2ecc9cbcb663b3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a2faf22b48dd0b809d6c3668a37f2119733a9b18
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765851"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129438"
 ---
 # <a name="ehostbindingpolicymodifyflags-enumeration"></a>EHostBindingPolicyModifyFlags 枚举
-允许主机以指定的重定向应用策略修改从源程序集对目标程序集时，应执行公共语言运行时 (CLR) 类型。  
+允许主机指定公共语言运行时（CLR）在将策略修改从源程序集应用到目标程序集时应执行的重定向的类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,24 +35,24 @@ typedef enum _hostBindingPolicyModifyFlags {
 } EHostBindingPolicyModifyFlags;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`HOST_BINDING_POLICY_MODIFY_CHAIN`|指定 CLR 将链接到目标程序集的源程序集的策略值。|  
+|`HOST_BINDING_POLICY_MODIFY_CHAIN`|指定 CLR 将源程序集的策略值链接到目标程序集的策略值。|  
 |`HOST_BINDING_POLICY_MODIFY_DEFAULT`|指定 CLR 将执行默认操作。|  
-|`HOST_BINDING_POLICY_MODIFY_MAX`|指定，CLR 将目标程序集的策略值设置为最大值。|  
-|`HOST_BINDING_POLICY_MODIFY_REMOVE`|指定，CLR 将值替换为策略目标程序集的源程序集。|  
+|`HOST_BINDING_POLICY_MODIFY_MAX`|指定 CLR 将目标程序集的策略值设置为最大值。|  
+|`HOST_BINDING_POLICY_MODIFY_REMOVE`|指定 CLR 将目标程序集的策略值替换为源程序集的策略值。|  
   
 ## <a name="remarks"></a>备注  
- [Iclrhostbindingpolicymanager:: Modifyapplicationpolicy](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md)方法采用一个参数类型`EHostBindingPolicyModifyFlags`。  
+ [ICLRHostBindingPolicyManager：： ModifyApplicationPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md)方法使用 `EHostBindingPolicyModifyFlags`类型的参数。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** MSCorEE.dll  
+ **库：** Mscoree.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

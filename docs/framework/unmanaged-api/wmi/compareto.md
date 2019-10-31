@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CompareTo function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ec42dff333422e247a11b4a3a5b9aed9bd316fa
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0d210795016cd2e0179b902a224ca0c62f4ac01f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798771"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128699"
 ---
 # <a name="compareto-function"></a>CompareTo 函数
 
@@ -52,17 +50,17 @@ HRESULT CompareTo (
 中标志的按位组合，用于指定要考虑比较的对象特征。 有关详细信息，请参阅 "[备注](#remarks)" 部分。
 
 `pCompareTo`\
-中用于比较的对象。 `pCompareTo`必须是有效的[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例;不能为`null`。
+中用于比较的对象。 `pCompareTo` 必须是有效的[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例;不能 `null`。
 
 ## <a name="return-value"></a>返回值
 
 此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 发生了未指定的错误。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数无效。 |
-| `WBEM_E_UNEXPECTED` | 0x8004101d | 对的第二`BeginEnumeration`次调用没有干预[`EndEnumeration`](endenumeration.md)调用。 |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | 对 `BeginEnumeration` 进行了第二次调用，无需对[`EndEnumeration`](endenumeration.md)进行干预。 |
 | `WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
 | `WBEM_S_DIFFERENT` | 0x40003 | 对象不同。 |
 | `WBEM_S_SAME` | 0 | 根据比较标志，对象是相同的。 |
@@ -71,9 +69,9 @@ HRESULT CompareTo (
 
 此函数包装对[IWbemClassObject：： CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto)方法的调用。
 
-可以作为`lEnumFlags`参数传递的标志在*WbemCli*头文件中定义，也可以在代码中将它们定义为常量。 您可以通过指定下列标志的按位组合来指定比较中涉及的各个特征：
+可以作为 `lEnumFlags` 参数传递的标志在*WbemCli*头文件中定义，也可以在代码中将它们定义为常量。 您可以通过指定下列标志的按位组合来指定比较中涉及的各个特征：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | 忽略源（服务器及其所属的命名空间）。 |
 | `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | 忽略所有限定符（包括**密钥**和**动态**） |
@@ -84,15 +82,15 @@ HRESULT CompareTo (
 
 也可以按如下所示指定单个复合标志：
 
-|返回的常量  |值  |Description  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_COMPARISON_INCLUDE_ALL` | 0 | 考虑比较中的所有功能。 |
 
 ## <a name="requirements"></a>要求
 
-**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。
 
-**标头：** WMINet_Utils.idl
+**标头：** WMINet_Utils .idl
 
 **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

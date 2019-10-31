@@ -5,22 +5,20 @@ helpviewer_keywords:
 - GCCpuGroup element
 - <GCCpuGroup> element
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9ff646f13c5619b0bfca1b61c86013a981c274e3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 352890519c1a227d664d877c3123866e5e4e1657
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252561"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116835"
 ---
 # <a name="gccpugroup-element"></a>\<GCCpuGroup > 元素
 
 指定垃圾回收是否支持多个 CPU 组。
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup >**  
 
 ## <a name="syntax"></a>语法
 
@@ -41,7 +39,7 @@ ms.locfileid: "70252561"
 
 ## <a name="enabled-attribute"></a>enabled 特性
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |`false`|垃圾回收不支持多个 CPU 组。 这是默认设置。|
 |`true`|如果启用了服务器垃圾回收，则垃圾回收支持多个 CPU 组。|
@@ -59,10 +57,10 @@ ms.locfileid: "70252561"
 
 ## <a name="remarks"></a>备注
 
-如果计算机具有多个 CPU 组并且启用了服务器垃圾回收（请参阅[ \<r >](gcserver-element.md)元素），则启用此元素会在所有 CPU 组之间扩展垃圾回收，并在创建和平衡堆。
+如果计算机具有多个 CPU 组并且启用了服务器垃圾回收（请参阅[\<r >](gcserver-element.md)元素），则启用此元素会在所有 CPU 组之间扩展垃圾回收，并在创建和平衡堆。
 
 > [!NOTE]
-> 此元素仅适用于垃圾回收线程。 若要使运行时能够在所有 CPU 组之间分配用户线程，还必须启用[ \<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md)元素。
+> 此元素仅适用于垃圾回收线程。 若要使运行时能够在所有 CPU 组之间分配用户线程，还必须启用[\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md)元素。
 
 ## <a name="example"></a>示例
 

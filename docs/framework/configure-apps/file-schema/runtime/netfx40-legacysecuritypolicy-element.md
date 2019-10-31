@@ -5,22 +5,20 @@ helpviewer_keywords:
 - <NetFx40_LegacySecurityPolicy> element
 - NetFx40_LegacySecurityPolicy element
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2cd6f937811ae503dd4de7ff989510c4eb8b8933
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: d5192eb56bb8b640544bdc52a0bb9d8a5277efef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252446"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116255"
 ---
-# <a name="netfx40_legacysecuritypolicy-element"></a>\<Y > 元素
+# <a name="netfx40_legacysecuritypolicy-element"></a>\<y > 元素
 
 指定运行时是否使用旧版代码访问安全性 (CAS) 策略。
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Y >**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<y >**  
 
 ## <a name="syntax"></a>语法
 
@@ -41,7 +39,7 @@ ms.locfileid: "70252446"
 
 ## <a name="enabled-attribute"></a>enabled 特性
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |`false`|运行时不使用旧的 CAS 策略。 这是默认设置。|
 |`true`|运行时使用旧版 CAS 策略。|
@@ -63,13 +61,13 @@ ms.locfileid: "70252446"
 
 CA 策略是特定于版本的。 .NET Framework 早期版本中存在的自定义 CAS 策略必须在 .NET Framework 4 中 respecified。
 
-将元素应用到 .NET Framework 4 程序集并不会影响[安全透明的代码](../../../misc/security-transparent-code.md); 透明规则仍适用。 `<NetFx40_LegacySecurityPolicy>`
+将 `<NetFx40_LegacySecurityPolicy>` 元素应用于 .NET Framework 4 程序集不会影响[安全透明代码](../../../misc/security-transparent-code.md);透明度规则仍适用。
 
 > [!IMPORTANT]
-> 对于未安装在[全局程序集缓存](../../../app-domains/gac.md)中的[本机映像生成器（ngen.exe）](../../../tools/ngen-exe-native-image-generator.md)创建的本机映像程序集，应用元素可能会导致严重的性能下降。`<NetFx40_LegacySecurityPolicy>` 性能下降是由运行时在应用属性时无法将程序集加载为本机映像而导致其作为实时程序集加载的。
+> 对于未安装在[全局程序集缓存](../../../app-domains/gac.md)中的[本机映像生成器（ngen.exe）](../../../tools/ngen-exe-native-image-generator.md)创建的本机映像程序集，应用 `<NetFx40_LegacySecurityPolicy>` 元素可能会导致严重的性能损失。 性能下降是由运行时在应用属性时无法将程序集加载为本机映像而导致其作为实时程序集加载的。
 
 > [!NOTE]
-> 如果指定的目标 .NET Framework 版本早于 Visual Studio 项目的项目设置中的 .NET Framework 4，则将启用 CAS 策略，包括你为该版本指定的任何自定义 CAS 策略。 但是，您将不能使用新 .NET Framework 4 类型和成员。 你还可以使用[应用程序配置文件](../../index.md)中的 "启动设置" 架构中的[ \<supportedRuntime > 元素](../startup/supportedruntime-element.md)指定 .NET Framework 的早期版本。
+> 如果指定的目标 .NET Framework 版本早于 Visual Studio 项目的项目设置中的 .NET Framework 4，则将启用 CAS 策略，包括你为该版本指定的任何自定义 CAS 策略。 但是，您将不能使用新 .NET Framework 4 类型和成员。 你还可以使用[应用程序配置文件](../../index.md)中的 "启动设置" 架构中的[\<supportedRuntime > 元素](../startup/supportedruntime-element.md)指定 .NET Framework 的早期版本。
 
 > [!NOTE]
 > 配置文件语法区分大小写。 应使用语法和示例部分中提供的语法。

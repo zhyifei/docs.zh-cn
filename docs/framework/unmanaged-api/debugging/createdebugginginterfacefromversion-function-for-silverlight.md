@@ -8,17 +8,15 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96968956b513e1ae80a25f5fb4afea48bf888876
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 438af9f191f48a86207c3b343ba428eef2c1fabc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739261"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132205"
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>Silverlight 的 CreateDebuggingInterfaceFromVersion 函数
-接受从返回的公共语言运行时 (CLR) 版本字符串[CreateVersionStringFromModule 函数](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)，并返回相应的调试器接口 (通常情况下， [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md))。  
+接受从[CreateVersionStringFromModule 函数](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)返回的公共语言运行时（CLR）版本字符串，并返回相应的调试器接口（通常为[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,14 +29,14 @@ HRESULT CreateDebuggingInterfaceFromVersion (
   
 ## <a name="parameters"></a>参数  
  `szDebuggeeVersion`  
- [in]目标调试对象，该值由返回的 CLR 版本字符串[CreateVersionStringFromModule 函数](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)。  
+ 中目标调试对象（由[CreateVersionStringFromModule 函数](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)返回）中的 CLR 的版本字符串。  
   
  `ppCordb`  
- [out] 指向“COM 对象的指针”的指针 (`IUnknown`)。 此对象强制转换为[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)对象返回前。  
+ [out] 指向“COM 对象的指针”的指针 (`IUnknown`)。 此对象将在返回之前强制转换为[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)对象。  
   
 ## <a name="return-value"></a>返回值  
  S_OK  
- `ppCordb` 引用有效的对象实现[ICorDebug 接口](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)接口。  
+ `ppCordb` 引用了实现[ICorDebug 接口](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)接口的有效对象。  
   
  E_INVALIDARG  
  `szDebuggeeVersion` 或 `ppCordb` 为 null。  
@@ -56,10 +54,10 @@ HRESULT CreateDebuggingInterfaceFromVersion (
  返回的接口提供用于附加到目标进程中的 CLR 和调试 CLR 正在运行的托管代码的功能。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** dbgshim.h  
+ **标头：** dbgshim.dll  
   
  **库：** dbgshim.dll  
   
- **.NET framework 版本：** 3.5 SP1
+ **.NET Framework 版本：** 3.5 SP1

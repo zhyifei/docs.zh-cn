@@ -10,14 +10,12 @@ helpviewer_keywords:
 - platform invoke, creating class for functions
 - DLL functions
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 275aa5bb664e9f5a50f44a72f2506d7984234b31
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 765d4344553a6e65b930a7bf586a41144d220fc6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051826"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123626"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>创建用于容纳 DLL 函数的类
 将常用的 DLL 函数包装在托管类中，这是封装平台功能的一种有效方式。 虽然不必在每种情形下都这样做，但由于定义 DLL 函数相当麻烦且容易出错，所以提供类包装器非常简便。 如果使用 Visual Basic 或 C# 进行编程，必须在一个类或 Visual Basic 模块中声明 DLL 函数。  

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 62db708b-6cf0-45c5-b897-4b5c75bd2505
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 85247f2f3672e7827f4dd0c93e50cd5da914ee8f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bbe2727e4b93cf6d7b3111b6060d170e497024a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755773"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130773"
 ---
 # <a name="icordebugmanagedcallbackexitthread-method"></a>ICorDebugManagedCallback::ExitThread 方法
-通知调试器执行托管的代码的线程已退出。  
+通知调试器已退出正在执行的托管代码的线程。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,18 +36,18 @@ HRESULT ExitThread (
   
 ## <a name="parameters"></a>参数  
  `pAppDomain`  
- [in]指向一个 ICorDebugAppDomain 对象，表示包含托管的线程的应用程序域的指针。  
+ 中指向 ICorDebugAppDomain 对象的指针，该对象表示包含托管线程的应用程序域。  
   
  `thread`  
- [in]指向表示托管的线程的 ICorDebugThread 对象的指针。  
+ 中指向 ICorDebugThread 对象的指针，该对象表示托管线程。  
   
 ## <a name="remarks"></a>备注  
- 一次`ExitThread`触发回调，该线程将不再显示在线程枚举中。  
+ 激发 `ExitThread` 回调后，线程将不再显示在线程枚举中。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

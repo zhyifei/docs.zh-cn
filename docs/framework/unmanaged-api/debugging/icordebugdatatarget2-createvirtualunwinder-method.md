@@ -2,14 +2,12 @@
 title: ICorDebugDataTarget2::CreateVirtualUnwinder 方法
 ms.date: 03/30/2017
 ms.assetid: 354c8b4c-7d23-45c6-a7d7-3be4c2a5b772
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5445fb223e34aa82d4b93032bb059093978f6bd1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f9a9038bd0d268e09d8518fa50534a9959b456de
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910330"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122188"
 ---
 # <a name="icordebugdatatarget2createvirtualunwinder-method"></a>ICorDebugDataTarget2::CreateVirtualUnwinder 方法
 创建一个从初始上下文（不一定是线程叶）开始展开的新堆栈开卷机。  
@@ -43,7 +41,7 @@ HRESULT CreateVirtualUnwinder(
  [输出] 指针指向“ICor调试虚拟开卷机”接口对象的地址。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK` 如果成功。 所有其他 `HRESULT` 都表示故障。 Mscordbi.dll 收到`HRESULT`的任何失败都视为严重错误, 并导致[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)方法`CORDBG_E_DATA_TARGET_ERROR`返回。  
+ `S_OK` 如果成功。 所有其他 `HRESULT` 都表示故障。 Mscordbi.dll 收到的任何失败的 `HRESULT` 都被视为致命错误，并导致[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)方法返回 `CORDBG_E_DATA_TARGET_ERROR`。  
   
 ## <a name="remarks"></a>备注  
   
@@ -51,11 +49,11 @@ HRESULT CreateVirtualUnwinder(
 > 此方法仅适用于 .NET Native。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl, Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

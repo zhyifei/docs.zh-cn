@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd9936a6-cc24-4869-8761-0988664464e6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4e2e6a4624403dcab30bdb7b6d3af0226204cac0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 97c4e6d3c9de7dcb8d399a956a4a58c49ca6e3b9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744641"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131869"
 ---
 # <a name="icordebugremotetarget-interface"></a>ICorDebugRemoteTarget 接口
 介绍能够让开发人员在公共语言运行时 (CLR) 环境中调试基于 Silverlight 的应用程序的方法。  
@@ -51,13 +49,13 @@ interface ICorDebugRemoteTarget  : IUnknown
  在 Windows 95、Windows 98、Windows ME 或非 x86 平台（例如 IA-64 和 AMD64）上，不支持混合模式（即托管和本机代码）调试。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl  
+ **标头：** Cordebug.idl .idl  
   
- **库：** :CorGuids.lib  
+ **库：** ： corguids.lib  
   
- **.NET framework 版本：** 3.5 SP1  
+ **.NET Framework 版本：** 3.5 SP1  
   
 ## <a name="see-also"></a>请参阅
 

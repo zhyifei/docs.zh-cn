@@ -14,38 +14,36 @@ helpviewer_keywords:
 ms.assetid: ac298ebd-0815-47e4-a823-30b31baab903
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 939f100e8ee386642a29c33827a8339caf0467b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 108492ba298e9f8429b2acd890ab3404365bc602
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967825"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130529"
 ---
 # <a name="ihostcrst-interface"></a>IHostCrst 接口
-用作主机的临界区对线程处理的表示形式。  
+用作线程的关键部分的宿主表示形式。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Enter 方法](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-enter-method.md)|将进入关键节。|  
+|[Enter 方法](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-enter-method.md)|输入临界区。|  
 |[Leave 方法](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-leave-method.md)|离开临界区。|  
-|[SetSpinCount 方法](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-setspincount-method.md)|设置临界区旋转计数。|  
-|[TryEnter 方法](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-tryenter-method.md)|若要立即输入的关键部分，并报告成功或失败的尝试。|  
+|[SetSpinCount 方法](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-setspincount-method.md)|设置临界区的旋转计数。|  
+|[TryEnter 方法](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-tryenter-method.md)|尝试输入临界区，并立即报告成功或失败。|  
   
 ## <a name="remarks"></a>备注  
- `IHostCrst` 允许公共语言运行时 (CLR) 与主机的关键部分的表示形式直接进行通信，而不是使用 Win32 函数类似于`EnterCriticalSection`或`LeaveCriticalSection`。  
+ `IHostCrst` 允许公共语言运行时（CLR）与关键节的主机表示形式直接通信，而不是使用 `EnterCriticalSection` 或 `LeaveCriticalSection`等 Win32 函数。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

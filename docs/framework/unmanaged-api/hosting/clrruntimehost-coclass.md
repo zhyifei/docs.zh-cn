@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2ac9cbf5-8a2d-4e4f-8831-0dad8ef0a897
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 841b05ca1037d82046820554878d883f94687d34
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1e595e1a4f1b462437f47207b998829a8bd774d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779145"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129452"
 ---
 # <a name="clrruntimehost-coclass"></a>CLRRuntimeHost 组件类
-提供用于管理由运行时执行代码的接口。  
+提供用于管理运行时执行的代码的接口。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,15 +37,15 @@ coclass CLRRuntimeHost {
   
 |接口|描述|  
 |---------------|-----------------|  
-|[ICLRRuntimeHost 接口](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|提供由运行时控制的应用程序执行的方法。|  
-|[ICLRValidator 接口](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|提供了用于验证的可移植可执行映像和详细报告验证错误的方法。|  
+|[ICLRRuntimeHost 接口](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|提供通过运行时控制应用程序执行的方法。|  
+|[ICLRValidator 接口](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|提供可移植可执行映像的验证方法，并提供验证错误的详细报告。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.idl  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

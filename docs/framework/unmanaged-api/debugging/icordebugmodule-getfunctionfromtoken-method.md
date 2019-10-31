@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fe12194-4ef7-43c1-9570-ade35ccf127a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 547986633172d6f5e6549ad2048833dc9fb0cef3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cb966a918c63b4fbc00dcf52819b9384427dfdaa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763464"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129590"
 ---
 # <a name="icordebugmodulegetfunctionfromtoken-method"></a>ICorDebugModule::GetFunctionFromToken 方法
-获取指定的元数据标记的函数。  
+获取元数据标记指定的函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,18 +36,18 @@ HRESULT GetFunctionFromToken(
   
 ## <a name="parameters"></a>参数  
  `methodDef`  
- [in]一个`mdMethodDef`元数据标记所引用的函数的元数据。  
+ 中引用函数的元数据的 `mdMethodDef` 元数据标记。  
   
  `ppFunction`  
- [out]ICorDebugFunction 接口对象，表示该函数的地址指针。  
+ 弄指向表示函数的 ICorDebugFunction 接口对象地址的指针。  
   
 ## <a name="remarks"></a>备注  
- `GetFunctionFromToken`如果中传递的值，方法将返回 CORDBG_E_FUNCTION_NOT_IL HRESULT`methodDef`不引用 Microsoft 中间语言 (MSIL) 方法。  
+ 如果 `methodDef` 中传递的值不引用 Microsoft 中间语言（MSIL）方法，`GetFunctionFromToken` 方法将返回 CORDBG_E_FUNCTION_NOT_IL HRESULT。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

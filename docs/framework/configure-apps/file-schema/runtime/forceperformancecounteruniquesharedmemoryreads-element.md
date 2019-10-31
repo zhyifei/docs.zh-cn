@@ -5,21 +5,19 @@ helpviewer_keywords:
 - forcePerformanceCounterUniqueSharedMemoryReads element
 - <forcePerformanceCounterUniqueSharedMemoryReads> element
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54bccd134a2f77925e80bfc681770b28c05f77a1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: efa6dce1035f7d2cf63b74c6a03d911b5dede722
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252606"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116956"
 ---
 # <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<s > 元素
 指定 PerfCounter.dll 是否使用 .NET Framework 版本 1.1 应用程序中的 CategoryOptions 注册表设置，以确定是否加载来自特定于类别的共享内存或全局内存的性能计数器数据。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<forcePerformanceCounterUniqueSharedMemoryReads>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<s >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +37,7 @@ enabled="true|false"/>
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`false`|Perfcounter finish 不使用 CategoryOptions 注册表设置，这是默认设置。|  
 |`true`|Perfcounter finish 使用 CategoryOptions 注册表设置。|  
@@ -59,12 +57,12 @@ enabled="true|false"/>
   
  从 .NET Framework 4 开始，使用性能计数器时，Perfcounter finish 会检查每个提供程序的 CategoryOptions 注册表项，以确定是否应从特定于类别的共享内存或全局共享内存中读取。 .NET Framework 1.1 Perfcounter finish 无法读取该注册表项，因为它不知道特定于类别的共享内存;它始终从全局共享内存进行读取。  
   
- 为实现向后兼容性，在 .NET Framework 1.1 应用程序中运行时，.NET Framework 4 Perfcounter finish 不检查 CategoryOptions 注册表项。 它只使用全局共享内存，就像 .NET Framework 1.1 Perfcounter finish 一样。 但是，可以通过启用`<forcePerformanceCounterUniqueSharedMemoryReads>`元素指示 .NET Framework 4 perfcounter finish 检查注册表设置。  
+ 为实现向后兼容性，在 .NET Framework 1.1 应用程序中运行时，.NET Framework 4 Perfcounter finish 不检查 CategoryOptions 注册表项。 它只使用全局共享内存，就像 .NET Framework 1.1 Perfcounter finish 一样。 但是，可以通过启用 `<forcePerformanceCounterUniqueSharedMemoryReads>` 元素指示 .NET Framework 4 Perfcounter finish 检查注册表设置。  
   
 > [!NOTE]
-> `<forcePerformanceCounterUniqueSharedMemoryReads>`启用元素并不保证将使用特定于类别的共享内存。 设置为`true`仅导致 perfcounter finish 引用 CategoryOptions 注册表设置。 CategoryOptions 的默认设置是使用特定于类别的共享内存;但是，您可以更改 CategoryOptions 以指示应使用全局共享内存。  
+> 启用 `<forcePerformanceCounterUniqueSharedMemoryReads>` 元素不保证将使用特定于类别的共享内存。 "启用" 设置为 "`true` 仅导致 Perfcounter finish 引用 CategoryOptions 注册表设置。 CategoryOptions 的默认设置是使用特定于类别的共享内存;但是，您可以更改 CategoryOptions 以指示应使用全局共享内存。  
   
- 包含 CategoryOptions 设置的注册表项为 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\< 类别名称 \Performance.\> 默认情况下，CategoryOptions 设置为3，指示 Perfcounter finish 使用特定于类别的共享内存。 如果将 CategoryOptions 设置为0，则 Perfcounter finish 将使用全局共享内存。 仅当正在创建的实例的名称与重复使用的实例相同时，才会重新使用实例数据。 所有版本都可以写入该类别。 如果 CategoryOptions 设置为1，则使用全局共享内存，但如果类别名称与要重用的类别的长度相同，则可以重用实例数据。  
+ 包含 CategoryOptions 设置的注册表项为 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\< 类别名称\>\Performance。 默认情况下，CategoryOptions 设置为3，指示 Perfcounter finish 使用特定于类别的共享内存。 如果将 CategoryOptions 设置为0，则 Perfcounter finish 将使用全局共享内存。 仅当正在创建的实例的名称与重复使用的实例相同时，才会重新使用实例数据。 所有版本都可以写入该类别。 如果 CategoryOptions 设置为1，则使用全局共享内存，但如果类别名称与要重用的类别的长度相同，则可以重用实例数据。  
   
  设置0和1可能会导致内存泄漏和填充性能计数器内存。  
   

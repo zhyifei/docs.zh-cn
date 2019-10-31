@@ -2,14 +2,12 @@
 title: <TypeParameter>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0de00b9313b60b3a527dd0380ae90d82731a8c02
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c69b535f3a01c287d30189138130066fc10a77e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049065"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128923"
 ---
 # <a name="typeparameter-element-net-native"></a>\<TypeParameter > 元素（.NET Native）
 将策略应用到以传递到方法为代表的类型参数类型。  
@@ -51,13 +49,13 @@ ms.locfileid: "71049065"
   
 ## <a name="name-attribute"></a>Name 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |parameter_name|类型 <xref:System.Type> 的参数名称。 例如，对于方法签名 `Type.GetInterfaceMap(Type interfaceType)`，`Name` 特性的值为“接口类型”。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |policy_setting|该设置将应用到这种策略类型。 可能值为 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   

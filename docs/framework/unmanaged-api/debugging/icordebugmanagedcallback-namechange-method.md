@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a7018a0e-880e-4b68-b52a-1cd22c7aad62
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: abbfd21736d220f1cba029235c71a85bf3048ff0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 456a79ec290964df8e9f74fc6ca19ef9aabe1230
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761617"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130679"
 ---
 # <a name="icordebugmanagedcallbacknamechange-method"></a>ICorDebugManagedCallback::NameChange 方法
-通知调试器的应用程序域或线程名称已更改。  
+通知调试器应用程序域或线程的名称已更改。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,15 +36,15 @@ HRESULT NameChange (
   
 ## <a name="parameters"></a>参数  
  `pAppDomain`  
- [in]指向 ICorDebugAppDomain 对象表示应用程序域的名称更改或，或者必须包含有名称的更改的线程。  
+ 中指向 ICorDebugAppDomain 对象的指针，该对象表示具有名称更改或包含名称更改的线程的应用程序域。  
   
  `pThread`  
- [in]指向表示发生了名称更改的线程的 ICorDebugThread 对象的指针。  
+ 中指向 ICorDebugThread 对象的指针，该对象表示名称发生更改的线程。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

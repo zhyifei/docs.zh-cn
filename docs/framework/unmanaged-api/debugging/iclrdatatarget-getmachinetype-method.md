@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5f1f9c61-3e3b-48b2-b111-a4395f7623a7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 958968fb1a84b598b0c3e92151fbad58fc5e79d4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 941d1b4057ef78a6235a0ba853e48a000f2087e8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738740"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122888"
 ---
 # <a name="iclrdatatargetgetmachinetype-method"></a>ICLRDataTarget::GetMachineType 方法
-获取目标进程正在使用的指令集的类型的标识符。  
+获取目标进程正在使用的指令集类型的标识符。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,12 +35,12 @@ HRESULT GetMachineType (
   
 ## <a name="parameters"></a>参数  
  `machineType`  
- [out]指向一个值，指示的指令集的目标进程正在使用。 返回`machineType`是 WinNT.h 中的标头文件中定义的 IMAGE_FILE_MACHINE 常量之一。  
+ 弄一个指向值的指针，该指针指示目标进程使用的指令集。 返回的 `machineType` 是在 WinNT 头文件中定义的 IMAGE_FILE_MACHINE 常量之一。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** ClrData.idl, ClrData.h  
+ **标头：** ClrData，ClrData  
   
  **库：** CorGuids.lib  
   

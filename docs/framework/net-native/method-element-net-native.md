@@ -2,14 +2,12 @@
 title: <Method>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d741f51abf02f4bfda2b007efd4c859027e54d9b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7b0e77e6dea29cbd5218ab3f6f992002efd51656
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049578"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128339"
 ---
 # <a name="method-element-net-native"></a>\<方法 > 元素（.NET Native）
 将运行时反射策略应用到一个构造函数或方法。  
@@ -37,19 +35,19 @@ ms.locfileid: "71049578"
   
 ## <a name="name-attribute"></a>Name 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |method_name|方法名。 该方法的类型是由 [\<Type>](type-element-net-native.md) 或 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 父元素定义的。|  
   
 ## <a name="signature-attribute"></a>签名特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |method_signature|形成方法签名的参数类型。 多个参数由逗号分隔，例如，`"System.String,System.Int32,System.Int32)"`。 参数类型名称应是完全限定的。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |policy_setting|该设置将应用到这种策略类型。 可能值为 `Auto`、`Excluded`、`Included` 和 `Required`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   

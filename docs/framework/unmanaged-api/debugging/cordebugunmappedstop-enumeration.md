@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a684f7d7-d0c2-4690-b721-639e613f11f8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c2ea0bf215c0d2abfe9beb29d736f893073d3be8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc02f63808b1929b93777c8bbc67c47000b0b424
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739506"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132750"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>CorDebugUnmappedStop 枚举
 指定未映射代码的类型，这些代码可以中断分档器代码执行。  
@@ -40,25 +38,25 @@ typedef enum CorDebugUnmappedStop {
 } CorDebugUnmappedStop;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`STOP_NONE`|不停止任何类型的非托管代码中。|  
-|`STOP_PROLOG`|停止在 prolog 代码中。|  
-|`STOP_EPILOG`|停止在 epilog 代码。|  
-|`STOP_NO_MAPPING_INFO`|在没有映射的信息的代码中停止。|  
-|`STOP_OTHER_UNMAPPED`|停止不适合 prolog、 epilog、 无映射信息或非托管的类别的未映射代码中。|  
-|`STOP_UNMANAGED`|在非托管代码中停止。 此值是有效仅使用互操作调试。|  
-|`STOP_ALL`|停止所有类型的非托管代码中。|  
+|`STOP_NONE`|请勿在任何类型的未映射代码中停止。|  
+|`STOP_PROLOG`|在 prolog 代码中停止。|  
+|`STOP_EPILOG`|在 epilog 代码中停止。|  
+|`STOP_NO_MAPPING_INFO`|在没有映射信息的代码中停止。|  
+|`STOP_OTHER_UNMAPPED`|在未映射的代码中停止，不适合 prolog、epilog、无映射-信息或非托管类别。|  
+|`STOP_UNMANAGED`|在非托管代码中停止。 此值仅适用于互操作调试。|  
+|`STOP_ALL`|在所有类型的未映射代码中停止。|  
   
 ## <a name="remarks"></a>备注  
- 使用[icordebugstepper:: Setunmappedstopmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)方法设置标志，用于指定将在其中停止分档器未映射的代码。  
+ 使用[ICorDebugStepper：： SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)方法设置标志，这些标志指定分档器将停止的未映射代码。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

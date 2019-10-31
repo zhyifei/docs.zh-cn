@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: 7d5385d3-f4a5-47c4-8478-a3513b5e9406
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e4bf3605331e6900fd890e49bb3f71f4ca4409c7
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 1f46866a1b975455acd294221e38ef3b4c358660
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377598"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140202"
 ---
 # <a name="icordebugvalue3-interface"></a>ICorDebugValue3 接口
-扩展了"ICorDebugValue"和"ICorDebugValue2"的接口以支持大于 2 GB 的数组。  
+扩展了 "ICorDebugValue" 和 "ICorDebugValue2" 接口，为大于 2 GB 的数组提供支持。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetSize64 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)|获取大小，以字节为单位，此`ICorDebugValue3`对象。|  
+|[GetSize64 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)|获取此 `ICorDebugValue3` 对象的大小（以字节为单位）。|  
   
 ## <a name="remarks"></a>备注  
- [Icordebugvalue:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)方法返回的对象大小的范围介于 0 到 2,147,483,647 个字节。 在.NET Framework 4.5 中，数组的大小可以超过 2 GB。 `ICorDebugValue3`接口使您能够确定这些数组的大小。  
+ [ICorDebugValue：： GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)方法返回的对象大小范围为0到2147483647字节。 在 .NET Framework 4.5 中，数组的大小可超过 2 GB。 `ICorDebugValue3` 接口使您能够确定这些数组的大小。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

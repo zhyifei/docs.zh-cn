@@ -10,14 +10,12 @@ api_type:
 ms.assetid: b22717b9-ead5-4eea-887e-789b52d613dc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a3eebdf56796fe599ec6ff62d7008d1af3be796e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: fc50fd7180aaf5c1cff2147268d34921eec39e8f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926839"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137767"
 ---
 # <a name="icordebugfunction3-interface"></a>ICorDebugFunction3 接口
 [仅在 .NET Framework 4.5.2 及更高版本中受支持]  
@@ -33,11 +31,11 @@ ms.locfileid: "70926839"
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl，Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
@@ -45,4 +43,4 @@ ms.locfileid: "70926839"
 
 - [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [ReJIT操作方法指南](https://blogs.msdn.microsoft.com/davbr/2011/10/12/rejit-a-how-to-guide/)
+- [ReJIT：操作方法指南](https://blogs.msdn.microsoft.com/davbr/2011/10/12/rejit-a-how-to-guide/)

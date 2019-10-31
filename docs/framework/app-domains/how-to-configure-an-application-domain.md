@@ -9,14 +9,12 @@ helpviewer_keywords:
 - application domains, configuring
 - ApplicationBase property
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 06883646982aa6bd642dc4fce7881a289dad5901
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ca28984fa4a328e33d8d9bf79641cc451160f5ea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053193"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119905"
 ---
 # <a name="how-to-configure-an-application-domain"></a>如何：配置应用程序域
 可以使用 <xref:System.AppDomainSetup> 类为新应用程序域提供含配置信息的公共语言运行时。 创建自己的应用程序域时，最重要的属性是 <xref:System.AppDomainSetup.ApplicationBase%2A>。 其他 AppDomainSetup 属性主要由运行时宿主用于配置特殊的应用程序域。  

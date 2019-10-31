@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8706356-d50b-4f87-a40c-39c3b7f4fd38
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 29fc1b491aa4e340c3d8ad6f761d0d6d901649ac
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 85f06b49aab1f1d1745bd7e359ed311c2ba1e44d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758561"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130979"
 ---
 # <a name="icordebugilframegetlocalvariable-method"></a>ICorDebugILFrame::GetLocalVariable 方法
-此 Microsoft 中间语言 (MSIL) 堆栈帧中获取指定的本地变量的值。  
+获取此 Microsoft 中间语言（MSIL）堆栈帧中的指定局部变量的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,18 +36,18 @@ HRESULT GetLocalVariable (
   
 ## <a name="parameters"></a>参数  
  `dwIndex`  
- [in]此 MSIL 堆栈帧中局部变量的索引。  
+ 中此 MSIL 堆栈帧中的局部变量的索引。  
   
  `ppValue`  
- [out]指向表示检索到的值的 ICorDebugValue 对象的地址的指针。  
+ 弄指向表示检索到的值的 ICorDebugValue 对象地址的指针。  
   
 ## <a name="remarks"></a>备注  
- `GetLocalVariable` MSIL 堆栈帧中或在实时 (JIT) 编译帧中，可以使用方法。  
+ `GetLocalVariable` 方法可用于 MSIL 堆栈帧或实时（JIT）编译的帧中。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

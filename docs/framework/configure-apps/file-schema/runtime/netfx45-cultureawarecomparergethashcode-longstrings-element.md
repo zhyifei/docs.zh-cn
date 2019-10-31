@@ -7,21 +7,19 @@ helpviewer_keywords:
 - GetHashCode method
 - hash codes, calculating
 ms.assetid: 3a5f38d1-ebc8-44de-aaeb-2929f6e6b48f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ef814d1b5f32359033e8a19999d6271677315fff
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 193f9a15768e4060d977063117c07558bbb1d766
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252421"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116132"
 ---
 # <a name="netfx45_cultureawarecomparergethashcode_longstrings-element"></a>\<NetFx45_CultureAwareComparerGetHashCode_LongStrings > 元素
 
 指定运行时是否使用固定的内存量来计算 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法的哈希代码。
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
 &nbsp;&nbsp;&nbsp;&nbsp; **\<NetFx45_CultureAwareComparerGetHashCode_LongStrings >**  
 
 ## <a name="syntax"></a>语法
@@ -42,7 +40,7 @@ ms.locfileid: "70252421"
 
 ## <a name="enabled-attribute"></a>enabled 特性
 
-|值|Description|
+|“值”|描述|
 |-----------|-----------------|
 |0|公共语言运行时为 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法分配可变的内存量来计算哈希代码。 这是默认设置。|
 |1|公共语言运行时为 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法分配固定的内存量来计算哈希代码。|

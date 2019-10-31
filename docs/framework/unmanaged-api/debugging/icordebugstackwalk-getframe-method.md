@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4083b505-5b59-44fb-8c5d-129db6a96c10
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 81c3eec9b33f51bd30cf8724eaf010d7cd0b6cd4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 77210edfdc954f38ff06bc43a8b41a6abe8dc3d6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760923"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131841"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>ICorDebugStackWalk::GetFrame 方法
-获取当前帧[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)对象。  
+获取[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)对象中的当前帧。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,28 +33,28 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
   
 ## <a name="parameters"></a>参数  
  `pFrame`  
- [in]指向表示的当前帧的堆栈创建的框架对象的地址的指针。  
+ 中指向所创建的帧对象的地址的指针，该对象表示堆栈中的当前帧。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|在运行时成功地返回当前帧。|  
-|E_FAIL|不返回当前帧。|  
+|S_OK|运行时成功返回了当前帧。|  
+|E_FAIL|当前帧未返回。|  
 |S_FALSE|当前帧是本机堆栈帧。|  
 |E_INVALIDARG|`pFrame` 为 null。|  
-|CORDBG_E_PAST_END_OF_STACK|帧指针已末尾的堆栈;因此，可以不访问任何其他帧。|  
+|CORDBG_E_PAST_END_OF_STACK|帧指针已位于堆栈末尾;因此，不能访问其他帧。|  
   
-## <a name="exceptions"></a>Exceptions  
+## <a name="exceptions"></a>异常  
   
 ## <a name="remarks"></a>备注  
- `ICorDebugStackWalk` 返回仅实际的堆栈帧。 使用[ICorDebugThread3::GetActiveInternalFrames](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md)方法以返回内部帧。 （内部帧是推送到堆栈上由运行时存储临时数据的数据结构。）  
+ `ICorDebugStackWalk` 仅返回实际的堆栈帧。 使用[ICorDebugThread3：： GetActiveInternalFrames](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md)方法返回内部帧。 （内部帧是由运行时推送到堆栈上的数据结构，用于存储临时数据。）  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

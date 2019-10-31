@@ -6,14 +6,12 @@ helpviewer_keywords:
 - fusion enumerations [.NET Framework]
 - enumerations [.NET Framework fusion]
 ms.assetid: 5817b4bc-b0ba-4b2f-a11c-a03dd8cb8f84
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e7670e19d764518cc8d88f702f169610b72642a9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9a030d1f0ec6cc4fd7ca526574caa4c281e2573e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795327"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108508"
 ---
 # <a name="fusion-enumerations"></a>合成枚举
 本部分介绍了合成 API 使用的非托管枚举。  
@@ -35,7 +33,7 @@ ms.locfileid: "70795327"
  指示由[CompareAssemblyIdentity](compareassemblyidentity-function.md)函数确定的两个程序集标识的等效性。  
   
  [CREATE_ASM_NAME_OBJ_FLAGS 枚举](create-asm-name-obj-flags-enumeration.md)  
- 指定当 [CreateAssemblyNameObject](createassemblynameobject-function.md) 函数构造对象时，该`IAssemblyName`对象的属性 。  
+ 指定由[CreateAssemblyNameObject](createassemblynameobject-function.md)函数构造的 `IAssemblyName` 对象的特性。  
   
 ## <a name="related-sections"></a>相关章节  
  [合成接口](fusion-interfaces.md)  

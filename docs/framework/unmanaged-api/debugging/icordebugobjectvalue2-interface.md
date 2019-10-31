@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: f93cc2ec-0a12-4499-9bf6-405dc58c9a81
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 14c701f4e1aeed887598e4f17e600a03de4cf078
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 34886b8f99715abe1f1abaa062d465002fbf98a7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943320"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129732"
 ---
 # <a name="icordebugobjectvalue2-interface"></a>ICorDebugObjectValue2 接口
 
@@ -31,7 +29,7 @@ ms.locfileid: "69943320"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetVirtualMethodAndType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType`尚未实现。|  
+|[GetVirtualMethodAndType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue2-getvirtualmethodandtype-method.md)|尚未实现 `GetVirtualMethodAndType`。|  
   
 ## <a name="remarks"></a>备注  
   
@@ -39,13 +37,13 @@ ms.locfileid: "69943320"
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl, Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
- **NET Framework 版本:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

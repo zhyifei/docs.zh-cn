@@ -9,14 +9,12 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de5ae03ab885c4368e39b6339b5a14d1082e6df5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: e670f5dba47393b7df047fb4e6f7d92df8cb187c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972869"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119806"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>如何：将程序集安装到全局程序集缓存
 
@@ -26,13 +24,13 @@ ms.locfileid: "70972869"
 - [全局程序集缓存工具](#global-assembly-cache-tool)
 
 > [!IMPORTANT]
-> 可以只将强名称程序集安装到全局程序集缓存中。 有关如何创建强名称程序集的信息，请参阅[如何：使用强名称为程序集签名](../../standard/assembly/sign-strong-name.md)。
+> 可以只将强名称程序集安装到全局程序集缓存中。 有关如何创建具有强名称的程序集的信息，请参阅[如何：使用强名称为程序集签名](../../standard/assembly/sign-strong-name.md)。
 
 ## <a name="windows-installer"></a>Windows Installer
 
 建议使用 [Windows Installer](/windows/desktop/Msi/installation-of-assemblies-to-the-global-assembly-cache)（即 Windows 安装引擎）将程序集添加到全局程序集缓存。 Windows Installer 可提供全局程序集缓存中程序集的引用计数，还具有其他优点。 若要创建 Windows Installer 的安装程序包，请使用[适用于 Visual Studio 2017 的 WiX 工具集扩展](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension)。
 
-## <a name="global-assembly-cache-tool"></a>全局程序集缓存工具
+## <a name="global-assembly-cache-tool"></a>“全局程序集缓存”工具
 
 可以使用 [.NET 全局程序集实用程序 (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) 将程序集添加到全局程序集缓存，并查看全局程序集缓存的内容。
 
@@ -61,6 +59,6 @@ gacutil -i hello.dll
 ## <a name="see-also"></a>请参阅
 
 - [使用程序集和全局程序集缓存](working-with-assemblies-and-the-gac.md)
-- [如何：从全局程序集缓存中删除程序集](how-to-remove-an-assembly-from-the-gac.md)
+- [如何：从全局程序集缓存中移除程序集](how-to-remove-an-assembly-from-the-gac.md)
 - [Gacutil.exe（全局程序集缓存工具）](../tools/gacutil-exe-gac-tool.md)
 - [如何：使用强名称为程序集签名](../../standard/assembly/sign-strong-name.md)

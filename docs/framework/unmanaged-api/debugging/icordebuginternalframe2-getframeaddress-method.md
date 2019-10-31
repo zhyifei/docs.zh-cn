@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ee8d058-ffc8-4967-9133-a5adfef4e518
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3062e636921ea959716a500dae689fbe07915006
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 40e64bdb35cff4e6ad6132c0806cfddd2767443c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759996"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122679"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>ICorDebugInternalFrame2::GetFrameAddress 方法
 返回内部帧的堆栈地址。  
@@ -35,24 +33,24 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
   
 ## <a name="parameters"></a>参数  
  `pAddress`  
- [out]指向`CORDB_ADDRESS`内部帧。  
+ 弄指向内部框架的 `CORDB_ADDRESS` 的指针。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|成功地返回内部帧的地址。|  
-|E_FAIL|不会返回内部帧的地址。|  
+|S_OK|已成功返回内部帧的地址。|  
+|E_FAIL|无法返回内部帧的地址。|  
 |E_INVALIDARG|`pAddress` 为 `null`。|  
   
 ## <a name="remarks"></a>备注  
- 中返回的值`pAddress`可用于确定相对于堆栈上的其他框架的内部帧的位置。 即使在基于 IA-64 的计算机上的内部帧位于堆栈仅，并且没有与后备存储区没有对应的指针。  
+ `pAddress` 中返回的值可用于确定内部帧相对于堆栈上其他帧的位置。 即使在基于 IA-64 的计算机上，内部帧也仅驻留在堆栈上，并且没有指向后备存储的相应指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

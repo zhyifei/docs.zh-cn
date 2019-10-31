@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 86f06245-9517-49be-8d8c-ca5deaf34c02
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a1b02bb74a61e64a3ed9875fcf88e018de9f6317
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8fc2abd0728115edbbfae42958d8013029523ed1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041439"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111360"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary 方法
 
-获取一个库提供程序回调接口, 该接口允许根据需要定位和加载特定于公共语言运行时 (CLR) 版本的调试库。
+获取一个库提供程序回调接口，该接口允许根据需要定位和加载特定于公共语言运行时（CLR）版本的调试库。
 
 ## <a name="syntax"></a>语法
 
@@ -47,7 +45,7 @@ HRESULT ProvideLibrary(
 中存储在 PE 文件的 COFF 文件头中的日期时间戳。
 
 `pLibraryProvider` \
-中存储在 PE 文件的 COFF 可选文件头中的字段。`SizeOfImage`
+中存储在 PE 文件的 COFF 可选文件头中的 `SizeOfImage` 字段。
 
 `hModule` \
 弄请求的模块的句柄。
@@ -60,26 +58,26 @@ HRESULT ProvideLibrary(
 |-------------|-----------------|
 |S_OK|该方法已成功完成。|
 
-## <a name="exceptions"></a>Exceptions
+## <a name="exceptions"></a>异常
 
 ## <a name="remarks"></a>备注
 
-`ProvideLibrary`允许调试器提供调试特定 CLR 文件 (如 mscordbi.dll 和 mscordacwks) 所需的模块。 模块句柄必须保持有效, 直到对[ICLRDebugging:: CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)方法的调用指示它们可能已被释放, 此时调用方负责释放句柄。
+`ProvideLibrary` 允许调试器提供调试特定 CLR 文件（如 mscordbi.dll 和 mscordacwks）所需的模块。 模块句柄必须保持有效，直到对[ICLRDebugging：： CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)方法的调用指示它们可能已被释放，此时调用方负责释放句柄。
 
 调试器可以使用任何可用的方法来查找或获取调试模块。
 
 > [!IMPORTANT]
-> 此功能允许 API 调用方提供包含可执行文件的模块, 并提供可能的恶意代码。 作为一种安全预防措施, 调用方不`ProvideLibrary`应使用分发任何不愿意自行执行的代码。
+> 此功能允许 API 调用方提供包含可执行文件的模块，并提供可能的恶意代码。 作为一种安全预防措施，调用方不应使用 `ProvideLibrary` 来分发不愿意自行执行的任何代码。
 >
-> 如果在已发布的库 (如 mscordbi.dll 或 mscordacwks) 中发现了严重的安全问题, 则可以对填充程序进行修补, 以识别文件的不正确版本。 然后, 填充程序可以为文件的已修补版本发出请求, 并拒绝不正确的版本 (如果提供这些文件以响应任何请求)。 仅当用户已修补新的填充码版本时, 才会发生这种情况。 未修补的版本将仍然容易受到攻击。
+> 如果在已发布的库（如 mscordbi.dll 或 mscordacwks）中发现了严重的安全问题，则可以对填充程序进行修补，以识别文件的不正确版本。 然后，填充程序可以为文件的已修补版本发出请求，并拒绝不正确的版本（如果提供这些文件以响应任何请求）。 仅当用户已修补新的填充码版本时，才会发生这种情况。 未修补的版本将仍然容易受到攻击。
 
 ## <a name="requirements"></a>要求
 
-**适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
 
-**标头：** Cordebug.idl, Cordebug.idl
+**标头**：CorDebug.idl、CorDebug.h
 
-**类库**CorGuids.lib
+**库：** CorGuids.lib
 
 **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
 

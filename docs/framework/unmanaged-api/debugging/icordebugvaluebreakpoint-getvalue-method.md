@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 52a73654-bc47-48b6-b2b1-a4456b10140c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 639b34093e79933b4daaa0e3ae5223f1a1a51bf6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5924a3914c7fe04413b4a6744bce263b56165d78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773780"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140215"
 ---
 # <a name="icordebugvaluebreakpointgetvalue-method"></a>ICorDebugValueBreakpoint::GetValue 方法
-获取表示在其设置断点的对象的值的"ICorDebugValue"对象的接口指针。  
+获取一个指向 "ICorDebugValue" 对象的接口指针，该对象表示在其上设置断点的对象的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,12 +35,12 @@ HRESULT GetValue (
   
 ## <a name="parameters"></a>参数  
  `ppValue`  
- [out]指向的地址的指针`ICorDebugValue`对象。  
+ 弄指向 `ICorDebugValue` 对象地址的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

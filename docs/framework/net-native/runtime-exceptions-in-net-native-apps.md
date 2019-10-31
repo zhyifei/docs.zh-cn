@@ -2,14 +2,12 @@
 title: .NET 本机应用中的运行时异常
 ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 27a2e0906343d115c47230c726efb74cd51d4c93
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3132e2c9502c91cbfa0b120f664fd0c6f99a2663
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049163"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128148"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>.NET 本机应用中的运行时异常
 请务必在通用 Windows 平台应用程序的目标平台上测试它们的发布版本，因为调试和发布配置完全不同。 默认情况下，调试配置使用 .NET Core 运行时来编译应用程序，但发布配置使用 .NET 本机将应用程序编译为本机代码。  
@@ -28,7 +26,7 @@ ms.locfileid: "71049163"
   
 - 尽可能减小了可执行文件的大小。 .NET 本机减小可执行文件的大小的方法之一是大量清理运行时异常消息， [Runtime exception messages](#Messages) 部分中更详细地讨论了这一主题。  
   
-- 很大程度优化了你的代码。 这意味着只要有可能就会使用该内联。 （内联将代码从外部例程移动到调用例程。） 事实上 .NET 本机提供专用的运行时并实现积极内联，影响在调试时显示的调用堆栈。  有关详细信息，请参阅 [Runtime call stack](#CallStack) 部分。  
+- 很大程度优化了你的代码。 这意味着只要有可能就会使用该内联。 （内联将代码从外部例程移到调用例程中。）  .NET Native 提供专用运行时并实现主动内联会影响在调试时显示的调用堆栈。  有关详细信息，请参阅 [Runtime call stack](#CallStack) 部分。  
   
 > [!NOTE]
 > 通过选中或取消选中“使用 .NET 本机工具链进行编译” 框，可以控制是否使用 .NET 本机工具链编译调试和发布版本。   但是，请注意 Windows 应用商店将始终使用 .NET 本机工具链编译你的应用程序的生产版本。  

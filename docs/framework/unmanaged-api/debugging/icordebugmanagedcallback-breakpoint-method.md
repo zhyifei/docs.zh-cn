@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 60b279b0-a726-46d2-8c53-76986a007ebb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f49fac3951c130c3cf06b6861beb06b89c27dfb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a4f7d4f422d80d044bcb92065dbefc7f421a069
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759888"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122602"
 ---
 # <a name="icordebugmanagedcallbackbreakpoint-method"></a>ICorDebugManagedCallback::Breakpoint 方法
-遇到断点时，会通知调试器。  
+遇到断点时，通知调试器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,18 +37,18 @@ HRESULT Breakpoint (
   
 ## <a name="parameters"></a>参数  
  `pAppDomain`  
- [in]指向一个 ICorDebugAppDomain 对象，表示包含断点的应用程序域的指针。  
+ 中指向 ICorDebugAppDomain 对象的指针，该对象表示包含断点的应用程序域。  
   
  `pThread`  
- [in]指向一个 ICorDebugThread 对象，表示包含断点的线程的指针。  
+ 中指向 ICorDebugThread 对象的指针，该对象表示包含断点的线程。  
   
  `pBreakpoint`  
- [in]指向一个 ICorDebugBreakpoint 对象，表示该断点的指针。  
+ 中指向表示断点的 ICorDebugBreakpoint 对象的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

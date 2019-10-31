@@ -13,14 +13,12 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c0b3c9d13267abe50ee187bce0c56485be29613
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 78f89c3c8784467d3ec396106de7bbb34a2022f6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775284"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121955"
 ---
 # <a name="applying-interop-attributes"></a>应用互操作特性
 <xref:System.Runtime.InteropServices> 命名空间提供三类特定于互操作的特性：在设计时由你应用的特性、在转换进程中由 COM 互操作工具和 API 应用的特性以及由你或 COM 互操作应用的特性。  

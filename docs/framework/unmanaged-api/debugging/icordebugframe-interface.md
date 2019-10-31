@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c48f764-3c64-4602-b2f4-4ffc60eb2c65
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d4744ea67d0ce0d9ad2b13c45bdef65f884ef925
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5aeea11b7e61869968aafe3425e27d6004f495ea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937006"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124063"
 ---
 # <a name="icordebugframe-interface"></a>ICorDebugFrame 接口
 
@@ -31,14 +29,14 @@ ms.locfileid: "69937006"
   
 |方法|描述|  
 |------------|-----------------|  
-|[CreateStepper 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-createstepper-method.md)|获取用于执行与此`ICorDebugFrame`相关的单步执行操作的 ICorDebugStepper。|  
-|[GetCallee 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcallee-method.md)|获取一个指针, 该`ICorDebugFrame`指针指向此框架调用的当前链中的, 如果这是链中的最内层帧, 则返回 null。|  
-|[GetCaller 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcaller-method.md)|获取指向当前链中`ICorDebugFrame`调用此帧的的指针, 如果这是链中最外层的帧, 则返回 null。|  
-|[GetChain 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getchain-method.md)|获取一个指针, 该指针指向`ICorDebugFrame`作为的一部分的 ICorDebugChain。|  
-|[GetCode 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md)|获取一个指针, 该指针指向与此堆栈帧关联的 ICorDebugCode。|  
-|[GetFunction 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getfunction-method.md)|获取一个指向 ICorDebugFunction 的指针, 该指针包含与此堆栈帧关联的代码。|  
+|[CreateStepper 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-createstepper-method.md)|获取一个 ICorDebugStepper，以执行与此 `ICorDebugFrame`相关的单步执行操作。|  
+|[GetCallee 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcallee-method.md)|获取一个指针，该指针指向此框架调用的当前链中的 `ICorDebugFrame`，如果这是链中的最内层帧，则返回 null。|  
+|[GetCaller 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcaller-method.md)|获取指向当前链中调用此帧的 `ICorDebugFrame` 的指针，如果这是链中最外层的帧，则返回 null。|  
+|[GetChain 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getchain-method.md)|获取一个指针，该指针指向 `ICorDebugFrame` 所属的 ICorDebugChain。|  
+|[GetCode 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md)|获取一个指针，该指针指向与此堆栈帧关联的 ICorDebugCode。|  
+|[GetFunction 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getfunction-method.md)|获取一个指向 ICorDebugFunction 的指针，该指针包含与此堆栈帧关联的代码。|  
 |[GetFunctionToken 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getfunctiontoken-method.md)|获取包含与此堆栈帧关联的代码的函数的元数据标记。|  
-|[GetStackRange 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getstackrange-method.md)|获取此`ICorDebugFrame`所表示的堆栈帧的绝对地址范围。|  
+|[GetStackRange 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getstackrange-method.md)|获取此 `ICorDebugFrame`所表示的堆栈帧的绝对地址范围。|  
   
 ## <a name="remarks"></a>备注  
   
@@ -46,11 +44,11 @@ ms.locfileid: "69937006"
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl, Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

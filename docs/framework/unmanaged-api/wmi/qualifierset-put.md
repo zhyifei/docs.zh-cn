@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Put function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 40688a0e4273233245d00fcd927f95945a43f712
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a35025c6d16455a51b7b22d822ba77337ddd894a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798268"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120237"
 ---
 # <a name="qualifierset_put-function"></a>QualifierSet_Put 函数
 
@@ -53,12 +51,12 @@ HRESULT QualifierSet_Put (
 中要写入的限定符的名称。
 
 `pVal`\
-中指向包含要写入的`VARIANT`限定符的有效的指针。 此参数不能为 `null`。
+中指向包含要写入的限定符的有效 `VARIANT` 的指针。 此参数不能为 `null`。
 
 `lFlavor`\
-中以下常量之一，定义此限定符所需的限定符风格。 默认值为`WBEM_FLAVOR_OVERRIDABLE` （0）。
+中以下常量之一，定义此限定符所需的限定符风格。 默认值为 `WBEM_FLAVOR_OVERRIDABLE` （0）。
 
-|返回的常量  |值  |Description  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | 限定符可以在派生类或实例中重写。 **这是默认值。** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | 限定符传播到实例。 |
@@ -70,12 +68,12 @@ HRESULT QualifierSet_Put (
 
 此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | 尝试在不能是键的属性上指定**密钥**限定符。 键在对象的类定义中指定，不能基于每个实例进行更改。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数无效。 |
-| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | `pVal`参数不是合法的限定符类型。 |
-| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | 不能对限定符调用`QualifierSet_Put`方法，因为所属对象不允许替代。 |
+| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | `pVal` 参数不是合法的限定符类型。 |
+| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | 不能对限定符调用 `QualifierSet_Put` 方法，因为所属对象不允许替代。 |
 | `WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
 
 ## <a name="remarks"></a>备注
@@ -84,9 +82,9 @@ HRESULT QualifierSet_Put (
 
 ## <a name="requirements"></a>要求
 
-**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。
 
-**标头：** WMINet_Utils.idl
+**标头：** WMINet_Utils .idl
 
 **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

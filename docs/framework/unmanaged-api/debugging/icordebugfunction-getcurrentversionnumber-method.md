@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c3af1575-cbe6-457a-bc08-c53460edcbc8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: be66e0e2c9aff788d1003878891b8d64d6353500
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0530ba742a739003bfa33079ad75cb1e6f5f5e59
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754700"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124021"
 ---
 # <a name="icordebugfunctiongetcurrentversionnumber-method"></a>ICorDebugFunction::GetCurrentVersionNumber 方法
-获取对此 ICorDebugFunction 对象所表示的函数所做的最新编辑的版本号。  
+获取对此 ICorDebugFunction 对象所表示的函数进行的最新编辑的版本号。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,15 +35,15 @@ HRESULT GetCurrentVersionNumber (
   
 ## <a name="parameters"></a>参数  
  `pnCurrentVersion`  
- [out]指向一个整数值，是对此函数所做的最新编辑的版本号的指针。  
+ 弄指向整数值的指针，该整数值是对此函数进行的最新编辑的版本号。  
   
 ## <a name="remarks"></a>备注  
- 对此函数所做的最新编辑的版本号可能大于函数本身的版本号。 可以使用两种[ICorDebugFunction2::GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md)方法或[icordebugcode:: Getversionnumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md)方法来检索该函数的版本号。  
+ 对此函数进行的最新编辑的版本号可能大于函数本身的版本号。 使用[ICorDebugFunction2：： GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md)方法或[ICorDebugCode：： GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md)方法检索函数的版本号。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

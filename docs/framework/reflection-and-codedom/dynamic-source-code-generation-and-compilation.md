@@ -10,14 +10,12 @@ helpviewer_keywords:
 - source code in multiple languages
 - languages, multiple language support by CodeDOM
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5fb95ab7ff4fcac7169238d90637d7b83078d6dd
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a7e341bb5bfb5b4648a222409951275169a29b79
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046106"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130245"
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>动态源代码生成和编译
 .NET Framework 包括一个名为代码文档对象模型 (CodeDOM) 的机制。通过该机制，发出源代码的程序开发者可基于一种表示要呈现的代码的单一模型，在运行时以多种编程语言生成源代码。  

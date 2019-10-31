@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6ef8ac9b-9803-4b65-8b13-25f3e0b1bc6b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b518a3be939c70b207a71d79a3d362dba26fd3d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2f91891164f1f80617cab10347eb4a7a08762c10
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774198"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140350"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>ICorPublishAppDomain::GetName 方法
-获取表示此应用程序域的名称[ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)。  
+获取此[ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)所表示的应用程序域的名称。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,20 +41,20 @@ HRESULT GetName (
  [in] `szName` 数组的大小。  
   
  `pcchName`  
- [out]指向宽字符，包括在返回的 null 字符数的`szName`数组。  
+ 弄一个指针，指向在 `szName` 数组中返回的宽字符数，包括 null 字符。  
   
  `szName`  
- [out]要在其中存储名称数组。  
+ 弄要在其中存储名称的数组。  
   
 ## <a name="remarks"></a>备注  
- 如果`szName`为非 null`GetName`方法将最多复制`cchName`字符 （包括 null 终止符） 到`szName`。 如果返回了非 null `pcchName`，实际名称 （包括 null 终止符） 中的字符数存储在`szName`数组。  
+ 如果 `szName` 为非 null，则 `GetName` 方法会将最多 `cchName` 个字符（包括 null 结束符）复制到 `szName`中。 如果在 `pcchName`中返回非 null，则名称中的实际字符数（包括 null 终止符）将存储在 `szName` 数组中。  
   
- `GetName`方法返回 S_OK HRESULT 而不考虑已复制的字符数。  
+ 无论复制了多少个字符，`GetName` 方法都将返回 S_OK HRESULT。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorPub.idl CorPub.h  
+ **标头：** CorPub，CorPub  
   
  **库：** CorGuids.lib  
   

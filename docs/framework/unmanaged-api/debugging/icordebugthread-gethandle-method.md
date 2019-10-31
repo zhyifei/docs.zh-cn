@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 172ef8c4-2ead-4cfc-bd2e-dee4fb7191cd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54981be7104eb04ac6347ad13b61a69f40d4377c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 33219d9a67379244e23da49c13617a4c4a2fa66d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770621"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133456"
 ---
 # <a name="icordebugthreadgethandle-method"></a>ICorDebugThread::GetHandle 方法
-获取此 ICorDebugThread 的活动部分当前句柄。  
+获取此 ICorDebugThread 的活动部分的当前句柄。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,17 +35,17 @@ HRESULT GetHandle (
   
 ## <a name="parameters"></a>参数  
  `phThreadHandle`  
- [out]此线程的活动部分的句柄 HTHREAD 指向的指针。  
+ 弄指向 HTHREAD 的指针，该指针是此线程的活动部分的句柄。  
   
 ## <a name="remarks"></a>备注  
- 改变该句柄，因为该过程执行，并可能会因线程的不同部分。  
+ 该句柄可能在进程执行时发生更改，并且可能不同于线程的不同部分。  
   
- 调试 API 由拥有此句柄。 调试程序应使用它之前对其进行复制。  
+ 此句柄属于调试 API。 调试器应在使用之前进行复制。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

@@ -1,17 +1,15 @@
 ---
-title: ICorDebugSymbolProvider::GetCodeRange 方法
+title: ICorDebugSymbolProvider：： GetCodeRange 方法
 ms.date: 03/30/2017
 ms.assetid: 49a2451f-d250-4e73-aa96-9ff49d9f11c6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 18fd8fdf9bcfa20b686ad1f04cd8dcc3b1c26de2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84bf545fedf3a6c7915d94fd0c2630268585b6eb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964642"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138922"
 ---
-# <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider::GetCodeRange 方法
+# <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider：： GetCodeRange 方法
 给定方法的相对虚拟地址 (RVA)，获取该方法的起始地址和大小。  
   
 ## <a name="syntax"></a>语法  
@@ -40,11 +38,11 @@ HRESULT GetCodeRange(
 > 此方法仅适用于 .NET Native。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl, Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

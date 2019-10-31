@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 66ec04e9-87cb-42ce-9720-81522abb5d5a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dde8971f9f08cc9e0930f6ea133d9a06b22e4c96
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d13c5be314dc39f3e7b42a8d6b13f6a25751067d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761419"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130713"
 ---
 # <a name="icordebugmanagedcallbackloadmodule-method"></a>ICorDebugManagedCallback::LoadModule 方法
-通知调试器已成功加载了公共语言运行时 (CLR) 模块。  
+通知调试器已成功加载公共语言运行时（CLR）模块。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,18 +36,18 @@ HRESULT LoadModule (
   
 ## <a name="parameters"></a>参数  
  `pAppDomain`  
- [in]指向一个 ICorDebugAppDomain 对象，表示在其中加载的模块的应用程序域的指针。  
+ 中指向 ICorDebugAppDomain 对象的指针，该对象表示已加载该模块的应用程序域。  
   
  `pModule`  
- [in]指向一个 icor 调试模块对象，表示 CLR 模块的指针。  
+ 中指向 ICorDebugModule 对象的指针，该对象表示 CLR 模块。  
   
 ## <a name="remarks"></a>备注  
- `LoadModule`回调提供适当的时间来检查模块的元数据、 设置在实时 (JIT) 编译器标志，或启用或禁用类加载模块的回调。  
+ `LoadModule` 回调提供适当的时间来检查模块的元数据、设置实时（JIT）编译器标志，或者为模块启用或禁用类加载回调。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], how-tos
 - application domains, how-tos
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b5d7f97a4ec67e4932aaee922897a16362f6a78c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bcb2ae00b02571b97dfc23100a1e5a7d3e7d8f12
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053227"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119993"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>应用程序域和程序集帮助主题
 以下各节包含使用应用程序域和程序集进行编程的相关概念性文档中的所有操作说明主题链接。  
@@ -27,15 +25,15 @@ ms.locfileid: "71053227"
   
 - [如何：将程序集加载到应用程序域中](how-to-load-assemblies-into-an-application-domain.md)  
   
-- [如何：从程序集获得类型和成员信息](../reflection-and-codedom/get-type-member-information.md)  
+- [如何：从程序集获取类型和成员信息](../reflection-and-codedom/get-type-member-information.md)  
   
  **程序集**  
   
-- [如何：确定程序集的完全限定名](../../standard/assembly/find-fully-qualified-name.md)  
+- [如何：确定程序集的完全限定的名称](../../standard/assembly/find-fully-qualified-name.md)  
   
 - [如何：生成单文件程序集](build-single-file-assembly.md)  
   
-- [如何：生成单文件程序集](build-multifile-assembly.md)  
+- [如何：生成多文件程序集](build-multifile-assembly.md)  
   
 - [如何：创建公钥/私钥对](../../standard/assembly/create-public-private-key-pair.md)  
   

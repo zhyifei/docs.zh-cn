@@ -6,14 +6,12 @@ helpviewer_keywords:
 - fusion interfaces [.NET Framework]
 - unmanaged interfaces [.NET Framework], fusion
 ms.assetid: e2cf98b7-40c1-4f74-86c7-8a76dd9da677
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1605605f8510f7ccf5f0bbf2f3f6b09050a16025
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 81c66825e69d9526abddfe06133426a2274ad08f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795302"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108185"
 ---
 # <a name="fusion-interfaces"></a>合成接口
 本节介绍了合成 API 用于访问应用程序资源属性的非托管接口，并为应用程序定位了这些资源的正确版本。  
@@ -29,7 +27,7 @@ ms.locfileid: "70795302"
  表示全局程序集缓存中的单个程序集。  
   
  [IAssemblyEnum 接口](iassemblyenum-interface.md)  
- 表示`IAssemblyName`对象数组的枚举器。  
+ 表示 `IAssemblyName` 对象的数组的枚举数。  
   
  [IAssemblyName 接口](iassemblyname-interface.md)  
  提供用于描述和处理程序集的唯一标识的方法。  
@@ -41,13 +39,13 @@ ms.locfileid: "70795302"
  表示定义当前作用域中的应用程序的代码的唯一签名。  
   
  [IEnumDefinitionIdentity 接口](ienumdefinitionidentity-interface.md)  
- 用作`IDefinitionIdentity`对象集合的枚举器。  
+ 用作 `IDefinitionIdentity` 对象的集合的枚举器。  
   
  [IEnumIDENTITY_ATTRIBUTE 接口](ienumidentity-attribute-interface.md)  
  用作当前范围中代码对象的特性的枚举数。  
   
  [IEnumReferenceIdentity 接口](ienumreferenceidentity-interface.md)  
- 用作对象集合的`IReferenceIdentity`枚举器。  
+ 用作 `IReferenceIdentity` 对象的集合的枚举器。  
   
  [IIdentityAuthority 接口](iidentityauthority-interface.md)  
  管理代码对象的标识键。  

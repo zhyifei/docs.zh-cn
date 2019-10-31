@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9fcefa98-750d-4168-8915-8173a43accf2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fc647805fcb7d8354a2540ac9424dc7155853444
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0b024d3396dfe1796fcb18afa122d4aee39c4ccc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745032"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132722"
 ---
 # <a name="icordebugchainenumerateframes-method"></a>ICorDebugChain::EnumerateFrames 方法
-获取一个枚举器包含在链中的所有托管的堆栈帧并从最新帧开始。  
+获取一个枚举数，该枚举数包含链中所有托管堆栈帧（从最新帧开始）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,17 +35,17 @@ HRESULT EnumerateFrames (
   
 ## <a name="parameters"></a>参数  
  `ppFrames`  
- [out]指向一个 ICorDebugFrameEnum 对象，它的堆栈帧的枚举器的地址的指针。  
+ 弄指向 ICorDebugFrameEnum 对象地址的指针，该对象是堆栈帧的枚举器。  
   
 ## <a name="remarks"></a>备注  
- 链表示在线程的物理调用堆栈。  
+ 链表示线程的物理调用堆栈。  
   
- `EnumerateFrames`应仅为托管链中调用方法。 调试 API 不提供用于获取非托管链中包含的帧的方法。 调试器必须使用其他方式获取此信息。  
+ 只应为托管链调用 `EnumerateFrames` 方法。 调试 API 不提供用于获取非托管链中包含的帧的方法。 调试器必须使用其他方法来获取此信息。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f24e1af9-c220-4f79-ae62-4153ec17ea81
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c24d6e9c42a091eafbe6d4bdee2bb4e055fd8852
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cff527aa7cde6a13667d47d030a0ef7db96ad5ba
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772033"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122335"
 ---
 # <a name="icordebugtypegetbase-method"></a>ICorDebugType::GetBase 方法
-如果存在，这表示的类型的表示基类型，ICorDebugType 到获取的接口指针`ICorDebugType`。  
+获取一个指向 ICorDebugType 的接口指针，该指针表示此 `ICorDebugType`表示的类型的基类型（如果存在）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,15 +35,15 @@ HRESULT GetBase (
   
 ## <a name="parameters"></a>参数  
  `pBase`  
- [out]指向的地址的指针`ICorDebugType`表示基类型的对象。  
+ 弄指向表示基类型的 `ICorDebugType` 对象地址的指针。  
   
 ## <a name="remarks"></a>备注  
- 查找一种类型的基类型可用于实现常见的调试器功能，例如打印出的对象或其父类的所有字段。  
+ 查找类型的基类型对于实现常见调试器功能非常有用，例如打印对象或其父类的所有字段。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

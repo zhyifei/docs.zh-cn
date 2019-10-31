@@ -1,17 +1,15 @@
 ---
-title: ICorDebugMergedAssemblyRecord::GetVersion 方法
+title: ICorDebugMergedAssemblyRecord：： GetVersion 方法
 ms.date: 03/30/2017
 ms.assetid: c6858b06-ae26-4312-b325-ea6025016675
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7d9133ab1b7d3985d3a383bb36dcbea315548c00
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0c89d0749281da412bbf71400d51bee1ed651fbe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939932"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129773"
 ---
-# <a name="icordebugmergedassemblyrecordgetversion-method"></a>ICorDebugMergedAssemblyRecord::GetVersion 方法
+# <a name="icordebugmergedassemblyrecordgetversion-method"></a>ICorDebugMergedAssemblyRecord：： GetVersion 方法
 获取程序集的版本信息。  
   
 ## <a name="syntax"></a>语法  
@@ -45,11 +43,11 @@ HRESULT GetVersion(
 > 此方法仅适用于 .NET Native。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl, Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

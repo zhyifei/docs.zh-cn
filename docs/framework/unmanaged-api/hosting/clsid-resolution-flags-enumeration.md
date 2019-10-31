@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: cd8b9879-962a-4811-aa46-2e2b6bae0d84
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5274e70c5bead201beb158ee2895415d7ec9e53c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d52f9f0bc2ff27d7849a80a424714aa84d3688fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779139"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137000"
 ---
-# <a name="clsidresolutionflags-enumeration"></a>CLSID_RESOLUTION_FLAGS 枚举
-包含指示公共语言运行时 (CLR) 应如何解析值`CLSID`。  
+# <a name="clsid_resolution_flags-enumeration"></a>CLSID_RESOLUTION_FLAGS 枚举
+包含指示公共语言运行时（CLR）应如何解析 `CLSID`的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,17 +33,17 @@ typedef enum {
 } CLSID_RESOLUTION_FLAGS;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
 |`CLSID_RESOLUTION_DEFAULT`|指示默认行为。|  
-|`CLSID_RESOLUTION_REGISTERED`|指示运行时注册表中搜索和应用程序策略。|  
+|`CLSID_RESOLUTION_REGISTERED`|指示运行时搜索注册表并应用填充码策略。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

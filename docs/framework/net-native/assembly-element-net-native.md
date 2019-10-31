@@ -2,14 +2,12 @@
 title: <Assembly>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1743264996680c6a0ce308619d7a5bafef5d07a5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bad2286c5306b9f8a8955ebef12e5e99aec5bb89
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049917"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128514"
 ---
 # <a name="assembly-element-net-native"></a>\<Assembly > 元素（.NET Native）
 将运行时反射策略应用到指定程序集中的所有类型。  
@@ -51,13 +49,13 @@ ms.locfileid: "71049917"
   
 ## <a name="name-attribute"></a>Name 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |assembly_name|程序集的简单名称，不要包含文件扩展名。 此特性对应 <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> 属性。 例如，一个名为 Extensions.dll 的程序集的名称为“Extensions”。<br /><br /> 你也可以指定文本字符串 `*Application*`，从而将策略应用到你的程序包中的所有程序集，而不管这些程序集是否已加载。 `*Application*` 从不会将策略应用到 .NET Framework 程序集。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |policy_setting|该设置将应用这个策略类型到该程序集中的所有类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e30c29f7-3f19-4081-b572-a731aa14cd44
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0f056e4ae233e70223755c1961cd3ee5da68ec90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 50794e96484432c8b7c203f6b8caa60130068a8c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745175"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122795"
 ---
 # <a name="icordebugbreakpointactivate-method"></a>ICorDebugBreakpoint::Activate 方法
-设置此活动的状态`ICorDebugBreakpoint`。  
+设置此 `ICorDebugBreakpoint`的活动状态。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,12 +35,12 @@ HRESULT Activate (
   
 ## <a name="parameters"></a>参数  
  `bActive`  
- [in]将此值设置为`true`来指定的状态为活动状态; 否则，将此值设置为`false`。  
+ 中将此值设置为 "`true`" 以将状态指定为 "活动";否则，请将此值设置为 `false`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

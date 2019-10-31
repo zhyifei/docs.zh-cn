@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: aae0f48c-4ede-4256-9251-a7fc85a229dc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 36a33b74a692761d772a888ce918aa28a2d92678
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c1d7db8aacaf81d47abd4a9cd972b44f56a3bb1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760552"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137513"
 ---
 # <a name="icordebugstepperstepout-method"></a>ICorDebugStepper::StepOut 方法
-导致此 ICorDebugStepper 单步执行其包含的线程，并完成时的当前帧将控制权返回给调用的帧。  
+使此 ICorDebugStepper 单步执行其包含线程，并在当前帧将控件返回到调用帧时完成。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,16 +32,16 @@ HRESULT StepOut ();
 ```  
   
 ## <a name="remarks"></a>备注  
- 一个`StepOut`操作将正常返回从当前帧的调用的帧后完成。  
+ 从当前帧返回到调用帧后，`StepOut` 操作将完成。  
   
- 如果`StepOut`时，将调用在非托管代码中，该步骤完成后，将当前帧返回到调用它的托管代码。  
+ 如果在非托管代码中调用 `StepOut`，则当当前帧返回到调用它的托管代码时，步骤将完成。  
   
- 在.NET Framework 2.0 版中，不要使用`StepOut`STOP_UNMANAGED 标志集因为这将会失败。 (使用[icordebugstepper:: Setunmappedstopmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)来设置标志的单步执行。)互操作调试程序必须跳出为本机代码本身。  
+ 在 .NET Framework 版本2.0 中，不要将 `StepOut` 与 STOP_UNMANAGED 标志一起使用，因为它将失败。 （使用[ICorDebugStepper：： SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)设置用于单步执行的标志。）互操作调试器必须自行单步执行到本机代码。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

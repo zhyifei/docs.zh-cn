@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6dfc220f-d0d4-45b3-bfce-5829f817766f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 926bdcee3a3c3974c8546f3a6dfe98f0b62c93c8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 23bc251053dd27a7c5accb48ab4759ecdb79fe09
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796571"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134310"
 ---
 # <a name="iassemblynameisequal-method"></a>IAssemblyName::IsEqual 方法
-根据指定的比较标志，确定指定的 [IAssemblyName](iassemblyname-interface.md) 对象是否等于此 `IAssemblyName`。  
+根据指定的比较标志，确定指定的[IAssemblyName](iassemblyname-interface.md)对象是否等于此 `IAssemblyName`。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,13 +36,13 @@ HRESULT IsEqual (
   
 ## <a name="parameters"></a>参数  
  `pName`  
- 中要`IAssemblyName`与此`IAssemblyName`进行比较的对象。  
+ 中要与此 `IAssemblyName`进行比较的 `IAssemblyName` 对象。  
   
  `dwCmpFlags`  
  中影响比较的[ASM_CMP_FLAGS](asm-cmp-flags-enumeration.md)值的按位组合。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 合成。h  
   

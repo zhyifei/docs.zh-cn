@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: ded1e492-a782-4185-9c66-709e421c1782
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a8f5e9a909a752dd8dc70bfc1c683b4611715f31
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3802354bf52cd2aab2a4149d565993b9965e8312
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767974"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138296"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg 函数
-通过使用从 XML 文件中读取的版本信息将公共语言运行时 (CLR) 加载到进程中。  
+使用从 XML 文件中读取的版本信息将公共语言运行时（CLR）加载到进程中。  
   
- .NET Framework 4 中已弃用此函数。  
+ 此函数已在 .NET Framework 4 中弃用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,32 +41,32 @@ HRESULT CorBindToRuntimeByCfg (
   
 ## <a name="parameters"></a>参数  
  `pCfgStream`  
- [in]一个指向`IStream`对象，它读取 XML 文件。  
+ 中指向读取 XML 文件的 `IStream` 对象的指针。  
   
  `reserved`  
- [in]保留供将来使用。 使用作为值 0 （零）。  
+ 中保留供将来使用。 使用0（零）作为值。  
   
  `startupFlags`  
- [in]值为[STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)枚举，用于指定 CLR 的启动行为。  
+ 中[STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)枚举的一个值，该值指定 CLR 的启动行为。  
   
  `rclsid`  
- [in]`CLSID`的实现的组件类[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)接口。 支持的值为 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
+ 中用于实现[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)接口的 coclass 的 `CLSID`。 支持的值为 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
   
  `riid`  
- [in]`IID`的任一`ICorRuntimeHost`或`ICLRRuntimeHost`接口。 支持的值为 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
+ 中`ICorRuntimeHost` 或 `ICLRRuntimeHost` 接口的 `IID`。 支持的值为 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
   
  `ppv`  
- [out]指向返回的接口的地址的指针。  
+ 弄指向返回的接口的地址的指针。  
   
 ## <a name="remarks"></a>备注  
- XML 文件的格式只被现代性的标准应用程序配置文件。 有关 XML 文件的详细信息，请参阅[配置文件架构](../../../../docs/framework/configure-apps/file-schema/index.md)。  
+ XML 文件的格式将建模为标准应用程序配置文件。 有关 XML 文件的详细信息，请参阅[配置文件架构](../../../../docs/framework/configure-apps/file-schema/index.md)。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** MSCorEE.dll  
+ **库：** Mscoree.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

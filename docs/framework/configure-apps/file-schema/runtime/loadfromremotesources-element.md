@@ -5,23 +5,21 @@ helpviewer_keywords:
 - loadFromRemoteSources element
 - <loadFromRemoteSources> element
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 83980d315c83aa5cc23944dbd271c29e0ed83206
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a4dbcd0a0b848e5ef57965b5b3f4fcee9161b724
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252467"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116565"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources > 元素
 指定是否应在 .NET Framework 4 及更高版本中将从远程源加载的程序集授予完全信任。
   
 > [!NOTE]
-> 如果由于 Visual Studio 项目错误列表中的错误消息或生成错误而定向到本文，请参阅[如何：在 Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))中使用 Web 程序集。  
+> 如果由于 Visual Studio 项目错误列表中的错误消息或生成错误而定向到本文，请参阅[如何：在 Visual studio 中使用 Web 程序集](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
 &nbsp;&nbsp;&nbsp;&nbsp; **\<loadFromRemoteSources >**  
   
 ## <a name="syntax"></a>语法  
@@ -42,7 +40,7 @@ ms.locfileid: "70252467"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`false`|不要向远程源的应用程序授予完全信任。 这是默认设置。|  
 |`true`|向远程源的应用程序授予完全信任。|  
@@ -61,7 +59,7 @@ ms.locfileid: "70252467"
 
 在 .NET Framework 3.5 及更早版本中，如果从远程位置加载程序集，程序集中的代码将以部分信任的方式与依赖于它的区域的授权集一起运行。 例如，如果从网站加载程序集，则该程序集将加载到 Internet 区域并被授予 Internet 权限集。 换句话说，它是在 Internet 沙箱中执行的。
 
-从 .NET Framework 4 开始，将禁用代码访问安全性（CAS）策略，并以完全信任方式加载程序集。 通常情况下，这会向用先前已进行沙盒<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>处理的方法加载的程序集授予完全信任。 为了防止出现这种情况，默认情况下，将禁用在从远程源加载的程序集中运行代码的功能。 默认情况下，如果尝试加载远程程序集， <xref:System.IO.FileLoadException>则会引发并引发如下异常消息：
+从 .NET Framework 4 开始，将禁用代码访问安全性（CAS）策略，并以完全信任方式加载程序集。 通常情况下，这会向用先前已进行沙盒处理 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法加载的程序集授予完全信任。 为了防止出现这种情况，默认情况下，将禁用在从远程源加载的程序集中运行代码的功能。 默认情况下，如果尝试加载远程程序集，则会引发 <xref:System.IO.FileLoadException>，并引发如下异常消息：
 
 ```text
 System.IO.FileNotFoundException: Could not load file or assembly 'file:assem.dll' or one of its dependencies. Operation is not supported. 
@@ -74,30 +72,30 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 若要加载程序集并执行其代码，你必须：
 
-- 为程序集显式创建沙盒（请参阅[如何：在沙盒](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)中运行部分受信任的代码。
+- 为程序集显式创建沙盒（请参阅[如何：在沙盒中运行部分受信任的代码](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)）。
 
-- 在完全信任环境中运行程序集的代码。 可以通过配置`<loadFromRemoteSources>`元素来执行此操作。 它使你能够指定在 .NET Framework 早期版本中以部分信任模式运行的程序集现在在 .NET Framework 4 及更高版本中以完全信任模式运行。
+- 在完全信任环境中运行程序集的代码。 为此，请配置 `<loadFromRemoteSources>` 元素。 它使你能够指定在 .NET Framework 早期版本中以部分信任模式运行的程序集现在在 .NET Framework 4 及更高版本中以完全信任模式运行。
 
 > [!IMPORTANT]
-> 如果程序集不应在完全信任环境中运行，请不要设置此配置元素。 而是创建一个可<xref:System.AppDomain>在其中加载程序集的沙盒。
+> 如果程序集不应在完全信任环境中运行，请不要设置此配置元素。 而是创建一个要在其中加载程序集的沙盒 <xref:System.AppDomain>。
 
-仅`enabled`当禁用代码`<loadFromRemoteSources>`访问安全性（CAS）时，元素的特性才有效。 默认情况下，CAS 策略在 .NET Framework 4 及更高版本中处于禁用状态。 如果将设置`enabled`为`true`，则会向远程程序集授予完全信任。
+仅当禁用代码访问安全性（CAS）时，`<loadFromRemoteSources>` 元素的 `enabled` 特性才有效。 默认情况下，CAS 策略在 .NET Framework 4 及更高版本中处于禁用状态。 如果将 `enabled` 设置为 `true`，则会向远程程序集授予完全信任。
 
-如果`enabled`未设置为`true`， <xref:System.IO.FileLoadException>则在以下条件之一下引发：
+如果 `enabled` 未设置为 `true`，则在下列情况下将引发 <xref:System.IO.FileLoadException>：
 
 - 当前域的沙盒行为与 .NET Framework 3.5 中的行为不同。 这要求禁用 CAS 策略，当前域不会进行沙盒处理。
 
-- 正在加载的程序集不是来自`MyComputer`区域。
+- 正在加载的程序集不是来自 `MyComputer` 区域。
 
-设置元素可`true`防止引发此异常。 `<loadFromRemoteSources>` 使用此方法，您可以指定不依赖公共语言运行时来对加载的程序集进行沙盒处理，以确保安全，并确保它们可以在完全信任的环境中执行。
+将 `<loadFromRemoteSources>` 元素设置为 `true` 可防止引发此异常。 使用此方法，您可以指定不依赖公共语言运行时来对加载的程序集进行沙盒处理，以确保安全，并确保它们可以在完全信任的环境中执行。
 
-## <a name="notes"></a>说明
+## <a name="notes"></a>注意
 
-- 在 .NET Framework 4.5 及更高版本中，本地网络共享上的程序集默认情况下以完全信任方式运行;您无需启用该`<loadFromRemoteSources>`元素。
+- 在 .NET Framework 4.5 及更高版本中，本地网络共享上的程序集默认情况下以完全信任方式运行;无需启用 `<loadFromRemoteSources>` 元素。
 
-- 如果应用程序是从 Web 复制而来，Windows 会将其标记为 Web 应用程序，即使它驻留在本地计算机上也不例外。 您可以通过更改其文件属性来更改该指定，或者可以使用`<loadFromRemoteSources>`元素授予程序集完全信任。 对于操作系统标记为从 Web 加载的本地程序集，也可以使用 <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> 方法进行加载。
+- 如果应用程序是从 Web 复制而来，Windows 会将其标记为 Web 应用程序，即使它驻留在本地计算机上也不例外。 您可以通过更改其文件属性来更改该指定，也可以使用 `<loadFromRemoteSources>` 元素向程序集授予完全信任权限。 对于操作系统标记为从 Web 加载的本地程序集，也可以使用 <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> 方法进行加载。
 
-- 你可能会<xref:System.IO.FileLoadException>在正在运行的应用程序中获取 Windows 虚拟 PC 应用程序。 当你尝试从宿主计算机上的链接文件夹中加载文件时，会发生这种情况。 当你尝试从链接在[远程桌面服务](https://go.microsoft.com/fwlink/?LinkId=182775)（终端服务）的文件夹中加载文件时，也会发生此问题。 若要避免此异常， `enabled`请`true`将设置为。
+- 你可能会在运行在 Windows Virtual PC 应用程序中的应用程序中获取 <xref:System.IO.FileLoadException>。 当你尝试从宿主计算机上的链接文件夹中加载文件时，会发生这种情况。 当你尝试从链接在[远程桌面服务](https://go.microsoft.com/fwlink/?LinkId=182775)（终端服务）的文件夹中加载文件时，也会发生此问题。 若要避免此异常，请将 `enabled` 设置为 `true`。
 
 ## <a name="configuration-file"></a>配置文件
 

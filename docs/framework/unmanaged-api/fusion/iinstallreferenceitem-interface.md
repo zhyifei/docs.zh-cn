@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66df494d-1a2f-4441-8ee6-cfed0217b4e6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5187c20aaa4bd37401db3990e0f8a96a61e75418
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 016ded7b1393d6e03faa029ab5be661bf4ff4efd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796384"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131671"
 ---
 # <a name="iinstallreferenceitem-interface"></a>IInstallReferenceItem 接口
 表示安装在全局程序集缓存中的项。  
@@ -30,10 +28,10 @@ ms.locfileid: "70796384"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetReference 方法](iinstallreferenceitem-getreference-method.md)|获取一个指向由此表示`FUSION_INSTALL_REFERENCE` `IInstallReferenceItem`的结构的指针。|  
+|[GetReference 方法](iinstallreferenceitem-getreference-method.md)|获取一个指针，该指针指向此 `IInstallReferenceItem`所表示的 `FUSION_INSTALL_REFERENCE` 结构。|  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 合成。h  
   

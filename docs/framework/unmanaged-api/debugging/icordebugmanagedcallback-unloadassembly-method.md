@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6734321c-c8a9-401f-a558-cad715ec4a77
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 120d00bd329db17b98a439aa2e9c36d2d04968d3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4ae4856eca2c1441ea53df0d9ed3648700b39b24
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761294"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130654"
 ---
 # <a name="icordebugmanagedcallbackunloadassembly-method"></a>ICorDebugManagedCallback::UnloadAssembly 方法
-通知调试器公共语言运行时程序集已被卸载。  
+通知调试器已卸载了公共语言运行时程序集。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,18 +36,18 @@ HRESULT UnloadAssembly (
   
 ## <a name="parameters"></a>参数  
  `pAppDomain`  
- [in]指向一个 ICorDebugAppDomain 对象，表示包含程序集的应用程序域的指针。  
+ 中指向 ICorDebugAppDomain 对象的指针，该对象表示包含程序集的应用程序域。  
   
  `pAssembly`  
- [in]指向表示程序集的 icor 调试程序集对象的指针。  
+ 中指向表示程序集的 ICorDebugAssembly 对象的指针。  
   
 ## <a name="remarks"></a>备注  
  不应在此回调后使用该程序集。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

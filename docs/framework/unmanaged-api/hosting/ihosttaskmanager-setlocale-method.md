@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 747ee407-ee8c-484d-9583-25089236d2d1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f388a52c320c3f0d5f4ad7e073e1e8960d7947dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e560d08d3e10db1b5978d1bd7be53dfed9ca3268
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749366"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132982"
 ---
 # <a name="ihosttaskmanagersetlocale-method"></a>IHostTaskManager::SetLocale 方法
-通知主机，公共语言运行时 (CLR) 已更改区域设置或区域性，当前正在执行的任务。  
+向宿主通知公共语言运行时（CLR）已更改当前正在执行的任务的区域设置或区域性。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,29 +35,29 @@ HRESULT SetLocale (
   
 ## <a name="parameters"></a>参数  
  `lcid`  
- [in]映射到新分配的地理区域性和语言区域设置标识符值。  
+ 中映射到新分配的地理区域和语言的区域设置标识符值。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`SetLocale` 已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|CLR 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。|  
-|HOST_E_TIMEOUT|呼叫已超时。|  
+|S_OK|`SetLocale` 成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|事件已取消时被阻塞的线程或纤程正在等待它。|  
-|E_FAIL|发生未知的灾难性故障。 如果某方法返回 E_FAIL，CLR 不再在进程内可用。 对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。|  
-|E_NOTIMPL|主机不允许托管的用户代码，若要修改的区域设置。|  
+|HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
+|E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
+|E_NOTIMPL|宿主不允许托管用户代码修改区域设置。|  
   
 ## <a name="remarks"></a>备注  
- 运行时调用`SetLocale`时的值<xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>属性更改由托管代码。 此方法提供主机后，若要执行同步的区域设置可能具有的任何机制的机会。 如果主机不允许的区域设置，若要从托管代码中，更改或不实现同步的区域设置的机制，它应从此方法返回 E_NOTIMPL。  
+ 当托管代码更改了 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 属性的值时，运行时调用 `SetLocale`。 此方法为主机提供了对区域设置同步所需的任何机制的机会。 如果主机不允许从托管代码更改区域设置，或未实现同步区域设置的机制，则它应从此方法返回 E_NOTIMPL。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: c35e2919-42c3-4ba0-ae28-443c35f66f93
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c7d9f5373f2b4ea216ca517813b1334b9f5c38a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 949d04fe8d9ce492fb320fb4732677ffb35302ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739968"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132829"
 ---
 # <a name="cordebugiltonativemappingtypes-enumeration"></a>CorDebugIlToNativeMappingTypes 枚举
-指示本机指令，COR_DEBUG_IL_TO_NATIVE_MAP 结构的实例所表示的特定范围是否与特殊的代码区域相符。  
+指示由 COR_DEBUG_IL_TO_NATIVE_MAP 结构的实例表示的一系列特定的本机指令是否对应于一个特殊的代码区域。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,18 +34,18 @@ typedef enum CorDebugIlToNativeMappingTypes {
 } CorDebugIlToNativeMappingTypes;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`NO_MAPPING`|本机指令的范围不对应任何特殊的代码区域。|  
-|`PROLOG`|本机指令的范围对应于在 prolog。|  
-|`EPILOG`|本机指令的范围与 epilog 相对应。|  
+|`NO_MAPPING`|本机指令的范围不对应于任何特殊代码区域。|  
+|`PROLOG`|本机指令的范围对应于序言。|  
+|`EPILOG`|本机指令的范围对应于 epilog。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

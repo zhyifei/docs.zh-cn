@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8c6d2089-4dbb-4715-b9e9-2a4491c8c9ce
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d438123dcefb901098954845596c210e5b76cea6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a0b70078dee88b270d8361aa9bddcb7d80df1db1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764102"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129475"
 ---
 # <a name="icordebugmodule2setjmcstatus-method"></a>ICorDebugModule2::SetJMCStatus 方法
-所有类的所有方法只是我的代码 (JMC) 状态设置为指定的值，除中此 ICorDebugModule2 中`pTokens`数组，它将设置为相反值。  
+将此 ICorDebugModule2 中所有类的所有方法的仅我的代码（JMC）状态设置为指定的值（`pTokens` 数组中的所有方法除外），将其设置为相反值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,25 +37,25 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>参数  
  `bIsJustMycode`  
- [in]设置为`true`的代码是调试; 否则为如果设置为`false`。  
+ 中如果要调试代码，则设置为 `true`;否则，设置为 `false`。  
   
  `cTokens`  
  [in] `pTokens` 数组的大小。  
   
  `pTokens`  
- [in]一个数组`mdToken`值，其中每个引用的方法，将具有其 JMC 状态设置为 ！`bIsJustMycode`。  
+ 中`mdToken` 值的数组，其中每个值都引用将其 JMC 状态设置为的方法！`bIsJustMycode`。  
   
 ## <a name="remarks"></a>备注  
- 中指定每个方法的 JMC 状态`pTokens`数组设置为相反`bIsJustMycode`值。 在此模块中的所有其他方法的状态设置为`bIsJustMycode`值。  
+ `pTokens` 数组中指定的每个方法的 JMC 状态设置为与 `bIsJustMycode` 值相反。 此模块中所有其他方法的状态将设置为 `bIsJustMycode` 值。  
   
- `SetJMCStatus`方法会清除所有以前的 JMC 设置在此模块中。  
+ `SetJMCStatus` 方法将清除此模块中的所有以前的 JMC 设置。  
   
- `SetJMCStatus`方法返回 S_OK HRESULT，如果已成功设置的所有函数。 它将返回标记一些函数，如果将 CORDBG_E_FUNCTION_NOT_DEBUGGABLE HRESULT`true`不是可调试。  
+ 如果已成功设置所有函数，则 `SetJMCStatus` 方法返回 S_OK HRESULT。 如果某些标记为 `true` 的函数不可调试，它将返回 CORDBG_E_FUNCTION_NOT_DEBUGGABLE HRESULT。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

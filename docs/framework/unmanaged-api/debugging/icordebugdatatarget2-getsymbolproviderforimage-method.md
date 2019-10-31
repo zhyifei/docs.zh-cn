@@ -2,14 +2,12 @@
 title: ICorDebugDataTarget2::GetSymbolProviderForImage 方法
 ms.date: 03/30/2017
 ms.assetid: b7c0a2f0-e904-43b3-98e1-d669e8a589e8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2e5a6e70d5148756a5ed8d17c56577da920d1b69
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 64a35f65bc3c31e091e2d94260efb84f20abb795
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911453"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122110"
 ---
 # <a name="icordebugdatatarget2getsymbolproviderforimage-method"></a>ICorDebugDataTarget2::GetSymbolProviderForImage 方法
 返回该模块基址中的模块符号提供程序。  
@@ -25,7 +23,7 @@ HRESULT GetSymbolProviderForImage(
   
 ## <a name="parameters"></a>参数  
  `imageBaseAddress`  
- 中一个[CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)值, 该值表示模块的基址。  
+ 中一个[CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)值，该值表示模块的基址。  
   
  `ppSymProvider`  
  弄指向[ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)对象地址的指针。  
@@ -36,11 +34,11 @@ HRESULT GetSymbolProviderForImage(
 > 此方法仅适用于 .NET Native。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl, Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0822423-a9df-4961-950d-50dcc152f863
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f857f773f02da25fe6650000be777b8290f5af91
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 78e34d9d33d34047e3ebd2effb4894bc7b709585
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274063"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132360"
 ---
 # <a name="cor_field-structure"></a>COR_FIELD 结构
 提供有关对象中的某个字段的信息。  
@@ -37,11 +35,11 @@ typedef struct COR_FIELD{
 } COR_FIELD;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`token`|可用于获取字段信息的标记。`mdFieldDef`|  
+|`token`|可用于获取字段信息的 `mdFieldDef` 标记。|  
 |`offset`|对象中字段数据的偏移量（以字节为单位）。|  
 |`id`|标识此字段的类型的[COR_TYPEID](cor-typeid-structure.md)值。|  
 |`fieldType`|一个 CorElementType 枚举值，该值指示字段的类型。|  
@@ -49,11 +47,11 @@ typedef struct COR_FIELD{
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl，Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

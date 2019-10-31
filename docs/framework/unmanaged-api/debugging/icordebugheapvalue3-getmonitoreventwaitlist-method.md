@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 035a9035-ac66-4953-b48a-99652b42b7fe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db34d56fd4d074551ca4823681bc5d94e76df758
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0fbff178efd4d0dff3593907b3d40e946be2ff6e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756614"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121294"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>ICorDebugHeapValue3::GetMonitorEventWaitList 方法
-提供的监视器锁与相关联的事件的线程排队的排序的列表。  
+提供在与监视器锁关联的事件上排队的线程的排序列表。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +35,7 @@ HRESULT GetMonitorEventWaitList (
   
 ## <a name="parameters"></a>参数  
  `ppThreadEnum`  
- [out]ICorDebugThreadEnum 枚举器提供的线程的顺序的列表。  
+ 弄提供线程有序列表的 ICorDebugThreadEnum 枚举器。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
@@ -45,25 +43,25 @@ HRESULT GetMonitorEventWaitList (
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|该列表不为空。|  
-|S_FALSE|该列表为空。|  
+|S_FALSE|列表为空。|  
   
-## <a name="exceptions"></a>Exceptions  
+## <a name="exceptions"></a>异常  
   
 ## <a name="remarks"></a>备注  
- 在列表中的第一个线程是下一次发布的第一个线程<xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>。 在列表中的下一个线程释放以下调用中，依次类推。  
+ 列表中的第一个线程是下一次调用 <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>释放的第一个线程。 此列表中的下一个线程将在以下调用上释放，依此类推。  
   
- 如果列表不为空，则此方法返回 S_OK。 如果列表为空，则方法返回 S_FALSE;在这种情况下，枚举仍然有效，但为空。  
+ 如果列表不为空，则此方法返回 S_OK。 如果列表为空，则该方法将返回 S_FALSE;在这种情况下，枚举仍有效，但它是空的。  
   
- 在任一情况下，枚举接口可以仅为当前同步状态的持续时间是可用。 但是，从该分发的线程接口都有效，直到线程退出为止。  
+ 在任一情况下，枚举接口仅在当前已同步状态的持续时间内可用。 但是，在线程退出之前，从它分配的线程的接口是有效的。  
   
- 如果`ppThreadEnum`不是有效的指针，则结果不可确定。  
+ 如果 `ppThreadEnum` 不是有效的指针，则结果是不确定的。  
   
- 出错时，无法确定的如果有，线程处于等待状态监视器，该方法将返回一个 HRESULT，指示失败。  
+ 如果发生错误，导致无法确定线程（如果有）正在等待监视器的线程，则该方法将返回一个指示失败的 HRESULT。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

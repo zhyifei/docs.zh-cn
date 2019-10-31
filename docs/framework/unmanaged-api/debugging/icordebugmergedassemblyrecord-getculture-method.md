@@ -1,17 +1,15 @@
 ---
-title: 'ICorDebugMergedAssemblyRecord:: GetCulture 方法'
+title: ICorDebugMergedAssemblyRecord：： GetCulture 方法
 ms.date: 03/30/2017
 ms.assetid: 030b2f8c-8c21-40b7-855d-3afa78975a17
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f0f3ecee5a003587771871a178356d6dbfd8a636
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f39a1f17c80d27a38c0f2a8a516405f72c79bbcf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936847"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131414"
 ---
-# <a name="icordebugmergedassemblyrecordgetculture-method"></a>ICorDebugMergedAssemblyRecord:: GetCulture 方法
+# <a name="icordebugmergedassemblyrecordgetculture-method"></a>ICorDebugMergedAssemblyRecord：： GetCulture 方法
 获取程序集的区域性名称字符串。  
   
 ## <a name="syntax"></a>语法  
@@ -41,11 +39,11 @@ HRESULT GetCulture(
 > 此方法仅适用于 .NET Native。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl, Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

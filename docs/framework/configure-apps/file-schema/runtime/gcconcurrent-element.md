@@ -9,22 +9,20 @@ helpviewer_keywords:
 - gcConcurrent element
 - <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b2774c32b4ee3e67772f84d599ecc5dbeb6598b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4897462e20b193496c44d26923d0d0e2a13f7dd6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252582"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116812"
 ---
 # <a name="gcconcurrent-element"></a>\<t > 元素
 
 指定公共语言运行时是否在单独线程上运行垃圾回收。
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<gcConcurrent>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<t >**  
 
 ## <a name="syntax"></a>语法
 
@@ -45,7 +43,7 @@ ms.locfileid: "70252582"
 
 ## <a name="enabled-attribute"></a>enabled 属性
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |`false`|不并发运行垃圾回收。|
 |`true`|并发运行垃圾回收。 这是默认设置。|
@@ -63,7 +61,7 @@ ms.locfileid: "70252582"
 
 ## <a name="remarks"></a>备注
 
-在.NET Framework 4 之前，工作站垃圾回收支持并发垃圾回收，在后台对一个单独线程执行垃圾回收。 在.NET Framework 4 中，并发垃圾回收被后台 GC 取代，它还在单独的线程上在后台中执行垃圾回收。 从 .NET Framework 4.5 开始，服务器垃圾回收可提供后台垃圾回收。 `<gcConcurrent>`元素控制运行时是执行并发还是后台垃圾回收（如果可用），或者是否执行前台垃圾回收。
+在.NET Framework 4 之前，工作站垃圾回收支持并发垃圾回收，在后台对一个单独线程执行垃圾回收。 在.NET Framework 4 中，并发垃圾回收被后台 GC 取代，它还在单独的线程上在后台中执行垃圾回收。 从 .NET Framework 4.5 开始，服务器垃圾回收可提供后台垃圾回收。 `<gcConcurrent>` 元素控制运行时是执行并发还是后台垃圾回收（如果可用），或者是否执行前台垃圾回收。
 
 ### <a name="to-disable-background-garbage-collection"></a>禁用后台垃圾回收
 
@@ -80,7 +78,7 @@ ms.locfileid: "70252582"
 </configuration>
 ```
 
- 如果计算机配置文件`<gcConcurrentSetting>`中存在一个设置，则会为所有 .NET Framework 应用程序定义默认值。 计算机配置文件设置将重写应用程序配置文件设置。
+ 如果计算机配置文件中存在 `<gcConcurrentSetting>` 设置，则它将为所有 .NET Framework 应用程序定义默认值。 计算机配置文件设置将重写应用程序配置文件设置。
 
  有关并发和后台垃圾回收的详细信息，请参阅[垃圾回收基础知识](../../../../standard/garbage-collection/fundamentals.md)一文中的 "[并发垃圾](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection)回收" 一节。
 

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 210a2f02-2678-4555-bc4a-78a0408764c8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d64773aa0d35f2e97232576d145dfcba624812ec
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: e419ebb6ffd404368baf32e591e08c4a70645127
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395532"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121120"
 ---
 # <a name="icordebugcode2getcodechunks-method"></a>ICorDebugCode2::GetCodeChunks 方法
 
@@ -42,13 +40,13 @@ HRESULT GetCodeChunks (
 ## <a name="parameters"></a>参数
 
 `cbufSize`  
-中@No__t-0 数组的大小。
+中`chunks` 数组的大小。
 
 `pcnumChunks`  
-弄@No__t-0 数组中返回的块区数。
+弄`chunks` 数组中返回的块区数。
 
 `chunks`  
-弄"CodeChunkInfo" 结构的数组，其中每个结构都表示一个代码块。 如果 @no__t 的值为0，则此参数可以为 null。
+弄"CodeChunkInfo" 结构的数组，其中每个结构都表示一个代码块。 如果 `cbufSize` 的值为0，则此参数可以为 null。
 
 ## <a name="remarks"></a>备注
 

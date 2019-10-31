@@ -2,14 +2,12 @@
 title: <TypeInstantiation>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 375c95a30f4f60bb711e176cb6c2d0c5fd763e2f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9069856b3d8739724d148b5eea5d4188c8b8b9e1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049115"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128679"
 ---
 # <a name="typeinstantiation-element-net-native"></a>\<类型实例化 > 元素（.NET Native）
 将运行时反射策略应用到一个构造泛型类型。  
@@ -53,19 +51,19 @@ ms.locfileid: "71049115"
   
 ## <a name="name-attribute"></a>Name 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |type_name|类型名称。 如果该 `<TypeInstantiation>` 元素是 [\<Namespace>](namespace-element-net-native.md) 元素、[\<Type>](type-element-net-native.md) 元素或另一个 `<TypeInstantiation>` 元素的子元素，type_name 可以指定类型名称而不包括其命名空间。 否则，type_name 必须包含完全限定的类型名称。 该类型名称没有经过修饰。 例如，对于一个 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 对象，`<TypeInstantiation>` 元素可能显示如下：<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
 ## <a name="arguments-attribute"></a>自变量特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |type_argument|指定泛型类型参数。 如果存在多个自变量，它们之间用逗号分割。 每个自变量必须包含一个完全限定的类型名称。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |policy_setting|该设置将应用到这个构造泛型类型的策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   
@@ -99,7 +97,7 @@ ms.locfileid: "71049115"
  如果 `<TypeInstantiation>` 元素是 [\<Assembly>](assembly-element-net-native.md)、[\<Namespace>](namespace-element-net-native.md)、或 [\<Type>](type-element-net-native.md) 元素的子元素，它会重写由父元素定义的策略设置。 如果 [\<Type>](type-element-net-native.md) 元素定义了相应的泛型类型定义，`<TypeInstantiation>` 元素只为指定构造泛型类型的实例化重写运行时反射策略。  
   
 ## <a name="example"></a>示例  
- 以下实例使用反射从一个构造的 <xref:System.Collections.Generic.Dictionary%602> 对象取回了泛型类型定义。 它还使用反射显示了代表构造泛型类型和构造类型定义的有关 <xref:System.Type> 对象的信息。 示例中`b`的变量是一个<xref:Windows.UI.Xaml.Controls.TextBlock>控件。  
+ 以下实例使用反射从一个构造的 <xref:System.Collections.Generic.Dictionary%602> 对象取回了泛型类型定义。 它还使用反射显示了代表构造泛型类型和构造类型定义的有关 <xref:System.Type> 对象的信息。 示例中的变量 `b` 是 <xref:Windows.UI.Xaml.Controls.TextBlock> 控件。  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bc96acb-6179-4328-a447-cda562ce9e98
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9be126e45d8428d8786e9aadf2195133d1957440
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff74a9849b74b8a8e6b8c03f1fc4e7c7eee1ec14
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754833"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124062"
 ---
 # <a name="icordebugframeenumnext-method"></a>ICorDebugFrameEnum::Next 方法
-获取指定的数量的 ICorDebugFrame 实例，从当前位置开始。  
+从当前位置开始，获取指定数量的 ICorDebugFrame 实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,18 +38,18 @@ HRESULT Next (
   
 ## <a name="parameters"></a>参数  
  `celt`  
- [in]数`ICorDebugFrame`要检索的实例。  
+ 中要检索的 `ICorDebugFrame` 实例的数目。  
   
  `frames`  
- [out]一个指针，其中每个指向数组`ICorDebugFrame`对象。  
+ 弄指针的数组，其中每个都指向一个 `ICorDebugFrame` 对象。  
   
  `pceltFetched`  
- [out]指向数`ICorDebugFrame`实际返回的实例。 此值可能为 null 如果`celt`是其中一个。  
+ 弄一个指针，指向实际返回的 `ICorDebugFrame` 实例的数目。 如果 `celt` 为1，则此值可以为 null。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

@@ -14,29 +14,27 @@ helpviewer_keywords:
 ms.assetid: a17b3155-7216-4e16-8c9f-abce21f549e7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4c5d4bc1fa82f7623168050f4ee36f0ea3cd171e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1305b9ebe3cd87ba002ee87610ff309d015a44e6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796442"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131751"
 ---
 # <a name="ienumreferenceidentity-interface"></a>IEnumReferenceIdentity 接口
-用作对象集合的`IReferenceIdentity`枚举器。  
+用作 `IReferenceIdentity` 对象的集合的枚举器。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|`IEnumReferenceIdentity::Clone`|获取一个接口指针，该指针`IEnumReferenceIdentity`指向包含与此`IEnumReferenceIdentity`相同的成员的新。|  
-|`IEnumReferenceIdentity::Next`|从当前位置开始，获取`IReferenceIdentity`指定数目的对象。|  
-|`IEnumReferenceIdentity::Reset`|将指令指针移到此`IEnumReferenceIdentity`的开头。|  
+|`IEnumReferenceIdentity::Clone`|获取一个接口指针，该指针指向与此 `IEnumReferenceIdentity`包含相同成员的新 `IEnumReferenceIdentity`。|  
+|`IEnumReferenceIdentity::Next`|从当前位置开始，获取指定数目的 `IReferenceIdentity` 对象。|  
+|`IEnumReferenceIdentity::Reset`|将指令指针移动到此 `IEnumReferenceIdentity`的开头。|  
 |`IEnumReferenceIdentity::Skip`|从当前位置开始，将指令指针向前移动指定数量的元素。|  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 隔离。h  
   

@@ -7,14 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6fba47c0ff6425a375715dcd4c08d62e0f7f598c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6efc89e5c22f53d9b2c48e535c783d488df16462
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046468"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130327"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>如何：执行对象的延迟初始化
 <xref:System.Lazy%601?displayProperty=nameWithType> 类可简化执行迟缓初始化和对象实例化的工作。 通过以迟缓方式初始化对象，可在不需要对象的情况下避免创建所有对象，或可在首次访问对象之后再进行迟缓初始化。 若要了解详细信息，请参阅[迟缓初始化](lazy-initialization.md)  

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29746b24-3766-4255-8813-0426c45e73e5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 003a6546b3316f2a2a65bce4537c60dcf62b3197
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f80bdffbf5c0ba39980bd27c6e89a368547340c0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752845"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129813"
 ---
 # <a name="icordebugmdagetxml-method"></a>ICorDebugMDA::GetXML 方法
-获取与由表示托管调试助手 (MDA) 关联的完整 XML 流[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)。  
+获取与[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)表示的托管调试助手（MDA）关联的完整 XML 流。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,18 +41,18 @@ HRESULT GetXML (
  [in] `szName` 数组的大小。  
   
  `pcchName`  
- [out]指向 XML 流的长度的指针。  
+ 弄指向 XML 流长度的指针。  
   
  `szName`  
- [out]在其中存储 XML 流的数组。 该数组可能为空。  
+ 弄要在其中存储 XML 流的数组。 该数组可能为空。  
   
 ## <a name="remarks"></a>备注  
- `GetXML`方法可能会影响性能，具体取决于关联的 XML 流的大小。  
+ `GetXML` 方法可能会影响性能，具体取决于关联的 XML 流的大小。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

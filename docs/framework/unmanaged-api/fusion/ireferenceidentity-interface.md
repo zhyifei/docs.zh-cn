@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9180ac5a-7019-4716-9f83-8a91d157239a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2bb151d7c77104d8e24acefaac2e1f109b67f168
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8f6a117d1e2fe76c271b0b014e6079370c8b4fe4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796356"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127069"
 ---
 # <a name="ireferenceidentity-interface"></a>IReferenceIdentity 接口
 表示对代码对象的唯一签名的引用。  
@@ -30,13 +28,13 @@ ms.locfileid: "70796356"
   
 |方法|描述|  
 |------------|-----------------|  
-|`IReferenceIdentity::Clone`|获取一个指向与此`IReferenceIdentity` `IReferenceIdentity`相同的新实例的接口指针，指定的特性更改除外。|  
-|`IReferenceIdentity::EnumAttributes`|获取一个接口指针，该`IEnumIDENTITY_ATTRIBUTE`指针指向包含与此`IReferenceIdentity`关联的特性的实例。|  
+|`IReferenceIdentity::Clone`|获取一个接口指针，该指针指向与此 `IReferenceIdentity`相同的新 `IReferenceIdentity` 实例，指定的特性更改除外。|  
+|`IReferenceIdentity::EnumAttributes`|获取一个接口指针，该指针指向包含与此 `IReferenceIdentity`关联的属性的 `IEnumIDENTITY_ATTRIBUTE` 实例。|  
 |`IReferenceIdentity::GetAttribute`|获取指定命名空间中具有指定名称的特性的值。|  
 |`IReferenceIdentity::SetAttribute`|将具有指定命名空间和指定名称的特性设置为指定值。|  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 隔离。h  
   

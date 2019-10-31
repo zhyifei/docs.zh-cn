@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 51f848be-84c5-4036-9839-c762c576bbf5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: caf76fa7962de9392b06591777ac862aa548d20d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc0cea10b4a209583fb7afb551a6b80d52ad7f62
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779555"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127030"
 ---
-# <a name="hosttype-enumeration"></a>HOST_TYPE 枚举
-包含指定的启动应用程序的宿主类型的值。  
+# <a name="host_type-enumeration"></a>HOST_TYPE 枚举
+包含的值用于指定启动应用程序的主机的类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,20 +34,20 @@ typedef enum {
 } HOST_TYPE;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`HOST_TYPE_APPLAUNCH`|启动从 AppLaunch.exe 应用程序。<br /><br /> 对于部分受信任的应用程序中使用此值。|  
-|`HOST_TYPE_CORFLAG`|直接启动应用程序。 也就是说，启动应用程序从其自己的.exe 文件。<br /><br /> 此值用于完全受信任的应用程序。|  
-|`HOST_TYPE_DEFAULT`|HOST_TYPE_APPLAUNCH 相同。|  
+|`HOST_TYPE_APPLAUNCH`|从 AppLaunch 启动应用程序。<br /><br /> 将此值用于部分受信任的应用程序。|  
+|`HOST_TYPE_CORFLAG`|直接启动该应用程序。 也就是说，从它自己的 .exe 文件启动该应用程序。<br /><br /> 将此值用于完全受信任的应用程序。|  
+|`HOST_TYPE_DEFAULT`|与 HOST_TYPE_APPLAUNCH 相同。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** MSCorEE.dll  
+ **库：** Mscoree.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

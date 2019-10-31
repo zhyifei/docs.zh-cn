@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome::GetRegister 方法
+title: ICorDebugVariableHome：： GetRegister 方法
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetRegister
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a5eecd7b-b04c-4266-bff2-7c8771d519a8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f4b3b80546095b79dc5b551a9c5e92ec15c0dddb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4c9932c3eeebd0101ee364c9b4d0b0a26862c4b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771785"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125072"
 ---
-# <a name="icordebugvariablehomegetregister-method"></a>ICorDebugVariableHome::GetRegister 方法
-获取包含的位置类型的变量的寄存器`VLT_REGISTER`，并与位置类型的变量的基寄存器`VLT_REGISTER_RELATIVE`。  
+# <a name="icordebugvariablehomegetregister-method"></a>ICorDebugVariableHome：： GetRegister 方法
+获取一个寄存器，其中包含位置类型为 `VLT_REGISTER`的变量，以及位置类型为 `VLT_REGISTER_RELATIVE`的变量的基寄存器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,20 +35,20 @@ HRESULT GetRegister(
   
 ## <a name="parameters"></a>参数  
  `pRegister`  
- [out]CorDebugRegister 枚举值，该值指示的位置类型的变量的寄存器`VLT_REGISTER`，并与位置类型的变量的基寄存器`VLT_REGISTER_RELATIVE`。  
+ 弄一个 CorDebugRegister 枚举值，该值指示注册位置类型为 `VLT_REGISTER`的变量，并使用 `VLT_REGISTER_RELATIVE`位置类型的变量的基寄存器。  
   
 ## <a name="return-value"></a>返回值  
- 此方法返回以下值：  
+ 方法返回以下值：  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
-|`S_OK`|该变量是由在寄存器中`pRegister`参数。|  
-|`E_FAIL`|该变量不是在寄存器或寄存器相对位置。|  
+|`S_OK`|变量位于 `pRegister` 参数所指示的寄存器中。|  
+|`E_FAIL`|变量不在寄存器或寄存器相对位置中。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

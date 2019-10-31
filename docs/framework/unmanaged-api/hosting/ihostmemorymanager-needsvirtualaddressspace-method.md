@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 71f0eab5-0170-46f8-9f88-1df5abdeb34a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57ed64ad8a6ae8ef46f423471436c3fce29d6fe5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a3ae474a73f4c8e4b98c4b2bc5d04e55bcae6874
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767816"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128666"
 ---
 # <a name="ihostmemorymanagerneedsvirtualaddressspace-method"></a>IHostMemoryManager::NeedsVirtualAddressSpace 方法
-通知宿主，公共语言运行时 (CLR) 将要尝试使用指定的内存。  
+向宿主通知公共语言运行时（CLR）将要尝试使用指定的内存。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,22 +36,22 @@ HRESULT NeedsVirtualAddressSpace (
   
 ## <a name="parameters"></a>参数  
  `startAddress`  
- [in]起始内存地址。  
+ 中内存的起始地址。  
   
  `size`  
- [in]以字节为单位的内存的大小。  
+ 中内存的大小（以字节为单位）。  
   
 ## <a name="remarks"></a>备注  
- `NeedsVirtualAddressSpace`方法是回调方法，必须由主机应用程序的编写器实现。 它是由 CLR 进行调用。  
+ `NeedsVirtualAddressSpace` 方法是回调方法，必须由宿主应用程序的编写器实现。 它由 CLR 调用。  
   
- 如果主机不希望在 CLR 使用指定的内存，它可能返回 E_OUTOFMEMORY HRESULT。  
+ 如果主机不希望 CLR 使用指定的内存，则它可能会返回 E_OUTOFMEMORY HRESULT。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

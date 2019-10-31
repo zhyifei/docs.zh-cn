@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e1f2c47-81df-4530-826d-96489cd68719
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7c3ced50457519d62be44712386bdabce176c44e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e044b1a2ad777868e33cd64bc8d09a9b76d547aa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761309"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130671"
 ---
 # <a name="icordebugmanagedcallbackstepcomplete-method"></a>ICorDebugManagedCallback::StepComplete 方法
-通知调试器步骤已完成。  
+通知调试器某个步骤已完成。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,24 +38,24 @@ HRESULT StepComplete (
   
 ## <a name="parameters"></a>参数  
  `pAppDomain`  
- [in]指向一个 ICorDebugAppDomain 对象，表示包含此步骤具有已完成的线程的应用程序域的指针。  
+ 中指向 ICorDebugAppDomain 对象的指针，该对象表示包含步骤已完成的线程的应用程序域。  
   
  `pThread`  
- [in]指向表示此步骤具有已完成的线程的 ICorDebugThread 对象的指针。  
+ 中指向 ICorDebugThread 对象的指针，该对象表示步骤已完成的线程。  
   
  `pStepper`  
- [in]指向表示执行代码中的步 ICorDebugStepper 对象的指针。  
+ 中指向 ICorDebugStepper 对象的指针，该对象表示代码执行中的步骤。  
   
  `reason`  
- [in]CorDebugStepReason 枚举，指示一个单步执行的结果的值。  
+ 中CorDebugStepReason 枚举的值，该值指示单个步骤的结果。  
   
 ## <a name="remarks"></a>备注  
- 分档器可能用于继续单步执行必要时，除非终止调试。  
+ 如果需要，可以使用分档器继续单步执行，除非调试已终止。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c431617a-b055-44a0-8730-48b7a86d9610
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1a044d1600f7e21e3abfbf704daef5213617b4c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87549118742da797ef0dd1b08ae9e72c466f7841
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780049"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139576"
 ---
 # <a name="icorruntimehostgetconfiguration-method"></a>ICorRuntimeHost::GetConfiguration 方法
-获取允许指定公共语言运行时 (CLR) 的回调配置主机的对象。  
+获取一个对象，该对象允许宿主指定公共语言运行时（CLR）的回调配置。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,19 +35,19 @@ HRESULT GetConfiguration(
   
 ## <a name="parameters"></a>参数  
  `pConfiguration`  
- [out]指向的地址的指针[ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)可以用于配置 CLR 对象。  
+ 弄指向可用于配置 CLR 的[ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)对象地址的指针。  
   
 ## <a name="remarks"></a>备注  
- CLR 必须在其初始化; 之前配置否则为`GetConfiguration`方法返回一个 HRESULT，指示错误。  
+ 必须在初始化之前配置 CLR;否则，`GetConfiguration` 方法返回一个 HRESULT，指示错误。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET framework 版本：** 1.0, 1.1  
+ **.NET Framework 版本：** 1.0、1。1  
   
 ## <a name="see-also"></a>请参阅
 

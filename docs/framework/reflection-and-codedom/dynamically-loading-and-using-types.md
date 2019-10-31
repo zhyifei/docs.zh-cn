@@ -12,14 +12,12 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 21d0425de072c91cf7111162e405f826e00e849d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 940f334ec6a42c4d8da461d634051ff979b8f98d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046095"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130264"
 ---
 # <a name="dynamically-loading-and-using-types"></a>动态加载和使用类型
 反射提供语言编译器为实现隐式后期绑定而使用的基础结构。 声明与唯一指定的类型相对应，绑定是查找声明（即实现）的过程。 运行时（而非编译时）发生此进程就称为后期绑定。 Visual Basic 允许在代码中使用隐式后期绑定；Visual Basic 编译器会调用使用反射来获取对象类型的帮助程序方法。 传递给帮助程序方法的参数会导致在运行时调用相应方法。 这些参数是在其上调用方法的实例（对象）、被调用方法的名称（字符串）和传递给被调用方法的参数（对象数组）。  
@@ -66,7 +64,7 @@ End Module
   
  BindToMethod 返回 <xref:System.Reflection.MethodBase> 供调用，如果不可能发生此类调用，则返回空引用（在 Visual Basic 中则返回 Nothing）。 MethodBase 返回值不必是 match 参数中包含的值之一，虽然通常情况下都是这样。  
   
- 存在 ByRef 参数时，调用方可能想将其恢复。 因此，如果 BindToMethod 已操作参数数组，联编程序允许客户端将参数数组映射回其原始形式。 为此，调用方必须确保参数顺序不变。 按名称传递参数时，联编程序会对参数数组重新排序，该顺序即调用方所见顺序。 有关详细信息，请参阅 <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType> 。  
+ 存在 ByRef 参数时，调用方可能想将其恢复。 因此，如果 BindToMethod 已操作参数数组，联编程序允许客户端将参数数组映射回其原始形式。 为此，调用方必须确保参数顺序不变。 按名称传递参数时，联编程序会对参数数组重新排序，该顺序即调用方所见顺序。 有关更多信息，请参见<xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>。  
   
  可用成员集是在类型或任何基类型中定义的成员。 如果指定了 <xref:System.Reflection.BindingFlags>，则会将所有可访问的成员返回到该集中。 如果未指定 BindingFlags.NonPublic，则联编程序必须强制实施可访问性规则。 指定公共或非公共绑定标志时，必须同时指定实例或静态绑定标志，否则不会返回任何成员。  
   
@@ -85,7 +83,7 @@ End Module
 |任何类型|其基类型|  
 |任何类型|实现的接口|  
 |Char|UInt16、UInt32、Int32、UInt64、Int64、Single、Double|  
-|Byte|Char、UInt16、Int16、UInt32、Int32、UInt64、Int64、Single、Double|  
+|字节|Char、UInt16、Int16、UInt32、Int32、UInt64、Int64、Single、Double|  
 |SByte|Int16、Int32、Int64、Single、Double|  
 |UInt16|UInt32、Int32、UInt64、Int64、Single、Double|  
 |Int16|Int32、Int64、Single、Double|  

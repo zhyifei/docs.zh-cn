@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1808121049c6344b72b1c9d99e19c46422dfa0c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.openlocfilehash: 2ca5f27bdea75f6c6ce8f954f553b6a58a1a9204
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042551"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124251"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>将对象层次结构映射到 XML 数据
 当 XML 文档在内存中时，概念上的表示形式是树。 编程时可使用对象层次结构访问树节点。 下面的示例显示 XML 内容如何成为节点。  
@@ -186,7 +184,7 @@ public class Sample
   
  通过逐行获取输入并使用从代码生成的输出，可以使用下表分析哪个节点测试生成哪些输出行，从而了解哪些 XML 数据成为哪种节点类型。  
   
-|输入|输出|节点类型测试|  
+|输入|Output|节点类型测试|  
 |-----------|------------|--------------------|  
 |\<?xml version="1.0"?>|\<?xml version='1.0'?>|XmlNodeType.XmlDeclaration|  
 |\<!-- This is a sample XML document -->|\<!--This is a sample XML document -->|XmlNodeType.Comment|  

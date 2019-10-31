@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7c36a7c2-75a2-4971-bc23-abf54c812154
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f1e003ba23f680c4a5525a956d758aac6b823eb9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ee749fd40f440e92f1d1b09c2ea5e7bdd51f1cbe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769704"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131136"
 ---
 # <a name="eclrevent-enumeration"></a>EClrEvent 枚举
-描述主机可为其注册回调的公共语言运行时 (CLR) 事件。  
+描述宿主可为其注册回调的公共语言运行时（CLR）事件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,28 +35,28 @@ typedef enum {
 } EClrEvent;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`Event_ClrDisabled`|指定错误的 CLR。|  
-|`Event_DomainUnload`|指定卸载特定<xref:System.AppDomain>。|  
-|`Event_MDAFired`|指定已生成的托管调试助手 (MDA) 消息。|  
-|`Event_StackOverflow`|指定已发生堆栈溢出错误。|  
+|`Event_ClrDisabled`|指定 CLR 错误的严重错误。|  
+|`Event_DomainUnload`|指定卸载特定 <xref:System.AppDomain>。|  
+|`Event_MDAFired`|指定已生成托管调试助手（MDA）消息。|  
+|`Event_StackOverflow`|指定发生堆栈溢出错误。|  
   
 ## <a name="remarks"></a>备注  
- 宿主可以注册任何所描述的事件类型的回调`EClrEvent`通过调用的方法[ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)接口。 主机通过调用此接口获取指向[iclrcontrol:: Getclrmanager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md)方法。  
+ 宿主可以通过调用[ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)接口的方法，为 `EClrEvent` 所述的任何事件类型注册回调。 宿主通过调用[ICLRControl：： GetCLRManager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md)方法获取指向此接口的指针。  
   
- `Event_CLRDisabled`和`Event_DomainUnload`不止一次和来自不同线程发出信号卸载或禁用 CLR 可以引发事件。  
+ 可以多次引发 `Event_CLRDisabled` 和 `Event_DomainUnload` 事件，并从不同的线程引发 CLR 的卸载或禁用信号。  
   
- `Event_MDAFired`事件引发的创建[MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md)实例，它包含 MDA 消息的详细信息。 Mda 的详细信息，请参阅[使用托管调试助手诊断错误](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)。  
+ `Event_MDAFired` 事件将引发包含 MDA 消息的详细信息的[MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md)实例的创建。 有关 Mda 的详细信息，请参阅[诊断托管调试助手的错误](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** MSCorEE.dll  
+ **库：** Mscoree.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

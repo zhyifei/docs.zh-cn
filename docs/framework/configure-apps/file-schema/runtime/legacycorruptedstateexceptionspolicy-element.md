@@ -5,21 +5,19 @@ helpviewer_keywords:
 - <legacyCorruptedStateExceptionsPolicy> element
 - legacyCorruptedStateExceptionsPolicy element
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6566437d899b768cda1bab74bb1310deb7aa74db
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: d1d29a37999a01f3e370897a1052f4f94435a218
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252506"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116462"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > 元素
 指定公共语言运行时是否允许托管代码捕获访问冲突和其他损坏状态异常。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<legacyCorruptedStateExceptionsPolicy>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<legacyCorruptedStateExceptionsPolicy >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,7 +36,7 @@ ms.locfileid: "70252506"
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`false`|应用程序不会捕获损坏状态异常故障，例如访问冲突。 这是默认设置。|  
 |`true`|应用程序将捕获损坏状态异常故障，例如访问冲突。|  
@@ -56,13 +54,13 @@ ms.locfileid: "70252506"
 ## <a name="remarks"></a>备注  
  在 .NET Framework 版本3.5 及更早版本中，公共语言运行时允许托管代码捕获由损坏的进程状态引发的异常。 访问冲突就是这种类型的异常的一个示例。  
   
- 从 .NET Framework 4 开始，托管代码不再在块中`catch`捕获这些类型的异常。 不过，你可以通过两种方式重写此更改并保持对损坏状态异常的处理：  
+ 从 .NET Framework 4 开始，托管代码不再在 `catch` 块中捕获这些类型的异常。 不过，你可以通过两种方式重写此更改并保持对损坏状态异常的处理：  
   
-- 将元素的`enabled`属性设置为`true`。 `<legacyCorruptedStateExceptionsPolicy>` 此配置设置将应用 processwide 并影响所有方法。  
+- 将 `<legacyCorruptedStateExceptionsPolicy>` 元素的 `enabled` 属性设置为 "`true`"。 此配置设置将应用 processwide 并影响所有方法。  
   
  或  
   
-- 将特性应用于包含异常`catch`块的方法。 <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType>  
+- 将 <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> 特性应用于包含异常 `catch` 块的方法。  
   
  此配置元素仅在 .NET Framework 4 及更高版本中可用。  
   

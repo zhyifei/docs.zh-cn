@@ -8,14 +8,12 @@ helpviewer_keywords:
 - first-chance exception notifications
 - exceptions, first chance notifications
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a17fae64f8cad58b09908212bae4cf62a156ed95
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: da60dfca424f7c10e810b5e083ff7fa63a688218
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921522"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119867"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>如何：接收第一机会异常通知
 通过 <xref:System.AppDomain> 类的 <xref:System.AppDomain.FirstChanceException> 事件，可在公共语言运行时开始搜索异常处理程序之前，收到已引发异常的通知。

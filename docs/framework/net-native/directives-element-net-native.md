@@ -2,14 +2,12 @@
 title: <Directives>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a9ec9a09e2fc03adbfcff0d7e69489e37da6e4a5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: abe2e7221e0afb984a6178b12fabc36ea24deb35
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049885"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128473"
 ---
 # <a name="directives-element-net-native"></a>\<指令 > 元素（.NET Native）
 .NET Native 的每个运行时指令文件中的根元素。  

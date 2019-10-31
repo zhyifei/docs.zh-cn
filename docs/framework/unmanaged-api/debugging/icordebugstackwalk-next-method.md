@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 189c36be-028c-4fba-a002-5edfb8fcd07f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 82f6c96e64b1197b5762c0ad7dbed5458b5d71a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8cebb66ecf298eaaca0e7af23a9b8c6a2932c23f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760894"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131818"
 ---
 # <a name="icordebugstackwalknext-method"></a>ICorDebugStackWalk::Next 方法
-将移动[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)到下一个帧的对象。  
+将[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)对象移动到下一帧。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,20 +36,20 @@ HRESULT Next();
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|在运行时成功展开至下一帧 （请参阅备注）。|  
-|E_FAIL|`ICorDebugStackWalk`不为高级对象。|  
-|CORDBG_S_AT_END_OF_STACK|由于此展开已达到堆栈的末尾。|  
-|CORDBG_E_PAST_END_OF_STACK|帧指针已末尾的堆栈;因此，可以不访问任何其他帧。|  
+|S_OK|运行时成功地展开为下一帧（请参阅 "备注"）。|  
+|E_FAIL|`ICorDebugStackWalk` 对象不是高级对象。|  
+|CORDBG_S_AT_END_OF_STACK|由于此展开导致堆栈结束。|  
+|CORDBG_E_PAST_END_OF_STACK|帧指针已位于堆栈末尾;因此，不能访问其他帧。|  
   
-## <a name="exceptions"></a>Exceptions  
+## <a name="exceptions"></a>异常  
   
 ## <a name="remarks"></a>备注  
- `Next`方法的改进`ICorDebugStackWalk`仅当运行时可展开当前帧对象传递给调用的帧。 否则，对象前移至下一个运行时能够展开的帧。  
+ 仅当运行时可以展开当前帧时，`Next` 方法才将 `ICorDebugStackWalk` 对象前进到调用帧。 否则，对象会前进到运行时能够展开的下一帧。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

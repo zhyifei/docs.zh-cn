@@ -2,14 +2,12 @@
 title: 运行时指令 (rd.xml) 配置文件引用
 ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: adfc0ae6d9bdae333daacee525c7775acd5a8029
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f4c51dc269775d14d395cb464b3787cc987e086d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049135"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128132"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>运行时指令 (rd.xml) 配置文件引用
 
@@ -41,27 +39,27 @@ ms.locfileid: "71049135"
 
 有关引用信息，请从以下结构中选择元素或参阅[运行时指令元素](runtime-directive-elements.md)。 在以下层次结构中，省略号表示递归结构。 括号中的信息表明元素是可选项还是必需项，以及如果使用该元素，将允许多少个实例（一个或多个）。
 
-[指令](directives-element-net-native.md)[1:1][应用程序](application-element-net-native.md)[0:1][程序集](assembly-element-net-native.md)[0： m][命名空间](namespace-element-net-native.md)[0： m]。 . .
-[类型](type-element-net-native.md)[0： M]。 . .
-[类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型）[0： M]。 . .
-[命名空间](namespace-element-net-native.md)[0： M][命名空间](namespace-element-net-native.md)[0： M]。 . .
-[类型](type-element-net-native.md)[0： M]。 . .
-[类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型）[0： M]。 . .
-[类型](type-element-net-native.md)[0： M][子类型](subtypes-element-net-native.md)（包含类型的子类）O：1[类型](type-element-net-native.md)[0： M]。 . .
-[类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型）[0： M]。 . .
-[特性暗示](attributeimplies-element-net-native.md)（包含类型是一个属性）O：1[泛型参数](genericparameter-element-net-native.md)[0： M][方法](method-element-net-native.md)[0： M][参数](parameter-element-net-native.md)[0： M][TypeParameter](typeparameter-element-net-native.md)[0： M][泛型参数](genericparameter-element-net-native.md)[0： M][方法实例化](methodinstantiation-element-net-native.md)（构造泛型方法）[0： M][属性](property-element-net-native.md)[0： M][字段](field-element-net-native.md)[0： M][事件](event-element-net-native.md)[0： M][类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型）[0： M][类型](type-element-net-native.md)[0： M]。 . .
-[类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型）[0： M]。 . .
-[方法](method-element-net-native.md)[0： M][参数](parameter-element-net-native.md)[0： M][TypeParameter](typeparameter-element-net-native.md)[0： M][泛型参数](genericparameter-element-net-native.md)[0： M][方法实例化](methodinstantiation-element-net-native.md)（构造泛型方法）[0： M][属性](property-element-net-native.md)[0： M][字段](field-element-net-native.md)[0： M][事件](event-element-net-native.md)[0： M][库](library-element-net-native.md)[0： M][程序集](assembly-element-net-native.md)[0： M][命名空间](namespace-element-net-native.md)[0： M]。 . .
-[类型](type-element-net-native.md)[0： M]。 . .
-[类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型）[0： M]。 . .
-[命名空间](namespace-element-net-native.md)[0： M][命名空间](namespace-element-net-native.md)[0： M]。 . .
-[类型](type-element-net-native.md)[0： M]。 . .
-[类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型）[0： M]。 . .
-[类型](type-element-net-native.md)[0： M][子类型](subtypes-element-net-native.md)（包含类型的子类）O：1[类型](type-element-net-native.md)[0： M]。 . .
-[类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型）[0： M]。 . .
-[特性暗示](attributeimplies-element-net-native.md)（包含类型是一个属性）O：1[泛型参数](genericparameter-element-net-native.md)[0： M][方法](method-element-net-native.md)[0： M][方法实例化](methodinstantiation-element-net-native.md)（构造泛型方法）[0： M][属性](property-element-net-native.md)[0： M][字段](field-element-net-native.md)[0： M][事件](event-element-net-native.md)[0： M][类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型）[0： M][类型](type-element-net-native.md)[0： M]。 . .
-[类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型）[0： M]。 . .
-[方法](method-element-net-native.md)[0： M][方法实例化](methodinstantiation-element-net-native.md)（构造泛型方法）[0： M][属性](property-element-net-native.md)[0： M][字段](field-element-net-native.md)[0： M][事件](event-element-net-native.md)[0： M]
+[指令](directives-element-net-native.md)[1:1][应用程序](application-element-net-native.md)[0:1][程序集](assembly-element-net-native.md)[0： m][命名空间](namespace-element-net-native.md)[0： m]。 方法。 方法。
+[类型](type-element-net-native.md)[0： M]。 方法。 方法。
+[类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 方法。 方法。
+[命名空间](namespace-element-net-native.md)[0： m][命名空间](namespace-element-net-native.md)[0： m]。 方法。 方法。
+[类型](type-element-net-native.md)[0： M]。 方法。 方法。
+[类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 方法。 方法。
+[类型](type-element-net-native.md)[0： M][子类型](subtypes-element-net-native.md)（包含类型的子类） [O:1][类型](type-element-net-native.md)[0： M]。 方法。 方法。
+[类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 方法。 方法。
+[特性暗示](attributeimplies-element-net-native.md)（包含类型为属性） [O:1][泛型参数](genericparameter-element-net-native.md)[0： m][方法](method-element-net-native.md)[0： M][参数](parameter-element-net-native.md)[0： m] [TypeParameter](typeparameter-element-net-native.md) [0： m][泛型参数](genericparameter-element-net-native.md)[0： M][方法实例化](methodinstantiation-element-net-native.md)（构造泛型方法） [0： M][属性](property-element-net-native.md)[0： m][字段](field-element-net-native.md)[0： M][事件](event-element-net-native.md)[0： m][类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： m][类型](type-element-net-native.md)[0： m]。 方法。 方法。
+[类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 方法。 方法。
+[方法](method-element-net-native.md)[0： m][参数](parameter-element-net-native.md)[0： m] [TypeParameter](typeparameter-element-net-native.md) [0： M][泛型参数](genericparameter-element-net-native.md)[0： m][方法实例化](methodinstantiation-element-net-native.md)（构造泛型方法） [0： m][属性](property-element-net-native.md)[0： M][字段](field-element-net-native.md)[0： M][事件](event-element-net-native.md)[0： m] [库](library-element-net-native.md)[0： m][程序集](assembly-element-net-native.md)[0： m][命名空间](namespace-element-net-native.md)[0： m]。 方法。 方法。
+[类型](type-element-net-native.md)[0： M]。 方法。 方法。
+[类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 方法。 方法。
+[命名空间](namespace-element-net-native.md)[0： m][命名空间](namespace-element-net-native.md)[0： m]。 方法。 方法。
+[类型](type-element-net-native.md)[0： M]。 方法。 方法。
+[类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 方法。 方法。
+[类型](type-element-net-native.md)[0： M][子类型](subtypes-element-net-native.md)（包含类型的子类） [O:1][类型](type-element-net-native.md)[0： M]。 方法。 方法。
+[类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 方法。 方法。
+[特性暗示](attributeimplies-element-net-native.md)（包含类型为属性） [O:1][泛型参数](genericparameter-element-net-native.md)[0： m][方法](method-element-net-native.md)[0： m][方法实例化](methodinstantiation-element-net-native.md)（构造泛型方法） [0： m][属性](property-element-net-native.md)[0： m][字段](field-element-net-native.md)[0： m][事件](event-element-net-native.md)[0： M][类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： m][类型](type-element-net-native.md)[0： m]。 方法。 方法。
+[类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 方法。 方法。
+[方法](method-element-net-native.md)[0： m][方法实例化](methodinstantiation-element-net-native.md)（构造泛型方法） [0： m][属性](property-element-net-native.md)[0： M][字段](field-element-net-native.md)[0： M][事件](event-element-net-native.md)[0： m]
 
 [Application](application-element-net-native.md) 元素可以不具任何属性，也可以具备在[“运行时指令和策略”部分](#Directives)中所讨论的策略属性。
 
@@ -92,43 +90,43 @@ ms.locfileid: "71049135"
 
 [Application](application-element-net-native.md)、[Assembly](assembly-element-net-native.md)、[AttributeImplies](attributeimplies-element-net-native.md)、[Namespace](namespace-element-net-native.md)、[Subtypes](subtypes-element-net-native.md) 和 [Type](type-element-net-native.md) 元素支持下列策略类型：
 
-- `Activate`。 控制运行时对构造函数的访问，以启用实例激活。
+- `Activate` 控制运行时对构造函数的访问，以启用实例激活。
 
-- `Browse`。 控制对有关程序元素信息的查询，但并不启用任何运行时访问。
+- `Browse` 控制对有关程序元素信息的查询，但并不启用任何运行时访问。
 
-- `Dynamic`。 控制运行时对所有类型成员的访问，包括构造函数、方法、字段、属性和事件，以启用动态编程。
+- `Dynamic` 控制运行时对所有类型成员的访问，包括构造函数、方法、字段、属性和事件，以启用动态编程。
 
-- `Serialize`。 控制运行时对构造函数、字段和属性的访问，以便通过 Newtonsoft JSON 序列化程序等第三方库实现类型实例的序列化。
+- `Serialize` 控制运行时对构造函数、字段和属性的访问，以便通过 Newtonsoft JSON 序列化程序等第三方库实现类型实例的序列化。
 
-- `DataContractSerializer`。 控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 类的序列化策略。
+- `DataContractSerializer` 控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 类的序列化策略。
 
-- `DataContractJsonSerializer`。 控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 类的 JSON 序列化策略。
+- `DataContractJsonSerializer` 控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 类的 JSON 序列化策略。
 
-- `XmlSerializer`。 控制使用 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 类的 XML 序列化策略。
+- `XmlSerializer` 控制使用 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 类的 XML 序列化策略。
 
-- `MarshalObject`。 控制将引用类型封送到 WinRT 和 COM 的策略。
+- `MarshalObject` 控制将引用类型封送到 WinRT 和 COM 的策略。
 
-- `MarshalDelegate`。 控制将委托类型作为函数指针封送到本机代码的策略。
+- `MarshalDelegate` 控制将委托类型作为函数指针封送到本机代码的策略。
 
 - `MarshalStructure` . 控制封送结构到本机代码的策略。
 
 与这些策略类型有关的设置如下：
 
-- `All`。 为工具链未删除的所有类型和成员启用策略。
+- `All` 为工具链未删除的所有类型和成员启用策略。
 
-- `Auto`。 使用默认行为。 （未指定策略等同于将该策略设置为 `Auto`，除非该策略被替代，例如被父元素替代。）
+- `Auto` 使用默认行为。 （未指定策略等同于将该策略设置为 `Auto`，除非该策略被替代，例如被父元素替代。）
 
-- `Excluded`。 禁用程序元素策略。
+- `Excluded` 禁用程序元素策略。
 
-- `Public`。 启用公共类型或成员策略，除非工具链确定该成员为多余并因此将其删除。 （在后一种情况下，你必须使用 `Required Public`，以确保该成员已被保留并且具有反射功能。）
+- `Public` 启用公共类型或成员策略，除非工具链确定该成员为多余并因此将其删除。 （在后一种情况下，你必须使用 `Required Public`，以确保该成员已被保留并且具有反射功能。）
 
-- `PublicAndInternal`。 如果工具链未将公共和内部类型或成员删除，则为它们启用策略。
+- `PublicAndInternal` 如果工具链未将公共和内部类型或成员删除，则为它们启用策略。
 
-- `Required Public`。 不管公共类型和成员是否处于占用状态，工具链均须将它们保留下来，并为它们启用策略。
+- `Required Public` 不管公共类型和成员是否处于占用状态，工具链均须将它们保留下来，并为它们启用策略。
 
-- `Required PublicAndInternal`。 不管公共和内部类型和成员是否处于占用状态，工具链均须将它们保留下来，并为它们启用策略。
+- `Required PublicAndInternal` 不管公共和内部类型和成员是否处于占用状态，工具链均须将它们保留下来，并为它们启用策略。
 
-- `Required All`。 不管所有类型和成员是否处于占用状态，工具链均须将它们保留下来，并为它们启用策略。
+- `Required All` 不管所有类型和成员是否处于占用状态，工具链均须将它们保留下来，并为它们启用策略。
 
 例如，以下运行时指令文件为程序集 DataClasses.dll 中的所有类型和成员定义了策略。 借此可以实现对所有公共属性的序列化反射；可实现对所有类型和类型成员进行浏览；可实现对所有类型的激活（由于具有 `Dynamic` 属性）；还可实现对所有公共类型和成员的反射。
 
@@ -405,7 +403,7 @@ ms.locfileid: "71049135"
 
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>XmlSerializer、DataContractSerializer 和 DataContractJsonSerializer 策略的影响
 
-与用于基于反射的序列化程序的<xref:System.Xml.Serialization.XmlSerializer> <xref:System.Runtime.Serialization.DataContractSerializer>策略不同，、和<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>策略用于启用一组对 .NET Native 工具链已知的序列化程序。 `Serialize` 这些序列化程序并非通过反射实施，但却按照与确定可反射类型的设置类似的方式来确定可在运行时实现序列化的类型的设置。
+与用于基于反射的序列化程序的 `Serialize` 策略不同，<xref:System.Xml.Serialization.XmlSerializer>、<xref:System.Runtime.Serialization.DataContractSerializer>和 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 策略用于启用一组在 .NET Native 工具链中已知的序列化程序。 这些序列化程序并非通过反射实施，但却按照与确定可反射类型的设置类似的方式来确定可在运行时实现序列化的类型的设置。
 
 将这些策略之一应用于类型，该类型便可借助匹配的序列化程序实现序列化。 同样，任何序列化引擎可静态确定为需要序列化的类型也可实现序列化。
 

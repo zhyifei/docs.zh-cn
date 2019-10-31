@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: ac6244b9-54ba-475f-b72a-abed6afc46ec
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 200ea1b9c046b8743699a549c07c0baaf285be39
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7af3109c822dfe945a60c16d4bd3b764f7550492
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965026"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131343"
 ---
 # <a name="icordebugregistersetsetregisters-method"></a>ICorDebugRegisterSet::SetRegisters 方法
-`SetRegisters`在 .NET Framework 版本2.0 中未实现。 请勿调用此方法。  
+.NET Framework 版本2.0 中未实现 `SetRegisters`。 请勿调用此方法。  
   
 > [!NOTE]
-> 使用较高级别的操作, 如[ICorDebugILFrame:: setip](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md)或[ICorDebugNativeFrame:: setip](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md)。  
+> 使用较高级别的操作，如[ICorDebugILFrame：： setip](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md)或[ICorDebugNativeFrame：： setip](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,13 +39,13 @@ HRESULT SetRegisters (
 ```  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl, Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
- **.NET Framework 版本:** 1.1、1。0  
+ **.NET Framework 版本：** 1.1、1。0  
   
 ## <a name="see-also"></a>请参阅
 

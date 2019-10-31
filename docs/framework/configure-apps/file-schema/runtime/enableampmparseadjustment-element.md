@@ -2,21 +2,19 @@
 title: <EnableAmPmParseAdjustment> 元素
 ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f132ce0a114a6fc904d86ca3ce893c447366523f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8920e51fcaaca5cb78b80a99ea321163c9b5240f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252630"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117370"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment > 元素
 确定日期和时间分析方法是否使用经过调整的规则集来分析包含 day、month、hour 和 AM/PM 指示符的日期字符串。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<EnableAmPmParseAdjustment>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<EnableAmPmParseAdjustment >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,7 +33,7 @@ ms.locfileid: "70252630"
   
 ### <a name="enabled-attribute"></a>enabled 特性  
   
-|值|Description|  
+|“值”|描述|  
 |-----------|-----------------|  
 |0|日期和时间分析方法不使用调整的规则来分析日期字符串，这些字符串只包含日、月、小时和 AM/PM 指示符。|  
 |1|日期和时间分析方法使用经过调整的规则，用于分析日期字符串，这些字符串只包含日、月、小时和 AM/PM 指示符。|  
@@ -51,7 +49,7 @@ ms.locfileid: "70252630"
 |`runtime`|包含有关运行时初始化选项的信息。|  
   
 ## <a name="remarks"></a>备注  
- `<EnableAmPmParseAdjustment>`元素控制以下方法如何分析包含数字日和月后跟一个小时和 AM/PM 指示符的日期字符串（例如 "4/10 6 AM"）：  
+ `<EnableAmPmParseAdjustment>` 元素控制以下方法如何分析包含数字日和月后跟一个小时和 AM/PM 指示符的日期字符串（例如 "4/10 6 AM"）：  
   
 - <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
   
@@ -65,20 +63,20 @@ ms.locfileid: "70252630"
   
  其他模式不受影响。  
   
- `<EnableAmPmParseAdjustment>`元素对<xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>、、和<xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>方法不起作用<xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType>。 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>  
+ `<EnableAmPmParseAdjustment>` 元素对 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>、<xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>、<xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>和 <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> 方法不起作用。  
   
 > [!IMPORTANT]
-> 在.NET Core 和.NET Native，默认情况下启用的调整后的 AM/PM 分析规则。  
+> 在 .NET Core 和 .NET Native 中，将默认启用调整后的 AM/PM 分析规则。  
   
  如果未启用解析调整规则，则会将字符串的第一个数字解释为12小时制的小时，而除 AM/PM 指示符之外的字符串的其余部分将被忽略。 解析方法返回的日期和时间由当前日期和从日期字符串提取的日期中的小时组成。  
   
  如果启用了解析调整规则，则分析方法会将日期和月份解释为属于当前年份，并将时间解释为12小时制的小时。  
   
- <xref:System.DateTime>下表说明了<xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType>当使用方法分析字符串 " `<EnableAmPmParseAdjustment>` 4/10 6 AM" （元素的`enabled`属性设置为 "0" 或 "1"）时，值中的差异。 它假定今天的日期为2017年1月5日，并使用指定的区域性的 "G" 格式字符串来显示日期。  
+ 下表说明了当 <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> 方法用于分析字符串 "4/10 6 AM" 与 `<EnableAmPmParseAdjustment>` 元素的 `enabled` 属性设置为 "0" 或 "1" <xref:System.DateTime> 值时的差异。 它假定今天的日期为2017年1月5日，并使用指定的区域性的 "G" 格式字符串来显示日期。  
   
 |区域性名称|enabled = "0"|enabled = "1"|  
 |------------------|------------------|------------------|  
-|en-US|上午 1/5/2017 4:00:00|上午 4/10/2017 6:00:00|  
+|zh-CN|上午 1/5/2017 4:00:00|上午 4/10/2017 6:00:00|  
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
 ## <a name="see-also"></a>请参阅

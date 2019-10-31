@@ -2,14 +2,12 @@
 title: 序列化和元数据
 ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ec8180da9637ec2b2c4e1b432773b4f9f1ac908b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1805b6ca06d584237303d1366222419da3e8b9ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049176"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128114"
 ---
 # <a name="serialization-and-metadata"></a>序列化和元数据
 
@@ -47,7 +45,7 @@ ms.locfileid: "71049176"
   
 ### <a name="typeof-used-outside-the-constructor"></a>构造函数外部使用的 TypeOf
 
- 如果调用了这些序列化类的构造函数并在C#提供给构造函数的<xref:System.Type>参数的表达式之外使用[typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)运算符（如以下代码所示），则 .NET Native 编译器无法解析该类型：  
+ 如果调用了这些序列化类的构造函数并在C#提供给构造函数的 <xref:System.Type> 参数的表达式之外使用[typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)运算符（如以下代码所示），则 .NET Native 编译器无法解析该类型：  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -57,7 +55,7 @@ ms.locfileid: "71049176"
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- 同样，如果调用的构造函数（如<xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>和）提供一个要序列<xref:System.Type>化的附加对象数组，如下面的代码所示，.NET Native 编译器无法解析这些类型。  
+ 同样，如果调用 <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> 构造函数并提供要序列化的其他 <xref:System.Type> 对象的数组，如下面的代码所示，.NET Native 编译器无法解析这些类型。  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   

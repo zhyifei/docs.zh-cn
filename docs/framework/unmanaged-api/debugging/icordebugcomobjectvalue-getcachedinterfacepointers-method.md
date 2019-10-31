@@ -13,17 +13,15 @@ helpviewer_keywords:
 ms.assetid: 08dbd558-bd39-4263-94c2-71e70687aaf0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bdbec0101de269b3d5b09e750d552c993a0198ab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c1e2b557a5e5794c50986b1af8ec39faba845cc9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748481"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125512"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a>ICorDebugComObjectValue::GetCachedInterfacePointers 方法
-获取缓存在当前运行时可调用包装 (RCW) 上的原始接口指针。  
+获取缓存在当前运行时可调用包装器（RCW）上的原始接口指针。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,23 +35,23 @@ HRESULT GetCachedInterfacePointers(
   
 ## <a name="parameters"></a>参数  
  `bIInspectableOnly`  
- [in]一个值，指示该方法是否将返回唯一的 Windows 运行时接口 (`IInspectable`接口) 或所有缓存的运行时可调用包装 (RCW) 的 COM 接口。  
+ 中一个值，该值指示方法是只返回 Windows 运行时接口（`IInspectable` 接口）还是运行时可调用包装器（RCW）缓存的所有 COM 接口。  
   
  `celt`  
- [in]要从中检索其地址的对象数。  
+ 中要检索其地址的对象的数目。  
   
  `pceltFetched`  
- [out]指向数`CORDB_ADDRESS`中实际返回的值`ptrs`。  
+ 弄一个指针，指向 `ptrs`中实际返回 `CORDB_ADDRESS` 值的数量。  
   
  `ptrs`  
- 指向数组的起始地址的指针`CORDB_ADDRESS`包含的地址的值缓存接口的对象。  
+ 一个指针，指向包含缓存接口对象地址的 `CORDB_ADDRESS` 值数组的起始地址。  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

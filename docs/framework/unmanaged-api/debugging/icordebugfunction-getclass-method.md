@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 27967230-144f-40d3-9e23-961d0241abd9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 218818097846709ec92e20f33a0707314edd562a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 887d207aea3de9296107c041816606b2f5947406
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754739"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124033"
 ---
 # <a name="icordebugfunctiongetclass-method"></a>ICorDebugFunction::GetClass 方法
-获取一个 ICorDebugClass 对象，表示此函数的类。  
+获取一个 ICorDebugClass 对象，该对象表示此函数所属的类。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,12 +35,12 @@ HRESULT GetClass (
   
 ## <a name="parameters"></a>参数  
  `ppClass`  
- [out]指向的地址的指针`ICorDebugClass`对象，表示的类或为 null，如果此函数不是类的成员。  
+ 弄指向表示类的 `ICorDebugClass` 对象地址的指针; 如果此函数不是类的成员，则为 null。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

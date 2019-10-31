@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8eb4095-3a8f-4be3-9446-63e9893dce7d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6fde9586c1b3736b5db2c4814058dd23713dd34d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 43f2048c8ab85fa7e94f73aad430400ad4c8352f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770330"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124585"
 ---
 # <a name="iclrtaskyieldtask-method"></a>ICLRTask::YieldTask 方法
-请求公共语言运行时 (CLR) 到某个位置放置该任务的当前[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)实例所表示，并使处理器时间可供其他任务。  
+请求公共语言运行时（CLR）搁置当前[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)实例表示的任务，并使处理器时间可供其他任务使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,22 +35,22 @@ HRESULT YieldTask ();
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`YieldTask` 已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|CLR 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。|  
-|HOST_E_TIMEOUT|呼叫已超时。|  
+|S_OK|`YieldTask` 成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|事件已取消时被阻塞的线程或纤程正在等待它。|  
-|E_FAIL|发生未知的灾难性故障。 如果某方法返回 E_FAIL，CLR 不再在进程内可用。 对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
+|E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>备注  
- 主机调用`YieldTask`请求的其他任务或进程的处理器资源。 此方法主要是为了允许运行时间较长代码放弃 CPU 时间。 在运行时尝试将此任务放置的当前`ICLRTask`实例表示在其中它可以产生处理时间，但是不能保证成功的状态。  
+ 主机调用 `YieldTask` 来请求其他任务或进程的处理器资源。 此方法主要用于允许长时间运行的代码放弃 CPU 时间。 运行时尝试将当前 `ICLRTask` 实例表示的任务置于可产生处理时间的状态，但不保证成功。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

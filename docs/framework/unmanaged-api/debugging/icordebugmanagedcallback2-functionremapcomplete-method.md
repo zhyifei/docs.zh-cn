@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5396c4c3-4ec3-4e3a-a38d-d65b21f0a2fc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9920627ed193e9741d65fddfc54f325cb1d3758c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e048d03e54d4f97cd45935906ea4e4744468db9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761058"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131520"
 ---
 # <a name="icordebugmanagedcallback2functionremapcomplete-method"></a>ICorDebugManagedCallback2::FunctionRemapComplete 方法
-通知调试器执行代码已切换到新版本的已编辑函数。  
+通知调试器，代码执行已切换到已编辑函数的新版本。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,21 +37,21 @@ HRESULT FunctionRemapComplete (
   
 ## <a name="parameters"></a>参数  
  `pAppDomain`  
- [in]指向一个 ICorDebugAppDomain 对象，表示包含已编辑的函数的应用程序域的指针。  
+ 中指向 ICorDebugAppDomain 对象的指针，该对象表示包含已编辑函数的应用程序域。  
   
  `pThread`  
- [in]指向一个 ICorDebugThread 对象，表示遇到重新映射断点的线程的指针。  
+ 中指向 ICorDebugThread 对象的指针，该对象表示遇到重新映射断点的线程。  
   
  `pFunction`  
- [in]指向一个 ICorDebugFunction 对象，表示当前线程上运行的函数的版本的指针。  
+ 中指向 ICorDebugFunction 对象的指针，该对象表示线程上当前正在运行的函数的版本。  
   
 ## <a name="remarks"></a>备注  
- 此回调使调试器有机会重新创建先前已存在任何分档器。  
+ 此回调使调试器有机会重新创建以前存在的任何 steppers。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

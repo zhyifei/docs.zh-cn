@@ -14,14 +14,12 @@ helpviewer_keywords:
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 656b82daffc62824ed663ea7080bd6d20cd0dadc
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 707c71482196d789ed9a88db34af048ec57734fb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045818"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130032"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>指定完全限定的类型名称
 
@@ -128,7 +126,7 @@ AssemblyProperty
 |\\*|指针类型。|
 |\\[|数组维度分隔符。|
 |\\]|数组维度分隔符。|
-|\\。|只有在数组规范中使用句点时，才应在句点前使用反斜杠。 NamespaceSpec 中的句点不使用反斜杠。|
+|\\|只有在数组规范中使用句点时，才应在句点前使用反斜杠。 NamespaceSpec 中的句点不使用反斜杠。|
 |\\\|必要时将反斜杠用作字符串文本。|
 
 请注意，除 AssemblyNameSpec 外，所有 TypeSpec 组件中的空格都是相关的。 在 AssemblyNameSpec 中，“,”分隔符之前的空格相关，但“,”分隔符之后的空格将被忽略。

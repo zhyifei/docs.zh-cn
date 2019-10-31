@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1d3d1eb-8370-4f25-8297-3bd262b4740a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c0e72d15ab4ca9b4468efb2a671022f30bfb3cc6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8b9ec94184945c19b77247175e51bd5e8dc1ceee
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759943"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122665"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>ICorDebugInternalFrame2::IsCloserToLeaf 方法
-检查是否`this`内部框架是比指定 ICorDebugFrame 对象更接近于叶。  
+检查 `this` 内部帧是否接近于指定的 ICorDebugFrame 对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,10 +34,10 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
   
 ## <a name="parameters"></a>参数  
  `pFrameToCompare`  
- [in]指向比较`ICorDebugFrame`对象。  
+ 中指向比较 `ICorDebugFrame` 对象的指针。  
   
  `pIsCloser`  
- [out]`true`如果`this`内部框架是比指定的帧更接近于叶`pFrameToCompare`; 否则为`false`。  
+ [out] 如果 `this` 内部帧比 `pFrameToCompare`指定的帧更接近叶，则 `true`;否则，`false`。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
@@ -51,12 +49,12 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
 |E_INVALIDARG|`pFrameToCompare` 或 `pIsCloser` 为 null。|  
   
 ## <a name="remarks"></a>备注  
- `IsCloserToLeaf` 可以用于实现适用于内部帧与堆栈上的其他框架在交错执行的策略。  
+ `IsCloserToLeaf` 可用于实现将内部帧与堆栈上的其他帧交错的策略。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - interop marshaling, blittable types
 - blittable types, interop marshaling
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 739f0efdb50f8eba4875a42d5173f741b6ee94b3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 816b854120f09efef69bd8ceb2d3650e5a8e7af0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051891"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123735"
 ---
 # <a name="blittable-and-non-blittable-types"></a>可直接复制到本机结构中的类型和非直接复制到本机结构中的类型
 大多数数据类型在托管和非托管内存中具有共同的表示形式，而且不需要互操作封送处理程序进行特殊处理。 这些类型称为 blittable 类型，因为它们在托管和非托管代码之间传递时不需要进行转换。  
@@ -59,7 +57,7 @@ ms.locfileid: "71051891"
   
  下表列出了 <xref:System> 命名空间中的 non-blittable 类型。 [委托](default-marshaling-behavior.md#default-marshaling-for-delegates)是引用静态方法或类实例的数据结构，也是 non-blittable 类型。  
   
-|Non-blittable 类型|说明|  
+|Non-blittable 类型|描述|  
 |-------------------------|-----------------|  
 |[System.Array](default-marshaling-for-arrays.md)|转换为 C 样式数组或 `SAFEARRAY`。|  
 |[System.Boolean](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|转换为 1、2 或 4 字节的值，`true` 表示 1 或 -1。|  

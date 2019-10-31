@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e3c3958-80bb-43b1-a96b-dd3e6dbd9cd7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a05a779d4a56eb8f881da1824d5ffaa363b5a01
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 1d42292705dae03e9bf1a1555508dfb69cebde82
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274282"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132439"
 ---
 # <a name="closeclrenumeration-function"></a>CloseCLREnumeration 函数
 关闭位于[EnumerateCLRs 函数](enumerateclrs-function.md)所返回的句柄数组中的所有有效的公共语言运行时（CLR）继续启动事件，并释放该句柄和字符串路径数组的内存。  
@@ -59,7 +57,7 @@ HRESULT CloseCLREnumeration (
  此函数无法释放 `pHandleArray` 和 `pStringArray` 的内存。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** dbgshim.dll  
   

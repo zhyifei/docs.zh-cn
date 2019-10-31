@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 30931874-4d0e-4df1-b3d1-e425b50655d1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9ab44ce8f51620d83084d1dd16e98b2b310feb76
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1759ee2ecf08322b745a4f80a62b24596c4504cb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968942"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123255"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 函数
 加载 .NET Framework 可再发行组件包中包含的 DLL 的指定版本。  
   
- 此函数已在 .NET Framework 4 中弃用。 改为使用[ICLRRuntimeInfo:: LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md)方法。  
+ 此函数已在 .NET Framework 4 中弃用。 改为使用[ICLRRuntimeInfo：： LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,10 +40,10 @@ HRESULT LoadLibraryShim (
   
 ## <a name="parameters"></a>参数  
  `szDllName`  
- 中以零结尾的字符串, 表示要从 .NET Framework 库中加载的 DLL 的名称。  
+ 中以零结尾的字符串，表示要从 .NET Framework 库中加载的 DLL 的名称。  
   
  `szVersion`  
- 中以零结尾的字符串, 表示要加载的 DLL 的版本。 如果`szVersion`为 null, 则为加载选择的版本是指定 DLL 的最新版本, 该版本低于版本4。 也就是说, 如果`szVersion`为 null, 则忽略等于或大于版本4的所有版本, 如果未安装低于版本4的版本, 则 DLL 无法加载。 这是为了确保 .NET Framework 4 的安装不会影响预先存在的应用程序或组件。 请参阅 CLR 团队博客中的 "[进程内 SxS 和迁移快速入门](https://go.microsoft.com/fwlink/?LinkId=200329)条目。  
+ 中以零结尾的字符串，表示要加载的 DLL 的版本。 如果 `szVersion` 为 null，则为加载选择的版本是最新版本的指定 DLL （低于版本4）。 也就是说，如果 `szVersion` 为空，则将忽略等于或大于版本4的所有版本，如果安装的版本低于版本4，则无法加载 DLL。 这是为了确保 .NET Framework 4 的安装不会影响预先存在的应用程序或组件。 请参阅 CLR 团队博客中的 "[进程内 SxS 和迁移快速入门](https://go.microsoft.com/fwlink/?LinkId=200329)条目。  
   
  `pvReserved`  
  留待将来使用。  
@@ -54,23 +52,23 @@ HRESULT LoadLibraryShim (
  弄指向模块的句柄的指针。  
   
 ## <a name="return-value"></a>返回值  
- 除以下值外, 此方法还返回 Winerror.h 中定义的标准组件对象模型 (COM) 错误代码。  
+ 除以下值外，此方法还返回 Winerror.h 中定义的标准组件对象模型（COM）错误代码。  
   
 |返回代码|描述|  
 |-----------------|-----------------|  
 |S_OK|该方法已成功完成。|  
-|CLR_E_SHIM_RUNTIMELOAD|加载`szDllName`需要加载公共语言运行时 (clr), 并且无法加载 CLR 的必要版本。|  
+|CLR_E_SHIM_RUNTIMELOAD|加载 `szDllName` 需要加载公共语言运行时（CLR），并且无法加载 CLR 的必要版本。|  
   
 ## <a name="remarks"></a>备注  
  此函数用于加载 .NET Framework 可再发行组件包中包含的 Dll。 它不会加载用户生成的 Dll。  
   
 > [!NOTE]
-> 从 .NET Framework 版本2.0 开始, 加载合成 .dll 会导致加载 CLR。 这是因为, 合成 .dll 中的函数现在是由运行时提供其实现的包装器。  
+> 从 .NET Framework 版本2.0 开始，加载合成 .dll 会导致加载 CLR。 这是因为，合成 .dll 中的函数现在是由运行时提供其实现的包装器。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

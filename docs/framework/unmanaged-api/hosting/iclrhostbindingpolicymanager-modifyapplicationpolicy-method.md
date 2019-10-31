@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d82d633e-cce6-427c-8b02-8227e34e12ba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0a9e438e6dd436303cd6f7aa60c779179b5d3c04
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d5323538447e083a0c727e43261dd68337182b9b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779672"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141076"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy 方法
-修改为指定的程序集绑定策略和创建策略的新版本。  
+修改指定程序集的绑定策略，并创建该策略的新版本。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,48 +41,48 @@ HRESULT  ModifyApplicationPolicy (
   
 ## <a name="parameters"></a>参数  
  `pwzSourceAssemblyIdentity`  
- [in]要修改的程序集的标识。  
+ 中要修改的程序集的标识。  
   
  `pwzTargetAssemblyIdentity`  
- [in]修改后的程序集的新标识。  
+ 中已修改的程序集的新标识。  
   
  `pbApplicationPolicy`  
- [in]指向包含要修改的程序集绑定策略数据的缓冲区的指针。  
+ 中指向包含要修改的程序集的绑定策略数据的缓冲区的指针。  
   
  `cbAppPolicySize`  
- [in]要替换的绑定策略的大小。  
+ 中要替换的绑定策略的大小。  
   
  `dwPolicyModifyFlags`  
- [in]逻辑或组合[EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md)值，指示重定向的控件。  
+ 中[EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md)值的逻辑或组合，指示对重定向的控制。  
   
  `pbNewApplicationPolicy`  
- [out]指向包含新的绑定策略数据的缓冲区的指针。  
+ 弄指向包含新绑定策略数据的缓冲区的指针。  
   
  `pcbNewAppPolicySize`  
- [in、 out]一个指向新的绑定策略缓冲区的大小。  
+ [in，out]指向新绑定策略缓冲区的大小的指针。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|已成功修改策略。|  
-|E_INVALIDARG|`pwzSourceAssemblyIdentity` 或`pwzTargetAssemblyIdentity`是 null 引用。|  
-|ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy` 是太小。|  
-|HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。|  
-|HOST_E_TIMEOUT|呼叫已超时。|  
+|E_INVALIDARG|`pwzSourceAssemblyIdentity` 或 `pwzTargetAssemblyIdentity` 为空引用。|  
+|ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy` 太小。|  
+|HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|事件已取消时被阻塞的线程或纤程正在等待它。|  
-|E_FAIL|发生未知的灾难性故障。 方法返回 E_FAIL 后，CLR 不再在进程中使用。 对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
+|E_FAIL|发生未知的灾难性故障。 方法返回 E_FAIL 后，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>备注  
- `ModifyApplicationPolicy`两次调用方法。 第一次调用应提供 null 值的`pbNewApplicationPolicy`参数。 此调用将返回必需的值与`pcbNewAppPolicySize`。 第二次调用应提供此值用于`pcbNewAppPolicySize`，并指向该大小的缓冲区`pbNewApplicationPolicy`。  
+ 可以调用 `ModifyApplicationPolicy` 方法两次。 第一次调用应为 `pbNewApplicationPolicy` 参数提供 null 值。 此调用将返回 `pcbNewAppPolicySize`所需的值。 第二次调用应为 `pcbNewAppPolicySize`提供此值，并指向 `pbNewApplicationPolicy`的大小的缓冲区。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

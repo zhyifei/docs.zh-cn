@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: b862ff3e-e480-4cdf-84e2-e1013334a467
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 291246169a5cc2c95b117bc55bc269791885b2ea
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c884569a452fb2985713956f942205cda6ea1ff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749101"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141246"
 ---
 # <a name="imanagedobjectgetobjectidentity-method"></a>IManagedObject::GetObjectIdentity 方法
 获取此托管对象的标识。  
@@ -39,23 +37,23 @@ HRESULT GetObjectIdentity (
   
 ## <a name="parameters"></a>参数  
  `pBSTRGUID`  
- [out]指向该对象所驻留的进程的 GUID 的指针。  
+ 弄指向对象所在的进程的 GUID 的指针。  
   
  `AppDomainID`  
- [out]指向对象的应用程序域的 ID 的指针。  
+ 弄指向对象的应用程序域的 ID 的指针。  
   
  `pCCW`  
- [out]一个指向 COM 经典 v-表中的对象的索引。  
+ 弄指向 COM 经典 v 表中对象索引的指针。  
   
 ## <a name="remarks"></a>备注  
- 托管对象的标识包括 COM 经典 v-表中的进程 GUID、 应用程序域 ID 和对象的索引。  
+ 托管对象的标识包括进程 GUID、应用程序域 ID 以及 COM 经典 v 表中对象的索引。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -17,14 +17,12 @@ helpviewer_keywords:
 ms.assetid: e00fd477-4f49-43d3-bd0e-3094824b1136
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 301e6cc153f905bc5c15e1b526e6fb1a492a76d6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4d1404e3f7565ee26edd94e059b7f01f8edd4dd6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774436"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121849"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>ICoreClrDebugTarget::EnumProcesses 方法
 枚举远程计算机上运行的进程。  
@@ -43,7 +41,7 @@ HRESULT EnumProcesses (
  [out] `ppProcs` 中返回的进程数。 此值可为 0（零）。  
   
  `ppProcs`  
- [out]一个数组[CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)这些结构表示远程计算机上运行的进程。  
+ 弄[CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)结构的数组，这些结构表示远程计算机上运行的进程。  
   
 ## <a name="return-value"></a>返回值  
  S_OK  
@@ -56,16 +54,16 @@ HRESULT EnumProcesses (
  其他故障。  
   
 ## <a name="remarks"></a>备注  
- 若要释放由此方法分配的内存，调用[icoreclrdebugtarget:: Freememory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)方法。  
+ 若要释放此方法分配的内存，请调用[ICoreClrDebugTarget：： FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CoreClrRemoteDebuggingInterfaces.h  
+ **标头：** CoreClrRemoteDebuggingInterfaces  
   
- **库：** mscordbi_macx86.dll  
+ **库：** mscordbi_macx86  
   
- **.NET framework 版本：** 3.5 SP1  
+ **.NET Framework 版本：** 3.5 SP1  
   
 ## <a name="see-also"></a>请参阅
 

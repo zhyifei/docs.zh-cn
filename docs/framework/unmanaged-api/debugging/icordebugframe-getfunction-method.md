@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 879d2311-0ff1-4616-a8b3-959ea5868b2e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f801dae69f16f2848b4ffa30f458c084fe9750a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 39175e338e4fd98dd4af1325138da732ed81c764
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754895"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137925"
 ---
 # <a name="icordebugframegetfunction-method"></a>ICorDebugFrame::GetFunction 方法
-获取包含与此堆栈帧关联的代码的函数。  
+获取一个函数，该函数包含与此堆栈帧关联的代码。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,15 +35,15 @@ HRESULT GetFunction (
   
 ## <a name="parameters"></a>参数  
  `ppFunction`  
- [out]指向一个 ICorDebugFunction 对象，表示包含与此堆栈帧关联的代码的函数的地址的指针。  
+ 弄指向 ICorDebugFunction 对象的地址的指针，该对象表示包含与此堆栈帧关联的代码的函数。  
   
 ## <a name="remarks"></a>备注  
- `GetFunction`如果帧不与任何特定的函数相关联，方法可能会失败。  
+ 如果框架不与任何特定函数相关联，则 `GetFunction` 方法可能会失败。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

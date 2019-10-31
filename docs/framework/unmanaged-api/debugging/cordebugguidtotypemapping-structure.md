@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: 57dbccd9-b16d-4da3-ae25-7a2cf9adf679
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38e1b19d6340f559e6f8b7e0f7bc042a10df16c3
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 313f6649448653ad630d616c7dbf739653e352dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025996"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132837"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>CorDebugGuidToTypeMapping 结构
-将 Windows 运行时 GUID 映射到其相应的 ICorDebugType 对象。  
+将 Windows 运行时 GUID 映射到其对应的 ICorDebugType 对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,17 +35,17 @@ typedef struct CorDebugGuidToTypeMapping {
 } CorDebugGuidToTypeMapping;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
 |`iid`|缓存的 Windows 运行时类型的 GUID。|  
-|`pType`|指向一个 ICorDebugType 对象，提供有关缓存类型的信息的指针。|  
+|`pType`|指向 ICorDebugType 对象的指针，该对象提供有关缓存类型的信息。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** Windows 运行时。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

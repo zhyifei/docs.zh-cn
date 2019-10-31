@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 081d1c95-152b-4797-8552-18453eb7b14b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f453e950a79b0f929ec8f813cc13eb2e01ab8c87
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 700e0af05828b9fe0a50c1aac114e840adc276b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760939"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131846"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>ICorDebugStackWalk::GetContext 方法
-返回的上下文中的当前帧[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)对象。  
+返回[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)对象中的当前帧的上下文。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,36 +36,36 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
   
 ## <a name="parameters"></a>参数  
  `contextFlags`  
- [in]指示请求 （在 WinNT.h 中定义） 的上下文缓冲区的内容的标志。  
+ 中指示上下文缓冲区的请求内容（在 WinNT 中定义）的标志。  
   
  `contextBufSize`  
- [in]已分配的上下文缓冲区大小。  
+ 中上下文缓冲区的已分配大小。  
   
  `contextSize`  
- [out]上下文的实际大小。 此值必须小于或等于上下文缓冲区的大小。  
+ 弄上下文的实际大小。 此值必须小于或等于上下文缓冲区的大小。  
   
  `contextBuf`  
- [out]上下文缓冲区中。  
+ 弄上下文缓冲区。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|成功地返回当前帧的上下文。|  
-|E_FAIL|不会返回上下文。|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)|上下文缓冲区因过小。|  
-|CORDBG_E_PAST_END_OF_STACK|帧指针已末尾的堆栈;因此，可以不访问任何其他帧。|  
+|S_OK|当前帧的上下文已成功返回。|  
+|E_FAIL|未能返回上下文。|  
+|HRESULT_FROM_WIN32 （ERROR_INSUFFICIENT BUFFER）|上下文缓冲区太小。|  
+|CORDBG_E_PAST_END_OF_STACK|帧指针已位于堆栈末尾;因此，不能访问其他帧。|  
   
-## <a name="exceptions"></a>Exceptions  
+## <a name="exceptions"></a>异常  
   
 ## <a name="remarks"></a>备注  
- 因为展开还原寄存器中，例如非易失寄存器的一个子集上下文在调用时可能不完全匹配的注册状态。  
+ 因为展开仅还原一个寄存器子集，如非易失性寄存器，所以在调用时，上下文可能与注册状态不完全匹配。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

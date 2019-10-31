@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: b4367214-6dac-4280-aa11-fd487ff30bc4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b488b6a887b0c66d8c17f8ea78f48f7d2ea31011
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 30e3a88140c8a438001e8428df4c5ee879c83376
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758405"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136913"
 ---
-# <a name="corimageunloading-function"></a>_CorImageUnloading 函数
-卸载托管的模块映像时通知加载程序。  
+# <a name="_corimageunloading-function"></a>_CorImageUnloading 函数
+卸载托管模块映像时通知加载程序。  
   
- 未实现此函数。 如果调用，则返回 E_NOTIMPL。  
+ 未实现此函数。 如果调用，它将返回 E_NOTIMPL。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,14 +36,14 @@ STDAPI (VOID) _CorImageUnloading(
   
 ## <a name="parameters"></a>参数  
  `ImageBase`  
- [in]指向要卸载的图像的起始位置的指针。  
+ 中一个指针，指向要卸载的图像的起始位置。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **标头：** Cor  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 38c1940b-ada1-40ba-8295-4c0833744e1e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d0f601c4b454b55edc5fa25eb2ee33d491009b9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 43f86e704e4a52a702b8f563e3c613806eb061b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760567"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137530"
 ---
 # <a name="icordebugstepperstep-method"></a>ICorDebugStepper::Step 方法
-导致此单步执行其包含的线程，并 （可选） 到 ICorDebugStepper 继续单步执行通过该线程中调用的函数。  
+使此 ICorDebugStepper 单步执行其包含线程，并根据需要继续单步执行线程中调用的函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,15 +35,15 @@ HRESULT Step (
   
 ## <a name="parameters"></a>参数  
  `bStepIn`  
- [in]设置为`true`来单步执行的线程内调用的函数。 设置为`false`到逐过程执行函数。  
+ 中设置为单步执行在线程中调用的函数的 `true`。 设置为 `false` 以逐过程执行函数。  
   
 ## <a name="remarks"></a>备注  
- 步骤完成时公共语言运行时执行此单步调试器的帧中的下一步托管的指令。 如果`Step`是分档器上调用，这不是在托管代码中，该步骤完成后，将由线程执行的下一个托管的代码指令。  
+ 当公共语言运行时执行此分档器帧中的下一个托管指令时，此步骤即告完成。 如果在不在托管代码中的分档器上调用 `Step`，则在线程执行下一个托管代码指令时，步骤将完成。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bca6bd79-e288-475a-aa46-6bf81541d966
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a23c2793dce5be459b3aa0f183179c584592c115
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a32fb0480e76f47495590a29c329f54722e2dee
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779879"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127779"
 ---
 # <a name="icorconfigurationsetgchostcontrol-method"></a>ICorConfiguration::SetGCHostControl 方法
-设置要由垃圾回收器用于请求的主机，若要更改的虚拟内存限制的回调接口。  
+设置垃圾回收器用于请求主机更改虚拟内存限制的回调接口。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,14 +35,14 @@ HRESULT SetGCHostControl (
   
 ## <a name="parameters"></a>参数  
  `pGCHostControl`  
- [in]一个指向[IGCHostControl](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)对象，它允许垃圾回收器请求的主机，若要更改虚拟内存的限制。  
+ 中指向[IGCHostControl](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)对象的指针，该对象允许垃圾回收器请求主机更改虚拟内存的限制。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

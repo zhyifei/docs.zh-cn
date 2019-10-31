@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0ac59d27-783f-4a87-b7a8-baa3ccc54582
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d7432771a7d8eee9cea10f883dd3bd91f5ffb74
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a72eabb1b405c67f5603164e56a589a237603d2f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761387"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130693"
 ---
 # <a name="icordebugmanagedcallbacklogswitch-method"></a>ICorDebugManagedCallback::LogSwitch 方法
-通知调试器公共语言运行时 (CLR) 托管线程已调用的一个方法<xref:System.Diagnostics.Switch>类来创建、 修改或删除调试/跟踪开关。  
+通知调试器公共语言运行时（CLR）托管线程在 <xref:System.Diagnostics.Switch> 类中调用了方法来创建、修改或删除调试/跟踪开关。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,27 +39,27 @@ HRESULT LogSwitch (
   
 ## <a name="parameters"></a>参数  
  `PAppDomain`  
- [in]指向一个 ICorDebugAppDomain 对象，表示包含创建、 修改或删除调试/跟踪开关的托管的线程的应用程序域的指针。  
+ 中指向 ICorDebugAppDomain 对象的指针，该对象表示包含创建、修改或删除调试/跟踪开关的托管线程的应用程序域。  
   
  `pThread`  
- [in]指向表示托管的线程的 ICorDebugThread 对象的指针。  
+ 中指向 ICorDebugThread 对象的指针，该对象表示托管线程。  
   
  `lLevel`  
- [in]一个值，指示已写入事件日志的描述性消息的严重性级别。  
+ 中一个值，该值指示写入事件日志的描述性消息的严重性级别。  
   
  `ulReason`  
- [in]值为[LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md)上调试/跟踪开关执行枚举，指示该操作。  
+ 中[LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md)枚举的值，该值指示在调试/跟踪开关上执行的操作。  
   
  `pLogSwitchName`  
- [in]指向调试/跟踪开关的名称的指针。  
+ 中指向调试/跟踪开关的名称的指针。  
   
  `pParentName`  
- [in]指向调试/跟踪开关的父级的名称的指针。  
+ 中一个指针，指向调试/跟踪开关的父项的名称。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

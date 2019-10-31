@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a846238-df4e-4060-ba3b-5173f6a51e85
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 233a2a6ca00e289911b45006d10e541e8c13971e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e0183ed0f1556afb660ead042dd0d26a63ef75dd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737294"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133230"
 ---
 # <a name="icorthreadpoolcorsetmaxthreads-method"></a>ICorThreadpool::CorSetMaxThreads 方法
 此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。  
@@ -37,11 +35,11 @@ HRESULT CorSetMaxThreads (
 ```  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

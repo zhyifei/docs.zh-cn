@@ -11,14 +11,12 @@ helpviewer_keywords:
 - CodeDOM, creating classes
 - CodeDOM, graphs
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c932587c13532e14c956f3ebd058ae41d30519dc
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ff7c9d1593c8e75f9bcaeda6577c7cb941719749
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046043"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130193"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>如何：使用 CodeDOM 创建类
 以下过程说明如何创建和编译 CodeDOM 图，此图会生成包含以下各项的类：两个字段、三个属性、一个方法、一个构造函数和一个入口点。  

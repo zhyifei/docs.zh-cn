@@ -9,18 +9,16 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da7fdab1cf67ffd47acb75533fcfdb89664c86d3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: af1548602ece8ea0f5720a836ec05648854e198f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834811"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127251"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>如何：从命令行创建 Windows 窗体应用程序
 
-下面的过程介绍从命令行创建和运行 Windows 窗体应用程序所必须完成的基本步骤。 在 Visual Studio 中没有对这些过程的扩展支持。  另请[参阅演练:在 WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)中承载 Windows 窗体控件。
+下面的过程介绍从命令行创建和运行 Windows 窗体应用程序所必须完成的基本步骤。 在 Visual Studio 中没有对这些过程的扩展支持。  另请参阅[演练：在 WPF 中承载 Windows 窗体控件](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)。
   
 ## <a name="procedure"></a>过程  
   
@@ -36,7 +34,7 @@ ms.locfileid: "71834811"
      [!code-csharp[System.Windows.Forms.BasicForm#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BasicForm#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
   
-3. 为创建一个无参数`Form1`的构造函数。
+3. 为 `Form1`创建无参数的构造函数。
   
      将在后续过程中向构造函数添加更多代码。
   
@@ -45,9 +43,9 @@ ms.locfileid: "71834811"
   
 4. 将 `Main` 方法添加到类。
   
-    1. C# 将应用`Main`到方法, 以指定 Windows 窗体应用程序是单线程单元。 <xref:System.STAThreadAttribute> (Visual Basic 中不需要特性, 因为使用 Visual Basic 开发的 Windows 窗体应用程序在默认情况下使用单线程单元模式。)  
+    1. 将 <xref:System.STAThreadAttribute> 应用到C# `Main` 方法，以指定 Windows 窗体应用程序是单线程单元。 （Visual Basic 中不需要特性，因为使用 Visual Basic 开发的 Windows 窗体应用程序在默认情况下使用单线程单元模式。）  
   
-    2. 调用<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>以将操作系统样式应用于应用程序。  
+    2. 调用 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 以将操作系统样式应用于应用程序。  
   
     3. 创建一个窗体实例，并运行。  
   
@@ -60,19 +58,19 @@ ms.locfileid: "71834811"
   
 2. 编译该窗体。  
   
-    - 如果使用C#的是, 请键入:`csc form1.cs`  
+    - 如果使用C#的是，请键入： `csc form1.cs`  
   
          `-or-`  
   
-    - 如果使用 Visual Basic, 请键入:`vbc form1.vb`  
+    - 如果使用 Visual Basic，请键入： `vbc form1.vb`  
   
-3. 在命令提示符下, 键入:`Form1.exe`  
+3. 在命令提示符下，键入： `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>添加控件和处理事件
 
-上一过程中的步骤演示了如何只创建一个可编译和运行的基本 Windows 窗体。 下一个过程中将显示如何创建控件并将其添加到窗体中，以及如何处理控件的事件。 有关可添加到 Windows 窗体的控件的详细信息, 请参阅[Windows 窗体控件](./controls/index.md)。
+上一过程中的步骤演示了如何只创建一个可编译和运行的基本 Windows 窗体。 下一个过程中将显示如何创建控件并将其添加到窗体中，以及如何处理控件的事件。 有关可添加到 Windows 窗体的控件的详细信息，请参阅[Windows 窗体控件](./controls/index.md)。
   
- 除了解如何创建 Windows 窗体应用程序外，还应了解基于事件的编程以及如何处理用户输入。 有关详细信息, 请参阅[在 Windows 窗体中创建事件处理程序](creating-event-handlers-in-windows-forms.md)和[处理用户输入](./controls/handling-user-input.md)  
+ 除了解如何创建 Windows 窗体应用程序外，还应了解基于事件的编程以及如何处理用户输入。 有关详细信息，请参阅[在 Windows 窗体中创建事件处理程序](creating-event-handlers-in-windows-forms.md)和[处理用户输入](./controls/handling-user-input.md)  
   
 #### <a name="to-declare-a-button-control-and-handle-its-click-event"></a>若要声明一个按钮控件和处理其 click 事件  
   

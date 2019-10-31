@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d8a7730-edc9-4728-898f-41b219cf5a28
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7de415b998ef97e7500c289a1bca4402d203b152
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 205ad3af81fb6fabda5cbe291536f8858999f831
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738689"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113705"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>ICLRDataTarget::GetTLSValue 方法
-获取一个值从线程本地存储 (TLS) 的目标进程中指定的线程。 由公共语言运行时 (CLR) 数据访问服务调用此方法。  
+从目标进程中指定线程的线程本地存储（TLS）获取值。 此方法由公共语言运行时（CLR）数据访问服务调用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,21 +37,21 @@ HRESULT GetTLSValue (
   
 ## <a name="parameters"></a>参数  
  `threadID`  
- [in]目标进程中线程的操作系统的系统标识符。  
+ 中目标进程中的线程的操作系统标识符。  
   
  `index`  
- [in]位置的索引。 此值必须是线程的指定本地存储中的有效索引。  
+ 中位置的索引。 此值必须是指定线程的本地存储区中的有效索引。  
   
  `value`  
- [out]一个指向`CLRDATA_ADDRESS`从给定的 TLS 位置返回指定的值的值。  
+ 弄一个指向 `CLRDATA_ADDRESS` 值的指针，该值指定从给定的 TLS 位置返回的值。  
   
 ## <a name="remarks"></a>备注  
  此方法由调试应用程序的编写器实现。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** ClrData.idl, ClrData.h  
+ **标头：** ClrData，ClrData  
   
  **库：** CorGuids.lib  
   

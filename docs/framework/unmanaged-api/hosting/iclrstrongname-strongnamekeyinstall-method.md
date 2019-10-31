@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c15cf3b-164c-49d1-8e57-e42949d55acf
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a2badf8f164abd1bbb8892ec5db28f7cf39f5c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 693a5831934647256ac48c8f3a2d30325dee4349
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775666"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135035"
 ---
 # <a name="iclrstrongnamestrongnamekeyinstall-method"></a>ICLRStrongName::StrongNameKeyInstall 方法
 将公钥/私钥对导入容器。  
@@ -39,26 +37,26 @@ HRESULT StrongNameKeyInstall (
   
 ## <a name="parameters"></a>参数  
  `wszKeyContainer`  
- [in]密钥容器的名称。 `wszKeyContainer` 必须为非空字符串。  
+ 中密钥容器的名称。 `wszKeyContainer` 必须为非空字符串。  
   
  `pbKeyBlob`  
- [in]二进制密钥对。  
+ 中二进制密钥对。  
   
  `cbKeyBlob`  
- [in]大小，以字节为单位的`pbKeyBlob`。  
+ 中`pbKeyBlob`的大小（以字节为单位）。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK` 如果成功，则完成的方法否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。  
+ 如果方法已成功完成，则 `S_OK`;否则，表示失败的 HRESULT 值（请参阅列表的[常见 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
   
 ## <a name="remarks"></a>备注  
- 使用[iclrstrongname:: Strongnamekeydelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)方法来删除密钥容器。  
+ 使用[ICLRStrongName：： StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)方法删除密钥容器。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MetaHost.h  
+ **标头：** MetaHost  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

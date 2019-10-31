@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 10a40ba0-1b65-4721-bd11-cf12d57b280d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e77046745381d3ecc35c24d5af3f9181b9132e9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 64ed875059730e91e28ff0903ab93fb25c68910b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738159"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134116"
 ---
 # <a name="icordebuggetprocess-method"></a>ICorDebug::GetProcess 方法
-获取一个指向到"ICorDebugProcess"实例的指定进程。  
+获取指向指定进程的 "ICorDebugProcess" 实例的指针。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,15 +36,15 @@ HRESULT GetProcess (
   
 ## <a name="parameters"></a>参数  
  `dwProcessId`  
- [in]进程的 ID。  
+ 中进程的 ID。  
   
  `ppProcess`  
- [out]指向的地址的指针`ICorDebugProcess`指定进程的实例。  
+ 弄指向指定进程的 `ICorDebugProcess` 实例的地址的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

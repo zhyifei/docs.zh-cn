@@ -4,17 +4,15 @@ ms.date: 03/30/2017
 dev_langs:
 - cpp
 ms.assetid: b3af44ec-7d41-425b-aed9-0c4379e5cbe9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 52a58f75ca7abd1bd1f871bcf4637bfd7eb7bdcd
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: b6bfd258f35f19719be5e5169a1edc22a358371c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300544"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123379"
 ---
 # <a name="icordebugprocess8enableexceptioncallbacksoutsideofmycode-method"></a>ICorDebugProcess8::EnableExceptionCallbacksOutsideOfMyCode 方法
-[.NET Framework 4.6 和更高版本中受支持]  
+[.NET Framework 4.6 及更高版本中支持]  
   
  启用或禁用某些类型的[ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)异常回调。  
   
@@ -33,16 +31,16 @@ HRESULT EnableExceptionCallbacksOutsideOfMyCode(
 ## <a name="remarks"></a>备注  
  如果 `enableExceptionsOutsideOfJMC` 的值是 `false`：  
   
-- DEBUG_EXCEPTION_FIRST_CHANCE 异常不会导致回调到调试器。  
+- DEBUG_EXCEPTION_FIRST_CHANCE 异常不会导致调试器回调。  
   
-- DEBUG_EXCEPTION_CATCH_HANDLER_FOUND 异常不会导致回调到调试器如果异常不会转义到用户代码 （即，从异常源到异常处理程序的路径有没有标记为 JustMyCode 或 JMC 的方法）。  
+- 如果异常从不转义用户代码（也就是说，从异常来源到异常处理程序的路径没有标记为 JustMyCode 或 JMC），则 DEBUG_EXCEPTION_CATCH_HANDLER_FOUND 异常将不会导致回调调试器。  
   
  `enableExceptionsOutsideOfJMC` 的默认值为 `true`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

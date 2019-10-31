@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6e02facb-2504-4356-9af5-0cee1f8436a7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95446996988a22e0d4495f3e0da9f6d2432f5a7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cf79c0d0f6def46d7f4d55f17afbd1f1dff00ad9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749721"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133075"
 ---
 # <a name="ihosttaskmanagerenddelayabort-method"></a>IHostTaskManager::EndDelayAbort 方法
-通知宿主托管代码正在退出在其中不必须中止当前任务，周期遵循以前通过调用[ihosttaskmanager:: Begindelayabort](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-begindelayabort-method.md)。  
+在之前调用[IHostTaskManager：： BeginDelayAbort](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-begindelayabort-method.md)时，通知宿主托管代码正在退出当前任务不得中止的时间段。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,23 +35,23 @@ HRESULT EndDelayAbort ();
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`EndDelayAbort` 已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。|  
-|HOST_E_TIMEOUT|呼叫已超时。|  
+|S_OK|`EndDelayAbort` 成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|事件已取消时被阻塞的线程或纤程正在等待它。|  
-|E_FAIL|发生未知的灾难性故障。 如果某方法返回 E_FAIL，CLR 不再在进程内可用。 对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。|  
-|E_UNEXPECTED|`EndDelayAbort` 调用而无需相应地调用`BeginDelayAbort`。|  
+|HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
+|E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
+|E_UNEXPECTED|调用 `EndDelayAbort` 时未调用 `BeginDelayAbort`的相应调用。|  
   
 ## <a name="remarks"></a>备注  
- CLR 可以相应地调用`BeginDelayAbort`之前调用了当前任务中`EndDelayAbort`。 如果没有此类的相应调用的主机的实现[IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)应返回 E_UNEXPECTED 从`EndDelayAbort`，并且应采取任何操作。  
+ 在调用 `EndDelayAbort`之前，CLR 对当前任务的 `BeginDelayAbort` 进行相应的调用。 如果没有此类对应的调用，主机的[IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)实现应从 `EndDelayAbort`返回 E_UNEXPECTED，且不应采取任何措施。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

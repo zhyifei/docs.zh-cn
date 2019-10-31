@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f17bca49-90bd-4dee-a5e1-b9a57ea46f85
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cb3044927e0d9975ed9347cd4f4896b3b75d3e29
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d1d6ddfe7834a1c6f22b9195042d32363d6ea6cc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749632"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133046"
 ---
 # <a name="ihosttaskmanagergetcurrenttask-method"></a>IHostTaskManager::GetCurrentTask 方法
-获取从其进行此调用的操作系统线程当前正在执行的任务的接口指针。  
+获取一个接口指针，该指针指向正在进行此调用的操作系统线程上当前正在执行的任务。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,29 +35,29 @@ HRESULT GetCurrentTask (
   
 ## <a name="parameters"></a>参数  
  `pTask`  
- [out]指向的地址的指针[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)实例，它表示当前正在执行的任务中，则为 null，如果没有任何任务当前正在执行。  
+ 弄指向表示当前正在执行的任务的[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)实例的地址的指针; 如果当前没有执行任何任务，则为 null。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`GetCurrentTask` 已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。|  
-|HOST_E_TIMEOUT|呼叫已超时。|  
+|S_OK|`GetCurrentTask` 成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|事件已取消时被阻塞的线程或纤程正在等待它。|  
-|E_FAIL|发生未知的灾难性故障。 如果某方法返回 E_FAIL，CLR 不再在进程内可用。 对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。|  
-|HOST_E_INVALIDOPERATION|`GetCurrentTask` 主机控件范围之外的操作系统线程上调用。|  
+|HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
+|E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_INVALIDOPERATION|在宿主控件之外的操作系统线程上调用了 `GetCurrentTask`。|  
   
 ## <a name="remarks"></a>备注  
- 主机还可以设置`pTask`参数为 null，以防止它未启动的任务输入 CLR。  
+ 宿主还可以将 `pTask` 参数设置为 null，以防止它在进入 CLR 时未启动的任务。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

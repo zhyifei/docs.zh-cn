@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6036345-18a3-45c1-a302-b1c6f2dced9b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dbf12612bb432f8935d08bdeac0bbcb471c38c54
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 70ae72968c3411a6732b09c0afe3d82931410cb5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759638"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130804"
 ---
 # <a name="icordebugmanagedcallbackevalexception-method"></a>ICorDebugManagedCallback::EvalException 方法
-通知调试器评估已终止，出现未经处理的异常。  
+通知调试器，计算已终止，并出现未经处理的异常。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,18 +37,18 @@ HRESULT EvalException (
   
 ## <a name="parameters"></a>参数  
  `pAppDomain`  
- [in]指向表示应用程序域计算已终止的 ICorDebugAppDomain 对象的指针。  
+ 中指向 ICorDebugAppDomain 对象的指针，该对象表示评估终止的应用程序域。  
   
  `pThread`  
- [in]指向一个 ICorDebugThread 对象，表示在其中计算终止的线程的指针。  
+ 中指向 ICorDebugThread 对象的指针，该对象表示在其中终止计算的线程。  
   
  `pEval`  
- [in]指向一个 ICorDebugEval 对象，表示执行计算的代码的指针。  
+ 中指向 ICorDebugEval 对象的指针，该对象表示执行计算的代码。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 30d906f2-cf35-4fa9-9d4c-0c31b58c9f3a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 398c48bfd30020efdb57861991c9541d412d3e0d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb96949e22b4edfc0e64780a54bb38da44eb8369
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763432"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129552"
 ---
 # <a name="icordebugmodulegetmetadatainterface-method"></a>ICorDebugModule::GetMetaDataInterface 方法
-获取可用于检查该模块的元数据的元数据接口对象。  
+获取可用于检查模块的元数据的元数据接口对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,18 +36,18 @@ HRESULT GetMetaDataInterface (
   
 ## <a name="parameters"></a>参数  
  `riid`  
- [in]指定的元数据接口引用 ID。  
+ 中用于指定元数据接口的引用 ID。  
   
  `ppObj`  
- [out]指向的地址的指针`T:IUnknown`对象，它是之一[元数据接口](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)。  
+ 弄一个指针，指向作为[元数据接口](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)之一的 `T:IUnknown` 对象的地址。  
   
 ## <a name="remarks"></a>备注  
- 可以使用调试器`GetMetaDataInterface`方法对于模块，它必须以编辑该模块来执行此操作的原始元数据的副本。 该调试器将调用`GetMetaDataInterface`若要获取[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)接口对象对于模块，然后调用[imetadataemit:: Savetomemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetomemory-method.md)将模块的元数据的副本保存到内存。  
+ 调试器可以使用 `GetMetaDataInterface` 方法创建模块的原始元数据的副本，必须执行此操作才能编辑该模块。 调试器调用 `GetMetaDataInterface` 获取该模块的[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)接口对象，然后调用[IMetaDataEmit：： SaveToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetomemory-method.md)将模块的元数据副本保存到内存。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

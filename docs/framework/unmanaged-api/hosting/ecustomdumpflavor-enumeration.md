@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: b39b3320-fac7-41f1-9a03-ab6fb0cd89c7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a416a51f5121f29d373fcfdfa6b0597d9b10ded5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 057794fe524a0ee01f6f090ca7e11a4a4b523047
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779378"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124930"
 ---
 # <a name="ecustomdumpflavor-enumeration"></a>ECustomDumpFlavor 枚举
-包含指示要包含堆的自定义子集中的项转储报告错误时的值。  
+包含一些值，这些值指示在报告错误时要包含在堆转储的自定义子集中的项。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,22 +33,22 @@ typedef enum {
 } ECustomDumpFlavor;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`DUMP_FLAVOR_Mini`|指定应启动作为小型转储并包括指定的任何额外数据自定义堆转储[CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)实例传递给相同的方法。|  
-|`DUMP_FLAVOR_NonHeapCLRState`|指定自定义堆转储应收集不动态分配的所有运行时状态数据。|  
+|`DUMP_FLAVOR_Mini`|指定自定义堆转储应作为小型转储开始，并包含传递给同一方法的任何[CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)实例指定的额外数据。|  
+|`DUMP_FLAVOR_NonHeapCLRState`|指定自定义堆转储应收集未动态分配的所有运行时状态数据。|  
   
 ## <a name="remarks"></a>备注  
- 类型的参数`ECustomDumpFlavor`传递给[iclrerrorreportingmanager:: Begincustomdump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)方法。  
+ `ECustomDumpFlavor` 类型的参数传递给[ICLRErrorReportingManager：： BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** MSCorEE.dll  
+ **库：** Mscoree.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06e583d6-d88a-4ff5-bb95-5c48618a461c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6d78208c180638e9048ae39664b8ce8f57be90da
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8df4e1df7836f340bb04fc47d1ca55e0fb7c9f0e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745168"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122773"
 ---
 # <a name="icordebugbreakpointisactive-method"></a>ICorDebugBreakpoint::IsActive 方法
-获取一个值，该值指示是否此`ICorDebugBreakpoint`处于活动状态。  
+获取一个值，该值指示此 `ICorDebugBreakpoint` 是否处于活动状态。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,12 +35,12 @@ HRESULT IsActive (
   
 ## <a name="parameters"></a>参数  
  `pbActive`  
- [out]`true`如果此断点是活动; 否则为`false`。  
+ [out] 如果此断点是活动的，则 `true`;否则，`false`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

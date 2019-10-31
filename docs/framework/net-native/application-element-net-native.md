@@ -2,14 +2,12 @@
 title: <Application>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2183a64f4e30a5188940abd5108a7ca1bddfe120
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e26826b3d8674b536ab0897182da58bc02cfd00b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049935"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128516"
 ---
 # <a name="application-element-net-native"></a>\<应用程序 > 元素（.NET Native）
 作为应用程序范围内的类型和元数据可以反应在运行时间的类型成员的容器而服务，并将运行时反射策略应用到一个应用的所有程序元素。  
@@ -52,7 +50,7 @@ ms.locfileid: "71049935"
   
 ## <a name="all-attributes"></a>所有特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |policy_setting|该策略的设置将应用到该应用中的所有类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   

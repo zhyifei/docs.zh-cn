@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1dcbd8bb566331a6a2d4217eeec0441fbd3e6ff6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e76800316885c27c697421d454341d5f0789c611
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739869"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097954"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType 枚举
-标识堆栈帧的类型。 此枚举由[icordebuginternalframe:: Getframetype](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)方法。  
+标识堆栈帧的类型。 此枚举由[ICorDebugInternalFrame：： GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)方法使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,26 +43,26 @@ typedef enum CorDebugInternalFrameType {
 } CorDebugInternalFrameType;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`STUBFRAME_NONE`|Null 值。 `ICorDebugInternalFrame::GetFrameType`方法永远不会返回此值。|  
-|`STUBFRAME_M2U`|托管到非托管存根 （stub） 框架。|  
-|`STUBFRAME_U2M`|非托管到托管存根 （stub） 的帧。|  
+|`STUBFRAME_NONE`|Null 值。 `ICorDebugInternalFrame::GetFrameType` 方法从不返回此值。|  
+|`STUBFRAME_M2U`|托管到非托管的存根帧。|  
+|`STUBFRAME_U2M`|非托管到托管的存根帧。|  
 |`STUBFRAME_APPDOMAIN_TRANSITION`|应用程序域之间的转换。|  
-|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|轻量的方法调用。|  
-|`STUBFRAME_FUNC_EVAL`|函数计算的开始。|  
-|`STUBFRAME_INTERNALCALL`|内部调入公共语言运行时。|  
-|`STUBFRAME_CLASS_INIT`|类初始化开始。|  
-|`STUBFRAME_EXCEPTION`|引发异常。|  
-|`STUBFRAME_SECURITY`|使用代码访问安全性的帧。|  
-|`STUBFRAME_JIT_COMPILATION`|运行时 JIT 编译的方法。|  
+|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|轻量方法调用。|  
+|`STUBFRAME_FUNC_EVAL`|函数计算的开头。|  
+|`STUBFRAME_INTERNALCALL`|公共语言运行时的内部调用。|  
+|`STUBFRAME_CLASS_INIT`|类初始化的开头。|  
+|`STUBFRAME_EXCEPTION`|引发的异常。|  
+|`STUBFRAME_SECURITY`|用于代码访问安全性的帧。|  
+|`STUBFRAME_JIT_COMPILATION`|运行时对方法进行 JIT 编译。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

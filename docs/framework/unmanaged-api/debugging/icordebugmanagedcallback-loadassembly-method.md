@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55cb673a-e240-43a6-a406-6912e7c0fe66
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d3aa76b88d89e83c400b3f372d846c1a31add255
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6d77ff1393bc0ba4884dfa34810fee5316e33ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761475"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130748"
 ---
 # <a name="icordebugmanagedcallbackloadassembly-method"></a>ICorDebugManagedCallback::LoadAssembly 方法
-通知调试器已经成功地加载公共语言运行时 (CLR) 程序集。  
+通知调试器已成功加载公共语言运行时（CLR）程序集。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,15 +36,15 @@ HRESULT LoadAssembly (
   
 ## <a name="parameters"></a>参数  
  `pAppDomain`  
- [in]指向表示程序集已在其中加载的应用程序域的 ICorDebugAppDomain 对象的指针。  
+ 中指向 ICorDebugAppDomain 对象的指针，该对象表示已加载程序集的应用程序域。  
   
  `pAssembly`  
- [in]指向表示程序集的 icor 调试程序集对象的指针。  
+ 中指向表示程序集的 ICorDebugAssembly 对象的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

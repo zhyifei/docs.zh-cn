@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c3601255-d894-4d7c-b1df-c31334551700
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3eed83cbc983d59e99b3a42e667e9e126316c263
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f6ef7e06d94cb22d266949927cb15105b1602d3a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780100"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139525"
 ---
 # <a name="icorruntimehostlocksheldbylogicalthread-method"></a>ICorRuntimeHost::LocksHeldByLogicalThread 方法
-检索当前线程持有的锁的数目。  
+检索当前线程所持有的锁的数目。  
   
  此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。  
   
@@ -39,16 +37,16 @@ HRESULT LocksHeldByLogicalThread(
   
 ## <a name="parameters"></a>参数  
  `pCount`  
- [out]一个指向当前线程持有的锁的数目。  
+ 弄一个指针，指向当前线程所持有的锁的数目。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET framework 版本：** 1.0, 1.1  
+ **.NET Framework 版本：** 1.0、1。1  
   
 ## <a name="see-also"></a>请参阅
 

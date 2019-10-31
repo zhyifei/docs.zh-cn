@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 89940711-98e7-4aa6-bffc-5e39e91e1b7d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 223989d883c421be228fb3d6a608643a5246c060
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1384acff4ea3d1aa820b065cd2c56f649f0cbdbb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763708"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127926"
 ---
 # <a name="icordebugmoduleisinmemory-method"></a>ICorDebugModule::IsInMemory 方法
-获取一个值，指示仅在内存中是否存在此模块。  
+获取一个值，该值指示此模块是否仅存在于内存中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,15 +35,15 @@ HRESULT IsInMemory(
   
 ## <a name="parameters"></a>参数  
  `pInMemory`  
- [out]`true`如果此模块只存在于内存; 否则为`false`。  
+ [out] 如果此模块仅存在于内存中，则 `true`;否则，`false`。  
   
 ## <a name="remarks"></a>备注  
- 公共语言运行时 (CLR) 支持原始字节流中的模块的加载。 进行此类模块称为*内存中模块*和磁盘上不存在。  
+ 公共语言运行时（CLR）支持从原始字节流加载模块。 此类模块称为*内存中模块*，不存在于磁盘上。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

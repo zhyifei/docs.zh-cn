@@ -2,14 +2,12 @@
 title: <AttributeImplies>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d15d572ee70e9c7a8cb29010d6debbd1874e5ae2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 94f7813938e2179a2355e6ab2eff22479122d4b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049904"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128486"
 ---
 # <a name="attributeimplies-element-net-native"></a>\<特性暗示 > 元素（.NET Native）
 为包含特性应用的代码元素定义策略。  
@@ -49,7 +47,7 @@ ms.locfileid: "71049904"
   
 ## <a name="all-attributes"></a>所有特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |policy_setting|该设置将应用到这种策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 893b6e6e61e23bdc0da1902407017a836bc6cbe8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 92e52fb130adecd6acdbeb8eac8d624d3c291094
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045686"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129982"
 ---
 # <a name="create-resource-files-for-net-apps"></a>为 .NET 应用创建资源文件
 
@@ -94,7 +92,7 @@ CancelButton=Cancel
 
  如果文本文件包含名称的重复匹配项，[资源文件生成器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 将显示一条警告，并忽略第二个名称。
 
- 值不能包含换行符，但可以使用 C 语言样式的转义符，例如使用 `\n` 表示新行，使用 `\t` 表示制表符。还可以使用经过转义的反斜杠字符（例如，“\\\\”）。 此外，允许使用空字符串。
+ *值*不能包含新行字符，但是可以使用 C 语言样式的转义符（如 `\n`）来表示新行，并 `\t` 以表示制表符。如果转义，还可以包含反斜杠字符（例如，"\\\\"）。 此外，允许使用空字符串。
 
  应使用 little-endian 或 big-endian 字节顺序的 UTF-8 编码或 UTF-16 编码以文本文件格式保存资源。 但是在默认情况下，将 .txt 文件转换为 .resources 文件的[资源文件生成器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 会将文件默认视为 UTF-8 文件。 如果希望 Resgen.exe 识别使用 UTF-16 编码的文件，必须在文件开头包含 Unicode 字节顺序标记 (U + FEFF)。
 

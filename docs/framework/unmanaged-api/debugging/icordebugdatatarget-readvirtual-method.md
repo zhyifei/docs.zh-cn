@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55e57640-b3d2-413d-b4f4-fbc27fb8e37c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c9d42c85502c12d4d77694626a533c69af97da67
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87316b20c5835d9b887355a1f9374fa5f2156e5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750261"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122170"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>ICorDebugDataTarget::ReadVirtual 方法
-获取从指定地址处开始的连续内存块，并返回它所提供的缓冲区中。  
+获取从指定地址开始的连续内存块，并将其返回到提供的缓冲区中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,24 +38,24 @@ HRESULT ReadVirtual(
   
 ## <a name="parameters"></a>参数  
  `address`  
- [in]起始地址的请求的内存。  
+ 中请求的内存的开始地址。  
   
  `pbuffer`  
- [out]将在其中存储内存缓冲区。  
+ 弄内存将存储到的缓冲区。  
   
  `bytesRequested`  
- [in]要从目标地址中获取的字节数。  
+ 中要从目标地址获取的字节数。  
   
  `pBytesRead`  
- [out]从目标地址实际读取的字节数。 这可以是少于`bytesRequested`。  
+ 弄实际从目标地址中读取的字节数。 这可以少于 `bytesRequested`。  
   
 ## <a name="remarks"></a>备注  
- 如果可以读取 （在指定的开始地址） 的第一个字节，则调用应返回成功 （若要支持高效读取的数据结构使用自我描述长度，类似于以 null 结尾的字符串）。  
+ 如果可以读取第一个字节（在指定的起始地址），则调用应返回 success （以支持通过自描述长度（例如，以 null 结尾的字符串）进行数据结构的有效读取。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

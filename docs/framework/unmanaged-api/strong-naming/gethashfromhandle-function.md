@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e00337f-b307-4602-9bc3-965a8dbf02cd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3eac353252f5a97402cbd883895b3e397c39edd6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dc241324f5844610d7b86b7cb9668f84d4525395
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799183"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140663"
 ---
 # <a name="gethashfromhandle-function"></a>GetHashFromHandle 函数
 使用指定的哈希算法，生成具有指定文件句柄的文件内容的哈希。  
@@ -51,17 +49,17 @@ HRESULT GetHashFromHandle (
  弄返回的哈希缓冲区。  
   
  `cchHash`  
- 中请求的最大大小`pbHash`。  
+ 中请求的最大 `pbHash`大小。  
   
  `pchHash`  
- 弄返回`pbHash`的的大小（以字节为单位）。  
+ 弄返回 `pbHash`的大小（以字节为单位）。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Stackexchange.redis.strongname  
   
- **类库**作为资源包括在 Mscoree.dll 中  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

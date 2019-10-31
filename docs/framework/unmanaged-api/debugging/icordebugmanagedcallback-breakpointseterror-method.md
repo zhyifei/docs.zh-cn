@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f2b773a4-c4d0-429c-9717-51d6e2ed86af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a3ef4b284676608363281e04087f6435dcb1ef74
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dae04e1809c1bb3260461086a4953b8b4e5cce52
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759843"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122573"
 ---
 # <a name="icordebugmanagedcallbackbreakpointseterror-method"></a>ICorDebugManagedCallback::BreakpointSetError 方法
-通知调试器，公共语言运行时无法准确地绑定在实时 (JIT) 编译函数之前设置的断点。  
+通知调试器，公共语言运行时无法准确绑定在实时（JIT）函数编译之前设置的断点。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,24 +38,24 @@ HRESULT BreakpointSetError (
   
 ## <a name="parameters"></a>参数  
  `pAppDomain`  
- [in]指向一个 ICorDebugAppDomain 对象，表示包含未绑定的断点的应用程序域的指针。  
+ 中指向 ICorDebugAppDomain 对象的指针，该对象表示包含未绑定断点的应用程序域。  
   
  `pThread`  
- [in]指向一个 ICorDebugThread 对象，表示包含未绑定的断点的线程的指针。  
+ 中指向 ICorDebugThread 对象的指针，该对象表示包含未绑定断点的线程。  
   
  `pBreakpoint`  
- [in]指向一个 ICorDebugBreakpoint 对象，表示未绑定的断点的指针。  
+ 中指向 ICorDebugBreakpoint 对象的指针，该对象表示未绑定的断点。  
   
  `dwError`  
- [in]一个整数，指示该错误。  
+ 中指示错误的整数。  
   
 ## <a name="remarks"></a>备注  
- 给定的断点将永远不会被命中。 调试器应停用，并将其重新绑定。  
+ 将永远不会命中给定的断点。 调试器应停用并将其重新绑定。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

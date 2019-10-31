@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05558daa-39e2-4c38-aeaf-e2aec4a09468
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9bbc3379ff9523564f4eae7da96fca2247601fcd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d9f0eff35dbe0058398d2d1c851ef85effa9cd28
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765156"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122412"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>ICorDebugThread4::HadUnhandledException 方法
-指示是否在线程曾有过未经处理的异常。  
+指示线程是否曾经出现过未经处理的异常。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,23 +35,23 @@ HRESULT GetBlockingObjects (
   
 ## <a name="parameters"></a>参数  
  `ppBlockingObjectEnum`  
- [out]指向的地址的有序枚举[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)结构。  
+ 弄指向[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)结构的有序枚举的地址的指针。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|线程具有必须自创建以来未处理的异常。|  
-|S_FALSE|线程永远不会有过未经处理的异常。|  
+|S_OK|线程在创建后有一个未经处理的异常。|  
+|S_FALSE|线程从未有未经处理的异常。|  
   
 ## <a name="remarks"></a>备注  
- 此方法指示线程是否曾有过未经处理的异常。 按时间触发未处理的异常回调时或启动本机 JIT 附加时，此方法保证将返回 S_OK。 不能保证该[ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md)方法将返回未处理的异常; 但是，它将如果进程不尚未继续出现未经处理的异常回调后，或时本机 JIT 附加。 此外，它有可能 （尽管不太可能） 具有多个线程在本机 JIT 附加触发的时未处理的异常。 这种情况下没有任何方法来确定哪些异常触发 JIT 附加。  
+ 此方法指示线程是否曾经出现过未经处理的异常。 当触发未经处理的异常回调或启动本机 JIT 附加时，此方法将保证返回 S_OK。 不保证[ICorDebugThread. GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md)方法将返回未经处理的异常;但是，如果在获取未经处理的异常回调或本机 JIT 附加时该进程尚未继续，则会出现此错误。 此外，在触发本机 JIT 附加时，有可能（尽管不太可能）有多个线程具有未经处理的异常。 在这种情况下，无法确定哪个异常触发了 JIT 附加。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

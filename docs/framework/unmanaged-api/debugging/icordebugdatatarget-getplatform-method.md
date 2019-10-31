@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ee96c9d-7a3d-4129-a6cc-7675c7f2dda4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1065c8d710ddbd6088ee0db694a43e098564e707
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5715f0634346dd0c6591cfe5687690aa0fba95f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750376"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125319"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>ICorDebugDataTarget::GetPlatform 方法
-提供有关平台，包括处理器体系结构和操作系统，目标进程正在其运行的信息。  
+提供有关平台的信息，包括在其上运行目标进程的处理器体系结构和操作系统。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,23 +33,23 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
   
 ## <a name="parameters"></a>参数  
  `pTargetPlatform`  
- [out]一个指向[CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)枚举，用于描述目标平台。  
+ 弄指向描述目标平台的[CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)枚举的指针。  
   
 ## <a name="remarks"></a>备注  
- `CorDebugPlatformEnum`通过使用枚举返回值[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)接口，以确定目标进程，如其指针大小、 地址空间布局、 注册组、 指令格式、 上下文布局的详细信息和调用约定。  
+ `CorDebugPlatformEnum` 枚举返回值由[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)接口用于确定目标进程的详细信息，例如，其指针大小、地址空间布局、寄存器集、指令格式、上下文布局和调用约定。  
   
- `pTargetPlatform`值可能引用一个平台，而不是在使用指定实际硬件的目标进行模拟。 例如，在 64 位版本的 Windows 操作系统运行在 Windows 上 Windows (WOW) 环境中的进程应使用`CORDB_PLATFORM_WINDOWS_X86`的值[CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)枚举。  
+ `pTargetPlatform` 值可能引用正在为目标模拟的平台，而不是指定使用中的实际硬件。 例如，在 windows 操作系统的64位版本上，在 windows on windows （WOW）环境中运行的进程应使用[CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)枚举的 `CORDB_PLATFORM_WINDOWS_X86` 值。  
   
- 此方法必须成功完成。 如果失败，目标平台是不可用。 该方法可能会出于以下原因失败：  
+ 此方法必须成功。 如果该操作失败，目标平台将无法使用。 此方法可能会由于以下原因而失败：  
   
-- 目标进行模拟的平台是不可用。  
+- 正在为目标模拟的平台不可用。  
   
-- 目标平台上的实际硬件是不可用。  
+- 目标平台上的实际硬件不可用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

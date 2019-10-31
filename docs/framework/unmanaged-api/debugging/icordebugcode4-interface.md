@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: a3fdf523-274a-449c-920b-9fcb0aed1d97
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8ec40de7fe9e12315987e65e48f1727f5d5b80ef
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6c74a6c371ababb21bfda9b8dd2910d6a7881e6a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960731"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125537"
 ---
 # <a name="icordebugcode4-interface"></a>ICorDebugCode4 接口
-提供一个方法, 该方法使调试器可以枚举函数中的局部变量和参数。  
+提供一个方法，该方法使调试器可以枚举函数中的局部变量和参数。  
   
 ## <a name="methods"></a>方法  
   
@@ -38,11 +36,11 @@ ms.locfileid: "69960731"
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl, Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   

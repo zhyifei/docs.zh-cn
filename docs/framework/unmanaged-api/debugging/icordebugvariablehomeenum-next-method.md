@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHomeEnum::Next 方法
+title: ICorDebugVariableHomeEnum：： Next 方法
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHomeEnum.Next
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: eb9ea96c-5b58-4655-8104-094fc8b393b8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 41aff94b8241f07c8646ecc52c06567fc262f703
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9c2c16789fb61099c9b7c58154810739d225af1f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774919"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121923"
 ---
-# <a name="icordebugvariablehomeenumnext-method"></a>ICorDebugVariableHomeEnum::Next 方法
-获取指定的数目的[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)包含本地变量和函数中的参数信息的实例。  
+# <a name="icordebugvariablehomeenumnext-method"></a>ICorDebugVariableHomeEnum：： Next 方法
+获取指定数量的[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)实例，其中包含有关函数中的局部变量和参数的信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,26 +40,26 @@ HRESULT Next(
  [in] 要检索的对象数。  
   
  `homes`  
- 一个指针，其中每个指向数组[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)对象，它提供有关本地变量或函数的参数的信息。  
+ 指针的数组，其中每个都指向一个[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)对象，该对象提供有关函数的局部变量或自变量的信息。  
   
  `pceltFetched`  
- [out]在对象中实际返回的实例数。  
+ 弄对象中实际返回的实例数。  
   
 ## <a name="return-value"></a>返回值  
- 该方法返回以下值。  
+ 方法返回以下值。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
 |`S_OK`|该方法已成功完成。|  
-|`S_FALSE`|检索实际的实例数，具体体现在`pceltFetched`，小于所请求的实例数。|  
+|`S_FALSE`|检索到的实例的实际数量（在 `pceltFetched`中反映）小于请求的实例数。|  
   
 ## <a name="remarks"></a>备注  
- [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md)方法检索的最大`celt`对象从枚举器当前位置开始。 方法返回时，`pceltFetched`包含检索到的对象的实际数目。  
+ [ICorDebugVariableHomeEnum：： Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md)方法从枚举器当前位置开始检索最多 `celt` 个对象。 当方法返回时，`pceltFetched` 包含检索到的对象的实际数目。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

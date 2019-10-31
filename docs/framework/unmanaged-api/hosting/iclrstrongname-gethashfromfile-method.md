@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e50480a-8ada-4044-b2a5-97bb14ed3525
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 87cdf61cfcd0aee661edf9e7d0c053c858f9d854
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 798bb0585bfe4cc29afba2fbefae818301704613
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748180"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135191"
 ---
 # <a name="iclrstrongnamegethashfromfile-method"></a>ICLRStrongName::GetHashFromFile 方法
 生成指定文件内容的哈希。  
@@ -41,32 +39,32 @@ HRESULT GetHashFromFile (
   
 ## <a name="parameters"></a>参数  
  `szFilePath`  
- [in]哈希的文件的名称。  
+ 中要进行哈希处理的文件的名称。  
   
  `piHashAlg`  
- [in、 out]要生成哈希时使用的算法。 有效的算法是定义的 Win32 CryptoAPI。 如果`piHashAlg`设置为 0，使用 CALG_SHA 1 的默认算法。  
+ [in，out]生成哈希时要使用的算法。 有效算法是由 Win32 CryptoAPI 定义的算法。 如果 `piHashAlg` 设置为0，则使用默认算法 CALG_SHA-1。  
   
  `pbHash`  
- [out]包含生成的哈希的字节数组。  
+ 弄一个字节数组，其中包含生成的哈希。  
   
  `cchHash`  
- [in]缓冲区的最大大小的`pbHash`指向。  
+ 中`pbHash` 指向的缓冲区的最大大小。  
   
  `pchHash`  
- [out]大小 （字节），则返回的`pbHash`。  
+ 弄返回 `pbHash`的大小（以字节为单位）。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK` 如果成功，则完成的方法否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。  
+ 如果方法已成功完成，则 `S_OK`;否则，表示失败的 HRESULT 值（请参阅列表的[常见 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
   
 ## <a name="remarks"></a>备注  
- 此方法等同于[iclrstrongname:: Gethashfromfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)方法，不同之处在于的文件的名称规范是 ANSI 而不是 Unicode。  
+ 此方法与[ICLRStrongName：： GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)方法相同，不同之处在于文件名规范为 ANSI 而不是 Unicode。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MetaHost.h  
+ **标头：** MetaHost  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

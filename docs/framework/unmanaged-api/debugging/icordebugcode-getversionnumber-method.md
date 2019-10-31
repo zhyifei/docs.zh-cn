@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8e02518-679f-4e9f-8a28-ba4a89a3876f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4b6fd6e8043f1c62da8994b43a9b9af45fb2e3c0
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 646c20ca1b78ff0ce513b8a3c9b578c3b1b9a696
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700824"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125606"
 ---
 # <a name="icordebugcodegetversionnumber-method"></a>ICorDebugCode::GetVersionNumber 方法
 
@@ -36,7 +34,7 @@ HRESULT GetVersionNumber (
 );
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>参数
 
  `nVersion`  
  弄指向代码版本号的指针。
@@ -47,10 +45,10 @@ HRESULT GetVersionNumber (
 
 ## <a name="requirements"></a>要求
 
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl，Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

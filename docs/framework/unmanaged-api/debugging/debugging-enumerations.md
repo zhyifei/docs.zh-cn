@@ -6,24 +6,22 @@ helpviewer_keywords:
 - unmanaged enumerations [.NET Framework], debugging
 - enumerations [.NET Framework debugging]
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5edd6dfb3dac05ce4614c43949f2ec4c19b5f742
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7948b78da1db5267ce53364af1e4a26ff73801e0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698507"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124333"
 ---
 # <a name="debugging-enumerations"></a>调试枚举
 本节介绍了调试 API 使用的非托管枚举。  
   
 ## <a name="in-this-section"></a>本节内容  
  [CLR_DEBUGGING_PROCESS_FLAGS 枚举](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md)  
- 提供了使用的值[iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)方法。  
+ 提供[ICLRDebugging：： OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)方法使用的值。  
   
  [CLRDataEnumMemoryFlags 枚举](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md)  
- 指示调用的内存区域[iclrdataenummemoryregions:: Enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)方法应包括。  
+ 指示对[ICLRDataEnumMemoryRegions：： EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)方法的调用应包括哪些内存区域。  
   
  [COR_PUB_ENUMPROCESS 枚举](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md)  
  标识要枚举的进程的类型。  
@@ -41,16 +39,16 @@ ms.locfileid: "61698507"
  描述为何导出的函数会调用托管代码。  
   
  CorDebugCreateProcessFlags  
- 提供了更多调试选项，可在调用[icordebug:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)方法。  
+ 提供可在对[ICorDebug：： CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)方法的调用中使用的其他调试选项。  
   
  [CorDebugDebugEventKind 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)  
- 指示获取其信息进行解码的事件的类型[解码事件](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md)方法。  
+ 指示[DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md)方法对其信息进行解码的事件类型。  
   
  [CorDebugDecodeEventFlagsWindows 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md)  
  提供关于 Windows 平台上的调试事件的其他信息。  
   
  CorDebugExceptionCallbackType  
- 指示从进行回调的类型[ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)事件。  
+ 指示从[ICorDebugManagedCallback2：： Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)事件进行的回调类型。  
   
  [CorDebugExceptionFlags 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)  
  提供有关异常的附加信息。  
@@ -83,7 +81,7 @@ ms.locfileid: "61698507"
  包含影响托管的实时 (JIT) 编译器的行为的值。  
   
  [CorDebugJITCompilerFlagsDeprecated 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflagsdeprecated-enumeration.md)  
- 已过时。 使用`CORDEBUG_JIT_DEFAULT`的成员[CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)枚举相反。  
+ 已过时。 改为使用[CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)枚举的 `CORDEBUG_JIT_DEFAULT` 成员。  
   
  CorDebugMappingResult  
  提供如何获取指令指针 (IP) 的值的详细信息。  
@@ -95,7 +93,7 @@ ms.locfileid: "61698507"
  提供用于确定调试器是否从本机映像缓存中加载本机 (NGen) 映像的值。  
   
  [CorDebugPlatform 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)  
- 提供了使用的目标平台值[icordebugdatatarget:: Getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)方法。  
+ 提供[ICorDebugDataTarget：： GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)方法使用的目标平台值。  
   
  [CorDebugRecordFormat 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
  描述包含本机异常调试事件相关信息的字节数组的数据格式。  

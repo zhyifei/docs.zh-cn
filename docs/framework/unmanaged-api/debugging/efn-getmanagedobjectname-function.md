@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6e7c6bee-7ced-495f-bf6c-2a5f0c716f7e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d3490477f30cd1c0badaa9cfd71433a5bf9d7a99
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c7333f8f7b95655ac821e9a2977d5db3794486a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738991"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123006"
 ---
-# <a name="efngetmanagedobjectname-function"></a>\_EFN\_GetManagedObjectName 函数
-获取使用提供的托管的对象指针的类型的名称。  
+# <a name="_efn_getmanagedobjectname-function"></a>\_EFN\_GetManagedObjectName 函数
+使用提供的托管对象指针获取类型的名称。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,24 +37,24 @@ HRESULT _EFN_GetManagedObjectName(
   
 ## <a name="parameters"></a>参数  
  `Client`  
- [in]指向调试客户端的指针。  
+ 中指向调试客户端的指针。  
   
  `objAddr`  
- [in]托管的对象指针。  
+ 中托管对象指针。  
   
  szName  
- [out]类型的名称。  
+ 弄类型的名称。  
   
  `cbName`  
- [out]字符串缓冲区中有可用的字符数。  
+ 弄字符串缓冲区中的可用字符数。  
   
 ## <a name="remarks"></a>备注  
- 如果没有任何托管的代码的线程上当前上下文中，该函数返回 HRESULT SOS_E_NOMANAGEDCODE 0xa0 设施值和错误代码为 0x1000。  
+ 如果当前在上下文中的线程上没有托管代码，则该函数将返回 HRESULT SOS_E_NOMANAGEDCODE，其设施值为0xa0，错误代码为0x1000。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** SOS_Stacktrace.h  
+ **标头：** SOS_Stacktrace  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

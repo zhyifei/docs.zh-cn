@@ -2,16 +2,14 @@
 title: <Property>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54daf15c593327bf3255f40f6eb6931ffc8bd3c6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b9bc89804a872dddf1a56c2a3dadc9c3df4f5fd1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049302"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128214"
 ---
-# <a name="property-element-net-native"></a>\<Property > 元素（.NET Native）
+# <a name="property-element-net-native"></a>\<属性 > 元素（.NET Native）
 将运行时反射策略应用到一个属性。  
   
 ## <a name="syntax"></a>语法  
@@ -37,13 +35,13 @@ ms.locfileid: "71049302"
   
 ## <a name="name-attribute"></a>Name 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |method_name|属性名称。 该属性的类型由 [\<Type>](type-element-net-native.md) 或 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 父元素定义。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |policy_setting|该设置将应用到这个属性的策略类型。 可能值为 `Auto`、`Excluded`、`Included` 和 `Required`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   
@@ -75,7 +73,7 @@ ms.locfileid: "71049302"
   
  该文件将 `All` 值应用到允许通过反射访问类构造函数的 `Activate` 的类的 `Book` 策略。 `Browse` 类的 `Book` 策略是从其父命名空间继承的。 这已设置为 `Required Public`，这使得元数据在运行时可用。  
   
- 以下是该实例的源代码。 变量表示一个<xref:Windows.UI.Xaml.Controls.TextBlock>控件。 `outputBlock`  
+ 以下是该实例的源代码。 `outputBlock` 变量表示 <xref:Windows.UI.Xaml.Controls.TextBlock> 控件。  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   

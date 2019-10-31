@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 66eeca30-adb4-45f4-aff5-347564c95724
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8ea4947582e4e8bfdb6873a90c5284e9ae9d8a62
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3c6def32c63e3557a4de72baf7b1c3e67feb4891
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736253"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136532"
 ---
 # <a name="getclridentitymanager-function"></a>GetCLRIdentityManager 函数
-获取一个指针指向使公共语言运行时 (CLR) 来管理标识的接口。  
+获取一个指向接口的指针，该接口允许公共语言运行时（CLR）管理标识。  
   
- .NET Framework 4 中已弃用此函数。  
+ 此函数已在 .NET Framework 4 中弃用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,20 +37,20 @@ STDAPI GetCLRIdentityManager(
   
 ## <a name="parameters"></a>参数  
  `riid`  
- [in]一个`REFIID`（接口标识符），它指定要获取的接口。 此值必须是 IID_ICLRAssemblyIdentityManager 或 IID_ICLRHostBindingPolicyManager。  
+ 中一个 `REFIID` （接口标识符），它指定要获取的接口。 此值必须是 IID_ICLRAssemblyIdentityManager 或 IID_ICLRHostBindingPolicyManager。  
   
  `ppManager`  
- [out]指向任何一个的地址的指针[ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)或[ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)对象。  
+ 弄指向[ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)或[ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)对象地址的指针。  
   
 ## <a name="remarks"></a>备注  
- 调用[GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md)函数获取指向的`GetCLRIdentityManager`函数。  
+ 调用[GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md)函数以获取指向 `GetCLRIdentityManager` 函数的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** MSCorWks.dll  
+ **库：** Mscorwks.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

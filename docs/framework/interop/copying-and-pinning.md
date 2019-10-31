@@ -7,14 +7,12 @@ helpviewer_keywords:
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 90ed12862c4cadc45777150deb1b9f91f111bf41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f6db7d37293015911c1285d39e19bf7542a7ac59
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750508"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123644"
 ---
 # <a name="copying-and-pinning"></a>复制和锁定
 
@@ -33,7 +31,7 @@ ms.locfileid: "64750508"
 在托管和非托管内存中，已设置格式的 [blittable](blittable-and-non-blittable-types.md) 类具有固定布局（已设置格式）以及通用数据表示形式。 当这些类型需要封送处理时，指向堆中对象的指针被直接传递给被调用方。 被调用方可以更改该指针所引用的内存位置的内容。
 
 > [!NOTE]
-> 如果参数标记为 Out 或 In/Out，则被调用方可以更改内存内容。相反，当参数设置为作为 In（已设置格式的 blittable 类型的默认值）封送时，被调用方应当避免更改内存内容。 在将同一类导出到类型库并用于进行跨单元调用时，修改 In 对象将产生问题。
+> 如果参数被标记为 Out 或 In/Out，则被调用方可以更改内存内容。与此相反，被调用方应避免在将参数设置为封送处理时更改内容，这是格式化本机类型类型的默认值。 在将同一类导出到类型库并用于进行跨单元调用时，修改 In 对象将产生问题。
 
 ## <a name="formatted-non-blittable-classes"></a>已设置格式的非 Blittable 类
 

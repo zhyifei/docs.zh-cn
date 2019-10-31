@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c826ba3-8258-49bc-a417-78807915fcaf
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7e1965917e8a1c5ae07cf119df3664b969a979be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a6d9708e7281a72c88ba28012006784f7b0ee9d9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969254"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124360"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost 函数
 使宿主可以将指定版本的公共语言运行时（CLR）加载到进程中。  
@@ -47,16 +45,16 @@ HRESULT CorBindToRuntimeHost (
  `pwszVersion`  
  中一个字符串，描述要加载的 CLR 的版本。  
   
- .NET Framework 中的版本号由以句点分隔的四个部分组成：*主*版本. 次要版本. 内部版本号. 修订号。 传递的字符串`pwszVersion`必须以字符 "v" 开头，后跟版本号的前三个部分（例如，"v 1.0.1529"）。  
+ .NET Framework 中的版本号由以句点分隔的四个部分组成：*主*版本. 次要版本. 内部版本号. 修订号。 作为 `pwszVersion` 传递的字符串必须以字符 "v" 开头，后跟版本号的前三个部分（例如，"1.0.1529"）。  
   
- 某些版本的 CLR 随策略声明一起安装，后者指定与以前版本的 CLR 的兼容性。 默认情况下，启动填充程序`pwszVersion`将根据策略语句进行评估，并加载与请求的版本兼容的运行时的最新版本。 主机可以通过`startupFlags`为参数传递值 STARTUP_LOADER_SAFEMODE 来强制填充程序跳过策略评估并`pwszVersion`加载中指定的确切版本。  
+ 某些版本的 CLR 随策略声明一起安装，后者指定与以前版本的 CLR 的兼容性。 默认情况下，启动填充程序根据策略语句计算 `pwszVersion`，并加载与请求的版本兼容的运行时的最新版本。 主机可以通过为 `startupFlags` 参数传递值 STARTUP_LOADER_SAFEMODE 来强制填充程序跳过策略评估并加载 `pwszVersion` 中指定的确切版本。  
   
- 如果`pwszVersion`为`null,` ，则此方法不加载任何版本的 CLR。 相反，它会返回 CLR_E_SHIM_RUNTIMELOAD，这表示它未能加载运行时。  
+ 如果 `pwszVersion` `null,` 则此方法不会加载任何版本的 CLR。 相反，它会返回 CLR_E_SHIM_RUNTIMELOAD，这表示它未能加载运行时。  
   
  `pwszBuildFlavor`  
  中一个字符串，指定是加载 CLR 的服务器还是工作站版本。 有效值为 `svr` 和 `wks`。 服务器版本经过优化，可利用多个处理器进行垃圾回收，工作站构建针对单处理器计算机上运行的客户端应用程序进行了优化。  
   
- 如果`pwszBuildFlavor`设置为 null，则加载工作站生成。 在单处理器计算机上运行时，始终会加载工作站构建，即使`pwszBuildFlavor`将设置为。 `svr` 但是，如果`pwszBuildFlavor`将设置为`svr` ，并且指定了并发垃圾回收（ `startupFlags`请参阅参数的说明），则将加载服务器生成。  
+ 如果 `pwszBuildFlavor` 设置为 null，则会加载工作站构建。 在单处理器计算机上运行时，始终会加载工作站构建，即使 `pwszBuildFlavor` 设置为 `svr`。 但是，如果 `pwszBuildFlavor` 设置为 `svr` 并指定了并发垃圾回收（请参阅 `startupFlags` 参数的说明），则将加载服务器生成。  
   
 > [!NOTE]
 > 在实现 Intel Itanium 体系结构（以前称为 IA-64）的64位系统上运行 WOW64 x86 模拟器的应用程序中不支持并发垃圾回收。 有关在64位 Windows 系统上使用 WOW64 的详细信息，请参阅[运行32位应用程序](/windows/desktop/WinProg64/running-32-bit-applications)。  
@@ -68,23 +66,23 @@ HRESULT CorBindToRuntimeHost (
  中保留以供将来进行扩展。  
   
  `startupFlags`  
- 中一组标志，这些标志控制并发垃圾回收、非特定于域的代码和`pwszVersion`参数的行为。 如果未设置任何标志，则默认值为单一域。 有关支持的值的列表，请参阅[STARTUP_FLAGS 枚举](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)。  
+ 中一组标志，这些标志控制并发垃圾回收、非特定于域的代码以及 `pwszVersion` 参数的行为。 如果未设置任何标志，则默认值为单一域。 有关支持的值的列表，请参阅[STARTUP_FLAGS 枚举](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)。  
   
  `rclsid`  
- 中用于实现 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) 或 [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) 接口的 coclass 的 `CLSID`。 支持的值为 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
+ 中用于实现[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)接口的 coclass 的 `CLSID`。 支持的值为 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
   
  `riid`  
- 中`IID`你请求的接口的。 支持的值为 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
+ 中请求的接口的 `IID`。 支持的值为 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
   
  `ppv`  
  弄指向已加载的运行时版本的接口指针。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.idl  
+ **标头：** Mscoree.dll  
   
- **类库**MSCorEE.dll  
+ **库：** Mscoree.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

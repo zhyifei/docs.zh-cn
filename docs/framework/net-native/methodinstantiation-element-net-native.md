@@ -2,14 +2,12 @@
 title: <MethodInstantiation>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f2c0354853e4725ba3e673fb9142c4a7a85d2121
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f19bd3c20088431bcbbafac298398b82a664bee9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049624"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128325"
 ---
 # <a name="methodinstantiation-element-net-native"></a>\<方法实例化 > 元素（.NET Native）
 将运行时反射策略应用到一个构造泛型方法。  
@@ -39,25 +37,25 @@ ms.locfileid: "71049624"
   
 ## <a name="name-attribute"></a>Name 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |method_name|方法名。 该方法的类型是由 [\<Type>](type-element-net-native.md) 或 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 父元素定义的。|  
   
 ## <a name="signature-attribute"></a>签名特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |method_signature|指定该类型的命名参数。 如果存在多个参数，它们之间用逗号分割。|  
   
 ## <a name="arguments-attribute"></a>自变量特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |method_arguments|指定泛型类型参数。 如果存在多个自变量，它们之间用逗号分割。 每个自变量必须包含一个完全限定的类型名称。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |policy_setting|该设置将应用到这个方法的策略类型。 可能值为 `Auto`、`Excluded`、`Included` 和 `Required`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   

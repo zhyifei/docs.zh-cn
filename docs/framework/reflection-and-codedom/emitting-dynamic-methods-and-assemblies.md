@@ -7,14 +7,12 @@ helpviewer_keywords:
 - metadata, emit interfaces
 - reflection emit, overview
 - assemblies [.NET Framework], emitting dynamic assemblies
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d8e2b9aeb8c632efcbf8c506da4da7c6e7b408e1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4578b708b10e93a7f5def5b9dc040eeb646bdc8f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046088"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130236"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>发出动态方法和程序集
 
@@ -36,7 +34,7 @@ ms.locfileid: "71046088"
   
 除了 <xref:System.Reflection.Emit> 命名空间中的托管类型，还有非托管元数据接口，非托管元数据接口在[元数据接口](../unmanaged-api/metadata/metadata-interfaces.md)参考文档中介绍。 托管的反射发出提供比非托管元数据接口更强的语义错误检查和更高级别的元数据抽象。  
   
-元数据和 MSIL 的另一个有用资源是《公共语言基础结构 (CLI)》文档，尤其是“第二部分：Metadata Definition and Semantics”（第 2 部分：元数据定义和语义）和“Partition III:CIL Instruction Set”（第 3 部分：CIL 指令集）。 该文档可在 [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) 和 [Ecma 网站](https://go.microsoft.com/fwlink/?LinkId=116487)上联机获取。  
+元数据和 MSIL 的另一个有用资源是《公共语言基础结构 (CLI)》文档，尤其是“第二部分：元数据定义和语义”和“第三部分: CIL 指令集”。 该文档可在 [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) 和 [Ecma 网站](https://go.microsoft.com/fwlink/?LinkId=116487)上联机获取。  
   
 ## <a name="in-this-section"></a>本节内容
   
@@ -46,10 +44,10 @@ ms.locfileid: "71046088"
 [如何：定义和执行动态方法](how-to-define-and-execute-dynamic-methods.md)   
 介绍如何执行简单的动态方法和绑定到类实例的动态方法。
 
-[如何：使用反射发出定义泛型类型](how-to-define-a-generic-type-with-reflection-emit.md)   
+[如何：用反射发出定义泛型类型](how-to-define-a-generic-type-with-reflection-emit.md)   
 介绍如何创建具有两个参数的简单泛型类型、如何对类型参数应用类约束、接口约束和特殊约束，以及如何创建使用类的类型参数作为参数类型和返回类型的成员。
 
-[如何：使用反射发出定义泛型方法](how-to-define-a-generic-method-with-reflection-emit.md)   
+[如何：用反射发出定义泛型方法](how-to-define-a-generic-method-with-reflection-emit.md)   
 介绍如何创建、发出和调用简单的泛型方法。
 
 [动态类型生成的可回收程序集](collectible-assemblies.md)   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8684cd06-ad3e-48ef-832e-15320e1f43a2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 62e2be44165472e2fbf368f61b865d39a5e9fc28
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 14356a12c944ef93dba5e7b818d3ee5cf5adc607
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395469"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125421"
 ---
 # <a name="icordebugcontrollercontinue-method"></a>ICorDebugController::Continue 方法
 
@@ -43,13 +41,13 @@ HRESULT Continue (
 
 ## <a name="remarks"></a>备注
 
-@no__t 在调用 `ICorDebugController::Stop` 方法后继续执行此过程。
+`Continue` 在调用 `ICorDebugController::Stop` 方法后继续执行此过程。
 
 执行混合模式调试时，请不要在 Win32 事件线程上调用 `Continue`，除非从带外事件继续。
 
-*带内事件*是托管事件或普通非托管事件，在此期间，调试器支持与进程的托管状态交互。 在这种情况下，调试器接收[ICorDebugUnmanagedCallback：:D ebugevent](icordebugunmanagedcallback-debugevent-method.md)回调，并将其 @no__t 参数设置为 `false`。
+*带内事件*是托管事件或普通非托管事件，在此期间，调试器支持与进程的托管状态交互。 在这种情况下，调试器接收[ICorDebugUnmanagedCallback：:D ebugevent](icordebugunmanagedcallback-debugevent-method.md)回调，并将其 `fOutOfBand` 参数设置为 "`false`"。
 
-带*外事件*是一种非托管事件，在此过程中，由于发生事件，进程停止时无法与进程的托管状态交互。 在这种情况下，调试器接收到 `ICorDebugUnmanagedCallback::DebugEvent` 回调，其 @no__t 参数设置为 `true`。
+带*外事件*是一种非托管事件，在此过程中，由于发生事件，进程停止时无法与进程的托管状态交互。 在这种情况下，调试器接收到 `ICorDebugUnmanagedCallback::DebugEvent` 回调，其 `fOutOfBand` 参数设置为 `true`。
 
 ## <a name="requirements"></a>要求
 

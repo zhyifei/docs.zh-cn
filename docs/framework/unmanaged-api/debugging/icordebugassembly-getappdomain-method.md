@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 14e18510-23ac-4cba-9f96-c86147a2df9d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4fced656168952c1064de213405147baf7856b2c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 53042e722809a6574396648529c677d749154716
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737357"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132731"
 ---
 # <a name="icordebugassemblygetappdomain-method"></a>ICorDebugAssembly::GetAppDomain 方法
-获取包含此应用程序域的接口指针`ICorDebugAssembly`实例。  
+获取一个接口指针，该指针指向包含此 `ICorDebugAssembly` 实例的应用程序域。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,15 +35,15 @@ HRESULT GetAppDomain (
   
 ## <a name="parameters"></a>参数  
  `ppAppDomain`  
- [out]指向表示应用程序域的 ICorDebugAppDomain 接口的地址的指针。  
+ 弄一个指针，指向表示应用程序域的 ICorDebugAppDomain 接口的地址。  
   
 ## <a name="remarks"></a>备注  
- 如果此程序集是系统程序集， `GetAppDomain` ，则返回 null。  
+ 如果此程序集是系统程序集，`GetAppDomain` 将返回 null。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

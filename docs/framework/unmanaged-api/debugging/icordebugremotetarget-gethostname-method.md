@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c7276f7-7e54-470c-808c-e13745ac07a1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 43a502682e6ccfc36931970d0121f91529f51711
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a9a6ca9ae3cdb1c6a7398d08c9f99e3cde125cf6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744720"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131901"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>ICorDebugRemoteTarget::GetHostName 方法
 返回远程调试目标计算机的完全限定域名或 IPv4 地址。 此时不支持 IPV6。  
@@ -39,7 +37,7 @@ HRESULT GetHostName (
   
 ## <a name="parameters"></a>参数  
  `cchHostName`  
- [in]大小，以字符为单位的`szHostName`缓冲区。 如果此参数为 0（零），`szHostName` 必须为 null。  
+ 中`szHostName` 缓冲区的大小（以字符为字符）。 如果此参数为 0（零），`szHostName` 必须为 null。  
   
  `pcchHostName`  
  [out] 主机名或 IP 地址中的字符数，包括 null 结束符。 此参数可以为 null。  
@@ -55,16 +53,16 @@ HRESULT GetHostName (
  无法返回主机名或 IP 地址。  
   
 ## <a name="remarks"></a>备注  
- 此方法由调试器编写器实现。 它必须遵循多次调用范例：在首次调用，调用方将 null 传递到两者`cchHostName`并`szHostName`，和`pcchHostName`返回所需的缓冲区的大小。 第二次调用时，先前返回的大小在 `cchHostName` 中传递，相应大小的缓冲区在 `szHostName` 中传递。  
+ 此方法由调试器编写器实现。 它必须遵循多个调用范例：在第一次调用时，调用方将 null 同时传递给 `cchHostName` 和 `szHostName`，`pcchHostName` 返回所需的缓冲区大小。 第二次调用时，先前返回的大小在 `cchHostName` 中传递，相应大小的缓冲区在 `szHostName` 中传递。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl  
+ **标头：** Cordebug.idl .idl  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** 3.5 SP1  
+ **.NET Framework 版本：** 3.5 SP1  
   
 ## <a name="see-also"></a>请参阅
 

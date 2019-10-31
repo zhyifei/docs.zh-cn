@@ -5,14 +5,12 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 5e903e04-17d0-4014-ac9a-a43330ec8b1c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1d20bc002e52c3c6a42b45c0d1c5d559e65dc52c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b7af03197a43976c47b7ddc30346d622e6b97207
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763658"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139139"
 ---
 # <a name="silverlight-debugging"></a>Silverlight 调试
 本部分中的主题描述了公共语言运行时 (CLR) 提供用于支持调试在 Windows 操作系统或在 Macintosh 平台上运行的基于 Silverlight 的应用程序的环境和接口。  
@@ -22,7 +20,7 @@ ms.locfileid: "61763658"
  提供枚举进程中 CLR 的机制。  
   
  [CloseCLREnumeration 函数](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)  
- 关闭任何位于返回的句柄数组中的有效 CLR 继续启动事件[EnumerateCLRs 函数](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)，并释放句柄和字符串路径数组的内存。  
+ 关闭位于[EnumerateCLRs 函数](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)所返回的句柄数组中的所有有效 CLR 继续启动事件，并释放该句柄和字符串路径数组的内存。  
   
  [CreateCoreClrDebugTarget 函数](../../../../docs/framework/unmanaged-api/debugging/createcoreclrdebugtarget-function.md)  
  创建进程和运行时枚举的远程目标连接。  
@@ -34,7 +32,7 @@ ms.locfileid: "61763658"
  从目标进程中的 CLR 路径创建版本字符串。  
   
  [CreateDebuggingInterfaceFromVersion 函数](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md)  
- 接受从返回的 CLR 版本字符串[CreateVersionStringFromModule 函数](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)函数，并返回相应的调试器接口。  
+ 接受从[CreateVersionStringFromModule 函数](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)函数返回的 CLR 版本字符串，并返回相应的调试器接口。  
   
  [CoreClrDebugProcInfo 结构](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)  
  表示在远程计算机上运行的进程。  

@@ -13,14 +13,12 @@ helpviewer_keywords:
 - platform invoke
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9ef6a31ba9589ded9527d15e90724d0d04749579
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7ec1f129dcc19300dd5a4e7c5e627d9e0edf29a1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051848"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123653"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>使用非托管 DLL 函数
 平台调用是一项服务，使托管代码能够调用动态链接库 (DLL) 中实现的非托管函数，例如 Windows API 中的非托管函数。 此服务定位并调用导出的函数，并根据需要跨交互操作边界封送其自变量（整数、字符串、数组、结构等）。  

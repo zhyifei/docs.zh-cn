@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f5cdc135-6db4-4b32-9dd1-260ec58b774f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c6b53d23410dd310766dab44664c8cd865ee9ba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c076dd2912a22e4f9492492a2d7a9fb73db88e8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771681"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139043"
 ---
 # <a name="icordebugstepper2setjmc-method"></a>ICorDebugStepper2::SetJMC 方法
-设置一个值，指定是否有此 ICorDebugStepper 步骤只能通过由应用程序的开发人员编写的代码。 此过程也称为认为只我的代码 (JMC) 调试。  
+设置一个值，该值指定此 ICorDebugStepper 是否仅通过应用程序开发人员编写的代码执行步骤。 此过程也称为 "仅我的代码" （JMC）调试。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,12 +35,12 @@ HRESULT SetJMC (
   
 ## <a name="parameters"></a>参数  
  `fIsJMCStepper`  
- [in]设置为`true`逐句通过代码编写的应用程序的开发人员; 否则，将设置为仅`false`。  
+ 中设置为仅在应用程序开发人员编写的代码中 `true`否则，设置为 `false`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

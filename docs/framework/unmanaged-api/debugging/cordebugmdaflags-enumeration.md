@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7c0c92fe-8bd2-477f-b307-aca0143732ca
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bf9f7f3d3419efc9e1dc7d75fc7272432c0cf5d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c7af194351290ad937e40a2fc8b960c2c242629c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739689"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132798"
 ---
 # <a name="cordebugmdaflags-enumeration"></a>CorDebugMDAFlags 枚举
 指定在其上激发托管调试助手 (MDA) 的线程的状态。  
@@ -34,19 +32,19 @@ typedef enum CorDebugMDAFlags {
 } CorDebugMDAFlags;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`MDA_FLAG_SLIP`|在其触发 MDA 的线程将落后由于 MDA 时触发。|  
+|`MDA_FLAG_SLIP`|触发 mda 后，触发 MDA 的线程发生了。|  
   
 ## <a name="remarks"></a>备注  
- 该线程时调用堆栈不再介绍最初引发 MDA 的位置，将被视为已*跳过*。 这是一种特殊情况由线程的执行无效操作在退出时。  
+ 当调用堆栈不再描述最初引发 MDA 的位置时，线程被视为已*落后*。 这是一个不寻常的情况，导致在退出时线程执行无效操作的情况。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

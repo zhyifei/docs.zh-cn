@@ -14,32 +14,30 @@ helpviewer_keywords:
 ms.assetid: 8adbf092-c3ba-4bee-b25b-0de6e43a4ce5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 32f27d6c15a99282eee20d2563a4ca741238d846
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 466b0ceec8ce9c9800393f96055730ecafc153b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638510"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120549"
 ---
 # <a name="iclrreferenceassemblyenum-interface"></a>ICLRReferenceAssemblyEnum 接口
-提供了使宿主可以操作该集由文件或流使用程序集标识数据，而无需创建或了解这些标识是公共语言运行时 (CLR) 的内部引用的程序集的方法。  
+提供一些方法，这些方法使宿主可以使用公共语言运行时（CLR）内部的程序集标识数据来操作由文件或流引用的程序集集，而无需创建或了解这些标识。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Get 方法](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-get-method.md)|提供的索引处获取程序集标识。|  
+|[Get 方法](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-get-method.md)|获取所提供索引处的程序集标识。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -2,14 +2,12 @@
 title: 适用于 Windows 应用商店应用的 .NET 的 MEF
 ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 255892e4dd3938028f488f80d8fba367590976f7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dafa6ddcd55940ea9bab61b79b6ab77896a1916f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051621"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126351"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>适用于 Windows 应用商店应用的 .NET 的 MEF
 <xref:System.Composition?displayProperty=nameWithType> 及其子命名空间包含用于使用 Managed Extensibility Framework (MEF) 开发可扩展的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用的类型。 这些名称空间是 [!INCLUDE[win8](../../../includes/win8-md.md)] 操作系统的 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 子集的一部分。  

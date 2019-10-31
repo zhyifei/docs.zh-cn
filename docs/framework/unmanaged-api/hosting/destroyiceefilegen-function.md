@@ -16,19 +16,17 @@ helpviewer_keywords:
 ms.assetid: dc1e2235-e721-4cb2-a0b8-6b0c030d7bab
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ab4560774edce49341c86dd9446e38701db7fa62
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4eb878b61b72378bc6870af7f2cd09f0b6943b13
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769830"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136505"
 ---
 # <a name="destroyiceefilegen-function"></a>DestroyICeeFileGen 函数
 销毁[ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md)对象。  
   
- .NET Framework 4 中已弃用此函数。  
+ 此函数已在 .NET Framework 4 中弃用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,20 +38,20 @@ HRESULT DestroyICeeFileGen (
   
 ## <a name="parameters"></a>参数  
  `ceeFileGen`  
- [in]`ICeeFileGen`要销毁对象。  
+ 中要销毁的 `ICeeFileGen` 对象。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回标准 COM 错误代码。  
   
 ## <a name="remarks"></a>备注  
- `DestroyICeeFileGen` 销毁`ICeeFileGen`对象创建[CreateICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md)函数。  
+ `DestroyICeeFileGen` 销毁[CreateICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md)函数创建的 `ICeeFileGen` 对象。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** ICeeFileGen.h  
+ **标头：** ICeeFileGen  
   
- **库：** MSCorPE.dll  
+ **库：** MSCorPE  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

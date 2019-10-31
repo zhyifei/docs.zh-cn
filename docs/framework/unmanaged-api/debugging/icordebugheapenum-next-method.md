@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2221fd06-9e27-4113-972e-2530db8c3594
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aef821c10b8b44e54967245aaab3956c16ea15b0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1beb69bfaad9acb9c269ad8becb81bea64edb6a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757383"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138459"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next 方法
-获取指定的数目的[COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)包含托管堆上对象的信息的实例。  
+获取指定数量的[COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)实例，这些实例包含有关托管堆上的对象的信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,18 +39,18 @@ HRESULT Next(
  [in] 要检索的对象数。  
   
  对象  
- [out]一个指针，其中每个指向数组[COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)托管堆提供的对象有关的信息的对象。  
+ 弄指针数组，其中每个都指向一个[COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)对象，该对象提供有关托管堆上的对象的信息。  
   
  pceltFetched  
- [out]指向数[COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)对象中实际返回`objects`。 如果 `celt` 为 1，此值可能为 `null`。  
+ 弄一个指针，指向 `objects`中实际返回的[COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)对象的数目。 如果 `celt` 为 1，此值可能为 `null`。  
   
 ## <a name="remarks"></a>备注  
  `COR_HEAPOBJECT.type` 字段是嵌套的引用计数 COM 接口的标识符。 此引用必须由 `ICorDebugHeapEnum::Next` 的调用方释放。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

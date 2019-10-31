@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 843cd5ab-d2b7-4ff6-86bd-e68c7a91c098
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f29246bdb929c8eaf1ebce726164d5cd2269b9f1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: acb80f3cc199d4d9f774cb3898335d26fe44b807
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796871"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127143"
 ---
 # <a name="getidentityauthority-function"></a>GetIdentityAuthority 函数
 获取一个指针，该指针指向管理代码对象的键的[IIdentityAuthority](iidentityauthority-interface.md)实例。  
@@ -37,10 +35,10 @@ HRESULT GetIdentityAuthority (
   
 ## <a name="parameters"></a>参数  
  `ppIIdentityAuthority`  
- 弄返回`IIdentityAuthority`的指针。  
+ 弄返回的 `IIdentityAuthority` 指针。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 隔离。h  
   

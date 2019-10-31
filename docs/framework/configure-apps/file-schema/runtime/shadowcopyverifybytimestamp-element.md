@@ -5,20 +5,18 @@ helpviewer_keywords:
 - <shadowCopyTimeStampVerification> element
 - shadowCopyTimeStampVerification element
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 79d44ff255b1fc12efc6e8488eeab231b9276b90
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 160f14c856735e1ceac8635506aea52454faea43
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252309"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115730"
 ---
 # <a name="shadowcopyverifybytimestamp-element"></a>\<shadowCopyVerifyByTimestamp> 元素
 指定卷影复制是否使用 .NET Framework 4 中引入的默认启动行为，或恢复为 .NET Framework 早期版本的启动行为。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
 &nbsp;&nbsp;&nbsp;&nbsp; **\<p >**  
   
 ## <a name="syntax"></a>语法  
@@ -38,10 +36,10 @@ ms.locfileid: "70252309"
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
-|真|在启动时，仅复制自上次复制到卷影复制目录以来已更新的程序集。 这是 .NET Framework 4 的默认值。|  
-|假|恢复到 .NET Framework 以前版本的启动行为，该行为是在启动时复制所有文件。|  
+|true|在启动时，仅复制自上次复制到卷影复制目录以来已更新的程序集。 这是 .NET Framework 4 的默认值。|  
+|False|恢复到 .NET Framework 以前版本的启动行为，该行为是在启动时复制所有文件。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  

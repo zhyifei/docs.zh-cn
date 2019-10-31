@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d2fe9bd-75ef-4364-84a6-da1e1994ac1a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b68624b962ed610dbeecd3e4cead769ab1400f4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1571ff796a10c5ddcd85cc2ce130e62eab2ed8f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739213"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132087"
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule 函数
 从目标进程中的公共语言运行时 (CLR) 路径创建版本字符串。  
@@ -74,15 +72,15 @@ HRESULT CreateVersionStringFromModule (
  `pidDebuggee` 不引用有效进程，或其他故障。  
   
 ## <a name="remarks"></a>备注  
- 此函数接受由 `pidDebuggee` 标识的 CLR 进程和由 `szModuleName` 指定的字符串路径。 版本字符串返回 `pBuffer` 指向的缓冲区。 此字符串对函数用户是不透明的；这就是说，该版本字符串本身不具有任何实质意义。 在此函数的上下文中单独使用并[CreateDebuggingInterfaceFromVersion 函数](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md)。  
+ 此函数接受由 `pidDebuggee` 标识的 CLR 进程和由 `szModuleName` 指定的字符串路径。 版本字符串返回 `pBuffer` 指向的缓冲区。 此字符串对函数用户是不透明的；这就是说，该版本字符串本身不具有任何实质意义。 它仅用于此函数和[CreateDebuggingInterfaceFromVersion 函数](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md)的上下文中。  
   
  应两次调用此函数。 第一次调用此函数时，为 `pBuffer` 和 `cchBuffer` 传递 null。 执行此操作时，`pBuffer` 所需的缓冲区大小将在 `pdwLength` 中返回。 然后可以第二次调用该函数，并将缓冲区传入 `pBuffer` 以及将缓冲区大小传入 `cchBuffer`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** dbgshim.h  
+ **标头：** dbgshim.dll  
   
  **库：** dbgshim.dll  
   
- **.NET framework 版本：** 3.5 SP1
+ **.NET Framework 版本：** 3.5 SP1

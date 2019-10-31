@@ -1,17 +1,15 @@
 ---
-title: ICorDebugSymbolProvider::GetMethodParameterSymbols 方法
+title: ICorDebugSymbolProvider：： GetMethodParameterSymbols 方法
 ms.date: 03/30/2017
 ms.assetid: 58b7c0b9-f6ad-4b49-b92d-0e421cfd0ec6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 04262876db39dad93cf5904cdbb81b568fc22041
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1f7da156e5a164dc753e2283bc7ab24d18983173
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957336"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138845"
 ---
-# <a name="icordebugsymbolprovidergetmethodparametersymbols-method"></a>ICorDebugSymbolProvider::GetMethodParameterSymbols 方法
+# <a name="icordebugsymbolprovidergetmethodparametersymbols-method"></a>ICorDebugSymbolProvider：： GetMethodParameterSymbols 方法
 给定方法的相对虚拟地址 (RVA) 后，获取该方法的参数符号。  
   
 ## <a name="syntax"></a>语法  
@@ -44,11 +42,11 @@ HRESULT GetMethodParameterSymbols(
 > 此方法仅适用于 .NET Native。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl, Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d6471bc-ad9b-4b1d-a307-c10443918863
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 24f058ff11a1155aa53a1d1f222ff1230c1c23e3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6c361113a441df050a8e7cd5219819cc8332581
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760982"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131480"
 ---
 # <a name="icordebugmanagedcallback2functionremapopportunity-method"></a>ICorDebugManagedCallback2::FunctionRemapOpportunity 方法
-通知调试器执行代码已达到已编辑函数的较旧版本中的序列点。  
+通知调试程序代码执行已到达已编辑函数的较早版本中的序列点。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,29 +39,29 @@ HRESULT FunctionRemapOpportunity (
   
 ## <a name="parameters"></a>参数  
  `pAppDomain`  
- [in]指向一个 ICorDebugAppDomain 对象，表示包含已编辑的函数的应用程序域的指针。  
+ 中指向 ICorDebugAppDomain 对象的指针，该对象表示包含已编辑函数的应用程序域。  
   
  `pThread`  
- [in]指向一个 ICorDebugThread 对象，表示遇到重新映射断点的线程的指针。  
+ 中指向 ICorDebugThread 对象的指针，该对象表示遇到重新映射断点的线程。  
   
  `pOldFunction`  
- [in]指向一个 ICorDebugFunction 对象，表示当前线程运行的函数的版本的指针。  
+ 中指向 ICorDebugFunction 对象的指针，该对象表示线程上当前正在运行的函数的版本。  
   
  `pNewFunction`  
- [in]指向一个 ICorDebugFunction 对象，表示该函数的最新版本的指针。  
+ 中指向 ICorDebugFunction 对象的指针，该对象表示函数的最新版本。  
   
  `oldILOffset`  
- [in]指令指针中函数的旧版本的 Microsoft 中间语言 (MSIL) 偏移量。  
+ 中函数的旧版本中指令指针的 Microsoft 中间语言（MSIL）偏移量。  
   
 ## <a name="remarks"></a>备注  
- 此回调使调试器能够重新指向其正确的位置指定的函数的新版本的指令指针映射通过调用[ICorDebugILFrame2::RemapFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)方法。 如果调试器不会调用`RemapFunction`之前调用[icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)方法中，运行时将继续执行旧代码，并会触发另一个`FunctionRemapOpportunity`回调在下一步的序列点。  
+ 此回调使调试器有机会通过调用[ICorDebugILFrame2：： RemapFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)方法将指令指针重新映射到指定函数的新版本中的适当位置。 如果在调用[ICorDebugController：： Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)方法之前调试器未调用 `RemapFunction`，则运行时将继续执行旧代码，并将在下一个序列点引发另一个 `FunctionRemapOpportunity` 回调。  
   
- 将为每个帧正在执行给定的函数的较旧版本，直到调试器返回 S_OK 调用该回调。  
+ 对于执行较早版本给定函数的每个帧，将调用此回调，直到调试器返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   

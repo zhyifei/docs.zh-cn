@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 59ec1832-9cc1-4b5c-983d-03407e51de56
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 73d5c98500c510630b1f8d6081b654a6dbd88a5b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b07029990ef529ded57bc569beff1061ad0f938
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771795"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140866"
 ---
 # <a name="iclrmetahostpolicygetrequestedruntime-method"></a>ICLRMetaHostPolicy::GetRequestedRuntime 方法
 
-提供基于宿主策略、托管程序集、版本字符串和配置流的公共语言运行时 (CLR) 的首选版本的接口。 此方法不会真正加载或激活 CLR，而只是返回[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)表示策略结果的接口。 此方法取代[GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)， [GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)， [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)， [CorBindToRuntimeByCfg](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)，并[GetCORRequiredVersion](../../../../docs/framework/unmanaged-api/hosting/getcorrequiredversion-function.md)方法。
+提供基于宿主策略、托管程序集、版本字符串和配置流的公共语言运行时 (CLR) 的首选版本的接口。 此方法实际上不会加载或激活 CLR，只是返回表示策略结果的[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)接口。 此方法取代了[GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)、 [GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)、 [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)、 [CorBindToRuntimeByCfg](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)和[GetCORRequiredVersion](../../../../docs/framework/unmanaged-api/hosting/getcorrequiredversion-function.md)方法。
 
 ## <a name="syntax"></a>语法
 
@@ -48,16 +46,16 @@ HRESULT GetRequestedRuntime(
 
 |“属性”|描述|
 |----------|-----------------|
-|`dwPolicyFlags`|[in] 必需。 指定的成员[METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)枚举，表示某个绑定策略，以及任意数量的修饰符。 当前可用的策略只有[METAHOST_POLICY_HIGHCOMPAT](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)。<br /><br /> 修饰符包括[METAHOST_POLICY_EMULATE_EXE_LAUNCH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)， [METAHOST_POLICY_APPLY_UPGRADE_POLICY](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)， [METAHOST_POLICY_SHOW_ERROR_DIALOG](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)， [METAHOST_POLICY_USE_PROCESS_IMAGE_PATH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)，并[METAHOST_POLICY_ENSURE_SKU_SUPPORTED](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)。|
+|`dwPolicyFlags`|[in] 必需。 指定[METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)枚举的成员，表示绑定策略和任意数量的修饰符。 当前可用的唯一策略为[METAHOST_POLICY_HIGHCOMPAT](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)。<br /><br /> 修饰符包括[METAHOST_POLICY_EMULATE_EXE_LAUNCH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)、 [METAHOST_POLICY_APPLY_UPGRADE_POLICY](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)、 [METAHOST_POLICY_SHOW_ERROR_DIALOG](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)、 [METAHOST_POLICY_USE_PROCESS_IMAGE_PATH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)和[METAHOST_POLICY_ENSURE_SKU_SUPPORTED](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)。|
 |`pwzBinary`|[in] 可选。 指定程序集文件路径。|
 |`pCfgStream`|[in] 可选。 指定配置文件作为 <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=nameWithType>。|
 |`pwzVersion`|[in, out] 可选。 指定或返回要加载的首选 CLR 版本。|
 |`pcchVersion`|[in, out] 必需。 输入时指定 `pwzVersion` 的预期的大小，以避免缓冲区溢出。 如果 `pwzVersion` 为 null，则当 `GetRequestedRuntime` 返回时，`pcchVersion` 包含 `pwzVersion` 的预期的大小以允许预分配；否则为 `pcchVersion` 包含写入 `pwzVersion` 的字符数量。|
-|`pwzImageVersion`|[out] 可选。 当`GetRequestedRuntime`返回，则包含 CLR 版本对应于[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)返回的接口。|
+|`pwzImageVersion`|[out] 可选。 当 `GetRequestedRuntime` 返回时，将包含对应于返回的[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)接口的 CLR 版本。|
 |`pcchImageVersion`|[in, out] 可选。 输入时指定 `pwzImageVersion` 的预期的大小以避免缓冲区溢出。 如果 `pwzImageVersion` 为 null，则当 `GetRequestedRuntime` 返回时，`pcchImageVersion` 包含 `pwzImageVersion` 的所需大小，以允许预分配。|
-|`pdwConfigFlags`|[out] 可选。 如果`GetRequestedRuntime`时返回，在绑定过程中，使用配置文件`pdwConfigFlags`包含[METAHOST_CONFIG_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-config-flags-enumeration.md)值，该值指示是否[\<启动 >](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)元素具有`useLegacyV2RuntimeActivationPolicy`属性集以及属性的值。 将应用[METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_MASK](../../../../docs/framework/unmanaged-api/hosting/metahost-config-flags-enumeration.md)屏蔽到`pdwConfigFlags`若要获取这些值与相关`useLegacyV2RuntimeActivationPolicy`。|
-|`riid`|[in]指定请求的接口标识符 IID_ICLRRuntimeInfo [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)接口。|
-|`ppRuntime`|[out]当`GetRequestedRuntime`返回，包含指向相应[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)接口。|
+|`pdwConfigFlags`|[out] 可选。 如果 `GetRequestedRuntime` 在绑定过程中使用配置文件，则当它返回时，`pdwConfigFlags` 将包含一个[METAHOST_CONFIG_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-config-flags-enumeration.md)值，该值指示[\<启动 >](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)元素是否具有 `useLegacyV2RuntimeActivationPolicy` 属性集和值特性。 将[METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_MASK](../../../../docs/framework/unmanaged-api/hosting/metahost-config-flags-enumeration.md)掩码应用到 `pdwConfigFlags` 以获取与 `useLegacyV2RuntimeActivationPolicy`相关的值。|
+|`riid`|中为请求的[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)接口指定接口标识符 IID_ICLRRuntimeInfo。|
+|`ppRuntime`|弄当 `GetRequestedRuntime` 返回时，将包含一个指向相应[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)接口的指针。|
 
 ## <a name="remarks"></a>备注
 
@@ -85,13 +83,13 @@ HRESULT GetRequestedRuntime(
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
 
-**标头：** MetaHost.h
+**标头：** MetaHost
 
-**库：** 包含为 MSCorEE.dll 中的资源
+**库：** 作为资源包括在 Mscoree.dll 中
 
-**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
+**.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
 
 ## <a name="see-also"></a>请参阅
 

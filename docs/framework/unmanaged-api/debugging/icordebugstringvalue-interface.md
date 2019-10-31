@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bf84d0af-53e1-4c04-bc5b-7e5f81ba2cc2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1cfaf886d09d843f4dbf61af55a9388454b050ca
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d1d3a5eb6e0b24b40a35c13a99465dd3c7032a91
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957428"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138945"
 ---
 # <a name="icordebugstringvalue-interface"></a>ICorDebugStringValue 接口
 应用于字符串值的 ICorDebugHeapValue 的子类。  
@@ -30,8 +28,8 @@ ms.locfileid: "69957428"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetLength 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|获取此`ICorDebugStringValue`引用的字符串中的字符数。|  
-|[GetString 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|获取此`ICorDebugStringValue`引用的字符串。|  
+|[GetLength 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|获取此 `ICorDebugStringValue`所引用的字符串中的字符数。|  
+|[GetString 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|获取此 `ICorDebugStringValue`引用的字符串。|  
   
 ## <a name="remarks"></a>备注  
   
@@ -39,11 +37,11 @@ ms.locfileid: "69957428"
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl, Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
