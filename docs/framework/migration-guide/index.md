@@ -6,20 +6,18 @@ helpviewer_keywords:
 - .NET Framework, migrating applications to
 - migration, .NET Framework
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9b1cda82125a2d4a6eb3102b01bea639a4f3e3df
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7401d7fed89d18aa0b05e1c95871e4a025705627
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636090"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126304"
 ---
 # <a name="migration-guide-to-the-net-framework-48-47-46-and-45"></a>.NET Framework 4.8、4.7、4.6 和 4.5 的迁移指南
 
-如果使用之前版本的 .NET Framework 创建了应用，通常可以轻松地将它升级为 .NET Framework 4.5 及其子版本（4.5.1 和 4.5.2）、.NET Framework 4.6 及其子版本（4.6.1 和 4.6.2）、.NET Framework 4.7 及其子版本（4.7.1 和 4.7.2）或者 .NET Framework 4.8。 在 Visual Studio 中打开项目。 如果项目是在之前版本的 Visual Studio 中创建的，则会自动打开“项目兼容性”对话框。 有关在 Visual Studio 中升级项目的详细信息，请参阅[移植、迁移和升级 Visual Studio 项目](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)和 [Visual Studio 2019 平台目标以及兼容性](/visualstudio/releases/2019/compatibility)。
+如果使用之前版本的 .NET Framework 创建了应用，通常可以轻松地将它升级为 .NET Framework 4.5 及其子版本（4.5.1 和 4.5.2）、.NET Framework 4.6 及其子版本（4.6.1 和 4.6.2）、.NET Framework 4.7 及其子版本（4.7.1 和 4.7.2）或者 .NET Framework 4.8。 在 Visual Studio 中打开项目。 如果项目是在之前版本的 Visual Studio 中创建的，则会自动打开“项目兼容性”  对话框。 有关在 Visual Studio 中升级项目的详细信息，请参阅[移植、迁移和升级 Visual Studio 项目](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)和 [Visual Studio 2019 平台目标以及兼容性](/visualstudio/releases/2019/compatibility)。
 
- 但是，.NET Framework 中的某些更改需要更改你的代码。 也可利用 .NET Framework 4.5 及其子版本、.NET Framework 4.6 及其子版本、.NET Framework 4.7 及其子版本或 .NET Framework 4.8 中的新增功能。 通常，针对新版本的 .NET Framework 来对应用进行这些类型的更改的过程称作“迁移”。 如果不需要迁移应用，可以在 .NET Framework 4.5 或更高版本中运行此应用，无需对其进行重新编译。
+ 但是，.NET Framework 中的某些更改需要更改你的代码。 也可利用 .NET Framework 4.5 及其子版本、.NET Framework 4.6 及其子版本、.NET Framework 4.7 及其子版本或 .NET Framework 4.8 中的新增功能。 通常，针对新版本的 .NET Framework 来对应用进行这些类型的更改的过程称作“迁移”  。 如果不需要迁移应用，可以在 .NET Framework 4.5 或更高版本中运行此应用，无需对其进行重新编译。
 
 ## <a name="migration-resources"></a>迁移资源
 

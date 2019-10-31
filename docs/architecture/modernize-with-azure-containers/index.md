@@ -2,12 +2,12 @@
 title: 通过 Azure 云和 Windows 容器现代化现有 .NET 应用程序（第 2 版）
 description: 阅读此电子书，了解如何将现有应用程序直接迁移到 Azure 云和 Windows 容器以实现现代化。
 ms.date: 04/28/2018
-ms.openlocfilehash: 99265e6179554214ae1684b6ea266693be7f80c1
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 67b1c7743697832684e96225e3d365da625ce6a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374167"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089768"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>通过 Azure 云和 Windows 容器现代化现有 .NET 应用程序（第 2 版）
 
@@ -29,11 +29,11 @@ Redmond, Washington 98052-6399
 
 本书“按原样”提供，表达作者的观点和看法。 本书中表达的观点、看法和信息（包括 URL 和其他 Internet 网站引用）如有更改，恕不另行通知。
 
-在此介绍的一些示例仅为解释提供，并且纯属虚构。 没有计划产生实际关联或联系，也不应妄加推断。
+本书中提及的一些示例仅用于说明，纯属虚构。 不存在任何实际关联或联系，请勿妄加推断。
 
 Microsoft 和 <https://www.microsoft.com> 上“商标”网页列出的商标是 Microsoft 集团公司的商标。 所有其他标记均为其各自所有者的财产。
 
-作者：
+作者:
 > **Cesar de la Torre**，Microsoft Corp .NET 产品团队的高级项目经理。
 
 参与者和审阅者：
@@ -56,7 +56,7 @@ Microsoft 和 <https://www.microsoft.com> 上“商标”网页列出的商标�
 
 ## <a name="about-this-guide"></a>关于本指南
 
-本指南主要重点介绍现有 Microsoft .NET Framework Web 应用程序或面向服务的应用程序的初始现代化，即将工作负荷移动到更新或更现代化的环境，而不会显著改变应用程序的代码和基本体系结构。 
+本指南主要重点介绍现有 Microsoft .NET Framework Web 应用程序或面向服务的应用程序的初始现代化，即将工作负荷移动到更新或更现代化的环境，而不会显著改变应用程序的代码和基本体系结构。
 
 本指南还强调使用一组特定的新技术和方法（如，Windows 容器和 Azure 中支持 Windows 容器的相关计算平台）将应用移动到云并部分现代化应用的益处。
 
@@ -119,7 +119,8 @@ Microsoft 和 <https://www.microsoft.com> 上“商标”网页列出的商标�
 
 - **云基础结构就绪**（重新托管或基础直接迁移）：作为第一步，很多组织只想快速执行云迁移策略。 在这种情况下，要重新托管应用程序。 大多数重新托管均可使用 [Azure Migrate](https://aka.ms/azuremigrate) 自动完成，该服务提供指南、见解和机制，帮助迁移到基于 Azure 的云工具（如 [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/) 和 [Azure 数据库迁移服务](https://azure.microsoft.com/campaigns/database-migration/)）。 也可以手动设置重新托管，以便在将旧版应用移动到云时了解关于这些资产的基础结构详细信息。 例如，可以在只做些许更改（或许只对配置做出细微更改）的情况下将应用程序移动到 Azure 中的 VM。 这种情况下的网络类似于本地环境，尤其是在 Azure 中创建虚拟网络时。
 
-- **云优化**（托管服务和 Windows 容器）：此模型进行了一些重要的部署优化，可获得云带来的显著益处，并且不需要更改应用程序的核心体系结构。 此处的基本步骤是对现有 .NET Framework 应用程序增加 [Windows 容器](https://docs.microsoft.com/virtualization/windowscontainers/about/) 支持。 此重要步骤（容器化）不需要触及代码，因此直接迁移的总体工作量很少。 可以使用 [Image2Docker](https://github.com/docker/communitytools-image2docker-win) 或 Visual Studio 之类的工具，Visual Studio 带有适用于 [Docker](https://www.docker.com/) 的工具。 Visual Studio 自动为 ASP.NET 应用程序和 Windows 容器映像选择智能默认值。 这些工具提供快速内部循环，并提供将容器迁移到 Azure 的快速途径。 部署到多个环境中时，敏捷性得到提高。 然后，要迁移到生产环境，可以将 Windows 容器部署到[用于容器的 Azure Web 应用](https://azure.microsoft.com/services/app-service/containers/)、[Azure 容器实例 (ACI)](https://azure.microsoft.com/services/container-instances/)；如果更希望采用 IaaS 方法，还可部署到具有 Windows Server 2016 和容器的 Azure VM。 对于更复杂的多容器应用程序，请考虑使用 [Azure Kubernetes 服务 (AKS/ACS)](https://azure.microsoft.com/services/container-service/) 等业务流程协调程序。 
+- **云优化**（托管服务和 Windows 容器）：此模型进行了一些重要的部署优化，可获得云带来的显著益处，并且不需要更改应用程序的核心体系结构。 此处的基本步骤是对现有 .NET Framework 应用程序增加 [Windows 容器](https://docs.microsoft.com/virtualization/windowscontainers/about/) 支持。 此重要步骤（容器化）不需要触及代码，因此直接迁移的总体工作量很少。 可以使用 [Image2Docker](https://github.com/docker/communitytools-image2docker-win) 或 Visual Studio 之类的工具，Visual Studio 带有适用于 [Docker](https://www.docker.com/) 的工具。 Visual Studio 自动为 ASP.NET 应用程序和 Windows 容器映像选择智能默认值。 这些工具提供快速内部循环，并提供将容器迁移到 Azure 的快速途径。 部署到多个环境中时，敏捷性得到提高。
+然后，要迁移到生产环境，可以将 Windows 容器部署到[用于容器的 Azure Web 应用](https://azure.microsoft.com/services/app-service/containers/)、[Azure 容器实例 (ACI)](https://azure.microsoft.com/services/container-instances/)；如果更希望采用 IaaS 方法，还可部署到具有 Windows Server 2016 和容器的 Azure VM。 对于更复杂的多容器应用程序，请考虑使用 [Azure Kubernetes 服务 (AKS/ACS)](https://azure.microsoft.com/services/container-service/) 等业务流程协调程序。
 
 初次更新期间，还可以从云中添加资产，如使用如下工具进行监视：[Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview)适用于应用生命周期且带 [Azure DevOps 服务](https://azure.microsoft.com/services/devops/)的 CI/CD 管道，以及 Azure 中提供的许多其他数据资源服务。 例如，可以修改单片 Web 应用，该应用最初使用传统 [ASP.NET Web 窗体](https://www.asp.net/web-forms)或 [ASP.NET MVC](https://www.asp.net/mvc) 开发，但现在使用 Windows 容器部署。 使用 Windows 容器时，还需要将数据迁移到 [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/)中的数据库，但不需要更改应用程序的核心体系结构。
 
@@ -201,4 +202,4 @@ GitHub 上的 [EShopModernizing](https://github.com/dotnet-architecture/eShopMod
 我们创作本指南，是为了帮助你了解改进和现代化现有 .NET Web 应用程序的选项。 本指南以及相关示例应用程序不断更新。 我们欢迎反馈！ 如有关于本指南的改进建议，请将其发送到 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)。
 
 >[!div class="step-by-step"]
->[下一步](lift-and-shift-existing-apps-azure-iaas.md) <!-- Next Chapter -->
+>[下一页](lift-and-shift-existing-apps-azure-iaas.md) <!-- Next Chapter -->

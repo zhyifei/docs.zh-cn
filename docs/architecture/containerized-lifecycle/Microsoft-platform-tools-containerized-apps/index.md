@@ -2,12 +2,12 @@
 title: 有关适用于容器化应用的 Microsoft 平台和工具的简介
 description: 了解 Microsoft 提供来支持 Docker 应用程序生命周期的产品/服务。
 ms.date: 02/15/2019
-ms.openlocfilehash: 6907528a5d7ff354a312e7575531b9c608cb479f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1829ce1051f091065f543a6cadcf5d179a284834
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295083"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094454"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>适用于容器化应用的 Microsoft 平台和工具的简介
 
@@ -43,7 +43,7 @@ ms.locfileid: "70295083"
 
   - **Azure 门户** 如果你在使用开源业务流程协调程序，则 Azure Kubernetes Service (AKS)、Service Fabric 和其他业务流程协调程序可帮助你设置和维护 Docker 环境。 如果使用 Azure Service Fabric，Service Fabric Explorer 工具可让用户可视化和配置群集。
 
-  - **Docker 工具**  可以使用熟悉的工具管理容器应用程序。 无需更改现有 Docker 管理做法，即可将容器工作负载移动到云。 针对所选的业务流程协调程序，使用熟悉的应用程序管理工具并通过标准 API 终结点连接。 还可以使用其他第三方工具管理 Docker 应用程序，如 Docker 数据中心或 CLI Docker 工具。 
+  - **Docker 工具**  可以使用熟悉的工具管理容器应用程序。 无需更改现有 Docker 管理做法，即可将容器工作负载移动到云。 针对所选的业务流程协调程序，使用熟悉的应用程序管理工具并通过标准 API 终结点连接。 还可以使用其他第三方工具管理 Docker 应用程序，如 Docker 数据中心或 CLI Docker 工具。
 
     即使你已熟悉 Linux 命令，也可通过 Linux Subsystem 命令行和在此 Linux Subsystem 功能上运行的产品（Docker 和 Kubernetes 等）客户端，使用 Microsoft Windows 和 PowerShell 管理容器应用程序。 你将在本书稍后部分深入学习如何通过你喜欢的 Microsoft Windows OS 在 Linux Subsystem 下使用这些工具。
 

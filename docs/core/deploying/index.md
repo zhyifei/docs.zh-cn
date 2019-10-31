@@ -1,16 +1,14 @@
 ---
 title: .NET Core 应用程序部署
 description: 了解有关部署 .NET Core 应用程序的方式。
-author: rpetrusha
-ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6f88659fcef49eba9344d3c4b2f0245b4072d7ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd15d41065b0a6ecb1a0bf04a0f0ab292a0a5fb7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613366"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089198"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core 应用程序部署
 
@@ -18,7 +16,7 @@ ms.locfileid: "61613366"
 
 - 依赖框架的部署。 顾名思义，依赖框架的部署 (FDD) 依赖目标系统上存在共享系统级版本的 .NET Core。 由于已存在 .NET Core，因此应用在 .NET Core 安装程序间也是可移植的。 应用仅包含其自己的代码和任何位于 .NET Core 库外的第三方依赖项。 FDD 包含可通过在命令行中使用 [dotnet 实用程序](../tools/dotnet.md)启动的 *.dll* 文件。 例如，`dotnet app.dll` 就可以运行一个名为 `app` 的应用程序。
 
-- 独立部署。 与 FDD 不同，独立部署 (SCD) 不依赖目标系统上存在的共享组件。 所有组件（包括 .NET Core 库和 .NET Core 运行时）都包含在应用程序中，并且独立于其他 .NET Core 应用程序。 SCD 包括一个可执行文件（如 Windows 平台上名为 `app` 的应用程序的 app.exe），它是特定于平台的 .NET Core 主机的重命名版本，还包括一个 .dll 文件（如 app.dll），而它是实际的应用程序。
+- 独立部署。 与 FDD 不同，独立部署 (SCD) 不依赖目标系统上存在的共享组件。 所有组件（包括 .NET Core 库和 .NET Core 运行时）都包含在应用程序中，并且独立于其他 .NET Core 应用程序。 SCD 包括一个可执行文件（如 Windows 平台上名为 `app` 的应用程序的 app.exe  ），它是特定于平台的 .NET Core 主机的重命名版本，还包括一个 .dll  文件（如 app.dll  ），而它是实际的应用程序。
 
 - 依赖框架的可执行文件。 生成在目标平台上运行的可执行文件。 类似于 FDD，依赖框架的可执行文件 (FDE) 是特定于平台的，而不是自包含的。 这些部署的运行仍依赖于现有的 .NET Core 共享系统级版本。 与 SCD 不同，应用仅包含代码和任何位于 .NET Core 库外的第三方依赖项。 FDE 生成在目标平台上运行的可执行文件。
 
@@ -48,7 +46,7 @@ ms.locfileid: "61613366"
 
 对于独立部署，可以部署应用和所需的第三方依赖项以及生成应用所使用的 .NET Core 版本。 创建 SCD 不包括各种平台上的 [.NET Core 本机依赖项](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)，因此运行应用前这些依赖项必须已存在。 有关在运行时进行版本绑定的详细信息，请参阅有关 [.NET Core 中的版本绑定](../versions/selection.md)的文章。
 
-从 NET Core 2.1 SDK（版本 2.1.300）开始，.NET Core 支持修补程序版本前滚。 在创建独立部署时，.NET Core 工具会自动包含你的应用程序所指向的 .NET Core 版本的最新服务的运行时。 （最新服务的运行时包括安全修补程序和其他 bug 修复程序。）服务的运行时不需要存在于你的生成系统上；它会从 NuGet.org 自动下载。有关详细信息，包括有关如何选择退出修补程序版本前滚的说明，请参阅[独立部署运行时前滚](runtime-patch-selection.md)。
+从 NET Core 2.1 SDK（版本 2.1.300）开始，.NET Core 支持修补程序版本前滚  。 在创建独立部署时，.NET Core 工具会自动包含你的应用程序所指向的 .NET Core 版本的最新服务的运行时。 （最新服务的运行时包括安全修补程序和其他 bug 修复程序。）服务的运行时不需要存在于你的生成系统上；它会从 NuGet.org 自动下载。有关详细信息，包括有关如何选择退出修补程序版本前滚的说明，请参阅[独立部署运行时前滚](runtime-patch-selection.md)。
 
 FDD 和 SCD 部署使用单独的主机可执行文件，使你可以使用发布者签名为 SCD 签署主机可执行文件。
 

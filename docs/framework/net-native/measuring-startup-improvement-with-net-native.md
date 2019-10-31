@@ -2,14 +2,12 @@
 title: 使用 .NET Native 衡量启动改善
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 74011a4c70cc8f7da3973698a43b1e97cffb9f9b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 771bf8deba8e851eadf356c647169a21428ddcff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927070"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128355"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>使用 .NET Native 衡量启动改善
 .NET Native 显著改善了应用的启动时间。 这一改善在便携式、低功耗设备上和在使用复杂应用时尤其明显。 该主题将帮助你初步了解衡量这个启动提升所需的基本检测。  
@@ -47,7 +45,7 @@ ms.locfileid: "70927070"
   
 - 当你的应用已完成同步新故事时。  
   
- 检测一个应用很简单：仅需调用位于派生类上的适当方法。 通过使用前面实例中的 `AppEventSource`，你可以按照如下所示检测一个应用：  
+ 检测应用程序非常简单：只需在派生类上调用适当的方法。 通过使用前面实例中的 `AppEventSource`，你可以按照如下所示检测一个应用：  
   
  [!code-csharp[ProjectN_ETW#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw2.cs#2)]  
   

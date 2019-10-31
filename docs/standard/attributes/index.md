@@ -12,14 +12,12 @@ helpviewer_keywords:
 - runtime, attributes
 - extending metadata
 ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2a31082604048e71ebc7581b36857a8bfbd333c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3a106eb58de4865e260a43c8466019e738510f5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969788"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130905"
 ---
 # <a name="extending-metadata-using-attributes"></a>利用特性扩展元数据
 公共语言运行时使你能够添加类似于关键字的描述性声明（称为特性），以便批注编程元素（如类型、字段、方法和属性）。 编译运行时的代码时，它将被转换为 Microsoft 中间语言 (MSIL)，并和编译器生成的元数据一起放置在可移植可执行 (PE) 文件内。 特性使你能够将额外的描述性信息放到可使用运行时反射服务提取的元数据中。 当你声明派生自 <xref:System.Attribute?displayProperty=nameWithType> 的特殊类的实例时，编译器会创建特性。  
