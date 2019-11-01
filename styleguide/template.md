@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 3674508c25e9a4b166f994e7ca16df04e484956b
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: 4f50d4d446896e12b5beb86fc649ea4fa7c82718
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306362"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775542"
 ---
 # <a name="metadata-and-markdown-template"></a>元数据和 Markdown 模板
 
@@ -76,7 +76,7 @@ Markdown 使用特殊字符如 \*、\` 和 \# 进行格式化。 如果要在内
 
 主题中**必须**只有一个第一级别标题 (H1)，此标题显示为页面上的标题。
 
-如果标题以 `#` 字符结束，则需要在末尾额外添加一个 `#` 字符，以便正确呈现此标题。 例如 `# Async Programming in F# #`。
+如果标题以 `#` 字符结尾，则需要对其进行转义以正确呈现标题。 例如 `# Async programming in F\#`。
 
 第二级标题生成页面 TOC，显示在“In this article”部分的页面标题下方。
 
