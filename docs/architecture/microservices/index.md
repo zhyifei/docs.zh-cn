@@ -2,12 +2,12 @@
 title: .NET 微服务。 适用于容器化 .NET 应用程序的体系结构
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 微服务可是模块化且可独立部署的服务。 （适用于 Linux 和 Windows）的 Docker 容器可将服务及其依赖项绑定到单个单元，使该单元在一个独立的环境中运行，因而可简化部署和测试。
 ms.date: 01/07/2019
-ms.openlocfilehash: dcfff8b06dc77b47e6586ea82c82acc30a5cf3df
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7fa4935fe56ca873a5311812637964083e34170e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70848874"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089912"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服务：适用于容器化 .NET 应用程序的体系结构
 
@@ -15,16 +15,16 @@ ms.locfileid: "70848874"
 
 **版本 v2.2** - 已更新到 ASP.NET Core 2.2
 
-本指南介绍如何使用容器开发基于微服务的应用程序并对其进行管理。 本指南探讨使用 .NET Core 和 Docker 容器的体系结构设计和实现方法。 
+本指南介绍如何使用容器开发基于微服务的应用程序并对其进行管理。 本指南探讨使用 .NET Core 和 Docker 容器的体系结构设计和实现方法。
 
 为了更加轻松地开始使用，本指南重点介绍一个容器化和基于微服务的参考应用程序（用户可获取该应用程序）。 可通过 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) GitHub 存储库获取该参考应用程序。
 
 ## <a name="action-links"></a>操作链接
 
-- 下载所选格式的电子书：| [PDF](https://aka.ms/microservicesebook) | [MOBI](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
+- 下载你选择的格式的此电子书（仅限英文版）：| [PDF](https://aka.ms/microservicesebook) | [MOBI](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
 
 - 克隆参考应用程序 [GitHub 上的 eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) 或为其创建分支
- 
+
 - 观看[第 9 频道上的介绍视频](https://aka.ms/microservices-video)
 
 - 立即了解[微服务体系结构](https://aka.ms/MicroservicesArchitecture)
@@ -47,7 +47,7 @@ Docker 正在逐渐成为容器行业的事实标准，受到 Windows 和 Linux 
 
 ## <a name="version"></a>Version
 
-本指南已进行了修订，涵盖 .NET Core 2.2 版本以及与 .NET Core 2.2 同期的同一“批”技术  （即 Azure 和其他第三方技术）的许多其他更新。 这就是书本版本也更新到 2.2 的原因  。 
+本指南已进行了修订，涵盖 .NET Core 2.2 版本以及与 .NET Core 2.2 同期的同一“批”技术  （即 Azure 和其他第三方技术）的许多其他更新。 这就是书本版本也更新到 2.2 的原因  。
 
 ## <a name="what-this-guide-does-not-cover"></a>本指南未涵盖的内容
 
@@ -72,7 +72,7 @@ Docker 正在逐渐成为容器行业的事实标准，受到 Windows 和 Linux 
 
 ## <a name="related-microservice-and-container-based-reference-application-eshoponcontainers"></a>相关微服务和基于容器的参考应用程序：eShopOnContainers
 
-eShopOnContainers 应用程序是用于 .NET Core 和旨在使用 Docker 容器部署的微服务的开源参考应用。 该应用程序包含多个子系统，包括多个 e-store UI 前端（一个 Web MVC 应用、一个 Web SPA 和一个本机移动应用）。 还包括用于所有所需服务器端操作的后端微服务和容器。 
+eShopOnContainers 应用程序是用于 .NET Core 和旨在使用 Docker 容器部署的微服务的开源参考应用。 该应用程序包含多个子系统，包括多个 e-store UI 前端（一个 Web MVC 应用、一个 Web SPA 和一个本机移动应用）。 还包括用于所有所需服务器端操作的后端微服务和容器。
 
 应用程序的用途是展示体系结构模式。 **它不是可直接用于生产的模板**，无法启动实际应用程序。 事实上，应用程序处于永久 beta 状态，因为它还用来在出现有趣的新技术时对其进行测试。
 

@@ -4,12 +4,12 @@ description: 了解如何使用 Blazor 和 .NET Core 以简单而熟悉的方式
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 936f85d4fda9c5396a6586810735877488226157
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 394d11038b59f4cbe9e9955df43b6198eb5daaf8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696930"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088129"
 ---
 # <a name="blazor-for-aspnet-web-forms-developers"></a>Blazor for ASP.NET Web Forms 开发人员
 

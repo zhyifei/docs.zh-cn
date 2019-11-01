@@ -4,12 +4,12 @@ description: 无服务器体系结构指南。 了解何时、为何以及如何
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: af930ba3d704e9bbf22f03ad6a4a547c5fbff4d3
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 9dea7dbccb5c9e125f792e6a7287a7dd2fad26f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522844"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093539"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>无服务器应用：体系结构、模式和 Azure 实现
 
@@ -43,17 +43,17 @@ Mac 和 macOS 是 Apple Inc. 的商标
 
 作者:
 
-> Microsoft Corp. APEX 高级云开发大使，  [Jeremy Likness](https://twitter.com/jeremylikness)
+> Microsoft Corp. 高级云大使 **[Jeremy Likness](https://twitter.com/jeremylikness)**
 
 参与者：
 
-> [Cecil Phillip](https://twitter.com/cecilphillip)，Microsoft Corp. APEX 二级云开发大使 
+> Microsoft Corp. 高级云大使 **[Cecil Phillip](https://twitter.com/cecilphillip)**
 
 编辑：
 
-> [Bill Wagner](https://twitter.com/billwagner)，Microsoft Corp. APEX 高级内容开发者 
+> Microsoft Corp. 高级内容开发者 **[Bill Wagner](https://twitter.com/billwagner)**
 
-> [Maira Wenzel](https://twitter.com/mairacw)，Microsoft Corp. APEX 高级内容开发者 
+> Microsoft Corp. 高级内容开发者 **[Maira Wenzel](https://twitter.com/mairacw)**
 
 参与者和审阅者：
 
