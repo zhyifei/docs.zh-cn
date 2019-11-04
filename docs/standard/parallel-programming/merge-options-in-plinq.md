@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7255ef11bfdf74afa6ae2032b0c86c8c44dbfe7d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f88f2035fb27567e56792cae8289140129e9c557
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647731"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129012"
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ 中的合并选项
 如果并行执行查询，PLINQ 对源序列进行分区，以便多个线程能够并发处理不同部分，通常是在不同的线程中。 如果要在一个线程（例如，`foreach`（Visual Basic 中的 `For Each`）循环）中使用结果，必须将每个线程的结果合并回一个序列中。 PLINQ 执行的合并类型具体视查询中的运算符而定。 例如，对结果强制施加新顺序的运算符必须缓冲所有线程中的全部元素。 从使用线程（以及应用用户）的角度来看，完全缓冲查询可能会运行很长时间，才能生成第一个结果。 默认情况下，其他运算符进行部分缓冲，并分批生成结果。 默认不缓冲的一个运算符是 <xref:System.Linq.ParallelEnumerable.ForAll%2A>。 它会立即生成所有线程中的所有元素。  
@@ -49,17 +47,17 @@ ms.locfileid: "64647731"
   
 |运算符|限制|  
 |--------------|------------------|  
-|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.Cast%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|无|  
+|<xref:System.Linq.ParallelEnumerable.Cast%2A>|无|  
 |<xref:System.Linq.ParallelEnumerable.Concat%2A>|只包含 Array 或 List 源的无序查询。|  
-|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.OfType%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|无|  
+|<xref:System.Linq.ParallelEnumerable.OfType%2A>|无|  
 |<xref:System.Linq.ParallelEnumerable.Reverse%2A>|只包含 Array 或 List 源的无序查询。|  
-|<xref:System.Linq.ParallelEnumerable.Select%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.Skip%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.Take%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.Where%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.Select%2A>|无|  
+|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|无|  
+|<xref:System.Linq.ParallelEnumerable.Skip%2A>|无|  
+|<xref:System.Linq.ParallelEnumerable.Take%2A>|无|  
+|<xref:System.Linq.ParallelEnumerable.Where%2A>|无|  
   
  其他所有 PLINQ 查询运算符可能会忽略用户提供的合并选项。 一些查询运算符（例如，<xref:System.Linq.ParallelEnumerable.Reverse%2A> 和 <xref:System.Linq.ParallelEnumerable.OrderBy%2A>）在生成并重新排序所有元素之前，无法生成任何元素。 因此，如果在还包含 <xref:System.Linq.ParallelEnumerable.Reverse%2A> 等运算符的查询中使用 <xref:System.Linq.ParallelMergeOptions>，除非运算符生成了结果，否则将不会在查询中应用合并行为。  
   
