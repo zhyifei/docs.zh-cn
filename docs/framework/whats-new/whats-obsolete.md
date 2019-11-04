@@ -7,14 +7,12 @@ helpviewer_keywords:
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 810f49581d4cb28987ea41237645f75c50388084
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 4de441ff55c3728f43742d6e467deeb47f400507
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690472"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140595"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework 类库中过时的内容
 
@@ -39,7 +37,7 @@ ms.locfileid: "66690472"
 
 - 通过删除该类型或成员的使用（如果可能）来更改代码。
 
-     或
+     -或-
 
 - 查看有关此技术领域的文档，以确定如何响应弃用情况。
 

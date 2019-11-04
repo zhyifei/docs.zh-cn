@@ -9,19 +9,19 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 25b686e654c5d6bb44a56b96cbf4045d14e95b62
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 5eb9313003f767daf64a5b5c4f229c6c58a018ec
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392425"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423246"
 ---
 # <a name="c-programming-guide"></a>C# 编程指南
 此部分详细介绍了 C# 语言主要功能，以及通过 .NET Framework 可以在 C# 中使用的功能。  
   
  阅读此部分的大部分内容的前提是，你已对 C# 和一般编程概念有一定的了解。 如果完全没有接触过编程或 C#，建议参阅 [C# 教程简介](../tutorials/intro-to-csharp/index.md)或 [.NET 浏览器内教程](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)，此教程不需要具备任何编程知识。  
   
- 若要了解特定的关键字、运算符和预处理器指令，请参阅 [C# 参考](../language-reference/index.md)。 若要了解 C# 语言规范，请参阅 [C# 语言规范](../language-reference/language-specification/index.md)。  
+ 若要了解特定的关键字、运算符和预处理器指令，请参阅 [C# 参考](../language-reference/index.md)。 若要了解 C# 语言规范，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)。  
   
 ## <a name="program-sections"></a>程序部分
 
@@ -56,7 +56,7 @@ ms.locfileid: "71392425"
   
  [迭代器](./concepts/iterators.md)
   
- [LINQ 查询表达式](./linq-query-expressions/index.md)  
+ [LINQ 查询表达式](../linq/index.md)  
   
  [Lambda 表达式](./statements-expressions-operators/lambda-expressions.md)  
   
@@ -73,7 +73,7 @@ ms.locfileid: "71392425"
   
  [.NET 中的程序集](../../standard/assembly/index.md)  
   
- [特性](./concepts/attributes/index.md)  
+ [属性](./concepts/attributes/index.md)  
   
  [集合](./concepts/collections.md)  
   

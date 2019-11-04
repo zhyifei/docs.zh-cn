@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: a4cb85eb94584cff20c9ff26b4aa6bacee4f9883
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: aa902ffaf93c8e1f273ed476dc7d413bcfce914c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252966"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417580"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>演练：创建并使用动态对象（C# 和 Visual Basic）
 
@@ -22,7 +22,7 @@ ms.locfileid: "70252966"
   
  动态对象还提供对 IronPython 和 IronRuby 等动态语言的便捷访问。 可以使用动态对象来引用在运行时解释的动态脚本。  
   
- 使用晚期绑定引用动态对象。 在 C# 中，将晚期绑定对象的类型指定为 `dynamic`。 在 Visual Basic 中，将晚期绑定对象的类型指定为 `Object`。 有关详细信息，请参阅[动态](../../language-reference/keywords/dynamic.md)和[早期绑定和晚期绑定](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)。  
+ 使用晚期绑定引用动态对象。 在 C# 中，将晚期绑定对象的类型指定为 `dynamic`。 在 Visual Basic 中，将晚期绑定对象的类型指定为 `Object`。 有关详细信息，请参阅[动态](../../language-reference/builtin-types/reference-types.md)和[早期绑定和晚期绑定](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)。  
   
  可以使用 <xref:System.Dynamic?displayProperty=nameWithType> 命名空间中的类来创建自定义动态对象。 例如，可以创建 <xref:System.Dynamic.ExpandoObject> 并在运行时指定该对象的成员。 还可以创建继承 <xref:System.Dynamic.DynamicObject> 类的自己的类型。 然后，可以替代 <xref:System.Dynamic.DynamicObject> 类的成员以提供运行时动态功能。  
   
@@ -164,5 +164,5 @@ ms.locfileid: "70252966"
 - <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>
 - [使用类型 dynamic](./using-type-dynamic.md)
 - [早期绑定和后期绑定](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../language-reference/keywords/dynamic.md)
+- [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [实现动态接口（可从 Microsoft TechNet 下载 PDF）](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

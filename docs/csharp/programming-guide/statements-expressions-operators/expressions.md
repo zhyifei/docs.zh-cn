@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 2db08bd89b5e0fc612599f83cb02178aef5ee5fb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e08220362c0acec6060ade75131e34a6b3fb7390
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774171"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417698"
 ---
 # <a name="expressions-c-programming-guide"></a>表达式（C# 编程指南）
 
@@ -47,7 +47,7 @@ System.Convert.ToInt32("35");
   
  [!code-csharp[csProgGuideStatements#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#2)]  
   
- 有关文本的详细信息，请参阅[类型](../../language-reference/keywords/types.md)。  
+ 有关文本的详细信息，请参阅[类型](/dotnet/csharp/language-reference/keywords)。  
   
  在前面的示例中，`i` 和 `s` 都是用于标识局部变量的简单名称。 在表达式中使用这些变量时，变量名称计算为当前在该变量的内存位置所存储的值。 下面的示例对此进行了演示：  
   

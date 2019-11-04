@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 9936d56582afd160bf3464d18efd3acf47c7af60
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f7cb9bd05d08a33be53abad58b78b39e36c6dffe
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924501"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419359"
 ---
 # <a name="finalizers-c-programming-guide"></a>终结器（C# 编程指南）
 终结器（也称为  析构函数）用于在垃圾回收器收集类实例时执行任何必要的最终清理操作。  
@@ -85,7 +85,7 @@ protected override void Finalize()
   
 ## <a name="c-language-specification"></a>C# 语言规范  
 
-有关详细信息，请参阅 [C# 语言规范](../../language-reference/language-specification/index.md)中的[析构函数](~/_csharplang/spec/classes.md#destructors)部分。
+有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的[析构函数](~/_csharplang/spec/classes.md#destructors)部分。
   
 ## <a name="see-also"></a>请参阅
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 160b25bd93f7d7c69ec104a31a0608e930e2dee3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 806bc3de138ebae682d2e248593230c753eb7ba2
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534886"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422764"
 ---
 # <a name="group-clause-c-reference"></a>group 子句（C# 参考）
 
@@ -54,7 +54,7 @@ ms.locfileid: "54534886"
 
 ### <a name="grouping-by-numeric-range"></a>按数值范围分组
 
-下一示例使用表达式创建表示百分比范围的数值组键。 请注意，该示例使用 [let](let-clause.md) 作为方法调用结果的方便存储位置，因此无需在 `group` 子句中调用该方法两次。 若要详细了解如何在查询表达式中安全地使用方法，请参阅[操作说明：在查询表达式中处理异常](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md)。
+下一示例使用表达式创建表示百分比范围的数值组键。 请注意，该示例使用 [let](let-clause.md) 作为方法调用结果的方便存储位置，因此无需在 `group` 子句中调用该方法两次。 若要详细了解如何在查询表达式中安全地使用方法，请参阅[操作说明：在查询表达式中处理异常](../../linq/handle-exceptions-in-query-expressions.md)。
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
@@ -78,7 +78,7 @@ group person by new {name = person.surname, city = person.city};
 
 ## <a name="example"></a>示例
 
-此示例演示在创建组之后，如何使用通过 `into` 实现的延续对这些组执行附加逻辑。 有关详细信息，请参阅 [into](into.md)。 下面的示例查询每个组，仅选择键值为元音的元素。
+此示例演示在创建组之后，如何使用通过 `into` 实现的延续  对这些组执行附加逻辑。 有关详细信息，请参阅 [into](into.md)。 下面的示例查询每个组，仅选择键值为元音的元素。
 
 [!code-csharp[cscsrefQueryKeywords#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#17)]
 

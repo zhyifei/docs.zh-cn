@@ -2,12 +2,12 @@
 title: 评估 NET Core 中的中断性变更
 description: 了解 .NET Core 为开发人员保持各 .NET 版本兼容性所使用的方法。
 ms.date: 06/10/2019
-ms.openlocfilehash: 4c3f051bf37ea4753d916ee22fedf97a9bad5892
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a4a1b5c4e81cec783248c6110b0af9844eb3f4af
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089347"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416680"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>评估 .NET Core 中的中断性变更
 
@@ -139,7 +139,7 @@ ms.locfileid: "73089347"
 
   鉴于以下两个原因将此视为中断性变更：
   
-  - 它将中断后期绑定方案，如 Visual Basic 中的后期绑定功能和 C# 的 [dynamic](../../csharp/language-reference/keywords/dynamic.md)。
+  - 它将中断后期绑定方案，如 Visual Basic 中的后期绑定功能和 C# 的 [dynamic](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type)。
   
   - 如果开发人员使用[命名参数](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments)，它将中断[源兼容性](categories.md#source-compatibility)。
 
@@ -227,7 +227,7 @@ ms.locfileid: "73089347"
 
 - ❓ 关于输入分析和新异常引发的变更（尽管本文档未指定分析行为） 
 
-### <a name="exceptions"></a>异常
+### <a name="exceptions"></a>例外
 
 - **✔️ 引发派生程度高于现有异常的异常**
 
@@ -260,7 +260,7 @@ ms.locfileid: "73089347"
 
 - **❌ 在上文未列出的任何其他的情况下删除异常**
 
-### <a name="attributes"></a>特性
+### <a name="attributes"></a>属性
 
 - **✔️ 更改不可观测的属性的值 **
 

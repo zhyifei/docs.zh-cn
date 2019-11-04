@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: b50a108d2efbfd3da0d690cb02537a12f766b26b
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: ff156afb3da4b921517fd841c5de2295265a8d7b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72237293"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198350"
 ---
-### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a>HttpRequestMessage.Version 的默认值已更改为 1.1 
+### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a>HttpRequestMessage.Version 的默认值已更改为 1.1
 
 <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> 属性的默认值已从 2.0 更改为 1.1。
 
@@ -16,10 +16,10 @@ ms.locfileid: "72237293"
 
 #### <a name="change-description"></a>更改描述
 
-在 .NET Core 1.0 至 2.0 中，<xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> 属性的默认值为 1.1。 从 .NET Core 2.1 开始，该值已更改为 2.1。 
+在 .NET Core 1.0 至 2.0 中，<xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> 属性的默认值为 1.1。 从 .NET Core 2.1 开始，该值已更改为 2.1。
 
 从 .NET Core 3.0 开始，<xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> 属性返回的默认版本号再次为 1.1。
- 
+
 #### <a name="recommended-action"></a>建议的操作
 
 如果代码依赖于 <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> 属性，则返回默认值 2.0，以更新代码。

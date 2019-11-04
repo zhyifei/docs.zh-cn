@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 32c7f4e9e4736145f9275b74f34c04404e7c770a
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 771238c53dc97f4cf4068968f3c68500ba9f87da
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394201"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198362"
 ---
 ### <a name="caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package"></a>缓存：Microsoft.Extensions.Caching.SqlServer 使用新 SqlClient 包
 
@@ -28,7 +28,7 @@ ms.locfileid: "72394201"
 
 #### <a name="recommended-action"></a>建议的操作
 
-客户无需担心此中断性变更，除非他们使用 `Microsoft.Extensions.Caching.SqlServer` 包返回的类型，并将它们强制转换为 `System.Data.SqlClient` 类型。 例如，如果有人将 `DbConnection` 强制转换为[旧的 SqlConnection 类型](xref:System.Data.SqlClient.SqlConnection)，则需要将转换更改为新的 `Microsoft.Data.SqlClient.SqlConnection` 类型。 
+客户无需担心此中断性变更，除非他们使用 `Microsoft.Extensions.Caching.SqlServer` 包返回的类型，并将它们强制转换为 `System.Data.SqlClient` 类型。 例如，如果有人将 `DbConnection` 强制转换为[旧的 SqlConnection 类型](xref:System.Data.SqlClient.SqlConnection)，则需要将转换更改为新的 `Microsoft.Data.SqlClient.SqlConnection` 类型。
 
 #### <a name="category"></a>类别
 

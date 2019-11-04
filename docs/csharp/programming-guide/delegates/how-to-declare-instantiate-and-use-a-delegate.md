@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 565ae2a6c42de57570f564edc9d0bde5cab8efa8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bd3d80023f6cb382f057e976dba01daf5e28db50
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590629"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423326"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>如何：声明、实例化和使用委托（C# 编程指南）
 在 C# 1.0 和更高版本中，可以如下面的示例所示声明委托。  
@@ -23,7 +23,7 @@ ms.locfileid: "69590629"
   
  [!code-csharp[csProgGuideDelegates#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#32)]  
   
- 在 C# 2.0 和更高版本中，还可以使用匿名方法来声明和初始化[委托](../../language-reference/keywords/delegate.md)，如下面的示例所示。  
+ 在 C# 2.0 和更高版本中，还可以使用匿名方法来声明和初始化[委托](../../language-reference/builtin-types/reference-types.md)，如下面的示例所示。  
   
  [!code-csharp[csProgGuideDelegates#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#15)]  
   

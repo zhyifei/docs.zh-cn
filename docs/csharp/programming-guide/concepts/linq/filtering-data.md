@@ -2,12 +2,12 @@
 title: 筛选数据 (C#)
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: 17d3a65b6042c9679a263eff0048f5360c4aa546
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: eb448c1c2ea6d9b3fcf0120043cafebc01cd3805
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594393"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418478"
 ---
 # <a name="filtering-data-c"></a>筛选数据 (C#)
 筛选是指将结果集限制为仅包含满足指定条件的元素的操作。 它也称为选定内容。  
@@ -50,7 +50,7 @@ foreach (string str in query)
 - <xref:System.Linq>
 - [标准查询运算符概述 (C#)](./standard-query-operators-overview.md)
 - [where 子句](../../../language-reference/keywords/where-clause.md)
-- [如何：在运行时动态指定谓词筛选器](../../linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+- [如何：在运行时动态指定谓词筛选器](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
 - [如何：使用反射查询程序集的元数据 (LINQ) (C#)](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
 - [如何：查询具有指定特性或名称的文件 (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
 - [如何：按任意词或字段对文本数据进行排序或筛选 (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

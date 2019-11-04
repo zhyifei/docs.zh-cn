@@ -2,16 +2,16 @@
 title: NamedPipe 激活
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: a7d940d6be56160945ca0f8697361314af96bc0b
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 9d1f7c599f16b0974fb327888c080957c5cd9cee
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487543"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417087"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe 激活
 
-本示例演示如何承载使用 Windows 进程激活服务 (WAS) 的服务以激活通过命名管道进行通信的服务。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)并且需要[!INCLUDE[wv](../../../../includes/wv-md.md)]运行。
+本示例演示如何承载使用 Windows 进程激活服务 (WAS) 的服务以激活通过命名管道进行通信的服务。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，需要运行 [!INCLUDE[wv](../../../../includes/wv-md.md)]。
 
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。
@@ -21,7 +21,7 @@ ms.locfileid: "67487543"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\NamedPipeActivation`
 
@@ -159,19 +159,19 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1. 确保安装了 IIS 7.0。 为使 WAS 激活需要 IIS 7.0。
+1. 确保已安装 IIS 7.0。 激活 WAS 需要 IIS 7.0。
 
-2. 请确保具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+2. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-    此外，必须安装 WCF 非 HTTP 激活组件：
+    此外，还必须安装 WCF 非 HTTP 激活组件：
 
-    1. 从“开始”菜单中，选择“控制面板”   。
+    1. 从“开始”菜单中，选择“控制面板”。
 
-    2. 选择**程序和功能**。
+    2. 选择 "**程序和功能**"。
 
-    3. 单击**打开或关闭 Windows 组件**。
+    3. 单击 **"打开或关闭 Windows 组件"** 。
 
-    4. 展开**Microsoft.NET Framework 3.0**节点并检查**Windows Communication Foundation 非 HTTP 激活**功能。
+    4. 展开**Microsoft .NET Framework 3.0**节点并检查**Windows Communication Foundation 非 HTTP 激活**功能。
 
 3. 将 Windows 进程激活服务 (WAS) 配置为支持命名管道激活。
 
@@ -179,7 +179,7 @@ Press <ENTER> to terminate client.
 
     1. 若要支持 net.pipe 激活，必须首先将默认的网站绑定到 net.pipe 协议。 可以通过使用随 IIS 7.0 管理工具集安装的 appcmd.exe 来执行此操作。 在具有提升权限的（管理员）命令提示符处，运行下列命令。
 
-        ```
+        ```console
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"
         -+bindings.[protocol='net.pipe',bindingInformation='*']
         ```
@@ -191,14 +191,14 @@ Press <ENTER> to terminate client.
 
     2. 尽管网站内的所有应用程序共享一个公共 net.pipe 绑定，但是每个应用程序可以单独启用 net.pipe 支持。 若要启用 /servicemodelsamples 应用程序的 net.pipe，请在具有提升权限的命令提示符处运行以下命令。
 
-        ```
+        ```console
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.pipe
         ```
 
         > [!NOTE]
         > 此命令是单行文本。
 
-        此命令将启用 /servicemodelsamples 应用程序使用同时访问`http://localhost/servicemodelsamples`和`net.tcp://localhost/servicemodelsamples`。
+        此命令允许使用 `http://localhost/servicemodelsamples` 和 `net.tcp://localhost/servicemodelsamples`访问/servicemodelsamples 应用程序。
 
 4. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
@@ -208,7 +208,7 @@ Press <ENTER> to terminate client.
 
     1. 通过在具有提升权限的命令提示符处运行以下命令，从启用的协议列表中移除 net.tcp。
 
-        ```
+        ```console
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http
         ```
 
@@ -217,7 +217,7 @@ Press <ENTER> to terminate client.
 
     2. 通过在具有提升权限的命令提示符处运行以下命令移除 net.tcp 站点绑定。
 
-        ```
+        ```console
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" --bindings.[protocol='net.pipe',bindingInformation='*']
         ```
 
@@ -226,4 +226,4 @@ Press <ENTER> to terminate client.
 
 ## <a name="see-also"></a>请参阅
 
-- [AppFabric 承载和持久性示例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [AppFabric 宿主和持久性示例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

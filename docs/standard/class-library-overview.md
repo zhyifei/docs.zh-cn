@@ -37,14 +37,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b890ac02d54a9092bf2ad24e31367ef1d487c01f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 596c0fd8fec8f59d977f1db445f9000df23ad5ce
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593505"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132845"
 ---
 # <a name="net-class-library-overview"></a>.NET 类库概述
 
@@ -72,7 +70,7 @@ ms.locfileid: "65593505"
   
  此命名方案使扩展 .NET Framework 的库开发人员可以轻松创建分层类型组，并用一致的、带有提示性的方式对其进行命名。 它还允许用全名（即命名空间和类型名称）明确地标识类型，这样可以防止类型名称发生冲突。 库开发人员在创建其命名空间的名称时应使用以下约定：  
   
- CompanyName.TechnologyName  
+ CompanyName.TechnologyName    
   
  例如，`Microsoft.Word` 命名空间就符合此原则。  
   
@@ -89,13 +87,13 @@ ms.locfileid: "65593505"
 |类别|类名|说明|Visual Basic 数据类型|C# 数据类型|C++/CLI 数据类型|F# 数据类型|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |整数|<xref:System.Byte>|8 位无符号整数。|**Byte**|**byte**|**unsigned char**|**byte**|  
-||<xref:System.SByte>|8 位有符号整数。<br /><br /> 不符合 CLS。|**SByte**|**sbyte**|**char**<br /> 或<br /> signed char|**sbyte**|  
+||<xref:System.SByte>|8 位有符号整数。<br /><br /> 不符合 CLS。|**SByte**|**sbyte**|**char**<br /> -或-<br /> signed char  |**sbyte**|  
 ||<xref:System.Int16>|16 位带符号整数。|**Short**|**short**|**short**|**int16**|  
-||<xref:System.Int32>|32 位带符号整数。|**Integer**|**int**|**int**<br /><br /> 或<br /><br /> **long**|**int**|  
+||<xref:System.Int32>|32 位带符号整数。|**Integer**|**int**|**int**<br /><br /> -或-<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|64 位带符号整数。|**Long**|**long**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|16 位无符号整数。<br /><br /> 不符合 CLS。|**UShort**|**ushort**|**unsigned short**|**uint16**|  
-||<xref:System.UInt32>|32 位无符号整数。<br /><br /> 不符合 CLS。|**UInteger**|**uint**|**unsigned int**<br /> 或<br /> **unsigned long**|**uint32**|  
-||<xref:System.UInt64>|64 位无符号整数。<br /><br /> 不符合 CLS。|**ULong**|**ulong**|unsigned __int64|**uint64**|  
+||<xref:System.UInt32>|32 位无符号整数。<br /><br /> 不符合 CLS。|**UInteger**|**uint**|**unsigned int**<br /> -或-<br /> **unsigned long**|**uint32**|  
+||<xref:System.UInt64>|64 位无符号整数。<br /><br /> 不符合 CLS。|**ULong**|**ulong**|unsigned __int64 |**uint64**|  
 |浮点|<xref:System.Single>|单精度（32 位）浮点数字。|**单精度**|**float**|**float**|**float32**<br> or<br>**single**|  
 ||<xref:System.Double>|双精度（64 位）浮点数字。|**双精度**|**double**|**double**|**float**<br> or <br> **double**|  
 |逻辑运算|<xref:System.Boolean>|布尔值（真或假）。|**布尔值**|**bool**|**bool**|**bool**|  

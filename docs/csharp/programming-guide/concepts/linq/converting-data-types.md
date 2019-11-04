@@ -2,12 +2,12 @@
 title: 转换数据类型 (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
-ms.openlocfilehash: 9e8b7726b94871a17a4be50a9b24d8b73abcf79c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ddd9407c3b7e25dbfb8fc0bddb5daab7db2e4e53
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594632"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418615"
 ---
 # <a name="converting-data-types-c"></a>转换数据类型 (C#)
 转换方法可更改输入对象的类型。  
@@ -79,5 +79,5 @@ static void Cast()
 - <xref:System.Linq>
 - [标准查询运算符概述 (C#)](./standard-query-operators-overview.md)
 - [from 子句](../../../language-reference/keywords/from-clause.md)
-- [LINQ 查询表达式](../../linq-query-expressions/index.md)
+- [LINQ 查询表达式](../../../linq/index.md)
 - [如何：使用 LINQ 查询 ArrayList (C#)](./how-to-query-an-arraylist-with-linq.md)

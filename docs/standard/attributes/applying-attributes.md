@@ -10,14 +10,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], attributes
 - attributes [.NET Framework], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2a2e34d0544c8105b539d36a4231c6efb4df0ee5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 14cd6fef80ff9ae3a9d78531785edab0da7cc6b9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337690"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130917"
 ---
 # <a name="applying-attributes"></a>应用特性
 使用以下过程将特性应用于代码的元素。  
@@ -34,7 +32,7 @@ ms.locfileid: "59337690"
   
  编译代码时，特性将被发到元数据中，并且通过运行时反射服务可用于公共语言运行时和任何自定义工具或应用程序。  
   
- 按照惯例，所有特性名称都以 Attribute 结尾。 但是，面向运行时的几种语言（如 Visual Basic 和 C#）无需指定特性的全名。 例如，若要初始化 <xref:System.ObsoleteAttribute?displayProperty=nameWithType>，只需将它引用为 Obsolete 即可。  
+ 按照惯例，所有特性名称都以 Attribute 结尾。 但是，面向运行时的几种语言（如 Visual Basic 和 C#）无需指定特性的全名。 例如，若要初始化 <xref:System.ObsoleteAttribute?displayProperty=nameWithType>，只需将它引用为 Obsolete  即可。  
   
 ## <a name="applying-an-attribute-to-a-method"></a>将特性应用于方法  
  以下代码示例显示如何声明 **System.ObsoleteAttribute**（其将代码标记为已过时。） 将字符串 `"Will be removed in next version"` 传递给特性。 当特性描述的代码被调用时，此特性会导致产生编译器警告，显示传递的字符串。  

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 192873aa5069aa4f96a18716afb066c80b223e29
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 30580b3fde5b8a99862896bb7d31c6c4024f97e8
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002440"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198354"
 ---
 ### <a name="floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception"></a>浮点分析操作不再失败或引发 OverflowException
 
@@ -16,7 +16,7 @@ ms.locfileid: "72002440"
 
 从 .NET Core 3.0 开始，分析超出范围的数值字符串时，<xref:System.Double.Parse%2A?displayProperty=nameWithType>、<xref:System.Double.TryParse%2A?displayProperty=nameWithType>、<xref:System.Single.Parse%2A?displayProperty=nameWithType> 和 <xref:System.Single.TryParse%2A?displayProperty=nameWithType> 方法不再失败。 相反，<xref:System.Double> 分析方法对于超过 <xref:System.Double.MaxValue?displayProperty=nameWithType> 的值返回 <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>，对于小于 <xref:System.Double.MinValue?displayProperty=nameWithType> 的值返回 <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>。 同样，<xref:System.Single> 分析方法对于超过 <xref:System.Single.MaxValue?displayProperty=nameWithType> 的值返回 <xref:System.Single.PositiveInfinity?displayProperty=nameWithType>，对于小于 <xref:System.Single.MinValue?displayProperty=nameWithType> 的值返回 <xref:System.Single.NegativeInfinity?displayProperty=nameWithType>。
 
-此更改是为了改进 IEEE 754:2008 的符合性。 
+此更改是为了改进 IEEE 754:2008 的符合性。
 
 #### <a name="version-introduced"></a>引入的版本
 

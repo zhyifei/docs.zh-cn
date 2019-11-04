@@ -6,18 +6,16 @@ helpviewer_keywords:
 - assembly binding, attributes
 - assembly manifest, attributes
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: d0809ec3da5a12abe950e63f9665037323a0ab39
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: fe003a6c74da59c1cb47a0f12a8597143916e320
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991669"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138648"
 ---
 # <a name="set-assembly-attributes"></a>设置程序集属性
 
@@ -90,7 +88,7 @@ ms.locfileid: "70991669"
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|表示程序集配置（如零售或调试）的字符串值。 运行时不使用此规则。|
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|指定引用程序集所用的默认别名的字符串值。 此值会在程序集本身的名称不友好（例如 GUID 值）的情况下提供一个友好名称。 此值还可用于完整程序集名称的缩写。|
 |<xref:System.Reflection.AssemblyDescriptionAttribute>|指定描述程序集性质和用途简短说明的字符串值。|
-|<xref:System.Reflection.AssemblyTitleAttribute>|指定程序集的友好名称的字符串值。 例如，名为 comdlg 的程序集的标题可能是“Microsoft 通用对话框控件”。|
+|<xref:System.Reflection.AssemblyTitleAttribute>|指定程序集的友好名称的字符串值。 例如，名为 comdlg 的程序集的标题可能是“Microsoft 通用对话框控件”  。|
 
 ## <a name="strong-name-attributes"></a>强名称特性
 
@@ -99,10 +97,10 @@ ms.locfileid: "70991669"
 |强名称属性|说明|
 |----------------------------|-----------------|
 |<xref:System.Reflection.AssemblyDelaySignAttribute>|表示正在使用延迟签名的布尔值。|
-|<xref:System.Reflection.AssemblyKeyFileAttribute>|表示文件名称的字符串值，该文件包含公钥（如果使用延迟签名）或同时包含作为参数传递给此特性的构造函数的公钥和私钥。 请注意，文件名与输出文件路径（.exe 或.dll）有关，与源文件路径无关。|
+|<xref:System.Reflection.AssemblyKeyFileAttribute>|表示文件名称的字符串值，该文件包含公钥（如果使用延迟签名）或同时包含作为参数传递给此特性的构造函数的公钥和私钥。 请注意，文件名与输出文件路径（.exe 或.dll）有关，与源文件路径无关   。|
 |<xref:System.Reflection.AssemblyKeyNameAttribute>|表示包含作为参数传递给此特性的构造函数的密钥对的密钥容器。|
 
-以下代码示例显示了使用延迟签名创建具有名为 myKey.snk 的公钥文件的强名称程序集时要应用的属性。
+以下代码示例显示了使用延迟签名创建具有名为 myKey.snk 的公钥文件的强名称程序集时要应用的属性  。
 
 ```cpp
 [assembly:AssemblyKeyFileAttribute("myKey.snk")];

@@ -2,19 +2,19 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: e3015e7185fd52a1161b91c74dee57f694fbeebd
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 51b0e0513ba20bf7aeae461dee6ac864f1d55897
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044719"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417095"
 ---
 # <a name="srmp"></a>SRMP
 本示例演示如何使用 HTTP 上的消息队列 (MSMQ) 来执行事务处理排队通信。  
   
  在排队通信中，客户端使用队列与服务进行通信。 更确切地说，客户端向队列发送消息。 服务从队列接收消息。 因此不必同时运行服务和客户端便可使用队列进行通信。  
   
- MSMQ 启用 HTTP（包括启用 HTTPS）来向队列发送消息。 在此示例中, 我们演示如何使用 Windows Communication Foundation (WCF) 排队通信以及如何通过 HTTP 发送消息。 MSMQ 使用一种称为 SRMP 的协议，此协议是一种用于通过 HTTP 进行通信的基于 SOAP 的协议。  
+ MSMQ 启用 HTTP（包括启用 HTTPS）来向队列发送消息。 在此示例中，我们演示如何使用 Windows Communication Foundation （WCF）排队通信以及如何通过 HTTP 发送消息。 MSMQ 使用一种称为 SRMP 的协议，此协议是一种用于通过 HTTP 进行通信的基于 SOAP 的协议。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
@@ -22,9 +22,9 @@ ms.locfileid: "70044719"
   
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+3. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
   
-4. 在 "**添加/删除 Windows 组件**" 中运行该示例之前, 请确保安装了 MSMQ 并提供 HTTP 支持。 安装 HTTP 支持时，会自动安装 Internet 信息服务 (IIS)，并会在 IIS 中添加对 MSMQ 的协议支持。  
+4. 在 "**添加/删除 Windows 组件**" 中运行该示例之前，请确保安装了 MSMQ 并提供 HTTP 支持。 安装 HTTP 支持时，会自动安装 Internet 信息服务 (IIS)，并会在 IIS 中添加对 MSMQ 的协议支持。  
   
 5. 如果想要确保使用 HTTP 进行通信，则可以启用 MSMQ 以便在加强模式中运行。 这可确保任何消息都不能使用任何非 HTTP 传输到达计算机上承载的任何队列。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "70044719"
   
  运行此示例可生成下面的输出。  
   
-```  
+```console  
 Processing Purchase Order: 556b70be-31ee-4a3b-8df4-ed5e538015a4   
 Customer: somecustomer.com   
 OrderDetails   
@@ -92,6 +92,6 @@ OrderDetails
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\SRMP`  

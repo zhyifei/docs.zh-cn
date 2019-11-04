@@ -6,18 +6,16 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d23a12ff92202ace69cb80ff59d6afcb5d8f8243
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 863fa565f7c107214273912a6d110b7664bffe6b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960376"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131501"
 ---
 # <a name="using-threads-and-threading"></a>使用线程和线程处理
 
-借助 .NET，可以编写同时执行多个操作的应用程序。 可在单独的线程上执行可能妨碍其他操作的操作，这些线程是称为多线程处理或自由线程处理的进程。  
+借助 .NET，可以编写同时执行多个操作的应用程序。 可在单独的线程上执行可能妨碍其他操作的操作，这些线程是称为多线程处理或自由线程处理的进程   。  
   
 使用多线程处理的应用程序可以更快地响应用户输入，因为在单独的线程上执行处理器密集型任务时，用户界面将保持活动状态。 创建可扩展的应用程序时，多线程编程也很有用，因为可以随着负载的增加添加线程。
 
@@ -44,7 +42,7 @@ ms.locfileid: "65960376"
 
 下表列出了某些 <xref:System.Threading.Thread> 属性：  
   
-|Property|说明|  
+|属性|说明|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|如果此线程已启动但尚未正常终止或中止，则返回 `true`。|  
 |<xref:System.Threading.Thread.IsBackground%2A>|获取或设置布尔值，该值指示线程是否为后台线程。 后台线程类似前台线程，但后台线程不会阻止进程停止。 属于某个进程的所有前台线程均停止后，公共语言运行时通过对仍处于活动状态的后台进程调用 <xref:System.Threading.Thread.Abort%2A> 方法来结束进程。 有关详细信息，请参阅[前台和后台线程](foreground-and-background-threads.md)。|  

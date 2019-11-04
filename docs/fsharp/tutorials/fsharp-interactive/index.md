@@ -2,14 +2,14 @@
 title: F# Interactive (fsi.exe) 参考
 description: 了解如何F#使用 Interactive （fsi.exe）在控制台上以交互F#方式运行代码或执行F#脚本。
 ms.date: 05/16/2016
-ms.openlocfilehash: 4e8521677cad5f4e62d2822837818292c55da96d
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 9f4b5c0e7527d29e375265bb31a5de2df098f8e1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002066"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419908"
 ---
-# <a name="interactive-programming-with-f"></a>与 F @ no__t 交互编程-0
+# <a name="interactive-programming-with-f"></a>与 F\# 的交互式编程
 
 > [!NOTE]
 > 本文目前仅介绍适用于 Windows 的体验。  它将被重写。
@@ -25,7 +25,7 @@ F# Interactive (fsi.exe) 用于在控制台以交互方式运行 F# 代码，或
 C:\Program Files (x86)\Microsoft Visual Studio\2019\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
 ```
 
-其中 `sku` @no__t 为-1、`Professional` 或 @no__t 为3。
+其中 `sku` 为 `Community`、`Professional`或 `Enterprise`。
 
 有关可用命令行选项的信息，请参阅 [F# Interactive 选项](../../language-reference/fsharp-interactive-options.md)。
 
@@ -43,10 +43,12 @@ F# Interactive 试图编译代码，如果成功，它将执行代码并打印�
 
 你可以通过调整设置控制 F# Interactive 命令行自变量（选项）。 在“工具”菜单上，选择“选项...”，然后展开“F# 工具”。 可以更改的两种设置是 F# Interactive 选项和“64 位F# Interactive”，只有在 64 位计算机上运行 F# Interactive 时，更改才有意义。 此设置确定是否需要运行 fsi.exe 或 fsianycpu.exe 的专用 64 位版本，它使用计算机体系结构确定是作为 32 位还是 64 位进程来运行。
 
-## <a name="scripting-with-f"></a>用 F @ no__t 编写脚本
+## <a name="scripting-with-f"></a>用 F\# 编写脚本
+
 脚本使用 **.fsx** 或 **.fsscript** 文件扩展名。 可以不编译源代码再运行编译的程序集，而仅运行 **fsi.exe** 并指定 F# 源代码脚本的文件名，F# Interactive 会实时读取并执行代码。
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>交互式、脚本编写和编译环境之间的差异
+
 在 F# Interactive 中编译代码时，无论是以交互方式运行还是直接运行脚本，都会定义 **INTERACTIVE** 符号。 在编译器中编译代码时，将定义 **COMPILED** 符号。 因此，如果编译模式和交互模式下的代码不同，你可以使用预处理器指令进行条件编译以确定使用哪种模式。
 
 当在 F# Interactive 中执行脚本时，某些指令可用，而在编译器中执行时，这些指令却不可用。 下表总结了使用 F# Interactive 时可用的指令。
@@ -87,7 +89,7 @@ printfn "%A" (MyAssembly.myFunction 10 40)
 输出如下所示：
 
 ```console
-Command line arguments: 
+Command line arguments:
 file1.fsx
 test
 90

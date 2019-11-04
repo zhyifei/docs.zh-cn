@@ -1,17 +1,17 @@
 ---
 title: 结果
-description: 了解如何使用F#结果类型可帮助你编写容错的代码。
+description: 了解如何使用F# "结果" 类型来帮助你编写容错代码。
 ms.date: 04/24/2017
-ms.openlocfilehash: 36f60df8a2991c1d318e4921af6c9e89a0156918
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 187aa26ccbaac7e0ec998756377bb7b0489eb1ab
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645325"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424855"
 ---
 # <a name="results"></a>结果
 
-从F#4.1，没有`Result<'T,'TFailure>`可用于编写容错错误代码的可组合的类型。
+从F# 4.1 开始，可以使用 `Result<'T,'TFailure>` 类型来编写可以撰写的错误容错代码。
 
 ## <a name="syntax"></a>语法
 
@@ -20,20 +20,20 @@ ms.locfileid: "65645325"
 [<StructuralEquality; StructuralComparison>]
 [<CompiledName("FSharpResult`2")>]
 [<Struct>]
-type Result<'T,'TError> = 
-    | Ok of ResultValue:'T 
+type Result<'T,'TError> =
+    | Ok of ResultValue:'T
     | Error of ErrorValue:'TError
 ```
 
 ## <a name="remarks"></a>备注
 
-请注意，结果类型是[结构的可区分联合](discriminated-unions.md#struct-discriminated-unions)，这另一项功能在中引入F#4.1。  结构相等性语义在此处适用。
+请注意，结果类型是[结构可区分联合](discriminated-unions.md#struct-discriminated-unions)，这是4.1 中F#引入的另一项功能。  在此处应用结构相等性语义。
 
-`Result`类型通常用在一元错误的处理，这通常称为[铁路面向编程](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html)中F#社区。  下面的简单示例演示了这种方法。
+`Result` 类型通常用于一元错误处理，这在F#社区中通常称为[面向铁路的编程](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html)。  以下简单示例演示了这种方法。
 
 ```fsharp
 // Define a simple type which has fields that can be validated
-type Request = 
+type Request =
     { Name: string
       Email: string }
 
@@ -57,11 +57,11 @@ let validateEmail req =
     | _ -> Ok req
 
 let validateRequest reqResult =
-    reqResult 
+    reqResult
     |> Result.bind validateName
     |> Result.bind validateEmail
 
-let test() = 
+let test() =
     // Now, create a Request and pattern match on the result.
     let req1 = { Name = "Phillip"; Email = "phillip@contoso.biz" }
     let res1 = validateRequest (Ok req1)
@@ -80,7 +80,7 @@ let test() =
 test()
 ```
 
-正如您所看到的它是很容易地链接在一起各种验证函数，如果您强制其全部返回`Result`。  这样，便分解成小的部分是根据你的需要是可组合此类功能。  这样做还具有的增值*强制实施*利用[模式匹配](pattern-matching.md)在一轮的验证结束时，后者又在强制实施更高程度的程序的正确性。
+正如您所看到的，如果强制所有验证函数都返回 `Result`，则可以很容易地将各种验证函数链接在一起。  这使你可以将此类功能分解为小部分，它们可根据你的需要进行组合。  这也增加了在一轮验证的末尾*强制*使用[模式匹配](pattern-matching.md)的值，进而强制实施更高程度的程序正确性。
 
 ## <a name="see-also"></a>请参阅
 

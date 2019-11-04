@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a3e602057bfd2dea15887daee9058b12f26992f2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 12777a5f34b8aadcc80977b8796fc2cd53c626a8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639046"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134255"
 ---
 # <a name="exception-handling-task-parallel-library"></a>异常处理（任务并行库）
 
@@ -40,7 +38,7 @@ ms.locfileid: "65639046"
 如果允许异常向上冒泡回到联接线程，则一个任务也许可以在引发异常后继续处理一些项。
 
 > [!NOTE]
-> 某些情况下，当启用“仅我的代码”后，Visual Studio 会在引发异常的行中断运行并显示一条错误消息，该消息显示“用户代码未处理异常”。 此错误是良性的。 可以按 F5 继续并查看在这些示例中演示的异常处理行为。 若要阻止 Visual Studio 在出现第一个错误时中断运行，只需在“工具”-&gt;“选项”-&gt;“调试”-&gt;“常规”  下取消选中“启用‘仅我的代码’” 复选框即可。
+> 某些情况下，当启用“仅我的代码”后，Visual Studio 会在引发异常的行中断运行并显示一条错误消息，该消息显示“用户代码未处理异常”。 此错误是良性的。 可以按 F5 继续并查看在这些示例中演示的异常处理行为。 若要阻止 Visual Studio 在出现第一个错误时中断运行，只需在“工具”-&gt;“选项”-&gt;“调试”-&gt;“常规”  下取消选中“启用‘仅我的代码’”  复选框即可。
 
 ## <a name="attached-child-tasks-and-nested-aggregateexceptions"></a>附加子任务和嵌套 AggregateExceptions
 

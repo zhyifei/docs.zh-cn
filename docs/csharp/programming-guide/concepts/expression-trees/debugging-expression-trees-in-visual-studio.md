@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中调试表达式树 (C#)
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 2b858597a01f4d7ce460460956d3efcad856531d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 30f538712881e41b4fd0e62d06f74373d755ea40
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319036"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195681"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>在 Visual Studio 中调试表达式树 (C#)
 可以在调试应用程序时分析表达式树的结构和内容。 要快速了解表达式树结构，可以使用 `DebugView` 属性，该属性[使用特殊语法](debugview-syntax.md)表示表达式树。 （请注意，`DebugView` 仅在调试模式下可用。）  
@@ -41,6 +41,6 @@ ms.locfileid: "72319036"
 ## <a name="see-also"></a>请参阅
 
 - [表达式树 (C#)](./index.md)
-- [在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio)
+- [在 Visual Studio 中进行调试](/visualstudio/debugger/debugger-feature-tour)
 - [创建自定义可视化工具](/visualstudio/debugger/create-custom-visualizers-of-data)
 - [`DebugView` 语法](debugview-syntax.md)

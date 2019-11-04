@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 81cf336f94815dd3f2c88995eb34ae03b8220097
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 9588ec73250e8745426f6f6020c8d555a174d627
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179922"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422961"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion（C# 编译器选项）
 
@@ -68,7 +68,7 @@ C# 应用程序引用的元数据不受 -langversion 编译器选项约束  。
 |Version|链接|说明|
 |-------|----|-----------|
 |C# 7.0 和更高版本||当前不可用|
-|C# 6.0|[链接](../language-specification/index.md)|C# 语言规范版本 6 - 非官方草稿：.NET Foundation|
+|C# 6.0|[链接](/dotnet/csharp/language-reference/language-specification/introduction)|C# 语言规范版本 6 - 非官方草稿：.NET Foundation|
 |C# 5.0|[下载 PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)|标准 ECMA-334 第 5 版|
 |C# 3.0|[下载 DOC](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|C# 语言规范版本 3.0：Microsoft Corporation|
 |C# 2.0|[下载 PDF](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%204th%20edition%20June%202006.pdf)|标准 ECMA-334 第 4 版|

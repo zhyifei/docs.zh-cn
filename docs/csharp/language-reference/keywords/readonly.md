@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 6c48806e54f11bce930d03a53b010c337e6658f8
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 30419200cfce785d7fcbbf59650241580a1f0ce4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960856"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454958"
 ---
 # <a name="readonly-c-reference"></a>readonly（C# 参考）
 
@@ -27,13 +27,13 @@ ms.locfileid: "72960856"
   - 由于引用类型包含对其数据的引用，因此属于 `readonly` 引用类型的字段必须始终引用同一对象。 该对象是可变的。 `readonly` 修饰符可防止字段替换为引用类型的其他实例。 但是，修饰符不会阻止通过只读字段修改字段的实例数据。
 
   > [!WARNING]
-  > 包含属于可变引用类型的外部可见只读字段的外部可见类型可能存在安全漏洞，可能会触发警告 [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types)：“不要声明只读可变引用类型。”
+  > 包含属于可变引用类型的外部可见只读字段的外部可见类型可能存在安全漏洞，可能会触发警告 [CA2104](/visualstudio/code-quality/ca2104)：“不要声明只读可变引用类型。”
 
 - 在 [`readonly struct` 定义](#readonly-struct-example)中，`readonly` 指示 `struct` 是不可变的。
 - 在 [`readonly` 成员定义](#readonly-member-examples)中，`readonly` 表示 `struct` 的成员不会改变结构的内部状态。
 - 在 [`ref readonly` 方法返回](#ref-readonly-return-example)中，`readonly` 修饰符指示该方法返回一个引用，且不允许向该引用写入内容。
 
-在 C# 7.2 中添加了 `readonly sturct` 和 `ref readonly` 上下文。 在 C# 8.0 中添加了 `readonly` 结构成员
+在 C# 7.2 中添加了 `readonly struct` 和 `ref readonly` 上下文。 在 C# 8.0 中添加了 `readonly` 结构成员
 
 ## <a name="readonly-field-example"></a>Readonly 字段示例
 
@@ -161,6 +161,6 @@ public string Message { readonly get; set; }
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](index.md)
-- [修饰符](modifiers.md)
+- [修饰符](index.md)
 - [const](const.md)
 - [字段](../../programming-guide/classes-and-structs/fields.md)

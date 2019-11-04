@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, waiting with wait handles
 ms.assetid: 6e2aa49b-fc84-4bcf-962b-17db98b7edcb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 67cf434737257a942e094fcb38ed18d597645d46
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 43ca52359a48d3ac5a27933fcc8ce56c07159cac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913333"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137979"
 ---
 # <a name="how-to-listen-for-cancellation-requests-that-have-wait-handles"></a>如何：侦听具有等待句柄的取消请求
 如果方法在等待事件收到信号时受阻止，既无法检查取消令牌的值，也无法及时响应。 第一个示例展示了如何在使用 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 等不本机支持统一取消框架的事件时解决此问题。 第二个示例展示了一种更简化的方法，即使用确实支持统一取消的 <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>。  

@@ -3,12 +3,12 @@ title: dotnet new 自定义模板
 description: 了解任意类型 .NET 项目或文件的自定义模板。
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: 7a599973a1914f0df187557e48718263f16546f3
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 8e1ac4ca21a8a90ad0f7c9bd3dd11281eb4a6e02
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117808"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420880"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 自定义模板
 
@@ -18,7 +18,7 @@ ms.locfileid: "71117808"
 
 模板引擎是开放源代码，在线代码存储库位于 GitHub 上的 [dotnet/templating](https://github.com/dotnet/templating/)。 有关模板示例，请访问 [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) 存储库。 GitHub 上的 [dotnet new 可用模板](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)收录了更多模板，包括第三方模板。 若要详细了解如何创建和使用自定义模板，请参阅[如何创建自己的 dotnet new 模板](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)和 [dotnet/templating GitHub 存储库 Wiki](https://github.com/dotnet/templating/wiki)。
 
-若要按照演示步骤操作并创建模板，请参阅[创建 dotnet new 自定义模板](../tutorials/create-custom-template.md)教程。
+若要按照演示步骤操作并创建模板，请参阅[创建 dotnet new 自定义模板](../tutorials/cli-templates-create-item-template.md)教程。
 
 ### <a name="net-default-templates"></a>.NET 默认模板
 
@@ -250,7 +250,7 @@ dotnet new <TEMPLATE>
 
 ## <a name="see-also"></a>请参阅
 
-- [创建 dotnet new 自定义模板（教程）](../tutorials/create-custom-template.md)
+- [创建 dotnet new 自定义模板（教程）](../tutorials/cli-templates-create-item-template.md)
 - [dotnet/templating GitHub 存储库 Wiki](https://github.com/dotnet/templating/wiki)
 - [dotnet/dotnet-template-samples GitHub 存储库](https://github.com/dotnet/dotnet-template-samples)
 - [如何创建自己的 dotnet new 模板](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)

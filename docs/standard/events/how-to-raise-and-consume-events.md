@@ -1,5 +1,5 @@
 ---
-title: 如何：引发和使用事件
+title: 如何：引发事件和使用事件
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - raising events
 - events [.NET Framework], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aa933e0fc589d0dbfec741e9db7fb11222cfdf38
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 256b5ae9ac2145e339136985872dfa5423aca730
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44193208"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131588"
 ---
-# <a name="how-to-raise-and-consume-events"></a>如何：引发和使用事件
+# <a name="how-to-raise-and-consume-events"></a>如何：引发事件和使用事件
 本主题中的示例演示如何处理事件。 它们包含 <xref:System.EventHandler>、<xref:System.EventHandler%601> 委托和自定义委托的示例，用于说明包含数据和不包含数据的事件。  
   
  这些示例使用[事件](../../../docs/standard/events/index.md)一文中介绍的概念。  

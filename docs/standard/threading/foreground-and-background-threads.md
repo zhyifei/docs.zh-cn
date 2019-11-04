@@ -8,14 +8,12 @@ helpviewer_keywords:
 - foreground threads
 - background threads
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8dbad5da42f5ed4e03751534a3a183615a9757cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9e93f07b3b84264373db0317919b6ee519c8127c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960022"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138053"
 ---
 # <a name="foreground-and-background-threads"></a>前台和后台线程
 托管线程可以是后台线程，也可以是前台线程。 后台线程和前台线程几乎完全相同，只有一处不同，即后台线程不会确保托管执行环境一直运行。 一旦托管进程（其中 .exe 文件为托管程序集）中的所有前台线程都停止，系统会停止并关闭所有后台线程。  

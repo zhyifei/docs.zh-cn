@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, preventing attachments
 ms.assetid: c0fb85d4-9e80-4905-9f65-29acc54201c4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 55b9c6c7175d8c7c33d8bfa03330c8e4b8816531
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 265b6d06f17a1dfbee3f009feff1ee1645e62a46
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592023"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139263"
 ---
 # <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>如何：防止子任务附加到父任务
 本文档演示如何阻止子任务附加到父任务。 在调用由第三方编写的也使用任务的组件时，阻止子任务附加到其父级是有用的。 例如，使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 选项创建 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 对象的第三方组件，如果长时间运行或引发未经处理的异常，可能会导致代码中出现问题。  

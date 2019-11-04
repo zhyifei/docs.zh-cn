@@ -39,14 +39,16 @@
           href: tutorials/object-detection-onnx.md
         - name: 使用 TensorFlow 对情绪分类（文本分类）
           href: tutorials/text-classification-tf.md
-    - name: 工具
+    - name: 模型生成器和 CLI
       items:
-        - name: 使用模型生成器预测价格
+        - name: 预测价格（模型生成器和回归）
           href: tutorials/predict-prices-with-model-builder.md
         - name: 使用 ML.NET CLI 分析情绪
           href: tutorials/mlnet-cli.md
-        - name: 使用模型生成器和 Razor Pages 分析情绪
+        - name: 分析 Razor Pages 中的情绪（模型生成器和二进制分类器）
           href: tutorials/sentiment-analysis-model-builder.md
+        - name: 对运行状况冲突分类（模型生成器和多类别分类）
+          href: tutorials/health-violation-classification-model-builder.md
     - name: Infer.NET
       items:
         - name: 使用 Infer.NET 进行概率编程

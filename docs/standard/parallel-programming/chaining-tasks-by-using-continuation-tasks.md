@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1f88308dcea250c02d9c6cd7f326570f8bc0133c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bf8a1c028b7b987cb9a7340597087d799dfd4321
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630117"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123173"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>使用延续任务来链接任务
 在异步编程中，一个异步操作在完成时调用另一个操作并将数据传递到其中的情况较常见。 传统上，延续性是通过使用回调方法完成的。 在任务并行库中， *延续任务*提供了同样的功能。 延续任务（也简称为“延续”）是一个异步任务，由另一个任务（称为 *前面的任务*）在完成时调用。  
@@ -123,7 +121,7 @@ ms.locfileid: "64630117"
   
  将使用 [异步编程模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) 的现有代码转换为使用 TPL 时，延续状态非常有用。 在 APM 中，通常在 **Begin**_Method_ 方法中提供对象状态，并在之后通过使用 <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> 属性访问该状态。 通过使用 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 方法，你可在将使用 APM 的代码转换为使用 TPL 时保留此状态。  
   
- 在 Visual Studio 调试器中处理 <xref:System.Threading.Tasks.Task> 对象时，延续状态也非常有用。 例如，在“并行任务”  窗口中，“任务”  列显示每个任务的状态对象的字符串表示形式。 有关“并行任务”窗口的详细信息，请参阅[使用并行任务窗口](/visualstudio/debugger/using-the-tasks-window)。  
+ 在 Visual Studio 调试器中处理 <xref:System.Threading.Tasks.Task> 对象时，延续状态也非常有用。 例如，在“并行任务”  窗口中，“任务”  列显示每个任务的状态对象的字符串表示形式。 有关“并行任务”  窗口的详细信息，请参阅[使用并行任务窗口](/visualstudio/debugger/using-the-tasks-window)。  
   
  下面的示例演示如何使用延续状态。 它将创建一个延续任务链。 每个任务都将为 <xref:System.DateTime> 方法的 `state` 参数提供当前时间，即一个 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 对象。 每个 <xref:System.DateTime> 对象都表示创建延续任务的时间。 每个任务都将生成第二个 <xref:System.DateTime> 对象作为其结果，该对象表示任务的完成时间。 所有任务都完成后，本示例将显示每个延续任务的创建时间和完成时间。  
   

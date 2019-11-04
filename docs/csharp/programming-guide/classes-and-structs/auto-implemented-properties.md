@@ -6,12 +6,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: aa55fa97-ccec-431f-b5e9-5ac789fd32b7
-ms.openlocfilehash: 44f3beb9de8c9d339c42db26bb9c510998abc7d7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 212fdde3a5ecc8b0a43e33bec3537bd57b1387e9
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597135"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419405"
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>自动实现的属性（C# 编程指南）
 在 C# 3.0 及更高版本，当属性访问器中不需要任何其他逻辑时，自动实现的属性会使属性声明更加简洁。 它们还允许客户端代码创建对象。 当你声明以下示例中所示的属性时，编译器将创建仅可以通过该属性的 `get` 和 `set` 访问器访问的专用、匿名支持字段。  
@@ -32,4 +32,4 @@ public string FirstName { get; set; } = "Jane";
 ## <a name="see-also"></a>请参阅
 
 - [属性](./properties.md)
-- [修饰符](../../language-reference/keywords/modifiers.md)
+- [修饰符](/dotnet/csharp/language-reference/keywords)

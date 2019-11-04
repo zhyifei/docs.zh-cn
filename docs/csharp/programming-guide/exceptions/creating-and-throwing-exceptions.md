@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 605a28f8f804c11a9a6636c7a17ec5782cc5a429
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: dfc852722531c06f986f54221ad094b13496561f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590312"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417939"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>创建和引发异常（C# 编程指南）
 异常用于指示在运行程序时发生了错误。 此时将创建一个描述错误的异常对象，然后使用 [throw](../../language-reference/keywords/throw.md) 关键字引发  。 然后，运行时搜索最兼容的异常处理程序。  
@@ -64,7 +64,7 @@ ms.locfileid: "69590312"
   
 ## <a name="c-language-specification"></a>C# 语言规范  
 
-有关详细信息，请参阅 [C# 语言规范](../../language-reference/language-specification/index.md)中的[异常](~/_csharplang/spec/exceptions.md)和 [throw 语句](~/_csharplang/spec/statements.md#the-throw-statement)。 该语言规范是 C# 语法和用法的权威资料。
+有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的[异常](~/_csharplang/spec/exceptions.md)和 [throw 语句](~/_csharplang/spec/statements.md#the-throw-statement)。 该语言规范是 C# 语法和用法的权威资料。
   
 ## <a name="see-also"></a>请参阅
 

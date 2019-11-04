@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 177617569a93e09f4c2a05acc21dce362edd58bc
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 7b5ae84d02b83a10a4b9e002fc2ed4ee0833b84c
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394188"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198365"
 ---
 ### <a name="http-defaulthttpcontext-extensibility-removed"></a>HTTP：已删除 DefaultHttpContext 扩展性
 
 作为 ASP.NET Core 3.0 性能改进的一部分，已删除 `DefaultHttpContext` 的扩展性。 此类现在为 `sealed`。 有关详细信息，请参阅 [aspnet/AspNetCore#6504](https://github.com/aspnet/AspNetCore/pull/6504)。
 
-如果单元测试使用 `Mock<DefaultHttpContext>`，请改用 `Mock<HttpContext>`。 
+如果单元测试使用 `Mock<DefaultHttpContext>`，请改用 `Mock<HttpContext>`。
 
 有关讨论，请参阅 [aspnet/AspNetCore#6534](https://github.com/aspnet/AspNetCore/issues/6534)。
 
@@ -32,7 +32,7 @@ ms.locfileid: "72394188"
 
 #### <a name="recommended-action"></a>建议的操作
 
-如果在单元测试中使用 `Mock<DefaultHttpContext>`，请改为开始使用 `Mock<HttpContext>`。 
+如果在单元测试中使用 `Mock<DefaultHttpContext>`，请改为开始使用 `Mock<HttpContext>`。
 
 #### <a name="category"></a>类别
 

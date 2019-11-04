@@ -12,14 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 052f6a61fb1b03b060e22bbff2d8124ac3a1c0c0
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: f61ad49753da9d96e733ea667095722ddc238fe1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377657"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121103"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>基于任务的异步模式 (TAP)
 基于任务的异步模式 (TAP) 是基于 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 命名空间中的 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks?displayProperty=nameWithType> 类型，这些类型用于表示任意异步操作。 TAP 是用于新开发的建议的异步设计模式。  

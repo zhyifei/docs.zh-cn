@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ab7c097f6b65d539117e5a6ef38eb67b24695a32
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: c861d61cbbe8075db4b17a702e863336ea621f2b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393970"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198357"
 ---
 ### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP：所有服务器均禁用同步 IO
 
@@ -53,7 +53,7 @@ if (syncIOFeature != null)
 
 #### <a name="new-behavior"></a>新行为
 
-默认情况下，不允许使用这些同步 API： 
+默认情况下，不允许使用这些同步 API：
 
 错误应如下所示：
 

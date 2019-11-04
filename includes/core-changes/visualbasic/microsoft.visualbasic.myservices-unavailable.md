@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 75ba041a93b71377928591967e1554742e1d17e1
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 58e65bae1593f23945a971b896a1db4a929b4587
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72237295"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198351"
 ---
 ### <a name="types-in-microsoftvisualbasicmyservices-namespace-not-available"></a>Microsoft.VisualBasic.MyServices 命名空间中的类型不可用
 
@@ -19,14 +19,14 @@ ms.locfileid: "72237295"
 <xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> 中的类型之前在某些 .NET Core 3.0 预览版本中可用。 自 NET Core 3.0 预览版 9 起，它们不再可用。
 
 已删除这些类型，以避免在后续版本中出现不必要的程序集依赖项或中断性变更。
- 
+
 #### <a name="recommended-action"></a>建议的操作
 
 如果你的代码依赖于对 Microsoft.VisualBasic.MyServices 类型及其成员的使用，可使用 .NET 类库中的相应类型和成员  。 下面是 Microsoft.VisualBasic.MyServices 到其等效 .NET 类库类型的映射  ：
 
 |Microsoft.VisualBasic.MyServices 类型|.NET 类库类型|
 |--|--|
-|<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>|<xref:System.Windows.Clipboard?displayProperty=nameWithType> 用于 WPF 应用程序，<xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> 用于 Windows 窗体应用程序| 
+|<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>|<xref:System.Windows.Clipboard?displayProperty=nameWithType> 用于 WPF 应用程序，<xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> 用于 Windows 窗体应用程序|
 |<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy>|<xref:System.IO> 命名空间中的类型|
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>|<xref:Microsoft.Win32> 命名空间中与注册表相关的类型|
 |<xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy>|<xref:System.Environment.GetFolderPath%2A?displayProperty=nameWithType>|

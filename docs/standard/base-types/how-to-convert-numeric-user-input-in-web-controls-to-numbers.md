@@ -13,14 +13,12 @@ helpviewer_keywords:
 - converting numeric user input to number
 - numbers [.NET Framework], converting numeric user input to number
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5af942b5e7576c13ff7be8d11c0009fd0c4f7462
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 78ba284ad2e75b39c0fb1001b0f65b48c519dbb5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882474"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140108"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>如何：将用户在 Web 控件中输入的数值转换成数字
 由于世界各地的人都可以查看网页，因此用户能够在 <xref:System.Web.UI.WebControls.TextBox> 控件中以几乎无限种格式输入数字数据。 所以，请务必确定网页用户的区域设置和区域性。 分析用户输入后，可以应用用户的区域设置和区域性定义的格式设置约定。  
@@ -53,7 +51,7 @@ ms.locfileid: "65882474"
   
  从 Internet Explorer 提交的 HTTP 请求中检索内容时，<xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 数组按用户首选项顺序进行填充。 数组中的第一个元素包含用户的主要区域性/区域名称。 如果数组包含其他任何项，Internet Explorer 会向它们随意分配质量说明符（通过分号与区域性名称隔开）。 例如，fr-FR 区域性条目可能会采用 `fr-FR;q=0.7` 格式。  
   
- 此示例调用 `useUserOverride` 参数设置为 `false` 的 <xref:System.Globalization.CultureInfo.%23ctor%2A> 构造函数，以新建 <xref:System.Globalization.CultureInfo> 对象。 这样可确保在区域性名称是服务器上的默认区域性名称时，类构造函数新建的 <xref:System.Globalization.CultureInfo> 对象包含区域性默认设置，并不反映使用服务器的“区域和语言选项”应用重写的任何设置。 服务器上任何已重写设置的值既不太可能存在于用户系统中，也不太可能反映在用户输入中。  
+ 此示例调用 `useUserOverride` 参数设置为 `false` 的 <xref:System.Globalization.CultureInfo.%23ctor%2A> 构造函数，以新建 <xref:System.Globalization.CultureInfo> 对象。 这样可确保在区域性名称是服务器上的默认区域性名称时，类构造函数新建的 <xref:System.Globalization.CultureInfo> 对象包含区域性默认设置，并不反映使用服务器的“区域和语言选项”  应用重写的任何设置。 服务器上任何已重写设置的值既不太可能存在于用户系统中，也不太可能反映在用户输入中。  
   
  代码可以调用用户输入将转换为的数字类型的 `Parse` 或 `TryParse` 方法。 一个分析操作可能需要重复调用分析方法。 因此，`TryParse` 方法更好，因为如果分析操作失败，它可以返回 `false`。 相比之下，如果在 Web 应用中处理 `Parse` 方法可能会重复抛出的异常，成本可能会非常高。  
   

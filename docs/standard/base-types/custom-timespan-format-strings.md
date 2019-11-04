@@ -13,14 +13,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 14fbcbbd2e4042fa4f25b3c8993cf47fefd95052
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f38ea3a1e2d687044f862e5d6c0a78c6c12965d6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645000"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126557"
 ---
 # <a name="custom-timespan-format-strings"></a>自定义 TimeSpan 格式字符串
 
@@ -67,7 +65,7 @@ ms.locfileid: "65645000"
 |“FFFFF”|时间间隔中的十万分之几秒。 不包含任何小数尾随零。<br /><br /> 更多信息：[“FFFFF”自定义格式说明符](#F5_Specifier)。|`TimeSpan.Parse("00:00:06.329179")`：<br /><br /> `FFFFF`：32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`：<br /><br /> `ss\.FFFFF`：03.1|
 |“FFFFFF”|时间间隔中的百万分之几秒。 不显示任何小数尾随零。<br /><br /> 更多信息：[“FFFFFF”自定义格式说明符](#F6_Specifier)。|`TimeSpan.Parse("00:00:06.3291791")`：<br /><br /> `FFFFFF`：329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`：<br /><br /> `ss\.FFFFFF`：03.1|
 |“FFFFFFF”|时间间隔中的千万分之几秒。 不显示任何小数尾随零或七个零。<br /><br /> 更多信息：[“FFFFFFF”自定义格式说明符](#F7_Specifier)。|`TimeSpan.Parse("00:00:06.3291791")`：<br /><br /> `FFFFFF`：3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`：<br /><br /> `ss\.FFFFFF`：03.19|
-|'string'|文本字符串分隔符。<br /><br /> 更多信息：[其他字符](#other-characters)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
+|'string  '|文本字符串分隔符。<br /><br /> 更多信息：[其他字符](#other-characters)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
 |&#92;|转义字符。<br /><br /> 更多信息：[其他字符](#other-characters)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 |任何其他字符|任何其他未转义字符会解释为自定义格式说明符。<br /><br /> 详细信息：[其他字符](#other-characters)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 

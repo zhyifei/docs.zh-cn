@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - PLINQ, overview
 ms.assetid: 3d4d0cd3-bde4-490b-99e7-f4e41be96455
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2c438170ec48f40e59f8710d4e3820d6e915bed5
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 1ea880c6403a5fc8b26ba67fe21dfce79c4683db
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903821"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140034"
 ---
 # <a name="parallel-linq-plinq"></a>并行 LINQ (PLINQ)
 并行 LINQ (PLINQ) 是 LINQ to Objects 的并行实现。 PLINQ 将整套 LINQ 标准查询运算符实现为 <xref:System.Linq> 命名空间的扩展方法，并提供适用于并行操作的其他运算符。 PLINQ 将 LINQ 语法的简洁和可靠性与并行编程的强大功能结合在一起。 就像面向任务并行库的代码一样，PLINQ 查询会根据主计算机的能力按比例调整并发程度。  

@@ -6,23 +6,23 @@ helpviewer_keywords:
 - data binding [WPF], enumeration
 - enumeration [WPF]
 ms.assetid: b9091eba-1119-424e-868b-d1a4168b3732
-ms.openlocfilehash: 5026261366d6abde82790f05780d8ba2c29c4a49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93f33e497fd7acb81c55f86bf38737d4e7d79bf2
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021006"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454438"
 ---
 # <a name="how-to-bind-to-an-enumeration"></a>如何：绑定到枚举
-此示例演示如何将绑定到通过绑定到枚举的 GetValues 方法的枚举。  
+此示例演示如何通过绑定到枚举的 GetValues 方法绑定到枚举。  
   
 ## <a name="example"></a>示例  
- 在下面的示例中，<xref:System.Windows.Controls.ListBox> 通过数据绑定来显示 <xref:System.Windows.HorizontalAlignment> 的枚举值列表。 <xref:System.Windows.Controls.ListBox> 和 <xref:System.Windows.Controls.Button> 已进行绑定，目的是使你可以通过选择 <xref:System.Windows.Controls.ListBox> 中的值来更改 <xref:System.Windows.Controls.Button> 的 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 属性值。  
+ 在下面的示例中，<xref:System.Windows.Controls.ListBox> 通过数据绑定显示 <xref:System.Windows.HorizontalAlignment> 枚举值的列表。 绑定 <xref:System.Windows.Controls.ListBox> 和 <xref:System.Windows.Controls.Button>，以便您可以通过在 <xref:System.Windows.Controls.ListBox>中选择一个值来更改 <xref:System.Windows.Controls.Button> 的 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 属性值。  
   
  [!code-xaml[BindToEnum#BindToEnum](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToEnum/CS/Window1.xaml#bindtoenum)]  
   
 ## <a name="see-also"></a>请参阅
 
 - [绑定到方法](how-to-bind-to-a-method.md)
-- [数据绑定概述](data-binding-overview.md)
+- [数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)
 - [帮助主题](data-binding-how-to-topics.md)

@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ffac3df82268399aa35ff494e462e2b23c3894b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14f4f1402f564d38bb508e893521a3951c1509f4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610794"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139712"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>如何：编写具有线程局部变量的 Parallel.For 循环
 此示例演示如何使用线程本地变量来存储和检索由 <xref:System.Threading.Tasks.Parallel.For%2A> 循环创建的每个单独任务中的状态。 通过使用线程本地数据，你可以避免将大量的访问同步为共享状态的开销。 在任务的所有迭代完成之前，你将计算和存储值，而不是写入每个迭代上的共享资源。 然后，你可以将最终结果一次性写入共享资源，或将其传递到另一个方法。  

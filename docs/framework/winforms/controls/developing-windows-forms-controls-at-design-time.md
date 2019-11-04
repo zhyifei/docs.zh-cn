@@ -9,24 +9,24 @@ helpviewer_keywords:
 - user controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1eebca72b8c564e6d846eba69b6b59139754738e
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: f6afb13a01075d3aa2d101100a0c3bfe31c6ee29
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015980"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460078"
 ---
 # <a name="develop-windows-forms-controls-at-design-time"></a>在设计时开发 Windows 窗体控件
 
 .NET Framework 为控件创作者提供了丰富的控件创作技术。 作者不再局限于设计作为现有控件集合的复合控件。 通过继承，可根据现有复合控件或现有 Windows 窗体控件创建自己的控件。 还可以自己设计实现自定义绘制的控件。 这些选项对可视化界面的设计和功能赋予了很大的灵活性。 若要利用这些功能，应熟悉基于对象的编程概念。
 
 > [!NOTE]
-> 无需透彻地理解继承, 但你可能会发现, 引用[继承基础知识 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)是非常有用的。
+> 无需透彻地理解继承，但你可能会发现，引用[继承基础知识（Visual Basic）](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)是非常有用的。
 
-如果要创建在 Web 窗体上使用的自定义控件，请参阅[开发自定义 ASP.NET 服务器控件](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100))。
+如果要创建在 Web 窗体上使用的自定义控件，请参阅[开发自定义 ASP.NET 服务器控件](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).。
 
 ## <a name="in-this-section"></a>本节内容
 
@@ -39,16 +39,16 @@ ms.locfileid: "70015980"
 [演练：使用 Windows 窗体控件上的智能标记执行常见任务](performing-common-tasks-using-smart-tags-on-wf-controls.md)\
 演示如何在 Windows 窗体控件上使用智能标记功能。
 
-[演练：用 DesignerSerializationVisibilityAttribute 序列化标准类型的集合](serializing-collections-designerserializationvisibilityattribute.md)\
-演示如何使用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType>特性序列化集合。
+[演练：用 DesignerSerializationVisibilityAttribute\ 序列化标准类型的集合](serializing-collections-designerserializationvisibilityattribute.md)
+演示如何使用 <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType> 特性序列化集合。
 
-[演练：在设计时调试自定义 Windows 窗体控件](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)\
+[演练：设计时调试自定义 Windows 窗体控件](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)\
 演示如何调试 Windows 窗体控件的设计时行为。
 
 [演练：创建利用 Visual Studio 设计时功能的 Windows 窗体控件](creating-a-wf-control-design-time-features.md)\
 演示如何将复合控件紧密集成到设计环境中。
 
-[如何：Windows 窗体的创作控件](how-to-author-controls-for-windows-forms.md)\
+[如何：创作 Windows 窗体的控件](how-to-author-controls-for-windows-forms.md)\
 概述实现 Windows 窗体控件的注意事项。
 
 [如何：创作复合控件](how-to-author-composite-controls.md)\
@@ -58,19 +58,19 @@ ms.locfileid: "70015980"
 概述复合控件的创建过程。
 
 [如何：从现有 Windows 窗体控件继承](how-to-inherit-from-existing-windows-forms-controls.md)\
-演示如何通过从<xref:System.Windows.Forms.Button> control 类继承来创建扩展控件。
+演示如何通过从 <xref:System.Windows.Forms.Button> 控件类继承来创建扩展控件。
 
 [如何：从 Control 类继承](how-to-inherit-from-the-control-class.md)\
 概述如何创建扩展的控件。
 
 [如何：在设计时将控件与窗体边缘对齐](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)\
-演示如何使用<xref:System.Windows.Forms.Control.Dock%2A>属性将控件与它所占有窗体的边缘对齐。
+演示如何使用 <xref:System.Windows.Forms.Control.Dock%2A> 属性将控件与它所占有窗体的边缘对齐。
 
-[如何：在 "选择工具箱项" 对话框中显示控件](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)\
+[如何：在“选择工具箱项”对话框中显示控件](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)\
 演示安装控件以将其显示在“自定义工具箱”对话框中的过程。
 
 [如何：为控件提供工具箱位图](how-to-provide-a-toolbox-bitmap-for-a-control.md)\
-演示如何使用在<xref:System.Drawing.ToolboxBitmapAttribute> **工具箱**中的自定义控件旁边显示一个图标。
+演示如何使用 <xref:System.Drawing.ToolboxBitmapAttribute> 在**工具箱**中的自定义控件旁边显示一个图标。
 
 [如何：测试 UserControl 的运行时行为](how-to-test-the-run-time-behavior-of-a-usercontrol.md)\
 演示如何使用 **UserControl 测试容器**来测试组合控件的行为。
@@ -95,5 +95,5 @@ ms.locfileid: "70015980"
 [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md)\
 介绍公共语言运行时，它旨在简化组件的创建和使用。 这种简化的一个重要方面是提高了采用不同编程语言编写的组件间的互操作性。 通过公共语言规范 (CLS) 可创建使用多个编程语言的工具和组件。
 
-[演练：用自定义组件自动填充工具箱](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)\
+[演练：使用自定义组件自动填充工具箱](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)\
 描述如何在“自定义工具箱”对话框中显示组件或控件。

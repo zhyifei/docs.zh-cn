@@ -5,12 +5,12 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.topic: overview
-ms.openlocfilehash: 0388bd1fa29ce1caad93c917503dac9eed8974e1
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f6b5fc1f92171b61dcab162b782ca7212c602d76
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "72303664"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416666"
 ---
 # <a name="dependency-loading-in-net-core"></a>.NET Core 中的依赖项加载
 
@@ -39,4 +39,4 @@ ms.locfileid: "72303664"
 
 ## <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>如何在 .NET Core 中使用和调试程序集可卸载性
 
-[如何在 .NET Core 中使用和调试程序集可卸载性](../../standard/assembly/unloadability-howto.md)一文是逐步骤教程。 其中显示了如何加载 .NET Core 应用程序、执行以及将其卸载。 该文章还提供了调试提示。
+[如何在 .NET Core 中使用和调试程序集可卸载性](../../standard/assembly/unloadability.md)一文是逐步骤教程。 其中显示了如何加载 .NET Core 应用程序、执行以及将其卸载。 该文章还提供了调试提示。

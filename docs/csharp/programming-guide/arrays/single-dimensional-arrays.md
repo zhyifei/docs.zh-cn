@@ -6,12 +6,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 17c384ec327d4a80ed614dce6254baa5bfb2e960
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5559acd162b26a94b009ec21691d1501c90db290
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597311"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419527"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>一维数组（C# 编程指南）
 
@@ -55,7 +55,7 @@ ms.locfileid: "69597311"
   
  此语句的结果取决于 `SomeType` 是值类型还是引用类型。 如果它是值类型，该语句将创建一个 10 个元素的数组，其中每个元素的类型都为 `SomeType`。 如果 `SomeType` 是引用类型，该语句将创建一个 10 个元素的数组，其中每个元素都将被初始化为空引用。  
   
- 有关值类型和引用类型的详细信息，请参阅[类型](../../language-reference/keywords/types.md)。  
+ 有关值类型和引用类型的详细信息，请参阅[类型](/dotnet/csharp/language-reference/keywords)。  
   
 ## <a name="see-also"></a>请参阅
 

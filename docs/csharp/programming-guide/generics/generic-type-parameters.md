@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C#], type parameters
 - type parameters [C#]
 ms.assetid: a03b0ab2-0606-4b41-b7bf-e64d5bb4d18f
-ms.openlocfilehash: 27cd89c8e82036bf6353030b4f235c2ebe738e6d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 992b71fa2afa6b511d09c69ade26e3b5bc13acd2
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589683"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195475"
 ---
 # <a name="generic-type-parameters-c-programming-guide"></a>泛型类型参数 -（C# 编程指南）
 
@@ -37,7 +37,7 @@ ms.locfileid: "69589683"
   
 - 请考虑在参数名称中指示出类型参数的约束  。 例如，约束为 `ISession` 的参数可命名为 `TSession`。
 
-可以使用代码分析规则 [CA1715](/visualstudio/code-quality/ca1715-identifiers-should-have-correct-prefix) 确保恰当地命名类型参数。
+可以使用代码分析规则 [CA1715](/visualstudio/code-quality/ca1715) 确保恰当地命名类型参数。
   
 ## <a name="see-also"></a>请参阅
 

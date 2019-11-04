@@ -2,12 +2,12 @@
 title: LINQ to Objects (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: 9e20b2c7278787671c7a27646b7cbaac78b57d5f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8c0eb71fffdd29d9599d74c789a66ec7caf1faeb
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591866"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418174"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
 术语“LINQ to Objects”指直接将 LINQ 查询与任何 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 集合一起使用，而不使用中间 LINQ 提供程序或 API，例如 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) 或 [LINQ to XML](./linq-to-xml-overview.md)。 可以使用 LINQ 来查询任何可枚举的集合，例如 <xref:System.Collections.Generic.List%601>、<xref:System.Array> 或 <xref:System.Collections.Generic.Dictionary%602>。 该集合可以是用户定义的集合，也可以是由 .NET Framework API 返回的集合。  
@@ -30,7 +30,7 @@ ms.locfileid: "69591866"
  [LINQ 和字符串 (C#)](./linq-and-strings.md)  
  阐释如何使用 LINQ 来查询和转换字符串和字符串集合。 还包括指向演示这些原则的主题的链接。  
   
- [LINQ 和反射 (C#)](./linq-and-reflection.md)  
+ [LINQ 和反射 (C#)](how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
  指向演示 LINQ 如何使用反射的示例的链接。  
   
  [LINQ 和文件目录 (C#)](./linq-and-file-directories.md)  

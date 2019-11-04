@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: a4bf8cff59ffe01b7465e227c0b1d1e7d93f16e7
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8344fdedcff34f102b73f977b688abc15563bd4c
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394412"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198366"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>共享框架：从 Microsoft.AspNetCore.App 中删除了程序集
 
-从 ASP.NET Core 3.0 开始，ASP.NET Core 共享框架 (`Microsoft.AspNetCore.App`) 只包含 Microsoft 完全开发、支持和可服务的第一方程序集。 
+从 ASP.NET Core 3.0 开始，ASP.NET Core 共享框架 (`Microsoft.AspNetCore.App`) 只包含 Microsoft 完全开发、支持和可服务的第一方程序集。
 
 #### <a name="change-description"></a>更改描述
 

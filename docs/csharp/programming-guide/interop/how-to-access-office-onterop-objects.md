@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: f0b763ad6b65c74b8c406fe006ef4036e70a99d4
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: b6e45858b64ea1bf87ca0e73001a5cf07ddfd58b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523562"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417706"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>如何：使用 Visual C# 功能访问 Office 互操作对象（C# 编程指南）
 
@@ -176,7 +176,7 @@ Visual C# 具有一些功能，可简化对 Office API 对象的访问。 这些
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Type.Missing?displayProperty=nameWithType>
-- [dynamic](../../language-reference/keywords/dynamic.md)
+- [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [使用类型 dynamic](../types/using-type-dynamic.md)
 - [命名参数和可选参数](../classes-and-structs/named-and-optional-arguments.md)
 - [如何：在 Office 编程中使用命名参数和可选参数](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
