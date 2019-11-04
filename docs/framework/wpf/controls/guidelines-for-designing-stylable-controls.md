@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: a5a91d6a1f046b31ff26e769e9fcc1c7516904c8
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0fbb515afbeac05168ced6f0a99f50eb29a5c848
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662606"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459659"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>可样式化控件的设计准则
 
@@ -30,15 +30,15 @@ ms.locfileid: "67662606"
 
 - 数据模板。
 
-有关样式设置和模板化简介，请参阅[样式设置和模板化](styling-and-templating.md)。
+有关样式设置和模板化简介，请参阅[样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)。
 
 <a name="Before_You_Start__Understanding_Your_Control"></a>
 
-## <a name="before-you-start-understanding-your-control"></a>在开始之前：了解您的控件
+## <a name="before-you-start-understanding-your-control"></a>准备工作：了解控件
 
 在开始阅读这些准则之前，请务必了解并定义了控件的常见用法。 样式设置公开一组通常不受约束的可能性。 旨在由许多开发人员在许多应用程序中广泛使用的控件面临着如下挑战：可以使用样式设置对控件的可视化外观进行广泛更改。 实际上，带样式的控件甚至可能并非控件作者的本意。 由于样式设置在本质上可以提供无限的灵活性，因此可以使用“常见用法”这一概念来帮助你限制自己的决定。
 
-若要了解控件的常见用法，最好考虑控件的价值主张。 你的控件能够在表中提供哪些无法由其他控件提供的内容？ 常见用法并不表示任何特定的可视化外观，而是表示控件的基本原理和一组有关其用法的合理预期。 了解到这一点，就可以对控件在一般情况下的撰写模型和样式定义行为进行一些假设。 情况下<xref:System.Windows.Controls.ComboBox>，例如，了解常见的使用情况不会深入分析任何有关某个特定<xref:System.Windows.Controls.ComboBox>具有圆的角，但能够让你深入了解这一事实，<xref:System.Windows.Controls.ComboBox>可能需要一个弹出窗口和切换是否处于打开状态的一些方法。
+若要了解控件的常见用法，最好考虑控件的价值主张。 你的控件能够在表中提供哪些无法由其他控件提供的内容？ 常见用法并不表示任何特定的可视化外观，而是表示控件的基本原理和一组有关其用法的合理预期。 了解到这一点，就可以对控件在一般情况下的撰写模型和样式定义行为进行一些假设。 例如，在 <xref:System.Windows.Controls.ComboBox>的情况下，了解常见用法不会给您提供有关特定 <xref:System.Windows.Controls.ComboBox> 是否有圆角的任何信息，但它可让您深入了解 <xref:System.Windows.Controls.ComboBox> 可能需要弹出窗口和一些方法。切换它是否已打开。
 
 <a name="General_Guidelines"></a>
 
@@ -62,15 +62,15 @@ ms.locfileid: "67662606"
 
   下表显示了由目前的控件样式使用的部分帮助程序元素列表：
 
-  |元素|类型|通过者|
+  |元素|键入|通过者|
   |-------------|----------|-------------|
-  |<xref:System.Windows.Controls.ContentPresenter>|基于类型的|<xref:System.Windows.Controls.Button><xref:System.Windows.Controls.CheckBox>， <xref:System.Windows.Controls.RadioButton>，<xref:System.Windows.Controls.Frame>等 (所有<xref:System.Windows.Controls.ContentControl>类型)|
-  |<xref:System.Windows.Controls.ItemsPresenter>|基于类型的|<xref:System.Windows.Controls.ListBox><xref:System.Windows.Controls.ComboBox>，<xref:System.Windows.Controls.Menu>等 (所有<xref:System.Windows.Controls.ItemsControl>类型)|
+  |<xref:System.Windows.Controls.ContentPresenter>|基于类型的|<xref:System.Windows.Controls.Button>、<xref:System.Windows.Controls.CheckBox>、<xref:System.Windows.Controls.RadioButton>、<xref:System.Windows.Controls.Frame>等（所有 <xref:System.Windows.Controls.ContentControl> 类型）|
+  |<xref:System.Windows.Controls.ItemsPresenter>|基于类型的|<xref:System.Windows.Controls.ListBox>、<xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.Menu>等（所有 <xref:System.Windows.Controls.ItemsControl> 类型）|
   |<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|命名的|<xref:System.Windows.Controls.ToolBar>|
-  |<xref:System.Windows.Controls.Primitives.Popup>|独立|<xref:System.Windows.Controls.ComboBox><xref:System.Windows.Controls.ToolBar>， <xref:System.Windows.Controls.Menu>， <xref:System.Windows.Controls.ToolTip>，等等|
-  |<xref:System.Windows.Controls.Primitives.RepeatButton>|命名的|<xref:System.Windows.Controls.Slider><xref:System.Windows.Controls.Primitives.ScrollBar>，等等|
+  |<xref:System.Windows.Controls.Primitives.Popup>|独立|<xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.ToolBar>、<xref:System.Windows.Controls.Menu>、<xref:System.Windows.Controls.ToolTip>等|
+  |<xref:System.Windows.Controls.Primitives.RepeatButton>|命名的|<xref:System.Windows.Controls.Slider>、<xref:System.Windows.Controls.Primitives.ScrollBar>等|
   |<xref:System.Windows.Controls.Primitives.ScrollBar>|命名的|<xref:System.Windows.Controls.ScrollViewer>|
-  |<xref:System.Windows.Controls.ScrollViewer>|独立|<xref:System.Windows.Controls.ListBox><xref:System.Windows.Controls.ComboBox>， <xref:System.Windows.Controls.Menu>， <xref:System.Windows.Controls.Frame>，等等|
+  |<xref:System.Windows.Controls.ScrollViewer>|独立|<xref:System.Windows.Controls.ListBox>、<xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.Menu>、<xref:System.Windows.Controls.Frame>等|
   |<xref:System.Windows.Controls.Primitives.TabPanel>|独立|<xref:System.Windows.Controls.TabControl>|
   |<xref:System.Windows.Controls.TextBox>|命名的|<xref:System.Windows.Controls.ComboBox>|
   |<xref:System.Windows.Controls.Primitives.TickBar>|基于类型的|<xref:System.Windows.Controls.Slider>|
@@ -79,7 +79,7 @@ ms.locfileid: "67662606"
 
   - 命名的帮助程序元素应当由父级标识，而且父级应当针对帮助程序元素建立任何必需的设置。
 
-  - 基于类型的帮助程序元素应当直接针对自身建立任何必需的设置。 这样做可能需要帮助程序元素查找它在使用时的信息上下文，包括其 `TemplatedParent`（它在使用时的模板的控件类型）。 例如，<xref:System.Windows.Controls.ContentPresenter>会自动将绑定`Content`的属性及其`TemplatedParent`到其<xref:System.Windows.Controls.ContentPresenter.Content%2A>属性中使用时<xref:System.Windows.Controls.ContentControl>派生类型。
+  - 基于类型的帮助程序元素应当直接针对自身建立任何必需的设置。 这样做可能需要帮助程序元素查找它在使用时的信息上下文，包括其 `TemplatedParent`（它在使用时的模板的控件类型）。 例如，在 <xref:System.Windows.Controls.ContentControl> 派生类型中使用时，<xref:System.Windows.Controls.ContentPresenter> 会自动将其 `TemplatedParent` 的 `Content` 属性绑定到其 <xref:System.Windows.Controls.ContentPresenter.Content%2A> 属性。
 
   - 独立帮助程序元素不能按这种方式进行优化，这是因为按照定义，帮助程序元素和父级不能相互识别。
 
@@ -87,25 +87,25 @@ ms.locfileid: "67662606"
 
 - **使用最佳做法来表示样式中的控件状态和行为。** 下面按顺序列出了用来表示样式中的控件状态更改和行为的最佳做法。 应使用列表上的第一项来实现你的方案。
 
-  1. 属性绑定。 示例： 绑定之间<xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A?displayProperty=nameWithType>和<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A?displayProperty=nameWithType>。
+  1. 属性绑定。 示例：在 <xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A?displayProperty=nameWithType>之间进行绑定。
 
-  2. 触发的属性更改或属性动画。 示例： 悬停状态的<xref:System.Windows.Controls.Button>。
+  2. 触发的属性更改或属性动画。 示例： <xref:System.Windows.Controls.Button>的悬停状态。
 
-  3. 命令。 示例： <xref:System.Windows.Controls.Primitives.ScrollBar.LineUpCommand>  /  <xref:System.Windows.Controls.Primitives.ScrollBar.LineDownCommand>中<xref:System.Windows.Controls.Primitives.ScrollBar>。
+  3. 命令。 示例： <xref:System.Windows.Controls.Primitives.ScrollBar>中 <xref:System.Windows.Controls.Primitives.ScrollBar.LineUpCommand> / <xref:System.Windows.Controls.Primitives.ScrollBar.LineDownCommand>。
 
-  4. 独立帮助程序元素。 示例：<xref:System.Windows.Controls.Primitives.TabPanel>在<xref:System.Windows.Controls.TabControl>。
+  4. 独立帮助程序元素。 示例： <xref:System.Windows.Controls.TabControl>中的 <xref:System.Windows.Controls.Primitives.TabPanel>。
 
-  5. 基于类型的帮助程序类型。 示例：<xref:System.Windows.Controls.ContentPresenter>中<xref:System.Windows.Controls.Button>，<xref:System.Windows.Controls.Primitives.TickBar>中<xref:System.Windows.Controls.Slider>。
+  5. 基于类型的帮助程序类型。 示例： <xref:System.Windows.Controls.ContentPresenter> <xref:System.Windows.Controls.Button>，<xref:System.Windows.Controls.Primitives.TickBar> <xref:System.Windows.Controls.Slider>。
 
-  6. 命名的帮助程序元素。 示例：<xref:System.Windows.Controls.TextBox>在<xref:System.Windows.Controls.ComboBox>。
+  6. 命名的帮助程序元素。 示例： <xref:System.Windows.Controls.ComboBox>中的 <xref:System.Windows.Controls.TextBox>。
 
-  7. 命名的帮助程序类型中的冒泡事件。 如果侦听样式元素中的冒泡事件，应当要求生成该事件的元素能够进行唯一标识。 示例：<xref:System.Windows.Controls.Primitives.Thumb>在<xref:System.Windows.Controls.ToolBar>。
+  7. 命名的帮助程序类型中的冒泡事件。 如果侦听样式元素中的冒泡事件，应当要求生成该事件的元素能够进行唯一标识。 示例： <xref:System.Windows.Controls.ToolBar>中的 <xref:System.Windows.Controls.Primitives.Thumb>。
 
-  8. 自定义 `OnRender` 行为。 示例：<xref:Microsoft.Windows.Themes.ButtonChrome>在<xref:System.Windows.Controls.Button>。
+  8. 自定义 `OnRender` 行为。 示例： <xref:System.Windows.Controls.Button>中的 <xref:Microsoft.Windows.Themes.ButtonChrome>。
 
 - **慎用样式触发器（与模板触发器相对）** 。 影响模板中元素上的属性的触发器必须在模板中声明。 影响控件上的属性的触发器（没有 `TargetName`）可以在样式中声明，除非你知道更改模板还可能会损坏触发器。
 
-- **与现有的样式设置模式保持一致。** 一个问题常常有多种解决办法。 注意尽可能与现有的控件样式设置模式保持一致。 这一点尤其重要的控件的派生自同一基类型 (例如， <xref:System.Windows.Controls.ContentControl>， <xref:System.Windows.Controls.ItemsControl>， <xref:System.Windows.Controls.Primitives.RangeBase>，依此类推)。
+- **与现有的样式设置模式保持一致。** 一个问题常常有多种解决办法。 注意尽可能与现有的控件样式设置模式保持一致。 这对于从同一基类型（例如 <xref:System.Windows.Controls.ContentControl>、<xref:System.Windows.Controls.ItemsControl>、<xref:System.Windows.Controls.Primitives.RangeBase>等）派生的控件尤其重要。
 
 - **在不重新模板化的情况下公开属性来启用常见自定义项方案**。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 不支持可插入/可自定义的部件，因此控件用户只能使用两种自定义方法：直接设置属性或者使用样式设置属性。 请记住，比较合适的做法是，设置数量有限的属性，使其面向极其常见的高优先级自定义项方案，否则的话，这些方案需要重新模板化。 下面是有关何时以及如何启用自定义项方案的最佳方法：
 
@@ -119,7 +119,7 @@ ms.locfileid: "67662606"
 
 ## <a name="theme-considerations"></a>主题注意事项
 
-- **主题样式应尝试在所有主题中具有一致的属性语义，但不保证能够实现这一点**。 作为控件文档的一部分，控件应当具有一个描述其属性语义（即控件属性的“含义”）的文档。 例如，<xref:System.Windows.Controls.ComboBox>控件应当定义的含义<xref:System.Windows.Controls.Control.Background%2A>属性内的<xref:System.Windows.Controls.ComboBox>。 控件的默认样式应当尝试遵循在其文档中的所有主题中定义的语义。 另一方面，控件用户应当注意属性语义可能因主题而异。 在某些情况下，给定的属性在由特定主题所需的可视化约束下可能无法表示。 （例如，对于许多控件来说，传统主题没有可以向其应用 `Thickness` 的边框。）
+- **主题样式应尝试在所有主题中具有一致的属性语义，但不保证能够实现这一点**。 作为控件文档的一部分，控件应当具有一个描述其属性语义（即控件属性的“含义”）的文档。 例如，<xref:System.Windows.Controls.ComboBox> 控件应定义 <xref:System.Windows.Controls.ComboBox>内的 <xref:System.Windows.Controls.Control.Background%2A> 属性的含义。 控件的默认样式应当尝试遵循在其文档中的所有主题中定义的语义。 另一方面，控件用户应当注意属性语义可能因主题而异。 在某些情况下，给定的属性在由特定主题所需的可视化约束下可能无法表示。 （例如，对于许多控件来说，传统主题没有可以向其应用 `Thickness` 的边框。）
 
 - **主题样式不需要在所有主题中具有一致的触发器语义**。 由控件样式通过触发器或动画公开的行为可能因主题而异。 控件用户应当注意到，控件不必使用同一个机制在所有主题中实现特定的行为。 例如，一个主题可以使用动画来表示悬停行为，而另一个主题则可以使用触发器。 这可能会导致自定义控件上的行为保留出现不一致。 （例如，如果控件的悬停状态使用触发器来表示，则更改背景属性可能不会影响该状态。 但是，如果悬停状态使用动画来实现，则更改背景属性可能会不可挽回地中断动画，从而中断状态过渡。）
 
@@ -127,5 +127,5 @@ ms.locfileid: "67662606"
 
 ## <a name="see-also"></a>请参阅
 
-- [样式设置和模板化](styling-and-templating.md)
+- [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [控件创作概述](control-authoring-overview.md)

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: c5c33327c5a80a4e275d1eaa505c1d20d3d7ba4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c6d6b7beba03aaa5c978b5cb72c09ce625e0d7e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017652"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460409"
 ---
 # <a name="control-styles-and-templates"></a>Control 样式和模板
-Windows Presentation Foundation (WPF) 中的控件具有<xref:System.Windows.Controls.ControlTemplate>，其中包含该控件的可视化树。 可以通过修改更改结构和控件的外观<xref:System.Windows.Controls.ControlTemplate>该控件。 无法替换可视化树的控件，则只有部分若要更改必须设置一个控件的可视化树<xref:System.Windows.Controls.Control.Template%2A>为新的完整控件属性<xref:System.Windows.Controls.ControlTemplate>。  
+Windows Presentation Foundation （WPF）中的控件具有一个包含该控件的可视化树的 <xref:System.Windows.Controls.ControlTemplate>。 可以通过修改控件的 <xref:System.Windows.Controls.ControlTemplate> 来更改该控件的结构和外观。 无法仅替换控件的可视化树的一部分;若要更改控件的可视化树，必须将控件的 <xref:System.Windows.Controls.Control.Template%2A> 属性设置为其新的和完整的 <xref:System.Windows.Controls.ControlTemplate>。  
   
  桌面主题确定使用的资源字典。 若要为桌面主题获取资源字典，请参阅[默认的 WPF 主题](https://go.microsoft.com/fwlink/?LinkID=158252)。  
   
@@ -61,7 +61,7 @@ Windows Presentation Foundation (WPF) 中的控件具有<xref:System.Windows.Con
  [TabControl 样式和模板](tabcontrol-styles-and-templates.md)  
  [TextBox 样式和模板](textbox-styles-and-templates.md)  
  [Thumb 样式和模板](thumb-styles-and-templates.md)  
- [ToggleButton 样式和模板](togglebutton-styles-and-templates.md)  
+ [切换按钮样式和模板](togglebutton-styles-and-templates.md)  
  [ToolBar 样式和模板](toolbar-styles-and-templates.md)  
  [ToolTip 样式和模板](tooltip-styles-and-templates.md)  
  [TreeView 样式和模板](treeview-styles-and-templates.md)  
@@ -75,4 +75,4 @@ Windows Presentation Foundation (WPF) 中的控件具有<xref:System.Windows.Con
 ## <a name="related-sections"></a>相关章节  
  [控件创作概述](control-authoring-overview.md)  
   
- [样式设置和模板化](styling-and-templating.md)
+ [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

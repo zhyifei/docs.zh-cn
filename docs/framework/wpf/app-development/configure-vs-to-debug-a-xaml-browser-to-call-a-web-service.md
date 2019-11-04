@@ -8,15 +8,15 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XAML browser applications [WPF]
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-ms.openlocfilehash: 27319179a9a30c5693f47039bf1e24c59adf0e68
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: d8cfae2fb47876d578c51e5f4acdfe0c31e752fe
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424653"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460901"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>如何：配置 Visual Studio 以调试 XAML 浏览器应用程序来调用 Web 服务
-XAML 浏览器应用程序（Xbap）在仅限 Internet 区域权限集的部分信任的安全沙盒中运行。 此权限集将 Web 服务调用限制为仅位于 XBAP 应用程序源站点上的 Web 服务。 不过，当从 Visual Studio 2005 调试 XBAP 时，它不会被视为具有与 Web 服务引用的站点相同的源站点。 这会导致 XBAP 尝试调用 Web 服务时引发安全异常。 但是，可以将 Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] 项目配置为模拟在调试时与它调用的 Web 服务具有相同的源站点。 这样，XBAP 就可以安全地调用 Web 服务，而不会导致安全异常。
+XAML 浏览器应用程序（Xbap）在仅限 Internet 区域权限集的部分信任的安全沙盒中运行。 此权限集将 Web 服务调用限制为仅位于 XBAP 应用程序源站点上的 Web 服务。 不过，当从 Visual Studio 2005 调试 XBAP 时，它不会被视为具有与 Web 服务引用的站点相同的源站点。 这会导致 XBAP 尝试调用 Web 服务时引发安全异常。 但是，可以将 Visual Studio 2005 XAML 浏览器应用程序（WPF）项目配置为模拟与调试时所调用的 Web 服务具有相同的源站点。 这样，XBAP 就可以安全地调用 Web 服务，而不会导致安全异常。
 
 ## <a name="configuring-visual-studio"></a>配置 Visual Studio
  若要配置 Visual Studio 2005 以调试调用 Web 服务的 XBAP：
@@ -38,7 +38,7 @@ XAML 浏览器应用程序（Xbap）在仅限 Internet 区域权限集的部分�
      `-debug c:\example.xbap`
 
 > [!NOTE]
-> 这是通过 Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] 项目模板创建的解决方案的默认配置。
+> 这是通过 Visual Studio 2005 XAML 浏览器应用程序（WPF）项目模板创建的解决方案的默认配置。
 
 1. 在“解决方案资源管理器”中选择了项目的情况下，在“项目” 菜单上单击“属性”。
 

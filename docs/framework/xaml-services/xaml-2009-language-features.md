@@ -5,15 +5,15 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: 05f811cd0d95f7605963dae851430fb6bf0e9f7a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac18be4732d223561d3a0afcef0e650587385822
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938797"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459895"
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009 语言功能
-XAML 2009 是新 XAML 语言功能的简写术语，其扩展现有的 XAML 语言规范。 XAML 2009 引入了几个新指令和结构。 其中包括[X:arguments 指令](x-arguments-directive.md); [X:factorymethod 指令](x-factorymethod-directive.md); [X:reference 标记扩展](x-reference-markup-extension.md); [X:typearguments 指令](x-typearguments-directive.md); 以及常见语言基元的内置类型 (例如`x:Char`)。  
+XAML 2009 是新 XAML 语言功能的简写术语，其扩展现有的 XAML 语言规范。 XAML 2009 引入了几个新指令和结构。 其中包括[X:Arguments 指令](x-arguments-directive.md);[X:FactoryMethod 指令](x-factorymethod-directive.md);[X:Reference 标记扩展](x-reference-markup-extension.md);[X:TypeArguments 指令](x-typearguments-directive.md);用于公共语言基元的内置类型（例如 `x:Char`）。  
   
 <a name="xaml_2009_support_in_wpf_and_visual_studio"></a>   
 ## <a name="xaml-2009-support-in-wpf-and-visual-studio"></a>在 WPF 和 Visual Studio 中支持 XAML 2009  
@@ -34,4 +34,4 @@ XAML 2009 是新 XAML 语言功能的简写术语，其扩展现有的 XAML 语�
   
 ## <a name="see-also"></a>请参阅
 
-- [XAML 概述 (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [XAML 概述 (WPF)](../../desktop-wpf/fundamentals/xaml.md)

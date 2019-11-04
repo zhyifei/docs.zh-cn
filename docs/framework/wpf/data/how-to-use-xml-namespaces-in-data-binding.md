@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], XML namespaces
 - namespaces [WPF], XML
 ms.assetid: a47c832f-dc84-48f2-96d5-cde18fc4284b
-ms.openlocfilehash: 9d8ddc5445bac28c68cd6cc99acf3313613a8c7f
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 47ce0d951df39c7b60aa2a543baf845f5471de6c
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919670"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460300"
 ---
 # <a name="how-to-use-xml-namespaces-in-data-binding"></a>如何：在数据绑定中使用 XML 命名空间
 ## <a name="example"></a>示例
@@ -32,5 +32,5 @@ ms.locfileid: "72919670"
 ## <a name="see-also"></a>请参阅
 
 - [使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
-- [数据绑定概述](data-binding-overview.md)
+- [数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)
 - [帮助主题](data-binding-how-to-topics.md)

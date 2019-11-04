@@ -10,17 +10,17 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d1af6c0e013f82569eed8d085df0249f4fb991bb
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: c1d9be77550b1255a24120c68f20d25640e0ebdf
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015680"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460626"
 ---
-# <a name="walkthrough-author-a-composite-control-with-c"></a>演练：使用 C 创作复合控件\#
+# <a name="walkthrough-author-a-composite-control-with-c"></a>演练：使用 C\# 创作复合控件
 
 复合控件提供了一种创建和重用自定义图形界面的方法。 复合控件本质上是具有可视化表示形式的组件。 因此，它可能包含一个或多个 Windows 窗体控件、组件或代码块，它们能够通过验证用户输入、修改显示属性或执行作者所需的其他任务来扩展功能。 可以按照与其他控件相同的方式将复合控件置于 Windows 窗体中。 在本演练的第一部分，将创建一个名为 `ctlClock` 的简单复合控件。 在本演练的第二部分，将通过继承扩展 `ctlClock` 的功能。
 
@@ -30,14 +30,14 @@ ms.locfileid: "70015680"
 
 ### <a name="to-create-the-ctlclocklib-control-library-and-the-ctlclock-control"></a>创建 ctlClockLib 控件库和 ctlClock 控件
 
-1. 在 Visual Studio 中, 创建一个新的**Windows 窗体控件库**项目, 并将其命名为**ctlClockLib**。
+1. 在 Visual Studio 中，创建一个新的**Windows 窗体控件库**项目，并将其命名为**ctlClockLib**。
 
      默认情况下，项目名称 `ctlClockLib` 也会分配到根命名空间中。 根命名空间用于限定程序集中的组件名。 例如，如果两个程序集都提供名为 `ctlClock` 的组件，则可以使用 `ctlClockLib.ctlClock.` 指定 `ctlClock` 组件
 
-2. 在**解决方案资源管理器**中, 右键单击**UserControl1.cs**, 然后单击 "**重命名**"。 将文件名更改为 `ctlClock.cs`。 当系统询问是否重命名对代码元素“UserControl1”的所有引用时，单击“是”按钮。
+2. 在**解决方案资源管理器**中，右键单击**UserControl1.cs**，然后单击 "**重命名**"。 将文件名更改为 `ctlClock.cs`。 当系统询问是否重命名对代码元素“UserControl1”的所有引用时，单击“是”按钮。
 
     > [!NOTE]
-    > 默认情况下, 复合控件继承自系统<xref:System.Windows.Forms.UserControl>提供的类。 <xref:System.Windows.Forms.UserControl>类提供所有复合控件所需的功能, 并实现标准方法和属性。
+    > 默认情况下，复合控件从系统提供的 <xref:System.Windows.Forms.UserControl> 类继承而来。 <xref:System.Windows.Forms.UserControl> 类提供所有复合控件所需的功能，并实现标准方法和属性。
 
 3. 在“文件”菜单上，单击“全部保存”保存项目。
 
@@ -47,28 +47,28 @@ ms.locfileid: "70015680"
 
 ### <a name="to-add-a-label-and-a-timer-to-your-composite-control"></a>将标签和计时器添加到复合控件
 
-1. 在**解决方案资源管理器**中, 右键单击**ctlClock.cs**, 然后单击 "**查看设计器**"。
+1. 在**解决方案资源管理器**中，右键单击**ctlClock.cs**，然后单击 "**查看设计器**"。
 
 2. 在“工具箱”中，展开“公共控件”节点，然后双击“标签”。
 
-     <xref:System.Windows.Forms.Label> 名`label1`为的控件将添加到设计器图面上的控件中。
+     名为 `label1` 的 <xref:System.Windows.Forms.Label> 控件添加到设计器图面上的控件中。
 
 3. 在设计器中，单击“label1”。 在“属性”窗口中，设置下列属性。
 
-    |属性|更改为|
+    |Property|更改为|
     |--------------|---------------|
-    |**Name**|`lblDisplay`|
+    |**名称**|`lblDisplay`|
     |**文本**|`(blank space)`|
     |**TextAlign**|`MiddleCenter`|
     |**Font.Size**|`14`|
 
 4. 在“工具箱”中，展开“组件”节点，然后双击“计时器”。
 
-     <xref:System.Windows.Forms.Timer>由于是一个组件, 因此它在运行时不具有可视表示形式。 因而它不会和控件一起出现在设计器图面上，而是出现在“组件设计器”（设计器图面底部的一栏）中。
+     由于 <xref:System.Windows.Forms.Timer> 是一个组件，因此它在运行时不具有可视表示形式。 因而它不会和控件一起出现在设计器图面上，而是出现在“组件设计器”（设计器图面底部的一栏）中。
 
-5. 在 "**组件设计器**" 中, 单击 " **timer1**" <xref:System.Windows.Forms.Timer.Interval%2A> , 然后`1000`将属性设置为`true`, 并<xref:System.Windows.Forms.Timer.Enabled%2A>将属性设置为。
+5. 在 "**组件设计器**" 中，单击 " **timer1**"，然后将 "<xref:System.Windows.Forms.Timer.Interval%2A>" 属性设置为 `1000` 并将 <xref:System.Windows.Forms.Timer.Enabled%2A> 属性设置为 "`true`"。
 
-     属性控制<xref:System.Windows.Forms.Timer>组件的计时频率。 <xref:System.Windows.Forms.Timer.Interval%2A> `timer1` 每走过一个刻度，它都会运行一次 `timer1_Tick` 事件中的代码。 间隔表示计时之间的毫秒数。
+     <xref:System.Windows.Forms.Timer.Interval%2A> 属性控制 <xref:System.Windows.Forms.Timer> 组件的计时频率。 `timer1` 每走过一个刻度，它都会运行一次 `timer1_Tick` 事件中的代码。 间隔表示计时之间的毫秒数。
 
 6. 在“组件设计器”中，双击“timer1”转到 `ctlClock` 的 `timer1_Tick` 事件。
 
@@ -94,11 +94,11 @@ ms.locfileid: "70015680"
 
 ## <a name="add-properties-to-the-composite-control"></a>向复合控件添加属性
 
-时钟控件现在封装一个<xref:System.Windows.Forms.Label>控件和一个<xref:System.Windows.Forms.Timer>组件, 每个组件都有其自己的固有属性集。 尽管控件的后续用户无法访问这些控件的单个属性，但可以通过编写适当的代码块来创建和公开自定义属性。 在下面的过程中，将向控件添加属性，这些属性可使用户能够更改背景和文本的颜色。
+时钟控件现在封装 <xref:System.Windows.Forms.Label> 控件和 <xref:System.Windows.Forms.Timer> 组件，每个组件都有其自己的固有属性集。 尽管控件的后续用户无法访问这些控件的单个属性，但可以通过编写适当的代码块来创建和公开自定义属性。 在下面的过程中，将向控件添加属性，这些属性可使用户能够更改背景和文本的颜色。
 
 ### <a name="to-add-a-property-to-your-composite-control"></a>将属性添加到复合控件
 
-1. 在**解决方案资源管理器**中, 右键单击**ctlClock.cs**, 然后单击 "**查看代码**"。
+1. 在**解决方案资源管理器**中，右键单击**ctlClock.cs**，然后单击 "**查看代码**"。
 
      控件的“代码编辑器”随即打开。
 
@@ -151,7 +151,7 @@ ms.locfileid: "70015680"
 
 ## <a name="test-the-control"></a>测试控件
 
-控件不是独立应用程序，它们必须托管在容器中。 测试控件的运行时行为，并使用“UserControl 测试容器”运用其属性。 有关详细信息，请参阅[如何：测试 UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)的运行时行为。
+控件不是独立应用程序，它们必须托管在容器中。 测试控件的运行时行为，并使用“UserControl 测试容器”运用其属性。 有关详细信息，请参阅[如何：测试 UserControl 的运行时行为](how-to-test-the-run-time-behavior-of-a-usercontrol.md)。
 
 ### <a name="to-test-your-control"></a>测试控件
 
@@ -175,7 +175,7 @@ ms.locfileid: "70015680"
 
 ### <a name="to-create-the-inherited-control"></a>创建继承的控件
 
-1. 在**解决方案资源管理器**中, 右键单击**ctlClockLib**, 指向 "**添加**", 然后单击 "**用户控件**"。
+1. 在**解决方案资源管理器**中，右键单击**ctlClockLib**，指向 "**添加**"，然后单击 "**用户控件**"。
 
      此时将打开“添加新项”对话框。
 
@@ -187,7 +187,7 @@ ms.locfileid: "70015680"
 
 4. 在“组件名称”下，双击“ctlClock”。
 
-5. 在**解决方案资源管理器**中, 浏览当前项目。
+5. 在**解决方案资源管理器**中，浏览当前项目。
 
     > [!NOTE]
     > 当前项目中添加了一个名为“ctlAlarmClock.cs”的文件。
@@ -198,7 +198,7 @@ ms.locfileid: "70015680"
 
 #### <a name="to-add-properties-to-your-composite-control"></a>将属性添加到复合控件
 
-1. 在**解决方案资源管理器**中, 右键单击**ctlAlarmClock**, 然后单击 "**查看代码**"。
+1. 在**解决方案资源管理器**中，右键单击**ctlAlarmClock**，然后单击 "**查看代码**"。
 
 2. 找到 `public class` 语句。 请注意，控件继承自 `ctlClockLib.ctlClock`。 在左大括号 (`{)` 语句下键入下以下代码。
 
@@ -237,7 +237,7 @@ ms.locfileid: "70015680"
 
 #### <a name="to-add-the-label-control"></a>添加标签控件
 
-1. 在**解决方案资源管理器**中, 右键单击**ctlAlarmClock**, 然后单击 "**查看设计器**"。
+1. 在**解决方案资源管理器**中，右键单击**ctlAlarmClock**，然后单击 "**查看设计器**"。
 
      `ctlAlarmClock` 的设计器将在主窗口中打开。
 
@@ -249,13 +249,13 @@ ms.locfileid: "70015680"
     > [!NOTE]
     > 如果希望复合控件的后续用户可以访问其内部控件，则可将其声明为 `public` 或 `protected`。 如此即可使用适当的代码设置和修改复合控件内所包含控件的属性。
 
-3. 向复合控件添加控件。<xref:System.Windows.Forms.Label>
+3. 向复合控件添加 <xref:System.Windows.Forms.Label> 控件。
 
-4. 使用鼠标将<xref:System.Windows.Forms.Label>控件拖到显示框的正下方。 在“属性”窗口中，设置下列属性。
+4. 使用鼠标将 <xref:System.Windows.Forms.Label> 控件直接拖到显示框的正下方。 在“属性”窗口中，设置下列属性。
 
-    |属性|设置|
+    |Property|设置|
     |--------------|-------------|
-    |**Name**|`lblAlarm`|
+    |**名称**|`lblAlarm`|
     |**文本**|**Alarm!**|
     |**TextAlign**|`MiddleCenter`|
     |**可见**|`false`|
@@ -320,15 +320,15 @@ ms.locfileid: "70015680"
 
 #### <a name="to-implement-the-shutoff-method"></a>实现关闭方法
 
-1. 在**解决方案资源管理器**中, 右键单击**ctlAlarmClock.cs**, 然后单击 "**查看设计器**"。
+1. 在**解决方案资源管理器**中，右键单击**ctlAlarmClock.cs**，然后单击 "**查看设计器**"。
 
      设计器随即打开。
 
 2. 将按钮添加到控件。 按如下方式设置该按钮的属性。
 
-    |属性|值|
+    |Property|“值”|
     |--------------|-----------|
-    |**Name**|`btnAlarmOff`|
+    |**名称**|`btnAlarmOff`|
     |**文本**|**禁用警报**|
 
 3. 在设计器中，双击“btnAlarmOff”控件。
@@ -351,35 +351,35 @@ ms.locfileid: "70015680"
 
 ### <a name="use-the-inherited-control-on-a-form"></a>在窗体上使用继承的控件
 
-您可以通过与测试基类控件`ctlClock`相同的方式来测试您的继承控件:按**F5**生成项目并在 " **UserControl 测试容器**" 中运行控件。 有关详细信息，请参阅[如何：测试 UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)的运行时行为。
+可以采用与测试基类控件相同的方式来测试继承的控件，`ctlClock`：按**F5**生成项目并在 " **UserControl 测试容器**" 中运行控件。 有关详细信息，请参阅[如何：测试 UserControl 的运行时行为](how-to-test-the-run-time-behavior-of-a-usercontrol.md)。
 
 若要使用控件，还需要将其放入窗体中。 与标准复合控件一样，继承的复合控件不能独立存在，而必须承载在窗体或其他容器中。 由于 `ctlAlarmClock` 的功能更加深入，因此需要附加代码以对其进行测试。 在本过程中，将编写一个简单的程序来测试 `ctlAlarmClock` 的功能。 将编写代码来设置和显示 `ctlAlarmClock` 的 `AlarmTime` 属性，并测试其固有功能。
 
 #### <a name="to-build-and-add-your-control-to-a-test-form"></a>生成测试窗体并将控件添加到该窗体
 
-1. 在**解决方案资源管理器**中, 右键单击**ctlClockLib**, 然后单击 "**生成**"。
+1. 在**解决方案资源管理器**中，右键单击**ctlClockLib**，然后单击 "**生成**"。
 
-2. 将新的**Windows 应用程序**项目添加到解决方案, 并将其命名为 "**测试**"。
+2. 将新的**Windows 应用程序**项目添加到解决方案，并将其命名为 "**测试**"。
 
-3. 在**解决方案资源管理器**中, 右键单击测试项目的 "**引用**" 节点。 单击“添加引用”，显示“添加引用”对话框。 单击标记为“项目”的选项卡。 “项目名称”下将列出 `ctlClockLib` 项目。 双击该项目将引用添加到测试项目。
+3. 在**解决方案资源管理器**中，右键单击测试项目的 "**引用**" 节点。 单击“添加引用”，显示“添加引用”对话框。 单击标记为“项目”的选项卡。 “项目名称”下将列出 `ctlClockLib` 项目。 双击该项目将引用添加到测试项目。
 
-4. 在**解决方案资源管理器**中, 右键单击 "**测试**", 然后单击 "**生成**"。
+4. 在**解决方案资源管理器**中，右键单击 "**测试**"，然后单击 "**生成**"。
 
 5. 在“工具箱”中，展开“ctlClockLib 组件”节点。
 
 6. 双击“ctlAlarmClock”向窗体添加 `ctlAlarmClock` 的副本。
 
-7. 在 "**工具箱**" 中, 找到并双击 " **DateTimePicker** " 将<xref:System.Windows.Forms.DateTimePicker>控件添加到<xref:System.Windows.Forms.Label>窗体, 然后双击 "**标签**" 添加控件。
+7. 在 "**工具箱**" 中，找到并双击 " **DateTimePicker** "，将 <xref:System.Windows.Forms.DateTimePicker> 控件添加到窗体，然后双击 "**标签**" 添加 <xref:System.Windows.Forms.Label> 控件。
 
 8. 使用鼠标将这些控件放置在窗体上合适的位置。
 
 9. 按下述方法设置这些控件的属性。
 
-    |控件|属性|“值”|
+    |控件|Property|“值”|
     |-------------|--------------|-----------|
     |`label1`|**文本**|`(blank space)`|
-    ||**Name**|`lblTest`|
-    |`dateTimePicker1`|**Name**|`dtpTest`|
+    ||**名称**|`lblTest`|
+    |`dateTimePicker1`|**名称**|`dtpTest`|
     ||**格式**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|
 
 10. 在设计器中，双击“dtpTest”。
@@ -398,13 +398,13 @@ ms.locfileid: "70015680"
     }
     ```
 
-12. 在**解决方案资源管理器**中, 右键单击 "**测试**", 然后单击 "**设为启动项目**"。
+12. 在**解决方案资源管理器**中，右键单击 "**测试**"，然后单击 "**设为启动项目**"。
 
 13. 在“调试”菜单上，单击“启动调试”。
 
-     测试程序随即启动。 请注意, `ctlAlarmClock`控件中的当前时间已更新, 并且开始时间显示<xref:System.Windows.Forms.DateTimePicker>在控件中。
+     测试程序随即启动。 请注意，`ctlAlarmClock` 控件中的当前时间已更新，并且开始时间显示在 <xref:System.Windows.Forms.DateTimePicker> 控件中。
 
-14. 单击 "小时" 的显示位置。<xref:System.Windows.Forms.DateTimePicker>
+14. 单击 "<xref:System.Windows.Forms.DateTimePicker>"，其中显示小时的分钟数。
 
 15. 使用键盘设置一个分钟值，使它比 `ctlAlarmClock` 显示的当前时间快一分钟。
 
@@ -417,5 +417,5 @@ ms.locfileid: "70015680"
 ## <a name="see-also"></a>请参阅
 
 - [各种自定义控件](varieties-of-custom-controls.md)
-- [如何：在 "选择工具箱项" 对话框中显示控件](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [演练：使用 Visual 从 Windows 窗体控件继承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [如何：在“选择工具箱项”对话框中显示控件](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [演练：使用 Visual C# 从 Windows 窗体控件继承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

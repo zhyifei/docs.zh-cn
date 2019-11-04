@@ -9,60 +9,60 @@ helpviewer_keywords:
 - styles [WPF], TreeView
 - TreeView [WPF], styles and templates
 ms.assetid: a49adb77-0202-4caa-b94a-8bb110d7fa9a
-ms.openlocfilehash: 01841bb828594dd4cac0c179d70495fe392c8de5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6dbe54324a5ad5e2f85719d819c035abfd644b1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761294"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460183"
 ---
 # <a name="treeview-styles-and-templates"></a>TreeView 样式和模板
-本主题介绍的样式和模板的<xref:System.Windows.Controls.TreeView>控件。 可以修改默认<xref:System.Windows.Controls.ControlTemplate>为控件提供唯一外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
+本主题介绍 <xref:System.Windows.Controls.TreeView> 控件的样式和模板。 您可以修改默认 <xref:System.Windows.Controls.ControlTemplate> 以使控件具有独特的外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
   
-## <a name="treeview-parts"></a>树视图部分  
- <xref:System.Windows.Controls.TreeView>控件没有任何命名的部件。  
+## <a name="treeview-parts"></a>TreeView 部件  
+ <xref:System.Windows.Controls.TreeView> 控件没有任何命名部分。  
   
- 当您创建<xref:System.Windows.Controls.ControlTemplate>有关<xref:System.Windows.Controls.TreeView>，模板可能包含<xref:System.Windows.Controls.ItemsPresenter>内<xref:System.Windows.Controls.ScrollViewer>。 (<xref:System.Windows.Controls.ItemsPresenter>显示在每个项<xref:System.Windows.Controls.TreeView>;<xref:System.Windows.Controls.ScrollViewer>控件内实现滚动)。  如果<xref:System.Windows.Controls.ItemsPresenter>不是直接子级<xref:System.Windows.Controls.ScrollViewer>，必须授予<xref:System.Windows.Controls.ItemsPresenter>名称， `ItemsPresenter`。  
+ 为 <xref:System.Windows.Controls.TreeView>创建 <xref:System.Windows.Controls.ControlTemplate> 时，模板可能包含 <xref:System.Windows.Controls.ScrollViewer>中的 <xref:System.Windows.Controls.ItemsPresenter>。 （<xref:System.Windows.Controls.ItemsPresenter> 显示 <xref:System.Windows.Controls.TreeView>中的每一项; <xref:System.Windows.Controls.ScrollViewer> 允许在控件中滚动）。  如果 <xref:System.Windows.Controls.ItemsPresenter> 不是 <xref:System.Windows.Controls.ScrollViewer>的直接子级，则必须为 <xref:System.Windows.Controls.ItemsPresenter> 指定名称 `ItemsPresenter`。  
   
-## <a name="treeview-states"></a>树视图状态  
- 下表列出了的可视状态<xref:System.Windows.Controls.TreeView>控件。  
+## <a name="treeview-states"></a>TreeView 状态  
+ 下表列出了 <xref:System.Windows.Controls.TreeView> 控件的可视状态。  
   
 |VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
-|有效|ValidationStates|该控件使用<xref:System.Windows.Controls.Validation>类和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`已在控件有焦点。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`具有该控件没有焦点。|  
+|有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `true` 控件没有焦点。|  
   
 ## <a name="treeviewitem-parts"></a>TreeViewItem 部件  
- 下表列出了用于命名的部件<xref:System.Windows.Controls.TreeViewItem>控件。  
+ 下表列出了 <xref:System.Windows.Controls.TreeViewItem> 控件的已命名部分。  
   
-|部件|类型|描述|  
+|部件|键入|描述|  
 |----------|----------|-----------------|  
-|PART_Header|<xref:System.Windows.FrameworkElement>|一个可包含的标头内容的可见元素<xref:System.Windows.Controls.TreeView>控件。|  
+|PART_Header|<xref:System.Windows.FrameworkElement>|一个包含 <xref:System.Windows.Controls.TreeView> 控件标题内容的视觉元素。|  
   
 ## <a name="treeviewitem-states"></a>TreeViewItem 状态  
- 下表列出了的可视状态<xref:System.Windows.Controls.TreeViewItem>控件。  
+ 下表列出了 <xref:System.Windows.Controls.TreeViewItem> 控件的可视状态。  
   
 |VisualState 名称|VisualStateGroup 名称|描述|  
 |----------------------|---------------------------|-----------------|  
 |普通|CommonStates|默认状态。|  
-|MouseOver|CommonStates|鼠标指针置于<xref:System.Windows.Controls.TreeViewItem>。|  
-|已禁用|CommonStates|<xref:System.Windows.Controls.TreeViewItem>被禁用。|  
-|已设定焦点|FocusStates|<xref:System.Windows.Controls.TreeViewItem>具有焦点。|  
-|失去焦点|FocusStates|<xref:System.Windows.Controls.TreeViewItem>不具有焦点。|  
-|展开|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem>是否展开控件。|  
-|Collapsed|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem>控件处于折叠状态。|  
-|HasItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem>具有项。|  
-|NoItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem>没有项。|  
-|已选定|SelectionStates|<xref:System.Windows.Controls.TreeViewItem>处于选中状态。|  
-|SelectedInactive|SelectionStates|<xref:System.Windows.Controls.TreeViewItem>是已选定但未处于活动状态。|  
-|未选定|SelectionStates|<xref:System.Windows.Controls.TreeViewItem>未选中。|  
-|有效|ValidationStates|该控件使用<xref:System.Windows.Controls.Validation>类和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`已在控件有焦点。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`具有该控件没有焦点。|  
+|MouseOver|CommonStates|鼠标指针置于 <xref:System.Windows.Controls.TreeViewItem>上。|  
+|Disabled|CommonStates|<xref:System.Windows.Controls.TreeViewItem> 处于禁用状态。|  
+|已设定焦点|FocusStates|<xref:System.Windows.Controls.TreeViewItem> 具有焦点。|  
+|失去焦点|FocusStates|<xref:System.Windows.Controls.TreeViewItem> 没有焦点。|  
+|展开|ExpansionStates|展开 <xref:System.Windows.Controls.TreeViewItem> 控件。|  
+|Collapsed|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem> 控件已折叠。|  
+|HasItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem> 具有项。|  
+|NoItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem> 没有项。|  
+|已选定|SelectionStates|选择 <xref:System.Windows.Controls.TreeViewItem>。|  
+|SelectedInactive|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> 处于选中状态，但不处于活动状态。|  
+|未选定|SelectionStates|未选择 <xref:System.Windows.Controls.TreeViewItem>。|  
+|有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `true` 控件没有焦点。|  
   
-## <a name="treeview-controltemplate-example"></a>TreeView ControlTemplate 示例  
- 下面的示例演示如何定义<xref:System.Windows.Controls.ControlTemplate>为<xref:System.Windows.Controls.TreeView>控件和其关联的类型。  
+## <a name="treeview-controltemplate-example"></a>TreeView System.windows.controls.controltemplate> 示例  
+ 下面的示例演示如何为 <xref:System.Windows.Controls.TreeView> 控件及其关联的类型定义 <xref:System.Windows.Controls.ControlTemplate>。  
   
  [!code-xaml[ControlTemplateExamples#TreeView](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/treeview.xaml#treeview)]  
   
@@ -78,5 +78,5 @@ ms.locfileid: "61761294"
 - <xref:System.Windows.Controls.ControlTemplate>
 - [控件样式和模板](control-styles-and-templates.md)
 - [控件自定义](control-customization.md)
-- [样式设置和模板化](styling-and-templating.md)
+- [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 12ced911c6fded5dd9016ea377a3a4518c9c2ee1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 9a3d579019db4d2b59a0252dbe63b4a6a0468849
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920342"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458300"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic 和 WPF 事件处理
 具体而言，对于 Microsoft Visual Basic .NET 语言，你可以使用特定于语言的 `Handles` 关键字将事件处理程序与实例关联，而不是将事件处理程序附加到特性或使用 <xref:System.Windows.UIElement.AddHandler%2A> 方法。 但是，用于将处理程序附加到实例的 `Handles` 技术存在一些限制，因为 `Handles` 语法不支持 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件系统的某些特定路由事件功能。  
@@ -47,4 +47,4 @@ ms.locfileid: "72920342"
 - <xref:System.Windows.UIElement.AddHandler%2A>
 - [将路由事件标记为“已处理”和“类处理”](marking-routed-events-as-handled-and-class-handling.md)
 - [路由事件概述](routed-events-overview.md)
-- [XAML 概述 (WPF)](xaml-overview-wpf.md)
+- [XAML 概述 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

@@ -1,16 +1,13 @@
 ---
 title: 如何：对工作流和工作流服务启用 SQL 持久性
 ms.date: 03/30/2017
-dev_langs:
-- csharp
-- vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: b3ba21234af9555a4e40a0b587ac21473cff8761
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 4dc5648d748372828c5b9a36441bfb02eef045e1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834843"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460874"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>如何：对工作流和工作流服务启用 SQL 持久性
 
@@ -29,7 +26,7 @@ Windows Server App Fabric 大大简化了配置持久性的过程。 有关详�
 > [!IMPORTANT]
 > 如果不创建持久性数据库，则当宿主尝试持久保存工作流时，SQL 工作流实例存储功能将引发与以下异常类似的异常。
 >
-> SqlClient. SqlException：找不到存储过程 "DurableInstancing. CreateLockOwner"
+> System.Data.SqlClient.SqlException: 找不到存储过程“System.Activities.DurableInstancing.CreateLockOwner”
 
 下面介绍如何使用 SQL 工作流实例存储来为工作流与工作流服务启用持久性。 有关 SQL 工作流实例存储的属性的详细信息，请参阅[Sql 工作流实例存储的属性](properties-of-sql-workflow-instance-store.md)。
 
@@ -72,7 +69,7 @@ Windows Server App Fabric 大大简化了配置持久性的过程。 有关详�
    ```
 
 > [!NOTE]
-> 请参阅 [How to：有关分步说明，请创建并运行[入门教程](getting-started-tutorial.md)的长时间运行的工作流 @ no__t 步骤。
+> 有关分步说明，请参阅[入门教程](getting-started-tutorial.md)中的 "[如何：创建和运行长时间运行的工作流](how-to-create-and-run-a-long-running-workflow.md)" 步骤。
 
 ## <a name="enabling-persistence-for-self-hosted-workflow-services-that-use-the-workflowservicehost"></a>为使用 WorkflowServiceHost 的自承载工作流服务启用持久性
 
@@ -129,7 +126,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 
 可使用配置文件为自承载或 Windows 进程激活服务 (WAS) 承载的工作流服务启用持久性。 WAS 承载的工作流服务与自承载工作流服务一样，都使用 WorkflowServiceHost。
 
-@No__t-0，一种服务行为，可用于通过 XML 配置方便地更改[SQL 工作流实例存储](sql-workflow-instance-store.md)属性。 对于 WAS 承载的工作流服务，请使用 Web.config 文件。 下面的配置示例演示如何使用配置文件中的 `sqlWorkflowInstanceStore` 行为元素来配置 SQL 工作流实例存储。
+`SqlWorkflowInstanceStoreBehavior`是一种服务行为，它允许您通过 XML 配置方便地更改[SQL 工作流实例存储](sql-workflow-instance-store.md)属性。 对于 WAS 承载的工作流服务，请使用 Web.config 文件。 下面的配置示例演示如何使用配置文件中的 `sqlWorkflowInstanceStore` 行为元素来配置 SQL 工作流实例存储。
 
 ```xml
 <serviceBehaviors>
@@ -140,9 +137,8 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
                     instanceCompletionAction="DeleteAll | DeleteNothing"
                     instanceLockedExceptionAction="NoRetry | BasicRetry |AggressiveRetry"
                     hostLockRenewalPeriod="00:00:30"
-                    runnableInstancesDetectionPeriod="00:00:05">
+                    runnableInstancesDetectionPeriod="00:00:05" />
 
-        <sqlWorkflowInstanceStore/>
     </behavior>
 </serviceBehaviors>
 ```
@@ -162,7 +158,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 安装将以下与 SQL 工作流实例存储功能相关的元素添加到 Machine.config 文件中：
 
-- 将以下行为扩展元素添加到 Machine.config 文件中，以便你可以使用配置文件中的 @no__t 0sqlWorkflowInstanceStore > 服务行为元素来为服务配置持久性。
+- 将以下行为扩展元素添加到 Machine.config 文件中，以便可以使用配置文件中的 \<sqlWorkflowInstanceStore > 服务行为元素来为服务配置持久性。
 
     ```xml
     <configuration>
@@ -172,6 +168,6 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
                     <add name="sqlWorkflowInstanceStore" type="System.Activities.DurableInstancing.SqlWorkflowInstanceStoreElement, System.Activities.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
                 </behaviorExtensions>
             </extensions>
-        <system.serviceModel>
-    <configuration>
+        </system.serviceModel>
+    </configuration>
     ```

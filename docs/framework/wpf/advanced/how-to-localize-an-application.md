@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: b3ad3d0c3223d5baf937ca22fd48d46a80979aac
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 26c09e547205e7819ebb43d6e34b6e18d6d9ff98
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913669"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460834"
 ---
 # <a name="how-to-localize-an-application"></a>如何：对应用程序进行本地化
 本教程介绍如何通过使用 LocBaml 工具创建本地化应用程序。  
@@ -28,31 +28,31 @@ ms.locfileid: "69913669"
   
 <a name="Requirements"></a>   
 ## <a name="requirements"></a>要求  
- 在此讨论过程中, 你将使用 Microsoft 生成引擎 (MSBuild), 这是从命令行运行的编译器。  
+ 在此讨论过程中，你将使用 Microsoft 生成引擎（MSBuild），这是从命令行运行的编译器。  
   
- 此外，还会指导你使用项目文件。 有关如何使用 MSBuild 和项目文件的说明, 请参阅[生成和部署](../app-development/building-and-deploying-wpf-applications.md)。  
+ 此外，还会指导你使用项目文件。 有关如何使用 MSBuild 和项目文件的说明，请参阅[生成和部署](../app-development/building-and-deploying-wpf-applications.md)。  
   
  在此讨论中的所有示例都使用 zh-CN（中文-中国）作为区域设置。 这使你能够而无需安装另一种语言就能完成这些示例的步骤。  
   
 <a name="create_sample_app"></a>   
 ## <a name="create-a-sample-application"></a>创建一个简单的应用程序  
- 在此步骤中，你将准备要用于本地化的应用程序。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 示例提供了 HelloApp 示例，将用于本讨论中的代码示例。 如果要使用此示例, 请从[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] [LocBaml 工具示例](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)下载文件。  
+ 在此步骤中，你将准备要用于本地化的应用程序。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 示例提供了 HelloApp 示例，将用于本讨论中的代码示例。 如果要使用此示例，请从[LocBaml 工具示例](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)下载 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 文件。  
   
 1. 将应用程序开发到想要开始进行本地化的位置。  
   
-2. 在项目文件中指定开发语言, 以便 MSBuild 生成主程序集和附属程序集 (扩展名为 .resources 的文件), 以包含非特定语言资源。 HelloApp 示例中的项目文件是 HelloApp.csproj。 在该文件中，你将找到标识如下的开发语言：  
+2. 在项目文件中指定开发语言，以便 MSBuild 生成主程序集和附属程序集（扩展名为 .resources 的文件），以包含非特定语言资源。 HelloApp 示例中的项目文件是 HelloApp.csproj。 在该文件中，你将找到标识如下的开发语言：  
   
      `<UICulture>en-US</UICulture>`  
   
-3. 将 Uid 添加到你的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件。 Uid 用于跟踪对文件的更改并标识必须翻译的项。 若要将 Uid 添加到文件, 请在项目文件上运行**updateuid** :  
+3. 将 Uid 添加到你的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件。 Uid 用于跟踪对文件的更改并标识必须翻译的项。 若要将 Uid 添加到文件，请在项目文件上运行**updateuid** ：  
   
-     **msbuild -t:updateuid helloapp.csproj**  
+     **msbuild-t:updateuid helloapp.resources.dll**  
   
-     若要验证是否没有缺少或重复的 Uid, 请运行**checkuid**:  
+     若要验证是否没有缺少或重复的 Uid，请运行**checkuid**：  
   
      **msbuild-t:checkuid helloapp.resources.dll**  
   
-     运行**updateuid**之后, 你的文件应包含 uid。 例如，在 HelloApp 的 Pane1.xaml 文件中，你应能找到下列内容：  
+     运行**updateuid**之后，你的文件应包含 uid。 例如，在 HelloApp 的 Pane1.xaml 文件中，你应能找到下列内容：  
   
      `<StackPanel x:Uid="StackPanel_1">`  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69913669"
 ## <a name="create-the-neutral-language-resources-satellite-assembly"></a>创建非特定语言资源附属程序集  
  将应用程序配置为生成非特定语言资源附属程序集后，则可生成应用程序。 这会生成主应用程序程序集，以及 LocBaml 本地化所需的非特定语言资源附属程序集。 若要生成应用程序：  
   
-1. 编译 Helloapp.resources.dll 以创建动态链接库 (DLL):  
+1. 编译 Helloapp.resources.dll 以创建动态链接库（DLL）：  
   
      **msbuild helloapp.csproj**  
   
@@ -91,24 +91,24 @@ ms.locfileid: "69913669"
   
 4. 运行 LocBaml 时可指定下列选项：  
   
-    - **parse**或 **-p:** 分析 Baml、资源或 DLL 文件以生成 .csv 或 .txt 文件。  
+    - **parse**或 **-p：** 分析 BAML、资源或 DLL 文件以生成 .csv 或 .txt 文件。  
   
-    - **生成**或 **-g:** 使用翻译的文件生成本地化的二进制文件。  
+    - **生成**或 **-g：** 通过使用已转换的文件生成本地化的二进制文件。  
   
-    - **out**或 **-o** {*filedirectory*] **:** 输出文件名。  
+    - **out**或 **-o** {*filedirectory*] **：** 输出文件名。  
   
-    - **culture**或 **-cul** {*culture*] **:** 输出程序集的区域设置。  
+    - **culture**或 **-cul** {*culture*] **：** 输出程序集的区域设置。  
   
-    - **转换**或 **-** 传输 {*转换 .csv*] **:** 已翻译或本地化的文件。  
+    - **转换**或传输 {*转换*文件] **：** 翻译或本地化**的**文件。  
   
-    - **asmpath**或 **-asmpath:** {*filedirectory*] **:** 如果代码包含自定义控件, 则必须将 asmpath 提供给自定义控件程序集。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]  
+    - **asmpath**或 **-asmpath：** {*filedirectory*] **：** 如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 代码包含自定义控件，则必须将**asmpath**提供给自定义控件程序集。  
   
-    - **nologo**显示没有徽标或版权信息。  
+    - **nologo：** 显示没有徽标或版权信息。  
   
-    - **详细**显示详细模式信息。  
+    - **verbose：** 显示详细模式信息。  
   
     > [!NOTE]
-    > 如果在运行该工具时需要选项列表, 请键入**LocBaml** , 然后按 enter。  
+    > 如果在运行该工具时需要选项列表，请键入**LocBaml** ，然后按 enter。  
   
 <a name="parse_dll"></a>   
 ## <a name="use-locbaml-to-parse-a-file"></a>使用 LocBaml 分析文件  
@@ -149,19 +149,19 @@ ms.locfileid: "69913669"
   
    下表显示了这些字段映射到 .csv 文件的分隔值的方式：  
   
-   |BAML 名称|资源键|类别|可读性|可修改性|注释|值|  
+   |BAML 名称|资源键|类别|可读性|可修改性|注释|“值”|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|忽略|FALSE|FALSE||#Text1;#Text2|
-   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|无|TRUE|TRUE||Hello World|
-   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|无|TRUE|TRUE||Goodbye World|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|忽略|false|false||#Text1;#Text2|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|None|true|true||Hello World|
+   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|None|true|true||Goodbye World|
   
-   请注意,**注释**字段的所有值不包含任何值;如果字段没有值, 则为空。 另请注意, 第一行中的项既不可读也不可修改, 并且具有 "Ignore" 作为其**类别**值, 所有这些都指示该值不可本地化。  
+   请注意，**注释**字段的所有值不包含任何值;如果字段没有值，则为空。 另请注意，第一行中的项既不可读也不可修改，并且具有 "Ignore" 作为其**类别**值，所有这些都指示该值不可本地化。  
   
-4. 为了便于发现已分析文件中的可本地化项 (特别是在大型文件中), 可以按**类别**、**可读性**和可**修改**性对项进行排序或筛选。 例如，你可以筛选出不可读且不可修改的值。  
+4. 为了便于发现已分析文件中的可本地化项（特别是在大型文件中），可以按**类别**、**可读性**和可**修改**性对项进行排序或筛选。 例如，你可以筛选出不可读且不可修改的值。  
   
 <a name="translate_loc_content"></a>   
 ## <a name="translate-the-localizable-content"></a>翻译可本地化的内容  
- 使用任何你可用的工具翻译提取的内容。 执行此操作的一个好办法是将这些资源写入 .csv 文件，并在 [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)] 中查看它们，对最后一列（值）作出翻译更改。  
+ 使用任何你可用的工具翻译提取的内容。 实现此目的的一种好方法是将资源写入 .csv 文件，并在 Microsoft Excel 中查看这些资源，对最后一列（值）进行转换。  
   
 <a name="merge_translations"></a>   
 ## <a name="use-locbaml-to-generate-a-new-resourcesdll-file"></a>使用 LocBaml 生成新的 .resources.dll 文件  
@@ -188,7 +188,7 @@ ms.locfileid: "69913669"
   
 7. 若要测试新的附属程序集，你需要更改应用程序将在其下运行的区域性设置。 可以通过两种方法执行此操作：  
   
-    - 更改操作系统的区域设置 ("**启动** &#124; **" "控制面板" "** &#124; **区域和语言选项**")。  
+    - 更改操作系统的区域设置（"**启动** &#124; **" "控制面板" "** &#124; **区域和语言选项**"）。  
   
     - 在你的应用程序中，将下列代码添加到 App.xaml.cs 中：  
   
@@ -199,7 +199,7 @@ ms.locfileid: "69913669"
 <a name="Some_Tips_for_Using_LocBaml"></a>   
 ## <a name="some-tips-for-using-locbaml"></a>使用 LocBaml 的一些提示  
   
-- 所有定义自定义控件的依赖程序集必须复制到 LocBaml 的本地目录，或安装到 GAC。 这是必需的, 因为本地化 API 在读取二进制 XAML (BAML) 时必须具有对依赖程序集的访问权限。  
+- 所有定义自定义控件的依赖程序集必须复制到 LocBaml 的本地目录，或安装到 GAC。 这是必需的，因为本地化 API 在读取二进制 XAML （BAML）时必须具有对依赖程序集的访问权限。  
   
 - 如果主程序集已签名，则生成的资源 DLL 也必须签名以进行加载。  
   

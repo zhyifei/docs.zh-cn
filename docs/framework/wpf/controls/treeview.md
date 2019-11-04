@@ -8,19 +8,19 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - hierarchical structure [WPF], TreeView control
 ms.assetid: 805c235c-0a0e-4e34-8d96-9dc3865cf2df
-ms.openlocfilehash: b353b413f7486990b6dd8ae5126809b27590ae3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb8d77bd3df848e6e9ed186cc621c02d36842175
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761322"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458286"
 ---
 # <a name="treeview"></a>TreeView
-<xref:System.Windows.Controls.TreeView>控件显示层次结构中使用可折叠节点的信息。  
+<xref:System.Windows.Controls.TreeView> 控件使用可折叠节点显示层次结构中的信息。  
   
- 下图是一种<xref:System.Windows.Controls.TreeView>具有嵌套的控件<xref:System.Windows.Controls.TreeViewItem>控件：  
+ 下图是具有嵌套 <xref:System.Windows.Controls.TreeViewItem> 控件的 <xref:System.Windows.Controls.TreeView> 控件的一个示例：  
   
- ![显示嵌套的 TreeViewItem 控件的图例。](./media/treeview/nested-treeviewitem-controls.jpg)  
+ ![显示嵌套的 TreeViewItem 控件的插图。](./media/treeview/nested-treeviewitem-controls.jpg)  
   
 ## <a name="in-this-section"></a>本节内容  
  [TreeView 概述](treeview-overview.md)  
@@ -31,5 +31,5 @@ ms.locfileid: "61761322"
   <xref:System.Windows.Controls.TreeViewItem>  
   
 ## <a name="related-sections"></a>相关章节  
- [数据绑定概述](../data/data-binding-overview.md)  
+ [数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)  
   [数据模板化概述](../data/data-templating-overview.md)

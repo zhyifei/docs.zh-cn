@@ -3,12 +3,12 @@ title: ML.NET 指标
 description: 了解用于评估 ML.NET 模型性能的指标
 ms.date: 04/29/2019
 author: natke
-ms.openlocfilehash: 45176902a195906e7b5cffd24fc9da839406ad9d
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: 362f2f382d050ff9ae246af2dffe3e15d22452eb
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410537"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460730"
 ---
 # <a name="model-evaluation-metrics-in-mlnet"></a>ML.NET 中的模型评估指标
 
@@ -47,7 +47,7 @@ ms.locfileid: "67410537"
 
 有关多类分类指标的更多详细信息，请阅读以下文章：
 
-- [Micro- and Macro-average of Precision, Recall and F-Score](http://rushdishams.blogspot.com/2011/08/micro-and-macro-average-of-precision.html)（查准率、查全率和 F 分数的微平均及宏平均）
+- [Micro- and Macro-average of Precision, Recall and F-Score](https://rushdishams.blogspot.com/2011/08/micro-and-macro-average-of-precision.html)（查准率、查全率和 F 分数的微平均及宏平均）
 - [Multiclass Classification with Imbalanced Dataset](https://towardsdatascience.com/machine-learning-multiclass-classification-with-imbalanced-data-set-29f6a177c1a)（不均衡数据集的多类分类）
 
 ## <a name="metrics-for-regression"></a>回归指标

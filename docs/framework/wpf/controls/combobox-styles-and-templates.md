@@ -9,65 +9,65 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: 8f29039185e7171d799543fb1d43e2fa460a97e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 29b5c351031b799c148c1e4f525e7bdcf96480bb
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912350"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460767"
 ---
 # <a name="combobox-styles-and-templates"></a>ComboBox 样式和模板
-本主题介绍的样式和模板的<xref:System.Windows.Controls.ComboBox>控件。 可以修改默认<xref:System.Windows.Controls.ControlTemplate>为控件提供唯一外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
+本主题介绍 <xref:System.Windows.Controls.ComboBox> 控件的样式和模板。 您可以修改默认 <xref:System.Windows.Controls.ControlTemplate> 以使控件具有独特的外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
   
-## <a name="combobox-parts"></a>组合框部分  
- 下表列出了用于命名的部件<xref:System.Windows.Controls.ComboBox>控件。  
+## <a name="combobox-parts"></a>ComboBox 部分  
+ 下表列出了 <xref:System.Windows.Controls.ComboBox> 控件的已命名部分。  
   
-|部件|类型|描述|  
+|部件|键入|描述|  
 |-|-|-|  
-|PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|包含文本的<xref:System.Windows.Controls.ComboBox>。|  
-|PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|下拉列表包含组合框中的项。|  
+|PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|包含 <xref:System.Windows.Controls.ComboBox>的文本。|  
+|PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|包含组合框中的项的下拉。|  
   
- 当您创建<xref:System.Windows.Controls.ControlTemplate>有关<xref:System.Windows.Controls.ComboBox>，模板可能包含<xref:System.Windows.Controls.ItemsPresenter>内<xref:System.Windows.Controls.ScrollViewer>。 (<xref:System.Windows.Controls.ItemsPresenter>显示在每个项<xref:System.Windows.Controls.ComboBox>;<xref:System.Windows.Controls.ScrollViewer>控件内实现滚动)。  如果<xref:System.Windows.Controls.ItemsPresenter>不是直接子级<xref:System.Windows.Controls.ScrollViewer>，必须授予<xref:System.Windows.Controls.ItemsPresenter>名称， `ItemsPresenter`。  
+ 为 <xref:System.Windows.Controls.ComboBox>创建 <xref:System.Windows.Controls.ControlTemplate> 时，模板可能包含 <xref:System.Windows.Controls.ScrollViewer>中的 <xref:System.Windows.Controls.ItemsPresenter>。 （<xref:System.Windows.Controls.ItemsPresenter> 显示 <xref:System.Windows.Controls.ComboBox>中的每一项; <xref:System.Windows.Controls.ScrollViewer> 允许在控件中滚动）。  如果 <xref:System.Windows.Controls.ItemsPresenter> 不是 <xref:System.Windows.Controls.ScrollViewer>的直接子级，则必须为 <xref:System.Windows.Controls.ItemsPresenter> 指定名称 `ItemsPresenter`。  
   
-## <a name="combobox-states"></a>组合框的状态  
- 下表列出了用于状态<xref:System.Windows.Controls.ComboBox>控件。  
+## <a name="combobox-states"></a>ComboBox 状态  
+ 下表列出了 <xref:System.Windows.Controls.ComboBox> 控件的状态。  
   
 |VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
 |普通|CommonStates|默认状态。|  
-|已禁用|CommonStates|已禁用控件。|  
-|MouseOver|CommonStates|鼠标指针位于<xref:System.Windows.Controls.ComboBox>控件。|  
+|Disabled|CommonStates|已禁用控件。|  
+|MouseOver|CommonStates|鼠标指针位于 <xref:System.Windows.Controls.ComboBox> 控件上。|  
 |已设定焦点|FocusStates|控件有焦点。|  
 |失去焦点|FocusStates|控件没有焦点。|  
-|FocusedDropDown|FocusStates|下拉列表<xref:System.Windows.Controls.ComboBox>具有焦点。|  
-|有效|ValidationStates|该控件使用<xref:System.Windows.Controls.Validation>类和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`已在控件有焦点。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`具有该控件没有焦点。|  
-|可编辑|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> 属性为 `true`。|  
-|无法编辑|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> 属性为 `false`。|  
+|FocusedDropDown|FocusStates|<xref:System.Windows.Controls.ComboBox> 的下拉箭头具有焦点。|  
+|有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `true` 控件没有焦点。|  
+|不可|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> 属性为 `true`。|  
+|不可编辑|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> 属性为 `false`。|  
   
 ## <a name="comboboxitem-parts"></a>ComboBoxItem 部件  
- <xref:System.Windows.Controls.ComboBoxItem>控件没有任何命名的部件。  
+ <xref:System.Windows.Controls.ComboBoxItem> 控件没有任何命名部分。  
   
 ## <a name="comboboxitem-states"></a>ComboBoxItem 状态  
- 下表列出了用于状态<xref:System.Windows.Controls.ComboBoxItem>控件。  
+ 下表列出了 <xref:System.Windows.Controls.ComboBoxItem> 控件的状态。  
   
 |VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
 |普通|CommonStates|默认状态。|  
-|已禁用|CommonStates|已禁用控件。|  
-|MouseOver|CommonStates|鼠标指针位于<xref:System.Windows.Controls.ComboBox>控件。|  
+|Disabled|CommonStates|已禁用控件。|  
+|MouseOver|CommonStates|鼠标指针位于 <xref:System.Windows.Controls.ComboBox> 控件上。|  
 |已设定焦点|FocusStates|控件有焦点。|  
 |失去焦点|FocusStates|控件没有焦点。|  
-|已选定|SelectionStates|当前选定项。|  
+|已选定|SelectionStates|当前已选定该项。|  
 |未选定|SelectionStates|未选定该项。|  
 |SelectedUnfocused|SelectionStates|该项已选定，但没有焦点。|  
-|有效|ValidationStates|该控件使用<xref:System.Windows.Controls.Validation>类和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`已在控件有焦点。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`具有该控件没有焦点。|  
+|有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `true` 控件没有焦点。|  
   
-## <a name="combobox-controltemplate-example"></a>组合框的 ControlTemplate 示例  
- 下面的示例演示如何定义<xref:System.Windows.Controls.ControlTemplate>为<xref:System.Windows.Controls.ComboBox>控件和关联的类型。  
+## <a name="combobox-controltemplate-example"></a>ComboBox System.windows.controls.controltemplate> 示例  
+ 下面的示例演示如何为 <xref:System.Windows.Controls.ComboBox> 控件和关联类型定义 <xref:System.Windows.Controls.ControlTemplate>。  
   
  [!code-xaml[ControlTemplateExamples#ComboBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#combobox)]  
   
@@ -83,5 +83,5 @@ ms.locfileid: "61912350"
 - <xref:System.Windows.Controls.ControlTemplate>
 - [控件样式和模板](control-styles-and-templates.md)
 - [控件自定义](control-customization.md)
-- [样式设置和模板化](styling-and-templating.md)
+- [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)

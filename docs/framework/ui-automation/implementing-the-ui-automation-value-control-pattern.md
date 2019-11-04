@@ -6,16 +6,16 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: 54991ce16aa905f4138013944fb8b5a317675d9b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 75cf628b6faad1f8c52a70c77baa4ede21160510
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043159"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458133"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>实现 UI 自动化 Value 控件模式
 > [!NOTE]
-> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题介绍了实现 <xref:System.Windows.Automation.Provider.IValueProvider>的准则和约定，包括有关事件和属性的信息。 本主题的结尾列出了指向其他参考资料的链接。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "71043159"
   
 - <xref:System.Windows.Automation.Provider.IValueProvider> 不支持检索格式设置信息或子字符串值。 在这些情况下，请实现 <xref:System.Windows.Automation.Provider.ITextProvider> 。  
   
-- <xref:System.Windows.Automation.Provider.IValueProvider>必须由控件（如下所示）中[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]的**颜色选取器**选择控件实现，该控件支持颜色值（例如 "黄色"）与等效的内部 RGB 结构之间的字符串映射。  
+- 必须通过 Microsoft Word （如下所示）中的 "**颜色选取器**" 选择控件（如下所示）来实现 <xref:System.Windows.Automation.Provider.IValueProvider>，该控件支持颜色值（例如 "黄色"）与等效的内部 RGB 结构之间的字符串映射。  
   
  ![突出显示黄色的颜色选取器。](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 颜色样本字符串映射的示例  
@@ -47,14 +47,14 @@ ms.locfileid: "71043159"
 ## <a name="required-members-for-ivalueprovider"></a>IValueProvider 必需的成员  
  实现 <xref:System.Windows.Automation.Provider.IValueProvider>需要以下属性和方法。  
   
-|必需的成员|成员类型|说明|  
+|必需的成员|成员类型|注意|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|Property|无|  
-|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|Property|无|  
-|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|方法|无|  
+|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|Property|None|  
+|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|Property|None|  
+|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|方法|None|  
   
 <a name="Exceptions"></a>   
-## <a name="exceptions"></a>Exceptions  
+## <a name="exceptions"></a>异常  
  提供程序必须引发以下异常。  
   
 |异常类型|条件|  

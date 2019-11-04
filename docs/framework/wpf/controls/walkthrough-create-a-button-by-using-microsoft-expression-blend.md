@@ -6,12 +6,12 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: 10342d97abc2e3c158f93171f5fe5cd560f9b7e4
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: e1fdc3ef51e8658e07bc555238229bed9116e165
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920256"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460098"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>演练：使用 Microsoft Expression Blend 创建按钮
 
@@ -255,7 +255,7 @@ ms.locfileid: "72920256"
 ## <a name="see-also"></a>请参阅
 
 - [使用 XAML 创建按钮](walkthrough-create-a-button-by-using-xaml.md)
-- [样式设置和模板化](styling-and-templating.md)
+- [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [动画概述](../graphics-multimedia/animation-overview.md)
 - [使用纯色和渐变进行绘制概述](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
 - [位图效果概述](../graphics-multimedia/bitmap-effects-overview.md)

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4a9a4b9bc15d2579837c3f4969a8d85293f10967
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: c54733a340b1855b3fc7b90ff2b5178fad8c5303
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015666"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460591"
 ---
-# <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>演练：使用 C 从 Windows 窗体控件继承\#
+# <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>演练：使用 C\# 从 Windows 窗体控件继承
 
-使用视觉C#对象, 可以通过*继承*来创建功能强大的自定义控件。 通过继承，可以创建不仅保留了标准 Windows 窗体控件的所有固有功能，而且还包含自定义功能的控件。 在本演练中，将创建一个名为 `ValueButton` 的简单继承控件。 此按钮将从标准 Windows 窗体<xref:System.Windows.Forms.Button>控件继承功能, 并将公开一个名`ButtonValue`为的自定义属性。
+使用视觉C#对象，可以通过*继承*来创建功能强大的自定义控件。 通过继承，可以创建不仅保留了标准 Windows 窗体控件的所有固有功能，而且还包含自定义功能的控件。 在本演练中，将创建一个名为 `ValueButton` 的简单继承控件。 此按钮将从标准 Windows 窗体 <xref:System.Windows.Forms.Button> 控件继承功能，并将公开名为 `ButtonValue`的自定义属性。
 
 ## <a name="create-the-project"></a>创建项目
 
@@ -28,7 +28,7 @@ ms.locfileid: "70015666"
 
 ### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a>创建 ValueButtonLib 控件库和 ValueButton 控件
 
-1. 在 Visual Studio 中, 创建一个新的**Windows 窗体控件库**项目, 并将其命名为**ValueButtonLib**。
+1. 在 Visual Studio 中，创建一个新的**Windows 窗体控件库**项目，并将其命名为**ValueButtonLib**。
 
      默认情况下，项目名称 `ValueButtonLib` 也会分配到根命名空间中。 根命名空间用于限定程序集中的组件名。 例如，如果两个程序集都提供名为 `ValueButton` 的组件，则可以使用 `ValueButtonLib.ValueButton` 指定 `ValueButton` 组件。 有关详细信息，请参阅[命名空间](../../../csharp/programming-guide/namespaces/index.md)。
 
@@ -36,16 +36,16 @@ ms.locfileid: "70015666"
 
 3. 在“解决方案资源管理器”中，右键单击“ValueButton.cs”并选择“查看代码”。
 
-4. 找到语句行, `public partial class ValueButton`并将此控件继承<xref:System.Windows.Forms.UserControl>的类型从更改为<xref:System.Windows.Forms.Button>。 `class` 这允许继承的控件继承<xref:System.Windows.Forms.Button>控件的所有功能。
+4. 找到 `class` 语句行 `public partial class ValueButton`，然后将此控件继承的类型从 <xref:System.Windows.Forms.UserControl> 更改为 <xref:System.Windows.Forms.Button>。 这允许您的继承控件继承 <xref:System.Windows.Forms.Button> 控件的所有功能。
 
 5. 在“解决方案资源管理器”中打开“ValueButton.cs”节点，以显示设计器生成的代码文件 **ValueButton.Designer.cs**。 在“代码编辑器”中打开此文件。
 
-6. 找到方法并删除<xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>分配属性的行。 `InitializeComponent` 此属性在<xref:System.Windows.Forms.Button>控件中不存在。
+6. 找到 `InitializeComponent` 方法，并删除分配 <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> 属性的行。 <xref:System.Windows.Forms.Button> 控件中不存在此属性。
 
 7. 在“文件”菜单中，选择“全部保存”以保存项目。
 
     > [!NOTE]
-    > 可视化设计器不再可用。 <xref:System.Windows.Forms.Button>由于控件执行其自己的绘制, 因此无法在设计器中修改其外观。 它的可视化表示形式将与它继承自的类 (即<xref:System.Windows.Forms.Button>) 的可视化表示形式完全相同, 除非在代码中进行了修改。 但仍然可以向设计器图面添加不含 UI 元素的组件。
+    > 可视化设计器不再可用。 由于 <xref:System.Windows.Forms.Button> 控件执行其自己的绘制，因此无法在设计器中修改其外观。 除非在代码中修改，否则其视觉对象表示形式将与其继承的类（即 <xref:System.Windows.Forms.Button>）完全相同。 但仍然可以向设计器图面添加不含 UI 元素的组件。
 
 ## <a name="add-a-property-to-your-inherited-control"></a>向继承的控件添加属性
 
@@ -95,7 +95,7 @@ ms.locfileid: "70015666"
 
 2. 在“Visual C#”节点下选择“Windows”节点，再单击“Windows 窗体应用程序”。
 
-3. 在 "**名称**" 框中, 输入**Test**。
+3. 在 "**名称**" 框中，输入**Test**。
 
 4. 在“解决方案资源管理器”中，右键单击测试项目的“引用”节点，然后从快捷菜单上选择“添加引用”以显示“添加引用”对话框。
 
@@ -107,17 +107,17 @@ ms.locfileid: "70015666"
 
 1. 在“解决方案资源管理器”中，右键单击“Form1.cs”，然后从快捷菜单中选择“视图设计器”。
 
-2. 在 "**工具箱**" 中, 选择 " **ValueButtonLib 组件**"。 双击“ValueButton”。
+2. 在 "**工具箱**" 中，选择 " **ValueButtonLib 组件**"。 双击“ValueButton”。
 
      窗体上将出现“ValueButton”。
 
 3. 右键单击“ValueButton”，并从快捷菜单中选择“属性”。
 
-4. 在“属性”窗口中，检查该控件的属性。 请注意, 它们与标准按钮公开的属性相同, 不同之处在于还有一个附加属性 ButtonValue。
+4. 在“属性”窗口中，检查该控件的属性。 请注意，它们与标准按钮公开的属性相同，不同之处在于还有一个附加属性 ButtonValue。
 
 5. 将**ButtonValue**属性设置为**5**。
 
-6. 在 "**工具箱**" 的 "**所有 Windows 窗体**" 选项卡中 , 双击 " <xref:System.Windows.Forms.Label>标签" 将控件添加到窗体。
+6. 在 "**工具箱**" 的 "**所有 Windows 窗体**" 选项卡中，双击 "**标签**"，将 <xref:System.Windows.Forms.Label> 控件添加到窗体。
 
 7. 将标签重新定位到窗体的中央。
 
@@ -143,5 +143,5 @@ ms.locfileid: "70015666"
 
 ## <a name="see-also"></a>请参阅
 
-- [如何：在 "选择工具箱项" 对话框中显示控件](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [演练：使用视觉对象创作复合控件C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [如何：在“选择工具箱项”对话框中显示控件](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [演练：使用 Visual C# 创作复合控件](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
