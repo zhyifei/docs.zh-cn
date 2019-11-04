@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: a83253e37d3afde9ed8266ec1195c9726f6462cc
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 8a2904d02b34058a87a77bbedbed3ccba4c80c58
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291591"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421575"
 ---
 # <a name="tour-of-net"></a>.NET 教程
 
@@ -37,7 +37,7 @@ Microsoft 积极开发和支持三种 .NET 语言：C#、F# 和 Visual Basic (VB
 
 ## <a name="automatic-memory-management"></a>自动内存管理
 
-.NET 使用[垃圾回收 (GC)](garbagecollection/index.md) 为程序提供自动内存管理。 GC 以一种“懒散”的方式进行内存管理，它优先考虑应用吞吐量，而不是立即回收内存。 要了解有关 .NET GC 的详细信息，请查看[垃圾回收 (GC) 的基础](garbagecollection/fundamentals.md)。
+.NET 使用[垃圾回收 (GC)](garbage-collection/index.md) 为程序提供自动内存管理。 GC 以一种“懒散”的方式进行内存管理，它优先考虑应用吞吐量，而不是立即回收内存。 要了解有关 .NET GC 的详细信息，请查看[垃圾回收 (GC) 的基础](garbage-collection/fundamentals.md)。
 
 以下两行代码都会分配内存：
 

@@ -6,21 +6,19 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dbb196b5beb2fc04ff85f2924356699fd83f3ea6
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3e87ba8c9442c4bba24e4e569cd20bdbdc76f6ec
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833663"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457991"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 部署指南（针对开发人员）
 本主题为想要随自己的应用一起安装任何 .NET Framework 版本（从 .NET Framework 4.5 到 [!INCLUDE[net_current](../../../includes/net-current-version.md)]）的开发人员提供了相关信息。
 
 有关下载链接，请参见[可再发行组件包](#redistributable-packages)部分。 你还可从这些 Microsoft 下载中心页面下载可再发行组件包和语言包：
 
-- 适用于所有操作系统的 .NET Framework 4.8（[Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=2085155)或[脱机安装程序](https://go.microsoft.com/fwlink/?linkid=2088631)）
+- 适用于所有操作系统的 .NET Framework 4.8（[Web 安装程序](https://go.microsoft.com/fwlink/?LinkId=2085155)或[脱机安装程序](https://go.microsoft.com/fwlink/?linkid=2088631)）
 
 - 适用于所有操作系统的 .NET Framework 4.7.2（[Web 安装程序](https://go.microsoft.com/fwlink/?LinkId=863262) 或[脱机安装程序](https://go.microsoft.com/fwlink/p/?LinkId=863265)）
 
@@ -170,7 +168,7 @@ InstallAware 从单个源生成 Windows 应用 (APPX)、Windows Installer (MSI)�
 
 ### <a name="windows-installer-xml-wix-deployment"></a>Windows Installer XML (WiX) 部署
 
-Windows Installer XML (WiX) 工具集通过 XML 源代码生成 Windows 安装包。 WiX 支持一种命令行环境，可以将其集成到你的生成过程中，以便生成 MSI 和 MSM 安装包。 通过使用 WiX，你可以 [将 .NET Framework 指定为系统必备组件](http://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html)，或 [创建链接器](http://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) 来完全控制 .NET Framework 的部署体验。 有关 WiX 的更多信息，请参阅 [Windows Installer XML (WiX) 工具集](http://wixtoolset.org/) 。
+Windows Installer XML (WiX) 工具集通过 XML 源代码生成 Windows 安装包。 WiX 支持一种命令行环境，可以将其集成到你的生成过程中，以便生成 MSI 和 MSM 安装包。 通过使用 WiX，你可以 [将 .NET Framework 指定为系统必备组件](https://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html)，或 [创建链接器](https://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) 来完全控制 .NET Framework 的部署体验。 有关 WiX 的更多信息，请参阅 [Windows Installer XML (WiX) 工具集](https://wixtoolset.org/) 。
 
 <a name="installing_manually"></a>
 

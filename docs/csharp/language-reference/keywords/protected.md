@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: a0420dd10d81c4ae893ab0447244a611091ed7b0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f54c3f36e5aeb428815d1c49cd797e559d156ea7
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69601972"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422569"
 ---
 # <a name="protected-c-reference"></a>protected（C# 参考）
 
@@ -49,7 +49,7 @@ ms.locfileid: "69601972"
 
 ## <a name="c-language-specification"></a>C# 语言规范  
 
-有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的[声明的可访问性](~/_csharplang/spec/basic-concepts.md#declared-accessibility)。 该语言规范是 C# 语法和用法的权威资料。
+有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的[声明的可访问性](~/_csharplang/spec/basic-concepts.md#declared-accessibility)。 该语言规范是 C# 语法和用法的权威资料。
 
 ## <a name="see-also"></a>请参阅
 
@@ -58,7 +58,7 @@ ms.locfileid: "69601972"
 - [C# 关键字](index.md)
 - [访问修饰符](access-modifiers.md)
 - [可访问性级别](accessibility-levels.md)
-- [修饰符](modifiers.md)
+- [修饰符](index.md)
 - [public](public.md)
 - [private](private.md)
 - [internal](internal.md)

@@ -17,17 +17,17 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 013e1960e6c5721e0bd7ce6998848ddce15a4e4d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 361101258caca763502f92d897866c75bc8d7da2
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924395"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418725"
 ---
 # <a name="basic-linq-query-operations-c"></a>基本 LINQ 查询操作 (C#)
 本主题简要介绍了 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式和一些在查询中执行的典型操作。 下面各主题中提供了更具体的信息：  
   
- [LINQ 查询表达式](../../linq-query-expressions/index.md)  
+ [LINQ 查询表达式](../../../linq/index.md)  
   
  [标准查询运算符概述 (C#)](./standard-query-operators-overview.md)  
   
@@ -101,7 +101,7 @@ from order in Customer.Orders...
   
 ## <a name="see-also"></a>请参阅
 
-- [LINQ 查询表达式](../../linq-query-expressions/index.md)
+- [LINQ 查询表达式](../../../linq/index.md)
 - [演练：用 C# 编写查询](./walkthrough-writing-queries-linq.md)
 - [查询关键字 (LINQ)](../../../language-reference/keywords/query-keywords.md)
 - [匿名类型](../../classes-and-structs/anonymous-types.md)

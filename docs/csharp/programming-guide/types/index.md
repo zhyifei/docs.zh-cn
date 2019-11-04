@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: a5ccd0e9e0e3e5bedad06a619be115c362b38e0d
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 5c5586c2ee41b12e9b5706603b4c2f62207566ed
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392155"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417722"
 ---
 # <a name="types-c-programming-guide"></a>类型（C# 编程指南）
 
@@ -74,7 +74,7 @@ C# 提供了一组标准的内置数值类型来表示整数、浮点值、布�
 
 对于 .NET 中的类型系统，请务必了解以下两个基本要点：
 
-- 它支持继承原则。 类型可以派生自其他类型（称为*基类型*）。 派生类型继承（有一些限制）基类型的方法、属性和其他成员。 基类型可以继而从某种其他类型派生，在这种情况下，派生类型继承其继承层次结构中的两种基类型的成员。 所有类型（包括 <xref:System.Int32?displayProperty=nameWithType>C# 关键字：[int](../../language-reference/builtin-types/integral-numeric-types.md)等内置数值类型）最终都派生自单个基类型，即 <xref:System.Object?displayProperty=nameWithType>（C# 关键字：[object](../../language-reference/keywords/object.md)。 这样的统一类型层次结构称为[通用类型系统](../../../standard/base-types/common-type-system.md) (CTS)。 若要详细了解 C# 中的继承，请参阅[继承](../classes-and-structs/inheritance.md)。
+- 它支持继承原则。 类型可以派生自其他类型（称为*基类型*）。 派生类型继承（有一些限制）基类型的方法、属性和其他成员。 基类型可以继而从某种其他类型派生，在这种情况下，派生类型继承其继承层次结构中的两种基类型的成员。 所有类型（包括 <xref:System.Int32?displayProperty=nameWithType>C# 关键字：[int](../../language-reference/builtin-types/integral-numeric-types.md)等内置数值类型）最终都派生自单个基类型，即 <xref:System.Object?displayProperty=nameWithType>（C# 关键字：[object](../../language-reference/builtin-types/reference-types.md)。 这样的统一类型层次结构称为[通用类型系统](../../../standard/base-types/common-type-system.md) (CTS)。 若要详细了解 C# 中的继承，请参阅[继承](../classes-and-structs/inheritance.md)。
 
 - CTS 中的每种类型被定义为值类型或引用类型。   这包括 .NET 类库中的所有自定义类型以及你自己的用户定义类型。 使用 [struct](../../language-reference/keywords/struct.md) 关键字定义的类型是值类型；所有内置数值类型都是 `structs`。 使用 [class](../../language-reference/keywords/class.md) 关键字定义的类型是引用类型。 引用类型和值类型遵循不同的编译时规则和运行时行为。
 
@@ -126,7 +126,7 @@ char c = 'Z';
 
 ### <a name="reference-types"></a>引用类型
 
-定义为[类](../../language-reference/keywords/class.md)、[委托](../../language-reference/keywords/delegate.md)、数组或[接口](../../language-reference/keywords/interface.md)的类型是*引用类型*。 在运行时，当声明引用类型的变量时，该变量会一直包含值 [null](../../language-reference/keywords/null.md)，直至使用 [new](../../language-reference/operators/new-operator.md) 运算符显式创建对象，或者为该变量分配已经在其他位置使用 `new` 创建的对象，如下所示：
+定义为[类](../../language-reference/keywords/class.md)、[委托](../../language-reference/builtin-types/reference-types.md)、数组或[接口](../../language-reference/keywords/interface.md)的类型是*引用类型*。 在运行时，当声明引用类型的变量时，该变量会一直包含值 [null](../../language-reference/keywords/null.md)，直至使用 [new](../../language-reference/operators/new-operator.md) 运算符显式创建对象，或者为该变量分配已经在其他位置使用 `new` 创建的对象，如下所示：
 
 ```csharp
 MyClass mc = new MyClass();
@@ -166,7 +166,7 @@ stringList.Add("String example");
 stringList.Add(4);
 ```
 
-使用类型参数，可以重用同一个类来保留任何类型的元素，而无需将每个元素转换成[对象](../../language-reference/keywords/object.md)。 泛型集合类称为*强类型集合*，因为编译器知道集合元素的具体类型，并能在编译时抛出错误，例如当尝试向上面示例中的 `stringList` 对象添加整数时。 有关详细信息，请参阅[泛型](../generics/index.md)。
+使用类型参数，可以重用同一个类来保留任何类型的元素，而无需将每个元素转换成[对象](../../language-reference/builtin-types/reference-types.md)。 泛型集合类称为*强类型集合*，因为编译器知道集合元素的具体类型，并能在编译时抛出错误，例如当尝试向上面示例中的 `stringList` 对象添加整数时。 有关详细信息，请参阅[泛型](../generics/index.md)。
 
 ## <a name="implicit-types-anonymous-types-and-nullable-value-types"></a>隐式类型、匿名类型和可以为 null 的值类型
 
@@ -178,7 +178,7 @@ stringList.Add(4);
 
 ## <a name="related-sections"></a>相关章节
 
-有关详细信息，请参阅下列主题：
+相关详细信息，请参阅以下主题：
 
 - [强制转换和类型转换](./casting-and-type-conversions.md)
 

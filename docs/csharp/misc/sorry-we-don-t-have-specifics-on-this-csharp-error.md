@@ -677,12 +677,12 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 68ea00c6f5f97e61adaeb53aed8464cf874814e7
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: bc19224f980091e6046494fd4d708af2b03041da
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196226"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419702"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>很抱歉，我们没有关于此 C# 错误的具体信息
 
@@ -695,7 +695,7 @@ ms.locfileid: "73196226"
 提供 QA 网站，以了解有关视觉对象C#的问题和问题。  
 
  另请参见：  
- [为 Visual C# 程序员提供的附加资源](../getting-started/additional-resources.md)  
+ [为 Visual C# 程序员提供的附加资源](../getting-started/index.md)  
   
 ## <a name="see-also"></a>请参阅
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e6bb1d53cbe1883b8faef75bd22942bd4f65a5e6
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 84b6bfc32f5a73597b227098e5aee1e3450cf85b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71181800"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198352"
 ---
 ### <a name="switchsystemwindowsformsenablevisualstylevalidation-compatibility-switch-not-supported"></a>不支持 Switch.System.Windows.Forms.EnableVisualStyleValidation 兼容性开关
 
@@ -12,7 +12,7 @@ ms.locfileid: "71181800"
 
 #### <a name="change-description"></a>更改描述
 
-在 .NET Framework 中，`Switch.System.Windows.Forms.EnableVisualStyleValidation` 兼容性开关使得应用程序可选择不验证以数值格式提供的视觉样式。 
+在 .NET Framework 中，`Switch.System.Windows.Forms.EnableVisualStyleValidation` 兼容性开关使得应用程序可选择不验证以数值格式提供的视觉样式。
 
 .NET Core 中尚不支持 `Switch.System.Windows.Forms.EnableVisualStyleValidation` 开关。
 

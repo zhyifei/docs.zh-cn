@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: d752f4815de16daa466302881116e80aceec6edf
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 76fa13d4a12362d04c832fd59ee69db5a6811029
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040905"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454458"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>如何：绑定到 Web 服务
 此示例演示如何绑定到由 Web 服务方法调用返回的对象。  
@@ -47,6 +47,6 @@ ms.locfileid: "73040905"
   
 ## <a name="see-also"></a>请参阅
 
-- [数据绑定概述](data-binding-overview.md)
+- [数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)
 - [绑定源概述](binding-sources-overview.md)
 - [让数据可供 XAML 中的绑定使用](how-to-make-data-available-for-binding-in-xaml.md)
