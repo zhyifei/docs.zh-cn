@@ -13,14 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4e743f32637a7e15b4b017bbe30aa02ad8388fbe
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d8546980dd0cf58ca7c095750f2749d5a6bc7723
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975961"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084216"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>正则表达式示例：扫描 HREF
 下面的示例搜索输入字符串并显示所有 href="…" 的值和它们在字符串中的位置。  

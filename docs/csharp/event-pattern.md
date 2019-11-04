@@ -2,13 +2,14 @@
 title: 标准 .NET 事件模式
 description: 介绍 .NET 事件模式，如何创建标准事件源以及订阅并处理代码中的标准事件。
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: cd1ead318529d1afc5b27ff8710cebcaae9b7bc3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: a050dc9a11470ff3b71488ce2ab4b92e607aa9b0
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062968"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037169"
 ---
 # <a name="standard-net-event-patterns"></a>标准 .NET 事件模式
 

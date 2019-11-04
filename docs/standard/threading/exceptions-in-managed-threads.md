@@ -8,14 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 689ee44980a4a41b6d46ed9b68306c1b08c49586
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c3215fd42e8cf6d6427d23f94c14db4230ddd02
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960061"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138065"
 ---
 # <a name="exceptions-in-managed-threads"></a>托管线程中的异常
 从 .NET Framework 2.0 版开始，公共语言运行时允许线程中的多数未经处理的异常正常继续。 在多数情况下，这意味着未经处理的异常会导致应用程序终止。  

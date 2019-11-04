@@ -10,14 +10,12 @@ helpviewer_keywords:
 - formatting strings [.NET Framework], how-to topics
 - strings [.NET Framework], formatting
 ms.assetid: 36e7e096-4e6c-4cf2-9ab6-68073026ea0e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5073042d578573e904c185bbc18486a82e6be678
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 63ba008ab7c6f1b7f7466ef60f7597a8df9bd8fc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633355"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084327"
 ---
 # <a name="performing-formatting-operations"></a>执行格式设置操作
 以下主题提供用于执行特定格式设置操作的分步说明。  

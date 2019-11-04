@@ -5,14 +5,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6427f7d005c43ef9e83387e865f71009b683a7c4
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: d44fb44db35b60f99583c20432c5998573298044
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972653"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107215"
 ---
 # <a name="assembly-location"></a>程序集位置
 程序集的位置决定公共语言运行时是否可以在引用该程序集时找到它，也可以决定是否可与其他程序集共享该程序集。 可以在以下位置部署程序集：  

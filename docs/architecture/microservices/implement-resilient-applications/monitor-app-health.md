@@ -2,12 +2,12 @@
 title: 运行状况监视
 description: 了解实现运行状况监视的一种方法。
 ms.date: 01/07/2019
-ms.openlocfilehash: 3b81537ca8e0c5cc7ce15ab64ab3235b699dc7a9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2d43efa7b6cfb855a033ee4d766c64c2472ceb36
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040060"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094069"
 ---
 # <a name="health-monitoring"></a>运行状况监视
 
@@ -110,7 +110,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     //…
     app.UseHealthChecks("/hc");
     //…
-} 
+}
 ```
 
 调用 `<yourmicroservice>/hc` 终结点时，它将运行 Startup 类的 `AddHealthChecks()` 方法中配置的所有运行状况检查，并显示结果。

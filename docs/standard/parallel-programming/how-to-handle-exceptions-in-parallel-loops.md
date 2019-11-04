@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to handle exceptions
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ffc522b2ab13ae2098c01e6716e00aef5bef8e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ae2fadd68cb211285e31e4ee990b6fb288056091
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962498"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091554"
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a>如何：处理并行循环中的异常
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 重载没有任何用于处理可能引发的异常的特殊机制。 在这一方面，它们类似于常规 `for` 和 `foreach` 循环（在 Visual Basic 中为 `For` 和 `For Each`）；未处理的异常会导致循环立即终止。  

@@ -1,13 +1,14 @@
 ---
 title: 属性
 description: 了解 C# 属性，包括验证功能、计算值、迟缓计算及属性更改通知。
+ms.technology: csharp-fundamentals
 ms.date: 04/25/2018
-ms.openlocfilehash: 6638ae74516d7546882c8a380eed9b03ff3d18e9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bda8a4f58f71b57248296dd4ba9f9bf4cbed40d4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587398"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039747"
 ---
 # <a name="properties"></a>属性
 

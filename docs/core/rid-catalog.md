@@ -2,16 +2,16 @@
 title: .NET Core 运行时标识符 (RID) 目录
 description: 了解运行时标识符 (RID) 及如何在 .NET Core 中使用 RID。
 ms.date: 02/22/2019
-ms.openlocfilehash: 0d03e39c755b43e145edf5efe48422cbae7abcab
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: e6bc3f75858d4b67cc8598e49ff4ad75521f16d6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745737"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100922"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 目录
 
-RID 是运行时标识符的缩写。 RID 值用于标识应用程序运行所在的目标平台。
+RID 是运行时标识符  的缩写。 RID 值用于标识应用程序运行所在的目标平台。
 .NET 包使用它们来表示 NuGet 包中特定于平台的资产。 以下值是 RID 的示例：`linux-x64`、`ubuntu.14.04-x64`、`win7-x64` 或 `osx.10.12-x64`。
 对于具有本机依赖项的包，RID 将指定在其中可以还原包的平台。
 
@@ -31,7 +31,7 @@ RID 是运行时标识符的缩写。 RID 值用于标识应用程序运行所�
 
 - `[version]` 是操作系统版本，使用的格式是以点 (`.`) 分隔的版本号。 例如 `15.10`。
 
-  - 版本不应为营销版本，因为它们通常代表该操作系统的多个离散版本，且具有不同的平台 API 外围应用。
+  - 版本不应  为营销版本，因为它们通常代表该操作系统的多个离散版本，且具有不同的平台 API 外围应用。
 
 - `[architecture]` 是处理器体系结构。 例如：`x86`、`x64`、`arm` 或 `arm64`。
 
@@ -39,7 +39,7 @@ RID 是运行时标识符的缩写。 RID 值用于标识应用程序运行所�
 
 ## <a name="rid-graph"></a>RID 图表
 
-RID 图表或运行时回退图表是互相兼容的 RID 列表。 [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) 包中定义了 RID。 可以在 CoreFX 存储库的 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 文件中查看支持的 RID 列表和 RID 图表。 在此文件中，可以看到除基 RID 以外的所有 RID 均包含 `"#import"` 语句。 这些语句指示的是兼容的 RID。
+RID 图表或运行时回退图表是互相兼容的 RID 列表。 [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) 包中定义了 RID。 可以在 CoreFX 存储库的 [runtime.json  ](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) 文件中查看支持的 RID 列表和 RID 图表。 在此文件中，可以看到除基 RID 以外的所有 RID 均包含 `"#import"` 语句。 这些语句指示的是兼容的 RID。
 
 NuGet 还原包时，它将尝试找到指定运行时的完全匹配项。
 如果未找到完全匹配项，NuGet 将返回此图表，直至它根据 RID 图表找到最相近的兼容系统。
@@ -54,7 +54,7 @@ NuGet 还原包时，它将尝试找到指定运行时的完全匹配项。
 
 上述 RID 指定 `osx.10.12-x64` 导入 `osx.10.11-x64`。 因此，当 NuGet 还原包时，它将尝试找到包中的 `osx.10.12-x64` 的完全匹配项。 例如，如果 NuGet 无法找到特定的运行时，可以还原指定 `osx.10.11-x64` 运行时的包。
 
-以下示例演示了 runtime.json 文件中定义的另一个略大的 RID 图表：
+以下示例演示了 runtime.json  文件中定义的另一个略大的 RID 图表：
 
 ```
     win7-x64    win7-x86
@@ -72,7 +72,7 @@ NuGet 还原包时，它将尝试找到指定运行时的完全匹配项。
 
 使用 RID 时，必须牢记以下几个注意事项：
 
-- RID 是不透明字符串，应将其视为黑盒。
+- RID 是不透明字符串  ，应将其视为黑盒。
 - 请勿以编程方式生成 RID。
 - 使用已为平台定义的 RID。
 - RID 必须具有特定性，因此请勿通过实际的 RID 值假定任何情况。
@@ -80,7 +80,7 @@ NuGet 还原包时，它将尝试找到指定运行时的完全匹配项。
 ## <a name="using-rids"></a>使用 RID
 
 若要使用 RID，必须知道有哪些 RID。 新值将定期添加到该平台。
-若要获取最新的完整版，请参阅 CoreFX 存储库上的 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 文件。
+若要获取最新的完整版，请参阅 CoreFX 存储库上的 [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) 文件。
 
 .NET Core 2.0 SDK 引入了可移植 RID 的概念。 它们是添加到 RID 图表的新值，并且未与特定版本或 OS 发行版本关联，是使用 .NET Core 2.0 及更高版本的首选值。 它们在处理多个 Linux 发行版时特别有用，因为大多数发行版 RID 都映射到可移植的 RID。
 
@@ -88,7 +88,7 @@ NuGet 还原包时，它将尝试找到指定运行时的完全匹配项。
 
 ## <a name="windows-rids"></a>Windows RID
 
-仅列出了公共值。 若要获取最新的完整版，请参阅 CoreFX 存储库上的 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 文件。
+仅列出了公共值。 若要获取最新的完整版，请参阅 CoreFX 存储库上的 [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) 文件。
 
 - 可移植（.NET Core 2.0 或更高版本）
   - `win-x64`
@@ -112,7 +112,7 @@ NuGet 还原包时，它将尝试找到指定运行时的完全匹配项。
 
 ## <a name="linux-rids"></a>Linux RID
 
-仅列出了公共值。 若要获取最新的完整版，请参阅 CoreFX 存储库上的 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 文件。 运行以下未列出的发行版的设备可能适用于其中一个可移植 RID。 例如，可以将运行未列出的 Linux 发行版的 Raspberry Pi 设备定向为使用 `linux-arm`。
+仅列出了公共值。 若要获取最新的完整版，请参阅 CoreFX 存储库上的 [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) 文件。 运行以下未列出的发行版的设备可能适用于其中一个可移植 RID。 例如，可以将运行未列出的 Linux 发行版的 Raspberry Pi 设备定向为使用 `linux-arm`。
 
 - 可移植（.NET Core 2.0 或更高版本）
   - `linux-x64`（大多数桌面发行版，如 CentOS、Debian、Fedora、Ubuntu 及派生版本）
@@ -130,7 +130,7 @@ NuGet 还原包时，它将尝试找到指定运行时的完全匹配项。
 
 ## <a name="macos-rids"></a>macOS RID
 
-macOS RID 使用较早的“OSX”品牌。 仅列出了公共值。 若要获取最新的完整版，请参阅 CoreFX 存储库上的 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 文件。
+macOS RID 使用较早的“OSX”品牌。 仅列出了公共值。 若要获取最新的完整版，请参阅 CoreFX 存储库上的 [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) 文件。
 
 - 可移植（.NET Core 2.0 或更高版本）
   - `osx-x64`（最低 OS 版本为 macOS 10.12 Sierra）
@@ -149,4 +149,4 @@ macOS RID 使用较早的“OSX”品牌。 仅列出了公共值。 若要获�
 
 ## <a name="see-also"></a>请参阅
 
-- [运行时 ID](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
+- [运行时 ID](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/readme.md)

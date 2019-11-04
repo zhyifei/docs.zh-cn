@@ -2,12 +2,12 @@
 title: 使用 RabbitMQ 实现用于开发或测试环境的事件总线
 description: 容器化 .NET 应用程序的 .NET 微服务架构 | 使用 RabbitMQ 实现用于开发或测试环境的集成事件的事件总线消息传递。
 ms.date: 10/02/2018
-ms.openlocfilehash: af02208bb9e680403a04377ccb740a8b15be29bc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7d51054d444ce1e35fabab94cc803e74dbd96f19
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675884"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089739"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>使用 RabbitMQ 实现用于开发或测试环境的事件总线
 
@@ -35,7 +35,7 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 ## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>使用 RabbitMQ 实现一个简单的发布方法
 
-下面的代码是 RabbitMQ 的事件总线实现的简化版，用以展示整个方案。 你真的不必以这种方式处理连接。 要查看完整的实现，请参阅 [dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) 存储库中的实际代码。 
+下面的代码是 RabbitMQ 的事件总线实现的简化版，用以展示整个方案。 你真的不必以这种方式处理连接。 要查看完整的实现，请参阅 [dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) 存储库中的实际代码。
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -82,7 +82,7 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
         where TH : IIntegrationEventHandler<T>
     {
         var eventName = _subsManager.GetEventKey<T>();
-        
+
         var containsKey = _subsManager.HasSubscriptionsForEvent(eventName);
         if (!containsKey)
         {

@@ -11,14 +11,12 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b40cb5d5d629ea7a3cb019be42b42a1072572311
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5002d7a180e480b0e1d38f1c1180fe565dc5e1dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044376"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105022"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe（管理强类型类生成器）
 利用管理强类型类生成器工具，你可以为指定的 Windows Management Instrumentation (WMI) 类快速生成早期绑定的托管类。 生成的类简化了访问 WMI 类的实例所必须编写的代码。  

@@ -8,17 +8,15 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 053726b200b73956099ff9274cc8f63f21d8fc64
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: f1913f8c41ba4a7b54f7abcdfb97400503da8ac5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972647"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107155"
 ---
 # <a name="assembly-manifest"></a>程序集清单
-每一程序集，无论是静态的还是动态的，均包含描述该程序集中各元素彼此如何关联的数据集合。 程序集清单就包含这些程序集元数据。 程序集清单包含指定该程序集的版本要求和安全标识所需的所有元数据，以及定义该程序集的范围和解析对资源和类的引用所需的全部元数据。 程序集清单可以存储在具有 Microsoft 中间语言 (MSIL) 代码的 PE 文件（.exe 或 .dll）中，也可存储在只包含程序集清单信息的独立 PE 文件中。  
+每一程序集，无论是静态的还是动态的，均包含描述该程序集中各元素彼此如何关联的数据集合。 程序集清单就包含这些程序集元数据。 程序集清单包含指定该程序集的版本要求和安全标识所需的所有元数据，以及定义该程序集的范围和解析对资源和类的引用所需的全部元数据。 程序集清单可以存储在具有 Microsoft 中间语言 (MSIL) 代码的 PE 文件（.exe 或 .dll）中，也可存储在只包含程序集清单信息的独立 PE 文件中   。  
   
  以下插图显示了清单的不同存储方法。  
   

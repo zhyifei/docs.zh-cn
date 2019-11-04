@@ -2,13 +2,14 @@
 title: 在 C# 中使用默认接口方法安全地更新接口
 description: 本高级教程探讨了如何安全地向现有接口定义添加新功能，而不破坏实现该接口的所有类和结构。
 ms.date: 05/06/2019
+ms.technlogy: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 71fce2594dbf5ef3175a6b9bdf4e6edba754bb84
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: b9194b769a3ba6d2906d6177c2363d6093b85188
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275985"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039253"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>教程：在 C# 8.0 中使用默认接口方法更新接口
 

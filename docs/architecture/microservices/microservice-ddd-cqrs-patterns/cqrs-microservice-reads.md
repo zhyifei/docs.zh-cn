@@ -2,12 +2,12 @@
 title: 在 CQRS 微服务中实现读取/查询
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解如何使用 Dapper 在 eShopOnContainers 中的订购微服务上实现 CQRS 查询端。
 ms.date: 10/08/2018
-ms.openlocfilehash: c39a42b7f5200208a0f812665a2d1c87b4433ba9
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 6541a0cb7ce8ac3946e119483308d91158bdb522
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275787"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094068"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>在 CQRS 微服务中实现读取/查询
 
@@ -35,7 +35,7 @@ ms.locfileid: "72275787"
 
 Viewmodel 可以是定义在类中的静态类型。 或者可以根据执行的查询对其进行动态创建（如订单微服务中所实现的），开发人员可灵活处理。
 
-## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>使用 Dapper 作为微型 ORM 以执行查询 
+## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>使用 Dapper 作为微型 ORM 以执行查询
 
 可使用任何微型 ORM、Entity Framework Core 甚至普通的 ADO.NET 进行查询。 在示例应用程序中，选择 Dapper 用于 eShopOnContainers 中的订单微服务，这是常用微型 ORM 的一个良好示例。 由于它是一个非常轻量化的框架，因此能够以极佳的性能运行普通 SQL 查询。 使用 Dapper，可写入一个可访问和联接多个表的 SQL 查询。
 
@@ -119,16 +119,16 @@ public class OrderQueries : IOrderQueries
         {
             connection.Open();
             return await connection.QueryAsync<OrderSummary>(
-                  @"SELECT o.[Id] as ordernumber, 
-                  o.[OrderDate] as [date],os.[Name] as [status], 
+                  @"SELECT o.[Id] as ordernumber,
+                  o.[OrderDate] as [date],os.[Name] as [status],
                   SUM(oi.units*oi.unitprice) as total
                   FROM [ordering].[Orders] o
-                  LEFT JOIN[ordering].[orderitems] oi ON  o.Id = oi.orderid 
+                  LEFT JOIN[ordering].[orderitems] oi ON  o.Id = oi.orderid
                   LEFT JOIN[ordering].[orderstatus] os on o.OrderStatusId = os.Id
                   GROUP BY o.[Id], o.[OrderDate], os.[Name]
                   ORDER BY o.[Id]");
         }
-    } 
+    }
 }
 ```
 

@@ -7,14 +7,12 @@ helpviewer_keywords:
 - threading [.NET]
 - threading [.NET], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: efbca8177c74fdee635b52294944df23e5aca24f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ad36789579b95e0129e402765194b9f5e45a4cc1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638780"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127501"
 ---
 # <a name="threads-and-threading"></a>线程与线程处理
 
@@ -22,12 +20,12 @@ ms.locfileid: "65638780"
 
 ## <a name="processes-and-threads"></a>进程和线程
 
-进程是一种正在执行的程序。 操作系统使用进程来分隔正在执行的应用程序。 线程是操作系统向其分配处理器时间的基本单元。 每个线程具有[计划优先级](scheduling-threads.md)并维护系统用于保存线程执行暂停时线程上下文的一组结构。 线程上下文包含线程顺畅继续执行所需的全部信息，包括线程的一组 CPU 寄存器和堆栈。 多个线程可在进程上下文中运行。 进程的所有线程共享其虚拟地址空间。 线程可执行任意部分的程序代码，包括其他线程正在执行的部分。
+进程是一种正在执行的程序  。 操作系统使用进程来分隔正在执行的应用程序。 线程是操作系统向其分配处理器时间的基本单元  。 每个线程具有[计划优先级](scheduling-threads.md)并维护系统用于保存线程执行暂停时线程上下文的一组结构。 线程上下文包含线程顺畅继续执行所需的全部信息，包括线程的一组 CPU 寄存器和堆栈。 多个线程可在进程上下文中运行。 进程的所有线程共享其虚拟地址空间。 线程可执行任意部分的程序代码，包括其他线程正在执行的部分。
 
 > [!NOTE]
-> .NET Framework 通过使用应用程序域，提供在进程中隔离应用程序的方法。 （应用程序域不适用于 .NET Core。）有关详细信息，请参阅[应用程序域](../../framework/app-domains/application-domains.md)一文中的[应用程序域和线程](../../framework/app-domains/application-domains.md#application-domains-and-threads)部分。
+> .NET Framework 通过使用应用程序域，提供在进程中隔离应用程序的方法  。 （应用程序域不适用于 .NET Core。）有关详细信息，请参阅[应用程序域](../../framework/app-domains/application-domains.md)一文中的[应用程序域和线程](../../framework/app-domains/application-domains.md#application-domains-and-threads)部分。
 
-默认情况下，.NET 程序由单个线程（通常称为主线程）启动。 但是，它可以创建其他线程，以与主线程并行或同时执行代码。 这些线程通常称为工作线程。
+默认情况下，.NET 程序由单个线程（通常称为主线程）启动  。 但是，它可以创建其他线程，以与主线程并行或同时执行代码。 这些线程通常称为工作线程  。
 
 ## <a name="when-to-use-multiple-threads"></a>何时使用多个线程
 

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - observers [.NET Framework], observer design pattern
 - observer design pattern [.NET Framework], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b410b9381246cef2e61086e333c4c5b07646a575
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e6aba4d85e502563291478640927bd0f234736a8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301056"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139314"
 ---
 # <a name="how-to-implement-an-observer"></a>如何：实现监视程序
 观察程序设计模式要求区分观察程序（注册获取通知）和提供程序（监视数据并将通知发送到一个或多个观察程序）。 本主题介绍了如何创建观察程序。 相关主题[如何：实现提供程序](../../../docs/standard/events/how-to-implement-a-provider.md)介绍了如何创建提供程序。  

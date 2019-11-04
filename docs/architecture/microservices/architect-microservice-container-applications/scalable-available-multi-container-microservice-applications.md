@@ -2,12 +2,12 @@
 title: 协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 description: 发现用于安排微服务和多容器应用程序以便实现高可伸缩性和可用性的选项，以及 Azure Dev Spaces 在开发 Kubernetes 应用程序生命周期时的可能性。
 ms.date: 09/20/2018
-ms.openlocfilehash: f0efad0134ec95028ecd49ad8d294ae4813940e9
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3915e6386e66d40bedc92368bfbcda81790c6923
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834325"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090147"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 
@@ -62,11 +62,11 @@ Azure Kubernetes 服务优化了专门针对 Azure 的常用 Docker 群集开源
 
 在开发环境中，[Docker 于 2018 年 7 月宣布](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)只需安装 [Docker 桌面](https://docs.docker.com/install/)，Kubernetes 便还可以在单个开发计算机（Windows 10 或 macOS）中运行。 可以在以后部署到云 (AKS) 进行进一步集成测试，如图 4-25 所示。
 
-![显示开发计算机上的 Kubernetes 随后部署到 AKS 的示意图](./media/scalable-available-multi-container-microservice-applications/kubernetes-development-environment.png) 
+![显示开发计算机上的 Kubernetes 随后部署到 AKS 的示意图](./media/scalable-available-multi-container-microservice-applications/kubernetes-development-environment.png)
 
 图 4-25  。 在开发计算机和云中运行 Kubernetes
 
-## <a name="getting-started-with-azure-kubernetes-service-aks"></a>Azure Kubernetes 服务 (AKS) 入门 
+## <a name="getting-started-with-azure-kubernetes-service-aks"></a>Azure Kubernetes 服务 (AKS) 入门
 
 若要开始使用 AKS，需从 Azure 门户或使用 CLI 部署 AKS 群集。 有关在 Azure 中部署 Kubernetes 群集的详细信息，请参阅[部署 Azure Kubernetes 服务 (AKS) 群集](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)。
 

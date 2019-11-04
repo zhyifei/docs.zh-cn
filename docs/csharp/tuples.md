@@ -2,13 +2,14 @@
 title: 元组类型 - C# 指南
 description: 了解 C# 中的未命名元组类型和命名元组类型
 ms.date: 05/15/2018
+ms.technology: csharp-fundamentals
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 3c8d4acfe231be63e1d70d467cbb72ecfa4f767d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: f551a1df4a31c3311119a0327e02fbc6096ce0a0
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774063"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039728"
 ---
 # <a name="c-tuple-types"></a>C# 元组类型
 

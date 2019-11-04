@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b996b09ed3973125d4d848d5e00c18ab02a6967
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 85098a0d10b4c05de52cd33d30ec5c4f4bbc594d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673738"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139999"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>PLINQ 的潜在缺陷
 
@@ -77,8 +75,7 @@ a.AsParallel().Where(...).OrderBy(...).Select(...).ForAll(x => fs.Write(x));
 
 尽管 PLINQ 对多个线程执行查询，但如果在 `foreach` 循环（Visual Basic 中的 `For Each`）中使用结果，查询结果必须合并回一个线程，并由枚举器串行访问。 在某些情况下，这是不可避免的；不过，应尽量使用 `ForAll` 方法，让每个线程输出自己的结果。例如，通过对线程安全集合（如 <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>）执行写入操作。
 
-
-  <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 也有同样的问题。换言之，强烈建议应首选使用 `source.AsParallel().Where().ForAll(...)`
+<xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 也有同样的问题。换言之，强烈建议应首选使用 `source.AsParallel().Where().ForAll(...)`
 
 `Parallel.ForEach(source.AsParallel().Where(), ...)`。
 

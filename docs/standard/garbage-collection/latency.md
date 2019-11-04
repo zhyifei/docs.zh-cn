@@ -6,14 +6,12 @@ helpviewer_keywords:
 - garbage collection, intrusiveness
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7a81a0015ae046682e1afa40c1c8d272357839ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8833c88c3221c0a375011eb62dd712340f7e89cd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622776"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120909"
 ---
 # <a name="latency-modes"></a>滞后时间模式
 若要回收对象，垃圾回收器必须停止应用程序中所有正在执行的线程。 在某些情况下（例如当应用程序检索数据或显示内容时），关键时刻可能发生完整的垃圾回收，从而妨碍性能。 可以通过将 <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> 属性设置为其中一个 <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> 值来调节垃圾回收的干扰。  

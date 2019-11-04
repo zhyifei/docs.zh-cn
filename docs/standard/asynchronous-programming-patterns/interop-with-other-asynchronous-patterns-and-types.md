@@ -12,14 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cb99d6d78fc381e0b56efae51307eb469c535a9a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: f9fe33bb46f0ba78756c4172032dfbaf45d6fc89
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457344"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123978"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>与其他异步模式和类型互操作
 .NET Framework 1.0 引进了 <xref:System.IAsyncResult> 模式，也称为 [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)或 `Begin/End` 模式。  .NET Framework 2.0 增加了 [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)。  从.NET Framework 4 开始， [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) 取代了 APM 和 EAP，但能够轻松构建从早期模式中迁移的例程。  

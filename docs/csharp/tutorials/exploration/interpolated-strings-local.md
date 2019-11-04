@@ -1,15 +1,13 @@
 ---
 title: 字符串内插 - C# 教程
 description: 本教程介绍了如何使用 C# 字符串内插功能将格式化表达式结果添加到较大的字符串中。
-author: rpetrusha
-ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: 813623f4036813d7c1af440a60387f5d8e889354
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 53b9afa4c5ccdcb1f18d2947981aee6571b73134
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774053"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120123"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>使用字符串内插构造格式化字符串
 

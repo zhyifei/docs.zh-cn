@@ -8,21 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57f274d55ba5723ce8e0b51a7a39e98e95855e28
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 27766c10d0624b5eda8256a3211662036a1b16b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64653926"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139946"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL 和传统 .NET Framework 异步编程
 .NET Framework 提供了以下两种标准模式，用于执行 I/O 密集型和计算密集型异步操作：  
   
 - 异步编程模型 (APM)，其中异步操作由一对 Begin/End 方法（如 <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> 和<xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>）表示。  
   
-- 基于事件的异步模式 (EAP)，其中异步操作由 OperationNameAsync 和 OperationNameCompleted 方法/事件对（如 <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> 和 <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>）表示。 （EAP 是在 .NET Framework 2.0 版本中引入的。）  
+- 基于事件的异步模式 (EAP)，其中异步操作由 OperationName  Async 和 OperationName  Completed 方法/事件对（如 <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> 和 <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>）表示。 （EAP 是在 .NET Framework 2.0 版本中引入的。）  
   
  任务并行库 (TPL) 可采用各种方法与任一异步模式协同使用。 可将 APM 和 EAP 操作作为任务向库使用者公开，也可以公开 APM 模式但用 Task 对象在内部实现它们。 在这两种情况下，可通过使用 Task 对象简化代码和利用以下有用的功能：  
   

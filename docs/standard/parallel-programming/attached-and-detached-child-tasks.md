@@ -8,17 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - tasks, child tasks
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 29383d0b7f125111071ac131d8a822dba811032e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f15ee4f136e3e2df1a4e1c7683467f2a4bc9bc0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603308"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123184"
 ---
 # <a name="attached-and-detached-child-tasks"></a>已附加和已分离的子任务
-子任务（或嵌套任务）是在另一个任务（称为“父任务”）的用户委托中创建的 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 实例。 可以分离或附加子任务。 分离的子任务是独立于父级而执行的任务。 附加的子任务是使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 选项创建的嵌套任务，父级不显式或默认禁止附加任务。 一个任务可以创建任意数量的附加和分离子任务，这仅受系统资源限制。  
+子任务  （或嵌套任务  ）是在另一个任务（称为“父任务”  ）的用户委托中创建的 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 实例。 可以分离或附加子任务。 分离的子任务  是独立于父级而执行的任务。 附加的子任务  是使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 选项创建的嵌套任务，父级不显式或默认禁止附加任务。 一个任务可以创建任意数量的附加和分离子任务，这仅受系统资源限制。  
   
  下表列出了两种子任务之间的基本差异。  
   
@@ -58,7 +56,7 @@ ms.locfileid: "54603308"
  如果分离子任务引发了异常，则该异常必须直接在父任务中进行观察和处理，正如任何非嵌套任务一样。 如果附加子任务引发了异常，则该异常会自动传播到父任务，并返回到等待或尝试访问任务的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 属性的线程。 因此，通过使用附加子任务，可以一次性处理调用线程上对 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 的调用中的所有异常。 有关详细信息，请参阅[异常处理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)。  
   
 ## <a name="cancellation-and-child-tasks"></a>取消和子任务  
- 任务取消需要彼此协作。 也就是说，若要取消任务，则每个附加或分离的子任务必须监视取消标记的状态。 如果想要通过使用一个取消请求来取消父任务及其所有子任务，则需要将作为自变量的相同令牌传递到所有的任务，并在每个任务中提供逻辑，以对每个任务中的请求作出响应。 有关详细信息，请参阅[任务取消](../../../docs/standard/parallel-programming/task-cancellation.md)和[如何：取消任务及其子级](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)。  
+ 任务取消需要彼此协作。 也就是说，若要取消任务，则每个附加或分离的子任务必须监视取消标记的状态。 如果想要通过使用一个取消请求来取消父任务及其所有子任务，则需要将作为参数的相同令牌传递到所有的任务，并在每个任务中提供逻辑，以对每个任务中的请求作出响应。 有关详细信息，请参阅[任务取消](../../../docs/standard/parallel-programming/task-cancellation.md)和[如何：取消任务及其子级](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)。  
   
 ### <a name="when-the-parent-cancels"></a>当父任务取消时  
  如果父任务在其子任务开始前取消了自身，则子任务将永远不会开始。 如果父任务在其子任务已开始后取消了自身，则子任务将完成运行，除非它自己具有取消逻辑。 有关详细信息，请参阅[任务取消](../../../docs/standard/parallel-programming/task-cancellation.md)。  

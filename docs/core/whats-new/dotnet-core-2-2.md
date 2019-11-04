@@ -4,15 +4,13 @@ description: 了解 .NET Core 2.2 的新增功能。
 dev_langs:
 - csharp
 - vb
-author: rpetrusha
-ms.author: ronpet
 ms.date: 12/04/2018
-ms.openlocfilehash: 49a65dd44159e9800f7cf50a1edaa3d9e9b82e47
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 917b51e0cf36cca45135fda4a084eb2bca62e835
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677261"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100697"
 ---
 # <a name="whats-new-in-net-core-22"></a>.NET Core 2.2 的新增功能
 
@@ -20,7 +18,7 @@ ms.locfileid: "57677261"
 
 ## <a name="new-deployment-mode"></a>新部署模式
 
-从 .NET Core 2.2 开始，可以部署[依赖于框架的可执行文件](../deploying/index.md#framework-dependent-executables-fde)，这是“.exe”文件而不是“.dll”文件。 与依赖框架的部署在功能上类似，依赖框架的可执行文件 (FDE) 仍然依赖于存在的 .NET Core 的共享系统级版本来运行。 应用程序只包含代码和任何第三方依赖项。 与依赖框架的部署不同，FDE 特定于平台。
+从 .NET Core 2.2 开始，可以部署[依赖于框架的可执行文件](../deploying/index.md#framework-dependent-executables-fde)，这是“.exe”  文件而不是“.dll”  文件。 与依赖框架的部署在功能上类似，依赖框架的可执行文件 (FDE) 仍然依赖于存在的 .NET Core 的共享系统级版本来运行。 应用程序只包含代码和任何第三方依赖项。 与依赖框架的部署不同，FDE 特定于平台。
 
 这种新的部署模式在构建可执行文件（而不是库）方面具有独特优势，这意味着你可以直接运行应用程序，而无需首先调用 `dotnet`。
 
@@ -76,11 +74,11 @@ internal sealed class SimpleEventListener : EventListener
 
 **分层编译仍然是一项可选功能**
 
-在 .NET Core 2.1，JIT 编译器实现了一项新的编译器技术，即“分层编译”，作为可选功能。 分层编译旨在提高性能。 由 JIT 编译器执行的重要任务之一是优化代码执行。 然而，对于很少使用的代码路径，相比执行未优化代码所花费的运行时，编译器可能需要更多的时间来优化代码。 分层编译介绍了 JIT 编译中的两个阶段：
+在 .NET Core 2.1，JIT 编译器实现了一项新的编译器技术，即“分层编译”  ，作为可选功能。 分层编译旨在提高性能。 由 JIT 编译器执行的重要任务之一是优化代码执行。 然而，对于很少使用的代码路径，相比执行未优化代码所花费的运行时，编译器可能需要更多的时间来优化代码。 分层编译介绍了 JIT 编译中的两个阶段：
 
-- 第一层，将尽可能快地生成代码。
+- 第一层  ，将尽可能快地生成代码。
 
-- 第二层，将为那些频繁执行的方法生成优化代码。 为了增强性能，第二层编译并行执行。
+- 第二层  ，将为那些频繁执行的方法生成优化代码。 为了增强性能，第二层编译并行执行。
 
 有关分层编译可能带来的性能改进的信息，请参阅[宣布发布 .NET Core 2.2 预览版 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/)。
 

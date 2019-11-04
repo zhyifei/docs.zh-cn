@@ -10,14 +10,12 @@ helpviewer_keywords:
 - PEverify.exe
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f0828409a8c57baecf7c81fd7a4df6e7844c7ce
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9d5f8c80937c36e975d42d6efb0a83295cb28be9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044323"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104979"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe（PEVerify 工具）
 PEVerify 工具有助于生成 Microsoft 中间语言 (MSIL) 的开发人员（如编译器编写者、脚本引擎开发人员等）确定其 MSIL 代码及关联的元数据是否满足类型安全要求。 某些编译器仅当你避免使用某些语言构造时才生成可验证的类型安全代码。 如果你作为开发人员正在使用此类编译器，则可能需要确认你未危害代码的类型安全性。 在这种情况下，你可以对文件运行 PEVerify 工具来检查 MSIL 和元数据。  

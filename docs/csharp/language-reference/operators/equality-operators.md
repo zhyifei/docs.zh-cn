@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 4a30068293bef3adb9f58cc7f61e7e24e144f31b
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 11d2161004af5199d9e501f8ab1e3c0382e6bfe7
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395140"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039022"
 ---
 # <a name="equality-operators-c-reference"></a>相等运算符（C# 参考）
 
@@ -41,7 +41,7 @@ ms.locfileid: "72395140"
 
 如果基本整数类型的相应值相等，则相同[枚举](../keywords/enum.md)类型的两个操作数相等。
 
-用户定义的 [struct](../keywords/struct.md) 类型默认情况下不支持 `==` 运算符。 要支持 `==` 运算符，用户定义的结构必须[重载](#operator-overloadability)它。
+用户定义的 [struct](../keywords/struct.md) 类型默认情况下不支持 `==` 运算符。 要支持 `==` 运算符，用户定义的结构必须[重载](operator-overloading.md)它。
 
 从 C# 7.3 开始，`==` 和 `!=` 运算符由 C# [元组](../../tuples.md)支持。 有关详细信息，请参阅 [C# 元组类型](../../tuples.md)一文的[相等性和元组](../../tuples.md#equality-and-tuples)部分。
 
@@ -55,7 +55,7 @@ ms.locfileid: "72395140"
 
 ### <a name="string-equality"></a>字符串相等性
 
-如果两个字符串均为 `null` 或者两个字符串实例具有相等长度且在每个字符位置有相同字符，则这两个[字符串](../keywords/string.md)操作数相等：
+如果两个字符串均为 `null` 或者两个字符串实例具有相等长度且在每个字符位置有相同字符，则这两个[字符串](../builtin-types/reference-types.md#the-string-type)操作数相等：
 
 [!code-csharp-interactive[string equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#StringEquality)]
 

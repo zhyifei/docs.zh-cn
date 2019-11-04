@@ -11,14 +11,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 670cdb369920663ffa62e224bdd5aa495fc7e622
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 6218aa1a7b813601e9b718abf862e20a7cbcd313
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377699"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124307"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>实现基于任务的异步模式
 可使用以下三种方式实现基于任务的异步模式 (TAP)：使用 Visual Studio 中的 C# 和 Visual Basic 编译器、手动实现或编译器和手动方法相结合。 以下各节详细地讨论了每一种方法。 可以使用 TAP 模式实现计算密集型和 I/O 密集型异步操作。 [工作负载](#workloads)部分介绍了各种类型的操作。

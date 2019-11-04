@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to speed up
 ms.assetid: c7a66677-cb59-4cbf-969a-d2e8fc61a6ce
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fde68d0a938ed04380bf0e99cc0c544793571d77
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 29d7fa8200ddd972c1a5c98ea6f30a7c8ff732e9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965574"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139749"
 ---
 # <a name="how-to-speed-up-small-loop-bodies"></a>如何：加快小型循环体的速度
 如果 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 循环的主体很小，它的执行速度可能慢于相当的顺序循环，如 C# 中的 [for](../../csharp/language-reference/keywords/for.md) 循环和 Visual Basic 中的 [For](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/44kykk21(v=vs.90)) 循环。 性能下降是由数据分区中的开销和在每个循环迭代上调用委托的成本所引起的。 若要解决这种情况下，<xref:System.Collections.Concurrent.Partitioner> 类提供了 <xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=nameWithType> 方法，使你能够为委托主体提供一个顺序循环，以便每个分区仅调用一次委托，而不是每个迭代调用一次委托。 有关详细信息，请参阅 [PLINQ 和 TPL 的自定义分区程序](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)。  

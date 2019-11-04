@@ -2,12 +2,12 @@
 title: 微服务中的复原和高可用性
 description: 微服务必须能够承受暂时的网络和依赖项故障，必须可复原以实现高可用性。
 ms.date: 09/20/2018
-ms.openlocfilehash: 6c110b0fe7a80842f12779494e5b0bdd29c5fb64
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1c0f75a8c68d1f84ba24c550e854edc5372cf7f6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834353"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094218"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>微服务中的复原和高可用性
 
@@ -31,8 +31,8 @@ ms.locfileid: "71834353"
 
 还可以使用出色的开源库 Beat Pulse，该库可通过 [GitHub](https://github.com/Xabaril/BeatPulse) 作为 [NuGet 包](https://www.nuget.org/packages/BeatPulse/) 获取。 此库还执行经过改进的运行状况检查，它可以处理两种类型的检查：
 
-- **运行情况**：检查微服务是否处于活动状态，即微服务是否接受请求并作出响应。 
-- **就绪情况**：检查微服务的依赖项（数据库、查询服务等）是否已就绪，以便微服务可以执行预期操作。 
+- **运行情况**：检查微服务是否处于活动状态，即微服务是否接受请求并作出响应。
+- **就绪情况**：检查微服务的依赖项（数据库、查询服务等）是否已就绪，以便微服务可以执行预期操作。
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>使用诊断和日志事件流
 

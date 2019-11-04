@@ -10,14 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 681c0f1f918c8991ed2544189488d1ea25547834
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2abac1ccf45fc9c9c28e27c132e72fe483a24d75
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345841"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122220"
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>如何：在数据流块中指定任务计划程序
 本文档演示在应用程序中使用数据流时如何关联特定任务计划程序。 示例在 Windows 窗体应用程序中使用 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> 类来显示读取器任务处于活动状态的时间和编写器任务处于活动状态的时间。 它还使用 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 方法使数据流块能够在用户界面线程上运行。
@@ -26,9 +24,9 @@ ms.locfileid: "59345841"
 
 ## <a name="to-create-the-windows-forms-application"></a>创建 Windows 窗体应用程序  
   
-1. 创建一个 Visual C# 或 Visual Basic“Windows 窗体应用程序”项目。 在以下步骤中，该项目命名为 `WriterReadersWinForms`。  
+1. 创建一个 Visual C# 或 Visual Basic“Windows 窗体应用程序”项目  。 在以下步骤中，该项目命名为 `WriterReadersWinForms`。  
   
-2. 在主窗体的窗体设计器中，Form1.cs（对于 Visual Basic 则为 Form1.vb）添加了四个 <xref:System.Windows.Forms.CheckBox> 控件。 将 `checkBox1`、`checkBox2`、`checkBox3`、`checkBox4` 的 <xref:System.Windows.Forms.Control.Text%2A> 属性分别设置为“读取器 1”、“读取器 2”、“读取器 3”和“编写器”。 将每个控件的 <xref:System.Windows.Forms.Control.Enabled%2A> 属性设置为 `False`。  
+2. 在主窗体的窗体设计器中，Form1.cs（对于 Visual Basic 则为 Form1.vb）添加了四个 <xref:System.Windows.Forms.CheckBox> 控件。 将 `checkBox1`、`checkBox2`、`checkBox3`、`checkBox4` 的 <xref:System.Windows.Forms.Control.Text%2A> 属性分别设置为“读取器 1”  、“读取器 2”  、“读取器 3”  和“编写器”  。 将每个控件的 <xref:System.Windows.Forms.Control.Enabled%2A> 属性设置为 `False`。  
   
 3. 在窗体上添加一个 <xref:System.Windows.Forms.Timer> 控件。 将 <xref:System.Windows.Forms.Timer.Interval%2A> 属性设置为 `2500`。  
   

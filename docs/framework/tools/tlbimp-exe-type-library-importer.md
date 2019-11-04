@@ -10,14 +10,12 @@ helpviewer_keywords:
 - type libraries
 - converting type definitions
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 048c2cd3d6b90dda951128a29a212928ee67c5a5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: fcbbc99c06e7c9666d58133bef20b84ef40c98d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971757"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104332"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe（类型库导入程序）
 类型库导入程序将 COM 类型库中的类型定义转换为公共语言运行时程序集中的等效定义。 Tlbimp.exe 的输出是一个二进制文件（程序集），其中包含在原始类型库中定义的类型的运行时元数据。 可以使用 [Ildasm.exe](ildasm-exe-il-disassembler.md) 这样的工具检查此文件。  

@@ -157,14 +157,12 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool, error messages
 - error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ad4ea3b2d5fb828c425f30e76244772f5ca9a11a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5d75f60cb96ddb7bd9e24a7cdc4b8d2b61aff8f4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043978"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104190"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe 错误消息
 在 Visual Studio 2012 中使用 Windows 运行时组件  模板时，生成进程调用 [Winmdexp.exe（Windows 运行时元数据导出工具）](winmdexp-exe-windows-runtime-metadata-export-tool.md)，因此“错误列表”  中会显示 Winmdexp.exe 错误消息。 Winmdexp.exe 在用 `/target:winmdobj` 选项编译的模块上运行。 由于它需要将编译的模块作为输入，因此不会显示错误消息，除非编译成功。  

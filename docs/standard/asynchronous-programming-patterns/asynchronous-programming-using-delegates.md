@@ -12,14 +12,12 @@ helpviewer_keywords:
 - delegates [.NET Framework], asynchronous
 - synchronous calling in asynchronous manner
 ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ce77e57eb049c031ed506e8812fff59ba97a978e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4e17e6a96a12b705cf455d70add7e12a30f5fa90
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950866"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121743"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>使用委托进行异步编程
 使用委托可通过异步方式调用同步方法。 如果同步调用委托，`Invoke` 方法将在当前线程上直接调用目标方法。 如果调用 `BeginInvoke` 方法，公共语言运行时 (CLR) 将对请求进行排队并立即返回给调用方。 目标方法将在线程池中的某个线程上异步调用。 提交请求的原始线程可以不受限制地继续与目标方法并行执行。 如果已在对 `BeginInvoke` 方法的调用中指定回叫方法，则目标方法结束时，将调用回叫方法。 在回叫方法中，`EndInvoke` 方法将获取返回值和所有输入/输出或仅输出参数。 如果调用 `BeginInvoke` 时未指定回叫方法，则可能从调用 `BeginInvoke` 的线程上调用 `EndInvoke`。  

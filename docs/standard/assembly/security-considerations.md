@@ -15,14 +15,12 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b8cf99e766e3ea66440a30b4b616a1d90ec937e3
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 2cd12ea49723bdac734c6847d337d945a5cfcb5e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972569"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138620"
 ---
 # <a name="assembly-security-considerations"></a>程序集安全注意事项
 <a name="top"></a>在生成程序集时，可指定该程序集运行所需的一组权限。 是否将特定的权限授予程序集是基于证据的。  
@@ -31,7 +29,7 @@ ms.locfileid: "70972569"
   
 - 将输入证据与加载程序所收集的证据合并，以创建用于策略决策的最终证据集。 使用这种语义的方法包括 **Assembly.Load**、**Assembly.LoadFrom** 和 **Activator.CreateInstance**。  
   
-- 原封不动地使用输入证据作为用于策略决策的最终证据集。 使用这种语义的方法包括 **Assembly.Load(byte[])** 和 **AppDomain.DefineDynamicAssembly()**。  
+- 原封不动地使用输入证据作为用于策略决策的最终证据集。 使用这种语义的方法包括 **Assembly.Load(byte[])** 和 **AppDomain.DefineDynamicAssembly()** 。  
   
   通过在将运行程序集的计算机上设置[安全策略](../../framework/misc/code-access-security-basics.md)，可以授予一些可选的权限。 如果你希望代码可以处理所有潜在的安全异常，可以执行以下操作之一：  
   

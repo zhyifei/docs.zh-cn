@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 58023498c499569eebb9a0506bea434d2669de45
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: c85f5b6b4552dc4a10c7ad66b8f93331f97a8621
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596007"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196199"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>使用 Override 和 New 关键字进行版本控制（C# 编程指南）
 C# 语言经过专门设计，以便不同库中的[基类](../../language-reference/keywords/base.md)与派生类之间的版本控制可以不断向前发展，同时保持后向兼容。 这具有多方面的意义。例如，这意味着在基[类](../../language-reference/keywords/class.md)中引入与派生类中的某个成员具有相同名称的新成员在 C# 中是完全支持的，不会导致意外行为。 它还意味着类必须显式声明某方法是要替代一个继承方法，还是本身就是一个隐藏具有类似名称的继承方法的新方法。  
@@ -56,7 +56,7 @@ C# 语言经过专门设计，以便不同库中的[基类](../../language-refer
   
  [!code-csharp[csProgGuideInheritance#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#44)]  
   
- 如果不需要自己的方法替代新的基类方法，则需要注意以下事项。 为了避免这两个方法之间发生混淆，可以重命名你的方法。 这可能很耗费时间且容易出错，而且在某些情况下并不可行。 但是，如果项目相对较小，则可以使用 Visual Studio 的重构选项来重命名方法。 有关详细信息，请参阅[重构类和类型（类设计器）](/visualstudio/ide/refactoring-classes-and-types-class-designer)。  
+ 如果不需要自己的方法替代新的基类方法，则需要注意以下事项。 为了避免这两个方法之间发生混淆，可以重命名你的方法。 这可能很耗费时间且容易出错，而且在某些情况下并不可行。 但是，如果项目相对较小，则可以使用 Visual Studio 的重构选项来重命名方法。 有关详细信息，请参阅[重构类和类型（类设计器）](/visualstudio/ide/class-designer/refactoring-classes-and-types)。  
   
  或者，也可以通过在派生类定义中使用关键字 `new` 来防止出现该警告：  
   

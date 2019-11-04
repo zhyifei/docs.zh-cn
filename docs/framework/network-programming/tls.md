@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: ad15c0d4bd69417fffd8bcad0805a3b78321e05b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 2433d8b8563cace4415fb8fcd2d110f75d7d4304
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894955"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196378"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 中的传输层安全性 (TLS) 最佳做法
 
@@ -56,7 +56,7 @@ WCF 支持 TLS1.0、1.1 和 1.2 作为 .NET Framework 4.7 中的默认设置。 
 
 对于 ASP.NET 应用程序，检查 _web.config_ 的 `<system.web><httpRuntime targetFramework>` 元素，以验证你所使用的是 .NET Framework 的目标版本。
 
-有关 Windows 窗体和其他应用程序，请参阅[如何：面向 .NET Framework 的某个版本](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。
+有关 Windows 窗体和其他应用程序，请参阅[如何：面向 .NET Framework 的某个版本](/visualstudio/ide/visual-studio-multi-targeting-overview)。
 
 使用以下部分验证你未使用特定 TLS 或 SSL 版本。
 

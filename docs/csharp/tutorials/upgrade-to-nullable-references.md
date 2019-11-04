@@ -2,13 +2,14 @@
 title: 使用可为空引用类型进行设计
 description: 本高级教程介绍了可为空引用类型。 你将学习在引用值可能为 NULL 时表达你的设计意图，并在引用值不能为 NULL 时让编译器强制执行。
 ms.date: 02/19/2019
+ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 842b1bb6e0d3032c6181cccf77934541754ff8ec
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 9cb9ac1b292e61d6a8a5f84be29a6a6c323725fc
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332335"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039688"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>教程：使用可为空引用类型迁移现有代码
 

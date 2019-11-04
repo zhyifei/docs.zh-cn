@@ -2,13 +2,14 @@
 title: C# 中的字符串内插
 description: 了解如何在 C# 中使用字符串插值将有格式的表达式结果包括在结果字符串中。
 author: pkulikov
+ms.technology: csharp-fundamentals
 ms.date: 09/02/2019
-ms.openlocfilehash: d3a3a08d5911b5323aa61c571f05318d10380339
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b901ae661ebd4af625d9f3c999b0eb50dda1990d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252930"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039214"
 ---
 # <a name="string-interpolation-in-c"></a>C\# 中的字符串内插
 

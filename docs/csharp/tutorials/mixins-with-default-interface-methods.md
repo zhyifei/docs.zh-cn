@@ -1,13 +1,14 @@
 ---
 title: 使用默认接口方法创建 mixin 类型
 description: 使用默认接口成员，可以通过实现器的可选默认实现来扩展接口。
+ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: 4dee97226420139d9cd09ad75d7c8caf4967273d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 798413f0071159893de39f3e190a9b2693571bb7
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321566"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039278"
 ---
 # <a name="tutorial-mix-in-functionality-when-creating-classes-using-interfaces-with-default-interface-methods"></a>教程：当通过默认接口方法创建使用接口的类时实现的混入功能
 

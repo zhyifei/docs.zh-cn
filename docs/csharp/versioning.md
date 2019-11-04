@@ -2,13 +2,14 @@
 title: C# 版本控制 - C# 指南
 description: 了解 C# 和 .NET 中的版本控制工作原理
 ms.date: 01/08/2017
+ms.technology: csharp-advanced-concepts
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: dcfe373312b88c8ddd8587e27c566a90b25e3c13
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3fadbc1257ae758fc220685fa074a4fa68b20ba1
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834060"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039658"
 ---
 # <a name="versioning-in-c"></a>C\# 中的版本控制
 

@@ -2,12 +2,12 @@
 title: 何时为 Docker 容器选择 .NET Framework
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 何时为 Docker 容器选择 .NET Framework
 ms.date: 01/07/2019
-ms.openlocfilehash: 575af1bc1966a25a01acdcfe106870ad1b7c477d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8316d17aae09ddbd70bd80af4f06d8cb029f2752
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039644"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093768"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>何时为 Docker 容器选择 .NET Framework
 
@@ -27,7 +27,7 @@ ms.locfileid: "71039644"
 
 但即使 .NET Standard 2.0 和 .NET Core 2.1 取得了如此重大的进展，也可能出现某些 NuGet 包需要在 Windows 上运行并且可能不支持 .NET Core 的情况。 如果这些软件包对于应用程序至关重要，那么将需要在 Windows 容器上使用 .NET Framework。
 
-## <a name="using-net-technologies-not-available-for-net-core"></a>使用不可用于 .NET Core 的 .NET 技术 
+## <a name="using-net-technologies-not-available-for-net-core"></a>使用不可用于 .NET Core 的 .NET 技术
 
 当前版本的 .NET Core（撰写本文时为 2.2 版）中没有提供某些 .NET Framework 技术。 虽然某些技术将在更高版本的 .NET Core (.NET Core 2.x) 中提供，但其他技术不适用于 .NET Core 面向的新应用程序模式，因此可能永远不可用。
 

@@ -13,14 +13,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4b079809fa76097cd575d96c70d17d1c6c85e3a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5934a342f653f294c07e00d38d51dae6b159dab9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968532"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122483"
 ---
 # <a name="substitutions-in-regular-expressions"></a>正则表达式中的替代
 <a name="Top"></a> 替换是只能在替换模式中识别的语言元素。 它们使用正则表达式模式定义全部或部分用于替换输入字符串中的匹配文本的文本。 替换模式可以包含一个或多个替换以及本文字符。 提供替换模式以将拥有 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 参数的 `replacement` 方法重载至 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法。 该方法将匹配的模式替换为 `replacement` 参数定义的模式。  

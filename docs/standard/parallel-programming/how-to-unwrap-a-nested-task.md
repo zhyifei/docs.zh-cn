@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to unwrap nested tasks
 ms.assetid: a0769dd2-0f6d-48ca-8418-a9d39de7f450
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3cc468da70d3c62c139a98a6637e7a3c7990c378
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c72654a2bc21035fe706d76018bb163d8ba01ee8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602047"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106905"
 ---
 # <a name="how-to-unwrap-a-nested-task"></a>如何：解除嵌套任务的包装
 可以从方法返回任务，再等待或继续执行此任务，如下面的示例所示：  

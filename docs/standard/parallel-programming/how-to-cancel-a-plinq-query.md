@@ -9,14 +9,12 @@ helpviewer_keywords:
 - PLINQ queries, how to cancel
 - cancellation, PLINQ
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a90a41b1dc2e5d0b24d3d72b870891238809d75
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 272f25d62cb63c60209be3bc54dc5e76fb30df54
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046526"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134233"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>如何：取消 PLINQ 查询
 下面的示例展示了取消 PLINQ 查询的两种方法。 第一个示例展示了如何取消主要由数据遍历组成的查询。 第二个示例展示了如何取消包含计算成本很高的用户函数的查询。

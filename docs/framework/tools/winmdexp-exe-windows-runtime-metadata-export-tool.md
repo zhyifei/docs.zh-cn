@@ -5,14 +5,12 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0ce98912e579e0dd570822c1f7c2133bb05ed491
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 061baf262342034299c47c22b2f2691f3a61b958
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773964"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104219"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe（Windows 运行时元数据导出工具）
 Windows 运行时元数据导出工具 (Winmdexp.exe) 可将 .NET Framework 模块转换为包含 Windows 运行时元数据的文件。 尽管 .NET Framework 程序集和 Windows 运行时元数据文件使用相同的物理格式，但元数据表的内容有差别，这意味着 .NET Framework 程序集不可自动用作 Windows 运行时组件。 将 .NET Framework 模块转换为 Windows 运行时组件的过程称为“导出”  。 在 .NET Framework 4.5 和 .NET Framework 4.5.1 中，生成的 Windows 元数据 (.winmd) 文件同时包含元数据和实现。  

@@ -9,14 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: edf519621c2113843b89d96948243e9c095d2a57
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: d5646c4969c95350ab4cd63b16f6f99ffba3a4ec
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988864"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131537"
 ---
 # <a name="garbage-collection-notifications"></a>垃圾回收通知
 在有些情况下，公共语言运行时执行的完整垃圾回收（即第 2 代回收）可能会对性能产生负面影响。 特别是，处理大量请求的服务器可能会出现此问题；在这种情况下，长时间垃圾回收会导致请求超时。为了防止在关键时期发生完全回收，可以接收即将执行完全垃圾回收的通知，再采取措施将工作负载重定向到另一个服务器实例。 也可以自行诱导回收，前提是当前服务器实例不需要处理请求。  

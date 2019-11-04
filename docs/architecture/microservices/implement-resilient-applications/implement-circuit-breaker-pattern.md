@@ -2,20 +2,20 @@
 title: 实现断路器模式
 description: 了解如何实现断路器模式作为 Http 重试的互补系统。
 ms.date: 10/16/2018
-ms.openlocfilehash: eec14273cb9480df51d6e5865106ccfc045845c4
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: a1a24094ae98d8c767ccf692fe8ded6e28d47854
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181925"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094118"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>实现断路器模式
 
 如前文所述，需要处理某类故障，处理这类故障时，所需的时间并不固定，尝试连接远程服务或资源时就可能会发生这类故障。 处理这类故障可以提高应用程序的稳定性和复原能力。
 
-在分布式环境中，对远程资源和服务的调用可能由于暂时性故障而失败，例如网络连接速度较慢和超时或资源响应缓慢或暂时不可用。 这些故障通常在一段时间之后会自动消失，应配备可靠强大的云应用程序，使用“重试模式”等策略来解决这些故障。 
+在分布式环境中，对远程资源和服务的调用可能由于暂时性故障而失败，例如网络连接速度较慢和超时或资源响应缓慢或暂时不可用。 这些故障通常在一段时间之后会自动消失，应配备可靠强大的云应用程序，使用“重试模式”等策略来解决这些故障。
 
-但也可能存在这种情况，由于意外事件引发故障，需要更长的时间来解决故障。 这些故障轻则导致部分连接中断，重则导致服务完全瘫痪。 在这些情况下，应用程序持续重试一个操作可能毫无意义，因为操作不可能成功。 
+但也可能存在这种情况，由于意外事件引发故障，需要更长的时间来解决故障。 这些故障轻则导致部分连接中断，重则导致服务完全瘫痪。 在这些情况下，应用程序持续重试一个操作可能毫无意义，因为操作不可能成功。
 
 相反，应对应用程序进行编码，使其接受已失败的操作，并相应解决故障。
 
@@ -57,11 +57,11 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 上述代码示例配置了断路器策略，因此，如果在重试 Http 请求时出现五个连续故障，则会中断或断开线路。 此时，电路将断开 30 秒：在此期间，断路器会立即中止呼叫，而不是拨打电话。  该策略自动将[相关异常和 HTTP 状态代码](/aspnet/core/fundamentals/http-requests#handle-transient-faults)解释为故障。  
 
-如果一个特定资源出现问题，且该资源部署在不同于执行 HTTP 调用的客户端应用程序或服务的环境中，则还应使用断路器将请求重定向到回退基础结构。 这样一来，如果数据中心发生故障，但该故障只影响后端微服务，而不影响客户端应用程序，则客户端应用程序可以重定向到回退服务。 Polly 正在规划新策略，用于自动实现此[故障转移策略](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy)方案。 
+如果一个特定资源出现问题，且该资源部署在不同于执行 HTTP 调用的客户端应用程序或服务的环境中，则还应使用断路器将请求重定向到回退基础结构。 这样一来，如果数据中心发生故障，但该故障只影响后端微服务，而不影响客户端应用程序，则客户端应用程序可以重定向到回退服务。 Polly 正在规划新策略，用于自动实现此[故障转移策略](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy)方案。
 
-所有这些功能均适用于从 .NET 代码内部管理故障转移的情况，与由 Azure 自动管理的情况相反（位置透明化）。 
+所有这些功能均适用于从 .NET 代码内部管理故障转移的情况，与由 Azure 自动管理的情况相反（位置透明化）。
 
-从使用情况角度来看，在使用 HttpClient 时，无需添加新内容，因为该代码与结合使用 HttpClientFactory 和 HttpClient 时所使用的代码相同，如之前部分所述。 
+从使用情况角度来看，在使用 HttpClient 时，无需添加新内容，因为该代码与结合使用 HttpClientFactory 和 HttpClient 时所使用的代码相同，如之前部分所述。
 
 ## <a name="test-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>在 eShopOnContainers 中测试 Http 重试和断路器
 
@@ -69,7 +69,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 在应用程序部署到云时，也可能在启动时看到这种类型的错误。 在这种情况下，业务流程协调程序可能会将容器从一个节点或 VM 移动到另一个（即启动新实例），以平衡群集节点中的容器数。
 
-在启用所有容器时，“eShopOnContainers”解决这些问题的方法是使用前文所述的重试模式。 
+在启用所有容器时，“eShopOnContainers”解决这些问题的方法是使用前文所述的重试模式。
 
 ### <a name="test-the-circuit-breaker-in-eshoponcontainers"></a>在 eShopOnContainers 中测试断路器
 
@@ -90,7 +90,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 例如，应用程序运行后，可立即通过在任何浏览器中使用以下 URI 发出请求，来启用中间件。 请注意，订单微服务使用端口 5103。
 
-`http://localhost:5103/failing?enable` 
+`http://localhost:5103/failing?enable`
 
 然后可以使用 URI `http://localhost:5103/failing` 检查状态，如图 8-5 中所示。
 
@@ -100,7 +100,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 在这种情况下，每当调用市场篮微服务时，微服务就会使用状态代码 500 进行响应。
 
-中间件开始运行后，便可尝试从 MVC web 应用程序下订单。 由于请求失败，线路将打开。 
+中间件开始运行后，便可尝试从 MVC web 应用程序下订单。 由于请求失败，线路将打开。
 
 在下面的示例中，可以看到 MVC web 应用程序在用于下订单的逻辑中具有一个捕获块。  如果代码捕获了一个开路异常，会向用户显示一条友好消息，请用户等待。
 
@@ -138,7 +138,7 @@ public class CartController : Controller
 
 **图 8-6**。 断路器向 UI 返回一个错误
 
-可以实现其他逻辑来指定何时打开/中断线路。 或如果有一个回退数据中心或冗余的后端系统，可尝试对另一个后端微服务发出 HTTP 请求。 
+可以实现其他逻辑来指定何时打开/中断线路。 或如果有一个回退数据中心或冗余的后端系统，可尝试对另一个后端微服务发出 HTTP 请求。
 
 最后，针对 `CircuitBreakerPolicy` 的另一种可能操作是使用 `Isolate`（强制打开线路并保持为打开状态）和 `Reset`（再次关闭路线）。 可使用这些操作构建一个实用程序 HTTP 终结点，用于在策略上直接调用隔离和重置。  还可以在生产中以合适的安全程度使用这种 HTTP 终结点，用于临时隔离下游系统，比如在想要升级系统的时候。 或可手动打开线路，以保护疑似发生故障的下游系统。
 

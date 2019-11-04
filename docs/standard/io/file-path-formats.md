@@ -9,14 +9,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 75261bc44b938432c9c22b90dc4db30ca00d630b
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 808c92e906a0bf6f8fdc368396d6d240573de501
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170733"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120779"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系统中的文件路径格式
 
@@ -104,7 +102,7 @@ DOS 设备路径由以下部分组成：
 
 DOS 设备路径通过定义进行完全限定。 不允许使用相对目录段（`.` 和 `..`）。 也不会包含当前目录。
 
-## <a name="example-ways-to-refer-to-the-same-file"></a>示例:引用同一个文件的方法
+## <a name="example-ways-to-refer-to-the-same-file"></a>示例：引用同一个文件的方法
 
 以下示例演示了一些方法，以此可在使用 <xref:System.IO> 命名空间中的 API 时引用文件。 该示例实例化 <xref:System.IO.FileInfo> 对象，并使用它的 <xref:System.IO.FileInfo.Name> 和 <xref:System.IO.FileInfo.Length> 属性来显示文件名以及文件长度。
 

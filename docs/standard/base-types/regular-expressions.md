@@ -20,14 +20,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 89b527d4febb677512b3cdcf7cd47344d182ae26
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: ac034ff37b0b39f41d6f58381286706f9a9ac602
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736856"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121703"
 ---
 # <a name="net-regular-expressions"></a>.NET 正则表达式
 正则表达式提供了功能强大、灵活而又高效的方法来处理文本。 使用正则表达式的全面模式匹配表示法，可以快速分析大量文本，以找到特定的字符模式；验证文本以确保它匹配预定义模式（如电子邮件地址）；提取、编辑、替换或删除文本子字符串；将提取的字符串添加到集合以生成报告。 对于处理字符串或分析大文本块的许多应用程序而言，正则表达式是不可缺少的工具。  

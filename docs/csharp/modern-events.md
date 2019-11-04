@@ -2,13 +2,14 @@
 title: 更新的 .NET Core 事件模式
 description: 了解 .NET Core 事件模式如何通过向后兼容性实现灵活性，以及如何通过异步订阅服务器实现安全事件处理。
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 85fa4fd111a9eab01c1d32949d9fcc5f6300e33c
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: a916a09b622f8df9bf99fafe52f35c706220f484
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798878"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039792"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>更新的 .NET Core 事件模式
 

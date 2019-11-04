@@ -7,14 +7,12 @@ helpviewer_keywords:
 - .NET, parallel programming in
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 962c89acf12595ca5b9f27fe411b31773cc5e0c2
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 487fe48462803ac19318f450f2576989f196a9be
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456949"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139955"
 ---
 # <a name="task-parallel-library-tpl"></a>任务并行库 (TPL)
 任务并行库 (TPL) 是 <xref:System.Threading?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks?displayProperty=nameWithType> 空间中的一组公共类型和 API。 TPL 的目的是通过简化将并行和并发添加到应用程序的过程来提高开发人员的工作效率。 TPL 动态缩放并发的程度以最有效地使用所有可用的处理器。 此外，TPL 还处理工作分区、<xref:System.Threading.ThreadPool> 上的线程调度、取消支持、状态管理以及其他低级别的细节操作。 通过使用 TPL，你可以在将精力集中于程序要完成的工作，同时最大程度地提高代码的性能。  

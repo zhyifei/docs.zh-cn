@@ -10,19 +10,17 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 870f65fdbf263913134d0528c200d3c2990a498c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 284be7789b6411055a6421fd07cc1b0605f6ea0c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299002"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139869"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>演练：创建数据流管道
-尽管可以使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> 方法从源块接收消息，但也可以连接消息块来形成一个*数据流管道*。 数据流管道是一系列组件或“数据流块”，每个组件或数据流块执行一个有助于实现更大目标的特定任务。 数据流管道中的每个数据流块会在收到来自另一数据流块的消息时执行工作。 这就好比是汽车制造装配线。 每辆汽车通过装配线时，一站组装车架，下一站则安装引擎，以此类推。 因为装配线可以同时装配多辆汽车，所以比一次装配整辆车拥有更高的产出。
+尽管可以使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> 方法从源块接收消息，但也可以连接消息块来形成一个*数据流管道*。 数据流管道是一系列组件或“数据流块”  ，每个组件或数据流块执行一个有助于实现更大目标的特定任务。 数据流管道中的每个数据流块会在收到来自另一数据流块的消息时执行工作。 这就好比是汽车制造装配线。 每辆汽车通过装配线时，一站组装车架，下一站则安装引擎，以此类推。 因为装配线可以同时装配多辆汽车，所以比一次装配整辆车拥有更高的产出。
 
- 本文档演示了一个数据流管道，用于从网站上下载书籍《The Iliad of Homer》并搜索文本以将各个单词与反转第一个单词字符的单词相匹配。 本文档中数据流管道的形成包括以下步骤：  
+ 本文档演示了一个数据流管道，用于从网站上下载书籍《The Iliad of Homer》  并搜索文本以将各个单词与反转第一个单词字符的单词相匹配。 本文档中数据流管道的形成包括以下步骤：  
   
 1. 创建参与管道的数据流块。  
   
@@ -74,7 +72,7 @@ ms.locfileid: "59299002"
  [!code-vb[TPLDataflow_Palindromes#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#4)]  
   
 ## <a name="posting-data-to-the-pipeline"></a>将数据发布到管道  
- 添加以下代码，以将《The Iliad of Homer》一书的 URL 发布到数据流管道的开头。  
+ 添加以下代码，以将《The Iliad of Homer》  一书的 URL 发布到数据流管道的开头。  
   
  [!code-csharp[TPLDataflow_Palindromes#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#6)]
  [!code-vb[TPLDataflow_Palindromes#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#6)]  
@@ -108,7 +106,7 @@ ms.locfileid: "59299002"
   
  通过使用数据流管道实现的并行称为*粗粒度并行*，因为它通常由几个较大的任务组成。 此外，你也可以在数据流管道中对短时间运行的较小任务使用*粒度较细的并行*。 在本示例中，管道的 `findReversedWords` 成员使用 [PLINQ](parallel-linq-plinq.md) 并行处理工作列表中的多个项。 在粗粒度的管道中使用细粒度并行可以提高总吞吐量。  
   
- 另外，还可以将数据流块连接到多个目标块，以创建“数据流网络”。 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> 方法采用一个 <xref:System.Predicate%601> 对象，该对象定义了目标块是否根据其值来接受每个消息。 大多数充当源的数据流块类型按目标块连接的顺序向所有已连接的目标块提供消息，直到其中一个块接受此消息。 通过使用此筛选机制，您可以创建已连接数据流块的系统，指示某些数据通过一条路径，其他数据通过另一条路径。 有关使用筛选来创建数据流网络的示例，请参阅[演练：在 Windows 窗体应用程序中使用数据流](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
+ 另外，还可以将数据流块连接到多个目标块，以创建“数据流网络”  。 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> 方法采用一个 <xref:System.Predicate%601> 对象，该对象定义了目标块是否根据其值来接受每个消息。 大多数充当源的数据流块类型按目标块连接的顺序向所有已连接的目标块提供消息，直到其中一个块接受此消息。 通过使用此筛选机制，您可以创建已连接数据流块的系统，指示某些数据通过一条路径，其他数据通过另一条路径。 有关使用筛选来创建数据流网络的示例，请参阅[演练：在 Windows 窗体应用程序中使用数据流](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   
 ## <a name="see-also"></a>请参阅
 

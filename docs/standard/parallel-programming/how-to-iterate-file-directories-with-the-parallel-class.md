@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1ec270159430434adc074f1fa6ca92ec3c4a455
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fda8443666d1c90b31cf02c2f925d1c89243a8e9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965262"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091319"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>如何：使用并行类循环访问文件目录
 在许多情况下，文件迭代是可以轻松并行执行的操作。 主题[如何：使用 PLINQ 循环访问文件目录](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md)，介绍了为多个应用场景执行此任务的最简单的方法。 不过，如果代码必须处理访问文件系统时可能会出现的多种异常，可能会带来麻烦。 下面的示例展示了一种解决此问题的方法。 它使用基于堆栈的迭代遍历指定目录下的所有文件和文件夹，并让代码能够捕获和处理各种异常。 当然，如何处理异常还是取决于自己的选择。  

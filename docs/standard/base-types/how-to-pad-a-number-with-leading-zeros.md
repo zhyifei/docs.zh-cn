@@ -11,14 +11,12 @@ helpviewer_keywords:
 - number formatting [.NET Framework]
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54c3eb734184adf5168607cfc8bcbf6c17ea493a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: bc3c4b75c484274c214141d8fbfcf8ac592b0b99
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678887"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131980"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>如何：用前导零填充数字
 
@@ -30,9 +28,9 @@ ms.locfileid: "57678887"
 
 1. 确定是要将整数显示为十进制值还是十六进制值。
 
-    - 若要将整数显示为十进制值，则调用其 `ToString(String)` 方法，并传递字符串“Dn”作为 `format` 参数的值，其中 n 表示字符串的最小长度。
+    - 若要将整数显示为十进制值，则调用其 `ToString(String)` 方法，并传递字符串“Dn”作为 `format` 参数的值，其中 n 表示字符串的最小长度   。
 
-    - 若要将整数显示为十六进制值，则调用其 `ToString(String)` 方法，并传递字符串“Xn”作为 format 参数的值，其中 n 表示字符串的最小长度。
+    - 若要将整数显示为十六进制值，则调用其 `ToString(String)` 方法，并传递字符串“Xn  ”作为 format 参数的值，其中 n  表示字符串的最小长度。
 
 此外，你也可以在 [C#](../../csharp/language-reference/tokens/interpolated.md) 和 [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) 的内插字符串中使用格式字符串，或者可以调用一个 <xref:System.String.Format%2A?displayProperty=nameWithType> 或 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 等使用[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)的方法。
 
@@ -55,7 +53,7 @@ ms.locfileid: "57678887"
 
 1. 将你要在格式化字符串中包括的前导零的数目添加到未填充的数字字符串的长度上。 添加前导零的个数将定义填充字符串的总长度。
 
-1. 调用整数值的 `ToString(String)` 方法，并且对于十进制字符串传递字符串“Dn”，对于十六进制字符串传递“Xn”；其中，n 表示填充的字符串的总长度。 也可以在支持复合格式设置的方法中使用“Dn”或“Xn”格式字符串。
+1. 调用整数值的 `ToString(String)` 方法，并且对于十进制字符串传递字符串“Dn  ”，对于十六进制字符串传递“Xn  ”；其中，n  表示填充的字符串的总长度。 也可以在支持复合格式设置的方法中使用“Dn  ”或“Xn  ”格式字符串。
 
 下面的示例使用五个前导零来填充整数值。
 
@@ -85,7 +83,7 @@ ms.locfileid: "57678887"
 
     1. 如果它包括小数点符号，则确定小数点左侧的字符数。
 
-         或
+         -或-
 
          如果它不包括小数点符号，则确定字符串的长度。
 

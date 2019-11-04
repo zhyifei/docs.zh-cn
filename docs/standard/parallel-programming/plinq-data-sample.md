@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 60693a6570eff6f9d4980d8f29f1385bc7462f08
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: b13a2608df486f1de42514d4f8eaac49f04d345e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353152"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140014"
 ---
 # <a name="plinq-data-sample"></a>PLINQ 数据示例
 此示例包含 .csv 格式的示例数据，以及将它转换为“客户”、“产品”、“订单”和“订单详情”内存中集合的方法。 若要进一步试验 PLINQ，可以将其他一些主题中的代码示例粘贴到本主题的代码中，并通过 `Main` 方法调用它。 也可以将此类数据用于自己的 PLINQ 查询。  

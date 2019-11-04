@@ -2,12 +2,12 @@
 title: 订阅事件
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解发布和订阅集成事件的详细信息。
 ms.date: 10/02/2018
-ms.openlocfilehash: ac9715c7c282be845e1e47516d06945c31f70209
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 208b0f27aa1e6ceb6686e9e846b6e31d9f1c74df
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039781"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035641"
 ---
 # <a name="subscribing-to-events"></a>订阅事件
 
@@ -105,7 +105,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 - 使用[事务日志挖掘](https://www.scoop.it/t/sql-server-transaction-log-mining)。
 
-- 使用[发件箱模式](http://gistlabs.com/2014/05/the-outbox/)。 这是用于存储集成事件（扩展本地事务）的事务表。
+- 使用[发件箱模式](https://www.kamilgrzybek.com/design/the-outbox-pattern/)。 这是用于存储集成事件（扩展本地事务）的事务表。
 
 在本案例中，使用完整事件溯源 (ES) 模式即使算不上*最好*的办法，也是最好的办法之一。 但是，在许多应用程序案例中，你可能无法实现完整的 ES 系统。 ES 意味着仅在事务数据库中存储域事件，而不存储当前状态数据。 仅存储域事件可以带来很大的好处，例如可以获得系统的历史记录，并且能够确定系统在过去任意时间点的状态。 但是，实现完整的 ES 系统需要重新构建大部分系统，并引入许多其他复杂性和要求。 例如，你希望使用专用于事件溯源的数据库（例如 [Event Store](https://eventstore.org/)）或面向文档的数据库（例如 Azure Cosmos DB、MongoDB、Cassandra、CouchDB 或 RavenDB）。 对于此问题，ES 是一种很好的解决方案，但不是最简单的解决方案，除非你已经熟悉事件溯源。
 
@@ -326,7 +326,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     <https://go.particular.net/eShopOnContainers>
 
 - **事件驱动的消息传递** \
-    [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
+    <https://patterns.arcitura.com/soa-patterns/design_patterns/event_driven_messaging>
 
 - **Jimmy Bogard。重构复原能力：评估耦合度** \
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>

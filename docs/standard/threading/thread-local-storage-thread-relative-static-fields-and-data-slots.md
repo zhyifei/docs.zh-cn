@@ -8,14 +8,12 @@ helpviewer_keywords:
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7beb22c68450d7ae4aeb6d0bcae45fafdfe78191
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: b5a7c4b78f8599f64aa11f1c98c033866e582933
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490919"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127524"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>线程本地存储：线程相关的静态字段和数据槽
 托管线程本地存储 (TLS) 可用于存储对线程和应用域唯一的数据。 .NET Framework 提供了下面两种托管 TLS 使用方式：线程相对静态字段和数据槽。  

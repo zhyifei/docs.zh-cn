@@ -2,12 +2,12 @@
 title: Docker 术语
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | Docker 术语
 ms.date: 01/07/2019
-ms.openlocfilehash: a5f78ea0e848ef14f6b37e2d97d7546df20096c2
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 2735188c508a7bbb0101946429faec122b13a17b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179405"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090051"
 ---
 # <a name="docker-terminology"></a>Docker 术语
 
@@ -17,7 +17,7 @@ ms.locfileid: "72179405"
 
 **Dockerfile**：包含有关如何生成 Docker 映像的说明的文本文件。 与批处理脚本相似，首先第一行将介绍基础映像，然后是关于安装所需程序、复制文件等操作的说明，直至获取所需的工作环境。
 
-**生成**：基于其 Dockerfile 提供的信息和上下文生成容器映像的操作，以及生成映像的文件夹中的其他文件。 可以使用 Docker 的 **docker build** 命令生成映像。 
+**生成**：基于其 Dockerfile 提供的信息和上下文生成容器映像的操作，以及生成映像的文件夹中的其他文件。 可以使用 Docker 的 **docker build** 命令生成映像。
 
 **容器**：Docker 映像的实例。 容器表示单个应用程序、进程或服务的执行。 它由 Docker 映像的内容、执行环境和一组标准指令组成。 在缩放服务时，可以从相同的映像创建多个容器实例。 或者，批处理作业可以从同一个映像创建多个容器，向每个实例传递不同的参数。
 
@@ -47,7 +47,7 @@ ms.locfileid: "72179405"
 
 **群集**：Docker 主机集合像单一虚拟 Docker 主机一样公开，以便应用程序可以扩展到服务分布在群集中多个主机的多个实例。 Docker 群集可以使用 Kubernetes、Azure Service Fabric、Docker Swarm 和 Mesosphere DC/OS创建。
 
-**业务流程协调程序**：简化群集和 Docker 主机管理的工具。 通过命令行界面 (CLI) 或图形用户界面，业务流程协调程序能够管理其映像、容器和主机。 可以管理容器网络、配置、负载均衡、服务发现、高可用性、Docker 主机配置等。 业务流程协调程序负责跨节点集合运行、分发、缩放和修复工作负荷。 通常情况下，业务流程协调程序产品是提供群集基础结构的同一产品，如 Kubernetes 和 Azure Service Fabric，以及市场中的其他产品/服务。 
+**业务流程协调程序**：简化群集和 Docker 主机管理的工具。 通过命令行界面 (CLI) 或图形用户界面，业务流程协调程序能够管理其映像、容器和主机。 可以管理容器网络、配置、负载均衡、服务发现、高可用性、Docker 主机配置等。 业务流程协调程序负责跨节点集合运行、分发、缩放和修复工作负荷。 通常情况下，业务流程协调程序产品是提供群集基础结构的同一产品，如 Kubernetes 和 Azure Service Fabric，以及市场中的其他产品/服务。
 
 >[!div class="step-by-step"]
 >[上一页](docker-defined.md)

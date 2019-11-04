@@ -13,18 +13,16 @@ helpviewer_keywords:
 - PadLeft method
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3f58e1c3a9e42f48ecc219a2db1649051f9ca20b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2cf114296005456f354d286aa2804fa8a95160dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43890722"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127628"
 ---
 # <a name="padding-strings-in-net"></a>填充 .NET 中的字符串
 
-使用下面的 <xref:System.String> 方法之一，在原始字符串中填充前导或尾随字符，以达到指定总长度，从而新建字符串。 填充字符可以是空格或指定字符。 生成的字符串可能显示为右对齐或左对齐。 如果原始字符串的长度已经等于或大于所需总长度，则填充方法返回未经更改的原始字符串；有关详细信息，请参阅 <xref:System.String.PadLeft%2A?displayProperty=nameWithType> 和 <xref:System.String.PadRight%2A?displayProperty=nameWithType> 方法的两个重载的“返回”部分。
+使用下面的 <xref:System.String> 方法之一，在原始字符串中填充前导或尾随字符，以达到指定总长度，从而新建字符串。 填充字符可以是空格或指定字符。 生成的字符串可能显示为右对齐或左对齐。 如果原始字符串的长度已经等于或大于所需总长度，则填充方法返回未经更改的原始字符串；有关详细信息，请参阅 <xref:System.String.PadLeft%2A?displayProperty=nameWithType> 和 <xref:System.String.PadRight%2A?displayProperty=nameWithType> 方法的两个重载的“返回”部分  。
   
 |方法名称|使用|  
 |-----------------|---------|  

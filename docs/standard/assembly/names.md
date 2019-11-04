@@ -5,14 +5,12 @@ helpviewer_keywords:
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 22e35450460436e164db922fce76a53c437f6bdf
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: a35be7c2a2cb4b499496f526d263bb1825a3614b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835324"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107119"
 ---
 # <a name="assembly-names"></a>程序集名称
 程序集的名称存储在元数据中，它对程序集的范围及应用程序对程序集的使用有重要影响。 强名称程序集有一个完全限定的名称，由程序集的名称、区域性、公钥及版本号组成。 该名称通常称为显示名称，对于加载的程序集，可通过使用 <xref:System.Reflection.Assembly.FullName%2A> 属性来获取它。  

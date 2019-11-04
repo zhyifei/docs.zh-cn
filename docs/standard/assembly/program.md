@@ -5,14 +5,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], programming
 - programming assemblies
 ms.assetid: 25918b15-701d-42c7-95fc-c290d08648d6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 03babe701b46eab54a76094c4728af80e6d9911e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9f07d36d9e47189d53e367fd1406e5684c024aa3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972617"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107058"
 ---
 # <a name="program-with-assemblies"></a>使用程序集编程
 程序集是 .NET Framework 的构造块；它们构成了部署、版本控制、重复使用、激活范围和安全权限的基本单元。 程序集向公共语言运行时提供了解类型实现所需要的信息。 程序集是为协同工作而生成的类型和资源的集合，这些类型和资源构成了一个逻辑功能单元。 对于运行时，类型不存在于程序集上下文之外。  

@@ -2,12 +2,12 @@
 title: 实现复原 Entity Framework Core SQL 连接
 description: 了解如何实现复原 Entity Framework Core SQL 连接。 在云中使用 Azure SQL 数据库时，此技术尤为重要。
 ms.date: 10/16/2018
-ms.openlocfilehash: 3bf5c1827cee1da69aeccdc9f15573c301fc9363
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3128cf1be7f2dc8804a002556db232f4e0fc8c33
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674554"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094053"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>实现复原 Entity Framework Core SQL 连接
 
@@ -49,7 +49,7 @@ public class Startup
 
 > System.InvalidOperationException：已配置的执行策略“SqlServerRetryingExecutionStrategy”不支持用户启动的事务。 使用由“DbContext.Database.CreateExecutionStrategy()”返回的执行策略执行事务（作为一个可回溯单元）中的所有操作。
 
-该解决方案通过代表所有需要执行的委托来手动调用 EF 执行策略。 如果出现暂时性失败，执行策略将再次调用委托。 例如，以下代码演示了在更新产品时，如何使用两个 DbContext（\_ catalogContext 和 IntegrationEventLogContext）在 eShopOnContainers 中实现该操作，然后保存需要使用不同 DbContext 的 ProductPriceChangedIntegrationEvent 对象。
+该解决方案通过代表所有需要执行的委托来手动调用 EF 执行策略。 如果发生暂时性故障，执行策略会再次调用委托。 例如，以下代码演示了在更新产品时，如何使用两个 DbContext（\_ catalogContext 和 IntegrationEventLogContext）在 eShopOnContainers 中实现该操作，然后保存需要使用不同 DbContext 的 ProductPriceChangedIntegrationEvent 对象。
 
 ```csharp
 public async Task<IActionResult> UpdateProduct(
@@ -104,7 +104,7 @@ public class CatalogIntegrationEventService : ICatalogIntegrationEventService
         // https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency
         await ResilientTransaction.New(_catalogContext).ExecuteAsync(async () =>
         {
-            // Achieving atomicity between original catalog database 
+            // Achieving atomicity between original catalog database
             // operation and the IntegrationEventLog thanks to a local transaction
             await _catalogContext.SaveChangesAsync();
             await _eventLogService.SaveEventAsync(evt,
@@ -128,7 +128,7 @@ public class ResilientTransaction
 
     public async Task ExecuteAsync(Func<Task> action)
     {
-        // Use of an EF Core resiliency strategy when using multiple DbContexts 
+        // Use of an EF Core resiliency strategy when using multiple DbContexts
         // within an explicit BeginTransaction():
         // https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency
         var strategy = _context.Database.CreateExecutionStrategy();

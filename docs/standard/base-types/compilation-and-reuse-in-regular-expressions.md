@@ -12,14 +12,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, compilation
 - regular expressions, engines
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca2dfcfbb5407be2727343a5b3a5b429af83ae20
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3e1dfe8373145286b03e503f038e267ff0d4c4f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634586"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091729"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>正则表达式中的编译和重复使用
 通过了解正则表达式引擎编译表达式的方式以及正则表达式的缓存方式，可以优化大量使用正则表达式的应用程序的性能。 本主题介绍编译和缓存。  

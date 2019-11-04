@@ -14,14 +14,12 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eddf605ab085aa39494bef0818ef51403cb032ef
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: a7a870ac32385bf5015f1a95c0246fed6a5c9c05
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988781"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084232"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>正则表达式中的限定符
 限定符指定输入中必须存在字符、组或字符类的多少实例才能找到匹配项。  下表列出了 .NET 支持的限定符。  

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - memory use, monitoring
 - application domains, resource monitoring
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8c7b9d7c2297fe30b02dc9782002413e9f38dc98
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 54e300bef1818fd08f27d7920eec68ee1f2c45bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751530"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141377"
 ---
 # <a name="application-domain-resource-monitoring"></a>应用程序域资源监控
 
@@ -43,7 +41,7 @@ ARM 是轻型服务，足可用于实际应用。 若要访问信息，可以使
 
 ARM 提供应用域使用的总处理器时间，以及关于内存使用情况的三种信息。
 
-- **应用域使用的总处理器时间（以秒为单位）**：此时间的计算方式为，将操作系统报告的线程时间相加得出，包括在生存期内在应用域中执行的所有线程。 受阻止或处于睡眠状态的线程不使用处理器时间。 如果线程调用本机代码，线程在本机代码中花费的时间计入执行调用的应用域的总处理器时间。
+- **应用域使用的总处理器时间（以秒为单位）** ：此时间的计算方式为，将操作系统报告的线程时间相加得出，包括在生存期内在应用域中执行的所有线程。 受阻止或处于睡眠状态的线程不使用处理器时间。 如果线程调用本机代码，线程在本机代码中花费的时间计入执行调用的应用域的总处理器时间。
 
   - 托管 API：<xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType> 属性。
 
@@ -51,7 +49,7 @@ ARM 提供应用域使用的总处理器时间，以及关于内存使用情况�
 
   - ETW 事件：`ThreadCreated`、`ThreadAppDomainEnter` 和 `ThreadTerminated` 事件。 若要了解提供程序和关键字，请参阅 [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md) 中的“应用域资源监视事件”。
 
-- **应用程序域在其生命周期内进行的托管分配总量（以字节为单位）**：总分配并不总是反映应用程序域的内存使用情况，因为所分配的对象可能是短期的。 不过，如果应用分配并释放大量对象，分配成本可能会非常高。
+- **应用程序域在其生命周期内进行的托管分配总量（以字节为单位）** ：总分配并不总是反映应用程序域的内存使用情况，因为所分配的对象可能是短期的。 不过，如果应用分配并释放大量对象，分配成本可能会非常高。
 
   - 托管 API：<xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> 属性。
 
@@ -59,7 +57,7 @@ ARM 提供应用域使用的总处理器时间，以及关于内存使用情况�
 
   - ETW 事件：`AppDomainMemAllocated` 事件、`Allocated` 字段。
 
-- **应用域引用且在最新执行的完全阻止式回收后保留的托管内存（以字节为单位）**：此数字只有在执行完全阻止式回收后才准确。 （这与并发回收相反，后者发生在后台，不会阻止应用。）例如，<xref:System.GC.Collect?displayProperty=nameWithType> 方法重载导致执行完全阻止式回收。
+- **应用域引用且在最新执行的完全阻止式回收后保留的托管内存（以字节为单位）** ：此数字只有在执行完全阻止式回收后才准确。 （这与并发回收相反，后者发生在后台，不会阻止应用。）例如，<xref:System.GC.Collect?displayProperty=nameWithType> 方法重载导致执行完全阻止式回收。
 
   - 托管 API：<xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> 属性。
 
@@ -67,7 +65,7 @@ ARM 提供应用域使用的总处理器时间，以及关于内存使用情况�
 
   - ETW 事件：`AppDomainMemSurvived` 事件、`Survived` 字段。
 
-- **进程引用且在最新执行的完全阻止式回收后保留的托管内存总量（以字节为单位）**：可将为单个应用程序域保留的内存与此数字进行比较。
+- **进程引用且在最新执行的完全阻止式回收后保留的托管内存总量（以字节为单位）** ：可将为单个应用程序域保留的内存与此数字进行比较。
 
   - 托管 API：<xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType> 属性。
 

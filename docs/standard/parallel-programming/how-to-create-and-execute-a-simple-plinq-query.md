@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to create
 ms.assetid: 983b4213-bddd-4a44-9262-cbe59186df4c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 472304dff23e92620dd461e8bc43c3093431ddc4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 349cc8d78e9a080d720e09a7e3e5e314752605c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962520"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106963"
 ---
 # <a name="how-to-create-and-execute-a-simple-plinq-query"></a>如何：创建并执行简单的 PLINQ 查询
 下面的示例演示如何通过对源序列使用 <xref:System.Linq.ParallelEnumerable.AsParallel%2A> 扩展方法来创建一个简单的并行 LINQ 查询，并使用 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 方法执行该查询。  

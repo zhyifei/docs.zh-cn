@@ -5,14 +5,12 @@ helpviewer_keywords:
 - strong-named assemblies
 - strong naming [.NET Framework], enhanced
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1ab1087a840fe41b9fac7779c73797c470899408
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1d582513b10de88e4e5b9b9ef8c338599d6980f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834883"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141172"
 ---
 # <a name="enhanced-strong-naming"></a>改进的强命名
 强名称签名是 .NET Framework 中用于识别程序集的识别机制。 它是一个公钥数字签名，通常用于验证发信方（签名方）发送给收信方（验证方）的数据的完整性。 此签名是程序集的唯一标识，可确保对程序集的引用清楚明确。 在生成过程中对程序集进行签名，然后在加载程序集时对其进行验证。  

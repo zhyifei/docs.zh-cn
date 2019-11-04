@@ -9,14 +9,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8fc88b06ee1e206208e6d6950f640966f53df3a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7f5969bc6f73b2260ae1ffa4b0026d5b4119ff88
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924907"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134263"
 ---
 # <a name="dataflow-task-parallel-library"></a>数据流（任务并行库）
 <a name="top"></a> 任务并行库 (TPL) 提供数据流组件，可帮助提高启用并发的应用程序的可靠性。 这些数据流组件统称为 TPL 数据流库  。 这种数据流模型通过向粗粒度的数据流和管道任务提供进程内消息传递来促进基于角色的编程。 数据流组件基于 TPL 的类型和计划基础结构，并集成了 C#、Visual Basic 和 F# 语言的异步编程支持。 当您有必须相互异步沟通的多个操作或者想要在数据可用时对其处理时，这些数据流组件就非常有用。 例如，请考虑一个处理网络摄像机图像数据的应用程序。 通过使用数据流模型，当图像帧可用时，应用程序就可以处理它们。 如果应用程序增强图像帧（例如执行灯光修正或消除红眼），则可以创建数据流组件的管道  。 管道的每个阶段可以使用更粗粒度的并行功能（例如 TPL 提供的功能）来转换图像。  

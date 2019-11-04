@@ -6,14 +6,12 @@ helpviewer_keywords:
 - 64-bit applications [C++]
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8aaa74eee5372dd7ba1ed145632f718d9ecce8ed
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 3ef6d02023570f5ec4013b070317c272a94b8212
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773978"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120099"
 ---
 # <a name="64-bit-applications"></a>64 位应用程序
 编译应用程序时，您可以将其指定为在 Windows 64 位操作系统上作为本机应用程序或在 WOW64（Windows 64 位下的 Windows 32 位）下运行。 WOW64 是一种兼容性环境，它使 32 位应用能够在 64 位系统上运行。 WOW64 包括在所有 64 位版本的 Windows 操作系统中。  

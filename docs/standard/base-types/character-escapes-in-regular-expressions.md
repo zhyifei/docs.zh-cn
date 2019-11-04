@@ -15,15 +15,13 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 248d434f7aad56d84d952fa27cf49f3d370f4a1c
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 0179c4313ebce3cf6f2ad09d527d43aeb627bf77
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "69934835"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120588"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>正则表达式中的字符转义
 正则表达式中的反斜杠 (\\) 指示以下值之一：  

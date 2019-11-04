@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, how to poll for requests
 ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1794b47db87f636cc2ccdf2eecb9e7ca334ae659
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: df76674e3003bbb77ef062e90b1dc3283f681d35
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47192870"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138029"
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>如何：通过轮询侦听取消请求
 下面的示例展示了一种方便用户代码定期轮询取消令牌，以确定是否已通过调用线程发出取消请求的方式。 此示例使用 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 类型，但相同的模式适用于 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 类型或 <xref:System.Threading.Thread?displayProperty=nameWithType> 类型直接创建的异步操作。  

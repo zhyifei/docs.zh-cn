@@ -8,18 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - synchronization primitives, Barrier
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 081a4e66462ab546bf4738b4a8b06a4a2ec91a1d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5aa34f7f39f4b9b626bea29372cf984f3cefb361
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645024"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138154"
 ---
 # <a name="barrier"></a>屏障
 
-<xref:System.Threading.Barrier?displayProperty=nameWithType> 是同步基元，可以使多个线程（称为“参与者”）分阶段同时处理算法。 达到代码中的屏障点之前，每个参与者将继续执行。 屏障表示工作阶段的末尾。 单个参与者到达屏障后将被阻止，直至所有参与者都已达到同一障碍。 所有参与者都已达到屏障后，你可以选择调用阶段后操作。 此阶段后操作可由单线程用于执行操作，而所有其他线程仍被阻止。 执行此操作后，所有参与者将不受阻止。  
+<xref:System.Threading.Barrier?displayProperty=nameWithType> 是同步基元，可以使多个线程（称为“参与者”  ）分阶段同时处理算法。 达到代码中的屏障点之前，每个参与者将继续执行。 屏障表示工作阶段的末尾。 单个参与者到达屏障后将被阻止，直至所有参与者都已达到同一障碍。 所有参与者都已达到屏障后，你可以选择调用阶段后操作。 此阶段后操作可由单线程用于执行操作，而所有其他线程仍被阻止。 执行此操作后，所有参与者将不受阻止。  
   
  以下代码片段演示了基本屏障模式。  
   

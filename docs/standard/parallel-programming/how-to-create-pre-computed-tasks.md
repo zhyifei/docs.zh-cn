@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, creating pre-computed
 ms.assetid: a73eafa2-1f49-4106-a19e-997186029b58
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5e68465b6fae39089600457414e7f2a2328f725b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f5d2a70685fe0401d0219b99ada6936ac04691f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593124"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123128"
 ---
 # <a name="how-to-create-pre-computed-tasks"></a>如何：创建预先计算的任务
 本文档介绍如何使用 <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> 方法检索缓存中包含的异步下载操作的结果。 <xref:System.Threading.Tasks.Task.FromResult%2A> 方法返回一个将所提供的值作为其 <xref:System.Threading.Tasks.Task%601> 属性的已完成的 <xref:System.Threading.Tasks.Task%601.Result%2A> 对象。 执行返回 <xref:System.Threading.Tasks.Task%601> 对象的异步运算，且已计算该 <xref:System.Threading.Tasks.Task%601> 对象的结果时，此方法将十分有用。  

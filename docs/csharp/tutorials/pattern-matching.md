@@ -2,13 +2,14 @@
 title: 使用模式匹配功能来扩展数据类型
 description: 本高级教程展示了如何使用模式匹配技术，通过单独创建的数据和算法来创建功能。
 ms.date: 03/13/2019
+ms-technology: csharp-whats-new
 ms.custom: mvc
-ms.openlocfilehash: 036a6bcda04771eb8cf3699af8756e83bb144389
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: ca7ae63a038fce0b2569e7a4bd1805765bc23d44
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332356"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039193"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>教程：使用模式匹配功能来扩展数据类型
 

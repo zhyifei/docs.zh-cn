@@ -1,16 +1,15 @@
 ---
 title: 方法 - C# 指南
 description: 有关方法、方法参数和方法返回值的概述
-author: rpetrusha
-ms.author: ronpet
+ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: b95818e06d37b0e98bf55428ff97dd476f92fac7
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: f44c83408e884d76eef5e2b5abbca511fbae2a1f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168513"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101487"
 ---
 # <a name="methods"></a>方法
 
@@ -18,22 +17,6 @@ ms.locfileid: "70168513"
 
 > [!NOTE]
 > 本主题讨论命名的方法。 有关匿名函数的信息，请参阅[匿名函数](programming-guide/statements-expressions-operators/anonymous-functions.md)。
-
-本主题包含以下各节：
-
-- [方法签名](#signatures)
-- [方法调用](#invocation)
-- [继承和重写的方法](#inherited)
-- [传递参数](#passing)
-  - [按值传递参数](#byval)
-  - [按引用传递参数](#byref)
-  - [参数数组](#paramarray)
-- [可选参数和自变量](#optional)
-- [返回值](#return)
-- [扩展方法](#extension)
-- [异步方法](#async)
-- [Expression-Bodied 成员](#expr)
-- [迭代器](#iterators)
 
 <a name="signatures"></a>
 
@@ -157,7 +140,7 @@ C# 中的所有类型不是值类型  就是引用类型  。 有关内置值类
 参数的默认值必须由以下几种表达式中的一种来赋予：
 
 - 常量，例如文本字符串或数字。
-- `new ValType` 形式的表达式，其中 `ValType` 是值类型。 请注意，这会调用该值类型的隐式无参数构造函数，该函数不是类型的实际成员。
+- `new ValType()` 形式的表达式，其中 `ValType` 是值类型。 请注意，这会调用该值类型的隐式无参数构造函数，该函数不是类型的实际成员。
 - `default(ValType)` 形式的表达式，其中 `ValType` 是值类型。
 
 如果某个方法同时包含必需的和可选的参数，则在参数列表末尾定义可选参数，即在定义完所有必需参数之后定义。

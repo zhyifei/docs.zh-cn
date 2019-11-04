@@ -13,14 +13,12 @@ helpviewer_keywords:
 - strings [.NET Framework], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 50750b23af9e9cfca79b0f7db9d272e8e24971ab
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: ef65c50111d6ba91ab70d0b9c8cb90c606f9366c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591410"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103818"
 ---
 # <a name="creating-new-strings-in-net"></a>新建 .NET 中的字符串
 借助 .NET Framework，可以使用简单的分配来创建字符串，也可以重载类构造函数，以支持使用许多不同参数来创建字符串。 .NET Framework 还在 <xref:System.String?displayProperty=nameWithType> 类中提供了多个方法，可通过合并多个字符串、字符串数组或对象来新建字符串对象。  
@@ -43,9 +41,9 @@ ms.locfileid: "65591410"
 |<xref:System.String.CopyTo%2A?displayProperty=nameWithType>|将一个字符串中的指定字符复制到一个字符数组中的指定位置。|  
   
 ### <a name="format"></a>格式  
- 可以使用 String.Format 方法，创建格式化字符串，并连接表示多个对象的字符串。 此方法自动将传递给它的任何对象转换为字符串。 例如，如果应用必须向用户显示 Int32 值和 DateTime 值，可以使用 Format 方法，轻松构造表示这些值的字符串。 有关此方法使用的格式化约定的信息，请参阅有关[复合格式化](../../../docs/standard/base-types/composite-formatting.md)的部分。  
+ 可以使用 String.Format  方法，创建格式化字符串，并连接表示多个对象的字符串。 此方法自动将传递给它的任何对象转换为字符串。 例如，如果应用必须向用户显示 Int32  值和 DateTime  值，可以使用 Format  方法，轻松构造表示这些值的字符串。 有关此方法使用的格式化约定的信息，请参阅有关[复合格式化](../../../docs/standard/base-types/composite-formatting.md)的部分。  
   
- 下面的示例使用 Format 方法，创建使用整数变量的字符串。  
+ 下面的示例使用 Format  方法，创建使用整数变量的字符串。  
   
  [!code-csharp[Strings.Creating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#1)]
  [!code-vb[Strings.Creating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#1)]  
@@ -53,13 +51,13 @@ ms.locfileid: "65591410"
  在此示例中，<xref:System.DateTime.Now%2A?displayProperty=nameWithType> 按照与当前线程关联的区域性指定的方式，显示当前日期和时间。  
   
 ### <a name="concat"></a>Concat  
- 使用 String.Concat 方法，可以通过两个或多个现有对象轻松新建字符串对象。 它提供了一种与语言无关的方法来连接字符串。 此方法接受派生自 System.Object 的任何类。 下面的示例使用两个现有字符串对象和一个分隔符创建一个字符串。  
+ 使用 String.Concat  方法，可以通过两个或多个现有对象轻松新建字符串对象。 它提供了一种与语言无关的方法来连接字符串。 此方法接受派生自 System.Object  的任何类。 下面的示例使用两个现有字符串对象和一个分隔符创建一个字符串。  
   
  [!code-csharp[Strings.Creating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#2)]
  [!code-vb[Strings.Creating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#2)]  
   
 ### <a name="join"></a>联接  
- String.Join 方法通过字符串数组和分隔符字符串新建字符串。 如果想要将多个字符串连接在一起，构成一个可能由逗号分隔的列表，则此方法非常有用。  
+ String.Join  方法通过字符串数组和分隔符字符串新建字符串。 如果想要将多个字符串连接在一起，构成一个可能由逗号分隔的列表，则此方法非常有用。  
   
  下面的示例使用空格来连接字符串数组。  
   
@@ -67,15 +65,15 @@ ms.locfileid: "65591410"
  [!code-vb[Strings.Creating#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#3)]  
   
 ### <a name="insert"></a>Insert  
- String.Insert 方法通过将一个字符串插入另一个字符串中的指定位置来新建字符串。 此方法使用从零开始的索引。 下面的示例将一个字符串插入 `MyString` 的第五个索引位置，并用此值创建新字符串。  
+ String.Insert  方法通过将一个字符串插入另一个字符串中的指定位置来新建字符串。 此方法使用从零开始的索引。 下面的示例将一个字符串插入 `MyString` 的第五个索引位置，并用此值创建新字符串。  
   
  [!code-csharp[Strings.Creating#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#4)]
  [!code-vb[Strings.Creating#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#4)]  
   
 ### <a name="copyto"></a>CopyTo  
- String.CopyTo 方法将字符串的某些部分复制到字符数组中。 可以同时指定字符串的开始索引和要复制的字符数。 此方法采用源索引、字符数组、目标索引和要复制的字符数。 所有索引都从零开始。  
+ String.CopyTo  方法将字符串的某些部分复制到字符数组中。 可以同时指定字符串的开始索引和要复制的字符数。 此方法采用源索引、字符数组、目标索引和要复制的字符数。 所有索引都从零开始。  
   
- 下面的示例使用 CopyTo 方法，将字符串对象中的“Hello”字词字符复制到字符数组的第一个索引位置。  
+ 下面的示例使用 CopyTo  方法，将字符串对象中的“Hello”字词字符复制到字符数组的第一个索引位置。  
   
  [!code-csharp[Strings.Creating#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#5)]
  [!code-vb[Strings.Creating#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#5)]  

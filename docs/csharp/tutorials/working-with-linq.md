@@ -2,13 +2,14 @@
 title: 使用 LINQ
 description: 此教程将介绍如何使用 LINQ 生成序列、编写用于 LINQ 查询的方法，以及如何区分及早计算和惰性计算。
 ms.date: 10/29/2018
+ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 72bb7475fc6b18650e0870bf99c4b8ddbac3ec9f
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: b25cd1763511f460537bccaf6011a3d23390ea72
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926621"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039175"
 ---
 # <a name="working-with-linq"></a>使用 LINQ
 

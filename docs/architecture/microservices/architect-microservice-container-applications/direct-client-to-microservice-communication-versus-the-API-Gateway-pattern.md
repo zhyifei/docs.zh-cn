@@ -2,12 +2,12 @@
 title: API 网关模式与客户端到微服务直接通信
 description: 了解 API 网关模式与客户端到微服务直接通信之间的差异及二者的用途。
 ms.date: 01/07/2019
-ms.openlocfilehash: 6b42650b2dbce093f12fe02b1605c95076dc8592
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 47e9a383c1fcb6c9fec38cb376b60a4ab839077d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522944"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090124"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 网关模式与客户端到微服务直接通信
 
@@ -132,7 +132,7 @@ API 网关可以提供多个功能。 然而，根据产品，它可能提供更
 
 图 4-14  。 为 API 网关使用 Azure API 管理
 
-Azure API 管理同时满足了 API 网关和管理需求（如日志记录、安全和计量等）。在这种情况下，使用如 Azure API 管理之类的产品时，拥有单个 API 网关不会存在较大风险，因为这类 API 网关“更精细”，这意味着不会实现可能发展成整体式组件的自定义 C# 代码。 
+Azure API 管理同时满足了 API 网关和管理需求（如日志记录、安全和计量等）。在这种情况下，使用如 Azure API 管理之类的产品时，拥有单个 API 网关不会存在较大风险，因为这类 API 网关“更精细”，这意味着不会实现可能发展成整体式组件的自定义 C# 代码。
 
 API 网关产品通常表现为用于入口通信的反向代理，也可以从内部微服务筛选 API，并授权此单层中的已发布 API。
 

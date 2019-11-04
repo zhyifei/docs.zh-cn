@@ -9,14 +9,12 @@ helpviewer_keywords:
 - cancellation tokens, joining
 - LinkedTokenSource, how to
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2684f0fd43f84573933fc0a7107ce4f9035bc092
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e35472040b6ee1263ebc4c4968fa1822045a2064
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913307"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138013"
 ---
 # <a name="how-to-listen-for-multiple-cancellation-requests"></a>如何：侦听多个取消请求
 此示例展示了如何同时侦听两个取消令牌，以便在其中任意一个令牌发出请求时取消操作。  

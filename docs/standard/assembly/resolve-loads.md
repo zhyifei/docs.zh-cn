@@ -8,18 +8,16 @@ helpviewer_keywords:
 - assemblies [.NET Framework], loading
 - application domains, resolving assembly loads
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: ee9ce292b18c75893dae46582dc5bb966981a614
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 6a49c070bd7d2e3819044c6bb653671a2fc8199f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972605"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107001"
 ---
 # <a name="resolve-assembly-loads"></a>解析程序集加载
 .NET 为对程序集加载需要更强控制的应用程序提供了 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。 通过处理此事件，应用程序可从常规探测路径外部将程序集加载到加载上下文、从几个程序集版本中选择要加载的版本、发出动态程序集并返回此程序集，等等。 本主题指导如何处理 <xref:System.AppDomain.AssemblyResolve> 事件。  

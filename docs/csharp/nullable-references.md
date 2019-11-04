@@ -1,13 +1,14 @@
 ---
 title: 可为空引用类型
 description: 本文概述了在 C# 8.0 中添加的可为空引用类型。 你将了解该功能如何为新项目和现有项目提供针对空引用异常的安全性。
+ms.technology: csharp-null-safety
 ms.date: 02/19/2019
-ms.openlocfilehash: 2c2148b3ae50ce6c00e523390ea02686d9106b8b
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: e20ea6efa389ba1aa0d8432a408c0b2a06a61c30
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846764"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039769"
 ---
 # <a name="nullable-reference-types"></a>可为空引用类型
 
@@ -66,6 +67,12 @@ name!.Length;
   - 引用类型的变量（例如字符串）不可为 null。 禁用所有为 Null 性警告。
 - `disable`：“禁用”可为空注释上下文  。 “禁用”可为空警告上下文  。
   - 引用类型的变量是“无视”，就像早期版本的 C# 一样。 禁用所有为 Null 性警告。
+
+**示例**：
+
+```xml
+<Nullable>enable</Nullable>
+```
 
 你还可以使用指令在项目的任何位置设置这些相同的上下文：
 

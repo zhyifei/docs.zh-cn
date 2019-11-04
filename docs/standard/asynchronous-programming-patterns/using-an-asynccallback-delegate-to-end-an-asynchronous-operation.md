@@ -11,14 +11,12 @@ helpviewer_keywords:
 - AsyncCallback delegate
 - stopping asynchronous operations
 ms.assetid: 9d97206c-8917-406c-8961-7d0909d84eeb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9e53634cea4ab3d260247ce645956c68ea7e2e80
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c3cac2db57a24bf6a0f5640e4ad8101686e6c3e9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623541"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130922"
 ---
 # <a name="using-an-asynccallback-delegate-to-end-an-asynchronous-operation"></a>使用 AsyncCallback 委托结束异步操作
 如果应用可以在等待异步操作结果期间继续执行其他工作，不得阻止应用一直到操作完成。 请使用下列方法之一，在应用等待异步操作完成期间继续执行指令：  

@@ -2,13 +2,14 @@
 title: 使用索引和范围探索数据范围
 description: 本高级教程教你使用索引和范围来探索数据，以检查顺序数据集的切片。
 ms.date: 09/20/2019
+ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: 1be144560d2b20bafc66cd68de0735e6dc7f0124
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: bbf3f257db9079c4f69f25c9ea08e7711b5ea04b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699941"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039672"
 ---
 # <a name="indices-and-ranges"></a>索引和范围
 

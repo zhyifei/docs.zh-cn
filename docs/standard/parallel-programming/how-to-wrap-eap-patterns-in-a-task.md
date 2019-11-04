@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to wrap EAP patterns
 ms.assetid: f11ed467-af2f-4504-8a2e-299a6c36d44e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a4287879bd95f7bc1e1dc99f74fa0d7cc0fe737f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ac7436892c644340286bb4670bf75c9cd63a8ce5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004255"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106819"
 ---
 # <a name="how-to-wrap-eap-patterns-in-a-task"></a>如何：在任务中包装 EAP 模式
 下面的示例演示如何通过使用 <xref:System.Threading.Tasks.TaskCompletionSource%601> 将任意基于事件的异步模式 (EAP) 操作序列公开为一个任务。 此示例还展示了如何使用 <xref:System.Threading.CancellationToken> 对 <xref:System.Net.WebClient> 对象调用内置的取消方法。  

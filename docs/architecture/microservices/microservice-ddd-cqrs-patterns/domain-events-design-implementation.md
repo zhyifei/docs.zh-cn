@@ -2,12 +2,12 @@
 title: 域事件。 设计和实现
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 深入了解域事件（在聚合之间建立通信的一个关键概念）。
 ms.date: 10/08/2018
-ms.openlocfilehash: 4fe0c1fa04bbecb64783e070838ab796de4f90d6
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: eea72633d3460f51821e8a939b14acff2f17965c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031835"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093956"
 ---
 # <a name="domain-events-design-and-implementation"></a>域事件：设计和实现
 
@@ -145,9 +145,9 @@ eShopOnContainers 使用延迟方法。 首先，将实体中发生的事件添�
 ```csharp
 public abstract class Entity
 {
-     //... 
+     //...
      private List<INotification> _domainEvents;
-     public List<INotification> DomainEvents => _domainEvents; 
+     public List<INotification> DomainEvents => _domainEvents;
 
      public void AddDomainEvent(INotification eventItem)
      {
@@ -194,7 +194,7 @@ public class OrderingContext : DbContext, IUnitOfWork
         // handlers that are using the same DbContext with Scope lifetime
         // B) Right AFTER committing data (EF SaveChanges) into the DB. This makes
         // multiple transactions. You will need to handle eventual consistency and
-        // compensatory actions in case of failures.        
+        // compensatory actions in case of failures.
         await _mediator.DispatchDomainEventsAsync(this);
 
         // After this line runs, all the changes (from the Command Handler and Domain
@@ -208,7 +208,7 @@ public class OrderingContext : DbContext, IUnitOfWork
 
 总体结果是将域事件引用（简单添加到内存中列表）从调度到事件处理程序中分离。 此外，可同步或异步调度事件，具体取决于你使用的调度程序。
 
-请注意事务边界在此时发挥巨大作用。 如果工作单元和事务可跨多个聚合（如使用 EF Core 和关系数据库时），这可正常运行。 但是，如果事务不能跨聚合（例如使用 Azure CosmosDB 等 NoSQL 数据库时），必须执行额外步骤以实现一致性。 这是持久性无感知不通用的另一个原因，它取决于你使用的存储系统。 
+请注意事务边界在此时发挥巨大作用。 如果工作单元和事务可跨多个聚合（如使用 EF Core 和关系数据库时），这可正常运行。 但是，如果事务不能跨聚合（例如使用 Azure CosmosDB 等 NoSQL 数据库时），必须执行额外步骤以实现一致性。 这是持久性无感知不通用的另一个原因，它取决于你使用的存储系统。
 
 ### <a name="single-transaction-across-aggregates-versus-eventual-consistency-across-aggregates"></a>跨聚合的单个事务与跨聚合的最终一致性
 
@@ -303,7 +303,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 
     public async Task Handle(OrderStartedDomainEvent orderStartedEvent)
     {
-        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ? orderStartedEvent.CardTypeId : 1;        
+        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ? orderStartedEvent.CardTypeId : 1;
         var userGuid = _identityService.GetUserIdentity();
         var buyer = await _buyerRepository.FindAsync(userGuid);
         bool buyerOriginallyExisted = (buyer == null) ? false : true;
@@ -321,7 +321,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
                                        orderStartedEvent.CardExpiration,
                                        orderStartedEvent.Order.Id);
 
-        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer) 
+        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer)
                                                                       : _buyerRepository.Add(buyer);
 
         await _buyerRepository.UnitOfWork

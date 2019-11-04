@@ -13,14 +13,12 @@ helpviewer_keywords:
 - parsing strings, other strings
 - Boolean data type, parsing strings
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cf8a7b090b7a54328101478aed7edbbc5efd79ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08e891501bbefcf8b32eff10dd7294af9d81adac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603620"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127571"
 ---
 # <a name="parsing-other-strings-in-net"></a>分析 .NET 中的其他字符串
 除了数字和 <xref:System.DateTime> 字符串之外，还可以将表示类型 <xref:System.Char>、<xref:System.Boolean> 和 <xref:System.Enum> 的字符串分析为数据类型。  
@@ -33,9 +31,9 @@ ms.locfileid: "54603620"
  [!code-vb[Conceptual.String.Parse#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#2)]  
   
 ## <a name="boolean"></a>Boolean  
- Boolean 数据类型包含 Parse 方法，可用于将表示 Boolean 值的字符串转换为实际 Boolean 类型。 此方法不区分大小写，可以成功分析包含“True”或“False”的字符串。 与 Boolean 类型关联的 Parse 方法还可以分析两端是空格的字符串。 如果传递的是其他任何字符串，<xref:System.FormatException> 就会抛出。  
+ Boolean  数据类型包含 Parse  方法，可用于将表示 Boolean 值的字符串转换为实际 Boolean  类型。 此方法不区分大小写，可以成功分析包含“True”或“False”的字符串。 与 Boolean  类型关联的 Parse  方法还可以分析两端是空格的字符串。 如果传递的是其他任何字符串，<xref:System.FormatException> 就会抛出。  
   
- 下面的代码示例使用 Parse 方法，将字符串转换为 Boolean 值。  
+ 下面的代码示例使用 Parse  方法，将字符串转换为 Boolean 值。  
   
  [!code-cpp[Conceptual.String.Parse#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#3)]
  [!code-csharp[Conceptual.String.Parse#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#3)]
@@ -44,7 +42,7 @@ ms.locfileid: "54603620"
 ## <a name="enumeration"></a>枚举  
  可以使用静态 **Parse** 方法将枚举类型初始化为字符串的值。 此方法接受要分析的枚举类型、要分析的字符串和可选 Boolean 标志（指明分析是否区分大小写）。 所分析的字符串可以包含用逗号分隔的多个值，这些值前面或后面可以是一个或多个空白（也称为空格）。 当字符串包含多个值时，返回的对象的值是所有指定值通过按位 OR 运算组合的值。  
   
- 下面的示例使用 Parse 方法，将字符串表示形式转换为枚举值。 <xref:System.DayOfWeek> 枚举从字符串初始化为 Thursday。  
+ 下面的示例使用 Parse  方法，将字符串表示形式转换为枚举值。 <xref:System.DayOfWeek> 枚举从字符串初始化为 Thursday  。  
   
  [!code-cpp[Conceptual.String.Parse#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#4)]
  [!code-csharp[Conceptual.String.Parse#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#4)]

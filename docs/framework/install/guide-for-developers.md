@@ -8,14 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c1a14f0ee36341c9579683f711ae78fc4df3f97
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 8c4b328cdecb468af57fe699283584e901772175
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833659"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091997"
 ---
 # <a name="install-the-net-framework-for-developers"></a>安装面向开发人员的 .NET Framework
 
@@ -37,7 +35,7 @@ ms.locfileid: "71833659"
 
 |.NET Framework 版本|开发人员安装|可再发行组件安装|平台支持|
 |----------------------------|----------------------------|----------------------------------|----------------------|
-|**4.8**|[.NET Framework 4.8 开发人员工具包](https://go.microsoft.com/fwlink/?linkid=2088517)|[下载中心 4.8 Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>[下载中心 4.8 脱机安装程序](https://go.microsoft.com/fwlink/?linkid=2088631)|**包含于：**<br/><br/>Windows 10 2019 年 5 月更新<br /><br /> **可以安装于：**<br/><br/>Windows 10 2018 年 10 月更新<br/>Windows 10 2018 年 4 月更新<br/>Windows 10 Fall Creators Update<br/>Windows 10 创意者更新 <br /> Windows 10 周年更新<br /> Windows 8.1 和更早版本<br /> Windows Server 2019<br/>Windows Server 版本 1809<br/>Windows Server 版本 1803<br /><br/> （有关完整列表，请参阅[系统要求](../get-started/system-requirements.md)）||
+|**4.8**|[.NET Framework 4.8 开发人员工具包](https://go.microsoft.com/fwlink/?linkid=2088517)|[下载中心 4.8 Web 安装程序](https://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>[下载中心 4.8 脱机安装程序](https://go.microsoft.com/fwlink/?linkid=2088631)|**包含于：**<br/><br/>Windows 10 2019 年 5 月更新<br /><br /> **可以安装于：**<br/><br/>Windows 10 2018 年 10 月更新<br/>Windows 10 2018 年 4 月更新<br/>Windows 10 Fall Creators Update<br/>Windows 10 创意者更新 <br /> Windows 10 周年更新<br /> Windows 8.1 和更早版本<br /> Windows Server 2019<br/>Windows Server 版本 1809<br/>Windows Server 版本 1803<br /><br/> （有关完整列表，请参阅[系统要求](../get-started/system-requirements.md)）||
 |**4.7.2**|[.NET Framework 4.7.2 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=874338)|[下载中心 4.7.2 Web 安装程序](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[下载中心 4.7.2 脱机安装程序](https://go.microsoft.com/fwlink/?LinkId=863265)|**包含于：** <br/><br/>Windows 10 2018 年 10 月更新<br/>Windows 10 2018 年 4 月更新<br/>Windows Server 2019<br/>Windows Server 版本 1809<br/>Windows Server 版本 1803<br /><br /> **可以安装于：**<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 创意者更新 <br /> Windows 10 周年更新<br /> Windows 8.1 和更早版本<br /> Windows Server 1709 和更低版本<br /><br/> （有关完整列表，请参阅[系统要求](../get-started/system-requirements.md)）||
 |**4.7.1**|[.NET Framework 4.7.1 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=852105)|[4.7.1 Web 安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [4.7.1 脱机安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=852107)|**包含于：** <br/><br/>Windows 10 Fall Creators Update<br/>Windows Server 版本 1709<br /><br /> **可以安装于：**<br/><br/> Windows 10 创意者更新 <br /> Windows 10 周年更新<br /> Windows 8.1 和更早版本<br /> Windows Server 2016 和更低版本<br /> （有关完整列表，请参阅[系统要求](../get-started/system-requirements.md)）||
 |**4.7**|[.NET Framework 4.7 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=825319)|[4.7 Web 安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [4.7 脱机安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=825303)|**包含于：** <br/><br/>Windows 10 创意者更新<br /><br /> **可以安装于：**<br /><br/> Windows 10 周年更新<br /> Windows 8.1 和更早版本<br /> Windows Server 2016 和更低版本<br /> （有关完整列表，请参阅[系统要求](../get-started/system-requirements.md)）||
@@ -170,7 +168,7 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
 
 1. 打开已安装的 .NET Framework 版本的语言包下载页：
 
-    - [.NET Framework 4.8 语言包](http://go.microsoft.com/fwlink/?LinkId=2053984)
+    - [.NET Framework 4.8 语言包](https://go.microsoft.com/fwlink/?LinkId=2053984)
 
     - [.NET Framework 4.7.2 语言包](https://go.microsoft.com/fwlink/?LinkID=863258)
 

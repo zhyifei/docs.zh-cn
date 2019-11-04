@@ -13,14 +13,12 @@ ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
 dev_langs:
 - csharp
 - vb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4c50cdf93d8cfcefeffd35290d26dfa432a241e1
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 51142a168aba4408e6ce550a032960c4df6c3ae7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882492"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138736"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>如何：向 Web 用户显示本地化的日期和时间信息
 由于世界各地的人都可以查看网页，因此在与用户交互时，分析和设置日期和时间值的格式的操作不得依赖默认格式（通常是 Web 服务器本地区域性的格式）。 相反，处理用户输入的日期和时间字符串的 Web 窗体，应使用用户的首选区域性分析字符串。 同样，日期和时间数据应以符合用户区域性的格式向用户显示。 本主题演示如何执行此操作。  
@@ -91,7 +89,7 @@ ms.locfileid: "65882492"
   
  从 Internet Explorer 提交的 HTTP 请求中检索内容时，<xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 数组按用户首选项顺序进行填充。 数组中的第一个元素包含用户的主要区域性/区域名称。 如果数组包含其他任何项，Internet Explorer 会向它们随意分配质量说明符（通过分号与区域性名称隔开）。 例如，fr-FR 区域性条目可能会采用 `fr-FR;q=0.7` 格式。  
   
- 此示例调用 `useUserOverride` 参数设置为 `false` 的 <xref:System.Globalization.CultureInfo.%23ctor%2A> 构造函数，以新建 <xref:System.Globalization.CultureInfo> 对象。 这样可确保在区域性名称是服务器上的默认区域性名称时，类构造函数新建的 <xref:System.Globalization.CultureInfo> 对象包含区域性默认设置，并不反映使用服务器的“区域和语言选项”应用重写的任何设置。 服务器上任何已重写设置的值既不太可能存在于用户系统中，也不太可能反映在用户输入中。  
+ 此示例调用 `useUserOverride` 参数设置为 `false` 的 <xref:System.Globalization.CultureInfo.%23ctor%2A> 构造函数，以新建 <xref:System.Globalization.CultureInfo> 对象。 这样可确保在区域性名称是服务器上的默认区域性名称时，类构造函数新建的 <xref:System.Globalization.CultureInfo> 对象包含区域性默认设置，并不反映使用服务器的“区域和语言选项”  应用重写的任何设置。 服务器上任何已重写设置的值既不太可能存在于用户系统中，也不太可能反映在用户输入中。  
   
  因为此示例分析日期和时间的两个字符串表示形式（一个由用户输入，另一个存储到隐藏字段），所以它定义了可能提前需要的 <xref:System.Globalization.CultureInfo> 对象。 它会创建 <xref:System.Globalization.CultureInfo> 对象数组，比 <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 属性返回的元素数量多一个。 然后，它为每个语言/区域字符串实例化 <xref:System.Globalization.CultureInfo> 对象，并实例化表示 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 的 <xref:System.Globalization.CultureInfo> 对象。  
   

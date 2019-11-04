@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 87ea2cbb46aca87af15b2c12321322c1b048df56
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a2271feae78100940b4ecac3c42c9bfefa7e1769
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625602"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123140"
 ---
 # <a name="data-structures-for-parallel-programming"></a>用于并行编程的数据结构
 .NET Framework 版本 4 引入了几种对并行编程非常有用的新类型，包括一组并发回收类、轻型同步基元和迟缓初始化类型。 可以将这些类型与任何多线程应用代码（包括任务并行库和 PLINQ）结合使用。  
@@ -43,7 +41,7 @@ ms.locfileid: "64625602"
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|通过提供简单的回收机制，简化分支和联接方案。 有关详细信息，请参阅 [CountdownEvent](../../../docs/standard/threading/countdownevent.md)。|  
 |<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|类似于 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 的同步基元。 虽然 <xref:System.Threading.ManualResetEventSlim> 是轻型基元，但只能用于进程内通信。|  
 |<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|限制可同时访问资源或资源池的线程数的同步基元。 有关详细信息，请参阅 [Semaphore 和 SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)。|  
-|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|互斥锁基元，导致尝试获取锁的线程先在循环中等待或旋转一段时间，再生成量程。 在应缩短锁等待时间的情况下，<xref:System.Threading.SpinLock> 的性能优于其他形式的锁定。 有关详细信息，请参阅 [SpinLock](../../../docs/standard/threading/spinlock.md)。|  
+|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|互斥锁基元，导致尝试获取锁的线程先在循环中等待或旋转  一段时间，再生成量程。 在应缩短锁等待时间的情况下，<xref:System.Threading.SpinLock> 的性能优于其他形式的锁定。 有关详细信息，请参阅 [SpinLock](../../../docs/standard/threading/spinlock.md)。|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|小的轻型类型，它会旋转一段指定的时间，并最终将线程置于等待状态（如果超出旋转计数的话）。  有关详细信息，请参阅 [SpinWait](../../../docs/standard/threading/spinwait.md)。|  
   
  有关详细信息，请参见:  

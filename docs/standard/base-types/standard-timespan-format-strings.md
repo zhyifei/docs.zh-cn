@@ -17,14 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc2ca7a94ffb19f62f354bdfc3040490b57e2689
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5284eb52d7b50307e51945fc0b4a9deb8818f2e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968548"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121684"
 ---
 # <a name="standard-timespan-format-strings"></a>标准 TimeSpan 格式字符串
 <a name="Top"></a> 标准 <xref:System.TimeSpan> 格式字符串使用一个格式说明符，定义格式设置操作生成的 <xref:System.TimeSpan> 值的文本表示形式。 任何包含一个以上字符（包括空格）的格式字符串都被解释为自定义 <xref:System.TimeSpan> 格式字符串。 有关详细信息，请参阅[自定义 TimeSpan 格式字符串](../../../docs/standard/base-types/custom-timespan-format-strings.md)。  

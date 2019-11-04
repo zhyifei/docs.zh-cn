@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: e70d2b708eefa9762bef15403a63b2a908f7a149
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 757cbce98c73821a19ee162b7828fa4ad952de3c
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168967"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195487"
 ---
 # <a name="c-walkthroughs"></a>C# 演练
 演练提供有关常见方案的分步说明，这使它们成为了解产品或特定功能部分的良好开端。  
@@ -72,4 +72,4 @@ ms.locfileid: "70168967"
 ## <a name="see-also"></a>请参阅
 
 - [C# 编程指南](./programming-guide/index.md)
-- [Visual Studio 示例](/visualstudio/ide/visual-studio-samples)
+- [Visual Studio 示例](/visualstudio/ide/visual-studio-ide)

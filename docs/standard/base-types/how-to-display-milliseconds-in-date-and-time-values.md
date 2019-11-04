@@ -12,14 +12,12 @@ helpviewer_keywords:
 - dates [.NET Framework], milliseconds
 - milliseconds [.NET Framework]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 135459f84cee0a3c356882b193ff561befb43145
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 01a34289b4845048438a3d3fd9263d1dcd1028c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963367"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138850"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>如何：显示日期和时间值中的毫秒
 默认日期和时间格式设置方法（如 <xref:System.DateTime.ToString?displayProperty=nameWithType>）包含时间值的小时、分钟和秒部分，但不包含毫秒部分。 本主题说明如何在格式化日期和时间字符串中包含日期和时间的毫秒部分。  

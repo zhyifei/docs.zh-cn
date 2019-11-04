@@ -2,14 +2,12 @@
 title: 全球化中断性变更 - .NET Core
 description: 列出 .NET Core 中全球化过程内的中断性变更。
 ms.date: 09/20/2019
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8ae7ac4f88cd8a4d6657bfde8abd3dfda35579d1
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 0913ea9a3e520d8a0ce916f3730673305124103b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216977"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093078"
 ---
 # <a name="globalization-breaking-changes"></a>全球化中断性变更 
 

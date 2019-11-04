@@ -9,14 +9,12 @@ helpviewer_keywords:
 - Parse method
 - parsing strings
 ms.assetid: 5e758b41-db93-456b-8999-99b7304b090d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8a6e0e7e69affd93320ec3f3d73e6254befaf6ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e4bf14981e538d95aebac3b0f36d38b61747989f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567739"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084319"
 ---
 # <a name="parsing-strings-in-net"></a>分析 .NET 中的字符串
 分析操作将表示某种 .NET 基类型的字符串转换为该基类型。 例如，分析操作用于将字符串转换为浮点数字或日期和时间值。 最常用于执行分析操作的方法是 `Parse` 方法。 因为分析是格式设置（涉及将基类型转换为其字符串表示形式）的反向操作，所以有许多相同规则和约定适用。 就像格式设置使用对象来实现 <xref:System.IFormatProvider> 接口以提供区域性敏感型格式设置信息一样，分析也使用对象来实现 <xref:System.IFormatProvider> 接口，以确定如何解释字符串表示形式。 有关详细信息，请参阅[类型格式设置](../../../docs/standard/base-types/formatting-types.md)。  
@@ -26,10 +24,10 @@ ms.locfileid: "33567739"
  介绍了如何将字符串转换为 .NET 数字类型。  
   
  [分析日期和时间字符串](../../../docs/standard/base-types/parsing-datetime.md)  
- 介绍了如何将字符串转换为 .NET DateTime 类型。  
+ 介绍了如何将字符串转换为 .NET DateTime  类型。  
   
  [分析其他字符串](../../../docs/standard/base-types/parsing-other.md)  
- 介绍了如何将字符串转换为 Char、Boolean 和 Enum 类型。  
+ 介绍了如何将字符串转换为 Char  、Boolean  和 Enum  类型。  
   
 ## <a name="related-sections"></a>相关章节  
  [格式设置类型](../../../docs/standard/base-types/formatting-types.md)  

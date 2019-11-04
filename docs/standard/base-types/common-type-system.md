@@ -16,15 +16,13 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 050b2c2b8b55bc79cf388ce7a8c197b14f3437d7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5590bb07c3927ba50000d7f9d99f11e30373343d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934762"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105710"
 ---
 # <a name="common-type-system"></a>常规类型系统
 通用类型系统定义了如何在公共语言运行时中声明、使用和管理类型，同时也是运行时跨语言集成支持的一个重要组成部分。 常规类型系统执行以下功能：  

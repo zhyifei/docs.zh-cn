@@ -1,16 +1,15 @@
 ---
 title: C# 中的继承
 description: 了解如何在 C# 库和应用程序中运用继承。
-author: rpetrusha
-ms.author: ronpet
 ms.date: 07/05/2018
+ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 41377cb47836624160a5b402e0a85270b68eba4f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b69da841c7c7a2e518191ad34f2ff5b368899728
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850985"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120131"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的继承
 

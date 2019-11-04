@@ -2,12 +2,12 @@
 title: 通过 Polly 实现使用指数退避算法的 HTTP 调用重试
 description: 了解如何使用 Polly 和 HttpClientFactory 处理 HTTP 故障。
 ms.date: 01/07/2019
-ms.openlocfilehash: 9988f70513959c099c771fcc0221bba7e2e70200
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 551cd1230c565b30c81090c984747e726680b9ed
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798814"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089959"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>通过 HttpClientFactory 和 Polly 策略实现使用指数退避算法的 HTTP 调用重试
 
@@ -15,7 +15,7 @@ ms.locfileid: "72798814"
 
 Polly 是一个 .NET 库，提供恢复能力和瞬态故障处理功能。 通过应用 Polly 策略（如重试、断路器、舱壁隔离、超时和回退）即可实现这些功能。 Polly 面向 .NET Framework 4.x 和 .NET Standard 1.0、1.1 和 2.0（支持 .NET Core）。
 
-但是，编写自己的自定义代码以将 Polly 库与 HttpClient 配合使用的过程非常复杂。 eShopOnContainers 的原始版本中包含基于 Polly 的 [ResilientHttpClient 构建基块](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10)。 但随着 [HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md) 的发布，使用 Polly 实现复原 HTTP 通信变得简单得多，因此已弃用 eShopOnContainers 中的构建基块。 
+但是，编写自己的自定义代码以将 Polly 库与 HttpClient 配合使用的过程非常复杂。 eShopOnContainers 的原始版本中包含基于 Polly 的 [ResilientHttpClient 构建基块](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10)。 但随着 [HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md) 的发布，使用 Polly 实现复原 HTTP 通信变得简单得多，因此已弃用 eShopOnContainers 中的构建基块。
 
 以下步骤说明如何通过集成到 HttpClientFactory 中的 Polly（已在上一部分中说明）使用 Http 重试。
 
@@ -49,20 +49,20 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 }
 ```
 
-使用 Polly 可定义一个重试策略，其中包含重试次数、指数退避算法配置以及在出现 HTTP 异常时要采取的操作，例如记录错误。 在此示例中，该策略配置为尝试 6 次（采用指数重试），以 2 秒为起始值。 
+使用 Polly 可定义一个重试策略，其中包含重试次数、指数退避算法配置以及在出现 HTTP 异常时要采取的操作，例如记录错误。 在此示例中，该策略配置为尝试 6 次（采用指数重试），以 2 秒为起始值。
 
 ## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>将抖动策略添加到重试策略
 
 在高并发率、高可伸缩性和高争用的情况下，常规重试策略可能会对系统产生影响。 在部分运行中断的情况下，有可能会有许多客户端同时发出相似的重试操作，从而形成操作高峰，为克服这种情况，一个好办法是向重试算法或策略中添加抖动策略。 由于增加了指数退避的随机性，这可能会改进端到端系统的整体性能。 这样在出现问题时可以分散峰值。 以下示例说明了这一原理：
 
 ```csharp
-Random jitterer = new Random(); 
+Random jitterer = new Random();
 var retryWithJitterPolicy = HttpPolicyExtensions
     .HandleTransientHttpError()
     .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
     .WaitAndRetryAsync(6,    // exponential back-off plus some jitter
         retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))  
-                      + TimeSpan.FromMilliseconds(jitterer.Next(0, 100)) 
+                      + TimeSpan.FromMilliseconds(jitterer.Next(0, 100))
     );
 ```
 
