@@ -7,18 +7,18 @@ helpviewer_keywords:
 - styles [WPF]
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
-ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b47b9b7091e5421278fe867f79eb8abc62588b93
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790905"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459056"
 ---
 # <a name="styles-and-templates"></a>样式和模板
-Windows Presentation Foundation (WPF) 样式和模板化指一套允许应用程序、 文档或用户界面 (UI) 设计器来创建极具视觉表现力的应用程序的功能 （样式、 模板、 触发器和情节提要），并尤其是查找其产品上实现标准化。  
+Windows Presentation Foundation （WPF）样式设置和模板化是指一套功能（样式、模板、触发器和情节提要），它允许应用程序、文档或用户界面（UI）设计器创建视觉引人注目的应用程序和针对产品的特定外观进行标准化。  
   
 ## <a name="in-this-section"></a>本节内容  
- [样式设置和模板化](styling-and-templating.md)  
+ [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   [如何：查找由 ControlTemplate 生成的元素](how-to-find-controltemplate-generated-elements.md)  
   
 ## <a name="reference"></a>参考  

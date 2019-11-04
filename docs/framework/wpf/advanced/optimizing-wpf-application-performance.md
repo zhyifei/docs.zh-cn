@@ -7,18 +7,18 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-ms.openlocfilehash: 4724e6264c0108924629055525e46d84e86a6e6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 98c7022eab9153808d47d7da69c23349032165c3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953423"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460847"
 ---
 # <a name="optimizing-wpf-application-performance"></a>优化 WPF 应用程序性能
-本部分旨在作为正在寻找提高应用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]程序性能的方法的应用程序开发人员的参考。 如果你是 Microsoft .NET 框架[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的新手的开发人员, 则应首先熟悉这两个平台。 本部分假设同时了解这两种情况, 并为已知道足以启动并运行应用程序的程序员编写这些内容。  
+本部分旨在作为正在寻找提高应用程序性能的方法的 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序开发人员的参考。 如果你是 Microsoft .NET 框架和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的新手的开发人员，则应首先熟悉这两个平台。 本部分假设同时了解这两种情况，并为已知道足以启动并运行应用程序的程序员编写这些内容。  
   
 > [!NOTE]
-> 本部分中提供的性能数据基于[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 2.8 GHz 电脑上运行的应用程序, 其中包含 512 RAM 和 ATI Radeon 9700 图形卡。  
+> 本部分中提供的性能数据基于使用 512 RAM 和 ATI Radeon 9700 图形卡的 2.8 GHz 电脑上运行的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序。  
   
 ## <a name="in-this-section"></a>本节内容  
  [规划应用程序性能](planning-for-application-performance.md)  
@@ -59,7 +59,7 @@ ms.locfileid: "69953423"
 - [WPF 中的文档](documents-in-wpf.md)
 - [绘制格式化文本](drawing-formatted-text.md)
 - [WPF 中的版式](typography-in-wpf.md)
-- [数据绑定概述](../data/data-binding-overview.md)
+- [数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)
 - [导航概述](../app-development/navigation-overview.md)
 - [动画提示和技巧](../graphics-multimedia/animation-tips-and-tricks.md)
 - [演练：在 WPF 应用程序中缓存应用程序数据](walkthrough-caching-application-data-in-a-wpf-application.md)

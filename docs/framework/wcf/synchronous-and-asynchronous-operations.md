@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: eab8faa54aaf9031ac0809912bd659c43e39a11b
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 61dfa257676d6c274d846300c7ccae75a219cf4c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321398"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424899"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和异步操作
 本主题讨论实现和调用异步服务操作。  
@@ -110,7 +110,7 @@ public class AsyncExample
  有关基于事件的异步模式的更多信息，请参见[基于事件的异步模式](https://go.microsoft.com/fwlink/?LinkId=232515)。  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>IAsyncResult 异步模式  
- 服务操作可以通过异步方式实现，使用 .NET Framework 异步编程模式，并使用 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 属性设置为 `true` 来标记 `<Begin>` 方法。 在这种情况下，异步操作将以与同步操作相同的方式在元数据中公开，即作为单个操作随请求消息和相关的响应消息来公开。 随后，客户端编程模型可以进行选择。 客户端编程模型可以将这种模式表示为同步操作，也可以表示为异步操作，但前提是调用该服务时发生了请求-响应消息交换。  
+ 服务操作可以通过异步方式实现，使用 .NET Framework 异步编程模式，并使用 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 属性设置为 `true`来标记 `<Begin>` 方法。 在这种情况下，异步操作将以与同步操作相同的方式在元数据中公开，即作为单个操作随请求消息和相关的响应消息来公开。 随后，客户端编程模型可以进行选择。 客户端编程模型可以将这种模式表示为同步操作，也可以表示为异步操作，但前提是调用该服务时发生了请求-响应消息交换。  
   
  通常，考虑到系统的异步特性，您不应依赖于线程。  将数据传递到操作调度处理的各个阶段的最可靠方式是使用扩展。  
   
@@ -162,13 +162,13 @@ Function EndDoWork(ByRef inout As String, ByRef outonly As String, ByVal result 
   
  在使用基于任务的模型时，只需使用 await 关键字调用操作，如下面的代码段所示。  
   
-```  
+```csharp  
 await simpleServiceClient.SampleMethodTaskAsync("hello, world");  
 ```  
   
  使用基于事件的异步模式只需添加事件处理程序，即可接收响应的通知 -- 将在用户界面线程上自动引发生成的事件。 若要使用此方法，请使用 [ServiceModel 元数据实用工具 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) 并同时指定 /async 和 /tcv:Version35 命令选项，如下面的示例所示。  
   
-```  
+```console  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
 ```  
   
@@ -176,7 +176,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Versio
   
  但是，基于事件的异步模型仅在 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] 中可用。 此外，如果 WCF 客户端通道是使用 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 创建的，那么即使在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 中，也不支持该模型。 使用 WCF 客户端通道对象时，必须使用 <xref:System.IAsyncResult?displayProperty=nameWithType> 对象异步调用操作。 若要使用此方法，请使用 [ServiceModel 元数据实用工具 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) 并指定 /async 命令选项，如下面的示例所示。  
   
-```  
+```console  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   
 ```  
   

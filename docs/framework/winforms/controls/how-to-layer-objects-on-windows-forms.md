@@ -12,31 +12,31 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2e4c6a3236b3a2a2afaad73fee21c3cf59b992b8
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 5b8f6c00e70df94ae3a82c2c195fa781f0840a53
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987569"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458351"
 ---
-# <a name="how-to-layer-objects-on-windows-forms"></a>如何：Windows 窗体上的层对象
+# <a name="how-to-layer-objects-on-windows-forms"></a>如何：在 Windows 窗体上的层对象
 
-当你创建复杂的用户界面或使用多文档界面 (MDI) 窗体时, 通常需要将控件和子窗体分层以创建更复杂的用户界面 (UI)。 若要在组的上下文中移动和跟踪控件和窗口, 请处理其*z 顺序*。 Z 顺序是窗体上的控件沿窗体的 z 轴 (深度) 的可视化分层。 Z 顺序顶部的窗口与所有其他窗口重叠。 所有其他窗口都与 z 顺序底部的窗口重叠。
+当你创建复杂的用户界面或使用多文档界面（MDI）窗体时，通常需要将控件和子窗体分层以创建更复杂的用户界面（UI）。 若要在组的上下文中移动和跟踪控件和窗口，请处理其*z 顺序*。 Z 顺序是窗体上的控件沿窗体的 z 轴（深度）的可视化分层。 Z 顺序顶部的窗口与所有其他窗口重叠。 所有其他窗口都与 z 顺序底部的窗口重叠。
 
 ## <a name="to-layer-controls-at-design-time"></a>在设计时将控件分层
 
-1. 在 Visual Studio 中, 选择要分层的控件。
+1. 在 Visual Studio 中，选择要分层的控件。
 
-2. 在 "**格式**" 菜单上, 选择 "**顺序**", 然后选择 "**置于顶层**" 或 "置于**底层**"。
+2. 在 "**格式**" 菜单上，选择 "**顺序**"，然后选择 "**置于顶层**" 或 "置于**底层**"。
 
 ## <a name="to-layer-controls-programmatically"></a>以编程方式对控件进行分层
 
-<xref:System.Windows.Forms.Control.BringToFront%2A>使用和<xref:System.Windows.Forms.Control.SendToBack%2A>方法来操作控件的 z 顺序。
+使用 <xref:System.Windows.Forms.Control.BringToFront%2A> 和 <xref:System.Windows.Forms.Control.SendToBack%2A> 方法来操作控件的 z 顺序。
 
-例如, 如果<xref:System.Windows.Forms.TextBox> `txtFirstName`控件位于另一个控件之下, 并且你想要将其置于顶层, 请使用以下代码:
+例如，如果 <xref:System.Windows.Forms.TextBox> `txtFirstName`控件在另一控件的下面，并且你想要将其置于顶层，请使用以下代码：
 
 ```vb
 txtFirstName.BringToFront()
@@ -51,7 +51,7 @@ txtFirstName->BringToFront();
 ```
 
 > [!NOTE]
-> Windows 窗体支持*控件包含*。 控件包含涉及到在包含控件中放置许多控件, 如<xref:System.Windows.Forms.RadioButton> <xref:System.Windows.Forms.GroupBox>控件中的多个控件。 然后, 可以将控件分层到包含控件中。 移动组框也将移动控件, 因为这些控件包含在其中。
+> Windows 窗体支持*控件包含*。 控件包含涉及到在包含控件中放置许多控件，如 <xref:System.Windows.Forms.GroupBox> 控件中的大量 <xref:System.Windows.Forms.RadioButton> 控件。 然后，可以将控件分层到包含控件中。 移动组框也将移动控件，因为这些控件包含在其中。
 
 ## <a name="see-also"></a>请参阅
 

@@ -9,38 +9,38 @@ helpviewer_keywords:
 - templates [WPF], ProgressBar
 - states [WPF], ProgressBar
 ms.assetid: 935aa600-16e6-4947-a905-37a189a583dd
-ms.openlocfilehash: f948cf2b4f4cd2a4cb73b0cd5fc754240c850b83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a1bea39ba9b6d2cff9937a3fee1d1de41daf16b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770521"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459881"
 ---
 # <a name="progressbar-styles-and-templates"></a>ProgressBar 样式和模板
-本主题介绍的样式和模板的<xref:System.Windows.Controls.ProgressBar>控件。 可以修改默认<xref:System.Windows.Controls.ControlTemplate>为控件提供唯一外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
+本主题介绍 <xref:System.Windows.Controls.ProgressBar> 控件的样式和模板。 您可以修改默认 <xref:System.Windows.Controls.ControlTemplate> 以使控件具有独特的外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
   
 ## <a name="progressbar-parts"></a>ProgressBar 部件  
- 下表列出了用于命名的部件<xref:System.Windows.Controls.ProgressBar>控件。  
+ 下表列出了 <xref:System.Windows.Controls.ProgressBar> 控件的已命名部分。  
   
-|部件|类型|描述|  
+|部件|键入|描述|  
 |-|-|-|  
-|PART_Indicator|<xref:System.Windows.FrameworkElement>|一个对象，它指示进度。|  
+|PART_Indicator|<xref:System.Windows.FrameworkElement>|指示进度的对象。|  
 |PART_Track|<xref:System.Windows.FrameworkElement>|定义进度指示器的路径的对象。|  
-|PART_GlowRect|<xref:System.Windows.FrameworkElement>|一个对象，修饰进度栏。|  
+|PART_GlowRect|<xref:System.Windows.FrameworkElement>|Embellishes 进度栏的对象。|  
   
-## <a name="progressbar-states"></a>进度栏状态  
- 下表列出了的可视状态<xref:System.Windows.Controls.ProgressBar>控件。  
+## <a name="progressbar-states"></a>ProgressBar 状态  
+ 下表列出了 <xref:System.Windows.Controls.ProgressBar> 控件的可视状态。  
   
 |VisualState 名称|VisualStateGroup 名称|描述|  
 |----------------------|---------------------------|-----------------|  
-|确定|CommonStates|<xref:System.Windows.Controls.ProgressBar> 报告进度基于<xref:System.Windows.Controls.Primitives.RangeBase.Value%2A>属性。|  
-|不确定|CommonStates|<xref:System.Windows.Controls.ProgressBar> 报告由重复图案泛型进度。|  
-|有效|ValidationStates|该控件使用<xref:System.Windows.Controls.Validation>类和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`已在控件有焦点。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`具有该控件没有焦点。|  
+|确定性|CommonStates|<xref:System.Windows.Controls.ProgressBar> 基于 <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> 属性报告进度。|  
+|尚|CommonStates|<xref:System.Windows.Controls.ProgressBar> 使用重复模式报告一般进度。|  
+|有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `true` 控件没有焦点。|  
   
-## <a name="progressbar-controltemplate-example"></a>ProgressBar ControlTemplate 示例  
- 下面的示例演示如何定义<xref:System.Windows.Controls.ControlTemplate>为<xref:System.Windows.Controls.ProgressBar>控件。  
+## <a name="progressbar-controltemplate-example"></a>ProgressBar System.windows.controls.controltemplate> 示例  
+ 下面的示例演示如何为 <xref:System.Windows.Controls.ProgressBar> 控件定义 <xref:System.Windows.Controls.ControlTemplate>。  
   
  [!code-xaml[ControlTemplateExamples#ProgressBar](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/progressbar.xaml#progressbar)]  
   
@@ -56,5 +56,5 @@ ms.locfileid: "61770521"
 - <xref:System.Windows.Controls.ControlTemplate>
 - [控件样式和模板](control-styles-and-templates.md)
 - [控件自定义](control-customization.md)
-- [样式设置和模板化](styling-and-templating.md)
+- [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)

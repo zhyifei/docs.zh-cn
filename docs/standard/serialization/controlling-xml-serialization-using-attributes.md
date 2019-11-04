@@ -15,19 +15,19 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: 54660244c1b3cca8cb75539edbe23628b370afd5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e089924900196ae369de1becfe3d0b8f0a00b79c
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934486"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459282"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>使用属性控制 XML 序列化
 
-使用属性可以控制对象的 XML 序列化，还可以利用同一组类创建其他 XML 流。 有关创建其他 XML 流的更多详细信息，请参阅[如何：指定 XML Stream 的替代元素名称](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。
+使用属性可以控制对象的 XML 序列化，还可以利用同一组类创建其他 XML 流。 有关创建其他 XML 流的详细信息，请参见[如何：指定 XML 流的替代元素名称](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。
 
 > [!NOTE]
-> 如果生成的 XML 必须符合到第 5 节的 World Wide Web 联合会 (W3C) 文档[简单对象访问协议 (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)，使用中列出的特性[属性，控制编码的 SOAP序列化](attributes-that-control-encoded-soap-serialization.md)。
+> 如果生成的 XML 必须符合标题为[简单对象访问协议（SOAP） 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)的万维网联合会（W3C）文档第5节，请使用[控制编码的 SOAP 序列化的特性](attributes-that-control-encoded-soap-serialization.md)中列出的属性。
 
 默认情况下，XML 元素名称由类或成员名称确定。 在名为 `Book` 的简单类中，名为 `ISBN` 的字段将生成 XML 元素标记 \<ISBN>，如下面的示例所示。
 
@@ -70,7 +70,7 @@ public class TaxRates {
 
 ## <a name="controlling-array-serialization"></a>控制数组序列化
 
-<xref:System.Xml.Serialization.XmlArrayAttribute> 和 <xref:System.Xml.Serialization.XmlArrayItemAttribute> 属性旨在用于控制数组的序列化。 使用这些属性，可以控制元素名称、 命名空间和 XML 架构 (XSD) 数据类型 (如标题为 World Wide Web 联合会 [www.w3.org] 文档中定义"XML 架构第 2 部分：数据类型"）。 此外，还可以指定数组所能包含的类型。
+<xref:System.Xml.Serialization.XmlArrayAttribute> 和 <xref:System.Xml.Serialization.XmlArrayItemAttribute> 属性旨在用于控制数组的序列化。 使用这些特性可以控制元素名称、命名空间以及 XML 架构 (XSD) 数据类型（在万维网联合会 [www.w3.org] 文档“XML 架构第 2 部分：数据类型”中进行了定义）。 此外，还可以指定数组所能包含的类型。
 
 对于序列化数组时生成的封闭 XML 元素，其属性将由 <xref:System.Xml.Serialization.XmlArrayAttribute> 确定。 例如，默认情况下，序列化下面的数组时，将会生成名为 `Employees` 的 XML 元素。 `Employees` 元素将包含在数组类型 `Employee` 之后命名的一系列元素。
 
@@ -202,7 +202,7 @@ public class Manager:Employee {
     <Employee xsi:type = "Manager">
         <Name>Ann</Name>
         <Level>3</Level>
-    <Employee>
+    </Employee>
 </Employees>
 </Group>
 ```
@@ -241,7 +241,7 @@ public class Group {
 </Group>
 ```
 
-区别两种 XML 流的另一个方法是，使用 XML 架构定义工具，从编译好的代码生成 XML 架构 (XSD) 文档文件。 （有关使用该工具的详细信息，请参见[XML 架构定义工具和 XML 序列化](the-xml-schema-definition-tool-and-xml-serialization.md)。）没有将属性应用于字段时，架构会以下列方式描述元素。
+区别两种 XML 流的另一个方法是，使用 XML 架构定义工具，从编译好的代码生成 XML 架构 (XSD) 文档文件。 （有关使用该工具的更多详细信息，请参阅[Xml 架构定义工具和 Xml 序列化](the-xml-schema-definition-tool-and-xml-serialization.md)。）当没有属性应用于字段时，架构将按以下方式描述元素。
 
 ```xml
 <xs:element minOccurs="0" maxOccurs ="1" name="Employees" type="ArrayOfEmployee" />
@@ -321,6 +321,6 @@ public class Group {
 - [用来控制编码的 SOAP 序列化的属性](attributes-that-control-encoded-soap-serialization.md)
 - [XML 序列化简介](introducing-xml-serialization.md)
 - [XML 序列化示例](examples-of-xml-serialization.md)
-- [如何：指定 XML Stream 的替代元素名称](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [如何：将对象序列化](how-to-serialize-an-object.md)
+- [如何：指定 XML 流的替代元素名称](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [如何：序列化对象](how-to-serialize-an-object.md)
 - [如何：反序列化对象](how-to-deserialize-an-object.md)

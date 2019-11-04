@@ -7,27 +7,27 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 334fdfa1c563844daf30eb4ee66dd66371e4774b
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 48441fe7c7c2745638a8aa95fd899d7e55697e85
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987012"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459469"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>如何：在 Windows 窗体上对齐多个控件
 
-若要标准化基于 Windows 的应用程序的用户界面 (UI) 的布局, 可以使用单个命令定位控件组。
+若要标准化基于 Windows 的应用程序的用户界面（UI）的布局，可以使用单个命令定位控件组。
 
 ## <a name="to-align-multiple-controls-on-a-form"></a>对齐窗体上的多个控件
 
-1. 在 Visual Studio 中, 打开包含要在**Windows 窗体设计器**中定位的控件的窗体。
+1. 在 Visual Studio 中，打开包含要在**Windows 窗体设计器**中定位的控件的窗体。
 
 2. 选择要对齐的控件。 您选择的第一个控件是其他控件将对齐的主要控件。
 
-3. 在 "**格式**" 菜单上, 选择 "**对齐**", 然后选择七个可用选项之一。
+3. 在 "**格式**" 菜单上，选择 "**对齐**"，然后选择七个可用选项之一。
 
 ## <a name="see-also"></a>请参阅
 
@@ -35,7 +35,7 @@ ms.locfileid: "69987012"
 - [如何：向 Windows 窗体添加控件](how-to-add-controls-to-windows-forms.md)
 - [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)
 - [按功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)
-- [演练：使用对齐线排列 Windows 窗体上的控件](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [演练：使用 TableLayoutPanel 排列 Windows 窗体上的控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [演练：使用 FlowLayoutPanel 排列 Windows 窗体上的控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [如何：将现有控件重新分配给不同的父控件](how-to-reassign-existing-controls-to-a-different-parent.md)
+- [演练：使用对齐线在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [演练：使用 FlowLayoutPanel 在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [如何：将现有控件重新分配给另一个父控件](how-to-reassign-existing-controls-to-a-different-parent.md)

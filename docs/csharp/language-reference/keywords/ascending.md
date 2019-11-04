@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ascending keyword [C#]
 ms.assetid: 57fbb619-8187-481c-b68e-3a91996fde69
-ms.openlocfilehash: 479e15b8c1103ea1e5fdd803812944d25d965a81
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f0b183f9e7cf0997947e5a8cdd73fb90fd7e44ea
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602340"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422917"
 ---
 # <a name="ascending-c-reference"></a>ascending（C# 参考）
 查询表达式中的 [orderby 子句](./orderby-clause.md) 中使用 `ascending` 上下文关键字指定排序顺序为从小到大。 由于 `ascending` 为默认排序顺序，因此无需加以指定。  
@@ -26,5 +26,5 @@ ms.locfileid: "69602340"
 ## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
-- [LINQ 查询表达式](../../programming-guide/linq-query-expressions/index.md)
+- [C# 中的 LINQ](../../linq/index.md)
 - [descending](./descending.md)

@@ -2,12 +2,12 @@
 title: 成员资格和角色提供程序
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 139d85a1ec36509690f35f24c7ddf04716a7e909
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7fba608d6d0ed3b7caab62ff16926d7b03516ed1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039439"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424671"
 ---
 # <a name="membership-and-role-provider"></a>成员资格和角色提供程序
 成员资格和角色提供程序示例演示服务如何使用 ASP.NET 成员资格和角色提供程序来对客户端进行身份验证和授权。  
@@ -69,7 +69,7 @@ ms.locfileid: "70039439"
 </system.web>  
 ```  
   
- 服务会公开一个单一终结点以便与使用 Web.config 配置文件定义的服务进行通信。 终结点由地址、绑定和协定组成。 绑定使用默认使用 Windows 身份验证的标准 `wsHttpBinding` 进行配置。 此示例将标准 `wsHttpBinding` 设置为使用用户名身份验证。 该行为指定将使用服务器证书进行服务身份验证。 服务器证书必须包含与[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) configuration 元素中`SubjectName`的`findValue`属性相同的值。 此外, 该行为指定 ASP.NET 成员资格提供程序执行用户名-密码对的身份验证, 并且角色映射通过指定为这两个提供程序定义的名称, 由 ASP.NET 角色提供程序执行。  
+ 服务会公开一个单一终结点以便与使用 Web.config 配置文件定义的服务进行通信。 终结点由地址、绑定和协定组成。 绑定使用默认使用 Windows 身份验证的标准 `wsHttpBinding` 进行配置。 此示例将标准 `wsHttpBinding` 设置为使用用户名身份验证。 该行为指定将使用服务器证书进行服务身份验证。 服务器证书必须包含与[\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) configuration 元素中的 `findValue` 属性相同的 `SubjectName` 值。 此外，该行为指定 ASP.NET 成员资格提供程序执行用户名-密码对的身份验证，并且角色映射通过指定为这两个提供程序定义的名称，由 ASP.NET 角色提供程序执行。  
   
 ```xml  
 <system.serviceModel>  
@@ -114,16 +114,16 @@ ms.locfileid: "70039439"
 </system.serviceModel>  
 ```  
   
- 运行示例时, 客户端会调用三个不同的用户帐户下的各种服务操作:Alice、Bob 和 Charlie。 操作请求和响应显示在客户端控制台窗口中。 以用户“Alice”身份执行的所有四个调用都应成功。 用户“Bob”在尝试调用 Divide 方法时会收到拒绝访问错误。 用户“Charlie”在尝试调用 Multiply 方法时会收到拒绝访问错误。 在客户端窗口中按 Enter 可以关闭客户端。  
+ 运行此示例时，客户端使用三个不同的用户帐户来调用各个服务操作：Alice、Bob 和 Charlie。 操作请求和响应显示在客户端控制台窗口中。 以用户“Alice”身份执行的所有四个调用都应成功。 用户“Bob”在尝试调用 Divide 方法时会收到拒绝访问错误。 用户“Charlie”在尝试调用 Multiply 方法时会收到拒绝访问错误。 在客户端窗口中按 Enter 可以关闭客户端。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 若要生成C#或 Visual Basic 的 .net 版本的解决方案, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+1. 若要生成C#或 Visual Basic 的 .net 版本的解决方案，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
   
 2. 确保已将 ASP.NET 配置为[数据库应用程序服务](https://go.microsoft.com/fwlink/?LinkId=94997)。  
   
     > [!NOTE]
-    > 如果运行的是 SQL Server Express Edition，则服务器名称为 .\SQLEXPRESS。 在配置 ASP.NET 应用程序服务数据库和 web.config 连接字符串时, 应使用此服务器。  
+    > 如果运行的是 SQL Server Express Edition，则服务器名称为 .\SQLEXPRESS。 在配置 ASP.NET 应用程序服务数据库和 web.config 连接字符串时，应使用此服务器。  
   
     > [!NOTE]
     > ASP.NET 工作进程帐户必须对此步骤中创建的数据库具有权限。 使用 sqlcmd 实用工具或 SQL Server Management Studio 来完成该工作。  
@@ -138,7 +138,7 @@ ms.locfileid: "70039439"
   
 3. 启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-4. 如果客户端和服务无法进行通信, 请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+4. 如果客户端和服务无法进行通信，请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
@@ -150,24 +150,24 @@ ms.locfileid: "70039439"
   
 4. 将客户端程序文件复制到客户端计算机上的客户端目录中。 另外，将 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 文件复制到客户端上。  
   
-5. 在服务器上, 打开具有管理权限的 Visual Studio 开发人员命令提示, 然后运行`setup.bat service`。 使用`setup.bat`参数运行将使用计算机的完全限定的域名创建一个服务证书, 并将服务证书导出到名为的文件。 `service`  
+5. 在服务器上，使用管理权限打开 Visual Studio 开发人员命令提示，并运行 `setup.bat service`。 使用 `service` 参数运行 `setup.bat` 将使用计算机的完全限定的域名创建一个服务证书，并将服务证书导出到名为的文件。  
   
-6. 编辑 web.config 以反映新的证书名称 (在`findValue` [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)的属性中), 该名称与计算机的完全限定域名相同。  
+6. 编辑 Web.config 以反映新的证书名称（在[\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)的 `findValue` 属性中），该名称与计算机的完全限定域名相同。  
   
 7. 将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
   
 8. 在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。  
   
-9. 在客户端上, 使用管理权限打开 Visual Studio 开发人员命令提示, 并运行 Importservicecert.bat。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
+9. 在客户端上，使用管理权限打开 Visual Studio 开发人员命令提示，并运行 Importservicecert.bat。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
   
-10. 在客户端计算机上，在命令提示符下启动 Client.exe。 如果客户端和服务无法进行通信, 请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+10. 在客户端计算机上，在命令提示符下启动 Client.exe。 如果客户端和服务无法进行通信，请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
 - 运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
 > [!NOTE]
-> 此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果你已运行跨计算机使用证书 Windows Communication Foundation (WCF) 示例, 请确保清除已安装在 CurrentUser-TrustedPeople 存储中的服务证书。 为此, 请使用以下命令:`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`例如: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+> 此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果你已运行跨计算机使用证书 Windows Communication Foundation （WCF）示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
 ## <a name="the-setup-batch-file"></a>Setup 批处理文件  
  通过运行此示例随附的 Setup.bat 批处理文件，可以用相关的证书将服务器配置为运行需要基于服务器证书的安全性的自承载应用程序。 必须修改此批处理文件，以便跨计算机或在非承载情况下工作。  
@@ -180,7 +180,7 @@ ms.locfileid: "70039439"
   
      证书存储在 LocalMachine 存储位置下的 My（个人）存储区中。  
   
-    ```  
+    ```console
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -194,6 +194,6 @@ ms.locfileid: "70039439"
   
      Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。  
   
-    ```  
+    ```bat  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  

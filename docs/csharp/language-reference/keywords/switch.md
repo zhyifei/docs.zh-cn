@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 5257d1d677246cdd6d826cd71ed3ffe116d2a4a6
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 76c778d1e2d45990793b5d9c7d4a8ee5a99fed46
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424122"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422299"
 ---
 # <a name="switch-c-reference"></a>switch（C# 参考）
 
@@ -44,7 +44,7 @@ ms.locfileid: "67424122"
 在 C# 6 及更低版本中，匹配表达式必须是返回以下类型值的表达式：
 
 - [字符型](char.md)。
-- [字符串](string.md)。
+- [字符串](../builtin-types/reference-types.md)。
 - [bool](bool.md)。
 - 整数值，例如 [int](../builtin-types/integral-numeric-types.md) 或 [long](../builtin-types/integral-numeric-types.md)。
 - [枚举](enum.md)值。
@@ -125,7 +125,7 @@ switch (caseSwitch)
 - 已声明 `const` 变量的名称。
 - 一个枚举常量。
 - [字符型](char.md)文本。
-- [字符串](string.md)文本。
+- [字符串](../builtin-types/reference-types.md)文本。
 
 常数表达式的计算方式如下：
 
@@ -195,7 +195,7 @@ case null:
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的 [switch 语句](~/_csharplang/spec/statements.md#the-switch-statement)。 该语言规范是 C# 语法和用法的权威资料。
+有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的 [switch 语句](~/_csharplang/spec/statements.md#the-switch-statement)。 该语言规范是 C# 语法和用法的权威资料。
 
 ## <a name="see-also"></a>请参阅
 

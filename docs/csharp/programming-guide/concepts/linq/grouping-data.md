@@ -2,12 +2,12 @@
 title: 对数据分组 (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 15dafdb144ee9fd4184d4c8281d041e03161a16b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e7f10b121a7a1c599d88731a806fe784eb1a7e66
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594201"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423408"
 ---
 # <a name="grouping-data-c"></a>对数据分组 (C#)
 分组是指将数据分到不同的组，使每组中的元素拥有公共的属性。  
@@ -64,8 +64,8 @@ foreach (var group in query)
 - <xref:System.Linq>
 - [标准查询运算符概述 (C#)](./standard-query-operators-overview.md)
 - [group 子句](../../../language-reference/keywords/group-clause.md)
-- [如何：创建嵌套组](../../linq-query-expressions/how-to-create-a-nested-group.md)
+- [如何：创建嵌套组](../../../linq/create-a-nested-group.md)
 - [如何：按扩展名对文件进行分组 (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)
-- [如何：对查询结果进行分组](../../linq-query-expressions/how-to-group-query-results.md)
-- [如何：对分组操作执行子查询](../../linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)
+- [如何：对查询结果进行分组](../../../linq/group-query-results.md)
+- [如何：对分组操作执行子查询](../../../linq/perform-a-subquery-on-a-grouping-operation.md)
 - [如何：使用组将一个文件拆分成多个文件 (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

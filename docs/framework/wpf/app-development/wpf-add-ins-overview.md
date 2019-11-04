@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: e1daf9efd59b89d5d5be5f51cf9ac5e00750dda3
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 319f8b8c0225c7730112b1db073884b391945ac8
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919729"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421088"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 外接程序概述
 
@@ -171,21 +171,21 @@ WPF UI 类型不能远程处理。 为了解决此问题，WPF 扩展了 .NET Fr
 
 ## <a name="add-ins-and-xaml-browser-applications"></a>外接程序和 XAML 浏览器应用程序
 
-到目前为止，示例中的主机应用程序都安装为独立应用程序。 但是，如果满足以下附加的生成和实现要求，[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 也可以承载外接程序：
+到目前为止，示例中的主机应用程序都安装为独立应用程序。 但 XAML 浏览器应用程序（Xbap）也可以承载外接程序，但有以下其他生成和实现要求：
 
-- 必须对 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 应用程序清单进行专门配置，以将管道（文件夹和程序集）和外接程序程序集下载到客户端计算机上的 ClickOnce 应用程序缓存中，与 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]位于同一文件夹中。
+- XBAP 应用程序清单必须经过专门配置，以将管道（文件夹和程序集）和外接程序程序集下载到客户端计算机上的 ClickOnce 应用程序缓存中，该文件位于 XBAP 所在的文件夹中。
 
-- 用于发现和加载外接程序的 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 代码必须使用 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 的 ClickOnce 应用程序缓存作为管道和外接程序位置。
+- 用于发现和加载外接程序的 XBAP 代码必须使用 XBAP 的 ClickOnce 应用程序缓存作为管道和外接程序位置。
 
-- 如果外接程序引用位于源站点的松散文件，则 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 必须将外接程序加载到专门的安全上下文中；在由 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 承载时，外接程序只能引用位于主机应用程序源站点的松散文件。
+- 如果外接程序引用位于源站点的松散文件，XBAP 必须将外接程序加载到特殊安全上下文中;当由 Xbap 承载时，外接程序只能引用位于主机应用程序源站点的松散文件。
 
 下面几个小节将详细介绍这些任务。
 
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>配置用于 ClickOnce 部署的管道和外接程序
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 下载到 ClickOnce 部署缓存中的 "安全" 文件夹，并从该文件夹运行。 为了使 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 能够承载外接程序，还必须将管道和外接程序程序集下载到该安全文件夹。 为此，需要将应用程序清单配置为包含要下载的管道和外接程序程序集。 尽管管道和外接程序程序集需要位于主机 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 项目的根文件夹中，以便 Visual Studio 能够检测管道程序集，但这是在 Visual Studio 中最容易实现的。
+Xbap 将下载到并从 ClickOnce 部署缓存中的一个安全文件夹运行。 为了使 XBAP 承载外接程序，还必须将管道和外接程序程序集下载到 safe 文件夹中。 为此，需要将应用程序清单配置为包含要下载的管道和外接程序程序集。 尽管管道和外接程序程序集需要位于主机 XBAP 项目的根文件夹中，但对于 Visual Studio 检测管道程序集，但这在 Visual Studio 中最容易实现。
 
-因此，第一步是通过设置每个管道程序集和外接程序程序集项目的生成输出，向 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 项目的根文件夹生成管道和外接程序程序集。 下表显示管道程序集项目和外接程序程序集项目的生成输出路径，这些路径位于与宿主 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 项目相同的解决方案和根文件夹中。
+因此，第一步是通过设置每个管道程序集和外接程序程序集项目的生成输出，将管道和外接程序程序集生成到 XBAP 项目的根。 下表显示了管道程序集项目和外接程序程序集项目的生成输出路径，该程序集项目位于与宿主 XBAP 项目相同的解决方案和根文件夹中。
 
 表 1：XBAP 承载的管道程序集的生成输出路径
 
@@ -197,21 +197,21 @@ WPF UI 类型不能远程处理。 为了解决此问题，WPF 扩展了 .NET Fr
 |宿主端适配器|`..\HostXBAP\HostSideAdapters\`|
 |外接程序|`..\HostXBAP\AddIns\WPFAddIn1`|
 
-下一步是通过执行以下操作，将管道程序集和外接程序程序集指定为 Visual Studio 中的 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 内容文件：
+下一步是通过执行以下操作，将管道程序集和外接程序程序集指定为 Visual Studio 中的 Xbap 内容文件：
 
 1. 通过在“解决方案资源管理器”中右键单击每个管道文件夹，然后选择“包括在项目中”，将管道和外接程序程序集包括在项目中。
 
 2. 在“属性”窗口中，将每个管道程序集和外接程序程序集的“生成操作”都设置为“内容”。
 
-最后一步是配置应用程序清单，以包含要下载的管道程序集文件和外接程序程序集文件。 文件应位于 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 应用程序所占用的 ClickOnce 缓存中文件夹根目录的文件夹中。 通过执行以下操作，可以在 Visual Studio 中实现该配置：
+最后一步是配置应用程序清单，以包含要下载的管道程序集文件和外接程序程序集文件。 文件应位于 XBAP 应用程序所占用的 ClickOnce 缓存中文件夹根目录的文件夹中。 通过执行以下操作，可以在 Visual Studio 中实现该配置：
 
-1. 右键单击 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 项目，依次单击“属性”、“发布”，然后单击“应用程序文件”按钮。
+1. 右键单击 XBAP 项目，单击 "**属性**"，单击 "**发布**"，然后单击 "**应用程序文件**" 按钮。
 
 2. 在“应用程序文件”对话框中，将每个管道和外接程序 DLL 的“发布状态”都设置为“包括(自动)”，并将每个管道和外接程序 DLL 的“下载组”都设置为“(必需)”。
 
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>从应用程序基使用管道和外接程序
 
-为 ClickOnce 部署配置管道和外接程序时，会将它们下载到与 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]相同的 ClickOnce 缓存文件夹中。 若要从 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 中使用管道和外接程序，[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 代码必须从应用程序基获取它们。 使用管道和外接程序的 .NET Framework 外接程序模型的各种类型和成员为此方案提供特殊支持。 首先，路径由 <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> 枚举值标识。 将此值用于使用管道的相关外接程序成员的重载，这些成员包括：
+为 ClickOnce 部署配置管道和外接程序时，会将它们下载到与 XBAP 相同的 ClickOnce 缓存文件夹中。 若要从 XBAP 使用管道和外接程序，XBAP 代码必须从应用程序基获取它们。 使用管道和外接程序的 .NET Framework 外接程序模型的各种类型和成员为此方案提供特殊支持。 首先，路径由 <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> 枚举值标识。 将此值用于使用管道的相关外接程序成员的重载，这些成员包括：
 
 - <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>
 

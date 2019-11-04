@@ -2,12 +2,12 @@
 title: 基于消息队列的消息安全性
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: 039ec21296392321fec40df2cae7383ccb3be6ea
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d27ee01636e37ac8f09c4f7dc497f14bfac1b0f1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039342"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424123"
 ---
 # <a name="message-security-over-message-queuing"></a>基于消息队列的消息安全性
 此示例演示如何实现一个应用程序，该应用程序对客户端使用 WS-Security 和 X.509v3 证书身份验证，并要求使用服务器的 X.509v3 证书对 MSMQ 进行服务器身份验证。 有时候消息安全性更重要，以确保 MSMQ 存储区中的消息始终是加密的，并且应用程序能够对消息执行其自己的身份验证。
@@ -24,11 +24,11 @@ ms.locfileid: "70039342"
 
     2. 展开 "**功能**" 选项卡。
 
-    3. 右键单击 "**专用消息队列**", 然后选择 "**新建** **专用队列**"。
+    3. 右键单击 "**专用消息队列**"，然后选择 "**新建** **专用队列**"。
 
     4. 选中 "**事务性**" 框。
 
-    5. 输入`ServiceModelSamplesTransacted`作为新队列的名称。
+    5. 输入 `ServiceModelSamplesTransacted` 作为新队列的名称。
 
 3. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
@@ -45,7 +45,7 @@ ms.locfileid: "70039342"
   
 4. 启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-5. 如果客户端和服务无法进行通信, 请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+5. 如果客户端和服务无法进行通信，请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
@@ -55,9 +55,9 @@ ms.locfileid: "70039342"
   
 3. 将客户端程序文件复制到客户端计算机上的客户端目录中。 另外，将 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 文件复制到客户端上。  
   
-4. 在服务器上运行 `setup.bat service`。 使用`setup.bat`参数运行将使用计算机的完全限定的域名创建一个服务证书, 并将服务证书导出到名为的文件。 `service`  
+4. 在服务器上运行 `setup.bat service`。 使用 `service` 参数运行 `setup.bat` 将使用计算机的完全限定的域名创建一个服务证书，并将服务证书导出到名为的文件。  
   
-5. 编辑服务的 setup.exe, 以反映新的证书名称 (在`findValue` [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)的属性中), 该名称与计算机的完全限定域名相同。  
+5. 编辑服务的 setup.exe，以反映新的证书名称（在[\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)的 `findValue` 属性中），该名称与计算机的完全限定域名相同。  
   
 6. 将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
   
@@ -73,14 +73,14 @@ ms.locfileid: "70039342"
   
 12. 在服务计算机上，在命令提示符下启动 Service.exe。  
   
-13. 在客户端计算机上，在命令提示符下启动 Client.exe。 如果客户端和服务无法进行通信, 请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+13. 在客户端计算机上，在命令提示符下启动 Client.exe。 如果客户端和服务无法进行通信，请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
 - 运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
     > [!NOTE]
-    > 此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果你已运行跨计算机使用证书 Windows Communication Foundation (WCF) 示例, 请确保清除已安装在 CurrentUser-TrustedPeople 存储中的服务证书。 为此, 请使用以下命令:`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`例如: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。
+    > 此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果你已运行跨计算机使用证书 Windows Communication Foundation （WCF）示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。
 
 ## <a name="requirements"></a>要求
  此示例要求安装并运行 MSMQ。
@@ -88,12 +88,12 @@ ms.locfileid: "70039342"
 ## <a name="demonstrates"></a>演示
  客户端使用服务的公钥对消息进行加密，并使用其自己的证书对消息进行签名。 从队列中读取消息的服务使用其受信任人的存储区中的证书对客户端证书进行身份验证。 然后它对消息进行解密并将消息调度给服务操作。
 
- 由于 Windows Communication Foundation (WCF) 消息作为 MSMQ 消息正文中的负载进行传递, 因此正文在 MSMQ 存储区中保持加密。 这样可以保护消息，以防意外泄漏。 请注意，MSMQ 本身并不知道它携带的消息是否经过加密。
+ 由于 Windows Communication Foundation （WCF）消息作为 MSMQ 消息正文中的负载进行传递，因此正文在 MSMQ 存储区中保持加密。 这样可以保护消息，以防意外泄漏。 请注意，MSMQ 本身并不知道它携带的消息是否经过加密。
 
  此示例演示如何在消息级别对 MSMQ 进行相互身份验证。 证书是在带外交换的。 对于排队的应用程序始终是这样，因为服务和客户端不是必须同时处于开启状态并正在运行。
 
 ## <a name="description"></a>描述
- 示例客户端和服务代码与[事务处理的 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例相同, 但有一个区别。 操作协定是通过保护级别批注的，这说明消息必须是经过签名和加密的。
+ 示例客户端和服务代码与[事务处理的 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例相同，但有一个区别。 操作协定是通过保护级别批注的，这说明消息必须是经过签名和加密的。
 
 ```csharp
 // Define a service contract.
@@ -167,7 +167,7 @@ public interface IOrderProcessor
 
  请注意，安全模式设置为“消息”，而 ClientCredentialType 设置为“证书”。
 
- 服务配置中包括一个服务行为，该行为指定客户端对服务进行身份验证时使用的服务的凭据。 服务器证书使用者名称是在`findValue` [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)的属性中指定的。
+ 服务配置中包括一个服务行为，该行为指定客户端对服务进行身份验证时使用的服务的凭据。 服务器证书主题名称是在[\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)的 `findValue` 属性中指定的。
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -271,7 +271,7 @@ public class OrderProcessorService : IOrderProcessor
 
  运行时，服务代码将显示客户端标识。 下面提供了服务代码的示例输出：
 
-```
+```console
 The service is ready.
 Press <ENTER> to terminate service.
 
@@ -300,7 +300,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 
 - 将客户端证书安装到服务器的受信任证书存储区中。
 
-     批处理文件中的以下行将客户端证书复制到服务器的 TrustedPeople 存储中，以使服务器能够做出相关的信任或不信任决定。 对于安装在 TrustedPeople 存储中并受 Windows Communication Foundation (WCF) 服务信任的证书, 必须将客户端证书验证模式设置为`PeerOrChainTrust`或`PeerTrust`值。 请参见前面的服务配置示例，了解如何使用配置文件完成此操作。
+     批处理文件中的以下行将客户端证书复制到服务器的 TrustedPeople 存储中，以使服务器能够做出相关的信任或不信任决定。 对于安装在 TrustedPeople 存储中并受 Windows Communication Foundation （WCF）服务信任的证书，必须将客户端证书验证模式设置为 `PeerOrChainTrust` 或 `PeerTrust` 值。 请参见前面的服务配置示例，了解如何使用配置文件完成此操作。
 
     ```bat
     echo ************
@@ -323,24 +323,24 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
-     %SERVER_NAME% 变量指定服务器名称。 该证书存储在 LocalMachine 存储区中。 如果使用服务参数 (如`setup.bat service`) 运行 setup 批处理文件, 则% SERVER_NAME% 包含计算机的完全限定域名。否则, 默认为 localhost
+     %SERVER_NAME% 变量指定服务器名称。 该证书存储在 LocalMachine 存储区中。 如果使用服务参数（如 `setup.bat service`）运行设置批处理文件，则% SERVER_NAME% 包含计算机的完全限定域名。否则，默认为 localhost
 
 - 将服务器证书安装到客户端的受信任证书存储区中。
 
      以下行将服务器证书复制到客户端的受信任人存储中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。
 
-    ```
+    ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
     > [!NOTE]
-    > 如果您使用的是非美国英文版本的 Microsoft Windows，则必须编辑 Setup.bat 文件，并用与您所在的区域对应的帐户名称替换“NT AUTHORITY\NETWORK SERVICE”帐户名称。
+    > 如果你使用的是非美国英语版本的 Microsoft Windows，则必须编辑 AUTHORITY\NETWORK 文件，并将 "NT SERVICE" 帐户名称替换为你的区域性等效项。
 
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\MessageSecurity`  

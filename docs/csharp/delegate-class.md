@@ -2,13 +2,14 @@
 title: System.Delegate 和 `delegate` 关键字
 description: 详细介绍 .NET Framework 中支持委托的类以及这些类映射到“delegate”关键字的方式。
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 4cf2b113fc9e2c6621f648af7ecb272a42b1f056
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f4635ff623feec9407021792cabd1677184b4d34
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465771"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420369"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate 和 `delegate` 关键字
 
@@ -31,9 +32,9 @@ ms.locfileid: "58465771"
 public delegate int Comparison<in T>(T left, T right);
 ```
 
-编译器会生成一个类，它派生自与使用的签名匹配的 `System.Delegate`（在此例中，是返回一个整数并具有两个参数的方法）。 该委托的类型是 `Comparison`。 `Comparison` 委托类型是泛型类型。 有关泛型的详细信息，请参阅[此处](generics.md)。
+编译器会生成一个类，它派生自与使用的签名匹配的 `System.Delegate`（在此例中，是返回一个整数并具有两个参数的方法）。 该委托的类型是 `Comparison`。 `Comparison` 委托类型是泛型类型。 有关泛型的详细信息，请参阅[此处](programming-guide/generics/index.md)。
 
-请注意，语法可能看起来像是声明变量，但它实际上是声明类型。 可以在类中、直接在命名空间中、甚至是在全局命名空间中定义委托类型。
+请注意，语法可能看起来像是声明变量，但它实际上是声明类型  。 可以在类中、直接在命名空间中、甚至是在全局命名空间中定义委托类型。
 
 > [!NOTE]
 > 建议不要直接在全局命名空间中声明委托类型（或其他类型）。 
@@ -64,7 +65,7 @@ public Comparison<T> comparator;
 int result = comparator(left, right);
 ```
 
-在上面的行中，代码会调用附加到委托的方法。
+在上面的行中，代码会调用  附加到委托的方法。
 可将变量视为方法名称，并使用普通方法调用语法调用它。
 
 此代码行做出的假设不安全：无法保证目标已被添加到委托中。 如果未附加目标，则上面的行会导致引发 `NullReferenceException`。 用于解决此问题的惯例比简单 null 检查更加复杂，在此[系列](delegates-patterns.md)的后面部分中会进行介绍。

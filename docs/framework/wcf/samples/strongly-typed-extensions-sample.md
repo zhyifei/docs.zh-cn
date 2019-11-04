@@ -2,12 +2,12 @@
 title: 强类型扩展示例
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: 1fd873e02dcc1fc824c8b17c52231c80c61e7c60
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5ee2f13df9d3c0841b3e8b62b1633ea4520d3860
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045481"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421515"
 ---
 # <a name="strongly-typed-extensions-sample"></a>强类型扩展示例
 此示例使用 <xref:System.ServiceModel.Syndication.SyndicationFeed> 类作为示例。 但是，此示例中演示的模式可用于支持扩展数据的所有 Syndication 类。  
@@ -40,12 +40,12 @@ ms.locfileid: "70045481"
 </entry>  
 ```  
   
- 元素指定了三个必需特性`ref` `type` (和`href`), 同时还允许存在其他扩展特性和扩展元素。 `<in-reply-to>`  
+ `<in-reply-to>` 元素指定了三个必需的属性（`ref`、`type` 和 `href`），同时还允许存在其他扩展属性和扩展元素。  
   
 ## <a name="modeling-the-in-reply-to-element"></a>对 In-Reply-To 元素建模  
  在此示例中，`<in-reply-to>` 元素建模为实现 <xref:System.Xml.Serialization.IXmlSerializable> 的 CLR，从而可以与 <xref:System.Runtime.Serialization.DataContractSerializer> 一起使用。 它还实现一些用于访问元素数据的方法和属性，如下面的示例代码所示。  
   
-```  
+```csharp  
 [XmlRoot(ElementName = "in-reply-to", Namespace = "http://contoso.org/syndication/thread/1.0")]  
 public class InReplyToElement : IXmlSerializable  
 {  
@@ -90,7 +90,7 @@ public class InReplyToElement : IXmlSerializable
   
  `InReplyToElement` 类实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口，该接口允许直接控制从 XML 读取对象实例和向 XML 写入对象实例的方式。 `ReadXml` 方法首先从传递给它的 `Ref` 读取 `HRef`、`Source`、`MediaType` 和 <xref:System.Xml.XmlReader> 属性的值。 所有未知的属性都存储在 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 集合中。 读取所有属性之后，将调用 <xref:System.Xml.XmlReader.ReadStartElement> 使读取器前进到下一个元素。 由于由该类建模的元素没有所需的子元素，因此子元素缓冲到 `XElement` 实例中并存储在 <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> 集合中，如下面的代码所示。  
   
-```  
+```csharp  
 public void ReadXml(System.Xml.XmlReader reader)  
 {  
     bool isEmpty = reader.IsEmptyElement;  
@@ -146,7 +146,7 @@ public void ReadXml(System.Xml.XmlReader reader)
   
  在 `WriteXml` 中，`InReplyToElement` 方法首先将 `Ref`、`HRef`、`Source` 和 `MediaType` 属性的值写出为 XML 属性。（`WriteXml` 并不负责编写实际的外部元素本身，该工作是由 `WriteXml` 的调用方完成的。） 它还将 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 和 <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> 的内容写入编写器，如下面的代码所示。  
   
-```  
+```csharp  
 public void WriteXml(System.Xml.XmlWriter writer)  
 {  
     if (this.Ref != null)  
@@ -189,7 +189,7 @@ public void WriteXml(System.Xml.XmlWriter writer)
   
  `ThreadedFeed` 类从 `SyndicationFeed` 继承，并重写 `OnCreateItem` 以返回一个 `ThreadedItem`。 它还实现用于将 `Items` 集合作为 `ThreadedItems` 访问的方法，如下面的代码所示。  
   
-```  
+```csharp  
 public class ThreadedFeed : SyndicationFeed  
 {  
     public ThreadedFeed()  
@@ -213,7 +213,7 @@ public class ThreadedFeed : SyndicationFeed
   
  类 `ThreadedItem` 从 `SyndicationItem` 继承，并使 `InReplyToElement` 成为强类型属性。 这样便可以方便地对 `InReplyTo` 扩展数据进行编程访问。 它还实现 `TryParseElement` 和 `WriteElementExtensions`，用于读取和写入其扩展数据，如下面的代码所示。  
   
-```  
+```csharp  
 public class ThreadedItem : SyndicationItem  
 {  
     private InReplyToElement inReplyTo;  
@@ -276,13 +276,13 @@ public class ThreadedItem : SyndicationItem
   
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+3. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StronglyTypedExtensions`  

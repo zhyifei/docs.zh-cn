@@ -2,23 +2,23 @@
 title: SAML 令牌提供程序
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 4a6ee808d224696d4fc21337cc558fcc6218e71d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 87aef572c2179034d295361c62942cea2ad6ed7a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044765"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424242"
 ---
 # <a name="saml-token-provider"></a>SAML 令牌提供程序
-本示例演示如何实现一个自定义客户端 SAML 令牌提供程序。 Windows Communication Foundation (WCF) 中的令牌提供程序用于向安全基础结构提供凭据。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 WCF 附带了默认的凭据管理器令牌提供程序。 WCF 还附带了一个 CardSpace 令牌提供程序。 自定义令牌提供程序在下列情况下有用：
+本示例演示如何实现一个自定义客户端 SAML 令牌提供程序。 Windows Communication Foundation （WCF）中的令牌提供程序用于向安全基础结构提供凭据。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 WCF 附带了默认的凭据管理器令牌提供程序。 WCF 还附带了一个 CardSpace 令牌提供程序。 自定义令牌提供程序在下列情况下有用：
 
 - 存在不能由这些令牌提供程序操作的凭据存储。
 
-- 如果希望提供自己的自定义机制, 以便在 WCF 客户端框架使用凭据时, 从用户提供详细信息时开始转换凭据。
+- 如果希望提供自己的自定义机制，以便在 WCF 客户端框架使用凭据时，从用户提供详细信息时开始转换凭据。
 
 - 要生成一个自定义令牌。
 
- 此示例演示如何生成一个自定义令牌提供程序, 该提供程序允许使用从 WCF 客户端框架之外获取的 SAML 令牌。
+ 此示例演示如何生成一个自定义令牌提供程序，该提供程序允许使用从 WCF 客户端框架之外获取的 SAML 令牌。
 
  总之，此示例将演示如下内容：
 
@@ -111,7 +111,7 @@ ms.locfileid: "70044765"
 </system.serviceModel>
 ```
 
- 以下步骤演示如何开发自定义 SAML 令牌提供程序并将其与 WCF: security framework 集成:
+ 以下步骤演示如何开发自定义 SAML 令牌提供程序并将其与 WCF： security framework 集成：
 
 1. 编写一个自定义 SAML 令牌提供程序。
 
@@ -119,7 +119,7 @@ ms.locfileid: "70044765"
 
      为了执行此任务，从 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 类派生了自定义令牌提供程序并重写了 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> 方法。 此方法创建并返回一个新的 `SecurityToken`。
 
-    ```
+    ```csharp
     protected override SecurityToken GetTokenCore(TimeSpan timeout)
     {
      // Create a SamlSecurityToken from the provided assertion
@@ -160,7 +160,7 @@ ms.locfileid: "70044765"
 
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> 类用于为在 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法中传入的特定 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 创建 `CreateSecurityTokenProvider`。 安全令牌管理器还用于创建令牌身份验证器和令牌序列化程序，但它们不包括在本示例中。 在本示例中，自定义安全令牌管理器继承自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 类并重写 `CreateSecurityTokenProvider` 方法，以便当传递的令牌需求指示请求 SAML 令牌时返回自定义 SAML 令牌提供程序。 如果客户端凭据类（请参见步骤 3）未指定一个断言，则安全令牌管理器将创建一个相应的实例。
 
-    ```
+    ```csharp
     public class SamlSecurityTokenManager :
      ClientCredentialsSecurityTokenManager
     {
@@ -232,7 +232,7 @@ ms.locfileid: "70044765"
 
      客户端凭据类用于表示为客户端代理配置的凭据并创建一个安全令牌管理器，该管理器用于获取令牌身份验证器、令牌提供程序和令牌序列化程序。
 
-    ```
+    ```csharp
     public class SamlClientCredentials : ClientCredentials
     {
      ClaimSet claims;
@@ -275,7 +275,7 @@ ms.locfileid: "70044765"
 
      示例删除默认的客户端凭据类，并提供新的客户端凭据类，以便客户端可以使用自定义客户端凭据。
 
-    ```
+    ```csharp
     // Create new credentials class
     SamlClientCredentials samlCC = new SamlClientCredentials();
 
@@ -309,7 +309,7 @@ ms.locfileid: "70044765"
 
      证书存储在 LocalMachine 存储位置下的 My（个人）存储区中。
 
-    ```
+    ```console
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -323,7 +323,7 @@ ms.locfileid: "70044765"
 
      Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。
 
-    ```
+    ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople
     ```
 
@@ -333,7 +333,7 @@ ms.locfileid: "70044765"
 
      证书存储在 CurrentUser 存储位置下的 My（个人）存储区中。
 
-    ```
+    ```console
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -347,7 +347,7 @@ ms.locfileid: "70044765"
 
      Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用颁发者证书填充服务器证书存储这一步骤。
 
-    ```
+    ```console
     certmgr.exe -add -r CurrentUser -s My -c -n %USER_NAME% -r LocalMachine -s TrustedPeople
     ```
 
@@ -355,14 +355,14 @@ ms.locfileid: "70044765"
 
 1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2. 若要生成解决方案, 请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
+2. 若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
 > [!NOTE]
 > 如果使用 Svcutil.exe 为此示例重新生成配置，请确保在客户端配置中修改终结点名称以与客户端代码匹配。
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>在同一计算机上运行示例
 
-1. 在 Visual Studio 2012 命令提示符下, 使用管理员权限运行安装程序 .bat。 这将安装运行示例所需的所有证书。
+1. 在 Visual Studio 2012 命令提示符下，使用管理员权限运行安装程序 .bat。 这将安装运行示例所需的所有证书。
 
     > [!NOTE]
     > 设置 bat 批处理文件设计为在 Visual Studio 2012 命令提示符下运行。 在 Visual Studio 2012 命令提示符中设置的 PATH 环境变量指向包含安装程序 bat 脚本所需的可执行文件的目录。  
@@ -371,7 +371,7 @@ ms.locfileid: "70044765"
   
 3. 启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-4. 如果客户端和服务无法进行通信, 请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+4. 如果客户端和服务无法进行通信，请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
@@ -379,7 +379,7 @@ ms.locfileid: "70044765"
   
 2. 将服务程序文件复制到服务计算机上的服务目录。 另外，将 Setup.bat 和 Cleanup.bat 文件复制到服务计算机上。  
   
-3. 必须具有一个其主题名称中包含计算机的完全限定域名的服务器证书。 必须更新 Service.exe.config 文件以反映此新证书名称。 可以通过修改 Setup.bat 批处理文件来创建服务器证书。 请注意, 必须在使用管理员特权打开的 Visual Studio 窗口开发人员命令提示中运行 setup.exe 文件。 必须将 `%SERVER_NAME%` 变量设置为用于承载服务的计算机的完全限定的主机名。  
+3. 必须具有一个其主题名称中包含计算机的完全限定域名的服务器证书。 必须更新 Service.exe.config 文件以反映此新证书名称。 可以通过修改 Setup.bat 批处理文件来创建服务器证书。 请注意，必须在使用管理员特权打开的 Visual Studio 窗口开发人员命令提示中运行 setup.exe 文件。 必须将 `%SERVER_NAME%` 变量设置为用于承载服务的计算机的完全限定的主机名。  
   
 4. 将服务器证书复制到客户端的 CurrentUser-TrustedPeople 存储中。 如果服务器证书是由客户端受信任的颁发者颁发，则不需要执行此步骤。  
   
@@ -393,7 +393,7 @@ ms.locfileid: "70044765"
   
 9. 在客户端计算机上，从命令提示窗口中启动 `Client.exe`。  
   
-10. 如果客户端和服务无法进行通信, 请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+10. 如果客户端和服务无法进行通信，请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   

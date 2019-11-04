@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-ms.openlocfilehash: edef213c0f4d43a15b7c6842ef6c62e95544da66
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 62f0ba1dc8b7836a3b4699699b91b567eb8051f3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039503"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458189"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>实现 UI 自动化 MultipleView 控件模式
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "73039503"
   
  <xref:System.Windows.Automation.MultipleViewPattern> 控件模式用于支持那些提供并能够在同组信息或子控件的多个表示形式间进行切换的控件。  
   
- 可显示多个视图的控件示例包括列表视图（可将其内容显示为缩略图、磁贴、图标或详细信息）、[!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 图表（饼图、折线图、条形图、带有公式的单元格值）、[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 文档（普通、Web 版式、打印布局、读取布局、大纲）、Microsoft Outlook 日历（年、月、周、天）和 Microsoft Windows Media Player 外观。 支持的视图由控件开发人员确定，并特定于每个控件。  
+ 可显示多个视图的控件示例包括列表视图（可将其内容显示为缩略图、磁贴、图标或详细信息）、Microsoft Excel 图表（饼图、折线图、条形图、带有公式的单元格值）、Microsoft Word 文档（正常、Web 版式、打印布局、阅读版式、大纲）、Microsoft Outlook 日历（年、月、周、天）和 Microsoft Windows Media Player 的外观。 支持的视图由控件开发人员确定，并特定于每个控件。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  

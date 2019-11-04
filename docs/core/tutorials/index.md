@@ -5,12 +5,12 @@ author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: 9e40de3d95738a8af394690575010339e7faad19
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7b6265cb652e6f3db702584295fac948d06ad5fc
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925945"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420843"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>通过探讨这些教程来学习 .NET Core 和 .NET Core SDK 工具
 
@@ -49,6 +49,6 @@ ms.locfileid: "70925945"
 - [使用 MSTest 和 .NET Core 执行单元测试](../testing/unit-testing-with-mstest.md)
 - [使用跨平台工具开发库](libraries.md)
 - [从本机代码承载 .NET Core](netcore-hosting.md)
-- [创建 dotnet new 自定义模板](create-custom-template.md)
+- [创建 dotnet new 自定义模板](cli-templates-create-item-template.md)
 
 有关开发 ASP.NET Core Web 应用程序的教程，请参阅 [ASP.NET Core 文档](/aspnet/core/)。

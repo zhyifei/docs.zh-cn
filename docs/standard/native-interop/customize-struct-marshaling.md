@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: b174a817e82f9a9f123c79581656cc8e7179b435
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
-ms.translationtype: HT
+ms.openlocfilehash: f4b8402413f4d2f558d8e61ad4f10490dece9835
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929041"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423993"
 ---
 # <a name="customizing-structure-marshaling"></a>自定义结构封送
 
@@ -22,11 +22,11 @@ ms.locfileid: "70929041"
 
 .NET 提供了 <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> 属性和 <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> 枚举，允许用户自定义字段在内存中的放置方式。 以下指南将帮助你避免常见问题。
 
- ✔️ 请考虑尽量使用 `LayoutKind.Sequential`。
+✔️ 请考虑尽量使用 `LayoutKind.Sequential`。
 
- ✔️ 当本机结构还具有显式布局（如联合）时，请务必仅将 `LayoutKind.Explicit` 用于封送。
+✔️ 当本机结构还具有显式布局（如联合）时，请务必仅将 `LayoutKind.Explicit` 用于封送。
 
- ❌ 在非 Windows 平台上封送结构时，请避免使用 `LayoutKind.Explicit`。 .NET Core 运行时不支持在 Intel 或 AMD 64 位的非 Windows 系统上按值将显式结构传递到本机函数。 但是，运行时支持在所有平台上按引用传递显式结构。
+如果需要在 .NET Core 3.0 之前针对运行时，请 **❌ 避免**使用 `LayoutKind.Explicit` 在非 Windows 平台上封送结构时使用。 3\.0 之前的 .NET Core 运行时不支持将显式结构按值传递到 Intel 或 AMD 64 位非 Windows 系统上的本机函数。 但是，运行时支持在所有平台上按引用传递显式结构。
 
 ## <a name="customizing-boolean-field-marshaling"></a>自定义布尔字段封送
 

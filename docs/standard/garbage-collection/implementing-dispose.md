@@ -9,20 +9,18 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 964c788c5fc1ac791ed3ddd20c9c5c972d07b2c1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 95726d4bfae6da43cd845d461caf8f1848d774f1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106880"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424335"
 ---
 # <a name="implementing-a-dispose-method"></a>实现 Dispose 方法
 
 通过实现 <xref:System.IDisposable.Dispose%2A> 方法来释放应用程序使用的非托管资源。 .NET 垃圾回收器不分配或释放非托管内存。  
   
-对象清理模式（称为[清理模式](../../../docs/standard/design-guidelines/dispose-pattern.md)）对对象生存期强制施加顺序。 释放模式仅用于访问非托管资源的对象，如文件和管道句柄、注册表句柄、等待句柄或指向非托管内存块的指针。 这是因为垃圾回收器在回收不使用的托管对象时非常高效，但无法回收非托管对象。  
+对象清理模式（称为[清理模式](implementing-dispose.md)）对对象生存期强制施加顺序。 释放模式仅用于访问非托管资源的对象，如文件和管道句柄、注册表句柄、等待句柄或指向非托管内存块的指针。 这是因为垃圾回收器在回收不使用的托管对象时非常高效，但无法回收非托管对象。  
   
 释放模式有两种变体：  
   
@@ -169,4 +167,4 @@ ms.locfileid: "70106880"
 - <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>
 - <xref:System.Object.Finalize%2A?displayProperty=nameWithType>
 - [如何：定义和使用类和结构 (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
-- [释放模式](../../../docs/standard/design-guidelines/dispose-pattern.md)
+- [释放模式](implementing-dispose.md)

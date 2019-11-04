@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing add-in pipeline segments [WPF]
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
-ms.openlocfilehash: e32987355a6c7ad32b5e0e8522dc4daa63783fdd
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: d799c91b9abdf7882a0fcd3f0b656eac553b188c
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291242"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460143"
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>如何：创建返回 UI 的外接程序
 此示例演示如何创建一个外接程序，该外接程序将 Windows Presentation Foundation （WPF）返回到宿主 WPF 独立应用程序。  
@@ -25,65 +25,65 @@ ms.locfileid: "72291242"
   
  此示例突出显示了支持此方案的 .NET Framework 外接程序模型的 WPF 扩展，并假设以下内容：  
   
-- .NET Framework 外接程序模型（包括管道、外接程序和主机开发）的知识。 如果不熟悉这些概念，请参阅[外接程序和扩展性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。 有关演示管道、外接程序和主机应用程序实现的教程，请参阅 [Walkthrough：创建可扩展应用程序 @ no__t。  
+- .NET Framework 外接程序模型（包括管道、外接程序和主机开发）的知识。 如果不熟悉这些概念，请参阅[外接程序和扩展性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。 有关演示管道、外接程序和主机应用程序实现的教程，请参阅[演练：创建可扩展的应用程序](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))。  
   
-- 了解 .NET Framework 外接程序模型的 WPF 扩展，可在以下位置找到：[WPF 外接程序概述](wpf-add-ins-overview.md)。  
+- 了解 .NET Framework 外接程序模型的 WPF 扩展，可在此处找到： [Wpf 外接程序概述](wpf-add-ins-overview.md)。  
   
 ## <a name="example"></a>示例  
  若要创建返回 WPF UI 的外接程序，需要每个管道段、外接程序和宿主应用程序的特定代码。  
 
 <a name="Contract"></a>   
 ## <a name="implementing-the-contract-pipeline-segment"></a>实现协定管道段  
- 方法必须由协定定义以返回 UI，并且其返回值的类型必须为 <xref:System.AddIn.Contract.INativeHandleContract>。 下面的代码中 `IWPFAddInContract` 协定的 @no__t 方法演示了这种情况。  
+ 方法必须由协定定义以返回 UI，并且其返回值的类型必须为 <xref:System.AddIn.Contract.INativeHandleContract>。 下面的代码中 `IWPFAddInContract` 协定的 `GetAddInUI` 方法演示了这一点。  
   
  [!code-csharp[SimpleAddInReturnsAUISample#ContractCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]
  [!code-vb[SimpleAddInReturnsAUISample#ContractCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Contracts/IWPFAddInContract.vb#contractcode)]  
   
 <a name="AddInView"></a>   
 ## <a name="implementing-the-add-in-view-pipeline-segment"></a>实现外接程序视图管道段  
- 由于外接程序实现了它作为 <xref:System.Windows.FrameworkElement> 的子类提供的 Ui，因此，与 `IWPFAddInView.GetAddInUI` 关联的外接程序视图上的方法必须返回 <xref:System.Windows.FrameworkElement> 类型的值。 以下代码显示作为接口实现的协定的外接程序视图。  
+ 由于外接程序实现了它作为 <xref:System.Windows.FrameworkElement>子类提供的 Ui，因此与 `IWPFAddInView.GetAddInUI` 相关联的外接程序视图上的方法必须返回 <xref:System.Windows.FrameworkElement>类型的值。 以下代码显示作为接口实现的协定的外接程序视图。  
   
  [!code-csharp[SimpleAddInReturnsAUISample#AddInViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/AddInViews/IWPFAddInView.cs#addinviewcode)]
  [!code-vb[SimpleAddInReturnsAUISample#AddInViewCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/AddInViews/IWPFAddInView.vb#addinviewcode)]  
   
 <a name="AddInSideAdapter"></a>   
 ## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>实现外接程序端适配器管道段  
- 协定方法返回 <xref:System.AddIn.Contract.INativeHandleContract>，但外接程序返回 <xref:System.Windows.FrameworkElement> （由外接程序视图指定）。 因此，在跨越隔离边界之前，必须先将 @no__t 0 转换为 @no__t 1。 此工作由外接程序端适配器通过调用 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> 来执行，如以下代码所示。  
+ 协定方法返回 <xref:System.AddIn.Contract.INativeHandleContract>，但外接程序返回 <xref:System.Windows.FrameworkElement> （由外接程序视图指定）。 因此，必须先将 <xref:System.Windows.FrameworkElement> 转换为 <xref:System.AddIn.Contract.INativeHandleContract>，才能跨越隔离边界。 此工作由外接程序端适配器通过调用 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>来执行，如以下代码所示。  
   
  [!code-csharp[SimpleAddInReturnsAUISample#AddInSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]
  [!code-vb[SimpleAddInReturnsAUISample#AddInSideAdapterCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.vb#addinsideadaptercode)]  
   
 <a name="HostView"></a>   
 ## <a name="implementing-the-host-view-pipeline-segment"></a>实现主机视图管道段  
- 由于宿主应用程序将显示 <xref:System.Windows.FrameworkElement>，与 `IWPFAddInHostView.GetAddInUI` 关联的宿主视图上的方法必须返回类型 <xref:System.Windows.FrameworkElement> 的值。 以下代码显示作为接口实现的协定的主机视图。  
+ 由于宿主应用程序将显示一个 <xref:System.Windows.FrameworkElement>，因此与 `IWPFAddInHostView.GetAddInUI` 关联的宿主视图上的方法必须返回 <xref:System.Windows.FrameworkElement>类型的值。 以下代码显示作为接口实现的协定的主机视图。  
   
  [!code-csharp[SimpleAddInReturnsAUISample#HostViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/HostViews/IWPFAddInHostView.cs#hostviewcode)]
  [!code-vb[SimpleAddInReturnsAUISample#HostViewCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/HostViews/IWPFAddInHostView.vb#hostviewcode)]  
   
 <a name="HostSideAdapter"></a>   
 ## <a name="implementing-the-host-side-adapter-pipeline-segment"></a>实现主机端适配器管道段  
- 协定方法返回 <xref:System.AddIn.Contract.INativeHandleContract>，但主机应用程序需要 @no__t 为-1 （由主机视图指定）。 因此，在跨越隔离边界之后，必须将 @no__t 0 转换为 @no__t 1。 此工作由主机端适配器通过调用 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> 来执行，如以下代码所示。  
+ 协定方法返回 <xref:System.AddIn.Contract.INativeHandleContract>，但宿主应用程序需要 <xref:System.Windows.FrameworkElement> （由主机视图指定）。 因此，在跨越隔离边界之后，必须将 <xref:System.AddIn.Contract.INativeHandleContract> 转换为 <xref:System.Windows.FrameworkElement>。 此工作由主机端适配器通过调用 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>来执行，如以下代码所示。  
   
  [!code-csharp[SimpleAddInReturnsAUISample#HostSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/HostSideAdapters/WPFAddIn_ContractToViewHostSideAdapter.cs#hostsideadaptercode)]
  [!code-vb[SimpleAddInReturnsAUISample#HostSideAdapterCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/HostSideAdapters/WPFAddIn_ContractToViewHostSideAdapter.vb#hostsideadaptercode)]  
   
 <a name="AddIn"></a>   
 ## <a name="implementing-the-add-in"></a>实现外接程序  
- 创建外接程序端适配器和外接程序视图后，外接程序（`WPFAddIn1.AddIn`）必须实现 `IWPFAddInView.GetAddInUI` 方法以返回 @no__t 2 对象（在本示例中为 @no__t 3）。 下面的代码显示 <xref:System.Windows.Controls.UserControl> 的实现 @no__t 为-1。  
+ 创建外接程序端适配器和外接程序视图后，外接程序（`WPFAddIn1.AddIn`）必须实现 `IWPFAddInView.GetAddInUI` 方法才能返回 <xref:System.Windows.FrameworkElement> 对象（在本示例中为 <xref:System.Windows.Controls.UserControl>）。 下面的代码演示了 <xref:System.Windows.Controls.UserControl>的实现 `AddInUI`。  
   
  [!code-xaml[SimpleAddInReturnsAUISample#AddInUIMarkup](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/WPFAddIn1/AddInUI.xaml#addinuimarkup)]  
   
  [!code-csharp[SimpleAddInReturnsAUISample#AddInUICodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/WPFAddIn1/AddInUI.xaml.cs#addinuicodebehind)]
  [!code-vb[SimpleAddInReturnsAUISample#AddInUICodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/WPFAddIn1/AddInUI.xaml.vb#addinuicodebehind)]  
   
- 外接程序 @no__t 的实现只需返回 `AddInUI` 的新实例，如以下代码所示。  
+ 外接程序 `IWPFAddInView.GetAddInUI` 的实现只需返回 `AddInUI`的新实例，如以下代码所示。  
   
  [!code-csharp[SimpleAddInReturnsAUISample#AddInCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/WPFAddIn1/AddIn.cs#addincode)]
  [!code-vb[SimpleAddInReturnsAUISample#AddInCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/WPFAddIn1/AddIn.vb#addincode)]  
   
 <a name="App"></a>   
 ## <a name="implementing-the-host-application"></a>实现主机应用程序  
- 创建主机端适配器和主机视图后，宿主应用程序可以使用 .NET Framework 外接程序模型打开管道，获取外接程序的宿主视图，并调用 @no__t 0 方法。 这些步骤在以下代码中显示。  
+ 创建主机端适配器和主机视图后，宿主应用程序可以使用 .NET Framework 外接程序模型打开管道，获取外接程序的宿主视图，并调用 `IWPFAddInHostView.GetAddInUI` 方法。 这些步骤在以下代码中显示。  
   
  [!code-csharp[SimpleAddInReturnsAUISample#GetUICode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/Host/MainWindow.xaml.cs#getuicode)]
  [!code-vb[SimpleAddInReturnsAUISample#GetUICode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Host/MainWindow.xaml.vb#getuicode)]  

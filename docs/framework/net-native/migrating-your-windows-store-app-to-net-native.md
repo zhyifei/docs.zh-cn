@@ -2,14 +2,14 @@
 title: 将 Windows 应用商店应用迁移到 .NET Native
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 7eea089ef9b492e156758d170394b17d74a60a64
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1942574e832ca7593d91c71370cc0af0c3051617
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128312"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455612"
 ---
-# <a name="migrating-your-windows-store-app-to-net-native"></a>将 Windows 应用商店应用迁移到 .NET Native
+# <a name="migrate-your-windows-store-app-to-net-native"></a>将 Windows 应用商店应用迁移到 .NET Native
 
 .NET Native 提供 Windows 应用商店中或开发人员计算机上的应用的静态编译。 这不同于及时生成 (JIT) 编译器或 [本地映像生成器 (Ngen.exe)](../tools/ngen-exe-native-image-generator.md) 在该设备上为 Windows 应用商店应用执行的动态编译。 尽管存在差异，但 .NET Native 会尝试保持与[.net For Windows 应用商店应用](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)的兼容性。 大多数情况下，适用于 Windows 应用商店应用的 .NET 上的功能也适用于 .NET Native。  然而，在某些情况下，你可能会遇到行为变更。 本文档讨论了 Windows 应用商店应用的标准 .NET 与以下几个方面的 .NET Native 之间的差异：
 
@@ -53,7 +53,7 @@ ms.locfileid: "73128312"
 
 例如，绑定数据需要一个应用能够将属性名映射到函数。 在 Windows 应用商店应用的 .NET 中，公共语言运行时自动使用反射来向托管类型和公开可用的本机类型提供该能力。 在 .NET Native 中，编译器将自动包含要将数据绑定到的类型的元数据。
 
-.NET Native 编译器还可以处理常用的泛型类型，如 <xref:System.Collections.Generic.List%601> 和 <xref:System.Collections.Generic.Dictionary%602>，无需任何提示或指令即可正常运行。 [动态](../../csharp/language-reference/keywords/dynamic.md) 关键字在某些限制内也受到支持。
+.NET Native 编译器还可以处理常用的泛型类型，如 <xref:System.Collections.Generic.List%601> 和 <xref:System.Collections.Generic.Dictionary%602>，无需任何提示或指令即可正常运行。 [动态](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type) 关键字在某些限制内也受到支持。
 
 > [!NOTE]
 > 在将应用程序移植到 .NET Native 时，应彻底测试所有动态代码路径。

@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: dfc66bd2bdc69d1236a635b30697bc1cd607821c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 93dbc711e38c17c2f502c4d04239d037ff015059
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120768"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425190"
 ---
 # <a name="net-guide"></a>.NET 指南
 
@@ -47,9 +47,9 @@ ms.locfileid: "73120768"
 如果对 .NET 的某些主要概念感兴趣，请查看：
 
 * [.NET 体系结构组件](components.md)
-* [.NET Standard](net-standard.md)
+* [.NET 标准](net-standard.md)
 * [本机互操作性](native-interop/index.md)
-* [垃圾回收](garbagecollection/index.md)
+* [垃圾回收](garbage-collection/index.md)
 * [.NET 中的基类型](base-types/index.md)
 * [集合](collections/index.md)
 * [日期、时间和时区](datetime/index.md)
@@ -58,7 +58,7 @@ ms.locfileid: "73120768"
 此外，请查看以下每种语言指南，了解这三种主要的 .NET 语言：
 
 * [C# 指南](../csharp/index.md)
-* [F# 指南](../fsharp/index.md)
+* [F # 指南](../fsharp/index.md)
 * [Visual Basic 指南](../visual-basic/index.md)
 
 ## <a name="api-reference"></a>API 参考

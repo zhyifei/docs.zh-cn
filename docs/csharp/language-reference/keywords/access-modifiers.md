@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: 5568d79c4a13b7b0db5a46bb4ebb2168ea66a2c9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7dfbc103b3fd0ebf8c349bd36dc54915782eb807
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606092"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422928"
 ---
 # <a name="access-modifiers-c-reference"></a>访问修饰符（C# 参考）
 访问修饰符是关键字，用于指定成员或类型已声明的可访问性。 本部分介绍四个访问修饰符：  
@@ -48,5 +48,5 @@ ms.locfileid: "69606092"
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](./index.md)
 - [访问修饰符](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [访问关键字](./access-keywords.md)
-- [修饰符](./modifiers.md)
+- [访问关键字](base.md)
+- [修饰符](index.md)

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f3ab7a11757ba1936aae6e63ace28c4b336292b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981885"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458705"
 ---
 # <a name="resources-wpf"></a>资源 (WPF)
-资源是可以在应用程序中的不同位置重复使用的对象。 WPF 支持不同类型的资源。 这些资源是主要缺少两种类型的资源：XAML 资源和资源数据文件。 XAML 资源的示例包括画笔和样式。 资源数据文件是应用程序所需的非可执行文件的数据文件。  
+资源是可以在应用程序中的不同位置重复使用的对象。 WPF 支持不同类型的资源。 这些资源主要分为两种类型的资源： XAML 资源和资源数据文件。 XAML 资源的示例包括画笔和样式。 资源数据文件是应用程序所需的不可执行的数据文件。  
   
 ## <a name="in-this-section"></a>本节内容  
- [XAML 资源](xaml-resources.md)  
+ [XAML 资源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)  
  [WPF 应用程序资源、内容和数据文件](../app-development/wpf-application-resource-content-and-data-files.md)  
  [WPF 中的 Pack URI](../app-development/pack-uris-in-wpf.md)  
   

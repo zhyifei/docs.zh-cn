@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: 7d97b7b05645b02a31af848c97758c7a1f6423b9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f72866cafbf291310d88fc6f18a5a15dc77c621d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602082"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422728"
 ---
 # <a name="internal-c-reference"></a>internal（C# 参考）
 `internal` 关键字是类型和类型成员的[访问修饰符](./access-modifiers.md)。 
@@ -89,7 +89,7 @@ public class TestAccess
   
 ## <a name="c-language-specification"></a>C# 语言规范  
 
-有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的[声明的可访问性](~/_csharplang/spec/basic-concepts.md#declared-accessibility)。 该语言规范是 C# 语法和用法的权威资料。
+有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的[声明的可访问性](~/_csharplang/spec/basic-concepts.md#declared-accessibility)。 该语言规范是 C# 语法和用法的权威资料。
   
 ## <a name="see-also"></a>请参阅
 
@@ -98,7 +98,7 @@ public class TestAccess
 - [C# 关键字](./index.md)
 - [访问修饰符](./access-modifiers.md)
 - [可访问性级别](./accessibility-levels.md)
-- [修饰符](./modifiers.md)
+- [修饰符](index.md)
 - [public](./public.md)
 - [专用](./private.md)
 - [受保护](./protected.md)

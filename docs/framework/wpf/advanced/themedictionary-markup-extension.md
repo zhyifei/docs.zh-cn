@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ThemeDictionary markup extension [WPF]
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
-ms.openlocfilehash: 471b444b66c5e8173542ab1e27cb1233bfde133f
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: ab38c2c885e230183852fff895e0a8a8f1d7a666
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582322"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459492"
 ---
 # <a name="themedictionary-markup-extension"></a>ThemeDictionary 标记扩展
 为集成第三方控件的自定义控件创作者或应用程序提供一种方法，用于加载要在设置控件样式时使用的特定于主题的资源字典。  
@@ -41,11 +41,11 @@ ms.locfileid: "72582322"
 |`assemblyUri`|包含主题信息的程序集的统一资源标识符（URI）。 通常，这是一个引用较大包中程序集的 Pack URI。 程序集资源和 Pack URI 可以简化部署问题。 有关详细信息，请参阅 [WPF 中的 Pack URI](../app-development/pack-uris-in-wpf.md)。|  
   
 ## <a name="remarks"></a>备注  
- 此扩展仅用于填充一个特定属性值：用于 <xref:System.Windows.ResourceDictionary.Source%2A?displayProperty=nameWithType> 的值。  
+ 此扩展仅用于填充一个特定属性值：用于 <xref:System.Windows.ResourceDictionary.Source%2A?displayProperty=nameWithType>的值。  
   
  通过使用此扩展，你可以指定仅限单个资源的程序集，该程序集包含的某些样式仅在将 Windows Aero 主题应用于用户系统时使用，其他样式仅在 Luna 主题处于活动状态时如此。 通过使用此扩展，可以自动让特定于控件的资源字典的内容失效，并在需要时重新将其加载为特定于其他主题的内容。  
   
- @No__t_0 字符串（<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> 属性值）形成命名约定的基础，该约定标识哪个字典适用于特定主题。 @No__t_1 的 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> 逻辑通过生成指向特定主题字典变量的统一资源标识符（URI）来完成该约定，如预编译的资源程序集内包含。 本文并未将该约定（即主题与一般控件样式设置和页/应用程序级样式设置之间的交互）作为一个概念进行详细介绍。 使用 `ThemeDictionary` 的基本方案是指定在应用程序级别声明的 `ResourceDictionary` 的 <xref:System.Windows.ResourceDictionary.Source%2A> 属性。 当通过 `ThemeDictionary` 扩展而不是直接 URI 为程序集提供 URI 时，扩展逻辑将提供在系统主题发生更改时应用的失效逻辑。  
+ `assemblyUri` 字符串（<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> 属性值）形成命名约定的基础，该约定标识哪个字典适用于特定主题。 `ThemeDictionary` 的 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> 逻辑通过生成指向特定主题字典变量的统一资源标识符（URI）来完成该约定，如预编译的资源程序集内包含。 本文并未将该约定（即主题与一般控件样式设置和页/应用程序级样式设置之间的交互）作为一个概念进行详细介绍。 使用 `ThemeDictionary` 的基本方案是指定在应用程序级别声明的 `ResourceDictionary` 的 <xref:System.Windows.ResourceDictionary.Source%2A> 属性。 当通过 `ThemeDictionary` 扩展而不是直接 URI 为程序集提供 URI 时，扩展逻辑将提供在系统主题发生更改时应用的失效逻辑。  
   
  特性语法是最常用于该标记扩展的语法。 在 `ThemeDictionary` 标识符字符串之后提供的字符串标记被指定为基础 <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> 扩展类的 <xref:System.Windows.ThemeDictionaryExtension> 值。  
   
@@ -66,6 +66,6 @@ ms.locfileid: "72582322"
 ## <a name="see-also"></a>请参阅
 
 - [样式设置和模板化](../controls/styling-and-templating.md)
-- [XAML 概述 (WPF)](xaml-overview-wpf.md)
+- [XAML 概述 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [标记扩展和 WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [WPF 应用程序资源、内容和数据文件](../app-development/wpf-application-resource-content-and-data-files.md)

@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: e62825a88858a63984860cbc8a1c570f784f663f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8c650ceab57a46cb6dd396111e7a93163a62299f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040867"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424944"
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows 概述
 用户通过 Windows 与 Windows Presentation Foundation （WPF）独立应用程序交互。 窗口的主要用途是托管使数据可视化并使用户能够与数据交互的内容。 独立 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序通过使用 <xref:System.Windows.Window> 类提供其自己的窗口。 本主题介绍了 <xref:System.Windows.Window>，然后介绍在独立应用程序中创建和管理 windows 的基本原理。  
   
 > [!NOTE]
-> Browser 寄宿 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序（包括 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 和松散 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 页面）不提供其自己的窗口。 而是托管在 Windows Internet Explorer 提供的 windows 中。 请参阅[WPF XAML 浏览器应用程序概述](wpf-xaml-browser-applications-overview.md)。  
+> Browser 寄宿 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序（包括 XAML 浏览器应用程序（Xbap）和松散 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 页面）不提供其自己的窗口。 而是托管在 Windows Internet Explorer 提供的 windows 中。 请参阅[WPF XAML 浏览器应用程序概述](wpf-xaml-browser-applications-overview.md)。  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>窗口类  
@@ -471,7 +471,7 @@ ms.locfileid: "73040867"
   
  但是，这超出了向使用 ClickOnce 从 Internet 或本地 intranet 区域启动的应用程序授予的权限集。 因此，用户将收到 ClickOnce 安全警告，需要将应用程序的权限集提升到完全信任。  
   
- 此外，默认情况下，[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 无法显示窗口或对话框。 有关独立应用程序安全注意事项的讨论，请参阅[WPF 安全策略-平台安全性](../wpf-security-strategy-platform-security.md)。  
+ 此外，默认情况下，Xbap 不能显示窗口或对话框。 有关独立应用程序安全注意事项的讨论，请参阅[WPF 安全策略-平台安全性](../wpf-security-strategy-platform-security.md)。  
   
 <a name="Other_Types_of_Windows"></a>   
 ## <a name="other-types-of-windows"></a>其他类型的窗口  

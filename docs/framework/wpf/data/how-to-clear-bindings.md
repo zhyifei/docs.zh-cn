@@ -9,28 +9,28 @@ helpviewer_keywords:
 - clearing bindings [WPF]
 - data binding [WPF], clearing bindings
 ms.assetid: 73962a93-32a9-4bcd-9240-bcfbb239093a
-ms.openlocfilehash: 8140928d44555e399ddf4ebd73407a251ad3cffe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 66f7eb0209d23660b9c7351ca793f509b2f4bb8d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61931464"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458876"
 ---
 # <a name="how-to-clear-bindings"></a>如何：清除绑定
 此示例演示如何从对象中清除绑定。  
   
 ## <a name="example"></a>示例  
- 若要从对象中某一个属性清除绑定，可以调用 <xref:System.Windows.Data.BindingOperations.ClearBinding%2A>，如以下示例所示。 以下示例将从 mytext（<xref:System.Windows.Controls.TextBlock> 对象）的 <xref:System.Windows.Controls.TextBlock.TextProperty> 删除绑定。  
+ 若要从对象的单个属性中清除绑定，请调用 <xref:System.Windows.Data.BindingOperations.ClearBinding%2A>，如下面的示例中所示。 下面的示例从*mytext*<xref:System.Windows.Controls.TextBlock> 对象的 <xref:System.Windows.Controls.TextBlock.TextProperty> 中移除绑定。  
   
  [!code-csharp[CodeOnlyBinding#ClearBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#clearbinding)]
  [!code-vb[CodeOnlyBinding#ClearBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#clearbinding)]  
   
  清除绑定会移除绑定，这样依赖属性的值会更改为过去尚未绑定时的值。 此值可以是默认值、继承值或来自数据模板绑定的值。  
   
- 若要清除一个对象的所有可操作属性的绑定，请使用 <xref:System.Windows.Data.BindingOperations.ClearAllBindings%2A>。  
+ 若要清除对象的所有可能属性的绑定，请使用 <xref:System.Windows.Data.BindingOperations.ClearAllBindings%2A>。  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Data.BindingOperations>
-- [数据绑定概述](data-binding-overview.md)
+- [数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)
 - [帮助主题](data-binding-how-to-topics.md)

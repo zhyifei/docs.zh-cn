@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 2a3e7f02ee9d210acae881edd170edbced82dab6
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 940d21bdd90d4594a39edc20283ca6a45ccf81fe
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353747"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422200"
 ---
 # <a name="value-types-c-reference"></a>值类型（C# 参考）
 
@@ -54,7 +54,7 @@ ms.locfileid: "71353747"
 
 - 其操作数都是简单类型常数的常量表达式在编译时进行评估。
 
-有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的[简单类型](~/_csharplang/spec/types.md#simple-types)部分。
+有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的[简单类型](~/_csharplang/spec/types.md#simple-types)部分。
 
 ## <a name="initializing-value-types"></a>初始化值类型
 
@@ -107,6 +107,6 @@ var p = new Point(); // Invoke parameterless constructor for the struct.
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](index.md)
-- [类型](types.md)
+- [类型](/dotnet/csharp/language-reference/keywords)
 - [引用类型](reference-types.md)
 - [可以为 null 的值类型](../../programming-guide/nullable-types/index.md)

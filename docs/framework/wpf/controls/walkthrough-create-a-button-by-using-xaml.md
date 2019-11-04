@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: a0792beca358de52a24bd9bb0dd48a20c175f8ff
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 6738b9e66c1223ea4ec50c070a421d119fd30bc4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920187"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458695"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>演练：使用 XAML 创建按钮
 
@@ -92,7 +92,7 @@ ms.locfileid: "72920187"
 
      ![宽度为90，边距为10的按钮](./media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")
 
-     您还可以对样式进行更多的操作，其中包括多种方法来微调目标对象、指定复杂的属性值，甚至使用样式作为其他样式的输入。 有关详细信息，请参阅[样式设置和模板化](styling-and-templating.md)。
+     您还可以对样式进行更多的操作，其中包括多种方法来微调目标对象、指定复杂的属性值，甚至使用样式作为其他样式的输入。 有关详细信息，请参阅[样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)。
 
 3. **将样式属性值设置为资源：** 通过资源，可以使用一种简单的方法来重复使用通常定义的对象和值。 使用资源来定义复杂值非常有用，使代码更具模块化。 将以下突出显示的标记添加到 app.config。
 
@@ -439,7 +439,7 @@ ms.locfileid: "72920187"
 ## <a name="see-also"></a>请参阅
 
 - [使用 Microsoft Expression Blend 创建按钮](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
-- [样式设置和模板化](styling-and-templating.md)
+- [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [动画概述](../graphics-multimedia/animation-overview.md)
 - [使用纯色和渐变进行绘制概述](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
 - [位图效果概述](../graphics-multimedia/bitmap-effects-overview.md)

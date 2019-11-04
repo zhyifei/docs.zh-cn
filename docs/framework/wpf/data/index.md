@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], data
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
-ms.openlocfilehash: c8fc25407eda75c7f2fbb188b96c68ac1b8342ad
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: aa8f872e807eccb81d0f1ca2c838485bb254c7c0
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400372"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460297"
 ---
 # <a name="data"></a>数据
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 数据绑定为应用程序呈现数据并与数据交互提供了一种简单且一致的方式。 元素可以绑定到公共语言运行时 (CLR) 对象和 XML 形式的各种数据源中的数据。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 还提供了通过拖放操作传输数据的机制。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 数据绑定为应用程序呈现数据并与数据交互提供了一种简单且一致的方式。 元素可以绑定到公共语言运行时（CLR）对象和 XML 形式的各种数据源中的数据。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 还提供了通过拖放操作传输数据的机制。  
   
 ## <a name="in-this-section"></a>本节内容  
  [数据绑定](data-binding-wpf.md)  
@@ -34,7 +34,7 @@ ms.locfileid: "68400372"
 ## <a name="related-sections"></a>相关章节  
  [控件](../controls/index.md)  
   
- [样式设置和模板化](../controls/styling-and-templating.md)  
+ [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   
  [数据绑定](../advanced/optimizing-performance-data-binding.md)  
   

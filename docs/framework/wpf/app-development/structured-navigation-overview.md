@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 76330c1228b1f55a5dbaf58a1acd231a391d550c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 09c3c57f3ac1009416a5c67b37c035fe30cd5b5e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580515"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425329"
 ---
 # <a name="structured-navigation-overview"></a>结构化导航概述
 
-可由 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]、<xref:System.Windows.Controls.Frame> 或 <xref:System.Windows.Navigation.NavigationWindow> 承载的内容由可由包统一资源标识符（Uri）标识并通过超链接导航到的页面组成。 页面的结构以及导航页面的方式（通过超链接来定义）称为导航拓扑。 此类拓扑适合各种应用程序类型，尤其适合在文档之间导航的应用程序类型。 对于此类应用程序，用户可以从一个页面导航到另一个页面，并且其中任一页面都无需了解另一页面的任何信息。
+可以由 XAML 浏览器应用程序（XBAP）、<xref:System.Windows.Controls.Frame>或 <xref:System.Windows.Navigation.NavigationWindow> 承载的内容由可由包统一资源标识符（Uri）标识并通过超链接导航到的页面组成。 页面的结构以及导航页面的方式（通过超链接来定义）称为导航拓扑。 此类拓扑适合各种应用程序类型，尤其适合在文档之间导航的应用程序类型。 对于此类应用程序，用户可以从一个页面导航到另一个页面，并且其中任一页面都无需了解另一页面的任何信息。
 
 但是，对于其他类型的应用程序，在其页面之间导航时，确实需要了解这些页面信息。 例如，假设一个人力资源应用程序，它具有一个列出组织中所有员工的页面，即“员工列表”页。 此页还允许用户通过单击超链接添加新员工。 单击超链接后，页面会导航到“添加员工”页以收集新员工的详细信息，并将其返回到“员工列表”页以创建新员工并更新列表。 这种样式的导航与调用方法来执行某些处理并返回值（称为结构化编程）类似。 同样，这种样式的导航称为*结构化导航*。
 
-@No__t_0 类不实现对结构化导航的支持。 相反，<xref:System.Windows.Navigation.PageFunction%601> 类派生自 <xref:System.Windows.Controls.Page>，并将其与结构化导航所需的基本构造进行扩展。 本主题演示如何使用 <xref:System.Windows.Navigation.PageFunction%601> 建立结构化导航。
+<xref:System.Windows.Controls.Page> 类不实现对结构化导航的支持。 相反，<xref:System.Windows.Navigation.PageFunction%601> 类派生自 <xref:System.Windows.Controls.Page>，并将其与结构化导航所需的基本构造进行扩展。 本主题演示如何使用 <xref:System.Windows.Navigation.PageFunction%601>建立结构化导航。
 
 <a name="Structured_Navigation"></a>
 
@@ -48,7 +48,7 @@ ms.locfileid: "72580515"
 
 ## <a name="structured-navigation-with-pagefunction"></a>使用 PageFunction 进行结构化导航
 
-本主题演示如何实现涉及单个 <xref:System.Windows.Navigation.PageFunction%601> 的结构化导航的基本机制。 在此示例中，<xref:System.Windows.Controls.Page> 调用 <xref:System.Windows.Navigation.PageFunction%601> 以获取用户的 <xref:System.String> 值并将其返回。
+本主题演示如何实现涉及单个 <xref:System.Windows.Navigation.PageFunction%601>的结构化导航的基本机制。 在此示例中，<xref:System.Windows.Controls.Page> 调用 <xref:System.Windows.Navigation.PageFunction%601> 以获取用户的 <xref:System.String> 值并将其返回。
 
 ### <a name="creating-a-calling-page"></a>创建调用页
 
@@ -66,7 +66,7 @@ ms.locfileid: "72580515"
 
 ### <a name="creating-a-page-function-to-call"></a>创建要调用的页函数
 
-由于调用页可以使用被调用页来从用户那里收集和返回数据，因此 <xref:System.Windows.Navigation.PageFunction%601> 是作为泛型类实现的，其类型参数指定被调用页将返回的值的类型。 下面的代码演示了被调用页的初始实现，该实现使用返回 <xref:System.String> 的 <xref:System.Windows.Navigation.PageFunction%601>。
+由于调用页可以使用被调用页来从用户那里收集和返回数据，因此 <xref:System.Windows.Navigation.PageFunction%601> 是作为泛型类实现的，其类型参数指定被调用页将返回的值的类型。 下面的代码演示了被调用页的初始实现，该实现使用返回 <xref:System.String>的 <xref:System.Windows.Navigation.PageFunction%601>。
 
 [!code-xaml[StructuredNavigationSample#CalledPageFunctionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml#calledpagefunctionmarkup)]
 
@@ -75,9 +75,9 @@ ms.locfileid: "72580515"
 [!code-csharp[StructuredNavigationSample#CalledPageFunctionCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#calledpagefunctioncodebehind2)]
 [!code-vb[StructuredNavigationSample#CalledPageFunctionCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#calledpagefunctioncodebehind2)]
 
-@No__t_0 的声明类似于添加了类型参数的 <xref:System.Windows.Controls.Page> 的声明。 从代码示语例中可以看出，在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 标记和代码隐藏中均指定了类型自变量，前者使用 `x:TypeArguments` 属性，后者使用标准的泛型类型参数语法。
+<xref:System.Windows.Navigation.PageFunction%601> 的声明类似于添加了类型参数的 <xref:System.Windows.Controls.Page> 的声明。 从代码示语例中可以看出，在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 标记和代码隐藏中均指定了类型自变量，前者使用 `x:TypeArguments` 属性，后者使用标准的泛型类型参数语法。
 
-不必仅使用 .NET Framework 类作为类型实参。 可以调用 <xref:System.Windows.Navigation.PageFunction%601> 来收集抽象为自定义类型的域特定数据。 下面的代码演示如何使用自定义类型作为 <xref:System.Windows.Navigation.PageFunction%601> 的类型参数。
+不必仅使用 .NET Framework 类作为类型实参。 可以调用 <xref:System.Windows.Navigation.PageFunction%601> 来收集抽象为自定义类型的域特定数据。 下面的代码演示如何使用自定义类型作为 <xref:System.Windows.Navigation.PageFunction%601>的类型参数。
 
 [!code-csharp[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomType.cs#customtypecode1)]
 [!code-vb[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomType.vb#customtypecode1)]
@@ -92,7 +92,7 @@ ms.locfileid: "72580515"
 [!code-csharp[CustomTypePageFunctionSnippets#CustomTypePageFunctionCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomTypePageFunction.xaml.cs#customtypepagefunctioncodebehind2)]
 [!code-vb[CustomTypePageFunctionSnippets#CustomTypePageFunctionCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomTypePageFunction.xaml.vb#customtypepagefunctioncodebehind2)]
 
-@No__t_0 的类型自变量为调用页和被调用页之间的通信提供基础，以下部分对此进行了讨论。
+<xref:System.Windows.Navigation.PageFunction%601> 的类型自变量为调用页和被调用页之间的通信提供基础，以下部分对此进行了讨论。
 
 正如您将看到的，用 <xref:System.Windows.Navigation.PageFunction%601> 的声明标识的类型在将数据从 <xref:System.Windows.Navigation.PageFunction%601> 返回到调用页时起着重要的作用。
 
@@ -127,15 +127,15 @@ ms.locfileid: "72580515"
 
   1. 使用无参数构造函数实例化调用的 <xref:System.Windows.Navigation.PageFunction%601>。
 
-  2. 将参数存储在 <xref:System.Windows.Application.Properties%2A> 中。
+  2. 将参数存储在 <xref:System.Windows.Application.Properties%2A>中。
 
   3. 导航到调用的 <xref:System.Windows.Navigation.PageFunction%601>。
 
 - 从调用的 <xref:System.Windows.Navigation.PageFunction%601>：
 
-  - 检索和使用存储在 <xref:System.Windows.Application.Properties%2A> 中的参数。
+  - 检索和使用存储在 <xref:System.Windows.Application.Properties%2A>中的参数。
 
-但是，你不久就会看到，你仍然需要使用代码来实例化并导航到被调用页，以收集被调用页返回的数据。 出于此原因，<xref:System.Windows.Navigation.PageFunction%601> 需要保持活动状态;否则，下一次导航到 <xref:System.Windows.Navigation.PageFunction%601> 时，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用无参数构造函数实例化 <xref:System.Windows.Navigation.PageFunction%601>。
+但是，你不久就会看到，你仍然需要使用代码来实例化并导航到被调用页，以收集被调用页返回的数据。 出于此原因，<xref:System.Windows.Navigation.PageFunction%601> 需要保持活动状态;否则，下一次导航到 <xref:System.Windows.Navigation.PageFunction%601>时，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用无参数构造函数实例化 <xref:System.Windows.Navigation.PageFunction%601>。
 
 但是，在被调用页返回前，需要返回可以由调用页检索的数据。
 
@@ -156,7 +156,7 @@ ms.locfileid: "72580515"
 
 在此示例中，如果用户按“取消”按钮，则会向调用页返回 `null` 值。 如果按“确定”按钮，则返回用户提供的字符串值。 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 是一种 `protected virtual` 方法，通过调用该方法可以将数据返回到调用页。 需要将数据打包到泛型 <xref:System.Windows.Navigation.ReturnEventArgs%601> 类型的实例中，其 type 参数指定 <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> 返回的值的类型。 这样，当你使用特定类型参数声明 <xref:System.Windows.Navigation.PageFunction%601> 时，你将声明 <xref:System.Windows.Navigation.PageFunction%601> 将返回类型参数指定的类型的实例。 在此示例中，类型参数和，因此，返回值的类型为 <xref:System.String>。
 
-调用 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 时，调用页需要某种方式来接收 <xref:System.Windows.Navigation.PageFunction%601> 的返回值。 出于此原因，<xref:System.Windows.Navigation.PageFunction%601> 实现了用于调用要处理的页的 <xref:System.Windows.Navigation.PageFunction%601.Return> 事件。 调用 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 时，将引发 <xref:System.Windows.Navigation.PageFunction%601.Return>，因此调用页可以向 <xref:System.Windows.Navigation.PageFunction%601.Return> 注册以接收通知。
+调用 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 时，调用页需要某种方式来接收 <xref:System.Windows.Navigation.PageFunction%601>的返回值。 出于此原因，<xref:System.Windows.Navigation.PageFunction%601> 实现了用于调用要处理的页的 <xref:System.Windows.Navigation.PageFunction%601.Return> 事件。 调用 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 时，将引发 <xref:System.Windows.Navigation.PageFunction%601.Return>，因此调用页可以向 <xref:System.Windows.Navigation.PageFunction%601.Return> 注册以接收通知。
 
 [!code-csharp[StructuredNavigationSample#ProcessResultCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml.cs#processresultcodebehind1)]
 [!code-vb[StructuredNavigationSample#ProcessResultCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CallingPage.xaml.vb#processresultcodebehind1)]

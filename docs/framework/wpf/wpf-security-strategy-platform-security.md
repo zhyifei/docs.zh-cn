@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 7559c7ec9aef8f95336d53e62ca9bf5861a9b22f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9c237c06de1388de4c1fe6a6edb3fb5b52522d1f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040724"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424626"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 安全策略 - 平台安全性
 虽然 Windows Presentation Foundation （WPF）提供各种安全服务，但它还利用基础平台（包括操作系统、CLR 和 Internet Explorer）的安全功能。 这些层组合在一起旨在提供 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 强大且深层防御的安全模型，尝试避免任何单点故障，如下图所示：  
@@ -70,7 +70,7 @@ Windows Vista 上的 WPF 用户将受益于操作系统的附加安全增强功�
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>浏览器承载的应用程序的受限权限进程  
  浏览器承载的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序在 Internet 区域沙箱内执行。 与 Microsoft Internet Explorer [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 集成将此保护扩展到其他支持。  
   
- 由于 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] 通常都是通过 Internet 区域权限集设置的沙盒，因此，删除这些权限不会损害 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] 的兼容性。 反而会创建一个附加的深层防御层；如果经过沙箱处理的应用程序能够利用其他层截获此进程，该进程将仍然只有有限特权。  
+ 由于 XAML 浏览器应用程序（Xbap）通常由 Internet 区域权限集进行沙盒处理，因此，删除这些权限不会损害 XAML 浏览器应用程序（Xbap）的兼容性。 反而会创建一个附加的深层防御层；如果经过沙箱处理的应用程序能够利用其他层截获此进程，该进程将仍然只有有限特权。  
   
  请参阅[使用最低权限的用户帐户](https://docs.microsoft.com/previous-versions/tn-archive/cc700846%28v=technet.10%29)。  
   
@@ -166,7 +166,7 @@ Windows Vista 上的 WPF 用户将受益于操作系统的附加安全增强功�
  请注意，.NET Framework 允许受信任的代码通过允许开发人员编写标记为 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> （APTCA）并部署到用户的全局程序集缓存（GAC）的托管程序集来扩展 XBAP Internet 区域沙盒。 将程序集标记为 APTCA 是高度敏感的安全操作，因为它允许任何代码调用该程序集，包括来自 Internet 的恶意代码。 执行此操作时，要特别注意并且必须采用最佳做法，用户必须选择信任该软件才能完成安装。  
   
 ## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer 安全  
- 除减少安全问题和简化安全配置外，Microsoft Internet Explorer 6 （SP2）还包含一些安全改进功能，这些功能增强了 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]的用户的安全性。 这些功能的主旨是尝试允许用户更好地控制它们的浏览体验。  
+ 除减少安全问题和简化安全配置外，Microsoft Internet Explorer 6 （SP2）还包含多个增强 XAML 浏览器应用程序（Xbap）用户安全性的功能。 这些功能的主旨是尝试允许用户更好地控制它们的浏览体验。  
   
  在 IE6 SP2 之前，用户可能会受到以下任意一项操作：  
   
@@ -182,7 +182,7 @@ Windows Vista 上的 WPF 用户将受益于操作系统的附加安全增强功�
   
  相同的用户启动逻辑也适用于**打开**/**保存**安全提示。 始终在信息栏下捕获 ActiveX 安装对话框，除非它们表示从以前安装的控件进行升级。 这些度量值组合在一起，可提供用户更安全、更可控的用户体验，因为诱导他们安装不需要的软件或恶意软件的站点受到了保护。  
   
- 这些功能还可保护使用 IE6 SP2 浏览网站的客户，使他们能够下载和安装 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序。 具体来说，这是因为 IE6 SP2 提供了更好的用户体验，可减少用户安装恶意应用程序或狡猾应用程序的可能性，而不管使用哪种技术来构建应用程序，包括 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 通过使用 ClickOnce 增加了这些保护，以便通过 Internet 下载其应用程序。 由于 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] 是在 Internet 区域安全沙盒内执行，因此可以无缝地启动它们。 另一方面，独立的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序需要完全信任才能执行。 对于这些应用程序，ClickOnce 将在启动过程中显示一个安全对话框，以通知使用应用程序的其他安全要求。 但是，必须由用户启动，必须由用户启动的逻辑进行管理并且可以取消。  
+ 这些功能还可保护使用 IE6 SP2 浏览网站的客户，使他们能够下载和安装 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序。 具体来说，这是因为 IE6 SP2 提供了更好的用户体验，可减少用户安装恶意应用程序或狡猾应用程序的可能性，而不管使用哪种技术来构建应用程序，包括 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 通过使用 ClickOnce 增加了这些保护，以便通过 Internet 下载其应用程序。 由于 XAML 浏览器应用程序（Xbap）在 Internet 区域安全沙盒中执行，因此可以无缝地启动它们。 另一方面，独立的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序需要完全信任才能执行。 对于这些应用程序，ClickOnce 将在启动过程中显示一个安全对话框，以通知使用应用程序的其他安全要求。 但是，必须由用户启动，必须由用户启动的逻辑进行管理并且可以取消。  
   
  Internet Explorer 7 结合并扩展了 IE6 SP2 的安全功能，作为对安全性的不断承诺的一部分。  
   

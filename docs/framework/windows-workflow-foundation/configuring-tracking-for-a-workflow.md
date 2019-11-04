@@ -2,12 +2,12 @@
 title: 为工作流配置跟踪
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 889efc804bb45b384dfde5b4deb520a81d1e5486
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 25edef2edc23a3823a892c64809df21f333478db
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353050"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458899"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>为工作流配置跟踪
 
@@ -52,7 +52,7 @@ instance.Extensions.Add(trackingParticipant);
 
 在 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 服务主机中承载工作流时，该工作流可以作为 WCF 服务公开。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 是基于工作流的服务的指定 .NET ServiceHost 实现。 本节介绍如何为在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中运行的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 工作流服务配置跟踪。 通过在 Web.config 文件（对于 Web 承载的服务）或 App.config 文件（对于在独立的应用程序中承载的服务，例如在控制台应用程序中承载的服务）中指定服务行为，或通过使用代码向服务宿主的 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合中添加与跟踪相关的行为，可以完成上述配置。
 
-对于在 <xref:System.ServiceModel.WorkflowServiceHost> 中承载的工作流服务，可以使用配置文件中的 < `behavior` > 元素添加 @no__t，如下面的示例中所示。
+对于在 <xref:System.ServiceModel.WorkflowServiceHost>中承载的工作流服务，可以使用配置文件中的 <`behavior`> 元素添加 <xref:System.Activities.Tracking.EtwTrackingParticipant>，如下面的示例中所示。
 
 ```xml
 <behaviors>
@@ -61,7 +61,7 @@ instance.Extensions.Add(trackingParticipant);
           <etwTracking profileName="Sample Tracking Profile" />
         </behavior>
    </serviceBehaviors>
-<behaviors>
+</behaviors>
 ```
 
 此外，对于 <xref:System.ServiceModel.WorkflowServiceHost> 中承载的工作流服务，你可以通过代码添加 <xref:System.Activities.Tracking.EtwTrackingParticipant> 行为扩展。 若要添加自定义跟踪参与者，请创建一个新的行为扩展并将其添加到 <xref:System.ServiceModel.ServiceHost> 中，如以下代码示例中所示。
@@ -196,7 +196,7 @@ WF 4 提供跟踪参与者，可将跟踪记录写入 ETW（Windows 事件跟踪
     </system.serviceModel>
     ```
 
-2. 将清单文件从 @no__t > \Microsoft.windows.applicationserver.applications.man 复制的%windir%\Microsoft.NET\Framework @ no__t-0 @ no__t-1latest 版本复制到临时位置，并将其重命名为ApplicationServer. Applications_Provider1。
+2. 将清单文件从%windir%\Microsoft.NET\Framework\\\<[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.windows.applicationserver.applications.man 复制的最新版本复制到临时位置，并将其重命名为ApplicationServer. Applications_Provider1。
 
 3. 将清单文件中的 GUID 更改为新的 GUID。
 
@@ -244,7 +244,7 @@ WF 4 提供跟踪参与者，可将跟踪记录写入 ETW（Windows 事件跟踪
         csc /target:library /win32res:Microsoft.Windows.ApplicationServer.Applications_Provider1.res NewProviderReg.cs /out:Microsoft.Windows.ApplicationServer.Applications_Provider1.dll
         ```
 
-    6. 将清单文件中的资源和消息 dll 名称从 @no__t 更改为新的 dll 名称。
+    6. 将清单文件中的资源和消息 dll 名称从 `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` 更改为新的 dll 名称。
 
         ```xml
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">

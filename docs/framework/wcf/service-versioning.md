@@ -2,12 +2,12 @@
 title: 服务版本控制
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 68c41f2c349dbceb318976ee26db58fd00dae872
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 3f9fd87eacf67a1b23568dcf87df086e935879ba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321490"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423690"
 ---
 # <a name="service-versioning"></a>服务版本控制
 服务（及其公开的终结点）在初始部署之后，可能出于多种原因（例如，更改业务需求、信息技术需求，或者为了解决其他问题）而需要更改，并且在其生存期期间可能需要更改多次。 每次更改都会引入服务的一个新版本。 本主题说明如何在 Windows Communication Foundation （WCF）中考虑版本控制。  
@@ -132,7 +132,7 @@ ms.locfileid: "72321490"
   
  这样的一种机制是使用接口来定义每个数据协定的成员，并按照这些接口，而不是实现这些接口的数据协定类来编写内部实现代码。 某个服务的版本 1 的以下代码显示了一个 `IPurchaseOrderV1` 接口和一个 `PurchaseOrderV1`：  
   
-```  
+```csharp  
 public interface IPurchaseOrderV1  
 {  
     string OrderId { get; set; }  
@@ -153,7 +153,7 @@ public class PurchaseOrderV1 : IPurchaseOrderV1
   
  该服务协定的操作将按照 `PurchaseOrderV1` 编写，而实际的业务逻辑将按照 `IPurchaseOrderV1` 编写。 然后，在版本 2 中，将有一个新的 `IPurchaseOrderV2` 接口和一个新的 `PurchaseOrderV2` 类，如下面代码中所示：  
   
-```  
+```csharp
 public interface IPurchaseOrderV2  
 {  
     DateTime OrderDate { get; set; }  

@@ -1,13 +1,13 @@
 ---
 title: 符号和运算符参考
-description: 了解符号和运算符中使用F#编程语言。
+description: 了解F#编程语言中使用的符号和运算符。
 ms.date: 02/11/2019
-ms.openlocfilehash: 14ea7a66f7e9a79d24b62a4aa0564eecb891ee1a
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 0c177242991c39aa1a2b7566415b50385f3403d1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306186"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424050"
 ---
 # <a name="symbol-and-operator-reference"></a>符号和运算符参考
 
@@ -20,7 +20,7 @@ ms.locfileid: "67306186"
 
 下表描述 F# 语言中使用的符号、提供指向包含详细信息的主题的链接，并简要描述一些符号的使用。 符号按 ASCII 字符集顺序排序。
 
-|符号或运算符|链接|描述|
+|符号或运算符|“链接”|描述|
 |------------------|-----|-----------|
 |`!`|[引用单元格](../reference-cells.md)<br /><br />[计算表达式](../computation-expressions.md)|<ul><li>取消引用引用单元格。<br /></li><li>在关键字后，指示由工作流控制的关键字行为的修改版本。<br /></li></ul>|
 |`!=`|不适用。|<ul><li>F# 中不使用。 使用 `<>` 进行不等运算。<br /></li></ul>|
@@ -30,7 +30,7 @@ ms.locfileid: "67306186"
 |`$`|无可用的详细信息。|<ul><li>在内部用于特定编译器生成的变量和函数名称。<br /></li></ul>|
 |`%`|[算术运算符](arithmetic-operators.md)<br /><br />[代码引用](../code-quotations.md)|<ul><li>计算整数余数。<br /></li><li>用于将表达式拼接到类型化的代码引号中。<br /></li></ul>|
 |`%%`|[代码引用](../code-quotations.md)|<ul><li>用于将表达式拼接到非类型化的代码引号中。<br /></li></ul>|
-|`%?`|[可为 null 的运算符](nullable-operators.md)|<ul><li>当右侧是可以为 null 的类型时，请计算整数余数。<br /></li></ul>|
+|`%?`|[可为 null 的运算符](nullable-operators.md)|<ul><li>当右侧是可以为 null 的类型时，计算整数余数。<br /></li></ul>|
 |`&`|[match 表达式](../match-expressions.md)|<ul><li>计算可变值的地址，以便在与其他语言进行互操作时使用。<br /></li><li>在“与”模式下使用。<br /></li></ul>|
 |`&&`|[布尔运算符](boolean-operators.md)|<ul><li>计算“布尔与”运算。<br /></li></ul>|
 |`&&&`|[位运算符](bitwise-operators.md)|<ul><li>计算“位与”运算。<br /></li></ul>|
@@ -49,7 +49,7 @@ ms.locfileid: "67306186"
 |`-`|[算术运算符](arithmetic-operators.md)|<ul><li>当用作二元运算符时，使左侧减去右侧。<br /></li><li>当用作二元运算符时，执行求反运算。<br /></li></ul>|
 |`-?`|[可为 null 的运算符](nullable-operators.md)|<ul><li>当右侧是可以为 null 的类型时，使左侧减去右侧。<br /></li></ul>|
 |`->`|[函数](../functions/index.md)<br /><br />[match 表达式](../match-expressions.md)|<ul><li>在函数类型中，分隔自变量和返回值。<br /></li><li>生成表达式（序列表达式）；等效于 `yield` 关键字。<br /></li><li>在匹配表达式中使用<br /></li></ul>|
-|`.`|[成员](../members/index.md)<br /><br />[基元类型](../primitive-types.md)|<ul><li>访问成员并分隔完全限定名称中的各个名称。<br /></li><li>指定浮点数中的小数点。<br /></li></ul>|
+|`.`|[成员](../members/index.md)<br /><br />[基元类型](../basic-types.md)|<ul><li>访问成员并分隔完全限定名称中的各个名称。<br /></li><li>指定浮点数中的小数点。<br /></li></ul>|
 |`..`|[循环：`for...in` 表达式](../loops-for-in-expression.md)|<ul><li>指定范围。<br /></li></ul>|
 |`.. ..`|[循环：`for...in` 表达式](../loops-for-in-expression.md)|<ul><li>指定范围和增量。<br /></li></ul>|
 |`.[...]`|[数组](../arrays.md)|<ul><li>访问数组元素。<br /></li></ul>|
@@ -61,7 +61,7 @@ ms.locfileid: "67306186"
 |`::`|[列表](../lists.md)<br /><br />[match 表达式](../match-expressions.md)|<ul><li>创建列表。 将左侧的元素追加到右侧的列表。<br /></li><li>在模式匹配中用于分隔列表的各个部分。<br /></li></ul>|
 |`:=`|[引用单元格](../reference-cells.md)|<ul><li>对引用单元格赋值。<br /></li></ul>|
 |`:>`|[强制转换和转换](../casting-and-conversions.md)|<ul><li>将类型转换为层次结构中级别更高的类型。<br /></li></ul>|
-|`:?`|[match 表达式](../match-expressions.md)|<ul><li>返回`true`如果的值与匹配指定的类型 （包括它是否子类型）; 否则，返回`false`（类型测试运算符）。<br /></li></ul>|
+|`:?`|[match 表达式](../match-expressions.md)|<ul><li>如果值与指定类型匹配（包括子类型），则返回 `true`;否则，将返回 `false` （类型测试运算符）。<br /></li></ul>|
 |`:?>`|[强制转换和转换](../casting-and-conversions.md)|<ul><li>将类型转换为层次结构中级别更低的类型。<br /></li></ul>|
 |`;`|[详细语法](../verbose-syntax.md)<br /><br />[列表](../lists.md)<br /><br />[记录](../records.md)|<ul><li>分隔表达式（主要用于详细语法）。<br /></li><li>分隔列表中的元素。<br /></li><li>分隔记录的字段。<br /></li></ul>|
 |`<`|[算术运算符](arithmetic-operators.md)|<ul><li>计算“小于”运算。<br /></li></ul>|
@@ -83,10 +83,10 @@ ms.locfileid: "67306186"
 |`=?`|[可为 null 的运算符](nullable-operators.md)|<ul><li>当右侧是可以为 null 的类型时，计算“等于”运算。<br /></li></ul>|
 |`==`|不适用。|<ul><li>F# 中不使用。 使用 `=` 进行相等运算。<br /></li></ul>|
 |`>`|[算术运算符](arithmetic-operators.md)|<ul><li>如果左侧大于右侧，则返回 `true`；否则返回 `false`。<br /></li></ul>|
-|`>?`|[可为 null 的运算符](nullable-operators.md)|<ul><li>当右侧是可以为 null 的类型时，则计算"大于"操作。<br /></li></ul>|
+|`>?`|[可为 null 的运算符](nullable-operators.md)|<ul><li>当右侧是可以为 null 的类型时，计算 "大于" 运算。<br /></li></ul>|
 |`>>`|[函数](../functions/index.md)|<ul><li>组合两个函数（正向组合运算符）。<br /></li></ul>|
 |`>>>`|[位运算符](bitwise-operators.md)|<ul><li>将左侧的位数向右移动右侧指定的位数。<br /></li></ul>|
-|`>=`|[算术运算符](arithmetic-operators.md)|<ul><li>返回`true`左侧和右侧是否大于或等于右侧的数字; 否则，返回`false`。<br /></li></ul>|
+|`>=`|[算术运算符](arithmetic-operators.md)|<ul><li>如果左侧大于或等于右侧，则返回 `true`;否则，将返回 `false`。<br /></li></ul>|
 |`>=?`|[可为 null 的运算符](nullable-operators.md)|<ul><li>当右侧是可以为 null 的类型时，计算“大于或等于”运算。<br /></li></ul>|
 |`?`|[参数和自变量](../parameters-and-arguments.md)|<ul><li>指定可选自变量。<br /></li><li>用作动态方法和属性调用的运算符。 你必须提供自己的实现。<br /></li></ul>|
 |`? ... <- ...`|无可用的详细信息。|<ul><li>用作设置动态属性的运算符。 你必须提供自己的实现。<br /></li></ul>|
@@ -96,7 +96,7 @@ ms.locfileid: "67306186"
 |`@`|[列表](../lists.md)<br /><br />[字符串](../strings.md)|<ul><li>连接两个列表。<br /></li><li>当放置在字符串文本之前时，指示将逐字解释字符串，而不会解释转义符。<br /></li></ul>|
 |`[...]`|[列表](../lists.md)|<ul><li>分隔列表中的元素。<br /></li></ul>|
 |<code>[&#124;...&#124;]</code>|[数组](../arrays.md)|<ul><li>分隔数组中的元素。<br /></li></ul>|
-|`[<...>]`|[属性](../attributes.md)|<ul><li>分隔特性。<br /></li></ul>|
+|`[<...>]`|[特性](../attributes.md)|<ul><li>分隔特性。<br /></li></ul>|
 |`\`|[字符串](../strings.md)|<ul><li>对下一个字符转义，在字符和字符串文本中使用。<br /></li></ul>|
 |`^`|[静态解析的类型参数](../generics/statically-resolved-type-parameters.md)<br /><br />[字符串](../strings.md)|<ul><li>指定在编译时（而非运行时）必须解析的类型参数。<br /></li><li>连接字符串。<br /></li></ul>|
 |`^^^`|[位运算符](bitwise-operators.md)|<ul><li>计算“位异或”运算。<br /></li></ul>|
@@ -131,19 +131,19 @@ ms.locfileid: "67306186"
 |`->`|右|
 |`:=`|右|
 |`,`|不相关|
-|`or`， <code>&#124;&#124;</code>|左侧|
-|`&`， `&&`|左侧|
-|`:>`， `:?>`|右|
-|`<`*op*， `>` *op*， `=`， <code>&#124;</code> *op*， `&` *op*， `&`<br /><br />（包括 `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`）|左侧|
+|`or`，<code>&#124;&#124;</code>|左侧|
+|`&`，`&&`|左侧|
+|`:>`，`:?>`|右|
+|`<`*op*，`>`*op*，`=`，<code>&#124;</code>*op*，`&`*op*，`&`<br /><br />（包括 `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`）|左侧|
 |`^`*op*<br /><br />（包括 `^^^`）|右|
 |`::`|右|
 |`:?`|未关联|
 |`-`*op*，`+`*op*|适用于最为这些符号的中缀使用|
-|`*`*op*，`/`*op*，`%`*op*|左|
+|`*`*op*，`/`*op*，`%`*op*|左侧|
 |`**`*op*|右|
 |`f x`（函数应用程序）|左侧|
 |<code>&#124;</code> （模式匹配）|右|
-|前缀运算符（`+`*op*，`-`*op*，`%`，`%%`，`&`，`&&`，`!`*op*，`~`*op*）|左侧|
+|前缀运算符（`+`*op*，`-`*op*，`%`，`%%`，`&`，`&&``!`*op*，`~`*op*）|左侧|
 |`.`|左侧|
 |`f(x)`|左侧|
 |`f<`*types*`>`|左侧|

@@ -2,12 +2,12 @@
 title: 函数
 description: 了解中的F#函数以及如何F#支持常见的函数编程构造。
 ms.date: 05/16/2016
-ms.openlocfilehash: 6f65ce692169b71abe8d2eff7ef07b66975d478b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c6b8307f51ffcdc77fe4352b2305fca1f247ccbb
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630699"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423958"
 ---
 # <a name="functions"></a>函数
 
@@ -76,7 +76,7 @@ let f x = (x, x)
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
 
-有关详细信息，请参阅[代码格式设置准则](../code-formatting-guidelines.md)和[详细语法](../verbose-syntax.md)。
+有关详细信息，请参阅[代码格式设置准则](../../style-guide/formatting.md)和[详细语法](../verbose-syntax.md)。
 
 ## <a name="return-values"></a>返回值
 
@@ -102,7 +102,7 @@ let vol = cylinderVolume 2.0 3.0
 
 ## <a name="partial-application-of-arguments"></a>部分应用参数
 
-如果提供的参数数目少于指定的参数数目，则可创建一个应采用其余参数的新函数。 这种处理参数的方法称为“柯里化”  ，而且这是 F# 等函数编程语言的一个特性。 例如，假设正在处理两种尺寸的管道：一种管道的半径为 **2.0**，另一种管道的半径为 **3.0**。 你可能会创建用于确定管道体积的函数，如下所示：
+如果提供的参数数目少于指定的参数数目，则可创建一个应采用其余参数的新函数。 这种处理参数的方法称为“柯里化”，而且这是 F# 等函数编程语言的一个特性。 例如，假设正在处理两种尺寸的管道：一种管道的半径为 **2.0**，另一种管道的半径为 **3.0**。 你可能会创建用于确定管道体积的函数，如下所示：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
 
@@ -120,7 +120,7 @@ let vol = cylinderVolume 2.0 3.0
 
 ## <a name="function-values"></a>函数值
 
-在 F# 中，所有函数都被视为值；实际上，它们被称为“函数值”  。 因为函数是值，所以它们可用作其他函数的参数，或在需要使用值的其他上下文中使用。 下面是一个采用函数值作为参数的函数示例：
+在 F# 中，所有函数都被视为值；实际上，它们被称为“函数值”。 因为函数是值，所以它们可用作其他函数的参数，或在需要使用值的其他上下文中使用。 下面是一个采用函数值作为参数的函数示例：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
 
@@ -142,7 +142,7 @@ let vol = cylinderVolume 2.0 3.0
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-可通过使用 `fun` 关键字来定义 lambda 表达式。 lambda 表达式类似于函数定义，只不过使用了 `->` 标记将参数列表与函数体分隔，而不是使用 `=` 标记。 与在常规函数定义中一样，可推断或显式指定参数类型，并且从主体中最后一个表达式的类型推断出 lambda 表达式的返回类型。 有关详细信息, 请[参阅 Lambda 表达式:`fun`关键字。](../functions/lambda-expressions-the-fun-keyword.md)
+可通过使用 `fun` 关键字来定义 lambda 表达式。 lambda 表达式类似于函数定义，只不过使用了 `->` 标记将参数列表与函数体分隔，而不是使用 `=` 标记。 与在常规函数定义中一样，可推断或显式指定参数类型，并且从主体中最后一个表达式的类型推断出 lambda 表达式的返回类型。 有关详细信息，请参阅 [Lambda 表达式：`fun` 关键字](../functions/lambda-expressions-the-fun-keyword.md)。
 
 ## <a name="function-composition-and-pipelining"></a>函数组合和流水线处理
 

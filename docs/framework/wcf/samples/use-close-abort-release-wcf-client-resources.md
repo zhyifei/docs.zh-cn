@@ -1,18 +1,18 @@
 ---
 title: 使用“关闭”和“中止”发布 WCF 客户端资源
-description: Dispose 可以失败，并且网络出现故障时引发异常。 这可能会导致意外的行为。 相反，使用关闭和中止网络发生故障时释放客户端资源。
+description: 当网络出现故障时，Dispose 会失败并引发异常。 这可能会导致意外的行为。 相反，请使用 Close 和 Abort 在网络发生故障时释放客户端资源。
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-ms.openlocfilehash: 58f828d9cd85806f5f04c349a7de18828ab5f6f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afb52e89c5f159e7866ebc8f30fcfae7dd5be93a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007568"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424176"
 ---
-# <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>关闭和中止发布资源安全地时网络连接已删除
+# <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>网络连接中断时，安全关闭和中止发布资源
 
-此示例演示如何使用`Close`和`Abort`方法来清理资源，使用类型化客户端时。 `using`语句不可靠网络连接时将导致异常。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。 在此示例中，客户端是一个控制台应用程序 (.exe)，服务是由 Internet 信息服务 (IIS) 承载的。
+此示例演示如何使用 `Close` 和 `Abort` 方法在使用类型化客户端时清理资源。 当网络连接不稳定时，`using` 语句将导致异常。 此示例基于实现计算器服务的[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 在此示例中，客户端是一个控制台应用程序 (.exe)，服务是由 Internet 信息服务 (IIS) 承载的。
 
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。
@@ -46,7 +46,7 @@ using (CalculatorClient client = new CalculatorClient())
 
 因为 `Dispose`() 发生在“finally”块内，因此在 `ApplicationException`() 失败的情况下，`Dispose` 不会发生在 using 块外。 如果外面的代码必须要知道 `ApplicationException` 发生的时间，则“using”构造可能会因为屏蔽此异常而导致问题。
 
-最后，示例演示 `DemonstrateCleanupWithExceptions` 中发生异常时如何正确清除异常。 本示例使用 try/catch 块报告错误并调用 `Abort`。 请参阅[预期异常](../../../../docs/framework/wcf/samples/expected-exceptions.md)示例捕获从客户端调用的异常有关的详细信息。
+最后，示例演示 `DemonstrateCleanupWithExceptions` 中发生异常时如何正确清除异常。 本示例使用 try/catch 块报告错误并调用 `Abort`。 有关从客户端调用捕获异常的详细信息，请参阅[预期异常](../../../../docs/framework/wcf/samples/expected-exceptions.md)示例。
 
 ```csharp
 try
@@ -73,7 +73,7 @@ catch (Exception e)
 ```
 
 > [!NOTE]
-> 使用语句和 ServiceHost:许多自承载的应用程序稍有多个托管服务，并且 ServiceHost.Close 很少引发异常，因此，此类应用程序可以安全地使用 using 语句和 ServiceHost。 但请注意，ServiceHost.Close 可能引发 `CommunicationException`，因此，如果关闭 ServiceHost 以后应用程序继续执行，则应避免使用 using 语句并遵循前面提供的模式。
+> using 语句和 ServiceHost：许多自承载的应用程序主要用于承载服务，并且 ServiceHost.Close 很少引发异常，因此这样的应用程序可以安全地一起使用 using 语句和 ServiceHost。 但请注意，ServiceHost.Close 可能引发 `CommunicationException`，因此，如果关闭 ServiceHost 以后应用程序继续执行，则应避免使用 using 语句并遵循前面提供的模式。
 
 运行示例时，在客户端控制台窗口中显示操作响应和异常。
 
@@ -81,7 +81,7 @@ catch (Exception e)
 
 客户端进程的预期输出为：
 
-```
+```console
 =
 = Demonstrating problem:  closing brace of using statement can throw.
 =
@@ -105,17 +105,17 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
-3. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。
+3. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
 
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\UsingUsing`

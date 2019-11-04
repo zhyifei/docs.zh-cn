@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
-ms.openlocfilehash: a20c0a6fd729c2fc34449167eb92cb774bc3b84e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 19e2925cd65cc9c68ff50d370398a4f401275940
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602009"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422593"
 ---
 # <a name="private-c-reference"></a>private（C# 参考）
 
@@ -45,7 +45,7 @@ class Employee
 
 ## <a name="c-language-specification"></a>C# 语言规范  
 
-有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的[声明的可访问性](~/_csharplang/spec/basic-concepts.md#declared-accessibility)。 该语言规范是 C# 语法和用法的权威资料。
+有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的[声明的可访问性](~/_csharplang/spec/basic-concepts.md#declared-accessibility)。 该语言规范是 C# 语法和用法的权威资料。
 
 ## <a name="see-also"></a>请参阅
 
@@ -54,7 +54,7 @@ class Employee
 - [C# 关键字](index.md)
 - [访问修饰符](access-modifiers.md)
 - [可访问性级别](accessibility-levels.md)
-- [修饰符](modifiers.md)
+- [修饰符](index.md)
 - [public](public.md)
 - [受保护](protected.md)
 - [internal](internal.md)

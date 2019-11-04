@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: b7401cd3e9551b378983193f4c5e8e4107954b74
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 663dd7a785200ddbc78cc0cd1fb5b43531982f42
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401413"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458953"
 ---
 # <a name="dependency-properties-overview"></a>依赖属性概述
 
 Windows Presentation Foundation (WPF) 提供一组服务，这些服务可用于扩展类型的[属性](../../../standard/base-types/common-type-system.md#Properties)的功能。 这些服务通常统称为 WPF 属性系统。 由 WPF 属性系统支持的属性称为依赖属性。 本概述介绍 WPF 属性系统以及依赖属性的功能。 这包括如何在 XAML 和在代码中使用现有依赖属性。 本概述还介绍依赖属性所特有的方面（如依赖属性元数据），并说明如何在自定义类中创建自己的依赖属性。
 
-## <a name="prerequisites"></a>系统必备
-本主题假设你在 .NET 类型系统和面向对象的编程方面有一些基础知识。 为了能理解本主题中的示例，还应了解 XAML 并知道如何编写 WPF 应用程序。 有关详细信息，请参见[演练：我的第一个 WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)桌面应用程序。  
+## <a name="prerequisites"></a>Prerequisites
+本主题假设你在 .NET 类型系统和面向对象的编程方面有一些基础知识。 为了能理解本主题中的示例，还应了解 XAML 并知道如何编写 WPF 应用程序。 有关详细信息，请参阅[演练：我的第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
   
 ## <a name="dependency-properties-and-clr-properties"></a>依赖属性和 CLR 属性
  在 WPF 中，属性通常公开为标准 .NET [属性](../../../standard/base-types/common-type-system.md#Properties)。 在基本级别，可以直接与这些属性交互，而不必了解它们是以依赖属性的形式实现的。 但是，应当熟悉 WPF 属性系统的部分或全部功能，以便利用这些功能。
@@ -40,11 +40,11 @@ Windows Presentation Foundation (WPF) 提供一组服务，这些服务可用于
 
 下面列出了与依赖属性一起使用的术语：
 
-- **依赖属性:** 由支持的属性<xref:System.Windows.DependencyProperty>。
+- **依赖属性：** <xref:System.Windows.DependencyProperty> 支持的属性。
 
-- **依赖项属性标识符:** <xref:System.Windows.DependencyProperty>实例, 在注册依赖属性时作为返回值获取, 然后存储为类的静态成员。 对于与 WPF 属性系统交互的许多 API，此标识符用作一个参数。
+- **依赖属性标识符：** 一个 <xref:System.Windows.DependencyProperty> 实例，在注册依赖属性时以返回值形式获取它，之后将其存储为类的静态成员。 对于与 WPF 属性系统交互的许多 API，此标识符用作一个参数。
 
-- **CLR "包装器":** 属性的实际 get 和 set 实现。 这些实现通过在 <xref:System.Windows.DependencyObject.GetValue%2A> 和 <xref:System.Windows.DependencyObject.SetValue%2A> 调用中使用依赖属性标识符来并入依赖属性标识符，从而使用 WPF 属性系统为属性提供支持。
+- **CLR“包装器”：** 属性的实际 get 和 set 实现。 这些实现通过在 <xref:System.Windows.DependencyObject.GetValue%2A> 和 <xref:System.Windows.DependencyObject.SetValue%2A> 调用中使用依赖属性标识符来并入依赖属性标识符，从而使用 WPF 属性系统为属性提供支持。
 
 下面的示例定义 `IsSpinning` 依赖属性，并说明 <xref:System.Windows.DependencyProperty> 标识符与它所支持的属性之间的关系。
 
@@ -61,7 +61,7 @@ Windows Presentation Foundation (WPF) 提供一组服务，这些服务可用于
 
 [!code-xaml[PropertiesOvwSupport#MostBasicProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#mostbasicproperty)]
 
-XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪种语法取决于该属性所使用的值类型以及其他因素（例如，是否存在类型转换器）。 有关属性设置的 XAML 语法的详细信息，请参阅 [XAML 概述 (WPF)](xaml-overview-wpf.md) 和 [XAML 语法详述](xaml-syntax-in-detail.md)。
+XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪种语法取决于该属性所使用的值类型以及其他因素（例如，是否存在类型转换器）。 有关属性设置的 XAML 语法的详细信息，请参阅 [XAML 概述 (WPF)](../../../desktop-wpf/fundamentals/xaml.md) 和 [XAML 语法详述](xaml-syntax-in-detail.md)。
 
 作为非属性语法的示例，下面的 XAML 示例显示了另一种按钮背景。 这一次不是设置简单的纯色，而是将背景设置为图像，用一个元素表示该图像并将该图像的源指定为嵌套元素的属性。 这是属性元素语法的示例。
 
@@ -78,7 +78,7 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-还可以<xref:System.Windows.DependencyObject.GetValue%2A> <xref:System.Windows.DependencyObject.SetValue%2A>直接调用属性系统 api。 如果使用现有属性 (包装更方便, 并为开发人员工具提供更好的属性公开), 则通常不需要这样做, 但在某些情况下, 可以直接调用 Api。
+你还可以调用属性系统 Api <xref:System.Windows.DependencyObject.GetValue%2A> 并直接 <xref:System.Windows.DependencyObject.SetValue%2A>。 如果使用现有属性（包装更方便，并为开发人员工具提供更好的属性公开），则通常不需要这样做，但在某些情况下，可以直接调用 Api。
 
 还可以在 XAML 中设置属性，然后通过代码隐藏在代码中访问这些属性。 有关详细信息，请参阅 [WPF 中的代码隐藏和 XAML](code-behind-and-xaml-in-wpf.md)。
 
@@ -136,7 +136,7 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 
 有关详细信息，请参阅[样式设置和模板化](../controls/styling-and-templating.md)。
 
-### <a name="animations"></a>Animations
+### <a name="animations"></a>动画
 可以对依赖属性进行动画处理。 在应用和运行动画时，经过动画处理的值的操作优先级高于该属性以其他方式具有的任何值（如本地值）。
 
 以下示例在 <xref:System.Windows.Controls.Button> 属性上对 <xref:System.Windows.Controls.Control.Background%2A> 进行动画处理（从技术上讲，通过使用属性元素语法将空白 <xref:System.Windows.Media.SolidColorBrush> 指定为 <xref:System.Windows.Controls.Control.Background%2A> 来对 <xref:System.Windows.Controls.Control.Background%2A> 进行动画处理，然后该 <xref:System.Windows.Media.SolidColorBrush> 的 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 属性就是直接动画处理过的属性）。
@@ -190,7 +190,7 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 
 ## <a name="learning-more-about-dependency-properties"></a>了解有关依赖属性的详细信息  
 
-- 附加属性是一种支持 XAML 中的专用语法的属性。 附加属性通常与公共语言运行时 (CLR) 属性没有1:1 对应关系, 并且不一定是依赖属性。 附加属性的典型用途是使子元素可以向其父元素报告属性值，即使父元素和子元素的类成员列表中均没有该属性也是如此。 一种主要情况是使子元素能够告知父元素应如何在 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 中呈现它们；有关示例，请参阅 <xref:System.Windows.Controls.DockPanel.Dock%2A> 或 <xref:System.Windows.Controls.Canvas.Left%2A>。 有关详细信息，请参阅[附加属性概述](attached-properties-overview.md)。
+- 附加属性是一种支持 XAML 中的专用语法的属性。 附加属性通常与公共语言运行时（CLR）属性没有1:1 对应关系，并且不一定是依赖属性。 附加属性的典型用途是使子元素可以向其父元素报告属性值，即使父元素和子元素的类成员列表中均没有该属性也是如此。 一种主要情况是使子元素能够告知父元素应如何在 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 中呈现它们；有关示例，请参阅 <xref:System.Windows.Controls.DockPanel.Dock%2A> 或 <xref:System.Windows.Controls.Canvas.Left%2A>。 有关详细信息，请参阅[附加属性概述](attached-properties-overview.md)。
 
 - 组件开发人员或应用程序开发人员可能希望创建自己的依赖属性，以便实现数据绑定或样式支持之类的功能，或者实现对失效和值强制的支持。 有关详细信息，请参阅[自定义依赖属性](custom-dependency-properties.md)。
 
@@ -200,5 +200,5 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 
 - [自定义依赖属性](custom-dependency-properties.md)
 - [只读依赖项属性](read-only-dependency-properties.md)
-- [XAML 概述 (WPF)](xaml-overview-wpf.md)
+- [XAML 概述 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [WPF 体系结构](wpf-architecture.md)

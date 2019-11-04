@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 4a0b15ded5050833d4e87a30b977139834b624d4
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 39124b03b21fe1bc2a5dce3d8fb90ff372ab4853
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197928"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458932"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>演练：在 Windows 窗体中承载 WPF 复合控件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，当您对 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 代码做了大量投资时，使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 而不是从头重新编写现有 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 应用程序会更有效。 常见的一种情况是，当你想要将一个或多个使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现的控件嵌入 Windows 窗体应用程序中。 有关自定义 WPF 控件的详细信息，请参阅[控件自定义](../controls/control-customization.md)。  
@@ -87,7 +87,7 @@ ms.locfileid: "73197928"
 #### <a name="styling-the-ui-elements"></a>设置 UI 元素的样式  
  数据输入窗体上的许多元素外观相似，这意味着它们对于其若干属性具有相同的设置。 以前的 XAML 使用 <xref:System.Windows.Style> 元素来定义元素类的标准属性设置，而不是单独设置每个元素的属性。 这种方法可以降低控件的复杂性，并使你能够通过单个样式特性更改多个元素的外观。  
   
- <xref:System.Windows.Style> 元素包含在 <xref:System.Windows.Controls.Grid> 元素的 <xref:System.Windows.FrameworkElement.Resources%2A> 属性中，因此控件中的所有元素都可以使用这些元素。 如果样式命名为，可通过将 <xref:System.Windows.Style> 元素设置为样式的名称，将其应用到元素。 未命名的样式将成为该元素的默认样式。 有关 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 样式的详细信息，请参阅[样式设置和模板化](../controls/styling-and-templating.md)。  
+ <xref:System.Windows.Style> 元素包含在 <xref:System.Windows.Controls.Grid> 元素的 <xref:System.Windows.FrameworkElement.Resources%2A> 属性中，因此控件中的所有元素都可以使用这些元素。 如果样式命名为，可通过将 <xref:System.Windows.Style> 元素设置为样式的名称，将其应用到元素。 未命名的样式将成为该元素的默认样式。 有关 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 样式的详细信息，请参阅[样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)。  
   
  下面的 XAML 演示复合控件的 <xref:System.Windows.Style> 元素。 若要查看样式如何应用于元素，请参阅前一个 XAML。 例如，最后一个 <xref:System.Windows.Controls.TextBlock> 元素具有 `inlineText` 样式，最后一个 <xref:System.Windows.Controls.TextBox> 元素使用默认样式。  
   

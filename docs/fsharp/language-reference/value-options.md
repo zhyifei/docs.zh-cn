@@ -1,26 +1,26 @@
 ---
 title: 值选项
-description: 了解如何F#值选项的类型，即选项类型的结构版本。
+description: 了解F#值选项类型，它是选项类型的结构版本。
 ms.date: 02/06/2019
-ms.openlocfilehash: e1036c83189c853b3704d94ca245e4818acc98c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4dc3f7217943345b7aaf1165fd648ab2e01bd727
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982574"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424018"
 ---
 # <a name="value-options"></a>值选项
 
-中的值选项类型F#在以下两种情况下保存时使用：
+在F#以下两种情况下，使用值选项类型：
 
-1. 一种方案是适用于[F#选项](options.md)。
-2. 使用结构提供了在你的方案中可以提高性能。
+1. 方案适用于某个[ F#选项](options.md)。
+2. 使用结构可在方案中提供性能优势。
 
-并非所有性能敏感方案"都解决"通过使用结构。 您必须考虑复制而不引用类型中使用它们时的额外成本。 但是，大型F#程序通常实例化许多可选类型流过热路径中，并在这种情况下，结构通常可以产生更好的程序的整个生命周期的整体性能。
+并非所有性能相关的方案都是使用结构 "解决" 的。 使用时，必须考虑复制的额外成本，而不是引用类型。 但是，大型F#程序通常会实例化许多通过热路径的可选类型，在这种情况下，结构通常可以在程序的整个生存期内提供更好的整体性能。
 
 ## <a name="definition"></a>定义
 
-值选项指[结构的可区分联合](discriminated-unions.md#struct-discriminated-unions)类似于引用选项类型。 这种方式可被视为其定义：
+值选项定义为类似于引用选项类型的[结构可区分联合](discriminated-unions.md#struct-discriminated-unions)。 它的定义可以通过以下方式来考虑：
 
 ```fsharp
 [<StructuralEquality; StructuralComparison>]
@@ -30,11 +30,11 @@ type ValueOption<'T> =
     | ValueSome of 'T
 ```
 
-值选项符合结构相等和比较。 主要区别是已编译的名称、 类型名称和大小写的名称所有指示它是值类型。
+值选项符合结构相等性和比较。 主要区别在于，已编译的名称、类型名称和大小写名称都表明它是值类型。
 
 ## <a name="using-value-options"></a>使用值选项
 
-就像使用值选项[选项](options.md)。 `ValueSome` 用于指示一个值是否存在，并且`ValueNone`值不存在时使用：
+值选项的使用方式与[选项](options.md)相同。 `ValueSome` 用于指示存在值，并且当值不存在时使用 `ValueNone`：
 
 ```fsharp
 let tryParseDateTime (s: string) =
@@ -55,23 +55,23 @@ match (result1, result2) with
 | ValueNone, ValueNone -> printfn "None of them are dates!"
 ```
 
-如同[选项](options.md)，返回的函数的命名约定`ValueOption`是它前面加`try`。
+与[选项](options.md)一样，返回 `ValueOption` 的函数的命名约定是使用 `try`作为其前缀。
 
 ## <a name="value-option-properties-and-methods"></a>值选项属性和方法
 
-这次还有另一个属性的值选项： `Value`。 <xref:System.InvalidOperationException>如果没有值，则的存在调用此属性时引发。
+目前存在一个值选项属性： `Value`。 如果调用此属性时没有值，则会引发 <xref:System.InvalidOperationException>。
 
 ## <a name="value-option-functions"></a>值选项函数
 
-目前有一个模块绑定函数的值选项`defaultValueArg`:
+目前有一个适用于值选项的模块绑定函数，`defaultValueArg`：
 
 ```fsharp
-val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T 
+val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T
 ```
 
-如同`defaultArg`函数，`defaultValueArg`返回给定值选项的基础值，如果它存在; 否则，返回指定的默认值。
+与 `defaultArg` 函数一样，`defaultValueArg` 返回给定值选项的基础值（如果存在）;否则，它将返回指定的默认值。
 
-在此期间，没有其他模块绑定函数的值选项。
+目前没有其他用于值选项的模块绑定函数。
 
 ## <a name="see-also"></a>请参阅
 

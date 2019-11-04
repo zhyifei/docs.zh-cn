@@ -2,12 +2,12 @@
 title: 约束
 description: 了解适用F#于泛型类型参数的约束，以指定泛型类型或函数中类型参数的要求。
 ms.date: 05/16/2016
-ms.openlocfilehash: 9912ba63138d893a7c616661dd2b1cbdbe51916c
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 70a8bec1ad67d7e814cb7a96b1876bb22399c5e7
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736791"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425017"
 ---
 # <a name="constraints"></a>约束
 
@@ -25,17 +25,17 @@ type-parameter-list when constraint1 [ and constraint2]
 
 |约束|语法|描述|
 |----------|------|-----------|
-|类型约束|*type-parameter* :&gt; *type*|提供的类型必须等于或派生自指定的类型，或者，如果类型是接口，则提供的类型必须实现接口。|
-|Null 约束|*type-parameter* : null|提供的类型必须支持 null 文本。 这包括所有 .NET 对象类型，但F#不包括列表、元组、函数、类、记录或联合类型。|
-|显式成员约束|[（]*类型参数*[or...或*类型参数*)]: (*成员签名*)|提供的类型自变量中至少有一个必须具有具有指定签名的成员;不用于常见用途。 成员必须在类型或隐式类型扩展的一部分上显式定义为显式成员约束的有效目标。|
-|构造函数约束|*类型-参数*：（new： unit &gt; "a）|提供的类型必须具有无参数的构造函数。|
+|类型约束|*类型参数*：&gt;*类型*|提供的类型必须等于或派生自指定的类型，或者，如果类型是接口，则提供的类型必须实现接口。|
+|Null 约束|*类型-参数*： null|提供的类型必须支持 null 文本。 这包括所有 .NET 对象类型，但F#不包括列表、元组、函数、类、记录或联合类型。|
+|显式成员约束|[（]*类型-参数*[或 .。。或*类型参数*）]：（*成员签名*）|提供的类型自变量中至少有一个必须具有具有指定签名的成员;不用于常见用途。 成员必须在类型或隐式类型扩展的一部分上显式定义为显式成员约束的有效目标。|
+|构造函数约束|*类型-参数*：（新的：单元&gt; "a"）|提供的类型必须具有无参数的构造函数。|
 |值类型约束|： struct|提供的类型必须是 .NET 值类型。|
 |引用类型约束|： not struct|提供的类型必须是 .NET 引用类型。|
-|枚举类型约束|: enum&lt;*underlying-type*&gt;|提供的类型必须是具有指定基础类型的枚举类型;不用于常见用途。|
-|委托约束|: delegate&lt;*tuple-parameter-type*, *return-type*&gt;|提供的类型必须是具有指定参数和返回值的委托类型;不用于常见用途。|
+|枚举类型约束|：枚举&lt;*基础类型*&gt;|提供的类型必须是具有指定基础类型的枚举类型;不用于常见用途。|
+|委托约束|：委托&lt;*元组-参数类型*、*返回类型*&gt;|提供的类型必须是具有指定参数和返回值的委托类型;不用于常见用途。|
 |比较约束|：比较|提供的类型必须支持比较。|
 |相等约束|：相等|提供的类型必须支持相等性。|
-|非托管约束|：非托管|提供的类型必须是非托管类型。 非托管类型是特定的基元类型（`sbyte`、`byte`、`char`、`nativeint`、`unativeint`、`float32`、@no__t、`int16`、`uint16`、`int32`、0、1、2 或 3）、枚举类型、4 或非泛型其字段为所有非托管类型的结构。|
+|非托管约束|：非托管|提供的类型必须是非托管类型。 非托管类型是特定的基元类型（`sbyte`、`byte`、`char`、`nativeint`、`unativeint`、`float32`、`float`、`int16`、`uint16`、`int32`、`uint32`、`int64`、`uint64`或 `decimal`）、枚举类型、`nativeptr<_>`或非泛型结构，其字段为所有非托管类型。|
 
 当你的代码必须使用在约束类型上可用的功能，而不是常规类型时，你必须添加约束。 例如，如果使用类型约束指定类类型，则可以在泛型函数或类型中使用该类的任意一个方法。
 
@@ -53,7 +53,7 @@ type Class1<'T when 'T :> System.Exception> =
 class end
 
 // Interface Type Constraint
-type Class2<'T when 'T :> System.IComparable> = 
+type Class2<'T when 'T :> System.IComparable> =
 class end
 
 // Null constraint

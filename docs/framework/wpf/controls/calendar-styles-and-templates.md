@@ -9,115 +9,115 @@ helpviewer_keywords:
 - Calendar [WPF], styles and templates
 - ControlTemplate [WPF], Calendar
 ms.assetid: f4fcf046-7a8f-41b8-b5a8-534b64e0345c
-ms.openlocfilehash: 18bef548b11f1a680c1361027b86f6952bedaad0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49d9ced42572ac06a4ff824ec41a59c14497d215
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912439"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460924"
 ---
 # <a name="calendar-styles-and-templates"></a>Calendar 样式和模板
-本主题介绍的样式和模板的<xref:System.Windows.Controls.Calendar>控件。 可以修改默认<xref:System.Windows.Controls.ControlTemplate>为控件提供唯一外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
+本主题介绍 <xref:System.Windows.Controls.Calendar> 控件的样式和模板。 您可以修改默认 <xref:System.Windows.Controls.ControlTemplate> 以使控件具有独特的外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
   
 ## <a name="calendar-parts"></a>日历部件  
- 下表列出了用于命名的部件<xref:System.Windows.Controls.Calendar>控件。  
+ 下表列出了 <xref:System.Windows.Controls.Calendar> 控件的已命名部分。  
   
-|部件|类型|描述|  
+|部件|键入|描述|  
 |-|-|-|  
-|PART_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|当前显示的月份或年份上的<xref:System.Windows.Controls.Calendar>。|  
-|PART_Root|<xref:System.Windows.Controls.Panel>|面板，其中包含<xref:System.Windows.Controls.Primitives.CalendarItem>。|  
+|PART_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|<xref:System.Windows.Controls.Calendar>上当前显示的月份或年份。|  
+|PART_Root|<xref:System.Windows.Controls.Panel>|包含 <xref:System.Windows.Controls.Primitives.CalendarItem>的面板。|  
   
 ## <a name="calendar-states"></a>日历状态  
- 下表列出了的可视状态<xref:System.Windows.Controls.Calendar>控件。  
+ 下表列出了 <xref:System.Windows.Controls.Calendar> 控件的可视状态。  
   
 |VisualState 名称|VisualStateGroup 名称|描述|  
 |----------------------|---------------------------|-----------------|  
-|有效|ValidationStates|该控件使用<xref:System.Windows.Controls.Validation>类和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`已在控件有焦点。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`具有该控件没有焦点。|  
+|有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `true` 控件没有焦点。|  
   
-## <a name="calendaritem-parts"></a>日历项目部分  
- 下表列出了用于命名的部件<xref:System.Windows.Controls.Primitives.CalendarItem>控件。  
+## <a name="calendaritem-parts"></a>CalendarItem 部件  
+ 下表列出了 <xref:System.Windows.Controls.Primitives.CalendarItem> 控件的已命名部分。  
   
-|部件|类型|描述|  
+|部件|键入|描述|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.FrameworkElement>|控件的根。|  
-|PART_PreviousButton|<xref:System.Windows.Controls.Button>|单击它时，显示日历的前一页按钮。|  
-|PART_NextButton|<xref:System.Windows.Controls.Button>|该按钮将显示日历的下一页面时单击它。|  
-|PART_HeaderButton|<xref:System.Windows.Controls.Button>|允许在月模式、 年模式和十年模式之间切换按钮。|  
-|PART_MonthView|<xref:System.Windows.Controls.Grid>|承载在月模式下的内容。|  
-|PART_YearView|<xref:System.Windows.Controls.Grid>|承载在年或十年中的模式下的内容。|  
-|PART_DisabledVisual|<xref:System.Windows.FrameworkElement>|在覆盖区上为禁用状态的。|  
-|DayTitleTemplate|<xref:System.Windows.DataTemplate>|<xref:System.Windows.DataTemplate>描述可视结构。|  
+|PART_PreviousButton|<xref:System.Windows.Controls.Button>|单击此按钮将显示日历的上一页。|  
+|PART_NextButton|<xref:System.Windows.Controls.Button>|用于显示单击日历下一页的按钮。|  
+|PART_HeaderButton|<xref:System.Windows.Controls.Button>|用于在月模式、年份模式和十年模式间切换的按钮。|  
+|PART_MonthView|<xref:System.Windows.Controls.Grid>|按月模式托管内容。|  
+|PART_YearView|<xref:System.Windows.Controls.Grid>|在年或十年模式下托管内容。|  
+|PART_DisabledVisual|<xref:System.Windows.FrameworkElement>|处于禁用状态的覆盖区。|  
+|DayTitleTemplate|<xref:System.Windows.DataTemplate>|描述视觉对象结构的 <xref:System.Windows.DataTemplate>。|  
   
-## <a name="calendaritem-states"></a>日历项目状态  
- 下表列出了的可视状态<xref:System.Windows.Controls.Primitives.CalendarItem>控件。  
+## <a name="calendaritem-states"></a>CalendarItem 状态  
+ 下表列出了 <xref:System.Windows.Controls.Primitives.CalendarItem> 控件的可视状态。  
   
 |VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
 |正常状态|CommonStates|默认状态。|  
-|已禁用状态|CommonStates|日历的状态时<xref:System.Windows.UIElement.IsEnabled%2A>属性是`false`。|  
-|有效|ValidationStates|该控件使用<xref:System.Windows.Controls.Validation>类和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`已在控件有焦点。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`具有该控件没有焦点。|  
-|有效|ValidationStates|该控件使用<xref:System.Windows.Controls.Validation>类和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`已在控件有焦点。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`具有该控件没有焦点。|  
+|禁用状态|CommonStates|`false`<xref:System.Windows.UIElement.IsEnabled%2A> 属性时日历的状态。|  
+|有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `true` 控件没有焦点。|  
+|有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `true` 控件没有焦点。|  
   
 ## <a name="calendardaybutton-parts"></a>CalendarDayButton 部件  
- <xref:System.Windows.Controls.Primitives.CalendarDayButton>控件没有任何命名的部件。  
+ <xref:System.Windows.Controls.Primitives.CalendarDayButton> 控件没有任何命名部分。  
   
 ## <a name="calendardaybutton-states"></a>CalendarDayButton 状态  
- 下表列出了的可视状态<xref:System.Windows.Controls.Primitives.CalendarDayButton>控件。  
+ 下表列出了 <xref:System.Windows.Controls.Primitives.CalendarDayButton> 控件的可视状态。  
   
 |VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
 |普通|CommonStates|默认状态。|  
-|已禁用|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarDayButton>被禁用。|  
-|MouseOver|CommonStates|鼠标指针置于<xref:System.Windows.Controls.Primitives.CalendarDayButton>。|  
-|已按下|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarDayButton>按下。|  
-|已选定|SelectionStates|按钮处于选中状态。|  
+|Disabled|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarDayButton> 处于禁用状态。|  
+|MouseOver|CommonStates|鼠标指针置于 <xref:System.Windows.Controls.Primitives.CalendarDayButton>上。|  
+|已按下|CommonStates|已按下 <xref:System.Windows.Controls.Primitives.CalendarDayButton>。|  
+|已选定|SelectionStates|该按钮处于选中状态。|  
 |未选定|SelectionStates|未选择该按钮。|  
-|CalendarButtonFocused|CalendarButtonFocusStates|该按钮具有焦点。|  
-|CalendarButtonUnfocused|CalendarButtonFocusStates|该按钮不具有焦点。|  
-|已设定焦点|FocusStates|该按钮具有焦点。|  
-|失去焦点|FocusStates|该按钮不具有焦点。|  
+|CalendarButtonFocused|CalendarButtonFocusStates|按钮有焦点。|  
+|CalendarButtonUnfocused|CalendarButtonFocusStates|按钮没有焦点。|  
+|已设定焦点|FocusStates|按钮有焦点。|  
+|失去焦点|FocusStates|按钮没有焦点。|  
 |活动的|ActiveStates|该按钮处于活动状态。|  
 |非活动|ActiveStates|该按钮处于非活动状态。|  
-|RegularDay|DayStates|该按钮不表示<xref:System.DateTime.Today%2A?displayProperty=nameWithType>。|  
-|今天|DayStates|此按钮表示<xref:System.DateTime.Today%2A?displayProperty=nameWithType>。|  
-|NormalDay|BlackoutDayStates|此按钮表示可以选择一天。|  
-|BlackoutDay|BlackoutDayStates|此按钮表示不能选择一天。|  
-|有效|ValidationStates|该控件使用<xref:System.Windows.Controls.Validation>类和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`已在控件有焦点。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`具有该控件没有焦点。|  
+|RegularDay|DayStates|此按钮不表示 <xref:System.DateTime.Today%2A?displayProperty=nameWithType>。|  
+|今天|DayStates|按钮表示 <xref:System.DateTime.Today%2A?displayProperty=nameWithType>。|  
+|NormalDay|BlackoutDayStates|按钮表示可选择的日期。|  
+|BlackoutDay|BlackoutDayStates|此按钮表示不能选择的日期。|  
+|有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `true` 控件没有焦点。|  
   
 ## <a name="calendarbutton-parts"></a>CalendarButton 部件  
- <xref:System.Windows.Controls.Primitives.CalendarButton>控件没有任何命名的部件。  
+ <xref:System.Windows.Controls.Primitives.CalendarButton> 控件没有任何命名部分。  
   
 ## <a name="calendarbutton-states"></a>CalendarButton 状态  
- 下表列出了的可视状态<xref:System.Windows.Controls.Primitives.CalendarButton>控件。  
+ 下表列出了 <xref:System.Windows.Controls.Primitives.CalendarButton> 控件的可视状态。  
   
 |VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
 |普通|CommonStates|默认状态。|  
-|已禁用|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarButton>被禁用。|  
-|MouseOver|CommonStates|鼠标指针置于<xref:System.Windows.Controls.Primitives.CalendarButton>。|  
-|已按下|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarButton>按下。|  
-|已选定|SelectionStates|按钮处于选中状态。|  
+|Disabled|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarButton> 处于禁用状态。|  
+|MouseOver|CommonStates|鼠标指针置于 <xref:System.Windows.Controls.Primitives.CalendarButton>上。|  
+|已按下|CommonStates|已按下 <xref:System.Windows.Controls.Primitives.CalendarButton>。|  
+|已选定|SelectionStates|该按钮处于选中状态。|  
 |未选定|SelectionStates|未选择该按钮。|  
-|CalendarButtonFocused|CalendarButtonFocusStates|该按钮具有焦点。|  
-|CalendarButtonUnfocused|CalendarButtonFocusStates|该按钮不具有焦点。|  
-|已设定焦点|FocusStates|该按钮具有焦点。|  
-|失去焦点|FocusStates|该按钮不具有焦点。|  
+|CalendarButtonFocused|CalendarButtonFocusStates|按钮有焦点。|  
+|CalendarButtonUnfocused|CalendarButtonFocusStates|按钮没有焦点。|  
+|已设定焦点|FocusStates|按钮有焦点。|  
+|失去焦点|FocusStates|按钮没有焦点。|  
 |活动的|ActiveStates|该按钮处于活动状态。|  
 |非活动|ActiveStates|该按钮处于非活动状态。|  
-|有效|ValidationStates|该控件使用<xref:System.Windows.Controls.Validation>类和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`已在控件有焦点。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`具有该控件没有焦点。|  
+|有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `true` 控件没有焦点。|  
   
-## <a name="calendar-controltemplate-example"></a>日历 ControlTemplate 示例  
- 下面的示例演示如何定义<xref:System.Windows.Controls.ControlTemplate>为<xref:System.Windows.Controls.Calendar>控件和关联的类型。  
+## <a name="calendar-controltemplate-example"></a>Calendar System.windows.controls.controltemplate> 示例  
+ 下面的示例演示如何为 <xref:System.Windows.Controls.Calendar> 控件和关联类型定义 <xref:System.Windows.Controls.ControlTemplate>。  
   
  [!code-xaml[ControlTemplateExamples#Calendar](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/calendar.xaml#calendar)]  
   
@@ -133,5 +133,5 @@ ms.locfileid: "61912439"
 - <xref:System.Windows.Controls.ControlTemplate>
 - [控件样式和模板](control-styles-and-templates.md)
 - [控件自定义](control-customization.md)
-- [样式设置和模板化](styling-and-templating.md)
+- [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)

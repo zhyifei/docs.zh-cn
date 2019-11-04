@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, control patterns for clients
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-ms.openlocfilehash: e1d87920f64242379d1931a424aa38b676dc5ef5
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c7d9eeceaba2ed8b624d3001dae86868ef626c08
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039451"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458113"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>客户端的 UI 自动化控件模式
 > [!NOTE]
@@ -40,7 +40,7 @@ ms.locfileid: "73039451"
   
 <a name="uiautomation_with_variable_patterns"></a>   
 ## <a name="controls-with-variable-patterns"></a>具有可变模式的控件  
- 某些控件类型支持不同的模式，具体取决于它们的状态或使用控件的方式。 可以具有可变模式的控件示例包括列表视图（缩略图、磁贴、图标、列表、详细信息）、[!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 图表（饼图、折线图、条形图、带有公式的单元值）、[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]的文档区域（正常、Web 版式、大纲、打印布局、打印预览）和Microsoft Windows Media Player 外观。  
+ 某些控件类型支持不同的模式，具体取决于它们的状态或使用控件的方式。 可以具有可变模式的控件示例包括列表视图（缩略图、磁贴、图标、列表、详细信息）、Microsoft Excel 图表（饼图、折线图、条形图、带有公式的单元值）、Microsoft Word 的文档区域（正常、Web 版式、大纲、打印布局、打印预览）和 Microsoft Windows Media Player 外观。  
   
  实现自定义控件类型的控件可以具有表示其功能所需的任何控件模式集。  
   

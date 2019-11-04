@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 7e29b724259604a6ee09dff9cf9133b1739eb9ad
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: 908c3fb0baacc7fd75dae875e9a9d49a08fe5401
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424786"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459721"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a>开发 Windows Presentation Foundation （WPF）独立应用程序和浏览器托管应用程序时，必须考虑安全模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 独立的应用程序使用无限制权限（CA**FullTrust**权限集）执行，不管是使用 Windows Installer （.msi）、XCopy 还是 ClickOnce 部署的。 不支持使用 ClickOnce 部署部分信任的独立 WPF 应用程序。 不过，完全信任的主机应用程序可以使用 .NET Framework 外接程序模型创建部分信任 <xref:System.AppDomain>。 有关详细信息，请参阅[WPF 外接程序概述](./app-development/wpf-add-ins-overview.md)。  
@@ -279,4 +279,4 @@ ms.locfileid: "73424786"
 - [应用程序的模式和实践安全指南](https://go.microsoft.com/fwlink/?LinkId=117426)
 - [代码访问安全性](../misc/code-access-security.md)
 - [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)
-- [XAML 概述 (WPF)](./advanced/xaml-overview-wpf.md)
+- [XAML 概述 (WPF)](../../desktop-wpf/fundamentals/xaml.md)

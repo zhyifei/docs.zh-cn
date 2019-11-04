@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: 21605b30867d7be0b906b431253c183e655bea82
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 01ea71f3de9e30abe25184e38a59f3707b54bd5a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922481"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422977"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc（C# 编译器选项）
 -doc 选项可让你在 XML 文件中放置文档注释  。  
@@ -35,13 +35,13 @@ ms.locfileid: "69922481"
 ## <a name="remarks"></a>备注  
  在源代码文件中，可以处理以下内容之前的文档注释，并将其添加到 XML 文件中：  
   
-- 作为[类](../keywords/class.md)、[委托](../keywords/delegate.md)或[接口](../keywords/interface.md)的用户定义类型  
+- 作为[类](../keywords/class.md)、[委托](../builtin-types/reference-types.md#the-delegate-type)或[接口](../keywords/interface.md)的用户定义类型  
   
 - 作为字段、[事件](../keywords/event.md)、[属性](../../programming-guide/classes-and-structs/using-properties.md)或方法的成员  
   
  包含 Main 的源代码文件首先输出到 XML 中。  
   
- 若要将生成的 xml 文件与 [IntelliSense](/visualstudio/ide/using-intellisense) 功能配合使用，请将 .xml 文件的文件名设为与要支持的程序集相同的名称，然后确保 .xml 文件与程序集位于同一目录中。 这样，在 Visual Studio 项目中引用程序集时，也会找到 .xml 文件。 有关详细信息，请参阅[提供代码注释](/visualstudio/ide/supplying-xml-code-comments)。  
+ 若要将生成的 xml 文件与 [IntelliSense](/visualstudio/ide/using-intellisense) 功能配合使用，请将 .xml 文件的文件名设为与要支持的程序集相同的名称，然后确保 .xml 文件与程序集位于同一目录中。 这样，在 Visual Studio 项目中引用程序集时，也会找到 .xml 文件。 有关详细信息，请参阅[提供代码注释](/visualstudio/ide/reference/generate-xml-documentation-comments)。  
   
  除非用 [-target:module](./target-module-compiler-option.md) 进行编译，否则 `file` 将包含 \<assembly>\</assembly> 标记，以指定包含编译输出文件的程序集清单的文件名。  
   

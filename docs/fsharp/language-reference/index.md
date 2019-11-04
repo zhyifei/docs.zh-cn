@@ -2,22 +2,22 @@
 title: F# 语言参考
 description: 从此F#引用中查找语言标记、概念、类型、表达式和编译器支持的构造主题的语言功能信息。
 ms.date: 05/16/2016
-ms.openlocfilehash: b37f9ddcd4fbf6939631f283be95ebf08cf072d6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ac7e268b28d6bb654e4443d04695cb15fe756e9f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630696"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424991"
 ---
 # <a name="f-language-reference"></a>F# 语言参考
 
-本部分是对F#语言 (一种面向 .net 的多范例编程语言) 的参考。 F# 语言支持函数式、命令式、面向对象的编程模式。
+本部分是对F#语言（一种面向 .net 的多范例编程语言）的参考。 F# 语言支持函数式、命令式、面向对象的编程模式。
 
 ## <a name="f-tokens"></a>F# 标记
 
 下表显示参考主题，这些主题提供在 F# 中用作标记的关键字、符号和文本表。
 
-|标题|描述|
+|Title|描述|
 |-----|-----------|
 |[关键字参考](keyword-reference.md)|包含指向所有 F# 语言关键字的相关信息的链接。|
 |[符号和运算符参考](./symbol-and-operator-reference/index.md)|包括 F# 语言中使用的符号和运算符表。|
@@ -27,7 +27,7 @@ ms.locfileid: "68630696"
 
 下表显示介绍语言概念的可用参考主题。
 
-|标题|描述|
+|Title|描述|
 |-----|-----------|
 |[函数](./functions/index.md)|函数是任何编程语言中程序执行的基本单元。 和其他语言一样，F# 函数有一个名称，可以有形参并采用实参，且具有一个主体。 F# 还支持函数编程构造，例如将函数视为值、在表达式中使用未命名的函数、组合函数以形成新的函数、扩充函数以及通过部分应用函数参数来隐式定义函数。|
 |[F# 类型](fsharp-types.md)|介绍 F# 中使用的类型以及如何命名和描述 F# 类型。|
@@ -42,13 +42,13 @@ ms.locfileid: "68630696"
 |[模式匹配](pattern-matching.md)|介绍模式，它是用来转换输入数据的规则，在整个 F# 语言中使用以提取模式的比较数据、将数据分解为各个构成部分或以各种方式从数据中提取信息。|
 |[活动模式](active-patterns.md)|介绍活动模式。 活动模式允许定义细分输入数据的已命名分区。 可使用活动模式以自定义方式为每个分区分解数据。|
 |[断言](assertions.md)|介绍 `assert` 表达式，它是一种可用于测试表达式的调试功能。 在调试模式中遇到故障时，断言将生成一个系统错误对话框。|
-|[异常处理](/.exception-handling/index.md)|包含 F# 语言中的异常处理支持相关信息。|
+|[异常处理](./exception-handling/index.md)|包含 F# 语言中的异常处理支持相关信息。|
 |[特性](attributes.md)|介绍启用要应用于编程构造的元数据的特性。|
-|[资源管理:`use` 关键字](resource-management-the-use-keyword.md)|描述关键字 `use` 和 `using`，它们可以控制资源的初始化和发布|
+|[资源管理：`use` 关键字](resource-management-the-use-keyword.md)|描述关键字 `use` 和 `using`，它们可以控制资源的初始化和发布|
 |[命名空间](namespaces.md)|介绍 F# 中的命名空间支持。 命名空间通过使你能够将名称附加一组程序元素，实现将代码整理到相关的功能区域。|
 |[模块](modules.md)|描述模块。 F# 模块是 F# 程序中的一组 F# 代码，例如值、类型和函数值。 对模块中的代码进行分组有助于将相关代码放在一起，并有助于避免程序中的名称冲突。|
 |[导入声明：`open` 关键字](import-declarations-the-open-keyword.md)|描述 `open` 的工作方式。 导入声明指定模块或命名空间，无需使用完全限定的名称即可引用其中的元素。|
-|[签名](signatures.md)|介绍签名和签名文件。 签名文件包含有关一组 F# 程序元素（如类型、命名空间和模块）的公共签名的信息。 它可用于指定这些程序元素的可访问性。|
+|[签名](signature-files.md)|介绍签名和签名文件。 签名文件包含有关一组 F# 程序元素（如类型、命名空间和模块）的公共签名的信息。 它可用于指定这些程序元素的可访问性。|
 |[XML 文档](xml-documentation.md)|介绍对生成文档文件的 XML 文档注释（也称为三斜杠注释）的支持。 与其他 .NET 语言一样，可采用 F# 从代码注释生成文档。|
 |[详细语法](verbose-syntax.md)|介绍未启用轻量语法时 F# 构造的语法。 详细语法由代码文件顶部的 `#light "off"` 指令指示。|
 
@@ -56,7 +56,7 @@ ms.locfileid: "68630696"
 
 下表提供的参考主题介绍 F# 语言支持的类型。
 
-|标题|描述|
+|Title|描述|
 |-----|-----------|
 |[值](./values/index.md)|介绍值，它是具有特定类型的不可变数量；值可以是整数或浮点数、字符或文本、列表、序列、数组、元组、可区分联合、记录、类类型或函数值。|
 |[基本类型](basic-types.md)|描述F#语言中使用的基本基本类型。 它还提供每种类型的相应 .NET 类型和最小和最大值。|
@@ -87,15 +87,15 @@ ms.locfileid: "68630696"
 
 下表列出了介绍 F# 表达式的主题。
 
-|标题|描述|
+|Title|描述|
 |-----|-----------|
 |[条件表达式：`if...then...else`](conditional-expressions-if-then-else.md)|介绍 `if...then...else` 表达式，该表达式不仅可运行代码的不同分支，还可计算为不同的值，具体取决于给定的布尔表达式。|
 |[match 表达式](match-expressions.md)|介绍 `match` 表达式，该表达式提供基于表达式与一组模式的比较结果的分支控制。|
-|[循环`for...to`表达式](loops-for-to-expression.md)|介绍 `for...to` 表达式，该表达式用于在一系列循环变量值中进行循环访问。|
-|[循环`for...in`表达式](loops-for-in-expression.md)|介绍 `for...in` 表达式，该表达式是一种循环构造，用于循环访问可枚举集合（例如，范围表达式、序列、列表、数组或其他支持枚举的构造）中的模式匹配项。|
-|[循环`while...do`表达式](loops-while-do-expression.md)|介绍 `while...do` 表达式，该表达式用于在指定的测试条件为 true 时执行迭代操作（循环）。|
+|[循环：`for...to` 表达式](loops-for-to-expression.md)|介绍 `for...to` 表达式，该表达式用于在一系列循环变量值中进行循环访问。|
+|[循环：`for...in` 表达式](loops-for-in-expression.md)|介绍 `for...in` 表达式，该表达式是一种循环构造，用于循环访问可枚举集合（例如，范围表达式、序列、列表、数组或其他支持枚举的构造）中的模式匹配项。|
+|[循环：`while...do` 表达式](loops-while-do-expression.md)|介绍 `while...do` 表达式，该表达式用于在指定的测试条件为 true 时执行迭代操作（循环）。|
 |[对象表达式](object-expressions.md)|介绍对象表达式，这些表达式可用于创建动态创建的匿名对象类型的新实例，该对象类型基于现有基类型、接口或接口集。|
-|[延迟表达式](lazy-expressions.md)|介绍延迟表达式, 这是不会立即计算, 而是在实际需要结果时进行计算的计算。|
+|[延迟表达式](lazy-expressions.md)|介绍延迟表达式，这是不会立即计算，而是在实际需要结果时进行计算的计算。|
 |[计算表达式](computation-expressions.md)|介绍 F# 中的计算表达式，它提供一种用于编写计算的方便语法，可以通过使用控制流构造和绑定来对这些计算进行排列和组合。 计算表达式可用于为 *Monad* 提供一种方便语法，Monad 是一种可用于管理函数程序中数据、控制以及副作用的函数编程功能。 异步工作流是计算表达式的一种，它提供对异步计算和并行计算的支持。 有关详细信息，请参阅[异步工作流](asynchronous-workflows.md)。|
 |[异步工作流](asynchronous-workflows.md)|介绍异步工作流，它是一种语言功能，可通过它用近似于编写同步代码的方式来编写异步代码。|
 |[代码引用](code-quotations.md)|介绍代码引用，它是一种可让你以编程方式生成和处理 F# 代码表达式的语言功能。|

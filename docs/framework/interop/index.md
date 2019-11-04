@@ -10,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, about interoperation
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
-ms.openlocfilehash: cdd8d2781331956289d2b74162e653ba1ee8fad6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 12183f390a5178f038c6dd2122a72a33e31ae0ee
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114229"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457965"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>与非托管代码进行交互操作
 
@@ -40,9 +40,6 @@ ms.locfileid: "73114229"
 [如何：映射 HRESULT 和异常](how-to-map-hresults-and-exceptions.md)  
 描述异常和 HRESULT 之间的映射。
 
-[COM 包装](com-wrappers.md)  
-介绍 COM 互操作提供的包装器。
-
 [类型等效性和嵌入的互操作类型](type-equivalence-and-embedded-interop-types.md)  
 介绍如何在程序集中嵌入 COM 类型的类型信息，以及公共语言运行时如何确定嵌入的 COM 类型的等效性。
 
@@ -57,3 +54,8 @@ ms.locfileid: "73114229"
 
 [如何：配置基于 .NET Framework 的 COM 组件以进行免注册激活](configure-net-framework-based-com-components-for-reg.md)  
 介绍如何创建应用程序清单以及如何创建并嵌入组件清单。
+
+## <a name="related-sections"></a>相关章节
+
+[COM 包装](../../standard/native-interop/com-wrappers.md)  
+介绍 COM 互操作提供的包装器。

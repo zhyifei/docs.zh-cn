@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 0c79ba3dd42f2e65eb241409946e921577ced5f1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 6d7401f9614e663351968dc6a2f85548735a176d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920053"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460418"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>通过创建 ControlTemplate 自定义现有控件的外观
 <a name="introduction"></a>一个 <xref:System.Windows.Controls.ControlTemplate> 指定控件的可视结构和可视行为。 您可以通过为控件提供新的 <xref:System.Windows.Controls.ControlTemplate>来自定义控件的外观。 创建 <xref:System.Windows.Controls.ControlTemplate>时，将替换现有控件的外观，而不更改其功能。 例如，你可以将应用程序中的按钮设置为舍入，而不是默认的方形形状，但该按钮仍会引发 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件。
@@ -262,4 +262,4 @@ ms.locfileid: "72920053"
 
 ## <a name="see-also"></a>请参阅
 
-- [样式设置和模板化](styling-and-templating.md)
+- [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

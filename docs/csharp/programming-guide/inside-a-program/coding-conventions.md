@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 27001d1697def083580ecdc742b4b8db924545aa
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 42e1814af38fa442255f6da79fb4862ce3d0f361
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589412"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423208"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 编码约定（C# 编程指南）
  编码约定可实现以下目的：  
@@ -93,7 +93,7 @@ ms.locfileid: "69589412"
   
      [!code-csharp[csProgGuideCodingConventions#10](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#10)]  
   
-- 避免使用 `var` 来代替 [dynamic](../../language-reference/keywords/dynamic.md)。  
+- 避免使用 `var` 来代替 [dynamic](../../language-reference/builtin-types/reference-types.md)。  
   
 - 使用隐式类型化来确定 [for](../../language-reference/keywords/for.md) 和 [foreach](../../language-reference/keywords/foreach-in.md) 循环中循环变量的类型。  
   

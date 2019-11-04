@@ -2,15 +2,15 @@
 title: UDP 激活
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 13444ab1be440c8e1a5f945cd512afa33772ea57
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 6e8d2f4428e85c71571021e2735f90e2e0a9d35a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044642"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424192"
 ---
 # <a name="udp-activation"></a>UDP 激活
-此示例基于[传输:UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。 它扩展了[传输:使用](../../../../docs/framework/wcf/samples/transport-udp.md) Windows 进程激活服务 (WAS) 支持进程激活的 UDP 示例。  
+此示例基于[Transport： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。 它扩展了[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例，以支持使用 Windows 进程激活服务（WAS）的进程激活。  
   
  该示例主要由三个部分组成：  
   
@@ -46,7 +46,7 @@ ms.locfileid: "70044642"
   
  当首次传入针对某个应用程序的新请求时，侦听器适配器会将 `WebhostOpenListenerChannelInstance` 调入 WAS，从而启动工作进程（如果尚未启动）。 然后加载协议处理程序，并可以启动侦听器适配器与虚拟应用程序之间的通信。  
   
- 侦听器适配器在 <`listenerAdapters`> 部分的%SystemRoot%\System32\inetsrv\ApplicationHost.config 中注册, 如下所示:  
+ 侦听器适配器在 "<`listenerAdapters`" > "部分的%SystemRoot%\System32\inetsrv\ApplicationHost.config 中注册，如下所示：  
   
 ```xml  
 <add name="net.udp" identity="S-1-5-21-2127521184-1604012920-1887927527-387045" />  
@@ -56,10 +56,10 @@ ms.locfileid: "70044642"
  UDP 协议侦听器是协议激活器内部的模块，它代表虚拟应用程序在 UDP 终结点进行侦听。 它在 `UdpSocketListener` 类中实现。 终结点表示为 `IPEndpoint`，其端口号从站点协议的绑定中提取。  
   
 ### <a name="control-service"></a>控制服务  
- 在此示例中, 我们使用 WCF 在激活器和 WAS 工作进程之间进行通信。 驻留在激活器中的服务称为“控制服务”。  
+ 在此示例中，我们使用 WCF 在激活器和 WAS 工作进程之间进行通信。 驻留在激活器中的服务称为“控制服务”。  
   
 ## <a name="protocol-handlers"></a>协议处理程序  
- 侦听器适配器调用 `WebhostOpenListenerChannelInstance` 之后，WAS 进程管理器将启动工作进程（如果尚未启动）。 工作进程内部的应用程序管理器随后使用该 `ListenerChannelId` 的请求加载 UDP 进程协议处理程序 (PPH)。 中的 PPH 将调用`IAdphManager`。`StartAppDomainProtocolListenerChannel` 启动 UDP AppDomain 协议处理程序 (ADPH)。  
+ 侦听器适配器调用 `WebhostOpenListenerChannelInstance` 之后，WAS 进程管理器将启动工作进程（如果尚未启动）。 工作进程内部的应用程序管理器随后使用该 `ListenerChannelId` 的请求加载 UDP 进程协议处理程序 (PPH)。 中的 PPH 将调用 `IAdphManager`。`StartAppDomainProtocolListenerChannel` 启动 UDP AppDomain 协议处理程序（ADPH）。  
   
 ## <a name="hostedudptransportconfiguration"></a>HostedUDPTransportConfiguration  
  该信息按如下方式在 Web.config 中注册：  
@@ -77,7 +77,7 @@ ms.locfileid: "70044642"
   
 1. 使用以下命令安装 ASP.NET 4.0。  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
@@ -89,7 +89,7 @@ ms.locfileid: "70044642"
   
     - 这还为该虚拟应用程序启用“net.udp”协议。  
   
-3. 启动用户接口应用程序“WasNetActivator.exe”。 单击 "**设置**" 选项卡, 选中以下复选框, 然后单击 "**安装**" 以安装它们:  
+3. 启动用户接口应用程序“WasNetActivator.exe”。 单击 "**设置**" 选项卡，选中以下复选框，然后单击 "**安装**" 以安装它们：  
   
     - UDP 侦听器适配器  
   
@@ -103,13 +103,13 @@ ms.locfileid: "70044642"
 ## <a name="sample-usage"></a>示例用法  
  编译后，生成四个不同的二进制文件：  
   
-- Client.exe:客户端代码。 App.config 编译到客户端配置文件 Client.exe.config 中。  
+- Client.exe：客户端代码。 App.config 编译到客户端配置文件 Client.exe.config 中。  
   
 - UDPActivation.dll：包含所有主要 UDP 实现的库。  
   
-- 服务 .dll:服务代码。 此代码被复制到虚拟应用程序 ServiceModelSamples 的 \bin 目录。 服务文件是 Service.svc，配置文件是 Web.config。编译后，这两个文件将被复制到以下位置：%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples。  
+- Service.dll：服务代码。 此代码被复制到虚拟应用程序 ServiceModelSamples 的 \bin 目录。 服务文件为 node.js，配置文件为 web.config。编译完成后，会将其复制到以下位置：%Systemdrive%\inetpub\wwwroot\servicemodelsamples。  
   
-- Wasnetactivator.exeUDP 激活程序。  
+- WasNetActivator：UDP 激活器程序。  
   
 - 确保所有的必需部分均已正确安装。 下列步骤说明如何运行该示例：  
   
@@ -117,13 +117,13 @@ ms.locfileid: "70044642"
   
     - Windows 进程激活服务 (WAS)。  
   
-    - Internet Information Services (IIS):W3SVC.  
+    - Internet Information Services (IIS)：W3SVC。  
   
-2. 然后启动激活器 WasNetActivator.exe。 在 "**激活**" 选项卡下, 在下拉列表中选择唯一的协议 " **UDP**"。 单击 "**启动**" 按钮以启动激活器。  
+2. 然后启动激活器 WasNetActivator.exe。 在 "**激活**" 选项卡下，在下拉列表中选择唯一的协议 " **UDP**"。 单击 "**启动**" 按钮以启动激活器。  
   
 3. 启动激活器后，可以通过在命令窗口中运行 Client.exe 来运行客户端代码。 下面是示例输出：  
   
-    ```  
+    ```console  
     Testing Udp Activation.  
     Start the status service.  
     Sending UDP datagrams.  
@@ -158,6 +158,6 @@ ms.locfileid: "70044642"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\UdpActivation`  

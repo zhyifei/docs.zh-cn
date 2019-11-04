@@ -2,12 +2,12 @@
 title: 联接运算 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: 95661e2d0d7f4f0e75c1fa1b10e1f322923189b1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 456894dd07f512d7e694ad0056b1e861dc3012c5
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592077"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423381"
 ---
 # <a name="join-operations-c"></a>联接运算 (C#)
 联接  两个数据源就是将一个数据源中的对象与另一个数据源中具有相同公共属性的对象相关联。  
@@ -34,11 +34,11 @@ ms.locfileid: "69592077"
 - [匿名类型](../../classes-and-structs/anonymous-types.md)
 - [构建联接和叉积查询](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
 - [join 子句](../../../language-reference/keywords/join-clause.md)
-- [如何：使用组合键进行联接](../../linq-query-expressions/how-to-join-by-using-composite-keys.md)
+- [如何：使用组合键进行联接](../../../linq/join-by-using-composite-keys.md)
 - [如何：联接不同文件的内容 (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)
-- [如何：对 join 子句的结果进行排序](../../linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
-- [如何：执行自定义联接操作](../../linq-query-expressions/how-to-perform-custom-join-operations.md)
-- [如何：执行分组联接](../../linq-query-expressions/how-to-perform-grouped-joins.md)
-- [如何：执行内部联接](../../linq-query-expressions/how-to-perform-inner-joins.md)
-- [如何：执行左外部联接](../../linq-query-expressions/how-to-perform-left-outer-joins.md)
+- [如何：对 join 子句的结果进行排序](../../../linq/order-the-results-of-a-join-clause.md)
+- [如何：执行自定义联接操作](../../../linq/perform-custom-join-operations.md)
+- [如何：执行分组联接](../../../linq/perform-grouped-joins.md)
+- [如何：执行内部联接](../../../linq/perform-inner-joins.md)
+- [如何：执行左外部联接](../../../linq/perform-left-outer-joins.md)
 - [如何：从多个源填充对象集合 (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - user controls [Windows Forms], creating
 - composite controls [Windows Forms], creating
 ms.assetid: 67713625-e2e4-4f6a-bce7-0855ee5043d9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7f4055c2374103b7df941d9a9bef24ed5e6cb27c
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 10bb807d012a130ad633b7ce06f99c5abf2cdda1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015839"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458367"
 ---
 # <a name="how-to-inherit-from-the-usercontrol-class"></a>如何：从 UserControl 类继承
 
@@ -29,17 +29,17 @@ ms.locfileid: "70015839"
 
 2. 将控件从“工具箱”的“Windows 窗体”选项卡中拖到设计器上。
 
-3. 应对这些控件进行定位并设计成你希望它们显示在最终用户控件中的样子。 如果要允许开发人员访问构成控件，则必须将这些控件声明为公共的，或有选择地公开构成控件的属性。 有关详细信息，请参阅[如何：公开构成控件](how-to-expose-properties-of-constituent-controls.md)的属性。
+3. 应对这些控件进行定位并设计成你希望它们显示在最终用户控件中的样子。 如果要允许开发人员访问构成控件，则必须将这些控件声明为公共的，或有选择地公开构成控件的属性。 有关详细信息，请参阅[如何：公开构成控件的属性](how-to-expose-properties-of-constituent-controls.md)。
 
 4. 实现控件将纳入的任何自定义方法或属性。
 
-5. 按**F5**生成项目并在 " **UserControl 测试容器**" 中运行控件。 有关详细信息，请参阅[如何：测试 UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)的运行时行为。
+5. 按**F5**生成项目并在 " **UserControl 测试容器**" 中运行控件。 有关详细信息，请参阅[如何：测试 UserControl 的运行时行为](how-to-test-the-run-time-behavior-of-a-usercontrol.md)。
 
 ## <a name="see-also"></a>请参阅
 
 - [各种自定义控件](varieties-of-custom-controls.md)
 - [如何：从 Control 类继承](how-to-inherit-from-the-control-class.md)
 - [如何：从现有 Windows 窗体控件继承](how-to-inherit-from-existing-windows-forms-controls.md)
-- [如何：Windows 窗体的创作控件](how-to-author-controls-for-windows-forms.md)
+- [如何：创作 Windows 窗体的控件](how-to-author-controls-for-windows-forms.md)
 - [排查 Visual Basic 中继承的事件处理程序问题](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [如何：测试 UserControl 的运行时行为](how-to-test-the-run-time-behavior-of-a-usercontrol.md)

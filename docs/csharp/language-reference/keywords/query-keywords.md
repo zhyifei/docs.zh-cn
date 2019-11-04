@@ -6,12 +6,12 @@ helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: ed931871e8abbfd9ff421a1307fb21c3490493fb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 44af3bf1a7c013c16c7b4a4528c3516621bea149
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608453"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422537"
 ---
 # <a name="query-keywords-c-reference"></a>查询关键字（C# 参考）
 
@@ -40,5 +40,5 @@ ms.locfileid: "69608453"
 
 - [C# 关键字](index.md)
 - [LINQ（语言集成查询）](../../programming-guide/concepts/linq/index.md)
-- [LINQ 查询表达式](../../programming-guide/linq-query-expressions/index.md)
-- [C# 中的 LINQ 入门](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [C# 中的 LINQ](../../linq/index.md)
+- [C# 中的 LINQ 入门](/dotnet/csharp/programming-guide/concepts/linq/)

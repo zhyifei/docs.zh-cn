@@ -8,12 +8,12 @@ helpviewer_keywords:
 - names in XAML [XAML Services]
 - XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-ms.openlocfilehash: 837a18ca18d0c634dfa5cc133aa013919cfb9d96
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a39d25f03583ab9020878b7a659bc99489231ff9
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053900"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458884"
 ---
 # <a name="xamlname-grammar"></a>XamlName 语法
 XamlName 语法是在 XAML 语言规范 [MS-CHAP] 中定义的一种特定语法，此处将在此处重现此语法。  
@@ -46,7 +46,7 @@ CombiningCharacter ::= UnicodeMn | UnicodeMc
 | Nd                 | Number、Decimal               |
 | Nl                 | 数字，字母                |
  
- XAML 定义了第二个语法 DottedXamlName，用于属性和事件限定引用，还用于附加成员。 有关详细信息，请<xref:System.Windows.DependencyProperty>参阅和[XAML 概述（WPF）](../wpf/advanced/xaml-overview-wpf.md)。  
+ XAML 定义了第二个语法 DottedXamlName，用于属性和事件限定引用，还用于附加成员。 有关详细信息，请参阅 <xref:System.Windows.DependencyProperty> 和[XAML 概述（WPF）](../../desktop-wpf/fundamentals/xaml.md)。  
   
  DottedXamlName 类型的字符串值必须符合以下语法：  
   
@@ -55,4 +55,4 @@ DottedXamlName ::= XamlName '.' XamlName
 ```  
   
 ## <a name="remarks"></a>备注  
- 有关完整规范，请参阅[ \["MS-\]XAML](https://go.microsoft.com/fwlink/?LinkId=114525)"。
+ 有关完整规范，请参阅[\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)。

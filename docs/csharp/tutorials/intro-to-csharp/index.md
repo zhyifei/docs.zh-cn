@@ -3,22 +3,24 @@ title: C# 简介 - 交互式教程
 description: 通过浏览器了解 C#，并开始使用自己的开发环境
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 1712e32175a95373ca85464bbdebed9ef99fb375
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 564af21fb0f9b6cf8b5c3591ff5622278a8cbb22
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850767"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423107"
 ---
 # <a name="introduction-to-c"></a>C\# 简介
 
-欢迎学习 C# 教程简介。 本系列教程从可以在浏览器中演练的交互式课程入手。
+欢迎学习 C# 教程简介。 本系列教程从可以在浏览器中演练的交互式课程入手。 在开始这些互动课程之前，可在[C# 101 视频系列](https://aka.ms/dotnet3-csharp)中了解 C# 的基础知识。
+
+> [!VIDEO https://channel9.msdn.com/Series/CSharp-101/What-is-C/player]
 
 头几个课程通过小篇幅的代码片段介绍了 C# 概念。 读者将了解 C# 语法的基础知识，以及如何使用字符串、数字和布尔值等数据类型。 全都是交互式课程，读者可以在几分钟内编写并运行代码。 无需事先了解编程或 C# 语言，即可学习头几个课程。
 
 可以使用联机浏览器体验或[在自己的本地开发环境中](local-environment.md)学习 Hello World 课程之后的入门教程。 每个教程结束时，可以决定是继续在线学习还是在自己的计算机上学习下一节课程。 可以访问相关链接设置自己的环境并继续在自己的计算机上学习下一个教程。
 
-## <a name="hello-worldhello-worldyml"></a>[Hello World](hello-world.yml)
+## <a name="hello-worldhello-worldyml"></a>[Hello world](hello-world.yml)
 
 在 [Hello world](hello-world.yml) 教程中，你将创建最基本的 C# 程序。 读者将探索 `string` 类型以及如何使用文本。
 

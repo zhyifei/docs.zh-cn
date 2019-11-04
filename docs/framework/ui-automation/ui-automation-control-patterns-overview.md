@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: a3daf75417260d7e761da2e90c595471b2a4b2a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: acb10df0da97954f4c2f7451d75d2f3042938e48
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131516"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458094"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI 自动化控件模式概述
 > [!NOTE]
@@ -55,7 +55,7 @@ ms.locfileid: "73131516"
 |---------------------------|------------------------|-----------------|  
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|用于可在停靠容器中停靠的控件。 例如，工具栏或工具调色板。|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|用于可展开或折叠的控件。 例如，应用程序中的菜单项，如 **“文件”** 菜单。|  
-|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|用于支持网格功能（如调整大小和移动到指定单元格）的控件。 例如 Windows Explorer 中的大图标视图或 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]中的不带标头的简单表格。|  
+|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|用于支持网格功能（如调整大小和移动到指定单元格）的控件。 例如，Windows 资源管理器中的大图标视图或 Microsoft Word 中没有标头的简单表格。|  
 |<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|用于在网格内具有单元格的控件。 单个单元格应支持 GridItem 模式。 例如，Microsoft Windows 资源管理器详细信息视图中的每个单元。|  
 |<xref:System.Windows.Automation.InvokePattern>|<xref:System.Windows.Automation.Provider.IInvokeProvider>|用于可被调用的控件，如按钮。|  
 |<xref:System.Windows.Automation.MultipleViewPattern>|<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|用于可在同一组信息、数据或子级的多个表示形式之间切换的控件。 例如，在列表视图控件中，数据可用于缩略图、磁贴、图标、列表或详细信息视图。|  
@@ -64,13 +64,13 @@ ms.locfileid: "73131516"
 |<xref:System.Windows.Automation.ScrollItemPattern>|<xref:System.Windows.Automation.Provider.IScrollItemProvider>|用于一种控件，该控件具有可滚动列表中的各个项。 例如，一个列表控件，该控件具有滚动列表中的各个项，如组合框控件。|  
 |<xref:System.Windows.Automation.SelectionPattern>|<xref:System.Windows.Automation.Provider.ISelectionProvider>|用于选择容器控件。 例如，列表框和组合框。|  
 |<xref:System.Windows.Automation.SelectionItemPattern>|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|用于选择容器控件中的各个项，如列表框和组合框。|  
-|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.Provider.ITableProvider>|用于具有网格以及标头信息的控件。 例如， [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 工作表。|  
+|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.Provider.ITableProvider>|用于具有网格以及标头信息的控件。 例如，Microsoft Excel 工作表。|  
 |<xref:System.Windows.Automation.TableItemPattern>|<xref:System.Windows.Automation.Provider.ITableItemProvider>|用于表中的项。|  
 |<xref:System.Windows.Automation.TextPattern>|<xref:System.Windows.Automation.Provider.ITextProvider>|用于可公开文本信息的编辑控件和文档。|  
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|用于在其中可切换状态的控件。 例如，复选框和可选中的菜单项。|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|用于可调整大小、移动和旋转的控件。 Transform 控件模式通常用于设计器、窗体、图形编辑器和绘图应用程序。|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|允许客户端在不支持某个值范围的控件上获取或设置值。 例如，日期时间选择器。|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|公开特定于 windows 的信息，这是 Microsoft Windows 操作系统的基本概念。 Windows 控件的示例包括顶级应用程序窗口（[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]、Microsoft Windows 资源管理器等）、多文档界面（MDI）子窗口和对话框。|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|公开特定于 windows 的信息，这是 Microsoft Windows 操作系统的基本概念。 Windows 控件的示例包括顶级应用程序窗口（Microsoft Word、Microsoft Windows 资源管理器等）、多文档界面（MDI）子窗口和对话框。|  
   
 ## <a name="see-also"></a>请参阅
 

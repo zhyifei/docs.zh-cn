@@ -9,34 +9,34 @@ helpviewer_keywords:
 - styles [WPF], NavigationWindow
 - templates [WPF], NavigationWindow
 ms.assetid: 3656055e-3222-43c8-b868-fd0c90cc31a3
-ms.openlocfilehash: 32d8aac99d40693e66c7b52a6c7d2c116d2f3baf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4aae14299b3959e7d2122991954cc62505d2a19e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770651"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460202"
 ---
 # <a name="navigationwindow-styles-and-templates"></a>NavigationWindow 样式和模板
-本主题介绍的样式和模板的<xref:System.Windows.Navigation.NavigationWindow>控件。 可以修改默认<xref:System.Windows.Controls.ControlTemplate>为控件提供唯一外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
+本主题介绍 <xref:System.Windows.Navigation.NavigationWindow> 控件的样式和模板。 您可以修改默认 <xref:System.Windows.Controls.ControlTemplate> 以使控件具有独特的外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
   
-## <a name="navigationwindow-parts"></a>NavigationWindow 部件  
- 下表列出了用于命名的部件<xref:System.Windows.Navigation.NavigationWindow>控件。  
+## <a name="navigationwindow-parts"></a>System.windows.navigation.navigationwindow> 部件  
+ 下表列出了 <xref:System.Windows.Navigation.NavigationWindow> 控件的已命名部分。  
   
-|部件|类型|描述|  
+|部件|键入|描述|  
 |-|-|-|  
-|PART_NavWinCP|<xref:System.Windows.Controls.ContentPresenter>|用于内容的区域。|  
+|PART_NavWinCP|<xref:System.Windows.Controls.ContentPresenter>|内容的区域。|  
   
-## <a name="navigationwindow-states"></a>NavigationWindow 状态  
- 下表列出了的可视状态<xref:System.Windows.Navigation.NavigationWindow>控件。  
+## <a name="navigationwindow-states"></a>System.windows.navigation.navigationwindow> 状态  
+ 下表列出了 <xref:System.Windows.Navigation.NavigationWindow> 控件的可视状态。  
   
 |VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
-|有效|ValidationStates|该控件使用<xref:System.Windows.Controls.Validation>类和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`已在控件有焦点。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`具有该控件没有焦点。|  
+|有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `true` 控件没有焦点。|  
   
-## <a name="navigationwindow-controltemplate-example"></a>NavigationWindow ControlTemplate 示例  
- 尽管此示例中包含的所有元素中定义的<xref:System.Windows.Controls.ControlTemplate>的<xref:System.Windows.Navigation.NavigationWindow>默认情况下，特定的值应被视为示例。  
+## <a name="navigationwindow-controltemplate-example"></a>System.windows.navigation.navigationwindow> System.windows.controls.controltemplate> 示例  
+ 尽管此示例包含默认情况下在 <xref:System.Windows.Navigation.NavigationWindow> 的 <xref:System.Windows.Controls.ControlTemplate> 中定义的所有元素，但应将特定值视为示例。  
   
  [!code-xaml[ControlTemplateExamples#NavigationWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/navigationwindow.xaml#navigationwindow)]  
   
@@ -53,5 +53,5 @@ ms.locfileid: "61770651"
 - <xref:System.Windows.Controls.ControlTemplate>
 - [控件样式和模板](control-styles-and-templates.md)
 - [控件自定义](control-customization.md)
-- [样式设置和模板化](styling-and-templating.md)
+- [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)

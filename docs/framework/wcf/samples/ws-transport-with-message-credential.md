@@ -2,17 +2,17 @@
 title: 使用消息凭据的 WS 传输
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-ms.openlocfilehash: a2eade01ff3397d8f7ea790558909111c43b131d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cc452ade4ef7d0d2d197f058d74ca0c3d0e0230d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959795"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423080"
 ---
 # <a name="ws-transport-with-message-credential"></a>使用消息凭据的 WS 传输
 此示例演示如何将 SSL 传输安全与消息中传送的客户端凭据结合使用。 本示例使用 `wsHttpBinding` 绑定。  
   
- 默认情况下，`wsHttpBinding` 绑定提供 HTTP 通信。 针对传输安全配置绑定之后，该绑定即支持 HTTPS 通信。 HTTPS 为通过网络传输的消息提供机密性和完整性保护。 但是，可用于针对服务对客户端进行身份验证的身份验证机制集仅限于 HTTPS 传输所支持的内容。 Windows Communication Foundation (WCF) 提供了`TransportWithMessageCredential`一个旨在克服此限制的安全模式。 配置该安全模式之后，使用传输安全为传输的消息提供机密性和完整性，并执行服务身份验证。 但是, 客户端身份验证是通过将客户端凭据直接置于消息中来执行的。 这允许你使用客户端身份验证的消息安全模式支持的任何凭据类型, 同时保持传输安全模式的性能优势。  
+ 默认情况下，`wsHttpBinding` 绑定提供 HTTP 通信。 针对传输安全配置绑定之后，该绑定即支持 HTTPS 通信。 HTTPS 为通过网络传输的消息提供机密性和完整性保护。 但是，可用于针对服务对客户端进行身份验证的身份验证机制集仅限于 HTTPS 传输所支持的内容。 Windows Communication Foundation （WCF）提供了一个旨在克服此限制的 `TransportWithMessageCredential` 安全模式。 配置该安全模式之后，使用传输安全为传输的消息提供机密性和完整性，并执行服务身份验证。 但是，客户端身份验证是通过将客户端凭据直接置于消息中来执行的。 这允许你使用客户端身份验证的消息安全模式支持的任何凭据类型，同时保持传输安全模式的性能优势。  
   
  在此示例中，使用 `UserName` 凭据类型向服务对客户端进行身份验证。  
   
@@ -61,7 +61,7 @@ public string GetCallerIdentity()
   
  指定的地址使用 https:// 方案。 绑定配置将安全模式设置为 `TransportWithMessageCredential`。 必须在服务的 Web.config 文件中指定相同的安全模式。  
   
- 由于本示例中使用的证书是用 Makecert 创建的测试证书, 因此当你尝试从浏览器访问 https: 地址 (例如`https://localhost/servicemodelsamples/service.svc`) 时, 会出现安全警报。 为了使 WCF 客户端能够使用测试证书, 已向客户端添加了一些附加代码, 以禁止显示安全警报。 使用生产证书时，不需要此代码和随附的类。  
+ 由于本示例中使用的证书是用 Makecert 创建的测试证书，因此当你尝试从浏览器访问 https：地址（如 `https://localhost/servicemodelsamples/service.svc`）时，会出现安全警报。 为了使 WCF 客户端能够使用测试证书，已向客户端添加了一些附加代码，以禁止显示安全警报。 使用生产证书时，不需要此代码和随附的类。  
 
 ```csharp
 // WARNING: This code is only needed for test certificates such as those created by makecert. It is   
@@ -71,7 +71,7 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   
-```  
+```console  
 Username authentication required.  
 Provide a valid machine or domain account. [domain\\user]  
    Enter username:   
@@ -91,8 +91,8 @@ Press <ENTER> to terminate client.
   
 1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 确保已执行[Internet Information Services (IIS) 服务器证书安装说明](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)。  
+2. 确保已执行[Internet Information Services （IIS）服务器证书安装说明](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)。  
   
 3. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-4. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+4. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  

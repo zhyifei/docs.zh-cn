@@ -5,12 +5,12 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: e07ded52d76e027127ad41c14c39730648c0ca12
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: c5cd4ab82fde1604dea14718b3cdd1a104fdf922
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775182"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425154"
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic 入门
 
@@ -41,7 +41,7 @@ ms.locfileid: "72775182"
 - [面向对象的编程](../programming-guide/concepts/object-oriented-programming.md)\
 提供指向一些页面的链接，这些页面介绍面向对象的编程并描述如何创建您自己的对象以及如何使用对象来简化代码过程。
 
-- [示例](../../visual-basic/sample-applications.md)\
+- [示例](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)\
 提供指向 Visual Basic 中的示例代码的链接。
 
 - [演练](../../visual-basic/walkthroughs.md)\
