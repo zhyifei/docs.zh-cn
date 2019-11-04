@@ -2,15 +2,15 @@
 title: 受信任的外观服务
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: ea2aa3840c48ba24bafeee3f10d0cb903b25dcac
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f49d0ee2a8f58e12ba8e250e2eacf4012c30cec8
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045434"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424253"
 ---
 # <a name="trusted-facade-service"></a>受信任的外观服务
-本方案示例演示如何使用 Windows Communication Foundation (WCF) 安全基础结构将调用方的标识信息从一个服务流到另一个服务。  
+本方案示例演示如何使用 Windows Communication Foundation （WCF）安全基础结构将调用方的标识信息从一个服务流到另一个服务。  
   
  使用外观服务向公共网络公开由服务提供的功能是一种常见设计模式。 外观服务通常驻留在周边网络（也称为 DMZ、外围安全区域和被筛选的子网）中，可与实现业务逻辑的后端服务通信和访问内部数据。 外观服务和后端服务之间的通信通道通过防火墙并通常仅限用于单一目的。  
   
@@ -22,7 +22,7 @@ ms.locfileid: "70045434"
   
 - 计算器后端服务  
   
- 外观服务负责验证请求和对调用方进行身份验证。 成功进行身份验证和验证后，服务将使用从周边网络到内部网络的受控通信通道将请求转发到后端服务。 作为所转发请求的一部分，外观服务包含有关调用方标识的信息，这样后端服务可以在其处理过程中使用此信息。 使用消息 `Username` 标头内部的 `Security` 安全令牌传输调用方标识。 该示例使用 WCF 安全基础结构从`Security`标头传输和提取此信息。  
+ 外观服务负责验证请求和对调用方进行身份验证。 成功进行身份验证和验证后，服务将使用从周边网络到内部网络的受控通信通道将请求转发到后端服务。 作为所转发请求的一部分，外观服务包含有关调用方标识的信息，这样后端服务可以在其处理过程中使用此信息。 使用消息 `Username` 标头内部的 `Security` 安全令牌传输调用方标识。 该示例使用 WCF 安全基础结构传输和提取 `Security` 标头中的此信息。  
   
 > [!IMPORTANT]
 > 后端服务委托外观服务对调用方进行身份验证。 因此，后端服务不再对调用方进行身份验证；它使用外观服务在转发的请求中提供的标识信息。 由于此信任关系，后端服务必须对外观服务进行身份验证，以确保转发的消息来自受信任的源（在本例中为外观服务）。  
@@ -47,7 +47,7 @@ ms.locfileid: "70045434"
   
  外观服务使用自定义 `UserNamePasswordValidator` 实现对调用方进行身份验证。 出于演示目的，该身份验证只确保调用方的用户名与所提供的密码相匹配。 在现实情况中，可能会使用 Active Directory 或自定义 ASP.NET 成员资格提供程序对用户进行身份验证。 验证程序实现位于 `FacadeService.cs` 文件中。  
   
-```  
+```csharp  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
 {  
     public override void Validate(string userName, string password)  
@@ -109,13 +109,13 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 </bindings>  
 ```  
   
- Security > binding 元素处理初始调用方的用户名传输和提取。 [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) Windowsstreamsecurity 正在 > 和[ tcpTransport>负责对外观和后端服务以及消息保护进行身份验证\<](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) 。 [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)  
+ [\<security >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) binding 元素负责执行初始调用方的用户名传输和提取。 [\<windowsstreamsecurity 正在 >](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)和[\<tcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md)负责验证外观和后端服务以及消息保护。  
   
- 若要转发请求, 外观服务实现必须提供初始调用方的用户名, 以便 WCF 安全基础结构能够将其放入转发的消息中。 初始调用方的用户名是在外观服务实现中提供的，具体方式为在外观服务用于与后端服务进行通信的客户端代理实例的 `ClientCredentials` 属性中设置该用户名。  
+ 若要转发请求，外观服务实现必须提供初始调用方的用户名，以便 WCF 安全基础结构能够将其放入转发的消息中。 初始调用方的用户名是在外观服务实现中提供的，具体方式为在外观服务用于与后端服务进行通信的客户端代理实例的 `ClientCredentials` 属性中设置该用户名。  
   
  下面的代码演示如何在外观服务上实现 `GetCallerIdentity` 方法。 其他方法使用相同的模式。  
   
-```  
+```csharp  
 public string GetCallerIdentity()  
 {  
     CalculatorClient client = new CalculatorClient();  
@@ -126,11 +126,11 @@ public string GetCallerIdentity()
 }  
 ```  
   
- 如前面的代码中所示，未针对 `ClientCredentials` 属性设置密码，只设置用户名。 在这种情况下, WCF 安全基础结构创建不含密码的用户名安全令牌, 这正是这种情况下所要求的。  
+ 如前面的代码中所示，未针对 `ClientCredentials` 属性设置密码，只设置用户名。 在这种情况下，WCF 安全基础结构创建不含密码的用户名安全令牌，这正是这种情况下所要求的。  
   
- 在后端服务上，必须对用户名安全令牌中包含的信息进行身份验证。 默认情况下, WCF 安全尝试使用提供的密码将用户映射到 Windows 帐户。 在这种情况下，不提供密码且不需要后端服务对用户名进行身份验证，因为外观服务已经执行了身份验证。 若要在 WCF 中实现此功能, `UserNamePasswordValidator`提供了一个自定义, 它只强制在令牌中指定用户名, 不执行任何其他身份验证。  
+ 在后端服务上，必须对用户名安全令牌中包含的信息进行身份验证。 默认情况下，WCF 安全尝试使用提供的密码将用户映射到 Windows 帐户。 在这种情况下，不提供密码且不需要后端服务对用户名进行身份验证，因为外观服务已经执行了身份验证。 为了在 WCF 中实现此功能，提供了一个自定义 `UserNamePasswordValidator`，只强制在令牌中指定用户名，不执行任何其他身份验证。  
   
-```  
+```csharp  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
 {  
     public override void Validate(string userName, string password)  
@@ -168,7 +168,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
   
  为提取用户名信息和有关受信任外观服务帐户的信息，后端服务实现使用 `ServiceSecurityContext` 类。 下面的代码演示如何实现 `GetCallerIdentity` 方法。  
   
-```  
+```csharp  
 public string GetCallerIdentity()  
 {  
     // Facade service is authenticated using Windows authentication.  
@@ -209,12 +209,12 @@ public string GetCallerIdentity()
 }  
 ```  
   
- 使用 `ServiceSecurityContext.Current.WindowsIdentity` 属性提取外观服务帐户信息。 为访问有关初始调用方的信息，后端服务使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 属性。 该属性查找类型为 `Identity` 的 `Name`声明。 此声明是由 WCF 安全基础结构根据`Username`安全令牌中包含的信息自动生成的。  
+ 使用 `ServiceSecurityContext.Current.WindowsIdentity` 属性提取外观服务帐户信息。 为访问有关初始调用方的信息，后端服务使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 属性。 该属性查找类型为 `Identity` 的 `Name`声明。 此声明由 WCF 安全基础结构根据 `Username` 安全令牌中包含的信息自动生成。  
   
 ## <a name="running-the-sample"></a>运行示例  
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。 在外观服务和后端服务控制台窗口中按 Enter 可以关闭服务。  
   
-```  
+```console  
 Username authentication required.  
 Provide a valid machine or domain ac  
    Enter username:  
@@ -238,7 +238,7 @@ Press <ENTER> to terminate client.
   
      Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。  
   
-    ```  
+    ```console  
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -254,7 +254,7 @@ Press <ENTER> to terminate client.
   
      下面的行将外观服务的证书复制到客户端的受信任人存储中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。  
   
-    ```  
+    ```console  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
@@ -276,7 +276,7 @@ Press <ENTER> to terminate client.
   
 5. 启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-6. 如果客户端和服务无法进行通信, 请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+6. 如果客户端和服务无法进行通信，请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
@@ -287,6 +287,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  

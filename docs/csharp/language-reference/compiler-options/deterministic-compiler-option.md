@@ -7,14 +7,12 @@ helpviewer_keywords:
 - -deterministic compiler option [C#]
 - deterministic compiler option [C#]
 - /deterministic compiler option [C#]
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e77c14a1c3a4ba11b8ae6556be4f1c3c0cd42788
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: ed5d1db4618649391f88affad67e62dd9fc95925
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202919"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455184"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -48,7 +46,7 @@ ms.locfileid: "70202919"
   - 分析器可能使用的其他文件
 - 当前区域性（针对生成诊断和异常消息的语言）。
 - 在未指定编码情况下使用的默认编码（或当前代码页）。
-- 编译器搜索路径（例如，由`/lib` 或 `/recurse` 指定）上文件是否存在及其内容。
+- 编译器搜索路径（例如，由`-lib` 或 `-recurse` 指定）上文件是否存在及其内容。
 - 运行编译器的 CLR 平台。
 - `%LIBPATH%` 的值，该值会影响分析器的依赖项加载。
 

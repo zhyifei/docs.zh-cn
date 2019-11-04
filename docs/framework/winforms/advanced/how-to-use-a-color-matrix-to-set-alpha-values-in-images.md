@@ -10,30 +10,30 @@ helpviewer_keywords:
 - matrices [Windows Forms], alpha values
 - bitmaps [Windows Forms], using color matrices for semi-transparent
 ms.assetid: a27121e6-f7e9-4c09-84e2-f05aa9d2a1bb
-ms.openlocfilehash: fd63380e04eeb4b7ec7ed7d59032309ea7446507
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 73e820845d040856a0ae367da8b9371ad6afa142
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593167"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423743"
 ---
 # <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>如何：使用颜色矩阵设置图像中的 Alpha 值
-<xref:System.Drawing.Bitmap>类 (派生自<xref:System.Drawing.Image>类) 和<xref:System.Drawing.Imaging.ImageAttributes>类提供用于获取和设置像素值的功能。 可以使用<xref:System.Drawing.Imaging.ImageAttributes>类来修改 alpha 值为整个图像，也可以调用<xref:System.Drawing.Bitmap.SetPixel%2A>方法的<xref:System.Drawing.Bitmap>类来修改单个像素的值。  
+<xref:System.Drawing.Bitmap> 类（继承自 <xref:System.Drawing.Image> 类）和 <xref:System.Drawing.Imaging.ImageAttributes> 类提供了获取和设置像素值的功能。 您可以使用 <xref:System.Drawing.Imaging.ImageAttributes> 类修改整个图像的 alpha 值，也可以调用 <xref:System.Drawing.Bitmap> 类的 <xref:System.Drawing.Bitmap.SetPixel%2A> 方法来修改单个像素值。  
   
 ## <a name="example"></a>示例  
- <xref:System.Drawing.Imaging.ImageAttributes>类具有许多属性，可用于在呈现期间修改映像。 在以下示例中，<xref:System.Drawing.Imaging.ImageAttributes>对象用于将所有 alpha 值设置为它们的 80%。 这是通过初始化颜色矩阵并设置缩放到 0.8 矩阵中的值的 alpha。 颜色矩阵的地址传递给<xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A>方法<xref:System.Drawing.Imaging.ImageAttributes>对象，并<xref:System.Drawing.Imaging.ImageAttributes>对象传递给<xref:System.Drawing.Graphics.DrawString%2A>方法<xref:System.Drawing.Graphics>对象。  
+ <xref:System.Drawing.Imaging.ImageAttributes> 类具有许多可用于在呈现过程中修改图像的属性。 在下面的示例中，<xref:System.Drawing.Imaging.ImageAttributes> 对象用于将所有 alpha 值设置为80% 的值。 这是通过初始化颜色矩阵并将矩阵中的 alpha 缩放值设置为0.8 来完成的。 颜色矩阵的地址将传递到 <xref:System.Drawing.Imaging.ImageAttributes> 对象的 <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> 方法，并将 <xref:System.Drawing.Imaging.ImageAttributes> 对象传递到 <xref:System.Drawing.Graphics> 对象的 <xref:System.Drawing.Graphics.DrawString%2A> 方法。  
   
- 在呈现期间，在位图中的 alpha 值将转换为它们的 80%。 这会导致混合和背景的图像。 如下图所示，位图图像看起来透明;您可以看到通过它黑色实线。  
+ 在呈现过程中，位图中的 alpha 值将转换为它们的80%。 这会导致图像与背景混合。 如下图所示，位图图像看起来是透明的;您可以看到它的实心黑色直线。  
   
- ![使用矩阵的 alpha 混合](./media/image2.png "image2")  
+ ![使用矩阵进行 alpha 混合的屏幕截图。](./media/how-to-use-a-color-matrix-to-set-alpha-values-in-images/alpha-blending-matrix.png "image2")  
   
- 图像是通过背景的白色部分，其中具有已与白色混合映像。 图像和黑色线条相交的位置与黑色混合映像。  
+ 如果图像位于背景的空白部分，则图像已与白色颜色混合。 如果图像与黑色线条交叉，图像会与黑色混合。  
   
  [!code-csharp[System.Drawing.AlphaBlending#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.AlphaBlending#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
+ 前面的示例旨在与 Windows 窗体一起使用，并且它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，这是 <xref:System.Windows.Forms.PaintEventHandler>的参数。  
   
 ## <a name="see-also"></a>请参阅
 

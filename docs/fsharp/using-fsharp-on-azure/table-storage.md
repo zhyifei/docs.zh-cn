@@ -3,14 +3,14 @@ title: 通过 F# 实现 Azure 表格存储入门
 description: 使用 Azure 表存储或 Azure Cosmos DB 在云中存储结构化数据。
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 30ffd5f099dbb8efbf57104a2ade6c26304b7cee
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 6833e2264f7543f50b94892b6980140e4bf1cdd1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395207"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424597"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>开始使用 Azure 表存储和 Azure Cosmos DB 表 API 使用 F @ no__t-0
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>开始使用 Azure 表存储和 Azure Cosmos DB 表 API 使用 F\#
 
 Azure 表存储是一项用于在云中存储结构化 NoSQL 数据的服务。 表存储是具有无架构设计的键/属性存储。 因为表存储是无架构的，所以在应用程序的需求不断变化时，可以轻松地调整数据。 对于所有类型的应用程序，访问数据的速度都迅速且经济高效。 对于相似的数据量，表存储的成本通常显著低于传统的 SQL。
 
@@ -40,11 +40,11 @@ Azure Cosmos DB 提供了为 Azure 表存储编写的应用程序的表 API，�
 
 本文中的示例可用于F#应用程序或F#脚本。 若要创建F#脚本，请在F#开发环境中创建具有 `.fsx` 扩展名的文件，例如 `tables.fsx`。
 
-接下来，使用[程序包管理器](package-management.md)（如[Paket](https://fsprojects.github.io/Paket/)或[NuGet](https://www.nuget.org/) ）安装 `WindowsAzure.Storage` 包，并使用 @no__t 5 指令引用脚本中的 @no__t。 为获取 Microsoft Azure 命名空间，请再次 `Microsoft.WindowsAzure.ConfigurationManager`。
+接下来，使用[程序包管理器](package-management.md)（如[Paket](https://fsprojects.github.io/Paket/)或[NuGet](https://www.nuget.org/) ）通过 `#r` 指令在脚本中安装 `WindowsAzure.Storage` 包和引用 `WindowsAzure.Storage.dll`。 为获取 Microsoft Azure 命名空间，请再次 `Microsoft.WindowsAzure.ConfigurationManager`。
 
 ### <a name="add-namespace-declarations"></a>添加命名空间声明
 
-将以下 `open` 语句添加到 @no__t 文件的顶部：
+将以下 `open` 语句添加到 `tables.fsx` 文件的顶部：
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L1-L5)]
 
@@ -54,7 +54,7 @@ Azure Cosmos DB 提供了为 Azure 表存储编写的应用程序的表 API，�
 
 ### <a name="get-your-azure-cosmos-db-connection-string"></a>获取 Azure Cosmos DB 连接字符串
 
-如果要连接到 Azure Cosmos DB，则需要此教程的连接字符串。 可以从 Azure 门户复制连接字符串。 在 Azure 门户的 Cosmos DB 帐户中，选择 "@no__t**设置**"，然后单击 "**复制**"**按钮，复制**主连接字符串。 
+如果要连接到 Azure Cosmos DB，则需要此教程的连接字符串。 可以从 Azure 门户复制连接字符串。 在 Azure 门户的 Cosmos DB 帐户中，请参阅 "**设置**" " > **连接字符串**"，然后单击 "**复制**" 按钮复制主连接字符串。
 
 对于本教程，请在脚本中输入连接字符串，如下面的示例所示：
 
@@ -66,7 +66,7 @@ Azure Cosmos DB 提供了为 Azure 表存储编写的应用程序的表 API，�
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L13-L15)]
 
-使用 Azure Configuration Manager 是可选的。 你还可以使用 API，例如 .NET Framework 的 @no__t 类型。
+使用 Azure Configuration Manager 是可选的。 你还可以使用 API，例如 .NET Framework 的 `ConfigurationManager` 类型。
 
 ### <a name="parse-the-connection-string"></a>分析连接字符串
 
@@ -74,7 +74,7 @@ Azure Cosmos DB 提供了为 Azure 表存储编写的应用程序的表 API，�
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L21-L22)]
 
-这会返回 @no__t 0。
+这会返回 `CloudStorageAccount`。
 
 ### <a name="create-the-table-service-client"></a>创建表服务客户端
 
@@ -92,15 +92,15 @@ Azure Cosmos DB 提供了为 Azure 表存储编写的应用程序的表 API，�
 
 ### <a name="add-an-entity-to-a-table"></a>向表中添加实体
 
-实体必须具有从 @no__t 继承的类型。 您可以采用任何喜欢的方式扩展 `TableEntity`，但您的类型*必须*具有无参数的构造函数。 只有同时包含 `get` 和 `set` 的属性存储在 Azure 表中。
+实体必须具有从 `TableEntity`继承的类型。 您可以采用任何喜欢的方式扩展 `TableEntity`，但您的类型*必须*具有无参数的构造函数。 只有同时包含 `get` 和 `set` 的属性存储在 Azure 表中。
 
 实体的分区和行键唯一标识表中的实体。 查询分区键相同的实体的速度快于查询分区键不同的实体的速度，但使用不同的分区键可实现更高的并行操作可伸缩性。
 
-下面是一个 `Customer` 的示例，该示例使用 @no__t 作为分区键，@no__t 为-2 作为行键。
+下面是使用 `lastName` 作为分区键和 `firstName` 作为行键的 `Customer` 的示例。
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L45-L52)]
 
-现在，将 `Customer` 添加到表中。 为此，请创建一个对表执行的 @no__t 0。 在这种情况下，将创建 `Insert` 操作。
+现在，将 `Customer` 添加到表中。 为此，请创建对表执行的 `TableOperation`。 在这种情况下，将创建 `Insert` 操作。
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L54-L55)]
 
@@ -119,7 +119,7 @@ Azure Cosmos DB 提供了为 Azure 表存储编写的应用程序的表 API，�
 
 ### <a name="retrieve-all-entities-in-a-partition"></a>检索分区中的所有实体
 
-若要查询表以获取分区中的所有实体，请使用 @no__t 的对象。 在这里，您将筛选 "Smith" 为分区键的实体。
+若要查询表以获取分区中的所有实体，请使用 `TableQuery` 对象。 在这里，您将筛选 "Smith" 为分区键的实体。
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L77-L82)]
 
@@ -139,7 +139,7 @@ Azure Cosmos DB 提供了为 Azure 表存储编写的应用程序的表 API，�
 
 ### <a name="retrieve-a-single-entity"></a>检索单个实体
 
-您可以编写查询以检索单个特定实体。 此处，可以使用 @no__t 0 来指定客户 "Ben Smith"。 返回 `Customer`，而不是集合。 在查询中同时指定分区键和行键是从表服务中检索单个实体的最快方法。
+您可以编写查询以检索单个特定实体。 此处，可以使用 `TableOperation` 来指定客户 "Ben Smith"。 返回 `Customer`，而不是集合。 在查询中同时指定分区键和行键是从表服务中检索单个实体的最快方法。
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L109-L111)]
 
@@ -149,7 +149,7 @@ Azure Cosmos DB 提供了为 Azure 表存储编写的应用程序的表 API，�
 
 ### <a name="replace-an-entity"></a>替换实体
 
-若要更新实体，请从表服务中检索它，修改实体对象，然后使用 @no__t 0 操作将更改保存回表服务。 这会导致在服务器上完全替换该实体，除非服务器上的该实体自检索后已更改，在这种情况下，该操作将失败。 此失败是为了防止应用程序无意中覆盖其他源的更改。
+若要更新实体，请从表服务中检索它，修改实体对象，然后使用 `Replace` 操作将更改保存回表服务。 这会导致在服务器上完全替换该实体，除非服务器上的该实体自检索后已更改，在这种情况下，该操作将失败。 此失败是为了防止应用程序无意中覆盖其他源的更改。
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L121-L128)]
 
@@ -161,7 +161,7 @@ Azure Cosmos DB 提供了为 Azure 表存储编写的应用程序的表 API，�
 
 ### <a name="query-a-subset-of-entity-properties"></a>查询实体属性的子集
 
-表查询可以只检索实体中的几个属性，而不是所有这些属性。 此方法称为 "投影"，可提高查询性能，尤其适用于大型实体。 此处，只返回使用 @no__t 0 和 `EntityResolver` 的电子邮件地址。 请注意，本地存储模拟器不支持投影，因此此代码仅在使用表服务中的帐户时运行。
+表查询可以只检索实体中的几个属性，而不是所有这些属性。 此方法称为 "投影"，可提高查询性能，尤其适用于大型实体。 此处，只使用 `DynamicTableEntity` 和 `EntityResolver`返回电子邮件地址。 请注意，本地存储模拟器不支持投影，因此此代码仅在使用表服务中的帐户时运行。
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L147-L158)]
 

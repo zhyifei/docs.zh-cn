@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: cee80ca0880e046870f699f45624df61ee507a47
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 403c4e76e302536513b9de0694ab7b0de621d5d2
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919862"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455517"
 ---
 # <a name="attached-properties-overview"></a>附加属性概述
 
@@ -146,5 +146,5 @@ WPF 定义了多个 [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includ
 - <xref:System.Windows.DependencyProperty>
 - [依赖项属性概述](dependency-properties-overview.md)
 - [自定义依赖属性](custom-dependency-properties.md)
-- [XAML 概述 (WPF)](xaml-overview-wpf.md)
+- [XAML 概述 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [注册附加属性](how-to-register-an-attached-property.md)

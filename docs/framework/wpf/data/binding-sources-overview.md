@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: cf5873cdf137573826d5361d077e0534e8cba1f0
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 5d0d28213ed8b4a0d464793aeba6823db2405bbe
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920292"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459012"
 ---
 # <a name="binding-sources-overview"></a>绑定源概述
 在数据绑定中，绑定源对象是指用户从其获取数据的对象。 本主题讨论可用作绑定源的对象类型。
@@ -54,7 +54,7 @@ ms.locfileid: "72920292"
 ## <a name="using-entire-objects-as-a-binding-source"></a>将整个对象用作绑定源
  可以将整个对象用作绑定源。 您可以通过使用 <xref:System.Windows.Data.Binding.Source%2A> 或 <xref:System.Windows.FrameworkElement.DataContext%2A> 属性指定绑定源，然后提供空白绑定声明： `{Binding}`。 适用的场景包括绑定到属于类型字符串的对象、绑定到具有感兴趣的多个属性的对象或绑定到集合对象。 有关绑定到整个集合对象的示例，请参阅[对分层数据使用主-从模式](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)。
 
- 请注意，可能需要应用自定义逻辑，以便数据对于绑定的目标属性有意义。 自定义逻辑可能采用自定义转换器的形式（如果不存在默认的类型转换）或 <xref:System.Windows.DataTemplate>。 有关转换器的详细信息，请参阅[数据绑定概述](data-binding-overview.md)的“数据转换”一节。 有关数据模板的详细信息，请参阅[数据模板化概述](data-templating-overview.md)。
+ 请注意，可能需要应用自定义逻辑，以便数据对于绑定的目标属性有意义。 自定义逻辑可能采用自定义转换器的形式（如果不存在默认的类型转换）或 <xref:System.Windows.DataTemplate>。 有关转换器的详细信息，请参阅[数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)的“数据转换”一节。 有关数据模板的详细信息，请参阅[数据模板化概述](data-templating-overview.md)。
 
 <a name="collections"></a>
 ## <a name="using-collection-objects-as-a-binding-source"></a>将集合对象用作绑定源
@@ -64,7 +64,7 @@ ms.locfileid: "72920292"
 
  <xref:System.Collections.ObjectModel.ObservableCollection%601> 类是公开 <xref:System.Collections.Specialized.INotifyCollectionChanged> 接口的数据集合的内置实现。 集合中的个别数据对象必须满足前面章节中所述的要求。 有关示例，请参阅[创建和绑定到 ObservableCollection](how-to-create-and-bind-to-an-observablecollection.md)。 在实现自己的集合之前，请考虑使用 <xref:System.Collections.ObjectModel.ObservableCollection%601> 或某个现有的集合类，如 <xref:System.Collections.Generic.List%601>、<xref:System.Collections.ObjectModel.Collection%601>和 <xref:System.ComponentModel.BindingList%601>，等等。
 
- WPF 从不直接绑定到集合。 如果指定集合作为绑定源，WPF 实际上会绑定到该集合的默认视图。 有关默认视图的信息，请参阅[数据绑定概述](data-binding-overview.md)。
+ WPF 从不直接绑定到集合。 如果指定集合作为绑定源，WPF 实际上会绑定到该集合的默认视图。 有关默认视图的信息，请参阅[数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)。
 
  如果你有高级方案，并且想要实现自己的集合，请考虑使用 <xref:System.Collections.IList> 接口。 <xref:System.Collections.IList> 提供了一个对象的非泛型集合，该集合可按索引单独访问，从而提高了性能。
 
@@ -97,6 +97,6 @@ ms.locfileid: "72920292"
 - <xref:System.Windows.Data.ObjectDataProvider>
 - <xref:System.Windows.Data.XmlDataProvider>
 - [指定绑定源](how-to-specify-the-binding-source.md)
-- [数据绑定概述](data-binding-overview.md)
+- [数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)
 - [使用 LINQ to XML 进行 WPF 数据绑定概述](wpf-data-binding-with-linq-to-xml-overview.md)
 - [优化数据绑定性能](../advanced/optimizing-performance-data-binding.md)

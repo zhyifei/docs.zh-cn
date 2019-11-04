@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 77f3c519308f39f83dac399aef395d5d36a7195e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
-ms.translationtype: MT
+ms.openlocfilehash: 6b1a78ec56032d84d9699c2ecda89308779ee2da
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040914"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421138"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 应用程序资源、内容和数据文件
 Microsoft Windows 应用程序通常依赖于包含不可执行的数据的文件，例如 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、图像、视频和音频。 Windows Presentation Foundation （WPF）为配置、标识和使用这些类型的数据文件（称为应用程序数据文件）提供特殊支持。 这种支持主要针对一组特定的应用程序数据文件类型，包括：  
@@ -187,15 +187,15 @@ Microsoft Windows 应用程序通常依赖于包含不可执行的数据的文�
   
  [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
   
- 但是，file:/// 和 http:// 方案要求应用程序具有完全信任。 如果你的应用程序是从 Internet 或 intranet 启动的 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]，并且该应用程序只请求从这些位置启动的应用程序允许的权限集，则只能从应用程序源站点加载松散文件（启动位置）。 此类文件称为*源站点*文件。  
+ 但是，file:/// 和 http:// 方案要求应用程序具有完全信任。 如果你的应用程序是从 Internet 或 intranet 启动的 XAML 浏览器应用程序（XBAP），并且该应用程序只请求从这些位置启动的应用程序允许的权限集，则松散文件只能从应用程序的源站点（启动位置）。 此类文件称为*源站点*文件。  
   
  虽然源站点文件并不仅限于部分信任应用程序，但这些文件是部分信任应用程序的唯一选择。 完全信任应用程序可能仍然需要加载它们在生成时所不知道的应用程序数据文件；但是完全信任应用程序可以使用 file:///，应用程序数据文件很可能将安装在该应用程序程序集所在的文件夹或其子文件夹中。 在此情况下，使用源站点引用比使用 file:/// 更加容易，因为使用 file:/// 需要找出文件的完整路径。  
   
 > [!NOTE]
-> 源站点文件不使用客户端计算机上的 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] 进行缓存，而内容文件为。 因此，只有在专门请求下载源站点文件时，才会下载它们。 如果 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] 应用程序包含大型媒体文件，则将其配置为源站点文件意味着初始的应用程序启动速度要快得多，并且只需按需下载文件即可。  
+> 源站点文件不与客户端计算机上的 XAML 浏览器应用程序（XBAP）缓存，而内容文件为。 因此，只有在专门请求下载源站点文件时，才会下载它们。 如果 XAML 浏览器应用程序（XBAP）应用程序包含大型媒体文件，则将其配置为源站点文件意味着初始应用程序的启动速度要快得多，并且仅按需下载这些文件。  
   
 ### <a name="configuring-site-of-origin-files"></a>配置源站点文件  
- 如果源站点文件在编译时不存在或未知，则需要使用传统的部署机制来确保在运行时可以使用所需的文件，包括使用 `XCopy` 命令行程序或 [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)]。  
+ 如果源站点文件在编译时不存在或未知，则需要使用传统的部署机制来确保在运行时可以使用所需的文件，包括使用 `XCopy` 命令行程序或 Microsoft WindowsInstaller.  
   
  如果你在编译时知道想要位于源站点的文件，但仍希望避免显式依赖项，则可以将这些文件作为 `None` 项添加到 MSBuild 项目。 与内容文件一样，需要设置 MSBuild `CopyToOutputDirectory` 特性，以指定将源站点文件复制到相对于生成的程序集的位置，方法是指定 `Always` 值或 `PreserveNewest` 值。  
   

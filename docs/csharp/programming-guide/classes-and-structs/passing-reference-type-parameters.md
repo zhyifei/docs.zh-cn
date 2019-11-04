@@ -6,12 +6,12 @@ helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: f4329c525995b8246427072d1f537d91d875ef95
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 6489d31ac1e466fdbf2b47ce1aae7e1139af0960
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596266"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419046"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>传递引用类型参数（C# 编程指南）
 [引用类型](../../language-reference/keywords/reference-types.md)的变量不直接包含其数据；它包含对其数据的引用。 如果按值传递引用类型参数，则可能更改属于所引用对象的数据，例如类成员的值。 但是，不能更改引用本身的值；例如，不能使用相同引用为新对象分配内存，并将其保留在方法外部。 为此，请使用 [ref](../../language-reference/keywords/ref.md) 或 [out](../../language-reference/keywords/out-parameter-modifier.md) 关键字传递参数。 为简单起见，下面的示例使用 `ref`。  
@@ -37,7 +37,7 @@ ms.locfileid: "69596266"
   
  在此示例中，需要按引用传递参数，以影响调用程序中的变量。 如果同时从方法标头和方法调用中删除 `ref` 关键字，调用程序中不会发生任何更改。  
   
- 有关字符串的详细信息，请参阅[字符串](../../language-reference/keywords/string.md)。  
+ 有关字符串的详细信息，请参阅[字符串](../../language-reference/builtin-types/reference-types.md)。  
   
 ## <a name="see-also"></a>请参阅
 

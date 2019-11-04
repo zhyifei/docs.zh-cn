@@ -6,26 +6,26 @@ helpviewer_keywords:
 - data binding [WPF], creating simple bindings
 - binding data [WPF], creating
 ms.assetid: 69b80f72-6259-44cb-8294-5bdcebca1e08
-ms.openlocfilehash: d617c8b97aa679398ed2d061a652f5164f1e499b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: faef59ed426059eb2d488d0584d3325c8d46d415
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61931556"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73453508"
 ---
 # <a name="how-to-create-a-simple-binding"></a>如何：创建简单绑定
-此示例演示如何创建一个简单<xref:System.Windows.Data.Binding>。  
+此示例演示如何创建简单的 <xref:System.Windows.Data.Binding>。  
   
 ## <a name="example"></a>示例  
- 此示例中有一个 `Person` 对象，该对象具有名为 `PersonName` 的字符串属性。 该 `Person` 对象在名为 `SDKSample` 的命名空间中定义。  
+ 在此示例中，有一个具有名为 `PersonName`的字符串属性的 `Person` 对象。 `Person` 对象是在名为 `SDKSample`的命名空间中定义的。  
   
- 在下面的示例中，突出显示的包含 `<src>` 元素的行将实例化 `Person` 对象，该对象的 `PersonName` 属性值为 `Joe`。 该操作在 `Resources` 部分完成，并指定了 `x:Key`。  
+ 在下面的示例中，包含 `<src>` 元素的突出显示的行将实例化 `PersonName` 属性值为 `Joe`的 `Person` 对象。 这是在 `Resources` 部分中完成的，并分配了 `x:Key`。  
   
  [!code-xaml[SimpleBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
   
- 然后，突出显示的包含 `<TextBlock>` 元素的行会将 <xref:System.Windows.Controls.TextBlock> 控件绑定到 `PersonName` 属性。 这样，<xref:System.Windows.Controls.TextBlock> 显示的值将为 “Joe”。  
+ 包含 `<TextBlock>` 元素的突出显示的行将 <xref:System.Windows.Controls.TextBlock> 控件绑定到 `PersonName` 属性。 因此，<xref:System.Windows.Controls.TextBlock> 显示值 "Joe"。  
   
 ## <a name="see-also"></a>请参阅
 
-- [数据绑定概述](data-binding-overview.md)
+- [数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)
 - [帮助主题](data-binding-how-to-topics.md)

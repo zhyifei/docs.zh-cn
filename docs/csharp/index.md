@@ -8,18 +8,20 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 77db5201ab21dff1f04f76da5dd10d07aa377813
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: a7ddaac56177d13248caf6559221fff26d2d2c00
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191805"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416724"
 ---
 # <a name="c-guide"></a>C# 指南
 
 C# 指南提供了许多有关 C# 语言的资源。 此网站面向许多不同的受众群体。 你可能希望探索本指南的不同部分，具体视你的编程经验或 C# 语言和 .NET 使用经验而定。
 
 - 对于从未接触过编程的开发者：
+  - 观看 [C# 101 视频系列](https://aka.ms/dotnet3-csharp)。 本文介绍将在这些教程中探讨的重要概念。
+
   - 从浏览 [C# 教程简介](tutorials/intro-to-csharp/index.md)开始。 通过了解这些教程，可以在浏览器中交互式浏览 C# 语言。 可以从这里转到其他[教程](tutorials/index.md)。 这些教程介绍了如何从头开始创建 C# 程序。 其中分步介绍了如何创建程序。 同时还解释了语言概念以及如何自行生成 C# 程序。 如果希望先阅读概述内容，请尝试阅读 [C# 语言介绍](tour-of-csharp/index.md)。 其中介绍了 C# 语言的概念。 阅读完这一部分后，你将会对 C# 语言有一个基本的了解，可以尝试阅读各个教程或自行生成一些程序。
 
 - 对于刚开始接触 C# 的开发者：
@@ -61,7 +63,7 @@ C# 指南分为多个部分。 可以按顺序阅读，也可以直接跳到最�
 - [语言参考](language-reference/index.md)
   - 此部分收录了 C# 语言参考资料。 此类资料有助于你了解 C# 语法和语义。 它还包含关于以下内容的参资料：类型、运算符、特性、预处理器指令、编译器开关、编译器错误和编译器警告。
 
-- [C# 语言规范](./language-reference/language-specification/index.md)
+- [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)
   - 指向最新版 C# 语言规范的链接。
 
 ## <a name="see-also"></a>请参阅

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 85218bd4b6e900bd4508a5c90132419a07846f2c
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: ce37eecf7edf2adcc4f56af27a5c658400f7abba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920211"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420643"
 ---
 # <a name="application-development"></a>应用程序开发
 <a name="introduction"></a>Windows Presentation Foundation （WPF）是一个演示框架，可用于开发以下类型的应用程序：  
   
 - 独立应用程序（传统样式 Windows 应用程序，内置于安装到客户端计算机并从客户端计算机运行的可执行程序集。  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] （由导航页面构成的应用程序，这些应用程序是作为可执行程序集生成并由 Web 浏览器（如 Microsoft Internet Explorer 或 Mozilla Firefox）承载的。  
+- XAML 浏览器应用程序（Xbap）（由导航页面构成的应用程序，这些应用程序被构建为可执行程序集并由 Web 浏览器（如 Microsoft Internet Explorer 或 Mozilla Firefox）承载。  
   
 - 自定义控件库（包含可重用控件的非可执行程序集）。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "72920211"
   
 - 管理独立应用程序中的窗口。  
   
-- 跟踪 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 以及使用导航窗口和框架的独立应用程序中的导航。  
+- 在 XAML 浏览器应用程序（Xbap）中跟踪导航，并在导航窗口和框架中跟踪独立应用程序。  
   
  以上功能由通过*应用程序定义*添加到应用程序的 <xref:System.Windows.Application> 类来实现。  
   
@@ -86,15 +86,15 @@ ms.locfileid: "72920211"
   
 - 在 Web 浏览器中承载的独立页面。  
   
-- 被编译到 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 中并在 Web 浏览器中承载的页面。  
+- 编译到在 Web 浏览器中承载的 XBAP 的页面。  
   
 - 被编译到独立应用程序中并由导航窗口 (<xref:System.Windows.Navigation.NavigationWindow>) 承载的页面。  
   
-- 由框架 (<xref:System.Windows.Controls.Frame>) 承载的页面（可能在独立页面中承载），或是被编译到 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 或独立应用程序中的页面。  
+- 由框架（<xref:System.Windows.Controls.Frame>）承载的页（可在独立页面上承载）或编译到 XBAP 或独立应用程序中的页面。  
   
  为了便于导航，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 实现了：  
   
-- <xref:System.Windows.Navigation.NavigationService>，供 <xref:System.Windows.Controls.Frame>、<xref:System.Windows.Navigation.NavigationWindow> 和 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 用于处理导航请求以支持应用程序内导航的共享导航引擎。  
+- <xref:System.Windows.Navigation.NavigationService>，用于处理导航请求的共享导航引擎，<xref:System.Windows.Controls.Frame>、<xref:System.Windows.Navigation.NavigationWindow>和 Xbap 使用这些请求来支持应用程序内导航。  
   
 - 用于启动导航的导航方法。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "72920211"
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>宿主  
- 可以在 Microsoft Internet Explorer 或 Firefox 中承载 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 每个承载模型都有各自的一些注意事项和约束，这些内容在[承载](hosting-wpf-applications.md)中均有涵盖。  
+ Xbap 可在 Microsoft Internet Explorer 或 Firefox 中承载。 每个承载模型都有各自的一些注意事项和约束，这些内容在[承载](hosting-wpf-applications.md)中均有涵盖。  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>生成和部署  
@@ -124,7 +124,7 @@ ms.locfileid: "72920211"
 |[应用程序管理概述](application-management-overview.md)|简要介绍 <xref:System.Windows.Application> 类，包括管理应用程序生存期、窗口、应用程序资源和导航。|  
 |[WPF 中的窗口](windows-in-wpf-applications.md)|详细介绍如何在应用程序中管理窗口，包括如何使用 <xref:System.Windows.Window> 类和对话框。|  
 |[导航概述](navigation-overview.md)|概述如何管理应用程序的各个页面间的导航。|  
-|[承载](hosting-wpf-applications.md)|概述 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。|  
+|[承载](hosting-wpf-applications.md)|提供 XAML 浏览器应用程序（Xbap）的概述。|  
 |[生成和部署](building-and-deploying-wpf-applications.md)|描述如何生成和部署 WPF 应用程序。|  
 |[Visual Studio 中的 WPF 简介](../getting-started/introduction-to-wpf-in-vs.md)|介绍 WPF 的主要功能。|  
 |[演练：我的第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|一项演练，用于演示如何使用页面导航、布局、控件、图像、样式和绑定来创建 WPF 应用程序。|

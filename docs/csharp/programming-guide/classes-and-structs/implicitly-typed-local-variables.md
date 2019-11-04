@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 8c09ddc5a9db71a4e0bef0434d2fc14a4c088352
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7010c38797ab64e5106c96c06cd814c143ca9c24
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635555"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419377"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>隐式类型本地变量（C# 编程指南）
 
@@ -99,7 +99,7 @@ private var bookTitles = new List<string>();
 - [匿名类型](anonymous-types.md)
 - [对象和集合初始值设定项](object-and-collection-initializers.md)
 - [var](../../language-reference/keywords/var.md)
-- [LINQ 查询表达式](../linq-query-expressions/index.md)
+- [C# 中的 LINQ](../../linq/index.md)
 - [LINQ（语言集成查询）](../../linq/index.md)
 - [for](../../language-reference/keywords/for.md)
 - [foreach, in](../../language-reference/keywords/foreach-in.md)

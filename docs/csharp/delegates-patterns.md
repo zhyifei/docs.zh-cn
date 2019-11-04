@@ -3,12 +3,12 @@ title: 委托的常见模式
 description: 了解在代码中使用委托避免组件间强耦合的常见模式。
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 174ae4129464c9d2e787048793cec764121ca4aa
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095693"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454078"
 ---
 # <a name="common-patterns-for-delegates"></a>委托的常见模式
 
@@ -58,7 +58,7 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 上面的静态类是可以发挥作用的最简单的类。 我们需要编写将消息写入控制台的方法的单个实现： 
 
-[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/Program.cs#LogToConsole "A Console logger.")]
+[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
 
 最后，你需要通过将委托附加到记录器中声明的 WriteMessage 委托来进行挂钩：
 
@@ -107,13 +107,13 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 ```csharp
 var fileOutput = new FileLogger("log.txt");
-Logger.WriteMessage += LogToConsole;
+Logger.WriteMessage += LoggingMethods.LogToConsole; // LoggingMethods is the static class we utilized earlier
 ```
 
 以后，即使在同一个应用程序中，也可在不对系统产生任何其他问题的情况下删除其中一个委托：
 
 ```csharp
-Logger.WriteMessage -= LogToConsole;
+Logger.WriteMessage -= LoggingMethods.LogToConsole;
 ```
 
 ## <a name="practices"></a>实践

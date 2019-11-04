@@ -12,14 +12,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6be45a3d03d8cff580653260081a20d518448237
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e05cfb949ee3f206f212ca7015f3ff4c22cd2a12
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662732"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423042"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>清理非托管资源
 
@@ -27,7 +25,7 @@ ms.locfileid: "67662732"
 
 如果你的类型使用非托管资源，则应执行以下操作：
 
-- 实现[清理模式](../../../docs/standard/design-guidelines/dispose-pattern.md)。 这要求你提供 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 实现以启用非托管资源的确定性释放。 当不再需要此对象（或其使用的资源）时，类型使用者可调用 <xref:System.IDisposable.Dispose%2A>。 <xref:System.IDisposable.Dispose%2A> 方法立即释放非托管资源。
+- 实现[清理模式](implementing-dispose.md)。 这要求你提供 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 实现以启用非托管资源的确定性释放。 当不再需要此对象（或其使用的资源）时，类型使用者可调用 <xref:System.IDisposable.Dispose%2A>。 <xref:System.IDisposable.Dispose%2A> 方法立即释放非托管资源。
 
 - 在类型使用者忘记调用 <xref:System.IDisposable.Dispose%2A> 的情况下，准备释放非托管资源。 有两种方法可以实现此目的：
 
@@ -41,7 +39,7 @@ ms.locfileid: "67662732"
 
 ## <a name="in-this-section"></a>本节内容
 
-[实现 Dispose 方法](../../../docs/standard/garbage-collection/implementing-dispose.md)介绍如何实现用于释放非托管资源的[清理模式](../../../docs/standard/design-guidelines/dispose-pattern.md)。
+[实现 Dispose 方法](../../../docs/standard/garbage-collection/implementing-dispose.md)介绍如何实现用于释放非托管资源的[清理模式](implementing-dispose.md)。
 
 [使用实现 IDisposable 的对象](../../../docs/standard/garbage-collection/using-objects.md)介绍类型使用者如何确保调用其 <xref:System.IDisposable.Dispose%2A> 实现。 建议使用 C# `using` 语句或 Visual Basic `Using` 语句来执行此操作。
 

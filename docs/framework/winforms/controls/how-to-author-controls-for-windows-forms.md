@@ -6,17 +6,17 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 45a6ae68102204ad8506027065c2676e02fdd7a3
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 3776e47191d9b10431acbb9a2a7257996e531ba8
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015916"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459424"
 ---
-# <a name="how-to-author-controls-for-windows-forms"></a>如何：Windows 窗体的创作控件
+# <a name="how-to-author-controls-for-windows-forms"></a>如何：创作 Windows 窗体的控件
 
 控件表示用户和程序之间的图形链接。 控件可以提供或处理数据、接受用户输入、响应事件或执行连接用户和应用程序的其他功能（任意数量）。 因为控件本质上是具有图形界面的组件，所以它能提供组件所提供的所有功能并提供用户交互。 控件是针对特定目的而创建的，而创作控件只是另一种编程任务。 考虑到这一点，以下步骤概述了控件的创作过程。 链接提供有关各个步骤的附加信息。
 
@@ -40,15 +40,15 @@ ms.locfileid: "70015916"
 
 5. 如果需要为控件自定义绘制，请为其添加代码。 有关详细信息，请参阅[自定义控件的绘制和呈现](custom-control-painting-and-rendering.md)。
 
-6. 如果控件继承自<xref:System.Windows.Forms.UserControl>, 则可以通过生成控件项目并在 " **UserControl 测试容器**" 中运行, 来测试其运行时行为。 有关详细信息，请参阅[如何：测试 UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)的运行时行为。
+6. 如果控件继承自 <xref:System.Windows.Forms.UserControl>，则可以通过生成控件项目并在 " **UserControl 测试容器**" 中运行，来测试其运行时行为。 有关详细信息，请参阅[如何：测试 UserControl 的运行时行为](how-to-test-the-run-time-behavior-of-a-usercontrol.md)。
 
-7. 还可以通过创建新项目（如 Windows 应用程序）并将其放入容器来测试和调试控件。 此过程演示为演练的[一部分:创作复合控件](walkthrough-authoring-a-composite-control-with-visual-csharp.md)。
+7. 还可以通过创建新项目（如 Windows 应用程序）并将其放入容器来测试和调试控件。 [演练：创作复合控件](walkthrough-authoring-a-composite-control-with-visual-csharp.md)中演示了此过程。
 
 8. 添加每个功能时，将功能添加到测试项目以执行新功能。
 
 9. 重复上述步骤，优化设计。
 
-10. 打包和部署控件。 有关详细信息, 请参阅[Visual Studio 中的 "部署"](/visualstudio/deployment/deploying-applications-services-and-components)。
+10. 打包和部署控件。 有关详细信息，请参阅[Visual Studio 中的 "部署"](/visualstudio/deployment/deploying-applications-services-and-components)。
 
 ## <a name="see-also"></a>请参阅
 

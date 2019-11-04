@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 073b28d353bb7ea43775c7e20ddf7241cabf7d9a
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 60614a95e4091b4d7bd9ae3a71e2ddeca53e29ba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664001"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424857"
 ---
 # <a name="xml-documents-and-data"></a>XML 文档和数据
 
@@ -62,7 +62,7 @@ ms.locfileid: "67664001"
 
 [XML 处理选项](../../../../docs/standard/data/xml/xml-processing-options.md) 讨论用于处理 XML 数据的选项。
 
-[处理内存中 XML 数据](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md) 讨论用于处理内存中 XML 数据的三种模型：[LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) 和 [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)、<xref:System.Xml.XmlDocument> 类（基于 W3C 文档对象模型）以及 <xref:System.Xml.XPath.XPathDocument> 类（基于 XPath 数据模型）。
+[处理内存中 XML 数据](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md) 讨论用于处理内存中 XML 数据的三种模型：[LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) 和 [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)、<xref:System.Xml.XmlDocument> 类（基于 W3C 文档对象模型）以及 <xref:System.Xml.XPath.XPathDocument> 类（基于 XPath 数据模型）。
 
 [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)\
 描述如何使用 XSLT 处理器。

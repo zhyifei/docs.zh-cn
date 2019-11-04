@@ -4,12 +4,12 @@ description: 有关可帮助了解 .NET 的 .NET Core、ASP.NET Core 和 C# 语�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: e4906feb7cda026848c990c7dd6f1dc8146dc7aa
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7953d178e9a24fc42f11b6bc5c866805ec381137
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855774"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423574"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 示例和教程
 
@@ -49,7 +49,7 @@ ms.locfileid: "70855774"
 
 本示例演示用于 C# 索引器的语法和功能。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/indexers)。
 
-**[委托和事件](../csharp/delegates-events.md)**
+**[委托和事件](../csharp/delegates-overview.md)**
 
 本示例演示用于 C# 委托和事件的语法和功能。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events)。 侧重于事件的[第二个示例](https://github.com/dotnet/samples/tree/master/csharp/events)也位于相同的存储库中。
 
@@ -95,15 +95,11 @@ ms.locfileid: "70855774"
 
 本教程演示了如何在 .NET Core 上构建支持插件基础结构的简单应用程序。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)。
 
-## <a name="deploying-to-containers"></a>部署到容器
+## <a name="deploy-to-containers"></a>部署到容器
 
-**[在 Windows Docker 容器中运行 ASP.NET MVC 应用程序](../framework/docker/aspnetmvc.md)**
+**[在 Windows Docker 容器中运行 ASP.NET MVC 应用程序](/aspnet/mvc/overview/deployment/docker-aspnetmvc)**
 
 本教程演示如何在 Windows Docker 容器中部署现有 ASP.NET MVC 应用。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator)。
-
-**[在 Windows 容器中运行 .NET Framework 控制台应用程序](../framework/docker/console.md)**
-
-本教程演示如何在 Windows 容器中部署现有控制台应用。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator)。
 
 ## <a name="viewing-and-downloading-samples"></a>查看和下载示例
 

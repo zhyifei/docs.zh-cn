@@ -8,17 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - synchronization primitives, SpinWait
 ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9b66ec913a6e8726710d90737f97c04335ae6e4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91588fc6e9c3c8e85de6a315c0743efb0137ecd5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676427"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128989"
 ---
 # <a name="spinwait"></a>SpinWait
-<xref:System.Threading.SpinWait?displayProperty=nameWithType> 是一种轻型同步类型，可用于低级方案，以避免执行内核事件所需的高成本上下文切换和内核转换。 在多核计算机上，如果不得长时间保留资源，更高效的做法是，先让等待线程在用户模式下旋转几十或几百个周期，再重试获取资源。 如果资源在旋转后可用，便节省了几千个周期。 如果资源仍不可用，那么也只花了几个周期，仍可以进入基于内核的等待。 这种“旋转后等待”的组合有时称为“两阶段等待操作”。  
+<xref:System.Threading.SpinWait?displayProperty=nameWithType> 是一种轻型同步类型，可用于低级方案，以避免执行内核事件所需的高成本上下文切换和内核转换。 在多核计算机上，如果不得长时间保留资源，更高效的做法是，先让等待线程在用户模式下旋转几十或几百个周期，再重试获取资源。 如果资源在旋转后可用，便节省了几千个周期。 如果资源仍不可用，那么也只花了几个周期，仍可以进入基于内核的等待。 这种“旋转后等待”的组合有时称为“两阶段等待操作”  。  
   
  <xref:System.Threading.SpinWait> 旨在与包装内核事件（如 <xref:System.Threading.ManualResetEvent>）的 .NET Framework 类型结合使用。 <xref:System.Threading.SpinWait> 本身也可以仅在一个程序中用于提供基本的旋转功能。  
   

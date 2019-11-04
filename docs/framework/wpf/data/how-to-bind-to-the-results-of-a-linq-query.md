@@ -5,12 +5,12 @@ helpviewer_keywords:
 - running a LINQ query [WPF], bind to results
 - binding to LINQ query results [WPF]
 ms.assetid: ff2844d9-17ed-4ea6-aab1-5111af0bc684
-ms.openlocfilehash: 70f4b439d231d69e5671216bc4e62d0789ce66c7
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: d21ac5f366e001ea76d6eda64ed62583248796f6
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920134"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454414"
 ---
 # <a name="how-to-bind-to-the-results-of-a-linq-query"></a>如何：绑定到 LINQ 查询的结果
 
@@ -35,4 +35,4 @@ ms.locfileid: "72920134"
 - [让数据可供 XAML 中的绑定使用](how-to-make-data-available-for-binding-in-xaml.md)
 - [绑定到集合并根据选择的内容显示信息](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
 - [WPF 版本 4.5 中的新增功能](../getting-started/whats-new.md)
-- [数据绑定概述](data-binding-overview.md)
+- [数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)

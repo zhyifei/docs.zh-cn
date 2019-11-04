@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 4d0801cd81e00c84be278b44730058798b0acfa9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b9b9f145f8f2d945fa06d53efa89f5754766963f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588190"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423131"
 ---
 # <a name="pointer-types-c-programming-guide"></a>指针类型（C# 编程指南）
 
@@ -23,7 +23,7 @@ void* identifier; //allowed but not recommended
 
 在指针类型中的 `*` 之前指定的类型被称为“referent 类型”  。 只有[非托管类型](../../language-reference/builtin-types/unmanaged-types.md)可为引用类型。
 
-指针类型不从[对象](../../language-reference/keywords/object.md)继承，并且指针类型与 `object` 之间不存在转换。 此外，装箱和取消装箱不支持指针。 但是，你可在不同的指针类型之间以及指针类型和整型之间进行转换。
+指针类型不从[对象](../../language-reference/builtin-types/reference-types.md)继承，并且指针类型与 `object` 之间不存在转换。 此外，装箱和取消装箱不支持指针。 但是，你可在不同的指针类型之间以及指针类型和整型之间进行转换。
 
 在同一个声明中声明多个指针时，星号 (*) 仅与基础类型一起写入；而不是用作每个指针名称的前缀。 例如:
 
@@ -87,5 +87,5 @@ int* myVariable;
 - [C# 编程指南](../index.md)
 - [不安全代码和指针](index.md)
 - [指针转换](pointer-conversions.md)
-- [类型](../../language-reference/keywords/types.md)
+- [类型](/dotnet/csharp/language-reference/keywords)
 - [unsafe](../../language-reference/keywords/unsafe.md)

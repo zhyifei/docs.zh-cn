@@ -13,17 +13,17 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 031313c6f56801f032a5aeaff06cde8d0550af92
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
-ms.translationtype: MT
+ms.openlocfilehash: 7e29b724259604a6ee09dff9cf9133b1739eb9ad
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582415"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424786"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a>开发 Windows Presentation Foundation （WPF）独立应用程序和浏览器托管应用程序时，必须考虑安全模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 独立的应用程序使用无限制权限（CA**FullTrust**权限集）执行，不管是使用 Windows Installer （.msi）、XCopy 还是 ClickOnce 部署的。 不支持使用 ClickOnce 部署部分信任的独立 WPF 应用程序。 不过，完全信任的主机应用程序可以使用 .NET Framework 外接程序模型创建部分信任 <xref:System.AppDomain>。 有关详细信息，请参阅[WPF 外接程序概述](./app-development/wpf-add-ins-overview.md)。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 浏览器承载的应用程序由 Windows Internet Explorer 或 Firefox 承载，可以是 [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] 或松散的 [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] 文档。有关详细信息，请参阅[WPF XAML 浏览器应用程序概述](./app-development/wpf-xaml-browser-applications-overview.md)。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 浏览器承载的应用程序由 Windows Internet Explorer 或 Firefox 承载，可以是 XAML 浏览器应用程序（Xbap）或松散 [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] 文档有关详细信息，请参阅[WPF XAML 浏览器应用程序概述](./app-development/wpf-xaml-browser-applications-overview.md)。  
   
  默认情况下，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 浏览器承载的应用程序在部分信任的安全沙箱中执行，该沙箱仅限默认的 CAS**Internet**区域权限集。 这会有效地将 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 浏览器承载的应用程序与客户端计算机隔离，就像需要隔离典型 Web 应用程序一样。 XBAP 最高可以将权限提升到“完全信任”，具体取决于部署 URL 的安全区域和客户端的安全配置。 有关详细信息，请参阅 [WPF 部分信任安全性](wpf-partial-trust-security.md)。  
   
@@ -45,13 +45,13 @@ ms.locfileid: "72582415"
   
 <a name="SafeTopLevelNavigation"></a>   
 ## <a name="safe-navigation"></a>安全导航  
- 对于 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 区分两种类型的导航：应用程序和浏览器。  
+ 对于 Xbap，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 区分两种类型的导航：应用程序和浏览器。  
   
  应用程序导航是指在浏览器托管的应用程序内的内容项之间进行导航。 浏览器导航是指可更改浏览器自身的内容和位置 URL 的导航。 应用程序导航（通常为 XAML）与浏览器导航（通常为 HTML）之间的关系如下图所示：
   
  ![应用程序导航与浏览器导航之间的关系。](./media/security-wpf/application-browser-navigation-relationship.png)  
   
- @No__t_0 要导航到的内容的类型主要取决于是否使用应用程序导航或浏览器导航。  
+ 对于 XBAP 要导航到的内容的类型，主要取决于是否使用应用程序导航或浏览器导航。  
   
 <a name="Application_Navigation_Security"></a>   
 ### <a name="application-navigation-security"></a>应用程序导航安全性  
@@ -83,7 +83,7 @@ ms.locfileid: "72582415"
   
 - **协议**。 使用的协议是**http**、 **https**、**文件**或**mailto**。  
   
- 如果 [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] 尝试以不符合这些条件的方式导航到内容，则会引发 <xref:System.Security.SecurityException>。  
+ 如果 XBAP 尝试以不符合这些条件的方式导航到内容，则会引发 <xref:System.Security.SecurityException>。  
   
 <a name="InternetExplorerSecuritySettings"></a>   
 ## <a name="web-browsing-software-security-settings"></a>Web 浏览软件安全设置  
@@ -124,7 +124,7 @@ ms.locfileid: "72582415"
   
 - **宽松 XAML**。 控制 Internet Explorer 是否可以导航到和松散的 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 文件。 （“启用”、“禁用”和“提示”选项）。  
   
-- **XAML 浏览器应用程序**。 控制 Internet Explorer 是否可以导航到并运行 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 （“启用”、“禁用”和“提示”选项）。  
+- **XAML 浏览器应用程序**。 控制 Internet Explorer 是否可以导航到并运行 Xbap。 （“启用”、“禁用”和“提示”选项）。  
   
  默认情况下，将为 " **Internet**"、"**本地 intranet**" 和 "**受信任站点**" 区域启用所有这些设置，并为 "受**限制的站点**" 区域禁用这些设置。  
   
@@ -207,9 +207,9 @@ ms.locfileid: "72582415"
 |---------------------|  
 |FEATURE_ENABLE_SCRIPT_PASTE_URLACTION_IF_PROMPT|  
   
- 如果在 Windows Internet Explorer 中运行包含 WPF <xref:System.Windows.Controls.WebBrowser> 控件的部分信任 [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)]，则 WPF 会在 Internet Explorer 进程的地址空间中承载 WebBrowser ActiveX 控件。 由于 WebBrowser ActiveX 控件承载于 Internet Explorer 进程中，因此还为 WebBrowser ActiveX 控件启用了 Internet Explorer 的所有功能控件。  
+ 如果在 Windows Internet Explorer 中运行包含 WPF <xref:System.Windows.Controls.WebBrowser> 控件的部分信任 XAML 浏览器应用程序（XBAP），则 WPF 会在 Internet Explorer 进程的地址空间中承载 WebBrowser ActiveX 控件。 由于 WebBrowser ActiveX 控件承载于 Internet Explorer 进程中，因此还为 WebBrowser ActiveX 控件启用了 Internet Explorer 的所有功能控件。  
   
- 与普通的独立应用程序相比，运行于 Internet Explorer 中的 XBAP 还将另外获得一层安全保护。 这种附加安全性是因为 Internet Explorer 会默认在 [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] 和 [!INCLUDE[win7](../../../includes/win7-md.md)] 上以受保护模式运行。 有关保护模式的详细信息，请参阅[了解和使用受保护模式的 Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393)。  
+ 与普通的独立应用程序相比，运行于 Internet Explorer 中的 XBAP 还将另外获得一层安全保护。 这种附加安全性是因为 Internet Explorer 会默认在 [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] 和 [!INCLUDE[win7](../../../includes/win7-md.md)]上以受保护模式运行。 有关保护模式的详细信息，请参阅[了解和使用受保护模式的 Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393)。  
   
 > [!NOTE]
 > 如果尝试在 Firefox 中运行包含 WPF <xref:System.Windows.Controls.WebBrowser> 控件的 XBAP，则在 Internet 区域中，将会引发 <xref:System.Security.SecurityException>。 这是由于 WPF 安全策略造成的。  
@@ -220,7 +220,7 @@ ms.locfileid: "72582415"
   
  但是，APTCA 程序集在安装到 GAC 后可能会出现安全漏洞。 一旦发现安全漏洞，程序集发布者可以生成安全更新来修复现有安装上的问题，还可以阻止问题发现后进行的安装操作。 其中一个更新选项是卸载程序集，即使这可能中断使用该程序集的其他完全受信任的客户端应用程序。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 提供了一种机制，通过该机制，可以为部分受信任的 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] 禁用 APTCA 程序集，而无需卸载 APTCA 程序集。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 提供了一种机制，可在不卸载 APTCA 程序集的情况下为部分受信任的 Xbap 禁用 APTCA 程序集。  
   
  若要禁用 APTCA 程序集，必须创建一个特殊的注册表项：  
   
@@ -258,7 +258,7 @@ ms.locfileid: "72582415"
  使用此设置，外部内容将加载到不同于承载应用程序的进程的进程中。 此进程被限制在默认 Internet 区域权限集中，从而有效地将其与承载应用程序和客户端计算机隔离。  
   
 > [!NOTE]
-> 尽管从独立应用程序中的 <xref:System.Windows.Navigation.NavigationWindow> 或 <xref:System.Windows.Controls.Frame> 导航到松散 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 文件的操作是基于 WPF 浏览器宿主基础结构（涉及 Presentationhost.exe 进程）实现的，但安全级别略小于内容直接在 Internet Explorer 中的 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 和 [!INCLUDE[win7](../../../includes/win7-md.md)] 上加载（这仍是通过 Presentationhost.exe）。 这是因为使用 Web 浏览器的独立 WPF 应用程序不提供 Internet Explorer 的额外“保护模式”安全功能。  
+> 尽管从独立应用程序中的 <xref:System.Windows.Navigation.NavigationWindow> 或 <xref:System.Windows.Controls.Frame> 导航到松散 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 文件的操作是基于 WPF 浏览器宿主基础结构（涉及 Presentationhost.exe 进程）实现的，但安全级别略微小于内容直接在 Internet Explorer 中的 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 和 [!INCLUDE[win7](../../../includes/win7-md.md)] 上加载（这仍通过 Presentationhost.exe）。 这是因为使用 Web 浏览器的独立 WPF 应用程序不提供 Internet Explorer 的额外“保护模式”安全功能。  
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>用于开发可提高安全性的 WPF 应用程序的资源  

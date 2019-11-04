@@ -2,12 +2,12 @@
 title: dotnet new 命令
 description: dotnet new 命令可根据指定模板新建 .NET Core 项目。
 ms.date: 05/06/2019
-ms.openlocfilehash: b61b5fd53f470c30b636026fa19ebfad834d6354
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c9529e135f48c80f445c91038294a3e7266486f1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117662"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420481"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -776,6 +776,6 @@ console、angular、react、reactredux、razorclasslib
 ## <a name="see-also"></a>请参阅
 
 - [dotnet new 自定义模板](custom-templates.md)
-- [创建 dotnet new 自定义模板](../tutorials/create-custom-template.md)
+- [创建 dotnet new 自定义模板](../tutorials/cli-templates-create-item-template.md)
 - [dotnet/dotnet-template-samples GitHub 存储库](https://github.com/dotnet/dotnet-template-samples)
 - [dotnet new 可用模板](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

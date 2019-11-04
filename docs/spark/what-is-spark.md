@@ -4,20 +4,20 @@ description: 了解 Apache Spark 和大数据方案。
 ms.date: 10/15/2019
 ms.topic: conceptual
 ms.custom: mvc
-ms.openlocfilehash: 187a37897c23809d91820bd79b476e775fb5b99b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 653f355d09a045feabb3dee0f5737cb691cf2dc4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583483"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458179"
 ---
 # <a name="what-is-apache-spark"></a>什么是 Apache Spark？
 
-[Apache Spark](https://spark.apache.org/) 是一种开放源代码并行处理框架，支持使用内存中处理来提升大数据分析应用程序的性能。 大数据解决方案旨在处理对传统数据库来说太大或太复杂的数据。 Spark 处理内存中的大量数据，这比基于磁盘的替代方法要快得多。 
+[Apache Spark](https://spark.apache.org/) 是一种开放源代码并行处理框架，支持使用内存中处理来提升大数据分析应用程序的性能。 大数据解决方案旨在处理对传统数据库来说太大或太复杂的数据。 Spark 处理内存中的大量数据，这比基于磁盘的替代方法要快得多。
 
 ## <a name="common-big-data-scenarios"></a>常见的大数据方案
 
-如果需要存储和处理大量数据、转换非结构化数据或处理流数据，则可以考虑使用大数据体系结构。 Spark 是一种通用的分布式处理引擎，可用于多个大数据方案。 
+如果需要存储和处理大量数据、转换非结构化数据或处理流数据，则可以考虑使用大数据体系结构。 Spark 是一种通用的分布式处理引擎，可用于多个大数据方案。
 
 ### <a name="extract-transform-and-load-etl"></a>提取、转换和加载 (ETL)
 
@@ -33,7 +33,7 @@ ms.locfileid: "72583483"
 
 ### <a name="real-time-data-stream-processing"></a>实时数据流处理
 
-流数据（或实时数据）是移动数据。 IoT 设备、网络日志和点击流中的遥测都是流数据示例。 可以处理实时数据以提供有用的信息，例如地理空间分析、远程监视和异常情况检测。 就像关系数据一样，可以在将数据移动到输出接收器之前筛选、聚合和准备流数据。 Apache Spark 通过 [Spark Streaming](https://spark.apache.org/streaming/) 支持[实时数据流处理](/azure/architecture/data-guide/big-data/real-time-processing)。 
+流数据（或实时数据）是移动数据。 IoT 设备、网络日志和点击流中的遥测都是流数据示例。 可以处理实时数据以提供有用的信息，例如地理空间分析、远程监视和异常情况检测。 就像关系数据一样，可以在将数据移动到输出接收器之前筛选、聚合和准备流数据。 Apache Spark 通过 [Spark Streaming](https://spark.apache.org/streaming/) 支持[实时数据流处理](/azure/architecture/data-guide/big-data/real-time-processing)。
 
 ### <a name="batch-processing"></a>批处理
 

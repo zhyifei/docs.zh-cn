@@ -2,12 +2,12 @@
 title: 静态解析的类型参数
 description: 了解如何使用在编译F#时（而不是在运行时）替换为实际类型的静态解析的类型参数。
 ms.date: 05/16/2016
-ms.openlocfilehash: bc3310192cdaa5ae4862b8aee46b6152f61da38a
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 017c18dd3caaa484ddc653557573f548e3224ca0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71082930"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425000"
 ---
 # <a name="statically-resolved-type-parameters"></a>静态解析的类型参数
 
@@ -21,7 +21,7 @@ ms.locfileid: "71082930"
 
 ## <a name="remarks"></a>备注
 
-在F#语言中，有两种不同类型的类型参数。 第一种类型是标准泛型类型参数。 它们由撇号（'）表示，如和`'T` `'U`中所示。 它们等效于其他 .NET Framework 语言的泛型类型参数。 另一种类型是静态解析的，它由一个插入符号指示， `^T`如`^U`和中所示。
+在F#语言中，有两种不同类型的类型参数。 第一种类型是标准泛型类型参数。 它们由撇号（'）表示，如 `'T` 和 `'U`中。 它们等效于其他 .NET Framework 语言的泛型类型参数。 另一种类型是静态解析的，它由一个插入符号表示，如 `^T` 和 `^U`中所示。
 
 静态解析的类型参数主要用于与成员约束结合使用，后者是允许您指定类型参数必须具有特定成员才能使用的约束。 无法使用常规泛型类型参数创建这种约束。
 
@@ -29,12 +29,12 @@ ms.locfileid: "71082930"
 
 |功能|泛型|静态解析|
 |-------|-------|-------------------|
-|语法|`'T`， `'U`|`^T`， `^U`|
+|语法|`'T`，`'U`|`^T`，`^U`|
 |解决时间|运行时|编译时间|
 |成员约束|不能与成员约束一起使用。|可以与成员约束一起使用。|
 |代码生成|具有标准泛型类型参数的类型（或方法）导致生成单个泛型类型或方法。|生成类型和方法的多个实例化，每个实例对应于所需的类型。|
 |与类型一起使用|可用于类型。|不能用于类型。|
-|与内联函数一起使用|不是。 不能使用标准泛型类型参数参数化内联函数。|可以。 静态解析的类型参数不能用于非内联的函数或方法。|
+|与内联函数一起使用|否。 不能使用标准泛型类型参数参数化内联函数。|可以。 静态解析的类型参数不能用于非内联的函数或方法。|
 
 许多F#核心库函数（特别是运算符）都有静态解析的类型参数。 这些函数和运算符是内联的，为数值计算生成了高效的代码生成。
 
@@ -42,7 +42,7 @@ ms.locfileid: "71082930"
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet401.fs)]
 
-的已解析类型`(+@)`基于`(+)`和`(*)`的使用，这两个均导致类型推理推断静态解析的类型参数上的成员约束。 解析后的类型（如F#解释器中所示）如下所示。
+`(+@)` 的解析类型基于 `(+)` 和 `(*)`的使用，这两种方法都会导致类型推理推断静态解析的类型参数上的成员约束。 解析后的类型（如F#解释器中所示）如下所示。
 
 ```fsharp
 ^a -> ^c -> ^d
@@ -62,7 +62,7 @@ when (^a or ^b) : (static member ( + ) : ^a * ^b -> ^d) and
 ```fsharp
 let inline konst x _ = x
 
-type CFunctor() = 
+type CFunctor() =
     static member inline fmap (f: ^a -> ^b, a: ^a list) = List.map f a
     static member inline fmap (f: ^a -> ^b, a: ^a option) =
         match a with

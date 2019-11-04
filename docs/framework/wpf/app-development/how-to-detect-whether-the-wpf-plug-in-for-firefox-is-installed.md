@@ -1,5 +1,5 @@
 ---
-title: 如何：检测是否安装了适用于 Firefox 的 WPF 插件
+title: 如何：检测是否已安装 Firefox 的 WPF 插件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - plug-in for Firefox [WPF]
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - Firefox [WPF], detecting installation
 - detecting whether the WPF plug-in for Firefox is installed [WPF]
 ms.assetid: 5f839373-e3fb-44f1-88ad-4a0761f02189
-ms.openlocfilehash: f84a0a2af43931b3ada1f674390ec5d841b79a1c
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: fdc7b516c316c7efc7056b549baf43191a5aedd1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690431"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423751"
 ---
-# <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a>如何：检测是否安装了适用于 Firefox 的 WPF 插件
+# <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a>如何：检测是否已安装 Firefox 的 WPF 插件
 
-Windows Presentation Foundation (WPF) Firefox 的插件使[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]和松散 XAML 文件 Mozilla Firefox 浏览器中运行。 本主题提供了用 HTML 和 JavaScript，管理员可以用于确定是否已安装 Firefox 的插件的 WPF 编写的脚本。
+用于 Firefox 的 Windows Presentation Foundation （WPF）插件使得 XAML 浏览器应用程序（Xbap）和松散 XAML 文件可在 Mozilla Firefox 浏览器中运行。 本主题提供以 HTML 和 JavaScript 编写的脚本，管理员可以使用该脚本来确定是否安装了 Firefox 的 WPF 插件。
 
 > [!NOTE]
-> 有关安装的详细信息，部署和检测.NET Framework，请参阅[安装面向开发人员的.NET Framework](../../install/guide-for-developers.md)。
+> 有关安装、部署和检测 .NET Framework 的详细信息，请参阅[为开发人员安装 .NET Framework](../../install/guide-for-developers.md)。
 
 ## <a name="example"></a>示例
 
-安装.NET Framework 3.5 时，客户端计算机配置与 WPF 插件 firefox。 以下示例脚本检查 firefox 的 WPF 插件，然后显示相应的状态消息。
+安装 .NET Framework 3.5 后，将使用用于 Firefox 的 WPF 插件配置客户端计算机。 下面的示例脚本检查 Firefox 的 WPF 插件，并显示相应的状态消息。
 
 ```html
 <HTML>
@@ -56,11 +56,11 @@ Windows Presentation Foundation (WPF) Firefox 的插件使[!INCLUDE[TLA#tla_xbap
 </HTML>
 ```
 
-如果 Firefox 的 wpf 插件检查成功，显示以下状态消息：
+如果 Firefox 的 WPF 插件的检查成功，则会显示以下状态消息：
 
 `The WPF plug-in for Firefox is installed.`
 
-否则，会显示以下状态消息：
+否则，将显示以下状态消息：
 
 `The WPF plug-in for Firefox is not installed. Please install or reinstall the .NET Framework 3.5.`
 

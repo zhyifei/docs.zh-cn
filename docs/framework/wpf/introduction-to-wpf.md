@@ -6,12 +6,12 @@ ms.assetid: b8d7cf43-d1f2-4f3d-adb0-4f3a6428edc0
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 35290796b89262cafd8bce63bb97da203853f569
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: d8ea49bbe400c5ec478a94ad7c1adb759af28abb
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72921028"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454194"
 ---
 # <a name="wpf-overview"></a>WPF 概述
 
@@ -612,7 +612,7 @@ WPF 控件的默认用户界面通常是从其他控件和形状构造的。 例
 
 资源和资源字典是 WPF 主题和皮肤支持的基础。
 
-有关详细信息，请参阅[资源](advanced/xaml-resources.md)。
+有关详细信息，请参阅[资源](../../desktop-wpf/fundamentals/xaml-resources-define.md)。
 
 ### <a name="custom-controls"></a>自定义控件
 

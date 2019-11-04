@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 9efd7a7581a1e8bd2cb5f544edd1b4c965aa1866
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 54b5f97aca131f52b9b5d9f54d7fa5ec00ba3d5b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395940"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423674"
 ---
 # <a name="systemiopipelines-in-net"></a>.NET 中的 System.IO.Pipelines
 
@@ -311,8 +311,8 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 之前的代码：
 
-* 使用 <xref:System.IO.Pipelines.PipeWriter.GetSpan%2A> 从 `PipeWriter` 请求至少 5 个字节的缓冲区。
-* 将 ASCII 字符串 `"Hello"` 的字节写入返回的 `Span<byte>`。
+* 使用 <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A> 从 `PipeWriter` 请求至少 5 个字节的缓冲区。
+* 将 ASCII 字符串 `"Hello"` 的字节写入返回的 `Memory<byte>`。
 * 调用 <xref:System.IO.Pipelines.PipeWriter.Advance%2A> 以指示写入缓冲区的字节数。
 * 刷新 `PipeWriter`，以便将字节发送到基础设备。
 

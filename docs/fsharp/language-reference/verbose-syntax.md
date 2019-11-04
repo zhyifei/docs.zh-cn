@@ -2,16 +2,16 @@
 title: 详细语法
 description: 了解F#编程语言中的详细和轻型语法之间的差异。
 ms.date: 05/16/2016
-ms.openlocfilehash: d2459da60bba5d88bd23615c8bf09ba64f7c22c4
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 575585b201acc1366980cfc5cf523c4117259084
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214035"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421180"
 ---
 # <a name="verbose-syntax"></a>详细语法
 
-以下语言提供了两种形式的语法： " F# *详细语法*" 和 "*轻量语法*"。 详细语法并不常用，但优点在于缩进不太敏感。 轻型语法较短，并使用缩进来表示构造的开始和结束，而不是使用`begin` `in`、 `end`、等其他关键字。 默认语法为轻型语法。 本主题介绍未启用轻型F#语法时构造的语法。 详细语法始终处于启用状态，因此即使启用了轻型语法，仍可对某些构造使用详细语法。 您可以使用`#light "off"`指令禁用轻型语法。
+以下语言提供了两种形式的语法： " F# *详细语法*" 和 "*轻量语法*"。 详细语法并不常用，但优点在于缩进不太敏感。 轻量语法较短，并使用缩进来表示构造的开始和结束，而不是使用其他关键字，如 `begin`、`end`、`in`等。 默认语法为轻型语法。 本主题介绍未启用轻型F#语法时构造的语法。 详细语法始终处于启用状态，因此即使启用了轻型语法，仍可对某些构造使用详细语法。 您可以使用 `#light "off"` 指令禁用轻型语法。
 
 ## <a name="table-of-constructs"></a>构造表
 
@@ -44,7 +44,7 @@ ms.locfileid: "71214035"
 </tr>
 <tr><td>
 
-嵌套`let`绑定
+嵌套 `let` 绑定
 
 </td><td>
 
@@ -354,4 +354,4 @@ module <module-name> =
 
 - [F# 语言参考](index.md)
 - [编译器指令](compiler-directives.md)
-- [代码格式设置准则](code-formatting-guidelines.md)
+- [代码格式设置准则](../style-guide/formatting.md)

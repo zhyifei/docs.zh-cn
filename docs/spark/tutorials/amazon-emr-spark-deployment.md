@@ -4,12 +4,12 @@ description: 了解如何将 .NET for Apache Spark 应用程序部署到 Amazon 
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 0eea5a40ae4643c7447e2f7281dc8b0db609ca79
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a1ff1ba4d5e855e0ac36b99b0c9d63adfaaaac1e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117944"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454931"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>将 .NET for Apache Spark 应用程序部署到 Amazon EMR Spark
 
@@ -71,7 +71,7 @@ Microsoft.Spark.Worker 是后端组件，位于 Spark 群集的单个工作器�
 
 [Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html) 是一个托管群集平台，可简化 AWS 上运行的大数据框架。
 
-> [!NOTE] 
+> [!NOTE]
 > Amazon EMR Spark 基于 Linux。 因此，如果要将应用部署到 Amazon EMR Spark，请确保应用与 .NET Standard 兼容，并且使用 [.NET Core 编译器](https://dotnet.microsoft.com/download)编译应用。
 
 ### <a name="deploy-microsoftsparkworker"></a>部署 Microsoft.Spark.Worker

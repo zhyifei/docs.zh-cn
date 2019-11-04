@@ -2,21 +2,21 @@
 title: WMI 提供程序
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 89e2d370919519953e714cb0d0020587b3f53c9d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dd24a6d270a0bd9012bbda2a53913167c9697bc5
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038515"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424516"
 ---
 # <a name="wmi-provider"></a>WMI 提供程序
-此示例演示如何使用 WCF 中内置的 Windows Management Instrumentation (WMI) 提供程序在运行时从 Windows Communication Foundation (WCF) 服务中收集数据。 另外，此示例还演示如何向服务添加用户定义的 WMI 对象。 该示例将激活[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)的 WMI 提供程序, 并演示如何在运行时从`ICalculator`服务中收集数据。  
+此示例演示如何使用 WCF 中内置的 Windows Management Instrumentation （WMI）提供程序在运行时从 Windows Communication Foundation （WCF）服务中收集数据。 另外，此示例还演示如何向服务添加用户定义的 WMI 对象。 该示例将激活[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)的 WMI 提供程序，并演示如何在运行时从 `ICalculator` 服务收集数据。  
   
- WMI 是 Microsoft 基于 Web 的企业管理 (WBEM) 标准的实现。 有关 WMI SDK 的详细信息, 请参阅[Windows Management Instrumentation](/windows/desktop/WmiSdk/wmi-start-page)。 WBEM 是有关应用程序如何向外部管理工具公开管理规范的行业标准。  
+ WMI 是 Microsoft 基于 Web 的企业管理 (WBEM) 标准的实现。 有关 WMI SDK 的详细信息，请参阅[Windows Management Instrumentation](/windows/desktop/WmiSdk/wmi-start-page)。 WBEM 是有关应用程序如何向外部管理工具公开管理规范的行业标准。  
   
- WCF 实现一个 WMI 提供程序, 该提供程序在运行时通过与 WBEM 兼容的接口公开检测。 管理工具可以在运行时通过接口连接至服务。 WCF 公开服务的属性, 如地址、绑定、行为和侦听器。  
+ WCF 实现一个 WMI 提供程序，该提供程序在运行时通过与 WBEM 兼容的接口公开检测。 管理工具可以在运行时通过接口连接至服务。 WCF 公开服务的属性，如地址、绑定、行为和侦听器。  
   
- 在应用程序的配置文件中激活内置 WMI 提供程序。 这可以通过`wmiProviderEnabled` [ \<system.servicemodel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)部分中的[ \<诊断 >](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)的属性完成, 如下面的示例配置所示:  
+ 在应用程序的配置文件中激活内置 WMI 提供程序。 这是通过[\<system.servicemodel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)部分中[\<诊断 >](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)的 `wmiProviderEnabled` 属性完成的，如下面的示例配置所示：  
   
 ```xml  
 <system.serviceModel>  
@@ -32,19 +32,19 @@ ms.locfileid: "70038515"
  将 WMI 对象添加到服务，可以显示用户定义的信息以及内置的 WMI 提供程序信息。 这可以通过使用 Installutil.exe 应用程序将服务方案发布到 WMI 来实现。 本主题末尾的安装说明介绍了如何实现上述操作的说明以及更详细的信息。  
   
 ## <a name="accessing-wmi-information"></a>访问 WMI 信息  
- 可以采用多种不同方式访问 WMI 数据。 Microsoft 为脚本、Visual Basic 应用程序、 C++应用程序和 .NET Framework (https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi) ) 提供 WMI api。  
+ 可以采用多种不同方式访问 WMI 数据。 Microsoft 为脚本、Visual Basic 应用程序、 C++应用程序和 .NET Framework （ https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi) 提供 WMI api。  
   
  此示例使用两个 Java 脚本：一个脚本用于枚举在计算机上运行的服务及其某些属性，另一个脚本用于查看用户定义的 WMI 数据。 该脚本打开与 WMI 提供程序的连接、分析数据并显示所收集的数据。  
   
  启动示例以创建 WCF 服务的运行实例。 在该服务运行的同时，在命令提示符处使用以下命令运行每个 Java 脚本：  
   
-```  
+```console  
 cscript EnumerateServices.js  
 ```  
   
  该脚本访问服务中包含的规范，并生成下面的输出：  
   
-```  
+```console  
 Microsoft (R) Windows Script Host Version 5.6  
 Copyright © Microsoft Corporation 1996-2001. All rights reserved.  
   
@@ -102,13 +102,13 @@ Copyright © Microsoft Corporation 1996-2001. All rights reserved.
   
  接下来，运行第二个 Java 脚本可以显示用户定义的 WMI 数据：  
   
-```  
+```console  
 cscript EnumerateCustomObjects.js  
 ```  
   
  该脚本访问服务中包含的用户定义的规范，并生成下面的输出：  
   
-```  
+```console 
 1 WMIObject(s) found.  
 |-PID:           30285bfd-9d66-4c4e-9be2-310499c5cef5  
 |-InstanceId:    3839  
@@ -127,10 +127,10 @@ cscript EnumerateCustomObjects.js
   
 3. 通过在宿主目录中的 service.dll 文件上运行 InstallUtil.exe（InstallUtil.exe 的默认位置是“%WINDIR%\Microsoft.NET\Framework\v4.0.30319”），可以将服务方案发布到 WMI。 只有在对 service.dll 文件进行了更改的情况下才需要执行此步骤。
   
-4. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+4. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
   
     > [!NOTE]
-    > 如果在安装 ASP.NET 之后安装了 WCF, 则可能需要运行 "% WINDIR% \Net\Framework\v3.0\Windows Communication Foundation\servicemodelreg.exe "-r-x, 为 ASPNET 帐户授予发布 WMI 对象的权限。  
+    > 如果在安装 ASP.NET 之后安装了 WCF，则可能需要运行 "% WINDIR% \Net\Framework\v3.0\Windows Communication Foundation\servicemodelreg.exe "-r-x，为 ASPNET 帐户授予发布 WMI 对象的权限。  
   
 5. 使用下面的命令可以查看通过 WMI 显示的示例：`cscript EnumerateServices.js` 或 `cscript EnumerateCustomObjects.js`。  
   
@@ -139,7 +139,7 @@ cscript EnumerateCustomObjects.js
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   

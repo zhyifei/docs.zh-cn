@@ -9,12 +9,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: 3ba52fccc0521df1a0bb5b6177575dc5d2152248
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f1bfbeccaf6c3916a591f6447760fa01c3f8a3b6
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633815"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422354"
 ---
 # <a name="select-clause-c-reference"></a>select 子句（C# 参考）
 
@@ -24,11 +24,11 @@ ms.locfileid: "65633815"
 
 [!code-csharp[cscsrefQueryKeywords#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Select.cs#8)]  
 
-`select` 子句生成的序列的类型确定查询变量 `queryHighScores` 的类型。 在最简单的情况下，`select` 子句仅指定范围变量。 这将导致返回的序列包含与数据源类型相同的元素。 有关详细信息，请参阅 [LINQ 查询操作中的类型关系](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)。 但是，`select` 子句还提供了强大的机制，用于将源数据转换（或投影）为新类型。 有关详细信息，请参阅[使用 LINQ 进行数据转换 (C#)](../../programming-guide/concepts/linq/data-transformations-with-linq.md)。
+`select` 子句生成的序列的类型确定查询变量 `queryHighScores` 的类型。 在最简单的情况下，`select` 子句仅指定范围变量。 这将导致返回的序列包含与数据源类型相同的元素。 有关详细信息，请参阅 [LINQ 查询操作中的类型关系](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)。 但是，`select` 子句还提供了强大的机制，用于将源数据转换（或投影  ）为新类型。 有关详细信息，请参阅[使用 LINQ 进行数据转换 (C#)](../../programming-guide/concepts/linq/data-transformations-with-linq.md)。
 
 ## <a name="example"></a>示例
 
-以下示例展示 `select` 子句可能采用的所有不同窗体。 在每个查询中，请注意 `select` 子句和查询变量（`studentQuery1`、`studentQuery2` 等）类型之间的关系。
+以下示例展示 `select` 子句可能采用的所有不同窗体。 在每个查询中，请注意 `select` 子句和查询变量  （`studentQuery1`、`studentQuery2` 等）类型之间的关系。
 
 [!code-csharp[cscsrefQueryKeywords#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Select.cs#9)]
 
@@ -45,5 +45,5 @@ ms.locfileid: "65633815"
 - [from 子句](from-clause.md)
 - [分部（方法）（C# 参考）](partial-method.md)
 - [匿名类型](../../programming-guide/classes-and-structs/anonymous-types.md)
-- [LINQ 查询表达式](../../programming-guide/linq-query-expressions/index.md)
-- [C# 中的 LINQ 入门](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [C# 中的 LINQ](../../linq/index.md)
+- [C# 中的 LINQ 入门](/dotnet/csharp/programming-guide/concepts/linq/)
