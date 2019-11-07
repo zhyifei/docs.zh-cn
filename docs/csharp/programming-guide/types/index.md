@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 5c5586c2ee41b12e9b5706603b4c2f62207566ed
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7d101e72a94ec1fecf44d4c883efb4f74e6d1d88
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417722"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739212"
 ---
 # <a name="types-c-programming-guide"></a>类型（C# 编程指南）
 
@@ -174,11 +174,11 @@ stringList.Add(4);
 
 在某些情况下，为不打算在方法边界外存储或传递的各组简单的相关值创建已命名的类型并不方便。 因此，可以创建*匿名类型*。 有关详细信息，请参阅[匿名类型](../classes-and-structs/anonymous-types.md)。
 
-普通值类型不能包含值 [null](../../language-reference/keywords/null.md)。 不过，可以在类型后面附加 `?`，创建可以为 null 的值类型。 例如，`int?` 是还可以包含值 [null](../../language-reference/keywords/null.md) 的 `int` 类型。 可以为 null 的值类型是泛型结构类型 <xref:System.Nullable%601?displayProperty=nameWithType> 的实例。 在将数据传入和传出数据库（数值可能为 null）时，可以为 null 的值类型特别有用。 有关详细信息，请参阅[可以为 null 的值类型](../nullable-types/index.md)。
+普通值类型不能包含值 [null](../../language-reference/keywords/null.md)。 不过，可以在类型后面附加 `?`，创建可以为 null 的值类型。 例如，`int?` 是还可以包含值 [null](../../language-reference/keywords/null.md) 的 `int` 类型。 可以为 null 的值类型是泛型结构类型 <xref:System.Nullable%601?displayProperty=nameWithType> 的实例。 在将数据传入和传出数据库（数值可能为 null）时，可以为 null 的值类型特别有用。 有关详细信息，请参阅[可以为 null 的值类型](../../language-reference/builtin-types/nullable-value-types.md)。
 
 ## <a name="related-sections"></a>相关章节
 
-相关详细信息，请参阅以下主题：
+有关详细信息，请参阅下列主题：
 
 - [强制转换和类型转换](./casting-and-type-conversions.md)
 

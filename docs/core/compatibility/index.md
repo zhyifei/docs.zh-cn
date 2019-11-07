@@ -2,12 +2,12 @@
 title: 评估 NET Core 中的中断性变更
 description: 了解 .NET Core 为开发人员保持各 .NET 版本兼容性所使用的方法。
 ms.date: 06/10/2019
-ms.openlocfilehash: a4a1b5c4e81cec783248c6110b0af9844eb3f4af
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: f4e18a17f58452c9325f36390626ae690f5ed777
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416680"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739349"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>评估 .NET Core 中的中断性变更
 
@@ -52,7 +52,7 @@ ms.locfileid: "73416680"
 - **✔️ 将 [struct](../../csharp/language-reference/keywords/struct.md) 类型更改为 `readonly struct` 类型**
 
   请注意，不允许将 `readonly struct` 类型更改为 `struct` 类型。
-  
+
 - **✔️ 没有可访问的（公共或受保护的）构造函数时，向类型添加 [sealed](../../csharp/language-reference/keywords/sealed.md) 或 [abstract](../../csharp/language-reference/keywords/abstract.md) 关键字** 
 
 - **✔️ 扩展类型的可见性**
@@ -138,9 +138,9 @@ ms.locfileid: "73416680"
 - **❌ 重命名参数（包括更改其大小写）**
 
   鉴于以下两个原因将此视为中断性变更：
-  
+
   - 它将中断后期绑定方案，如 Visual Basic 中的后期绑定功能和 C# 的 [dynamic](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type)。
-  
+
   - 如果开发人员使用[命名参数](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments)，它将中断[源兼容性](categories.md#source-compatibility)。
 
 - **❌ 从 `ref` 返回值更改为 `ref readonly` 返回值**
@@ -153,9 +153,9 @@ ms.locfileid: "73416680"
 
   通常这不属于中断性变更，因为 C# 编译器通常会发出 [callvirt](<xref:System.Reflection.Emit.OpCodes.Callvirt>) 中间语言 (IL) 指令来调用非虚拟方法（`callvirt` 执行 null 检查，而常规调用不会执行此检查），鉴于下列原因此行为非恒定：
   - C# 并非 .NET 面向的唯一语言。
-  
+
   - 目标方法为非虚拟且可能非 null 时（如通过 [?. null 传播运算符](../../csharp/language-reference/operators/member-access-operators.md#null-conditional-operators--and-)访问的方法），C# 编译器逐渐尝将 `callvirt` 优化为常规调用。
-  
+
   使方法成为虚拟方法意味着使用者代码通常最终要以非虚拟方式调用它。
 
 - **❌ 将 [virtual](../../csharp/language-reference/keywords/virtual.md) 关键字添加到成员**
@@ -227,7 +227,7 @@ ms.locfileid: "73416680"
 
 - ❓ 关于输入分析和新异常引发的变更（尽管本文档未指定分析行为） 
 
-### <a name="exceptions"></a>例外
+### <a name="exceptions"></a>异常
 
 - **✔️ 引发派生程度高于现有异常的异常**
 
@@ -260,7 +260,7 @@ ms.locfileid: "73416680"
 
 - **❌ 在上文未列出的任何其他的情况下删除异常**
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 - **✔️ 更改不可观测的属性的值 **
 

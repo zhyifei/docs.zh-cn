@@ -2,12 +2,12 @@
 title: 操作指南（C# 指南）
 description: 快速提示及重点短代码示例集合
 ms.date: 12/20/2017
-ms.openlocfilehash: f764bd0183e3881bfb81ebda7d3c7dd49a4cbdde
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 855ea90d22174c2b7c0b53a526c47a5edbe5496d
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591612"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736889"
 ---
 # <a name="how-to-c"></a>操作指南 (C#)
 
@@ -65,8 +65,8 @@ ms.locfileid: "71591612"
 - [将字符串转换为数字](../programming-guide/types/how-to-convert-a-string-to-a-number.md)。
 - [使用模式匹配、`as` 和 `is` 运算符安全强制转换为其他类型](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)。
 - [定义自定义类型转换](../language-reference/operators/user-defined-conversion-operators.md)。
-- [确定类型是否为可为 null 的值类型](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md)。
-- [在可为 null 和不可为 null 的值类型之间转换](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-value-type-to-an-underlying-type)。
+- [确定类型是否为可为 null 的值类型](../language-reference/builtin-types/nullable-value-types.md#how-to-identify-a-nullable-value-type)。
+- [在可为 null 和不可为 null 的值类型之间转换](../language-reference/builtin-types/nullable-value-types.md#conversion-from-a-nullable-value-type-to-an-underlying-type)。
 
 ## <a name="equality-and-ordering-comparisons"></a>相等比较和排序比较
 
