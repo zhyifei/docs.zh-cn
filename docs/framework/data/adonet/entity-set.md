@@ -2,15 +2,15 @@
 title: 实体集
 ms.date: 03/30/2017
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
-ms.openlocfilehash: b74d6bf373925ac90a998e2c4425c053e533f82a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5a2465801c270813dd7bca2144d05fa202571153
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783992"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738432"
 ---
 # <a name="entity-set"></a>实体集
-*实体集*是某个[实体类型](entity-type.md)的实例和从该实体类型派生的任何类型的实例的逻辑容器。 （有关派生类型的信息，请[参阅实体数据模型：继承](entity-data-model-inheritance.md)。）实体类型与实体集之间的关系类似于关系数据库中行与表之间的关系：与行类似，实体类型描述数据结构，而与表类似，实体集包含给定结构的实例。 实体集不是一种数据建模构造，它没有描述数据结构。 相反，实体集提供了一种承载或存储环境构造（例如公共语言运行库或 SQL Server 数据库）来分组实体类型实例，以便可以将它们映射到某个数据存储区。  
+*实体集*是某个[实体类型](entity-type.md)的实例和从该实体类型派生的任何类型的实例的逻辑容器。 （有关派生类型的信息，请参阅[实体数据模型：继承](entity-data-model-inheritance.md)。）实体类型与实体集之间的关系类似于关系数据库中行与表之间的关系：与行类似，实体类型描述数据结构，而与表类似，实体集包含给定结构的实例。 实体集不是一种数据建模构造，它没有描述数据结构。 相反，实体集提供了一种承载或存储环境构造（例如公共语言运行库或 SQL Server 数据库）来分组实体类型实例，以便可以将它们映射到某个数据存储区。  
   
  实体集是在[实体容器](entity-container.md)中定义的，实体容器是实体集和[关联集](association-set.md)的逻辑分组。  
   
@@ -32,11 +32,11 @@ ms.locfileid: "70783992"
   
  ![具有三个实体类型的示例模型](./media/entity-set/example-model-three-entity-types.gif)  
   
- 下图显示了基于上面所示的概念模型的两个实体集（`Books` 和 `Publishers`）和一个关联集 (`PublishedBy`)。 实体集中的`Books` Bi 表示运行时`Book`实体类型的实例。 同样，Pj 表示`Publisher` `Publishers`实体集中的实例。 BiPj 表示`PublishedBy` `PublishedBy`关联集中关联的实例。  
+ 下图显示了基于上面所示的概念模型的两个实体集（`Books` 和 `Publishers`）和一个关联集 (`PublishedBy`)。 `Books` 实体集中的 Bi 表示运行时 `Book` 实体类型的实例。 同样，Pj 表示 `Publishers` 实体集中的 `Publisher` 实例。 BiPj 表示 `PublishedBy` 关联集中 `PublishedBy` 关联的实例。  
   
  ![显示集合示例的屏幕截图。](./media/entity-set/sets-example-association.gif)  
   
- [ADO.NET 实体框架](./ef/index.md)使用一种称为概念架构定义语言（[CSDL](./ef/language-reference/csdl-specification.md)）的域特定语言（DSL）来定义概念模型。 下面的 CSDL 定义了一个实体容器，其中对于上图所示的概念模型中的每个实体类型都有一个实体集。 请注意，每个实体集的名称和实体类型都是使用 XML 特性定义的。  
+ [ADO.NET 实体框架](./ef/index.md)使用一种称为概念架构定义语言（[CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)）的域特定语言（DSL）来定义概念模型。 下面的 CSDL 定义了一个实体容器，其中对于上图所示的概念模型中的每个实体类型都有一个实体集。 请注意，每个实体集的名称和实体类型都是使用 XML 特性定义的。  
   
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   

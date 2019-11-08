@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 2e975745c2124ab2834eb82ed9b94563b44642b1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c18cce1898b8834c20d5e4af70c1b010e4b96e11
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453685"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740899"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF 中的代码隐藏和 XAML
 <a name="introduction"></a>代码隐藏是一项术语，用于描述在对 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页进行标记编译时与标记定义的对象联接的代码。 本主题介绍代码隐藏的要求，以及 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]中代码的替代内联代码机制。  
@@ -50,7 +50,7 @@ ms.locfileid: "73453685"
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x：Code  
- [x:Code](../../xaml-services/x-code-intrinsic-xaml-type.md)是 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]中定义的指令元素。 `x:Code` 指令元素可以包含内联编程代码。 以内联方式定义的代码可以与同一页上的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 进行交互。 下面的示例说明内联C#代码。 请注意，代码位于 `x:Code` 元素内部，并且代码必须围绕 `<CDATA[`...`]]>` 来转义 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]的内容，以便 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器（解释 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 架构或 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 架构）不会尝试按原义解释内容，[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]。  
+ [x:Code](../../xaml-services/x-code-intrinsic-xaml-type.md)是 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]中定义的指令元素。 `x:Code` 指令元素可以包含内联编程代码。 以内联方式定义的代码可以与同一页上的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 进行交互。 下面的示例说明内联C#代码。 请注意，代码位于 `x:Code` 元素内部，并且代码必须围绕 `<CDATA[`...`]]>` 来转义 XML 的内容，以便 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器（解释 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 架构或 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 架构）不会尝试将内容按原义解释为 XML。  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   

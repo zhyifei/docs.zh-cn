@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 8c650ceab57a46cb6dd396111e7a93163a62299f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 87d5ff67a9e95c5ec5385802d09d667ee8b6e0f9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424944"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740675"
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows 概述
 用户通过 Windows 与 Windows Presentation Foundation （WPF）独立应用程序交互。 窗口的主要用途是托管使数据可视化并使用户能够与数据交互的内容。 独立 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序通过使用 <xref:System.Windows.Window> 类提供其自己的窗口。 本主题介绍了 <xref:System.Windows.Window>，然后介绍在独立应用程序中创建和管理 windows 的基本原理。  
@@ -88,7 +88,7 @@ ms.locfileid: "73424944"
   
  若要使 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 标记文件和代码隐藏文件协同工作，需要满足以下要求：  
   
-- 在标记中，`Window` 元素必须包含 `x:Class` 特性。 在生成应用程序时，标记文件中存在 `x:Class` 会导致 Microsoft 生成引擎（MSBuild）创建从 <xref:System.Windows.Window> 派生的 `partial` 类，并具有 `x:Class` 特性指定的名称。 这需要为 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 架构（`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`）添加 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空间声明。 生成的 `partial` 类实现 `InitializeComponent` 方法，该方法用于注册事件和设置在标记中实现的属性。  
+- 在标记中，`Window` 元素必须包含 `x:Class` 特性。 在生成应用程序时，标记文件中存在 `x:Class` 会导致 Microsoft 生成引擎（MSBuild）创建从 <xref:System.Windows.Window> 派生的 `partial` 类，并具有 `x:Class` 特性指定的名称。 这需要为 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 架构（`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`）添加 XML 命名空间声明。 生成的 `partial` 类实现 `InitializeComponent` 方法，该方法用于注册事件和设置在标记中实现的属性。  
   
 - 在代码隐藏中，类必须是 `partial` 类，该类的名称与标记中 `x:Class` 特性指定的名称相同，并且必须派生自 <xref:System.Windows.Window>。 这允许代码隐藏文件与生成应用程序时为标记文件生成的 `partial` 类相关联（请参阅[生成 WPF 应用程序](building-a-wpf-application-wpf.md)）。  
   

@@ -2,12 +2,12 @@
 title: 实体数据模型：继承
 ms.date: 03/30/2017
 ms.assetid: 42c7ef24-710a-4af9-8493-cd41c399ecb0
-ms.openlocfilehash: 21dbdff63c07dbcdac8de7bf4b3a8e5d0ece7901
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4c4abc371000006d40ede3d904b0437f3f85e3e7
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784078"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738450"
 ---
 # <a name="entity-data-model-inheritance"></a>实体数据模型：继承
 实体数据模型（EDM）支持[实体类型](entity-type.md)的继承。 EDM 中的继承与面向对象的编程语言中的类的继承类似。 与面向对象的语言中的类一样，在概念模型中，您可以定义从另一个实体类型（*基类型*）继承的实体类型（*派生类型*）。 但是，与面向对象编程中的类不同，在概念模型中，派生类型始终继承基类型的所有[属性](property.md)和[导航属性](navigation-property.md)。 不能重写派生类型中的继承属性。  
@@ -18,11 +18,11 @@ ms.locfileid: "70784078"
   
 ## <a name="example"></a>示例  
 
-下图显示了一个具有四个实体类型的概念`Book`模型`FictionBook`： `Publisher`、、 `Author`和。 `FictionBook` 实体类型是一个派生类型，继承自 `Book` 实体类型。 `FictionBook` 类型继承了 `ISBN (Key)`、`Title` 和 `Revision` 属性，并定义了一个名为 `Genre` 的附加属性。  
+下图显示了一个具有四个实体类型的概念模型： `Book`、`FictionBook`、`Publisher`和 `Author`。 `FictionBook` 实体类型是一个派生类型，继承自 `Book` 实体类型。 `FictionBook` 类型继承了 `ISBN (Key)`、`Title` 和 `Revision` 属性，并定义了一个名为 `Genre` 的附加属性。  
   
  ![显示具有四个实体类型的概念模型的关系图。](./media/entity-data-model-inheritance/entity-type-inheritance.gif)  
   
- [ADO.NET 实体框架](./ef/index.md)使用一种称为概念架构定义语言（[CSDL](./ef/language-reference/csdl-specification.md)）的域特定语言（DSL）来定义概念模型。 下面的 CSDL 定义了一个实体类型 `FictionBook`，它继承自 `Book` 类型（如上图中所示）：  
+ [ADO.NET 实体框架](./ef/index.md)使用一种称为概念架构定义语言（[CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)）的域特定语言（DSL）来定义概念模型。 下面的 CSDL 定义了一个实体类型 `FictionBook`，它继承自 `Book` 类型（如上图中所示）：  
   
  [!code-xml[EDM_Example_Model#DerivedType](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books5.edmx#derivedtype)]  
   

@@ -2,19 +2,19 @@
 title: <mexTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 01baba8d-d784-4255-9ea2-7afff1482bf0
-ms.openlocfilehash: d77809ae87a28995b3f37848e19ebddd24942f22
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 91c1d17ef450200c95d7f871e8cbee85ddd260d1
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397756"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738903"
 ---
-# <a name="mextcpbinding"></a>\<mexTcpBinding>
+# <a name="mextcpbinding"></a>\<mexTcpBinding >
 指定用于通过 TCP 进行的 WS-MetadataExchange (WS-MEX) 消息交换的绑定的设置。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+\<system &nbsp; &nbsp;[ **>** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<mexTcpBinding >**  
   
 ## <a name="syntax"></a>语法  
@@ -50,7 +50,7 @@ ms.locfileid: "70397756"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<bindings>](bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
+|[\<bindings >](bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
   
 ## <a name="see-also"></a>请参阅
 
@@ -62,4 +62,4 @@ ms.locfileid: "70397756"
 - [绑定](../../../wcf/bindings.md)
 - [配置系统提供的绑定](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [使用绑定配置服务和客户端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

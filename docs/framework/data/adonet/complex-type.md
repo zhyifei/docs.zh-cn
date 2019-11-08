@@ -2,12 +2,12 @@
 title: Complex Type — 复杂类型
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
-ms.openlocfilehash: 0d9b8efd08cc0dfba5b26a70773b614b0d63d74f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e21ca90a7be8f2bd9be9483c66a1e95e6ba1bee2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786748"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738549"
 ---
 # <a name="complex-type"></a>Complex Type — 复杂类型
 "*复杂类型*" 是用于定义[实体类型](entity-type.md)或其他复杂类型上的丰富的结构化属性的模板。 每个模板都包含以下内容：  
@@ -29,7 +29,7 @@ ms.locfileid: "70786748"
 - 复杂类型不能参与[关联](association-type.md)。 关联的两端都不能是复杂类型，因此不能为复杂类型定义[导航属性](navigation-property.md)。  
   
 ## <a name="example"></a>示例  
- [ADO.NET 实体框架](./ef/index.md)使用一种称为概念架构定义语言（[CSDL](./ef/language-reference/csdl-specification.md)）的域特定语言（DSL）来定义概念模型。 下面的 CSDL 定义了一个复杂类型 Address，它具有基元类型属性 `StreetAddress`、`City`、`StateOrProvince`、`Country` 和 `PostalCode`。  
+ [ADO.NET 实体框架](./ef/index.md)使用一种称为概念架构定义语言（[CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)）的域特定语言（DSL）来定义概念模型。 下面的 CSDL 定义了一个复杂类型 Address，它具有基元类型属性 `StreetAddress`、`City`、`StateOrProvince`、`Country` 和 `PostalCode`。  
   
  [!code-xml[EDM_Example_Model#ComplexTypeExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#complextypeexample)]  
   

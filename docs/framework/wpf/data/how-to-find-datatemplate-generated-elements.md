@@ -8,18 +8,18 @@ helpviewer_keywords:
 - finding DataTemplate elements [WPF]
 - DataTemplate [WPF]
 ms.assetid: bfcd564e-5e9e-451e-8641-a9b5c3cfac90
-ms.openlocfilehash: f9265e3f7b287e1e8c264e89325f7c9649eebe2c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2cb3d73574cd207c0e06abe15f6a953a67cd5c78
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459130"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733426"
 ---
 # <a name="how-to-find-datatemplate-generated-elements"></a>如何：查找由 DataTemplate 生成的元素
 此示例演示如何查找 <xref:System.Windows.DataTemplate>生成的元素。  
   
 ## <a name="example"></a>示例  
- 在此示例中，有一个绑定到某些 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据的 <xref:System.Windows.Controls.ListBox>：  
+ 在此示例中，有一个绑定到一些 XML 数据的 <xref:System.Windows.Controls.ListBox>：  
   
  [!code-xaml[FindGeneratedItems#LB](~/samples/snippets/csharp/VS_Snippets_Wpf/FindGeneratedItems/CSharp/Window1.xaml#lb)]  
   

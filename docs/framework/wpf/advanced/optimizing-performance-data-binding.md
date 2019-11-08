@@ -5,15 +5,15 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: 31fdc3c31c8792fea5f3e71dedb7370ebd63c98e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 9b302be3ed9f01ccd27470063f49966dc7d74708
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458545"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740793"
 ---
 # <a name="optimizing-performance-data-binding"></a>优化性能：数据绑定
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 数据绑定为应用程序呈现数据并与数据交互提供了一种简单且一致的方式。 元素可以绑定到各种数据源中的数据，其形式为 CLR 对象和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 数据绑定为应用程序呈现数据并与数据交互提供了一种简单且一致的方式。 元素可以绑定到各种数据源中的数据，格式为 CLR 对象和 XML。  
   
  本主题提供数据绑定性能方面的建议。  
 
@@ -69,7 +69,7 @@ ms.locfileid: "73458545"
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
 ## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>请勿仅为数据绑定而将 CLR 对象转换为 XML。  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 允许数据绑定到 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 内容;但是，[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 内容的数据绑定比绑定到 CLR 对象的数据要慢。 如果唯一目的是用于数据绑定，请不要将 CLR 对象数据转换为 XML。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 允许数据绑定到 XML 内容;但是，到 XML 内容的数据绑定比绑定到 CLR 对象的数据要慢。 如果唯一目的是用于数据绑定，请不要将 CLR 对象数据转换为 XML。  
   
 ## <a name="see-also"></a>请参阅
 

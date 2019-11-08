@@ -2,20 +2,20 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 1fd0a12b62c416ce71946e59e7868abc7638a274
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 766dab35541465da15ccb1090d41b22332aafd0e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398125"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739049"
 ---
-# <a name="custombinding"></a>\<customBinding>
+# <a name="custombinding"></a>\<customBinding >
 
 提供了对用户消息堆栈的完全控制。
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+\<system &nbsp; &nbsp;[ **>** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<customBinding >**  
 
 ## <a name="syntax"></a>语法
@@ -191,13 +191,13 @@ ms.locfileid: "70398125"
 
 |元素|描述|
 |-------------|-----------------|
-|[\<compositeDuplex>](compositeduplex.md)|对自定义绑定指定双向消息处理。 它与本身不允许进行双工通信的传输（例如，HTTP）一起使用。 与此相反，TCP 本身允许进行双工通信，并且不要求服务在将消息发送回客户端时使用此绑定元素。<br /><br /> 客户端必须公开一个地址，以便服务进行联系和建立连接。 此客户端地址由 `ClientBaseAddress` 属性提供。<br /><br /> 此元素的类型为 <xref:System.ServiceModel.Configuration.CompositeDuplexElement>。|
-|[\<pnrpPeerResolver>](pnrppeerresolver.md)|指定对等名称解析协议 (PNRP) 对等名称解析程序。 此元素的类型为 <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>。|
-|[\<reliableSession>](reliablesession.md)|指定 WS-ReliableMessaging 的设置。 如果将该元素添加到自定义绑定，则生成的通道可支持一次性传递保证。 此元素的类型为 <xref:System.ServiceModel.Configuration.ReliableSessionElement>。|
-|[\<security>](security-of-custombinding.md)|指定自定义绑定的安全选项。 此元素的类型为 <xref:System.ServiceModel.Configuration.SecurityElement>。|
-|[\<sslStreamSecurity>](sslstreamsecurity.md)|指定 SSL 流绑定的安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>。|
-|[\<transactionFlow>](transactionflow.md)|指定绑定支持事务流以及 `transactionProtocol` 属性将要使用的协议。 此元素的类型为 <xref:System.ServiceModel.Configuration.TransactionFlowElement>。|
-|[\<windowsStreamSecurity>](windowsstreamsecurity.md)|指定自定义绑定的流安全选项。 此元素的类型为 <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>。|
+|[\<compositeDuplex >](compositeduplex.md)|对自定义绑定指定双向消息处理。 它与本身不允许进行双工通信的传输（例如，HTTP）一起使用。 与此相反，TCP 本身允许进行双工通信，并且不要求服务在将消息发送回客户端时使用此绑定元素。<br /><br /> 客户端必须公开一个地址，以便服务进行联系和建立连接。 此客户端地址由 `ClientBaseAddress` 属性提供。<br /><br /> 此元素的类型为 <xref:System.ServiceModel.Configuration.CompositeDuplexElement>。|
+|[\<pnrpPeerResolver >](pnrppeerresolver.md)|指定对等名称解析协议 (PNRP) 对等名称解析程序。 此元素的类型为 <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>。|
+|[\<reliableSession >](reliablesession.md)|指定 WS-ReliableMessaging 的设置。 如果将该元素添加到自定义绑定，则生成的通道可支持一次性传递保证。 此元素的类型为 <xref:System.ServiceModel.Configuration.ReliableSessionElement>。|
+|[\<security >](security-of-custombinding.md)|指定自定义绑定的安全选项。 此元素的类型为 <xref:System.ServiceModel.Configuration.SecurityElement>。|
+|[\<Custombinding> sslstreamsecurity> >](sslstreamsecurity.md)|指定 SSL 流绑定的安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>。|
+|[\<transactionFlow >](transactionflow.md)|指定绑定支持事务流以及 `transactionProtocol` 属性将要使用的协议。 此元素的类型为 <xref:System.ServiceModel.Configuration.TransactionFlowElement>。|
+|[\<Windowsstreamsecurity 正在 >](windowsstreamsecurity.md)|指定自定义绑定的流安全选项。 此元素的类型为 <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>。|
 
 ### <a name="parent-elements"></a>父元素
 
@@ -279,11 +279,11 @@ ms.locfileid: "70398125"
 
 下表总结了每层的选项。
 
-|层|选项|必填|
+|层|选项|必需|
 |-----------|-------------|--------------|
 |事务流|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|No|
 |可靠性|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|No|
-|安全性|对称、非对称、传输级|No|
+|安全|对称、非对称、传输级|No|
 |形状更改|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|No|
 |传输升级|SSL 流、Windows 流、对等解析程序|No|
 |编码|文本、二进制、MTOM、自定义|是|
@@ -299,7 +299,7 @@ ms.locfileid: "70398125"
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.Configuration.BindingsSection>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)
 - [绑定](../../../wcf/bindings.md)
 - [扩展绑定](../../../wcf/extending/extending-bindings.md)
 - [自定义绑定](../../../wcf/extending/custom-bindings.md)

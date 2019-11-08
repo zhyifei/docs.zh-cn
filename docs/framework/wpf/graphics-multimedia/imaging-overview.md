@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 7c0168d5ca8b1d3bda709f934e454b2603d37b71
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b60f2871062a12d3bee91a9c6d9883222b3034f4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039885"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733576"
 ---
 # <a name="imaging-overview"></a>图像处理概述
 本主题介绍 Microsoft Windows Presentation Foundation 映像组件。 WPF 映像使开发人员能够显示、转换和格式化图像。  
@@ -165,7 +165,7 @@ ms.locfileid: "73039885"
 ## <a name="image-metadata"></a>图像元数据  
  某些图像文件包含用于描述文件的内容或特征的元数据。 例如，大多数数数字相机创建的图像中包含用于捕获该图像的照相机品牌和型号的元数据。 每个图像格式处理元数据的方式不同，但 WPF 映像为每种支持的图像格式的元数据提供了一种统一的方式。  
   
- 通过 <xref:System.Windows.Media.Imaging.BitmapSource> 对象的 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> 属性提供对元数据的访问。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> 返回一个 <xref:System.Windows.Media.Imaging.BitmapMetadata> 对象，其中包含图像包含的所有元数据。 此数据可以位于一个元数据架构中或位于不同架构的组合中。 WPF 映像支持以下图像元数据架构：可交换图像文件（Exif）、文本（PNG 文本数据）、图像文件目录（IFD）、国际新闻通信委员会（IPTC）和 [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]。  
+ 通过 <xref:System.Windows.Media.Imaging.BitmapSource> 对象的 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> 属性提供对元数据的访问。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> 返回一个 <xref:System.Windows.Media.Imaging.BitmapMetadata> 对象，其中包含图像包含的所有元数据。 此数据可以位于一个元数据架构中或位于不同架构的组合中。 WPF 映像支持以下图像元数据架构：可交换图像文件（Exif）、文本（PNG 文本数据）、图像文件目录（IFD）、国际新闻通信委员会（IPTC）和可扩展元数据平台（XMP）。  
   
  为了简化读取元数据的过程，<xref:System.Windows.Media.Imaging.BitmapMetadata> 提供了多个可以轻松访问的命名属性，如 <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>、<xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>和 <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>。 许多命名属性还可以用于编写元数据。 元数据查询读取器提供对读取元数据的其他支持。 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> 方法用于通过提供字符串查询（例如 *"/app1/exif/"* ）来检索元数据查询读取器。 在下面的示例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> 用于获取存储在 *"/Text/Description"* 位置中的文本。  
   

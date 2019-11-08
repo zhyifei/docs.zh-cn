@@ -2,12 +2,12 @@
 title: 安全数据访问
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 122bdaf8467994f8f56ce3f6c92457be6b8b3155
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c08f41be67f5d87635021e86ba5a5b33af9304cd
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782774"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735279"
 ---
 # <a name="secure-data-access"></a>安全数据访问
 要编写安全的 ADO.NET 代码，必须了解基础数据存储（即数据库）中提供的安全机制。 您还需要考虑应用程序可能包含的其他功能或组件对安全性的影响。  
@@ -55,7 +55,7 @@ ms.locfileid: "70782774"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[异常处理基础知识](../../../standard/exceptions/exception-handling-fundamentals.md)|描述 try/catch/finally 结构化异常处理的基本形式。|  
+|[在 .NET 中处理和引发异常](../../../standard/exceptions/index.md)|描述 try/catch/finally 结构化异常处理的基本形式。|  
 |[与异常有关的最佳做法](../../../standard/exceptions/best-practices-for-exceptions.md)|描述处理异常的最佳做法。|  
   
 ## <a name="protecting-microsoft-access-and-excel-data-sources"></a>保护 Microsoft Access 和 Excel 数据源  

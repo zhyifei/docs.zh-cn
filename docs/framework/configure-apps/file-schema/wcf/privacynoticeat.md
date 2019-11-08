@@ -2,19 +2,19 @@
 title: <privacyNoticeAt>
 ms.date: 03/30/2017
 ms.assetid: 4cc96942-4eb9-4241-b2fd-45aa239915e8
-ms.openlocfilehash: 624b52c0618362f48063c8f7e7c53c5a68d7de8f
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 2ff70d3a8636970434582e417e4549ab6b433fc1
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400030"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738760"
 ---
-# <a name="privacynoticeat"></a>\<privacyNoticeAt>
+# <a name="privacynoticeat"></a>\<privacyNoticeAt >
 表示一个配置元素，该元素指定 `wsFederationHttp` 绑定中使用的隐私声明。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+\<system &nbsp; &nbsp;[ **>** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<privacyNotice >**  
@@ -26,7 +26,7 @@ ms.locfileid: "70400030"
                version="Integer" />
 ```  
   
-## <a name="type"></a>类型  
+## <a name="type"></a>键入  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -46,7 +46,7 @@ ms.locfileid: "70400030"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding >](bindings.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="see-also"></a>请参阅
 
@@ -56,4 +56,4 @@ ms.locfileid: "70400030"
 - [绑定](../../../wcf/bindings.md)
 - [扩展绑定](../../../wcf/extending/extending-bindings.md)
 - [自定义绑定](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding>](custombinding.md)
+- [\<customBinding >](custombinding.md)

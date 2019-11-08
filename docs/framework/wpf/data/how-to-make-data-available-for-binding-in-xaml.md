@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], making data available for binding
 - binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
-ms.openlocfilehash: 2bfd9809a6ad487a7e706366dc6bce8fe951c940
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 97e878e4932ca9122bf27f76c32d1a56e69f253a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459762"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740603"
 ---
 # <a name="how-to-make-data-available-for-binding-in-xaml"></a>如何：使数据可用于 XAML 中的绑定
 本主题讨论在 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]中可用于绑定的各种方式，具体取决于应用程序的需求。  
@@ -38,7 +38,7 @@ ms.locfileid: "73459762"
  [!code-csharp[ADODataSet#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml.cs#1)]
  [!code-vb[ADODataSet#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ADODataSet/VisualBasic/Window1.xaml.vb#1)]  
   
- 若要使用 <xref:System.Windows.Data.XmlDataProvider> 类访问用于绑定的 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据，请参阅[使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。 若要使用 <xref:System.Windows.Data.ObjectDataProvider> 类访问用于绑定的 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据，请参阅[绑定到 XDocument、system.xml.linq.xelement> 或 LINQ FOR XML 查询结果](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)。  
+ 若要使用 <xref:System.Windows.Data.XmlDataProvider> 类访问用于绑定的 XML 数据，请参阅[使用 XMLDataProvider 和 XPath 查询绑定到 Xml 数据](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。 若要使用 <xref:System.Windows.Data.ObjectDataProvider> 类访问用于绑定的 XML 数据，请参阅[绑定到 XDocument、system.xml.linq.xelement> 或 LINQ FOR XML 查询结果](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)。  
   
  有关指定要绑定到的数据的多种方式的信息，请参阅[指定绑定源](how-to-specify-the-binding-source.md)。 有关可以绑定到的数据类型或者如何实现您自己的公共语言运行时（CLR）对象进行绑定的信息，请参阅[绑定源概述](binding-sources-overview.md)。  
   

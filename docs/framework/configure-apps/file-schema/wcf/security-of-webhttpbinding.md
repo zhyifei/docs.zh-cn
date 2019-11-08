@@ -2,22 +2,22 @@
 title: <security> 的 <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: 2f0bc97e10fcd72f2f33cc20730320cbbfc42dd8
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 77009dc950a608da9e0db3a7d09be67e1ed46137
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399754"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738638"
 ---
-# <a name="security-of-webhttpbinding"></a>\<webHttpBinding 的\<安全 > >
-指定配置了[ \<webHttpBinding >](webhttpbinding.md)的终结点的安全要求。  
+# <a name="security-of-webhttpbinding"></a>\<webHttpBinding 的安全 > \<
+指定使用[\<webHttpBinding >](webhttpbinding.md)配置的终结点的安全要求。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+\<system &nbsp; &nbsp;[ **>** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<webHttpBinding >** ](webhttpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<安全 >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<** >  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,17 +48,17 @@ ms.locfileid: "70399754"
   
 ## <a name="mode-attribute"></a>Mode 属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
-|无|禁用安全性。|  
-|传输|使用 HTTPS 提供安全性。 此服务需要使用 SSL 证书进行配置。 消息使用 HTTPS 获得全面保护，而且客户端使用服务的 SSL 证书对服务进行身份验证。 客户端身份验证通过`ClientCredentialType` [ \<传输 >](transport-of-webhttpbinding.md)的属性进行控制。|  
+|None|禁用安全性。|  
+|传输|使用 HTTPS 提供安全性。 此服务需要使用 SSL 证书进行配置。 消息使用 HTTPS 获得全面保护，而且客户端使用服务的 SSL 证书对服务进行身份验证。 客户端身份验证通过[\<传输 >](transport-of-webhttpbinding.md)的 `ClientCredentialType` 属性进行控制。|  
 |TransportCredentialOnly|此模式并不提供消息的完整性和保密性， 而是提供基于 HTTP 的客户端身份验证。 使用此模式时应当小心。 在通过其他方式（如 IPSec）提供传输安全，并且 WCF 基础结构仅提供客户端身份验证的环境中，应使用此方法。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<transport>](transport-of-webhttpbinding.md)|定义传输安全设置。 此元素与 <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> 类型相对应。|  
+|[\<传输 >](transport-of-webhttpbinding.md)|定义传输安全设置。 此元素与 <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> 类型相对应。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -78,5 +78,5 @@ ms.locfileid: "70399754"
 - [绑定](../../../wcf/bindings.md)
 - [配置系统提供的绑定](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [使用绑定配置服务和客户端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)
 - [WCF Web HTTP 编程模型](../../../wcf/feature-details/wcf-web-http-programming-model.md)

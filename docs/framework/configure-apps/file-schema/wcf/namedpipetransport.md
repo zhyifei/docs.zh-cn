@@ -2,19 +2,19 @@
 title: <namedPipeTransport>
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: e5f1d49e0e3bb5f52c5e18577d556d25539434a9
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 00631ad88d771ed8f45638f28c84df05917fd3a0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400165"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736584"
 ---
-# <a name="namedpipetransport"></a>\<namedPipeTransport>
+# <a name="namedpipetransport"></a>\<namedPipeTransport >
 定义传输，使通道在被包括到自定义绑定中时使用命名管道来传输消息。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+\<system &nbsp; &nbsp;[ **>** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<namedPipeTransport >**  
@@ -49,7 +49,7 @@ ms.locfileid: "70400165"
   
 |元素|描述|  
 |-------------|-----------------|  
-|ChannelInitializationTimeout|获取或设置一个<xref:System.TimeSpan> ，它确定通道在断开连接前可处于初始化状态的最大时间。|  
+|ChannelInitializationTimeout|获取或设置一个 <xref:System.TimeSpan>，该确定通道在断开连接前可处于初始化状态的最大时间。|  
 |ConnectionBufferSize|获取或设置用于从客户端或服务传输网络上的序列化消息块的缓冲区大小。|  
 |hostNameComparisonMode|获取或设置一个值，该值指示在对 URI 进行匹配时，是否使用主机名来访问服务。|  
 |manualAddressing|获取或设置一个值，该值指示是否要求对消息进行手动寻址。|  
@@ -60,13 +60,13 @@ ms.locfileid: "70400165"
 |maxPendingConnections|获取或设置在服务上等待调度的最大连接数。|  
 |maxReceivedMessageSize|获取和设置允许接收的最大消息大小（以字节为单位）。|  
 |transferMode|获取或设置一个值，该值指示通过面向连接的传输对消息进行缓冲还是流处理。|  
-|[\<connectionPoolSettings > \<namedPipeTransport >](connectionpoolsettings.md)|指定命名管道绑定的其他连接池设置。|  
+|[\<namedPipeTransport \<connectionPoolSettings > >](connectionpoolsettings.md)|指定命名管道绑定的其他连接池设置。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding >](bindings.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
 此传输使用“net.pipe://hostname/path”形式的 URI。 其他 URI 组件是可选的。  
@@ -84,4 +84,4 @@ ms.locfileid: "70400165"
 - [绑定](../../../wcf/bindings.md)
 - [扩展绑定](../../../wcf/extending/extending-bindings.md)
 - [自定义绑定](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding>](custombinding.md)
+- [\<customBinding >](custombinding.md)

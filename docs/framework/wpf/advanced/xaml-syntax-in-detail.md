@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: aa535c36b578e000ae6ddd7534838b07b0a5d756
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 10bd924664a469be26174fadf3892ee56aa33856
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459997"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740641"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 语法详述
 本主题定义用于描述 XAML 语法元素的术语。 在本文档的其余部分中经常使用这些术语，这两个术语分别适用于 WPF 文档，适用于使用 XAML 的其他框架或由 system.exception 级别的 XAML 语言支持启用的基本 XAML 概念。 本主题概述了在主题[XAML 概述（WPF）](../../../desktop-wpf/fundamentals/xaml.md)中引入的基本术语。  
@@ -52,7 +52,7 @@ ms.locfileid: "73459997"
 #### <a name="members-of-types-and-class-inheritance"></a>类型和类继承的成员  
  作为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 类型的 XAML 成员出现的属性和事件通常继承自基类型。 例如，请看下面的示例： `<Button Background="Blue" .../>`。 如果要查看类定义、反射结果或文档，则 <xref:System.Windows.Controls.Control.Background%2A> 属性不是 <xref:System.Windows.Controls.Button> 类上的直接声明的属性。 相反，<xref:System.Windows.Controls.Control.Background%2A> 是从基 <xref:System.Windows.Controls.Control> 类继承的。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML 元素的类继承行为是对 XML 标记的架构强制解释的重大影响。 类继承可能会变得复杂，尤其是在中间基类是抽象类或涉及接口时。 这是一种原因，一种原因是，XAML 元素及其允许的属性集难以准确准确地表示，并使用通常用于 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 编程的架构类型（如 DTD 或 XSD 格式）。 另一个原因是 XAML 语言自身的可扩展性和类型映射功能排除了允许的类型和成员的任何固定表示形式的完整性。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML 元素的类继承行为是对 XML 标记的架构强制解释的重大影响。 类继承可能会变得复杂，尤其是在中间基类是抽象类或涉及接口时。 这是一种原因，这是一组 XAML 元素及其允许的特性很难准确准确地使用通常用于 XML 编程（如 DTD 或 XSD 格式）的架构类型来表示。 另一个原因是 XAML 语言自身的可扩展性和类型映射功能排除了允许的类型和成员的任何固定表示形式的完整性。  
   
 <a name="object_element_syntax"></a>   
 ## <a name="object-element-syntax"></a>对象元素语法  

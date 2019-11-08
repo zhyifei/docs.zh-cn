@@ -14,12 +14,12 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 00596911cf603ae9615eb64d0aedefe90c2520bc
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8e3ac7207a5ef05b94e97f005ecd17d5078669a4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458990"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740884"
 ---
 # <a name="custom-dependency-properties"></a>自定义依赖项属性
 
@@ -35,7 +35,7 @@ ms.locfileid: "73458990"
 
 ## <a name="what-is-a-dependency-property"></a>什么是依赖属性？
 
-您可以通过将其实现为依赖属性，使其成为公共语言运行时（CLR）属性，以支持样式设置、数据绑定、继承、动画和默认值。 依赖属性是通过调用 <xref:System.Windows.DependencyProperty.Register%2A> 方法（或 <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>）注册到 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 属性系统并且由 <xref:System.Windows.DependencyProperty> 标识符字段支持的属性。 依赖项属性只能由 <xref:System.Windows.DependencyObject> 类型使用，但在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 类层次结构中 <xref:System.Windows.DependencyObject> 非常高，因此 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中提供的大多数类都可以支持依赖属性。 若要详细了解依赖属性和此 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 中对依赖属性进行描述所使用的术语和约定，请参阅[依赖属性概述](dependency-properties-overview.md)。
+您可以通过将其实现为依赖属性，使其成为公共语言运行时（CLR）属性，以支持样式设置、数据绑定、继承、动画和默认值。 依赖属性是通过调用 <xref:System.Windows.DependencyProperty.Register%2A> 方法（或 <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>）注册到 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 属性系统并且由 <xref:System.Windows.DependencyProperty> 标识符字段支持的属性。 依赖项属性只能由 <xref:System.Windows.DependencyObject> 类型使用，但在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 类层次结构中 <xref:System.Windows.DependencyObject> 非常高，因此 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中提供的大多数类都可以支持依赖属性。 有关依赖属性以及在此 SDK 中描述它们的一些术语和约定的详细信息，请参阅[依赖属性概述](dependency-properties-overview.md)。
 
 <a name="example_dp"></a>
 

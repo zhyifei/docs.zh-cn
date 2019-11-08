@@ -2,22 +2,22 @@
 title: <transport> 的 <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: 4ea60ccaba58bc0b3fa8f2263295bf1413d25e89
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 0cd20c607b0c4ddd3ecfd806d38ba63b4a5c5a25
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399269"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732761"
 ---
-# <a name="transport-of-ws2007httpbinding"></a>\<ws2007HttpBinding > 的\<传输 >
+# <a name="transport-of-ws2007httpbinding"></a>\<ws2007HttpBinding 的 \<传输 > >
 定义 HTTP 传输的身份验证设置。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+\<system &nbsp; &nbsp;[ **>** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ws2007HttpBinding >** ](ws2007httpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全 >** ](security-of-ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](security-of-ws2007httpbinding.md) >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<传输 >**  
   
 ## <a name="syntax"></a>语法  
@@ -28,7 +28,7 @@ ms.locfileid: "70399269"
            realm="string" />
 ```  
   
-## <a name="type"></a>类型  
+## <a name="type"></a>键入  
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -44,10 +44,10 @@ ms.locfileid: "70399269"
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
-|无|禁用安全性。|  
-|基本|使用基本身份验证。|  
+|None|禁用安全性。|  
+|Basic|使用基本身份验证。|  
 |摘要|使用摘要式身份验证。|  
 |Ntlm|对 Windows 域使用 NTLM 身份验证作为回退。|  
 |Windows|使用集成 Windows 身份验证。|  
@@ -55,23 +55,23 @@ ms.locfileid: "70399269"
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType 属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
-|无|禁用安全性。|  
-|基本|使用基本身份验证。|  
+|None|禁用安全性。|  
+|Basic|使用基本身份验证。|  
 |摘要|使用摘要式身份验证。|  
 |Ntlm|对 Windows 域使用 NTLM 作为回退。|  
 |Windows|使用集成 Windows 身份验证。|  
 |证书|使用 X.509 证书对客户端进行身份验证。|  
   
 ### <a name="child-elements"></a>子元素  
- 无  
+ None  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<security>](security-of-ws2007httpbinding.md)|表示[ \<ws2007HttpBinding >](ws2007httpbinding.md)元素的安全功能。|  
+|[\<security >](security-of-ws2007httpbinding.md)|表示[\<ws2007HttpBinding >](ws2007httpbinding.md)元素的安全功能。|  
   
 ## <a name="see-also"></a>请参阅
 
@@ -83,4 +83,4 @@ ms.locfileid: "70399269"
 - [绑定](../../../wcf/bindings.md)
 - [配置系统提供的绑定](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [使用绑定配置服务和客户端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

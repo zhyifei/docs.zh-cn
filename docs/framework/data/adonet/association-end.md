@@ -2,12 +2,12 @@
 title: 关联端
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
-ms.openlocfilehash: 33cc2e10d9b72ef7f5f024905938c41fcc4a9755
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 489802ca18708e076c0cd5dd380ad1361916ad5f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785047"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732355"
 ---
 # <a name="association-end"></a>关联端
 *关联端*标识[关联](association-type.md)一端的[实体类型](entity-type.md)以及该关联端可以存在的实体类型实例的数量。 关联端定义为关联的一部分；关联必须正好有两个关联端。 [导航属性](navigation-property.md)允许从一个关联端导航到另一个关联端。  
@@ -26,11 +26,11 @@ ms.locfileid: "70785047"
 - 有关在关联端上执行的操作的信息，例如级联删除。 （可选）  
   
 ## <a name="example"></a>示例  
- 下图显示了一个具有两个关联的概念模型：`PublishedBy` 和 `WrittenBy`。 `PublishedBy` 关联的关联端是 `Book` 和 `Publisher` 实体类型。 `Publisher` End 的重数为一（1），而`Book`结尾的重数为多（\*），这表示发布者发布了许多书籍，书籍发布了一个出版商。  
+ 下图显示了一个具有两个关联的概念模型：`PublishedBy` 和 `WrittenBy`。 `PublishedBy` 关联的关联端是 `Book` 和 `Publisher` 实体类型。 `Publisher` 端的重数为一（1），而 `Book` 结束的重数为多（\*），这表示发布者发布了许多书籍，书籍发布了一个出版商。  
   
  ![具有三个实体类型的示例模型](./media/association-end/example-model-three-entity-types.gif)  
   
- ADO.NET 实体框架使用一种称为概念架构定义语言（[CSDL](./ef/language-reference/csdl-specification.md)）的域特定语言（DSL）来定义概念模型。 下面的 CSDL 定义了上图中显示的 `PublishedBy` 关联。 请注意，每个关联端的类型、名称和重数由 XML 特性指定（分别是 `Type`、`Role` 和 `Multiplicity` 特性）。 有关在端上执行的操作的可选信息在 XML 元素（`OnDelete` 元素）中指定。 在本例中，如果删除出版商，将同时删除所有关联的书籍。  
+ ADO.NET 实体框架使用一种称为概念架构定义语言（[CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)）的域特定语言（DSL）来定义概念模型。 下面的 CSDL 定义了上图中显示的 `PublishedBy` 关联。 请注意，每个关联端的类型、名称和重数由 XML 特性指定（分别是 `Type`、`Role` 和 `Multiplicity` 特性）。 有关在端上执行的操作的可选信息在 XML 元素（`OnDelete` 元素）中指定。 在本例中，如果删除出版商，将同时删除所有关联的书籍。  
   
  [!code-xml[EDM_Example_Model#AssociationEnd](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#associationend)]  
   

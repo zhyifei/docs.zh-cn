@@ -6,21 +6,21 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: 76438b85a12d75efa0fc106a645fb592b3205fad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5b49e2a1f7536fb9d8e8f4dbfc53494dcd1f1ac
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960972"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740767"
 ---
 # <a name="sample-opentype-font-pack"></a>示例 OpenType 字体包
-本主题概述了随一起[!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]分发的示例 OpenType 字体。 示例字体支持[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序可使用的扩展 OpenType 功能。  
+本主题概述了随 Windows SDK 一起分发的示例 OpenType 字体。 示例字体支持 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序可使用的扩展 OpenType 功能。  
 
 <a name="overview"></a>   
 ## <a name="fonts-in-the-opentype-font-pack"></a>OpenType 字体包中的字体  
- 提供了一组可在创建[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序时使用的示例 OpenType 字体。 [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] 这些示例字体在 Ascender Corporation 的许可下提供。 这些字体仅实现由 OpenType 格式定义的全部功能的子集。 下表列出了示例 OpenType 字体的名称。  
+ Windows SDK 提供了一组可在创建 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序时使用的示例 OpenType 字体。 这些示例字体在 Ascender Corporation 的许可下提供。 这些字体仅实现由 OpenType 格式定义的全部功能的子集。 下表列出了示例 OpenType 字体的名称。  
   
-|**Name**|**文件**|  
+|**名称**|**文件**|  
 |--------------|--------------|  
 |Kootenay|Kooten.ttf|  
 |Lindsey|Linds.ttf|  
@@ -42,9 +42,9 @@ ms.locfileid: "69960972"
   
 <a name="installing_the_fonts"></a>   
 ## <a name="installing-the-fonts"></a>安装字体  
- 你可以选择将示例 OpenType 字体安装到默认 Windows 字体目录 **\WINDOWS\Fonts**。 使用“字体”控制面板安装字体。 一旦这些字体位于您的计算机上, 引用默认 Windows 字体的所有应用程序都可以访问它们。 可以通过双击字体文件以多种字体大小来显示具有代表性的字符集。 下面的屏幕截图显示 Lindsey 字体文件 Linds.ttf。  
+ 你可以选择将示例 OpenType 字体安装到默认 Windows 字体目录 **\WINDOWS\Fonts**。 使用“字体”控制面板安装字体。 一旦这些字体位于您的计算机上，引用默认 Windows 字体的所有应用程序都可以访问它们。 可以通过双击字体文件以多种字体大小来显示具有代表性的字符集。 下面的屏幕截图显示 Lindsey 字体文件 Linds.ttf。  
   
- ![Lindsey 字体&#40;OpenType&#41; ](./media/typographyinwpf-04.png "TypographyInWPF_04")  
+ ![Lindsey 字体 (OpenType)](./media/typographyinwpf-04.png "TypographyInWPF_04")  
 显示 Lindsey 字体  
   
 <a name="using_the_fonts"></a>   

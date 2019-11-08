@@ -1,24 +1,24 @@
 ---
-title: <message>的元素<wsFederationHttpBinding>
+title: <wsFederationHttpBinding> 的 <message> 元素
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: e26e1f94fb38e0654fd0bc9f06c6096a488bccfe
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 8e0903dd1313e68e2de65730e129079199ebe2f2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400286"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738982"
 ---
-# <a name="message-element-of-wsfederationhttpbinding"></a>\<wsFederationHttpBinding > 的\<消息 > 元素
-定义[ \<wsFederationHttpBinding >](wsfederationhttpbinding.md)的消息级安全性设置。  
+# <a name="message-element-of-wsfederationhttpbinding"></a>\<wsFederationHttpBinding 的 \<message > 元素 >
+定义[\<wsFederationHttpBinding >](wsfederationhttpbinding.md)的消息级安全性设置。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+\<system &nbsp; &nbsp;[ **>** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsFederationHttpBinding >** ](wsfederationhttpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全 >** ](security-of-wsfederationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<消息 >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](security-of-wsfederationhttpbinding.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**消息 >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -88,13 +88,13 @@ ms.locfileid: "70400286"
 |特性|描述|  
 |---------------|-----------------|  
 |algorithmSuite|设置消息加密和密钥包装算法。 有关此属性的有效值，请参见“algorithmSuite 属性”表。 默认值为 `Basic256`。<br /><br /> 此属性的类型为 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>。 这些算法映射到安全策略语言 (WS-SecurityPolicy) 规范中指定的算法。|  
-|issuedKeyType|指定要颁发的密钥类型。 包括以下有效值：<br /><br /> -   SymmetricKey<br />-PublicKey<br /><br /> 默认值为 `SymmetricKey`。 此属性的类型为 <xref:System.IdentityModel.Tokens.SecurityKeyType>。|  
+|issuedKeyType|指定要颁发的密钥类型。 包括以下有效值：<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> 默认值为 `SymmetricKey`。 此属性的类型为 <xref:System.IdentityModel.Tokens.SecurityKeyType>。|  
 |issuedTokenType|一个字符串，它所包含的 URI 指定要颁发的令牌的类型。 默认值为 `null`。|  
 |negotiateServiceCredential|一个布尔值，指定是否应在协商过程中交换服务凭据，或者是否可在带外使用服务凭据。 默认值为 `true`，这意味着对服务凭据进行协商。|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite 属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |Basic128|使用 Basic128 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa-oaep-mgf1p。|  
 |Basic192|使用 Basic192 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa-oaep-mgf1p。|  
@@ -117,16 +117,16 @@ ms.locfileid: "70400286"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements>](claimtyperequirements-element.md)|指定此绑定的声明类型集合。 每个元素的类型都为 <xref:System.ServiceModel.Configuration.ClaimTypeElement>。|  
+|[\<claimTypeRequirements >](claimtyperequirements-element.md)|指定此绑定的声明类型集合。 每个元素的类型都为 <xref:System.ServiceModel.Configuration.ClaimTypeElement>。|  
 |issuer|指定颁发安全令牌的终结点。 此元素的类型为 <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>。|  
 |issuerMetadata|指定颁发者的终结点地址。|  
-|[\<tokenRequestParameters>](tokenrequestparameters.md)|令牌请求参数的集合。 每个参数都是一个 XML 元素。|  
+|[\<tokenRequestParameters >](tokenrequestparameters.md)|令牌请求参数的集合。 每个参数都是一个 XML 元素。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<security>](security-of-wsfederationhttpbinding.md)|定义绑定的安全设置。|  
+|[\<security >](security-of-wsfederationhttpbinding.md)|定义绑定的安全设置。|  
   
 ## <a name="see-also"></a>请参阅
 
@@ -138,4 +138,4 @@ ms.locfileid: "70400286"
 - [绑定](../../../wcf/bindings.md)
 - [配置系统提供的绑定](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [使用绑定配置服务和客户端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: d8fdeec8784c9a44c9b272a0a5a8b9c56ace5230
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e14ab0ebc7d44e2792307b16c7c0581ff7a71bc6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458826"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740826"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable 特性
-指定 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器可能会忽略在标记文件中遇到的 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空间前缀。 `mc:Ignorable` 特性支持用于自定义命名空间映射和 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 版本控制的标记兼容性。  
+指定在标记文件中遇到哪些 XML 命名空间前缀可能会被 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器忽略。 `mc:Ignorable` 特性支持用于自定义命名空间映射和 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 版本控制的标记兼容性。  
   
 ## <a name="xaml-attribute-usage-single-prefix"></a>XAML 特性用法（单前缀）  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73458826"
 |*ThisElementCanBeIgnored*|如果无法解析基础类型，则 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 处理器实现可忽略的元素。|  
   
 ## <a name="remarks"></a>备注  
- `mc` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空间前缀是在映射 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 兼容性命名空间 `http://schemas.openxmlformats.org/markup-compatibility/2006`时要使用的建议前缀约定。  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 兼容命名空间 `http://schemas.openxmlformats.org/markup-compatibility/2006`时，建议使用 `mc` XML 命名空间前缀。  
   
  元素名称的前缀部分标识为 `mc:Ignorable` 在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器处理时不会引发错误的元素或属性。 如果该特性未能解析为基础类型或编程构造，则将忽略该元素。 但请注意，如果忽略元素，则忽略的元素可能仍会生成其他元素要求的分析错误。 例如，特定的元素内容模型可能只需要一个子元素，但如果指定的子元素位于 `mc:Ignorable` 前缀中，并且指定的子元素未能解析为类型，则 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器可能会引发错误。  
   

@@ -2,12 +2,12 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: c16270babe4daa8e703b24b27211c6fd6f53677d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b7778d6a2e0b0dd15b2911f2d1cee36208e13328
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039922"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738514"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 将一种数据类型的表达式转换为另一种数据类型的表达式。  
@@ -23,7 +23,7 @@ CAST ( expression AS data_type )
  任何可转换为 `data_type`的有效表达式。  
   
  `data_type`  
- 系统提供的目标数据类型。 该类型必须为基元（标量）类型。 使用的 `data_type` 取决于查询空间。 如果使用 <xref:System.Data.EntityClient.EntityCommand>执行查询，则数据类型为概念模型中定义的类型。 有关详细信息，请参阅 [CSDL Specification](csdl-specification.md)。 如果使用 <xref:System.Data.Objects.ObjectQuery%601>执行查询，则数据类型为公共语言运行库 (CLR) 类型。  
+ 系统提供的目标数据类型。 该类型必须为基元（标量）类型。 使用的 `data_type` 取决于查询空间。 如果使用 <xref:System.Data.EntityClient.EntityCommand>执行查询，则数据类型为概念模型中定义的类型。 有关详细信息，请参阅 [CSDL Specification](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)。 如果使用 <xref:System.Data.Objects.ObjectQuery%601>执行查询，则数据类型为公共语言运行库 (CLR) 类型。  
   
 ## <a name="return-value"></a>返回值  
  返回与 `data_type`相同的值。  

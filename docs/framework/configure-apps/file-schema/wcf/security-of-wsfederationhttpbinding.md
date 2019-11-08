@@ -2,22 +2,22 @@
 title: <security> 的 <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
-ms.openlocfilehash: 6c07d1ca18837f66548411262b84b9a326f5ec4a
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: ea029444cee331a235c7a2fc140b4321d7530063
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399734"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736326"
 ---
-# <a name="security-of-wsfederationhttpbinding"></a>\<wsFederationHttpBinding 的\<安全 > >
-定义[ \<wsFederationHttpBinding >](wsfederationhttpbinding.md)的安全设置。  
+# <a name="security-of-wsfederationhttpbinding"></a>\<wsFederationHttpBinding 的安全 > \<
+定义[\<wsFederationHttpBinding >](wsfederationhttpbinding.md)的安全设置。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+\<system &nbsp; &nbsp;[ **>** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsFederationHttpBinding >** ](wsfederationhttpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<安全 >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<** >  
   
 ## <a name="syntax"></a>语法  
   
@@ -90,9 +90,9 @@ ms.locfileid: "70399734"
   
 ## <a name="mode-attribute"></a>Mode 属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
-|无|SOAP 消息在传输过程中并不安全。|  
+|None|SOAP 消息在传输过程中并不安全。|  
 |消息|通过使用 SOAP 消息安全，可以提供完整性、保密性、服务器身份验证和客户端身份验证。 默认情况下，将对正文进行加密和签名。 此服务需要使用证书进行配置。 客户端根据由安全令牌服务颁发给客户端的令牌进行身份验证|  
 |TransportWithMessageCredential|完整性、保密性和服务器身份验证均由 HTTPS 提供。 此服务需要使用证书进行配置。 客户端身份验证采用 SOAP 消息安全方式提供，并根据由安全令牌服务颁发给客户端的令牌进行。|  
   
@@ -100,13 +100,13 @@ ms.locfileid: "70399734"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<message>](message-element-of-wsfederationhttpbinding.md)|定义消息级安全性设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>。|  
+|[\<message >](message-element-of-wsfederationhttpbinding.md)|定义消息级安全性设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|定义[ \<wsDualHttpBinding >](wsdualhttpbinding.md)的所有绑定功能。|  
+|[\<binding >](bindings.md)|定义[\<wsDualHttpBinding >](wsdualhttpbinding.md)的所有绑定功能。|  
   
 ## <a name="see-also"></a>请参阅
 
@@ -120,4 +120,4 @@ ms.locfileid: "70399734"
 - [绑定](../../../wcf/bindings.md)
 - [配置系统提供的绑定](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [使用绑定配置服务和客户端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

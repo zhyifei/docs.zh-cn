@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 0758a537ee457a8fe5a778e2a2c24a8ba13c263b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d578b9834ca39a33e284d3066eef85890c224a2f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460872"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740808"
 ---
 # <a name="printing-overview"></a>打印概述
 使用 Microsoft .NET 框架，使用 Windows Presentation Foundation （WPF）的应用程序开发人员具有丰富的一组新的打印和打印系统管理 Api。 在 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 中，还为创建 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 应用程序的开发人员和使用非托管代码的开发人员提供了这些打印系统增强功能中的某些功能。 这一新功能的核心是新的 XML 纸张规范（XPS）文件格式和 XPS 打印路径。  
@@ -29,7 +29,7 @@ ms.locfileid: "73460872"
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>关于 XPS  
- XPS 是一种电子文档格式，是一种假脱机文件格式和页面描述语言。 这是一种打开的文档格式，它使用 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]、开放式打包约定（OPC）和其他行业标准来创建跨平台文档。 XPS 简化了创建、共享、打印、查看和存档数字文档的过程。 有关 XPS 的其他信息，请参阅[Xps 文档](/windows/desktop/printdocs/documents)。  
+ XPS 是一种电子文档格式，是一种假脱机文件格式和页面描述语言。 它是一种开放文档格式，它使用 XML、开放式打包约定（OPC）和其他行业标准来创建跨平台文档。 XPS 简化了创建、共享、打印、查看和存档数字文档的过程。 有关 XPS 的其他信息，请参阅[Xps 文档](/windows/desktop/printdocs/documents)。  
   
  以[编程方式打印 Xps 文件](how-to-programmatically-print-xps-files.md)中演示了使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 打印基于 XPS 的内容的几种方法。 在查看本主题中的内容时，参考这些示例会很有帮助。 （非托管代码开发人员应查看[MXDC_ESCAPE 函数](/windows/desktop/printdocs/mxdc-escape)的文档。 Windows 窗体开发人员必须使用 <xref:System.Drawing.Printing> 命名空间中的 API，该命名空间不支持完整的 XPS 打印路径，但支持混合的 GDI 到 XPS 打印路径。 请参阅下面的**打印路径体系结构**。）  
   
@@ -78,7 +78,7 @@ ms.locfileid: "73460872"
  若要访问完整的 XPS 功能集，必须使用高级打印 API。 下面更详细地介绍了几个相关的 API。 有关 XPS 打印路径 Api 的完整列表，请参阅 <xref:System.Windows.Xps> 和 <xref:System.Printing> 命名空间引用。  
   
 #### <a name="printticket-and-printcapabilities"></a>PrintTicket 和 PrintCapabilities  
- <xref:System.Printing.PrintTicket> 和 <xref:System.Printing.PrintCapabilities> 类是高级 XPS 功能的基础。 这两种类型的对象均是面向打印的功能（例如排序规则、双面打印、装订等）的格式的结构 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]。这些结构由打印架构定义。 <xref:System.Printing.PrintTicket> 指示打印机如何处理打印作业。 <xref:System.Printing.PrintCapabilities> 类定义打印机的各种功能。 通过查询打印机的功能，可以创建充分利用打印机的受支持功能的 <xref:System.Printing.PrintTicket>。 同样，可以避免不受支持的功能。  
+ <xref:System.Printing.PrintTicket> 和 <xref:System.Printing.PrintCapabilities> 类是高级 XPS 功能的基础。 这两种类型的对象均是面向打印的功能（例如排序规则、双面打印、装订等）的 XML 格式的结构。这些结构由打印架构定义。 <xref:System.Printing.PrintTicket> 指示打印机如何处理打印作业。 <xref:System.Printing.PrintCapabilities> 类定义打印机的各种功能。 通过查询打印机的功能，可以创建充分利用打印机的受支持功能的 <xref:System.Printing.PrintTicket>。 同样，可以避免不受支持的功能。  
   
  下面的示例演示如何使用代码查询打印机的 <xref:System.Printing.PrintCapabilities> 和创建 <xref:System.Printing.PrintTicket>。  
   

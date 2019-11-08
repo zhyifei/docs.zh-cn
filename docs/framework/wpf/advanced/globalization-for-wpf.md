@@ -7,19 +7,19 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 04001f88e0f59fd4eb3ca84d846456be7740737e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 1d6430ba5969d8a05db47baf9521d2409e596c23
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460488"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740866"
 ---
 # <a name="globalization-for-wpf"></a>WPF 的全球化
 本主题介绍编写全局市场 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序时应注意的问题。 在 <xref:System.Globalization> 命名空间的 .NET 中定义全球化编程元素。
 
 <a name="xaml_globalization"></a>
 ## <a name="xaml-globalization"></a>XAML 全球化
- Extensible Application Markup Language （XAML）基于 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 并且充分利用在 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 规范中定义的全球化支持。 以下部分介绍了一些您应该注意的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 功能。
+ Extensible Application Markup Language （XAML）基于 XML，并利用 XML 规范中定义的全球化支持。 以下部分介绍了一些您应该注意的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 功能。
 
 <a name="char_reference"></a>
 ### <a name="character-references"></a>字符引用
@@ -143,7 +143,7 @@ ms.locfileid: "73460488"
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>多语言用户界面
- 多语言用户界面（MUI）是用于将用户界面从一种语言切换到另一种语言的 Microsoft 支持。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序使用程序集模型来支持 MUI。 一个应用程序包含非特定语言程序集和与语言相关的附属资源程序集。 入口点是主程序集中的托管 .EXE。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 资源加载器利用 [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]的资源管理器来支持资源查找和回退。 多个语言附属程序集使用同一个主程序集。 加载的资源程序集取决于当前线程的 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A>。
+ 多语言用户界面（MUI）是用于将用户界面从一种语言切换到另一种语言的 Microsoft 支持。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序使用程序集模型来支持 MUI。 一个应用程序包含非特定语言程序集和与语言相关的附属资源程序集。 入口点是主程序集中的托管 .EXE。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 资源加载器利用框架的资源管理器来支持资源查找和回退。 多个语言附属程序集使用同一个主程序集。 加载的资源程序集取决于当前线程的 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A>。
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>可本地化的用户界面
@@ -152,7 +152,7 @@ ms.locfileid: "73460488"
  从资源的角度来看，旨在描述依赖于语言的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件是一个资源元素，因此，其最终分发格式必须可本地化以支持国际语言。 由于 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 无法处理事件，许多 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 应用程序包含执行此操作的代码块。 有关详细信息，请参阅[XAML 概述（WPF）](../../../desktop-wpf/fundamentals/xaml.md)。 将 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件标记为 XAML 的 BAML 形式后，代码会被去除并编译到不同的二进制文件中。 BAML 形式的 XAML 文件、图像以及其他类型的托管资源对象将嵌入附属资源程序集中，该程序集可本地化为其他语言，如果不需要进行本地化，以上各项就会嵌入主程序集中。
 
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序支持所有 [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]的 CLR 资源，包括字符串表、图像等。
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序支持所有 FrameworkCLR 资源，包括字符串表、图像等。
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>生成可本地化的应用程序

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: d088342a08076c69b34f6c3d39dce076cb3890d4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 377ee76e7e3537e9cae010189306611a503acbed
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460047"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740634"
 ---
 # <a name="data-templating-overview"></a>数据模板化概述
 WPF 数据模板化模型为定义数据的表示提供了很大的灵活性。 WPF 控件具有支持自定义数据表示的内置功能。 本主题首先演示如何定义 <xref:System.Windows.DataTemplate>，然后引入其他数据模板化功能，如基于自定义逻辑的模板选择和对分层数据的显示的支持。  
@@ -54,7 +54,7 @@ WPF 数据模板化模型为定义数据的表示提供了很大的灵活性。 
   
  ![数据模板化示例屏幕快照](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
   
- 但是，这会受到限制且不灵活。 此外，如果要绑定到 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据，将不能重写 `ToString`。  
+ 但是，这会受到限制且不灵活。 此外，如果您要绑定到 XML 数据，您将无法重写 `ToString`。  
   
 <a name="defining_simple_datatemplate"></a>   
 ### <a name="defining-a-simple-datatemplate"></a>定义简单的 DataTemplate  
@@ -62,7 +62,7 @@ WPF 数据模板化模型为定义数据的表示提供了很大的灵活性。 
   
  [!code-xaml[DataTemplatingIntro_snip#Inline](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#inline)]  
   
- 本主题中的示例的基础数据是 CLR 对象的集合。 如果要绑定到 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据，基本概念都相同，只不过语法稍微不同。 例如，将 <xref:System.Windows.Data.Binding.XPath%2A> 设置为 `@TaskName` （如果 `TaskName` 是 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 节点的属性），而不是让 `Path=TaskName`。  
+ 本主题中的示例的基础数据是 CLR 对象的集合。 如果要绑定到 XML 数据，基本概念是相同的，但有一些细微的差别。 例如，将 <xref:System.Windows.Data.Binding.XPath%2A> 设置为 `@TaskName` （如果 `TaskName` 是 XML 节点的属性），而不是让 `Path=TaskName`。  
   
  现在，我们的 <xref:System.Windows.Controls.ListBox> 如下所示：  
   

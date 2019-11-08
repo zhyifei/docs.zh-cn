@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 619dc101cd8851cee24651b7e3098ae12ef46259
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a0916a2957eab6ae340fe914395eda44860da3b7
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459773"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733736"
 ---
 # <a name="navigation-overview"></a>导航概述
 
@@ -85,7 +85,7 @@ Windows Presentation Foundation （WPF）支持可在两种类型的应用程序
 
 [!code-xaml[NavigationOverviewSnippets#Page1XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page1.xaml#page1xaml)]
 
-在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 标记中实现的 <xref:System.Windows.Controls.Page> 的根元素 `Page` 为，并且需要 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 命名空间声明。 `Page` 元素包含要导航并显示的内容。 可以通过设置 `Page.Content` 属性元素来添加内容，如以下标记所示。
+在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 标记中实现的 <xref:System.Windows.Controls.Page> 的根元素 `Page` 为，并且需要 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]XML 命名空间声明。 `Page` 元素包含要导航并显示的内容。 可以通过设置 `Page.Content` 属性元素来添加内容，如以下标记所示。
 
 [!code-xaml[NavigationOverviewSnippets#Page2XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page2.xaml#page2xaml)]
 
@@ -106,7 +106,7 @@ Windows Presentation Foundation （WPF）支持可在两种类型的应用程序
 
 要允许标记文件和代码隐藏文件协同工作，需要进行以下配置：
 
-- 在标记中，`Page` 元素必须包含 `x:Class` 特性。 在生成应用程序时，标记文件中存在 `x:Class` 会导致 Microsoft 生成引擎（MSBuild）创建从 <xref:System.Windows.Controls.Page> 派生的 `partial` 类，并具有 `x:Class` 特性指定的名称。 这需要为 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 架构（`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`）添加 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空间声明。 生成的 `partial` 类实现 `InitializeComponent`，该调用用于注册事件并设置标记中实现的属性。
+- 在标记中，`Page` 元素必须包含 `x:Class` 特性。 在生成应用程序时，标记文件中存在 `x:Class` 会导致 Microsoft 生成引擎（MSBuild）创建从 <xref:System.Windows.Controls.Page> 派生的 `partial` 类，并具有 `x:Class` 特性指定的名称。 这需要为 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 架构（`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`）添加 XML 命名空间声明。 生成的 `partial` 类实现 `InitializeComponent`，该调用用于注册事件并设置标记中实现的属性。
 
 - 在代码隐藏中，类必须是 `partial` 类，该类的名称与标记中 `x:Class` 特性指定的名称相同，并且必须派生自 <xref:System.Windows.Controls.Page>。 这允许代码隐藏文件与生成应用程序时为标记文件生成的 `partial` 类相关联（请参阅[生成 WPF 应用程序](building-a-wpf-application-wpf.md)）。
 

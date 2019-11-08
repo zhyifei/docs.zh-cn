@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: a634667ec8d963ef52abbdbe517a57d10e4a60fa
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 091fde9a6149f72577e0cf38c8ebf1536abdf6ea
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040222"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738199"
 ---
 # <a name="handling-null-values"></a>处理 Null 值
 在列中的值未知或缺失时，在关系数据库中使用空值。 空既不是空字符串（对于 character 或 datetime 数据类型），也不是零值（对于 numeric 数据类型）。 ANSI SQL-92 规范规定，空必须对于所有数据类型均相同，以便以一致的方式处理所有空。 <xref:System.Data.SqlTypes> 命名空间通过实现 <xref:System.Data.SqlTypes.INullable> 接口，提供空语义。 <xref:System.Data.SqlTypes> 中的每种数据类型都有其自己的 `IsNull` 属性和可分配给该数据类型的实例的 `Null` 值。  
   
 > [!NOTE]
-> .NET Framework 2.0 版引入了对可以为 null 的类型的支持，这允许程序员扩展值类型以表示基础类型的所有值。 这些 CLR 可以为 null 的类型表示 <xref:System.Nullable> 结构的一个实例。 当值类型为装箱和未装箱，从而增强与对象类型的兼容性时，这个功能特别有用。 CLR 可以为 null 的类型不用于存储数据库 null 值，因为 ANSI SQL null 值的行为与 `null` 引用（或 Visual Basic 中的 `Nothing`）不同。 为了使用数据库 ANSI SQL null 值，请使用 <xref:System.Data.SqlTypes> null 值而不使用 <xref:System.Nullable>。 有关使用中的 CLR 可以为 null 的类型的详细信息 Visual Basic 参阅可以为 Null C#的[值类型](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)，有关，请参阅[使用可以为 null 的值类型](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)。  
+> .NET Framework 2.0 版引入了对可以为 null 的类型的支持，这允许程序员扩展值类型以表示基础类型的所有值。 这些 CLR 可以为 null 的类型表示 <xref:System.Nullable> 结构的一个实例。 当值类型为装箱和未装箱，从而增强与对象类型的兼容性时，这个功能特别有用。 CLR 可以为 null 的类型不用于存储数据库 null 值，因为 ANSI SQL null 值的行为与 `null` 引用（或 Visual Basic 中的 `Nothing`）不同。 为了使用数据库 ANSI SQL null 值，请使用 <xref:System.Data.SqlTypes> null 值而不使用 <xref:System.Nullable>。 若要详细了解如何在 Visual Basic 中使用 CLR 可以为 null 的类型，请参阅C#可以为 Null 的[值类型](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)，并查看[可为 null 值类型](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)。  
   
 ## <a name="nulls-and-three-valued-logic"></a>空和三值逻辑  
  在列定义中允许空值将三值逻辑引入您的应用程序。 可以将比较计算为以下三个条件之一：  

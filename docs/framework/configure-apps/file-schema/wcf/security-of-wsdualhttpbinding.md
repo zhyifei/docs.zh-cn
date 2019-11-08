@@ -2,22 +2,22 @@
 title: <security> 的 <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
-ms.openlocfilehash: b6a1c952b1ae65c8fb6f17237b5c15f3a8d4844a
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 4969c041678bbf3490975bc0ec53507b6cf762bb
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399753"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738602"
 ---
-# <a name="security-of-wsdualhttpbinding"></a>\<wsDualHttpBinding 的\<安全 > >
-定义[ \<wsDualHttpBinding >](wsdualhttpbinding.md)的安全功能。  
+# <a name="security-of-wsdualhttpbinding"></a>\<wsDualHttpBinding 的安全 > \<
+定义[\<wsDualHttpBinding >](wsdualhttpbinding.md)的安全功能。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+\<system &nbsp; &nbsp;[ **>** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsDualHttpBinding >** ](wsdualhttpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<安全 >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<** >  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,22 +40,22 @@ ms.locfileid: "70399753"
   
 ## <a name="mode-attribute"></a>Mode 属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
-|无|禁用安全性。|  
+|None|禁用安全性。|  
 |消息|使用 SOAP 消息安全提供安全性。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<message>](message-of-wsdualhttpbinding.md)|定义消息级安全性设置。 此元素的类型为 <xref:System.ServiceModel.MessageSecurityOverHttp>。|  
+|[\<message >](message-of-wsdualhttpbinding.md)|定义消息级安全性设置。 此元素的类型为 <xref:System.ServiceModel.MessageSecurityOverHttp>。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|定义[ \<wsDualHttpBinding >](wsdualhttpbinding.md)的所有绑定功能。|  
+|[\<binding >](bindings.md)|定义[\<wsDualHttpBinding >](wsdualhttpbinding.md)的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
  双向绑定向服务公开客户端的 IP 地址。 客户端应使用安全来确保仅连接到自己信任的服务。  
@@ -68,4 +68,4 @@ ms.locfileid: "70399753"
 - [绑定](../../../wcf/bindings.md)
 - [配置系统提供的绑定](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [使用绑定配置服务和客户端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

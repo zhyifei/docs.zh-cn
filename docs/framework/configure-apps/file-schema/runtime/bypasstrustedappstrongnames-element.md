@@ -7,12 +7,12 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - <bypassTrustedAppStrongNames> element
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
-ms.openlocfilehash: 50e67e97d74b896a680cc18270d32aa7a8eb8035
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 96361a6742d1d2f76cb237344189d3277d7c8069
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118180"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739094"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> 元素
 
@@ -72,7 +72,7 @@ ms.locfileid: "73118180"
 - 签名没有延迟。
 
 > [!NOTE]
-> 如果对计算机上的所有应用程序使用注册表项关闭了绕过功能，则此配置文件设置将不起作用。 有关详细信息，请参阅[如何：禁用强名称跳过功能](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)。
+> 如果对计算机上的所有应用程序使用注册表项关闭了绕过功能，则此配置文件设置将不起作用。 有关详细信息，请参阅[如何：禁用强名称跳过功能](../../../../standard/assembly/disable-strong-name-bypass-feature.md)。
 
 ## <a name="example"></a>示例
 

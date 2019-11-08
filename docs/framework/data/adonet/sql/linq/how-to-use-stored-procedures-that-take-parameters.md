@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: e9d77cd1dc82e1b103c5f0d9f3f447ed105acaec
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: faf4ea9c52b91c3fc0f2f775e7bd5dfe039c53a8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003241"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738110"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>如何：使用采用参数的存储过程
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将输出参数映射到引用参数，并且对于值类型，它将参数声明为可以为 null。  
   
- 有关如何在返回行集的查询中使用输入参数的示例，请参阅 [How to：返回行集 @ no__t。  
+ 有关如何在返回行集的查询中使用输入参数的示例，请参阅[如何：返回行集](how-to-return-rowsets.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例带有单个输入参数（客户 ID）并返回一个输出参数（该客户的总销售额）。  
@@ -43,5 +43,5 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
 
 - [存储过程](stored-procedures.md)
 - [下载示例数据库](downloading-sample-databases.md)
-- [使用可以为 Null 的值类型](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
-- [可以为 null 的值类型](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [可以为 null 的C#值类型（）](../../../../../csharp/language-reference/builtin-types/nullable-value-types.md)
+- [可以为 Null 的值类型 (Visual Basic)](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

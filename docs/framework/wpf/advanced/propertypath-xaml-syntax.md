@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: b2530793bfe1a158a0df1c34b2768e0c7ca351f3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f9176e61915b6c5cc05f120eade69a6d19cc4e6a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459361"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740782"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 语法
 
@@ -32,7 +32,7 @@ ms.locfileid: "73459361"
 
 数据绑定是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能，借此可以绑定到任意依赖属性的目标值。 但是，此类数据绑定的源不需要是依赖属性；可以是适用数据提供程序能识别的任意属性类型。 属性路径特别用于 <xref:System.Windows.Data.ObjectDataProvider>，后者用于从公共语言运行时（CLR）对象及其属性获取绑定源。
 
-请注意，对 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 的数据绑定不使用 <xref:System.Windows.PropertyPath>，因为它不使用 <xref:System.Windows.Data.Binding>中的 <xref:System.Windows.Data.Binding.Path%2A>。 相反，可以使用 <xref:System.Windows.Data.Binding.XPath%2A>，并在数据的 [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] 中指定有效的 XPath 语法。 还将 <xref:System.Windows.Data.Binding.XPath%2A> 指定为字符串，但此处未记录此内容;请参阅[使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。
+请注意，数据绑定到 XML 不会使用 <xref:System.Windows.PropertyPath>，因为它不使用 <xref:System.Windows.Data.Binding>中 <xref:System.Windows.Data.Binding.Path%2A>。 相反，可以使用 <xref:System.Windows.Data.Binding.XPath%2A>，并将有效的 XPath 语法指定到数据的 XML 文档对象模型（DOM）中。 还将 <xref:System.Windows.Data.Binding.XPath%2A> 指定为字符串，但此处未记录此内容;请参阅[使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。
 
 理解数据绑定中的属性路径的关键是将绑定到单个属性值设置为目标，或者改为绑定到采用列表或集合的目标属性。 如果要绑定集合，例如绑定将根据集合中的数据项数扩展的 <xref:System.Windows.Controls.ListBox>，则属性路径应引用集合对象，而不是单个集合项。 数据绑定引擎会自动将用作数据源的集合与绑定目标的类型匹配，从而导致诸如使用 items 数组填充 <xref:System.Windows.Controls.ListBox> 的行为。
 
@@ -76,7 +76,7 @@ ms.locfileid: "73459361"
 <object property="(ownerType.propertyName)" .../>
 ```
 
-圆括号指示 <xref:System.Windows.PropertyPath> 中的此属性应使用部分限定构造。 它可以使用 XML 命名空间来查找具有适当映射的类型。 `ownerType` 通过每个程序集中的 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 声明搜索 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器有权访问的类型。 大部分应用程序都具有映射到 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空间的默认 XML 命名空间，因此通常仅有自定义类型或该命名空间之外的类型才需要前缀。  `propertyName` 必须解析为 `ownerType` 中存在的属性名称。 此语法一般用于以下任一情况：
+圆括号指示 <xref:System.Windows.PropertyPath> 中的此属性应使用部分限定构造。 它可以使用 XML 命名空间来查找具有适当映射的类型。 `ownerType` 通过每个程序集中的 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 声明搜索 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器有权访问的类型。 大部分应用程序都具有映射到 `http://schemas.microsoft.com/winfx/2006/xaml/presentation` 命名空间的默认 XML 命名空间，因此通常仅有自定义类型或该命名空间之外的类型才需要前缀。  `propertyName` 必须解析为 `ownerType` 中存在的属性名称。 此语法一般用于以下任一情况：
 
 - 路径是在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的样式或模板（该样式或模板没有指定的目标类型）中指定的。 除此之外，限定用法一般无效，因为在非样式、非模板情况下，属性存在于实例中，而不是类型中。
 
@@ -97,7 +97,7 @@ ms.locfileid: "73459361"
 此语法中的 / 用于在分层数据源对象中导航，并且支持使用连续的 / 字符分多个步骤导航层次结构。 源遍历说明了当前记录指针位置，该位置是通过将数据与其视图的 UI 同步而确定的。 有关与分层数据源对象绑定的详细信息，以及数据绑定中当前记录指针的概念，请参阅[对分层数据使用主-从模式](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)或[数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)。
 
 > [!NOTE]
-> 此语法看起来类似 [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]。 绑定到 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据源的 true [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] 表达式不用作 <xref:System.Windows.Data.Binding.Path%2A> 值，应改为用于互斥 <xref:System.Windows.Data.Binding.XPath%2A> 属性。
+> 在表面上，此语法类似于 XPath。 用于绑定到 XML 数据源的真正的 XPath 表达式不用作 <xref:System.Windows.Data.Binding.Path%2A> 值，应改为用于互斥的 <xref:System.Windows.Data.Binding.XPath%2A> 属性。
 
 ### <a name="collection-views"></a>集合视图
 
@@ -204,7 +204,7 @@ ms.locfileid: "73459361"
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>
 ```
 
-圆括号指示 <xref:System.Windows.PropertyPath> 中的此属性应使用部分限定构造。 可以使用 XML 命名空间来查找类型。 `ownerType` 通过每个程序集中的 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 声明搜索 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器有权访问的类型。 大部分应用程序都具有映射到 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空间的默认 XML 命名空间，因此通常仅有自定义类型或该命名空间之外的类型才需要前缀。 `propertyName` 必须解析为 `ownerType` 中存在的属性名称。 指定为 `propertyName` 的属性必须是 <xref:System.Windows.DependencyProperty>。 （所有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附加属性都实现为依赖属性，因此该问题仅与自定义附加属性相关。）
+圆括号指示 <xref:System.Windows.PropertyPath> 中的此属性应使用部分限定构造。 可以使用 XML 命名空间来查找类型。 `ownerType` 通过每个程序集中的 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 声明搜索 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器有权访问的类型。 大部分应用程序都具有映射到 `http://schemas.microsoft.com/winfx/2006/xaml/presentation` 命名空间的默认 XML 命名空间，因此通常仅有自定义类型或该命名空间之外的类型才需要前缀。 `propertyName` 必须解析为 `ownerType` 中存在的属性名称。 指定为 `propertyName` 的属性必须是 <xref:System.Windows.DependencyProperty>。 （所有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附加属性都实现为依赖属性，因此该问题仅与自定义附加属性相关。）
 
 <a name="indexanim"></a>
 

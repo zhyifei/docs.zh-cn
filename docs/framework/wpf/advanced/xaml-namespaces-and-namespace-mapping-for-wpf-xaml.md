@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 6c06e18f7869f1b1041c4d5fb1608a87f2902d7b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8f381a06aa916be378052d00f0d65f37ef910433
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460573"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740661"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML 的 XAML 命名空间和命名空间映射
 本主题进一步解释通常在 WPF XAML 文件的根标记中出现的两个 XAML 命名空间映射的存在性和用途。 此外，还介绍如何生成相似映射以使用代码中和/或单独程序集内定义的元素。  
@@ -39,7 +39,7 @@ ms.locfileid: "73460573"
   
  这些声明之间的关系是 `x:` 前缀映射支持 XAML 语言定义中的内部函数，并且 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 是将 XAML 用作语言并为 XAML 定义对象词汇的一种实现。 因为 WPF 词汇用法远比 XAML 内部函数用法常见，因此默认映射 WPF 词汇。  
   
- 此 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 内，映射 XAML 语言内部函数支持的 `x:` 前缀约定后跟项目模板、示例代码和语言功能文档。 XAML 命名空间定义许多常用功能，即使对于基本 WPF 应用程序而言，这些功能也是必需的。 例如，若要通过分部类将任何代码隐藏加入到 XAML 文件，必须将该类命名为相关 XAML 文件根元素中的 `x:Class` 属性。 或者，XAML 页面中定义的任何要作为键控资源访问的元素都应在当前元素上设置 `x:Key` 属性。 有关 XAML 的这些方面和其他方面的详细信息，请参阅 [XAML 概述 (WPF)](../../../desktop-wpf/fundamentals/xaml.md) 或 [XAML 语法详述](xaml-syntax-in-detail.md)。  
+ 用于映射 XAML 语言内部函数支持的 `x:` 前缀约定后跟项目模板、示例代码和此 SDK 中的语言功能的文档。 XAML 命名空间定义许多常用功能，即使对于基本 WPF 应用程序而言，这些功能也是必需的。 例如，若要通过分部类将任何代码隐藏加入到 XAML 文件，必须将该类命名为相关 XAML 文件根元素中的 `x:Class` 属性。 或者，XAML 页面中定义的任何要作为键控资源访问的元素都应在当前元素上设置 `x:Key` 属性。 有关 XAML 的这些方面和其他方面的详细信息，请参阅 [XAML 概述 (WPF)](../../../desktop-wpf/fundamentals/xaml.md) 或 [XAML 语法详述](xaml-syntax-in-detail.md)。  
   
 <a name="Mapping_To_Custom_Classes_and_Assemblies"></a>   
 ## <a name="mapping-to-custom-classes-and-assemblies"></a>映射到自定义类和程序集  
@@ -105,7 +105,7 @@ End Namespace
   
 <a name="Mapping_CLR_Namespaces_to_XML_Namespaces_in_an"></a>   
 ## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>将 CLR 命名空间映射到程序集中的 XML 命名空间  
- WPF 定义 XAML 处理器使用的 CLR 属性，以便将多个 CLR 命名空间映射到单个 XAML 命名空间。 此特性 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>会置于生成程序集的源代码的程序集级别。 WPF 程序集源代码使用此特性将各种常见命名空间（如 <xref:System.Windows> 和 <xref:System.Windows.Controls>）映射到 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空间。  
+ WPF 定义 XAML 处理器使用的 CLR 属性，以便将多个 CLR 命名空间映射到单个 XAML 命名空间。 此特性 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>会置于生成程序集的源代码的程序集级别。 WPF 程序集源代码使用此特性将各种常见命名空间（如 <xref:System.Windows> 和 <xref:System.Windows.Controls>）映射到 `http://schemas.microsoft.com/winfx/2006/xaml/presentation` 命名空间。  
   
  <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 采用以下两个参数： XML/XAML 命名空间名称和 CLR 命名空间名称。 可以有多个 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 将多个 CLR 命名空间映射到同一个 XML 命名空间。 映射后，通过在分部类代码隐藏页中提供相应 `using` 语句，可在无完全限定的情况下引用这些命名空间的成员（如果需要）。 有关更多详细信息，请参阅 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>。  
   

@@ -2,19 +2,19 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 80784f40130e572ae374bd9b26e701360dbfcaa5
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: fa87a1b0961425d6a9bc84769bef6e87cbc2ce96
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399135"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732555"
 ---
-# <a name="websocketsettings"></a>\<webSocketSettings>
+# <a name="websocketsettings"></a>\<s >
 用来指定 Web Socket 设置的配置元素。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+\<system &nbsp; &nbsp;[ **>** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding >** ](nethttpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<s >**  
@@ -54,23 +54,23 @@ ms.locfileid: "70399135"
   
 ## <a name="transportusage-attribute"></a>transportUsage 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |WhenDuplex|如果为双工协定，则使用 Web Socket 协议。|  
 |Always|始终使用 Web Socket 协议，而不管协定类型。|  
 |Never|永远不使用 Web Socket 协议。|  
   
 ### <a name="child-elements"></a>子元素  
- 无  
+ None  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|\<netHttpBinding>|指定 NetHttpBinding|  
+|\<netHttpBinding >|指定 NetHttpBinding|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用\<s > 元素。  
+ 下面的示例演示如何使用 \<s > 元素。  
   
 ```xml  
 <netHttpBinding>
@@ -96,4 +96,4 @@ ms.locfileid: "70399135"
 - [绑定](../../../wcf/bindings.md)
 - [配置系统提供的绑定](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [使用绑定配置服务和客户端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

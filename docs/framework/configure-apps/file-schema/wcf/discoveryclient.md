@@ -2,19 +2,19 @@
 title: <discoveryClient>
 ms.date: 03/30/2017
 ms.assetid: a78f74c3-1152-4149-ab29-3f12d316caeb
-ms.openlocfilehash: 5e586437e3b269d361c254744e820ee8e8c0ca0a
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 71305720cad0206ec3dabb1863e2f1cd72eb85f0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400402"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739036"
 ---
-# <a name="discoveryclient"></a>\<discoveryClient>
+# <a name="discoveryclient"></a>\<discoveryClient >
 一个用于创建自定义绑定的配置元素，通过该绑定，客户端应用程序能够自动搜索可检测服务，并能够在运行时查找服务地址。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+\<system &nbsp; &nbsp;[ **>** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<discoveryClient >**  
@@ -51,13 +51,13 @@ ms.locfileid: "70400402"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<standardEndpoints>](standardendpoints.md)|一个配置元素，提供客户端应用程序用于搜索发现服务的一组条件。 可以将条件分组为搜索条件（指定要查找的服务）和查找终止条件（搜索应持续的时间长度）。|  
+|[\<standardEndpoints >](standardendpoints.md)|一个配置元素，提供客户端应用程序用于搜索发现服务的一组条件。 可以将条件分组为搜索条件（指定要查找的服务）和查找终止条件（搜索应持续的时间长度）。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding >](bindings.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="see-also"></a>请参阅
 

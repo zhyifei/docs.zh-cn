@@ -6,23 +6,23 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: 0f39c9d42abfaba1327f2c189ac6ce3d40db6e89
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f075d646539de5d68e1c9c75d9664451125e9919
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459208"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733561"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>如何：使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据
-此示例演示如何使用 <xref:System.Windows.Data.XmlDataProvider>绑定到 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 数据。  
+此示例演示如何使用 <xref:System.Windows.Data.XmlDataProvider>绑定到 XML 数据。  
   
- 使用 <xref:System.Windows.Data.XmlDataProvider>，可以通过应用程序中的数据绑定访问的基础数据可以是 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 节点的任意树。 换句话说，<xref:System.Windows.Data.XmlDataProvider> 提供一种简便的方法来使用 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 节点的任意树作为绑定源。  
+ 使用 <xref:System.Windows.Data.XmlDataProvider>，可以通过应用程序中的数据绑定访问的基础数据可以是 XML 节点的任意树。 换句话说，<xref:System.Windows.Data.XmlDataProvider> 提供了一种简便的方法来使用 XML 节点的任意树作为绑定源。  
   
 ## <a name="example"></a>示例  
- 在下面的示例中，数据作为 <xref:System.Windows.FrameworkElement.Resources%2A> 部分中的 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]*数据岛*直接嵌入。 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据岛必须包装在 `<x:XData>` 标记中，并始终具有一个单一根节点，在本示例中根节点为 *Inventory*。  
+ 在下面的示例中，数据直接作为 XML*数据岛*嵌入到 <xref:System.Windows.FrameworkElement.Resources%2A> 部分中。 XML 数据岛必须包装在 `<x:XData>` 标记中，并且始终有一个根节点，这是此示例中的*清单*。  
   
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据的根节点具有一个将 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空间设置为空字符串的 **xmlns** 属性。 将 XPath 查询应用到 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页中内联的数据岛时，需要此属性。 在此内联情况下，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，因此数据岛继承了 <xref:System.Windows> 命名空间。 因此，需要将命名空间设置为空白，以使 XPath 查询不受 <xref:System.Windows> 命名空间的限定，这会 misdirect 查询。  
+> XML 数据的根节点具有将 XML 命名空间设置为空字符串的**xmlns**属性。 将 XPath 查询应用到 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页中内联的数据岛时，需要此属性。 在此内联情况下，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，因此数据岛继承了 <xref:System.Windows> 命名空间。 因此，需要将命名空间设置为空白，以使 XPath 查询不受 <xref:System.Windows> 命名空间的限定，这会 misdirect 查询。  
   
  [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
@@ -48,11 +48,11 @@ ms.locfileid: "73459208"
   
  [!code-xaml[XmlDataSourceVariation#XmlNodePath](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   
- 在某些应用程序中，将 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 作为 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页的源内的数据岛嵌入可能很不方便，因为在编译时必须知道该数据的确切内容。 因此，还支持从外部 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 文件获取该数据，如下面的示例所示：  
+ 在某些应用程序中，将 XML 作为数据岛嵌入到 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页的源中可能不太方便，因为在编译时必须知道数据的确切内容。 因此，还支持从外部 XML 文件获取数据，如以下示例中所示：  
   
  [!code-xaml[XMLDataSource2#XmlFileExample](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource2/CS/Window1.xaml#xmlfileexample)]  
   
- 如果 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据位于远程 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 文件中，则可以通过将相应的 URL 分配到 <xref:System.Windows.Data.XmlDataProvider.Source%2A> 特性来定义对数据的访问权限，如下所示：  
+ 如果 XML 数据位于远程 XML 文件中，则可以通过将相应的 URL 分配到 <xref:System.Windows.Data.XmlDataProvider.Source%2A> 特性来定义对数据的访问权限，如下所示：  
   
 ```xml  
 <XmlDataProvider x:Key="BookData" Source="http://MyUrl" XPath="Books"/>  

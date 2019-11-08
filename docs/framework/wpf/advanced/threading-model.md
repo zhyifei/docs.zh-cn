@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ef25123ed53ecf3e03e4f4c969bed2ef570591ad
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 22544b3bf2acf6e397f2ad5ae3de576bf491bd2b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459027"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740736"
 ---
 # <a name="threading-model"></a>线程处理模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 旨在帮助开发人员处理复杂的线程处理问题。 因此，大多数 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 开发人员无需编写使用多个线程的接口。 由于多线程程序既复杂又难以调试，因此当存在单线程解决方案时，应避免使用多线程程序。  
@@ -49,7 +49,7 @@ ms.locfileid: "73459027"
   
  如果只有一个线程可以修改 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，后台线程如何与用户进行交互？ 后台线程可以要求 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 线程代表其执行操作。 它通过向 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 线程的 <xref:System.Windows.Threading.Dispatcher> 注册工作项来实现此目的。 <xref:System.Windows.Threading.Dispatcher> 类提供两种方法来注册工作项： <xref:System.Windows.Threading.Dispatcher.Invoke%2A> 和 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>。 这两种方法都计划一个用于执行的委托。 <xref:System.Windows.Threading.Dispatcher.Invoke%2A> 是一种同步调用–也就是说，它不会返回，直到 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 线程实际完成委托。 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 是异步的，并且会立即返回。  
   
- <xref:System.Windows.Threading.Dispatcher> 按优先级对其队列中的元素进行排序。 向 <xref:System.Windows.Threading.Dispatcher> 队列添加元素时，可以指定10个级别。 这些优先级在 <xref:System.Windows.Threading.DispatcherPriority> 枚举中维护。 [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)] 文档中可以找到有关 <xref:System.Windows.Threading.DispatcherPriority> 级别的详细信息。  
+ <xref:System.Windows.Threading.Dispatcher> 按优先级对其队列中的元素进行排序。 向 <xref:System.Windows.Threading.Dispatcher> 队列添加元素时，可以指定10个级别。 这些优先级在 <xref:System.Windows.Threading.DispatcherPriority> 枚举中维护。 Windows SDK 文档中可以找到有关 <xref:System.Windows.Threading.DispatcherPriority> 级别的详细信息。  
   
 <a name="samples"></a>   
 ## <a name="threads-in-action-the-samples"></a>实际线程：示例  

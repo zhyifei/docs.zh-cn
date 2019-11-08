@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 5d0d28213ed8b4a0d464793aeba6823db2405bbe
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e7546021fbfde3fceea7fd4f1eba10cdc90dff8b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459012"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740615"
 ---
 # <a name="binding-sources-overview"></a>绑定源概述
 在数据绑定中，绑定源对象是指用户从其获取数据的对象。 本主题讨论可用作绑定源的对象类型。
@@ -25,7 +25,7 @@ ms.locfileid: "73459012"
 |公共语言运行时（CLR）对象|可以绑定到任何公共语言运行时（CLR）对象的公共属性、子属性以及索引器。 绑定引擎使用 CLR 反射获取属性的值。 或者，实现 <xref:System.ComponentModel.ICustomTypeDescriptor> 或具有注册 <xref:System.ComponentModel.TypeDescriptionProvider> 的对象也适用于绑定引擎。<br /><br /> 有关如何实现可用作绑定源的类的详细信息，请参阅本主题后面的[为绑定源实现类](#classes)。|
 |动态对象|可以绑定到实现 <xref:System.Dynamic.IDynamicMetaObjectProvider> 接口的对象的可用属性和索引器。 如果可以访问代码中的成员，则可以绑定到该成员。 例如，如果动态对象使用户可以通过 `someObjet.AProperty` 访问代码中的成员，则可以通过将绑定路径设置为 `AProperty` 来绑定到该成员。|
 |ADO.NET 对象|可以绑定到 ADO.NET 对象，如 <xref:System.Data.DataTable>。 ADO.NET <xref:System.Data.DataView> 实现 <xref:System.ComponentModel.IBindingList> 接口，该接口提供绑定引擎侦听的更改通知。|
-|[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 对象|您可以绑定到 <xref:System.Xml.XmlNode>、<xref:System.Xml.XmlDocument>或 <xref:System.Xml.XmlElement>上的 `XPath` 查询，也可以运行这些查询。 访问标记中的绑定源 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据的一种简便方法是使用 <xref:System.Windows.Data.XmlDataProvider> 对象。 有关详细信息，请参阅[使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。<br /><br /> 你还可以使用 LINQ to XML 绑定到 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument>，或者绑定到这些类型的对象上运行的查询结果。 使用 LINQ to XML 访问作为标记中的绑定源的 XML 数据的一种简便方法是使用 <xref:System.Windows.Data.ObjectDataProvider> 对象。 有关详细信息，请参阅[绑定到 XDocument、XElement 或 LINQ for XML 查询结果](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)。|
+|XML 对象|您可以绑定到 <xref:System.Xml.XmlNode>、<xref:System.Xml.XmlDocument>或 <xref:System.Xml.XmlElement>上的 `XPath` 查询，也可以运行这些查询。 访问标记中的绑定源的 XML 数据的一种简便方法是使用 <xref:System.Windows.Data.XmlDataProvider> 对象。 有关详细信息，请参阅[使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。<br /><br /> 你还可以使用 LINQ to XML 绑定到 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument>，或者绑定到这些类型的对象上运行的查询结果。 使用 LINQ to XML 访问作为标记中的绑定源的 XML 数据的一种简便方法是使用 <xref:System.Windows.Data.ObjectDataProvider> 对象。 有关详细信息，请参阅[绑定到 XDocument、XElement 或 LINQ for XML 查询结果](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)。|
 |<xref:System.Windows.DependencyObject> 对象|可以绑定到任何 <xref:System.Windows.DependencyObject>的依赖项属性。 有关示例，请参阅[绑定两个控件的属性](how-to-bind-the-properties-of-two-controls.md)。|
 
 <a name="classes"></a>
@@ -86,7 +86,7 @@ ms.locfileid: "73459012"
 
 - 始终可以绑定到依赖属性。
 
- [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 绑定的权限要求非常类似。 在部分信任沙箱中，当它无权访问指定数据时，<xref:System.Windows.Data.XmlDataProvider> 失败。
+ XML 绑定的权限要求类似。 在部分信任沙箱中，当它无权访问指定数据时，<xref:System.Windows.Data.XmlDataProvider> 失败。
 
  具有匿名类型的对象是内部对象。 只有在完全信任级别下运行，才能绑定到匿名类型的属性。 有关匿名类型的详细信息，请参阅[匿名类型（C# 编程指南）](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)或[匿名类型 (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Visual Basic)。
 

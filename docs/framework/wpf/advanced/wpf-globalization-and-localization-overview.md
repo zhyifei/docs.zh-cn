@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: a912e0437bf986aff65fc722065e912571427189
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b8777e1402bef1708136a5f81a641beb8c761905
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035785"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740706"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和本地化概述
 
@@ -70,7 +70,7 @@ ms.locfileid: "73035785"
 
 ## <a name="localize-a-wpf-application"></a>对 WPF 应用程序进行本地化
 
-对 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序进行本地化时，有几个选项。 例如，可以将应用程序中的可本地化资源绑定到 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 文件，将可本地化的文本存储在 resx 表中，或让本地化人员使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 文件。 本部分介绍使用 XAML 的 BAML 形式的本地化工作流，该工作流提供以下几个优点：
+对 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序进行本地化时，有几个选项。 例如，可以将应用程序中的可本地化资源绑定到 XML 文件，将可本地化的文本存储在 resx 表中，或让本地化人员使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 文件。 本部分介绍使用 XAML 的 BAML 形式的本地化工作流，该工作流提供以下几个优点：
 
 - 您可以在生成后进行本地化。
 

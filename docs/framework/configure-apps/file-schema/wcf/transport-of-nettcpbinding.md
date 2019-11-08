@@ -2,22 +2,22 @@
 title: <transport> 的 <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 41f11be9b4ae8f7a7535c9766965de8575cff784
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 4ef08ad73a03dea21d27217364a7bacb46a3848e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399320"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735931"
 ---
 # <a name="transport-of-nettcpbinding"></a>\<netTcpBinding> 的 \<transport>
-定义使用[ \<netTcpBinding >](nettcpbinding.md)配置的终结点的消息级安全性要求的类型。  
+定义使用[\<netTcpBinding >](nettcpbinding.md)配置的终结点的消息级安全性要求的类型。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+\<system &nbsp; &nbsp;[ **>** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netTcpBinding >** ](nettcpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全 >** ](security-of-nettcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](security-of-nettcpbinding.md) >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<传输 >**  
   
 ## <a name="syntax"></a>语法  
@@ -47,35 +47,35 @@ ms.locfileid: "70399320"
   
 |特性|描述|  
 |---------------|-----------------|  
-|clientCredentialType|可选。 指定要在使用传输安全性执行客户端身份验证时使用的凭据类型。<br /><br /> -默认值为`Windows`。<br />-此属性的类型<xref:System.ServiceModel.TcpClientCredentialType>为。|  
+|clientCredentialType|可选。 指定要在使用传输安全性执行客户端身份验证时使用的凭据类型。<br /><br /> -默认值为 `Windows`。<br />-此属性的类型为 <xref:System.ServiceModel.TcpClientCredentialType>。|  
 |protectionLevel|可选。 定义 TCP 传输级别的安全性。 对消息进行签名可以降低该消息在传输过程中被第三方篡改的风险。 加密可以在传输过程中提供数据级保密。<br /><br /> 默认值为 `EncryptAndSign`。|  
 |sslProtocols|指定支持哪些 SslProtocols 的 SslProtocols 枚举标志值。 默认值为 Tls&#124;Tls11&#124;Tls12。|  
-|policyEnforcement|此枚举指定应何时强制实施 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>。<br /><br /> 1.Never – 绝不强制实施此策略（禁用扩展保护）。<br />2.WhenSupported – 仅在客户端支持扩展保护时才强制实施此策略。<br />3.Always – 总是强制实施此策略。 不支持扩展保护的客户端将无法进行身份验证。|  
+|policyEnforcement|此枚举指定应何时强制实施 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>。<br /><br /> 1. 从不–不强制实施策略（禁用扩展保护）。<br />WhenSupported-仅当客户端支持扩展保护时才强制实施策略。<br />3. always –始终强制实施策略。 不支持扩展保护的客户端将无法进行身份验证。|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
-|无|客户端为匿名客户端。 这需要服务证书。|  
+|None|客户端为匿名客户端。 这需要服务证书。|  
 |Windows|指定使用 SP 协商（Kerberos 协商）进行客户端 Windows 身份验证。|  
 |证书|使用证书进行对客户端进行身份验证。 这使用 SSL 协商并需要服务证书。|  
   
 ## <a name="protectionlevel-attribute"></a>protectionLevel 属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
-|无|无保护。|  
+|None|无保护。|  
 |Sign|对消息进行签名。|  
 |EncryptAndSign|-对消息进行加密和签名。|  
   
 ### <a name="child-elements"></a>子元素  
- 无  
+ None  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<security>](security-of-nettcpbinding.md)|指定[ \<netTcpBinding >](nettcpbinding.md)的安全功能。|  
+|[\<security >](security-of-nettcpbinding.md)|指定[\<netTcpBinding >](nettcpbinding.md)的安全功能。|  
   
 ## <a name="remarks"></a>备注  
  使用传输安全性以获得 SOAP 消息的完整性和保密性以及相互身份验证。 如果在绑定上选择此安全模式，则使用安全传输配置信道栈，并且使用传输安全性（如 Windows (Negotiate) 或 SSLL）保护 SOAP 消息安全通过 TCP 传递。  
@@ -90,4 +90,4 @@ ms.locfileid: "70399320"
 - [绑定](../../../wcf/bindings.md)
 - [配置系统提供的绑定](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [使用绑定配置服务和客户端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

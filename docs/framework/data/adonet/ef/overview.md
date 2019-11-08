@@ -2,18 +2,18 @@
 title: 实体框架概述
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 92aa7b9c1f163c0496a821cca375c8b7e1b21a5f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b68db4f139330ccc1da5057498a37a08d00ba266
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854340"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738508"
 ---
 # <a name="entity-framework-overview"></a>实体框架概述
 
 实体框架是 ADO.NET 中的一组技术，支持开发面向数据的软件应用程序。 面向数据的应用程序的架构师和开发人员曾为实现两个迥然不同的目标费尽心机： 他们必须为要解决的业务问题的实体、关系和逻辑构建模型，还必须处理用于存储和检索数据的数据引擎。 数据可能跨多个各有不同协议的存储系统；甚至使用单个存储系统的应用程序也必须在存储系统的需求与编写高效且容易维护的应用程序代码之间取得平衡。
 
-实体框架使开发人员能够以特定于域的对象和属性（如客户和客户地址）的形式处理数据，而无需考虑这些数据所用的基础数据库表和列。存放. 借助实体框架，开发人员在处理数据时能够以更高的抽象级别工作，并且能够以相比传统应用程序更少的代码创建和维护面向数据的应用程序。 由于实体框架是 .NET Framework 的组件，因此实体框架应用程序可以在安装了版本 3.5 SP1 的 .NET Framework 的任何计算机上运行。
+实体框架使开发人员能够以特定于域的对象和属性（如客户和客户地址）的形式处理数据，而无需考虑这些数据所用的基础数据库表和列。存放. 借助 Entity Framework，开发人员在处理数据时能够以更高的抽象级别工作，并且能够以相比传统应用程序更少的代码创建和维护面向数据的应用程序。 由于实体框架是 .NET Framework 的组件，因此实体框架应用程序可以在安装了版本 3.5 SP1 的 .NET Framework 的任何计算机上运行。
 
 ## <a name="give-life-to-models"></a>为模型指定生存期
  构建应用程序或服务时常用的一种长期存在的设计方法是将应用程序或服务分为三部分：域模型、逻辑模型和物理模型。 域模型定义要建模的系统中的实体和关系。 关系数据库的逻辑模型通过外键约束将实体和关系规范化到表中。 物理模型通过指定分区和索引等存储详细信息实现特定数据引擎的功能。
@@ -34,7 +34,7 @@ ms.locfileid: "70854340"
 
 可以根据需要对存储模型和映射进行更改，而无需对概念模型、数据类或应用程序代码进行更改。 存储模型是特定于提供程序的，因此可以在各种数据源之间使用一致的概念模型。
 
-实体框架使用这些模型和映射文件对概念模型中的实体和关系创建、读取、更新和删除操作，以便对数据源中的等效操作进行操作。 实体框架甚至支持将概念模型中的实体映射到数据源中的存储过程。 有关详细信息，请参阅[CSDL、SSDL 和 MSL 规范](./language-reference/csdl-ssdl-and-msl-specifications.md)。
+实体框架使用这些模型和映射文件对概念模型中的实体和关系创建、读取、更新和删除操作，以便对数据源中的等效操作进行操作。 实体框架甚至支持将概念模型中的实体映射到数据源中的存储过程。 有关详细信息，请参阅[CSDL、SSDL 和 MSL 规范](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)。
 
 ## <a name="map-objects-to-data"></a>将对象映射到数据
  面向对象的编程对与数据存储系统的交互提出了一个难题。 虽然类的组织结构通常可以比较接近地反映关系数据库表的组织结构，但这种对应关系并不完美。 多个规范化表通常对应于单个类，而且类间关系的表示方式与表间关系的表示方式通常也不相同。 例如，若要表示某个销售订单的客户，`Order` 类可能会使用一个包含对 `Customer` 类实例的引用的属性，而数据库中的 `Order` 表行会包含一个外键列（或一组列），通过这些列包含对应于 `Customer` 表中的主键值的值。 `Customer` 类可能会使用一个名为 `Orders` 的属性（该属性包含 `Order` 类实例的集合），而数据库中的 `Customer` 表则不包含相应的列。 实体框架使开发人员可以灵活地以这种方式表示关系，或在数据库中表示更密切的模型关系。
@@ -47,7 +47,7 @@ ms.locfileid: "70854340"
 
 - LINQ to Entities。 提供语言集成查询 (LINQ) 支持，用于查询在概念模型中定义的实体类型。 有关详细信息，请参阅[LINQ to Entities](./language-reference/linq-to-entities.md)。
 
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)]。 一种独立于存储的 SQL 方言，可直接处理概念模型中的实体并支持实体数据模型的概念。 [!INCLUDE[esql](../../../../../includes/esql-md.md)]同时用于对象查询和使用 EntityClient 提供程序执行的查询。 有关详细信息，请参阅[实体 SQL 概述](./language-reference/entity-sql-overview.md)。
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)] 一种独立于存储的 SQL 方言，可直接处理概念模型中的实体并支持实体数据模型的概念。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 同时用于对象查询和使用 EntityClient 提供程序执行的查询。 有关详细信息，请参阅[实体 SQL 概述](./language-reference/entity-sql-overview.md)。
 
 实体框架包括 EntityClient 数据提供程序。 此提供程序管理连接，将实体查询转换为特定于数据源的查询，并返回实体框架用于将实体数据具体化为对象的数据读取器。 当不需要对象具体化时，通过使应用程序执行 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查询并使用返回的只读数据读取器，还可以像标准 ADO.NET 数据提供程序一样使用 EntityClient 提供程序。 有关详细信息，请参阅[实体框架的 EntityClient Provider](entityclient-provider-for-the-entity-framework.md)。
 
@@ -55,11 +55,11 @@ ms.locfileid: "70854340"
 
 ![实体框架体系结构图](./media/wd-efarchdiagram.gif "wd_EFArchDiagram")
 
-实体数据模型工具可以生成派生自`System.Data.Objects.ObjectContext`或`System.Data.Entity.DbContext`的类，该类表示概念模型中的实体容器。 此对象上下文提供跟踪更改以及管理标识、并发和关系的功能。 此类还公开将插入、更新和删除操作写入数据源的 `SaveChanges` 方法。 与查询类似，这些更改是由系统自动生成的命令或由开发人员指定的存储过程执行的。
+实体数据模型工具可以生成派生自 `System.Data.Objects.ObjectContext` 或 `System.Data.Entity.DbContext` 的类，该类表示概念模型中的实体容器。 此对象上下文提供跟踪更改以及管理标识、并发和关系的功能。 此类还公开将插入、更新和删除操作写入数据源的 `SaveChanges` 方法。 与查询类似，这些更改是由系统自动生成的命令或由开发人员指定的存储过程执行的。
 
 ## <a name="data-providers"></a>数据提供程序
 
-`EntityClient`提供程序通过在概念性实体和关系方面访问数据来扩展 ADO.NET 提供程序模型。 它执行使用 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 的查询。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 提供使 `EntityClient` 能与数据库进行通信的基础查询语言。 有关详细信息，请参阅[实体框架的 EntityClient Provider](entityclient-provider-for-the-entity-framework.md)。
+`EntityClient` 提供程序通过在概念实体和关系方面访问数据来扩展 ADO.NET 提供程序模型。 它执行使用 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 的查询。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 提供使 `EntityClient` 能与数据库进行通信的基础查询语言。 有关详细信息，请参阅[实体框架的 EntityClient Provider](entityclient-provider-for-the-entity-framework.md)。
 
 实体框架包括支持规范命令树的更新的 SqlClient 数据提供程序。 有关详细信息，请参阅[SqlClient for the 实体框架](sqlclient-for-the-entity-framework.md)。
 
@@ -67,7 +67,7 @@ ms.locfileid: "70854340"
 
 与实体框架运行时一起，Visual Studio 包含映射和建模工具。 有关详细信息，请参阅[建模和映射](modeling-and-mapping.md)。
 
-## <a name="learn-more"></a>了解详细信息
+## <a name="learn-more"></a>了解更多信息
 
 若要了解有关实体框架的详细信息，请参阅：
 

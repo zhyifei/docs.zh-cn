@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 2abe89abf1ab246464c8f7a7ca7c87295b0b3946
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 178145b06cb937fb677b8454357bed774ed3003b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458973"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740847"
 ---
 # <a name="dependency-property-value-precedence"></a>依赖项属性值优先级
 <a name="introduction"></a> 本主题说明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统的工作机制如何影响依赖属性的值，并介绍应用于属性有效值的属性系统的各方面所依据的优先级。  
@@ -109,7 +109,7 @@ ms.locfileid: "73458973"
   
 <a name="animations"></a>   
 ## <a name="coercion-animations-and-base-value"></a>强制、动画和基值  
- 强制和动画在本 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 中都作用于称为“基值”的值。 因此，基值是在各项中通过向上计算一直到第 2 项为止而确定的任何值。  
+ 强制和动画都作用于在整个 SDK 中称为 "基值" 的值。 因此，基值是在各项中通过向上计算一直到第 2 项为止而确定的任何值。  
   
  对于动画，如果没有为某些行为指定“From”和“To”值，或者动画在完成时故意还原为基值，那么基值将影响动画值。 若要了解实际效果，请运行 [From, To, and By Animation Target Values Sample](https://go.microsoft.com/fwlink/?LinkID=159988)（From、To 和 By 动画目标值示例）。 尝试为示例中的矩形高度设置本地值，使初始本地值不同于动画中的任何“From”值。 你会注意到动画立即使用“From”值开始，并在开始后替换基值。 动画完成后，可能会指定返回到在动画完成之前找到的值，方法是指定停止 <xref:System.Windows.Media.Animation.FillBehavior>。 然后，根据正常优先级来确定基值。  
   

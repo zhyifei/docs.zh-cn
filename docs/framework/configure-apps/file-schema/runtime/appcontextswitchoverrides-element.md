@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: feb84fb3d8836168035ef8eed31728c6a0d00cba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 881b9fedfaa42ffb402e226a6b271f47feb20617
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118289"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736806"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 元素
 定义 <xref:System.AppContext> 类使用的一个或多个开关，用于提供新功能的选择退出机制。  
@@ -92,7 +92,7 @@ ms.locfileid: "73118289"
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |控制[DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer)是否根据 ECMAScript V6 和 V8 标准序列化一些控制字符。 有关详细信息，请参阅[缓解：使用 DataContractJsonSerializer 对控制字符进行序列化](../../../migration-guide/mitigation-serialization-control-characters.md)| .NET Framework 4.7 |
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|控制 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 是否支持多个调整或只支持时区的单个调整。 如果 `true`，则使用 <xref:System.TimeZoneInfo> 类型来序列化和反序列化日期和时间数据;否则，它将使用 <xref:System.TimeZone> 类型，该类型不支持多个调整规则。|.NET Framework 4.6.2|
 |`Switch.System.Runtime.Serialization.UseNewMaxArraySize`|控制在对象序列化和反序列化期间 <xref:System.Runtime.Serialization.ObjectManager?displayProperty=nameWithType> 是否使用更大的数组大小。 将此开关设置为 "`true`"，以通过类型（如 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>）提高大型对象图的序列化和反序列化的性能。 |.NET Framework 4.7.2|
-|`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|控制 <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> 构造函数是否使用现有对象引用来设置新对象的 <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> 属性。 有关详细信息，请参阅[缓解：ClaimsIdentity 构造函数](../../../migration-guide/mitigation-claimsidentity-constructor.md)。|.NET Framework 4.6.2|  
+|`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|控制 <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> 构造函数是否使用现有对象引用来设置新对象的 <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> 属性。 有关详细信息，请参阅[缓解：ClaimsIdentity 构造函数](../../../migration-guide/retargeting/4.6.1-4.6.2.md)。|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|控制是否尝试重用 <xref:System.Security.Cryptography.AesCryptoServiceProvider> 解密器引发 <xref:System.Security.Cryptography.CryptographicException>。 有关详细信息，请参阅[AesCryptoServiceProvider 解密器提供可重用的转换](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform)。|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|控制[CspParameters](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle)属性的值是表示窗口句柄的内存位置的[IntPtr](xref:System.IntPtr) ，还是窗口句柄（HWND）。 有关详细信息，请参阅[缓解：应向 CspParameters.ParentWindowHandle 分配 HWND](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value)。 |.NET Framework 4.7|   
 |`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|控制在 FIPS 模式下使用托管加密类是引发 <xref:System.Security.Cryptography.CryptographicException> （`true`）还是依赖于系统库（`false`）的实现。|.NET Framework 4.8|

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - typography [WPF], special characters
 - special characters [WPF]
 ms.assetid: a57776d1-f353-4794-afa0-bfa3c712ed1c
-ms.openlocfilehash: 713428adc2e1576d1b95984b492fe84c042c0a09
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 59449637bb45f6b75462b6809c354af7972fc2e7
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919632"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740843"
 ---
 # <a name="how-to-use-special-characters-in-xaml"></a>如何：在 XAML 中使用特殊字符
-在 Visual Studio 中创建的标记文件将自动保存为 Unicode UTF-8 文件格式，这意味着，最特殊的字符（如重音符号）已正确编码。 但是，有一组常用特殊字符的处理方式不同。 这些特殊字符遵循万维网联合会（W3C） [!INCLUDE[TL A#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 标准编码。  
+在 Visual Studio 中创建的标记文件将自动保存为 Unicode UTF-8 文件格式，这意味着，最特殊的字符（如重音符号）已正确编码。 但是，有一组常用特殊字符的处理方式不同。 这些特殊字符遵循用于编码的万维网联合会（W3C） XML 标准。  
   
  下表显示这组特殊字符的编码语法：  
   

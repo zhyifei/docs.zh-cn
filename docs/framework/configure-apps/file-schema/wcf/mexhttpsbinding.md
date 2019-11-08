@@ -2,19 +2,19 @@
 title: <mexHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: f2ed3774-78b9-4a15-b79b-655f1ad68b86
-ms.openlocfilehash: d32db2180e06cba6662ed853ab1a259805680ea1
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 79c3c68d69bf3cf5a018e6cf62f34e5ec2ce0cd5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397825"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738932"
 ---
-# <a name="mexhttpsbinding"></a>\<mexHttpsBinding>
+# <a name="mexhttpsbinding"></a>\<mexHttpsBinding >
 指定用于通过 HTTPS 进行的 WS-MetadataExchange (WS-MEX) 消息交换的绑定的设置。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+\<system &nbsp; &nbsp;[ **>** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<mexHttpsBinding >**  
   
 ## <a name="syntax"></a>语法  
@@ -50,10 +50,10 @@ ms.locfileid: "70397825"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<bindings>](bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
+|[\<bindings >](bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
   
 ## <a name="remarks"></a>备注  
- 此绑定实质上是支持使用证书的传输级安全性的 `WSHttpBinding` 绑定。 有关配置和使用此类元数据终结点的详细信息[，请参阅如何：配置自定义 WS-Metadata Exchange 绑定](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)， [如何：通过非 MEX 绑定](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)检索元数据，并使用示例[自定义安全元数据终结点](../../../wcf/samples/custom-secure-metadata-endpoint.md)。  
+ 此绑定实质上是支持使用证书的传输级安全性的 `WSHttpBinding` 绑定。 有关配置和使用此类元数据终结点的详细信息，请参阅[如何：配置自定义 WS-Metadata Exchange 绑定](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)，[如何：通过非 MEX 绑定检索元数据](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)，以及示例[自定义安全元数据终结点](../../../wcf/samples/custom-secure-metadata-endpoint.md).  
   
 ## <a name="see-also"></a>请参阅
 
@@ -68,4 +68,4 @@ ms.locfileid: "70397825"
 - [绑定](../../../wcf/bindings.md)
 - [配置系统提供的绑定](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [使用绑定配置服务和客户端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)
