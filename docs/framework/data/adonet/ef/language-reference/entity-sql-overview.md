@@ -2,67 +2,67 @@
 title: Entity SQL 概述
 ms.date: 03/30/2017
 ms.assetid: f0bb8120-e709-40a3-ac1e-5520dc47477d
-ms.openlocfilehash: 8f40a34f361669d2b8d89b63b3187cae6bf705d2
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e0f154ab2d9db1a1fdbaba8c72bc7e43ad71ee0b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854484"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738489"
 ---
-# <a name="entity-sql-overview"></a><span data-ttu-id="3ae3f-102">Entity SQL 概述</span><span class="sxs-lookup"><span data-stu-id="3ae3f-102">Entity SQL Overview</span></span>
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3ae3f-103">是一种类似 SQL 的语言，可用于在实体框架中查询概念模型。</span><span class="sxs-lookup"><span data-stu-id="3ae3f-103">is a SQL-like language that enables you to query conceptual models in the Entity Framework.</span></span> <span data-ttu-id="3ae3f-104">概念模型将数据表示为实体和关系， [!INCLUDE[esql](../../../../../../includes/esql-md.md)]并使你能够以熟悉使用 SQL 的用户所熟悉的格式查询这些实体和关系。</span><span class="sxs-lookup"><span data-stu-id="3ae3f-104">Conceptual models represent data as entities and relationships, and [!INCLUDE[esql](../../../../../../includes/esql-md.md)] allows you to query those entities and relationships in a format that is familiar to those who have used SQL.</span></span>  
+# <a name="entity-sql-overview"></a><span data-ttu-id="6e38c-102">Entity SQL 概述</span><span class="sxs-lookup"><span data-stu-id="6e38c-102">Entity SQL Overview</span></span>
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] <span data-ttu-id="6e38c-103">是一种类似 SQL 的语言，可用于在实体框架中查询概念模型。</span><span class="sxs-lookup"><span data-stu-id="6e38c-103">is a SQL-like language that enables you to query conceptual models in the Entity Framework.</span></span> <span data-ttu-id="6e38c-104">概念模型将数据表示为实体和关系，[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 使你能够以熟悉使用 SQL 的用户所熟知的格式查询这些实体和关系。</span><span class="sxs-lookup"><span data-stu-id="6e38c-104">Conceptual models represent data as entities and relationships, and [!INCLUDE[esql](../../../../../../includes/esql-md.md)] allows you to query those entities and relationships in a format that is familiar to those who have used SQL.</span></span>  
       
- <span data-ttu-id="3ae3f-105">实体框架与存储特定的数据提供程序一起使用，以[!INCLUDE[esql](../../../../../../includes/esql-md.md)]将泛型转换为特定于存储的查询。</span><span class="sxs-lookup"><span data-stu-id="3ae3f-105">The Entity Framework works with storage-specific data providers to translate generic [!INCLUDE[esql](../../../../../../includes/esql-md.md)] into storage-specific queries.</span></span> <span data-ttu-id="3ae3f-106">EntityClient 提供程序提供一种方式，用于针对实体模型执行 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 命令并返回包括标量结果、结果集和对象图在内的丰富类型数据。</span><span class="sxs-lookup"><span data-stu-id="3ae3f-106">The EntityClient provider supplies a way to execute an [!INCLUDE[esql](../../../../../../includes/esql-md.md)] command against an entity model and return rich types of data including scalar results, result sets, and object graphs.</span></span> <span data-ttu-id="3ae3f-107">构造 <xref:System.Data.EntityClient.EntityCommand> 对象时，可以指定一个存储过程名称或者通过将 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询字符串分配该对象的 <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> 属性来指定查询文本。</span><span class="sxs-lookup"><span data-stu-id="3ae3f-107">When you construct <xref:System.Data.EntityClient.EntityCommand> objects, you can specify a stored procedure name or the text of a query by assigning an [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query string to its <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="3ae3f-108"><xref:System.Data.EntityClient.EntityDataReader> 公开对 EDM 执行 <xref:System.Data.EntityClient.EntityCommand> 的结果。</span><span class="sxs-lookup"><span data-stu-id="3ae3f-108">The <xref:System.Data.EntityClient.EntityDataReader> exposes the results of executing a <xref:System.Data.EntityClient.EntityCommand> against an EDM.</span></span> <span data-ttu-id="3ae3f-109">若要执行返回 <xref:System.Data.EntityClient.EntityDataReader> 的命令，请调用 <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>。</span><span class="sxs-lookup"><span data-stu-id="3ae3f-109">To execute the command that returns the <xref:System.Data.EntityClient.EntityDataReader>, call <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>.</span></span>  
+ <span data-ttu-id="6e38c-105">实体框架与存储特定的数据提供程序一起使用，将泛型 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 转换为特定于存储的查询。</span><span class="sxs-lookup"><span data-stu-id="6e38c-105">The Entity Framework works with storage-specific data providers to translate generic [!INCLUDE[esql](../../../../../../includes/esql-md.md)] into storage-specific queries.</span></span> <span data-ttu-id="6e38c-106">EntityClient 提供程序提供一种方式，用于针对实体模型执行 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 命令并返回包括标量结果、结果集和对象图在内的丰富类型数据。</span><span class="sxs-lookup"><span data-stu-id="6e38c-106">The EntityClient provider supplies a way to execute an [!INCLUDE[esql](../../../../../../includes/esql-md.md)] command against an entity model and return rich types of data including scalar results, result sets, and object graphs.</span></span> <span data-ttu-id="6e38c-107">构造 <xref:System.Data.EntityClient.EntityCommand> 对象时，可以指定一个存储过程名称或者通过将 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询字符串分配该对象的 <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> 属性来指定查询文本。</span><span class="sxs-lookup"><span data-stu-id="6e38c-107">When you construct <xref:System.Data.EntityClient.EntityCommand> objects, you can specify a stored procedure name or the text of a query by assigning an [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query string to its <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="6e38c-108"><xref:System.Data.EntityClient.EntityDataReader> 公开对 EDM 执行 <xref:System.Data.EntityClient.EntityCommand> 的结果。</span><span class="sxs-lookup"><span data-stu-id="6e38c-108">The <xref:System.Data.EntityClient.EntityDataReader> exposes the results of executing a <xref:System.Data.EntityClient.EntityCommand> against an EDM.</span></span> <span data-ttu-id="6e38c-109">若要执行返回 <xref:System.Data.EntityClient.EntityDataReader> 的命令，请调用 <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>。</span><span class="sxs-lookup"><span data-stu-id="6e38c-109">To execute the command that returns the <xref:System.Data.EntityClient.EntityDataReader>, call <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>.</span></span>  
   
- <span data-ttu-id="3ae3f-110">除了 EntityClient 提供程序之外，实体框架使你能够使用[!INCLUDE[esql](../../../../../../includes/esql-md.md)]对概念模型执行查询，并以强类型 CLR 对象的形式返回数据，这些对象是实体类型的实例。</span><span class="sxs-lookup"><span data-stu-id="3ae3f-110">In addition to the EntityClient provider, the Entity Framework enables you to use [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to execute queries against a conceptual model and return data as strongly-typed CLR objects that are instances of entity types.</span></span> <span data-ttu-id="3ae3f-111">有关详细信息，请参阅使用[对象](../working-with-objects.md)。</span><span class="sxs-lookup"><span data-stu-id="3ae3f-111">For more information, see [Working with Objects](../working-with-objects.md).</span></span>  
+ <span data-ttu-id="6e38c-110">除了 EntityClient 提供程序之外，实体框架使你能够使用 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 对概念模型执行查询，并以强类型 CLR 对象的形式返回数据，这些对象是实体类型的实例。</span><span class="sxs-lookup"><span data-stu-id="6e38c-110">In addition to the EntityClient provider, the Entity Framework enables you to use [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to execute queries against a conceptual model and return data as strongly-typed CLR objects that are instances of entity types.</span></span> <span data-ttu-id="6e38c-111">有关详细信息，请参阅使用[对象](../working-with-objects.md)。</span><span class="sxs-lookup"><span data-stu-id="6e38c-111">For more information, see [Working with Objects](../working-with-objects.md).</span></span>  
   
- <span data-ttu-id="3ae3f-112">本节提供 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 的概念信息。</span><span class="sxs-lookup"><span data-stu-id="3ae3f-112">This section provides conceptual information about [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span></span>  
+ <span data-ttu-id="6e38c-112">本节提供 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 的概念信息。</span><span class="sxs-lookup"><span data-stu-id="6e38c-112">This section provides conceptual information about [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3ae3f-113">本节内容</span><span class="sxs-lookup"><span data-stu-id="3ae3f-113">In This Section</span></span>  
- [<span data-ttu-id="3ae3f-114">实体 SQL 与 Transact-SQL 的区别</span><span class="sxs-lookup"><span data-stu-id="3ae3f-114">How Entity SQL Differs from Transact-SQL</span></span>](how-entity-sql-differs-from-transact-sql.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6e38c-113">本节内容</span><span class="sxs-lookup"><span data-stu-id="6e38c-113">In This Section</span></span>  
+ [<span data-ttu-id="6e38c-114">实体 SQL 与 Transact-SQL 的区别</span><span class="sxs-lookup"><span data-stu-id="6e38c-114">How Entity SQL Differs from Transact-SQL</span></span>](how-entity-sql-differs-from-transact-sql.md)  
   
- [<span data-ttu-id="3ae3f-115">实体 SQL 快速参考</span><span class="sxs-lookup"><span data-stu-id="3ae3f-115">Entity SQL Quick Reference</span></span>](entity-sql-quick-reference.md)  
+ [<span data-ttu-id="6e38c-115">实体 SQL 快速参考</span><span class="sxs-lookup"><span data-stu-id="6e38c-115">Entity SQL Quick Reference</span></span>](entity-sql-quick-reference.md)  
   
- [<span data-ttu-id="3ae3f-116">类型系统</span><span class="sxs-lookup"><span data-stu-id="3ae3f-116">Type System</span></span>](type-system-entity-sql.md)  
+ [<span data-ttu-id="6e38c-116">类型系统</span><span class="sxs-lookup"><span data-stu-id="6e38c-116">Type System</span></span>](type-system-entity-sql.md)  
   
- [<span data-ttu-id="3ae3f-117">类型定义</span><span class="sxs-lookup"><span data-stu-id="3ae3f-117">Type Definitions</span></span>](type-definitions-entity-sql.md)  
+ [<span data-ttu-id="6e38c-117">类型定义</span><span class="sxs-lookup"><span data-stu-id="6e38c-117">Type Definitions</span></span>](type-definitions-entity-sql.md)  
   
- [<span data-ttu-id="3ae3f-118">构造类型</span><span class="sxs-lookup"><span data-stu-id="3ae3f-118">Constructing Types</span></span>](constructing-types-entity-sql.md)  
+ [<span data-ttu-id="6e38c-118">构造类型</span><span class="sxs-lookup"><span data-stu-id="6e38c-118">Constructing Types</span></span>](constructing-types-entity-sql.md)  
   
- [<span data-ttu-id="3ae3f-119">查询计划缓存</span><span class="sxs-lookup"><span data-stu-id="3ae3f-119">Query Plan Caching</span></span>](query-plan-caching-entity-sql.md)  
+ [<span data-ttu-id="6e38c-119">查询计划缓存</span><span class="sxs-lookup"><span data-stu-id="6e38c-119">Query Plan Caching</span></span>](query-plan-caching-entity-sql.md)  
   
- [<span data-ttu-id="3ae3f-120">命名空间</span><span class="sxs-lookup"><span data-stu-id="3ae3f-120">Namespaces</span></span>](namespaces-entity-sql.md)  
+ [<span data-ttu-id="6e38c-120">命名空间</span><span class="sxs-lookup"><span data-stu-id="6e38c-120">Namespaces</span></span>](namespaces-entity-sql.md)  
   
- [<span data-ttu-id="3ae3f-121">标识符</span><span class="sxs-lookup"><span data-stu-id="3ae3f-121">Identifiers</span></span>](identifiers-entity-sql.md)  
+ [<span data-ttu-id="6e38c-121">标识符</span><span class="sxs-lookup"><span data-stu-id="6e38c-121">Identifiers</span></span>](identifiers-entity-sql.md)  
   
- [<span data-ttu-id="3ae3f-122">Parameters</span><span class="sxs-lookup"><span data-stu-id="3ae3f-122">Parameters</span></span>](parameters-entity-sql.md)  
+ [<span data-ttu-id="6e38c-122">参数</span><span class="sxs-lookup"><span data-stu-id="6e38c-122">Parameters</span></span>](parameters-entity-sql.md)  
   
- [<span data-ttu-id="3ae3f-123">变量</span><span class="sxs-lookup"><span data-stu-id="3ae3f-123">Variables</span></span>](variables-entity-sql.md)  
+ [<span data-ttu-id="6e38c-123">变量</span><span class="sxs-lookup"><span data-stu-id="6e38c-123">Variables</span></span>](variables-entity-sql.md)  
   
- [<span data-ttu-id="3ae3f-124">不支持的表达式</span><span class="sxs-lookup"><span data-stu-id="3ae3f-124">Unsupported Expressions</span></span>](unsupported-expressions-entity-sql.md)  
+ [<span data-ttu-id="6e38c-124">不支持的表达式</span><span class="sxs-lookup"><span data-stu-id="6e38c-124">Unsupported Expressions</span></span>](unsupported-expressions-entity-sql.md)  
   
- [<span data-ttu-id="3ae3f-125">文本</span><span class="sxs-lookup"><span data-stu-id="3ae3f-125">Literals</span></span>](literals-entity-sql.md)  
+ [<span data-ttu-id="6e38c-125">文本</span><span class="sxs-lookup"><span data-stu-id="6e38c-125">Literals</span></span>](literals-entity-sql.md)  
   
- [<span data-ttu-id="3ae3f-126">NULL 文本和类型推理</span><span class="sxs-lookup"><span data-stu-id="3ae3f-126">Null Literals and Type Inference</span></span>](null-literals-and-type-inference-entity-sql.md)  
+ [<span data-ttu-id="6e38c-126">NULL 文本和类型推理</span><span class="sxs-lookup"><span data-stu-id="6e38c-126">Null Literals and Type Inference</span></span>](null-literals-and-type-inference-entity-sql.md)  
   
- [<span data-ttu-id="3ae3f-127">输入字符集</span><span class="sxs-lookup"><span data-stu-id="3ae3f-127">Input Character Set</span></span>](input-character-set-entity-sql.md)  
+ [<span data-ttu-id="6e38c-127">输入字符集</span><span class="sxs-lookup"><span data-stu-id="6e38c-127">Input Character Set</span></span>](input-character-set-entity-sql.md)  
   
- [<span data-ttu-id="3ae3f-128">查询表达式</span><span class="sxs-lookup"><span data-stu-id="3ae3f-128">Query Expressions</span></span>](query-expressions-entity-sql.md)  
+ [<span data-ttu-id="6e38c-128">查询表达式</span><span class="sxs-lookup"><span data-stu-id="6e38c-128">Query Expressions</span></span>](query-expressions-entity-sql.md)  
   
- [<span data-ttu-id="3ae3f-129">函数</span><span class="sxs-lookup"><span data-stu-id="3ae3f-129">Functions</span></span>](functions-entity-sql.md)  
+ [<span data-ttu-id="6e38c-129">函数</span><span class="sxs-lookup"><span data-stu-id="6e38c-129">Functions</span></span>](functions-entity-sql.md)  
   
- [<span data-ttu-id="3ae3f-130">运算符优先级</span><span class="sxs-lookup"><span data-stu-id="3ae3f-130">Operator Precedence</span></span>](operator-precedence-entity-sql.md)  
+ [<span data-ttu-id="6e38c-130">运算符优先级</span><span class="sxs-lookup"><span data-stu-id="6e38c-130">Operator Precedence</span></span>](operator-precedence-entity-sql.md)  
   
- [<span data-ttu-id="3ae3f-131">分页</span><span class="sxs-lookup"><span data-stu-id="3ae3f-131">Paging</span></span>](paging-entity-sql.md)  
+ [<span data-ttu-id="6e38c-131">分页</span><span class="sxs-lookup"><span data-stu-id="6e38c-131">Paging</span></span>](paging-entity-sql.md)  
   
- [<span data-ttu-id="3ae3f-132">比较语义</span><span class="sxs-lookup"><span data-stu-id="3ae3f-132">Comparison Semantics</span></span>](comparison-semantics-entity-sql.md)  
+ [<span data-ttu-id="6e38c-132">比较语义</span><span class="sxs-lookup"><span data-stu-id="6e38c-132">Comparison Semantics</span></span>](comparison-semantics-entity-sql.md)  
   
- [<span data-ttu-id="3ae3f-133">撰写嵌套的实体 SQL 查询</span><span class="sxs-lookup"><span data-stu-id="3ae3f-133">Composing Nested Entity SQL Queries</span></span>](composing-nested-entity-sql-queries.md)  
+ [<span data-ttu-id="6e38c-133">撰写嵌套的实体 SQL 查询</span><span class="sxs-lookup"><span data-stu-id="6e38c-133">Composing Nested Entity SQL Queries</span></span>](composing-nested-entity-sql-queries.md)  
   
- [<span data-ttu-id="3ae3f-134">可以为 NULL 的结构化类型</span><span class="sxs-lookup"><span data-stu-id="3ae3f-134">Nullable Structured Types</span></span>](nullable-structured-types-entity-sql.md)  
+ [<span data-ttu-id="6e38c-134">可以为 NULL 的结构化类型</span><span class="sxs-lookup"><span data-stu-id="6e38c-134">Nullable Structured Types</span></span>](nullable-structured-types-entity-sql.md)  
   
-## <a name="see-also"></a><span data-ttu-id="3ae3f-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="3ae3f-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6e38c-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="6e38c-135">See also</span></span>
 
-- [<span data-ttu-id="3ae3f-136">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="3ae3f-136">Entity SQL Reference</span></span>](entity-sql-reference.md)
-- [<span data-ttu-id="3ae3f-137">实体 SQL 语言</span><span class="sxs-lookup"><span data-stu-id="3ae3f-137">Entity SQL Language</span></span>](entity-sql-language.md)
-- [<span data-ttu-id="3ae3f-138">CSDL、SSDL 和 MSL 规范</span><span class="sxs-lookup"><span data-stu-id="3ae3f-138">CSDL, SSDL, and MSL Specifications</span></span>](csdl-ssdl-and-msl-specifications.md)
+- [<span data-ttu-id="6e38c-136">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="6e38c-136">Entity SQL Reference</span></span>](entity-sql-reference.md)
+- [<span data-ttu-id="6e38c-137">实体 SQL 语言</span><span class="sxs-lookup"><span data-stu-id="6e38c-137">Entity SQL Language</span></span>](entity-sql-language.md)
+- [<span data-ttu-id="6e38c-138">CSDL、SSDL 和 MSL 规范</span><span class="sxs-lookup"><span data-stu-id="6e38c-138">CSDL, SSDL, and MSL Specifications</span></span>](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)
