@@ -2,17 +2,14 @@
 title: Visual Basic 中断性变更 - .NET Core
 description: 列出与 .NET Core 一起使用的 Visual Basic 中的中断性变更。
 ms.date: 09/20/2019
-ms.openlocfilehash: c4db31079098ca48dfd0ef4708a55049dde619fe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f7cd5160631ac696d542084a71dc44e65a94cabf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092801"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739339"
 ---
 # <a name="visual-basic-breaking-changes"></a>Visual Basic 中断性变更
-
-> [!IMPORTANT]
-> 本文正在构建中。 这并不是 .NET Core 中断性变更的完整列表。 如需详细了解 .NET Core 重大变更，请参阅 GitHub 上 dotnet/docs 存储库中的各个[重大变更问题](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change)。
 
 下表按 .NET Core 版本列出了 Visual Basic 中的中断性变更。
 

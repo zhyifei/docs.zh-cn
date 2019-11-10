@@ -2,17 +2,14 @@
 title: 加密中断性变更 - .NET Core
 description: 列出 .NET Core 中与加密相关的中断性变更。
 ms.date: 09/20/2019
-ms.openlocfilehash: ce6739c57df801ef6ae3ab35e31bba6ad4055caa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 628162eb391c27b810e9db0a869896eb8443a06f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093083"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739736"
 ---
 # <a name="cryptography-breaking-changes"></a>加密中断性变更
-
-> [!IMPORTANT]
-> 本文正在构建中。 这并不是 .NET Core 中断性变更的完整列表。 如需详细了解 .NET Core 重大变更，请参阅 GitHub 上 dotnet/docs 存储库中的各个[重大变更问题](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change)。 
 
 下表按 .NET Core 版本列出了与加密相关的中断性变更。
 
