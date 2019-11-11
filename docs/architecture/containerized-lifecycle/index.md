@@ -2,12 +2,12 @@
 title: 容器和 Docker 简介
 description: 简要了解使用 Docker 所带来的主要优势。
 ms.date: 02/15/2019
-ms.openlocfilehash: a03c67ed4fbc55c84e69fba5b7978863c8305e00
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9ac08a64cd2465b4b88a266c1ec0925f37680bf9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295047"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738129"
 ---
 # <a name="introduction-to-containers-and-docker"></a>容器和 Docker 简介
 
@@ -19,7 +19,7 @@ ms.locfileid: "70295047"
 
 每个容器都可运行整个 Web 应用或服务，如图 1-1 所示。 在本例中，Docker 主机是容器主机，App1、App2、Svc1 和 Svc2 是容器化的应用程序或服务。
 
-![两个应用程序和两个 VM 或物理服务器的操作系统上运行的服务](./media/image1.png)
+![显示 VM 或服务器中运行的四个容器的关系图。](./media/index/multiple-containers-single-host.png)
 
 **图 1-1**。 在一个容器主机上运行多个容器
 

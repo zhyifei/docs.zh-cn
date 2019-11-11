@@ -4,12 +4,12 @@ description: .NET 微服务和 Web 应用中的安全性 - 了解 ASP.NET Core W
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: f405b4199e8239e86c4799a649c3d87811d99828
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: b25f02140915ce87c5c478d8a8a5fe28ba7693b3
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798853"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736946"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>确保 .NET 微服务和 Web 应用的安全性
 
@@ -21,15 +21,17 @@ ms.locfileid: "72798853"
 
 在微服务方案中，通常会集中处理身份验证。 如果使用 API 网关，则网关是一个进行身份验证的好方法，如图 9-1 所示。 如果使用此方法，请确保在不使用 API 网关的情况下，无法直接访问各个微服务，除非其他安全性措施已就绪，可对来自网关和其他位置的消息进行身份验证。
 
-![当 API 网关集中身份验证时，它会在向微服务转发请求时添加用户信息。](./media/image1.png)
+![显示客户端移动应用如何与后端交互的关系图。](./media/index/api-gateway-centralized-authentication.png)
 
 **图 9-1**。 使用 API 网关进行集中身份验证
 
-如果可以直接访问服务，则身份验证服务（如 Azure Active Directory）或充当安全令牌服务 (STS) 的专用身份验证微服务可用于对用户进行身份验证。 通过安全令牌或 cookie 在服务之间共享信任决策。 （如有需要，可通过实现 [Cookie 共享](/aspnet/core/security/cookie-sharing)在 ASP.NET Core 应用程序之间共享这些令牌。）此模式如图 9-2 所示。
+当 API 网关集中身份验证时，它会在向微服务转发请求时添加用户信息。 如果可以直接访问服务，则身份验证服务（如 Azure Active Directory）或充当安全令牌服务 (STS) 的专用身份验证微服务可用于对用户进行身份验证。 通过安全令牌或 cookie 在服务之间共享信任决策。 （如有需要，可通过实现 [Cookie 共享](/aspnet/core/security/cookie-sharing)在 ASP.NET Core 应用程序之间共享这些令牌。）此模式如图 9-2 所示。
 
-![直接访问微服务时，包含身份验证和授权的信任由微服务之间共享的专用微服务颁发的安全令牌处理。](./media/image2.png)
+![显示通过后端微服务进行身份验证的关系图。](./media/index/identity-microservice-authentication.png)
 
 **图 9-2**。 通过标识微服务进行的身份验证；使用授权令牌共享信任
+
+直接访问微服务时，包含身份验证和授权的信任由微服务之间共享的专用微服务颁发的安全令牌处理。
 
 ### <a name="authenticate-with-aspnet-core-identity"></a>使用 ASP.NET Core 标识进行身份验证
 
@@ -121,7 +123,7 @@ else
 
 在 Visual Studio 中创建 ASP.NET 代码 Web 应用程序项目时，如果选择“单个用户帐户”  身份验证选项，则使用外部提供程序进行登录所需的所有代码已在项目中，如图 9-3 所示。
 
-![新 ASP.NET Core Web 应用的对话框，突出显示用于更改身份验证的按钮。](./media/image3.png)
+![“新建 ASP.NET Core Web 应用程序”对话框的屏幕截图。](./media/index/select-external-authentication-option.png)
 
 **图 9-3**。 创建 Web 应用程序项目时，选择一个用于使用外部身份验证的选项
 

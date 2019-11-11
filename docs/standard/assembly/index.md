@@ -12,16 +12,16 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 7ac9ea194095832f6c3825ce414350bca89c26fb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8e68d2dbb13d226ba738bdf8455418c9e771d6a6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107246"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733153"
 ---
 # <a name="assemblies-in-net"></a>.NET 中的程序集
 
-程序集构成了 .NET 应用程序的部署、版本控制、重用、激活范围和安全权限的基本单元。 程序集是为协同工作而生成的类型和资源的集合，这些类型和资源构成了一个逻辑功能单元。 程序集采用可执行文件 (.exe) 或动态链接库文件 (.dll) 的形式，是 .NET 应用程序的构建基块   。 它们向公共语言运行时提供了注意类型实现代码所需的信息。 可以将程序集视为一组构成功能逻辑单元并旨在配合使用的类型和资源。
+程序集构成了 .NET 应用程序的部署、版本控制、重用、激活范围和安全权限的基本单元。 程序集是为协同工作而生成的类型和资源的集合，这些类型和资源构成了一个逻辑功能单元。 程序集采用可执行文件 (.exe) 或动态链接库文件 (.dll) 的形式，是 .NET 应用程序的构建基块   。 它们向公共语言运行时提供了注意类型实现代码所需的信息。
 
 在 .NET Core 和 .NET Framework 中，可以从一个或多个源代码文件生成程序集。 在 .NET Framework 中，程序集可以包含一个或多个模块。 因此，大型项目可以采用以下规划：由多个开发者单独开发各源代码文件或模块，最后整合所有这些内容以创建一个程序集。 若要详细了解模块，请参阅[操作说明：生成多文件程序集](../../framework/app-domains/build-multifile-assembly.md)。
 
@@ -39,29 +39,29 @@ ms.locfileid: "73107246"
 
 ## <a name="assemblies-in-the-common-language-runtime"></a>公共语言运行时中的程序集
 
-程序集向公共语言运行时提供了注意类型实现代码所需的信息。 对于运行时，类型不存在于程序集上下文之外。 
+程序集向公共语言运行时提供了注意类型实现代码所需的信息。 对于运行时，类型不存在于程序集上下文之外。
 
-程序集定义以下信息：  
-  
+程序集定义以下信息：
+
 - 公共语言运行时执行的代码。 请注意，每个程序集只能有一个入口点：`DllMain`、`WinMain` 或 `Main`。
-  
-- 安全边界。 程序集就是在其中请求和授予权限的单元。 有关程序集中安全边界的详细信息，请参阅[程序集安全注意事项](security-considerations.md)。  
-  
-- 类型边界。 每一类型的标识均包括该类型所驻留的程序集的名称。 在一个程序集的范围中加载的称为 `MyType` 的类型不同于在另一个程序集范围中加载的称为 `MyType` 的类型。 
-  
+
+- 安全边界。 程序集就是在其中请求和授予权限的单元。 有关程序集中安全边界的详细信息，请参阅[程序集安全注意事项](security-considerations.md)。
+
+- 类型边界。 每一类型的标识均包括该类型所驻留的程序集的名称。 在一个程序集的范围中加载的称为 `MyType` 的类型不同于在另一个程序集范围中加载的称为 `MyType` 的类型。
+
 - 引用范围边界。 [程序集清单](#assembly-manifest)包含用于解析类型和满足资源请求的元数据。 该清单指定要在程序集外公开的类型和资源，并枚举它所依赖的其他程序集。 除非可迁移可执行 (PE) 文件中的 Microsoft 中间语言 (MSIL) 代码具有相关的[程序集清单](#assembly-manifest)，否则不执行此代码。
-  
-- 版本边界。 程序集是公共语言运行时中无版本冲突的最小单元。 同一程序集中的所有类型和资源均会被版本化为一个单元。 [程序集清单](#assembly-manifest)描述你为任何依赖项程序集所指定的版本依赖性。 有关版本控制的详细信息，请参阅[程序集版本控制](versioning.md)。  
-  
-- 部署单元。 当一个应用程序启动时，只有该应用程序最初调用的程序集必须存在。 其他程序集（例如，包含本地化资源或实用工具类的程序集）可以按需检索。 这样，应用在第一次下载时就会比较精简。 有关部署程序集的详细信息，请参阅[部署应用程序](../../framework/deployment/index.md)。  
-  
-- 并行执行单元。 有关运行多个版本的程序集的详细信息，请参阅[程序集和并行执行](side-by-side-execution.md)。  
+
+- 版本边界。 程序集是公共语言运行时中无版本冲突的最小单元。 同一程序集中的所有类型和资源均会被版本化为一个单元。 [程序集清单](#assembly-manifest)描述你为任何依赖项程序集所指定的版本依赖性。 有关版本控制的详细信息，请参阅[程序集版本控制](versioning.md)。
+
+- 部署单元。 当一个应用程序启动时，只有该应用程序最初调用的程序集必须存在。 其他程序集（例如，包含本地化资源或实用工具类的程序集）可以按需检索。 这样，应用在第一次下载时就会比较精简。 有关部署程序集的详细信息，请参阅[部署应用程序](../../framework/deployment/index.md)。
+
+- 并行执行单元。 有关运行多个版本的程序集的详细信息，请参阅[程序集和并行执行](side-by-side-execution.md)。
 
 ## <a name="create-an-assembly"></a>创建程序集
 
-程序集可以为静态或动态。 静态程序集存储在磁盘上的可迁移可执行 (PE) 文件中。 静态程序集可以包括接口、类和资源（如位图、JPEG 文件和其他资源文件）。 你还可以创建动态程序集，动态程序集直接从内存运行并且在执行前不保存到磁盘上。 你可以在执行动态程序集后将它们保存在磁盘上。  
+程序集可以为静态或动态。 静态程序集存储在磁盘上的可迁移可执行 (PE) 文件中。 静态程序集可以包括接口、类和资源（如位图、JPEG 文件和其他资源文件）。 你还可以创建动态程序集，动态程序集直接从内存运行并且在执行前不保存到磁盘上。 你可以在执行动态程序集后将它们保存在磁盘上。
 
-有几种创建程序集的方法。 你可以使用可创建 .dll 或 .exe 文件的开发工具，例如 Visual Studio   。 可以使用 Windows SDK 中的工具创建具有从其他开发环境中创建的模块的程序集。 还可以使用公共语言运行时 API（例如 <xref:System.Reflection.Emit?displayProperty=nameWithType>）来创建动态程序集。 
+有几种创建程序集的方法。 你可以使用可创建 .dll 或 .exe 文件的开发工具，例如 Visual Studio   。 可以使用 Windows SDK 中的工具创建具有从其他开发环境中创建的模块的程序集。 还可以使用公共语言运行时 API（例如 <xref:System.Reflection.Emit?displayProperty=nameWithType>）来创建动态程序集。
 
 可以采用以下方法编译程序集：在 Visual Studio 中生成程序集、使用 .NET Core 命令行接口工具生成程序集，或使用命令行编译器生成 .NET Framework 程序集。 有关使用 .NET Core 命令行接口工具生成程序集的详细信息，请参阅 [.NET Core 命令行接口工具](../../core/tools/index.md)。 要了解如何使用命令行编译器生成程序集，请参阅[使用 csc.exe 的命令行生成](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)（适用于 C#），或者[从命令行生成](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)（适用于 Visual Basic）。
 
@@ -90,23 +90,23 @@ ms.locfileid: "73107246"
 在 C# 中，可以在单个应用程序中使用同一程序集的两个版本。 有关详细信息，请参阅[外部别名](../../csharp/language-reference/keywords/extern-alias.md)。
 
 ## <a name="related-content"></a>相关的内容
-  
-|Title|说明|  
-|-----------|-----------------|  
-|[程序集内容](contents.md)|组成程序集的元素。|  
-|[程序集清单](manifest.md)|程序集清单中的数据，以及它如何存储在程序集中。|  
-|[全局程序集缓存](../../framework/app-domains/gac.md)|GAC 如何存储和使用程序集。|  
-|[具有强名称的程序集](strong-named.md)|具有强名称的程序集的特征。|  
-|[程序集安全注意事项](security-considerations.md)|安全性如何作用于程序集。|  
-|[程序集版本控制](versioning.md)|.NET Framework 版本控制策略的概述。|  
-|[程序集位置](../../framework/app-domains/assembly-placement.md)|在何处可以找到程序集。|  
-|[程序集和并行执行](side-by-side-execution.md)|同时使用多个版本的运行时或程序集。|  
-|[使用程序集编程](program.md)|如何在程序集上创建、签署和设置特性。|  
-|[发出动态方法和程序集](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|如何创建动态程序集。|  
-|[运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|.NET Framework 如何在运行时解析程序集引用。|  
 
-## <a name="reference"></a>参考  
- <xref:System.Reflection.Assembly?displayProperty=nameWithType>
+|Title|说明|
+|-----------|-----------------|
+|[程序集内容](contents.md)|组成程序集的元素。|
+|[程序集清单](manifest.md)|程序集清单中的数据，以及它如何存储在程序集中。|
+|[全局程序集缓存](../../framework/app-domains/gac.md)|GAC 如何存储和使用程序集。|
+|[具有强名称的程序集](strong-named.md)|具有强名称的程序集的特征。|
+|[程序集安全注意事项](security-considerations.md)|安全性如何作用于程序集。|
+|[程序集版本控制](versioning.md)|.NET Framework 版本控制策略的概述。|
+|[程序集位置](../../framework/app-domains/assembly-placement.md)|在何处可以找到程序集。|
+|[程序集和并行执行](side-by-side-execution.md)|同时使用多个版本的运行时或程序集。|
+|[发出动态方法和程序集](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|如何创建动态程序集。|
+|[运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|.NET Framework 如何在运行时解析程序集引用。|
+
+## <a name="reference"></a>参考
+
+<xref:System.Reflection.Assembly?displayProperty=nameWithType>
 
 ## <a name="see-also"></a>请参阅
 
