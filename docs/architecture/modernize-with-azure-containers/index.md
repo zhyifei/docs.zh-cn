@@ -3,10 +3,10 @@ title: 通过 Azure 云和 Windows 容器现代化现有 .NET 应用程序（第
 description: 阅读此电子书，了解如何将现有应用程序直接迁移到 Azure 云和 Windows 容器以实现现代化。
 ms.date: 04/28/2018
 ms.openlocfilehash: 67b1c7743697832684e96225e3d365da625ce6a3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "73089768"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>通过 Azure 云和 Windows 容器现代化现有 .NET 应用程序（第 2 版）
