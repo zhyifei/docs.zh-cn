@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: d82c60374db637bb8ac879a23e2d74c39194ca18
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8d090df1338c535b11a7fd3ec32f6d1cb00b338f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353725"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739681"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>如何：使用模式匹配以及 is 和 as 运算符安全地进行强制转换
 
@@ -23,7 +23,7 @@ ms.locfileid: "71353725"
 
 前面的示例演示了模式匹配语法的一些功能。 `if (a is Mammal m)` 和 `if (o is Mammal m)` 语句将测试与初始化赋值相结合。 只有在测试成功时才会进行赋值。 变量 `m` 仅在已赋值的嵌入式 `if` 语句的范围内。 以后无法在同一方法中访问 `m`。 在交互式窗口中尝试操作。
 
-也可以使用同一语法来测试[可为空的值类型](../programming-guide/nullable-types/index.md)是否具有值，如以下示例代码所示：
+也可以使用同一语法来测试[可为空的值类型](../language-reference/builtin-types/nullable-value-types.md)是否具有值，如以下示例代码所示：
 
 [!code-csharp[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
 

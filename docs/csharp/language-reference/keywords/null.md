@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
-ms.openlocfilehash: 74d13de78369b13fbf970dce9a3ef5ae7cbaac7f
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 932649bf063beb8cb334966c0bec0a8df86c7625
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698885"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736893"
 ---
 # <a name="null-c-reference"></a>null（C# 参考）
 
-`null` 关键字是表示不引用任何对象的空引用的文字值。 `null` 是引用类型变量的默认值。 普通值类型不能为 NULL，[可为空的值类型](../../programming-guide/nullable-types/index.md)除外。
+`null` 关键字是表示不引用任何对象的空引用的文字值。 `null` 是引用类型变量的默认值。 普通值类型不能为 NULL，[可为空的值类型](../builtin-types/nullable-value-types.md)除外。
 
 下面的示例演示 null 关键字的一些行为：
 

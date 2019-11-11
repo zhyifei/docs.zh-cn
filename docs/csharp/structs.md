@@ -4,12 +4,12 @@ description: 了解结构类型及其创建方式
 ms.date: 10/12/2016
 ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 10971dc1a0b2c9d64ac8766734b3f6f630aa3ccf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 39bf44dc187fbbc7aac71a1d5c5f3a4d7f446eb8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423114"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739174"
 ---
 # <a name="structs"></a>结构
 
@@ -53,21 +53,9 @@ ms.locfileid: "73423114"
   
 - 结构可以实现接口。
 
-## <a name="literal-values"></a>文本值
-
-在 C# 中，文本值从编译器接收类型。 可以通过在数字末尾追加一个字母来指定数字文本应采用的类型。 例如，若要指定应按浮点数来处理值 4.56，则在该数字后追加一个“f”或“F”：`4.56f`。 如果没有追加字母，编译器将推断该文本的 `double` 类型。 若要详细了解可以使用字母后缀指定哪些类型，请参阅[值类型](./language-reference/keywords/value-types.md)中的各个类型参考页。  
-  
-由于文本已类型化，且所有类型最终都是从 <xref:System.Object> 派生，因此可以编写和编译如下所示的代码：  
-  
-[!code-csharp[Literal Values](../../samples/snippets/csharp/concepts/structs/literals.cs)]
-
-最后两个示例演示 C# 7.0 中引入的语言功能。 第一个示例演示可使用下划线字符作为数值文本内的数字分隔符  。 可将它们放在数字中的任意位置，从而提高可读性。 不会对值产生影响。
-
-第二个示例演示二进制文本  ，使用二进制文本可直接指定位模式，无需使用十六进制表示法。
-
 ## <a name="nullable-value-types"></a>可以为 null 的值类型
 
-普通值类型不能具有 [null](language-reference/keywords/null.md) 值。 不过，可以在类型后面附加 `?`，创建可以为 null 的值类型。 例如，`int?` 是还可以包含值 [null](./language-reference/keywords/null.md) 的 `int` 类型。 可以为 null 的值类型是泛型结构类型 <xref:System.Nullable%601> 的实例。 在将数据传入和传出数据库（数值可能为 NULL 或未定义）时，可为空的值类型特别有用。 有关详细信息，请参阅[可以为 null 的值类型](programming-guide/nullable-types/index.md)。
+普通值类型不能具有 [null](language-reference/keywords/null.md) 值。 不过，可以在类型后面附加 `?`，创建可以为 null 的值类型。 例如，`int?` 是还可以包含值 [null](./language-reference/keywords/null.md) 的 `int` 类型。 可以为 null 的值类型是泛型结构类型 <xref:System.Nullable%601> 的实例。 在将数据传入和传出数据库（数值可能为 NULL 或未定义）时，可为空的值类型特别有用。 有关详细信息，请参阅[可以为 null 的值类型](language-reference/builtin-types/nullable-value-types.md)。
 
 ## <a name="see-also"></a>请参阅
 

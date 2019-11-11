@@ -2,12 +2,12 @@
 title: ref 返回值和 ref 局部变量（C# 指南）
 description: 了解如何定义和使用 ref 返回值和 ref 局部变量
 ms.date: 04/04/2018
-ms.openlocfilehash: 99e0f9d995cf3bf5c0486415b6f2d578147d3c7f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7ade422b5b3805ef2e1f487252a98fb85cdfe70c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114476"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736817"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 返回值和局部变量
 
@@ -25,7 +25,7 @@ ms.locfileid: "73114476"
 
 - 返回值不得为文本 `null`。 返回 `null` 会生成编译器错误 CS8156“无法在此上下文中使用表达式，因为它可能不是以引用方式返回”。
 
-   使用引用返回值的方法可以返回值当前为 NULL（未实例化）或[可为空的值类型](../nullable-types/index.md)的变量别名。
+   使用引用返回值的方法可以返回值当前为 NULL（未实例化）或[可为空的值类型](../../language-reference/builtin-types/nullable-value-types.md)的变量别名。
 
 - 返回值不得为常量、枚举成员、通过属性的按值返回值或 `class`/`struct` 方法。 违反此规则会生成编译器错误 CS8156“无法在此上下文中使用表达式，因为它可能不是以引用方式返回”。
 

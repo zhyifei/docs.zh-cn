@@ -12,12 +12,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 75c86c49f4d471452a7e8f56856d5437e84df307
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 113df1ad3fc3ac1e27ebfef572494c1f15a3dbb5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084343"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733173"
 ---
 # <a name="delay-sign-an-assembly"></a>延迟为程序集签名
 
@@ -89,4 +89,3 @@ ms.locfileid: "73084343"
 - [创建程序集](create.md)
 - [如何：创建公钥/私钥对](create-public-private-key-pair.md)
 - [Sn.exe（强名称工具）](../../framework/tools/sn-exe-strong-name-tool.md)
-- [使用程序集编程](program.md)

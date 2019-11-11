@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], creating
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
-ms.openlocfilehash: 8a00784e6aa2d663c738339367b4076e79ed9c95
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 81fffb2b2e1d56d6068bf6f663a13fad6968a383
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122498"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740517"
 ---
 # <a name="create-assemblies"></a>创建程序集
 
@@ -46,7 +46,6 @@ ms.locfileid: "73122498"
 
 ## <a name="see-also"></a>请参阅
 
-- [使用程序集编程](program.md)
 - [程序集版本控制](versioning.md)
 - [如何：生成单文件程序集](../../framework/app-domains/build-single-file-assembly.md)
 - [如何：生成多文件程序集](../../framework/app-domains/build-multifile-assembly.md)

@@ -2,12 +2,12 @@
 title: Docker 容器、映像和注册表
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | Docker 容器、映像和注册表
 ms.date: 08/31/2018
-ms.openlocfilehash: 520f8d4d54f1fdd227ff9a1e88660b62e75f927f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3b643a3bf4ca3ce1b8ba3fc40cd2f3ad8bbe5ffb
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674894"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737763"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker 容器、映像和注册表
 
@@ -19,11 +19,13 @@ ms.locfileid: "68674894"
 
 图 2-4 显示了 Docker 中的映像和注册表与其他组件相关联的方式。 还显示了供应商推出的多种注册表产品/服务。
 
-![Docker 中的基本分类：注册表如同用于存储映像的书架，可被拉取以生成容器，从而运行服务或 Web 应用。 本地和公有云上均有专用 Docker 注册表。 Docker 中心是由 Docker 维护的公共注册表，除了 Docker 信任的注册表（企业级解决方案），Azure 还提供了 Azure 容器注册表。 AWS、Google 和其他产品也有容器注册表。](./media/image5.PNG)
+![显示 Docker 中的基本分类的关系图。](./media/docker-containers-images-registries/taxonomy-of-docker-terms-and-concepts.png)
 
 **图 2-4**。 Docker 术语和概念的分类
 
-将映射存储到注册表中可存储静态和不可变的应用程序，包括其在框架级别的所有依赖项。 然后可将这些映像部署到多种环境中，并进行版本控制，从而提供一致的部署单元
+注册表如同用于存储映像的书架，可被拉取以生成容器，从而运行服务或 Web 应用。 本地和公有云上均有专用 Docker 注册表。 Docker 中心是由 Docker 维护的公共注册表，除了 Docker 信任的注册表（企业级解决方案），Azure 还提供了 Azure 容器注册表。 AWS、Google 和其他产品也有容器注册表。
+
+通过将映射存储到注册表中，可存储静态和不可变的应用程序，包括其在框架级别的所有依赖项。 然后可将这些映像部署到多种环境中，并进行版本控制，从而提供一致的部署单元
 
 无论是托管在本地还是托管在云中，在下列情况下都建议使用私有映像注册表：
 

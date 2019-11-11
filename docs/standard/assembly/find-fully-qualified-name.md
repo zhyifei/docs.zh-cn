@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 49d6d6cf5c138df671d061beb23cb57bcb0667b5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bf24db03ca1dc4fbf3041f5e83d740029d87928f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140300"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740498"
 ---
 # <a name="how-to-find-an-assemblys-fully-qualified-name"></a>如何：查找程序集的完全限定名
 
@@ -126,4 +126,3 @@ End Class
 - [创建和使用具有强名称的程序集](create-use-strong-named.md)
 - [全局程序集缓存](../../framework/app-domains/gac.md)
 - [运行时如何定位程序集](../../framework/deployment/how-the-runtime-locates-assemblies.md)
-- [使用程序集编程](program.md)

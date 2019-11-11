@@ -3,12 +3,12 @@ title: C# 类型和变量 - C# 语言介绍
 description: 了解如何在 C# 中定义类型和声明变量
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 22a91b101d5361091b09217d4562703851c86940
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 863f37714da06ca55c8c9092f06c445995d47ce3
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105590"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739157"
 ---
 # <a name="types-and-variables"></a>类型和变量
 
@@ -48,7 +48,7 @@ C# 值类型又细分为*简单类型*、*枚举类型*、*结构类型*和*可�
 [SimpleTypes]: ../language-reference/keywords/value-types.md#simple-types
 [EnumTypes]: ../language-reference/keywords/enum.md
 [StructTypes]: ../language-reference/keywords/struct.md
-[NullableTypes]: ../programming-guide/nullable-types/index.md
+[NullableTypes]: ../language-reference/builtin-types/nullable-value-types.md
 [ReferenceTypes]: ../language-reference/keywords/reference-types.md
 [ClassTypes]: ../language-reference/keywords/class.md
 [InterfaceTypes]: ../language-reference/keywords/interface.md
