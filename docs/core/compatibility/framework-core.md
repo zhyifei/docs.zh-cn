@@ -2,19 +2,16 @@
 title: .NET Framework 到 .NET Core 3.0 的重大变更 - .NET Core
 description: 列出了 Windows 窗体和 Windows Presentation Foundation 的从 .NET Framework 到 .NET Core 3.0 的重大变更。
 ms.date: 09/10/2019
-ms.openlocfilehash: a374e35192c7aad07e986e0e0b75039642744edc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 80c93dd7a8715a9bcc6d81605ffe5af4b0461257
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089576"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739438"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core-30"></a>从 .NET Framework 迁移到 .NET Core 3.0 的重大变更
 
-> [!IMPORTANT]
-> 本文正在构建中。 这并不是 .NET Core 中断性变更的完整列表。 如需详细了解 .NET Core 重大变更，请参阅 GitHub 上 dotnet/docs 存储库中的各个[重大变更问题](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change)。 
-
-如果要将 Windows 窗体或 Windows Presentation Foundation 应用程序从 .NET Framework 迁移到 .NET Core 3.0，请查看以下主题，了解可能影响你的应用的重大变更：
+如果要将 Windows 窗体或 Windows Presentation Foundation 应用程序从 .NET Framework 迁移到 .NET Core 3.0，请查看以下主题，了解可能影响你的应用的中断性变更：
 
 ## <a name="windows-forms"></a>Windows 窗体
 
