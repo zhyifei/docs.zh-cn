@@ -2,21 +2,18 @@
 title: .NET Framework 到 .NET Core 3.0 的重大变更 - .NET Core
 description: 列出了 Windows 窗体和 Windows Presentation Foundation 的从 .NET Framework 到 .NET Core 3.0 的重大变更。
 ms.date: 09/10/2019
-ms.openlocfilehash: a374e35192c7aad07e986e0e0b75039642744edc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 80c93dd7a8715a9bcc6d81605ffe5af4b0461257
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089576"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739438"
 ---
-# <a name="breaking-changes-for-migration-from-net-framework-to-net-core-30"></a><span data-ttu-id="3f87a-103">从 .NET Framework 迁移到 .NET Core 3.0 的重大变更</span><span class="sxs-lookup"><span data-stu-id="3f87a-103">Breaking changes for migration from .NET Framework to .NET Core 3.0</span></span>
+# <a name="breaking-changes-for-migration-from-net-framework-to-net-core-30"></a><span data-ttu-id="4312a-103">从 .NET Framework 迁移到 .NET Core 3.0 的重大变更</span><span class="sxs-lookup"><span data-stu-id="4312a-103">Breaking changes for migration from .NET Framework to .NET Core 3.0</span></span>
 
-> [!IMPORTANT]
-> <span data-ttu-id="3f87a-104">本文正在构建中。</span><span class="sxs-lookup"><span data-stu-id="3f87a-104">This article is under construction.</span></span> <span data-ttu-id="3f87a-105">这并不是 .NET Core 中断性变更的完整列表。</span><span class="sxs-lookup"><span data-stu-id="3f87a-105">This is not a complete list of .NET Core breaking changes.</span></span> <span data-ttu-id="3f87a-106">如需详细了解 .NET Core 重大变更，请参阅 GitHub 上 dotnet/docs 存储库中的各个[重大变更问题](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change)。</span><span class="sxs-lookup"><span data-stu-id="3f87a-106">For more information on .NET Core breaking changes, you can examine individual [breaking changes issues](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) in the dotnet/docs repository on GitHub.</span></span> 
+<span data-ttu-id="4312a-104">如果要将 Windows 窗体或 Windows Presentation Foundation 应用程序从 .NET Framework 迁移到 .NET Core 3.0，请查看以下主题，了解可能影响你的应用的中断性变更：</span><span class="sxs-lookup"><span data-stu-id="4312a-104">If you're migrating a Windows Forms or Windows Presentation Foundation application from .NET Framework to .NET Core 3.0, review the following topics for breaking changes that may affect your app:</span></span>
 
-<span data-ttu-id="3f87a-107">如果要将 Windows 窗体或 Windows Presentation Foundation 应用程序从 .NET Framework 迁移到 .NET Core 3.0，请查看以下主题，了解可能影响你的应用的重大变更：</span><span class="sxs-lookup"><span data-stu-id="3f87a-107">If you are migrating a Windows Forms or Windows Presentation Foundation application from .NET Framework to .NET Core 3.0, review the following topics for breaking changes that may affect your app:</span></span>
-
-## <a name="windows-forms"></a><span data-ttu-id="3f87a-108">Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="3f87a-108">Windows Forms</span></span>
+## <a name="windows-forms"></a><span data-ttu-id="4312a-105">Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="4312a-105">Windows Forms</span></span>
 
 [!INCLUDE[Control.DefaultFont changed to Segoe UI 9pt](~/includes/core-changes/windowsforms/control-defaultfont-changed.md)]
 
