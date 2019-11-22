@@ -868,7 +868,7 @@
               href: programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md
         - name: 面向对象的编程
           href: programming-guide/concepts/object-oriented-programming.md
-        - name: 映像
+        - name: 反射
           href: programming-guide/concepts/reflection.md
         - name: '序列化 (C#)'
           items:
