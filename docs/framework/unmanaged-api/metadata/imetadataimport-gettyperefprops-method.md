@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 01837955-ce1e-4068-b338-fd473bd77d1d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a4d8829c9cb2818eafe98809c9a0d5fd8109d076
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6ea7605e062eb77e0488b3a9561c4d83be16fa7d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778819"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436711"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>IMetaDataImport::GetTypeRefProps 方法
-获取与关联的元数据<xref:System.Type>指定的 TypeRef 标记所引用。  
+Gets the metadata associated with the <xref:System.Type> referenced by the specified TypeRef token.  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,26 +39,26 @@ HRESULT GetTypeRefProps (
   
 ## <a name="parameters"></a>参数  
  `tr`  
- [in]表示要返回的元数据的类型的 TypeRef 标记。  
+ [in] The TypeRef token that represents the type to return metadata for.  
   
  `ptkResolutionScope`  
- [out]指向在其中进行引用的作用域的指针。 此值是 AssemblyRef 或 ModuleRef 标记。  
+ [out] A pointer to the scope in which the reference is made. This value is an AssemblyRef or ModuleRef token.  
   
  `szName`  
- [out]包含类型名称的缓冲区。  
+ [out] A buffer containing the type name.  
   
  `cchName`  
- [in]请求的大小以宽字符为单位`szName`。  
+ [in] The requested size in wide characters of `szName`.  
   
  `pchName`  
- [out]在宽字符为单位返回的大小`szName`。  
+ [out] The returned size in wide characters of `szName`.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

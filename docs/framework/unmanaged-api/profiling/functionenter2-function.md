@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: ce7a21f9-0ca3-4b92-bc4b-bb803cae3f51
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 413cde3d0977c1fd6897fc5bd6fa7a3fef00ac02
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f4deec3e2b49b5cd6a924af8024e775c5c549f97
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763335"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440861"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 函数
-通知探查器，控制被传递给函数，并介绍有关堆栈帧和函数参数。 此函数取代[FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)函数。  
+Notifies the profiler that control is being passed to a function and provides information about the stack frame and function arguments. This function supersedes the [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) function.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,40 +37,40 @@ void __stdcall FunctionEnter2 (
   
 ## <a name="parameters"></a>参数  
  `funcId`  
- [in]控件传递到函数的标识符。  
+ [in] The identifier of the function to which control is passed.  
   
  `clientData`  
- [in]通过使用以前指定探查器的重新映射的函数标识符[FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)函数。  
+ [in] The remapped function identifier, which the profiler previously specified by using the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function.  
   
  `func`  
- [in]一个`COR_PRF_FRAME_INFO`值，该值指向有关堆栈帧的信息。  
+ [in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.  
   
- 探查器应将此视为可以传递回执行引擎的不透明句柄[ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)方法。  
+ The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.  
   
  `argumentInfo`  
- [in]一个指向[COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md)结构，它在内存中的函数的参数指定的位置。  
+ [in] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) structure that specifies the locations in memory of the function's arguments.  
   
- 若要访问参数的信息，`COR_PRF_ENABLE_FUNCTION_ARGS`标志必须设置。 可以使用探查器[icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法设置的事件标志。  
+ In order to access argument information, the `COR_PRF_ENABLE_FUNCTION_ARGS` flag must be set. The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags.  
   
 ## <a name="remarks"></a>备注  
- 值`func`并`argumentInfo`参数都不是有效后`FunctionEnter2`函数返回，因为这些值可能会更改或已损坏。  
+ The values of the `func` and `argumentInfo` parameters are not valid after the `FunctionEnter2` function returns because the values may change or be destroyed.  
   
- `FunctionEnter2`函数是一个回调; 必须实现它。 实现必须使用`__declspec`(`naked`) 存储类特性。  
+ The `FunctionEnter2` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
   
- 调用此函数之前，执行引擎不会保存任何寄存器。  
+ The execution engine does not save any registers before calling this function.  
   
-- 在进入时，必须保存使用，包括浮点单元 (FPU) 中的所有注册。  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- 退出时，必须通过弹出已推送到由其调用方的所有参数由还原堆栈。  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- 实现`FunctionEnter2`不应阻止，因为它会延迟垃圾回收。 实现不应尝试垃圾回收，因为堆栈可能不是在垃圾收集友好状态中。 如果尝试在垃圾回收，则运行时将阻止直到`FunctionEnter2`返回。  
+ The implementation of `FunctionEnter2` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionEnter2` returns.  
   
- 此外，`FunctionEnter2`函数不能调用到托管代码中或以任何方式导致托管的内存分配。  
+ Also, the `FunctionEnter2` function must not call into managed code or in any way cause a managed memory allocation.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **库：** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd2bc956-7dbe-49fc-a646-daa0d267f2df
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c194cea21901015153626dc5aead49ed1b2c3df7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6600ca7e70ac77ffba0c75812f27d388c354ece6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755107"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438327"
 ---
 # <a name="isymunmanagedwriter2defineconstant2-method"></a>ISymUnmanagedWriter2::DefineConstant2 方法
-定义常量值的名称。  
+Defines a name for a constant value.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,19 +36,19 @@ HRESULT DefineConstant2(
   
 ## <a name="parameters"></a>参数  
  `name`  
- [in]该常量的名称。  
+ [in] The constant name.  
   
  `value`  
- [in]常量的值。  
+ [in] The value of the constant.  
   
  `sigToken`  
- [in]常量的元数据标记。  
+ [in] The metadata token of the constant.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

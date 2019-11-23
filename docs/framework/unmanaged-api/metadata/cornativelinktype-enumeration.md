@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f86ff37-2dab-4e64-819a-76b3bfe828ff
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 944c641c39ddef7add0e9f382dc7d35068668455
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 718e41e16c07265d8a36b8f6124d99cd3490f7be
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781717"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436624"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType 枚举
 提供一些值，用于指示本机代码中链接的类型。  
@@ -40,23 +38,23 @@ typedef enum
 } CorNativeLinkType;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`nltNone`|指示未指定任何关键字。|  
-|`nltAnsi`|指示指定的 ANSI 关键字。|  
-|`nltUnicode`|指示指定的 Unicode 关键字|  
-|`nltAuto`|指示指定 auto 关键字。|  
-|`nltOle`|指示指定的 OLE 关键字。|  
+|`nltNone`|Indicates that none of the keywords are specified.|  
+|`nltAnsi`|Indicates that an ANSI keyword is specified.|  
+|`nltUnicode`|Indicates that a Unicode keyword is specified|  
+|`nltAuto`|Indicates that an auto keyword is specified.|  
+|`nltOle`|Indicates that an OLE keyword is specified.|  
 |`nltMaxValue`|未使用。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

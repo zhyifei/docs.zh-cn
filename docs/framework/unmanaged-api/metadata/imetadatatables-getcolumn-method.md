@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1032055b-cabb-45c5-a50e-7e853201b175
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 853f137d91e1b3eb4f3f65a06522618f8441dcb3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 376b9ff09ad38ca43d57fcf064458e0331da8aad
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053677"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442002"
 ---
 # <a name="imetadatatablesgetcolumn-method"></a>IMetaDataTables::GetColumn 方法
-获取一个指针，该指针指向给定表中指定列和行的单元中包含的值。  
+Gets a pointer to the value contained in the cell of the specified column and row in the given table.  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,46 +39,46 @@ HRESULT GetColumn (
 ## <a name="parameters"></a>参数
 
  `ixTbl`  
- 中表的索引。  
+ [in] The index of the table.  
   
  `ixCol`  
- 中表中的列的索引。  
+ [in] The index of the column in the table.  
   
  `rid`  
- 中表中的行的索引。  
+ [in] The index of the row in the table.  
   
  `pVal`  
- 弄指向单元格中的值的指针。  
+ [out] A pointer to the value in the cell.  
  
 ## <a name="remarks"></a>备注
 
-返回的值的 interpretion `pVal`取决于列的类型。 列类型可通过调用[IMetaDataTables](imetadatatables-getcolumninfo-method.md)来确定。
+The interpretion of the value returned through `pVal` depends on the column's type. The column type can be determined by calling [IMetaDataTables.GetColumnInfo](imetadatatables-getcolumninfo-method.md).
 
-- **GetColumn**方法自动将**Rid**或**CodedToken**类型的列转换为完整的32位`mdToken`值。
-- 它还会自动将8位或16位值转换为完整的32位值。 
-- 对于*堆*类型列，返回的*pVal*将是对应堆中的索引。
+- The **GetColumn** method automatically converts columns of type **Rid** or **CodedToken** to full 32-bit `mdToken` values.
+- It also automatically converts 8-bit or 16-bit values to full 32-bit values. 
+- For *heap* type columns, the returned *pVal* will be an index into the corresponding heap.
 
-| 列类型              | pVal 包含 | 注释                          |
+| Column type              | pVal contains | 注释                          |
 |--------------------------|---------------|-----------------------------------|
-| `0`..`iRidMax`<br>（0-63）  | mdToken     | *pVal*将包含一个完整的令牌。 函数自动将 Rid 转换为完整的标记。 |
-| `iCodedToken`..`iCodedTokenMax`<br>（64.. 95） | mdToken | 返回后， *pVal*将包含一个完整的令牌。 函数自动将 CodedToken 解压缩到完整的令牌中。 |
-| `iSHORT`（96）            | Int16         | 自动将符号扩展为32位。  |
-| `iUSHORT`（97）           | UInt16        | 自动将符号扩展为32位。  |
-| `iLONG`（98）             | Int32         |                                        | 
-| `iULONG`（99）            | UInt32        |                                        |
-| `iBYTE`（100）            | Byte          | 自动将符号扩展为32位。  |
-| `iSTRING`（101）          | 字符串堆索引 | *pVal*是字符串堆中的索引。 使用[IMetadataTables：： GetString](imetadatatables-getstring-method.md)获取实际的列字符串值。 |
-| `iGUID`（102）            | Guid 堆索引 | *pVal*是 Guid 堆中的索引。 使用[IMetadataTables：： GetGuid](imetadatatables-getguid-method.md)获取实际的列 Guid 值。 |
-| `iBLOB`（103）            | Blob 堆索引 | *pVal*是 Blob 堆中的索引。 使用[IMetadataTables：： GetBlob](imetadatatables-getblob-method.md)获取实际的列 Blob 值。 |
+| `0`..`iRidMax`<br>(0..63)  | mdToken     | *pVal* will contain a full Token. The function automatically converts the Rid into a full token. |
+| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | mdToken | Upon return, *pVal* will contain a full Token. The function automatically decompresses the CodedToken into a full token. |
+| `iSHORT` (96)            | Int16         | Automatically sign-extended to 32-bit.  |
+| `iUSHORT` (97)           | UInt16        | Automatically sign-extended to 32-bit.  |
+| `iLONG` (98)             | Int32         |                                        | 
+| `iULONG` (99)            | UInt32        |                                        |
+| `iBYTE` (100)            | 字节          | Automatically sign-extended to 32-bit.  |
+| `iSTRING` (101)          | String heap index | *pVal* is an index into the String heap. Use [IMetadataTables::GetString](imetadatatables-getstring-method.md) to get the actual column String value. |
+| `iGUID` (102)            | Guid heap index | *pVal* is an index into the Guid heap. Use [IMetadataTables::GetGuid](imetadatatables-getguid-method.md) to get the actual column Guid value. |
+| `iBLOB` (103)            | Blob heap index | *pVal* is an index into the Blob heap. Use [IMetadataTables::GetBlob](imetadatatables-getblob-method.md) to get the actual column Blob value. |
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **Header:** Cor.h  
   
- **类库**用作 Mscoree.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET Framework 版本**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

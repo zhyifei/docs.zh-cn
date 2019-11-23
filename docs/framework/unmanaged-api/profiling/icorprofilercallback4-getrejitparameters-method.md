@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0e9bfe07-9f20-498c-b568-9017c8f6056c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 03b7ca218318df517832d198e72d4f79d30827b8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d81d7275d197de1dfc99b135377459f509c2651f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779235"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439436"
 ---
 # <a name="icorprofilercallback4getrejitparameters-method"></a>ICorProfilerCallback4::GetReJITParameters 方法
-允许代码探查器来设置新的重新编译的方法主体的备用代码生成标志。  
+Allows the code profiler to set alternate code generation flags for a new recompiled method body.  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,21 +33,21 @@ HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef met
   
 ## <a name="parameters"></a>参数  
  `moduleID`  
- [in]包含 CLR 需要 JIT 重新编译参数的方法的模块。  
+ [in] The module that contains the method for which the CLR needs JIT recompilation parameters.  
   
  `methodId`  
- [in]`MethodDef` CLR 需要 JIT 重新编译参数的方法。  
+ [in] The `MethodDef` of the method for which the CLR needs JIT recompilation parameters.  
   
  `pFunctionControl`  
- [in]一个指向[ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)探查器可用于提供正在重新编译方法的 JIT 重新编译信息的接口。  
+ [in] A pointer to an [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interface that the profiler can use to provide JIT recompilation information for the method being recompiled.  
   
 ## <a name="remarks"></a>备注  
- CLR 问题`GetReJITParameters`回调，以便探查器可以指定用于重新编译给定的方法的参数。 `GetReJITParameters`回调仅一次发出每个函数; 由探查器提供的参数适用于该函数的所有实例。  
+ The CLR issues a `GetReJITParameters` callback so that the profiler can specify the parameters for recompiling a given method. The `GetReJITParameters` callback is issued only once per function; the parameters supplied by the profiler apply to all instances of that function.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

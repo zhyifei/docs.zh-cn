@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b97493fb-713e-49d5-a73e-5688b2ad0700
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 57f57d67c4f7641495feca0b9c128e6ccf456cab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 460162f0fbc9993635d1bce0c5b130358ced4fa7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780196"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448144"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>ICorProfilerInfo::GetClassFromObject 方法
-获取`ClassID`给定的对象，其`ObjectID`。  
+Gets the `ClassID` of an object, given its `ObjectID`.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,18 +35,18 @@ HRESULT GetClassFromObject(
   
 ## <a name="parameters"></a>参数  
  `objectId`  
- [in]要为其获取对象的 ID `ClassID`。  
+ [in] The ID of the object for which to get the `ClassID`.  
   
  `pClassId`  
- [out]指向返回的指针`ClassID`。  
+ [out] A pointer to the returned `ClassID`.  
   
 ## <a name="remarks"></a>备注  
- 为空`pClassId`指示`objectId`正在卸载的类型。  
+ A null `pClassId` indicates that `objectId` has a type that is unloading.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

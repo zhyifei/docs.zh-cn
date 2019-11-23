@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d1de53ad-9435-4b5f-9df7-07f21210e5b5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1f657957d42cef1421ab3aa19f297bd04b0cacd8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c78ce8192d6456dd1b1be990d87b9209b028e09
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781332"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440369"
 ---
 # <a name="imetadataimportcountenum-method"></a>IMetaDataImport::CountEnum 方法
-检索由指定枚举器枚举中获取元素的数。  
+Gets the number of elements in the enumeration that was retrieved by the specified enumerator.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,20 +36,20 @@ HRESULT CountEnum (
   
 ## <a name="parameters"></a>参数  
  `hEnum`  
- [in]枚举器句柄。  
+ [in] The handle for the enumerator.  
   
  `pulCount`  
- [out]枚举的元素数。  
+ [out] The number of elements enumerated.  
   
 ## <a name="remarks"></a>备注  
- 通过指定的句柄`hEnum`获取从以前`Enum`*名称*调用 (例如， [imetadataimport:: Enumtypedefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md))。  
+ The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

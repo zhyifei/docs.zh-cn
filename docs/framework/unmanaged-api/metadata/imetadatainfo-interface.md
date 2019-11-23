@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 137cb264-64de-46ac-bc6e-2a7db97e8abe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c691c403155d6e10db70c05894fe6a0fd381f036
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be08e27bd98eccdffca654972eca775e2ecd0a95
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042441"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442096"
 ---
 # <a name="imetadatainfo-interface"></a>IMetaDataInfo 接口
 提供一种方法，使用此方法可获取关于将元数据从磁盘文件映射到内存中的信息。  
@@ -30,16 +28,16 @@ ms.locfileid: "62042441"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetFileMapping 方法](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)|获取内存区域的映射的文件和映射的类型。|  
+|[GetFileMapping 方法](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)|Gets the memory region of the mapped file, and the kind of mapping.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

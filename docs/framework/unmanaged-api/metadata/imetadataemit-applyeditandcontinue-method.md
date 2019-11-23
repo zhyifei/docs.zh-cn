@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35991289-f389-495d-8caa-a6384fb1d557
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 05de7d45c53d8aeaafaa06ae351050cc8bca3622
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b9cad4c9647983e5b39f9b7a5d03736f2848e1c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777688"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432697"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>IMetaDataEmit::ApplyEditAndContinue 方法
-使用指定的元数据中所做的更改更新当前程序集作用域。  
+Updates the current assembly scope with the changes made in the specified metadata.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,16 +35,16 @@ HRESULT ApplyEditAndContinue (
   
 ## <a name="parameters"></a>参数  
  `pImport`  
- \[在中\]指针，指向[IUnknown](/cpp/atl/iunknown)对象，表示从可移植可执行 (PE) 文件的增量元数据。
+ \[in\] Pointer to an [IUnknown](/cpp/atl/iunknown) object that represents the delta metadata from the portable executable (PE) file.
   
- 增量元数据是元数据，其中包括对模块的实际元数据的副本所做的更改的块。  
+ The delta metadata is the block of metadata that includes the changes that were made to the copy of the module's actual metadata.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

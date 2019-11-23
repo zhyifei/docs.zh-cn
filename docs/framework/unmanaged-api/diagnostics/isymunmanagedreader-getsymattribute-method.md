@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c675ce7e-76e7-45ff-8273-3b6489a2767c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 26458e2512f331ff7a8c41868c99d092cfd30977
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7f04b5c100f1fd9c44e671b883fe469b16d33fa6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737237"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440148"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute 方法
-获取根据其名称的自定义属性。 与不同的元数据自定义特性，这些自定义属性保存在符号存储区中。  
+Gets a custom attribute based upon its name. Unlike metadata custom attributes, these custom attributes are held in the symbol store.  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,25 +39,25 @@ HRESULT GetSymAttribute (
   
 ## <a name="parameters"></a>参数  
  `parent`  
- [in]为其请求该属性的对象元数据标记。  
+ [in] The metadata token for the object for which the attribute is requested.  
   
  `name`  
- [in]指示要检索的特性的变量指向的指针。  
+ [in] A pointer to the variable that indicates the attribute to retrieve.  
   
  `cBuffer`  
  [in] `buffer` 数组的大小。  
   
  `pcBuffer`  
- [out]指向接收特性数据的长度的变量的指针。  
+ [out] A pointer to the variable that receives the length of the attribute data.  
   
  `buffer`  
- [out]指向接收属性数据的变量的指针。  
+ [out] A pointer to the variable that receives the attribute data.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

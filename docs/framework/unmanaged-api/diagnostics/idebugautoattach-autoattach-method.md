@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3cf3bd9c-7d88-4afa-a476-94cdc7609aa6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e04a447c8562ff797ac98885bded150a3a167136
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 766aeb31436101babeab31b615a1c633578bfcc5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775793"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445520"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach 方法
-执行服务器调用调试器自动附加。  
+Performs server-invoked debugger auto attach.  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,25 +40,25 @@ HRESULT AutoAttach
   
 ## <a name="parameters"></a>参数  
  `guidPort`  
- [in]始终设置为`GUID_NULL`。  
+ [in] Always set to `GUID_NULL`.  
   
  `dwPid`  
- [in]进程 ID，通常情况下检索与`GetCurrentProcessId`函数。  
+ [in] Process ID, normally retrieved with the `GetCurrentProcessId` function.  
   
  `dwProgramType`  
- [in]程序类型： `AUTOATTACH_PROGRAM_WIN32`， `AUTOATTACH_PROGRAM_COMPLUS`，或`AUTOATTACH_PROGRAM_UNKNOWN`。  
+ [in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.  
   
  `dwProgramId`  
- [in]程序 id。  
+ [in] Program ID.  
   
  `pszSessionId`  
- [in]Debug 谓词由传递的字符串。  
+ [in] String passed by the debug verb.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则为 S_OK。  
+ S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>要求  
- **标头：** DbgAutoAttach.h  
+ **Header:** DbgAutoAttach.h  
   
 ## <a name="see-also"></a>请参阅
 

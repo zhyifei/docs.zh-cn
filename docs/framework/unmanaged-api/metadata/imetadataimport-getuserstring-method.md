@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fd3bb47-58b5-4083-b241-b9719df7a285
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: edeaefd0792a5cc03ae6d4385ff669a343ffdfc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 690abec6104f6eed1ad5a0eae9a6b6bb18d35b0d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778805"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436684"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>IMetaDataImport::GetUserString 方法
 获取指定元数据标记所表示的文字字符串。  
@@ -40,23 +38,23 @@ HRESULT GetUserString (
   
 ## <a name="parameters"></a>参数  
  `stk`  
- [in]要返回的关联的字符串的字符串标记。  
+ [in] The String token to return the associated string for.  
   
  `szString`  
- [out]所需字符串的副本。  
+ [out] A copy of the requested string.  
   
  `cchString`  
- [in]以宽字符为单位的所请求的最大大小`szString`。  
+ [in] The maximum size in wide characters of the requested `szString`.  
   
  `pchString`  
- [out]以宽字符为单位返回大小`szString`。  
+ [out] The size in wide characters of the returned `szString`.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

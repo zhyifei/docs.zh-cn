@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 798513a0-68b1-4d04-bc5b-782a4445ea68
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c38b7f060c34f7408195484dec2c49305db422fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a43c1883038e41cac1b58c78bc26f20d436ebbd1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781323"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440240"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes 方法
-枚举与指定的类型或成员相关联的自定义特性定义标记。  
+Enumerates custom attribute-definition tokens associated with the specified type or member.  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,36 +40,36 @@ HRESULT EnumCustomAttributes (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in、 out]指向返回的枚举数的指针。  
+ [in, out] A pointer to the returned enumerator.  
   
  `tk`  
- [in]范围的枚举，则为零的所有自定义属性标记。  
+ [in] A token for the scope of the enumeration, or zero for all custom attributes.  
   
  `tkType`  
- [in]要枚举的属性的类型的构造函数的令牌或`null`对于所有类型。  
+ [in] A token for the constructor of the type of the attributes to be enumerated, or `null` for all types.  
   
  `rCustomAttributes`  
- [out]自定义属性标记的数组。  
+ [out] An array of custom attribute tokens.  
   
  `cMax`  
  [in] `rCustomAttributes` 数组的最大大小。  
   
  `pcCustomAttributes`  
- [out，optional]令牌中返回的值的实际数目`rCustomAttributes`。  
+ [out, optional] The actual number of token values returned in `rCustomAttributes`.  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes` 已成功返回。|  
-|`S_FALSE`|没有要枚举的自定义属性。 在这种情况下，`pcCustomAttributes`为零。|  
+|`S_OK`|`EnumCustomAttributes` returned successfully.|  
+|`S_FALSE`|There are no custom attributes to enumerate. In that case, `pcCustomAttributes` is zero.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

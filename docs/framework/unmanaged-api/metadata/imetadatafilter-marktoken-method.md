@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bd492834-6529-4d39-b93d-f8cdbd3e297f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 08340c82acb8eff2ce5b778c719f350b58b51fa5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae105a60969e819f7974735ed8f075c60ba93916
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757535"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440346"
 ---
 # <a name="imetadatafiltermarktoken-method"></a>IMetaDataFilter::MarkToken 方法
-设置一个值，该值指定元数据标记已处理。  
+Sets a value indicating that the specified metadata token has been processed.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,14 +35,14 @@ HRESULT MarkToken (
   
 ## <a name="parameters"></a>参数  
  `tk`  
- [in]要将标记为已处理的标记。  
+ [in] The token to mark as processed.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

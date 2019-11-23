@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e97c97a6-6e4f-41f5-9af1-9b3cf3bdbd6b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 444c892026f9b6de12255ebdcda829db82c9bfdb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 743b6bed1a5d62f5214b8366b1a3c6e4ebecb98b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780442"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441715"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>IMetaDataImport::EnumMemberRefs 方法
 枚举表示指定类型成员的 MemberRef 标记。  
@@ -41,33 +39,33 @@ HRESULT EnumMemberRefs (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in、 out]一个指向枚举器。  
+ [in, out] A pointer to the enumerator.  
   
  `tkParent`  
- [in]要枚举其成员的类型的 TypeDef、 TypeRef、 MethodDef 或 ModuleRef 标记。  
+ [in] A TypeDef, TypeRef, MethodDef, or ModuleRef token for the type whose members are to be enumerated.  
   
  `rMemberRefs`  
- [out]用于存储 MemberRef 令牌的数组。  
+ [out] The array used to store MemberRef tokens.  
   
  `cMax`  
  [in] `rMemberRefs` 数组的最大大小。  
   
  `pcTokens`  
- [out]MemberRef 令牌中返回的实际数目`rMemberRefs`。  
+ [out] The actual number of MemberRef tokens returned in `rMemberRefs`.  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMemberRefs` 已成功返回。|  
-|`S_FALSE`|没有要枚举的 MemberRef 标记。 在这种情况下，`pcTokens`是为零。|  
+|`S_OK`|`EnumMemberRefs` returned successfully.|  
+|`S_FALSE`|There are no MemberRef tokens to enumerate. In that case, `pcTokens` is to zero.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

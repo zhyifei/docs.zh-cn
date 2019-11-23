@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6f9ac84-302a-4f5e-b990-e76f4269fceb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3f45423bb0ff4c755e657729c5725c8d9a22bde3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fcaf748413321f684336543e60f735af69894b51
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746761"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436007"
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a>ISymUnmanagedReader::GetMethodVersion 方法
-获取方法版本。 方法版本从 1 开始，在每的次递增的方法重新编译。 重新编译可发生该方法无需进行更改。  
+Gets the method version. The method version starts at 1 and is incremented each time the method is recompiled. Recompilation can happen without changes to the method.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,16 +35,16 @@ HRESULT GetMethodVersion (
   
 ## <a name="parameters"></a>参数  
  `pMethod`  
- [in]要为其获取版本方法。  
+ [in] The method for which to get the version.  
   
  `version`  
- [out]指向一个变量来接收方法版本的指针。  
+ [out] A pointer to a variable that receives the method version.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5da1bf3d-dddf-4892-b266-578ee54d570b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c5651da4c0065a4ac479fe31e54225ee5df51b32
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8af2b6834ac8655c64a7738c65550b515a4b6675
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780612"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439046"
 ---
 # <a name="icorprofilerinfogetilfunctionbodyallocator-method"></a>ICorProfilerInfo::GetILFunctionBodyAllocator 方法
-获取提供的方法来分配内存来用于换出的 Microsoft 中间语言 (MSIL) 代码中的方法主体的接口。  
+Gets an interface that provides a method to allocate memory to be used for swapping out the body of a method in Microsoft intermediate language (MSIL) code.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,18 +35,18 @@ HRESULT GetILFunctionBodyAllocator(
   
 ## <a name="parameters"></a>参数  
  `moduleId`  
- [in]该方法所在的模块的 ID。  
+ [in] The ID of the module in which the method resides.  
   
  `ppMalloc`  
- [out]一个指向[IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)提供的方法来分配内存的接口。  
+ [out] A pointer to an [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interface that provides a method to allocate the memory.  
   
 ## <a name="remarks"></a>备注  
- 方法体中的 MSIL 代码必须位于作为相对虚拟地址 (RVA)，相对于已加载模块，这意味着，它遵循中 4 GB 的模块。 轻松的工具来换出的一种方法，正文`GetILFunctionBodyAllocator`方法可确保该内存分配该范围内。  
+ A method body in MSIL code must be located as a relative virtual address (RVA), relative to the loaded module, which means that it follows the module within 4 GB. To make it easier for a tool to swap out the body of a method, the `GetILFunctionBodyAllocator` method ensures that memory is allocated within that range.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

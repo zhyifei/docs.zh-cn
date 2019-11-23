@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 97f15656-8677-4079-8553-a1d8603355d6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f4cea67587e4a33b4b9f8cbaa23cb7d299004a46
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e7b3d5bd53bb9e4d6b897bfbf109c1f7307224cd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736163"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442503"
 ---
 # <a name="inotifysink2onsynccallout-method"></a>INotifySink2::OnSyncCallOut 方法
-调用超时时被调用。  
+Gets invoked when a call is out.  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,19 +38,19 @@ HRESULT OnSyncCallOut
   
 ## <a name="parameters"></a>参数  
  `in_CallID`  
- [in]为向外调用的 ID。请参阅[CALL_ID 结构](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)。  
+ [in] ID of the call that is out. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `out_ppBuffer`  
- [out]调用缓冲区。  
+ [out] Call buffer.  
   
  `out_pBufferSize`  
- [out]调用缓冲区，以字节为单位的大小。  
+ [out] Size of the call buffer, in bytes.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则为 S_OK。  
+ S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>要求  
- **标头：** ProtocolNotify2.idl  
+ **Header:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>请参阅
 

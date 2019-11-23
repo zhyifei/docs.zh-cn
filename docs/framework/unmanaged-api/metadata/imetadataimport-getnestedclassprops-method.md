@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 704d19f1-bdef-4745-af8c-6476eb246fb3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d7dd59c1e0e8b28c557910da3fd9c6489370cc62
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0adf4f91e1bc7bfb72f634cb3bf038710198b74f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778948"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437139"
 ---
 # <a name="imetadataimportgetnestedclassprops-method"></a>IMetaDataImport::GetNestedClassProps 方法
-获取父标记 TypeDef<xref:System.Type>指定的嵌套类型。  
+Gets the TypeDef token for the parent <xref:System.Type> of the specified nested type.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,17 +36,17 @@ HRESULT GetNestedClassProps (
   
 ## <a name="parameters"></a>参数  
  `tdNestedClass`  
- [in]一个 TypeDef 令牌表示<xref:System.Type>要返回的父类的令牌。  
+ [in] A TypeDef token representing the <xref:System.Type> to return the parent class token for.  
   
  `ptdEnclosingClass`  
- [out]指向的 TypeDef 标记的指针<xref:System.Type>的`tdNestedClass`嵌套在中。  
+ [out] A pointer to the TypeDef token for the <xref:System.Type> that `tdNestedClass` is nested in.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

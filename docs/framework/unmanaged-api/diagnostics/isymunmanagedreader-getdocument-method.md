@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bb203853-6a6d-4027-b9e9-603a7f28b9d3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 32b7505a9e512f3c3e3e7a9fcbff40276e98ecf4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1fcb885b6e19457065c2ca9971f068b42f97147d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759345"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448341"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument 方法
-查找文档。 文档语言、 供应商和类型是可选的。  
+Finds a document. The document language, vendor, and type are optional.  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,25 +38,25 @@ HRESULT GetDocument (
   
 ## <a name="parameters"></a>参数  
  `url`  
- [in]标识文档的 URL。  
+ [in] The URL that identifies the document.  
   
  `language`  
- [in]文档语言。 此参数可选。  
+ [in] The document language. 此参数可选。  
   
  `languageVendor`  
- [in]文档语言供应商的标识。 此参数可选。  
+ [in] The identity of the vendor for the document language. 此参数可选。  
   
  `documentType`  
- [in]文档的类型。 此参数可选。  
+ [in] The type of the document. 此参数可选。  
   
  `pRetVal`  
- [out]指向返回的接口的指针。  
+ [out] A pointer to the returned interface.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

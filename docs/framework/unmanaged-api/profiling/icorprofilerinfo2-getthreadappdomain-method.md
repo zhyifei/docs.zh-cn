@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a11b264-8540-4732-aa35-bc2d95b95b8e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2fa4b1c45b7bf10d167089f80686f438d54288cf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8637be3c0a59676dc52aea985d7418bfd8f247bc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782230"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443102"
 ---
 # <a name="icorprofilerinfo2getthreadappdomain-method"></a>ICorProfilerInfo2::GetThreadAppDomain 方法
-获取在其中指定的线程当前正在执行代码的应用程序域的 ID。  
+Gets the ID of the application domain in which the specified thread is currently executing code.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,15 +35,15 @@ HRESULT GetThreadAppDomain(
   
 ## <a name="parameters"></a>参数  
  `threadId`  
- [in]指定在线程 ID。  
+ [in] The ID specifying the thread.  
   
  `pAppDomainId`  
- [out]指向应用程序域的 ID 的指针。  
+ [out] A pointer to the ID of the application domain.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

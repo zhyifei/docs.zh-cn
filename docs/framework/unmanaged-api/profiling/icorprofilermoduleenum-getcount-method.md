@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0a4a5e0-4689-474b-b0f4-37ca0639c918
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 44d3fee49ae74c69b49029208588f4894e250f78
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9aaf1a282435e3f52b2c2d8f3d17254b877e61cc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775209"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442766"
 ---
 # <a name="icorprofilermoduleenumgetcount-method"></a>ICorProfilerModuleEnum::GetCount 方法
 获取已加载到应用程序的托管模块数。  
@@ -35,12 +33,12 @@ HRESULT GetCount([out] ULONG * pcelt);
   
 ## <a name="parameters"></a>参数  
  `celt`  
- [out]集合中的运行时模块数。  
+ [out] The number of runtime modules in the collection.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: bed097b3-6d52-46c9-bee7-ac7910b6fc3f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e1a95b3078f4a592e28e0deb9869fc520cde811d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 047516574595f9ffcd61360f51823da73a2f9733
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779273"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439514"
 ---
 # <a name="icorprofilercallback3initializeforattach-method"></a>ICorProfilerCallback3::InitializeForAttach 方法
 由公共语言运行时 (CLR) 调用，从而给予分析器一个在附加操作后可将其状态初始化的机会。  
@@ -41,7 +39,7 @@ HRESULT InitializeForAttach(
  [in] `ICorProfilerInfo*` 接口的接口指针。  
   
  `pvClientData`  
- [in]对数据的指针传递到[iclrprofiling:: Attachprofiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)中的方法及其`pvClientData`参数。 如果此参数为 NULL，则 `cbClientData` 将为 0（零）。 当 CLR 从 `InitializeForAttach` 返回时将释放此内存。  
+ [in] A pointer to the data passed to the [IClrProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method in its `pvClientData` parameter. 如果此参数为 NULL，则 `cbClientData` 将为 0（零）。 当 CLR 从 `InitializeForAttach` 返回时将释放此内存。  
   
  `cbClientData`  
  [in] `pvClientData` 指向的数据的大小（以字节为单位）。  
@@ -50,9 +48,9 @@ HRESULT InitializeForAttach(
  CLR 调用 `InitializeForAttach` 以便给予分析器请求回调的机会。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

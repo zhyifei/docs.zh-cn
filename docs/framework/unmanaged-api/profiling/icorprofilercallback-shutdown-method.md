@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ea194f0-a331-4855-a2ce-37393b8e5f84
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d63dd911a5f674a3ce0b02ec78de443c7aebf84
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63e41df8af85d94df068526ef69708687b341e78
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747169"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446942"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>ICorProfilerCallback::Shutdown 方法
-通知探查器正在关闭应用程序。  
+Notifies the profiler that the application is shutting down.  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,16 +32,16 @@ HRESULT Shutdown();
 ```  
   
 ## <a name="remarks"></a>备注  
- 探查器代码不能安全地调用的方法[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)接口后`Shutdown`调用方法。 对任何调用`ICorProfilerInfo`方法会导致未定义的行为后`Shutdown`方法返回。 某些不可变事件可能仍会发生后关闭;请注意探查器应发生这种情况时立即返回。  
+ The profiler code cannot safely call methods of the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interface after the `Shutdown` method is called. Any calls to `ICorProfilerInfo` methods result in undefined behavior after the `Shutdown` method returns. Certain immutable events may still occur after shutdown; the profiler should take care to return immediately when this occurs.  
   
- `Shutdown`作为托管代码所分析的托管应用程序启动时，才会调用方法 （即，托管进程堆栈上的初始帧）。 如果应用程序作为非托管代码启动，但稍后又跳转到托管代码，从而创建公共语言运行时 (CLR) 的实例则`Shutdown`将不会调用。 对于这些情况下，探查器应包含在其库中`DllMain`例程使用 DLL_PROCESS_DETACH 值以释放任何资源并执行清理处理数据，例如刷新跟踪磁盘，等等。  
+ The `Shutdown` method will be called only if the managed application that is being profiled started as managed code (that is, the initial frame on the process stack is managed). If the application started as unmanaged code but later jumped into managed code, thereby creating an instance of the common language runtime (CLR), then `Shutdown` will not be called. For these cases, the profiler should include in its library a `DllMain` routine that uses the DLL_PROCESS_DETACH value to free any resources and perform clean-up processing of its data, such as flushing traces to disk and so on.  
   
- 一般情况下，探查器必须处理意外关闭。 例如，进程可能会暂停通过 Win32 的`TerminateProcess`方法 （在 Winbase.h 中声明）。 在其他情况下，CLR 将暂停特定托管的线程 （后台线程），而无需为其提供有序销毁消息。  
+ In general, the profiler must cope with unexpected shutdowns. For example, a process might be halted by Win32's `TerminateProcess` method (declared in Winbase.h). In other cases, the CLR will halt certain managed threads (background threads) without delivering orderly destruction messages for them.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

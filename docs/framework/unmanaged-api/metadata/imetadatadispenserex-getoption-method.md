@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7f794e5-8e25-4d65-850a-7c34fbfce87d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8717a1eafebf24366c35848dbe285943c107ed51
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ab74b02df959fe6e6457273e67ba3b82ae6a015c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777731"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435991"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>IMetaDataDispenserEx::GetOption 方法
-获取当前元数据范围的指定选项的值。 选项，可以控制如何处理对当前元数据范围的调用。  
+Gets the value of the specified option for the current metadata scope. The option controls how calls to the current metadata scope are handled.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,13 +36,13 @@ HRESULT GetOption (
   
 ## <a name="parameters"></a>参数  
  `optionId`  
- [in]一个指向指定要检索的选项的 GUID。 请参阅受支持的 Guid 的列表的备注部分。  
+ [in] A pointer to a GUID that specifies the option to be retrieved. See the Remarks section for a list of supported GUIDs.  
   
  `pValue`  
- [out]返回选项的值。 此值的类型将指定的选项的类型的变体。  
+ [out] The value of the returned option. The type of this value will be a variant of the specified option's type.  
   
 ## <a name="remarks"></a>备注  
- 以下列表显示了此方法支持的 Guid。 有关说明，请参阅[imetadatadispenserex:: Setoption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md)方法。 如果`optionId`是不在此列表中，此方法返回 HRESULT `E_INVALIDARG`，指示存在错误的参数。  
+ The following list shows the GUIDs that are supported for this method. For descriptions, see the [IMetaDataDispenserEx::SetOption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md) method. If `optionId` is not in this list, this method returns HRESULT `E_INVALIDARG`, indicating an incorrect parameter.  
   
 - MetaDataCheckDuplicatesFor  
   
@@ -61,11 +59,11 @@ HRESULT GetOption (
 - MetaDataLinkerOptions  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

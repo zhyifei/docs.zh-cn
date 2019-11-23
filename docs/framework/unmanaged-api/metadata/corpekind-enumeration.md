@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 22dc6dea-b1b9-4982-a730-a022d586b117
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0bfe30567bcd8e22a82d401e00b0a6ee50407def
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 74670a1477546066145bd4bbf2f123a252e10b55
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781674"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436473"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind 枚举
-包含值，用于描述一个可移植可执行 (PE) 文件，如从调用返回[IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)。  
+Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,24 +39,24 @@ typedef enum CorPEKind {
 } CorPEKind;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`peNot`|指示这不是 PE 文件。|  
-|`peILOnly`|指示此 PE 文件包含仅托管代码。|  
-|`pe32BitRequired`|指示此 PE 文件进行 Win32 调用。|  
-|`pe32Plus`|指示此 PE 文件在 64 位平台上运行。|  
-|`pe32Unmanaged`|指示此 PE 文件是本机代码。|  
-|pe32BitPreferred|指示此 PE 文件与平台无关，并且更适合于创建要在 32 位环境中加载。|  
+|`peNot`|Indicates that this is not a PE file.|  
+|`peILOnly`|Indicates that this PE file contains only managed code.|  
+|`pe32BitRequired`|Indicates that this PE file makes Win32 calls.|  
+|`pe32Plus`|Indicates that this PE file runs on a 64-bit platform.|  
+|`pe32Unmanaged`|Indicates that this PE file is native code.|  
+|pe32BitPreferred|Indicates that this PE file is platform-neutral and prefers to be loaded in a 32-bit environment.|  
   
 ## <a name="remarks"></a>备注  
- 按位组合中，可以使用这些值。  
+ These values can be used in bitwise combinations.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

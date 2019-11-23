@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d86a3d14-4796-4909-9591-dfafe3de5ce4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d64a1ef21cd4fa4224609c7cd415c1611313769
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5c81bc82e19bce658336e4860a61f2721e17423d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777543"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431688"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam 方法
-创建具有指定的签名为指定的标记所引用的方法的参数定义，并为该参数定义中获取的标记。  
+Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,38 +42,38 @@ HRESULT DefineParam (
   
 ## <a name="parameters"></a>参数  
  `md`  
- [in]要定义其参数的方法的标记。  
+ [in] The token for the method whose parameter is being defined.  
   
  `ulParamSeq`  
- [in]参数序列号。  
+ [in] The parameter sequence number.  
   
  `szName`  
- [in]以 unicode 格式参数的名称。  
+ [in] The name of the parameter in Unicode.  
   
  `dwParamFlags`  
- [in]参数的的标志。 这是一个位掩码的`CorParamAttr`值。  
+ [in] Flags for the parameter. This is a bitmask of `CorParamAttr` values.  
   
  `dwCPlusTypeFlag`  
- [in]`ELEMENT_TYPE_` *\** 的常量值。  
+ [in] `ELEMENT_TYPE_` *\** for the constant value.  
   
  `pValue`  
- [in]参数的常量值。  
+ [in] The constant value for the parameter.  
   
  `cchValue`  
- [in]大小，以 Unicode 字符的`pValue`。  
+ [in] The size, in Unicode characters, of `pValue`.  
   
  `ppd`  
- [out]`mdParamDef`分配标记。  
+ [out] The `mdParamDef` token assigned.  
   
 ## <a name="remarks"></a>备注  
- 中的顺序值`ulParamSeq`参数 1 开头。 返回值具有的序列号为 0。  
+ The sequence values in `ulParamSeq` begin with 1 for parameters. A return value has a sequence number of 0.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

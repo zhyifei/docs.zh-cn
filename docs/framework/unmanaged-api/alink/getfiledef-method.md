@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e3fbe6c-b82a-4181-ab17-7faa1263f5b3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5db205993bc1a0665dc0003948ce805813251f48
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6a561205602920123176bd421ca2ef1b601166c1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787451"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426051"
 ---
 # <a name="getfiledef-method"></a>GetFileDef 方法
-检索在元数据中使用的实际 FileDef 令牌（而不是由 ALink 分配的令牌）。  
+Retrieves the actual FileDef token used in metadata (as opposed to the token assigned by ALink).  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,19 +36,19 @@ HRESULT GetFileDef(
   
 ## <a name="parameters"></a>参数  
  `AssemblyID`  
- 程序集的 ID。  
+ ID of the assembly.  
   
  `TargetFile`  
- 从 AddFile 方法或 AddImport 方法检索到的已添加文件的标记。  
+ Token of the added file as retrieved from AddFile Method or AddImport Method.  
   
  `pScope`  
- 接收 FileDef 标记。  
+ Receives the FileDef token.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>要求  
- 需要 alink  
+ Requires alink.h  
   
 ## <a name="see-also"></a>请参阅
 

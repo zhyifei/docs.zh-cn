@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7de6447a-a751-49d8-87e2-951cee77b536
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 85b0edc81a9a861a3eed6a7bc3ffc1ed1db37403
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e73160fb1927560ad381dbb85d03796296ba9a4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770731"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434286"
 ---
 # <a name="imetadataemitgettokenfromtypespec-method"></a>IMetaDataEmit::GetTokenFromTypeSpec 方法
-获取具有指定的元数据签名的类型的元数据令牌。  
+Gets a metadata token for the type with the specified metadata signature.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,20 +37,20 @@ HRESULT GetTokenFromTypeSpec (
   
 ## <a name="parameters"></a>参数  
  `pvSig`  
- [in]正在定义的签名。  
+ [in] The signature being defined.  
   
  `cbSig`  
- [in]中的字节计数`pvSig`。  
+ [in] The count of bytes in `pvSig`.  
   
  `ptypespec`  
- [out]`mdTypeSpec`分配标记。  
+ [out] The `mdTypeSpec` token assigned.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

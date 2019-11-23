@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc0ff3e6-7e7d-4f6c-948d-52b28f5cb78c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e83afcf6c872927e614fce33ca96e93f0da4f497
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 247a2793bf3806f5ee38585d50b4535820dfcb69
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778869"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437055"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps 方法
-获取表示指定的标记的属性的元数据。  
+Gets the metadata for the property represented by the specified token.  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,59 +50,59 @@ HRESULT GetPropertyProps (
   
 ## <a name="parameters"></a>参数  
  `prop`  
- [in]表示要返回的元数据的属性的标记。  
+ [in] A token that represents the property to return metadata for.  
   
  `pClass`  
- [out]指向表示实现属性的类型的 TypeDef 标记的指针。  
+ [out] A pointer to the TypeDef token that represents the type that implements the property.  
   
  `szProperty`  
- [out]用于保存的属性名称的缓冲区。  
+ [out] A buffer to hold the property name.  
   
  `cchProperty`  
- [in]在宽字符为单位的大小`szProperty`。  
+ [in] The size in wide characters of `szProperty`.  
   
  `pchProperty`  
- [out]在中返回的宽字符数`szProperty`。  
+ [out] The number of wide characters returned in `szProperty`.  
   
  `pdwPropFlags`  
- [out]指向应用于属性的任何属性标志的指针。 此值是从一个位掩码[CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md)枚举。  
+ [out] A pointer to any attribute flags applied to the property. This value is a bitmask from the [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) enumeration.  
   
  `ppvSig`  
- [out]一个指向该属性的元数据签名。  
+ [out] A pointer to the metadata signature of the property.  
   
  `pbSig`  
- [out]在返回的字节数`ppvSig`。  
+ [out] The number of bytes returned in `ppvSig`.  
   
  `pdwCPlusTypeFlag`  
- [out]一个指定类型的常量，它是属性的默认值的标志。 此值是从 CorElementType 枚举。  
+ [out] A flag specifying the type of the constant that is the default value of the property. This value is from the CorElementType enumeration.  
   
  `ppDefaultValue`  
- [out]指向存储此属性的默认值的字节的指针。  
+ [out] A pointer to the bytes that store the default value for this property.  
   
  `pcchDefaultValue`  
- [out]在宽字符为单位的大小`ppDefaultValue`，如果`pdwCPlusTypeFlag`是 ELEMENT_TYPE_STRING; 否则，此值不是相关。 在这种情况下，时长`ppDefaultValue`从指定的类型推断`pdwCPlusTypeFlag`。  
+ [out] The size in wide characters of `ppDefaultValue`, if `pdwCPlusTypeFlag` is ELEMENT_TYPE_STRING; otherwise, this value is not relevant. In that case, the length of `ppDefaultValue` is inferred from the type that is specified by `pdwCPlusTypeFlag`.  
   
  `pmdSetter`  
- [out]指向表示属性的 set 访问器方法的 MethodDef 标记的指针。  
+ [out] A pointer to the MethodDef token that represents the set accessor method for the property.  
   
  `pmdGetter`  
- [out]指向表示属性的 get 访问器方法的 MethodDef 标记的指针。  
+ [out] A pointer to the MethodDef token that represents the get accessor method for the property.  
   
  `rmdOtherMethod`  
- [out]一个表示与属性关联的其他方法的 MethodDef 标记的数组。  
+ [out] An array of MethodDef tokens that represent other methods associated with the property.  
   
  `cMax`  
- [in] `rmdOtherMethod` 数组的最大大小。 如果未提供足够大以保存所有方法的数组，则跳过而不发出警告。  
+ [in] `rmdOtherMethod` 数组的最大大小。 If you do not provide an array large enough to hold all the methods, they are skipped without warning.  
   
  `pcOtherMethod`  
- [out]在中返回的 MethodDef 标记数`rmdOtherMethod`。  
+ [out] The number of MethodDef tokens returned in `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

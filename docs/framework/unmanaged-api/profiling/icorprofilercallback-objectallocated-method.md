@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: eb412622-77cc-4abd-a2cd-c910fe8edd54
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 10a000fd98ad12dc39f8f8338485d6bb4093ee07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 66643bbb8dbc914b2e0e48a7f0c87630fe95e5d3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782982"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445853"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>ICorProfilerCallback::ObjectAllocated 方法
-通知探查器内存中堆分配的对象。  
+Notifies the profiler that memory within the heap has been allocated for an object.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,18 +35,18 @@ HRESULT ObjectAllocated(
   
 ## <a name="parameters"></a>参数  
  `objectId`  
- [in]为其分配内存的对象的 ID。  
+ [in] The ID of the object for which memory was allocated.  
   
  `classId`  
- [in]类对象的实例的 ID。  
+ [in] The ID of the class of which the object is an instance.  
   
 ## <a name="remarks"></a>备注  
- `ObjectedAllocated`对于从堆栈或非托管的内存分配不调用方法。 `classId`参数可以引用尚未加载的托管代码中的类。 探查器将接收此类的类加载回调后立即`ObjectAllocated`回调。  
+ The `ObjectedAllocated` method is not called for allocations from either the stack or unmanaged memory. The `classId` parameter can refer to a class in managed code that has not been loaded yet. The profiler will receive a class load callback for that class immediately after the `ObjectAllocated` callback.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

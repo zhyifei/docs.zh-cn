@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1efedcb-3dd7-42ae-a399-21c24728aec5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2f3d74830de0541ec789081c47352beca8d81d74
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4faf8646b81f92ddf65eff15fdc610d275b37864
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780710"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440007"
 ---
 # <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents 方法
 枚举指定的 TypeDef 标记的事件定义标记。  
@@ -41,33 +39,33 @@ HRESULT EnumEvents (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in、 out]一个指向枚举器。  
+ [in, out] A pointer to the enumerator.  
   
  `td`  
- [in]其事件定义是要枚举的 TypeDef 标记。  
+ [in] The TypeDef token whose event definitions are to be enumerated.  
   
  `rEvents`  
- [out]返回的事件的数组。  
+ [out] The array of returned events.  
   
  `cMax`  
  [in] `rEvents` 数组的最大大小。  
   
  `pcEvents`  
- [out]事件中返回的实际数目`rEvents`。  
+ [out] The actual number of events returned in `rEvents`.  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` 已成功返回。|  
-|`S_FALSE`|没有要枚举的事件。 在这种情况下，`pcEvents`为零。|  
+|`S_OK`|`EnumEvents` returned successfully.|  
+|`S_FALSE`|There are no events to enumerate. In that case, `pcEvents` is zero.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 166b0761-ed80-4ccd-9973-dc20e61bf8fa
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f08b3d9634362d47615fe14287ab9ec35e78ee65
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 077e6d729eb98ddad25cd0c0cccf6d4641e2602c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775059"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428255"
 ---
 # <a name="icorprofilerobjectenumgetcount-method"></a>ICorProfilerObjectEnum::GetCount 方法
-获取集合中的冻结对象总数。  
+Gets the total number of frozen objects in the collection.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,14 +35,14 @@ HRESULT GetCount (
   
 ## <a name="parameters"></a>参数  
  `pcelt`  
- [out]指向集合中的冻结对象数的指针。  
+ [out] A pointer to the number of frozen objects in the collection.  
   
- 此方法将始终返回零的.NET Framework 3.5 版 Service Pack 1 (SP1) 和更高版本。  
+ This method will always return zero in the .NET Framework version 3.5 Service Pack 1 (SP1) and later versions.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

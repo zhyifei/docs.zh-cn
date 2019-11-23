@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f2833594-d90b-4a71-9a53-34b12470c64a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 19f1839aa2c4ca810e76c1745103a00c6f5ea5a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c736eccfd5d05ec9b65e6ed26187e7c7b4387c5d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777574"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431731"
 ---
 # <a name="imetadataemitdefinemoduleref-method"></a>IMetaDataEmit::DefineModuleRef 方法
-具有指定名称创建一个模块的元数据签名。  
+Creates the metadata signature for a module with the specified name.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,17 +36,17 @@ HRESULT DefineModuleRef (
   
 ## <a name="parameters"></a>参数  
  `szName`  
- [in]另一台元数据文件，通常的 DLL 的名称。 这是只是文件名。 不要使用完整路径名称。  
+ [in] The name of the other metadata file, typically a DLL. This is the file name only. Do not use a full path name.  
   
  `pmur`  
- [out]已分配`mdModuleRef`令牌。  
+ [out] The assigned `mdModuleRef` token.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

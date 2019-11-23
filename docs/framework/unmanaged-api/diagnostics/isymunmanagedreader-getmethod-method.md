@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ae6cfb29-bc2c-4606-af86-1d32ebd31020
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 35dd8dd272ea8b4fc21cb9d7dce6899ceb836265
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9407942b81c5318509f2b026fa5db1cdd163e02d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777000"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448278"
 ---
 # <a name="isymunmanagedreadergetmethod-method"></a>ISymUnmanagedReader::GetMethod 方法
-获取符号读取器方法，给定一个方法标记。  
+Gets a symbol reader method, given a method token.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,16 +35,16 @@ HRESULT GetMethod (
   
 ## <a name="parameters"></a>参数  
  `token`  
- [in]方法标记中。  
+ [in] The method token.  
   
  `pRetVal`  
- [out]指向返回的接口的指针。  
+ [out] A pointer to the returned interface.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

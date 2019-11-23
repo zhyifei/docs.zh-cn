@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00061a25-ba05-47a7-b984-fd916b06b149
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 77f72fb7eb7b0542dc9a3179811a78b189d6b3b0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c9ac624e17223def206e86fd92ee4fd2de7f6082
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778836"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436747"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>IMetaDataImport::GetTypeDefProps 方法
-返回元数据信息<xref:System.Type>由指定的 TypeDef 标记。  
+Returns metadata information for the <xref:System.Type> represented by the specified TypeDef token.  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,29 +40,29 @@ HRESULT GetTypeDefProps (
   
 ## <a name="parameters"></a>参数  
  `td`  
- [in]表示要返回的元数据的类型的 TypeDef 标记。  
+ [in] The TypeDef token that represents the type to return metadata for.  
   
  `szTypeDef`  
- [out]包含类型名称的缓冲区。  
+ [out] A buffer containing the type name.  
   
  `cchTypeDef`  
- [in]在宽字符为单位的大小`szTypeDef`。  
+ [in] The size in wide characters of `szTypeDef`.  
   
  `pchTypeDef`  
- [out]在中返回的宽字符数`szTypeDef`。  
+ [out] The number of wide characters returned in `szTypeDef`.  
   
  `pdwTypeDefFlags`  
- [out]一个指向任何修改的类型定义的标志。 此值是从一个位掩码[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)枚举。  
+ [out] A pointer to any flags that modify the type definition. This value is a bitmask from the [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration.  
   
  `ptkExtends`  
- [out]TypeDef 或 TypeRef 元数据标记，表示所请求类型的基类型。  
+ [out] A TypeDef or TypeRef metadata token that represents the base type of the requested type.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

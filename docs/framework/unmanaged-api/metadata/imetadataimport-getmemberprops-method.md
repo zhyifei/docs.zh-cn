@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fcf32c4b27324ccc54eabbb248e8c9906cf693b6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc5bbba2fa4a95955e52a2e083a2097178b5d96a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782365"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437515"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps 方法
-获取有关指定的成员定义，包括名称、 二进制签名和相对虚拟地址的元数据中存储的信息<xref:System.Type>指定的元数据标记所引用的成员。 这是一个简单的帮助程序方法： 如果*mb*然后是 MethodDef **GetMethodProps**调用; 如果*mb*然后是 FieldDef **GetFieldProps**调用。 查看这些详细信息的其他方法。 
+Gets information stored in the metadata for a specified member definition, including the name, binary signature, and relative virtual address, of the <xref:System.Type> member referenced by the specified metadata token. This is a simple helper method: if *mb* is a MethodDef, then **GetMethodProps** is called; if *mb* is a FieldDef, then **GetFieldProps** is called. See these other methods for details. 
   
 ## <a name="syntax"></a>语法  
   
@@ -49,50 +47,50 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>参数  
  `mb`  
- [in]引用的成员，若要获取有关关联的元数据标记。  
+ [in] The token that references the member to get the associated metadata for.  
   
  `pClass`  
- [out]指向表示类的成员的元数据标记的指针。  
+ [out] A pointer to the metadata token that represents the class of the member.  
   
  `szMember`  
- [out]成员的名称。  
+ [out] The name of the member.  
   
  `cchMember`  
- [in]在宽字符为单位的大小`szMember`缓冲区。  
+ [in] The size in wide characters of the `szMember` buffer.  
   
  `pchMember`  
- [out]在宽字符返回的名称的大小。  
+ [out] The size in wide characters of the returned name.  
   
  `pdwAttr`  
- [out]任何标志应用于的成员的值。  
+ [out] Any flag values applied to the member.  
   
  `ppvSigBlob`  
- [out]指向成员的二进制元数据签名的指针。  
+ [out] A pointer to the binary metadata signature of the member.  
   
  `pcbSigBlob`  
- [out]以字节为单位的大小`ppvSigBlob`。  
+ [out] The size in bytes of `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out]指向成员的相对虚拟地址的指针。  
+ [out] A pointer to the relative virtual address of the member.  
   
  `pdwImplFlags`  
- [out]与成员关联的任何方法实现标志。  
+ [out] Any method implementation flags associated with the member.  
   
  `pdwCPlusTypeFlag`  
- [out]一个标志，用于将标记<xref:System.ValueType>。 它是之一`ELEMENT_TYPE_*`值。
+ [out] A flag that marks a <xref:System.ValueType>. It is one of the `ELEMENT_TYPE_*` values.
   
  `ppValue`  
- [out]返回此成员的常量字符串值。  
+ [out] A constant string value returned by this member.  
   
  `pcchValue`  
- [out]以字符为单位的大小`ppValue`，或为零`ppValue`不保存字符串。  
+ [out] The size in characters of `ppValue`, or zero if `ppValue` does not hold a string.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

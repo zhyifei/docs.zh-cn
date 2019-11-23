@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55a2f907-d216-42eb-8f2f-e5d59c2eebd6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 563a2e19c9c254870b3e767253a276a201e631a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dffd4365669da61f7b321110ad663c131ce591e6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779301"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439677"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>ICorProfilerCallback2::RootReferences2 方法
-在发生垃圾回收后，请通知有关根引用探查器。 此方法是的扩展[icorprofilercallback:: Rootreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)方法。  
+Notifies the profiler about root references after a garbage collection has occurred. This method is an extension of the [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) method.  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,35 +38,35 @@ HRESULT RootReferences2(
   
 ## <a name="parameters"></a>参数  
  `cRootRefs`  
- [in]中的元素数`rootRefIds`， `rootKinds`， `rootFlags`，和`rootIds`数组。  
+ [in] The number of elements in the `rootRefIds`, `rootKinds`, `rootFlags`, and `rootIds` arrays.  
   
  `rootRefIds`  
- [in]对象 Id，其中每个引用的静态对象或在堆栈上的对象的数组。 中的元素`rootKinds`数组提供信息来对分类中的相应元素`rootRefIds`数组。  
+ [in] An array of object IDs, each of which references either a static object or an object on the stack. Elements in the `rootKinds` array provide information to classify corresponding elements in the `rootRefIds` array.  
   
  `rootKinds`  
- [in]一个数组[COR_PRF_GC_ROOT_KIND](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md)指示垃圾回收根的类型的值。  
+ [in] An array of [COR_PRF_GC_ROOT_KIND](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md) values that indicate the type of the garbage collection root.  
   
  `rootFlags`  
- [in]一个数组[COR_PRF_GC_ROOT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md)描述垃圾回收根的属性的值。  
+ [in] An array of [COR_PRF_GC_ROOT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md) values that describe the properties of a garbage collection root.  
   
  `rootIds`  
- [in]指向一个整数，包含有关垃圾回收根，具体取决于值的其他信息的值的 UINT_PTR 数组`rootKinds`参数。  
+ [in] An array of UINT_PTR values that point to an integer that contains additional information about the garbage collection root, depending on the value of the `rootKinds` parameter.  
   
- 如果根的类型为堆栈，则根 ID 将包含的变量的函数。 如果该根 ID 为 0，则该函数是未命名的函数内部的 CLR。 如果根的类型为一个句柄，根 ID 可供垃圾回收句柄。 对于其他根类型，该 ID 是不透明值，应当忽略。  
+ If the type of the root is a stack, the root ID is for the function that contains the variable. If that root ID is 0, the function is an unnamed function that is internal to the CLR. If the type of the root is a handle, the root ID is for the garbage collection handle. For the other root types, the ID is an opaque value and should be ignored.  
   
 ## <a name="remarks"></a>备注  
- `rootRefIds`， `rootKinds`， `rootFlags`，和`rootIds`数组是并行数组。 即`rootRefIds[i]`， `rootKinds[i]`， `rootFlags[i]`，和`rootIds[i]`都涉及同一个根。  
+ The `rootRefIds`, `rootKinds`, `rootFlags`, and `rootIds` arrays are parallel arrays. That is, `rootRefIds[i]`, `rootKinds[i]`, `rootFlags[i]`, and `rootIds[i]` all concern the same root.  
   
- 这两`RootReferences`和`RootReferences2`调用以通知探查器。 探查器将通常实现一种方法或另一个，但不是能同时，因为传入的信息`RootReferences2`是传入的超集`RootReferences`。  
+ Both `RootReferences` and `RootReferences2` are called to notify the profiler. Profilers will normally implement one method or the other, but not both, because the information passed in `RootReferences2` is a superset of that passed in `RootReferences`.  
   
- 中的条目可能`rootRefIds`为零，这意味着相应的根引用为 null，且不引用托管堆上的对象。  
+ It is possible for entries in `rootRefIds` to be zero, which implies that the corresponding root reference is null and does not refer to an object on the managed heap.  
   
- 通过返回的对象 Id`RootReferences2`不能在该回调本身，因为垃圾回收可能正处于将对象从旧地址移到新的地址。 因此，探查器不应在 `RootReferences2` 调用期间尝试检查对象。 当[ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)是调用，所有对象都已移到其新位置并且可以安全地检查。  
+ The object IDs returned by `RootReferences2` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects from old addresses to new addresses. 因此，探查器不应在 `RootReferences2` 调用期间尝试检查对象。 When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, all objects have been moved to their new locations and can be safely inspected.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

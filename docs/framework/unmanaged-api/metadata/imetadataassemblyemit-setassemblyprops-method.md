@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 91b633d7-9e75-43c3-a8d2-2144984e5f9e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 34335321207e98a518ff3e0fdb5ea1dc3ac68b75
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f79320d5b7d2ad4ad44a79fae063ce6718490a70
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776264"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431948"
 ---
 # <a name="imetadataassemblyemitsetassemblyprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyProps 方法
 修改指定的 `Assembly` 元数据结构。  
@@ -43,35 +41,35 @@ HRESULT SetAssemblyProps (
   
 ## <a name="parameters"></a>参数  
  `pma`  
- [in]指定的元数据标记`Assembly`要修改的元数据结构。  
+ [in] The metadata token that specifies the `Assembly` metadata structure to be modified.  
   
  `pbPublicKey`  
- [in]指向程序集的发布服务器的公钥的指针。  
+ [in] A pointer to the public key of the publisher of the assembly.  
   
  `cbPublicKey`  
- [in]以字节为单位的大小`pbPublicKey`。  
+ [in] The size in bytes of `pbPublicKey`.  
   
  `ulHashAlgId`  
- [in]使用程序集文件进行哈希的哈希算法标识符。  
+ [in] The identifier for the hash algorithm used to hash the assembly files.  
   
  `szName`  
- [in]用户可读文本的程序集的名称。  
+ [in] The human-readable text name of the assembly.  
   
  `pMetaData`  
- [in]指向包含程序集的版本、 平台和区域设置信息 ASSEMBLYMETADATA 的指针。  
+ [in] A pointer to the ASSEMBLYMETADATA that contains version, platform, and locale information for the assembly.  
   
  `dwAssemblyFlags`  
- [in]按位组合[AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md)指定程序集的各种属性的值。  
+ [in] A bitwise combination of [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) values that specify various attributes of the assembly.  
   
 ## <a name="remarks"></a>备注  
- 若要创建`Assembly`元数据结构，使用[imetadataassemblyemit:: Defineassembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md)方法。  
+ To create an `Assembly` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) method.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93de56b6-4ae8-4cca-acdc-25a434623509
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4087bdd82041152a9946a576e0eb96bf63f177c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 041df959139a0be77f40d6aa5655ff15f93fb26f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777271"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427942"
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a>ISymUnmanagedWriter::Initialize2 方法
-此编写器将与之关联的元数据发射器接口和设置输出文件将写入调试符号的名称。 此方法还允许您设置的程序数据库 (PDB) 文件的最终位置。  
+Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written. This method also lets you set the final location of the program database (PDB) file.  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,25 +38,25 @@ HRESULT Initialize2(
   
 ## <a name="parameters"></a>参数  
  `emitter`  
- [in]指向元数据发射器接口的指针。  
+ [in] A pointer to the metadata emitter interface.  
   
  `tempfilename`  
- [in]一个指向`WCHAR`，其中包含要写入调试符号的文件名称。 如果为不使用文件名的编写器指定文件名，则忽略此参数。  
+ [in] A pointer to a `WCHAR` that contains the file name to which the debugging symbols are written. 如果为不使用文件名的编写器指定文件名，则忽略此参数。  
   
  `pIStream`  
- [in]如果指定，将符号编写器发出符号置于给定<xref:System.Runtime.InteropServices.ComTypes.IStream>而不是文件中指定`filename`参数。 `pIStream` 参数是可选的。  
+ [in] If specified, the symbol writer emits the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter. `pIStream` 参数是可选的。  
   
  `fFullBuild`  
- [in]`true`如果这是完全重新生成;`false`如果这是增量编译。  
+ [in] `true` if this is a full rebuild; `false` if this is an incremental compilation.  
   
  `finalfilename`  
- [in]一个指向`WCHAR`，它是 PDB 文件的最后一个位置的路径字符串。  
+ [in] A pointer to a `WCHAR` that is the path string to the final location of the PDB file.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

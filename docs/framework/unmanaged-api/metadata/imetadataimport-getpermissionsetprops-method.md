@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9855f0e4-12c0-4d3d-ab5d-d6bc52d25eae
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 48cd62f89f1112a1007a5661dc55fe2977dace2b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a020a0343eecceb4a85ebbddffe323c7f7bdca3d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778917"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437109"
 ---
 # <a name="imetadataimportgetpermissionsetprops-method"></a>IMetaDataImport::GetPermissionSetProps 方法
-获取与关联的元数据<xref:System.Security.PermissionSet?displayProperty=nameWithType>所表示的指定权限令牌。  
+Gets the metadata associated with the <xref:System.Security.PermissionSet?displayProperty=nameWithType> represented by the specified Permission token.  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,23 +38,23 @@ HRESULT GetPermissionSetProps (
   
 ## <a name="parameters"></a>参数  
  `pm`  
- [in]表示要获取其元数据属性的权限集的权限的元数据标记。  
+ [in] The Permission metadata token that represents the permission set to get the metadata properties for.  
   
  `pdwAction`  
- [out]指向在权限集中的指针。  
+ [out] A pointer to the permission set.  
   
  `ppvPermission`  
- [out]一个指向权限集的二进制元数据签名。  
+ [out] A pointer to the binary metadata signature of the permission set.  
   
  `pcbPermission`  
- [out]以字节为单位的大小`ppvPermission`。  
+ [out] The size in bytes of `ppvPermission`.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

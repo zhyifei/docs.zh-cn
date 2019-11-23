@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dec7df60-4d30-47c8-99db-72e0419e5f76
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 570e48788a11045882ef546bf6bc22315c2a02b0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fded6b95144d4088a2abc8dfcc4ef8eda331c34f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777277"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438431"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType 方法
-指定嵌套类型为可导出。 [ExportType 方法](exporttype-method.md)还可以导出嵌套类型，但此方法的速度更快。  
+Specifies nested types as exportable. The [ExportType Method](exporttype-method.md) can also export nested types, but this method is faster.  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,31 +41,31 @@ HRESULT ExportNestedType(
   
 ## <a name="parameters"></a>参数  
  `AssemblyID`  
- 要从中导出的程序集的 ID。  
+ ID of assembly to export from.  
   
  `FileToken`  
- 定义要导出的类型的文件标记或文件的程序集。  
+ File token or Assembly of file that defines the type to be made exportable.  
   
  `TypeToken`  
- 要使其可导出的类型的类型标记。  
+ Type token of type to be made exportable.  
   
  `ParentType`  
- 父类型的标记。  
+ Token of parent type.  
   
  `pszTypename`  
- 要导出的完全限定的类型名称。  
+ Fully qualified type name to export.  
   
  `dwFlags`  
- `ComType`标志， `tdPublic`如或`tdNested`。 此值可传递给[DefineExportedType 方法](../metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
+ `ComType` flags such as `tdPublic` or `tdNested`. This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- 接收导出类型的令牌。  
+ Receives token for exported type.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>要求  
- 需要 alink  
+ Requires alink.h  
   
 ## <a name="see-also"></a>请参阅
 

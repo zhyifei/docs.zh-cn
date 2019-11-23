@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0afc1197-2a5b-424f-8b82-9cb59a7e00db
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 335c25316b34f79b8d02eea5a7dd4ed7994fc754
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6999821412b3cdd614cb30858a0616c9f27a6baa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780174"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448108"
 ---
 # <a name="icorprofilerinfogetclassfromtoken-method"></a>ICorProfilerInfo::GetClassFromToken 方法
-获取给定元数据标记的类的 ID。 此方法是在.NET Framework 2.0 版中已过时。 使用[ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md)相反。  
+Gets the ID of the class, given the metadata token. This method is obsolete in the .NET Framework version 2.0. Use [ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) instead.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,25 +36,25 @@ HRESULT GetClassFromToken(
   
 ## <a name="parameters"></a>参数  
  `moduleID`  
- [in]包含的类模块的 ID。  
+ [in] The ID of the module that contains the class.  
   
  `typeDef`  
- [in]`mdTypeDef`元数据标记所引用的类。  
+ [in] An `mdTypeDef` metadata token that references the class.  
   
  `cTypeArgs`  
- [out]指向类 id。  
+ [out] A pointer to the class ID.  
   
 ## <a name="remarks"></a>备注  
- 此方法已过时;请改用`ICorProfilerInfo2::GetClassFromTokenAndTypeArgs`对于所有类型。  
+ This method is obsolete; instead, use `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` for all types.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** 1.0, 1.1  
+ **.NET Framework Versions:** 1.0, 1.1  
   
 ## <a name="see-also"></a>请参阅
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36cdc9f5-7579-4cd2-aa36-fc05c741584c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: be8f4e396171f3e56b5b93969d3960b7aaea142e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e508ccd81d25aa3d303456fa88554903ec71d633
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780638"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439063"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>ICorProfilerInfo::GetHandleFromThread 方法
-映射到 Win32 线程句柄的线程 ID。  
+Maps the ID of a thread to a Win32 thread handle.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,18 +35,18 @@ HRESULT GetHandleFromThread(
   
 ## <a name="parameters"></a>参数  
  `threadId`  
- [in]要映射的线程 ID。  
+ [in] The thread ID to be mapped.  
   
  `phThread`  
- [out]指向 Win32 线程句柄的指针。  
+ [out] A pointer to a Win32 thread handle.  
   
 ## <a name="remarks"></a>备注  
- 探查器必须调用 Win32`DuplicateHandle`才能使用该句柄上的函数。  
+ The profiler must call the Win32 `DuplicateHandle` function on the handle before using it.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

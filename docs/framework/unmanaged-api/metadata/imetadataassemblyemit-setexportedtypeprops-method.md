@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c090153-fd5f-46c7-9cff-39a78d992c8f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e4be840760782789aa91e5519f60374aca2e3941
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae682c354a7a5188611b103008a3e18f8d821260
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775262"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431940"
 ---
 # <a name="imetadataassemblyemitsetexportedtypeprops-method"></a>IMetaDataAssemblyEmit::SetExportedTypeProps 方法
 修改指定的 `ExportedType` 元数据结构。  
@@ -40,26 +38,26 @@ HRESULT SetExportedTypeProps (
   
 ## <a name="parameters"></a>参数  
  `ct`  
- [in]指定的元数据标记`ExportedType`要修改的元数据结构。  
+ [in] The metadata token that specifies the `ExportedType` metadata structure to be modified.  
   
  `tkImplementation`  
- [in]类型的标记`File`， `AssemblyRef`，或`ExportedType`，指定此类型的实现方式。  
+ [in] The token, of type `File`, `AssemblyRef`, or `ExportedType`, that specifies how this type is implemented.  
   
  `tkTypeDef`  
- [in]`TypeDef`代码文件中引用的令牌。  
+ [in] The `TypeDef` token referenced in the code file.  
   
  `dwExportedTypeFlags`  
- [in]指定类型的属性的值的按位组合。  
+ [in] A bitwise combination of values that specify attributes of the type.  
   
 ## <a name="remarks"></a>备注  
- 若要创建`ExportedType`元数据结构，使用[imetadataassemblyemit:: Defineexportedtype](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)方法。  
+ To create an `ExportedType` metadata structure, use the [IMetaDataAssemblyEmit::DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) method.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

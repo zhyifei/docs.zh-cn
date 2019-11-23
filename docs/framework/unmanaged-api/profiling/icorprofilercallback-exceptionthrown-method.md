@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: f1a23f3b-ac21-4905-8abf-8ea59f15af53
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 01e407b726ce4426f3b58bc29854b30bd6add257
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4ecbe0ef3c3021c5633b9380da2eb31cf22aa4b1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953875"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445324"
 ---
 # <a name="icorprofilercallbackexceptionthrown-method"></a>ICorProfilerCallback::ExceptionThrown 方法
-通知探查器引发了异常。  
+Notifies the profiler that an exception has been thrown.  
   
 > [!NOTE]
-> 仅当异常到达托管代码时, 才调用此函数。  
+> This function is called only if the exception reaches managed code.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,19 +37,19 @@ HRESULT ExceptionThrown(
   
 ## <a name="parameters"></a>参数  
  `thrownObjectId`  
- 中导致引发异常的对象的 ID。  
+ [in] The ID of the object that caused the exception to be thrown.  
   
 ## <a name="remarks"></a>备注  
- 探查器不应在此方法的实现中被阻止, 因为堆栈可能不处于允许垃圾回收的状态, 因此无法启用抢先垃圾回收。 如果探查器在此处阻止并且试图进行垃圾回收, 则运行时将被阻止, 直到此回调返回。  
+ The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
   
- 探查器的此方法的实现不应调入托管代码或以任何方式导致托管内存分配。  
+ The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Corprof.idl, Corprof.idl  
+ **头文件：** CorProf.idl、CorProf.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

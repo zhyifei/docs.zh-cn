@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8e7dbf14-98a2-4384-a950-58a7640e59df
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8f8c18935069e4162236f99c411312087ce73bdc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d44eae4da70418e2d4f398b2bacee1fb53d55b60
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782216"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443056"
 ---
 # <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>ICorProfilerInfo2::GetThreadStaticAddress 方法
-获取指定在范围内的指定线程的线程静态字段的地址。  
+Gets the address of the specified thread-static field that is in the scope of the specified thread.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,30 +37,30 @@ HRESULT GetThreadStaticAddress(
   
 ## <a name="parameters"></a>参数  
  `classId`  
- [in]包含请求的线程静态字段的类的 ID。  
+ [in] The ID of the class that contains the requested thread-static field.  
   
  `fieldToken`  
- [in]请求的线程静态字段元数据标记。  
+ [in] The metadata token for the requested thread-static field.  
   
  `threadId`  
- [in]请求的静态字段的作用域的线程的 ID。  
+ [in] The ID of the thread that is the scope for the requested static field.  
   
  `ppAddress`  
- [out]指向位于指定线程静态字段的地址的指针。  
+ [out] A pointer to the address of the static field that is within the specified thread.  
   
 ## <a name="remarks"></a>备注  
- `GetThreadStaticAddress`方法可能会返回以下值之一：  
+ The `GetThreadStaticAddress` method may return one of the following:  
   
-- 如果尚未分配给定的静态字段中指定的上下文的地址 CORPROF_E_DATAINCOMPLETE HRESULT。  
+- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
   
-- 可能在垃圾回收堆的对象的地址。 垃圾回收后，这些地址可能会变为无效操作后垃圾收集探查器不应假定其是否有效。  
+- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection profilers should not assume that they are valid.  
   
- 类的类构造函数完成之前，`GetThreadStaticAddress`将返回 CORPROF_E_DATAINCOMPLETE 对于所有其静态字段，尽管可能已初始化的一些静态字段和根垃圾回收对象。  
+ Before a class’s class constructor is completed, `GetThreadStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bfd54573-b7e6-4bd1-a184-7f08a8b39fae
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e631b0a90498ea1299d9448507014081bd2d3018
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d310ad49debf69d1139f2286cb76e51e9b622ea9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756053"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445339"
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionenter-method"></a>ICorProfilerCallback::ExceptionSearchFunctionEnter 方法
-通知探查器的异常处理的搜索阶段已开始搜索函数，以便找到当前异常的处理程序。  
+Notifies the profiler that the search phase of exception handling has begun searching a function to find a handler for the current exception.  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,12 +34,12 @@ HRESULT ExceptionSearchFunctionEnter(
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in]已输入的函数的 ID。  
+ [in] The ID of the function that has been entered.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

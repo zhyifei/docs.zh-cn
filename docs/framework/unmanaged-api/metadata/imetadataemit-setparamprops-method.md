@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a95a3908-9f87-4084-937e-8e01ef03ad63
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f8448de17ad974bc77021a7880b7d8576c69ae75
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 813460aa027b259866b168d426fd28502b5c4465
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750911"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432494"
 ---
 # <a name="imetadataemitsetparamprops-method"></a>IMetaDataEmit::SetParamProps 方法
-设置或更改的调用之前已定义的方法参数的功能[imetadataemit:: Defineparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md)。  
+Sets or changes features of a method parameter that was defined by a prior call to [IMetaDataEmit::DefineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,29 +40,29 @@ HRESULT SetParamProps (
   
 ## <a name="parameters"></a>参数  
  `pd`  
- [in]目标参数的标记。  
+ [in] The token for the target parameter.  
   
  `szName`  
- [in]以 unicode 格式参数的名称。  
+ [in] The name of the parameter in Unicode.  
   
  `dwParamFlags`  
- [in]参数的标志。  
+ [in] The flags for the parameter.  
   
  `dwCPlusTypeFlag`  
- [in]ELEMENT_TYPE_ * 的常量值。  
+ [in] The ELEMENT_TYPE_* for the constant value.  
   
  `pValue`  
- [in]参数的常量值。  
+ [in] The constant value for the parameter.  
   
  `cchValue`  
- [in] (Unicode) 字符中的大小`pValue`。  
+ [in] The size in (Unicode) characters of `pValue`.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

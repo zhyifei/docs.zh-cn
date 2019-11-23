@@ -6,36 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT [.NET Framework profiling]
 ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a8eb622b974de350f86a586a0f07b887bffdbd61
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4d835f749a33d21a13be307e1524671e36496899
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483069"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440832"
 ---
-# <a name="corprofeunsupportedcallsequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
-在.NET Framework 2.0 版中引入 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT。 .NET Framework 4 在两个方案中返回此 HRESULT:  
+# <a name="corprof_e_unsupported_call_sequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
+The CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT was introduced in the .NET Framework version 2.0. The .NET Framework 4 returns this HRESULT in two scenarios:  
   
-- 时劫持探查器会强行将线程的重置注册上下文在任意时间，以便该线程尝试访问处于不一致状态的结构。  
+- When a hijacking profiler forcibly resets a thread's register context at an arbitrary time so that the thread tries to access structures that are in an inconsistent state.  
   
-- 当探查器尝试调用触发垃圾回收禁止垃圾回收的回调方法中的一条信息性方法。  
+- When a profiler tries to call an informational method that triggers garbage collection from a callback method that forbids garbage collection.  
   
- 以下各节中讨论了这两种方案。  
+ These two scenarios are discussed in the following sections.  
   
-## <a name="hijacking-profilers"></a>拦截探查器  
- （这种情况下是主要问题拦截探查器，尽管某些情况下，非拦截探查器可以在此处查看此 HRESULT。）  
+## <a name="hijacking-profilers"></a>Hijacking Profilers  
+ (This scenario is primarily an issue with hijacking profilers although there are cases where non-hijacking profilers can see this HRESULT.)  
   
- 在此方案中，攻击探查器强制重置线程的寄存器上下文在任意时间，以便线程可以输入探查器代码或重新输入公共语言运行时 (CLR) 通过[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)方法。  
+ In this scenario, a hijacking profiler forcibly resets a thread's register context at an arbitrary time so that the thread can enter profiler code or re-enter the common language runtime (CLR) through an [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) method.  
   
- 许多分析 API 提供了指向在 CLR 中的数据结构的 Id。 许多`ICorProfilerInfo`调用只是读取这些数据结构的信息，并将其传递回。 但是，CLR 可能会更改这些结构中运行，以及它可以使用锁来执行此操作。 假设 CLR 已保存 （或尝试获取） 时锁定探查器拦截该线程。 如果线程重新进入 CLR，并尝试执行更多的锁或检查正被修改的结构，这些结构可能处于不一致的状态。 在这种情况下很容易发生死锁和访问冲突。  
+ Many of the IDs that the profiling API provides point to data structures in the CLR. Many `ICorProfilerInfo` calls merely read information from these data structures and pass them back. However, the CLR might change things in those structures as it runs, and it might use locks to do so. Suppose the CLR was already holding (or attempting to acquire) a lock at the time the profiler hijacked the thread. If the thread re-enters the CLR and tries to take more locks or inspect structures that were in the process of being modified, these structures might be in an inconsistent state. Deadlocks and access violations can easily occur in such situations.  
   
- 一般情况下，当非攻击方式探查器执行代码时，才[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)方法并调用到`ICorProfilerInfo`方法使用有效的参数，它不应发生死锁或收到访问冲突。 例如，探查器中运行的代码[icorprofilercallback:: Classloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)方法可能会通过调用请求有关类的信息[ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)方法。 代码可能会收到一个 CORPROF_E_DATAINCOMPLETE HRESULT，指示信息是不可用;但是，它不会发生死锁或收到访问冲突。 调用此类`ICorProfilerInfo`称为同步的因为它们源自`ICorProfilerCallback`方法。  
+ In general, when a non-hijacking profiler executes code inside an [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) method and calls into an `ICorProfilerInfo` method with valid parameters, it should not deadlock or receive an access violation. For example, profiler code that runs inside the [ICorProfilerCallback::ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md) method may ask for information about the class by calling the [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) method. The code might receive an CORPROF_E_DATAINCOMPLETE HRESULT to indicate that information is unavailable; however, it will not deadlock or receive an access violation. This class of calls into `ICorProfilerInfo` are called synchronous, because they are made from an `ICorProfilerCallback` method.  
   
- 但是，托管的线程的执行不在两者之间的代码`ICorProfilerCallback`方法被认为对此进行的异步调用。 在.NET Framework 版本 1 中，很难确定异步调用中可能会发生什么。 在调用可能发生死锁、 崩溃，或给出无效的回答。 .NET Framework 2.0 版引入了一些简单的检查，以帮助您避免此问题。 在.NET Framework 2.0 中，如果调用不安全`ICorProfilerInfo`异步函数中，将失败并出现 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT。  
+ However, a managed thread that executes code that is not within an `ICorProfilerCallback` method is considered to be making an asynchronous call. In the .NET Framework version 1, it was difficult to determine what might happen in an asynchronous call. The call could deadlock, crash, or give an invalid answer. The .NET Framework version 2.0 introduced some simple checks to help you avoid this problem. In the .NET Framework 2.0, if you call an unsafe `ICorProfilerInfo` function asynchronously, it fails with an CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT.  
   
- 一般情况下，异步调用是不安全的。 但是，以下方法是安全的特别是支持异步调用：  
+ In general, asynchronous calls are not safe. However, the following methods are safe and specifically support asynchronous calls:  
   
 - [GetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)  
   
@@ -69,14 +67,14 @@ ms.locfileid: "66483069"
   
 - [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)  
   
- 有关其他信息，请参阅文章[我们使用了 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://go.microsoft.com/fwlink/?LinkId=169156) CLR 分析 API 博客中。  
+ For additional information, see the entry [Why we have CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://go.microsoft.com/fwlink/?LinkId=169156) in the CLR Profiling API blog.  
   
-## <a name="triggering-garbage-collections"></a>触发垃圾回收  
- 此方案涉及到回调方法中运行的探查器 (例如，一个的`ICorProfilerCallback`方法) 禁止垃圾回收。 如果探查器尝试调用信息性方法 (例如上, 一个方法`ICorProfilerInfo`接口) 的可能触发垃圾收集、 信息性方法失败，错误为 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT。  
+## <a name="triggering-garbage-collections"></a>Triggering Garbage Collections  
+ This scenario involves a profiler that is running inside a callback method (for example, one of the `ICorProfilerCallback` methods) that forbids garbage collection. If the profiler tries to call an informational method (for example, a method on the `ICorProfilerInfo` interface) that might trigger a garbage collection, the informational method fails with a CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT.  
   
- 下表显示可能会触发垃圾回收的信息性方法和禁止垃圾回收的回调方法。 如果探查器中列出的回调方法之一执行并调用其中一个列出的信息性方法，该信息性方法将失败并 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT。  
+ The following table displays the callback methods that forbid garbage collections, and informational methods that may trigger garbage collections. If the profiler executes inside one of the listed callback methods and calls one of the listed informational methods, that informational method fails with a CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT.  
   
-|禁止垃圾回收的回叫方法|触发垃圾回收的信息性方法|  
+|Callback methods that forbid garbage collections|Informational methods that trigger garbage collections|  
 |------------------------------------------------------|------------------------------------------------------------|  
 |[ThreadAssignedToOSThread](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadassignedtoosthread-method.md)<br /><br /> [ExceptionUnwindFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionenter-method.md)<br /><br /> [ExceptionUnwindFunctionLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionleave-method.md)<br /><br /> [ExceptionUnwindFinallyEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md)<br /><br /> [ExceptionUnwindFinallyLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)<br /><br /> [ExceptionCatcherEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md)<br /><br /> [RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md)<br /><br /> [RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md)<br /><br /> [RuntimeSuspendAborted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendaborted-method.md)<br /><br /> [RuntimeThreadSuspended](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)<br /><br /> [RuntimeThreadResumed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadresumed-method.md)<br /><br /> [MovedReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md)<br /><br /> [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)<br /><br /> [ObjectsAllocatedByClass](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectsallocatedbyclass-method.md)<br /><br /> [RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)<br /><br /> [HandleCreated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md)<br /><br /> [HandleDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md)<br /><br /> [GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)<br /><br /> [GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)|[GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md)<br /><br /> [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md)<br /><br /> [SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)<br /><br /> [ForceGC](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-forcegc-method.md)<br /><br /> [GetClassFromToken](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassfromtoken-method.md)<br /><br /> [GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md)<br /><br /> [GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md)<br /><br /> [GetAppDomainInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getappdomaininfo-method.md)<br /><br /> [EnumModules](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md)<br /><br /> [RequestProfilerDetach](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-requestprofilerdetach-method.md)<br /><br /> [GetAppDomainsContainingModule](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getappdomainscontainingmodule-method.md)|  
   

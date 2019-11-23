@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 74300a12d000565a63cd7ea862c759d47b87bbe1
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f5104c779f99ef9f26a9eccc00008ded62336d8e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69665696"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426959"
 ---
-# <a name="icorprofilerinfo10suspendruntime-method"></a>ICorProfilerInfo10:: SuspendRuntime 方法
+# <a name="icorprofilerinfo10suspendruntime-method"></a>ICorProfilerInfo10::SuspendRuntime Method
 
-挂起运行时, 而不执行 GC。
+Suspends the runtime without performing a GC.
 
 ## <a name="syntax"></a>语法
 
@@ -30,14 +30,14 @@ HRESULT SuspendRuntime();
 
 ## <a name="requirements"></a>要求
 
-**适用**请参阅[支持 .Net Core 的操作系统](../../../core/windows-prerequisites.md#net-core-supported-operating-systems)。
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**标头：** Corprof.idl, Corprof.idl
+**头文件：** CorProf.idl、CorProf.h
 
-**类库**CorGuids.lib
+**库：** CorGuids.lib
 
-**.Net 版本:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>请参阅
 
-- [ICorProfilerInfo10 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

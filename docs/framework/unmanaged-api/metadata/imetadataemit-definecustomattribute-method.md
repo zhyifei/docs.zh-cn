@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7dd14854-b756-4401-b167-88ca576dc8f0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 994e007eabf8b7fdcf5446d905c06eb4ab91bb3f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e6a732b98ae02ba2b273b45921b7de61ab4fd29f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777674"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432635"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>IMetaDataEmit::DefineCustomAttribute 方法
-使用指定的元数据签名，附加到指定的对象，创建自定义属性的定义并获取该自定义特性定义的标记。  
+Creates a definition for a custom attribute with the specified metadata signature, to be attached to the specified object, and gets a token to that custom attribute definition.  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,26 +39,26 @@ HRESULT DefineCustomAttribute (
   
 ## <a name="parameters"></a>参数  
  `tkObj`  
- [in]所有者项标记。  
+ [in] The token for the owner item.  
   
  `tkType`  
- [in]令牌，用于标识自定义属性。  
+ [in] The token that identifies the custom attribute.  
   
  `pCustomAttribute`  
- [in]一个指向自定义属性。  
+ [in] A pointer to the custom attribute.  
   
  `cbCustomAttribute`  
- [in]中的字节计数`pCustomAttribute`。  
+ [in] The count of bytes in `pCustomAttribute`.  
   
  `pcv`  
- [out]`mdCustomAttribute`分配标记。  
+ [out] The `mdCustomAttribute` token assigned.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

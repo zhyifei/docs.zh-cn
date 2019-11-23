@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bda75017-739f-4ce5-9000-f3b526e8473c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3ebf8c736cdd1362cae1b1e0b734ce14bea49b18
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 97b127c9a6aac0a0fefe25faf294791dcd2c8e41
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751883"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436031"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo 方法
-获取一个数组对象有关的详细的信息。  
+Gets detailed information about an array object.  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,27 +38,27 @@ HRESULT GetArrayObjectInfo(
   
 ## <a name="parameters"></a>参数  
  `objectId`  
- [in]有效的数组对象的 ID。  
+ [in] The ID of a valid array object.  
   
  `cDimensions`  
- [in]数组的秩 （维数）。  
+ [in] The rank (number of dimensions) of the array.  
   
  `pDimensionSizes`  
- [out]一个数组，包含整数，每个资源表示数组的维度的大小。  
+ [out] An array that contains integers, each representing the size of a dimension of the array.  
   
  `pDimensionLowerBounds`  
- [out]包含整数的数组，每个代表较低的数组的维度的绑定。  
+ [out] An array that contains integers, each representing the lower bound of a dimension of the array.  
   
  `ppData`  
- [out]指向数组的布局方式根据原始缓冲区的地址的C++约定。  
+ [out] A pointer to the address of the raw buffer for the array, which is laid out according to the C++ convention.  
   
 ## <a name="remarks"></a>备注  
- `pDimensionSizes`和`pDimensionLowerBounds`是并行数组，因此，位于每个数组中的相同索引处的元素是相同的实体的特征。  
+ The `pDimensionSizes` and `pDimensionLowerBounds` are parallel arrays, so the elements located at the same index in each array are characteristics of the same entity.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

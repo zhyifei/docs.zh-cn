@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca2af325-eb9d-4a91-90e4-267e45b98611
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4b09ccfdb33c9853ed97005461f2288f1e7e6fd1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bab215a8221696a0e43e228278085fcef52a40e9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781749"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442823"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>CorMethodSemanticsAttr 枚举
 包含一些值，用于描述方法和关联属性或事件之间的关系。  
@@ -41,21 +39,21 @@ typedef enum CorMethodSemanticsAttr {
 } CorMethodSemanticsAttr;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`msSetter`|指定的方法是`set`属性访问器。|  
-|`msGetter`|指定的方法是`get`属性访问器。|  
-|`msOther`|指定该方法具有一个属性或事件而不是此处定义的关系。|  
-|`msAddOn`|指定该方法将添加事件处理程序方法。|  
-|`msRemoveOn`|指定方法移除事件处理程序方法。|  
-|`msFire`|指定该方法将引发一个事件。|  
+|`msSetter`|Specifies that the method is a `set` accessor for a property.|  
+|`msGetter`|Specifies that the method is a `get` accessor for a property.|  
+|`msOther`|Specifies that the method has a relationship to a property or an event other than those defined here.|  
+|`msAddOn`|Specifies that the method adds handler methods for an event.|  
+|`msRemoveOn`|Specifies that the method removes handler methods for an event.|  
+|`msFire`|Specifies that the method raises an event.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

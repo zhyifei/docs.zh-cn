@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d90dcee-0206-4540-807b-06982fe65f1a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e15f4e8691db13b9a646a1e1d783075acfcdd896
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 10f31d56a9727e99157f49038c19781f12cd9958
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777082"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440427"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a>IMetaDataFilter::IsTokenMarked 方法
-获取一个值，该值指示指定的元数据令牌是否已标记为已处理。  
+Gets a value indicating whether the specified metadata token has been marked as processed.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,17 +36,17 @@ HRESULT IsTokenMarked (
   
 ## <a name="parameters"></a>参数  
  `tk`  
- [in]要检查其处理标记的标记。  
+ [in] The token to examine for a processing mark.  
   
  `pIsMarked`  
- [out]一个值，则该值`true`如果`tk`处理; 否则为`false`。  
+ [out] A value that is `true` if `tk` has been processed; otherwise `false`.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

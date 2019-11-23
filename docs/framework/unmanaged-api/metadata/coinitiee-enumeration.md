@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 64264238-3b68-4bac-a887-36b552426a6c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 23f5a2b6b0970f3cb64ee339e6a1a409354a60e5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ccc038b4420040779dae70f15e3a8827ba94180
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780956"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444106"
 ---
 # <a name="coinitiee-enumeration"></a>COINITIEE 枚举
-指定使用的常量[CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)初始化公共语言运行时。  
+Specifies constants used by [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) when initializing the common language runtime.  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,20 +34,20 @@ typedef enum tagCOINITEE {
 } COINITIEE;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`COINITEE_DEFAULT`|默认初始化模式。 此初始化运行时和创建默认<xref:System.AppDomain>。|  
-|`COINITEE_DLL`|若要运行的托管的 DLL 的初始化。|  
-|`COINITEE_MAIN`|初始化运行托管可执行程序。 此初始化运行时，但不会创建默认<xref:System.AppDomain>，其中输入主例程中的 EXE 后创建的。|  
+|`COINITEE_DEFAULT`|Default initialization mode. This initializes the runtime and creates the default <xref:System.AppDomain>.|  
+|`COINITEE_DLL`|Initializes to run a managed DLL.|  
+|`COINITEE_MAIN`|Initializes to run a managed EXE. This initializes the runtime but does not create the default <xref:System.AppDomain>, which is created after entering the main routine of the EXE.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

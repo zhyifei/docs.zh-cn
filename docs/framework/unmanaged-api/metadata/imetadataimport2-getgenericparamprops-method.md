@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbb21e67-712b-49e7-a27c-a1e73ffd46c5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cf9f6cc1e568463f2ca9afa38c10f50d0c247013
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a8c5dd263401002deaee3d21f1e41b41a29faec2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755352"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427294"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps 方法
-获取与指定的标记表示的泛型参数相关联的元数据。  
+Gets the metadata associated with the generic parameter represented by the specified token.  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,35 +42,35 @@ HRESULT GetGenericParamProps (
   
 ## <a name="parameters"></a>参数  
  `gp`  
- [in]表示要为其返回的元数据的泛型参数的标记。  
+ [in] The token that represents the generic parameter for which to return metadata.  
   
  `pulParamSeq`  
- [out]序号位置`Type`父构造函数或方法中的参数。  
+ [out] The ordinal position of the `Type` parameter in the parent constructor or method.  
   
  `pdwParamFlags`  
- [out]值为[CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)枚举，用于描述`Type`泛型形参。  
+ [out] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the `Type` for the generic parameter.  
   
  `ptOwner`  
- [out]TypeDef 或 MethodDef 标记表示的参数的所有者。  
+ [out] A TypeDef or MethodDef token that represents the owner of the parameter.  
   
  `reserved`  
- [out]保留供将来的扩展。  
+ [out] Reserved for future extensibility.  
   
  `wzName`  
- [out]泛型参数的名称。  
+ [out] The name of the generic parameter.  
   
  `cchName`  
- [in]大小`wzName`缓冲区。  
+ [in] The size of the `wzName` buffer.  
   
  `pchName`  
- [out]该名称，以宽字符为单位返回的大小。  
+ [out] The returned size of the name, in wide characters.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

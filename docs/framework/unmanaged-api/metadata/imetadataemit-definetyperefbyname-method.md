@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c30a4ce3-2d3e-411a-98df-e62ac4a5dd50
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f005ee9d3d9d4b8977cd6a1838fe46015e604df5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3dfdd473b01bfe83def52f957c52e0f4d11375ad
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777467"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434380"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName 方法
-获取在指定范围内，这是当前作用域之外定义的类型的元数据令牌。  
+Gets a metadata token for a type that is defined in the specified scope, which is outside the current scope.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,30 +37,30 @@ HRESULT DefineTypeRefByName (
   
 ## <a name="parameters"></a>参数  
  `tkResolutionScope`  
- [in]指定解析范围标记。 以下令牌类型是有效的：  
+ [in] The token specifying the resolution scope. The following token types are valid:  
   
-- `mdModuleRef`如果类型在其中定义调用方在同一程序集中定义的。  
+- `mdModuleRef`, if the type is defined in the same assembly in which the caller is defined.  
   
-- `mdAssemblyRef`如果不是在其中定义调用方的程序集中定义的类型。  
+- `mdAssemblyRef`, if the type is defined in an assembly other than the one in which the caller is defined.  
   
-- `mdTypeRef`如果该类型是嵌套的类型。  
+- `mdTypeRef`, if the type is a nested type.  
   
-- `mdModule`如果在其中定义调用方位于同一模块中定义该类型。  
+- `mdModule`, if the type is defined in the same module in which the caller is defined.  
   
-- 如果全局定义的类型，则为 null。  
+- Null, if the type is defined globally.  
   
  `szName`  
- [in]以 unicode 格式的目标类型的名称。  
+ [in] The name of the target type in Unicode.  
   
  `ptr`  
- [out]一个指向`mdTypeRef`分配给类型的令牌。  
+ [out] A pointer to the `mdTypeRef` token that is assigned to the type.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

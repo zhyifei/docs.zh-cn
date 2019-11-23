@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 84ccbd7a8be7d90a541fb2d54baa3d7f66d3d31e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0731053fb37c775d25052a5fd99a479a44ff5862
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746111"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434879"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock 方法
-获取基本代码的部分块。  
+Gets a section block of the code base.  
   
- 此方法已过时，不应使用。  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,26 +40,26 @@ HRESULT GetSectionBlock (
   
 ## <a name="parameters"></a>参数  
  `section`  
- [in]要从其中检索块的基本代码部分。  
+ [in] The section from which to retrieve a block of the code base.  
   
  `len`  
- [in]要检索的块的长度。  
+ [in] The length of the block to be retrieved.  
   
  `align`  
- [in]相对于开头部分与对齐块的第一个字节的字节。 这是块的部分中的位置。  
+ [in] The byte, relative to the beginning of the section, with which to align the first byte of the block. This is the position of the block within the section.  
   
  `ppBytes`  
- [out]指向接收检索到块的地址的位置的指针。  
+ [out] A pointer to a location that receives the address of the retrieved block.  
   
 ## <a name="remarks"></a>备注  
- 调用`GetSectionBlock`仅在具有未由其他方法的特殊部分要求。  
+ Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

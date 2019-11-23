@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4789d08f-8683-45d3-ac30-73d48c61e470
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 09c36dd65c8a4202f13d362668f74cd9a362e35a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 92e40dbe8892d48dba1c54d9cd16faa409440b24
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744366"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438117"
 ---
-# <a name="notifyfilter-enumeration"></a>NOTIFY_FILTER 枚举
-标识调试器函数的回调。 有关详细信息，请参阅[INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)方法。  
+# <a name="notify_filter-enumeration"></a>NOTIFY_FILTER 枚举
+Identifies callbacks for debugger functions. For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,20 +39,20 @@ enum tagNOTIFY_FILTER
 };  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`NOTIFY_FILTER_ONSYNCCALLOUT`|指示[INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)方法调用。|  
-|`NOTIFY_FILTER_ONSYNCCALLENTER`|指示[INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)方法调用。|  
-|`NOTIFY_FILTER_ONSYNCCALLEXIT`|指示[INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)方法调用。|  
-|`NOTIFY_FILTER_ONSYNCCALLRETURN`|指示[INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)方法调用。|  
-|`NOTIFY_FILTER_ALLSYNC`|表示将所有[INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)不应调用方法。|  
-|`NOTIFY_FILTER_ALL`|激活现有和将来的所有通知。|  
-|`NOTIFY_FILTER_NONE`|指示应调用没有通知方法。|  
+|`NOTIFY_FILTER_ONSYNCCALLOUT`|Indicates that the [INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) method should be invoked.|  
+|`NOTIFY_FILTER_ONSYNCCALLENTER`|Indicates that the [INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) method should be invoked.|  
+|`NOTIFY_FILTER_ONSYNCCALLEXIT`|Indicates that the [INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) method should be invoked.|  
+|`NOTIFY_FILTER_ONSYNCCALLRETURN`|Indicates that the [INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) method should be invoked.|  
+|`NOTIFY_FILTER_ALLSYNC`|Indicates that all of the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) methods should be invoked.|  
+|`NOTIFY_FILTER_ALL`|Activates all existing and future notifications.|  
+|`NOTIFY_FILTER_NONE`|Indicates that no notification methods should be invoked.|  
   
 ## <a name="requirements"></a>要求  
- **标头：** ProtocolNotify2.idl  
+ **Header:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>请参阅
 

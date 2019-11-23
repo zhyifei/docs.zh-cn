@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: d8ec8d3c-70f7-4cc6-9957-68068fd8f49c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a82ce9709e008e092c5f31372a89bf9a16e1f88b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6b551743227dc1c6069796038782a515e6dbe8c4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767025"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443788"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor 枚举
-指定将检查有重复项的元数据令牌。  
+Specifies the metadata tokens that will be checked for duplicates.  
   
 ## <a name="syntax"></a>语法  
   
@@ -66,42 +64,42 @@ typedef enum CorCheckDuplicatesFor {
 } CorCheckDuplicatesFor;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`MDDupAll`|检查有重复项的所有元数据标记。|  
+|`MDDupAll`|Check all metadata tokens for duplicates.|  
 |`MDDupENC`|未使用。|  
-|`MDNoDupChecks`|不会检查有重复项的元数据标记。|  
-|`MDDupTypeDef`|检查重复项的`mdTypeDef`令牌。|  
-|`MDDupInterfaceImpl`|检查重复项的`mdInterfaceImpl`令牌。|  
-|`MDDupMethodDef`|检查重复项的`mdMethodDef`令牌。|  
-|`MDDupTypeRef`|检查重复项的`mdTypeRef`令牌。|  
-|`MDDupMemberRef`|检查重复项的`mdMemberRef`令牌。|  
-|`MDDupCustomAttribute`|检查重复项的`mdCustomAttribute`令牌。|  
-|`MDDupParamDef`|检查重复项的`mdParamDef`令牌。|  
-|`MDDupPermission`|检查重复项的`mdPermission`令牌。|  
-|`MDDupProperty`|检查重复项的`mdProperty`令牌。|  
-|`MDDupEvent`|检查重复项的`mdEvent`令牌。|  
-|`MDDupFieldDef`|检查重复项的`mdFieldDef`令牌。|  
-|`MDDupSignature`|检查重复项的`mdSignature`令牌。|  
-|`MDDupModuleRef`|检查重复项的`mdModuleRef`令牌。|  
-|`MDDupTypeSpec`|检查重复项的`mdTypeSpec`令牌。|  
-|`MDDupImplMap`|检查重复项的`mdImplMap`令牌。|  
-|`MDDupAssemblyRef`|检查重复项的`mdAssemblyRef`令牌。|  
-|`MDDupFile`|检查重复项的`mdFile`令牌。|  
-|`MDDupExportedType`|检查重复项的`mdExportedType`令牌。|  
-|`MDDupManifestResource`|检查重复项的`mdManifestResource`令牌。|  
-|`MDDupGenericParam`|检查重复项的`mdGenericParam`令牌。|  
-|`MDDupMethodSpec`|检查重复项的`mdMethodSpec`令牌。|  
-|`MDDupGenericParamConstraint`|检查重复项的`mdGenericParamConstraint`令牌。|  
-|`MDDupAssembly`|检查重复项的`mdAssembly`令牌。|  
-|`MDDupDefault`|检查重复的项`mdMemberRef`， `mdTypeRef`， `mdSignature`， `mdTypeSpec`，和`mdMethodSpec`令牌。|  
+|`MDNoDupChecks`|Do not check metadata tokens for duplicates.|  
+|`MDDupTypeDef`|Check for duplicates of `mdTypeDef` tokens.|  
+|`MDDupInterfaceImpl`|Check for duplicates of `mdInterfaceImpl` tokens.|  
+|`MDDupMethodDef`|Check for duplicates of `mdMethodDef` tokens.|  
+|`MDDupTypeRef`|Check for duplicates of `mdTypeRef` tokens.|  
+|`MDDupMemberRef`|Check for duplicates of `mdMemberRef` tokens.|  
+|`MDDupCustomAttribute`|Check for duplicates of `mdCustomAttribute` tokens.|  
+|`MDDupParamDef`|Check for duplicates of `mdParamDef` tokens.|  
+|`MDDupPermission`|Check for duplicates of `mdPermission` tokens.|  
+|`MDDupProperty`|Check for duplicates of `mdProperty` tokens.|  
+|`MDDupEvent`|Check for duplicates of `mdEvent` tokens.|  
+|`MDDupFieldDef`|Check for duplicates of `mdFieldDef` tokens.|  
+|`MDDupSignature`|Check for duplicates of `mdSignature` tokens.|  
+|`MDDupModuleRef`|Check for duplicates of `mdModuleRef` tokens.|  
+|`MDDupTypeSpec`|Check for duplicates of `mdTypeSpec` tokens.|  
+|`MDDupImplMap`|Check for duplicates of `mdImplMap` tokens.|  
+|`MDDupAssemblyRef`|Check for duplicates of `mdAssemblyRef` tokens.|  
+|`MDDupFile`|Check for duplicates of `mdFile` tokens.|  
+|`MDDupExportedType`|Check for duplicates of `mdExportedType` tokens.|  
+|`MDDupManifestResource`|Check for duplicates of `mdManifestResource` tokens.|  
+|`MDDupGenericParam`|Check for duplicates of `mdGenericParam` tokens.|  
+|`MDDupMethodSpec`|Check for duplicates of `mdMethodSpec` tokens.|  
+|`MDDupGenericParamConstraint`|Check for duplicates of `mdGenericParamConstraint` tokens.|  
+|`MDDupAssembly`|Check for duplicates of `mdAssembly` tokens.|  
+|`MDDupDefault`|Check for duplicates of `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, and `mdMethodSpec` tokens.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

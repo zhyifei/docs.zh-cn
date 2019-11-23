@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c7c5b39a-d4ac-41f1-9d1e-44163f563a49
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 14ea8dab2c4258fe490ef362fd527d80bd8a0178
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c8ecab9d957e72bb6c0817af07c863fcff97cde
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746101"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436337"
 ---
 # <a name="iceegengetmethodbuffer-method"></a>ICeeGen::GetMethodBuffer 方法
-获取在指定的相对虚拟地址的方法的适当大小的缓冲区。  
+Gets a buffer of the appropriate size for the method at the specified relative virtual address.  
   
- 此方法已过时，不应使用。  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,17 +38,17 @@ HRESULT GetMethodBuffer (
   
 ## <a name="parameters"></a>参数  
  `RVA`  
- [in]要为其返回缓冲区的方法相对虚拟地址。  
+ [in] The relative virtual address of the method for which to return a buffer.  
   
  `lpBuffer`  
- [out]指向返回的缓冲区的指针。  
+ [out] A pointer to the returned buffer.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

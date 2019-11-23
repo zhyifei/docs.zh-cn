@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8ba42d2-d9fa-43cb-bbc0-f33e1e592cb6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 061c482a7e674fd425fe627c741a11b39864ba5c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: af1c3d599c5280e584ffb842c96c70a7c3d4ed08
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778856"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436874"
 ---
 # <a name="imetadataimportgetscopeprops-method"></a>IMetaDataImport::GetScopeProps 方法
 获取当前元数据范围内的程序集或模块的名称和版本标识符（可选）。  
@@ -40,26 +38,26 @@ HRESULT GetScopeProps (
   
 ## <a name="parameters"></a>参数  
  `szName`  
- [out]程序集或模块名称的缓冲区。  
+ [out] A buffer for the assembly or module name.  
   
  `cchName`  
- [in]在宽字符为单位的大小`szName`。  
+ [in] The size in wide characters of `szName`.  
   
  `pchName`  
- [out]在中返回的宽字符数`szName`。  
+ [out] The number of wide characters returned in `szName`.  
   
  `pmvid`  
- [out，optional]指向唯一地标识程序集或模块的版本的 GUID 的指针。  
+ [out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.  
   
 ## <a name="remarks"></a>备注  
- [Imetadataemit:: Setmoduleprops](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md)方法用于设置这些属性。  
+ The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

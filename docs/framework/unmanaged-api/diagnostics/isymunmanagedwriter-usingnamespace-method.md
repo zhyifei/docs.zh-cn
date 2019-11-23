@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8d746e0a-d158-4983-88da-db0a0856bc0b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0076b70c85c21f0c4b1fb140b15000f99dbff742
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cb0af78092822875204f45ec3dca1484e5b5fc90
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755131"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427465"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>ISymUnmanagedWriter::UsingNamespace 方法
-指定当前打开的词法范围内，使用给定的完全限定的命名空间名称。 将从当前打开的作用域继承的所有作用域内使用的命名空间。 关闭当前作用域也将停止使用此命名空间。  
+Specifies that the given fully qualified namespace name is being used within the currently open lexical scope. The namespace will be used within all scopes that inherit from the currently open scope. Closing the current scope will also stop the use of the namespace.  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,13 +34,13 @@ HRESULT UsingNamespace(
   
 ## <a name="parameters"></a>参数  
  `fullName`  
- [in]指向命名空间的完全限定名称的指针。  
+ [in] A pointer to the fully qualified name of the namespace.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

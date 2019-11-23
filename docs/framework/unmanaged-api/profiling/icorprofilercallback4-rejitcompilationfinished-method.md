@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b5cff02-2005-44eb-a2bc-50214c4b0e1d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 80bff6f06851206ff01b861001c6ed7c90db7d1e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a42198b1c89dbc47c6659564cf32738b683697b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758193"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439309"
 ---
 # <a name="icorprofilercallback4rejitcompilationfinished-method"></a>ICorProfilerCallback4::ReJITCompilationFinished 方法
-通知探查器在实时 (JIT) 编译器已完成重新编译函数。  
+Notifies the profiler that the just-in-time (JIT) compiler has finished recompiling a function.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,23 +36,23 @@ HRESULT ReJITCompilationFinished(
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in]已重新编译函数的 ID。  
+ [in] The ID of the function that was recompiled.  
   
  `rejitId`  
  [in] JIT 重新编译的函数的标识。  
   
  `hrStatus`  
- [in]一个值，指示 JIT 重新编译是否成功。  
+ [in] A value that indicates whether the JIT recompilation was successful.  
   
  `fIsSafeToBlock`  
- [in]`true`以指示，阻止可能会导致运行时等待调用的线程返回从此回调;`false`以指示，阻止不会影响运行时的操作。  
+ [in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime.  
   
- 值为`true`不会损害了运行时，但可能会影响分析结果。  
+ A value of `true` does not harm the runtime, but can affect the profiling results.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee518bda-3296-482e-a7b7-e9d51dd1a181
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e7e060d2f72609b470dbd5060746a1458f5eed9d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3ab24ab869e1f2cff9beafe50e6982ba2e7cf0aa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782301"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436702"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken 方法
 获取指定标记所表示的类型规范的二进制元数据签名。  
@@ -39,23 +37,23 @@ HRESULT GetTypeSpecFromToken (
   
 ## <a name="parameters"></a>参数  
  `typespec`  
- [in]与请求的元数据签名关联的 TypeSpec 标记。  
+ [in] The TypeSpec token associated with the requested metadata signature.  
   
  `ppvSig`  
- [out]指向二进制元数据签名的指针。  
+ [out] A pointer to the binary metadata signature.  
   
  `pcbSig`  
- [out]大小，以字节为单位的元数据签名。  
+ [out] The size, in bytes, of the metadata signature.  
   
 ## <a name="return-value"></a>返回值  
- 一个 HRESULT，指示成功或失败。 可以使用 FAILED 宏测试失败。  
+ An HRESULT that indicates success or failure. Failures can be tested with the FAILED macro.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

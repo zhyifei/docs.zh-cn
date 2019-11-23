@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 864f1267-d267-4696-8df7-1f83f8444d6f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5898f2f0900b0bbe392d4dbaa8fc1db5e0e45c9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 98183ed02f8821b7c40852de2d040775d30f2518
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767003"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443745"
 ---
 # <a name="cordeclsecurity-enumeration"></a>CorDeclSecurity 枚举
 指定可以使用声明性安全执行的安全操作。  
@@ -56,7 +54,7 @@ typedef enum CorDeclSecurity {
 } CorDeclSecurity;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
@@ -64,14 +62,14 @@ typedef enum CorDeclSecurity {
 |`dclActionNil`|保留。|  
 |`dclRequest`|保留。|  
 |`dclDemand`|要求调用堆栈中的所有高级调用方已被授予当前权限对象所指定的权限。|  
-|`dclAssert`|调用代码可以访问当前权限对象所标识的资源，即使堆栈中的高级调用方不具备访问该资源的权限|  
-|`dclDeny`|即使它们已被授予权限来访问它，将向调用方，拒绝访问当前权限对象指定的资源的能力。|  
+|`dclAssert`|The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource|  
+|`dclDeny`|The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.|  
 |`dclPermitOnly`|仅可以访问此权限对象所指定的资源，即使代码已被授予访问其他资源的权限。|  
-|`dclLinktimeCheck`|需要已被授予指定的权限在给定时间内直接调用方。|  
-|`dclInheritanceCheck`|需要已被授予指定的权限派生的类继承另一个类或重写方法。|  
-|`dclRequestMinimum`|调用方可以请求的代码运行所需的最小权限。 此操作仅可以在程序集的作用域内使用。|  
-|`dclRequestOptional`|调用方可以请求是可选的 （无需运行） 的其他权限。 此请求隐式拒绝所有未明确请求的其他权限。 此操作仅可以在程序集的作用域内使用。|  
-|`dclRequestRefuse`|将不授予调用方的请求可能被误用的权限。 此操作仅可以在程序集的作用域内使用。|  
+|`dclLinktimeCheck`|The immediate caller is required to have been granted the specified permission for a given period of time.|  
+|`dclInheritanceCheck`|The derived class inheriting another class or overriding a method is required to have been granted the specified permission.|  
+|`dclRequestMinimum`|The caller can request for the minimum permissions required for code to run. 此操作仅可以在程序集的作用域内使用。|  
+|`dclRequestOptional`|The caller can request for additional permissions that are optional (not required to run). 此请求隐式拒绝所有未明确请求的其他权限。 此操作仅可以在程序集的作用域内使用。|  
+|`dclRequestRefuse`|The caller's request for permissions that might be misused will not be granted. 此操作仅可以在程序集的作用域内使用。|  
 |`dclPrejitGrant`|保留。|  
 |`dclPrejitDenied`|保留。|  
 |`dclNonCasDemand`|保留。|  
@@ -83,9 +81,9 @@ typedef enum CorDeclSecurity {
 |`dclMaximumValue`|保留。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

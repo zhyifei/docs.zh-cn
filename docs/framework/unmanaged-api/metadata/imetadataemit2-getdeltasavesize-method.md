@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 036db5e7-8211-4645-9a34-03d1a89be955
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0b0a190ce57091434006421e6d8551c78cbe66b8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 219d3196e3b2125033a23623b7e77e31c6f1ff03
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777167"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440489"
 ---
 # <a name="imetadataemit2getdeltasavesize-method"></a>IMetaDataEmit2::GetDeltaSaveSize 方法
-获取一个值，该值指示元数据大小而导致编辑并继续在当前会话中的任何更改。  
+Gets a value indicating any change in metadata size that results from the current edit-and-continue session.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,17 +36,17 @@ HRESULT GetDeltaSaveSize (
   
 ## <a name="parameters"></a>参数  
  `fSave`  
- [in]之一[CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md)值，指示所需的精度级别。 对于.NET Framework 2.0 版中，将忽略此参数。  
+ [in] One of the [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) values, indicating the level of precision desired. For the .NET Framework version 2.0, this parameter is ignored.  
   
  `pdwSaveSize`  
- [out]元数据的大小变化。  
+ [out] The change in the size of the metadata.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

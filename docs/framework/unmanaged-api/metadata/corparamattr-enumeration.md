@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7ff90ad-dad8-48e8-917d-4aa9a118cbc8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bfa8f1b5df76c7fdfe2f25b637b157bfa4424f7a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1d58c8c0413346536c3e61e67ca0077c08c2b387
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781658"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436487"
 ---
 # <a name="corparamattr-enumeration"></a>CorParamAttr 枚举
 包含一些值，用于描述方法参数的元数据。  
@@ -44,22 +42,22 @@ typedef enum CorParamAttr {
 } CorParamAttr;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`pdIn`|指定该参数传递到方法调用。|  
-|`pdOut`|指定该参数将传递从方法返回。|  
+|`pdIn`|Specifies that the parameter is passed into the method call.|  
+|`pdOut`|Specifies that the parameter is passed from the method return.|  
 |`pdOptional`|指定参数为可选。|  
-|`pdReservedMask`|公共语言运行时，保留供内部使用。|  
+|`pdReservedMask`|Reserved for internal use by the common language runtime.|  
 |`pdHasDefault`|指定参数具有默认值。|  
-|`pdHasFieldMarshal`|指定该参数具有封送处理信息。|  
+|`pdHasFieldMarshal`|Specifies that the parameter has marshaling information.|  
 |`pdUnused`|未使用。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
