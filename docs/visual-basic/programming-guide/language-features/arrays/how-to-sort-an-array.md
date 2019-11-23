@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Visual Basic 中对数组进行排序
+title: 'How to: Sort An Array'
 ms.date: 07/20/2015
 f1_keywords:
 - Array.Sort
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - arrays [Visual Basic], sorting
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
-ms.openlocfilehash: 467d1bcce6bda2feb5a8e59c152cb292d753e79b
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 3fb9af8de0fc86075fdccd64506c855c1c720660
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700977"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351856"
 ---
-# <a name="how-to-sort-an-array-in-visual-basic"></a>如何：在 Visual Basic 中对数组进行排序
+# <a name="how-to-sort-an-array-in-visual-basic"></a>How to: sort an array in Visual Basic
 
-本文演示如何对 Visual Basic 中的字符串数组进行排序。
+This article shows an example of how to sort an array of strings in Visual Basic.
 
 ## <a name="example"></a>示例
 
-此示例声明一个名为 @no__t @no__t 0 个对象的数组，填充该数组，然后按字母顺序对其进行排序：
+This example declares an array of `String` objects named `zooAnimals`, populates it, and then sorts it alphabetically:
   
 ```vb
 Private Sub SortAnimals()
@@ -36,9 +36,9 @@ End Sub
 
 以下情况可能会导致异常：
 
-- 数组为空（<xref:System.ArgumentNullException> 类）。
-- Array 为多维（@no__t 0 类）。
-- 数组中的一个或多个元素未实现 @no__t 的接口（@no__t 1 类）。
+- Array is empty (<xref:System.ArgumentNullException> class).
+- Array is multidimensional (<xref:System.RankException> class).
+- One or more elements of the array don't implement the <xref:System.IComparable> interface (<xref:System.InvalidOperationException> class).
 
 ## <a name="see-also"></a>请参阅
 

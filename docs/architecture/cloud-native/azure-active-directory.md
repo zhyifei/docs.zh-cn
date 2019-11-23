@@ -19,7 +19,7 @@ Microsoft Azure Active Directory （Azure AD）以服务的形式提供标识和
 
 Azure AD 支持公司品牌的登录屏幕、多工厂身份验证以及用于为本地托管的应用程序提供 SSO 的基于云的应用程序代理。 它提供不同类型的安全报告和警报功能。
 
-## <a name="references"></a>reference
+## <a name="references"></a>参考
 
 - [Microsoft 标识平台](https://docs.microsoft.com/azure/active-directory/develop/)
 

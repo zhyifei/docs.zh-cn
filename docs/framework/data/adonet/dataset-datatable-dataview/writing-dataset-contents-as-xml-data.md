@@ -17,7 +17,7 @@ ms.locfileid: "71833967"
   
  当以 XML 数据形式编写 <xref:System.Data.DataSet> 时，<xref:System.Data.DataSet> 中的行将以它们的当前版本编写。 不过，也可以用 DiffGram 形式编写 <xref:System.Data.DataSet>，从而使行的当前值和原始值都将包含在内。  
   
- @No__t-0 的 XML 表示形式可以写入文件、流、 **XmlWriter**或字符串。 这些选择在如何传输 <xref:System.Data.DataSet> 的 XML 表示形式方面提供了很大的灵活性。 若要以字符串的形式获取 @no__t 的 XML 表示形式，请使用**GetXml**方法，如以下示例中所示。  
+ <xref:System.Data.DataSet> 的 XML 表示形式可以写入文件、流、 **XmlWriter**或字符串。 这些选择在如何传输 <xref:System.Data.DataSet> 的 XML 表示形式方面提供了很大的灵活性。 若要以字符串的形式获取 <xref:System.Data.DataSet> 的 XML 表示形式，请使用**GetXml**方法，如以下示例中所示。  
   
 ```vb  
 Dim xmlDS As String = custDS.GetXml()  
@@ -27,21 +27,21 @@ Dim xmlDS As String = custDS.GetXml()
 string xmlDS = custDS.GetXml();  
 ```  
   
- **GetXml**返回无架构信息的 @no__t 的 XML 表示形式。 若要将 <xref:System.Data.DataSet> （作为 XML 架构）的架构信息写入字符串，请使用**GetXmlSchema**。  
+ **GetXml**返回没有架构信息的 <xref:System.Data.DataSet> 的 XML 表示形式。 若要将 <xref:System.Data.DataSet> （作为 XML 架构）的架构信息写入字符串，请使用**GetXmlSchema**。  
   
- 若要将 @no__t 0 写入文件、流或**XmlWriter**，请使用**WriteXml**方法。 传递给**WriteXml**的第一个参数是 XML 输出的目标。 例如，传递包含文件名、一个**system.object**对象的字符串，等等。 可以传递**XmlWriteMode**的可选的第二个参数，以指定 XML 输出的写入方式。  
+ 若要将 <xref:System.Data.DataSet> 写入文件、流或**XmlWriter**，请使用**WriteXml**方法。 传递给**WriteXml**的第一个参数是 XML 输出的目标。 例如，传递包含文件名、一个**system.object**对象的字符串，等等。 可以传递**XmlWriteMode**的可选的第二个参数，以指定 XML 输出的写入方式。  
   
  下表显示了**XmlWriteMode**的选项。  
   
-|XmlWriteMode 选项|描述|  
+|XmlWriteMode 选项|说明|  
 |-------------------------|-----------------|  
 |**IgnoreSchema**|以 XML 数据形式编写 <xref:System.Data.DataSet> 的当前内容，不包含 XML 架构。 这是默认设置。|  
 |**WriteSchema**|以 XML 数据形式编写 <xref:System.Data.DataSet> 的当前内容，以关系结构作为内联 XML 架构。|  
 |**DiffGram**|以 DiffGram 形式编写整个 <xref:System.Data.DataSet>，包括原始值和当前值。 有关详细信息，请参阅[diffgram](diffgrams.md)。|  
   
- 写入包含**DataRelation**对象的 @no__t 的 xml 表示形式时，您很可能希望所生成的 xml 将每个关系的子行嵌套在它们的相关父元素中。 若要实现此目的，请在将**datarelation**添加到 <xref:System.Data.DataSet> 时将**datarelation**的**Nested**属性设置为**true** 。 有关详细信息，请参阅[嵌套 datarelation](nesting-datarelations.md)。  
+ 写入包含**DataRelation**对象的 <xref:System.Data.DataSet> 的 XML 表示形式时，您很可能希望所生成的 XML 将每个关系的子行嵌套在它们的相关父元素中。 若要实现此目的，请在将**datarelation**添加到 <xref:System.Data.DataSet>时，将**datarelation**的**Nested**属性设置为**true** 。 有关详细信息，请参阅[嵌套 datarelation](nesting-datarelations.md)。  
   
- 下面两个示例演示了如何将 @no__t 的 XML 表示形式写入文件。 第一个示例将生成的 XML 的文件名传递给**WriteXml**。 第二个示例传递一个**StreamWriter**对象。
+ 下面两个示例演示如何将 <xref:System.Data.DataSet> 的 XML 表示形式写入文件。 第一个示例将生成的 XML 的文件名传递给**WriteXml**。 第二个示例传递一个**StreamWriter**对象。
   
 ```vb  
 custDS.WriteXml("Customers.xml", XmlWriteMode.WriteSchema)  
@@ -66,14 +66,14 @@ xmlSW.Close();
 ## <a name="mapping-columns-to-xml-elements-attributes-and-text"></a>将列映射到 XML 元素、属性和文本  
  您可以使用**DataColumn**对象的**ColumnMapping**属性来指定如何在 XML 中表示表的列。 下表显示了表列的**ColumnMapping**属性的不同**mappingtype.attribute**值以及生成的 XML。  
   
-|MappingType 值|描述|  
+|MappingType 值|说明|  
 |-----------------------|-----------------|  
 |**元素**|这是默认设置。 列以元素名称为 ColumnName 的 XML 元素形式编写，列的内容以元素文本形式编写。 例如：<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
 |**特性**|对于属性名称为 ColumnName 的当前行，列以 XML 元素的 XML 属性形式编写，列的内容以属性值形式编写。 例如：<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
 |**SimpleContent**|列的内容以 XML 元素中当前行文本的形式编写。 例如：<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> 请注意，无法为具有**元素**列或嵌套关系的表的列设置**SimpleContent** 。|  
 |**消隐**|不在 XML 输出中编写该列。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在数据集中使用 XML](using-xml-in-a-dataset.md)
 - [DiffGrams](diffgrams.md)

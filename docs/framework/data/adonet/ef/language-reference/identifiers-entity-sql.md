@@ -10,7 +10,7 @@ ms.lasthandoff: 10/03/2019
 ms.locfileid: "71833707"
 ---
 # <a name="identifiers-entity-sql"></a>标识符 (Entity SQL)
-在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，标识符用于表示查询表达式别名、变量引用、对象的属性、函数等等。 @no__t 提供了两种标识符：简单标识符和带引号的标识符。  
+在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，标识符用于表示查询表达式别名、变量引用、对象的属性、函数等等。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供了两种标识符：简单标识符和带引号的标识符。  
   
 ## <a name="simple-identifiers"></a>简单标识符  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中的简单标识符是字母数字和下划线字符的序列。 标识符的第一个字符必须是字母字符（a-z 或 A-Z）。  
@@ -86,7 +86,7 @@ SELECT 1 AS X, 2 AS X …
 ```  
   
 ## <a name="scoping-rules"></a>作用域规则  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 定义作用域规则，用来确定查询语言中的特定变量何时可见。 一些表达式或语句引入了新名称。 作用域规则确定在何处可以使用这些名称，与另一声明同名的新声明何时或在何处可以隐藏其前置任务。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 定义确定特定变量何时在查询语言中可见的范围规则。 一些表达式或语句引入了新名称。 作用域规则确定在何处可以使用这些名称，与另一声明同名的新声明何时或在何处可以隐藏其前置任务。  
   
  在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询中定义了名称，即是在作用域内定义了名称。 作用域包括查询的整个区域。 在作用域内定义的名称对该作用域的所有表达式或名称引用都可见。 作用域内定义的名称不能在作用域开始之前和结束之后进行引用。  
   
@@ -120,7 +120,7 @@ SELECT 1 AS X, 2 AS X …
   
  `AVG(t.c) becomes AVG(group..(t.c))`  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [实体 SQL 引用](entity-sql-reference.md)
 - [实体 SQL 概述](entity-sql-overview.md)

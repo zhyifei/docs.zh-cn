@@ -27,13 +27,13 @@ Microsoft 企业库异常处理应用程序块帮助实现常见的设计模式�
 
 ## <a name="dealing-with-expected-exceptions"></a>处理预期异常
 
-正确的操作过程是在每一个操作或相关扩展点中捕获预期异常，确定是否可以从中恢复，并在 FaultException @ no__t-0T > 中返回正确的自定义错误。
+正确的操作过程是在每一个操作或相关扩展点中捕获预期异常，确定是否可以从 FaultException 中恢复，并在\<中返回正确的自定义错误 >。
   
 ## <a name="dealing-with-unexpected-exceptions-using-an-ierrorhandler"></a>使用 IErrorHandler 处理意外的异常
 
 若要处理意外异常，推荐的操作过程是 "IErrorHandler"。 错误处理程序仅在 WCF 运行时级别（"服务模型" 层）捕获异常，而不是在通道层捕获异常。 在通道层挂钩 IErrorHandler 的唯一方法是创建一个自定义通道，但在大多数情况下不建议这样做。
 
-通常，"意外的异常" 既不是不可恢复的异常，也不是处理异常;这是意外的用户异常。 不能恢复的异常（如内存不足异常）–通常由[服务模型异常处理程序](xref:System.ServiceModel.Dispatcher.ExceptionHandler)自动处理–通常不能正常处理，也不能正常处理此类异常的唯一原因其他日志记录或将标准异常返回到客户端。 在处理消息的过程中（例如，在序列化、编码器或格式化程序级别）发生的处理异常不能在 IErrorHandler 进行处理，因为就发生这些异常的时间而言，错误处理程序介入的时间要么过早，要么过晚。 同样，不能在 IErrorHandler 处理传输异常。
+通常，"意外的异常" 既不是不可恢复的异常，也不是处理异常;这是意外的用户异常。 不能恢复的异常（如内存不足异常）–通常由[服务模型异常处理程序](xref:System.ServiceModel.Dispatcher.ExceptionHandler)自动处理–通常不能正常处理，而处理此类异常的唯一原因可能是执行其他日志记录或将标准异常返回到客户端。 在处理消息的过程中（例如，在序列化、编码器或格式化程序级别）发生的处理异常不能在 IErrorHandler 进行处理，因为就发生这些异常的时间而言，错误处理程序介入的时间要么过早，要么过晚。 同样，不能在 IErrorHandler 处理传输异常。
 
 使用 IErrorHandler，您可以显式控制某一异常引发时您的应用程序的行为。 您可以：  
 
@@ -53,7 +53,7 @@ IErrorHandler.ProvideFault 控制发送到客户端的错误消息。 无论您�
 
 您可能会使用此方法的一个方面是在您想要创建一个中心位置以便在将异常发送到客户端之前将异常转换为错误时（确保实例不会被释放并且通道不会转移到错误状态）。
 
-IErrorHandler.HandleError 方法通常用来实现错误相关行为，例如错误日志记录、系统通知、关闭应用程序等。可以在服务内的多个地方调用 IErrorHandler.HandleError，并且根据引发错误的位置，HandleError 方法不一定被与操作相同的线程调用；在此方面不作任何保证。
+IErrorHandler. HandleError 方法通常用于实现错误相关的行为，例如错误日志记录、系统通知、关闭应用程序等。IErrorHandler 可以在服务内的多个位置调用 HandleError，并且根据引发错误的位置，HandleError 方法与该操作可以调用，也可以不调用;在这方面没有任何保证。
 
 ## <a name="dealing-with-exceptions-outside-wcf"></a>在 WCF 外处理异常
 
@@ -73,6 +73,6 @@ IErrorHandler.HandleError 方法通常用来实现错误相关行为，例如错
 
 可通过安装错误处理程序，像许多其他类型的调度失败一样检查类型转换调度失败。 调用 IErrorHandler 扩展点处理服务级别异常。 从中，可以选择要发送回调用方的响应，以及执行任何自定义任务和报告。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [基本 WCF 编程](../basic-wcf-programming.md)

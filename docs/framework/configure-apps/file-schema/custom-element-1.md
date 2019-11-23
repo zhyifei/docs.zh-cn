@@ -20,7 +20,7 @@ ms.locfileid: "73118838"
 定义自定义配置节中由 \<节 > 元素定义并使用 <xref:System.Configuration.SingleTagSectionHandler> 类的设置。
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; *\<sectionName >*
+&nbsp;&nbsp; *\<sectionName>*
 
 ## <a name="syntax"></a>语法
 
@@ -28,19 +28,19 @@ ms.locfileid: "73118838"
 <sectionName key="value" key2="value2" ... />
 ```
 
-## <a name="attributes"></a>特性
+## <a name="attributes"></a>Attributes
 
 属性和属性值是用户定义的。
 
 ## <a name="parent-element"></a>父元素
 
-|     | 描述 |
+|     | 说明 |
 | --- | ----------- |
 | [ **\<configuration>** ](configuration-element.md) | 公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。 |
 
 ## <a name="child-elements"></a>子元素
 
-None
+无
 
 ## <a name="remarks"></a>备注
 
@@ -66,6 +66,6 @@ None
 
 此元素可用于应用程序配置文件、计算机配置文件（*machine.config*）和不在应用程序目录级别的*web.config 文件。*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET Framework 的配置文件架构](index.md)

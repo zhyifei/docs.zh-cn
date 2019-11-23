@@ -30,7 +30,7 @@ ms.locfileid: "72291473"
   
  拖放操作期间执行的特定操作特定于应用程序，并且通常由上下文而定。  例如，默认情况下，在同一存储设备上将选择的文件从一个文件夹拖动到另一个文件夹会移动文件。默认情况下，将文件从通用命名约定（UNC）共享拖到本地文件夹会复制这些文件。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的拖放设施拥有高度的灵活性并可自定义，以便支持各种拖放方案。  拖放支持在单个应用程序内或不同应用程序之间操作对象。 也完全支持 @no__t 0 应用程序和其他 Windows 应用程序之间的拖放。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的拖放设施拥有高度的灵活性并可自定义，以便支持各种拖放方案。  拖放支持在单个应用程序内或不同应用程序之间操作对象。 也完全支持 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序和其他 Windows 应用程序之间的拖放。  
   
  在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，任何 <xref:System.Windows.UIElement> 或 <xref:System.Windows.ContentElement> 都可以参与拖放。 拖放操作所需的事件和方法是在 <xref:System.Windows.DragDrop> 类中定义的。 <xref:System.Windows.UIElement> 和 <xref:System.Windows.ContentElement> 类包含 <xref:System.Windows.DragDrop> 附加事件的别名，从而在 <xref:System.Windows.UIElement> 或 <xref:System.Windows.ContentElement> 作为基元素继承时，这些事件出现在类成员列表中。 附加到这些事件的事件处理程序会附加到基础 <xref:System.Windows.DragDrop> 附加事件，并接收相同的事件数据实例。 有关详细信息，请参阅 <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType> 事件。  
   
@@ -66,27 +66,27 @@ ms.locfileid: "72291473"
   
 ### <a name="drag-source-events"></a>拖动源事件  
   
-|Event|总结|  
+|事件|摘要|  
 |-----------|-------------|  
-|<xref:System.Windows.DragDrop.GiveFeedback>|此事件在拖放操作期间持续发生，并且使放置源能够向用户提供反馈信息。 通常通过更改鼠标指针外观来指示拖放目标允许的效果这一方式来提供这种反馈。  这是冒泡事件。|  
-|<xref:System.Windows.DragDrop.QueryContinueDrag>|此事件于拖放操作期间键盘或鼠标按钮状态发生变化时发生，并使放置源能够根据键/按钮状态取消拖放操作。 这是冒泡事件。|  
+|<xref:System.Windows.DragDrop.GiveFeedback>|此事件在拖放操作期间持续发生，并且使放置源能够向用户提供反馈信息。 通常通过更改鼠标指针外观来指示拖放目标允许的效果这一方式来提供这种反馈。  这是 冒泡事件。|  
+|<xref:System.Windows.DragDrop.QueryContinueDrag>|此事件于拖放操作期间键盘或鼠标按钮状态发生变化时发生，并使放置源能够根据键/按钮状态取消拖放操作。 这是 冒泡事件。|  
 |<xref:System.Windows.DragDrop.PreviewGiveFeedback>|<xref:System.Windows.DragDrop.GiveFeedback> 的隧道版本。|  
 |<xref:System.Windows.DragDrop.PreviewQueryContinueDrag>|<xref:System.Windows.DragDrop.QueryContinueDrag> 的隧道版本。|  
   
 ### <a name="drop-target-events"></a>拖放目标事件  
   
-|Event|总结|  
+|事件|摘要|  
 |-----------|-------------|  
-|<xref:System.Windows.DragDrop.DragEnter>|将对象拖到拖放目标的边界中时发生此事件。 这是冒泡事件。|  
-|<xref:System.Windows.DragDrop.DragLeave>|将对象拖出拖放目标边界时发生此事件。  这是冒泡事件。|  
-|<xref:System.Windows.DragDrop.DragOver>|在拖放目标的边界内拖动（移动）对象时会持续发生此事件。 这是冒泡事件。|  
-|<xref:System.Windows.DragDrop.Drop>|将对象放置在拖放目标上时发生此事件。  这是冒泡事件。|  
+|<xref:System.Windows.DragDrop.DragEnter>|将对象拖到拖放目标的边界中时发生此事件。 这是 冒泡事件。|  
+|<xref:System.Windows.DragDrop.DragLeave>|将对象拖出拖放目标边界时发生此事件。  这是 冒泡事件。|  
+|<xref:System.Windows.DragDrop.DragOver>|在拖放目标的边界内拖动（移动）对象时会持续发生此事件。 这是 冒泡事件。|  
+|<xref:System.Windows.DragDrop.Drop>|将对象放置在拖放目标上时发生此事件。  这是 冒泡事件。|  
 |<xref:System.Windows.DragDrop.PreviewDragEnter>|<xref:System.Windows.DragDrop.DragEnter> 的隧道版本。|  
 |<xref:System.Windows.DragDrop.PreviewDragLeave>|<xref:System.Windows.DragDrop.DragLeave> 的隧道版本。|  
 |<xref:System.Windows.DragDrop.PreviewDragOver>|<xref:System.Windows.DragDrop.DragOver> 的隧道版本。|  
 |<xref:System.Windows.DragDrop.PreviewDrop>|<xref:System.Windows.DragDrop.Drop> 的隧道版本。|  
   
- 若要处理对象实例的拖放事件，请为上表中所列的事件添加处理程序。 若要处理类级别的拖放事件，请替代相应的虚拟 On*Event 和 On\*PreviewEvent 方法。 有关详细信息，请参阅[按控件基类进行的路由事件类处理](marking-routed-events-as-handled-and-class-handling.md#Class_Handling_of_Routed_Events)。  
+ 若要处理对象实例的拖放事件，请为上表中所列的事件添加处理程序。 若要处理类级别的拖放事件，请替代相应的虚拟 On*Event 和 On*PreviewEvent 方法。 有关详细信息，请参阅[按控件基类进行的路由事件类处理](marking-routed-events-as-handled-and-class-handling.md#Class_Handling_of_Routed_Events)。  
   
 <a name="Implementing_Drag_And_Drop"></a>   
 ## <a name="implementing-drag-and-drop"></a>实现拖放  
@@ -122,7 +122,7 @@ ms.locfileid: "72291473"
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>拖放示例  
- 本节介绍如何实现 <xref:System.Windows.Shapes.Ellipse> 元素的拖放。 <xref:System.Windows.Shapes.Ellipse> 既是拖动源也是拖放目标。 传输的数据是椭圆形的 <xref:System.Windows.Shapes.Shape.Fill%2A> 属性的字符串表示形式。 下面的 XAML 展示 <xref:System.Windows.Shapes.Ellipse> 元素和它处理的拖放相关事件。 有关如何实现拖放的完整步骤，请参阅 [Walkthrough：在用户控件 @ no__t 上启用拖放。  
+ 本节介绍如何实现 <xref:System.Windows.Shapes.Ellipse> 元素的拖放。 <xref:System.Windows.Shapes.Ellipse> 既是拖动源也是拖放目标。 传输的数据是椭圆形的 <xref:System.Windows.Shapes.Shape.Fill%2A> 属性的字符串表示形式。 下面的 XAML 展示 <xref:System.Windows.Shapes.Ellipse> 元素和它处理的拖放相关事件。 有关如何实现拖放的完整步骤，请参阅[演练：对用户控件启用拖放功能](walkthrough-enabling-drag-and-drop-on-a-user-control.md)。  
   
  [!code-xaml[DragDropSnippets#EllipseXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
   
@@ -139,18 +139,18 @@ ms.locfileid: "72291473"
   
  拖动源还可能针对允许的操作（移动、复制、无）向用户提供反馈，并且可以根据额外用户输入（如拖动过程中按 ESC 键）取消拖放操作。  
   
- 你的应用程序负责确定发生拖动的时间，然后通过调用 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法启动拖放操作。 通常情况下，这是在按下鼠标按钮的同时，要拖动的元素上发生 <xref:System.Windows.UIElement.MouseMove> 事件时。 下面的示例显示了如何从 <xref:System.Windows.Shapes.Ellipse> 元素的 <xref:System.Windows.UIElement.MouseMove> 事件处理程序中启动拖放操作，以将其作为拖动源。 传输的数据是椭圆形的 <xref:System.Windows.Shapes.Shape.Fill%2A> 属性的字符串表示形式。  
+ 你的应用程序负责确定发生拖动的时间，然后通过调用 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法启动拖放操作。 通常情况下，这是在按下鼠标按钮的同时，要拖动的元素上发生 <xref:System.Windows.UIElement.MouseMove> 事件时。 下面的示例显示了如何从 <xref:System.Windows.UIElement.MouseMove> 元素的 <xref:System.Windows.Shapes.Ellipse> 事件处理程序中启动拖放操作，以将其作为拖动源。 传输的数据是椭圆形的 <xref:System.Windows.Shapes.Shape.Fill%2A> 属性的字符串表示形式。  
   
  [!code-csharp[DragDropSnippets#DoDragDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dodragdrop)]
  [!code-vb[DragDropSnippets#DoDragDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dodragdrop)]  
   
  在 <xref:System.Windows.UIElement.MouseMove> 事件处理程序中，调用 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法启动拖放操作。 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法采用三个参数：  
   
-- `dragSource` – 引用作为传输的数据的源的依赖项对象；通常是 <xref:System.Windows.UIElement.MouseMove> 事件的源。  
+- `dragSource` –对作为已传输数据的源的依赖项对象的引用;这通常是 <xref:System.Windows.UIElement.MouseMove> 事件的源。  
   
-- `data` - 包含传输的数据（包装在 <xref:System.Windows.DataObject> 中）的对象。  
+- `data`-包含已传输数据的对象，包装在 <xref:System.Windows.DataObject>中。  
   
-- `allowedEffects` - 指定拖放操作允许的效果的 <xref:System.Windows.DragDropEffects> 枚举值之一。  
+- `allowedEffects`-指定拖放操作允许的效果的 <xref:System.Windows.DragDropEffects> 枚举值之一。  
   
  任何可序列化对象都可以在 `data` 参数中传递。 如果数据尚未包装在 <xref:System.Windows.DataObject> 中，则它将自动包装在一个新的 <xref:System.Windows.DataObject> 中。 若要传递多个数据项，必须自行创建 <xref:System.Windows.DataObject>，并将其传递到 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法。 有关详细信息，请参阅[数据和数据对象](data-and-data-objects.md)。  
   
@@ -203,7 +203,7 @@ ms.locfileid: "72291473"
   
  将数据拖出目标边界而未放置时，发生 <xref:System.Windows.DragDrop.DragLeave> 事件。 可以处理此事件，以便撤销在 <xref:System.Windows.DragDrop.DragEnter> 事件处理程序中进行的一切操作。  
   
- 下面的示例演示 <xref:System.Windows.DragDrop.DragLeave> 元素的 <xref:System.Windows.Shapes.Ellipse> 事件处理程序。 此代码通过将保存的 <xref:System.Windows.Media.Brush> 应用到椭圆来撤销 <xref:System.Windows.DragDrop.DragEnter> 事件处理程序中执行的预览。  
+ 下面的示例演示 <xref:System.Windows.DragDrop.DragLeave> 元素的 <xref:System.Windows.Shapes.Ellipse> 事件处理程序。 此代码通过将保存的 <xref:System.Windows.DragDrop.DragEnter> 应用到椭圆来撤销 <xref:System.Windows.Media.Brush> 事件处理程序中执行的预览。  
   
  [!code-csharp[DragDropSnippets#DragLeave](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragleave)]
  [!code-vb[DragDropSnippets#DragLeave](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragleave)]  
@@ -215,9 +215,9 @@ ms.locfileid: "72291473"
  [!code-csharp[DragDropSnippets#Drop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
  [!code-vb[DragDropSnippets#Drop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Clipboard>
-- [演练：对用户控件启用拖放（@ no__t-0）
+- [演练：在用户控件上启用拖放功能](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
 - [帮助主题](drag-and-drop-how-to-topics.md)
 - [拖放](drag-and-drop.md)

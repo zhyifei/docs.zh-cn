@@ -1,14 +1,13 @@
 ---
 title: 适用于 WCF 开发人员的 Docker gRPC
 description: 为 ASP.NET Core gRPC 应用程序创建 Docker 映像
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: cc369da9494ade532187dfc8d19a94a3a037ebab
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: a5aceb4b5270cb828965e990a62db4147012adff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841653"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967842"
 ---
 # <a name="docker"></a>Docker
 
@@ -18,7 +17,7 @@ ms.locfileid: "73841653"
 
 Microsoft 提供了一系列用于构建和运行 .NET Core 应用程序的基本映像。 若要创建 ASP.NET Core 3.0 图像，请使用两个基本映像：用于生成和发布应用程序的 SDK 映像，以及用于部署的运行时映像。
 
-| Image | 描述 |
+| 映像 | 说明 |
 | ----- | ----------- |
 | [mcr.microsoft.com/dotnet/core/sdk](https://hub.docker.com/_/microsoft-dotnet-core-sdk/) | 用于生成具有 `docker build`的应用程序。 不能在生产中使用。 |
 | [mcr.microsoft.com/dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) | 包含运行时和 ASP.NET Core 依赖项。 用于生产。 |
@@ -70,7 +69,7 @@ Dockerfile 有两部分：第一个使用 `sdk` 基本映像来生成和发布�
 
 ### <a name="the-build-steps"></a>生成步骤
 
-| 步骤 | 描述 |
+| 步骤 | 说明 |
 | ---- | ----------- |
 | `FROM ...` | 声明基映像并分配 `builder` 别名（有关说明，请参阅下一部分）。 |
 | `WORKDIR /src` | 创建 `/src` 目录，并将其设置为当前工作目录。 |
@@ -80,7 +79,7 @@ Dockerfile 有两部分：第一个使用 `sdk` 基本映像来生成和发布�
 
 ### <a name="the-runtime-image-steps"></a>运行时映像步骤
 
-| 步骤 | 描述 |
+| 步骤 | 说明 |
 | ---- | ----------- |
 | `FROM ...` | 声明新的基本映像。 |
 | `WORKDIR /app` | 创建 `/app` 目录，并将其设置为当前工作目录。 |

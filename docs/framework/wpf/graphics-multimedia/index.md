@@ -55,7 +55,7 @@ ms.locfileid: "72919992"
 
 ## <a name="graphics-and-rendering"></a>图形和呈现
 
-WPF 引入了对高质量 2-D 图形的支持。 功能包括画笔、几何、图像、形状和转换。 有关详细信息，请参阅[图形](graphics.md)。 图形元素的呈现基于 <xref:System.Windows.Media.Visual> 类。 屏幕上的视觉对象的结构由可视化树描述。 有关详细信息，请参见 [WPF 图形绘制概述](wpf-graphics-rendering-overview.md)。
+WPF 引入了对高质量 2-D 图形的支持。 功能包括画笔、几何、图像、形状和转换。 有关详细信息，请参阅[图形](graphics.md)。 图形元素的呈现基于 <xref:System.Windows.Media.Visual> 类。 屏幕上的视觉对象的结构由可视化树描述。 有关详细信息，请参阅 [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)。
 
 ### <a name="2-d-shapes"></a>二维形状
 
@@ -161,7 +161,7 @@ End Class
 
 有关详细信息，请参阅[多媒体概述](multimedia-overview.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Media>
 - <xref:System.Windows.Media.Animation>

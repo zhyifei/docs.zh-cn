@@ -21,7 +21,7 @@ ASP.NET Core 应用基于一系列中间件构建。 中间件是一些处理程
 
 ASP.NET Core 请求管道包含一系列请求委托，依次调用。 下图演示了这一概念。 沿黑色箭头执行。
 
-![条](media/middleware/request-delegate-pipeline.png)
+![管道 (pipeline)](media/middleware/request-delegate-pipeline.png)
 
 前面的关系图缺少生命周期事件的概念。 此概念是处理 ASP.NET Web 窗体请求的基础。 此系统使你可以更轻松地处理正在进行的过程，并允许在任意点插入中间件。 中间件按其添加到请求管道中的顺序执行。 它们还添加在代码中，而不是配置文件中，通常在*Startup.cs*中。
 
@@ -52,7 +52,7 @@ ASP.NET 4.x 包含许多模块。 同样，ASP.NET Core 还提供了许多中间
 |URL 重写&#8224;   |`RewriteModule`              |[URL 重写中间件](/aspnet/core/fundamentals/url-rewriting)|
 |静态压缩     |`StaticCompressionModule`    |[响应压缩中间件](/aspnet/core/performance/response-compression)|
 |静态内容         |`StaticFileModule`           |[静态文件中间件](/aspnet/core/fundamentals/static-files)|
-|URL 授权      |`UrlAuthorizationModule`     |[ASP.NET Core 标识](/aspnet/core/security/authentication/identity)|
+|URL 身份验证      |`UrlAuthorizationModule`     |[ASP.NET Core 标识](/aspnet/core/security/authentication/identity)|
 
 此列表并不详尽，但应了解两个框架之间存在的映射。 有关更详细的列表，请参阅[带有 ASP.NET Core 的 IIS 模块](/aspnet/core/host-and-deploy/iis/modules)。
 

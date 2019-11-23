@@ -1,14 +1,13 @@
 ---
 title: Protobuf 消息-WCF 开发人员 gRPC
 description: 了解 Protobuf 消息是如何在 IDL 中定义并在中C#生成的。
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 9943478698acfbb54b3e1dd0e6a856d11b9266c3
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 4d543fe88c21999cd820a0bb98073d58a229913a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841467"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967440"
 ---
 # <a name="protobuf-messages"></a>Protobuf 消息
 

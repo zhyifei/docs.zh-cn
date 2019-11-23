@@ -72,21 +72,21 @@ Serialize.exe -sb Test.bin 10000 >somefile.txt
 
 - 运行时序列化
 
-  - <xref:System.Runtime.Serialization.IFormatter>，用于指代 @no__t 或 @no__t 2 对象。
+  - <xref:System.Runtime.Serialization.IFormatter> 用于引用 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 或 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 对象。
 
-  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>，用于将链接列表序列化为二进制格式的流。 二进制格式化程序使用了只有 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 类型才理解的格式。 然而，该数据非常简明。
+  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 用于将链接列表序列化为二进制格式的流。 二进制格式化程序使用了只有 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 类型才理解的格式。 然而，该数据非常简明。
 
-  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>，用于将链接列表序列化为 SOAP 格式的流。 SOAP 是一种标准格式。
+  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 用于将链接列表序列化为 SOAP 格式的流。 SOAP 是一种标准格式。
 
 - 流 I/O
 
-  - <xref:System.IO.Stream> 可用于序列化和反序列化。 此示例中使用的特定流类型是 <xref:System.IO.FileStream> 类型。 然而，序列化可以用于从 <xref:System.IO.Stream> 派生的任何类型。
+  - 用于序列化和反序列化的 <xref:System.IO.Stream>。 此示例中使用的特定流类型是 <xref:System.IO.FileStream> 类型。 然而，序列化可以用于从 <xref:System.IO.Stream> 派生的任何类型。
 
-  - <xref:System.IO.File> 可用于创建 <xref:System.IO.FileStream> 对象，以便在磁盘上读取和创建文件。
+  - <xref:System.IO.File> 用于创建 <xref:System.IO.FileStream> 对象，以便在磁盘上读取和创建文件。
 
-  - <xref:System.IO.FileStream> 可用于对链接列表进行序列化和反序列化。
+  - <xref:System.IO.FileStream> 用于序列化和反序列化链接列表。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.IO>
 - <xref:System.IO.File>

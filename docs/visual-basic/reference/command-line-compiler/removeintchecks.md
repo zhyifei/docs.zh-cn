@@ -27,22 +27,22 @@ ms.locfileid: "72005225"
   
 ## <a name="arguments"></a>参数  
   
-|术语|定义|  
+|术语|Definition|  
 |---|---|  
-|`+` &#124; `-`|可选。 @No__t-0 选项导致编译器检查所有整数计算是否存在溢出错误。 默认值为 `-removeintchecks-`。<br /><br /> 指定 @no__t 0 或 `-removeintchecks+` 可防止错误检查，并可以更快地进行整数计算。 但是，如果不进行错误检查，且数据类型容量溢出，则可能会存储不正确的结果，而不会引发错误。|  
+|`+` &#124; `-`|可选。 `-removeintchecks-` 选项导致编译器检查所有整数计算是否存在溢出错误。 默认值为 `-removeintchecks-`。<br /><br /> 指定 `-removeintchecks` 或 `-removeintchecks+` 可防止错误检查并可以更快地进行整数计算。 但是，如果不进行错误检查，且数据类型容量溢出，则可能会存储不正确的结果，而不会引发错误。|  
   
 |在 Visual Studio 集成开发环境中设置-removeintchecks|  
 |---|  
-|1.在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。 <br />2.单击“编译”选项卡。<br />3.单击“高级”按钮。<br />4.修改 "**删除整数溢出检查**" 框的值。|  
+|1. 在**解决方案资源管理器**中选择了一个项目。 在“项目”菜单上，单击“属性”。 <br />2. 单击 "**编译**" 选项卡。<br />3. 单击 "**高级**" 按钮。<br />4. 修改 "**删除整数溢出检查**" 框的值。|  
   
 ## <a name="example"></a>示例  
- 下面的代码编译 `Test.vb` 并关闭整数溢出-错误检查。  
+ 下面的代码编译 `Test.vb` 并关闭整数溢出错误检查。  
   
 ```console
 vbc -removeintchecks+ test.vb  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

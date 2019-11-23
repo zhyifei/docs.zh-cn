@@ -34,7 +34,7 @@ func init ProjectName --docker
 从以下选项中选择所需的辅助运行时：
 
 - `dotnet` (C#)
-- `node` (JavaScript)
+- `node` （JavaScript）
 - `python`
 
 创建项目时，它将包含一个 Dockerfile。 现在，你可以在本地创建和测试函数。 使用 `docker build` 和 `docker run` 命令生成并运行该命令。 有关使用 Docker 支持构建 Azure Functions 的详细步骤，请参阅在[Linux 上使用自定义映像创建函数](https://docs.microsoft.com/azure/azure-functions/functions-create-function-linux-custom-image)教程。
@@ -43,7 +43,7 @@ func init ProjectName --docker
 
 Azure 函数根据针对给定函数的事件速率，自动缩放以满足需求。 此外，你还可以利用 Kubernetes 来托管函数并使用基于 Kubernetes 的事件驱动自动缩放或 KEDA。 如果没有发生任何事件，KEDA 可以向下扩展到0个实例，然后在响应事件时，它可以使用其水平 pod 自动缩放程序扩展容器的数量，以满足需求。 [了解有关通过 KEDA 缩放 Azure 函数的详细信息](https://docs.microsoft.com/azure/azure-functions/functions-kubernetes-keda)。
 
-## <a name="references"></a>reference
+## <a name="references"></a>参考
 
 - [在 Docker 容器中运行 Azure Functions](https://markheath.net/post/azure-functions-docker)
 - [在 Linux 上使用自定义映像创建函数](https://docs.microsoft.com/azure/azure-functions/functions-create-function-linux-custom-image)

@@ -164,7 +164,7 @@ Blazor 中的路由在客户端（而不是在服务器上）进行处理。 当
 
 在 Blazor 服务器应用程序中，根组件的 "主机" 页在 *_Host.* # 文件中定义。 此文件定义了一个 Razor 页面，而不是一个组件。 Razor Pages 使用 Razor 语法来定义服务器可寻址页面，与 *.aspx*页面非常类似。 `Html.RenderComponentAsync<TComponent>(RenderMode)` 方法用于定义根级别组件的呈现位置。 `RenderMode` 选项指示组件的呈现方式。 下表概述了支持的 `RenderMode` 选项。
 
-|选项                        |描述       |
+|选项                        |说明       |
 |------------------------------|------------------|
 |`RenderMode.Server`           |建立与浏览器的连接后交互呈现|
 |`RenderMode.ServerPrerendered`|首先预呈现并以交互方式呈现|

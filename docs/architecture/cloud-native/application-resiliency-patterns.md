@@ -27,7 +27,7 @@ ms.locfileid: "73841887"
 
 **图 6-3**。 要重试的 HTTP 状态代码
 
-问：是否要重试 HTTP 状态代码 403-禁止访问？ 否。 此时，系统将正常运行，但通知调用方他们无权执行所请求的操作。 必须注意仅重试由失败导致的操作。
+问：是否要重试 HTTP 状态代码 403-禁止访问？ No。 此时，系统将正常运行，但通知调用方他们无权执行所请求的操作。 必须注意仅重试由失败导致的操作。
 
 如第1章所述，构建云本机应用程序的 Microsoft 开发人员应面向 .NET Core。 版本2.1 引入了[HTTPClientFactory](https://www.stevejgordon.co.uk/introduction-to-httpclientfactory-aspnetcore)库，用于创建用于与基于 URL 的资源交互的 HTTP 客户端实例。 工厂类取代了原始 HTTPClient 类，它支持许多增强功能，其中一个功能与 Polly 复原库[紧密集成](../microservices/implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md)。 利用它，你可以轻松地在应用程序启动类中定义复原策略来处理部分故障和连接问题。
 

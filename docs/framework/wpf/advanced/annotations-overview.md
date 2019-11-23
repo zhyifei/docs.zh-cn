@@ -19,7 +19,7 @@ ms.locfileid: "72004043"
 # <a name="annotations-overview"></a>批注概述
 在纸质文档上编写说明或注释毫不稀奇，我们几乎认为这是理所当然的。 这些说明或注释就是“批注”，我们将其添加到文档，用于标注信息或突出显示兴趣项以供日后参考。 虽然在打印文档上编写注释很简单也很平常，但是就算在所有电子文档上添加个人注释，功能上却通常有很多限制。  
   
- 本主题介绍了几种常见类型的批注，特别是粘滞便笺和突出显示内容，并说明了 Microsoft 批注框架如何通过 Windows Presentation Foundation 在应用程序中帮助这些类型的批注）文档查看控件。  @no__t 0 文档查看支持批注的控件包括 <xref:System.Windows.Controls.FlowDocumentReader> 和 <xref:System.Windows.Controls.FlowDocumentScrollViewer>，以及从 <xref:System.Windows.Controls.Primitives.DocumentViewerBase> 派生的控件，如 @no__t 和 @no__t。  
+ 本主题介绍了几种常见类型的批注，特别是粘滞便笺和突出显示内容，并说明了 Microsoft 批注框架如何通过 Windows Presentation Foundation 在应用程序中帮助这些类型的批注）文档查看控件。  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支持批注的文档查看控件包括 <xref:System.Windows.Controls.FlowDocumentReader> 和 <xref:System.Windows.Controls.FlowDocumentScrollViewer>，以及从 <xref:System.Windows.Controls.Primitives.DocumentViewerBase> 派生的控件，例如 <xref:System.Windows.Controls.DocumentViewer> 和 <xref:System.Windows.Controls.FlowDocumentPageViewer>。  
 
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>便笺  
@@ -27,7 +27,7 @@ ms.locfileid: "72004043"
   
  下图显示了突出显示、文本便笺以及墨迹便笺批注的一些示例。  
   
- ![突出显示、文本和墨迹便笺批注。](./media/caf-stickynote.jpg "CAF_StickyNote")  
+ ![突出显示、 文本和墨迹便笺批注.](./media/caf-stickynote.jpg "CAF_StickyNote")  
   
  下面的示例演示了可用于在应用程序中启用批注支持的方法。  
   
@@ -35,14 +35,14 @@ ms.locfileid: "72004043"
  [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
   
 <a name="caf1_type_callouts"></a>   
-## <a name="highlights"></a>突出显示  
+## <a name="highlights"></a>亮点  
  当人们在纸质文档上作标记时，往往使用创造性的方法来突出显示兴趣项，例如对于句子中的某些字词，加下划线、高亮显示、圈出，或者将在空白的地方绘制标记或符号。  Microsoft 批注框架中的突出显示批注提供了类似的功能，用于标记 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 文档查看控件中显示的信息。  
   
  下图演示了一个突出显示批注的示例。  
   
  ![突出显示批注](./media/caf-callouts.png "CAF_Callouts")  
   
- 用户通常通过首先选择某个文本或感兴趣的项来创建批注，然后右键单击以显示批注选项 @no__t 0。  下面的示例演示可用来使用路由命令声明一个 @no__t 1 的 @no__t，用户可以访问这些命令来创建和管理注释。  
+ 用户通常通过首先选择某个文本或感兴趣的项来创建批注，然后右键单击以显示批注选项 <xref:System.Windows.Controls.ContextMenu>。  下面的示例演示了可用于使用路由命令声明一个 <xref:System.Windows.Controls.ContextMenu> 的 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，用户可以访问这些命令来创建和管理批注。  
   
  [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
@@ -63,7 +63,7 @@ ms.locfileid: "72004043"
   
  另一个示例方案包括允许通过电子邮件在文档读取器之间交换批注和便笺的应用程序。 凭借此功能，这些应用程序可以将读取器导航到包含要交换的批注的页面。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Controls.Primitives.DocumentViewerBase>
 - <xref:System.Windows.Controls.DocumentViewer>
@@ -75,4 +75,4 @@ ms.locfileid: "72004043"
 - [ContextMenu 概述](../controls/contextmenu-overview.md)
 - [命令概述](commanding-overview.md)
 - [流文档概述](flow-document-overview.md)
-- [如何：将命令添加到 MenuItem @ no__t-0
+- [如何：将命令添加到菜单项](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))

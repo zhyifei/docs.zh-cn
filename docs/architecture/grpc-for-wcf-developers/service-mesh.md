@@ -1,14 +1,13 @@
 ---
 title: 服务网格-适用于 WCF 开发人员的 gRPC
 description: 使用服务网格将请求路由并平衡到 Kubernetes 群集中的 gRPC 服务。
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6bdfa57ba47ba0105092d1c140705599b7023c78
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d20275082973f30bddbb342da90454401d4f019b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841989"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966972"
 ---
 # <a name="service-meshes"></a>服务网格
 

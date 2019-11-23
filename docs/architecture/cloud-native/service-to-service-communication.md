@@ -3,12 +3,12 @@ title: 服务到服务通信
 description: 了解后端云和本地微服务与其他后端微服务通信的方式。
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: 6a7e72491cb56d925e684b94109b1aaa98e24df3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5124b8b83f62ff17b1230ead63db26e0c1f2a5b
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73842013"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087600"
 ---
 # <a name="service-to-service-communication"></a>服务到服务通信
 
@@ -208,7 +208,7 @@ EventGrid 和服务总线之间的主要区别是基础*消息交换模式*。
 
 ### <a name="streaming-messages-in-the-azure-cloud"></a>在 Azure 云中传输消息
 
-Azure 服务总线和事件网格为公开单一独立事件（例如新 Cosmos DB 文档）的应用程序提供了很大的支持。 但是，如果您的云本机系统需要处理*相关事件流*，该怎么办？ [事件流](https://msdn.microsoft.com/magazine/dn904671)更复杂。 它们通常是按时间顺序排列的、相互关联的，并且必须作为一个组进行处理。
+Azure 服务总线和事件网格为公开单一独立事件（例如新 Cosmos DB 文档）的应用程序提供了很大的支持。 但是，如果您的云本机系统需要处理*相关事件流*，该怎么办？ [事件流](https://docs.microsoft.com/archive/msdn-magazine/2015/february/microsoft-azure-the-rise-of-event-stream-oriented-systems)更复杂。 它们通常是按时间顺序排列的、相互关联的，并且必须作为一个组进行处理。
 
 [Azure 事件中心](https://azure.microsoft.com/services/event-hubs/)是一种数据流式处理平台和事件引入服务，可收集、转换和存储事件。 它经过优化，可捕获流式处理数据，如从遥测上下文发出的连续事件通知。 此服务可高度缩放，每秒可以存储和[处理数百万事件](https://docs.microsoft.com/azure/event-hubs/event-hubs-about)。 图4-18 所示，它通常是事件管道的前门，它将插入流与事件使用分离。
 
@@ -220,7 +220,7 @@ Azure 服务总线和事件网格为公开单一独立事件（例如新 Cosmos 
 
 事件中心支持常见的事件发布协议，包括 HTTPS 和 AMQP。 它还支持 Kafka 1.0。 [现有的 Kafka 应用程序可使用 Kafka 协议与事件中心进行通信](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview)，该协议提供了管理大型 Kafka 群集的替代方法。 许多开源云本机系统都接受 Kafka。
 
-事件中心通过[分区使用者模型](https://docs.microsoft.com/azure/event-hubs/event-hubs-features)实现消息流式处理，其中每个使用者只读取消息流的特定子集或分区。 此模式可实现大量的事件处理水平，并提供队列和主题中不可用的其他面向流的功能。 分区是事件中心内保留的有序事件的序列。 当较新的事件到达时，它们将被添加到此序列的末尾。 图4-19 显示事件中心中的分区。
+事件中心通过[分区使用者模型](https://docs.microsoft.com/azure/event-hubs/event-hubs-features)实现消息流式处理，其中每个使用者只读取消息流的特定子集或分区。 此模式允许以极大的水平缩放规模进行事件处理，并提供队列和主题所不能提供的其他面向流的功能。 分区是事件中心内保留的有序事件的序列。 当较新的事件到达时，它们将被添加到此序列的末尾。 图4-19 显示事件中心中的分区。
 
 ![事件中心分区](./media/event-hub-partitioning.png)
 

@@ -24,14 +24,14 @@ ms.locfileid: "72005503"
   
 ## <a name="arguments"></a>参数  
  `location`  
- 必需。 类或模块的名称，该类或模块包含在程序启动时要调用的 @no__t。 此格式可以是**main： module**或 **-main： namespace。**  
+ 必需。 类或模块的名称，其中包含在程序启动时要调用的 `Sub Main` 过程。 此格式可以是**main： module**或 **-main： namespace。**  
   
 ## <a name="remarks"></a>备注  
  创建可执行文件或 Windows 可执行程序时，请使用此选项。 如果省略 **-main**选项，编译器将在所有公共类和模块中搜索有效的共享 `Sub Main`。  
   
- 有关 @no__t 过程的各种形式的讨论，请参阅[中的 Main 过程 Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) 。  
+ 有关 `Main` 过程的各种形式的讨论，请参阅[中的 Main 过程 Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) 。  
   
- 如果 `location` 是继承自 <xref:System.Windows.Forms.Form> 的类，则编译器将提供一个默认的 `Main` 过程，该过程将启动应用程序（如果类没有 @no__t 的过程）。 这使您可以在命令行上编译在开发环境中创建的代码。  
+ 如果 `location` 是从 <xref:System.Windows.Forms.Form>继承的类，则编译器将提供一个默认的 `Main` 过程，该过程在类没有 `Main` 过程的情况下启动应用程序。 这使您可以在命令行上编译在开发环境中创建的代码。  
   
  [!code-vb[VbVbalrCompiler#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#16)]  
   
@@ -46,13 +46,13 @@ ms.locfileid: "72005503"
 4. 修改 "**启动对象**" 框中的值。  
   
 ## <a name="example"></a>示例  
- 下面的代码编译 `T2.vb` 并 `T3.vb`，指定将在 @no__t 3 类中找到 @no__t 2 过程。  
+ 下面的代码编译 `T2.vb` 和 `T3.vb`，指定将在 `Test2` 类中找到 `Sub Main` 过程。  
   
 ```console
 vbc t2.vb t3.vb -main:Test2  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target （Visual Basic）](../../../visual-basic/reference/command-line-compiler/target.md)

@@ -29,9 +29,9 @@ ms.locfileid: "72291638"
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>创建非对称密钥并且将它保存在密钥容器中  
   
-1. 创建 <xref:System.Security.Cryptography.CspParameters> 类的新实例，并将要调用密钥容器的名称传递到 @no__t 字段。  
+1. 创建 <xref:System.Security.Cryptography.CspParameters> 类的新实例，并将要调用密钥容器的名称传递到 <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> 字段。  
   
-2. 创建类的新实例，该类派生自 @no__t 0 类（通常为**RSACryptoServiceProvider**或**DSACryptoServiceProvider**），并将之前创建的**CspParameters**对象传递到其构造函数。  
+2. 创建从 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 类派生的类的新实例（通常为**RSACryptoServiceProvider**或**DSACryptoServiceProvider**），并将之前创建的**CspParameters**对象传递给其构造函数。  
   
 ### <a name="to-delete-the-key-from-a-key-container"></a>从密钥容器删除密钥  
   
@@ -223,9 +223,9 @@ Key added to container:
 Key deleted.  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [生成加密和解密密钥](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
 - [加密数据](../../../docs/standard/security/encrypting-data.md)
 - [解密数据](../../../docs/standard/security/decrypting-data.md)
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [加密服务](../../../docs/standard/security/cryptographic-services.md)

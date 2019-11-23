@@ -16,7 +16,7 @@ ms.lasthandoff: 10/07/2019
 ms.locfileid: "72004578"
 ---
 # <a name="typography"></a>版式
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 支持丰富的文本内容表示形式。 @No__t-0 中的文本使用 Microsoft ClearType 呈现，从而增强了文本的清晰度和可读性。 @no__t 还支持 OpenType 字体，该字体提供的功能超出了 TrueType®格式定义的其他功能。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 包括对丰富的文本内容呈现功能的支持。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的文本使用 Microsoft ClearType 呈现，从而增强了文本的清晰度和可读性。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 还支持 OpenType 字体，它们提供的其他功能超出了 TrueType®格式定义的功能。  
   
 ## <a name="in-this-section"></a>本节内容  
  [WPF 中的版式](typography-in-wpf.md)  
@@ -28,7 +28,7 @@ ms.locfileid: "72004578"
  [字形](glyphs.md)  
  [帮助主题](typography-how-to-topics.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Documents.Typography>
 - [WPF 中的文档](documents-in-wpf.md)

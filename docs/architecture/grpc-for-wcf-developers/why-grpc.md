@@ -1,14 +1,13 @@
 ---
 title: 为什么建议为 WCF 开发人员使用 gRPC-gRPC for WCF 开发人员
 description: 讨论为什么 gRPC 非常适合要迁移到现代体系结构和平台的 WCF 开发人员。
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: f96e9a059dc9f12a13c9eb5bb7184ee75d602458
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: da712e1ceee92f0a1a2661252dcda602f5dde9a0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841305"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966948"
 ---
 # <a name="why-grpc-is-recommended-for-wcf-developers"></a>为什么向 WCF 开发人员推荐 gRPC
 
@@ -42,7 +41,7 @@ gRPC 具有完全双向流式处理，它为 WCF 的全双工服务提供非常�
 
 gRPC 允许客户端指定 RPC 完成的最长时间。 如果超过指定的截止时间，则服务器可以独立于客户端取消该操作。 截止时间和取消可通过进一步的 gRPC 调用进行传播，以帮助强制实施资源使用限制。 超过截止时间时，客户端也可能会中止操作（例如，由于用户交互）。
 
-### <a name="security"></a>安全
+### <a name="security"></a>安全性
 
 在 TLS 端到端加密连接上使用 HTTP/2 时，gRPC 是隐式的。 支持客户端证书身份验证（请参阅第6章），进一步提高客户端和服务器之间的安全性和信任。
 

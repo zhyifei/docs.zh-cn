@@ -41,12 +41,12 @@ ms.locfileid: "71956428"
 
 - [演练：使用 ClickOnce 部署 API 按需下载附属程序集](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api)
 
-- [如何：为 Windows 窗体全球化 @ no__t 设置区域性和 UI 区域性
+- [如何：为 Windows 窗体全球化设置区域性和 UI 区域性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/b28bx3bh(v=vs.100))
 
-- [如何：创建镜像 Windows 窗体和控件 @ no__t-0
+- [如何：创建镜像 Windows 窗体和控件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xwbz5ws0(v=vs.100))
 
-- [如何：使用 AutoSize 和 TableLayoutPanel Control @ no__t 支持对 Windows 窗体的本地化
+- [如何：使用 AutoSize 属性和 TableLayoutPanel 控件支持对 Windows 窗体的本地化](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))
 
-- [演练：本地化 Windows 窗体 @ no__t-0
+- [演练：本地化 Windows 窗体](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
 
-- [演练：创建调整比例的布局 @ no__t-0
+- [演练：创建调整本地化比例的布局](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))

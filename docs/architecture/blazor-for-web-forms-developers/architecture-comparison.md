@@ -52,7 +52,7 @@ Blazor[组件](components.md)是表示可重复使用的 UI 部分的 .net 类�
 
 ![Blazor DOM 交互](./media/architecture-comparison/blazor-dom-interaction.png)
 
-组件还可以手动指示在正常 UI 事件之外的状态发生更改时，应呈现这些组件。 Blazor 使用 `SynchronizationContext` 来强制执行单个逻辑线程。 此 `SynchronizationContext` 上将执行 Blazor 引发的组件生命周期方法和任何事件回调。
+组件还可以手动指示在正常 UI 事件之外的状态发生更改时，应呈现这些组件。 Blazor 使用 `SynchronizationContext` 来强制执行单个逻辑线程。 此 `SynchronizationContext`上将执行 Blazor 引发的组件生命周期方法和任何事件回调。
 
 >[!div class="step-by-step"]
 >[上一页](introduction.md)

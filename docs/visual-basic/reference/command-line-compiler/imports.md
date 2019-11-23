@@ -1,20 +1,20 @@
 ---
-title: -imports （Visual Basic）
+title: -imports
 ms.date: 03/10/2018
 helpviewer_keywords:
 - /imports compiler option [Visual Basic]
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-ms.openlocfilehash: 929e24a1ffd02d4e21ab1b925ddd59050b5d3cc4
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 380e71e462f736d4564a37b83567007fa9461b05
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005573"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332958"
 ---
-# <a name="-imports-visual-basic"></a>-imports （Visual Basic）
-从指定的程序集导入命名空间。  
+# <a name="-imports-visual-basic"></a>-imports (Visual Basic)
+Imports namespaces from a specified assembly.  
   
 ## <a name="syntax"></a>语法  
   
@@ -22,23 +22,23 @@ ms.locfileid: "72005573"
 -imports:namespaceList  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
   
 |术语|定义|  
 |---|---|  
-|`namespaceList`|必需。 要导入的命名空间的逗号分隔列表。|  
+|`namespaceList`|必须的。 Comma-delimited list of namespaces to be imported.|  
   
 ## <a name="remarks"></a>备注  
- @No__t-0 选项将导入在当前源文件集中或从任何引用的程序集内定义的任何命名空间。  
+ The `-imports` option imports any namespace defined within the current set of source files or from any referenced assembly.  
   
- 使用 `-imports` 指定的命名空间中的成员可用于编译中的所有源代码文件。 使用[Imports 语句（.Net 命名空间和类型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)可在单个源代码文件中使用命名空间。  
+ The members in a namespace specified with `-imports` are available to all source-code files in the compilation. Use the [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to use a namespace in a single source-code file.  
   
-|在 Visual Studio 集成开发环境中设置/imports|  
+|To set /imports in the Visual Studio integrated development environment|  
 |---|  
-|1.在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。 <br />2.单击“引用”选项卡。<br />3.在 "**添加用户导入**" 按钮旁的框中输入命名空间名称。<br />4.单击 "**添加用户导入**" 按钮。|  
+|1.  Have a project selected in **Solution Explorer**. 在“项目”菜单上，单击“属性”。 <br />2.  Click the **References** tab.<br />3.  Enter the namespace name in the box beside the **Add User Import** button.<br />4.  Click the **Add User Import** button.|  
   
 ## <a name="example"></a>示例  
- 当指定 @no__t 时，以下代码将编译。 如果没有此方法，则成功编译需要在源代码文件的开头包含 `Imports System.Globalization` 语句，或者属性完全限定为 `System.Globalization.CultureInfo.CurrentCulture.Name`。
+ The following code compiles when `/imports:system.globalization` is specified. Without it, successful compilation requires either that an `Imports System.Globalization` statement be included at the beginning of the source code file, or that the property be fully qualified as `System.Globalization.CultureInfo.CurrentCulture.Name`.
 
 ```vb
 Module Example

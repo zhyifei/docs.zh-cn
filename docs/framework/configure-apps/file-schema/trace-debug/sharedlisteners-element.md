@@ -22,8 +22,8 @@ ms.locfileid: "71699294"
 包含任何源或跟踪元素可以引用的侦听器。  默认情况下，这些侦听器不会接收任何跟踪，而且不能在运行时检索这些侦听器。 可以按名称将标识为共享侦听器的侦听器添加到源或跟踪。  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t **\<sharedListeners >**  
+&nbsp;&nbsp;[ **\<的 >** ](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<sharedListeners >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,32 +33,32 @@ ms.locfileid: "71699294"
 </sharedListeners>  
 ```  
   
-## <a name="attributes-and-elements"></a>特性和元素  
+## <a name="attributes-and-elements"></a>属性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a>Attributes  
  无。  
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-trace.md)|将侦听器添加到 `sharedListeners` 集合中。|  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`Configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`system.diagnostics`|为 ASP.NET 配置节指定根元素。|  
   
 ## <a name="remarks"></a>备注  
- 将侦听器添加到共享侦听器集合并不会使其成为活动侦听器。 还必须将其添加到跟踪源或跟踪，只需将其添加到跟踪元素的 `Listeners` 集合中即可。 .NET Framework 中的侦听器类派生自 @no__t 的类。  
+ 将侦听器添加到共享侦听器集合并不会使其成为活动侦听器。 还必须将其添加到跟踪源或跟踪，方法是将其添加到跟踪元素的 `Listeners` 集合。 .NET Framework 中的侦听器类派生自 <xref:System.Diagnostics.TraceListener> 类。  
   
  此元素可在计算机配置文件（Machine.config）和应用程序配置文件中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 `<sharedListeners>` 元素将侦听器 `console` 添加到 @no__t 和 @no__t 类的 `Listeners` 集合。 控制台跟踪侦听器通过调用 <xref:System.Diagnostics.TraceSource> 或 <xref:System.Diagnostics.Trace> 将跟踪信息写入控制台。  
+ 下面的示例演示如何使用 `<sharedListeners>` 元素将侦听器 `console` 添加到 <xref:System.Diagnostics.TraceSource> 和 <xref:System.Diagnostics.Trace> 类的 `Listeners` 集合。 控制台跟踪侦听器通过调用 <xref:System.Diagnostics.TraceSource> 或 <xref:System.Diagnostics.Trace>将跟踪信息写入控制台。  
   
 ```xml  
 <configuration>  
@@ -88,7 +88,7 @@ ms.locfileid: "71699294"
 </configuration>
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Diagnostics.TraceListener>
 - [跟踪和调试设置架构](index.md)

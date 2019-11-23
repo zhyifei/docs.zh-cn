@@ -29,7 +29,7 @@ ms.locfileid: "73841761"
 
 部署到单一应用程序通常需要重新启动整个应用程序，即使只替换一个小模块。 根据托管应用程序的计算机的数目，这可能会导致部署期间停机。
 
-### <a name="hosting"></a>宿主
+### <a name="hosting"></a>托管
 
 整体应用程序完全承载于单个计算机实例上。 这可能需要比分布式应用程序中的任何模块都需要的功能更高的硬件。 此外，如果应用程序的任何部分成为瓶颈，则必须将整个应用程序部署到其他计算机节点，以便进行横向扩展。
 
@@ -137,7 +137,7 @@ Kubernetes 部署在生产环境中提供了极大价值，但你也可以在本
 - 仪表板
 - 容器运行时： Docker、rkt、CRI 和 containerd
 - 启用容器网络接口（CNI）
-- 入口
+- 传入
 
 安装 Minikube 后，可以通过运行 `minikube start` 命令快速开始使用它，该命令会下载映像并启动本地 Kubernetes 群集。 启动群集后，使用标准的 Kubernetes `kubectl` 命令与该群集进行交互。
 
@@ -206,7 +206,7 @@ ENTRYPOINT ["dotnet", "WebApplication3.dll"]
 
 **图 3-9**。 Visual Studio 添加 Orchestrator 支持
 
-## <a name="references"></a>reference
+## <a name="references"></a>参考
 
 - [什么是 Kubernetes？](https://blog.newrelic.com/engineering/what-is-kubernetes/)
 - [通过 Minikube 安装 Kubernetes](https://kubernetes.io/docs/setup/learning-environment/minikube/)

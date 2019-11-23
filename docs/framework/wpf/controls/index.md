@@ -97,7 +97,7 @@ ms.locfileid: "73459443"
 
  有关这些基类的详细信息，请参阅[WPF 内容模型](wpf-content-model.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [样式设置和模板化](styling-and-templating.md)
 - [按类别分类的控件](controls-by-category.md)

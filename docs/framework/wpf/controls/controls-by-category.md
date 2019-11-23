@@ -56,7 +56,7 @@ Windows Presentation Foundation （WPF）控件可以逻辑分组为多个类别
 - <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>按钮  
- 按钮是最基本的用户界面控件之一。 当用户单击应用程序时，应用程序通常会在 @no__t 0 事件中执行一些任务。  
+ 按钮是最基本的用户界面控件之一。 当用户单击应用程序时，应用程序通常会在 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件中执行一些任务。  
   
 - <xref:System.Windows.Controls.Button>  
   
@@ -177,6 +177,6 @@ Windows Presentation Foundation （WPF）控件可以逻辑分组为多个类别
   
 - <xref:System.Windows.Controls.InkPresenter>  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [控件库](control-library.md)

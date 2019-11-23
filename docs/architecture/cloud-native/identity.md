@@ -1,5 +1,5 @@
 ---
-title: 标识
+title: 身份
 description: 构建适用于 Azure 的云本机 .NET 应用 |标识
 ms.date: 09/23/2019
 ms.openlocfilehash: 4cc7c04bf323d2589777df466321f6801f511b6f
@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "73840345"
 ---
-# <a name="identity"></a>标识
+# <a name="identity"></a>身份
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -27,7 +27,7 @@ ms.locfileid: "73840345"
 
 通常，STS 只负责对主体进行身份验证。 确定其对资源的访问级别是否留给了应用程序的其他部分。
 
-## <a name="references"></a>reference
+## <a name="references"></a>参考
 
 - [Microsoft 标识平台](https://docs.microsoft.com/azure/active-directory/develop/)
 

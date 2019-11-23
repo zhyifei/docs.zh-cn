@@ -11,7 +11,7 @@ ms.locfileid: "72031893"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>任务 1：创建一个新的 Windows Presentation Foundation 应用程序
 
-在此任务中，您将使用 WPF 应用程序 Visual Studio 模板创建一个空的 Windows Presentation Foundation （WPF）应用程序，并添加对相应 @no__t 工作流程序集的引用。  
+在此任务中，您将使用 WPF 应用程序 Visual Studio 模板创建一个空的 Windows Presentation Foundation （WPF）应用程序，并向相应的 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流程序集添加引用。  
   
 ## <a name="to-create-the-wpf-application-project"></a>创建 WPF 应用程序项目
 
@@ -37,9 +37,9 @@ ms.locfileid: "72031893"
     - System.Activities.Presentation
     - System.Activities.Core.Presentation
 
-10. 请参阅 [Task 2：承载工作流设计器 @ no__t，以了解如何承载工作流设计器设计画布。
+10. 请参阅[任务2：宿主工作流设计器](task-2-host-the-workflow-designer.md)以了解如何承载工作流设计器设计画布。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [重新托管工作流设计器](rehosting-the-workflow-designer.md)
-- [Task 2：承载工作流设计器 @ no__t-0
+- [任务 2：托管工作流设计器](task-2-host-the-workflow-designer.md)

@@ -14,7 +14,7 @@ ms.locfileid: "71834272"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>将 XSLT 转换应用于 DataSet
 
-@No__t 的**WriteXml**方法，可以将**数据集**的内容作为 XML 数据写入。 随后的一项常见任务是使用 XSL 转换 (XSLT) 将该 XML 转换为另一种格式。 不过，通过将**数据集**与 <xref:System.Xml.XmlDataDocument> 同步，可以将 XSLT 样式表应用于**数据集**的内容，而不必首先使用**WriteXml**以 XML 数据的形式编写**数据集**的内容。  
+使用 <xref:System.Data.DataSet> 的**WriteXml**方法，可以将**数据集**的内容作为 XML 数据写入。 随后的一项常见任务是使用 XSL 转换 (XSLT) 将该 XML 转换为另一种格式。 不过，通过将**数据集**与 <xref:System.Xml.XmlDataDocument> 同步，可以将 XSLT 样式表应用于**数据集**的内容，而不必首先使用**WriteXml**以 XML 数据的形式编写**数据集**的内容。  
   
  下面的示例使用数据表和关系填充**数据集**，并将**数据**集与**XMLDATADOCUMENT**同步，并使用 XSLT 样式表将部分**数据集**作为 HTML 文件写入。 下面是 XSLT 样式表的内容：
   
@@ -60,7 +60,7 @@ ms.locfileid: "71834272"
  下面的代码填充**数据集**并应用 XSLT 样式表。  
   
 > [!NOTE]
-> 如果要将 XSLT 样式表应用于包含关系的**数据集**，如果将每个嵌套关系的 @no__t 的**嵌套**属性都设置为**true** ，则会获得最佳性能。 此设置使你可以使用 XSLT 样式表，执行正常的由上而下处理以遍历层次结构和转换数据，而不是使用对性能要求较高的 XPath 定位轴（例如，样式表节点测试表达式中前面的同级和后面的同级）来遍历层次结构。 有关嵌套关系的详细信息，请参阅[嵌套 datarelation](nesting-datarelations.md)。  
+> 如果要将 XSLT 样式表应用于包含关系的**数据集**，如果将每个嵌套关系的 <xref:System.Data.DataRelation> 的**嵌套**属性设置为**true** ，则会获得最佳性能。 此设置使你可以使用 XSLT 样式表，执行正常的由上而下处理以遍历层次结构和转换数据，而不是使用对性能要求较高的 XPath 定位轴（例如，样式表节点测试表达式中前面的同级和后面的同级）来遍历层次结构。 有关嵌套关系的详细信息，请参阅[嵌套 datarelation](nesting-datarelations.md)。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -124,7 +124,7 @@ xslTran.Transform(xmlDoc, null, writer);
 writer.Close();  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据集和 XmlDataDocument 同步](dataset-and-xmldatadocument-synchronization.md)
 - [ADO.NET 概述](../ado-net-overview.md)

@@ -14,7 +14,7 @@ ms.locfileid: "72002710"
   
  使用 Visual Studio 的开发人员可以使用对象关系设计器来实现此目的。  
   
- 如果使用 SQLMetal 命令行工具，请将 **/serialization**选项与 @no__t 参数一起使用。 有关详细信息，请参阅 [SqlMetal.exe（代码生成工具）](../../../../tools/sqlmetal-exe-code-generation-tool.md)。  
+ 如果使用 SQLMetal 命令行工具，请将 **/serialization**选项与 `unidirectional` 参数一起使用。 有关详细信息，请参阅 [SqlMetal.exe（代码生成工具）](../../../../tools/sqlmetal-exe-code-generation-tool.md)。  
   
 ## <a name="example"></a>示例  
  以下 SQLMetal 命令行会产生包含可序列化实体的文件。  
@@ -27,7 +27,7 @@ sqlmetal /code:nwserializable.vb /language:vb "c:\northwnd.mdf" /sprocs /functio
 sqlmetal /code:nwserializable.cs /language:csharp "c:\northwnd.mdf" /sprocs /functions /pluralize /serialization:unidirectional  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [序列化](serialization.md)
 - [创建对象模型](creating-the-object-model.md)

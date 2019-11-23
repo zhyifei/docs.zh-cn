@@ -32,9 +32,9 @@ ms.locfileid: "71592065"
   
 - 此错误的一个常见原因是在事件处理程序中使用 `Catch e As Exception`。 如果是这种情况，请将 `Catch` 块变量命名为 `ex` 而不是 `e`。  
   
-- 此错误的另一个常见原因是尝试访问在单独的 @no__t 块中的 `Try` 块内声明的局部变量。 若要更正此错误，请在 `Try...Catch...Finally` 结构之外声明变量。  
+- 此错误的另一个常见原因是尝试访问在单独的 `Catch` 块中 `Try` 块内声明的局部变量。 若要更正此错误，请在 `Try...Catch...Finally` 结构之外声明变量。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [变量声明](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

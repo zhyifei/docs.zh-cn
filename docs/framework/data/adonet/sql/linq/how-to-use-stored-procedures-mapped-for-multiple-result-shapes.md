@@ -15,7 +15,7 @@ ms.locfileid: "72003271"
 # <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>如何：使用针对多个结果形状映射的存储过程
 当存储过程可以返回多个结果形状时，返回类型无法强类型化为单个投影形状。 尽管 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以生成所有可能的投影类型，但它无法获知将以何种顺序返回它们。  
   
- 请将这种情况与按顺序产生多个结果形状的存储过程作一个对比。 有关详细信息，请参阅[如何：使用为顺序结果形状（@ no__t-0）映射的存储过程。  
+ 请将这种情况与按顺序产生多个结果形状的存储过程作一个对比。 有关详细信息，请参阅[如何：使用为顺序结果形状映射的存储过程](how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)。  
   
  <xref:System.Data.Linq.Mapping.ResultTypeAttribute> 属性适用于返回多个结果类型的存储过程，用以指定该过程可以返回的类型的集合。  
   
@@ -43,6 +43,6 @@ else if(@shape = 2)
  [!code-csharp[DLinqSprox#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#5)]
  [!code-vb[DLinqSprox#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#5)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [存储过程](stored-procedures.md)

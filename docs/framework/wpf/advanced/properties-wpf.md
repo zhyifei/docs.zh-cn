@@ -17,7 +17,7 @@ ms.lasthandoff: 10/07/2019
 ms.locfileid: "72003140"
 ---
 # <a name="properties-wpf"></a>属性 (WPF)
-@no__t 提供了一组服务，这些服务可用于扩展公共语言运行时（CLR）属性的功能。 这些服务通常统称为 WPF 属性系统。 由 WPF 属性系统支持的属性称为依赖属性。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了一组服务，这些服务可用于扩展公共语言运行时（CLR）属性的功能。 这些服务通常统称为 WPF 属性系统。 由 WPF 属性系统支持的属性称为依赖属性。  
   
 ## <a name="in-this-section"></a>本节内容  
 

@@ -1,14 +1,13 @@
 ---
 title: 错误处理-针对 WCF 开发人员的 gRPC
 description: 待撰写
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 91f5789d8ed0f01f3ce2f3f9a6c6ccf14f245290
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2c44bd9264c877a7c7a86c115b6da9f759006016
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73842001"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967782"
 ---
 # <a name="error-handling"></a>错误处理
 
@@ -16,7 +15,7 @@ WCF 使用 `FaultException<T>` 和 `FaultContract` 来提供详细的错误信�
 
 遗憾的是，当前版本的 gRPC 缺少 WCF 发现的复杂性，并且基于简单状态代码和元数据仅限制了内置错误处理。 下表是最常用的状态代码的快速指南：
 
-| 状态代码 | 问题 |
+| 状态代码 | Problem |
 | ----------- | ------- |
 | `GRPC_STATUS_UNIMPLEMENTED` | 尚未写入方法。 |
 | `GRPC_STATUS_UNAVAILABLE` | 整个服务有问题。 |

@@ -14,8 +14,8 @@ ms.locfileid: "71698163"
 指定是否将国际化域名（IDN）分析应用于域名。
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t **\<idn >**  
+[ **\<uri** &nbsp;&nbsp;>](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<idn >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -25,28 +25,28 @@ ms.locfileid: "71698163"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a>特性和元素  
+## <a name="attributes-and-elements"></a>属性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a>Attributes  
 
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |`enabled`|指定是否将国际化域名（IDN）分析应用于域名。默认值为 none。|  
 
 ### <a name="child-elements"></a>子元素
 
-None
+无
   
 ### <a name="parent-elements"></a>父元素
 
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[oma-uri](uri-element-uri-settings.md)|包含指定 .NET Framework 如何处理使用统一资源标识符（Uri）表示的 web 地址的设置。|  
 
 ## <a name="remarks"></a>备注
 
-现有的 @no__t 0 类已在 .NET Framework 3.5 中扩展。 3.0 SP1 和 2.0 SP1，支持国际资源标识符（IRI）和国际化域名（IDN）。 当前用户将看不到 .NET Framework 2.0 行为中的任何更改，除非它们专门启用 IRI 和 IDN 支持。 这确保了 NET Framework 以前版本的应用程序兼容性。
+现有 <xref:System.Uri> 类已在 .NET Framework 3.5 中扩展。 3.0 SP1 和 2.0 SP1，支持国际资源标识符（IRI）和国际化域名（IDN）。 当前用户将看不到 .NET Framework 2.0 行为中的任何更改，除非它们专门启用 IRI 和 IDN 支持。 这确保了 NET Framework 以前版本的应用程序兼容性。
 
 若要启用对 IRI 的支持，需要以下两项更改：
 
@@ -91,7 +91,7 @@ None
 </configuration>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>

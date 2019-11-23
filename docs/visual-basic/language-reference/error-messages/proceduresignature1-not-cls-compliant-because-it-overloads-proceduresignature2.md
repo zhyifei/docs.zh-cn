@@ -14,9 +14,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/10/2019
 ms.locfileid: "72250173"
 ---
-# <a name="proceduresignature1-is-not-cls-compliant-because-it-overloads-proceduresignature2-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>\<proceduresignature1 > 不符合 CLS，因为它重载了 \<proceduresignature2 >，后者仅与数组参数类型的数组或数组参数类型的秩不同
+# <a name="proceduresignature1-is-not-cls-compliant-because-it-overloads-proceduresignature2-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>\<proceduresignature1 > 不符合 CLS，因为它重载 \<只是数组参数类型的数组或数组参数类型的秩不同的 proceduresignature2 >
 
-如果过程或属性重写另一个过程或属性，并且其参数列表之间的唯一区别是交错数组或数组排名的嵌套级别，则它会被标记为 `<CLSCompliant(True)>`。
+当过程或属性重写另一个过程或属性，并且其参数列表之间的唯一区别是交错数组或数组排名的嵌套级别时，将标记为 `<CLSCompliant(True)>`。
   
  在下面的声明中，第二个和第三个声明生成此错误：
   
@@ -26,7 +26,7 @@ ms.locfileid: "72250173"
   
  `Overloads Sub ProcessArray(arrayParam(,) As Integer)`  
   
- 第二个声明将原始的一维参数 @no__t 更改为数组的数组。 第三个声明将 `arrayParam` 更改为二维数组（秩为2）。 虽然 Visual Basic 允许重载只是这些更改之一不同，但这种重载不符合[语言独立性和与语言无关的组件](../../../standard/language-independence-and-language-independent-components.md)（CLS）。  
+ 第二个声明将原始的一维参数 `arrayParam` 更改为数组的数组。 第三个声明会将 `arrayParam` 更改为二维数组（秩为2）。 虽然 Visual Basic 允许重载只是这些更改之一不同，但这种重载不符合[语言独立性和与语言无关的组件](../../../standard/language-independence-and-language-independent-components.md)（CLS）。  
   
  当将 <xref:System.CLSCompliantAttribute> 应用到编程元素中时，需要将该特性的 `isCompliant` 参数设置为 `True` 或 `False` 来指示符合或不符合性。 此参数没有默认值，必须为其提供一个值。  
   
@@ -39,9 +39,9 @@ ms.locfileid: "72250173"
 ## <a name="to-correct-this-error"></a>更正此错误  
   
 - 如果你需要 CLS 符合性，请将你的重载定义为与其他方法不同，而不只是此帮助页上提到的更改。
-- 如果要求重载仅在此帮助页上引用的更改中有所不同，请从其定义中删除 @no__t 0，或将其标记为 `<CLSCompliant(False)>`。
+- 如果要求重载只是此帮助页上提到的更改不同，请从其定义中删除 <xref:System.CLSCompliantAttribute> 或将其标记为 `<CLSCompliant(False)>`。
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [过程重载](../../programming-guide/language-features/procedures/procedure-overloading.md)
-- [重载](../modifiers/overloads.md)
+- [Overloads](../modifiers/overloads.md)

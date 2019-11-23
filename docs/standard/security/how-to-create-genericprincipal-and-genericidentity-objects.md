@@ -15,14 +15,14 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1f768242bffe619051779f87e950138ae9fcec6c
 ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71353182"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>如何：创建 GenericPrincipal 和 GenericIdentity 对象
 
-可以将 <xref:System.Security.Principal.GenericIdentity> 类与 @no__t 类结合使用，以创建独立于 Windows 域的授权方案。
+可以将 <xref:System.Security.Principal.GenericIdentity> 类与 <xref:System.Security.Principal.GenericPrincipal> 类结合使用，以创建独立于 Windows 域的授权方案。
 
 ### <a name="to-create-a-genericprincipal-object"></a>创建 GenericPrincipal 对象
 
@@ -48,7 +48,7 @@ ms.locfileid: "71353182"
     GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);
     ```
 
-3. 使用以下代码将主体附加到当前线程中。 这在以下情况下很有用：必须验证主体几次，必须由应用程序中运行的其他代码验证，或者必须由 <xref:System.Security.Permissions.PrincipalPermission> 对象验证。 不将主体附加到线程中，仍可对主体对象执行基于角色的验证。 有关详细信息，请参阅[替换主体对象](../../../docs/standard/security/replacing-a-principal-object.md)。
+3. 使用以下代码将主体附加到当前线程中。 这在以下情况下很有用：必须验证主体多次，必须由应用程序中运行的其他代码验证，或者必须由 <xref:System.Security.Permissions.PrincipalPermission> 对象验证。 不将主体附加到线程中，仍可对主体对象执行基于角色的验证。 有关详细信息，请参阅[替换主体对象](../../../docs/standard/security/replacing-a-principal-object.md)。
 
     ```vb
     Thread.CurrentPrincipal = myPrincipal
@@ -142,7 +142,7 @@ The IsAuthenticated is: True
 Is this a Manager? True
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Security.Principal.GenericIdentity>
 - <xref:System.Security.Principal.GenericPrincipal>

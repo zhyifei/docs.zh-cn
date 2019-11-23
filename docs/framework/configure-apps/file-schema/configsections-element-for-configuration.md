@@ -1,5 +1,5 @@
 ---
-title: <configuration> 的 <configSections> 元素
+title: <configSections> 的 <configuration> 元素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections
@@ -21,24 +21,24 @@ ms.locfileid: "73119018"
 包含配置节和命名空间声明。
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; **\<configSections >**
+&nbsp;&nbsp; **\<configSections>**
 
-## <a name="attributes"></a>特性
+## <a name="attributes"></a>Attributes
 
-None
+无
 
 ## <a name="parent-element"></a>父元素
 
-|     | 描述 |
+|     | 说明 |
 | --- | ----------- |
 | [ **\<configuration>** ](configuration-element.md) | 公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。 |
 
 ## <a name="child-elements"></a>子元素
 
-|     | 描述 |
+|     | 说明 |
 | --- | ----------- |
 | [ **\<部分 >** ](section-element.md) | 包含配置节声明。 |
-| [ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md) | 定义配置节的命名空间。 |
+| [ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md) | 定义配置节的命名空间。 |
 | [ **\<remove>** ](remove-element-for-configsections.md) | 删除预定义的节或节组。 |
 | [ **\<clear>** ](clear-element-for-configsections.md) | 清除所有之前定义的部分和节组。 |
 
@@ -66,6 +66,6 @@ None
 
 此元素可用于应用程序配置文件、计算机配置文件（*machine.config*）和不在应用程序目录级别的*web.config 文件。*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET Framework 的配置文件架构](index.md)

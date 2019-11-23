@@ -36,7 +36,7 @@ ms.locfileid: "73841281"
 
 第6章深入探讨了服务网格技术，其中包括对其体系结构和可用开源实现的讨论。
 
-## <a name="summary"></a>总结
+## <a name="summary"></a>摘要
 
 在本章中，我们讨论了云本机通信模式。 我们首先检查前端客户端如何与后端微服务通信。 在此过程中，我们讨论了 API 网关平台和实时通信。 然后介绍了微服务如何与其他后端服务进行通信。 我们同时探讨了跨服务的同步 HTTP 通信和异步消息传递。 我们介绍了 gRPC，这是云中的一项技术。 最后，我们引入了一种新的、快速发展的技术，该技术可简化微服务通信。
 
@@ -52,7 +52,7 @@ ms.locfileid: "73841281"
 
 接下来，我们将迁移到云本机系统中的分布式数据，以及它所呈现的优点和挑战。
 
-### <a name="references"></a>reference
+### <a name="references"></a>参考
 
 - [.NET 微服务：容器化 .NET 应用程序的体系结构](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
 

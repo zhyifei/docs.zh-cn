@@ -1,5 +1,5 @@
 ---
-title: Visual Basic 中的 Me、My、MyBase 和 MyClass
+title: Me、My、MyBase 和 MyClass
 ms.date: 07/20/2015
 f1_keywords:
 - MyClass
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - current instance [Visual Basic], Me keyword
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
-ms.openlocfilehash: 7df146e09a1d7cd730f4cf539d6823f7ced44bd1
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: a21dfeb12e8d99f5f8b8afede084846711c299ab
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002530"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347341"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Visual Basic 中的 Me、My、MyBase 和 MyClass
-`Me`、`My`、`MyBase` 和 Visual Basic 中的 @no__t 为类似的名称，但用途不同。 本主题将介绍其中的每个实体，以便将它们区分开来。  
+`Me`, `My`, `MyBase`, and `MyClass` in Visual Basic have similar names, but different purposes. This topic describes each of these entities in order to distinguish them.  
   
 ## <a name="me"></a>Me  
- @No__t 关键字提供了一种方法，用于引用当前正在执行代码的类或结构的特定实例。 `Me` 的行为类似于引用当前实例的对象变量或结构变量。 在将有关当前正在执行的类或结构实例的信息传递到另一个类、结构或模块中的过程时，使用 @no__t。  
+ The `Me` keyword provides a way to refer to the specific instance of a class or structure in which the code is currently executing. `Me` behaves like either an object variable or a structure variable referring to the current instance. Using `Me` is particularly useful for passing information about the currently executing instance of a class or structure to a procedure in another class, structure, or module.  
   
- 例如，假设你在模块中具有以下过程。  
+ For example, suppose you have the following procedure in a module.  
   
 ```vb  
 Sub ChangeFormColor(FormName As Form)  
@@ -43,20 +43,20 @@ Sub ChangeFormColor(FormName As Form)
 End Sub  
 ```  
   
- 可以调用此过程，并使用以下语句将 @no__t 0 类的当前实例作为参数传递。  
+ You can call this procedure and pass the current instance of the <xref:System.Windows.Forms.Form> class as an argument by using the following statement.  
   
 ```vb  
 ChangeFormColor(Me)  
 ```  
   
 ## <a name="my"></a>My  
- @No__t-0 功能提供对多个 .NET Framework 类的简单直观访问，使 Visual Basic 用户可以与计算机、应用程序、设置、资源等进行交互。  
+ The `My` feature provides easy and intuitive access to a number of .NET Framework classes, enabling the Visual Basic user to interact with the computer, application, settings, resources, and so on.  
   
 ## <a name="mybase"></a>MyBase  
- @No__t 的关键字的行为类似于引用类的当前实例的基类的对象变量。 `MyBase` 通常用于访问派生类中被重写或隐藏的基类成员。 `MyBase.New` 用于从派生类构造函数中显式调用基类构造函数。  
+ The `MyBase` keyword behaves like an object variable referring to the base class of the current instance of a class. `MyBase` is commonly used to access base class members that are overridden or shadowed in a derived class. `MyBase.New` is used to explicitly call a base class constructor from a derived class constructor.  
   
 ## <a name="myclass"></a>MyClass  
- @No__t 的关键字的行为类似于引用最初实现的类的当前实例的对象变量。 `MyClass` 类似于 `Me`，但其上的所有方法调用都被视为 `NotOverridable` 方法。  
+ The `MyClass` keyword behaves like an object variable referring to the current instance of a class as originally implemented. `MyClass` is similar to `Me`, but all method calls on it are treated as if the method were `NotOverridable`.  
   
 ## <a name="see-also"></a>请参阅
 

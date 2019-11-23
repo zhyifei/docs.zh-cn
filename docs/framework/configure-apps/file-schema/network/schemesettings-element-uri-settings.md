@@ -13,8 +13,8 @@ ms.locfileid: "71697760"
 指定如何分析特定方案的 <xref:System.Uri>。  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t **\<schemeSettings >**  
+[ **\<uri** &nbsp;&nbsp;>](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<schemeSettings >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -23,15 +23,15 @@ ms.locfileid: "71697760"
 </schemeSettings>  
 ```  
   
-## <a name="attributes-and-elements"></a>特性和元素  
+## <a name="attributes-and-elements"></a>属性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>特性  
- None  
+### <a name="attributes"></a>Attributes  
+ 无  
   
 ### <a name="child-elements"></a>子元素  
   
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[add](add-element-for-schemesettings-uri-settings.md)|为方案名称添加方案设置。|  
 |[clear](clear-element-for-schemesettings-uri-settings.md)|清除所有现有方案设置。|  
@@ -39,12 +39,12 @@ ms.locfileid: "71697760"
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[oma-uri](uri-element-uri-settings.md)|包含指定 .NET Framework 如何处理使用统一资源标识符（Uri）表示的 web 地址的设置。|  
   
 ## <a name="remarks"></a>备注  
- 默认情况下，在执行路径压缩之前，@no__t 0 类会取消转义百分号编码的路径分隔符。 这是作为一种安全机制实现的，针对以下攻击：  
+ 默认情况下，在执行路径压缩之前，<xref:System.Uri?displayProperty=nameWithType> 类会取消转义百分号编码的路径分隔符。 这是作为一种安全机制实现的，针对以下攻击：  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -52,7 +52,7 @@ ms.locfileid: "71697760"
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- 出于此原因，@no__t 0 类首先取消转义路径分隔符，然后应用路径压缩。 将上述恶意 URL 传递到 <xref:System.Uri?displayProperty=nameWithType> 类构造函数的结果将生成以下 URI：  
+ 出于此原因，<xref:System.Uri?displayProperty=nameWithType> 类首先取消转义路径分隔符，然后应用路径压缩。 将上述恶意 URL 传递到 <xref:System.Uri?displayProperty=nameWithType> 类构造函数的结果将生成以下 URI：  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -83,7 +83,7 @@ ms.locfileid: "71697760"
 |验证文件||  
 |可以为空||  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>

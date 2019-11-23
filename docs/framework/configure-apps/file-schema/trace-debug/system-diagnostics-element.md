@@ -15,11 +15,11 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699199"
 ---
-# <a name="systemdiagnostics-element"></a>0system > 元素的 @no__t
+# <a name="systemdiagnostics-element"></a>\<> 元素
 指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **\<system >**  
+&nbsp;&nbsp; **\<的 >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -28,15 +28,15 @@ ms.locfileid: "71699199"
 </system.diagnostics>  
 ```  
   
-## <a name="attributes-and-elements"></a>特性和元素  
+## <a name="attributes-and-elements"></a>属性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a>Attributes  
  无。  
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |[\<assert>](assert-element.md)|指定调用 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 方法时是否显示消息框；另外指定要写入消息的文件的名称。|  
 |[\<performanceCounters>](performancecounters-element.md)|指定由性能计数器共享的全局内存的大小。|  
@@ -47,15 +47,15 @@ ms.locfileid: "71699199"
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何在 **\<system >** 元素中嵌入跟踪开关和跟踪侦听器。 @No__t-0 trace 开关设置为 @no__t 级别。 跟踪侦听器 @no__t 创建一个名为 @no__t 的文件，并将输出写入文件。  
+ 下面的示例演示如何在 **\<diagnostics >** 元素中嵌入跟踪开关和跟踪侦听器。 `General` trace 开关设置为 <xref:System.Diagnostics.TraceLevel> 级别。 跟踪侦听器 `myListener` 创建一个名为 `MyListener.log` 的文件，并将输出写入文件。  
   
 > [!NOTE]
-> 在 .NET Framework 2.0 版中，你可以使用文本指定开关值。 例如，你可以为 @no__t 指定 `true`，或者使用表示枚举值的文本，例如 `Error` 。 行 `<add name="myTraceSwitch" value="Error" />` 等于 `<add name="myTraceSwitch" value="1" />`。  
+> 在 .NET Framework 2.0 版中，你可以使用文本指定开关值。 例如，你可以为 <xref:System.Diagnostics.BooleanSwitch> 指定 `true` 或使用表示枚举值的文本，例如 <xref:System.Diagnostics.TraceSwitch>的 `Error`。 行 `<add name="myTraceSwitch" value="Error" />` 等于 `<add name="myTraceSwitch" value="1" />`。  
   
 ```xml  
 <configuration>  
@@ -72,7 +72,7 @@ ms.locfileid: "71699199"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>

@@ -1,5 +1,5 @@
 ---
-title: '>>= 运算符 (Visual Basic)'
+title: '>>= 运算符'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.>>=
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 - '>>= operator [Visual Basic]'
 ms.assetid: 2bcd9abb-7a8c-4229-b75d-8816ff1dc700
-ms.openlocfilehash: 08d4e251a96ca387a709319e752351db6825d9e8
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: cad021c7730782d6233c60841483df7173308dc1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701346"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351999"
 ---
-# <a name="-operator-visual-basic"></a>> > = 运算符（Visual Basic）
-对变量或属性的值执行算术右移位，并将结果赋回给变量或属性。  
+# <a name="-operator-visual-basic"></a>>>= Operator (Visual Basic)
+Performs an arithmetic right shift on the value of a variable or property and assigns the result back to the variable or property.  
   
 ## <a name="syntax"></a>语法  
   
@@ -28,23 +28,23 @@ variableorproperty >>= amount
   
 ## <a name="parts"></a>部件  
  `variableorproperty`  
- 必需。 整型类型的变量或属性（`SByte`、`Byte`、`Short`、`UShort`、`Integer`、`UInteger`、`Long` 或 @no__t 7）。  
+ 必须的。 Variable or property of an integral type (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`).  
   
  `amount`  
- 必需。 扩大到 `Integer` 的数据类型的数值表达式。  
+ 必须的。 Numeric expression of a data type that widens to `Integer`.  
   
 ## <a name="remarks"></a>备注  
- @No__t-0 运算符左侧的元素可以是简单的标量变量、属性或数组元素。 变量或属性不能是[只读](../../../visual-basic/language-reference/modifiers/readonly.md)的。  
+ The element on the left side of the `>>=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- @No__t-0 运算符首先对变量或属性的值执行算术右移位运算。 然后，运算符将该操作的结果赋给变量或属性。  
+ The `>>=` operator first performs an arithmetic right shift on the value of the variable or property. The operator then assigns the result of that operation back to the variable or property.  
   
- 算术移位不是循环的，这意味着，不会在另一端重新引入结果的末尾以外的位。 在算术右移位时，将丢弃超出最右位位置的位，并将最左侧的位传播到左端空出的位位置。 这意味着，如果 @no__t 为负值，则空出的位置将设置为1。 如果 @no__t 为正值，或者其数据类型为无符号类型，则空出位置将设置为零。  
+ Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end. In an arithmetic right shift, the bits shifted beyond the rightmost bit position are discarded, and the leftmost bit is propagated into the bit positions vacated at the left. This means that if `variableorproperty` has a negative value, the vacated positions are set to one. If `variableorproperty` is positive, or if its data type is an unsigned type, the vacated positions are set to zero.  
   
 ## <a name="overloading"></a>重载  
- [> > 运算符](../../../visual-basic/language-reference/operators/right-shift-operator.md)可*重载*，这意味着当操作数具有该类或结构的类型时，该类或结构可以重新定义其行为。 重载 `>>` 运算符会影响 @no__t 1 运算符的行为。 如果你的代码在重载 @no__t 的类或结构上使用 `>>=`，请确保了解其重新定义的行为。 有关详细信息，请参阅 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ The [>> Operator](../../../visual-basic/language-reference/operators/right-shift-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `>>` operator affects the behavior of the `>>=` operator. If your code uses `>>=` on a class or structure that overloads `>>`, be sure you understand its redefined behavior. 有关更多信息，请参见 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用 `>>=` 运算符将 @no__t 1 变量的位模式向右移动指定的量，并将结果赋给该变量。  
+ The following example uses the `>>=` operator to shift the bit pattern of an `Integer` variable right by the specified amount and assign the result to the variable.  
   
  [!code-vb[VbVbalrOperators#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#15)]  
   

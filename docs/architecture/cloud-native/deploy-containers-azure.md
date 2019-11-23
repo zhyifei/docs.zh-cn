@@ -69,7 +69,7 @@ docker rmi myregistry.azurecr.io/mycontainer:v1
 
 - 缩放
 - 身份验证
-- 网络
+- 联网
 - 监视
 - Tags
 
@@ -103,7 +103,7 @@ az aks use-dev-spaces -g my-aks-resource-group -n MyAKSCluster
 ![连接到 Visual Studio 中的 Azure Dev Spaces](./media/azure-dev-spaces-visual-studio-launchsettings.png)
 **图 3-12**。 在 Visual Studio 中连接到 Azure Dev Spaces
 
-## <a name="references"></a>reference
+## <a name="references"></a>参考
 
 - [未的版本](https://martinfowler.com/bliki/CanaryRelease.html)
 - [Azure Dev Spaces 与 VS Code](https://docs.microsoft.com/azure/dev-spaces/quickstart-netcore)

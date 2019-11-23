@@ -21,7 +21,7 @@ ms.locfileid: "73840747"
 - 大多数组织已经依赖于 Azure AD 一定程度上。
 - NTLM 哈希的双重哈希可确保泄露不会允许在本地 Active Directory 中使用的凭据。
 
-## <a name="references"></a>reference
+## <a name="references"></a>参考
 
 - [身份验证基础知识](https://docs.microsoft.com/azure/active-directory/develop/authentication-scenarios)
 - [访问令牌和声明](https://docs.microsoft.com/azure/active-directory/develop/access-tokens)

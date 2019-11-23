@@ -25,14 +25,14 @@ helpviewer_keywords:
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
 ms.openlocfilehash: d95feec3a976a38c92a215f6da58ae6324085fe8
 ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71696870"
 ---
 # <a name="user-defined-data-type"></a>用户定义的数据类型
 
-以您定义的格式保存数据。 @No__t-0 语句定义格式。
+以您定义的格式保存数据。 `Structure` 语句定义格式。
 
 以前版本的 Visual Basic 支持用户定义的类型（UDT）。 当前版本将 UDT 扩展到*结构*。 结构是一种或多种数据类型*成员*的串联。 Visual Basic 将结构视为单个单元，但你也可以单独访问其成员。
 
@@ -44,9 +44,9 @@ ms.locfileid: "71696870"
 
 ## <a name="declaration-format"></a>声明格式
 
-结构声明以[Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)开头，以 `End Structure` 语句结束。 @No__t-0 语句提供结构的名称，该名称也是结构正在定义的数据类型的标识符。 代码的其他部分可以使用此标识符来声明变量、参数和函数返回值，使其成为此结构的数据类型。
+结构声明以[Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)开头，以 `End Structure` 语句结束。 `Structure` 语句提供结构的名称，该名称也是结构正在定义的数据类型的标识符。 代码的其他部分可以使用此标识符来声明变量、参数和函数返回值，使其成为此结构的数据类型。
 
-@No__t-0 和 `End Structure` 语句之间的声明定义结构的成员。
+`Structure` 和 `End Structure` 语句之间的声明定义结构的成员。
 
 ## <a name="member-access-levels"></a>成员访问级别
 
@@ -54,7 +54,7 @@ ms.locfileid: "71696870"
 
 ## <a name="programming-tips"></a>编程提示
 
-- **内存消耗。** 与所有复合数据类型一样，不能通过将其成员的标称存储分配相加来安全地计算结构的总内存消耗量。 而且，不能安全地假设内存中的存储顺序与声明顺序相同。 如果需要控制结构的存储布局，则可以将 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性应用于 @no__t 语句。
+- **内存消耗。** 与所有复合数据类型一样，不能通过将其成员的标称存储分配相加来安全地计算结构的总内存消耗量。 而且，不能安全地假设内存中的存储顺序与声明顺序相同。 如果需要控制结构的存储布局，则可以将 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 特性应用于 `Structure` 语句。
 
 - **互操作注意事项。** 如果与不是为 .NET Framework 编写的组件（如自动化或 COM 对象）交互，请记住，其他环境中的用户定义类型与 Visual Basic 结构类型不兼容。
 
@@ -62,7 +62,7 @@ ms.locfileid: "71696870"
 
 - **键入字符。** 结构数据类型没有文本类型字符或标识符类型字符。
 
-- **Framework 类型。** .NET Framework 中没有相应的类型。 所有结构都继承自 .NET Framework 类 <xref:System.ValueType?displayProperty=nameWithType>，但没有任何单独的结构对应于 <xref:System.ValueType?displayProperty=nameWithType>。
+- **Framework 类型。** .NET Framework 中没有相应的类型。 所有结构都继承自 .NET Framework 类 <xref:System.ValueType?displayProperty=nameWithType>，但没有单个结构与 <xref:System.ValueType?displayProperty=nameWithType>相对应。
 
 ## <a name="example"></a>示例
 
@@ -76,12 +76,12 @@ ms.locfileid: "71696870"
 End Structure
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ValueType>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - [数据类型](../../../visual-basic/language-reference/data-types/index.md)
-- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Widening](../../../visual-basic/language-reference/modifiers/widening.md)

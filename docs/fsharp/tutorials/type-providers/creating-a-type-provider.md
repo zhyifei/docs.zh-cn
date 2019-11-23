@@ -1,19 +1,19 @@
 ---
 title: 教程：创建类型提供程序
 description: 了解如何在3.0 中F# F#创建自己的类型提供程序，具体方法是检查几个简单的类型提供程序来说明基本概念。
-ms.date: 02/02/2019
-ms.openlocfilehash: 8d1a1fedf03437ccbacd40616cc7dc3e1da435b2
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.date: 11/04/2019
+ms.openlocfilehash: 8df893669b8ee04bad366dbe42a55c83d1f5a8fe
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214272"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968375"
 ---
 # <a name="tutorial-create-a-type-provider"></a>教程：创建类型提供程序
 
 中F#的类型提供程序机制是其对信息丰富编程的支持的重要组成部分。 本教程介绍了如何创建自己的类型提供程序，逐步讲解如何开发几个简单的类型提供程序来说明基本概念。 有关中F#的类型提供程序机制的详细信息，请参阅[类型提供程序](index.md)。
 
-F#生态系统包含一系列常用的 Internet 和企业数据服务的类型提供程序。 例如:
+F#生态系统包含一系列常用的 Internet 和企业数据服务的类型提供程序。 例如：
 
 - [Fsharp.core](https://fsharp.github.io/FSharp.Data/)包含 JSON、XML、CSV 和 HTML 文档格式的类型提供程序。
 
@@ -53,7 +53,7 @@ F#生态系统包含一系列常用的 Internet 和企业数据服务的类型�
 
 ## <a name="a-simple-type-provider"></a>简单类型提供程序
 
-此示例为 HelloWorldTypeProvider，类似于`examples` [ F#类型提供程序 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)的目录中的示例。 提供程序提供了一个包含100个擦除类型的 "类型空间"，如以下代码所示， F#使用签名语法并省略除之外`Type1`的所有内容。 有关已擦除的类型的详细信息，请参阅本主题后面的有关已擦除的所[提供类型的详细](#details-about-erased-provided-types)信息。
+此示例为 HelloWorldTypeProvider，类似于[ F#类型提供程序 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)`examples` 目录中的示例。 提供程序提供了一个包含100个擦除类型的 "类型空间"，如以下代码所示， F#使用签名语法并省略除 `Type1`之外的所有内容的详细信息。 有关已擦除的类型的详细信息，请参阅本主题后面的有关已擦除的所[提供类型的详细](#details-about-erased-provided-types)信息。
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -146,7 +146,7 @@ obj2.InstanceProperty
 let data1 = Samples.HelloWorldTypeProvider.Type1.NestedType.StaticProperty35
 ```
 
-然后，在该类型提供程序`Samples.HelloWorldTypeProvider`生成的命名空间下查找类型。
+然后，在该类型提供程序生成的 `Samples.HelloWorldTypeProvider` 命名空间下查找类型。
 
 重新编译提供程序之前，请确保已关闭使用提供程序 DLL 的所有 Visual Studio F#和 Interactive 实例。 否则，将发生生成错误，因为输出 DLL 将被锁定。
 
@@ -162,9 +162,9 @@ fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
-作为替代方法，请打开 Visual Studio，打开 "调试" 菜单`Debug/Attach to process…`，选择并附加到`devenv`正在编辑脚本的其他进程。 通过使用此方法，您可以通过以交互方式将表达式键入到第二个实例（使用完整的 IntelliSense 和其他功能），更轻松地定位类型提供程序中的特定逻辑。
+作为替代方法，请打开 Visual Studio，打开 "调试" 菜单，选择 "`Debug/Attach to process…`"，并附加到正在编辑脚本的其他 `devenv` 进程。 通过使用此方法，您可以通过以交互方式将表达式键入到第二个实例（使用完整的 IntelliSense 和其他功能），更轻松地定位类型提供程序中的特定逻辑。
 
-可以禁用仅我的代码调试，以便更好地识别生成的代码中的错误。 有关如何启用或禁用此功能的信息，请参阅[使用调试器在代码中导航](/visualstudio/debugger/navigating-through-code-with-the-debugger)。 此外，还可以通过打开`Debug`菜单，然后选择`Exceptions` "Ctrl + Alt + `Exceptions` E 键" 打开对话框，来设置第一次异常捕获。 在该对话框的 "" `Common Language Runtime Exceptions`下，选中`Thrown`相应的复选框。
+可以禁用仅我的代码调试，以便更好地识别生成的代码中的错误。 有关如何启用或禁用此功能的信息，请参阅[使用调试器在代码中导航](/visualstudio/debugger/navigating-through-code-with-the-debugger)。 此外，还可以通过打开 "`Debug`" 菜单，然后选择 "`Exceptions`" 或按 Ctrl + Alt + E 键打开 `Exceptions` 对话框，来设置第一次异常捕获。 在该对话框中的 "`Common Language Runtime Exceptions`下，选择" `Thrown` "复选框。
 
 ### <a name="implementation-of-the-type-provider"></a>类型提供程序的实现
 
@@ -177,7 +177,7 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
 
 此类型必须是公共的，并且必须使用[TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947)属性进行标记，以便编译器在单独F#的项目引用包含该类型的程序集时识别该类型提供程序。 *Config*参数是可选的，如果存在，则包含F#编译器创建的类型提供程序实例的上下文配置信息。
 
-接下来，实现[ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f)接口。 在这种情况下，将`TypeProviderForNamespaces` `ProvidedTypes` API 中的类型用作基类型。 此帮助器类型可以提供积极提供的命名空间的有限集合，其中每个命名空间都直接包含有限数量的固定、积极提供的类型。 在此上下文中，提供程序*积极*将生成类型，即使它们不需要或不使用也是如此。
+接下来，实现[ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f)接口。 在这种情况下，可将 `ProvidedTypes` API 中的 `TypeProviderForNamespaces` 类型用作基类型。 此帮助器类型可以提供积极提供的命名空间的有限集合，其中每个命名空间都直接包含有限数量的固定、积极提供的类型。 在此上下文中，提供程序*积极*将生成类型，即使它们不需要或不使用也是如此。
 
 ```fsharp
 inherit TypeProviderForNamespaces(config)
@@ -217,7 +217,7 @@ do()
 
 ### <a name="providing-one-type-and-its-members"></a>提供一种类型及其成员
 
-`makeOneProvidedType`函数执行提供一种类型的实际工作。
+`makeOneProvidedType` 函数执行提供一种类型的实际工作。
 
 ```fsharp
 let makeOneProvidedType (n:int) =
@@ -236,7 +236,7 @@ let t = ProvidedTypeDefinition(thisAssembly, namespaceName,
 
 您应注意以下几点：
 
-- 此提供的类型会被清除。  由于您指示基类型为`obj`，因此，实例将在编译的代码中显示为类型为[obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7)的值。
+- 此提供的类型会被清除。  因为您指示基类型是 `obj`的，所以实例将在编译的代码中显示为类型为[obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7)的值。
 
 - 指定非嵌套类型时，必须指定程序集和命名空间。 对于已擦除的类型，程序集应为类型提供程序程序集本身。
 
@@ -255,7 +255,7 @@ let staticProp = ProvidedProperty(propertyName = "StaticProperty",
                                   getterCode = (fun args -> <@@ "Hello!" @@>))
 ```
 
-获取此属性的计算结果将始终为字符串 "Hello！"。 属性`GetterCode`的用于使用F#引号，表示宿主编译器为获取属性而生成的代码。 有关报价的详细信息，请参阅[代码引用F#（）](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155)。
+获取此属性的计算结果将始终为字符串 "Hello！"。 属性的 `GetterCode` 使用F#引号，表示宿主编译器为获取属性而生成的代码。 有关报价的详细信息，请参阅[代码引用F#（）](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155)。
 
 将 XML 文档添加到属性。
 
@@ -276,7 +276,7 @@ let ctor = ProvidedConstructor(parameters = [ ],
                                invokeCode = (fun args -> <@@ "The object data" :> obj @@>))
 ```
 
-构造`InvokeCode`函数的返回一个F#引号，表示调用构造函数时宿主编译器生成的代码。 例如，可以使用以下构造函数：
+构造函数的 `InvokeCode` 返回一个F#引号，表示调用构造函数时宿主编译器生成的代码。 例如，可以使用以下构造函数：
 
 ```fsharp
 new Type10()
@@ -300,13 +300,13 @@ ProvidedConstructor(parameters = [ ProvidedParameter("data",typeof<string>) ],
                     invokeCode = (fun args -> <@@ (%%(args.[0]) : string) :> obj @@>))
 ```
 
-构造`InvokeCode`函数的再次返回一个F#引号，该引号表示宿主编译器为对方法的调用而生成的代码。 例如，可以使用以下构造函数：
+构造函数的 `InvokeCode` 再次返回一个F#引号，表示宿主编译器为对方法的调用而生成的代码。 例如，可以使用以下构造函数：
 
 ```fsharp
 new Type10("ten")
 ```
 
-使用基础数据 "10" 创建所提供类型的实例。 您可能已注意到该`InvokeCode`函数返回了一个引号。 此函数的输入为表达式列表，每个构造函数参数一个。 在这种情况下，可在中`args.[0]`找到表示单个参数值的表达式。 对构造函数的调用的代码会将返回值强制转换为已清除`obj`的类型。 将第二个提供的构造函数添加到类型后，将创建一个提供的实例属性：
+使用基础数据 "10" 创建所提供类型的实例。 您可能已注意到 `InvokeCode` 函数返回了一个引号。 此函数的输入为表达式列表，每个构造函数参数一个。 在这种情况下，可以在 `args.[0]`中使用表示单个参数值的表达式。 对构造函数的调用的代码会将返回值强制转换为删除的类型 `obj`。 将第二个提供的构造函数添加到类型后，将创建一个提供的实例属性：
 
 ```fsharp
 let instanceProp =
@@ -318,7 +318,7 @@ instanceProp.AddXmlDocDelayed(fun () -> "This is an instance property")
 t.AddMember instanceProp
 ```
 
-获取此属性将返回字符串的长度，即表示形式对象。 属性`GetterCode`将返回一个F#指定宿主编译器生成以获取属性的代码的报价。 与`InvokeCode`一样， `GetterCode`该函数返回一个引号。 宿主编译器使用参数列表调用此函数。 在这种情况下，参数只包含表示正在调用 getter 的实例的单个表达式，你可以使用`args.[0]`访问该实例。 `GetterCode`然后，将接合的实现转换为已删除类型`obj`的结果引用，并使用强制转换来满足编译器用于检查对象是否为字符串的类型的机制。 下一部分`makeOneProvidedType`提供了包含一个参数的实例方法。
+获取此属性将返回字符串的长度，即表示形式对象。 `GetterCode` 属性返回一个F#引号，该引号指定宿主编译器为获取属性而生成的代码。 与 `InvokeCode`一样，`GetterCode` 函数返回一个引号。 宿主编译器使用参数列表调用此函数。 在这种情况下，参数只包含表示正在调用 getter 的实例的单个表达式，可以使用 `args.[0]`访问该实例。 然后，`GetterCode` 的实现在结果引用中接合 `obj`，并使用强制转换来满足编译器用于检查对象是否为字符串的类型的机制。 `makeOneProvidedType` 的下一部分提供了包含一个参数的实例方法。
 
 ```fsharp
 let instanceMeth =
@@ -341,19 +341,21 @@ t.AddMembersDelayed(fun () ->
 
   nestedType.AddMembersDelayed (fun () ->
     let staticPropsInNestedType =
-      [ for i in 1 .. 100 do
-          let valueOfTheProperty = "I am string "  + string i
-
-          let p =
-            ProvidedProperty(propertyName = "StaticProperty" + string i,
-              propertyType = typeof<string>,
-              isStatic = true,
-              getterCode= (fun args -> <@@ valueOfTheProperty @@>))
-
-          p.AddXmlDocDelayed(fun () ->
-              sprintf "This is StaticProperty%d on NestedType" i)
-
-          yield p ]
+      [
+          for i in 1 .. 100 ->
+              let valueOfTheProperty = "I am string "  + string i
+    
+              let p =
+                ProvidedProperty(propertyName = "StaticProperty" + string i,
+                  propertyType = typeof<string>,
+                  isStatic = true,
+                  getterCode= (fun args -> <@@ valueOfTheProperty @@>))
+    
+              p.AddXmlDocDelayed(fun () ->
+                  sprintf "This is StaticProperty%d on NestedType" i)
+    
+              p
+      ]
 
     staticPropsInNestedType)
 
@@ -370,7 +372,7 @@ t.AddMembersDelayed(fun () ->
 
 - 当你为信息空间编写提供程序时，这些信息空间非常大且相互互连，因此无法为信息空间生成真实的 .NET 类型。
 
-在此示例中，每个提供的类型都`obj`将被清除为类型，并且该类型的所有`obj`使用将在编译的代码中显示为类型。 事实上，这些示例中的基础对象是字符串，但该类型在 .net 编译的`System.Object`代码中显示为。 与类型擦除的所有使用一样，可以使用显式装箱、取消装箱和强制转换为破坏的已擦除类型。 在这种情况下，当使用对象时，可能会导致无效的强制转换异常。 提供程序运行时可以定义自己的专用表示类型，以帮助防止出现 false 表示形式。 不能在自身中定义F#已删除的类型。 仅可删除所提供的类型。 您必须了解使用类型提供程序的已擦除类型或提供擦除的类型的提供程序的各种后果，这两者都是不切实际的。 擦除的类型没有真正的 .NET 类型。 因此，不能对该类型执行准确的反射，如果使用运行时强制转换和依赖于确切运行时类型语义的其他技术，则可能破坏已擦除的类型。 在运行时，通常会导致类型强制转换异常。
+在此示例中，每个提供的类型都将被清除为类型 `obj`，并且该类型的所有使用将在编译的代码中显示为类型 `obj`。 事实上，这些示例中的基础对象是字符串，但该类型在 .NET 编译的代码中显示为 `System.Object`。 与类型擦除的所有使用一样，可以使用显式装箱、取消装箱和强制转换为破坏的已擦除类型。 在这种情况下，当使用对象时，可能会导致无效的强制转换异常。 提供程序运行时可以定义自己的专用表示类型，以帮助防止出现 false 表示形式。 不能在自身中定义F#已删除的类型。 仅可删除所提供的类型。 您必须了解使用类型提供程序的已擦除类型或提供擦除的类型的提供程序的各种后果，这两者都是不切实际的。 擦除的类型没有真正的 .NET 类型。 因此，不能对该类型执行准确的反射，如果使用运行时强制转换和依赖于确切运行时类型语义的其他技术，则可能破坏已擦除的类型。 在运行时，通常会导致类型强制转换异常。
 
 ### <a name="choosing-representations-for-erased-provided-types"></a>为已清除的提供的类型选择表示形式
 
@@ -382,11 +384,11 @@ t.AddMembersDelayed(fun () ->
 
 - 所提供的已擦除类类型的擦除始终是该类型的继承链中的第一个非擦除基类型。
 
-- 所提供的已擦除接口类型的擦除始终`System.Object`为。
+- 始终 `System.Object`擦除所提供的已擦除接口类型。
 
 **提供的类型的表示形式有哪些？**
 
-- 已清除的提供的类型的可能的对象集称为其表示形式。 在本文档的示例中，所有已清除的提供的类型`Type1.Type100`的表示形式始终为字符串对象。
+- 已清除的提供的类型的可能的对象集称为其表示形式。 在本文档的示例中，所有已清除的提供的类型的表示形式 `Type1.Type100` 始终是字符串对象。
 
 提供的类型的所有表示形式都必须与提供的类型的擦除兼容。 （否则， F#编译器将在使用类型提供程序时提供错误，否则将生成无效的 .net 代码。 如果类型提供程序返回的代码给出无效的表示形式，则该类型提供程序无效。）
 
@@ -418,7 +420,7 @@ ProvidedConstructor(parameters = [],
     invokeCode= (fun args -> <@@ (new DataObject()) :> obj @@>))
 ```
 
-在这种情况下，可以（可选）通过在`baseType` `ProvidedTypeDefinition`构造时将此类型指定为，将此类型用作类型擦除：
+在这种情况下，可以（可选）将此类型用作类型擦除，方法是在构造 `ProvidedTypeDefinition`时将此类型指定为 `baseType`：
 
 ```fsharp
 ProvidedTypeDefinition(…, baseType = Some typeof<DataObject> )
@@ -436,13 +438,13 @@ ProvidedConstructor(…, InvokeCode = (fun args -> <@@ new DataObject() @@>), �
 
 ### <a name="type-checked-regex-provider"></a>类型检查 Regex 提供程序
 
-假设要实现用于在提供以下编译时保证的接口中包装 .net <xref:System.Text.RegularExpressions.Regex>库的正则表达式的类型提供程序：
+假设要实现一个类型提供程序，用于在提供以下编译时保证的接口中包装 .NET <xref:System.Text.RegularExpressions.Regex> 库的正则表达式：
 
 - 正在验证正则表达式是否有效。
 
 - 提供基于正则表达式中的任何组名称的匹配项的命名属性。
 
-本部分说明如何使用类型提供程序创建`RegexTyped`正则表达式模式参数化的类型以提供这些优点。 如果提供的模式无效，则编译器将报告错误，类型提供程序可以从模式中提取组，以便可以通过使用匹配的命名属性来访问这些组。 设计类型提供程序时，应考虑其公开的 API 应如何向最终用户显示，以及此设计如何转换为 .NET 代码。 下面的示例演示如何使用此类 API 获取区域代码的组件：
+本部分说明如何使用类型提供程序创建正则表达式模式参数化的 `RegexTyped` 类型，以提供这些优点。 如果提供的模式无效，则编译器将报告错误，类型提供程序可以从模式中提取组，以便可以通过使用匹配的命名属性来访问这些组。 设计类型提供程序时，应考虑其公开的 API 应如何向最终用户显示，以及此设计如何转换为 .NET 代码。 下面的示例演示如何使用此类 API 获取区域代码的组件：
 
 ```fsharp
 type T = RegexTyped< @"(?<AreaCode>^\d{3})-(?<PhoneNumber>\d{3}-\d{4}$)">
@@ -459,15 +461,15 @@ let result = reg.IsMatch("425-123-2345")
 let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 ```
 
-请注意以下几点:
+请注意以下几点：
 
-- 标准 Regex 类型表示参数化`RegexTyped`类型。
+- 标准 Regex 类型表示参数化 `RegexTyped` 类型。
 
-- `RegexTyped`构造函数导致调用 Regex 构造函数，并传入模式的静态类型参数。
+- `RegexTyped` 构造函数将导致调用 Regex 构造函数，并传入模式的静态类型参数。
 
-- `Match`方法的结果以标准<xref:System.Text.RegularExpressions.Match>类型表示。
+- `Match` 方法的结果由标准 <xref:System.Text.RegularExpressions.Match> 类型表示。
 
-- 每个命名组都生成提供的属性，而访问属性会导致在匹配的`Groups`集合上使用索引器。
+- 每个命名组都生成提供的属性，而访问属性会导致对匹配的 `Groups` 集合使用索引器。
 
 下面的代码是实现此类提供程序的逻辑的核心，此示例省略了向所提供类型添加所有成员的情况。 有关每个已添加成员的信息，请参阅本主题后面的相应部分。 有关完整的代码，请从 CodePlex 网站上的[ F# 3.0 示例包](https://archive.codeplex.com/?p=fsharp3sample)下载该示例。
 
@@ -525,21 +527,21 @@ type public CheckedRegexProvider() as this =
 do ()
 ```
 
-请注意以下几点:
+请注意以下几点：
 
-- 该类型提供程序采用两个静态参数`pattern`：（必需） `options`和（这是可选的，因为提供了默认值）。
+- 该类型提供程序采用两个静态参数： `pattern`是必需的，并且是可选的 `options`（因为提供了默认值）。
 
 - 提供静态参数后，可以创建正则表达式的实例。 如果正则表达式格式不正确，此实例将引发异常，并向用户报告此错误。
 
-- `DefineStaticParameters`在回调中，可以定义在提供参数后将返回的类型。
+- 在 `DefineStaticParameters` 回调中，可以定义在提供参数后将返回的类型。
 
-- 此代码会`HideObjectMethods`将设置为 true，以使 IntelliSense 体验保持简单。 此属性将导致`Equals`从提供`Finalize`的对象`GetType`的 IntelliSense 列表中抑制、 `GetHashCode`、和成员。
+- 此代码将 `HideObjectMethods` 设置为 true，以使 IntelliSense 体验保持精简。 此属性将导致从提供的对象的 IntelliSense 列表中抑制 `Equals`、`GetHashCode`、`Finalize`和 `GetType` 成员。
 
-- 使用`obj`作为方法的基类型，但会`Regex`将对象用作此类型的运行时表示形式，如下面的示例所示。
+- 使用 `obj` 作为方法的基类型，但你将使用 `Regex` 对象作为此类型的运行时表示形式，如下面的示例所示。
 
-- 当正则表达式`Regex`无效时，对构造函数的调用将引发。 <xref:System.ArgumentException> 编译器将捕获此异常并向用户报告编译时或 Visual Studio 编辑器中的错误消息。 此异常允许验证正则表达式，而无需运行应用程序。
+- 当正则表达式无效时，调用 `Regex` 构造函数将引发 <xref:System.ArgumentException>。 编译器将捕获此异常并向用户报告编译时或 Visual Studio 编辑器中的错误消息。 此异常允许验证正则表达式，而无需运行应用程序。
 
-上面定义的类型不太有用，因为它不包含任何有意义的方法或属性。 首先，添加一个静态`IsMatch`方法：
+上面定义的类型不太有用，因为它不包含任何有意义的方法或属性。 首先，添加一个静态 `IsMatch` 方法：
 
 ```fsharp
 let isMatch =
@@ -554,9 +556,9 @@ isMatch.AddXmlDoc "Indicates whether the regular expression finds a match in the
 ty.AddMember isMatch
 ```
 
-前面的代码定义了一个`IsMatch`方法，该方法采用字符串作为输入并`bool`返回。 唯一难用`args`的部分是`InvokeCode`定义中的参数。 在此示例中`args` ，是表示此方法的参数的引号列表。 如果该方法是实例方法，则第一个参数表示`this`参数。 但对于静态方法，参数只是方法的显式参数。 请注意，带引号的值的类型应与指定的返回类型（在本例中`bool`为）匹配。 另请注意，此代码使用`AddXmlDoc`方法来确保所提供的方法也具有可通过 IntelliSense 提供的有用文档。
+前面的代码定义了一个 `IsMatch`方法，该方法采用字符串作为输入并返回一个 `bool`。 唯一棘手的部分是在 `InvokeCode` 定义中使用 `args` 参数。 在此示例中，`args` 是表示此方法的参数的引号列表。 如果该方法是实例方法，则第一个参数表示 `this` 参数。 但对于静态方法，参数只是方法的显式参数。 请注意，带引号的值的类型应匹配指定的返回类型（在本例中为 `bool`）。 另请注意，此代码使用 `AddXmlDoc` 方法，以确保所提供的方法也具有可通过 IntelliSense 提供的有用文档。
 
-接下来，添加实例 Match 方法。 但是，此方法应返回提供`Match`的类型的值，以便能够以强类型方式访问组。 因此，首先声明`Match`类型。 由于此类型依赖于以静态参数形式提供的模式，因此，此类型必须嵌套在参数化类型定义中：
+接下来，添加实例 Match 方法。 但是，此方法应返回所提供的 `Match` 类型的值，以便能够以强类型方式访问组。 因此，首先声明 `Match` 类型。 由于此类型依赖于以静态参数形式提供的模式，因此，此类型必须嵌套在参数化类型定义中：
 
 ```fsharp
 let matchTy =
@@ -568,7 +570,7 @@ let matchTy =
 ty.AddMember matchTy
 ```
 
-然后，将一个属性添加到每个组的匹配类型。 在运行时，匹配项表示为<xref:System.Text.RegularExpressions.Match>值，因此，定义属性的引用必须<xref:System.Text.RegularExpressions.Match.Groups>使用索引属性来获取相关组。
+然后，将一个属性添加到每个组的匹配类型。 在运行时，匹配项表示为 <xref:System.Text.RegularExpressions.Match> 值，因此定义属性的引号必须使用 <xref:System.Text.RegularExpressions.Match.Groups> 索引属性来获取相关组。
 
 ```fsharp
 for group in r.GetGroupNames() do
@@ -583,9 +585,9 @@ for group in r.GetGroupNames() do
     matchTy.AddMember prop
 ```
 
-同样，请注意，将 XML 文档添加到提供的属性。 另请注意，如果`GetterCode`提供了函数，则可以读取属性; `SetterCode`如果提供了函数，则可以编写属性，因此，生成的属性是只读的。
+同样，请注意，将 XML 文档添加到提供的属性。 另请注意，如果提供了 `GetterCode` 函数，则可以读取属性; 如果提供了 `SetterCode` 函数，则可以编写属性，因此，生成的属性是只读的。
 
-现在，你可以创建返回此`Match`类型的值的实例方法：
+现在，你可以创建一个实例方法，该方法返回此 `Match` 类型的值：
 
 ```fsharp
 let matchMethod =
@@ -600,7 +602,7 @@ matchMeth.AddXmlDoc "Searches the specified input string for the first occurrenc
 ty.AddMember matchMeth
 ```
 
-由于您正在创建实例方法， `args.[0]`因此`RegexTyped`表示在其上调用方法的实例， `args.[1]`是输入参数。
+由于正在创建实例方法，因此 `args.[0]` 表示在其上调用方法的 `RegexTyped` 实例，`args.[1]` 是输入参数。
 
 最后，提供一个构造函数，以便可以创建提供的类型的实例。
 
@@ -615,7 +617,7 @@ ctor.AddXmlDoc("Initializes a regular expression instance.")
 ty.AddMember ctor
 ```
 
-构造函数只需擦除到标准 .net 正则表达式实例的创建，这会再次装箱到对象， `obj`因为它是所提供的类型的擦除。 通过此更改，本主题中前面指定的示例 API 用法按预期方式工作。 以下代码已完成，并且是最终的：
+构造函数只需擦除到标准 .NET 正则表达式实例的创建，该实例再次装箱到对象，因为 `obj` 是所提供的类型的擦除。 通过此更改，本主题中前面指定的示例 API 用法按预期方式工作。 以下代码已完成，并且是最终的：
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider
@@ -744,7 +746,7 @@ do ()
 |100.0|5.2|
 |150.0|6.4|
 
-本部分说明如何提供可用于获取`Distance`具有类型`float<meter>`的属性的行和`Time`类型`float<second>`的属性的类型。 为简单起见，进行了以下假设：
+本部分说明如何提供一个类型，该类型可用于获取具有类型 `float<meter>` 的 `Distance` 属性和 `float<second>`类型 `Time` 属性的行。 为简单起见，进行了以下假设：
 
 - 标头名称要么不小于单位，要么格式为 "Name （unit）" 且不包含逗号。
 
@@ -774,7 +776,7 @@ let (time:float) = row.[1]
 printfn "%f" (float time)
 ```
 
-最佳转换需要类型提供程序在类型提供程序的程序`CsvFile`集中定义实类型。 类型提供程序经常依赖几个帮助程序类型和方法来包装重要逻辑。 由于度量值会在运行时被清除，因此`float[]`可以使用作为行的已擦除类型。 编译器会将不同的列视为具有不同的度量值类型。 例如，我们的示例中的第一列的`float<meter>`类型为， `float<second>`第二列的类型为。 但是，清除的表示形式可能会变得非常简单。
+最佳转换需要类型提供程序在类型提供程序的程序集中定义实际 `CsvFile` 类型。 类型提供程序经常依赖几个帮助程序类型和方法来包装重要逻辑。 由于度量值会在运行时被清除，因此可以使用 `float[]` 作为行的已擦除类型。 编译器会将不同的列视为具有不同的度量值类型。 例如，本示例中的第一列的类型为 `float<meter>`，第二列的类型为 `float<second>`。 但是，清除的表示形式可能会变得非常简单。
 
 下面的代码显示了实现的核心。
 
@@ -783,10 +785,12 @@ printfn "%f" (float time)
 type CsvFile(filename) =
     // Cache the sequence of all data lines (all lines but the first)
     let data =
-        seq { for line in File.ReadAllLines(filename) |> Seq.skip 1 do
-                 yield line.Split(',') |> Array.map float }
+        seq {
+            for line in File.ReadAllLines(filename) |> Seq.skip 1 ->
+                line.Split(',') |> Array.map float
+        }
         |> Seq.cache
-    member __.Data = data
+    member _.Data = data
 
 [<TypeProvider>]
 type public MiniCsvProvider(cfg:TypeProviderConfig) as this =
@@ -875,9 +879,9 @@ type public MiniCsvProvider(cfg:TypeProviderConfig) as this =
 
 - 您可以使用传入到类型提供程序构造函数的[TypeProviderConfig](https://msdn.microsoft.com/library/1cda7b9a-3d07-475d-9315-d65e1c97eb44)值来解析相对文件名。
 
-- 您可以使用`AddDefinitionLocation`方法来定义所提供属性的位置。 因此，如果在提供`Go To Definition`的属性上使用，则将在 Visual Studio 中打开 CSV 文件。
+- 您可以使用 `AddDefinitionLocation` 方法来定义所提供属性的位置。 因此，如果对提供的属性使用 `Go To Definition`，则将在 Visual Studio 中打开 CSV 文件。
 
-- 您可以使用该`ProvidedMeasureBuilder`类型来查找 SI 单位并生成相关`float<_>`类型。
+- 您可以使用 `ProvidedMeasureBuilder` 类型查找 SI 单位并生成相关的 `float<_>` 类型。
 
 ### <a name="key-lessons"></a>关键课程
 
@@ -889,7 +893,7 @@ type public MiniCsvProvider(cfg:TypeProviderConfig) as this =
 
 ### <a name="a-look-at-the-compiled-code-for-erased-types"></a>查看已清除类型的已编译代码
 
-若要让你了解如何使用类型提供程序与发出的代码相对应的情况，请参阅以下函数，方法是使用`HelloWorldTypeProvider`本主题前面部分中使用的。
+若要告诉您如何使用该类型提供程序与发出的代码相对应的情况，请参阅下面的函数，方法是使用本主题前面使用的 `HelloWorldTypeProvider`。
 
 ```fsharp
 let function1 () =
@@ -925,13 +929,13 @@ IL_0017:  ret
 } // end of class Module1
 ```
 
-如示例所示，已清除类型`Type1` `InstanceProperty`和属性的所有提到，只保留对所涉及的运行时类型的操作。
+如示例所示，该类型的所有提及 `Type1` 和 `InstanceProperty` 属性已被清除，只保留对所涉及的运行时类型的操作。
 
 ### <a name="design-and-naming-conventions-for-type-providers"></a>类型提供程序的设计和命名约定
 
 在创作类型提供程序时，请遵循以下约定。
 
-**连接协议的提供程序**通常，数据和服务连接协议的大多数提供程序 dll 的名称（如 OData 或 SQL 连接）应以`TypeProvider`或`TypeProviders`结尾。 例如，使用类似于以下字符串的 DLL 名称：
+**连接协议的提供程序**通常，数据和服务连接协议的大多数提供程序 Dll 的名称（如 OData 或 SQL 连接）应以 `TypeProvider` 或 `TypeProviders`结束。 例如，使用类似于以下字符串的 DLL 名称：
 
 `Fabrikam.Management.BasicTypeProviders.dll`
 
@@ -956,7 +960,7 @@ IL_0017:  ret
   let regex = new RegexTyped<"a+b+a+b+">()
 ```
 
-**单独数据源**。 某些类型提供程序连接到单个专用数据源并只提供数据。 在这种情况下，应删除`TypeProvider`此后缀并使用标准的 .net 命名约定：
+**单独数据源**。 某些类型提供程序连接到单个专用数据源并只提供数据。 在这种情况下，应删除 `TypeProvider` 后缀并使用标准的 .NET 命名约定：
 
 ```fsharp
 #r "Fabrikam.Data.Freebase.dll"
@@ -964,7 +968,7 @@ IL_0017:  ret
 let data = Fabrikam.Data.Freebase.Astronomy.Asteroids
 ```
 
-有关详细信息，请参阅`GetConnection`本主题后面部分介绍的设计约定。
+有关详细信息，请参阅本主题后面所述的 `GetConnection` 设计约定。
 
 ### <a name="design-patterns-for-type-providers"></a>类型提供程序的设计模式
 
@@ -972,7 +976,7 @@ let data = Fabrikam.Data.Freebase.Astronomy.Asteroids
 
 #### <a name="the-getconnection-design-pattern"></a>GetConnection 设计模式
 
-大多数类型提供程序应编写为使用`GetConnection` fsharp.core 中的类型提供程序使用的模式，如以下示例所示：
+大多数类型提供程序应编写为使用 Fsharp.core 中的类型提供程序使用的 `GetConnection` 模式，如下面的示例所示：
 
 ```fsharp
 #r "Fabrikam.Data.WebDataStore.dll"
@@ -1020,14 +1024,14 @@ ProvidedType API 具有延迟版本的 AddMember。
 
 ### <a name="providing-array-types-and-generic-type-instantiations"></a>提供数组类型和泛型类型实例化
 
-通过在任何实例上使用`MakeArrayType`normal、 <xref:System.Type> `MakePointerType`和`MakeGenericType` ，可使提供的成员（其签名包括数组类型、byref 类型和泛型类型的实例化），其中`ProvidedTypeDefinitions`包括。
+通过在任何 <xref:System.Type>的实例上使用普通 `MakeArrayType`、`MakePointerType`和 `MakeGenericType`，使提供的成员（其签名包括数组类型、byref 类型和泛型类型的实例化），其中包括 `ProvidedTypeDefinitions`。
 
 > [!NOTE]
-> 在某些情况下，您可能必须使用中`ProvidedTypeBuilder.MakeGenericType`的帮助器。  有关更多详细信息，请参阅[类型提供程序 SDK 文档](https://github.com/fsprojects/FSharp.TypeProviders.SDK/blob/master/README.md#explicit-construction-of-code-makegenerictype-makegenericmethod-and-uncheckedquotations)。
+> 在某些情况下，您可能必须在 `ProvidedTypeBuilder.MakeGenericType`中使用帮助程序。  有关更多详细信息，请参阅[类型提供程序 SDK 文档](https://github.com/fsprojects/FSharp.TypeProviders.SDK/blob/master/README.md#explicit-construction-of-code-makegenerictype-makegenericmethod-and-uncheckedquotations)。
 
 ### <a name="providing-unit-of-measure-annotations"></a>提供度量单位批注
 
-ProvidedTypes API 提供了提供度量值注释的帮助器。 例如，若要提供类型`float<kg>`，请使用以下代码：
+ProvidedTypes API 提供了提供度量值注释的帮助器。 例如，若要提供类型 `float<kg>`，请使用以下代码：
 
 ```fsharp
   let measures = ProvidedMeasureBuilder.Default
@@ -1036,7 +1040,7 @@ ProvidedTypes API 提供了提供度量值注释的帮助器。 例如，若要�
   let float_kg = measures.AnnotateType(typeof<float>,[kg])
 ```
 
-  若要提供类型`Nullable<decimal<kg/m^2>>`，请使用以下代码：
+  若要提供类型 `Nullable<decimal<kg/m^2>>`，请使用以下代码：
 
 ```fsharp
   let kgpm2 = measures.Ratio(kg, measures.Square m)
@@ -1046,7 +1050,7 @@ ProvidedTypes API 提供了提供度量值注释的帮助器。 例如，若要�
 
 ### <a name="accessing-project-local-or-script-local-resources"></a>访问项目本地资源或脚本本地资源
 
-在构造过程中，可以为类型提供程序`TypeProviderConfig`的每个实例指定一个值。 此值包含提供程序的 "解析文件夹" （即，编译的项目文件夹或包含脚本的目录）、被引用程序集的列表和其他信息。
+在构造过程中，可以为类型提供程序的每个实例指定 `TypeProviderConfig` 值。 此值包含提供程序的 "解析文件夹" （即，编译的项目文件夹或包含脚本的目录）、被引用程序集的列表和其他信息。
 
 ### <a name="invalidation"></a>失效
 
@@ -1054,11 +1058,11 @@ ProvidedTypes API 提供了提供度量值注释的帮助器。 例如，若要�
 
 ### <a name="caching-schema-information"></a>缓存架构信息
 
-提供程序通常必须缓存对架构信息的访问。 应使用指定为静态参数或用户数据的文件名来存储缓存的数据。 架构缓存的一个示例是`LocalSchemaFile` `FSharp.Data.TypeProviders`程序集的类型提供程序中的参数。 在这些提供程序的实现中，此静态参数指示类型提供程序使用指定的本地文件中的架构信息，而不是通过网络访问数据源。 若要使用缓存的架构信息，还必须将静态参数`ForceUpdate`设置`false`为。 您可以使用类似的技术来启用联机和脱机数据访问。
+提供程序通常必须缓存对架构信息的访问。 应使用指定为静态参数或用户数据的文件名来存储缓存的数据。 `FSharp.Data.TypeProviders` 程序集的类型提供程序中的 `LocalSchemaFile` 参数就是架构缓存的一个示例。 在这些提供程序的实现中，此静态参数指示类型提供程序使用指定的本地文件中的架构信息，而不是通过网络访问数据源。 若要使用缓存的架构信息，还必须将静态参数 `ForceUpdate` 设置为 `false`。 您可以使用类似的技术来启用联机和脱机数据访问。
 
 ### <a name="backing-assembly"></a>支持程序集
 
-在编译`.dll`或`.exe`文件时，生成的类型的支持 .dll 文件将静态链接到生成的程序集中。 通过将中间语言（IL）类型定义和任何托管资源从支持程序集复制到最终程序集来创建此链接。 使用F# Interactive 时，不会复制后备 .dll 文件，而是将其直接加载到F#交互进程。
+编译 `.dll` 或 `.exe` 文件时，生成的类型的支持 .dll 文件将静态链接到生成的程序集。 通过将中间语言（IL）类型定义和任何托管资源从支持程序集复制到最终程序集来创建此链接。 使用F# Interactive 时，不会复制后备 .dll 文件，而是将其直接加载到F#交互进程。
 
 ### <a name="exceptions-and-diagnostics-from-type-providers"></a>类型提供程序中的异常和诊断
 
@@ -1068,7 +1072,7 @@ ProvidedTypes API 提供了提供度量值注释的帮助器。 例如，若要�
 
 - 类型提供程序无法报告警告。
 
-- 当在F#编译器、 F#开发环境或F#交互式环境中承载类型提供程序时，将捕获该提供程序的所有异常。 Message 属性始终是错误文本，并且不会显示任何堆栈跟踪。 如果要引发异常，可以引发以下示例： `System.NotSupportedException`、 `System.IO.IOException`、 `System.Exception`。
+- 当在F#编译器、 F#开发环境或F#交互式环境中承载类型提供程序时，将捕获该提供程序的所有异常。 Message 属性始终是错误文本，并且不会显示任何堆栈跟踪。 如果要引发异常，可以引发以下示例： `System.NotSupportedException`、`System.IO.IOException``System.Exception`。
 
 #### <a name="providing-generated-types"></a>提供生成的类型
 
@@ -1082,9 +1086,9 @@ type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/"
 
 F# 3.0 版本中的 ProvidedTypes-0.2 helper 代码仅限于提供生成的类型。 对于生成的类型定义，以下语句必须为 true：
 
-- `isErased`必须设置为`false`。
+- `isErased` 必须设置为 `false`。
 
-- 必须将生成的类型添加到新构造`ProvidedAssembly()`的，它表示生成的代码片段的容器。
+- 必须将生成的类型添加到新构造的 `ProvidedAssembly()`，它表示生成的代码片段的容器。
 
 - 提供程序必须有一个程序集，该程序集具有包含在磁盘上的匹配 .dll 文件的实际后备 .NET .dll 文件。
 
@@ -1094,9 +1098,9 @@ F# 3.0 版本中的 ProvidedTypes-0.2 helper 代码仅限于提供生成的类�
 
 ### <a name="provided-types-must-be-reachable"></a>提供的类型必须是可访问的
 
-应可从非嵌套类型访问所有提供的类型。 非嵌套类型是在对`TypeProviderForNamespaces`构造函数的调用或对`AddNamespace`的调用中提供的。 例如，如果提供程序提供类型`StaticClass.P : T`，则必须确保 T 为非嵌套类型或嵌套在一个类型下。
+应可从非嵌套类型访问所有提供的类型。 非嵌套类型是在对 `TypeProviderForNamespaces` 构造函数或对 `AddNamespace`的调用中提供的。 例如，如果提供程序提供 `StaticClass.P : T`类型，则必须确保 T 为非嵌套类型或嵌套在一个类型下。
 
-例如，某些提供程序有一个包含这些`DataTypes` `T1, T2, T3, ...`类型的静态类，例如。 否则，此错误表明找到了对程序集 A 中的类型 T 的引用，但无法在该程序集中找到该类型。 如果出现此错误，请验证是否可以从提供程序类型中访问所有子类型。 注意：这些`T1, T2, T3...`类型称为 "*动态*类型"。 请记住将其放在可访问的命名空间或父类型中。
+例如，某些提供程序有一个静态类，如 `DataTypes`，其中包含这些 `T1, T2, T3, ...` 类型。 否则，此错误表明找到了对程序集 A 中的类型 T 的引用，但无法在该程序集中找到该类型。 如果出现此错误，请验证是否可以从提供程序类型中访问所有子类型。 注意：这些 `T1, T2, T3...` 类型称为*即时*类型。 请记住将其放在可访问的命名空间或父类型中。
 
 ### <a name="limitations-of-the-type-provider-mechanism"></a>类型提供程序机制的限制
 
@@ -1132,7 +1136,7 @@ devenv /debugexe fsc.exe script.fsx
 
   您可以使用打印到 stdout 的日志记录。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [类型提供程序](index.md)
 - [类型提供程序 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK)

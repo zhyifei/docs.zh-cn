@@ -16,11 +16,11 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供聚合函数。 �
 
 ## <a name="avgexpression"></a>AVG （expression）
 
-返回集合中各值的平均值。 空值将被忽略。
+返回集合中各值的平均值。 将忽略 null 值。
 
-**参数**
+参数
 
-@No__t-0、`Int64`、`Double` 和 @no__t。
+`Int32`、`Int64`、`Double`和 `Decimal`。
 
 **返回值**
 
@@ -32,9 +32,9 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供聚合函数。 �
 
 ## <a name="checksum_aggcollection"></a>CHECKSUM_AGG （集合）
  
- 返回集合中各值的校验和。 空值将被忽略。
+ 返回集合中各值的校验和。 将忽略 null 值。
  
- **参数**
+ 参数
  
  集合（`Int32`）。
  
@@ -50,14 +50,14 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供聚合函数。 �
 
 以 `Int32` 形式返回集合中的项数。
 
-**参数**
+参数
 
-集合 @ no__t-0T >，其中 T 为以下类型之一：
+集合\<T >，其中 T 为以下类型之一：
 
 |   |   |   |   |
 |---|---|---|---|
 |`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
-|`Time`|`String`|`Binary`|`Guid` （在 SQL Server 2000 中未返回）|
+|`Time`|`String`|`Binary`|`Guid` （SQL Server 2000 中未返回）|
 
 **返回值**
 
@@ -71,14 +71,14 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供聚合函数。 �
  
 以 `bigint` 形式返回集合中的项数。
  
- **参数**
+ 参数
  
  集合（T），其中 T 为以下类型之一：
  
  |   |   |   |   |
 |---|---|---|---|
 |`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
-|`Time`|`String`|`Binary`|`Guid` （在 SQL Server 2000 中未返回）|
+|`Time`|`String`|`Binary`|`Guid` （SQL Server 2000 中未返回）|
 
 **返回值**
 
@@ -92,7 +92,7 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供聚合函数。 �
 
 返回集合中的最大值。
 
-**参数**
+参数
 
 集合（T），其中 T 为以下类型之一： 
 
@@ -113,7 +113,7 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供聚合函数。 �
 
 返回集合中的最小值。
 
-**参数**
+参数
 
 集合（T），其中 T 为以下类型之一： 
 
@@ -134,7 +134,7 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供聚合函数。 �
 
 返回指定表达式中所有值的统计标准偏差。
 
-**参数**
+参数
 
 集合（`Double`）。
 
@@ -150,7 +150,7 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供聚合函数。 �
 
 返回指定表达式中所有值的总体标准偏差。
 
-**参数**
+参数
 
 集合（`Double`）。
 
@@ -166,9 +166,9 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供聚合函数。 �
 
 返回集合中所有值的总和。
 
-**参数**
+参数
 
-集合（T），其中 T 为以下类型之一： `Int32`，`Int64`，`Double`，@no__t 为3。
+集合（T），其中 T 为以下类型之一： `Int32`、`Int64`、`Double``Decimal`。
 
 **返回值**
 
@@ -182,7 +182,7 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供聚合函数。 �
 
 返回指定表达式中所有值的方差。
 
-**参数**
+参数
 
 集合（`Double`）。
 
@@ -198,7 +198,7 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供聚合函数。 �
 
 返回指定表达式中所有值的总体方差。
 
-**参数**
+参数
 
 集合（`Double`）。
 
@@ -210,7 +210,7 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供聚合函数。 �
 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_varp)] 
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [聚合函数（Transact-sql）](/sql/t-sql/functions/aggregate-functions-transact-sql)
 - [实体 SQL 语言](./language-reference/entity-sql-language.md)

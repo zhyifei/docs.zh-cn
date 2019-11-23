@@ -23,7 +23,7 @@ ms.locfileid: "71833783"
  要对其执行分组的任何有效查询表达式。 `expression` 可以是属性或者是引用 FROM 子句所返回的属性的非聚合表达式。 GROUP BY 子句中的每一个表达式的求值结果必须为可比较相等性的类型。 这些类型通常为标量基元类型，如数字、字符串和日期。 不可按集合分组。  
   
 ## <a name="remarks"></a>备注  
- 如果 \<select list > 中包含聚合函数，则 GROUP BY 将计算每个组的汇总值。 指定 GROUP BY 时，选择列表中任何非聚合表达式内的每个属性名都应包含在 GROUP BY 列表中，或者 GROUP BY 表达式必须与选择列表表达式完全匹配。  
+ 如果 SELECT 子句中包含聚合函数 \<选择 list >，则 GROUP BY 将计算每个组的汇总值。 指定 GROUP BY 时，选择列表中任何非聚合表达式内的每个属性名都应包含在 GROUP BY 列表中，或者 GROUP BY 表达式必须与选择列表表达式完全匹配。  
   
 > [!NOTE]
 > 如果未指定 ORDER BY 子句，则使用 GROUP BY 子句返回的组没有任何特定的顺序。 若要指定特定的数据排序，建议始终使用 ORDER BY 子句。  
@@ -62,13 +62,13 @@ GROUP BY 1   -- BAD, a constant is not allowed
 ## <a name="example"></a>示例  
  下面的 Entity SQL 查询使用 GROUP BY 运算符来指定查询所返回的对象的分组。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1. 按照 [How 中的过程执行以下操作：执行返回 PrimitiveType Results @ no__t-0 的查询。  
+1. 按照[如何：执行返回 PrimitiveType 结果的查询](../how-to-execute-a-query-that-returns-primitivetype-results.md)中的过程进行操作。  
   
 2. 将以下查询作为参数传递给 `ExecutePrimitiveTypeQuery` 方法：  
   
  [!code-sql[DP EntityServices Concepts#GROUPBY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#groupby)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [实体 SQL 引用](entity-sql-reference.md)
 - [查询表达式](query-expressions-entity-sql.md)

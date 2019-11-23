@@ -56,7 +56,7 @@ ms.locfileid: "73841743"
 
 最后，为应用程序中的某些任务利用无服务器，增加了复杂性。 通常情况下，最好先以模块化、松散耦合的方式构建应用程序，然后确定是否有无服务器可提供的好处，这使得额外的复杂性更值得。 许多较小的应用程序在单一单一部署中运行良好，无需分布式应用程序体系结构的无服务器计算要求。
 
-## <a name="references"></a>reference
+## <a name="references"></a>参考
 
 - [了解无服务器冷启动](https://azure.microsoft.com/blog/understanding-serverless-cold-start/)
 - [准备好 Azure Functions 实例](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances)

@@ -1,5 +1,5 @@
 ---
-title: 如何：引用对象的当前实例（Visual Basic）
+title: 如何：引用对象的当前实例
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], object
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - current instance
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
-ms.openlocfilehash: 6c216dbc59bcad7a9f24bb01f856c3d29c288dbb
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 62b22a54904a45380052d3d81d9415517d4f8d3b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005665"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346886"
 ---
-# <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>如何：引用对象的当前实例（Visual Basic）
-对象的*当前实例*是当前在其中执行代码的实例。  
+# <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>如何：引用对象的当前实例 (Visual Basic)
+The *current instance* of an object is the instance in which the code is currently executing.  
   
- 使用 @no__t 的关键字来引用当前的实例。  
+ You use the `Me` keyword to refer to the current instance.  
   
-### <a name="to-refer-to-the-current-instance"></a>引用当前实例  
+### <a name="to-refer-to-the-current-instance"></a>To refer to the current instance  
   
-- 使用 @no__t 关键字，通常使用对象变量的名称。  
+- Use the `Me` keyword where you would normally use the name of an object variable.  
   
     ```vb  
     Me.ForeColor = System.Drawing.Color.Crimson  
     Me.Close()  
     ```  
   
-     尽管 @no__t 的行为与对象变量类似，但不能对其进行声明或向其分配任何内容。 `Me` 始终引用当前实例。  
+     Although `Me` behaves like an object variable, you cannot declare it or assign anything to it. `Me` always refers to the current instance.  
   
 ## <a name="see-also"></a>请参阅
 

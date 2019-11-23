@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
 ms.openlocfilehash: c74947e21de8ba26ffde01f6f28aea67346c2071
 ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72002072"
@@ -21,7 +21,7 @@ ms.locfileid: "72002072"
   
 ## <a name="returning-an-array-type-from-a-function-procedure"></a>从函数过程返回数组类型
 
-如果 @no__t 0 过程返回数组数据类型，则不能使用 @no__t 的名称将值存储在数组的元素中。 如果尝试执行此操作，编译器会将其解释为对 @no__t 的调用。 下面的示例生成编译器错误：
+如果 `Function` 过程返回数组数据类型，则不能使用 `Function` 名称将值存储在数组的元素中。 如果尝试执行此操作，编译器会将其解释为对 `Function`的调用。 下面的示例生成编译器错误：
   
 ```vb
 Function AllOnes(n As Integer) As Integer()
@@ -35,7 +35,7 @@ Function AllOnes(n As Integer) As Integer()
 End Function
 ```
 
-语句 @no__t 会生成编译器错误，因为它似乎使用错误数据类型（标量 `Integer` 而不是 @no__t 数组）的参数调用了 `AllOnes`。 语句 `Return AllOnes()` 会生成编译器错误，因为它似乎调用不带参数 `AllOnes`。  
+语句 `AllOnes(i) = 1` 会生成编译器错误，因为该语句似乎调用了具有错误数据类型的参数 `AllOnes` （标量 `Integer`，而不是 `Integer` 数组）。 语句 `Return AllOnes()` 会生成编译器错误，因为它似乎调用不带参数的 `AllOnes`。  
   
  **正确的方法：** 为了能够修改要返回的数组元素，请将内部数组定义为局部变量。 下面的示例在编译时不会出现错误：
 
@@ -49,7 +49,7 @@ End Function
 
 - **引用类型元素**。 如果声明参数[ByVal](../../../language-reference/modifiers/byval.md)，则该过程将无法修改基础变量元素本身。 但是，如果参数是引用类型，则该过程可以修改它所指向的对象的成员，即使它不能替换变量的值。 例如，如果参数是一个数组变量，则该过程无法向其分配新数组，但它可以更改其一个或多个元素。 更改的元素将反映在调用代码的基础数组变量中。
 
-下面的示例定义了两个过程，这些过程按值获取数组变量并对其元素进行操作。 过程 `increase` 只是向每个元素添加一个。 过程 `replace` 会将新数组分配给参数 `a()`，然后将其添加到每个元素。 但是，重新分配不会影响调用代码中的基础数组变量，因为 `a()` 声明 @no__t 为-1。
+下面的示例定义了两个过程，这些过程按值获取数组变量并对其元素进行操作。 过程 `increase` 只是向每个元素添加一个。 过程 `replace` 向参数 `a()` 分配新数组，然后将一个数组添加到每个元素。 但是，重新分配不会影响调用代码中的基础数组变量，因为 `a()` `ByVal`声明。
 
 [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]
 
@@ -59,11 +59,11 @@ End Function
 
 [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]
   
-第一个 `MsgBox` 调用显示 "增加后（n）：11、21、31、41 "。 由于 @no__t 是引用类型，`increase` 可以更改其成员，即使将其传递 `ByVal`。
+第一个 `MsgBox` 调用显示 "增加（n）：11，21，31，41" 之后的 "。 由于 `n` 是引用类型，因此 `increase` 可以更改其成员，即使它是 `ByVal`传递的。
 
-第二个 `MsgBox` 调用显示 "replace 后（n）：11、21、31、41 "。 由于 `n` @no__t 为-1，`replace` 无法通过向其分配新数组来修改变量 `n`。 如果 `replace` 会创建新的数组实例，`k`，并将其分配给本地变量 `a`，它将丢失对调用代码传入的 `n` 的引用。 递增 `a` 的成员时，只会影响本地阵列 `k`。
+第二个 `MsgBox` 调用显示 "replace （n）：11，21，31，41" 之后的。 由于 `n` 传递 `ByVal`，`replace` 无法通过为其分配新数组来修改变量 `n`。 如果 `replace` 创建新的数组实例 `k` 并将其分配给本地变量 `a`，则它将失去调用代码传入的 `n` 的引用。 递增 `a`的成员时，只会影响 `k` 的本地数组。
 
-**正确的方法：** 若要能够修改基础变量元素本身，请按引用传递它。 下面的示例演示 `replace` 的声明中的更改，它允许在调用代码中将一个数组替换为另一个数组：
+**正确的方法：** 若要能够修改基础变量元素本身，请按引用传递它。 下面的示例演示 `replace` 声明中的更改，这些更改允许它在调用代码中将一个数组替换为另一个数组：
 
 [!code-vb[VbVbcnProcedures#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#64)]
 
@@ -75,7 +75,7 @@ End Function
 
 以下项（即使它们属于参数列表）不是过程签名的组成部分：
 
-- 过程修饰符关键字，如 `Public`、`Shared` 和 `Static`。
+- 过程修饰符关键字，如 `Public`、`Shared`和 `Static`。
 - 参数名称。
 - 参数修饰符关键字，如 `ByRef` 和 `Optional`。
 - 返回值的数据类型（转换运算符除外）。
@@ -95,7 +95,7 @@ End Function
 确定要调用的重载时，请注意遵守以下规则：
 
 - 提供正确的参数数目，并按正确的顺序排列。  
-- 理想情况下，自变量的数据类型应与对应参数的数据类型完全相同。 在任何情况下，每个参数的数据类型必须扩大到其对应参数的数据类型。 即使[Option Strict 语句](../../../language-reference/statements/option-strict-statement.md)设置为 `Off`，也是如此。 如果重载需要自变量列表进行任何收缩转换，则不能调用该重载。
+- 理想情况下，自变量的数据类型应与对应参数的数据类型完全相同。 在任何情况下，每个参数的数据类型必须扩大到其对应参数的数据类型。 即使[Option Strict 语句](../../../language-reference/statements/option-strict-statement.md)设置为 `Off`也是如此。 如果重载需要自变量列表进行任何收缩转换，则不能调用该重载。
 - 如果提供需要扩大的参数，请将其数据类型尽可能靠近相应的参数数据类型。 如果两个或更多重载接受您的参数数据类型，则编译器会将调用解析为对最小扩大量进行调用的重载。
 
 在准备参数时，可以使用[CType 函数](../../../language-reference/functions/ctype-function.md)转换关键字来减少数据类型不匹配的几率。
@@ -110,9 +110,9 @@ End Function
 
 [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]
   
-在第一次调用中，编译器将消除第一个重载，因为第一个参数的类型（`Short`）会缩小到相应参数的类型（@no__t 为-1）。 然后，它将消除第三个重载，因为第二个重载（@no__t 0 和 `Single`）中的每个参数类型扩大到第三个重载（`Integer` 和 `Single`）中的相应类型。 第二个重载需要更少的扩展，因此编译器将其用于调用。
+在第一次调用中，编译器将消除第一个重载，因为第一个参数的类型（`Short`）会缩小到相应参数的类型（`Byte`）。 然后，它将消除第三个重载，因为第二个重载（`Short` 和 `Single`）中的每个参数类型扩大为第三个重载（`Integer` 和 `Single`）中的相应类型。 第二个重载需要更少的扩展，因此编译器将其用于调用。
 
-在第二次调用中，编译器无法根据收缩消除任何重载。 它消除第三个重载的原因与第一次调用中的相同原因，因为它可以通过更少的参数类型来调用第二个重载。 但编译器无法在第一个和第二个重载之间解析。 每个都有一个已定义的参数类型，该类型扩大到另一个中的相应类型（`Byte` 到 `Short`，但 `Single` 到 @no__t。 因此，编译器将生成重载决策错误。
+在第二次调用中，编译器无法根据收缩消除任何重载。 它消除第三个重载的原因与第一次调用中的相同原因，因为它可以通过更少的参数类型来调用第二个重载。 但编译器无法在第一个和第二个重载之间解析。 每个都有一个已定义的参数类型，该类型扩大到另一个中的相应类型（`Byte` 到 `Short`，但 `Single` `Double`）。 因此，编译器将生成重载决策错误。
 
 **正确的方法：** 若要能够无歧义地调用重载过程，请使用[CType 函数](../../../language-reference/functions/ctype-function.md)将参数数据类型与参数类型相匹配。 下面的示例演示对 `z` 的调用，该调用强制解析为第二个重载。
 
@@ -122,7 +122,7 @@ End Function
 
 如果过程的两个重载具有相同的签名，但最后一个参数在另[一个中声明](../../../language-reference/modifiers/paramarray.md)为[可选](../../../language-reference/modifiers/optional.md)，则编译器将根据最接近的匹配项解析对该过程的调用。 有关更多信息，请参见 [Overload Resolution](./overload-resolution.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [过程](index.md)
 - [Sub 过程](sub-procedures.md)

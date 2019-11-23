@@ -1,5 +1,5 @@
 ---
-title: <configSections> 的 <clear> 元素
+title: <clear> 的 <configSections> 元素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/clear
@@ -21,8 +21,8 @@ ms.locfileid: "73119086"
 清除所有之前定义的部分和节组。
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<clear >**
+&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>语法
 
@@ -30,21 +30,21 @@ ms.locfileid: "73119086"
 <clear/>
 ```
 
-## <a name="attribute"></a>特性
+## <a name="attribute"></a>属性
 
-|           | 描述 |
+|           | 说明 |
 | --------- | ----------- |
 | **name**  | 必需的特性。<br><br>指定要删除的节或节组的名称。 |
 
 ## <a name="parent-element"></a>父元素
 
-|     | 描述 |
+|     | 说明 |
 | --- | ----------- |
 | [ **\<configSections >** Element](configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
 
 ## <a name="child-elements"></a>子元素
 
-None
+无
 
 ## <a name="remarks"></a>备注
 
@@ -91,6 +91,6 @@ None
 
 此元素可用于应用程序配置文件、计算机配置文件（*machine.config*）和不在应用程序目录级别的*web.config 文件。*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET Framework 的配置文件架构](index.md)

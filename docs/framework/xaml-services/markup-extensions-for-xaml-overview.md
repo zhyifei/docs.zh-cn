@@ -21,10 +21,10 @@ ms.locfileid: "71736499"
 <a name="XAML_Defined_Markup_Extensions"></a>
 ## <a name="xaml-defined-markup-extensions"></a>XAML 定义的标记扩展
 
-.NET Framework XAML 服务实现了几个标记扩展来实现 XAML 语言支持。 这些标记扩展与作为一种语言的 XAML 规范各部分相对应。 这些扩展通常在语法中可由 `x:` 前缀进行标识（如常见用法中所见）。 这些 XAML 语言元素的 .NET Framework XAML 服务实现都派生自 @no__t 的基类。
+.NET Framework XAML 服务实现了几个标记扩展来实现 XAML 语言支持。 这些标记扩展与作为一种语言的 XAML 规范各部分相对应。 这些扩展通常在语法中可由 `x:` 前缀进行标识（如常见用法中所见）。 这些 XAML 语言元素的 .NET Framework XAML 服务实现都派生自 <xref:System.Windows.Markup.MarkupExtension> 基类。
 
 > [!NOTE]
-> `x:` 前缀用于 XAML 语言命名空间中的典型 XAML 命名空间映射（在 XAML 生成的根元素中）。 例如, 用于各种特定框架的 Visual Studio 项目和页面模板会使用此`x:`映射启动一个 XAML 文件。 可以在自己的 XAML 命名空间映射中选择不同的前缀标记，但是本文档采用默认值 `x:` 映射来标识作为 XAML 语言 XAML 命名空间的已定义部分的实体，而不是采用特定框架的默认 XAML 命名空间或其他任意 CLR 或 XML 命名空间。
+> `x:` 前缀用于 XAML 语言命名空间中的典型 XAML 命名空间映射（在 XAML 生成的根元素中）。 例如，用于各种特定框架的 Visual Studio 项目和页面模板会使用此 `x:` 映射来启动 XAML 文件。 可以在自己的 XAML 命名空间映射中选择不同的前缀标记，但是本文档采用默认值 `x:` 映射来标识作为 XAML 语言 XAML 命名空间的已定义部分的实体，而不是采用特定框架的默认 XAML 命名空间或其他任意 CLR 或 XML 命名空间。
 
 ### <a name="xtype"></a>x:Type
 
@@ -46,9 +46,9 @@ ms.locfileid: "71736499"
 
 `x:Reference` 属于 XAML 2009（原始 (2006) 语言集的扩展）。 `x:Reference` 表示对对象图中另一个现有对象的引用。 该对象由其 `x:Name`进行标识。 有关详细信息，请参阅 [x:Reference Markup Extension](x-reference-markup-extension.md)。
 
-### <a name="other-x-constructs"></a>其他 x:构造
+### <a name="other-x-constructs"></a>其他 x: 构造
 
-还有其他用于支持 XAML 语言功能的 `x:` 构造，不过这些构造并不作为标记扩展而实现。 有关详细信息, 请[参阅 XAML 命名空间 (x:)语言功能](xaml-namespace-x-language-features.md)。
+还有其他用于支持 XAML 语言功能的 `x:` 构造，不过这些构造并不作为标记扩展而实现。 有关更多信息，请参见 [XAML Namespace (x:) Language Features](xaml-namespace-x-language-features.md)。
 
 <a name="the_markupextension_base_class"></a>
 
@@ -74,9 +74,9 @@ ms.locfileid: "71736499"
 
 ### <a name="the-parameterless-constructor"></a>无参数构造函数
 
-对于所有标记扩展支持类型, 应公开一个公共的无参数构造函数。 对于 XAML 对象编写器从对象元素用法实例化标记扩展的任何情况, 都需要一个无参数的构造函数。 支持对象元素用法对于标记扩展是合理预期（特别是对于序列化）。 但是，如果只想支持标记扩展的特性用法，则可以在没有公共构造函数的情况下实现标记扩展。  
+对于所有标记扩展支持类型，应公开一个公共的无参数构造函数。 对于 XAML 对象编写器从对象元素用法实例化标记扩展的任何情况，都需要一个无参数的构造函数。 支持对象元素用法对于标记扩展是合理预期（特别是对于序列化）。 但是，如果只想支持标记扩展的特性用法，则可以在没有公共构造函数的情况下实现标记扩展。  
 
-如果标记扩展用法没有参数, 则需要使用无参数构造函数来支持使用。
+如果标记扩展用法没有参数，则需要使用无参数构造函数来支持使用。
 
 <a name="constructor_patterns_and_positional_arguments_for_a_custom_markup_extension"></a>
 ## <a name="constructor-patterns-and-positional-arguments-for-a-custom-markup-extension"></a>自定义标记扩展的构造函数模式和位置参数
@@ -93,7 +93,7 @@ public Collate(CollationMode collationMode) {...}
 
 处理的工作原理在概念上如同标记扩展是要创建的对象，然后设置其成员值。 要设置的每个指定属性的计算方式都类似于如何在分析 XAML 时对创建的对象设置指定成员。 有两个重要的差异：
   
-- 如前所述, 标记扩展支持类型不需要具有无参数的构造函数即可在 XAML 中进行实例化。 其对象构造会推迟到文本语法中的可能参数进行词汇切分并计算为位置或命名参数，会在该时间调用适当的构造函数。
+- 如前所述，标记扩展支持类型不需要具有无参数的构造函数即可在 XAML 中进行实例化。 其对象构造会推迟到文本语法中的可能参数进行词汇切分并计算为位置或命名参数，会在该时间调用适当的构造函数。
 - 标记扩展用法可以进行嵌套。 首先计算最内层的标记扩展。 因此，可以采用这类用法，并一个构造参数声明为需要生成值转换器（如标记扩展）的类型。
 
 前面的示例演示了对这类处理的依赖。 .NET Framework XAML 服务 XAML 对象编写器会在本机级别将枚举常量名处理为枚举值。
@@ -131,7 +131,7 @@ XAML 指定的标记扩展还可以使用命名参数形式来实现用法。 �
 
 标记扩展用法方案通常是围绕在特性用法中使用标记扩展来设计的。 但是，还可能可以定义后备类以支持属性元素用法。
 
-若要支持标记扩展的属性元素用法, 请定义公共无参数构造函数。 这应是实例构造函数，而不是静态构造函数。 这是必需的, 因为 XAML 处理器通常必须对它从标记处理的任何对象元素调用无参数的构造函数, 并且这包括标记扩展类作为对象元素。 对于高级方案，可以为类定义非默认构造路径。 (有关详细信息, 请参阅[X:FactoryMethod 指令](x-factorymethod-directive.md)。)但是，不应将这些模式用于标记扩展用途，因为这会显著提高用法模式的发现难度（对于设计者和原始标记的用户都是如此）。
+若要支持标记扩展的属性元素用法，请定义公共无参数构造函数。 这应是实例构造函数，而不是静态构造函数。 这是必需的，因为 XAML 处理器通常必须对它从标记处理的任何对象元素调用无参数的构造函数，并且这包括标记扩展类作为对象元素。 对于高级方案，可以为类定义非默认构造路径。 （有关详细信息，请参阅[X:FactoryMethod 指令](x-factorymethod-directive.md)。）但是，不应将这些模式用于标记扩展目的，因为这会使对设计人员和原始标记用户的使用模式的发现更难。
 
 <a name="attributing_for_a_custom_markup_extension"></a>
 ## <a name="attributing-for-a-custom-markup-extension"></a>自定义标记扩展的特性化
@@ -171,7 +171,7 @@ XAML 对象编写器处理标记扩展用法和调用 <xref:System.Windows.Marku
 
 如果在保存路径上使用 XAML 节点流，则对象图表示形式中通常没有任何内容可告知要序列化的对象最初由标记扩展用法和 `ProvideValue` 结果提供。 需要保持标记扩展用法以进行往返，同时还捕获对象图中的其他更改的方案必须设计自己的方法，来保留原始 XAML 输入中有关标记扩展用法的信息。 例如，若要还原标记扩展用法，可能需要在保存路径上使用节点流才能还原标记扩展用法，或在原始 XAML 与往返 XAML 之间执行某种类型的合并。 某些 XAML 实现框架（如 WPF）使用中间类型（表达式）来帮助表示标记扩展用法提供值的情况。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Markup.MarkupExtension>
 - [XAML 的类型转换器和标记扩展](type-converters-and-markup-extensions-for-xaml.md)

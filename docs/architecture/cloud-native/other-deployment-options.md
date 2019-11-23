@@ -41,7 +41,7 @@ Azure 容器实例最适合用于测试方案。 它们提供了一种快速、�
 
 Azure 容器实例提供了在 Azure 中运行容器的最简单、最简单的方法。 无需配置应用服务或 orchestrator 或处理虚拟机。 然而，由于其简易性，ACI 应该主要用于测试目的。 如果你的应用程序需要自动可伸缩性、配置为一起使用的多个容器或任何其他复杂的功能，则可以使用其他更适合的 Azure 服务来托管你的应用程序。
 
-## <a name="references"></a>reference
+## <a name="references"></a>参考
 
 - [Azure 容器实例文档](https://docs.microsoft.com/azure/container-instances/)
 - [从 ACR 部署容器实例](https://docs.microsoft.com/azure/container-instances/container-instances-using-azure-container-registry#deploy-with-azure-portal)

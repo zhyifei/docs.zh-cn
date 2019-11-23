@@ -28,13 +28,13 @@ ms.locfileid: "71834597"
 
 ## <a name="mouse-information"></a>鼠标信息
 
-<xref:System.Windows.Forms.MouseEventArgs> 将发送到与单击鼠标按钮和跟踪鼠标移动相关的鼠标事件处理程序。 <xref:System.Windows.Forms.MouseEventArgs> 提供有关当前鼠标状态的信息，包括鼠标指针在客户端坐标中的位置、按下的鼠标按钮是哪一个以及是否已经滚动鼠标滚轮。 几个鼠标事件（例如通知鼠标指针进入或离开控件边界的时间）会向事件处理程序发送 <xref:System.EventArgs>，但不提供详细信息。
+<xref:System.Windows.Forms.MouseEventArgs> 将发送到与单击鼠标按钮和跟踪鼠标移动相关的鼠标事件处理程序。 <xref:System.Windows.Forms.MouseEventArgs> 提供有关鼠标的当前状态的信息，包括鼠标指针在工作区坐标中的位置、按下鼠标按钮以及鼠标滚轮是否已滚动。 几个鼠标事件（例如通知鼠标指针进入或离开控件边界的时间）会向事件处理程序发送 <xref:System.EventArgs>，但不提供详细信息。
 
-如果想要知道鼠标按钮当前的状态或鼠标指针的位置，并且希望避免处理鼠标事件，还可以使用 <xref:System.Windows.Forms.Control> 类的 <xref:System.Windows.Forms.Control.MouseButtons%2A> 和 <xref:System.Windows.Forms.Control.MousePosition%2A> 属性。 <xref:System.Windows.Forms.Control.MouseButtons%2A> 返回有关当前按下哪些鼠标按钮的信息。 <xref:System.Windows.Forms.Control.MousePosition%2A> 返回鼠标指针的屏幕坐标，等同于由 <xref:System.Windows.Forms.Cursor.Position%2A> 返回的值。
+如果想要知道鼠标按钮当前的状态或鼠标指针的位置，并且希望避免处理鼠标事件，还可以使用 <xref:System.Windows.Forms.Control.MouseButtons%2A> 类的 <xref:System.Windows.Forms.Control.MousePosition%2A> 和 <xref:System.Windows.Forms.Control> 属性。 <xref:System.Windows.Forms.Control.MouseButtons%2A> 返回当前按下鼠标按钮的相关信息。 <xref:System.Windows.Forms.Control.MousePosition%2A> 返回鼠标指针的屏幕坐标，等同于由 <xref:System.Windows.Forms.Cursor.Position%2A> 返回的值。
 
 ## <a name="converting-between-screen-and-client-coordinates"></a>在屏幕坐标和客户端坐标之间转换
 
-由于某些鼠标位置信息以客户端坐标提供，另一些以屏幕坐标提供，因此可能需要将某个点的位置信息从一个坐标系统转换到另一个坐标系统。 通过使用 <xref:System.Windows.Forms.Control> 类提供的 <xref:System.Windows.Forms.Control.PointToClient%2A> 和 <xref:System.Windows.Forms.Control.PointToScreen%2A> 方法可轻松完成此操作。
+由于某些鼠标位置信息以客户端坐标提供，另一些以屏幕坐标提供，因此可能需要将某个点的位置信息从一个坐标系统转换到另一个坐标系统。 通过使用 <xref:System.Windows.Forms.Control.PointToClient%2A> 类提供的 <xref:System.Windows.Forms.Control.PointToScreen%2A> 和 <xref:System.Windows.Forms.Control> 方法可轻松完成此操作。
 
 ## <a name="standard-click-event-behavior"></a>标准单击事件行为
 
@@ -66,7 +66,7 @@ ms.locfileid: "71834597"
 
 8. <xref:System.Windows.Forms.Control.MouseUp> 事件。
 
-有关演示鼠标单击事件顺序的代码示例，请参阅 [How to：在 Windows 窗体控件 @ no__t-0 中处理用户输入事件。
+有关演示鼠标单击事件顺序的代码示例，请参阅[如何：处理 Windows 窗体控件中的用户输入事件](how-to-handle-user-input-events-in-windows-forms-controls.md)。
 
 ### <a name="individual-controls"></a>个别控件
 
@@ -82,24 +82,24 @@ ms.locfileid: "71834597"
 
   - 左键单击：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 
-  - 右键单击：未引发任何 click 事件
+  - 右键单击：不会引发任何单击事件
 
   - 左键双击：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>；<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 
-  - 右键双击：未引发任何 click 事件
+  - 右键双击：不会引发任何单击事件
 
-- <xref:System.Windows.Forms.TextBox>、<xref:System.Windows.Forms.RichTextBox>、<xref:System.Windows.Forms.ListBox>、<xref:System.Windows.Forms.MaskedTextBox> 和 <xref:System.Windows.Forms.CheckedListBox> 控件
+- <xref:System.Windows.Forms.TextBox>、<xref:System.Windows.Forms.RichTextBox>、<xref:System.Windows.Forms.ListBox>、<xref:System.Windows.Forms.MaskedTextBox>和 <xref:System.Windows.Forms.CheckedListBox> 控件
 
   > [!NOTE]
   > 当用户单击这些控件内的任意位置时，将发生稍后详细说明的事件行为。
 
   - 左键单击：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 
-  - 右键单击：未引发任何 click 事件
+  - 右键单击：不会引发任何单击事件
 
   - 左键双击：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>、<xref:System.Windows.Forms.Control.DoubleClick>、<xref:System.Windows.Forms.Control.MouseDoubleClick>
 
-  - 右键双击：未引发任何 click 事件
+  - 右键双击：不会引发任何单击事件
 
 - <xref:System.Windows.Forms.ListView> 控件
 
@@ -150,6 +150,6 @@ ms.locfileid: "71834597"
     > [!NOTE]
     > 如果用户在鼠标按钮处于按下状态时将指针移出切换控件（例如在鼠标按下时将鼠标从 <xref:System.Windows.Forms.Button> 控件移出），那么切换控件将以引发状态进行绘制，并且只发生 <xref:System.Windows.Forms.Control.MouseUp> 事件。 在这种情况下，将不会发生 <xref:System.Windows.Forms.Control.Click> 或 <xref:System.Windows.Forms.Control.MouseClick> 事件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Windows 窗体应用程序中的鼠标输入](mouse-input-in-a-windows-forms-application.md)

@@ -76,7 +76,7 @@ SET READ_COMMITTED_SNAPSHOT ON
  快照事务始终使用开放式并发控制，不赋予可能阻止其他事务更新行的任何锁。 如果快照事务尝试提交对事务开始后已更改的行的更新，事务将回滚并引发错误。  
   
 ## <a name="working-with-snapshot-isolation-in-adonet"></a>在 ADO.NET 中使用快照隔离  
- ADO.NET 中通过 <xref:System.Data.SqlClient.SqlTransaction> 类支持快照隔离。 如果已为快照隔离启用了数据库，但没有为 READ_COMMITTED_SNAPSHOT 配置该数据库，则必须在调用 <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> 方法时使用**IsolationLevel**枚举值启动 @no__t 0。 此代码段假定连接是打开的 <xref:System.Data.SqlClient.SqlConnection> 对象。  
+ ADO.NET 中通过 <xref:System.Data.SqlClient.SqlTransaction> 类支持快照隔离。 如果已为快照隔离启用了数据库，但未将其配置为 READ_COMMITTED_SNAPSHOT 上的，则必须在调用 <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> 方法时，使用**IsolationLevel**枚举值启动 <xref:System.Data.SqlClient.SqlTransaction>。 此代码段假定连接是打开的 <xref:System.Data.SqlClient.SqlConnection> 对象。  
   
 ```vb  
 Dim sqlTran As SqlTransaction = _  
@@ -97,7 +97,7 @@ SqlTransaction sqlTran =
   
 - 它将打开第二个连接，并使用快照隔离级别启动第二个事务，以读取**TestSnapshot**表中的数据。 因为启用了快照隔离，此事务可以读取在开始 sqlTransaction1 之前存在的数据。  
   
-- 打开第三个连接，并使用 READ COMMITTED 隔离级别开始一个事务，尝试读取表中的数据。 在这种情况下，代码无法读取数据，因为代码在第一个事务中无法通过在表上放置的锁进行读取，因而超时。如果使用 REPEATABLE READ 和 SERIALIZABLE 隔离级别，因为这些隔离级别也无法通过第一个事务中放置的锁，因而会出现同样的结果。  
+- 打开第三个连接，并使用 READ COMMITTED 隔离级别开始一个事务，尝试读取表中的数据。 在这种情况下，代码无法读取数据，因为它不能读取在第一个事务的表中放置的锁和超时。如果使用了可重复读取和可序列化隔离级别，则会出现相同的结果，因为这些隔离级别也不能读取在第一个事务中放置的锁之后。  
   
 - 打开第四个连接，并使用 READ UNCOMMITTED 隔离级别开始一个事务，对 sqlTransaction1 中未提交的值执行脏读。 如果第一个事务未提交，数据库中永远不会真正存在此值。  
   
@@ -141,7 +141,7 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
  如果应用程序中存在许多冲突，快照隔离也许不是最佳的选择。 只有在确实需要时，才应使用提示。 应用程序的设计不应使其操作始终依赖于锁提示。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [SQL Server 和 ADO.NET](index.md)
 - [ADO.NET 概述](../ado-net-overview.md)

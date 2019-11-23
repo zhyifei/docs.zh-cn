@@ -20,8 +20,8 @@ ms.locfileid: "71697156"
 指定由性能计数器共享的全局内存的大小。
 
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t **\<performanceCounters >**  
+&nbsp;&nbsp;[ **\<的 >** ](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<performanceCounters >**  
 
 ## <a name="syntax"></a>语法
 
@@ -29,13 +29,13 @@ ms.locfileid: "71697156"
 <performanceCounters filemappingsize="524288" />
 ```
 
-## <a name="attributes-and-elements"></a>特性和元素
+## <a name="attributes-and-elements"></a>属性和元素
 
 下列各节描述了特性、子元素和父元素。
 
-### <a name="attributes"></a>特性
+### <a name="attributes"></a>Attributes
 
-|特性|描述|
+|属性|说明|
 |---------------|-----------------|
 |filemappingsize|必需的特性。<br /><br /> 指定由性能计数器共享的全局内存的大小（以字节为单位）。 默认值为 524288。|
 
@@ -45,7 +45,7 @@ ms.locfileid: "71697156"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
 |`Configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|
 |`system.diagnostics`|为 ASP.NET 配置节指定根元素。|
@@ -56,9 +56,9 @@ ms.locfileid: "71697156"
 
 全局共享内存的大小只能与配置文件一起设置。  默认大小为 524288 byes，最大大小为33554432个字节，最小大小为32768个字节。  由于全局共享内存由所有进程和类别共享，因此第一个创建者指定大小。  如果在应用程序配置文件中定义大小，则仅当应用程序是导致性能计数器执行的第一个应用程序时，才使用该大小。  因此，指定 `filemappingsize` 值的正确位置是 Machine.config 文件。  全局共享内存中的内存不能由单独的性能计数器释放，因此，如果创建了大量具有不同名称的性能计数器实例，则最终的全局共享内存会耗尽。
 
-对于单独共享内存的大小，会先引用注册表项 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services @ no__t-0 *\<category name >* \Performance 中的 DWORD FileMappingSize 值，然后再引用值为配置文件中的全局共享内存指定。 如果 FileMappingSize 值不存在，则会在配置文件中将单独的共享内存大小设置为第四（1/4）个全局设置。
+对于单独的共享内存的大小，将首先引用注册表项 HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\\ *\<类别名称 >* \PERFORMANCE 的 DWORD FileMappingSize 值，然后引用在配置文件中为全局共享内存指定的值。 如果 FileMappingSize 值不存在，则会在配置文件中将单独的共享内存大小设置为第四（1/4）个全局设置。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Diagnostics.PerformanceCounter>
 - <xref:System.Diagnostics.PerformanceCounterCategory>

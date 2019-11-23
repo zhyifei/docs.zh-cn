@@ -15,12 +15,12 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71698212"
 ---
-# <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > 元素 (网络设置)
+# <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > 元素（网络设置）
 配置超文本传输协议 (HTTP) 代理服务器。  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t **\<defaultProxy >**  
+\<&nbsp;[**的 &nbsp;>** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<defaultProxy >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,40 +34,40 @@ ms.locfileid: "71698212"
 </defaultProxy>
 ```  
   
-## <a name="attributes-and-elements"></a>特性和元素  
+## <a name="attributes-and-elements"></a>属性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a>Attributes  
   
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |`enabled`|指定是否使用 Web 代理。 默认值为 `true`。|  
 |`useDefaultCredentials`|指定是否使用此主机的默认凭据来访问 Web 代理。 默认值为 `false`。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[bypasslist](bypasslist-element-network-settings.md)|提供一组描述不使用代理的地址的正则表达式。|  
-|[module](module-element-network-settings.md)|向应用程序添加新的代理模块。|  
+|[name](module-element-network-settings.md)|向应用程序添加新的代理模块。|  
 |[代理](proxy-element-network-settings.md)|定义代理服务器。|  
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[system.net](system-net-element-network-settings.md)|包含指定 .NET Framework 如何连接到网络的设置。|  
   
 ## <a name="remarks"></a>备注  
  如果 defaultProxy 元素为空，则将沿用 Internet Explorer 中的代理设置。 这种行为在 .NET Framework 1.1 版中有所不同。  
   
- 如果[module](module-element-network-settings.md)元素指定非公共类型, 该类型不是从<xref:System.Net.IWebProxy>类派生, 则此对象的无参数构造函数中出现异常, 或者在检索时出现异常, 则会引发异常。系统指定的默认代理。 异常的 <xref:System.Exception.InnerException%2A> 属性应具有错误根本原因的详细信息。  
+ 如果[module](module-element-network-settings.md)元素指定非公共类型，该类型不是从 <xref:System.Net.IWebProxy> 类派生，则此对象的无参数构造函数中出现异常，或者在检索系统指定的默认代理时出现异常，则会引发异常。 异常的 <xref:System.Exception.InnerException%2A> 属性应具有错误根本原因的详细信息。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 以下示例使用 Internet Explorer 代理中的默认值, 指定代理地址, 并绕过代理进行本地访问和 contoso.com。  
+ 以下示例使用 Internet Explorer 代理中的默认值，指定代理地址，并绕过代理进行本地访问和 contoso.com。  
   
 ```xml  
 <configuration>  
@@ -86,7 +86,7 @@ ms.locfileid: "71698212"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [网络设置架构](index.md)

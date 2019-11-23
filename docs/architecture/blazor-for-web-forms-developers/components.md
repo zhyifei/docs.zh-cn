@@ -62,7 +62,7 @@ Razor 是基于 HTML 和C#的轻型标记模板化语言。 借助 Razor，你�
 
 Razor 指令（如 ASP.NET Web 窗体中的指令）控制如何编译 Razor 组件的许多方面。 示例包括组件的：
 
-- Namespace
+- 命名空间
 - 基类
 - 实现的接口
 - 泛型参数
@@ -77,15 +77,15 @@ Razor 指令以 `@` 字符开始，通常在文件开头的新行的开头使用
 
 下表汇总了 Blazor 中使用的各种 Razor 指令及其等效的 ASP.NET Web 窗体（如果存在）。
 
-|指令    |描述|示例|Web 窗体等效项|
+|Directive    |说明|示例|Web 窗体等效项|
 |-------------|-----------|-------|--------------------|
-|`@attribute` |向组件添加类级别属性|`@attribute [Authorize]`|None|
+|`@attribute` |向组件添加类级别属性|`@attribute [Authorize]`|无|
 |`@code`      |将类成员添加到组件|`@code { ... }`|`<script runat="server">...</script>`|
 |`@implements`|实现指定接口|`@implements IDisposable`|使用代码隐藏|
 |`@inherits`  |继承自指定的基类|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
-|`@inject`    |将服务注入组件|`@inject IJSRuntime JS`|None|
+|`@inject`    |将服务注入组件|`@inject IJSRuntime JS`|无|
 |`@layout`    |指定组件的布局组件|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
-|`@namespace` |设置组件的命名空间|`@namespace MyNamespace`|None|
+|`@namespace` |设置组件的命名空间|`@namespace MyNamespace`|无|
 |`@page`      |指定组件的路由|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |指定组件的泛型类型参数|`@typeparam TItem`|使用代码隐藏|
 |`@using`     |指定要引入作用域的命名空间|`@using MyComponentNamespace`|*在 web.config*中添加命名空间|
@@ -98,7 +98,7 @@ Razor 组件还广泛使用元素上的*指令属性*，以控制如何编译组
 
 下表总结了 Blazor 中使用的 Razor 指令的各种属性。
 
-|特性    |描述|示例|
+|属性    |说明|示例|
 |-------------|-----------|-------|
 |`@attributes`|呈现特性字典|`<input @attributes="ExtraAttributes" />`|
 |`@bind`      |创建双向数据绑定    |`<input @bind="username" @bind:event="oninput" />`|

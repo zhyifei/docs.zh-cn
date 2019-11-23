@@ -32,15 +32,15 @@ ms.locfileid: "73130294"
 - <xref:System.Type> 或 <xref:System.Reflection.Emit.TypeBuilder> 的一个实例，表示 `T`。 
 
    > [!IMPORTANT]
-   > 必须释放表示部分程序集的所有对象。 定义 `T` 的 <xref:System.Reflection.Emit.ModuleBuilder> 保持对 <xref:System.Reflection.Emit.TypeBuilder> 的引用，<xref:System.Reflection.Emit.AssemblyBuilder> 对象保持对 <xref:System.Reflection.Emit.ModuleBuilder> 的引用，因此必须释放对这些对象的引用。 即使是存在 `T` 的构造中使用的 <xref:System.Reflection.Emit.LocalBuilder> 或 <xref:System.Reflection.Emit.ILGenerator>，也会阻止卸载。
+   > 必须释放表示部分程序集的所有对象。 定义 <xref:System.Reflection.Emit.ModuleBuilder> 的 `T` 保持对 <xref:System.Reflection.Emit.TypeBuilder> 的引用，<xref:System.Reflection.Emit.AssemblyBuilder> 对象保持对 <xref:System.Reflection.Emit.ModuleBuilder> 的引用，因此必须释放对这些对象的引用。 即使是存在 <xref:System.Reflection.Emit.LocalBuilder> 的构造中使用的 <xref:System.Reflection.Emit.ILGenerator> 或 `T`，也会阻止卸载。
 
-- 仍可供执行代码访问的另一动态定义类型 `T1` 对 `T` 的静态引用。 例如，`T1` 可能派生自 `T`，或 `T` 可能为 `T1` 的方法中的参数类型。
+- 仍可供执行代码访问的另一动态定义类型 `T` 对 `T1` 的静态引用。 例如，`T1` 可能派生自 `T`，或 `T` 可能为 `T1` 的方法中的参数类型。
  
-- 属于 `T` 的静态字段的 ByRef。
+- 属于  **的静态字段的 ByRef**`T`。
 
-- 引用 `T` 或 `T` 的组件的 <xref:System.RuntimeTypeHandle>、<xref:System.RuntimeFieldHandle>、<xref:System.RuntimeMethodHandle>。
+- 引用 <xref:System.RuntimeTypeHandle> 或 <xref:System.RuntimeFieldHandle> 的组件的 <xref:System.RuntimeMethodHandle>、`T`、`T`。
 
-- 可直接或间接用于访问表示 `T` 的 <xref:System.Type> 对象的任何反射对象的实例。 例如，可从其元素类型为 `T` 的任意数组类型，或类型参数为 `T` 的泛型类型获取 `T` 的 <xref:System.Type> 对象。 
+- 可直接或间接用于访问表示 <xref:System.Type> 的 `T` 对象的任何反射对象的实例。 例如，可从其元素类型为 <xref:System.Type> 的任意数组类型，或类型参数为 `T` 的泛型类型获取 `T` 的 `T` 对象。 
 
 - 任何线程的调用堆栈上的方法 `M`，其中 `M` 是 `T` 的一种方法，或程序集中定义的模块级方法。
 
@@ -78,6 +78,6 @@ ms.locfileid: "73130294"
 - **线程静态数据**       
    不支持线程静态变量。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [发出动态方法和程序集](emitting-dynamic-methods-and-assemblies.md)

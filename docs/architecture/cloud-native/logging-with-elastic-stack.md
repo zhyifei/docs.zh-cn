@@ -96,7 +96,7 @@ Logstash 收集了日志后，需要将其放在某个位置。 尽管 Logstash 
 
 另一种方法是[最近发布的 ELK 产品/服务](https://devops.com/logz-io-unveils-azure-open-source-elk-monitoring-solution/)。
 
-## <a name="references"></a>reference
+## <a name="references"></a>参考
 
 - [在 Azure 上安装弹性堆栈](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)
 

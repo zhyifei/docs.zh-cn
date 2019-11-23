@@ -30,7 +30,7 @@ public abstract long Seek (long offset, System.IO.SeekOrigin origin);
 ## <a name="parameters"></a>参数
 
 `offset`\
-相对于 @no__t 0 的字节偏移量。
+相对于 `origin`的字节偏移量。
 
 `origin`\
 枚举值之一，指示要从中获取新位置的参考点。
@@ -43,7 +43,7 @@ public abstract long Seek (long offset, System.IO.SeekOrigin origin);
 ## <a name="remarks"></a>备注
 
 > [!WARNING]
-> @No__t-0 方法是私有的，不应在代码中直接使用。
+> `SqlStreamChars.Seek` 方法是私有的，不应在代码中直接使用。
 >
 > 在任何情况下，Microsoft 不支持在生产应用程序中使用此方法。
 
@@ -53,4 +53,4 @@ public abstract long Seek (long offset, System.IO.SeekOrigin origin);
 
 **程序集：** System.object （在 System.web 中）
 
-**.NET Framework 版本：** 自2.0 起可用。
+**.NET framework 版本**：自 2.0 之后可用。

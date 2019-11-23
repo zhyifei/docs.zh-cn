@@ -50,7 +50,7 @@ Azure Dev Spaces 有助于各个开发人员在开发期间在 Azure 中托管�
 
 EShopOnContainers 示例包括对跟踪联机市场营销活动的支持。 Azure Function 用于请求给定市场活动 ID 的市场营销活动详细信息。 单个 Azure 函数终结点更简单、更充分，而不是出于此目的创建一个完整的 ASP.NET Core 应用程序。 Azure Functions 具有比完全 ASP.NET Core 应用程序更简单的生成和部署模型，尤其是在配置为在 Kubernetes 中运行时。 部署函数的脚本使用 Azure 资源管理器（ARM）模板和 Azure CLI。 此市场活动详细信息微服务不是面向客户的，与在线商店没有相同的要求，因此它非常适合 Azure Functions。 函数需要某些配置才能正常工作，如数据库连接字符串数据和图像基 URI 设置。 在 Azure 门户中配置 Azure Functions。
 
-## <a name="references"></a>reference
+## <a name="references"></a>参考
 
 - [eShopOnContainers：在 AKS 中创建 Kubernetes 群集](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)#create-kubernetes-cluster-in-aks)
 - [eShopOnContainers： Azure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)

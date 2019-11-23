@@ -27,27 +27,27 @@ ms.locfileid: "72005209"
   
 ## <a name="arguments"></a>参数  
   
-|术语|定义|  
+|术语|Definition|  
 |---|---|  
 |`namespace`|命名空间的名称，其中包含当前项目的所有类型声明。|  
   
 ## <a name="remarks"></a>备注  
- 如果使用 Visual Studio 可执行文件（Devenv）来编译在 Visual Studio 集成开发环境中创建的项目，请使用 `-rootnamespace` 来指定 @no__t 属性的值。 有关详细信息，请参阅[Devenv 命令行开关](/visualstudio/ide/reference/devenv-command-line-switches)。  
+ 如果使用 Visual Studio 可执行文件（Devenv）来编译在 Visual Studio 集成开发环境中创建的项目，请使用 `-rootnamespace` 指定 <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> 属性的值。 有关详细信息，请参阅[Devenv 命令行开关](/visualstudio/ide/reference/devenv-command-line-switches)。  
   
- 使用公共语言运行时 MSIL 拆装器（`Ildasm.exe`）查看输出文件中的命名空间名称。  
+ 使用公共语言运行时 MSIL 拆装器（`Ildasm.exe`）来查看输出文件中的命名空间名称。  
   
 |在 Visual Studio 集成开发环境中设置-rootnamespace|  
 |---|  
-|1.在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。 <br />2.单击“应用程序” 选项卡。<br />3.修改 "**根命名空间**" 框中的值。|  
+|1. 在**解决方案资源管理器**中选择了一个项目。 在“项目”菜单上，单击“属性”。 <br />2. 单击 "**应用程序**" 选项卡。<br />3. 修改 "**根命名空间**" 框中的值。|  
   
 ## <a name="example"></a>示例  
- 下面的代码编译 `In.vb` 并将命名空间中的所有类型声明都括起来 `mynamespace`。  
+ 下面的代码编译 `In.vb`，并将命名空间 `mynamespace`中的所有类型声明括起来。  
   
 ```console
 vbc -rootnamespace:mynamespace in.vb  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Ildasm.exe（IL 反汇编程序）](../../../framework/tools/ildasm-exe-il-disassembler.md)

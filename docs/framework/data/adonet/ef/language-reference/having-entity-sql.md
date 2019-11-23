@@ -10,7 +10,7 @@ ms.lasthandoff: 10/03/2019
 ms.locfileid: "71833735"
 ---
 # <a name="having-entity-sql"></a>HAVING (Entity SQL)
-指定组或聚合的搜索条件。  
+为某个组或聚合指定搜索条件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -20,7 +20,7 @@ ms.locfileid: "71833735"
   
 ## <a name="arguments"></a>参数  
  `search_condition`  
- 指定组或聚合应满足的搜索条件。 当 HAVING 与 GROUP BY ALL 一起使用时，HAVING 子句优先于 ALL。  
+ 为组或聚合指定要满足的搜索条件。 当 HAVING 与 GROUP BY ALL 一起使用时，HAVING 子句优先于 ALL。  
   
 ## <a name="remarks"></a>备注  
  HAVING 子句用于对分组结果指定附加筛选条件。 如果在查询表达式中未指定 GROUP BY 子句，则将使用隐式单集组。  
@@ -40,13 +40,13 @@ HAVING SUM(o.Quantity) > 1
 ## <a name="example"></a>示例  
  下面的 Entity SQL 查询使用 HAVING 和 GROUP BY 运算符指定组或聚合的搜索条件。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1. 按照 [How 中的过程执行以下操作：执行返回 PrimitiveType Results @ no__t-0 的查询。  
+1. 按照[如何：执行返回 PrimitiveType 结果的查询](../how-to-execute-a-query-that-returns-primitivetype-results.md)中的过程进行操作。  
   
 2. 将以下查询作为参数传递给 `ExecutePrimitiveTypeQuery` 方法：  
   
  [!code-sql[DP EntityServices Concepts#HAVING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#having)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [实体 SQL 引用](entity-sql-reference.md)
 - [查询表达式](query-expressions-entity-sql.md)

@@ -157,7 +157,7 @@ RBAC 中的第一个组件是一个安全主体。 安全主体可以是用户�
 
 许多安全[专家建议](https://www.troyhunt.com/password-managers-dont-have-to-be-perfect-they-just-have-to-be-better-than-not-having-one/)使用密码管理器来保留自己的密码，这是最佳方法。 尽管它在一个位置集中了密码，但它还允许使用非常复杂的密码，并确保它们对于每个帐户都是唯一的。 Azure 中存在相同的系统：机密的中心存储。
 
-## <a name="azure-key-vault"></a>Azure Key Vault
+## <a name="azure-key-vault"></a>Azure 密钥保管库
 
 Azure Key Vault 提供了一个集中位置，用于存储数据库、API 密钥和证书等东西的密码。 在保管库中输入了机密后，就不会再次显示该密码，并且有意复杂的命令。 使用软件加密或 FIPS 140-2 第2级验证的硬件安全模块保护安全的信息。
 

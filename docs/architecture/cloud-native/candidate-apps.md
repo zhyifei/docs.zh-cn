@@ -3,18 +3,18 @@ title: 云本机的候选应用
 description: 了解哪些类型的应用程序受益于云本机方法
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 127dca45ce8a5e025ca7511e6513afffe64e592d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 328af4081d830cf1a7959a37c2155090ec4da3ff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841857"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968300"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>云本机的候选应用
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-查看公文包中的应用。 有多少用户有资格使用云本机体系结构？ 全部？ 也许有些吗？
+查看公文包中的应用。 有多少用户有资格使用云本机体系结构？ 它们全部？ 也许有些吗？
 
 应用成本/收益分析后，就很有可能不支持巨大价格标记，这是云本机所必需的。 云本机的成本远远超出了应用程序的商业价值。
 
@@ -64,13 +64,13 @@ ms.locfileid: "73841857"
 
 适当的迁移策略取决于组织的优先级和目标系统。 对于许多人来说，对单一应用程序进行云优化或将粗粒度服务添加到 N 层应用程序可能更具成本效益。 在这些情况下，你仍可以充分利用 cloud PaaS 功能，如 Azure App Service 提供的功能。
 
-## <a name="summary"></a>总结
+## <a name="summary"></a>摘要
 
 本章介绍了云本机计算。 我们提供了一个定义，同时提供了驱动云本机应用程序的关键功能。 我们探讨了可证明这种投资和工作量的应用程序类型。
 
 随着简介，我们现在深入了解云本机。
 
-### <a name="references"></a>reference
+### <a name="references"></a>参考
 
 - [云本机计算基础](https://www.cncf.io/)
 
@@ -89,8 +89,6 @@ ms.locfileid: "73841857"
 - [Netflix 如何部署代码](https://www.infoq.com/news/2013/06/netflix/)
 
 - [缩放 WeChat 微服务的重载控制](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf)
-
-- [RayGun 案例研究](https://raygun.com/case-study/ovation)
 
 >[!div class="step-by-step"]
 >[上一页](definition.md)

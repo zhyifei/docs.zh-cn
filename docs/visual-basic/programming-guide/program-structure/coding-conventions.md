@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
 ms.openlocfilehash: 18c309e22cccfa5d835394996fc6974d95825b65
 ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72003119"
@@ -28,7 +28,7 @@ Microsoft 将按照本主题中的准则开发示例和文档。 如果遵循相
   
 - 有关命名准则的信息，请参阅[命名准则](../../../standard/design-guidelines/naming-guidelines.md)主题。  
   
-- 不要使用 "我的" 或 "我的" 作为变量名称的一部分。 这种做法与 @no__t 0 对象混淆。  
+- 不要使用 "我的" 或 "我的" 作为变量名称的一部分。 这种做法与 `My` 对象混淆。  
   
 - 不需要在自动生成的代码中更改对象的名称，使其符合指导原则。  
   
@@ -67,7 +67,7 @@ Microsoft 将按照本主题中的准则开发示例和文档。 如果遵循相
   
 ## <a name="program-structure"></a>程序结构  
   
-- 使用 `Main` 方法时，请使用新的控制台应用程序的默认构造，并对命令行参数使用 `My`。  
+- 使用 `Main` 方法时，为新的控制台应用程序使用默认构造，并将 `My` 用于命令行参数。  
   
      [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
@@ -81,7 +81,7 @@ Microsoft 将按照本主题中的准则开发示例和文档。 如果遵循相
      MsgBox($"hello{vbCrLf}goodbye")
      ```
   
-- 若要在循环中追加字符串，请使用 @no__t 的对象。  
+- 若要在循环中追加字符串，请使用 <xref:System.Text.StringBuilder> 对象。  
   
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
@@ -92,9 +92,9 @@ Microsoft 将按照本主题中的准则开发示例和文档。 如果遵循相
   
 ### <a name="unsigned-data-type"></a>无符号数据类型  
   
-- 使用 `Integer` 而不是无符号类型，但它们是必需的。  
+- 除非有必要，否则请使用 `Integer` 而不是无符号类型。  
   
-### <a name="arrays"></a>数组  
+### <a name="arrays"></a>阵列  
   
 - 在声明行上初始化数组时，请使用短语法。 例如，使用以下语法。  
   
@@ -121,7 +121,7 @@ Microsoft 将按照本主题中的准则开发示例和文档。 如果遵循相
      [!code-vb[VbVbalrGuidelines#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#13)]  
   
 ### <a name="use-the-with-keyword"></a>使用 With 关键字  
- 对一个对象进行一系列调用时，请考虑使用 @no__t 关键字：  
+ 对一个对象进行一系列调用时，请考虑使用 `With` 关键字：  
   
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
@@ -129,7 +129,7 @@ Microsoft 将按照本主题中的准则开发示例和文档。 如果遵循相
  请勿使用 `On Error Goto`。  
   
 ### <a name="use-the-isnot-keyword"></a>使用 IsNot 关键字  
- 使用 @no__t 关键字而不是 `Not...Is Nothing`。  
+ 使用 `IsNot` 关键字而不是 `Not...Is Nothing`。  
   
 ### <a name="new-keyword"></a>New 关键字  
   
@@ -151,7 +151,7 @@ Microsoft 将按照本主题中的准则开发示例和文档。 如果遵循相
   
      [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
-- 使用 `AddressOf`，并且不显式实例化委托：  
+- 使用 `AddressOf`，而不显式实例化委托：  
   
      [!code-vb[VbVbalrGuidelines#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#25)]  
   
@@ -159,10 +159,10 @@ Microsoft 将按照本主题中的准则开发示例和文档。 如果遵循相
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
-- 在调用 `RaiseEvent` 方法之前，不要验证事件是否 `Nothing` （null）。 `RaiseEvent` 会在引发事件之前检查 @no__t。  
+- 在调用 `RaiseEvent` 方法之前，不要验证事件是否 `Nothing` （null）。 `RaiseEvent` 在引发事件之前检查 `Nothing`。  
   
 ### <a name="using-shared-members"></a>使用共享成员  
- 使用类名称（而不是从实例变量）调用 @no__t 的成员。  
+ 使用类名称（而不是从实例变量）调用 `Shared` 成员。  
   
 ### <a name="use-xml-literals"></a>使用 XML 文本  
  XML 文本简化了使用 XML 时所遇到的最常见任务（例如，加载、查询和转换）。 当你用 XML 开发时，请遵循以下准则：  
@@ -195,18 +195,18 @@ Microsoft 将按照本主题中的准则开发示例和文档。 如果遵循相
   
      [!code-vb[VbVbalrGuidelines#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#31)]  
   
-- 在 `From` 语句下对齐查询子句：  
+- 对齐 `From` 语句下的查询子句：  
   
      [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
-- 在其他查询子句之前使用 `Where` 子句，以便后面的查询子句对筛选的数据集进行操作：  
+- 在其他查询子句之前使用 `Where` 子句，以便后面的查询子句对筛选的数据集执行操作：  
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
-- 使用 `Join` 子句显式定义联接操作，而不是使用 @no__t 子句隐式定义联接运算：  
+- 使用 `Join` 子句显式定义联接运算，而不是使用 `Where` 子句隐式定义联接运算：  
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安全编码准则](../../../standard/security/secure-coding-guidelines.md)

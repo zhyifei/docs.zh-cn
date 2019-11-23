@@ -26,9 +26,9 @@ ms.locfileid: "71956906"
 
 ## <a name="using-font-fallback"></a>使用字体回退
 
-若要利用此功能，请不要为窗体或任何其他元素设置 <xref:System.Drawing.Font> 属性。 应用程序将自动使用默认系统字体，该字体不同于操作系统的一种本地化语言。 当应用程序运行时，系统会自动为操作系统中选定的区域性提供正确的字体。
+若要利用此功能，请不要设置窗体或任何其他元素的 <xref:System.Drawing.Font> 属性。 应用程序将自动使用默认系统字体，该字体不同于操作系统的一种本地化语言。 当应用程序运行时，系统会自动为操作系统中选定的区域性提供正确的字体。
 
-不设置字体的规则有一个例外，即更改字体样式。 这对于应用程序而言很重要，用户在该应用程序中单击按钮以使文本框中的文本以粗体显示。 为此，您可以编写一个函数，根据窗体的字体是，将文本框的字体样式更改为粗体。 在两个位置调用此函数很重要：在按钮的 @no__t 0 事件处理程序中，以及在 @no__t 事件处理程序中。 如果仅在 @no__t 0 事件处理程序中调用函数，而其他代码段更改整个窗体的字体系列，则文本框不会随窗体的其余部分而更改。
+不设置字体的规则有一个例外，即更改字体样式。 这对于应用程序而言很重要，用户在该应用程序中单击按钮以使文本框中的文本以粗体显示。 为此，您可以编写一个函数，根据窗体的字体是，将文本框的字体样式更改为粗体。 在两个位置调用此函数很重要：在按钮的 <xref:System.Windows.Forms.Control.Click> 事件处理程序和 <xref:System.Windows.Forms.Control.FontChanged> 事件处理程序中。 如果仅在 <xref:System.Windows.Forms.Control.Click> 事件处理程序中调用函数，而其他代码段更改整个窗体的字体系列，则文本框不会随窗体的其余部分发生更改。
 
 ```vb
 Private Sub MakeBold()
@@ -84,6 +84,6 @@ TextBox1.Font = New System.Drawing.Font(Me.Font, TextBox1.Font.Style)
 textBox1.Font = new System.Drawing.Font(this.Font, textBox1.Font.Style);
 ```
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用字体和文本](using-fonts-and-text.md)

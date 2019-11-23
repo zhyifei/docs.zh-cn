@@ -18,21 +18,21 @@ XML 序列化程序生成器为指定程序集中的类型创建一个 XML 序�
 sgen [options]  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>参数  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
-|**/a @ no__t-1ssembly @ no__t-2：** _filename_|为由 filename 指定的程序集或可执行文件中包含的所有类型生成序列化代码。 只能提供一个文件名。 如果该参数重复，将使用最后一个文件名。|  
-|**/c @ no__t-1ompiler @ no__t-2：** _options_|指定要传递给 C# 编译器的选项。 支持所有传递到编译器的 csc.exe 选项。 这可用于指定应该对程序集进行签名，以及用于指定密钥文件。|  
+|**/a\[ssembly\]：** _filename_|为由 filename 指定的程序集或可执行文件中包含的所有类型生成序列化代码。 只能提供一个文件名。 如果该参数重复，将使用最后一个文件名。|  
+|**/c\[ompiler\]：** _选项_|指定要传递给 C# 编译器的选项。 支持所有传递到编译器的 csc.exe 选项。 这可用于指定应该对程序集进行签名，以及用于指定密钥文件。|  
 |**/d\[ebug\]**|生成一个可用于调试器的映像。|  
 |**/f\[orce\]**|强制覆盖同名的现有程序集。 默认值为 false。|  
 |**/help 或 /?**|显示该工具的命令语法和选项。|  
 |**/k\[eep\]**|取消在生成的源文件和其他临时文件编译到序列化程序集内之后对它们的删除操作。 这可用于确定工具是否正在为某个特定类型生成序列化代码。|  
 |**/n\[ologo\]**|取消显示 Microsoft 启动版权标志。|  
-|**/o @ no__t-1ut @ no__t-2：** _path_|指定要在其中保存生成的程序集的目录。 **注意：** 生成的程序集的名称由输入程序集的名称加上“xmlSerializers.dll”组成。|  
+|**/o\[\]：** _路径_|指定要在其中保存生成的程序集的目录。 **注意：** 生成的程序集的名称由输入程序集的名称加上“xmlSerializers.dll”组成。|  
 |**/p\[roxytypes\]**|仅生成 XML Web services 代理类型的序列化代码。|  
-|**/r @ no__t-1eference @ no__t-2：** _assemblyfiles_|指定由需要 XML 序列化的类型引用的程序集。 接受多个程序集文件（由逗号分隔）。|  
-|**/s @ no__t-1ilent @ no__t-2**|取消显示成功消息。|  
+|**/r\[eference\]：** _assemblyfiles_|指定由需要 XML 序列化的类型引用的程序集。 接受多个程序集文件（由逗号分隔）。|  
+|**/s\[ilent\]**|取消显示成功消息。|  
 |**/t\[ype\]:** _type_|仅生成指定类型的序列化代码。|  
 |**/v\[erbose\]**|显示详细输出，以进行调试。 列出目标程序集中无法使用 <xref:System.Xml.Serialization.XmlSerializer> 进行序列化的类型。|  
 |**/?**|显示该工具的命令语法和选项。|  
@@ -55,7 +55,7 @@ sgen Data.dll
   
  可以从代码中引用需要序列化和反序列化 Data.dll 中的类型的 Data.XmlSerializers.dll 程序集。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [工具](../../../docs/framework/tools/index.md)
 - [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

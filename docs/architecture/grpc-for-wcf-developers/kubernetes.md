@@ -1,14 +1,13 @@
 ---
 title: Kubernetes-WCF 开发人员 gRPC
 description: 在 Kubernetes 群集中运行 ASP.NET Core gRPC 服务。
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 819c761a7a55485612b7fb0c8b392971751d8724
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 503b582ae9fdcf8c72c87558de3a8ddd898489aa
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841575"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967569"
 ---
 # <a name="kubernetes"></a>Kubernetes
 
@@ -47,7 +46,7 @@ metadata:
 
 Pod 是 Kubernetes 中的基本执行单位。 它们可以运行多个容器，但也可用于运行单个容器。 Pod 还包括容器所需的任何存储资源，以及网络 IP 地址。
 
-### <a name="services"></a>Services
+### <a name="services"></a>服务
 
 服务是一种元对象，用于描述 pod （或 pod 集），并提供一种在群集内访问这些对象的方式，如使用群集 DNS 服务将服务名称映射到一组 pod IP 地址。
 

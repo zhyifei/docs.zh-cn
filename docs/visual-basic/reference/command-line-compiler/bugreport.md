@@ -24,7 +24,7 @@ ms.locfileid: "72002348"
   
 ## <a name="arguments"></a>参数  
   
-|术语|定义|  
+|术语|Definition|  
 |---|---|  
 |`file`|必需。 将包含 bug 报告的文件的名称。 如果名称包含空格，请将文件名用引号（""）引起来。|  
   
@@ -43,24 +43,24 @@ ms.locfileid: "72002348"
   
 - 有关你如何思考问题的说明，请对此进行提示。  
   
- 由于所有源代码文件的副本都包含在 `file` 中，因此可能需要在最短的程序中再现（怀疑）代码缺陷。  
+ 由于 `file`中包含所有源代码文件的副本，因此你可能希望在尽可能短的程序中再现（怀疑）代码缺陷。  
   
 > [!IMPORTANT]
-> @No__t-0 选项将生成一个包含潜在敏感信息的文件。 这包括当前时间、编译器版本、.NET Framework 版本、OS 版本、用户名、运行编译器时所用的命令行参数、所有源代码和任何被引用程序集的二进制格式。 通过在 web.config 文件中为 ASP.NET 应用程序的服务器端编译指定命令行选项，可以访问此选项。 若要防止出现这种情况，请修改 Machine.config 文件，禁止用户在服务器上进行编译。  
+> `-bugreport` 选项将生成一个包含潜在敏感信息的文件。 这包括当前时间、编译器版本、.NET Framework 版本、OS 版本、用户名、运行编译器时所用的命令行参数、所有源代码和任何被引用程序集的二进制格式。 通过在 web.config 文件中为 ASP.NET 应用程序的服务器端编译指定命令行选项，可以访问此选项。 若要防止出现这种情况，请修改 Machine.config 文件，禁止用户在服务器上进行编译。  
   
- 如果将此选项与 `-errorreport:prompt`、@no__t 为-1 或 `-errorreport:send` 一起使用，并且应用程序遇到内部编译器错误，则 @no__t 中的信息将发送到 Microsoft Corporation。 该信息将帮助 Microsoft 工程师找出错误的原因，并帮助改进 Visual Basic 的下一版本。 默认情况下，不会向 Microsoft 发送任何信息。 但是，当你使用 @no__t 默认情况下启用的（默认情况下启用）编译应用程序时，应用程序将收集其错误报告。 然后，当计算机的管理员登录时，"错误报告系统" 会显示一个弹出窗口，使管理员能够将自登录后发生的任何错误报告转发给 Microsoft。  
+ 如果此选项与 `-errorreport:prompt`、`-errorreport:queue`或 `-errorreport:send`一起使用，并且应用程序遇到内部编译器错误，则 `file` 中的信息将发送到 Microsoft Corporation。 该信息将帮助 Microsoft 工程师找出错误的原因，并帮助改进 Visual Basic 的下一版本。 默认情况下，不会向 Microsoft 发送任何信息。 但是，当你使用 `-errorreport:queue`（默认情况下已启用）编译应用程序时，应用程序将收集其错误报告。 然后，当计算机的管理员登录时，"错误报告系统" 会显示一个弹出窗口，使管理员能够将自登录后发生的任何错误报告转发给 Microsoft。  
   
 > [!NOTE]
-> 在 Visual Studio 开发环境中，不能使用 `/bugreport` 选项;仅当从命令行进行编译时，它才可用。  
+> `/bugreport` 选项在 Visual Studio 开发环境中不可用;仅当从命令行进行编译时，它才可用。  
   
 ## <a name="example"></a>示例  
- 下面的示例将 `T2.vb` 编译，并将所有错误报告信息放在文件 `Problem.txt` 中。  
+ 下面的示例将编译 `T2.vb`，并将所有 bug 报告信息放入 `Problem.txt`文件中。  
   
 ```console  
 vbc -bugreport:problem.txt t2.vb  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-debug （Visual Basic）](../../../visual-basic/reference/command-line-compiler/debug.md)

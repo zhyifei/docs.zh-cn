@@ -217,11 +217,11 @@ ms.locfileid: "73039179"
 
   关键帧动画的功能比“From/To/By”动画的功能更强大，因为可以指定任意多个目标值，甚至可以控制它们的插值方法。 某些类型只能用关键帧动画进行动画处理。 关键帧动画[概述](key-frame-animations-overview.md)中详细描述了关键帧动画。
 
-- \<*类型*> AnimationUsingPath
+- \<*Type*>AnimationUsingPath
 
   路径动画支持使用几何路径来生成动画值。
 
-- \<*类型*> AnimationBase
+- \<*Type*>AnimationBase
 
   一个抽象类，它在实现它时将 \<*类型*> 值进行动画处理。 此类用作 \<*类型*> 动画和 \<*类型*> AnimationUsingKeyFrames 类的基类。 只有在想要创建自己的自定义动画时，才需要直接处理这些类。 否则，请使用 \<*类型*> 动画或关键帧\<*类型*> 动画。
 
@@ -231,10 +231,10 @@ ms.locfileid: "73039179"
 
 |属性类型|对应的基本 (From/To/By) 动画|对应的关键帧动画|对应的路径动画|用法示例|
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|None|对 <xref:System.Windows.Media.SolidColorBrush> 或 <xref:System.Windows.Media.GradientStop>的 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 进行动画处理。|
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|无|对 <xref:System.Windows.Media.SolidColorBrush> 或 <xref:System.Windows.Media.GradientStop>的 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 进行动画处理。|
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|对 <xref:System.Windows.Controls.DockPanel> 的 <xref:System.Windows.FrameworkElement.Width%2A> 或 <xref:System.Windows.Controls.Button>的 <xref:System.Windows.FrameworkElement.Height%2A> 进行动画处理。|
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|对 <xref:System.Windows.Media.EllipseGeometry>的 <xref:System.Windows.Media.EllipseGeometry.Center%2A> 位置进行动画处理。|
-|<xref:System.String>|None|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|None|对 <xref:System.Windows.Controls.TextBlock> 的 <xref:System.Windows.Controls.TextBlock.Text%2A> 或 <xref:System.Windows.Controls.Button>的 <xref:System.Windows.Controls.ContentControl.Content%2A> 进行动画处理。|
+|<xref:System.String>|无|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|无|对 <xref:System.Windows.Controls.TextBlock> 的 <xref:System.Windows.Controls.TextBlock.Text%2A> 或 <xref:System.Windows.Controls.Button>的 <xref:System.Windows.Controls.ContentControl.Content%2A> 进行动画处理。|
 
 <a name="animationsaretimelines"></a>
 
@@ -248,7 +248,7 @@ ms.locfileid: "73039179"
 
 #### <a name="the-duration-property"></a>Duration 属性
 
-如前文所述，时间线表示时间段。 该时间段的长度由时间线的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 确定，通常使用 <xref:System.Windows.Duration.TimeSpan%2A> 值来指定该时间线。 当时间线达到其持续时间的终点时，表示时间线完成了一次迭代。
+如前文所述，时间线表示一个时间段。 该时间段的长度由时间线的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 确定，通常使用 <xref:System.Windows.Duration.TimeSpan%2A> 值来指定该时间线。 当时间线达到其持续时间的终点时，表示时间线完成了一次迭代。
 
 动画使用其 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 属性来确定其当前值。 如果没有为动画指定 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 值，则使用默认值1秒。
 
@@ -367,7 +367,7 @@ ms.locfileid: "73039179"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|描述|
+|职务|说明|
 |-----------|-----------------|
 |[动画和计时系统概述](animation-and-timing-system-overview.md)|介绍计时系统如何使用 <xref:System.Windows.Media.Animation.Timeline> 和 <xref:System.Windows.Media.Animation.Clock> 类，这允许您创建动画。|
 |[动画提示和技巧](animation-tips-and-tricks.md)|列出用于解决与动画有关的问题（如性能）的有用提示。|
@@ -377,7 +377,7 @@ ms.locfileid: "73039179"
 |[缓动函数](easing-functions.md)|说明如何将数学公式应用于动画以获得真实行为（如反弹）。|
 |[路径动画概述](path-animations-overview.md)|描述如何沿复杂路径移动或旋转对象。|
 |[属性动画技术概述](property-animation-techniques-overview.md)|描述使用演示图板、本地动画、时钟以及逐帧动画的属性动画。|
-|[演示图板概述](storyboards-overview.md)|描述如何将演示图板与多个时间线一起使用，以创建复杂动画。|
+|[情节提要概述](storyboards-overview.md)|描述如何将演示图板与多个时间线一起使用，以创建复杂动画。|
 |[计时行为概述](timing-behaviors-overview.md)|介绍动画中使用的 <xref:System.Windows.Media.Animation.Timeline> 类型和属性。|
 |[计时事件概述](timing-events-overview.md)|介绍 <xref:System.Windows.Media.Animation.Timeline> 上可用的事件，以及在时间线中执行代码的 <xref:System.Windows.Media.Animation.Clock> 对象，如开始、暂停、继续、跳过或停止。|
 |[帮助主题](animation-and-timing-how-to-topics.md)|包含演示在应用程序中使用动画和时间线的代码示例。|

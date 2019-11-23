@@ -26,9 +26,9 @@ SQL 主要处理*值的无序集*。 排序通常是显式声明的后续处理�
 
 ### <a name="concat"></a>Concat
 
-<xref:System.Linq.Enumerable.Concat%2A> 方法是为有序多重集定义的，其中接收方的顺序与自变量的顺序相同。 <xref:System.Linq.Enumerable.Concat%2A> 的作用等效于对多重集执行 `UNION ALL`，紧接着再执行常见排序。
+<xref:System.Linq.Enumerable.Concat%2A> 方法是为有序多重集定义的，其中接收方的顺序与自变量的顺序相同。 <xref:System.Linq.Enumerable.Concat%2A> 的工作方式是对多重集执行 `UNION ALL`，并遵循常见的顺序。
 
-在产生结果前，最后一步是在 SQL 中排序。 <xref:System.Linq.Enumerable.Concat%2A> 不保留其自变量的顺序。 为确保顺序合适，您必须显式对 <xref:System.Linq.Enumerable.Concat%2A> 的结果进行排序。
+在产生结果前，最后一步是在 SQL 中排序。 <xref:System.Linq.Enumerable.Concat%2A> 不会保留其参数的顺序。 为确保顺序合适，您必须显式对 <xref:System.Linq.Enumerable.Concat%2A> 的结果进行排序。
 
 ### <a name="intersect-except-union"></a>Intersect、Except、Union
 
@@ -38,10 +38,10 @@ SQL 主要处理*值的无序集*。 排序通常是显式声明的后续处理�
 
 ### <a name="take-skip"></a>Take、Skip
 
-<xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 方法仅对*有序集*定义良好。 未定义针对无序集或多重集的语义。
+<xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 方法仅针对*有序集*定义良好。 未定义针对无序集或多重集的语义。
 
 > [!NOTE]
-> <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 用在针对 SQL Server 2000 的查询中时存在一定的限制。 有关详细信息，请参阅[疑难解答](troubleshooting.md)中的 "跳过并使用 SQL Server 2000" 条目。
+> 在针对 SQL Server 2000 的查询中使用 <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 时，存在某些限制。 有关详细信息，请参阅[疑难解答](troubleshooting.md)中的 "跳过并使用 SQL Server 2000" 条目。
 
 由于 SQL 中的排序存在限制，因此 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会设法将这些方法的参数的排序操作移到相应方法的结果中进行。 例如，请考虑下面这个 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查询：
 
@@ -76,17 +76,17 @@ ORDER BY [t0].[CustomerID]
 
 |运算符|阐释|
 |---------------|---------------|
-|<xref:System.Linq.Enumerable.TakeWhile%2A>， <xref:System.Linq.Enumerable.SkipWhile%2A>|SQL 查询是对多重集执行的，而不是对序列执行的。 `ORDER BY` 必须是最后一个应用于结果的子句。 因此，不存在适用于这两个方法的通用转换。|
+|<xref:System.Linq.Enumerable.TakeWhile%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>|SQL 查询是对多重集执行的，而不是对序列执行的。 `ORDER BY` 必须是最后一个应用于结果的子句。 因此，不存在适用于这两个方法的通用转换。|
 |<xref:System.Linq.Enumerable.Reverse%2A>|此方法的转换对于有序集而言是可行的，但目前 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 未对它进行转换。|
-|<xref:System.Linq.Enumerable.Last%2A>， <xref:System.Linq.Enumerable.LastOrDefault%2A>|这些方法的转换对于有序集而言是可行的，但目前 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 未对它们进行转换。|
-|<xref:System.Linq.Enumerable.ElementAt%2A>， <xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|SQL 查询是对多重集执行的，而不是对可建立索引的序列执行的。|
-|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A>（带默认参数的重载）|一般而言，无法为任意元组指定默认值。 在某些情况下，可以通过外部联接为元组指定 Null 值。|
+|<xref:System.Linq.Enumerable.Last%2A>, <xref:System.Linq.Enumerable.LastOrDefault%2A>|这些方法的转换对于有序集而言是可行的，但目前 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 未对它们进行转换。|
+|<xref:System.Linq.Enumerable.ElementAt%2A>, <xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|SQL 查询是对多重集执行的，而不是对可建立索引的序列执行的。|
+|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A> （用默认 arg 重载）|一般而言，无法为任意元组指定默认值。 在某些情况下，可以通过外部联接为元组指定 Null 值。|
 
 ## <a name="expression-translation"></a>表达式转换
 
 ### <a name="null-semantics"></a>Null 语义
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不会将 null 比较语义施加在 SQL 上。 比较运算符在语法上被转换为其 SQL 等效项。 因此，该语义反映了由服务器或连接设置定义的 SQL 语义。 例如，在默认 SQL Server 设置下，两个 null 值被视为不相等，但您可以更改这些设置以更改语义。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 在转换查询时不考虑服务器设置。
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不在 SQL 上施加 null 比较语义。 比较运算符在语法上被转换为其 SQL 等效项。 因此，该语义反映了由服务器或连接设置定义的 SQL 语义。 例如，在默认 SQL Server 设置下，两个 null 值被视为不相等，但您可以更改这些设置以更改语义。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 在转换查询时不考虑服务器设置。
 
 对文本型 null 的比较被转换为相应的 SQL 版本（`is null` 或 `is not null`）。
 
@@ -158,7 +158,7 @@ Visual Basic 编译器使用的以下 Helper 函数转换为对应的 SQL 运算
 
 ### <a name="inheritance-mapping-restrictions"></a>继承映射限制
 
-有关详细信息，请参阅[如何：映射继承层次结构 @ no__t。
+有关详细信息，请参阅[如何：映射继承层次结构](how-to-map-inheritance-hierarchies.md)。
 
 ### <a name="inheritance-in-queries"></a>查询中的继承
 
@@ -198,17 +198,17 @@ Visual Basic 编译器使用的以下 Helper 函数转换为对应的 SQL 运算
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000 支持
 
-以下 SQL Server 2000 限制（与 Microsoft SQL Server 2005 相比）影响 @no__t 0 支持。
+以下 SQL Server 2000 限制（与 Microsoft SQL Server 2005 相比）会影响 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持。
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply 和 Outer Apply 运算符
 
-这些运算符在 SQL Server 2000 中不可用。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 设法通过一系列的重写来将它们替换为适当的联接。
+这些运算符在 SQL Server 2000 中不可用。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 尝试使用适当的联接替换一系列重写。
 
-`Cross Apply` 和 `Outer Apply` 是为关系导航生成的。 可以进行这种重写的查询集定义不完善。 出于此原因，SQL Server 2000 支持的最小查询集是不涉及关系导航的集。
+为关系导航生成 `Cross Apply` 和 `Outer Apply`。 可以进行这种重写的查询集定义不完善。 出于此原因，SQL Server 2000 支持的最小查询集是不涉及关系导航的集。
 
 ### <a name="text--ntext"></a>text / ntext
 
-数据类型 `text` @ no__t-1 @ no__t-2 不能用于针对 Microsoft SQL Server 2005 支持的 @no__t 3 @ no__t @ @ no__t 的某些查询操作。
+在某些查询操作中，不能将数据类型 `text` / `ntext`  / 2005 支持的 `varchar(max)``nvarchar(max)`Microsoft SQL Server。
 
 不存在解决此限制的方法。 具体而言，您不能对包含映射到 `Distinct()` 或 `text` 列的成员的任何结果使用 `ntext`。
 
@@ -218,7 +218,7 @@ SQL Server 2000 （到 SP4）联编程序具有由嵌套查询触发的一些特
 
 ### <a name="skip-and-take-operators"></a>Skip 和 Take 运算符
 
-<xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 用在针对 SQL Server 2000 的查询中时存在一定的限制。 有关详细信息，请参阅[疑难解答](troubleshooting.md)中的 "跳过并使用 SQL Server 2000" 条目。
+在针对 SQL Server 2000 的查询中使用 <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 时，存在某些限制。 有关详细信息，请参阅[疑难解答](troubleshooting.md)中的 "跳过并使用 SQL Server 2000" 条目。
 
 ## <a name="object-materialization"></a>对象具体化
 
@@ -232,7 +232,7 @@ SQL Server 2000 （到 SP4）联编程序具有由嵌套查询触发的一些特
 
   - 投影中的类型强制转换
 
-- 执行 <xref:System.Linq.Enumerable.AsEnumerable%2A> 方法的方法在*本地执行*。 此方法不会导致直接执行。
+- 遵循 <xref:System.Linq.Enumerable.AsEnumerable%2A> 方法的方法在*本地执行*。 此方法不会导致直接执行。
 
 - 您可以将 `struct` 用作查询结果的返回类型或结果类型的成员。 实体需要变成类。 匿名类型具体化为类的实例，但命名结构（非实体）可在投影中使用。
 
@@ -246,7 +246,7 @@ SQL Server 2000 （到 SP4）联编程序具有由嵌套查询触发的一些特
 
   - <xref:System.Linq.Enumerable.ToArray%2A>
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [引用](reference.md)
 - [返回或跳过序列中的元素](return-or-skip-elements-in-a-sequence.md)

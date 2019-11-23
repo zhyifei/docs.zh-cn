@@ -28,7 +28,7 @@ ms.locfileid: "72004873"
 
 可以在泛型接口和委托中使用 `In` 关键字。
   
-如果类型参数仅用作方法参数的类型并且不用作方法返回类型，则可以在泛型接口或委托中声明为逆变。 @no__t 参数不能是协变或逆变。
+如果类型参数仅用作方法参数的类型并且不用作方法返回类型，则可以在泛型接口或委托中声明为逆变。 `ByRef` 参数不能是协变或逆变。
 
 引用类型支持协变和逆变，但值类型不支持协变和逆变。
 
@@ -36,7 +36,7 @@ ms.locfileid: "72004873"
 
 ## <a name="behavior"></a>行为
 
-具有逆变类型参数的接口使其方法接受的参数的类型可以比接口类型参数指定的类型派生程度更小。 例如，由于在 .NET Framework 4 中，在 @no__t 的接口中，类型 T 是逆变的，因此，如果 @no__t 从 @no__t 继承，则无需使用任何特殊转换方法，即可将 @no__t 类型的对象分配给 @no__t 2 类型的对象。
+具有逆变类型参数的接口使其方法接受的参数的类型可以比接口类型参数指定的类型派生程度更小。 例如，由于在 .NET Framework 4 的 <xref:System.Collections.Generic.IComparer%601> 接口中，类型 T 是逆变的，因此，如果 `Employee` 从 `Person`继承，则可以将 `IComparer(Of Person)` 类型的对象分配给 `IComparer(Of Employee)` 类型的对象，而无需使用任何特殊转换方法。
 
 可以向逆变委托分配相同类型的其他委托，不过要使用派生程度更小的泛型类型参数。
 
@@ -52,7 +52,7 @@ ms.locfileid: "72004873"
 
 [!code-vb[vbVarianceKeywords#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#2)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [泛型接口中的变体](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
 - [Out](out-generic-modifier.md)

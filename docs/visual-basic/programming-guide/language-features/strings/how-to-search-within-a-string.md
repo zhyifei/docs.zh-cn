@@ -19,21 +19,21 @@ ms.locfileid: "71700063"
 
 ## <a name="example"></a>示例
 
-此示例对 @no__t 1 对象调用 <xref:System.String.IndexOf%2A> 方法，以报告子字符串的第一个匹配项的索引：
+此示例对 <xref:System.String> 对象调用 <xref:System.String.IndexOf%2A> 方法，以报告子字符串的第一个匹配项的索引：
 
  [!code-vb[VbVbalrStrings#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#71)]
 
 ## <a name="robust-programming"></a>可靠编程
 
-@No__t-0 方法返回子字符串的第一个匹配项的第一个字符的位置。 索引从0开始，这意味着字符串的第一个字符的索引为0。
+<xref:System.String.IndexOf%2A> 方法返回子字符串的第一个匹配项的第一个字符的位置。 索引从0开始，这意味着字符串的第一个字符的索引为0。
 
-如果 @no__t，则返回-1。
+如果 <xref:System.String.IndexOf%2A> 未找到子字符串，则返回-1。
 
-@No__t-0 方法区分大小写，并使用当前区域性。
+<xref:System.String.IndexOf%2A> 方法区分大小写，并使用当前区域性。
 
-为了获得最佳的错误控制，你可能需要在 Try ... 的 `Try` 块中包含字符串搜索[Catch .。。Finally 语句](../../../language-reference/statements/try-catch-finally-statement.md)构造。
+为了获得最佳的错误控制，你可能需要将字符串搜索包含 `Try` 在[Try .。。Catch .。。Finally 语句](../../../language-reference/statements/try-catch-finally-statement.md)构造。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.String.IndexOf%2A>
 - [Try...Catch...Finally 语句](../../../language-reference/statements/try-catch-finally-statement.md)

@@ -191,7 +191,7 @@ Azure Cosmos DB 使用自动[分区](https://docs.microsoft.com/azure/cosmos-db/
 
 在内部，Cosmos DB 自动管理[物理分区](https://docs.microsoft.com/azure/cosmos-db/partition-data)上的[逻辑分区](https://docs.microsoft.com/azure/cosmos-db/partition-data)位置，以有效地满足容器的可伸缩性和性能需求。 随着应用程序的吞吐量和存储要求的增加，Azure Cosmos DB 会移动逻辑分区，以便在更多的服务器之间重新分发负载。 这些再分发操作由 Cosmos DB 管理，并在没有任何中断或停机时间的情况下执行。
 
-## <a name="azure-redis-cache"></a>Azure Redis 缓存
+## <a name="azure-redis-cache"></a>Azure Redis Cache
 
 充分了解缓存的优点，提高性能和伸缩性。
 

@@ -37,7 +37,7 @@ ms.locfileid: "71834652"
 </bindings>
 ```
 
-在[\<security >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)上，@no__t 2 值指定应该使用的安全模式。 在此示例中，使用 `message` 安全，这就是在[\<security >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)中指定[@no__t 2message >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)的原因。 [@No__t-3message >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)中的[\<issuer >](../../configure-apps/file-schema/wcf/issuer.md)元素为向客户端颁发安全令牌的 STS 指定地址和绑定，以便客户端可以向 @no__t 服务进行身份验证。
+在[\<安全 >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)上，`security` 值指定应该使用的安全模式。 在此示例中，将使用 `message` security，这就是[\<安全 >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)中指定[\<消息 >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)的原因。 [\<消息](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)内的[\<颁发者 >](../../configure-apps/file-schema/wcf/issuer.md)元素 > 为向客户端颁发安全令牌的 STS 指定地址和绑定，以便客户端可以向 `ICalculator` 服务进行身份验证。
   
 下面的代码演示了如何在服务上配置此绑定：
 
@@ -64,7 +64,7 @@ ms.locfileid: "71834652"
 </bindings>
 ```
 
-在[\<security >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)上，@no__t 2 值指定应该使用的安全模式。 在此示例中，使用 `message` 安全，这就是在[\<security >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)中指定[@no__t 2message >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)的原因。 [@No__t-4message >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)内 `ws2007FederationHttpBinding` 的[\<issuerMetadata >](../../configure-apps/file-schema/wcf/issuermetadata.md)元素指定终结点的地址和标识，该终结点可用于检索 STS 的元数据。
+在[\<安全 >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)上，`security` 值指定应该使用的安全模式。 在此示例中，将使用 `message` security，这就是[\<安全 >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)中指定[\<消息 >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)的原因。 [\<消息](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)内 `ws2007FederationHttpBinding` 的[\<issuedtokenparameters >](../../configure-apps/file-schema/wcf/issuermetadata.md)元素 > 指定终结点的地址和标识，该终结点可用于检索 STS 的元数据。
 
 以下代码显示了服务的行为：
 
@@ -93,7 +93,7 @@ ms.locfileid: "71834652"
 </behaviors>
 ```
   
-[@No__t-1issuedTokenAuthentication >](../../configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)> 允许服务指定在身份验证过程中允许客户端显示的令牌约束。 此配置指定该服务接受由主题名称为 CN=STS 的证书签名的令牌。
+[\<的 issuedTokenAuthentication >](../../configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)> 允许服务指定在身份验证过程中允许客户端显示的令牌约束。 此配置指定该服务接受由主题名称为 CN=STS 的证书签名的令牌。
 
 STS 使用标准的 <xref:System.ServiceModel.WS2007HttpBinding> 提供单个终结点。 服务响应客户端对令牌的请求。 如果客户端使用 Windows 帐户进行身份验证，则服务将颁发一个令牌，该令牌以声明的形式包含客户端的用户名。 在创建令牌的过程中，STS 使用与 CN=STS 证书关联的私钥对令牌进行签名。 另外，它还创建对称密钥并使用与 CN=localhost 证书关联的公钥对该密钥进行加密。 在向客户端返回令牌的过程中，STS 还返回对称密钥。 客户端向 `ICalculator` 服务出示所颁发的令牌，并通过使用密钥对消息进行签名来证明客户端知道该对称密钥。
 
@@ -126,6 +126,6 @@ Press <ENTER> to terminate client.
 > 
 > `<InstallDrive>:\WF_WCF_Samples`
 > 
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
 > 
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\WS2007FederationHttp`

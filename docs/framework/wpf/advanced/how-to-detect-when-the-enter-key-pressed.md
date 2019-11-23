@@ -1,5 +1,5 @@
 ---
-title: 如何：按下 Enter 键时进行检测
+title: 如何：检测何时按下 Enter 键
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,24 +15,24 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72004819"
 ---
-# <a name="how-to-detect-when-the-enter-key-pressed"></a>如何：按下 Enter 键时进行检测
-此示例演示如何检测在键盘上按 @no__t 0 键的时间。  
+# <a name="how-to-detect-when-the-enter-key-pressed"></a>如何：检测何时按下 Enter 键
+此示例演示如何检测在键盘上按下 <xref:System.Windows.Input.Key.Enter> 键的时间。  
   
- 此示例由一个 @no__t 0 文件和一个代码隐藏文件组成。  
+ 此示例由一个 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 文件和一个代码隐藏文件组成。  
   
 ## <a name="example"></a>示例  
- 当用户按 @no__t 中的 @no__t 0 键时，文本框中的输入将显示在 @no__t 的另一区域中。  
+ 当用户按 <xref:System.Windows.Controls.TextBox>中的 <xref:System.Windows.Input.Key.Enter> 键时，文本框中的输入将显示在 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]的另一区域中。  
   
- 下面的 XAML 创建用户界面，该用户界面由 <xref:System.Windows.Controls.StackPanel>、<xref:System.Windows.Controls.TextBlock> 和 <xref:System.Windows.Controls.TextBox> 组成。  
+ 以下 XAML 创建用户界面，该用户界面由 <xref:System.Windows.Controls.StackPanel>、<xref:System.Windows.Controls.TextBlock>和 <xref:System.Windows.Controls.TextBox>组成。  
   
  [!code-xaml[keydown#KeyDownUI](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyDown/CSharp/Window1.xaml#keydownui)]  
   
- 下面的代码将创建 <xref:System.Windows.UIElement.KeyDown> 事件处理程序。  如果按下的键是 <xref:System.Windows.Input.Key.Enter> 键，则会在 <xref:System.Windows.Controls.TextBlock> 中显示一条消息。  
+ 下面的代码将创建 <xref:System.Windows.UIElement.KeyDown> 事件处理程序。  如果按下的键是 <xref:System.Windows.Input.Key.Enter> 键，<xref:System.Windows.Controls.TextBlock>中将显示一条消息。  
   
  [!code-csharp[keydown#KeyDownSample](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyDown/CSharp/Window1.xaml.cs#keydownsample)]
  [!code-vb[keydown#KeyDownSample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyDown/VisualBasic/Window1.xaml.vb#keydownsample)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [输入概述](input-overview.md)
 - [路由事件概述](routed-events-overview.md)

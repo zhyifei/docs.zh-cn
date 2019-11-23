@@ -20,14 +20,14 @@ ms.locfileid: "72005706"
 HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgressClassName, [out] BSTR* pwzErrorAssemblyName, [out] BSTR* pwzErrorClassName );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>参数  
  `pwzProgressAssemblyName`  
   
  弄指向包含主机提供的进度用户界面的程序集的指针。  
   
  `pwzProgressClassName`  
   
- 弄类的名称，它是宿主提供的进度用户界面，最好是 @no__t 为-0 的 XAML 文件是其顶级元素。 此类驻留在由 `pwzProgressAssemblyName` 指定的程序集中。  
+ 弄作为主机提供的进度用户界面的类的名称，最好是具有 <xref:System.Windows.Controls.Page> 的 XAML 文件是它的顶级元素。 此类驻留在 `pwzProgressAssemblyName`指定的程序集中。  
   
  `pwzErrorAssemblyName`  
   
@@ -35,7 +35,7 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
   
  `pwzErrorClassName`  
   
- 弄类的名称，它是宿主提供的错误用户界面，最好是包含 <xref:System.Windows.Controls.Page> 的 XAML 文件是它的顶级元素。 此类驻留在由 `pwzErrorAssemblyName` 指定的程序集中。  
+ 弄作为宿主提供的错误用户界面的类的名称，最好是具有 <xref:System.Windows.Controls.Page> 的 XAML 文件是它的顶级元素。 此类驻留在 `pwzErrorAssemblyName`指定的程序集中。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  HRESULT：已忽略。  
@@ -45,6 +45,6 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
   
  此函数在 Presentationhost.exe 的初始化过程中调用一次。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IWpfHostSupport](iwpfhostsupport.md)

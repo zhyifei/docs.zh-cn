@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 760bfb32-5c3f-4bdb-a432-9a6001c92db7
 ms.openlocfilehash: 9c25653809c51662ea5b606ab97be6a9b50d5986
 ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/04/2019
 ms.locfileid: "71956933"
@@ -32,44 +32,44 @@ Exit { Do | For | Function | Property | Select | Sub | Try | While }
 ## <a name="statements"></a>语句
 
  `Exit Do`  
- 立即退出出现 @no__t 的0循环。 继续执行 `Loop` 语句后面的语句。 `Exit Do` 只能在 @no__t 循环内使用。 在嵌套 `Do` 循环内使用时，`Exit Do` 退出最内层的循环，并将控制转移到下一个更高的嵌套级别。
+ 立即退出出现 `Do` 循环。 继续执行 `Loop` 语句后面的语句。 `Exit Do` 只能在 `Do` 循环内使用。 在嵌套的 `Do` 循环中使用时，`Exit Do` 退出最内层的循环，并将控制转移到下一个更高的嵌套级别。
 
  `Exit For`  
- 立即退出出现 @no__t 的0循环。 继续执行 `Next` 语句后面的语句。 `Exit For` 只能在 @no__t `Next` 或 `For Each` ... `Next` 循环内使用。 在嵌套 `For` 循环内使用时，`Exit For` 退出最内层的循环，并将控制转移到下一个更高的嵌套级别。
+ 立即退出出现 `For` 循环。 继续执行 `Next` 语句后面的语句。 `Exit For` 只能在 `For`...`Next` 或 `For Each`...`Next` 循环内使用。 在嵌套的 `For` 循环中使用时，`Exit For` 退出最内层的循环，并将控制转移到下一个更高的嵌套级别。
 
  `Exit Function`  
- 会立即退出显示它的 @no__t 0 过程。 执行将继续，语句后跟调用 `Function` 过程的语句后面的语句。 `Exit Function` 只能在 @no__t 一过程中使用。
+ 立即退出显示的 `Function` 过程。 继续执行调用 `Function` 过程的语句后面的语句。 `Exit Function` 只能在 `Function` 过程中使用。
 
- 若要指定返回值，可以在 `Exit Function` 语句之前，将值分配给函数名称。 若要分配返回值并在一个语句中退出函数，可以改为使用[Return 语句](return-statement.md)。
+ 若要指定一个返回值，可以在 `Exit Function` 语句前面的行上将值分配给函数名称。 若要分配返回值并在一个语句中退出函数，可以改为使用[Return 语句](return-statement.md)。
 
  `Exit Property`  
- 会立即退出显示它的 @no__t 0 过程。 执行将继续，语句称为 @no__t 的过程，即，语句请求或设置属性的值。 `Exit Property` 只能在属性的 @no__t 或 @no__t 步骤中使用。
+ 立即退出显示的 `Property` 过程。 执行将继续执行调用 `Property` 过程的语句，即，语句请求或设置属性的值。 `Exit Property` 只能在属性的 `Get` 或 `Set` 过程中使用。
 
- 若要在 @no__t 的过程中指定返回值，可以在 @no__t 1 语句之前，将值分配给函数名称。 若要在一个语句中分配返回值并退出 `Get` 过程，可以改为使用 @no__t 语句。
+ 若要在 `Get` 过程中指定返回值，可以在 `Exit Property` 语句前面的行上将值分配给函数名称。 若要分配返回值并在一个语句中退出 `Get` 过程，则可以改用 `Return` 语句。
 
- 在 @no__t 的过程中，@no__t 语句等效于第 2 @no__t 语句。
+ 在 `Set` 过程中，`Exit Property` 语句与 `Return` 语句等效。
 
  `Exit Select`  
- 立即退出出现 @no__t 的块。 继续执行 `End Select` 语句后面的语句。 `Exit Select` 只能在 @no__t 语句中使用。
+ 立即退出显示该 `Select Case` 的块。 继续执行 `End Select` 语句后面的语句。 `Exit Select` 只能在 `Select Case` 语句内使用。
 
  `Exit Sub`  
- 会立即退出显示它的 @no__t 0 过程。 执行将继续，语句后跟调用 `Sub` 过程的语句后面的语句。 `Exit Sub` 只能在 @no__t 一过程中使用。
+ 立即退出显示的 `Sub` 过程。 继续执行调用 `Sub` 过程的语句后面的语句。 `Exit Sub` 只能在 `Sub` 过程中使用。
 
- 在 @no__t 的过程中，@no__t 语句等效于第 2 @no__t 语句。
+ 在 `Sub` 过程中，`Exit Sub` 语句与 `Return` 语句等效。
 
  `Exit Try`  
- 立即退出出现 @no__t 0 或 `Catch` 块。 如果有 `Finally` 块，则继续执行; 否则，将继续执行 `End Try` 语句后面的语句。 `Exit Try` 只能在 @no__t 或 `Catch` 块内使用，而不能在 @no__t 块内使用。
+ 会立即退出显示的 `Try` 或 `Catch` 块。 如果有一个，则继续执行 `Finally` 块，否则将继续执行 `End Try` 语句后面的语句。 `Exit Try` 只能在 `Try` 或 `Catch` 块内使用，而不能在 `Finally` 块内使用。
 
  `Exit While`  
- 立即退出出现 @no__t 的0循环。 继续执行 `End While` 语句后面的语句。 `Exit While` 只能在 @no__t 循环内使用。 在嵌套 `While` 循环内使用时，`Exit While` 会将控制转移到循环，该循环是在发生 `Exit While` 的循环之上的一个嵌套级别。
+ 立即退出出现 `While` 循环。 继续执行 `End While` 语句后面的语句。 `Exit While` 只能在 `While` 循环内使用。 在嵌套的 `While` 循环中使用时，`Exit While` 将控制转移到循环，该循环在 `Exit While` 发生的循环之上的一个嵌套级别。
 
 ## <a name="remarks"></a>备注
 
-不要将 `Exit` 语句与 @no__t 语句混淆。 `Exit` 不定义语句的末尾。
+不要将 `Exit` 语句与 `End` 语句混淆。 `Exit` 不定义语句的末尾。
 
 ## <a name="example"></a>示例
 
-在下面的示例中，当 `index` 变量大于100时，loop 条件将停止循环。 但是，循环中的 `If` 语句导致当索引变量大于10时，`Exit Do` 语句停止循环。
+在下面的示例中，循环条件在 `index` 变量大于100时停止循环。 但是，循环中的 `If` 语句导致 `Exit Do` 语句在索引变量大于10时停止循环。
 
 [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]
 
@@ -85,7 +85,7 @@ Exit { Do | For | Function | Property | Select | Sub | Try | While }
 
 [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Continue 语句](continue-statement.md)
 - [Do...Loop 语句](do-loop-statement.md)

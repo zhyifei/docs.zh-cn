@@ -17,15 +17,15 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697894"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>用于 bypasslist 的 0remove > 元素（网络设置） @no__t
+# <a name="remove-element-for-bypasslist-network-settings"></a>\<删除 bypasslist 的 > 元素（网络设置）
 
 从代理跳过列表中删除 IP 地址或 DNS 名称。
 
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<remove >**  
+\<&nbsp;[**的 &nbsp;>** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<删除 >**  
 
 ## <a name="syntax"></a>语法
 
@@ -35,13 +35,13 @@ ms.locfileid: "71697894"
 />
 ```
 
-## <a name="attributes-and-elements"></a>特性和元素
+## <a name="attributes-and-elements"></a>属性和元素
 
 下列各节描述了特性、子元素和父元素。
 
-### <a name="attributes"></a>特性
+### <a name="attributes"></a>Attributes
 
-|**特性**|**说明**|
+|**特性**|**描述**|
 |-------------------|---------------------|
 |`address`|描述 IP 地址或 DNS 名称的正则表达式。|
 
@@ -51,15 +51,15 @@ ms.locfileid: "71697894"
 
 ### <a name="parent-elements"></a>父元素
 
-|**元素**|**说明**|
+|**元素**|**描述**|
 |-----------------|---------------------|
 |[bypasslist](bypasslist-element-network-settings.md)|提供了一组正则表达式，描述不使用代理的地址。|
 
 ## <a name="remarks"></a>备注
 
-@No__t 0 元素从绕过代理服务器的地址列表中删除描述 IP 地址或 DNS 服务器名称的正则表达式。 地址在配置文件中或配置层次结构中的更高级别定义。
+`remove` 元素从绕过代理服务器的地址列表中删除描述 IP 地址或 DNS 服务器名称的正则表达式。 地址在配置文件中或配置层次结构中的更高级别定义。
 
-@No__t-0 属性的值应为描述一组 IP 地址或主机名的正则表达式。
+`address` 属性的值应为描述一组 IP 地址或主机名的正则表达式。
 
 有关正则表达式的详细信息，请参阅。[.NET Framework 正则表达式](../../../../standard/base-types/regular-expressions.md)。
 
@@ -84,7 +84,7 @@ ms.locfileid: "71697894"
 </configuration>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [网络设置架构](index.md)

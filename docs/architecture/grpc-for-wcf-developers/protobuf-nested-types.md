@@ -1,14 +1,13 @@
 ---
 title: Protobuf 嵌套类型-WCF 开发人员 gRPC
 description: 了解 Protobuf 和 gRPC 中的嵌套消息类型及其生成方式C#。
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: ec9fc522619230c1201bfef1e8128f7356936212
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: bbc7ed41516d29f867bbc9da5b258f6a3c9ff261
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841401"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967387"
 ---
 # <a name="protobuf-nested-types"></a>Protobuf 嵌套类型
 

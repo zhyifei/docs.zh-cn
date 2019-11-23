@@ -31,12 +31,12 @@ public abstract bool CanSeek { get; }
 ## <a name="property-value"></a>属性值
 
 <xref:System.Boolean>\
-如果当前流支持查找操作，则为 `true`;否则 @no__t 为-1。
+`true` 如果当前流支持查找操作，则为; 否则为。否则，`false`。
 
 ## <a name="remarks"></a>备注
 
 > [!WARNING]
-> @No__t-0 属性是私有的，不应在代码中直接使用。
+> `SqlStreamChars.CanSeek` 属性是私有的，不应在代码中直接使用。
 >
 > 在任何情况下，Microsoft 不支持在生产应用程序中使用此属性。
 
@@ -46,4 +46,4 @@ public abstract bool CanSeek { get; }
 
 **程序集：** System.object （在 System.web 中）
 
-**.NET Framework 版本：** 自2.0 起可用。
+**.NET framework 版本**：自 2.0 之后可用。

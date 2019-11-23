@@ -38,7 +38,7 @@ AKS 群集可通过以下两种方式之一进行缩放：
 
 Azure Functions 自动支持向外扩展。默认消耗计划根据传入的触发事件数动态添加（和删除）资源。 仅根据执行次数、执行时间和所使用的内存，对正在使用的计算资源付费。 使用高级计划，你可以获得这些相同的功能，但你也可以控制所使用的实例大小、已准备好的实例（以避免冷启动延迟），并配置要在其上运行函数的专用 Vm。 尽管默认配置应为大多数应用提供经济实惠且可缩放的解决方案，但 "高级" 选项使开发人员可以灵活地满足自定义 Azure Functions 要求。
 
-## <a name="references"></a>reference
+## <a name="references"></a>参考
 
 - [AKS 多节点池](https://docs.microsoft.com/azure/aks/use-multiple-node-pools)
 - [AKS 群集自动缩放程序](https://docs.microsoft.com/azure/aks/cluster-autoscaler)

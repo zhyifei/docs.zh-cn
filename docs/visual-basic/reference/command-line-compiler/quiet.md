@@ -30,7 +30,7 @@ ms.locfileid: "72005277"
 
 默认情况，`-quiet` 是无效的。 当编译器报告与语法相关的错误或警告时，它还会输出源代码中的行。 对于分析编译器输出的应用程序，编译器仅输出诊断文本可能更方便。
 
-在下面的示例中，`Module1` 会输出一个错误，该错误在编译时不 @no__t 为-1 时包含源代码。
+在下面的示例中，`Module1` 输出了在编译时不 `-quiet`的错误。
 
 ```vb
 Module Module1
@@ -49,24 +49,24 @@ C:\projects\vb2.vb(3) : error BC30451: 'x' is not declared. It may be inaccessib
         ~
 ```
 
-用 `-quiet` 编译时，编译器仅输出以下内容：
+用 `-quiet`编译的编译器仅输出以下内容：
 
 ```console
 E:\test\t2.vb(3) : error BC30451: Name 'x' is not declared.
 ```
 
 > [!NOTE]
-> 在 Visual Studio 开发环境中，不能使用 `-quiet` 选项;仅当从命令行进行编译时，它才可用。
+> `-quiet` 选项在 Visual Studio 开发环境中不可用;仅当从命令行进行编译时，它才可用。
 
 ## <a name="example"></a>示例
 
-下面的代码编译 `T2.vb`，并且不显示与语法相关的编译器诊断的代码：
+下面的代码编译 `T2.vb` 并且不显示与语法相关的编译器诊断的代码：
 
 ```console
 vbc -quiet t2.vb
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

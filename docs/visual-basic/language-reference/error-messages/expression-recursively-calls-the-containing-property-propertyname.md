@@ -14,14 +14,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71698569"
 ---
-# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>表达式递归调用包含属性 "\<propertyname >"
-属性定义的 @no__t 的语句中的语句将值存储到属性的名称中。  
+# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>表达式以递归方式调用包含属性 "\<propertyname >"
+属性定义的 `Set` 过程中的语句将值存储到属性的名称中。  
   
- 保存属性值的建议方法是在属性的容器中定义一个 @no__t 0 变量，并将其用于 @no__t 和 @no__t 2 过程。 然后 `Set` 过程应在此 `Private` 变量中存储传入值。  
+ 保存属性值的建议方法是在属性的容器中定义 `Private` 变量，并在 `Get` 和 `Set` 过程中使用它。 然后，`Set` 过程应在此 `Private` 变量中存储传入值。  
   
- @No__t 的过程的行为类似于 @no__t 1 过程，因此它可以通过遇到 @no__t 2 语句，为属性名称赋值并返回控制权。 不过，建议的方法是在[返回语句](../../../visual-basic/language-reference/statements/return-statement.md)中包含 `Private` 变量作为值。  
+ `Get` 过程的行为类似于 `Function` 过程，因此它可以通过遇到 `End Get` 语句，为属性名称赋值并返回控制权。 不过，建议的方法是在[返回语句](../../../visual-basic/language-reference/statements/return-statement.md)中包含 `Private` 变量作为值。  
   
- @No__t 的过程的行为类似于 @no__t 1 过程，该过程不返回值。 因此，该过程或属性名称在 @no__t 的过程中没有特殊含义，因此不能在其中存储值。  
+ `Set` 过程的行为类似于 `Sub` 过程，该过程不返回值。 因此，该过程或属性名称在 `Set` 过程中没有特殊含义，因此不能在其中存储值。  
   
  下面的示例说明了可能导致此错误的方法，并遵循建议的方法。  
   
@@ -63,7 +63,7 @@ End Class
   
 - 如前面的示例所示，重写属性定义以使用建议的方法。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [属性过程](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
 - [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)

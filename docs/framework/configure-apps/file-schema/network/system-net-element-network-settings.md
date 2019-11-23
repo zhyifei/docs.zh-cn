@@ -19,7 +19,7 @@ ms.locfileid: "71697509"
 包含指定 .NET Framework 如何连接到网络的设置。  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t **\<system >**  
+\<&nbsp;**的 &nbsp;>**  
   
 ## <a name="syntax"></a>语法  
   
@@ -28,35 +28,35 @@ ms.locfileid: "71697509"
 </system.net>  
 ```  
   
-## <a name="attributes-and-elements"></a>特性和元素  
+## <a name="attributes-and-elements"></a>属性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a>Attributes  
  无。  
   
 ### <a name="child-elements"></a>子元素  
   
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[authenticationModules](authenticationmodules-element-network-settings.md)|指定用于对 Internet 请求进行身份验证的模块。|  
 |[connectionManagement](connectionmanagement-element-network-settings.md)|指定与 Internet 主机的最大连接数。|  
 |[defaultProxy](defaultproxy-element-network-settings.md)|配置超文本传输协议 (HTTP) 代理服务器。|  
 |[mailSettings](mailsettings-element-network-settings.md)|配置简单邮件传输协议（SMTP）邮件发送选项。|  
 |[requestCaching](requestcaching-element-network-settings.md)|控制网络请求的缓存机制。|  
-|[设置](settings-element-network-settings.md)|为 <xref:System.Net> 以及相关子命名空间中的类配置基本网络选项。|  
+|[设置](settings-element-network-settings.md)|为 <xref:System.Net> 和相关子命名空间中的类配置基本网络选项。|  
 |[webRequestModules](webrequestmodules-element-network-settings.md)|指定用于从 Internet 主机请求信息的模块。|  
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[configuration](../configuration-element.md)|包含所有命名空间的设置。|  
   
 ## <a name="remarks"></a>备注  
- [@No__t-1system >](system-net-element-network-settings.md)元素包含 <xref:System.Net> 和相关子命名空间中的类的设置。 设置配置身份验证模块、连接管理、邮件设置、代理服务器和 Internet 请求模块，用于接收来自 Internet 主机的信息。  
+ [\<system.web >](system-net-element-network-settings.md)元素包含 <xref:System.Net> 和相关子命名空间中的类的设置。 设置配置身份验证模块、连接管理、邮件设置、代理服务器和 Internet 请求模块，用于接收来自 Internet 主机的信息。  
   
 ## <a name="example"></a>示例  
- 以下示例显示 <xref:System.Net> 类使用的典型配置。  
+ 下面的示例演示 <xref:System.Net> 类使用的典型配置。  
   
 ```xml  
 <configuration>  
@@ -92,6 +92,6 @@ ms.locfileid: "71697509"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [网络设置架构](index.md)

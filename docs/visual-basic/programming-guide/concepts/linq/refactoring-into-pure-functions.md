@@ -4,7 +4,7 @@ ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
 ms.openlocfilehash: e951b3e9108f26a9c861eb49c44bb0a510131819
 ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/03/2019
 ms.locfileid: "71834918"
@@ -21,7 +21,7 @@ ms.locfileid: "71834918"
 
  转换为函数编程的一种方式是重构现有代码以消除不必要的副作用和外部依赖项。 这样，您可以创建现有代码的纯函数版本。
 
-本主题讨论什么是纯函数，什么不是纯函数。 [教程：操作 WordprocessingML 文档中的内容（Visual Basic） ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) 教程介绍了如何操作 WordprocessingML 文档，并包含两个如何使用纯函数重构的示例。
+本主题讨论什么是纯函数，什么不是纯函数。 [教程：在 WordprocessingML 文档中操作内容（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)教程介绍了如何操作 WordprocessingML 文档，并包括两个如何使用纯函数重构的示例。
 
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>消除副作用和外部依赖项
 
@@ -52,7 +52,7 @@ End Module
 StringOne-StringTwo
 ```
 
-请注意，无论修改的数据是 @no__t 0 还是 @no__t 1 访问，或是 @no__t 2 成员还是实例成员，都是不相关的。 纯函数不会更改函数以外的任何数据。
+请注意，无论修改的数据是 `public` 还是 `private` 访问，或是 `shared` 成员还是实例成员，都是不相关的。 纯函数不会更改函数以外的任何数据。
 
 ### <a name="non-pure-function-that-changes-an-argument"></a>可更改参数的非纯函数
 
@@ -105,7 +105,7 @@ End Module
 
 有关详细信息，请参阅[标准查询运算符概述（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [纯功能转换简介（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [函数编程与命令式编程（Visual Basic） ](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [函数编程与命令式编程（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

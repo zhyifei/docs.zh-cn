@@ -1,5 +1,5 @@
 ---
-title: 如何：以编程方式向 WCF 服务和客户端添加可发现性
+title: 如何：以编程方式向 WCF 服务和客户端添加可检测性
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
 ms.openlocfilehash: a139eb4a15486be329bc6853ee6b3a3be06b0619
@@ -9,14 +9,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/12/2019
 ms.locfileid: "72291567"
 ---
-# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>如何：以编程方式向 WCF 服务和客户端添加可发现性
+# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>如何：以编程方式向 WCF 服务和客户端添加可检测性
 本主题说明如何使 Windows Communication Foundation （WCF）服务可发现。 它基于[自主机](https://go.microsoft.com/fwlink/?LinkId=145523)示例。  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>针对 Discovery 配置现有自承载服务示例  
   
 1. 在 Visual Studio 2012 中打开自承载解决方案。 示例位于 TechnologySamples\Basic\Service\Hosting\SelfHost 目录中。  
   
-2. 将对 `System.ServiceModel.Discovery.dll` 的引用添加到服务项目中。 你可能会看到一条错误消息，指出 "系统。 "System.servicemodel. .dll" 或其依赖项之一需要更高版本的 .NET Framework，而不是在项目中指定的版本 ... "如果看到此消息，请在解决方案资源管理器中右键单击该项目，然后选择 "**属性**"。 在项目的 "**属性**" 窗口中，确保**目标框架**[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。  
+2. 将对 `System.ServiceModel.Discovery.dll` 的引用添加到服务项目中。 你可能会看到一条错误消息，指出 "系统。 "System.servicemodel. .dll" 或其依赖项之一需要更高版本的 .NET Framework，而不是在项目中指定的版本 ... "如果看到此消息，请在解决方案资源管理器中右键单击该项目，然后选择 "**属性**"。 在项目的 "**属性**" 窗口中，确保 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]**目标框架**。  
   
 3. 打开 Service.cs 文件并添加下面的 `using` 语句。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "72291567"
     }  
     ```  
   
-     这会告知 WCF @no__t 0 类应使用标准 UDP 发现终结点来发送和接收发现消息。  
+     这会告知 WCF <xref:System.ServiceModel.Discovery.DiscoveryClient> 类应使用标准 UDP 发现终结点来发送和接收发现消息。  
   
 8. 在下一行，调用 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 方法并指定包含要搜索的服务协定的 <xref:System.ServiceModel.Discovery.FindCriteria> 实例。 在本示例中，指定的是 `ICalculator`。  
   
@@ -340,7 +340,7 @@ namespace DiscoveryClientApp
 }  
 ```  
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WCF 发现概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
 - [WCF 发现对象模型](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

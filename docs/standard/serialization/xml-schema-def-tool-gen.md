@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 XML 架构定义工具生成类和 XML 架构文档
+title: 'How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - generating XML classes using XML Schema Definition tool
@@ -14,7 +14,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71392859"
 ---
-# <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>如何：使用 XML 架构定义工具生成类和 XML 架构文档
+# <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents
 使用 XML 架构定义工具 (Xsd.exe) 可以生成描述类的 XML 架构，也可以生成 XML 架构定义的类。 下面的过程说明如何执行这两种操作。  
   
 ### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a>生成符合特定架构的类  
@@ -52,12 +52,12 @@ ms.locfileid: "71392859"
   
      架构将被写入，以名称“schema0.xsd”开头。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Data.DataSet>
 - [XML 架构定义工具和 XML 序列化](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)
 - [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [XML 架构定义工具 (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [如何：序列化对象 @ no__t-0
-- [如何：反序列化对象 @ no__t-0
+- [如何：序列化对象](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

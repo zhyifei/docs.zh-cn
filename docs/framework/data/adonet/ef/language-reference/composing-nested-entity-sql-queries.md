@@ -10,10 +10,10 @@ ms.lasthandoff: 10/16/2019
 ms.locfileid: "72395556"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>撰写嵌套的 Entity SQL 查询
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 是一种功能丰富的语言。 @No__t 的构建基块是一个表达式。 与传统的 SQL 不同，[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不限于表格结果集： [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持组合复杂的表达式，这些表达式可以具有文本、参数或嵌套表达式。 表达式中的值可以是参数化的或由其他表达式组成。  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 是一种功能丰富的语言。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 的构建基块是一个表达式。 与传统的 SQL 不同，[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不限于表格结果集： [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持组合可以具有文本、参数或嵌套表达式的复杂表达式。 表达式中的值可以是参数化的或由其他表达式组成。  
   
 ## <a name="nested-expressions"></a>嵌套表达式  
- 嵌套表达式可以放置在任何可接受其返回类型值的位置。 例如:  
+ 嵌套表达式可以放置在任何可接受其返回类型值的位置。 例如：  
   
 ```sql  
 -- Returns a hierarchical collection of three elements at top-level.   
@@ -25,7 +25,7 @@ ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})
 {{{@x}}};  
 ```  
   
- 嵌套查询可以放在投影子句中。 例如:  
+ 嵌套查询可以放在投影子句中。 例如：  
   
 ```sql  
 -- Returns a collection of rows where each row contains an Address entity.  
@@ -46,7 +46,7 @@ UNION ALL
 FROM … );  
 ```  
   
- 下面的示例演示如何在 @no__t 中正确嵌套表达式：[如何：对两个查询的并集进行排序](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))。  
+ 下面的示例演示如何在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]中正确嵌套表达式：[如何：对两个查询的并集进行排序](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))。  
   
 ## <a name="nested-queries-in-projection"></a>投影中的嵌套查询  
  投影子句中的嵌套查询可在服务器上转换为笛卡尔积查询。 在某些后端服务器（包括 SQL Server）中，这可能会导致 TempDB 表变得非常大，这可能会对服务器性能产生负面影响。  
@@ -75,6 +75,6 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [实体 SQL 概述](entity-sql-overview.md)

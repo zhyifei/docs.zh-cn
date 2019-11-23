@@ -27,19 +27,19 @@ ms.locfileid: "71834803"
 
 WCF 为此过程提供基类帮助程序。 有关本文中讨论的通道帮助器类的图示，请参阅[通道模型概述](channel-model-overview.md)。
 
-- @No__t 0 类实现 @no__t，并强制执行[开发通道](developing-channels.md)的步骤2中所述的状态机。
+- <xref:System.ServiceModel.Channels.CommunicationObject> 类实现 <xref:System.ServiceModel.ICommunicationObject> 并强制执行[开发通道](developing-channels.md)的步骤2中所述的状态机。
 
 - <xref:System.ServiceModel.Channels.ChannelManagerBase> 类实现 <xref:System.ServiceModel.Channels.CommunicationObject> 并为 <xref:System.ServiceModel.Channels.ChannelFactoryBase> 和 <xref:System.ServiceModel.Channels.ChannelListenerBase> 提供统一的基类。 <xref:System.ServiceModel.Channels.ChannelManagerBase> 类与 <xref:System.ServiceModel.Channels.ChannelBase>（用来实现 <xref:System.ServiceModel.Channels.IChannel> 的基类）结合使用。
 
-- @No__t 0 类实现 <xref:System.ServiceModel.Channels.ChannelManagerBase> 和 @no__t，并将 `CreateChannel` 重载合并为一个 @no__t 的抽象方法。
+- <xref:System.ServiceModel.Channels.ChannelFactoryBase> 类实现 <xref:System.ServiceModel.Channels.ChannelManagerBase> 并 <xref:System.ServiceModel.Channels.IChannelFactory>，并将 `CreateChannel` 重载合并为一个 `OnCreateChannel` 抽象方法。
 
 - <xref:System.ServiceModel.Channels.ChannelListenerBase> 类实现 <xref:System.ServiceModel.Channels.IChannelListener>。 它负责执行基本状态管理。
 
-以下讨论基于 @no__t 0Transport：UDP](../samples/transport-udp.md)示例。
+以下讨论基于[传输： UDP](../samples/transport-udp.md)示例。
 
 ## <a name="creating-a-channel-listener"></a>创建通道侦听器
 
-示例实现的 @no__t 0 从 @no__t 类派生。 它使用单个 UDP 套接字来接收数据报。 `OnOpen` 方法使用该 UDP 套接字以异步循环形式接收数据。 收到的数据随后将借助于消息编码系统转换为消息：
+示例实现的 `UdpChannelListener` 派生自 <xref:System.ServiceModel.Channels.ChannelListenerBase> 类。 它使用单个 UDP 套接字来接收数据报。 `OnOpen` 方法使用该 UDP 套接字以异步循环形式接收数据。 收到的数据随后将借助于消息编码系统转换为消息：
 
 ```csharp
 message = UdpConstants.MessageEncoder.ReadMessage(
@@ -48,7 +48,7 @@ message = UdpConstants.MessageEncoder.ReadMessage(
 );
 ```
 
-由于可以用同一个数据报通道来表示来自多个源的消息，因此 `UdpChannelListener` 是一个单一实例侦听器。 一次最多可有一个活动 <xref:System.ServiceModel.Channels.IChannel> 与此侦听器关联。 只有当随后释放了由 <xref:System.ServiceModel.Channels.ChannelListenerBase%601.AcceptChannel%2A> 方法返回的通道时，该示例才生成另一个通道。 接收到消息时，它将排队传入此单独通道。
+由于可以用同一个数据报通道来表示来自多个源的消息，因此 `UdpChannelListener` 是一个单一实例侦听器。 一次最多有一个与此侦听器关联的活动 <xref:System.ServiceModel.Channels.IChannel>。 只有当随后释放了由 <xref:System.ServiceModel.Channels.ChannelListenerBase%601.AcceptChannel%2A> 方法返回的通道时，该示例才生成另一个通道。 接收到消息时，它将排队传入此单独通道。
 
 ### <a name="udpinputchannel"></a>UdpInputChannel
 

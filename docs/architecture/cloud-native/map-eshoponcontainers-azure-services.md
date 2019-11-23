@@ -64,14 +64,14 @@ EShopOnContainers 应用程序在请求之间存储用户的当前购物篮。 �
 
 在部署到生产环境后，eShopOnContainers 应用程序将能够利用几项 Azure 服务来改善其复原能力。 应用程序发布运行状况检查，这些检查可与 Application Insights 集成，以根据应用程序的可用性提供报告和警报。 Azure 资源还提供可用于识别和更正 bug 和性能问题的诊断日志。 资源日志提供有关应用程序使用不同 Azure 资源的时间和方式的详细信息。 你将在[第6章](resiliency.md)了解有关云本机复原功能的详细信息。
 
-## <a name="references"></a>reference
+## <a name="references"></a>参考
 
 - [EShopOnContainers 体系结构](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Architecture)
 - [安排微服务和多容器应用的业务流程，以实现高可伸缩性和高可用性](https://docs.microsoft.com/dotnet/architecture/microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications)
 - [Azure API 管理](https://docs.microsoft.com/azure/api-management/api-management-key-concepts)
 - [Azure SQL 数据库概述](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)
 - [适用于 Redis 的 Azure 缓存](https://azure.microsoft.com/services/cache/)
-- [Azure Cosmos DB 的适用于 MongoDB 的 API](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
+- [Azure Cosmos DB 的 API for MongoDB](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
 - [Azure 服务总线](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)
 - [Azure Monitor 概述](https://docs.microsoft.com/azure/azure-monitor/overview)
 

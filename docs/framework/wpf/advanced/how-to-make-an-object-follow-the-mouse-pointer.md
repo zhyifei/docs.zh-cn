@@ -19,18 +19,18 @@ ms.locfileid: "72005062"
 # <a name="how-to-make-an-object-follow-the-mouse-pointer"></a>如何：使对象跟随鼠标指针移动
 此示例演示当鼠标指针移动到屏幕上时如何更改对象的尺寸。  
   
- 该示例包含一个 @no__t 0 文件，该文件创建 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 和一个创建事件处理程序的代码隐藏文件。  
+ 该示例包含一个 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 文件，该文件用于创建 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 和一个创建事件处理程序的代码隐藏文件。  
   
 ## <a name="example"></a>示例  
- 以下 XAML 将创建 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，其中包含 <xref:System.Windows.Controls.StackPanel> 内的 @no__t，并附加 @no__t 3 事件的事件处理程序。  
+ 以下 XAML 创建 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，它由 <xref:System.Windows.Controls.StackPanel>内的 <xref:System.Windows.Shapes.Ellipse> 组成，并附加 <xref:System.Windows.UIElement.MouseMove> 事件的事件处理程序。  
   
  [!code-xaml[mouseMoveWithPointer#MouseMoveWithPointerXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/mouseMoveWithPointer/CSharp/Window1.xaml#mousemovewithpointerxaml)]  
   
- 下面的代码将创建 <xref:System.Windows.UIElement.MouseMove> 事件处理程序。  当鼠标指针移动时，将增加和减少 @no__t 的高度和宽度。  
+ 下面的代码将创建 <xref:System.Windows.UIElement.MouseMove> 事件处理程序。  当鼠标指针移动时，将增加和减少 <xref:System.Windows.Shapes.Ellipse> 的高度和宽度。  
   
  [!code-csharp[mouseMoveWithPointer#MouseMovePointerGetPosition](~/samples/snippets/csharp/VS_Snippets_Wpf/mouseMoveWithPointer/CSharp/Window1.xaml.cs#mousemovepointergetposition)]
  [!code-vb[mouseMoveWithPointer#MouseMovePointerGetPosition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/mouseMoveWithPointer/VisualBasic/Window1.xaml.vb#mousemovepointergetposition)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [输入概述](input-overview.md)

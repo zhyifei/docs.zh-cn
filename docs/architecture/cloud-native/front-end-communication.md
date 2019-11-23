@@ -37,7 +37,7 @@ ms.locfileid: "73841791"
 
 ![API 网关模式](./media/api-gateway-pattern.png)
 
-**图4-3。** API 网关模式
+**图 4-3.** API 网关模式
 
 在上图中，请注意 API 网关服务如何抽象后端核心微服务。 作为 web API 实现，它充当*反向代理*，将传入流量路由到内部微服务。
 
@@ -47,7 +47,7 @@ ms.locfileid: "73841791"
 
 ![API 网关模式](./media/backend-for-frontend-pattern.png)
 
-**图4-4。** 前端模式
+**图 4-4.** 前端模式
 
 请注意，在上图中，如何将传入流量发送到特定的 API 网关（基于客户端类型）： web、移动或桌面应用。 这种方法非常合理，因为每个设备的功能在外形规格、性能和显示限制方面的差异大不相同。 通常，移动应用程序的功能与浏览器或桌面应用程序的功能不同。 可以对每个网关进行优化，以匹配相应设备的功能和功能。
 
@@ -63,7 +63,7 @@ ms.locfileid: "73841791"
 | :-------- | :-------- |
 | 路由 | 身份验证 |
 | 请求聚合 | 授权 |
-| 服务发现（带 Consul 和 Eureka） | 遏制 |
+| 服务发现（带 Consul 和 Eureka） | 限制 |
 | 负载平衡 | 日志记录、跟踪 |
 | 缓存 | 标头/查询字符串转换 |
 | 相关传递 | 自定义中间件 |
@@ -95,7 +95,7 @@ Kubernetes 包含支持 HTTP （级别7）负载平衡的内置功能，称为[�
 
 ![Azure API 管理](./media/azure-api-management.png)
 
-**图4-6。** Azure API 管理
+**图 4-6.** Azure API 管理
 
 首先，API 管理公开了一个网关服务器，该服务器允许根据可配置的规则和策略对后端服务进行受控访问。 这些服务可以位于 Azure 云中、本地的数据中心或其他公有云。 API 密钥和 JWT 令牌决定谁可以执行什么操作。 出于分析目的记录所有流量。
 
@@ -158,7 +158,7 @@ Azure API 管理跨[四个不同的层](https://azure.microsoft.com/pricing/deta
 
 ![Azure SignalR](./media/azure-signalr-service.png)
 
-**图4-7。** Azure SignalR
+**图 4-7.** Azure SignalR
 
 Azure SignalR 服务的另一个优点是实现无服务器云本机服务。 或许你的代码是按需执行的，Azure Functions 触发器。 这种情况可能比较棘手，因为你的代码不会与客户端保持长时间的连接。 Azure SignalR 服务可以处理这种情况，因为服务已为你管理连接。
 

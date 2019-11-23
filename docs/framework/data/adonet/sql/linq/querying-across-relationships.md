@@ -31,9 +31,9 @@ ms.locfileid: "72003327"
   
  既然您已经具备了关系，您就可以通过引用您的类中定义的关系属性来编写查询。 这些关系引用相当于数据库中的外键关系。 使用这些关系的操作会转换成用等效的 SQL 表示的更为复杂的联接。 只要你已经定义关系（使用 <xref:System.Data.Linq.Mapping.AssociationAttribute> 属性），你就无需在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中编写显式联接的代码。  
   
- 为了帮助保持这种错觉，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 实现了一种称为*延迟加载*的技术。 有关详细信息，请参阅[延迟与立即加载](deferred-versus-immediate-loading.md)。  
+ 为了帮助维持这种错觉，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 实现了一种称为*延迟加载*的技术。 有关详细信息，请参阅[延迟与立即加载](deferred-versus-immediate-loading.md)。  
   
- 请考虑以下 SQL 查询来投影 `CustomerID` @ no__t-1 @ no__t 对的列表：  
+ 请考虑以下 SQL 查询来投影 `CustomerID`-`OrderID` 对的列表：  
   
 ```sql
 SELECT t0.CustomerID, t1.OrderID  
@@ -42,16 +42,16 @@ FROM   Customers AS t0 INNER JOIN
 WHERE  (t0.City = @p0)  
 ```  
   
- 若要通过使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 获得相同的结果，您可以使用 `Orders` 类中已经存在的 `Customer` 属性引用。 @No__t 引用提供了执行查询所必需的信息并投影了 `CustomerID` @ no__t @ no__t 对，如以下代码所示：  
+ 若要通过使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 获得相同的结果，您可以使用 `Orders` 类中已经存在的 `Customer` 属性引用。 `Orders` 引用提供了执行查询所需的信息，并投影了 `CustomerID`-`OrderID` 对，如以下代码所示：  
   
  [!code-csharp[DLinqQueryConcepts#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#5)]
  [!code-vb[DLinqQueryConcepts#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#5)]  
   
- 您也可以反向操作。 也就是说，您可以查询 `Orders`，然后使用其 `Customer` 关系引用来访问关于关联的 `Customer` 对象的信息。 下面的代码投影与之前相同的 `CustomerID` @ no__t-1 @ no__t-2 对，但这次是通过查询 `Orders` 而不是 `Customers` 来进行的。  
+ 您也可以反向操作。 也就是说，您可以查询 `Orders`，然后使用其 `Customer` 关系引用来访问关于关联的 `Customer` 对象的信息。 下面的代码将与之前相同的 `CustomerID`-`OrderID` 对，但这次通过查询 `Orders` 而不是 `Customers`来执行。  
   
  [!code-csharp[DLinqQueryConcepts#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#6)]
  [!code-vb[DLinqQueryConcepts#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#6)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [查询概念](query-concepts.md)

@@ -1,14 +1,13 @@
 ---
 title: 将 WCF 解决方案迁移到 WCF 开发人员的 gRPC-gRPC
 description: 如何将不同类型的 WCF 服务迁移到 gRPC 中的等效类型。
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 65c30b777d9981cb3291b846f698f2a69b4498fc
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 33823d20e1593323a03da12981c5a4534c4d491a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841497"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971776"
 ---
 # <a name="migrate-a-wcf-solution-to-grpc"></a>将 WCF 解决方案迁移到 gRPC
 

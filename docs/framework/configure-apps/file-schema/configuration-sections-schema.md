@@ -23,17 +23,17 @@ ms.locfileid: "73118932"
 配置节架构包含用于在配置文件中定义自定义设置的元素。 有关配置文件和架构的一般信息，请参阅[.NET Framework 的配置文件架构](index.md)。
 
 [ **\<configuration>** ](configuration-element.md)   
-[ **\<configSections >** ](configsections-element-for-configuration.md)   
-[ **\<清除 >** ](clear-element-for-configsections.md)   
-[**删除 > 的\<** ](remove-element-for-configsections.md)   
-[ **\<节 >** ](section-element.md)   
-[ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md)
+[ **\<configSections>** ](configsections-element-for-configuration.md)   
+[ **\<clear>** ](clear-element-for-configsections.md)   
+[ **\<remove>** ](remove-element-for-configsections.md)   
+[ **\<section>** ](section-element.md)   
+[ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md)
 
-|     | 描述 |
+|     | 说明 |
 | --- | ----------- |
-| [ **\<清除 >** **\<configSections >** ](clear-element-for-configsections.md) | 清除所有之前定义的部分和节组。 |
+| [ **\<clear>** for **\<configSections>** ](clear-element-for-configsections.md) | 清除所有之前定义的部分和节组。 |
 | [ **\<clear>** ](clear-element-for-configsections.md) | 清除所有之前定义的部分和节组。 |
-| [ **\<configSections >** ](configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
-| [ **\<删除** **\<configSections**的 > >](remove-element-for-configsections.md) | 删除预定义的节或节组。 |
+| [ **\<configSections>** ](configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
+| [ **\<remove>** for **\<configSections>** ](remove-element-for-configsections.md) | 删除预定义的节或节组。 |
 | [ **\<configSections >** 和 **\<sectionGroup** **\<节 >** >](section-element.md) | 包含配置节声明。 |
-| [ **\<configSections** **\<sectionGroup >** >](sectiongroup-element-for-configsections.md) | 定义配置节的命名空间。 |
+| [ **\<sectionGroup>** for **\<configSections>** ](sectiongroup-element-for-configsections.md) | 定义配置节的命名空间。 |

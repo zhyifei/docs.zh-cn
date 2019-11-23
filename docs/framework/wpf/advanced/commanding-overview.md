@@ -25,7 +25,7 @@ ms.locfileid: "72004595"
   
  本概述定义 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中有哪些命令、哪些类属于命令模型以及如何在应用程序中使用和创建命令。  
   
- 本主题包含以下各节:  
+ 本主题包含以下各节：  
   
 - [什么是命令？](#commands_at_10000_feet)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "72004595"
 ## <a name="simple-command-example-in-wpf"></a>WPF 中的简单命令示例  
  使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中命令的最简单方式是使用其中一个命令库类中预定义的 <xref:System.Windows.Input.RoutedCommand>；使用具有命令处理本机支持的控件；使用具有命令调用本机支持的控件。  <xref:System.Windows.Input.ApplicationCommands.Paste%2A> 命令是 <xref:System.Windows.Input.ApplicationCommands> 类中的预定义命令之一。  <xref:System.Windows.Controls.TextBox> 控件含有用于处理 <xref:System.Windows.Input.ApplicationCommands.Paste%2A> 命令的内置逻辑。  <xref:System.Windows.Controls.MenuItem> 类具有调用命令的本机支持。  
   
- 以下示例显示了如何设置 <xref:System.Windows.Controls.MenuItem>，以便在单击时它将调用 <xref:System.Windows.Controls.TextBox> 上的 <xref:System.Windows.Input.ApplicationCommands.Paste%2A> 命令，假定 <xref:System.Windows.Controls.TextBox> 具有键盘焦点。  
+ 以下示例显示了如何设置 <xref:System.Windows.Controls.MenuItem>，以便在单击时它将调用 <xref:System.Windows.Input.ApplicationCommands.Paste%2A> 上的 <xref:System.Windows.Controls.TextBox> 命令，假定 <xref:System.Windows.Controls.TextBox> 具有键盘焦点。  
   
  [!code-xaml[CommandingOverviewSnippets#CommandingOverviewSimpleCommand](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewsimplecommand)]  
   
@@ -72,11 +72,11 @@ ms.locfileid: "72004595"
   
 <a name="Commands"></a>   
 ### <a name="commands"></a>命令  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的命令是通过实现 <xref:System.Windows.Input.ICommand> 接口创建的。  <xref:System.Windows.Input.ICommand> 公开了两种方法 <xref:System.Windows.Input.ICommand.Execute%2A> 和 <xref:System.Windows.Input.ICommand.CanExecute%2A>，以及一个事件 <xref:System.Windows.Input.ICommand.CanExecuteChanged>。 <xref:System.Windows.Input.ICommand.Execute%2A> 执行与该命令关联的操作。 <xref:System.Windows.Input.ICommand.CanExecute%2A> 确定是否可以在当前命令目标上执行该命令。 如果集中管理命令操作的命令管理器检测到命令源中存在一个可能使已引发命令无效但尚未由命令绑定执行的更改，则会引发 <xref:System.Windows.Input.ICommand.CanExecuteChanged>。  <xref:System.Windows.Input.ICommand> 的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现是 <xref:System.Windows.Input.RoutedCommand> 类，并且是本概述的重点。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的命令是通过实现 <xref:System.Windows.Input.ICommand> 接口创建的。  <xref:System.Windows.Input.ICommand> 公开了两种方法 <xref:System.Windows.Input.ICommand.Execute%2A> 和 <xref:System.Windows.Input.ICommand.CanExecute%2A>，以及一个事件 <xref:System.Windows.Input.ICommand.CanExecuteChanged>。 <xref:System.Windows.Input.ICommand.Execute%2A> 执行与该命令关联的操作。 <xref:System.Windows.Input.ICommand.CanExecute%2A> 确定是否可以在当前命令目标上执行该命令。 如果集中管理命令操作的命令管理器检测到命令源中存在一个可能使已引发命令无效但尚未由命令绑定执行的更改，则会引发 <xref:System.Windows.Input.ICommand.CanExecuteChanged>。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的 <xref:System.Windows.Input.ICommand> 实现是 <xref:System.Windows.Input.RoutedCommand> 类，并且是本概述的重点。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中输入的主要源是鼠标、键盘、墨迹和路由命令。  面向设备程度更高的输入使用 <xref:System.Windows.RoutedEvent> 通知应用程序页中的对象输入事件已发生。  <xref:System.Windows.Input.RoutedCommand> 也不例外。  <xref:System.Windows.Input.RoutedCommand> 的 <xref:System.Windows.Input.RoutedCommand.Execute%2A> 和 <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> 方法不包含该命令的应用程序逻辑，而是引发通过元素树通行和浮升的路由事件，直到遇到具有 <xref:System.Windows.Input.CommandBinding> 的对象。  <xref:System.Windows.Input.CommandBinding> 包含这些事件的处理程序，命令正是由这些处理程序执行。  有关 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中事件路由的详细信息，请参阅[路由事件概述](routed-events-overview.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中输入的主要源是鼠标、键盘、墨迹和路由命令。  面向设备程度更高的输入使用 <xref:System.Windows.RoutedEvent> 通知应用程序页中的对象输入事件已发生。  <xref:System.Windows.Input.RoutedCommand> 也不例外。  <xref:System.Windows.Input.RoutedCommand.Execute%2A> 的 <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> 和 <xref:System.Windows.Input.RoutedCommand> 方法不包含该命令的应用程序逻辑，而是引发通过元素树通行和浮升的路由事件，直到遇到具有 <xref:System.Windows.Input.CommandBinding> 的对象。  <xref:System.Windows.Input.CommandBinding> 包含这些事件的处理程序，命令正是由这些处理程序执行。  有关 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中事件路由的详细信息，请参阅[路由事件概述](routed-events-overview.md)。  
   
- <xref:System.Windows.Input.RoutedCommand> 上的 <xref:System.Windows.Input.RoutedCommand.Execute%2A> 方法引发命令目标上的 <xref:System.Windows.Input.CommandManager.PreviewExecuted> 和 <xref:System.Windows.Input.CommandManager.Executed> 事件。  <xref:System.Windows.Input.RoutedCommand> 上的 <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> 方法引发命令目标上的 <xref:System.Windows.Input.CommandManager.CanExecute> 和 <xref:System.Windows.Input.CommandManager.PreviewCanExecute> 事件。  这些事件通过元素树通行和浮升，直到遇到一个具有针对该特定命令的 <xref:System.Windows.Input.CommandBinding> 的对象。  
+ <xref:System.Windows.Input.RoutedCommand.Execute%2A> 上的 <xref:System.Windows.Input.RoutedCommand> 方法引发命令目标上的 <xref:System.Windows.Input.CommandManager.PreviewExecuted> 和 <xref:System.Windows.Input.CommandManager.Executed> 事件。  <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> 上的 <xref:System.Windows.Input.RoutedCommand> 方法引发命令目标上的 <xref:System.Windows.Input.CommandManager.CanExecute> 和 <xref:System.Windows.Input.CommandManager.PreviewCanExecute> 事件。  这些事件通过元素树通行和浮升，直到遇到一个具有针对该特定命令的 <xref:System.Windows.Input.CommandBinding> 的对象。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了分布在几个类中的一组常用路由命令：<xref:System.Windows.Input.MediaCommands>、<xref:System.Windows.Input.ApplicationCommands>、<xref:System.Windows.Input.NavigationCommands>、<xref:System.Windows.Input.ComponentCommands> 和 <xref:System.Windows.Documents.EditingCommands>。  这些类仅由 <xref:System.Windows.Input.RoutedCommand> 对象构成，而不包含命令的实现逻辑。  实现逻辑由在其上执行命令的对象负责。  
   
@@ -90,35 +90,35 @@ ms.locfileid: "72004595"
   
 - <xref:System.Windows.Input.ICommandSource.Command%2A> 是在调用命令源时执行的命令。  
   
-- <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 是要执行命令的对象。  值得注意的是，在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，仅当 <xref:System.Windows.Input.ICommand> 为 <xref:System.Windows.Input.RoutedCommand> 时，<xref:System.Windows.Input.ICommandSource> 上的 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 属性才适用。  如果在 <xref:System.Windows.Input.ICommandSource> 上设置 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 并且相应的命令不是 <xref:System.Windows.Input.RoutedCommand>，则忽略命令目标。 如果未设置 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>，则具有键盘焦点的元素将成为命令目标。  
+- <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 是要执行命令的对象。  值得注意的是，在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，仅当 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 为 <xref:System.Windows.Input.ICommandSource> 时，<xref:System.Windows.Input.ICommand> 上的 <xref:System.Windows.Input.RoutedCommand> 属性才适用。  如果在 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 上设置 <xref:System.Windows.Input.ICommandSource> 并且相应的命令不是 <xref:System.Windows.Input.RoutedCommand>，则忽略命令目标。 如果未设置 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>，则具有键盘焦点的元素将成为命令目标。  
   
 - <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> 是用于将信息传递给实现命令的处理程序的用户定义数据类型。  
   
- 实现 <xref:System.Windows.Input.ICommandSource> 的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 类是 <xref:System.Windows.Controls.Primitives.ButtonBase>、<xref:System.Windows.Controls.MenuItem>、<xref:System.Windows.Documents.Hyperlink> 和 <xref:System.Windows.Input.InputBinding>。  单击 <xref:System.Windows.Controls.Primitives.ButtonBase>、<xref:System.Windows.Controls.MenuItem> 和 <xref:System.Windows.Documents.Hyperlink> 时，调用一个命令，当执行与其关联的 <xref:System.Windows.Input.InputGesture> 时，<xref:System.Windows.Input.InputBinding> 调用命令。  
+ 实现 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的 <xref:System.Windows.Input.ICommandSource> 类是 <xref:System.Windows.Controls.Primitives.ButtonBase>、<xref:System.Windows.Controls.MenuItem>、<xref:System.Windows.Documents.Hyperlink> 和 <xref:System.Windows.Input.InputBinding>。  单击 <xref:System.Windows.Controls.Primitives.ButtonBase>、<xref:System.Windows.Controls.MenuItem> 和 <xref:System.Windows.Documents.Hyperlink> 时，调用一个命令，当执行与其关联的 <xref:System.Windows.Input.InputBinding> 时，<xref:System.Windows.Input.InputGesture> 调用命令。  
   
- 以下示例显示如何将 <xref:System.Windows.Controls.ContextMenu> 中的 <xref:System.Windows.Controls.MenuItem> 用作 <xref:System.Windows.Input.ApplicationCommands.Properties%2A> 命令的命令源。  
+ 以下示例显示如何将 <xref:System.Windows.Controls.MenuItem> 中的 <xref:System.Windows.Controls.ContextMenu> 用作 <xref:System.Windows.Input.ApplicationCommands.Properties%2A> 命令的命令源。  
   
  [!code-xaml[CommandingOverviewSnippets#CommandingOverviewCmdSourceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewcmdsourcexaml)]  
   
  [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCmdSource](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcmdsource)]
  [!code-vb[CommandingOverviewSnippets#CommandingOverviewCmdSource](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcmdsource)]  
   
- 通常，命令源将侦听 <xref:System.Windows.Input.RoutedCommand.CanExecuteChanged> 事件。  此事件通知命令源在当前命令目标上执行命令的能力可能已发生更改。  命令源可以使用 <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> 方法查询 <xref:System.Windows.Input.RoutedCommand> 的当前状态。  如果命令无法执行，命令源可禁用自身。  此情况的一个示例是 <xref:System.Windows.Controls.MenuItem>，在命令无法执行时，它自身将灰显。  
+ 通常，命令源将侦听 <xref:System.Windows.Input.RoutedCommand.CanExecuteChanged> 事件。  此事件通知命令源在当前命令目标上执行命令的能力可能已发生更改。  命令源可以使用 <xref:System.Windows.Input.RoutedCommand> 方法查询 <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> 的当前状态。  如果命令无法执行，命令源可禁用自身。  此情况的一个示例是 <xref:System.Windows.Controls.MenuItem>，在命令无法执行时，它自身将灰显。  
   
  <xref:System.Windows.Input.InputGesture> 可以用作命令源。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的两种输入笔势是 <xref:System.Windows.Input.KeyGesture> 和 <xref:System.Windows.Input.MouseGesture>。  可以将 <xref:System.Windows.Input.KeyGesture> 视为键盘快捷方式，例如 Ctrl+C。  <xref:System.Windows.Input.KeyGesture> 由一个 <xref:System.Windows.Input.Key> 和一组 <xref:System.Windows.Input.ModifierKeys> 组成。  <xref:System.Windows.Input.MouseGesture> 由 <xref:System.Windows.Input.MouseAction> 和一组可选的 <xref:System.Windows.Input.ModifierKeys> 组成。  
   
  为了将 <xref:System.Windows.Input.InputGesture> 用作命令源，它必须与一个命令相关联。 可通过几种方式来实现此目的。  其中一种方法是使用 <xref:System.Windows.Input.InputBinding>。  
   
- 以下示例演示如何在 <xref:System.Windows.Input.KeyGesture> 和 <xref:System.Windows.Input.RoutedCommand> 之间创建 <xref:System.Windows.Input.KeyBinding>。  
+ 以下示例演示如何在 <xref:System.Windows.Input.KeyBinding> 和 <xref:System.Windows.Input.KeyGesture> 之间创建 <xref:System.Windows.Input.RoutedCommand>。  
   
  [!code-xaml[CommandingOverviewSnippets#CommandingOverviewXAMLKeyBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewxamlkeybinding)]  
   
  [!code-csharp[CommandingOverviewSnippets#CommandingOverviewKeyBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewkeybinding)]
  [!code-vb[CommandingOverviewSnippets#CommandingOverviewKeyBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewkeybinding)]  
   
- 将 <xref:System.Windows.Input.InputGesture> 关联到 <xref:System.Windows.Input.RoutedCommand> 的另一种方法是将 <xref:System.Windows.Input.InputGesture> 添加到 <xref:System.Windows.Input.RoutedCommand> 上的 <xref:System.Windows.Input.InputGestureCollection>。  
+ 将 <xref:System.Windows.Input.InputGesture> 关联到 <xref:System.Windows.Input.RoutedCommand> 的另一种方法是将 <xref:System.Windows.Input.InputGesture> 添加到 <xref:System.Windows.Input.InputGestureCollection> 上的 <xref:System.Windows.Input.RoutedCommand>。  
   
- 以下示例演示如何将 <xref:System.Windows.Input.KeyGesture> 添加到 <xref:System.Windows.Input.RoutedCommand> 的 <xref:System.Windows.Input.InputGestureCollection> 中。  
+ 以下示例演示如何将 <xref:System.Windows.Input.KeyGesture> 添加到 <xref:System.Windows.Input.InputGestureCollection> 的 <xref:System.Windows.Input.RoutedCommand> 中。  
   
  [!code-csharp[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewkeygestureoncmd)]
  [!code-vb[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewkeygestureoncmd)]  
@@ -131,7 +131,7 @@ ms.locfileid: "72004595"
   
  <xref:System.Windows.Input.CommandBinding.Command%2A> 是与 <xref:System.Windows.Input.CommandBinding> 关联的命令。  附加到 <xref:System.Windows.Input.CommandBinding.PreviewExecuted> 和 <xref:System.Windows.Input.CommandBinding.Executed> 事件的事件处理程序实现命令逻辑。  附加到 <xref:System.Windows.Input.CommandBinding.PreviewCanExecute> 和 <xref:System.Windows.Input.CommandBinding.CanExecute> 事件的事件处理程序确定是否可以在当前命令目标上执行该命令。  
   
- 以下示例演示如何在应用程序的根 <xref:System.Windows.Window> 上创建 <xref:System.Windows.Input.CommandBinding>。  <xref:System.Windows.Input.CommandBinding> 将 <xref:System.Windows.Input.ApplicationCommands.Open%2A> 命令与 <xref:System.Windows.Input.CommandManager.Executed> 和 <xref:System.Windows.Input.CommandBinding.CanExecute> 处理程序关联。  
+ 以下示例演示如何在应用程序的根 <xref:System.Windows.Input.CommandBinding> 上创建 <xref:System.Windows.Window>。  <xref:System.Windows.Input.CommandBinding> 将 <xref:System.Windows.Input.ApplicationCommands.Open%2A> 命令与 <xref:System.Windows.Input.CommandManager.Executed> 和 <xref:System.Windows.Input.CommandBinding.CanExecute> 处理程序关联。  
   
  [!code-xaml[commandwithhandler#CommandHandlerCommandBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
   
@@ -152,9 +152,9 @@ ms.locfileid: "72004595"
   
 <a name="Commane_Target"></a>   
 ### <a name="command-target"></a>命令目标  
- 命令目标是在其上执行命令的元素。  关于 <xref:System.Windows.Input.RoutedCommand>，命令目标是 <xref:System.Windows.Input.CommandManager.Executed> 和 <xref:System.Windows.Input.CommandManager.CanExecute> 的路由开始的元素。  如前所述，在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，仅当 <xref:System.Windows.Input.ICommand> 为 <xref:System.Windows.Input.RoutedCommand> 时，<xref:System.Windows.Input.ICommandSource> 上的 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 属性才适用。  如果在 <xref:System.Windows.Input.ICommandSource> 上设置 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 并且相应的命令不是 <xref:System.Windows.Input.RoutedCommand>，则忽略命令目标。  
+ 命令目标是在其上执行命令的元素。  关于 <xref:System.Windows.Input.RoutedCommand>，命令目标是 <xref:System.Windows.Input.CommandManager.Executed> 和 <xref:System.Windows.Input.CommandManager.CanExecute> 的路由开始的元素。  如前所述，在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，仅当 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 为 <xref:System.Windows.Input.ICommandSource> 时，<xref:System.Windows.Input.ICommand> 上的 <xref:System.Windows.Input.RoutedCommand> 属性才适用。  如果在 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 上设置 <xref:System.Windows.Input.ICommandSource> 并且相应的命令不是 <xref:System.Windows.Input.RoutedCommand>，则忽略命令目标。  
   
- 命令源可以显式设置命令目标。  如果未定义命令目标，则具有键盘焦点的元素将用作命令目标。  将具有键盘焦点的元素用作命令目标的一个好处在于，这样可使应用程序开发者能够使用同一命令源在多个目标上调用命令，而无需跟踪命令目标。  例如，如果 <xref:System.Windows.Controls.MenuItem> 在具有 <xref:System.Windows.Controls.TextBox> 控件和 <xref:System.Windows.Controls.PasswordBox> 控件的应用程序中调用“Paste”命令，则目标可以是 <xref:System.Windows.Controls.TextBox> 或 <xref:System.Windows.Controls.PasswordBox>，具体取决于哪个控件具有键盘焦点。  
+ 命令源可以显式设置命令目标。  如果未定义命令目标，则具有键盘焦点的元素将用作命令目标。  将具有键盘焦点的元素用作命令目标的一个好处在于，这样可使应用程序开发者能够使用同一命令源在多个目标上调用命令，而无需跟踪命令目标。  例如，如果 <xref:System.Windows.Controls.MenuItem> 在具有 **控件和** 控件的应用程序中调用“Paste”命令，则目标可以是 <xref:System.Windows.Controls.TextBox> 或 <xref:System.Windows.Controls.PasswordBox>，具体取决于哪个控件具有键盘焦点<xref:System.Windows.Controls.TextBox><xref:System.Windows.Controls.PasswordBox>。  
   
  以下示例演示如何在标记和代码隐藏中显式设置命令目标。  
   
@@ -175,7 +175,7 @@ ms.locfileid: "72004595"
   
  许多这些命令都包含一组默认输入绑定。  例如，如果指定应用程序处理 "复制" 命令，则会自动获取键盘绑定 "CTRL + C"。还会获取其他输入设备的绑定，如 Tablet PC 笔笔势和语音信息。  
   
- 使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 引用各个命令库中的命令时，通常可省略公开静态命令属性的库类的类名。 一般来说，命令名称是明确作为字符串的，且存在所属类型来提供命令的逻辑分组，不过对于消除二义性这并不必要。 例如，可指定 `Command="Cut"` 而不是更为冗长的 `Command="ApplicationCommands.Cut"`。 这是针对命令内置于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器中的便捷机制（更准确地说，它是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器在加载时所引用的 <xref:System.Windows.Input.ICommand> 的类型转换器行为）。  
+ 使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 引用各个命令库中的命令时，通常可省略公开静态命令属性的库类的类名。 一般来说，命令名称是明确作为字符串的，且存在所属类型来提供命令的逻辑分组，不过对于消除二义性这并不必要。 例如，可指定 `Command="Cut"` 而不是更为冗长的 `Command="ApplicationCommands.Cut"`。 这是针对命令内置于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器中的便捷机制（更准确地说，它是 <xref:System.Windows.Input.ICommand> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 处理器在加载时所引用的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的类型转换器行为）。  
   
 <a name="creating_commands"></a>   
 ## <a name="creating-custom-commands"></a>创建自定义命令  
@@ -183,7 +183,7 @@ ms.locfileid: "72004595"
   
  有关创建自定义 <xref:System.Windows.Input.RoutedCommand> 的示例，请参阅[创建自定义 RoutedCommand 示例](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Input.RoutedCommand>
 - <xref:System.Windows.Input.CommandBinding>
@@ -192,5 +192,5 @@ ms.locfileid: "72004595"
 - [输入概述](input-overview.md)
 - [路由事件概述](routed-events-overview.md)
 - [实现 ICommandSource](how-to-implement-icommandsource.md)
-- [如何：将命令添加到 MenuItem @ no__t-0
+- [如何：将命令添加到菜单项](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
 - [创建自定义 RoutedCommand 示例](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)

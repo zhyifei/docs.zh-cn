@@ -23,11 +23,11 @@ ms.locfileid: "72003055"
   
 - 映射文件必须为 XML 文件。  
   
-- XML 映射文件必须能够通过 XML 架构定义文件的验证。 有关详细信息，请参阅[如何：验证 DBML 和外部映射文件 @ no__t。  
+- XML 映射文件必须能够通过 XML 架构定义文件的验证。 有关详细信息，请参阅[如何：验证 DBML 和外部映射文件](how-to-validate-dbml-and-external-mapping-files.md)。  
   
 - 外部映射会重写基于属性的映射。 换句话说，在使用外部映射源创建 <xref:System.Data.Linq.DataContext> 时，<xref:System.Data.Linq.DataContext> 会忽略已在类上创建的所有映射属性。 无论类是否包含在外部映射文件中，都会发生这种情况。  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支持混合使用两种映射方式（基于属性的映射和外部映射）。  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支持混合使用两种映射方法（基于属性和外部）。  
   
 ## <a name="xml-schema-definition-file"></a>XML 架构定义文件  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的外部映射必须能够通过以下 XML 架构定义的验证。  
@@ -35,7 +35,7 @@ ms.locfileid: "72003055"
  请将此架构定义文件与用于验证 DBML 文件的架构定义文件区分开来。 有关详细信息，请参阅[LINQ to SQL 中的代码生成](code-generation-in-linq-to-sql.md)。  
   
 > [!NOTE]
-> Visual Studio 用户还会在 "XML 架构" 对话框中找到此 XSD 文件，其形式为 "Linqtosqlmapping.xsd"。 若要正确使用此文件来验证外部映射文件，请参阅 [How to：验证 DBML 和外部映射文件 @ no__t。  
+> Visual Studio 用户还会在 "XML 架构" 对话框中找到此 XSD 文件，其形式为 "Linqtosqlmapping.xsd"。 若要正确使用此文件来验证外部映射文件，请参阅[如何：验证 DBML 和外部映射文件](how-to-validate-dbml-and-external-mapping-files.md)。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -141,8 +141,8 @@ elementFormDefault="qualified" >
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [LINQ to SQL 中的代码生成](code-generation-in-linq-to-sql.md)
 - [引用](reference.md)
-- [如何：生成对象模型作为外部文件 @ no__t-0
+- [如何：将对象模型作为外部文件生成](how-to-generate-the-object-model-as-an-external-file.md)

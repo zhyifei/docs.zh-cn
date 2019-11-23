@@ -14,7 +14,7 @@ ms.locfileid: "72291398"
 ---
 # <a name="accessibility-best-practices"></a>辅助功能最佳方案
 > [!NOTE]
-> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新信息，请参阅 @no__t 1Windows 自动化 API：UI Automation @ no__t。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  在控件或应用程序中实现以下最佳做法将提高使用辅助技术设备的用户的可访问性。 其中一些最佳做法重点关注优秀的 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 设计。 每项最佳做法均包括实现 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 控件或应用程序的相关信息。 在很多情况下，满足这些最佳做法的工作已包含在 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 控件中。  
   
@@ -26,17 +26,17 @@ ms.locfileid: "72291398"
 ### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>对所有 UI 元素和文本启用编程访问  
  用户界面（UI）元素应启用编程访问。 如果 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 是一种标准 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 控件，则此控件包含对编程访问的支持。 如果此控件是自定义控件（已是公共控件或“控件”的子类别），则必须检查可能需要修改的区域的 <xref:System.Windows.Automation.Peers.AutomationPeer> 实现。  
   
- 按照此最佳实践，辅助技术供应商可以标识和操作产品的 @no__t 的元素。  
+ 按照此最佳实践，辅助技术供应商可以识别和操作产品的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]元素。  
   
 <a name="Place_Names__Titles_and_Descriptions_on_UI_Objects_"></a>   
 ### <a name="place-names-titles-and-descriptions-on-ui-objects-frames-and-pages"></a>在 UI 对象、帧和页面上添加名称、标题和说明  
- 辅助技术（尤其是屏幕阅读器）使用标题来了解导航方案中的帧、对象或页面的位置。 因此，标题必须说明性很强。 例如，如果用户已深入导航到某个特定区域，“Microsoft 网页”的网页标题毫无用处。 描述性标题对于有视力障碍且依赖屏幕阅读器的用户至关重要。 同样，对于 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 控件，@no__t 为-1，<xref:System.Windows.Automation.AutomationProperties.HelpTextProperty> 对于辅助技术设备十分重要。  
+ 辅助技术（尤其是屏幕阅读器）使用标题来了解导航方案中的帧、对象或页面的位置。 因此，标题必须说明性很强。 例如，如果用户已深入导航到某个特定区域，“Microsoft 网页”的网页标题毫无用处。 描述性标题对于有视力障碍且依赖屏幕阅读器的用户至关重要。 同样，对于 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 控件，<xref:System.Windows.Automation.AutomationProperties.NameProperty> 和 <xref:System.Windows.Automation.AutomationProperties.HelpTextProperty> 对辅助技术设备很重要。  
   
- 遵循此最佳做法，辅助 technologys 可以识别和操作示例控件和应用程序中 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]。  
+ 遵循此最佳做法，辅助 technologys 可以识别和操作示例控件和应用程序中的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]。  
   
 <a name="Ensure_Programmatic_Events_are_Triggered_by_all_UI"></a>   
 ### <a name="ensure-programmatic-events-are-triggered-by-all-ui-activities"></a>确保编程事件可以由所有 UI 活动触发  
- 按照此最佳实践，辅助 technologys 可以侦听 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 中的更改并通知用户这些更改。  
+ 按照此最佳实践，辅助 technologys 可以侦听 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 中的更改，并通知用户有关这些更改的信息。  
   
 <a name="User_Settings"></a>   
 ## <a name="user-settings"></a>用户设置  
@@ -66,7 +66,7 @@ ms.locfileid: "72291398"
   
 <a name="Ensure_all_UI_Correctly_Scales_by_any_DPI_Setting"></a>   
 ### <a name="ensure-all-ui-correctly-scales-by-any-dpi-setting"></a>确保任何 DPI 设置可以正确缩放所有 UI  
- 确保所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 可根据每英寸点数（dpi）设置正确缩放。 另外，请确保 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 元素适合 1024 x 768 屏幕，每英寸120点（dpi）。  
+ 确保所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 都可以根据每英寸点数（dpi）设置正确缩放。 同时，请确保 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 元素适合 1024 x 768 的屏幕，每英寸120点（dpi）。  
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>导航  
@@ -128,9 +128,9 @@ ms.locfileid: "72291398"
   
 <a name="Use_Standard_Input_APIs_with_Devices_Independent"></a>   
 ### <a name="use-standard-input-apis-with-device-independent-calls"></a>通过独立于设备的调用使用标准输入 API  
- 独立于设备的调用确保键盘和鼠标的功能相等，同时为辅助技术提供有关 @no__t 的所需信息。  
+ 独立于设备的调用确保键盘和鼠标的功能相等，同时为辅助技术提供有关 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]所需的信息。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Automation.Peers>
 - [带有主题和 UI 自动化支持示例的 NumericUpDown 自定义控件](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))

@@ -19,8 +19,8 @@ ms.locfileid: "71697464"
 指定用于从网络主机请求信息的模块。  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t @ no__t-4webRequestModules >  
+\<&nbsp;[**的 &nbsp;>** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;\<webRequestModules >  
   
 ## <a name="syntax"></a>语法  
   
@@ -29,15 +29,15 @@ ms.locfileid: "71697464"
 </webRequestModules>  
 ```  
   
-## <a name="attributes-and-elements"></a>特性和元素  
+## <a name="attributes-and-elements"></a>属性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a>Attributes  
  无。  
   
 ### <a name="child-elements"></a>子元素  
   
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[add](add-element-for-webrequestmodules-network-settings.md)|向应用程序添加自定义 Web 请求模块。|  
 |[clear](clear-element-for-webrequestmodules-network-settings.md)|从应用程序中删除所有已注册的 Web 请求模块。|  
@@ -45,14 +45,14 @@ ms.locfileid: "71697464"
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[system.net](system-net-element-network-settings.md)|包含指定 .NET Framework 如何连接到网络的设置。|  
   
 ## <a name="remarks"></a>备注  
  此 `webRequestModules` 元素注册 <xref:System.Net.WebRequest> 类的子代，以处理向网络主机发出的信息请求。 Web 请求模块必须实现 <xref:System.Net.IWebRequestCreate> 接口。  
   
- .NET Framework 包含以 `http://`、`https://` 和 `file://` 开头的 Uri 的 Web 请求模块。 只能通过在配置文件中注册自定义模块来重写默认模块。  
+ .NET Framework 包含以 `http://`、`https://`和 `file://`开头的 Uri 的 Web 请求模块。 只能通过在配置文件中注册自定义模块来重写默认模块。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
@@ -73,7 +73,7 @@ ms.locfileid: "71697464"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.IWebRequestCreate>

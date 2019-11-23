@@ -30,7 +30,7 @@ FUNCTION function-name
   
 ## <a name="arguments"></a>参数  
  `function-name`  
- 函数的名称。  
+ 函数名称。  
   
  `parameter-name`  
  函数中参数的名称。  
@@ -41,7 +41,7 @@ FUNCTION function-name
  `data_type`  
  受支持类型的名称。  
   
- COLLECTION （< type_definition @ no__t）  
+ 集合（< type_definition`>`）  
  一个表达式，返回受支持类型、行或引用的集合。  
   
  REF **(** `data_type` **)**  
@@ -61,7 +61,7 @@ FUNCTION function-name
   
  `A()`  
   
- 有关详细信息，请参阅[如何：调用用户定义的函数 @ no__t。  
+ 有关详细信息，请参阅 [如何：调用用户定义的函数](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))。  
   
  还可以在模型本身中声明函数。 在模型中声明的函数的执行方式与在命令中内联声明的函数的执行方式相同。 有关详细信息，请参阅[用户定义函数](user-defined-functions-entity-sql.md)。  
   
@@ -75,7 +75,7 @@ FUNCTION function-name
   
  [!code-sql[DP EntityServices Concepts#FUNCTION2](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function2)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [实体 SQL 引用](entity-sql-reference.md)
 - [实体 SQL 语言](entity-sql-language.md)

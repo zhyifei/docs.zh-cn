@@ -11,25 +11,25 @@ ms.locfileid: "72180252"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>任务 2：承载工作流设计器
 
-本主题介绍在 Windows Presentation Foundation （WPF）应用程序中承载 @no__t 的实例的过程。
+本主题介绍在 Windows Presentation Foundation （WPF）应用程序中承载 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 的实例的过程。
 
-此过程配置包含设计器的**网格**控件，以编程方式创建包含默认 @no__t 2 活动的 @no__t 的实例，注册设计器元数据以提供对所有内置的设计器支持活动，并承载 WPF 应用程序中的 @no__t。
+此过程配置包含设计器的**网格**控件，以编程方式创建 <xref:System.Activities.Presentation.WorkflowDesigner> 的实例，该实例包含默认的 <xref:System.Activities.Statements.Sequence> 活动，注册设计器元数据以为所有内置活动提供设计器支持，并在 WPF 应用程序中承载 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]。
 
 ## <a name="to-host-the-workflow-designer"></a>承载工作流设计器
 
-1. 打开在 [Task 1 中创建的 HostingApplication 项目：创建新的 Windows Presentation Foundation 应用程序 @ no__t-0。
+1. 打开你在[任务1：创建新的 Windows Presentation Foundation 应用程序](task-1-create-a-new-wpf-app.md)中创建的 HostingApplication 项目。
 
 2. 调整窗口的大小，以便更轻松地使用 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]。 为此，请在设计器中选择 " **mainwindow.xaml** "，按 F4 以显示 "**属性**" 窗口，并在 "**布局**" 部分中，将 "**宽度**" 设置为600，将 "**高度**" 设置为值350。
 
 3. 设置网格名称，方法是在设计器中选择 "**网格**" 面板（单击**mainwindow.xaml**中的框），然后将 "**属性**" 窗口顶部的 "**名称**" 属性设置为 "grid1"。
 
-4. 在 "**属性**" 窗口中，单击 "@no__t" 属性旁边的省略号（ **...** ）以打开 "**集合编辑器**" 对话框。
+4. 在 "**属性**" 窗口中，单击 "`ColumnDefinitions`" 属性旁边的省略号（ **...** ）以打开 "**集合编辑器**" 对话框。
 
 5. 在 "**集合编辑器**" 对话框中，单击 "**添加**" 按钮三次，以便在布局中插入三列。 第一列将包含 "**工具箱**"，第二列将承载 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]，第三列将用于属性检查器。
 
-6. 将中间列的 @no__t 0 属性设置为值 "4 *"。
+6. 将中间列的 `Width` 属性设置为值 "4 *"。
 
-7. 单击“确定” 以保存更改。 以下 XAML 将添加到*mainwindow.xaml*文件中：
+7. 单击 **“确定”** ，保存这些更改。 以下 XAML 将添加到*mainwindow.xaml*文件中：
 
     ```xaml
     <Grid Name="grid1">
@@ -55,7 +55,7 @@ ms.locfileid: "72180252"
         using System.ComponentModel;
         ```
 
-    2. 若要声明一个私有成员字段以保存 <xref:System.Activities.Presentation.WorkflowDesigner> 的实例，请将以下代码添加到 @no__t 1 类：
+    2. 若要声明一个私有成员字段以保存 <xref:System.Activities.Presentation.WorkflowDesigner>的实例，请将以下代码添加到 `MainWindow` 类：
 
         ```csharp
         public partial class MainWindow : Window
@@ -69,7 +69,7 @@ ms.locfileid: "72180252"
         }
         ```
 
-    3. 将下面的 `AddDesigner` 方法添加到 `MainWindow` 类。 实现创建 @no__t 的实例，并向其添加一个 @no__t 活动，并将其放在 grid1**网格**的中间列中。
+    3. 将下面的 `AddDesigner` 方法添加到 `MainWindow` 类。 实现创建 <xref:System.Activities.Presentation.WorkflowDesigner>的实例，向其中添加 <xref:System.Activities.Statements.Sequence> 活动，并将其放在 grid1**网格**的中间列中。
 
         ```csharp
         private void AddDesigner()
@@ -88,7 +88,7 @@ ms.locfileid: "72180252"
         }
         ```
 
-    4. 注册设计器元数据，为所有内置活动添加设计器支持。 通过此方法可以将活动从工具箱拖放到 <xref:System.Activities.Statements.Sequence> 中的原始 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 活动上。 为此，请将 `RegisterMetadata` 方法添加到 @no__t 类：
+    4. 注册设计器元数据，为所有内置活动添加设计器支持。 通过此方法可以将活动从工具箱拖放到 <xref:System.Activities.Statements.Sequence> 中的原始 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 活动上。 为此，请将 `RegisterMetadata` 方法添加到 `MainWindow` 类：
 
         ```csharp
         private void RegisterMetadata()
@@ -98,7 +98,7 @@ ms.locfileid: "72180252"
         }
         ```
 
-        有关注册活动设计器的详细信息，请参阅 [How to：创建自定义活动设计器 @ no__t。
+        有关注册活动设计器的详细信息，请参阅[如何：创建自定义活动设计器](how-to-create-a-custom-activity-designer.md)。
 
     5. 在 `MainWindow` 类构造函数中，添加对上文声明的方法的调用，以便注册设计器支持元数据，并创建 <xref:System.Activities.Presentation.WorkflowDesigner>。
 
@@ -120,10 +120,10 @@ ms.locfileid: "72180252"
 
 9. 按<kbd>F5</kbd>生成并运行解决方案。
 
-10. 请参阅 [Task 3：创建 "工具箱" 和 "PropertyGrid" 窗格 "no__t-0" 以了解如何向重新承载工作流设计器添加**工具箱**和**PropertyGrid**支持。
+10. 请参阅[任务3：创建 "工具箱" 和 "PropertyGrid" 窗格](task-3-create-the-toolbox-and-propertygrid-panes.md)，了解如何向重新承载工作流设计器添加 **"工具箱" 和 "** **PropertyGrid** " 支持。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [重新托管工作流设计器](rehosting-the-workflow-designer.md)
-- @no__t 0Task 1：创建新的 Windows Presentation Foundation 应用程序 @ no__t-0
-- [Task 3：创建 "工具箱" 和 "PropertyGrid" 窗格 @ no__t-0
+- [任务 1：新建 Windows Presentation Foundation 应用程序](task-1-create-a-new-wpf-app.md)
+- [任务 3：创建“工具箱”和“属性网格”窗格](task-3-create-the-toolbox-and-propertygrid-panes.md)

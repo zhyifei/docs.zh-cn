@@ -51,7 +51,7 @@ ms.locfileid: "72003392"
 - 将这些更改提交至 Northwind 数据库。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
- 在第一个任务中，您将创建一个 Visual Studio 解决方案，其中包含生成和运行 @no__t 0 项目所必需的引用。  
+ 在第一个任务中，您将创建一个 Visual Studio 解决方案，其中包含生成和运行 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 项目所必需的引用。  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
   
@@ -63,7 +63,7 @@ ms.locfileid: "72003392"
   
 4. 在 "**名称**" 框中，键入**LinqDataManipulationApp**。  
   
-5. 单击 **“确定”** 。  
+5. 单击" **确定**"。  
   
 ## <a name="adding-linq-references-and-directives"></a>添加 LINQ 引用和指令  
  本演练用到默认情况下您的项目中可能未安装的程序集。 如果 `System.Data.Linq` 未在您的项目中列为引用（单击 "显示**解决方案资源管理器**中的**所有文件**" 并展开 "**引用**" 节点），请添加它，如以下步骤中所述。  
@@ -186,6 +186,6 @@ ms.locfileid: "72003392"
 > [!NOTE]
 > 通过提交更改添加了新的客户后，您无法再次按原样执行此解决方案，因为您无法再次按原样添加相同的客户。 若要再次执行此解决方案，请更改要添加的客户 ID 值。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [通过演练学习](learning-by-walkthroughs.md)

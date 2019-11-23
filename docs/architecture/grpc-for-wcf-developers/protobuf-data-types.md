@@ -1,14 +1,13 @@
 ---
 title: Protobuf 标量数据类型-WCF 开发人员 gRPC
 description: 了解 .NET Core 中的 Protobuf 和 gRPC 支持的基本数据类型和熟知数据类型。
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: cae9cc483ffb791a9b53e6a2d9d7c0924d725a67
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: ae7f5f48099000dff0eefb36e23cb9b9f2ac517c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841455"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971552"
 ---
 # <a name="protobuf-scalar-data-types"></a>Protobuf 标量数据类型
 

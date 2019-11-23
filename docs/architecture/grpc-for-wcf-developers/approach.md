@@ -1,14 +1,13 @@
 ---
 title: GRPC 如何为 WCF 开发人员提供 RPC gRPC
 description: 比较 WCF 的主要功能和 gRPC。
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 3da28968f8c8bd6c4fdba7432ffc8458d8340457
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 1ebfd102217c9685c5ff5200386c642b2017e98f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841689"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968121"
 ---
 # <a name="how-grpc-approaches-rpc"></a>gRPC 如何处理 RPC
 
@@ -16,7 +15,7 @@ Windows Communication Foundation （WCF）和 gRPC 都是*远程过程调用*（
 
 下表设置了 WCF 的主要功能与 gRPC 的关系，以及可以在本书的其余部分找到更详细说明的位置。
 
-| 特征 | WCF | gRPC |
+| 功能 | WCF | gRPC |
 | -------- | --- | ---- |
 | 目标 | 独立于网络实现的业务代码 | 从接口定义和网络实现分离业务代码 |
 | 定义服务和消息（第3-4 章）  | 服务协定、操作协定和数据协定 | 使用 proto 文件声明服务和消息 |

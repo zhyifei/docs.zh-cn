@@ -1,16 +1,15 @@
 ---
 title: GRPC for WCF 开发人员
-description: 简介
-author: markrendle
+description: 介绍
 ms.date: 09/02/2019
-ms.openlocfilehash: 9eb12d5060ddf4f345ebe095738c98238c6caab7
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 3fb7ae440f65cc2daa2a2c984d01d0c0c1eac0aa
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841569"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967624"
 ---
-# <a name="introduction"></a>简介
+# <a name="introduction"></a>介绍
 
 帮助计算机相互通信是数字时代的主要 preoccupations 之一。 特别要注意的是，我们正在努力确定适合当前基础结构的互操作性要求的最佳远程通信机制。 正如您所想象的那样，该机制随着需求或基础结构的演变而变化。
 
@@ -62,7 +61,7 @@ Windows Communication Foundation 是用于生成服务的框架。 它是在早�
 
 ## <a name="whom-this-guide-is-for"></a>本指南适用的
 
-本指南专为在以前使用 WCF 的 .NET Framework 或 .NET Core 中的开发人员编写，并正在寻求将其应用程序迁移到 .NET Core 3.0 及更高版本的新式 RPC 环境。 本指南还可能更适用于开发人员升级或考虑升级到需要使用内置 gRPC 工具的 .NET Core 3.0 的开发人员。
+本指南面向正在使用 .NET Framework 或 .NET Core，以前使用过 WCF 并且正在寻求将应用程序迁移到 .NET Core 3.0 及更高版本的新式 RPC 环境中的开发人员。 本指南更适用于正在升级或考虑升级到 .NET Core 3.0 且想要使用内置 gRPC 工具的开发人员。
 
 >[!div class="step-by-step"]
 >[上一页](index.md)

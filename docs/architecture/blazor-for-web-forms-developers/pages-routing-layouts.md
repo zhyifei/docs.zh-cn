@@ -145,7 +145,7 @@ Blazor 中的路由由 `Router` 组件处理。 `Router` 组件通常在应用�
 
 ## <a name="navigation"></a>导航
 
-在 ASP.NET Web 窗体中，通过将重定向响应返回到浏览器来触发到其他页面的导航。 例如:
+在 ASP.NET Web 窗体中，通过将重定向响应返回到浏览器来触发到其他页面的导航。 例如：
 
 ```csharp
 protected void NavigateButton_Click(object sender, EventArgs e)

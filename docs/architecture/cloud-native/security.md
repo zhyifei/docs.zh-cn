@@ -1,5 +1,5 @@
 ---
-title: 安全
+title: 安全性
 description: 构建适用于 Azure 的云本机 .NET 应用 |安全
 ms.date: 06/30/2019
 ms.openlocfilehash: 848255de70038798417a558543d0b1ea8cff1e37
@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "73840993"
 ---
-# <a name="security"></a>安全
+# <a name="security"></a>安全性
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 

@@ -1,14 +1,13 @@
 ---
 title: 应用程序性能管理-适用于 WCF 开发人员的 gRPC
 description: ASP.NET Core gRPC 应用程序的日志记录、指标和跟踪。
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6ba67fd069e7efc232f912e50c0e283facb79e9c
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 2b6a30ab68cb6e2fdc81c59e7faef81064b948c1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841683"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968179"
 ---
 # <a name="application-performance-management"></a>应用程序性能管理
 
@@ -64,12 +63,12 @@ public class StockData : Stocks.StocksBase
 
 大多数指标平台支持5种基本类型的指标，如下表所示：
 
-| 度量值类型 | 描述 |
+| 度量值类型 | 说明 |
 | ----------- | ----------- |
 | 计数器     | 跟踪发生某些情况（如请求、错误等）的频率。 |
 | 衡量       | 记录随时间变化的单个值，如活动连接。 |
-| 而言   | 度量跨任意限制的值的分布。 例如，直方图可以跟踪数据集的大小，计算包含多少 < 10 个记录，多少11-100 和101-1000，以及 > 1000 条记录。 |
-| 进度表       | 度量事件在不同时间范围内的发生速率。 |
+| 直方图   | 度量跨任意限制的值的分布。 例如，直方图可以跟踪数据集的大小，计算包含多少 < 10 个记录，多少11-100 和101-1000，以及 > 1000 条记录。 |
+| 计数       | 度量事件在不同时间范围内的发生速率。 |
 | 计时器       | 跟踪事件的持续时间以及事件发生的速率（以直方图形式存储）。 |
 
 使用*应用指标*，可通过依赖关系注入获取 `IMetrics` 接口，并用于记录 gRPC 服务的任何指标。 下面的示例演示如何计算一段时间内发出的 `Get` 请求数：
@@ -160,7 +159,7 @@ public class Startup
 
 OpenTracing 包是抽象层，因此它需要特定于后端的实现。 OpenTracing API 实现适用于以下开源后端。
 
-| “属性” | Package | 网站 |
+| 名称 | 包 | 网站 |
 | ---- | ------- | -------- |
 | Jaeger | [Jaeger](https://www.nuget.org/packages/Jaeger/) | [jaegertracing.io](https://jaegertracing.io) |
 | 弹性 APM | [NetCoreAll](https://www.nuget.org/packages/Elastic.Apm.NetCoreAll/) | [elastic.co/products/apm](https://www.elastic.co/products/apm) |

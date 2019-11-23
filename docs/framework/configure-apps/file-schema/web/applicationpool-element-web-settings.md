@@ -19,8 +19,8 @@ ms.locfileid: "71699221"
 > 仅当 ASP.NET 应用程序托管在 IIS 7.0 或更高版本上时，此元素和它支持的功能才起作用。  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t[ **\<system >** ](system-web-element-web-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t **\<applicationPool >**  
+&nbsp;&nbsp;[ **\<system.web >** ](system-web-element-web-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<applicationPool >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,13 +31,13 @@ ms.locfileid: "71699221"
     requestQueueLimit="5000" />  
 ```  
   
-## <a name="attributes-and-elements"></a>特性和元素  
+## <a name="attributes-and-elements"></a>属性和元素  
 
 下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a>Attributes  
   
-|特性|描述|  
+|属性|说明|  
 |---------------|-----------------|  
 |`maxConcurrentRequestsPerCPU`|指定 ASP.NET 每 CPU 允许的并发请求数。|  
 |`maxConcurrentThreadsPerCPU`|指定每个 CPU 的应用程序池可以运行的线程数。 这提供了一种方法来控制 ASP.NET 并发，因为你可以限制每个 CPU 可用于处理请求的托管线程数。 默认情况下，此设置为0，这意味着 ASP.NET 不会限制可为每个 CPU 创建的线程数，尽管 CLR 线程池还限制了可创建的线程数。|  
@@ -48,7 +48,7 @@ ms.locfileid: "71699221"
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |[\<system.web>](system-web-element-web-settings.md)|包含有关 ASP.NET 如何与宿主应用程序进行交互的信息。|  
   
@@ -56,14 +56,14 @@ ms.locfileid: "71699221"
 
 在集成模式下运行 IIS 7.0 或更高版本时，此元素组合可让你配置当应用程序托管在 IIS 应用程序池中时，ASP.NET 如何管理线程和队列请求。 如果运行 IIS 6 或在经典模式下或在 ISAPI 模式下运行 IIS 7.0，则将忽略这些设置。  
   
-@No__t 设置适用于在 .NET Framework 的特定版本上运行的所有应用程序池。 这些设置包含在 aspnet .config 文件中。 此文件的版本2.0 和 4.0 .NET Framework。 （版本3.0 和 3.5 .NET Framework 共享包含版本2.0 的 aspnet .config 文件。）  
+`applicationPool` 设置适用于在 .NET Framework 的特定版本上运行的所有应用程序池。 这些设置包含在 aspnet .config 文件中。 此文件的版本2.0 和 4.0 .NET Framework。 （版本3.0 和 3.5 .NET Framework 共享包含版本2.0 的 aspnet .config 文件。）  
   
 > [!IMPORTANT]
-> 如果在 [!INCLUDE[win7](../../../../../includes/win7-md.md)] 上运行 IIS 7.0，则可以为每个应用程序池分别配置一个 aspnet .config 文件。 这使你可以为每个应用程序池定制线程性能。  
+> 如果在 [!INCLUDE[win7](../../../../../includes/win7-md.md)]上运行 IIS 7.0，则可以为每个应用程序池配置单独的 aspnet .config 文件。 这使你可以为每个应用程序池定制线程性能。  
   
-对于 @no__t 设置，.NET Framework 4 中的默认设置 "5000" 有效地关闭了由 ASP.NET 控制的请求阻止，除非你实际每个 CPU 有5000或更多请求。 默认设置依赖于 CLR 线程池来自动管理每个 CPU 的并发。 对于大量使用异步请求处理的应用程序，或在网络 i/o 上阻塞多个长时间运行的请求的应用程序，将从 .NET Framework 4 中增加的默认限制中受益。 将 @no__t 设置为零将关闭使用托管线程处理 ASP.NET 请求。 当应用程序在 IIS 应用程序池中运行时，请求将保留在 IIS i/o 线程上，因此并发会受到 IIS 线程设置的限制。  
+对于 `maxConcurrentRequestsPerCPU` 设置，.NET Framework 4 中的默认设置 "5000" 有效地关闭了由 ASP.NET 控制的请求阻止，除非你实际每个 CPU 有5000或更多请求。 默认设置依赖于 CLR 线程池来自动管理每个 CPU 的并发。 对于大量使用异步请求处理的应用程序，或在网络 i/o 上阻塞多个长时间运行的请求的应用程序，将从 .NET Framework 4 中增加的默认限制中受益。 将 `maxConcurrentRequestsPerCPU` 设置为零将关闭使用托管线程来处理 ASP.NET 请求。 当应用程序在 IIS 应用程序池中运行时，请求将保留在 IIS i/o 线程上，因此并发会受到 IIS 线程设置的限制。  
   
-@No__t 设置的工作方式与在 ASP.NET 应用程序的 web.config 文件中设置的[processModel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7w2sway1(v=vs.100))元素的 @no__t 特性相同。 但是，aspnet 文件中的 @no__t 设置将覆盖 Web.config 文件中的 @no__t 设置。 换句话说，如果同时设置了这两个属性（默认情况下为 true），则将优先使用 aspnet .config 文件中的 `requestQueueLimit` 设置。  
+`requestQueueLimit` 设置的工作方式与在 ASP.NET 应用程序的 web.config 文件中设置的[processModel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7w2sway1(v=vs.100))元素的 `requestQueueLimit` 属性相同。 但是，aspnet 文件中的 `requestQueueLimit` 设置会覆盖 Web.config 文件中的 `requestQueueLimit` 设置。 换句话说，如果同时设置了这两个属性（默认情况下为 true），则将优先使用 aspnet .config 文件中的 `requestQueueLimit` 设置。  
   
 ## <a name="example"></a>示例  
 
@@ -97,6 +97,6 @@ ms.locfileid: "71699221"
 |验证文件||  
 |可以为空||  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [\<system.web> 元素（Web 设置）](system-web-element-web-settings.md)

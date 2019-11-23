@@ -57,7 +57,7 @@ ms.locfileid: "73841221"
 Istio 实现的关键组件是一种名为[Envoy 代理](https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy)的代理服务。 从 Lyft 开始，到[云本机计算基础](https://www.cncf.io/)（在第1章讨论），Envoy 代理与每个服务一起运行，并为以下功能提供平台无关的基础：
 
 - 动态服务发现。
-- 负载均衡。
+- 负载平衡。
 - TLS 终止。
 - HTTP 和 gRPC 代理。
 - 断路器复原。

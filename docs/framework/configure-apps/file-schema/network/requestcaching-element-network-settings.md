@@ -19,8 +19,8 @@ ms.locfileid: "71697828"
 控制网络请求的缓存机制。  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t **\<requestCaching >**  
+\<&nbsp;[**的 &nbsp;>** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<requestCaching >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,21 +35,21 @@ ms.locfileid: "71697828"
 </requestCaching>
 ```  
   
-## <a name="attributes-and-elements"></a>特性和元素  
+## <a name="attributes-and-elements"></a>属性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a>Attributes  
   
-|特性|描述|  
+|属性|说明|  
 |---------------|-----------------|  
-|`isPrivateCache`|指定缓存是否在不同用户的信息之间提供隔离。 默认值为 `true`。 对于中间层应用程序，此值应为 `false`。|  
+|`isPrivateCache`|指定缓存是否在不同用户的信息之间提供隔离。 默认值为 `true`。 应为中间层应用程序 `false` 此值。|  
 |`disableAllCaching`|指定为所有 Web 响应禁用缓存，且不能以编程方式重写。|  
 |`defaultPolicyLevel`|<xref:System.Net.Cache.RequestCacheLevel> 枚举中的值之一。 默认值为 `BypassCache`。|  
 |`unspecifiedMaximumAge`|指定将内容标记为过期的默认时间。|  
   
 ## <a name="policylevel-attribute"></a>policyLevel 特性  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`Default`|如果资源是最新的，则返回缓存的资源，内容长度准确，并且存在过期、修改和内容长度属性。|  
 |`BypassCache`|从服务器返回资源。|  
@@ -62,14 +62,14 @@ ms.locfileid: "71697828"
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](defaulthttpcachepolicy-element-network-settings.md)|可选元素。<br /><br /> 描述 HTTP 缓存是否处于活动状态，并描述默认缓存策略。|  
 |[\<defaultFtpCachePolicy > 元素（网络设置）](defaultftpcachepolicy-element-network-settings.md)|可选元素。<br /><br /> 介绍 FTP 缓存是否处于活动状态，并描述默认缓存策略。|  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |[system.net](system-net-element-network-settings.md)|包含指定 .NET Framework 如何连接到网络的设置。|  
   
@@ -86,7 +86,7 @@ ms.locfileid: "71697828"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Net.Cache?displayProperty=nameWithType>
 - [网络设置架构](index.md)

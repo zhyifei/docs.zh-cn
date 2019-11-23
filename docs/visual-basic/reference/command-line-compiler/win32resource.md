@@ -32,12 +32,12 @@ ms.locfileid: "72004961"
 ## <a name="remarks"></a>备注  
  您可以使用 Microsoft Windows 资源编译器（RC）创建 Win32 资源文件。  
   
- Win32 资源可以包含版本或位图（图标）信息，这些信息有助于在**文件资源管理器**中标识您的应用程序。 如果不指定 `-win32resource`，编译器将根据程序集版本生成版本信息。 @No__t 0 和 @no__t 选项是互斥的。  
+ Win32 资源可以包含版本或位图（图标）信息，这些信息有助于在**文件资源管理器**中标识您的应用程序。 如果不指定 `-win32resource`，编译器将根据程序集版本生成版本信息。 `-win32resource` 和 `-win32icon` 选项是互斥的。  
   
  请参阅[-linkresource （Visual Basic）](../../../visual-basic/reference/command-line-compiler/linkresource.md)以引用 .NET Framework 资源文件或[-resource （Visual Basic）](../../../visual-basic/reference/command-line-compiler/resource.md)来附加 .NET Framework 资源文件。  
   
 > [!NOTE]
-> 在 Visual Studio 开发环境中，不能使用 `-win32resource` 选项;仅当从命令行进行编译时，它才可用。  
+> `-win32resource` 选项在 Visual Studio 开发环境中不可用;仅当从命令行进行编译时，它才可用。  
   
 ## <a name="example"></a>示例  
  下面的代码编译 `In.vb` 并附加 Win32 资源文件，`Rf.res`：  
@@ -46,7 +46,7 @@ ms.locfileid: "72004961"
 vbc -win32resource:rf.res in.vb  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
