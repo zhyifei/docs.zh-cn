@@ -1,5 +1,5 @@
 ---
-title: Default (Visual Basic)
+title: Default
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Default
@@ -10,32 +10,32 @@ helpviewer_keywords:
 - Default keyword [Visual Basic]
 - default properties
 ms.assetid: 45fce9b9-d212-4b2d-ab86-6e359b8b57af
-ms.openlocfilehash: f78ffe42a9d618d44da2a50c0de831396576430c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad4c9528f208cc2c31f07b0506d1b049a7568c86
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800927"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351579"
 ---
 # <a name="default-visual-basic"></a>Default (Visual Basic)
-一个属性标识为其类、 结构或接口的默认属性。  
+Identifies a property as the default property of its class, structure, or interface.  
   
 ## <a name="remarks"></a>备注  
- 类、 结构或接口可以将最多一个作为其属性的指定*默认属性*，前提是该属性带有至少一个参数。 如果代码而无需指定成员的类或结构的引用，Visual Basic 解析到的默认属性的引用。  
+ A class, structure, or interface can designate at most one of its properties as the *default property*, provided that property takes at least one parameter. If code makes a reference to a class or structure without specifying a member, Visual Basic resolves that reference to the default property.  
   
- 默认属性可能会导致小减少源代码的字符，但它们会使代码更难以阅读。 如果发出对类或结构名称的引用时，调用代码不熟悉你的类或结构，它无法确定该引用访问的类或结构本身或默认属性。 这可能会导致编译器错误或细微的运行时逻辑错误。  
+ Default properties can result in a small reduction in source code-characters, but they can make your code more difficult to read. If the calling code is not familiar with your class or structure, when it makes a reference to the class or structure name it cannot be certain whether that reference accesses the class or structure itself, or a default property. This can lead to compiler errors or subtle run-time logic errors.  
   
- 您可以始终使用某种程度上减少默认属性错误的可能性[Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)设置编译器类型检查到`On`。  
+ You can somewhat reduce the chance of default property errors by always using the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md) to set compiler type checking to `On`.  
   
- 如果想要使用预定义的类或结构在代码中，您必须确定是否具有默认属性，以及如果成功，其名称是什么。  
+ If you are planning to use a predefined class or structure in your code, you must determine whether it has a default property, and if so, what its name is.  
   
- 由于这些缺点，应考虑未定义默认属性。 代码的可读性，应该还考虑始终显式引用的所有属性，包括默认属性。  
+ Because of these disadvantages, you should consider not defining default properties. For code readability, you should also consider always referring to all properties explicitly, even default properties.  
   
- `Default`修饰符可用于在此上下文中：  
+ The `Default` modifier can be used in this context:  
   
  [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：声明并在 Visual Basic 中调用默认属性](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
+- [How to: Declare and Call a Default Property in Visual Basic](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
 - [关键字](../../../visual-basic/language-reference/keywords/index.md)
