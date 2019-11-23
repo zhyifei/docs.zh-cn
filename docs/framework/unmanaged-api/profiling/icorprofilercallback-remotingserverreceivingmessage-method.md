@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5604d21f-e6b7-490e-b469-42122a7568e1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2bc3e48185c3bc289a4f7bfd865f69d9c06a720c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2c2eb7d0dc04d813b1ce91fb1acf4b171f244592
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750509"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445759"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>ICorProfilerCallback::RemotingServerReceivingMessage 方法
-通知探查器进程已接收到的远程方法调用或激活请求。  
+Notifies the profiler that the process has received a remote method invocation or activation request.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,26 +35,26 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>参数  
  `pCookie`  
- [in]中提供的值的值将对应[icorprofilercallback:: Remotingclientsendingmessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)在这些情况下：  
+ [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) under these conditions:  
   
-- 远程处理 GUID cookie 处于活动状态。  
+- Remoting GUID cookies are active.  
   
-- 通道成功传输消息。  
+- The channel succeeds in transmitting the message.  
   
-- GUID cookie 处于活动状态的客户端的过程。  
+- GUID cookies are active on the client-side process.  
   
- 这允许轻松配对的远程处理调用以及逻辑调用堆栈的创建。  
+ This allows easy pairing of remoting calls and the creation of a logical call stack.  
   
  `fIsAsync`  
- [in]一个值，则该值`true`的调用是异步的; 否则为如果`false`。  
+ [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
   
 ## <a name="remarks"></a>备注  
- 如果消息请求是异步的可以使用任何任意线程将请求提供服务。  
+ If the message request is asynchronous, the request can be serviced by any arbitrary thread.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

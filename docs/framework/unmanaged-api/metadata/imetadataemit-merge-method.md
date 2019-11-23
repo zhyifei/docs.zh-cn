@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7596220c-f699-4b6c-8ae7-c83220610650
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3fee3c0b82bec102d8e292a76d3df5a14d40ace8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 06894f238f9fda3111d5484bb1b2add183a5abb2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757667"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448056"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge 方法
-将指定的导入的范围添加到要合并的范围列表。  
+Adds the specified imported scope to the list of scopes to be merged.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,23 +37,23 @@ HRESULT Merge (
   
 ## <a name="parameters"></a>参数  
  `pImport`  
- [in]一个指向[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)对象，用于标识要合并的导入的作用域。  
+ [in] A pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) object that identifies the imported scope to be merged.  
   
  `pIMap`  
- [in]一个指向[IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)对象，它指定标记重新映射。  
+ [in] A pointer to an [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) object that specifies the token re-map.  
   
  `pHandler`  
- [in]一个指向[IUnknown](/cpp/atl/iunknown)对象，它指定了错误。  
+ [in] A pointer to an [IUnknown](/cpp/atl/iunknown) object that specifies the errors.  
   
 ## <a name="remarks"></a>备注  
- 调用[imetadataemit:: Mergeend](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md)触发的元数据合并到单个作用域。  
+ Call [IMetaDataEmit::MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) to trigger the merger of metadata into a single scope.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

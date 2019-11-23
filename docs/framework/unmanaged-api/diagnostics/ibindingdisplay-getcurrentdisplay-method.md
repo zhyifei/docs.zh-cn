@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d28eeea4-c4e0-40d4-91de-198d98cfa13c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d075aeeb904469613999829a1444511d069b9918
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9294dbf1caddd4b607185de54efd2b4764e6ca35
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775975"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448502"
 ---
 # <a name="ibindingdisplaygetcurrentdisplay-method"></a>IBindingDisplay::GetCurrentDisplay 方法
-返回当前绑定显示信息。  
+Returns the current binding display information.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,19 +35,19 @@ HRESULT GetCurrentDisplay (
   
 ## <a name="parameters"></a>参数  
  `display`  
- [out，retval]指向包含绑定显示信息的 safearray 的指针。  
+ [out, retval] A pointer to a safearray containing the binding display information.  
   
 ## <a name="remarks"></a>备注  
- [Ibindingdisplay:: Initializeforprocess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)方法必须具有先前已成功，并且必须由调试器停止程序。  
+ The [IBindingDisplay::InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) method must have previously succeeded, and the program must be stopped by a debugger.  
   
- 调用方必须释放返回`SAFEARRAY`使用的内存[SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy)。  
+ The caller must deallocate the returned `SAFEARRAY` memory by using [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy).  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** BindingDisplay.h  
+ **Header:** BindingDisplay.h  
   
- **库：** BindingDisplay.idl  
+ **Library:** BindingDisplay.idl  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

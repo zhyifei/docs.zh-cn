@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 050e77ee-3014-45c0-9e29-2ebe29347b0d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9a48dbd38d357b668c2794ae6305ceb9cad3dcf4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dfbc10bdbe633450dee2e27524c29ead21fb739e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787196"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445535"
 ---
 # <a name="setpekind-method"></a>SetPEKind 方法
-确定可移植的可执行文件类型（特定于计算机或计算机不可知）。  
+Determines the portable executable type, either machine-specific or machine-agnostic.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,22 +37,22 @@ HRESULT SetPEKind(
   
 ## <a name="parameters"></a>参数  
  `AssemblyID`  
- 程序集的 ID。  
+ ID of the assembly.  
   
  `FileToken`  
- 要为其设置 PE 类型的文件的标记。 如果不指示未`AssemblyID`绑定的 .netmodule，则可以为 NULL。  
+ Token of file for which the PE type is to be set. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
   
  `dwPEKind`  
- PE 的类型，如[CorPEKind 枚举](../metadata/corpekind-enumeration.md)所示。  
+ The type of PE, as indicated by the [CorPEKind Enumeration](../metadata/corpekind-enumeration.md).  
   
  `dwMachine`  
- 目标计算机体系结构，如 NT 标头中所示。  
+ The target machine architecture, as indicated in the NT header.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>要求  
- 需要 alink。  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>请参阅
 

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4611ee6f-0f05-4d84-91e1-e83d5e7dd7e4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7f179e3b01d6c3b34dfa765565a0fc38d0ba867c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 174486a88192bd5ff11074930d5ad3375603f8a5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753701"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449468"
 ---
-# <a name="corprfgcrootflags-enumeration"></a>COR_PRF_GC_ROOT_FLAGS 枚举
-指示垃圾回收根的属性。  
+# <a name="cor_prf_gc_root_flags-enumeration"></a>COR_PRF_GC_ROOT_FLAGS 枚举
+Indicates a property of a garbage collection root.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,22 +35,22 @@ typedef enum {
 } COR_PRF_GC_ROOT_FLAGS;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_PINNING`|根可防止垃圾回收将对象移动。|  
-|`COR_PRF_GC_ROOT_WEAKREF`|根不会阻止垃圾回收。|  
-|`COR_PRF_GC_ROOT_INTERIOR`|根引用的对象，而不是对象本身的字段。|  
-|`COR_PRF_GC_ROOT_REFCOUNTED`|如果该对象的引用计数为某个特定值，根可防止垃圾回收。|  
+|`COR_PRF_GC_ROOT_PINNING`|The root prevents a garbage collection from moving the object.|  
+|`COR_PRF_GC_ROOT_WEAKREF`|The root does not prevent garbage collection.|  
+|`COR_PRF_GC_ROOT_INTERIOR`|The root refers to a field of the object rather than the object itself.|  
+|`COR_PRF_GC_ROOT_REFCOUNTED`|The root prevents garbage collection if the reference count of the object is a certain value.|  
   
 ## <a name="remarks"></a>备注  
- `COR_PRF_GC_ROOT_FLAGS` 是一个位掩码，提供了特殊的根的其他信息。 但是，并非所有根都是特殊的。 例如，某些根不是弱引用，固定的或引用计数的内部指针。 对于此类的根，有要传达的标志。 因此，使用此枚举中，如下所示的方法[ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)方法中，发送 0 标志位掩码，指示所有标记为关闭状态。  
+ `COR_PRF_GC_ROOT_FLAGS` is a bitmask that provides additional information about special roots. However, not all roots are special. For example, some roots are not weak references, interior pointers, pinned, or reference-counted. For such roots, there are no flags to convey. Therefore, methods that use this enumeration, such as the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) method, send 0 for the flags bitmask, indicating that all flags are turned off.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

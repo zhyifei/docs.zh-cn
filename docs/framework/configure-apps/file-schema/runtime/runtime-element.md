@@ -9,19 +9,19 @@ helpviewer_keywords:
 - runtime element
 - container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
-ms.openlocfilehash: e703b9739ea93d3c7bf08371bc264bbdcb05b716
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3825ae7c3e35193cb835981600fe1ef83097cd2d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252330"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430455"
 ---
-# <a name="runtime-element"></a>\<运行时 > 元素
+# <a name="runtime-element"></a>\<runtime> Element
 
-提供公共语言运行时用来配置应用程序的信息。
+Provides information used by the common language runtime to configure applications.
 
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp; **\<运行时 >**  
+[\<configuration>](../configuration-element.md)\
+&nbsp;&nbsp;\<runtime>
 
 ## <a name="syntax"></a>语法
 
@@ -32,7 +32,7 @@ ms.locfileid: "70252330"
 
 ## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍子元素和父元素。
+The following sections describe child elements and parent elements.
 
 ### <a name="attributes"></a>特性
 
@@ -49,9 +49,9 @@ ms.locfileid: "70252330"
 |[\<appDomainResourceMonitoring>](appdomainresourcemonitoring-element.md)|指示运行时在过程的生命周期过程中收集所有应用程序域的统计数据。|
 |[\<assemblyBinding>](assemblybinding-element-for-runtime.md)|包含有关程序集版本重定向和程序集位置的信息。|
 |[\<bypassTrustedAppStrongNames>](bypasstrustedappstrongnames-element.md)|指定是否应绕过对受信任的程序集进行强名称验证。|
-|[\<CompatSortNLSVersion>](compatsortnlsversion-element.md)|指定在执行字符串比较时，运行时应使用旧的排序行为。|
+|[\<CompatSortNLSVersion>](compatsortnlsversion-element.md)|Specifies that the runtime should use legacy sorting behavior when performing string comparisons.|
 |[\<developmentMode>](developmentmode-element.md)|指定运行时是否搜索由 DEVPATH 环境变量指定的目录中的程序集。|
-|[\<disableCachingBindingFailures>](disablecachingbindingfailures-element.md)|指定是否禁用绑定故障的缓存，这是 .NET Framework 版本2.0 中的默认行为。|
+|[\<disableCachingBindingFailures>](disablecachingbindingfailures-element.md)|Specifies whether the caching of binding failures, which is the default behavior in the .NET Framework version 2.0, is disabled.|
 |[\<disableCommitThreadStack>](disablecommitthreadstack-element.md)|指定在线程启动时是否提交完整线程堆栈。|
 |[\<disableFusionUpdatesFromADManager>](disablefusionupdatesfromadmanager-element.md)|指定是否禁用允许运行时主机为应用程序域重写配置设置的默认行为。|
 |[\<EnableAmPmParseAdjustment>](enableampmparseadjustment-element.md)|确定日期和时间分析方法是否使用调整后的一组规则来分析仅包含天、月、小时和 AM/PM 指示符的日期字符串。|
@@ -59,8 +59,12 @@ ms.locfileid: "70252330"
 |[\<etwEnable>](etwenable-element.md)|指定是否为公共语言运行时事件启用 Windows 事件跟踪 (ETW)。|
 |[\<forcePerformanceCounterUniqueSharedMemoryReads>](forceperformancecounteruniquesharedmemoryreads-element.md)|指定 PerfCounter.dll 是否使用 .NET Framework 版本 1.1 应用程序中的 CategoryOptions 注册表设置，以确定是否加载来自特定于类别的共享内存或全局内存的性能计数器数据。|
 |[\<gcAllowVeryLargeObjects>](gcallowverylargeobjects-element.md)|在 64 位平台上，启用总大小大于 2 千兆字节 (GB) 的数组。|
-|[\<gcConcurrent>](gcconcurrent-element.md)|指定公共语言运行时是否并发运行垃圾回收。|
+|[\<gcConcurrent>](gcconcurrent-element.md)|Specifies whether the common language runtime runs garbage collection concurrently.|
 |[\<GCCpuGroup>](gccpugroup-element.md)|指定垃圾回收是否支持多个 CPU 组。|
+|[\<GCHeapAffinitizeMask>](gcheapaffinitizemask-element.md)|Defines the affinity between garbage collection heaps and individual processors.|
+|[\<GCHeapCount>](gcheapcount-element.md)|Specifies the number of heaps/threads to use for server garbage collection.|
+|[\<GCLOHThreshold>](gclohthreshold-element.md)|Specifies the threshold size that causes the garbage collector to put objects on the large object heap.|
+|[\<GCNoAffinitize>](gcnoaffinitize-element.md)|Specifies whether or not to affinitize server garbage collection threads with CPUs.|
 |[\<gcServer>](gcserver-element.md)|指定公共语言运行时是否运行服务器垃圾回收。|
 |[\<generatePublisherEvidence>](generatepublisherevidence-element.md)|指定运行时是否使用代码访问安全性 (CAS) 发布服务器策略。|
 |[\<legacyCorruptedStateExceptionsPolicy>](legacycorruptedstateexceptionspolicy-element.md)|指定运行时是否允许托管的代码捕获访问冲突和其他损坏状态异常。|
@@ -71,7 +75,7 @@ ms.locfileid: "70252330"
 |[\<NetFx45_CultureAwareComparerGetHashCode_LongStrings>](netfx45-cultureawarecomparergethashcode-longstrings-element.md)|指定运行时是否使用固定的内存量来计算 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法的哈希代码。|
 |[\<PreferComInsteadOfRemoting>](prefercominsteadofmanagedremoting-element.md)|指定运行时将使用 COM 互操作来代替跨应用程序域边界的远程。|
 |[\<relativeBindForResources>](relativebindforresources-element.md)|优化附属程序集的探测。|
-|[\<shadowCopyVerifyByTimeStamp>](shadowcopyverifybytimestamp-element.md)|指定卷影复制是否使用 .NET Framework 4 中引入的默认启动行为，或恢复为 .NET Framework 早期版本的启动行为。|
+|[\<shadowCopyVerifyByTimeStamp>](shadowcopyverifybytimestamp-element.md)|Specifies whether shadow copying uses the default startup behavior introduced in the .NET Framework 4, or reverts to the startup behavior of earlier versions of the .NET Framework.|
 |[\<supportPortability>](supportportability-element.md)|通过禁用将程序集视为等效于应用程序可移植性用途的默认行为来指定应用程序可以在两种不同的 .NET Framework 实现中引用同一程序集。|
 |[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|提供默认内存中对象缓存的配置信息。|
 |[\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md)|指定运行时是否跨所有 CPU 组分发托管的线程。|
@@ -89,9 +93,9 @@ ms.locfileid: "70252330"
 
 ## <a name="remarks"></a>备注
 
-公共语言运行时使用配置文件的[ \<运行时 >](runtime-element.md)部分中的子元素来配置应用程序的执行方式。 例如， [ \<r >](gcserver-element.md)元素确定垃圾回收器是使用工作站垃圾回收还是服务器[ \<](userandomizedstringhashalgorithm-element.md)垃圾回收，UseRandomizedStringHashAlgorithm > 元素确定公共语言运行时是否为每个应用程序或每个应用程序域计算字符串的哈希代码，以及`AppContextSwitchOverrides`元素是否允许库用户选择或退出库提供的已更改功能。
+The child elements in the [\<runtime>](runtime-element.md) section of a configuration file are used by the common language runtime to configure how an application executes. For example, the [\<gcServer>](gcserver-element.md) element determines whether the garbage collector uses workstation garbage collection or server garbage collection, the [\<UseRandomizedStringHashAlgorithm>](userandomizedstringhashalgorithm-element.md) element determines whether the common language runtime calculates hash codes for string on a per-application or a per-application domain basis, and the `AppContextSwitchOverrides` element allows library users to opt in or opt out of changed  functionality provided by a library.
 
-在应用程序启动时，公共语言运行时将自动读取[ \<运行时 >](runtime-element.md)部分中的元素。 你还可以通过向<xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType>属性提供其名称来定义非默认应用程序域的配置文件; 在加载应用程序域时，将自动读取其设置。 如果需要，您很少需要直接读取应用程序的配置文件中的[ \<运行时 >](runtime-element.md)部分中的设置。
+The elements in the [\<runtime>](runtime-element.md) section are read automatically by the common language runtime at application startup. You can also define the configuration file for a non-default application domain by supplying its name to the <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> property; its settings are read automatically when the application domain is loaded. You should rarely, if ever, have a need to directly read the settings in the [\<runtime>](runtime-element.md) section in your application's configuration file.
 
 ## <a name="see-also"></a>请参阅
 

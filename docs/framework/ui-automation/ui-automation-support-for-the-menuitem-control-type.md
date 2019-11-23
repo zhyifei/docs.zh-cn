@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Menu Item control type
 - UI Automation, Menu Item control type
 ms.assetid: 54bce311-3d23-40b9-ba90-1bdbdaf8fbba
-ms.openlocfilehash: 5b9983dda790fbf501b055ea8e592851e61e1e89
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c65e30ffea64a9b577cfee7535fd92e489bc7632
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039418"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446705"
 ---
 # <a name="ui-automation-support-for-the-menuitem-control-type"></a>UI 自动化对 MenuItem 控件类型的支持
 
 > [!NOTE]
-> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。
 
 本主题提供有关对 MenuItem 控件类型的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 支持的信息。 本主题描述控件的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 树结构，并提供 MenuItem 控件类型所必需的属性和控件模式。
 
-使用菜单控件，可以对与命令和事件处理程序相关联的元素以分层方式进行组织。 在典型的 Microsoft Windows 应用程序中，菜单栏包含多个菜单项（如 "**文件**"、"**编辑**" 和 "**窗口**"），每个菜单项都显示一个菜单。 菜单包含一系列菜单项（如“新建”、“打开”和“关闭”），可以通过展开这些菜单项来显示额外的菜单项，或者通过单击它们来执行特定的操作。 菜单项可以承载于菜单、菜单栏或工具栏中。
+使用菜单控件，可以对与命令和事件处理程序相关联的元素以分层方式进行组织。 In a typical Microsoft Windows application, a menu bar contains several menu items (such as **File**, **Edit**, and **Window**), and each menu item displays a menu. 菜单包含一系列菜单项（如“新建”、“打开”和“关闭”），可以通过展开这些菜单项来显示额外的菜单项，或者通过单击它们来执行特定的操作。 菜单项可以承载于菜单、菜单栏或工具栏中。
 
 以下几节定义了 MenuItem 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有列表控件，无论控件是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。
 
@@ -32,9 +32,9 @@ ms.locfileid: "73039418"
 
 |控件视图|内容视图|
 |------------------|------------------|
-|MenuItem “帮助”<br /><br /> <ul><li>菜单（帮助菜单项的子菜单）<br /><br /> <ul><li>MenuItem“帮助主题”</li><li>MenuItem “关于 Notepad”</li></ul></li></ul>|MenuItem “帮助”<br /><br /> -MenuItem "帮助主题"<br />-MenuItem "关于 Notepad"|
+|MenuItem “帮助”<br /><br /> <ul><li>菜单（帮助菜单项的子菜单）<br /><br /> <ul><li>MenuItem“帮助主题”</li><li>MenuItem “关于 Notepad”</li></ul></li></ul>|MenuItem “帮助”<br /><br /> -   MenuItem "Help Topics"<br />-   MenuItem "About Notepad"|
 
-菜单项控件的控件视图具有如上所示的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构。 请注意，包括了 "**帮助**" 菜单项，以便更好地说明子菜单层次结构中典型菜单的结构。
+菜单项控件的控件视图具有如上所示的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构。 Note that the **Help** menu item is included to better illustrate the structure in a typical menu to submenu hierarchy.
 
 而对于内容视图而言，菜单不存在于 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树，因为它不给最终用户提供有意义的信息。
 
@@ -42,7 +42,7 @@ ms.locfileid: "73039418"
 
 ## <a name="required-ui-automation-properties"></a>必需的 UI 自动化属性
 
-下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与菜单项控件尤其相关。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅[客户端的 UI 自动化属性](ui-automation-properties-for-clients.md)。
+下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与菜单项控件尤其相关。 For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).
 
 |Property|“值”|描述|
 |--------------|-----------|-----------------|

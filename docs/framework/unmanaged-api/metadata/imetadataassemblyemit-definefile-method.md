@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 54d5a233da2bf033d960fd02961ac89eb57151d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0b7ca6f9878ed2fa2d90ea93e5101f0a66ec2d5e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776283"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440205"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>IMetaDataAssemblyEmit::DefineFile 方法
 创建包含此程序集引用的程序集的元数据的 `File` 元数据结构，并返回关联的元数据标记。  
@@ -41,29 +39,29 @@ HRESULT DefineFile (
   
 ## <a name="parameters"></a>参数  
  `szName`  
- [in]要使用的文件的名称。  
+ [in] The name of the file to be consumed.  
   
  `pbHashValue`  
- [in]指向与该程序集关联的哈希数据的指针。  
+ [in] A pointer to the hash data associated with the assembly.  
   
  `cbHashValue`  
- [in]以字节为单位的大小`pbHashValue`。  
+ [in] The size in bytes of `pbHashValue`.  
   
  `dwFileFlags`  
- [in]按位组合`FileFlags`指定属性设置的值。  
+ [in] A bitwise combination of `FileFlags` values that specify property settings.  
   
  `pmdf`  
- [out]指向返回的指针`File`令牌。  
+ [out] A pointer to the returned `File` token.  
   
 ## <a name="remarks"></a>备注  
- 一个`File`必须已在生成此程序集时，不包括包含的元数据的文件时此程序集的一部分的每个文件定义元数据结构。  
+ One `File` metadata structure must be defined for each file that was part of this assembly at the time that this assembly was built, excluding the file that contains the metadata.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

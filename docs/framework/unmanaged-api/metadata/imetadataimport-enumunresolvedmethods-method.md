@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: eb3187d7-74cf-44b1-aeeb-7a8d2b60e3b7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 74d0c2e9777a7bd3d49622fb326ecb6b58fbec07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff9827174e43fd62f3a995e9f477c6fff66b227a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782535"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449955"
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>IMetaDataImport::EnumUnresolvedMethods 方法
 枚举表示当前元数据范围内未解析的方法的 MemberDef 标记。  
@@ -40,35 +38,35 @@ HRESULT EnumUnresolvedMethods (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in、 out]一个指向枚举器。 对于首次调用此方法，这必须为 NULL。  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `rMethods`  
- [out]用于存储 MemberDef 标记的数组。  
+ [out] The array used to store the MemberDef tokens.  
   
  `cMax`  
  [in] `rMethods` 数组的最大大小。  
   
  `pcTokens`  
- [out]在中返回的 MemberDef 标记数`rMethods`。  
+ [out] The number of MemberDef tokens returned in `rMethods`.  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUnresolvedMethods` 已成功返回。|  
-|`S_FALSE`|没有要枚举的标记。 在这种情况下，`pcTokens`为零。|  
+|`S_OK`|`EnumUnresolvedMethods` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="remarks"></a>备注  
- 无法解析的方法是指已声明但未实现。 如果该方法标记为一种方法枚举中包括`miForwardRef`并将`mdPinvokeImpl`或`miRuntime`设置为零。 换而言之，未解析的方法是标记的类方法`miForwardRef`但其不在非托管代码 （通过 PInvoke 访问） 中实现也不会由运行时本身在内部实现  
+ An unresolved method is one that has been declared but not implemented. A method is included in the enumeration if the method is marked `miForwardRef` and either `mdPinvokeImpl` or `miRuntime` is set to zero. In other words, an unresolved method is a class method that is marked `miForwardRef` but which is not implemented in unmanaged code (reached via PInvoke) nor implemented internally by the runtime itself  
   
- 枚举不包括在模块作用域 （全局） 或接口或抽象类中定义的所有方法。  
+ The enumeration excludes all methods that are defined either at module scope (globals) or in interfaces or abstract classes.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: af28db02-29af-45ac-aec6-8d6c6123c2ff
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1763f9341af2d90cf465cb554bf7f282a4d92058
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 381c38542dcde242c0a1a4e71e9b99316328159d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777812"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436248"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope 方法
-可在其中创建新的元数据的内存中创建一个新的区域。  
+Creates a new area in memory in which you can create new metadata.  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,30 +38,30 @@ HRESULT DefineScope (
   
 ## <a name="parameters"></a>参数  
  `rclsid`  
- [in]若要创建版本的元数据结构的 CLSID。 此值必须是.NET Framework 2.0 版的 CLSID_CorMetaDataRuntime。  
+ [in] The CLSID of the version of metadata structures to be created. This value must be CLSID_CorMetaDataRuntime for the .NET Framework version 2.0.  
   
  `dwCreateFlags`  
- [in]指定选项的标志。 此值必须为零的.NET Framework 2.0。  
+ [in] Flags that specify options. This value must be zero for the .NET Framework 2.0.  
   
  `riid`  
- [in]要返回; 所需的元数据接口的 IID调用方将使用接口创建新的元数据。  
+ [in] The IID of the desired metadata interface to be returned; the caller will use the interface to create the new metadata.  
   
- 值`riid`必须指定一个"发出"接口。 有效值为 IID_IMetaDataEmit、 IID_IMetaDataAssemblyEmit 或 IID_IMetaDataEmit2。  
+ The value of `riid` must specify one of the "emit" interfaces. Valid values are IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit, or IID_IMetaDataEmit2.  
   
  `ppIUnk`  
- [out]对返回的接口指针。  
+ [out] The pointer to the returned interface.  
   
 ## <a name="remarks"></a>备注  
- `DefineScope` 创建一系列内存中元数据的表、 生成元数据，一个唯一 GUID （模块版本标识符或时产生的 MVID） 和为编译单元发出模块表中创建一个条目。  
+ `DefineScope` creates a set of in-memory metadata tables, generates a unique GUID (module version identifier, or MVID) for the metadata, and creates an entry in the module table for the compilation unit being emitted.  
   
- 您可以将属性附加到元数据范围作为一个整体使用[imetadataemit:: Setmoduleprops](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md)或[imetadataemit:: Definecustomattribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md)方法，根据需要。  
+ You can attach attributes to the metadata scope as a whole by using the [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) or [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) method, as appropriate.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

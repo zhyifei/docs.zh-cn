@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b8be30e8c3b6bc7c03ede5f897f176e04153003b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 193e8788d5a1b28f43f2fb0d4d935a18542dd923
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781968"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427488"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls 方法
 枚举表示指定类型的方法的 MethodBody 和 MethodDeclaration 标记。  
@@ -42,36 +40,36 @@ HRESULT EnumMethodImpls (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in、 out]一个指向枚举器。 对于首次调用此方法，这必须为 NULL。  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `td`  
- [in]TypeDef 的类型的令牌要枚举的方法实现。  
+ [in] A TypeDef token for the type whose method implementations to enumerate.  
   
  `rMethodBody`  
- [out]要存储 MethodBody 令牌的数组。  
+ [out] The array to store the MethodBody tokens.  
   
  `rMethodDecl`  
- [out]要存储 MethodDeclaration 标记的数组。  
+ [out] The array to store the MethodDeclaration tokens.  
   
  `cMax`  
- [in]最大大小`rMethodBody`和`rMethodDecl`数组。  
+ [in] The maximum size of the `rMethodBody` and `rMethodDecl` arrays.  
   
  `pcTokens`  
- [in]方法中返回的实际数量`rMethodBody`和`rMethodDecl`。  
+ [in] The actual number of methods returned in `rMethodBody` and `rMethodDecl`.  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls` 已成功返回。|  
-|`S_FALSE`|没有要枚举的方法标记。 在这种情况下，`pcTokens`为零。|  
+|`S_OK`|`EnumMethodImpls` returned successfully.|  
+|`S_FALSE`|There are no method tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

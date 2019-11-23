@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55773dbc-9053-46e3-8a3c-86caa9d91fb4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a1935b831902e975616557f512789c339baf49c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5afd48b36355835647ab8d06691f2bd2058b00cb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776972"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426735"
 ---
 # <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodFromDocumentPosition 方法
-返回包含在文档中的给定位置处的断点的方法。  
+Returns the method that contains the breakpoint at the given position in a document.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,22 +37,22 @@ HRESULT GetMethodFromDocumentPosition (
   
 ## <a name="parameters"></a>参数  
  `document`  
- [in]指定的文档。  
+ [in] The specified document.  
   
  `line`  
- [in]指定文档的行。  
+ [in] The line of the specified document.  
   
  `column`  
- [in]指定文档的列。  
+ [in] The column of the specified document.  
   
  `pRetVal`  
- [out]指向的地址的指针[ISymUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)对象，表示包含断点的方法。  
+ [out] A pointer to the address of a [ISymUnmanagedMethod Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents the method containing the breakpoint.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

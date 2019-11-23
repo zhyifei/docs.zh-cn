@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0b284b18-0084-4b3a-912a-5ebe9f29c88b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c150f4bda901627fc21ed54926c3cf959bb829a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c88b7a401a19b1bd0e02edab7ef7bbee1372199e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776301"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432076"
 ---
 # <a name="imetadataassemblyemitdefineassemblyref-method"></a>IMetaDataAssemblyEmit::DefineAssemblyRef 方法
 创建包含此程序集引用的程序集的元数据的 `AssemblyRef` 结构，并返回关联的元数据标记。  
@@ -44,40 +42,40 @@ HRESULT DefineAssemblyRef (
   
 ## <a name="parameters"></a>参数  
  `pbPublicKeyOrToken`  
- [in]引用的程序集的发布服务器的公钥。 帮助器函数[StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md)可用于获取要将作为此参数传递的公钥的哈希。  
+ [in] The public key of the publisher of the referenced assembly. The helper function [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) can be used to get the hash of the public key to pass as this parameter.  
   
  `cbPublicKeyOrToken`  
- [in]以字节为单位的大小`pbPublicKeyOrToken`。  
+ [in] The size in bytes of `pbPublicKeyOrToken`.  
   
  `szName`  
- [in]用户可读文本的程序集的名称。 此值不得超过 1024年个字符。  
+ [in] The human-readable text name of the assembly. This value must not exceed 1024 characters.  
   
  `pMetaData`  
- [in]ASSEMBLYMETADATA 实例包含引用的程序集的版本、 平台和区域设置信息。  
+ [in] An ASSEMBLYMETADATA instance that contains the version, platform and locale information of the referenced assembly.  
   
  `pbHashValue`  
- [in]与引用的程序集关联的哈希数据。 可选。  
+ [in] The hash data associated with the referenced assembly. 可选。  
   
  `cbHashValue`  
- [in]以字节为单位的大小`pbHashValue`。  
+ [in] The size in bytes of `pbHashValue`.  
   
  `dwAssemblyRefFlags`  
- [in]按位组合[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)影响执行引擎的行为的值。  
+ [in] A bitwise combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that influence the behavior of the execution engine.  
   
  `pmdar`  
- [out]指向返回的指针`AssemblyRef`元数据标记。  
+ [out] A pointer to the returned `AssemblyRef` metadata token.  
   
 ## <a name="remarks"></a>备注  
- 一个`AssemblyRef`必须为此程序集引用每个程序集定义元数据结构。  
+ One `AssemblyRef` metadata structure must be defined for each assembly that this assembly references.  
   
- 在运行时，引用的程序集的详细信息将传递给它们表示"按生成"信息指示的程序集冲突解决程序。 程序集解析程序然后将策略应用。  
+ At run time, the details of a referenced assembly are passed to the assembly resolver with an indication that they represent the "as built" information. The assembly resolver then applies policy.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

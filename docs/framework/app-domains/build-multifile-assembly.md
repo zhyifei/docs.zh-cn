@@ -1,5 +1,5 @@
 ---
-title: 如何：生成多文件程序集
+title: 'How to: Build a multifile assembly'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -17,14 +17,14 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-ms.openlocfilehash: 150c0f63d52590ea9cf80a3e991375f10ce1a124
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0f8c6d57425657e321d80f9edffa20f27bc28770
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119938"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429567"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>如何：生成多文件程序集
+# <a name="how-to-build-a-multifile-assembly"></a>How to: Build a multifile assembly
 
 本文章介绍如何创建多文件程序集，并提供用于说明过程中每个步骤的代码。
 
@@ -72,8 +72,6 @@ ms.locfileid: "73119938"
 
    ```vb
    ' Assembly building example in the .NET Framework.
-   Imports System
-
    Namespace myStringer
        Public Class Stringer
            Public Sub StringerMethod()
@@ -144,7 +142,6 @@ ms.locfileid: "73119938"
    ```
 
    ```vb
-   Imports System
    Imports myStringer
 
    Class MainClientApp
@@ -227,6 +224,6 @@ ms.locfileid: "73119938"
 ## <a name="see-also"></a>请参阅
 
 - [创建程序集](../../standard/assembly/create.md)
-- [如何：查看程序集内容](../../standard/assembly/view-contents.md)
+- [How to: View assembly contents](../../standard/assembly/view-contents.md)
 - [运行时如何定位程序集](../deployment/how-the-runtime-locates-assemblies.md)
 - [多文件程序集](multifile-assemblies.md)

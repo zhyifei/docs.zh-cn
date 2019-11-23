@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e817f35-a2bc-4403-9e6f-f731e6b9fe23
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 135938c4ed91423145ca46b743620f4236f7f818
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 128268bab77c8be5dc809eaa6d2548fc34f13cbd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742255"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446620"
 ---
 # <a name="assemblyattributesgoheres"></a>AssemblyAttributesGoHereS
 
@@ -40,7 +38,7 @@ internal sealed class AssemblyAttributesGoHereS
 
 对此类型的引用指示了安全性相关的和非多用途的自定义属性。
 
-这些类型标记为"内部".NET Framework 中，并且位于<xref:System.Runtime.CompilerServices>命名空间。
+These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
 
 ## <a name="requirements"></a>要求
 

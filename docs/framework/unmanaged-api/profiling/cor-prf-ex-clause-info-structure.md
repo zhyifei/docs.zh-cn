@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 7d0d6fb7-bc9d-40f0-8163-c0d162eaba7d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 85c0cc3880e4fc78d4badea329d62a6fced2a977
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: df4bfe69b22439073342693a03376a0b506f9c70
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781946"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428374"
 ---
-# <a name="corprfexclauseinfo-structure"></a>COR_PRF_EX_CLAUSE_INFO 结构
+# <a name="cor_prf_ex_clause_info-structure"></a>COR_PRF_EX_CLAUSE_INFO 结构
 存储有关特定的异常子句实例及其关联的帧的信息。  
   
 ## <a name="syntax"></a>语法  
@@ -37,19 +35,19 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
 } COR_PRF_EX_CLAUSE_INFO;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`clauseType`|值为[COR_PRF_CLAUSE_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md)枚举，用于指定异常子句只需输入的代码或左侧的类型。|  
-|`programCounter`|子句处理程序的本机入口点 — 例如，X86 EIP 寄存器的内容。|  
-|`framePointer`|子句处理程序的逻辑帧指针 — 例如，X86 EBP 寄存器的内容。|  
-|`shadowStackPointer`|指向阴影堆栈指针。 此值是 BSP 寄存器的内容，仅适用于 IA64。|  
+|`clauseType`|A value of the [COR_PRF_CLAUSE_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md) enumeration that specifies the type of exception clause the code just entered or left.|  
+|`programCounter`|The native entry point of the clause handler — for example, the contents of the X86 EIP register.|  
+|`framePointer`|The pointer to the logical frame for the clause handler — for example, the contents of the X86 EBP register.|  
+|`shadowStackPointer`|The pointer to the shadow stack. This value is the contents of the BSP register and applies only to IA64.|  
   
 ## <a name="remarks"></a>备注  
- 收到的异常通知后， [ICorProfilerInfo2::GetNotifiedExceptionClauseInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md)可用于获取在异常子句的本机地址和帧信息 (`catch` / `finally`/筛选)，要在运行或刚运行过。  
+ When an exception notification is received, [ICorProfilerInfo2::GetNotifiedExceptionClauseInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md) can be used to get the native address and frame information for the exception clause (`catch`/`finally`/filter) that is about to be run or has just been run.  
   
- 执行的异常子句包括公共语言运行时 (CLR) 从这些回调：  
+ Execution of an exception clause involves these callbacks from the common language runtime (CLR):  
   
 - [ICorProfilerCallback::ExceptionCatcherEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md)  
   
@@ -64,9 +62,9 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
 - [ICorProfilerCallback::ExceptionSearchFilterLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **库：** CorGuids.lib  
   

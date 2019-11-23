@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d23247e-c58c-45db-afd8-83aa89cde18e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 65f59d3df96f46ad65650183bdb6f631356a4d0b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d32dc8ae59fc1a4a189d849437cc95ea3b94a4d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775528"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449537"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields 方法
 枚举指定的 TypeDef 标记所引用的类型的 FieldDef 标记。  
@@ -41,33 +39,33 @@ HRESULT EnumFields (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in、 out]一个指向枚举器。  
+ [in, out] A pointer to the enumerator.  
   
  `cl`  
- [in]其字段是要枚举类的 TypeDef 标记。  
+ [in] The TypeDef token of the class whose fields are to be enumerated.  
   
  `rFields`  
- [out]FieldDef 标记列表。  
+ [out] The list of FieldDef tokens.  
   
  `cMax`  
  [in] `rFields` 数组的最大大小。  
   
  `pcTokens`  
- [out]FieldDef 标记中返回的实际数目`rFields`。  
+ [out] The actual number of FieldDef tokens returned in `rFields`.  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFields` 已成功返回。|  
-|`S_FALSE`|没有要枚举的字段。 在这种情况下，`pcTokens`为零。|  
+|`S_OK`|`EnumFields` returned successfully.|  
+|`S_FALSE`|There are no fields to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

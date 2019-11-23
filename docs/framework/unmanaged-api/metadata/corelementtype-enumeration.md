@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: c3809c8f-1737-4f0f-9442-0c01ee689871
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6057bd48ff4fe3f852f82de2bab972d95fef138c
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 0ce84e1545523302cd47e60b9f047bc470e6bf0f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868566"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443625"
 ---
 # <a name="corelementtype-enumeration"></a>CorElementType 枚举
 
-指定公共语言运行时<xref:System.Type>、类型修饰符或元数据类型签名中的类型的相关信息。
+Specifies a common language runtime <xref:System.Type>, a type modifier, or information about a type in a metadata type signature.
 
 ## <a name="syntax"></a>语法
 
@@ -77,74 +75,74 @@ typedef enum CorElementType {
 } CorElementType;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 |成员|描述|
 |------------|-----------------|
 |`ELEMENT_TYPE_END`|内部使用。|
-|`ELEMENT_TYPE_VOID`|Void 类型。|
-|`ELEMENT_TYPE_BOOLEAN`|布尔类型|
+|`ELEMENT_TYPE_VOID`|A void type.|
+|`ELEMENT_TYPE_BOOLEAN`|A Boolean type|
 |`ELEMENT_TYPE_CHAR`|一个字符类型。|
-|`ELEMENT_TYPE_I1`|有符号1字节整数。|
+|`ELEMENT_TYPE_I1`|A signed 1-byte integer.|
 |`ELEMENT_TYPE_U1`|1 字节无符号整数。|
-|`ELEMENT_TYPE_I2`|有符号的2字节整数。|
-|`ELEMENT_TYPE_U2`|无符号2字节整数。|
-|`ELEMENT_TYPE_I4`|有符号4字节整数。|
-|`ELEMENT_TYPE_U4`|4字节无符号整数。|
-|`ELEMENT_TYPE_I8`|8字节有符号整数。|
-|`ELEMENT_TYPE_U8`|8字节无符号整数。|
-|`ELEMENT_TYPE_R4`|4字节浮点数。|
-|`ELEMENT_TYPE_R8`|8字节浮点数。|
-|`ELEMENT_TYPE_STRING`|System.string 类型。|
-|`ELEMENT_TYPE_PTR`|指针类型修饰符。|
-|`ELEMENT_TYPE_BYREF`|引用类型修饰符。|
-|`ELEMENT_TYPE_VALUETYPE`|值类型修饰符。|
-|`ELEMENT_TYPE_CLASS`|类类型修饰符。|
-|`ELEMENT_TYPE_VAR`|类变量类型修饰符。|
-|`ELEMENT_TYPE_ARRAY`|多维数组类型修饰符。|
-|`ELEMENT_TYPE_GENERICINST`|泛型类型的类型修饰符。|
+|`ELEMENT_TYPE_I2`|A signed 2-byte integer.|
+|`ELEMENT_TYPE_U2`|An unsigned 2-byte integer.|
+|`ELEMENT_TYPE_I4`|A signed 4-byte integer.|
+|`ELEMENT_TYPE_U4`|An unsigned 4-byte integer.|
+|`ELEMENT_TYPE_I8`|A signed 8-byte integer.|
+|`ELEMENT_TYPE_U8`|An unsigned 8-byte integer.|
+|`ELEMENT_TYPE_R4`|A 4-byte floating point.|
+|`ELEMENT_TYPE_R8`|An 8-byte floating point.|
+|`ELEMENT_TYPE_STRING`|A System.String type.|
+|`ELEMENT_TYPE_PTR`|A pointer type modifier.|
+|`ELEMENT_TYPE_BYREF`|A reference type modifier.|
+|`ELEMENT_TYPE_VALUETYPE`|A value type modifier.|
+|`ELEMENT_TYPE_CLASS`|A class type modifier.|
+|`ELEMENT_TYPE_VAR`|A class variable type modifier.|
+|`ELEMENT_TYPE_ARRAY`|A multi-dimensional array type modifier.|
+|`ELEMENT_TYPE_GENERICINST`|A type modifier for generic types.|
 |`ELEMENT_TYPE_TYPEDBYREF`|类型化的引用。|
-|`ELEMENT_TYPE_I`|本机整数的大小。|
-|`ELEMENT_TYPE_U`|无符号本机整数的大小。|
-|`ELEMENT_TYPE_FNPTR`|指向函数的指针。|
-|`ELEMENT_TYPE_OBJECT`|System.object 类型。|
-|`ELEMENT_TYPE_SZARRAY`|一维的、从零开始的下限数组类型修饰符。|
-|`ELEMENT_TYPE_MVAR`|方法变量类型修饰符。|
-|`ELEMENT_TYPE_CMOD_REQD`|C 语言必需的修饰符。|
-|`ELEMENT_TYPE_CMOD_OPT`|C 语言可选修饰符。|
+|`ELEMENT_TYPE_I`|Size of a native integer.|
+|`ELEMENT_TYPE_U`|Size of an unsigned native integer.|
+|`ELEMENT_TYPE_FNPTR`|A pointer to a function.|
+|`ELEMENT_TYPE_OBJECT`|A System.Object type.|
+|`ELEMENT_TYPE_SZARRAY`|A single-dimensional, zero lower-bound array type modifier.|
+|`ELEMENT_TYPE_MVAR`|A method variable type modifier.|
+|`ELEMENT_TYPE_CMOD_REQD`|A C language required modifier.|
+|`ELEMENT_TYPE_CMOD_OPT`|A C language optional modifier.|
 |`ELEMENT_TYPE_INTERNAL`|内部使用。|
 |`ELEMENT_TYPE_MAX`|无效类型。|
 |`ELEMENT_TYPE_MODIFIER`|内部使用。|
-|`ELEMENT_TYPE_SENTINEL`|作为参数数目可变的列表的 sentinel 的类型修饰符。|
+|`ELEMENT_TYPE_SENTINEL`|A type modifier that is a sentinel for a list of a variable number of parameters.|
 |`ELEMENT_TYPE_PINNED`|内部使用。|
 
 ## <a name="remarks"></a>备注
 
-类型修饰符构成了用于表示更复杂类型的基础。 `CorElementType`类型修饰符值应用于在类型签名中紧跟在其后面的值。 在`CorElementType`类型修饰符值之后的值可以`CorElementType`是简单类型值、元数据标记或其他值, 如下表所示。
+The type modifiers form the basis for representing more complex types. A `CorElementType` type modifier value is applied to the value that immediately follows it in the type signature. The value that follows the `CorElementType` type modifier value can be a `CorElementType` simple type value, a metadata token, or other value, as specified in the following table.
 
 > [!NOTE]
-> 所有数字 (*数字*、*参数计数*、*元数据标记*、*排名*、*计数*和*界限*) 都存储为压缩整数。 有关详细信息, 请参阅 ECMA 网站上的[标准 ECMA-335-公共语言基础结构 (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) 。
+> All numbers (*number*, *argument Count*, *metadata token*, *rank*, *count*, and *bound*) are stored as compressed integers. See [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) on the ECMA Web site for details.
 
-|类型修饰符|格式|
+|Type modifier|格式|
 |-------------------|------------|
-|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<值> `CorElementType`|
-|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<值> `CorElementType`|
-|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<元数据标记 `mdTypeDef` >|
-|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<元数据标记 `mdTypeDef` >|
-|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<number >|
-|`ELEMENT_TYPE_ARRAY`|\<ELEMENT_TYPE_ARRAY 值>\<rank >\<count1 >\<bound1>... `CorElementType`\<countN >\<boundN >|
-|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<元数据标记 > \<参数计数 > \<arg1 > ... `mdTypeDef`\<argN >|
-|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<函数的完整签名, 包括调用约定 >|
-|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<值> `CorElementType`|
-|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<number >|
-|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<或元`mdTypeDef`数据标记`mdTypeRef` >|
-|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<或元`mdTypeDef`数据标记`mdTypeRef` >|
+|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<a `CorElementType` value>|
+|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<a `CorElementType` value>|
+|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<an `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<an `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<number>|
+|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN> \<boundN>|
+|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<an `mdTypeDef` metadata token> \<argument Count> \<arg1> ... \<argN>|
+|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<complete signature for the function, including calling convention>|
+|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<a `CorElementType` value>|
+|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<number>|
+|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<a `mdTypeRef` or `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<a `mdTypeRef` or `mdTypeDef` metadata token>|
 
 ## <a name="requirements"></a>要求
 
-**适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
 
-**标头：** CorHdr.h
+**Header:** CorHdr.h
 
 **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

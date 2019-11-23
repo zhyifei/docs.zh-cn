@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7061343-d0a3-4fd5-b312-61974f98bd62
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f486ffd1206dd30fa29d3f07c8c5b738cc207db0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6f8df824ed36b7793d5f07e5b5cf51f65f9c8e24
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745869"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432244"
 ---
 # <a name="ihostfiltermarktoken-method"></a>IHostFilter::MarkToken 方法
-指示将处理指定的元数据令牌。  
+Indicates that the specified metadata token will be processed.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,17 +35,17 @@ HRESULT MarkToken (
   
 ## <a name="parameters"></a>参数  
  `tk`  
- [in]要处理的元数据标记。  
+ [in] The metadata token to be processed.  
   
 ## <a name="remarks"></a>备注  
- 通常情况下，所需的令牌，如果在元数据范围内进行处理。 `MarkToken`方法将传递给元数据引擎通过[imetadataemit:: Sethandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md)方法。  
+ Typically, you want a token to be processed if it is in the metadata scope. The `MarkToken` method is passed to the metadata engine via the [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) method.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

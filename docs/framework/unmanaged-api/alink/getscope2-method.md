@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 49435665-6f5a-4acd-9034-8c9244a04a63
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f08c4a97b8cbc61a735bb9c1e6a31a698e7eefc1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a5b080443be94d5a298cc67591914d87470e6f48
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787345"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447183"
 ---
 # <a name="getscope2-method"></a>GetScope2 方法
-获取导入范围。  
+Gets an import scope.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,22 +37,22 @@ HRESULT GetScope2(
   
 ## <a name="parameters"></a>参数  
  `AssemblyID`  
- 目标程序集的 ID。  
+ ID of target assembly.  
   
  `FileToken`  
- 要从中导入的文件的 ID。  
+ ID of file from which to import.  
   
  `dwScope`  
- 要导入的从零开始的范围。  
+ Zero-based scope to import.  
   
  `ppImportScope`  
- 接收指向指定范围的[IMetaDataImport2 接口](../metadata/imetadataimport2-interface.md)接口的指针。  
+ Receives pointer to [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface for indicated scope.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>要求  
- 需要 alink。  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>请参阅
 

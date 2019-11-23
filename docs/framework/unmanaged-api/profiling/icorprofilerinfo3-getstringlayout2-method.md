@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1a268496-ee51-4d84-8700-ee56fd0c499d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1ac724db000f84e37995a34e808d3df4b1e7a960
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1e3dc4735af68da7f76fc6fce84d2dd4ac3f576e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765404"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449664"
 ---
 # <a name="icorprofilerinfo3getstringlayout2-method"></a>ICorProfilerInfo3::GetStringLayout2 方法
-获取有关字符串对象布局的信息。 此方法取代[ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md)方法。  
+获取有关字符串对象布局的信息。 This method supersedes the [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) method.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,18 +35,18 @@ HRESULT GetStringLayout2(
   
 ## <a name="parameters"></a>参数  
  `pStringLengthOffset`  
- [out]指向的位置，相对于的偏移量的`ObjectID`指针，用于存储字符串本身的长度。 长度存储为`DWORD`。  
+ [out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself. The length is stored as a `DWORD`.  
   
  `pBufferOffset`  
- [out]指向缓冲区，相对于的偏移量的`ObjectID`指针，它将存储的宽字符字符串。  
+ [out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, which stores the string of wide characters.  
   
 ## <a name="remarks"></a>备注  
- 可能或可能不是以 null 结尾的字符串。  
+ Strings may or may not be null-terminated.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

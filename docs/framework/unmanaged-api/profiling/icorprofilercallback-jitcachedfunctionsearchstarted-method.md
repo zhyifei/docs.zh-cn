@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5cba642c-0d80-48ee-889d-198c5044d821
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f4d35179b8ae35c03370cc3798609d6ed430cde3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d3fe6691a2d9989de002bad09c2e8f66a094f56
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782856"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448430"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a>ICorProfilerCallback::JITCachedFunctionSearchStarted 方法
-通知探查器以前使用本机映像生成器 (NGen.exe) 编译的函数已开始搜索。  
+Notifies the profiler that a search has started for a function that was compiled previously using the Native Image Generator (NGen.exe).  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,24 +35,24 @@ HRESULT JITCachedFunctionSearchStarted(
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in]为其执行搜索的函数的 ID。  
+ [in] The ID of the function for which the search is being performed.  
   
  `pbUseCachedFunction`  
- [out]`true`如果执行引擎应使用的缓存的版本的函数 （如果可用）; 否则为`false`。 如果值为`false`，则执行引擎将执行 JIT 编译的函数而不是使用不是 JIT 编译的版本。  
+ [out] `true` if the execution engine should use the cached version of a function (if available); otherwise `false`. If the value is `false`, the execution engine JIT-compiles the function instead of using a version that is not JIT-compiled.  
   
 ## <a name="remarks"></a>备注  
- 在.NET Framework 2.0 版中，`JITCachedFunctionSearchStarted`并[icorprofilercallback:: Jitcachedfunctionsearchfinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md)回调不会为正则 NGen 映像中的所有函数。 仅为配置文件优化 NGen 映像将在图中生成的所有函数的回调。 但是，由于的额外开销，探查器应请求探查器优化 NGen 映像仅当它要使用这些回调以强制对函数进行编译中实时 (JIT)。 否则，探查器应使用延迟策略，用于收集函数的信息。  
+ In the .NET Framework version 2.0, the `JITCachedFunctionSearchStarted` and [ICorProfilerCallback::JITCachedFunctionSearchFinished Method](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md) callbacks will not be made for all functions in regular NGen images. Only NGen images optimized for a profile will generate callbacks for all functions in the image. However, due to the additional overhead, a profiler should request profiler-optimized NGen images only if it intends to use these callbacks to force a function to be compiled just-in-time (JIT). Otherwise, the profiler should use a lazy strategy for gathering function information.  
   
- 探查器必须支持的分析的应用程序的多个线程同时调用相同的方法的情况。 例如，一个线程调用`JITCachedFunctionSearchStarted`，并通过设置响应探查器*pbUseCachedFunction*为 FALSE，以强制执行 JIT 编译。 随后将调用的线程[icorprofilercallback:: Jitcompilationstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)并[icorprofilercallback:: Jitcompilationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)。  
+ Profilers must support cases where multiple threads of a profiled application are calling the same method simultaneously. For example, thread A calls `JITCachedFunctionSearchStarted` and the profiler responds by setting *pbUseCachedFunction*to FALSE to force JIT compilation. Thread A then calls [ICorProfilerCallback::JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) and [ICorProfilerCallback::JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md).  
   
- 现在，线程 B 调用`JITCachedFunctionSearchStarted`相同的函数。 即使探查器已声明其意图到 JIT 编译的函数，探查器收到第二个回调，因为探查器已答复了线程 A 的调用之前，线程 B 发送回调`JITCachedFunctionSearchStarted`。 线程调用的顺序取决于如何计划的线程。  
+ Now thread B calls `JITCachedFunctionSearchStarted` for the same function. Even though the profiler has stated its intention to JIT-compile the function, the profiler receives the second callback because thread B sends the callback before the profiler has responded to thread A's call to `JITCachedFunctionSearchStarted`. The order in which the threads make calls depends on how the threads are scheduled.  
   
- 在探查器收到重复的回调，它必须设置由引用的值`pbUseCachedFunction`为相同的值的所有重复的回调。 也就是说，当`JITCachedFunctionSearchStarted`多次调用具有相同`functionId`值，探查器必须响应相同每次。  
+ When the profiler receives duplicate callbacks, it must set the value referenced by `pbUseCachedFunction` to the same value for all the duplicate callbacks. That is, when `JITCachedFunctionSearchStarted` is called multiple times with the same `functionId` value, the profiler must respond the same each time.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

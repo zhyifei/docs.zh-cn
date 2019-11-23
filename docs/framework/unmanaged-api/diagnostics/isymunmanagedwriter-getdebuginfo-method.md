@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: dd31c210-6829-45eb-927e-cc53932638b7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8737885015055994bff3f6066bccb551f19f74f4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2b901a3dac499f1ce3f843c59122dd8fd5022147
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777319"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427959"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo 方法
-返回编译器编写可移植可执行 (PE) 文件头中的调试目录项所需的信息。 符号编辑器填写所有字段除外`TimeDateStamp`和`PointerToRawData`。 （编译器负责适当地设置这两个字段。）  
+Returns the information necessary for a compiler to write the debug directory entry in the portable executable (PE) file header. The symbol writer fills out all fields except for `TimeDateStamp` and `PointerToRawData`. (The compiler is responsible for setting these two fields appropriately.)  
   
- 编译器应调用此方法，发出到 PE 文件的数据 blob，设置`PointerToRawData`字段 IMAGE_DEBUG_DIRECTORY 指向发出的数据，并将 IMAGE_DEBUG_DIRECTORY 写到 PE 文件中。 编译器还应设置`TimeDateStamp`字段为等于`TimeDateStamp`正在生成的 PE 文件。  
+ A compiler should call this method, emit the data blob to the PE file, set the `PointerToRawData` field in the IMAGE_DEBUG_DIRECTORY to point to the emitted data, and write the IMAGE_DEBUG_DIRECTORY to the PE file. The compiler should also set the `TimeDateStamp` field to equal the `TimeDateStamp` of the PE file being generated.  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,22 +40,22 @@ HRESULT GetDebugInfo(
   
 ## <a name="parameters"></a>参数  
  `pIDD`  
- [in、 out]指向符号编写器将填写 IMAGE_DEBUG_DIRECTORY 的指针。  
+ [in, out] A pointer to an IMAGE_DEBUG_DIRECTORY that the symbol writer will fill out.  
   
  `cData`  
- [in]一个`DWORD`包含调试数据的大小。  
+ [in] A `DWORD` that contains the size of the debug data.  
   
  `pcData`  
- [out]一个指向`DWORD`接收包含调试数据所需的缓冲区的大小。  
+ [out] A pointer to a `DWORD` that receives the size of the buffer required to contain the debug data.  
   
  `data`  
- [out]指向的缓冲区，则大到足以保留符号存储区的调试数据的指针。  
+ [out] A pointer to a buffer that is large enough to hold the debug data for the symbol store.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

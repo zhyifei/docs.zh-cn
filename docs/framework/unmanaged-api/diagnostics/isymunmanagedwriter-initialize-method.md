@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: e0ebd793-3764-4df0-8f12-0e95f60b9eae
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c1ea9424c000ad3ae4918181084c89038c2ec8d1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e9ab623d5fe9fcfda2305df078e988a561afdc5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777286"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427975"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>ISymUnmanagedWriter::Initialize 方法
-此编写器将与之关联的元数据发射器接口和设置输出文件将写入调试符号的名称。  
+Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.  
   
- 只有一次调用此方法，必须在调用之前编写器的任何其他方法。 某些编写器可能需要的文件名称。 但是，你始终可以给此方法没有任何负面影响的未使用的文件名的编写器传递文件名称。  
+ This method can be called only once, and it must be called before any other writer methods. Some writers may require a file name. However, you can always pass a file name to this method without any negative effect on writers that do not use the file name.  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,22 +39,22 @@ HRESULT Initialize(
   
 ## <a name="parameters"></a>参数  
  `emitter`  
- [in]指向元数据发射器接口的指针。  
+ [in] A pointer to the metadata emitter interface.  
   
  `filename`  
- [in]写入调试符号的文件名。 如果为不使用文件名的编写器指定文件名，则忽略此参数。  
+ [in] The file name to which the debugging symbols are written. 如果为不使用文件名的编写器指定文件名，则忽略此参数。  
   
  `pIStream`  
- [in]如果指定，符号编写器将发出符号置于给定<xref:System.Runtime.InteropServices.ComTypes.IStream>而不是文件中指定`filename`参数。 `pIStream` 参数是可选的。  
+ [in] If specified, the symbol writer will emit the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter. `pIStream` 参数是可选的。  
   
  `fFullBuild`  
- [in]`true`如果这是完全重新生成;`false`如果这是增量编译。  
+ [in] `true` if this is a full rebuild; `false` if this is an incremental compilation.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

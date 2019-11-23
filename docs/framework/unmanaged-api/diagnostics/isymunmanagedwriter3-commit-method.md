@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f6961922-46ec-4d2c-8369-85f880731f37
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bcfa0c01dc36a68711c42a7e8318cea023b1772f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5985257a186839a297c245b23f093f0b18a798fe
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752428"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438266"
 ---
 # <a name="isymunmanagedwriter3commit-method"></a>ISymUnmanagedWriter3::Commit 方法
-提交所做的更改写入到流的到目前为止。  
+Commits the changes written so far to the stream.  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,10 +32,10 @@ HRESULT Commit();
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

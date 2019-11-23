@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0aa60f24-8bbd-4c83-83c5-86ad191b1d82
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d6c45e44f68621708d05ca43857cf1e100113166
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 11f9a186f5ec5e3b9e718a3ccd43b35b66d28078
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771074"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433190"
 ---
 # <a name="icorprofilerinfo2getfunctioninfo2-method"></a>ICorProfilerInfo2::GetFunctionInfo2 方法
 获取每个类型参数或某个函数（如果存在）的父类、元数据标记和 `ClassID`。  
@@ -67,7 +65,7 @@ HRESULT GetFunctionInfo2(
  [out] 一个由 `ClassID` 值构成的数组，其中的每个值都是函数的类型参数的 ID。 方法返回时，`typeArgs` 将包含部分或全部 `ClassID` 值。  
   
 ## <a name="remarks"></a>备注  
- 探查器代码可以调用[icorprofilerinfo:: Getmodulemetadata](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md)来获取[元数据](../../../../docs/framework/unmanaged-api/metadata/index.md)给定模块的接口。 然后，返回到 `pToken` 所引用位置的元数据标记便可用于访问该函数的元数据。  
+ The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a [metadata](../../../../docs/framework/unmanaged-api/metadata/index.md) interface for a given module. 然后，返回到 `pToken` 所引用位置的元数据标记便可用于访问该函数的元数据。  
   
  通过 `pClassId` 和 `typeArgs` 参数返回的类 ID 和类型参数取决于传入 `frameInfo` 参数的值，如下表中所示。  
   
@@ -82,9 +80,9 @@ HRESULT GetFunctionInfo2(
  或者，可以先用长度为零的 `pcTypeArgs` 缓冲区调用 `GetFunctionInfo2` 以获取正确的缓冲区大小。 然后，可将缓冲区大小设置为 `pcTypeArgs` 中返回的值除以 `ClassID` 值的大小，然后再次调用 `GetFunctionInfo2`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

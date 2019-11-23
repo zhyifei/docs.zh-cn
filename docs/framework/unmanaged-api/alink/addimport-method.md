@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4fedf8a0-08c8-43d0-aa00-20f2a521c991
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aed70a78e2513f4d63fbf8ca8868f26efbac9ae8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 52e52ac62e2dcfeb182da3014a863409f640274e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787666"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446656"
 ---
 # <a name="addimport-method"></a>AddImport 方法
-将导入添加到程序集。  
+Adds imports to the assembly.  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,22 +38,22 @@ HRESULT AddImport(
   
 ## <a name="parameters"></a>参数  
  `AssemblyID`  
- 要扩充的程序集的唯一 ID。  
+ Unique ID of assembly to be augmented.  
   
  `ImportToken`  
- 要导入的文件从[ImportFile 方法](importfile-method.md)检索的唯一 ID。  
+ Unique ID, retrieved from [ImportFile Method](importfile-method.md), of file to be imported.  
   
  `dwFlags`  
- Com + FileDef 标志`ffContainsNoMetaData` ，例如和。 `ffWriteable` `dwFlags`传递给[DefineFile 方法](../metadata/imetadataassemblyemit-definefile-method.md)。  
+ COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pFileToken`  
- 指向接收结果文件的 ID 的标记的指针。  
+ Pointer to token that receives the ID for the resulting file.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>要求  
- 需要 alink  
+ Requires alink.h  
   
 ## <a name="see-also"></a>请参阅
 

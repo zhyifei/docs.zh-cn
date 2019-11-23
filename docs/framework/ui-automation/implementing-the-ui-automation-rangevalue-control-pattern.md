@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Range Value control pattern
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
-ms.openlocfilehash: 57986fa28a7a1bb7f70409b332147ff5b9615ec0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 04db9f97ccea10cf8c65df0f0117c272a5e868dd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043413"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435105"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>实现 UI 自动化 RangeValue 控件模式
 > [!NOTE]
-> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本主题介绍了实现 <xref:System.Windows.Automation.Provider.IRangeValueProvider>的准则和约定，包括有关事件和属性的信息。 本主题的结尾列出了指向其他参考资料的链接。  
   
@@ -29,26 +29,26 @@ ms.locfileid: "71043413"
   
 - 具有不明确范围值的控件（如进度栏或滑块）应对这些值进行规范化。  
   
- ![进度栏。](./media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
+ ![Progress bar.](./media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
 进度栏的示例，其中值为整数类型，最小和最大属性值分别被规范化为 0 和 100  
   
 <a name="Required_Members_for_the_IRangeValueProvider"></a>   
 ## <a name="required-members-for-irangevalueprovider"></a>IRangeValueProvider 必需的成员  
   
-|必需的成员|成员类型|说明|  
+|必需的成员|成员类型|注意|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Property|None|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|属性|无|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|属性|无|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|属性|无|  
-|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Property|无|  
-|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Property|无|  
-|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|方法|无|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Property|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Property|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Property|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Property|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Property|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|方法|None|  
   
  没有与此控件模式关联的事件。  
   
 <a name="Exceptions"></a>   
-## <a name="exceptions"></a>Exceptions  
+## <a name="exceptions"></a>异常  
  提供程序必须引发以下异常。  
   
 |异常类型|条件|  

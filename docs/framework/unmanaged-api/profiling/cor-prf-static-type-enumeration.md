@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 441d7809-5b65-41a5-ba64-2910a8008315
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 753c3b38187dd69593dcb0520acef9ce4b137039
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 40efe81f72a2043503bf521e3e47dad1a7f4530c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751901"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448449"
 ---
-# <a name="corprfstatictype-enumeration"></a>COR_PRF_STATIC_TYPE 枚举
-指示字段是否为静态的，并在字段为静态字段时指示应用于该字段的静态质量。 这些值可以组合使用位或运算来指示该字段具有多个不同的静态质量。  
+# <a name="cor_prf_static_type-enumeration"></a>COR_PRF_STATIC_TYPE 枚举
+指示字段是否为静态的，并在字段为静态字段时指示应用于该字段的静态质量。 These values can be combined using the bitwise OR operation to indicate that the field has multiple, different static qualities.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,20 +36,20 @@ typedef enum {
 } COR_PRF_STATIC_TYPE;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_NOT_A_STATIC`|该字段不是静态的。|  
-|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|该字段是应用程序域静态。|  
-|`COR_PRF_FIELD_THREAD_STATIC`|线程静态字段。|  
-|`COR_PRF_FIELD_CONTEXT_STATIC`|该字段为静态上下文。|  
-|`COR_PRF_FIELD_RVA_STATIC`|该字段是相对虚拟地址 (RVA) 的静态。|  
+|`COR_PRF_FIELD_NOT_A_STATIC`|The field is not static.|  
+|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|The field is application domain-static.|  
+|`COR_PRF_FIELD_THREAD_STATIC`|The field is thread-static.|  
+|`COR_PRF_FIELD_CONTEXT_STATIC`|The field is context-static.|  
+|`COR_PRF_FIELD_RVA_STATIC`|The field is relative virtual address (RVA)-static.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6ec3800-e0d9-4387-afb8-ddc0b818114c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 195642d9186016417db310402b664a1043d09e71
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 48c38288e960ff2e1fe21f30b6eceae8eeaac2da
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781365"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434855"
 ---
 # <a name="imetadatatablesgettableindex-method"></a>IMetaDataTables::GetTableIndex 方法
-获取指定的标记所引用的表的索引。  
+Gets the index for the table referenced by the specified token.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,20 +36,20 @@ HRESULT GetTableIndex (
   
 ## <a name="parameters"></a>参数  
  `token`  
- [in]引用表中的令牌。  
+ [in] The token that references the table.  
   
  `pixTbl`  
- [out]返回所引用的表的索引指向的指针。  
+ [out] A pointer to the returned index for the referenced table.  
   
 ## <a name="remarks"></a>备注  
- 不建议使用此方法，因为它不会返回一致的结果。 有关 GUID 表的信息，请参阅公共语言基础结构 (CLI) 文档，尤其是"第二部分：元数据定义和语义"。 可联机获取该文档；请参阅 MSDN 上的 [ECMA C# 和公共语言基础结构标准](https://go.microsoft.com/fwlink/?LinkID=99212)和 Ecma International 网站上的[标准 ECMA-335 - 公共语言基础结构 (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552)。  
+ We do not recommend the use of this method, because it does not return consistent results. For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics". 可联机获取该文档；请参阅 MSDN 上的 [ECMA C# 和公共语言基础结构标准](https://go.microsoft.com/fwlink/?LinkID=99212)和 Ecma International 网站上的[标准 ECMA-335 - 公共语言基础结构 (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552)。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

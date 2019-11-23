@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 426f4e4f-e60d-4ad1-b546-a10e3c55c283
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5bd07411acd074bf5a25148110dbdf28a004551a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: acbd49de7362d9c05a609a2d870af100637e10ab
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777256"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427902"
 ---
 # <a name="isymunmanagedwriteropennamespace-method"></a>ISymUnmanagedWriter::OpenNamespace 方法
-打开一个新的命名空间。 定义一个命名空间的方法或变量之前调用此方法。 可以嵌套命名空间。  
+打开一个新的命名空间。 Call this method before defining methods or variables that occupy a namespace. Namespaces can be nested.  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,13 +34,13 @@ HRESULT OpenNamespace(
   
 ## <a name="parameters"></a>参数  
  `name`  
- [in]一个指向新的命名空间的名称。  
+ [in] A pointer to the name of the new namespace.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

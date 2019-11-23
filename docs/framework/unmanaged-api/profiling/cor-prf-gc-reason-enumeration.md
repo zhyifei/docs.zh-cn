@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 72822b95-a7fb-485e-9d55-1cb016d9a458
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4f5a596608719889e6440e5cd42dafb82abaa074
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f10ec279e67b86448298745a488f5b3e833e8c39
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753721"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447370"
 ---
-# <a name="corprfgcreason-enumeration"></a>COR_PRF_GC_REASON 枚举
+# <a name="cor_prf_gc_reason-enumeration"></a>COR_PRF_GC_REASON 枚举
 指示当前发生垃圾回收的原因。  
   
 ## <a name="syntax"></a>语法  
@@ -35,17 +33,17 @@ typedef enum {
 } COR_PRF_GC_REASON;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`COR_PRF_GC_INDUCED`|通过已引发垃圾回收<xref:System.GC.Collect%2A>方法。|  
-|`COR_PRF_GC_OTHER`|原因是未指定。|  
+|`COR_PRF_GC_INDUCED`|The garbage collection was induced by a <xref:System.GC.Collect%2A> method.|  
+|`COR_PRF_GC_OTHER`|The reason is unspecified.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

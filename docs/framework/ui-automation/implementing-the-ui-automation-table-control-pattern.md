@@ -6,16 +6,16 @@ helpviewer_keywords:
 - control patterns, Table
 - TableControl pattern
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
-ms.openlocfilehash: 1fec3671f017ae6c6864537805e6c793b5f9046b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8e929f181255f6738261533fa3261187ebe3c6ff
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458141"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447091"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>实现 UI 自动化 Table 控件模式
 > [!NOTE]
-> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本主题介绍实现 <xref:System.Windows.Automation.Provider.ITableProvider>的准则和约定，包括有关属性、方法和事件的信息。 本概述的结尾列出了指向其他参考资料的链接。  
   
@@ -32,14 +32,14 @@ ms.locfileid: "73458141"
 - 列和行标头可能包含主标头以及任何支持的标头。  
   
 > [!NOTE]
-> 在 Microsoft Excel 电子表格中，此概念在用户定义了 "First name" 列的情况下变得明显。 此列现在有两个标头 — 用户定义的“名字”标头和应用程序分配的该列的字母数字名称。  
+> This concept becomes evident in a Microsoft Excel spreadsheet where a user has defined a "First name" column. 此列现在有两个标头 — 用户定义的“名字”标头和应用程序分配的该列的字母数字名称。  
   
-- 有关相关网格功能，请参阅[实现 UI 自动化网格控件模式](implementing-the-ui-automation-grid-control-pattern.md)。  
+- See [Implementing the UI Automation Grid Control Pattern](implementing-the-ui-automation-grid-control-pattern.md) for related grid functionality.  
   
- ![具有复杂标头项的表。](./media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
+ ![Table with complex header items.](./media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
 具有复杂列标头的表示例  
   
- ![具有不明确的 RowOrColumnMajor 属性的表。](./media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
+ ![Table with ambiguous RowOrColumnMajor property.](./media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
 具有不明确的 RowOrColumnMajor 属性的表示例。  
   
 <a name="Required_Members_for_ITableProvider"></a>   

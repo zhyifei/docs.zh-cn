@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 02c789fd-16fc-48c6-9619-56e87e2a37ca
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a1c950e9a6e53e04cc0f2e52a140612562b32ff1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7e270dbfc63c03e77cb4b0694296e48c2035b8a6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70776980"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445690"
 ---
 # <a name="importfileex2-method"></a>ImportFileEx2 方法
-导入程序集和未绑定模块。 此方法类似于[ImportFile 方法](importfile-method.md)，但即使磁盘上没有要导入的文件也能正常工作。  
+Imports assemblies and unbound modules. This method is like [ImportFile Method](importfile-method.md), but works even if the file being imported does not exist on disk.  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,34 +41,34 @@ HRESULT ImportFileEx2(
   
 ## <a name="parameters"></a>参数  
  `pszFilename`  
- 要导入的文件的名称。  
+ Name of file to be imported.  
   
  `pszTargetName`  
- 目标文件的可选名称。  
+ Optional name of target file.  
   
  `pAssemblyScopeIn`  
- 可选的导入范围[IMetaDataAssemblyImport 接口](../metadata/imetadataassemblyimport-interface.md)接口。  
+ Optional import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface.  
   
  `fSmartImport`  
- 如果为 TRUE，则使用 ImportTypes，否则必须手动执行导入。  
+ If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
   
  `dwOpenFlags`  
- 要传递给[OpenScope 方法](../metadata/imetadatadispenser-openscope-method.md)的标志。  
+ Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
- 接收程序集或文件的唯一 ID。  
+ Receives unique ID for the assembly or file.  
   
  `ppAssemblyScope`  
- 接收程序集导入范围[IMetaDataAssemblyImport 接口](../metadata/imetadataassemblyimport-interface.md)接口。 如果文件不是程序集，则可以为 NULL。  
+ Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Can be NULL if the file is not an assembly.  
   
  `pdwCountOfScopes`  
- 接收导入的文件和/或范围的数量。  
+ Receives the number of files and/or scopes imported.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>要求  
- 需要 alink。  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>请参阅
 

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: d0d65060-6f90-42a2-95cf-6ffb04352996
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 58fa2a6d34f1f3627378c1355a1a292b665899ee
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9dbbdcc9d0fb9f0a8d2a64edfa4a0ad92570933c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756414"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450005"
 ---
 # <a name="imetadataimportenumsignatures-method"></a>IMetaDataImport::EnumSignatures 方法
 枚举当前范围内表示独立签名的 Signature 标记。  
@@ -40,33 +38,33 @@ HRESULT EnumSignatures (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in、 out]一个指向枚举器。 对于首次调用此方法，这必须为 NULL。  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `rSignatures`  
- [out]用于存储签名令牌的数组。  
+ [out] The array used to store the Signature tokens.  
   
  `cMax`  
  [in] `rSignatures` 数组的最大大小。  
   
  `pcSignatures`  
- [out]签名令牌中返回的数目`rSignatures`。  
+ [out] The number of Signature tokens returned in `rSignatures`.  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumSignatures` 已成功返回。|  
-|`S_FALSE`|没有要枚举的标记。 在这种情况下，`pcSignatures`为零。|  
+|`S_OK`|`EnumSignatures` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcSignatures` is zero.|  
   
 ## <a name="remarks"></a>备注  
- 签名令牌创建的[imetadataemit:: Gettokenfromsig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md)方法。  
+ The Signature tokens are created by the [IMetaDataEmit::GetTokenFromSig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) method.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

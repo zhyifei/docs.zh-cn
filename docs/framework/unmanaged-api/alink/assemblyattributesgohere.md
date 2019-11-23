@@ -1,5 +1,5 @@
 ---
-title: AssemblyAttributesGoHere 类 (System.Runtime.CompilerServices)
+title: AssemblyAttributesGoHere Class (System.Runtime.CompilerServices)
 ms.date: 03/30/2017
 api_name:
 - System.Runtime.CompilerServices.AssemblyAttributesGoHere
@@ -15,16 +15,14 @@ helpviewer_keywords:
 ms.assetid: 7b26fcb6-94f4-4f09-933e-b33efe451f4f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 571c2f6723e827a1b385f77724c33703ae970ae3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99d7d2bbbb0586db34b5cb7a785b0448a20ab5bc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775617"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446637"
 ---
-# <a name="assemblyattributesgohere-class"></a>AssemblyAttributesGoHere 类
+# <a name="assemblyattributesgohere-class"></a>AssemblyAttributesGoHere Class
 
 由 ALink 用作占位符以存储有关自定义特性的信息。
 
@@ -40,7 +38,7 @@ internal sealed class AssemblyAttributesGoHere
 
 对此类型的引用指示与安全性无关且用途单一的自定义属性。
 
-这些类型标记为"内部".NET Framework 中，并且位于<xref:System.Runtime.CompilerServices>命名空间。
+These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
 
 ## <a name="requirements"></a>要求
 

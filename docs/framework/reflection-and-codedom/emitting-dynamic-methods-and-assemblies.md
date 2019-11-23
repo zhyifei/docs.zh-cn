@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata, emit interfaces
 - reflection emit, overview
 - assemblies [.NET Framework], emitting dynamic assemblies
-ms.openlocfilehash: 4578b708b10e93a7f5def5b9dc040eeb646bdc8f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 578851bed188921324e3c25e533b3466068dee3d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130236"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446780"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>发出动态方法和程序集
 
@@ -34,7 +34,7 @@ ms.locfileid: "73130236"
   
 除了 <xref:System.Reflection.Emit> 命名空间中的托管类型，还有非托管元数据接口，非托管元数据接口在[元数据接口](../unmanaged-api/metadata/metadata-interfaces.md)参考文档中介绍。 托管的反射发出提供比非托管元数据接口更强的语义错误检查和更高级别的元数据抽象。  
   
-元数据和 MSIL 的另一个有用资源是《公共语言基础结构 (CLI)》文档，尤其是“第二部分：元数据定义和语义”和“第三部分: CIL 指令集”。 该文档可在 [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) 和 [Ecma 网站](https://go.microsoft.com/fwlink/?LinkId=116487)上联机获取。  
+元数据和 MSIL 的另一个有用资源是《公共语言基础结构 (CLI)》文档，尤其是“第二部分：元数据定义和语义”和“第三部分: CIL 指令集”。 The documentation is available online at the [Ecma Web site](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
 ## <a name="in-this-section"></a>本节内容
   

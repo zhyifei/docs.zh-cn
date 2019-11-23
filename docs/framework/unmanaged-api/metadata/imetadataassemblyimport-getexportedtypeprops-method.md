@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 25ca7623-5a55-4f09-b44a-36b03d142278
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f8dd1daf3528bbc642033e254a809c18c3662ff1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 82302124828a2dab73b445128d7d847e112edd36
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779183"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448217"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps 方法
-获取具有指定的元数据签名的导出类型的属性集。  
+Gets the set of properties of the exported type with the specified metadata signature.  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,32 +41,32 @@ HRESULT GetExportedTypeProps (
   
 ## <a name="parameters"></a>参数  
  `mdct`  
- [in]`mdExportedType`表示导出的类型的元数据标记。  
+ [in] An `mdExportedType` metadata token that represents the exported type.  
   
  `szName`  
- [out]导出的类型的名称。  
+ [out] The name of the exported type.  
   
  `cchName`  
- [in]大小，以宽字符为单位的`szName`。  
+ [in] The size, in wide characters, of `szName`.  
   
  `pchName`  
- [out]中实际返回宽字符数 `szName`  
+ [out] The number of wide characters actually returned in `szName`  
   
  `ptkImplementation`  
- [out]`mdFile`， `mdAssemblyRef`，或`mdExportedType`包含或允许访问的导出的类型属性的元数据标记。  
+ [out] An `mdFile`, `mdAssemblyRef`, or `mdExportedType` metadata token that contains or allows access to the properties of the exported type.  
   
  `ptkTypeDef`  
- [out]一个指向`mdTypeDef`表示该文件中的类型的令牌。  
+ [out] A pointer to an `mdTypeDef` token that represents a type in the file.  
   
  `pdwExportedTypeFlags`  
- [out]指向描述应用于导出的类型的元数据的标志的指针。 标志值可以是一个或多个[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)值。  
+ [out] A pointer to the flags that describe the metadata applied to the exported type. The flags value can be one or more [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) values.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: afdb5ac9-5bf5-4b91-b7cb-f81db23d7da3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 74f0e6e39f99c9e6981066e6a3171bb9508cf1a5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e7a25fce945504cff0d07f499ae4bb79378e9f3a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782141"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449699"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>ICorProfilerInfo3::GetFunctionTailcall3Info 方法
-提供了正在向探查器报告的函数的堆栈帧[FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)函数。 仅在 `FunctionTailcall3WithInfo` 回调时可调用此方法。  
+Provides the stack frame of the function that is being reported to the profiler by the [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) function. 仅在 `FunctionTailcall3WithInfo` 回调时可调用此方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,10 +36,10 @@ HRESULT GetFunctionTailcall3Info(
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in]`FunctionID`返回的函数。  
+ [in] The `FunctionID` of the function that is returning.  
   
  `eltInfo`  
- [in] 表示有关给定堆栈帧的信息的不透明的句柄。 探查器应提供相同`eltInfo`，提供给探查器`FunctionTailcall3WithInfo`函数。  
+ [in] 表示有关给定堆栈帧的信息的不透明的句柄。 The profiler should provide the same `eltInfo` that was given to the profiler by the `FunctionTailcall3WithInfo` function.  
   
  `pFrameInfo`  
  [out] 表示有关给定堆栈帧的泛型信息的不透明的句柄。 此句柄仅在探查器调用 `GetFunctionTailcall3Info` 方法的 `FunctionTailcall3WithInfo` 回调时有效。  
@@ -49,9 +47,9 @@ HRESULT GetFunctionTailcall3Info(
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

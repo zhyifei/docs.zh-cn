@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 37fd27af-8062-4904-ace4-51bb78ec600a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ff0660ef2b30e32af540fe7bef5936ab6d0a359f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5b4b0682b2bddff96cb3d720900ed3aa39f06f9d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777627"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431848"
 ---
 # <a name="imetadataemitdefineimporttype-method"></a>IMetaDataEmit::DefineImportType 方法
-创建对当前作用域之外定义，并定义该引用的标记的指定类型的引用。  
+Creates a reference to the specified type that is defined outside the current scope, and defines a token for that reference.  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,35 +41,35 @@ HRESULT DefineImportType (
   
 ## <a name="parameters"></a>参数  
  `pAssemImport`  
- [in][IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)表示从中导入的目标类型的程序集的接口。  
+ [in] An [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface that represents the assembly from which the target type is imported.  
   
  `pbHashValue`  
- [in]一个数组，包含由指定的程序集的哈希`pAssemImport`。  
+ [in] An array that contains the hash for the assembly specified by `pAssemImport`.  
   
  `cbHashValue`  
  [in] `pbHashValue` 数组中的字节数。  
   
  `pImport`  
- [in][IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)接口，表示从其导入目标类型的元数据范围。  
+ [in] An [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interface that represents the metadata scope from which the target type is imported.  
   
  `tdImport`  
- [in]`mdTypeDef`指定目标类型的令牌。  
+ [in] An `mdTypeDef` token that specifies the target type.  
   
  `pAssemEmit`  
- [in][IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)表示目标类型导入的程序集的接口。  
+ [in] An [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) interface that represents the assembly into which the target type is imported.  
   
  `ptr`  
- [out]`mdTypeRef`类型引用的当前作用域中定义的令牌。  
+ [out] The `mdTypeRef` token that is defined in the current scope for the type reference.  
   
 ## <a name="remarks"></a>备注  
- 在调用之前[imetadataemit:: Defineimportmember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md)方法中，可以使用`DefineImportType`方法中的当前作用域，该成员的父类或父接口创建，则为类型引用。  
+ Prior to calling the [IMetaDataEmit::DefineImportMember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md) method, you can use the `DefineImportType` method to create a type reference, in the current scope, for the member's parent class or parent interface.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 54d9a5a5-3877-49c1-a503-ce7c7943bc2a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4729a8d3ac2c6f7ec51a032a07ebfd1c2838cb9a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae9cb089ad6c0b0422063d3db413b97eb6ff1405
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782911"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445799"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a>ICorProfilerCallback::RemotingClientSendingMessage 方法
-通知探查器客户端向服务器发送请求。  
+Notifies the profiler that the client is sending a request to the server.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,23 +35,23 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>参数  
  `pCookie`  
- [in]使用中提供的值相对应的值[icorprofilercallback:: Remotingserverreceivingmessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md)在这些情况下：  
+ [in] A value that corresponds with the value provided in [ICorProfilerCallback::RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) under these conditions:  
   
-- 远程处理 GUID cookie 处于活动状态。  
+- Remoting GUID cookies are active.  
   
-- 通道成功传输消息。  
+- The channel succeeds in transmitting the message.  
   
-- GUID cookie 处于活动状态的服务器端的过程。  
+- GUID cookies are active on the server-side process.  
   
- 这允许轻松配对的远程处理调用以及逻辑调用堆栈的创建。  
+ This allows easy pairing of remoting calls and the creation of a logical call stack.  
   
  `fIsAsync`  
- [in]一个值，则该值`true`的调用是异步的; 否则为如果`false`。  
+ [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

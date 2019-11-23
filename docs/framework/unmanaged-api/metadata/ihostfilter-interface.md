@@ -14,33 +14,31 @@ helpviewer_keywords:
 ms.assetid: e79456b1-045b-4a84-9714-2ea560ff75ea
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c437d1856e1aa9526516c0a1d1ca931d8ed25c80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 90f7899beea204ea53a587200807ccd807cd6c11
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965779"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426136"
 ---
 # <a name="ihostfilter-interface"></a>IHostFilter 接口
-提供一个方法, 用于指示将处理指定的标记。  
+Provides a method to indicate that a specified token will be processed.  
   
 > [!NOTE]
-> `IHostFilter`接口必须由客户端实现。  
+> The `IHostFilter` interface must be implemented by the client.  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[MarkToken 方法](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|指示将处理指定的元数据标记。|  
+|[MarkToken 方法](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Indicates that the specified metadata token will be processed.|  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **Header:** Cor.h  
   
- **类库**用作 Mscoree.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

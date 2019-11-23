@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb8db3b6-d81d-49fc-b74c-dbc908a9eab9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3532ca0a30d83aa8f61bc4397090f3d589b73257
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fda890cee5f513ea8cf7e82e710f5451a860c49f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780930"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443909"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags 枚举
 包含一些值，用于描述应用于程序集编译的元数据。  
@@ -55,33 +53,33 @@ typedef enum CorAssemblyFlags {
 } CorAssemblyFlags;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`afPublicKey`|指示程序集引用包含完整的、 未经哈希的公钥。|  
-|`afPA_None`|指示未指定的处理器体系结构。|  
-|`afPA_MSIL`|指示处理器体系结构为非特定 (PE32)。|  
-|`afPA_x86`|指示处理器体系结构 x86 (PE32)。|  
-|`afPA_IA64`|指示处理器体系结构为 Itanium （PE32 +）。|  
-|`afPA_AMD64`|指示处理器体系结构是 AMD X64 （PE32 +）。|  
-|`afPA_ARM`|指示处理器体系结构是 ARM (PE32)。|  
-|`afPA_NoPlatform`|指示程序集是引用程序集;也就是说，它适用于任何体系结构，但无法在任何体系结构上运行。 因此，该标志是与相同`afPA_Mask`。|  
-|`afPA_Specified`|指示处理器体系结构标志应将传播给`AssemblyRef`记录。|  
-|`afPA_Mask`|一个掩码，用于描述处理器体系结构。|  
-|`afPA_FullMask`|指定包含处理器体系结构说明。|  
-|`afPA_Shift`|指示处理器体系结构标志到和从索引中的 shift 计数。|  
-|`afEnableJITcompileTracking`|指示相应的值从<xref:System.Diagnostics.DebuggableAttribute.DebuggingModes>的<xref:System.Diagnostics.DebuggableAttribute>。|  
-|`afDisableJITcompileOptimizer`|指示相应的值从<xref:System.Diagnostics.DebuggableAttribute.DebuggingModes>的<xref:System.Diagnostics.DebuggableAttribute>。|  
-|`afRetargetable`|指示程序集可以对程序集从不同的发布服务器在运行时重定向。|  
-|`afContentType_Mask`|一个屏蔽，它描述的内容类型。|  
-|`afContentType_Default`|指示默认内容类型。|  
-|`afContentType_WindowsRuntime`|指示 Windows 运行时的内容类型。|  
+|`afPublicKey`|Indicates that the assembly reference holds the full, unhashed public key.|  
+|`afPA_None`|Indicates that the processor architecture is unspecified.|  
+|`afPA_MSIL`|Indicates that the processor architecture is neutral (PE32).|  
+|`afPA_x86`|Indicates that the processor architecture is x86 (PE32).|  
+|`afPA_IA64`|Indicates that the processor architecture is Itanium (PE32+).|  
+|`afPA_AMD64`|Indicates that the processor architecture is AMD X64 (PE32+).|  
+|`afPA_ARM`|Indicates that the processor architecture is ARM (PE32).|  
+|`afPA_NoPlatform`|Indicates that the assembly is a reference assembly; that is, it applies to any architecture but cannot run on any architecture. Thus, the flag is the same as `afPA_Mask`.|  
+|`afPA_Specified`|Indicates that the processor architecture flags should be propagated to the `AssemblyRef` record.|  
+|`afPA_Mask`|A mask that describes the processor architecture.|  
+|`afPA_FullMask`|Specifies that the processor architecture description is included.|  
+|`afPA_Shift`|Indicates a shift count in the processor architecture flags to and from the index.|  
+|`afEnableJITcompileTracking`|Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.|  
+|`afDisableJITcompileOptimizer`|Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.|  
+|`afRetargetable`|Indicates that the assembly can be retargeted at run time to an assembly from a different publisher.|  
+|`afContentType_Mask`|A mask that describes the content type.|  
+|`afContentType_Default`|Indicates the default content type.|  
+|`afContentType_WindowsRuntime`|Indicates the Windows Runtime content type.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

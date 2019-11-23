@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: cf30e27c-1f7e-43a2-ba1e-01e4137301db
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2f236a74da04dfddef852514eccb02215ad2d15a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 643c9d7104c374d9141a604083f3fdcd540156c4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752388"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428385"
 ---
-# <a name="corprfcodeinfo-structure"></a>COR_PRF_CODE_INFO 结构
+# <a name="cor_prf_code_info-structure"></a>COR_PRF_CODE_INFO 结构
 表示存储在内存中的一个本机代码连续块。  
   
 ## <a name="syntax"></a>语法  
@@ -35,17 +33,17 @@ typedef struct _COR_PRF_CODE_INFO {
 } COR_PRF_CODE_INFO;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`startAddress`|代码连续块起始地址。|  
-|`size`|块的大小。|  
+|`startAddress`|The starting address of the contiguous block of code.|  
+|`size`|The size of the block.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **库：** CorGuids.lib  
   

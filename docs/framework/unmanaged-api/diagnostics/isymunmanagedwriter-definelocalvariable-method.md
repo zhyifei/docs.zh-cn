@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fab8a58-3883-490f-8b27-64042c90f104
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a9466df3f6413f86eb8558f0037b96c254b2a2e1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f6a741df3ea57b5e9b4fa8bc5d304bfedd1d6c15
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777339"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428010"
 ---
 # <a name="isymunmanagedwriterdefinelocalvariable-method"></a>ISymUnmanagedWriter::DefineLocalVariable 方法
-在当前词法范围内定义单个变量。 在范围内具有多个家庭的相同名称的变量，此方法可以调用多次。 在此情况下，但是，值`startOffset`和`endOffset`参数不能重叠。  
+在当前词法范围内定义单个变量。 This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope. In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,40 +43,40 @@ HRESULT DefineLocalVariable(
   
 ## <a name="parameters"></a>参数  
  `name`  
- [in]一个指向`WCHAR`，用于定义本地变量的名称。  
+ [in] A pointer to a `WCHAR` that defines the local variable name.  
   
  `attributes`  
- [in]局部变量特性。  
+ [in] The local variable attributes.  
   
  `cSig`  
- [in]一个`ULONG32`指示的大小，以字节为单位，`signature`缓冲区。  
+ [in] A `ULONG32` that indicates the size, in bytes, of the `signature` buffer.  
   
  `signature`  
- [in]局部变量签名。  
+ [in] The local variable signature.  
   
  `addrKind`  
- [in]地址类型。  
+ [in] The address type.  
   
  `addr1`  
- [in]参数规格的第一个地址。  
+ [in] The first address for the parameter specification.  
   
  `addr2`  
- [in]参数规格的第二个地址。  
+ [in] The second address for the parameter specification.  
   
  `addr3`  
- [in]参数规格的第三个地址。  
+ [in] The third address for the parameter specification.  
   
  `startOffset`  
- [in]变量的起始偏移量。 此参数可选。 如果该值为 0，则忽略此参数，并在整个范围内定义的变量。 如果它是一个非零值，该变量在当前作用域的偏移量之内。  
+ [in] The start offset for the variable. 此参数可选。 If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
   
  `endOffset`  
- [in]变量的结束偏移量。 此参数可选。 如果该值为 0，则忽略此参数，并在整个范围内定义的变量。 如果它是一个非零值，该变量在当前作用域的偏移量之内。  
+ [in] The end offset for the variable. 此参数可选。 If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

@@ -2,20 +2,20 @@
 title: <mexTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 01baba8d-d784-4255-9ea2-7afff1482bf0
-ms.openlocfilehash: 91c1d17ef450200c95d7f871e8cbee85ddd260d1
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 8d0ae2a1848eaf28c2e408542b8209cf968de4c1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738903"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430301"
 ---
-# <a name="mextcpbinding"></a>\<mexTcpBinding >
+# <a name="mextcpbinding"></a>\<mexTcpBinding>
 指定用于通过 TCP 进行的 WS-MetadataExchange (WS-MEX) 消息交换的绑定的设置。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-\<system &nbsp; &nbsp;[ **>** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定**](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<mexTcpBinding >**  
+&nbsp;&nbsp;[ **\<system.serviceModel>** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bindings>** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<mexTcpBinding>**  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73738903"
 |特性|描述|  
 |---------------|-----------------|  
 |`closeTimeout`|一个 <xref:System.TimeSpan> 值，指定为完成关闭操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:01:00。|  
-|`name`|一个包含绑定的配置名称的字符串。 因为此值用作绑定的标识，所以它应该是唯一的。 每个绑定都具有 `name` 和 `namespace` 属性，它们共同在服务的元数据中唯一标识每个绑定。 此外，在同一类型的绑定中，此名称是唯一的。 从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。 有关默认配置和无值绑定和行为的详细信息，请参阅[WCF 服务的](../../../wcf/samples/simplified-configuration-for-wcf-services.md)[简化配置](../../../wcf/simplified-configuration.md)和简化配置。|  
+|`name`|一个包含绑定的配置名称的字符串。 因为此值用作绑定的标识，所以它应该是唯一的。 Starting with .NET Framework 4, bindings and behaviors are not required to have a name. For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |`openTimeout`|一个 <xref:System.TimeSpan> 值，指定为完成打开操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:01:00。|  
 |`receiveTimeout`|一个 <xref:System.TimeSpan> 值，指定为完成接收操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:10:00。|  
 |`sendTimeout`|一个 <xref:System.TimeSpan> 值，指定为完成发送操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:01:00。|  
@@ -50,7 +50,7 @@ ms.locfileid: "73738903"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<bindings >](bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
+|[\<bindings>](bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
   
 ## <a name="see-also"></a>请参阅
 
@@ -62,4 +62,4 @@ ms.locfileid: "73738903"
 - [绑定](../../../wcf/bindings.md)
 - [配置系统提供的绑定](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [使用绑定配置服务和客户端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding >](bindings.md)
+- [\<binding>](bindings.md)

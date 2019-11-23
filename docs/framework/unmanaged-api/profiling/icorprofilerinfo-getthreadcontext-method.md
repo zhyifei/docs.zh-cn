@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 79446216-4b8b-484c-8fe3-e87dbf9df2fd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1b8afe10563d61e3ddab93e8d1b57eee4b6765c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc4643f1c90b3ea4d3b561249a4e76ff304737bd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766841"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438758"
 ---
 # <a name="icorprofilerinfogetthreadcontext-method"></a>ICorProfilerInfo::GetThreadContext 方法
-获取当前与指定的线程相关联的上下文标识。  
+Gets the context identity currently associated with the specified thread.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,15 +35,15 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>参数  
  `threadId`  
- [in]线程的 ID。  
+ [in] The ID of the thread.  
   
  `pContextId`  
- [out]指向当前与指定的线程相关联的上下文 ID 的指针。 如果线程有没有当前与它关联的上下文，此函数将返回 CORPROF_E_DATAINCOMPLETE。  
+ [out] A pointer to the context ID currently associated with the specified thread. If the thread has no context currently associated with it, this function will return CORPROF_E_DATAINCOMPLETE.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

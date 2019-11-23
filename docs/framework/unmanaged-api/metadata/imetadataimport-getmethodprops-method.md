@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0667ef7-1d31-4c89-a2d3-d426f023f8d2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 27b2867019085bf5b44f2ee364c07af66144d4b5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4a258ce9121a287929ca5bc39c480f1ca2596e78
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782332"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437458"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a>IMetaDataImport::GetMethodProps 方法
 获取与指定的 MethodDef 标记引用的方法关联的元数据。  
@@ -46,41 +44,41 @@ HRESULT GetMethodProps (
   
 ## <a name="parameters"></a>参数  
  `mb`  
- [in]表示要返回的元数据的方法的 MethodDef 标记。  
+ [in] The MethodDef token that represents the method to return metadata for.  
   
  `pClass`  
- [out]指向表示实现方法的类型的 TypeDef 标记的指针。  
+ [out] A Pointer to a TypeDef token that represents the type that implements the method.  
   
  `szMethod`  
- [out]指向方法的名称的缓冲区的指针。  
+ [out] A Pointer to a buffer that has the method's name.  
   
  `cchMethod`  
- [in]请求的大小`szMethod`。  
+ [in] The requested size of `szMethod`.  
   
  `pchMethod`  
- [out]一个指向宽字符为单位的大小`szMethod`，或发生截断时，实际方法名称中的宽字符数。  
+ [out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.  
   
  `pdwAttr`  
- [out]一个指向与方法关联的任何标志。  
+ [out] A pointer to any flags associated with the method.  
   
  `ppvSigBlob`  
- [out]指向方法的二进制元数据签名的指针。  
+ [out] A pointer to the binary metadata signature of the method.  
   
  `pcbSigBlob`  
- [out]指向以字节为单位的大小的`ppvSigBlob`。  
+ [out] A Pointer to the size in bytes of `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out]指向方法的相对虚拟地址的指针。  
+ [out] A pointer to the relative virtual address of the method.  
   
  `pdwImplFlags`  
- [out]指向方法的任何实现标志的指针。  
+ [out] A pointer to any implementation flags for the method.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

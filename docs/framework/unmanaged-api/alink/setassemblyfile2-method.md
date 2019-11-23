@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: eedb9125-1ef1-4000-abfc-7de86e5a1f17
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aba11ccd61b65d2a779b39db8e0e082cf4d4015b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f710ef9741869a2b4fd8473ed3ecf379cfcc56d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787213"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445576"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 方法
-为新的程序集设置和选项的名称。 生成未绑定的模块时，请勿调用此方法。  
+Sets the name of and options for a new assembly. Do not call this method when you produce unbound modules.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,22 +37,22 @@ HRESULT SetAssemblyFile2(
   
 ## <a name="parameters"></a>参数  
  `pszFilename`  
- 清单文件的名称。  
+ Name of manifest file.  
   
  `pEmitter`  
- 此文件的[IMetaDataEmit2 接口](../metadata/imetadataemit2-interface.md)接口。  
+ [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md) interface for this file.  
   
  `afFlags`  
- [AssemblyFlags 枚举](../metadata/assemblyflags-enumeration.md)表示的选项。  
+ Options represented by [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).  
   
  `pAssemblyID`  
- 接收正在构造的程序集的唯一 ID。  
+ Receives unique ID for the assembly being constructed.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>要求  
- 需要 alink。  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>请参阅
 

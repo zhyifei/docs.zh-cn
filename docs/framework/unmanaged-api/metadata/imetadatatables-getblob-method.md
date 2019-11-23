@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 94667c1c-6d58-4aa7-b74e-530b11e2a276
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 83f8ae068552ba83a016b5484e3ac6641417fa99
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f5a736d80f36afb8d0a643d4a4e36c9abff01995
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781570"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445439"
 ---
 # <a name="imetadatatablesgetblob-method"></a>IMetaDataTables::GetBlob 方法
-获取一个指向二进制大型对象 (BLOB) 中的指定的列索引处。  
+Gets a pointer to the binary large object (BLOB) at the specified column index.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,20 +37,20 @@ HRESULT GetBlob (
   
 ## <a name="parameters"></a>参数  
  `ixBlob`  
- [in]要从其中获取的内存地址`ppData`。  
+ [in] The memory address from which to get `ppData`.  
   
  `pcbData`  
- [out]指向的大小，以字节为单位的`ppData`。  
+ [out] A pointer to the size, in bytes, of `ppData`.  
   
  `ppData`  
- [out]检索到的二进制数据的指针的指针。  
+ [out] A pointer to a pointer to the binary data retrieved.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

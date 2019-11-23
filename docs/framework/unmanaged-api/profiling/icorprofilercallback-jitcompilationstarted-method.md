@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 31782b36-d311-4518-8f45-25f65385af5b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a5ba90ce4523fcc55fca3f84a78fa4cfeb6a93f0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 96ab77a36c0a0bddda0fca342433666dd19082d3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782830"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426193"
 ---
 # <a name="icorprofilercallbackjitcompilationstarted-method"></a>ICorProfilerCallback::JITCompilationStarted 方法
-通知探查器在实时 (JIT) 编译器已开始编译函数。  
+Notifies the profiler that the just-in-time (JIT) compiler has started to compile a function.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,22 +35,22 @@ HRESULT JITCompilationStarted(
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in]从开始编译函数的 ID。  
+ [in] The ID of the function for which the compilation is starting.  
   
  `fIsSafeToBlock`  
- [in]一个值，该值向探查器是否阻止会影响运行时的操作。 值是`true`如果阻塞可能会导致运行时等待调用的线程返回从此回调; 否则为`false`。  
+ [in] A value indicating to the profiler whether blocking will affect the operation of the runtime. The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.  
   
- 尽管值`true`不会造成损害运行时、 但可能会扭曲分析结果。  
+ Although a value of `true` will not harm the runtime, it can skew the profiling results.  
   
 ## <a name="remarks"></a>备注  
- 可以接收多个对`JITCompilationStarted`并[icorprofilercallback:: Jitcompilationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)调用每个函数的方式运行时句柄类构造函数。 例如，运行时开始对方法进行 JIT 编译的但类 B 的类构造函数需要运行。 因此，运行时执行 JIT 编译类 B 的构造函数，并运行它。 构造函数正在运行，但可以对一个，这会导致方法 A 再次进行 JIT 编译方法的调用。 在此方案中，将停止方法 A 首次 JIT 编译。 但是，这两种方法进行 JIT 编译一个尝试与 JIT 编译事件报告。 如果探查器会通过调用替换为方法的 Microsoft 中间语言 (MSIL) 代码[icorprofilerinfo:: Setilfunctionbody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md)方法，它必须同时执行此操作`JITCompilationStarted`事件，但它可能会使用相同的 MSIL 块对于两者。  
+ It is possible to receive more than one pair of `JITCompilationStarted` and [ICorProfilerCallback::JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) calls for each function because of the way the runtime handles class constructors. For example, the runtime starts to JIT-compile method A, but the class constructor for class B needs to be run. Therefore, the runtime JIT-compiles the constructor for class B and runs it. While the constructor is running, it makes a call to method A, which causes method A to be JIT-compiled again. In this scenario, the first JIT compilation of method A is halted. However, both attempts to JIT-compile method A are reported with JIT-compilation events. If the profiler is going to replace Microsoft intermediate language (MSIL) code for method A by calling the [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method, it must do so for both `JITCompilationStarted` events, but it may use the same MSIL block for both.  
   
- 在两个线程同时执行回调的情况下，探查器必须支持 JIT 回调的序列。 例如，调用线程 A `JITCompilationStarted`。 但是，在线程 A 调用前`JITCompilationFinished`，线程 B 调用[icorprofilercallback:: Exceptionsearchfunctionenter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)从线程 A 的函数 id`JITCompilationStarted`回调。 它可能显示的函数 ID 尚未有效期不应因为调用`JITCompilationFinished`有尚未收到事件探查器。 但是，在这种情况下，函数 ID 有效。  
+ Profilers must support the sequence of JIT callbacks in cases where two threads are simultaneously making callbacks. For example, thread A calls `JITCompilationStarted`. However, before thread A calls `JITCompilationFinished`, thread B calls [ICorProfilerCallback::ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) with the function ID from thread A's `JITCompilationStarted` callback. It might appear that the function ID should not yet be valid because a call to `JITCompilationFinished` had not yet been received by the profiler. However, in a case like this one, the function ID is valid.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

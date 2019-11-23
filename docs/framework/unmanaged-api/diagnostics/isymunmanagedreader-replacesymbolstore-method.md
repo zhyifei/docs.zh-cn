@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 43257761-8cb1-4eaf-8fb5-1f3980cb66cd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8721f7c30061fbfd4a761bed090b761762c3c13c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 60c3537a80c39f758f46e6f2f0a5f2bcd27350b5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939023"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445733"
 ---
 # <a name="isymunmanagedreaderreplacesymbolstore-method"></a>ISymUnmanagedReader::ReplaceSymbolStore 方法
-用增量符号存储区替换现有的符号存储区。 此方法类似于[UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)方法, 不同之处在于给定增量充当完全替换而不是更新。  
+用增量符号存储区替换现有的符号存储区。 This method is similar to the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method, except that the given delta acts as a complete replacement rather than an update.  
   
 > [!NOTE]
-> 只需指定`filename`或`pIStream`参数之一, 而不能同时指定两者。 如果`filename`指定了, 则将用该文件中的符号更新符号存储区。 如果`pIStream`指定了, 则将用<xref:System.Runtime.InteropServices.ComTypes.IStream>中的数据更新存储区。  
+> You need specify only one of the `filename` or `pIStream` parameters, not both. If `filename` is specified, the symbol store will be updated with the symbols in that file. If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,16 +38,16 @@ HRESULT ReplaceSymbolStore (
   
 ## <a name="parameters"></a>参数  
  `filename`  
- 中包含符号存储区的文件的名称。  
+ [in] The name of the file containing the symbol store.  
   
  `pIStream`  
- 中文件流, 用作`filename`参数的替代项。  
+ [in] The file stream, used as an alternative to the `filename` parameter.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功, 则返回 S_OK;否则, E_FAIL 或其他一些错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym, CorSym  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

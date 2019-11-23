@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5d798088-7992-48a0-ae55-d2a7ee31913f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 27b2241f7eb0e1ce8b0728a54028f9b4a6112e36
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 104a6c3c42c310513040cb45db7f51ffe729c19d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781253"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427447"
 ---
 # <a name="functionleave3-function"></a>FunctionLeave3 函数
-通知探查器从函数返回控制。  
+Notifies the profiler that control is being returned from a function.  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,27 +32,27 @@ void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);
   
 ## <a name="parameters"></a>参数  
  `functionOrRemappedID`  
- [in]函数从其返回控件的标识符。  
+ [in] The identifier of the function from which control is returned.  
   
 ## <a name="remarks"></a>备注  
- `FunctionLeave3`回调函数通知探查器，如函数正被调用，但不支持返回值检查。 使用[ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)注册此函数的实现。  
+ The `FunctionLeave3` callback function notifies the profiler as functions are being called, but does not support return value inspection. Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.  
   
- `FunctionLeave3`函数是一个回调; 必须实现它。 实现必须使用`__declspec(naked)`存储类特性。  
+ The `FunctionLeave3` function is a callback; you must implement it. The implementation must use the `__declspec(naked)` storage-class attribute.  
   
- 调用此函数之前，执行引擎不会保存任何寄存器。  
+ The execution engine does not save any registers before calling this function.  
   
-- 在进入时，必须保存使用，包括浮点单元 (FPU) 中的所有注册。  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- 退出时，必须通过弹出已推送到由其调用方的所有参数由还原堆栈。  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- 实现`FunctionLeave3`不应阻止，因为它会延迟垃圾回收。 实现不应尝试的垃圾回收，因为堆栈可能不是在垃圾收集友好状态中。 如果尝试在垃圾回收，则运行时将阻止直到`FunctionLeave3`返回。  
+ The implementation of `FunctionLeave3` should not block, because it will delay garbage collection. The implementation should not attempt a garbage collection, because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionLeave3` returns.  
   
- `FunctionLeave3`函数不得调入托管代码或以任何方式导致托管的内存分配。  
+ The `FunctionLeave3` function must not call into managed code or cause a managed memory allocation in any way.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **库：** CorGuids.lib  
   

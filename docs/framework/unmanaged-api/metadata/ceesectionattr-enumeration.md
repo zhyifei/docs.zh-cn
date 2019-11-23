@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0db51881-b869-4677-a715-1726a9216489
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 61fc71c2ab0a9107f5e9fbb354fe0f8c2fb0dace
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 97b28c961f43388679615ac0d5b19c4c69df1e3d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776334"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444251"
 ---
 # <a name="ceesectionattr-enumeration"></a>CeeSectionAttr 枚举
-提供用于指定以供节的特性值[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)接口。  
+Provides values that specify attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,21 +37,21 @@ typedef enum  {
 } CeeSectionAttr;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`sdNone`|部分没有任何属性。|  
-|`sdReadOnly`|部分包含初始化的数据，可以仅读取，不会更新。|  
-|`sdReadWrite`|部分包含初始化的数据可读取或更新。|  
-|`sdExecute`|部分包含可执行代码，允许读取和执行。|  
+|`sdNone`|Section has no attributes.|  
+|`sdReadOnly`|Section contains initialized data that can be only read, not updated.|  
+|`sdReadWrite`|Section contains initialized data that can be read or updated.|  
+|`sdExecute`|Section contains executable code that is allowed to be read and executed.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

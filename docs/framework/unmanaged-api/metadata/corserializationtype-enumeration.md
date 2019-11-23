@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6b1fcd11-c7fb-4be2-8910-abc862d4caf4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b9b7138d403bc84ab377301b82d697fd137416c6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 064374285216e9fb054b299937087f1ca7c351a4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781595"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432873"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType 枚举
-指定公共语言运行时如何序列化对象。  
+Specifies how an object is serialized by the common language runtime.  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,35 +53,35 @@ typedef enum CorSerializationType {
 } CorSerializationType;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`SERIALIZATION_TYPE_UNDEFINED`|序列化的对象是未定义。|  
-|`SERIALIZATION_TYPE_BOOLEAN`|将对象序列化为布尔值类型|  
-|`SERIALIZATION_TYPE_CHAR`|将对象序列化为字符类型。|  
-|`SERIALIZATION_TYPE_I1`|对象序列化为 1 字节有符号整数。|  
-|`SERIALIZATION_TYPE_U1`|对象序列化为 1 字节无符号整数。|  
-|`SERIALIZATION_TYPE_I2`|对象序列化为 2 字节有符号整数。|  
-|`SERIALIZATION_TYPE_U2`|对象序列化为 2 字节无符号整数。|  
-|`SERIALIZATION_TYPE_I4`|对象序列化为 4 字节有符号整数。|  
-|`SERIALIZATION_TYPE_U4`|对象序列化为 4 字节无符号整数。|  
-|`SERIALIZATION_TYPE_I8`|对象序列化为 8 字节有符号整数。|  
-|`SERIALIZATION_TYPE_U8`|对象序列化为一个无符号的 8 字节整数。|  
-|`SERIALIZATION_TYPE_R4`|将对象序列化为 4 字节浮点数。|  
-|`SERIALIZATION_TYPE_R8`|将对象序列化为 8 字节浮点数。|  
-|`SERIALIZATION_TYPE_STRING`|将对象序列化为 System.String 类型。|  
-|`SERIALIZATION_TYPE_SZARRAY`|将对象序列化为一维，零的下限的数组。|  
-|`SERIALIZATION_TYPE_TYPE`|将对象序列化为泛型类型。|  
-|`SERIALIZATION_TYPE_TAGGED_OBJECT`|将对象序列化为一个标记对象。|  
-|`SERIALIZATION_TYPE_FIELD`|将对象序列化为一个字段。|  
-|`SERIALIZATION_TYPE_PROPERTY`|将对象序列化为一个属性。|  
-|`SERIALIZATION_TYPE_ENUM`|将对象序列化为一个枚举。|  
+|`SERIALIZATION_TYPE_UNDEFINED`|Serialization of the object is undefined.|  
+|`SERIALIZATION_TYPE_BOOLEAN`|Object is serialized as a Boolean type|  
+|`SERIALIZATION_TYPE_CHAR`|Object is serialized as a character type.|  
+|`SERIALIZATION_TYPE_I1`|Object is serialized as a signed 1-byte integer.|  
+|`SERIALIZATION_TYPE_U1`|Object is serialized as an unsigned 1-byte integer.|  
+|`SERIALIZATION_TYPE_I2`|Object is serialized as a signed 2-byte integer.|  
+|`SERIALIZATION_TYPE_U2`|Object is serialized as an unsigned 2-byte integer.|  
+|`SERIALIZATION_TYPE_I4`|Object is serialized as a signed 4-byte integer.|  
+|`SERIALIZATION_TYPE_U4`|Object is serialized as an unsigned 4-byte integer.|  
+|`SERIALIZATION_TYPE_I8`|Object is serialized as a signed 8-byte integer.|  
+|`SERIALIZATION_TYPE_U8`|Object is serialized as an unsigned 8-byte integer.|  
+|`SERIALIZATION_TYPE_R4`|Object is serialized as a 4-byte floating point.|  
+|`SERIALIZATION_TYPE_R8`|Object is serialized as an 8-byte floating point.|  
+|`SERIALIZATION_TYPE_STRING`|Object is serialized as a System.String type.|  
+|`SERIALIZATION_TYPE_SZARRAY`|Object is serialized as a single-dimensional, zero lower-bound array.|  
+|`SERIALIZATION_TYPE_TYPE`|Object is serialized as a generic type.|  
+|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Object is serialized as a tagged object.|  
+|`SERIALIZATION_TYPE_FIELD`|Object is serialized as a field.|  
+|`SERIALIZATION_TYPE_PROPERTY`|Object is serialized as a property.|  
+|`SERIALIZATION_TYPE_ENUM`|Object is serialized as an enumeration.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

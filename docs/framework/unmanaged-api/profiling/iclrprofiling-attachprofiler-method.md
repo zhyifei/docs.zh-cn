@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: efc097fd9b4da668aafce90ce601a3143ea57dc7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 25c208c98802be540bde7532c53798e6f7b35446
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763168"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445951"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler 方法
 将指定的探查器附加到指定的进程中。  
@@ -53,7 +51,7 @@ HRESULT AttachProfiler(
  [in] 要加载的探查器 DLL 文件的完整路径。 此字符串应包含不超过 260 个字符，包括 null 终止符。 如果 `wszProfilerPath` 为 null 或为空字符串，公共语言运行时 (CLR) 将通过在 `pClsidProfiler` 指向的 CLSID 的注册表中查找探查器的 DLL 文件的位置。  
   
  `pvClientData`  
- [in]指向要传递给探查器数据[ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)方法。 `AttachProfiler` 返回后，触发器进程可重用此内存。 如果 `pvClientData` 为 null，`cbClientData` 必须为 0（零）。  
+ [in] A pointer to data to be passed to the profiler by the [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method. `AttachProfiler` 返回后，触发器进程可重用此内存。 如果 `pvClientData` 为 null，`cbClientData` 必须为 0（零）。  
   
  `cbClientData`  
  [in] `pvClientData` 指向的数据的大小（以字节为单位）。  
@@ -74,7 +72,7 @@ HRESULT AttachProfiler(
 |HRESULT_FROM_WIN32(ERROR_TIMEOUT)|尚未开始加载探查器，超时就已过期。 可重试附加操作。 当目标进程中的终结器运行时间长于超时值时，就会出现超时。|  
 |E_INVALIDARG|一个或多个参数具有无效值。|  
 |E_FAIL|出现其他未指定错误。|  
-|其他错误代码|如果探查器的[ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)方法返回一个 HRESULT，指示失败，`AttachProfiler`返回相同的 HRESULT。 在这种情况下，E_NOTIMPL 将转换为 CORPROF_E_PROFILER_NOT_ATTACHABLE。|  
+|其他错误代码|If the profiler’s [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method returns an HRESULT that indicates failure, `AttachProfiler` returns that same HRESULT. 在这种情况下，E_NOTIMPL 将转换为 CORPROF_E_PROFILER_NOT_ATTACHABLE。|  
   
 ## <a name="remarks"></a>备注  
   
@@ -82,9 +80,9 @@ HRESULT AttachProfiler(
  与 COM 约定一致，`AttachProfiler` 的调用方（例如，由探查器开发人员创作的触发器代码）将负责分配和释放 `pvClientData` 参数指向的数据的内存。 当 CLR 执行 `AttachProfiler` 调用时，会创建 `pvClientData` 指向的内存的副本，并将其传输到目标进程中。 当目标进程内部的 CLR 接收到自己的 `pvClientData` 块副本时，会通过 `InitializeForAttach` 方法将块传递给探查器，然后从目标进程释放其 `pvClientData` 块的副本。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

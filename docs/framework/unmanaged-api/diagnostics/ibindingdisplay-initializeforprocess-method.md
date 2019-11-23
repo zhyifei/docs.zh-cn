@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 59417acb-4e59-46ad-acfe-d827e6ab6078
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c19b49e9e9d4e388706a96ff54d588d5aeff99b3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bb796a12868cc3e44394ab493f7838dc48ab4dc5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775944"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448492"
 ---
 # <a name="ibindingdisplayinitializeforprocess-method"></a>IBindingDisplay::InitializeForProcess 方法
-初始化[IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)对象。  
+Initializes the [IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) object.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,17 +35,17 @@ HRESULT InitializeForProcess (
   
 ## <a name="parameters"></a>参数  
  `pid`  
- [in]进程标识符。  
+ [in] The process identifier.  
   
 ## <a name="remarks"></a>备注  
- 该调试器将调用`InitializeForProcess`在创建时初始化绑定显示的方法。 `InitializeForProcess` 必须在任何其他方法之前在创建时调用`IBindingDisplay`调用。  
+ The debugger calls the `InitializeForProcess` method at creation time to initialize the binding display. `InitializeForProcess` must be called at creation time before any other method on `IBindingDisplay` is called.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** BindingDisplay.h  
+ **Header:** BindingDisplay.h  
   
- **库：** BindingDisplay.idl  
+ **Library:** BindingDisplay.idl  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

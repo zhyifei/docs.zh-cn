@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0adbbd35-5e8d-4fec-8268-dc70a07c5975
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a0f4eb244e02e13e418a55351dbc1eb1f5b5d16d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d45a369def193b9c8d8f9a3aa954ede600a87dd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617744"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434733"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport 接口
 提供从可迁移可执行 (PE) 文件或其他源（如类型库或独立的运行时元数据二进制文件）导入和操作现有元数据的方法。  
@@ -105,13 +103,13 @@ ms.locfileid: "64617744"
 - Get 方法专门用来返回元数据项的单值属性。 当该属性是对另一个项的引用时，将返回该项的标记。 任何指针输入类型都可为 NULL，以指示未请求特定值。 若要获取基本上由集合对象（例如，某个类实现的接口集合）构成的属性，请使用枚举方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3a912787-f139-43ca-a841-8bbda3107ecf
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 76d341aca7c96e5932a1fc155ccaee17ce6585da
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1db4c4ab7e47e223a492e08297ac3cedcb3a27eb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70776999"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445605"
 ---
 # <a name="setassemblyfile-method"></a>SetAssemblyFile 方法
-指定要生成的程序集的名称。 不在生成未绑定的模块时使用。  
+Assigns the name of the assembly to be built. Not for use when producing unbound modules.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,22 +37,22 @@ HRESULT SetAssemblyFile(
   
 ## <a name="parameters"></a>参数  
  `pszFilename`  
- 清单文件的完全限定名称。  
+ Fully qualified name of the manifest file.  
   
  `pEmitter`  
- 指向[IMetaDataEmit 接口](../metadata/imetadataemit-interface.md)接口的指针。  
+ Pointer to [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface.  
   
  `afFlags`  
- [AssemblyFlags 枚举](../metadata/assemblyflags-enumeration.md)中定义的标志。  
+ Flags as defined in [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).  
   
  `pAssemblyID`  
- 指向生成的程序集的 ID 的指针。  
+ Pointer to ID of resulting assembly.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>要求  
- 需要 alink。  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>请参阅
 

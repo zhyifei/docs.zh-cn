@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2576c449-388d-4434-a0e1-9f53991e11b6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c455b5196ceafef924de59e9134b89ed62455520
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5214298c6ad9594548ab45ed583cb5b14ce1f30d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737224"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441761"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout 方法
-完成已由调用之前定义的类的字段的布局[DefineTypeDef 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)。  
+Completes the layout of fields for a class that has been defined by a prior call to [DefineTypeDef Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,32 +38,32 @@ HRESULT SetClassLayout (
   
 ## <a name="parameters"></a>参数  
  `td`  
- [in]`mdTypeDef`标记，用于指定要进行布局的类。  
+ [in] An `mdTypeDef` token that specifies the class to be laid out.  
   
  `dwPackSize`  
- [in]封装大小：1、 2、 4、 8 或 16 个字节。 封装大小为相邻的域之间的字节数。  
+ [in] The packing size: 1, 2, 4, 8 or 16 bytes. The packing size is the number of bytes between adjacent fields.  
   
  `rFieldOffsets`  
- [in]一个数组[COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)结构，其中每个指定的类的字段和字段的偏移量的类中。 终止与数组`mdTokenNil`。  
+ [in] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) structures, each of which specifies a field of the class and the field's offset within the class. Terminate the array with `mdTokenNil`.  
   
  `ulClassSize`  
- [in]以字节为单位，类的大小。  
+ [in] The size, in bytes, of the class.  
   
 ## <a name="remarks"></a>备注  
- 通过调用最初定义该类[imetadataemit:: Definetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)方法，并指定三种布局的类的字段之一： 自动、 连续的或显式。 通常情况下，将使用自动布局，并让运行时选择最佳的方式进行布局的字段。  
+ The class is initially defined by calling the [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) method, and specifying one of three layouts for the fields of the class: automatic, sequential, or explicit. Normally, you would use automatic layout and let the runtime choose the best way to lay out the fields.  
   
- 但是，您可能希望根据非托管代码使用的排列方式布局的字段。 在这种情况下，选择连续或显式布局，并调用`SetClassLayout`完成字段的布局：  
+ However, you might want the fields laid out according to the arrangement that unmanaged code uses. In this case, choose either sequential or explicit layout and call `SetClassLayout` to complete the layout of the fields:  
   
-- 顺序布局：指定封装大小。 字段对齐根据自然大小或包装大小，在较小的偏移量字段的任何结果。 设置`rFieldOffsets`和`ulClassSize`为零。  
+- Sequential layout: Specify the packing size. A field is aligned according to either its natural size or the packing size, whichever results in the smaller offset of the field. Set `rFieldOffsets` and `ulClassSize` to zero.  
   
-- 显式布局：指定每个字段的偏移量，或者指定类的大小和封装大小。  
+- Explicit layout: Either specify the offset of each field or specify the class size and the packing size.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

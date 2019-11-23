@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5fee4a0-b132-4e5e-8730-e586ce314b9a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e3868b07ff01f2d1fec79537dd478a2d005f490f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6d7884e896d6a0463639e7ef08b47dced10a27f4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778769"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431385"
 ---
 # <a name="imetadataimport2getgenericparamconstraintprops-method"></a>IMetaDataImport2::GetGenericParamConstraintProps 方法
-获取与指定的约束标记所表示的泛型参数约束相关联的元数据。  
+Gets the metadata associated with the generic parameter constraint represented by the specified constraint token.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,20 +37,20 @@ HRESULT GetGenericParamConstraintProps (
   
 ## <a name="parameters"></a>参数  
  `gpc`  
- [in]与泛型参数约束为其返回的元数据标记。  
+ [in] The token to the generic parameter constraint for which to return the metadata.  
   
  `ptGenericParam`  
- [out]指向表示约束的泛型参数的标记的指针。  
+ [out] A pointer to the token that represents the generic parameter that is constrained.  
   
  `ptkConstraintType`  
- [out]指向表示约束 TypeDef、 TypeRef 或 TypeSpec 标记的`ptGenericParam`。  
+ [out] A pointer to a TypeDef, TypeRef, or TypeSpec token that represents a constraint on `ptGenericParam`.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

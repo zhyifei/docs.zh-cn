@@ -14,27 +14,25 @@ helpviewer_keywords:
 ms.assetid: 9868cfb3-dd51-4812-bca9-171d7829afe9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7f61f8c77799bbc7a993683421eeee4fd7277d4a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d116d2ce986dd163ee7abbdd14002da690893ea
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697701"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445489"
 ---
 # <a name="inotifyconnection2-interface"></a>INotifyConnection2 接口
-声明用于注册和注销连接通知源的方法。  
+Declares methods for registering and unregistering a connection notification source.  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[RegisterNotifySource 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|安装指定的通知的源对象。|  
-|[UnregisterNotifySource 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|从连接中移除指定的通知源对象。|  
+|[RegisterNotifySource 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|Installs a specified notification source object.|  
+|[UnregisterNotifySource 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|Removes a specified notification source object from the connection.|  
   
 ## <a name="requirements"></a>要求  
- **标头：** ProtocolNotify2.idl  
+ **Header:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>请参阅
 

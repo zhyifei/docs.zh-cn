@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 727819d5-1dab-4ebb-ac25-950b4111dc72
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7f27955467436d562c6a9acc9d7f666427e4c85b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4347a4da3e58a20c98e217de3a71c448e244eb29
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770712"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440116"
 ---
 # <a name="imetadataimportcloseenum-method"></a>IMetaDataImport::CloseEnum 方法
-关闭由指定句柄的枚举器。  
+Closes the enumerator that is identified by the specified handle.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,17 +35,17 @@ void CloseEnum (
   
 ## <a name="parameters"></a>参数  
  `hEnum`  
- [in]枚举器来关闭句柄。  
+ [in] The handle for the enumerator to close.  
   
 ## <a name="remarks"></a>备注  
- 通过指定的句柄`hEnum`获取从以前`Enum`*名称*调用 (例如， [imetadataimport:: Enumtypedefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md))。  
+ The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

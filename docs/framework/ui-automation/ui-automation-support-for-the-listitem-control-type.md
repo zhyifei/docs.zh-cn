@@ -6,16 +6,16 @@ helpviewer_keywords:
 - List Item control type
 - UI Automation, List Item control type
 ms.assetid: 34f533bf-fc14-4e78-8fee-fb7107345fab
-ms.openlocfilehash: c2b1406519c80368cd00a888c541ec9abfce7faa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4b7c3b6bbdc38227871ea020047bc21987b18ee9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123078"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446716"
 ---
 # <a name="ui-automation-support-for-the-listitem-control-type"></a>UI 自动化对 ListItem 控件类型的支持
 > [!NOTE]
-> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本主题介绍对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件类型的 <xref:System.Windows.Automation.ControlType.ListItem> 支持。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控件类型是一组条件，控件必须满足这些条件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 属性。 这些条件包括针对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性值和控件模式的特定准则。  
   
@@ -29,13 +29,13 @@ ms.locfileid: "73123078"
   
 |控件视图|内容视图|  
 |------------------|------------------|  
-|ListItem<br /><br /> -Image （0个或多个）<br />-Text （0个或多个）<br />-Edit （0个或多个）|ListItem|  
+|ListItem<br /><br /> -   Image (0 or more)<br />-   Text (0 or more)<br />-   Edit (0 or more)|ListItem|  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的内容视图中的列表项控件的子级必须始终为“0”。 如果该控件的结构为其他项包含在列表项之下，则它应遵循对 TreeItem 控件类型控件类型的[UI 自动化支持](ui-automation-support-for-the-treeitem-control-type.md)的要求。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的内容视图中的列表项控件的子级必须始终为“0”。 If the structure of the control is such that other items are contained underneath the list item then it should follow the requirements for the [UI Automation Support for the TreeItem Control Type](ui-automation-support-for-the-treeitem-control-type.md) control type.  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必需的 UI 自动化属性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与列表项控件密切相关。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅[客户端的 UI 自动化属性](ui-automation-properties-for-clients.md)。  
+ 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与列表项控件密切相关。 For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|“值”|注意|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -65,7 +65,7 @@ ms.locfileid: "73123078"
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|视情况而定|如果可以操作项以显示或隐藏信息，则必须实现此控件模式。|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|视情况而定|如果可以编辑项，则必须实现此控件模式。 更改列表项控件将导致对 <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>和 <xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>的值进行更改。|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|视情况而定|如果在列表容器内支持项之间的空间导航，并且容器按行和列排列，则必须实现 Grid Item 控件模式。|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|视情况而定|如果项具有可以对其执行的命令（独立于所选内容），则必须实现此模式。 这通常是与双击列表项控件相关联的操作。 示例将从 Microsoft Windows 资源管理器中启动文档，或者在 Microsoft Windows Media Player 中播放音乐文件。|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|视情况而定|如果项具有可以对其执行的命令（独立于所选内容），则必须实现此模式。 这通常是与双击列表项控件相关联的操作。 Examples would be launching a document from Microsoft Windows Explorer, or playing a music file in Microsoft Windows Media Player.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  

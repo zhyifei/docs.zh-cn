@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cf064bac-9a9f-41c5-9e1d-108ff7af3afe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ba35cd678d88389854ca2e866020ea3a9364c923
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6966d0ad2fefd8401b19d8e8dcf7776799a066b2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777661"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432564"
 ---
 # <a name="imetadataemitdefineevent-method"></a>IMetaDataEmit::DefineEvent 方法
-使用指定的元数据签名中，创建一个事件的定义并获取该事件定义的标记。  
+Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,38 +43,38 @@ HRESULT DefineEvent (
   
 ## <a name="parameters"></a>参数  
  `td`  
- [in]目标类或接口的标记。 这可以是`mdTypeDef`或`mdTypeDefNil`令牌。  
+ [in] The token for the target class or interface. This is either a `mdTypeDef` or `mdTypeDefNil` token.  
   
  `szEvent`  
- [in]事件的名称。  
+ [in] The name of the event.  
   
  `dwEventFlags`  
- [in]事件的标志。  
+ [in] Event flags.  
   
  `tkEventType`  
- [in]事件类标记。 这是`mdTypeDef`、 一个`mdTypeRef`，或`mdTokenNil`令牌。  
+ [in] The token for the event class. This is a `mdTypeDef`, a `mdTypeRef`, or a `mdTokenNil` token.  
   
  `mdAddOn`  
- [in]用来订阅事件或为 null 的方法。  
+ [in] The method used to subscribe to the event, or null.  
   
  `mdRemoveOn`  
- [in]用于取消订阅事件，则为 null 的方法。  
+ [in] The method used to unsubscribe to the event, or null.  
   
  `mdFire`  
- [in]（由派生类） 用于引发事件的方法。  
+ [in] The method used (by a derived class) to raise the event.  
   
  `rmdOtherMethods[]`  
- [in]有关其他方法与事件关联的标记的数组。 数组结尾`mdMethodDefNil`令牌。  
+ [in] An array of tokens for other methods associated with the event. The array is terminated with a `mdMethodDefNil` token.  
   
  `pmdEvent`  
- [out]分配到的事件的元数据标记。  
+ [out] The metadata token assigned to the event.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

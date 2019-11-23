@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: aa38efd4-de7e-4482-a5d3-adc152093460
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 955a2b63c457342d6aa31755ce42e989cc791e5c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1cb2bf3aa021ed738f7fad93fc4b86d97baf1e5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776849"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449391"
 ---
 # <a name="isymunmanagedbindergetreaderfromstream-method"></a>ISymUnmanagedBinder::GetReaderFromStream 方法
-给定元数据接口并包含符号存储区的流，返回的正确[ISymUnmanagedReader](isymunmanagedreader-interface.md)从给定的符号存储区的结构，它将读取调试符号。  
+Given a metadata interface and a stream that contains the symbol store, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure that will read the debugging symbols from the given symbol store.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,19 +36,19 @@ HRESULT GetReaderFromStream(
   
 ## <a name="parameters"></a>参数  
  `importer`  
- [in]指向元数据导入接口的指针。  
+ [in] A pointer to the metadata import interface.  
   
  `pstream`  
- [in]指向包含符号存储区的流的指针。  
+ [in] A pointer to the stream that contains the symbol store.  
   
  `pRetVal`  
- [out]一个指针，它设置为返回[ISymUnmanagedReader](isymunmanagedreader-interface.md)接口。  
+ [out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

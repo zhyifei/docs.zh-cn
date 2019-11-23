@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9b4bf2f-1098-43d6-9619-a99b4bda1940
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8ac12d5b6bc2911e3bd879285a9a12f65c426f0d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fd362beb9f8fd7a1f2076eb6490a96c0358520e4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745853"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432146"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map 方法
-映射使用元数据签名的程序集之间的关系。  
+Maps a relationship between the assemblies using metadata signatures.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,20 +36,20 @@ HRESULT Map (
   
 ## <a name="parameters"></a>参数  
  `tkImp`  
- [in]表示导入的代码对象的元数据标记。  
+ [in] The metadata token that represents the imported code object.  
   
  `tkEmit`  
- [in]表示发出的代码对象的元数据标记。  
+ [in] The metadata token that represents the emitted code object.  
   
 ## <a name="remarks"></a>备注  
- 标记重新映射发生在合并期间时, 原始令牌的作用域导入 （源） 元数据范围内，新的令牌的范围限定在发出 （目标） 的元数据范围内。  
+ When the token re-map occurs during a merge, the original token is scoped in the imported (source) metadata scope and the new token is scoped in the emitted (target) metadata scope.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

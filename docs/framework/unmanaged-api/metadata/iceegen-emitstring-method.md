@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: ad2710a7-edb8-4493-8619-3fce235e3334
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3adc29f73a3ab4a43a399b024a6c0187f02b5851
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8433ff6e0ec550d6b0558bfb9c7698c49e98278c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750617"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436381"
 ---
 # <a name="iceegenemitstring-method"></a>ICeeGen::EmitString 方法
-将指定的字符串发出到基本代码。  
+Emits the specified string into the code base.  
   
- 此方法已过时，不应使用。  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,17 +38,17 @@ HRESULT EmitString (
   
 ## <a name="parameters"></a>参数  
  `lpString`  
- [in]要发出的字符串。  
+ [in] The string to emit.  
   
  `RVA`  
- [out]发出的字符串的相对虚拟地址。  
+ [out] The relative virtual address of the emitted string.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

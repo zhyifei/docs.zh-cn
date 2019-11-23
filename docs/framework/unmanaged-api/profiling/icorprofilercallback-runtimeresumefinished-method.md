@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 76de0494-dc49-426b-887d-bee98806a982
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 883e226042225b63097acf731b13abd69cc757ba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 81c26214762fba1cac43e42adc1ee9909759972f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750415"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430310"
 ---
 # <a name="icorprofilercallbackruntimeresumefinished-method"></a>ICorProfilerCallback::RuntimeResumeFinished 方法
-通知探查器运行时已恢复运行时的所有线程，并已返回到正常操作。  
+Notifies the profiler that the runtime has resumed all runtime threads and has returned to normal operation.  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,12 +32,12 @@ HRESULT RuntimeResumeFinished();
 ```  
   
 ## <a name="remarks"></a>备注  
- `RuntimeResumeFinished`回叫不能保证在相同的线程上发生[icorprofilercallback:: Runtimesuspendstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md)回调。 但是，可以保证在相同的线程上发生[icorprofilercallback:: Runtimeresumestarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md)回调。  
+ The `RuntimeResumeFinished` callback is not guaranteed to occur on the same thread as the [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) callback. However, it is guaranteed to occur on the same thread as the [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) callback.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

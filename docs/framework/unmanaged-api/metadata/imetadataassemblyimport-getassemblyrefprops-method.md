@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c6b7fb4-cbca-4479-b650-ab9a99732ea0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aa633d554652050af51065e11221f898b34d5c63
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4149db74adfa26df221eed5c590766a023bb105e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772668"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448222"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps 方法
-获取具有指定的元数据签名的程序集引用的属性集。  
+Gets the set of properties for the assembly reference with the specified metadata signature.  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,44 +44,44 @@ HRESULT GetAssemblyRefProps (
   
 ## <a name="parameters"></a>参数  
  `mdar`  
- [in]`mdAssemblyRef`表示要为其获取属性的程序集引用的元数据标记。  
+ [in] The `mdAssemblyRef` metadata token that represents the assembly reference for which to get the properties.  
   
  `ppbPublicKeyOrToken`  
- [out]公钥或元数据标记的指针。  
+ [out] A pointer to the public key or the metadata token.  
   
  `pcbPublicKeyOrToken`  
- [out]返回公钥或标记中的字节数。  
+ [out] The number of bytes in the returned public key or token.  
   
  `szName`  
- [out]程序集的简单名称。  
+ [out] The simple name of the assembly.  
   
  `cchName`  
- [in]大小，以宽字符为单位的`szName`。  
+ [in] The size, in wide chars, of `szName`.  
   
  `pchName`  
- [out]指向的宽字符中实际返回数的`szName`。  
+ [out] A pointer to the number of wide chars actually returned in `szName`.  
   
  `pMetaData`  
- [out]指向包含程序集元数据的 ASSEMBLYMETADATA 结构的指针。  
+ [out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.  
   
  `ppbHashValue`  
- [out]指向哈希值的指针。 这是使用 sha-1 算法，哈希`PublicKey`除非 arfFullOriginator 标记所引用的程序集的属性[AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md)枚举设置。  
+ [out] A pointer to the hash value. This is the hash, using the SHA-1 algorithm, of the `PublicKey` property of the assembly being referenced, unless the arfFullOriginator flag of the [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) enumeration is set.  
   
  `pcbHashValue`  
- [out]中返回的哈希值的宽字符数。  
+ [out] The number of wide chars in the returned hash value.  
   
  `pdwAssemblyRefFlags`  
- [out]指向描述应用于程序集的元数据的标志的指针。 标志值是一个或多个组合[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)值。  
+ [out] A pointer to flags that describe the metadata applied to an assembly. The flags value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.  
   
 ## <a name="return-value"></a>返回值  
- 此方法返回时如果它成功，则为 S_OK否则，它返回一个在 Winerror.h 标头文件中定义的错误代码。  
+ This method returns S_OK if it succeeds; otherwise, it returns one of the error codes defined in the Winerror.h header file.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

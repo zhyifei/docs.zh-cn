@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 42145e8d-000f-4d0b-ae43-c08201190fa2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 71a2c7a61d573c1e17d0e8fefcd34d60e05ed3c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b240be3e5b0127de42cea43dd8e89a2cc656b28e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780474"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449510"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>IMetaDataImport::EnumFieldsWithName 方法
 枚举具有指定名称的指定类型的 FieldDef 标记。  
@@ -42,39 +40,39 @@ HRESULT EnumFieldsWithName (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in、 out]一个指向枚举器。  
+ [in, out] A pointer to the enumerator.  
   
  `cl`  
- [in]要枚举其字段的类型的标记。  
+ [in] The token of the type whose fields are to be enumerated.  
   
  `szName`  
- [in]枚举的作用域限制字段名称。  
+ [in] The field name that limits the scope of the enumeration.  
   
  `rFields`  
- [out]用于存储 FieldDef 标记的数组。  
+ [out] Array used to store the FieldDef tokens.  
   
  `cMax`  
  [in] `rFields` 数组的最大大小。  
   
  `pcTokens`  
- [out]FieldDef 标记中返回的实际数目`rFields`。  
+ [out] The actual number of FieldDef tokens returned in `rFields`.  
   
 ## <a name="remarks"></a>备注  
- 与不同[imetadataimport:: Enumfields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md)，`EnumFieldsWithName`丢弃不具有指定的名称的所有字段令牌。  
+ Unlike [IMetaDataImport::EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` discards all field tokens that do not have the specified name.  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFieldsWithName` 已成功返回。|  
-|`S_FALSE`|没有要枚举的字段。 在这种情况下，`pcTokens`为零。|  
+|`S_OK`|`EnumFieldsWithName` returned successfully.|  
+|`S_FALSE`|There are no fields to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5fa68a67-ced6-41c6-a2c0-467060fd0692
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 495ed887126f0b569acc1309609a0c132d0766eb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a62f402fbfae6188ab0423ea7a55a4dfc6cb4112
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763309"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427397"
 ---
 # <a name="functionleave3withinfo-function"></a>FunctionLeave3WithInfo 函数
-通知探查器一个函数，从正在返回控制和提供句柄，可传递给[ICorProfilerInfo3::GetFunctionLeave3Info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md)检索堆栈帧和返回值。  
+Notifies the profiler that control is being returned from a function, and provides a handle that can be passed to the [ICorProfilerInfo3::GetFunctionLeave3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) to retrieve the stack frame and the return value.  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,30 +34,30 @@ void __stdcall FunctionLeave3WithInfo(
   
 ## <a name="parameters"></a>参数  
  `functionIDOrClientID`  
- [in]函数从其返回控件的标识符。  
+ [in] The identifier of the function from which control is returned.  
   
  `eltInfo`  
- [in] 表示有关给定堆栈帧的信息的不透明的句柄。 此句柄无效，仅在传递到回调过程。  
+ [in] 表示有关给定堆栈帧的信息的不透明的句柄。 This handle is valid only during the callback to which it is passed.  
   
 ## <a name="remarks"></a>备注  
- `FunctionLeave3WithInfo`回调方法通知探查器，如函数调用，并允许探查器以使用[ICorProfilerInfo3::GetFunctionLeave3Info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md)检查返回值。 若要访问返回值信息`COR_PRF_ENABLE_FUNCTION_RETVAL`标志必须设置。 可以使用探查器[icorprofilerinfo:: Seteventmask 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)设置的事件标志，然后使用[ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)注册应用此函数的实现。  
+ The `FunctionLeave3WithInfo` callback method notifies the profiler as functions are called, and allows the profiler to use the [ICorProfilerInfo3::GetFunctionLeave3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) to inspect the return value. To access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag has to be set. The profiler can use the [ICorProfilerInfo::SetEventMask method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) to set the event flags, and then use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) to register your implementation of this function.  
   
- `FunctionLeave3WithInfo`函数是一个回调; 必须实现它。 实现必须使用`__declspec(naked)`存储类特性。  
+ The `FunctionLeave3WithInfo` function is a callback; you must implement it. The implementation must use the `__declspec(naked)` storage-class attribute.  
   
- 调用此函数之前，执行引擎不会保存任何寄存器。  
+ The execution engine does not save any registers before calling this function.  
   
-- 在进入时，必须保存使用，包括浮点单元 (FPU) 中的所有注册。  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- 退出时，必须通过弹出已推送到由其调用方的所有参数由还原堆栈。  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- 实现`FunctionLeave3WithInfo`不应阻止，因为它会延迟垃圾回收。 实现不应尝试的垃圾回收，因为堆栈可能不是在垃圾收集友好状态中。 如果尝试在垃圾回收，则运行时将阻止直到`FunctionLeave3WithInfo`返回。  
+ The implementation of `FunctionLeave3WithInfo` should not block, because it will delay garbage collection. The implementation should not attempt a garbage collection, because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionLeave3WithInfo` returns.  
   
- `FunctionLeave3WithInfo`函数不得调入托管代码或以任何方式导致托管的内存分配。  
+ The `FunctionLeave3WithInfo` function must not call into managed code or cause a managed memory allocation in any way.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **库：** CorGuids.lib  
   

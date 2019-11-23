@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9e0f3b6-e106-4820-bada-5bfba34ce360
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f03a2dfa60f2fbdce317d96a9e5b23c6f017dc3d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da9a13a3dea34f6681f47e95c5b352a710d7458b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777740"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431217"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>IMetaDataDispenserEx::GetCORSystemDirectory 方法
-获取包含当前的公共语言运行时 (CLR) 的目录。 进程外调试器支持此方法仅供使用。 如果从另一个组件调用，它将返回 E_NOTIMPL。  
+Gets the directory that holds the current common language runtime (CLR). This method is supported only for use by out-of-process debuggers. If called from another component, it will return E_NOTIMPL.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,20 +37,20 @@ HRESULT GetCORSystemDirectory (
   
 ## <a name="parameters"></a>参数  
  `szBuffer`  
- [out]要接收的目录名称的缓冲区。  
+ [out] The buffer to receive the directory name.  
   
  `cchBuffer`  
- [in]大小，以字节为单位的`szBuffer`。  
+ [in] The size, in bytes, of `szBuffer`.  
   
  `pchBuffer`  
- [out]中实际返回的字节数`szBuffer`。  
+ [out] The number of bytes actually returned in `szBuffer`.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

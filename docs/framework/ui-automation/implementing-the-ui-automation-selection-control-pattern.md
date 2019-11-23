@@ -6,16 +6,16 @@ helpviewer_keywords:
 - UI Automation, Selection control pattern
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
-ms.openlocfilehash: 39baadbad4bf5aff1cc2cd7877489f43581e0fa0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 754af531a20805c53785a37695dce97bb7967a53
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458158"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447127"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>实现 UI 自动化 Selection 控件模式
 > [!NOTE]
-> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本主题介绍了实现 <xref:System.Windows.Automation.Provider.ISelectionProvider>的准则和约定，包括有关事件和属性的信息。 本主题的结尾列出了指向其他参考资料的链接。  
   
@@ -29,12 +29,12 @@ ms.locfileid: "73458158"
   
 - 具有最小、最大和连续范围的控件（如“卷” 滑块控件）应实现 <xref:System.Windows.Automation.Provider.IRangeValueProvider> 而不是 <xref:System.Windows.Automation.Provider.ISelectionProvider>。  
   
-- 用于管理实现 <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>的子控件的单选控件，如 "**显示属性**" 对话框中的 "**屏幕分辨率**" 滑块或 Microsoft Word 中的 "**颜色选取器**" 选择控件（如下所示））应实现 <xref:System.Windows.Automation.Provider.ISelectionProvider>;它们的子项应同时实现 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> 和 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>。  
+- Single-selection controls that manage child controls that implement <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, such as the **Screen Resolution** slider in the **Display Properties** dialog box or the **Color Picker** selection control from Microsoft Word (illustrated below), should implement <xref:System.Windows.Automation.Provider.ISelectionProvider>; their children should implement both <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> and <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
   
- ![突出显示黄色的颜色选取器。](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
+ ![Color picker with yellow highlighted.](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 颜色样本字符串映射的示例  
   
-- 菜单不支持 <xref:System.Windows.Automation.SelectionPattern>。 如果要使用同时包含图形和文本的菜单项（例如 Microsoft Outlook 的 "**视图**" 菜单中的 "**预览窗格**" 项）并需要传达状态，则应实现 <xref:System.Windows.Automation.Provider.IToggleProvider>。  
+- 菜单不支持 <xref:System.Windows.Automation.SelectionPattern>。 If you are working with menu items that include both graphics and text (such as the **Preview Pane** items in the **View** menu in Microsoft Outlook) and need to convey state, you should implement <xref:System.Windows.Automation.Provider.IToggleProvider>.  
   
 <a name="Required_Members_for_ISelectionProvider"></a>   
 ## <a name="required-members-for-iselectionprovider"></a>ISelectionProvider 必需的成员  

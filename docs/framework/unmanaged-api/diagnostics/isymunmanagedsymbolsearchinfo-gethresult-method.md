@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6999dc3d-65d7-4bf6-bb0a-6efc0fc72588
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b32865e0ac9d8a4a049db5d7ed6179879342c10a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 21f6cf18ee7d883e1792b597e08724946f53eda9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778104"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446184"
 ---
 # <a name="isymunmanagedsymbolsearchinfogethresult-method"></a>ISymUnmanagedSymbolSearchInfo::GetHRESULT 方法
-获取 HRESULT。  
+Gets the HRESULT.  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,13 +34,13 @@ HRESULT GetHRESULT(
   
 ## <a name="parameters"></a>参数  
  `phr`  
- [out]指向 HRESULT 的指针。  
+ [out] A pointer to the HRESULT.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

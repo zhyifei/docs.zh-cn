@@ -6,14 +6,12 @@ helpviewer_keywords:
 - metadata interfaces [.NET Framework]
 - interfaces (.NET Framework metadata]
 ms.assetid: f5cdac93-a28c-48ef-8a19-5773376e9e7c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8a704d531b1c49ffe653009e0e90f33b7a126e91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4672cb813cec4a127f7888a2273eb26c3f34c3d9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049812"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431584"
 ---
 # <a name="metadata-interfaces"></a>元数据接口
 本节描述非托管接口，这些接口提供对由 .NET Framework 类型、方法、字段等公开的元数据的访问。  
@@ -38,7 +36,7 @@ ms.locfileid: "62049812"
  提供将类型库映射到其元数据签名并进行相互转换的方法。  
   
  [IMetaDataDispenser 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)  
- `IMetaDataDispenser` 已过时。 请改用 `IMetaDataDispenserEx`。  
+ `IMetaDataDispenser` 已过时。 请改用 `IMetaDataDispenserEx` 。  
   
  [IMetaDataDispenserEx 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
  提供映射用于创建或修改元数据的内存区域的方法。  

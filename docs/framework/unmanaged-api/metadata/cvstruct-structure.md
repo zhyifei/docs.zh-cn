@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9e4e497-d5fb-464b-991c-3bdd824664fd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b3e35cea4601c8e51eb3021dc9f598ddb881afe0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 19ee3097dfe80ba9dcbdaf316db0fd165b50abc6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750717"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436425"
 ---
 # <a name="cvstruct-structure"></a>CVStruct 结构
 包含在安装模块或复合图像时所使用的信息。  
@@ -37,21 +35,21 @@ typedef struct {
 } CVStruct;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|主要|主要版本的内部版本号。|  
-|次要|次要版本生成号。|  
-|Sub|二次内部版本号。|  
-|Build|生成号。|  
+|主要|Major version build number.|  
+|次要|Minor version build number.|  
+|Sub|Sub-build number.|  
+|生成|Build number.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

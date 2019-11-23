@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 93c9a369-225f-4eff-9b78-3fbee4902cf1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b4f34340c18fddc46695fe64946c3afd90ed7454
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 74807a678b5c0c2738f33fe552f6462af93ca1f9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772297"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436463"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType 枚举
-指示元数据标记的类型。  
+Indicates the type of a metadata token.  
   
 ## <a name="syntax"></a>语法  
   
@@ -61,44 +59,44 @@ typedef enum CorTokenType {
 } CorTokenType;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`mdtModule`|`mdModule`令牌。|  
-|`mdtTypeRef`|`mdTypeRef`令牌。|  
-|`mdtTypeDef`|`mdTypeDef`令牌。|  
-|`mdtFieldDef`|`mdFieldDef`令牌。|  
-|`mdtMethodDef`|`mdMethodDef`令牌。|  
-|`mdtParamDef`|`mdParamDef`令牌。|  
-|`mdtInterfaceImpl`|`mdInterfaceImpl`令牌。|  
-|`mdtMemberRef`|`mdMemberRef`令牌。|  
-|`mdtCustomAttribute`|`mdCustomAttribute`令牌。|  
-|`mdtPermission`|`mdPermission`令牌。|  
-|`mdtSignature`|`mdSignature`令牌。|  
-|`mdtEvent`|`mdEvent`令牌。|  
-|`mdtProperty`|`mdProperty`令牌。|  
-|`mdtModuleRef`|`mdModuleRef`令牌。|  
-|`mdtTypeSpec`|`mdTypeSpec`令牌。|  
-|`mdtAssembly`|`mdAssembly`令牌。|  
-|`mdtAssemblyRef`|`mdAssemblyRef`令牌。|  
-|`mdtFile`|`mdFile`令牌。|  
-|`mdtExportedType`|`mdExportedType`令牌。|  
-|`mdtManifestResource`|`mdManifestResource`令牌。|  
-|`mdtGenericParam`|`mdGenericParam`令牌。|  
-|`mdtMethodSpec`|`mdMethodSpec`令牌。|  
-|`mdtGenericParamConstraint`|`mdGenericParamConstraint`令牌。|  
-|`mdtString`|`mdString`令牌。|  
-|`mdtName`|`mdName`令牌。|  
+|`mdtModule`|An `mdModule` token.|  
+|`mdtTypeRef`|An `mdTypeRef` token.|  
+|`mdtTypeDef`|An `mdTypeDef` token.|  
+|`mdtFieldDef`|An `mdFieldDef` token.|  
+|`mdtMethodDef`|An `mdMethodDef` token.|  
+|`mdtParamDef`|An `mdParamDef` token.|  
+|`mdtInterfaceImpl`|An `mdInterfaceImpl` token.|  
+|`mdtMemberRef`|An `mdMemberRef` token.|  
+|`mdtCustomAttribute`|An `mdCustomAttribute` token.|  
+|`mdtPermission`|An `mdPermission` token.|  
+|`mdtSignature`|An `mdSignature` token.|  
+|`mdtEvent`|An `mdEvent` token.|  
+|`mdtProperty`|An `mdProperty` token.|  
+|`mdtModuleRef`|An `mdModuleRef` token.|  
+|`mdtTypeSpec`|An `mdTypeSpec` token.|  
+|`mdtAssembly`|An `mdAssembly` token.|  
+|`mdtAssemblyRef`|An `mdAssemblyRef` token.|  
+|`mdtFile`|An `mdFile` token.|  
+|`mdtExportedType`|An `mdExportedType` token.|  
+|`mdtManifestResource`|An `mdManifestResource` token.|  
+|`mdtGenericParam`|An `mdGenericParam` token.|  
+|`mdtMethodSpec`|An `mdMethodSpec` token.|  
+|`mdtGenericParamConstraint`|An `mdGenericParamConstraint` token.|  
+|`mdtString`|An `mdString` token.|  
+|`mdtName`|An `mdName` token.|  
 |`mdtBaseType`|未使用。|  
   
 ## <a name="remarks"></a>备注  
- 每个值是相应的元数据令牌中的最高位字节的值相等。  
+ Each value is equal to the value of the top byte in the corresponding metadata token.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 43189651-a535-4803-a1d1-f1c427ace2ca
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 63ad2532240c9f18a00421281fae0d111dbfaec5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 71e2bc1d60e050d817429db5bc6926b3b16c637c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963794"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431402"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout 方法
-获取有关字符串对象布局的信息。 此方法在 .NET Framework 4 中已弃用, 并且被[ICorProfilerInfo3:: GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md)方法取代。  
+获取有关字符串对象布局的信息。 This method is deprecated in the .NET Framework 4, and is superseded by the [ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) method.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,34 +36,34 @@ HRESULT GetStringLayout(
   
 ## <a name="parameters"></a>参数  
  `pBufferLengthOffset`  
- 弄一个指针, 它指向存储字符串长度的相对`ObjectID`于指针的位置偏移量。 长度存储为`DWORD`。  
+ [out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string. The length is stored as a `DWORD`.  
   
 > [!NOTE]
-> 此参数返回字符串本身的长度, 而不是缓冲区的长度。 缓冲区的长度不再可用。  
+> This parameter returns the length of the string itself, not the length of the buffer. The length of the buffer is no longer available.  
   
  `PStringLengthOffset`  
- 弄指向位置偏移量的指针, 该位置相对`ObjectID`于指针存储字符串本身的长度。 长度存储为`DWORD`。  
+ [out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself. The length is stored as a `DWORD`.  
   
  `pBufferOffset`  
- 弄一个指针, 它指向存储宽字符字符串的缓冲区相对`ObjectID`于指针的偏移量。  
+ [out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, that stores the string of wide characters.  
   
 ## <a name="remarks"></a>备注  
- 方法获取在其中存储下列位置的相对`ObjectID`于指针的偏移量: `GetStringLayout`  
+ The `GetStringLayout` method gets the offsets, relative to the `ObjectID` pointer, of the locations in which the following are stored:  
   
-- 字符串缓冲区的长度。  
+- The length of the string's buffer.  
   
-- 字符串本身的长度。  
+- The length of the string itself.  
   
-- 包含宽字符实际字符串的缓冲区。  
+- The buffer that contains the actual string of wide characters.  
   
- 字符串可以以 null 结尾。  
+ Strings may be null-terminated.  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Corprof.idl, Corprof.idl  
+ **头文件：** CorProf.idl、CorProf.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 973dbcc5-bce8-43a7-9a66-d9a1db7cc5b7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3cc4dccde3248a997cb250e9d6f86538f0e8ebdb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3353b453133b14b622a5f62409e7076e111cf824
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774944"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428137"
 ---
 # <a name="icorprofilerobjectenumreset-method"></a>ICorProfilerObjectEnum::Reset 方法
-将此枚举器的光标移动到序列的起始位置。  
+Moves this enumerator's cursor to the starting position of the sequence.  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,9 +32,9 @@ HRESULT Reset ();
 ```  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

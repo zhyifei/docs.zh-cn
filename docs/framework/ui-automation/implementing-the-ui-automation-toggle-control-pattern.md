@@ -6,16 +6,16 @@ helpviewer_keywords:
 - control patterns, Toggle
 - UI Automation, Toggle control pattern
 ms.assetid: 3cfe875f-b0c0-413d-9703-5f14e6a1a30e
-ms.openlocfilehash: a9b03fbffc4e922cb3d00738e8df00fc0393b799
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c25f2d3b73e90adb3299ff8c4ff7c8a77fc5fc5e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043138"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447071"
 ---
 # <a name="implementing-the-ui-automation-toggle-control-pattern"></a>实现 UI 自动化 Toggle 控件模式
 > [!NOTE]
-> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本主题介绍实现 <xref:System.Windows.Automation.Provider.IToggleProvider>的准则和约定，包括有关方法和属性的信息。 本主题的结尾列出了指向其他参考资料的链接。  
   
@@ -37,15 +37,15 @@ ms.locfileid: "71043138"
 ## <a name="required-members-for-itoggleprovider"></a>IToggleProvider 必需的成员  
  实现 <xref:System.Windows.Automation.Provider.IToggleProvider>需要以下属性和方法。  
   
-|必需的成员|成员类型|说明|  
+|必需的成员|成员类型|注意|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|方法|None|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|属性|无|  
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|Property|None|  
   
  没有与此控件模式关联的事件。  
   
 <a name="Exceptions"></a>   
-## <a name="exceptions"></a>Exceptions  
+## <a name="exceptions"></a>异常  
  没有与此控件模式关联的异常。  
   
 ## <a name="see-also"></a>请参阅

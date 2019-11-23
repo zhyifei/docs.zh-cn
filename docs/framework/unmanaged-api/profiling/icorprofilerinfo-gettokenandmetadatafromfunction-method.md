@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e525aa16-c923-4b16-833b-36f1f0dd70fc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b608b8818890bdb27a956a90c7987cf7c421304d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b3e14230888e9bf846879d5728c2b20883fb8d53
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772268"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438738"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a>ICorProfilerInfo::GetTokenAndMetadataFromFunction 方法
-获取元数据标记和可用于指定的函数对令牌的元数据接口实例。  
+Gets the metadata token and a metadata interface instance that can be used against the token for the specified function.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,21 +37,21 @@ HRESULT GetTokenAndMetaDataFromFunction(
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in]要为其获取元数据标记和元数据接口的函数的 ID。  
+ [in] The ID of the function for which to get the metadata token and metadata interface.  
   
  `riid`  
- [in]要获取的实例元数据接口的引用 ID。  
+ [in] The reference ID of the metadata interface to get the instance of.  
   
  `ppImport`  
- [out]指向可用于指定的函数对令牌的元数据接口实例的地址的指针。  
+ [out] A pointer to the address of the metadata interface instance that can be used against the token for the specified function.  
   
  `pToken`  
- [out]指向指定函数的元数据标记的指针。  
+ [out] A pointer to the metadata token for the specified function.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

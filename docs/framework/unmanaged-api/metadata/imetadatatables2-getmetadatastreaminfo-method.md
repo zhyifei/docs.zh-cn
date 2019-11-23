@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8b280627-cc74-4789-95da-1fefc966de05
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4f559a269b48ceabfbe9c3a0cf3665458a2cf012
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 279e34689169d31ad89772e90155e7f50bdbac08
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769278"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426218"
 ---
 # <a name="imetadatatables2getmetadatastreaminfo-method"></a>IMetaDataTables2::GetMetaDataStreamInfo 方法
-获取名称、 大小和元数据流中指定索引处的内容。  
+Gets the name, size, and contents of the metadata stream at the specified index.  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,23 +38,23 @@ HRESULT GetMetaDataStreamInfo (
   
 ## <a name="parameters"></a>参数  
  `ix`  
- [in]请求的元数据的流的索引。  
+ [in] The index of the requested metadata stream.  
   
  `ppchName`  
- [out]指向流的名称的指针。  
+ [out] A pointer to the name of the stream.  
   
  `ppv`  
- [out]指向元数据的流的指针。  
+ [out] A pointer to the metadata stream.  
   
  `pcb`  
- [out]大小，以字节为单位的`ppv`。  
+ [out] The size, in bytes, of `ppv`.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

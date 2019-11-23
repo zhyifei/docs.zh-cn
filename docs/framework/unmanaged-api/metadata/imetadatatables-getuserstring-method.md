@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 35b8f0d6-9aba-4714-adb2-62020a38fb7e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a4eaf426bc9c933de1d4b774928f2b0a54dfb472
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5936ca837c9ab452e992fcb09aacb476ab37316a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636964"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431433"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>IMetaDataTables::GetUserString 方法
 
-获取在当前作用域中的字符串列中的指定索引处的硬编码的字符串。
+Gets the hard-coded string at the specified index in the string column in the current scope.
 
 ## <a name="syntax"></a>语法
 
@@ -41,23 +39,23 @@ HRESULT GetUserString (
 ## <a name="parameters"></a>参数
 
 `ixUserString`\
-[in]将从其检索硬编码字符串的索引值。
+[in] The index value from which the hard-coded string will be retrieved.
 
 `pcbData`\
-[out]指针的大小`ppData`。
+[out] A pointer to the size of `ppData`.
 
 `ppData`\
-[out]为指向返回的字符串的指针。
+[out] A pointer to a pointer to the returned string.
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
 
-**标头：** Cor.h
+**Header:** Cor.h
 
-**库：** 用作 MsCorEE.dll 中的资源
+**Library:** Used as a resource in MsCorEE.dll
 
-**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>请参阅
 

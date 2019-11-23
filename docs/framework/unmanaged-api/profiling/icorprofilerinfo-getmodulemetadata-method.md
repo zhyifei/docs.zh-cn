@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7a439d92-348a-44dd-b60f-cad7cba56379
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2e63cf698e41e70084c9b71bdf58d7ac60723d53
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c7bf8e3ebedb17a4536b604909434c3e004fc828
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782793"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439828"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a>ICorProfilerInfo::GetModuleMetaData 方法
-获取将映射到指定的模块的元数据接口实例。  
+Gets a metadata interface instance that maps to the specified module.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,26 +37,26 @@ HRESULT GetModuleMetaData(
   
 ## <a name="parameters"></a>参数  
  `moduleId`  
- [in]接口实例将映射到该模块的 ID。  
+ [in] The ID of the module to which the interface instance will be mapped.  
   
  `dwOpenFlags`  
- [in]值为[CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)枚举，用于指定打开清单文件的模式。 仅`ofRead`，`ofWrite`和`ofNoTransform`位均有效。  
+ [in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration that specifies the mode for opening manifest files. Only the `ofRead`, `ofWrite` and `ofNoTransform` bits are valid.  
   
  `riid`  
- [in]引用 ID (GUID) 将检索其实例的元数据接口。 请参阅[元数据接口](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)有关接口的列表。  
+ [in] The reference ID (GUID) of the metadata interface whose instance will be retrieved. See [Metadata Interfaces](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) for a list of the interfaces.  
   
  `ppOut`  
- [out]指向元数据接口实例的地址的指针。  
+ [out] A pointer to the address of the metadata interface instance.  
   
 ## <a name="remarks"></a>备注  
- 可能会要求提供要在读/写模式下打开的元数据，但这将导致该程序的元数据执行速度变慢，因为对更改就像从编译器，不能优化元数据。  
+ You may ask for the metadata to be opened in read/write mode, but this will result in slower metadata execution of the program, because changes made to the metadata cannot be optimized as they were from the compiler.  
   
- 一些模块 （如资源模块） 有任何元数据。 在这些情况下，`GetModuleMetaData`将返回 S_FALSE 和中的 null 的 HRESULT 值 *`ppOut`。  
+ Some modules (such as resource modules) have no metadata. In those cases, `GetModuleMetaData` will return an HRESULT value of S_FALSE, and a null in *`ppOut`.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

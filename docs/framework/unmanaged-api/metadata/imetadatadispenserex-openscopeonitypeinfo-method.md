@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3480bbdb-c442-44a0-b7c6-333354503c52
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 60390fecad15dbb2c453453fa8c35556b5db6b54
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8deefe026e32a56d853e173e6a8fa3be942ccd9c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777713"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431128"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo 方法
-未实现此方法。 如果调用，则返回 E_NOTIMPL。  
+未实现此方法。 If called, it returns E_NOTIMPL.  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,23 +38,23 @@ HRESULT OpenScopeOnITypeInfo (
   
 ## <a name="parameters"></a>参数  
  `pITI`  
- [in]指向[ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)接口，用于提供在其上打开作用域的类型信息。  
+ [in] Pointer to an [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interface that provides the type information on which to open the scope.  
   
  `dwOpenFlags`  
- [in]打开模式的标志。  
+ [in] The open mode flags.  
   
  `riid`  
- [in]所需的接口。  
+ [in] The desired interface.  
   
  `ppIUnk`  
- [out]指针到指向返回的接口。  
+ [out] Pointer to a pointer to the returned interface.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

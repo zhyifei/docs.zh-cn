@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 03bc49bf-a89b-4fb6-a88d-97482e061195
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c3a6892dbed172c0be3b036014d393657dbc8593
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8dadf9ec8f896b03e4918b21f5153c1b747010fd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777524"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446663"
 ---
 # <a name="addfile2-method"></a>AddFile2 方法
-将文件添加到程序集。 还可用于创建未绑定的模块。  
+Adds files to the assembly. Can also be used to create unbound modules.  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,25 +39,25 @@ HRESULT AddFile2(
   
 ## <a name="parameters"></a>参数  
  `AssemblyID`  
- 向其中添加文件的程序集的 ID。  
+ ID for the assembly to which the file is added.  
   
  `pszFilename`  
- 要添加的文件的名称。  
+ Name of the file to be added.  
   
  `dwFlags`  
- Com `FileDef` + 标志`ffContainsNoMetaData` ，例如`ffWriteable`和。 `dwFlags`传递给[DefineFile 方法](../metadata/imetadataassemblyemit-definefile-method.md)。  
+ COM+ `FileDef` flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
- [IMetaDataEmit2 接口](../metadata/imetadataemit2-interface.md)接口的接口。  
+ Interface to [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md) interface.  
   
  `pFileToken`  
- 接收要添加的文件的 ID。  
+ Receives ID for the file being added.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>要求  
- 需要 alink。  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>请参阅
 

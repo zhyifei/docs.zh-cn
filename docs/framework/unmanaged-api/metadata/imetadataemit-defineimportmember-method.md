@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7dd94c6-335b-46ff-9dfe-505056db5673
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 341972629e18213536919fe53bfae94613b4d6e9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 75711b3d87699ff5db21a04351ff0acaccabb5aa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777643"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431859"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember 方法
-创建对指定成员的类型或模块的当前作用域之外定义，并定义该引用的令牌的引用。  
+Creates a reference to the specified member of a type or module that is defined outside the current scope, and defines a token for that reference.  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,46 +42,46 @@ HRESULT DefineImportMember (
   
 ## <a name="parameters"></a>参数  
  `pAssemImport`  
- [in][IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)表示从中导入的目标成员的程序集的接口。  
+ [in] An [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface that represents the assembly from which the target member is imported.  
   
  `pbHashValue`  
- [in]一个数组，包含由指定的程序集的哈希`pAssemImport`。  
+ [in] An array that contains the hash for the assembly specified by `pAssemImport`.  
   
  `cbHashValue`  
  [in] `pbHashValue` 数组中的字节数。  
   
  `pImport`  
- [in][IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)表示从中导入的目标成员的元数据范围的接口。  
+ [in] An [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interface that represents the metadata scope from which the target member is imported.  
   
  `mbMember`  
- [in]指定目标成员的元数据标记。 标记可以是`mdMethodDef`（适用于成员方法）， `mdProperty` （适用于成员属性），或`mdFieldDef`（适用于成员字段） 令牌。  
+ [in] The metadata token that specifies the target member. The token can be an `mdMethodDef` (for a member method), `mdProperty` (for a member property), or `mdFieldDef` (for a member field) token.  
   
  `pAssemEmit`  
- [in][IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)表示目标成员导入的程序集的接口。  
+ [in] An [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) interface that represents the assembly into which the target member is imported.  
   
  `tkParent`  
- [in]`mdTypeRef`或`mdModuleRef`令牌类型或模块，分别，拥有的目标成员。  
+ [in] The `mdTypeRef` or `mdModuleRef` token for the type or module, respectively, that owns the target member.  
   
  `pmr`  
- [out]`mdMemberRef`在成员引用的当前作用域中定义的令牌。  
+ [out] The `mdMemberRef` token that is defined in the current scope for the member reference.  
   
 ## <a name="remarks"></a>备注  
- `DefineImportMember`方法查找由指定的成员`mbMember`，即定义另一个作用域中指定的`pImport`，并检索其属性。 使用此信息来调用[imetadataemit:: Definememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md)要创建成员引用的当前作用域中的方法。  
+ The `DefineImportMember` method looks up the member, specified by `mbMember`, that is defined in another scope, specified by `pImport`, and retrieves its properties. It uses this information to call the [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) method in the current scope to create the member reference.  
   
- 通常情况下，使用之前`DefineImportMember`方法，您必须创建，在当前作用域、 类型引用或目标成员的父类、 接口或模块的模块参考。 然后传入此引用的元数据标记`tkParent`参数。 不需要创建对目标成员的父级的引用，如果将在解决更高版本的编译器或链接器。 总结：  
+ Generally, before you use the `DefineImportMember` method, you must create, in the current scope, a type reference or module reference for the target member's parent class, interface, or module. The metadata token for this reference is then passed in the `tkParent` argument. You do not need to create a reference to the target member's parent if it will be resolved later by the compiler or linker. 总结：  
   
-- 如果目标成员是字段或方法，可以使用两种[imetadataemit:: Definetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md)或[imetadataemit:: Defineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md)方法为创建的类型引用，在当前范围内，成员的父类或父接口。  
+- If the target member is a field or method, use either the [IMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) or the [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) method to create a type reference, in the current scope, for the member's parent class or parent interface.  
   
-- 如果目标成员的全局变量或全局函数 （即，不是成员的类或接口），请使用[imetadataemit:: Definemoduleref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md)方法中成员的父级的当前范围，创建模块引用模块。  
+- If the target member is a global variable or global function (that is, not a member of a class or interface), use the [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) method to create a module reference, in the current scope, for the member's parent module.  
   
-- 如果目标成员的父级将由编译器或链接器的更高版本解析，则传递`mdTokenNil`在`tkParent`。 此应用的唯一情况是全局函数或全局变量从最终将链接到当前模块的.obj 文件导入和合并的元数据。  
+- If the target member's parent will be resolved later by the compiler or linker, then pass `mdTokenNil` in `tkParent`. The only scenario in which this applies is when a global function or global variable is being imported from a .obj file that will ultimately be linked into the current module and the metadata merged.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

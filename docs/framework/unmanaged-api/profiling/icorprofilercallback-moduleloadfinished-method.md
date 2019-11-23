@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 050649e5-ffc0-4458-a0a4-d9ee128a219e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c04b7862363b441ab35d6dd364c4dffaf7464153
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 08fbf49e6944de4934a9fe7a960405ee96a7d8e3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769226"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445937"
 ---
 # <a name="icorprofilercallbackmoduleloadfinished-method"></a>ICorProfilerCallback::ModuleLoadFinished 方法
-通知探查器模块已完成加载。  
+Notifies the profiler that a module has finished loading.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,20 +35,20 @@ HRESULT ModuleLoadFinished(
   
 ## <a name="parameters"></a>参数  
  `moduleId`  
- [in]已完成加载的模块的 ID。  
+ [in] The ID of the module that has finished loading.  
   
  `hrStatus`  
- [in]一个 HRESULT，指示是否已成功加载的模块。  
+ [in] An HRESULT that indicates whether the module was loaded successfully.  
   
 ## <a name="remarks"></a>备注  
- 值`moduleId`不是有效信息请求直到`ModuleLoadFinished`调用方法。  
+ The value of `moduleId` is not valid for an information request until the `ModuleLoadFinished` method is called.  
   
- 加载该模块的某些部分可能会继续后`ModuleLoadFinished`回调。 失败的 HRESULT 在`hrStatus`表明发生了故障。 但是，成功的 HRESULT 在`hrStatus`仅表示已成功加载该模块的第一部分。  
+ Some parts of loading the module might continue after the `ModuleLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the module has succeeded.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

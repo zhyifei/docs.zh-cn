@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 057bae1d702fa091ebc3d3178c9fba35d5dd3d90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 40f24a4ea628ce92a27ab1bfe97fc87a57dfa4f0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777654"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432555"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField 方法
-使用指定的元数据签名中，创建一个字段的定义并获取该字段定义的标记。  
+Creates a definition for a field with the specified metadata signature, and gets a token to that field definition.  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,38 +43,38 @@ HRESULT DefineField (
   
 ## <a name="parameters"></a>参数  
  `td`  
- [in]`mdTypeDef`令牌对封闭类或接口。  
+ [in] The `mdTypeDef` token for the enclosing class or interface.  
   
  `szName`  
- [in]Unicode 中的字段名称。  
+ [in] The field name in Unicode.  
   
  `dwFieldFlags`  
- [in]字段特性。 这是一个位掩码的`CorFieldAttr`值。  
+ [in] The field attributes. This is a bitmask of `CorFieldAttr` values.  
   
  `pvSigBlob`  
- [in]作为 BLOB 字段签名。  
+ [in] The field signature as a BLOB.  
   
  `cbSigBlob`  
- [in]中的字节计数`pvSigBlob`。  
+ [in] The count of bytes in `pvSigBlob`.  
   
  `dwCPlusTypeFlag`  
- [in]`ELEMENT_TYPE_` *\** 的常量值。 这是`CorElementType`值。 如果不定义该字段的常数值，使用`ELEMENT_TYPE_END`。  
+ [in] The `ELEMENT_TYPE_` *\** for the constant value. This is a `CorElementType` value. If not defining a constant value for the field, use `ELEMENT_TYPE_END`.  
   
  `pValue`  
- [in]字段的常量值。  
+ [in] The constant value for the field.  
   
  `cchValue`  
- [in] (Unicode) 字符中的大小`pValue`。  
+ [in] The size in (Unicode) characters of `pValue`.  
   
  `pmd`  
- [out]`mdFieldDef`分配标记。  
+ [out] The `mdFieldDef` token assigned.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

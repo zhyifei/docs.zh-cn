@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 53441f3a-68d2-477c-906e-37c55dfcfb4d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: afa2d35a193a11360b52bcbdc1d9e5dae16d1c90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 66186d25e8fee0d6b25c0a2069d46ff9a104c625
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782127"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450033"
 ---
 # <a name="imetadataimportenummodulerefs-method"></a>IMetaDataImport::EnumModuleRefs 方法
 枚举表示导入的模块的 ModuleRef 标记。  
@@ -40,30 +38,30 @@ HRESULT EnumModuleRefs (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in、 out]一个指向枚举器。 对于首次调用此方法，这必须为 NULL。  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `rModuleRefs`  
- [out]用于存储的 ModuleRef 标记的数组。  
+ [out] The array used to store the ModuleRef tokens.  
   
  `cMax`  
  [in] `rModuleRefs` 数组的最大大小。  
   
  `pcModuleRefs`  
- [out]在中返回的 ModuleRef 标记数`rModuleRefs`。  
+ [out] The number of ModuleRef tokens returned in `rModuleRefs`.  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumModuleRefs` 已成功返回。|  
-|`S_FALSE`|没有要枚举的标记。 在这种情况下，`pcModuleRefs`为零。|  
+|`S_OK`|`EnumModuleRefs` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcModuleRefs` is zero.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

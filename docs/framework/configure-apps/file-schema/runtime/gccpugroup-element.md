@@ -5,20 +5,20 @@ helpviewer_keywords:
 - GCCpuGroup element
 - <GCCpuGroup> element
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
-ms.openlocfilehash: 352890519c1a227d664d877c3123866e5e4e1657
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ae9c96c9d49cf3f6be94da3f77b91423cab12e0b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73116835"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430479"
 ---
-# <a name="gccpugroup-element"></a>\<GCCpuGroup > 元素
+# <a name="gccpugroup-element"></a>\<GCCpuGroup> Element
 
 指定垃圾回收是否支持多个 CPU 组。
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup >**  
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup>**
 
 ## <a name="syntax"></a>语法
 
@@ -41,8 +41,8 @@ ms.locfileid: "73116835"
 
 |“值”|描述|
 |-----------|-----------------|
-|`false`|垃圾回收不支持多个 CPU 组。 这是默认设置。|
-|`true`|如果启用了服务器垃圾回收，则垃圾回收支持多个 CPU 组。|
+|`false`|Garbage collection does not support multiple CPU groups. 这是默认设置。|
+|`true`|Garbage collection supports multiple CPU groups, if server garbage collection is enabled.|
 
 ### <a name="child-elements"></a>子元素
 
@@ -57,14 +57,14 @@ ms.locfileid: "73116835"
 
 ## <a name="remarks"></a>备注
 
-如果计算机具有多个 CPU 组并且启用了服务器垃圾回收（请参阅[\<r >](gcserver-element.md)元素），则启用此元素会在所有 CPU 组之间扩展垃圾回收，并在创建和平衡堆。
+When a computer has multiple CPU groups and server garbage collection is enabled (see the [\<gcServer>](gcserver-element.md) element), enabling this element extends garbage collection across all CPU groups and takes all cores into account when creating and balancing heaps.
 
 > [!NOTE]
-> 此元素仅适用于垃圾回收线程。 若要使运行时能够在所有 CPU 组之间分配用户线程，还必须启用[\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md)元素。
+> This element applies only to garbage collection threads. To enable the runtime to distribute user threads across all CPU groups, you must also enable the [\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md) element.
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何为多个 CPU 组启用垃圾回收。
+The following example shows how to enable garbage collection for multiple CPU groups.
 
 ```xml
 <configuration>
@@ -79,5 +79,5 @@ ms.locfileid: "73116835"
 
 - [运行时设置架构](index.md)
 - [配置文件架构](../index.md)
-- [禁用并发垃圾回收](gcconcurrent-element.md#to-disable-background-garbage-collection)
-- [工作站和服务器垃圾回收](../../../../standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)
+- [To disable concurrent garbage collection](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [工作站和服务器垃圾回收](../../../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection)

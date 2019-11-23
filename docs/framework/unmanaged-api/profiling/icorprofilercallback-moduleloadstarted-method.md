@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9cd2fe75-408a-400f-a6b1-9979624a2fe2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5b847cbbdf1bfccd91ca212dadd1fcd82cc12c82
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 55927167f8b61ade4ef479b30b85ad8d82be8025
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768198"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445924"
 ---
 # <a name="icorprofilercallbackmoduleloadstarted-method"></a>ICorProfilerCallback::ModuleLoadStarted 方法
-通知探查器正在加载的模块。  
+Notifies the profiler that a module is being loaded.  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,15 +34,15 @@ HRESULT ModuleLoadStarted(
   
 ## <a name="parameters"></a>参数  
  `moduleId`  
- [in]正在加载的模块的 ID。  
+ [in] The ID of the module that is being loaded.  
   
 ## <a name="remarks"></a>备注  
- 值`moduleId`不是有效的信息请求之前[icorprofilercallback:: Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)调用方法。  
+ The value of `moduleId` is not valid for an information request until the [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) method is called.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

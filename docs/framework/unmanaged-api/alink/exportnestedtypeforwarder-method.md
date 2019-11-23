@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 886ea6c5-6b26-4b88-8bf6-448d6d191950
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: eb8112d6d2b5c2cbb257db2f20ff4be5a84e827b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cc81ccd1c754e3d34c54737f4560b4f81d5cc916
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787464"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438415"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder 方法
-将嵌套类型的类型转发器添加到给定程序集的类型表。  
+Adds a type forwarder for a nested type to the type table of the given assembly.  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,31 +40,31 @@ HRESULT ExportNestedTypeForwarder(
   
 ## <a name="parameters"></a>参数  
  `AssemblyID`  
- 要从中导出的程序集的 ID。  
+ ID of the assembly to export from.  
   
  `FileToken`  
- 定义类型的文件的文件标记或程序集 ID。  
+ File token or assembly ID of file that defines the type.  
   
  `TypeToken`  
- 类型的标记。  
+ Token for the type.  
   
  `ParentType`  
- 父类型的标记。  
+ Token of parent type.  
   
  `pszTypename`  
- 要导出的完全限定的类型名称。  
+ Fully qualified type name to export.  
   
  `dwFlags`  
- `ComType`标志， `tdPublic`如或`tdNested`。  
+ `ComType` flags such as `tdPublic` or `tdNested`.  
   
  `pType`  
- 接收导出类型的令牌。 这仅适用于发出嵌套类型。  
+ Receives token of export type. This is necessary only for emitting nested types.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>要求  
- 需要 alink  
+ Requires alink.h  
   
 ## <a name="see-also"></a>请参阅
 

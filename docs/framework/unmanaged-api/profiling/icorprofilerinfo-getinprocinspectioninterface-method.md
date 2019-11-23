@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 22a92d1d-8849-4af6-8304-ecc53dd1d289
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 67a680727e824cbe29b9e022e00d661e8694f153
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d3fcd859fb11f6a0c660751f16fa175e19e9d03b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780565"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438993"
 ---
 # <a name="icorprofilerinfogetinprocinspectioninterface-method"></a>ICorProfilerInfo::GetInprocInspectionInterface 方法
-对于"ICorDebugProcess"接口获取可查询的对象。 此方法是在.NET Framework 2.0 版中已过时。  
+Gets an object that can be queried for an "ICorDebugProcess" interface. This method is obsolete in the .NET Framework version 2.0.  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,19 +34,19 @@ HRESULT GetInprocInspectionInterface(
   
 ## <a name="parameters"></a>参数  
  `ppicd`  
- [out](/cpp/atl/iunknown)对象，可用于查询`ICorDebugProcess`接口。  
+ [out](/cpp/atl/iunknown) object that can be queried for an `ICorDebugProcess` interface.  
   
 ## <a name="remarks"></a>备注  
- 公共语言运行时 (CLR) 调试 API 支持.NET Framework 1.0 版中的有限进程内调试。 探查器可以使用调试 API 的检查部分启用进程内调试。 由于客户反馈，进程内调试已删除从.NET Framework 版本 2.0 中，并替换为一系列更加符合分析 API 的功能。  
+ The common language runtime (CLR) debugging API supported limited in-process debugging in the .NET Framework version 1.0. In-process debugging enabled a profiler to use the inspection portions of the debugging API. As a result of customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** 1.0  
+ **.NET Framework Version:** 1.0  
   
 ## <a name="see-also"></a>请参阅
 

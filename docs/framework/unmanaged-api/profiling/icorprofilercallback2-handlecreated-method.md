@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6bbb7786-7c38-490f-9834-91aa2795c355
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3d5ea547066663564d76008434884b6e34150efb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 594d970dbe0a176a5ec49015e105f89ff64bdfac
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779336"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439771"
 ---
 # <a name="icorprofilercallback2handlecreated-method"></a>ICorProfilerCallback2::HandleCreated 方法
-通知代码探查器已创建了垃圾回收句柄。  
+Notifies the code profiler that a garbage collection handle has been created.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,15 +35,15 @@ HRESULT HandleCreated(
   
 ## <a name="parameters"></a>参数  
  `handleId`  
- [in]垃圾回收的句柄的 ID。  
+ [in] The ID of the handle for the garbage collection.  
   
  `initialObjectId`  
- [in]为其创建垃圾回收句柄的对象的 ID。  
+ [in] The ID of the object for which the garbage collection handle was created.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

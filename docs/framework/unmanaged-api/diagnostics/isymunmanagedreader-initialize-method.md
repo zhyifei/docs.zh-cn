@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 8f0dd2fe-7df7-464e-91f4-5518c586bb5f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f2dceeb2f0b3aa9f3147157e77087dffbf2d5f85
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ca34d1d84d6f9960d021c35566f8412df321464d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939011"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429748"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize 方法
-用此读取器将与之关联的元数据导入程序接口以及模块的文件名初始化符号读取器。  
+Initializes the symbol reader with the metadata importer interface that this reader will be associated with, along with the file name of the module.  
   
 > [!NOTE]
-> 此方法只能调用一次, 并且必须在任何其他读取器方法之前调用。  
+> This method can be called only once, and must be called before any other reader methods.  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,25 +40,25 @@ HRESULT Initialize (
   
 ## <a name="parameters"></a>参数  
  `importer`  
- 中此读取器将与之关联的元数据导入程序接口。  
+ [in] The metadata importer interface with which this reader will be associated.  
   
  `filename`  
- 中模块的文件名。 可以改为`pIStream`使用参数。  
+ [in] The file name of the module. You can use the `pIStream` parameter instead.  
   
  `searchPath`  
- 中要搜索的路径。 此参数可选。  
+ [in] The path to search. 此参数可选。  
   
  `pIStream`  
- 中文件流, 用作 filename 参数的替代项。  
+ [in] The file stream, used as an alternative to the filename parameter.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功, 则返回 S_OK;否则, E_FAIL 或其他一些错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="remarks"></a>备注  
- 只需指定`filename` `pIStream`或参数之一, 而不能同时指定两者。 `searchPath` 参数是可选的。  
+ You need to specify only one of the `filename` or the `pIStream` parameters, not both. `searchPath` 参数是可选的。  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym, CorSym  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

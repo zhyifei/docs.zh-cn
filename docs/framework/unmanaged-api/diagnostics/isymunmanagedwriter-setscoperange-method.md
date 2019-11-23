@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d4d98676-444b-46ca-bfe6-0d827385cd22
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c13eb7ca16cdb7c70f3fef0dd4efcb9362cd3d87
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b404a187d8628a04d2aa51df15f86fcc9d0b14f8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776591"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427862"
 ---
 # <a name="isymunmanagedwritersetscoperange-method"></a>ISymUnmanagedWriter::SetScopeRange 方法
-定义指定词法范围的偏移量范围。 范围将成为新的当前作用域，并推送到的作用域堆栈上。 作用域必须形成层次结构。 同级不能重叠。  
+定义指定词法范围的偏移量范围。 The scope becomes the new current scope and is pushed onto a stack of scopes. Scopes must form a hierarchy. Siblings are not allowed to overlap.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,22 +36,22 @@ HRESULT OpenScope(
   
 ## <a name="parameters"></a>参数  
  `scopeId`  
- [in]作用域范围标识符。  
+ [in] The scope identifier for the scope.  
   
  `startOffset`  
- [in]偏移量，以字节为单位，从开始处的词法作用域中的第一个指令的方法。  
+ [in] The offset, in bytes, of the first instruction in the lexical scope from the beginning of the method.  
   
  `endOffset`  
- [in]偏移量，以字节为单位，从开始处的词法作用域中的最后一个指令的方法。  
+ [in] The offset, in bytes, of the last instruction in the lexical scope from the beginning of the method.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="remarks"></a>备注  
- [Isymunmanagedwriter:: Openscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md)返回可用于不透明的范围标识符`ISymUnmanagedWriter::SetScopeRange`来定义范围的起始和结束偏移量在更高版本时。 在这种情况下，偏移量传递给`ISymUnmanagedWriter::OpenScope`并[isymunmanagedwriter:: Closescope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md)将被忽略。 范围标识符只是在当前方法中有效。  
+ [ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with `ISymUnmanagedWriter::SetScopeRange` to define a scope's starting and ending offset at a later time. In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) are ignored. Scope identifiers are only valid in the current method.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

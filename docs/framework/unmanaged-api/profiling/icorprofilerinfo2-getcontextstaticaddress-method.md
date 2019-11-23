@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2b374116-0972-416a-8cf5-79213129be9a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2c5c8165d44cc3a305820f8e97c07da37f2a0693
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d5d7da343148d5f1c2aa9b2b639b094f8269199b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775806"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433200"
 ---
 # <a name="icorprofilerinfo2getcontextstaticaddress-method"></a>ICorProfilerInfo2::GetContextStaticAddress 方法
-获取指定的上下文在作用域中的指定上下文的静态字段的地址。  
+Gets the address for the specified context-static field that is in the scope of the specified context.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,30 +37,30 @@ HRESULT GetContextStaticAddress(
   
 ## <a name="parameters"></a>参数  
  `classId`  
- [in]包含请求的上下文静态字段的类的 ID。  
+ [in] The ID of the class that contains the requested context-static field.  
   
  `fieldToken`  
- [in]请求的上下文静态字段元数据标记。  
+ [in] The metadata token for the requested context-static field.  
   
  `contextId`  
- [in]请求的上下文静态字段的作用域上下文的 ID。  
+ [in] The ID of the context that is the scope for the requested context-static field.  
   
  `ppAddress`  
- [out]一个指向指定的上下文内的静态字段的地址。  
+ [out] A pointer to the address of the static field that is within the specified context.  
   
 ## <a name="remarks"></a>备注  
- `GetContextStaticAddress`方法可能会返回以下值之一：  
+ The `GetContextStaticAddress` method may return one of the following:  
   
-- 如果尚未分配给定的静态字段中指定的上下文的地址 CORPROF_E_DATAINCOMPLETE HRESULT。  
+- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
   
-- 可能在垃圾回收堆的对象的地址。 使垃圾回收后，探查器不应假定它们是有效，则这些地址可能会回收后无效。  
+- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
   
- 类的类构造函数完成之前，`GetContextStaticAddress`将返回 CORPROF_E_DATAINCOMPLETE 对于所有其静态字段，尽管可能已初始化的一些静态字段和根垃圾回收对象。  
+ Before a class’s class constructor is completed, `GetContextStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: f64c325a-ed3a-4aaf-b847-a88edbc4fefc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 18197f0c500a205a66bdda8a9401f31d4208ae67
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94230cbad95ff0a5d4234c27aa5d1d56ac5be9bb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780436"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428398"
 ---
-# <a name="corprfclausetype-enumeration"></a>COR_PRF_CLAUSE_TYPE 枚举
+# <a name="cor_prf_clause_type-enumeration"></a>COR_PRF_CLAUSE_TYPE 枚举
 指示代码刚进入或离开的异常子句的类型。  
   
 ## <a name="syntax"></a>语法  
@@ -37,19 +35,19 @@ typedef enum {
 } COR_PRF_CLAUSE_TYPE;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`COR_PRF_CLAUSE_NONE`|在异常子句无效。|  
-|`COR_PRF_CLAUSE_FILTER`|在异常子句是筛选器表达式。|  
-|`COR_PRF_CLAUSE_CATCH`|在异常子句是`catch`语句。|  
-|`COR_PRF_CLAUSE_FINALLY`|在异常子句是`finally`语句。|  
+|`COR_PRF_CLAUSE_NONE`|The exception clause is not valid.|  
+|`COR_PRF_CLAUSE_FILTER`|The exception clause is a filter expression.|  
+|`COR_PRF_CLAUSE_CATCH`|The exception clause is a `catch` statement.|  
+|`COR_PRF_CLAUSE_FINALLY`|The exception clause is a `finally` statement.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

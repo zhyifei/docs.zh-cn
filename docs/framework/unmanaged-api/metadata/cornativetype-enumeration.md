@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e47a72f1-9609-48ed-bb34-97170d7f6890
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 846c754aeb0a710fa70e906e666f694eaa77c576
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ef4788891e91608a394482319a89b8b0d258449f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781712"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436512"
 ---
 # <a name="cornativetype-enumeration"></a>CorNativeType 枚举
 包含一些值，用于描述本机非托管类型。  
@@ -87,62 +85,62 @@ typedef enum CorNativeType {
 } CorNativeType;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
 |`NATIVE_TYPE_END`|已过时。|  
 |`NATIVE_TYPE_VOID`|已过时。|  
-|`NATIVE_TYPE_BOOLEAN`|一个 4 字节布尔值，其中 TRUE 为非零值; FALSE 为零。|  
-|`NATIVE_TYPE_I1`|一个 8 位带符号的整数值。|  
-|`NATIVE_TYPE_U1`|一个 8 位无符号的整数值。|  
-|`NATIVE_TYPE_I2`|一个 16 位带符号的整数值。|  
-|`NATIVE_TYPE_U2`|一个 16 位无符号的整数值。|  
+|`NATIVE_TYPE_BOOLEAN`|A 4-byte Boolean value, where TRUE is non-zero and FALSE is zero.|  
+|`NATIVE_TYPE_I1`|A signed 8-bit integer value.|  
+|`NATIVE_TYPE_U1`|An unsigned 8-bit integer value.|  
+|`NATIVE_TYPE_I2`|A signed 16-bit integer value.|  
+|`NATIVE_TYPE_U2`|An unsigned 16-bit integer value.|  
 |`NATIVE_TYPE_I4`|带符号的 32 位整数值。|  
 |`NATIVE_TYPE_U4`|32 位无符号整数值。|  
-|`NATIVE_TYPE_I8`|一个 64 位带符号的整数值。|  
-|`NATIVE_TYPE_U8`|一个 64 位无符号的整数值。|  
-|`NATIVE_TYPE_R4`|4 字节浮点数字值。|  
-|`NATIVE_TYPE_R8`|8 字节浮点数字值。|  
+|`NATIVE_TYPE_I8`|A signed 64-bit integer value.|  
+|`NATIVE_TYPE_U8`|An unsigned 64-bit integer value.|  
+|`NATIVE_TYPE_R4`|A 4-byte floating-point numeric value.|  
+|`NATIVE_TYPE_R8`|An 8-byte floating-point numeric value.|  
 |`NATIVE_TYPE_SYSCHAR`|已过时。|  
 |`NATIVE_TYPE_VARIANT`|已过时。|  
-|`NATIVE_TYPE_CURRENCY`|对应于托管的数值 COM 类型<xref:System.Decimal>类型。|  
+|`NATIVE_TYPE_CURRENCY`|A numeric COM type that corresponds to the managed <xref:System.Decimal> type.|  
 |`NATIVE_TYPE_PTR`|已过时。|  
 |`NATIVE_TYPE_DECIMAL`|已过时。|  
 |`NATIVE_TYPE_DATE`|已过时。|  
-|`NATIVE_TYPE_BSTR`|COM 互操作。|  
-|`NATIVE_TYPE_LPSTR`|LPSTR 字符串值。|  
-|`NATIVE_TYPE_LPWSTR`|为 LPWSTR 字符串值。|  
-|`NATIVE_TYPE_LPTSTR`|LPTSTR 字符串值。|  
-|`NATIVE_TYPE_FIXEDSYSSTRING`|一个固定的系统定义的字符串值。|  
+|`NATIVE_TYPE_BSTR`|COM Interop.|  
+|`NATIVE_TYPE_LPSTR`|An LPSTR string value.|  
+|`NATIVE_TYPE_LPWSTR`|An LPWSTR string value.|  
+|`NATIVE_TYPE_LPTSTR`|An LPTSTR string value.|  
+|`NATIVE_TYPE_FIXEDSYSSTRING`|A fixed, system-defined string value.|  
 |`NATIVE_TYPE_OBJECTREF`|已过时。|  
-|`NATIVE_TYPE_IUNKNOWN`|COM 互操作。|  
-|`NATIVE_TYPE_IDISPATCH`|COM 互操作。|  
-|`NATIVE_TYPE_STRUCT`|一个本机结构的值。|  
-|`NATIVE_TYPE_INTF`|COM 互操作。|  
-|`NATIVE_TYPE_SAFEARRAY`|COM 互操作。|  
-|`NATIVE_TYPE_FIXEDARRAY`|一个固定长度的数组的值。|  
-|`NATIVE_TYPE_INT`|一个本机 16 位有符号的整数值。|  
-|`NATIVE_TYPE_UINT`|一个本机 16 位无符号的整数值。|  
-|`NATIVE_TYPE_NESTEDSTRUCT`|已过时。<br /><br /> 使用 NATIVE_TYPE_STRUCT。|  
-|`NATIVE_TYPE_BYVALSTR`|COM 互操作。|  
-|`NATIVE_TYPE_ANSIBSTR`|COM 互操作。|  
-|`NATIVE_TYPE_TBSTR`|COM 互操作。<br /><br /> 选择 BSTR 或 ANSIBSTR 因平台而异。|  
-|`NATIVE_TYPE_VARIANTBOOL`|一个 2 字节布尔值，其中 TRUE 为-1，则返回 FALSE 为零。|  
+|`NATIVE_TYPE_IUNKNOWN`|COM Interop.|  
+|`NATIVE_TYPE_IDISPATCH`|COM Interop.|  
+|`NATIVE_TYPE_STRUCT`|A native structure value.|  
+|`NATIVE_TYPE_INTF`|COM Interop.|  
+|`NATIVE_TYPE_SAFEARRAY`|COM Interop.|  
+|`NATIVE_TYPE_FIXEDARRAY`|A fixed-length array value.|  
+|`NATIVE_TYPE_INT`|A native 16-bit signed integer value.|  
+|`NATIVE_TYPE_UINT`|A native 16-bit unsigned integer value.|  
+|`NATIVE_TYPE_NESTEDSTRUCT`|已过时。<br /><br /> Use NATIVE_TYPE_STRUCT.|  
+|`NATIVE_TYPE_BYVALSTR`|COM Interop.|  
+|`NATIVE_TYPE_ANSIBSTR`|COM Interop.|  
+|`NATIVE_TYPE_TBSTR`|COM Interop.<br /><br /> Select BSTR or ANSIBSTR depending on the platform.|  
+|`NATIVE_TYPE_VARIANTBOOL`|A 2-byte Boolean value, where TRUE is -1 and FALSE is zero.|  
 |`NATIVE_TYPE_FUNC`|函数指针。|  
-|`NATIVE_TYPE_ASANY`|对任何本机类型的引用。|  
-|`NATIVE_TYPE_ARRAY`|对具有未指定类型的成员的数组的引用。|  
-|`NATIVE_TYPE_LPSTRUCT`|指向一个结构的 32 位整数的指针。|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|自定义封送处理程序的本机类型。<br /><br /> 这必须跟以下格式的字符串："本机类型名称/0 自定义封送处理程序类型名称/0 可选 cookie/0"或"{本机类型 GUID} / 0 自定义封送处理程序类型名称/0 可选 cookie/0"|  
-|`NATIVE_TYPE_ERROR`|COM 互操作。<br /><br /> 使用 ELEMENT_TYPE_I4 此类型映射为 VT_HRESULT。|  
-|`NATIVE_TYPE_IINSPECTABLE`|一个本机`IInspectable`类型。|  
-|`NATIVE_TYPE_HSTRING`|一个本机`HString`。|  
-|`NATIVE_TYPE_MAX`|无效值。|  
+|`NATIVE_TYPE_ASANY`|A reference to any native type.|  
+|`NATIVE_TYPE_ARRAY`|A reference to an array with members of an unspecified type.|  
+|`NATIVE_TYPE_LPSTRUCT`|A 32-bit integer pointer to a structure.|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|A custom marshaler native type.<br /><br /> This must be followed by a string of the following format: "Native type name/0Custom marshaler type name/0Optional cookie/0" or "{Native type GUID}/0Custom marshaler type name/0Optional cookie/0"|  
+|`NATIVE_TYPE_ERROR`|COM Interop.<br /><br /> With ELEMENT_TYPE_I4 this type maps to VT_HRESULT.|  
+|`NATIVE_TYPE_IINSPECTABLE`|A native `IInspectable` type.|  
+|`NATIVE_TYPE_HSTRING`|A native `HString`.|  
+|`NATIVE_TYPE_MAX`|An invalid value.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

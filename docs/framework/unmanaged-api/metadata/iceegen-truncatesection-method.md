@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0451d752-1e5c-4c9a-8bad-6cd35b7ba3df
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 994f6668de3040cc9f2381356d6db06c18c9e984
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87a70587027f283ef5976089b3f2daf1204e68ec
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745880"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426127"
 ---
 # <a name="iceegentruncatesection-method"></a>ICeeGen::TruncateSection 方法
-通过指定长度截断指定的代码部分。  
+Truncates the specified code section by the specified length.  
   
- 此方法已过时，不应使用。  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,20 +38,20 @@ HRESULT TruncateSection (
   
 ## <a name="parameters"></a>参数  
  `section`  
- [in]要截断的部分。  
+ [in] The section to truncate.  
   
  `len`  
- [in]长度 （以字节为单位，按其截断部分）。  
+ [in] The length, in bytes, by which to truncate the section.  
   
 ## <a name="remarks"></a>备注  
- 调用`TruncateSection`仅在具有未由其他方法的特殊部分要求。  
+ Call `TruncateSection` only if you have special section requirements that are not handled by other methods.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

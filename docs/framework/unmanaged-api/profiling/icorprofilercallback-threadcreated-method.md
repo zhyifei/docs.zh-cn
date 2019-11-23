@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cca0f799-09b8-4689-a33c-6d6537943a9b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c7cd897237539be9bd832a793ad623cf7f31c4b9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1d8aa231f65bad88806ee9b1d3c5df978c9740a2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747129"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446925"
 ---
 # <a name="icorprofilercallbackthreadcreated-method"></a>ICorProfilerCallback::ThreadCreated 方法
-通知探查器已创建一个线程。  
+Notifies the profiler that a thread has been created.  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,15 +34,15 @@ HRESULT ThreadCreated(
   
 ## <a name="parameters"></a>参数  
  `threadId`  
- [in]已创建的线程的 ID。  
+ [in] The ID of the thread that has been created.  
   
 ## <a name="remarks"></a>备注  
- `threadId`值是否立即有效。  
+ The `threadId` value is immediately valid.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

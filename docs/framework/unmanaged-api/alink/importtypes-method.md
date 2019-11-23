@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 351d4b4c-c939-486d-9471-51914a55f471
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f19dd114925ed1fd12bcc0056411c3e3d4181215
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 76d2b163f959111923bffb1348890f6fbb29828e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777094"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445674"
 ---
 # <a name="importtypes-method"></a>ImportTypes 方法
-开始从通过[ImportFile 方法](importfile-method.md)导入的每个范围导入类型。  
+Initiates the importing of types from each scope imported via [ImportFile Method](importfile-method.md).  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,28 +39,28 @@ HRESULT ImportTypes(
   
 ## <a name="parameters"></a>参数  
  `AssemblyID`  
- 要导入到的程序集的 ID。  
+ ID of the assembly to import to.  
   
  `FileToken`  
- 要从中导入的文件的 ID。  
+ ID of the file to import from.  
   
  `dwScope`  
- 要导入的从零开始的范围。  
+ Zero-based scope to import.  
   
  `phEnum`  
- 接收此范围内的类型的枚举器句柄。  
+ Receives enumerator handle for the types in this scope.  
   
  `ppImportScope`  
- 可以选择接收[IMetaDataImport 接口](../metadata/imetadataimport-interface.md)接口。  
+ Optionally receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface.  
   
  `pdwCountOfTypes`  
- 可以选择接收指定范围内的类型的计数。  
+ Optionally receives count of types in the indicated scope.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>要求  
- 需要 alink  
+ Requires alink.h  
   
 ## <a name="see-also"></a>请参阅
 

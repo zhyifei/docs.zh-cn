@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f8e498f8-f93a-4b82-bd22-55bdbf5e8d45
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b5818cb8d7da7415feb61532799df5fa5a16fd3b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3c573c709e765fa723a726f5c8990ba59222ed1f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781219"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428127"
 ---
 # <a name="icorprofilerobjectenumskip-method"></a>ICorProfilerObjectEnum::Skip 方法
-因此跳过指定的数量的元素，请从其当前位置前移此枚举器的光标。  
+Advances the cursor of this enumerator from its current position so that the specified number of elements are skipped.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,15 +35,15 @@ HRESULT Skip (
   
 ## <a name="parameters"></a>参数  
  `celt`  
- [in]要跳过的元素数。  
+ [in] The number of elements to be skipped.  
   
 ## <a name="remarks"></a>备注  
- 此枚举器的光标的新位置是: （当前位置） + `celt` 。  
+ The new position of this enumerator's cursor is: (current position) + `celt` .  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

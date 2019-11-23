@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0c6ac12-22ea-43f5-b799-8cda0faf3336
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2aefd79e251d751a6c8354fa827863cb5aedf305
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1fb3f4486bc0ee7a85975770f94a8241999f10e0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751050"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442112"
 ---
 # <a name="imetadataemitsetmethodprops-method"></a>IMetaDataEmit::SetMethodProps 方法
-设置或更新存储在指定的相对虚拟地址，通过调用之前定义的方法的功能[imetadataemit:: Definemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)。  
+Sets or updates the feature, stored at the specified relative virtual address, of a method defined by a prior call to [IMetaDataEmit::DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md).  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,23 +38,23 @@ HRESULT SetMethodProps (
   
 ## <a name="parameters"></a>参数  
  `md`  
- [in]若要更改方法的标记。  
+ [in] The token for the method to be changed.  
   
  `dwMethodFlags`  
- [in]成员属性。  
+ [in] The member attributes.  
   
  `ulCodeRVA`  
- [in]代码的地址。  
+ [in] The address of the code.  
   
  `dwImplFlags`  
- [in]该方法实现标志。  
+ [in] The implementation flags for the method.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

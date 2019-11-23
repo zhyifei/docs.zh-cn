@@ -18,15 +18,16 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-ms.openlocfilehash: 3c14e251b6ca88fb864952c3411b5ea0c46da302
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 39bb518306b6e76aea1ae4a791fca79fbbb1b6c8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129943"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445740"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>检索桌面应用程序中的资源
-使用 .NET Framework 桌面应用中的本地化资源时，最好用主程序集打包默认或非特定区域性的资源，并为应用支持的每种语言或区域性单独创建附属程序集。 可以使用下一节中介绍的 <xref:System.Resources.ResourceManager> 类访问已命名的资源。 如果选择不在主程序集和附属程序集中嵌入资源，也可以按本文后面的 [从 .resources 文件中检索资源](#from_file) 一节中所述直接访问二进制 .resources 文件。  若要检索 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用中的资源，请参阅 Windows 开发人员中心中的 [在 Windows 应用商店应用中创建和检索资源](https://go.microsoft.com/fwlink/p/?LinkID=241674) 一文。  
+
+使用 .NET Framework 桌面应用中的本地化资源时，最好用主程序集打包默认或非特定区域性的资源，并为应用支持的每种语言或区域性单独创建附属程序集。 可以使用下一节中介绍的 <xref:System.Resources.ResourceManager> 类访问已命名的资源。 如果选择不在主程序集和附属程序集中嵌入资源，也可以按本文后面的 [从 .resources 文件中检索资源](#from_file) 一节中所述直接访问二进制 .resources 文件。  To retrieve resources in Windows 8.x Store apps, see [Creating and retrieving resources in Windows Store apps](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140)).  
   
 <a name="from_assembly"></a>   
 ## <a name="retrieving-resources-from-assemblies"></a>从程序集中检索资源  
@@ -205,4 +206,4 @@ csc Example.cs
 - [桌面应用中的资源](index.md)
 - [打包和部署资源](packaging-and-deploying-resources-in-desktop-apps.md)
 - [运行时如何定位程序集](../deployment/how-the-runtime-locates-assemblies.md)
-- [在 Windows 应用商店应用中创建和检索资源](https://go.microsoft.com/fwlink/p/?LinkID=241674)
+- [在 Windows 应用商店应用中创建和检索资源](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))

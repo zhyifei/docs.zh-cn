@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 116085df-7a77-404a-afac-d0557a12b986
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 71df3bc707099cbad06742d964881ee629216b69
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9bb3934be4a2f4de4a3a235a00522c801331e1eb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782820"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448426"
 ---
 # <a name="icorprofilercallbackjitfunctionpitched-method"></a>ICorProfilerCallback::JITFunctionPitched 方法
-通知探查器的已实时 (JIT) 的函数的编译已从内存中删除。  
+Notifies the profiler that a function that has been just-in-time (JIT)-compiled has been removed from memory.  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,17 +34,17 @@ HRESULT JITFunctionPitched(
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in]已删除的函数的 ID。  
+ [in] The ID of the function that was removed.  
   
 ## <a name="remarks"></a>备注  
- 如果调用已删除的函数时，探查器会收到新的 JIT 编译事件时重新编译函数。 目前，公共语言运行时 (CLR) JIT 编译器不会删除函数从内存，所以此回调当前未使用且不会收到探查器。  
+ If the removed function is called, the profiler will receive new JIT-compilation events when the function is recompiled. Currently, the common language runtime (CLR) JIT compiler does not remove functions from memory, so this callback is currently not used and will not be received by the profiler.  
   
- 值`functionId`直到重新编译该函数不有效。 该函数重新编译时，相同`functionId`将使用的值。  
+ The value of `functionId` is not valid until the function is recompiled. When the function is recompiled, the same `functionId` value will be used.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

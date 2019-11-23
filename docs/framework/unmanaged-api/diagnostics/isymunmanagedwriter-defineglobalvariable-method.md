@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 843c904a-8176-4d8f-bd47-b4d4c29f4c5c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5bc14c36563badb73ac9f9d955ea0c00f5330b4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94d1aa5bba87e8ca11b58bdf89a697e1ccf500b1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777359"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428020"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable 方法
-定义单个全局变量。  
+Defines a single global variable.  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,34 +41,34 @@ HRESULT DefineGlobalVariable(
   
 ## <a name="parameters"></a>参数  
  `name`  
- [in]一个指向`WCHAR`，用于定义全局变量的名称。  
+ [in] A pointer to a `WCHAR` that defines the global variable name.  
   
  `attributes`  
- [in]全局变量特性。  
+ [in] The global variable attributes.  
   
  `cSig`  
- [in]一个`ULONG32`指示的大小，以字符为单位的`signature`缓冲区。  
+ [in] A `ULONG32` that indicates the size, in characters, of the `signature` buffer.  
   
  `signature`  
- [in]全局变量签名。  
+ [in] The global variable signature.  
   
  `addrKind`  
- [in]地址类型。  
+ [in] The address type.  
   
  `addr1`  
- [in]参数规格的第一个地址。  
+ [in] The first address for the parameter specification.  
   
  `addr2`  
- [in]参数规格的第二个地址。  
+ [in] The second address for the parameter specification.  
   
  `addr3`  
- [in]参数规格的第三个地址。  
+ [in] The third address for the parameter specification.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

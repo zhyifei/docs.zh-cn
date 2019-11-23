@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e3b73a3f-d089-4101-a9a9-5e0765d05b61
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7fad7fae41fed70d996fcaaa7a7cdf69403b6094
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c26c0a5f8c597613266e2e6d1998edfca8f17b82
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763349"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448337"
 ---
 # <a name="isymunmanagedreadergetdocuments-method"></a>ISymUnmanagedReader::GetDocuments 方法
-返回一组符号存储区中定义的所有文档。  
+Returns an array of all the documents defined in the symbol store.  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,16 +40,16 @@ HRESULT GetDocuments (
  [in] `pDocs` 数组的大小。  
   
  `pcDocs`  
- [out]指向一个变量来接收数组长度的指针。  
+ [out] A pointer to a variable that receives the array length.  
   
  `pDocs`  
- [out]指向一个变量来接收的文档数组的指针。  
+ [out] A pointer to a variable that receives the document array.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ce8f6aa6-4ebf-4a86-b429-4bbc8af41a8f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 31fad9e82d0b93360f92676f6357c136ae60634a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 41021a524142afe34727584265aee578e31a64b3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771129"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433208"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs 方法
-获取`FunctionID`通过使用指定的元数据令牌，其中包含类的函数和`ClassID`的任何值类型参数。  
+Gets the `FunctionID` of a function by using the specified metadata token, containing class, and `ClassID` values of any type arguments.  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,34 +39,34 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
   
 ## <a name="parameters"></a>参数  
  `moduleID`  
- [in]该函数所在的模块的 ID。  
+ [in] The ID of the module in which the function resides.  
   
  `funcDef`  
- [in]`mdMethodDef`引用了函数的元数据标记。  
+ [in] An `mdMethodDef` metadata token that references the function.  
   
  `classId`  
- [in]函数的包含类的 ID。  
+ [in] The ID of the function's containing class.  
   
  `cTypeArgs`  
- [in]对于给定的函数的类型参数的数目。 此值必须为零的非泛型函数。  
+ [in] The number of type parameters for the given function. This value must be zero for non-generic functions.  
   
  `typeArgs`  
- [in]一个数组`ClassID`值，其中每个是函数的参数。 值`typeArgs`可以为 NULL，如果`cTypeArgs`设置为零。  
+ [in] An array of `ClassID` values, each of which is an argument of the function. The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.  
   
  `pFunctionID`  
- [out]一个指向`FunctionID`指定函数。  
+ [out] A pointer to the `FunctionID` of the specified function.  
   
 ## <a name="remarks"></a>备注  
- 调用`GetFunctionFromTokenAndTypeArgs`方法替换`mdMethodRef`元数据，而不是`mdMethodDef`元数据标记可以具有不可预知的结果。 调用方应解决`mdMethodRef`到`mdMethodDef`时将其传递。  
+ Calling the `GetFunctionFromTokenAndTypeArgs` method with an `mdMethodRef` metadata instead of an `mdMethodDef` metadata token can have unpredictable results. Callers should resolve the `mdMethodRef` to an `mdMethodDef` when passing it.  
   
- 如果尚未加载该函数，则调用`GetFunctionFromTokenAndTypeArgs`会导致加载发生，这是一种危险操作在多种上下文中的。 例如，在模块或类型的加载过程中调用此方法在运行时尝试循环加载某些内容导致无限循环。  
+ If the function is not already loaded, calling `GetFunctionFromTokenAndTypeArgs` will cause loading to occur, which is a dangerous operation in many contexts. For example, calling this method during loading of modules or types could lead to an infinite loop as the runtime attempts to circularly load things.  
   
- 一般情况下，使用`GetFunctionFromTokenAndTypeArgs`不建议这样做。 如果探查器是对特定函数的事件感兴趣，它们应存储`ModuleID`并`mdMethodDef`该函数，并使用[ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)若要检查是否给定`FunctionID`是所需的函数。  
+ In general, use of `GetFunctionFromTokenAndTypeArgs` is discouraged. If profilers are interested in events for a particular function, they should store the `ModuleID` and `mdMethodDef` of that function, and use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) to check whether a given `FunctionID` is that of the desired function.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

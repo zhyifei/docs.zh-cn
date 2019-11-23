@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 25788ed1-0ce3-4b97-96fc-88f8997812a3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8a035e8dd7bd880c4ead500eede5e1b095d701f2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a59b50009e7f0ab2fff1b8439e368234403822c1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778070"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446129"
 ---
 # <a name="isymunmanagedvariablegetaddressfield1-method"></a>ISymUnmanagedVariable::GetAddressField1 方法
-获取此变量的第一个地址字段。 其含义取决于类型的地址。  
+Gets the first address field for this variable. Its meaning depends on the kind of address.  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,13 +34,13 @@ HRESULT GetAddressField1(
   
 ## <a name="parameters"></a>参数  
  `pRetVal`  
- [out]一个指向`ULONG32`，它接收的第一个地址字段。  
+ [out] A pointer to a `ULONG32` that receives the first address field.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

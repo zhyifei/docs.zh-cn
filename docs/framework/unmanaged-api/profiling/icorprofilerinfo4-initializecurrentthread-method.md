@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 18a3335c-8c75-476c-b6de-72c0bfedae5d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b9bb5a2629e435d76691d48feef6689191b66373
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 39882a554f9d47040bef00ff320d15b56abea533
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957889"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445724"
 ---
 # <a name="icorprofilerinfo4initializecurrentthread-method"></a>ICorProfilerInfo4::InitializeCurrentThread 方法
-在同一线程上的后续探查器 API 调用之前初始化当前线程, 以便避免死锁。  
+Initializes the current thread in advance of subsequent profiler API calls on the same thread, so that deadlock can be avoided.  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,17 +32,17 @@ HRESULT InitializeCurrentThread ();
 ```  
   
 ## <a name="remarks"></a>备注  
- 建议在存在挂起的`InitializeCurrentThread`线程时, 调用将调用探查器 API 的任何线程。 此方法通常由创建自己的线程的探查器使用, 用来调用[ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)方法, 在目标线程挂起时执行堆栈遍历。 通过在`InitializeCurrentThread`探查器首次创建采样线程时调用一次, 探查器可以确保在第一次调用时, CLR 将以`DoStackSnapshot`其他方式执行的延迟的每个线程初始化状态.  
+ We recommend that you call `InitializeCurrentThread` on any thread that will call a profiler API while there are suspended threads. This method is typically used by sampling profilers that create their own thread to call the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method to perform stack walks while the target thread is suspended. By calling `InitializeCurrentThread` once when the profiler first creates the sampling thread, profilers can ensure that lazy per-thread initialization that the CLR would otherwise perform during the first call to `DoStackSnapshot` can now occur safely when no other threads are suspended.  
   
 > [!NOTE]
-> `InitializeCurrentThread`预先执行初始化来完成接受锁定的任务, 可能会死锁。 仅`InitializeCurrentThread`当没有挂起的线程时才调用。  
+> `InitializeCurrentThread` does the initialization in advance to finish tasks that take locks, and may deadlock. Call `InitializeCurrentThread` only when there are no suspended threads.  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Corprof.idl, Corprof.idl  
+ **头文件：** CorProf.idl、CorProf.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

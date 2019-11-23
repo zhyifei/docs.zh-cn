@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50cbe557-2322-41aa-8e0d-f967602eaa0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4844834232e34ab5dacfa34e7aa5d204ee344612
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 662b628f3cc6d2d7138f56820beaccee9c5d9e81
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781361"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426654"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a>IMetaDataTables::GetTableInfo 方法
-获取名称、 行大小、 行数、 列数和指定的表的键列索引。  
+Gets the name, row size, number of rows, number of columns, and key column index of the specified table.  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,29 +40,29 @@ HRESULT GetTableInfo (
   
 ## <a name="parameters"></a>参数  
  `ixTbl`  
- [in]表的标识符要返回其属性。  
+ [in] The identifier of the table whose properties to return.  
   
  `pcbRow`  
- [out]指向大小 （字节） 的表行的指针。  
+ [out] A pointer to the size, in bytes, of a table row.  
   
  `pcRows`  
- [out]指向表中的行数的指针。  
+ [out] A pointer to the number of rows in the table.  
   
  `pcCols`  
- [out]指向表中的列数的指针。  
+ [out] A pointer to the number of columns in the table.  
   
  `piKey`  
- [out]索引键列，则为-1 如果表没有键列的指针。  
+ [out] A pointer to the index of the key column, or -1 if the table has no key column.  
   
  `ppName`  
- [out]为表名的指针指向的指针。  
+ [out] A pointer to a pointer to the table name.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

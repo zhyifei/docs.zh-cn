@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7f230961-23a6-4d56-ad2d-7a876d65705f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5e00e7f39bc2f8c14db0676102a52089c7710bd6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57515ac4670b9b7e25bb496851347a62e1b246df
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772263"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438723"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass 方法
-确定指定的类是否为数组类。  
+Determines whether the specified class is an array class.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,24 +37,24 @@ HRESULT IsArrayClass(
   
 ## <a name="parameters"></a>参数  
  `classId`  
- [in]要检查其类的 ID。  
+ [in] The ID of the class to be examined.  
   
  `pBaseElemType`  
- [out]CorElementType 枚举，指示数组元素的类型的值指向的指针。  
+ [out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.  
   
  `pBaseClassId`  
- [out]指向数组元素、 可用时的类 ID 的指针。  
+ [out] A pointer to the class ID of the array elements, when available.  
   
  `pcRank`  
- [out]指向一个整数，指示数组的秩 （即维数） 的指针。  
+ [out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.  
   
 ## <a name="remarks"></a>备注  
- 如果指定的类是数组类，`IsArrayClass`方法返回 S_OK HRESULT 和任何非 null 输出参数的值。 否则，它返回 S_FALSE。  
+ If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters. Otherwise, it returns S_FALSE.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3c325c82-cddd-4b00-b3da-e450c36abf62
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 882d3b3c359724688c0fb8fe5e2b567f1d575e76
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bea857f65081432eb3f5501c75af6d13805c76d7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782860"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426233"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchfinished-method"></a>ICorProfilerCallback::JITCachedFunctionSearchFinished 方法
-通知探查器搜索已完成以前使用本机映像生成器 (NGen.exe) 编译的函数。  
+Notifies the profiler that a search has finished for a function that was compiled previously using the Native Image Generator (NGen.exe).  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,18 +35,18 @@ HRESULT JITCachedFunctionSearchFinished(
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in]为其执行了搜索函数的 ID。  
+ [in] The ID of the function for which the search was performed.  
   
  `result`  
- [in]值为[COR_PRF_JIT_CACHE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md)枚举，指示搜索结果。  
+ [in] A value of the [COR_PRF_JIT_CACHE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md) enumeration that indicates the result of the search.  
   
 ## <a name="remarks"></a>备注  
- 在.NET Framework 2.0 版中， [icorprofilercallback:: Jitcachedfunctionsearchstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md)和`JITCachedFunctionSearchFinished`回调不会为正则 NGen 映像中的所有函数。 仅为探查器优化 NGen 映像将在图中生成的所有函数的回调。 但是，由于的额外开销，探查器应请求探查器优化 NGen 映像仅当它要使用这些回调以强制对函数进行编译中实时 (JIT)。 否则，探查器应使用延迟策略，用于收集函数的信息。  
+ In the .NET Framework version 2.0, the [ICorProfilerCallback::JITCachedFunctionSearchStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md) and `JITCachedFunctionSearchFinished` callbacks will not be made for all functions in regular NGen images. Only NGen images optimized for a profiler will generate callbacks for all functions in the image. However, due to the additional overhead, a profiler should request profiler-optimized NGen images only if it intends to use these callbacks to force a function to be compiled just-in-time (JIT). Otherwise, the profiler should use a lazy strategy for gathering function information.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44cf6908-f555-4ae8-b2cf-24bd974bf2fe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 13f8a50f3fcbe9d6e7602ca3bbeb36587ecff32c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a5dda5861343865a139f6b6b9e2794179b0727a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778799"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434725"
 ---
 # <a name="imetadataimportisglobal-method"></a>IMetaDataImport::IsGlobal 方法
 获取一个值，该值指示由指定的元数据标记表示的字段、方法或类型是否具有全局范围。  
@@ -38,17 +36,17 @@ HRESULT IsGlobal (
   
 ## <a name="parameters"></a>参数  
  `pd`  
- [in]表示类型、 字段或方法的元数据标记。  
+ [in] A metadata token that represents a type, field, or method.  
   
  `pbGlobal`  
- [out] 1，如果该对象具有全局作用域;否则为 0 （零）。  
+ [out] 1 if the object has global scope; otherwise, 0 (zero).  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

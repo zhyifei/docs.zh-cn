@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3c24e552-fc69-4971-b65a-a3e4b5f7f1e8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a4185ec41fc9f7d1d919a79b57c02625210ad72a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7547d7557169b1279125141afb5b05e22341942a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777189"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432741"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>IMetaDataEmit2::DefineMethodSpec 方法
-创建一个方法的泛型实例并获取定义的标记。  
+Creates a generic instance of a method, and gets a token to the definition.  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,23 +38,23 @@ HRESULT DefineMethodSpec (
   
 ## <a name="parameters"></a>参数  
  `tkParent`  
- [in]要创建泛型实例的方法的标记。 该标记必须为类型`mdMethodDef`或`mdMemberRef`。  
+ [in] A token for the method of which to create the generic instance. The token must be of type `mdMethodDef` or `mdMemberRef`.  
   
  `pvSigBlob`  
- [in]指向二进制 COM + 方法的签名的指针。  
+ [in] A pointer to the binary COM+ signature of the method.  
   
  `cbSibBlob`  
- [in]大小，以字节为单位的`pvSigBlob`。  
+ [in] The size, in bytes, of `pvSigBlob`.  
   
  `pmi`  
- [out]该方法的元数据签名定义标记。  
+ [out] A token to the metadata signature definition of the method.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 46264b2c-574d-4dde-aafc-77187a104fdd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8a70c041bc17f58a5e17877dd2e1f2aa2944e689
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3e470250fa0e86610fcc9a6d6e2ca03569d62b54
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777930"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449445"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName 方法
-获取一个指针指向导出的类型，在给定其名称和封闭类型。  
+Gets a pointer to an exported type, given its name and enclosing type.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,23 +37,23 @@ HRESULT FindExportedTypeByName (
   
 ## <a name="parameters"></a>参数  
  `szName`  
- [in]导出的类型的名称。  
+ [in] The name of the exported type.  
   
  `mdtExportedType`  
- [in]用于导出的类型在封闭类的元数据令牌。 此值是`mdExportedTypeNil`如果请求的导出类型不是嵌套的类型。  
+ [in] The metadata token for the enclosing class of the exported type. This value is `mdExportedTypeNil` if the requested exported type is not a nested type.  
   
  `ptkExportedType`  
- [out]一个指向`mdExportedType`表示导出的类型的令牌。  
+ [out] A pointer to the `mdExportedType` token that represents the exported type.  
   
 ## <a name="remarks"></a>备注  
- `FindExportedTypeByName`方法使用由公共语言运行时解析引用的标准规则。  
+ The `FindExportedTypeByName` method uses the standard rules employed by the common language runtime for resolving references.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

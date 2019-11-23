@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 154b2460-59ce-4874-a9f2-1b3353486ac5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3de3a9c152f3074339dba330b7827cf795a7e537
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2c3c3a0168216902e5982b7d0193e72acc2bdf47
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745974"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448093"
 ---
 # <a name="iceegengetsectioncreate-method"></a>ICeeGen::GetSectionCreate 方法
-生成并获取使用指定的名称和标记值的代码节。  
+Generates and gets a code section using the specified name and flag values.  
   
- 此方法已过时，不应使用。  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,23 +39,23 @@ HRESULT GetSectionCreate (
   
 ## <a name="parameters"></a>参数  
  `name`  
- [in]指向一个字符串，指定要创建的节的名称的指针。  
+ [in] A pointer to a string that specifies the name of the section to be created.  
   
  `flags`  
- [in]指定选项的标志。  
+ [in] Flags that specify options.  
   
  `section`  
- [out]指向新创建的代码部分的指针。  
+ [out] A pointer to the newly created code section.  
   
 ## <a name="remarks"></a>备注  
- 调用`GetSectionCreate`仅在具有未由其他方法的特殊部分要求。  
+ Call `GetSectionCreate` only if you have special section requirements that are not handled by other methods.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

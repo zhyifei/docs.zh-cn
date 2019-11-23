@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 532c7a02-a9de-4cea-bb2b-7f470da594de
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 08b35dd1744dbbb64d202718b61a9db5684d3bc3
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: ad721d28f6a7dc6ae0370ce10178990cb02fb9f9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380364"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430049"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences 方法
 
@@ -48,7 +46,7 @@ HRESULT ConditionalWeakTableElementReferences(
 [in] 一个包含对象 ID 的数组，其中每个对象 ID 都包含相关句柄对中主要元素的 `ObjectID`。
 
 `valueRefIds`\
-[in] 一个包含对象 ID 的数组，其中每个对象 ID 都包含相关句柄对中次要元素的 `ObjectID`。 (`keyRefIds[i]`保留`valueRefIds[i]`保持活动状态。)
+[in] 一个包含对象 ID 的数组，其中每个对象 ID 都包含相关句柄对中次要元素的 `ObjectID`。 (`keyRefIds[i]` keeps `valueRefIds[i]` alive.)
 
 `rootIds`\
 [in] 一个包含 `GCHandleID` 值的数组，这些值指向包含有关垃圾回收根的附加信息的整数。
@@ -57,7 +55,7 @@ HRESULT ConditionalWeakTableElementReferences(
 
 ## <a name="example"></a>示例
 
-下面的代码示例演示如何实现[ICorProfilerCallback5](icorprofilercallback5-interface.md) ，并使用此方法。
+The following code example demonstrates how to implement [ICorProfilerCallback5](icorprofilercallback5-interface.md) and use this method.
 
 ```cpp
 HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
@@ -82,13 +80,13 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 
 ## <a name="remarks"></a>备注
 
-.NET Framework 4.5 或更高版本实现的探查器[ICorProfilerCallback5](icorprofilercallback5-interface.md)接口并记录由指定的依赖项`ConditionalWeakTableElementReferences`方法。 `ICorProfilerCallback5` 提供所表示的活动对象之间的依赖关系的一组完整`ConditionalWeakTable`条目。 这些依赖关系和成员字段所指定的引用[icorprofilercallback:: Objectreferences](icorprofilercallback-objectreferences-method.md)方法启用托管的探查器生成的活动对象的完整对象图。
+A profiler for the .NET Framework 4.5 or later versions implements the [ICorProfilerCallback5](icorprofilercallback5-interface.md) interface and records the dependencies specified by the `ConditionalWeakTableElementReferences` method. `ICorProfilerCallback5` provides the complete set of dependencies among live objects represented by `ConditionalWeakTable` entries. These dependencies and the member field references specified by the [ICorProfilerCallback::ObjectReferences](icorprofilercallback-objectreferences-method.md) method enable a managed profiler to generate the full object graph of live objects.
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
 
-**标头：** CorProf.idl, CorProf.h
+**头文件：** CorProf.idl、CorProf.h
 
 **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
 

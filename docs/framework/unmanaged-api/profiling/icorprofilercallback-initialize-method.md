@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc5fab2a-4b45-4b12-8727-b89c9915f23e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e50421dc15dd30f1811dbe5ebef2ff2f7a0a9483
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 64df6a81eb23c20537238c702fd0c204d64d14bc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755822"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434548"
 ---
 # <a name="icorprofilercallbackinitialize-method"></a>ICorProfilerCallback::Initialize 方法
-调用以初始化代码探查器每次启动新的公共语言运行时 (CLR) 应用程序时。  
+Called to initialize the code profiler whenever a new common language runtime (CLR) application is started.  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,15 +34,15 @@ HRESULT Initialize(
   
 ## <a name="parameters"></a>参数  
  `pICorProfilerInfoUnk`  
- [在中](/cpp/atl/iunknown)探查器必须查询接口[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)接口指针。  
+ [in](/cpp/atl/iunknown) interface that the profiler must query for an [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interface pointer.  
   
 ## <a name="remarks"></a>备注  
- `Initialize`调用是启用 （或禁用） 是固定不变的回调的唯一机会。 通过启用回调后`Initialize`调用，不能禁用更高版本使用[icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)。 值 COR_PRF_MONITOR_IMMUTABLE [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)枚举指示哪个事件是固定不变。  
+ The `Initialize` call is the only opportunity to enable (or disable) callbacks that are immutable. Once a callback is enabled by the `Initialize` call, it cannot be disabled later using [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md). The COR_PRF_MONITOR_IMMUTABLE value of the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration indicates which events are immutable.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

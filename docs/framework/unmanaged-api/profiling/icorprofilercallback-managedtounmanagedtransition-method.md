@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef3cd619-912d-40c5-a449-03ba02a39ee7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 277e035ab542f895ca700ecd5f3205cc757c9ddd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f4f5871bdd7adf11fcc811fd40c62e3027b8e607
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769308"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426184"
 ---
 # <a name="icorprofilercallbackmanagedtounmanagedtransition-method"></a>ICorProfilerCallback::ManagedToUnmanagedTransition 方法
-通知探查器已发生从托管代码到非托管代码的转换。  
+Notifies the profiler that a transition from managed code to unmanaged code has occurred.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,18 +35,18 @@ HRESULT ManagedToUnmanagedTransition(
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in]正在调用的函数的 ID。  
+ [in] The ID of the function that is being called.  
   
  `reason`  
- [in]值为[COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md)指示转换是否发生了由于存在从托管代码到非托管代码的调用或由于从托管函数调用的非托管一个返回的枚举。  
+ [in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into unmanaged code from managed code, or because of a return from a managed function called by an unmanaged one.  
   
 ## <a name="remarks"></a>备注  
- 如果的值`reason`是 COR_PRF_TRANSITION_CALL，ID 是的非托管函数中，将永远不会已编译的使用中实时编译器该函数。 非托管的函数具有与它们，如名称和一些元数据相关联的基本信息。 如果通过使用隐式平台调用非托管的函数调用 (PInvoke)，运行时调用的目标和的值不能确定`functionId`将为 null。 有关隐式 PInvoke 的详细信息，请参阅[使用C++互操作 (隐式 PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)。  
+ If the value of `reason` is COR_PRF_TRANSITION_CALL, the function ID is that of the unmanaged function, which will never have been compiled using the just-in-time compiler. Unmanaged functions have basic information associated with them, such as a name and some metadata. If the unmanaged function was called by using implicit platform invoke (PInvoke), the runtime cannot determine the destination of the call and the value of `functionId` will be null. For more information on implicit PInvoke, see [Using C++ Interop (Implicit PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke).  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   
