@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 727819d5-1dab-4ebb-ac25-950b4111dc72
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7f27955467436d562c6a9acc9d7f666427e4c85b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4347a4da3e58a20c98e217de3a71c448e244eb29
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770712"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440116"
 ---
-# <a name="imetadataimportcloseenum-method"></a><span data-ttu-id="32e3a-102">IMetaDataImport::CloseEnum 方法</span><span class="sxs-lookup"><span data-stu-id="32e3a-102">IMetaDataImport::CloseEnum Method</span></span>
-<span data-ttu-id="32e3a-103">关闭由指定句柄的枚举器。</span><span class="sxs-lookup"><span data-stu-id="32e3a-103">Closes the enumerator that is identified by the specified handle.</span></span>  
+# <a name="imetadataimportcloseenum-method"></a><span data-ttu-id="18a55-102">IMetaDataImport::CloseEnum 方法</span><span class="sxs-lookup"><span data-stu-id="18a55-102">IMetaDataImport::CloseEnum Method</span></span>
+<span data-ttu-id="18a55-103">Closes the enumerator that is identified by the specified handle.</span><span class="sxs-lookup"><span data-stu-id="18a55-103">Closes the enumerator that is identified by the specified handle.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="32e3a-104">语法</span><span class="sxs-lookup"><span data-stu-id="32e3a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="18a55-104">语法</span><span class="sxs-lookup"><span data-stu-id="18a55-104">Syntax</span></span>  
   
 ```cpp  
 void CloseEnum (  
@@ -35,23 +33,23 @@ void CloseEnum (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="32e3a-105">参数</span><span class="sxs-lookup"><span data-stu-id="32e3a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="18a55-105">参数</span><span class="sxs-lookup"><span data-stu-id="18a55-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="32e3a-106">[in]枚举器来关闭句柄。</span><span class="sxs-lookup"><span data-stu-id="32e3a-106">[in] The handle for the enumerator to close.</span></span>  
+ <span data-ttu-id="18a55-106">[in] The handle for the enumerator to close.</span><span class="sxs-lookup"><span data-stu-id="18a55-106">[in] The handle for the enumerator to close.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="32e3a-107">备注</span><span class="sxs-lookup"><span data-stu-id="32e3a-107">Remarks</span></span>  
- <span data-ttu-id="32e3a-108">通过指定的句柄`hEnum`获取从以前`Enum`*名称*调用 (例如， [imetadataimport:: Enumtypedefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md))。</span><span class="sxs-lookup"><span data-stu-id="32e3a-108">The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="18a55-107">备注</span><span class="sxs-lookup"><span data-stu-id="18a55-107">Remarks</span></span>  
+ <span data-ttu-id="18a55-108">The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).</span><span class="sxs-lookup"><span data-stu-id="18a55-108">The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="32e3a-109">要求</span><span class="sxs-lookup"><span data-stu-id="32e3a-109">Requirements</span></span>  
- <span data-ttu-id="32e3a-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="32e3a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="18a55-109">要求</span><span class="sxs-lookup"><span data-stu-id="18a55-109">Requirements</span></span>  
+ <span data-ttu-id="18a55-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="18a55-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="32e3a-111">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="32e3a-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="18a55-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="18a55-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="32e3a-112">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="32e3a-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="18a55-112">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="18a55-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="32e3a-113">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="32e3a-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="18a55-113">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="18a55-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="32e3a-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="32e3a-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="18a55-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="18a55-114">See also</span></span>
 
-- [<span data-ttu-id="32e3a-115">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="32e3a-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="32e3a-116">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="32e3a-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="18a55-115">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="18a55-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="18a55-116">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="18a55-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

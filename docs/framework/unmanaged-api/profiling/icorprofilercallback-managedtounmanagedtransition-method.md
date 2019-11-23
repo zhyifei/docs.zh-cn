@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: ef3cd619-912d-40c5-a449-03ba02a39ee7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 277e035ab542f895ca700ecd5f3205cc757c9ddd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f4f5871bdd7adf11fcc811fd40c62e3027b8e607
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769308"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426184"
 ---
-# <a name="icorprofilercallbackmanagedtounmanagedtransition-method"></a><span data-ttu-id="4c00a-102">ICorProfilerCallback::ManagedToUnmanagedTransition 方法</span><span class="sxs-lookup"><span data-stu-id="4c00a-102">ICorProfilerCallback::ManagedToUnmanagedTransition Method</span></span>
-<span data-ttu-id="4c00a-103">通知探查器已发生从托管代码到非托管代码的转换。</span><span class="sxs-lookup"><span data-stu-id="4c00a-103">Notifies the profiler that a transition from managed code to unmanaged code has occurred.</span></span>  
+# <a name="icorprofilercallbackmanagedtounmanagedtransition-method"></a><span data-ttu-id="8629f-102">ICorProfilerCallback::ManagedToUnmanagedTransition 方法</span><span class="sxs-lookup"><span data-stu-id="8629f-102">ICorProfilerCallback::ManagedToUnmanagedTransition Method</span></span>
+<span data-ttu-id="8629f-103">Notifies the profiler that a transition from managed code to unmanaged code has occurred.</span><span class="sxs-lookup"><span data-stu-id="8629f-103">Notifies the profiler that a transition from managed code to unmanaged code has occurred.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4c00a-104">语法</span><span class="sxs-lookup"><span data-stu-id="4c00a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8629f-104">语法</span><span class="sxs-lookup"><span data-stu-id="8629f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ManagedToUnmanagedTransition(  
@@ -35,27 +33,27 @@ HRESULT ManagedToUnmanagedTransition(
     [in] COR_PRF_TRANSITION_REASON reason);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4c00a-105">参数</span><span class="sxs-lookup"><span data-stu-id="4c00a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8629f-105">参数</span><span class="sxs-lookup"><span data-stu-id="8629f-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="4c00a-106">[in]正在调用的函数的 ID。</span><span class="sxs-lookup"><span data-stu-id="4c00a-106">[in] The ID of the function that is being called.</span></span>  
+ <span data-ttu-id="8629f-106">[in] The ID of the function that is being called.</span><span class="sxs-lookup"><span data-stu-id="8629f-106">[in] The ID of the function that is being called.</span></span>  
   
  `reason`  
- <span data-ttu-id="4c00a-107">[in]值为[COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md)指示转换是否发生了由于存在从托管代码到非托管代码的调用或由于从托管函数调用的非托管一个返回的枚举。</span><span class="sxs-lookup"><span data-stu-id="4c00a-107">[in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into unmanaged code from managed code, or because of a return from a managed function called by an unmanaged one.</span></span>  
+ <span data-ttu-id="8629f-107">[in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into unmanaged code from managed code, or because of a return from a managed function called by an unmanaged one.</span><span class="sxs-lookup"><span data-stu-id="8629f-107">[in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into unmanaged code from managed code, or because of a return from a managed function called by an unmanaged one.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4c00a-108">备注</span><span class="sxs-lookup"><span data-stu-id="4c00a-108">Remarks</span></span>  
- <span data-ttu-id="4c00a-109">如果的值`reason`是 COR_PRF_TRANSITION_CALL，ID 是的非托管函数中，将永远不会已编译的使用中实时编译器该函数。</span><span class="sxs-lookup"><span data-stu-id="4c00a-109">If the value of `reason` is COR_PRF_TRANSITION_CALL, the function ID is that of the unmanaged function, which will never have been compiled using the just-in-time compiler.</span></span> <span data-ttu-id="4c00a-110">非托管的函数具有与它们，如名称和一些元数据相关联的基本信息。</span><span class="sxs-lookup"><span data-stu-id="4c00a-110">Unmanaged functions have basic information associated with them, such as a name and some metadata.</span></span> <span data-ttu-id="4c00a-111">如果通过使用隐式平台调用非托管的函数调用 (PInvoke)，运行时调用的目标和的值不能确定`functionId`将为 null。</span><span class="sxs-lookup"><span data-stu-id="4c00a-111">If the unmanaged function was called by using implicit platform invoke (PInvoke), the runtime cannot determine the destination of the call and the value of `functionId` will be null.</span></span> <span data-ttu-id="4c00a-112">有关隐式 PInvoke 的详细信息，请参阅[使用C++互操作 (隐式 PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)。</span><span class="sxs-lookup"><span data-stu-id="4c00a-112">For more information on implicit PInvoke, see [Using C++ Interop (Implicit PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8629f-108">备注</span><span class="sxs-lookup"><span data-stu-id="8629f-108">Remarks</span></span>  
+ <span data-ttu-id="8629f-109">If the value of `reason` is COR_PRF_TRANSITION_CALL, the function ID is that of the unmanaged function, which will never have been compiled using the just-in-time compiler.</span><span class="sxs-lookup"><span data-stu-id="8629f-109">If the value of `reason` is COR_PRF_TRANSITION_CALL, the function ID is that of the unmanaged function, which will never have been compiled using the just-in-time compiler.</span></span> <span data-ttu-id="8629f-110">Unmanaged functions have basic information associated with them, such as a name and some metadata.</span><span class="sxs-lookup"><span data-stu-id="8629f-110">Unmanaged functions have basic information associated with them, such as a name and some metadata.</span></span> <span data-ttu-id="8629f-111">If the unmanaged function was called by using implicit platform invoke (PInvoke), the runtime cannot determine the destination of the call and the value of `functionId` will be null.</span><span class="sxs-lookup"><span data-stu-id="8629f-111">If the unmanaged function was called by using implicit platform invoke (PInvoke), the runtime cannot determine the destination of the call and the value of `functionId` will be null.</span></span> <span data-ttu-id="8629f-112">For more information on implicit PInvoke, see [Using C++ Interop (Implicit PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke).</span><span class="sxs-lookup"><span data-stu-id="8629f-112">For more information on implicit PInvoke, see [Using C++ Interop (Implicit PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4c00a-113">要求</span><span class="sxs-lookup"><span data-stu-id="4c00a-113">Requirements</span></span>  
- <span data-ttu-id="4c00a-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4c00a-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8629f-113">要求</span><span class="sxs-lookup"><span data-stu-id="8629f-113">Requirements</span></span>  
+ <span data-ttu-id="8629f-114">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8629f-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4c00a-115">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4c00a-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="8629f-115">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8629f-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="4c00a-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4c00a-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8629f-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8629f-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4c00a-117">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4c00a-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8629f-117">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8629f-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4c00a-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="4c00a-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8629f-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="8629f-118">See also</span></span>
 
-- [<span data-ttu-id="4c00a-119">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="4c00a-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="4c00a-120">UnmanagedToManagedTransition 方法</span><span class="sxs-lookup"><span data-stu-id="4c00a-120">UnmanagedToManagedTransition Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md)
-- [<span data-ttu-id="4c00a-121">在 C++ 中使用显式 PInvoke（DllImport 特性）</span><span class="sxs-lookup"><span data-stu-id="4c00a-121">Using Explicit PInvoke in C++ (DllImport Attribute)</span></span>](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)
+- [<span data-ttu-id="8629f-119">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="8629f-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="8629f-120">UnmanagedToManagedTransition 方法</span><span class="sxs-lookup"><span data-stu-id="8629f-120">UnmanagedToManagedTransition Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md)
+- [<span data-ttu-id="8629f-121">在 C++ 中使用显式 PInvoke（DllImport 特性）</span><span class="sxs-lookup"><span data-stu-id="8629f-121">Using Explicit PInvoke in C++ (DllImport Attribute)</span></span>](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6fab8a58-3883-490f-8b27-64042c90f104
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a9466df3f6413f86eb8558f0037b96c254b2a2e1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f6a741df3ea57b5e9b4fa8bc5d304bfedd1d6c15
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777339"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428010"
 ---
-# <a name="isymunmanagedwriterdefinelocalvariable-method"></a><span data-ttu-id="5beae-102">ISymUnmanagedWriter::DefineLocalVariable 方法</span><span class="sxs-lookup"><span data-stu-id="5beae-102">ISymUnmanagedWriter::DefineLocalVariable Method</span></span>
-<span data-ttu-id="5beae-103">在当前词法范围内定义单个变量。</span><span class="sxs-lookup"><span data-stu-id="5beae-103">Defines a single variable in the current lexical scope.</span></span> <span data-ttu-id="5beae-104">在范围内具有多个家庭的相同名称的变量，此方法可以调用多次。</span><span class="sxs-lookup"><span data-stu-id="5beae-104">This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope.</span></span> <span data-ttu-id="5beae-105">在此情况下，但是，值`startOffset`和`endOffset`参数不能重叠。</span><span class="sxs-lookup"><span data-stu-id="5beae-105">In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.</span></span>  
+# <a name="isymunmanagedwriterdefinelocalvariable-method"></a><span data-ttu-id="d1695-102">ISymUnmanagedWriter::DefineLocalVariable 方法</span><span class="sxs-lookup"><span data-stu-id="d1695-102">ISymUnmanagedWriter::DefineLocalVariable Method</span></span>
+<span data-ttu-id="d1695-103">在当前词法范围内定义单个变量。</span><span class="sxs-lookup"><span data-stu-id="d1695-103">Defines a single variable in the current lexical scope.</span></span> <span data-ttu-id="d1695-104">This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope.</span><span class="sxs-lookup"><span data-stu-id="d1695-104">This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope.</span></span> <span data-ttu-id="d1695-105">In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.</span><span class="sxs-lookup"><span data-stu-id="d1695-105">In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5beae-106">语法</span><span class="sxs-lookup"><span data-stu-id="5beae-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d1695-106">语法</span><span class="sxs-lookup"><span data-stu-id="d1695-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineLocalVariable(  
@@ -43,45 +41,45 @@ HRESULT DefineLocalVariable(
     [in] ULONG32      endOffset);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5beae-107">参数</span><span class="sxs-lookup"><span data-stu-id="5beae-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d1695-107">参数</span><span class="sxs-lookup"><span data-stu-id="d1695-107">Parameters</span></span>  
  `name`  
- <span data-ttu-id="5beae-108">[in]一个指向`WCHAR`，用于定义本地变量的名称。</span><span class="sxs-lookup"><span data-stu-id="5beae-108">[in] A pointer to a `WCHAR` that defines the local variable name.</span></span>  
+ <span data-ttu-id="d1695-108">[in] A pointer to a `WCHAR` that defines the local variable name.</span><span class="sxs-lookup"><span data-stu-id="d1695-108">[in] A pointer to a `WCHAR` that defines the local variable name.</span></span>  
   
  `attributes`  
- <span data-ttu-id="5beae-109">[in]局部变量特性。</span><span class="sxs-lookup"><span data-stu-id="5beae-109">[in] The local variable attributes.</span></span>  
+ <span data-ttu-id="d1695-109">[in] The local variable attributes.</span><span class="sxs-lookup"><span data-stu-id="d1695-109">[in] The local variable attributes.</span></span>  
   
  `cSig`  
- <span data-ttu-id="5beae-110">[in]一个`ULONG32`指示的大小，以字节为单位，`signature`缓冲区。</span><span class="sxs-lookup"><span data-stu-id="5beae-110">[in] A `ULONG32` that indicates the size, in bytes, of the `signature` buffer.</span></span>  
+ <span data-ttu-id="d1695-110">[in] A `ULONG32` that indicates the size, in bytes, of the `signature` buffer.</span><span class="sxs-lookup"><span data-stu-id="d1695-110">[in] A `ULONG32` that indicates the size, in bytes, of the `signature` buffer.</span></span>  
   
  `signature`  
- <span data-ttu-id="5beae-111">[in]局部变量签名。</span><span class="sxs-lookup"><span data-stu-id="5beae-111">[in] The local variable signature.</span></span>  
+ <span data-ttu-id="d1695-111">[in] The local variable signature.</span><span class="sxs-lookup"><span data-stu-id="d1695-111">[in] The local variable signature.</span></span>  
   
  `addrKind`  
- <span data-ttu-id="5beae-112">[in]地址类型。</span><span class="sxs-lookup"><span data-stu-id="5beae-112">[in] The address type.</span></span>  
+ <span data-ttu-id="d1695-112">[in] The address type.</span><span class="sxs-lookup"><span data-stu-id="d1695-112">[in] The address type.</span></span>  
   
  `addr1`  
- <span data-ttu-id="5beae-113">[in]参数规格的第一个地址。</span><span class="sxs-lookup"><span data-stu-id="5beae-113">[in] The first address for the parameter specification.</span></span>  
+ <span data-ttu-id="d1695-113">[in] The first address for the parameter specification.</span><span class="sxs-lookup"><span data-stu-id="d1695-113">[in] The first address for the parameter specification.</span></span>  
   
  `addr2`  
- <span data-ttu-id="5beae-114">[in]参数规格的第二个地址。</span><span class="sxs-lookup"><span data-stu-id="5beae-114">[in] The second address for the parameter specification.</span></span>  
+ <span data-ttu-id="d1695-114">[in] The second address for the parameter specification.</span><span class="sxs-lookup"><span data-stu-id="d1695-114">[in] The second address for the parameter specification.</span></span>  
   
  `addr3`  
- <span data-ttu-id="5beae-115">[in]参数规格的第三个地址。</span><span class="sxs-lookup"><span data-stu-id="5beae-115">[in] The third address for the parameter specification.</span></span>  
+ <span data-ttu-id="d1695-115">[in] The third address for the parameter specification.</span><span class="sxs-lookup"><span data-stu-id="d1695-115">[in] The third address for the parameter specification.</span></span>  
   
  `startOffset`  
- <span data-ttu-id="5beae-116">[in]变量的起始偏移量。</span><span class="sxs-lookup"><span data-stu-id="5beae-116">[in] The start offset for the variable.</span></span> <span data-ttu-id="5beae-117">此参数可选。</span><span class="sxs-lookup"><span data-stu-id="5beae-117">This parameter is optional.</span></span> <span data-ttu-id="5beae-118">如果该值为 0，则忽略此参数，并在整个范围内定义的变量。</span><span class="sxs-lookup"><span data-stu-id="5beae-118">If it is 0, this parameter is ignored and the variable is defined throughout the entire scope.</span></span> <span data-ttu-id="5beae-119">如果它是一个非零值，该变量在当前作用域的偏移量之内。</span><span class="sxs-lookup"><span data-stu-id="5beae-119">If it is a nonzero value, the variable falls within the offsets of the current scope.</span></span>  
+ <span data-ttu-id="d1695-116">[in] The start offset for the variable.</span><span class="sxs-lookup"><span data-stu-id="d1695-116">[in] The start offset for the variable.</span></span> <span data-ttu-id="d1695-117">此参数可选。</span><span class="sxs-lookup"><span data-stu-id="d1695-117">This parameter is optional.</span></span> <span data-ttu-id="d1695-118">If it is 0, this parameter is ignored and the variable is defined throughout the entire scope.</span><span class="sxs-lookup"><span data-stu-id="d1695-118">If it is 0, this parameter is ignored and the variable is defined throughout the entire scope.</span></span> <span data-ttu-id="d1695-119">If it is a nonzero value, the variable falls within the offsets of the current scope.</span><span class="sxs-lookup"><span data-stu-id="d1695-119">If it is a nonzero value, the variable falls within the offsets of the current scope.</span></span>  
   
  `endOffset`  
- <span data-ttu-id="5beae-120">[in]变量的结束偏移量。</span><span class="sxs-lookup"><span data-stu-id="5beae-120">[in] The end offset for the variable.</span></span> <span data-ttu-id="5beae-121">此参数可选。</span><span class="sxs-lookup"><span data-stu-id="5beae-121">This parameter is optional.</span></span> <span data-ttu-id="5beae-122">如果该值为 0，则忽略此参数，并在整个范围内定义的变量。</span><span class="sxs-lookup"><span data-stu-id="5beae-122">If it is 0, this parameter is ignored and the variable is defined throughout the entire scope.</span></span> <span data-ttu-id="5beae-123">如果它是一个非零值，该变量在当前作用域的偏移量之内。</span><span class="sxs-lookup"><span data-stu-id="5beae-123">If it is a nonzero value, the variable falls within the offsets of the current scope.</span></span>  
+ <span data-ttu-id="d1695-120">[in] The end offset for the variable.</span><span class="sxs-lookup"><span data-stu-id="d1695-120">[in] The end offset for the variable.</span></span> <span data-ttu-id="d1695-121">此参数可选。</span><span class="sxs-lookup"><span data-stu-id="d1695-121">This parameter is optional.</span></span> <span data-ttu-id="d1695-122">If it is 0, this parameter is ignored and the variable is defined throughout the entire scope.</span><span class="sxs-lookup"><span data-stu-id="d1695-122">If it is 0, this parameter is ignored and the variable is defined throughout the entire scope.</span></span> <span data-ttu-id="d1695-123">If it is a nonzero value, the variable falls within the offsets of the current scope.</span><span class="sxs-lookup"><span data-stu-id="d1695-123">If it is a nonzero value, the variable falls within the offsets of the current scope.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5beae-124">返回值</span><span class="sxs-lookup"><span data-stu-id="5beae-124">Return Value</span></span>  
- <span data-ttu-id="5beae-125">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="5beae-125">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d1695-124">返回值</span><span class="sxs-lookup"><span data-stu-id="d1695-124">Return Value</span></span>  
+ <span data-ttu-id="d1695-125">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="d1695-125">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5beae-126">要求</span><span class="sxs-lookup"><span data-stu-id="5beae-126">Requirements</span></span>  
- <span data-ttu-id="5beae-127">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5beae-127">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d1695-126">要求</span><span class="sxs-lookup"><span data-stu-id="d1695-126">Requirements</span></span>  
+ <span data-ttu-id="d1695-127">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d1695-127">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5beae-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="5beae-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d1695-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="d1695-128">See also</span></span>
 
-- [<span data-ttu-id="5beae-129">ISymUnmanagedWriter 接口</span><span class="sxs-lookup"><span data-stu-id="5beae-129">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="5beae-130">DefineGlobalVariable 方法</span><span class="sxs-lookup"><span data-stu-id="5beae-130">DefineGlobalVariable Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)
-- [<span data-ttu-id="5beae-131">DefineLocalVariable2 方法</span><span class="sxs-lookup"><span data-stu-id="5beae-131">DefineLocalVariable2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-definelocalvariable2-method.md)
+- [<span data-ttu-id="d1695-129">ISymUnmanagedWriter 接口</span><span class="sxs-lookup"><span data-stu-id="d1695-129">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="d1695-130">DefineGlobalVariable 方法</span><span class="sxs-lookup"><span data-stu-id="d1695-130">DefineGlobalVariable Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)
+- [<span data-ttu-id="d1695-131">DefineLocalVariable2 方法</span><span class="sxs-lookup"><span data-stu-id="d1695-131">DefineLocalVariable2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-definelocalvariable2-method.md)

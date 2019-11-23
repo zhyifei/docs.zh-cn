@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: ad2710a7-edb8-4493-8619-3fce235e3334
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3adc29f73a3ab4a43a399b024a6c0187f02b5851
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8433ff6e0ec550d6b0558bfb9c7698c49e98278c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750617"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436381"
 ---
-# <a name="iceegenemitstring-method"></a><span data-ttu-id="399b0-102">ICeeGen::EmitString 方法</span><span class="sxs-lookup"><span data-stu-id="399b0-102">ICeeGen::EmitString Method</span></span>
-<span data-ttu-id="399b0-103">将指定的字符串发出到基本代码。</span><span class="sxs-lookup"><span data-stu-id="399b0-103">Emits the specified string into the code base.</span></span>  
+# <a name="iceegenemitstring-method"></a><span data-ttu-id="3a6b7-102">ICeeGen::EmitString 方法</span><span class="sxs-lookup"><span data-stu-id="3a6b7-102">ICeeGen::EmitString Method</span></span>
+<span data-ttu-id="3a6b7-103">Emits the specified string into the code base.</span><span class="sxs-lookup"><span data-stu-id="3a6b7-103">Emits the specified string into the code base.</span></span>  
   
- <span data-ttu-id="399b0-104">此方法已过时，不应使用。</span><span class="sxs-lookup"><span data-stu-id="399b0-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="3a6b7-104">This method is obsolete and should not be used.</span><span class="sxs-lookup"><span data-stu-id="3a6b7-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="399b0-105">语法</span><span class="sxs-lookup"><span data-stu-id="399b0-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3a6b7-105">语法</span><span class="sxs-lookup"><span data-stu-id="3a6b7-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT EmitString (  
@@ -38,22 +36,22 @@ HRESULT EmitString (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="399b0-106">参数</span><span class="sxs-lookup"><span data-stu-id="399b0-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3a6b7-106">参数</span><span class="sxs-lookup"><span data-stu-id="3a6b7-106">Parameters</span></span>  
  `lpString`  
- <span data-ttu-id="399b0-107">[in]要发出的字符串。</span><span class="sxs-lookup"><span data-stu-id="399b0-107">[in] The string to emit.</span></span>  
+ <span data-ttu-id="3a6b7-107">[in] The string to emit.</span><span class="sxs-lookup"><span data-stu-id="3a6b7-107">[in] The string to emit.</span></span>  
   
  `RVA`  
- <span data-ttu-id="399b0-108">[out]发出的字符串的相对虚拟地址。</span><span class="sxs-lookup"><span data-stu-id="399b0-108">[out] The relative virtual address of the emitted string.</span></span>  
+ <span data-ttu-id="3a6b7-108">[out] The relative virtual address of the emitted string.</span><span class="sxs-lookup"><span data-stu-id="3a6b7-108">[out] The relative virtual address of the emitted string.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="399b0-109">要求</span><span class="sxs-lookup"><span data-stu-id="399b0-109">Requirements</span></span>  
- <span data-ttu-id="399b0-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="399b0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3a6b7-109">要求</span><span class="sxs-lookup"><span data-stu-id="3a6b7-109">Requirements</span></span>  
+ <span data-ttu-id="3a6b7-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3a6b7-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="399b0-111">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="399b0-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="3a6b7-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3a6b7-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="399b0-112">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="399b0-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="3a6b7-112">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3a6b7-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="399b0-113">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="399b0-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3a6b7-113">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3a6b7-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="399b0-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="399b0-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3a6b7-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="3a6b7-114">See also</span></span>
 
-- [<span data-ttu-id="399b0-115">ICeeGen 接口</span><span class="sxs-lookup"><span data-stu-id="399b0-115">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="3a6b7-115">ICeeGen 接口</span><span class="sxs-lookup"><span data-stu-id="3a6b7-115">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

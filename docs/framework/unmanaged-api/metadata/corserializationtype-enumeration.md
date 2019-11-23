@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6b1fcd11-c7fb-4be2-8910-abc862d4caf4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b9b7138d403bc84ab377301b82d697fd137416c6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 064374285216e9fb054b299937087f1ca7c351a4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781595"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432873"
 ---
-# <a name="corserializationtype-enumeration"></a><span data-ttu-id="9ecb8-102">CorSerializationType 枚举</span><span class="sxs-lookup"><span data-stu-id="9ecb8-102">CorSerializationType Enumeration</span></span>
-<span data-ttu-id="9ecb8-103">指定公共语言运行时如何序列化对象。</span><span class="sxs-lookup"><span data-stu-id="9ecb8-103">Specifies how an object is serialized by the common language runtime.</span></span>  
+# <a name="corserializationtype-enumeration"></a><span data-ttu-id="ef352-102">CorSerializationType 枚举</span><span class="sxs-lookup"><span data-stu-id="ef352-102">CorSerializationType Enumeration</span></span>
+<span data-ttu-id="ef352-103">Specifies how an object is serialized by the common language runtime.</span><span class="sxs-lookup"><span data-stu-id="ef352-103">Specifies how an object is serialized by the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9ecb8-104">语法</span><span class="sxs-lookup"><span data-stu-id="9ecb8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ef352-104">语法</span><span class="sxs-lookup"><span data-stu-id="ef352-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorSerializationType {  
@@ -55,38 +53,38 @@ typedef enum CorSerializationType {
 } CorSerializationType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="9ecb8-105">成员</span><span class="sxs-lookup"><span data-stu-id="9ecb8-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="ef352-105">Members</span><span class="sxs-lookup"><span data-stu-id="ef352-105">Members</span></span>  
   
-|<span data-ttu-id="9ecb8-106">成员</span><span class="sxs-lookup"><span data-stu-id="9ecb8-106">Member</span></span>|<span data-ttu-id="9ecb8-107">描述</span><span class="sxs-lookup"><span data-stu-id="9ecb8-107">Description</span></span>|  
+|<span data-ttu-id="ef352-106">成员</span><span class="sxs-lookup"><span data-stu-id="ef352-106">Member</span></span>|<span data-ttu-id="ef352-107">描述</span><span class="sxs-lookup"><span data-stu-id="ef352-107">Description</span></span>|  
 |------------|-----------------|  
-|`SERIALIZATION_TYPE_UNDEFINED`|<span data-ttu-id="9ecb8-108">序列化的对象是未定义。</span><span class="sxs-lookup"><span data-stu-id="9ecb8-108">Serialization of the object is undefined.</span></span>|  
-|`SERIALIZATION_TYPE_BOOLEAN`|<span data-ttu-id="9ecb8-109">将对象序列化为布尔值类型</span><span class="sxs-lookup"><span data-stu-id="9ecb8-109">Object is serialized as a Boolean type</span></span>|  
-|`SERIALIZATION_TYPE_CHAR`|<span data-ttu-id="9ecb8-110">将对象序列化为字符类型。</span><span class="sxs-lookup"><span data-stu-id="9ecb8-110">Object is serialized as a character type.</span></span>|  
-|`SERIALIZATION_TYPE_I1`|<span data-ttu-id="9ecb8-111">对象序列化为 1 字节有符号整数。</span><span class="sxs-lookup"><span data-stu-id="9ecb8-111">Object is serialized as a signed 1-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_U1`|<span data-ttu-id="9ecb8-112">对象序列化为 1 字节无符号整数。</span><span class="sxs-lookup"><span data-stu-id="9ecb8-112">Object is serialized as an unsigned 1-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_I2`|<span data-ttu-id="9ecb8-113">对象序列化为 2 字节有符号整数。</span><span class="sxs-lookup"><span data-stu-id="9ecb8-113">Object is serialized as a signed 2-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_U2`|<span data-ttu-id="9ecb8-114">对象序列化为 2 字节无符号整数。</span><span class="sxs-lookup"><span data-stu-id="9ecb8-114">Object is serialized as an unsigned 2-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_I4`|<span data-ttu-id="9ecb8-115">对象序列化为 4 字节有符号整数。</span><span class="sxs-lookup"><span data-stu-id="9ecb8-115">Object is serialized as a signed 4-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_U4`|<span data-ttu-id="9ecb8-116">对象序列化为 4 字节无符号整数。</span><span class="sxs-lookup"><span data-stu-id="9ecb8-116">Object is serialized as an unsigned 4-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_I8`|<span data-ttu-id="9ecb8-117">对象序列化为 8 字节有符号整数。</span><span class="sxs-lookup"><span data-stu-id="9ecb8-117">Object is serialized as a signed 8-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_U8`|<span data-ttu-id="9ecb8-118">对象序列化为一个无符号的 8 字节整数。</span><span class="sxs-lookup"><span data-stu-id="9ecb8-118">Object is serialized as an unsigned 8-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_R4`|<span data-ttu-id="9ecb8-119">将对象序列化为 4 字节浮点数。</span><span class="sxs-lookup"><span data-stu-id="9ecb8-119">Object is serialized as a 4-byte floating point.</span></span>|  
-|`SERIALIZATION_TYPE_R8`|<span data-ttu-id="9ecb8-120">将对象序列化为 8 字节浮点数。</span><span class="sxs-lookup"><span data-stu-id="9ecb8-120">Object is serialized as an 8-byte floating point.</span></span>|  
-|`SERIALIZATION_TYPE_STRING`|<span data-ttu-id="9ecb8-121">将对象序列化为 System.String 类型。</span><span class="sxs-lookup"><span data-stu-id="9ecb8-121">Object is serialized as a System.String type.</span></span>|  
-|`SERIALIZATION_TYPE_SZARRAY`|<span data-ttu-id="9ecb8-122">将对象序列化为一维，零的下限的数组。</span><span class="sxs-lookup"><span data-stu-id="9ecb8-122">Object is serialized as a single-dimensional, zero lower-bound array.</span></span>|  
-|`SERIALIZATION_TYPE_TYPE`|<span data-ttu-id="9ecb8-123">将对象序列化为泛型类型。</span><span class="sxs-lookup"><span data-stu-id="9ecb8-123">Object is serialized as a generic type.</span></span>|  
-|`SERIALIZATION_TYPE_TAGGED_OBJECT`|<span data-ttu-id="9ecb8-124">将对象序列化为一个标记对象。</span><span class="sxs-lookup"><span data-stu-id="9ecb8-124">Object is serialized as a tagged object.</span></span>|  
-|`SERIALIZATION_TYPE_FIELD`|<span data-ttu-id="9ecb8-125">将对象序列化为一个字段。</span><span class="sxs-lookup"><span data-stu-id="9ecb8-125">Object is serialized as a field.</span></span>|  
-|`SERIALIZATION_TYPE_PROPERTY`|<span data-ttu-id="9ecb8-126">将对象序列化为一个属性。</span><span class="sxs-lookup"><span data-stu-id="9ecb8-126">Object is serialized as a property.</span></span>|  
-|`SERIALIZATION_TYPE_ENUM`|<span data-ttu-id="9ecb8-127">将对象序列化为一个枚举。</span><span class="sxs-lookup"><span data-stu-id="9ecb8-127">Object is serialized as an enumeration.</span></span>|  
+|`SERIALIZATION_TYPE_UNDEFINED`|<span data-ttu-id="ef352-108">Serialization of the object is undefined.</span><span class="sxs-lookup"><span data-stu-id="ef352-108">Serialization of the object is undefined.</span></span>|  
+|`SERIALIZATION_TYPE_BOOLEAN`|<span data-ttu-id="ef352-109">Object is serialized as a Boolean type</span><span class="sxs-lookup"><span data-stu-id="ef352-109">Object is serialized as a Boolean type</span></span>|  
+|`SERIALIZATION_TYPE_CHAR`|<span data-ttu-id="ef352-110">Object is serialized as a character type.</span><span class="sxs-lookup"><span data-stu-id="ef352-110">Object is serialized as a character type.</span></span>|  
+|`SERIALIZATION_TYPE_I1`|<span data-ttu-id="ef352-111">Object is serialized as a signed 1-byte integer.</span><span class="sxs-lookup"><span data-stu-id="ef352-111">Object is serialized as a signed 1-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_U1`|<span data-ttu-id="ef352-112">Object is serialized as an unsigned 1-byte integer.</span><span class="sxs-lookup"><span data-stu-id="ef352-112">Object is serialized as an unsigned 1-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_I2`|<span data-ttu-id="ef352-113">Object is serialized as a signed 2-byte integer.</span><span class="sxs-lookup"><span data-stu-id="ef352-113">Object is serialized as a signed 2-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_U2`|<span data-ttu-id="ef352-114">Object is serialized as an unsigned 2-byte integer.</span><span class="sxs-lookup"><span data-stu-id="ef352-114">Object is serialized as an unsigned 2-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_I4`|<span data-ttu-id="ef352-115">Object is serialized as a signed 4-byte integer.</span><span class="sxs-lookup"><span data-stu-id="ef352-115">Object is serialized as a signed 4-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_U4`|<span data-ttu-id="ef352-116">Object is serialized as an unsigned 4-byte integer.</span><span class="sxs-lookup"><span data-stu-id="ef352-116">Object is serialized as an unsigned 4-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_I8`|<span data-ttu-id="ef352-117">Object is serialized as a signed 8-byte integer.</span><span class="sxs-lookup"><span data-stu-id="ef352-117">Object is serialized as a signed 8-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_U8`|<span data-ttu-id="ef352-118">Object is serialized as an unsigned 8-byte integer.</span><span class="sxs-lookup"><span data-stu-id="ef352-118">Object is serialized as an unsigned 8-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_R4`|<span data-ttu-id="ef352-119">Object is serialized as a 4-byte floating point.</span><span class="sxs-lookup"><span data-stu-id="ef352-119">Object is serialized as a 4-byte floating point.</span></span>|  
+|`SERIALIZATION_TYPE_R8`|<span data-ttu-id="ef352-120">Object is serialized as an 8-byte floating point.</span><span class="sxs-lookup"><span data-stu-id="ef352-120">Object is serialized as an 8-byte floating point.</span></span>|  
+|`SERIALIZATION_TYPE_STRING`|<span data-ttu-id="ef352-121">Object is serialized as a System.String type.</span><span class="sxs-lookup"><span data-stu-id="ef352-121">Object is serialized as a System.String type.</span></span>|  
+|`SERIALIZATION_TYPE_SZARRAY`|<span data-ttu-id="ef352-122">Object is serialized as a single-dimensional, zero lower-bound array.</span><span class="sxs-lookup"><span data-stu-id="ef352-122">Object is serialized as a single-dimensional, zero lower-bound array.</span></span>|  
+|`SERIALIZATION_TYPE_TYPE`|<span data-ttu-id="ef352-123">Object is serialized as a generic type.</span><span class="sxs-lookup"><span data-stu-id="ef352-123">Object is serialized as a generic type.</span></span>|  
+|`SERIALIZATION_TYPE_TAGGED_OBJECT`|<span data-ttu-id="ef352-124">Object is serialized as a tagged object.</span><span class="sxs-lookup"><span data-stu-id="ef352-124">Object is serialized as a tagged object.</span></span>|  
+|`SERIALIZATION_TYPE_FIELD`|<span data-ttu-id="ef352-125">Object is serialized as a field.</span><span class="sxs-lookup"><span data-stu-id="ef352-125">Object is serialized as a field.</span></span>|  
+|`SERIALIZATION_TYPE_PROPERTY`|<span data-ttu-id="ef352-126">Object is serialized as a property.</span><span class="sxs-lookup"><span data-stu-id="ef352-126">Object is serialized as a property.</span></span>|  
+|`SERIALIZATION_TYPE_ENUM`|<span data-ttu-id="ef352-127">Object is serialized as an enumeration.</span><span class="sxs-lookup"><span data-stu-id="ef352-127">Object is serialized as an enumeration.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9ecb8-128">要求</span><span class="sxs-lookup"><span data-stu-id="9ecb8-128">Requirements</span></span>  
- <span data-ttu-id="9ecb8-129">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9ecb8-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ef352-128">要求</span><span class="sxs-lookup"><span data-stu-id="ef352-128">Requirements</span></span>  
+ <span data-ttu-id="ef352-129">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ef352-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9ecb8-130">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="9ecb8-130">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="ef352-130">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="ef352-130">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="9ecb8-131">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9ecb8-131">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ef352-131">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ef352-131">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9ecb8-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="9ecb8-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ef352-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="ef352-132">See also</span></span>
 
-- [<span data-ttu-id="9ecb8-133">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="9ecb8-133">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="ef352-133">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="ef352-133">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

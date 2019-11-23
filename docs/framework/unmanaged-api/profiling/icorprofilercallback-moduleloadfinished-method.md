@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 050649e5-ffc0-4458-a0a4-d9ee128a219e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c04b7862363b441ab35d6dd364c4dffaf7464153
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 08fbf49e6944de4934a9fe7a960405ee96a7d8e3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769226"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445937"
 ---
-# <a name="icorprofilercallbackmoduleloadfinished-method"></a><span data-ttu-id="eab19-102">ICorProfilerCallback::ModuleLoadFinished 方法</span><span class="sxs-lookup"><span data-stu-id="eab19-102">ICorProfilerCallback::ModuleLoadFinished Method</span></span>
-<span data-ttu-id="eab19-103">通知探查器模块已完成加载。</span><span class="sxs-lookup"><span data-stu-id="eab19-103">Notifies the profiler that a module has finished loading.</span></span>  
+# <a name="icorprofilercallbackmoduleloadfinished-method"></a><span data-ttu-id="e75b6-102">ICorProfilerCallback::ModuleLoadFinished 方法</span><span class="sxs-lookup"><span data-stu-id="e75b6-102">ICorProfilerCallback::ModuleLoadFinished Method</span></span>
+<span data-ttu-id="e75b6-103">Notifies the profiler that a module has finished loading.</span><span class="sxs-lookup"><span data-stu-id="e75b6-103">Notifies the profiler that a module has finished loading.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eab19-104">语法</span><span class="sxs-lookup"><span data-stu-id="eab19-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e75b6-104">语法</span><span class="sxs-lookup"><span data-stu-id="e75b6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ModuleLoadFinished(  
@@ -35,28 +33,28 @@ HRESULT ModuleLoadFinished(
     [in] HRESULT  hrStatus);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="eab19-105">参数</span><span class="sxs-lookup"><span data-stu-id="eab19-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e75b6-105">参数</span><span class="sxs-lookup"><span data-stu-id="e75b6-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="eab19-106">[in]已完成加载的模块的 ID。</span><span class="sxs-lookup"><span data-stu-id="eab19-106">[in] The ID of the module that has finished loading.</span></span>  
+ <span data-ttu-id="e75b6-106">[in] The ID of the module that has finished loading.</span><span class="sxs-lookup"><span data-stu-id="e75b6-106">[in] The ID of the module that has finished loading.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="eab19-107">[in]一个 HRESULT，指示是否已成功加载的模块。</span><span class="sxs-lookup"><span data-stu-id="eab19-107">[in] An HRESULT that indicates whether the module was loaded successfully.</span></span>  
+ <span data-ttu-id="e75b6-107">[in] An HRESULT that indicates whether the module was loaded successfully.</span><span class="sxs-lookup"><span data-stu-id="e75b6-107">[in] An HRESULT that indicates whether the module was loaded successfully.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="eab19-108">备注</span><span class="sxs-lookup"><span data-stu-id="eab19-108">Remarks</span></span>  
- <span data-ttu-id="eab19-109">值`moduleId`不是有效信息请求直到`ModuleLoadFinished`调用方法。</span><span class="sxs-lookup"><span data-stu-id="eab19-109">The value of `moduleId` is not valid for an information request until the `ModuleLoadFinished` method is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e75b6-108">备注</span><span class="sxs-lookup"><span data-stu-id="e75b6-108">Remarks</span></span>  
+ <span data-ttu-id="e75b6-109">The value of `moduleId` is not valid for an information request until the `ModuleLoadFinished` method is called.</span><span class="sxs-lookup"><span data-stu-id="e75b6-109">The value of `moduleId` is not valid for an information request until the `ModuleLoadFinished` method is called.</span></span>  
   
- <span data-ttu-id="eab19-110">加载该模块的某些部分可能会继续后`ModuleLoadFinished`回调。</span><span class="sxs-lookup"><span data-stu-id="eab19-110">Some parts of loading the module might continue after the `ModuleLoadFinished` callback.</span></span> <span data-ttu-id="eab19-111">失败的 HRESULT 在`hrStatus`表明发生了故障。</span><span class="sxs-lookup"><span data-stu-id="eab19-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="eab19-112">但是，成功的 HRESULT 在`hrStatus`仅表示已成功加载该模块的第一部分。</span><span class="sxs-lookup"><span data-stu-id="eab19-112">However, a success HRESULT in `hrStatus` indicates only that the first part of loading the module has succeeded.</span></span>  
+ <span data-ttu-id="e75b6-110">Some parts of loading the module might continue after the `ModuleLoadFinished` callback.</span><span class="sxs-lookup"><span data-stu-id="e75b6-110">Some parts of loading the module might continue after the `ModuleLoadFinished` callback.</span></span> <span data-ttu-id="e75b6-111">A failure HRESULT in `hrStatus` indicates a failure.</span><span class="sxs-lookup"><span data-stu-id="e75b6-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="e75b6-112">However, a success HRESULT in `hrStatus` indicates only that the first part of loading the module has succeeded.</span><span class="sxs-lookup"><span data-stu-id="e75b6-112">However, a success HRESULT in `hrStatus` indicates only that the first part of loading the module has succeeded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="eab19-113">要求</span><span class="sxs-lookup"><span data-stu-id="eab19-113">Requirements</span></span>  
- <span data-ttu-id="eab19-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="eab19-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e75b6-113">要求</span><span class="sxs-lookup"><span data-stu-id="e75b6-113">Requirements</span></span>  
+ <span data-ttu-id="e75b6-114">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e75b6-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eab19-115">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="eab19-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="e75b6-115">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e75b6-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="eab19-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eab19-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e75b6-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e75b6-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="eab19-117">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eab19-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e75b6-117">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e75b6-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eab19-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="eab19-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e75b6-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="e75b6-118">See also</span></span>
 
-- [<span data-ttu-id="eab19-119">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="eab19-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="eab19-120">ModuleLoadStarted 方法</span><span class="sxs-lookup"><span data-stu-id="eab19-120">ModuleLoadStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadstarted-method.md)
+- [<span data-ttu-id="e75b6-119">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="e75b6-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="e75b6-120">ModuleLoadStarted 方法</span><span class="sxs-lookup"><span data-stu-id="e75b6-120">ModuleLoadStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadstarted-method.md)

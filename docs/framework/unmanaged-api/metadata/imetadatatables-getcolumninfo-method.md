@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 68c160ea-ae7d-4750-985d-a038b2c8e7d9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dd67d9faafedf4fb92c69618d4464ebb2ce47dcc
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 854d3ad28cc00c03e903b9e1d2ce3863e3ceef17
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774261"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436105"
 ---
-# <a name="imetadatatablesgetcolumninfo-method"></a><span data-ttu-id="a912c-102">IMetaDataTables::GetColumnInfo 方法</span><span class="sxs-lookup"><span data-stu-id="a912c-102">IMetaDataTables::GetColumnInfo Method</span></span>
-<span data-ttu-id="a912c-103">获取有关指定表中指定列的数据。</span><span class="sxs-lookup"><span data-stu-id="a912c-103">Gets data about the specified column in the specified table.</span></span>  
+# <a name="imetadatatablesgetcolumninfo-method"></a><span data-ttu-id="27828-102">IMetaDataTables::GetColumnInfo 方法</span><span class="sxs-lookup"><span data-stu-id="27828-102">IMetaDataTables::GetColumnInfo Method</span></span>
+<span data-ttu-id="27828-103">Gets data about the specified column in the specified table.</span><span class="sxs-lookup"><span data-stu-id="27828-103">Gets data about the specified column in the specified table.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a912c-104">语法</span><span class="sxs-lookup"><span data-stu-id="a912c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="27828-104">语法</span><span class="sxs-lookup"><span data-stu-id="27828-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetColumnInfo (   
@@ -40,63 +38,63 @@ HRESULT GetColumnInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a912c-105">参数</span><span class="sxs-lookup"><span data-stu-id="a912c-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="27828-105">参数</span><span class="sxs-lookup"><span data-stu-id="27828-105">Parameters</span></span>
 =======
 
  `ixTbl`  
- <span data-ttu-id="a912c-106">中所需表的索引。</span><span class="sxs-lookup"><span data-stu-id="a912c-106">[in] The index of the desired table.</span></span>  
+ <span data-ttu-id="27828-106">[in] The index of the desired table.</span><span class="sxs-lookup"><span data-stu-id="27828-106">[in] The index of the desired table.</span></span>  
   
  `ixCol`  
- <span data-ttu-id="a912c-107">中所需列的索引。</span><span class="sxs-lookup"><span data-stu-id="a912c-107">[in] The index of the desired column.</span></span>  
+ <span data-ttu-id="27828-107">[in] The index of the desired column.</span><span class="sxs-lookup"><span data-stu-id="27828-107">[in] The index of the desired column.</span></span>  
   
  `poCol`  
- <span data-ttu-id="a912c-108">弄指向行中列的偏移量的指针。</span><span class="sxs-lookup"><span data-stu-id="a912c-108">[out] A pointer to the offset of the column in the row.</span></span>  
+ <span data-ttu-id="27828-108">[out] A pointer to the offset of the column in the row.</span><span class="sxs-lookup"><span data-stu-id="27828-108">[out] A pointer to the offset of the column in the row.</span></span>  
   
  `pcbCol`  
- <span data-ttu-id="a912c-109">弄一个指针，指向列的大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="a912c-109">[out] A pointer to the size, in bytes, of the column.</span></span>  
+ <span data-ttu-id="27828-109">[out] A pointer to the size, in bytes, of the column.</span><span class="sxs-lookup"><span data-stu-id="27828-109">[out] A pointer to the size, in bytes, of the column.</span></span>  
   
  `pType`  
- <span data-ttu-id="a912c-110">弄一个指针，指向列中值的类型。</span><span class="sxs-lookup"><span data-stu-id="a912c-110">[out] A pointer to the type of the values in the column.</span></span>  
+ <span data-ttu-id="27828-110">[out] A pointer to the type of the values in the column.</span><span class="sxs-lookup"><span data-stu-id="27828-110">[out] A pointer to the type of the values in the column.</span></span>  
   
  `ppName`  
- <span data-ttu-id="a912c-111">弄指向列名的指针的指针。</span><span class="sxs-lookup"><span data-stu-id="a912c-111">[out] A pointer to a pointer to the column name.</span></span>  
+ <span data-ttu-id="27828-111">[out] A pointer to a pointer to the column name.</span><span class="sxs-lookup"><span data-stu-id="27828-111">[out] A pointer to a pointer to the column name.</span></span>  
  
-## <a name="remarks"></a><span data-ttu-id="a912c-112">备注</span><span class="sxs-lookup"><span data-stu-id="a912c-112">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="27828-112">备注</span><span class="sxs-lookup"><span data-stu-id="27828-112">Remarks</span></span>
 
-<span data-ttu-id="a912c-113">返回的列类型位于值的范围内：</span><span class="sxs-lookup"><span data-stu-id="a912c-113">The returned column type falls within a range of values:</span></span>
+<span data-ttu-id="27828-113">The returned column type falls within a range of values:</span><span class="sxs-lookup"><span data-stu-id="27828-113">The returned column type falls within a range of values:</span></span>
 
-| <span data-ttu-id="a912c-114">pType</span><span class="sxs-lookup"><span data-stu-id="a912c-114">pType</span></span>                    | <span data-ttu-id="a912c-115">描述</span><span class="sxs-lookup"><span data-stu-id="a912c-115">Description</span></span>   | <span data-ttu-id="a912c-116">Helper 函数</span><span class="sxs-lookup"><span data-stu-id="a912c-116">Helper function</span></span>                   |
+| <span data-ttu-id="27828-114">pType</span><span class="sxs-lookup"><span data-stu-id="27828-114">pType</span></span>                    | <span data-ttu-id="27828-115">描述</span><span class="sxs-lookup"><span data-stu-id="27828-115">Description</span></span>   | <span data-ttu-id="27828-116">Helper function</span><span class="sxs-lookup"><span data-stu-id="27828-116">Helper function</span></span>                   |
 |--------------------------|---------------|-----------------------------------|
-| <span data-ttu-id="a912c-117">`0`.。`iRidMax`</span><span class="sxs-lookup"><span data-stu-id="a912c-117">`0`..`iRidMax`</span></span><br><span data-ttu-id="a912c-118">（0-63）</span><span class="sxs-lookup"><span data-stu-id="a912c-118">(0..63)</span></span>   | <span data-ttu-id="a912c-119">去掉</span><span class="sxs-lookup"><span data-stu-id="a912c-119">Rid</span></span>           | <span data-ttu-id="a912c-120">**IsRidType**</span><span class="sxs-lookup"><span data-stu-id="a912c-120">**IsRidType**</span></span><br><span data-ttu-id="a912c-121">**IsRidOrToken**</span><span class="sxs-lookup"><span data-stu-id="a912c-121">**IsRidOrToken**</span></span> |
-| <span data-ttu-id="a912c-122">`iCodedToken`.。`iCodedTokenMax`</span><span class="sxs-lookup"><span data-stu-id="a912c-122">`iCodedToken`..`iCodedTokenMax`</span></span><br><span data-ttu-id="a912c-123">（64.. 95）</span><span class="sxs-lookup"><span data-stu-id="a912c-123">(64..95)</span></span> | <span data-ttu-id="a912c-124">编码标记</span><span class="sxs-lookup"><span data-stu-id="a912c-124">Coded token</span></span> | <span data-ttu-id="a912c-125">**IsCodedTokenType**</span><span class="sxs-lookup"><span data-stu-id="a912c-125">**IsCodedTokenType**</span></span> <br><span data-ttu-id="a912c-126">**IsRidOrToken**</span><span class="sxs-lookup"><span data-stu-id="a912c-126">**IsRidOrToken**</span></span> |
-| <span data-ttu-id="a912c-127">`iSHORT` （96）</span><span class="sxs-lookup"><span data-stu-id="a912c-127">`iSHORT` (96)</span></span>            | <span data-ttu-id="a912c-128">Int16</span><span class="sxs-lookup"><span data-stu-id="a912c-128">Int16</span></span>         | <span data-ttu-id="a912c-129">**IsFixedType**</span><span class="sxs-lookup"><span data-stu-id="a912c-129">**IsFixedType**</span></span>                   |
-| <span data-ttu-id="a912c-130">`iUSHORT` （97）</span><span class="sxs-lookup"><span data-stu-id="a912c-130">`iUSHORT` (97)</span></span>           | <span data-ttu-id="a912c-131">UInt16</span><span class="sxs-lookup"><span data-stu-id="a912c-131">UInt16</span></span>        | <span data-ttu-id="a912c-132">**IsFixedType**</span><span class="sxs-lookup"><span data-stu-id="a912c-132">**IsFixedType**</span></span>                   |
-| <span data-ttu-id="a912c-133">`iLONG` （98）</span><span class="sxs-lookup"><span data-stu-id="a912c-133">`iLONG` (98)</span></span>             | <span data-ttu-id="a912c-134">Int32</span><span class="sxs-lookup"><span data-stu-id="a912c-134">Int32</span></span>         | <span data-ttu-id="a912c-135">**IsFixedType**</span><span class="sxs-lookup"><span data-stu-id="a912c-135">**IsFixedType**</span></span>                   |
-| <span data-ttu-id="a912c-136">`iULONG` （99）</span><span class="sxs-lookup"><span data-stu-id="a912c-136">`iULONG` (99)</span></span>            | <span data-ttu-id="a912c-137">UInt32</span><span class="sxs-lookup"><span data-stu-id="a912c-137">UInt32</span></span>        | <span data-ttu-id="a912c-138">**IsFixedType**</span><span class="sxs-lookup"><span data-stu-id="a912c-138">**IsFixedType**</span></span>                   |
-| <span data-ttu-id="a912c-139">`iBYTE` （100）</span><span class="sxs-lookup"><span data-stu-id="a912c-139">`iBYTE` (100)</span></span>            | <span data-ttu-id="a912c-140">字节</span><span class="sxs-lookup"><span data-stu-id="a912c-140">Byte</span></span>          | <span data-ttu-id="a912c-141">**IsFixedType**</span><span class="sxs-lookup"><span data-stu-id="a912c-141">**IsFixedType**</span></span>                   |
-| <span data-ttu-id="a912c-142">`iSTRING` （101）</span><span class="sxs-lookup"><span data-stu-id="a912c-142">`iSTRING` (101)</span></span>          | <span data-ttu-id="a912c-143">字符串</span><span class="sxs-lookup"><span data-stu-id="a912c-143">String</span></span>        | <span data-ttu-id="a912c-144">**IsHeapType**</span><span class="sxs-lookup"><span data-stu-id="a912c-144">**IsHeapType**</span></span>                    |
-| <span data-ttu-id="a912c-145">`iGUID` （102）</span><span class="sxs-lookup"><span data-stu-id="a912c-145">`iGUID` (102)</span></span>            | <span data-ttu-id="a912c-146">GUID</span><span class="sxs-lookup"><span data-stu-id="a912c-146">Guid</span></span>          | <span data-ttu-id="a912c-147">**IsHeapType**</span><span class="sxs-lookup"><span data-stu-id="a912c-147">**IsHeapType**</span></span>                    |
-| <span data-ttu-id="a912c-148">`iBLOB` （103）</span><span class="sxs-lookup"><span data-stu-id="a912c-148">`iBLOB` (103)</span></span>            | <span data-ttu-id="a912c-149">Blob</span><span class="sxs-lookup"><span data-stu-id="a912c-149">Blob</span></span>          | <span data-ttu-id="a912c-150">**IsHeapType**</span><span class="sxs-lookup"><span data-stu-id="a912c-150">**IsHeapType**</span></span>                    |
+| <span data-ttu-id="27828-117">`0`..`iRidMax`</span><span class="sxs-lookup"><span data-stu-id="27828-117">`0`..`iRidMax`</span></span><br><span data-ttu-id="27828-118">(0..63)</span><span class="sxs-lookup"><span data-stu-id="27828-118">(0..63)</span></span>   | <span data-ttu-id="27828-119">Rid</span><span class="sxs-lookup"><span data-stu-id="27828-119">Rid</span></span>           | <span data-ttu-id="27828-120">**IsRidType**</span><span class="sxs-lookup"><span data-stu-id="27828-120">**IsRidType**</span></span><br><span data-ttu-id="27828-121">**IsRidOrToken**</span><span class="sxs-lookup"><span data-stu-id="27828-121">**IsRidOrToken**</span></span> |
+| <span data-ttu-id="27828-122">`iCodedToken`..`iCodedTokenMax`</span><span class="sxs-lookup"><span data-stu-id="27828-122">`iCodedToken`..`iCodedTokenMax`</span></span><br><span data-ttu-id="27828-123">(64..95)</span><span class="sxs-lookup"><span data-stu-id="27828-123">(64..95)</span></span> | <span data-ttu-id="27828-124">Coded token</span><span class="sxs-lookup"><span data-stu-id="27828-124">Coded token</span></span> | <span data-ttu-id="27828-125">**IsCodedTokenType**</span><span class="sxs-lookup"><span data-stu-id="27828-125">**IsCodedTokenType**</span></span> <br><span data-ttu-id="27828-126">**IsRidOrToken**</span><span class="sxs-lookup"><span data-stu-id="27828-126">**IsRidOrToken**</span></span> |
+| <span data-ttu-id="27828-127">`iSHORT` (96)</span><span class="sxs-lookup"><span data-stu-id="27828-127">`iSHORT` (96)</span></span>            | <span data-ttu-id="27828-128">Int16</span><span class="sxs-lookup"><span data-stu-id="27828-128">Int16</span></span>         | <span data-ttu-id="27828-129">**IsFixedType**</span><span class="sxs-lookup"><span data-stu-id="27828-129">**IsFixedType**</span></span>                   |
+| <span data-ttu-id="27828-130">`iUSHORT` (97)</span><span class="sxs-lookup"><span data-stu-id="27828-130">`iUSHORT` (97)</span></span>           | <span data-ttu-id="27828-131">UInt16</span><span class="sxs-lookup"><span data-stu-id="27828-131">UInt16</span></span>        | <span data-ttu-id="27828-132">**IsFixedType**</span><span class="sxs-lookup"><span data-stu-id="27828-132">**IsFixedType**</span></span>                   |
+| <span data-ttu-id="27828-133">`iLONG` (98)</span><span class="sxs-lookup"><span data-stu-id="27828-133">`iLONG` (98)</span></span>             | <span data-ttu-id="27828-134">Int32</span><span class="sxs-lookup"><span data-stu-id="27828-134">Int32</span></span>         | <span data-ttu-id="27828-135">**IsFixedType**</span><span class="sxs-lookup"><span data-stu-id="27828-135">**IsFixedType**</span></span>                   |
+| <span data-ttu-id="27828-136">`iULONG` (99)</span><span class="sxs-lookup"><span data-stu-id="27828-136">`iULONG` (99)</span></span>            | <span data-ttu-id="27828-137">UInt32</span><span class="sxs-lookup"><span data-stu-id="27828-137">UInt32</span></span>        | <span data-ttu-id="27828-138">**IsFixedType**</span><span class="sxs-lookup"><span data-stu-id="27828-138">**IsFixedType**</span></span>                   |
+| <span data-ttu-id="27828-139">`iBYTE` (100)</span><span class="sxs-lookup"><span data-stu-id="27828-139">`iBYTE` (100)</span></span>            | <span data-ttu-id="27828-140">字节</span><span class="sxs-lookup"><span data-stu-id="27828-140">Byte</span></span>          | <span data-ttu-id="27828-141">**IsFixedType**</span><span class="sxs-lookup"><span data-stu-id="27828-141">**IsFixedType**</span></span>                   |
+| <span data-ttu-id="27828-142">`iSTRING` (101)</span><span class="sxs-lookup"><span data-stu-id="27828-142">`iSTRING` (101)</span></span>          | <span data-ttu-id="27828-143">字符串</span><span class="sxs-lookup"><span data-stu-id="27828-143">String</span></span>        | <span data-ttu-id="27828-144">**IsHeapType**</span><span class="sxs-lookup"><span data-stu-id="27828-144">**IsHeapType**</span></span>                    |
+| <span data-ttu-id="27828-145">`iGUID` (102)</span><span class="sxs-lookup"><span data-stu-id="27828-145">`iGUID` (102)</span></span>            | <span data-ttu-id="27828-146">GUID</span><span class="sxs-lookup"><span data-stu-id="27828-146">Guid</span></span>          | <span data-ttu-id="27828-147">**IsHeapType**</span><span class="sxs-lookup"><span data-stu-id="27828-147">**IsHeapType**</span></span>                    |
+| <span data-ttu-id="27828-148">`iBLOB` (103)</span><span class="sxs-lookup"><span data-stu-id="27828-148">`iBLOB` (103)</span></span>            | <span data-ttu-id="27828-149">Blob</span><span class="sxs-lookup"><span data-stu-id="27828-149">Blob</span></span>          | <span data-ttu-id="27828-150">**IsHeapType**</span><span class="sxs-lookup"><span data-stu-id="27828-150">**IsHeapType**</span></span>                    |
 
-<span data-ttu-id="a912c-151">可以使用读取存储在*堆*中的值（即 `IsHeapType == true`）：</span><span class="sxs-lookup"><span data-stu-id="a912c-151">Values that are stored in the *heap* (that is, `IsHeapType == true`) can be read using:</span></span>
+<span data-ttu-id="27828-151">Values that are stored in the *heap* (that is, `IsHeapType == true`) can be read using:</span><span class="sxs-lookup"><span data-stu-id="27828-151">Values that are stored in the *heap* (that is, `IsHeapType == true`) can be read using:</span></span>
 
-- <span data-ttu-id="a912c-152">`iSTRING`： **IMetadataTables. GetString**</span><span class="sxs-lookup"><span data-stu-id="a912c-152">`iSTRING`: **IMetadataTables.GetString**</span></span>
-- <span data-ttu-id="a912c-153">`iGUID`： **IMetadataTables. GetGUID**</span><span class="sxs-lookup"><span data-stu-id="a912c-153">`iGUID`: **IMetadataTables.GetGUID**</span></span>
-- <span data-ttu-id="a912c-154">`iBLOB`： **IMetadataTables. GetBlob**</span><span class="sxs-lookup"><span data-stu-id="a912c-154">`iBLOB`: **IMetadataTables.GetBlob**</span></span>
+- <span data-ttu-id="27828-152">`iSTRING`: **IMetadataTables.GetString**</span><span class="sxs-lookup"><span data-stu-id="27828-152">`iSTRING`: **IMetadataTables.GetString**</span></span>
+- <span data-ttu-id="27828-153">`iGUID`: **IMetadataTables.GetGUID**</span><span class="sxs-lookup"><span data-stu-id="27828-153">`iGUID`: **IMetadataTables.GetGUID**</span></span>
+- <span data-ttu-id="27828-154">`iBLOB`: **IMetadataTables.GetBlob**</span><span class="sxs-lookup"><span data-stu-id="27828-154">`iBLOB`: **IMetadataTables.GetBlob**</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="a912c-155">若要使用上表中定义的常量，请包含*cor*头文件提供的指令 `#define _DEFINE_META_DATA_META_CONSTANTS`。</span><span class="sxs-lookup"><span data-stu-id="a912c-155">To use the constants defined in the table above, include the directive `#define _DEFINE_META_DATA_META_CONSTANTS` provided by the *cor.h* header file.</span></span>
+> <span data-ttu-id="27828-155">To use the constants defined in the table above, include the directive `#define _DEFINE_META_DATA_META_CONSTANTS` provided by the *cor.h* header file.</span><span class="sxs-lookup"><span data-stu-id="27828-155">To use the constants defined in the table above, include the directive `#define _DEFINE_META_DATA_META_CONSTANTS` provided by the *cor.h* header file.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="a912c-156">要求</span><span class="sxs-lookup"><span data-stu-id="a912c-156">Requirements</span></span>  
- <span data-ttu-id="a912c-157">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a912c-157">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="27828-156">要求</span><span class="sxs-lookup"><span data-stu-id="27828-156">Requirements</span></span>  
+ <span data-ttu-id="27828-157">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="27828-157">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a912c-158">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="a912c-158">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="27828-158">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="27828-158">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a912c-159">**库：** 用作 Mscoree.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="a912c-159">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="27828-159">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="27828-159">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="a912c-160">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a912c-160">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="27828-160">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="27828-160">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a912c-161">请参阅</span><span class="sxs-lookup"><span data-stu-id="a912c-161">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="27828-161">请参阅</span><span class="sxs-lookup"><span data-stu-id="27828-161">See also</span></span>
 
-- [<span data-ttu-id="a912c-162">IMetaDataTables 接口</span><span class="sxs-lookup"><span data-stu-id="a912c-162">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="a912c-163">IMetaDataTables2 接口</span><span class="sxs-lookup"><span data-stu-id="a912c-163">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="27828-162">IMetaDataTables 接口</span><span class="sxs-lookup"><span data-stu-id="27828-162">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="27828-163">IMetaDataTables2 接口</span><span class="sxs-lookup"><span data-stu-id="27828-163">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
