@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1b33de4c-19cb-4a36-a93f-8675b2a36d58
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b293c30060107d18c6b609efc82c4128a73cc1c7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: df97f4c37d8f335ce183685debd7c0933be910ed
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787212"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445560"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile 方法
-使您能够在创建程序集时指定或重置链接器使用的清单文件。  
+Enables you to specify or reset the manifest file that the linker uses when it creates the assembly.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,16 +35,16 @@ HRESULT SetManifestFile(
 ## <a name="parameters"></a>参数  
  `pszFile`  
   
- 其内容将放入 Win32 资源 blob 中的清单文件的名称。  
+ The name of the manifest file whose contents are put into the Win32 resources blob.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="remarks"></a>备注  
- 在请求 Win32ResBlob 之前调用此。 `pszFile`参数的值是清单文件的名称，其内容被读取并放入 Win32 资源，ID 为 RT_MANIFEST。 使用 NULL 的参数调用时，将清除任何以前的读取清单。 这样一来，就可以将链接器的状态重置为初始化时的状态。  
+ Call this before asking for the Win32ResBlob. The value of the `pszFile` parameter is the name of the manifest file whose contents are read and put in the Win32 resources with ID of RT_MANIFEST. When called by using a parameter of NULL, any previously read manifest is cleared. This enables one to reset the state of the linker to that of initialization time.  
   
 ## <a name="requirements"></a>要求  
- 需要 aLink  
+ Requires aLink.h  
   
 ## <a name="see-also"></a>请参阅
 

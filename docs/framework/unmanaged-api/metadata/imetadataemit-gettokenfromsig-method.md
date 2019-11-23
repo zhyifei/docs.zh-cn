@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50a58a83-6287-40a4-b315-47823cea0a5c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: afc2192fe46ed75ed6fb75e0d58268152856b746
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f1262181fa745e1b6d3fc48a4ad728c1020705b5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770775"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434313"
 ---
 # <a name="imetadataemitgettokenfromsig-method"></a>IMetaDataEmit::GetTokenFromSig 方法
-获取指定的元数据签名令牌。  
+Gets a token for the specified metadata signature.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,20 +37,20 @@ HRESULT GetTokenFromSig (
   
 ## <a name="parameters"></a>参数  
  `pvSig`  
- [in]要保留和存储的签名。  
+ [in] The signature to be persisted and stored.  
   
  `cbSig`  
- [in]中的字节计数`pvSig`。  
+ [in] The count of bytes in `pvSig`.  
   
  `pmsig`  
- [out]`mdSignature`分配标记。  
+ [out] The `mdSignature` token assigned.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

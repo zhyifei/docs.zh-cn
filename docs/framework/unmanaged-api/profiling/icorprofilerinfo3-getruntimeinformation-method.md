@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4400fb8c-0407-4791-8557-f011fd2aee51
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7087864d0305f0cdb0b4977f037cf5a7c4dee18d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20556d85655a0a1bbe069a94b99c19c774a13ce6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783144"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449683"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation 方法
-提供有关所分析公共语言运行时 (CLR) 的版本信息。  
+Provides version information about the common language runtime (CLR) that is being profiled.  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,39 +43,39 @@ HRESULT GetRuntimeInformation(
   
 ## <a name="parameters"></a>参数  
  `pClrInstanceId`  
- [out]在进程中正在运行的 CLR 实例代表 ID。 这是与相同`ClrInstanceID`Windows (ETW) 启动事件的事件跟踪报告。  
+ [out] The representative ID of a running CLR instance in a process. This is the same as the `ClrInstanceID` that the event tracing for Windows (ETW) startup event reports.  
   
  `pRuntimeType`  
- [out]运行时类型中。 此参数返回`COR_PRF_DESKTOP_CLR`桌面版本的 CLR，或`COR_PRF_CORE_CLR`CLR 在 Silverlight 中使用的 core 版本。  
+ [out] The runtime type. This parameter returns `COR_PRF_DESKTOP_CLR` for the desktop version of the CLR, or `COR_PRF_CORE_CLR` for the core version of the CLR used in Silverlight.  
   
  `pMajorVersion`  
- [out]CLR 主版本号。  
+ [out] The major version number of the CLR.  
   
  `pMinorVersion`  
- [out]CLR 次版本号。  
+ [out] The minor version number of the CLR.  
   
  `pBuildVersion`  
- [out]CLR 内部版本号。  
+ [out] The build version number of the CLR.  
   
  `pQFEVersion`  
- [out]与软件更新关联的 CLR 的版本号。  
+ [out] The version number of the CLR that is associated with a software update.  
   
  `cchVersionString`  
- [in]长度，以字符为单位的缓冲区的`szVersionString`指向。  
+ [in] The length, in characters, of the buffer that `szVersionString` points to.  
   
  `pcchVersionString`  
- [out]长度，以字符为单位的`szVersionString`。  
+ [out] The length, in characters, of `szVersionString`.  
   
  `szVersionString`  
- [out]CLR 版本字符串。  
+ [out] The CLR version string.  
   
 ## <a name="remarks"></a>备注  
- 可以传入任何参数为 null。 但是，`pcchVersionString`不能为 null 除非`szVersionString`也为 null。  
+ You may pass null for any parameter. However, `pcchVersionString` cannot be null unless `szVersionString` is also null.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

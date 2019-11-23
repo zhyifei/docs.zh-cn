@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55674b68-678a-4747-ae06-4e91519c7305
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4c1bf9e572ee88bd299f23ebb435c1b4d24ed717
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b78d604a28ffe01000a763f7e0dd3c1630e2c186
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762928"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435922"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>ICorProfilerCallback::ClassUnloadFinished 方法
-通知探查器类已完成卸载。  
+Notifies the profiler that a class has finished unloading.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,18 +35,18 @@ HRESULT ClassUnloadFinished(
   
 ## <a name="parameters"></a>参数  
  `classId`  
- [in]标识已被卸载的类。  
+ [in] Identifies the class that was unloaded.  
   
  `hrStatus`  
- [in]一个 HRESULT，指示是否已成功类已被卸载。  
+ [in] An HRESULT that indicates whether the class was unloaded successfully.  
   
 ## <a name="remarks"></a>备注  
- 卸载类的某些部分可能会继续后`ClassUnloadFinished`回调。 失败的 HRESULT 在`hrStatus`表明发生了故障。 但是，成功的 HRESULT 在`hrStatus`仅表示已成功卸载类的第一部分。  
+ Some parts of unloading the class might continue after the `ClassUnloadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the class has succeeded.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

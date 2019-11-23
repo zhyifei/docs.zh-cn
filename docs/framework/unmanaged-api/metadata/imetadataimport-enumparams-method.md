@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52118dc9-fe6e-4b39-aa48-c3cc3ea4214d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d64a39dcdb6e3b26ff38106673719e475315f5dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e5fa3647c86d97730e7ad6a2576dd34af75251d6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782111"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433954"
 ---
 # <a name="imetadataimportenumparams-method"></a>IMetaDataImport::EnumParams 方法
 枚举 ParamDef 标记，这些标记表示指定的 MethodDef 标记所引用的方法的参数。  
@@ -41,33 +39,33 @@ HRESULT EnumParams (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in、 out]一个指向枚举器。 对于首次调用此方法，这必须为 NULL。  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `mb`  
- [in]表示与要枚举的参数的方法的 MethodDef 标记。  
+ [in] A MethodDef token representing the method with the parameters to enumerate.  
   
  `rParams`  
- [out]用于存储 ParamDef 标记的数组。  
+ [out] The array used to store the ParamDef tokens.  
   
  `cMax`  
  [in] `rParams` 数组的最大大小。  
   
  `pcTokens`  
- [out]在中返回的 ParamDef 标记数`rParams`。  
+ [out] The number of ParamDef tokens returned in `rParams`.  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumParams` 已成功返回。|  
-|`S_FALSE`|没有要枚举的标记。 在这种情况下，`pcTokens`为零。|  
+|`S_OK`|`EnumParams` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

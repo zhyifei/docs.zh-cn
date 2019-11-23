@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 624672b5-1189-488a-85d2-3e12b49617c1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0d00c28862036c21c44f46c23fb09e947628dcf3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f98c35f77fdb200be2e96364c9ac06c386faa62
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783049"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436021"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>ICorProfilerInfo2::GetBoxClassLayout 方法
-获取有关进行装箱时指定的值类型所在的位置信息。  
+Gets information about where the specified value type is located when it is boxed.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,18 +35,18 @@ HRESULT GetBoxClassLayout(
   
 ## <a name="parameters"></a>参数  
  `classId`  
- [in]类，用于描述进行装箱的值类型的 ID。  
+ [in] The ID of the class that describes the value type that is boxed.  
   
  `pBufferOffset`  
- [out]一个整数，表示相对于值类型的装箱的对象 ID 指针的偏移量。  
+ [out] An integer that is the offset, relative to the boxed object ID pointer, of the value type.  
   
 ## <a name="remarks"></a>备注  
- `pBufferOffset`值是一个框中的值类型的位置。 之后`pBufferOffset`应用到的已装箱对象的值类型的类布局可用于将对象的值解释。  
+ The `pBufferOffset` value is the location of the value type within a box. After `pBufferOffset` is applied to a boxed object, the value type's class layout can be used to interpret the object's value.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

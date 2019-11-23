@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ea73055-ece0-4151-a094-414c88ef8941
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fadc54d74ce6027bd021e148a14cb0c432eb41fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1d6d66ea62cbf679f722f830b3638455001aedd6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782345"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437486"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps 方法
 获取与指定标记引用的成员关联的元数据。  
@@ -43,32 +41,32 @@ HRESULT GetMemberRefProps (
   
 ## <a name="parameters"></a>参数  
  `mr`  
- [in]要返回关联的元数据的 MemberRef 标记。  
+ [in] The MemberRef token to return associated metadata for.  
   
  `ptk`  
- [out]表示声明该成员或表示声明该成员或表示成员 MethodDef 的模块类的 ModuleRef 标记的类的 TypeDef 或 TypeRef 或 TypeSpec 标记。  
+ [out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.  
   
  `szMember`  
- [out]一个成员的名称的字符串缓冲区。  
+ [out] A string buffer for the member's name.  
   
  `cchMember`  
- [in]请求的大小以宽字符为单位`szMember`。  
+ [in] The requested size in wide characters of `szMember`.  
   
  `pchMember`  
- [out]在宽字符为单位返回的大小`szMember`。  
+ [out] The returned size in wide characters of `szMember`.  
   
  `ppvSibBlob`  
- [out]指向成员的二进制元数据签名的指针。  
+ [out] A pointer to the binary metadata signature for the member.  
   
  `pbSig`  
- [out]以字节为单位的大小`ppvSigBlob`。  
+ [out] The size in bytes of `ppvSigBlob`.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

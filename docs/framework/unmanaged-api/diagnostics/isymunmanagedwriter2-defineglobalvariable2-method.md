@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 04d569d6-a151-4957-9872-f3f694c3e4a9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a54d3cb1bb9abf740c2c9b5a9a8312a9612ae658
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 12475b1ac8a1a81e565aa689eac2ae1a9b55e73a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894453"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438285"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 方法
-定义一个全局变量。  
+Defines a single global variable.  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,31 +40,31 @@ HRESULT DefineGlobalVariable2(
   
 ## <a name="parameters"></a>参数  
  `name`  
- 中全局变量名称。  
+ [in] The global variable name.  
   
  `attributes`  
- 中全局变量特性。  
+ [in] The global variable attributes.  
   
  `sigToken`  
- 中签名的元数据标记。  
+ [in] The metadata token of the signature.  
   
  `addrKind`  
- 中地址类型。  
+ [in] The address type.  
   
  `addr1`  
- 中参数规范的第一个地址。  
+ [in] The first address for the parameter specification.  
   
  `addr2`  
- 中参数规范的第二个地址。  
+ [in] The second address for the parameter specification.  
   
  `addr3`  
- 中参数规范的第三个地址。  
+ [in] The third address for the parameter specification.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 S_OK;否则，E_FAIL 或其他一些错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl  
+ **Header:** CorSym.idl  
   
 ## <a name="see-also"></a>请参阅
 

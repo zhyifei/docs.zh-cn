@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 190f424d-5e37-4163-a191-0895686e9476
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 12f16b9bc87ea65e2699ec902d717b08d3155b95
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 080777b656e1c3df1cc4170fe1dff6de6ddb41fc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756180"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445389"
 ---
 # <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a>ICorProfilerCallback::ExceptionSearchCatcherFound 方法
-通知探查器的异常处理的搜索阶段已找到的处理程序引发的异常。  
+Notifies the profiler that the search phase of exception handling has located a handler for the exception that was thrown.  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,12 +34,12 @@ RESULT ExceptionSearchCatcherFound(
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in]包含异常处理程序函数的 ID。  
+ [in] The ID of the function that contains the exception handler.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

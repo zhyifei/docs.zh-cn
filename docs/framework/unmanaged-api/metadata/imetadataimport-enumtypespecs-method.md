@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 75331c7b-988b-436c-9eb9-a270d37b4f06
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 81592b6da7fa7cdf275e9fa5b4b82ef0a15061c0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 42b8360ac6a7bb62f29046475d6cc98124619770
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782572"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449970"
 ---
 # <a name="imetadataimportenumtypespecs-method"></a>IMetaDataImport::EnumTypeSpecs 方法
 枚举当前元数据范围内定义的 TypeSpec 标记。  
@@ -40,33 +38,33 @@ HRESULT EnumTypeSpecs (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in、 out]一个指向枚举器。 对于首次调用此方法，此值必须为 NULL。  
+ [in, out] A pointer to the enumerator. This value must be NULL for the first call of this method.  
   
  `rTypeSpecs`  
- [out]用于存储 TypeSpec 标记的数组。  
+ [out] The array used to store the TypeSpec tokens.  
   
  `cMax`  
  [in] `rTypeSpecs` 数组的最大大小。  
   
  `pcTypeSpecs`  
- [out]在中返回的 TypeSpec 标记数`rTypeSpecs`。  
+ [out] The number of TypeSpec tokens returned in `rTypeSpecs`.  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeSpecs` 已成功返回。|  
-|`S_FALSE`|没有要枚举的标记。 在这种情况下，`pcTypeSpecs`为零。|  
+|`S_OK`|`EnumTypeSpecs` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeSpecs` is zero.|  
   
 ## <a name="remarks"></a>备注  
- TypeSpec 标记创建的[imetadataemit:: Gettokenfromtypespec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md)方法。  
+ The TypeSpec tokens are created by the [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) method.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

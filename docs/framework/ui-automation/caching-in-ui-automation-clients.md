@@ -5,22 +5,22 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: bf617279b16f53164209f5ae7605830dabda4c2e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8de96aa3877b2ca414c87958dad480503f57ccb7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043931"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433938"
 ---
 # <a name="caching-in-ui-automation-clients"></a>在 UI 自动化客户端中缓存
 > [!NOTE]
-> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本主题介绍 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性和控件模式的缓存。  
   
  在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，缓存意味着预提取的数据。 然后，无需进一步的跨进程通信即可访问数据。 UI 自动化客户端应用程序通常使用缓存来批量检索属性和控件模式。 然后，根据需要从缓存中检索信息。 应用程序会定期更新缓存，通常使为了响应表明 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 中的内容发生更改的事件。  
   
- 使用带有服务器端 UI 自动化提供程序的 Windows Presentation Foundation （WPF）控件和自定义控件，缓存的优势最明显。 在访问客户端提供程序（如 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控件的默认提供程序）时，其优势稍小一些。  
+ The benefits of caching are most noticeable with Windows Presentation Foundation (WPF) controls and custom controls that have server-side UI Automation providers. 在访问客户端提供程序（如 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控件的默认提供程序）时，其优势稍小一些。  
   
  当应用程序激活 <xref:System.Windows.Automation.CacheRequest> ，然后使用任何返回 <xref:System.Windows.Automation.AutomationElement>的方法或属性时，就会进行缓存；例如， <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>和 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>。 <xref:System.Windows.Automation.TreeWalker> 类的方法例外；只有在将 <xref:System.Windows.Automation.CacheRequest> 指定为参数（例如， <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>）时，才会进行缓存。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "71043931"
 ## <a name="activating-the-cacherequest"></a>激活 CacheRequest  
  仅当在 <xref:System.Windows.Automation.AutomationElement> 对于当前线程处于活动状态的情况下检索 <xref:System.Windows.Automation.CacheRequest> 对象时，才会执行缓存。 有两种方法可激活 <xref:System.Windows.Automation.CacheRequest>。  
   
- 通常的方法是调用 <xref:System.Windows.Automation.CacheRequest.Activate%2A>。 此方法返回实现 <xref:System.IDisposable>的对象。 只要 <xref:System.IDisposable> 对象存在，请求就将保持活动状态。 控制对象的生存期的最简单方法是将调用括在`using` （C#）或`Using` （Visual Basic）块中。 这样即使引发异常也能确保请求从堆栈中弹出。  
+ 通常的方法是调用 <xref:System.Windows.Automation.CacheRequest.Activate%2A>。 此方法返回实现 <xref:System.IDisposable>的对象。 只要 <xref:System.IDisposable> 对象存在，请求就将保持活动状态。 The easiest way to control the lifetime of the object is to enclose the call within a `using` (C#) or `Using` (Visual Basic) block. 这样即使引发异常也能确保请求从堆栈中弹出。  
   
  另一种方法是调用 <xref:System.Windows.Automation.CacheRequest.Push%2A>，此方法在你想要嵌套缓存请求时非常有用。 此方法将请求放在堆栈上，并激活请求。 在 <xref:System.Windows.Automation.CacheRequest.Pop%2A>从堆栈中删除请求之前，请求将保持活动状态。 如果将另一个请求推入堆栈，该请求将暂时变为非活动状态；只有堆栈顶部的请求才会处于活动状态。  
   
@@ -105,4 +105,4 @@ ms.locfileid: "71043931"
 
 - [客户端的 UI 自动化事件](ui-automation-events-for-clients.md)
 - [在 UI 自动化中使用缓存](use-caching-in-ui-automation.md)
-- [FetchTimer 示例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))
+- [FetchTimer Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

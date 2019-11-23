@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a25a8f8b-5cfa-440d-9376-a1a1c3a9fc11
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fc7b6d1a27faf7bde46305f9c98d98351e6261b6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db768c97a2d1a0fd5ee42ecfb121fb96d3092e79
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782264"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433023"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>ICorProfilerInfo2::GetRVAStaticAddress 方法
-获取指定的相对虚拟地址 (RVA) 的静态字段的地址。  
+Gets the address of the specified relative virtual address (RVA) static field.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,27 +36,27 @@ HRESULT GetRVAStaticAddress(
   
 ## <a name="parameters"></a>参数  
  `classId`  
- [in]包含请求的 RVA 静态字段的类的 ID。  
+ [in] The ID of the class that contains the requested RVA-static field.  
   
  `fieldToken`  
- [in]请求的 RVA 静态字段的元数据标记。  
+ [in] Metadata token for the requested RVA-static field.  
   
  `ppAddress`  
- [out]指向 RVA 静态字段的地址的指针。  
+ [out] A pointer to the address of the RVA-static field.  
   
 ## <a name="remarks"></a>备注  
- `GetRVAStaticAddress`方法可能会返回以下值之一：  
+ The `GetRVAStaticAddress` method may return one of the following:  
   
-- 如果尚未分配给定的静态字段中指定的上下文的地址 CORPROF_E_DATAINCOMPLETE HRESULT。  
+- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
   
-- 可能在垃圾回收堆的对象的地址。 使垃圾回收后，探查器不应假定它们是有效，则这些地址可能会回收后无效。  
+- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
   
- 类的类构造函数完成之前，`GetRVAStaticAddress`将返回 CORPROF_E_DATAINCOMPLETE 对于所有其静态字段，虽然一些静态字段可能已初始化，并且可能根垃圾回收对象。  
+ Before a class’s class constructor is completed, `GetRVAStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and may be rooting garbage collection objects.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b1f1418-4be8-4cdb-b418-b3abccc527a7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ea144784f82c192f41f68394eb2ccdf443db54c2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1c9f15881d3515f24a63f29e9337a7a356937f2d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782558"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449942"
 ---
 # <a name="imetadataimportenumuserstrings-method"></a>IMetaDataImport::EnumUserStrings 方法
 枚举表示当前元数据范围内的硬编码字符串的 String 标记。  
@@ -40,33 +38,33 @@ HRESULT EnumUserStrings (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in、 out]一个指向枚举器。 对于首次调用此方法，这必须为 NULL。  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `rStrings`  
- [out]用于存储的字符串标记的数组。  
+ [out] The array used to store the String tokens.  
   
  `cMax`  
  [in] `rStrings` 数组的最大大小。  
   
  `pcStrings`  
- [out]字符串中返回的标记数`rStrings`。  
+ [out] The number of String tokens returned in `rStrings`.  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUserStrings` 已成功返回。|  
-|`S_FALSE`|没有要枚举的标记。 在这种情况下，`pcStrings`为零。|  
+|`S_OK`|`EnumUserStrings` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcStrings` is zero.|  
   
 ## <a name="remarks"></a>备注  
- 创建的字符串标记[imetadataemit:: Defineuserstring](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md)方法。 此方法旨在由元数据浏览器中，而不是由编译器使用。  
+ The String tokens are created by the [IMetaDataEmit::DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) method. This method is designed to be used by a metadata browser rather than by a compiler.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

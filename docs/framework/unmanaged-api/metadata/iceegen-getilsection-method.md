@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6f2db2ca-203f-4ac3-9530-208642ca385e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8bddb782e13b4e7400c7e4a8128dc333efc8141d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7ef944fd06d07dc8c4e49061a5e72d8acc4d0465
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746175"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436346"
 ---
 # <a name="iceegengetilsection-method"></a>ICeeGen::GetIlSection 方法
-获取由指定句柄引用的基的中间语言代码的节。  
+Gets the section of the intermediate language code base referenced by the specified handle.  
   
- 此方法已过时，不应使用。  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,14 +37,14 @@ HRESULT GetIlSection (
   
 ## <a name="parameters"></a>参数  
  `section`  
- [in]部分以获取句柄。  
+ [in] The handle to the section to get.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

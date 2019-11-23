@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 619bb5de-e309-48b6-a3af-32d935a0ff46
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1dd3cf7e4badf8caa711f2a1b972d9fa14215204
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8105ba34ca400771fbc4273630f20941a4a9557d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752140"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432275"
 ---
-# <a name="corprfmisc-enumeration"></a>COR_PRF_MISC 枚举
+# <a name="cor_prf_misc-enumeration"></a>COR_PRF_MISC 枚举
 包含指定特殊标识符的常数值。  
   
 ## <a name="syntax"></a>语法  
@@ -36,18 +34,18 @@ typedef enum {
 } COR_PRF_MISC;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`PROFILER_PARENT_UNKNOWN`|使用的默认标识符[icorprofilerinfo:: Getmoduleinfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md)尚未附加到程序集的模块。|  
-|`PROFILER_GLOBAL_CLASS`|默认类不属于类的全局常量的标识符。|  
-|`PROFILER_GLOBAL_MODULE`|不属于一个模块的全局对象的默认模块标识符。|  
+|`PROFILER_PARENT_UNKNOWN`|The default identifier used by [ICorProfilerInfo::GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) for a module that has not yet been attached to an assembly.|  
+|`PROFILER_GLOBAL_CLASS`|The default class identifier for global constants that do not belong to a class.|  
+|`PROFILER_GLOBAL_MODULE`|The default module identifier for global objects that do not belong to a module.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

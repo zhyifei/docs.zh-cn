@@ -6,16 +6,16 @@ helpviewer_keywords:
 - UI Automation GridItem control pattern
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
-ms.openlocfilehash: fdaac3cad61f6047201587e48d4377fa61b868af
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 832a53e072afc5533f2eeb7feb0cc326771cf23d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043405"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435251"
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>实现 UI 自动化 GridItem 控件模式
 > [!NOTE]
-> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本主题介绍实现 <xref:System.Windows.Automation.Provider.IGridItemProvider>的准则和约定，包括有关属性的信息。 本概述的结尾列出了指向其他参考资料的链接。  
   
@@ -37,18 +37,18 @@ ms.locfileid: "71043405"
 ## <a name="required-members-for-igriditemprovider"></a>IGridItemProvider 必需的成员  
  实现 <xref:System.Windows.Automation.Provider.IGridItemProvider>需要以下属性和方法。  
   
-|必需的成员|成员类型|说明|  
+|必需的成员|成员类型|注意|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|属性|无|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|Property|None|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|Property|None|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|属性|None|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|Property|无|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|Property|无|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|Property|None|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|Property|None|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|Property|None|  
   
  没有与此控件模式关联的方法或事件。  
   
 <a name="Exceptions"></a>   
-## <a name="exceptions"></a>Exceptions  
+## <a name="exceptions"></a>异常  
  没有与此控件模式关联的异常。  
   
 ## <a name="see-also"></a>请参阅

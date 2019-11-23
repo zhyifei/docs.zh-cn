@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c571e37d87ffd136687452dc80a823b8ddbe3359
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cea84f47a5289df4bc9c50381e18d7077b3b8dad
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782061"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440473"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope 方法
-将程序集导入到当前作用域和合并的作用域获取新的元数据签名。  
+Imports an assembly into the current scope and gets a new metadata signature for the merged scope.  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,44 +45,44 @@ HRESULT TranslateSigWithScope (
   
 ## <a name="parameters"></a>参数  
  `pAssemImport`  
- [in]用于导入程序集 （其中定义签名） 的接口。  
+ [in] The interface for import assembly (where the signature is defined).  
   
  `pbHashValue`  
- [in]程序集哈希 blob。  
+ [in] The hash blob for the assembly.  
   
  `cbHashValue`  
- [in]中的字节计数`pbHashValue`。  
+ [in] The count of bytes in `pbHashValue`.  
   
  `import`  
- [in]用于导入元数据范围的接口。  
+ [in] The interface for import metadata scope.  
   
  `pbSigBlob`  
- [in]要导入的签名。  
+ [in] The signature to be imported.  
   
  `cbSigBlob`  
- [in]大小，以字节为单位的`pbSigBlob`。  
+ [in] The size, in bytes, of `pbSigBlob`.  
   
  `pAssemEmit`  
- [in]导出程序集的接口。  
+ [in] The interface for export assembly.  
   
  `emit`  
- [in]导出元数据范围的接口。  
+ [in] The interface for export metadata scope.  
   
  `pvTranslatedSig`  
- [out]要保存已翻译的签名 blob 的缓冲区。  
+ [out] The buffer to hold the translated signature blob.  
   
  `cbTranslatedSigMax`  
- [in]容量，以字节为单位的`pvTranslatedSig`。  
+ [in] The capacity, in bytes, of `pvTranslatedSig`.  
   
  `pcbTranslatedSig`  
- [out]已翻译的签名中的实际字节数。  
+ [out] The number of actual bytes in the translated signature.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

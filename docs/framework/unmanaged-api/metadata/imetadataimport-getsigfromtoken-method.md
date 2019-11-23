@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab894dc4-f7b6-4afc-bfcb-582a4b7e53a2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2060a70e2a3ce355f43ade67e6d6843670e00ad3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 205f48fb417365565695c72095187d349127e536
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778846"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436848"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a>IMetaDataImport::GetSigFromToken 方法
 获取与指定标记关联的二进制元数据签名。  
@@ -39,20 +37,20 @@ HRESULT GetSigFromToken (
   
 ## <a name="parameters"></a>参数  
  `mdSig`  
- [in]要返回的二进制元数据签名的令牌。  
+ [in] The token to return the binary metadata signature for.  
   
  `ppvSig`  
- [out]指向返回的元数据签名的指针。  
+ [out] A pointer to the returned metadata signature.  
   
  `pcbSig`  
- [out]大小 （字节） 的二进制元数据签名。  
+ [out] The size in bytes of the binary metadata signature.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
