@@ -6,21 +6,21 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: 7cbfca932b5f9f8a6f658e84204da5005da5ffb8
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 780c63e5a8f3f0d82559565b3319fe54507e3d21
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609841"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036127"
 ---
 # <a name="true-and-false-operators-c-reference"></a>true 和 false 运算符（C# 参考）
 
-`true` 运算符返回 [bool](../keywords/bool.md) 值 `true`，以指明操作数一定为 true。 `false` 运算符返回 `bool` 值 `true`，以指明操作数一定为 false。 无法确保 `true` 和 `false` 运算符互补。 也就是说，`true` 和 `false` 运算符可能同时针对同一个操作数返回 `bool` 值 `false`。 如果某类型定义这两个运算符之一，它还必须定义另一个运算符。
+`true` 运算符返回 [bool](../keywords/bool.md) 值 `true`，以指明其操作数一定为 true。 `false` 运算符返回 `bool` 值 `true`，以指明其操作数一定为 false。 无法确保 `true` 和 `false` 运算符互补。 也就是说，`true` 和 `false` 运算符可能同时针对同一个操作数返回 `bool` 值 `false`。 如果某类型定义这两个运算符之一，它还必须定义另一个运算符。
 
 > [!TIP]
 > 如需支持三值逻辑（例如，在使用支持三值布尔类型的数据库时），请使用 `bool?` 类型。 C# 提供 `&` 和 `|` 运算符，它们通过 `bool?` 操作数支持三值逻辑。 有关详细信息，请参阅[布尔逻辑运算符](boolean-logical-operators.md)一文的[可以为 null 的布尔逻辑运算符](boolean-logical-operators.md#nullable-boolean-logical-operators)部分。
 
-## <a name="boolean-expressions"></a>布尔表达式
+## <a name="boolean-expressions"></a>Boolean 表达式
 
 包含已定义 `true` 运算符的类型可以是 [if](../keywords/if-else.md)、[do](../keywords/do.md)、[while](../keywords/while.md) 和 [for](../keywords/for.md) 语句以及[条件运算符 `?:`](conditional-operator.md) 中控制条件表达式的结果的类型。 有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的 [Boolean 表达式](~/_csharplang/spec/expressions.md#boolean-expressions)部分。
 
@@ -30,7 +30,7 @@ ms.locfileid: "67609841"
 
 ## <a name="example"></a>示例
 
-下面的示例展示了定义 `true` 和 `false` 运算符的类型。 此类型还重载了逻辑 AND 运算符 `&`，因此也可以对相应类型的操作数执行运算符 `&&` 运算。
+下面的示例展示了定义 `true` 和 `false` 运算符的类型。 此外，该类型还重载了逻辑 AND 运算符 `&`，因此，也可以对相应类型的操作数计算运算符 `&&`。
 
 [!code-csharp[true and false operators example](~/samples/csharp/language-reference/operators/TrueFalseOperators.cs)]
 

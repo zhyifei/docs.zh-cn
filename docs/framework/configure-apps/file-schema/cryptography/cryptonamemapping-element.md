@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <cryptoNameMapping> element
 - cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-ms.openlocfilehash: 45d2da22a7c3486d4c7a638e92d1f3fce6f9883c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4b3495d17e07ca611a384bf958ee06e928eb2506
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699721"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088018"
 ---
 # <a name="cryptonamemapping-element"></a>\<cryptoNameMapping > 元素
 包含类到友好名称的映射。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<cryptoNameMapping >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<g s >** ](cryptographysettings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<cryptoNameMapping >**
+
 ## <a name="syntax"></a>语法  
   
 ```xml  
@@ -50,10 +50,10 @@ ms.locfileid: "71699721"
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`cryptographySettings`|包含加密设置。|  
 |`cryptoNameMapping`|包含类到友好名称的映射。|  
-|`mscorlib`|包含 \<cryptographySettings > 元素。|  
+|`mscorlib`|包含 \<G s > 元素。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 **\<cryptoNameMapping >** 元素来引用加密类并配置运行时。 然后，你可以将字符串 "RSA" 传递到 @no__t 0 方法，并使用 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 方法返回 @no__t 2 对象。  
+ 下面的示例演示如何使用 **\<cryptoNameMapping >** 元素来引用加密类并配置运行时。 然后，你可以将字符串 "RSA" 传递到 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 方法，并使用 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 方法返回 `MyCryptoRSAClass` 对象。  
   
 ```xml  
 <configuration>  
@@ -78,5 +78,5 @@ ms.locfileid: "71699721"
 
 - [配置文件架构](../index.md)
 - [加密设置架构](index.md)
-- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [加密服务](../../../../standard/security/cryptographic-services.md)
 - [配置加密类](../../configure-cryptography-classes.md)

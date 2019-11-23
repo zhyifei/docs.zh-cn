@@ -2,12 +2,12 @@
 title: 流处理源示例
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: 1eb9f2194b2c7e4879cf9e443fea337c73986361
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ede1dbb4f5c682b8182dda4888a9cbd373b95dd8
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425357"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976378"
 ---
 # <a name="streaming-feeds-sample"></a>流处理源示例
 此示例演示如何管理包含大量项的联合源。 在服务器上，此示例演示如何延迟在源中创建各个 <xref:System.ServiceModel.Syndication.SyndicationItem> 对象，一直到项就要被写入网络流之前。  
@@ -33,7 +33,7 @@ interface IStreamingFeedService
   
  服务通过使用 `ItemGenerator` 类创建一个可能无限的 <xref:System.ServiceModel.Syndication.SyndicationItem> 实例流（使用迭代器）来实现此协定，如下面的代码所示。  
   
-```csharp  
+```csharp
 class ItemGenerator  
 {  
     public IEnumerable<SyndicationItem> GenerateItems()  
@@ -51,7 +51,7 @@ class ItemGenerator
   
  当服务实现创建源时，使用 `ItemGenerator.GenerateItems()` 的输出，而不是使用缓冲的项集合。  
   
-```csharp  
+```csharp
 public Atom10FeedFormatter StreamedFeed()  
 {  
     SyndicationFeed feed = new SyndicationFeed("Streamed feed", "Feed to test streaming", null);  
