@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8f35414d-f40b-4b99-8768-9adb675c622a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6094bbedcc5386d3f5c0400960e47ac91defe2a1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8360a74e9e18e5b68ecc9edd7be2e3a711cb61c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782446"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437781"
 ---
-# <a name="imetadataimportgetclasslayout-method"></a><span data-ttu-id="e4499-102">IMetaDataImport::GetClassLayout 方法</span><span class="sxs-lookup"><span data-stu-id="e4499-102">IMetaDataImport::GetClassLayout Method</span></span>
-<span data-ttu-id="e4499-103">获取指定的 TypeDef 标记所引用类的布局信息。</span><span class="sxs-lookup"><span data-stu-id="e4499-103">Gets layout information for the class referenced by the specified TypeDef token.</span></span>  
+# <a name="imetadataimportgetclasslayout-method"></a><span data-ttu-id="80e4d-102">IMetaDataImport::GetClassLayout 方法</span><span class="sxs-lookup"><span data-stu-id="80e4d-102">IMetaDataImport::GetClassLayout Method</span></span>
+<span data-ttu-id="80e4d-103">获取指定的 TypeDef 标记所引用类的布局信息。</span><span class="sxs-lookup"><span data-stu-id="80e4d-103">Gets layout information for the class referenced by the specified TypeDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e4499-104">语法</span><span class="sxs-lookup"><span data-stu-id="e4499-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="80e4d-104">语法</span><span class="sxs-lookup"><span data-stu-id="80e4d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetClassLayout  (   
@@ -40,35 +38,35 @@ HRESULT GetClassLayout  (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e4499-105">参数</span><span class="sxs-lookup"><span data-stu-id="e4499-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="80e4d-105">参数</span><span class="sxs-lookup"><span data-stu-id="80e4d-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="e4499-106">[in]具有要返回的布局的类的 TypeDef 标记。</span><span class="sxs-lookup"><span data-stu-id="e4499-106">[in] The TypeDef token for the class with the layout to return.</span></span>  
+ <span data-ttu-id="80e4d-106">[in] The TypeDef token for the class with the layout to return.</span><span class="sxs-lookup"><span data-stu-id="80e4d-106">[in] The TypeDef token for the class with the layout to return.</span></span>  
   
  `pdwPackSize`  
- <span data-ttu-id="e4499-107">[out]值 1、 2、 4、 8 或 16，它表示类的包大小之一。</span><span class="sxs-lookup"><span data-stu-id="e4499-107">[out] One of the values 1, 2, 4, 8, or 16, representing the pack size of the class.</span></span>  
+ <span data-ttu-id="80e4d-107">[out] One of the values 1, 2, 4, 8, or 16, representing the pack size of the class.</span><span class="sxs-lookup"><span data-stu-id="80e4d-107">[out] One of the values 1, 2, 4, 8, or 16, representing the pack size of the class.</span></span>  
   
  `rFieldOffset`  
- <span data-ttu-id="e4499-108">[out]一个数组[COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)值。</span><span class="sxs-lookup"><span data-stu-id="e4499-108">[out] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) values.</span></span>  
+ <span data-ttu-id="80e4d-108">[out] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) values.</span><span class="sxs-lookup"><span data-stu-id="80e4d-108">[out] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) values.</span></span>  
   
  `cMax`  
- <span data-ttu-id="e4499-109">[in] `rFieldOffset` 数组的最大大小。</span><span class="sxs-lookup"><span data-stu-id="e4499-109">[in] The maximum size of the `rFieldOffset` array.</span></span>  
+ <span data-ttu-id="80e4d-109">[in] `rFieldOffset` 数组的最大大小。</span><span class="sxs-lookup"><span data-stu-id="80e4d-109">[in] The maximum size of the `rFieldOffset` array.</span></span>  
   
  `pcFieldOffset`  
- <span data-ttu-id="e4499-110">[out]在返回的元素数目`rFieldOffset`。</span><span class="sxs-lookup"><span data-stu-id="e4499-110">[out] The number of elements returned in `rFieldOffset`.</span></span>  
+ <span data-ttu-id="80e4d-110">[out] The number of elements returned in `rFieldOffset`.</span><span class="sxs-lookup"><span data-stu-id="80e4d-110">[out] The number of elements returned in `rFieldOffset`.</span></span>  
   
  `pulClassSize`  
- <span data-ttu-id="e4499-111">[out]以字节为单位表示的类的大小`td`。</span><span class="sxs-lookup"><span data-stu-id="e4499-111">[out] The size in bytes of the class represented by `td`.</span></span>  
+ <span data-ttu-id="80e4d-111">[out] The size in bytes of the class represented by `td`.</span><span class="sxs-lookup"><span data-stu-id="80e4d-111">[out] The size in bytes of the class represented by `td`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e4499-112">要求</span><span class="sxs-lookup"><span data-stu-id="e4499-112">Requirements</span></span>  
- <span data-ttu-id="e4499-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e4499-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="80e4d-112">要求</span><span class="sxs-lookup"><span data-stu-id="80e4d-112">Requirements</span></span>  
+ <span data-ttu-id="80e4d-113">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="80e4d-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e4499-114">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e4499-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="80e4d-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="80e4d-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e4499-115">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="e4499-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="80e4d-115">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="80e4d-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e4499-116">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e4499-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="80e4d-116">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="80e4d-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e4499-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="e4499-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="80e4d-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="80e4d-117">See also</span></span>
 
-- [<span data-ttu-id="e4499-118">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="e4499-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="e4499-119">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="e4499-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="80e4d-118">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="80e4d-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="80e4d-119">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="80e4d-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

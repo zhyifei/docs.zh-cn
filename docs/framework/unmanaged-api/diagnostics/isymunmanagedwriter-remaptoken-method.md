@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: bca92682-ee1e-467f-8fb0-d8d4617f82fe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c04ca1d56f3e93c77f335218bb534f890e9053d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e441d4ff39632d9381e445ee99249d04539ad87
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776609"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427883"
 ---
-# <a name="isymunmanagedwriterremaptoken-method"></a><span data-ttu-id="3df9f-102">ISymUnmanagedWriter::RemapToken 方法</span><span class="sxs-lookup"><span data-stu-id="3df9f-102">ISymUnmanagedWriter::RemapToken Method</span></span>
-<span data-ttu-id="3df9f-103">通知的符号编写器元数据标记在发出元数据已被重新映射。</span><span class="sxs-lookup"><span data-stu-id="3df9f-103">Notifies the symbol writer that a metadata token has been remapped as the metadata was emitted.</span></span> <span data-ttu-id="3df9f-104">如果符号编写器已存储在符号存储区中旧的令牌，则它必须具有新值，或它的存储的令牌必须保存相应的符号读取器在读取阶段重新映射的映射更新。</span><span class="sxs-lookup"><span data-stu-id="3df9f-104">If the symbol writer has stored the old token within the symbol store, it must either update the stored token with the new value, or it must save the map for the corresponding symbol reader to remap during the read phase.</span></span>  
+# <a name="isymunmanagedwriterremaptoken-method"></a><span data-ttu-id="5cff0-102">ISymUnmanagedWriter::RemapToken 方法</span><span class="sxs-lookup"><span data-stu-id="5cff0-102">ISymUnmanagedWriter::RemapToken Method</span></span>
+<span data-ttu-id="5cff0-103">Notifies the symbol writer that a metadata token has been remapped as the metadata was emitted.</span><span class="sxs-lookup"><span data-stu-id="5cff0-103">Notifies the symbol writer that a metadata token has been remapped as the metadata was emitted.</span></span> <span data-ttu-id="5cff0-104">If the symbol writer has stored the old token within the symbol store, it must either update the stored token with the new value, or it must save the map for the corresponding symbol reader to remap during the read phase.</span><span class="sxs-lookup"><span data-stu-id="5cff0-104">If the symbol writer has stored the old token within the symbol store, it must either update the stored token with the new value, or it must save the map for the corresponding symbol reader to remap during the read phase.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3df9f-105">语法</span><span class="sxs-lookup"><span data-stu-id="3df9f-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5cff0-105">语法</span><span class="sxs-lookup"><span data-stu-id="5cff0-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT RemapToken(  
@@ -35,19 +33,19 @@ HRESULT RemapToken(
     [in] mdToken  newToken);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3df9f-106">参数</span><span class="sxs-lookup"><span data-stu-id="3df9f-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5cff0-106">参数</span><span class="sxs-lookup"><span data-stu-id="5cff0-106">Parameters</span></span>  
  `oldToken`  
- <span data-ttu-id="3df9f-107">[in]已重新映射元数据标记。</span><span class="sxs-lookup"><span data-stu-id="3df9f-107">[in] The metadata token that was remapped.</span></span>  
+ <span data-ttu-id="5cff0-107">[in] The metadata token that was remapped.</span><span class="sxs-lookup"><span data-stu-id="5cff0-107">[in] The metadata token that was remapped.</span></span>  
   
  `newToken`  
- <span data-ttu-id="3df9f-108">[in]向其新的元数据令牌`oldToken`已重新映射。</span><span class="sxs-lookup"><span data-stu-id="3df9f-108">[in] The new metadata token to which `oldToken` was remapped.</span></span>  
+ <span data-ttu-id="5cff0-108">[in] The new metadata token to which `oldToken` was remapped.</span><span class="sxs-lookup"><span data-stu-id="5cff0-108">[in] The new metadata token to which `oldToken` was remapped.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3df9f-109">返回值</span><span class="sxs-lookup"><span data-stu-id="3df9f-109">Return Value</span></span>  
- <span data-ttu-id="3df9f-110">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="3df9f-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5cff0-109">返回值</span><span class="sxs-lookup"><span data-stu-id="5cff0-109">Return Value</span></span>  
+ <span data-ttu-id="5cff0-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="5cff0-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3df9f-111">要求</span><span class="sxs-lookup"><span data-stu-id="3df9f-111">Requirements</span></span>  
- <span data-ttu-id="3df9f-112">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="3df9f-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5cff0-111">要求</span><span class="sxs-lookup"><span data-stu-id="5cff0-111">Requirements</span></span>  
+ <span data-ttu-id="5cff0-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5cff0-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3df9f-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="3df9f-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5cff0-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="5cff0-113">See also</span></span>
 
-- [<span data-ttu-id="3df9f-114">ISymUnmanagedWriter 接口</span><span class="sxs-lookup"><span data-stu-id="3df9f-114">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="5cff0-114">ISymUnmanagedWriter 接口</span><span class="sxs-lookup"><span data-stu-id="5cff0-114">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

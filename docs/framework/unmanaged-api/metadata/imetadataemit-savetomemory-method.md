@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: d5237628-2675-45ed-a39e-65c0731b6a56
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e32c0ace5f999a75220d0d093b85e0cbbfc73889
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: be4fb0b4b49408a97b318e0f54f5a753f3f24ef1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757581"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435800"
 ---
-# <a name="imetadataemitsavetomemory-method"></a><span data-ttu-id="dcccf-102">IMetaDataEmit::SaveToMemory 方法</span><span class="sxs-lookup"><span data-stu-id="dcccf-102">IMetaDataEmit::SaveToMemory Method</span></span>
-<span data-ttu-id="dcccf-103">将保存到指定的内存区域的当前作用域中的所有元数据。</span><span class="sxs-lookup"><span data-stu-id="dcccf-103">Saves all metadata in the current scope to the specified area of memory.</span></span>  
+# <a name="imetadataemitsavetomemory-method"></a><span data-ttu-id="7cb14-102">IMetaDataEmit::SaveToMemory 方法</span><span class="sxs-lookup"><span data-stu-id="7cb14-102">IMetaDataEmit::SaveToMemory Method</span></span>
+<span data-ttu-id="7cb14-103">Saves all metadata in the current scope to the specified area of memory.</span><span class="sxs-lookup"><span data-stu-id="7cb14-103">Saves all metadata in the current scope to the specified area of memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dcccf-104">语法</span><span class="sxs-lookup"><span data-stu-id="dcccf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7cb14-104">语法</span><span class="sxs-lookup"><span data-stu-id="7cb14-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SaveToMemory (   
@@ -36,23 +34,23 @@ HRESULT SaveToMemory (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="dcccf-105">参数</span><span class="sxs-lookup"><span data-stu-id="dcccf-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7cb14-105">参数</span><span class="sxs-lookup"><span data-stu-id="7cb14-105">Parameters</span></span>  
  `pbData`  
- <span data-ttu-id="dcccf-106">[out]要开始编写元数据地址。</span><span class="sxs-lookup"><span data-stu-id="dcccf-106">[out] The address at which to begin writing metadata.</span></span>  
+ <span data-ttu-id="7cb14-106">[out] The address at which to begin writing metadata.</span><span class="sxs-lookup"><span data-stu-id="7cb14-106">[out] The address at which to begin writing metadata.</span></span>  
   
  `cbData`  
- <span data-ttu-id="dcccf-107">[in]以字节为单位分配的内存大小。</span><span class="sxs-lookup"><span data-stu-id="dcccf-107">[in] The size, in bytes, of the allocated memory.</span></span>  
+ <span data-ttu-id="7cb14-107">[in] The size, in bytes, of the allocated memory.</span><span class="sxs-lookup"><span data-stu-id="7cb14-107">[in] The size, in bytes, of the allocated memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dcccf-108">要求</span><span class="sxs-lookup"><span data-stu-id="dcccf-108">Requirements</span></span>  
- <span data-ttu-id="dcccf-109">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dcccf-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7cb14-108">要求</span><span class="sxs-lookup"><span data-stu-id="7cb14-108">Requirements</span></span>  
+ <span data-ttu-id="7cb14-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7cb14-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dcccf-110">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="dcccf-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7cb14-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7cb14-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="dcccf-111">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="dcccf-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="7cb14-111">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7cb14-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="dcccf-112">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dcccf-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7cb14-112">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7cb14-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dcccf-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="dcccf-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7cb14-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="7cb14-113">See also</span></span>
 
-- [<span data-ttu-id="dcccf-114">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="dcccf-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="dcccf-115">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="dcccf-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="7cb14-114">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="7cb14-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="7cb14-115">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="7cb14-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

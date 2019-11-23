@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c571e37d87ffd136687452dc80a823b8ddbe3359
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cea84f47a5289df4bc9c50381e18d7077b3b8dad
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782061"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440473"
 ---
-# <a name="imetadataemittranslatesigwithscope-method"></a><span data-ttu-id="ab1a1-102">IMetaDataEmit::TranslateSigWithScope 方法</span><span class="sxs-lookup"><span data-stu-id="ab1a1-102">IMetaDataEmit::TranslateSigWithScope Method</span></span>
-<span data-ttu-id="ab1a1-103">将程序集导入到当前作用域和合并的作用域获取新的元数据签名。</span><span class="sxs-lookup"><span data-stu-id="ab1a1-103">Imports an assembly into the current scope and gets a new metadata signature for the merged scope.</span></span>  
+# <a name="imetadataemittranslatesigwithscope-method"></a><span data-ttu-id="37efb-102">IMetaDataEmit::TranslateSigWithScope 方法</span><span class="sxs-lookup"><span data-stu-id="37efb-102">IMetaDataEmit::TranslateSigWithScope Method</span></span>
+<span data-ttu-id="37efb-103">Imports an assembly into the current scope and gets a new metadata signature for the merged scope.</span><span class="sxs-lookup"><span data-stu-id="37efb-103">Imports an assembly into the current scope and gets a new metadata signature for the merged scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ab1a1-104">语法</span><span class="sxs-lookup"><span data-stu-id="ab1a1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="37efb-104">语法</span><span class="sxs-lookup"><span data-stu-id="37efb-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT TranslateSigWithScope (   
@@ -45,53 +43,53 @@ HRESULT TranslateSigWithScope (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ab1a1-105">参数</span><span class="sxs-lookup"><span data-stu-id="ab1a1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="37efb-105">参数</span><span class="sxs-lookup"><span data-stu-id="37efb-105">Parameters</span></span>  
  `pAssemImport`  
- <span data-ttu-id="ab1a1-106">[in]用于导入程序集 （其中定义签名） 的接口。</span><span class="sxs-lookup"><span data-stu-id="ab1a1-106">[in] The interface for import assembly (where the signature is defined).</span></span>  
+ <span data-ttu-id="37efb-106">[in] The interface for import assembly (where the signature is defined).</span><span class="sxs-lookup"><span data-stu-id="37efb-106">[in] The interface for import assembly (where the signature is defined).</span></span>  
   
  `pbHashValue`  
- <span data-ttu-id="ab1a1-107">[in]程序集哈希 blob。</span><span class="sxs-lookup"><span data-stu-id="ab1a1-107">[in] The hash blob for the assembly.</span></span>  
+ <span data-ttu-id="37efb-107">[in] The hash blob for the assembly.</span><span class="sxs-lookup"><span data-stu-id="37efb-107">[in] The hash blob for the assembly.</span></span>  
   
  `cbHashValue`  
- <span data-ttu-id="ab1a1-108">[in]中的字节计数`pbHashValue`。</span><span class="sxs-lookup"><span data-stu-id="ab1a1-108">[in] The count of bytes in `pbHashValue`.</span></span>  
+ <span data-ttu-id="37efb-108">[in] The count of bytes in `pbHashValue`.</span><span class="sxs-lookup"><span data-stu-id="37efb-108">[in] The count of bytes in `pbHashValue`.</span></span>  
   
  `import`  
- <span data-ttu-id="ab1a1-109">[in]用于导入元数据范围的接口。</span><span class="sxs-lookup"><span data-stu-id="ab1a1-109">[in] The interface for import metadata scope.</span></span>  
+ <span data-ttu-id="37efb-109">[in] The interface for import metadata scope.</span><span class="sxs-lookup"><span data-stu-id="37efb-109">[in] The interface for import metadata scope.</span></span>  
   
  `pbSigBlob`  
- <span data-ttu-id="ab1a1-110">[in]要导入的签名。</span><span class="sxs-lookup"><span data-stu-id="ab1a1-110">[in] The signature to be imported.</span></span>  
+ <span data-ttu-id="37efb-110">[in] The signature to be imported.</span><span class="sxs-lookup"><span data-stu-id="37efb-110">[in] The signature to be imported.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="ab1a1-111">[in]大小，以字节为单位的`pbSigBlob`。</span><span class="sxs-lookup"><span data-stu-id="ab1a1-111">[in] The size, in bytes, of `pbSigBlob`.</span></span>  
+ <span data-ttu-id="37efb-111">[in] The size, in bytes, of `pbSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="37efb-111">[in] The size, in bytes, of `pbSigBlob`.</span></span>  
   
  `pAssemEmit`  
- <span data-ttu-id="ab1a1-112">[in]导出程序集的接口。</span><span class="sxs-lookup"><span data-stu-id="ab1a1-112">[in] The interface for export assembly.</span></span>  
+ <span data-ttu-id="37efb-112">[in] The interface for export assembly.</span><span class="sxs-lookup"><span data-stu-id="37efb-112">[in] The interface for export assembly.</span></span>  
   
  `emit`  
- <span data-ttu-id="ab1a1-113">[in]导出元数据范围的接口。</span><span class="sxs-lookup"><span data-stu-id="ab1a1-113">[in] The interface for export metadata scope.</span></span>  
+ <span data-ttu-id="37efb-113">[in] The interface for export metadata scope.</span><span class="sxs-lookup"><span data-stu-id="37efb-113">[in] The interface for export metadata scope.</span></span>  
   
  `pvTranslatedSig`  
- <span data-ttu-id="ab1a1-114">[out]要保存已翻译的签名 blob 的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="ab1a1-114">[out] The buffer to hold the translated signature blob.</span></span>  
+ <span data-ttu-id="37efb-114">[out] The buffer to hold the translated signature blob.</span><span class="sxs-lookup"><span data-stu-id="37efb-114">[out] The buffer to hold the translated signature blob.</span></span>  
   
  `cbTranslatedSigMax`  
- <span data-ttu-id="ab1a1-115">[in]容量，以字节为单位的`pvTranslatedSig`。</span><span class="sxs-lookup"><span data-stu-id="ab1a1-115">[in] The capacity, in bytes, of `pvTranslatedSig`.</span></span>  
+ <span data-ttu-id="37efb-115">[in] The capacity, in bytes, of `pvTranslatedSig`.</span><span class="sxs-lookup"><span data-stu-id="37efb-115">[in] The capacity, in bytes, of `pvTranslatedSig`.</span></span>  
   
  `pcbTranslatedSig`  
- <span data-ttu-id="ab1a1-116">[out]已翻译的签名中的实际字节数。</span><span class="sxs-lookup"><span data-stu-id="ab1a1-116">[out] The number of actual bytes in the translated signature.</span></span>  
+ <span data-ttu-id="37efb-116">[out] The number of actual bytes in the translated signature.</span><span class="sxs-lookup"><span data-stu-id="37efb-116">[out] The number of actual bytes in the translated signature.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ab1a1-117">要求</span><span class="sxs-lookup"><span data-stu-id="ab1a1-117">Requirements</span></span>  
- <span data-ttu-id="ab1a1-118">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ab1a1-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="37efb-117">要求</span><span class="sxs-lookup"><span data-stu-id="37efb-117">Requirements</span></span>  
+ <span data-ttu-id="37efb-118">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="37efb-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ab1a1-119">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ab1a1-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="37efb-119">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="37efb-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ab1a1-120">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="ab1a1-120">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="37efb-120">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="37efb-120">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ab1a1-121">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab1a1-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="37efb-121">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="37efb-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ab1a1-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="ab1a1-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="37efb-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="37efb-122">See also</span></span>
 
-- [<span data-ttu-id="ab1a1-123">IMetaDataAssemblyEmit 接口</span><span class="sxs-lookup"><span data-stu-id="ab1a1-123">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [<span data-ttu-id="ab1a1-124">IMetaDataAssemblyImport 接口</span><span class="sxs-lookup"><span data-stu-id="ab1a1-124">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [<span data-ttu-id="ab1a1-125">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="ab1a1-125">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="ab1a1-126">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="ab1a1-126">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="ab1a1-127">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="ab1a1-127">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="37efb-123">IMetaDataAssemblyEmit 接口</span><span class="sxs-lookup"><span data-stu-id="37efb-123">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="37efb-124">IMetaDataAssemblyImport 接口</span><span class="sxs-lookup"><span data-stu-id="37efb-124">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="37efb-125">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="37efb-125">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="37efb-126">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="37efb-126">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="37efb-127">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="37efb-127">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

@@ -15,34 +15,32 @@ helpviewer_keywords:
 ms.assetid: 01de7ac6-0aad-42ef-bf93-50737667b0a4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ad694f1a041346bc360e623829d2d38245773aaf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6cd6b7981c9b6b7f2efd30b045e8e179a22a3b87
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756068"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445367"
 ---
-# <a name="icorprofilercallbackexceptionsearchfunctionleave-method"></a><span data-ttu-id="f7095-102">ICorProfilerCallback::ExceptionSearchFunctionLeave 方法</span><span class="sxs-lookup"><span data-stu-id="f7095-102">ICorProfilerCallback::ExceptionSearchFunctionLeave Method</span></span>
-<span data-ttu-id="f7095-103">通知探查器的异常处理的搜索阶段已完成搜索函数。</span><span class="sxs-lookup"><span data-stu-id="f7095-103">Notifies the profiler that the search phase of exception handling has finished searching a function.</span></span>  
+# <a name="icorprofilercallbackexceptionsearchfunctionleave-method"></a><span data-ttu-id="7c590-102">ICorProfilerCallback::ExceptionSearchFunctionLeave 方法</span><span class="sxs-lookup"><span data-stu-id="7c590-102">ICorProfilerCallback::ExceptionSearchFunctionLeave Method</span></span>
+<span data-ttu-id="7c590-103">Notifies the profiler that the search phase of exception handling has finished searching a function.</span><span class="sxs-lookup"><span data-stu-id="7c590-103">Notifies the profiler that the search phase of exception handling has finished searching a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f7095-104">语法</span><span class="sxs-lookup"><span data-stu-id="f7095-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7c590-104">语法</span><span class="sxs-lookup"><span data-stu-id="7c590-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExceptionSearchFunctionLeave();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="f7095-105">要求</span><span class="sxs-lookup"><span data-stu-id="f7095-105">Requirements</span></span>  
- <span data-ttu-id="f7095-106">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f7095-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7c590-105">要求</span><span class="sxs-lookup"><span data-stu-id="7c590-105">Requirements</span></span>  
+ <span data-ttu-id="7c590-106">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7c590-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f7095-107">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f7095-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="7c590-107">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7c590-107">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="f7095-108">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f7095-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7c590-108">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7c590-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f7095-109">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f7095-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7c590-109">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7c590-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f7095-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="f7095-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7c590-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="7c590-110">See also</span></span>
 
-- [<span data-ttu-id="f7095-111">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="f7095-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="f7095-112">ExceptionSearchFunctionEnter 方法</span><span class="sxs-lookup"><span data-stu-id="f7095-112">ExceptionSearchFunctionEnter Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)
+- [<span data-ttu-id="7c590-111">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="7c590-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="7c590-112">ExceptionSearchFunctionEnter 方法</span><span class="sxs-lookup"><span data-stu-id="7c590-112">ExceptionSearchFunctionEnter Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)

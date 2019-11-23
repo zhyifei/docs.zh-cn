@@ -7,31 +7,29 @@ helpviewer_keywords:
 - diagnostics symbol store structures [.NET Framework]
 - structures [.NET Framework debugging]
 ms.assetid: 0d423791-d40d-45c6-a82b-1a165768d737
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2e7bd0fabcd4838990ae8704de4f83e9677dbc08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d58891be89aef0587922daaec1efaf53829501f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599281"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448520"
 ---
-# <a name="diagnostics-symbol-store-structures"></a><span data-ttu-id="a3c81-102">诊断符号存储区结构</span><span class="sxs-lookup"><span data-stu-id="a3c81-102">Diagnostics Symbol Store Structures</span></span>
-<span data-ttu-id="a3c81-103">本主题描述诊断符号存储区 API 使用的非托管的结构。</span><span class="sxs-lookup"><span data-stu-id="a3c81-103">This topic describes the unmanaged structures that the diagnostics symbol store API uses.</span></span>  
+# <a name="diagnostics-symbol-store-structures"></a><span data-ttu-id="779a2-102">诊断符号存储区结构</span><span class="sxs-lookup"><span data-stu-id="779a2-102">Diagnostics Symbol Store Structures</span></span>
+<span data-ttu-id="779a2-103">This topic describes the unmanaged structures that the diagnostics symbol store API uses.</span><span class="sxs-lookup"><span data-stu-id="779a2-103">This topic describes the unmanaged structures that the diagnostics symbol store API uses.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a3c81-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="a3c81-104">In This Section</span></span>  
- [<span data-ttu-id="a3c81-105">CALL_ID 结构</span><span class="sxs-lookup"><span data-stu-id="a3c81-105">CALL_ID Structure</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)  
- <span data-ttu-id="a3c81-106">提供给函数的调用调试程序的信息。</span><span class="sxs-lookup"><span data-stu-id="a3c81-106">Provides information to a debugger about a function that is being called.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="779a2-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="779a2-104">In This Section</span></span>  
+ [<span data-ttu-id="779a2-105">CALL_ID 结构</span><span class="sxs-lookup"><span data-stu-id="779a2-105">CALL_ID Structure</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)  
+ <span data-ttu-id="779a2-106">Provides information to a debugger about a function that is being called.</span><span class="sxs-lookup"><span data-stu-id="779a2-106">Provides information to a debugger about a function that is being called.</span></span>  
   
- [<span data-ttu-id="a3c81-107">SYMLINEDELTA 结构</span><span class="sxs-lookup"><span data-stu-id="a3c81-107">SYMLINEDELTA Structure</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)  
- <span data-ttu-id="a3c81-108">提供到符号处理程序已由于编辑而移动的方法有关的信息。</span><span class="sxs-lookup"><span data-stu-id="a3c81-108">Provides information to the symbol handler about methods that were moved as a result of edits.</span></span>  
+ [<span data-ttu-id="779a2-107">SYMLINEDELTA 结构</span><span class="sxs-lookup"><span data-stu-id="779a2-107">SYMLINEDELTA Structure</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)  
+ <span data-ttu-id="779a2-108">Provides information to the symbol handler about methods that were moved as a result of edits.</span><span class="sxs-lookup"><span data-stu-id="779a2-108">Provides information to the symbol handler about methods that were moved as a result of edits.</span></span>  
   
- [<span data-ttu-id="a3c81-109">USER_THREAD 结构</span><span class="sxs-lookup"><span data-stu-id="a3c81-109">USER_THREAD Structure</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)  
- <span data-ttu-id="a3c81-110">提供给关于线程调试程序的信息。</span><span class="sxs-lookup"><span data-stu-id="a3c81-110">Provides information to a debugger about a thread.</span></span>  
+ [<span data-ttu-id="779a2-109">USER_THREAD 结构</span><span class="sxs-lookup"><span data-stu-id="779a2-109">USER_THREAD Structure</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)  
+ <span data-ttu-id="779a2-110">Provides information to a debugger about a thread.</span><span class="sxs-lookup"><span data-stu-id="779a2-110">Provides information to a debugger about a thread.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="a3c81-111">相关章节</span><span class="sxs-lookup"><span data-stu-id="a3c81-111">Related Sections</span></span>  
- [<span data-ttu-id="a3c81-112">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="a3c81-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
+## <a name="related-sections"></a><span data-ttu-id="779a2-111">相关章节</span><span class="sxs-lookup"><span data-stu-id="779a2-111">Related Sections</span></span>  
+ [<span data-ttu-id="779a2-112">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="779a2-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
   
- [<span data-ttu-id="a3c81-113">诊断符号存储区枚举</span><span class="sxs-lookup"><span data-stu-id="a3c81-113">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
+ [<span data-ttu-id="779a2-113">诊断符号存储区枚举</span><span class="sxs-lookup"><span data-stu-id="779a2-113">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
   
- [<span data-ttu-id="a3c81-114">调试</span><span class="sxs-lookup"><span data-stu-id="a3c81-114">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+ [<span data-ttu-id="779a2-114">调试</span><span class="sxs-lookup"><span data-stu-id="779a2-114">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
