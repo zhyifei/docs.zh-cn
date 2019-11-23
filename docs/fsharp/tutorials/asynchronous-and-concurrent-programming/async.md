@@ -9,45 +9,45 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/16/2019
 ms.locfileid: "72395791"
 ---
-# <a name="async-programming-in-f"></a><span data-ttu-id="c18ae-103">F @ no__t 中的异步编程</span><span class="sxs-lookup"><span data-stu-id="c18ae-103">Async programming in F\#</span></span>
+# <a name="async-programming-in-f"></a><span data-ttu-id="3a25c-103">F 中的异步编程\#</span><span class="sxs-lookup"><span data-stu-id="3a25c-103">Async programming in F\#</span></span>
 
-<span data-ttu-id="c18ae-104">异步编程是一种对新式应用程序至关重要的机制，原因多种多样。</span><span class="sxs-lookup"><span data-stu-id="c18ae-104">Asynchronous programming is a mechanism that is essential to modern applications for diverse reasons.</span></span> <span data-ttu-id="c18ae-105">大多数开发人员都将遇到两个主要用例：</span><span class="sxs-lookup"><span data-stu-id="c18ae-105">There are two primary use cases that most developers will encounter:</span></span>
+<span data-ttu-id="3a25c-104">异步编程是一种对新式应用程序至关重要的机制，原因多种多样。</span><span class="sxs-lookup"><span data-stu-id="3a25c-104">Asynchronous programming is a mechanism that is essential to modern applications for diverse reasons.</span></span> <span data-ttu-id="3a25c-105">大多数开发人员都将遇到两个主要用例：</span><span class="sxs-lookup"><span data-stu-id="3a25c-105">There are two primary use cases that most developers will encounter:</span></span>
 
-- <span data-ttu-id="c18ae-106">提供可为大量并发传入请求提供服务的服务器进程，同时最大限度地减少在请求处理过程中所占用的系统资源，等待来自该进程外部的系统或服务的输入</span><span class="sxs-lookup"><span data-stu-id="c18ae-106">Presenting a server process that can service a significant number of concurrent incoming requests, while minimizing the system resources occupied while request processing awaits inputs from systems or services external to that process</span></span>
-- <span data-ttu-id="c18ae-107">在并发后台工作的同时维护响应式 UI 或主线程</span><span class="sxs-lookup"><span data-stu-id="c18ae-107">Maintaining a responsive UI or main thread while concurrently progressing background work</span></span>
+- <span data-ttu-id="3a25c-106">提供可为大量并发传入请求提供服务的服务器进程，同时最大限度地减少在请求处理过程中所占用的系统资源，等待来自该进程外部的系统或服务的输入</span><span class="sxs-lookup"><span data-stu-id="3a25c-106">Presenting a server process that can service a significant number of concurrent incoming requests, while minimizing the system resources occupied while request processing awaits inputs from systems or services external to that process</span></span>
+- <span data-ttu-id="3a25c-107">在并发后台工作的同时维护响应式 UI 或主线程</span><span class="sxs-lookup"><span data-stu-id="3a25c-107">Maintaining a responsive UI or main thread while concurrently progressing background work</span></span>
 
-<span data-ttu-id="c18ae-108">尽管后台工作通常涉及多个线程的使用率，但请务必分别考虑异步和多线程的概念。</span><span class="sxs-lookup"><span data-stu-id="c18ae-108">Although background work often does involve the utilization of multiple threads, it's important to consider the concepts of asynchrony and multi-threading separately.</span></span> <span data-ttu-id="c18ae-109">事实上，它们是单独的问题，而另一个则不是。</span><span class="sxs-lookup"><span data-stu-id="c18ae-109">In fact, they are separate concerns, and one does not imply the other.</span></span> <span data-ttu-id="c18ae-110">本文后面的内容将更详细地介绍这一点。</span><span class="sxs-lookup"><span data-stu-id="c18ae-110">What follows in this article will describe this in more detail.</span></span>
+<span data-ttu-id="3a25c-108">尽管后台工作通常涉及多个线程的使用率，但请务必分别考虑异步和多线程的概念。</span><span class="sxs-lookup"><span data-stu-id="3a25c-108">Although background work often does involve the utilization of multiple threads, it's important to consider the concepts of asynchrony and multi-threading separately.</span></span> <span data-ttu-id="3a25c-109">事实上，它们是单独的问题，而另一个则不是。</span><span class="sxs-lookup"><span data-stu-id="3a25c-109">In fact, they are separate concerns, and one does not imply the other.</span></span> <span data-ttu-id="3a25c-110">本文后面的内容将更详细地介绍这一点。</span><span class="sxs-lookup"><span data-stu-id="3a25c-110">What follows in this article will describe this in more detail.</span></span>
 
-## <a name="asynchrony-defined"></a><span data-ttu-id="c18ae-111">已定义异步</span><span class="sxs-lookup"><span data-stu-id="c18ae-111">Asynchrony defined</span></span>
+## <a name="asynchrony-defined"></a><span data-ttu-id="3a25c-111">已定义异步</span><span class="sxs-lookup"><span data-stu-id="3a25c-111">Asynchrony defined</span></span>
 
-<span data-ttu-id="c18ae-112">之前的一点是，异步独立于多个线程的利用率，值得进一步解释。</span><span class="sxs-lookup"><span data-stu-id="c18ae-112">The previous point - that asynchrony is independent of the utilization of multiple threads - is worth explaining a bit further.</span></span> <span data-ttu-id="c18ae-113">有时有三个相关概念，但彼此完全独立：</span><span class="sxs-lookup"><span data-stu-id="c18ae-113">There are three concepts that are sometimes related, but strictly independent of one another:</span></span>
+<span data-ttu-id="3a25c-112">之前的一点是，异步独立于多个线程的利用率，值得进一步解释。</span><span class="sxs-lookup"><span data-stu-id="3a25c-112">The previous point - that asynchrony is independent of the utilization of multiple threads - is worth explaining a bit further.</span></span> <span data-ttu-id="3a25c-113">有时有三个相关概念，但彼此完全独立：</span><span class="sxs-lookup"><span data-stu-id="3a25c-113">There are three concepts that are sometimes related, but strictly independent of one another:</span></span>
 
-- <span data-ttu-id="c18ae-114">能力当多个计算在重叠的时间段内执行时。</span><span class="sxs-lookup"><span data-stu-id="c18ae-114">Concurrency; when multiple computations execute in overlapping time periods.</span></span>
-- <span data-ttu-id="c18ae-115">度当一个计算的多个计算或多个部分在同一时间运行时。</span><span class="sxs-lookup"><span data-stu-id="c18ae-115">Parallelism; when multiple computations or several parts of a single computation run at exactly the same time.</span></span>
-- <span data-ttu-id="c18ae-116">异步当一个或多个计算可与主程序流分开执行时。</span><span class="sxs-lookup"><span data-stu-id="c18ae-116">Asynchrony; when one or more computations can execute separately from the main program flow.</span></span>
+- <span data-ttu-id="3a25c-114">能力当多个计算在重叠的时间段内执行时。</span><span class="sxs-lookup"><span data-stu-id="3a25c-114">Concurrency; when multiple computations execute in overlapping time periods.</span></span>
+- <span data-ttu-id="3a25c-115">度当一个计算的多个计算或多个部分在同一时间运行时。</span><span class="sxs-lookup"><span data-stu-id="3a25c-115">Parallelism; when multiple computations or several parts of a single computation run at exactly the same time.</span></span>
+- <span data-ttu-id="3a25c-116">异步当一个或多个计算可与主程序流分开执行时。</span><span class="sxs-lookup"><span data-stu-id="3a25c-116">Asynchrony; when one or more computations can execute separately from the main program flow.</span></span>
 
-<span data-ttu-id="c18ae-117">这三种概念都是直角概念，但可以很容易地与父，尤其是在它们一起使用时。</span><span class="sxs-lookup"><span data-stu-id="c18ae-117">All three are orthogonal concepts, but can be easily conflated, especially when they are used together.</span></span> <span data-ttu-id="c18ae-118">例如，可能需要并行执行多个异步计算。</span><span class="sxs-lookup"><span data-stu-id="c18ae-118">For example, you may need to execute multiple asynchronous computations in parallel.</span></span> <span data-ttu-id="c18ae-119">这并不意味着并行或异步彼此不同。</span><span class="sxs-lookup"><span data-stu-id="c18ae-119">This does not mean that parallelism or asynchrony imply one another.</span></span>
+<span data-ttu-id="3a25c-117">这三种概念都是直角概念，但可以很容易地与父，尤其是在它们一起使用时。</span><span class="sxs-lookup"><span data-stu-id="3a25c-117">All three are orthogonal concepts, but can be easily conflated, especially when they are used together.</span></span> <span data-ttu-id="3a25c-118">例如，可能需要并行执行多个异步计算。</span><span class="sxs-lookup"><span data-stu-id="3a25c-118">For example, you may need to execute multiple asynchronous computations in parallel.</span></span> <span data-ttu-id="3a25c-119">这并不意味着并行或异步彼此不同。</span><span class="sxs-lookup"><span data-stu-id="3a25c-119">This does not mean that parallelism or asynchrony imply one another.</span></span>
 
-<span data-ttu-id="c18ae-120">如果你考虑 "异步" 一词的 etymology，则涉及两个部分：</span><span class="sxs-lookup"><span data-stu-id="c18ae-120">If you consider the etymology of the word "asynchronous", there are two pieces involved:</span></span>
+<span data-ttu-id="3a25c-120">如果你考虑 "异步" 一词的 etymology，则涉及两个部分：</span><span class="sxs-lookup"><span data-stu-id="3a25c-120">If you consider the etymology of the word "asynchronous", there are two pieces involved:</span></span>
 
-- <span data-ttu-id="c18ae-121">"a"，表示 "not"。</span><span class="sxs-lookup"><span data-stu-id="c18ae-121">"a", meaning "not".</span></span>
-- <span data-ttu-id="c18ae-122">"同步"，表示 "同时"。</span><span class="sxs-lookup"><span data-stu-id="c18ae-122">"synchronous", meaning "at the same time".</span></span>
+- <span data-ttu-id="3a25c-121">"a"，表示 "not"。</span><span class="sxs-lookup"><span data-stu-id="3a25c-121">"a", meaning "not".</span></span>
+- <span data-ttu-id="3a25c-122">"同步"，表示 "同时"。</span><span class="sxs-lookup"><span data-stu-id="3a25c-122">"synchronous", meaning "at the same time".</span></span>
 
-<span data-ttu-id="c18ae-123">将这两个术语组合在一起后，会看到 "异步" 表示 "不同时"。</span><span class="sxs-lookup"><span data-stu-id="c18ae-123">When you put these two terms together, you'll see that "asynchronous" means "not at the same time".</span></span> <span data-ttu-id="c18ae-124">就这么简单！</span><span class="sxs-lookup"><span data-stu-id="c18ae-124">That's it!</span></span> <span data-ttu-id="c18ae-125">此定义中不存在并发或并行性的含义。</span><span class="sxs-lookup"><span data-stu-id="c18ae-125">There is no implication of concurrency or parallelism in this definition.</span></span> <span data-ttu-id="c18ae-126">实际上也是如此。</span><span class="sxs-lookup"><span data-stu-id="c18ae-126">This is also true in practice.</span></span>
+<span data-ttu-id="3a25c-123">将这两个术语组合在一起后，会看到 "异步" 表示 "不同时"。</span><span class="sxs-lookup"><span data-stu-id="3a25c-123">When you put these two terms together, you'll see that "asynchronous" means "not at the same time".</span></span> <span data-ttu-id="3a25c-124">就这么简单！</span><span class="sxs-lookup"><span data-stu-id="3a25c-124">That's it!</span></span> <span data-ttu-id="3a25c-125">此定义中不存在并发或并行性的含义。</span><span class="sxs-lookup"><span data-stu-id="3a25c-125">There is no implication of concurrency or parallelism in this definition.</span></span> <span data-ttu-id="3a25c-126">实际上也是如此。</span><span class="sxs-lookup"><span data-stu-id="3a25c-126">This is also true in practice.</span></span>
 
-<span data-ttu-id="c18ae-127">在实际情况下，中F#的异步计算计划为独立于主程序流执行。</span><span class="sxs-lookup"><span data-stu-id="c18ae-127">In practical terms, asynchronous computations in F# are scheduled to execute independently of the main program flow.</span></span> <span data-ttu-id="c18ae-128">这并不意味着并发性或并行性，也不意味着计算始终在后台发生。</span><span class="sxs-lookup"><span data-stu-id="c18ae-128">This doesn't imply concurrency or parallelism, nor does it imply that a computation always happens in the background.</span></span> <span data-ttu-id="c18ae-129">事实上，异步计算甚至可以同步执行，具体取决于计算的性质和正在执行计算的环境。</span><span class="sxs-lookup"><span data-stu-id="c18ae-129">In fact, asynchronous computations can even execute synchronously, depending on the nature of the computation and the environment the computation is executing in.</span></span>
+<span data-ttu-id="3a25c-127">在实际情况下，中F#的异步计算计划为独立于主程序流执行。</span><span class="sxs-lookup"><span data-stu-id="3a25c-127">In practical terms, asynchronous computations in F# are scheduled to execute independently of the main program flow.</span></span> <span data-ttu-id="3a25c-128">这并不意味着并发性或并行性，也不意味着计算始终在后台发生。</span><span class="sxs-lookup"><span data-stu-id="3a25c-128">This doesn't imply concurrency or parallelism, nor does it imply that a computation always happens in the background.</span></span> <span data-ttu-id="3a25c-129">事实上，异步计算甚至可以同步执行，具体取决于计算的性质和正在执行计算的环境。</span><span class="sxs-lookup"><span data-stu-id="3a25c-129">In fact, asynchronous computations can even execute synchronously, depending on the nature of the computation and the environment the computation is executing in.</span></span>
 
-<span data-ttu-id="c18ae-130">应该具有的主要要点在于是异步计算与主程序流无关。</span><span class="sxs-lookup"><span data-stu-id="c18ae-130">The main takeaway you should have is that asynchronous computations are independent of the main program flow.</span></span> <span data-ttu-id="c18ae-131">尽管对异步计算的执行时间或方式有一些保证，但还是有一些用于协调和安排这些方法的方法。</span><span class="sxs-lookup"><span data-stu-id="c18ae-131">Although there are few guarantees about when or how an asynchronous computation executes, there are some approaches to orchestrating and scheduling them.</span></span> <span data-ttu-id="c18ae-132">本文的其余部分探讨了F#异步的核心概念，以及如何使用中F#内置的类型、函数和表达式。</span><span class="sxs-lookup"><span data-stu-id="c18ae-132">The rest of this article explores core concepts for F# asynchrony and how to use the types, functions, and expressions built into F#.</span></span>
+<span data-ttu-id="3a25c-130">应该具有的主要要点在于是异步计算与主程序流无关。</span><span class="sxs-lookup"><span data-stu-id="3a25c-130">The main takeaway you should have is that asynchronous computations are independent of the main program flow.</span></span> <span data-ttu-id="3a25c-131">尽管对异步计算的执行时间或方式有一些保证，但还是有一些用于协调和安排这些方法的方法。</span><span class="sxs-lookup"><span data-stu-id="3a25c-131">Although there are few guarantees about when or how an asynchronous computation executes, there are some approaches to orchestrating and scheduling them.</span></span> <span data-ttu-id="3a25c-132">本文的其余部分探讨了F#异步的核心概念，以及如何使用中F#内置的类型、函数和表达式。</span><span class="sxs-lookup"><span data-stu-id="3a25c-132">The rest of this article explores core concepts for F# asynchrony and how to use the types, functions, and expressions built into F#.</span></span>
 
-## <a name="core-concepts"></a><span data-ttu-id="c18ae-133">核心概念</span><span class="sxs-lookup"><span data-stu-id="c18ae-133">Core concepts</span></span>
+## <a name="core-concepts"></a><span data-ttu-id="3a25c-133">核心概念</span><span class="sxs-lookup"><span data-stu-id="3a25c-133">Core concepts</span></span>
 
-<span data-ttu-id="c18ae-134">在F#中，异步编程围绕三个核心概念：</span><span class="sxs-lookup"><span data-stu-id="c18ae-134">In F#, asynchronous programming is centered around three core concepts:</span></span>
+<span data-ttu-id="3a25c-134">在F#中，异步编程围绕三个核心概念：</span><span class="sxs-lookup"><span data-stu-id="3a25c-134">In F#, asynchronous programming is centered around three core concepts:</span></span>
 
-- <span data-ttu-id="c18ae-135">@No__t-0 类型，它表示可组合的异步计算。</span><span class="sxs-lookup"><span data-stu-id="c18ae-135">The `Async<'T>` type, which represents a composable asynchronous computation.</span></span>
-- <span data-ttu-id="c18ae-136">@No__t-0 模块函数，可用于计划异步工作、撰写异步计算和转换异步结果。</span><span class="sxs-lookup"><span data-stu-id="c18ae-136">The `Async` module functions, which let you schedule asynchronous work, compose asynchronous computations, and transform asynchronous results.</span></span>
-- <span data-ttu-id="c18ae-137">@No__t 0[计算表达式](../../language-reference/computation-expressions.md)，它提供了一种用于生成和控制异步计算的方便语法。</span><span class="sxs-lookup"><span data-stu-id="c18ae-137">The `async { }` [computation expression](../../language-reference/computation-expressions.md), which provides a convenient syntax for building and controlling asynchronous computations.</span></span>
+- <span data-ttu-id="3a25c-135">`Async<'T>` 类型，它表示可组合的异步计算。</span><span class="sxs-lookup"><span data-stu-id="3a25c-135">The `Async<'T>` type, which represents a composable asynchronous computation.</span></span>
+- <span data-ttu-id="3a25c-136">`Async` 模块函数，可用于计划异步工作、撰写异步计算和转换异步结果。</span><span class="sxs-lookup"><span data-stu-id="3a25c-136">The `Async` module functions, which let you schedule asynchronous work, compose asynchronous computations, and transform asynchronous results.</span></span>
+- <span data-ttu-id="3a25c-137">`async { }`[计算表达式](../../language-reference/computation-expressions.md)，它提供了一种用于生成和控制异步计算的方便语法。</span><span class="sxs-lookup"><span data-stu-id="3a25c-137">The `async { }` [computation expression](../../language-reference/computation-expressions.md), which provides a convenient syntax for building and controlling asynchronous computations.</span></span>
 
-<span data-ttu-id="c18ae-138">在以下示例中，可以看到这三个概念：</span><span class="sxs-lookup"><span data-stu-id="c18ae-138">You can see these three concepts in the following example:</span></span>
+<span data-ttu-id="3a25c-138">在以下示例中，可以看到这三个概念：</span><span class="sxs-lookup"><span data-stu-id="3a25c-138">You can see these three concepts in the following example:</span></span>
 
 ```fsharp
 open System
@@ -69,15 +69,15 @@ let main argv =
     0
 ```
 
-<span data-ttu-id="c18ae-139">在此示例中，@no__t @no__t 函数的类型为-1。</span><span class="sxs-lookup"><span data-stu-id="c18ae-139">In the example, the `printTotalFileBytes` function is of type `string -> Async<unit>`.</span></span> <span data-ttu-id="c18ae-140">调用函数实际上不会执行异步计算。</span><span class="sxs-lookup"><span data-stu-id="c18ae-140">Calling the function does not actually execute the asynchronous computation.</span></span> <span data-ttu-id="c18ae-141">相反，它会返回一个 `Async<unit>`，它充当要异步执行的工作的 \* 规范。</span><span class="sxs-lookup"><span data-stu-id="c18ae-141">Instead, it returns an `Async<unit>` that acts as a \*specification- of the work that is to execute asynchronously.</span></span> <span data-ttu-id="c18ae-142">它将在其正文中调用 `Async.AwaitTask`，这会在调用时将 @no__t 的结果转换为适当的类型。</span><span class="sxs-lookup"><span data-stu-id="c18ae-142">It will call `Async.AwaitTask` in its body, which will convert the result of <xref:System.IO.File.WriteAllBytesAsync%2A> to an appropriate type when it is called.</span></span>
+<span data-ttu-id="3a25c-139">在此示例中，`printTotalFileBytes` 函数的类型为 `string -> Async<unit>`。</span><span class="sxs-lookup"><span data-stu-id="3a25c-139">In the example, the `printTotalFileBytes` function is of type `string -> Async<unit>`.</span></span> <span data-ttu-id="3a25c-140">调用函数实际上不会执行异步计算。</span><span class="sxs-lookup"><span data-stu-id="3a25c-140">Calling the function does not actually execute the asynchronous computation.</span></span> <span data-ttu-id="3a25c-141">相反，它会返回一个 `Async<unit>`，它充当要异步执行的工作的 \* 规范。</span><span class="sxs-lookup"><span data-stu-id="3a25c-141">Instead, it returns an `Async<unit>` that acts as a \*specification- of the work that is to execute asynchronously.</span></span> <span data-ttu-id="3a25c-142">它将在其正文中调用 `Async.AwaitTask`，这会在调用时将 <xref:System.IO.File.WriteAllBytesAsync%2A> 的结果转换为适当的类型。</span><span class="sxs-lookup"><span data-stu-id="3a25c-142">It will call `Async.AwaitTask` in its body, which will convert the result of <xref:System.IO.File.WriteAllBytesAsync%2A> to an appropriate type when it is called.</span></span>
 
-<span data-ttu-id="c18ae-143">另一个重要的行是对 @no__t 的调用。</span><span class="sxs-lookup"><span data-stu-id="c18ae-143">Another important line is the call to `Async.RunSynchronously`.</span></span> <span data-ttu-id="c18ae-144">这是要实际执行F#异步计算时需要调用的异步模块启动函数之一。</span><span class="sxs-lookup"><span data-stu-id="c18ae-144">This is one of the Async module starting functions that you'll need to call if you want to actually execute an F# asynchronous computation.</span></span>
+<span data-ttu-id="3a25c-143">另一个重要的行是对 `Async.RunSynchronously`的调用。</span><span class="sxs-lookup"><span data-stu-id="3a25c-143">Another important line is the call to `Async.RunSynchronously`.</span></span> <span data-ttu-id="3a25c-144">这是要实际执行F#异步计算时需要调用的异步模块启动函数之一。</span><span class="sxs-lookup"><span data-stu-id="3a25c-144">This is one of the Async module starting functions that you'll need to call if you want to actually execute an F# asynchronous computation.</span></span>
 
-<span data-ttu-id="c18ae-145">这与 `async` 编程的C#/VB 样式是根本差异。</span><span class="sxs-lookup"><span data-stu-id="c18ae-145">This is a fundamental difference with the C#/VB style of `async` programming.</span></span> <span data-ttu-id="c18ae-146">在F#中，可以将异步计算视为**冷任务**。</span><span class="sxs-lookup"><span data-stu-id="c18ae-146">In F#, asynchronous computations can be thought of as **Cold tasks**.</span></span> <span data-ttu-id="c18ae-147">它们必须显式启动才能实际执行。</span><span class="sxs-lookup"><span data-stu-id="c18ae-147">They must be explicitly started to actually execute.</span></span> <span data-ttu-id="c18ae-148">这有一些优点，因为它允许你比在/VB. 中C#更轻松地组合和序列化异步工作</span><span class="sxs-lookup"><span data-stu-id="c18ae-148">This has some advantages, as it allows you to combine and sequence asynchronous work much more easily than in C#/VB.</span></span>
+<span data-ttu-id="3a25c-145">这与 `async` 编程的C#/VB 样式是根本差异。</span><span class="sxs-lookup"><span data-stu-id="3a25c-145">This is a fundamental difference with the C#/VB style of `async` programming.</span></span> <span data-ttu-id="3a25c-146">在F#中，可以将异步计算视为**冷任务**。</span><span class="sxs-lookup"><span data-stu-id="3a25c-146">In F#, asynchronous computations can be thought of as **Cold tasks**.</span></span> <span data-ttu-id="3a25c-147">它们必须显式启动才能实际执行。</span><span class="sxs-lookup"><span data-stu-id="3a25c-147">They must be explicitly started to actually execute.</span></span> <span data-ttu-id="3a25c-148">这有一些优点，因为它允许你比在/VB. 中C#更轻松地组合和序列化异步工作</span><span class="sxs-lookup"><span data-stu-id="3a25c-148">This has some advantages, as it allows you to combine and sequence asynchronous work much more easily than in C#/VB.</span></span>
 
-## <a name="combining-asynchronous-computations"></a><span data-ttu-id="c18ae-149">组合异步计算</span><span class="sxs-lookup"><span data-stu-id="c18ae-149">Combining asynchronous computations</span></span>
+## <a name="combining-asynchronous-computations"></a><span data-ttu-id="3a25c-149">组合异步计算</span><span class="sxs-lookup"><span data-stu-id="3a25c-149">Combining asynchronous computations</span></span>
 
-<span data-ttu-id="c18ae-150">下面是通过组合计算在上一个示例中生成的示例：</span><span class="sxs-lookup"><span data-stu-id="c18ae-150">Here is an example that builds upon the previous one by combining computations:</span></span>
+<span data-ttu-id="3a25c-150">下面是通过组合计算在上一个示例中生成的示例：</span><span class="sxs-lookup"><span data-stu-id="3a25c-150">Here is an example that builds upon the previous one by combining computations:</span></span>
 
 ```fsharp
 open System
@@ -101,18 +101,18 @@ let main argv =
     0
 ```
 
-<span data-ttu-id="c18ae-151">正如您所看到的，`main` 函数进行了更多调用。</span><span class="sxs-lookup"><span data-stu-id="c18ae-151">As you can see, the `main` function has quite a few more calls made.</span></span> <span data-ttu-id="c18ae-152">从概念上讲，它执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="c18ae-152">Conceptually, it does the following:</span></span>
+<span data-ttu-id="3a25c-151">正如您所看到的那样，`main` 函数进行了更多调用。</span><span class="sxs-lookup"><span data-stu-id="3a25c-151">As you can see, the `main` function has quite a few more calls made.</span></span> <span data-ttu-id="3a25c-152">从概念上讲，它执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="3a25c-152">Conceptually, it does the following:</span></span>
 
-1. <span data-ttu-id="c18ae-153">将命令行参数转换为 `Array.map` @no__t 计算。</span><span class="sxs-lookup"><span data-stu-id="c18ae-153">Transform the command-line arguments into `Async<unit>` computations with `Array.map`.</span></span>
-2. <span data-ttu-id="c18ae-154">创建一个 `Async<'T[]>`，它在运行时并行计划并运行 @no__t 1 个计算。</span><span class="sxs-lookup"><span data-stu-id="c18ae-154">Create an `Async<'T[]>` that schedules and runs the `printTotalFileBytes` computations in parallel when it runs.</span></span>
-3. <span data-ttu-id="c18ae-155">创建一个 `Async<unit>`，它将运行并行计算并忽略其结果。</span><span class="sxs-lookup"><span data-stu-id="c18ae-155">Create an `Async<unit>` that will run the parallel computation and ignore its result.</span></span>
-4. <span data-ttu-id="c18ae-156">在 @no__t 的最后一个计算中显式运行，并在它完成之前一直阻止。</span><span class="sxs-lookup"><span data-stu-id="c18ae-156">Explicitly run the last computation with `Async.RunSynchronously` and block until it is completes.</span></span>
+1. <span data-ttu-id="3a25c-153">将命令行参数转换为 `Array.map``Async<unit>` 计算。</span><span class="sxs-lookup"><span data-stu-id="3a25c-153">Transform the command-line arguments into `Async<unit>` computations with `Array.map`.</span></span>
+2. <span data-ttu-id="3a25c-154">创建一个在运行时计划和运行 `printTotalFileBytes` 计算的 `Async<'T[]>`。</span><span class="sxs-lookup"><span data-stu-id="3a25c-154">Create an `Async<'T[]>` that schedules and runs the `printTotalFileBytes` computations in parallel when it runs.</span></span>
+3. <span data-ttu-id="3a25c-155">创建一个将运行并行计算并忽略其结果的 `Async<unit>`。</span><span class="sxs-lookup"><span data-stu-id="3a25c-155">Create an `Async<unit>` that will run the parallel computation and ignore its result.</span></span>
+4. <span data-ttu-id="3a25c-156">在 `Async.RunSynchronously` 和块中显式运行上次计算，直到完成。</span><span class="sxs-lookup"><span data-stu-id="3a25c-156">Explicitly run the last computation with `Async.RunSynchronously` and block until it is completes.</span></span>
 
-<span data-ttu-id="c18ae-157">运行此程序时，@no__t 为每个命令行参数并行运行0。</span><span class="sxs-lookup"><span data-stu-id="c18ae-157">When this program runs, `printTotalFileBytes` runs in parallel for each command-line argument.</span></span> <span data-ttu-id="c18ae-158">由于异步计算独立于程序流执行，因此它们不会打印其信息并完成执行。</span><span class="sxs-lookup"><span data-stu-id="c18ae-158">Because asynchronous computations execute independently of program flow, there is no order in which they print their information and finish executing.</span></span> <span data-ttu-id="c18ae-159">将并行计划计算，但不保证其执行顺序。</span><span class="sxs-lookup"><span data-stu-id="c18ae-159">The computations will be scheduled in parallel, but their order of execution is not guaranteed.</span></span>
+<span data-ttu-id="3a25c-157">运行此程序时，`printTotalFileBytes` 会并行运行每个命令行参数。</span><span class="sxs-lookup"><span data-stu-id="3a25c-157">When this program runs, `printTotalFileBytes` runs in parallel for each command-line argument.</span></span> <span data-ttu-id="3a25c-158">由于异步计算独立于程序流执行，因此它们不会打印其信息并完成执行。</span><span class="sxs-lookup"><span data-stu-id="3a25c-158">Because asynchronous computations execute independently of program flow, there is no order in which they print their information and finish executing.</span></span> <span data-ttu-id="3a25c-159">将并行计划计算，但不保证其执行顺序。</span><span class="sxs-lookup"><span data-stu-id="3a25c-159">The computations will be scheduled in parallel, but their order of execution is not guaranteed.</span></span>
 
-## <a name="sequencing-asynchronous-computations"></a><span data-ttu-id="c18ae-160">序列化异步计算</span><span class="sxs-lookup"><span data-stu-id="c18ae-160">Sequencing asynchronous computations</span></span>
+## <a name="sequencing-asynchronous-computations"></a><span data-ttu-id="3a25c-160">序列化异步计算</span><span class="sxs-lookup"><span data-stu-id="3a25c-160">Sequencing asynchronous computations</span></span>
 
-<span data-ttu-id="c18ae-161">由于 @no__t 为工作规范而不是已运行的任务，因此您可以轻松地执行更复杂的转换。</span><span class="sxs-lookup"><span data-stu-id="c18ae-161">Because `Async<'T>` is a specification of work rather than an already-running task, you can perform more intricate transformations easily.</span></span> <span data-ttu-id="c18ae-162">下面是一个示例，该示例对一组异步计算进行排序，以便它们逐个执行。</span><span class="sxs-lookup"><span data-stu-id="c18ae-162">Here is an example that sequences a set of Async computations so they execute one after another.</span></span>
+<span data-ttu-id="3a25c-161">由于 `Async<'T>` 是一种规范，而不是已运行的任务，因此你可以轻松地执行更复杂的转换。</span><span class="sxs-lookup"><span data-stu-id="3a25c-161">Because `Async<'T>` is a specification of work rather than an already-running task, you can perform more intricate transformations easily.</span></span> <span data-ttu-id="3a25c-162">下面是一个示例，该示例对一组异步计算进行排序，以便它们逐个执行。</span><span class="sxs-lookup"><span data-stu-id="3a25c-162">Here is an example that sequences a set of Async computations so they execute one after another.</span></span>
 
 ```fsharp
 let printTotalFileBytes path =
@@ -131,213 +131,213 @@ let main argv =
     |> ignore
 ```
 
-<span data-ttu-id="c18ae-163">这会将 @no__t 0 计划为按 @no__t 的元素的顺序执行，而不是以并行方式进行计划。</span><span class="sxs-lookup"><span data-stu-id="c18ae-163">This will schedule `printTotalFileBytes` to execute in the order of the elements of `argv` rather than scheduling them in parallel.</span></span> <span data-ttu-id="c18ae-164">因为在上一次计算执行完成后将不会计划下一项，所以，计算的顺序就是在执行时没有重叠。</span><span class="sxs-lookup"><span data-stu-id="c18ae-164">Because the next item will not be scheduled until after the last computation has finished executing, the computations are sequenced such that there is no overlap in their execution.</span></span>
+<span data-ttu-id="3a25c-163">这会计划 `printTotalFileBytes` 按 `argv` 元素的顺序执行，而不是并行计划它们。</span><span class="sxs-lookup"><span data-stu-id="3a25c-163">This will schedule `printTotalFileBytes` to execute in the order of the elements of `argv` rather than scheduling them in parallel.</span></span> <span data-ttu-id="3a25c-164">因为在上一次计算执行完成后将不会计划下一项，所以，计算的顺序就是在执行时没有重叠。</span><span class="sxs-lookup"><span data-stu-id="3a25c-164">Because the next item will not be scheduled until after the last computation has finished executing, the computations are sequenced such that there is no overlap in their execution.</span></span>
 
-## <a name="important-async-module-functions"></a><span data-ttu-id="c18ae-165">重要的异步模块函数</span><span class="sxs-lookup"><span data-stu-id="c18ae-165">Important Async module functions</span></span>
+## <a name="important-async-module-functions"></a><span data-ttu-id="3a25c-165">重要的异步模块函数</span><span class="sxs-lookup"><span data-stu-id="3a25c-165">Important Async module functions</span></span>
 
-<span data-ttu-id="c18ae-166">在中F#编写异步代码时，通常会与用于处理计算计划的框架交互。</span><span class="sxs-lookup"><span data-stu-id="c18ae-166">When you write async code in F# you'll usually interact with a framework that handles scheduling of computations for you.</span></span> <span data-ttu-id="c18ae-167">但是，这并不总是如此，因此最好了解用于计划异步工作的各种开始函数。</span><span class="sxs-lookup"><span data-stu-id="c18ae-167">However, this is not always the case, so it is good to learn the various starting functions to schedule asynchronous work.</span></span>
+<span data-ttu-id="3a25c-166">在中F#编写异步代码时，通常会与用于处理计算计划的框架交互。</span><span class="sxs-lookup"><span data-stu-id="3a25c-166">When you write async code in F# you'll usually interact with a framework that handles scheduling of computations for you.</span></span> <span data-ttu-id="3a25c-167">但是，这并不总是如此，因此最好了解用于计划异步工作的各种开始函数。</span><span class="sxs-lookup"><span data-stu-id="3a25c-167">However, this is not always the case, so it is good to learn the various starting functions to schedule asynchronous work.</span></span>
 
-<span data-ttu-id="c18ae-168">因为F#异步计算是一种_规范_，而不是已在执行的工作表示形式，所以必须使用启动函数显式启动它们。</span><span class="sxs-lookup"><span data-stu-id="c18ae-168">Because F# asynchronous computations are a _specification_ of work rather than a representation of work that is already executing, they must be explicitly started with a starting function.</span></span> <span data-ttu-id="c18ae-169">许多[异步启动函数](https://msdn.microsoft.com/library/ee370232.aspx)在不同的上下文中很有用。</span><span class="sxs-lookup"><span data-stu-id="c18ae-169">There are many [Async starting functions](https://msdn.microsoft.com/library/ee370232.aspx) that are helpful in different contexts.</span></span> <span data-ttu-id="c18ae-170">以下部分介绍了一些更常见的启动函数。</span><span class="sxs-lookup"><span data-stu-id="c18ae-170">The following section describes some of the more common starting functions.</span></span>
+<span data-ttu-id="3a25c-168">因为F#异步计算是一种_规范_，而不是已在执行的工作表示形式，所以必须使用启动函数显式启动它们。</span><span class="sxs-lookup"><span data-stu-id="3a25c-168">Because F# asynchronous computations are a _specification_ of work rather than a representation of work that is already executing, they must be explicitly started with a starting function.</span></span> <span data-ttu-id="3a25c-169">许多[异步启动函数](https://msdn.microsoft.com/library/ee370232.aspx)在不同的上下文中很有用。</span><span class="sxs-lookup"><span data-stu-id="3a25c-169">There are many [Async starting functions](https://msdn.microsoft.com/library/ee370232.aspx) that are helpful in different contexts.</span></span> <span data-ttu-id="3a25c-170">以下部分介绍了一些更常见的启动函数。</span><span class="sxs-lookup"><span data-stu-id="3a25c-170">The following section describes some of the more common starting functions.</span></span>
 
-### <a name="asyncstartchild"></a><span data-ttu-id="c18ae-171">StartChild</span><span class="sxs-lookup"><span data-stu-id="c18ae-171">Async.StartChild</span></span>
+### <a name="asyncstartchild"></a><span data-ttu-id="3a25c-171">StartChild</span><span class="sxs-lookup"><span data-stu-id="3a25c-171">Async.StartChild</span></span>
 
-<span data-ttu-id="c18ae-172">在异步计算中启动子计算。</span><span class="sxs-lookup"><span data-stu-id="c18ae-172">Starts a child computation within an asynchronous computation.</span></span> <span data-ttu-id="c18ae-173">这允许并发执行多个异步计算。</span><span class="sxs-lookup"><span data-stu-id="c18ae-173">This allows multiple asynchronous computations to be executed concurrently.</span></span> <span data-ttu-id="c18ae-174">子计算与父计算共享取消标记。</span><span class="sxs-lookup"><span data-stu-id="c18ae-174">The child computation shares a cancellation token with the parent computation.</span></span> <span data-ttu-id="c18ae-175">如果取消了父计算，则子计算也将被取消。</span><span class="sxs-lookup"><span data-stu-id="c18ae-175">If the parent computation is canceled, the child computation is also canceled.</span></span>
+<span data-ttu-id="3a25c-172">在异步计算中启动子计算。</span><span class="sxs-lookup"><span data-stu-id="3a25c-172">Starts a child computation within an asynchronous computation.</span></span> <span data-ttu-id="3a25c-173">这允许并发执行多个异步计算。</span><span class="sxs-lookup"><span data-stu-id="3a25c-173">This allows multiple asynchronous computations to be executed concurrently.</span></span> <span data-ttu-id="3a25c-174">子计算与父计算共享取消标记。</span><span class="sxs-lookup"><span data-stu-id="3a25c-174">The child computation shares a cancellation token with the parent computation.</span></span> <span data-ttu-id="3a25c-175">如果取消了父计算，则子计算也将被取消。</span><span class="sxs-lookup"><span data-stu-id="3a25c-175">If the parent computation is canceled, the child computation is also canceled.</span></span>
 
-<span data-ttu-id="c18ae-176">信号</span><span class="sxs-lookup"><span data-stu-id="c18ae-176">Signature:</span></span>
+<span data-ttu-id="3a25c-176">信号</span><span class="sxs-lookup"><span data-stu-id="3a25c-176">Signature:</span></span>
 
 ```fsharp
 computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
 ```
 
-<span data-ttu-id="c18ae-177">何时使用：</span><span class="sxs-lookup"><span data-stu-id="c18ae-177">When to use:</span></span>
+<span data-ttu-id="3a25c-177">何时使用：</span><span class="sxs-lookup"><span data-stu-id="3a25c-177">When to use:</span></span>
 
-- <span data-ttu-id="c18ae-178">如果要同时执行多个异步计算，而不是一次执行多个异步计算，但不需要并行计划它们。</span><span class="sxs-lookup"><span data-stu-id="c18ae-178">When you want to execute multiple asynchronous computations concurrently rather than one at a time, but not have them scheduled in parallel.</span></span>
-- <span data-ttu-id="c18ae-179">如果希望将子计算的生存期与父计算的生存期关联，则为。</span><span class="sxs-lookup"><span data-stu-id="c18ae-179">When you wish to tie the lifetime of a child computation to that of a parent computation.</span></span>
+- <span data-ttu-id="3a25c-178">如果要同时执行多个异步计算，而不是一次执行多个异步计算，但不需要并行计划它们。</span><span class="sxs-lookup"><span data-stu-id="3a25c-178">When you want to execute multiple asynchronous computations concurrently rather than one at a time, but not have them scheduled in parallel.</span></span>
+- <span data-ttu-id="3a25c-179">如果希望将子计算的生存期与父计算的生存期关联，则为。</span><span class="sxs-lookup"><span data-stu-id="3a25c-179">When you wish to tie the lifetime of a child computation to that of a parent computation.</span></span>
 
-<span data-ttu-id="c18ae-180">需要注意的事项：</span><span class="sxs-lookup"><span data-stu-id="c18ae-180">What to watch out for:</span></span>
+<span data-ttu-id="3a25c-180">需要注意的事项：</span><span class="sxs-lookup"><span data-stu-id="3a25c-180">What to watch out for:</span></span>
 
-- <span data-ttu-id="c18ae-181">通过 `Async.StartChild` 启动多个计算与并行计划它们不同。</span><span class="sxs-lookup"><span data-stu-id="c18ae-181">Starting multiple computations with `Async.StartChild` isn't the same as scheduling them in parallel.</span></span> <span data-ttu-id="c18ae-182">如果要并行计划计算，请使用 `Async.Parallel`。</span><span class="sxs-lookup"><span data-stu-id="c18ae-182">If you wish to schedule computations in parallel, use `Async.Parallel`.</span></span>
-- <span data-ttu-id="c18ae-183">取消父计算将触发它开始的所有子计算的取消。</span><span class="sxs-lookup"><span data-stu-id="c18ae-183">Canceling a parent computation will trigger cancellation of all child computations it started.</span></span>
+- <span data-ttu-id="3a25c-181">用 `Async.StartChild` 启动多个计算与并行计划它们不同。</span><span class="sxs-lookup"><span data-stu-id="3a25c-181">Starting multiple computations with `Async.StartChild` isn't the same as scheduling them in parallel.</span></span> <span data-ttu-id="3a25c-182">如果要并行计划计算，请使用 `Async.Parallel`。</span><span class="sxs-lookup"><span data-stu-id="3a25c-182">If you wish to schedule computations in parallel, use `Async.Parallel`.</span></span>
+- <span data-ttu-id="3a25c-183">取消父计算将触发它开始的所有子计算的取消。</span><span class="sxs-lookup"><span data-stu-id="3a25c-183">Canceling a parent computation will trigger cancellation of all child computations it started.</span></span>
 
-### <a name="asyncstartimmediate"></a><span data-ttu-id="c18ae-184">StartImmediate</span><span class="sxs-lookup"><span data-stu-id="c18ae-184">Async.StartImmediate</span></span>
+### <a name="asyncstartimmediate"></a><span data-ttu-id="3a25c-184">StartImmediate</span><span class="sxs-lookup"><span data-stu-id="3a25c-184">Async.StartImmediate</span></span>
 
-<span data-ttu-id="c18ae-185">运行异步计算，在当前操作系统线程上立即启动。</span><span class="sxs-lookup"><span data-stu-id="c18ae-185">Runs an asynchronous computation, starting immediately on the current operating system thread.</span></span> <span data-ttu-id="c18ae-186">如果需要在计算过程中在调用线程上更新某些内容，这会很有帮助。</span><span class="sxs-lookup"><span data-stu-id="c18ae-186">This is helpful if you need to update something on the calling thread during the computation.</span></span> <span data-ttu-id="c18ae-187">例如，如果异步计算必须更新 UI （如更新进度栏），则应使用 `Async.StartImmediate`。</span><span class="sxs-lookup"><span data-stu-id="c18ae-187">For example, if an asynchronous computation must update a UI (such as updating a progress bar), then `Async.StartImmediate` should be used.</span></span>
+<span data-ttu-id="3a25c-185">运行异步计算，在当前操作系统线程上立即启动。</span><span class="sxs-lookup"><span data-stu-id="3a25c-185">Runs an asynchronous computation, starting immediately on the current operating system thread.</span></span> <span data-ttu-id="3a25c-186">如果需要在计算过程中在调用线程上更新某些内容，这会很有帮助。</span><span class="sxs-lookup"><span data-stu-id="3a25c-186">This is helpful if you need to update something on the calling thread during the computation.</span></span> <span data-ttu-id="3a25c-187">例如，如果异步计算必须更新 UI （如更新进度栏），则应使用 `Async.StartImmediate`。</span><span class="sxs-lookup"><span data-stu-id="3a25c-187">For example, if an asynchronous computation must update a UI (such as updating a progress bar), then `Async.StartImmediate` should be used.</span></span>
 
-<span data-ttu-id="c18ae-188">信号</span><span class="sxs-lookup"><span data-stu-id="c18ae-188">Signature:</span></span>
+<span data-ttu-id="3a25c-188">信号</span><span class="sxs-lookup"><span data-stu-id="3a25c-188">Signature:</span></span>
 
 ```fsharp
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 ```
 
-<span data-ttu-id="c18ae-189">何时使用：</span><span class="sxs-lookup"><span data-stu-id="c18ae-189">When to use:</span></span>
+<span data-ttu-id="3a25c-189">何时使用：</span><span class="sxs-lookup"><span data-stu-id="3a25c-189">When to use:</span></span>
 
-- <span data-ttu-id="c18ae-190">需要在异步计算的中间对调用线程进行更新时。</span><span class="sxs-lookup"><span data-stu-id="c18ae-190">When you need to update something on the calling thread in the middle of an asynchronous computation.</span></span>
+- <span data-ttu-id="3a25c-190">需要在异步计算的中间对调用线程进行更新时。</span><span class="sxs-lookup"><span data-stu-id="3a25c-190">When you need to update something on the calling thread in the middle of an asynchronous computation.</span></span>
 
-<span data-ttu-id="c18ae-191">需要注意的事项：</span><span class="sxs-lookup"><span data-stu-id="c18ae-191">What to watch out for:</span></span>
+<span data-ttu-id="3a25c-191">需要注意的事项：</span><span class="sxs-lookup"><span data-stu-id="3a25c-191">What to watch out for:</span></span>
 
-- <span data-ttu-id="c18ae-192">异步计算中的代码将在要计划的任何线程上运行。</span><span class="sxs-lookup"><span data-stu-id="c18ae-192">Code in the asynchronous computation will run on whatever thread one happens to be scheduled on.</span></span> <span data-ttu-id="c18ae-193">如果该线程以某种方式（例如，UI 线程）进行敏感，则可能会出现问题。</span><span class="sxs-lookup"><span data-stu-id="c18ae-193">This can be problematic if that thread is in some way sensitive, such as a UI thread.</span></span> <span data-ttu-id="c18ae-194">在这种情况下，可能不适合使用 `Async.StartImmediate`。</span><span class="sxs-lookup"><span data-stu-id="c18ae-194">In such cases, `Async.StartImmediate` is likely inappropriate to use.</span></span>
+- <span data-ttu-id="3a25c-192">异步计算中的代码将在要计划的任何线程上运行。</span><span class="sxs-lookup"><span data-stu-id="3a25c-192">Code in the asynchronous computation will run on whatever thread one happens to be scheduled on.</span></span> <span data-ttu-id="3a25c-193">如果该线程以某种方式（例如，UI 线程）进行敏感，则可能会出现问题。</span><span class="sxs-lookup"><span data-stu-id="3a25c-193">This can be problematic if that thread is in some way sensitive, such as a UI thread.</span></span> <span data-ttu-id="3a25c-194">在这种情况下，`Async.StartImmediate` 可能不适合使用。</span><span class="sxs-lookup"><span data-stu-id="3a25c-194">In such cases, `Async.StartImmediate` is likely inappropriate to use.</span></span>
 
-### <a name="asyncstartastask"></a><span data-ttu-id="c18ae-195">Async.startastask</span><span class="sxs-lookup"><span data-stu-id="c18ae-195">Async.StartAsTask</span></span>
+### <a name="asyncstartastask"></a><span data-ttu-id="3a25c-195">Async.startastask</span><span class="sxs-lookup"><span data-stu-id="3a25c-195">Async.StartAsTask</span></span>
 
-<span data-ttu-id="c18ae-196">在线程池中执行计算。</span><span class="sxs-lookup"><span data-stu-id="c18ae-196">Executes a computation in the thread pool.</span></span> <span data-ttu-id="c18ae-197">返回一个 <xref:System.Threading.Tasks.Task%601>，它将在计算终止后（生成结果、引发异常或取消）在相应的状态下完成。</span><span class="sxs-lookup"><span data-stu-id="c18ae-197">Returns a <xref:System.Threading.Tasks.Task%601> that will be completed on the corresponding state once the computation terminates (produces the result, throws exception, or gets canceled).</span></span> <span data-ttu-id="c18ae-198">如果未提供取消标记，则使用默认取消标记。</span><span class="sxs-lookup"><span data-stu-id="c18ae-198">If no cancellation token is provided, then the default cancellation token is used.</span></span>
+<span data-ttu-id="3a25c-196">在线程池中执行计算。</span><span class="sxs-lookup"><span data-stu-id="3a25c-196">Executes a computation in the thread pool.</span></span> <span data-ttu-id="3a25c-197">返回一个 <xref:System.Threading.Tasks.Task%601>，它将在计算终止后（生成结果、引发异常或取消）在相应的状态下完成。</span><span class="sxs-lookup"><span data-stu-id="3a25c-197">Returns a <xref:System.Threading.Tasks.Task%601> that will be completed on the corresponding state once the computation terminates (produces the result, throws exception, or gets canceled).</span></span> <span data-ttu-id="3a25c-198">如果未提供取消标记，则使用默认取消标记。</span><span class="sxs-lookup"><span data-stu-id="3a25c-198">If no cancellation token is provided, then the default cancellation token is used.</span></span>
 
-<span data-ttu-id="c18ae-199">信号</span><span class="sxs-lookup"><span data-stu-id="c18ae-199">Signature:</span></span>
+<span data-ttu-id="3a25c-199">信号</span><span class="sxs-lookup"><span data-stu-id="3a25c-199">Signature:</span></span>
 
 ```fsharp
 computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
 ```
 
-<span data-ttu-id="c18ae-200">何时使用：</span><span class="sxs-lookup"><span data-stu-id="c18ae-200">When to use:</span></span>
+<span data-ttu-id="3a25c-200">何时使用：</span><span class="sxs-lookup"><span data-stu-id="3a25c-200">When to use:</span></span>
 
-- <span data-ttu-id="c18ae-201">需要调用需要 <xref:System.Threading.Tasks.Task%601> 的 .NET API 来表示异步计算的结果时。</span><span class="sxs-lookup"><span data-stu-id="c18ae-201">When you need to call into a .NET API that expects a <xref:System.Threading.Tasks.Task%601> to represent the result of an asynchronous computation.</span></span>
+- <span data-ttu-id="3a25c-201">需要调入需要 <xref:System.Threading.Tasks.Task%601> 来表示异步计算结果的 .NET API 时。</span><span class="sxs-lookup"><span data-stu-id="3a25c-201">When you need to call into a .NET API that expects a <xref:System.Threading.Tasks.Task%601> to represent the result of an asynchronous computation.</span></span>
 
-<span data-ttu-id="c18ae-202">需要注意的事项：</span><span class="sxs-lookup"><span data-stu-id="c18ae-202">What to watch out for:</span></span>
+<span data-ttu-id="3a25c-202">需要注意的事项：</span><span class="sxs-lookup"><span data-stu-id="3a25c-202">What to watch out for:</span></span>
 
-- <span data-ttu-id="c18ae-203">此调用将分配额外的 @no__t 0 对象，如果经常使用此对象，则可能会增加开销。</span><span class="sxs-lookup"><span data-stu-id="c18ae-203">This call will allocate an additional `Task` object, which can increase overhead if it is used often.</span></span>
+- <span data-ttu-id="3a25c-203">此调用将分配其他 `Task` 对象，如果经常使用此对象，则可能会增加开销。</span><span class="sxs-lookup"><span data-stu-id="3a25c-203">This call will allocate an additional `Task` object, which can increase overhead if it is used often.</span></span>
 
-### <a name="asyncparallel"></a><span data-ttu-id="c18ae-204">Async 并行</span><span class="sxs-lookup"><span data-stu-id="c18ae-204">Async.Parallel</span></span>
+### <a name="asyncparallel"></a><span data-ttu-id="3a25c-204">Async 并行</span><span class="sxs-lookup"><span data-stu-id="3a25c-204">Async.Parallel</span></span>
 
-<span data-ttu-id="c18ae-205">计划要并行执行的异步计算序列。</span><span class="sxs-lookup"><span data-stu-id="c18ae-205">Schedules a sequence of asynchronous computations to be executed in parallel.</span></span> <span data-ttu-id="c18ae-206">通过指定 @no__t 的参数，可选择优化/限制并行度。</span><span class="sxs-lookup"><span data-stu-id="c18ae-206">The degree of parallelism can be optionally tuned/throttled by specifying the `maxDegreesOfParallelism` parameter.</span></span>
+<span data-ttu-id="3a25c-205">计划要并行执行的异步计算序列。</span><span class="sxs-lookup"><span data-stu-id="3a25c-205">Schedules a sequence of asynchronous computations to be executed in parallel.</span></span> <span data-ttu-id="3a25c-206">通过指定 `maxDegreesOfParallelism` 参数，可以选择性地优化/限制并行度。</span><span class="sxs-lookup"><span data-stu-id="3a25c-206">The degree of parallelism can be optionally tuned/throttled by specifying the `maxDegreesOfParallelism` parameter.</span></span>
 
-<span data-ttu-id="c18ae-207">信号</span><span class="sxs-lookup"><span data-stu-id="c18ae-207">Signature:</span></span>
+<span data-ttu-id="3a25c-207">信号</span><span class="sxs-lookup"><span data-stu-id="3a25c-207">Signature:</span></span>
 
 ```fsharp
 computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
 ```
 
-<span data-ttu-id="c18ae-208">何时使用它：</span><span class="sxs-lookup"><span data-stu-id="c18ae-208">When to use it:</span></span>
+<span data-ttu-id="3a25c-208">何时使用:</span><span class="sxs-lookup"><span data-stu-id="3a25c-208">When to use it:</span></span>
 
-- <span data-ttu-id="c18ae-209">如果需要同时运行一组计算，而不依赖于其执行顺序。</span><span class="sxs-lookup"><span data-stu-id="c18ae-209">If you need to run a set of computations at the same time and have no reliance on their order of execution.</span></span>
-- <span data-ttu-id="c18ae-210">如果无需并行计划的计算结果，直到它们全部完成。</span><span class="sxs-lookup"><span data-stu-id="c18ae-210">If you don't require results from computations scheduled in parallel until they have all completed.</span></span>
+- <span data-ttu-id="3a25c-209">如果需要同时运行一组计算，而不依赖于其执行顺序。</span><span class="sxs-lookup"><span data-stu-id="3a25c-209">If you need to run a set of computations at the same time and have no reliance on their order of execution.</span></span>
+- <span data-ttu-id="3a25c-210">如果无需并行计划的计算结果，直到它们全部完成。</span><span class="sxs-lookup"><span data-stu-id="3a25c-210">If you don't require results from computations scheduled in parallel until they have all completed.</span></span>
 
-<span data-ttu-id="c18ae-211">需要注意的事项：</span><span class="sxs-lookup"><span data-stu-id="c18ae-211">What to watch out for:</span></span>
+<span data-ttu-id="3a25c-211">需要注意的事项：</span><span class="sxs-lookup"><span data-stu-id="3a25c-211">What to watch out for:</span></span>
 
-- <span data-ttu-id="c18ae-212">所有计算完成后，只能访问生成的值数组。</span><span class="sxs-lookup"><span data-stu-id="c18ae-212">You can only access the resulting array of values once all computations have finished.</span></span>
-- <span data-ttu-id="c18ae-213">计算将运行，但最终会得到计划。</span><span class="sxs-lookup"><span data-stu-id="c18ae-213">Computations will be run however they end up getting scheduled.</span></span> <span data-ttu-id="c18ae-214">这意味着不能依赖其执行顺序。</span><span class="sxs-lookup"><span data-stu-id="c18ae-214">This means you cannot rely on their order of their execution.</span></span>
+- <span data-ttu-id="3a25c-212">所有计算完成后，只能访问生成的值数组。</span><span class="sxs-lookup"><span data-stu-id="3a25c-212">You can only access the resulting array of values once all computations have finished.</span></span>
+- <span data-ttu-id="3a25c-213">计算将运行，但最终会得到计划。</span><span class="sxs-lookup"><span data-stu-id="3a25c-213">Computations will be run however they end up getting scheduled.</span></span> <span data-ttu-id="3a25c-214">这意味着不能依赖其执行顺序。</span><span class="sxs-lookup"><span data-stu-id="3a25c-214">This means you cannot rely on their order of their execution.</span></span>
 
-### <a name="asyncsequential"></a><span data-ttu-id="c18ae-215">异步顺序</span><span class="sxs-lookup"><span data-stu-id="c18ae-215">Async.Sequential</span></span>
+### <a name="asyncsequential"></a><span data-ttu-id="3a25c-215">异步顺序</span><span class="sxs-lookup"><span data-stu-id="3a25c-215">Async.Sequential</span></span>
 
-<span data-ttu-id="c18ae-216">计划一系列要按其传递顺序执行的异步计算。</span><span class="sxs-lookup"><span data-stu-id="c18ae-216">Schedules a sequence of asynchronous computations to be executed in the order that they are passed.</span></span> <span data-ttu-id="c18ae-217">将执行第一个计算，然后执行下一次计算，依次类推。</span><span class="sxs-lookup"><span data-stu-id="c18ae-217">The first computation will be executed, then the next, and so on.</span></span> <span data-ttu-id="c18ae-218">不会并行执行任何计算。</span><span class="sxs-lookup"><span data-stu-id="c18ae-218">No computations will be executed in parallel.</span></span>
+<span data-ttu-id="3a25c-216">计划一系列要按其传递顺序执行的异步计算。</span><span class="sxs-lookup"><span data-stu-id="3a25c-216">Schedules a sequence of asynchronous computations to be executed in the order that they are passed.</span></span> <span data-ttu-id="3a25c-217">将执行第一个计算，然后执行下一次计算，依次类推。</span><span class="sxs-lookup"><span data-stu-id="3a25c-217">The first computation will be executed, then the next, and so on.</span></span> <span data-ttu-id="3a25c-218">不会并行执行任何计算。</span><span class="sxs-lookup"><span data-stu-id="3a25c-218">No computations will be executed in parallel.</span></span>
 
-<span data-ttu-id="c18ae-219">信号</span><span class="sxs-lookup"><span data-stu-id="c18ae-219">Signature:</span></span>
+<span data-ttu-id="3a25c-219">信号</span><span class="sxs-lookup"><span data-stu-id="3a25c-219">Signature:</span></span>
 
 ```fsharp
 computations: seq<Async<'T>> -> Async<'T[]>
 ```
 
-<span data-ttu-id="c18ae-220">何时使用它：</span><span class="sxs-lookup"><span data-stu-id="c18ae-220">When to use it:</span></span>
+<span data-ttu-id="3a25c-220">何时使用:</span><span class="sxs-lookup"><span data-stu-id="3a25c-220">When to use it:</span></span>
 
-- <span data-ttu-id="c18ae-221">如果需要按顺序执行多个计算。</span><span class="sxs-lookup"><span data-stu-id="c18ae-221">If you need to execute multiple computations in order.</span></span>
+- <span data-ttu-id="3a25c-221">如果需要按顺序执行多个计算。</span><span class="sxs-lookup"><span data-stu-id="3a25c-221">If you need to execute multiple computations in order.</span></span>
 
-<span data-ttu-id="c18ae-222">需要注意的事项：</span><span class="sxs-lookup"><span data-stu-id="c18ae-222">What to watch out for:</span></span>
+<span data-ttu-id="3a25c-222">需要注意的事项：</span><span class="sxs-lookup"><span data-stu-id="3a25c-222">What to watch out for:</span></span>
 
-- <span data-ttu-id="c18ae-223">所有计算完成后，只能访问生成的值数组。</span><span class="sxs-lookup"><span data-stu-id="c18ae-223">You can only access the resulting array of values once all computations have finished.</span></span>
-- <span data-ttu-id="c18ae-224">计算将按其传递到此函数的顺序运行，这可能意味着返回结果之前需要更多时间。</span><span class="sxs-lookup"><span data-stu-id="c18ae-224">Computations will be run in the order that they are passed to this function, which can mean that more time will elapse before the results are returned.</span></span>
+- <span data-ttu-id="3a25c-223">所有计算完成后，只能访问生成的值数组。</span><span class="sxs-lookup"><span data-stu-id="3a25c-223">You can only access the resulting array of values once all computations have finished.</span></span>
+- <span data-ttu-id="3a25c-224">计算将按其传递到此函数的顺序运行，这可能意味着返回结果之前需要更多时间。</span><span class="sxs-lookup"><span data-stu-id="3a25c-224">Computations will be run in the order that they are passed to this function, which can mean that more time will elapse before the results are returned.</span></span>
 
-### <a name="asyncawaittask"></a><span data-ttu-id="c18ae-225">Async.awaittask</span><span class="sxs-lookup"><span data-stu-id="c18ae-225">Async.AwaitTask</span></span>
+### <a name="asyncawaittask"></a><span data-ttu-id="3a25c-225">Async.awaittask</span><span class="sxs-lookup"><span data-stu-id="3a25c-225">Async.AwaitTask</span></span>
 
-<span data-ttu-id="c18ae-226">返回一个异步计算，该计算等待给定的 <xref:System.Threading.Tasks.Task%601> 完成，并将其结果作为 @no__t 返回</span><span class="sxs-lookup"><span data-stu-id="c18ae-226">Returns an asynchronous computation that waits for the given <xref:System.Threading.Tasks.Task%601> to complete and returns its result as an `Async<'T>`</span></span>
+<span data-ttu-id="3a25c-226">返回一个异步计算，该异步计算等待给定的 <xref:System.Threading.Tasks.Task%601> 完成，并将其结果作为 `Async<'T>` 返回</span><span class="sxs-lookup"><span data-stu-id="3a25c-226">Returns an asynchronous computation that waits for the given <xref:System.Threading.Tasks.Task%601> to complete and returns its result as an `Async<'T>`</span></span>
 
-<span data-ttu-id="c18ae-227">信号</span><span class="sxs-lookup"><span data-stu-id="c18ae-227">Signature:</span></span>
+<span data-ttu-id="3a25c-227">信号</span><span class="sxs-lookup"><span data-stu-id="3a25c-227">Signature:</span></span>
 
 ```fsharp
 task: Task<'T>  -> Async<'T>
 ```
 
-<span data-ttu-id="c18ae-228">何时使用：</span><span class="sxs-lookup"><span data-stu-id="c18ae-228">When to use:</span></span>
+<span data-ttu-id="3a25c-228">何时使用：</span><span class="sxs-lookup"><span data-stu-id="3a25c-228">When to use:</span></span>
 
-- <span data-ttu-id="c18ae-229">使用 .NET API 时，将在F#异步计算中返回 <xref:System.Threading.Tasks.Task%601>。</span><span class="sxs-lookup"><span data-stu-id="c18ae-229">When you are consuming a .NET API that returns a <xref:System.Threading.Tasks.Task%601> within an F# asynchronous computation.</span></span>
+- <span data-ttu-id="3a25c-229">当你使用的是在F#异步计算中返回 <xref:System.Threading.Tasks.Task%601> 的 .net API 时。</span><span class="sxs-lookup"><span data-stu-id="3a25c-229">When you are consuming a .NET API that returns a <xref:System.Threading.Tasks.Task%601> within an F# asynchronous computation.</span></span>
 
-<span data-ttu-id="c18ae-230">需要注意的事项：</span><span class="sxs-lookup"><span data-stu-id="c18ae-230">What to watch out for:</span></span>
+<span data-ttu-id="3a25c-230">需要注意的事项：</span><span class="sxs-lookup"><span data-stu-id="3a25c-230">What to watch out for:</span></span>
 
-- <span data-ttu-id="c18ae-231">按照任务并行库的约定，将异常包装在 <xref:System.AggregateException> 中，这不同于异步显示异常F#的方式。</span><span class="sxs-lookup"><span data-stu-id="c18ae-231">Exceptions are wrapped in <xref:System.AggregateException> following the convention of the Task Parallel Library, and this is different from how F# async generally surfaces exceptions.</span></span>
+- <span data-ttu-id="3a25c-231">异常按照任务并行库的约定 <xref:System.AggregateException> 包装，这不同于异步显示异常的方式F# 。</span><span class="sxs-lookup"><span data-stu-id="3a25c-231">Exceptions are wrapped in <xref:System.AggregateException> following the convention of the Task Parallel Library, and this is different from how F# async generally surfaces exceptions.</span></span>
 
-### <a name="asynccatch"></a><span data-ttu-id="c18ae-232">Async Catch</span><span class="sxs-lookup"><span data-stu-id="c18ae-232">Async.Catch</span></span>
+### <a name="asynccatch"></a><span data-ttu-id="3a25c-232">Async Catch</span><span class="sxs-lookup"><span data-stu-id="3a25c-232">Async.Catch</span></span>
 
-<span data-ttu-id="c18ae-233">创建一个异步计算，该计算执行给定的 `Async<'T>`，返回 `Async<Choice<'T, exn>>`。</span><span class="sxs-lookup"><span data-stu-id="c18ae-233">Creates an asynchronous computation that executes a given `Async<'T>`, returning an `Async<Choice<'T, exn>>`.</span></span> <span data-ttu-id="c18ae-234">如果给定 `Async<'T>` 成功完成，则将返回一个 @no__t 为结果值。</span><span class="sxs-lookup"><span data-stu-id="c18ae-234">If the given `Async<'T>` completes successfully, then a `Choice1Of2` is returned with the resultant value.</span></span> <span data-ttu-id="c18ae-235">如果异常在完成前引发，则返回一个 @no__t，并引发异常。</span><span class="sxs-lookup"><span data-stu-id="c18ae-235">If an exception is thrown before it completes, then a `Choice2of2` is returned with the raised exception.</span></span> <span data-ttu-id="c18ae-236">如果它用于由多个计算组成的异步计算，并且其中一个计算引发异常，则会完全停止包含计算。</span><span class="sxs-lookup"><span data-stu-id="c18ae-236">If it is used on an asynchronous computation that is itself composed of many computations, and one of those computations throws an exception, the encompassing computation will be stopped entirely.</span></span>
+<span data-ttu-id="3a25c-233">创建一个异步计算，该计算执行给定的 `Async<'T>`，并返回一个 `Async<Choice<'T, exn>>`。</span><span class="sxs-lookup"><span data-stu-id="3a25c-233">Creates an asynchronous computation that executes a given `Async<'T>`, returning an `Async<Choice<'T, exn>>`.</span></span> <span data-ttu-id="3a25c-234">如果给定 `Async<'T>` 成功完成，则返回具有结果值的 `Choice1Of2`。</span><span class="sxs-lookup"><span data-stu-id="3a25c-234">If the given `Async<'T>` completes successfully, then a `Choice1Of2` is returned with the resultant value.</span></span> <span data-ttu-id="3a25c-235">如果在异常完成之前引发了异常，则会返回 `Choice2of2`，并引发异常。</span><span class="sxs-lookup"><span data-stu-id="3a25c-235">If an exception is thrown before it completes, then a `Choice2of2` is returned with the raised exception.</span></span> <span data-ttu-id="3a25c-236">如果它用于由多个计算组成的异步计算，并且其中一个计算引发异常，则会完全停止包含计算。</span><span class="sxs-lookup"><span data-stu-id="3a25c-236">If it is used on an asynchronous computation that is itself composed of many computations, and one of those computations throws an exception, the encompassing computation will be stopped entirely.</span></span>
 
-<span data-ttu-id="c18ae-237">信号</span><span class="sxs-lookup"><span data-stu-id="c18ae-237">Signature:</span></span>
+<span data-ttu-id="3a25c-237">信号</span><span class="sxs-lookup"><span data-stu-id="3a25c-237">Signature:</span></span>
 
 ```fsharp
 computation: Async<'T> -> Async<Choice<'T, exn>>
 ```
 
-<span data-ttu-id="c18ae-238">何时使用：</span><span class="sxs-lookup"><span data-stu-id="c18ae-238">When to use:</span></span>
+<span data-ttu-id="3a25c-238">何时使用：</span><span class="sxs-lookup"><span data-stu-id="3a25c-238">When to use:</span></span>
 
-- <span data-ttu-id="c18ae-239">当你执行的异步工作可能会失败并出现异常，你希望在调用方中处理该异常。</span><span class="sxs-lookup"><span data-stu-id="c18ae-239">When you are performing asynchronous work that may fail with an exception and you want to handle that exception in the caller.</span></span>
+- <span data-ttu-id="3a25c-239">当你执行的异步工作可能会失败并出现异常，你希望在调用方中处理该异常。</span><span class="sxs-lookup"><span data-stu-id="3a25c-239">When you are performing asynchronous work that may fail with an exception and you want to handle that exception in the caller.</span></span>
 
-<span data-ttu-id="c18ae-240">需要注意的事项：</span><span class="sxs-lookup"><span data-stu-id="c18ae-240">What to watch out for:</span></span>
+<span data-ttu-id="3a25c-240">需要注意的事项：</span><span class="sxs-lookup"><span data-stu-id="3a25c-240">What to watch out for:</span></span>
 
-- <span data-ttu-id="c18ae-241">使用组合的或序列化的异步计算时，如果其中一个 "内部" 计算引发异常，则会完全停止包含计算。</span><span class="sxs-lookup"><span data-stu-id="c18ae-241">When using combined or sequenced asynchronous computations, the encompassing computation will fully stop if one of its "internal" computations throws an exception.</span></span>
+- <span data-ttu-id="3a25c-241">使用组合的或序列化的异步计算时，如果其中一个 "内部" 计算引发异常，则会完全停止包含计算。</span><span class="sxs-lookup"><span data-stu-id="3a25c-241">When using combined or sequenced asynchronous computations, the encompassing computation will fully stop if one of its "internal" computations throws an exception.</span></span>
 
-### <a name="asyncignore"></a><span data-ttu-id="c18ae-242">Async。 Ignore</span><span class="sxs-lookup"><span data-stu-id="c18ae-242">Async.Ignore</span></span>
+### <a name="asyncignore"></a><span data-ttu-id="3a25c-242">Async。 Ignore</span><span class="sxs-lookup"><span data-stu-id="3a25c-242">Async.Ignore</span></span>
 
-<span data-ttu-id="c18ae-243">创建一个异步计算，该异步计算将运行给定的计算并忽略其结果。</span><span class="sxs-lookup"><span data-stu-id="c18ae-243">Creates an asynchronous computation that runs the given computation and ignores its result.</span></span>
+<span data-ttu-id="3a25c-243">创建一个异步计算，该异步计算将运行给定的计算并忽略其结果。</span><span class="sxs-lookup"><span data-stu-id="3a25c-243">Creates an asynchronous computation that runs the given computation and ignores its result.</span></span>
 
-<span data-ttu-id="c18ae-244">信号</span><span class="sxs-lookup"><span data-stu-id="c18ae-244">Signature:</span></span>
+<span data-ttu-id="3a25c-244">信号</span><span class="sxs-lookup"><span data-stu-id="3a25c-244">Signature:</span></span>
 
 ```fsharp
 computation: Async<'T> -> Async<unit>
 ```
 
-<span data-ttu-id="c18ae-245">何时使用：</span><span class="sxs-lookup"><span data-stu-id="c18ae-245">When to use:</span></span>
+<span data-ttu-id="3a25c-245">何时使用：</span><span class="sxs-lookup"><span data-stu-id="3a25c-245">When to use:</span></span>
 
-- <span data-ttu-id="c18ae-246">如果具有不需要其结果的异步计算。</span><span class="sxs-lookup"><span data-stu-id="c18ae-246">When you have an asynchronous computation whose result is not needed.</span></span> <span data-ttu-id="c18ae-247">这类似于非异步代码的 `ignore` 代码。</span><span class="sxs-lookup"><span data-stu-id="c18ae-247">This is analogous to the `ignore` code for non-asynchronous code.</span></span>
+- <span data-ttu-id="3a25c-246">如果具有不需要其结果的异步计算。</span><span class="sxs-lookup"><span data-stu-id="3a25c-246">When you have an asynchronous computation whose result is not needed.</span></span> <span data-ttu-id="3a25c-247">这类似于非异步代码的 `ignore` 代码。</span><span class="sxs-lookup"><span data-stu-id="3a25c-247">This is analogous to the `ignore` code for non-asynchronous code.</span></span>
 
-<span data-ttu-id="c18ae-248">需要注意的事项：</span><span class="sxs-lookup"><span data-stu-id="c18ae-248">What to watch out for:</span></span>
+<span data-ttu-id="3a25c-248">需要注意的事项：</span><span class="sxs-lookup"><span data-stu-id="3a25c-248">What to watch out for:</span></span>
 
-- <span data-ttu-id="c18ae-249">如果你必须使用此项，因为你希望使用 `Async.Start` 或需要 `Async<unit>` 的其他函数，则请考虑是否放弃结果是否可执行。</span><span class="sxs-lookup"><span data-stu-id="c18ae-249">If you must use this because you wish to use `Async.Start` or another function that requires `Async<unit>`, consider if discarding the result is okay to do.</span></span> <span data-ttu-id="c18ae-250">通常不应丢弃结果来满足类型签名。</span><span class="sxs-lookup"><span data-stu-id="c18ae-250">Discarding results just to fit a type signature should not generally be done.</span></span>
+- <span data-ttu-id="3a25c-249">如果你必须使用此功能，因为你希望使用 `Async.Start` 或需要 `Async<unit>`的其他函数，则请考虑是否放弃结果是可以的。</span><span class="sxs-lookup"><span data-stu-id="3a25c-249">If you must use this because you wish to use `Async.Start` or another function that requires `Async<unit>`, consider if discarding the result is okay to do.</span></span> <span data-ttu-id="3a25c-250">通常不应丢弃结果来满足类型签名。</span><span class="sxs-lookup"><span data-stu-id="3a25c-250">Discarding results just to fit a type signature should not generally be done.</span></span>
 
-### <a name="asyncrunsynchronously"></a><span data-ttu-id="c18ae-251">RunSynchronously</span><span class="sxs-lookup"><span data-stu-id="c18ae-251">Async.RunSynchronously</span></span>
+### <a name="asyncrunsynchronously"></a><span data-ttu-id="3a25c-251">RunSynchronously</span><span class="sxs-lookup"><span data-stu-id="3a25c-251">Async.RunSynchronously</span></span>
 
-<span data-ttu-id="c18ae-252">运行异步计算，并在调用线程上等待其结果。</span><span class="sxs-lookup"><span data-stu-id="c18ae-252">Runs an asynchronous computation and awaits its result on the calling thread.</span></span> <span data-ttu-id="c18ae-253">此调用正在阻止。</span><span class="sxs-lookup"><span data-stu-id="c18ae-253">This call is blocking.</span></span>
+<span data-ttu-id="3a25c-252">运行异步计算，并在调用线程上等待其结果。</span><span class="sxs-lookup"><span data-stu-id="3a25c-252">Runs an asynchronous computation and awaits its result on the calling thread.</span></span> <span data-ttu-id="3a25c-253">此调用正在阻止。</span><span class="sxs-lookup"><span data-stu-id="3a25c-253">This call is blocking.</span></span>
 
-<span data-ttu-id="c18ae-254">信号</span><span class="sxs-lookup"><span data-stu-id="c18ae-254">Signature:</span></span>
+<span data-ttu-id="3a25c-254">信号</span><span class="sxs-lookup"><span data-stu-id="3a25c-254">Signature:</span></span>
 
 ```fsharp
 computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -> 'T
 ```
 
-<span data-ttu-id="c18ae-255">何时使用它：</span><span class="sxs-lookup"><span data-stu-id="c18ae-255">When to use it:</span></span>
+<span data-ttu-id="3a25c-255">何时使用:</span><span class="sxs-lookup"><span data-stu-id="3a25c-255">When to use it:</span></span>
 
-- <span data-ttu-id="c18ae-256">如果需要，请在应用程序的入口点（可执行文件）中使用它一次。</span><span class="sxs-lookup"><span data-stu-id="c18ae-256">If you need it, use it only once in an application - at the entry point for an executable.</span></span>
-- <span data-ttu-id="c18ae-257">当你不关心性能并希望同时执行一组其他异步操作时。</span><span class="sxs-lookup"><span data-stu-id="c18ae-257">When you don't care about performance and want to execute a set of other asynchronous operations at once.</span></span>
+- <span data-ttu-id="3a25c-256">如果需要，请在应用程序的入口点（可执行文件）中使用它一次。</span><span class="sxs-lookup"><span data-stu-id="3a25c-256">If you need it, use it only once in an application - at the entry point for an executable.</span></span>
+- <span data-ttu-id="3a25c-257">当你不关心性能并希望同时执行一组其他异步操作时。</span><span class="sxs-lookup"><span data-stu-id="3a25c-257">When you don't care about performance and want to execute a set of other asynchronous operations at once.</span></span>
 
-<span data-ttu-id="c18ae-258">需要注意的事项：</span><span class="sxs-lookup"><span data-stu-id="c18ae-258">What to watch out for:</span></span>
+<span data-ttu-id="3a25c-258">需要注意的事项：</span><span class="sxs-lookup"><span data-stu-id="3a25c-258">What to watch out for:</span></span>
 
-- <span data-ttu-id="c18ae-259">调用 `Async.RunSynchronously` 会阻止调用线程，直到执行完成。</span><span class="sxs-lookup"><span data-stu-id="c18ae-259">Calling `Async.RunSynchronously` blocks the calling thread until the execution completes.</span></span>
+- <span data-ttu-id="3a25c-259">调用 `Async.RunSynchronously` 会阻止调用线程，直到执行完成。</span><span class="sxs-lookup"><span data-stu-id="3a25c-259">Calling `Async.RunSynchronously` blocks the calling thread until the execution completes.</span></span>
 
-### <a name="asyncstart"></a><span data-ttu-id="c18ae-260">Async. Start</span><span class="sxs-lookup"><span data-stu-id="c18ae-260">Async.Start</span></span>
+### <a name="asyncstart"></a><span data-ttu-id="3a25c-260">Async. Start</span><span class="sxs-lookup"><span data-stu-id="3a25c-260">Async.Start</span></span>
 
-<span data-ttu-id="c18ae-261">在线程池中启动异步计算，该计算返回 `unit`。</span><span class="sxs-lookup"><span data-stu-id="c18ae-261">Starts an asynchronous computation in the thread pool that returns `unit`.</span></span> <span data-ttu-id="c18ae-262">不会等待其结果。</span><span class="sxs-lookup"><span data-stu-id="c18ae-262">Doesn't wait for its result.</span></span> <span data-ttu-id="c18ae-263">@No__t-0 开始的嵌套计算完全独立于调用它们的父计算。</span><span class="sxs-lookup"><span data-stu-id="c18ae-263">Nested computations started with `Async.Start` are started completely independently of the parent computation that called them.</span></span> <span data-ttu-id="c18ae-264">它们的生存期未绑定到任何父计算。</span><span class="sxs-lookup"><span data-stu-id="c18ae-264">Their lifetime is not tied to any parent computation.</span></span> <span data-ttu-id="c18ae-265">如果取消了父计算，则不会取消任何子计算。</span><span class="sxs-lookup"><span data-stu-id="c18ae-265">If the parent computation is canceled, no child computations are cancelled.</span></span>
+<span data-ttu-id="3a25c-261">在线程池中启动异步计算，该计算返回 `unit`。</span><span class="sxs-lookup"><span data-stu-id="3a25c-261">Starts an asynchronous computation in the thread pool that returns `unit`.</span></span> <span data-ttu-id="3a25c-262">不会等待其结果。</span><span class="sxs-lookup"><span data-stu-id="3a25c-262">Doesn't wait for its result.</span></span> <span data-ttu-id="3a25c-263">`Async.Start` 启动的嵌套计算完全独立于调用它们的父计算。</span><span class="sxs-lookup"><span data-stu-id="3a25c-263">Nested computations started with `Async.Start` are started completely independently of the parent computation that called them.</span></span> <span data-ttu-id="3a25c-264">它们的生存期未绑定到任何父计算。</span><span class="sxs-lookup"><span data-stu-id="3a25c-264">Their lifetime is not tied to any parent computation.</span></span> <span data-ttu-id="3a25c-265">如果取消了父计算，则不会取消任何子计算。</span><span class="sxs-lookup"><span data-stu-id="3a25c-265">If the parent computation is canceled, no child computations are cancelled.</span></span>
 
-<span data-ttu-id="c18ae-266">信号</span><span class="sxs-lookup"><span data-stu-id="c18ae-266">Signature:</span></span>
+<span data-ttu-id="3a25c-266">信号</span><span class="sxs-lookup"><span data-stu-id="3a25c-266">Signature:</span></span>
 
 ```fsharp
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 ```
 
-<span data-ttu-id="c18ae-267">仅在以下情况时使用：</span><span class="sxs-lookup"><span data-stu-id="c18ae-267">Use only when:</span></span>
+<span data-ttu-id="3a25c-267">仅在以下情况时使用：</span><span class="sxs-lookup"><span data-stu-id="3a25c-267">Use only when:</span></span>
 
-- <span data-ttu-id="c18ae-268">您有一个异步计算，该计算不产生结果和/或需要处理一个结果。</span><span class="sxs-lookup"><span data-stu-id="c18ae-268">You have an asynchronous computation that doesn't yield a result and/or require processing of one.</span></span>
-- <span data-ttu-id="c18ae-269">不需要知道异步计算何时完成。</span><span class="sxs-lookup"><span data-stu-id="c18ae-269">You don't need to know when an asynchronous computation completes.</span></span>
-- <span data-ttu-id="c18ae-270">您不关心异步计算在哪个线程上运行。</span><span class="sxs-lookup"><span data-stu-id="c18ae-270">You don't care which thread an asynchronous computation runs on.</span></span>
-- <span data-ttu-id="c18ae-271">您无需注意或报告由任务生成的异常。</span><span class="sxs-lookup"><span data-stu-id="c18ae-271">You don't have any need to be aware of or report exceptions resulting from the task.</span></span>
+- <span data-ttu-id="3a25c-268">您有一个异步计算，该计算不产生结果和/或需要处理一个结果。</span><span class="sxs-lookup"><span data-stu-id="3a25c-268">You have an asynchronous computation that doesn't yield a result and/or require processing of one.</span></span>
+- <span data-ttu-id="3a25c-269">不需要知道异步计算何时完成。</span><span class="sxs-lookup"><span data-stu-id="3a25c-269">You don't need to know when an asynchronous computation completes.</span></span>
+- <span data-ttu-id="3a25c-270">您不关心异步计算在哪个线程上运行。</span><span class="sxs-lookup"><span data-stu-id="3a25c-270">You don't care which thread an asynchronous computation runs on.</span></span>
+- <span data-ttu-id="3a25c-271">您无需注意或报告由任务生成的异常。</span><span class="sxs-lookup"><span data-stu-id="3a25c-271">You don't have any need to be aware of or report exceptions resulting from the task.</span></span>
 
-<span data-ttu-id="c18ae-272">需要注意的事项：</span><span class="sxs-lookup"><span data-stu-id="c18ae-272">What to watch out for:</span></span>
+<span data-ttu-id="3a25c-272">需要注意的事项：</span><span class="sxs-lookup"><span data-stu-id="3a25c-272">What to watch out for:</span></span>
 
-- <span data-ttu-id="c18ae-273">通过 `Async.Start` 开始的计算引发的异常不会传播到调用方。</span><span class="sxs-lookup"><span data-stu-id="c18ae-273">Exceptions raised by computations started with `Async.Start` aren't propagated to the caller.</span></span> <span data-ttu-id="c18ae-274">调用堆栈将被完全展开。</span><span class="sxs-lookup"><span data-stu-id="c18ae-274">The call stack will be completely unwound.</span></span>
-- <span data-ttu-id="c18ae-275">任何 effectful 的工作（例如调用 `printfn`）都是从 @no__t 开始，这不会导致在程序执行的主线程上发生效果。</span><span class="sxs-lookup"><span data-stu-id="c18ae-275">Any effectful work (such as calling `printfn`) started with `Async.Start` won't cause the effect to happen on the main thread of a program's execution.</span></span>
+- <span data-ttu-id="3a25c-273">通过 `Async.Start` 开始的计算引发的异常不会传播到调用方。</span><span class="sxs-lookup"><span data-stu-id="3a25c-273">Exceptions raised by computations started with `Async.Start` aren't propagated to the caller.</span></span> <span data-ttu-id="3a25c-274">调用堆栈将被完全展开。</span><span class="sxs-lookup"><span data-stu-id="3a25c-274">The call stack will be completely unwound.</span></span>
+- <span data-ttu-id="3a25c-275">使用 `Async.Start` 启动的任何 effectful 工作（例如调用 `printfn`）都不会导致在程序执行的主线程上发生效果。</span><span class="sxs-lookup"><span data-stu-id="3a25c-275">Any effectful work (such as calling `printfn`) started with `Async.Start` won't cause the effect to happen on the main thread of a program's execution.</span></span>
 
-## <a name="interoperating-with-net"></a><span data-ttu-id="c18ae-276">与 .NET 互操作</span><span class="sxs-lookup"><span data-stu-id="c18ae-276">Interoperating with .NET</span></span>
+## <a name="interoperating-with-net"></a><span data-ttu-id="3a25c-276">与 .NET 互操作</span><span class="sxs-lookup"><span data-stu-id="3a25c-276">Interoperating with .NET</span></span>
 
-<span data-ttu-id="c18ae-277">你可以使用 .NET 库或C#使用[async/await](../../../standard/async.md)样式异步编程的基本代码。</span><span class="sxs-lookup"><span data-stu-id="c18ae-277">You may be working with a .NET library or C# codebase that uses [async/await](../../../standard/async.md)-style asynchronous programming.</span></span> <span data-ttu-id="c18ae-278">因为C#和大多数 .net 库使用 <xref:System.Threading.Tasks.Task%601> 和 <xref:System.Threading.Tasks.Task> 类型作为其核心抽象，而不是 `Async<'T>`，所以必须将这两种方法之间的边界跨越异步。</span><span class="sxs-lookup"><span data-stu-id="c18ae-278">Because C# and the majority of .NET libraries use the <xref:System.Threading.Tasks.Task%601> and <xref:System.Threading.Tasks.Task> types as their core abstractions rather than `Async<'T>`, you must cross a boundary between these two approaches to asynchrony.</span></span>
+<span data-ttu-id="3a25c-277">你可以使用 .NET 库或C#使用[async/await](../../../standard/async.md)样式异步编程的基本代码。</span><span class="sxs-lookup"><span data-stu-id="3a25c-277">You may be working with a .NET library or C# codebase that uses [async/await](../../../standard/async.md)-style asynchronous programming.</span></span> <span data-ttu-id="3a25c-278">由于C#大多数 .net 库使用 <xref:System.Threading.Tasks.Task%601>，并 <xref:System.Threading.Tasks.Task> 类型作为其核心抽象，而不是 `Async<'T>`，因此必须将这两种方法之间的边界跨越异步。</span><span class="sxs-lookup"><span data-stu-id="3a25c-278">Because C# and the majority of .NET libraries use the <xref:System.Threading.Tasks.Task%601> and <xref:System.Threading.Tasks.Task> types as their core abstractions rather than `Async<'T>`, you must cross a boundary between these two approaches to asynchrony.</span></span>
 
-### <a name="how-to-work-with-net-async-and-taskt"></a><span data-ttu-id="c18ae-279">如何使用 .NET async 和 `Task<T>`</span><span class="sxs-lookup"><span data-stu-id="c18ae-279">How to work with .NET async and `Task<T>`</span></span>
+### <a name="how-to-work-with-net-async-and-taskt"></a><span data-ttu-id="3a25c-279">如何使用 .NET async 和 `Task<T>`</span><span class="sxs-lookup"><span data-stu-id="3a25c-279">How to work with .NET async and `Task<T>`</span></span>
 
-<span data-ttu-id="c18ae-280">使用使用 <xref:System.Threading.Tasks.Task%601> （即，具有返回值的异步计算）的 .NET 异步库和基本代码非常简单，并且具有的F#内置支持。</span><span class="sxs-lookup"><span data-stu-id="c18ae-280">Working with .NET async libraries and codebases that use <xref:System.Threading.Tasks.Task%601> (that is, async computations that have return values) is straightforward and has built-in support with F#.</span></span>
+<span data-ttu-id="3a25c-280">使用 <xref:System.Threading.Tasks.Task%601> 的 .NET 异步库和基本代码（即，具有返回值的异步计算）非常简单，并且具有的F#内置支持。</span><span class="sxs-lookup"><span data-stu-id="3a25c-280">Working with .NET async libraries and codebases that use <xref:System.Threading.Tasks.Task%601> (that is, async computations that have return values) is straightforward and has built-in support with F#.</span></span>
 
-<span data-ttu-id="c18ae-281">您可以使用 `Async.AwaitTask` 函数来等待 .NET 异步计算：</span><span class="sxs-lookup"><span data-stu-id="c18ae-281">You can use the `Async.AwaitTask` function to await a .NET asynchronous computation:</span></span>
+<span data-ttu-id="3a25c-281">您可以使用 `Async.AwaitTask` 函数来等待 .NET 异步计算：</span><span class="sxs-lookup"><span data-stu-id="3a25c-281">You can use the `Async.AwaitTask` function to await a .NET asynchronous computation:</span></span>
 
 ```fsharp
 let getValueFromLibrary param =
@@ -347,7 +347,7 @@ let getValueFromLibrary param =
     }
 ```
 
-<span data-ttu-id="c18ae-282">可以使用 `Async.StartAsTask` 函数将异步计算传递到 .NET 调用方：</span><span class="sxs-lookup"><span data-stu-id="c18ae-282">You can use the `Async.StartAsTask` function to pass an asynchronous computation to a .NET caller:</span></span>
+<span data-ttu-id="3a25c-282">可以使用 `Async.StartAsTask` 函数将异步计算传递到 .NET 调用方：</span><span class="sxs-lookup"><span data-stu-id="3a25c-282">You can use the `Async.StartAsTask` function to pass an asynchronous computation to a .NET caller:</span></span>
 
 ```fsharp
 let computationForCaller param =
@@ -357,9 +357,9 @@ let computationForCaller param =
     } |> Async.StartAsTask
 ```
 
-### <a name="how-to-work-with-net-async-and-task"></a><span data-ttu-id="c18ae-283">如何使用 .NET async 和 `Task`</span><span class="sxs-lookup"><span data-stu-id="c18ae-283">How to work with .NET async and `Task`</span></span>
+### <a name="how-to-work-with-net-async-and-task"></a><span data-ttu-id="3a25c-283">如何使用 .NET async 和 `Task`</span><span class="sxs-lookup"><span data-stu-id="3a25c-283">How to work with .NET async and `Task`</span></span>
 
-<span data-ttu-id="c18ae-284">若要使用 @no__t 为0（即，不返回值的 .NET async 计算）的 Api，你可能需要添加一个将 @no__t 转换为 @no__t 2 的其他函数：</span><span class="sxs-lookup"><span data-stu-id="c18ae-284">To work with APIs that use <xref:System.Threading.Tasks.Task> (that is, .NET async computations that do not return a value), you may need to add an additional function that will convert an `Async<'T>` to a <xref:System.Threading.Tasks.Task>:</span></span>
+<span data-ttu-id="3a25c-284">若要使用 <xref:System.Threading.Tasks.Task> （即，不返回值的 .NET async 计算）的 Api，你可能需要添加一个将 `Async<'T>` 转换为 <xref:System.Threading.Tasks.Task>的其他函数：</span><span class="sxs-lookup"><span data-stu-id="3a25c-284">To work with APIs that use <xref:System.Threading.Tasks.Task> (that is, .NET async computations that do not return a value), you may need to add an additional function that will convert an `Async<'T>` to a <xref:System.Threading.Tasks.Task>:</span></span>
 
 ```fsharp
 module Async =
@@ -368,22 +368,22 @@ module Async =
         Async.StartAsTask comp :> Task
 ```
 
-<span data-ttu-id="c18ae-285">已有 `Async.AwaitTask` 接受 @no__t 输入。</span><span class="sxs-lookup"><span data-stu-id="c18ae-285">There is already an `Async.AwaitTask` that accepts a <xref:System.Threading.Tasks.Task> as input.</span></span> <span data-ttu-id="c18ae-286">使用此函数和之前定义 `startTaskFromAsyncUnit` 函数，可以从F#异步计算启动和等待 @no__t 类型。</span><span class="sxs-lookup"><span data-stu-id="c18ae-286">With this and the previously defined `startTaskFromAsyncUnit` function, you can start and await <xref:System.Threading.Tasks.Task> types from an F# async computation.</span></span>
+<span data-ttu-id="3a25c-285">已存在接受作为输入的 <xref:System.Threading.Tasks.Task> 的 `Async.AwaitTask`。</span><span class="sxs-lookup"><span data-stu-id="3a25c-285">There is already an `Async.AwaitTask` that accepts a <xref:System.Threading.Tasks.Task> as input.</span></span> <span data-ttu-id="3a25c-286">使用此函数和先前定义的 `startTaskFromAsyncUnit` 函数，可以从F#异步计算启动和等待 <xref:System.Threading.Tasks.Task> 类型。</span><span class="sxs-lookup"><span data-stu-id="3a25c-286">With this and the previously defined `startTaskFromAsyncUnit` function, you can start and await <xref:System.Threading.Tasks.Task> types from an F# async computation.</span></span>
 
-## <a name="relationship-to-multithreading"></a><span data-ttu-id="c18ae-287">与多线程的关系</span><span class="sxs-lookup"><span data-stu-id="c18ae-287">Relationship to multithreading</span></span>
+## <a name="relationship-to-multithreading"></a><span data-ttu-id="3a25c-287">与多线程的关系</span><span class="sxs-lookup"><span data-stu-id="3a25c-287">Relationship to multithreading</span></span>
 
-<span data-ttu-id="c18ae-288">尽管本文介绍了线程处理，但要记住以下两个重要事项：</span><span class="sxs-lookup"><span data-stu-id="c18ae-288">Although threading is mentioned throughout this article, there are two important things to remember:</span></span>
+<span data-ttu-id="3a25c-288">尽管本文介绍了线程处理，但要记住以下两个重要事项：</span><span class="sxs-lookup"><span data-stu-id="3a25c-288">Although threading is mentioned throughout this article, there are two important things to remember:</span></span>
 
-1. <span data-ttu-id="c18ae-289">除非在当前线程上显式启动，否则异步计算与线程之间没有关联。</span><span class="sxs-lookup"><span data-stu-id="c18ae-289">There is no affinity between an asynchronous computation and a thread, unless explicitly started on the current thread.</span></span>
-1. <span data-ttu-id="c18ae-290">中F#的异步编程不是多线程的抽象。</span><span class="sxs-lookup"><span data-stu-id="c18ae-290">Asynchronous programming in F# is not an abstraction for multi-threading.</span></span>
+1. <span data-ttu-id="3a25c-289">除非在当前线程上显式启动，否则异步计算与线程之间没有关联。</span><span class="sxs-lookup"><span data-stu-id="3a25c-289">There is no affinity between an asynchronous computation and a thread, unless explicitly started on the current thread.</span></span>
+1. <span data-ttu-id="3a25c-290">中F#的异步编程不是多线程的抽象。</span><span class="sxs-lookup"><span data-stu-id="3a25c-290">Asynchronous programming in F# is not an abstraction for multi-threading.</span></span>
 
-<span data-ttu-id="c18ae-291">例如，根据工作的性质，计算实际上可以在其调用方的线程上运行。</span><span class="sxs-lookup"><span data-stu-id="c18ae-291">For example, a computation may actually run on its caller's thread, depending on the nature of the work.</span></span> <span data-ttu-id="c18ae-292">计算也可以在线程之间 "跳转"，从而在 "等待" 的时间间隔（例如，当网络调用正在传输时）使用一小段时间完成有用的工作。</span><span class="sxs-lookup"><span data-stu-id="c18ae-292">A computation could also "jump" between threads, borrowing them for a small amount of time to do useful work in between periods of "waiting" (such as when a network call is in transit).</span></span>
+<span data-ttu-id="3a25c-291">例如，根据工作的性质，计算实际上可以在其调用方的线程上运行。</span><span class="sxs-lookup"><span data-stu-id="3a25c-291">For example, a computation may actually run on its caller's thread, depending on the nature of the work.</span></span> <span data-ttu-id="3a25c-292">计算也可以在线程之间 "跳转"，从而在 "等待" 的时间间隔（例如，当网络调用正在传输时）使用一小段时间完成有用的工作。</span><span class="sxs-lookup"><span data-stu-id="3a25c-292">A computation could also "jump" between threads, borrowing them for a small amount of time to do useful work in between periods of "waiting" (such as when a network call is in transit).</span></span>
 
-<span data-ttu-id="c18ae-293">尽管F#提供了在当前线程上启动异步计算的某些功能（或不显式在当前线程上），但异步通常不与特定的线程策略相关联。</span><span class="sxs-lookup"><span data-stu-id="c18ae-293">Although F# provides some abilities to start an asynchronous computation on the current thread (or explicitly not on the current thread), asynchrony generally is not associated with a particular threading strategy.</span></span>
+<span data-ttu-id="3a25c-293">尽管F#提供了在当前线程上启动异步计算的某些功能（或不显式在当前线程上），但异步通常不与特定的线程策略相关联。</span><span class="sxs-lookup"><span data-stu-id="3a25c-293">Although F# provides some abilities to start an asynchronous computation on the current thread (or explicitly not on the current thread), asynchrony generally is not associated with a particular threading strategy.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="c18ae-294">请参阅</span><span class="sxs-lookup"><span data-stu-id="c18ae-294">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3a25c-294">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3a25c-294">See also</span></span>
 
-- [<span data-ttu-id="c18ae-295">F#异步编程模型</span><span class="sxs-lookup"><span data-stu-id="c18ae-295">The F# Asynchronous Programming Model</span></span>](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
-- [<span data-ttu-id="c18ae-296">Jet .com 的F# Async Guide</span><span class="sxs-lookup"><span data-stu-id="c18ae-296">Jet.com's F# Async Guide</span></span>](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)
-- [<span data-ttu-id="c18ae-297">F#获取趣味和利润的异步编程指南</span><span class="sxs-lookup"><span data-stu-id="c18ae-297">F# for fun and profit's Asynchronous Programming guide</span></span>](https://fsharpforfunandprofit.com/posts/concurrency-async-and-parallel/)
-- [<span data-ttu-id="c18ae-298">C#和F#中的异步：中的异步陷阱C#</span><span class="sxs-lookup"><span data-stu-id="c18ae-298">Async in C# and F#: Asynchronous gotchas in C#</span></span>](http://tomasp.net/blog/csharp-async-gotchas.aspx/)
+- [<span data-ttu-id="3a25c-295">F#异步编程模型</span><span class="sxs-lookup"><span data-stu-id="3a25c-295">The F# Asynchronous Programming Model</span></span>](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
+- [<span data-ttu-id="3a25c-296">Jet .com 的F# Async Guide</span><span class="sxs-lookup"><span data-stu-id="3a25c-296">Jet.com's F# Async Guide</span></span>](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)
+- [<span data-ttu-id="3a25c-297">F#获取趣味和利润的异步编程指南</span><span class="sxs-lookup"><span data-stu-id="3a25c-297">F# for fun and profit's Asynchronous Programming guide</span></span>](https://fsharpforfunandprofit.com/posts/concurrency-async-and-parallel/)
+- [<span data-ttu-id="3a25c-298">C#和F#中的异步：中的异步陷阱C#</span><span class="sxs-lookup"><span data-stu-id="3a25c-298">Async in C# and F#: Asynchronous gotchas in C#</span></span>](http://tomasp.net/blog/csharp-async-gotchas.aspx/)

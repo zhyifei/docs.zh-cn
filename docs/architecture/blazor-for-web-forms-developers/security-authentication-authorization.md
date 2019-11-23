@@ -11,13 +11,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "73840801"
 ---
-# <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-blazor"></a><span data-ttu-id="69314-103">安全性： ASP.NET Web Forms 和 Blazor 中的身份验证和授权</span><span class="sxs-lookup"><span data-stu-id="69314-103">Security: authentication and authorization in ASP.NET Web Forms and Blazor</span></span>
+# <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-blazor"></a><span data-ttu-id="68b5d-103">安全性： ASP.NET Web Forms 和 Blazor 中的身份验证和授权</span><span class="sxs-lookup"><span data-stu-id="68b5d-103">Security: authentication and authorization in ASP.NET Web Forms and Blazor</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="69314-104">*即将推出此内容。*</span><span class="sxs-lookup"><span data-stu-id="69314-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="68b5d-104">*即将推出此内容。*</span><span class="sxs-lookup"><span data-stu-id="68b5d-104">*This content is coming soon.*</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="69314-105">[上一页](config.md)
->[下一页](migration.md)</span><span class="sxs-lookup"><span data-stu-id="69314-105">[Previous](config.md)
+><span data-ttu-id="68b5d-105">[上一页](config.md)
+>[下一页](migration.md)</span><span class="sxs-lookup"><span data-stu-id="68b5d-105">[Previous](config.md)
 [Next](migration.md)</span></span>

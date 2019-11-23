@@ -11,11 +11,11 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "73840783"
 ---
-# <a name="state-management"></a><span data-ttu-id="11b5d-103">状态管理</span><span class="sxs-lookup"><span data-stu-id="11b5d-103">State management</span></span>
+# <a name="state-management"></a><span data-ttu-id="55309-103">状态管理</span><span class="sxs-lookup"><span data-stu-id="55309-103">State management</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="11b5d-104">*即将推出此内容。*</span><span class="sxs-lookup"><span data-stu-id="11b5d-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="55309-104">*即将推出此内容。*</span><span class="sxs-lookup"><span data-stu-id="55309-104">*This content is coming soon.*</span></span>
 
 <!--
 - View state
@@ -25,6 +25,6 @@ ms.locfileid: "73840783"
 -->
 
 >[!div class="step-by-step"]
-><span data-ttu-id="11b5d-105">[上一页](pages-routing-layouts.md)
->[下一页](forms-validation.md)</span><span class="sxs-lookup"><span data-stu-id="11b5d-105">[Previous](pages-routing-layouts.md)
+><span data-ttu-id="55309-105">[上一页](pages-routing-layouts.md)
+>[下一页](forms-validation.md)</span><span class="sxs-lookup"><span data-stu-id="55309-105">[Previous](pages-routing-layouts.md)
 [Next](forms-validation.md)</span></span>

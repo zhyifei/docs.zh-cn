@@ -16,39 +16,39 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72005209"
 ---
-# <a name="-rootnamespace"></a><span data-ttu-id="63c21-102">-rootnamespace</span><span class="sxs-lookup"><span data-stu-id="63c21-102">-rootnamespace</span></span>
-<span data-ttu-id="63c21-103">指定所有类型声明的命名空间。</span><span class="sxs-lookup"><span data-stu-id="63c21-103">Specifies a namespace for all type declarations.</span></span>  
+# <a name="-rootnamespace"></a><span data-ttu-id="9c9b7-102">-rootnamespace</span><span class="sxs-lookup"><span data-stu-id="9c9b7-102">-rootnamespace</span></span>
+<span data-ttu-id="9c9b7-103">指定所有类型声明的命名空间。</span><span class="sxs-lookup"><span data-stu-id="9c9b7-103">Specifies a namespace for all type declarations.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="63c21-104">语法</span><span class="sxs-lookup"><span data-stu-id="63c21-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9c9b7-104">语法</span><span class="sxs-lookup"><span data-stu-id="9c9b7-104">Syntax</span></span>  
   
 ```console  
 -rootnamespace:namespace  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="63c21-105">参数</span><span class="sxs-lookup"><span data-stu-id="63c21-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="9c9b7-105">参数</span><span class="sxs-lookup"><span data-stu-id="9c9b7-105">Arguments</span></span>  
   
-|<span data-ttu-id="63c21-106">术语</span><span class="sxs-lookup"><span data-stu-id="63c21-106">Term</span></span>|<span data-ttu-id="63c21-107">定义</span><span class="sxs-lookup"><span data-stu-id="63c21-107">Definition</span></span>|  
+|<span data-ttu-id="9c9b7-106">术语</span><span class="sxs-lookup"><span data-stu-id="9c9b7-106">Term</span></span>|<span data-ttu-id="9c9b7-107">Definition</span><span class="sxs-lookup"><span data-stu-id="9c9b7-107">Definition</span></span>|  
 |---|---|  
-|`namespace`|<span data-ttu-id="63c21-108">命名空间的名称，其中包含当前项目的所有类型声明。</span><span class="sxs-lookup"><span data-stu-id="63c21-108">The name of the namespace in which to enclose all type declarations for the current project.</span></span>|  
+|`namespace`|<span data-ttu-id="9c9b7-108">命名空间的名称，其中包含当前项目的所有类型声明。</span><span class="sxs-lookup"><span data-stu-id="9c9b7-108">The name of the namespace in which to enclose all type declarations for the current project.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="63c21-109">备注</span><span class="sxs-lookup"><span data-stu-id="63c21-109">Remarks</span></span>  
- <span data-ttu-id="63c21-110">如果使用 Visual Studio 可执行文件（Devenv）来编译在 Visual Studio 集成开发环境中创建的项目，请使用 `-rootnamespace` 来指定 @no__t 属性的值。</span><span class="sxs-lookup"><span data-stu-id="63c21-110">If you use the Visual Studio executable file (Devenv.exe) to compile a project created in the Visual Studio integrated development environment, use `-rootnamespace` to specify the value of the <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> property.</span></span> <span data-ttu-id="63c21-111">有关详细信息，请参阅[Devenv 命令行开关](/visualstudio/ide/reference/devenv-command-line-switches)。</span><span class="sxs-lookup"><span data-stu-id="63c21-111">See [Devenv Command Line Switches](/visualstudio/ide/reference/devenv-command-line-switches) for more information.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9c9b7-109">备注</span><span class="sxs-lookup"><span data-stu-id="9c9b7-109">Remarks</span></span>  
+ <span data-ttu-id="9c9b7-110">如果使用 Visual Studio 可执行文件（Devenv）来编译在 Visual Studio 集成开发环境中创建的项目，请使用 `-rootnamespace` 指定 <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> 属性的值。</span><span class="sxs-lookup"><span data-stu-id="9c9b7-110">If you use the Visual Studio executable file (Devenv.exe) to compile a project created in the Visual Studio integrated development environment, use `-rootnamespace` to specify the value of the <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> property.</span></span> <span data-ttu-id="9c9b7-111">有关详细信息，请参阅[Devenv 命令行开关](/visualstudio/ide/reference/devenv-command-line-switches)。</span><span class="sxs-lookup"><span data-stu-id="9c9b7-111">See [Devenv Command Line Switches](/visualstudio/ide/reference/devenv-command-line-switches) for more information.</span></span>  
   
- <span data-ttu-id="63c21-112">使用公共语言运行时 MSIL 拆装器（`Ildasm.exe`）查看输出文件中的命名空间名称。</span><span class="sxs-lookup"><span data-stu-id="63c21-112">Use the common language runtime MSIL Disassembler (`Ildasm.exe`) to view the namespace names in your output file.</span></span>  
+ <span data-ttu-id="9c9b7-112">使用公共语言运行时 MSIL 拆装器（`Ildasm.exe`）来查看输出文件中的命名空间名称。</span><span class="sxs-lookup"><span data-stu-id="9c9b7-112">Use the common language runtime MSIL Disassembler (`Ildasm.exe`) to view the namespace names in your output file.</span></span>  
   
-|<span data-ttu-id="63c21-113">在 Visual Studio 集成开发环境中设置-rootnamespace</span><span class="sxs-lookup"><span data-stu-id="63c21-113">To set -rootnamespace in the Visual Studio integrated development environment</span></span>|  
+|<span data-ttu-id="9c9b7-113">在 Visual Studio 集成开发环境中设置-rootnamespace</span><span class="sxs-lookup"><span data-stu-id="9c9b7-113">To set -rootnamespace in the Visual Studio integrated development environment</span></span>|  
 |---|  
-|<span data-ttu-id="63c21-114">1.在 **“解决方案资源管理器”** 中选择一个项目。</span><span class="sxs-lookup"><span data-stu-id="63c21-114">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="63c21-115">在“项目”菜单上，单击“属性”。</span><span class="sxs-lookup"><span data-stu-id="63c21-115">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="63c21-116">2.单击“应用程序” 选项卡。</span><span class="sxs-lookup"><span data-stu-id="63c21-116">2.  Click the **Application** tab.</span></span><br /><span data-ttu-id="63c21-117">3.修改 "**根命名空间**" 框中的值。</span><span class="sxs-lookup"><span data-stu-id="63c21-117">3.  Modify the value in the **Root Namespace** box.</span></span>|  
+|<span data-ttu-id="9c9b7-114">1. 在**解决方案资源管理器**中选择了一个项目。</span><span class="sxs-lookup"><span data-stu-id="9c9b7-114">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="9c9b7-115">在“项目”菜单上，单击“属性”。</span><span class="sxs-lookup"><span data-stu-id="9c9b7-115">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="9c9b7-116">2. 单击 "**应用程序**" 选项卡。</span><span class="sxs-lookup"><span data-stu-id="9c9b7-116">2.  Click the **Application** tab.</span></span><br /><span data-ttu-id="9c9b7-117">3. 修改 "**根命名空间**" 框中的值。</span><span class="sxs-lookup"><span data-stu-id="9c9b7-117">3.  Modify the value in the **Root Namespace** box.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="63c21-118">示例</span><span class="sxs-lookup"><span data-stu-id="63c21-118">Example</span></span>  
- <span data-ttu-id="63c21-119">下面的代码编译 `In.vb` 并将命名空间中的所有类型声明都括起来 `mynamespace`。</span><span class="sxs-lookup"><span data-stu-id="63c21-119">The following code compiles `In.vb` and encloses all type declarations in the namespace `mynamespace`.</span></span>  
+## <a name="example"></a><span data-ttu-id="9c9b7-118">示例</span><span class="sxs-lookup"><span data-stu-id="9c9b7-118">Example</span></span>  
+ <span data-ttu-id="9c9b7-119">下面的代码编译 `In.vb`，并将命名空间 `mynamespace`中的所有类型声明括起来。</span><span class="sxs-lookup"><span data-stu-id="9c9b7-119">The following code compiles `In.vb` and encloses all type declarations in the namespace `mynamespace`.</span></span>  
   
 ```console
 vbc -rootnamespace:mynamespace in.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="63c21-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="63c21-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9c9b7-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9c9b7-120">See also</span></span>
 
-- [<span data-ttu-id="63c21-121">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="63c21-121">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="63c21-122">Ildasm.exe（IL 反汇编程序）</span><span class="sxs-lookup"><span data-stu-id="63c21-122">Ildasm.exe (IL Disassembler)</span></span>](../../../framework/tools/ildasm-exe-il-disassembler.md)
-- [<span data-ttu-id="63c21-123">示例编译命令行</span><span class="sxs-lookup"><span data-stu-id="63c21-123">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="9c9b7-121">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="9c9b7-121">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="9c9b7-122">Ildasm.exe（IL 反汇编程序）</span><span class="sxs-lookup"><span data-stu-id="9c9b7-122">Ildasm.exe (IL Disassembler)</span></span>](../../../framework/tools/ildasm-exe-il-disassembler.md)
+- [<span data-ttu-id="9c9b7-123">示例编译命令行</span><span class="sxs-lookup"><span data-stu-id="9c9b7-123">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

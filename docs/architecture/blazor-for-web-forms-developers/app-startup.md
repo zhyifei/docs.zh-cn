@@ -11,13 +11,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "73840843"
 ---
-# <a name="app-startup"></a><span data-ttu-id="74fba-103">应用启动</span><span class="sxs-lookup"><span data-stu-id="74fba-103">App startup</span></span>
+# <a name="app-startup"></a><span data-ttu-id="aff61-103">应用启动</span><span class="sxs-lookup"><span data-stu-id="aff61-103">App startup</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="74fba-104">*即将推出此内容。*</span><span class="sxs-lookup"><span data-stu-id="74fba-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="aff61-104">*即将推出此内容。*</span><span class="sxs-lookup"><span data-stu-id="aff61-104">*This content is coming soon.*</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="74fba-105">[上一页](project-structure.md)
->[下一页](components.md)</span><span class="sxs-lookup"><span data-stu-id="74fba-105">[Previous](project-structure.md)
+><span data-ttu-id="aff61-105">[上一页](project-structure.md)
+>[下一页](components.md)</span><span class="sxs-lookup"><span data-stu-id="aff61-105">[Previous](project-structure.md)
 [Next](components.md)</span></span>

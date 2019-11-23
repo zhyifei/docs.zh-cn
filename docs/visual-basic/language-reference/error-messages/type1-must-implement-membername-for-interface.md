@@ -1,5 +1,5 @@
 ---
-title: <type1>“<typename>”必须为接口“<interfacename>”实现“<membername>”
+title: <type1>“<typename>”必须为接口“<membername>”实现“<interfacename>”
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30154
@@ -14,28 +14,28 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71696893"
 ---
-# <a name="type1typename-must-implement-membername-for-interface-interfacename"></a><span data-ttu-id="c1639-102">\<type1 > "\<typename >" 必须为接口 "\<interfacename >" 实现 "2membername @no__t"</span><span class="sxs-lookup"><span data-stu-id="c1639-102">\<type1>'\<typename>' must implement '\<membername>' for interface '\<interfacename>'</span></span>
-<span data-ttu-id="c1639-103">"\<typename >" 必须为接口 "\<interfacename >" 实现 "\<membername >"。</span><span class="sxs-lookup"><span data-stu-id="c1639-103">'\<typename>' must implement '\<membername>' for interface '\<interfacename>'.</span></span> <span data-ttu-id="c1639-104">实现属性必须具有匹配的 "ReadOnly"/"WriteOnly" 说明符。</span><span class="sxs-lookup"><span data-stu-id="c1639-104">Implementing property must have matching 'ReadOnly'/'WriteOnly' specifiers.</span></span>  
+# <a name="type1typename-must-implement-membername-for-interface-interfacename"></a><span data-ttu-id="2e0ea-102">\<type1 > "\<typename >" 必须为接口 "\<interfacename >" 实现 "\<成员 >"</span><span class="sxs-lookup"><span data-stu-id="2e0ea-102">\<type1>'\<typename>' must implement '\<membername>' for interface '\<interfacename>'</span></span>
+<span data-ttu-id="2e0ea-103">"\<typename >" 必须为接口 "\<interfacename >" 实现 "\<成员名称 >"。</span><span class="sxs-lookup"><span data-stu-id="2e0ea-103">'\<typename>' must implement '\<membername>' for interface '\<interfacename>'.</span></span> <span data-ttu-id="2e0ea-104">实现属性必须具有匹配的 "ReadOnly"/"WriteOnly" 说明符。</span><span class="sxs-lookup"><span data-stu-id="2e0ea-104">Implementing property must have matching 'ReadOnly'/'WriteOnly' specifiers.</span></span>  
   
- <span data-ttu-id="c1639-105">类或结构声明实现接口，但不实现由接口定义的过程、属性或事件。</span><span class="sxs-lookup"><span data-stu-id="c1639-105">A class or structure claims to implement an interface but does not implement a procedure, property, or event defined by the interface.</span></span> <span data-ttu-id="c1639-106">必须实现接口的每个成员。</span><span class="sxs-lookup"><span data-stu-id="c1639-106">Every member of the interface must be implemented.</span></span>  
+ <span data-ttu-id="2e0ea-105">类或结构声明实现接口，但不实现由接口定义的过程、属性或事件。</span><span class="sxs-lookup"><span data-stu-id="2e0ea-105">A class or structure claims to implement an interface but does not implement a procedure, property, or event defined by the interface.</span></span> <span data-ttu-id="2e0ea-106">必须实现接口的每个成员。</span><span class="sxs-lookup"><span data-stu-id="2e0ea-106">Every member of the interface must be implemented.</span></span>  
   
- <span data-ttu-id="c1639-107">**错误 ID：** BC30154</span><span class="sxs-lookup"><span data-stu-id="c1639-107">**Error ID:** BC30154</span></span>  
+ <span data-ttu-id="2e0ea-107">**错误 ID：** BC30154</span><span class="sxs-lookup"><span data-stu-id="2e0ea-107">**Error ID:** BC30154</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="c1639-108">更正此错误</span><span class="sxs-lookup"><span data-stu-id="c1639-108">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="2e0ea-108">更正此错误</span><span class="sxs-lookup"><span data-stu-id="2e0ea-108">To correct this error</span></span>  
   
-1. <span data-ttu-id="c1639-109">使用在接口中定义的相同名称和签名声明成员。</span><span class="sxs-lookup"><span data-stu-id="c1639-109">Declare a member with the same name and signature as defined in the interface.</span></span> <span data-ttu-id="c1639-110">请确保至少包含 `End Function`、`End Sub` 或 `End Property` 语句。</span><span class="sxs-lookup"><span data-stu-id="c1639-110">Be sure to include at least the `End Function`, `End Sub`, or `End Property` statement.</span></span>  
+1. <span data-ttu-id="2e0ea-109">使用在接口中定义的相同名称和签名声明成员。</span><span class="sxs-lookup"><span data-stu-id="2e0ea-109">Declare a member with the same name and signature as defined in the interface.</span></span> <span data-ttu-id="2e0ea-110">请确保至少包含 `End Function`、`End Sub`或 `End Property` 语句。</span><span class="sxs-lookup"><span data-stu-id="2e0ea-110">Be sure to include at least the `End Function`, `End Sub`, or `End Property` statement.</span></span>  
   
-2. <span data-ttu-id="c1639-111">将 `Implements` 子句添加到 @no__t 的末尾，`Sub`、`Property` 或 @no__t 语句。</span><span class="sxs-lookup"><span data-stu-id="c1639-111">Add an `Implements` clause to the end of the `Function`, `Sub`, `Property`, or `Event` statement.</span></span> <span data-ttu-id="c1639-112">例如：</span><span class="sxs-lookup"><span data-stu-id="c1639-112">For example:</span></span>  
+2. <span data-ttu-id="2e0ea-111">将 `Implements` 子句添加到 `Function`、`Sub`、`Property`或 `Event` 语句的末尾。</span><span class="sxs-lookup"><span data-stu-id="2e0ea-111">Add an `Implements` clause to the end of the `Function`, `Sub`, `Property`, or `Event` statement.</span></span> <span data-ttu-id="2e0ea-112">例如：</span><span class="sxs-lookup"><span data-stu-id="2e0ea-112">For example:</span></span>  
   
     ```vb  
     Public Event ItHappened() Implements IBaseInterface.ItHappened  
     ```  
   
-3. <span data-ttu-id="c1639-113">实现属性时，请确保使用与接口定义中相同的方式来使用 `ReadOnly` 或 @no__t。</span><span class="sxs-lookup"><span data-stu-id="c1639-113">When implementing a property, make sure that `ReadOnly` or `WriteOnly` is used in the same way as in the interface definition.</span></span>  
+3. <span data-ttu-id="2e0ea-113">实现属性时，请确保使用与接口定义中相同的方式来使用 `ReadOnly` 或 `WriteOnly`。</span><span class="sxs-lookup"><span data-stu-id="2e0ea-113">When implementing a property, make sure that `ReadOnly` or `WriteOnly` is used in the same way as in the interface definition.</span></span>  
   
-4. <span data-ttu-id="c1639-114">实现某个属性时，请根据需要声明 @no__t 0 和 @no__t 的过程。</span><span class="sxs-lookup"><span data-stu-id="c1639-114">When implementing a property, declare `Get` and `Set` procedures, as appropriate.</span></span>  
+4. <span data-ttu-id="2e0ea-114">实现属性时，请根据需要声明 `Get` 和 `Set` 过程。</span><span class="sxs-lookup"><span data-stu-id="2e0ea-114">When implementing a property, declare `Get` and `Set` procedures, as appropriate.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c1639-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="c1639-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2e0ea-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2e0ea-115">See also</span></span>
 
-- [<span data-ttu-id="c1639-116">Implements 语句</span><span class="sxs-lookup"><span data-stu-id="c1639-116">Implements Statement</span></span>](../../../visual-basic/language-reference/statements/implements-statement.md)
-- [<span data-ttu-id="c1639-117">接口</span><span class="sxs-lookup"><span data-stu-id="c1639-117">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [<span data-ttu-id="2e0ea-116">Implements 语句</span><span class="sxs-lookup"><span data-stu-id="2e0ea-116">Implements Statement</span></span>](../../../visual-basic/language-reference/statements/implements-statement.md)
+- [<span data-ttu-id="2e0ea-117">接口</span><span class="sxs-lookup"><span data-stu-id="2e0ea-117">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
