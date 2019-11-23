@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 65063ad5-e0d9-4c01-8f8b-9a5950109fa6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e157c758b472ea89e21c1ed1ba8c17693c20a3d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5ce1af82631531f8f7105fbf92ba78db3cca437b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777795"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442327"
 ---
-# <a name="imetadatadispenseropenscope-method"></a><span data-ttu-id="f019c-102">IMetaDataDispenser::OpenScope 方法</span><span class="sxs-lookup"><span data-stu-id="f019c-102">IMetaDataDispenser::OpenScope Method</span></span>
-<span data-ttu-id="f019c-103">打开一个现有的磁盘上的文件并将其元数据映射到内存中。</span><span class="sxs-lookup"><span data-stu-id="f019c-103">Opens an existing, on-disk file and maps its metadata into memory.</span></span>  
+# <a name="imetadatadispenseropenscope-method"></a><span data-ttu-id="639f7-102">IMetaDataDispenser::OpenScope 方法</span><span class="sxs-lookup"><span data-stu-id="639f7-102">IMetaDataDispenser::OpenScope Method</span></span>
+<span data-ttu-id="639f7-103">Opens an existing, on-disk file and maps its metadata into memory.</span><span class="sxs-lookup"><span data-stu-id="639f7-103">Opens an existing, on-disk file and maps its metadata into memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f019c-104">语法</span><span class="sxs-lookup"><span data-stu-id="f019c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="639f7-104">语法</span><span class="sxs-lookup"><span data-stu-id="639f7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT OpenScope (  
@@ -38,46 +36,46 @@ HRESULT OpenScope (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f019c-105">参数</span><span class="sxs-lookup"><span data-stu-id="f019c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="639f7-105">参数</span><span class="sxs-lookup"><span data-stu-id="639f7-105">Parameters</span></span>  
  `szScope`  
- <span data-ttu-id="f019c-106">[in]要打开的文件的名称。</span><span class="sxs-lookup"><span data-stu-id="f019c-106">[in] The name of the file to be opened.</span></span> <span data-ttu-id="f019c-107">该文件必须包含公共语言运行时 (CLR) 元数据。</span><span class="sxs-lookup"><span data-stu-id="f019c-107">The file must contain common language runtime (CLR) metadata.</span></span>  
+ <span data-ttu-id="639f7-106">[in] The name of the file to be opened.</span><span class="sxs-lookup"><span data-stu-id="639f7-106">[in] The name of the file to be opened.</span></span> <span data-ttu-id="639f7-107">The file must contain common language runtime (CLR) metadata.</span><span class="sxs-lookup"><span data-stu-id="639f7-107">The file must contain common language runtime (CLR) metadata.</span></span>  
   
  `dwOpenFlags`  
- <span data-ttu-id="f019c-108">[in]值为[CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)枚举，用于打开指定的模式 （读取、 写入和其他操作）。</span><span class="sxs-lookup"><span data-stu-id="f019c-108">[in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration to specify the mode (read, write, and so on) for opening.</span></span>  
+ <span data-ttu-id="639f7-108">[in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration to specify the mode (read, write, and so on) for opening.</span><span class="sxs-lookup"><span data-stu-id="639f7-108">[in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration to specify the mode (read, write, and so on) for opening.</span></span>  
   
  `riid`  
- <span data-ttu-id="f019c-109">[in]要返回; 所需的元数据接口的 IID调用方将使用该接口导入 （读取） 或发出 （写入） 元数据。</span><span class="sxs-lookup"><span data-stu-id="f019c-109">[in] The IID of the desired metadata interface to be returned; the caller will use the interface to import (read) or emit (write) metadata.</span></span>  
+ <span data-ttu-id="639f7-109">[in] The IID of the desired metadata interface to be returned; the caller will use the interface to import (read) or emit (write) metadata.</span><span class="sxs-lookup"><span data-stu-id="639f7-109">[in] The IID of the desired metadata interface to be returned; the caller will use the interface to import (read) or emit (write) metadata.</span></span>  
   
- <span data-ttu-id="f019c-110">值`riid`必须指定一个"导入"发出"接口。</span><span class="sxs-lookup"><span data-stu-id="f019c-110">The value of `riid` must specify one of the "import" or "emit" interfaces.</span></span> <span data-ttu-id="f019c-111">有效值为 IID_IMetaDataEmit、 IID_IMetaDataImport、 IID_IMetaDataAssemblyEmit、 IID_IMetaDataAssemblyImport、 IID_IMetaDataEmit2 或 IID_IMetaDataImport2。</span><span class="sxs-lookup"><span data-stu-id="f019c-111">Valid values are IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2, or IID_IMetaDataImport2.</span></span>  
+ <span data-ttu-id="639f7-110">The value of `riid` must specify one of the "import" or "emit" interfaces.</span><span class="sxs-lookup"><span data-stu-id="639f7-110">The value of `riid` must specify one of the "import" or "emit" interfaces.</span></span> <span data-ttu-id="639f7-111">Valid values are IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2, or IID_IMetaDataImport2.</span><span class="sxs-lookup"><span data-stu-id="639f7-111">Valid values are IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2, or IID_IMetaDataImport2.</span></span>  
   
  `ppIUnk`  
- <span data-ttu-id="f019c-112">[out]对返回的接口指针。</span><span class="sxs-lookup"><span data-stu-id="f019c-112">[out] The pointer to the returned interface.</span></span>  
+ <span data-ttu-id="639f7-112">[out] The pointer to the returned interface.</span><span class="sxs-lookup"><span data-stu-id="639f7-112">[out] The pointer to the returned interface.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f019c-113">备注</span><span class="sxs-lookup"><span data-stu-id="f019c-113">Remarks</span></span>  
- <span data-ttu-id="f019c-114">方法使用从一个"导入"接口，或添加到使用从"发出"界面中的一个方法，可以查询的元数据的内存中副本。</span><span class="sxs-lookup"><span data-stu-id="f019c-114">The in-memory copy of the metadata can be queried using methods from one of the "import" interfaces, or added to using methods from the one of the "emit" interfaces.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="639f7-113">备注</span><span class="sxs-lookup"><span data-stu-id="639f7-113">Remarks</span></span>  
+ <span data-ttu-id="639f7-114">The in-memory copy of the metadata can be queried using methods from one of the "import" interfaces, or added to using methods from the one of the "emit" interfaces.</span><span class="sxs-lookup"><span data-stu-id="639f7-114">The in-memory copy of the metadata can be queried using methods from one of the "import" interfaces, or added to using methods from the one of the "emit" interfaces.</span></span>  
   
- <span data-ttu-id="f019c-115">如果目标文件不包含 CLR 元数据，`OpenScope`方法将失败。</span><span class="sxs-lookup"><span data-stu-id="f019c-115">If the target file does not contain CLR metadata, the `OpenScope` method will fail.</span></span>  
+ <span data-ttu-id="639f7-115">If the target file does not contain CLR metadata, the `OpenScope` method will fail.</span><span class="sxs-lookup"><span data-stu-id="639f7-115">If the target file does not contain CLR metadata, the `OpenScope` method will fail.</span></span>  
   
- <span data-ttu-id="f019c-116">在.NET Framework 版本 1.0 和 1.1 版中，如果作用域以打开`dwOpenFlags`设置为 ofRead，有资格享受共享。</span><span class="sxs-lookup"><span data-stu-id="f019c-116">In the .NET Framework version 1.0 and version 1.1, if a scope is opened with `dwOpenFlags` set to ofRead, it is eligible for sharing.</span></span> <span data-ttu-id="f019c-117">也就是说，如果后续调用`OpenScope`传入以前打开的文件的名称，重用现有的范围，且不会创建一组新的数据结构。</span><span class="sxs-lookup"><span data-stu-id="f019c-117">That is, if subsequent calls to `OpenScope` pass in the name of a file that was previously opened, the existing scope is reused and a new set of data structures is not created.</span></span> <span data-ttu-id="f019c-118">但是，由于这种共享会出现问题。</span><span class="sxs-lookup"><span data-stu-id="f019c-118">However, problems can arise due to this sharing.</span></span>  
+ <span data-ttu-id="639f7-116">In the .NET Framework version 1.0 and version 1.1, if a scope is opened with `dwOpenFlags` set to ofRead, it is eligible for sharing.</span><span class="sxs-lookup"><span data-stu-id="639f7-116">In the .NET Framework version 1.0 and version 1.1, if a scope is opened with `dwOpenFlags` set to ofRead, it is eligible for sharing.</span></span> <span data-ttu-id="639f7-117">That is, if subsequent calls to `OpenScope` pass in the name of a file that was previously opened, the existing scope is reused and a new set of data structures is not created.</span><span class="sxs-lookup"><span data-stu-id="639f7-117">That is, if subsequent calls to `OpenScope` pass in the name of a file that was previously opened, the existing scope is reused and a new set of data structures is not created.</span></span> <span data-ttu-id="639f7-118">However, problems can arise due to this sharing.</span><span class="sxs-lookup"><span data-stu-id="639f7-118">However, problems can arise due to this sharing.</span></span>  
   
- <span data-ttu-id="f019c-119">在.NET Framework 2.0 版中，作用域以打开`dwOpenFlags`不再共享设置为 ofRead。</span><span class="sxs-lookup"><span data-stu-id="f019c-119">In the .NET Framework version 2.0, scopes opened with `dwOpenFlags` set to ofRead are no longer shared.</span></span> <span data-ttu-id="f019c-120">使用 ofReadOnly 值以允许要共享的作用域。</span><span class="sxs-lookup"><span data-stu-id="f019c-120">Use the ofReadOnly value to allow the scope to be shared.</span></span> <span data-ttu-id="f019c-121">共享作用域后，使用"读/写"元数据接口的查询将失败。</span><span class="sxs-lookup"><span data-stu-id="f019c-121">When a scope is shared, queries that use "read/write" metadata interfaces will fail.</span></span>  
+ <span data-ttu-id="639f7-119">In the .NET Framework version 2.0, scopes opened with `dwOpenFlags` set to ofRead are no longer shared.</span><span class="sxs-lookup"><span data-stu-id="639f7-119">In the .NET Framework version 2.0, scopes opened with `dwOpenFlags` set to ofRead are no longer shared.</span></span> <span data-ttu-id="639f7-120">Use the ofReadOnly value to allow the scope to be shared.</span><span class="sxs-lookup"><span data-stu-id="639f7-120">Use the ofReadOnly value to allow the scope to be shared.</span></span> <span data-ttu-id="639f7-121">When a scope is shared, queries that use "read/write" metadata interfaces will fail.</span><span class="sxs-lookup"><span data-stu-id="639f7-121">When a scope is shared, queries that use "read/write" metadata interfaces will fail.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f019c-122">要求</span><span class="sxs-lookup"><span data-stu-id="f019c-122">Requirements</span></span>  
- <span data-ttu-id="f019c-123">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f019c-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="639f7-122">要求</span><span class="sxs-lookup"><span data-stu-id="639f7-122">Requirements</span></span>  
+ <span data-ttu-id="639f7-123">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="639f7-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f019c-124">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f019c-124">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="639f7-124">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="639f7-124">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f019c-125">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="f019c-125">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="639f7-125">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="639f7-125">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f019c-126">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f019c-126">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="639f7-126">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="639f7-126">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f019c-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="f019c-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="639f7-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="639f7-127">See also</span></span>
 
-- [<span data-ttu-id="f019c-128">IMetaDataDispenser 接口</span><span class="sxs-lookup"><span data-stu-id="f019c-128">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
-- [<span data-ttu-id="f019c-129">IMetaDataDispenserEx 接口</span><span class="sxs-lookup"><span data-stu-id="f019c-129">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [<span data-ttu-id="f019c-130">IMetaDataAssemblyEmit 接口</span><span class="sxs-lookup"><span data-stu-id="f019c-130">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [<span data-ttu-id="f019c-131">IMetaDataAssemblyImport 接口</span><span class="sxs-lookup"><span data-stu-id="f019c-131">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [<span data-ttu-id="f019c-132">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="f019c-132">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="f019c-133">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="f019c-133">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="f019c-134">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="f019c-134">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="f019c-135">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="f019c-135">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="639f7-128">IMetaDataDispenser 接口</span><span class="sxs-lookup"><span data-stu-id="639f7-128">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [<span data-ttu-id="639f7-129">IMetaDataDispenserEx 接口</span><span class="sxs-lookup"><span data-stu-id="639f7-129">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [<span data-ttu-id="639f7-130">IMetaDataAssemblyEmit 接口</span><span class="sxs-lookup"><span data-stu-id="639f7-130">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="639f7-131">IMetaDataAssemblyImport 接口</span><span class="sxs-lookup"><span data-stu-id="639f7-131">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="639f7-132">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="639f7-132">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="639f7-133">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="639f7-133">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="639f7-134">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="639f7-134">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="639f7-135">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="639f7-135">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: d6f9ac84-302a-4f5e-b990-e76f4269fceb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3f45423bb0ff4c755e657729c5725c8d9a22bde3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fcaf748413321f684336543e60f735af69894b51
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746761"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436007"
 ---
-# <a name="isymunmanagedreadergetmethodversion-method"></a><span data-ttu-id="1d5df-102">ISymUnmanagedReader::GetMethodVersion 方法</span><span class="sxs-lookup"><span data-stu-id="1d5df-102">ISymUnmanagedReader::GetMethodVersion Method</span></span>
-<span data-ttu-id="1d5df-103">获取方法版本。</span><span class="sxs-lookup"><span data-stu-id="1d5df-103">Gets the method version.</span></span> <span data-ttu-id="1d5df-104">方法版本从 1 开始，在每的次递增的方法重新编译。</span><span class="sxs-lookup"><span data-stu-id="1d5df-104">The method version starts at 1 and is incremented each time the method is recompiled.</span></span> <span data-ttu-id="1d5df-105">重新编译可发生该方法无需进行更改。</span><span class="sxs-lookup"><span data-stu-id="1d5df-105">Recompilation can happen without changes to the method.</span></span>  
+# <a name="isymunmanagedreadergetmethodversion-method"></a><span data-ttu-id="ed9fa-102">ISymUnmanagedReader::GetMethodVersion 方法</span><span class="sxs-lookup"><span data-stu-id="ed9fa-102">ISymUnmanagedReader::GetMethodVersion Method</span></span>
+<span data-ttu-id="ed9fa-103">Gets the method version.</span><span class="sxs-lookup"><span data-stu-id="ed9fa-103">Gets the method version.</span></span> <span data-ttu-id="ed9fa-104">The method version starts at 1 and is incremented each time the method is recompiled.</span><span class="sxs-lookup"><span data-stu-id="ed9fa-104">The method version starts at 1 and is incremented each time the method is recompiled.</span></span> <span data-ttu-id="ed9fa-105">Recompilation can happen without changes to the method.</span><span class="sxs-lookup"><span data-stu-id="ed9fa-105">Recompilation can happen without changes to the method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1d5df-106">语法</span><span class="sxs-lookup"><span data-stu-id="1d5df-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ed9fa-106">语法</span><span class="sxs-lookup"><span data-stu-id="ed9fa-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMethodVersion (  
@@ -35,19 +33,19 @@ HRESULT GetMethodVersion (
     [out] int* version);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1d5df-107">参数</span><span class="sxs-lookup"><span data-stu-id="1d5df-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ed9fa-107">参数</span><span class="sxs-lookup"><span data-stu-id="ed9fa-107">Parameters</span></span>  
  `pMethod`  
- <span data-ttu-id="1d5df-108">[in]要为其获取版本方法。</span><span class="sxs-lookup"><span data-stu-id="1d5df-108">[in] The method for which to get the version.</span></span>  
+ <span data-ttu-id="ed9fa-108">[in] The method for which to get the version.</span><span class="sxs-lookup"><span data-stu-id="ed9fa-108">[in] The method for which to get the version.</span></span>  
   
  `version`  
- <span data-ttu-id="1d5df-109">[out]指向一个变量来接收方法版本的指针。</span><span class="sxs-lookup"><span data-stu-id="1d5df-109">[out] A pointer to a variable that receives the method version.</span></span>  
+ <span data-ttu-id="ed9fa-109">[out] A pointer to a variable that receives the method version.</span><span class="sxs-lookup"><span data-stu-id="ed9fa-109">[out] A pointer to a variable that receives the method version.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1d5df-110">返回值</span><span class="sxs-lookup"><span data-stu-id="1d5df-110">Return Value</span></span>  
- <span data-ttu-id="1d5df-111">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="1d5df-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ed9fa-110">返回值</span><span class="sxs-lookup"><span data-stu-id="ed9fa-110">Return Value</span></span>  
+ <span data-ttu-id="ed9fa-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="ed9fa-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1d5df-112">要求</span><span class="sxs-lookup"><span data-stu-id="1d5df-112">Requirements</span></span>  
- <span data-ttu-id="1d5df-113">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="1d5df-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ed9fa-112">要求</span><span class="sxs-lookup"><span data-stu-id="ed9fa-112">Requirements</span></span>  
+ <span data-ttu-id="ed9fa-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ed9fa-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1d5df-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="1d5df-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ed9fa-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="ed9fa-114">See also</span></span>
 
-- [<span data-ttu-id="1d5df-115">ISymUnmanagedReader 接口</span><span class="sxs-lookup"><span data-stu-id="1d5df-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="ed9fa-115">ISymUnmanagedReader 接口</span><span class="sxs-lookup"><span data-stu-id="ed9fa-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

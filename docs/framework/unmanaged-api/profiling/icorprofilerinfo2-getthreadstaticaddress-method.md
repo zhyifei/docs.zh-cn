@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8e7dbf14-98a2-4384-a950-58a7640e59df
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8f8c18935069e4162236f99c411312087ce73bdc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d44eae4da70418e2d4f398b2bacee1fb53d55b60
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782216"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443056"
 ---
-# <a name="icorprofilerinfo2getthreadstaticaddress-method"></a><span data-ttu-id="d0006-102">ICorProfilerInfo2::GetThreadStaticAddress 方法</span><span class="sxs-lookup"><span data-stu-id="d0006-102">ICorProfilerInfo2::GetThreadStaticAddress Method</span></span>
-<span data-ttu-id="d0006-103">获取指定在范围内的指定线程的线程静态字段的地址。</span><span class="sxs-lookup"><span data-stu-id="d0006-103">Gets the address of the specified thread-static field that is in the scope of the specified thread.</span></span>  
+# <a name="icorprofilerinfo2getthreadstaticaddress-method"></a><span data-ttu-id="d0a64-102">ICorProfilerInfo2::GetThreadStaticAddress 方法</span><span class="sxs-lookup"><span data-stu-id="d0a64-102">ICorProfilerInfo2::GetThreadStaticAddress Method</span></span>
+<span data-ttu-id="d0a64-103">Gets the address of the specified thread-static field that is in the scope of the specified thread.</span><span class="sxs-lookup"><span data-stu-id="d0a64-103">Gets the address of the specified thread-static field that is in the scope of the specified thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d0006-104">语法</span><span class="sxs-lookup"><span data-stu-id="d0006-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d0a64-104">语法</span><span class="sxs-lookup"><span data-stu-id="d0a64-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetThreadStaticAddress(  
@@ -37,38 +35,38 @@ HRESULT GetThreadStaticAddress(
     [out] void       **ppAddress);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d0006-105">参数</span><span class="sxs-lookup"><span data-stu-id="d0006-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d0a64-105">参数</span><span class="sxs-lookup"><span data-stu-id="d0a64-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="d0006-106">[in]包含请求的线程静态字段的类的 ID。</span><span class="sxs-lookup"><span data-stu-id="d0006-106">[in] The ID of the class that contains the requested thread-static field.</span></span>  
+ <span data-ttu-id="d0a64-106">[in] The ID of the class that contains the requested thread-static field.</span><span class="sxs-lookup"><span data-stu-id="d0a64-106">[in] The ID of the class that contains the requested thread-static field.</span></span>  
   
  `fieldToken`  
- <span data-ttu-id="d0006-107">[in]请求的线程静态字段元数据标记。</span><span class="sxs-lookup"><span data-stu-id="d0006-107">[in] The metadata token for the requested thread-static field.</span></span>  
+ <span data-ttu-id="d0a64-107">[in] The metadata token for the requested thread-static field.</span><span class="sxs-lookup"><span data-stu-id="d0a64-107">[in] The metadata token for the requested thread-static field.</span></span>  
   
  `threadId`  
- <span data-ttu-id="d0006-108">[in]请求的静态字段的作用域的线程的 ID。</span><span class="sxs-lookup"><span data-stu-id="d0006-108">[in] The ID of the thread that is the scope for the requested static field.</span></span>  
+ <span data-ttu-id="d0a64-108">[in] The ID of the thread that is the scope for the requested static field.</span><span class="sxs-lookup"><span data-stu-id="d0a64-108">[in] The ID of the thread that is the scope for the requested static field.</span></span>  
   
  `ppAddress`  
- <span data-ttu-id="d0006-109">[out]指向位于指定线程静态字段的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="d0006-109">[out] A pointer to the address of the static field that is within the specified thread.</span></span>  
+ <span data-ttu-id="d0a64-109">[out] A pointer to the address of the static field that is within the specified thread.</span><span class="sxs-lookup"><span data-stu-id="d0a64-109">[out] A pointer to the address of the static field that is within the specified thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d0006-110">备注</span><span class="sxs-lookup"><span data-stu-id="d0006-110">Remarks</span></span>  
- <span data-ttu-id="d0006-111">`GetThreadStaticAddress`方法可能会返回以下值之一：</span><span class="sxs-lookup"><span data-stu-id="d0006-111">The `GetThreadStaticAddress` method may return one of the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d0a64-110">备注</span><span class="sxs-lookup"><span data-stu-id="d0a64-110">Remarks</span></span>  
+ <span data-ttu-id="d0a64-111">The `GetThreadStaticAddress` method may return one of the following:</span><span class="sxs-lookup"><span data-stu-id="d0a64-111">The `GetThreadStaticAddress` method may return one of the following:</span></span>  
   
-- <span data-ttu-id="d0006-112">如果尚未分配给定的静态字段中指定的上下文的地址 CORPROF_E_DATAINCOMPLETE HRESULT。</span><span class="sxs-lookup"><span data-stu-id="d0006-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
+- <span data-ttu-id="d0a64-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span><span class="sxs-lookup"><span data-stu-id="d0a64-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
   
-- <span data-ttu-id="d0006-113">可能在垃圾回收堆的对象的地址。</span><span class="sxs-lookup"><span data-stu-id="d0006-113">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="d0006-114">垃圾回收后，这些地址可能会变为无效操作后垃圾收集探查器不应假定其是否有效。</span><span class="sxs-lookup"><span data-stu-id="d0006-114">These addresses may become invalid after garbage collection, so after garbage collection profilers should not assume that they are valid.</span></span>  
+- <span data-ttu-id="d0a64-113">The addresses of objects that may be in the garbage collection heap.</span><span class="sxs-lookup"><span data-stu-id="d0a64-113">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="d0a64-114">These addresses may become invalid after garbage collection, so after garbage collection profilers should not assume that they are valid.</span><span class="sxs-lookup"><span data-stu-id="d0a64-114">These addresses may become invalid after garbage collection, so after garbage collection profilers should not assume that they are valid.</span></span>  
   
- <span data-ttu-id="d0006-115">类的类构造函数完成之前，`GetThreadStaticAddress`将返回 CORPROF_E_DATAINCOMPLETE 对于所有其静态字段，尽管可能已初始化的一些静态字段和根垃圾回收对象。</span><span class="sxs-lookup"><span data-stu-id="d0006-115">Before a class’s class constructor is completed, `GetThreadStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
+ <span data-ttu-id="d0a64-115">Before a class’s class constructor is completed, `GetThreadStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span><span class="sxs-lookup"><span data-stu-id="d0a64-115">Before a class’s class constructor is completed, `GetThreadStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d0006-116">要求</span><span class="sxs-lookup"><span data-stu-id="d0006-116">Requirements</span></span>  
- <span data-ttu-id="d0006-117">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d0006-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d0a64-116">要求</span><span class="sxs-lookup"><span data-stu-id="d0a64-116">Requirements</span></span>  
+ <span data-ttu-id="d0a64-117">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d0a64-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d0006-118">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d0006-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d0a64-118">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d0a64-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="d0006-119">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d0006-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d0a64-119">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d0a64-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d0006-120">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d0006-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d0a64-120">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d0a64-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d0006-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="d0006-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0a64-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="d0a64-121">See also</span></span>
 
-- [<span data-ttu-id="d0006-122">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="d0006-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="d0006-123">ICorProfilerInfo2 接口</span><span class="sxs-lookup"><span data-stu-id="d0006-123">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="d0a64-122">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="d0a64-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="d0a64-123">ICorProfilerInfo2 接口</span><span class="sxs-lookup"><span data-stu-id="d0a64-123">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

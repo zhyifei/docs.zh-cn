@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: dbb21e67-712b-49e7-a27c-a1e73ffd46c5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cf9f6cc1e568463f2ca9afa38c10f50d0c247013
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a8c5dd263401002deaee3d21f1e41b41a29faec2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755352"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427294"
 ---
-# <a name="imetadataimport2getgenericparamprops-method"></a><span data-ttu-id="706b7-102">IMetaDataImport2::GetGenericParamProps 方法</span><span class="sxs-lookup"><span data-stu-id="706b7-102">IMetaDataImport2::GetGenericParamProps Method</span></span>
-<span data-ttu-id="706b7-103">获取与指定的标记表示的泛型参数相关联的元数据。</span><span class="sxs-lookup"><span data-stu-id="706b7-103">Gets the metadata associated with the generic parameter represented by the specified token.</span></span>  
+# <a name="imetadataimport2getgenericparamprops-method"></a><span data-ttu-id="c344e-102">IMetaDataImport2::GetGenericParamProps 方法</span><span class="sxs-lookup"><span data-stu-id="c344e-102">IMetaDataImport2::GetGenericParamProps Method</span></span>
+<span data-ttu-id="c344e-103">Gets the metadata associated with the generic parameter represented by the specified token.</span><span class="sxs-lookup"><span data-stu-id="c344e-103">Gets the metadata associated with the generic parameter represented by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="706b7-104">语法</span><span class="sxs-lookup"><span data-stu-id="706b7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c344e-104">语法</span><span class="sxs-lookup"><span data-stu-id="c344e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetGenericParamProps (  
@@ -42,41 +40,41 @@ HRESULT GetGenericParamProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="706b7-105">参数</span><span class="sxs-lookup"><span data-stu-id="706b7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c344e-105">参数</span><span class="sxs-lookup"><span data-stu-id="c344e-105">Parameters</span></span>  
  `gp`  
- <span data-ttu-id="706b7-106">[in]表示要为其返回的元数据的泛型参数的标记。</span><span class="sxs-lookup"><span data-stu-id="706b7-106">[in] The token that represents the generic parameter for which to return metadata.</span></span>  
+ <span data-ttu-id="c344e-106">[in] The token that represents the generic parameter for which to return metadata.</span><span class="sxs-lookup"><span data-stu-id="c344e-106">[in] The token that represents the generic parameter for which to return metadata.</span></span>  
   
  `pulParamSeq`  
- <span data-ttu-id="706b7-107">[out]序号位置`Type`父构造函数或方法中的参数。</span><span class="sxs-lookup"><span data-stu-id="706b7-107">[out] The ordinal position of the `Type` parameter in the parent constructor or method.</span></span>  
+ <span data-ttu-id="c344e-107">[out] The ordinal position of the `Type` parameter in the parent constructor or method.</span><span class="sxs-lookup"><span data-stu-id="c344e-107">[out] The ordinal position of the `Type` parameter in the parent constructor or method.</span></span>  
   
  `pdwParamFlags`  
- <span data-ttu-id="706b7-108">[out]值为[CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)枚举，用于描述`Type`泛型形参。</span><span class="sxs-lookup"><span data-stu-id="706b7-108">[out] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the `Type` for the generic parameter.</span></span>  
+ <span data-ttu-id="c344e-108">[out] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the `Type` for the generic parameter.</span><span class="sxs-lookup"><span data-stu-id="c344e-108">[out] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the `Type` for the generic parameter.</span></span>  
   
  `ptOwner`  
- <span data-ttu-id="706b7-109">[out]TypeDef 或 MethodDef 标记表示的参数的所有者。</span><span class="sxs-lookup"><span data-stu-id="706b7-109">[out] A TypeDef or MethodDef token that represents the owner of the parameter.</span></span>  
+ <span data-ttu-id="c344e-109">[out] A TypeDef or MethodDef token that represents the owner of the parameter.</span><span class="sxs-lookup"><span data-stu-id="c344e-109">[out] A TypeDef or MethodDef token that represents the owner of the parameter.</span></span>  
   
  `reserved`  
- <span data-ttu-id="706b7-110">[out]保留供将来的扩展。</span><span class="sxs-lookup"><span data-stu-id="706b7-110">[out] Reserved for future extensibility.</span></span>  
+ <span data-ttu-id="c344e-110">[out] Reserved for future extensibility.</span><span class="sxs-lookup"><span data-stu-id="c344e-110">[out] Reserved for future extensibility.</span></span>  
   
  `wzName`  
- <span data-ttu-id="706b7-111">[out]泛型参数的名称。</span><span class="sxs-lookup"><span data-stu-id="706b7-111">[out] The name of the generic parameter.</span></span>  
+ <span data-ttu-id="c344e-111">[out] The name of the generic parameter.</span><span class="sxs-lookup"><span data-stu-id="c344e-111">[out] The name of the generic parameter.</span></span>  
   
  `cchName`  
- <span data-ttu-id="706b7-112">[in]大小`wzName`缓冲区。</span><span class="sxs-lookup"><span data-stu-id="706b7-112">[in] The size of the `wzName` buffer.</span></span>  
+ <span data-ttu-id="c344e-112">[in] The size of the `wzName` buffer.</span><span class="sxs-lookup"><span data-stu-id="c344e-112">[in] The size of the `wzName` buffer.</span></span>  
   
  `pchName`  
- <span data-ttu-id="706b7-113">[out]该名称，以宽字符为单位返回的大小。</span><span class="sxs-lookup"><span data-stu-id="706b7-113">[out] The returned size of the name, in wide characters.</span></span>  
+ <span data-ttu-id="c344e-113">[out] The returned size of the name, in wide characters.</span><span class="sxs-lookup"><span data-stu-id="c344e-113">[out] The returned size of the name, in wide characters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="706b7-114">要求</span><span class="sxs-lookup"><span data-stu-id="706b7-114">Requirements</span></span>  
- <span data-ttu-id="706b7-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="706b7-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c344e-114">要求</span><span class="sxs-lookup"><span data-stu-id="c344e-114">Requirements</span></span>  
+ <span data-ttu-id="c344e-115">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c344e-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="706b7-116">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="706b7-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c344e-116">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c344e-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="706b7-117">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="706b7-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c344e-117">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c344e-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="706b7-118">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="706b7-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c344e-118">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c344e-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="706b7-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="706b7-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c344e-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="c344e-119">See also</span></span>
 
-- [<span data-ttu-id="706b7-120">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="706b7-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [<span data-ttu-id="706b7-121">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="706b7-121">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="c344e-120">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="c344e-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="c344e-121">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="c344e-121">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

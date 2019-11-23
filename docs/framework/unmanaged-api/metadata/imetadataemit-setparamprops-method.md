@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a95a3908-9f87-4084-937e-8e01ef03ad63
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f8448de17ad974bc77021a7880b7d8576c69ae75
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 813460aa027b259866b168d426fd28502b5c4465
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750911"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432494"
 ---
-# <a name="imetadataemitsetparamprops-method"></a><span data-ttu-id="92525-102">IMetaDataEmit::SetParamProps 方法</span><span class="sxs-lookup"><span data-stu-id="92525-102">IMetaDataEmit::SetParamProps Method</span></span>
-<span data-ttu-id="92525-103">设置或更改的调用之前已定义的方法参数的功能[imetadataemit:: Defineparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md)。</span><span class="sxs-lookup"><span data-stu-id="92525-103">Sets or changes features of a method parameter that was defined by a prior call to [IMetaDataEmit::DefineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).</span></span>  
+# <a name="imetadataemitsetparamprops-method"></a><span data-ttu-id="0945e-102">IMetaDataEmit::SetParamProps 方法</span><span class="sxs-lookup"><span data-stu-id="0945e-102">IMetaDataEmit::SetParamProps Method</span></span>
+<span data-ttu-id="0945e-103">Sets or changes features of a method parameter that was defined by a prior call to [IMetaDataEmit::DefineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).</span><span class="sxs-lookup"><span data-stu-id="0945e-103">Sets or changes features of a method parameter that was defined by a prior call to [IMetaDataEmit::DefineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="92525-104">语法</span><span class="sxs-lookup"><span data-stu-id="92525-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0945e-104">语法</span><span class="sxs-lookup"><span data-stu-id="0945e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetParamProps (   
@@ -40,35 +38,35 @@ HRESULT SetParamProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="92525-105">参数</span><span class="sxs-lookup"><span data-stu-id="92525-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0945e-105">参数</span><span class="sxs-lookup"><span data-stu-id="0945e-105">Parameters</span></span>  
  `pd`  
- <span data-ttu-id="92525-106">[in]目标参数的标记。</span><span class="sxs-lookup"><span data-stu-id="92525-106">[in] The token for the target parameter.</span></span>  
+ <span data-ttu-id="0945e-106">[in] The token for the target parameter.</span><span class="sxs-lookup"><span data-stu-id="0945e-106">[in] The token for the target parameter.</span></span>  
   
  `szName`  
- <span data-ttu-id="92525-107">[in]以 unicode 格式参数的名称。</span><span class="sxs-lookup"><span data-stu-id="92525-107">[in] The name of the parameter in Unicode.</span></span>  
+ <span data-ttu-id="0945e-107">[in] The name of the parameter in Unicode.</span><span class="sxs-lookup"><span data-stu-id="0945e-107">[in] The name of the parameter in Unicode.</span></span>  
   
  `dwParamFlags`  
- <span data-ttu-id="92525-108">[in]参数的标志。</span><span class="sxs-lookup"><span data-stu-id="92525-108">[in] The flags for the parameter.</span></span>  
+ <span data-ttu-id="0945e-108">[in] The flags for the parameter.</span><span class="sxs-lookup"><span data-stu-id="0945e-108">[in] The flags for the parameter.</span></span>  
   
  `dwCPlusTypeFlag`  
- <span data-ttu-id="92525-109">[in]ELEMENT_TYPE_ \* 的常量值。</span><span class="sxs-lookup"><span data-stu-id="92525-109">[in] The ELEMENT_TYPE_\* for the constant value.</span></span>  
+ <span data-ttu-id="0945e-109">[in] The ELEMENT_TYPE_\* for the constant value.</span><span class="sxs-lookup"><span data-stu-id="0945e-109">[in] The ELEMENT_TYPE_\* for the constant value.</span></span>  
   
  `pValue`  
- <span data-ttu-id="92525-110">[in]参数的常量值。</span><span class="sxs-lookup"><span data-stu-id="92525-110">[in] The constant value for the parameter.</span></span>  
+ <span data-ttu-id="0945e-110">[in] The constant value for the parameter.</span><span class="sxs-lookup"><span data-stu-id="0945e-110">[in] The constant value for the parameter.</span></span>  
   
  `cchValue`  
- <span data-ttu-id="92525-111">[in] (Unicode) 字符中的大小`pValue`。</span><span class="sxs-lookup"><span data-stu-id="92525-111">[in] The size in (Unicode) characters of `pValue`.</span></span>  
+ <span data-ttu-id="0945e-111">[in] The size in (Unicode) characters of `pValue`.</span><span class="sxs-lookup"><span data-stu-id="0945e-111">[in] The size in (Unicode) characters of `pValue`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="92525-112">要求</span><span class="sxs-lookup"><span data-stu-id="92525-112">Requirements</span></span>  
- <span data-ttu-id="92525-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="92525-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0945e-112">要求</span><span class="sxs-lookup"><span data-stu-id="0945e-112">Requirements</span></span>  
+ <span data-ttu-id="0945e-113">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0945e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="92525-114">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="92525-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0945e-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0945e-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="92525-115">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="92525-115">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="0945e-115">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0945e-115">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="92525-116">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="92525-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0945e-116">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0945e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="92525-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="92525-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0945e-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="0945e-117">See also</span></span>
 
-- [<span data-ttu-id="92525-118">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="92525-118">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="92525-119">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="92525-119">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="0945e-118">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="0945e-118">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="0945e-119">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="0945e-119">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

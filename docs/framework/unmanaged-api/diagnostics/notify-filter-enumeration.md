@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 4789d08f-8683-45d3-ac30-73d48c61e470
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 09c36dd65c8a4202f13d362668f74cd9a362e35a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 92e40dbe8892d48dba1c54d9cd16faa409440b24
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744366"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438117"
 ---
-# <a name="notifyfilter-enumeration"></a><span data-ttu-id="e9f82-102">NOTIFY_FILTER 枚举</span><span class="sxs-lookup"><span data-stu-id="e9f82-102">NOTIFY_FILTER Enumeration</span></span>
-<span data-ttu-id="e9f82-103">标识调试器函数的回调。</span><span class="sxs-lookup"><span data-stu-id="e9f82-103">Identifies callbacks for debugger functions.</span></span> <span data-ttu-id="e9f82-104">有关详细信息，请参阅[INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="e9f82-104">For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.</span></span>  
+# <a name="notify_filter-enumeration"></a><span data-ttu-id="475a3-102">NOTIFY_FILTER 枚举</span><span class="sxs-lookup"><span data-stu-id="475a3-102">NOTIFY_FILTER Enumeration</span></span>
+<span data-ttu-id="475a3-103">Identifies callbacks for debugger functions.</span><span class="sxs-lookup"><span data-stu-id="475a3-103">Identifies callbacks for debugger functions.</span></span> <span data-ttu-id="475a3-104">For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="475a3-104">For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e9f82-105">语法</span><span class="sxs-lookup"><span data-stu-id="e9f82-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="475a3-105">语法</span><span class="sxs-lookup"><span data-stu-id="475a3-105">Syntax</span></span>  
   
 ```cpp  
 enum tagNOTIFY_FILTER  
@@ -41,21 +39,21 @@ enum tagNOTIFY_FILTER
 };  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e9f82-106">成员</span><span class="sxs-lookup"><span data-stu-id="e9f82-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="475a3-106">Members</span><span class="sxs-lookup"><span data-stu-id="475a3-106">Members</span></span>  
   
-|<span data-ttu-id="e9f82-107">成员</span><span class="sxs-lookup"><span data-stu-id="e9f82-107">Member</span></span>|<span data-ttu-id="e9f82-108">描述</span><span class="sxs-lookup"><span data-stu-id="e9f82-108">Description</span></span>|  
+|<span data-ttu-id="475a3-107">成员</span><span class="sxs-lookup"><span data-stu-id="475a3-107">Member</span></span>|<span data-ttu-id="475a3-108">描述</span><span class="sxs-lookup"><span data-stu-id="475a3-108">Description</span></span>|  
 |------------|-----------------|  
-|`NOTIFY_FILTER_ONSYNCCALLOUT`|<span data-ttu-id="e9f82-109">指示[INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)方法调用。</span><span class="sxs-lookup"><span data-stu-id="e9f82-109">Indicates that the [INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) method should be invoked.</span></span>|  
-|`NOTIFY_FILTER_ONSYNCCALLENTER`|<span data-ttu-id="e9f82-110">指示[INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)方法调用。</span><span class="sxs-lookup"><span data-stu-id="e9f82-110">Indicates that the [INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) method should be invoked.</span></span>|  
-|`NOTIFY_FILTER_ONSYNCCALLEXIT`|<span data-ttu-id="e9f82-111">指示[INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)方法调用。</span><span class="sxs-lookup"><span data-stu-id="e9f82-111">Indicates that the [INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) method should be invoked.</span></span>|  
-|`NOTIFY_FILTER_ONSYNCCALLRETURN`|<span data-ttu-id="e9f82-112">指示[INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)方法调用。</span><span class="sxs-lookup"><span data-stu-id="e9f82-112">Indicates that the [INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) method should be invoked.</span></span>|  
-|`NOTIFY_FILTER_ALLSYNC`|<span data-ttu-id="e9f82-113">表示将所有[INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)不应调用方法。</span><span class="sxs-lookup"><span data-stu-id="e9f82-113">Indicates that all of the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) methods should be invoked.</span></span>|  
-|`NOTIFY_FILTER_ALL`|<span data-ttu-id="e9f82-114">激活现有和将来的所有通知。</span><span class="sxs-lookup"><span data-stu-id="e9f82-114">Activates all existing and future notifications.</span></span>|  
-|`NOTIFY_FILTER_NONE`|<span data-ttu-id="e9f82-115">指示应调用没有通知方法。</span><span class="sxs-lookup"><span data-stu-id="e9f82-115">Indicates that no notification methods should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ONSYNCCALLOUT`|<span data-ttu-id="475a3-109">Indicates that the [INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) method should be invoked.</span><span class="sxs-lookup"><span data-stu-id="475a3-109">Indicates that the [INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) method should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ONSYNCCALLENTER`|<span data-ttu-id="475a3-110">Indicates that the [INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) method should be invoked.</span><span class="sxs-lookup"><span data-stu-id="475a3-110">Indicates that the [INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) method should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ONSYNCCALLEXIT`|<span data-ttu-id="475a3-111">Indicates that the [INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) method should be invoked.</span><span class="sxs-lookup"><span data-stu-id="475a3-111">Indicates that the [INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) method should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ONSYNCCALLRETURN`|<span data-ttu-id="475a3-112">Indicates that the [INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) method should be invoked.</span><span class="sxs-lookup"><span data-stu-id="475a3-112">Indicates that the [INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) method should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ALLSYNC`|<span data-ttu-id="475a3-113">Indicates that all of the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) methods should be invoked.</span><span class="sxs-lookup"><span data-stu-id="475a3-113">Indicates that all of the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) methods should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ALL`|<span data-ttu-id="475a3-114">Activates all existing and future notifications.</span><span class="sxs-lookup"><span data-stu-id="475a3-114">Activates all existing and future notifications.</span></span>|  
+|`NOTIFY_FILTER_NONE`|<span data-ttu-id="475a3-115">Indicates that no notification methods should be invoked.</span><span class="sxs-lookup"><span data-stu-id="475a3-115">Indicates that no notification methods should be invoked.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="e9f82-116">要求</span><span class="sxs-lookup"><span data-stu-id="e9f82-116">Requirements</span></span>  
- <span data-ttu-id="e9f82-117">**标头：** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="e9f82-117">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="475a3-116">要求</span><span class="sxs-lookup"><span data-stu-id="475a3-116">Requirements</span></span>  
+ <span data-ttu-id="475a3-117">**Header:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="475a3-117">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e9f82-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="e9f82-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="475a3-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="475a3-118">See also</span></span>
 
-- [<span data-ttu-id="e9f82-119">诊断符号存储区枚举</span><span class="sxs-lookup"><span data-stu-id="e9f82-119">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+- [<span data-ttu-id="475a3-119">诊断符号存储区枚举</span><span class="sxs-lookup"><span data-stu-id="475a3-119">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
