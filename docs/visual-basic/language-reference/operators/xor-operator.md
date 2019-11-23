@@ -1,5 +1,5 @@
 ---
-title: 异或运算符 (Visual Basic)
+title: 异或运算符
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Xor
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Xor keyword [Visual Basic]
 - bitwise comparison [Visual Basic]
 ms.assetid: 036000a9-3934-4e7f-a9d0-a816de3d84a6
-ms.openlocfilehash: d82018a3018e2cf4362b9904ed127c20f56f6f0c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
-ms.translationtype: HT
+ms.openlocfilehash: c5c7ec87bc173f724f8c670395bc3b0458444df6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701273"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335408"
 ---
 # <a name="xor-operator-visual-basic"></a>异或运算符 (Visual Basic)
-对两个 `Boolean` 表达式执行逻辑异运算，或对两个数值表达式执行位异运算。  
+Performs a logical exclusion on two `Boolean` expressions, or a bitwise exclusion on two numeric expressions.  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,18 +32,18 @@ result = expression1 Xor expression2
   
 ## <a name="parts"></a>部件  
  `result`  
- 必需。 任何 `Boolean` 或数值变量。 对于布尔值比较，`result` 是两个 `Boolean` 值的逻辑异运算（互斥逻辑析取）。 对于按位运算，`result` 是表示两个数值位模式的按位异运算（互斥按位析取）的数字值。  
+ 必须的。 Any `Boolean` or numeric variable. For Boolean comparison, `result` is the logical exclusion (exclusive logical disjunction) of two `Boolean` values. For bitwise operations, `result` is a numeric value that represents the bitwise exclusion (exclusive bitwise disjunction) of two numeric bit patterns.  
   
  `expression1`  
- 必需。 任何 `Boolean` 或数值表达式。  
+ 必须的。 Any `Boolean` or numeric expression.  
   
  `expression2`  
- 必需。 任何 `Boolean` 或数值表达式。  
+ 必须的。 Any `Boolean` or numeric expression.  
   
 ## <a name="remarks"></a>备注  
- 对于布尔值比较，当且仅当 `expression1` 和 `expression2` 的值都为 `True`时，才 `True` `result`。 即，当且仅当 `expression1` 和 `expression2` 的计算结果为相反 `Boolean` 值时。 下表说明了如何确定 `result`。  
+ For Boolean comparison, `result` is `True` if and only if exactly one of `expression1` and `expression2` evaluates to `True`. That is, if and only if `expression1` and `expression2` evaluate to opposite `Boolean` values. The following table illustrates how `result` is determined.  
   
-|如果 `expression1` 为|并且 `expression2` 为|`result` 的值是|  
+|If `expression1` is|And `expression2` is|The value of `result` is|  
 |-------------------------|--------------------------|------------------------------|  
 |`True`|`True`|`False`|  
 |`True`|`False`|`True`|  
@@ -51,11 +51,11 @@ result = expression1 Xor expression2
 |`False`|`False`|`False`|  
   
 > [!NOTE]
-> 在布尔比较中，`Xor` 运算符始终计算两个表达式，这可能包括进行过程调用。 `Xor`没有短路，因为结果总是依赖于这两个操作数。 对于*短路*逻辑运算符，请参阅[AndAlso Operator](../../../visual-basic/language-reference/operators/andalso-operator.md) and [OrElse 运算符](../../../visual-basic/language-reference/operators/orelse-operator.md)。  
+> In a Boolean comparison, the `Xor` operator always evaluates both expressions, which could include making procedure calls. There is no short-circuiting counterpart to `Xor`, because the result always depends on both operands. For *short-circuiting* logical operators, see [AndAlso Operator](../../../visual-basic/language-reference/operators/andalso-operator.md) and [OrElse Operator](../../../visual-basic/language-reference/operators/orelse-operator.md).  
   
- 对于按位运算，`Xor` 运算符对两个数值表达式中的相同位置执行按位比较，并根据下表设置 `result` 中的相应位。  
+ For bitwise operations, the `Xor` operator performs a bitwise comparison of identically positioned bits in two numeric expressions and sets the corresponding bit in `result` according to the following table.  
   
-|如果 `expression1` 中有位|`expression2` 中的位是|`result` 中的位是|  
+|If bit in `expression1` is|And bit in `expression2` is|The bit in `result` is|  
 |--------------------------------|---------------------------------|----------------------------|  
 |1|1|0|  
 |1|0|1|  
@@ -63,35 +63,35 @@ result = expression1 Xor expression2
 |0|0|0|  
   
 > [!NOTE]
-> 由于逻辑 and 位运算符的优先级低于其他算术运算符和关系运算符，因此应将任何按位运算括在括号中，以确保准确执行。  
+> Since the logical and bitwise operators have a lower precedence than other arithmetic and relational operators, any bitwise operations should be enclosed in parentheses to ensure accurate execution.  
   
- 例如，5 `Xor` 3 为6。 若要查看此操作的原因，请将5和3转换为其二进制表示形式101和011。 然后，使用上表来确定 101 Xor 011 为110，这是十进制数字6的二进制表示形式。  
+ For example, 5 `Xor` 3 is 6. To see why this is so, convert 5 and 3 to their binary representations, 101 and 011. Then use the previous table to determine that 101 Xor 011 is 110, which is the binary representation of the decimal number 6.  
   
 ## <a name="data-types"></a>数据类型  
- 如果操作数由一个 `Boolean` 表达式和一个数值表达式组成，则 Visual Basic 会将 `Boolean` 表达式转换为数值（对于 `True` 为–1，对于 `False`为0）并执行按位运算。  
+ If the operands consist of one `Boolean` expression and one numeric expression, Visual Basic converts the `Boolean` expression to a numeric value (–1 for `True` and 0 for `False`) and performs a bitwise operation.  
   
- 对于 `Boolean` 比较，将 `Boolean`结果的数据类型。 对于按位比较，结果数据类型是一种适合 `expression1` 和 `expression2`的数据类型的数值类型。 请参阅[运算符结果的数据类型](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)中的 "关系和按位比较" 表。  
+ For a `Boolean` comparison, the data type of the result is `Boolean`. For a bitwise comparison, the result data type is a numeric type appropriate for the data types of `expression1` and `expression2`. See the "Relational and Bitwise Comparisons" table in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
   
 ## <a name="overloading"></a>重载  
- 可以*重载*`Xor` 运算符，这意味着当操作数具有该类或结构的类型时，该类或结构可以重新定义其行为。 如果代码对这样的类或结构使用此运算符，请确保了解其重新定义的行为。 有关更多信息，请参见 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ The `Xor` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, make sure you understand its redefined behavior. 有关更多信息，请参见 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用 `Xor` 运算符对两个表达式执行逻辑异运算（互斥逻辑析取）。 结果是一个 `Boolean` 值，该值表示是否确实 `True`其中一个表达式。  
+ The following example uses the `Xor` operator to perform logical exclusion (exclusive logical disjunction) on two expressions. The result is a `Boolean` value that represents whether exactly one of the expressions is `True`.  
   
  [!code-vb[VbVbalrOperators#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#40)]  
   
- 前面的示例分别产生 `False`、`True`和 `False`的结果。  
+ The previous example produces results of `False`, `True`, and `False`, respectively.  
   
 ## <a name="example"></a>示例  
- 下面的示例使用 `Xor` 运算符对两个数值表达式的各个位执行逻辑异运算（互斥逻辑析取）。 如果操作数中的相应位中正好有一个设置为1，则结果模式中的位将设置为1。  
+ The following example uses the `Xor` operator to perform logical exclusion (exclusive logical disjunction) on the individual bits of two numeric expressions. The bit in the result pattern is set if exactly one of the corresponding bits in the operands is set to 1.  
   
  [!code-vb[VbVbalrOperators#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#41)]  
   
- 前面的示例分别产生2、12和14的结果。  
+ The previous example produces results of 2, 12, and 14, respectively.  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-- [逻辑/按位运算符（Visual Basic）](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Logical/Bitwise Operators (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Visual Basic 中的逻辑运算符和位运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

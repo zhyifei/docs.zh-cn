@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f768242bffe619051779f87e950138ae9fcec6c
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
-ms.translationtype: HT
+ms.openlocfilehash: 37f5543ceaca83a024132c5d010b6d969876454f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353182"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353829"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>如何：创建 GenericPrincipal 和 GenericIdentity 对象
 
-可以将 <xref:System.Security.Principal.GenericIdentity> 类与 <xref:System.Security.Principal.GenericPrincipal> 类结合使用，以创建独立于 Windows 域的授权方案。
+You can use the <xref:System.Security.Principal.GenericIdentity> class in conjunction with the <xref:System.Security.Principal.GenericPrincipal> class to create an authorization scheme that exists independent of a Windows domain.
 
 ### <a name="to-create-a-genericprincipal-object"></a>创建 GenericPrincipal 对象
 
@@ -48,7 +48,7 @@ ms.locfileid: "71353182"
     GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);
     ```
 
-3. 使用以下代码将主体附加到当前线程中。 这在以下情况下很有用：必须验证主体多次，必须由应用程序中运行的其他代码验证，或者必须由 <xref:System.Security.Permissions.PrincipalPermission> 对象验证。 不将主体附加到线程中，仍可对主体对象执行基于角色的验证。 有关详细信息，请参阅[替换主体对象](../../../docs/standard/security/replacing-a-principal-object.md)。
+3. 使用以下代码将主体附加到当前线程中。 This is valuable in situations where the principal must be validated several times, it must be validated by other code running in your application, or it must be validated by a <xref:System.Security.Permissions.PrincipalPermission> object. 不将主体附加到线程中，仍可对主体对象执行基于角色的验证。 有关详细信息，请参阅[替换主体对象](../../../docs/standard/security/replacing-a-principal-object.md)。
 
     ```vb
     Thread.CurrentPrincipal = myPrincipal
@@ -63,7 +63,6 @@ ms.locfileid: "71353182"
 下面的代码示例说明如何创建 **GenericPrincipal** 和 **GenericIdentity** 的实例。 此代码将这些对象的值显示到控制台中。
 
 ```vb
-Imports System
 Imports System.Security.Principal
 Imports System.Threading
 
@@ -142,7 +141,7 @@ The IsAuthenticated is: True
 Is this a Manager? True
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Security.Principal.GenericIdentity>
 - <xref:System.Security.Principal.GenericPrincipal>

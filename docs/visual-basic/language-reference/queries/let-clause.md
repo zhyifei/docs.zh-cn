@@ -1,5 +1,5 @@
 ---
-title: Let 子句 (Visual Basic)
+title: Let 子句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryLet
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: 88166a040823cfefe623f672e556c364d652a7fc
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: HT
+ms.openlocfilehash: 63eaf97016db259870eb77199651ecbdc5f809c7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004725"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350438"
 ---
 # <a name="let-clause-visual-basic"></a>Let 子句 (Visual Basic)
-计算值并将其分配给查询中的新变量。  
+Computes a value and assigns it to a new variable within the query.  
   
 ## <a name="syntax"></a>语法  
   
@@ -26,22 +26,22 @@ Let variable = expression [, ...]
   
 ## <a name="parts"></a>部件  
   
-|术语|Definition|  
+|术语|定义|  
 |---|---|  
-|`variable`|必需。 可用于引用所提供表达式的结果的别名。|  
-|`expression`|必需。 将进行计算并分配给指定变量的表达式。|  
+|`variable`|必须的。 An alias that can be used to reference the results of the supplied expression.|  
+|`expression`|必须的。 An expression that will be evaluated and assigned to the specified variable.|  
   
 ## <a name="remarks"></a>备注  
- 使用 `Let` 子句可以计算每个查询结果的值，并使用别名引用这些值。 别名可用于其他子句，如 `Where` 子句。 使用 `Let` 子句可以创建更易于阅读的查询语句，因为您可以为查询中包含的 expression 子句指定一个别名，并在每次使用 expression 子句时替换该别名。  
+ The `Let` clause enables you to compute values for each query result and reference them by using an alias. The alias can be used in other clauses, such as the `Where` clause. The `Let` clause enables you to create a query statement that is easier to read because you can specify an alias for an expression clause included in the query and substitute the alias each time the expression clause is used.  
   
- 可在 `Let` 子句中包含任意数量的 `variable` 和 `expression` 分配。 使用逗号（，）分隔每个赋值。  
+ You can include any number of `variable` and `expression` assignments in the `Let` clause. Separate each assignment with a comma (,).  
   
 ## <a name="example"></a>示例  
- 下面的代码示例使用 `Let` 子句来计算产品10% 的折扣。  
+ The following code example uses the `Let` clause to compute a 10 percent discount on products.  
   
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [查询](../../../visual-basic/language-reference/queries/index.md)

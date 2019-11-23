@@ -1,5 +1,5 @@
 ---
-title: Take 子句 (Visual Basic)
+title: Take 子句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryTake
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-ms.openlocfilehash: 32a4c7fd7f1e2f6fe640f3f53f15579f014759d5
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: HT
+ms.openlocfilehash: 3082954ef84560ccb70f7a47cd3532f622829392
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004717"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349635"
 ---
 # <a name="take-clause-visual-basic"></a>Take 子句 (Visual Basic)
 从集合的开头返回指定数量的连续元素。  
@@ -26,23 +26,23 @@ Take count
   
 ## <a name="parts"></a>部件  
  `count`  
- 必需。 值或计算结果为要返回的序列的元素数的表达式。  
+ 必须的。 A value or an expression that evaluates to the number of elements of the sequence to return.  
   
 ## <a name="remarks"></a>备注  
- `Take` 子句使查询包括从结果列表的开头开始的指定数量的连续元素。 要包括的元素数由 `count` 参数指定。  
+ The `Take` clause causes a query to include a specified number of contiguous elements from the start of a results list. The number of elements to include is specified by the `count` parameter.  
   
- 可以将 `Take` 子句与 `Skip` 子句一起使用，以从查询的任何段返回数据范围。 为此，请将范围中第一个元素的索引传递到 `Skip` 子句，并将范围的大小传递到 `Take` 子句。 在这种情况下，必须在 `Skip` 子句之后指定 `Take` 子句。  
+ You can use the `Take` clause with the `Skip` clause to return a range of data from any segment of a query. To do this, pass the index of the first element of the range to the `Skip` clause and the size of the range to the `Take` clause. In this case, the `Take` clause must be specified after the `Skip` clause.  
   
- 在查询中使用 `Take` 子句时，您可能还需要确保按使 `Take` 子句包含预期结果的顺序返回结果。 有关对查询结果进行排序的详细信息，请参阅[Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)。  
+ When you use the `Take` clause in a query, you may also need to ensure that the results are returned in an order that will enable the `Take` clause to include the intended results. For more information about ordering query results, see [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- 您可以使用 `TakeWhile` 子句来指定仅返回某些元素，具体取决于所提供的条件。  
+ You can use the `TakeWhile` clause to specify that only certain elements be returned, depending on a supplied condition.  
   
 ## <a name="example"></a>示例  
- 下面的代码示例将 `Take` 子句与 `Skip` 子句一起使用，以便在页中从查询返回数据。 GetCustomers 函数使用 `Skip` 子句跳过列表中的客户，直至提供的起始索引值，并使用 `Take` 子句返回从该索引值开始的客户的页面。  
+ The following code example uses the `Take` clause together with the `Skip` clause to return data from a query in pages. The GetCustomers function uses the `Skip` clause to bypass the customers in the list until the supplied starting index value, and uses the `Take` clause to return a page of customers starting from that index value.  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [查询](../../../visual-basic/language-reference/queries/index.md)
