@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3b039e50-63ec-4730-99ff-2327408de477
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 271ecd7e757340becccb7bf52362487a2b277299
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 506e13ad956a01b16e36d8c71737fe0efce4c01b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737192"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450317"
 ---
-# <a name="imetadataemitseteventprops-method"></a><span data-ttu-id="129dd-102">IMetaDataEmit::SetEventProps 方法</span><span class="sxs-lookup"><span data-stu-id="129dd-102">IMetaDataEmit::SetEventProps Method</span></span>
-<span data-ttu-id="129dd-103">设置或更新的定义通过以前调用的事件指定的功能[imetadataemit:: Defineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)。</span><span class="sxs-lookup"><span data-stu-id="129dd-103">Sets or updates the specified feature of an event defined by a prior call to [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).</span></span>  
+# <a name="imetadataemitseteventprops-method"></a><span data-ttu-id="24dc5-102">IMetaDataEmit::SetEventProps 方法</span><span class="sxs-lookup"><span data-stu-id="24dc5-102">IMetaDataEmit::SetEventProps Method</span></span>
+<span data-ttu-id="24dc5-103">Sets or updates the specified feature of an event defined by a prior call to [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).</span><span class="sxs-lookup"><span data-stu-id="24dc5-103">Sets or updates the specified feature of an event defined by a prior call to [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="129dd-104">语法</span><span class="sxs-lookup"><span data-stu-id="129dd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="24dc5-104">语法</span><span class="sxs-lookup"><span data-stu-id="24dc5-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetEventProps (  
@@ -41,38 +39,38 @@ HRESULT SetEventProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="129dd-105">参数</span><span class="sxs-lookup"><span data-stu-id="129dd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="24dc5-105">参数</span><span class="sxs-lookup"><span data-stu-id="24dc5-105">Parameters</span></span>  
  `ev`  
- <span data-ttu-id="129dd-106">[in]事件标记中。</span><span class="sxs-lookup"><span data-stu-id="129dd-106">[in] The event token.</span></span>  
+ <span data-ttu-id="24dc5-106">[in] The event token.</span><span class="sxs-lookup"><span data-stu-id="24dc5-106">[in] The event token.</span></span>  
   
  `dwEventFlags`  
- <span data-ttu-id="129dd-107">[in]事件的标志。</span><span class="sxs-lookup"><span data-stu-id="129dd-107">[in] Event flags.</span></span> <span data-ttu-id="129dd-108">这是一个位掩码的`CorEventAttr`值。</span><span class="sxs-lookup"><span data-stu-id="129dd-108">This is a bitmask of `CorEventAttr` values.</span></span>  
+ <span data-ttu-id="24dc5-107">[in] Event flags.</span><span class="sxs-lookup"><span data-stu-id="24dc5-107">[in] Event flags.</span></span> <span data-ttu-id="24dc5-108">This is a bitmask of `CorEventAttr` values.</span><span class="sxs-lookup"><span data-stu-id="24dc5-108">This is a bitmask of `CorEventAttr` values.</span></span>  
   
  `tkEventType`  
- <span data-ttu-id="129dd-109">[in]事件类标记。</span><span class="sxs-lookup"><span data-stu-id="129dd-109">[in] The token for the event class.</span></span> <span data-ttu-id="129dd-110">这可以是`mdTypeDef`或`mdTypeRef`令牌。</span><span class="sxs-lookup"><span data-stu-id="129dd-110">This is either a `mdTypeDef` or a `mdTypeRef` token.</span></span>  
+ <span data-ttu-id="24dc5-109">[in] The token for the event class.</span><span class="sxs-lookup"><span data-stu-id="24dc5-109">[in] The token for the event class.</span></span> <span data-ttu-id="24dc5-110">This is either a `mdTypeDef` or a `mdTypeRef` token.</span><span class="sxs-lookup"><span data-stu-id="24dc5-110">This is either a `mdTypeDef` or a `mdTypeRef` token.</span></span>  
   
  `mdAddOn`  
- <span data-ttu-id="129dd-111">[in]用来订阅事件或为 null 的方法。</span><span class="sxs-lookup"><span data-stu-id="129dd-111">[in] The method used to subscribe to the event, or null.</span></span>  
+ <span data-ttu-id="24dc5-111">[in] The method used to subscribe to the event, or null.</span><span class="sxs-lookup"><span data-stu-id="24dc5-111">[in] The method used to subscribe to the event, or null.</span></span>  
   
  `mdRemoveOn`  
- <span data-ttu-id="129dd-112">[in]用于取消订阅事件，则为 null 的方法。</span><span class="sxs-lookup"><span data-stu-id="129dd-112">[in] The method used to unsubscribe to the event, or null.</span></span>  
+ <span data-ttu-id="24dc5-112">[in] The method used to unsubscribe to the event, or null.</span><span class="sxs-lookup"><span data-stu-id="24dc5-112">[in] The method used to unsubscribe to the event, or null.</span></span>  
   
  `mdFire`  
- <span data-ttu-id="129dd-113">[in]（由派生类） 用于引发事件的方法。</span><span class="sxs-lookup"><span data-stu-id="129dd-113">[in] The method used (by a derived class) to raise the event.</span></span>  
+ <span data-ttu-id="24dc5-113">[in] The method used (by a derived class) to raise the event.</span><span class="sxs-lookup"><span data-stu-id="24dc5-113">[in] The method used (by a derived class) to raise the event.</span></span>  
   
  `rmdOtherMethods[]`  
- <span data-ttu-id="129dd-114">[in]有关其他方法与事件关联的标记的数组。</span><span class="sxs-lookup"><span data-stu-id="129dd-114">[in] An array of tokens for other methods associated with the event.</span></span> <span data-ttu-id="129dd-115">数组的最后一个元素必须是`mdMethodDefNil`。</span><span class="sxs-lookup"><span data-stu-id="129dd-115">The last element of the array must be `mdMethodDefNil`.</span></span>  
+ <span data-ttu-id="24dc5-114">[in] An array of tokens for other methods associated with the event.</span><span class="sxs-lookup"><span data-stu-id="24dc5-114">[in] An array of tokens for other methods associated with the event.</span></span> <span data-ttu-id="24dc5-115">The last element of the array must be `mdMethodDefNil`.</span><span class="sxs-lookup"><span data-stu-id="24dc5-115">The last element of the array must be `mdMethodDefNil`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="129dd-116">要求</span><span class="sxs-lookup"><span data-stu-id="129dd-116">Requirements</span></span>  
- <span data-ttu-id="129dd-117">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="129dd-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="24dc5-116">要求</span><span class="sxs-lookup"><span data-stu-id="24dc5-116">Requirements</span></span>  
+ <span data-ttu-id="24dc5-117">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="24dc5-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="129dd-118">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="129dd-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="24dc5-118">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="24dc5-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="129dd-119">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="129dd-119">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="24dc5-119">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="24dc5-119">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="129dd-120">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="129dd-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="24dc5-120">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="24dc5-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="129dd-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="129dd-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="24dc5-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="24dc5-121">See also</span></span>
 
-- [<span data-ttu-id="129dd-122">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="129dd-122">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="129dd-123">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="129dd-123">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="24dc5-122">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="24dc5-122">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="24dc5-123">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="24dc5-123">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

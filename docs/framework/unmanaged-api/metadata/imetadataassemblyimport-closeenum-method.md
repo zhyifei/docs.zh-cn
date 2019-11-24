@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c9df4087-12b3-46d9-b075-9067dd7805df
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2b46d1f5fb797b74726070ae3cd9814dc46c8f03
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c037b9dce4b7530c952c75122f86335da82e1b27
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778332"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446028"
 ---
-# <a name="imetadataassemblyimportcloseenum-method"></a><span data-ttu-id="4ab24-102">IMetaDataAssemblyImport::CloseEnum 方法</span><span class="sxs-lookup"><span data-stu-id="4ab24-102">IMetaDataAssemblyImport::CloseEnum Method</span></span>
-<span data-ttu-id="4ab24-103">释放指定的枚举实例的引用。</span><span class="sxs-lookup"><span data-stu-id="4ab24-103">Releases a reference to the specified enumeration instance.</span></span>  
+# <a name="imetadataassemblyimportcloseenum-method"></a><span data-ttu-id="5a383-102">IMetaDataAssemblyImport::CloseEnum 方法</span><span class="sxs-lookup"><span data-stu-id="5a383-102">IMetaDataAssemblyImport::CloseEnum Method</span></span>
+<span data-ttu-id="5a383-103">Releases a reference to the specified enumeration instance.</span><span class="sxs-lookup"><span data-stu-id="5a383-103">Releases a reference to the specified enumeration instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4ab24-104">语法</span><span class="sxs-lookup"><span data-stu-id="4ab24-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5a383-104">语法</span><span class="sxs-lookup"><span data-stu-id="5a383-104">Syntax</span></span>  
   
 ```cpp  
 void CloseEnum (  
@@ -35,19 +33,19 @@ void CloseEnum (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4ab24-105">参数</span><span class="sxs-lookup"><span data-stu-id="4ab24-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5a383-105">参数</span><span class="sxs-lookup"><span data-stu-id="5a383-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="4ab24-106">[in]要关闭的枚举实例。</span><span class="sxs-lookup"><span data-stu-id="4ab24-106">[in] The enumeration instance to be closed.</span></span>  
+ <span data-ttu-id="5a383-106">[in] The enumeration instance to be closed.</span><span class="sxs-lookup"><span data-stu-id="5a383-106">[in] The enumeration instance to be closed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4ab24-107">要求</span><span class="sxs-lookup"><span data-stu-id="4ab24-107">Requirements</span></span>  
- <span data-ttu-id="4ab24-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4ab24-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5a383-107">要求</span><span class="sxs-lookup"><span data-stu-id="5a383-107">Requirements</span></span>  
+ <span data-ttu-id="5a383-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5a383-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4ab24-109">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="4ab24-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="5a383-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="5a383-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="4ab24-110">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="4ab24-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="5a383-110">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5a383-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="4ab24-111">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4ab24-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5a383-111">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5a383-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4ab24-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="4ab24-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5a383-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="5a383-112">See also</span></span>
 
-- [<span data-ttu-id="4ab24-113">IMetaDataAssemblyImport 接口</span><span class="sxs-lookup"><span data-stu-id="4ab24-113">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="5a383-113">IMetaDataAssemblyImport 接口</span><span class="sxs-lookup"><span data-stu-id="5a383-113">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

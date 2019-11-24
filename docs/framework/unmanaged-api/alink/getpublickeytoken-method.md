@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 4a16374c-94b0-47b0-9fed-88c2b0cdccd4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 158ecc036d56e2ad9a3fa650677c04ebcbfd7696
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2e7ed4e1529104db30b0b06665f74342d9ca9a01
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777228"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447241"
 ---
-# <a name="getpublickeytoken-method"></a><span data-ttu-id="b5e39-102">GetPublicKeyToken 方法</span><span class="sxs-lookup"><span data-stu-id="b5e39-102">GetPublicKeyToken Method</span></span>
-<span data-ttu-id="b5e39-103">检索给定 keyfile 或 key 容器的公钥标记。</span><span class="sxs-lookup"><span data-stu-id="b5e39-103">Retrieves the public key token for a given keyfile or key container.</span></span>  
+# <a name="getpublickeytoken-method"></a><span data-ttu-id="ceed5-102">GetPublicKeyToken 方法</span><span class="sxs-lookup"><span data-stu-id="ceed5-102">GetPublicKeyToken Method</span></span>
+<span data-ttu-id="ceed5-103">Retrieves the public key token for a given keyfile or key container.</span><span class="sxs-lookup"><span data-stu-id="ceed5-103">Retrieves the public key token for a given keyfile or key container.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b5e39-104">语法</span><span class="sxs-lookup"><span data-stu-id="b5e39-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ceed5-104">语法</span><span class="sxs-lookup"><span data-stu-id="ceed5-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetPublicKeyToken(  
@@ -37,27 +35,27 @@ HRESULT GetPublicKeyToken(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b5e39-105">参数</span><span class="sxs-lookup"><span data-stu-id="b5e39-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ceed5-105">参数</span><span class="sxs-lookup"><span data-stu-id="ceed5-105">Parameters</span></span>  
  `pszKeyFile`  
- <span data-ttu-id="b5e39-106">密钥的文件名。</span><span class="sxs-lookup"><span data-stu-id="b5e39-106">Filename of the key.</span></span>  
+ <span data-ttu-id="ceed5-106">Filename of the key.</span><span class="sxs-lookup"><span data-stu-id="ceed5-106">Filename of the key.</span></span>  
   
  `pszKeyContainer`  
- <span data-ttu-id="b5e39-107">密钥容器的名称。</span><span class="sxs-lookup"><span data-stu-id="b5e39-107">Name of the key container.</span></span>  
+ <span data-ttu-id="ceed5-107">Name of the key container.</span><span class="sxs-lookup"><span data-stu-id="ceed5-107">Name of the key container.</span></span>  
   
  `pvPublicKeyToken`  
- <span data-ttu-id="b5e39-108">要存储密钥标记的地址。</span><span class="sxs-lookup"><span data-stu-id="b5e39-108">Address where key token is to be stored.</span></span>  
+ <span data-ttu-id="ceed5-108">Address where key token is to be stored.</span><span class="sxs-lookup"><span data-stu-id="ceed5-108">Address where key token is to be stored.</span></span>  
   
  `pcbPublicKeyToken`  
- <span data-ttu-id="b5e39-109">指定指定的缓冲区`pvPublicKeyToken`的大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="b5e39-109">Specifies the size, in bytes, of the buffer indicated by `pvPublicKeyToken`.</span></span> <span data-ttu-id="b5e39-110">返回时，包含所使用的实际字节数。</span><span class="sxs-lookup"><span data-stu-id="b5e39-110">Upon return, contains actual number of bytes used.</span></span>  
+ <span data-ttu-id="ceed5-109">Specifies the size, in bytes, of the buffer indicated by `pvPublicKeyToken`.</span><span class="sxs-lookup"><span data-stu-id="ceed5-109">Specifies the size, in bytes, of the buffer indicated by `pvPublicKeyToken`.</span></span> <span data-ttu-id="ceed5-110">Upon return, contains actual number of bytes used.</span><span class="sxs-lookup"><span data-stu-id="ceed5-110">Upon return, contains actual number of bytes used.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b5e39-111">返回值</span><span class="sxs-lookup"><span data-stu-id="b5e39-111">Return Value</span></span>  
- <span data-ttu-id="b5e39-112">如果该方法成功，则返回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="b5e39-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ceed5-111">返回值</span><span class="sxs-lookup"><span data-stu-id="ceed5-111">Return Value</span></span>  
+ <span data-ttu-id="ceed5-112">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="ceed5-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b5e39-113">要求</span><span class="sxs-lookup"><span data-stu-id="b5e39-113">Requirements</span></span>  
- <span data-ttu-id="b5e39-114">需要 alink。</span><span class="sxs-lookup"><span data-stu-id="b5e39-114">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ceed5-113">要求</span><span class="sxs-lookup"><span data-stu-id="ceed5-113">Requirements</span></span>  
+ <span data-ttu-id="ceed5-114">Requires alink.h.</span><span class="sxs-lookup"><span data-stu-id="ceed5-114">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b5e39-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="b5e39-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ceed5-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="ceed5-115">See also</span></span>
 
-- [<span data-ttu-id="b5e39-116">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="b5e39-116">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="b5e39-117">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="b5e39-117">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="b5e39-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="b5e39-118">ALink API</span></span>](index.md)
+- [<span data-ttu-id="ceed5-116">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="ceed5-116">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="ceed5-117">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="ceed5-117">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="ceed5-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="ceed5-118">ALink API</span></span>](index.md)

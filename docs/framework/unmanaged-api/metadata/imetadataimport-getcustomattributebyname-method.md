@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 909aa530-2e3b-4d0a-a38a-a2750e535d7d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7bebf254110d9970ff3a99f948ff2e831ffb6b35
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bd7ba7ff10918e5953ea8ae89a60af3115af48a3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782437"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437682"
 ---
-# <a name="imetadataimportgetcustomattributebyname-method"></a><span data-ttu-id="03225-102">IMetaDataImport::GetCustomAttributeByName 方法</span><span class="sxs-lookup"><span data-stu-id="03225-102">IMetaDataImport::GetCustomAttributeByName Method</span></span>
-<span data-ttu-id="03225-103">获取自定义特性，在给定其名称和所有者。</span><span class="sxs-lookup"><span data-stu-id="03225-103">Gets the custom attribute, given its name and owner.</span></span>  
+# <a name="imetadataimportgetcustomattributebyname-method"></a><span data-ttu-id="8098f-102">IMetaDataImport::GetCustomAttributeByName 方法</span><span class="sxs-lookup"><span data-stu-id="8098f-102">IMetaDataImport::GetCustomAttributeByName Method</span></span>
+<span data-ttu-id="8098f-103">Gets the custom attribute, given its name and owner.</span><span class="sxs-lookup"><span data-stu-id="8098f-103">Gets the custom attribute, given its name and owner.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="03225-104">语法</span><span class="sxs-lookup"><span data-stu-id="03225-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8098f-104">语法</span><span class="sxs-lookup"><span data-stu-id="8098f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCustomAttributeByName (  
@@ -38,32 +36,32 @@ HRESULT GetCustomAttributeByName (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="03225-105">参数</span><span class="sxs-lookup"><span data-stu-id="03225-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8098f-105">参数</span><span class="sxs-lookup"><span data-stu-id="8098f-105">Parameters</span></span>  
  `tkObj`  
- <span data-ttu-id="03225-106">[in]表示拥有该自定义属性的对象的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="03225-106">[in] A metadata token representing the object that owns the custom attribute.</span></span>  
+ <span data-ttu-id="8098f-106">[in] A metadata token representing the object that owns the custom attribute.</span><span class="sxs-lookup"><span data-stu-id="8098f-106">[in] A metadata token representing the object that owns the custom attribute.</span></span>  
   
  `szName`  
- <span data-ttu-id="03225-107">[in]自定义特性的名称。</span><span class="sxs-lookup"><span data-stu-id="03225-107">[in] The name of the custom attribute.</span></span>  
+ <span data-ttu-id="8098f-107">[in] The name of the custom attribute.</span><span class="sxs-lookup"><span data-stu-id="8098f-107">[in] The name of the custom attribute.</span></span>  
   
  `ppData`  
- <span data-ttu-id="03225-108">[out]指向的是自定义特性的值的数据数组的指针。</span><span class="sxs-lookup"><span data-stu-id="03225-108">[out] A pointer to an array of data that is the value of the custom attribute.</span></span>  
+ <span data-ttu-id="8098f-108">[out] A pointer to an array of data that is the value of the custom attribute.</span><span class="sxs-lookup"><span data-stu-id="8098f-108">[out] A pointer to an array of data that is the value of the custom attribute.</span></span>  
   
  `pcbData`  
- <span data-ttu-id="03225-109">[out]以字节为单位的中返回的数据大小 \*`ppData`。</span><span class="sxs-lookup"><span data-stu-id="03225-109">[out] The size in bytes of the data returned in \*`ppData`.</span></span>  
+ <span data-ttu-id="8098f-109">[out] The size in bytes of the data returned in \*`ppData`.</span><span class="sxs-lookup"><span data-stu-id="8098f-109">[out] The size in bytes of the data returned in \*`ppData`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="03225-110">备注</span><span class="sxs-lookup"><span data-stu-id="03225-110">Remarks</span></span>  
- <span data-ttu-id="03225-111">它是合法的相同的所有者; 定义多个自定义属性它们甚至可能具有相同的名称。</span><span class="sxs-lookup"><span data-stu-id="03225-111">It is legal to define multiple custom attributes for the same owner; they may even have the same name.</span></span> <span data-ttu-id="03225-112">但是，`GetCustomAttributeByName`只返回一个实例。</span><span class="sxs-lookup"><span data-stu-id="03225-112">However, `GetCustomAttributeByName` returns only one instance.</span></span> <span data-ttu-id="03225-113">(`GetCustomAttributeByName`返回它所遇到的第一个实例。)若要查找的自定义属性的所有实例，请调用[imetadataimport:: Enumcustomattributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="03225-113">(`GetCustomAttributeByName` returns the first instance that it encounters.) To find all instances of a custom attribute, call the [IMetaDataImport::EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8098f-110">备注</span><span class="sxs-lookup"><span data-stu-id="8098f-110">Remarks</span></span>  
+ <span data-ttu-id="8098f-111">It is legal to define multiple custom attributes for the same owner; they may even have the same name.</span><span class="sxs-lookup"><span data-stu-id="8098f-111">It is legal to define multiple custom attributes for the same owner; they may even have the same name.</span></span> <span data-ttu-id="8098f-112">However, `GetCustomAttributeByName` returns only one instance.</span><span class="sxs-lookup"><span data-stu-id="8098f-112">However, `GetCustomAttributeByName` returns only one instance.</span></span> <span data-ttu-id="8098f-113">(`GetCustomAttributeByName` returns the first instance that it encounters.) To find all instances of a custom attribute, call the [IMetaDataImport::EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="8098f-113">(`GetCustomAttributeByName` returns the first instance that it encounters.) To find all instances of a custom attribute, call the [IMetaDataImport::EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="03225-114">要求</span><span class="sxs-lookup"><span data-stu-id="03225-114">Requirements</span></span>  
- <span data-ttu-id="03225-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="03225-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8098f-114">要求</span><span class="sxs-lookup"><span data-stu-id="8098f-114">Requirements</span></span>  
+ <span data-ttu-id="8098f-115">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8098f-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="03225-116">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="03225-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="8098f-116">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="8098f-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="03225-117">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="03225-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="8098f-117">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8098f-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="03225-118">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03225-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="8098f-118">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8098f-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="03225-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="03225-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8098f-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="8098f-119">See also</span></span>
 
-- [<span data-ttu-id="03225-120">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="03225-120">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="03225-121">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="03225-121">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="8098f-120">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="8098f-120">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="8098f-121">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="8098f-121">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

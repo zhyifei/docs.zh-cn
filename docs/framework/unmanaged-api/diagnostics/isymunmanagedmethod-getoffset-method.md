@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8bf3cb62-89bf-4159-ad53-de606aba89e8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 62fa0969044504905d5c835f74873dc6f46cafa8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f7993ebc15f95df97a9b45523717f318d8c435ce
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769439"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448944"
 ---
-# <a name="isymunmanagedmethodgetoffset-method"></a><span data-ttu-id="a60a3-102">ISymUnmanagedMethod::GetOffset 方法</span><span class="sxs-lookup"><span data-stu-id="a60a3-102">ISymUnmanagedMethod::GetOffset Method</span></span>
-<span data-ttu-id="a60a3-103">返回到文档中的给定位置中此方法相对应的偏移量。</span><span class="sxs-lookup"><span data-stu-id="a60a3-103">Returns the offset within this method that corresponds to a given position within a document.</span></span>  
+# <a name="isymunmanagedmethodgetoffset-method"></a><span data-ttu-id="44a92-102">ISymUnmanagedMethod::GetOffset 方法</span><span class="sxs-lookup"><span data-stu-id="44a92-102">ISymUnmanagedMethod::GetOffset Method</span></span>
+<span data-ttu-id="44a92-103">Returns the offset within this method that corresponds to a given position within a document.</span><span class="sxs-lookup"><span data-stu-id="44a92-103">Returns the offset within this method that corresponds to a given position within a document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a60a3-104">语法</span><span class="sxs-lookup"><span data-stu-id="a60a3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="44a92-104">语法</span><span class="sxs-lookup"><span data-stu-id="44a92-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetOffset(  
@@ -37,25 +35,25 @@ HRESULT GetOffset(
     [out, retval] ULONG32*        pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a60a3-105">参数</span><span class="sxs-lookup"><span data-stu-id="a60a3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="44a92-105">参数</span><span class="sxs-lookup"><span data-stu-id="44a92-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="a60a3-106">[in]指向为其请求偏移量的文档的指针。</span><span class="sxs-lookup"><span data-stu-id="a60a3-106">[in] A pointer to the document for which the offset is requested.</span></span>  
+ <span data-ttu-id="44a92-106">[in] A pointer to the document for which the offset is requested.</span><span class="sxs-lookup"><span data-stu-id="44a92-106">[in] A pointer to the document for which the offset is requested.</span></span>  
   
  `line`  
- <span data-ttu-id="a60a3-107">[in]为其请求偏移量的文档行。</span><span class="sxs-lookup"><span data-stu-id="a60a3-107">[in] The document line for which the offset is requested.</span></span>  
+ <span data-ttu-id="44a92-107">[in] The document line for which the offset is requested.</span><span class="sxs-lookup"><span data-stu-id="44a92-107">[in] The document line for which the offset is requested.</span></span>  
   
  `column`  
- <span data-ttu-id="a60a3-108">[in]为其请求偏移量的文档列。</span><span class="sxs-lookup"><span data-stu-id="a60a3-108">[in] The document column for which the offset is requested.</span></span>  
+ <span data-ttu-id="44a92-108">[in] The document column for which the offset is requested.</span><span class="sxs-lookup"><span data-stu-id="44a92-108">[in] The document column for which the offset is requested.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="a60a3-109">[out]一个指向`ULONG32`，它接收的偏移量。</span><span class="sxs-lookup"><span data-stu-id="a60a3-109">[out] A pointer to a `ULONG32` that receives the offsets.</span></span>  
+ <span data-ttu-id="44a92-109">[out] A pointer to a `ULONG32` that receives the offsets.</span><span class="sxs-lookup"><span data-stu-id="44a92-109">[out] A pointer to a `ULONG32` that receives the offsets.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a60a3-110">返回值</span><span class="sxs-lookup"><span data-stu-id="a60a3-110">Return Value</span></span>  
- <span data-ttu-id="a60a3-111">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="a60a3-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="44a92-110">返回值</span><span class="sxs-lookup"><span data-stu-id="44a92-110">Return Value</span></span>  
+ <span data-ttu-id="44a92-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="44a92-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a60a3-112">要求</span><span class="sxs-lookup"><span data-stu-id="a60a3-112">Requirements</span></span>  
- <span data-ttu-id="a60a3-113">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a60a3-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="44a92-112">要求</span><span class="sxs-lookup"><span data-stu-id="44a92-112">Requirements</span></span>  
+ <span data-ttu-id="44a92-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="44a92-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a60a3-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="a60a3-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="44a92-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="44a92-114">See also</span></span>
 
-- [<span data-ttu-id="a60a3-115">ISymUnmanagedMethod 接口</span><span class="sxs-lookup"><span data-stu-id="a60a3-115">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="44a92-115">ISymUnmanagedMethod 接口</span><span class="sxs-lookup"><span data-stu-id="44a92-115">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

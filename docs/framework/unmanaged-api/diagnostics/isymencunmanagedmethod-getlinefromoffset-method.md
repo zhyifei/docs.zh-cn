@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: cc09bad2-fb34-4d13-a521-6ec7b1a1d915
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b669921bf8d27283ba99f4ca1d97b6abc00e15db
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94a571a4bc01b805387aebe5a6e23bad0b735313
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776884"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448650"
 ---
-# <a name="isymencunmanagedmethodgetlinefromoffset-method"></a><span data-ttu-id="27430-102">ISymENCUnmanagedMethod::GetLineFromOffset 方法</span><span class="sxs-lookup"><span data-stu-id="27430-102">ISymENCUnmanagedMethod::GetLineFromOffset Method</span></span>
-<span data-ttu-id="27430-103">获取与某一偏移量关联的行信息。</span><span class="sxs-lookup"><span data-stu-id="27430-103">Gets the line information associated with an offset.</span></span> <span data-ttu-id="27430-104">如果偏移量的参数 (`dwOffset`) 不是序列点，此方法获取与前一个偏移量关联的行信息。</span><span class="sxs-lookup"><span data-stu-id="27430-104">If the offset parameter (`dwOffset`) is not a sequence point, this method gets the line information associated with the previous offset.</span></span>  
+# <a name="isymencunmanagedmethodgetlinefromoffset-method"></a><span data-ttu-id="92c7d-102">ISymENCUnmanagedMethod::GetLineFromOffset 方法</span><span class="sxs-lookup"><span data-stu-id="92c7d-102">ISymENCUnmanagedMethod::GetLineFromOffset Method</span></span>
+<span data-ttu-id="92c7d-103">Gets the line information associated with an offset.</span><span class="sxs-lookup"><span data-stu-id="92c7d-103">Gets the line information associated with an offset.</span></span> <span data-ttu-id="92c7d-104">If the offset parameter (`dwOffset`) is not a sequence point, this method gets the line information associated with the previous offset.</span><span class="sxs-lookup"><span data-stu-id="92c7d-104">If the offset parameter (`dwOffset`) is not a sequence point, this method gets the line information associated with the previous offset.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="27430-105">语法</span><span class="sxs-lookup"><span data-stu-id="27430-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="92c7d-105">语法</span><span class="sxs-lookup"><span data-stu-id="92c7d-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetLineFromOffset(  
@@ -39,31 +37,31 @@ HRESULT GetLineFromOffset(
      [out] ULONG32*  pdwStartOffset);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="27430-106">参数</span><span class="sxs-lookup"><span data-stu-id="27430-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="92c7d-106">参数</span><span class="sxs-lookup"><span data-stu-id="92c7d-106">Parameters</span></span>  
  `dwOffset`  
- <span data-ttu-id="27430-107">[in]一个`ULONG32`包含的偏移量。</span><span class="sxs-lookup"><span data-stu-id="27430-107">[in] A `ULONG32` that contains the offset.</span></span>  
+ <span data-ttu-id="92c7d-107">[in] A `ULONG32` that contains the offset.</span><span class="sxs-lookup"><span data-stu-id="92c7d-107">[in] A `ULONG32` that contains the offset.</span></span>  
   
  `pline`  
- <span data-ttu-id="27430-108">[out]一个指向`ULONG32`接收行。</span><span class="sxs-lookup"><span data-stu-id="27430-108">[out] A pointer to a `ULONG32` that receives the line.</span></span>  
+ <span data-ttu-id="92c7d-108">[out] A pointer to a `ULONG32` that receives the line.</span><span class="sxs-lookup"><span data-stu-id="92c7d-108">[out] A pointer to a `ULONG32` that receives the line.</span></span>  
   
  `pcolumn`  
- <span data-ttu-id="27430-109">[out]一个指向`ULONG32`接收列。</span><span class="sxs-lookup"><span data-stu-id="27430-109">[out] A pointer to a `ULONG32` that receives the column.</span></span>  
+ <span data-ttu-id="92c7d-109">[out] A pointer to a `ULONG32` that receives the column.</span><span class="sxs-lookup"><span data-stu-id="92c7d-109">[out] A pointer to a `ULONG32` that receives the column.</span></span>  
   
  `pendLine`  
- <span data-ttu-id="27430-110">[out]一个指向`ULONG32`接收结束行。</span><span class="sxs-lookup"><span data-stu-id="27430-110">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
+ <span data-ttu-id="92c7d-110">[out] A pointer to a `ULONG32` that receives the end line.</span><span class="sxs-lookup"><span data-stu-id="92c7d-110">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
   
  `pendColumn`  
- <span data-ttu-id="27430-111">[out]一个指向`ULONG32`，它接收的结束列。</span><span class="sxs-lookup"><span data-stu-id="27430-111">[out] A pointer to a `ULONG32` that receives the end column.</span></span>  
+ <span data-ttu-id="92c7d-111">[out] A pointer to a `ULONG32` that receives the end column.</span><span class="sxs-lookup"><span data-stu-id="92c7d-111">[out] A pointer to a `ULONG32` that receives the end column.</span></span>  
   
  `pdwStartOffset`  
- <span data-ttu-id="27430-112">[out]一个指向`ULONG32`接收相关联的序列点。</span><span class="sxs-lookup"><span data-stu-id="27430-112">[out] A pointer to a `ULONG32` that receives the associated sequence point.</span></span>  
+ <span data-ttu-id="92c7d-112">[out] A pointer to a `ULONG32` that receives the associated sequence point.</span><span class="sxs-lookup"><span data-stu-id="92c7d-112">[out] A pointer to a `ULONG32` that receives the associated sequence point.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="27430-113">返回值</span><span class="sxs-lookup"><span data-stu-id="27430-113">Return Value</span></span>  
- <span data-ttu-id="27430-114">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="27430-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="92c7d-113">返回值</span><span class="sxs-lookup"><span data-stu-id="92c7d-113">Return Value</span></span>  
+ <span data-ttu-id="92c7d-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="92c7d-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="27430-115">要求</span><span class="sxs-lookup"><span data-stu-id="27430-115">Requirements</span></span>  
- <span data-ttu-id="27430-116">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="27430-116">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="92c7d-115">要求</span><span class="sxs-lookup"><span data-stu-id="92c7d-115">Requirements</span></span>  
+ <span data-ttu-id="92c7d-116">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="92c7d-116">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="27430-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="27430-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="92c7d-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="92c7d-117">See also</span></span>
 
-- [<span data-ttu-id="27430-118">ISymENCUnmanagedMethod 接口</span><span class="sxs-lookup"><span data-stu-id="27430-118">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [<span data-ttu-id="92c7d-118">ISymENCUnmanagedMethod 接口</span><span class="sxs-lookup"><span data-stu-id="92c7d-118">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

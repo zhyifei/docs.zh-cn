@@ -15,41 +15,39 @@ helpviewer_keywords:
 ms.assetid: ebaad1d5-ee0a-4cb0-96bc-8ba5d371b747
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 556048be66a7c60dd82a8d51391a86655db6802a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 645c9dd9319dfdf9cb070366d2c389f879e1b1d2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755925"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448044"
 ---
-# <a name="icorprofilercallbackexceptionunwindfunctionleave-method"></a><span data-ttu-id="2fdbb-102">ICorProfilerCallback::ExceptionUnwindFunctionLeave 方法</span><span class="sxs-lookup"><span data-stu-id="2fdbb-102">ICorProfilerCallback::ExceptionUnwindFunctionLeave Method</span></span>
-<span data-ttu-id="2fdbb-103">通知探查器的异常处理展开阶段已完成展开函数。</span><span class="sxs-lookup"><span data-stu-id="2fdbb-103">Notifies the profiler that the unwind phase of exception handling has finished unwinding a function.</span></span>  
+# <a name="icorprofilercallbackexceptionunwindfunctionleave-method"></a><span data-ttu-id="66368-102">ICorProfilerCallback::ExceptionUnwindFunctionLeave 方法</span><span class="sxs-lookup"><span data-stu-id="66368-102">ICorProfilerCallback::ExceptionUnwindFunctionLeave Method</span></span>
+<span data-ttu-id="66368-103">Notifies the profiler that the unwind phase of exception handling has finished unwinding a function.</span><span class="sxs-lookup"><span data-stu-id="66368-103">Notifies the profiler that the unwind phase of exception handling has finished unwinding a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2fdbb-104">语法</span><span class="sxs-lookup"><span data-stu-id="2fdbb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="66368-104">语法</span><span class="sxs-lookup"><span data-stu-id="66368-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExceptionUnwindFunctionLeave();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="2fdbb-105">备注</span><span class="sxs-lookup"><span data-stu-id="2fdbb-105">Remarks</span></span>  
- <span data-ttu-id="2fdbb-106">当`ExceptionUnwindFunctionLeave`方法调用，从堆栈移除的函数实例和其堆栈数据。</span><span class="sxs-lookup"><span data-stu-id="2fdbb-106">When the `ExceptionUnwindFunctionLeave` method is called, the function instance and its stack data are removed from the stack.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="66368-105">备注</span><span class="sxs-lookup"><span data-stu-id="66368-105">Remarks</span></span>  
+ <span data-ttu-id="66368-106">When the `ExceptionUnwindFunctionLeave` method is called, the function instance and its stack data are removed from the stack.</span><span class="sxs-lookup"><span data-stu-id="66368-106">When the `ExceptionUnwindFunctionLeave` method is called, the function instance and its stack data are removed from the stack.</span></span>  
   
- <span data-ttu-id="2fdbb-107">探查器在此调用期间不应进行阻止，因为堆栈可能未处于允许垃圾回收的状态，因此不能启用抢先式垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="2fdbb-107">The profiler should not block during this call because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="2fdbb-108">如果尝试进行事件探查器阻止和垃圾回收，直到此回调返回，将阻止运行时。</span><span class="sxs-lookup"><span data-stu-id="2fdbb-108">If the profiler blocks here and a garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
+ <span data-ttu-id="66368-107">The profiler should not block during this call because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span><span class="sxs-lookup"><span data-stu-id="66368-107">The profiler should not block during this call because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="66368-108">If the profiler blocks here and a garbage collection is attempted, the runtime will block until this callback returns.</span><span class="sxs-lookup"><span data-stu-id="66368-108">If the profiler blocks here and a garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
   
- <span data-ttu-id="2fdbb-109">此外，在此调用过程探查器必须调入托管代码或以任何方式导致托管内存分配。</span><span class="sxs-lookup"><span data-stu-id="2fdbb-109">Also, during this call, the profiler must not call into managed code or in any way cause a managed-memory allocation.</span></span>  
+ <span data-ttu-id="66368-109">Also, during this call, the profiler must not call into managed code or in any way cause a managed-memory allocation.</span><span class="sxs-lookup"><span data-stu-id="66368-109">Also, during this call, the profiler must not call into managed code or in any way cause a managed-memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2fdbb-110">要求</span><span class="sxs-lookup"><span data-stu-id="2fdbb-110">Requirements</span></span>  
- <span data-ttu-id="2fdbb-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2fdbb-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="66368-110">要求</span><span class="sxs-lookup"><span data-stu-id="66368-110">Requirements</span></span>  
+ <span data-ttu-id="66368-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="66368-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2fdbb-112">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2fdbb-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="66368-112">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="66368-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="2fdbb-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2fdbb-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="66368-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="66368-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2fdbb-114">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2fdbb-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="66368-114">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="66368-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2fdbb-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="2fdbb-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="66368-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="66368-115">See also</span></span>
 
-- [<span data-ttu-id="2fdbb-116">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="2fdbb-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="2fdbb-117">ExceptionUnwindFunctionEnter 方法</span><span class="sxs-lookup"><span data-stu-id="2fdbb-117">ExceptionUnwindFunctionEnter Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionenter-method.md)
+- [<span data-ttu-id="66368-116">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="66368-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="66368-117">ExceptionUnwindFunctionEnter 方法</span><span class="sxs-lookup"><span data-stu-id="66368-117">ExceptionUnwindFunctionEnter Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionenter-method.md)
