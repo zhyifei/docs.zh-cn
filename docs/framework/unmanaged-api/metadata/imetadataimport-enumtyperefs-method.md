@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: b4896b8f-8e97-469c-8089-e72a025661b5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f6af4c1d6eb9c305358573b06da164e2344ff46e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 778ebf1d4fad0c8703964be88fdc3ff8c033bc28
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774629"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449980"
 ---
-# <a name="imetadataimportenumtyperefs-method"></a><span data-ttu-id="bf51d-102">IMetaDataImport::EnumTypeRefs 方法</span><span class="sxs-lookup"><span data-stu-id="bf51d-102">IMetaDataImport::EnumTypeRefs Method</span></span>
-<span data-ttu-id="bf51d-103">枚举当前元数据范围内定义的 TypeRef 标记。</span><span class="sxs-lookup"><span data-stu-id="bf51d-103">Enumerates TypeRef tokens defined in the current metadata scope.</span></span>  
+# <a name="imetadataimportenumtyperefs-method"></a><span data-ttu-id="b6d6e-102">IMetaDataImport::EnumTypeRefs 方法</span><span class="sxs-lookup"><span data-stu-id="b6d6e-102">IMetaDataImport::EnumTypeRefs Method</span></span>
+<span data-ttu-id="b6d6e-103">枚举当前元数据范围内定义的 TypeRef 标记。</span><span class="sxs-lookup"><span data-stu-id="b6d6e-103">Enumerates TypeRef tokens defined in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bf51d-104">语法</span><span class="sxs-lookup"><span data-stu-id="bf51d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b6d6e-104">语法</span><span class="sxs-lookup"><span data-stu-id="b6d6e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumTypeRefs (  
@@ -38,39 +36,39 @@ HRESULT EnumTypeRefs (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bf51d-105">参数</span><span class="sxs-lookup"><span data-stu-id="bf51d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b6d6e-105">参数</span><span class="sxs-lookup"><span data-stu-id="b6d6e-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="bf51d-106">[in、 out]一个指向枚举器。</span><span class="sxs-lookup"><span data-stu-id="bf51d-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="bf51d-107">对于首次调用此方法，这必须为 NULL。</span><span class="sxs-lookup"><span data-stu-id="bf51d-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="b6d6e-106">[in, out] A pointer to the enumerator.</span><span class="sxs-lookup"><span data-stu-id="b6d6e-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="b6d6e-107">This must be NULL for the first call of this method.</span><span class="sxs-lookup"><span data-stu-id="b6d6e-107">This must be NULL for the first call of this method.</span></span>  
   
  `rTypeRefs`  
- <span data-ttu-id="bf51d-108">[out]用于存储 TypeRef 标记的数组。</span><span class="sxs-lookup"><span data-stu-id="bf51d-108">[out] The array used to store the TypeRef tokens.</span></span>  
+ <span data-ttu-id="b6d6e-108">[out] The array used to store the TypeRef tokens.</span><span class="sxs-lookup"><span data-stu-id="b6d6e-108">[out] The array used to store the TypeRef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="bf51d-109">[in] `rTypeRefs` 数组的最大大小。</span><span class="sxs-lookup"><span data-stu-id="bf51d-109">[in] The maximum size of the `rTypeRefs` array.</span></span>  
+ <span data-ttu-id="b6d6e-109">[in] `rTypeRefs` 数组的最大大小。</span><span class="sxs-lookup"><span data-stu-id="b6d6e-109">[in] The maximum size of the `rTypeRefs` array.</span></span>  
   
  `pcTypeRefs`  
- <span data-ttu-id="bf51d-110">[out]指向 TypeRef 标记中返回数的`rTypeRefs`。</span><span class="sxs-lookup"><span data-stu-id="bf51d-110">[out] A pointer to the number of TypeRef tokens returned in `rTypeRefs`.</span></span>  
+ <span data-ttu-id="b6d6e-110">[out] A pointer to the number of TypeRef tokens returned in `rTypeRefs`.</span><span class="sxs-lookup"><span data-stu-id="b6d6e-110">[out] A pointer to the number of TypeRef tokens returned in `rTypeRefs`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="bf51d-111">返回值</span><span class="sxs-lookup"><span data-stu-id="bf51d-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b6d6e-111">返回值</span><span class="sxs-lookup"><span data-stu-id="b6d6e-111">Return Value</span></span>  
   
-|<span data-ttu-id="bf51d-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="bf51d-112">HRESULT</span></span>|<span data-ttu-id="bf51d-113">描述</span><span class="sxs-lookup"><span data-stu-id="bf51d-113">Description</span></span>|  
+|<span data-ttu-id="b6d6e-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b6d6e-112">HRESULT</span></span>|<span data-ttu-id="b6d6e-113">描述</span><span class="sxs-lookup"><span data-stu-id="b6d6e-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="bf51d-114">`EnumTypeRefs` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="bf51d-114">`EnumTypeRefs` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="bf51d-115">没有要枚举的标记。</span><span class="sxs-lookup"><span data-stu-id="bf51d-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="bf51d-116">在这种情况下，`pcTypeRefs`为零。</span><span class="sxs-lookup"><span data-stu-id="bf51d-116">In that case, `pcTypeRefs` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="b6d6e-114">`EnumTypeRefs` returned successfully.</span><span class="sxs-lookup"><span data-stu-id="b6d6e-114">`EnumTypeRefs` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="b6d6e-115">There are no tokens to enumerate.</span><span class="sxs-lookup"><span data-stu-id="b6d6e-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="b6d6e-116">In that case, `pcTypeRefs` is zero.</span><span class="sxs-lookup"><span data-stu-id="b6d6e-116">In that case, `pcTypeRefs` is zero.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="bf51d-117">备注</span><span class="sxs-lookup"><span data-stu-id="bf51d-117">Remarks</span></span>  
- <span data-ttu-id="bf51d-118">TypeRef 标记表示一种类型的引用。</span><span class="sxs-lookup"><span data-stu-id="bf51d-118">A TypeRef token represents a reference to a type.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b6d6e-117">备注</span><span class="sxs-lookup"><span data-stu-id="b6d6e-117">Remarks</span></span>  
+ <span data-ttu-id="b6d6e-118">A TypeRef token represents a reference to a type.</span><span class="sxs-lookup"><span data-stu-id="b6d6e-118">A TypeRef token represents a reference to a type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bf51d-119">要求</span><span class="sxs-lookup"><span data-stu-id="bf51d-119">Requirements</span></span>  
- <span data-ttu-id="bf51d-120">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bf51d-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b6d6e-119">要求</span><span class="sxs-lookup"><span data-stu-id="b6d6e-119">Requirements</span></span>  
+ <span data-ttu-id="b6d6e-120">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b6d6e-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bf51d-121">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="bf51d-121">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b6d6e-121">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b6d6e-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="bf51d-122">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="bf51d-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="b6d6e-122">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b6d6e-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="bf51d-123">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bf51d-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b6d6e-123">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b6d6e-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bf51d-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="bf51d-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b6d6e-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="b6d6e-124">See also</span></span>
 
-- [<span data-ttu-id="bf51d-125">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="bf51d-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="bf51d-126">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="bf51d-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="b6d6e-125">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="b6d6e-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="b6d6e-126">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="b6d6e-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

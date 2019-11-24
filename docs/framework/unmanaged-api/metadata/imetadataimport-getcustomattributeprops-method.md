@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6eefb243-a281-41c1-bcdc-7e17513bc446
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c714915651d8660a739d8ee6518fc3814af4c08d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a80336db4a5a8d7cfdebb7eb8d25bcb8f96e87c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782414"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437647"
 ---
-# <a name="imetadataimportgetcustomattributeprops-method"></a><span data-ttu-id="428cb-102">IMetaDataImport::GetCustomAttributeProps 方法</span><span class="sxs-lookup"><span data-stu-id="428cb-102">IMetaDataImport::GetCustomAttributeProps Method</span></span>
-<span data-ttu-id="428cb-103">获取给定元数据标记的自定义属性的值。</span><span class="sxs-lookup"><span data-stu-id="428cb-103">Gets the value of the custom attribute, given its metadata token.</span></span>  
+# <a name="imetadataimportgetcustomattributeprops-method"></a><span data-ttu-id="6c55d-102">IMetaDataImport::GetCustomAttributeProps 方法</span><span class="sxs-lookup"><span data-stu-id="6c55d-102">IMetaDataImport::GetCustomAttributeProps Method</span></span>
+<span data-ttu-id="6c55d-103">获取给定元数据标记的自定义属性的值。</span><span class="sxs-lookup"><span data-stu-id="6c55d-103">Gets the value of the custom attribute, given its metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="428cb-104">语法</span><span class="sxs-lookup"><span data-stu-id="428cb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6c55d-104">语法</span><span class="sxs-lookup"><span data-stu-id="6c55d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCustomAttributeProps (  
@@ -39,35 +37,35 @@ HRESULT GetCustomAttributeProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="428cb-105">参数</span><span class="sxs-lookup"><span data-stu-id="428cb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6c55d-105">参数</span><span class="sxs-lookup"><span data-stu-id="6c55d-105">Parameters</span></span>  
  `cv`  
- <span data-ttu-id="428cb-106">[in] 表示要检索的自定义属性的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="428cb-106">[in] A metadata token that represents the custom attribute to be retrieved.</span></span>  
+ <span data-ttu-id="6c55d-106">[in] 表示要检索的自定义属性的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="6c55d-106">[in] A metadata token that represents the custom attribute to be retrieved.</span></span>  
   
  `ptkObj`  
- <span data-ttu-id="428cb-107">[out, optional] 表示自定义属性修改的对象的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="428cb-107">[out, optional] A metadata token representing the object that the custom attribute modifies.</span></span> <span data-ttu-id="428cb-108">此值可为任何类型的元数据标记（`mdCustomAttribute` 除外）。</span><span class="sxs-lookup"><span data-stu-id="428cb-108">This value can be any type of metadata token except `mdCustomAttribute`.</span></span>  
+ <span data-ttu-id="6c55d-107">[out, optional] 表示自定义属性修改的对象的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="6c55d-107">[out, optional] A metadata token representing the object that the custom attribute modifies.</span></span> <span data-ttu-id="6c55d-108">此值可为任何类型的元数据标记（`mdCustomAttribute` 除外）。</span><span class="sxs-lookup"><span data-stu-id="6c55d-108">This value can be any type of metadata token except `mdCustomAttribute`.</span></span>  
   
  `ptkType`  
- <span data-ttu-id="428cb-109">[out, optional] 表示已返回自定义属性的 <xref:System.Type> 的 `mdMethodDef` 或 `mdMemberRef` 元数据标记。</span><span class="sxs-lookup"><span data-stu-id="428cb-109">[out, optional] An `mdMethodDef` or `mdMemberRef` metadata token representing the <xref:System.Type> of the returned custom attribute.</span></span>  
+ <span data-ttu-id="6c55d-109">[out, optional] 表示已返回自定义属性的 <xref:System.Type> 的 `mdMethodDef` 或 `mdMemberRef` 元数据标记。</span><span class="sxs-lookup"><span data-stu-id="6c55d-109">[out, optional] An `mdMethodDef` or `mdMemberRef` metadata token representing the <xref:System.Type> of the returned custom attribute.</span></span>  
   
  `ppBlob`  
- <span data-ttu-id="428cb-110">[out, optional] 指向自定义属性的值的数据数组指针。</span><span class="sxs-lookup"><span data-stu-id="428cb-110">[out, optional] A pointer to an array of data that is the value of the custom attribute.</span></span>  
+ <span data-ttu-id="6c55d-110">[out, optional] 指向自定义属性的值的数据数组指针。</span><span class="sxs-lookup"><span data-stu-id="6c55d-110">[out, optional] A pointer to an array of data that is the value of the custom attribute.</span></span>  
   
  `pcbSize`  
- <span data-ttu-id="428cb-111">[out, optional] \*`ppBlob` 中返回的数据大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="428cb-111">[out, optional] The size in bytes of the data returned in \*`ppBlob`.</span></span>  
+ <span data-ttu-id="6c55d-111">[out, optional] \*`ppBlob` 中返回的数据大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="6c55d-111">[out, optional] The size in bytes of the data returned in \*`ppBlob`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="428cb-112">备注</span><span class="sxs-lookup"><span data-stu-id="428cb-112">Remarks</span></span>  
- <span data-ttu-id="428cb-113">自定义属性以元数据引擎理解的格式存储为数据数组。</span><span class="sxs-lookup"><span data-stu-id="428cb-113">A custom attribute is stored as an array of data, the format which is understood by the metadata engine.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6c55d-112">备注</span><span class="sxs-lookup"><span data-stu-id="6c55d-112">Remarks</span></span>  
+ <span data-ttu-id="6c55d-113">自定义属性以元数据引擎理解的格式存储为数据数组。</span><span class="sxs-lookup"><span data-stu-id="6c55d-113">A custom attribute is stored as an array of data, the format which is understood by the metadata engine.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="428cb-114">要求</span><span class="sxs-lookup"><span data-stu-id="428cb-114">Requirements</span></span>  
- <span data-ttu-id="428cb-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="428cb-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6c55d-114">要求</span><span class="sxs-lookup"><span data-stu-id="6c55d-114">Requirements</span></span>  
+ <span data-ttu-id="6c55d-115">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6c55d-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="428cb-116">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="428cb-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="6c55d-116">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6c55d-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="428cb-117">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="428cb-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="6c55d-117">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6c55d-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="428cb-118">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="428cb-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6c55d-118">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6c55d-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="428cb-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="428cb-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6c55d-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="6c55d-119">See also</span></span>
 
-- [<span data-ttu-id="428cb-120">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="428cb-120">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="428cb-121">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="428cb-121">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="6c55d-120">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="6c55d-120">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="6c55d-121">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="6c55d-121">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

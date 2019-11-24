@@ -14,28 +14,26 @@ helpviewer_keywords:
 ms.assetid: edc8a02b-a0ac-46e3-80c1-fb8b5cef6341
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 70828b8d4ebcc17fa178a53806ef7f55f7ba33e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6d033b6910120ac3074cf008391cf93e084fa2e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939784"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449082"
 ---
-# <a name="isymunmanageddocumentwriter-interface"></a><span data-ttu-id="4e761-102">ISymUnmanagedDocumentWriter 接口</span><span class="sxs-lookup"><span data-stu-id="4e761-102">ISymUnmanagedDocumentWriter Interface</span></span>
-<span data-ttu-id="4e761-103">提供用于写入到符号存储区引用的文档的方法。</span><span class="sxs-lookup"><span data-stu-id="4e761-103">Provides methods for writing to a document referenced by a symbol store.</span></span>  
+# <a name="isymunmanageddocumentwriter-interface"></a><span data-ttu-id="8b6fc-102">ISymUnmanagedDocumentWriter 接口</span><span class="sxs-lookup"><span data-stu-id="8b6fc-102">ISymUnmanagedDocumentWriter Interface</span></span>
+<span data-ttu-id="8b6fc-103">提供用于写入到符号存储区引用的文档的方法。</span><span class="sxs-lookup"><span data-stu-id="8b6fc-103">Provides methods for writing to a document referenced by a symbol store.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="4e761-104">方法</span><span class="sxs-lookup"><span data-stu-id="4e761-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="8b6fc-104">方法</span><span class="sxs-lookup"><span data-stu-id="8b6fc-104">Methods</span></span>  
   
-|<span data-ttu-id="4e761-105">方法</span><span class="sxs-lookup"><span data-stu-id="4e761-105">Method</span></span>|<span data-ttu-id="4e761-106">描述</span><span class="sxs-lookup"><span data-stu-id="4e761-106">Description</span></span>|  
+|<span data-ttu-id="8b6fc-105">方法</span><span class="sxs-lookup"><span data-stu-id="8b6fc-105">Method</span></span>|<span data-ttu-id="8b6fc-106">描述</span><span class="sxs-lookup"><span data-stu-id="8b6fc-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="4e761-107">SetCheckSum 方法</span><span class="sxs-lookup"><span data-stu-id="4e761-107">SetCheckSum Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|<span data-ttu-id="4e761-108">设置校验和信息。</span><span class="sxs-lookup"><span data-stu-id="4e761-108">Sets checksum information.</span></span>|  
-|[<span data-ttu-id="4e761-109">SetSource 方法</span><span class="sxs-lookup"><span data-stu-id="4e761-109">SetSource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|<span data-ttu-id="4e761-110">正在写入的文档集将嵌入的源。</span><span class="sxs-lookup"><span data-stu-id="4e761-110">Sets embedded source for a document that is being written.</span></span>|  
+|[<span data-ttu-id="8b6fc-107">SetCheckSum 方法</span><span class="sxs-lookup"><span data-stu-id="8b6fc-107">SetCheckSum Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|<span data-ttu-id="8b6fc-108">设置校验和信息。</span><span class="sxs-lookup"><span data-stu-id="8b6fc-108">Sets checksum information.</span></span>|  
+|[<span data-ttu-id="8b6fc-109">SetSource 方法</span><span class="sxs-lookup"><span data-stu-id="8b6fc-109">SetSource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|<span data-ttu-id="8b6fc-110">Sets embedded source for a document that is being written.</span><span class="sxs-lookup"><span data-stu-id="8b6fc-110">Sets embedded source for a document that is being written.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="4e761-111">要求</span><span class="sxs-lookup"><span data-stu-id="4e761-111">Requirements</span></span>  
- <span data-ttu-id="4e761-112">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4e761-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8b6fc-111">要求</span><span class="sxs-lookup"><span data-stu-id="8b6fc-111">Requirements</span></span>  
+ <span data-ttu-id="8b6fc-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="8b6fc-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4e761-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="4e761-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8b6fc-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="8b6fc-113">See also</span></span>
 
-- [<span data-ttu-id="4e761-114">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="4e761-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="8b6fc-114">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="8b6fc-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

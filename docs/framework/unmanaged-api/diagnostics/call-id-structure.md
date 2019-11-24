@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: bfd46324-afec-4782-9c18-586d81fb4740
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2823c018ff22607052cb9a298f69dbd0c4fe2c23
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c606f67766334800444f39b115d90f65ecca13d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769499"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448591"
 ---
-# <a name="callid-structure"></a><span data-ttu-id="87c06-102">CALL_ID 结构</span><span class="sxs-lookup"><span data-stu-id="87c06-102">CALL_ID Structure</span></span>
-<span data-ttu-id="87c06-103">提供给函数的调用调试程序的信息。</span><span class="sxs-lookup"><span data-stu-id="87c06-103">Provides information to a debugger about a function that is being called.</span></span> <span data-ttu-id="87c06-104">请参阅[INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)接口的详细信息。</span><span class="sxs-lookup"><span data-stu-id="87c06-104">See the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interface for more information.</span></span>  
+# <a name="call_id-structure"></a><span data-ttu-id="cb335-102">CALL_ID 结构</span><span class="sxs-lookup"><span data-stu-id="cb335-102">CALL_ID Structure</span></span>
+<span data-ttu-id="cb335-103">Provides information to a debugger about a function that is being called.</span><span class="sxs-lookup"><span data-stu-id="cb335-103">Provides information to a debugger about a function that is being called.</span></span> <span data-ttu-id="cb335-104">See the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interface for more information.</span><span class="sxs-lookup"><span data-stu-id="cb335-104">See the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interface for more information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="87c06-105">语法</span><span class="sxs-lookup"><span data-stu-id="87c06-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cb335-105">语法</span><span class="sxs-lookup"><span data-stu-id="cb335-105">Syntax</span></span>  
   
 ```cpp  
 typedef struct tagCALL_ID  
@@ -40,21 +38,21 @@ typedef struct tagCALL_ID
 } CALL_ID;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="87c06-106">成员</span><span class="sxs-lookup"><span data-stu-id="87c06-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="cb335-106">Members</span><span class="sxs-lookup"><span data-stu-id="cb335-106">Members</span></span>  
   
-|<span data-ttu-id="87c06-107">成员</span><span class="sxs-lookup"><span data-stu-id="87c06-107">Member</span></span>|<span data-ttu-id="87c06-108">描述</span><span class="sxs-lookup"><span data-stu-id="87c06-108">Description</span></span>|  
+|<span data-ttu-id="cb335-107">成员</span><span class="sxs-lookup"><span data-stu-id="cb335-107">Member</span></span>|<span data-ttu-id="cb335-108">描述</span><span class="sxs-lookup"><span data-stu-id="cb335-108">Description</span></span>|  
 |------------|-----------------|  
-|`szMachine`|<span data-ttu-id="87c06-109">标识发起呼叫的计算机。</span><span class="sxs-lookup"><span data-stu-id="87c06-109">Identifies the machine that is making the call.</span></span>|  
-|`dwPid`|<span data-ttu-id="87c06-110">标识计算机处理器。</span><span class="sxs-lookup"><span data-stu-id="87c06-110">Identifies the machine processor.</span></span>|  
-|`pUserThread`|<span data-ttu-id="87c06-111">标识正在执行调用的线程。</span><span class="sxs-lookup"><span data-stu-id="87c06-111">Identifies the thread that is executing the call.</span></span>|  
-|`addrStackPointer`|<span data-ttu-id="87c06-112">指定调用堆栈的地址。</span><span class="sxs-lookup"><span data-stu-id="87c06-112">Specifies the address of the call stack.</span></span>|  
-|`szEntryPoint`|<span data-ttu-id="87c06-113">指定调用的地址。</span><span class="sxs-lookup"><span data-stu-id="87c06-113">Specifies the address of the call.</span></span>|  
-|`szDestinationMachine`|<span data-ttu-id="87c06-114">标识将执行调用的计算机。</span><span class="sxs-lookup"><span data-stu-id="87c06-114">Identifies the machine that will execute the call.</span></span>|  
+|`szMachine`|<span data-ttu-id="cb335-109">Identifies the machine that is making the call.</span><span class="sxs-lookup"><span data-stu-id="cb335-109">Identifies the machine that is making the call.</span></span>|  
+|`dwPid`|<span data-ttu-id="cb335-110">Identifies the machine processor.</span><span class="sxs-lookup"><span data-stu-id="cb335-110">Identifies the machine processor.</span></span>|  
+|`pUserThread`|<span data-ttu-id="cb335-111">Identifies the thread that is executing the call.</span><span class="sxs-lookup"><span data-stu-id="cb335-111">Identifies the thread that is executing the call.</span></span>|  
+|`addrStackPointer`|<span data-ttu-id="cb335-112">Specifies the address of the call stack.</span><span class="sxs-lookup"><span data-stu-id="cb335-112">Specifies the address of the call stack.</span></span>|  
+|`szEntryPoint`|<span data-ttu-id="cb335-113">Specifies the address of the call.</span><span class="sxs-lookup"><span data-stu-id="cb335-113">Specifies the address of the call.</span></span>|  
+|`szDestinationMachine`|<span data-ttu-id="cb335-114">Identifies the machine that will execute the call.</span><span class="sxs-lookup"><span data-stu-id="cb335-114">Identifies the machine that will execute the call.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="87c06-115">要求</span><span class="sxs-lookup"><span data-stu-id="87c06-115">Requirements</span></span>  
- <span data-ttu-id="87c06-116">**标头：** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="87c06-116">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cb335-115">要求</span><span class="sxs-lookup"><span data-stu-id="cb335-115">Requirements</span></span>  
+ <span data-ttu-id="cb335-116">**Header:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="cb335-116">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="87c06-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="87c06-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cb335-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="cb335-117">See also</span></span>
 
-- [<span data-ttu-id="87c06-118">INotifySink2 接口</span><span class="sxs-lookup"><span data-stu-id="87c06-118">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="87c06-119">诊断符号存储区结构</span><span class="sxs-lookup"><span data-stu-id="87c06-119">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+- [<span data-ttu-id="cb335-118">INotifySink2 接口</span><span class="sxs-lookup"><span data-stu-id="cb335-118">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="cb335-119">诊断符号存储区结构</span><span class="sxs-lookup"><span data-stu-id="cb335-119">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
