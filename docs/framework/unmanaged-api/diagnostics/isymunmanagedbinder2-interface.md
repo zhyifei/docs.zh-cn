@@ -14,29 +14,27 @@ helpviewer_keywords:
 ms.assetid: 7a59f405-73e8-4434-8bcc-a9dc45ea08e6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c9fbb8364fb967e739eb9807b26cbc65f0ebec1d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8300e3a7b324a2ff4acabeb30b30d2cdabc7c776
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944193"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449321"
 ---
 # <a name="isymunmanagedbinder2-interface"></a>ISymUnmanagedBinder2 接口
-表示非托管代码的符号联编程序, 并扩展[ISymUnmanagedBinder](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)接口。  
+Represents a symbol binder for unmanaged code, and extends the [ISymUnmanagedBinder](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md) interface.  
   
 > [!IMPORTANT]
-> 打开不受信任的源中的程序数据库 (PDB) 文件会带来安全风险。  
+> It is a security risk to open a program database (PDB) file from an untrusted source.  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetReaderForFile2 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)|给定元数据接口和文件名后, 将返回正确的[ISymUnmanagedReader](isymunmanagedreader-interface.md)接口, 该接口将读取与模块关联的调试符号。 与[ISymUnmanagedBinder:: GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)方法相比, 提供的搜索范围更广。|  
+|[GetReaderForFile2 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)|Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module. Provides a more extensive search than the [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) method.|  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym, CorSym  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

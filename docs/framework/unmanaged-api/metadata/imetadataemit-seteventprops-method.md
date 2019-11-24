@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b039e50-63ec-4730-99ff-2327408de477
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 271ecd7e757340becccb7bf52362487a2b277299
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 506e13ad956a01b16e36d8c71737fe0efce4c01b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737192"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450317"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps 方法
-设置或更新的定义通过以前调用的事件指定的功能[imetadataemit:: Defineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)。  
+Sets or updates the specified feature of an event defined by a prior call to [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,32 +41,32 @@ HRESULT SetEventProps (
   
 ## <a name="parameters"></a>参数  
  `ev`  
- [in]事件标记中。  
+ [in] The event token.  
   
  `dwEventFlags`  
- [in]事件的标志。 这是一个位掩码的`CorEventAttr`值。  
+ [in] Event flags. This is a bitmask of `CorEventAttr` values.  
   
  `tkEventType`  
- [in]事件类标记。 这可以是`mdTypeDef`或`mdTypeRef`令牌。  
+ [in] The token for the event class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
   
  `mdAddOn`  
- [in]用来订阅事件或为 null 的方法。  
+ [in] The method used to subscribe to the event, or null.  
   
  `mdRemoveOn`  
- [in]用于取消订阅事件，则为 null 的方法。  
+ [in] The method used to unsubscribe to the event, or null.  
   
  `mdFire`  
- [in]（由派生类） 用于引发事件的方法。  
+ [in] The method used (by a derived class) to raise the event.  
   
  `rmdOtherMethods[]`  
- [in]有关其他方法与事件关联的标记的数组。 数组的最后一个元素必须是`mdMethodDefNil`。  
+ [in] An array of tokens for other methods associated with the event. The last element of the array must be `mdMethodDefNil`.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

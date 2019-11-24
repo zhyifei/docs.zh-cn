@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d58caac-2e75-4dfa-9249-32d8a624b247
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8956d72d25f240eff653d3eefb92b68431f4e2ae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c956f5d68c992f1b08988e59038e8667b391f734
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771780"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448913"
 ---
 # <a name="isymunmanagedmethodgetrootscope-method"></a>ISymUnmanagedMethod::GetRootScope 方法
-获取在此方法内的根词法范围。 此范围包括整个方法。  
+Gets the root lexical scope within this method. 此范围包括整个方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,13 +34,13 @@ HRESULT GetRootScope(
   
 ## <a name="parameters"></a>参数  
  `pRetVal`  
- [out]一个指针，它设置为返回[ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)接口。  
+ [out] A pointer that is set to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

@@ -14,20 +14,18 @@ helpviewer_keywords:
 ms.assetid: bf4ffa50-4506-4dd4-aa13-a0457b47ca74
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 354736890a4b042a8da5e747a0ab6ea3777e398e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ad34592223433f0bf541c390674bcf96839b6ca8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952906"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440813"
 ---
 # <a name="functionenter-function"></a>FunctionEnter 函数
-通知探查器控制正在传递到函数。  
+Notifies the profiler that control is being passed to a function.  
   
 > [!NOTE]
-> 此`FunctionEnter`函数在 .NET Framework 版本2.0 中已弃用, 其使用将导致性能下降。 改为使用[FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)函数。  
+> The `FunctionEnter` function is deprecated in the .NET Framework version 2.0, and its use will incur a performance penalty. Use the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) function instead.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,29 +37,29 @@ void __stdcall FunctionEnter (
   
 ## <a name="parameters"></a>参数  
  `funcID`  
- 中要传递控制的函数的标识符。  
+ [in] The identifier of the function to which control is passed.  
   
 ## <a name="remarks"></a>备注  
- `FunctionEnter`函数是回调; 必须实现它。 实现必须使用`__declspec`(`naked`) 存储类特性。  
+ The `FunctionEnter` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
   
- 在调用此函数之前, 执行引擎不会保存任何注册。  
+ The execution engine does not save any registers before calling this function.  
   
-- 进入时, 必须保存使用的所有寄存器, 包括浮点单元 (FPU) 中的所有寄存器。  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- 退出时, 必须通过弹出由其调用方推送的所有参数来还原堆栈。  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- 的`FunctionEnter`实现不应被阻止, 因为它将延迟垃圾回收。 实现不应尝试垃圾回收, 因为堆栈可能不处于垃圾回收友好状态。 如果尝试垃圾回收, 则运行时将被阻止, `FunctionEnter`直到返回。  
+ The implementation of `FunctionEnter` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionEnter` returns.  
   
- 此外, 该`FunctionEnter`函数不得调入托管代码或以任何方式导致托管的内存分配。  
+ Also, the `FunctionEnter` function must not call into managed code or in any way cause a managed memory allocation.  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl  
+ **Header:** CorProf.idl  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
- **.NET Framework 版本:** 1.1、1。0  
+ **.NET Framework Versions:** 1.1, 1.0  
   
 ## <a name="see-also"></a>请参阅
 

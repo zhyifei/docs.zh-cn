@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b72f5409-79af-4fa7-90a7-7630eec170f1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 77d54f6c8f67dda5132518d1fbd579a91ce82071
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ec0a86e3396ad42152bc0a244f74ad13deba16e4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777437"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446518"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute 方法
-调用以设置程序集级别的自定义特性。  
+Call to set assembly-level custom attributes.  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,31 +41,31 @@ HRESULT EmitAssemblyCustomAttribute(
   
 ## <a name="parameters"></a>参数  
  `AssemblyID`  
- 程序集的 ID。  
+ ID of the assembly.  
   
  `FileToken`  
- 定义属性的文件。 如果不指示未`AssemblyID`绑定的 .netmodule，则可以为 NULL。  
+ File that defiles the attribute. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
   
  `tkType`  
- 自定义属性的类型。  
+ Type of the custom attribute.  
   
  `pCustomValue`  
- 自定义值数据。  
+ Custom value data.  
   
  `cbCustomValue`  
- 自定义值数据的长度。  
+ Length of custom value data.  
   
  `bSecurity`  
- 如果自定义属性与程序集签名相关，则为 TRUE。  
+ TRUE if the custom attribute is related to assembly signing.  
   
  `bAllowMulti`  
- 如果要发出多个属性，则为 TRUE。  
+ TRUE if multiple attributes are to be emitted.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>要求  
- 需要 alink  
+ Requires alink.h  
   
 ## <a name="see-also"></a>请参阅
 

@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: ac193b6b78434245b8f11a4f627b4e1992feb8a7
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: d6518612c213d21c2dc7d80878121ccd3b7e2abb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69661276"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449851"
 ---
-# <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10:: EnumerateObjectReferences 方法
+# <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10::EnumerateObjectReferences Method
 
-给定 ObjectID、callback 和 clientData, 枚举每个对象引用 (如果有)。
+Given an ObjectID, callback and clientData, enumerates each object reference (if any).
 
 ## <a name="syntax"></a>语法
 
@@ -33,28 +33,28 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 #### <a name="parameters"></a>参数
 
 `objectId` \
-中要在其上枚举引用的对象。
+[in] The object to enumerate references on.
 
 `callback` \
-中将用对象的引用调用的函数。
+[in] The function that will be called with the references for the object.
 
 `clientData` \
-中探查器提供的要传递给函数`callback`的数据。
+[in] Profiler-provided data to pass to the `callback` function.
 
 ## <a name="remarks"></a>备注
 
-方法类似于 [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), 只不过它会按需对探查器进行引用, 而不是预先分配用于存储引用的数组。 `EnumerateObjectReferences`
+The `EnumerateObjectReferences` method is similar to [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), except that it walks the references on demand for the profiler instead of pre-allocating an array to store the references.
 
 ## <a name="requirements"></a>要求
 
-**适用**请参阅[支持 .Net Core 的操作系统](../../../core/windows-prerequisites.md#net-core-supported-operating-systems)。
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**标头：** Corprof.idl, Corprof.idl
+**头文件：** CorProf.idl、CorProf.h
 
-**类库**CorGuids.lib
+**库：** CorGuids.lib
 
-**.Net 版本:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>请参阅
 
-- [ICorProfilerInfo10 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

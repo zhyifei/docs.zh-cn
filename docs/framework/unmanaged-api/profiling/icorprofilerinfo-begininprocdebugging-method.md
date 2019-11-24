@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5c82c69-99f8-4447-aee0-42cca0a5eb5c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 618be7482616ea155798973d02a90f32d46164db
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fffc028c7706c86e8384483cc92ebad90b292861
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780269"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447753"
 ---
 # <a name="icorprofilerinfobegininprocdebugging-method"></a>ICorProfilerInfo::BeginInprocDebugging 方法
-初始化在进程中调试支持。 此方法是在.NET Framework 2.0 版中已过时。  
+Initializes in-process debugging support. This method is obsolete in the .NET Framework version 2.0.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,22 +35,22 @@ HRESULT BeginInprocDebugging(
   
 ## <a name="parameters"></a>参数  
  `fThisThreadOnly`  
- [in]将此值设置为`true`初始化调试支持仅当前的线程; 将其设置为`false`初始化的所有线程的调试支持。  
+ [in] Set this value to `true` to initialize debugging support for only the current thread; set it to `false` to initialize debugging support for all threads.  
   
  `pdwProfilerContext`  
- [out]指向返回的值标识的调试会话的指针。  
+ [out] The pointer to a returned value that identifies the debugging session.  
   
 ## <a name="remarks"></a>备注  
- CLR 调试服务支持在.NET framework 1.0 和 1.1 版中进行有限进程内调试。 探查器可以使用调试 API 的检查部分启用进程内调试。 但是，由于客户反馈，进程内调试已从.NET Framework 2.0 版中，在中删除并替换为符合分析 API 的更多的功能的一组。  
+ The CLR debugging services supported limited in-process debugging in the .NET Framework versions 1.0 and 1.1. In-process debugging enabled a profiler to use the inspection portions of the debugging API. However, due to customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** 1.0  
+ **.NET Framework Version:** 1.0  
   
 ## <a name="see-also"></a>请参阅
 

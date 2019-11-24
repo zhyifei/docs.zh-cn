@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 52794819-0a59-4bb1-a265-0f158cd5cd65
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e214af178972623bad3536565aa9bc51edc97260
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8ff7d5a593388bd3a584e031aea411dfdb6c9845
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763112"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445196"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>ICorProfilerCallback::AppDomainShutdownFinished 方法
-通知探查器已从进程中卸载应用程序域。  
+Notifies the profiler that an application domain has been unloaded from a process.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,20 +35,20 @@ HRESULT AppDomainShutdownFinished(
   
 ## <a name="parameters"></a>参数  
  `appDomainId`  
- [in]标识应用程序的程序集存储在其中的域。  
+ [in] Identifies the domain in which the application's assemblies are stored.  
   
  `hrStatus`  
- [in]一个 HRESULT，指示是否已成功应用程序域已被卸载。  
+ [in] An HRESULT that indicates whether the application domain was unloaded successfully.  
   
 ## <a name="remarks"></a>备注  
- 值`appDomainId`不是有效的信息请求后[icorprofilercallback:: Appdomainshutdownstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md)方法返回。  
+ The value of `appDomainId` is not valid for an information request after the [ICorProfilerCallback::AppDomainShutdownStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) method returns.  
   
- 卸载应用程序域的某些部分可能会继续后`AppDomainCreationFinished`回调。 失败的 HRESULT 在`hrStatus`表明发生了故障。 但是，成功的 HRESULT 在`hrStatus`仅表示已成功卸载应用程序域的第一部分。  
+ Some parts of unloading the application domain might continue after the `AppDomainCreationFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the application domain has succeeded.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 08dff60c-f01b-4050-8865-ea3f95361c9f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5d8827f46a12bd090fa27e71072d833607d34677
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6a5b3f1e9bf1444feb73949ef7133fbd9ae35134
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777350"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446476"
 ---
 # <a name="enumcustomattributes-method"></a>EnumCustomAttributes 方法
-检索程序集级别的自定义特性。  
+Retrieves assembly-level custom attributes.  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,25 +39,25 @@ HRESULT EnumCustomAttributes(
   
 ## <a name="parameters"></a>参数  
  `hEnum`  
- 枚举器的句柄。  
+ Handle of enumerator.  
   
  `tkType`  
- 要枚举的属性的类型。 `mdTokenNill`用于所有属性。  
+ Type of attributes to be enumerated. Use `mdTokenNill` for all attributes.  
   
  `rCustomValues`  
- 接收自定义特性标记。  
+ Receives custom attributes tokens.  
   
  `cMax`  
- 指定数组的`rCustomValues`大小。  
+ Specifies size of `rCustomValues` array.  
   
  `pcCustomValues`  
- 可以选择接收令牌值的计数。  
+ Optionally receives count of token values.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>要求  
- 需要 alink  
+ Requires alink.h  
   
 ## <a name="see-also"></a>请参阅
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 275ef87b-0b53-49f9-af6b-58506335dc06
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 54789003f7454a65449e55ea4d990edd672d9c1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9aace77c4b3549c033433d4c305b07daa1f7a8c1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774693"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448990"
 ---
 # <a name="isymunmanagedencupdateupdatemethodlines-method"></a>ISymUnmanagedENCUpdate::UpdateMethodLines 方法
-允许更新的方法，已不被重新编译，但其行已独立移动的行信息。 允许每个语句的增量。  
+Allows updating the line information for a method that has not been recompiled, but whose lines have moved independently. A delta for each statement is allowed.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,19 +36,19 @@ HRESULT UpdateMethodLines(
   
 ## <a name="parameters"></a>参数  
  `mdMethodToken`  
- [in]方法令牌的元数据。  
+ [in] The metadata of the method token.  
   
  `pDeltas`  
- [in]一个数组`INT32`值，该值指示方法中的每个序列点的增量。  
+ [in] An array of `INT32` values that indicates deltas for each sequence point in the method.  
   
  `cDeltas`  
- [in]一个`ULONG`包含的大小`pDeltas`参数。  
+ [in] A `ULONG` containing the size of the `pDeltas` parameter.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

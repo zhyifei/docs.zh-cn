@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8dcd7537-d0c6-498c-8a56-2c060310ef65
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 64971319f592ee097e45cff10ef46b76e8b3b0a5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1bbdfa93913b9fdf8aa164c8ca6c35cd33a228df
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782839"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449915"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a>ICorProfilerCallback::JITCompilationFinished 方法
-通知探查器在实时 (JIT) 编译器已完成编译函数。  
+Notifies the profiler that the just-in-time (JIT) compiler has finished compiling a function.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,20 +36,20 @@ HRESULT JITCompilationFinished(
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in]已编译的函数的 ID。  
+ [in] The ID of the function that was compiled.  
   
  `hrStatus`  
- [in]指示编译是否成功的值。  
+ [in] A value indicating whether compilation was successful.  
   
  `fIsSafeToBlock`  
- [in]一个值，该值向探查器是否阻止会影响运行时的操作。 值是`true`如果阻塞可能会导致运行时等待调用的线程返回从此回调; 否则为`false`。  
+ [in] A value indicating to the profiler whether blocking will affect the operation of the runtime. The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.  
   
- 尽管值`true`不会造成损害运行时、 但可能会扭曲分析结果。  
+ Although a value of `true` will not harm the runtime, it can skew the profiling results.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

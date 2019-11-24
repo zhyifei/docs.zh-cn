@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbdf853b-d1a4-4828-8ef7-53d121d8e6ae
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a68ea07c40c966422be6ebb663e62508032c2610
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9c96cacf508ef5c056a1ff4469247393fdfb9e9e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750444"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444473"
 ---
 # <a name="icorprofilercallbackrootreferences-method"></a>ICorProfilerCallback::RootReferences 方法
-通知探查器与垃圾回收后根引用的信息。  
+Notifies the profiler with information about root references after garbage collection.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,22 +35,22 @@ HRESULT RootReferences(
   
 ## <a name="parameters"></a>参数  
  `cRootRefs`  
- [in]中的引用数`rootRefIds`数组。  
+ [in] The number of references in the `rootRefIds` array.  
   
  `rootRefIds`  
- [in]一个对象 Id 引用静态对象或在堆栈上的对象的数组。  
+ [in] An array of object IDs that reference either a static object or an object on the stack.  
   
 ## <a name="remarks"></a>备注  
- 这两`RootReferences`并[ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)调用以通知探查器。 探查器通常会实现一个或另一个，但不是同时，因为传入的信息`RootReferences2`是传入的超集`RootReferences`。  
+ Both `RootReferences` and [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) are called to notify the profiler. Profilers will normally implement one or the other, but not both, because the information passed in `RootReferences2` is a superset of that passed in `RootReferences`.  
   
- 很可能`rootRefIds`数组以包含 null 对象。 例如，在堆栈上声明的所有对象引用被视为根的垃圾回收器，并将始终报告。  
+ It is possible for the `rootRefIds` array to contain a null object. For example, all object references declared on the stack are treated as roots by the garbage collector and will always be reported.  
   
- 通过返回的对象 Id`RootReferences`不能在该回调本身，因为垃圾回收可能正处于将对象从旧地址移到新的地址。 因此，探查器必须不尝试检查对象在`RootReferences`调用。 当[ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)是调用，所有对象都已移到其新位置并且可以安全地检查。  
+ The object IDs returned by `RootReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects from old addresses to new addresses. Therefore, profilers must not attempt to inspect objects during a `RootReferences` call. When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, all objects have been moved to their new locations and can be safely inspected.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

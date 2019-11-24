@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 83a0e4e7-ec06-40cb-9b63-700b9695bb04
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0cd154ac90418dd0f6f476151686ff670c01c98c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ca7c7570aff63aa328dddc0626648fa74397addc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632237"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448733"
 ---
 # <a name="enumimporttypes-method"></a>EnumImportTypes 方法
 
-枚举每个作用域中的每个类型。
+Enumerates each type in each scope.
 
 ## <a name="syntax"></a>语法
 
@@ -42,24 +40,24 @@ HRESULT EnumImportTypes(
 ## <a name="parameters"></a>参数
 
 `hEnum`\
-枚举器的句柄。
+Handle for enumerator.
 
 `dwMax`\
-要检索的类型的最大数目。
+Maximum number of types to retrieve.
 
 `aTypeDefs`\
-收到令牌类型，不能超过`dwMax`。
+Receives type tokens, not to exceed `dwMax`.
 
 `pdwCount`\
-接收中的类型的实际数目`aTypeDefs`。
+Receives actual number of type in `aTypeDefs`.
 
 ## <a name="return-value"></a>返回值
 
-如果该方法成功，返回，则为 S_OK。
+Returns S_OK if the method succeeds.
 
 ## <a name="requirements"></a>要求
 
-需要 alink.h
+Requires alink.h
 
 ## <a name="see-also"></a>请参阅
 

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ae2c4be-212c-4e74-9288-40a11dc26522
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e909680428c7957da2283d13f5676329d953bf22
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d28a0c8b7ee85f023026dde6f3cc8f3a8406aa64
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781895"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450311"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr 枚举
 包含一些值，用于描述字段的相应元数据。  
@@ -58,34 +56,34 @@ typedef enum CorFieldAttr {
 } CorFieldAttr;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`fdFieldAccessMask`|指定可访问性信息。|  
-|`fdPrivateScope`|指定不能引用的字段。|  
-|`fdPrivate`|指定字段只能由其父类型访问。|  
-|`fdFamANDAssem`|指定字段是由其程序集中的派生类可访问。|  
-|`fdAssembly`|指定该字段是可由其程序集中的所有类型访问。|  
-|`fdFamily`|指定该字段只能由其类型访问和派生类。|  
-|`fdFamORAssem`|指定该字段可由派生类中它的程序集的所有类型访问。|  
-|`fdPublic`|指定字段具有可见性的所有类型，此作用域的访问。|  
-|`fdStatic`|指定字段及其类型的成员，而不是实例成员。|  
-|`fdInitOnly`|指定在初始化后，无法更改该字段。|  
-|`fdLiteral`|指定字段值是一个编译时常量。|  
-|`fdNotSerialized`|指定项目扩展其类型时，该字段不会序列化。|  
-|`fdSpecialName`|指定该字段是特殊的并且其名称描述如何。|  
-|`fdPinvokeImpl`|指定字段实现通过 PInvoke 转发。|  
-|`fdReservedMask`|公共语言运行时，保留供内部使用。|  
-|`fdRTSpecialName`|指定公共语言运行时元数据内部 Api 应检查该名称的编码。|  
-|`fdHasFieldMarshal`|指定该字段包含封送处理信息。|  
-|`fdHasDefault`|指定该字段具有默认值。|  
-|`fdHasFieldRVA`|指定该字段具有相对虚拟地址。|  
+|`fdFieldAccessMask`|Specifies accessibility information.|  
+|`fdPrivateScope`|Specifies that the field cannot be referenced.|  
+|`fdPrivate`|Specifies that the field is accessible only by its parent type.|  
+|`fdFamANDAssem`|Specifies that the field is accessible by derived classes in its assembly.|  
+|`fdAssembly`|Specifies that the field is accessible by all types in its assembly.|  
+|`fdFamily`|Specifies that the field is accessible only by its type and derived classes.|  
+|`fdFamORAssem`|Specifies that the field is accessible by derived classes and by all types in its assembly.|  
+|`fdPublic`|Specifies that the field is accessible by all types with visibility of this scope.|  
+|`fdStatic`|Specifies that the field is a member of its type rather than an instance member.|  
+|`fdInitOnly`|Specifies that the field cannot be changed after it is initialized.|  
+|`fdLiteral`|Specifies that the field value is a compile-time constant.|  
+|`fdNotSerialized`|Specifies that the field is not serialized when its type is remoted.|  
+|`fdSpecialName`|Specifies that the field is special, and that its name describes how.|  
+|`fdPinvokeImpl`|Specifies that the field implementation is forwarded through PInvoke.|  
+|`fdReservedMask`|Reserved for internal use by the common language runtime.|  
+|`fdRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the name.|  
+|`fdHasFieldMarshal`|Specifies that the field contains marshaling information.|  
+|`fdHasDefault`|Specifies that the field has a default value.|  
+|`fdHasFieldRVA`|Specifies that the field has a relative virtual address.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

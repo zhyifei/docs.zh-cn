@@ -5,16 +5,16 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 6cbf31c8a1cdf6e853e56445d22f4a7513bd1859
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c59352f908c5f4a1fd2ca6dd631d26bb5d69f09a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042000"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441222"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>UI 自动化对标准控件的支持
 > [!NOTE]
-> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本主题包含有关对为 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]和 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]框架所开发的应用程序中标准控件的 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 支持的信息。  
   
@@ -44,8 +44,8 @@ ms.locfileid: "71042000"
 |Edit|Document|  
 |Edit|Edit|  
 |SysLink|超链接|  
-|Static|文本|  
-|Static|图像|  
+|Static|Text|  
+|Static|Image|  
 |SysIPAddress32|自定义|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
@@ -63,7 +63,7 @@ ms.locfileid: "71042000"
 |msctls_trackbar32|Slider|  
 |msctls_updown32|Spinner|  
 |msctls_statusbar32|StatusBar|  
-|SysTabControl32|Tab|  
+|SysTabControl32|选项卡|  
 |SysTabControl32|TabItem|  
 |ToolbarWindow32|ToolBar|  
 |ToolbarWindow32|MenuItem|  
@@ -77,13 +77,13 @@ ms.locfileid: "71042000"
 |SysTreeView32|树|  
 |SysTreeView32|TreeItem|  
   
- **注意** 仅在随 [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] 一起提供的版本中（在 RichEd20.dll 中为版本 3.1 和更高版本，在 MsftEdit.dll 中为版本 4.1 和更高版本）支持 RichEdit 控件。  
+ **Note** The RichEdit control is supported only for versions shipped with Windows Vista (in RichEd20.dll version 3.1 and later, and MsftEdit.dll version 4.1 and later).  
   
  不支持以下控件。  
   
 |类名|控件类型|  
 |----------------|------------------|  
-|SysAnimate32|图像|  
+|SysAnimate32|Image|  
 |SysPager|Spinner|  
 |SysDateTimePick32|自定义|  
 |SysMonthCal32|Calendar|  
@@ -94,9 +94,9 @@ ms.locfileid: "71042000"
   
 <a name="Windows_Forms_Controls"></a>   
 ## <a name="windows-forms-controls"></a>Windows 窗体控件  
- 通过 uiautomationclientsideproviders.dll 中的客户[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]端提供程序向 Windows 窗体控件公开。 此程序集将自动注册，以用于 UI 自动化客户端应用程序。  
+ Windows Forms controls are exposed to [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] through client-side providers in UIAutomationClientsideProviders.dll. 此程序集将自动注册，以用于 UI 自动化客户端应用程序。  
   
- 通常， [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支持作为公共控件的托管包装器 Windows 窗体控件。 支持以下控件。  
+ Typically, Windows Forms controls that are managed wrappers for [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] common controls are supported by [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. 支持以下控件。  
   
 |类名|  
 |----------------|  
@@ -129,14 +129,14 @@ ms.locfileid: "71042000"
 |TabControl/TabPage|  
 |文本框|  
 |计时器|  
-|ToolBar|  
+|Toolbar|  
 |ToolTip|  
 |TrackBar|  
 |TreeView|  
 |VscrollBar|  
 |Web 浏览器|  
   
- 以下控件[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]仅通过其对 Microsoft Active Accessibility 的支持公开。 某些功能可能不可用。  
+ The following controls are exposed to [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] only through their support for Microsoft Active Accessibility. 某些功能可能不可用。  
   
 |控件名称|  
 |------------------|  

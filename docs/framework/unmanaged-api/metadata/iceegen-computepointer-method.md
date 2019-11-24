@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: b6b95c04-0f2c-4fcc-a8bc-3b1dcbdba731
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5741ba1b4564a703ff57b45c728bb9efac0bb35a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 01be6c30e16e4abdd6002fc8207b33a9c76a2eef
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782007"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448754"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer 方法
-确定指定的代码部分的缓冲区。  
+Determines the buffer for the specified code section.  
   
- 此方法已过时，不应使用。  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,20 +39,20 @@ HRESULT ComputePointer (
   
 ## <a name="parameters"></a>参数  
  `section`  
- [in]要为其返回缓冲区在代码部分。  
+ [in] The code section for which to return a buffer.  
   
  `RVA`  
- [in]要为其获取一个指针，该方法相对虚拟地址。  
+ [in] The relative virtual address of the method for which to get a pointer.  
   
  `lpBuffer`  
- [out]指向返回的缓冲区的指针。  
+ [out] A pointer to the returned buffer.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

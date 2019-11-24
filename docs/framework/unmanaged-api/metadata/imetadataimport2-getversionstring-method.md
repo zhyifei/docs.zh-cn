@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 308183ee-fd44-4432-9d86-ef00d181b49b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d500584afd608f79e41e932be259d29ae51db2db
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c9f667edf30feb23e1cdaa28950503283fce42e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781573"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445221"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>IMetaDataImport2::GetVersionString 方法
-获取用于生成程序集的运行时的版本号。  
+Gets the version number of the runtime that was used to build the assembly.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,23 +37,23 @@ HRESULT GetVersionString (
   
 ## <a name="parameters"></a>参数  
  `pwzBuf`  
- [out]用于存储指定的版本字符串的数组。  
+ [out] An array to store the string that specifies the version.  
   
  `ccBufSize`  
- [in]大小，以宽字符为单位的`pwzBuf`数组。  
+ [in] The size, in wide characters, of the `pwzBuf` array.  
   
  `pccBufSize`  
- [out]中包括 null 终止符的宽字符数返回`pwzBuf`数组。  
+ [out] The number of wide characters, including a null terminator, returned in the `pwzBuf` array.  
   
 ## <a name="remarks"></a>备注  
- `GetVersionString`方法获取当前元数据范围的生成目标版本。 如果从未保存过作用域，它不会生成目标版本，并将返回空字符串。  
+ The `GetVersionString` method gets the built-for version of the current metadata scope. If the scope has never been saved, it will not have a built-for version, and an empty string will be returned.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

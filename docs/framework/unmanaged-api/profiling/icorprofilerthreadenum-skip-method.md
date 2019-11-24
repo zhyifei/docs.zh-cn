@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: acb8b029-4a96-4ed7-ae3c-310204e5ceea
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2c394c2b17404351bd0813ab1eb21230a1edd9de
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aaa8eaa2c4eb927a817425611f71e51c9f3d37af
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781094"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447579"
 ---
 # <a name="icorprofilerthreadenumskip-method"></a>ICorProfilerThreadEnum::Skip 方法
 从当前位置前移枚举器的光标，以便跳过指定的元素数量。  
@@ -36,23 +34,23 @@ HRESULT Skip (    [in] ULONG celt
   
 ## <a name="parameters"></a>参数  
  `celt`  
- [in]要跳过的元素数。  
+ [in] The number of elements to be skipped.  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`celt` 跳过的元素。|  
-|S_FALSE|少于`celt`跳过的元素，指示没有更多元素。|  
+|S_OK|`celt` elements were skipped.|  
+|S_FALSE|Fewer than `celt` elements were skipped, which indicates that there are no more elements.|  
   
 ## <a name="remarks"></a>备注  
- 此枚举器的光标的新位置是 （当前的位置） + `celt`。  
+ The new position of this enumerator's cursor is (current position) + `celt`.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: decd4f46-f3b2-466f-9501-e74f2b86b846
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c402dcda79f013b19b091c6309b3d71951018a18
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 23d293a87112c62cb2127b435faeca258a7de226
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776366"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444226"
 ---
 # <a name="assemblyrefflags-enumeration"></a>AssemblyRefFlags 枚举
-包含值，用于描述程序集引用的功能。  
+Contains values that describe features of an assembly reference.  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,16 +32,16 @@ typedef enum {
 } AssemblyRefFlags;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`arfFullOriginator`|指定程序集引用包含完整的、 未经哈希的发布服务器信息的程序集。|  
+|`arfFullOriginator`|Specifies that the assembly reference contains full, unhashed information about the publisher of the assembly.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

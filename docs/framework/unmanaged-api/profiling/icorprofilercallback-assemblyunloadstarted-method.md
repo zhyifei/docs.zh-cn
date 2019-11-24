@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6e47b7e5-0335-4dd3-8c42-d3c07d62b102
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cfcf2c74a2a44bd0539bf78e237e42553696b16c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3abf944df3619256791882bf61dfc4072b642c54
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762987"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445139"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>ICorProfilerCallback::AssemblyUnloadStarted 方法
-通知探查器正在卸载程序集。  
+Notifies the profiler that an assembly is being unloaded.  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,15 +34,15 @@ HRESULT AssemblyUnloadStarted(
   
 ## <a name="parameters"></a>参数  
  `assemblyId`  
- [in]标识正在卸载的程序集。  
+ [in] Identifies the assembly that is being unloaded.  
   
 ## <a name="remarks"></a>备注  
- 值`assemblyId`不是有效的信息请求后`AssemblyUnloadStarted`方法将返回-这是探查器的最后一次机会来获取有关此程序集的信息。  
+ The value of `assemblyId` is not valid for an information request after the `AssemblyUnloadStarted` method returns — this is the profiler's last chance to get information about this assembly.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

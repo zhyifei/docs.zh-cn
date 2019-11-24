@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ccda329-d752-4d89-abe8-511af3c3f4c9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0d446e2b78f41d43aa70f429e23f1f4be22fd799
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 59512cc1c1b280d7fe6deb2f9d721ad53547e356
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782496"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437954"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef 方法
-获取指向成员的 MemberRef 标记的指针，它是引用包含由指定<xref:System.Type>并具有指定的名称和元数据签名。  
+Gets a pointer to the MemberRef token for the member reference that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,33 +39,33 @@ HRESULT FindMemberRef (
   
 ## <a name="parameters"></a>参数  
  `td`  
- [in]对类或接口，包含要搜索的成员引用的 TypeRef 标记。 如果此值为`mdTokenNil`，在执行查找的全局变量或全局函数引用。  
+ [in] The TypeRef token for the class or interface that encloses the member reference to search for. If this value is `mdTokenNil`, the lookup is done for a global variable or a global-function reference.  
   
  `szName`  
- [in]要搜索的成员引用的名称。  
+ [in] The name of the member reference to search for.  
   
  `pvSigBlob`  
- [in]指向成员引用的二进制元数据签名的指针。  
+ [in] A pointer to the binary metadata signature of the member reference.  
   
  `cbSigBlob`  
- [in]以字节为单位的大小`pvSigBlob`。  
+ [in] The size in bytes of `pvSigBlob`.  
   
  `pmr`  
- [out]指向匹配的 MemberRef 标记的指针。  
+ [out] A pointer to the matching MemberRef token.  
   
 ## <a name="remarks"></a>备注  
- 指定使用封闭类或接口的成员 (`td`)，其名称 (`szName`)，并根据需要它的签名 (`pvSigBlob`)。  
+ You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).  
   
- 签名传递给`FindMemberRef`必须已生成在当前范围内，因为这些签名将绑定到特定的作用域。 签名可以嵌入令牌，用于标识封闭类或值类型。 令牌的本地 TypeDef 表中的索引。 无法生成上下文的当前作用域外部的运行时签名并使用该签名作为输入`FindMemberRef`。  
+ The signature passed to `FindMemberRef` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindMemberRef`.  
   
- `FindMemberRef` 查找仅直接在类或接口; 中定义的成员引用找不到继承的成员的引用。  
+ `FindMemberRef` finds only member references that were defined directly in the class or interface; it does not find inherited member references.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

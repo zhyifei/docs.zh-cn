@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44757163-1228-4213-a4c4-d4de503cc75d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6338034d6714e8770e06ff61994fdf4433eb1684
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 706ea37101f9f961e92d8cef2cf508c1dd0d56c1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781793"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450239"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a>CorLocalRefPreservation 枚举
 包含用于处理本地引用的标志值。  
@@ -37,18 +35,18 @@ typedef enum CorLocalRefPreservation
 } CorLocalRefPreservation;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`MDPreserveLocalRefsNone`|保留任何本地引用。|  
-|`MDPreserveLocalTypeRef`|保留本地类型引用。|  
-|`MDPreserveLocalMemberRef`|保留本地成员引用。|  
+|`MDPreserveLocalRefsNone`|Preserve no local references.|  
+|`MDPreserveLocalTypeRef`|Preserve local type references.|  
+|`MDPreserveLocalMemberRef`|Preserve local member references.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

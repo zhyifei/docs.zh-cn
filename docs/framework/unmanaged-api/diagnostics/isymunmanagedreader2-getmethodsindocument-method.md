@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7ae84d6-81e8-4cb7-a1f9-d48b6cde5d79
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a7fa192a8e8b8a876f672e36bb906a714b1266e2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 70c1d87ae32fb70f8d9f6e32b527394022459526
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736661"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446434"
 ---
 # <a name="isymunmanagedreader2getmethodsindocument-method"></a>ISymUnmanagedReader2::GetMethodsInDocument 方法
-获取每个方法中提供的文档包含行信息。  
+Gets every method that has line information in the provided document.  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,22 +38,22 @@ HRESULT GetMethodsInDocument(
   
 ## <a name="parameters"></a>参数  
  `document`  
- [in]指向文档的指针。  
+ [in] A pointer to the document.  
   
  `cMethod`  
- [in]一个`ULONG32`指示的大小`pRetVal`数组。  
+ [in] A `ULONG32` that indicates the size of the  `pRetVal` array.  
   
  `pcMethod`  
- [out]一个指向`ULONG32`接收包含方法所需的缓冲区的大小。  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the methods.  
   
  `pRetVal`  
- [out]指向接收方法的缓冲区的指针。  
+ [out] A pointer to the buffer that receives the methods.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

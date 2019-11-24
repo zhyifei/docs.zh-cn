@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9dcc8b3d-33ee-4c7c-8d6f-322c57b94a0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b64275def01d7b62f9a461de69a286769094305e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 99f529a151a42cf4a9ee1f74bd3a76a5b6b1b35f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777588"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445258"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl 方法
-创建继承自一个接口，方法的实现的定义，并将令牌返回到该方法实现定义。  
+Creates a definition for implementation of a method inherited from an interface, and returns a token to that method-implementation definition.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,20 +37,20 @@ HRESULT DefineMethodImpl (
   
 ## <a name="parameters"></a>参数  
  `td`  
- [in]`mdTypedef`令牌的实现类。  
+ [in] The `mdTypedef` token of the implementing class.  
   
  `tkBody`  
- [in]`mdMethodDef`或`mdMemberRef`令牌的代码体。  
+ [in] The `mdMethodDef` or `mdMemberRef` token of the code body.  
   
  `tkDecl`  
- [in]`mdMethodDef`或`mdMemberRef`正在实现的接口方法的令牌。  
+ [in] The `mdMethodDef` or `mdMemberRef` token of the interface method being implemented.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: d6ece160-26ad-4d39-abd7-05acd6f78c48
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 74e70f58600205d44a9ba052981b2cc67b3a44ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d01b864be231e5b0a3fd72dc2f3636a87c8cae83
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753812"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448628"
 ---
-# <a name="corprfgcgeneration-enumeration"></a>COR_PRF_GC_GENERATION 枚举
-标识垃圾回收的代。  
+# <a name="cor_prf_gc_generation-enumeration"></a>COR_PRF_GC_GENERATION 枚举
+Identifies a garbage-collection generation.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,26 +35,26 @@ typedef enum {
 } COR_PRF_GC_GENERATION;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`COR_PRF_GC_GEN_0`|该对象存储为第 0 代中。|  
-|`COR_PRF_GC_GEN_1`|该对象存储为第 1 代。|  
-|`COR_PRF_GC_GEN_2`|该对象存储为第 2 代。|  
-|`COR_PRF_GC_LARGE_OBJECT_HEAP`|该对象存储在大型对象堆。|  
+|`COR_PRF_GC_GEN_0`|The object is stored as generation 0.|  
+|`COR_PRF_GC_GEN_1`|The object is stored as generation 1.|  
+|`COR_PRF_GC_GEN_2`|The object is stored as generation 2.|  
+|`COR_PRF_GC_LARGE_OBJECT_HEAP`|The object is stored in the large-object heap.|  
   
 ## <a name="remarks"></a>备注  
- 垃圾回收器提高将对象划分为几个代根据年龄内存管理性能。 垃圾回收器当前正在使用三代，编号为 0、 1 和 2，以及用于大型对象的特殊堆段。 其大小大于特定值的对象存储在大型对象堆。 其他分配的对象最初属于第 0 代。 第 0 代中发生了垃圾回收后存在的所有对象都提升到第 1 代。 在第 1 代垃圾回收后存在的对象将移到第 2 代。  
+ The garbage collector improves memory management performance by dividing objects into generations based on age. The garbage collector currently uses three generations, numbered 0, 1, and 2, plus a special heap segment that is used for large objects. Objects whose size is larger than a particular value are stored in the large-object heap. Other allocated objects start out belonging to generation 0. All objects that exist after garbage collection occurs in generation 0 are promoted to generation 1. Objects that exist after garbage collection occurs in generation 1 move into generation 2.  
   
- 代的使用意味着，垃圾收集器在任何一次处理已分配对象的一个子集。  
+ The use of generations means that the garbage collector has to work with only a subset of the allocated objects at any one time.  
   
- `COR_PRF_GC_GENERATION`枚举由[COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md)结构。  
+ The `COR_PRF_GC_GENERATION` enumeration is used by the [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structure.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

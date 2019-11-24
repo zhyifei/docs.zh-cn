@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8cc3b0c3-d97d-4f71-9e7d-ef2a92b4959a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 187a5e673457d2d1eebb60cc1795e9885426c6d3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8e9e08ac903423b2e121f22cc9e43a660ccfac7b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781960"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450081"
 ---
 # <a name="imetadataimportenummethods-method"></a>IMetaDataImport::EnumMethods 方法
 枚举表示指定类型的方法的 MethodDef 标记。  
@@ -41,33 +39,33 @@ HRESULT EnumMethods (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in、 out]一个指向枚举器。 对于首次调用此方法，这必须为 NULL。  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `cl`  
- [in]方法来枚举与表示类型的 TypeDef 标记。  
+ [in] A TypeDef token representing the type with the methods to enumerate.  
   
  `rMethods`  
- [out]要存储的 MethodDef 标记的数组。  
+ [out] The array to store the MethodDef tokens.  
   
  `cMax`  
- [in]最大大小的 MethodDef`rMethods`数组。  
+ [in] The maximum size of the MethodDef `rMethods` array.  
   
  `pcTokens`  
- [out]在中返回的 MethodDef 标记数`rMethods`。  
+ [out] The number of MethodDef tokens returned in `rMethods`.  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethods` 已成功返回。|  
-|`S_FALSE`|没有要枚举的 MethodDef 标记。 在这种情况下，`pcTokens`为零。|  
+|`S_OK`|`EnumMethods` returned successfully.|  
+|`S_FALSE`|There are no MethodDef tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

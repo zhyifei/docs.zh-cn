@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 17c45f15-8c44-44da-b070-f902077b36e4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e45f5411d48032b86403e35358d7ce83d5f97c6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bf932b63973f93c56883f099ddaadd9d1519f337
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777909"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446328"
 ---
 # <a name="isymunmanagedscopegetlocals-method"></a>ISymUnmanagedScope::GetLocals 方法
-获取此范围内定义的本地变量。  
+Gets the local variables defined within this scope.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,19 +37,19 @@ HRESULT GetLocals(
   
 ## <a name="parameters"></a>参数  
  `cLocals`  
- [in]一个`ULONG32`指示的大小`locals`数组。  
+ [in] A `ULONG32` that indicates the size of the `locals` array.  
   
  `pcLocals`  
- [out]一个指向`ULONG32`接收包含本地变量所需的缓冲区的大小。  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the local variables.  
   
  `locals`  
- [out]接收本地变量的数组。  
+ [out] The array that receives the local variables.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

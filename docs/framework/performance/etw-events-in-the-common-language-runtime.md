@@ -8,19 +8,19 @@ helpviewer_keywords:
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 46ad58813da5b71b884ad55f796db3522b2f1920
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 83246f42275425bca48530915c7bf5c19f3b9f04
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046617"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447666"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>公共语言运行时中的 ETW 事件
 公共语言运行时 (CLR) 通过大量的调试和分析事件，提供有用的 Windows 事件跟踪 (ETW) 诊断信息。 CLR ETW 事件利用 Windows ETW 跟踪系统来扩充公共语言运行时所提供的现有分析和调试支持。  
   
- 有关 ETW 的详细信息，请参阅 MSDN 上的[使用 ETW 改善调试和性能优化](https://go.microsoft.com/fwlink/?LinkID=161142)一文。 有关 Xperf 的详细信息，请参阅 NTDebugging 博客中的 [Windows Performance Toolkit - Xperf](https://go.microsoft.com/fwlink/?LinkID=161144)（Windows 性能工具包 - Xperf）。  
+ More information about ETW is available in the [Improve Debugging and Performance Tuning with ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw) article. 有关 Xperf 的详细信息，请参阅 NTDebugging 博客中的 [Windows Performance Toolkit - Xperf](https://blogs.msdn.microsoft.com/ntdebugging/2008/04/03/windows-performance-toolkit-xperf/)（Windows 性能工具包 - Xperf）。  
   
- 事件主题中所述的所有事件都需要 .NET Framework 4 或更高版本。 Windows Vista 操作系统是支持的最低客户端，而 Windows Server 2008 是支持的最低服务器。  
+ The .NET Framework 4 or later is required for all the events described in the event topics. Windows Vista 操作系统是支持的最低客户端，而 Windows Server 2008 是支持的最低服务器。  
   
 ## <a name="in-this-section"></a>本节内容  
  [控制 .NET Framework 日志记录](controlling-logging.md)  

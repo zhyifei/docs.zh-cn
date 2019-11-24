@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d23a3408-b525-4aec-a186-2ac7ca65d7a4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a9d1cf182eaf6f245baa5d898bac3ca7d3190234
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6bbb41f8fd3ac37f1c21fe8b4f6159e3d303777c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763096"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445191"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback::AppDomainShutdownStarted 方法
-通知探查器正在从进程卸载程序的应用程序域。  
+Notifies the profiler that an application domain is being unloaded from a process.  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,15 +34,15 @@ HRESULT AppDomainShutdownStarted(
   
 ## <a name="parameters"></a>参数  
  `appDomainId`  
- [in]标识应用程序的程序集存储在其中的域。  
+ [in] Identifies the domain in which the application's assemblies are stored.  
   
 ## <a name="remarks"></a>备注  
- 值`appDomainId`不是有效的任何信息请求后`AppDomainShutdownStarted`方法将返回-这是探查器的最后一次机会来获取有关此应用程序域的信息。  
+ The value of `appDomainId` is not valid for any information request after the `AppDomainShutdownStarted` method returns — this is the profiler's last chance to get information about this application domain.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

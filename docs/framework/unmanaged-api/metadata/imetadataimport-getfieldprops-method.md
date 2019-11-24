@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 574ac706a07e7fcd701ab04f923d5171bea6f64a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 462512fd2c2b33905b45bb67599b23b301fc71f7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782379"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437993"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps 方法
 获取与指定 FieldDef 标记引用的字段关联的元数据。  
@@ -47,44 +45,44 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>参数  
  `mb`  
- [in]表示要获取关联的元数据的字段的 FieldDef 标记。  
+ [in] A FieldDef token that represents the field to get associated metadata for.  
   
  `pClass`  
- [out]指向表示字段所属的类类型的 TypeDef 标记的指针。  
+ [out] A pointer to a TypeDef token that represents the type of the class that the field belongs to.  
   
  `szField`  
- [out]字段的名称。  
+ [out] The name of the field.  
   
  `cchField`  
- [in]在宽字符的缓冲区的大小*szField*。  
+ [in] The size in wide characters of the buffer for *szField*.  
   
  `pchField`  
- [out]返回缓冲区的实际大小。  
+ [out] The actual size of the returned buffer.  
   
  `pdwAttr`  
- [out]与该字段的元数据关联的标志。  
+ [out] Flags associated with the field's metadata.  
   
  `ppvSigBlob`  
- [in]指向描述字段的二进制元数据值的指针。  
+ [in] A pointer to the binary metadata value that describes the field.  
   
  `pcbSigBlob`  
- [out]以字节为单位的大小`ppvSigBlob`。  
+ [out] The size in bytes of `ppvSigBlob`.  
   
  `pdwCPlusTypeFlag`  
- [out]一个标志，指定该字段的值类型。  
+ [out] A flag that specifies the value type of the field.  
   
  `ppValue`  
- [out]字段的常量值。  
+ [out] A constant value for the field.  
   
  `pcchValue`  
- [out]以字符为单位的大小`ppValue`，或如果不存在任何字符串则为零。  
+ [out] The size in chars of `ppValue`, or zero if no string exists.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

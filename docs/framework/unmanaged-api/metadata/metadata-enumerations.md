@@ -6,14 +6,12 @@ helpviewer_keywords:
 - metadata enumerations [.NET Framework]
 - unmanaged enumerations [.NET Framework], metadata
 ms.assetid: 711ab251-cfdb-4280-aaa6-9bc1b341cdc3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f92b87cc2748a709361ff2c0c8129db5f7fe6046
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92f2419070738a49f78c1f1497652cc0b89f3b21
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042193"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447859"
 ---
 # <a name="metadata-enumerations"></a>元数据枚举
 本节描述元数据 API 使用的非托管枚举。  
@@ -26,16 +24,16 @@ ms.locfileid: "62042193"
  包含一些值，用于描述程序集引用的函数。  
   
  [CeeSectionAttr 枚举](../../../../docs/framework/unmanaged-api/metadata/ceesectionattr-enumeration.md)  
- 提供用于指定以供节的特性值[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)接口。  
+ Provides values that specify the attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.  
   
  [CeeSectionRelocType 枚举](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md)  
- 提供要影响的类型值`reloc`发出的调用中的指令[iceegen:: Addsectionreloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)方法。  
+ Provides values to influence the type of `reloc` instruction emitted in a call to the [ICeeGen::AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md) method.  
   
  [COINITICOR 枚举](../../../../docs/framework/unmanaged-api/metadata/coiniticor-enumeration.md)  
- 指定使用的常量[CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md)初始化公共语言运行时。  
+ Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when initializing the common language runtime.  
   
  [COINITIEE 枚举](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md)  
- 指定使用的常量[CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)初始化公共语言运行时。  
+ Specifies constants used by [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) when initializing the common language runtime.  
   
  [CorArgType 枚举](../../../../docs/framework/unmanaged-api/metadata/corargtype-enumeration.md)  
  包含一些值，用于描述运行时句柄的本机类型。  
@@ -68,13 +66,13 @@ ms.locfileid: "62042193"
  包含一些值，用于描述字段的相应元数据。  
   
  [CorFileFlags 枚举](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)  
- 包含值，用于描述对的调用中定义的文件类型[imetadataassemblyemit:: Definefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)方法。  
+ Contains values that describe the type of file defined in a call to the [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) method.  
   
  [CorFileMapping 枚举](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)  
- 包含描述从调用返回的文件映射的类型的值[imetadatainfo:: Getfilemapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)方法。  
+ Contains values that describe the type of file mapping that is returned from a call to the [IMetaDataInfo::GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) method.  
   
  [CorGenericParamAttr 枚举](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)  
- 包含值，用于描述<xref:System.Type>泛型类型，作为调用中使用参数[IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)方法。  
+ Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to the [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md) method.  
   
  [CorImportOptions 枚举](../../../../docs/framework/unmanaged-api/metadata/corimportoptions-enumeration.md)  
  包含一些标志值，用于在导入当前作用域范围外的程序集的过程中控制行为。  
@@ -116,7 +114,7 @@ ms.locfileid: "62042193"
  包含一些值，用于描述方法参数的元数据。  
   
  [CorPEKind 枚举](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)  
- 包含值，用于描述可移植可执行文件，如从调用返回[IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)方法。  
+ Contains values that describe a portable executable file, as returned from a call to the [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md) method.  
   
  [CorPinvokeMap 枚举](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md)  
  包含一些值，用于描述 PInvoke 调用的功能。  
@@ -134,7 +132,7 @@ ms.locfileid: "62042193"
  包含一些值，用于指示查询保存操作的大小时所需的精度级别。  
   
  [CorSerializationType 枚举](../../../../docs/framework/unmanaged-api/metadata/corserializationtype-enumeration.md)  
- 包含一些值，用于描述公共语言运行时如何序列化对象。 这些值通常对应于 CorElementType 值。  
+ 包含一些值，用于描述公共语言运行时如何序列化对象。 These values generally correspond to CorElementType values.  
   
  [CorSetENC 枚举](../../../../docs/framework/unmanaged-api/metadata/corsetenc-enumeration.md)  
  包含一些值，用于在元数据生成期间影响行为。  
@@ -152,10 +150,10 @@ ms.locfileid: "62042193"
  包含一些值，用于描述非托管的调用约定。  
   
  [CorValidatorModuleType 枚举](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md)  
- 提供了所使用的值[IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)接口来指定模块 （与.obj 文件的 PE 文件） 的类型。  
+ Provides values used by the [IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md) interface to specify the type of the module (PE file vs. .obj file).  
   
  [COUNINITIEE 枚举](../../../../docs/framework/unmanaged-api/metadata/couninitiee-enumeration.md)  
- 指定使用的常量[CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md)初始化公共语言运行时。  
+ Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.  
   
 ## <a name="related-sections"></a>相关章节  
  [元数据接口](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

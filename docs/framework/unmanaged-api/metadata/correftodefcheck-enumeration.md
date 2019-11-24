@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9a80f1a-55af-4459-b095-8441aae16119
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2ae87dd4538a9a8e88591f498c0ce77b51bfa852
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e6c3c9b842bd823e8975661964480fd801779b2d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781623"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450130"
 ---
 # <a name="correftodefcheck-enumeration"></a>CorRefToDefCheck 枚举
 指定用于控制将哪些引用项转换为相应定义以优化代码的标志。  
@@ -38,20 +36,20 @@ typedef enum CorRefToDefCheck {
 } CorRefToDefCheck;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|指定类型的引用和成员引用应转换为定义。 这是默认值 (`MDTypeRefToDef` &#124; `MDMemberRefToDef`)。|  
-|`MDRefToDefAll`|指定应将所有被引用的项转换为定义。|  
-|`MDRefToDefNone`|指定应将任何被引用的项转换为定义。|  
-|`MDTypeRefToDef`|指定类型引用仅应将转换为类型定义。|  
-|`MDMemberRefToDef`|指定成员引用仅应转换为定义。 也就是说，成员引用应转换为方法定义或字段定义。|  
+|`MDRefToDefDefault`|Specifies that type references and member references should be converted to definitions. This is the default value (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
+|`MDRefToDefAll`|Specifies that all referenced items should be converted to definitions.|  
+|`MDRefToDefNone`|Specifies that no referenced items should be converted to definitions.|  
+|`MDTypeRefToDef`|Specifies that only type references should be converted to type definitions.|  
+|`MDMemberRefToDef`|Specifies that only member references should be converted to definitions. That is, member references should be converted to either method definitions or field definitions.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

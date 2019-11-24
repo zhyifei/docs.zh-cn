@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3eb41151-a228-43e3-ba8f-e6dd3ceb8542
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5d479e9f55cf7d7a13fef99f302bfd8d9d89d47f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 401dfbea0da309db24f3052f462daa66e8bbef4a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776954"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449264"
 ---
 # <a name="isymunmanagedconstantgetsignature-method"></a>ISymUnmanagedConstant::GetSignature 方法
-获取常量的签名。  
+Gets the signature of the constant.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,19 +37,19 @@ HRESULT GetSignature(
   
 ## <a name="parameters"></a>参数  
  `cSig`  
- [in]缓冲区的长度的`pcSig`参数指向。  
+ [in] The length of the buffer that the `pcSig` parameter points to.  
   
  `pcSig`  
- [out]一个指向`ULONG32`用于接收大小，以字符为单位，包含该签名所需的缓冲区。  
+ [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.  
   
  `sig`  
- [out]存储签名的缓冲区。  
+ [out] The buffer that stores the signature.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

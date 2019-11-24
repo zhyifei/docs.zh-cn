@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4effbe95-c36e-4a45-8b2a-ee21339415fb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1bb9a444d8e8b674d1f173214d8bac427f24e408
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 048d784a55fd7c29c837a54fbd5adcdcf62a7a2c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759402"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448856"
 ---
 # <a name="isymunmanagedmethodgettoken-method"></a>ISymUnmanagedMethod::GetToken 方法
 返回此方法的元数据标记。  
@@ -36,13 +34,13 @@ HRESULT GetToken(
   
 ## <a name="parameters"></a>参数  
  `pToken`  
- [out]一个指向`mdMethodDef`用于接收大小，以字符为单位，包含的元数据所需的缓冲区。  
+ [out] A pointer to a `mdMethodDef` that receives the size, in characters, of the buffer required to contain the metadata.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

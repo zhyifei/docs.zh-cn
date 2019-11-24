@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4a16374c-94b0-47b0-9fed-88c2b0cdccd4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 158ecc036d56e2ad9a3fa650677c04ebcbfd7696
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2e7ed4e1529104db30b0b06665f74342d9ca9a01
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777228"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447241"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken 方法
-检索给定 keyfile 或 key 容器的公钥标记。  
+Retrieves the public key token for a given keyfile or key container.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,22 +37,22 @@ HRESULT GetPublicKeyToken(
   
 ## <a name="parameters"></a>参数  
  `pszKeyFile`  
- 密钥的文件名。  
+ Filename of the key.  
   
  `pszKeyContainer`  
- 密钥容器的名称。  
+ Name of the key container.  
   
  `pvPublicKeyToken`  
- 要存储密钥标记的地址。  
+ Address where key token is to be stored.  
   
  `pcbPublicKeyToken`  
- 指定指定的缓冲区`pvPublicKeyToken`的大小（以字节为单位）。 返回时，包含所使用的实际字节数。  
+ Specifies the size, in bytes, of the buffer indicated by `pvPublicKeyToken`. Upon return, contains actual number of bytes used.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>要求  
- 需要 alink。  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>请参阅
 

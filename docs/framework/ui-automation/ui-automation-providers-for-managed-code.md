@@ -8,18 +8,18 @@ helpviewer_keywords:
 - UI Automation, custom user interface (UI) elements
 - providers, UI Automation
 ms.assetid: 5f82f731-f1b5-4c8b-b47c-d11279a02574
-ms.openlocfilehash: dd07b07d2ccf649952cddfcca47d30a12570b048
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ea0d7a3f5912cc8a30d9e8eced91770ad9c9255e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042033"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441482"
 ---
 # <a name="ui-automation-providers-for-managed-code"></a>托管代码的 UI 自动化提供程序
 > [!NOTE]
-> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
- 本部分包含概述和帮助主题，这些主题介绍如何编写[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]自定义[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]元素的提供程序。  
+ This section contains overviews and how-to topics that describe how to write [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] providers for custom [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.  
   
 ## <a name="in-this-section"></a>本节内容  
  [服务器端 UI 自动化提供程序实现](server-side-ui-automation-provider-implementation.md)  

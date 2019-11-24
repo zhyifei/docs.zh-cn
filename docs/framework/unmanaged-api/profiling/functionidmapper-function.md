@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: b8205b60-1893-4303-8cff-7ac5a00892aa
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b9dee1404a8da63208bba7b7529b16eabbee3254
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 23c6f0a29160b6e1dc194cf360c07374c565522b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745765"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440701"
 ---
 # <a name="functionidmapper-function"></a>FunctionIDMapper 函数
-通知探查器函数的给定的标识符可能被重新映射到要在中使用的备用 ID [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)， [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)，和[FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)该函数的回调。 `FunctionIDMapper` 此外还要使探查器指示它是否想要接收该函数的回调。  
+Notifies the profiler that the given identifier of a function may be remapped to an alternative ID to be used in the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), and [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) callbacks for that function. `FunctionIDMapper` 此外还要使探查器指示它是否想要接收该函数的回调。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,24 +38,24 @@ UINT_PTR __stdcall FunctionIDMapper (
  [in] 要重新映射的函数标识符。  
   
  `pbHookFunction`  
- [out]指向一个值，探查器设置为该值`true`如果想要接收`FunctionEnter2`， `FunctionLeave2`，和`FunctionTailcall2`回调; 否则，此值设置为`false`。  
+ [out] A pointer to a value that the profiler sets to `true` if it wants to receive `FunctionEnter2`, `FunctionLeave2`, and `FunctionTailcall2` callbacks; otherwise, it sets this value to `false`.  
   
 ## <a name="return-value"></a>返回值  
- 探查器返回一个执行引擎用作替代函数标识符的值。 返回值不能为 null，除非在 `pbHookFunction` 中返回 `false`。 否则，返回值为 null 会产生不可预知的结果，包括可能停止该过程。  
+ 探查器返回一个执行引擎用作替代函数标识符的值。 返回值不能为 null，除非在 `pbHookFunction` 中返回 `false`。 Otherwise, a null return value will produce unpredictable results, including possibly halting the process.  
   
 ## <a name="remarks"></a>备注  
- `FunctionIDMapper`函数是一个回调。 它被实现由探查器将重新映射到更适用于探查器的某个其他标识符的函数 ID。 `FunctionIDMapper`返回要在任何给定的函数进行的备用 ID。 执行引擎中的探查器返回到表示通过此备用 ID，除了传统的函数 ID，然后遵循探查器的请求`clientData`的参数`FunctionEnter2`， `FunctionLeave2`，和`FunctionTailcall2`挂钩，以标识为其调用挂钩函数。  
+ The `FunctionIDMapper` function is a callback. It is implemented by the profiler to remap a function ID to some other identifier that is more useful for the profiler. The `FunctionIDMapper` returns the alternate ID to be used for any given function. The execution engine then honors the profiler's request by passing this alternate ID, in addition to the traditional function ID, back to the profiler in the `clientData` parameter of the `FunctionEnter2`, `FunctionLeave2`, and `FunctionTailcall2` hooks, to identify the function for which the hook is being called.  
   
- 可以使用[icorprofilerinfo:: Setfunctionidmapper](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)方法，以指定的实现`FunctionIDMapper`函数。 您可以调用`ICorProfilerInfo::SetFunctionIDMapper`方法只有一次，我们建议你在执行[icorprofilercallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)回调。  
+ You can use the [ICorProfilerInfo::SetFunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md) method to specify the implementation of the `FunctionIDMapper` function. You can call the `ICorProfilerInfo::SetFunctionIDMapper` method only once, and we recommend that you do so in the [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) callback.  
   
- 默认情况下，假定，探查器，用于设置 COR_PRF_MONITOR_ENTERLEAVE 标志通过使用[icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)，和用于设置挂钩通过[icorprofilerinfo:: Setenterleavefunctionhooks](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setenterleavefunctionhooks-method.md)或[ICorProfilerInfo2::SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)，应会收到`FunctionEnter2`， `FunctionLeave2`，并`FunctionTailcall2`的每个函数的回调。 但是，探查器可以实现`FunctionIDMapper`要有选择地避免对于某些接收这些回调函数通过设置`pbHookFunction`到`false`。  
+ By default, it is assumed that a profiler that sets the COR_PRF_MONITOR_ENTERLEAVE flag by using [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md), and which sets hooks via [ICorProfilerInfo::SetEnterLeaveFunctionHooks](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setenterleavefunctionhooks-method.md) or [ICorProfilerInfo2::SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md), should receive the `FunctionEnter2`, `FunctionLeave2`, and `FunctionTailcall2` callbacks for every function. However, profilers may implement `FunctionIDMapper` to selectively avoid receiving these callbacks for certain functions by setting `pbHookFunction` to `false`.  
   
- 探查器应为容错进行事件探查应用程序的多个线程同时调用相同的方法/函数的情况。 在这种情况下，探查器可能会收到多个`FunctionIDMapper`相同的回调`FunctionID`。 探查器应确保以从此回调返回的相同值，它具有相同调用多次时`FunctionID`。  
+ Profilers should be tolerant of cases where multiple threads of a profiled application are calling the same method/function simultaneously. In such cases, the profiler may receive multiple `FunctionIDMapper` callbacks for the same `FunctionID`. The profiler should be certain to return the same values from this callback when it is called multiple times with the same `FunctionID`.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **库：** CorGuids.lib  
   

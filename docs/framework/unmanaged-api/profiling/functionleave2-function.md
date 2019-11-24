@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 124921f2f99ca4d8da88cc3713624383e225a26f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e40687f7f843dc563801bb01b503d2ae94a094fc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781273"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446014"
 ---
 # <a name="functionleave2-function"></a>FunctionLeave2 函数
-函数即将返回给调用方，并提供有关堆栈帧和函数返回值的信息，请通知探查器。  
+Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,40 +37,40 @@ void __stdcall FunctionLeave2 (
   
 ## <a name="parameters"></a>参数  
  `funcId`  
- [in]函数返回的标识符。  
+ [in] The identifier of the function that is returning.  
   
  `clientData`  
- [in]通过探查器之前指定的重新映射的函数标识符[FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)函数。  
+ [in] The remapped function identifier, which the profiler previously specified via the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function.  
   
  `func`  
- [in]一个`COR_PRF_FRAME_INFO`值，该值指向有关堆栈帧的信息。  
+ [in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.  
   
- 探查器应将此视为可以传递回执行引擎的不透明句柄[ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)方法。  
+ The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.  
   
  `retvalRange`  
- [in]一个指向[COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)结构，它指定函数的返回值的内存位置。  
+ [in] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that specifies the memory location of the function's return value.  
   
- 若要访问返回值信息`COR_PRF_ENABLE_FUNCTION_RETVAL`标志必须设置。 可以使用探查器[icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法设置的事件标志。  
+ In order to access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set. The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags.  
   
 ## <a name="remarks"></a>备注  
- 值`func`并`retvalRange`参数都不是有效后`FunctionLeave2`函数返回，因为这些值可能会更改或已损坏。  
+ The values of the `func` and `retvalRange` parameters are not valid after the `FunctionLeave2` function returns because the values may change or be destroyed.  
   
- `FunctionLeave2`函数是一个回调; 必须实现它。 实现必须使用`__declspec`(`naked`) 存储类特性。  
+ The `FunctionLeave2` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
   
- 调用此函数之前，执行引擎不会保存任何寄存器。  
+ The execution engine does not save any registers before calling this function.  
   
-- 在进入时，必须保存使用，包括浮点单元 (FPU) 中的所有注册。  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- 退出时，必须通过弹出已推送到由其调用方的所有参数由还原堆栈。  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- 实现`FunctionLeave2`不应阻止，因为它会延迟垃圾回收。 实现不应尝试垃圾回收，因为堆栈可能不是在垃圾收集友好状态中。 如果尝试在垃圾回收，则运行时将阻止直到`FunctionLeave2`返回。  
+ The implementation of `FunctionLeave2` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionLeave2` returns.  
   
- 此外，`FunctionLeave2`函数不能调用到托管代码中或以任何方式导致托管的内存分配。  
+ Also, the `FunctionLeave2` function must not call into managed code or in any way cause a managed memory allocation.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **库：** CorGuids.lib  
   

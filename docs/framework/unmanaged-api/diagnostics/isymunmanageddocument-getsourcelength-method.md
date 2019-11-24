@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e087dbbb-f4fb-4fbe-8292-e4f1a14d0df2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bf79c05b3b16bb61ac59534dd83cb8eb2bb1f823
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0551e8b4f381f76e7bbac06ca7b5f6aea5bbb61f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776698"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449148"
 ---
 # <a name="isymunmanageddocumentgetsourcelength-method"></a>ISymUnmanagedDocument::GetSourceLength 方法
 获取嵌入源的长度（以字节表示）。  
@@ -36,10 +34,10 @@ HRESULT GetSourceLength(
   
 ## <a name="parameters"></a>参数  
  `pRetVal`  
- [out]指向指示嵌入源的长度，以字节为单位的变量的指针。  
+ [out] A pointer to a variable that indicates the length, in bytes, of the embedded source.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则为 S_OK。  
+ S_OK if the method succeeds.  
   
 ## <a name="see-also"></a>请参阅
 

@@ -14,29 +14,27 @@ helpviewer_keywords:
 ms.assetid: 37527a84-4b03-4f08-8135-94d898599089
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a6f514cc070a0a38eb09a5387efc8611100765b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e4a415b21e3980e7603319d7acbb3831462fac9e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944096"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449293"
 ---
 # <a name="isymunmanagedbinder3-interface"></a>ISymUnmanagedBinder3 接口
-扩展符号联编程序接口。 通过对`QueryInterface` `ISymUnmanagedBinder`实现接口的对象调用来获取此接口。  
+Extends the symbol binder interface. Obtain this interface by calling `QueryInterface` on an object that implements the `ISymUnmanagedBinder` interface.  
   
 > [!IMPORTANT]
-> 打开不受信任的源中的程序数据库 (PDB) 文件会带来安全风险。  
+> It is a security risk to open a program database (PDB) file from an untrusted source.  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetReaderFromCallback 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|允许用户通过回调`IID_IDiaReadExeAtRVACallback` `IID_IDiaReadExeAtOffsetCallback`来实现或提供, 以从内存中获取调试目录信息|  
+|[GetReaderFromCallback 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|Allows the user to implement or supply via callback either an `IID_IDiaReadExeAtRVACallback` or `IID_IDiaReadExeAtOffsetCallback` to obtain the Debug directory information from memory|  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym, CorSym  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

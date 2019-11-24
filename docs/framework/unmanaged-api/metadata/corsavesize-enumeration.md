@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: eb95ce39-5688-43c1-a34d-578794b32faa
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c1e7bbac17d9a9ae191a5ad6d69b52a806383562
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0f870d9d7d1bc292b213d690df508a6c28bac2ab
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781604"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450095"
 ---
 # <a name="corsavesize-enumeration"></a>CorSaveSize 枚举
 包含一些值，用于指示查询保存操作的大小时所需的精度级别。  
@@ -36,20 +34,20 @@ typedef enum CorSaveSize {
 } CorSaveSize;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`cssAccurate`|指定返回值应为完全。|  
-|`cssQuick`|指定应估计的返回值。|  
-|`cssDiscardTransientCAs`|指定应删除丢弃的类型。|  
+|`cssAccurate`|Specifies that the return value should be exact.|  
+|`cssQuick`|Specifies that the return value should be estimated.|  
+|`cssDiscardTransientCAs`|Specifies that discardable types should be removed.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

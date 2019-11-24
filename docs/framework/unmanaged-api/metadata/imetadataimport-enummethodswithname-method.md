@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8624913-2e23-46ad-a0c1-bb8eccbbf20f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e5de55d74741e9deb33be2f9adf15a970561664b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b0817288040550b5f4c3c4ec063f6a7fdb004137
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779735"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450059"
 ---
 # <a name="imetadataimportenummethodswithname-method"></a>IMetaDataImport::EnumMethodsWithName 方法
 枚举具有指定名称并且由指定的 TypeDef 标记所引用的类型定义的方法。  
@@ -42,39 +40,39 @@ HRESULT EnumMethodsWithName (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in、 out]一个指向枚举器。 对于首次调用此方法，这必须为 NULL。  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `cl`  
- [in]表示其方法来枚举的类型的 TypeDef 标记。  
+ [in] A TypeDef token representing the type whose methods to enumerate.  
   
  `szName`  
- [in]枚举的作用域限制名称。  
+ [in] The name that limits the scope of the enumeration.  
   
  `rMethods`  
- [out]用于存储 MethodDef 标记的数组。  
+ [out] The array used to store the MethodDef tokens.  
   
  `cMax`  
  [in] `rMethods` 数组的最大大小。  
   
  `pcTokens`  
- [out]在中返回的 MethodDef 标记数`rMethods`。  
+ [out] The number of MethodDef tokens returned in `rMethods`.  
   
 ## <a name="remarks"></a>备注  
- 此方法枚举字段和方法，但不是属性或事件。 与不同[imetadataimport:: Enummethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md)，`EnumMethodsWithName`丢弃不具有指定的名称的所有方法标记。  
+ This method enumerates fields and methods, but not properties or events. Unlike [IMetaDataImport::EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` discards all method tokens that do not have the specified name.  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodsWithName` 已成功返回。|  
-|`S_FALSE`|没有要枚举的标记。 在这种情况下，`pcTokens`为零。|  
+|`S_OK`|`EnumMethodsWithName` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

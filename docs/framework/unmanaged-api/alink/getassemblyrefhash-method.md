@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 091a18bd-e901-46f6-b999-74d71c8a7c41
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d19eebaa3aa0ebb6f9807f0cf277b7ed6183c148
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c68f43ce2f79ee6e4ec44ce4b2f0dbfb1c1185fa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777190"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433873"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash 方法
-检索给定程序集的哈希 blob。  
+Retrieves a hash blob for a given assembly.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,19 +36,19 @@ HRESULT GetAssemblyRefHash(
   
 ## <a name="parameters"></a>参数  
  `FileToken`  
- 哈希将引用的程序集的 ID。  
+ ID of assembly to which the hash will refer.  
   
  `ppvHash`  
- 接收生成的哈希 blob。  
+ Receives the resulting hash blob.  
   
  `pcbHash`  
- 接收哈希 blob 的大小（以字节为单位）。  
+ Receives size, in bytes, of hash blob.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>要求  
- 需要 alink  
+ Requires alink.h  
   
 ## <a name="see-also"></a>请参阅
 

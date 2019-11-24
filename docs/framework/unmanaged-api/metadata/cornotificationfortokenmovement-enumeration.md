@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1edd1670-976a-4fc8-bef7-7c41e60ad989
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7a7859bd890a2ecc10b5117f697ff8b06ad569f6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 411fad0accb59431f776c5bd66e8bd3027ddd907
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781691"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450157"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>CorNotificationForTokenMovement 枚举
-指定标记重新映射发生时将发送到元数据 API 客户端的通知。  
+Specifies the notifications that will be sent to the metadata API client when a token remap occurs.  
   
 ## <a name="syntax"></a>语法  
   
@@ -61,41 +59,41 @@ typedef enum CorNotificationForTokenMovement {
 } CorNotificationForTokenMovement;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`MDNotifyDefault`|通知时间`mdTypeRef`， `mdMethodDef`， `mdMemberRef`，或`mdFieldDef`令牌移动。|  
-|`MDNotifyAll`|在任何标记移动时通知。|  
-|`MDNotifyNone`|不会通知标记移动时。|  
-|`MDNotifyMethodDef`|通知时间`mdMethodDef`标记移动。|  
-|`MDNotifyMemberRef`|通知时间`mdMemberRef`标记移动。|  
-|`MDNotifyFieldDef`|通知时间`mdFieldDef`标记移动。|  
-|`MDNotifyTypeRef`|通知时间`mdTypeRef`标记移动。|  
-|`MDNotifyTypeDef`|通知时间`mdTypeDef`标记移动。|  
-|`MDNotifyParamDef`|通知时间`mdParamDef`标记移动。|  
-|`MDNotifyInterfaceImpl`|通知时间`mdInterfaceImpl`标记移动。|  
-|`MDNotifyProperty`|通知时间`mdProperty`标记移动。|  
-|`MDNotifyEvent`|通知时间`mdEvent`标记移动。|  
-|`MDNotifySignature`|通知时间`mdSignature`标记移动。|  
-|`MDNotifyTypeSpec`|通知时间`mdTypeSpec`标记移动。|  
-|`MDNotifyCustomAttribute`|通知时间`mdCustomAttribute`标记移动。|  
-|`MDNotifySecurityValue`|通知时间`mdSecurityValue`标记移动。|  
-|`MDNotifyPermission`|通知时间`mdPermission`标记移动。|  
-|`MDNotifyModuleRef`|通知时间`mdModuleRef`标记移动。|  
-|`MDNotifyNameSpace`|通知时间`mdNameSpace`标记移动。|  
-|`MDNotifyAssemblyRef`|通知时间`mdAssemblyRef`标记移动。|  
-|`MDNotifyFile`|通知时间`mdFile`标记移动。|  
-|`MDNotifyExportedType`|通知时间`mdExportedType`标记移动。|  
-|`MDNotifyResource`|通知时间`mdManifestResource`标记移动。|  
+|`MDNotifyDefault`|Notify when `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, or `mdFieldDef` tokens move.|  
+|`MDNotifyAll`|Notify when any token moves.|  
+|`MDNotifyNone`|Do not notify when tokens move.|  
+|`MDNotifyMethodDef`|Notify when an `mdMethodDef` token moves.|  
+|`MDNotifyMemberRef`|Notify when an `mdMemberRef` token moves.|  
+|`MDNotifyFieldDef`|Notify when an `mdFieldDef` token moves.|  
+|`MDNotifyTypeRef`|Notify when an `mdTypeRef` token moves.|  
+|`MDNotifyTypeDef`|Notify when an `mdTypeDef` token moves.|  
+|`MDNotifyParamDef`|Notify when an `mdParamDef` token moves.|  
+|`MDNotifyInterfaceImpl`|Notify when an `mdInterfaceImpl` token moves.|  
+|`MDNotifyProperty`|Notify when an `mdProperty` token moves.|  
+|`MDNotifyEvent`|Notify when an `mdEvent` token moves.|  
+|`MDNotifySignature`|Notify when an `mdSignature` token moves.|  
+|`MDNotifyTypeSpec`|Notify when an `mdTypeSpec` token moves.|  
+|`MDNotifyCustomAttribute`|Notify when an `mdCustomAttribute` token moves.|  
+|`MDNotifySecurityValue`|Notify when an `mdSecurityValue` token moves.|  
+|`MDNotifyPermission`|Notify when an `mdPermission` token moves.|  
+|`MDNotifyModuleRef`|Notify when an `mdModuleRef` token moves.|  
+|`MDNotifyNameSpace`|Notify when an `mdNameSpace` token moves.|  
+|`MDNotifyAssemblyRef`|Notify when an `mdAssemblyRef` token moves.|  
+|`MDNotifyFile`|Notify when an `mdFile` token moves.|  
+|`MDNotifyExportedType`|Notify when an `mdExportedType` token moves.|  
+|`MDNotifyResource`|Notify when an `mdManifestResource` token moves.|  
   
 ## <a name="remarks"></a>备注  
- 令牌可能会重新映射 （即移动） 期间元数据合并。  
+ A token may be re-mapped (that is, moved) during a metadata merge.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

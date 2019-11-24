@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 75594833-bed3-47b2-a426-b75c5fe6fbcf
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e084bc957eca9474078ed5ca3aef0276361dbe1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d2d9ca77e764fe439753f1174a42af5ef80faa59
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745536"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447702"
 ---
-# <a name="corprfsuspendreason-enumeration"></a>COR_PRF_SUSPEND_REASON 枚举
-指示运行时挂起的原因。  
+# <a name="cor_prf_suspend_reason-enumeration"></a>COR_PRF_SUSPEND_REASON 枚举
+Indicates the reason that the runtime is suspended.  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,26 +38,26 @@ typedef enum {
 } COR_PRF_SUSPEND_REASON;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_SUSPEND_OTHER`|运行时挂起，原因不明。|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC`|在运行时挂起垃圾回收集合请求提供服务。<br /><br /> 垃圾收集相关回调之间发生[icorprofilercallback:: Runtimesuspendfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md)并[icorprofilercallback:: Runtimeresumestarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md)回调。|  
-|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|运行时挂起，以便`AppDomain`可以关闭。<br /><br /> 当挂起运行时，运行时将确定哪些线程处于`AppDomain`，它是正在关闭，并将它们设置为继续时中止。 有没有`AppDomain`-此挂起期间的特定回调。|  
-|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|运行时挂起，以便进行代码间距调整。<br /><br /> 代码时，才会仅在实时 (JIT) 编译器处于活动状态时使用代码间距调整已启用。 代码间距调整回调发生之间`ICorProfilerCallback::RuntimeSuspendFinished`和`ICorProfilerCallback::RuntimeResumeStarted`回调。 **注意：** CLR JIT 不会在.NET Framework 2.0 版中，不宣传函数，以便在 2.0 中不使用此值。|  
-|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|运行时挂起，以便它可以关闭。 它必须挂起所有线程完成该操作。|  
-|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|运行时挂起进行进程内调试。|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|在运行时挂起垃圾回收准备。|  
-|`COR_PRF_SUSPEND_FOR_REJIT`|运行时挂起为 JIT 重新编译。|  
+|`COR_PRF_FIELD_SUSPEND_OTHER`|The runtime is suspended for an unspecified reason.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC`|The runtime is suspended to service a garbage collection request.<br /><br /> The garbage collection-related callbacks occur between the [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) and [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) callbacks.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|The runtime is suspended so that an `AppDomain` can be shut down.<br /><br /> While the runtime is suspended, the runtime will determine which threads are in the `AppDomain` that is being shut down and set them to abort when they resume. There are no `AppDomain`-specific callbacks during this suspension.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|The runtime is suspended so that code pitching can occur.<br /><br /> Code pitching ensues only when the just-in-time (JIT) compiler is active with code pitching enabled. Code pitching callbacks occur between the `ICorProfilerCallback::RuntimeSuspendFinished` and `ICorProfilerCallback::RuntimeResumeStarted` callbacks. **Note:**  The CLR JIT does not pitch functions in the .NET Framework version 2.0, so this value is not used in 2.0.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|The runtime is suspended so that it can shut down. It must suspend all threads to complete the operation.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|The runtime is suspended for in-process debugging.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|The runtime is suspended to prepare for a garbage collection.|  
+|`COR_PRF_SUSPEND_FOR_REJIT`|The runtime is suspended for JIT recompilation.|  
   
 ## <a name="remarks"></a>备注  
- 非托管代码中的所有运行时线程都可以继续运行，直到它们尝试重新输入运行时，此时它们还会挂起，直到运行时恢复。 这也适用于输入运行时的新线程。 在运行时中的所有线程立即挂起; 如果它们是在可中断代码中，连接，或者需要挂起时它们到达可中断的代码。  
+ All runtime threads that are in unmanaged code are permitted to continue running until they try to re-enter the runtime, at which point they will also be suspended until the runtime resumes. This also applies to new threads that enter the runtime. All threads within the runtime are either suspended immediately if they are in interruptible code, or asked to suspend when they do reach interruptible code.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

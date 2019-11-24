@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b2a8240b-07fe-4859-bb2b-7d3adbfa0a9f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 17f7c985b27adbbb2a5c7ddc2bb62fc93a099a45
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6a0f6dc9d2559bafed416d409063088d2f51c27d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763127"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445218"
 ---
 # <a name="icorprofilercallbackappdomaincreationstarted-method"></a>ICorProfilerCallback::AppDomainCreationStarted 方法
-通知探查器正在创建应用程序域。  
+Notifies the profiler that an application domain is being created.  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,15 +34,15 @@ HRESULT AppDomainCreationStarted(
   
 ## <a name="parameters"></a>参数  
  `appDomainId`  
- [in]标识正在创建的域。  
+ [in] Identifies the domain which is being created.  
   
 ## <a name="remarks"></a>备注  
- ID 不是有效的任何信息请求，直到[icorprofilercallback:: Appdomaincreationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md)调用方法。  
+ The ID is not valid for any information request until the [ICorProfilerCallback::AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) method is called.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

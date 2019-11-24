@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 00bfc9fc21ed39226fd21c4096305c254d73ee11
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: c33a868b643cb3e3fd5dfaf436e3078bc590705c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69665726"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449819"
 ---
-# <a name="icorprofilerinfo10requestrejitwithinliners-method"></a>ICorProfilerInfo10:: RequestReJITWithInliners 方法
+# <a name="icorprofilerinfo10requestrejitwithinliners-method"></a>ICorProfilerInfo10::RequestReJITWithInliners Method
 
-ReJITs 请求的方法, 以及所请求的方法的任何 inliners。
+ReJITs the methods requested, as well as any inliners of the methods requested.
 
 ## <a name="syntax"></a>语法
 
@@ -34,7 +34,7 @@ HRESULT RequestReJITWithInliners( [in]                       DWORD       dwRejit
 #### <a name="parameters"></a>参数
 
 `dwRejitFlags` \
-中[COR_PRF_REJIT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-rejit-flags-enumeration.md)的位掩码。
+[in] A bitmask of [COR_PRF_REJIT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-rejit-flags-enumeration.md).
 
 `cFunctions` \
 [in] 要重新编译的函数数目。
@@ -47,18 +47,18 @@ HRESULT RequestReJITWithInliners( [in]                       DWORD       dwRejit
 
 ## <a name="remarks"></a>备注
 
-[RequestReJIT](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrejit-method.md)不会对内联方法进行任何跟踪。 探查器应阻止内联或跟踪内联, 并为所有 inliners `RequestReJIT`调用以确保内联方法的每个实例都已 ReJITted。 这会在附加上出现 ReJIT 问题, 因为探查器不会监视内联。 可以调用此方法来保证完整的 inliners 集也会 ReJITted。
+[RequestReJIT](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrejit-method.md) does not do any tracking of inlined methods. The profiler was expected to either block inlining or track inlining and call `RequestReJIT` for all inliners to make sure every instance of an inlined method was ReJITted. This poses a problem with ReJIT on attach, since the profiler is not present to monitor inlining. This method can be called to guarantee that the full set of inliners will be ReJITted as well.
 
 ## <a name="requirements"></a>要求
 
-**适用**请参阅[支持 .Net Core 的操作系统](../../../core/windows-prerequisites.md#net-core-supported-operating-systems)。
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**标头：** Corprof.idl, Corprof.idl
+**头文件：** CorProf.idl、CorProf.h
 
-**类库**CorGuids.lib
+**库：** CorGuids.lib
 
-**.Net 版本:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>请参阅
 
-- [ICorProfilerInfo10 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

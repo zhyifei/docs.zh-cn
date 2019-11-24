@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e2d88c6-8a3a-4fbe-900b-b4f4c06bf6bf
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 40d1817b9eb7f341899efddb469c7fa17a8f8c0e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1a4f7703536bcfdae75b0bcffae8dca0734e9e0f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782393"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437565"
 ---
 # <a name="imetadataimportgetfieldmarshal-method"></a>IMetaDataImport::GetFieldMarshal 方法
-获取一个指向由指定的字段元数据标记所表示的字段的本机、 非托管类型。  
+Gets a pointer to the native, unmanaged type of the field represented by the specified field metadata token.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,20 +37,20 @@ HRESULT GetFieldMarshal (
   
 ## <a name="parameters"></a>参数  
  `tk`  
- [in]表示要获取互操作封送处理信息的字段的元数据标记。  
+ [in] The metadata token that represents the field to get interop marshaling information for.  
   
  `ppvNativeType`  
- [out]指向字段的本机类型的元数据签名的指针。  
+ [out] A pointer to the metadata signature of the field's native type.  
   
  `pcbNativeType`  
- [out]以字节为单位的大小`ppvNativeType`。  
+ [out] The size in bytes of `ppvNativeType`.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cbaca4e1-4473-459b-ba34-f1f59ce7c0ba
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 73ece48a21ac40320379f5bf4ea309a3ec36b40f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 924feaeb91b42404461ad5d276c0cb77279d4dc4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736763"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449280"
 ---
 # <a name="isymunmanagedconstantgetname-method"></a>ISymUnmanagedConstant::GetName 方法
-获取常量的名称。  
+Gets the name of the constant.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,19 +37,19 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>参数  
  `cchName`  
- [in]缓冲区的长度的`szName`参数指向。  
+ [in] The length of the buffer that the `szName` parameter points to.  
   
  `pcchName`  
- [out]一个指向`ULONG32`用于接收大小，以字符为单位，以包含名称，包括 null 终止的缓冲区。  
+ [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the name, including the null termination.  
   
  `szName`  
- [out]存储名称的缓冲区。  
+ [out] The buffer that stores the name.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

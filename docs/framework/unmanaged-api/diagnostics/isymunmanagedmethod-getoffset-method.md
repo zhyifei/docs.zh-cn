@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8bf3cb62-89bf-4159-ad53-de606aba89e8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 62fa0969044504905d5c835f74873dc6f46cafa8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f7993ebc15f95df97a9b45523717f318d8c435ce
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769439"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448944"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>ISymUnmanagedMethod::GetOffset 方法
-返回到文档中的给定位置中此方法相对应的偏移量。  
+Returns the offset within this method that corresponds to a given position within a document.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,22 +37,22 @@ HRESULT GetOffset(
   
 ## <a name="parameters"></a>参数  
  `document`  
- [in]指向为其请求偏移量的文档的指针。  
+ [in] A pointer to the document for which the offset is requested.  
   
  `line`  
- [in]为其请求偏移量的文档行。  
+ [in] The document line for which the offset is requested.  
   
  `column`  
- [in]为其请求偏移量的文档列。  
+ [in] The document column for which the offset is requested.  
   
  `pRetVal`  
- [out]一个指向`ULONG32`，它接收的偏移量。  
+ [out] A pointer to a `ULONG32` that receives the offsets.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

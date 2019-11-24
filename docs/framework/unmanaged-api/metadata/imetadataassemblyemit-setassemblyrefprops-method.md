@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70a32bf3-9051-4f96-ae87-11356d06a073
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 984ec5dea757971081ce05c858788473a0f616e7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5434aa2d12bd9a29a8c2fc784421442469ceb1ce
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775272"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440559"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyRefProps 方法
 修改指定的 `AssemblyRef` 元数据结构。  
@@ -44,38 +42,38 @@ HRESULT SetAssemblyRefProps (
   
 ## <a name="parameters"></a>参数  
  `ar`  
- [in]指定的元数据标记`AssemblyRef`要修改的元数据结构。  
+ [in] The metadata token that specifies the `AssemblyRef` metadata structure to be modified.  
   
  `pbPublicKeyOrToken`  
- [in]引用的程序集的发布服务器的公钥。  
+ [in] The public key of the publisher of the referenced assembly.  
   
  `cbPublicKeyOrToken`  
- [in]以字节为单位的大小`pbPublicKeyOrToken`。  
+ [in] The size in bytes of `pbPublicKeyOrToken`.  
   
  `szName`  
- [in]用户可读文本的程序集的名称。  
+ [in] The human-readable text name of the assembly.  
   
  `pMetaData`  
- [in]指向包含程序集的版本、 平台和区域设置信息的 ASSEMBLYMETADATA 实例的指针。  
+ [in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.  
   
  `pbHashValue`  
- [in]指向与该程序集关联的哈希数据的指针。  
+ [in] A pointer to the hash data associated with the assembly.  
   
  `cbHashValue`  
- [in]以字节为单位的大小`pbHashValue`。  
+ [in] The size in bytes of `pbHashValue`.  
   
  `dwAssemblyRefFlags`  
- [in]按位组合[AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md)指定引用程序集的属性的值。  
+ [in] A bitwise combination of [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) values that specify attributes of the referenced assembly.  
   
 ## <a name="remarks"></a>备注  
- 若要创建`AssemblyRef`元数据结构，使用[imetadataassemblyemit:: Defineassemblyref](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)方法。  
+ To create an `AssemblyRef` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) method.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

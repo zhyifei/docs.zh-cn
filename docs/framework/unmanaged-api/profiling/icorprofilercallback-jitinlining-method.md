@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c2f45801-dd38-4b78-b6b7-64397dc73f83
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 82af06837ead9a00923c23d4ce145015308fbbf7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 62035d623d56f7521e0a599a13bc20778e3f18d1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782806"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449900"
 ---
 # <a name="icorprofilercallbackjitinlining-method"></a>ICorProfilerCallback::JITInlining 方法
-通知探查器实时 (JIT) 编译器将要插入一个嵌入另一个函数。  
+Notifies the profiler that the just-in-time (JIT) compiler is about to insert a function in line with another function.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,23 +36,23 @@ HRESULT JITInlining(
   
 ## <a name="parameters"></a>参数  
  `callerId`  
- [in]在其中函数的 ID`calleeId`将插入函数。  
+ [in] The ID of the function into which the `calleeId` function will be inserted.  
   
  `calleeId`  
- [in]要插入该函数的 ID。  
+ [in] The ID of the function to be inserted.  
   
  `pfShouldInline`  
- [out]`true`若要允许插入发生; 否则为`false`。  
+ [out] `true` to allow the insertion to occur; otherwise, `false`.  
   
 ## <a name="remarks"></a>备注  
- 探查器可以设置`pfShouldInline`到`false`以免`calleeId`函数中要插入到`callerId`函数。 此外，探查器可以全局内联插入使用禁用的 COR_PRF_DISABLE_INLINING 值[COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)枚举。  
+ The profiler can set `pfShouldInline` to `false` to prevent the `calleeId` function from being inserted into the `callerId` function. Also, the profiler can globally disable inline insertion by using the COR_PRF_DISABLE_INLINING value of the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration.  
   
- 内联函数插入不会引发事件进入或离开。 因此，探查器必须设置`pfShouldInline`到`false`为了生成准确的调用关系图。 设置`pfShouldInline`到`false`会影响性能，因为内联插入通常会提高速度和减少了单独的插入方法的 JIT 编译事件数。  
+ Functions inserted inline do not raise events for entering or leaving. Therefore, the profiler must set `pfShouldInline` to `false` in order to produce an accurate callgraph. Setting `pfShouldInline` to `false` will affect performance, because inline insertion typically increases speed and reduces the number of separate JIT compilation events for the inserted method.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc09bad2-fb34-4d13-a521-6ec7b1a1d915
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b669921bf8d27283ba99f4ca1d97b6abc00e15db
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94a571a4bc01b805387aebe5a6e23bad0b735313
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776884"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448650"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset 方法
-获取与某一偏移量关联的行信息。 如果偏移量的参数 (`dwOffset`) 不是序列点，此方法获取与前一个偏移量关联的行信息。  
+Gets the line information associated with an offset. If the offset parameter (`dwOffset`) is not a sequence point, this method gets the line information associated with the previous offset.  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,28 +39,28 @@ HRESULT GetLineFromOffset(
   
 ## <a name="parameters"></a>参数  
  `dwOffset`  
- [in]一个`ULONG32`包含的偏移量。  
+ [in] A `ULONG32` that contains the offset.  
   
  `pline`  
- [out]一个指向`ULONG32`接收行。  
+ [out] A pointer to a `ULONG32` that receives the line.  
   
  `pcolumn`  
- [out]一个指向`ULONG32`接收列。  
+ [out] A pointer to a `ULONG32` that receives the column.  
   
  `pendLine`  
- [out]一个指向`ULONG32`接收结束行。  
+ [out] A pointer to a `ULONG32` that receives the end line.  
   
  `pendColumn`  
- [out]一个指向`ULONG32`，它接收的结束列。  
+ [out] A pointer to a `ULONG32` that receives the end column.  
   
  `pdwStartOffset`  
- [out]一个指向`ULONG32`接收相关联的序列点。  
+ [out] A pointer to a `ULONG32` that receives the associated sequence point.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

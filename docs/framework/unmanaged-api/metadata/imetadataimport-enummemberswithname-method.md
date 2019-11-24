@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c9e9120-3104-42f0-86ce-19a025f20dcc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 737ccc8af41c9eca765a7ea06f29d1aec1ccfad6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ed193aab8beb0de1321aa1d52ec9f963b08b316c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758849"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441660"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>IMetaDataImport::EnumMembersWithName 方法
 枚举表示具有指定名称的指定类型的成员的 MemberDef 标记。  
@@ -42,39 +40,39 @@ HRESULT EnumMembersWithName (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in、 out]一个指向枚举器。  
+ [in, out] A pointer to the enumerator.  
   
  `cl`  
- [in]表示与要枚举的成员类型的 TypeDef 标记。  
+ [in] A TypeDef token representing the type with members to enumerate.  
   
  `szName`  
- [in]成员名称的枚举器的作用域限制。  
+ [in] The member name that limits the scope of the enumerator.  
   
  `rMembers`  
- [out]用于存储 MemberDef 标记的数组。  
+ [out] The array used to store the MemberDef tokens.  
   
  `cMax`  
  [in] `rMembers` 数组的最大大小。  
   
  `pcTokens`  
- [out]MemberDef 标记中返回的实际数目`rMembers`。  
+ [out] The actual number of MemberDef tokens returned in `rMembers`.  
   
 ## <a name="remarks"></a>备注  
- 此方法枚举字段和方法，但不是属性或事件。 与不同[imetadataimport:: Enummembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md)，`EnumMembersWithName`放弃所有不具有指定的名称的字段和成员的令牌。  
+ This method enumerates fields and methods, but not properties or events. Unlike [IMetaDataImport::EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` discards all field and member tokens that do not have the specified name.  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` 已成功返回。|  
-|`S_FALSE`|没有要枚举的 MemberDef 标记。 在这种情况下，`pcTokens`为零。|  
+|`S_OK`|`EnumTypeDefs` returned successfully.|  
+|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

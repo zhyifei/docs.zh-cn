@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1b0306b7-622b-4b57-8edc-3c713bb147ae
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 08f997e133fa6cc8769efe18e7ca06c0153f15a4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 35966e25d02bd6f1a9bdd21ad4e9cc44b7bb480e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781800"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450257"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>CorManifestResourceFlags 枚举
-指示程序集清单中编码的资源的可见性。  
+Indicates the visibility of resources encoded in an assembly manifest.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,18 +36,18 @@ typedef enum CorManifestResourceFlags {
 } CorManifestResourceFlags;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
 |`mrVisibilityMask`|保留。|  
-|`mrPublic`|资源是公共的。|  
-|`mrPrivate`|资源是私有的。|  
+|`mrPublic`|The resources are public.|  
+|`mrPrivate`|The resources are private.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8d3080ee-39fe-4c57-8950-51323632d045
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cf2a1bca6115902d96f72c19dc469d0a1c8588cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 79a9e4513a98a29edc11cc76c599f03c9c3a72b4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756212"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450110"
 ---
 # <a name="corregflags-enumeration"></a>CorRegFlags 枚举
-提供安装模块或复合图像时用于注册的标志值。  
+Provides flag values used for registration when installing a module or composite image.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,20 +35,20 @@ typedef enum
 } CorRegFlags;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`regNoCopy`|指定不应将文件复制到目标。|  
-|`regConfig`|指定模块或复合是一种配置。|  
-|`regHasRefs`|指定模块或复合具有类的引用。|  
+|`regNoCopy`|Specifies that files should not be copied into the destination.|  
+|`regConfig`|Specifies that the module or composite is a configuration.|  
+|`regHasRefs`|Specifies that the module or composite has class references.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

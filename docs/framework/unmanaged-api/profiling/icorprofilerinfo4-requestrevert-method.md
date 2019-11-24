@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70261da5-5933-4e25-9de0-ddf51cba56cc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5e74cb663f968cc9b1b04a912307e3b4a12e86d4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c7ced05692e3030bace10dab9a6793a29fac6c26
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748659"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444836"
 ---
 # <a name="icorprofilerinfo4requestrevert-method"></a>ICorProfilerInfo4::RequestRevert 方法
 将指定函数的所有实例还原为其初始版本。  
@@ -56,8 +54,8 @@ HRESULT RequestRevert (
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|尝试还原所有请求；但是，必须检查返回的状态数组，确定成功还原了哪些函数。|  
-|CORPROF_E_CALLBACK4_REQUIRED|探查器必须实现[ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)接口必须支持此调用。|  
-|CORPROF_E_REJIT_NOT_ENABLED|尚未启用 JIT 重新编译。 必须使用启用 JIT 重新编译在初始化期间[icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法以设置`COR_PRF_ENABLE_REJIT`标志。|  
+|CORPROF_E_CALLBACK4_REQUIRED|The profiler must implement the [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interface for this call to be supported.|  
+|CORPROF_E_REJIT_NOT_ENABLED|尚未启用 JIT 重新编译。 You must enable JIT recompilation during initialization by using the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the `COR_PRF_ENABLE_REJIT` flag.|  
 |E_INVALIDARG|`cFunctions` 为 0，或者 `moduleIds` 或 `methodIds` 为 `NULL`。|  
 |E_OUTOFMEMORY|CLR 无法完成请求，因为它已耗尽内存。|  
   
@@ -76,9 +74,9 @@ HRESULT RequestRevert (
  在下次调用任何已还原的函数实例时，将运行此函数的初始版本。 如果已在运行某个函数，则将完成正在运行的版本的执行操作。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

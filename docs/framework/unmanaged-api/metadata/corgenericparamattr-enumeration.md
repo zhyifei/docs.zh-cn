@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 36c76266-71d8-48dc-bd89-54943fa659c1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 981829500e499be05a8de7c1ffb4683429a903e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4abf876681d5b04555c9f030a94b722874e326e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781847"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450277"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr 枚举
-包含值，用于描述<xref:System.Type>泛型类型，作为调用中使用参数[IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)。  
+Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,24 +43,24 @@ typedef enum CorGenericParamAttr {
 } CorGenericParamAttr;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`gpVarianceMask`|参数的变体仅应用于接口和委托的泛型参数。|  
-|`gpNonVariant`|表示不存在的方差。|  
-|`gpCovariant`|指示协方差。|  
-|`gpContravariant`|指示逆变。|  
-|`gpSpecialConstraintMask`|可以将特殊约束应用于任何<xref:System.Type>参数。|  
-|`gpNoSpecialConstraint`|指示没有约束应用于<xref:System.Type>参数。|  
-|`gpReferenceTypeConstraint`|指示<xref:System.Type>参数必须是引用类型。|  
-|`gpNotNullableValueTypeConstraint`|指示<xref:System.Type>参数必须是值类型，不能为 null 值。|  
-|`gpDefaultConstructorConstraint`|指示<xref:System.Type>参数必须具有不带参数的默认公共构造函数。|  
+|`gpVarianceMask`|Parameter variance applies only to generic parameters for interfaces and delegates.|  
+|`gpNonVariant`|Indicates the absence of variance.|  
+|`gpCovariant`|Indicates covariance.|  
+|`gpContravariant`|Indicates contravariance.|  
+|`gpSpecialConstraintMask`|Special constraints can apply to any <xref:System.Type> parameter.|  
+|`gpNoSpecialConstraint`|Indicates that no constraint applies to the <xref:System.Type> parameter.|  
+|`gpReferenceTypeConstraint`|Indicates that the <xref:System.Type> parameter must be a reference type.|  
+|`gpNotNullableValueTypeConstraint`|Indicates that the <xref:System.Type> parameter must be a value type that cannot be a null value.|  
+|`gpDefaultConstructorConstraint`|Indicates that the <xref:System.Type> parameter must have a default public constructor that takes no parameters.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

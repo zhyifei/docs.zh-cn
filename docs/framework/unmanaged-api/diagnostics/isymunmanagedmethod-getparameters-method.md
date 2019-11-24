@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a8074f1-facc-4a3f-bb9b-d6574fc2fc74
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 39ad47ae7659734191d380d8b3c29fb1a6de6afc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e8139a822c877e70731e18ae5a75b83e6b7578e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769423"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448953"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>ISymUnmanagedMethod::GetParameters 方法
-获取此方法的参数。 参数的方法签名中定义的顺序返回。  
+Gets the parameters for this method. The parameters are returned in the order in which they are defined within the method's signature.  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,16 +40,16 @@ HRESULT GetParameters(
  [in] `params` 数组的大小。  
   
  `pcParams`  
- [in]一个指向`ULONG32`接收包含参数所需的缓冲区的大小。  
+ [in] A pointer to a `ULONG32` that receives the size of the buffer that is required to contain the parameters.  
   
  `params`  
- [out]指向接收参数的缓冲区的指针。  
+ [out] A pointer to the buffer that receives the parameters.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

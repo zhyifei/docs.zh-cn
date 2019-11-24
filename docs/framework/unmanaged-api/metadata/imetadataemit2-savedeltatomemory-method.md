@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e2146726-0084-4c9e-a2d2-e8d461b13b21
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 79b21613ba844ca4c749d9c04d75260e326e6512
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d0718ff9a7e288ffc6a856032aa47949fda443f5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777138"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447885"
 ---
 # <a name="imetadataemit2savedeltatomemory-method"></a>IMetaDataEmit2::SaveDeltaToMemory 方法
-将更改从当前会话中编辑和继续保存到内存中。  
+Saves changes from the current edit-and-continue session to memory.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,17 +36,17 @@ HRESULT SaveDeltaToMemory (
   
 ## <a name="parameters"></a>参数  
  `pbData`  
- [out]开始写入的元数据增量的地址。  
+ [out] The address at which to begin writing the metadata delta.  
   
  `cbData`  
- [in]所做的更改的大小。 使用[IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md)确定的大小。  
+ [in] The size of the changes. Use [IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) to determine the size.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

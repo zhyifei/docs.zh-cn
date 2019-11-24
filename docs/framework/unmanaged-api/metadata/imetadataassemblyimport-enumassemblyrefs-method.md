@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8844d0dd-730e-4592-8a7b-c1462d312c70
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5c7b512de76b5ada882b1d81c2968b4ead5c8c20
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 06b81615565a04db7d6cfef4da9b5372a85afd68
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775941"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450343"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs 方法
-枚举`mdAssemblyRef`的程序集清单中定义的实例。  
+Enumerates the `mdAssemblyRef` instances that are defined in the assembly manifest.  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,30 +38,30 @@ HRESULT EnumAssemblyRefs (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in、 out]一个指向枚举器。 这必须是一个 null 值时`EnumAssemblyRefs`第一次调用方法。  
+ [in, out] A pointer to the enumerator. This must be a null value when the `EnumAssemblyRefs` method is called for the first time.  
   
  `rAssemblyRefs`  
- [out]枚举`mdAssemblyRef`元数据标记。  
+ [out] The enumeration of `mdAssemblyRef` metadata tokens.  
   
  `cMax`  
- [in]可以放置在令牌的最大数目`rAssemblyRefs`数组。  
+ [in] The maximum number of tokens that can be placed in the `rAssemblyRefs` array.  
   
  `pcTokens`  
- [out]中实际放置的标记数`rAssemblyRefs`。  
+ [out] The number of tokens actually placed in `rAssemblyRefs`.  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumAssemblyRefs` 已成功返回。|  
-|`S_FALSE`|没有要枚举的标记。 在这种情况下，`pcTokens`设置为零。|  
+|`S_OK`|`EnumAssemblyRefs` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

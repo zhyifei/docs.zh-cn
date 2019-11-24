@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2350351e-f253-4c0c-a191-f952bc5700e6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0a6b754e6ceef0c451c38055078d403c0601ce45
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b6ef54297b69892f07df1aa92a92600fb20756e9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755940"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445303"
 ---
 # <a name="icorprofilercallbackexceptionunwindfinallyleave-method"></a>ICorProfilerCallback::ExceptionUnwindFinallyLeave 方法
-通知探查器的异常展开阶段处理已离开`finally`子句。  
+Notifies the profiler that the unwind phase of exception handling has left a `finally` clause.  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,14 +32,14 @@ HRESULT ExceptionUnwindFinallyLeave();
 ```  
   
 ## <a name="remarks"></a>备注  
- 探查器在此调用期间不应进行阻止，因为堆栈可能未处于允许垃圾回收的状态，因此不能启用抢先式垃圾回收。 如果尝试进行事件探查器阻止和垃圾回收，直到此回调返回，将阻止运行时。  
+ The profiler should not block during this call because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and a garbage collection is attempted, the runtime will block until this callback returns.  
   
- 此外，在此调用过程探查器必须调入托管代码或以任何方式导致托管内存分配。  
+ Also, during this call, the profiler must not call into managed code or in any way cause a managed-memory allocation.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

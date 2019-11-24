@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbab7d90-d515-4dc9-8195-294d5d04bab6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 910f8b7f78b6348ace9036d35c0844f2a64cf433
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eaf0ae2a1b86234495c1804cff8b74331b3e8021
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763141"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445271"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished 方法
-通知探查器已创建的应用程序域。  
+Notifies the profiler that an application domain has been created.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,20 +35,20 @@ HRESULT AppDomainCreationFinished(
   
 ## <a name="parameters"></a>参数  
  `appDomainId`  
- [in]标识已创建的域。  
+ [in] Identifies the domain which has been created.  
   
  `hrStatus`  
- [in]一个 HRESULT，指示是否已成功完成创建应用程序域。  
+ [in] An HRESULT that indicates whether creation of the application domain completed successfully.  
   
 ## <a name="remarks"></a>备注  
- 应用程序 ID 不是有效的任何信息请求直到`AppDomainCreationFinished`调用方法。  
+ The application ID is not valid for any information request until the `AppDomainCreationFinished` method is called.  
   
- 加载应用程序域的某些部分可能会继续后`AppDomainCreationFinished`回调。 失败的 HRESULT 在`hrStatus`表明发生了故障。 但是，成功的 HRESULT 在`hrStatus`仅表示已成功创建应用程序域的第一部分。  
+ Some parts of loading the application domain might continue after the `AppDomainCreationFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of creating the application domain has succeeded.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

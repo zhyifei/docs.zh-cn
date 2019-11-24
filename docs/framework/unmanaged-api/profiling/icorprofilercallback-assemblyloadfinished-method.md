@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 86d98f39-52e6-4c61-a625-9760f695ff12
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 174e71fca8c59dbd4842d0fc0b84bb9a3d7b10df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 33b72c8d089e5b335069fe465987086dfa1243bc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763041"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445170"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>ICorProfilerCallback::AssemblyLoadFinished 方法
-通知探查器程序集已完成加载。  
+Notifies the profiler that an assembly has finished loading.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,20 +35,20 @@ HRESULT AssemblyLoadFinished(
   
 ## <a name="parameters"></a>参数  
  `assemblyId`  
- [in]标识已加载的程序集。  
+ [in] Identifies the assembly that was loaded.  
   
  `hrStatus`  
- [in]一个 HRESULT，指示是否已完成的程序集加载成功。  
+ [in] An HRESULT that indicates whether the assembly finished loading successfully.  
   
 ## <a name="remarks"></a>备注  
- 值`assemblyId`不是有效信息请求直到`AssemblyLoadFinished`调用方法。  
+ The value of `assemblyId` is not valid for an information request until the `AssemblyLoadFinished` method is called.  
   
- 加载程序集的某些部分可能会继续后`AssemblyLoadFinished`回调。 失败的 HRESULT 在`hrStatus`表明发生了故障。 但是，成功的 HRESULT 在`hrStatus`仅表示已成功加载程序集的第一部分。  
+ Some parts of loading the assembly might continue after the `AssemblyLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the assembly has succeeded.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

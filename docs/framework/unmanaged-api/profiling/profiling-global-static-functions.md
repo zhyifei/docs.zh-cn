@@ -6,69 +6,67 @@ helpviewer_keywords:
 - profiling global static functions [.NET Framework]
 - unmanaged global static functions [.NET Framework], profiling
 ms.assetid: 08a13a57-dc49-488d-b937-31e3051fda97
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3ea65c06871d9762fa6daac229a568594b4c4479
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: d1d9b0a4c61ce7c3f8f9792046fb4bddf0fdfa05
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457471"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447430"
 ---
 # <a name="profiling-global-static-functions"></a>分析全局静态函数
-本节描述分析 API 使用的非托管的 API 函数。  
+This section describes the unmanaged API functions that the profiling API uses.  
   
 ## <a name="in-this-section"></a>本节内容  
   
-## <a name="net-framework-version-1-profiling-functions"></a>.NET framework 版本 1 分析函数  
+## <a name="net-framework-version-1-profiling-functions"></a>.NET Framework version 1 Profiling Functions  
  [FunctionEnter 函数](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)  
- 通知探查器控件传递给函数。 .NET Framework 2.0 中已弃用。  
+ Notifies the profiler that control is being passed to a function. Deprecated in the .NET Framework 2.0.  
   
  [FunctionLeave 函数](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)  
- 通知探查器函数以返回到调用方。 .NET Framework 2.0 中已弃用。  
+ Notifies the profiler that a function is about to return to the caller. Deprecated in the .NET Framework 2.0.  
   
  [FunctionTailcall 函数](../../../../docs/framework/unmanaged-api/profiling/functiontailcall-function.md)  
- 通知探查器当前正在执行的函数将要执行到另一个函数的结尾调用。 .NET Framework 2.0 中已弃用。  
+ Notifies the profiler that the currently executing function is about to perform a tail call to another function. Deprecated in the .NET Framework 2.0.  
   
-## <a name="net-framework-version-2-profiling-functions"></a>.NET framework 版本 2 分析函数  
+## <a name="net-framework-version-2-profiling-functions"></a>.NET Framework version 2 Profiling Functions  
  [FunctionIDMapper 函数](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)  
- 通知探查器函数的给定的标识符可能被重新映射到要在中使用的备用 ID [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)， [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)，和[FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)该函数的回调。 此外使探查器以指示它是否想要为该函数接收回调  
+ Notifies the profiler that the given identifier of a function may be remapped to an alternative ID to be used in the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), and [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) callbacks for that function. Also enables the profiler to indicate whether it wants to receive callbacks for that function  
   
  [FunctionEnter2 函数](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)  
- 通知探查器，控制被传递给函数，并介绍有关堆栈帧和函数参数。 .NET Framework 4 中不推荐使用。  
+ Notifies the profiler that control is being passed to a function and provides information about the stack frame and function arguments. Deprecated in the .NET Framework 4.  
   
  [FunctionLeave2 函数](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)  
- 函数即将返回给调用方，并提供有关堆栈帧和函数返回值的信息，请通知探查器。 .NET Framework 4 中不推荐使用。  
+ Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value. Deprecated in the .NET Framework 4.  
   
  [FunctionTailcall2 函数](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)  
- 通知探查器当前正在执行的函数将要执行到另一个函数的结尾调用并提供有关堆栈帧的信息。 .NET Framework 4 中不推荐使用。  
+ Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame. Deprecated in the .NET Framework 4.  
   
  [StackSnapshotCallback 函数](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md)  
- 提供有关每个托管的帧和非托管帧的每次运行在堆栈上的堆栈遍历，启动的过程信息，以及探查器[ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)方法。  
+ Provides the profiler with information about each managed frame and each run of unmanaged frames on the stack during a stack walk, which is initiated by the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.  
   
-## <a name="net-framework-version-4-profiling-functions"></a>.NET framework 版本 4 分析函数  
+## <a name="net-framework-version-4-profiling-functions"></a>.NET Framework version 4 Profiling Functions  
  [FunctionIDMapper2 函数](../../../../docs/framework/unmanaged-api/profiling/functionidmapper2-function.md)  
- 通知探查器函数的给定的标识符可能被重新映射到要在中使用的备用 ID [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)， [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)，和[FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)，或[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)， [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)，并且[FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)该函数的回调。 此外使探查器以指示它是否想要接收该函数的回调。  
+ Notifies the profiler that the given identifier of a function may be remapped to an alternative ID to be used in the [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md), and [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md), or[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), and [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) callbacks for that function. Also enables the profiler to indicate whether it wants to receive callbacks for that function.  
   
- `FunctionIDMapper2` 扩展了[FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)函数与`clientData`探查器可能用于消除运行时间歧义的参数。  
+ `FunctionIDMapper2` extends the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function with a `clientData` parameter, which profilers may use to disambiguate among runtimes.  
   
  [FunctionEnter3 函数](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)  
- 通知探查器控件传递给函数。  
+ Notifies the profiler that control is being passed to a function.  
   
  [FunctionEnter3WithInfo 函数](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)  
- 通知探查器正在将控件传递给函数，并提供句柄，可传递给[ICorProfilerInfo3::GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)以检索堆栈帧和函数参数。  
+ Notifies the profiler that control is being passed to a function, and provides a handle that can be passed to [ICorProfilerInfo3::GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) to retrieve the stack frame and function arguments.  
   
  [FunctionLeave3 函数](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)  
- 通知探查器从函数返回控制。  
+ Notifies the profiler that control is being returned from a function.  
   
  [FunctionLeave3WithInfo 函数](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)  
- 通知探查器一个函数，从正在返回控制和提供句柄，可传递给[ICorProfilerInfo3::GetFunctionLeave3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md)检索堆栈帧和返回值。  
+ Notifies the profiler that control is being returned from a function, and provides a handle that can be passed to [ICorProfilerInfo3::GetFunctionLeave3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) to retrieve the stack frame and the return value.  
   
  [FunctionTailcall3 函数](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)  
- 通知探查器当前正在执行的函数将要执行到另一个函数的结尾调用。  
+ Notifies the profiler that the currently executing function is about to perform a tail call to another function.  
   
  [FunctionTailcall3WithInfo 函数](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)  
- 通知当前正在执行的函数将执行到另一个函数的结尾调用探查器和提供句柄，可传递给[ICorProfilerInfo3::GetFunctionTailcall3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md)检索堆栈帧。  
+ Notifies the profiler that the currently executing function is about to perform a tail call to another function, and provides a handle that can be passed to [ICorProfilerInfo3::GetFunctionTailcall3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) to retrieve the stack frame.  
   
 ## <a name="related-sections"></a>相关章节  
  [分析概述](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: be3f5985-b1e4-4036-8602-c16e8508d4af
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2a4305b94d785a764671a2d73f43facefd0da0e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e5eb735acac73d694a0719c206bd22711a8c0333
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782371"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437539"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps 方法
-获取一个指针指向的元数据令牌<xref:System.Type>实现指定的方法和接口，其用于声明该方法。
+Gets a pointer to the metadata tokens for the <xref:System.Type> that implements the specified method, and for the interface that declares that method.
   
 ## <a name="syntax"></a>语法  
   
@@ -39,27 +37,27 @@ HRESULT GetInterfaceImplProps (
   
 ## <a name="parameters"></a>参数  
  `iiImpl`  
- [in]表示此方法返回的类和接口令牌的元数据标记。  
+ [in] The metadata token representing the method to return the class and interface tokens for.  
   
  `pClass`  
- [out]表示实现方法的类的元数据标记。  
+ [out] The metadata token representing the class that implements the method.  
   
  `ptkIface`  
- [out]表示定义实现的方法的接口的元数据标记。  
+ [out] The metadata token representing the interface that defines the implemented method.  
 
 ## <a name="remarks"></a>备注
 
- 获取值以供`iImpl`通过调用[EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md)方法。
+ You obtain the value for `iImpl` by calling the [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) method.
  
- 例如，假设类具有`mdTypeDef`令牌 0x02000007 的值，它实现的类型具有令牌的三个接口： 
+ For example, suppose that a class has an `mdTypeDef` token value of 0x02000007 and that it implements three interfaces whose types have tokens: 
 
 - 0x02000003 (TypeDef)
 - 0x0100000A (TypeRef)
 - 0x0200001C (TypeDef)
 
-从概念上讲，此信息存储到作为接口实现表：
+Conceptually, this information is stored into an interface implementation table as:
 
-| 行号 | 类令牌 | 接口令牌 |
+| Row number | Class token | Interface token |
 |------------|-------------|-----------------|
 | 4          |             |                 |
 | 5          | 02000007    | 02000003        |
@@ -67,19 +65,19 @@ HRESULT GetInterfaceImplProps (
 | 7          |             |                 |
 | 8          | 02000007    | 0200001C        |
 
-请注意，该令牌是一个 4 字节值：
+Recall, the token is a 4-byte value:
 
-- 较低的 3 个字节存储的行号，或 RID。
-- 高位字节包含标记类型 – 为 0x09 `mdtInterfaceImpl`。
+- The lower 3 bytes hold the row number, or RID.
+- The upper byte holds the token type – 0x09 for `mdtInterfaceImpl`.
 
-`GetInterfaceImplProps` 返回信息保存在行中提供的令牌`iImpl`参数。 
+`GetInterfaceImplProps` returns the information held in the row whose token you provide in the `iImpl` argument. 
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

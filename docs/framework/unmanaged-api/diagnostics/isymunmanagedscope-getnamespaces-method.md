@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c44b0440-04bd-460a-84fb-41afecf44503
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d2c64d7ead2f7ce3d76b40f4fdc604506ee85561
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b765294826a5da4010cdd2db79b50667a6f1cdb4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777890"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446304"
 ---
 # <a name="isymunmanagedscopegetnamespaces-method"></a>ISymUnmanagedScope::GetNamespaces 方法
-获取此范围内所使用的命名空间。  
+Gets the namespaces that are being used within this scope.  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,16 +41,16 @@ HRESULT GetNamespaces(
  [in] `namespaces` 数组的大小。  
   
  `pcNameSpaces`  
- [out]一个指向`ULONG32`接收包含命名空间所需的缓冲区的大小。  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.  
   
  `namespaces`  
- [out]接收这些命名空间数组。  
+ [out] The array that receives the namespaces.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

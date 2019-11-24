@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 67e8209d-a0ca-4118-a6e6-c1ee0abc2221
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4ace66630176149a18a174fad24f782a289b0e9d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 34744132442440ef160841db5a50bf75355f2410
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762996"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445162"
 ---
 # <a name="icorprofilercallbackassemblyloadstarted-method"></a>ICorProfilerCallback::AssemblyLoadStarted 方法
-通知探查器正在加载程序集。  
+Notifies the profiler that an assembly is being loaded.  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,15 +34,15 @@ HRESULT AssemblyLoadStarted(
   
 ## <a name="parameters"></a>参数  
  `assemblyId`  
- [in]标识要加载的程序集。  
+ [in] Identifies the assembly that is being loaded.  
   
 ## <a name="remarks"></a>备注  
- 值`assemblyId`不是有效的信息请求之前[icorprofilercallback:: Assemblyloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadfinished-method.md)调用方法。  
+ The value of `assemblyId` is not valid for an information request until the [ICorProfilerCallback::AssemblyLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadfinished-method.md) method is called.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

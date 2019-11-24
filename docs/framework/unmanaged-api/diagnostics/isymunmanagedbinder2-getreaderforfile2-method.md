@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: dd92dcaf-403c-464d-a254-21594985dddd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: db917820de92b2e347385afc5217c0ca190825cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 756ba2e71ca2e3e817a0a8b89165bb807368c1f9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776831"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449330"
 ---
 # <a name="isymunmanagedbinder2getreaderforfile2-method"></a>ISymUnmanagedBinder2::GetReaderForFile2 方法
-给定元数据接口和文件名称，返回的正确[ISymUnmanagedReader](isymunmanagedreader-interface.md)将读取与模块关联的调试符号的接口。  
+Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.  
   
- 此方法提供了更广泛的搜索的程序数据库 (PDB) 文件比[isymunmanagedbinder:: Getreaderforfile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)方法。  
+ This method provides a more extensive search for the program database (PDB) file than the [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) method.  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,28 +40,28 @@ HRESULT GetReaderForFile2(
   
 ## <a name="parameters"></a>参数  
  `importer`  
- [in]指向元数据导入接口的指针。  
+ [in] A pointer to the metadata import interface.  
   
  `fileName`  
- [in]一个指向的文件的名称。  
+ [in] A pointer to the file name.  
   
  `searchPath`  
- [in]搜索路径指向的指针。  
+ [in] A pointer to the search path.  
   
  `searchPolicy`  
- [in]值为[CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)枚举，用于指定要执行的符号读取器的搜索时使用的策略。  
+ [in] A value of the [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeration that specifies the policy to be used when doing a search for a symbol reader.  
   
  `pRetVal`  
- [out]一个指针，它设置为返回[ISymUnmanagedReader](isymunmanagedreader-interface.md)接口。  
+ [out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="remarks"></a>备注  
- 此版本的方法可以搜索该模块的旁边以外的区域中的 PDB 文件。 搜索策略可以控制通过组合[CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)。 例如，`AllowReferencePathAccess | AllowSymbolServerAccess`查找 PDB 旁边的可执行文件，在符号服务器上，但不查询注册表或可执行文件中使用的路径。 如果`searchPath`提供参数，将始终搜索这些目录。  
+ This version of the method can search for the PDB file in areas other than right next to the module. The search policy can be controlled by combining [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md). For example, `AllowReferencePathAccess | AllowSymbolServerAccess` looks for the PDB next to the executable file and on a symbol server, but does not query the registry or use the path in the executable file. If the `searchPath` parameter is provided, those directories will always be searched.  
   
 ## <a name="see-also"></a>请参阅
 

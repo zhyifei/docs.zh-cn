@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdebc1f3-b62e-4d9e-b775-8ccaa8ecb250
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bdab1fd10be8fd245f4348798232964721b4487a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f3bb978b8358992fd9aa7da922e28efc1ed1a951
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777337"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446490"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest 方法
-发出最终清单。 导入所有其他文件并设置所有选项后，调用此方法。 不要对未绑定的模块调用此方法。  
+Emits the final manifest. Call this method after importing all other files and setting all options. Do not call this method for unbound modules.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,19 +37,19 @@ HRESULT EmitManifest(
   
 ## <a name="parameters"></a>参数  
  `AssemblyID`  
- 程序集的 ID。  
+ ID of the assembly.  
   
  `pdwReserveSize`  
- 接收程序集文件中要保留的大小，从[StrongNameSignatureSize 函数](../strong-naming/strongnamesignaturesize-function.md)检索。  
+ Receives the size to reserve in the assembly file, retrieved from [StrongNameSignatureSize Function](../strong-naming/strongnamesignaturesize-function.md).  
   
  `ptkManifest`  
- 可以选择接收程序集清单标记。  
+ Optionally receives the assembly manifest token.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>要求  
- 需要 alink。  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>请参阅
 

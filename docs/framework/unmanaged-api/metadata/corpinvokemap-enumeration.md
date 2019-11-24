@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: f14f986e-f6ce-42bc-aa23-18150c46d28c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a876ff1ba0d2342f7975bf5adfc8ec03d21578f5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 17b7af7016cf88fd3ae263dd952502d515b0c833
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781643"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441559"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap 枚举
-指定选项的 PInvoke 调用。  
+Specifies options for a PInvoke call.  
   
 ## <a name="syntax"></a>语法  
   
@@ -63,37 +61,37 @@ typedef enum  CorPinvokeMap {
 } CorPinvokeMap;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`pmNoMangle`|使用指定的每个成员名称。|  
+|`pmNoMangle`|Use each member name as specified.|  
 |`pmCharSetMask`|保留。|  
 |`pmCharSetNotSpec`|保留。|  
 |`pmCharSetAnsi`|以多字节字符串的形式封送字符串。|  
 |`pmCharSetUnicode`|以 Unicode 2 字节字符的形式封送字符串。|  
-|`pmCharSetAuto`|针对目标操作系统适当地自动封送字符串。 默认值是 Windows NT、 Windows 2000、 Windows XP 和 Windows Server 2003 系列中; 上的为 Unicode默认值为 ANSI，在 Windows 98 和 Windows me 一起提供。|  
+|`pmCharSetAuto`|针对目标操作系统适当地自动封送字符串。 The default is Unicode on Windows NT, Windows 2000, Windows XP, and the Windows Server 2003 family; the default is ANSI on Windows 98 and Windows Me.|  
 |`pmBestFitUseAssem`|保留。|  
-|`pmBestFitEnabled`|执行最佳映射缺乏完全匹配 ANSI 字符集的 Unicode 字符。|  
-|`pmBestFitDisabled`|不执行最佳的映射的 Unicode 字符。 在这种情况下，无法映射的所有字符将都替换为？。|  
+|`pmBestFitEnabled`|Perform best-fit mapping of Unicode characters that lack an exact match in the ANSI character set.|  
+|`pmBestFitDisabled`|Do not perform best-fit mapping of Unicode characters. In this case, all unmappable characters will be replaced by a ‘?’.|  
 |`pmBestFitMask`|保留。|  
 |`pmThrowOnUnmappableCharUseAssem`|保留。|  
-|`pmThrowOnUnmappableCharEnabled`|互操作封送处理程序遇到的无法映射字符时引发异常。|  
-|`pmThrowOnUnmappableCharDisabled`|互操作封送处理程序遇到的无法映射字符时不会引发异常。|  
+|`pmThrowOnUnmappableCharEnabled`|Throw an exception when the interop marshaler encounters an unmappable character.|  
+|`pmThrowOnUnmappableCharDisabled`|Do not throw an exception when the interop marshaler encounters an unmappable character.|  
 |`pmThrowOnUnmappableCharMask`|保留|  
-|`pmSupportsLastError`|允许被调用方能够调用 Win32`SetLastError`从特性化方法返回之前的函数。|  
+|`pmSupportsLastError`|Allow the callee to call the Win32 `SetLastError` function before returning from the attributed method.|  
 |`pmCallConvMask`|保留|  
-|`pmCallConvWinapi`|使用默认平台调用约定。 例如，在 Windows 上默认值是`StdCall`以及它是 Windows CE.NET `Cdecl`。|  
-|`pmCallConvCdecl`|使用`Cdecl`调用约定。 在这种情况下，调用方清理堆栈。 这样，与调用函数`varargs`（即，接受数目可变的参数的函数）。|  
-|`pmCallConvStdcall`|使用`StdCall`调用约定。 在这种情况下，被调用方清理堆栈。 这是使用平台 invoke 调用非托管函数的默认约定。|  
-|`pmCallConvThiscall`|使用`ThisCall`调用约定。 在这种情况下，第一个参数是`this`指针和存储在寄存器 ECX 中。 其他参数被推送到堆栈上。 `ThisCall`调用约定用于从非托管 DLL 导出的类上调用方法。|  
+|`pmCallConvWinapi`|Use the default platform calling convention. For example, on Windows the default is `StdCall` and on Windows CE .NET it is `Cdecl`.|  
+|`pmCallConvCdecl`|Use the `Cdecl` calling convention. In this case, the caller cleans the stack. This enables calling functions with `varargs` (that is, functions that accept a variable number of parameters).|  
+|`pmCallConvStdcall`|Use the `StdCall` calling convention. In this case, the callee cleans the stack. 这是使用平台 invoke 调用非托管函数的默认约定。|  
+|`pmCallConvThiscall`|Use the `ThisCall` calling convention. In this case, the first parameter is the `this` pointer and is stored in register ECX. 其他参数被推送到堆栈上。 The `ThisCall` calling convention is used to call methods on classes exported from an unmanaged DLL.|  
 |`pmCallConvFastcall`|保留。|  
 |`pmMaxValue`|保留。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
