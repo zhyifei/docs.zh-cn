@@ -7,12 +7,12 @@
       href: get-started/install-fsharp.md
     - name: 'Visual Studio 中的 F# 入门'
       href: get-started/get-started-visual-studio.md
-    - name: 'Visual Studio for Mac 中的 F# 入门'
-      href: get-started/get-started-with-visual-studio-for-mac.md
-    - name: 'Visual Studio Code 和 Ionide 中的 F# 入门'
+    - name: 'Visual Studio Code 中的 F# 入门'
       href: get-started/get-started-vscode.md
     - name: '.NET Core CLI 中的 F# 入门'
       href: get-started/get-started-command-line.md
+    - name: 'Visual Studio for Mac 中的 F# 入门'
+      href: get-started/get-started-with-visual-studio-for-mac.md
 - name: '什么是 F#'
   href: what-is-fsharp.md
 - name: 'F# 教程'

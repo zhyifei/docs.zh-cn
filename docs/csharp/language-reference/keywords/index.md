@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 3699d25b781ddf25fd917e49cf3cdf8d20ea090f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9b01b90f0269a0d8e82189276bceae1c5eafb784
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422742"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428482"
 ---
 # <a name="c-keywords"></a>C# 关键字
 
@@ -26,7 +26,7 @@ ms.locfileid: "73422742"
 |---|---|---|---|  
 |[abstract](abstract.md)|[as](../operators/type-testing-and-cast.md#as-operator)|[base](base.md)|[bool](bool.md)|  
 |[break](break.md)|[byte](../builtin-types/integral-numeric-types.md)|[case](switch.md)|[catch](try-catch.md)|  
-|[char](char.md)|[checked](checked.md)|[class](class.md)|[const](const.md)|  
+|[char](../builtin-types/char.md)|[checked](checked.md)|[class](class.md)|[const](const.md)|  
 |[continue](continue.md)|[decimal](../builtin-types/floating-point-numeric-types.md)|[default](default.md)|[delegate](../builtin-types/reference-types.md)|  
 |[do](do.md)|[double](../builtin-types/floating-point-numeric-types.md)|[else](if-else.md)|[enum](enum.md)|  
 |[event](event.md)|[explicit](../operators/user-defined-conversion-operators.md)|[extern](extern.md)|[false](false-literal.md)|  
@@ -34,7 +34,7 @@ ms.locfileid: "73422742"
 |[foreach](foreach-in.md)|[goto](goto.md)|[if](if-else.md)|[implicit](../operators/user-defined-conversion-operators.md)|  
 |[in](in.md)|[int](../builtin-types/integral-numeric-types.md)|[interface](interface.md)|[internal](internal.md)|
 |[is](is.md)|[lock](lock-statement.md)|[long](../builtin-types/integral-numeric-types.md)|[namespace](namespace.md)|
-|[全新](../operators/new-operator.md)|[null](null.md)|[object](../builtin-types/reference-types.md)|[operator](../operators/operator-overloading.md)|
+|[new](../operators/new-operator.md)|[null](null.md)|[object](../builtin-types/reference-types.md)|[operator](../operators/operator-overloading.md)|
 |[out](out.md)|[override](override.md)|[params](params.md)|[private](private.md)|
 |[protected](protected.md)|[public](public.md)|[readonly](readonly.md)|[ref](ref.md)|
 |[return](return.md)|[sbyte](../builtin-types/integral-numeric-types.md)|[sealed](sealed.md)|[short](../builtin-types/integral-numeric-types.md)||
@@ -52,14 +52,14 @@ ms.locfileid: "73422742"
 ||||  
 |---|---|---|  
 |[add](add.md)|[alias](extern-alias.md)|[ascending](ascending.md)|
-|[异步](async.md)|[await](../operators/await.md)|[by](by.md)|
+|[async](async.md)|[await](../operators/await.md)|[by](by.md)|
 |[descending](descending.md)|[dynamic](../builtin-types/reference-types.md)|[equals](equals.md)|
 |[from](from-clause.md)|[get](get.md)|[global](../operators/namespace-alias-qualifier.md)|
 |[group](group-clause.md)|[into](into.md)|[join](join-clause.md)|
 |[let](let-clause.md)|[nameof](../operators/nameof.md)|[on](on.md)|
 |[orderby](orderby-clause.md)|[partial（类型）](partial-type.md)|[partial（方法）](partial-method.md)|
 |[remove](remove.md)|[select](select-clause.md)|[set](set.md)|
-|[unmanaged（泛型类型约束）](where-generic-type-constraint.md)|[值](value.md)|[var](var.md)|
+|[unmanaged（泛型类型约束）](where-generic-type-constraint.md)|[value](value.md)|[var](var.md)|
 |[when（筛选条件）](when.md)|[where（泛型类型约束）](where-generic-type-constraint.md)|[where（查询子句）](where-clause.md)|
 |[yield](yield.md)| | |
   

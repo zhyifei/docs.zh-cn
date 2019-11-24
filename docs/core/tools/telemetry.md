@@ -4,12 +4,12 @@ description: 了解可收集使用情况信息以供分析的 .NET Core SDK 遥�
 author: KathleenDollard
 ms.date: 08/27/2019
 ms.custom: seodec18
-ms.openlocfilehash: 253f69392f034e330a75ed387d9346e8a5ae2a08
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: ecb8dbed036a04726867d004dbadf6205c1fa09f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133700"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281771"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 遥测
 
@@ -114,7 +114,7 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 
 下面的示例显示所收集的数据类型：
 
-```
+```console
 System.IO.IOException
 at System.ConsolePal.WindowsConsoleStream.Write(Byte[] buffer, Int32 offset, Int32 count)
 at System.IO.StreamWriter.Flush(Boolean flushStream, Boolean flushEncoder)

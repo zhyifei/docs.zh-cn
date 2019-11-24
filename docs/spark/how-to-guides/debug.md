@@ -4,12 +4,12 @@ description: 了解如何在 Windows 上部署 .NET for Apache Spark 应用程�
 ms.date: 08/15/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: dcaca96f6eb871c15a37adc18190b073c63c8e93
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 098c7519fe99ef04773c5e4b81685ca0f06f1272
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206145"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281533"
 ---
 # <a name="debug-a-net-for-apache-spark-application"></a>部署 .NET for Apache Spark 应用程序
 
@@ -29,7 +29,7 @@ spark-submit \
 
 运行命令时，会看到以下输出：
 
-```
+```console
 ***********************************************************************
 * .NET Backend running debug mode. Press enter to exit *
 ***********************************************************************

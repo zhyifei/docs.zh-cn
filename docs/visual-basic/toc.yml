@@ -83,7 +83,7 @@
       href: programming-guide/concepts/linq/index.md
     - name: 面向对象的编程
       href: programming-guide/concepts/object-oriented-programming.md
-    - name: 映像
+    - name: 反射
       href: programming-guide/concepts/reflection.md
     - name: 序列化
       href: programming-guide/concepts/serialization/index.md
@@ -970,15 +970,15 @@
         - name: 无法创建 ActiveX 组件
           href: language-reference/error-messages/cannot-create-activex-component.md
         - name: “<name>”是使用“System.MarshalByRefObject”作为基类的类“<name>”的值类型字段“<classname>”的成员，无法引用
-          href: language-reference/error-messages/cannot-refer-to-name-because-it-is-member-of-value-typed-field-name-of-class.md
+          href: language-reference/error-messages/bc30310.md
         - name: 没有类的显式实例，就无法从共享方法或共享成员初始值设定项中引用该类的实例成员
-          href: language-reference/error-messages/cannot-refer-to-an-instance-member-of-a-class.md
+          href: language-reference/error-messages/bc30369.md
         - name: 无法建立必要的临时文件。
           href: language-reference/error-messages/can-t-create-necessary-temporary-file.md
         - name: 无法打开“<filename>”进行写入
-          href: language-reference/error-messages/can-t-open-filename-for-writing.md
+          href: language-reference/error-messages/bc2012.md
         - name: 无法找到类“<classname>”
-          href: language-reference/error-messages/class-classname-cannot-be-found.md
+          href: language-reference/error-messages/bc31098.md
         - name: 类不支持自动化或不支持所需的接口
           href: language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md
         - name: “Class”语句必须以匹配的“End Class”结束

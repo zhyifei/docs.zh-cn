@@ -3,12 +3,12 @@ title: 排查 .NET Core 工具使用问题
 description: 发现运行 .NET Core 工具出现的常见问题及可能的解决方案。
 author: kdollard
 ms.date: 09/23/2019
-ms.openlocfilehash: fc6c520ab57235c78148a6b77717cbd80a989451
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: df896405a122050acba220923eee58e87e0b75b6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318287"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74282501"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>排查 .NET Core 工具使用问题
 
@@ -25,7 +25,7 @@ ms.locfileid: "72318287"
 
 如果找不到可执行文件，则将看到如下所示的消息：
 
-```
+```console
 Could not execute because the specified command or file was not found.
 Possible reasons for this include:
   * You misspelled a built-in dotnet command.
@@ -101,7 +101,7 @@ dotnet --info
 
 .NET Core 全局或本地工具安装失败的原因有很多。 当工具安装失败时，你将看到如下所示的消息：
 
-```
+```console
 Tool '{0}' failed to install. This failure may have been caused by:
 
 * You are attempting to install a preview release and did not use the --version option to specify the version.
