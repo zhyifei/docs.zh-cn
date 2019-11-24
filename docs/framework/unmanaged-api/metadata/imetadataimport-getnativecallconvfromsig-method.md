@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50e04026-4d4a-47d9-96c1-f4677d6d938b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 44b5dfb31cfe0364a745b729018be536f6be9aac
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 06ff6a1885a5e9bb819c2897aaf85e5c2b9b1147
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778965"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437243"
 ---
 # <a name="imetadataimportgetnativecallconvfromsig-method"></a>IMetaDataImport::GetNativeCallConvFromSig 方法
 获取指定的签名指针所表示的方法的本机调用约定。  
@@ -39,20 +37,20 @@ HRESULT GetNativeCallConvFromSig (
   
 ## <a name="parameters"></a>参数  
  `pvSig`  
- [in]指向要返回的调用约定的方法的元数据签名的指针。  
+ [in] A pointer to the metadata signature of the method to return the calling convention for.  
   
  `cbSig`  
- [in]以字节为单位的大小`pvSig`。  
+ [in] The size in bytes of `pvSig`.  
   
  `pCallConv`  
- [out]一个指向本机调用约定。  
+ [out] A pointer to the native calling convention.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3ef841c2-cade-42ee-ba34-2ef91d6d0879
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ba24f5394ef8fb31d8bfa4e74ac59e7bd4af86d8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 12f31d0bf224e38418818122dad3586ec687b2ad
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769867"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448576"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind 枚举
-指示内存地址的类型。  
+Indicates the type of memory address.  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,23 +42,23 @@ typedef enum CorSymAddrKind
 } CorSymAddrKind;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`ADDR_IL_OFFSET`|指示非 Microsoft 中间语言 (MSIL) 本地变量或参数索引。|  
-|`ADDR_NATIVE_RVA`|指示模块中的相对虚拟地址。|  
-|`ADDR_NATIVE_REGISTER`|指示 CPU 寄存器。|  
-|`ADDR_NATIVE_REGREL`|指示第一个地址是寄存器和第二个地址是偏移量。|  
-|`ADDR_NATIVE_OFFSET`|指示一个偏移的基址。|  
-|`ADDR_NATIVE_REGREG`|指示第一个地址是寄存器中，低部分和第二个地址是高部分。|  
-|`ADDR_NATIVE_REGSTK`|指示第一个地址是寄存器的低部分、 第二个是高的部分中，第三个是偏移量。|  
-|`ADDR_NATIVE_STKREG`|指示第一个地址是寄存器，第二个是偏移量，并且第三个已注册的高部分。|  
-|`ADDR_BITFIELD`|指示第一个地址是一个字段的开头和第二个地址是字段长度。|  
-|`ADDR_NATIVE_ISECTOFFSET`|指示第一个地址是部分和第二个地址是偏移量。|  
+|`ADDR_IL_OFFSET`|Indicates a Microsoft intermediate language (MSIL) local variable or parameter index.|  
+|`ADDR_NATIVE_RVA`|Indicates a relative virtual address into a module.|  
+|`ADDR_NATIVE_REGISTER`|Indicates a CPU register.|  
+|`ADDR_NATIVE_REGREL`|Indicates that the first address is a register and the second address is an offset.|  
+|`ADDR_NATIVE_OFFSET`|Indicates an offset from a base address.|  
+|`ADDR_NATIVE_REGREG`|Indicates that the first address is the low portion of a register, and the second address is the high portion.|  
+|`ADDR_NATIVE_REGSTK`|Indicates that the first address is the low portion of a register, the second is the high portion, and the third is an offset.|  
+|`ADDR_NATIVE_STKREG`|Indicates that the first address is a register, the second is an offset, and the third is the high portion of the register.|  
+|`ADDR_BITFIELD`|Indicates that the first address is the start of a field and the second address is the field length.|  
+|`ADDR_NATIVE_ISECTOFFSET`|Indicates that the first address is the section and the second address is an offset.|  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

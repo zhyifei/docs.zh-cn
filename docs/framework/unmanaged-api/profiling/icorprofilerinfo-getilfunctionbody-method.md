@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e29b46bc-5fdc-4894-b0c2-619df4b65ded
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 484fb5b8398e3ebd61d1c300afec1536ee1dc0c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a7ec50c91ce02958d0d44643d4f79da1680532aa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780598"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450358"
 ---
 # <a name="icorprofilerinfogetilfunctionbody-method"></a>ICorProfilerInfo::GetILFunctionBody 方法
-获取一个指针指向方法的主体在 Microsoft 中间语言 (MSIL) 代码中，从其标头处开始。  
+Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,26 +37,26 @@ HRESULT GetILFunctionBody(
   
 ## <a name="parameters"></a>参数  
  `moduleId`  
- [in]该函数所在的模块的 ID。  
+ [in] The ID of the module in which the function resides.  
   
  `methodId`  
- [in]方法的元数据标记。  
+ [in] The metadata token for the method.  
   
  `ppMethodHeader`  
- [out]指向方法的标头的指针。  
+ [out] A pointer to the method's header.  
   
  `pcbMethodSize`  
- [out]一个整数，指定方法的大小。  
+ [out] An integer that specifies the size of the method.  
   
 ## <a name="remarks"></a>备注  
- 一种方法是按其所在的模块限定范围。 因为`GetILFunctionBody`方法旨在为访问工具提供对 MSIL 代码，然后加载公共语言运行时 (CLR)，它使用的元数据标记的方法来查找所需的实例。  
+ A method is scoped by the module in which it lives. Because the `GetILFunctionBody` method is designed to give a tool access to the MSIL code before it has been loaded by the common language runtime (CLR), it uses the metadata token of the method to find the desired instance.  
   
- `GetILFunctionBody` 如果可以返回 CORPROF_E_FUNCTION_NOT_IL HRESULT`methodId`指向一种方法，没有任何 MSIL 代码 （如一个抽象方法或平台调用 (PInvoke) 方法）。  
+ `GetILFunctionBody` can return a CORPROF_E_FUNCTION_NOT_IL HRESULT if the `methodId` points to a method without any MSIL code (such as an abstract method, or a platform invoke (PInvoke) method).  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

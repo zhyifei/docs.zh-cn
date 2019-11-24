@@ -14,20 +14,18 @@ helpviewer_keywords:
 ms.assetid: 18e89f45-e068-426a-be16-9f53a4346860
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 238a5f19bd8cbd89a5537b2b9297bfa9e1f54613
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 774a5d4e48f00ea8c28977f3f685dcd5a8da3199
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952876"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440585"
 ---
 # <a name="functionleave-function"></a>FunctionLeave 函数
-通知探查器某个函数将要返回到调用方。  
+Notifies the profiler that a function is about to return to the caller.  
   
 > [!NOTE]
-> .NET Framework `FunctionLeave` 2.0 中不推荐使用该函数。 它将继续运行, 但会导致性能下降。 改为使用[FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)函数。  
+> The `FunctionLeave` function is deprecated in the .NET Framework 2.0. It will continue to work, but will incur a performance penalty. Use the [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) function instead.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,29 +37,29 @@ void __stdcall FunctionLeave (
   
 ## <a name="parameters"></a>参数  
  `funcID`  
- 中返回的函数的标识符。  
+ [in] The identifier of the function that is returning.  
   
 ## <a name="remarks"></a>备注  
- `FunctionLeave`函数是回调; 必须实现它。 实现必须使用`__declspec`(`naked`) 存储类特性。  
+ The `FunctionLeave` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
   
- 在调用此函数之前, 执行引擎不会保存任何注册。  
+ The execution engine does not save any registers before calling this function.  
   
-- 进入时, 必须保存使用的所有寄存器, 包括浮点单元 (FPU) 中的所有寄存器。  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- 退出时, 必须通过弹出由其调用方推送的所有参数来还原堆栈。  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- 的`FunctionLeave`实现不应被阻止, 因为它将延迟垃圾回收。 实现不应尝试垃圾回收, 因为堆栈可能不处于垃圾回收友好状态。 如果尝试垃圾回收, 则运行时将被阻止, `FunctionLeave`直到返回。  
+ The implementation of `FunctionLeave` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionLeave` returns.  
   
- 此外, 该`FunctionLeave`函数不得调入托管代码或以任何方式导致托管的内存分配。  
+ Also, the `FunctionLeave` function must not call into managed code or in any way cause a managed memory allocation.  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl  
+ **Header:** CorProf.idl  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
- **.NET Framework 版本:** 1.1、1。0  
+ **.NET Framework Versions:** 1.1, 1.0  
   
 ## <a name="see-also"></a>请参阅
 

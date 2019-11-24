@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1f3dbdf5-db0c-4b07-bbb7-375de2a63673
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d0fef75a1d47ba0c16569d3955ee447c2e7332d4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7d61a6db8f42398a0d6e0d818605592f4fe71cf7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776126"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445010"
 ---
 # <a name="icorprofilercallbackexceptioncatcherleave-method"></a>ICorProfilerCallback::ExceptionCatcherLeave 方法
-通知探查器将控制权传递带相应`catch`块。  
+Notifies the profiler that control is being passed out of the appropriate `catch` block.  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,14 +32,14 @@ HRESULT ExceptionCatcherLeave();
 ```  
   
 ## <a name="remarks"></a>备注  
- 探查器不应在其实现此方法阻止因为堆栈可能未处于允许垃圾回收的状态，因此不能启用抢先式垃圾回收。 如果探查器进行阻止并尝试执行垃圾回收，运行时将阻塞，直到此回调返回。  
+ The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
   
- 为托管代码或以任何方式导致托管内存分配，不应调用此方法的探查器的实现。  
+ The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

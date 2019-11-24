@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 20fefee7-1040-41ba-93dc-bd42f68b90c2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 981048c10be27900f011afeab55d1c5eb523f734
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 64ecbb56ab32ac8381a4864acd5fd40741786d30
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776678"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449133"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange 方法
-返回到给定缓冲区中指定的嵌入的源范围。 缓冲区必须足够大以保存源。  
+Returns the specified range of the embedded source into the given buffer. The buffer must be large enough to hold the source.  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,28 +41,28 @@ HRESULT GetSourceRange(
   
 ## <a name="parameters"></a>参数  
  `startLine`  
- [in]当前文档中的起始行。  
+ [in] The starting line in the current document.  
   
  `startColumn`  
- [in]当前文档中的起始列。  
+ [in] The starting column in the current document.  
   
  `endLine`  
- [in]当前文档中的最后一行。  
+ [in] The final line in the current document.  
   
  `endColumn`  
- [in]当前文档中的最后一列。  
+ [in] The final column in the current document.  
   
  `cSourceBytes`  
- [in]为源，以字节为单位的大小。  
+ [in] The size of the source, in bytes.  
   
  `pcSourceBytes`  
- [out]指向一个变量来接收源大小的指针。  
+ [out] A pointer to a variable that receives the source size.  
   
  `source`  
- [out]大小和源文档，以字节为单位的指定范围的长度。  
+ [out] The size and length of the specified range of the source document, in bytes.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则为 S_OK。  
+ S_OK if the method succeeds.  
   
 ## <a name="see-also"></a>请参阅
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea3dc625-5650-4bf4-8e67-01e42be065b1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 85f788ec61cc441e7271fb7a8aba843f37d20a57
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3f6320d6d962e40acf494acbb5c95adda62d1461
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782729"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445287"
 ---
 # <a name="icorprofilercallbackexceptionunwindfunctionenter-method"></a>ICorProfilerCallback::ExceptionUnwindFunctionEnter 方法
-通知探查器的异常处理展开阶段已开始展开一个函数。  
+Notifies the profiler that the unwind phase of exception handling has begun to unwind a function.  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,17 +34,17 @@ HRESULT ExceptionUnwindFunctionEnter(
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in]正在展开的函数的 ID。  
+ [in] The ID of the function that is being unwound.  
   
 ## <a name="remarks"></a>备注  
- 探查器不应在其实现此方法阻止因为堆栈可能未处于允许垃圾回收的状态，因此不能启用抢先式垃圾回收。 如果探查器进行阻止并尝试执行垃圾回收，运行时将阻塞，直到此回调返回。  
+ The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
   
- 为托管代码或以任何方式导致托管内存分配，不应调用此方法的探查器的实现。  
+ The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e0c3521-e54d-43c1-9857-cc76b49b8ffc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ff298f73f02f148fc389f389ba86fd9a550998c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 74088d1cd018bb07406fc7d00ff83d783a98b663
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781777"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450224"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr 枚举
-包含描述一种方法的功能的值。  
+Contains values that describe the features of a method.  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,39 +62,39 @@ typedef enum CorMethodAttr {
 } CorMethodAttr;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`mdMemberAccessMask`|指定成员访问权限。|  
-|`mdPrivateScope`|指定该成员不能被引用。|  
-|`mdPrivate`|指定该成员是只能由父类型访问。|  
-|`mdFamANDAssem`|指定该成员是仅在此程序集中的子类型访问。|  
-|`mdAssem`|指定该成员是可访问的程序集中的任何人。|  
-|`mdFamily`|指定该成员是只能由类型和子类型访问。|  
-|`mdFamORAssem`|指定该成员是可由派生类中它的程序集的其他类型访问。|  
-|`mdPublic`|指定该成员是由下列所有类型与访问作用域可访问。|  
-|`mdStatic`|指定为该类型的一部分而不是实例成员定义成员。|  
-|`mdFinal`|指定不能重写该方法。|  
-|`mdVirtual`|指定可以重写该方法。|  
-|`mdHideBySig`|指定的方法按名称和签名，而不是只按名称隐藏。|  
-|`mdVtableLayoutMask`|指定虚拟表布局。|  
-|`mdReuseSlot`|指定用于此方法在虚拟表中的槽在重用。 这是默认设置。|  
-|`mdNewSlot`|指定此方法总是获取虚拟表中的新槽。|  
-|`mdCheckAccessOnOverride`|指定可以通过向其是可见的相同类型中重写该方法。|  
-|`mdAbstract`|指定未实现方法。|  
-|`mdSpecialName`|指定的方法是特殊字符，其名称描述如何。|  
-|`mdPinvokeImpl`|指定使用 PInvoke 转发该方法的实现。|  
-|`mdUnmanagedExport`|指定的方法是导出到非托管代码的托管的方法。|  
-|`mdReservedMask`|公共语言运行时，保留供内部使用。|  
-|`mdRTSpecialName`|指定公共语言运行时应检查的方法名称的编码。|  
-|`mdHasSecurity`|指定该方法具有与之关联的安全。|  
-|`mdRequireSecObject`|指定该方法调用包含安全代码的另一种方法。|  
+|`mdMemberAccessMask`|Specifies member access.|  
+|`mdPrivateScope`|Specifies that the member cannot be referenced.|  
+|`mdPrivate`|Specifies that the member is accessible only by the parent type.|  
+|`mdFamANDAssem`|Specifies that the member is accessible by subtypes only in this assembly.|  
+|`mdAssem`|Specifies that the member is accessibly by anyone in the assembly.|  
+|`mdFamily`|Specifies that the member is accessible only by type and subtypes.|  
+|`mdFamORAssem`|Specifies that the member is accessible by derived classes and by other types in its assembly.|  
+|`mdPublic`|Specifies that the member is accessible by all types with access to the scope.|  
+|`mdStatic`|Specifies that the member is defined as part of the type rather than as a member of an instance.|  
+|`mdFinal`|Specifies that the method cannot be overridden.|  
+|`mdVirtual`|Specifies that the method can be overridden.|  
+|`mdHideBySig`|Specifies that the method hides by name and signature, rather than just by name.|  
+|`mdVtableLayoutMask`|Specifies virtual table layout.|  
+|`mdReuseSlot`|Specifies that the slot used for this method in the virtual table be reused. 这是默认设置。|  
+|`mdNewSlot`|Specifies that the method always gets a new slot in the virtual table.|  
+|`mdCheckAccessOnOverride`|Specifies that the method can be overridden by the same types to which it is visible.|  
+|`mdAbstract`|Specifies that the method is not implemented.|  
+|`mdSpecialName`|Specifies that the method is special, and that its name describes how.|  
+|`mdPinvokeImpl`|Specifies that the method implementation is forwarded using PInvoke.|  
+|`mdUnmanagedExport`|Specifies that the method is a managed method exported to unmanaged code.|  
+|`mdReservedMask`|Reserved for internal use by the common language runtime.|  
+|`mdRTSpecialName`|Specifies that the common language runtime should check the encoding of the method name.|  
+|`mdHasSecurity`|Specifies that the method has security associated with it.|  
+|`mdRequireSecObject`|Specifies that the method calls another method containing security code.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

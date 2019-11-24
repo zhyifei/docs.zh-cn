@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 35449514-333f-4918-9c60-7aa198d655d2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6c52f96ad9458dfd5cdedc5cc73154aa570c6759
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 26948261c571dbe963811e8e9631551685a63bdb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751963"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450371"
 ---
-# <a name="corprfruntimetype-enumeration"></a>COR_PRF_RUNTIME_TYPE 枚举
-包含指示公共语言运行时 (CLR) 的版本值： 桌面或 CoreCLR，在 Silverlight 中使用。  
+# <a name="cor_prf_runtime_type-enumeration"></a>COR_PRF_RUNTIME_TYPE 枚举
+Contains values that indicate the version of the common language runtime (CLR): desktop or CoreCLR, which is used in Silverlight.  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,19 +34,19 @@ typedef enum
 } COR_PRF_RUNTIME_TYPE;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`COR_PRF_DESKTOP_CLR`|桌面 CLR 的版本。|  
-|`COR_PRF_CORE_CLR`|在 Silverlight 中所用的 CLR core 版本。|  
+|`COR_PRF_DESKTOP_CLR`|The desktop version of the CLR.|  
+|`COR_PRF_CORE_CLR`|The core version of the CLR, used in Silverlight.|  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   

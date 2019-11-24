@@ -9,16 +9,16 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: d342e4382cfe227e477ab87c2ca428834010768e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5f9362814eb671a6d7a111cadb96be6d06f5cb3d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042163"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441491"
 ---
 # <a name="ui-automation-events-overview"></a>UI 自动化事件概述
 > [!NOTE]
-> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 事件通知是屏幕读取器和屏幕放大器等辅助技术的一项重要功能。 这些 UI 自动化客户端跟踪由 UI 自动化提供程序引发的事件（当 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 中发生一些事情时），并使用这些信息通知最终用户。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "71042163"
 ## <a name="types-of-events"></a>事件类型  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件分为以下几类：  
   
-|事件|描述|  
+|Event — 事件|描述|  
 |-----------|-----------------|  
 |属性更改|当 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 元素上的某个属性或控件模式更改时引发。 例如，如果客户端需要监视应用程序的复选框控件，它可以注册来侦听 <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> 属性上的属性更改事件。 选中或取消选中该复选框控件时，提供程序会引发事件且客户端会采取必要的操作。|  
 |元素操作|当来自最终用户或编程活动的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 结果出现更改时引发；例如，单击或通过 <xref:System.Windows.Automation.InvokePattern>调用一个按钮。|  
@@ -66,7 +66,7 @@ ms.locfileid: "71042163"
 ## <a name="ui-automation-event-arguments"></a>UI 自动化事件参数  
  下列类能封装事件参数。  
   
-|类|描述|  
+|实例|描述|  
 |-----------|-----------------|  
 |<xref:System.Windows.Automation.AsyncContentLoadedEventArgs>|包含有关内容异步加载的信息，包括加载已完成的百分比的信息。|  
 |<xref:System.Windows.Automation.AutomationEventArgs>|包含有关无需额外数据的简单事件的信息。|  

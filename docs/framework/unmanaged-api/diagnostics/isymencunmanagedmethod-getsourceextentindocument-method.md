@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9c5566ab-4ec7-4b61-9753-839bb90ae78c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e4948a853434b14845983addb0e6fa4012279084
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b8e72745eff09c6707afe5a5f20a1ddf38b239ae
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776867"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448613"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>ISymENCUnmanagedMethod::GetSourceExtentInDocument 方法
-获取的最小起始行和方法的最大结束行中特定文档。  
+Gets the smallest start line and largest end line for the method in a specific document.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,19 +36,19 @@ HRESULT GetSourceExtentInDocument(
   
 ## <a name="parameters"></a>参数  
  `document`  
- [in]指向文档的指针。  
+ [in] A pointer to the document.  
   
  `pstartLine`  
- [out]一个指向`ULONG32`，它接收的起始行。  
+ [out] A pointer to a `ULONG32` that receives the start line.  
   
  `pendLine`  
- [out]一个指向`ULONG32`接收结束行。  
+ [out] A pointer to a `ULONG32` that receives the end line.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

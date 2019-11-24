@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fb8e178-342b-4c89-9bcf-f7f834e6cb77
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 50035799fcfa4c4b08404d63fe91e7dba85722fa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: acb772a64c8f13405f2836bb5f4f308986dce414
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758833"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447652"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers 方法
 枚举表示指定类型的成员的 MemberDef 标记。  
@@ -41,38 +39,38 @@ HRESULT EnumMembers (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in、 out]一个指向枚举器。  
+ [in, out] A pointer to the enumerator.  
   
  `cl`  
- [in]表示要枚举其成员的类型的 TypeDef 标记。  
+ [in] A TypeDef token representing the type whose members are to be enumerated.  
   
  `rMembers`  
- [out]用来保存 MemberDef 标记数组。  
+ [out] The array used to hold the MemberDef tokens.  
   
  `cMax`  
  [in] `rMembers` 数组的最大大小。  
   
  `pcTokens`  
- [out]MemberDef 标记中返回的实际数目`rMembers`。  
+ [out] The actual number of MemberDef tokens returned in `rMembers`.  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMembers` 已成功返回。|  
-|`S_FALSE`|没有要枚举的 MemberDef 标记。 在这种情况下，`pcTokens`为零。|  
+|`S_OK`|`EnumMembers` returned successfully.|  
+|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="remarks"></a>备注  
- 枚举的成员的类集合时`EnumMembers`仅返回成员 (字段和方法，但**不**属性或事件) 在类中直接定义。 它不返回任何成员的类继承，即使类提供实现这些继承的成员。 若要枚举继承的成员，调用方必须显式遍历继承链。 请注意，继承链的规则可能会有所不同，具体取决于语言或编译器发出的原始元数据。
+ When enumerating collections of members for a class, `EnumMembers` returns only members (fields and methods, but **not** properties or events) defined directly on the class. It does not return any members that the class inherits, even if the class provides an implementation for those inherited members. To enumerate inherited members, the caller must explicitly walk the inheritance chain. Note that the rules for the inheritance chain may vary depending on the language or compiler that emitted the original metadata.
  
- 属性和事件不会枚举`EnumMembers`。 若要枚举的请使用[EnumProperties](imetadataimport-enumproperties-method.md)或[EnumEvents](imetadataimport-enumevents-method.md)。
+ Properties and events are not enumerated by `EnumMembers`. To enumerate those, use [EnumProperties](imetadataimport-enumproperties-method.md) or [EnumEvents](imetadataimport-enumevents-method.md).
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

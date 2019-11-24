@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 836133e8-6108-4b9b-b0a9-bce4e08dccda
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 22c45ff77c030dcbe87e5aa53284b2cace9849ab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 889fd4ec3332cbe80a035e13a5145421dc0ed5a9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759475"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448890"
 ---
 # <a name="isymunmanagedmethodgetsequencepointcount-method"></a>ISymUnmanagedMethod::GetSequencePointCount 方法
-获取在此方法内的序列点的计数。  
+Gets the count of sequence points within this method.  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,13 +34,13 @@ HRESULT GetSequencePointCount(
   
 ## <a name="parameters"></a>参数  
  `pRetVal`  
- [out]一个指向`ULONG32`接收包含序列点所需的缓冲区的大小。  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the sequence points.  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>请参阅
 

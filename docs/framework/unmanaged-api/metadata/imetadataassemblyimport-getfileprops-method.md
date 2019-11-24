@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5e6216f-ae3d-4697-9688-66b69c1251ec
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4f3883b0cd1b7aca6265b738eace483c81eb37b9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: beb697d80417b937876a0887e4376341185a47d9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760137"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447213"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps 方法
-获取具有指定的元数据签名文件的属性。  
+Gets the properties of the file with the specified metadata signature.  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,32 +41,32 @@ HRESULT GetFileProps (
   
 ## <a name="parameters"></a>参数  
  `mdf`  
- [in]`mdFile`表示要为其获取属性的文件的元数据标记。  
+ [in] The `mdFile` metadata token that represents the file for which to get the properties.  
   
  `szName`  
- [out]简单文件的名称。  
+ [out] The simple name of the file.  
   
  `cchName`  
- [in]大小，以宽字符为单位的`szName`。  
+ [in] The size, in wide chars, of `szName`.  
   
  `pchName`  
- [out]中实际返回的宽字符数`szName`。  
+ [out] The number of wide chars actually returned in `szName`.  
   
  `ppbHashValue`  
- [out]指向哈希值的指针。 这是使用 sha-1 算法，该文件的哈希。  
+ [out] A pointer to the hash value. This is the hash, using the SHA-1 algorithm, of the file.  
   
  `pcbHashValue`  
- [out]中返回的哈希值的宽字符数。  
+ [out] The number of wide chars in the returned hash value.  
   
  `pdwFileFlags`  
- [out]指向描述应用于文件的元数据的标志的指针。 标志值是一个或多个组合[CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)值。  
+ [out] A pointer to the flags that describe the metadata applied to a file. The flags value is a combination of one or more [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

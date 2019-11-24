@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 8653bd4c-2290-43d2-a3e1-cbbd50033f4f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 66bd56a332dc34fd35f3129256cc0e3d6c5d4508
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: af881d23ff77f05dadbbc745b973979e35ebe9f7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636704"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447564"
 ---
 # <a name="imethodmallocalloc-method"></a>IMethodMalloc::Alloc 方法
 
-尝试为新的 Microsoft 中间语言 (MSIL) 函数主体分配指定的内存量。
+Attempts to allocate a specified amount of memory for a new Microsoft intermediate language (MSIL) function body.
 
 ## <a name="syntax"></a>语法
 
@@ -39,22 +37,22 @@ PVOID Alloc (
 ## <a name="parameters"></a>参数
 
 `cb`\
-[in]要为方法主体分配的字节数。
+[in] The number of bytes to allocate for the method body.
 
 ## <a name="remarks"></a>备注
 
- 已分配的内存将大于与此分配器相关联的模块的基址的地址处开始。 换而言之，每个分配器创建特定的模块，并将尝试从其基址分配内存的正偏移位置。 如果`Alloc`无法分配请求的数目的字节大于该模块的基址的地址处返回 E_OUTOFMEMORY，而不考虑实际的可用内存空间量。
+ The allocated memory will begin at an address greater than the base address of the module that is associated with this allocator. In other words, each allocator is created for a particular module, and will attempt to allocate memory at a positive offset from its base address. If `Alloc` fails to allocate the requested number of bytes at an address greater than the base address of the module, it returns E_OUTOFMEMORY, regardless of the actual amount of memory space available.
 
- `Alloc`方法应结合使用[icorprofilerinfo:: Setilfunctionbody](icorprofilerinfo-setilfunctionbody-method.md)方法。
+ The `Alloc` method should be used in conjunction with the [ICorProfilerInfo::SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) method.
 
 ## <a name="requirements"></a>要求
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
 
- **标头：** CorProf.idl, CorProf.h
+ **头文件：** CorProf.idl、CorProf.h
 
  **库：** CorGuids.lib
 
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>请参阅
 

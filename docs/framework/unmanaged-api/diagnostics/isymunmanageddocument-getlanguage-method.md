@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6639418-e9f2-4a99-8ce2-ec9876e0bc79
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 167eb9ae550454afee05cf1e724ba4afa4f95430
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cea18fefa2d356cbb5857db5133b1086c38ac6ff
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776735"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449177"
 ---
 # <a name="isymunmanageddocumentgetlanguage-method"></a>ISymUnmanagedDocument::GetLanguage 方法
-获取此文档的语言标识符  
+Gets the language identifier of this document  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,10 +34,10 @@ HRESULT GetLanguage(
   
 ## <a name="parameters"></a>参数  
  `pRetVal`  
- [out]指向一个变量来接收语言标识符的指针。  
+ [out] A pointer to a variable that receives the language identifier.  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则为 S_OK。  
+ S_OK if the method succeeds.  
   
 ## <a name="see-also"></a>请参阅
 

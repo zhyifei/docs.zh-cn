@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a4926d0a-261b-46b1-9994-82633661a64b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1c734801fd5629d8ed6bf4bccd81cf6b6de246f4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e8c145632911817e8e19d587bb8afead0a6c33af
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777412"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434346"
 ---
 # <a name="imetadataemitdeletetoken-method"></a>IMetaDataEmit::DeleteToken 方法
-从当前的元数据范围中删除指定的标记。  
+Deletes the specified token from the current metadata scope.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,14 +35,14 @@ HRESULT DeleteToken (
   
 ## <a name="parameters"></a>参数  
  `tkObj`  
- [in]要删除的标记。  
+ [in] The token to be deleted.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **Header:** Cor.h  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 80571933bc8d91c074dbee62aad50cece6277d51
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 7593e8873c2714df85146903c0052a9909a95ccd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69665517"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444713"
 ---
-# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9:: GetNativeCodeStartAddresses 方法
+# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9::GetNativeCodeStartAddresses Method
 
-给定一个 functionId 和 rejitId, 枚举此代码当前存在的所有实时编译版本的本机代码起始地址。
+Given a functionId and rejitId, enumerates the native code start address of all jitted versions of this code that currently exist.
 
 ## <a name="syntax"></a>语法
 
@@ -35,7 +35,7 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 #### <a name="parameters"></a>参数
 
 `functionId` \
-中应返回其本机代码起始地址的函数的 ID。
+[in] The ID of the function whose native code start addresses should be returned.
 
 `reJitId` \
 [in] JIT 重新编译的函数的标识。
@@ -44,25 +44,25 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 [in] `codeStartAddresses` 数组的最大大小。
 
 `pcCodeStartAddresses` \
-弄可用地址的数目。
+[out] The number of available addresses.
 
 `codeStartAddresses` \
-弄的`UINT_PTR`数组, 其中每个都是指定函数的本机正文的开始地址。
+[out] An array of `UINT_PTR`, each one of which is the start address for a native body for the specified function.
 
 ## <a name="remarks"></a>备注
 
-启用分层编译后, 函数可能有多个本机代码体。
+When tiered compilation is enabled, a function may have more than one native code body.
 
 ## <a name="requirements"></a>要求
 
-**适用**请参阅[支持 .Net Core 的操作系统](../../../core/windows-prerequisites.md#net-core-supported-operating-systems)。
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**标头：** Corprof.idl, Corprof.idl
+**头文件：** CorProf.idl、CorProf.h
 
-**类库**CorGuids.lib
+**库：** CorGuids.lib
 
-**.Net 版本:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
 ## <a name="see-also"></a>请参阅
 
-- [ICorProfilerInfo9 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)

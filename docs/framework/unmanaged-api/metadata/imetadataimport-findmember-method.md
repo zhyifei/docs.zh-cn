@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ad32fb84-c2b6-41cd-888d-787ff3a90449
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4eefb7ec1e7d0d130ec64531a59d1d5bbce04963
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7a46fa5319a1badc0cf28dcdbf535a6ed017c9c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968920"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437914"
 ---
 # <a name="imetadataimportfindmember-method"></a>IMetaDataImport::FindMember 方法
-获取一个指针, 该指针指向由指定的和具有指定名称和元数据<xref:System.Type>签名的指定的 MemberDef 标记。  
+Gets a pointer to the MemberDef token for field or method that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,36 +39,36 @@ HRESULT FindMember (
   
 ## <a name="parameters"></a>参数  
  `td`  
- 中包含要搜索的成员的类或接口的 TypeDef 标记。 如果此值为`mdTokenNil`, 则对全局变量或全局函数执行查找。  
+ [in] The TypeDef token for the class or interface that encloses the member to search for. If this value is `mdTokenNil`, the lookup is done for a global-variable or global-function.  
   
  `szName`  
- 中要搜索的成员的名称。  
+ [in] The name of the member to search for.  
   
  `pvSigBlob`  
- 中指向成员的二进制元数据签名的指针。  
+ [in] A pointer to the binary metadata signature of the member.  
   
  `cbSigBlob`  
- 中的大小 (以字节`pvSigBlob`为单位)。  
+ [in] The size in bytes of `pvSigBlob`.  
   
  `pmb`  
- 弄指向匹配的 MemberDef 标记的指针。  
+ [out] A pointer to the matching MemberDef token.  
   
 ## <a name="remarks"></a>备注  
- 使用成员的封闭类或接口 (`td`)、其名称 (`szName`) 和 (可选) 的签名 (`pvSigBlob`) 来指定成员。 类或接口中可能存在多个具有相同名称的成员。 在这种情况下, 传递成员的签名以查找唯一匹配项。  
+ You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`). There might be multiple members with the same name in a class or interface. In that case, pass the member's signature to find the unique match.  
   
- 传递给`FindMember`的签名必须已在当前范围内生成, 因为签名将绑定到特定范围。 签名可以嵌入标识封闭类或值类型的标记。 该令牌是本地 TypeDef 表中的索引。 不能在当前范围的上下文之外生成运行时签名, 并将该签名用作输入以输入到`FindMember`。  
+ The signature passed to `FindMember` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to input to `FindMember`.  
   
- `FindMember`仅查找直接在类或接口中定义的成员;它不会查找继承成员。  
+ `FindMember` finds only members that were defined directly in the class or interface; it does not find inherited members.  
   
 > [!NOTE]
-> `FindMember`是一个帮助器方法。 它调用[IMetaDataImport:: FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md);如果该调用找不到匹配项, `FindMember`则调用[IMetaDataImport:: FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md)。  
+> `FindMember` is a helper method. It calls [IMetaDataImport::FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); if that call does not find a match, `FindMember` then calls [IMetaDataImport::FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **Header:** Cor.h  
   
- **类库**作为资源包括在 Mscoree.dll 中  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

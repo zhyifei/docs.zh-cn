@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 40f9bd9e-16ec-447e-81b0-168c875e9866
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 502e7841f8c413aa48732bcea0b6c2178d70c061
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ffb5953c843a338b4548253457a0c3b1ca0c20f5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776442"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444296"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags 枚举
-包含描述运行时功能的程序集的值。  
+Contains values that describe run-time features of an assembly.  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,25 +36,25 @@ typedef enum {
 } AssemblyFlags;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`afImplicitExportedTypes`|指定导出的类型定义是隐式包含程序集的文件中。 在.NET framework 1.0 和 1.1 版中，此值始终假定要设置。|  
-|`afImplicitResources`|指定的资源定义中是隐式包含程序集的文件。 在.NET Framework 1.0 和 1.1 中，此值始终假定要设置。|  
-|`afNonSideBySideAppDomain`|指定是否在同一应用程序域中运行该程序集不能执行与其他版本。|  
-|`afNonSideBySideProcess`|指定是否在同一进程中运行该程序集不能执行与其他版本。|  
-|`afNonSideBySideMachine`|指定是否在同一台计算机上运行该程序集不能执行与其他版本。|  
+|`afImplicitExportedTypes`|Specifies that exported type definitions are implicit within the files that comprise the assembly. In the .NET Framework versions 1.0 and 1.1, this value is always assumed to be set.|  
+|`afImplicitResources`|Specifies that resource definitions are implicit within the files that comprise the assembly. In the .NET Framework 1.0 and 1.1, this value is always assumed to be set.|  
+|`afNonSideBySideAppDomain`|Specifies that the assembly cannot execute with other versions if they are running in the same application domain.|  
+|`afNonSideBySideProcess`|Specifies that the assembly cannot execute with other versions if they are running in the same process.|  
+|`afNonSideBySideMachine`|Specifies that the assembly cannot execute with other versions if they are running on the same computer.|  
   
 ## <a name="remarks"></a>备注  
- 0x0010 和 0x0070 非独占，之间的值用于描述通过并行兼容性功能的引用的程序集。 如果没有这些值设置，该程序集被假定为通过并行兼容。  
+ The values between 0x0010 and 0x0070, inclusive, are used to describe side-by-side compatibility features of the referenced assembly. If none of these values are set, the assembly is assumed to be side-by-side compatible.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MsCorEE.h  
+ **Header:** MsCorEE.h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

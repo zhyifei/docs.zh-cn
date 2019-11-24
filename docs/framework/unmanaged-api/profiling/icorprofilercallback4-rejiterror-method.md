@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7888aa9-dfaa-420f-9f99-e06ab35ca482
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6b01f38fbcf1cb0439b82a933b37971515b06ac4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6ea9dee6e83870d1f2e0fdccffa53f16e6f18dba
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758158"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430106"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError 方法
-通知探查器在实时 (JIT) 编译器时重新编译过程中的出错。  
+Notifies the profiler that the just-in-time (JIT) compiler encountered an error in the recompilation process.  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,16 +37,16 @@ HRESULT ReJITError(
   
 ## <a name="parameters"></a>参数  
  `moduleID`  
- [in]`ModuleID`中进行重新编译失败的尝试。  
+ [in] The `ModuleID` in which the failed recompilation attempt was made.  
   
  `methodId`  
- [in]`MethodDef`在其上进行了重新编译失败的尝试的方法。  
+ [in] The `MethodDef` of the method on which the failed recompilation attempt was made.  
   
  `functionId`  
- [in]正在重新编译或已标记为重新编译函数实例。 此值可能为`NULL`如果而不是实例化每个安装在每个方法的基础上发生故障 （例如，如果探查器指定要重新编译的方法的无效的元数据令牌）。  
+ [in] The function instance that is being recompiled or marked for recompilation. This value may be `NULL` if the failure occurred on a per-method basis instead of a per-instantiation basis (for example, if the profiler specified an invalid metadata token for the method to be recompiled).  
   
  `hrStatus`  
- [in]一个 HRESULT，指示故障的性质。 请参阅值的列表的状态 HRESULT 部分。  
+ [in] An HRESULT that indicates the nature of the failure. See the Status HRESULTS section for a list of values.  
   
 ## <a name="return-value"></a>返回值  
  将忽略此回调的返回值。  
@@ -57,17 +55,17 @@ HRESULT ReJITError(
   
 |状态数组 HRESULT|描述|  
 |--------------------------|-----------------|  
-|E_INVALIDARG|`moduleID`或`methodDef`令牌是`NULL`。|  
+|E_INVALIDARG|The `moduleID` or `methodDef` token is `NULL`.|  
 |CORPROF_E_DATAINCOMPLETE|该模块尚未完全加载，或正在被卸载。|  
-|CORPROF_E_MODULE_IS_DYNAMIC|动态生成指定的模块 (例如，通过`Reflection.Emit`)，并因此不受此方法。|  
-|CORPROF_E_FUNCTION_IS_COLLECTIBLE|该方法在可回收程序集，实例化，并因此不能重新编译。 请注意，类型和非反射上下文中定义的函数 (例如， `List<MyCollectibleStruct>`) 可以实例化成可回收程序集。|  
-|E_OUTOFMEMORY|尝试将标记为 JIT 重新编译指定的方法时 CLR 内存不足。|  
-|其他|操作系统返回了 CLR 控件范围之外的失败。 例如，如果要更改的内存页的访问权限保护的系统调用失败，将显示操作系统错误。|  
+|CORPROF_E_MODULE_IS_DYNAMIC|The specified module was dynamically generated (for example, by `Reflection.Emit`), and is thus not supported by this method.|  
+|CORPROF_E_FUNCTION_IS_COLLECTIBLE|The method is instantiated into a collectible assembly, and is therefore not able to be recompiled. Note that types and functions defined in a non-reflection context (for example, `List<MyCollectibleStruct>`) can be instantiated into a collectible assembly.|  
+|E_OUTOFMEMORY|The CLR ran out of memory while trying to mark the specified method for JIT recompilation.|  
+|其他|操作系统返回了 CLR 控件范围之外的失败。 For example, if a system call to change the access protection of a page of memory fails, the operating system error is displayed.|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   
