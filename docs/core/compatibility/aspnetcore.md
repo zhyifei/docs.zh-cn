@@ -1,21 +1,21 @@
 ---
 title: ASP.NET Core 中断性变更 - .NET Core
 description: 列出 ASP.NET Core 中的中断性变更。
-ms.date: 10/17/2019
+ms.date: 11/20/2019
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 4a382fc94eac656605260f628f3eaa5b41bc24da
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 26b1fc2d2abe2dd8421a8c527add6b9fd4f3f847
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579988"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74282516"
 ---
-# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="ea0ef-103">ASP.NET Core 中断性变更</span><span class="sxs-lookup"><span data-stu-id="ea0ef-103">ASP.NET Core breaking changes</span></span>
+# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="a13e6-103">ASP.NET Core 中断性变更</span><span class="sxs-lookup"><span data-stu-id="a13e6-103">ASP.NET Core breaking changes</span></span>
 
-<span data-ttu-id="ea0ef-104">下表按 ASP.NET Core 版本列出了 ASP.NET Core 中断性变更。</span><span class="sxs-lookup"><span data-stu-id="ea0ef-104">The following is a list of ASP.NET Core breaking changes by ASP.NET Core version.</span></span> <span data-ttu-id="ea0ef-105">ASP.NET Core 提供 .NET Core 使用的 Web 应用开发功能。</span><span class="sxs-lookup"><span data-stu-id="ea0ef-105">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
+<span data-ttu-id="a13e6-104">下表按 ASP.NET Core 版本列出了 ASP.NET Core 中断性变更。</span><span class="sxs-lookup"><span data-stu-id="a13e6-104">The following is a list of ASP.NET Core breaking changes by ASP.NET Core version.</span></span> <span data-ttu-id="a13e6-105">ASP.NET Core 提供 .NET Core 使用的 Web 应用开发功能。</span><span class="sxs-lookup"><span data-stu-id="a13e6-105">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
 
-## <a name="aspnet-core-30"></a><span data-ttu-id="ea0ef-106">ASP.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="ea0ef-106">ASP.NET Core 3.0</span></span>
+## <a name="aspnet-core-30"></a><span data-ttu-id="a13e6-106">ASP.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="a13e6-106">ASP.NET Core 3.0</span></span>
 
 [!INCLUDE[obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed](~/includes/core-changes/aspnetcore/3.0/obsolete-apis-removed.md)]
 
@@ -86,6 +86,10 @@ ms.locfileid: "72579988"
 ***
 
 [!INCLUDE[HTTP: Response body infrastructure changes](~/includes/core-changes/aspnetcore/3.0/http-response-body-changes.md)]
+
+***
+
+[!INCLUDE[HTTP: Some cookie SameSite default values changed](~/includes/core-changes/aspnetcore/3.0/http-cookie-samesite-defaults-change.md)]
 
 ***
 

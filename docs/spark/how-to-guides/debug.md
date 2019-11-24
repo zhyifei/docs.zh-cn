@@ -4,20 +4,20 @@ description: 了解如何在 Windows 上部署 .NET for Apache Spark 应用程�
 ms.date: 08/15/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: dcaca96f6eb871c15a37adc18190b073c63c8e93
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 098c7519fe99ef04773c5e4b81685ca0f06f1272
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206145"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281533"
 ---
-# <a name="debug-a-net-for-apache-spark-application"></a><span data-ttu-id="41931-103">部署 .NET for Apache Spark 应用程序</span><span class="sxs-lookup"><span data-stu-id="41931-103">Debug a .NET for Apache Spark application</span></span>
+# <a name="debug-a-net-for-apache-spark-application"></a><span data-ttu-id="80e59-103">部署 .NET for Apache Spark 应用程序</span><span class="sxs-lookup"><span data-stu-id="80e59-103">Debug a .NET for Apache Spark application</span></span>
 
-<span data-ttu-id="41931-104">此操作说明提供需要运行的命令，以在 Windows 上调试 .NET for Apache Spark 应用程序和 Scala 代码。</span><span class="sxs-lookup"><span data-stu-id="41931-104">This how-to provides the commands you need to run to debug your .NET for Apache Spark application and Scala code on Windows.</span></span>
+<span data-ttu-id="80e59-104">此操作说明提供需要运行的命令，以在 Windows 上调试 .NET for Apache Spark 应用程序和 Scala 代码。</span><span class="sxs-lookup"><span data-stu-id="80e59-104">This how-to provides the commands you need to run to debug your .NET for Apache Spark application and Scala code on Windows.</span></span>
 
-## <a name="debug-your-application"></a><span data-ttu-id="41931-105">调试应用程序</span><span class="sxs-lookup"><span data-stu-id="41931-105">Debug your application</span></span>
+## <a name="debug-your-application"></a><span data-ttu-id="80e59-105">调试应用程序</span><span class="sxs-lookup"><span data-stu-id="80e59-105">Debug your application</span></span>
 
-<span data-ttu-id="41931-106">打开新的命令提示符窗口，运行以下内容：</span><span class="sxs-lookup"><span data-stu-id="41931-106">Open a new command prompt window, run the following:</span></span>
+<span data-ttu-id="80e59-106">打开新的命令提示符窗口，运行以下内容：</span><span class="sxs-lookup"><span data-stu-id="80e59-106">Open a new command prompt window, run the following:</span></span>
 
 ```shell
 spark-submit \
@@ -27,21 +27,21 @@ spark-submit \
   debug
 ```
 
-<span data-ttu-id="41931-107">运行命令时，会看到以下输出：</span><span class="sxs-lookup"><span data-stu-id="41931-107">When you run the command, you see the following output:</span></span>
+<span data-ttu-id="80e59-107">运行命令时，会看到以下输出：</span><span class="sxs-lookup"><span data-stu-id="80e59-107">When you run the command, you see the following output:</span></span>
 
-```
+```console
 ***********************************************************************
 * .NET Backend running debug mode. Press enter to exit *
 ***********************************************************************
 ```
 
-<span data-ttu-id="41931-108">在此调试模式中，`DotnetRunner` 不启动 .NET 应用程序，但它会等待应用程序连接。</span><span class="sxs-lookup"><span data-stu-id="41931-108">In this debug mode, `DotnetRunner` does not launch the .NET application, but it waits for it to connect.</span></span> <span data-ttu-id="41931-109">将此命令提示符窗口保持打开状态。</span><span class="sxs-lookup"><span data-stu-id="41931-109">Leave this command prompt window open.</span></span>
+<span data-ttu-id="80e59-108">在此调试模式中，`DotnetRunner` 不启动 .NET 应用程序，但它会等待应用程序连接。</span><span class="sxs-lookup"><span data-stu-id="80e59-108">In this debug mode, `DotnetRunner` does not launch the .NET application, but it waits for it to connect.</span></span> <span data-ttu-id="80e59-109">将此命令提示符窗口保持打开状态。</span><span class="sxs-lookup"><span data-stu-id="80e59-109">Leave this command prompt window open.</span></span>
 
-<span data-ttu-id="41931-110">现在可以使用任何调试程序来运行 .NET 应用程序，以调试应用程序。</span><span class="sxs-lookup"><span data-stu-id="41931-110">Now you can run your .NET application with any debugger to debug your application.</span></span>
+<span data-ttu-id="80e59-110">现在可以使用任何调试程序来运行 .NET 应用程序，以调试应用程序。</span><span class="sxs-lookup"><span data-stu-id="80e59-110">Now you can run your .NET application with any debugger to debug your application.</span></span>
 
-## <a name="debug-scala-code"></a><span data-ttu-id="41931-111">调试 Scala 代码</span><span class="sxs-lookup"><span data-stu-id="41931-111">Debug Scala code</span></span>
+## <a name="debug-scala-code"></a><span data-ttu-id="80e59-111">调试 Scala 代码</span><span class="sxs-lookup"><span data-stu-id="80e59-111">Debug Scala code</span></span>
 
-<span data-ttu-id="41931-112">如果需要调试 Scala 端代码（如 `DotnetRunner` 或 `DotnetBackendHandler`），请运行以下命令：</span><span class="sxs-lookup"><span data-stu-id="41931-112">If you need to debug the Scala side code, such as `DotnetRunner` or `DotnetBackendHandler`, run the following command:</span></span>
+<span data-ttu-id="80e59-112">如果需要调试 Scala 端代码（如 `DotnetRunner` 或 `DotnetBackendHandler`），请运行以下命令：</span><span class="sxs-lookup"><span data-stu-id="80e59-112">If you need to debug the Scala side code, such as `DotnetRunner` or `DotnetBackendHandler`, run the following command:</span></span>
 
 ```shell
 spark-submit \
@@ -52,11 +52,11 @@ spark-submit \
   <path-to-your-app-exe> <argument(s)-to-your-app>
 ```
 
-<span data-ttu-id="41931-113">运行命令后，使用 [Intellij](https://www.jetbrains.com/help/idea/attaching-to-local-process.html) 将调试程序附加到正在运行的进程。</span><span class="sxs-lookup"><span data-stu-id="41931-113">After you run the command, attach a debugger to the running process using [Intellij](https://www.jetbrains.com/help/idea/attaching-to-local-process.html).</span></span>
+<span data-ttu-id="80e59-113">运行命令后，使用 [Intellij](https://www.jetbrains.com/help/idea/attaching-to-local-process.html) 将调试程序附加到正在运行的进程。</span><span class="sxs-lookup"><span data-stu-id="80e59-113">After you run the command, attach a debugger to the running process using [Intellij](https://www.jetbrains.com/help/idea/attaching-to-local-process.html).</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="41931-114">后续步骤</span><span class="sxs-lookup"><span data-stu-id="41931-114">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="80e59-114">后续步骤</span><span class="sxs-lookup"><span data-stu-id="80e59-114">Next steps</span></span>
 
-* [<span data-ttu-id="41931-115">.NET for Apache Spark 入门</span><span class="sxs-lookup"><span data-stu-id="41931-115">Get started with .NET for Apache Spark</span></span>](../tutorials/get-started.md)
-* [<span data-ttu-id="41931-116">将 .NET for Apache Spark 应用程序部署到 Azure HDInsight</span><span class="sxs-lookup"><span data-stu-id="41931-116">Deploy a .NET for Apache Spark application to Azure HDInsight</span></span>](../tutorials/hdinsight-deployment.md)
-* [<span data-ttu-id="41931-117">将 .NET for Apache Spark 应用程序部署到 Databricks</span><span class="sxs-lookup"><span data-stu-id="41931-117">Deploy a .NET for Apache Spark application to Databricks</span></span>](../tutorials/databricks-deployment.md)
-* [<span data-ttu-id="41931-118">将 .NET for Apache Spark 应用程序部署到 Amazon EMR Spark</span><span class="sxs-lookup"><span data-stu-id="41931-118">Deploy a .NET for Apache Spark application to Amazon EMR Spark</span></span>](../tutorials/amazon-emr-spark-deployment.md)
+* [<span data-ttu-id="80e59-115">.NET for Apache Spark 入门</span><span class="sxs-lookup"><span data-stu-id="80e59-115">Get started with .NET for Apache Spark</span></span>](../tutorials/get-started.md)
+* [<span data-ttu-id="80e59-116">将 .NET for Apache Spark 应用程序部署到 Azure HDInsight</span><span class="sxs-lookup"><span data-stu-id="80e59-116">Deploy a .NET for Apache Spark application to Azure HDInsight</span></span>](../tutorials/hdinsight-deployment.md)
+* [<span data-ttu-id="80e59-117">将 .NET for Apache Spark 应用程序部署到 Databricks</span><span class="sxs-lookup"><span data-stu-id="80e59-117">Deploy a .NET for Apache Spark application to Databricks</span></span>](../tutorials/databricks-deployment.md)
+* [<span data-ttu-id="80e59-118">将 .NET for Apache Spark 应用程序部署到 Amazon EMR Spark</span><span class="sxs-lookup"><span data-stu-id="80e59-118">Deploy a .NET for Apache Spark application to Amazon EMR Spark</span></span>](../tutorials/amazon-emr-spark-deployment.md)
