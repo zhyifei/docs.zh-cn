@@ -1,48 +1,73 @@
 ---
 title: 序列
 description: 如果有大量的F#有序数据集合，但不一定要使用所有元素，请了解如何使用序列。
-ms.date: 02/19/2019
-ms.openlocfilehash: 63e878c2c11db25a08d449070ab779a6e6a2c2eb
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.date: 11/04/2019
+ms.openlocfilehash: 34e03f1cead0a9f678f637afcb6c8397ef7572bc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216759"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971445"
 ---
 # <a name="sequences"></a>序列
 
 > [!NOTE]
 > 本文中的 API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
 
-*序列*是所有类型的元素的逻辑系列。 如果有大量的有序数据集合，但不一定需要使用所有元素，则序列将特别有用。 单个序列元素只会根据需要计算，因此，在不使用所有元素的情况下，序列可提供比列表更好的性能。 序列由`seq<'T>`类型表示，该类型是的`System.Collections.Generic.IEnumerable`别名。 因此，实现`System.IEnumerable`的任何 .NET Framework 类型都可用作序列。 [Seq 模块](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)为涉及序列的操作提供支持。
+*序列*是所有类型的元素的逻辑系列。 如果有大量的有序数据集合，但不一定需要使用所有元素，则序列将特别有用。 单个序列元素只会根据需要计算，因此，在不使用所有元素的情况下，序列可提供比列表更好的性能。 序列由 `seq<'T>` 类型表示，该类型是 <xref:System.Collections.Generic.IEnumerable%601>的别名。 因此，实现 <xref:System.Collections.Generic.IEnumerable%601> 接口的任何 .NET 类型都可用作序列。 [Seq 模块](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)为涉及序列的操作提供支持。
 
 ## <a name="sequence-expressions"></a>序列表达式
 
-*序列表达式*是计算结果为序列的表达式。 序列表达式可以采用多种形式。 最简单的形式是指定一个范围。 例如， `seq { 1 .. 5 }`创建一个包含五个元素的序列，包括终结点1和5。 您还可以指定两个双精度句点之间的增量（或减量）。 例如，下面的代码创建10的倍数序列。
+*序列表达式*是计算结果为序列的表达式。 序列表达式可以采用多种形式。 最简单的形式是指定一个范围。 例如，`seq { 1 .. 5 }` 创建一个包含五个元素的序列，包括终结点1和5。 您还可以指定两个双精度句点之间的增量（或减量）。 例如，下面的代码创建10的倍数序列。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-序列表达式由生成序列值F#的表达式组成。 它们可以使用`yield`关键字来生成将成为序列的一部分的值。
-
-下面是一个示例。
+序列表达式由生成序列值F#的表达式组成。 还可以通过编程方式生成值：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1503.fs)]
 
-可以使用`->`运算符`yield`而不是，在这`do`种情况下可以省略关键字，如下面的示例中所示。
+前面的示例使用 `->` 运算符，这允许您指定一个表达式，该表达式的值将成为序列的一部分。 仅当其后的代码的每个部分都返回值时，才能使用 `->`。
+
+此外，还可以指定 `do` 关键字，其中包含如下所示的可选 `yield`：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1504.fs)]
 
-下面的代码将生成一个坐标对列表，以及一个表示该网格的数组的索引。
+下面的代码将生成一个坐标对列表，以及一个表示该网格的数组的索引。 请注意，第一个 `for` 表达式需要指定 `do`。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1505.fs)]
 
-序列中使用的表达式是筛选器。`if` 例如，若要生成一个仅包含质数的序列，假设你有一个类型`isprime` `int -> bool`的函数，请按如下所示构造序列。
+序列中使用的 `if` 表达式是一个筛选器。 例如，若要生成一个仅包含质数的序列，假设有一个函数 `isprime` 类型 `int -> bool`，请按如下所示构造序列。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1506.fs)]
 
-在迭代中`yield`使用`->`或时，每次迭代都应生成序列的单个元素。 如果每个迭代生成一系列元素，请`yield!`使用。 在这种情况下，将对每个迭代上生成的元素进行连接以生成最终序列。
+如前文所述，此处 `do` 是必需的，因为不存在与 `if``else` 的分支。 如果尝试使用 `->`，则会出现一条错误消息，指出并非所有分支都返回值。
 
-可以将多个表达式组合在一起的序列表达式中。 每个表达式生成的元素连接在一起。 有关示例，请参阅本主题的 "示例" 部分。
+## <a name="the-yield-keyword"></a>`yield!` 关键字
+
+有时，你可能希望将一系列元素包含在另一个序列中。 若要在另一个序列内包含序列，需要使用 `yield!` 关键字：
+
+```fsharp
+// Repeats '1 2 3 4 5' ten times
+seq {
+    for _ in 1..10 do
+        yield! seq { 1; 2; 3; 4; 5}
+}
+```
+
+考虑 `yield!` 的另一种方法是将内部序列平展，然后将其包含在包含序列中。
+
+如果在表达式中使用 `yield!`，则所有其他单个值都必须使用 `yield` 关键字：
+
+```fsharp
+// Combine repeated values with their values
+seq {
+    for x in 1..10 do
+        yield x
+        yield! seq { for i in 1..x -> i}
+}
+```
+
+仅指定上一个示例中的 `x` 将导致序列不生成值。
 
 ## <a name="examples"></a>示例
 
@@ -50,11 +75,11 @@ ms.locfileid: "71216759"
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1507.fs)]
 
-下面的代码使用`yield`创建一个包含三个元素的元组（每个元素都包含两个因素和产品）的乘法表。
+下面的示例创建一个乘法表，其中包含三个元素的元组，每个元素包含两个因素和产品：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1508.fs)]
 
-下面的示例演示`yield!`如何使用将各个序列合并为一个最终序列。 在这种情况下，将在一个递归函数中串联二元树中每个子树的序列，以生成最终序列。
+下面的示例演示如何使用 `yield!` 将各个序列合并为一个最终序列。 在这种情况下，将在一个递归函数中串联二元树中每个子树的序列，以生成最终序列。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1509.fs)]
 
@@ -62,7 +87,7 @@ ms.locfileid: "71216759"
 
 序列支持许多与[列表](lists.md)相同的函数。 序列还支持通过使用键生成函数进行分组和计数等操作。 序列还支持用于提取个子序列的更广泛的函数。
 
-许多数据类型（例如列表、数组、集和映射）都是隐式的，因为它们是可枚举的集合。 采用序列作为参数的函数除了实现F# `System.Collections.Generic.IEnumerable<'T>`的任何 .NET Framework 数据类型之外，还适用于任何通用数据类型。 将此与采用列表作为参数的函数相反，只能采用列表。 类型`seq<'T>`是的类型`IEnumerable<'T>`缩写。 这意味着，实现泛型`System.Collections.Generic.IEnumerable<'T>`的任何类型（包括数组、列表、集和中F#的映射，以及大多数 .NET Framework 集合类型） `seq`都与类型兼容，可在需要序列的任何位置使用.
+许多数据类型（例如列表、数组、集和映射）都是隐式的，因为它们是可枚举的集合。 采用序列作为参数的函数适用于任何通用F#数据类型，以及任何实现 `System.Collections.Generic.IEnumerable<'T>`的 .net 数据类型。 将此与采用列表作为参数的函数相反，只能采用列表。 类型 `seq<'T>` 是 `IEnumerable<'T>`的类型缩写。 这意味着，实现泛型 `System.Collections.Generic.IEnumerable<'T>`的任何类型（包括数组、列表、集和中F#的映射，以及大多数 .net 集合类型）都与 `seq` 类型兼容，可以在需要序列的任何位置使用。
 
 ## <a name="module-functions"></a>模块函数
 
@@ -76,7 +101,7 @@ ms.locfileid: "71216759"
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet9.fs)]
 
-您可以使用[Seq](https://msdn.microsoft.com/library/059de69d-812c-4f8e-be86-88aa72101576)来创建一个序列，通过使用您提供的函数为其创建元素。 还可为序列提供大小。 此函数与[List](https://msdn.microsoft.com/library/dd38c096-0ea8-4858-be6b-794b90418b83)类似，只是在遍历序列之前不会创建元素。 下面的代码演示如何使用`Seq.init`。
+您可以使用[Seq](https://msdn.microsoft.com/library/059de69d-812c-4f8e-be86-88aa72101576)来创建一个序列，通过使用您提供的函数为其创建元素。 还可为序列提供大小。 此函数与[List](https://msdn.microsoft.com/library/dd38c096-0ea8-4858-be6b-794b90418b83)类似，只是在遍历序列之前不会创建元素。 下面的代码演示如何使用 `Seq.init`。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet10.fs)]
 
@@ -90,7 +115,7 @@ ms.locfileid: "71216759"
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet11.fs)]
 
-通过使用[Seq](https://msdn.microsoft.com/library/1d087db3-a8b2-41dd-8ddc-227544529334)，你可以从弱类型集合中创建一个序列，如中`System.Collections`定义的集合。 此类弱类型集合具有元素类型`System.Object` ，并使用非泛型`System.Collections.Generic.IEnumerable&#96;1`类型进行枚举。 下面的代码演示`Seq.cast`如何使用`System.Collections.ArrayList`将转换为序列。
+通过使用[Seq](https://msdn.microsoft.com/library/1d087db3-a8b2-41dd-8ddc-227544529334)，你可以从弱类型集合（如 `System.Collections`中定义的集合）创建序列。 此类弱类型集合具有元素类型 `System.Object`，并使用非泛型 `System.Collections.Generic.IEnumerable&#96;1` 类型进行枚举。 下面的代码演示如何使用 `Seq.cast` 将 `System.Collections.ArrayList` 转换为序列。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet12.fs)]
 
@@ -98,7 +123,7 @@ ms.locfileid: "71216759"
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet13.fs)]
 
-[Seq：](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21)从采用状态并将其转换为生成序列中每个后续元素的计算函数生成序列。 状态只是用于计算每个元素的值，并且可以在计算每个元素时进行更改。 的第二个`Seq.unfold`参数是用于启动序列的初始值。 `Seq.unfold`将选项类型用于状态，这使你可以通过返回`None`值来终止序列。 下面的代码演示了两个序列的`seq1`示例`fib`，以及由`unfold`操作生成的。 第一个`seq1`是，它是数字最多为20的简单序列。 第二个`fib`使用`unfold`来计算斐波那契序列。 因为波那契序列中的每个元素都是前两个斐波那契数的总和，所以，状态值是包含序列中前两个数字的元组。 初始值为`(1,1)`，序列中的前两个数字。
+[Seq：](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21)从采用状态并将其转换为生成序列中每个后续元素的计算函数生成序列。 状态只是用于计算每个元素的值，并且可以在计算每个元素时进行更改。 `Seq.unfold` 的第二个参数是用于启动序列的初始值。 `Seq.unfold` 使用状态的选项类型，这使你可以通过返回 `None` 值来终止序列。 下面的代码演示了两个序列的示例，`seq1` 和 `fib`由 `unfold` 操作生成。 第一种是 `seq1`，它只是数字最大为20的简单序列。 第二个 `fib`使用 `unfold` 计算斐波那契序列。 因为波那契序列中的每个元素都是前两个斐波那契数的总和，所以，状态值是包含序列中前两个数字的元组。 初始值为 `(1,1)`，序列中的前两个数字。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet14.fs)]
 
@@ -126,32 +151,32 @@ The sequence fib contains Fibonacci numbers.
 
 [Seq. filter](https://msdn.microsoft.com/library/7f2e9850-a660-460c-9831-3bbff5613770)和[seq。 choose](https://msdn.microsoft.com/library/63b83b06-4b24-4239-bf69-a2c12d891395)类似于列表可用的相应函数，但在计算序列元素之前，不会发生筛选和选择。
 
-[Seq](https://msdn.microsoft.com/library/1892dfeb-308e-45e2-857a-3c3405d02244)从另一个序列创建序列，但将序列限制为指定数量的元素。 [Seq。 take 会](https://msdn.microsoft.com/library/6e75f701-640b-4c4a-9d63-4313fc090596)创建一个新序列，该序列只包含序列开头的指定数量的元素。 如果序列中的元素少于您指定要执行的元素， `Seq.take`则将`System.InvalidOperationException`引发。 与`Seq.take` `Seq.truncate` 之间的区别在于，如果元素数少于指定的数目，则不`Seq.truncate`会产生错误。
+[Seq](https://msdn.microsoft.com/library/1892dfeb-308e-45e2-857a-3c3405d02244)从另一个序列创建序列，但将序列限制为指定数量的元素。 [Seq。 take 会](https://msdn.microsoft.com/library/6e75f701-640b-4c4a-9d63-4313fc090596)创建一个新序列，该序列只包含序列开头的指定数量的元素。 如果序列中的元素数少于指定的元素数，`Seq.take` 会引发 `System.InvalidOperationException`。 `Seq.take` 和 `Seq.truncate` 之间的区别在于，如果元素数少于指定的数目，`Seq.truncate` 不会产生错误。
 
-下面的代码演示了和之间`Seq.truncate` `Seq.take`的行为。
+下面的代码演示 `Seq.truncate` 和 `Seq.take`之间的行为和差异。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet16.fs)]
 
 出现错误之前的输出如下所示。
 
 ```console
-1 4 9 16 25 
-1 4 9 16 25 36 49 64 81 100 
-1 4 9 16 25 
+1 4 9 16 25
+1 4 9 16 25 36 49 64 81 100
+1 4 9 16 25
 1 4 9 16 25 36 49 64 81 100
 ```
 
-通过使用[takeWhile](https://msdn.microsoft.com/library/19eea4ce-66e0-4353-b015-72eb03421d92)，你可以指定一个谓词函数（布尔函数），并从另一个序列中创建一个序列`true`，该序列由该谓词的原始序列的这些元素组成，但在第一个元素之前停止谓词为其返回`false`的。 [Seq： skip](https://msdn.microsoft.com/library/b4eb3f08-8594-4d17-8180-852c6c688bf1)返回一个序列，该序列跳过另一个序列的指定数目的第一个元素，并返回剩余的元素。 [SkipWhile](https://msdn.microsoft.com/library/fb729021-2a3c-430f-83c3-0b37526f1a16)返回一个序列，该序列在谓词返回`true`时跳过另一个序列的第一个元素，然后返回剩余的元素，从谓词返回`false`的第一个元素开始.
+通过使用[takeWhile](https://msdn.microsoft.com/library/19eea4ce-66e0-4353-b015-72eb03421d92)，你可以指定一个谓词函数（布尔函数），并从另一个序列中创建一个序列，该序列由 `true`谓词的原始序列的那些元素组成，但在的第一个元素之前停止谓词返回 `false`。 [Seq： skip](https://msdn.microsoft.com/library/b4eb3f08-8594-4d17-8180-852c6c688bf1)返回一个序列，该序列跳过另一个序列的指定数目的第一个元素，并返回剩余的元素。 [SkipWhile](https://msdn.microsoft.com/library/fb729021-2a3c-430f-83c3-0b37526f1a16)返回一个序列，该序列将跳过另一个序列的第一个元素，前提是该谓词返回 `true`，然后返回剩余的元素，从该谓词返回的第一个元素开始 `false`。
 
-下面的代码示例演示了`Seq.takeWhile`、 `Seq.skip` `Seq.skipWhile`和的行为。
+下面的代码示例演示了 `Seq.takeWhile`、`Seq.skip`和 `Seq.skipWhile`之间的行为和差异。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet17.fs)]
 
 输出如下所示。
 
 ```console
-1 4 9 
-36 49 64 81 100 
+1 4 9
+36 49 64 81 100
 16 25 36 49 64 81 100
 ```
 
@@ -161,9 +186,9 @@ The sequence fib contains Fibonacci numbers.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet18.fs)]
 
-[Seq](https://msdn.microsoft.com/library/8b565b8f-d645-4dba-be22-099075fe4744)类似`Seq.pairwise`，不同之处在于，它会生成一系列数组，其中包含序列中相邻元素（*窗口*）的副本。 指定每个数组中所需的相邻元素的数目。
+[Seq](https://msdn.microsoft.com/library/8b565b8f-d645-4dba-be22-099075fe4744)与 `Seq.pairwise`类似，只是它会生成一系列数组，其中包含序列中相邻元素（*窗口*）的副本。 指定每个数组中所需的相邻元素的数目。
 
-以下代码示例演示了 `Seq.windowed` 的用法。 在此示例中，窗口中的元素数为3。 该示例使用`printSeq`上一个代码示例中定义的。
+以下代码示例演示了 `Seq.windowed` 的用法。 在此示例中，窗口中的元素数为3。 该示例使用上一个代码示例中定义的 `printSeq`。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet180.fs)]
 
@@ -172,12 +197,12 @@ The sequence fib contains Fibonacci numbers.
 初始顺序：
 
 ```console
-1.0 1.5 2.0 1.5 1.0 1.5 
+1.0 1.5 2.0 1.5 1.0 1.5
 
-Windows of length 3: 
-[|1.0; 1.5; 2.0|] [|1.5; 2.0; 1.5|] [|2.0; 1.5; 1.0|] [|1.5; 1.0; 1.5|] 
+Windows of length 3:
+[|1.0; 1.5; 2.0|] [|1.5; 2.0; 1.5|] [|2.0; 1.5; 1.0|] [|1.5; 1.0; 1.5|]
 
-Moving average: 
+Moving average:
 1.5 1.666666667 1.5 1.333333333
 ```
 
@@ -197,7 +222,7 @@ Moving average:
 
 在前面的代码中，只计算并检查第一个元素，结果为-1。
 
-[CountBy](https://msdn.microsoft.com/library/721702a5-150e-4fe8-81cd-ffbf8476cc1f)采用一个函数，该函数为每个元素生成一个名为*key*的值。 通过对每个元素调用此函数，为每个元素生成一个密钥。 `Seq.countBy`然后返回一个序列，其中包含键值，以及生成每个密钥值的元素数的计数。
+[CountBy](https://msdn.microsoft.com/library/721702a5-150e-4fe8-81cd-ffbf8476cc1f)采用一个函数，该函数为每个元素生成一个名为*key*的值。 通过对每个元素调用此函数，为每个元素生成一个密钥。 然后 `Seq.countBy` 返回一个包含键值的序列，以及生成每个密钥值的元素数的计数。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet201.fs)]
 
@@ -209,9 +234,9 @@ Moving average:
 
 前面的输出显示，原始序列中有34个元素，这些元素生成了键1，33值生成了键2，并显示了生成密钥0的33值。
 
-可以通过调用序列[groupBy](https://msdn.microsoft.com/library/d46a04df-1a42-40cc-a368-058c9c5806fd)对序列中的元素进行分组。 `Seq.groupBy`采用一个序列和一个从元素生成键的函数。 函数在序列的每个元素上执行。 `Seq.groupBy`返回一个元组序列，其中每个元组的第一个元素是键，第二个元素是生成该键的元素的序列。
+可以通过调用序列[groupBy](https://msdn.microsoft.com/library/d46a04df-1a42-40cc-a368-058c9c5806fd)对序列中的元素进行分组。 `Seq.groupBy` 采用一个序列和一个从元素生成键的函数。 函数在序列的每个元素上执行。 `Seq.groupBy` 返回元组的序列，其中每个元组的第一个元素是键，第二个元素是生成该键的元素序列。
 
-下面的代码示例演示`Seq.groupBy`如何使用将编号从1到100的序列分为三个组，这些组具有非重复键值0、1和2。
+下面的代码示例演示如何使用 `Seq.groupBy` 将编号从1到100的序列划分为三个组，这些组具有不同的键值0、1和2。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet202.fs)]
 
@@ -223,21 +248,21 @@ Moving average:
 
 通过调用 Seq，可以创建一个消除重复元素的序列[。](https://msdn.microsoft.com/library/99d01014-7e0e-4e7b-9d0a-41a61d93f401) 或者，可以使用[seq.distinctby](https://msdn.microsoft.com/library/9293293b-9420-49c8-848f-401a9cd49b75)，它采用在每个元素上调用的键生成函数。 生成的序列包含具有唯一键的原始序列的元素;随后将丢弃向早期元素生成重复键的元素。
 
-下面的代码示例阐释了的`Seq.distinct`用法。 `Seq.distinct`通过生成表示二进制数字的序列，并显示唯一不同的元素是0和1来演示。
+下面的代码示例演示如何使用 `Seq.distinct`。 通过生成表示二进制数字的序列，并显示唯一不同的元素是0和1来演示 `Seq.distinct`。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet22.fs)]
 
-下面的代码演示`Seq.distinctBy`了一个序列，该序列包含负数和正数，并使用绝对值函数作为键生成函数。 生成的序列缺少与序列中的负数相对应的所有正数，因为负数出现在序列的前面，因此选择了负数，而不是具有相同绝对值或键。
+下面的代码演示 `Seq.distinctBy` 的方法是从包含负数和正数的序列开始，并使用绝对值函数作为键生成函数。 生成的序列缺少与序列中的负数相对应的所有正数，因为负数出现在序列的前面，因此选择了负数，而不是具有相同绝对值或键。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet23.fs)]
 
 ## <a name="readonly-and-cached-sequences"></a>Readonly 和缓存序列
 
-[Seq readonly](https://msdn.microsoft.com/library/88059cb4-3bb0-4126-9448-fbcd48fe13a7)创建序列的只读副本。 `Seq.readonly`当你具有读写集合（如数组），并且你不希望修改原始集合时，此方法非常有用。 此函数可用于保留数据封装。 在下面的代码示例中，创建了一个包含数组的类型。 属性将公开数组，但不返回数组，而是返回从数组使用`Seq.readonly`创建的序列。
+[Seq readonly](https://msdn.microsoft.com/library/88059cb4-3bb0-4126-9448-fbcd48fe13a7)创建序列的只读副本。 如果有读写集合（如数组），并且不想修改原始集合，`Seq.readonly` 会很有用。 此函数可用于保留数据封装。 在下面的代码示例中，创建了一个包含数组的类型。 属性将公开数组，但不返回数组，而是返回从数组使用 `Seq.readonly`创建的序列。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet24.fs)]
 
-[Seq：](https://msdn.microsoft.com/library/d197f9cc-08bf-4986-9869-246e72ca73f0)创建序列的存储版本。 使用`Seq.cache`可以避免重新计算序列，或者当你有多个使用序列的线程时，但必须确保每个元素仅被处理一次。 如果有多个线程正在使用的序列，则可以让一个线程枚举并计算原始序列的值，其余线程可以使用缓存的序列。
+[Seq：](https://msdn.microsoft.com/library/d197f9cc-08bf-4986-9869-246e72ca73f0)创建序列的存储版本。 使用 `Seq.cache` 来避免重新计算序列，或者当你有多个使用序列的线程时，但必须确保每个元素仅在一次后处理。 如果有多个线程正在使用的序列，则可以让一个线程枚举并计算原始序列的值，其余线程可以使用缓存的序列。
 
 ## <a name="performing-computations-on-sequences"></a>对序列执行计算
 
