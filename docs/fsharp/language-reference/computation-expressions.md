@@ -1,42 +1,42 @@
 ---
 title: 计算表达式
 description: 了解如何创建方便的语法，以便在中F#写入可使用控制流结构和绑定进行排序和组合的计算。
-ms.date: 03/15/2019
-ms.openlocfilehash: 2f0eb7686378766f6b379f0401589490f01a1963
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: c9ac0454221782a7ccb3d41850ca6aba4e20a72a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424745"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976790"
 ---
-# <a name="computation-expressions"></a><span data-ttu-id="c5336-103">计算表达式</span><span class="sxs-lookup"><span data-stu-id="c5336-103">Computation Expressions</span></span>
+# <a name="computation-expressions"></a><span data-ttu-id="1a245-103">计算表达式</span><span class="sxs-lookup"><span data-stu-id="1a245-103">Computation Expressions</span></span>
 
-<span data-ttu-id="c5336-104">中F#的计算表达式提供了一种方便的语法，用于编写可使用控制流结构和绑定进行序列化和组合的计算。</span><span class="sxs-lookup"><span data-stu-id="c5336-104">Computation expressions in F# provide a convenient syntax for writing computations that can be sequenced and combined using control flow constructs and bindings.</span></span> <span data-ttu-id="c5336-105">根据计算表达式的类型，可以将其视为表示 monad、monoids、monad 转换器和 applicative 函子的一种方法。</span><span class="sxs-lookup"><span data-stu-id="c5336-105">Depending on the kind of computation expression, they can be thought of as a way to express monads, monoids, monad transformers, and applicative functors.</span></span> <span data-ttu-id="c5336-106">但是，与其他语言（如 Haskell 中的 *-notation* ）不同，它们不会与单个抽象相关，也不依赖于宏或其他形式的元编程来实现方便且区分上下文的语法。</span><span class="sxs-lookup"><span data-stu-id="c5336-106">However, unlike other languages (such as *do-notation* in Haskell), they are not tied to a single abstraction, and do not rely on macros or other forms of metaprogramming to accomplish a convenient and context-sensitive syntax.</span></span>
+<span data-ttu-id="1a245-104">中F#的计算表达式提供了一种方便的语法，用于编写可使用控制流结构和绑定进行序列化和组合的计算。</span><span class="sxs-lookup"><span data-stu-id="1a245-104">Computation expressions in F# provide a convenient syntax for writing computations that can be sequenced and combined using control flow constructs and bindings.</span></span> <span data-ttu-id="1a245-105">根据计算表达式的类型，可以将其视为表示 monad、monoids、monad 转换器和 applicative 函子的一种方法。</span><span class="sxs-lookup"><span data-stu-id="1a245-105">Depending on the kind of computation expression, they can be thought of as a way to express monads, monoids, monad transformers, and applicative functors.</span></span> <span data-ttu-id="1a245-106">但是，与其他语言（如 Haskell 中的 *-notation* ）不同，它们不会与单个抽象相关，也不依赖于宏或其他形式的元编程来实现方便且区分上下文的语法。</span><span class="sxs-lookup"><span data-stu-id="1a245-106">However, unlike other languages (such as *do-notation* in Haskell), they are not tied to a single abstraction, and do not rely on macros or other forms of metaprogramming to accomplish a convenient and context-sensitive syntax.</span></span>
 
-## <a name="overview"></a><span data-ttu-id="c5336-107">概述</span><span class="sxs-lookup"><span data-stu-id="c5336-107">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="1a245-107">概述</span><span class="sxs-lookup"><span data-stu-id="1a245-107">Overview</span></span>
 
-<span data-ttu-id="c5336-108">计算可以采用多种形式。</span><span class="sxs-lookup"><span data-stu-id="c5336-108">Computations can take many forms.</span></span> <span data-ttu-id="c5336-109">最常见的计算形式是单线程执行，它易于理解和修改。</span><span class="sxs-lookup"><span data-stu-id="c5336-109">The most common form of computation is single-threaded execution, which is easy to understand and modify.</span></span> <span data-ttu-id="c5336-110">但是，并非所有形式的计算都像单线程执行一样简单。</span><span class="sxs-lookup"><span data-stu-id="c5336-110">However, not all forms of computation are as straightforward as single-threaded execution.</span></span> <span data-ttu-id="c5336-111">一些示例包括：</span><span class="sxs-lookup"><span data-stu-id="c5336-111">Some examples include:</span></span>
+<span data-ttu-id="1a245-108">计算可以采用多种形式。</span><span class="sxs-lookup"><span data-stu-id="1a245-108">Computations can take many forms.</span></span> <span data-ttu-id="1a245-109">最常见的计算形式是单线程执行，它易于理解和修改。</span><span class="sxs-lookup"><span data-stu-id="1a245-109">The most common form of computation is single-threaded execution, which is easy to understand and modify.</span></span> <span data-ttu-id="1a245-110">但是，并非所有形式的计算都像单线程执行一样简单。</span><span class="sxs-lookup"><span data-stu-id="1a245-110">However, not all forms of computation are as straightforward as single-threaded execution.</span></span> <span data-ttu-id="1a245-111">一些示例包括：</span><span class="sxs-lookup"><span data-stu-id="1a245-111">Some examples include:</span></span>
 
-- <span data-ttu-id="c5336-112">非确定性计算</span><span class="sxs-lookup"><span data-stu-id="c5336-112">Non-deterministic computations</span></span>
-- <span data-ttu-id="c5336-113">异步计算</span><span class="sxs-lookup"><span data-stu-id="c5336-113">Asynchronous computations</span></span>
-- <span data-ttu-id="c5336-114">Effectful 计算</span><span class="sxs-lookup"><span data-stu-id="c5336-114">Effectful computations</span></span>
-- <span data-ttu-id="c5336-115">生成计算</span><span class="sxs-lookup"><span data-stu-id="c5336-115">Generative computations</span></span>
+- <span data-ttu-id="1a245-112">非确定性计算</span><span class="sxs-lookup"><span data-stu-id="1a245-112">Non-deterministic computations</span></span>
+- <span data-ttu-id="1a245-113">异步计算</span><span class="sxs-lookup"><span data-stu-id="1a245-113">Asynchronous computations</span></span>
+- <span data-ttu-id="1a245-114">Effectful 计算</span><span class="sxs-lookup"><span data-stu-id="1a245-114">Effectful computations</span></span>
+- <span data-ttu-id="1a245-115">生成计算</span><span class="sxs-lookup"><span data-stu-id="1a245-115">Generative computations</span></span>
 
-<span data-ttu-id="c5336-116">通常，在应用程序的某些部分，您必须执行*上下文相关*的计算。</span><span class="sxs-lookup"><span data-stu-id="c5336-116">More generally, there are *context-sensitive* computations that you must perform in certain parts of an application.</span></span> <span data-ttu-id="c5336-117">编写上下文相关的代码可能会很难，因为在没有抽象的情况下，可以轻松地在给定上下文之外 "泄漏" 计算，以防您这样做。</span><span class="sxs-lookup"><span data-stu-id="c5336-117">Writing context-sensitive code can be challenging, as it is easy to "leak" computations outside of a given context without abstractions to prevent you from doing so.</span></span> <span data-ttu-id="c5336-118">这些抽象通常很难自行编写，这就是F#一种通用的方法来实现这种**计算表达式**。</span><span class="sxs-lookup"><span data-stu-id="c5336-118">These abstractions are often challenging to write by yourself, which is why F# has a generalized way to do so called **computation expressions**.</span></span>
+<span data-ttu-id="1a245-116">通常，在应用程序的某些部分，您必须执行*上下文相关*的计算。</span><span class="sxs-lookup"><span data-stu-id="1a245-116">More generally, there are *context-sensitive* computations that you must perform in certain parts of an application.</span></span> <span data-ttu-id="1a245-117">编写上下文相关的代码可能会很难，因为在没有抽象的情况下，可以轻松地在给定上下文之外 "泄漏" 计算，以防您这样做。</span><span class="sxs-lookup"><span data-stu-id="1a245-117">Writing context-sensitive code can be challenging, as it is easy to "leak" computations outside of a given context without abstractions to prevent you from doing so.</span></span> <span data-ttu-id="1a245-118">这些抽象通常很难自行编写，这就是F#一种通用的方法来实现这种**计算表达式**。</span><span class="sxs-lookup"><span data-stu-id="1a245-118">These abstractions are often challenging to write by yourself, which is why F# has a generalized way to do so called **computation expressions**.</span></span>
 
-<span data-ttu-id="c5336-119">计算表达式为区分上下文的计算提供统一的语法和抽象模型。</span><span class="sxs-lookup"><span data-stu-id="c5336-119">Computation expressions offer a uniform syntax and abstraction model for encoding context-sensitive computations.</span></span>
+<span data-ttu-id="1a245-119">计算表达式为区分上下文的计算提供统一的语法和抽象模型。</span><span class="sxs-lookup"><span data-stu-id="1a245-119">Computation expressions offer a uniform syntax and abstraction model for encoding context-sensitive computations.</span></span>
 
-<span data-ttu-id="c5336-120">每个计算表达式都是由*生成器*类型支持的。</span><span class="sxs-lookup"><span data-stu-id="c5336-120">Every computation expression is backed by a *builder* type.</span></span> <span data-ttu-id="c5336-121">生成器类型定义可用于计算表达式的操作。</span><span class="sxs-lookup"><span data-stu-id="c5336-121">The builder type defines the operations that are available for the computation expression.</span></span> <span data-ttu-id="c5336-122">请参阅[创建新类型的计算表达式](computation-expressions.md#creating-a-new-type-of-computation-expression)，其中显示了如何创建自定义计算表达式。</span><span class="sxs-lookup"><span data-stu-id="c5336-122">See [Creating a New Type of Computation Expression](computation-expressions.md#creating-a-new-type-of-computation-expression), which shows how to create a custom computation expression.</span></span>
+<span data-ttu-id="1a245-120">每个计算表达式都是由*生成器*类型支持的。</span><span class="sxs-lookup"><span data-stu-id="1a245-120">Every computation expression is backed by a *builder* type.</span></span> <span data-ttu-id="1a245-121">生成器类型定义可用于计算表达式的操作。</span><span class="sxs-lookup"><span data-stu-id="1a245-121">The builder type defines the operations that are available for the computation expression.</span></span> <span data-ttu-id="1a245-122">请参阅[创建新类型的计算表达式](computation-expressions.md#creating-a-new-type-of-computation-expression)，其中显示了如何创建自定义计算表达式。</span><span class="sxs-lookup"><span data-stu-id="1a245-122">See [Creating a New Type of Computation Expression](computation-expressions.md#creating-a-new-type-of-computation-expression), which shows how to create a custom computation expression.</span></span>
 
-### <a name="syntax-overview"></a><span data-ttu-id="c5336-123">语法概述</span><span class="sxs-lookup"><span data-stu-id="c5336-123">Syntax overview</span></span>
+### <a name="syntax-overview"></a><span data-ttu-id="1a245-123">语法概述</span><span class="sxs-lookup"><span data-stu-id="1a245-123">Syntax overview</span></span>
 
-<span data-ttu-id="c5336-124">所有计算表达式具有以下形式：</span><span class="sxs-lookup"><span data-stu-id="c5336-124">All computation expressions have the following form:</span></span>
+<span data-ttu-id="1a245-124">所有计算表达式具有以下形式：</span><span class="sxs-lookup"><span data-stu-id="1a245-124">All computation expressions have the following form:</span></span>
 
 ```fsharp
 builder-expr { cexper }
 ```
 
-<span data-ttu-id="c5336-125">其中 `builder-expr` 是定义计算表达式的生成器类型的名称，而 `cexper` 是计算表达式的表达式主体。</span><span class="sxs-lookup"><span data-stu-id="c5336-125">where `builder-expr` is the name of a builder type that defines the computation expression, and `cexper` is the expression body of the computation expression.</span></span> <span data-ttu-id="c5336-126">例如，`async` 计算表达式代码可能如下所示：</span><span class="sxs-lookup"><span data-stu-id="c5336-126">For example, `async` computation expression code can look like this:</span></span>
+<span data-ttu-id="1a245-125">其中 `builder-expr` 是定义计算表达式的生成器类型的名称，而 `cexper` 是计算表达式的表达式主体。</span><span class="sxs-lookup"><span data-stu-id="1a245-125">where `builder-expr` is the name of a builder type that defines the computation expression, and `cexper` is the expression body of the computation expression.</span></span> <span data-ttu-id="1a245-126">例如，`async` 计算表达式代码可能如下所示：</span><span class="sxs-lookup"><span data-stu-id="1a245-126">For example, `async` computation expression code can look like this:</span></span>
 
 ```fsharp
 let fetchAndDownload url =
@@ -49,7 +49,7 @@ let fetchAndDownload url =
     }
 ```
 
-<span data-ttu-id="c5336-127">计算表达式中有一种特殊的附加语法，如前面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="c5336-127">There is a special, additional syntax available within a computation expression, as shown in the previous example.</span></span> <span data-ttu-id="c5336-128">以下表达式窗体可用于计算表达式：</span><span class="sxs-lookup"><span data-stu-id="c5336-128">The following expression forms are possible with computation expressions:</span></span>
+<span data-ttu-id="1a245-127">计算表达式中有一种特殊的附加语法，如前面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="1a245-127">There is a special, additional syntax available within a computation expression, as shown in the previous example.</span></span> <span data-ttu-id="1a245-128">以下表达式窗体可用于计算表达式：</span><span class="sxs-lookup"><span data-stu-id="1a245-128">The following expression forms are possible with computation expressions:</span></span>
 
 ```fsharp
 expr { let! ... }
@@ -61,13 +61,13 @@ expr { return! ... }
 expr { match! ... }
 ```
 
-<span data-ttu-id="c5336-129">其中的每个关键字和其他标准F#关键字仅在计算表达式中可用（如果已在后备生成器类型中定义）。</span><span class="sxs-lookup"><span data-stu-id="c5336-129">Each of these keywords, and other standard F# keywords are only available in a computation expression if they have been defined in the backing builder type.</span></span> <span data-ttu-id="c5336-130">唯一的例外情况是 `match!`，这本身就是使用 `let!` 后跟结果的模式匹配的语法。</span><span class="sxs-lookup"><span data-stu-id="c5336-130">The only exception to this is `match!`, which is itself syntactic sugar for the use of `let!` followed by a pattern match on the result.</span></span>
+<span data-ttu-id="1a245-129">其中的每个关键字和其他标准F#关键字仅在计算表达式中可用（如果已在后备生成器类型中定义）。</span><span class="sxs-lookup"><span data-stu-id="1a245-129">Each of these keywords, and other standard F# keywords are only available in a computation expression if they have been defined in the backing builder type.</span></span> <span data-ttu-id="1a245-130">唯一的例外情况是 `match!`，这本身就是使用 `let!` 后跟结果的模式匹配的语法。</span><span class="sxs-lookup"><span data-stu-id="1a245-130">The only exception to this is `match!`, which is itself syntactic sugar for the use of `let!` followed by a pattern match on the result.</span></span>
 
-<span data-ttu-id="c5336-131">生成器类型是一个对象，该对象定义控制计算表达式片段的组合方式的特殊方法;也就是说，其方法控制计算表达式的行为方式。</span><span class="sxs-lookup"><span data-stu-id="c5336-131">The builder type is an object that defines special methods that govern the way the fragments of the computation expression are combined; that is, its methods control how the computation expression behaves.</span></span> <span data-ttu-id="c5336-132">描述生成器类的另一种方法是，它使您能够自定义多个F#构造（如循环和绑定）的操作。</span><span class="sxs-lookup"><span data-stu-id="c5336-132">Another way to describe a builder class is to say that it enables you to customize the operation of many F# constructs, such as loops and bindings.</span></span>
+<span data-ttu-id="1a245-131">生成器类型是一个对象，该对象定义控制计算表达式片段的组合方式的特殊方法;也就是说，其方法控制计算表达式的行为方式。</span><span class="sxs-lookup"><span data-stu-id="1a245-131">The builder type is an object that defines special methods that govern the way the fragments of the computation expression are combined; that is, its methods control how the computation expression behaves.</span></span> <span data-ttu-id="1a245-132">描述生成器类的另一种方法是，它使您能够自定义多个F#构造（如循环和绑定）的操作。</span><span class="sxs-lookup"><span data-stu-id="1a245-132">Another way to describe a builder class is to say that it enables you to customize the operation of many F# constructs, such as loops and bindings.</span></span>
 
 ### `let!`
 
-<span data-ttu-id="c5336-133">`let!` 关键字将调用的结果绑定到一个名称：</span><span class="sxs-lookup"><span data-stu-id="c5336-133">The `let!` keyword binds the result of a call to another computation expression to a name:</span></span>
+<span data-ttu-id="1a245-133">`let!` 关键字将调用的结果绑定到一个名称：</span><span class="sxs-lookup"><span data-stu-id="1a245-133">The `let!` keyword binds the result of a call to another computation expression to a name:</span></span>
 
 ```fsharp
 let doThingsAsync url =
@@ -77,13 +77,13 @@ let doThingsAsync url =
     }
 ```
 
-<span data-ttu-id="c5336-134">如果将对计算表达式的调用绑定到 `let`，则不会获得计算表达式的结果。</span><span class="sxs-lookup"><span data-stu-id="c5336-134">If you bind the call to a computation expression with `let`, you will not get the result of the computation expression.</span></span> <span data-ttu-id="c5336-135">而是将未*实现*的调用的值绑定到该计算表达式。</span><span class="sxs-lookup"><span data-stu-id="c5336-135">Instead, you will have bound the value of the *unrealized* call to that computation expression.</span></span> <span data-ttu-id="c5336-136">使用 `let!` 绑定到结果。</span><span class="sxs-lookup"><span data-stu-id="c5336-136">Use `let!` to bind to the result.</span></span>
+<span data-ttu-id="1a245-134">如果将对计算表达式的调用绑定到 `let`，则不会获得计算表达式的结果。</span><span class="sxs-lookup"><span data-stu-id="1a245-134">If you bind the call to a computation expression with `let`, you will not get the result of the computation expression.</span></span> <span data-ttu-id="1a245-135">而是将未*实现*的调用的值绑定到该计算表达式。</span><span class="sxs-lookup"><span data-stu-id="1a245-135">Instead, you will have bound the value of the *unrealized* call to that computation expression.</span></span> <span data-ttu-id="1a245-136">使用 `let!` 绑定到结果。</span><span class="sxs-lookup"><span data-stu-id="1a245-136">Use `let!` to bind to the result.</span></span>
 
-<span data-ttu-id="c5336-137">`let!` 由生成器类型上的 `Bind(x, f)` 成员定义。</span><span class="sxs-lookup"><span data-stu-id="c5336-137">`let!` is defined by the `Bind(x, f)` member on the builder type.</span></span>
+<span data-ttu-id="1a245-137">`let!` 由生成器类型上的 `Bind(x, f)` 成员定义。</span><span class="sxs-lookup"><span data-stu-id="1a245-137">`let!` is defined by the `Bind(x, f)` member on the builder type.</span></span>
 
 ### `do!`
 
-<span data-ttu-id="c5336-138">`do!` 关键字用于调用一个计算表达式，该表达式返回类似于 `unit`的类型（由生成器上的 `Zero` 成员定义）：</span><span class="sxs-lookup"><span data-stu-id="c5336-138">The `do!` keyword is for calling a computation expression that returns a `unit`-like type (defined by the `Zero` member on the builder):</span></span>
+<span data-ttu-id="1a245-138">`do!` 关键字用于调用一个计算表达式，该表达式返回类似于 `unit`的类型（由生成器上的 `Zero` 成员定义）：</span><span class="sxs-lookup"><span data-stu-id="1a245-138">The `do!` keyword is for calling a computation expression that returns a `unit`-like type (defined by the `Zero` member on the builder):</span></span>
 
 ```fsharp
 let doThingsAsync data url =
@@ -93,13 +93,13 @@ let doThingsAsync data url =
     }
 ```
 
-<span data-ttu-id="c5336-139">对于[异步工作流](asynchronous-workflows.md)，此类型为 `Async<unit>`。</span><span class="sxs-lookup"><span data-stu-id="c5336-139">For the [async workflow](asynchronous-workflows.md), this type is `Async<unit>`.</span></span> <span data-ttu-id="c5336-140">对于其他计算表达式，此类型可能是 `CExpType<unit>`。</span><span class="sxs-lookup"><span data-stu-id="c5336-140">For other computation expressions, the type is likely to be `CExpType<unit>`.</span></span>
+<span data-ttu-id="1a245-139">对于[异步工作流](asynchronous-workflows.md)，此类型为 `Async<unit>`。</span><span class="sxs-lookup"><span data-stu-id="1a245-139">For the [async workflow](asynchronous-workflows.md), this type is `Async<unit>`.</span></span> <span data-ttu-id="1a245-140">对于其他计算表达式，此类型可能是 `CExpType<unit>`。</span><span class="sxs-lookup"><span data-stu-id="1a245-140">For other computation expressions, the type is likely to be `CExpType<unit>`.</span></span>
 
-<span data-ttu-id="c5336-141">`do!` 由生成器类型上的 `Bind(x, f)` 成员定义，其中 `f` 生成一个 `unit`。</span><span class="sxs-lookup"><span data-stu-id="c5336-141">`do!` is defined by the `Bind(x, f)` member on the builder type, where `f` produces a `unit`.</span></span>
+<span data-ttu-id="1a245-141">`do!` 由生成器类型上的 `Bind(x, f)` 成员定义，其中 `f` 生成一个 `unit`。</span><span class="sxs-lookup"><span data-stu-id="1a245-141">`do!` is defined by the `Bind(x, f)` member on the builder type, where `f` produces a `unit`.</span></span>
 
 ### `yield`
 
-<span data-ttu-id="c5336-142">`yield` 关键字用于从计算表达式返回值，以便可以将其用作 <xref:System.Collections.Generic.IEnumerable%601>：</span><span class="sxs-lookup"><span data-stu-id="c5336-142">The `yield` keyword is for returning a value from the computation expression so that it can be consumed as an <xref:System.Collections.Generic.IEnumerable%601>:</span></span>
+<span data-ttu-id="1a245-142">`yield` 关键字用于从计算表达式返回值，以便可以将其用作 <xref:System.Collections.Generic.IEnumerable%601>：</span><span class="sxs-lookup"><span data-stu-id="1a245-142">The `yield` keyword is for returning a value from the computation expression so that it can be consumed as an <xref:System.Collections.Generic.IEnumerable%601>:</span></span>
 
 ```fsharp
 let squares =
@@ -112,13 +112,41 @@ for sq in squares do
     printfn "%d" sq
 ```
 
-<span data-ttu-id="c5336-143">与[ C#中的 yield 关键字](../../csharp/language-reference/keywords/yield.md)一样，计算表达式中的每个元素都是在迭代时重新生成的。</span><span class="sxs-lookup"><span data-stu-id="c5336-143">As with the [yield keyword in C#](../../csharp/language-reference/keywords/yield.md), each element in the computation expression is yielded back as it is iterated.</span></span>
+<span data-ttu-id="1a245-143">在大多数情况下，调用方可以省略它。</span><span class="sxs-lookup"><span data-stu-id="1a245-143">In most cases, it can be omitted by callers.</span></span> <span data-ttu-id="1a245-144">省略 `yield` 的最常见方法是 `->` 运算符：</span><span class="sxs-lookup"><span data-stu-id="1a245-144">The most common way to omit `yield` is with the `->` operator:</span></span>
 
-<span data-ttu-id="c5336-144">`yield` 由生成器类型上的 `Yield(x)` 成员定义，其中 `x` 是要返回的项。</span><span class="sxs-lookup"><span data-stu-id="c5336-144">`yield` is defined by the `Yield(x)` member on the builder type, where `x` is the item to yield back.</span></span>
+```fsharp
+let squares =
+    seq {
+        for i in 1..10 -> i * i
+    }
+
+for sq in squares do
+    printfn "%d" sq
+```
+
+<span data-ttu-id="1a245-145">对于更复杂的表达式，可能会产生许多不同的值，并且可能有条件地省略关键字：</span><span class="sxs-lookup"><span data-stu-id="1a245-145">For more complex expressions that might yield many different values, and perhaps conditionally, simply omitting the keyword can do:</span></span>
+
+```fsharp
+let weekdays includeWeekend =
+    seq {
+        "Monday"
+        "Tuesday"
+        "Wednesday"
+        "Thursday"
+        "Friday"
+        if includeWeekend then
+            "Saturday"
+            "Sunday"
+    }
+```
+
+<span data-ttu-id="1a245-146">与[ C#中的 yield 关键字](../../csharp/language-reference/keywords/yield.md)一样，计算表达式中的每个元素都是在迭代时重新生成的。</span><span class="sxs-lookup"><span data-stu-id="1a245-146">As with the [yield keyword in C#](../../csharp/language-reference/keywords/yield.md), each element in the computation expression is yielded back as it is iterated.</span></span>
+
+<span data-ttu-id="1a245-147">`yield` 由生成器类型上的 `Yield(x)` 成员定义，其中 `x` 是要返回的项。</span><span class="sxs-lookup"><span data-stu-id="1a245-147">`yield` is defined by the `Yield(x)` member on the builder type, where `x` is the item to yield back.</span></span>
 
 ### `yield!`
 
-<span data-ttu-id="c5336-145">`yield!` 关键字用于平展计算表达式中的值的集合：</span><span class="sxs-lookup"><span data-stu-id="c5336-145">The `yield!` keyword is for flattening a collection of values from a computation expression:</span></span>
+<span data-ttu-id="1a245-148">`yield!` 关键字用于平展计算表达式中的值的集合：</span><span class="sxs-lookup"><span data-stu-id="1a245-148">The `yield!` keyword is for flattening a collection of values from a computation expression:</span></span>
 
 ```fsharp
 let squares =
@@ -140,13 +168,15 @@ let squaresAndCubes =
 printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
 ```
 
-<span data-ttu-id="c5336-146">计算时，`yield!` 调用的计算表达式会将其项逐个返回，从而平展结果。</span><span class="sxs-lookup"><span data-stu-id="c5336-146">When evaluated, the computation expression called by `yield!` will have its items yielded back one-by-one, flattening the result.</span></span>
+<span data-ttu-id="1a245-149">计算时，`yield!` 调用的计算表达式会将其项逐个返回，从而平展结果。</span><span class="sxs-lookup"><span data-stu-id="1a245-149">When evaluated, the computation expression called by `yield!` will have its items yielded back one-by-one, flattening the result.</span></span>
 
-<span data-ttu-id="c5336-147">`yield!` 由生成器类型上的 `YieldFrom(x)` 成员定义，其中 `x` 是值的集合。</span><span class="sxs-lookup"><span data-stu-id="c5336-147">`yield!` is defined by the `YieldFrom(x)` member on the builder type, where `x` is a collection of values.</span></span>
+<span data-ttu-id="1a245-150">`yield!` 由生成器类型上的 `YieldFrom(x)` 成员定义，其中 `x` 是值的集合。</span><span class="sxs-lookup"><span data-stu-id="1a245-150">`yield!` is defined by the `YieldFrom(x)` member on the builder type, where `x` is a collection of values.</span></span>
+
+<span data-ttu-id="1a245-151">与 `yield`不同，必须显式指定 `yield!`。</span><span class="sxs-lookup"><span data-stu-id="1a245-151">Unlike `yield`, `yield!` must be explicitly specified.</span></span> <span data-ttu-id="1a245-152">它的行为在计算表达式中是隐式的。</span><span class="sxs-lookup"><span data-stu-id="1a245-152">Its behavior isn't implicit in computation expressions.</span></span>
 
 ### `return`
 
-<span data-ttu-id="c5336-148">`return` 关键字包装与计算表达式对应的类型中的值。</span><span class="sxs-lookup"><span data-stu-id="c5336-148">The `return` keyword wraps a value in the type corresponding to the computation expression.</span></span> <span data-ttu-id="c5336-149">除了使用 `yield`的计算表达式，它用于 "完成" 计算表达式：</span><span class="sxs-lookup"><span data-stu-id="c5336-149">Aside from computation expressions using `yield`, it is used to "complete" a computation expression:</span></span>
+<span data-ttu-id="1a245-153">`return` 关键字包装与计算表达式对应的类型中的值。</span><span class="sxs-lookup"><span data-stu-id="1a245-153">The `return` keyword wraps a value in the type corresponding to the computation expression.</span></span> <span data-ttu-id="1a245-154">除了使用 `yield`的计算表达式，它用于 "完成" 计算表达式：</span><span class="sxs-lookup"><span data-stu-id="1a245-154">Aside from computation expressions using `yield`, it is used to "complete" a computation expression:</span></span>
 
 ```fsharp
 let req = // 'req' is of type is 'Async<data>'
@@ -159,11 +189,11 @@ let req = // 'req' is of type is 'Async<data>'
 let result = Async.RunSynchronously req
 ```
 
-<span data-ttu-id="c5336-150">`return` 由生成器类型上的 `Return(x)` 成员定义，其中 `x` 是要包装的项。</span><span class="sxs-lookup"><span data-stu-id="c5336-150">`return` is defined by the `Return(x)` member on the builder type, where `x` is the item to wrap.</span></span>
+<span data-ttu-id="1a245-155">`return` 由生成器类型上的 `Return(x)` 成员定义，其中 `x` 是要包装的项。</span><span class="sxs-lookup"><span data-stu-id="1a245-155">`return` is defined by the `Return(x)` member on the builder type, where `x` is the item to wrap.</span></span>
 
 ### `return!`
 
-<span data-ttu-id="c5336-151">`return!` 关键字实现计算表达式的值，并将结果与计算表达式对应的类型进行包装：</span><span class="sxs-lookup"><span data-stu-id="c5336-151">The `return!` keyword realizes the value of a computation expression and wraps that result in the type corresponding to the computation expression:</span></span>
+<span data-ttu-id="1a245-156">`return!` 关键字实现计算表达式的值，并将结果与计算表达式对应的类型进行包装：</span><span class="sxs-lookup"><span data-stu-id="1a245-156">The `return!` keyword realizes the value of a computation expression and wraps that result in the type corresponding to the computation expression:</span></span>
 
 ```fsharp
 let req = // 'req' is of type is 'Async<data>'
@@ -175,11 +205,11 @@ let req = // 'req' is of type is 'Async<data>'
 let result = Async.RunSynchronously req
 ```
 
-<span data-ttu-id="c5336-152">`return!` 由生成器类型上的 `ReturnFrom(x)` 成员定义，其中 `x` 是另一个计算表达式。</span><span class="sxs-lookup"><span data-stu-id="c5336-152">`return!` is defined by the `ReturnFrom(x)` member on the builder type, where `x` is another computation expression.</span></span>
+<span data-ttu-id="1a245-157">`return!` 由生成器类型上的 `ReturnFrom(x)` 成员定义，其中 `x` 是另一个计算表达式。</span><span class="sxs-lookup"><span data-stu-id="1a245-157">`return!` is defined by the `ReturnFrom(x)` member on the builder type, where `x` is another computation expression.</span></span>
 
 ### `match!`
 
-<span data-ttu-id="c5336-153">从 4.5 F#开始，使用`match!`关键字可以在其结果中内联调用另一个计算表达式和模式匹配：</span><span class="sxs-lookup"><span data-stu-id="c5336-153">Starting with F# 4.5, the `match!` keyword allows you to inline a call to another computation expression and pattern match on its result:</span></span>
+<span data-ttu-id="1a245-158">从 4.5 F#开始，使用`match!`关键字可以在其结果中内联调用另一个计算表达式和模式匹配：</span><span class="sxs-lookup"><span data-stu-id="1a245-158">Starting with F# 4.5, the `match!` keyword allows you to inline a call to another computation expression and pattern match on its result:</span></span>
 
 ```fsharp
 let doThingsAsync url =
@@ -190,47 +220,47 @@ let doThingsAsync url =
     }
 ```
 
-<span data-ttu-id="c5336-154">当使用 `match!`调用计算表达式时，它将实现调用的结果，如 `let!`。</span><span class="sxs-lookup"><span data-stu-id="c5336-154">When calling a computation expression with `match!`, it will realize the result of the call like `let!`.</span></span> <span data-ttu-id="c5336-155">这通常在调用计算表达式（其中的结果是[可选](options.md)的）时使用。</span><span class="sxs-lookup"><span data-stu-id="c5336-155">This is often used when calling a computation expression where the result is an [optional](options.md).</span></span>
+<span data-ttu-id="1a245-159">当使用 `match!`调用计算表达式时，它将实现调用的结果，如 `let!`。</span><span class="sxs-lookup"><span data-stu-id="1a245-159">When calling a computation expression with `match!`, it will realize the result of the call like `let!`.</span></span> <span data-ttu-id="1a245-160">这通常在调用计算表达式（其中的结果是[可选](options.md)的）时使用。</span><span class="sxs-lookup"><span data-stu-id="1a245-160">This is often used when calling a computation expression where the result is an [optional](options.md).</span></span>
 
-## <a name="built-in-computation-expressions"></a><span data-ttu-id="c5336-156">内置计算表达式</span><span class="sxs-lookup"><span data-stu-id="c5336-156">Built-in computation expressions</span></span>
+## <a name="built-in-computation-expressions"></a><span data-ttu-id="1a245-161">内置计算表达式</span><span class="sxs-lookup"><span data-stu-id="1a245-161">Built-in computation expressions</span></span>
 
-<span data-ttu-id="c5336-157">核心库定义了三个内置计算表达式：[序列表达式](sequences.md)、[异步工作流](asynchronous-workflows.md)和[查询表达式。](query-expressions.md) F#</span><span class="sxs-lookup"><span data-stu-id="c5336-157">The F# core library defines three built-in computation expressions: [Sequence Expressions](sequences.md), [Asynchronous Workflows](asynchronous-workflows.md), and [Query Expressions](query-expressions.md).</span></span>
+<span data-ttu-id="1a245-162">核心库定义了三个内置计算表达式：[序列表达式](sequences.md)、[异步工作流](asynchronous-workflows.md)和[查询表达式。](query-expressions.md) F#</span><span class="sxs-lookup"><span data-stu-id="1a245-162">The F# core library defines three built-in computation expressions: [Sequence Expressions](sequences.md), [Asynchronous Workflows](asynchronous-workflows.md), and [Query Expressions](query-expressions.md).</span></span>
 
-## <a name="creating-a-new-type-of-computation-expression"></a><span data-ttu-id="c5336-158">创建新类型的计算表达式</span><span class="sxs-lookup"><span data-stu-id="c5336-158">Creating a New Type of Computation Expression</span></span>
+## <a name="creating-a-new-type-of-computation-expression"></a><span data-ttu-id="1a245-163">创建新类型的计算表达式</span><span class="sxs-lookup"><span data-stu-id="1a245-163">Creating a New Type of Computation Expression</span></span>
 
-<span data-ttu-id="c5336-159">您可以通过创建生成器类并在类上定义某些特殊方法，定义自己的计算表达式的特征。</span><span class="sxs-lookup"><span data-stu-id="c5336-159">You can define the characteristics of your own computation expressions by creating a builder class and defining certain special methods on the class.</span></span> <span data-ttu-id="c5336-160">Builder 类可以选择定义下表中列出的方法。</span><span class="sxs-lookup"><span data-stu-id="c5336-160">The builder class can optionally define the methods as listed in the following table.</span></span>
+<span data-ttu-id="1a245-164">您可以通过创建生成器类并在类上定义某些特殊方法，定义自己的计算表达式的特征。</span><span class="sxs-lookup"><span data-stu-id="1a245-164">You can define the characteristics of your own computation expressions by creating a builder class and defining certain special methods on the class.</span></span> <span data-ttu-id="1a245-165">Builder 类可以选择定义下表中列出的方法。</span><span class="sxs-lookup"><span data-stu-id="1a245-165">The builder class can optionally define the methods as listed in the following table.</span></span>
 
-<span data-ttu-id="c5336-161">下表描述了可在工作流生成器类中使用的方法。</span><span class="sxs-lookup"><span data-stu-id="c5336-161">The following table describes methods that can be used in a workflow builder class.</span></span>
+<span data-ttu-id="1a245-166">下表描述了可在工作流生成器类中使用的方法。</span><span class="sxs-lookup"><span data-stu-id="1a245-166">The following table describes methods that can be used in a workflow builder class.</span></span>
 
-|<span data-ttu-id="c5336-162">**方法**</span><span class="sxs-lookup"><span data-stu-id="c5336-162">**Method**</span></span>|<span data-ttu-id="c5336-163">**典型签名**</span><span class="sxs-lookup"><span data-stu-id="c5336-163">**Typical signature(s)**</span></span>|<span data-ttu-id="c5336-164">**描述**</span><span class="sxs-lookup"><span data-stu-id="c5336-164">**Description**</span></span>|
+|<span data-ttu-id="1a245-167">**方法**</span><span class="sxs-lookup"><span data-stu-id="1a245-167">**Method**</span></span>|<span data-ttu-id="1a245-168">**典型签名**</span><span class="sxs-lookup"><span data-stu-id="1a245-168">**Typical signature(s)**</span></span>|<span data-ttu-id="1a245-169">**描述**</span><span class="sxs-lookup"><span data-stu-id="1a245-169">**Description**</span></span>|
 |----|----|----|
-|`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|<span data-ttu-id="c5336-165">为计算表达式中的 `let!` 和 `do!` 调用。</span><span class="sxs-lookup"><span data-stu-id="c5336-165">Called for `let!` and `do!` in computation expressions.</span></span>|
-|`Delay`|`(unit -> M<'T>) -> M<'T>`|<span data-ttu-id="c5336-166">将计算表达式包装为函数。</span><span class="sxs-lookup"><span data-stu-id="c5336-166">Wraps a computation expression as a function.</span></span>|
-|`Return`|`'T -> M<'T>`|<span data-ttu-id="c5336-167">为计算表达式中的 `return` 调用。</span><span class="sxs-lookup"><span data-stu-id="c5336-167">Called for `return` in computation expressions.</span></span>|
-|`ReturnFrom`|`M<'T> -> M<'T>`|<span data-ttu-id="c5336-168">为计算表达式中的 `return!` 调用。</span><span class="sxs-lookup"><span data-stu-id="c5336-168">Called for `return!` in computation expressions.</span></span>|
-|`Run`|<span data-ttu-id="c5336-169">`M<'T> -> M<'T>` 或</span><span class="sxs-lookup"><span data-stu-id="c5336-169">`M<'T> -> M<'T>` or</span></span><br /><br />`M<'T> -> 'T`|<span data-ttu-id="c5336-170">执行计算表达式。</span><span class="sxs-lookup"><span data-stu-id="c5336-170">Executes a computation expression.</span></span>|
-|`Combine`|<span data-ttu-id="c5336-171">`M<'T> * M<'T> -> M<'T>` 或</span><span class="sxs-lookup"><span data-stu-id="c5336-171">`M<'T> * M<'T> -> M<'T>` or</span></span><br /><br />`M<unit> * M<'T> -> M<'T>`|<span data-ttu-id="c5336-172">在计算表达式中调用以进行序列化。</span><span class="sxs-lookup"><span data-stu-id="c5336-172">Called for sequencing in computation expressions.</span></span>|
-|`For`|<span data-ttu-id="c5336-173">`seq<'T> * ('T -> M<'U>) -> M<'U>` 或</span><span class="sxs-lookup"><span data-stu-id="c5336-173">`seq<'T> * ('T -> M<'U>) -> M<'U>` or</span></span><br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|<span data-ttu-id="c5336-174">为计算表达式中的 `for...do` 表达式调用。</span><span class="sxs-lookup"><span data-stu-id="c5336-174">Called for `for...do` expressions in computation expressions.</span></span>|
-|`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|<span data-ttu-id="c5336-175">为计算表达式中的 `try...finally` 表达式调用。</span><span class="sxs-lookup"><span data-stu-id="c5336-175">Called for `try...finally` expressions in computation expressions.</span></span>|
-|`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|<span data-ttu-id="c5336-176">为计算表达式中的 `try...with` 表达式调用。</span><span class="sxs-lookup"><span data-stu-id="c5336-176">Called for `try...with` expressions in computation expressions.</span></span>|
-|`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'T :> IDisposable`|<span data-ttu-id="c5336-177">为计算表达式中的 `use` 绑定调用。</span><span class="sxs-lookup"><span data-stu-id="c5336-177">Called for `use` bindings in computation expressions.</span></span>|
-|`While`|`(unit -> bool) * M<'T> -> M<'T>`|<span data-ttu-id="c5336-178">为计算表达式中的 `while...do` 表达式调用。</span><span class="sxs-lookup"><span data-stu-id="c5336-178">Called for `while...do` expressions in computation expressions.</span></span>|
-|`Yield`|`'T -> M<'T>`|<span data-ttu-id="c5336-179">为计算表达式中的 `yield` 表达式调用。</span><span class="sxs-lookup"><span data-stu-id="c5336-179">Called for `yield` expressions in computation expressions.</span></span>|
-|`YieldFrom`|`M<'T> -> M<'T>`|<span data-ttu-id="c5336-180">为计算表达式中的 `yield!` 表达式调用。</span><span class="sxs-lookup"><span data-stu-id="c5336-180">Called for `yield!` expressions in computation expressions.</span></span>|
-|`Zero`|`unit -> M<'T>`|<span data-ttu-id="c5336-181">为计算表达式中 `if...then` 表达式的空 `else` 分支调用。</span><span class="sxs-lookup"><span data-stu-id="c5336-181">Called for empty `else` branches of `if...then` expressions in computation expressions.</span></span>|
-|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|<span data-ttu-id="c5336-182">指示将计算表达式作为一个引号传递到 `Run` 成员。</span><span class="sxs-lookup"><span data-stu-id="c5336-182">Indicates that the computation expression is passed to the `Run` member as a quotation.</span></span> <span data-ttu-id="c5336-183">它将计算的所有实例都转换为引号。</span><span class="sxs-lookup"><span data-stu-id="c5336-183">It translates all instances of a computation into a quotation.</span></span>|
+|`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|<span data-ttu-id="1a245-170">为计算表达式中的 `let!` 和 `do!` 调用。</span><span class="sxs-lookup"><span data-stu-id="1a245-170">Called for `let!` and `do!` in computation expressions.</span></span>|
+|`Delay`|`(unit -> M<'T>) -> M<'T>`|<span data-ttu-id="1a245-171">将计算表达式包装为函数。</span><span class="sxs-lookup"><span data-stu-id="1a245-171">Wraps a computation expression as a function.</span></span>|
+|`Return`|`'T -> M<'T>`|<span data-ttu-id="1a245-172">为计算表达式中的 `return` 调用。</span><span class="sxs-lookup"><span data-stu-id="1a245-172">Called for `return` in computation expressions.</span></span>|
+|`ReturnFrom`|`M<'T> -> M<'T>`|<span data-ttu-id="1a245-173">为计算表达式中的 `return!` 调用。</span><span class="sxs-lookup"><span data-stu-id="1a245-173">Called for `return!` in computation expressions.</span></span>|
+|`Run`|<span data-ttu-id="1a245-174">`M<'T> -> M<'T>` 或</span><span class="sxs-lookup"><span data-stu-id="1a245-174">`M<'T> -> M<'T>` or</span></span><br /><br />`M<'T> -> 'T`|<span data-ttu-id="1a245-175">执行计算表达式。</span><span class="sxs-lookup"><span data-stu-id="1a245-175">Executes a computation expression.</span></span>|
+|`Combine`|<span data-ttu-id="1a245-176">`M<'T> * M<'T> -> M<'T>` 或</span><span class="sxs-lookup"><span data-stu-id="1a245-176">`M<'T> * M<'T> -> M<'T>` or</span></span><br /><br />`M<unit> * M<'T> -> M<'T>`|<span data-ttu-id="1a245-177">在计算表达式中调用以进行序列化。</span><span class="sxs-lookup"><span data-stu-id="1a245-177">Called for sequencing in computation expressions.</span></span>|
+|`For`|<span data-ttu-id="1a245-178">`seq<'T> * ('T -> M<'U>) -> M<'U>` 或</span><span class="sxs-lookup"><span data-stu-id="1a245-178">`seq<'T> * ('T -> M<'U>) -> M<'U>` or</span></span><br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|<span data-ttu-id="1a245-179">为计算表达式中的 `for...do` 表达式调用。</span><span class="sxs-lookup"><span data-stu-id="1a245-179">Called for `for...do` expressions in computation expressions.</span></span>|
+|`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|<span data-ttu-id="1a245-180">为计算表达式中的 `try...finally` 表达式调用。</span><span class="sxs-lookup"><span data-stu-id="1a245-180">Called for `try...finally` expressions in computation expressions.</span></span>|
+|`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|<span data-ttu-id="1a245-181">为计算表达式中的 `try...with` 表达式调用。</span><span class="sxs-lookup"><span data-stu-id="1a245-181">Called for `try...with` expressions in computation expressions.</span></span>|
+|`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'T :> IDisposable`|<span data-ttu-id="1a245-182">为计算表达式中的 `use` 绑定调用。</span><span class="sxs-lookup"><span data-stu-id="1a245-182">Called for `use` bindings in computation expressions.</span></span>|
+|`While`|`(unit -> bool) * M<'T> -> M<'T>`|<span data-ttu-id="1a245-183">为计算表达式中的 `while...do` 表达式调用。</span><span class="sxs-lookup"><span data-stu-id="1a245-183">Called for `while...do` expressions in computation expressions.</span></span>|
+|`Yield`|`'T -> M<'T>`|<span data-ttu-id="1a245-184">为计算表达式中的 `yield` 表达式调用。</span><span class="sxs-lookup"><span data-stu-id="1a245-184">Called for `yield` expressions in computation expressions.</span></span>|
+|`YieldFrom`|`M<'T> -> M<'T>`|<span data-ttu-id="1a245-185">为计算表达式中的 `yield!` 表达式调用。</span><span class="sxs-lookup"><span data-stu-id="1a245-185">Called for `yield!` expressions in computation expressions.</span></span>|
+|`Zero`|`unit -> M<'T>`|<span data-ttu-id="1a245-186">为计算表达式中 `if...then` 表达式的空 `else` 分支调用。</span><span class="sxs-lookup"><span data-stu-id="1a245-186">Called for empty `else` branches of `if...then` expressions in computation expressions.</span></span>|
+|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|<span data-ttu-id="1a245-187">指示将计算表达式作为一个引号传递到 `Run` 成员。</span><span class="sxs-lookup"><span data-stu-id="1a245-187">Indicates that the computation expression is passed to the `Run` member as a quotation.</span></span> <span data-ttu-id="1a245-188">它将计算的所有实例都转换为引号。</span><span class="sxs-lookup"><span data-stu-id="1a245-188">It translates all instances of a computation into a quotation.</span></span>|
 
-<span data-ttu-id="c5336-184">生成器类中的许多方法都使用并返回 `M<'T>` 构造，这通常是一个单独定义的类型，用于确定要合并的计算种类，例如，异步工作流的 `Async<'T>` 和用于序列的 `Seq<'T>`工作.</span><span class="sxs-lookup"><span data-stu-id="c5336-184">Many of the methods in a builder class use and return an `M<'T>` construct, which is typically a separately defined type that characterizes the kind of computations being combined, for example, `Async<'T>` for asynchronous workflows and `Seq<'T>` for sequence workflows.</span></span> <span data-ttu-id="c5336-185">这些方法的签名使它们相互组合起来并彼此嵌套，以便可以将从一个构造返回的工作流对象传递到下一个构造。</span><span class="sxs-lookup"><span data-stu-id="c5336-185">The signatures of these methods enable them to be combined and nested with each other, so that the workflow object returned from one construct can be passed to the next.</span></span> <span data-ttu-id="c5336-186">编译器在分析计算表达式时，通过使用上表中的方法和计算表达式中的代码，将表达式转换为一系列嵌套函数调用。</span><span class="sxs-lookup"><span data-stu-id="c5336-186">The compiler, when it parses a computation expression, converts the expression into a series of nested function calls by using the methods in the preceding table and the code in the computation expression.</span></span>
+<span data-ttu-id="1a245-189">生成器类中的许多方法都使用并返回 `M<'T>` 构造，这通常是一个单独定义的类型，用于确定要合并的计算种类，例如，异步工作流的 `Async<'T>` 和用于序列的 `Seq<'T>`工作.</span><span class="sxs-lookup"><span data-stu-id="1a245-189">Many of the methods in a builder class use and return an `M<'T>` construct, which is typically a separately defined type that characterizes the kind of computations being combined, for example, `Async<'T>` for asynchronous workflows and `Seq<'T>` for sequence workflows.</span></span> <span data-ttu-id="1a245-190">这些方法的签名使它们相互组合起来并彼此嵌套，以便可以将从一个构造返回的工作流对象传递到下一个构造。</span><span class="sxs-lookup"><span data-stu-id="1a245-190">The signatures of these methods enable them to be combined and nested with each other, so that the workflow object returned from one construct can be passed to the next.</span></span> <span data-ttu-id="1a245-191">编译器在分析计算表达式时，通过使用上表中的方法和计算表达式中的代码，将表达式转换为一系列嵌套函数调用。</span><span class="sxs-lookup"><span data-stu-id="1a245-191">The compiler, when it parses a computation expression, converts the expression into a series of nested function calls by using the methods in the preceding table and the code in the computation expression.</span></span>
 
-<span data-ttu-id="c5336-187">嵌套表达式的格式如下：</span><span class="sxs-lookup"><span data-stu-id="c5336-187">The nested expression is of the following form:</span></span>
+<span data-ttu-id="1a245-192">嵌套表达式的格式如下：</span><span class="sxs-lookup"><span data-stu-id="1a245-192">The nested expression is of the following form:</span></span>
 
 ```fsharp
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-<span data-ttu-id="c5336-188">在上面的代码中，如果未在计算表达式生成器类中定义 `Run` 和 `Delay`，则将忽略这些调用。</span><span class="sxs-lookup"><span data-stu-id="c5336-188">In the above code, the calls to `Run` and `Delay` are omitted if they are not defined in the computation expression builder class.</span></span> <span data-ttu-id="c5336-189">计算表达式的主体（此处表示为 `{| cexpr |}`）将按下表中所述的翻译转换为涉及生成器类方法的调用。</span><span class="sxs-lookup"><span data-stu-id="c5336-189">The body of the computation expression, here denoted as `{| cexpr |}`, is translated into calls involving the methods of the builder class by the translations described in the following table.</span></span> <span data-ttu-id="c5336-190">根据这些转换以递归方式定义计算表达式 `{| cexpr |}`，其中 `expr` 为F#表达式，`cexpr`为计算表达式。</span><span class="sxs-lookup"><span data-stu-id="c5336-190">The computation expression `{| cexpr |}` is defined recursively according to these translations where `expr` is an F# expression and `cexpr` is a computation expression.</span></span>
+<span data-ttu-id="1a245-193">在上面的代码中，如果未在计算表达式生成器类中定义 `Run` 和 `Delay`，则将忽略这些调用。</span><span class="sxs-lookup"><span data-stu-id="1a245-193">In the above code, the calls to `Run` and `Delay` are omitted if they are not defined in the computation expression builder class.</span></span> <span data-ttu-id="1a245-194">计算表达式的主体（此处表示为 `{| cexpr |}`）将按下表中所述的翻译转换为涉及生成器类方法的调用。</span><span class="sxs-lookup"><span data-stu-id="1a245-194">The body of the computation expression, here denoted as `{| cexpr |}`, is translated into calls involving the methods of the builder class by the translations described in the following table.</span></span> <span data-ttu-id="1a245-195">根据这些转换以递归方式定义计算表达式 `{| cexpr |}`，其中 `expr` 为F#表达式，`cexpr`为计算表达式。</span><span class="sxs-lookup"><span data-stu-id="1a245-195">The computation expression `{| cexpr |}` is defined recursively according to these translations where `expr` is an F# expression and `cexpr` is a computation expression.</span></span>
 
-|<span data-ttu-id="c5336-191">Expression</span><span class="sxs-lookup"><span data-stu-id="c5336-191">Expression</span></span>|<span data-ttu-id="c5336-192">转换</span><span class="sxs-lookup"><span data-stu-id="c5336-192">Translation</span></span>|
+|<span data-ttu-id="1a245-196">Expression</span><span class="sxs-lookup"><span data-stu-id="1a245-196">Expression</span></span>|<span data-ttu-id="1a245-197">转换</span><span class="sxs-lookup"><span data-stu-id="1a245-197">Translation</span></span>|
 |----------|-----------|
 |<code>{ let binding in cexpr }</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
 |<code>{ let! pattern = expr in cexpr }</code>|<code>builder.Bind(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|
@@ -253,9 +283,9 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 |<code>{ other-expr; cexpr }</code>|<code>expr; { cexpr }</code>|
 |<code>{ other-expr }</code>|`expr; builder.Zero()`|
 
-<span data-ttu-id="c5336-193">在上表中，`other-expr` 描述了表中未列出的表达式。</span><span class="sxs-lookup"><span data-stu-id="c5336-193">In the previous table, `other-expr` describes an expression that is not otherwise listed in the table.</span></span> <span data-ttu-id="c5336-194">生成器类不需要实现所有方法并支持上表中列出的所有翻译。</span><span class="sxs-lookup"><span data-stu-id="c5336-194">A builder class does not need to implement all of the methods and support all of the translations listed in the previous table.</span></span> <span data-ttu-id="c5336-195">未实现的这些构造在该类型的计算表达式中不可用。</span><span class="sxs-lookup"><span data-stu-id="c5336-195">Those constructs that are not implemented are not available in computation expressions of that type.</span></span> <span data-ttu-id="c5336-196">例如，如果不想在计算表达式中支持 `use` 关键字，则可以在生成器类中省略 `Use` 的定义。</span><span class="sxs-lookup"><span data-stu-id="c5336-196">For example, if you do not want to support the `use` keyword in your computation expressions, you can omit the definition of `Use` in your builder class.</span></span>
+<span data-ttu-id="1a245-198">在上表中，`other-expr` 描述了表中未列出的表达式。</span><span class="sxs-lookup"><span data-stu-id="1a245-198">In the previous table, `other-expr` describes an expression that is not otherwise listed in the table.</span></span> <span data-ttu-id="1a245-199">生成器类不需要实现所有方法并支持上表中列出的所有翻译。</span><span class="sxs-lookup"><span data-stu-id="1a245-199">A builder class does not need to implement all of the methods and support all of the translations listed in the previous table.</span></span> <span data-ttu-id="1a245-200">未实现的这些构造在该类型的计算表达式中不可用。</span><span class="sxs-lookup"><span data-stu-id="1a245-200">Those constructs that are not implemented are not available in computation expressions of that type.</span></span> <span data-ttu-id="1a245-201">例如，如果不想在计算表达式中支持 `use` 关键字，则可以在生成器类中省略 `Use` 的定义。</span><span class="sxs-lookup"><span data-stu-id="1a245-201">For example, if you do not want to support the `use` keyword in your computation expressions, you can omit the definition of `Use` in your builder class.</span></span>
 
-<span data-ttu-id="c5336-197">下面的代码示例演示一个计算表达式，该表达式将计算封装为一系列步骤，一次只能对一个步骤进行计算。</span><span class="sxs-lookup"><span data-stu-id="c5336-197">The following code example shows a computation expression that encapsulates a computation as a series of steps that can be evaluated one step at a time.</span></span> <span data-ttu-id="c5336-198">`OkOrException`，可区分的联合类型对该表达式的错误状态进行编码（如目前所计算）。</span><span class="sxs-lookup"><span data-stu-id="c5336-198">A discriminated union type, `OkOrException`, encodes the error state of the expression as evaluated so far.</span></span> <span data-ttu-id="c5336-199">此代码演示了几种可在计算表达式中使用的典型模式，如某些生成器方法的样本实现。</span><span class="sxs-lookup"><span data-stu-id="c5336-199">This code demonstrates several typical patterns that you can use in your computation expressions, such as boilerplate implementations of some of the builder methods.</span></span>
+<span data-ttu-id="1a245-202">下面的代码示例演示一个计算表达式，该表达式将计算封装为一系列步骤，一次只能对一个步骤进行计算。</span><span class="sxs-lookup"><span data-stu-id="1a245-202">The following code example shows a computation expression that encapsulates a computation as a series of steps that can be evaluated one step at a time.</span></span> <span data-ttu-id="1a245-203">`OkOrException`，可区分的联合类型对该表达式的错误状态进行编码（如目前所计算）。</span><span class="sxs-lookup"><span data-stu-id="1a245-203">A discriminated union type, `OkOrException`, encodes the error state of the expression as evaluated so far.</span></span> <span data-ttu-id="1a245-204">此代码演示了几种可在计算表达式中使用的典型模式，如某些生成器方法的样本实现。</span><span class="sxs-lookup"><span data-stu-id="1a245-204">This code demonstrates several typical patterns that you can use in your computation expressions, such as boilerplate implementations of some of the builder methods.</span></span>
 
 ```fsharp
 // Computations that can be run step by step
@@ -378,29 +408,29 @@ comp |> step |> step
 comp |> step |> step |> step |> step
 ```
 
-<span data-ttu-id="c5336-200">计算表达式具有表达式返回的基础类型。</span><span class="sxs-lookup"><span data-stu-id="c5336-200">A computation expression has an underlying type, which the expression returns.</span></span> <span data-ttu-id="c5336-201">基础类型可能表示可以执行的计算结果或延迟计算，或者它可能提供一种方法来循环访问某些类型的集合。</span><span class="sxs-lookup"><span data-stu-id="c5336-201">The underlying type may represent a computed result or a delayed computation that can be performed, or it may provide a way to iterate through some type of collection.</span></span> <span data-ttu-id="c5336-202">在上面的示例中，基础类型**最终**是。</span><span class="sxs-lookup"><span data-stu-id="c5336-202">In the previous example, the underlying type was **Eventually**.</span></span> <span data-ttu-id="c5336-203">对于序列表达式，基础类型是 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="c5336-203">For a sequence expression, the underlying type is <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>.</span></span> <span data-ttu-id="c5336-204">对于查询表达式，基础类型为 <xref:System.Linq.IQueryable?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="c5336-204">For a query expression, the underlying type is <xref:System.Linq.IQueryable?displayProperty=nameWithType>.</span></span> <span data-ttu-id="c5336-205">对于异步工作流，基础类型是[`Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)。</span><span class="sxs-lookup"><span data-stu-id="c5336-205">For an asynchronous workflow, the underlying type is [`Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7).</span></span> <span data-ttu-id="c5336-206">`Async` 对象表示要执行的工作来计算结果。</span><span class="sxs-lookup"><span data-stu-id="c5336-206">The `Async` object represents the work to be performed to compute the result.</span></span> <span data-ttu-id="c5336-207">例如，调用[`Async.RunSynchronously`](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b)以执行计算并返回结果。</span><span class="sxs-lookup"><span data-stu-id="c5336-207">For example, you call [`Async.RunSynchronously`](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) to execute a computation and return the result.</span></span>
+<span data-ttu-id="1a245-205">计算表达式具有表达式返回的基础类型。</span><span class="sxs-lookup"><span data-stu-id="1a245-205">A computation expression has an underlying type, which the expression returns.</span></span> <span data-ttu-id="1a245-206">基础类型可能表示可以执行的计算结果或延迟计算，或者它可能提供一种方法来循环访问某些类型的集合。</span><span class="sxs-lookup"><span data-stu-id="1a245-206">The underlying type may represent a computed result or a delayed computation that can be performed, or it may provide a way to iterate through some type of collection.</span></span> <span data-ttu-id="1a245-207">在上面的示例中，基础类型**最终**是。</span><span class="sxs-lookup"><span data-stu-id="1a245-207">In the previous example, the underlying type was **Eventually**.</span></span> <span data-ttu-id="1a245-208">对于序列表达式，基础类型是 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="1a245-208">For a sequence expression, the underlying type is <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>.</span></span> <span data-ttu-id="1a245-209">对于查询表达式，基础类型为 <xref:System.Linq.IQueryable?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="1a245-209">For a query expression, the underlying type is <xref:System.Linq.IQueryable?displayProperty=nameWithType>.</span></span> <span data-ttu-id="1a245-210">对于异步工作流，基础类型是[`Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)。</span><span class="sxs-lookup"><span data-stu-id="1a245-210">For an asynchronous workflow, the underlying type is [`Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7).</span></span> <span data-ttu-id="1a245-211">`Async` 对象表示要执行的工作来计算结果。</span><span class="sxs-lookup"><span data-stu-id="1a245-211">The `Async` object represents the work to be performed to compute the result.</span></span> <span data-ttu-id="1a245-212">例如，调用[`Async.RunSynchronously`](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b)以执行计算并返回结果。</span><span class="sxs-lookup"><span data-stu-id="1a245-212">For example, you call [`Async.RunSynchronously`](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) to execute a computation and return the result.</span></span>
 
-## <a name="custom-operations"></a><span data-ttu-id="c5336-208">自定义操作</span><span class="sxs-lookup"><span data-stu-id="c5336-208">Custom Operations</span></span>
+## <a name="custom-operations"></a><span data-ttu-id="1a245-213">自定义操作</span><span class="sxs-lookup"><span data-stu-id="1a245-213">Custom Operations</span></span>
 
-<span data-ttu-id="c5336-209">可以在计算表达式中定义自定义操作，并使用自定义操作作为计算表达式中的运算符。</span><span class="sxs-lookup"><span data-stu-id="c5336-209">You can define a custom operation on a computation expression and use a custom operation as an operator in a computation expression.</span></span> <span data-ttu-id="c5336-210">例如，可以在查询表达式中包含查询运算符。</span><span class="sxs-lookup"><span data-stu-id="c5336-210">For example, you can include a query operator in a query expression.</span></span> <span data-ttu-id="c5336-211">定义自定义操作时，必须在计算表达式中定义 Yield 和方法。</span><span class="sxs-lookup"><span data-stu-id="c5336-211">When you define a custom operation, you must define the Yield and For methods in the computation expression.</span></span> <span data-ttu-id="c5336-212">若要定义自定义操作，请将其放在计算表达式的 builder 类中，然后应用[`CustomOperationAttribute`](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19)。</span><span class="sxs-lookup"><span data-stu-id="c5336-212">To define a custom operation, put it in a builder class for the computation expression, and then apply the [`CustomOperationAttribute`](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19).</span></span> <span data-ttu-id="c5336-213">此属性采用字符串作为参数，该参数是要在自定义操作中使用的名称。</span><span class="sxs-lookup"><span data-stu-id="c5336-213">This attribute takes a string as an argument, which is the name to be used in a custom operation.</span></span> <span data-ttu-id="c5336-214">此名称将出现在计算表达式的左大括号开头的范围内。</span><span class="sxs-lookup"><span data-stu-id="c5336-214">This name comes into scope at the start of the opening curly brace of the computation expression.</span></span> <span data-ttu-id="c5336-215">因此，不应使用与此块中的自定义操作名称相同的标识符。</span><span class="sxs-lookup"><span data-stu-id="c5336-215">Therefore, you shouldn’t use identifiers that have the same name as a custom operation in this block.</span></span> <span data-ttu-id="c5336-216">例如，避免在查询表达式中使用标识符，如 `all` 或 `last`。</span><span class="sxs-lookup"><span data-stu-id="c5336-216">For example, avoid the use of identifiers such as `all` or `last` in query expressions.</span></span>
+<span data-ttu-id="1a245-214">可以在计算表达式中定义自定义操作，并使用自定义操作作为计算表达式中的运算符。</span><span class="sxs-lookup"><span data-stu-id="1a245-214">You can define a custom operation on a computation expression and use a custom operation as an operator in a computation expression.</span></span> <span data-ttu-id="1a245-215">例如，可以在查询表达式中包含查询运算符。</span><span class="sxs-lookup"><span data-stu-id="1a245-215">For example, you can include a query operator in a query expression.</span></span> <span data-ttu-id="1a245-216">定义自定义操作时，必须在计算表达式中定义 Yield 和方法。</span><span class="sxs-lookup"><span data-stu-id="1a245-216">When you define a custom operation, you must define the Yield and For methods in the computation expression.</span></span> <span data-ttu-id="1a245-217">若要定义自定义操作，请将其放在计算表达式的 builder 类中，然后应用[`CustomOperationAttribute`](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19)。</span><span class="sxs-lookup"><span data-stu-id="1a245-217">To define a custom operation, put it in a builder class for the computation expression, and then apply the [`CustomOperationAttribute`](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19).</span></span> <span data-ttu-id="1a245-218">此属性采用字符串作为参数，该参数是要在自定义操作中使用的名称。</span><span class="sxs-lookup"><span data-stu-id="1a245-218">This attribute takes a string as an argument, which is the name to be used in a custom operation.</span></span> <span data-ttu-id="1a245-219">此名称将出现在计算表达式的左大括号开头的范围内。</span><span class="sxs-lookup"><span data-stu-id="1a245-219">This name comes into scope at the start of the opening curly brace of the computation expression.</span></span> <span data-ttu-id="1a245-220">因此，不应使用与此块中的自定义操作名称相同的标识符。</span><span class="sxs-lookup"><span data-stu-id="1a245-220">Therefore, you shouldn’t use identifiers that have the same name as a custom operation in this block.</span></span> <span data-ttu-id="1a245-221">例如，避免在查询表达式中使用标识符，如 `all` 或 `last`。</span><span class="sxs-lookup"><span data-stu-id="1a245-221">For example, avoid the use of identifiers such as `all` or `last` in query expressions.</span></span>
 
-### <a name="extending-existing-builders-with-new-custom-operations"></a><span data-ttu-id="c5336-217">利用新的自定义操作扩展现有生成器</span><span class="sxs-lookup"><span data-stu-id="c5336-217">Extending existing Builders with new Custom Operations</span></span>
+### <a name="extending-existing-builders-with-new-custom-operations"></a><span data-ttu-id="1a245-222">利用新的自定义操作扩展现有生成器</span><span class="sxs-lookup"><span data-stu-id="1a245-222">Extending existing Builders with new Custom Operations</span></span>
 
-<span data-ttu-id="c5336-218">如果已经有一个生成器类，则可以从该生成器类的外部扩展其自定义操作。</span><span class="sxs-lookup"><span data-stu-id="c5336-218">If you already have a builder class, its custom operations can be extended from outside of this builder class.</span></span> <span data-ttu-id="c5336-219">扩展必须在模块中声明。</span><span class="sxs-lookup"><span data-stu-id="c5336-219">Extensions must be declared in modules.</span></span> <span data-ttu-id="c5336-220">命名空间不能包含在定义该类型的同一文件和相同的命名空间声明组中的扩展成员。</span><span class="sxs-lookup"><span data-stu-id="c5336-220">Namespaces cannot contain extension members except in the same file and the same namespace declaration group where the type is defined.</span></span>
+<span data-ttu-id="1a245-223">如果已经有一个生成器类，则可以从该生成器类的外部扩展其自定义操作。</span><span class="sxs-lookup"><span data-stu-id="1a245-223">If you already have a builder class, its custom operations can be extended from outside of this builder class.</span></span> <span data-ttu-id="1a245-224">扩展必须在模块中声明。</span><span class="sxs-lookup"><span data-stu-id="1a245-224">Extensions must be declared in modules.</span></span> <span data-ttu-id="1a245-225">命名空间不能包含在定义该类型的同一文件和相同的命名空间声明组中的扩展成员。</span><span class="sxs-lookup"><span data-stu-id="1a245-225">Namespaces cannot contain extension members except in the same file and the same namespace declaration group where the type is defined.</span></span>
 
-<span data-ttu-id="c5336-221">下面的示例演示现有 `Microsoft.FSharp.Linq.QueryBuilder` 类的扩展。</span><span class="sxs-lookup"><span data-stu-id="c5336-221">The following example shows the extension of the existing `Microsoft.FSharp.Linq.QueryBuilder` class.</span></span>
+<span data-ttu-id="1a245-226">下面的示例演示现有 `Microsoft.FSharp.Linq.QueryBuilder` 类的扩展。</span><span class="sxs-lookup"><span data-stu-id="1a245-226">The following example shows the extension of the existing `Microsoft.FSharp.Linq.QueryBuilder` class.</span></span>
 
 ```fsharp
 type Microsoft.FSharp.Linq.QueryBuilder with
 
     [<CustomOperation("existsNot")>]
-    member __.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
+    member _.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
         Enumerable.Any (source.Source, Func<_,_>(predicate)) |> not
 ```
 
-## <a name="see-also"></a><span data-ttu-id="c5336-222">请参阅</span><span class="sxs-lookup"><span data-stu-id="c5336-222">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1a245-227">请参阅</span><span class="sxs-lookup"><span data-stu-id="1a245-227">See also</span></span>
 
-- [<span data-ttu-id="c5336-223">F# 语言参考</span><span class="sxs-lookup"><span data-stu-id="c5336-223">F# Language Reference</span></span>](index.md)
-- [<span data-ttu-id="c5336-224">异步工作流</span><span class="sxs-lookup"><span data-stu-id="c5336-224">Asynchronous Workflows</span></span>](asynchronous-workflows.md)
-- [<span data-ttu-id="c5336-225">序列</span><span class="sxs-lookup"><span data-stu-id="c5336-225">Sequences</span></span>](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
-- [<span data-ttu-id="c5336-226">查询表达式</span><span class="sxs-lookup"><span data-stu-id="c5336-226">Query Expressions</span></span>](query-expressions.md)
+- [<span data-ttu-id="1a245-228">F# 语言参考</span><span class="sxs-lookup"><span data-stu-id="1a245-228">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="1a245-229">异步工作流</span><span class="sxs-lookup"><span data-stu-id="1a245-229">Asynchronous Workflows</span></span>](asynchronous-workflows.md)
+- [<span data-ttu-id="1a245-230">序列</span><span class="sxs-lookup"><span data-stu-id="1a245-230">Sequences</span></span>](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
+- [<span data-ttu-id="1a245-231">查询表达式</span><span class="sxs-lookup"><span data-stu-id="1a245-231">Query Expressions</span></span>](query-expressions.md)

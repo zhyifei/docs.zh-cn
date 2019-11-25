@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Visual Basic 中创建注册表项并设置其值
+title: 如何：创建注册表项并设置其值
 ms.date: 07/20/2015
 f1_keywords:
 - RegistryKey.CreateSubKey
@@ -11,73 +11,73 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 84fc824ad5911621c679d70f480d9b5e83c095ad
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 459c4b3f971009ee4b6b669c55bc058db0826595
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054136"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349205"
 ---
-# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a><span data-ttu-id="c665a-102">如何：在 Visual Basic 中创建注册表项并设置其值</span><span class="sxs-lookup"><span data-stu-id="c665a-102">How to: Create a Registry Key and Set Its Value in Visual Basic</span></span>
+# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a><span data-ttu-id="48010-102">如何：在 Visual Basic 中创建注册表项并设置其值</span><span class="sxs-lookup"><span data-stu-id="48010-102">How to: Create a Registry Key and Set Its Value in Visual Basic</span></span>
 
-<span data-ttu-id="c665a-103">`My.Computer.Registry` 对象的 `CreateSubKey` 方法可用于创建注册表项。</span><span class="sxs-lookup"><span data-stu-id="c665a-103">The `CreateSubKey` method of the `My.Computer.Registry` object can be used to create a registry key.</span></span>
+<span data-ttu-id="48010-103">`My.Computer.Registry` 对象的 `CreateSubKey` 方法可用于创建注册表项。</span><span class="sxs-lookup"><span data-stu-id="48010-103">The `CreateSubKey` method of the `My.Computer.Registry` object can be used to create a registry key.</span></span>
 
-## <a name="procedure"></a><span data-ttu-id="c665a-104">过程</span><span class="sxs-lookup"><span data-stu-id="c665a-104">Procedure</span></span>
+## <a name="procedure"></a><span data-ttu-id="48010-104">过程</span><span class="sxs-lookup"><span data-stu-id="48010-104">Procedure</span></span>
 
-### <a name="to-create-a-registry-key"></a><span data-ttu-id="c665a-105">创建注册表项</span><span class="sxs-lookup"><span data-stu-id="c665a-105">To create a registry key</span></span>
+### <a name="to-create-a-registry-key"></a><span data-ttu-id="48010-105">创建注册表项</span><span class="sxs-lookup"><span data-stu-id="48010-105">To create a registry key</span></span>
 
-- <span data-ttu-id="c665a-106">使用 `CreateSubKey` 方法，指定放置注册表项的配置单元以及注册表项的名称。</span><span class="sxs-lookup"><span data-stu-id="c665a-106">Use the `CreateSubKey` method, specifying which hive to place the key under as well as the name of the key.</span></span> <span data-ttu-id="c665a-107">参数 `Subkey` 不区分大小写。</span><span class="sxs-lookup"><span data-stu-id="c665a-107">The parameter `Subkey` is not case-sensitive.</span></span> <span data-ttu-id="c665a-108">此示例在 HKEY_CURRENT_USER 下创建注册表项 `MyTestKey`。</span><span class="sxs-lookup"><span data-stu-id="c665a-108">This example creates the registry key `MyTestKey` under HKEY_CURRENT_USER.</span></span>
-
-    [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]
-
-### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a><span data-ttu-id="c665a-109">创建注册表项并设置其值</span><span class="sxs-lookup"><span data-stu-id="c665a-109">To create a registry key and set a value in it</span></span>
-
-1. <span data-ttu-id="c665a-110">使用 `CreateSubkey` 方法，指定放置注册表项的配置单元以及注册表项的名称。</span><span class="sxs-lookup"><span data-stu-id="c665a-110">Use the `CreateSubkey` method, specifying which hive to place the key under as well as the name of the key.</span></span> <span data-ttu-id="c665a-111">此示例在 HKEY_CURRENT_USER 下创建注册表项 `MyTestKey`。</span><span class="sxs-lookup"><span data-stu-id="c665a-111">This example creates the registry key `MyTestKey` under HKEY_CURRENT_USER.</span></span>
+- <span data-ttu-id="48010-106">使用 `CreateSubKey` 方法，指定放置注册表项的配置单元以及注册表项的名称。</span><span class="sxs-lookup"><span data-stu-id="48010-106">Use the `CreateSubKey` method, specifying which hive to place the key under as well as the name of the key.</span></span> <span data-ttu-id="48010-107">参数 `Subkey` 不区分大小写。</span><span class="sxs-lookup"><span data-stu-id="48010-107">The parameter `Subkey` is not case-sensitive.</span></span> <span data-ttu-id="48010-108">此示例在 HKEY_CURRENT_USER 下创建注册表项 `MyTestKey`。</span><span class="sxs-lookup"><span data-stu-id="48010-108">This example creates the registry key `MyTestKey` under HKEY_CURRENT_USER.</span></span>
 
     [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]
 
-2. <span data-ttu-id="c665a-112">使用 `SetValue` 方法设置值。</span><span class="sxs-lookup"><span data-stu-id="c665a-112">Set the value with the `SetValue` method.</span></span> <span data-ttu-id="c665a-113">此示例设置字符串值。</span><span class="sxs-lookup"><span data-stu-id="c665a-113">This example sets the string value.</span></span> <span data-ttu-id="c665a-114">“MyTestKeyValue”设置为“This is a test value”。</span><span class="sxs-lookup"><span data-stu-id="c665a-114">"MyTestKeyValue" to "This is a test value".</span></span>
+### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a><span data-ttu-id="48010-109">创建注册表项并设置其值</span><span class="sxs-lookup"><span data-stu-id="48010-109">To create a registry key and set a value in it</span></span>
+
+1. <span data-ttu-id="48010-110">使用 `CreateSubkey` 方法，指定放置注册表项的配置单元以及注册表项的名称。</span><span class="sxs-lookup"><span data-stu-id="48010-110">Use the `CreateSubkey` method, specifying which hive to place the key under as well as the name of the key.</span></span> <span data-ttu-id="48010-111">此示例在 HKEY_CURRENT_USER 下创建注册表项 `MyTestKey`。</span><span class="sxs-lookup"><span data-stu-id="48010-111">This example creates the registry key `MyTestKey` under HKEY_CURRENT_USER.</span></span>
+
+    [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]
+
+2. <span data-ttu-id="48010-112">使用 `SetValue` 方法设置值。</span><span class="sxs-lookup"><span data-stu-id="48010-112">Set the value with the `SetValue` method.</span></span> <span data-ttu-id="48010-113">此示例设置字符串值。</span><span class="sxs-lookup"><span data-stu-id="48010-113">This example sets the string value.</span></span> <span data-ttu-id="48010-114">“MyTestKeyValue”设置为“This is a test value”。</span><span class="sxs-lookup"><span data-stu-id="48010-114">"MyTestKeyValue" to "This is a test value".</span></span>
 
     [!code-vb[VbResourceTasks#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#14)]
 
-## <a name="example"></a><span data-ttu-id="c665a-115">示例</span><span class="sxs-lookup"><span data-stu-id="c665a-115">Example</span></span>
+## <a name="example"></a><span data-ttu-id="48010-115">示例</span><span class="sxs-lookup"><span data-stu-id="48010-115">Example</span></span>
 
-<span data-ttu-id="c665a-116">此示例在 HKEY_CURRENT_USER 下创建注册表项 `MyTestKey`，然后将字符串值 `MyTestKeyValue` 设置为 `This is a test value`。</span><span class="sxs-lookup"><span data-stu-id="c665a-116">This example creates the registry key `MyTestKey` under HKEY_CURRENT_USER and then sets the string value `MyTestKeyValue` to `This is a test value`.</span></span>
+<span data-ttu-id="48010-116">此示例在 HKEY_CURRENT_USER 下创建注册表项 `MyTestKey`，然后将字符串值 `MyTestKeyValue` 设置为 `This is a test value`。</span><span class="sxs-lookup"><span data-stu-id="48010-116">This example creates the registry key `MyTestKey` under HKEY_CURRENT_USER and then sets the string value `MyTestKeyValue` to `This is a test value`.</span></span>
 
 [!code-vb[VbResourceTasks#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#15)]
 
-## <a name="robust-programming"></a><span data-ttu-id="c665a-117">可靠编程</span><span class="sxs-lookup"><span data-stu-id="c665a-117">Robust Programming</span></span>
+## <a name="robust-programming"></a><span data-ttu-id="48010-117">可靠编程</span><span class="sxs-lookup"><span data-stu-id="48010-117">Robust Programming</span></span>
 
-<span data-ttu-id="c665a-118">检查注册表结构，查找适合项的位置。</span><span class="sxs-lookup"><span data-stu-id="c665a-118">Examine the registry structure to find a suitable location for your key.</span></span> <span data-ttu-id="c665a-119">例如，可能需要打开当前用户的 HKEY_CURRENT_USER\Software 项，并用公司的名称创建一项。</span><span class="sxs-lookup"><span data-stu-id="c665a-119">For example, you may want to open the HKEY_CURRENT_USER\Software key of the current user, and create a key with your company's name.</span></span> <span data-ttu-id="c665a-120">然后将注册表值添加到公司的项上。</span><span class="sxs-lookup"><span data-stu-id="c665a-120">Then add the registry values to your company's key.</span></span>
+<span data-ttu-id="48010-118">检查注册表结构，查找适合项的位置。</span><span class="sxs-lookup"><span data-stu-id="48010-118">Examine the registry structure to find a suitable location for your key.</span></span> <span data-ttu-id="48010-119">例如，可能需要打开当前用户的 HKEY_CURRENT_USER\Software 项，并用公司的名称创建一项。</span><span class="sxs-lookup"><span data-stu-id="48010-119">For example, you may want to open the HKEY_CURRENT_USER\Software key of the current user, and create a key with your company's name.</span></span> <span data-ttu-id="48010-120">然后将注册表值添加到公司的项上。</span><span class="sxs-lookup"><span data-stu-id="48010-120">Then add the registry values to your company's key.</span></span>
 
-<span data-ttu-id="c665a-121">从 Web 应用程序读取注册表时，当前用户依赖于在 Web 应用程序中实现的身份验证和模拟。</span><span class="sxs-lookup"><span data-stu-id="c665a-121">When reading the registry from a Web application, the current user depends on the authentication and impersonation implemented in the Web application.</span></span>
+<span data-ttu-id="48010-121">从 Web 应用程序读取注册表时，当前用户依赖于在 Web 应用程序中实现的身份验证和模拟。</span><span class="sxs-lookup"><span data-stu-id="48010-121">When reading the registry from a Web application, the current user depends on the authentication and impersonation implemented in the Web application.</span></span>
 
-<span data-ttu-id="c665a-122">将数据写入用户文件夹 (<xref:Microsoft.Win32.Registry.CurrentUser>) 比写入本地计算机 (<xref:Microsoft.Win32.Registry.LocalMachine>) 更安全。</span><span class="sxs-lookup"><span data-stu-id="c665a-122">It is more secure to write data to the user folder (<xref:Microsoft.Win32.Registry.CurrentUser>) rather than to the local computer (<xref:Microsoft.Win32.Registry.LocalMachine>).</span></span>
+<span data-ttu-id="48010-122">将数据写入用户文件夹 (<xref:Microsoft.Win32.Registry.CurrentUser>) 比写入本地计算机 (<xref:Microsoft.Win32.Registry.LocalMachine>) 更安全。</span><span class="sxs-lookup"><span data-stu-id="48010-122">It is more secure to write data to the user folder (<xref:Microsoft.Win32.Registry.CurrentUser>) rather than to the local computer (<xref:Microsoft.Win32.Registry.LocalMachine>).</span></span>
 
-<span data-ttu-id="c665a-123">创建注册表值时，需要确定该值已存在时应执行的操作。</span><span class="sxs-lookup"><span data-stu-id="c665a-123">When you create a registry value, you need to decide what to do if that value already exists.</span></span> <span data-ttu-id="c665a-124">另一进程（可能是恶意进程）可能已创建了该值，并拥有对该值的访问权。</span><span class="sxs-lookup"><span data-stu-id="c665a-124">Another process, perhaps a malicious one, may have already created the value and have access to it.</span></span> <span data-ttu-id="c665a-125">将数据放入注册表值后，其他进程即可使用这些数据。</span><span class="sxs-lookup"><span data-stu-id="c665a-125">When you put data in the registry value, the data is available to the other process.</span></span> <span data-ttu-id="c665a-126">若要防止出现这种情况，请使用 <xref:Microsoft.Win32.RegistryKey.GetValue%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="c665a-126">To prevent this, use the <xref:Microsoft.Win32.RegistryKey.GetValue%2A> method.</span></span> <span data-ttu-id="c665a-127">如果项不存在，则该方法返回 `Nothing`。</span><span class="sxs-lookup"><span data-stu-id="c665a-127">It returns `Nothing` if the key does not already exist.</span></span>
+<span data-ttu-id="48010-123">创建注册表值时，需要确定该值已存在时应执行的操作。</span><span class="sxs-lookup"><span data-stu-id="48010-123">When you create a registry value, you need to decide what to do if that value already exists.</span></span> <span data-ttu-id="48010-124">另一进程（可能是恶意进程）可能已创建了该值，并拥有对该值的访问权。</span><span class="sxs-lookup"><span data-stu-id="48010-124">Another process, perhaps a malicious one, may have already created the value and have access to it.</span></span> <span data-ttu-id="48010-125">将数据放入注册表值后，其他进程即可使用这些数据。</span><span class="sxs-lookup"><span data-stu-id="48010-125">When you put data in the registry value, the data is available to the other process.</span></span> <span data-ttu-id="48010-126">若要防止出现这种情况，请使用 <xref:Microsoft.Win32.RegistryKey.GetValue%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="48010-126">To prevent this, use the <xref:Microsoft.Win32.RegistryKey.GetValue%2A> method.</span></span> <span data-ttu-id="48010-127">如果项不存在，则该方法返回 `Nothing`。</span><span class="sxs-lookup"><span data-stu-id="48010-127">It returns `Nothing` if the key does not already exist.</span></span>
 
-<span data-ttu-id="c665a-128">即使注册表项受 ACL（访问控制列表）保护，在注册表中以纯文本形式存储机密信息（例如密码）也不安全。</span><span class="sxs-lookup"><span data-stu-id="c665a-128">It is not secure to store secrets, such as passwords, in the registry as plain text, even if the registry key is protected by ACLs (Access Control Lists).</span></span>
+<span data-ttu-id="48010-128">即使注册表项受 ACL（访问控制列表）保护，在注册表中以纯文本形式存储机密信息（例如密码）也不安全。</span><span class="sxs-lookup"><span data-stu-id="48010-128">It is not secure to store secrets, such as passwords, in the registry as plain text, even if the registry key is protected by ACLs (Access Control Lists).</span></span>
 
-<span data-ttu-id="c665a-129">以下情况可能会导致异常：</span><span class="sxs-lookup"><span data-stu-id="c665a-129">The following conditions may cause an exception:</span></span>
+<span data-ttu-id="48010-129">以下情况可能会导致异常：</span><span class="sxs-lookup"><span data-stu-id="48010-129">The following conditions may cause an exception:</span></span>
 
-- <span data-ttu-id="c665a-130">密钥名称是 `Nothing` (<xref:System.ArgumentNullException>)。</span><span class="sxs-lookup"><span data-stu-id="c665a-130">The name of the key is `Nothing` (<xref:System.ArgumentNullException>).</span></span>
+- <span data-ttu-id="48010-130">密钥名称是 `Nothing` (<xref:System.ArgumentNullException>)。</span><span class="sxs-lookup"><span data-stu-id="48010-130">The name of the key is `Nothing` (<xref:System.ArgumentNullException>).</span></span>
 
-- <span data-ttu-id="c665a-131">用户没有创建注册表项的权限 (<xref:System.Security.SecurityException>)。</span><span class="sxs-lookup"><span data-stu-id="c665a-131">The user does not have permissions to create registry keys (<xref:System.Security.SecurityException>).</span></span>
+- <span data-ttu-id="48010-131">用户没有创建注册表项的权限 (<xref:System.Security.SecurityException>)。</span><span class="sxs-lookup"><span data-stu-id="48010-131">The user does not have permissions to create registry keys (<xref:System.Security.SecurityException>).</span></span>
 
-- <span data-ttu-id="c665a-132">项名称超过 255 个字符的限制 (<xref:System.ArgumentException>)。</span><span class="sxs-lookup"><span data-stu-id="c665a-132">The key name exceeds the 255-character limit (<xref:System.ArgumentException>).</span></span>
+- <span data-ttu-id="48010-132">项名称超过 255 个字符的限制 (<xref:System.ArgumentException>)。</span><span class="sxs-lookup"><span data-stu-id="48010-132">The key name exceeds the 255-character limit (<xref:System.ArgumentException>).</span></span>
 
-- <span data-ttu-id="c665a-133">项已关闭 (<xref:System.IO.IOException>)。</span><span class="sxs-lookup"><span data-stu-id="c665a-133">The key is closed (<xref:System.IO.IOException>).</span></span>
+- <span data-ttu-id="48010-133">项已关闭 (<xref:System.IO.IOException>)。</span><span class="sxs-lookup"><span data-stu-id="48010-133">The key is closed (<xref:System.IO.IOException>).</span></span>
 
-- <span data-ttu-id="c665a-134">注册表项为只读 (<xref:System.UnauthorizedAccessException>)。</span><span class="sxs-lookup"><span data-stu-id="c665a-134">The registry key is read-only (<xref:System.UnauthorizedAccessException>).</span></span>
+- <span data-ttu-id="48010-134">注册表项为只读 (<xref:System.UnauthorizedAccessException>)。</span><span class="sxs-lookup"><span data-stu-id="48010-134">The registry key is read-only (<xref:System.UnauthorizedAccessException>).</span></span>
 
-## <a name="net-framework-security"></a><span data-ttu-id="c665a-135">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="c665a-135">.NET Framework Security</span></span>
+## <a name="net-framework-security"></a><span data-ttu-id="48010-135">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="48010-135">.NET Framework Security</span></span>
 
-<span data-ttu-id="c665a-136">若要运行此进程，程序集需要 <xref:System.Security.Permissions.RegistryPermission> 类授予的特权等级。</span><span class="sxs-lookup"><span data-stu-id="c665a-136">To run this process, your assembly requires a privilege level granted by the <xref:System.Security.Permissions.RegistryPermission> class.</span></span> <span data-ttu-id="c665a-137">如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。</span><span class="sxs-lookup"><span data-stu-id="c665a-137">If you are running in a partial-trust context, the process might throw an exception due to insufficient privileges.</span></span> <span data-ttu-id="c665a-138">同样，用户必须具有用于创建或写入设置的正确 ACL。</span><span class="sxs-lookup"><span data-stu-id="c665a-138">Similarly, the user must have the correct ACLs for creating or writing to settings.</span></span> <span data-ttu-id="c665a-139">例如，具有代码访问安全性权限的本地应用程序可能没有操作系统权限。</span><span class="sxs-lookup"><span data-stu-id="c665a-139">For example, a local application that has the code access security permission might not have operating system permission.</span></span> <span data-ttu-id="c665a-140">有关详细信息，请参阅[代码访问安全性基础知识](../../../../framework/misc/code-access-security-basics.md)。</span><span class="sxs-lookup"><span data-stu-id="c665a-140">For more information, see [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md).</span></span>
+<span data-ttu-id="48010-136">若要运行此进程，程序集需要 <xref:System.Security.Permissions.RegistryPermission> 类授予的特权等级。</span><span class="sxs-lookup"><span data-stu-id="48010-136">To run this process, your assembly requires a privilege level granted by the <xref:System.Security.Permissions.RegistryPermission> class.</span></span> <span data-ttu-id="48010-137">如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。</span><span class="sxs-lookup"><span data-stu-id="48010-137">If you are running in a partial-trust context, the process might throw an exception due to insufficient privileges.</span></span> <span data-ttu-id="48010-138">同样，用户必须具有用于创建或写入设置的正确 ACL。</span><span class="sxs-lookup"><span data-stu-id="48010-138">Similarly, the user must have the correct ACLs for creating or writing to settings.</span></span> <span data-ttu-id="48010-139">例如，具有代码访问安全性权限的本地应用程序可能没有操作系统权限。</span><span class="sxs-lookup"><span data-stu-id="48010-139">For example, a local application that has the code access security permission might not have operating system permission.</span></span> <span data-ttu-id="48010-140">有关详细信息，请参阅[代码访问安全性基础知识](../../../../framework/misc/code-access-security-basics.md)。</span><span class="sxs-lookup"><span data-stu-id="48010-140">For more information, see [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="c665a-141">请参阅</span><span class="sxs-lookup"><span data-stu-id="c665a-141">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="48010-141">请参阅</span><span class="sxs-lookup"><span data-stu-id="48010-141">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>
 - <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>
-- [<span data-ttu-id="c665a-142">读取和写入注册表</span><span class="sxs-lookup"><span data-stu-id="c665a-142">Reading from and Writing to the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
-- [<span data-ttu-id="c665a-143">代码访问安全性基础知识</span><span class="sxs-lookup"><span data-stu-id="c665a-143">Code Access Security Basics</span></span>](../../../../framework/misc/code-access-security-basics.md)
+- [<span data-ttu-id="48010-142">读取和写入注册表</span><span class="sxs-lookup"><span data-stu-id="48010-142">Reading from and Writing to the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+- [<span data-ttu-id="48010-143">代码访问安全性基础知识</span><span class="sxs-lookup"><span data-stu-id="48010-143">Code Access Security Basics</span></span>](../../../../framework/misc/code-access-security-basics.md)

@@ -10,22 +10,22 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: a68434aaa118db60a502c2bcc0bb188b83b0f463
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 9c011cf1216b98fa20e330e185e4cf2c331b31d4
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698421"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087954"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="37d1f-102">用于 authenticationModules 的 0add > 元素（网络设置） @no__t</span><span class="sxs-lookup"><span data-stu-id="37d1f-102">\<add> Element for authenticationModules (Network Settings)</span></span>
-<span data-ttu-id="37d1f-103">向应用程序添加身份验证模块。</span><span class="sxs-lookup"><span data-stu-id="37d1f-103">Adds an authentication module to the application.</span></span>  
-  
-[<span data-ttu-id="37d1f-104"> **\<configuration>** </span><span class="sxs-lookup"><span data-stu-id="37d1f-104">**\<configuration>**</span></span>](../configuration-element.md)  
-<span data-ttu-id="37d1f-105">&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="37d1f-105">&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)</span></span>  
-<span data-ttu-id="37d1f-106">&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="37d1f-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<authenticationModules>**](authenticationmodules-element-network-settings.md)</span></span>  
-<span data-ttu-id="37d1f-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<添加 >**</span><span class="sxs-lookup"><span data-stu-id="37d1f-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="37d1f-108">语法</span><span class="sxs-lookup"><span data-stu-id="37d1f-108">Syntax</span></span>  
+# <a name="add-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="1ed1c-102">\<为 authenticationModules 添加 > 元素（网络设置）</span><span class="sxs-lookup"><span data-stu-id="1ed1c-102">\<add> Element for authenticationModules (Network Settings)</span></span>
+<span data-ttu-id="1ed1c-103">向应用程序添加身份验证模块。</span><span class="sxs-lookup"><span data-stu-id="1ed1c-103">Adds an authentication module to the application.</span></span>  
+
+<span data-ttu-id="1ed1c-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="1ed1c-104">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="1ed1c-105">\<&nbsp;&nbsp;[ **> 的**](system-net-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="1ed1c-105">&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)</span></span>\
+<span data-ttu-id="1ed1c-106">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="1ed1c-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<authenticationModules>**](authenticationmodules-element-network-settings.md)</span></span>\
+<span data-ttu-id="1ed1c-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<添加 >**</span><span class="sxs-lookup"><span data-stu-id="1ed1c-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="1ed1c-108">语法</span><span class="sxs-lookup"><span data-stu-id="1ed1c-108">Syntax</span></span>  
   
 ```xml  
 <add
@@ -33,34 +33,34 @@ ms.locfileid: "71698421"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="37d1f-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="37d1f-109">Attributes and Elements</span></span>  
- <span data-ttu-id="37d1f-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="37d1f-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="1ed1c-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="1ed1c-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="1ed1c-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="1ed1c-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="37d1f-111">特性</span><span class="sxs-lookup"><span data-stu-id="37d1f-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="1ed1c-111">特性</span><span class="sxs-lookup"><span data-stu-id="1ed1c-111">Attributes</span></span>  
   
-|<span data-ttu-id="37d1f-112">**特性**</span><span class="sxs-lookup"><span data-stu-id="37d1f-112">**Attribute**</span></span>|<span data-ttu-id="37d1f-113">**说明**</span><span class="sxs-lookup"><span data-stu-id="37d1f-113">**Description**</span></span>|  
+|<span data-ttu-id="1ed1c-112">**特性**</span><span class="sxs-lookup"><span data-stu-id="1ed1c-112">**Attribute**</span></span>|<span data-ttu-id="1ed1c-113">**描述**</span><span class="sxs-lookup"><span data-stu-id="1ed1c-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`type`|<span data-ttu-id="37d1f-114">完全限定的类型名称（由 <xref:System.Type.FullName%2A> 属性指示）和程序集名称（由 <xref:System.Reflection.Assembly.FullName%2A> 属性指示），用逗号分隔。</span><span class="sxs-lookup"><span data-stu-id="37d1f-114">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma.</span></span>|  
+|`type`|<span data-ttu-id="1ed1c-114">完全限定的类型名称（由 <xref:System.Type.FullName%2A> 属性指示）和程序集名称（由 <xref:System.Reflection.Assembly.FullName%2A> 属性指示），用逗号分隔。</span><span class="sxs-lookup"><span data-stu-id="1ed1c-114">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="37d1f-115">子元素</span><span class="sxs-lookup"><span data-stu-id="37d1f-115">Child Elements</span></span>  
- <span data-ttu-id="37d1f-116">无。</span><span class="sxs-lookup"><span data-stu-id="37d1f-116">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="1ed1c-115">子元素</span><span class="sxs-lookup"><span data-stu-id="1ed1c-115">Child Elements</span></span>  
+ <span data-ttu-id="1ed1c-116">无。</span><span class="sxs-lookup"><span data-stu-id="1ed1c-116">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="37d1f-117">父元素</span><span class="sxs-lookup"><span data-stu-id="37d1f-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="1ed1c-117">父元素</span><span class="sxs-lookup"><span data-stu-id="1ed1c-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="37d1f-118">**元素**</span><span class="sxs-lookup"><span data-stu-id="37d1f-118">**Element**</span></span>|<span data-ttu-id="37d1f-119">**说明**</span><span class="sxs-lookup"><span data-stu-id="37d1f-119">**Description**</span></span>|  
+|<span data-ttu-id="1ed1c-118">**元素**</span><span class="sxs-lookup"><span data-stu-id="1ed1c-118">**Element**</span></span>|<span data-ttu-id="1ed1c-119">**描述**</span><span class="sxs-lookup"><span data-stu-id="1ed1c-119">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="37d1f-120">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="37d1f-120">authenticationModules</span></span>](authenticationmodules-element-network-settings.md)|<span data-ttu-id="37d1f-121">指定用于对网络请求进行身份验证的模块。</span><span class="sxs-lookup"><span data-stu-id="37d1f-121">Specifies modules used to authenticate network requests.</span></span>|  
+|[<span data-ttu-id="1ed1c-120">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="1ed1c-120">authenticationModules</span></span>](authenticationmodules-element-network-settings.md)|<span data-ttu-id="1ed1c-121">指定用于对网络请求进行身份验证的模块。</span><span class="sxs-lookup"><span data-stu-id="1ed1c-121">Specifies modules used to authenticate network requests.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="37d1f-122">备注</span><span class="sxs-lookup"><span data-stu-id="37d1f-122">Remarks</span></span>  
- <span data-ttu-id="37d1f-123">`add` 元素会在已注册的身份验证模块列表末尾添加一个身份验证模块。</span><span class="sxs-lookup"><span data-stu-id="37d1f-123">The `add` element adds an authentication module to the end of the list of registered authentication modules.</span></span> <span data-ttu-id="37d1f-124">身份验证模块按照它们添加到列表中的顺序进行调用。</span><span class="sxs-lookup"><span data-stu-id="37d1f-124">Authentication modules are called in the order in which they were added to the list.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1ed1c-122">备注</span><span class="sxs-lookup"><span data-stu-id="1ed1c-122">Remarks</span></span>  
+ <span data-ttu-id="1ed1c-123">`add` 元素会在已注册的身份验证模块列表末尾添加一个身份验证模块。</span><span class="sxs-lookup"><span data-stu-id="1ed1c-123">The `add` element adds an authentication module to the end of the list of registered authentication modules.</span></span> <span data-ttu-id="1ed1c-124">身份验证模块按照它们添加到列表中的顺序进行调用。</span><span class="sxs-lookup"><span data-stu-id="1ed1c-124">Authentication modules are called in the order in which they were added to the list.</span></span>  
   
- <span data-ttu-id="37d1f-125">@No__t-0 属性的值应为有效的类型名称和相应的程序集名称，用逗号分隔。</span><span class="sxs-lookup"><span data-stu-id="37d1f-125">The value for the `type` attribute should be a valid type name and corresponding assembly name, separated by a comma.</span></span>  
+ <span data-ttu-id="1ed1c-125">`type` 属性的值应为有效的类型名称和相应的程序集名称，用逗号分隔。</span><span class="sxs-lookup"><span data-stu-id="1ed1c-125">The value for the `type` attribute should be a valid type name and corresponding assembly name, separated by a comma.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="37d1f-126">配置文件</span><span class="sxs-lookup"><span data-stu-id="37d1f-126">Configuration Files</span></span>  
- <span data-ttu-id="37d1f-127">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="37d1f-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="1ed1c-126">配置文件</span><span class="sxs-lookup"><span data-stu-id="1ed1c-126">Configuration Files</span></span>  
+ <span data-ttu-id="1ed1c-127">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="1ed1c-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="37d1f-128">示例</span><span class="sxs-lookup"><span data-stu-id="37d1f-128">Example</span></span>  
- <span data-ttu-id="37d1f-129">下面的示例启用了默认的身份验证模块。</span><span class="sxs-lookup"><span data-stu-id="37d1f-129">The following example enables the default authentication modules.</span></span> <span data-ttu-id="37d1f-130">应将版本和 PublicKeyToken 的值替换为指定模块的正确值。</span><span class="sxs-lookup"><span data-stu-id="37d1f-130">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
+## <a name="example"></a><span data-ttu-id="1ed1c-128">示例</span><span class="sxs-lookup"><span data-stu-id="1ed1c-128">Example</span></span>  
+ <span data-ttu-id="1ed1c-129">下面的示例启用了默认的身份验证模块。</span><span class="sxs-lookup"><span data-stu-id="1ed1c-129">The following example enables the default authentication modules.</span></span> <span data-ttu-id="1ed1c-130">应将版本和 PublicKeyToken 的值替换为指定模块的正确值。</span><span class="sxs-lookup"><span data-stu-id="1ed1c-130">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
   
 ```xml  
 <configuration>  
@@ -81,8 +81,8 @@ ms.locfileid: "71698421"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="37d1f-131">请参阅</span><span class="sxs-lookup"><span data-stu-id="37d1f-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1ed1c-131">请参阅</span><span class="sxs-lookup"><span data-stu-id="1ed1c-131">See also</span></span>
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [<span data-ttu-id="37d1f-132">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="37d1f-132">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="1ed1c-132">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="1ed1c-132">Network Settings Schema</span></span>](index.md)
