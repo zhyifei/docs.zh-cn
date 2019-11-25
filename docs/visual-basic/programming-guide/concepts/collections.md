@@ -1,15 +1,15 @@
 ---
-title: 集合 (Visual Basic)
+title: 集合
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 7a4b891aa490d727a7f09bc19c11b8e505ef81f0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ba16d04e781bcf69356b1f603d92e104816a0860
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754993"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347091"
 ---
-# <a name="collections-visual-basic"></a>集合 (Visual Basic)
+# <a name="collections-visual-basic"></a>Collections (Visual Basic)
 
 对于许多应用程序，你会想要创建和管理相关对象的组。 有两种方法对对象进行分组：通过创建对象的数组，以及通过创建对象的集合。
 
@@ -22,7 +22,7 @@ ms.locfileid: "64754993"
 如果集合中只包含一种数据类型的元素，则可以使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间中的一个类。 泛型集合强制类型安全，因此无法向其添加任何其他数据类型。 当你从泛型集合检索元素时，你无需确定其数据类型或对其进行转换。
 
 > [!NOTE]
-> 本主题中的示例，包括[导入](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)语句`System.Collections.Generic`和`System.Linq`命名空间。
+> For the examples in this topic, include [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) statements for the `System.Collections.Generic` and `System.Linq` namespaces.
 
 <a name="BKMK_SimpleCollection"></a>
 
@@ -30,7 +30,7 @@ ms.locfileid: "64754993"
 
 本部分中的示例使用泛型 <xref:System.Collections.Generic.List%601> 类，通过此类可使用对象的强类型列表。
 
-下面的示例创建字符串列表，然后循环访问字符串使用[为每个...下一步](../../../visual-basic/language-reference/statements/for-each-next-statement.md)语句。
+The following example creates a list of strings and then iterates through the strings by using a [For Each…Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md) statement.
 
 ```vb
 ' Create a list of strings.
@@ -63,7 +63,7 @@ Next
 'Output: chinook coho pink sockeye
 ```
 
-可以使用[为...下一步](../../../visual-basic/language-reference/statements/for-next-statement.md)语句而不是`For Each`语句来循环访问集合。 通过按索引位置访问集合元素实现此目的。 元素的索引开始于 0，结束于元素计数减 1。
+You can use a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) statement instead of a `For Each` statement to iterate through a collection. 通过按索引位置访问集合元素实现此目的。 元素的索引开始于 0，结束于元素计数减 1。
 
 以下示例通过使用 `For…Next` 而不是 `For Each` 循环访问集合中的元素。
 
@@ -95,7 +95,7 @@ Next
 'Output: chinook pink sockeye
 ```
 
-以下示例从一个泛型列表中删除元素。 而不是`For Each`语句，[为...下一步](../../../visual-basic/language-reference/statements/for-next-statement.md)使用以降序顺序循环访问的语句。 这是因为 <xref:System.Collections.Generic.List%601.RemoveAt%2A> 方法将导致已移除的元素后的元素的索引值减小。
+以下示例从一个泛型列表中删除元素。 Instead of a `For Each` statement, a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) statement that iterates in descending order is used. 这是因为 <xref:System.Collections.Generic.List%601.RemoveAt%2A> 方法将导致已移除的元素后的元素的索引值减小。
 
 ```vb
 Dim numbers As New List(Of Integer) From
@@ -173,7 +173,7 @@ End Class
 
 下表列出了 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间中的一些常用类：
 
-|类|描述|
+|实例|描述|
 |---|---|
 |<xref:System.Collections.Generic.Dictionary%602>|表示基于键进行组织的键/值对的集合。|
 |<xref:System.Collections.Generic.List%601>|表示可按索引访问的对象的列表。 提供用于对列表进行搜索、排序和修改的方法。|
@@ -203,7 +203,7 @@ End Class
 
 下表列出了 `System.Collections` 命名空间中的一些常用类：
 
-|类|描述|
+|实例|描述|
 |---|---|
 |<xref:System.Collections.ArrayList>|表示对象的数组，这些对象的大小会根据需要动态增加。|
 |<xref:System.Collections.Hashtable>|表示根据键的哈希代码进行组织的键/值对的集合。|
@@ -224,7 +224,7 @@ Visual Basic `Collection` 类将其所有元素存储为 `Object` 类型，因�
 
 只要可能，则应使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间或 <xref:System.Collections.Concurrent> 命名空间中的泛型集合而不是 Visual Basic `Collection` 类。
 
-有关详细信息，请参阅 <xref:Microsoft.VisualBasic.Collection>。
+有关更多信息，请参见<xref:Microsoft.VisualBasic.Collection>。
 
 <a name="BKMK_KeyValuePairs"></a>
 
@@ -296,7 +296,7 @@ Private Function BuildDictionary2() As Dictionary(Of String, Element)
 End Function
 ```
 
-以下示例使用 <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> 方法和 `Dictionary` 的 <xref:System.Collections.Generic.Dictionary%602.Item%2A> 属性按键快速查找某个项。 `Item`属性使您能够访问中的项`elements`通过使用集合`elements(symbol)`在 Visual Basic 中的代码。
+以下示例使用 <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> 方法和 `Dictionary` 的 <xref:System.Collections.Generic.Dictionary%602.Item%2A> 属性按键快速查找某个项。 The `Item` property enables you to access an item in the `elements` collection by using the `elements(symbol)` code in Visual Basic.
 
 ```vb
 Private Sub FindInDictionary(ByVal symbol As String)
@@ -330,7 +330,7 @@ End Sub
 
 ## <a name="using-linq-to-access-a-collection"></a>使用 LINQ 访问集合
 
-可以使用 LINQ（语言集成查询）来访问集合。 LINQ 查询提供筛选、排序和分组功能。 有关详细信息，请参阅[在 Visual Basic 中的 LINQ 入门](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)。
+可以使用 LINQ（语言集成查询）来访问集合。 LINQ 查询提供筛选、排序和分组功能。 For more information, see [Getting Started with LINQ in Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).
 
 以下示例运行一个对泛型 `List` 的 LINQ 查询。 LINQ 查询返回一个包含结果的不同集合。
 
@@ -458,7 +458,7 @@ End Class
 
 ## <a name="defining-a-custom-collection"></a>定义自定义集合
 
-可以通过实现 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Collections.IEnumerable> 接口来定义集合。 有关其他信息，请参阅[对集合进行枚举](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100))。
+可以通过实现 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Collections.IEnumerable> 接口来定义集合。 For additional information, see [Enumerating a Collection](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100)).
 
 尽管可以定义自定义集合，但通常最好使用包含在 .NET Framework 中的集合，这在本主题前面的[集合类型](#kinds-of-collections)中进行了介绍。
 
@@ -538,13 +538,13 @@ End Class
 
 ## <a name="iterators"></a>Iterators
 
-迭代器用于对集合执行自定义迭代。 迭代器可以是一种方法，或是一个 `get` 访问器。 迭代器使用[产生](../../../visual-basic/language-reference/statements/yield-statement.md)语句返回一次的集合的每个元素。
+迭代器用于对集合执行自定义迭代。 迭代器可以是一种方法，或是一个 `get` 访问器。 An iterator uses a [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) statement to return each element of the collection one at a time.
 
-通过使用调用迭代器[为每个...下一步](../../../visual-basic/language-reference/statements/for-each-next-statement.md)语句。 `For Each` 循环的每次迭代都会调用迭代器。 迭代器中到达 `Yield` 语句时，会返回一个表达式，并保留当前在代码中的位置。 下次调用迭代器时，将从该位置重新开始执行。
+You call an iterator by using a [For Each…Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md) statement. `For Each` 循环的每次迭代都会调用迭代器。 迭代器中到达 `Yield` 语句时，会返回一个表达式，并保留当前在代码中的位置。 下次调用迭代器时，将从该位置重新开始执行。
 
-有关详细信息，请参阅[迭代器 (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md)。
+For more information, see [Iterators (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md).
 
-下面的示例使用迭代器方法。 迭代器方法具有`Yield`内的语句[为...下一步](../../../visual-basic/language-reference/statements/for-next-statement.md)循环。 在 `ListEvenNumbers` 方法中，`For Each` 语句体的每次迭代都会创建对迭代器方法的调用，并将继续到下一个 `Yield` 语句。
+下面的示例使用迭代器方法。 The iterator method has a `Yield` statement that is inside a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) loop. 在 `ListEvenNumbers` 方法中，`For Each` 语句体的每次迭代都会创建对迭代器方法的调用，并将继续到下一个 `Yield` 语句。
 
 ```vb
 Public Sub ListEvenNumbers()

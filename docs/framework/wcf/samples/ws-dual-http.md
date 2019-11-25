@@ -2,12 +2,12 @@
 title: WS 双向 Http
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: bc8958ab092f97e94a75bc366d576441c1a5bbbd
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 44fdf6f0b27e15c486afa32f67668e9fd6eeac10
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424544"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138685"
 ---
 # <a name="ws-dual-http"></a>WS 双向 Http
 
@@ -88,7 +88,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 4. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
 
     > [!IMPORTANT]
-    > 在跨计算机配置中运行客户端时，请确保在[\<客户端 > 元素的\<终结点 >](../../configure-apps/file-schema/wcf/endpoint-of-client.md)的 `address` 属性和[`clientBaseAddress` 绑定](../../../../docs/framework/misc/binding.md)的\<属性中替换 localhost >[\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)元素的元素，该元素具有相应计算机的名称，如下所示：
+    > 在跨计算机配置中运行客户端时，请确保在[\<客户端 > 元素的\<终结点 >](../../configure-apps/file-schema/wcf/endpoint-of-client.md)的 `address` 属性和[`clientBaseAddress` 绑定](../../configure-apps/file-schema/wcf/bindings.md)的\<属性中替换 localhost >[\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)元素的元素，该元素具有相应计算机的名称，如下所示：
 
     ```xml
     <client>

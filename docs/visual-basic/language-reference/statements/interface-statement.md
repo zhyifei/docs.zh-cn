@@ -1,5 +1,5 @@
 ---
-title: Interface 语句 (Visual Basic)
+title: Interface 语句
 ms.date: 05/12/2018
 f1_keywords:
 - vb.Interface
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: 68590702835e47e5f0f2e0380bc0fe4017d5eb15
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: b606f24cf3baa13746834dfbf7ca6b9215fd3558
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582671"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348059"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface 语句 (Visual Basic)
-声明接口的名称，并引入该接口所包含的成员的定义。  
+Declares the name of an interface and introduces the definitions of the members that the interface comprises.  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,80 +37,80 @@ End Interface
   
 |术语|定义|  
 |---|---|  
-|`attributelist`|可选。 请参阅[特性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
-|`accessmodifier`|可选。 可以是以下各项之一：<br /><br /> -   [公有](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [保护](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [朋友](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私有](../../../visual-basic/language-reference/modifiers/private.md)<br />-  [受保护的朋友](../../language-reference/modifiers/protected-friend.md)<br/>- [私有保护](../../language-reference/modifiers/private-protected.md)<br /><br /> 请参阅 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
-|`Shadows`|可选。 请参阅[阴影](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
-|`name`|必须的。 此接口的名称。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`Of`|可选。 指定这是一个泛型接口。|  
-|`typelist`|如果使用 of 关键字，则[为](../../../visual-basic/language-reference/statements/of-clause.md)必需。 此接口的类型参数列表。 根据需要，可以使用 `In` 和 `Out` 泛型修饰符将每个类型参数声明为变体。 请参阅[类型列表](../../../visual-basic/language-reference/statements/type-list.md)。|  
-|`Inherits`|可选。 指示此接口继承另一个接口的特性和成员。 请参阅[Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)。|  
-|`interfacenames`|如果使用 `Inherits` 语句，则是必需的。 此接口派生自的接口的名称。|  
-|`modifiers`|可选。 要定义的接口成员的适当修饰符。|  
-|`Property`|可选。 定义一个属性，该属性是接口的成员。|  
-|`Function`|可选。 定义一个 `Function` 过程，该过程是接口的成员。|  
-|`Sub`|可选。 定义一个 `Sub` 过程，该过程是接口的成员。|  
-|`Event`|可选。 定义是接口成员的事件。|  
-|`Interface`|可选。 定义一个嵌套在此接口内的接口。 嵌套接口定义必须使用 `End Interface` 语句终止。|  
-|`Class`|可选。 定义一个类，该类是接口的成员。 成员类定义必须使用 `End Class` 语句终止。|  
-|`Structure`|可选。 定义一个结构，该结构是接口的成员。 成员结构定义必须以 `End Structure` 语句终止。|  
-|`membername`|对于定义为接口成员的每个属性、过程、事件、接口、类或结构都是必需的。 成员名。|  
-|`End Interface`|终止 `Interface` 定义。|  
+|`attributelist`|可选。 See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|可选。 可以是以下各项之一：<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-  [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [Private Protected](../../language-reference/modifiers/private-protected.md)<br /><br /> 请参阅 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`Shadows`|可选。 See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`name`|必须的。 Name of this interface. 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`Of`|可选。 Specifies that this is a generic interface.|  
+|`typelist`|Required if you use the [Of](../../../visual-basic/language-reference/statements/of-clause.md) keyword. List of type parameters for this interface. Optionally, each type parameter can be declared variant by using `In` and `Out` generic modifiers. See [Type List](../../../visual-basic/language-reference/statements/type-list.md).|  
+|`Inherits`|可选。 Indicates that this interface inherits the attributes and members of another interface or interfaces. See [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`interfacenames`|Required if you use the `Inherits` statement. The names of the interfaces from which this interface derives.|  
+|`modifiers`|可选。 Appropriate modifiers for the interface member being defined.|  
+|`Property`|可选。 Defines a property that is a member of the interface.|  
+|`Function`|可选。 Defines a `Function` procedure that is a member of the interface.|  
+|`Sub`|可选。 Defines a `Sub` procedure that is a member of the interface.|  
+|`Event`|可选。 Defines an event that is a member of the interface.|  
+|`Interface`|可选。 Defines an interface that is a nested within this interface. The nested interface definition must terminate with an `End Interface` statement.|  
+|`Class`|可选。 Defines a class that is a member of the interface. The member class definition must terminate with an `End Class` statement.|  
+|`Structure`|可选。 Defines a structure that is a member of the interface. The member structure definition must terminate with an `End Structure` statement.|  
+|`membername`|Required for each property, procedure, event, interface, class, or structure defined as a member of the interface. 成员名。|  
+|`End Interface`|Terminates the `Interface` definition.|  
   
 ## <a name="remarks"></a>备注  
- *接口*定义类和结构可以实现的一组成员（如属性和过程）。 接口仅定义成员的签名，而不定义其内部工作原理。  
+ An *interface* defines a set of members, such as properties and procedures, that classes and structures can implement. The interface defines only the signatures of the members and not their internal workings.  
   
- 类或结构通过为接口所定义的每个成员提供代码来实现接口。 最后，当应用程序从该类或结构创建实例时，对象存在并在内存中运行。 有关详细信息，请参阅[对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)和[接口](../../../visual-basic/programming-guide/language-features/interfaces/index.md)。  
+ A class or structure implements the interface by supplying code for every member defined by the interface. Finally, when the application creates an instance from that class or structure, an object exists and runs in memory. For more information, see [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) and [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- 只能在命名空间或模块级别使用 `Interface`。 这意味着接口的*声明上下文*必须是源文件、命名空间、类、结构、模块或接口，不能是过程或块。 有关详细信息，请参阅[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
+ You can use `Interface` only at namespace or module level. This means the *declaration context* for an interface must be a source file, namespace, class, structure, module, or interface, and cannot be a procedure or block. 有关详细信息，请参阅[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
   
- 接口默认为[Friend](../../../visual-basic/language-reference/modifiers/friend.md)访问。 您可以使用访问修饰符调整其访问级别。 有关详细信息，请参阅[Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+ Interfaces default to [Friend](../../../visual-basic/language-reference/modifiers/friend.md) access. You can adjust their access levels with the access modifiers. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="rules"></a>规则  
   
-- **嵌套接口。** 可以在一个接口中定义另一个接口。 外部接口称为*包含接口*，而内部接口称为*嵌套接口*。  
+- **Nesting Interfaces.** You can define one interface within another. The outer interface is called the *containing interface*, and the inner interface is called a *nested interface*.  
   
-- **成员声明。** 将属性或过程声明为某个接口的成员时，只会定义该属性或过程的*签名*。 这包括元素类型（属性或过程）、其参数和参数类型以及其返回类型。 因此，成员定义只使用一行代码，而终止语句，如 `End Function` 或 `End Property` 在接口中无效。  
+- **Member Declaration.** When you declare a property or procedure as a member of an interface, you are defining only the *signature* of that property or procedure. This includes the element type (property or procedure), its parameters and parameter types, and its return type. Because of this, the member definition uses only one line of code, and terminating statements such as `End Function` or `End Property` are not valid in an interface.  
   
-     与此相反，当您定义枚举或结构或者嵌套类或接口时，必须包含其数据成员。  
+     In contrast, when you define an enumeration or structure, or a nested class or interface, it is necessary to include their data members.  
   
-- **成员修饰符。** 定义模块成员时，不能使用任何访问修饰符，也不能指定除[重载](../../../visual-basic/language-reference/modifiers/overloads.md)以外的[共享](../../../visual-basic/language-reference/modifiers/shared.md)或任何过程修饰符。 您可以使用[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)声明任何成员，并且在定义属性时可以使用[默认值](../../../visual-basic/language-reference/modifiers/default.md)，也可以使用[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)或[WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)。  
+- **Member Modifiers.** You cannot use any access modifiers when defining module members, nor can you specify [Shared](../../../visual-basic/language-reference/modifiers/shared.md) or any procedure modifier except [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md). You can declare any member with [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md), and you can use [Default](../../../visual-basic/language-reference/modifiers/default.md) when defining a property, as well as [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) or [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
   
-- **继承。** 如果接口使用[Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)，则可以指定一个或多个基接口。 即使两个接口都定义了具有相同名称的成员，也可以从两个接口继承。 如果这样做，则实现代码必须使用名称限定来指定要实现的成员。  
+- **继承。** If the interface uses the [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), you can specify one or more base interfaces. You can inherit from two interfaces even if they each define a member with the same name. If you do so, the implementing code must use name qualification to specify which member it is implementing.  
   
-     接口不能从具有限制性更强的访问级别的其他接口继承。 例如，`Public` 接口无法从 `Friend` 接口继承。  
+     An interface cannot inherit from another interface with a more restrictive access level. For example, a `Public` interface cannot inherit from a `Friend` interface.  
   
-     接口不能从嵌套在它内的接口继承。  
+     An interface cannot inherit from an interface nested within it.  
   
-- **部署.** 当类使用[Implements](../../../visual-basic/language-reference/statements/implements-clause.md)语句实现此接口时，它必须实现在接口中定义的每个成员。 而且，实现代码中的每个签名必须与此接口中定义的相应签名完全匹配。 但是，实现代码中成员的名称不必与接口中定义的成员名称匹配。  
+- **Implementation.** When a class uses the [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) statement to implement this interface, it must implement every member defined within the interface. Furthermore, each signature in the implementing code must exactly match the corresponding signature defined in this interface. However, the name of the member in the implementing code does not have to match the member name as defined in the interface.  
   
-     当类实现过程时，它无法将过程指定为 `Shared`。  
+     When a class is implementing a procedure, it cannot designate the procedure as `Shared`.  
   
-- **默认属性。** 接口最多可以将一个属性指定为其*默认属性*，可以在不使用属性名称的情况下引用它。 您可以通过使用[默认](../../../visual-basic/language-reference/modifiers/default.md)修饰符声明来指定此类属性。  
+- **Default Property.** An interface can specify at most one property as its *default property*, which can be referenced without using the property name. You specify such a property by declaring it with the [Default](../../../visual-basic/language-reference/modifiers/default.md) modifier.  
   
-     请注意，这意味着接口仅在继承 "无" 时才可以定义默认属性。  
+     Notice that this means that an interface can define a default property only if it inherits none.  
   
 ## <a name="behavior"></a>行为  
   
-- **访问级别。** 所有接口成员隐式具有[公共](../../../visual-basic/language-reference/modifiers/public.md)访问权限。 定义成员时，不能使用任何访问修饰符。 但是，实现接口的类可以为每个已实现的成员声明一个访问级别。  
+- **Access Level.** All interface members implicitly have [Public](../../../visual-basic/language-reference/modifiers/public.md) access. You cannot use any access modifier when defining a member. However, a class implementing the interface can declare an access level for each implemented member.  
   
-     如果向变量分配类实例，则其成员的访问级别可依赖于该变量的数据类型是基础接口还是实现类。 下面的示例阐释了这一点。  
+     If you assign a class instance to a variable, the access level of its members can depend on whether the data type of the variable is the underlying interface or the implementing class. 下面的示例阐释了这一点。  
   
      [!code-vb[VbVbalrStatements#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#39)]  
   
-     如果通过 `varAsInterface` 访问类成员，它们都具有公共访问权限。 但是，如果通过 `varAsClass` 访问成员，则 `Sub` 过程 `doSomething` 具有私有访问权限。  
+     If you access class members through `varAsInterface`, they all have public access. However, if you access members through `varAsClass`, the `Sub` procedure `doSomething` has private access.  
   
-- **内.** 接口在其命名空间、类、结构或模块中的作用域内。  
+- **Scope.** An interface is in scope throughout its namespace, class, structure, or module.  
   
-     每个接口成员的作用域都是整个接口。  
+     The scope of every interface member is the entire interface.  
   
-- **生存期.** 接口本身没有生存期，也没有其成员。 如果类实现接口，并将对象创建为该类的实例，则对象在运行它的应用程序中具有生存期。 有关详细信息，请参阅[类语句](../../../visual-basic/language-reference/statements/class-statement.md)中的 "生存期"。  
+- **Lifetime.** An interface does not itself have a lifetime, nor do its members. When a class implements an interface and an object is created as an instance of that class, the object has a lifetime within the application in which it is running. For more information, see "Lifetime" in [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md).  
   
 ## <a name="example"></a>示例  
- 下面的示例使用 `Interface` 语句来定义名为 `thisInterface` 的接口，该接口必须通过 `Property` 语句和 `Function` 语句来实现。  
+ The following example uses the `Interface` statement to define an interface named `thisInterface`, which must be implemented with a `Property` statement and a `Function` statement.  
   
  [!code-vb[VbVbalrStatements#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#40)]  
   
- 请注意，`Property` 和 `Function` 语句不会引入以 `End Property` 结尾的块，并在接口内 `End Function`。 接口仅定义其成员的签名。 完全 `Property` 和 `Function` 块显示在实现 `thisInterface` 的类中。  
+ Note that the `Property` and `Function` statements do not introduce blocks ending with `End Property` and `End Function` within the interface. The interface defines only the signatures of its members. The full `Property` and `Function` blocks appear in a class that implements `thisInterface`.  
   
 ## <a name="see-also"></a>请参阅
 

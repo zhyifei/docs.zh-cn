@@ -2,12 +2,12 @@
 title: LINQ 和字符串 (C#)
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: c7a1b86cc611d5f38ceab814b4594f5ad953fbc4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb1714c54331ead80cd28435cf3ed1c4c54a704e
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744613"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140894"
 ---
 # <a name="linq-and-strings-c"></a>LINQ 和字符串 (C#)
 
@@ -21,7 +21,7 @@ LINQ 可用于查询和转换字符串和字符串集合。 这在处理文本�
 
 可以使用 <xref:System.String.Split%2A?displayProperty=nameWithType> 方法或 <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> 方法将文本块拆分为可查询的较小字符串数组，从而对其进行查询、分析和修改。 可以先将源文本拆分为词语、句、段落、页或任何其他条件，然后根据查询的需要执行其他拆分。
 
-- [如何：对某个词在字符串中出现的次数进行计数 (LINQ) (C#)](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
+- [如何对某个词在字符串中出现的次数进行计数 (LINQ) (C#)](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
   演示如何使用 LINQ 进行简单文本查询。
 
 - [如何：查询包含一组指定词语的句子 (LINQ) (C#)](how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)
@@ -32,7 +32,7 @@ LINQ 可用于查询和转换字符串和字符串集合。 这在处理文本�
 
   演示字符串是可查询类型。
 
-- [如何：将 LINQ 查询与正则表达式合并 (C#)](how-to-combine-linq-queries-with-regular-expressions.md)
+- [如何将 LINQ 查询与正则表达式合并 (C#)](how-to-combine-linq-queries-with-regular-expressions.md)
 
   演示如何在 LINQ 查询中使用正则表达式，以便对筛选的查询结果进行复杂的模式匹配。
 
@@ -52,7 +52,7 @@ LINQ 可用于查询和转换字符串和字符串集合。 这在处理文本�
 
   演示如何对 .csv 文件的某行中的字段进行重新排序。
 
-- [如何：组合和比较字符串集合 (LINQ) (C#)](how-to-combine-and-compare-string-collections-linq.md)
+- [如何：合并和比较字符串集合 (LINQ) (C#)](how-to-combine-and-compare-string-collections-linq.md)
 
   演示如何通过各种方式合并字符串列表。
 
@@ -68,7 +68,7 @@ LINQ 可用于查询和转换字符串和字符串集合。 这在处理文本�
   
   演示如何通过将单个文件用作数据源来创建新文件。
 
-- [如何：在 CSV 文本文件中计算列值 (LINQ) (C#)](how-to-compute-column-values-in-a-csv-text-file-linq.md)
+- [如何在 CSV 文本文件中计算列值 (LINQ) (C#)](how-to-compute-column-values-in-a-csv-text-file-linq.md)
   
   演示如何在 .csv 文件中对文本数据执行数学计算。
 

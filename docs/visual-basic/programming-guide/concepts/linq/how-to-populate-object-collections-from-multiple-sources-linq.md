@@ -1,15 +1,15 @@
 ---
-title: 如何：从多个源 (LINQ) (Visual Basic) 填充对象集合
+title: 如何：从多个源填充对象集合 (LINQ)
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 21474758cffd15c0cb4193cdb2a7bc33c981c938
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 74a2a0f71e575136f1758f72f9a8db72549a9489
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586199"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346977"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>如何：从多个源 (LINQ) (Visual Basic) 填充对象集合
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)
 
 本示例演示如何将来自不同源的数据合并到一系列新的类型。
 
@@ -18,7 +18,7 @@ ms.locfileid: "65586199"
 
 ## <a name="to-create-the-data-file"></a>创建数据文件
 
-- 按照后列文章中的说明将 names.csv 和 scores.csv 文件复制到项目文件夹：[如何：联接不同文件 (LINQ) (Visual Basic 中) 的内容](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)。
+- Copy the names.csv and scores.csv files into your project folder, as described in [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>示例
 
@@ -100,7 +100,7 @@ End Class
 ' The average score of Michael Tucker is 92
 ```
 
-在中[Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)子句中，对象初始值设定项用于实例化每个新`Student`使用来自两个来源的数据的对象。
+In the [Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.
 
 如果不需要存储查询的结果，那么和命名类型相比，匿名类型使用起来更方便。 如果在执行查询的方法外部传递查询结果，则需要使用命名类型。 下面的示例执行与前面的示例相同的任务，但使用的是匿名类型，而不是命名类型：
 
@@ -130,4 +130,4 @@ Next
 
 ## <a name="see-also"></a>请参阅
 
-- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

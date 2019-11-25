@@ -1,5 +1,5 @@
 ---
-title: 如何：调用重载的过程 (Visual Basic)
+title: 如何：调用重载过程
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -8,25 +8,25 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
-ms.openlocfilehash: d325c09516b4ce03facedce86f17ea49480b997a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d983f5f6183c33141079ed35171f7a73f254450f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666009"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340198"
 ---
-# <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>如何：调用重载的过程 (Visual Basic)
-重载过程的优点是在调用的灵活性。 调用代码可以获取要传递给该过程，然后调用单个过程名称，无论它传递哪些参数所需的信息。  
+# <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>如何：调用重载过程 (Visual Basic)
+The advantage of overloading a procedure is in the flexibility of the call. The calling code can obtain the information it needs to pass to the procedure and then call a single procedure name, no matter what arguments it is passing.  
   
-### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>调用已定义的多个版本的过程  
+### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>To call a procedure that has more than one version defined  
   
-1. 在调用代码中，确定要传递给过程的数据。  
+1. In the calling code, determine which data to pass to the procedure.  
   
-2. 以正常方式表示的参数列表中的数据写入过程调用。 请确保参数匹配的参数列表中为过程定义的版本之一。  
+2. Write the procedure call in the normal way, presenting the data in the argument list. Be sure the arguments match the parameter list in one of the versions defined for the procedure.  
   
-3. 无需确定要调用的过程的哪个版本。 Visual Basic 将控制传递给参数列表匹配的版本。  
+3. You do not have to determine which version of the procedure to call. Visual Basic passes control to the version matching your argument list.  
   
-     下面的示例调用`post`过程中声明[如何：定义一个过程的多个版本](./how-to-define-multiple-versions-of-a-procedure.md)。 它获取的客户标识，确定它是否`String`或`Integer`，然后在任一情况下调用相同的过程。  
+     The following example calls the `post` procedure declared in [How to: Define Multiple Versions of a Procedure](./how-to-define-multiple-versions-of-a-procedure.md). It obtains the customer identification, determines whether it is a `String` or an `Integer`, and then in either case calls the same procedure.  
   
      [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]  
   
@@ -40,7 +40,7 @@ ms.locfileid: "61666009"
 - [过程疑难解答](./troubleshooting-procedures.md)
 - [如何：定义一个过程的多个版本](./how-to-define-multiple-versions-of-a-procedure.md)
 - [如何：重载带有可选参数的过程](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [如何：重载的参数数量不确定的过程](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [如何：重载参数数量不确定的过程](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [重载过程注意事项](./considerations-in-overloading-procedures.md)
 - [重载决策](./overload-resolution.md)
 - [重载](../../../../visual-basic/language-reference/modifiers/overloads.md)

@@ -1,5 +1,5 @@
 ---
-title: If...Then...Else 语句 (Visual Basic)
+title: If...Then...Else 语句
 ms.date: 04/16/2018
 f1_keywords:
 - vb.ElseIf
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: db81a1c41809b563d5f9d0777c3feb064c5e540b
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: f505755caeb9cc3cfeeb1ba83b6de15f48314103
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400712"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351160"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>If...Then...Else 语句 (Visual Basic)
 
@@ -48,79 +48,79 @@ End If
 If condition Then [ statements ] [ Else [ elsestatements ] ]
 ```
 
-## <a name="quick-links-to-example-code"></a>示例代码的快速链接
+## <a name="quick-links-to-example-code"></a>Quick links to example code
 
-本文包含一些示例，这些示例演示了`If`...`Then`...`Else`语句：
+This article includes several examples that illustrate uses of the `If`...`Then`...`Else` statement:
 
-- [多行语法示例](#multi-line)
-- [嵌套语法示例](#nested)
-- [单行语法示例](#single-line)
+- [Multiline syntax example](#multi-line)
+- [Nested syntax example](#nested)
+- [Single-line syntax example](#single-line)
 
 ## <a name="parts"></a>部件
 
 `condition` \
-必需。 表达式. 的计算结果`True`必须`False`为或，或者是可隐式转换为`Boolean`的数据类型。
+必须的。 Expression. Must evaluate to `True` or `False`, or to a data type that is implicitly convertible to `Boolean`.
 
-如果该表达式是一个计算结果为 " [Nothing](../../../visual-basic/language-reference/nothing.md)" 的[可以为 null](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean`的变量，则该条件`False`将被视为`ElseIf` "表达式"，并在它们存在的`Else`情况下计算块，或者块是如果它存在，则执行。
+If the expression is a [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` variable that evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the condition is treated as if the expression is `False`, and the `ElseIf` blocks are evaluated if they exist, or the `Else` block is executed if it exists.
 
 `Then` \
-在单行语法中为必需;在多行语法中是可选的。
+Required in the single-line syntax; optional in the multiline syntax.
 
 `statements` \
 可选。 后面`If`的一个或多个语句 ...如果计算结果为`True`，则执行。 `condition` `Then`
 
 `elseifcondition` \
-如果`ElseIf`存在，则为必需。 表达式. 的计算结果`True`必须`False`为或，或者是可隐式转换为`Boolean`的数据类型。
+Required if `ElseIf` is present. Expression. Must evaluate to `True` or `False`, or to a data type that is implicitly convertible to `Boolean`.
 
 `elseifstatements` \
 可选。 后面`ElseIf`的一个或多个语句 ...如果计算结果为`True`，则执行。 `elseifcondition` `Then`
 
 `elsestatements` \
-可选。 如果上`condition` `elseifcondition`一个或表达式的计算结果为`True`，则执行的一个或多个语句。
+可选。 One or more statements that are executed if no previous `condition` or `elseifcondition` expression evaluates to `True`.
 
 `End If` \
-终止的`If`多行版本 ...`Then`...`Else`块。
+Terminates the multiline version of `If`...`Then`...`Else` block.
 
 ## <a name="remarks"></a>备注
 
-### <a name="multiline-syntax"></a>多行语法
+### <a name="multiline-syntax"></a>Multiline syntax
 
-`If`当 ...`Then`...语句时， `condition`将对其进行测试。 `Else` 如果`condition` `Then`为`True`，则执行以下语句。 如果`condition` `ElseIf`为`False`，则按顺序对每个语句（如果有）进行求值。 找到后，将执行紧随关联`ElseIf`的后面的语句。 `True` `elseifcondition` 如果计算`elseifcondition`结果不`True`为， `ElseIf`或者没有语句，则将执行下面`Else`的语句。 执行完后的语句`Then` `ElseIf` `Else`后，将继续执行后面`End If`的语句。
+When an `If`...`Then`...`Else` statement is encountered, `condition` is tested. If `condition` is `True`, the statements following `Then` are executed. If `condition` is `False`, each `ElseIf` statement (if there are any) is evaluated in order. When a `True` `elseifcondition` is found, the statements immediately following the associated `ElseIf` are executed. If no `elseifcondition` evaluates to `True`, or if there are no `ElseIf` statements, the statements following `Else` are executed. After executing the statements following `Then`, `ElseIf`, or `Else`, execution continues with the statement following `End If`.
 
-`ElseIf` 和`Else`子句均可选。 你可以`ElseIf` `If`在 ... 中包含任意数量的子句`Then`...语句后， `Else`子句`ElseIf`中不能出现子句。 `Else` `If`...`Then`...`Else`语句可以相互嵌套。
+The `ElseIf` and `Else` clauses are both optional. You can have as many `ElseIf` clauses as you want in an `If`...`Then`...`Else` statement, but no `ElseIf` clause can appear after an `Else` clause. `If`...`Then`...`Else` statements can be nested within each other.
 
-在多行语法中， `If`语句必须是第一行中的唯一语句。 `ElseIf`、和语句`End If`前面只能有一个行标签。 `Else` `If`...`Then`...`Else`块必须`End If`以语句结束。
+In the multiline syntax, the `If` statement must be the only statement on the first line. The `ElseIf`, `Else`, and `End If` statements can be preceded only by a line label. The `If`...`Then`...`Else` block must end with an `End If` statement.
 
 > [!TIP]
-> [Select ...](../../../visual-basic/language-reference/statements/select-case-statement.md)当你评估具有多个可能值的单个表达式时，Case 语句可能更有用。
+> The [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md) might be more useful when you evaluate a single expression that has several possible values.
 
-### <a name="single-line-syntax"></a>单行语法
+### <a name="single-line-syntax"></a>Single-Line syntax
 
-对于一个条件，可以使用单行语法，如果该条件为 true，则执行代码。 不过，多行语法提供更多的结构和灵活性，更易于读取、维护和调试。
+You can use the single-line syntax for a single condition with code to execute if it's true. However, the multiple-line syntax provides more structure and flexibility and is easier to read, maintain, and debug.
 
-检查关键字后面`Then`的内容，以确定语句是否为单行`If`语句。 如果在同一行之后`Then`出现注释以外的任何内容，则该语句将被视为单行`If`语句。 如果`Then`不存在，则必须为多行`If`的开头 ...`Then`...`Else`.
+What follows the `Then` keyword is examined to determine whether a statement is a single-line `If`. If anything other than a comment appears after `Then` on the same line, the statement is treated as a single-line `If` statement. If `Then` is absent, it must be the start of a multiple-line `If`...`Then`...`Else`.
 
-在单行语法中，你可以将多个语句作为`If`...`Then`决策。 所有语句必须位于同一行上，并由冒号分隔。
+In the single-line syntax, you can have multiple statements executed as the result of an `If`...`Then` decision. All statements must be on the same line and be separated by colons.
 
-## <a name="multiline-syntax-example"></a>多行语法示例
+## <a name="multiline-syntax-example"></a>Multiline syntax example
 
 <a name="multi-line"></a>
 
-下面的示例演示如何使用的多行语法`If`。`Then`...`Else`语句。
+The following example illustrates the use of the multiline syntax of the `If`...`Then`...`Else` statement.
 
 [!code-vb[VbVbalrStatements#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#101)]
 
-## <a name="nested-syntax-example"></a>嵌套语法示例
+## <a name="nested-syntax-example"></a>Nested syntax example
 
 <a name="nested"></a>
 
-下面的示例包含嵌套`If`...`Then`...`Else`语句。
+The following example contains nested `If`...`Then`...`Else` statements.
 
 [!code-vb[VbVbalrStatements#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#102)]
 
-## <a name="single-line-syntax-example"></a>单行语法示例
+## <a name="single-line-syntax-example"></a>Single-Line syntax example
 
-<a name="single-line"></a>下面的示例演示单行语法的用法。
+<a name="single-line"></a> The following example illustrates the use of the single-line syntax.
 
 [!code-vb[VbVbalrStatements#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#103)]
 
@@ -132,5 +132,5 @@ If condition Then [ statements ] [ Else [ elsestatements ] ]
 - [Select...Case 语句](../../../visual-basic/language-reference/statements/select-case-statement.md)
 - [嵌套的控件结构](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
 - [决策结构](../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
-- [Visual Basic 中的逻辑运算符和位运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
 - [If 运算符](../../../visual-basic/language-reference/operators/if-operator.md)

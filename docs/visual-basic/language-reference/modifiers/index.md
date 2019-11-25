@@ -1,13 +1,13 @@
 ---
-title: 修饰符 (Visual Basic)
+title: 修饰符
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-ms.openlocfilehash: 466d69ec966037ae3a980bba381fc61be52f30e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0379a0d0571a66bda4df06f5c2d3282d80034cae
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051177"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351544"
 ---
 # <a name="modifiers-visual-basic"></a>修饰符 (Visual Basic)
 本节中的主题介绍 Visual Basic 运行时修饰符。  
@@ -25,7 +25,7 @@ ms.locfileid: "62051177"
   
  [ByVal](../../../visual-basic/language-reference/modifiers/byval.md)  
   
- [默认](../../../visual-basic/language-reference/modifiers/default.md)  
+ [Default](../../../visual-basic/language-reference/modifiers/default.md)  
   
  [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62051177"
   
  [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
   
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
+ [New](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
   
  [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62051177"
 
  [Protected Friend](../../../visual-basic/language-reference/modifiers/protected-friend.md)  
   
- [Public](../../../visual-basic/language-reference/modifiers/public.md)  
+ [COMClassAttribute](../../../visual-basic/language-reference/modifiers/public.md)  
   
  [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)  
   

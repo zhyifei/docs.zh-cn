@@ -1,5 +1,5 @@
 ---
-title: WithEvents (Visual Basic)
+title: WithEvents
 ms.date: 07/20/2015
 f1_keywords:
 - vb.WithEvents
@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
-ms.openlocfilehash: 50d5a768393e90d28d150b451405e35e6f4c7953
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 2309c675b50a2025d73841a47fe8e30e7cecd522
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583043"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350744"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
-指定一个或多个已声明的成员变量引用可引发事件的类的实例。
+Specifies that one or more declared member variables refer to an instance of a class that can raise events.
 
 ## <a name="remarks"></a>备注
 
-使用 `WithEvents` 定义变量时，可以通过声明方式指定方法使用 `Handles` 关键字来处理变量的事件。
+When a variable is defined using `WithEvents`, you can declaratively specify that a method handles the variable's events using the `Handles` keyword.
 
-只能在类或模块级别使用 `WithEvents`。 这意味着 `WithEvents` 变量的声明上下文必须是类或模块，不能是源文件、命名空间、结构或过程。
+You can use `WithEvents` only at class or module level. This means the declaration context for a `WithEvents` variable must be a class or module and cannot be a source file, namespace, structure, or procedure.
 
-不能对结构成员使用 `WithEvents`。
+You cannot use `WithEvents` on a structure member.
 
-您只能用 `WithEvents` 声明单个变量（而非数组）。
+You can declare only individual variables—not arrays—with `WithEvents`.
 
 ## <a name="rules"></a>规则
 
-**元素类型。** 必须将 `WithEvents` 变量声明为对象变量，以便它们可以接受类实例。 但是，不能将它们声明为 `Object`。 您必须将它们声明为可引发事件的特定类。
+**Element Types.** You must declare `WithEvents` variables to be object variables so that they can accept class instances. However, you cannot declare them as `Object`. You must declare them as the specific class that can raise the events.
 
-@No__t_0 修饰符可以在此上下文中使用： [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)
+The `WithEvents` modifier can be used in this context: [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)
 
 ## <a name="example"></a>示例
 

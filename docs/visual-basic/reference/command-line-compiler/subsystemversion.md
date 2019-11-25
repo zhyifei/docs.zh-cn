@@ -1,17 +1,17 @@
 ---
-title: -subsystemversion (Visual Basic)
+title: -subsystemversion
 ms.date: 03/13/2018
 helpviewer_keywords:
 - /subsystemversion compiler option [Visual Basic]
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: e42501a002d808f31dc3d599dc030e96c573a22f
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: a977bc4cff822de551bf82d0f31707e9b2b6ea41
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380325"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348537"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 
@@ -50,7 +50,7 @@ ms.locfileid: "66380325"
 
 ## <a name="default-values"></a>默认值
 
--subsystemversion 编译器选项的默认值取决于以下列表中的条件  ：
+-subsystemversion 编译器选项的默认值取决于以下列表中的条件：
 
 - 只要设置了以下列表中的任意编译器选项，则默认值为 6.02：
 
@@ -60,13 +60,13 @@ ms.locfileid: "66380325"
 
   - [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)
 
-- 如果使用 MSBuild，要面向.NET Framework 4.5 中，并且你尚未设置任何先前在此列表中已指定的编译器选项，则默认值为 6.00。
+- 如果使用 MSBuild，面向 .NET Framework 4.5，并且未设置先前在此列表中指定的任何编译器选项，则默认值为 6.00。
 
 - 如果前面的条件均不符合，则默认值为 4.00。
 
 ## <a name="setting-this-option"></a>设置此选项
 
-若要设置 **-subsystemversion**编译器选项在 Visual Studio 中，必须打开.vbproj 文件，并为指定值`SubsystemVersion`MSBuild XML 中的属性。 不能在 Visual Studio IDE 中设置此选项。 有关详细信息，请参阅本主题前面的“默认值”或[常用的 MSBuild 项目属性](/visualstudio/msbuild/common-msbuild-project-properties)。
+To set the **-subsystemversion** compiler option in Visual Studio, you must open the .vbproj file and specify a value for the `SubsystemVersion` property in the MSBuild XML. 不能在 Visual Studio IDE 中设置此选项。 有关详细信息，请参阅本主题前面的“默认值”或[常用的 MSBuild 项目属性](/visualstudio/msbuild/common-msbuild-project-properties)。
 
 ## <a name="see-also"></a>请参阅
 

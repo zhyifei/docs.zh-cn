@@ -1,27 +1,27 @@
 ---
-title: 匿名类型定义 (Visual Basic)
+title: 匿名类型定义
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: 5f6486965d9e44524420975523e10ded32a135b7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f8ac26577a7fbef865605a7ecf643fa733b2c2c0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755211"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344916"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>匿名类型定义 (Visual Basic)
 
-在响应的匿名类型的实例声明时，编译器会创建包含类型的指定的属性的新类定义。
+In response to the declaration of an instance of an anonymous type, the compiler creates a new class definition that contains the specified properties for the type.
 
-## <a name="compiler-generated-code"></a>编译器生成的代码
+## <a name="compiler-generated-code"></a>Compiler-Generated Code
 
-有关的以下定义`product`，编译器会创建一个包含属性的新类定义`Name`， `Price`，和`OnHand`。
+For the following definition of `product`, the compiler creates a new class definition that contains properties `Name`, `Price`, and `OnHand`.
 
 [!code-vb[VbVbalrAnonymousTypes#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#25)]
 
-类定义包含类似于下面的属性定义。 请注意，没有任何`Set`键属性的方法。 键属性的值是只读的。
+The class definition contains property definitions similar to the following. Notice that there is no `Set` method for the key properties. The values of key properties are read-only.
 
 ```vb
 Public Class $Anonymous1
@@ -52,38 +52,38 @@ Public Class $Anonymous1
 End Class
 ```
 
-此外，匿名类型定义包含无参数构造函数。 不允许需要参数的构造函数。
+In addition, anonymous type definitions contain a parameterless constructor. Constructors that require parameters are not permitted.
 
-如果匿名类型声明包含至少一个键属性，类型定义将重写继承的三个成员<xref:System.Object>: <xref:System.Object.Equals%2A>， <xref:System.Object.GetHashCode%2A>，和<xref:System.Object.ToString%2A>。 如果声明没有键属性，仅<xref:System.Object.ToString%2A>被重写。 重写提供以下功能：
+If an anonymous type declaration contains at least one key property, the type definition overrides three members inherited from <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, and <xref:System.Object.ToString%2A>. If no key properties are declared, only <xref:System.Object.ToString%2A> is overridden. The overrides provide the following functionality:
 
-- `Equals` 返回`True`如果两个匿名类型实例是相同的实例，或如果满足以下条件：
+- `Equals` returns `True` if two anonymous type instances are the same instance, or if they meet the following conditions:
 
-  - 它们具有相同数量的属性。
+  - They have the same number of properties.
 
-  - 在具有相同名称的相同顺序中声明的属性和相同的推断类型。 名称比较不区分大小写。
+  - The properties are declared in the same order, with the same names and the same inferred types. Name comparisons are not case-sensitive.
 
-  - 在至少一个属性是键属性和`Key`关键字应用于相同的属性。
+  - At least one of the properties is a key property, and the `Key` keyword is applied to the same properties.
 
-  - 键属性的每个相应的对比较返回`True`。
+  - Comparison of each corresponding pair of key properties returns `True`.
 
-    例如，在以下示例中，`Equals`将返回`True`仅`employee01`和`employee08`。 前面每行指定新的实例不匹配的原因的注释`employee01`。
+    For example, in the following examples, `Equals` returns `True` only for `employee01` and `employee08`. The comment before each line specifies the reason why the new instance does not match `employee01`.
 
     [!code-vb[VbVbalrAnonymousTypes#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#24)]
 
-- `GetHashcode` 提供了相应唯一的 GetHashCode 算法。 该算法使用只有键属性来计算哈希代码。
+- `GetHashcode` provides an appropriately unique GetHashCode algorithm. The algorithm uses only the key properties to compute the hash code.
 
-- `ToString` 返回连接的属性值的字符串，如下面的示例中所示。 包含密钥和非键属性。
+- `ToString` returns a string of concatenated property values, as shown in the following example. Both key and non-key properties are included.
 
   [!code-vb[VbVbalrAnonymousTypes#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#29)]
 
-显式命名的匿名类型属性不能与这些生成的方法发生冲突。 也就是说，不能使用`.Equals`， `.GetHashCode`，或`.ToString`命名属性。
+Explicitly named properties of an anonymous type cannot conflict with these generated methods. That is, you cannot use `.Equals`, `.GetHashCode`, or `.ToString` to name a property.
 
-至少包含一个匿名类型定义的键属性还实现<xref:System.IEquatable%601?displayProperty=nameWithType>接口，其中`T`是匿名类型的类型。
+Anonymous type definitions that include at least one key property also implement the <xref:System.IEquatable%601?displayProperty=nameWithType> interface, where `T` is the type of the anonymous type.
 
 > [!NOTE]
-> 匿名类型声明创建同一匿名类型，仅当它们发生在同一程序集、 其属性具有相同的名称和相同的推断类型、 相同顺序声明的属性和相同的属性标记为键属性。
+> Anonymous type declarations create the same anonymous type only if they occur in the same assembly, their properties have the same names and the same inferred types, the properties are declared in the same order, and the same properties are marked as key properties.
 
 ## <a name="see-also"></a>请参阅
 
 - [匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [如何：推断属性名和匿名类型声明中的类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [如何：推断匿名类型声明中的属性名和类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)

@@ -1,5 +1,5 @@
 ---
-title: Double 数据类型 (Visual Basic)
+title: Double 数据类型
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Double
@@ -19,43 +19,43 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: 92adb26702d94dee08e51decd845d019c797e195
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 347b5c7b7af4c4aafec0f91aca46a8cf640236b9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630094"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344015"
 ---
 # <a name="double-data-type-visual-basic"></a>Double 数据类型 (Visual Basic)
 
-为负值以及从 4.94065645841246544 E-324 到 1.79769313486231570 E + 308 的值, 保留已签名的 IEEE 64 位 (8 字节) 双精度浮点数, 其值范围为-1.79769313486231570 E + 308 到-4.94065645841246544 E-324正值。 双精度数字存储实数的近似值。
+Holds signed IEEE 64-bit (8-byte) double-precision floating-point numbers that range in value from -1.79769313486231570E+308 through -4.94065645841246544E-324 for negative values and from 4.94065645841246544E-324 through 1.79769313486231570E+308 for positive values. Double-precision numbers store an approximation of a real number.
 
 ## <a name="remarks"></a>备注
 
-`Double`数据类型为数字提供最大和最小的度。
+The `Double` data type provides the largest and smallest possible magnitudes for a number.
 
-          `Double` 的默认值为 0。
+`Double` 的默认值为 0。
 
 ## <a name="programming-tips"></a>编程提示
 
-- **Precision.** 使用浮点数时, 请记住, 它们在内存中不一定有精确的表示形式。 这可能会导致某些操作产生意外结果, 如值比较和`Mod`运算符。 有关详细信息, 请参阅[数据类型疑难解答](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。
+- **Precision.** When you work with floating-point numbers, remember that they do not always have a precise representation in memory. This could lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
 
-- **尾随零。** 浮点数据类型不包含尾随零字符的任何内部表示形式。 例如, 它们不区分4.2000 和4.2。 因此, 在显示或打印浮点值时, 不会出现尾随零字符。
+- **Trailing Zeros.** The floating-point data types do not have any internal representation of trailing zero characters. For example, they do not distinguish between 4.2000 and 4.2. Consequently, trailing zero characters do not appear when you display or print floating-point values.
 
-- **键入字符。** 将文本类型字符 `R` 追加到文本会将其强制转换为 `Double` 数据类型。 例如, 如果整数值后跟`R`, 则该值将更改`Double`为。
+- **Type Characters.** 将文本类型字符 `R` 追加到文本会将其强制转换为 `Double` 数据类型。 For example, if an integer value is followed by `R`, the value is changed to a `Double`.
 
   ```vb
   ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:
   Dim dub As Double = 4.0R
   ```
 
-  将标识符类型字符 `#` 追加到任何标识符会将其强制转换为 `Double`。 在下面的示例中, 变量`num`被类型化为: `Double`
+  将标识符类型字符 `#` 追加到任何标识符会将其强制转换为 `Double`。 In the following example, the variable `num` is typed as a `Double`:
 
   ```vb
   Dim num# = 3
   ```
 
-- **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.Double?displayProperty=nameWithType> 结构。
+- **Framework Type.** .NET Framework 中的对应类型是 <xref:System.Double?displayProperty=nameWithType> 结构。
 
 ## <a name="see-also"></a>请参阅
 

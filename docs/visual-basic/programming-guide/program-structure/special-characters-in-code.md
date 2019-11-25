@@ -1,5 +1,5 @@
 ---
-title: 代码中的特殊字符 (Visual Basic)
+title: 代码中的特殊字符
 ms.date: 07/20/2015
 f1_keywords:
 - vb.)
@@ -30,62 +30,62 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-ms.openlocfilehash: 95bef937912e35cd828bf0090b4cf48ccb3290cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f4ab35b56d48ae86bdb024ffea27735b39decdc2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962465"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347258"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>代码中的特殊字符 (Visual Basic)
-有时, 您必须在代码中使用特殊字符, 即不是字母或数字的字符。 Visual Basic 字符集中的标点和特殊字符具有多种用途, 从组织程序文本到定义编译器或已编译程序所执行的任务。 它们不指定要执行的操作。  
+Sometimes you have to use special characters in your code, that is, characters that are not alphabetical or numeric. The punctuation and special characters in the Visual Basic character set have various uses, from organizing program text to defining the tasks that the compiler or the compiled program performs. 它们不指定要执行的操作。  
   
-## <a name="parentheses"></a>括号  
- 定义过程 (如`Sub`或`Function`) 时, 请使用括号。 必须将所有过程参数列表括在括号中。 还可以使用括号将变量或参数置于逻辑组中, 特别是在复杂表达式中覆盖运算符优先级的默认顺序。 下面的示例阐释了这一点。  
+## <a name="parentheses"></a>Parentheses  
+ Use parentheses when you define a procedure, such as a `Sub` or `Function`. You must enclose all procedure argument lists in parentheses. You also use parentheses for putting variables or arguments into logical groups, especially to override the default order of operator precedence in a complex expression. 下面的示例阐释了这一点。  
   
  [!code-vb[VbVbcnConventions#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#11)]  
   
- 执行前面的代码后, 的值`d`为 8.225, `e`值为3。 的计算`d`使用的默认`/`优先级为 "over `+` ", 等效于`d = b + (c / a)`。 计算中的括号用于`e`重写默认优先级。  
+ Following execution of the previous code, the value of `d` is 8.225 and the value of `e` is 3. The calculation for `d` uses the default precedence of `/` over `+` and is equivalent to `d = b + (c / a)`. The parentheses in the calculation for `e` override the default precedence.  
   
 ## <a name="separators"></a>分隔符  
- 分隔符可执行其名称建议: 它们分隔代码段。 在 Visual Basic 中, 分隔符为冒号 (`:`)。 如果要在单个行而不是单独的行中包含多个语句, 请使用分隔符。 这样可以节省空间, 并可提高代码的可读性。 下面的示例显示了以冒号分隔的三个语句。  
+ Separators do what their name suggests: they separate sections of code. In Visual Basic, the separator character is the colon (`:`). Use separators when you want to include multiple statements on a single line instead of separate lines. This saves space and improves the readability of your code. The following example shows three statements separated by colons.  
   
  [!code-vb[VbVbcnConventions#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#12)]  
   
- 有关详细信息，请参阅[如何：在代码](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)中中断和组合语句。  
+ For more information, see [How to: Break and Combine Statements in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
- 冒号 (`:`) 字符还用于标识语句标签。 有关详细信息，请参阅[如何：标签语句](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)。  
+ The colon (`:`) character is also used to identify a statement label. For more information, see [How to: Label Statements](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 ## <a name="concatenation"></a>串联  
- 使用运算符进行串联, 或将字符串链接在一起。 `&` 不要将其与`+`运算符混淆, 后者将数值相加。 如果在操作数值`+`时使用运算符进行连接, 则可以获得不正确的结果。 下面的示例演示这一操作。  
+ Use the `&` operator for *concatenation*, or linking strings together. Do not confuse it with the `+` operator, which adds together numeric values. If you use the `+` operator to concatenate when you operate on numeric values, you can obtain incorrect results. 下面的示例演示这一操作。  
   
  [!code-vb[VbVbcnConventions#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#13)]  
   
- 执行前面的代码后, 的值`resultA`为 21.01, `resultB`值为 "10.0111"。  
+ Following execution of the previous code, the value of `resultA` is 21.01 and the value of `resultB` is "10.0111".  
   
-## <a name="member-access-operators"></a>成员访问运算符  
- 若要访问类型的成员, 请在类型名称和成员`.`名称之间使用点 (`!`) 或感叹号 () 运算符。  
+## <a name="member-access-operators"></a>Member Access Operators  
+ To access a member of a type, you use the dot (`.`) or exclamation point (`!`) operator between the type name and the member name.  
   
-### <a name="dot--operator"></a>点 (.)运算符  
- 在类、结构、接口或枚举上使用运算符作为成员访问运算符。`.` 成员可以是字段、属性、事件或方法。 下面的示例阐释了这一点。  
+### <a name="dot--operator"></a>Dot (.) Operator  
+ Use the `.` operator on a class, structure, interface, or enumeration as a member access operator. The member can be a field, property, event, or method. 下面的示例阐释了这一点。  
   
  [!code-vb[VbVbcnConventions#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#14)]  
   
-### <a name="exclamation-point--operator"></a>感叹号 (!)运算符  
- 仅在类或接口上将运算符用作字典访问运算符。`!` 类或接口必须具有接受单个`String`参数的默认属性。 紧跟在`!`运算符后面的标识符将成为作为字符串传递到默认属性的参数值。 下面的示例演示这一操作。  
+### <a name="exclamation-point--operator"></a>Exclamation Point (!) Operator  
+ Use the `!` operator only on a class or interface as a dictionary access operator. The class or interface must have a default property that accepts a single `String` argument. The identifier immediately following the `!` operator becomes the argument value passed to the default property as a string. 下面的示例演示这一操作。  
   
  [!code-vb[VbVbcnConventions#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#15)]  
   
- 所有的`MsgBox`三个输出行都显示值`32856`。 第一行使用对属性`index`的传统访问, 第二行使用`index`作为类`hasDefault`的默认属性的事实, 第三行使用对类的字典访问。  
+ The three output lines of `MsgBox` all display the value `32856`. The first line uses the traditional access to property `index`, the second makes use of the fact that `index` is the default property of class `hasDefault`, and the third uses dictionary access to the class.  
   
- 请注意, `!`运算符的第二个操作数必须是一个有效的 Visual Basic 标识符, 不能用双引号`" "`() 引起来。 换句话说, 您不能使用字符串文本或字符串变量。 对于`MsgBox`调用的最后一行, 以下更改将生成错误, 因为`"X"`是括起来的字符串文字。  
+ Note that the second operand of the `!` operator must be a valid Visual Basic identifier not enclosed in double quotation marks (`" "`). In other words, you cannot use a string literal or string variable. The following change to the last line of the `MsgBox` call generates an error because `"X"` is an enclosed string literal.  
   
  `"Dictionary access returns " & hD!"X")`  
   
 > [!NOTE]
-> 对默认集合的引用必须是显式的。 特别是, 不能对后期`!`绑定变量使用运算符。  
+> References to default collections must be explicit. In particular, you cannot use the `!` operator on a late-bound variable.  
   
- 该`!`字符还用作`Single`类型字符。  
+ The `!` character is also used as the `Single` type character.  
   
 ## <a name="see-also"></a>请参阅
 

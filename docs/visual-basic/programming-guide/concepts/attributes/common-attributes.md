@@ -1,17 +1,17 @@
 ---
-title: 常见特性（Visual Basic）
+title: 通用属性
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 5bc568279a6952fdc5e0a000b1208cd7f9cfd6e7
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 2889411779a275baa8c91862d4cac2f820d660d0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524280"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353531"
 ---
-# <a name="common-attributes-visual-basic"></a>常见特性（Visual Basic）
+# <a name="common-attributes-visual-basic"></a>Common Attributes (Visual Basic)
 
-本主题介绍 Visual Basic 程序中最常用的属性。
+This topic describes the attributes that are most commonly used in Visual Basic programs.
 
 - [全局特性](#Global)
 
@@ -21,7 +21,7 @@ ms.locfileid: "72524280"
 
 - [调用方信息特性](#CallerInfo)
 
-- [Visual Basic 特性](#VB)
+- [Visual Basic Attributes](#VB)
 
 ## <a name="Global"></a> 全局特性
 
@@ -31,7 +31,7 @@ ms.locfileid: "72524280"
 <Assembly: AssemblyVersion("1.0.0.0")>
 ```
 
-全局特性显示在任何顶级 `Imports` 语句之后、任何类型、模块或命名空间声明之前的源代码中。 全局特性可以出现在多个源文件中，但必须在单个编译过程中编译这些文件。 对于 Visual Basic 项目，全局属性通常放在 AssemblyInfo 文件中（当您在 Visual Studio 中创建项目时，将自动创建文件）。
+Global attributes appear in the source code after any top-level `Imports` statements and before any type, module, or namespace declarations. 全局特性可以出现在多个源文件中，但必须在单个编译过程中编译这些文件。 For Visual Basic projects, global attributes are generally put in the AssemblyInfo.vb file (the file is created automatically when you create a project in Visual Studio).
 
 程序集特性是提供程序集相关信息的值。 它们分为以下几类：
 
@@ -130,8 +130,8 @@ b.NewMethod()
 
 ```vb
 #Const TRACE_ON = True
-Imports System
 Imports System.Diagnostics
+
 Module TestConditionalAttribute
     Public Class Trace
         <Conditional("TRACE_ON")>
@@ -228,32 +228,32 @@ End Class
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|包含调用方的源文件的完整路径。 这是编译时的路径。|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|源文件中调用方法的行号。|`Integer`|
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|调用方的方法名称或属性名称。 有关详细信息，请参阅[调用方信息（Visual Basic）](../../../../visual-basic/programming-guide/concepts/caller-information.md)。|`String`|
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|调用方的方法名称或属性名称。 For more information, see [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|
 
-有关调用方信息属性的详细信息，请参阅[调用方信息（Visual Basic）](../../../../visual-basic/programming-guide/concepts/caller-information.md)。
+For more information about the Caller Info attributes, see [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).
 
-## <a name="VB"></a>Visual Basic 特性
+## <a name="VB"></a> Visual Basic Attributes
 
-下表列出了特定于 Visual Basic 的特性。
+The following table lists the attributes that are specific to Visual Basic.
 
 |特性|目标|
 |---------------|-------------|
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|向编译器指示应将类公开为 COM 对象。|
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|允许只使用模块所需的限定来访问模块成员。|
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|指定结构中用于文件输入和输出函数的固定长度字符串的大小。|
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|指定结构中用于文件输入和输出函数的固定数组的大小。|
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|Indicates to the compiler that the class should be exposed as a COM object.|
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Allows module members to be accessed using only the qualification needed for the module.|
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Specifies the size of a fixed-length string in a structure for use with file input and output functions.|
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Specifies the size of a fixed array in a structure for use with file input and output functions.|
 
 ### <a name="comclassattribute"></a>COMClassAttribute
 
-使用 `COMClassAttribute` 可以简化从 Visual Basic 创建 COM 组件的过程。 COM 对象明显不同于 .NET Framework 程序集，如果没有 `COMClassAttribute`，则需要执行一些步骤以从 Visual Basic 生成 COM 对象。 对于标记为 `COMClassAttribute` 的类，编译器会自动执行这些步骤中的许多步骤。
+Use `COMClassAttribute` to simplify the process of creating COM components from Visual Basic. COM objects are considerably different from .NET Framework assemblies, and without `COMClassAttribute`, you need to follow a number of steps to generate a COM object from Visual Basic. For classes marked with `COMClassAttribute`, the compiler performs many of these steps automatically.
 
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute
 
-使用 `HideModuleNameAttribute` 允许只使用模块所需的限定来访问模块成员。
+Use `HideModuleNameAttribute` to allow module members to be accessed by using only the qualification needed for the module.
 
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute
 
-使用 `VBFixedStringAttribute` 强制 Visual Basic 创建固定长度的字符串。 字符串在默认情况下为可变长度，在将字符串存储到文件时，此属性很有用。 下面的代码演示了这一点：
+Use `VBFixedStringAttribute` to force Visual Basic to create a fixed-length string. Strings are of variable length by default, and this attribute is useful when storing strings to files. The following code demonstrates this:
 
 ```vb
 Structure Worker
@@ -267,7 +267,7 @@ End Structure
 
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute
 
-使用 `VBFixedArrayAttribute` 声明大小固定的数组。 与 Visual Basic 字符串一样，数组在默认情况下为可变长度。 将数据序列化或写入到文件时，此属性很有用。
+Use `VBFixedArrayAttribute` to declare arrays that are fixed in size. Like Visual Basic strings, arrays are of variable length by default. This attribute is useful when serializing or writing data to files.
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,5 +1,5 @@
 ---
-title: 互操作性疑难解答 (Visual Basic)
+title: 互操作性疑难解答
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interop, deploying assemblies
@@ -16,61 +16,61 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: c04cd0928eb83aabcd1f0f4b1b43f8ae6d356d20
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 344c180cf0b9426898e17b45db768a337fd45beb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969325"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74338684"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>互操作性疑难解答 (Visual Basic)
-当你在 COM 和 .NET Framework 的托管代码之间进行互操作时, 你可能会遇到以下一个或多个常见问题。  
+When you interoperate between COM and the managed code of the .NET Framework, you may encounter one or more of the following common issues.  
   
-## <a name="vbconinteroperabilitymarshalinganchor1"></a>互操作封送  
- 有时, 可能需要使用不属于 .NET Framework 的数据类型。 互操作程序集处理 COM 对象的大部分工作, 但您可能需要控制向 COM 公开托管对象时使用的数据类型。 例如, 类库中的结构必须在发送到`BStr`由 Visual Basic 6.0 及更早版本创建的 COM 对象的字符串上指定非托管类型。 在这种情况下, 可以使用<xref:System.Runtime.InteropServices.MarshalAsAttribute>属性来将托管类型公开为非托管类型。  
+## <a name="vbconinteroperabilitymarshalinganchor1"></a> Interop Marshaling  
+ At times, you may have to use data types that are not part of the .NET Framework. Interop assemblies handle most of the work for COM objects, but you may have to control the data types that are used when managed objects are exposed to COM. For example, structures in class libraries must specify the `BStr` unmanaged type on strings sent to COM objects created by Visual Basic 6.0 and earlier versions. In such cases, you can use the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute to cause managed types to be exposed as unmanaged types.  
   
-## <a name="vbconinteroperabilitymarshalinganchor2"></a>将固定长度的字符串导出到非托管代码  
- 在 Visual Basic 6.0 及更早版本中, 字符串将以字节序列的形式导出到 COM 对象, 而不包含 null 终止字符。 为了与其他语言兼容, 在导出字符串时 Visual Basic .NET 包含终止字符。 解决这种不兼容问题的最佳方式是将缺少终止字符的字符串导出为`Byte`或`Char`数组。  
+## <a name="vbconinteroperabilitymarshalinganchor2"></a> Exporting Fixed-Length Strings to Unmanaged Code  
+ In Visual Basic 6.0 and earlier versions, strings are exported to COM objects as sequences of bytes without a null termination character. For compatibility with other languages, Visual Basic .NET includes a termination character when exporting strings. The best way to address this incompatibility is to export strings that lack the termination character as arrays of `Byte` or `Char`.  
   
-## <a name="vbconinteroperabilitymarshalinganchor3"></a>导出继承层次结构  
- 公开为 COM 对象时, 托管类层次结构将展开。 例如, 如果您定义一个具有成员的基类, 然后继承作为 COM 对象公开的派生类中的基类, 则使用 COM 对象中的派生类的客户端将无法使用继承的成员。 只能从 COM 对象访问基类成员作为基类的实例, 并且仅当基类作为 COM 对象创建时才可以访问。  
+## <a name="vbconinteroperabilitymarshalinganchor3"></a> Exporting Inheritance Hierarchies  
+ Managed class hierarchies flatten out when exposed as COM objects. For example, if you define a base class with a member, and then inherit the base class in a derived class that is exposed as a COM object, clients that use the derived class in the COM object will not be able to use the inherited members. Base class members can be accessed from COM objects only as instances of a base class, and then only if the base class is also created as a COM object.  
   
 ## <a name="overloaded-methods"></a>重载方法  
- 尽管可以使用 Visual Basic 创建重载方法, 但 COM 不支持这些方法。 当包含重载方法的类公开为 COM 对象时, 将为重载方法生成新的方法名称。  
+ Although you can create overloaded methods with Visual Basic, they are not supported by COM. When a class that contains overloaded methods is exposed as a COM object, new method names are generated for the overloaded methods.  
   
- 例如, 假设有一个具有两个`Synch`方法重载的类。 当类公开为 COM 对象时, 生成的新方法名称可以是`Synch`和。 `Synch_2`  
+ For example, consider a class that has two overloads of the `Synch` method. When the class is exposed as a COM object, the new generated method names could be `Synch` and `Synch_2`.  
   
- 重命名可能会导致 COM 对象的使用者出现两个问题。  
+ The renaming can cause two problems for consumers of the COM object.  
   
-1. 客户端可能不需要生成的方法名称。  
+1. Clients might not expect the generated method names.  
   
-2. 当向类或其基类添加新的重载时, 公开为 COM 对象的类中生成的方法名可能会更改。 这可能会导致版本控制问题。  
+2. The generated method names in the class exposed as a COM object can change when new overloads are added to the class or its base class. This can cause versioning problems.  
   
- 若要解决这两个问题, 请在开发将作为 COM 对象公开的对象时, 为每个方法指定唯一名称, 而不是使用重载。  
+ To solve both problems, give each method a unique name, instead of using overloading, when you develop objects that will be exposed as COM objects.  
   
-## <a name="vbconinteroperabilitymarshalinganchor4"></a>通过互操作程序集使用 COM 对象  
- 使用互操作程序集的方式与它们所表示的 COM 对象的托管代码替换几乎相同。 但是, 由于它们是包装器而不是实际的 COM 对象, 因此使用互操作程序集和标准程序集之间存在一些差异。 这些差异区域包括类的公开以及参数和返回值的数据类型。  
+## <a name="vbconinteroperabilitymarshalinganchor4"></a> Use of COM Objects Through Interop Assemblies  
+ You use interop assemblies almost as if they are managed code replacements for the COM objects they represent. However, because they are wrappers and not actual COM objects, there are some differences between using interop assemblies and standard assemblies. These areas of difference include the exposure of classes, and data types for parameters and return values.  
   
-## <a name="vbconinteroperabilitymarshalinganchor5"></a>作为接口和类公开的类  
- 与标准程序集中的类不同, COM 类在互操作程序集中作为接口和表示 COM 类的类公开。 接口的名称与 COM 类的名称相同。 互操作类的名称与原始 COM 类的名称相同, 但附加了 "Class" 一词。 例如, 假设有一个项目, 其中包含对 COM 对象的互操作程序集的引用。 如果 COM 类命名`MyComClass`为, IntelliSense 和对象浏览器将显示一个名为`MyComClass`的接口和一个名`MyComClassClass`为的类。  
+## <a name="vbconinteroperabilitymarshalinganchor5"></a> Classes Exposed as Both Interfaces and Classes  
+ Unlike classes in standard assemblies, COM classes are exposed in interop assemblies as both an interface and a class that represents the COM class. The interface's name is identical to that of the COM class. The name of the interop class is the same as that of the original COM class, but with the word "Class" appended. For example, suppose you have a project with a reference to an interop assembly for a COM object. If the COM class is named `MyComClass`, IntelliSense and the Object Browser show an interface named `MyComClass` and a class named `MyComClassClass`.  
   
-## <a name="vbconinteroperabilitymarshalinganchor6"></a>创建 .NET Framework 类的实例  
- 通常, 使用具有类名的`New`语句创建 .NET Framework 类的实例。 具有由互操作程序集表示的 COM 类是一种情况, 您可以在其中`New`使用带有接口的语句。 除非您将 COM 类与`Inherits`语句一起使用, 否则您可以像使用类一样使用接口。 下面的代码演示如何在项目中`Command`创建一个对象, 该对象具有对 Microsoft ActiveX 数据对象2.8 库 COM 对象的引用:  
+## <a name="vbconinteroperabilitymarshalinganchor6"></a> Creating Instances of a .NET Framework Class  
+ Generally, you create an instance of a .NET Framework class using the `New` statement with a class name. Having a COM class represented by an interop assembly is the one case in which you can use the `New` statement with an interface. Unless you are using the COM class with an `Inherits` statement, you can use the interface just as you would a class. The following code demonstrates how to create a `Command` object in a project that has a reference to the Microsoft ActiveX Data Objects 2.8 Library COM object:  
   
  [!code-vb[VbVbalrInterop#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#20)]  
   
- 但是, 如果使用 COM 类作为派生类的基类, 则必须使用表示 COM 类的互操作类, 如以下代码所示:  
+ However, if you are using the COM class as the base for a derived class, you must use the interop class that represents the COM class, as in the following code:  
   
  [!code-vb[VbVbalrInterop#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#21)]  
   
 > [!NOTE]
-> 互操作程序集隐式实现表示 COM 类的接口。 不应尝试使用`Implements`语句来实现这些接口, 否则将产生错误。  
+> Interop assemblies implicitly implement interfaces that represent COM classes. You should not try to use the `Implements` statement to implement these interfaces or an error will result.  
   
-## <a name="vbconinteroperabilitymarshalinganchor7"></a>参数和返回值的数据类型  
- 与标准程序集的成员不同, 互操作程序集成员的数据类型可能不同于原始对象声明中使用的类型。 尽管互操作程序集将 COM 类型隐式转换为兼容的公共语言运行时类型, 但您应注意双方使用的数据类型, 以防止运行时错误。 例如, 在 Visual Basic 6.0 及更早版本中创建的 COM 对象中, 类型`Integer`的值采用 .NET Framework 等效`Short`类型。 建议在使用之前, 使用对象浏览器来检查导入成员的特征。  
+## <a name="vbconinteroperabilitymarshalinganchor7"></a> Data Types for Parameters and Return Values  
+ Unlike members of standard assemblies, interop assembly members may have data types that differ from those used in the  original object declaration. Although interop assemblies implicitly convert COM types to compatible common language runtime types, you should pay attention to the data types that are used by both sides to prevent runtime errors. For example, in COM objects created in Visual Basic 6.0 and earlier versions, values of type `Integer` assume the .NET Framework equivalent type, `Short`. It is recommended that you use the Object Browser to examine the characteristics of imported members before you use them.  
   
-## <a name="vbconinteroperabilitymarshalinganchor8"></a>模块级 COM 方法  
- 大多数 com 对象的使用方法是: 使用`New`关键字创建 com 类的实例, 然后调用该对象的方法。 此规则的一个例外涉及包含`AppObj`或`GlobalMultiUse` com 类的 com 对象。 此类类类似于 Visual Basic .NET 类中的模块级方法。 Visual Basic 6.0 及更早版本在你首次调用其中一个方法时, 会隐式创建此类对象的实例。 例如, 在 Visual Basic 6.0 中, 可以添加对 Microsoft DAO 3.6 对象库的引用, 并在不`DBEngine`首先创建实例的情况下调用方法:  
+## <a name="vbconinteroperabilitymarshalinganchor8"></a> Module level COM methods  
+ Most COM objects are used by creating an instance of a COM class using the `New` keyword and then calling methods of the object. One exception to this rule involves COM objects that contain `AppObj` or `GlobalMultiUse` COM classes. Such classes resemble module level methods in Visual Basic .NET classes. Visual Basic 6.0 and earlier versions implicitly create instances of such objects for you the first time that you call one of their methods. For example, in Visual Basic 6.0 you can add a reference to the Microsoft DAO 3.6 Object Library and call the `DBEngine` method without first creating an instance:  
   
 ```vb  
 Dim db As DAO.Database  
@@ -79,52 +79,52 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 ' Use the database object.  
 ```  
   
- Visual Basic .NET 要求始终创建 COM 对象的实例, 然后才能使用其方法。 若要在 Visual Basic 中使用这些方法, 请声明所需类的变量, 并使用 new 关键字将对象分配给对象变量。 若要确保仅创建类的一个实例, 可以使用关键字。`Shared`  
+ Visual Basic .NET requires that you always create instances of COM objects before you can use their methods. To use these methods in Visual Basic, declare a variable of the desired class and use the new keyword to assign the object to the object variable. The `Shared` keyword can be used when you want to make sure that only one instance of the class is created.  
   
  [!code-vb[VbVbalrInterop#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#23)]  
   
-## <a name="vbconinteroperabilitymarshalinganchor9"></a>事件处理程序中的未处理错误  
- 一个常见的互操作问题涉及事件处理程序中的错误, 这些事件处理程序处理 COM 对象引发的事件。 此类错误将被忽略, 除非使用`On Error`或`Try...Catch...Finally`语句具体检查错误。 例如, 下面的示例来自一个 Visual Basic 的 .NET 项目, 该项目具有对 Microsoft ActiveX 数据对象2.8 库 COM 对象的引用。  
+## <a name="vbconinteroperabilitymarshalinganchor9"></a> Unhandled Errors in Event Handlers  
+ One common interop problem involves errors in event handlers that handle events raised by COM objects. Such errors are ignored unless you specifically check for errors using `On Error` or `Try...Catch...Finally` statements. For example, the following example is from a Visual Basic .NET project that has a reference to the Microsoft ActiveX Data Objects 2.8 Library COM object.  
   
  [!code-vb[VbVbalrInterop#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#24)]  
   
- 此示例将按预期方式引发错误。 但是, 如果您尝试不带`Try...Catch...Finally`块的相同示例, 则将忽略该错误, 就像您使用了`OnError Resume Next`语句一样。 如果没有错误处理, 被零除会失败。 由于此类错误从不引发未经处理的异常错误, 因此在处理 COM 对象的事件的事件处理程序中使用某种形式的异常处理是非常重要的。  
+ This example raises an error as expected. However, if you try the same example without the `Try...Catch...Finally` block, the error is ignored as if you used the `OnError Resume Next` statement. Without error handling, the division by zero silently fails. Because such errors never raise unhandled exception errors, it is important that you use some form of exception handling in event handlers that handle events from COM objects.  
   
-### <a name="understanding-com-interop-errors"></a>了解 COM 互操作错误  
- 如果没有错误处理, 互操作调用通常会生成提供少量信息的错误。 尽可能使用结构化错误处理来提供有关发生问题的详细信息。 调试应用程序时, 这会特别有用。 例如:  
+### <a name="understanding-com-interop-errors"></a>Understanding COM interop errors  
+ Without error handling, interop calls often generate errors that provide little information. Whenever possible, use structured error handling to provide more information about problems when they occur. This can be especially helpful when you debug applications. 例如:  
   
  [!code-vb[VbVbalrInterop#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#25)]  
   
- 可以通过检查 exception 对象的内容来查找错误说明、HRESULT 和 COM 错误源等信息。  
+ You can find information such as the error description, HRESULT, and the source of COM errors by examining the contents of the exception object.  
   
-## <a name="vbconinteroperabilitymarshalinganchor10"></a>ActiveX 控件问题  
- 大多数与 Visual Basic 6.0 一起使用的 ActiveX 控件都适用于 Visual Basic .NET, 而不会出现问题。 主要异常是容器控件, 或以可视方式包含其他控件的控件。 以下是无法正常使用 Visual Studio 的较旧控件的一些示例:  
+## <a name="vbconinteroperabilitymarshalinganchor10"></a> ActiveX Control Issues  
+ Most ActiveX controls that work with Visual Basic 6.0 work with Visual Basic .NET without trouble. The main exceptions are container controls, or controls that visually contain other controls. Some examples of older controls that do not work correctly with Visual Studio are as follows:  
   
-- Microsoft Forms 2.0 框架控件  
+- Microsoft Forms 2.0 Frame control  
   
-- Up-down 控件, 也称为数值调节钮控件  
+- Up-Down control, also known as the spin control  
   
-- Sheridan 选项卡控件  
+- Sheridan Tab Control  
   
- 对于不支持的 ActiveX 控件问题, 只需解决几个问题。 如果你拥有原始源代码, 则可以将现有控件迁移到 Visual Studio。 否则, 你可以咨询软件供应商以进行更新。用于替换不受支持的 ActiveX 控件的 NET 兼容版本的控件。  
+ There are only a few workarounds for unsupported ActiveX control problems. You can migrate existing controls to Visual Studio if you own the original source code. Otherwise, you can check with software vendors for updated .NET-compatible versions of controls to replace unsupported ActiveX controls.  
   
-## <a name="vbconinteroperabilitymarshalinganchor11"></a>传递控件的 ReadOnly 属性 ByRef  
- 当你将一些较旧的 ActiveX 控件的属性作为`ReadOnly` `ByRef`参数传递给其他过程时, Visual Basic .net 有时会引发 COM 错误, 如 "错误 0x800A017F CTL_E_SETNOTSUPPORTED"。 来自 Visual Basic 6.0 的类似过程调用不会引发错误, 并且这些参数被视为按值传递。 Visual Basic .net 错误消息指示您尝试更改不具有属性`Set`过程的属性。  
+## <a name="vbconinteroperabilitymarshalinganchor11"></a> Passing ReadOnly Properties of Controls ByRef  
+ Visual Basic .NET sometimes raises COM errors such as, "Error 0x800A017F CTL_E_SETNOTSUPPORTED", when you pass `ReadOnly` properties of some older ActiveX controls as `ByRef` parameters to other procedures. Similar procedure calls from Visual Basic 6.0 do not raise an error, and the parameters are treated as if you passed them by value. The Visual Basic .NET error message indicates that you are trying to change a property that does not have a property `Set` procedure.  
   
- 如果有权访问被调用的过程, 则可以通过使用`ByVal`关键字声明接受`ReadOnly`属性的参数来防止此错误。 例如：  
+ If you have access to the procedure being called, you can prevent this error by using the `ByVal` keyword to declare parameters that accept `ReadOnly` properties. 例如:  
   
  [!code-vb[VbVbalrInterop#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#26)]  
   
- 如果您无法访问所调用过程的源代码, 则可以通过在调用过程的前后添加一组额外的括号来强制通过值传递属性。 例如, 在引用 Microsoft ActiveX 数据对象2.8 库 COM 对象的项目中, 您可以使用:  
+ If you do not have access to the source code for the procedure being called, you can force the property to be passed by value by adding an extra set of brackets around the calling procedure. For example, in a project that has a reference to the Microsoft ActiveX Data Objects 2.8 Library COM object, you can use:  
   
  [!code-vb[VbVbalrInterop#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#27)]  
   
-## <a name="vbconinteroperabilitymarshalinganchor12"></a>部署公开互操作的程序集  
- 部署公开 COM 接口的程序集会带来一些独特的挑战。 例如, 当单独的应用程序引用同一 COM 程序集时, 可能会出现问题。 当安装了新版本的程序集, 而另一个应用程序仍在使用旧版本的程序集时, 这种情况很常见。 如果卸载共享 DLL 的程序集, 则可能会无意中使其对其他程序集不可用。  
+## <a name="vbconinteroperabilitymarshalinganchor12"></a> Deploying Assemblies That Expose Interop  
+ Deploying assemblies that expose COM interfaces presents some unique challenges. For example, a potential problem occurs when separate applications reference the same COM assembly. This situation is common when a new version of an assembly is installed and another application is still using the old version of the assembly. If you uninstall an assembly that shares a DLL, you can unintentionally make it unavailable to the other assemblies.  
   
- 若要避免此问题, 应将共享程序集安装到全局程序集缓存 (GAC), 并使用用于合并模块作为组件。 如果无法在 GAC 中安装应用程序, 则应将其安装到特定于版本的子目录中的 CommonFilesFolder。  
+ To avoid this problem, you should install shared assemblies to the Global Assembly Cache (GAC) and use a MergeModule for the component. If you cannot install the application in the GAC, it should be installed to CommonFilesFolder in a version-specific subdirectory.  
   
- 未共享的程序集应与调用应用程序并排放置在目录中。  
+ Assemblies that are not shared should be located side by side in the directory with the calling application.  
   
 ## <a name="see-also"></a>请参阅
 

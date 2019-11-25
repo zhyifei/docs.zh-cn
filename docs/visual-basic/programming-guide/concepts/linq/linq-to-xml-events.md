@@ -1,15 +1,15 @@
 ---
-title: LINQ to XML 事件（Visual Basic）
+title: LINQ to XML 事件
 ms.date: 07/20/2015
 ms.assetid: 34923928-b99c-4004-956e-38f6db25e910
-ms.openlocfilehash: d35f8063fe87ee4be3dd49a3c0221cb9c47cb22e
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 06191fb94f808d9a3ece8de000dec1c5de769dde
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834984"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351923"
 ---
-# <a name="linq-to-xml-events-visual-basic"></a>LINQ to XML 事件（Visual Basic）
+# <a name="linq-to-xml-events-visual-basic"></a>LINQ to XML Events (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 事件使你可以在 XML 树发生改变时得到通知。  
   
  可以将事件添加到任何 <xref:System.Xml.Linq.XObject> 的实例。 事件处理程序然后将接收对该 <xref:System.Xml.Linq.XObject> 及其所有子代进行修改的事件。 例如，可以将事件处理程序添加到树根，然后从该事件处理程序中处理对树进行的所有修改。  
@@ -19,14 +19,14 @@ ms.locfileid: "71834984"
 ## <a name="types-and-events"></a>类型和事件  
  在处理事件时使用下面的类型：  
   
-|类型|描述|  
+|键入|描述|  
 |----------|-----------------|  
 |<xref:System.Xml.Linq.XObjectChange>|当 <xref:System.Xml.Linq.XObject> 发生事件时指定事件类型。|  
 |<xref:System.Xml.Linq.XObjectChangeEventArgs>|提供有关 <xref:System.Xml.Linq.XObject.Changing> 和 <xref:System.Xml.Linq.XObject.Changed> 事件的数据。|  
   
  修改 XML 树时将引发以下事件：  
   
-|Event|描述|  
+|Event — 事件|描述|  
 |-----------|-----------------|  
 |<xref:System.Xml.Linq.XObject.Changing>|在此 <xref:System.Xml.Linq.XObject> 或它的任何子代即将发生更改之前发生。|  
 |<xref:System.Xml.Linq.XObject.Changed>|在 <xref:System.Xml.Linq.XObject> 或它的任何子代已经更改时发生。|  
@@ -116,4 +116,4 @@ Total:308
   
 ## <a name="see-also"></a>请参阅
 
-- [高级 LINQ to XML 编程（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

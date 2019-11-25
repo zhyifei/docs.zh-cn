@@ -1,5 +1,5 @@
 ---
-title: 教程：使用 Windows Communication Foundation 客户端
+title: 'Tutorial: Use a Windows Communication Foundation client'
 ms.date: 03/19/2019
 helpviewer_keywords:
 - WCF clients [WCF], using
@@ -7,34 +7,34 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: 5c280933c81ef54ba58181e3005e30775b9b8e42
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: d0ef525db16b2b2cedeea5fa03376fb4f3489a4a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928886"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346772"
 ---
-# <a name="tutorial-use-a-windows-communication-foundation-client"></a>教程：使用 Windows Communication Foundation 客户端
+# <a name="tutorial-use-a-windows-communication-foundation-client"></a>Tutorial: Use a Windows Communication Foundation client
 
-本教程介绍创建基本 Windows Communication Foundation （WCF）应用程序所需的五个任务中的最后一个。 有关教程的概述，请参阅[教程：开始 Windows Communication Foundation 应用程序](getting-started-tutorial.md)。
+This tutorial describes the last of five tasks required to create a basic Windows Communication Foundation (WCF) application. For an overview of the tutorials, see [Tutorial: Get started with Windows Communication Foundation applications](getting-started-tutorial.md).
 
-创建并配置 Windows Communication Foundation （WCF）代理后，您可以创建一个客户端实例并编译该客户端应用程序。 然后，你可以使用它来与 WCF 服务进行通信。 
+After you've created and configured a Windows Communication Foundation (WCF) proxy, you create a client instance and compile the client application. You then use it to communicate with the WCF service. 
 
 在本教程中，你将了解：
 > [!div class="checklist"]
 >
-> - 添加代码以使用 WCF 客户端。
-> - 测试 WCF 客户端。
+> - Add code to use the WCF client.
+> - Test the WCF client.
 
-## <a name="add-code-to-use-the-wcf-client"></a>添加代码以使用 WCF 客户端
+## <a name="add-code-to-use-the-wcf-client"></a>Add code to use the WCF client
 
-客户端代码执行以下步骤：
+The client code does the following steps:
 
-- 实例化 WCF 客户端。
+- Instantiates the WCF client.
 - 从生成的代理调用服务操作。
-- 完成操作调用后关闭客户端。
+- Closes the client after the operation call is completed.
 
-从**GettingStartedClient**项目中打开**Program.cs**或**Module1**文件，并将其代码替换为以下代码：
+Open the **Program.cs** or **Module1.vb** file from the **GettingStartedClient** project and replace its code with the following code:
 
 ```csharp
 using System;
@@ -87,7 +87,6 @@ namespace GettingStartedClient
 ```
 
 ```vb
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.ServiceModel
@@ -135,27 +134,27 @@ Module Module1
 End Module
 ```
 
-请注意导入C# `Imports` 的`GettingStartedClient.ServiceReference1`（适用于 Visual）或（适用 Visual Basic）语句。 `using` 此语句将导入 Visual Studio 生成的带有**添加服务引用**函数的代码。 此代码实例化 WCF 代理，并调用计算器服务公开的每个服务操作。 然后，它会关闭代理并结束程序。
+Notice the `using` (for Visual C#) or `Imports` (for Visual Basic) statement that imports `GettingStartedClient.ServiceReference1`. This statement imports the code that Visual Studio generated with the **Add Service Reference** function. The code instantiates the WCF proxy and calls each of the service operations that the calculator service exposes. It then closes the proxy and ends the program.
 
-## <a name="test-the-wcf-client"></a>测试 WCF 客户端
+## <a name="test-the-wcf-client"></a>Test the WCF client
 
-### <a name="test-the-application-from-visual-studio"></a>从 Visual Studio 测试应用程序
+### <a name="test-the-application-from-visual-studio"></a>Test the application from Visual Studio
 
-1. 保存并生成解决方案。
+1. Save and build the solution.
 
-2. 选择**GettingStartedLib**文件夹，然后从快捷菜单中选择 "**设为启动项目**"。
+2. Select the **GettingStartedLib** folder, and then select **Set as Startup Project** from the shortcut menu.
 
-3. 从 "**启动项目**" 中，从下拉列表中选择 " **GettingStartedLib** "，然后选择 "**运行**" 或按**F5**。
+3. From **Startup Projects**, select **GettingStartedLib** from the drop-down list, then select **Run** or press **F5**.
 
-### <a name="test-the-application-from-a-command-prompt"></a>在命令提示符下测试应用程序
+### <a name="test-the-application-from-a-command-prompt"></a>Test the application from a command prompt
 
-1. 以管理员身份打开命令提示符，然后导航到你的 Visual Studio 解决方案目录。 
+1. Open a command prompt as an administrator, and then navigate to your Visual Studio solution directory. 
 
-2. 若要启动该服务：输入*GettingStartedHost\bin\Debug\GettingStartedHost.exe*。
+2. To start the service: Enter *GettingStartedHost\bin\Debug\GettingStartedHost.exe*.
 
-3. 启动客户端：打开另一个命令提示符，导航到 Visual Studio 解决方案目录，然后输入*GettingStartedClient\bin\Debug\GettingStartedClient.exe*。
+3. To start the client: Open another command prompt, navigate to your Visual Studio solution directory, then enter *GettingStartedClient\bin\Debug\GettingStartedClient.exe*.
 
-   *GettingStartedHost*生成以下输出：
+   *GettingStartedHost.exe* produces the following output:
 
    ```text
    The service is ready.
@@ -171,7 +170,7 @@ End Module
    Return: 3.14285714285714
    ```
 
-   *GettingStartedClient*生成以下输出：
+   *GettingStartedClient.exe* produces the following output:
 
    ```text
    Add(100,15.99) = 115.99
@@ -184,15 +183,15 @@ End Module
 
 ## <a name="next-steps"></a>后续步骤
 
-你现在已经完成了 WCF 入门教程中的所有任务。 在本教程中，你将了解：
+You've now completed all the tasks in the WCF get started tutorial. 在本教程中，你将了解：
 
 在本教程中，你将了解：
 > [!div class="checklist"]
 >
-> - 添加代码以使用 WCF 客户端。
-> - 测试 WCF 客户端。
+> - Add code to use the WCF client.
+> - Test the WCF client.
 
-如果在任何步骤中遇到问题或错误，请按照故障排除一文中的步骤进行修复。
+If you have problems or errors in any of the steps, follow the steps in the troubleshooting article to fix them.
 
 > [!div class="nextstepaction"]
-> [排查 WCF 入门教程](troubleshooting-the-getting-started-tutorial.md)
+> [Troubleshoot the Get started with WCF tutorials](troubleshooting-the-getting-started-tutorial.md)

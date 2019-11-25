@@ -1,5 +1,5 @@
 ---
-title: 参数和变量之间的差异 (Visual Basic)
+title: 参数和变量之间的差异
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -11,31 +11,31 @@ helpviewer_keywords:
 - procedure parameters
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-ms.openlocfilehash: a69b956c7cffcc2a26916d6fc92f23dd4e2322d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4249dbf86bd1bfa7ef08e94059d2880333e9a92
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864242"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341377"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>参数和变量之间的差异 (Visual Basic)
-在大多数情况下，一个过程必须有已在其中调用它的情况有关的一些信息。 执行重复或共享任务的过程为每个调用使用不同的信息。 此信息包括变量、 常量和表达式在调用时传递给该过程。  
+In most cases, a procedure must have some information about the circumstances in which it has been called. A procedure that performs repeated or shared tasks uses different information for each call. This information consists of variables, constants, and expressions that you pass to the procedure when you call it.  
   
- 将此信息传递给该过程，该过程定义*参数*，然后调用代码将传递*自变量*给该参数。 您可以将参数作为一个停车和当作一辆汽车的参数。 就像在不同的时间，不同的汽车可以放置停车空间中，调用代码可传递不同的参数相同的参数每次调用该过程。  
+ To communicate this information to the procedure, the procedure defines a *parameter*, and the calling code passes an *argument* to that parameter. You can think of the parameter as a parking space and the argument as an automobile. Just as different automobiles can park in a parking space at different times, the calling code can pass a different argument to the same parameter every time that it calls the procedure.  
   
 ## <a name="parameters"></a>参数  
- 一个*参数*表示该过程希望你传递时调用它的值。 该过程的声明定义其参数。  
+ A *parameter* represents a value that the procedure expects you to pass when you call it. The procedure's declaration defines its parameters.  
   
- 在定义`Function`或`Sub`过程中，指定*参数列表*在紧跟过程名称的括号中。 对于每个参数，请指定一个名称、 数据类型，并传递机制 ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md))。 您还可以指示参数是可选。 这意味着调用代码不需要传递的值。  
+ When you define a `Function` or `Sub` procedure, you specify a *parameter list* in parentheses immediately following the procedure name. For each parameter, you specify a name, a data type, and a passing mechanism ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)). You can also indicate that a parameter is optional. This means that the calling code does not have to pass a value for it.  
   
- 每个参数的名称用作*局部变量*过程中。 使用参数名称使用任何其他变量的方法相同。  
+ The name of each parameter serves as a *local variable* in the procedure. You use the parameter name the same way you use any other variable.  
   
 ## <a name="arguments"></a>自变量  
- *自变量*表示在调用过程时传递给过程参数的值。 当调用该过程时，调用代码将提供参数。  
+ An *argument* represents the value that you pass to a procedure parameter when you call the procedure. The calling code supplies the arguments when it calls the procedure.  
   
- 当您调用`Function`或`Sub`过程，包括*自变量列表*在紧跟过程名称的括号中。 每个自变量对应于列表中的同一位置中的参数。  
+ When you call a `Function` or `Sub` procedure, you include an *argument list* in parentheses immediately following the procedure name. Each argument corresponds to the parameter in the same position in the list.  
   
- 与参数定义不同的参数没有名称。 每个自变量是一个表达式，它可以包含零或多个变量、 常量和文本。 表达式的计算结果的数据类型通常应匹配定义的相应参数的数据类型，并在任何情况下它都可以转换为参数类型。  
+ In contrast to parameter definition, arguments do not have names. Each argument is an expression, which can contain zero or more variables, constants, and literals. The data type of the evaluated expression should typically match the data type defined for the corresponding parameter, and in any case it must be convertible to the parameter type.  
   
 ## <a name="see-also"></a>请参阅
 
@@ -45,7 +45,7 @@ ms.locfileid: "61864242"
 - [属性过程](./property-procedures.md)
 - [运算符过程](./operator-procedures.md)
 - [如何：为过程定义参数](./how-to-define-a-parameter-for-a-procedure.md)
-- [如何：将参数传递给过程](./how-to-pass-arguments-to-a-procedure.md)
+- [如何：将自变量传递给过程](./how-to-pass-arguments-to-a-procedure.md)
 - [按值和按引用传递自变量](./passing-arguments-by-value-and-by-reference.md)
 - [递归过程](./recursive-procedures.md)
 - [过程重载](./procedure-overloading.md)

@@ -1,5 +1,5 @@
 ---
-title: -help，-? （Visual Basic）
+title: -help，-?
 ms.date: 03/10/2018
 helpviewer_keywords:
 - /? compiler option [Visual Basic]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - -? compiler option [Visual Basic]
 - '? compiler option [Visual Basic]'
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
-ms.openlocfilehash: 33b1837415001253122388f7b4992abf6f96903f
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 6013b92206e00a77a8ca30d38846c87372c3873e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005602"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344272"
 ---
-# <a name="-help---visual-basic"></a>-help，-? （Visual Basic）
+# <a name="-help---visual-basic"></a>-help，-? (Visual Basic)
 显示编译器选项。  
   
 ## <a name="syntax"></a>语法  
@@ -32,13 +32,13 @@ ms.locfileid: "72005602"
 ```  
   
 ## <a name="remarks"></a>备注  
- 如果在编译中包含此选项，则不会创建任何输出文件，也不会进行编译。  
+ If you include this option in a compilation, no output file is created and no compilation takes place.  
   
 > [!NOTE]
-> 在 Visual Studio 开发环境中，不能使用 `-help` 选项;仅当从命令行进行编译时，它才可用。  
+> The `-help` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
   
 ## <a name="example"></a>示例  
- 下面的代码显示命令行中的帮助。  
+ The following code displays help from the command line.  
   
 ```console  
 vbc -help  

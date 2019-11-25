@@ -1,5 +1,5 @@
 ---
-title: '#区域指令 (Visual Basic)'
+title: '#Region 指令'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Region
@@ -10,14 +10,15 @@ helpviewer_keywords:
 - region directive (#region)
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
-ms.openlocfilehash: eaaf0f8279ec905767be3f364a88357f0d393bba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4cf9b103486378d001b588aa285f590980b51bb8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61812640"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343791"
 ---
 # <a name="region-directive"></a>#Region 指令
+
 折叠并隐藏 Visual Basic 文件中的代码段。  
   
 ## <a name="syntax"></a>语法  
@@ -31,13 +32,15 @@ ms.locfileid: "61812640"
   
 |术语|定义|  
 |---|---|  
-|`identifier_string`|必需。 当区域处于折叠状态时充当区域标题的字符串。 默认情况下，区域处于折叠状态。|  
+|`identifier_string`|必须的。 当区域处于折叠状态时充当区域标题的字符串。 默认情况下，区域处于折叠状态。|  
 |`#End Region`|终止 `#Region` 块。|  
   
 ## <a name="remarks"></a>备注  
- 使用 `#Region` 指令指定使用 Visual Studio Code 编辑器的大纲显示功能时要展开或折叠的代码块。 您可以将放置，或*嵌套*中其他区域将类似区域组合在一起, 的区域。  
+
+ 使用 `#Region` 指令指定使用 Visual Studio Code 编辑器的大纲显示功能时要展开或折叠的代码块。 You can place, or *nest*, regions within other regions to group similar regions together.  
   
 ## <a name="example"></a>示例  
+
  此示例使用 `#Region` 指令。  
   
  [!code-vb[VbVbalrConditionalComp#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#4)]  

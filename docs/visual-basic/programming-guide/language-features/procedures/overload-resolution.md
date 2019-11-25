@@ -1,5 +1,5 @@
 ---
-title: 重载决策 (Visual Basic)
+title: 重载决策
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -10,53 +10,53 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: 4f81c7377423899c142c4270f325bbd7ed20b877
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e69136b1e3015055cad9852bf04151f57558b88
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792012"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352650"
 ---
 # <a name="overload-resolution-visual-basic"></a>重载决策 (Visual Basic)
-当 Visual Basic 编译器遇到多个重载版本中定义的过程调用时，编译器必须确定哪个重载来调用。 做到这一点，请执行以下步骤：  
+When the Visual Basic compiler encounters a call to a procedure that is defined in several overloaded versions, the compiler must decide which of the overloads to call. It does this by performing the following steps:  
   
-1. **辅助功能。** 它消除了一种访问级别，以防止调用代码中调用它的任何重载。  
+1. **辅助功能。** It eliminates any overload with an access level that prevents the calling code from calling it.  
   
-2. **参数数目。** 它消除了定义不同数量的参数提供的调用中的任何重载。  
+2. **Number of Parameters.** It eliminates any overload that defines a different number of parameters than are supplied in the call.  
   
-3. **参数数据类型。** 编译器则报告实例方法优先于扩展方法。 如果需要仅进行扩大转换来匹配的过程调用找到的任何实例方法，则所有扩展方法将被都删除，并且编译器将通过仅候选实例方法继续。 如果找到此类的实例方法，则将继续使用实例和扩展方法。  
+3. **Parameter Data Types.** The compiler gives instance methods preference over extension methods. If any instance method is found that requires only widening conversions to match the procedure call, all extension methods are dropped and the compiler continues with only the instance method candidates. If no such instance method is found, it continues with both instance and extension methods.  
   
-     在此步骤中，它消除了所有重载的调用参数的数据类型无法转换的重载中定义的参数类型。  
+     In this step, it eliminates any overload for which the data types of the calling arguments cannot be converted to the parameter types defined in the overload.  
   
-4. **收缩转换。** 它消除了所有需要收缩转换从调用的参数类型为定义的参数类型的重载。 这是 true 还是类型检查开关 ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) 是`On`或`Off`。  
+4. **Narrowing Conversions.** It eliminates any overload that requires a narrowing conversion from the calling argument types to the defined parameter types. This is true whether the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `On` or `Off`.  
   
-5. **最小扩大。** 编译器会考虑对其余的重载。 对于每个对，它将进行比较已定义的参数的数据的类型。 如果所有的重载之一中的类型扩大到中的其他的相应类型，编译器消除了后者。 也就是说，它将保留要求最少量的扩大转换的重载。  
+5. **Least Widening.** The compiler considers the remaining overloads in pairs. For each pair, it compares the data types of the defined parameters. If the types in one of the overloads all widen to the corresponding types in the other, the compiler eliminates the latter. That is, it retains the overload that requires the least amount of widening.  
   
-6. **单个候选项。** 它会持续假设重载直到只有一个成对重载会保留，并解析对重载的调用。 如果编译器不能减少到单个的候选版本的重载，则将生成错误。  
+6. **Single Candidate.** It continues considering overloads in pairs until only one overload remains, and it resolves the call to that overload. If the compiler cannot reduce the overloads to a single candidate, it generates an error.  
   
- 下图显示了确定哪一组重载版本来调用的进程。  
+ The following illustration shows the process that determines which of a set of overloaded versions to call.  
   
- ![重载解析过程的流程图](./media/overload-resolution/determine-overloaded-version.gif "在重载版本中")    
+ ![Flow diagram of overload resolution process](./media/overload-resolution/determine-overloaded-version.gif "Resolving among overloaded versions")    
   
- 下面的示例阐释了此重载决策过程。  
+ The following example illustrates this overload resolution process.  
   
  [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
   
  [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
   
- 在第一次调用，编译器无第一个重载，因为第一个参数的类型 (`Short`) 收缩到的相应参数的类型 (`Byte`)。 它然后能消除第三个重载，因为每个自变量类型中的第二个重载 (`Short`并`Single`) 将扩展到第三个重载中的相应类型 (`Integer`和`Single`)。 第二个重载需要较少扩大转换，因此编译器将其用于调用。  
+ In the first call, the compiler eliminates the first overload because the type of the first argument (`Short`) narrows to the type of the corresponding parameter (`Byte`). It then eliminates the third overload because each argument type in the second overload (`Short` and `Single`) widens to the corresponding type in the third overload (`Integer` and `Single`). The second overload requires less widening, so the compiler uses it for the call.  
   
- 在第二个调用中，编译器不能消除任何根据收缩的重载。 因为它可以调用与自变量类型的最少扩大的第二个重载，它可以消除第三个重载了如下所示的第一个调用中，由于同一原因。 但是，编译器无法解析的第一个和第二个重载之间。 每个都有一个定义的参数类型扩展到其他相应的类型 (`Byte`到`Short`，但`Single`到`Double`)。 因此，编译器将生成重载解析错误。  
+ In the second call, the compiler cannot eliminate any of the overloads on the basis of narrowing. It eliminates the third overload for the same reason as in the first call, because it can call the second overload with less widening of the argument types. However, the compiler cannot resolve between the first and second overloads. Each has one defined parameter type that widens to the corresponding type in the other (`Byte` to `Short`, but `Single` to `Double`). The compiler therefore generates an overload resolution error.  
   
-## <a name="overloaded-optional-and-paramarray-arguments"></a>重载可选和 ParamArray 参数  
- 如果过程的两个重载具有相同的签名，只不过声明的最后一个参数[可选](../../../../visual-basic/language-reference/modifiers/optional.md)合一和[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)中另一个，则编译器将解析对作为该过程的调用如下所示：  
+## <a name="overloaded-optional-and-paramarray-arguments"></a>Overloaded Optional and ParamArray Arguments  
+ If two overloads of a procedure have identical signatures except that the last parameter is declared [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) in one and [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) in the other, the compiler resolves a call to that procedure as follows:  
   
-|如果调用提供了最后一个参数为|编译器解析对声明为的最后一个参数的重载的调用|  
+|If the call supplies the last argument as|The compiler resolves the call to the overload declaring the last argument as|  
 |---|---|  
-|没有值 （省略该参数）|`Optional`|  
-|单个值|`Optional`|  
-|以逗号分隔的列表中的两个或多个值|`ParamArray`|  
-|（包括一个空数组） 任何长度的数组|`ParamArray`|  
+|No value (argument omitted)|`Optional`|  
+|A single value|`Optional`|  
+|Two or more values in a comma-separated list|`ParamArray`|  
+|An array of any length (including an empty array)|`ParamArray`|  
   
 ## <a name="see-also"></a>请参阅
 
@@ -65,9 +65,9 @@ ms.locfileid: "61792012"
 - [过程重载](./procedure-overloading.md)
 - [过程疑难解答](./troubleshooting-procedures.md)
 - [如何：定义一个过程的多个版本](./how-to-define-multiple-versions-of-a-procedure.md)
-- [如何：调用重载的过程](./how-to-call-an-overloaded-procedure.md)
+- [如何：调用重载过程](./how-to-call-an-overloaded-procedure.md)
 - [如何：重载带有可选参数的过程](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [如何：重载的参数数量不确定的过程](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [如何：重载参数数量不确定的过程](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [重载过程注意事项](./considerations-in-overloading-procedures.md)
 - [重载](../../../../visual-basic/language-reference/modifiers/overloads.md)
 - [扩展方法](./extension-methods.md)

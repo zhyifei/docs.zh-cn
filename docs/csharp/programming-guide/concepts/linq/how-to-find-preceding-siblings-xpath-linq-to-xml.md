@@ -1,15 +1,15 @@
 ---
-title: 如何：查找前面的同级 (XPath-LINQ to XML) (C#)
+title: 如何查找前面的同级 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
-ms.openlocfilehash: 2af2e08fa692142d2932a427f48ba5d323d7a848
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 08fc2073f76f37bd0381a05a7969d1c7748d6252
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253650"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141058"
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>如何：查找前面的同级 (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>如何查找前面的同级 (XPath-LINQ to XML) (C#)
 本主题将 XPath `preceding-sibling` 轴与 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 子 <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> 轴进行比较。  
   
  XPath 表达式为：  
@@ -21,7 +21,7 @@ ms.locfileid: "70253650"
 ## <a name="example"></a>示例  
  下面的示例查找 `FullAddress` 元素，然后使用 `preceding-sibling` 轴检索前面的元素。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)。  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  

@@ -1,41 +1,41 @@
 ---
-title: 如何：在 Visual Basic 中创建 XML 文档
+title: 如何：创建 XML 文档
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
-ms.openlocfilehash: 5b317706e3e8e0c5958f5a3d0fd859d68600bc7a
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 41b7ef1f435fd0a4f20c4ca2936e2d91e155f7c5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524487"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347422"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>如何：在 Visual Basic 中创建 XML 文档
 
-此示例演示如何将 XML 文档注释添加到代码。
+This example shows how to add XML documentation comments to your code.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-create-xml-documentation-for-a-type-or-member"></a>为类型或成员创建 XML 文档
+## <a name="to-create-xml-documentation-for-a-type-or-member"></a>To create XML documentation for a type or member
 
-1. 在**代码编辑器**中，将光标置于要为其创建文档的类型或成员之上的行上。
+1. In the **Code Editor**, position your cursor on the line above the type or member for which you want to create documentation.
 
-2. 键入 `'''` （三个单引号）。
+2. Type `'''` (three single-quotation marks).
 
-    类型或成员的 XML 主干将添加到**代码编辑器**中。
+    An XML skeleton for the type or member is added in the **Code Editor**.
 
-3. 在适当的标记之间添加描述性信息。
+3. Add descriptive information between the appropriate tags.
 
     > [!NOTE]
-    > 如果在 XML 文档块中添加额外的行，则每行都必须以 `'''` 开头。
+    > If you add additional lines within the XML documentation block, each line must begin with `'''`.
 
-4. 使用新的 XML 文档注释添加使用类型或成员的附加代码。
+4. Add additional code that uses the type or member with the new XML documentation comments.
 
-    IntelliSense 将显示该类型或成员的 \<summary > 标记中的文本。
+    IntelliSense displays the text from the \<summary> tag for the type or member.
 
-5. 编译代码以生成包含文档注释的 XML 文件。 有关详细信息，请参阅 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)。
+5. Compile the code to generate an XML file containing the documentation comments. 有关详细信息，请参阅 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)。
 
 ## <a name="see-also"></a>请参阅
 

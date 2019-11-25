@@ -3,12 +3,12 @@ title: 事件介绍
 description: 本概述中介绍 .NET Core 中的事件和事件的语言设计目标。
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: b1fd2ebe2ae91b55c9179f280d8894f6b40ced9b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ceae2b9319a1de9f01102987735c7db2c2883f18
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771917"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138516"
 ---
 # <a name="introduction-to-events"></a>事件介绍
 
@@ -26,13 +26,13 @@ ms.locfileid: "72771917"
 
 ## <a name="design-goals-for-event-support"></a>事件支持的设计目标
 
-事件的语言设计针对这些目标。
+事件的语言设计针对这些目标：
 
-首先，在事件源和事件接收器之间启用非常小的耦合。 这两个组件可能不会由同一个组织编写，甚至可能会通过完全不同的计划进行更新。
+- 在事件源和事件接收器之间启用非常小的耦合。 这两个组件可能不会由同一个组织编写，甚至可能会通过完全不同的计划进行更新。
 
-其次，订阅事件并从同一事件取消订阅应该非常简单。
+- 订阅事件并从同一事件取消订阅应该非常简单。
 
-最后，事件源应支持多个事件订阅服务器。 它还应支持不附加任何事件订阅服务器。
+- 事件源应支持多个事件订阅服务器。 它还应支持不附加任何事件订阅服务器。
 
 你会发现事件的目标与委托的目标非常相似。
 因此，事件语言支持基于委托语言支持构建。

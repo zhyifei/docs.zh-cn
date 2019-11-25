@@ -1,20 +1,20 @@
 ---
-title: Visual Basic 中的 XML
-description: 了解如何使用 XML 和 LINQ 到 Visual Basic 代码中的 XML 功能。
+title: XML
+description: Learn how to use XML and LINQ to XML features in your Visual Basic code.
 ms.date: 10/20/2017
 helpviewer_keywords:
 - LINQ to XML [Visual Basic]
 ms.assetid: 954b6e40-1246-4185-a018-4061724fcae9
-ms.openlocfilehash: 6ae69a54a9aa4585a0aaed95c80bfd12ce473953
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0bcc6a91c8c20d7e1277000ed76fd59e2e8ba7ee
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780349"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330806"
 ---
 # <a name="xml-in-visual-basic"></a>Visual Basic 中的 XML
 
-Visual Basic 提供了集成的语言支持，使其能够与之交互[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。  
+Visual Basic provides integrated language support that enables it to interact with [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="in-this-section"></a>本节内容  
 
@@ -22,7 +22,7 @@ Visual Basic 提供了集成的语言支持，使其能够与之交互[!INCLUDE[
   
 |主题|描述|  
 |-----------|-----------------|  
-|[Visual Basic 中的 LINQ to XML 概述](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)|介绍了如何支持 Visual Basic [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。|  
+|[Visual Basic 中的 LINQ to XML 概述](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)|Describes how Visual Basic supports [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[在 Visual Basic 中创建 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)|介绍了如何使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 创建 XML 文本对象。|  
 |[在 Visual Basic 中操控 XML](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)|介绍了如何使用 Visual Basic 加载和分析 XML。|  
 |[在 Visual Basic 中访问 XML](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)|介绍了 XML 轴属性，以及用于访问 XML 元素和属性的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 方法。|  

@@ -1,5 +1,5 @@
 ---
-title: 接口 (Visual Basic)
+title: 接口
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, interfaces
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interfaces
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-ms.openlocfilehash: 968e5d9bb08f168e3c77b40ea42b16dc66e93e64
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 619aa6695db756e56a836fd76693cc8a3976f8e2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956294"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345052"
 ---
 # <a name="interfaces-visual-basic"></a>接口 (Visual Basic)
 接口定义了类可以实现的属性、方法和事件。 接口允许将功能定义为一些紧密相关的属性、方法和事件的小组；这样就减少了兼容性问题，因为可以在不损害现有代码的情况下开发接口的增强型实现。 在任何时候都可以通过开发附加接口和实现来添加新的功能。  
@@ -40,13 +40,13 @@ ms.locfileid: "69956294"
  [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
 ## <a name="implementing-interfaces"></a>实现接口  
- 通过两种方式`Implements`使用 Visual Basic 保留字。 `Implements` 语句表示类或结构实现接口。 `Implements` 关键字表示类成员或结构成员实现特定的接口成员。  
+ The Visual Basic reserved word `Implements` is used in two ways. `Implements` 语句表示类或结构实现接口。 `Implements` 关键字表示类成员或结构成员实现特定的接口成员。  
   
 ### <a name="implements-statement"></a>Implements 语句  
  如果一个类或结构实现一个或多个接口，则它必须紧随在 `Class` 或 `Structure` 语句之后包括 `Implements` 语句。 `Implements` 语句需要一个由类实现的接口的逗号分隔列表。 类或结构必须使用 `Implements` 关键字来实现所有的接口成员。  
   
 ### <a name="implements-keyword"></a>Implements 关键字  
- `Implements` 关键字需要一个要实现的接口成员的逗号分隔列表。 通常只指定单个接口成员，但也可以指定多个成员。 接口成员的规范由接口名称（必须在类中的 implements 语句中指定）、句点和要实现的成员函数、属性或事件的名称组成。 实现接口成员的成员的名称可以使用任何合法标识符, 但并不限于 Visual Basic 早期版本中使用的`InterfaceName_MethodName`约定。  
+ `Implements` 关键字需要一个要实现的接口成员的逗号分隔列表。 通常只指定单个接口成员，但也可以指定多个成员。 接口成员的规范由接口名称（必须在类中的 implements 语句中指定）、句点和要实现的成员函数、属性或事件的名称组成。 The name of a member that implements an interface member can use any legal identifier, and it is not limited to the `InterfaceName_MethodName` convention used in earlier versions of Visual Basic.  
   
  例如，以下代码显示了如何声明一个名为 `Sub1` 的用于实现接口方法的子例程：  
   

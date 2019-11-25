@@ -1,16 +1,16 @@
 ---
-title: 内插字符串 (Visual Basic)
+title: 内插字符串
 ms.date: 10/31/2017
-ms.openlocfilehash: b9dd055154c86da370a984a465ed412f1fd9908c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: d1220f3804d571f6da229dc5dfa099a22ab1478d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666940"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344330"
 ---
-# <a name="interpolated-strings-visual-basic-reference"></a>内插字符串 (Visual Basic 引用)
+# <a name="interpolated-strings-visual-basic-reference"></a>Interpolated Strings (Visual Basic Reference)
 
-用于构造字符串。  内插字符串类似于包含内插表达式的模板字符串。  内插字符串返回的字符串可替换内插表达式并且包含其字符串表示形式。 此功能在 Visual Basic 14 及更高版本中可用。
+用于构造字符串。  内插字符串类似于包含内插表达式的模板字符串。  内插字符串返回的字符串可替换内插表达式并且包含其字符串表示形式。 This feature is available in Visual Basic 14 and later versions.
 
 与[复合格式字符串](../../../../standard/base-types/composite-formatting.md#composite-format-string)相比，内插字符串的参数更易于理解。  例如，内插字符串
 
@@ -18,10 +18,10 @@ ms.locfileid: "69666940"
 Console.WriteLine($"Name = {name}, hours = {hours:hh}")
 ```
 
-包含 2 个内插表达式：“{name}”和“{hours:hh}”。 等效复合格式字符串为：
+包含 2 个内插表达式：“{name}”和“{hours:hh}”。 等效的复合格式字符串为：
 
 ```vb
-Console.WriteLine("Name = {0}, hours = {1:hh}", name, hours);
+Console.WriteLine("Name = {0}, hours = {1:hh}", name, hours)
 ```
 
 内插字符串的结构为：
@@ -34,10 +34,10 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 - *field-width* 是一个带符号整数，表示字段中的字符数。 如果为正数，则字段右对齐；如果为负数，则左对齐。
 
-- “格式字符串”是适合正在设置格式的对象类型的格式字符串。 例如, 对于<xref:System.DateTime>值, 它可以是[标准日期和时间格式字符串](../../../../standard/base-types/standard-date-and-time-format-strings.md), 例如 "d" 或 "d"。
+- “格式字符串”是适合正在设置格式的对象类型的格式字符串。 For example, for a <xref:System.DateTime> value, it could be a [standard date and time format string](../../../../standard/base-types/standard-date-and-time-format-strings.md) such as "D" or "d".
 
 > [!IMPORTANT]
-> 字符串开头的 `$` 和 `"` 之间不能有任何空格。 这样做会导致编译器错误。
+> 字符串开头的 `$` 和 `"` 之间不能有任何空格。 Doing so causes a compiler error.
 
 可以在可使用字符串的任何位置使用内插字符串。  每次执行带内插字符串的代码时，都会计算内插字符串。 这有助于分隔内插字符串的定义和计算结果。
 
@@ -57,7 +57,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
    这是字符串解释的最终结果。 出现的所有双大括号（“{{”和“}}”）都转换为单大括号。
 
-2. 将内插字符串转换为 <xref:System.IFormattable> 变量，使用此变量可通过单个 <xref:System.IFormattable> 实例创建多个包含区域性特定内容的结果字符串。 对于包括诸如各区域性的正确数字和日期格式之类的内容，这种转换很有用。  出现的所有双大括号（“{{”和“}}”）仍保留为双大括号，直至通过显式或隐式调用 <xref:System.Object.ToString> 方法格式化字符串。  所有包含的内插表达式都{0}转换{1}为、等。
+2. 将内插字符串转换为 <xref:System.IFormattable> 变量，使用此变量可通过单个 <xref:System.IFormattable> 实例创建多个包含区域性特定内容的结果字符串。 对于包括诸如各区域性的正确数字和日期格式之类的内容，这种转换很有用。  出现的所有双大括号（“{{”和“}}”）仍保留为双大括号，直至通过显式或隐式调用 <xref:System.Object.ToString> 方法格式化字符串。  All contained interpolation expressions are converted to {0}, {1}, and so on.
 
    以下示例使用反射来显示内插字符串中所创建的 <xref:System.IFormattable> 变量的成员以及字段和属性值。 并将 <xref:System.IFormattable> 变量传递给 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 方法。
 
@@ -65,15 +65,15 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
    请注意，只能通过使用反射来检查内插字符串。 如果将其传递给字符串格式设置方法，例如 <xref:System.Console.WriteLine(System.String)>，则会解析其格式项并返回结果字符串。
 
-3. 将内插字符串转换为<xref:System.FormattableString>表示复合格式字符串的变量。 例如，检查复合格式字符串及其呈现为结果字符串的方式可能有助于在生成查询时防止注入攻击。 <xref:System.FormattableString>还包括:
+3. Conversion of an interpolated string to a <xref:System.FormattableString> variable that represents a composite format string. 例如，检查复合格式字符串及其呈现为结果字符串的方式可能有助于在生成查询时防止注入攻击。 A <xref:System.FormattableString> also includes:
 
       - <xref:System.FormattableString.ToString> 重载，生成 <xref:System.Globalization.CultureInfo.CurrentCulture> 的结果字符串。
 
-      - 为生成字符串<xref:System.Globalization.CultureInfo.InvariantCulture>的方法。<xref:System.FormattableString.Invariant%2A>
+      - A <xref:System.FormattableString.Invariant%2A> method that produces a string for the <xref:System.Globalization.CultureInfo.InvariantCulture>.
 
       - <xref:System.FormattableString.ToString(System.IFormatProvider)> 方法，生成特定区域性的结果字符串。
 
-    出现的所有双大括号 ("{{" 和 "}}") 都保留为双大括号, 直至你进行格式化。  所有包含的内插表达式都{0}转换{1}为、等。
+    All occurrences of double curly braces ("{{" and "}}") remain as double curly braces until you format.  All contained interpolation expressions are converted to {0}, {1}, and so on.
 
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]
 

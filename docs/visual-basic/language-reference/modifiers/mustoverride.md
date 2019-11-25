@@ -1,5 +1,5 @@
 ---
-title: MustOverride (Visual Basic)
+title: MyBase
 ms.date: 07/20/2015
 f1_keywords:
 - vb.MustOverride
@@ -15,28 +15,28 @@ helpviewer_keywords:
 - MustOverride keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
-ms.openlocfilehash: f5932b28c4664dd59dad829228f2186e78108af5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dc6a153a604fd0e5cee9d7d46ebcd63294f33628
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661246"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351484"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
-指定属性或过程未实现此类中，必须重写派生类中，然后才能使用。  
+Specifies that a property or procedure is not implemented in this class and must be overridden in a derived class before it can be used.  
   
 ## <a name="remarks"></a>备注  
- 只能在属性或过程声明语句中使用 `MustOverride`。 属性或过程的指定`MustOverride`必须是类的成员，类必须标记[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)。  
+ You can use `MustOverride` only in a property or procedure declaration statement. The property or procedure that specifies `MustOverride` must be a member of a class, and the class must be marked [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).  
   
 ## <a name="rules"></a>规则  
   
-- **不完整的声明。** 当指定`MustOverride`，不会不提供任何其他代码行的属性或过程，即使`End Function`， `End Property`，或`End Sub`语句。  
+- **Incomplete Declaration.** When you specify `MustOverride`, you do not supply any additional lines of code for the property or procedure, not even the `End Function`, `End Property`, or `End Sub` statement.  
   
-- **组合的修饰符。** 不能指定`MustOverride`连同`NotOverridable`， `Overridable`，或`Shared`同一声明中。  
+- **Combined Modifiers.** You cannot specify `MustOverride` together with `NotOverridable`, `Overridable`, or `Shared` in the same declaration.  
   
-- **隐藏和重写。** 隐藏和重写操作都可重新定义继承的元素，但这两种方法之间又具有很大的差异。 有关详细信息，请参阅[Visual Basic 中的隐藏](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
+- **Shadowing and Overriding.** 隐藏和重写操作都可重新定义继承的元素，但这两种方法之间又具有很大的差异。 For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
-- **替换术语。** 除不能用作重写中的元素有时称为*纯虚拟*元素。  
+- **Alternate Terms.** An element that cannot be used except in an override is sometimes called a *pure virtual* element.  
   
  `MustOverride` 修饰符可用于下面的上下文中：  
   
@@ -53,4 +53,4 @@ ms.locfileid: "64661246"
 - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
 - [关键字](../../../visual-basic/language-reference/keywords/index.md)
-- [在 Visual Basic 中隐藏](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

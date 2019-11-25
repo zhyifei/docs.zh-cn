@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 LINQ 修改数据库中的数据 (Visual Basic)
+title: 'How to: Modify Data in a Database by Using LINQ'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inserting rows [LINQ to SQL]
@@ -12,60 +12,60 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: ebf0ed1be8d74b60b7e626db996e7cefb1c01131
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 9a10efef5ae92dd21888594ae80a3fc07869a8c0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524522"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344949"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>如何：使用 LINQ 修改数据库中的数据 (Visual Basic)
 
-使用语言集成查询（LINQ）查询可以轻松地访问数据库信息和修改数据库中的值。
+Language-Integrated Query (LINQ) queries make it easy to access database information and modify values in the database.
 
-下面的示例演示如何创建一个新的应用程序，用于检索和更新 SQL Server 数据库中的信息。
+The following example shows how to create a new application that retrieves and updates information in a SQL Server database.
 
-本主题中的示例使用 Northwind 示例数据库。 如果你的开发计算机上没有此数据库，可以从 Microsoft 下载中心下载它。 有关说明，请参阅[下载示例数据库](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)。
+The examples in this topic use the Northwind sample database. If you do not have this database on your development computer, you can download it from the Microsoft Download Center. For instructions, see [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).
 
-### <a name="to-create-a-connection-to-a-database"></a>创建与数据库的连接
+### <a name="to-create-a-connection-to-a-database"></a>To create a connection to a database
 
-1. 在 Visual Studio 中，通过单击 "**查看**" 菜单打开**服务器资源管理器**/**数据库资源管理器**，然后选择 "**服务器资源管理器**/**数据库资源管理器**"。
+1. In Visual Studio, open **Server Explorer**/**Database Explorer** by clicking the **View** menu, and then select **Server Explorer**/**Database Explorer**.
 
-2. 右键单击**服务器资源管理器**/**数据库资源管理器**中的 "**数据连接**"，然后单击 "**添加连接**"。
+2. Right-click **Data Connections** in **Server Explorer**/**Database Explorer**, and click **Add Connection**.
 
-3. 指定与 Northwind 示例数据库的有效连接。
+3. Specify a valid connection to the Northwind sample database.
 
-### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>使用 LINQ to SQL 文件添加项目
+### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>To add a Project with a LINQ to SQL file
 
-1. 在 Visual Studio 中的“文件”菜单上，指向“新建”，然后单击“项目”。 选择 Visual Basic **Windows 窗体应用程序**作为项目类型。
+1. 在 Visual Studio 中的“文件”菜单上，指向“新建”，然后单击“项目”。 Select Visual Basic **Windows Forms Application** as the project type.
 
-2. 在 **“项目”** 菜单上，单击 **“添加新项”** 。 选择 " **LINQ to SQL 类**" 项模板。
+2. 在 **“项目”** 菜单上，单击 **“添加新项”** 。 Select the **LINQ to SQL Classes** item template.
 
-3. 为 `northwind.dbml` 文件命名。 单击 **添加**。 为 `northwind.dbml` 文件打开对象关系设计器（O/R 设计器）。
+3. 为 `northwind.dbml` 文件命名。 单击 **添加**。 The Object Relational Designer (O/R Designer) is opened for the `northwind.dbml` file.
 
-### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>添加要查询和修改设计器的表
+### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>To add tables to query and modify to the designer
 
-1. 在**服务器资源管理器**/**数据库资源管理器**中，展开与 Northwind 数据库的连接。 展开 "**表**" 文件夹。
+1. In **Server Explorer**/**Database Explorer**, expand the connection to the Northwind database. Expand the **Tables** folder.
 
-     如果关闭了 O/R 设计器，则可以通过双击先前添加的 `northwind.dbml` 文件重新打开它。
+     If you have closed the O/R Designer, you can reopen it by double-clicking the `northwind.dbml` file that you added earlier.
 
-2. 单击 "Customers" 表，并将其拖到设计器的左窗格中。
+2. Click the Customers table and drag it to the left pane of the designer.
 
-     设计器将为您的项目创建一个新的客户对象。
+     The designer creates a new Customer object for your project.
 
-3. 保存更改并关闭设计器。
+3. Save your changes and close the designer.
 
 4. 保存你的项目。
 
-### <a name="to-add-code-to-modify-the-database-and-display-the-results"></a>添加代码以修改数据库并显示结果
+### <a name="to-add-code-to-modify-the-database-and-display-the-results"></a>To add code to modify the database and display the results
 
-1. 从 "**工具箱**" 中，将 "<xref:System.Windows.Forms.DataGridView>" 控件拖动到项目的默认 Windows 窗体 "Form1"。
+1. From the **Toolbox**, drag a <xref:System.Windows.Forms.DataGridView> control onto the default Windows Form for your project, Form1.
 
-2. 将表添加到 O/R 设计器后，设计器会将 <xref:System.Data.Linq.DataContext> 对象添加到项目。 此对象包含可用于访问 Customers 表的代码。 它还包含用于定义表的本地 Customer 对象和 Customer 集合的代码。 项目的 <xref:System.Data.Linq.DataContext> 对象根据 .dbml 文件的名称进行命名。 对于此项目，<xref:System.Data.Linq.DataContext> 对象名为 `northwindDataContext`。
+2. When you added tables to the O/R Designer, the designer added a <xref:System.Data.Linq.DataContext> object to your project. This object contains code that you can use to access the Customers table. It also contains code that defines  a local Customer object and a Customers collection for the table. The <xref:System.Data.Linq.DataContext> object for your project is named based on the name of your .dbml file. For this project, the <xref:System.Data.Linq.DataContext> object is named `northwindDataContext`.
 
-     您可以在代码中创建 <xref:System.Data.Linq.DataContext> 对象的实例，并查询和修改 O/R 设计器指定的 Customers 集合。 在通过调用 <xref:System.Data.Linq.DataContext> 对象的 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 方法提交之前，对 "客户" 集合所做的更改不会反映到数据库中。
+     You can create an instance of the <xref:System.Data.Linq.DataContext> object in your code and query and modify the Customers collection specified by the O/R Designer. Changes that you make to the Customers collection are not reflected in the database until you submit them by calling the <xref:System.Data.Linq.DataContext.SubmitChanges%2A> method of the <xref:System.Data.Linq.DataContext> object.
 
-     双击 Windows 窗体 "Form1"，将代码添加到 <xref:System.Windows.Forms.Form.Load> 事件，以查询作为 <xref:System.Data.Linq.DataContext> 的属性公开的 Customers 表。 添加以下代码：
+     Double-click the Windows Form, Form1, to add code to the <xref:System.Windows.Forms.Form.Load> event to query the Customers table that is exposed as a property of your <xref:System.Data.Linq.DataContext>. 添加以下代码：
 
     ```vb
     Private db As northwindDataContext
@@ -87,9 +87,9 @@ ms.locfileid: "72524522"
     End Sub
     ```
 
-3. 从 "**工具箱**" 中，将三个 <xref:System.Windows.Forms.Button> 控件拖动到窗体上。 选择第一个 `Button` 控件。 在 "**属性**" 窗口中，将 `Button` 控件的 `Name` 设置为 `AddButton`，并将 `Text` 设置为 `Add`。 选择第二个按钮，并将 `Name` 属性设置为 `UpdateButton`，将 `Text` 属性设置为 "`Update`"。 选择第三个按钮，并将 `Name` 属性设置为 `DeleteButton`，将 `Text` 属性设置为 "`Delete`"。
+3. From the **Toolbox**, drag three <xref:System.Windows.Forms.Button> controls onto the form. Select the first `Button` control. In the **Properties** window, set the `Name` of the `Button` control to `AddButton` and the `Text` to `Add`. Select the second button and set the `Name` property to `UpdateButton` and the `Text` property to `Update`. Select the third button and set the `Name` property to `DeleteButton` and the `Text` property to `Delete`.
 
-4. 双击 "**添加**" 按钮，将代码添加到其 `Click` 事件。 添加以下代码：
+4. Double-click the **Add** button to add code to its `Click` event. 添加以下代码：
 
     ```vb
     Private Sub AddButton_Click(ByVal sender As System.Object,
@@ -114,7 +114,7 @@ ms.locfileid: "72524522"
     End Sub
     ```
 
-5. 双击 "**更新**" 按钮，将代码添加到其 `Click` 事件。 添加以下代码：
+5. Double-click the **Update** button to add code to its `Click` event. 添加以下代码：
 
     ```vb
     Private Sub UpdateButton_Click(ByVal sender As System.Object, _
@@ -138,7 +138,7 @@ ms.locfileid: "72524522"
     End Sub
     ```
 
-6. 双击 "**删除**" 按钮，将代码添加到其 `Click` 事件。 添加以下代码：
+6. Double-click the **Delete** button to add code to its `Click` event. 添加以下代码：
 
     ```vb
     Private Sub DeleteButton_Click(ByVal sender As System.Object, _
@@ -159,7 +159,7 @@ ms.locfileid: "72524522"
     End Sub
     ```
 
-7. 按 F5 运行项目。 单击 "**添加**" 以添加新记录。 单击 "**更新**" 以修改新记录。 单击 "**删除**" 以删除新记录。
+7. 按 F5 运行项目。 Click **Add** to add a new record. Click **Update** to modify the new record. Click **Delete** to delete the new record.
 
 ## <a name="see-also"></a>请参阅
 

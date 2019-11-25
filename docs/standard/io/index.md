@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3b3dcc3b96e12f89508f4d2708c5ab083516dba
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 889271ca41fb84b44757adfffc61ffbfbc0a03a8
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025496"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204796"
 ---
 # <a name="file-and-stream-io"></a>文件和流 I/O
 
@@ -99,7 +99,7 @@ ms.locfileid: "67025496"
 
 ## <a name="asynchronous-io-operations"></a>异步 I/O 操作
 
-读取或写入大量数据会占用大量资源。 如果你的应用程序需要保持对用户的响应性，则你应异步执行这些任务。 在执行同步 I/O 操作时，UI 线程将受阻，直至完成占用大量资源的操作。  在开发 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用时使用异步 I/O 操作可防止造成应用程序已停止工作的印象。
+读取或写入大量数据会占用大量资源。 如果你的应用程序需要保持对用户的响应性，则你应异步执行这些任务。 在执行同步 I/O 操作时，UI 线程将受阻，直至完成占用大量资源的操作。  在开发 Windows 8.x 应用商店应用时，使用异步 I/O 操作可防止造成应用已停止工作的印象。
 
 异步成员在其名称中包含 `Async`，如 <xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.FlushAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A> 方法。 你可以将这些方法与 `async` 和 `await` 关键字一起使用。
 
@@ -129,7 +129,7 @@ ms.locfileid: "67025496"
 
 独立存储是一种数据存储机制，它在代码与保存的数据之间定义了标准化的关联方式，从而提供隔离性和安全性。 存储提供按用户、程序集和（可选）域隔离的虚拟文件系统。 当你的应用程序无权访问用户文件时，独立存储特别有用。 你可以通过一种由计算机的安全策略控制的方式保存应用程序的设置或文件。
 
-独立存储不可用于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用；请改用 <xref:Windows.Storage?displayProperty=nameWithType> 命名空间中的应用程序数据类。 有关详细信息，请参阅[应用程序数据](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29)。
+独立存储不可用于 Windows 8.x 应用商店应用；请改用 <xref:Windows.Storage?displayProperty=nameWithType> 命名空间中的应用程序数据类。 有关详细信息，请参阅[应用程序数据](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29)。
 
 在实现独立存储时，经常使用以下类：
 
@@ -145,7 +145,7 @@ ms.locfileid: "67025496"
 
 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 包含许多用于对流进行读取和写入操作的类型；但是，该集不包含所有的 .NET Framework I/O 类型。
 
-在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中使用 I/O 操作时，要注意一些重要差异：
+在 Windows 8.x 应用商店应用中使用 I/O 操作时，要注意一些重要差异：
 
 - 专门与文件操作相关的类型（如 <xref:System.IO.File>、<xref:System.IO.FileInfo>、<xref:System.IO.Directory> 和 <xref:System.IO.DirectoryInfo>）未包含在[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 中。 请改用 Windows 运行时的 <xref:Windows.Storage?displayProperty=nameWithType> 命名空间中的类型（如 <xref:Windows.Storage.StorageFile> 和 <xref:Windows.Storage.StorageFolder>）。
 
@@ -157,13 +157,13 @@ ms.locfileid: "67025496"
 
 如果需要，你可以在 .NET Framework 流和 Windows 运行时流之间进行转换。 有关详细信息，请参阅[如何：在 .NET Framework 流和 Windows 运行时流之间进行转换](how-to-convert-between-dotnet-streams-and-winrt-streams.md)或 <xref:System.IO.WindowsRuntimeStreamExtensions>。
 
-若要深入了解 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用中的 I/O 操作，请参阅[快速入门：读取和写入文件](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10))。
+要深入了解 Windows 8.x 应用商店应用中的 I/O 操作，请参阅[快速入门：对文件执行读取和写入操作](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10))。
 
 ## <a name="io-and-security"></a>I/O 和安全性
 
 在使用 <xref:System.IO?displayProperty=nameWithType> 命名空间中的类时，你必须遵循操作系统安全性要求（如访问控制列表 (ACL)）来控制对文件和目录的访问。 此要求是在所有 <xref:System.Security.Permissions.FileIOPermission> 要求之外的要求。 可以用编程方式管理 ACL。 有关详细信息，请参阅[如何：添加或删除访问控制列表条目](how-to-add-or-remove-access-control-list-entries.md)。
 
-默认安全策略将阻止 Internet 或 Intranet 应用程序访问用户计算机上的文件。 因此，在编写将通过 Internet 或 Intranet 下载的代码时，请不要使用需要物理文件路径的 I/O 类。 请转而将[独立存储](isolated-storage.md)用于传统 .NET Framework 应用程序，或将[应用程序数据](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))用于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用。
+默认安全策略将阻止 Internet 或 Intranet 应用程序访问用户计算机上的文件。 因此，在编写将通过 Internet 或 Intranet 下载的代码时，请不要使用需要物理文件路径的 I/O 类。 请转而将[独立存储](isolated-storage.md)用于传统 .NET Framework 应用程序，或将[应用程序数据](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))用于 Windows 8.x 应用商店应用。
 
 仅在构造流时执行安全性检查。 因此，请不要打开流并将其传递给受信程度较低的代码或应用程序域。
 

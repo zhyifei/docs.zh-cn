@@ -1,14 +1,14 @@
 ---
-title: $ （Visual Basic 引用）
+title: $
 ms.date: 10/31/2017
-ms.openlocfilehash: f9de6f0d8289b4f37ced347eda0683a4db331369
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 007f64e3bee9ba7fa310d500eb8938d7e1633d58
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423663"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349588"
 ---
-# <a name="-visual-basic-reference"></a>$ （Visual Basic 引用）
+# <a name="-visual-basic-reference"></a>$ (Visual Basic Reference)
 
 将字符串文本标识为[内插字符串](../../programming-guide/language-features/strings/interpolated-strings.md)。 内插字符串是一个类似于模板的字符串，其中包含文本和内插表达式。 例如，在赋值语句或方法调用中解析内插字符串时，其内插表达式在结果字符串中会替换为字符串表示形式。 内插字符串是 .NET Framework 支持的[复合格式字符串](../../../standard/base-types/composite-formatting.md)的替代项。
 
@@ -21,4 +21,4 @@ ms.locfileid: "73423663"
 ## <a name="see-also"></a>请参阅
 
 - [Visual Basic 参考](../index.md)
-- [Visual Basic 特殊字符](index.md)
+- [Visual Basic Special Characters](index.md)

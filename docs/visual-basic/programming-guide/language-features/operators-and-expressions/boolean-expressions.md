@@ -1,5 +1,5 @@
 ---
-title: 布尔表达式 (Visual Basic)
+title: 布尔表达式
 ms.date: 07/20/2015
 helpviewer_keywords:
 - short-circuiting
@@ -14,61 +14,61 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: ce9146791935a488108d110134e9273507b0da6f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1000ec6e4b35d0cb2c6232b50f9a9551cb0dfdcd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864657"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350814"
 ---
 # <a name="boolean-expressions-visual-basic"></a>布尔表达式 (Visual Basic)
-一个*布尔表达式*是表达式的计算结果为值[布尔数据类型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md):`True`或`False`。 `Boolean` 表达式可以采用多种形式。 简单的方法是直接的值的比较`Boolean`变量`Boolean`文本，如下面的示例中所示。  
+A *Boolean expression* is an expression that evaluates to a value of the [Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` or `False`. `Boolean` expressions can take several forms. The simplest is the direct comparison of the value of a `Boolean` variable to a `Boolean` literal, as shown in the following example.  
   
  [!code-vb[VbVbalrOperators#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#87)]  
   
-## <a name="two-meanings-of-the--operator"></a>两种含义的 = 运算符  
- 请注意，在赋值语句`newCustomer = True`与在前面的示例中，表达式看起来相同，但它执行不同的功能，以不同的方式使用。 在前面的示例中，表达式`newCustomer = True`表示一个布尔值，和`=`符号被解释为比较运算符。 在独立语句中，`=`符号被解释为赋值运算符，分配给左侧变量右侧值。 下面的示例阐释了这一点。  
+## <a name="two-meanings-of-the--operator"></a>Two Meanings of the = Operator  
+ Notice that the assignment statement `newCustomer = True` looks the same as the expression in the preceding example, but it performs a different function and is used differently. In the preceding example, the expression `newCustomer = True` represents a Boolean value, and the `=` sign is interpreted as a comparison operator. In a stand-alone statement, the `=` sign is interpreted as an assignment operator and assigns the value on the right to the variable on the left. 下面的示例阐释了这一点。  
   
  [!code-vb[VbVbalrOperators#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#88)]  
   
- 有关详细信息，请参阅[值的比较](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)并[语句](../../../../visual-basic/language-reference/statements/index.md)。  
+ For further information, see [Value Comparisons](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md) and [Statements](../../../../visual-basic/language-reference/statements/index.md).  
   
 ## <a name="comparison-operators"></a>比较运算符  
- 比较运算符，如`=`， `<`， `>`， `<>`， `<=`，并`>=`通过比较运算符右侧表达式的左侧和右侧表达式产生布尔表达式运算符和评估结果作为`True`或`False`。 下面的示例阐释了这一点。  
+ Comparison operators such as `=`, `<`, `>`, `<>`, `<=`, and `>=` produce Boolean expressions by comparing the expression on the left side of the operator to the expression on the right side of the operator and evaluating the result as `True` or `False`. 下面的示例阐释了这一点。  
   
  `42 < 81`  
   
- 由于 42 是小于 81，前面示例中的布尔表达式计算结果为`True`。 此类表达式的详细信息，请参阅[值的比较](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)。  
+ Because 42 is less than 81, the Boolean expression in the preceding example evaluates to `True`. For more information on this kind of expression, see [Value Comparisons](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md).  
   
-### <a name="comparison-operators-combined-with-logical-operators"></a>与逻辑运算符结合使用的比较运算符  
- 可以使用逻辑运算符以生成更复杂的布尔表达式组合比较表达式。 下面的示例演示如何将具有一个逻辑运算符结合使用的比较运算符。  
+### <a name="comparison-operators-combined-with-logical-operators"></a>Comparison Operators Combined with Logical Operators  
+ Comparison expressions can be combined using logical operators to produce more complex Boolean expressions. The following example demonstrates the use of comparison operators in conjunction with a logical operator.  
   
  `x > y And x < 1000`  
   
- 在前面的示例中，整个表达式的值取决于每侧的表达式的值`And`运算符。 如果两个表达式均`True`，则整个表达式的计算结果为`True`。 如果任一表达式`False`，则整个表达式的计算结果为`False`。  
+ In the preceding example, the value of the overall expression depends on the values of the expressions on each side of the `And` operator. If both expressions are `True`, then the overall expression evaluates to `True`. If either expression is `False`, then the entire expression evaluates to `False`.  
   
-## <a name="short-circuiting-operators"></a>短路运算符  
- 逻辑运算符`AndAlso`并`OrElse`表现出行为称为*短路*。 短路运算符首先计算左的操作数。 如果左的操作数确定整个表达式的值，然后程序执行继续进行而不计算右侧表达式。 下面的示例阐释了这一点。  
+## <a name="short-circuiting-operators"></a>Short-Circuiting Operators  
+ The logical operators `AndAlso` and `OrElse` exhibit behavior known as *short-circuiting*. A short-circuiting operator evaluates the left operand first. If the left operand determines the value of the entire expression, then program execution proceeds without evaluating the right expression. 下面的示例阐释了这一点。  
   
  [!code-vb[VbVbalrOperators#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#89)]  
   
- 在上述示例中，运算符将计算左侧的表达式`45 < 12`。 由于左侧的表达式的计算结果为`False`，整个逻辑表达式的计算结果必须为`False`。 程序执行因此将跳过执行中的代码`If`而无需计算右侧表达式块`testFunction(3)`。 此示例不会调用`testFunction()`因为左侧的表达式使整个表达式。  
+ In the preceding example, the operator evaluates the left expression, `45 < 12`. Because the left expression evaluates to `False`, the entire logical expression must evaluate to `False`. Program execution thus skips execution of the code within the `If` block without evaluating the right expression, `testFunction(3)`. This example does not call `testFunction()` because the left expression falsifies the entire expression.  
   
- 同样，如果左侧的表达式在逻辑表达式中使用`OrElse`计算结果为`True`，执行过程前进到下一行代码而无需计算右侧表达式，因为左侧的表达式已经证明整个表达式。  
+ Similarly, if the left expression in a logical expression using `OrElse` evaluates to `True`, execution proceeds to the next line of code without evaluating the right expression, because the left expression has already validated the entire expression.  
   
-### <a name="comparison-with-non-short-circuiting-operators"></a>与非短路运算符的比较  
- 与此相反，计算逻辑运算符的两端时逻辑运算符`And`和`Or`使用。 下面的示例阐释了这一点。  
+### <a name="comparison-with-non-short-circuiting-operators"></a>Comparison with Non-Short-Circuiting Operators  
+ By contrast, both sides of the logical operator are evaluated when the logical operators `And` and `Or` are used. 下面的示例阐释了这一点。  
   
  [!code-vb[VbVbalrOperators#90](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#90)]  
   
- 前面的示例调用`testFunction()`即使左侧的表达式的计算结果为`False`。  
+ The preceding example calls `testFunction()` even though the left expression evaluates to `False`.  
   
-## <a name="parenthetical-expressions"></a>加括号的表达式  
- 可以使用括号来控制的布尔表达式计算顺序。 首先计算由括号括起来的表达式。 多个层级的嵌套，优先将授予嵌套最深的表达式。 在括号内，评估会继续按照运算符优先级规则。 有关详细信息，请参阅[在 Visual Basic 中的运算符优先级](../../../../visual-basic/language-reference/operators/operator-precedence.md)。  
+## <a name="parenthetical-expressions"></a>Parenthetical Expressions  
+ You can use parentheses to control the order of evaluation of Boolean expressions. Expressions enclosed by parentheses evaluate first. For multiple levels of nesting, precedence is granted to the most deeply nested expressions. Within parentheses, evaluation proceeds according to the rules of operator precedence. For more information, see [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
 ## <a name="see-also"></a>请参阅
 
-- [在 Visual Basic 中的逻辑和位运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
 - [值的比较](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [语句](../../../../visual-basic/programming-guide/language-features/statements.md)
 - [比较运算符](../../../../visual-basic/language-reference/operators/comparison-operators.md)

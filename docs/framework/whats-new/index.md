@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: be6f6b2d2213e96bc4e695ffbf7bc77f755ed492
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ffcb288995975433bdd915362fccca03f345b5f5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454985"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281654"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新增功能
 
@@ -626,7 +626,7 @@ Windows 窗体的 HDPI 感知应用程序、Windows Presentation Foundation (WPF
 
 **垃圾回收性能改进**
 
-.NET Framework 4.7.1 中的垃圾回收 (GC) 的更改提升了整体性能，尤其是大型对象堆 (LOH) 分配的性能。 在 .NET Framework 4.7.1 中，小型对象堆 (SOH) 分配和 LOH 分配使用不同的锁，当后台 GC (BGC) 整理 SOH 时即发生 LOH 分配。 这样，进行大量 LOH 分配的应用程序发生分配锁争用的情况将减少，从而提高性能。 有关详细信息，请参阅 [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/)（.NET Framework 4.7.1 运行时和编译器功能）博客文章中的“Runtime -- GC Performance Improvements”（运行时 -- GC 性能改进）一节。
+.NET Framework 4.7.1 中的垃圾回收 (GC) 的更改提升了整体性能，尤其是大型对象堆 (LOH) 分配的性能。 在 .NET Framework 4.7.1 中，小型对象堆 (SOH) 分配和 LOH 分配使用不同的锁，当后台 GC 整理 SOH 时即发生 LOH 分配。 这样，进行大量 LOH 分配的应用程序发生分配锁争用的情况将减少，从而提高性能。 有关详细信息，请参阅 [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/)（.NET Framework 4.7.1 运行时和编译器功能）博客文章中的“Runtime -- GC Performance Improvements”（运行时 -- GC 性能改进）一节。
 
 <a name="net471"/>
 
@@ -1178,7 +1178,7 @@ WCF 包含可以在客户端应用程序上设置以确保它们始终连接到�
 
 为了支持最近激增的 WPF 应用程序高 DPI 和混合 DPI 环境，.NET Framework 4.6.2 中的 WPF 启用了按监视器 DPI 感知。 有关如何使 WPF 应用成为按监视器 DPI 感知的详细信息，请参阅 GitHub 上的[示例和开发人员指南](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI)。
 
-在 .NET framework 的早期版本中，WPF 应用为系统 DPI 感知。 换而言之，应用程序的 UI 由操作系统相应地进行缩放，具体取决于在其上呈现应用的监视器的 DPI。 ,
+在 .NET framework 的早期版本中，WPF 应用为系统 DPI 感知。 换而言之，应用程序的 UI 由操作系统相应地进行缩放，具体取决于在其上呈现应用的监视器的 DPI。
 
 对于在 .NET Framework 4.6.2 控制下运行的应用程序，可以在应用程序配置文件的 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 部分中添加配置语句，在 WPF 应用程序中禁用按监视器 DPI 更改，如下所示：
 
@@ -1894,7 +1894,7 @@ Windows 窗体的改进包括：
 
 - 改进对 Windows 运行时组件的异常支持。 在 [!INCLUDE[win81](../../../includes/win81-md.md)] 中，Windows 应用商店应用产生的异常保留了有关导致异常的错误的信息（甚至可跨语言使用）。 可以在 [.NET Framework 4.5.1 公告](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/)的“Windows 应用商店应用开发”一节中了解此功能。
 
-自 Visual Studio 2013 起，可以使用[托管配置文件引导式优化工具 (Mpgo.exe)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) 来优化 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用和桌面应用。
+自 Visual Studio 2013 起，可以使用[托管配置文件引导式优化工具 (Mpgo.exe)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) 来优化 Windows 8.x 应用商店应用和桌面应用程序。
 
 有关 ASP.NET 4.5.1 中的新功能，请参阅[适用于 Visual Studio 2013 的 ASP.NET 和 Web 工具发行说明](/aspnet/visual-studio/overview/2013/release-notes).
 
@@ -1944,7 +1944,7 @@ Windows 窗体的改进包括：
 
 - 多个范围。
 
-- 创建 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用程序时可使用的 MEF 子集。 此子集可作为 NuGet 库中的[可下载程序包](https://go.microsoft.com/fwlink/?LinkId=256238)提供。 若要安装此程序包，请在 Visual Studio 中打开项目，从“项目”  菜单中选择“管理 NuGet 包”  ，然后联机搜索 `Microsoft.Composition` 程序包。
+- 创建 Windows 8.x 应用商店应用时可以使用一部分 MEF。 此子集可作为 NuGet 库中的[可下载程序包](https://go.microsoft.com/fwlink/?LinkId=256238)提供。 若要安装此程序包，请在 Visual Studio 中打开项目，从“项目”  菜单中选择“管理 NuGet 包”  ，然后联机搜索 `Microsoft.Composition` 程序包。
 
 有关详细信息，请参阅 [Managed Extensibility Framework (MEF)](../mef/index.md)。
 
@@ -1956,9 +1956,9 @@ Windows 窗体的改进包括：
 
 ### <a name="tools"></a>工具
 
-在 .NET Framework 4.5 中，使用资源文件生成器 (Resgen.exe)，可以通过 .NET Framework 程序集中嵌入的 .resources 文件创建用于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用的 .resw 文件。 有关详细信息，请参阅 [Resgen.exe（资源文件生成器）](../tools/resgen-exe-resource-file-generator.md)。
+在 .NET Framework 4.5 中，使用资源文件生成器 (Resgen.exe)，可以通过 .NET Framework 程序集中嵌入的 .resources 文件创建用于 Windows 8.x 应用商店应用的 .resw 文件。 有关详细信息，请参阅 [Resgen.exe（资源文件生成器）](../tools/resgen-exe-resource-file-generator.md)。
 
-利用按托管配置优化 (Mpgo.exe) 工具，你可以通过优化本机映像程序集来改进应用程序的启动时间、内存使用率（工作集大小）和吞吐量。 该命令行工具会针对本机映像应用程序程序集生成配置文件数据。 请参阅 [Mpgo.exe（按托管配置文件优化工具）](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md)。 自 Visual Studio 2013 起，可以使用 Mpgo.exe 优化 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用和桌面应用。
+利用按托管配置优化 (Mpgo.exe) 工具，你可以通过优化本机映像程序集来改进应用程序的启动时间、内存使用率（工作集大小）和吞吐量。 该命令行工具会针对本机映像应用程序程序集生成配置文件数据。 请参阅 [Mpgo.exe（按托管配置文件优化工具）](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md)。 自 Visual Studio 2013 起，可以使用 Mpgo.exe 优化 Windows 8.x 应用商店应用和桌面应用程序。
 
 <a name="parallel" />
 
@@ -2118,7 +2118,7 @@ ASP.NET 4.5 和 4.5.1 为 Web 窗体、WebSocket 支持、异步处理程序、�
 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
 
-[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用程序为特定窗体因素而设计，并利用 Windows 操作系统的功能。 可以使用一部分 .NET Framework 4.5 或 4.5.1 生成用 C# 或 Visual Basic 编写的 Windows 相关 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用。 该子集称为 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，在 Windows 开发人员中心的[概述](https://go.microsoft.com/fwlink/?LinkId=228491)中进行讨论。
+Windows 8.x 应用商店应用专为特定外形规格而设计，并利用 Windows 操作系统的强大技术支持。 可以使用一部分 .NET Framework 4.5 或 4.5.1 生成用 C# 或 Visual Basic 编写的 Windows 相关 Windows 8.x 应用商店应用。 该子集称为 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，在 Windows 开发人员中心的[概述](https://go.microsoft.com/fwlink/?LinkId=228491)中进行讨论。
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>可移植类库<a name="portable" />
 
@@ -2130,4 +2130,4 @@ ASP.NET 4.5 和 4.5.1 为 Web 窗体、WebSocket 支持、异步处理程序、�
 - [.NET Framework 中辅助功能的新增功能](whats-new-in-accessibility.md)
 - [Visual Studio 2017 中的新增功能](/visualstudio/ide/whats-new-visual-studio-2017)
 - [ASP.NET](/aspnet)
-- [Visual C++ 中的新增功能](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
+- [Visual Studio 中的 C++ 新变化](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

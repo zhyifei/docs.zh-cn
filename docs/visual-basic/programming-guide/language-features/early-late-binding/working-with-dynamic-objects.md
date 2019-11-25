@@ -1,22 +1,22 @@
 ---
-title: 使用动态对象 (Visual Basic)
+title: 使用动态对象
 ms.date: 07/20/2015
 helpviewer_keywords:
 - dynamic objects [Visual Basic]
 ms.assetid: bdee2a00-07ff-46f9-86dd-fdac9b99cc97
-ms.openlocfilehash: ea7d7aae1cd79a0243a9c721b5e3958fba82f84f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 20d007fb48e1db352bab6d8e25d2e60e02554732
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973181"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345165"
 ---
 # <a name="working-with-dynamic-objects-visual-basic"></a>使用动态对象 (Visual Basic)
-动态对象提供另一种方法，而不`Object`类型，将在运行时的后期绑定到一个对象。 通过使用动态中定义的接口在运行时动态对象公开属性和方法等成员<xref:System.Dynamic>命名空间。 可以使用中的类<xref:System.Dynamic>命名空间创建的与静态类型或格式不匹配的数据结构处理的对象。 此外可以使用 IronPython 和 IronRuby 等动态语言中定义的动态对象。 有关演示如何创建动态对象，或使用动态语言中定义的动态对象的示例，请参阅[演练：创建和使用动态对象](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)， <xref:System.Dynamic.DynamicObject>，或<xref:System.Dynamic.ExpandoObject>。  
+Dynamic objects provide another way, other than the `Object` type, to late bind to an object at run time. A dynamic object exposes members such as properties and methods at run time by using dynamic interfaces that are defined in the <xref:System.Dynamic> namespace. You can use the classes in the <xref:System.Dynamic> namespace to create objects that work with data structures that do not match a static type or format. You can also use the dynamic objects that are defined in dynamic languages such as IronPython and IronRuby. For examples that show how to create dynamic objects or use a dynamic object defined in a dynamic language, see [Walkthrough: Creating and Using Dynamic Objects](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md), <xref:System.Dynamic.DynamicObject>, or <xref:System.Dynamic.ExpandoObject>.  
   
- Visual Basic 将绑定到对象中的动态语言运行时和 IronPython 和 IronRuby 等动态语言使用<xref:System.Dynamic.IDynamicMetaObjectProvider>接口。 类的实现示例`IDynamicMetaObjectProvider`接口是<xref:System.Dynamic.DynamicObject>和<xref:System.Dynamic.ExpandoObject>类。  
+ Visual Basic binds to objects from the dynamic language runtime and dynamic languages such as IronPython and IronRuby by using the <xref:System.Dynamic.IDynamicMetaObjectProvider> interface. Examples of classes that implement the `IDynamicMetaObjectProvider` interface are the <xref:System.Dynamic.DynamicObject> and <xref:System.Dynamic.ExpandoObject> classes.  
   
- 如果对实现的对象进行后期绑定调用`IDynamicMetaObjectProvider`接口，Visual Basic 将绑定到使用该接口的动态对象。 如果对未实现的对象进行后期绑定调用`IDynamicMetaObjectProvider`接口，或者，如果在调用`IDynamicMetaObjectProvider`接口失败，则通过使用 Visual Basic 运行时的后期绑定功能，Visual Basic 将绑定到对象。  
+ If a late-bound call is made to an object that implements the `IDynamicMetaObjectProvider` interface, Visual Basic binds to the dynamic object by using that interface. If a late-bound call is made to an object that does not implement the `IDynamicMetaObjectProvider` interface, or if the call to the `IDynamicMetaObjectProvider` interface fails, Visual Basic binds to the object by using the late-binding capabilities of the Visual Basic runtime.  
   
 ## <a name="see-also"></a>请参阅
 

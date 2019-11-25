@@ -2,12 +2,12 @@
 title: 集运算 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: cea0c0ba4dd6c7f874f69e3ec4a179248397b67d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7fd61e17c37c3d9056159cf4ec3ccfafa2ceb871
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591113"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140928"
 ---
 # <a name="set-operations-c"></a>集运算 (C#)
 LINQ 中的集运算是指根据相同或不同集合（或集）中是否存在等效元素来生成结果集的查询运算。  
@@ -33,7 +33,7 @@ LINQ 中的集运算是指根据相同或不同集合（或集）中是否存在
 ### <a name="except"></a>Except  
  下图演示 <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType> 的行为。 返回的序列只包含位于第一个输入序列但不位于第二个输入序列的元素。  
   
- ![显示 Except&#40;&#41; 操作的图形](./media/set-operations/except-behavior-graphic.png "显示 Except 的行为。")  
+ ![显示 Except() 的操作的图](./media/set-operations/except-behavior-graphic.png "显示 Except 的行为。")  
   
 ### <a name="intersect"></a>相交  
  下图演示 <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType> 的行为。 返回的序列包含两个输入序列共有的元素。  
@@ -48,5 +48,5 @@ LINQ 中的集运算是指根据相同或不同集合（或集）中是否存在
 
 - <xref:System.Linq>
 - [标准查询运算符概述 (C#)](./standard-query-operators-overview.md)
-- [如何：组合和比较字符串集合 (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md)
+- [如何合并和比较字符串集合 (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md)
 - [如何：查找两个列表之间的差集 (LINQ) (C#)](./how-to-find-the-set-difference-between-two-lists-linq.md)

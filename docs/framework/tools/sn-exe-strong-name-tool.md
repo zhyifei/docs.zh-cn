@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: dc9b8beafe1b174543afaf9da7e7180638d561ff
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 90cad6529b3ac2a8afedaca0c43d5c7561dcf9e6
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104353"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138961"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe（强名称工具）
 强名称工具 (Sn.exe) 有助于使用[强名称](../../standard/assembly/strong-named.md)对程序集进行签名。 Sn.exe 提供了用于密钥管理、签名生成和签名验证的选项。  
@@ -55,7 +55,7 @@ sn [-quiet][option [parameter(s)]]
 |`-o infile [outfile]`|从 infile 中提取公钥并将其存储在 .csv 文件中  。 公钥的每一字节都由逗号分隔。 这种格式可以用来在源代码中将对密钥的引用硬编码为已初始化的数组。 如果不指定 outfile，则此选项将输出放到剪贴板上  。 **注意：** 此选项不验证输入是否只是公钥。 如果 `infile` 包含带有私钥的密钥对，则会同时提取私钥。|  
 |`-p infile outfile [hashalg]`|从 infile 中的密钥对中提取公钥，并将其存储在 outfile 中，可选择使用 hashalg 指定的 RSA 算法    。 此公钥可用于通过[程序集链接器 (Al.exe)](al-exe-assembly-linker.md) 的 /delaysign+ 和 /keyfile 选项，对程序集进行延迟签名   。 如果对程序集进行延迟签名，则在编译时只设置公钥，并在文件中为要在以后添加的签名（当私钥已知时）保留空间。|  
 |`-pc container outfile [hashalg]`|从 container 中的密钥对中提取公钥并将其存储在 outfile 中   。 如果使用 hashalg 选项，则使用 RSA 算法提取公钥  。|  
-|`-Pb [y &#124; n]`|指定是否强制执行强名称跳过策略。 如果指定 y，则在将完全信任程序集加载到完全信任 <xref:System.AppDomain> 时，不验证这些程序集的强名称  。 如果指定 n，则会验证强名称是否正确，但不会验证是否具有特定强名称  。 <xref:System.Security.Permissions.StrongNameIdentityPermission> 对完全信任程序集不起作用。 你必须自己对强名称是否匹配进行检查。<br /><br /> 如果既没有指定 `y` 也没有指定 `n`，则此选项显示当前设置。 默认值为 `y`。 **注意：** 在 64 位计算机上，必须同时在 Sn.exe 的 32 位和 64 位实例中设置此参数。|  
+|`-Pb [y|n]`|指定是否强制执行强名称跳过策略。 如果指定 y，则在将完全信任程序集加载到完全信任 <xref:System.AppDomain> 时，不验证这些程序集的强名称  。 如果指定 n，则会验证强名称是否正确，但不会验证是否具有特定强名称  。 <xref:System.Security.Permissions.StrongNameIdentityPermission> 对完全信任程序集不起作用。 你必须自己对强名称是否匹配进行检查。<br /><br /> 如果既没有指定 `y` 也没有指定 `n`，则此选项显示当前设置。 默认值为 `y`。 **注意：** 在 64 位计算机上，必须同时在 Sn.exe 的 32 位和 64 位实例中设置此参数。|  
 |`-q[uiet]`|指定安静模式；取消显示成功消息。|  
 |`-R[a] assembly infile`|使用 infile 中的密钥对，为先前已签名的程序集或延迟签名的程序集重新签名  。<br /><br /> 如果使用了 -Ra，则重新计算程序集中所有文件的哈希值  。|  
 |`-Rc[a] assembly container`|使用 container 中的密钥对，为之前已签名的程序集或延迟签名的程序集重新签名  。<br /><br /> 如果使用了 -Rca，则重新计算程序集中所有文件的哈希值  。|  

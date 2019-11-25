@@ -1,15 +1,15 @@
 ---
-title: 如何：查找具有特定属性的元素 (XPath-LINQ to XML) (C#)
+title: 如何查找具有特定属性的元素 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: daed00dd-923a-43be-8a90-eee406f6f574
-ms.openlocfilehash: 1e71dd7f6619c051d0e3cdef2726daff82ba3d70
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e79cad3ad6fb0bf88e388b552f8e39327acfb4ad
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253673"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141039"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>如何：查找具有特定属性的元素 (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>如何查找具有特定属性的元素 (XPath-LINQ to XML) (C#)
 有时需要查找具有特定属性的所有元素。 您并不关心属性的内容， 而是根据属性是否存在进行选择。  
   
  XPath 表达式为：  

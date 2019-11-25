@@ -1,20 +1,20 @@
 ---
-title: Visual Basic 语言规范
+title: 语言规范
 ms.date: 08/02/2017
 helpviewer_keywords:
 - resources [Visual Basic], specifications
 - Visual Basic code, specifications
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
-ms.openlocfilehash: 399bc15f3249c99f1c94338869e77befc8c26015
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0df3f0a49d1dc84f5a6f3218b23f20ce3d43a1fc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766423"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352871"
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic 语言规范
-Visual Basic 语言规范是解答有关 Visual Basic 语法和句法的所有问题的权威来源。 它包含有关语言，包括 Visual Basic 参考文档中未涵盖的多个点的详细的信息。  
+The Visual Basic Language Specification is the authoritative source for answers to all questions about Visual Basic grammar and syntax. It contains detailed information about the language, including many points not covered in the Visual Basic reference documentation.  
   
  此规范可在 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=188623)下载使用。  
   

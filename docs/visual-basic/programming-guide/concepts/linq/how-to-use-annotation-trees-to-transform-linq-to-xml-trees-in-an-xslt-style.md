@@ -1,15 +1,15 @@
 ---
-title: 如何：使用批注以 XSLT 样式转换 LINQ to XML 树（Visual Basic）
+title: 如何：使用批注以 XSLT 样式转换 LINQ to XML 树
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: b8f15c4dc6016e48619d26e7cc8717a2a3c5acd5
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: d9cb32462535f099107343bd9069b4da3508c5b0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581980"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348359"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>如何：使用批注以 XSLT 样式转换 LINQ to XML 树（Visual Basic）
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style (Visual Basic)
 
 使用批注可帮助进行 XML 树的转换。
 
@@ -19,7 +19,7 @@ ms.locfileid: "72581980"
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>
 ```
 
-任何给定的文本节点都可以具有任意数量的子 `<b>` 和 `<i>` 元素。 此方法扩展到多种其他情况：例如，可以包含各种子元素（如常规段落、项目符号段落和位图）的页面。 表中的单元格可以包含文本，下拉列表或位图。 以文档为中心的 XML 的一个主要特性是您不必知道任一特定元素将具有哪些子元素。
+任何给定的文本节点都可以具有任意数量的子 `<b>` 和 `<i>` 元素。 This approach extends to a number of other situations: such as, pages that can contain a variety of child elements, such as regular paragraphs, bulleted paragraphs, and bitmaps. 表中的单元格可以包含文本，下拉列表或位图。 以文档为中心的 XML 的一个主要特性是您不必知道任一特定元素将具有哪些子元素。
 
 如果在转换树中的元素时不必知道有关要转换元素的子级的太多信息，则这种方法（使用批注）就是一种有效的方法。
 
@@ -43,7 +43,7 @@ ms.locfileid: "72581980"
 
 ## <a name="transforming-a-tree"></a>转换一个树
 
-第一个示例将所有 `Paragraph` 节点重命名为 `para`：
+This first example renames all `Paragraph` nodes to `para`:
 
 ```vb
 Imports <xmlns:xf="http://www.microsoft.com/LinqToXmlTransform/2007">
@@ -83,7 +83,7 @@ End Module
 </Root>
 ```
 
-## <a name="a-more-complicated-transform"></a>更复杂的转换
+## <a name="a-more-complicated-transform"></a>A more complicated transform
 
 下面的示例对树进行查询并计算 `Data` 元素的平均值和总和，并将它们作为新元素添加到树中。
 
@@ -158,29 +158,29 @@ After Transform
 </Root>
 ```
 
-## <a name="effecting-the-transform"></a>影响转换
+## <a name="effecting-the-transform"></a>Effecting the transform
 
 小函数 `XForm` 可以从原始的、已批注的树创建新的、转换后的树。
 
 该函数的伪代码非常简单：
 
-> 函数采用 System.xml.linq.xelement> 作为参数，并返回 System.xml.linq.xelement>。
+> The function takes an XElement as an argument and returns an XElement.
 >
-> 如果元素具有 System.xml.linq.xelement> 批注，则返回新的 System.xml.linq.xelement>：
+> If an element has an XElement annotation, then return a new XElement:
 >
-> - 新 System.xml.linq.xelement> 的名称是 annotation 元素的名称。
-> - 所有属性都将从注释复制到新节点。
-> - 所有子节点都从批注进行复制，但特殊节点 xf： ApplyTransforms 被识别，并且源元素的子节点会进行迭代。 如果源子节点不是 System.xml.linq.xelement>，则会将其复制到新树。 如果源子级是 System.xml.linq.xelement>，则通过以递归方式调用此函数来转换它。
+> - The name of the new XElement is the annotation element's name.
+> - All attributes are copied from the annotation to the new node.
+> - All child nodes are copied from the annotation, with the exception that the special node xf:ApplyTransforms is recognized, and the source element's child nodes are iterated. If the source child node is not an XElement, it is copied to the new tree. If the source child is an XElement, then it is transformed by calling this function recursively.
 >
-> 如果未对元素进行批注：
+> If an element is not annotated:
 >
-> - 返回新的 System.xml.linq.xelement>
->   - 新 System.xml.linq.xelement> 的名称为源元素的名称。
->   - 所有属性均从源元素复制到目标的元素。
->   - 从源元素复制所有子节点。
->   - 如果源子节点不是 System.xml.linq.xelement>，则会将其复制到新树。 如果源子级是 System.xml.linq.xelement>，则通过以递归方式调用此函数来转换它。
+> - Return a new XElement
+>   - The name of the new XElement is the source element's name.
+>   - All attributes are copied from the source element to the destination's element.
+>   - All child nodes are copied from the source element.
+>   - If the source child node is not an XElement, it is copied to the new tree. If the source child is an XElement, then it is transformed by calling this function recursively.
 
-下面的代码是此函数的实现：
+The following code is the implementation of this function:
 
 ```vb
 ' Build a transformed XML tree per the annotations.
@@ -227,7 +227,6 @@ End Function
 下面的代码是包括 `XForm` 函数的完整示例。 它包括此类型转换的几种典型用法：
 
 ```vb
-Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Text
@@ -377,4 +376,4 @@ After Transform
 
 ## <a name="see-also"></a>请参阅
 
-- [高级 LINQ to XML 编程（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

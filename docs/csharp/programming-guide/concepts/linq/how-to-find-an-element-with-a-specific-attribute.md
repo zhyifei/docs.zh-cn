@@ -1,21 +1,21 @@
 ---
-title: 如何：查找具有特定属性的元素 (C#)
+title: 如何查找具有特定特性的元素 (C#)
 ms.date: 07/20/2015
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
-ms.openlocfilehash: da2d1691af6268a97e1f586e92c26bbb26906100
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 106885b8658c493caab3101e6b4ce921589076eb
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593603"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141165"
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>如何：查找具有特定属性的元素 (C#)
+# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>如何查找具有特定特性的元素 (C#)
 本主题演示如何查找其属性具有特定值的元素。  
   
 ## <a name="example"></a>示例  
  本示例演示如何查找具有值为“Billing”的 `Address` 属性的 `Type` 元素。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md)。  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrder.xml");  
@@ -43,7 +43,7 @@ foreach (XElement el in address)
 ## <a name="example"></a>示例  
  下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息，请参阅[命名空间概述(LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的典型采购单](./sample-xml-file-typical-purchase-order-in-a-namespace.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的典型采购单](./sample-xml-file-typical-purchase-order-in-a-namespace.md)。  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrderInNamespace.xml");  

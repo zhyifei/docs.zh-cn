@@ -1,5 +1,5 @@
 ---
-title: Visual Basic 命令行编译器
+title: Command-line compiler
 ms.date: 02/20/2018
 helpviewer_keywords:
 - compilers [Visual Basic], Visual Basic options
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - compiler options, Visual Basic
 - Visual Basic compiler, options
 ms.assetid: 6b57c444-50c7-4b88-8f59-ed65cff5e05c
-ms.openlocfilehash: d5bccab71d790a7a70d012375d3f47676cf83c6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65f617a42e6281ca3b2336319d8a61d84e0386d6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794103"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344230"
 ---
-# <a name="visual-basic-command-line-compiler"></a>Visual Basic 命令行编译器
+# <a name="visual-basic-command-line-compiler"></a>Visual Basic command-line compiler
 
-Visual Basic 命令行编译器提供了从 Visual Studio 集成的开发环境 (IDE) 中编译程序的替代方法。 本部分包含 Visual Basic 编译器选项的说明。
+The Visual Basic command-line compiler provides an alternative to compiling programs from within the Visual Studio integrated development environment (IDE). This section contains descriptions for the Visual Basic compiler options.
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 ## <a name="in-this-section"></a>本节内容
 
 [从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
-介绍 Visual Basic 命令行编译器，作为编译程序从 Visual Studio IDE 中的替代方法提供。
+Describes the Visual Basic command-line compiler, which is provided as an alternative to compiling programs from within the Visual Studio IDE.
 
 [按字母顺序列出的 Visual Basic 编译器选项](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
-列出按字母顺序排列的表中的编译器选项
+Lists compiler options in an alphabetical table
 
 [按类别列出的 Visual Basic 编译器选项](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
 显示功能组中的编译器选项。
@@ -35,4 +35,4 @@ Visual Basic 命令行编译器提供了从 Visual Studio 集成的开发环境 
 ## <a name="related-sections"></a>相关章节
 
 [Visual Basic 指南](../../index.md)  
-用于 Visual Basic 文档的起始点。
+The starting point for the Visual Basic documentation.

@@ -1,15 +1,15 @@
 ---
-title: 如何：查找子代元素 (XPath-LINQ to XML) (C#)
+title: 如何查找子代元素 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b318da39-bb8b-4c56-a019-e13b12b01831
-ms.openlocfilehash: 602e04eaf5dff9f95a495daea9606afb8c162bb2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c90651502629284c67cc16de8a1aa59c392ae178
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253713"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141114"
 ---
-# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>如何：查找子代元素 (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>如何查找子代元素 (XPath-LINQ to XML) (C#)
 本主题演示如何获取具有特定名称的后代元素。  
   
  XPath 表达式为 `//Name`。  
@@ -17,7 +17,7 @@ ms.locfileid: "70253713"
 ## <a name="example"></a>示例  
  本示例查找名为 `Name` 的所有后代。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  

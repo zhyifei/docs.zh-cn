@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 4fcf01c9f65f2b1bd11462a6f7d61b3551f37b86
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 332a88530010197187ca3ea787e152b0c95a5514
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320649"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141594"
 ---
 # <a name="configuring-wcf-services"></a>配置 WCF 服务
 
@@ -19,7 +19,7 @@ ms.locfileid: "72320649"
   
 ## <a name="in-this-section"></a>本节内容  
  [简化配置](simplified-configuration.md)  
- 从 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 开始，WCF 附带了新的默认配置模型，该模型可简化 WCF 配置要求。 如果没有为特定服务提供任何 WCF 配置，运行时将使用默认终结点、绑定和行为自动配置服务。  
+ 从 .NET Framework 4 开始，WCF 附带了新的默认配置模型，该模型可简化 WCF 配置要求。 如果没有为特定服务提供任何 WCF 配置，运行时将使用默认终结点、绑定和行为自动配置服务。  
   
  [使用配置文件配置服务](configuring-services-using-configuration-files.md)  
  Windows Communication Foundation （WCF）服务是使用 .NET Framework 配置技术配置的。 最常见的情况是，将 XML 元素添加到承载 WCF 服务的 Internet Information Services （IIS）站点的 web.config 文件中。 这些元素允许您更改详细信息，例如每台计算机上的终结点地址（用于与服务进行通信的实际地址）。  

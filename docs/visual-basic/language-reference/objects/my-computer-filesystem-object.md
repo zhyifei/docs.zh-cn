@@ -1,5 +1,5 @@
 ---
-title: My.user 对象 (Visual Basic)
+title: My.Computer.FileSystem 对象
 ms.date: 07/20/2015
 helpviewer_keywords:
 - FileSystem module
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Seek function
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
-ms.openlocfilehash: 311f605d3f4e77ac2828b8851cbf318da1a0e582
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 958483be7eb200b5f3d3b46738df0a3c50c4f3c3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963704"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347239"
 ---
 # <a name="mycomputerfilesystem-object"></a>My.Computer.FileSystem 对象
 提供了用于处理驱动器、文件和目录的属性和方法。  
@@ -25,17 +25,17 @@ ms.locfileid: "69963704"
 ## <a name="remarks"></a>备注  
  有关 `My.Computer.FileSystem` 对象所使用方法和属性的信息，请参阅 <xref:Microsoft.VisualBasic.FileIO.FileSystem>。  
   
- 有关详细信息, 请参阅[使用 Visual Basic 进行文件访问](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)。  
+ For more information, see [File Access with Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
   
 > [!NOTE]
-> 你还可以使用<xref:System.IO?displayProperty=nameWithType>命名空间中的类来处理驱动器、文件和目录。  
+> You can also use classes in the <xref:System.IO?displayProperty=nameWithType> namespace to work with drives, files, and directories.  
   
 ## <a name="requirements"></a>要求  
  **命名空间：** <xref:Microsoft.VisualBasic.MyServices>  
   
- **类:** (提供对的<xref:Microsoft.VisualBasic.FileIO.FileSystem>访问) <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy>  
+ **Class:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
   
- **件**Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>请参阅
 

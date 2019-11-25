@@ -1,16 +1,16 @@
 ---
-title: 特殊字符（Visual Basic 引用）
+title: 特殊字符
 ms.date: 10/31/2017
-ms.openlocfilehash: 7085c020cc21b0ca8b3fc46226c864d736ab0085
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 07522ae43c40af5be844d873159a4f54a15f90e8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582372"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349606"
 ---
-# <a name="special-characters-visual-basic-reference"></a>特殊字符（Visual Basic 引用）
+# <a name="special-characters-visual-basic-reference"></a>Special Characters (Visual Basic Reference)
 
-特殊字符是预定义的上下文字符，用于修改它们所预置的程序元素。 Visual Basic 支持以下特殊字符：
+Special characters are predefined, contextual characters that modifies the program element to which they are prepended. Visual Basic supports the following special character:
 
 - [$](interpolated.md)：内插的字符串字符。
 

@@ -1,26 +1,29 @@
 ---
-title: 访问应用程序设置 (Visual Basic)
+title: 访问应用程序设置
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], application settings
 - examples [Visual Basic], application settings
 ms.assetid: e38d0cc7-247a-46ca-ba04-f2913f0adb2e
-ms.openlocfilehash: 56bce47aa37b536c494e43d26bead3114e7dcfa1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49f65e9c39a29056cb1c552f0d577fcf0d75d658
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014409"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353248"
 ---
 # <a name="accessing-application-settings-visual-basic"></a>访问应用程序设置 (Visual Basic)
+
 本部分包含描述 `My.Settings` 对象及其允许完成的任务的主题。  
   
 ## <a name="mysettings"></a>My.Settings  
- `My.Settings` 对象的属性提供对应用程序设置的访问。 若要添加或删除设置，请使用“项目设计器”的“设置”窗格。  
+
+ `My.Settings` 对象的属性提供对应用程序设置的访问。 若要添加或删除设置，请使用“项目设计器”的“设置”窗格。    
   
  `My.Settings` 对象的方法允许保存当前用户设置或将用户设置还原为上次保存的值。  
   
 ## <a name="tasks"></a>任务  
+
  下表列出了演示如何访问应用程序窗体的示例。  
   
 |功能|查看|  

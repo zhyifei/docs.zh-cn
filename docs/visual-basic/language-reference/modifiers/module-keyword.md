@@ -1,5 +1,5 @@
 ---
-title: Module <keyword> (Visual Basic)
+title: Module <keyword>
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ModuleAttribute
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Module modifier
 - attribute blocks, Module keyword
 ms.assetid: d971b940-05ab-4d56-8485-e3b8a661906b
-ms.openlocfilehash: f6ded1184aedf1702f4b6e5eebb85709cf8e39f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd2f762181b5a702f0b0defd5b71bb7bdf129c7b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920700"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351549"
 ---
-# <a name="module-keyword-visual-basic"></a>模块\<关键字 > (Visual Basic)
-指定源文件开头特性应用于当前程序集模块。  
+# <a name="module-keyword-visual-basic"></a>Module \<keyword> (Visual Basic)
+Specifies that an attribute at the beginning of a source file applies to the current assembly module.  
   
 ## <a name="remarks"></a>备注  
- 许多属性适用于单个编程元素，如类或属性。 此类将特性应用通过将附加特性块，在尖括号内 (`< >`)，直接向声明语句。  
+ Many attributes pertain to an individual programming element, such as a class or property. You apply such an attribute by attaching the attribute block, within angle brackets (`< >`), directly to the declaration statement.  
   
- 如果属性不仅到下面的元素，而且当前的程序集模块，源文件的起始处插入分的特性块和用于标识与特性`Module`关键字。 如果应用于整个程序集，则使用[程序集](../../../visual-basic/language-reference/modifiers/assembly.md)关键字。  
+ If an attribute pertains not only to the following element but to the current assembly module, you place the attribute block at the beginning of the source file and identify the attribute with the `Module` keyword. If it applies to the entire assembly, you use the [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) keyword.  
   
- `Module`修饰符不是与相同[Module 语句](../../../visual-basic/language-reference/statements/module-statement.md)。  
+ The `Module` modifier is not the same as the [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).  
   
 ## <a name="see-also"></a>请参阅
 

@@ -1,15 +1,15 @@
 ---
-title: 对数据进行排序（Visual Basic）
+title: 对数据进行排序
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: f8b1734597efa3134c95c9764bad7f79fd3cf1e4
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: f1d4d8afb9b6e176a7ac048ba3270ecafdce24c9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524080"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350589"
 ---
-# <a name="sorting-data-visual-basic"></a>对数据进行排序（Visual Basic）
+# <a name="sorting-data-visual-basic"></a>Sorting Data (Visual Basic)
 
 排序操作基于一个或多个属性对序列的元素进行排序。 第一个排序条件对元素执行主要排序。 通过指定第二个排序条件，您可以对每个主要排序组内的元素进行排序。
 
@@ -21,7 +21,7 @@ ms.locfileid: "72524080"
 
 ## <a name="methods"></a>方法
 
-|方法名|描述|Visual Basic 查询表达式语法|详细信息|
+|方法名|描述|Visual Basic Query Expression Syntax|详细信息|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |OrderBy|按升序对值排序。|`Order By`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|
 |OrderByDescending|按降序对值排序。|`Order By … Descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|
@@ -153,4 +153,4 @@ MsgBox(sb.ToString())
 - [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Order By 子句](../../../../visual-basic/language-reference/queries/order-by-clause.md)
 - [如何：对查询结果进行排序](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)
-- [如何：按任意词或字段对文本数据进行排序或筛选（LINQ）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

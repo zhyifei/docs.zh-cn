@@ -1,5 +1,5 @@
 ---
-title: 如何：隐藏与变量同名的变量 (Visual Basic)
+title: 如何：隐藏与您的变量同名的变量
 ms.date: 07/20/2015
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
@@ -12,41 +12,41 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-ms.openlocfilehash: 487e0a15ba6b52f92ab39fe0bae4ab15fa92707f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0915adbbabb778b1bdd3b6b30e56725a7e74867c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629987"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345358"
 ---
-# <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>如何：隐藏与变量同名的变量 (Visual Basic)
+# <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>如何：隐藏与您的变量同名的变量 (Visual Basic)
 
-您*可以通过隐藏*变量来隐藏该变量, 也就是说, 使用同一名称的变量重新定义该变量即可。 您可以通过两种方式隐藏要隐藏的变量:
+You can hide a variable by *shadowing* it, that is, by redefining it with a variable of the same name. You can shadow the variable you want to hide in two ways:
 
-- **通过范围隐藏。** 可以通过范围将其隐藏, 方法是在包含要隐藏的变量的区域的子区域内重新声明。
+- **Shadowing Through Scope.** You can shadow it through scope by redeclaring it inside a subregion of the region containing the variable you want to hide.
 
-- **通过继承隐藏。** 如果要隐藏的变量是在类级别定义的, 可以通过继承将其隐藏, 方法是使用派生类中的[Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)关键字对其进行重新声明。
+- **Shadowing Through Inheritance.** If the variable you want to hide is defined at class level, you can shadow it through inheritance by redeclaring it with the [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) keyword in a derived class.
 
-## <a name="two-ways-to-hide-a-variable"></a>用于隐藏变量的两种方法
+## <a name="two-ways-to-hide-a-variable"></a>Two Ways to Hide a Variable
 
-#### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a>通过使用范围隐藏变量来隐藏变量
+#### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a>To hide a variable by shadowing it through scope
 
-1. 确定定义要隐藏的变量的区域, 并确定要将其与变量一起重新定义的子区域。
+1. Determine the region defining the variable you want to hide, and determine a subregion in which to redefine it with your variable.
 
-    |变量的区域|允许用于重新定义的子区域|
+    |Variable's region|Allowable subregion for redefining it|
     |-----------------------|-------------------------------------------|
-    |模块|模块内的类|
-    |类|类中的子类<br /><br /> 类中的过程|
+    |模块|A class within the module|
+    |实例|A subclass within the class<br /><br /> A procedure within the class|
 
-    不能在该过程中的块内重新定义过程变量, 例如在`If`...`End If` 构造`For`或循环。
+    You cannot redefine a procedure variable in a block within that procedure, for example in an `If`...`End If` construction or a `For` loop.
 
-2. 如果子区域尚不存在, 则创建它。
+2. Create the subregion if it does not already exist.
 
-3. 在子区域内, 编写声明隐藏变量的[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)。
+3. Within the subregion, write a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) declaring the shadowing variable.
 
-    当子区域内的代码引用变量名时, 编译器解析对隐藏变量的引用。
+    When code inside the subregion refers to the variable name, the compiler resolves the reference to the shadowing variable.
 
-    下面的示例说明了通过范围进行的隐藏, 以及跳过隐藏的引用。
+    The following example illustrates shadowing through scope, as well as a reference that bypasses the shadowing.
 
     ```vb
     Module shadowByScope
@@ -68,21 +68,21 @@ ms.locfileid: "68629987"
     End Module
     ```
 
-    前面的示例在模块级`num`和过程级别 (在过程`show`中) 声明变量。 局部变量`num`将隐藏`num` 中`show`的模块级变量, 因此本地变量设置为2。 但是, 在此`num` `useModuleLevelNum`过程中没有要隐藏的局部变量。 因此, `useModuleLevelNum`将模块级变量的值设置为1。
+    The preceding example declares the variable `num` both at module level and at procedure level (in the procedure `show`). The local variable `num` shadows the module-level variable `num` within `show`, so the local variable is set to 2. However, there is no local variable to shadow `num` in the `useModuleLevelNum` procedure. Therefore, `useModuleLevelNum` sets the value of the module-level variable to 1.
 
-    通过`MsgBox`使用模块`show`名称限定`num` , 中的调用会绕过隐藏机制。 因此, 它会显示模块级变量, 而不是局部变量。
+    The `MsgBox` call inside `show` bypasses the shadowing mechanism by qualifying `num` with the module name. Therefore, it displays the module-level variable instead of the local variable.
 
-#### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>通过继承隐藏变量来隐藏变量
+#### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>To hide a variable by shadowing it through inheritance
 
-1. 确保要隐藏的变量是在类中声明, 在类级别 (在任何过程之外) 声明。 否则, 不能通过继承将其隐藏起来。
+1. Be sure the variable you want to hide is declared in a class, and at class level (outside any procedure). Otherwise you cannot shadow it through inheritance.
 
-2. 定义派生自变量的类的类 (如果尚不存在)。
+2. Define a class derived from the variable's class if one does not already exist.
 
-3. 在派生类中, 编写声明`Dim`变量的语句。 在声明中包含[Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)关键字。
+3. Inside the derived class, write a `Dim` statement declaring your variable. Include the [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) keyword in the declaration.
 
-    当派生类中的代码引用变量名时, 编译器会将对变量的引用解析为。
+    When code in the derived class refers to the variable name, the compiler resolves the reference to your variable.
 
-    下面的示例演示通过继承进行的隐藏。 它创建两个引用, 一个用于访问隐藏变量, 另一个用于绕过隐藏。
+    The following example illustrates shadowing through inheritance. It makes two references, one that accesses the shadowing variable and one that bypasses the shadowing.
 
     ```vb
     Public Class shadowBaseClass
@@ -99,19 +99,19 @@ ms.locfileid: "68629987"
     End Class
     ```
 
-    前面的示例声明基类中`shadowString`的变量, 并将其隐藏在派生类中。 派生类`showStrings`中的过程在名称`shadowString`不合格时显示字符串的隐藏版本。 `shadowString` 当`MyBase`用关键字限定时, 它会显示隐藏的版本。
+    The preceding example declares the variable `shadowString` in the base class and shadows it in the derived class. The procedure `showStrings` in the derived class displays the shadowing version of the string when the name `shadowString` is not qualified. It then displays the shadowed version when `shadowString` is qualified with the `MyBase` keyword.
 
 ## <a name="robust-programming"></a>可靠编程
 
-隐藏引入了一个具有相同名称的变量的多个版本。 当代码语句引用变量名时, 编译器解析引用的版本取决于一些因素, 如代码语句的位置和符合条件的字符串的状态。 这可能会增加引用隐藏变量的意外版本的风险。 您可以通过完全限定对隐藏变量的所有引用来降低风险。
+Shadowing introduces more than one version of a variable with the same name. When a code statement refers to the variable name, the version to which the compiler resolves the reference depends on factors such as the location of the code statement and the presence of a qualifying string. This can increase the risk of referring to an unintended version of a shadowed variable. You can lower that risk by fully qualifying all references to a shadowed variable.
 
 ## <a name="see-also"></a>请参阅
 
 - [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Visual Basic 中的阴影](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [隐藏和重写之间的差异](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
 - [如何：隐藏继承的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
-- [如何：访问由派生类隐藏的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
+- [如何：访问被派生类隐藏的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
 - [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Me、My、MyBase 和 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [继承的基础知识](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

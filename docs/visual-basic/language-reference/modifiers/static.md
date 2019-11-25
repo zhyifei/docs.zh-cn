@@ -1,5 +1,5 @@
 ---
-title: Static (Visual Basic)
+title: Static
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Static
@@ -7,42 +7,42 @@ helpviewer_keywords:
 - static modifier
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
-ms.openlocfilehash: f1031fe005a2fc264b50116b8ea3311dc7065dbc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f020756466888f51298abb423997906ddc7caff7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647639"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350762"
 ---
 # <a name="static-visual-basic"></a>Static (Visual Basic)
-指定一个或多个声明的局部变量继续存在，并在其中声明它们的过程终止后保留最新值。  
+Specifies that one or more declared local variables are to continue to exist and retain their latest values after termination of the procedure in which they are declared.  
   
 ## <a name="remarks"></a>备注  
- 通常情况下，在过程中的本地变量将消失就立即停止该过程。 静态变量继续存在，并保留其最新值。 你的代码调用该过程，下一次未重新初始化该变量，并且它仍保留分配给它的最新值。 静态变量将继续存在的类或模块中定义的生存期内。  
+ Normally, a local variable in a procedure ceases to exist as soon as the procedure stops. A static variable continues to exist and retains its most recent value. The next time your code calls the procedure, the variable is not reinitialized, and it still holds the latest value that you assigned to it. A static variable continues to exist for the lifetime of the class or module that it is defined in.  
   
 ## <a name="rules"></a>规则  
   
-- **声明上下文。** 可以使用`Static`仅对本地变量。 这意味着声明上下文`Static`变量必须是一个过程或块，在过程中，并且它不能为源文件、 命名空间、 类、 结构或模块。  
+- **Declaration Context.** You can use `Static` only on local variables. This means the declaration context for a `Static` variable must be a procedure or a block in a procedure, and it cannot be a source file, namespace, class, structure, or module.  
   
-     不能使用`Static`结构过程内。  
+     You cannot use `Static` inside a structure procedure.  
   
-- 数据类型的`Static`无法推断局部变量。 有关详细信息，请参阅[本地类型推断](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
+- The data types of `Static` local variables cannot be inferred. For more information, see [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
-- **组合的修饰符。** 不能指定`Static`连同`ReadOnly`， `Shadows`，或`Shared`同一声明中。  
+- **Combined Modifiers.** You cannot specify `Static` together with `ReadOnly`, `Shadows`, or `Shared` in the same declaration.  
   
 ## <a name="behavior"></a>行为  
- 当声明中的静态变量`Shared`过程中，只有一个静态变量副本是可用于整个应用程序。 在调用`Shared`过程的方法是使用类名称，不是指向类的实例的变量。  
+ When you declare a static variable in a `Shared` procedure, only one copy of the static variable is available for the whole application. You call a `Shared` procedure by using the class name, not a variable that points to an instance of the class.  
   
- 当声明不是一个过程中的静态变量`Shared`，只有一个变量的副本可为每个类实例。 使用指向类的特定实例的变量调用的非共享过程。  
+ When you declare a static variable in a procedure that isn't `Shared`, only one copy of the variable is available for each instance of the class. You call a non-shared procedure by using a variable that points to a specific instance of the class.  
   
 ## <a name="example"></a>示例  
  以下示例演示了 `Static` 的用法。  
   
  [!code-vb[VbVbalrKeywords#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#5)]  
   
- `Static`变量`totalSales`仅一次初始化为 0。 你输入每次`updateSales`，`totalSales`仍具有为其计算的最新值。  
+ The `Static` variable `totalSales` is initialized to 0 only one time. Each time that you enter `updateSales`, `totalSales` still has the most recent value that you calculated for it.  
   
- `Static`修饰符可用于在此上下文中：  
+ The `Static` modifier can be used in this context:  
   
  [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "64647639"
 
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
-- [在 Visual Basic 中的生存期](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Lifetime in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [变量声明](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

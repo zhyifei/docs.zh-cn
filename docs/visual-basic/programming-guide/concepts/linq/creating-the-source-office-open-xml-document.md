@@ -1,15 +1,15 @@
 ---
-title: 创建源 Office Open XML 文档（Visual Basic）
+title: 创建源 Office Open XML 文档
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: 75030f3d1c2940cc84f81b85dca921497137439f
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 5f7a9baebd2d1db73ab17924e0ff8a7408637ee8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352945"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346421"
 ---
-# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>创建源 Office Open XML 文档（Visual Basic）
+# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Creating the Source Office Open XML Document (Visual Basic)
 本主题演示如何创建本教程其他示例中使用的 Office Open XML WordprocessingML 文档。 如果您按照这些说明操作，您的输出结果将与每个示例中提供的输出相匹配。  
   
  不过，本教程中的示例可以使用任何有效的 WordprocessingML 文档。  
@@ -44,7 +44,7 @@ ms.locfileid: "71352945"
   
 3. 用“标题 1”样式格式化第一行。  
   
-4. 选择包含 Visual Basic 代码的行。 第一行以 `Imports` 关键字开头。 最后一行是 "End Class"。 用 courier 字体格式化这些行。 用新样式格式化这些行并将新样式命名为“Code”。  
+4. Select the lines that contain the Visual Basic code. 第一行以 `Imports` 关键字开头。 The last line is "End Class". 用 courier 字体格式化这些行。 用新样式格式化这些行并将新样式命名为“Code”。  
   
 5. 最后，选择包含输出的整个行，并用 `Code` 样式格式化该行。  
   
@@ -55,4 +55,4 @@ ms.locfileid: "71352945"
   
 ## <a name="see-also"></a>请参阅
 
-- [教程：操作 WordprocessingML 文档中的内容（Visual Basic） ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

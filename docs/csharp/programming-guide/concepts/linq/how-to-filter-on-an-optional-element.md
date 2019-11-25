@@ -1,15 +1,15 @@
 ---
-title: 如何：筛选可选元素 (C#)
+title: 如何筛选可选元素 (C#)
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: 0f8e17d99085ad04ed76b83bce806418ca6d60cd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c9f844619cbb3d7a66ca66989baa900e0fd7bc2f
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253819"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141253"
 ---
-# <a name="how-to-filter-on-an-optional-element-c"></a>如何：筛选可选元素 (C#)
+# <a name="how-to-filter-on-an-optional-element-c"></a>如何筛选可选元素 (C#)
 有时，尽管不能确定某个元素是否存在于 XML 文档中，您还是会尝试筛选该元素。 应当执行搜索，这样如果特定元素没有子元素，就不会因为筛选它而触发空引用异常。 在下面的示例中，`Child5` 元素没有 `Type` 子元素，但是查询仍可以正确执行。  
   
 ## <a name="example"></a>示例  

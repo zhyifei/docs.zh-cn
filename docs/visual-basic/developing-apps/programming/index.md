@@ -1,21 +1,23 @@
 ---
-title: Visual Basic 编程
+title: 编程
 ms.date: 07/20/2015
 helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-ms.openlocfilehash: 68c200b3e47a0f96963e5872c854633a7c24e938
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 048bc70c2b5416d4377c5abcfdaf18a9312068db
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423980"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352110"
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic 编程
+
 此部分将介绍在创建 Visual Basic 应用程序过程中可能想要详细了解的编程任务。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [访问计算机资源](../../../visual-basic/developing-apps/programming/computer-resources/index.md)  
  所含文档介绍了如何使用 `My.Computer` 对象访问运行应用程序的计算机的相关信息，并控制计算机。  
   

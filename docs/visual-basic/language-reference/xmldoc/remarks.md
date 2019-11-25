@@ -1,19 +1,19 @@
 ---
-title: <remarks> （Visual Basic）
+title: <remarks>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <remarks> XML tag
 - remarks XML tag
 ms.assetid: c6241773-a7ed-41c9-9a8b-9722a0c606a9
-ms.openlocfilehash: 38549b2fcce0740b2b9cfd42d950e56b343e7a30
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: b327e548bcdce1522a888855bd88e3150695147b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524674"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352251"
 ---
-# <a name="remarks-visual-basic"></a>\<remarks > （Visual Basic）
-为成员指定备注部分。  
+# <a name="remarks-visual-basic"></a>\<remarks> (Visual Basic)
+Specifies a remarks section for the member.  
   
 ## <a name="syntax"></a>语法  
   
@@ -26,14 +26,14 @@ ms.locfileid: "72524674"
  对成员的说明。  
   
 ## <a name="remarks"></a>备注  
- 使用 `<remarks>` 标记添加有关类型的信息，从而补充[\<summary >](../../../visual-basic/language-reference/xmldoc/summary.md)指定的信息。  
+ Use the `<remarks>` tag to add information about a type, supplementing the information specified with [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md).  
   
- 此信息显示在对象浏览器中。 有关对象浏览器的信息，请参阅[查看代码的结构](/visualstudio/ide/viewing-the-structure-of-code)。  
+ This information appears in the Object Browser. For information about the Object Browser, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).  
   
  使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译以便将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
- 此示例使用 `<remarks>` 标记解释 `UpdateRecord` 方法的作用。  
+ This example uses the `<remarks>` tag to explain what the `UpdateRecord` method does.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

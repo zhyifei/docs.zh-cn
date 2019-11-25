@@ -1,16 +1,16 @@
 ---
-title: My.user 对象 (Visual Basic)
+title: My.Computer.Ports 对象
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Ports object
 - Ports object
 ms.assetid: 244ede4e-25b7-445b-9fd6-163550cce193
-ms.openlocfilehash: 2122dc099b36494aa44e538fdf3683dc9e9640fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 83874131655fd0bc2aac788c3beeaa1ca74195a6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966016"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332009"
 ---
 # <a name="mycomputerports-object"></a>My.Computer.Ports 对象
 提供了用于访问计算机的串行端口的属性和方法。  
@@ -18,17 +18,17 @@ ms.locfileid: "69966016"
 ## <a name="remarks"></a>备注  
  有关 `My.Computer.Ports` 对象所使用方法和属性的信息，请参阅 <xref:Microsoft.VisualBasic.Devices.Ports>。  
   
- 有关详细信息, 请参阅[访问计算机的端口](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)。  
+ For more information, see [Accessing the Computer's Ports](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).  
   
 > [!NOTE]
-> 你还可以使用<xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>类的属性和方法来访问计算机的串行端口。  
+> You can also use properties and methods of the <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> class to access the computer's serial ports.  
   
 ## <a name="requirements"></a>要求  
  **命名空间：** <xref:Microsoft.VisualBasic.Devices>  
   
- **类:** <xref:Microsoft.VisualBasic.Devices.Ports>  
+ **Class:** <xref:Microsoft.VisualBasic.Devices.Ports>  
   
- **件**Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>请参阅
 

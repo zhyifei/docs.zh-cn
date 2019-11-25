@@ -1,5 +1,5 @@
 ---
-title: 重载过程注意事项 (Visual Basic)
+title: 重载过程注意事项
 ms.date: 07/20/2015
 helpviewer_keywords:
 - signatures [Visual Basic], ParamArray arguments
@@ -25,65 +25,65 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: bd5b0032ca63ccb2f2cc30d72a5b3f3c7eb3c346
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 4a0cfe176a59b3f90f5850ae8b4e34784c400c6b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775735"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351000"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>重载过程注意事项 (Visual Basic)
-重载过程时，必须为每个重载版本使用不同的*签名*。 这通常意味着每个版本都必须指定不同的参数列表。 有关详细信息，请参阅[过程重载](./procedure-overloading.md)中的 "不同签名"。  
+When you overload a procedure, you must use a different *signature* for each overloaded version. This usually means each version must specify a different parameter list. For more information, see "Different Signature" in [Procedure Overloading](./procedure-overloading.md).  
   
- 您可以使用 `Sub` 过程重载 `Function` 过程，反之亦然，前提是它们具有不同的签名。 两个重载只能不同于有一个返回值，而另一个没有返回值。  
+ You can overload a `Function` procedure with a `Sub` procedure, and vice versa, provided they have different signatures. Two overloads cannot differ only in that one has a return value and the other does not.  
   
- 您可以重载属性，方法与重载过程的方法相同，并且具有相同的限制。 但是，不能使用属性重载过程，反之亦然。  
+ You can overload a property the same way you overload a procedure, and with the same restrictions. However, you cannot overload a procedure with a property, or vice versa.  
   
-## <a name="alternatives-to-overloaded-versions"></a>重载版本的替代项  
- 有时会有一些重载版本的替代方法，特别是在有可选参数时，或参数的数目是可变的。  
+## <a name="alternatives-to-overloaded-versions"></a>Alternatives to Overloaded Versions  
+ You sometimes have alternatives to overloaded versions, particularly when the presence of arguments is optional or their number is variable.  
   
- 请记住，可选参数并不一定支持所有语言，参数数组仅限 Visual Basic。 如果要编写的过程可能会从用多种不同语言的任意语言编写的代码中调用，则重载版本提供最大的灵活性。  
+ Keep in mind that optional arguments are not necessarily supported by all languages, and parameter arrays are limited to Visual Basic. If you are writing a procedure that is likely to be called from code written in any of several different languages, overloaded versions offer the greatest flexibility.  
   
-### <a name="overloads-and-optional-arguments"></a>重载和可选参数  
- 如果调用代码可以选择提供或忽略一个或多个参数，则可以定义多个重载版本或使用可选参数。  
+### <a name="overloads-and-optional-arguments"></a>Overloads and Optional Arguments  
+ When the calling code can optionally supply or omit one or more arguments, you can define multiple overloaded versions or use optional parameters.  
   
-#### <a name="when-to-use-overloaded-versions"></a>何时使用重载版本  
- 可以考虑在以下情况下定义一系列重载版本：  
+#### <a name="when-to-use-overloaded-versions"></a>When to Use Overloaded Versions  
+ You can consider defining a series of overloaded versions in the following cases:  
   
-- 过程代码中的逻辑明显不同，具体取决于调用代码是否提供可选参数。  
+- The logic in the procedure code is significantly different depending on whether the calling code supplies an optional argument or not.  
   
-- 过程代码无法可靠地测试调用代码是否提供了可选参数。 例如，如果不能提供调用代码预期无法提供的默认值，则会出现这种情况。  
+- The procedure code cannot reliably test whether the calling code has supplied an optional argument. This is the case, for example, if there is no possible candidate for a default value that the calling code could not be expected to supply.  
   
-#### <a name="when-to-use-optional-parameters"></a>何时使用可选参数  
- 在以下情况下，你可能更倾向于使用一个或多个可选参数：  
+#### <a name="when-to-use-optional-parameters"></a>When to Use Optional Parameters  
+ You might prefer one or more optional parameters in the following cases:  
   
-- 调用代码未提供可选参数时唯一必需的操作是将参数设置为默认值。 在这种情况下，如果使用一个或多个 `Optional` 参数定义单个版本，则过程代码可能会比较复杂。  
+- The only required action when the calling code does not supply an optional argument is to set the parameter to a default value. In such a case, the procedure code can be less complicated if you define a single version with one or more `Optional` parameters.  
   
- 有关详细信息，请参阅[可选参数](./optional-parameters.md)。  
+ For more information, see [Optional Parameters](./optional-parameters.md).  
   
-### <a name="overloads-and-paramarrays"></a>重载和 ParamArrays  
- 当调用代码可以传递可变数量的参数时，可以定义多个重载版本或使用参数数组。  
+### <a name="overloads-and-paramarrays"></a>Overloads and ParamArrays  
+ When the calling code can pass a variable number of arguments, you can define multiple overloaded versions or use a parameter array.  
   
-#### <a name="when-to-use-overloaded-versions"></a>何时使用重载版本  
- 可以考虑在以下情况下定义一系列重载版本：  
+#### <a name="when-to-use-overloaded-versions"></a>When to Use Overloaded Versions  
+ You can consider defining a series of overloaded versions in the following cases:  
   
-- 您知道，调用代码永远不会向参数数组传递超过少量的值。  
+- You know that the calling code never passes more than a small number of values to the parameter array.  
   
-- 过程代码中的逻辑明显不同，具体取决于调用代码传递的值的数量。  
+- The logic in the procedure code is significantly different depending on how many values the calling code passes.  
   
-- 调用代码可以传递不同数据类型的值。  
+- The calling code can pass values of different data types.  
   
-#### <a name="when-to-use-a-parameter-array"></a>何时使用参数数组  
- 在以下情况下，你可以使用 `ParamArray` 参数提供更好的服务：  
+#### <a name="when-to-use-a-parameter-array"></a>When to Use a Parameter Array  
+ You are better served by a `ParamArray` parameter in the following cases:  
   
-- 您无法预测调用代码可传递给参数数组的值数量，并且它可能是一个较大的数值。  
+- You are not able to predict how many values the calling code can pass to the parameter array, and it could be a large number.  
   
-- 过程逻辑适合于循环访问调用代码所通过的所有值，实际上对每个值执行相同的操作。  
+- The procedure logic lends itself to iterating through all the values the calling code passes, performing essentially the same operations on every value.  
   
- 有关详细信息，请参阅[参数数组](./parameter-arrays.md)。  
+ For more information, see [Parameter Arrays](./parameter-arrays.md).  
   
-## <a name="implicit-overloads-for-optional-parameters"></a>可选参数的隐式重载  
- 带有[可选](../../../../visual-basic/language-reference/modifiers/optional.md)参数的过程等效于两个重载过程，其中一个参数具有可选参数，一个参数不包含它。 不能使用与上述任一方法对应的参数列表重载此类过程。 以下声明阐释了这一点。  
+## <a name="implicit-overloads-for-optional-parameters"></a>Implicit Overloads for Optional Parameters  
+ A procedure with an [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) parameter is equivalent to two overloaded procedures, one with the optional parameter and one without it. You cannot overload such a procedure with a parameter list corresponding to either of these. The following declarations illustrate this.  
   
  [!code-vb[VbVbcnProcedures#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#58)]  
   
@@ -91,35 +91,35 @@ ms.locfileid: "72775735"
   
  [!code-vb[VbVbcnProcedures#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#61)]  
   
- 对于具有多个可选参数的过程，有一组隐式重载，它们与前面示例中的逻辑类似。  
+ For a procedure with more than one optional parameter, there is a set of implicit overloads, arrived at by logic similar to that in the preceding example.  
   
-## <a name="implicit-overloads-for-a-paramarray-parameter"></a>ParamArray 参数的隐式重载  
- 编译器将具有[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)参数的过程视为具有无限数目的重载，这些重载在调用代码传递给参数数组的内容中彼此不同，如下所示：  
+## <a name="implicit-overloads-for-a-paramarray-parameter"></a>Implicit Overloads for a ParamArray Parameter  
+ The compiler considers a procedure with a [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parameter to have an infinite number of overloads, differing from each other in what the calling code passes to the parameter array, as follows:  
   
-- 调用代码未向 `ParamArray` 提供参数时的一个重载  
+- One overload for when the calling code does not supply an argument to the `ParamArray`  
   
-- 如果调用代码提供一维 `ParamArray` 元素类型的数组，则为一个重载  
+- One overload for when the calling code supplies a one-dimensional array of the `ParamArray` element type  
   
-- 对于每个正整数，调用代码提供该数量的参数时的一个重载，每个 `ParamArray` 元素类型  
+- For every positive integer, one overload for when the calling code supplies that number of arguments, each of the `ParamArray` element type  
   
- 以下声明阐释了这些隐式重载。  
+ The following declarations illustrate these implicit overloads.  
   
  [!code-vb[VbVbcnProcedures#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#68)]  
   
  [!code-vb[VbVbcnProcedures#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#70)]  
   
- 不能使用参数列表重载此类过程，该参数列表采用一维数组作为参数数组。 但是，可以使用其他隐式重载的签名。 以下声明阐释了这一点。  
+ You cannot overload such a procedure with a parameter list that takes a one-dimensional array for the parameter array. However, you can use the signatures of the other implicit overloads. The following declarations illustrate this.  
   
  [!code-vb[VbVbcnProcedures#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#71)]  
   
-## <a name="typeless-programming-as-an-alternative-to-overloading"></a>作为重载替代的替代方法  
- 如果要允许调用代码将不同数据类型传递给参数，则可以使用一种无类型编程方法。 您可以通过[Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)或[-optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md)编译器选项将类型检查开关设置为 `Off`。 然后不必声明参数的数据类型。 不过，与重载相比，此方法具有以下缺点：  
+## <a name="typeless-programming-as-an-alternative-to-overloading"></a>Typeless Programming as an Alternative to Overloading  
+ If you want to allow the calling code to pass different data types to a parameter, an alternative approach is typeless programming. You can set the type checking switch to `Off` with either the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) or the [-optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) compiler option. Then you do not have to declare the parameter's data type. However, this approach has the following disadvantages compared to overloading:  
   
-- 无程序编程产生的执行代码效率较低。  
+- Typeless programming produces less efficient execution code.  
   
-- 此过程必须测试其预期要传递的每个数据类型。  
+- The procedure must test for every data type it anticipates being passed.  
   
-- 如果调用代码传递了过程不支持的数据类型，则编译器无法发出错误信号。  
+- The compiler cannot signal an error if the calling code passes a data type that the procedure does not support.  
   
 ## <a name="see-also"></a>请参阅
 

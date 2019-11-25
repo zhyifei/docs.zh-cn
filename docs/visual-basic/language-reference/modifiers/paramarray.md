@@ -1,5 +1,5 @@
 ---
-title: ParamArray (Visual Basic)
+title: ParamArray
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ParamArray
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - ParamArray keyword [Visual Basic]
 - ParamArray keyword [Visual Basic], syntax
 ms.assetid: a5f18789-92bd-488f-9c7e-cf3719963635
-ms.openlocfilehash: 8fc5d1afd9e9723e6b3c58e100b0519ef8fdfab4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbc87bffebc265e6062512e96fc29a64334b3c65
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968365"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351375"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
-指定过程参数采用指定类型的可选元素数组。 `ParamArray`只能在参数列表的最后一个参数上使用。  
+Specifies that a procedure parameter takes an optional array of elements of the specified type. `ParamArray` can be used only on the last parameter of a parameter list.  
   
 ## <a name="remarks"></a>备注  
- `ParamArray`允许将任意数量的参数传递给过程。 始终使用[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)声明参数。`ParamArray`  
+ `ParamArray` allows you to pass an arbitrary number of arguments to the procedure. A `ParamArray` parameter is always declared using [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).  
   
- 可以通过以下方式向`ParamArray`参数提供一个或多个参数: 传递适当数据类型的数组、以逗号分隔的值列表, 或根本不提供任何参数。 有关详细信息, 请参阅[参数数组](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)中的 "调用 ParamArray"。  
+ You can supply one or more arguments to a `ParamArray` parameter by passing an array of the appropriate data type, a comma-separated list of values, or nothing at all. For details, see "Calling a ParamArray" in [Parameter Arrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
   
 > [!IMPORTANT]
-> 无论何时处理可能会无限大的阵列, 都有 overrunning 应用程序的一些内部容量的风险。 如果接受来自调用代码的参数数组, 则应测试其长度, 如果应用程序太大, 则应采取适当的措施。  
+> Whenever you deal with an array which can be indefinitely large, there is a risk of overrunning some internal capacity of your application. If you accept a parameter array from the calling code, you should test its length and take appropriate steps if it is too large for your application.  
   
  `ParamArray` 修饰符可用于下面的上下文中：  
   

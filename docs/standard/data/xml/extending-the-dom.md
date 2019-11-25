@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ced76a0bb28a91824676f496b28143a921b987de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 3224250b08a780b87b9b7f96547830b0563daadf
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559487"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351942"
 ---
 # <a name="extending-the-dom"></a>扩展 DOM
 
@@ -127,7 +127,6 @@ class LineInfoElement : XmlElement, IXmlLineInfo {
 以下示例计算 XML 文档中的元素数：
 
 ```vb
-Imports System
 Imports System.Xml
 Imports System.IO
 
@@ -235,7 +234,7 @@ book.xml
 </book>
 ```
 
-#### <a name="output"></a>输出
+#### <a name="output"></a>Output
 
 ```console
 Number of elements in book.xml: 3

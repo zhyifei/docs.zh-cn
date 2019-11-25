@@ -1,5 +1,5 @@
 ---
-title: -link （Visual Basic）
+title: -link
 ms.date: 03/10/2018
 helpviewer_keywords:
 - l compiler option [Visual Basic]
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: 0a6a6b6436210e699d8fd176dc1ba6e4aded7c8d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: ecb7b0448b8ee9c1c1fc1eb9542b693d60a38ffd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523977"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335847"
 ---
-# <a name="-link-visual-basic"></a>-link （Visual Basic）
+# <a name="-link-visual-basic"></a>-link (Visual Basic)
 使编译器让指定程序集中的 COM 类型信息可供当前正在编译的项目使用。  
   
 ## <a name="syntax"></a>语法  
@@ -57,9 +57,9 @@ ms.locfileid: "72523977"
   
 - 调用具有程序集 B 中的返回类型或参数类型的字段、属性、事件或方法。  
   
- 使用[-libpath](libpath.md)可指定一个或多个程序集引用所在的目录。  
+ Use [-libpath](libpath.md) to specify the directory in which one or more of your assembly references is located.  
   
- 与[-reference](reference.md)编译器选项一样，`-link` 编译器选项使用 Vbc 响应文件，该文件引用频繁使用的 .NET Framework 程序集。 如果你不希望编译器使用 Vbc 文件，请使用[-noconfig](noconfig.md)编译器选项。  
+ Like the [-reference](reference.md) compiler option, the `-link` compiler option uses the Vbc.rsp response file, which references frequently used .NET Framework assemblies. Use the [-noconfig](noconfig.md) compiler option if you do not want the compiler to use the Vbc.rsp file.  
   
  `-link` 的缩写形式是 `-l`。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "72523977"
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>示例  
- 以下命令行编译源文件 `OfficeApp.vb` 和引用程序集中的 `COMData1.dll` 并 `COMData2.dll` 生成 `OfficeApp.exe`。  
+ The following command line compiles source file `OfficeApp.vb` and reference assemblies from `COMData1.dll` and `COMData2.dll` to produce `OfficeApp.exe`.  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
@@ -93,7 +93,7 @@ vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb
 
 - [Visual Basic 命令行编译器](index.md)
 - [演练：嵌入托管程序集中的类型](../../../standard/assembly/embed-types-visual-studio.md)
-- [-reference （Visual Basic）](reference.md)
+- [-reference (Visual Basic)](reference.md)
 - [-noconfig](noconfig.md)
 - [-libpath](libpath.md)
 - [示例编译命令行](sample-compilation-command-lines.md)

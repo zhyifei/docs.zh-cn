@@ -1,21 +1,21 @@
 ---
-title: 如何：查找具有特定子元素的元素 (C#)
+title: 如何查找具有特定子元素的元素 (C#)
 ms.date: 07/20/2015
 ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
-ms.openlocfilehash: f007bddcbecc1cb938d05c7d444d29b6047749e8
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0536b1b92d4d7fc18b5d406bbcd24aefc6a840c6
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253741"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141143"
 ---
-# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>如何：查找具有特定子元素的元素 (C#)
+# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>如何查找具有特定子元素的元素 (C#)
 本主题演示如何查找特定元素，该特定元素包含具有特定值的子元素。  
   
 ## <a name="example"></a>示例  
  示例查找 `Test` 元素，该元素包含具有值为“Examp2.EXE”的 `CommandLine` 子元素。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：测试配置 (LINQ to XML)](./sample-xml-file-test-configuration-linq-to-xml.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：测试配置 (LINQ to XML)](./sample-xml-file-test-configuration-linq-to-xml.md)。  
   
 ```csharp  
 XElement root = XElement.Load("TestConfig.xml");  
@@ -37,7 +37,7 @@ foreach (XElement el in tests)
 ## <a name="example"></a>示例  
  下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息，请参阅[命名空间概述(LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的测试配置](./sample-xml-file-test-configuration-in-a-namespace1.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的测试配置](./sample-xml-file-test-configuration-in-a-namespace1.md)。  
   
 ```csharp  
 XElement root = XElement.Load("TestConfigInNamespace.xml");  

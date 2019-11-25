@@ -6,33 +6,17 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: 02163f923bc93a1cf377cc608b5f390472c60edd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a592cbb49c1b9ec8f36b90f2ec1097f6c84efbe9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121602"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281814"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework 中的性能计数器
+
 本主题提供了可在[Windows 性能监视器](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)中查找的性能计数器的列表。  
-  
-- [异常性能计数器](#exception)  
-  
-- [互操作性能计数器](#interop)  
-  
-- [JIT 性能计数器](#jit)  
-  
-- [加载性能计数器](#loading)  
-  
-- [锁定和线程性能计数器](#lockthread)  
-  
-- [内存性能计数器](#memory)  
-  
-- [联网性能计数器](#networking)  
-  
-- [安全性能计数器](#security)  
-  
-<a name="exception"></a>   
+
 ## <a name="exception-performance-counters"></a>异常性能计数器  
  性能控制台 .NET CLR Exceptions（异常）类别包含的计算取提供应用程序引发的异常的相关信息。 下表描述这些性能计数器。  
   
@@ -43,8 +27,7 @@ ms.locfileid: "73121602"
 |**筛选次数/秒**|显示每秒执行的 .NET 异常筛选次数。 无论异常是否已处理，都会计算异常筛选。<br /><br /> 此计数器不是一段时间内的平均值；它显示最近两个样本观测值的差除以取样间隔所得的结果。|  
 |**Finally 数量/秒**|显示每秒执行的 finally 块的数量。 无论以何种方式退出 try 块，均会执行 finally 块。  此计数器只计算到为异常执行的 finally 块，不计算正常代码路径上的 finally 块。<br /><br /> 此计数器不是一段时间内的平均值；它显示最近两个样本观测值的差除以取样间隔所得的结果。|  
 |**引发到捕获的深度/秒**|显示从引发异常的帧到处理该异常的帧每秒遍历的堆栈帧数。 此计数器在输入异常处理程序后重置为零，因此嵌入的异常显示处理程序到处理程序的堆栈深度。<br /><br /> 此计数器不是一段时间内的平均值；它显示最近两个样本观测值的差除以取样间隔所得的结果。|  
-  
-<a name="interop"></a>   
+     
 ## <a name="interop-performance-counters"></a>互操作性能计数器  
  性能控制台 .NET CLR Interop（互操作）类别包括的计数器提供应用程序与 COM 组件、COM + 服务和外部类型库交互的相关信息。 下表描述这些性能计数器。  
   
@@ -55,8 +38,7 @@ ms.locfileid: "73121602"
 |**存根数**|显示由公共语言运行时创建的当前存根数。 存根负责在 COM 互操作调用或平台 invoke 调用期间将自变量和返回值从托管代码封送值非托管代码（或反之）。|  
 |**TLB 导出次数/秒**|留待将来使用。|  
 |**TLB 导入次数/秒**|留待将来使用。|  
-  
-<a name="jit"></a>   
+    
 ## <a name="jit-performance-counters"></a>JIT 性能计数器  
  性能控制台 .NET CLR JIT 类别包括的计数器提供已进行 JIT 编译的代码的相关信息。 下表描述这些性能计数器。  
   
@@ -68,8 +50,7 @@ ms.locfileid: "73121602"
 |**实时编译的 IL 字节/秒**|显示每秒 JIT 编译的 MSIL 字节数。 此计数器不是一段时间内的平均值；它显示最近两个样本观测值的差除以取样间隔所得的结果。|  
 |**标准 JIT 失败**|显示自应用程序启动以来 JIT 编译器编译失败的方法的高峰数量。 如果无法验证 MSIL 或者 JIT 编译器中出现内部错误，则可能发生此失败。|  
 |**实时编译的 IL 字节总数**|显示自应用程序启动以来 JIT 编译的 MSIL 字节总数。 此计数器等效于“实时编译的 IL 字节数”计数器。|  
-  
-<a name="loading"></a>   
+     
 ## <a name="loading-performance-counters"></a>加载性能计数器  
  性能控制台 .NET CLR Loading（加载）类别包括的计数器提供已加载的程序集、类和应用程序域的相关信息。 下表描述这些性能计数器。  
   
@@ -91,8 +72,7 @@ ms.locfileid: "73121602"
 |**卸载的 Appdomain 总数**|显示自应用程序启动以来卸载的应用程序的高峰数量。 如果应用程序域加载和卸载多次，则此计数器将在每次卸载应用程序域时均递增。|  
 |**程序集总数**|显示自应用程序启动以来加载的程序集总数。 如果程序集以非特定于域的形式从多个应用程序域中加载，则此计数器只递增一次。|  
 |**已加载的类总数**|显示自应用程序启动以来所有程序集中加载的类的累计数量。|  
-  
-<a name="lockthread"></a>   
+   
 ## <a name="lock-and-thread-performance-counters"></a>锁定和线程性能计数器  
  性能控制台 .NET CLR LocksAndThreads（锁定和线程）类别包括的计数器提供应用程序所使用的托管锁定和线程的相关信息。 下表描述这些性能计数器。  
   
@@ -108,8 +88,7 @@ ms.locfileid: "73121602"
 |**队列长度峰值**|显示自应用程序启动以来等待获取托管锁定的线程总数。|  
 |**已识别线程的速率/秒**|显示每秒内由运行时识别的线程数。 这些线程与对应的托管线程对象相关联。 运行时不创建这些线程，但它们在运行时内至少运行过一次。<br /><br /> 仅跟踪唯一线程；其线程 ID 与重新输入运行时或在线程退出后重新创建的线程 ID 相同的线程不会进行两次计数。<br /><br /> 此计数器不是一段时间内的平均值；它显示最近两个样本观测值的差除以取样间隔所得的结果。|  
 |**争用总数**|显示运行时中线程已尝试获取托管锁失败的总次数。|  
-  
-<a name="memory"></a>   
+    
 ## <a name="memory-performance-counters"></a>内存性能计数器  
  性能控制台 .NET CLR Memory（内存）类别包括的计数器提供垃圾回收器的相关信息。 下表描述这些性能计数器。  
   
@@ -117,9 +96,9 @@ ms.locfileid: "73121602"
 |-------------------------|-----------------|  
 |**所有堆中的字节数**|显示“第 1 代堆大小”计数器、“第 2 代堆大小”计数器和“大型对象堆大小”计数器的总和。 此计数器显示垃圾回收堆上分配的当前内存（以字节为单位）。|  
 |**GC 句柄数**|显示正在使用的垃圾回收句柄的当前数目。 垃圾回收句柄是指公共语言运行时和托管环境外部的资源的句柄。|  
-|**第 0 代回收次数**|显示自应用程序启动以来第 0 代对象（即最年轻、最近分配的对象）进行垃圾回收的次数。<br /><br /> 第 0 代中的可用内存不能满足分配请求时，会出现第 0 代垃圾回收。 此计数器在第 0 代垃圾回收结束时递增。 较高代的垃圾回收包含所有较低代的垃圾回收。 此计数器在较高代（第 1 或第 2 代）垃圾回收发生时显示递增。<br /><br /> 此计数器显示上次观测的值。 _Global\_ 计数器值不准确，应当忽略。|  
-|**第 1 代回收次数**|显示自应用程序启动以来第 1 代对象进行垃圾回收的次数。<br /><br /> 此计数器在第 1 代垃圾回收结束时递增。 较高代的垃圾回收包含所有较低代的垃圾回收。 此计数器在较高代（第 2 代）垃圾回收发生时显式递增。<br /><br /> 此计数器显示上次观测的值。 _Global\_ 计数器值不准确，应当忽略。|  
-|**第 2 代回收次数**|显示自应用程序启动以来第 2 代对象进行垃圾回收的次数。 此计数器在第 2 代垃圾回收结束时递增。<br /><br /> 此计数器显示上次观测的值。 _Global\_ 计数器值不准确，应当忽略。|  
+|**第 0 代回收次数**|显示自应用程序启动以来第 0 代对象（即最年轻、最近分配的对象）进行垃圾回收的次数。<br /><br /> 第 0 代中的可用内存不能满足分配请求时，会出现第 0 代垃圾回收。 此计数器在第 0 代垃圾回收结束时递增。 较高代的垃圾回收包含所有较低代的垃圾回收。 此计数器在较高代（第 1 或第 2 代）垃圾回收发生时显示递增。<br /><br /> 此计数器显示上次观测的值。 _Global **计数器值不准确，应当忽略。\_**|  
+|**第 1 代回收次数**|显示自应用程序启动以来第 1 代对象进行垃圾回收的次数。<br /><br /> 此计数器在第 1 代垃圾回收结束时递增。 较高代的垃圾回收包含所有较低代的垃圾回收。 此计数器在较高代（第 2 代）垃圾回收发生时显式递增。<br /><br /> 此计数器显示上次观测的值。 _Global **计数器值不准确，应当忽略。\_**|  
+|**第 2 代回收次数**|显示自应用程序启动以来第 2 代对象进行垃圾回收的次数。 此计数器在第 2 代垃圾回收结束时递增。<br /><br /> 此计数器显示上次观测的值。 _Global **计数器值不准确，应当忽略。\_**|  
 |**已引发 GC 数**|显示因显式调用 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 而执行的垃圾回收最大次数。 建议让垃圾回收器微调其回收的频率。|  
 |**固定对象数目**|显示在上一次垃圾回收中遇到的固定对象的数目。 钉住的对象是垃圾回收器不能移入内存的对象。 此计数器只跟踪经过垃圾回收的堆中钉住的对象。 例如，第 0 代垃圾回收只导致对第 0 代堆中的固定对象进行枚举。|  
 |**正在使用的接收器块数目**|显示正在使用的同步块的当前数目。 同步块是分配的每个对象的数据结构，用于存储同步信息。 它们保留对托管对象的弱引用并且必须由垃圾回收器扫描。 同步块不限于只存储同步信息，也可以存储 COM 互操作元数据。 此计数器指示有关大量使用同步基元的性能问题。|  
@@ -133,29 +112,29 @@ ms.locfileid: "73121602"
 |**第 1 代堆大小**|显示第 1 代中的当前字节数；此计数器不显示第 1 代的最大大小。 此代中的对象不是直接分配的；这些对象是从以前的第 0 代垃圾回收提升的。 此计数器在垃圾回收结束时更新，不在每次分配时更新。|  
 |**第 1 代提升的字节数/秒**|显示每秒从第 1 代提升到第 2 代的字节数。 此计数器中不包括仅由于等待完成而被提升的对象。<br /><br /> 垃圾回收后仍存在的内存被提升。 由于第 2 代是最早的，因此不会从第 2 代提升任何内容。 此计数器是每秒创建的生存期很长的对象的指示器。<br /><br /> 计数器显示最近两个样本中观测的值的差除以样本的间隔时间所得的结果。|  
 |**第 2 代堆大小**|显示在第 2 代中的当前字节数。 此代中的对象不是直接分配的；这些对象是在以前的第 1 代垃圾回收过程中从第 1 代提升的。 此计数器在垃圾回收结束时更新，不在每次分配时更新。|  
-|**大型对象堆大小**|显示大型对象堆的当前大小（以字节为单位）。 垃圾回收器将大于 85,000 字节左右的对象视作大对象并且直接在特殊堆中分配大对象；它们不是按照这些级别提升的。 此计数器在垃圾回收结束时更新，不在每次分配时更新。|  
+|**大型对象堆大小**|显示大型对象堆的当前大小（以字节为单位）。 大于大约85000字节的对象被垃圾回收器视为大型对象，并在特殊堆中直接分配。 它们不会通过生成进行提升。 此计数器在垃圾回收结束时更新，不在每次分配时更新。|  
 |**进程 ID**|显示被监视的 CLR 进程实例的进程 ID。|  
 |**从第 0 代提升的终止内存**|显示仅由于等待完成而从第 0 代提升到第 1 代的内存字节数。 此计数器不是累积计数器；它显示在上一次垃圾回收结束时观测的值。|  
 |**从第 0 代提升的内存**|显示垃圾回收后仍存在并从第 0 代提升到第 1 代的内存字节数。 此计数器中不包括仅由于等待完成而被提升的对象。 此计数器不是累积计数器；它显示在上一次垃圾回收结束时观测的值。|  
 |**从第 1 代提升的内存**|显示垃圾回收后仍存在并从第 1 代提升到第 2 代的内存字节数。 此计数器中不包括仅由于等待完成而被提升的对象。 此计数器不是累积计数器；它显示在上一次垃圾回收结束时观测的值。 如果上一次垃圾回收只是第 0 代回收，则此计数器将重置为 0。|  
-  
-<a name="networking"></a>   
+     
 ## <a name="networking-performance-counters"></a>联网性能计数器  
- 性能控制台 .NET CLR Networking（网络）类别包括的计数器提供应用程序通过网络发送和接收的数据的相关信息。 下表描述这些性能计数器。  
+
+性能控制台 .NET CLR Networking（网络）类别包括的计数器提供应用程序通过网络发送和接收的数据的相关信息。 下表描述这些性能计数器。  
   
 |性能计数器|描述|  
 |-------------------------|-----------------|  
-|**已接收的字节数**|自进程启动以来，<xref:System.AppDomain> 中的所有 <xref:System.Net.Sockets.Socket> 对象接收到的字节的累积总数。 此数字包括数据和 TCP/IP 协议未定义的任何协议信息。|  
-|**已发送的字节数**|自进程启动以来，<xref:System.AppDomain> 中的所有 <xref:System.Net.Sockets.Socket> 对象已发送的字节的累积总数。 此数字包括数据和 TCP/IP 协议未定义的任何协议信息。|  
-|**已建立的连接**|自进程启动以来，<xref:System.AppDomain> 中曾连接的任何流套接的 <xref:System.Net.Sockets.Socket> 对象的累积总数。|  
-|**已接收的数据报**|自进程启动以来，<xref:System.AppDomain> 中的所有 <xref:System.Net.Sockets.Socket> 对象接收到的数据报包的累积总数。|  
-|**已发送的数据报**|自进程启动以来，<xref:System.AppDomain> 中的所有 <xref:System.Net.Sockets.Socket> 对象已发送的数据报包的累积总数。|  
-|**HttpWebRequest 平均生存期**|自进程启动以来，<xref:System.AppDomain> 中在上一个间隔中结束的所有 <xref:System.Net.HttpWebRequest> 对象的平均完成时间。|  
-|**HttpWebRequest 平均排队时间**|自进程启动以来，<xref:System.AppDomain> 中在上一个间隔中结束的所有 <xref:System.Net.HttpWebRequest> 对象的平均排队时间。|  
-|**创建的 HttpWebRequest/秒**|<xref:System.AppDomain> 中每秒创建的 <xref:System.Net.HttpWebRequest> 对象的数目。|  
-|**已排队的 HttpWebRequest/秒**|<xref:System.AppDomain> 中每秒添加到队列的 <xref:System.Net.HttpWebRequest> 对象的数量。|  
-|**已中止的 HttpWebRequest/秒**|<xref:System.AppDomain> 中其中每秒应用程序调用 <xref:System.Net.HttpWebRequest.Abort%2A> 方法的 <xref:System.Net.HttpWebRequest> 对象的数量。|  
-|**失败的 HttpWebRequest/秒**|<xref:System.AppDomain> 中每秒从服务器接收失败状态的 <xref:System.Net.HttpWebRequest> 对象的数量。|  
+|**已接收的字节数**|自进程启动以来，<xref:System.Net.Sockets.Socket> 中的所有 <xref:System.AppDomain> 对象接收到的字节的累积总数。 此数字包括数据和 TCP/IP 协议未定义的任何协议信息。|  
+|**已发送的字节数**|自进程启动以来，<xref:System.Net.Sockets.Socket> 中的所有 <xref:System.AppDomain> 对象已发送的字节的累积总数。 此数字包括数据和 TCP/IP 协议未定义的任何协议信息。|  
+|**已建立的连接**|自进程启动以来，<xref:System.Net.Sockets.Socket> 中曾连接的任何流套接的 <xref:System.AppDomain> 对象的累积总数。|  
+|**已接收的数据报**|自进程启动以来，<xref:System.Net.Sockets.Socket> 中的所有 <xref:System.AppDomain> 对象接收到的数据报包的累积总数。|  
+|**已发送的数据报**|自进程启动以来，<xref:System.Net.Sockets.Socket> 中的所有 <xref:System.AppDomain> 对象已发送的数据报包的累积总数。|  
+|**HttpWebRequest 平均生存期**|自进程启动以来，<xref:System.Net.HttpWebRequest> 中在上一个间隔中结束的所有 <xref:System.AppDomain> 对象的平均完成时间。|  
+|**HttpWebRequest 平均排队时间**|自进程启动以来，<xref:System.Net.HttpWebRequest> 中在上一个间隔中结束的所有 <xref:System.AppDomain> 对象的平均排队时间。|  
+|**创建的 HttpWebRequest/秒**|<xref:System.Net.HttpWebRequest> 中每秒创建的 <xref:System.AppDomain> 对象的数目。|  
+|**已排队的 HttpWebRequest/秒**|<xref:System.Net.HttpWebRequest> 中每秒添加到队列的 <xref:System.AppDomain> 对象的数量。|  
+|**已中止的 HttpWebRequest/秒**|<xref:System.Net.HttpWebRequest> 中其中每秒应用程序调用 <xref:System.Net.HttpWebRequest.Abort%2A> 方法的 <xref:System.AppDomain> 对象的数量。|  
+|**失败的 HttpWebRequest/秒**|<xref:System.Net.HttpWebRequest> 中每秒从服务器接收失败状态的 <xref:System.AppDomain> 对象的数量。|  
   
  几类受支持的网络性能计数器如下：  
   
@@ -167,7 +146,7 @@ ms.locfileid: "73121602"
   
 - 每间隔计数器，用于测量每个间隔（通常以秒计）中正在进行特定转换的对象数。  
   
- 适用于事件的网络性能计数器包括：  
+适用于事件的网络性能计数器包括：  
   
 - **已建立的连接**  
   
@@ -177,7 +156,7 @@ ms.locfileid: "73121602"
   
  这些性能计数器提供自进程启动以来的计数。 已建立的 <xref:System.Net.Sockets.Socket> 连接的计数包括显式 <xref:System.Net.Sockets.Socket> 方法调用（由已建立的流套接连接的应用程序执行）以及其他类（例如 <xref:System.Net.HttpWebRequest>、<xref:System.Net.FtpWebRequest>、<xref:System.Net.WebClient> 和 <xref:System.Net.Sockets.TcpClient>）对 <xref:System.Net.Sockets.Socket> 类执行的内部调用  
   
- “已接收的数据报”和“已发送的数据报”的计数包括使用显式 <xref:System.Net.Sockets.Socket> 方法调用（由应用程序执行）或由其他类（例如 <xref:System.Net.Sockets.UdpClient>）对 <xref:System.Net.Sockets.Socket> 执行的内部调用而发送或接收的数据报包。 类的新实例。 “已接收的数据报”和“已发送的数据报”的计数也可能用于通过假定数据报的平均大小粗略测量使用数据报发送或接收的字节数。  
+ “已接收的数据报”和“已发送的数据报”的计数包括使用显式 **方法调用（由应用程序执行）或由其他类（例如**）对  **执行的内部调用而发送或接收的数据报包。** <xref:System.Net.Sockets.Socket><xref:System.Net.Sockets.UdpClient><xref:System.Net.Sockets.Socket> 类的新实例。 “已接收的数据报”和“已发送的数据报”的计数也可能用于通过假定数据报的平均大小粗略测量使用数据报发送或接收的字节数。  
   
  适用于数据的网络性能计数器包括：  
   
@@ -193,11 +172,11 @@ ms.locfileid: "73121602"
   
 - **HttpWebRequest 平均排队时间**  
   
- 对于“HttpWebRequest 平均排队时间”计数器，大多数 <xref:System.Net.HttpWebRequest> 对象的生存期总是开始于创建对象时，而在应用程序关闭响应流时结束。 有两种不常见的情况：  
+ 对于“HttpWebRequest 平均排队时间”计数器，大多数  **对象的生存期总是开始于创建对象时，而在应用程序关闭响应流时结束。** <xref:System.Net.HttpWebRequest> 有两种不常见的情况：  
   
 - 如果应用程序从未调用 <xref:System.Net.HttpWebRequest.GetResponse%2A> 或 <xref:System.Net.HttpWebRequest.BeginGetResponse%2A> 方法，则忽略 <xref:System.Net.HttpWebRequest> 对象的生存期。  
   
-- 如果 <xref:System.Net.HttpWebRequest>对象在调用 <xref:System.Net.HttpWebRequest.GetResponse%2A> 或 <xref:System.Net.HttpWebRequest.EndGetResponse%2A> 方法时引发 <xref:System.Net.WebException>，则在引发异常时生存期结束。 从技术上来说，此时（返回至用户的响应流实际上为包含响应流副本的内存流）也关闭基础响应流。  
+- 如果 <xref:System.Net.HttpWebRequest>对象在调用 <xref:System.Net.WebException> 或 <xref:System.Net.HttpWebRequest.GetResponse%2A> 方法时引发 <xref:System.Net.HttpWebRequest.EndGetResponse%2A>，则在引发异常时生存期结束。 从技术上来说，此时（返回至用户的响应流实际上为包含响应流副本的内存流）也关闭基础响应流。  
   
  有 4 个计数器可在每个间隔跟踪某些 <xref:System.Net.HttpWebRequest> 对象问题。 这些性能计数器可帮助应用程序开发人员、管理员和支持人员更好地了解 <xref:System.Net.HttpWebRequest> 对象的当前行为。 这些计数器包括：  
   
@@ -209,11 +188,11 @@ ms.locfileid: "73121602"
   
 - **失败的 HttpWebRequest/秒**  
   
- “已中止的 HttpWebRequest/秒”计数器也对 <xref:System.Net.HttpWebRequest.Abort%2A> 的内部调用进行计数。 这些内部调用通常由应用程序可能要测量的超时导致。  
+ “已中止的 HttpWebRequest/秒”计数器也对  **的内部调用进行计数。** <xref:System.Net.HttpWebRequest.Abort%2A> 这些内部调用通常由应用程序可能要测量的超时导致。  
   
- “失败的 HttpWebRequest/秒”计数器包含每秒从服务器接收失败状态代码的 <xref:System.Net.HttpWebRequest> 对象的数量。 这意味着在请求结束时从 Http 服务器接收的状态代码不在 200 到 299 的范围内。 已处理并引发新请求的状态代码（例如多个 401 未授权状态代码）是否失败取决于重试结果。 如果应用程序可基于重试查看错误，则此计数器递增。  
+ “失败的 HttpWebRequest/秒”计数器包含每秒从服务器接收失败状态代码的  **对象的数量。** <xref:System.Net.HttpWebRequest> 这意味着在请求结束时从 Http 服务器接收的状态代码不在 200 到 299 的范围内。 已处理并引发新请求的状态代码（例如多个 401 未授权状态代码）是否失败取决于重试结果。 如果应用程序可基于重试查看错误，则此计数器递增。  
   
- 网络性能计数器可以通过使用 <xref:System.Diagnostics> 命名空间中的 <xref:System.Diagnostics.PerformanceCounter> 和相关类进行访问和管理。 它还可以通过使用 Windows 性能监视器控制台进行查看。  
+ 网络性能计数器可以通过使用 <xref:System.Diagnostics.PerformanceCounter> 命名空间中的 <xref:System.Diagnostics> 和相关类进行访问和管理。 它还可以通过使用 Windows 性能监视器控制台进行查看。  
   
  需要在要使用的配置文件中启用网络性能计数器。 通过配置文件中的单个设置即可启用或禁用所有网络性能计数器。 不能启用或禁用单个网络性能计数器。 有关详细信息，请参阅 [\<performanceCounter> 元素（网络设置）](../configure-apps/file-schema/network/performancecounter-element-network-settings.md)。  
   
@@ -236,8 +215,7 @@ for (int i = 0; i < Array.Length; i++)
 - “.NET CLR 网络 4.0.0.0”- 所有上述套接计数器和 .NET Framework 版本 4 及更高版本上受支持的新的性能计数器。 这些新的计数器提供有关 <xref:System.Net.HttpWebRequest> 对象的性能信息。  
   
  有关访问和管理应用程序中性能计数器的详细信息，请参阅[性能计数器](performance-counters.md)。  
-  
-<a name="security"></a>   
+    
 ## <a name="security-performance-counters"></a>安全性能计数器  
  性能控制台 .NET CLR Security（安全性）类别包括的计数器提供公共语言运行时针对应用程序执行的安全检查的相关信息。 下表描述这些性能计数器。  
   
@@ -249,7 +227,7 @@ for (int i = 0; i < Array.Length; i++)
 |**堆栈审核深度**|显示在上次运行时代码访问安全检查期间的堆栈深度。 运行时代码访问安全检查通过审核堆栈执行。 此计数器不是平均值；它仅显示最后观测的值。|  
 |**运行时检查总数**|显示自应用程序启动以来执行的运行时代码访问安全检查的总数。 当调用方要求特定权限时，执行运行时代码访问安全检查。 运行时检查在调用方每次调用时都会执行，并会检查调用方的当前线程堆栈。 此计数器与“堆栈审阅深度”计数器一起使用时可指示安全检查出现的性能损失。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [性能计数器](performance-counters.md)
+- [Performance Counters](performance-counters.md)
 - [运行时分析](runtime-profiling.md)

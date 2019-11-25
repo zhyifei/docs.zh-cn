@@ -1,27 +1,27 @@
 ---
-title: 如何：将一个数组赋给另一个数组 (Visual Basic)
+title: 如何：将一个数组赋给另一个数组
 ms.date: 07/20/2015
 helpviewer_keywords:
 - covariance, arrays
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: a39888f19e5033a5c6622313fb7451d6463b2f7c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: be5337e36c2cc7ad9f9b32182b8575ac66bb4a50
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64858882"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351893"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>如何：将一个数组赋给另一个数组 (Visual Basic)
 
-由于数组是对象，您可以在赋值语句和其他对象类型一样使用它们。 一个数组变量保留一个指向数据构成的数组元素和等级和长度的信息，并分配只复制此指针。
+Because arrays are objects, you can use them in assignment statements like other object types. An array variable holds a pointer to the data constituting the array elements and the rank and length information, and an assignment copies only this pointer.
 
-### <a name="to-assign-one-array-to-another-array"></a>若要将一个数组赋给另一个数组
+### <a name="to-assign-one-array-to-another-array"></a>To assign one array to another array
 
-1. 请确保两个数组具有相同的秩 （维数） 和兼容的元素数据类型。
+1. Ensure that the two arrays have the same rank (number of dimensions) and compatible element data types.
 
-2. 使用标准的赋值语句将源数组赋给目标数组。 不遵循括号数组名。
+2. Use a standard assignment statement to assign the source array to the destination array. Do not follow either array name with parentheses.
 
     ```vb
     Dim formArray() As System.Windows.Forms.Form
@@ -29,19 +29,19 @@ ms.locfileid: "64858882"
     controlArray = formArray
     ```
 
-当将一个数组赋给另一个时，以下规则适用：
+When you assign one array to another, the following rules apply:
 
-- **相等的秩。** 目标数组的秩 （维数） 必须是相同的源数组。
+- **Equal Ranks.** The rank (number of dimensions) of the destination array must be the same as that of the source array.
 
-  提供两个数组的秩相等，维度不相等。 在分配期间可以更改给定维度中的元素数。
+  Provided the ranks of the two arrays are equal, the dimensions do not need to be equal. The number of elements in a given dimension can change during assignment.
 
-- **元素类型。** 任一这两个数组必须具有*引用类型*必须具有的元素或这两个数组*值类型*元素。 有关更多信息，请参见 [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)。
+- **Element Types.** Either both arrays must have *reference type* elements or both arrays must have *value type* elements. 有关更多信息，请参见 [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)。
 
-  - 如果这两个数组具有值类型的元素，元素数据类型必须完全相同。 唯一的例外是，您可以将分配的数组`Enum`的基类型的数组元素`Enum`。
+  - If both arrays have value type elements, the element data types must be exactly the same. The only exception to this is that you can assign an array of `Enum` elements to an array of the base type of that `Enum`.
 
-  - 如果两个数组具有引用类型元素，则必须从目标元素类型派生的源元素类型。 在这种情况下，两个数组具有相同的继承关系作为其元素。 这称为*数组协方差*。
+  - If both arrays have reference type elements, the source element type must derive from the destination element type. When this is the case, the two arrays have the same inheritance relationship as their elements. This is called *array covariance*.
 
-编译器会报告错误如果违反了上述规则，例如如果数据类型不兼容或者数组的秩不相等。 您可以添加错误处理代码，以确保数组赋值前都兼容。 此外可以使用[TryCast 运算符](../../../../visual-basic/language-reference/operators/trycast-operator.md)关键字，如果你想要避免引发异常。
+The compiler reports an error if the above rules are violated, for example if the data types are not compatible or the ranks are unequal. You can add error handling to your code to make sure that the arrays are compatible before attempting an assignment. You can also use the [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) keyword if you want to avoid throwing an exception.
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,5 +1,5 @@
 ---
-title: 控制流 (Visual Basic)
+title: 控制流
 ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [Visual Basic], control flow
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - structures [Visual Basic], control
 - conditional statements [Visual Basic], control flow
 ms.assetid: 5623ef47-52b1-4202-befd-9af36422ec6f
-ms.openlocfilehash: 6a9b769c2ef7fe3b6e2d39279f11b49b64641339
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: e47a48755c6752dc8c46e35399f1a1efae9c4a08
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701023"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353934"
 ---
 # <a name="control-flow-in-visual-basic"></a>控制流 (Visual Basic)
 
 程序可以按从头到尾的顺序执行所有语句，而不受管制。 只需使用这种单向控制流，即可编写一些非常简单的程序。 然而，任何一种编程语言的大部分功能性和实用性都是源自能否更改控制语句和循环的执行顺序。
 
- 借助控制结构，可以对程序执行流进行管制。 使用控制结构，可以编写进行决策或重复操作的 Visual Basic 代码。 使用其他控制结构，可以保证处置资源或对同一对象引用运行一系列语句。
+ 借助控制结构，可以对程序执行流进行管制。 Using control structures, you can write Visual Basic code that makes decisions or that repeats actions. 使用其他控制结构，可以保证处置资源或对同一对象引用运行一系列语句。
   
 ## <a name="in-this-section"></a>本节内容
 

@@ -1,87 +1,65 @@
 ---
-title: 'How to: Create and Run a Long Running Workflow'
+title: How to create and run a long-running workflow
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-ms.openlocfilehash: e5083b3d12cecc395500ef13405effa7b7e51633
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 10eb4e2947bed9cea89f1cda05272aa3fa0fadaa
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420616"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204883"
 ---
-# <a name="how-to-create-and-run-a-long-running-workflow"></a>How to: Create and Run a Long Running Workflow
+# <a name="how-to-create-and-run-a-long-running-workflow"></a>How to create and run a long-running workflow
 
-Windows Workflow Foundation （WF）的一个中心功能是运行时能够将空闲工作流保存并卸载到数据库。 [如何：运行工作流](how-to-run-a-workflow.md)中的步骤演示了如何使用控制台应用程序托管工作流。 示例演示了启动工作流、工作流生命周期处理程序和恢复书签。 为了有效演示工作流持久性，需要一个支持启动和恢复多个工作流实例的更为复杂的工作流主机。 教程中此步骤演示了如何创建 Windows 窗体主机应用程序，此 Windows 窗体主机应用程序支持启动和恢复多个工作流实例、工作流持久性，并为高级功能（如在后续教程步骤中演示的跟踪和版本控制）提供基础。
-
-> [!NOTE]
-> 此教程步骤和后续步骤使用[如何：创建工作流](how-to-create-a-workflow.md)中的所有三个工作流类型。 如果未完成所有这三种类型，则可以从[Windows Workflow Foundation （WF45）-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)下载完整的步骤版本。
+One of the central features of Windows Workflow Foundation (WF) is the runtime’s ability to persist and unload idle workflows to a database. The steps in [How to: Run a Workflow](how-to-run-a-workflow.md) demonstrated the basics of workflow hosting using a console application. 示例演示了启动工作流、工作流生命周期处理程序和恢复书签。 为了有效演示工作流持久性，需要一个支持启动和恢复多个工作流实例的更为复杂的工作流主机。 教程中此步骤演示了如何创建 Windows 窗体主机应用程序，此 Windows 窗体主机应用程序支持启动和恢复多个工作流实例、工作流持久性，并为高级功能（如在后续教程步骤中演示的跟踪和版本控制）提供基础。
 
 > [!NOTE]
-> 若要下载完整版本或观看教程的视频演练，请参阅[Windows Workflow Foundation （WF45）-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。
+> This tutorial step and the subsequent steps use all three workflow types from [How to: Create a Workflow](how-to-create-a-workflow.md). If you did not complete all three types you can download a completed version of the steps from [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).
 
-## <a name="in-this-topic"></a>在本主题中
+> [!NOTE]
+> To download a completed version or view a video walkthrough of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).
 
-- [创建持久性数据库](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)
+## <a name="to-create-the-persistence-database"></a>创建持久性数据库
 
-- [添加对 DurableInstancing 程序集的引用](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)
-
-- [创建工作流主机窗体](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)
-
-- [添加窗体的属性和帮助器方法](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)
-
-- [配置实例存储、工作流生命周期处理程序和扩展](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)
-
-- [启用和恢复多个工作流类型](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)
-
-- [启动新工作流](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)
-
-- [恢复工作流](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)
-
-- [终止工作流](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)
-
-- [生成并运行应用程序](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)
-
-### <a name="BKMK_CreatePersistenceDatabase"></a>创建持久性数据库
-
-1. 打开 SQL Server Management Studio 并连接到本地服务器，例如 **.\SQLEXPRESS**。 右键单击本地服务器上的 "**数据库**" 节点，然后选择 "**新建数据库**"。 将新数据库命名为**WF45GettingStartedTutorial**，接受所有其他值，然后选择 **"确定"** 。
+1. Open SQL Server Management Studio and connect to the local server, for example **.\SQLEXPRESS**. Right-click the **Databases** node on the local server, and select **New Database**. Name the new database **WF45GettingStartedTutorial**, accept all other values, and select **OK**.
 
     > [!NOTE]
-    > 在创建数据库之前，请确保在本地服务器上具有**Create database**权限。
+    > Ensure that you have **Create Database** permission on the local server before creating the database.
 
-2. 从 "**文件**" 菜单中**选择 "** **打开**"。 浏览到以下文件夹：`C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`
+2. Choose **Open**, **File** from the **File** menu. Browse to the following folder: *C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en*
 
-    选择以下两个文件，并单击 "**打开**"。
+    Select the following two files and click **Open**.
 
-    - SqlWorkflowInstanceStoreLogic.sql
+    - *SqlWorkflowInstanceStoreLogic.sql*
 
-    - SqlWorkflowInstanceStoreSchema.sql
+    - *SqlWorkflowInstanceStoreSchema.sql*
 
-3. 从 "**窗口**" 菜单中选择 " **sqlworkflowinstancestoreschema.sql** "。 确保在 "**可用数据库**" 下拉 WF45GettingStartedTutorial 中选择 " "，并从 "**查询**" 菜单中选择 "**执行**"。
+3. Choose **SqlWorkflowInstanceStoreSchema.sql** from the **Window** menu. Ensure that **WF45GettingStartedTutorial** is selected in the **Available Databases** drop-down and choose **Execute** from the **Query** menu.
 
-4. 从 "**窗口**" 菜单中选择 " **sqlworkflowinstancestorelogic.sql** "。 确保在 "**可用数据库**" 下拉 WF45GettingStartedTutorial 中选择 " "，并从 "**查询**" 菜单中选择 "**执行**"。
+4. Choose **SqlWorkflowInstanceStoreLogic.sql** from the **Window** menu. Ensure that **WF45GettingStartedTutorial** is selected in the **Available Databases** drop-down and choose **Execute** from the **Query** menu.
 
     > [!WARNING]
     > 请务必按正确顺序执行前面两个步骤。 如果不按顺序执行查询，系统会发生错误，并且持久性数据库会配置不正确。
 
-### <a name="BKMK_AddReference"></a>添加对 DurableInstancing 程序集的引用
+## <a name="to-add-the-reference-to-the-durableinstancing-assemblies"></a>添加对 DurableInstancing 程序集的引用
 
-1. 在**解决方案资源管理器**中右键单击 " **NumberGuessWorkflowHost** "，然后选择 "**添加引用**"。
+1. Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and select **Add Reference**.
 
-2. 从 "**添加引用**" 列表中选择 "**程序集**"，然后在 "**搜索程序集**" 框中键入 `DurableInstancing`。 这将筛选程序集，使您更易于选择所需引用。
+2. Select **Assemblies** from the **Add Reference** list, and type `DurableInstancing` into the **Search Assemblies** box. 这将筛选程序集，使您更易于选择所需引用。
 
-3. 选中 " **DurableInstancing** " 和 " **DurableInstancing** **" 旁边**的复选框，然后单击 **"确定"** 。
+3. Check the checkbox beside **System.Activities.DurableInstancing** and **System.Runtime.DurableInstancing** from the **Search Results** list, and click **OK**.
 
-### <a name="BKMK_CreateForm"></a>创建工作流主机窗体
+## <a name="to-create-the-workflow-host-form"></a>创建工作流主机窗体
 
 > [!NOTE]
-> 此过程中的步骤描述了如何手动添加和配置窗体。 如果需要，您可以下载教程的解决方案文件并将完成后的窗体添加到项目。 若要下载教程文件，请参阅[Windows Workflow Foundation （WF45）-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。 下载文件后，右键单击**NumberGuessWorkflowHost** ，然后选择 "**添加引用**"。 添加对**system.web**和**system.object**的引用。 如果从 "**添加**"、"**新建项**" 菜单添加新的窗体，但在导入窗体时必须手动添加，则会自动添加这些引用。 添加引用后，在**解决方案资源管理器**中右键单击**NumberGuessWorkflowHost** ，然后选择 "**添加**"、"**现有项**"。 浏览到项目文件中的 `Form` 文件夹，选择**WorkflowHostForm.cs** （或**WorkflowHostForm**），然后单击 "**添加**"。 如果选择导入窗体，则可以跳到下一部分，[添加窗体的属性和帮助器方法](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)。
+> 此过程中的步骤描述了如何手动添加和配置窗体。 如果需要，您可以下载教程的解决方案文件并将完成后的窗体添加到项目。 To download the tutorial files, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976). Once the files are downloaded, right-click **NumberGuessWorkflowHost** and choose **Add Reference**. Add a reference to **System.Windows.Forms** and **System.Drawing**. These references are added automatically if you add a new form from the **Add**, **New Item** menu, but must be added manually when importing a form. Once the references are added, right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **Existing Item**. Browse to the `Form` folder in the project files, select **WorkflowHostForm.cs** (or **WorkflowHostForm.vb**), and click **Add**. If you choose to import the form, then you can skip down to the next section, [To add the properties and helper methods of the form](#to-add-the-properties-and-helper-methods-of-the-form).
 
-1. 在**解决方案资源管理器**中右键单击 " **NumberGuessWorkflowHost** "，然后选择 "**添加**"、"**新建项**"。
+1. Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **New Item**.
 
-2. 在 "**已安装**模板" 列表中，选择 " **Windows 窗体**"，在 "**名称**" 框中键入 `WorkflowHostForm`，然后单击 "**添加**"。
+2. In the **Installed** templates list, choose **Windows Form**, type `WorkflowHostForm` in the **Name** box, and click **Add**.
 
 3. 在窗体上配置以下属性。
 
@@ -93,71 +71,71 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
 
 4. 按照指定顺序将以下控件添加到窗体，并根据指示配置这些属性。
 
-    |控件|属性：值|
+    |控件|Property: Value|
     |-------------|---------------------|
-    |**Button**|名称： NewGame<br /><br /> 位置：13、13<br /><br /> 大小：75，23<br /><br /> 文本：新建游戏|
-    |**标签**|位置：94、18<br /><br /> Text：推测一个从1到|
-    |**组合框**|名称： NumberRange<br /><br /> DropDownStyle： DropDownList<br /><br /> 项：10，100，1000<br /><br /> 位置：228、12<br /><br /> 大小：143，21|
-    |**标签**|位置：13，43<br /><br /> 文本：工作流类型|
-    |**组合框**|名称： WorkflowType<br /><br /> DropDownStyle： DropDownList<br /><br /> Items： Statemachinenumberguessworkflow.xaml、Flowchartnumberguessworkflow.xaml、Sequentialnumberguessworkflow.xaml<br /><br /> 位置：94、40<br /><br /> 大小：277，21|
-    |**标签**|名称： WorkflowVersion<br /><br /> 位置：13，362<br /><br /> 文本：工作流版本|
-    |**GroupBox**|位置：13，67<br /><br /> 大小：358、287<br /><br /> 文本：游戏|
+    |**Button**|Name: NewGame<br /><br /> Location: 13, 13<br /><br /> Size: 75, 23<br /><br /> Text: New Game|
+    |**标签**|Location: 94, 18<br /><br /> Text: Guess a number from 1 to|
+    |**组合框**|Name: NumberRange<br /><br /> DropDownStyle: DropDownList<br /><br /> Items: 10, 100, 1000<br /><br /> Location: 228, 12<br /><br /> Size: 143, 21|
+    |**标签**|Location: 13, 43<br /><br /> Text: Workflow type|
+    |**组合框**|Name: WorkflowType<br /><br /> DropDownStyle: DropDownList<br /><br /> Items: StateMachineNumberGuessWorkflow, FlowchartNumberGuessWorkflow, SequentialNumberGuessWorkflow<br /><br /> Location: 94, 40<br /><br /> Size: 277, 21|
+    |**标签**|Name: WorkflowVersion<br /><br /> Location: 13, 362<br /><br /> Text: Workflow version|
+    |**GroupBox**|Location: 13, 67<br /><br /> Size: 358, 287<br /><br /> Text: Game|
 
     > [!NOTE]
-    > 添加以下控件时，将其放入分组框。
+    > When adding the following controls, put them into the GroupBox.
 
-    |控件|属性：值|
+    |控件|Property: Value|
     |-------------|---------------------|
-    |**标签**|位置：7、20<br /><br /> 文本：工作流实例 Id|
-    |**组合框**|名称： InstanceId<br /><br /> DropDownStyle： DropDownList<br /><br /> 位置：121、17<br /><br /> 大小：227，21|
-    |**标签**|位置：7，47<br /><br /> 文本：推测|
-    |**文本框**|名称：推测<br /><br /> 位置：50、44<br /><br /> 大小：65，20|
-    |**Button**|名称： EnterGuess<br /><br /> 位置：121、42<br /><br /> 大小：75，23<br /><br /> 文本：输入推测|
-    |**Button**|名称： QuitGame<br /><br /> 位置：274、42<br /><br /> 大小：75，23<br /><br /> 文本： Quit|
-    |**文本框**|名称： WorkflowStatus<br /><br /> 位置：10，73<br /><br /> 多行： True<br /><br /> ReadOnly： True<br /><br /> 滚动条：垂直<br /><br /> 大小：338、208|
+    |**标签**|Location: 7, 20<br /><br /> Text: Workflow Instance Id|
+    |**组合框**|Name: InstanceId<br /><br /> DropDownStyle: DropDownList<br /><br /> Location: 121, 17<br /><br /> Size: 227, 21|
+    |**标签**|Location: 7, 47<br /><br /> Text: Guess|
+    |**文本框**|Name: Guess<br /><br /> Location: 50, 44<br /><br /> Size: 65, 20|
+    |**Button**|Name: EnterGuess<br /><br /> Location: 121, 42<br /><br /> Size: 75, 23<br /><br /> Text: Enter Guess|
+    |**Button**|Name: QuitGame<br /><br /> Location: 274, 42<br /><br /> Size: 75, 23<br /><br /> Text: Quit|
+    |**文本框**|Name: WorkflowStatus<br /><br /> Location: 10, 73<br /><br /> Multiline: True<br /><br /> ReadOnly: True<br /><br /> ScrollBars: Vertical<br /><br /> Size: 338, 208|
 
-5. 将窗体的**AcceptButton**属性设置为**EnterGuess**。
+5. Set the **AcceptButton** property of the form to **EnterGuess**.
 
  以下示例展示了完成的窗体。
 
- ![Windows Workflow Foundation 工作流宿主窗体的屏幕截图。](./media/how-to-create-and-run-a-long-running-workflow/windows-workflow-foundation-workflowhostform.png)
+ ![Screenshot of a Windows Workflow Foundation Workflow Host Form.](./media/how-to-create-and-run-a-long-running-workflow/windows-workflow-foundation-workflowhostform.png)
 
-### <a name="BKMK_AddHelperMethods"></a>添加窗体的属性和帮助器方法
+## <a name="to-add-the-properties-and-helper-methods-of-the-form"></a>添加窗体的属性和帮助器方法
 
 本节的步骤将属性和帮助器添加至窗体类，此窗体类将配置窗体的 UI，以支持运行和恢复数字猜测工作流。
 
-1. 在**解决方案资源管理器**中右键单击 " **WorkflowHostForm** "，然后选择 "**查看代码**"。
+1. Right-click **WorkflowHostForm** in **Solution Explorer** and choose **View Code**.
 
 2. 在包含其他 `using`（或 `Imports`）语句的文件的顶部添加以下 `using`（或 `Imports`）语句。
 
     ```vb
-    Imports System.Windows.Forms
-    Imports System.Activities.DurableInstancing
     Imports System.Activities
+    Imports System.Activities.DurableInstancing
     Imports System.Data.SqlClient
     Imports System.IO
+    Imports System.Windows.Forms
     ```
 
     ```csharp
-    using System.Windows.Forms;
-    using System.Activities.DurableInstancing;
     using System.Activities;
+    using System.Activities.DurableInstancing;
     using System.Data.SqlClient;
     using System.IO;
+    using System.Windows.Forms;
     ```
 
-3. 将以下成员声明添加到**WorkflowHostForm**类。
+3. Add the following member declarations to the **WorkflowHostForm** class.
 
     ```vb
     Const connectionString = "Server=.\SQLEXPRESS;Initial Catalog=WF45GettingStartedTutorial;Integrated Security=SSPI"
     Dim store As SqlWorkflowInstanceStore
-    Dim WorkflowStarting As Boolean
+    Dim workflowStarting As Boolean
     ```
 
     ```csharp
     const string connectionString = "Server=.\\SQLEXPRESS;Initial Catalog=WF45GettingStartedTutorial;Integrated Security=SSPI";
     SqlWorkflowInstanceStore store;
-    bool WorkflowStarting;
+    bool workflowStarting;
     ```
 
     > [!NOTE]
@@ -187,9 +165,9 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
     }
     ```
 
-    "`InstanceId`" 组合框显示持久化工作流实例 id 的列表，`WorkflowInstanceId` 属性返回当前选定的工作流。
+    The `InstanceId` combo box displays a list of persisted workflow instance ids, and the `WorkflowInstanceId` property returns the currently selected workflow.
 
-5. 为窗体 `Load` 事件添加处理程序。 若要添加该处理程序，请切换到窗体的**设计视图**，单击 "**属性**" 窗口顶部的 "**事件**" 图标，然后双击 "**加载**"。
+5. 为窗体 `Load` 事件添加处理程序。 To add the handler, switch to **Design View** for the form, click the **Events** icon at the top of the **Properties** window, and double-click **Load**.
 
     ```vb
     Private Sub WorkflowHostForm_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -207,12 +185,12 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
 6. 将下列代码添加到 `WorkflowHostForm_Load`。
 
     ```vb
-    'Initialize the store and configure it so that it can be used for
-    'multiple WorkflowApplication instances.
+    ' Initialize the store and configure it so that it can be used for
+    ' multiple WorkflowApplication instances.
     store = New SqlWorkflowInstanceStore(connectionString)
     WorkflowApplication.CreateDefaultInstanceOwner(store, Nothing, WorkflowIdentityFilter.Any)
 
-    'Set default ComboBox selections.
+    ' Set default ComboBox selections.
     NumberRange.SelectedIndex = 0
     WorkflowType.SelectedIndex = 0
 
@@ -234,7 +212,7 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
 
     窗体加载时，将配置 `SqlWorkflowInstanceStore`，范围和工作流类型组合框将设置为默认值，持久性工作流实例将添加到 `InstanceId` 组合框。
 
-7. 为 `SelectedIndexChanged` 添加 `InstanceId` 处理程序。 若要添加该处理程序，请切换到窗体的**设计视图**，选择 "`InstanceId`" 组合框，单击 "**属性**" 窗口顶部的 "**事件**" 图标，然后双击 " **SelectedIndexChanged**"。
+7. 为 `SelectedIndexChanged` 添加 `InstanceId` 处理程序。 To add the handler, switch to **Design View** for the form, select the `InstanceId` combo box, click the **Events** icon at the top of the **Properties** window, and double-click **SelectedIndexChanged**.
 
     ```vb
     Private Sub InstanceId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles InstanceId.SelectedIndexChanged
@@ -256,20 +234,20 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
         Return
     End If
 
-    'Clear the status window.
+    ' Clear the status window.
     WorkflowStatus.Clear()
 
-    'Get the workflow version and display it.
-    'If the workflow is just starting then this info will not
-    'be available in the persistence store so do not try and retrieve it.
-    If Not WorkflowStarting Then
+    ' Get the workflow version and display it.
+    ' If the workflow is just starting then this info will not
+    ' be available in the persistence store so do not try and retrieve it.
+    If Not workflowStarting Then
         Dim instance As WorkflowApplicationInstance = _
             WorkflowApplication.GetInstance(WorkflowInstanceId, store)
 
         WorkflowVersion.Text = _
             WorkflowVersionMap.GetIdentityDescription(instance.DefinitionIdentity)
 
-        'Unload the instance.
+        ' Unload the instance.
         instance.Abandon()
     End If
     ```
@@ -286,7 +264,7 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
     // Get the workflow version and display it.
     // If the workflow is just starting then this info will not
     // be available in the persistence store so do not try and retrieve it.
-    if (!WorkflowStarting)
+    if (!workflowStarting)
     {
         WorkflowApplicationInstance instance =
             WorkflowApplication.GetInstance(this.WorkflowInstanceId, store);
@@ -305,7 +283,7 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
     Private Sub ListPersistedWorkflows()
         Using localCon As New SqlConnection(connectionString)
             Dim localCmd As String = _
-                "Select [InstanceId] from [System.Activities.DurableInstancing].[Instances] Order By [CreationTime]"
+                "SELECT [InstanceId] FROM [System.Activities.DurableInstancing].[Instances] ORDER BY [CreationTime]"
 
             Dim cmd As SqlCommand = localCon.CreateCommand()
             cmd.CommandText = localCmd
@@ -313,7 +291,7 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
             Using reader As SqlDataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection)
 
                 While (reader.Read())
-                    'Get the InstanceId of the persisted Workflow.
+                    ' Get the InstanceId of the persisted Workflow.
                     Dim id As Guid = Guid.Parse(reader(0).ToString())
                     InstanceId.Items.Add(id)
                 End While
@@ -323,10 +301,10 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
     ```
 
     ```csharp
-    using (SqlConnection localCon = new SqlConnection(connectionString))
+    using (var localCon = new SqlConnection(connectionString))
     {
         string localCmd =
-            "Select [InstanceId] from [System.Activities.DurableInstancing].[Instances] Order By [CreationTime]";
+            "SELECT [InstanceId] FROM [System.Activities.DurableInstancing].[Instances] ORDER BY [CreationTime]";
 
         SqlCommand cmd = localCon.CreateCommand();
         cmd.CommandText = localCmd;
@@ -335,7 +313,7 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
         {
             while (reader.Read())
             {
-                // Get the InstanceId of the persisted Workflow
+                // Get the InstanceId of the persisted Workflow.
                 Guid id = Guid.Parse(reader[0].ToString());
                 InstanceId.Items.Add(id);
             }
@@ -350,8 +328,8 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
     ```vb
     Private Delegate Sub UpdateStatusDelegate(msg As String)
     Public Sub UpdateStatus(msg As String)
-        'We may be on a different thread so we need to
-        'make this call using BeginInvoke.
+        ' We may be on a different thread so we need to
+        ' make this call using BeginInvoke.
         If InvokeRequired Then
             BeginInvoke(New UpdateStatusDelegate(AddressOf UpdateStatus), msg)
         Else
@@ -361,7 +339,7 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
 
             WorkflowStatus.AppendText(msg)
 
-            'Ensure that the newly added status is visible.
+            ' Ensure that the newly added status is visible.
             WorkflowStatus.SelectionStart = WorkflowStatus.Text.Length
             WorkflowStatus.ScrollToCaret()
         End If
@@ -392,7 +370,7 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
     }
     ```
 
-11. 将下面的 `GameOver` 方法和对应的委托添加到窗体类中。 当工作流完成时，此方法将通过从**InstanceId**组合框中删除已完成工作流的实例 id 来更新窗体 UI。
+11. 将下面的 `GameOver` 方法和对应的委托添加到窗体类中。 When a workflow completes, this method updates the form UI by removing the instance id of the completed workflow from the **InstanceId** combo box.
 
     ```vb
     Private Delegate Sub GameOverDelegate()
@@ -400,7 +378,7 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
         If InvokeRequired Then
             BeginInvoke(New GameOverDelegate(AddressOf GameOver))
         Else
-            'Remove this instance from the InstanceId combo box.
+            ' Remove this instance from the InstanceId combo box.
             InstanceId.Items.Remove(InstanceId.SelectedItem)
             InstanceId.SelectedIndex = -1
         End If
@@ -417,14 +395,14 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
         }
         else
         {
-            // Remove this instance from the combo box
+            // Remove this instance from the combo box.
             InstanceId.Items.Remove(InstanceId.SelectedItem);
             InstanceId.SelectedIndex = -1;
         }
     }
     ```
 
-### <a name="BKMK_ConfigureWorkflowApplication"></a>配置实例存储、工作流生命周期处理程序和扩展
+## <a name="to-configure-the-instance-store-workflow-lifecycle-handlers-and-extensions"></a>配置实例存储、工作流生命周期处理程序和扩展
 
 1. 向窗体类添加 `ConfigureWorkflowApplication` 方法。
 
@@ -445,7 +423,7 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
 2. 在 `ConfigureWorkflowApplication` 中，指定 `SqlWorkflowInstanceStore` 的 `WorkflowApplication`。
 
     ```vb
-    'Configure the persistence store.
+    ' Configure the persistence store.
     wfApp.InstanceStore = store
     ```
 
@@ -454,11 +432,11 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
     wfApp.InstanceStore = store;
     ```
 
-3. 接下来，创建一个 `StringWriter` 实例，并将它添加到 `Extensions` 的 `WorkflowApplication` 集合中。 将 `StringWriter` 添加到扩展时，它会捕获所有 `WriteLine` 活动输出。 当工作流进入空闲状态时，`WriteLine` 输出可从 `StringWriter` 提取并显示在窗体上。
+3. 接下来，创建一个 `StringWriter` 实例，并将它添加到 `Extensions` 的 `WorkflowApplication` 集合中。 When a `StringWriter` is added to the extensions it captures all `WriteLine` activity output. 当工作流进入空闲状态时，`WriteLine` 输出可从 `StringWriter` 提取并显示在窗体上。
 
     ```vb
-    'Add a StringWriter to the extensions. This captures the output
-    'from the WriteLine activities so we can display it in the form.
+    ' Add a StringWriter to the extensions. This captures the output
+    ' from the WriteLine activities so we can display it in the form.
     Dim sw As New StringWriter()
     wfApp.Extensions.Add(sw)
     ```
@@ -466,7 +444,7 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
     ```csharp
     // Add a StringWriter to the extensions. This captures the output
     // from the WriteLine activities so we can display it in the form.
-    StringWriter sw = new StringWriter();
+    var sw = new StringWriter();
     wfApp.Extensions.Add(sw);
     ```
 
@@ -476,14 +454,12 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
     wfApp.Completed = _
         Sub(e As WorkflowApplicationCompletedEventArgs)
             If e.CompletionState = ActivityInstanceState.Faulted Then
-                UpdateStatus(String.Format("Workflow Terminated. Exception: {0}" & vbCrLf & "{1}", _
-                    e.TerminationException.GetType().FullName, _
-                    e.TerminationException.Message))
+                UpdateStatus($"Workflow Terminated. Exception: {e.TerminationException.GetType().FullName}{vbCrLf}{e.TerminationException.Message}")
             ElseIf e.CompletionState = ActivityInstanceState.Canceled Then
                 UpdateStatus("Workflow Canceled.")
             Else
-                Dim Turns As Integer = Convert.ToInt32(e.Outputs("Turns"))
-                UpdateStatus($"Congratulations, you guessed the number in {Turns} turns.")
+                Dim turns As Integer = Convert.ToInt32(e.Outputs("Turns"))
+                UpdateStatus($"Congratulations, you guessed the number in {turns} turns.")
             End If
             GameOver()
         End Sub
@@ -502,8 +478,8 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
         }
         else
         {
-            int Turns = Convert.ToInt32(e.Outputs["Turns"]);
-            UpdateStatus($"Congratulations, you guessed the number in {Turns} turns.");
+            int turns = Convert.ToInt32(e.Outputs["Turns"]);
+            UpdateStatus($"Congratulations, you guessed the number in {turns} turns.");
         }
         GameOver();
     };
@@ -514,12 +490,12 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
     ```vb
     wfApp.Aborted = _
         Sub(e As WorkflowApplicationAbortedEventArgs)
-            UpdateStatus($"Workflow Aborted. Exception: {0e.Reason.GetType().FullName}" & vbCrLf & $"{e.Reason.Message}")
+            UpdateStatus($"Workflow Aborted. Exception: {e.Reason.GetType().FullName}{vbCrLf}{e.Reason.Message}")
         End Sub
 
     wfApp.OnUnhandledException = _
         Function(e As WorkflowApplicationUnhandledExceptionEventArgs)
-            UpdateStatus($"Unhandled Exception: {e.UnhandledException.GetType().FullName}" & vbCrLf & $"{e.UnhandledException.Message}")
+            UpdateStatus($"Unhandled Exception: {e.UnhandledException.GetType().FullName}{vbCrLf}{e.UnhandledException.Message}")
             GameOver()
             Return UnhandledExceptionAction.Terminate
         End Function
@@ -544,7 +520,7 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
     ```vb
     wfApp.PersistableIdle = _
         Function(e As WorkflowApplicationIdleEventArgs)
-            'Send the current WriteLine outputs to the status window.
+            ' Send the current WriteLine outputs to the status window.
             Dim writers = e.GetInstanceExtensions(Of StringWriter)()
             For Each writer In writers
                 UpdateStatus(writer.ToString())
@@ -572,44 +548,42 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
 
     ```vb
     Private Sub ConfigureWorkflowApplication(wfApp As WorkflowApplication)
-        'Configure the persistence store.
+        ' Configure the persistence store.
         wfApp.InstanceStore = store
 
-        'Add a StringWriter to the extensions. This captures the output
-        'from the WriteLine activities so we can display it in the form.
+        ' Add a StringWriter to the extensions. This captures the output
+        ' from the WriteLine activities so we can display it in the form.
         Dim sw As New StringWriter()
         wfApp.Extensions.Add(sw)
 
         wfApp.Completed = _
             Sub(e As WorkflowApplicationCompletedEventArgs)
                 If e.CompletionState = ActivityInstanceState.Faulted Then
-                    UpdateStatus(String.Format("Workflow Terminated. Exception: {0}" & vbCrLf & "{1}", _
-                        e.TerminationException.GetType().FullName, _
-                        e.TerminationException.Message))
+                    UpdateStatus($"Workflow Terminated. Exception: {e.TerminationException.GetType().FullName}{vbCrLf}{e.TerminationException.Message}")
                 ElseIf e.CompletionState = ActivityInstanceState.Canceled Then
                     UpdateStatus("Workflow Canceled.")
                 Else
-                    Dim Turns As Integer = Convert.ToInt32(e.Outputs("Turns"))
-                    UpdateStatus($"Congratulations, you guessed the number in {Turns} turns.")
+                    Dim turns As Integer = Convert.ToInt32(e.Outputs("Turns"))
+                    UpdateStatus($"Congratulations, you guessed the number in {turns} turns.")
                 End If
                 GameOver()
             End Sub
 
         wfApp.Aborted = _
             Sub(e As WorkflowApplicationAbortedEventArgs)
-                UpdateStatus($"Workflow Aborted. Exception: {e.Reason.GetType().FullName}" & vbCrLf & $"{e.Reason.Message}")
+                UpdateStatus($"Workflow Aborted. Exception: {e.Reason.GetType().FullName}{vbCrLf}{e.Reason.Message}")
             End Sub
 
         wfApp.OnUnhandledException = _
             Function(e As WorkflowApplicationUnhandledExceptionEventArgs)
-                UpdateStatus($"Unhandled Exception: {e.UnhandledException.GetType().FullName}" & vbCrLf & $"{e.UnhandledException.Message}")
+                UpdateStatus($"Unhandled Exception: {e.UnhandledException.GetType().FullName}{vbCrLf}{e.UnhandledException.Message}")
                 GameOver()
                 Return UnhandledExceptionAction.Terminate
             End Function
 
         wfApp.PersistableIdle = _
             Function(e As WorkflowApplicationIdleEventArgs)
-                'Send the current WriteLine outputs to the status window.
+                ' Send the current WriteLine outputs to the status window.
                 Dim writers = e.GetInstanceExtensions(Of StringWriter)()
                 For Each writer In writers
                     UpdateStatus(writer.ToString())
@@ -627,7 +601,7 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
 
         // Add a StringWriter to the extensions. This captures the output
         // from the WriteLine activities so we can display it in the form.
-        StringWriter sw = new StringWriter();
+        var sw = new StringWriter();
         wfApp.Extensions.Add(sw);
 
         wfApp.Completed = delegate(WorkflowApplicationCompletedEventArgs e)
@@ -642,8 +616,8 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
             }
             else
             {
-                int Turns = Convert.ToInt32(e.Outputs["Turns"]);
-                UpdateStatus($"Congratulations, you guessed the number in {Turns} turns.");
+                int turns = Convert.ToInt32(e.Outputs["Turns"]);
+                UpdateStatus($"Congratulations, you guessed the number in {turns} turns.");
             }
             GameOver();
         };
@@ -673,22 +647,22 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
     }
     ```
 
-### <a name="BKMK_WorkflowVersionMap"></a>启用和恢复多个工作流类型
+## <a name="to-enable-starting-and-resuming-multiple-workflow-types"></a>支持启动和恢复多个工作流类型
 
-要恢复工作流实例，主机必须提供工作流定义。 在此教程中有三个工作流类型，且后续教程步骤会介绍这些类型的多个版本。 主机应用程序可通过 `WorkflowIdentity` 将标识信息与持久化工作流实例相关联。 本节中的步骤演示了如何创建一个实用工具类，以帮助将工作流标识从持久化工作流实例映射到对应的工作流定义。 有关 `WorkflowIdentity` 和版本控制的详细信息，请参阅[使用 WorkflowIdentity 和版本控制](using-workflowidentity-and-versioning.md)。
+要恢复工作流实例，主机必须提供工作流定义。 在此教程中有三个工作流类型，且后续教程步骤会介绍这些类型的多个版本。 主机应用程序可通过 `WorkflowIdentity` 将标识信息与持久化工作流实例相关联。 本节中的步骤演示了如何创建一个实用工具类，以帮助将工作流标识从持久化工作流实例映射到对应的工作流定义。 For more information about `WorkflowIdentity` and versioning, see [Using WorkflowIdentity and Versioning](using-workflowidentity-and-versioning.md).
 
-1. 在**解决方案资源管理器**中右键单击 " **NumberGuessWorkflowHost** "，然后选择 "**添加**"、"**类**"。 在 "**名称**" 框中键入 `WorkflowVersionMap`，然后单击 "**添加**"。
+1. Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **Class**. Type `WorkflowVersionMap` into the **Name** box and click **Add**.
 
 2. 在包含其他 `using` 或 `Imports` 语句的文件的顶部添加以下 `using` 或 `Imports` 语句。
 
     ```vb
-    Imports NumberGuessWorkflowActivities
     Imports System.Activities
+    Imports NumberGuessWorkflowActivities
     ```
 
     ```csharp
-    using NumberGuessWorkflowActivities;
     using System.Activities;
+    using NumberGuessWorkflowActivities;
     ```
 
 3. 使用以下声明替换 `WorkflowVersionMap` 类声明。
@@ -697,7 +671,7 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
     Public Module WorkflowVersionMap
         Dim map As Dictionary(Of WorkflowIdentity, Activity)
 
-        'Current version identities.
+        ' Current version identities.
         Public StateMachineNumberGuessIdentity As WorkflowIdentity
         Public FlowchartNumberGuessIdentity As WorkflowIdentity
         Public SequentialNumberGuessIdentity As WorkflowIdentity
@@ -705,7 +679,7 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
         Sub New()
             map = New Dictionary(Of WorkflowIdentity, Activity)
 
-            'Add the current workflow version identities.
+            ' Add the current workflow version identities.
             StateMachineNumberGuessIdentity = New WorkflowIdentity With
             {
                 .Name = "StateMachineNumberGuessWorkflow",
@@ -791,9 +765,9 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
 
     `WorkflowVersionMap` 包含与此教程中的三个工作流定义对应的三个工作流标识，并在以下各节中工作流启动和恢复时使用。
 
-### <a name="BKMK_StartWorkflow"></a>启动新工作流
+## <a name="to-start-a-new-workflow"></a>启动新工作流
 
-1. 为 `Click` 添加 `NewGame` 处理程序。 若要添加该处理程序，请切换到窗体的**设计视图**，然后双击 `NewGame`。 此时将添加 `NewGame_Click` 处理程序，视图将切换为窗体的代码视图。 每当用户单击此按钮时，就会启动新工作流。
+1. 为 `Click` 添加 `NewGame` 处理程序。 To add the handler, switch to **Design View** for the form, and double-click `NewGame`. 此时将添加 `NewGame_Click` 处理程序，视图将切换为窗体的代码视图。 每当用户单击此按钮时，就会启动新工作流。
 
     ```vb
     Private Sub NewGame_Click(sender As Object, e As EventArgs) Handles NewGame.Click
@@ -865,26 +839,26 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
 4. 接下来，添加以下代码，此代码将工作流添加到工作流列表中，并在窗体上显示工作流的版本信息。
 
     ```vb
-    'Add the workflow to the list and display the version information.
-    WorkflowStarting = True
+    ' Add the workflow to the list and display the version information.
+    workflowStarting = True
     InstanceId.SelectedIndex = InstanceId.Items.Add(wfApp.Id)
     WorkflowVersion.Text = identity.ToString()
-    WorkflowStarting = False
+    workflowStarting = False
     ```
 
     ```csharp
     // Add the workflow to the list and display the version information.
-    WorkflowStarting = true;
+    workflowStarting = true;
     InstanceId.SelectedIndex = InstanceId.Items.Add(wfApp.Id);
     WorkflowVersion.Text = identity.ToString();
-    WorkflowStarting = false;
+    workflowStarting = false;
     ```
 
 5. 调用 `ConfigureWorkflowApplication` 为此 `WorkflowApplication` 实例配置实例存储、扩展以及工作流生命周期处理程序。
 
     ```vb
-    'Configure the instance store, extensions, and
-    'workflow lifecycle handlers.
+    ' Configure the instance store, extensions, and
+    ' workflow lifecycle handlers.
     ConfigureWorkflowApplication(wfApp)
     ```
 
@@ -897,7 +871,7 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
 6. 最后，调用 `Run`。
 
     ```vb
-    'Start the workflow.
+    ' Start the workflow.
     wfApp.Run()
     ```
 
@@ -910,7 +884,7 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
 
     ```vb
     Private Sub NewGame_Click(sender As Object, e As EventArgs) Handles NewGame.Click
-        'Start a new workflow.
+        ' Start a new workflow.
         Dim inputs As New Dictionary(Of String, Object)()
         inputs.Add("MaxNumber", Convert.ToInt32(NumberRange.SelectedItem))
 
@@ -930,17 +904,17 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
 
         Dim wfApp = New WorkflowApplication(wf, inputs, identity)
 
-        'Add the workflow to the list and display the version information.
-        WorkflowStarting = True
+        ' Add the workflow to the list and display the version information.
+        workflowStarting = True
         InstanceId.SelectedIndex = InstanceId.Items.Add(wfApp.Id)
         WorkflowVersion.Text = identity.ToString()
-        WorkflowStarting = False
+        workflowStarting = False
 
-        'Configure the instance store, extensions, and
-        'workflow lifecycle handlers.
+        ' Configure the instance store, extensions, and
+        ' workflow lifecycle handlers.
         ConfigureWorkflowApplication(wfApp)
 
-        'Start the workflow.
+        ' Start the workflow.
         wfApp.Run()
     End Sub
     ```
@@ -969,13 +943,13 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
 
         Activity wf = WorkflowVersionMap.GetWorkflowDefinition(identity);
 
-        WorkflowApplication wfApp = new WorkflowApplication(wf, inputs, identity);
+        var wfApp = new WorkflowApplication(wf, inputs, identity);
 
         // Add the workflow to the list and display the version information.
-        WorkflowStarting = true;
+        workflowStarting = true;
         InstanceId.SelectedIndex = InstanceId.Items.Add(wfApp.Id);
         WorkflowVersion.Text = identity.ToString();
-        WorkflowStarting = false;
+        workflowStarting = false;
 
         // Configure the instance store, extensions, and
         // workflow lifecycle handlers.
@@ -986,9 +960,9 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
     }
     ```
 
-### <a name="BKMK_ResumeWorkflow"></a>恢复工作流
+## <a name="to-resume-a-workflow"></a>恢复工作流
 
-1. 为 `Click` 添加 `EnterGuess` 处理程序。 若要添加该处理程序，请切换到窗体的**设计视图**，然后双击 `EnterGuess`。 每当用户单击此按钮时，就会恢复工作流。
+1. 为 `Click` 添加 `EnterGuess` 处理程序。 To add the handler, switch to **Design View** for the form, and double-click `EnterGuess`. 每当用户单击此按钮时，就会恢复工作流。
 
     ```vb
     Private Sub EnterGuess_Click(sender As Object, e As EventArgs) Handles EnterGuess.Click
@@ -1043,14 +1017,13 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
     Dim instance As WorkflowApplicationInstance = _
         WorkflowApplication.GetInstance(WorkflowInstanceId, store)
 
-    'Use the persisted WorkflowIdentity to retrieve the correct workflow
-    'definition from the dictionary.
+    ' Use the persisted WorkflowIdentity to retrieve the correct workflow
+    ' definition from the dictionary.
     Dim wf As Activity = _
         WorkflowVersionMap.GetWorkflowDefinition(instance.DefinitionIdentity)
 
-    'Associate the WorkflowApplication with the correct definition
-    Dim wfApp As WorkflowApplication = _
-        New WorkflowApplication(wf, instance.DefinitionIdentity)
+    ' Associate the WorkflowApplication with the correct definition
+    Dim wfApp As New WorkflowApplication(wf, instance.DefinitionIdentity)
     ```
 
     ```csharp
@@ -1063,22 +1036,21 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
         WorkflowVersionMap.GetWorkflowDefinition(instance.DefinitionIdentity);
 
     // Associate the WorkflowApplication with the correct definition
-    WorkflowApplication wfApp =
-        new WorkflowApplication(wf, instance.DefinitionIdentity);
+    var wfApp = new WorkflowApplication(wf, instance.DefinitionIdentity);
     ```
 
 4. 创建 `WorkflowApplication` 后，请调用 `ConfigureWorkflowApplication` 以配置实例存储、工作流生命周期处理程序以及扩展。 每次创建新 `WorkflowApplication` 时都必须执行这些步骤，并且必须在将工作流实例加载到 `WorkflowApplication` 中之前完成。 在加载工作流后，此工作流通过用户的猜测恢复执行。
 
     ```vb
-    'Configure the extensions and lifecycle handlers.
-    'Do this before the instance is loaded. Once the instance is
-    'loaded it is too late to add extensions.
+    ' Configure the extensions and lifecycle handlers.
+    ' Do this before the instance is loaded. Once the instance is
+    ' loaded it is too late to add extensions.
     ConfigureWorkflowApplication(wfApp)
 
-    'Load the workflow.
+    ' Load the workflow.
     wfApp.Load(instance)
 
-    'Resume the workflow.
+    ' Resume the workflow.
     wfApp.ResumeBookmark("EnterGuess", userGuess)
     ```
 
@@ -1098,7 +1070,7 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
 5. 最后，清除猜测文本框，并使窗体准备接受其他猜测。
 
     ```vb
-    'Clear the Guess textbox.
+    ' Clear the Guess textbox.
     Guess.Clear()
     Guess.Focus()
     ```
@@ -1129,27 +1101,26 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
         Dim instance As WorkflowApplicationInstance = _
             WorkflowApplication.GetInstance(WorkflowInstanceId, store)
 
-        'Use the persisted WorkflowIdentity to retrieve the correct workflow
-        'definition from the dictionary.
+        ' Use the persisted WorkflowIdentity to retrieve the correct workflow
+        ' definition from the dictionary.
         Dim wf As Activity = _
             WorkflowVersionMap.GetWorkflowDefinition(instance.DefinitionIdentity)
 
-        'Associate the WorkflowApplication with the correct definition
-        Dim wfApp As WorkflowApplication = _
-            New WorkflowApplication(wf, instance.DefinitionIdentity)
+        ' Associate the WorkflowApplication with the correct definition
+        Dim wfApp As New WorkflowApplication(wf, instance.DefinitionIdentity)
 
-        'Configure the extensions and lifecycle handlers.
-        'Do this before the instance is loaded. Once the instance is
-        'loaded it is too late to add extensions.
+        ' Configure the extensions and lifecycle handlers.
+        ' Do this before the instance is loaded. Once the instance is
+        ' loaded it is too late to add extensions.
         ConfigureWorkflowApplication(wfApp)
 
-        'Load the workflow.
+        ' Load the workflow.
         wfApp.Load(instance)
 
-        'Resume the workflow.
+        ' Resume the workflow.
         wfApp.ResumeBookmark("EnterGuess", userGuess)
 
-        'Clear the Guess textbox.
+        ' Clear the Guess textbox.
         Guess.Clear()
         Guess.Focus()
     End Sub
@@ -1182,8 +1153,7 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
             WorkflowVersionMap.GetWorkflowDefinition(instance.DefinitionIdentity);
 
         // Associate the WorkflowApplication with the correct definition
-        WorkflowApplication wfApp =
-            new WorkflowApplication(wf, instance.DefinitionIdentity);
+        var wfApp = new WorkflowApplication(wf, instance.DefinitionIdentity);
 
         // Configure the extensions and lifecycle handlers.
         // Do this before the instance is loaded. Once the instance is
@@ -1202,9 +1172,9 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
     }
     ```
 
-### <a name="BKMK_TerminateWorkflow"></a>终止工作流
+## <a name="to-terminate-a-workflow"></a>终止工作流
 
-1. 为 `Click` 添加 `QuitGame` 处理程序。 若要添加该处理程序，请切换到窗体的**设计视图**，然后双击 `QuitGame`。 每当用户单击此按钮，即终止当前选择的工作流。
+1. 为 `Click` 添加 `QuitGame` 处理程序。 To add the handler, switch to **Design View** for the form, and double-click `QuitGame`. 每当用户单击此按钮，即终止当前选择的工作流。
 
     ```vb
     Private Sub QuitGame_Click(sender As Object, e As EventArgs) Handles QuitGame.Click
@@ -1230,21 +1200,20 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
     Dim instance As WorkflowApplicationInstance = _
         WorkflowApplication.GetInstance(WorkflowInstanceId, store)
 
-    'Use the persisted WorkflowIdentity to retrieve the correct workflow
-    'definition from the dictionary.
+    ' Use the persisted WorkflowIdentity to retrieve the correct workflow
+    ' definition from the dictionary.
     Dim wf As Activity = WorkflowVersionMap.GetWorkflowDefinition(instance.DefinitionIdentity)
 
-    'Associate the WorkflowApplication with the correct definition.
-    Dim wfApp As WorkflowApplication = _
-        New WorkflowApplication(wf, instance.DefinitionIdentity)
+    ' Associate the WorkflowApplication with the correct definition.
+    Dim wfApp As New WorkflowApplication(wf, instance.DefinitionIdentity)
 
-    'Configure the extensions and lifecycle handlers.
+    ' Configure the extensions and lifecycle handlers.
     ConfigureWorkflowApplication(wfApp)
 
-    'Load the workflow.
+    ' Load the workflow.
     wfApp.Load(instance)
 
-    'Terminate the workflow.
+    ' Terminate the workflow.
     wfApp.Terminate("User resigns.")
     ```
 
@@ -1263,8 +1232,7 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
     Activity wf = WorkflowVersionMap.GetWorkflowDefinition(instance.DefinitionIdentity);
 
     // Associate the WorkflowApplication with the correct definition
-    WorkflowApplication wfApp =
-        new WorkflowApplication(wf, instance.DefinitionIdentity);
+    var wfApp = new WorkflowApplication(wf, instance.DefinitionIdentity);
 
     // Configure the extensions and lifecycle handlers
     ConfigureWorkflowApplication(wfApp);
@@ -1276,9 +1244,9 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
     wfApp.Terminate("User resigns.");
     ```
 
-### <a name="BKMK_BuildAndRun"></a> 生成并运行应用程序
+## <a name="to-build-and-run-the-application"></a>生成并运行应用程序
 
-1. 双击**解决方案资源管理器**中的**Program.cs** （或**Module1**）以显示代码。
+1. Double-click **Program.cs** (or **Module1.vb**) in **Solution Explorer** to display the code.
 
 2. 在包含其他 `using`（或 `Imports`）语句的文件的顶部添加以下 `using`（或 `Imports`）语句。
 
@@ -1290,7 +1258,7 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
     using System.Windows.Forms;
     ```
 
-3. 从[如何：运行工作流](how-to-run-a-workflow.md)，删除或注释掉现有工作流宿主代码，并将其替换为以下代码。
+3. Remove or comment out the existing workflow hosting code from [How to: Run a Workflow](how-to-run-a-workflow.md), and replace it with the following code.
 
     ```vb
     Sub Main()
@@ -1307,14 +1275,14 @@ Windows Workflow Foundation （WF）的一个中心功能是运行时能够将�
     }
     ```
 
-4. 在**解决方案资源管理器**中右键单击 " **NumberGuessWorkflowHost** "，然后选择 "**属性**"。 在 "**应用程序**" 选项卡中，为**输出类型**指定**Windows 应用程序**。 此步骤是可选的，但如果不执行此步骤，则除了窗体之外还会显示控制台窗口。
+4. Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Properties**. In the **Application** tab, specify **Windows Application** for the **Output type**. 此步骤是可选的，但如果不执行此步骤，则除了窗体之外还会显示控制台窗口。
 
 5. 按 Ctrl+Shift+B 生成应用程序。
 
-6. 确保将**NumberGuessWorkflowHost**设置为启动应用程序，然后按 Ctrl + F5 启动该应用程序。
+6. Ensure that **NumberGuessWorkflowHost** is set as the startup application, and press Ctrl+F5 to start the application.
 
-7. 为推测游戏选择一个范围，并选择要启动的工作流类型，然后单击 "**新建游戏**"。 在**推测**框中输入推测，然后单击 "**开始**" 以提交推测。 请注意，`WriteLine` 活动的输出将显示在窗体上。
+7. Select a range for the guessing game and the type of workflow to start, and click **New Game**. Enter a guess in the **Guess** box and click **Go** to submit your guess. 请注意，`WriteLine` 活动的输出将显示在窗体上。
 
-8. 使用不同的工作流类型和编号范围启动多个工作流，输入一些推测，并通过从 "**工作流实例 Id** " 列表中进行选择来在工作流之间进行切换。
+8. Start several workflows using different workflow types and number ranges, enter some guesses, and switch between the workflows by selecting from the **Workflow Instance Id** list.
 
-    请注意，当切换到新工作流时，状态窗口中不会显示以前的猜测值和工作流进度。 状态不可用的原因是未将它捕获并保存在任何位置。 在本教程的后续步骤中，[如何：创建自定义跟踪参与者](how-to-create-a-custom-tracking-participant.md)，创建用于保存此信息的自定义跟踪参与者。
+    请注意，当切换到新工作流时，状态窗口中不会显示以前的猜测值和工作流进度。 状态不可用的原因是未将它捕获并保存在任何位置。 In the next step of the tutorial, [How to: Create a Custom Tracking Participant](how-to-create-a-custom-tracking-participant.md), you create a custom tracking participant that saves this information.

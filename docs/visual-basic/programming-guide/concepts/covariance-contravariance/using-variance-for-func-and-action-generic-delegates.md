@@ -1,19 +1,19 @@
 ---
-title: 对 Func 和 Action 泛型委托使用变体（Visual Basic）
+title: 对 Func 和 Action 泛型委托使用变体
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-ms.openlocfilehash: a85d6ae2fa32547958e557bbe45b9405e9b660ef
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 2678abd03f55224720d00509dc44f2db16551193
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524239"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349047"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>对 Func 和 Action 泛型委托使用变体（Visual Basic）
+# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Using Variance for Func and Action Generic Delegates (Visual Basic)
 
 这些示例演示如何使用 `Func` 和 `Action` 泛型委托中的协变和逆变来启用重用方法并为代码中提供更多的灵活性。
 
-有关协变和逆变的详细信息，请参阅[委托中的变体（Visual Basic）](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)。
+For more information about covariance and contravariance, see [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).
 
 ## <a name="using-delegates-with-covariant-type-parameters"></a>使用具有协变类型参数的委托
 

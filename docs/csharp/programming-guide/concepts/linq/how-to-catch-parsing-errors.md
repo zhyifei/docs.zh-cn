@@ -1,15 +1,15 @@
 ---
-title: 如何：捕捉分析错误 (C#)
+title: 如何捕捉分析错误 (C#)
 ms.date: 07/20/2015
 ms.assetid: bfb612d4-5605-48ef-8c93-915cf9d5dcfb
-ms.openlocfilehash: 4195ff50d1b4d23cd9eb07fc27f20861d1504672
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1a05037892061dec85e7837472e8ec13e076724b
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204145"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141481"
 ---
-# <a name="how-to-catch-parsing-errors-c"></a>如何：捕捉分析错误 (C#)
+# <a name="how-to-catch-parsing-errors-c"></a>如何捕捉分析错误 (C#)
 本主题演示如何检测格式不正确或无效的 XML。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 通过使用 <xref:System.Xml.XmlReader> 实现。 如果将格式不正确或无效的 XML 传递给 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，则基础 <xref:System.Xml.XmlReader> 类将引发异常。 用于分析 XML 的各种方法（如 <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>）不会捕捉异常；应用程序可以捕捉异常。  

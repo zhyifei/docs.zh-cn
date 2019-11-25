@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 7010c38797ab64e5106c96c06cd814c143ca9c24
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: dab708bfbc33458bc2664c0d04757f0badcc2575
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419377"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141604"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>隐式类型本地变量（C# 编程指南）
 
@@ -30,13 +30,13 @@ ms.locfileid: "73419377"
 - 在 [for](../../language-reference/keywords/for.md) 初始化语句中。
 
     ```csharp
-    for(var x = 1; x < 10; x++)
+    for (var x = 1; x < 10; x++)
     ```
 
 - 在 [foreach](../../language-reference/keywords/foreach-in.md) 初始化语句中。
 
     ```csharp
-    foreach(var item in list){...}
+    foreach (var item in list) {...}
     ```
 
 - 在 [using](../../language-reference/keywords/using-statement.md) 域间中。
@@ -45,7 +45,7 @@ ms.locfileid: "73419377"
     using (var file = new StreamReader("C:\\myfile.txt")) {...}
     ```
 
-有关详细信息，请参阅[如何：在查询表达式中使用隐式类型本地变量和数组](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)。
+有关详细信息，请参阅[如何在查询表达式中使用隐式类型化局部变量和数组](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)。
 
 ## <a name="var-and-anonymous-types"></a>var 和匿名类型
 
@@ -63,7 +63,7 @@ ms.locfileid: "73419377"
 
 - `var` 不能在类范围内对字段使用。
 
-- 使用 `var` 声明的变量不能在初始化表达式中使用。 换句话说，此表达式是合法的`: int i = (i = 20);`，但是此表达式会生成编译时错误：`var i = (i = 20);`
+- 使用 `var` 声明的变量不能在初始化表达式中使用。 换句话说，此表达式是合法的：`int i = (i = 20);`，但是此表达式会生成编译时错误：`var i = (i = 20);`
 
 - 不能在相同语句中初始化多个隐式类型化变量。
 
@@ -95,7 +95,7 @@ private var bookTitles = new List<string>();
 
 - [C# 参考](../../language-reference/index.md)
 - [隐式类型化数组](../arrays/implicitly-typed-arrays.md)
-- [如何：在查询表达式中使用隐式类型本地变量和数组](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
+- [如何在查询表达式中使用隐式类型化局部变量和数组](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
 - [匿名类型](anonymous-types.md)
 - [对象和集合初始值设定项](object-and-collection-initializers.md)
 - [var](../../language-reference/keywords/var.md)

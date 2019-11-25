@@ -1,5 +1,5 @@
 ---
-title: 按位置和名称传递自变量 (Visual Basic)
+title: 按位置和按名称传递自变量
 ms.date: 02/01/2018
 helpviewer_keywords:
 - arguments [Visual Basic], passing by name
@@ -22,66 +22,66 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-ms.openlocfilehash: 2fa07a4ecf31b9dc0fee91593e793f3b00c5a83b
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: b6588335f7634cc87a9fc14cbfc4ba80baad1abb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524443"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352622"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>按位置和名称传递自变量 (Visual Basic)
 
-当调用 `Sub` 或 `Function` 过程时，可以*按位置*（按照它们在过程定义中的显示顺序）传递参数，也可以*按名称*传递参数，而不考虑位置。
+When you call a `Sub` or `Function` procedure, you can pass arguments *by position* — in the order in which they appear in the procedure's definition — or you can pass them *by name*, without regard to position.
 
-按名称传递参数时，请指定参数的声明名称，后跟冒号和等号（`:=`），后跟自变量值。 可以按任意顺序提供命名参数。
+When you pass an argument by name, you specify the argument's declared name followed by a colon and an equal sign (`:=`), followed by the argument value. You can supply named arguments in any order.
 
-例如，以下 `Sub` 过程采用三个参数：
+For example, the following `Sub` procedure takes three arguments:
 
 [!code-vb[SampleProcedure](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#1)]
 
-调用此过程时，可以按位置、名称或同时使用这两个参数来提供参数。
+When you call this procedure, you can supply the arguments by position, by name, or by using a mixture of both.
 
-## <a name="passing-arguments-by-position"></a>按位置传递参数
+## <a name="passing-arguments-by-position"></a>Passing Arguments by Position
 
-可以调用 `Display` 方法，该方法的参数按位置传递，并用逗号进行分隔，如以下示例中所示：
+You can call the `Display` method with its arguments passed by position and delimited by commas, as shown in the following example:
 
 [!code-vb[ByPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#2)]
 
-如果在位置参数列表中省略了可选参数，则必须用逗号保存其位置。 下面的示例调用不带 `age` 参数的 `Display` 方法：
+If you omit an optional argument in a positional argument list, you must hold its place with a comma. The following example calls the `Display` method without the `age` argument:
 
 [!code-vb[ByPositionWithOptionalArgument](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#3)]
 
-## <a name="passing-arguments-by-name"></a>按名称传递参数
+## <a name="passing-arguments-by-name"></a>Passing Arguments by Name
 
-另外，还可以使用按名称传递的参数（也用逗号分隔）来调用 `Display`，如下面的示例中所示：
+Alternatively, you can call `Display` with the arguments passed by name, also delimited by commas, as shown in the following example:
 
 [!code-vb[ByName](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#4)]
 
-当调用具有多个可选参数的过程时，以这种方式传递参数的方法特别有用。 如果按名称提供参数，则无需使用连续的逗号表示缺少的位置参数。 通过按名称传递参数，还可以更轻松地跟踪正在传递的参数和要省略的参数。
+Passing arguments by name in this way is especially useful when you call a procedure that has more than one optional argument. If you supply arguments by name, you do not have to use consecutive commas to denote missing positional arguments. Passing arguments by name also makes it easier to keep track of which arguments you are passing and which ones you are omitting.
 
-## <a name="mixing-arguments-by-position-and-by-name"></a>按位置和按名称混合参数
+## <a name="mixing-arguments-by-position-and-by-name"></a>Mixing Arguments by Position and by Name
 
-可以在单个过程调用中按位置和按名称提供参数，如以下示例中所示：
+You can supply arguments both by position and by name in a single procedure call, as shown in the following example:
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#5)]
 
-在前面的示例中，由于 `birth` 是按名称传递的，因此不需要额外的逗号来容纳省略的 `age` 参数的位置。
+In the preceding example, no extra comma is necessary to hold the place of the omitted `age` argument, since `birth` is passed by name.
 
-在15.5 之前的 Visual Basic 版本中，当你通过位置和名称的组合提供参数时，位置参数必须是第一个。 按名称提供参数后，所有剩余参数都必须按名称传递。  例如，以下对 `Display` 方法的调用显示编译器错误[BC30241：应为命名参数](../../../misc/bc30241.md)。
+In versions of Visual Basic before 15.5, when you supply arguments by a mixture of position and name, the positional arguments must all come first. Once you supply an argument by name, any remaining arguments must all be passed by name.  For example, the following call to the `Display` method displays compiler error [BC30241: Named argument expected](../../../misc/bc30241.md).
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)]
 
-从 Visual Basic 15.5 开始，如果结束位置参数位于正确的位置，则位置参数可以跟随命名参数。 如果在 Visual Basic 15.5 下编译，则以前对 `Display` 方法的调用将成功编译，不再生成编译器错误[BC30241](../../../misc/bc30241.md)。
+Starting with Visual Basic 15.5, positional arguments can follow named arguments if the ending positional arguments are in the correct position. If compiled under Visual Basic 15.5, the previous call to the `Display` method compiles successfully and no longer generates compiler error [BC30241](../../../misc/bc30241.md).
 
-如果要使用命名参数使代码更具可读性，此功能可以按任意顺序混合并匹配命名参数和位置参数。 例如，下面的 `Person` 类构造函数需要 `Person` 类型的两个参数，这两个参数都可以是 `Nothing`。
+This ability to mix and match named and positional arguments in any order is particularly useful when you want to use a named argument to make your code more readable. For example, the following `Person` class constructor requires two arguments of type `Person`, both of which can be `Nothing`.
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#7)]
 
-在 `Nothing` `father` 和 `mother` 参数的值时，使用混合的命名和位置参数可确保代码的意图：
+Using mixed named and positional arguments helps to make the intent of the code clear when the value of the `father` and `mother` arguments is `Nothing`:
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#8)]
 
-若要在带有命名参数的位置参数后面添加以下元素，你必须将以下元素添加到 Visual Basic 项目（\* .vbproj）文件中：
+To follow positional arguments with named arguments, you must add the following element to your Visual Basic project (\*.vbproj) file:
 
 ```xml
 <PropertyGroup>
@@ -89,13 +89,13 @@ ms.locfileid: "72524443"
 </PropertyGroup>
 ```
 
-有关详细信息，请参阅[设置 Visual Basic 语言版本](../../../language-reference/configure-language-version.md)。
+For more information see [setting the Visual Basic language version](../../../language-reference/configure-language-version.md).
 
-## <a name="restrictions-on-supplying-arguments-by-name"></a>按名称提供参数的限制
+## <a name="restrictions-on-supplying-arguments-by-name"></a>Restrictions on Supplying Arguments by Name
 
-不能按名称传递参数，以避免输入所需的参数。 只能省略可选参数。
+You cannot pass arguments by name to avoid entering required arguments. You can omit only the optional arguments.
 
-不能按名称传递参数数组。 这是因为，当你调用过程时，你为参数数组提供了不限数量的逗号分隔参数，且编译器无法将多个参数与单个名称相关联。
+You cannot pass a parameter array by name. This is because when you call the procedure, you supply an indefinite number of comma-separated arguments for the parameter array, and the compiler cannot associate more than one argument with a single name.
 
 ## <a name="see-also"></a>请参阅
 

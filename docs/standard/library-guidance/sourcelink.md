@@ -4,12 +4,12 @@ description: 有关使用源链接改进 .NET 库调试的最佳做法建议。
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 7530c984ce4bbe9e40362bd550bec57ac585a550
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 89f9e3b1fd70003c528465f29a143b157468d539
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928992"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089289"
 ---
 # <a name="source-link"></a>源链接
 
@@ -25,7 +25,7 @@ ms.locfileid: "70928992"
 
 可以使用 [NuGet 包资源管理器](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)以确认源链接元数据是否已成功嵌入在包中。 检查 `Repository` 元数据是否存在并具有注释标识符，以及 .pdb 文件是否与每个目标的 .dll 放置在一起。
 
-![NuGet 包资源管理器中的 SourceLink](./media/sourcelink/nuget-package-explorer-sourcelink.png "NuGet 包资源管理器中的源链接")
+![NuGet 包资源管理器中的源链接](./media/sourcelink/nuget-package-explorer-sourcelink.png "NuGet 包资源管理器中的源链接")
 
 **✔️ 请考虑**使用源链接将源代码管理元数据添加到程序集和 NuGet 包。
 
