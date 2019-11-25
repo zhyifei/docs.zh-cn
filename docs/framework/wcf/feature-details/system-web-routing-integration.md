@@ -2,20 +2,20 @@
 title: System.Web.Routing 集成
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: 3d5c3d7586189e0939fd52bc2b5feac51ae00613
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85137689a31573dc10e8f7384007830ab40d31df
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933882"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976038"
 ---
-# <a name="systemwebrouting-integration"></a><span data-ttu-id="4b8c8-102">System.Web.Routing 集成</span><span class="sxs-lookup"><span data-stu-id="4b8c8-102">System.Web.Routing Integration</span></span>
-<span data-ttu-id="4b8c8-103">承载 Windows Communication Foundation (WCF) 服务在 Internet 信息服务 (IIS) 时你将一个.svc 文件放在虚拟目录中。</span><span class="sxs-lookup"><span data-stu-id="4b8c8-103">When hosting a Windows Communication Foundation (WCF) service in Internet Information Service (IIS) you place a .svc file in the virtual directory.</span></span> <span data-ttu-id="4b8c8-104">此 .svc 文件指定所用的服务主机工厂以及实现服务的类。</span><span class="sxs-lookup"><span data-stu-id="4b8c8-104">This .svc file specifies the service host factory to use as well as the class that implements the service.</span></span> <span data-ttu-id="4b8c8-105">向服务发出请求时您的.svc 文件中指定 URI，例如： `http://contoso.com/EmployeeServce.svc`。</span><span class="sxs-lookup"><span data-stu-id="4b8c8-105">When making requests to the service you specify the .svc file in the URI, for example: `http://contoso.com/EmployeeServce.svc`.</span></span> <span data-ttu-id="4b8c8-106">对于编写 REST 服务的程序员，此类型的 URI 并非最佳选择。</span><span class="sxs-lookup"><span data-stu-id="4b8c8-106">For programmers writing REST services this type of URI is not optimal.</span></span> <span data-ttu-id="4b8c8-107">REST 服务的 URI 指定了特定资源，通常没有任何扩展。</span><span class="sxs-lookup"><span data-stu-id="4b8c8-107">URIs for REST services specify a specific resource and normally do not have any extensions.</span></span> <span data-ttu-id="4b8c8-108"><xref:System.Web.Routing>集成功能可用于承载响应无扩展的 Uri 的 WCF REST 服务。</span><span class="sxs-lookup"><span data-stu-id="4b8c8-108">The <xref:System.Web.Routing> integration feature allows you to host a WCF REST service that responds to URIs without an extension.</span></span> <span data-ttu-id="4b8c8-109">详细了解路由，请参见[ASP.NET 路由](https://go.microsoft.com/fwlink/?LinkId=184660)。</span><span class="sxs-lookup"><span data-stu-id="4b8c8-109">For more information about routing see [ASP.NET Routing](https://go.microsoft.com/fwlink/?LinkId=184660).</span></span>  
+# <a name="systemwebrouting-integration"></a><span data-ttu-id="c9d7f-102">System.Web.Routing 集成</span><span class="sxs-lookup"><span data-stu-id="c9d7f-102">System.Web.Routing Integration</span></span>
+<span data-ttu-id="c9d7f-103">在 Internet 信息服务（IIS）中承载 Windows Communication Foundation （WCF）服务时，会将一个 .svc 文件放在虚拟目录中。</span><span class="sxs-lookup"><span data-stu-id="c9d7f-103">When hosting a Windows Communication Foundation (WCF) service in Internet Information Service (IIS) you place a .svc file in the virtual directory.</span></span> <span data-ttu-id="c9d7f-104">此 .svc 文件指定所用的服务主机工厂以及实现服务的类。</span><span class="sxs-lookup"><span data-stu-id="c9d7f-104">This .svc file specifies the service host factory to use as well as the class that implements the service.</span></span> <span data-ttu-id="c9d7f-105">向服务发出请求时，请在 URI 中指定 .svc 文件，例如： `http://contoso.com/EmployeeServce.svc`。</span><span class="sxs-lookup"><span data-stu-id="c9d7f-105">When making requests to the service you specify the .svc file in the URI, for example: `http://contoso.com/EmployeeServce.svc`.</span></span> <span data-ttu-id="c9d7f-106">对于编写 REST 服务的程序员，此类型的 URI 并非最佳选择。</span><span class="sxs-lookup"><span data-stu-id="c9d7f-106">For programmers writing REST services this type of URI is not optimal.</span></span> <span data-ttu-id="c9d7f-107">REST 服务的 URI 指定了特定资源，通常没有任何扩展。</span><span class="sxs-lookup"><span data-stu-id="c9d7f-107">URIs for REST services specify a specific resource and normally do not have any extensions.</span></span> <span data-ttu-id="c9d7f-108"><xref:System.Web.Routing> 集成功能可用于承载对不带扩展名的 Uri 做出响应的 WCF REST 服务。</span><span class="sxs-lookup"><span data-stu-id="c9d7f-108">The <xref:System.Web.Routing> integration feature allows you to host a WCF REST service that responds to URIs without an extension.</span></span> <span data-ttu-id="c9d7f-109">有关路由的详细信息，请参阅[ASP.NET 路由](https://go.microsoft.com/fwlink/?LinkId=184660)。</span><span class="sxs-lookup"><span data-stu-id="c9d7f-109">For more information about routing see [ASP.NET Routing](https://go.microsoft.com/fwlink/?LinkId=184660).</span></span>  
   
-## <a name="using-systemwebrouting-integration"></a><span data-ttu-id="4b8c8-110">使用 System.Web.Routing 集成</span><span class="sxs-lookup"><span data-stu-id="4b8c8-110">Using System.Web.Routing Integration</span></span>  
- <span data-ttu-id="4b8c8-111">若要使用 <xref:System.Web.Routing> 集成功能，请使用 <xref:System.ServiceModel.Activation.ServiceRoute> 类创建一个或多个路由，然后将这些路由添加到 Global.asax 文件中的 <xref:System.Web.Routing.RouteTable>。</span><span class="sxs-lookup"><span data-stu-id="4b8c8-111">To use the <xref:System.Web.Routing> integration feature, you use the <xref:System.ServiceModel.Activation.ServiceRoute> class to create one or more routes and add them to the <xref:System.Web.Routing.RouteTable> in a Global.asax file.</span></span> <span data-ttu-id="4b8c8-112">这些路由可指定服务所响应的相对 URI。</span><span class="sxs-lookup"><span data-stu-id="4b8c8-112">These routes specify the relative URIs that the service responds to.</span></span> <span data-ttu-id="4b8c8-113">下面的示例演示如何执行此操作。</span><span class="sxs-lookup"><span data-stu-id="4b8c8-113">The following example shows how to do this.</span></span>  
+## <a name="using-systemwebrouting-integration"></a><span data-ttu-id="c9d7f-110">使用 System.Web.Routing 集成</span><span class="sxs-lookup"><span data-stu-id="c9d7f-110">Using System.Web.Routing Integration</span></span>  
+ <span data-ttu-id="c9d7f-111">若要使用 <xref:System.Web.Routing> 集成功能，请使用 <xref:System.ServiceModel.Activation.ServiceRoute> 类创建一个或多个路由，然后将这些路由添加到 Global.asax 文件中的 <xref:System.Web.Routing.RouteTable>。</span><span class="sxs-lookup"><span data-stu-id="c9d7f-111">To use the <xref:System.Web.Routing> integration feature, you use the <xref:System.ServiceModel.Activation.ServiceRoute> class to create one or more routes and add them to the <xref:System.Web.Routing.RouteTable> in a Global.asax file.</span></span> <span data-ttu-id="c9d7f-112">这些路由可指定服务所响应的相对 URI。</span><span class="sxs-lookup"><span data-stu-id="c9d7f-112">These routes specify the relative URIs that the service responds to.</span></span> <span data-ttu-id="c9d7f-113">下面的示例演示如何执行此操作。</span><span class="sxs-lookup"><span data-stu-id="c9d7f-113">The following example shows how to do this.</span></span>  
   
-```  
+```aspx-csharp  
 <%@ Application Language="C#" %>  
 <%@ Import Namespace="System.Web.Routing" %>  
 <%@ Import Namespace="System.ServiceModel.Activation" %>  
@@ -34,9 +34,9 @@ ms.locfileid: "61933882"
 </script>  
 ```  
   
- <span data-ttu-id="4b8c8-114">这示例将具有以 Customers 开头的相对 URI 的所有请求路由到 `Service` 服务。</span><span class="sxs-lookup"><span data-stu-id="4b8c8-114">This routes all requests with a relative URI that begins with Customers to the `Service` service.</span></span>  
+ <span data-ttu-id="c9d7f-114">这示例将具有以 Customers 开头的相对 URI 的所有请求路由到 `Service` 服务。</span><span class="sxs-lookup"><span data-stu-id="c9d7f-114">This routes all requests with a relative URI that begins with Customers to the `Service` service.</span></span>  
   
- <span data-ttu-id="4b8c8-115">在 Web.config 文件中，必须添加 `System.Web.Routing.UrlRoutingModule` 模块，将 `runAllManagedModulesForAllRequests` 特性设置为 `true`，以及将 `UrlRoutingHandler` 处理程序添加到 `<system.webServer>` 元素，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="4b8c8-115">In your Web.config file you must add the `System.Web.Routing.UrlRoutingModule` module, set the `runAllManagedModulesForAllRequests` attribute to `true`, and add the `UrlRoutingHandler` handler to the `<system.webServer>` element as shown in the following example.</span></span>  
+ <span data-ttu-id="c9d7f-115">在 Web.config 文件中，必须添加 `System.Web.Routing.UrlRoutingModule` 模块，将 `runAllManagedModulesForAllRequests` 特性设置为 `true`，以及将 `UrlRoutingHandler` 处理程序添加到 `<system.webServer>` 元素，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="c9d7f-115">In your Web.config file you must add the `System.Web.Routing.UrlRoutingModule` module, set the `runAllManagedModulesForAllRequests` attribute to `true`, and add the `UrlRoutingHandler` handler to the `<system.webServer>` element as shown in the following example.</span></span>  
   
 ```xml  
 <system.webServer>  
@@ -49,7 +49,7 @@ ms.locfileid: "61933882"
     </system.webServer>  
 ```  
   
- <span data-ttu-id="4b8c8-116">此示例将加载路由所需的模块和处理程序。</span><span class="sxs-lookup"><span data-stu-id="4b8c8-116">This loads a module and handler required for routing.</span></span> <span data-ttu-id="4b8c8-117">有关详细信息，请参阅[路由](../../../../docs/framework/wcf/feature-details/routing.md)。</span><span class="sxs-lookup"><span data-stu-id="4b8c8-117">For more information, see [Routing](../../../../docs/framework/wcf/feature-details/routing.md).</span></span> <span data-ttu-id="4b8c8-118">另外，还必须在 `aspNetCompatibilityEnabled` 元素中将 `true` 特性设置为 `<serviceHostingEnvironment>`，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="4b8c8-118">You must also set the `aspNetCompatibilityEnabled` attribute to `true` in the `<serviceHostingEnvironment>` element as shown in the following example.</span></span>  
+ <span data-ttu-id="c9d7f-116">此示例将加载路由所需的模块和处理程序。</span><span class="sxs-lookup"><span data-stu-id="c9d7f-116">This loads a module and handler required for routing.</span></span> <span data-ttu-id="c9d7f-117">有关详细信息，请参阅[路由](../../../../docs/framework/wcf/feature-details/routing.md)。</span><span class="sxs-lookup"><span data-stu-id="c9d7f-117">For more information, see [Routing](../../../../docs/framework/wcf/feature-details/routing.md).</span></span> <span data-ttu-id="c9d7f-118">另外，还必须在 `aspNetCompatibilityEnabled` 元素中将 `true` 特性设置为 `<serviceHostingEnvironment>`，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="c9d7f-118">You must also set the `aspNetCompatibilityEnabled` attribute to `true` in the `<serviceHostingEnvironment>` element as shown in the following example.</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -58,9 +58,9 @@ ms.locfileid: "61933882"
     </system.serviceModel>  
 ```  
   
- <span data-ttu-id="4b8c8-119">实现该服务的类必须启用 ASP.NET 兼容性需求，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="4b8c8-119">The class that implements the service must enable ASP.NET compatibility requirements as shown in the following example.</span></span>  
+ <span data-ttu-id="c9d7f-119">实现该服务的类必须启用 ASP.NET 兼容性需求，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="c9d7f-119">The class that implements the service must enable ASP.NET compatibility requirements as shown in the following example.</span></span>  
   
-```  
+```csharp 
 [ServiceContract]  
 [AspNetCompatibilityRequirements(RequirementsMode=AspNetCompatibilityRequirementsMode.Allowed)]  
     public class Service  
@@ -69,7 +69,7 @@ ms.locfileid: "61933882"
     }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4b8c8-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="4b8c8-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c9d7f-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="c9d7f-120">See also</span></span>
 
-- [<span data-ttu-id="4b8c8-121">WCF Web HTTP 编程模型</span><span class="sxs-lookup"><span data-stu-id="4b8c8-121">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [<span data-ttu-id="4b8c8-122">ASP.NET 路由</span><span class="sxs-lookup"><span data-stu-id="4b8c8-122">ASP.NET Routing</span></span>](https://go.microsoft.com/fwlink/?LinkId=184660)
+- [<span data-ttu-id="c9d7f-121">WCF Web HTTP 编程模型</span><span class="sxs-lookup"><span data-stu-id="c9d7f-121">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [<span data-ttu-id="c9d7f-122">ASP.NET 路由</span><span class="sxs-lookup"><span data-stu-id="c9d7f-122">ASP.NET Routing</span></span>](https://go.microsoft.com/fwlink/?LinkId=184660)
