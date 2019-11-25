@@ -2,14 +2,12 @@
 title: 缓解：图标对象中的 PNG 帧
 ms.date: 03/30/2017
 ms.assetid: ca87fefb-7144-4b4e-8832-5a939adbb4b2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 85a76681cf6efd649fe366a68d956246334975fe
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1a4ae0c069a4cd6d53bce77e64822ebf3fbb5361
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789970"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457878"
 ---
 # <a name="mitigation-png-frames-in-icon-objects"></a>缓解：图标对象中的 PNG 帧
 从 .NET Framework 4.6 开始， <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> 方法成功将带 PNG 帧的图标转换为 <xref:System.Drawing.Bitmap> 对象。  
@@ -36,4 +34,4 @@ ms.locfileid: "70789970"
   
 ## <a name="see-also"></a>请参阅
 
-- [重定目标更改](retargeting-changes-in-the-net-framework-4-6.md)
+- [应用程序兼容性](application-compatibility.md)

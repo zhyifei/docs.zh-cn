@@ -2,12 +2,12 @@
 title: 通过 Ocelot 实现 API 网关
 description: 了解如何通过 Ocelot 实现 API 网关以及如何在基于容器的环境中使用 Ocelot。
 ms.date: 10/02/2018
-ms.openlocfilehash: cb452c330712ecf536cdf09f41fdbf828a4e9314
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 6c576a17d784777557bfb8bd99438eb111e8ec2e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771175"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737683"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>通过 Ocelot 实现 API 网关
 
@@ -22,7 +22,7 @@ ms.locfileid: "72771175"
 
 以下体系结构关系图显示了如何在 eShopOnContainers 中通过 Ocelot 实现 API 网关。
 
-![显示客户端应用、微服务和及其间 API 网关的 eShopOnContainers 体系结构关系图](./media/image28.png)
+![显示 eShopOnContainers 体系结构的图示。](./media/implement-api-gateways-with-ocelot/eshoponcontainers-architecture.png)
 
 图 6-28  。 使用 API 网关的 eShopOnContainers 体系结构
 
@@ -46,7 +46,7 @@ ms.locfileid: "72771175"
 
 例如，eShopOnContainers 具有大约六项必须通过 API 网关发布的内部微服务类型，如下图所示。
 
-![仅“购物篮”、“目录”、“位置”、“市场营销”、“订购”和“付款”微服务通过 API 网关发布。](./media/image29.png)
+![显示其子文件夹的“服务”文件夹的屏幕截图。](./media/implement-api-gateways-with-ocelot/eshoponcontainers-microservice-folders.png)
 
 图 6-29  。 Visual Studio 的 eShopOnContainers 解决方案中的微服务文件夹
 
@@ -54,7 +54,7 @@ ms.locfileid: "72771175"
 
 目前，所有这些服务都是作为 ASP.NET Core Web API 服务实现的，可以从代码中了解到。 我们主要来看一项微服务，比如“目录”微服务代码。
 
-![Catalog.API 项目的解决方案资源管理器视图。](./media/image30.png)
+![显示 Catalog.API 项目内容的解决方案资源管理器的屏幕截图。](./media/implement-api-gateways-with-ocelot/catalog-api-microservice-folders.png)
 
 图 6-30  。 Web API 微服务示例（“目录”微服务）
 
@@ -130,7 +130,7 @@ docker-compose run --service-ports catalog.api
 
 然后，可直接访问“目录”微服务，并直接通过该“外部”端口由 Swagger UI 查看其方法，此事例中为 `http://localhost:5101/swagger`：
 
-![Catalog.API REST API 的 Swagger UI 页面的浏览器视图。](./media/image31.png)
+![显示 Catalog.API REST API 的 Swagger UI 的屏幕截图。](./media/implement-api-gateways-with-ocelot/test-catalog-microservice.png)
 
 图 6-31  。 通过其 Swagger UI 测试“目录”微服务
 
@@ -152,7 +152,7 @@ Install-Package Ocelot
 
 在 eShopOnContainers 中，其 API 网关实现是一个非常简单的 ASP.NET Core WebHost 项目，而 Ocelot 的中间件可处理所有 API 网关功能，如下图所示：
 
-![Ocelot API 网关项目的解决方案资源管理器视图。](./media/image32.png)
+![显示 Ocelot API 网关项目的解决方案资源管理器的屏幕截图。](./media/implement-api-gateways-with-ocelot/ocelotapigw-base-project.png)
 
 图 6-32  。 eShopOnContainers 中的 OcelotApiGw 基础项目
 
@@ -280,7 +280,7 @@ UpstreamPathTemplate 是一个 URL，Ocelot 将其用来识别用于客户端中
 
 在 eShopOnContainers 中，为 Ocelot API 网关使用单个 Docker 容器映像。但是在运行时，通过提供不同的 configuration.json 文件为每种类型的 API 网关/BFF 创建不同的服务/容器，并使用 docker 卷为每个服务访问不同的 PC 文件夹。
 
-![Ocelot API 网关的单个 Docker 图像用于全部四个 API 网关](./media/image33.png)
+![所有 API 网关的单个 Ocelot 网关 Docker 映像的图示。](./media/implement-api-gateways-with-ocelot/reusing-single-ocelot-docker-image.png)
 
 图 6-33  。 在多个 API 网关类型中重用单个 Ocelot Docker 映像
 
@@ -354,7 +354,7 @@ webmarketingapigw:
 
 由于上面的代码，并且如下方 Visual Studio Explorer 所示，定义每个特定业务/BFF API 网关所需的唯一文件只有 configuration.json 文件，因为这四个 API 网关基于相同 Docker 映像。
 
-![各 API 网关之间的唯一区别是每个网关的 configuration.json 文件不同。](./media/image34.png)
+![显示具有 configuration.json 文件的所有 API 网关的屏幕截图。](./media/implement-api-gateways-with-ocelot/ocelot-configuration-files.png)
 
 图 6-34  。 使用 Ocelot 定义每个 API 网关/BFF 所需的唯一文件是配置文件
 
@@ -364,13 +364,13 @@ webmarketingapigw:
 
 例如，访问 webshoppingapigw API 网关提供的上游 URL `http://localhost:5202/api/v1/c/catalog/items/2/` 时，将从 Docker 主机中的内部下游 URL `http://catalog.api/api/v1/2` 获取相同结果，如以下浏览器所示。
 
-![来自 Catalog.api、通过 API 网关的响应的浏览器视图。](./media/image35.png)
+![显示通过 API 网关进行响应的浏览器屏幕截图。](./media/implement-api-gateways-with-ocelot/access-microservice-through-url.png)
 
 图 6-35  。 通过 API 网关提供的 URL 访问微服务
 
 由于测试或调试原因，如果想不通过 API 网关直接访问目录 Docker 容器（仅在开发环境中），考虑到“catalog.api”是 Docker 主机内部的 DNS 解析（由 docker-compose 服务名称处理服务发现），直接访问容器的唯一方法是通过 docker-compose.override.yml 中发布的外部端口，该端口仅用于开发测试，例如以下浏览器中的 `http://localhost:5101/api/v1/Catalog/items/1`。
 
-![响应的浏览器视图，该响应从 Catalog.api 直接转到 Catalog.api，与通过 API 网关的响应相同。](./media/image36.png)
+![显示对 Catalog.api 的直接响应的浏览器屏幕截图。](./media/implement-api-gateways-with-ocelot/direct-access-microservice-testing.png)
 
 图 6-36  。 出于测试目的直接访问微服务
 
@@ -384,13 +384,13 @@ webmarketingapigw:
 
 在下图中，还可了解聚合器服务如何与其相关 API 网关协同工作。
 
-![eShopOnContainers 体系结构，其中显示了聚合器服务。](./media/image37.png)
+![显示聚合器服务的 eShopOnContainers 体系结构的图示。](./media/implement-api-gateways-with-ocelot/eshoponcontainers-architecture-aggregator-services.png)
 
 图 6-37  。 使用聚合器服务的 eShopOnContainers 体系结构
 
 进一步放大视图，在下图的“购物”业务区中，可以看到在使用 API 网关中的聚合器服务时，客户端应用和微服务之间的干扰减少了。
 
-![放大 eShopOnContainers 体系结构，显示聚合器服务，该服务“组合”响应“加入”来自多个微服务的响应，以减少与最终客户端之间的干扰。](./media/image38.png)
+![显示放大的 eShopOnContainers 体系结构的图示。](./media/implement-api-gateways-with-ocelot/zoom-in-vision-aggregator-services.png)
 
 图 6-38  。 聚合器服务的放大影像
 
@@ -404,17 +404,17 @@ webmarketingapigw:
 
 由于 eShopOnContainers 使用的多个 API 网关具有基于 BFF 和业务范围的边界，因此“标识/身份验证”服务排除在 API 网关之外，如下图中黄色高亮部分所示。
 
-![eShopOnContainers 体系结构关系图，显示 API 网关下的身份标识微服务。](./media/image39.png)
+![显示 API 网关下的标识微服务的图示。](./media/implement-api-gateways-with-ocelot/eshoponcontainers-identity-service-position.png)
 
 图 6-39  。 eShopOnContainers 中的“标识”服务的位置
 
 但是，Ocelot 还支持在 API 网关边界内设置“标识/身份验证”微服务，如另一图所示。
 
-![通过 API 网关 (AG) 下的标识微服务进行身份验证：1）AG 从标识微服务请求身份验证令牌，2）标识微服务将令牌返回到 AG，3-4）AG 使用身份验证令牌向微服务发出请求。](./media/image40.png)
+![显示 Ocelot API 网关中的身份验证的图示。](./media/implement-api-gateways-with-ocelot/ocelot-authentication.png)
 
 图 6-40  。 Ocelot 中的身份验证
 
-由于 eShopOnContainers 应用程序已将 API 网关拆分为多个 BFF（用于前端的后端）和业务范围 API 网关，因此另一种选择是为横切关注点创建其他 API 网关。 对于基于更复杂的微服务且具有多个横切关注点微服务的架构，这种选择更加合理。 由于 eShopOnContainers 中只有一个横切关注点，为简单起见，决定仅从 API 网关领域处理安全服务。
+如上图所示，当标识微服务位于 API 网关 (AG) 下时：1) AG 从标识微服务请求身份验证令牌，2) 标识微服务将令牌返回到 AG，3-4) AG 使用身份验证令牌向微服务发出请求。 由于 eShopOnContainers 应用程序已将 API 网关拆分为多个 BFF（用于前端的后端）和业务范围 API 网关，因此另一种选择是为横切关注点创建其他 API 网关。 对于基于更复杂的微服务且具有多个横切关注点微服务的架构，这种选择更加合理。 由于 eShopOnContainers 中只有一个横切关注点，为简单起见，决定仅从 API 网关领域处理安全服务。
 
 在任何情况下，如果应用受到 API 网关级别的保护，则尝试使用任何安全的微服务时，首先会访问 Ocelot API 网关的身份验证模块。 这将重新定向 HTTP 请求，访问“标识”或“身份验证”微服务以获取访问令牌，这样便可通过 access_token 访问受保护的服务。
 
@@ -540,11 +540,11 @@ Ocelot 的 ReRoute 层中的授权。   Ocelot 支持在进行身份验证后评
 
 在 Web 应用程序前的 Kubernetes 中加入入口 Nginx 层和几个 Ocelot API 网关/BFF 是理想的体系结构，如下图所示。
 
-![Kubernetes 入口充当流向应用的所有流量的反向代理，包括通常在 Api 网关范围之外的 Web 应用程序。](./media/image41.png)
+![显示入口层如何适合 AKS 环境的图示。](./media/implement-api-gateways-with-ocelot/eshoponcontainer-ingress-tier.png)
 
 图 6-41  。 部署到 Kubernetes 时 eShopOnContainers 中的入口层
 
-将 eShopOnContainers 部署到 Kubernetes 时，它只通过入口公开一些服务或终结点，基本上是以下列出的 URL 上的后缀  ：
+Kubernetes 入口充当流向应用的所有流量的反向代理，包括通常在 Api 网关范围之外的 Web 应用程序。 将 eShopOnContainers 部署到 Kubernetes 时，它只通过入口公开一些服务或终结点，基本上是以下列出的 URL 上的后缀  ：
 
 - `/` 用于客户端 SPA Web 应用程序
 - `/webmvc` 用于客户端 MVC Web 应用程序

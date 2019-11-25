@@ -13,18 +13,19 @@ helpviewer_keywords:
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51938dade8ebd1b84010533e04b26cf989ed5f24
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 21d8ef3abfd16e11c9251edfc4f39b02e93eaab5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353941"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740927"
 ---
 # <a name="generic-collections-in-net"></a>.NET 中的泛型集合
 
  .NET 类库提供了许多 <xref:System.Collections.Generic> 和 <xref:System.Collections.ObjectModel> 命名空间中的泛型集合类。 若要详细了解这些类，请参阅[常用集合类型](../../../docs/standard/collections/commonly-used-collection-types.md)。  
   
-### <a name="systemcollectionsgeneric"></a>System.Collections.Generic  
+## <a name="systemcollectionsgeneric"></a>System.Collections.Generic
+
  许多泛型集合类型均为非泛型类型的直接模拟。 <xref:System.Collections.Generic.Dictionary%602> 是 <xref:System.Collections.Hashtable> 的泛型版本；它使用枚举的泛型结构 <xref:System.Collections.Generic.KeyValuePair%602> 而不是 <xref:System.Collections.DictionaryEntry>。  
   
  <xref:System.Collections.Generic.List%601> 是 <xref:System.Collections.ArrayList> 的泛型版本。 存在响应非泛型版本的泛型 <xref:System.Collections.Generic.Queue%601> 和 <xref:System.Collections.Generic.Stack%601> 类。  
@@ -33,14 +34,16 @@ ms.locfileid: "71353941"
   
  <xref:System.Collections.Generic.LinkedList%601> 泛型类是真正的链接列表。 它没有任何非泛型对应项。  
   
-### <a name="systemcollectionsobjectmodel"></a>System.Collections.ObjectModel  
+## <a name="systemcollectionsobjectmodel"></a>System.Collections.ObjectModel
+
  <xref:System.Collections.ObjectModel.Collection%601> 泛型类提供用于派生自己的泛型集合类型的基类。 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 类提供了任何从实现 <xref:System.Collections.Generic.IList%601> 泛型接口的类型生成只读集合的简便方法。 <xref:System.Collections.ObjectModel.KeyedCollection%602> 泛型类提供了存储包含其自己的键的对象的方法。  
   
-## <a name="other-generic-types"></a>其他泛型类型  
+## <a name="other-generic-types"></a>其他泛型类型
+
  <xref:System.Nullable%601> 泛型结构允许使用值类型，如同它们可分配 `null`。 这在处理数据库查询时很有用，其中字段包含可能丢失的值类型。 泛型类型参数可为任意值类型。  
   
 > [!NOTE]
-> 在 C# 和 Visual Basic 中，无需显式使用 <xref:System.Nullable%601>，因为语言具有可以为 null 类型的语法。 请参阅[可为空的值类型（C# 编程指南）](../../csharp/programming-guide/nullable-types/index.md)或 [可为空的值类型 (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)。
+> 在 C# 和 Visual Basic 中，无需显式使用 <xref:System.Nullable%601>，因为语言具有可以为 null 类型的语法。 请参阅[可为 null 的值类型（C# 引用）](../../csharp/language-reference/builtin-types/nullable-value-types.md)和[可为 null 的值类型 (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)。
   
  <xref:System.ArraySegment%601> 泛型结构提供了分隔任何类型的从零开始的一维数组内的一系列元素的方法。 泛型类型参数是数组中元素的类型。  
   

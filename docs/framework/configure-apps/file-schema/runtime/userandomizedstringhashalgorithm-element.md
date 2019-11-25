@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UseRandomizedStringHashAlgorithm element
 - <UseRandomizedStringHashAlgorithm> element
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
-ms.openlocfilehash: cc9708b8cca6520932fbf0e1975a05cad5fad485
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3863bc1376d89ef804022fb9c87fac3a25fc910f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115045"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968836"
 ---
 # <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm > 元素
 确定公共语言运行时是否按应用程序域计算字符串的哈希代码。  
@@ -70,7 +70,7 @@ ms.locfileid: "73115045"
   
  运行该示例时，如果不提供配置文件，它将显示如下所示的输出。 请注意，这两个应用程序域中的字符串的哈希代码是相同的。  
   
-```  
+```console
 String 'This is a string.' in domain 'PerDomain.exe': 941BCEAC  
 String 'This is a string.' in domain 'NewDomain': 941BCEAC  
 ```  
@@ -88,7 +88,7 @@ String 'This is a string.' in domain 'NewDomain': 941BCEAC
   
  如果配置文件存在，则此示例将显示以下输出：  
   
-```  
+```console
 String 'This is a string.' in domain 'PerDomain.exe': 5435776D  
 String 'This is a string.' in domain 'NewDomain': 75CC8236  
 ```  

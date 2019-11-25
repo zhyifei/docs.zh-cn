@@ -5,15 +5,15 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 637911b3-0c78-4493-a4fb-91db56d767cd
-ms.openlocfilehash: 5d2380db3b8d2c5c41d04a34f9b86a97eb7b27b1
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 3e27e6ff526edc33e06bfc19ff7d5a284c0d30f2
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672031"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975759"
 ---
 # <a name="printing-and-print-system-management"></a>打印和打印系统管理
-[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]和 Microsoft .NET 框架引入了一个新的打印路径 (Microsoft Windows 图形设备接口 (GDI) 打印的替代方案, 以及一组极丰富的打印系统管理 Api。  
+Windows Vista 和 Microsoft .NET 框架引入了一种新的打印路径（Microsoft Windows 图形设备接口（GDI）打印的替代方案，以及一组极丰富的扩展的打印系统管理 Api。  
   
 ## <a name="in-this-section"></a>本节内容  
  [打印概述](printing-overview.md)  

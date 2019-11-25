@@ -3,12 +3,12 @@ title: 分支和循环 - C# 教程简介
 description: 在本教程的“分支和循环”中，将编写 C# 代码以研究支持条件分支和循环重复执行语句的语言语法。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: a0701a63d6c3aece6bac4263cbcf8a682a623cf7
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 44b634e3c2120116ee7fd66770398a6b66c8ed8c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834124"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739127"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>通过分支和循环语句了解条件逻辑
 
@@ -18,7 +18,13 @@ ms.locfileid: "71834124"
 
 ## <a name="make-decisions-using-the-if-statement"></a>使用 `if` 语句做出决定
 
-创建名为 branches-tutorial  的目录。 将新建的目录设为当前目录，并运行 `dotnet new console -n BranchesAndLoops -o .`。 此命令会在当前目录中创建一个新的 .NET Core 控制台应用程序。
+创建名为 branches-tutorial  的目录。 将其设为当前目录并运行以下命令：
+
+```dotnetcli
+dotnet new console -n BranchesAndLoops -o .
+```
+
+此命令会在当前目录中创建一个新的 .NET Core 控制台应用程序。
 
 在常用编辑器中，打开 Program.cs  ，并将行 `Console.WriteLine("Hello World!");` 替换为以下代码：
 

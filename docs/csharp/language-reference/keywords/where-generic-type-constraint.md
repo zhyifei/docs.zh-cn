@@ -7,12 +7,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 4e51c5dd226533e7d1ce79a136dba19cbb252f92
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 24ae6e285b8b4270188462b05f39c6142c6901ae
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253917"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972716"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where（泛型类型约束）（C# 参考）
 
@@ -44,7 +44,7 @@ ms.locfileid: "70253917"
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 
-`where` 子句也可能包括构造函数约束 `new()`。 该约束使得能够使用 `new` 运算符创建类型参数的实例。 [new() 约束](new-constraint.md)可以让编译器知道：提供的任何类型参数都必须具有可访问的无参数（或默认）构造函数。 例如:
+`where` 子句也可能包括构造函数约束 `new()`。 该约束使得能够使用 `new` 运算符创建类型参数的实例。 [new() 约束](new-constraint.md)可以让编译器知道：提供的任何类型参数都必须具有可访问的无参数构造函数。 例如:
 
 [!code-csharp[using the new constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
 

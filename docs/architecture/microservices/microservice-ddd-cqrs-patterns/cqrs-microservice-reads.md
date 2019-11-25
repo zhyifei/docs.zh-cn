@@ -2,12 +2,12 @@
 title: 在 CQRS 微服务中实现读取/查询
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解如何使用 Dapper 在 eShopOnContainers 中的订购微服务上实现 CQRS 查询端。
 ms.date: 10/08/2018
-ms.openlocfilehash: 6541a0cb7ce8ac3946e119483308d91158bdb522
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 235b0e471a17e2a37a883a111cf499b7837f3ea1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094068"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972078"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>在 CQRS 微服务中实现读取/查询
 
@@ -15,15 +15,15 @@ ms.locfileid: "73094068"
 
 如图 7-3 所示，这种方法很简单。 根据用户界面应用程序的要求，Web API 控制器使用任意基础结构（如 Dapper 等微观对象关系映射程序 (ORM)）并返回动态 ViewModel 就可实现 API 接口。
 
-![可以通过只使用微型 ORM（如 Dapper）查询数据库（返回动态 ViewModel），实现采用简化 CQRS 方法的最简单查询端方法。](./media/image3.png)
+![在简化的 CQRS 中显示高级查询端的关系图。](./media/cqrs-microservice-reads/simple-approach-cqrs-queries.png)
 
 **图 7-3**。 CQRS 微服务中用于查询的最简单方法
 
-这是用于查询的最简单方法。 查询定义查询数据库并返回为每个查询动态构建的动态 ViewModel。 因为查询是幂等的，所以无论查询运行多少次，数据都不会更改。 因此，不会受到事务端所用 DDD 模式的限制（如聚合和其他模式），这也是查询与事务区域分离的原因。 只需查询数据库以获取 UI 需要的数据，并返回动态 ViewModel，除在 SQL 语句中外，动态 ViewModel 不需要在任何地方静态定义（ViewModel 没有类）。
+可以通过只使用微型 ORM（如 Dapper）查询数据库（返回动态 ViewModel），实现采用简化 CQRS 方法的最简单查询端方法。 查询定义查询数据库并返回为每个查询动态构建的动态 ViewModel。 因为查询是幂等的，所以无论查询运行多少次，数据都不会更改。 因此，不会受到事务端所用 DDD 模式的限制（如聚合和其他模式），这也是查询与事务区域分离的原因。 只需查询数据库以获取 UI 需要的数据，并返回动态 ViewModel，除在 SQL 语句中外，动态 ViewModel 不需要在任何地方静态定义（ViewModel 没有类）。
 
 因为这种方法很简单，因此查询端所需的代码（例如使用 [Dapper](https://github.com/StackExchange/Dapper) 等微型 ORM 的代码）可[在同一 Web API 项目](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs)中实现。 如图 7-4 所示。 查询在 eShopOnContainers 解决方案的“Ordering.API”微服务项目中定义  。
 
-![Ordering.API 项目的解决方案资源管理器视图，其中显示 Application > Queries 文件夹。](./media/image4.png)
+![Ordering.API 项目的“查询”文件夹的屏幕截图。](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
 
 **图 7-4**。 eShopOnContainers 的订购微服务中的查询
 
@@ -41,7 +41,7 @@ Viewmodel 可以是定义在类中的静态类型。 或者可以根据执行的
 
 Dapper 是开源项目（最初由 Sam Saffron 创建），也是在 [Stack Overflow](https://stackoverflow.com/) 中使用的构建基块的一部分。 要使用 Dapper，只需通过 [Dapper NuGet 包](https://www.nuget.org/packages/Dapper)进行安装，如下图所示：
 
-![在 VS 的“管理 NuGet 程序包”视图中查看的 Dapper 程序包。](./media/image4.1.png)
+![“NuGet 包”视图中 Dapper 包的屏幕截图。](./media/cqrs-microservice-reads/drapper-package-nuget.png)
 
 还需要添加一个 using 语句，使代码具有 Dapper 扩展方法的访问权限。
 
@@ -177,7 +177,7 @@ public class OrderSummary
 
 下图中，可以看到 Swagger UI 如何显示 ResponseType 信息。
 
-![订购 API 的 Swagger UI 页面的浏览器视图。](./media/image5.png)
+![Ordering.API 的 Swagger UI 页面的屏幕截图。](./media/cqrs-microservice-reads/swagger-ordering-http-api.png)
 
 **图 7-5**。 显示来自 Web API 的响应类型和可能的 HTTP 状态代码的 Swagger UI
 
@@ -189,7 +189,7 @@ public class OrderSummary
  <https://github.com/StackExchange/dapper-dot-net>
 
 - **Julie Lerman.数据点 - Dapper、Entity Framework 和混合应用（MSDN 杂志文章）**  
-  <https://msdn.microsoft.com/magazine/mt703432>
+  <https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps>
 
 - **使用 Swagger 的 ASP.NET Core Web API 帮助页**  
   <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>

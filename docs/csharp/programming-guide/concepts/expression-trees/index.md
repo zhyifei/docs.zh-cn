@@ -2,17 +2,17 @@
 title: 表达式树 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: 7e63bf28f10070daa9624daa67bd5118fa67874d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: e1ba2ac9107b5c0ab4547bd8cc5f23ca84753951
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926719"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969848"
 ---
 # <a name="expression-trees-c"></a>表达式树 (C#)
 表达式树以树形数据结构表示代码，其中每一个节点都是一种表达式，比如方法调用和 `x < y` 这样的二元运算等。  
   
- 你可以对表达式树中的代码进行编辑和运算。 这样能够动态修改可执行代码、在不同数据库中执行 LINQ 查询以及创建动态查询。 若要详细了解 LINQ 中的表达式树，请参阅[操作说明：使用表达式树生成动态查询 (C#)](./how-to-use-expression-trees-to-build-dynamic-queries.md)。  
+ 你可以对表达式树中的代码进行编辑和运算。 这样能够动态修改可执行代码、在不同数据库中执行 LINQ 查询以及创建动态查询。 有关 LINQ 中表达式树的详细信息，请参阅[如何使用表达式树生成动态查询 (C#)](./how-to-use-expression-trees-to-build-dynamic-queries.md)。
   
  表达式树还能用于动态语言运行时 (DLR) 以提供动态语言和 .NET Framework 之间的互操作性，同时保证编译器编写员能够发射表达式树而非 Microsoft 中间语言 (MSIL)。 有关 DLR 的详细信息，请参阅[动态语言运行时概述](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)。  
   
@@ -118,7 +118,7 @@ Console.WriteLine("Decomposed expression: {0} => {1} {2} {3}",
 ```  
   
 ## <a name="immutability-of-expression-trees"></a>表达式树永久性  
- 表达式树应具有永久性。 这意味着如果你想修改某个表达式树，则必须复制该表达式树然后替换其中的节点来创建一个新的表达式树。 你可以使用表达式树访问者遍历现有表达式树。 有关详细信息，请参阅[如何：修改表达式树 (C#)](./how-to-modify-expression-trees.md)。  
+ 表达式树应具有永久性。 这意味着如果你想修改某个表达式树，则必须复制该表达式树然后替换其中的节点来创建一个新的表达式树。 你可以使用表达式树访问者遍历现有表达式树。 有关详细信息，请参阅[如何修改表达式树 (C#)](./how-to-modify-expression-trees.md)。
   
 ## <a name="compiling-expression-trees"></a>编译表达式树  
  <xref:System.Linq.Expressions.Expression%601> 类型提供了 <xref:System.Linq.Expressions.Expression%601.Compile%2A> 方法以将表达式树表示的代码编译成可执行委托。  
@@ -145,13 +145,13 @@ Console.WriteLine(expr.Compile()(4));
 // Also prints True.  
 ```  
   
- 有关详细信息，请参阅[如何：执行表达式树 (C#)](./how-to-execute-expression-trees.md)。  
+ 有关详细信息，请参阅[如何执行表达式树 (C#)](./how-to-execute-expression-trees.md)。
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Linq.Expressions>
-- [如何：执行表达式树 (C#)](./how-to-execute-expression-trees.md)
-- [如何：修改表达式树 (C#)](./how-to-modify-expression-trees.md)
+- [如何执行表达式树 (C#)](./how-to-execute-expression-trees.md)
+- [如何修改表达式树 (C#)](./how-to-modify-expression-trees.md)
 - [Lambda 表达式](../../statements-expressions-operators/lambda-expressions.md)
 - [动态语言运行时概述](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
 - [编程概念 (C#)](../index.md)

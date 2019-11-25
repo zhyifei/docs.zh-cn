@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用 | 在 ASP.NET
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9d9e75767f5ed5010f618d5dbe1e58fe79454597
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 7e84da784d34be1646df982fa2594764d43d99dd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117295"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966871"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>在 ASP.NET Core 应用中使用数据
 
@@ -282,7 +282,7 @@ await strategy.ExecuteAsync(async () =>
 
 尽管对于管理持久性以及在大多数情况下封装应用程序开发者提供的数据库详细信息而言，EF Core 是绝佳选择，但它不是唯一的选择。 另一个热门的开源替代选择是一种所谓的微型 ORM，即 [Dapper](https://github.com/StackExchange/Dapper)。 微型 ORM 是不具有完整功能的轻量级工具，用于将对象映射到数据结构。 Dapper 在设计上主要关注性能，而不是完全封装用于检索和更新数据的基础查询。 因为它不提取开发人员的 SQL，Dapper“更接近于原型”，使开发人员可以编写要用于给定数据访问操作的确切查询。
 
-EF Core 具有两个重要功能，使其有别于 Dapper ，并且增加其性能开销。 第一个功能是从 LINQ 表达式转换为 SQL。 将缓存这些转换，但即便如此，首次执行它们时仍会产生开销。 第二个功能是对实体进行更改跟踪（以便生成高效的更新语句）。 通过使用 AsNotTracking 扩展，可对特定查询关闭此行为。 EF Core 还会生成通常非常高效的 SQL 查询，并且从性能角度上看，任何情况下都能完全接受，但如果需要执行对精确查询的精细化控制，也可使用 EF Core 传入自定义 SQL（或执行存储过程）。 在这种情况下，Dapper 的性能仍然优于 EF Core，但只有略微优势。 Julie Lerman 在其 2016 年 5 月的 MSDN 文章 [Dapper、Entity Framework 和混合应用](https://msdn.microsoft.com/magazine/mt703432.aspx)中展示了部分性能数据。 可访问 [Dapper 网站](https://github.com/StackExchange/Dapper)，查看各种数据访问方法的其他性能基准数据。
+EF Core 具有两个重要功能，使其有别于 Dapper ，并且增加其性能开销。 第一个功能是从 LINQ 表达式转换为 SQL。 将缓存这些转换，但即便如此，首次执行它们时仍会产生开销。 第二个功能是对实体进行更改跟踪（以便生成高效的更新语句）。 通过使用 AsNotTracking 扩展，可对特定查询关闭此行为。 EF Core 还会生成通常非常高效的 SQL 查询，并且从性能角度上看，任何情况下都能完全接受，但如果需要执行对精确查询的精细化控制，也可使用 EF Core 传入自定义 SQL（或执行存储过程）。 在这种情况下，Dapper 的性能仍然优于 EF Core，但只有略微优势。 Julie Lerman 在其 2016 年 5 月的 MSDN 文章 [Dapper、Entity Framework 和混合应用](https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps)中展示了部分性能数据。 可访问 [Dapper 网站](https://github.com/StackExchange/Dapper)，查看各种数据访问方法的其他性能基准数据。
 
 要查看 Dapper 与 EF Core 语法之间的差异，请考虑用于检索一系列项目的相同方法的两个版本：
 
@@ -342,20 +342,20 @@ NoSQL 数据库需要处理的另一复杂性是版本控制。 对象的属性�
 
 NoSQL 数据库通常不会强制实施 [ACID](https://en.wikipedia.org/wiki/ACID)，这意味着它在性能和可伸缩性方面优于关系数据库。 它们非常适合特别大型的数据集和对象，不适合规范化表格结构中的存储。 根据最适合的情景分别加以利用，单个应用程序能同时获得关系数据库和 NoSQL 数据库带来的好处。
 
-## <a name="azure-documentdb"></a>Azure Cosmos DB
+## <a name="azure-cosmos-db"></a>Azure Cosmos DB
 
-Azure Cosmos DB 是一项完全托管的 NoSQL 数据库服务，可提供基于云的无架构数据存储。 Cosmos DB 旨在实现快速可预测性能、高可用性、弹性缩放和全球分发。 尽管属于 NoSQL 数据库，但开发人员可对 JSON 数据使用熟悉的一系列 SQL 查询功能。 Cosmos DB 中的所有资源均存储为 JSON 文档。 资源作为“项目”（包含元数据的文档）和“源”（项目集合）管理   。 图 8-2 显示了不同 Cosmos DB 资源之间的关系。
+Azure Cosmos DB 是一项完全托管的 NoSQL 数据库服务，可提供基于云的无架构数据存储。 Azure Cosmos DB 旨在实现快速且可预测性能、高可用性、弹性缩放和全球分发。 尽管属于 NoSQL 数据库，但开发人员可对 JSON 数据使用熟悉的一系列 SQL 查询功能。 Azure Cosmos DB 中的所有资源均存储为 JSON 文档。 资源作为“项目”（包含元数据的文档）和“源”（项目集合）管理   。 图 8-2 显示了不同 Azure Cosmos DB 资源之间的关系。
 
-![Cosmos DB（一种 NoSQL JSON 数据库）的资源之间的层次结构关系](./media/image8-2.png)
+![Azure Cosmos DB（一种 NoSQL JSON 数据库）的资源之间的层次结构关系](./media/image8-2.png)
 
-**图 8-2。** Cosmos DB 资源组织。
+**图 8-2。** Azure Cosmos DB 资源组织。
 
-Cosmos DB 查询语言是简单而强大的接口，用于查询 JSON 文档。 该语言支持 ANSI SQL 语法的子集，并添加了对 JavaScript 对象、数组、对象结构和函数调用的深度集成。
+Azure Cosmos DB 查询语言是一种用于查询 JSON 文档的简单而强大的接口。 该语言支持 ANSI SQL 语法的子集，并添加了对 JavaScript 对象、数组、对象结构和函数调用的深度集成。
 
-**参考 - Cosmos DB**
+参考 – Azure Cosmos DB 
 
-- DocumentDB 简介  
-  <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
+- Azure Cosmos DB 简介  
+  <https://docs.microsoft.com/azure/cosmos-db/introduction>
 
 ## <a name="other-persistence-options"></a>其他持久性选项
 
@@ -439,7 +439,6 @@ public class CachedCatalogService : ICatalogService
     private readonly CatalogService _catalogService;
     private static readonly string _brandsKey = "brands";
     private static readonly string _typesKey = "types";
-    private static readonly string _itemsKeyTemplate = "items-{0}-{1}-{2}-{3}";
     private static readonly TimeSpan _defaultCacheDuration = TimeSpan.FromSeconds(30);
     public CachedCatalogService(IMemoryCache cache,
     CatalogService catalogService)
@@ -459,7 +458,7 @@ public class CachedCatalogService : ICatalogService
 
     public async Task<Catalog> GetCatalogItems(int pageIndex, int itemsPage, int? brandID, int? typeId)
     {
-        string cacheKey = String.Format(_itemsKeyTemplate, pageIndex, itemsPage, brandID, typeId);
+        string cacheKey = $"items-{pageIndex}-{itemsPage}-{brandID}-{typeId}";
         return await _cache.GetOrCreateAsync(cacheKey, async entry =>
         {
             entry.SlidingExpiration = _defaultCacheDuration;

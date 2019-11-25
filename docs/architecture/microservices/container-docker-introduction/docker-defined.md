@@ -2,22 +2,22 @@
 title: 什么是 Docker？
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 什么是 Docker？
 ms.date: 08/31/2018
-ms.openlocfilehash: 6fb08157a78bfaee48e0bf919fc5942eadf0f287
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 215d756c631440c99a3a8ad8128ec61fef3bc26d
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771347"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740082"
 ---
 # <a name="what-is-docker"></a>什么是 Docker？
 
 [Docker](https://www.docker.com/) 是一种[开源项目](https://github.com/docker/docker)，用于将应用程序自动部署为可在云或本地运行的便携式独立容器。 Docker 也是一家[公司](https://www.docker.com/)，它与云、Linux 和 Windows 供应商（包括 Microsoft）协作，致力于推广和发展这项技术。
 
-![Docker 容器可以在任意位置运行：在客户数据中心本地、在外部服务提供商或在 Azure 云中。](./media/image2.png)
+![显示 Docker 容器可运行位置的关系图。](./media/docker-defined/docker-containers-run-anywhere.png)
 
-**图 2-2**。 Docker 在混合云的所有层部署容器
+**图 2-2**。 Docker 在混合云的所有层部署容器。
 
-Docker 映像容器可以在 Linux 和 Windows 上本机运行。 但是，Windows 映像仅能在 Windows 主机上运行，Linux 映像可以在 Linux 主机和 Windows 主机上运行（到目前为止，使用 Hyper-V Linux VM），其中主机是指服务器或 VM。
+Docker 容器可以在任意位置运行：在客户数据中心本地、在外部服务提供商或在 Azure 云中。 Docker 映像容器可以在 Linux 和 Windows 上本机运行。 但是，Windows 映像仅能在 Windows 主机上运行，Linux 映像可以在 Linux 主机和 Windows 主机上运行（到目前为止，使用 Hyper-V Linux VM），其中主机是指服务器或 VM。
 
 开发人员可以在 Windows、Linux 或 macOS 上使用开发环境。 在开发计算机上，开发人员运行部署了 Docker 映像（包括应用及其依赖项）的 Docker 主机。 在 Linux 或 Mac 上进行开发的开发人员使用基于 Linux 的 Docker 主机，并且他们可以仅为 Linux 容器创建映像。 （在 Mac 上进行开发的开发人员可以从 macOS 中编辑代码或运行 Docker CLI，但截至撰写本文时，容器不在 macOS 上直接运行。）在 Windows 上进行开发的开发人员可以为 Linux 或 Windows 容器创建映像。
 
@@ -37,10 +37,12 @@ Docker 映像容器可以在 Linux 和 Windows 上本机运行。 但是，Windo
 
 | 虚拟机 | Docker 容器 |
 | -----------------| ------------------|
-|![对于 VM，在主机服务器中有三个基本层，从底部向上依次为：基础结构、主机操作系统和虚拟机监控程序，在所有这些层的顶部，每个 VM 都有其自己的 OS 和所有必需的库。](./media/image3.png)|![对于 Docker，主机服务器仅包含基础结构和 OS，除此以外，就是用于隔离容器但共享基础 OS 服务的容器引擎。](./media/image4.png)|
+|![显示传统 VM 的硬件/软件堆栈的关系图。](./media/docker-defined/virtual-machine-hardware-software.png)|![显示 Docker 容器的硬件/软件堆栈的关系图。](./media/docker-defined/docker-container-hardware-software.png)|
 |虚拟机包括应用程序、必需的库或二进制文件以及完整的来宾操作系统。 与比容器化相比，完全虚拟化需要更多资源。 | 容器包括应用程序及其所有依赖项。 但是，它们与其他容器共享 OS 内核，在主机操作系统上的用户空间中作为独立进程运行。 （Hyper-V 容器例外，其中的每个容器都在各容器特定虚拟机内部运行。） |
 
 **图 2-3**。 比较传统虚拟机与 Docker 容器
+
+对于 VM，在主机服务器中有三个基本层，从底部向上依次为：基础结构、主机操作系统和虚拟机监控程序，在所有这些层的顶部，每个 VM 都有其自己的 OS 和所有必需的库。 对于 Docker，主机服务器仅有基础结构和 OS，在其顶部是容器引擎，它将容器隔离，但共享基础 OS 服务。
 
 由于容器所需的资源要少得多（例如，它们不需要一个完整的 OS），所以它们易于部署且可快速启动。 这使你能够具有更高的密度，也就是说，这允许你在同一硬件单元上运行更多服务，从而降低了成本。
 

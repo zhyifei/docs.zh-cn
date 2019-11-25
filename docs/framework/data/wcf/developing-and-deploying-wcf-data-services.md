@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: d7ddae58874c69468eb6ff1762db9083897b1acd
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d6d0f6f357feba903e8345fc45251c146c5406db
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854070"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975319"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>开发和部署 WCF 数据服务
 
@@ -20,7 +20,7 @@ ms.locfileid: "70854070"
 
 ## <a name="develop-wcf-data-services"></a>开发 WCF 数据服务
 
-使用 WCF 数据服务创建支持的[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]数据服务时，必须在开发过程中执行以下基本任务：
+使用 WCF 数据服务创建支持 Open Data Protocol （OData）的数据服务时，必须在开发过程中执行以下基本任务：
 
 1. **定义数据模型**
 
@@ -32,7 +32,7 @@ ms.locfileid: "70854070"
 
 3. **配置数据服务**
 
-     默认情况下，WCF 数据服务禁用对由实体容器公开的资源的访问。 使用<xref:System.Data.Services.DataServiceConfiguration>接口可以配置对资源和服务操作的访问，指定受支持的 OData 版本，还可以定义其他服务范围的行为，例如批处理行为或可返回的最大实体数在单个响应源中。 有关详细信息，请参阅[配置数据服务](configuring-the-data-service-wcf-data-services.md)。
+     默认情况下，WCF 数据服务禁用对由实体容器公开的资源的访问。 利用 <xref:System.Data.Services.DataServiceConfiguration> 接口，你可以配置对资源和服务操作的访问、指定支持的 OData 版本，并定义其他服务范围的行为，例如批处理行为或可在单个响应源中返回的最大实体数。 有关详细信息，请参阅[配置数据服务](configuring-the-data-service-wcf-data-services.md)。
 
 本主题主要介绍如何使用 Visual Studio 开发和部署数据服务。 有关将数据公开为 OData 源的 WCF 数据服务提供的灵活性的信息，请参阅[定义 WCF 数据服务](defining-wcf-data-services.md)。
 
@@ -42,7 +42,7 @@ ms.locfileid: "70854070"
 
 1. **本地 IIS 服务器**
 
-     当你创建的数据服务是在 Internet Information Services （IIS）上运行的 ASP.NET 应用程序或 ASP.NET 网站时，我们建议使用 IIS 在本地计算机上开发和测试数据服务。 在 IIS 上运行数据服务更便于在调试过程中跟踪 HTTP 请求。 这还允许预先确定 IIS 访问数据服务所需的文件、数据库和其他资源所必须具备的权限。 若要在 IIS 上运行数据服务，必须确保正确安装和配置 IIS 和 Windows Communication Foundation （WCF），并授予对文件系统和数据库中的 IIS 帐户的访问权限。 有关详细信息，请参阅[如何：开发在 IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)上运行的 WCF 数据服务。
+     当你创建的数据服务是在 Internet Information Services （IIS）上运行的 ASP.NET 应用程序或 ASP.NET 网站时，我们建议使用 IIS 在本地计算机上开发和测试数据服务。 在 IIS 上运行数据服务更便于在调试过程中跟踪 HTTP 请求。 这还允许预先确定 IIS 访问数据服务所需的文件、数据库和其他资源所必须具备的权限。 若要在 IIS 上运行数据服务，必须确保正确安装和配置 IIS 和 Windows Communication Foundation （WCF），并授予对文件系统和数据库中的 IIS 帐户的访问权限。 有关详细信息，请参阅 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)。
 
     > [!NOTE]
     > 必须使用管理员权限运行 Visual Studio，才能启用开发环境以配置本地 IIS 服务器。
@@ -63,7 +63,7 @@ ms.locfileid: "70854070"
 
     - 此服务器无法处理分块 HTTP 流，在从数据服务访问大型二进制数据时，WCF 数据服务客户端发送此流。 有关详细信息，请参阅[流式处理提供程序](streaming-provider-wcf-data-services.md)。
 
-    - 此服务器在处理 URL 中的句点（`.`）字符时会遇到问题，即使密钥值 WCF 数据服务支持此字符。
+    - 此服务器在处理 URL 中的句点（`.`）字符时遇到问题，即使密钥值中 WCF 数据服务支持此字符。
 
     > [!TIP]
     > 即使您可以使用 Visual Studio 开发服务器在开发过程中测试数据服务，您应该在部署到运行 IIS 的 Web 服务器之后再次对其进行测试。
@@ -111,7 +111,7 @@ WCF 数据服务在选择承载数据服务的过程方面很灵活。 可以使
      有关 ASP.NET 应用程序的部署选项的详细信息，请参阅[Visual Studio 和 ASP.NET 的 Web 部署概述](https://docs.microsoft.com/previous-versions/aspnet/dd394698(v=vs.110))。
 
     > [!TIP]
-    > 在尝试将数据服务部署到 IIS 之前，请确保已测试了向运行 IIS 的 Web 服务器的部署。 有关详细信息，请参阅[如何：开发在 IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)上运行的 WCF 数据服务。
+    > 在尝试将数据服务部署到 IIS 之前，请确保已测试了向运行 IIS 的 Web 服务器的部署。 有关详细信息，请参阅 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)。
 
 - **Microsoft Azure**
 
@@ -121,7 +121,7 @@ WCF 数据服务在选择承载数据服务的过程方面很灵活。 可以使
 
 部署数据服务时，应注意以下事项：
 
-- 当你部署使用实体框架提供程序访问 SQL Server 数据库的数据服务时，你可能还需要传播数据结构和/或数据。 Visual Studio 可以自动创建脚本（.sql 文件）来在目标数据库中执行此操作，并且这些脚本可以包含在 ASP.NET 应用程序的 Web 部署包中。 有关详细信息，请参阅[如何：使用 Web 应用程序项目](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))部署数据库。 对于 ASP.NET 网站，可以使用 Visual Studio 中的 "**数据库发布向导**" 来执行此操作。 有关详细信息，请参阅[发布 SQL 数据库](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))。
+- 当你部署使用实体框架提供程序访问 SQL Server 数据库的数据服务时，你可能还需要传播数据结构和/或数据。 Visual Studio 可以自动创建脚本（.sql 文件）来在目标数据库中执行此操作，并且这些脚本可以包含在 ASP.NET 应用程序的 Web 部署包中。 有关详细信息，请参阅[如何：使用 Web 应用程序项目部署数据库](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))。 对于 ASP.NET 网站，可以使用 Visual Studio 中的 "**数据库发布向导**" 来执行此操作。 有关详细信息，请参阅[发布 SQL 数据库](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))。
 
 - 由于 WCF 数据服务包含基本 WCF 实现，因此你可以使用 Windows Server AppFabric 来监视部署到在 Windows Server 上运行的 IIS 的数据服务。 有关使用 Windows Server AppFabric 监视数据服务的详细信息，请参阅[使用 Windows Server appfabric 进行跟踪后 WCF 数据服务](https://go.microsoft.com/fwlink/?LinkID=202005)。
 

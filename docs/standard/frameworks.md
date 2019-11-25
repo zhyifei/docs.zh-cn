@@ -1,19 +1,19 @@
 ---
-title: 目标框架
+title: SDK 样式项目中的目标框架 - .NET
 description: 了解用于 .NET Core 应用和库的目标框架。
 author: mairaw
 ms.author: mairaw
-ms.date: 09/23/2019
+ms.date: 10/27/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: b05923b293b1a5bb94a69ddd0154f8701b9326b0
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: d528201d1420b171e3a75919269e1c7a714f86e8
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216655"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73041003"
 ---
-# <a name="target-frameworks"></a>目标框架
+# <a name="target-frameworks-in-sdk-style-projects"></a>SDK 样式项目中的目标框架
 
 以应用或库中的框架为目标时，需要指定想要向应用或库提供的 API 集。 使用目标框架名字对象 (TFM) 在项目文件中指定目标框架。
 
@@ -108,7 +108,7 @@ public class MyClass
 }
 ```
 
-生成系统可识别预处理器符号，这些符号表示[支持的目标框架版本](#supported-target-framework-versions)表中所示的目标框架。 使用表示 .NET Standard 或 .NET Core TFM 的符号时，用下划线替代句点，并将小写字母转换为大写字母（例如，`netstandard1.4` 的符号是 `NETSTANDARD1_4`）。
+使用 SDK 样式项目时，生成系统可识别预处理器符号，这些符号表示[支持的目标框架版本](#supported-target-framework-versions)表中所示的目标框架。 使用表示 .NET Standard 或 .NET Core TFM 的符号时，用下划线替代句点，并将小写字母转换为大写字母（例如，`netstandard1.4` 的符号是 `NETSTANDARD1_4`）。
 
 完整的 .NET Core 目标框架的预处理器符号列表：
 

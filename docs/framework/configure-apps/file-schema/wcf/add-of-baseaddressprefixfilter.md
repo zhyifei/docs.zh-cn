@@ -2,18 +2,18 @@
 title: <add> 的 <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: dee2cd482efc841b7320ed2114a05000255466f3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 809e6d5504b56f86eb09a5d57931f922e1c18348
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850516"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973812"
 ---
-# <a name="add-of-baseaddressprefixfilter"></a>\<add> of \<baseAddressPrefixFilter>
+# <a name="add-of-baseaddressprefixfilter"></a>\<添加 > \<baseAddressPrefixFilter >
 表示一个配置元素，该元素指定传递筛选器，该筛选器提供一种机制，用于在 IIS 中承载 Windows Communication Foundation （WCF）应用程序时选择适当的 Internet Information Services （IIS）绑定。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+\<system &nbsp; &nbsp;[ **>** ](system-servicemodel.md) \
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceHostingEnvironment >** ](servicehostingenvironment.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<baseAddressPrefixFilters >** ](baseaddressprefixfilters.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<添加 >**  
@@ -44,7 +44,7 @@ ms.locfileid: "70850516"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters>](baseaddressprefixfilters.md)|指定传递筛选器的配置元素的集合，这些筛选器提供一种机制，用于在 IIS 中承载 Windows Communication Foundation （WCF）应用程序时选取适当的 IIS 绑定。|  
+|[\<baseAddressPrefixFilters >](baseaddressprefixfilters.md)|指定传递筛选器的配置元素的集合，这些筛选器提供一种机制，用于在 IIS 中承载 Windows Communication Foundation （WCF）应用程序时选取适当的 IIS 绑定。|  
   
 ## <a name="remarks"></a>备注  
  前缀筛选器为共享的宿主提供程序提供一种指定服务要使用的 URI 的方法。 它使得共享主机可以在同一站点上通过同一方案的不同基址承载多个应用程序。  
@@ -53,9 +53,9 @@ ms.locfileid: "70850516"
   
  IIS 支持为每个站点指定多个 IIS 绑定，这会导致每个方案有多个基址。 因为在站点下承载的 WCF 服务只允许绑定到每个方案的一个基址，所以您可以使用前缀筛选器功能选取所需的承载服务的基址。 根据可选前缀列表筛选器筛选 IIS 提供的传入基址。  
   
- 例如，您的站点可包含以下基址。  
+ 例如，你的站点可包含以下基址：
   
-```  
+``` 
 http://testl.fabrikam.com/Service.svc  
 http://test2.fabrikam.com/Service.svc  
 ```  

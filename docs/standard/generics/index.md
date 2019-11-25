@@ -28,33 +28,18 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c9f15a7ff30d5647338bf1954aca441b47281b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0eb88b8f46d425ae840c2bf8ed8eb479971d1cbc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948744"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974664"
 ---
 # <a name="generics-in-net"></a>.NET 中的泛型
 
-<a name="top"></a>借助泛型，可以根据要处理的精确数据类型定制方法、类、结构或接口。 例如，不使用允许键和值为任意类型的 <xref:System.Collections.Hashtable> 类，而使用 <xref:System.Collections.Generic.Dictionary%602> 泛型类并指定允许的密钥类型和允许的值的类型。 泛型的优点包括：代码的可重用性增加，类型安全性提高。  
-  
- 本主题概述了 .NET 中的泛型，并总结了泛型类型或方法。 它包含下列部分：  
-  
-- [定义和使用泛型](#defining_and_using_generics)  
-  
-- [泛型术语](#generics_terminology)  
-  
-- [类库和语言支持](#class_library_and_language_support)  
-  
-- [嵌套类型和泛型](#nested_types_and_generics)  
-  
-- [相关主题](#related_topics)  
-  
-- [引用](#reference)  
-  
-<a name="defining_and_using_generics"></a>   
-## <a name="defining-and-using-generics"></a>定义和使用泛型  
+借助泛型，你可以根据要处理的精确数据类型定制方法、类、结构或接口。 例如，不使用允许键和值为任意类型的 <xref:System.Collections.Hashtable> 类，而使用 <xref:System.Collections.Generic.Dictionary%602> 泛型类并指定允许的密钥类型和允许的值的类型。 泛型的优点包括：代码的可重用性增加，类型安全性提高。  
+
+## <a name="defining-and-using-generics"></a>定义和使用泛型
  泛型是为所存储或使用的一个或多个类型具有占位符（类型形参）的类、结构、接口和方法。 泛型集合类可以将类型形参用作其存储的对象类型的占位符；类型形参呈现为其字段的类型和其方法的参数类型。 泛型方法可将其类型形参用作其返回值的类型或用作其形参之一的类型。 以下代码举例说明了一个简单的泛型类定义。  
   
  [!code-cpp[Conceptual.Generics.Overview#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#2)]
@@ -66,8 +51,7 @@ ms.locfileid: "69948744"
  [!code-cpp[Conceptual.Generics.Overview#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#3)]
  [!code-csharp[Conceptual.Generics.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#3)]
  [!code-vb[Conceptual.Generics.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#3)]  
-  
-<a name="generics_terminology"></a>   
+
 ### <a name="generics-terminology"></a>泛型术语  
  介绍 .NET 中的泛型需要用到以下术语：  
   
@@ -97,10 +81,7 @@ ms.locfileid: "69948744"
  [!code-csharp[Conceptual.Generics.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#5)]
  [!code-vb[Conceptual.Generics.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#5)]  
   
- [返回页首](#top)  
-  
-<a name="advantages_limitations"></a>   
-## <a name="advantages-and-disadvantages-of-generics"></a>泛型的利与弊  
+## <a name="advantages-and-disadvantages-of-generics"></a>泛型的利与弊
  使用泛型集合和委托有很多好处：  
   
 - 类型安全。 泛型将类型安全的负担从你那里转移到编译器。 没有必要编写代码来测试正确的数据类型，因为它会在编译时强制执行。 降低了强制类型转换的必要性和运行时错误的可能性。  
@@ -131,10 +112,7 @@ ms.locfileid: "69948744"
     > 通过在动态程序集中触发代码或通过使用 [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 定义的嵌套类型不需要包括其封闭类型的类型参数；然而，如果不包括，类型参数就不会在嵌套类的范围内。  
   
      有关详细信息，请参阅 <xref:System.Type.MakeGenericType%2A>中的“嵌套类型”。  
-  
- [返回页首](#top)  
-  
-<a name="class_library_and_language_support"></a>   
+
 ## <a name="class-library-and-language-support"></a>类库和语言支持  
  .NET 在以下命名空间中提供了大量泛型集合类：  
   
@@ -148,17 +126,11 @@ ms.locfileid: "69948744"
   
  公共语言运行时提供了新的操作码和前缀来支持 Microsoft 中间语言 (MSIL) 中的泛型类型，包括 <xref:System.Reflection.Emit.OpCodes.Stelem>、 <xref:System.Reflection.Emit.OpCodes.Ldelem>、 <xref:System.Reflection.Emit.OpCodes.Unbox_Any>、 <xref:System.Reflection.Emit.OpCodes.Constrained>和 <xref:System.Reflection.Emit.OpCodes.Readonly>。  
   
- Visual C++、C# 和 Visual Basic 都对定义和使用泛型提供完全支持。 有关语言支持的详细信息，请参阅 [Visual Basic 中的泛型类型](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)、[泛型简介](../../csharp/programming-guide/generics/index.md)和 [Visual C++ 中的泛型概述](/cpp/windows/overview-of-generics-in-visual-cpp)。  
-  
- [返回页首](#top)  
-  
-<a name="nested_types_and_generics"></a>   
+ Visual C++、C# 和 Visual Basic 都对定义和使用泛型提供完全支持。 有关语言支持的详细信息，请参阅 [Visual Basic 中的泛型类型](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)、[泛型简介](../../csharp/programming-guide/generics/index.md)和 [Visual C++ 中的泛型概述](/cpp/windows/overview-of-generics-in-visual-cpp)。 
+
 ## <a name="nested-types-and-generics"></a>嵌套类型和泛型  
  嵌套在泛型类型中的类型可取决于封闭泛型类型的类型参数。 公共语言运行时将嵌套类型看作泛型，即使它们不具有自己的泛型类型形参。 创建嵌套类型的实例时，必须指定所有封闭泛型类型的类型实参。  
-  
- [返回页首](#top)  
-  
-<a name="related_topics"></a>   
+
 ## <a name="related-topics"></a>相关主题  
   
 |Title|说明|  
@@ -173,13 +145,10 @@ ms.locfileid: "69948744"
 |[Visual Basic 中的泛型类型](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|为 Visual Basic 用户描述泛型功能，包括有关使用和定义泛型类型的帮助主题。|  
 |[泛型介绍](../../csharp/programming-guide/generics/index.md)|为 C# 用户概述定义和使用泛型类型。|  
 |[Visual C++ 中的泛型概述](/cpp/windows/overview-of-generics-in-visual-cpp)|为 C++ 用户描述泛型功能，包括泛型和模板之间的差异。|  
-  
-<a name="reference"></a>   
+
 ## <a name="reference"></a>参考  
  <xref:System.Collections.Generic>  
   
  <xref:System.Collections.ObjectModel>  
   
  <xref:System.Reflection.Emit.OpCodes?displayProperty=nameWithType>  
-  
- [返回页首](#top)

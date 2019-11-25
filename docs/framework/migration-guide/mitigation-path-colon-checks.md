@@ -2,14 +2,12 @@
 title: 缓解：路径冒号检查
 ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a74c25a9bf4dd8b9ab86bd280881fe1a7999e1d5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e88643fea3bd507289436f41880a2de34117884f
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789992"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457897"
 ---
 # <a name="mitigation-path-colon-checks"></a>缓解：路径冒号检查
 自面向 .NET Framework 4.6.2 的应用起，为了支持以前不受支持的路径，执行了大量更改（无论是在长度方面还是在格式方面）。 特别是，能够更加准确地检查驱动器分隔符语法（冒号）的用法是否正确。  
@@ -34,4 +32,4 @@ ms.locfileid: "70789992"
   
 ## <a name="see-also"></a>请参阅
 
-- [重定目标更改](retargeting-changes-in-the-net-framework-4-6-2.md)
+- [应用程序兼容性](application-compatibility.md)

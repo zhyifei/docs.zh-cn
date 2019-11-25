@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: a734240fd8a7ec5217674342dc20b3cf8cbdf4ab
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 605ff7a9acaaa217f0e482579968757dd451aed9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739637"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974834"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>将数据绑定到控件（WCF 数据服务）
-使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，可以将 `ComboBox` 和 `ListView` 等控件绑定到 <xref:System.Data.Services.Client.DataServiceCollection%601> 类的实例。 从 <xref:System.Collections.ObjectModel.ObservableCollection%601> 类继承的这一集合包含[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 源中的数据。 此类表示一个动态数据集合，在添加项或移除项时，此集合将提供通知。 使用 <xref:System.Data.Services.Client.DataServiceCollection%601> 的实例进行数据绑定时，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端库将处理这些事件，以确保 <xref:System.Data.Services.Client.DataServiceContext> 跟踪的对象与绑定 UI 元素中的数据保持同步。  
+使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，可以将 `ComboBox` 和 `ListView` 等控件绑定到 <xref:System.Data.Services.Client.DataServiceCollection%601> 类的实例。 此集合继承自 <xref:System.Collections.ObjectModel.ObservableCollection%601> 类，包含来自 Open Data Protocol （OData）源的数据。 此类表示一个动态数据集合，在添加项或移除项时，此集合将提供通知。 使用 <xref:System.Data.Services.Client.DataServiceCollection%601> 的实例进行数据绑定时，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端库将处理这些事件，以确保 <xref:System.Data.Services.Client.DataServiceContext> 跟踪的对象与绑定 UI 元素中的数据保持同步。  
   
  <xref:System.Data.Services.Client.DataServiceCollection%601> 类（间接）实现 <xref:System.Collections.Specialized.INotifyCollectionChanged> 接口以从集合中添加或移除对象时警告上下文。 与 <xref:System.Data.Services.Client.DataServiceCollection%601> 一起使用的数据服务类型对象还必须实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口，才能在绑定集合中对象的属性发生更改时警告 <xref:System.Data.Services.Client.DataServiceCollection%601>。  
   
@@ -25,7 +25,7 @@ ms.locfileid: "73739637"
 > 当你使用**添加服务引用**对话框或带有 `/dataservicecollection` 选项的[DataSvcUtil](wcf-data-service-client-utility-datasvcutil-exe.md)工具来生成客户端数据服务类时，生成的数据类将实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口。 有关详细信息，请参阅[如何：手动生成客户端数据服务类](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)。  
   
 ## <a name="creating-the-binding-collection"></a>创建绑定集合  
- 可以通过使用提供的 <xref:System.Data.Services.Client.DataServiceCollection%601> 实例调用其中一个类构造函数方法创建 <xref:System.Data.Services.Client.DataServiceContext> 类的新实例，还可以创建 <xref:System.Data.Services.Client.DataServiceQuery%601> 或返回 <xref:System.Collections.Generic.IEnumerable%601> 实例的 LINQ 查询（执行时）。 此 <xref:System.Collections.Generic.IEnumerable%601> 提供从 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源具体化的绑定集合的对象的源。 有关详细信息，请参阅[对象具体化](object-materialization-wcf-data-services.md)。 默认情况下，对绑定对象所做的更改和插入到集合的项自动由 <xref:System.Data.Services.Client.DataServiceContext> 跟踪。 如果需要手动跟踪这些更改，请调用采用 `trackingMode` 参数的构造函数方法之一，并将值指定为 <xref:System.Data.Services.Client.TrackingMode.None>。  
+ 可以通过使用提供的 <xref:System.Data.Services.Client.DataServiceCollection%601> 实例调用其中一个类构造函数方法创建 <xref:System.Data.Services.Client.DataServiceContext> 类的新实例，还可以创建 <xref:System.Data.Services.Client.DataServiceQuery%601> 或返回 <xref:System.Collections.Generic.IEnumerable%601> 实例的 LINQ 查询（执行时）。 此 <xref:System.Collections.Generic.IEnumerable%601> 提供从 OData 源具体化的绑定集合的对象的源。 有关详细信息，请参阅[对象具体化](object-materialization-wcf-data-services.md)。 默认情况下，对绑定对象所做的更改和插入到集合的项自动由 <xref:System.Data.Services.Client.DataServiceContext> 跟踪。 如果需要手动跟踪这些更改，请调用采用 `trackingMode` 参数的构造函数方法之一，并将值指定为 <xref:System.Data.Services.Client.TrackingMode.None>。  
   
  下面的示例演示如何基于提供的 <xref:System.Data.Services.Client.DataServiceCollection%601> 和返回具有相关订单的所有客户的 <xref:System.Data.Services.Client.DataServiceContext> 创建 <xref:System.Data.Services.Client.DataServiceQuery%601> 的实例：  
   

@@ -6,48 +6,30 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 833bf46b973988196fea37da18bac9923ecd6dcc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8d40091420c29c86f2ebb25f14c17ae4f7a1c44a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141371"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974763"
 ---
 # <a name="garbage-collection-and-performance"></a>垃圾回收和性能
 
-<a name="top"></a> 本主题介绍与垃圾回收和内存使用情况相关的问题。 它解决了关于托管堆的问题，并解释了如何最小化垃圾回收对应用程序的影响。 每个问题具有访问可用来调查问题的过程的链接。
-
-本主题包含以下各节：
-
-- [性能分析工具](#performance_analysis_tools)
-
-- [性能问题故障排除](#troubleshooting_performance_issues)
-
-- [故障排除指南](#troubleshooting_guidelines)
-
-- [性能检查过程](#performance_check_procedures)
-
-<a name="performance_analysis_tools"></a>
+本主题介绍与垃圾回收和内存使用情况相关的问题。 它解决了关于托管堆的问题，并解释了如何最小化垃圾回收对应用程序的影响。 每个问题具有访问可用来调查问题的过程的链接。
 
 ## <a name="performance-analysis-tools"></a>性能分析工具
 
-以下各节介绍了可用于调查内存使用情况和垃圾回收问题的工具。 本主题中稍后提供的[过程](#performance_check_procedures)将引用这些工具。
-
-<a name="perf_counters"></a>
+以下各节介绍了可用于调查内存使用情况和垃圾回收问题的工具。 本主题中稍后提供的[过程](#performance-check-procedures)将引用这些工具。
 
 ### <a name="memory-performance-counters"></a>内存性能计数器
 
 可以使用性能计数器来收集性能数据。 有关说明，请参阅[运行时分析](../../../docs/framework/debug-trace-profile/runtime-profiling.md)。 如 [.NET Framework 中的性能计数器](../../../docs/framework/debug-trace-profile/performance-counters.md)中所述，性能计数器的 .NET CLR 内存类别提供有关垃圾回收器的信息。
-
-<a name="sos"></a>
 
 ### <a name="debugging-with-sos"></a>用 SOS 调试
 
 可以使用 [Windows 调试器 (WinDbg)](/windows-hardware/drivers/debugger/index) 检查托管堆上的对象。
 
 若要安装 WinDbg，请从[下载 Windows 调试工具](/windows-hardware/drivers/debugger/debugger-download-tools)页安装 Windows 调试工具。
-
-<a name="etw"></a>
 
 ### <a name="garbage-collection-etw-events"></a>垃圾回收 ETW 事件
 
@@ -61,8 +43,6 @@ Windows 事件跟踪 (ETW) 是一个跟踪系统，对由 .NET Framework 提供�
 
 ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问题。 一个进程可以通过结合 ETW 事件来提供其自身的事件。 登录后，可以关联应用程序事件和垃圾回收事件，以确定如何以及何时出现堆问题。 例如，服务器应用程序可以在客户端请求开始和结束时提供事件。
 
-<a name="profiling_api"></a>
-
 ### <a name="the-profiling-api"></a>分析 API
 
 公共语言运行时 (CLR) 分析接口将提供有关垃圾回收期间受影响对象的详细信息。 垃圾回收开始和结束时，可以通知探查器。 它可以提供有关托管堆上对象的报告，其中包括每一代对象的标识。 有关详细信息，请参阅[分析概述](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)。
@@ -72,10 +52,6 @@ ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问�
 ### <a name="application-domain-resource-monitoring"></a>应用程序域资源监控
 
 从 .NET Framework 4 开始，应用程序域资源监视 (ARM) 使主机可以通过应用程序域监视 CPU 和内存使用情况。 有关详细信息，请参阅[应用程序域资源监控](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)。
-
-[返回页首](#top)
-
-<a name="troubleshooting_performance_issues"></a>
 
 ## <a name="troubleshooting-performance-issues"></a>故障排除性能问题
 
@@ -213,10 +189,6 @@ ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问�
 |------------------------|
 |[确定 CPU 的使用率过高是否由垃圾回收引起。](#HighCPU)<br /><br /> [在垃圾回收结束时，设置一个断点。](#GenBreak)|
 
-[返回页首](#top)
-
-<a name="troubleshooting_guidelines"></a>
-
 ## <a name="troubleshooting-guidelines"></a>故障排除指南
 
 本部分介绍在开始调查时应考虑的准则。
@@ -258,10 +230,6 @@ ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问�
   如果在已回收第 2 代对象以进行垃圾回收后执行 **RestartEE**，则此命令会强制中断。
 
   在服务器垃圾回收中，只有一个线程调用 **RestartEE**，因此在第 2 代垃圾回收期间，此断点只会出现一次。
-
-[返回页首](#top)
-
-<a name="performance_check_procedures"></a>
 
 ## <a name="performance-check-procedures"></a>性能检查过程
 

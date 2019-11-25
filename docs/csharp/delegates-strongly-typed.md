@@ -2,13 +2,14 @@
 title: 强类型委托
 description: 了解创建需要委托的功能时，如何使用泛型委托类型声明自定义类型。
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 564a683d-352b-4e57-8bac-b466529daf6b
-ms.openlocfilehash: 2e4cc1c7bfa0aaa90f3aaefa0da64c5486a9d10f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: efdbef39d0e6bf2f07cde2c9621cec173e921752
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215159"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037358"
 ---
 # <a name="strongly-typed-delegates"></a>强类型委托
 
@@ -34,7 +35,7 @@ public delegate void Action<in T1, in T2>(T1 arg1, T2 arg2);
 有关协方差的文章中介绍了泛型类型参数的 `in` 修饰符。
 
 `Action` 委托的变体可包含多达 16 个参数，如 <xref:System.Action%6016>。
-重要的是这些定义对每个委托参数使用不同的泛型参数：这样可以具有最大的灵活性。 方法参数不需要但可能是相同的类型。
+重要的是，这些定义对每个委托参数将使用不同的泛型参数：这样可以提供最大的灵活性。 方法参数不需要但可能是相同的类型。
 
 对任何具有 void 返回类型的委托类型使用一种 `Action` 类型。
 
@@ -54,7 +55,8 @@ public delegate TResult Func<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
 
 对任何返回值的委托类型使用一种 `Func` 类型。
 
-还有一种专门的委托类型 <xref:System.Predicate%601>，此类型返回单个值的测试结果：
+还有一种专门的 <xref:System.Predicate%601> 
+委托类型，可返回单个值的测试结果：
 
 ```csharp
 public delegate bool Predicate<in T>(T obj);

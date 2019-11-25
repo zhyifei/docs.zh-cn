@@ -4,12 +4,12 @@ description: 本高级教程介绍了可为空引用类型。 你将学习在引
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 9cb9ac1b292e61d6a8a5f84be29a6a6c323725fc
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: d0faea19ac1c7c7f28d9775fc3b69c71a752fbcb
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039688"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969350"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>教程：使用可为空引用类型迁移现有代码
 
@@ -32,7 +32,7 @@ C# 8 引入了  可为空引用类型，它们以与可为空值类型补充值�
 
 ## <a name="explore-the-sample-application"></a>浏览示例应用程序
 
-即将迁移的示例应用程序是一个 RSS 源阅读器 Web 应用。 它从单个 RSS 源中进行读取并显示最新文章的摘要。 可以单击任何文章以访问网站。 应用程序相对较新，但却是在可以使用可为空引用类型前编写的。 应用程序的设计决策代表了合理的原则，但没有利用这一重要的语言功能。
+即将迁移的示例应用程序是一个 RSS 源阅读器 Web 应用。 它从单个 RSS 源中进行读取并显示最新文章的摘要。 可以选择任何文章以访问网站。 应用程序相对较新，但却是在可以使用可为空引用类型前编写的。 应用程序的设计决策代表了合理的原则，但没有利用这一重要的语言功能。
 
 示例应用程序包括验证应用主要功能的单元测试库。 如果根据生成的警告更改任何实现，该项目将使安全升级变得更容易。 若要下载起始代码，可以访问 [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/start) GitHub 存储库。
 

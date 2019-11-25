@@ -1,5 +1,5 @@
 ---
-title: = 运算符 - C# 参考
+title: 赋值运算符 - C# 参考
 ms.custom: seodec18
 ms.date: 09/10/2019
 f1_keywords:
@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: a450a55524f33f4f06ed077aba864e8f641a458d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 103bc823ab6a56d53a3f2ec05b8de9295f1de400
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70924658"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039085"
 ---
-# <a name="-operator-c-reference"></a>= 运算符（C# 参考）
+# <a name="assignment-operators-c-reference"></a>赋值运算符（C# 参考）
 
 赋值运算符 `=` 将其右操作数的值赋给变量、[属性](../../programming-guide/classes-and-structs/properties.md)或由其左操作数给出的[索引器](../../programming-guide/indexers/index.md)元素。 赋值表达式的结果是分配给左操作数的值。 右操作数类型必须与左操作数类型相同，或可隐式转换为左操作数的类型。
 
-赋值运算符为右联运算符，即形式的表达式
+赋值运算符 `=` 为右联运算符，即形式的表达式
 
 ```csharp
 a = b = c
@@ -41,8 +41,6 @@ a = (b = c)
 [!code-csharp[ref assignment operator](~/samples/csharp/language-reference/operators/AssignmentOperator.cs#RefAssignment)]
 
 对于 ref 赋值运算符，其两个操作数的类型必须相同。
-
-有关详细信息，请参阅[功能建议说明](~/_csharplang/proposals/csharp-7.3/ref-local-reassignment.md)。
 
 ## <a name="compound-assignment"></a>复合赋值
 
@@ -68,11 +66,15 @@ x = x op y
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 
-用户定义类型不能重载赋值运算符。 但是，用户定义类型可以定义到其他类型的隐式转换。 这样，可以将用户定义类型的值分配给其他类型的变量、属性或索引器元素。 有关详细信息，请参阅[用户定义转换运算符](user-defined-conversion-operators.md)。
+用户定义类型不能[重载](operator-overloading.md)赋值运算符。 但是，用户定义类型可以定义到其他类型的隐式转换。 这样，可以将用户定义类型的值分配给其他类型的变量、属性或索引器元素。 有关详细信息，请参阅[用户定义转换运算符](user-defined-conversion-operators.md)。
+
+用户定义类型不能显式重载复合赋值运算符。 但是，如果用户定义类型重载了二元运算符 `op`，则 `op=` 运算符（如果存在）也将被隐式重载。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的[分配运算符](~/_csharplang/spec/expressions.md#assignment-operators)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的[分配运算符](~/_csharplang/spec/expressions.md#assignment-operators)部分。
+
+如需了解有关 ref 赋值运算符 `= ref` 的详细信息，请参阅[功能建议说明](~/_csharplang/proposals/csharp-7.3/ref-local-reassignment.md)。
 
 ## <a name="see-also"></a>请参阅
 

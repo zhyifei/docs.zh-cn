@@ -2,21 +2,21 @@
 title: <baseAddressPrefixFilters>
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-ms.openlocfilehash: a22623c0856dd6d9b7c8c75e0b3feccc2d9350bd
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: cdf3264d1631db8e61bbcc4f6febd7008099251b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850202"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968718"
 ---
-# <a name="baseaddressprefixfilters"></a>\<baseAddressPrefixFilters>
+# <a name="baseaddressprefixfilters"></a>\<baseAddressPrefixFilters >
 表示配置元素的集合，这些元素指定通过筛选器，这些筛选器提供一种机制，用于在 IIS 中承载 Windows Communication Foundation （WCF）应用程序时选择适当的 Internet Information Services （IIS）绑定。  
   
 > [!WARNING]
-> \<baseAddressPrefixFilters > 无法识别 "localhost";改为使用完全限定的计算机名称。  
+> \<baseAddressPrefixFilters > 不能识别 "localhost";改为使用完全限定的计算机名称。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+\<system &nbsp; &nbsp;[ **>** ](system-servicemodel.md) \
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceHostingEnvironment >** ](servicehostingenvironment.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<baseAddressPrefixFilters >**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "70850202"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<serviceHostingEnvironment>](servicehostingenvironment.md)|定义服务承载环境要为特定传输实例化的类型。|  
+|[\<serviceHostingEnvironment >](servicehostingenvironment.md)|定义服务承载环境要为特定传输实例化的类型。|  
   
 ## <a name="remarks"></a>备注  
  前缀筛选器为共享的宿主提供程序提供一种指定服务要使用的 URI 的方法。 它使得共享主机可以在同一站点上通过同一方案的不同基址承载多个应用程序。  
@@ -55,9 +55,9 @@ ms.locfileid: "70850202"
   
  IIS 支持为每个站点指定多个 IIS 绑定，这会导致每个方案有多个基址。 因为在站点下承载的 WCF 服务只允许绑定到每个方案的一个基址，所以您可以使用前缀筛选器功能选取所需的承载服务的基址。 根据可选前缀列表筛选器筛选 IIS 提供的传入基址。  
   
- 例如，您的站点可包含以下基址。  
+ 例如，你的站点可包含以下基址：
   
-```  
+``` 
 http://testl.fabrikam.com/Service.svc  
 http://test2.fabrikam.com/Service.svc  
 ```  

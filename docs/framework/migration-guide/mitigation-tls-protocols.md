@@ -5,14 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e98b447028ef9fa96233a71133aa82184d83cec8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 45225d73ac60564d3e22c73270faab6b4e04d697
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779164"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457835"
 ---
 # <a name="mitigation-tls-protocols"></a>缓解：TLS 协议
 从 .NET Framework 4.6 开始，允许 <xref:System.Net.ServicePointManager?displayProperty=nameWithType> 和 <xref:System.Net.Security.SslStream?displayProperty=nameWithType> 类使用以下三种协议之一：Tls1.0、Tls1.1 或 Tls1.2。 不支持 SSL3.0 协议和 RC4 密码。  
@@ -44,4 +42,4 @@ ms.locfileid: "70779164"
   
 ## <a name="see-also"></a>请参阅
 
-- [重定目标更改](retargeting-changes-in-the-net-framework-4-6.md)
+- [应用程序兼容性](application-compatibility.md)
