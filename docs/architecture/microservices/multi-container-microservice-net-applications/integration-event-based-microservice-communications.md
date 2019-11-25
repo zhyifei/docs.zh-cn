@@ -2,20 +2,20 @@
 title: 在微服务（集成事件）之间实现基于事件的通信
 description: 适用于容器化 .NET 应用程序的 .NET 微服务基础结构 | 了解集成事件以在微服务之间实现基于事件的通信。
 ms.date: 10/02/2018
-ms.openlocfilehash: 8a5cfa280063da742dc1693905fc44cf870c1fcc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 70566745dc084ba9016a850ad749fefb958e89ec
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676094"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737150"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>在微服务（集成事件）之间实现基于事件的通信
 
 如前所述，使用基于事件的通信时，当值得注意的事件发生时，微服务会发布事件，例如更新业务实体时。 其他微服务订阅这些事件。 微服务收到事件时，可以更新其自己的业务实体，这可能会导致发布更多事件。 这是最终一致性概念的本质。 通常通过使用事件总线实现来执行此发布/订阅系统。 事件总线可以设计为包含 API 的接口，该 API 是订阅和取消订阅事件和发布事件所需的。 它还可以包含一个或多个基于跨进程或消息通信的实现，例如支持异步通信和发布/订阅模型的消息队列或服务总线。
 
-可以使用事件来实现跨多个服务的业务事务，这可提供这些服务间的最终一致性。 最终一致事务由一系列分布式操作组成。 在每个操作中，微服务会更新业务实体，并发布可触发下一个操作的事件。
+可以使用事件来实现跨多个服务的业务事务，这可提供这些服务间的最终一致性。 最终一致事务由一系列分布式操作组成。 在每个操作中，微服务会更新业务实体，并发布可触发下一个操作的事件。 下面的图 6-18 显示了通过和事件总线发布的 PriceUpdated 事件，因此价格更新传播到购物篮和其他微服务。
 
-![通过事件总线使用事件驱动通信的目录微服务，以实现与购物篮和其他微服务的最终一致性。](./media/image19.png)
+![与事件总线进行异步事件驱动通信的关系图。](./media/integration-event-based-microservice-communications/event-driven-communication.png)
 
 **图 6-18**。 基于事件总线的事件驱动的通信
 
@@ -64,11 +64,11 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 事件总线可实现发布/订阅式通信，无需组件之间相互显式识别，如图 6-19 所示。
 
-![基本发布/订阅模式，微服务 A 发布到事件总线，这会分发到订阅微服务 B 和 C，发布服务器无需知道订阅服务器。](./media/image20.png)
+![显示基本发布/订阅模式的关系图。](./media/integration-event-based-microservice-communications/publish-subscribe-basics.png)
 
 **图 6-19**。 事件总线的发布/订阅基础知识
 
-事件总线与观察者模式和发布-订阅模式相关。
+上图显示了微服务 A 发布到事件总线，这会分发到订阅微服务 B 和 C，发布服务器无需知道订阅服务器。 事件总线与观察者模式和发布-订阅模式相关。
 
 ### <a name="observer-pattern"></a>观察者模式
 
@@ -92,11 +92,11 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 在图 6-20 中，可看到事件总线的抽象，包含基于 RabbitMQ、Azure 服务总线或其他事件/消息中转站等基础结构消息技术的多个实现。
 
-![最好通过接口定义事件总线，以便它可以使用多种技术（如 RabbitMQ Azure 服务总线或其他技术）实现。](./media/image21.png)
+![显示事件总线抽象层的添加关系图。](./media/integration-event-based-microservice-communications/multiple-implementations-event-bus.png)
 
 **图 6- 20。** 事件总线的多个实现
 
-但是，如前所述，仅当需要由你的抽象支持的基本事件总线功能时，才适合使用你自己的抽象（事件总线接口）。 如果需要更丰富的服务总线功能，应使用你喜欢的商用服务总线提供的 API 和抽象，而不是你自己的抽象。
+最好通过接口定义事件总线，以便它可以使用多种技术（如 RabbitMQ Azure 服务总线或其他技术）实现。 但是，如前所述，仅当需要由你的抽象支持的基本事件总线功能时，才适合使用你自己的抽象（事件总线接口）。 如果需要更丰富的服务总线功能，应使用你喜欢的商用服务总线提供的 API 和抽象，而不是你自己的抽象。
 
 ### <a name="defining-an-event-bus-interface"></a>定义事件总线接口
 

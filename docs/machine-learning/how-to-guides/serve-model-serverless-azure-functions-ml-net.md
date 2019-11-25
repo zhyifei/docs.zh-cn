@@ -1,31 +1,34 @@
 ---
 title: 将模型部署到 Azure Functions
 description: 使用 Azure Functions 通过 Internet 提供 ML.NET 情绪分析机器学习模型进行预测
-ms.date: 09/12/2019
+ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 4f805c638df9e60160c27fa08995ce393e59d007
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 5ef6331950845b2900e33b2c51c308644ba17fd6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774530"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733348"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>将模型部署到 Azure Functions
 
 了解如何通过 Azure Functions 无服务器环境部署预先训练的 ML.NET 机器学习模型，以便通过 HTTP 进行预测。
 
 > [!NOTE]
-> `PredictionEnginePool` 服务扩展目前处于预览状态。
+> 此示例运行 `PredictionEnginePool` 服务的预览版本。
 
 ## <a name="prerequisites"></a>系统必备
 
 - 安装了“.NET Core 跨平台开发”工作负载和“Azure 开发”的 [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
-- Microsoft.NET.Sdk.Functions NuGet 包版本 1.0.28+。
 - [Azure Functions 工具](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - Powershell
 - 预先定型的模型。 使用 [ML.NET 情绪分析教程](../tutorials/sentiment-analysis.md)生成自己的模型，或下载此[预先训练的情绪分析机器学习模型](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)
+
+## <a name="azure-functions-sample-overview"></a>Azure Functions 示例概述
+
+此示例是 C# HTTP 触发器 Azure Functions 应用程序  ，它使用预先定型的二进制分类模型将文本的情绪分类为消极或积极。 Azure Functions 提供了一种简便的方法，可以在云中托管的无服务器环境中大规模运行少量代码。 若要获取此示例的代码，请参阅 GitHub 上的 [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction) 存储库。
 
 ## <a name="create-azure-functions-project"></a>创建 Azure Functions 项目
 
@@ -35,7 +38,7 @@ ms.locfileid: "72774530"
 
     在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新文件夹”  。 键入“MLModels”，再按 Enter。
 
-1. 安装“Microsoft.ML NuGet 包”  ：
+1. 安装 Microsoft.ML NuGet 包  版本 1.3.1  ：
 
     在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 将“nuget.org”选择为“包源”，选择“浏览”选项卡并搜索“Microsoft.ML”  ，在列表中选择该包，然后选择“安装”  按钮。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。
 
@@ -43,13 +46,13 @@ ms.locfileid: "72774530"
 
     在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.Azure.Functions.Extensions”，在列表中选择该包，再选择“安装”按钮   。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。
 
-1. 安装 **Microsoft.Extensions.ML NuGet 包**：
+1. 安装 0.15.1 版本的 Microsoft.Extensions.ML NuGet 包   ：
 
     在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.Extensions.ML”，在列表中选择包，再选择“安装”按钮   。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。
 
-1. 将 Microsoft.NET.Sdk.Functions NuGet 包更新为版本 1.0.28+  ：
+1. 安装 1.0.28+ 版本的 Microsoft.NET.Sdk.Functions NuGet 包   ：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 选择“nuget.org”作为包源，然后选择“安装”选项卡并搜索“Microsoft.NET.Sdk.Functions”，在列表中选择该包，再从“版本”下拉列表中选择 1.0.28 或更高版本，并选择“更新”按钮   。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 选择“nuget.org”作为包源，然后选择“已安装”选项卡并搜索“Microsoft.NET.Sdk.Functions”，在列表中选择该包，再从“版本”下拉列表中选择 1.0.28 或更高版本，并选择“更新”按钮   。  选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。
 
 ## <a name="add-pre-trained-model-to-project"></a>将预先训练的模型添加到项目
 
@@ -114,17 +117,11 @@ ms.locfileid: "72774530"
 
 1. 在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新项”  。
 1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“Startup.cs”     。 然后，选择“添加”  按钮。
+1. 将以下 using 语句添加到 Startup.cs 的顶部： 
 
-    此时，*Startup.cs* 文件在代码编辑器中打开。 将以下 using 语句添加到 *Startup.cs* 的顶部：
+    [!code-csharp [StartupUsings](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/Startup.cs#L1-L6)]
 
-    ```csharp
-    using Microsoft.Azure.Functions.Extensions.DependencyInjection;
-    using Microsoft.Extensions.ML;
-    using SentimentAnalysisFunctionsApp;
-    using SentimentAnalysisFunctionsApp.DataModels;
-    ```
-
-    删除 using 语句下面的现有代码，并将以下代码添加到 *Startup.cs* 文件中：
+1. 删除 using 语句下的现有代码，并添加以下代码：
 
     ```csharp
     [assembly: FunctionsStartup(typeof(Startup))]
@@ -132,14 +129,22 @@ ms.locfileid: "72774530"
     {
         public class Startup : FunctionsStartup
         {
-            public override void Configure(IFunctionsHostBuilder builder)
-            {
-                builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
-                    .FromFile(modelName: "SentimentAnalysisModel", filePath:"MLModels/sentiment_model.zip", watchForChanges: true);
-            }
+
         }
     }
     ```
+
+1. 在 `Startup` 类中定义变量，以存储运行应用的环境以及模型所在的文件路径
+
+    [!code-csharp [DefineStartupVars](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/Startup.cs#L13-L14)]
+
+1. 在它下面创建一个构造函数，以设置 `_environment` 和 `_modelPath` 变量的值。 应用程序在本地运行时，默认环境为“开发”。 
+
+    [!code-csharp [StartupCtor](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/Startup.cs#L16-L29)]
+
+1. 然后，在构造函数下面添加一个名为 `Configure` 的新方法，用于注册 `PredictionEnginePool` 服务。
+
+    [!code-csharp [ConfigureServices](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/Startup.cs#L31-L35)]
 
 概括地讲，此代码在应用程序请求时自动初始化对象和服务供以后使用，无需手动执行初始化。
 
@@ -172,28 +177,7 @@ ms.locfileid: "72774530"
 
 将 AnalyzeSentiment  类中 Run  方法的现有实现替换为以下代码：
 
-```csharp
-[FunctionName("AnalyzeSentiment")]
-public async Task<IActionResult> Run(
-[HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] HttpRequest req,
-ILogger log)
-{
-    log.LogInformation("C# HTTP trigger function processed a request.");
-
-    //Parse HTTP Request Body
-    string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-    SentimentData data = JsonConvert.DeserializeObject<SentimentData>(requestBody);
-
-    //Make Prediction
-    SentimentPrediction prediction = _predictionEnginePool.Predict(modelName: "SentimentAnalysisModel", example: data);
-
-    //Convert prediction to string
-    string sentiment = Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative";
-
-    //Return Prediction
-    return (ActionResult)new OkObjectResult(sentiment);
-}
-```
+[!code-csharp [AnalyzeRunMethod](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/AnalyzeSentiment.cs#L26-L45)]
 
 执行 `Run` 方法时，来自 HTTP 请求的传入数据被反序列化并用作 `PredictionEnginePool` 的输入。 然后，调用 `Predict` 方法，使用在 `Startup` 类中注册的 `SentimentAnalysisModel` 进行预测，并在成功时将结果返回给用户。
 

@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: d983ee09704ff69fdedfa95a31942161162f73eb
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 242234d93bc1b8f9b88749f2e3bcfb37c2bde86d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970656"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037963"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core 测试 .NET Standard 库
 
@@ -42,11 +42,11 @@ ms.locfileid: "70970656"
 
    单元测试模板创建的源代码负责执行以下操作：
 
-   * 它会导入 <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> 命名空间，其中包含用于单元测试的类型。
+   - 它会导入 <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> 命名空间，其中包含用于单元测试的类型。
 
-   * 向 `UnitTest1` 类应用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 特性。 测试类中标记有 \[TestMethod\] 属性的所有测试方法都会在单元测试运行时自动执行。
+   - 向 `UnitTest1` 类应用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 特性。 测试类中标记有 \[TestMethod\] 属性的所有测试方法都会在单元测试运行时自动执行。
 
-   * 它会应用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 属性，将 `TestMethod1` 定义为在单元测试运行时自动执行的测试方法。
+   - 它会应用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 属性，将 `TestMethod1` 定义为在单元测试运行时自动执行的测试方法。
 
 1. 在“解决方案资源管理器”  中，右键单击“StringLibraryTest”  项目的“依赖项”  节点，并从上下文菜单中选择“添加引用”  。
 
@@ -73,11 +73,11 @@ ms.locfileid: "70970656"
 
    单元测试模板创建的源代码负责执行以下操作：
 
-   * 它会导入 <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> 命名空间，其中包含用于单元测试的类型。
+   - 它会导入 <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> 命名空间，其中包含用于单元测试的类型。
 
-   * 向 `UnitTest1` 类应用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 特性。 测试类中标记有 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 特性的所有测试方法都会在单元测试运行时自动执行。
+   - 向 `UnitTest1` 类应用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 特性。 测试类中标记有 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 特性的所有测试方法都会在单元测试运行时自动执行。
 
-   * 它会应用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 属性，将 `TestMethod1` 定义为在单元测试运行时自动执行的测试方法。
+   - 它会应用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 属性，将 `TestMethod1` 定义为在单元测试运行时自动执行的测试方法。
 
 1. 在“解决方案资源管理器”  中，右键单击“StringLibraryTest”  项目的“依赖项”  节点，并从上下文菜单中选择“添加引用”  。
 
@@ -93,7 +93,7 @@ ms.locfileid: "70970656"
 
 运行单元测试时，Visual Studio 执行单元测试类（对其应用了 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 特性的类）中标记有 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 特性的所有方法。 当第一次遇到测试不通过或测试方法中的所有测试均已成功通过时，测试方法终止。
 
-最常见的测试调用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 类的成员。 许多断言方法至少包含两个参数，其中一个是预期的测试结果，另一个是实际的测试结果。 下表显示了最常调用的一些方法。
+最常见的测试调用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 类的成员。 许多断言方法至少包含两个参数，其中一个是预期的测试结果，另一个是实际的测试结果。 下表显示了最常调用的一些方法：
 
 断言方法 | 函数
 --- | ---
@@ -116,7 +116,7 @@ ms.locfileid: "70970656"
 
 1. 将 UnitTest1.cs  代码窗口中的代码替换为以下代码：
 
-   [!CODE-csharp[Test#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
+   [!code-csharp[Test#1](~/samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
 
    请注意，`TestStartsWithUpper` 方法中测试的大写字符包括希腊文大写字母 alpha (U+0391) 和西里尔文大写字母 EM (U+041C)，`TestDoesNotStartWithUpper` 方法中测试的小写字符包括希腊文小写字母 alpha (U+03B1) 和西里尔文小写字母 Ghe (U+0433)。
 
@@ -128,7 +128,7 @@ ms.locfileid: "70970656"
 
 1. 将 UnitTest1.vb  代码窗口中的代码替换为以下代码：
 
-    [!CODE-vb[Test#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
+    [!code-vb[Test#1](~/samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
 
    请注意，`TestStartsWithUpper` 方法中测试的大写字符包括希腊文大写字母 alpha (U+0391) 和西里尔文大写字母 EM (U+041C)，`TestDoesNotStartWithUpper` 方法中测试的小写字符包括希腊文小写字母 alpha (U+03B1) 和西里尔文小写字母 Ghe (U+0433)。
 

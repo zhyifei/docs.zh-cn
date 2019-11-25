@@ -7,23 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30663
 ms.assetid: 3760e7ff-7238-40a1-8676-77d858a64fc0
-ms.openlocfilehash: da4a766e2617308cb33b9673a88db9e7a954152a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2f4dc428a247275f9919c4a8b6e6944a558eef0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935312"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968228"
 ---
-# <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>属性 '\<attributename > 不能应用多次
-该特性仅应用一次。 `AttributeUsage`属性确定是否可以多次应用属性。  
+# <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>特性 "\<attributename >" 不能应用多次
+
+特性只能应用一次。 `AttributeUsage` 特性确定特性是否可以应用多次。  
   
- **错误 ID:** BC30663  
+ **错误 ID：** BC30663  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1. 请确保该属性只应用一次。  
+1. 请确保属性仅应用一次。  
   
-2. 如果使用的您开发的自定义特性，请考虑更改其`AttributeUsage`属性以允许多个特性用法，与下面的示例一样。  
+2. 如果使用的是你开发的自定义特性，请考虑将其 `AttributeUsage` 特性更改为允许使用多种特性，如下面的示例所示。  
   
 ```vb  
 <AttributeUsage(AllowMultiple := True)>  

@@ -1,15 +1,15 @@
 ---
-title: 如何：使用 Async 和 Await 并行发出多个 Web 请求 (C#)
+title: 如何使用 Async 和 Await 并行发出多个 Web 请求 (C#)
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: 06b70f5f3b2e1f3e7e423b16463f0b6b613f62c2
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: a6eef947e8f657cff574ffdf3afcd8943c665b8d
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168383"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969950"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>如何：使用 Async 和 Await 并行发出多个 Web 请求 (C#)
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>如何使用 Async 和 Await 并行发出多个 Web 请求 (C#)
 在 async 方法中，任务在创建后即启动。 在任务完成前处理无法继续的方法中将 [await](../../../language-reference/operators/await.md) 运算符应用于任务。 通常任务被创建后即等待，如下面的示例所示。  
   
 ```csharp  
@@ -37,7 +37,7 @@ var result = await myTask;
 > [!NOTE]
 > 若要完成此项目，计算机上必须安装有 Visual Studio 2012 或更高版本和 .NET Framework 4.5 或更高版本。  
   
- 有关同时启动多个任务的另一个示例，请参阅[如何：使用 Task.WhenAll 扩展异步演练 (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。  
+ 有关同时启动多个任务的其他示例，请参阅[如何使用 Task.WhenAll 扩展异步演练 (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。
   
  可以从[开发人员代码示例](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)下载此示例的代码。  
   
@@ -228,4 +228,4 @@ namespace AsyncExample_MultipleTasks
 
 - [演练：使用 Async 和 Await 访问 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [使用 Async 和 Await 的异步编程 (C#)](./index.md)
-- [如何：使用 Task.WhenAll 扩展异步演练 (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [如何使用 Task.WhenAll 扩展异步演练 (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

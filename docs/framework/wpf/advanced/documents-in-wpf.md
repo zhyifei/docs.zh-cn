@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: fbd4df8820073a3cdf2a8d5aad9c56bd7ca751df
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 36704d56b66de977ac7f63fd7e766c925ef9023b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460526"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974687"
 ---
 # <a name="documents-in-wpf"></a>WPF 中的文档
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供各种文档功能，使创建的高保真内容更易于访问和读取，而不是在以前的 Windows 版本中使用。 除增强功能和质量外，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 还对文档显示、打包和安全性能提供集成服务。 本主题介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文档类型和文档打包。  
@@ -125,13 +125,13 @@ ms.locfileid: "73460526"
   
 <a name="XPS_Documents"></a>   
 ## <a name="xps-documents"></a>XPS 文档  
- XML 纸张规范（XPS）文档是一个包，其中包含一个或多个固定文档以及呈现所需的所有资源和信息。  XPS 也是本机 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 打印假脱机文件格式。  <xref:System.Windows.Xps.Packaging.XpsDocument> 存储在标准 ZIP 数据集中，可以包含 XML 和二进制组件（如图像和字体文件）的组合。 [PackageRelationships](#PackageRelationships) 用于定义内容和完全呈现文档所需的资源之间的依赖关系。  <xref:System.Windows.Xps.Packaging.XpsDocument> 的设计提供了支持多种用途的单个高保真文档解决方案：  
+ XML 纸张规范（XPS）文档是一个包，其中包含一个或多个固定文档以及呈现所需的所有资源和信息。  XPS 也是本机 Windows Vista 打印假脱机文件格式。  <xref:System.Windows.Xps.Packaging.XpsDocument> 存储在标准 ZIP 数据集中，可以包含 XML 和二进制组件（如图像和字体文件）的组合。 [PackageRelationships](#PackageRelationships) 用于定义内容和完全呈现文档所需的资源之间的依赖关系。  <xref:System.Windows.Xps.Packaging.XpsDocument> 的设计提供了支持多种用途的单个高保真文档解决方案：  
   
 - 将固定文档内容和资源读取、写入和存储为单个可移植且易于分发的文件。  
   
 - 显示包含 XPS 查看器应用程序的文档。  
   
-- 以 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 的本机打印后台输出格式输出文档。  
+- 以 Windows Vista 的本机打印后台输出格式输出文档。  
   
 - 将文档直接路由到与 XPS 兼容的打印机。  
   

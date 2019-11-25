@@ -1,15 +1,15 @@
 ---
-title: 如何：使用 Task.WhenAll 扩展异步演练 (C#)
+title: 如何使用 Task.WhenAll 扩展异步演练 (C#)
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: f44595a409113e4b7ff3ad2c6d0712e5debaad08
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: afd7dda4e876b7faa54ae4a8e62d640d2b9aaf07
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040645"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970024"
 ---
-# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>如何：使用 Task.WhenAll 扩展异步演练 (C#)
+# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>如何使用 Task.WhenAll 扩展异步演练 (C#)
 
 提高[演练：使用 Async 和 Await 访问 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)中的异步解决方案的性能，方法是使用 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 方法。 此方法以异步方式等待多个异步操作（它们表示为任务的集合）。
 

@@ -2,12 +2,12 @@
 title: 实现值对象
 description: 适用于容器化的 .NET 应用程序的 .NET 微服务体系结构 | 深入了解有关使用新实体框架功能实现值对象的详细信息和选项。
 ms.date: 10/08/2018
-ms.openlocfilehash: b2f7b0f36fea25c25edd47731d9387810bd2b44d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2608517c4006f5e8da1d31b2c337d8ddd3ddd542
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674144"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739863"
 ---
 # <a name="implement-value-objects"></a>实现值对象
 
@@ -17,7 +17,7 @@ ms.locfileid: "68674144"
 
 图 7-13 显示 Order 聚合中的 Address 值对象。
 
-![Order 聚合中的 Address 值对象。](./media/image14.png)
+![显示订单聚合中的 Address 值对象的关系图。](./media/implement-value-objects/value-object-within-aggregate.png)
 
 图 7-13  。 Order 聚合中的 Address 值对象
 
@@ -310,7 +310,7 @@ public class Address
 - **Martin Fowler。ValueObject 模式** \
   <https://martinfowler.com/bliki/ValueObject.html>
 
-- **Eric Evans。Domain-Driven Design:Tackling Complexity in the Heart of Software.** （域驱动设计：软件核心复杂性应对之道） （书；包括值对象的讨论）\
+- **Eric Evans。域驱动设计：软件核心复杂性应对之道.** （书；包括值对象的讨论）\
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 - **Vaughn Vernon。实现域驱动设计。** （书；包括值对象的讨论）\

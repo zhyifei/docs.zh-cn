@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ce022e92e8b6770c42800a04a349eff751bdb708
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3cd881044d45a276ec361d24097b59b8ce76b7e4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052066"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975698"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework 初始化错误：管理用户体验
 
@@ -41,7 +41,7 @@ CLR 激活 API 返回 HRESULT 代码以报告对主机的激活操作结果。 �
 
 如果 CLR 激活系统无法加载应用程序所需运行时的正确版本，它将向用户显示一条错误消息，通知他们，他们的计算机未正确配置，无法运行该应用程序，并为他们提供机会来修复该问题。 在此情况下通常会显示以下错误消息。 用户可以选择“是”  以转到 Microsoft 网站，从中为应用程序下载正确的 .NET Framework 版本。
 
-![.NET Framework 初始化错误对话框](./media/initialization-errors-managing-the-user-experience/initialization-error-dialog.png "初始化错误的典型错误消息")
+![“.NET Framework 初始化错误”对话框](./media/initialization-errors-managing-the-user-experience/initialization-error-dialog.png "初始化错误的典型错误消息")
 
 ## <a name="resolving-the-initialization-error"></a>解决初始化错误
 
@@ -59,7 +59,7 @@ CLR 激活 API 返回 HRESULT 代码以报告对主机的激活操作结果。 �
 
 [ICLRMetaHostPolicy::GetRequestedRuntime](../unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) 方法接受 [METAHOST_POLICY_FLAGS](../unmanaged-api/hosting/metahost-policy-flags-enumeration.md) 枚举作为输入。 可以包括 METAHOST_POLICY_SHOW_ERROR_DIALOG 标志，以在找不到请求的 CLR 版本时请求显示错误消息。 默认情况下，不显示错误消息。 （[ICLRMetaHost::GetRuntime](../unmanaged-api/hosting/iclrmetahost-getruntime-method.md) 方法不接受此标志，且不提供任何显示该错误消息的其他方式。）
 
-Windows 提供的 [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkID=255242) 函数可用于声名是否希望因代码在进程中运行而显示错误消息。 可以指定 SEM_FAILCRITICALERRORS 标志来阻止显示错误消息。
+Windows 提供的 [SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode) 函数可用于声名是否希望因代码在进程中运行而显示错误消息。 可以指定 SEM_FAILCRITICALERRORS 标志来阻止显示错误消息。
 
 但是，在某些情况下，需要替代由应用程序进程设置的 SEM_FAILCRITICALERRORS 设置。 例如，如果使用本机 COM 组件托管 CLR 且托管位置位于设置 SEM_FAILCRITICALERRORS 的进程，则建议替代该标志，具体取决于在该特定应用程序进程内显示的错误消息的影响。 在这种情况下，可以使用以下一种标志替代 SEM_FAILCRITICALERRORS：
 
@@ -82,7 +82,7 @@ CLR 包括一组适用于各种方案的主机，如果在加载所需运行时�
 
 CLR 激活系统在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上提供与在其他版本 Windows 操作系统上一样的行为和 UI，除非加载 CLR 2.0 时遇到问题。 [!INCLUDE[win8](../../../includes/win8-md.md)] 包括使用 CLR 4.5 的 .NET Framework 4.5。 但是，[!INCLUDE[win8](../../../includes/win8-md.md)] 不包括 .NET Framework 2.0、3.0 或 3.5，它们都使用 CLR 2.0。 结果，依赖于 CLR 2.0 的应用程序默认情况下在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上不运行。 相反，它们将显示下面的对话框，使用户能够安装 .NET Framework 3.5。 用户还可在“控制面板”中启用 .NET Framework 3.5。 这两个选项将在[在 Windows 10、Windows 8.1 和 Windows 8 上安装 .NET Framework 3.5](../install/dotnet-35-windows-10.md)一文中进行讨论。
 
-![Windows 8 上用于 3.5 版本安装的对话框](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "提示按需安装 .NET Framework 3.5")
+![Windows 8 上的“3.5 安装”对话框](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "提示按需安装 .NET Framework 3.5")
 
 > [!NOTE]
 > .NET Framework 4.5 取代了用户计算机上的 .NET Framework 4 (CLR 4)。 因此，.NET Framework 4 应用程序将在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上顺畅运行，不会显示该对话框。

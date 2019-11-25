@@ -2,12 +2,12 @@
 title: 容器化整体式应用程序
 description: 容器化整体式应用程序虽然无法从微服务体系结构中获得所有好处，但却具有可立即提供的重要部署优势。
 ms.date: 09/20/2018
-ms.openlocfilehash: 5b38ba1c2954f4fd4064723b1316afbf09d25bf2
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e02aa4ff644fc26b7f15721866f8862f6a175cf2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771478"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737992"
 ---
 # <a name="containerizing-monolithic-applications"></a>容器化整体式应用程序
 
@@ -15,11 +15,11 @@ ms.locfileid: "72771478"
 
 若要管理此模型，可部署单个容器来表示应用程序。 若要增加容量，可进行横向扩展，即，只需添加更多副本并将负载均衡器置于前面。 为了简单起见，在单个容器或 VM 中管理单个部署。
 
-![整体式容器化应用程序将其大部分功能集中在一个具有内部层或库的容器中，并通过在多个服务器/VM 上克隆容器来进行横向扩展](./media/image1.png)
+![显示整体式容器化应用程序组件的关系图。](./media/containerize-monolithic-applications/monolithic-containerized-application.png)
 
 **图 4-1**。 容器化整体式应用程序的体系结构示例
 
-如图 4-1 中所示，可以在每个容器添加多个组件、库或内部层。 然而，这种整体式模式可能违背了容器原则（“一个容器在一个进程中做一件事”），但在某些情况下没有关系。
+如图 4-1 中所示，可以在每个容器添加多个组件、库或内部层。 整体式容器化应用程序将其大部分功能集中在一个具有内部层或库的容器中，并通过在多个服务器/VM 上克隆容器来进行横向扩展。 然而，这种整体式模式可能违背了容器原则（“一个容器在一个进程中做一件事”），但在某些情况下没有关系。
 
 如果应用程序在增长，需要它进行缩放，这种方法的缺点就会变得显而易见。 如果整个应用程序都可缩放，这就不是问题了。 但在大多数情况下，应用程序中只有一小部分是瓶颈，需要进行缩放，而其他组件使用较少。
 
@@ -31,7 +31,7 @@ ms.locfileid: "72771478"
 
 从基础结构的角度来看，每台服务器可以在同一台主机上运行多个应用程序，在资源使用率中具有可接受的效率比率，如图 4-2 所示。
 
-![一个主机可以运行多个整体式应用，每个应用位于一个单独的容器中。](./media/image2.png)
+![显示一个主机在容器中运行许多应用的关系图。](./media/containerize-monolithic-applications/host-multiple-apps-containers.png)
 
 **图 4-2**。 整体式方法：主机运行多个应用，每个应用作为一个容器运行
 
@@ -39,7 +39,7 @@ Microsoft Azure 中的整体式应用程序可以使用每个实例的专用 VM 
 
 像 QA 环境或有限的生产环境一样，可以部署多个 Docker 主机 VM 并使用 Azure 平衡器平衡这些 VM，如图 4-3 所示。 这样，你可以使用粗粒度方法管理缩放，因为整个应用程序都在单个容器中。
 
-![多个主机，每个主机运行一个带有整体式应用程序的容器。](./media/image3.png)
+![显示几个主机运行整体式应用容器的关系图。](./media/containerize-monolithic-applications/docker-infrastructure-monolithic-application.png)
 
 **图 4-3**。 多个主机纵向扩展单容器应用程序的示例
 
@@ -59,7 +59,7 @@ Microsoft Azure 中的整体式应用程序可以使用每个实例的专用 VM 
 
 无论是想验证部署到 Azure 的容器，还是想应用程序只作为单容器应用程序，Azure 应用服务都能够用一种适合的方式可缩放的基于单个容器的服务。 Azure 应用服务使用简单。 此服务与 Git 完美集成，可方便获取代码、在 Visual Studio 中构建此服务并将其直接部署到 Azure。
 
-![用于将单容器应用程序从 Visual Studio 发布到 Azure 应用服务的向导](./media/image4.png)
+![显示容器注册表的“创建应用服务”对话框的屏幕截图。](./media/containerize-monolithic-applications/publish-azure-app-service-container.png)
 
 **图 4-4**。 将单容器应用程序从 Visual Studio 发布到 Azure 应用服务
 

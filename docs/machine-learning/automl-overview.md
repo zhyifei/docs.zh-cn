@@ -6,12 +6,12 @@ ms.date: 05/01/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
-ms.openlocfilehash: da2d764e678debc78a25faeb8e48facb44fc4021
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 263004e67bf88af4182788e8c74cb410460e9201
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929424"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971408"
 ---
 # <a name="automated-machine-learning-with-mlnet"></a>使用 ML.NET 自动化机器学习
 
@@ -22,7 +22,7 @@ ms.locfileid: "70929424"
 - 用于特征选择和模型训练的源代码（用于了解模型）
 
 > [!NOTE]
-> 此功能目前处于预览状态，且材料可能会有所变化。 
+> 此功能目前处于预览状态，且材料可能会有所变化。
 
 自动化 ML 目前仅限于二元分类、多类分类和回归这三个机器学习[任务](resources/tasks.md)。 未来的版本将支持其他机器学习任务。
 

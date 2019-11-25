@@ -5,22 +5,22 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: df6806cd77e7ff109d79f7ba61866763de4c7fc1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d0002182c5ae519c36348acdd2587bca499fe72e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790360"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975139"
 ---
 # <a name="quickstart-wcf-data-services"></a>快速入门（WCF 数据服务）
 
-本快速入门帮助你熟悉 WCF 数据服务和[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]通过一系列支持[入门](getting-started-with-wcf-data-services.md)中主题的任务。
+本快速入门通过一系列支持[入门](getting-started-with-wcf-data-services.md)中的主题的任务，帮助你熟悉 WCF 数据服务和 Open Data Protocol （OData）。
 
 ## <a name="what-youll-learn"></a>你将学习的内容
 
 本快速入门中的第一项任务介绍如何创建数据服务以公开 Northwind 示例数据库中的 OData 数据源。 在后面的主题中，你将使用 Web 浏览器访问 OData 源，并创建使用客户端库使用 OData 源的 Windows Presentation Foundation （WPF）客户端应用程序。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>Prerequisites
 
 为了完成本快速入门，必须安装以下组件：
 

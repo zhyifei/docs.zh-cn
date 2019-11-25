@@ -1,5 +1,5 @@
 ---
-title: 如何：为枚举创建新方法 - C# 编程指南
+title: 如何为枚举创建新方法 - C# 编程指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - extension methods [C#], for enums
 - enum extensibility [C#]
 ms.assetid: 100106f9-1e54-462c-8ebe-3892fe23b6eb
-ms.openlocfilehash: 99a2005e1a64fa214776145a903341fb162f0633
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 02af55c851392ce5dde4c83fd32d18b927950a3f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597043"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971031"
 ---
-# <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>如何：为枚举创建新方法（C# 编程指南）
+# <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>如何为枚举创建新方法（C# 编程指南）
 可使用扩展方法添加特定于某个特定枚举类型的功能。  
   
 ## <a name="example"></a>示例  

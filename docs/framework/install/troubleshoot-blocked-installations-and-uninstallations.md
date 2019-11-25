@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, troubleshooting blocked installations
 - blocked .NET Framework installations, troubleshooting
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
-ms.openlocfilehash: e602e0f0603637659b7d18d75e66547dcd946c54
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d0f3d857a90aca763121595151a2193125b47c6c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123762"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975630"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>安装和卸载 .NET Framework 受阻疑难解答
 
@@ -41,14 +41,14 @@ ms.locfileid: "73123762"
 |前一次安装要求重新启动计算机，所以安装程序无法继续。 请重新启动计算机，然后重新运行安装程序。|有时需要重新启动以完全完成一次安装。 根据说明重新启动计算机并重新运行安装程序。<br /><br /> 在极少数情况下，如果 Windows 检测到缺少一些更新并需要重新启动来安装队列中的下一个更新，则可能要求不止一次重新启动系统。|  
 |.NET Framework 安装程序无法在程序兼容性模式下运行。|请参阅本文后面的[程序兼容性问题](#compat)一节。|  
 |.NET Framework 4.5.x/4.6.x/4.7.x/4.8 尚未安装，因为组件存储已损坏。|有关详细信息，请参阅[使用 DISM 或系统更新准备工具修复 Windows 更新错误](https://support.microsoft.com/kb/947821)。|  
-|安装程序无法运行，因为 Windows Installer 服务在此计算机上不可用。|请参阅 Microsoft 支持网站上的[安装或更新程序时出现的 Windows Installer 服务错误](https://go.microsoft.com/fwlink/p/?LinkId=248684)。|  
-|安装程序可能无法正常运行，因为 Windows Update 服务在此计算机上不可用。|可将计算机配置为使用 Windows Server Update Services (WSUS) 而非 Microsoft Windows Update。 有关详细信息，请参阅[尝试在 Windows 8 或 Windows Server 2012 上安装 .NET Framework 3.5 时出现的错误代码](https://support.microsoft.com/kb/2734782)中有关错误代码 0x800F0906 的一节。<br /><br /> 另请参阅 Microsoft 支持网站上的[如何获取 Windows 更新代理的最新版本以帮助管理计算机上的更新](https://go.microsoft.com/fwlink/p/?LinkId=248437)。|  
-|安装程序可能无法正常运行，因为后台智能传输服务 (BITS) 在此计算机上不可用。|请参阅 Microsoft 支持网站上的[用于防止基于 Windows Vista 的计算机上的后台智能传输服务 (BITS) 发生崩溃的更新](https://go.microsoft.com/fwlink/p/?LinkId=248680)。|  
+|安装程序无法运行，因为 Windows Installer 服务在此计算机上不可用。|请参阅 Microsoft 支持网站上的[尝试在 Windows 7 或 Windows Vista 中安装程序时出现的“无法访问 Windows Installer 服务”错误](https://support.microsoft.com/help/2642495/the-windows-installer-service-could-not-be-accessed-error-when-you-try)。|  
+|安装程序可能无法正常运行，因为 Windows Update 服务在此计算机上不可用。|可将计算机配置为使用 Windows Server Update Services (WSUS) 而非 Microsoft Windows Update。 有关详细信息，请参阅 [.NET Framework 3.5 安装错误：0x800F0906、0x800F081F、0x800F0907](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906-0x800f081f-0x800f0907) 中的错误代码 0x800F0906 部分。<br /><br /> 另请参阅 Microsoft 支持网站上的[如何将 Windows 更新代理更新至最新版本](https://support.microsoft.com/help/949104/how-to-update-the-windows-update-agent-to-the-latest-version)。|  
+|安装程序可能无法正常运行，因为后台智能传输服务 (BITS) 在此计算机上不可用。|请参阅 Microsoft 支持网站上的[用于修复基于 Windows Vista 的计算机上的后台智能传输服务 (BITS) 发生崩溃的更新](https://support.microsoft.com/help/940520/an-update-is-available-to-fix-a-background-intelligent-transfer-servic)。|  
 |安装程序可能无法正常运行，因为 Windows 更新遇到了错误并显示错误代码 0x80070643 或 0x643。|请参阅 Microsoft 支持部门网站上的 [.NET Framework 更新安装错误：“0x80070643”或“0x643”](https://support.microsoft.com/kb/976982)。|  
 |此操作系统已包含 .NET Framework 4.5.x/4.6.x/4.7.x/4.8。 无需安装 .NET Framework 4.5.x/4.6.x/4.7.x/4.8 可再发行组件。|不执行任何操作。<br /><br /> 要确定系统上安装了哪些版本的 .NET Framework，请参阅[如何：确定已安装的 .NET Framework 版本](../migration-guide/how-to-determine-which-versions-are-installed.md)。 请参阅[系统需求](../get-started/system-requirements.md)以了解受支持的操作系统。|  
 |此操作系统不支持 .NET Framework 4.5.x/4.6.x/4.7.x/4.8。|请参阅[系统需求](../get-started/system-requirements.md)以了解受支持的操作系统。<br /><br /> Windows 7 上安装 .NET Framework 失败时，此消息通常会指示未安装 Windows 7 SP1。 在 Windows 7 系统上，.NET Framework 要求安装 Windows 7 SP1。 如果你使用的是 Windows 7 系统，但尚未安装 Service Pack 1，则需要先安装 SP1，然后才能安装 .NET Framework。 有关安装 Windows 7 SP1 的信息，请参阅[了解如何安装 Windows 7 Service Pack 1 (SP1)](https://windows.microsoft.com/windows7/install-windows-7-service-pack-1)。|  
 |你的计算机当前正在运行 Windows Server 2008 操作系统的服务器核心安装。 .NET Framework 4.5.x 需要完整版本的操作系统或 Server Core 2008 R2 SP1。 请安装完整版的 Windows Server 2008 SP2、Windows Server 2008 R2 SP1 或 Server Core 2008 R2 SP1，然后重新运行 .NET Framework 4.5.x 安装程序。|.NET Framework 在带有 Windows Server 2008 R2 SP1 或更高版本的服务器核心角色中受支持。 请参阅[系统需求](../get-started/system-requirements.md)。|  
-|.NET Framework 4.5.x 已包含在此操作系统中，但当前处于关闭状态（仅限 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]）。|请参阅 Windows 网站上的[打开或关闭 Windows 功能](https://go.microsoft.com/fwlink/p/?LinkId=248438)。|  
+|.NET Framework 4.5.x 已包含在此操作系统中，但当前处于关闭状态（仅限 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]）。| 使用“控制面板”中的“打开或关闭 Windows 功能”，以打开 .NET Framework 4.5.x   。 |  
 |此安装程序要求使用 x86 计算机。 不能在 x64 或 IA64 计算机上安装此程序。|请参阅[系统需求](../get-started/system-requirements.md)。|  
 |此安装程序要求使用 x64 或 x86 计算机。 不能在 IA64 计算机上安装此程序。|请参阅[系统需求](../get-started/system-requirements.md)。|  
 

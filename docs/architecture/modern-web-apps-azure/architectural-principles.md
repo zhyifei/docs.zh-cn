@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 体�
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 91bb3be207c9919eb7eb0119e96e76aae94858be
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 656c92c417283366e4bb757489c189ecbc0ea815
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373755"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416689"
 ---
 # <a name="architectural-principles"></a>体系结构原则
 

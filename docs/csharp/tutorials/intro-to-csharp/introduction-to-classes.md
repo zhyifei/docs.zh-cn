@@ -3,12 +3,12 @@ title: 类和对象 - C# 简介教程
 description: 创建首个 C# 程序，并探索面向对象的概念
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: f4199f709ee0011af9f00f6909193f08345bc49e
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: e4cf7912de69946289c0594944b8ac3a8c252ac2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834108"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736839"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>使用类和对象探索面向对象的编程
 
@@ -178,7 +178,7 @@ catch (ArgumentOutOfRangeException e)
 使用 [`try` 和 `catch` 语句](../../language-reference/keywords/try-catch.md)，标记可能会引发异常的代码块，并捕获预期错误。 可以使用相同的技术，测试代码能否在取款后的余额为负数时引发异常：
 
 ```csharp
-// Test for a negative balance:
+// Test for a negative balance.
 try
 {
     account.MakeWithdrawal(750, DateTime.Now, "Attempt to overdraw");
@@ -210,6 +210,6 @@ Console.WriteLine(account.GetAccountHistory());
 
 ## <a name="next-steps"></a>后续步骤
 
-如果遇到问题，可以在 [GitHub 存储库](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/)中查看本教程的源代码
+如果遇到问题，可以在 [GitHub 存储库](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/)中查看本教程的源代码。
 
-恭喜，你已完成我们的所有 C# 简介教程。 若要了解详细信息，请继续学习我们的[教程](../index.md)
+恭喜，你已完成我们的所有 C# 简介教程。 若要了解详细信息，请继续学习我们的[教程](../index.md)。

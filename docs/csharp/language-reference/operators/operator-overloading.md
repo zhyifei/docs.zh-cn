@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 130eb4be66d13b43e5605ef98a647fa9f4223014
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 04c8731867e32ce1000a511c9ab36db554664a97
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116091"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038953"
 ---
 # <a name="operator-overloading-c-reference"></a>运算符重载（C# 引用）
 
-用户定义的类型可重载预定义的 C# 运算符。 也就是说，当一个或两个运算符都是某类型时，此类型可提供操作的自定义实现。 [可重载运算符](#overloadable-operators)部分介绍了哪些 C# 运算符可重载。
+用户定义的类型可重载预定义的 C# 运算符。 也就是说，当一个或两个操作数都是某类型时，此类型可提供操作的自定义实现。 [可重载运算符](#overloadable-operators)部分介绍了哪些 C# 运算符可重载。
 
 使用 `operator` 关键字来声明运算符。 运算符声明必须符合以下规则：
 
 - 同时包含 `public` 和 `static` 修饰符。
-- 一元运算符采用一个参数。 二元运算符采用两个参数。 在每种情况下，都至少有一个参数必须具有类型 `T` 或 `T?`，其中 `T` 是包含运算符声明的类型。
+- 一元运算符有一个输入参数。 二元运算符有两个输入参数。 在每种情况下，都至少有一个参数必须具有类型 `T` 或 `T?`，其中 `T` 是包含运算符声明的类型。
 
 下面的示例定义了一个表示有理数的简单结构。 该结构会重载一些[算术运算符](arithmetic-operators.md)：
 
 [!code-csharp[fraction example](~/samples/csharp/language-reference/operators/OperatorOverloading.cs)]
 
-可以通过定义从 `int` 到 `Fraction` 的隐式转换来扩展前面的示例。 然后，重载运算符将支持这两种类型的参数。 也就是说，可以将一个整数添加到一个分数中，得到一个分数结果。
+可以通过[定义从 `int` 到 `Fraction` 的隐式转换](user-defined-conversion-operators.md)来扩展前面的示例。 然后，重载运算符将支持这两种类型的参数。 也就是说，可以将一个整数添加到一个分数中，得到一个分数结果。
 
 还可以使用 `operator` 关键字来定义自定义类型转换。 有关详细信息，请参阅[用户定义转换运算符](user-defined-conversion-operators.md)。
 

@@ -2,13 +2,14 @@
 title: 区别委托和事件
 description: 了解委托和事件的区别，以及何时使用 .NET Core 的这两种功能。
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: 2f9c26519d93314f4991829191723df5426b23b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff90af1d2b1a92f06eed58228f8e8ca5ff6b93ca
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219133"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037317"
 ---
 # <a name="distinguishing-delegates-and-events"></a>区别委托和事件
 
@@ -35,7 +36,7 @@ ms.locfileid: "33219133"
 
 另一个注意事项是委托方法所需的方法原型。 如你所见，用于事件的委托均具有无效的返回类型。 你还看到，存在创建事件处理程序的惯用语，该事件处理程序通过修改事件参数对象的属性将信息传回到事件源。 虽然这些惯用语可发挥作用，但它们不像从方法返回值那样自然。
 
-请注意，通常可能会同时存在这两种试探法：如果委托方法返回一个值，则它可能会以某种方式影响算法。
+请注意，这两种试探法可能经常同时存在：如果委托方法返回值，则可能会以某种方式影响算法。
 
 ## <a name="event-listeners-often-have-longer-lifetimes"></a>事件侦听器通常具有较长的生存期 
 

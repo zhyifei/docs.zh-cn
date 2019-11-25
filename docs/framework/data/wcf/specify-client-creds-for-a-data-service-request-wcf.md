@@ -1,5 +1,5 @@
 ---
-title: 如何：为数据服务请求指定客户端凭据（WCF 数据服务）
+title: 如何：为数据服务请求（WCF 数据服务）指定客户端凭据
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: 4177b7f5138bd3e3ddd63e4a0d8d4bcb2be01fbb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bb25319e3a4b1f8c7a3586c546ce1d589b48e438
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790325"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975151"
 ---
-# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>如何：为数据服务请求指定客户端凭据（WCF 数据服务）
-默认情况下，客户端库在向 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服务发送请求时不提供凭据。 但是，可以通过为 <xref:System.Net.NetworkCredential> 的 <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> 属性提供 <xref:System.Data.Services.Client.DataServiceContext> 以指定发送凭据，对发送到数据服务的请求进行身份验证。 有关更多信息，请参见 [Securing WCF Data Services](securing-wcf-data-services.md)。 本主题中的示例演示如何显式提供 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端从数据服务请求数据时使用的凭据。  
+# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>如何：为数据服务请求（WCF 数据服务）指定客户端凭据
+默认情况下，客户端库在向 OData 服务发送请求时不提供凭据。 但是，可以通过为 <xref:System.Net.NetworkCredential> 的 <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> 属性提供 <xref:System.Data.Services.Client.DataServiceContext> 以指定发送凭据，对发送到数据服务的请求进行身份验证。 有关更多信息，请参见 [Securing WCF Data Services](securing-wcf-data-services.md)。 本主题中的示例演示如何显式提供 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端从数据服务请求数据时使用的凭据。  
   
- 本主题中的示例使用罗斯文示例数据服务和自动生成的客户端数据服务类。 此服务和客户端数据类是在完成[WCF 数据服务快速入门](quickstart-wcf-data-services.md)时创建的。 你还可以使用网站上[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]发布的[Northwind 示例数据服务](https://go.microsoft.com/fwlink/?LinkId=187426); 此示例数据服务是只读的，尝试保存更改将返回错误。 网站上[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]的示例数据服务允许匿名身份验证。  
+ 本主题中的示例使用罗斯文示例数据服务和自动生成的客户端数据服务类。 此服务和客户端数据类是在完成[WCF 数据服务快速入门](quickstart-wcf-data-services.md)时创建的。 你还可以使用在 OData 网站上发布的[Northwind 示例数据服务](https://go.microsoft.com/fwlink/?LinkId=187426);此示例数据服务是只读的，尝试保存更改将返回错误。 OData 网站上的示例数据服务允许匿名身份验证。  
   
 ## <a name="example"></a>示例  
  下面的示例来自作为 Windows Presentation Framework 应用程序主页的 Extensible Application Markup Language （XAML）文件的代码隐藏页。 该示例显示了一个 `LoginWindow` 实例，用于收集用户的身份验证凭据，然后在向数据服务发出请求时使用了这些凭据。  

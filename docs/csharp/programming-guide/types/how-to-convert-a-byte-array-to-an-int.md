@@ -6,12 +6,12 @@ helpviewer_keywords:
 - conversions [C#], byte array to int
 - byte arrays [C#], converting to int
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
-ms.openlocfilehash: 96507f03a3d64b96ef6059a92459bfc7fa854372
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: cb6252069302a28f8a85247aa4584a9284b26c4d
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395691"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195463"
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>如何：将字节数组转换为 int（C# 编程指南）
 
@@ -35,7 +35,7 @@ ms.locfileid: "72395691"
 此示例初始化字节数组，并在计算机体系结构为 little-endian（即首先存储最低有效字节）的情况下反转数组，然后调用 [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) 方法以将数组中的四个字节转换为 `int`。 [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) 的第二个参数指定字节数组的起始索引。
 
 > [!NOTE]
-> 输出可能会根据计算机体系结构的 endian 设置而不同。
+> 输出可能会根据计算机体系结构的字节顺序而不同。
 
 [!code-csharp[csProgGuideTypes#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#22)]
 
@@ -44,7 +44,7 @@ ms.locfileid: "72395691"
 在本示例中，将调用 <xref:System.BitConverter> 类的 <xref:System.BitConverter.GetBytes%28System.Int32%29> 方法，将 `int` 转换为字节数组。
 
 > [!NOTE]
-> 输出可能会根据计算机体系结构的 endian 设置而不同。
+> 输出可能会根据计算机体系结构的字节顺序而不同。
 
 [!code-csharp[csProgGuideTypes#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#23)]
 

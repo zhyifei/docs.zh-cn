@@ -2,12 +2,12 @@
 title: 使用 IHostedService 和 BackgroundService 类在微服务中实现后台任务
 description: 用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解使用 IHostedService 和 BackgroundService 在微服务 .NET Core 中实现后台任务的新选项。
 ms.date: 01/07/2019
-ms.openlocfilehash: 2d0b41bc7853dc616284c46462efe96ca1a9d296
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: d289d8ccc737fa9fc13b95da44e4b617b431f96a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770125"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737189"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>使用 IHostedService 和 BackgroundService 类在微服务中实现后台任务
 
@@ -17,11 +17,11 @@ ms.locfileid: "72770125"
 
 自 .NET Core 2.0 开始，该框架提供名为 <xref:Microsoft.Extensions.Hosting.IHostedService> 的新接口，有助于轻松实现托管服务。 基本理念是，可以注册多个后台任务（托管服务），在 Web 主机或主机运行时在后台运行，如图 6-26 所示。
 
-![ASP.NET Core 1.x 和 2.x 支持将 IWebHost 用于 Web 应用中的后台进程，.NET Core 2.1 支持将 IHost 用于使用简单控制台应用的后台进程。](./media/image26.png)
+![比较 ASP.NET Core IWebHost 和 .NET Core IHost 的关系图。](./media/background-tasks-with-ihostedservice/ihosted-service-webhost-vs-host.png)
 
 **图 6-26**. 在 WebHost 与主机中使用 IHostedService
 
-请注意 `WebHost` 和 `Host` 之间产生的差异。
+ASP.NET Core 1.x 和 2.x 支持 IWebHost，用于 Web 应用中的后台进程。 .NET Core 2.1 支持 IHost，适用于带有纯控制台应用的后台进程。 请注意 `WebHost` 和 `Host` 之间产生的差异。
 
 ASP.NET Core 2.0 中的 `WebHost`（实现 `IWebHost` 的基类）是用于为进程提供 HTTP 服务器功能的基础结构项目，例如，如果正在实现 MVC Web 应用或 Web API 服务。 它提供 ASP.NET Core 中所有新的基础结构优点，使用户能够使用依赖关系注入，在请求管道中插入中间件等，并精确地将这些 `IHostedServices` 用于后台任务。
 
@@ -224,9 +224,11 @@ WebHost.CreateDefaultBuilder(args)
 
 下图显示了实现 IHostedServices 时涉及的类和接口的直观摘要。
 
-![类图：IWebHost 和 IHost 可以托管许多服务，这些服务从实现 IHostedService 的 BackgroundService 继承。](./media/image27.png)
+![显示 IWebHost 和 IHost 可以托管多个服务的关系图。](./media/background-tasks-with-ihostedservice/class-diagram-custom-ihostedservice.png)
 
 **图 6-27**。 显示多个与 IHostedService 相关的类和接口的类图
+
+类图：IWebHost 和 IHost 可以托管许多服务，这些服务从实现 IHostedService 的 BackgroundService 继承。
 
 ### <a name="deployment-considerations-and-takeaways"></a>部署注意事项和要点
 

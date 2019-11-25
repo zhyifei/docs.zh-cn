@@ -1,5 +1,5 @@
 ---
-title: 如何：验证字符串是否为有效的电子邮件格式
+title: 如何确认字符串是有效的电子邮件格式
 ms.date: 12/10/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,16 +18,14 @@ helpviewer_keywords:
 - email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 352808e561a0f59d41f092eb7c70c40a591da5b6
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: c02fc215fa66951ae3333175191ab96a226a2afe
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846765"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197586"
 ---
-# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>如何：验证字符串是否为有效的电子邮件格式
+# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>如何确认字符串是有效的电子邮件格式
 
 下面的示例使用正则表达式来验证一个字符串是否为有效的电子邮件格式。
 
@@ -52,7 +50,7 @@ ms.locfileid: "72846765"
 [!code-csharp[RegularExpressions.Examples.Email#7](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#7)]
 [!code-vb[RegularExpressions.Examples.Email#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#7)]
 
-在本例中，正则表达式模式 ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$`` 的解释如以下图例所示。 使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 标志编译正则表达式。
+在本例中，正则表达式模式 ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$`` 的解释如以下图例所示。 使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 标志编译正则表达式。
 
 模式 `^`：从字符串的开头部分开始匹配。
 
@@ -64,7 +62,7 @@ ms.locfileid: "72846765"
 
 模式 `(\.(?!\.))`：如果下一个字符为句点，则匹配它。 如果下一个字符不为句点，则看下一个字符并继续进行匹配。 `(?!\.)` 是宽度为零的负预测先行断言，可防止两个连续句号出现在电子邮件地址的本地部分中。
 
-模式 ``|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w]``：如果下一个字符不为句点，则匹配任何单词字符或以下字符之一： -!#$%&'*+/=?^`{}|~
+模式 ``|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w]``：如果下一个字符不为句点，则匹配任何单词字符或以下字符之一：-!#$%&'\*+/=?^\`{}|~
 
 模式 ``((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*``：匹配替换模式（一个句点，后跟一个非句点或许多字符中的某个字符）零次或多次。
 

@@ -1,25 +1,25 @@
 ---
-title: 业务流程模式-无服务器应用
-description: Azure 持久性函数 pr
+title: 业务流程模式 - 无服务器应用
+description: Azure Durable 函数流程
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
 ms.openlocfilehash: 2bd81c29e727254af6c8ecf39ee4bfef1f39d009
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: MT
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "72522632"
 ---
 # <a name="orchestration-patterns"></a>业务流程模式
 
-Durable Functions 使你可以更轻松地创建由无服务器环境中的离散的、长时间运行的活动组成的有状态工作流。 由于 Durable Functions 可以跟踪工作流的进度并定期检查执行历史记录，因此它的作用就在于实现一些有趣的模式。
+Durable Functions 使你可以更轻松地创建无服务器环境中由长时间运行的离散活动构成的状态工作流。 由于 Durable Functions 可以跟踪工作流的进度并定期检查执行历史记录，因此它有助于实现一些有趣的模式。
 
-## <a name="function-chaining"></a>函数链接
+## <a name="function-chaining"></a>函数链
 
-在典型的顺序过程中，活动需要按特定顺序逐个执行。 或者，即将发生的活动可能需要以前函数的一些输出。 此依赖项对活动排序创建了一个执行函数链。
+在典型的连续进程中，活动需要按特定顺序逐个执行。 或者，即将发生的活动可能需要前一个函数的一些输出。 这种对活动顺序的依赖关系创建了执行的函数链。
 
-使用 Durable Functions 实现此工作流模式的好处在于它可以执行检查点操作。 如果服务器崩溃、网络超时或发生其他问题，则持久性函数可以从上一已知状态恢复，并继续运行工作流，即使它在另一台服务器上也是如此。
+使用 Durable Functions 实现此工作流模式的好处在于它可以执行检查点操作。 如果服务器崩溃、网络超时或发生其他问题，则 Durable 函数可以从上一个已知状态恢复，并继续运行工作流，即使其位于另一台服务器上也是如此。
 
 ```csharp
 [FunctionName("PlaceOrder")]
@@ -37,7 +37,7 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-在上面的代码示例中，@no__t 0 函数负责在数据中心中的虚拟机上运行给定的活动。 当 await 返回并且基础任务完成时，执行将记录到历史记录表。 业务流程协调程序函数中的代码可以使用任何熟悉的任务并行库构造和 async/await 关键字。
+在上面的代码示例中，`CallActivityAsync` 函数负责在数据中心中的虚拟机上运行给定的活动。 当 await 返回并且基础任务完成时，执行将被记录到历史记录表。 业务流程协调程序函数中的代码可利用任何熟悉的任务并行库构造和 async/await 关键字。
 
 下面的代码简单举例介绍了 `ProcessPayment` 方法：
 
@@ -56,11 +56,11 @@ public static bool ProcessPayment([ActivityTrigger] DurableActivityContext conte
 }
 ```
 
-## <a name="asynchronous-http-apis"></a>异步 HTTP Api
+## <a name="asynchronous-http-apis"></a>异步 HTTP API
 
-在某些情况下，工作流可能包含需要较长时间才能完成的活动。 假设有一个进程，该进程将媒体文件备份到 blob 存储中。 根据媒体文件的大小和数量，此备份过程可能需要数小时才能完成。
+在某些情况下，工作流可能包含需要较长时间才能完成的活动。 假设有一个进程，该进程开始将媒体文件备份到 blob 存储中。 根据媒体文件的大小和数量，此备份进程可能需要数小时才能完成。
 
-在这种情况下，@no__t 0 的功能可以检查正在运行的工作流的状态，这会很有用。 使用 `HttpTrigger` 来启动工作流时，可以使用 @no__t 1 方法返回 @no__t 的实例。 此响应为客户端提供有效负载中的 URI，可用于检查正在运行的进程的状态。
+在此方案中，`DurableOrchestrationClient` 查看正在运行的工作流状态的功能非常有用。 使用 `HttpTrigger` 启动工作流时，可以使用 `CreateCheckStatusResponse` 方法返回 `HttpResponseMessage` 的实例。 此响应为客户端提供有效负载中的 URI，可用于检查正在运行的进程的状态。
 
 ```csharp
 [FunctionName("OrderWorkflow")]
@@ -76,7 +76,7 @@ public static async Task<HttpResponseMessage> Run(
 }
 ```
 
-下面的示例结果显示了响应负载的结构。
+下面的示例结果显示了响应有效负载的结构。
 
 ```json
 {
@@ -101,11 +101,11 @@ public static async Task<HttpResponseMessage> Run(
 }
 ```
 
-进程继续时，状态响应将更改为 "已**失败**" 或 "**已完成**"。 成功完成后，负载中的**输出**属性将包含任何返回的数据。
+在此过程继续时，状态响应将更改为“已失败”  或“已完成”  。 成功完成后，有效负载中的“输出”  属性将包含任何返回的数据。
 
 ## <a name="monitoring"></a>监视
 
-对于简单的定期任务，Azure Functions 提供可基于 CRON 表达式计划的 `TimerTrigger`。 计时器适用于简单、生存期较短的任务，但可能存在需要更灵活的计划的情况。 这种情况是监视模式和 Durable Functions 可帮助。
+对于简单的定期任务，Azure Functions 提供可基于 CRON 表达式计划的 `TimerTrigger`。 计时器适用于简单、生存期较短的任务，但可能存在需要更灵活的计划的情况。 监视模式和 Durable Functions 可在此种情况下提供帮助。
 
 Durable Functions 允许灵活计划间隔、生存期管理和从单个业务流程函数创建多个监视器进程。 此功能的一个用例是为在满足特定阈值后完成的股票价格变化创建观察程序。
 
@@ -149,7 +149,7 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 }
 ```
 
-`DurableOrchestrationContext` `CreateTimer` 方法设置用于检查股票价格变化的下一次调用的计划。 @no__t，还具有 @no__t 1 属性，用于获取 UTC 格式的当前日期时间值。 最好使用此属性（而不是 `DateTime.UtcNow`），因为它很容易模拟进行测试。
+`DurableOrchestrationContext` 的 `CreateTimer` 方法设置了用于检查股票价格变化的下一次调用的计划。 `DurableOrchestrationContext` 还具有 `CurrentUtcDateTime` 属性，用于获取 UTC 格式的当前日期时间值。 最好使用此属性而不是 `DateTime.UtcNow`，因为它易于模拟进行测试。
 
 ## <a name="recommended-resources"></a>推荐的资源
 

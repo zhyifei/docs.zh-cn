@@ -1,18 +1,18 @@
 ---
 title: '#if 预处理器指令 - C# 参考'
 ms.custom: seodec18
-ms.date: 06/30/2018
+ms.date: 10/27/2019
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: d0297094fbb8098b706cb8c6338fa123afc0753b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 561a628c60888a8d4f3c50c8413784e1ed210599
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605698"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035996"
 ---
 # <a name="if-c-reference"></a>#if（C# 参考）
 
@@ -40,9 +40,12 @@ ms.locfileid: "69605698"
 
 使用 `#define` 创建的符号的作用域是在其中定义它的文件。
 
-此外，生成系统还会感知表示不同[目标框架](../../../standard/frameworks.md)的预定义预处理器符号。 在创建可以面向多个.NET 实现或版本的应用程序时，这些符号会很有用。
+此外，生成系统还会感知表示 SDK 样式项目中不同[目标框架](../../../standard/frameworks.md)的预定义预处理器符号。 在创建可以面向多个.NET 实现或版本的应用程序时，这些符号会很有用。
 
 [!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
+
+> [!NOTE]
+> 对于传统的 .NET Framework 项目，必须通过项目的属性页面在 Visual Studio 中为不同目标框架手动配置条件编译符号。
 
 其他预定义符号包括 DEBUG 和 TRACE 常量。 你可以使用 `#define` 替代项目的值集。 例如，会根据生成配置属性（“调试”或者“发布”模式）自动设置 DEBUG 符号。
 

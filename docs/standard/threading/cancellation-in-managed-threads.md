@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3e39ee597f5142f2b3ccbd4ded49e59d6700ec8a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d4bbf30923d65ad7aeced80efa626136ae27491b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960145"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138144"
 ---
 # <a name="cancellation-in-managed-threads"></a>托管线程中的取消
 从 .NET Framework 4 开始，.NET Framework 在协作取消异步操作或长时间运行的同步操作时使用统一的模型。 此模型基于被称为取消标记的轻量对象。 调用一个或多个可取消操作的对象（例如通过创建新线程或任务）将标记传递给每个操作。 单个操作反过来可将标记的副本传递给其他操作。 稍后，创建标记的对象可使用此标记请求停止执行操作内容。 只有发出请求的对象，才能发出取消请求，而每个侦听器负责侦听是否有请求，并及时适当地响应请求。  
@@ -35,7 +33,7 @@ ms.locfileid: "69960145"
   
  下图显示了标记源与标记的所有副本之间的关系。  
   
- ![CancellationTokenSource 和 cancellation 令牌](../../../docs/standard/threading/media/vs-cancellationtoken.png "VS_CancellationToken")  
+ ![CancellationTokenSource 和取消标记](../../../docs/standard/threading/media/vs-cancellationtoken.png "VS_CancellationToken")  
   
  新的取消模型使创建取消感知应用程序和库更简单，并支持以下功能：  
   

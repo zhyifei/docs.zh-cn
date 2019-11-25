@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: fb08cef284a016dd65c99a1efb0a661624a731f1
-  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+  ms.openlocfilehash: f7fd68120defbfcda6ac11e14bc749bf4d69c109
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 10/09/2019
-  ms.locfileid: "72179012"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969388"
 items:
 - durationInMinutes: 1
   content: >
@@ -22,7 +22,7 @@ items:
 - title: 创建列表
   durationInMinutes: 2
   content: >
-    在交互式窗口中，运行以下代码。 为此，请在交互式窗口中键入以下代码块（将 `<name>` 替换为自己的名称），再单击“运行”按钮：
+    在交互式窗口中，运行以下代码。 选择“进入焦点模式”按钮。 然后，在交互式窗口中键入以下代码块（将 `<name>` 替换为自己的名称），再选择“运行”：
 
 
     ```csharp
@@ -106,7 +106,7 @@ items:
     ```
 
 
-    再次单击“运行”，看看结果如何。 在 C# 中，索引是从 0 开始编制，因此最大有效索引是用列表项数减 1 计算得出。
+    再次选择“运行”，看看结果如何。 在 C# 中，索引是从 0 开始编制，因此最大有效索引是用列表项数减 1 计算得出。
 
 
     > [!NOTE]

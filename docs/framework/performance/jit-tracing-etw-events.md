@@ -7,35 +7,28 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 145a53363c9d7aca622ee0b1ccb2700e5984397d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4daa0fc0d689815e3a2c65df09c6c046d06a25c4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046418"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975502"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT 跟踪 ETW 事件
-<a name="top"></a> 这些事件可收集有关实时 (JIT) 内联和 JIT 尾调用成功或失败的信息。  
-  
- JIT 跟踪事件包含以下两个类别：  
-  
-- [JIT 内联事件](#jit_inlining_events)  
-  
-- [JIT 尾调用事件](#jit_tail_call_events)  
-  
-<a name="jit_inlining_events"></a>   
-## <a name="jit-inlining-events"></a>JIT 内联事件  
-  
-### <a name="methodjitinliningfailed-event"></a>MethodJitInliningFailed 事件  
+这些事件可收集有关实时 (JIT) 内联和 JIT 尾调用成功或失败的信息。
+
+## <a name="jit-inlining-events"></a>JIT 内联事件
+
+### <a name="methodjitinliningfailed-event"></a>MethodJitInliningFailed 事件
  下表显示了关键字和级别。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)。）  
   
-|引发事件的关键字|Level|  
+|引发事件的关键字|层次|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|详细级别 (5)|  
   
  下表显示了事件信息。  
   
-|Event|事件 ID|在发生以下情况时引发|  
+|Event — 事件|事件 ID|在发生以下情况时引发|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningFailed`|186|JIT 内联失败。|  
   
@@ -59,13 +52,13 @@ ms.locfileid: "71046418"
 ### <a name="methodjitinliningsucceeded-event"></a>MethodJitInliningSucceeded 事件  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Level|  
+|引发事件的关键字|层次|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|详细级别 (5)|  
   
  下表显示了事件信息。  
   
-|Event|事件 ID|在发生以下情况时引发|  
+|Event — 事件|事件 ID|在发生以下情况时引发|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningSucceeded`|185|方法内联成功。|  
   
@@ -83,22 +76,19 @@ ms.locfileid: "71046418"
 |InlineeName|win:UnicodeString|编译器正在尝试内联的方法（不生成对此方法的调用）。|  
 |InlineeNameSignature|win:UnicodeString|被内联方的签名。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
-  
- [返回页首](#top)  
-  
-<a name="jit_tail_call_events"></a>   
+
 ## <a name="jit-tail-call-events"></a>JIT 尾调用事件  
   
 ### <a name="methodjittailcallfailed-event"></a>MethodJITTailCallFailed 事件  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Level|  
+|引发事件的关键字|层次|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|详细级别 (5)|  
   
  下表显示了事件信息。  
   
-|Event|事件 ID|在发生以下情况时引发|  
+|Event — 事件|事件 ID|在发生以下情况时引发|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallFailed`|189|方法尾调用失败。|  
   
@@ -122,13 +112,13 @@ ms.locfileid: "71046418"
 ### <a name="methodjittailcallsucceeded-event"></a>MethodJITTailCallSucceeded 事件  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Level|  
+|引发事件的关键字|层次|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|详细级别 (5)|  
   
  下表显示了事件信息。  
   
-|Event|事件 ID|在发生以下情况时引发|  
+|Event — 事件|事件 ID|在发生以下情况时引发|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallSucceeded`|188|方法尾调用成功。|  
   

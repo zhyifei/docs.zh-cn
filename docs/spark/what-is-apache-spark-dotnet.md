@@ -4,12 +4,12 @@ description: 了解 .NET for Apache Spark，一种免费、开放源代码、跨
 author: mamccrea
 ms.topic: overview
 ms.date: 10/15/2019
-ms.openlocfilehash: c31b50a20ac08bcde077e1e85ee915435a99fc28
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 12fccd478cedaccf455043feb3afa7b12221bf0e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395855"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458199"
 ---
 # <a name="what-is-net-for-apache-spark"></a>什么是 .NET for Apache Spark？
 
@@ -19,10 +19,10 @@ ms.locfileid: "72395855"
 
 .NET for Apache Spark 为开发人员提供 .NET 体验或基本代码，以参与大数据分析领域。 .NET for Apache Spark 提供了用于通过 C# 和 F# 使用 Spark 的高性能 API。 通过 C# 和 F#，可以访问：
 
-* 用于处理结构化数据的 DataFrame 和 SparkSQL
-* 用于处理流数据的 Spark 结构化流
-* 用于采用 SQL 语法编写查询的 Spark SQL
-* 机器学习集成，以实现更快的训练和预测速度（即使用 .NET for Apache Spark 和 [ML.NET](http://dot.net/ml)）
+* 用于处理结构化数据的 DataFrame 和 SparkSQL。
+* 用于处理流数据的 Spark 结构化流。
+* 用于采用 SQL 语法编写查询的 Spark SQL。
+* 通过集成机器学习，可以加快培训和预测速度（即结合使用 .NET for Apache Spark 和 [ML.NET](https://dot.net/ml)）。
 
 .NET for Apache Spark 符合 .NET Standard，这是正式的 .NET API 规范，常见于 .NET 实现中。 这意味着可以在编写 .NET 代码的任何位置使用 .NET for Apache Spark，可在其中重复使用你作为 .NET 开发人员已具有的所有知识、技能、代码和库。
 
@@ -39,7 +39,7 @@ C#/F# 语言与 Spark 的绑定是在新的 Spark 互操作层上编写的，该
 
 ## <a name="net-for-apache-spark-performance"></a>.NET for Apache Spark 性能
 
-与使用 [TPC-H 基准](http://www.tpc.org/tpch/)的 Python 和 Scala 相比，.NET for Apache Spark 在大多数情况下表现良好，并且当用户定义的函数性能至关重要时，其速度比 Python 快两倍。 目前正在努力提升基准性能。 
+与使用 [TPC-H 基准](http://www.tpc.org/tpch/)的 Python 和 Scala 相比，.NET for Apache Spark 在大多数情况下表现良好，并且当用户定义的函数性能至关重要时，其速度比 Python 快两倍。 目前正在努力提升基准性能。
 
 若要建立自己的基准，请参阅 [.NET for Apache Spark GitHub](https://github.com/dotnet/spark/tree/master/benchmark) 上提供的基准。
 

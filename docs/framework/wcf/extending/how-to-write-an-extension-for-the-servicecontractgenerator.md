@@ -2,12 +2,12 @@
 title: 如何：编写 ServiceContractGenerator 的扩展
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
-ms.openlocfilehash: af23babd9255c45b9fa89b5c167de6960f0f690e
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 68b380a40448f21ba770aa47c7188b818fa8f9e7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855724"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975881"
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>如何：编写 ServiceContractGenerator 的扩展
 本主题描述如何编写 <xref:System.ServiceModel.Description.ServiceContractGenerator> 的扩展。 这可以通过对操作行为实现 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> 接口或者对协定行为实现 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> 接口来完成。 本主题演示如何对协定行为实现 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> 接口。  
@@ -22,42 +22,42 @@ ms.locfileid: "70855724"
     public void GenerateContract(ServiceContractGenerationContext context)  
     {  
         Console.WriteLine("In generate contract.");  
-    context.ContractType.Comments.AddRange(Formatter.FormatComments(commentText));  
+        context.ContractType.Comments.AddRange(Formatter.FormatComments(commentText));  
     }  
     ```  
   
 2. 在同一个类上实现 <xref:System.ServiceModel.Description.IWsdlImportExtension>。 通过将代码生成扩展添加到导入的 <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 实例，<xref:System.ServiceModel.Description.ContractDescription> 方法可以处理特定的 WSDL 扩展（此例中为 WSDL 批注）。  
   
     ```csharp
-    public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
-       {  
-                // Contract documentation  
-             if (context.WsdlPortType.Documentation != null)  
-             {  
-                    context.Contract.Behaviors.Add(new WsdlDocumentationImporter(context.WsdlPortType.Documentation));  
-             }  
-             // Operation documentation  
-             foreach (Operation operation in context.WsdlPortType.Operations)  
-             {  
-                if (operation.Documentation != null)  
-                {  
-                   OperationDescription operationDescription = context.Contract.Operations.Find(operation.Name);  
-                   if (operationDescription != null)  
-                   {  
-                            operationDescription.Behaviors.Add(new WsdlDocumentationImporter(operation.Documentation));  
-                   }  
-                }  
-             }  
-          }  
-          public void BeforeImport(ServiceDescriptionCollection wsdlDocuments, XmlSchemaSet xmlSchemas, ICollection<XmlElement> policy)   
-            {  
-                Console.WriteLine("BeforeImport called.");  
-            }  
-  
-          public void ImportEndpoint(WsdlImporter importer, WsdlEndpointConversionContext context)   
-            {  
-                Console.WriteLine("ImportEndpoint called.");  
-            }  
+    public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)
+    {
+        // Contract documentation
+        if (context.WsdlPortType.Documentation != null)
+        {
+            context.Contract.Behaviors.Add(new WsdlDocumentationImporter(context.WsdlPortType.Documentation));
+        }
+        // Operation documentation
+        foreach (Operation operation in context.WsdlPortType.Operations)
+        {
+            if (operation.Documentation != null)
+            {
+                OperationDescription operationDescription = context.Contract.Operations.Find(operation.Name);
+                if (operationDescription != null)
+                {
+                    operationDescription.Behaviors.Add(new WsdlDocumentationImporter(operation.Documentation));
+                }
+            }
+        }
+    }
+    public void BeforeImport(ServiceDescriptionCollection wsdlDocuments, XmlSchemaSet xmlSchemas, ICollection<XmlElement> policy)
+    {
+        Console.WriteLine("BeforeImport called.");
+    }
+
+    public void ImportEndpoint(WsdlImporter importer, WsdlEndpointConversionContext context)
+    {
+        Console.WriteLine("ImportEndpoint called.");
+    }
     ```  
   
 3. 将 WSDL 导入程序添加到客户端配置中。  
@@ -72,22 +72,23 @@ ms.locfileid: "70855724"
   
 4. 在客户端代码中，创建一个 `MetadataExchangeClient` 并调用 `GetMetadata`。  
   
-    ```csharp  
-    MetadataExchangeClient mexClient = new MetadataExchangeClient(metadataAddress);  
+    ```csharp
+    var mexClient = new MetadataExchangeClient(metadataAddress);  
     mexClient.ResolveMetadataReferences = true;  
     MetadataSet metaDocs = mexClient.GetMetadata();  
     ```  
   
 5. 创建一个 `WsdlImporter` 并调用 `ImportAllContracts`。  
   
-    ```csharp  
-    WsdlImporter importer = new WsdlImporter(metaDocs);            System.Collections.ObjectModel.Collection<ContractDescription> contracts = importer.ImportAllContracts();  
+    ```csharp
+    var importer = new WsdlImporter(metaDocs);
+    System.Collections.ObjectModel.Collection<ContractDescription> contracts = importer.ImportAllContracts();  
     ```  
   
 6. 创建一个 `ServiceContractGenerator` 并为每个协定调用 `GenerateServiceContractType`。  
   
-    ```csharp  
-    ServiceContractGenerator generator = new ServiceContractGenerator();  
+    ```csharp
+    var generator = new ServiceContractGenerator();  
     foreach (ContractDescription contract in contracts)  
     {  
        generator.GenerateServiceContractType(contract);  

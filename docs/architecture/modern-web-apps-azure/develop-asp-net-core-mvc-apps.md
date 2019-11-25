@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 开�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 19d1d5f81b5be9b843698b6e61d8571d4edfa66f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: b57741ed68b3481ad2c85b1c3d62717f09c7570e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181950"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971588"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>开发 ASP.NET Core MVC 应用
 
@@ -172,7 +172,7 @@ ASP.NET Core UI 项目负责所有 UI 级问题，但不得包含业务逻辑或
 
 ### <a name="feature-organization"></a>功能整理
 
-默认情况下，ASP.NET Core 应用程序将其文件夹结构整理为包含 Controllers 和 Views，还经常包含 ViewModels。 支持这些服务器端结构的客户端代码通常单独存放在 wwwroot 文件夹中。 但是对于大型应用程序而言，这种整理方式可能会出现问题，因为处理任何给定功能通常会要求在这些文件夹之间跳转。 每个文件夹中的文件和子文件夹数量越多，通过解决方案资源管理器的滚动就越多，这种整理方式实现起来也就越难。 解决此问题的其中一种办法是按功能，而不要按文件类型来整理应用程序代码  。 这种整理方式通常被称为功能文件夹或[功能切片](https://msdn.microsoft.com/magazine/mt763233.aspx)（另请参阅：[垂直切片](https://deviq.com/vertical-slices/)）。
+默认情况下，ASP.NET Core 应用程序将其文件夹结构整理为包含 Controllers 和 Views，还经常包含 ViewModels。 支持这些服务器端结构的客户端代码通常单独存放在 wwwroot 文件夹中。 但是对于大型应用程序而言，这种整理方式可能会出现问题，因为处理任何给定功能通常会要求在这些文件夹之间跳转。 每个文件夹中的文件和子文件夹数量越多，通过解决方案资源管理器的滚动就越多，这种整理方式实现起来也就越难。 解决此问题的其中一种办法是按功能，而不要按文件类型来整理应用程序代码  。 这种整理方式通常被称为功能文件夹或[功能切片](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc)（另请参阅：[垂直切片](https://deviq.com/vertical-slices/)）。
 
 ASP.NET Core MVC 支持使用 Areas 实现此目的。 使用区域可以在每个 Area 文件夹中创建单独的 Controllers 和 Views 文件夹集（以及任何关联的模型）。 图 7-1 显示了一个使用 Areas 的示例文件夹结构。
 
@@ -237,7 +237,7 @@ public class FeatureConvention : IControllerModelConvention
 services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 ```
 
-ASP.NET Core MVC 还使用约定来确定视图的位置。 可以使用自定义约定取而代之，使视图位于功能文件夹中（使用上述 FeatureConvention 提供的功能名称）。 可在 MSDN 文章 [ASP.NET Core MVC 的功能切片](https://msdn.microsoft.com/magazine/mt763233.aspx)中详细了解此方法并下载工作示例。
+ASP.NET Core MVC 还使用约定来确定视图的位置。 可以使用自定义约定取而代之，使视图位于功能文件夹中（使用上述 FeatureConvention 提供的功能名称）。 可在 MSDN 文章 [ASP.NET Core MVC 的功能切片](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc)中详细了解此方法并下载工作示例。
 
 ### <a name="cross-cutting-concerns"></a>横切关注点
 
@@ -311,18 +311,18 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-你可阅读 MSDN 文章[真实的 ASP.NET Core MVC 过滤器](https://msdn.microsoft.com/magazine/mt767699.aspx)，了解有关实现过滤器的详细信息并下载工作示例。
+你可阅读 MSDN 文章[真实的 ASP.NET Core MVC 过滤器](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters)，了解有关实现过滤器的详细信息并下载工作示例。
 
 > ### <a name="references--structuring-applications"></a>参考 - 构建应用程序
 >
 > - **Areas**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN 杂志 - ASP.NET Core MVC 的功能切分**  
->   <https://msdn.microsoft.com/magazine/mt763233.aspx>
+>   <https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc>
 > - **过滤器**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN - 真实的 ASP.NET Core MVC 过滤器**  
->   <https://msdn.microsoft.com/magazine/mt767699.aspx>
+>   <https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters>
 
 ## <a name="security"></a>安全性
 

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: 017fe2177cf824d461b4c51ea805f75b6ddbe064
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1ce152b84f17a35982a75f54b5418623ba39210f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779988"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975224"
 ---
 # <a name="wcf-data-services-45"></a>WCF 数据服务 4.5
 
-WCF 数据服务（以前称为 "ADO.NET Data Services"）是 .NET Framework 的一个组件，使你能够通过使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] [具象状态的语义来创建使用来通过 Web 或 intranet 公开和使用数据的服务传输（REST）](https://go.microsoft.com/fwlink/?LinkId=113919)。 OData 将数据公开为可通过 URI 进行寻址的资源。 通过使用标准 HTTP 谓词 GET、PUT、POST 和 DELETE 访问和更改数据。 OData 使用[实体数据模型](../adonet/entity-data-model.md)的实体关系约定将资源公开为通过关联相关的实体集。
+WCF 数据服务（以前称为 "ADO.NET Data Services"）是 .NET Framework 的一个组件，它使你能够使用[具象状态传输（REST）](https://go.microsoft.com/fwlink/?LinkId=113919)的语义创建使用 Open Data Protocol （OData）在 Web 或 intranet 上公开和使用数据的服务。 OData 将数据公开为可通过 URI 进行寻址的资源。 通过使用标准 HTTP 谓词 GET、PUT、POST 和 DELETE 访问和更改数据。 OData 使用[实体数据模型](../adonet/entity-data-model.md)的实体关系约定将资源公开为通过关联相关的实体集。
 
-WCF 数据服务使用 OData 协议对资源进行寻址和更新。 通过这种方式，你可以从支持 OData 的任何客户端访问这些服务。 OData 允许使用众所周知的传输格式请求数据并将数据写入资源：Atom，一组用于将数据作为 XML 进行交换和更新的标准，以及 JavaScript 对象表示法（JSON），这是在 AJAX 应用程序中广泛使用的基于文本的数据交换格式。
+WCF 数据服务使用 OData 协议对资源进行寻址和更新。 通过这种方式，你可以从支持 OData 的任何客户端访问这些服务。 OData 使你可以通过使用众所周知的传输格式请求数据并将数据写入资源： Atom，一组用于以 XML 格式交换和更新数据的标准，以及 JavaScript 对象表示法（JSON），这是在 AJAX 中广泛使用的基于文本的数据交换格式。应用程序.
 
 WCF 数据服务可以将源自各种源的数据作为 OData 源公开。 Visual Studio 工具通过使用 ADO.NET 实体框架数据模型，使你可以更轻松地创建基于 OData 的服务。 还可以基于公共语言运行时（CLR）类，甚至是后期绑定或未类型化的数据来创建 OData 源。
 
@@ -46,13 +46,13 @@ WCF 数据服务还包括一组客户端库，一个用于一般 .NET Framework 
 
 我想了解有关 OData 的详细信息 。
 
-- [白皮书OData 简介](https://go.microsoft.com/fwlink/?LinkId=220867)
+- [白皮书：OData 简介](https://go.microsoft.com/fwlink/?LinkId=220867)
 
 - [Open Data Protocol 网站](https://go.microsoft.com/fwlink/?LinkID=184554)
 
-- [ODataSDK](https://go.microsoft.com/fwlink/?LinkID=185248)
+- [OData：SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
 
-- [OData常见问题解答](https://go.microsoft.com/fwlink/?LinkId=185867)
+- [OData：常见问题](https://go.microsoft.com/fwlink/?LinkId=185867)
 
 我想观看一些视频 。
 
@@ -60,7 +60,7 @@ WCF 数据服务还包括一组客户端库，一个用于一般 .NET Framework 
 
 - [WCF Data Services 开发人员视频](https://go.microsoft.com/fwlink/?LinkId=220861)
 
-- [OData开发人员网站](https://go.microsoft.com/fwlink/?LinkId=185866)
+- [OData：开发人员网站](https://go.microsoft.com/fwlink/?LinkId=185866)
 
 我想要查看端到端示例 。
 
@@ -68,7 +68,7 @@ WCF 数据服务还包括一组客户端库，一个用于一般 .NET Framework 
 
 - [MSDN 示例库上的其他 WCF Data Services 示例](https://go.microsoft.com/fwlink/?LinkId=220866)
 
-- [ODataSDK](https://go.microsoft.com/fwlink/?LinkID=185248)
+- [OData：SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
 
 它如何与 Visual Studio 集成？
 
@@ -82,7 +82,7 @@ WCF 数据服务还包括一组客户端库，一个用于一般 .NET Framework 
 
 - [概述](wcf-data-services-overview.md)
 
-- [白皮书OData 简介](https://go.microsoft.com/fwlink/?LinkId=220867)
+- [白皮书：OData 简介](https://go.microsoft.com/fwlink/?LinkId=220867)
 
 - [应用程序方案](application-scenarios-wcf-data-services.md)
 

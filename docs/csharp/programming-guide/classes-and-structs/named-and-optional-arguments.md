@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 83e465651762fce33a62009fb3add40373a33c51
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 30475b637202d3b614ac968897e467956bc78646
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772129"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970511"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>命名实参和可选实参（C# 编程指南）
 C# 4 介绍命名实参和可选实参。 通过*命名实参*，你可以为特定形参指定实参，方法是将实参与该形参的名称关联，而不是与形参在形参列表中的位置关联。 通过*可选参数*，你可以为某些形参省略实参。 这两种技术都可与方法、索引器、构造函数和委托一起使用。  
@@ -113,7 +113,7 @@ C# 4 介绍命名实参和可选实参。 通过*命名实参*，你可以为特
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- 有关详细信息和示例，请参阅[操作说明：在 Office 编程中使用命名参数和可选参数](./how-to-use-named-and-optional-arguments-in-office-programming.md)和[操作说明：使用 Visual C# 功能访问 Office 互操作对象](../interop/how-to-access-office-onterop-objects.md)。  
+ 有关详细信息和示例，请参阅[如何在 Office 编程中使用命名实参和可选实参](./how-to-use-named-and-optional-arguments-in-office-programming.md)和[如何：使用 Visual C# 功能访问 Office 互操作对象](../interop/how-to-access-office-onterop-objects.md)。  
   
 ## <a name="overload-resolution"></a>重载决策  
  使用命名实参和可选实参将在以下方面对重载决策产生影响：  
@@ -129,7 +129,7 @@ C# 4 介绍命名实参和可选实参。 通过*命名实参*，你可以为特
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：在 Office 编程中使用命名参数和可选参数](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [如何：在 Office 编程中使用命名实参和可选实参](./how-to-use-named-and-optional-arguments-in-office-programming.md)
 - [使用类型 dynamic](../types/using-type-dynamic.md)
 - [使用构造函数](./using-constructors.md)
 - [使用索引器](../indexers/using-indexers.md)

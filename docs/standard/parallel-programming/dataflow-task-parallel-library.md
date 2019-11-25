@@ -9,38 +9,27 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
-ms.openlocfilehash: 7f5969bc6f73b2260ae1ffa4b0026d5b4119ff88
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6c589e85a0bbfb3f0b5858698ffb2a294ff88cf2
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134263"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973782"
 ---
 # <a name="dataflow-task-parallel-library"></a>数据流（任务并行库）
-<a name="top"></a> 任务并行库 (TPL) 提供数据流组件，可帮助提高启用并发的应用程序的可靠性。 这些数据流组件统称为 TPL 数据流库  。 这种数据流模型通过向粗粒度的数据流和管道任务提供进程内消息传递来促进基于角色的编程。 数据流组件基于 TPL 的类型和计划基础结构，并集成了 C#、Visual Basic 和 F# 语言的异步编程支持。 当您有必须相互异步沟通的多个操作或者想要在数据可用时对其处理时，这些数据流组件就非常有用。 例如，请考虑一个处理网络摄像机图像数据的应用程序。 通过使用数据流模型，当图像帧可用时，应用程序就可以处理它们。 如果应用程序增强图像帧（例如执行灯光修正或消除红眼），则可以创建数据流组件的管道  。 管道的每个阶段可以使用更粗粒度的并行功能（例如 TPL 提供的功能）来转换图像。  
+任务并行库 (TPL) 提供数据流组件，可帮助提高启用并发的应用程序的可靠性。 这些数据流组件统称为 TPL 数据流库  。 这种数据流模型通过向粗粒度的数据流和管道任务提供进程内消息传递来促进基于角色的编程。 数据流组件基于 TPL 的类型和计划基础结构，并集成了 C#、Visual Basic 和 F# 语言的异步编程支持。 当您有必须相互异步沟通的多个操作或者想要在数据可用时对其处理时，这些数据流组件就非常有用。 例如，请考虑一个处理网络摄像机图像数据的应用程序。 通过使用数据流模型，当图像帧可用时，应用程序就可以处理它们。 如果应用程序增强图像帧（例如执行灯光修正或消除红眼），则可以创建数据流组件的管道  。 管道的每个阶段可以使用更粗粒度的并行功能（例如 TPL 提供的功能）来转换图像。  
   
  本文档对 TPL 数据流库进行了概述。 它介绍编程模型，预定义的数据流块类型，以及如何配置数据流块来满足应用程序的特定要求。  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
-  
- 本文档包含以下各节：  
-  
-- [编程模型](#model)  
-  
-- [预定义的数据流块类型](#predefined_types)  
-  
-- [配置数据流块行为](#behavior)  
-  
-- [自定义数据流块](#custom)  
-  
-<a name="model"></a>   
-## <a name="programming-model"></a>编程模型  
+
+## <a name="programming-model"></a>编程模型
  TPL 数据流库向具有高吞吐量和低滞后时间的占用大量 CPU 和 I/O 操作的应用程序的并行化和消息传递提供了基础。 它还能显式控制缓存数据的方式以及在系统中移动的方式。 为了更好地了解数据流编程模型，请考虑一个以异步方式从磁盘加载图像并创建复合图像的应用程序。 传统编程模型通常需要使用回调和同步对象（例如锁）来协调任务和访问共享数据。 通过使用数据流编程模型，您可以从磁盘读取时创建处理图像的数据流对象。 在数据流模型下，您可以声明当数据可用时的处理方式，以及数据之间的所有依赖项。 由于运行时管理数据之间的依赖项，因此通常可以避免这种要求来同步访问共享数据。 此外，因为运行时计划基于数据的异步到达，所以数据流可以通过有效管理基础线程提高响应能力和吞吐量。 有关在 Windows 窗体应用程序中使用数据流编程模型实现图像处理的示例，请参阅[演练：在 Windows 窗体应用程序中使用数据流](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   
 ### <a name="sources-and-targets"></a>源和目标  
  TPL 数据流库包括*数据流块*，它是缓冲并处理数据的数据结构。 TPL 定义了三种数据流块：源块  、目标块  和传播器块  。 源块作为数据源，可以读取。 目标块作为数据接收方，可以写入。 传播器块作为源块和目标块，可以读取和写入。 TPL 定义 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType> 接口来表示源，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> 表示目标以及 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602?displayProperty=nameWithType> 表示传播器。 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> 继承自 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 和 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>。  
   
- TPL 数据流库提供了多个预定义的数据流块类型，可以实现 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>、<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 和 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> 接口。 这些数据流块类型在本文档的[预定义的数据流块类型](#predefined_types)部分进行了说明。  
+ TPL 数据流库提供了多个预定义的数据流块类型，可以实现 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>、<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 和 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> 接口。 这些数据流块类型在本文档的[预定义的数据流块类型](#predefined-dataflow-block-types)部分进行了说明。  
   
 ### <a name="connecting-blocks"></a>连接块  
  可以连接数据流块来形成管道  （这是数据流块的线性序列），或网络  （这是数据流块的图形）。 管道是网络的一种形式。 在管道或网络中，当数据可用时源向目标异步传播数据。 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> 方法将源数据流块链接到目标块。 源可以链接到零个或多个目标；目标可以从零个或多个源进行链接。 您可以同时向管道或网络中添加或从其移除数据流块。 预定义的数据流块类型处理所有的建立或释放链接的线程安全性。  
@@ -78,10 +67,7 @@ ms.locfileid: "73134263"
  [!code-vb[TPLDataflow_Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#11)]  
   
  您也可以使用类似延续任务主体中的属性（例如 <xref:System.Threading.Tasks.Task.IsCanceled%2A>）来确定有关数据流块的完成状态的其他信息。 若要深入了解延续任务及其与取消和错误处理如何相关，请参阅[使用延续任务链接任务](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)、[任务取消](../../../docs/standard/parallel-programming/task-cancellation.md)和[异常处理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)。  
-  
- [[转到页首](#top)]  
-  
-<a name="predefined_types"></a>   
+
 ## <a name="predefined-dataflow-block-types"></a>预定义的数据流块类型  
  TPL 数据流库提供了多个预定义的数据流块类型。 这些类型分为三个类别：缓冲块  、执行块  和分组块  。 以下部分描述了组成这些类别的块类型。  
   
@@ -201,10 +187,7 @@ ms.locfileid: "73134263"
  [!code-vb[TPLDataflow_Overview#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#9)]  
   
  有关使用 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 捕获程序从数据库中读取数据时发生的结果和任何异常的完整示例，请参阅[演练：使用 BatchBlock 和 BatchedJoinBlock 提高效率](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md)。  
-  
- [[转到页首](#top)]  
-  
-<a name="behavior"></a>   
+
 ## <a name="configuring-dataflow--block-behavior"></a>配置数据流块行为  
  可以通过给数据流块类型的构造函数提供 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions?displayProperty=nameWithType> 对象来启用其他选项。 这些选项控制这类管理基础任务和并行度的调度程序的行为。 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions> 还包含派生类型，用以指定特定于某些数据流块类型的行为。 下表汇总了与每个数据流块类型相关的选项类型。  
   
@@ -254,16 +237,11 @@ ms.locfileid: "73134263"
   
  对于联接块类型（如 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>），贪婪模式意味着块立即接受数据，即使相应的数据联接不可用。 非贪婪模式意味着块推迟所有传入的消息，直到在其每个目标上有一个可完成联接。 如果任何推迟的消息不再可用，则联接块会释放所有推迟的消息并重新启动该过程。 对于 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 类，贪婪和非贪婪行为非常相似，不同之处在于在非贪婪模式下，<xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 对象推迟所有传入的消息，直到不同源中有足够消息可用于完成批作业。  
   
- 若要为数据流块指定非贪婪模式，请将 <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> 设置为 `False`。 有关演示如何使用非贪婪模式使多个联接块更高效地共享数据源的示例，请参阅[如何：使用 JoinBlock 从多个源读取数据](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md)。  
-  
- [[转到页首](#top)]  
-  
-<a name="custom"></a>   
+ 若要为数据流块指定非贪婪模式，请将 <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> 设置为 `False`。 有关演示如何使用非贪婪模式使多个联接块更高效地共享数据源的示例，请参阅[如何：使用 JoinBlock 从多个源读取数据](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md)。
+
 ## <a name="custom-dataflow-blocks"></a>自定义数据流块  
- 尽管 TPL 数据流库提供了许多预定义块类型，但是您还是可以创建执行自定义行为的其他块类型。 直接实现 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 或 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 接口或使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> 方法生成封装现有块类型行为的复杂块。 有关演示如何实现自定义数据流块功能的示例，请参阅[演练：创建自定义数据流块类型](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md)。  
-  
- [[转到页首](#top)]  
-  
+ 尽管 TPL 数据流库提供了许多预定义块类型，但是您还是可以创建执行自定义行为的其他块类型。 直接实现 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 或 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 接口或使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> 方法生成封装现有块类型行为的复杂块。 有关演示如何实现自定义数据流块功能的示例，请参阅[演练：创建自定义数据流块类型](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md)。
+
 ## <a name="related-topics"></a>相关主题  
   
 |Title|说明|  

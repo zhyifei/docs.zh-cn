@@ -2,18 +2,18 @@
 title: Docker 应用程序的外部循环 DevOps 工作流步骤
 description: 了解 DevOps 工作流的“外部循环”步骤
 ms.date: 02/15/2019
-ms.openlocfilehash: 5687caff0c635e7add135654a8f564b2c509cbf8
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 7c465ab380770441005f7365f53bc585236c31bd
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834562"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738356"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 应用程序的外部循环 DevOps 工作流步骤
 
-图 5-1 显示了包含 DevOps 外部循环工作流的步骤的端到端描述。
+图 5-1 显示了包含 DevOps 外部循环工作流的步骤的端到端描述。 它显示了 DevOps 的“外部循环”。 将代码推送到存储库时，将启动 CI 管道，然后启动 CD 管道，在该管道中部署应用程序。 从已部署的应用程序中收集的指标将反馈到在其中发生“内部循环”的开发工作负载中，因此开发团队拥有实际数据来响应用户和业务需求。
 
-![下图显示了 DevOps 的“外部循环”。 将代码推送到存储库时，将启动 CI 管道，然后启动 CD 管道，在该管道中部署应用程序。 从已部署的应用程序中收集的指标将反馈到在其中发生“内部循环”的开发工作负载中，因此开发团队拥有实际数据来响应用户和业务需求。](./media/image1.png)
+![显示 DevOps 外部循环工作流的 6 个步骤的关系图。](./media/docker-application-outer-loop-devops-workflow/overview-dev-ops-outter-loop-workflow.png)
 
 **图 5-1**。 使用 Microsoft 工具的 Docker 应用程序的 DevOps 外部循环工作流
 
@@ -45,9 +45,9 @@ CI 已成为新式软件测试和交付的标准。 Docker 解决方案在开发
 
 当使用 Docker 进行部署时，要部署的“最终项目”是其中嵌入了应用程序或服务的 Docker 映像。 这些映像被推送或发布到 Docker 注册表（一个如 Azure 容器注册表中的专用存储库，或者像 Docker Hub 注册表这样的公共存储库，通常用于官方基础映像）  。
 
-下面是一个基本概念：CI 管道将通过到 Git 等的 SCC 存储库的提交来启动。 提交将导致 Azure DevOps Services 在 Docker 容器中运行生成作业，并在该作业成功完成后，将 Docker 映像推送到 Docker 注册表，如图 5-2 所示。
+下面是一个基本概念：CI 管道将通过到 Git 等的 SCC 存储库的提交来启动。 提交将导致 Azure DevOps Services 在 Docker 容器中运行生成作业，并在该作业成功完成后，将 Docker 映像推送到 Docker 注册表，如图 5-2 所示。 外部循环的第一部分涉及步骤 1 至 3，从代码、运行、调试和验证，到代码存储库，再一直到生成和测试 CI 步骤。
 
-![外部循环的第一部分涉及步骤 1 至 3，从代码、运行、调试和验证，到代码存储库，再一直到生成和测试 CI 步骤](./media/image2.png)
+![显示 CI 工作流中所涉及的三个步骤的关系图。](./media/docker-application-outer-loop-devops-workflow/continuous-integration-steps.png)
 
 **图 5-2**。 CI 中涉及的步骤
 
@@ -69,7 +69,7 @@ CI 已成为新式软件测试和交付的标准。 Docker 解决方案在开发
 
 Visual Studio Azure DevOps Services 包含可在 CI/CD 管道中使用的生成和发布模板，可以使用这些模板生成 Docker 映像、将 Docker 映像推送到经过身份验证的 Docker 注册表、运行 Docker 映像或运行 Docker CLI 提供的其他操作。 它还添加了 Docker Compose 任务，可使用该任务来生成、推送和运行多容器 Docker 应用程序，或者运行 Docker Compose CLI 提供的其他操作，如图 5-3 所示。
 
-![Azure DevOps 中 Docker CI 管道的浏览器视图](./media/image3.png)
+![Azure DevOps 中 Docker CI 管道的屏幕截图。](./media/docker-application-outer-loop-devops-workflow/docker-ci-pipeline-azure-devops.png)
 
 **图 5-3**。 Azure DevOps Services 中的 Docker CI 管道，包括生成和发布模板以及相关任务。
 
@@ -124,15 +124,15 @@ Visual Studio Azure DevOps Services 包含可在 CI/CD 管道中使用的生成�
 
 通常，你可能想要在 Azure 容器注册表中的专用存储库中或 Docker 受信注册表等本地注册表中，或在具有有限访问权限的公共云注册表（如 Docker Hub）中，保留自定义映像的专用存储库，虽然在最后一种情况下，如果代码不是开放源代码，则必须信任供应商的安全性。 不管怎样，所使用的方法都类似，并且基于 `docker push` 命令，如图 5-4 所示。
 
-![在步骤 3 中，对于生成集成和测试 (CI)，可以将生成的 Docker 映像发布到专用或公共注册表。](./media/image4.png)
+![显示将自定义映像推送到容器注册表的关系图。](./media/docker-application-outer-loop-devops-workflow/docker-push-custom-images.png)
 
 **图 5-4**。 将自定义映像发布到 Docker 注册表
 
-云供应商提供了多种 Docker 注册表产品/服务，如 Azure 容器注册表、Amazon Web Services 容器注册表、Google 容器注册表、Quay 注册表等。
+在步骤 3 中，对于生成集成和测试 (CI)，可以将生成的 Docker 映像发布到专用或公共注册表。 云供应商提供了多种 Docker 注册表产品/服务，如 Azure 容器注册表、Amazon Web Services 容器注册表、Google 容器注册表、Quay 注册表等。
 
 使用 Docker 任务，可以将具有多个标记的 `docker-compose.yml` 文件定义的一组服务映像推送到经过身份验证的 Docker 注册表（如 Azure 容器注册表），如图 5-5 所示。
 
-![从 Azure DevOps 将映像发布到注册表的步骤的浏览器视图。](./media/image5.png)
+![显示将映像发布到注册表的步骤的屏幕截图。](./media/docker-application-outer-loop-devops-workflow/publish-custom-image-to-docker-registry.png)
 
 **图 5-5**。 使用 Azure DevOps Services 将自定义映像发布到 Docker 注册表
 
@@ -148,13 +148,13 @@ Docker 映像的不变性确保了使用通过 CI 开发、测试的内容和在
 
 让我们首先来看一下不太复杂的情况：部署到单个环境或多个环境（QA、暂存和生产）中的简单 Docker 主机（VM 或服务器）。 在此情况下，在内部，CD 管道可以使用 docker-compose（来自 Azure DevOps Services 部署任务）来部署 Docker 应用程序及其相关容器或服务集，如图 5-6 所示。
 
-![CD 部署步骤 (#4) 可以发布到不同的环境，如 q&a、暂存和生产。](./media/image6.png)
+![显示部署到三个环境的 CD 部署步骤的示意图。](./media/docker-application-outer-loop-devops-workflow/deploy-app-containers-to-docker-host-environments.png)
 
 **图 5-6**。 将应用程序容器部署到简单的 Docker 主机环境注册表
 
 图 5-7 突出显示了如何通过单击“添加任务”对话框中的“Docker Compose”，通过 Azure DevOps Services 将生成 CI 连接到 QA/测试环境。 但是，在部署到暂存或生产环境时，通常会使用 Release Management 功能处理多个环境（如 QA、暂存和生产）。 如果要部署到单个 Docker 主机，它将使用 Azure DevOps Services“Docker Compose”任务（在内部调用 `docker-compose up` 命令）。 如果要部署到 Azure Kubernetes 服务 (AKS)，它将使用 Docker 部署任务，如以下部分所述。
 
-![添加 Docker Compose 任务的浏览器视图。](./media/image7.png)
+![显示 Docker Compose 任务的“添加任务”对话框的屏幕截图。](./media/docker-application-outer-loop-devops-workflow/add-tasks-docker-compose.png)
 
 **图 5-7**。 在 Azure DevOps Services 管道中添加 Docker Compose 任务
 
@@ -166,7 +166,7 @@ Azure DevOps Services 模板使你能够生成包含特定注册表映像摘要�
 
 通过 Azure DevOps Services 模板，可以生成新映像，将该映像发布到 Docker 注册表，在 Linux 或 Windows 主机上运行该映像，以及使用 `docker-compose` 等命令将多个容器部署为整个应用程序，所有这些都通过适用于多个环境的 Azure DevOps Services Release Management 功能实现，如图 5-8 所示。
 
-![Azure DevOps 的浏览器视图，配置了 Docker compose 发布。](./media/image8.png)
+![显示 Docker 撰写版配置的屏幕截图。](./media/docker-application-outer-loop-devops-workflow/configure-docker-compose-release.png)
 
 **图 5-8**。 从 Azure DevOps Services Release Management 配置 Azure DevOps Services Docker Compose 任务
 
@@ -180,19 +180,19 @@ Azure DevOps Services 模板使你能够生成包含特定注册表映像摘要�
 
 从 CD（尤其是 Azure DevOps Services）的角度来看，可从 Azure DevOps Services Release Management 环境运行特制的部署任务，这些环境将容器化应用程序部署到容器服务中的分布式群集，如图 5-9 所示。
 
-![CD 部署步骤 (#4) 也可以通过业务流程协调程序发布到群集。](./media/image9.png)
+![显示部署到业务流程协调程序的 CD 部署步骤的示意图。](./media/docker-application-outer-loop-devops-workflow/cd-deploy-to-orchestrators.png)
 
 **图 5-9**。 将分布式应用程序部署到容器服务
 
 最初，当部署到特定群集或业务流程协调程序时，通常会为每个业务流程协调程序使用特定的部署脚本和机制（即 Kubernetes 和 Service Fabric 具有不同部署机制），而不是使用基于 `docker-compose.yml` 定义文件的简单易用的 `docker-compose` 工具。 但是，由于图 5-10 所示的 Azure DevOps Services Docker 部署任务，现在还可以通过使用熟悉的 `docker-compose.yml` 文件部署到受支持的业务流程协调程序，因为该工具会为你执行该“转换”（从 `docker-compose.yml` 文件转换为业务流程协调程序所需的格式）。
 
-![Azure DevOps 中任务目录的浏览器视图，显示了“部署到 Kubernetes”任务。](./media/add-deploy-to-kubernetes-task.png)
+![显示“部署到 Kubernetes”任务的屏幕截图。](./media/docker-application-outer-loop-devops-workflow/add-deploy-to-kubernetes-task.png)
 
 **图 5-10**。 将“部署到 Kubernetes”任务添加到环境
 
 图 5-11 演示了如何使用可用于配置的部分编辑“部署到 Kubernetes”任务。 此任务将检索要在群集中作为容器部署的即用型自定义 Docker 映像。
 
-![Azure DevOps 部署到 Kubernetes 任务定义的浏览器视图。](./media/edit-deploy-to-kubernetes-task.png)
+![显示“部署到 Kubernetes”任务配置的屏幕截图。](./media/docker-application-outer-loop-devops-workflow/edit-deploy-to-kubernetes-task.png)
 
 **图 5-11**。 部署到 ACS DC/OS 的 Docker 部署任务定义
 

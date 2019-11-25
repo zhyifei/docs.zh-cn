@@ -2,33 +2,33 @@
 title: WCF Web HTTP 服务帮助页
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: 60fd909d6e7d3ba0e0c0254024ef7eb40263b59e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8d798c8080bf1afee87305cd00a27db2ece7e970
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050399"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975919"
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF Web HTTP 服务帮助页
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]提供了 WCF WEB HTTP 服务的自动帮助页。 此帮助页列出了每个操作的说明、请求和响应格式以及架构。 默认情况下关闭此功能。 当用户浏览到 WCF WEB HTTP 服务和附加"/help"的 URL，例如末尾`http://localhost:8000/Customers/Help`，如显示以下信息帮助页。  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]提供了 WCF WEB HTTP 服务的自动帮助页。 此帮助页列出了每个操作的说明、请求和响应格式以及架构。 默认情况下关闭此功能。 当用户浏览到 WCF WEB HTTP 服务并在 URL 的末尾追加 "/Help" 时（例如 `http://localhost:8000/Customers/Help`），将显示如下所示的帮助页。  
   
- ![使用 WCF REST 帮助页的浏览器打开。](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
+ ![具有 WCF REST 帮助页打开的浏览器。](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
   
  用户随后可以单击帮助页中列出的任何方法，并且所显示的该操作的详细页中显示了有关该方法的更多信息，其中包括消息格式和示例响应。 下图是方法帮助页的一个示例。  
   
- ![GetCustomers 方法的 WCF REST 帮助页详细信息的浏览器打开。](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
+ ![具有 WCF REST 帮助页详细信息的浏览器 GetCustomers 方法打开。](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>使用 WCF Web HTTP 帮助页  
  WCF WEB HTTP 帮助页显示了每个操作的简单说明（假设你使用 <xref:System.ComponentModel.DescriptionAttribute> 指定了操作）。 此特性接受一个字符串，该字符串中包含它所应用到的操作的简短说明。 例如，下面的代码演示如何使用 <xref:System.ComponentModel.DescriptionAttribute> 来提供简短说明。  
   
-```  
+```csharp
 [OperationContract]  
 [WebGet(UriTemplate="/template1", BodyStyle = WebMessageBodyStyle.Bare)]  
 [Description("Description for GET /template1")]  
 SyndicationFeedFormatter GetTemplate1();  
 ```  
   
- 若要打开 WCF WEB HTTP 帮助页，你必须向服务的终结点添加一个终结点行为。 可以通过配置或代码完成此操作。 若要通过配置启用 WCF WEB HTTP 帮助页，请使用 `<webHttp>`、`enableHelp` 元素添加终结点行为，将 `true` 设置为 ，添加一个终结点并将其配置为使用终结点行为。 下面的配置代码演示如何执行此操作。  
+ 若要打开 WCF WEB HTTP 帮助页，你必须向服务的终结点添加一个终结点行为。 可以通过配置或代码完成此操作。 若要通过配置启用 WCF WEB HTTP 帮助页，请使用 `<webHttp>``enableHelp` 元素添加终结点行为，将 `true` 设置为 ，添加一个终结点并将其配置为使用终结点行为。 下面的配置代码演示如何执行此操作。  
   
 ```xml  
 <endpointBehaviors>  
@@ -47,7 +47,7 @@ SyndicationFeedFormatter GetTemplate1();
   
  若要通过代码启用 WCF Web HTTP 帮助页，请添加一个服务终结点，将 <xref:System.ServiceModel.Description.WebHttpBehavior> 添加到该终结点，并将 <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A> 设置为 `true`。 下面的代码演示如何执行此操作。  
   
-```  
+```csharp
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  
 {  
    host.AddServiceEndpoint(typeof(ICustomerCollection), new WebHttpBinding(), "");
@@ -240,4 +240,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- 有关数据协定序列化架构的详细信息，请参阅[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。
+ 有关数据协定序列化架构的详细信息，请参阅[数据协定架构引用](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。

@@ -1,15 +1,15 @@
 ---
-title: 如何：使用表达式树生成动态查询 (C#)
+title: 如何使用表达式树来生成动态查询 (C#)
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 7f18539dba17f9fcb8769ca56d977908c58e6579
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 36a81b145b6a9a25c22243f63cfb71a6a39c5891
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418682"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969877"
 ---
-# <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>如何：使用表达式树生成动态查询 (C#)
+# <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>如何使用表达式树来生成动态查询 (C#)
 在 LINQ 中，表达式树用于表示针对数据源的结构化查询，这些数据源可实现 <xref:System.Linq.IQueryable%601>。 例如，LINQ 提供程序可实现 <xref:System.Linq.IQueryable%601> 接口，用于查询关系数据存储。 C# 编译器将针对此类数据源的查询编译为代码，该代码在运行时会生成一个表达式树。 然后，查询提供程序可以遍历表达式树数据结构，并将其转换为适合于数据源的查询语言。  
   
  表达式树还可以用在 LINQ 中，用于表示分配给类型为 <xref:System.Linq.Expressions.Expression%601> 的变量的 lambda 表达式。  
@@ -108,5 +108,5 @@ foreach (string company in results)
 ## <a name="see-also"></a>请参阅
 
 - [表达式树 (C#)](./index.md)
-- [如何：执行表达式树 (C#)](./how-to-execute-expression-trees.md)
+- [如何执行表达式树 (C#)](./how-to-execute-expression-trees.md)
 - [如何：在运行时动态指定谓词筛选器](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)

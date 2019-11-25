@@ -2,12 +2,12 @@
 title: 设计基础结构持久性层
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 在基础结构持久性层的设计中探索存储库模式。
 ms.date: 10/08/2018
-ms.openlocfilehash: 76f545403a1b595ce7a541a96d212b9406d89c10
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f1c5df1cc5672760374610a416ae22b45cd76c25
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674114"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737943"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>设计基础结构持久性层
 
@@ -33,9 +33,11 @@ ms.locfileid: "68674114"
 
 需要再次强调的是，应该仅为每个聚合根定义一个存储库，如图 7-17 所示。 若要实现聚合根的目标，即维持聚合中所有对象之间的事务一致性，就决不能为数据库中的每个表创建一个存储库。
 
-![域层和基础结构层之间的关系：购买者聚合依赖于 IBuyerRepository 接口，而订单聚合依赖于 IOrderRepository 接口，这些接口由依赖于 UnitOfWork（可访问数据层中的表，也在此处实现）的对应存储库在基础结构层中实现。](./media/image18.png)
+![显示域和其他基础结构的关系的关系图。](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
 
 **图 7-17**。 存储库、聚合和数据库表之间的关系
+
+上图显示了域层和基础结构层之间的关系：购买者聚合依赖于 IBuyerRepository 接口，而订单聚合依赖于 IOrderRepository 接口，这些接口由依赖于 UnitOfWork（可访问数据层中的表，也在此处实现）的对应存储库在基础结构层中实现。
 
 ### <a name="enforce-one-aggregate-root-per-repository"></a>强制每个存储库使用一个聚合根
 
@@ -117,7 +119,7 @@ public interface IRepository<T> where T : IAggregateRoot
 - **The Repository pattern** \（存储库模式）\
   <https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)>
 
-- **Eric Evans。Domain-Driven Design:Tackling Complexity in the Heart of Software.** （域驱动设计：软件核心复杂性应对之道）\ （书；包含对存储库模式的讨论）\
+- **Eric Evans。域驱动设计：Tackling Complexity in the Heart of Software.** （域驱动设计：软件核心复杂性应对之道）\ （书；包含对存储库模式的讨论）\
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="unit-of-work-pattern"></a>工作单元模式

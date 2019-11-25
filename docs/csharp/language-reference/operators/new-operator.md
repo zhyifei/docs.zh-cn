@@ -5,12 +5,12 @@ ms.date: 06/25/2019
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: 3d64c4805abe38c80301748ffa6b35fc87563b60
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: c21132a6622ce697fe3c52a461a33f548e0c8f31
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403965"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036391"
 ---
 # <a name="new-operator-c-reference"></a>new 运算符（C# 参考）
 
@@ -50,7 +50,7 @@ ms.locfileid: "67403965"
 
 无需销毁此前创建的类型实例。 引用和值类型的实例将自动销毁。 包含值类型的上下文销毁后，值类型的实例随之销毁。 在引用类型的最后一次引用被删除后，[垃圾回收器](../../../standard/garbage-collection/index.md)会在非指定的时间销毁其实例。
 
-对于包含非托管资源的类型（例如，文件句柄），建议使用确定性清理以确保尽快释放其包含的资源。 有关详细信息，请参阅 <xref:System.IDisposable?displayProperty=nameWithType> API 参考和 [using 语句](../keywords/using-statement.md)一文。
+对于包含非托管资源的类型实例（例如，文件句柄），建议采用确定性的清理来确保尽快释放其包含的资源。 有关详细信息，请参阅 <xref:System.IDisposable?displayProperty=nameWithType> API 参考和 [using 语句](../keywords/using-statement.md)一文。
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 

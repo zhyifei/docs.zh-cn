@@ -5,32 +5,18 @@ helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
-ms.openlocfilehash: d3966ff15e06baf293ea02dad031bd5849b4a20f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c1c3298d87ad0f481fa30182e40cd5edcd535d6a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126044"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975623"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 迁移问题
 
-本主题描述 .NET Framework 3.5 Service Pack 1 和 .NET Framework 4 之间的迁移问题，包括针对标准符合性和安全性的修复和更改以及基于客户反馈的更改。 这些更改中的大多数更改不需要在应用程序中进行任何编程修改。 有关可能涉及这些修改的更改，请参阅表的“建议的更改”一列。
+本主题描述 .NET Framework 3.5 Service Pack 1 和 .NET Framework 4 之间的迁移问题，包括针对标准符合性和安全性的修复和更改以及基于客户反馈的更改。 这些更改中的大多数更改不需要在应用程序中进行任何编程修改。 有关可能涉及这些修改的更改，请参阅表的“建议的更改”一列。 按区域划分的显著更改，例如，ASP.NET 和 Windows Presentation Foundation (WPF)。
 
-本主题描述以下几个方面的重大更改：
-
-- [ASP.NET 和 Web](#aspnet-and-web)
-
-- [核心](#core)
-
-- [Data](#data)
-
-- [Windows Communication Foundation (WCF)](#windows-communication-foundation-wcf)
-
-- [Windows Presentation Foundation (WPF)](#windows-presentation-foundation-wpf)
-
-- [XML](#xml)
-
-有关本主题中问题的更高级概述，请参阅 [Migration Guide to the .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)（.NET Framework 4 的迁移指南）。
+有关本主题中问题的更高级概述，请参阅 [.NET Framework 4 的迁移指南](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)。
 
 有关新增功能的信息，请参阅 [.NET Framework 4 中的新增功能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29)。
 
@@ -56,7 +42,7 @@ ms.locfileid: "73126044"
 | **Web.config 文件中的移动程序集** | 在早期版本的 ASP.NET 中，对 System.Web.Mobile.dll 程序集的引用位于根 Web.config 文件 `assemblies` 节中的 `system.web`/`compilation` 下。 为了提高性能，已删除对此程序集的引用。<br><br>注意：System.Web.Mobile.dll 程序集和 ASP.NET 移动控件包含在 ASP.NET 4 中，但它们已被弃用。 | 若要使用此程序集中的类型，请在根 Web.config 文件或应用程序 Web.config 文件中添加对此程序集的引用。 |
 | **输出缓存** | 在 ASP.NET 1.0 中，Bug 会导致缓存页（这些页指定 `Location="ServerAndClient"` 作为输出缓存设置）在响应中发出 `Vary:*` HTTP 标头。 这还能起到告知客户端浏览器绝不要本地对页进行缓存的作用。 ASP.NET 1.1 中已添加 <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> 方法，可调用此方法来禁止显示 `Vary:*` 标头。 但 Bug 报告表明开发人员不了解现有 `SetOmitVaryStar` 行为。<br><br>在 ASP.NET 4 中，不再从指定以下指令的响应中发出 `Vary:*` HTTP 标头：<br><br>`<%@ OutputCache Location="ServerAndClient" %>`<br><br>因此，不再需要使用 <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> 方法即可禁止显示 `Vary:*` 标头。 在为 `Location` 特性指定“ServerAndClient”的应用程序中，可在浏览器中对页进行缓存而无需调用 <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A>。 | 如果应用程序中的页必须发出 `Vary:*`，请调用 <xref:System.Web.HttpResponse.AppendHeader%2A> 方法，如以下示例所示：<br><br>`System.Web.HttpResponse.AppendHeader("Vary","*");`<br><br>或者，可将输出缓存 `Location` 特性的值更改为“Server”。 |
 | **页分析** | ASP.NET 4 中针对 ASP.NET 网页（.aspx 文件）和用户控件（.aspx 文件）的页分析器不仅比早期版本的 ASP.NET 中的页分析器更为严格，而且会将更多的标记设为无效。 | 检查在页运行时产生的错误消息并纠正因无效标记导致的错误。 |
-| **Passport 类型** | 由于 Passport（现在为 Live ID SDK）中的更改，ASP.NET 2.0 中内置的 Passport 支持已过时且不受支持。 因此，现在用 `ObsoleteAttribute` 特性标记 <xref:System.Web.Security> 中与 Passport 相关的类型。 | 更改使用 <xref:System.Web.Security> 命名空间中的 Passport 类型（例如，<xref:System.Web.Security.PassportIdentity>）的所有代码，以使用 [SDK](https://go.microsoft.com/fwlink/?LinkId=106346)。 |
+| **Passport 类型** | 由于 Passport（现在为 Live ID SDK）中的更改，ASP.NET 2.0 中内置的 Passport 支持已过时且不受支持。 因此，现在用 `ObsoleteAttribute` 特性标记 <xref:System.Web.Security> 中与 Passport 相关的类型。 | 更改使用 <xref:System.Web.Security> 命名空间中的 Passport 类型（例如，<xref:System.Web.Security.PassportIdentity>）的所有代码，以使用 Windows Live ID SDK。 |
 | **FilePath 属性中的 PathInfo 信息** | ASP.NET 4 不再将 `PathInfo` 值加入从属性（如 <xref:System.Web.HttpRequest.FilePath>、<xref:System.Web.HttpRequest.AppRelativeCurrentExecutionFilePath> 和 <xref:System.Web.HttpRequest.CurrentExecutionFilePath>）返回的值中。 而是在 <xref:System.Web.HttpRequest.PathInfo> 中提供 `PathInfo` 信息。 例如，假定以下 URL 片段：<br><br>`/testapp/Action.mvc/SomeAction`<br><br>在 ASP.NET 的早期版本中，<xref:System.Web.HttpRequest> 属性具有以下值：<br><br>* <xref:System.Web.HttpRequest.FilePath>：`/testapp/Action.mvc/SomeAction`<br>* <xref:System.Web.HttpRequest.PathInfo>：（空）<br><br>而在 ASP.NET 4 中，<xref:System.Web.HttpRequest> 属性具有以下值：<br><br>* <xref:System.Web.HttpRequest.FilePath>：`/testapp/Action.mvc`<br>* <xref:System.Web.HttpRequest.PathInfo>：`SomeAction` | 检查所依赖 <xref:System.Web.HttpRequest> 类的属性所在位置的代码以返回路径信息；更改代码以反映对返回路径信息的方式的更改。 |
 | **请求验证** | 为了改进请求验证，将在请求生命周期中提早调用 ASP.NET 请求验证。 因此，将为不是针对 .aspx 文件的请求（如针对 Web 服务调用和自定义处理程序的请求）运行请求验证。 此外，在请求处理管道中运行自定义 HTTP 模块时，请求验证也处于活动状态。<br><br>进行此更改后，针对 .aspx 文件之外的资源的请求可能会引发请求验证错误。 在请求管道（例如，自定义 HTTP 模块）中运行的自定义代码也可能会引发请求验证错误。 | 如有必要，可通过使用 Web 配置文件中的以下设置，还原为仅让 .aspx 页触发请求验证这一旧行为：<br><br>`<httpRuntime requestValidationMode="2.0" />`<br><br>警告：如果还原为旧行为，请确保现有处理程序中的所有代码、模块和其他自定义代码对潜在不安全的 HTTP 输入（可能是 XSS 攻击途径）进行检查。 |
 | **路由** | 如果在 Visual Studio 2010 中创建一个文件系统网站，并且该网站位于其名称包含点 (.) 的文件夹中，则 URL 路由不会可靠地工作。 从某些虚拟路径返回 HTTP 404 错误。 发生此情况的原因是，Visual Studio 2010 使用错误的根虚拟目录路径启动了 Visual Studio 开发服务器。 | * 在基于文件的网站的“属性”  页中，将“虚拟路径”  特性更改为“/”。<br><br>-或-<br><br>* 创建 Web 应用程序项目而非网站项目。 Web 应用程序项目不会出现此问题，并且 URL 路由会正常工作，即使项目文件夹的名称中包含点也是如此。<br><br>-或-<br><br>* 创建在 IIS 中托管的基于 HTTP 的网站。 IIS 托管的网站可在虚拟路径和项目文件文件夹中包含点。 |
@@ -104,7 +90,7 @@ ms.locfileid: "73126044"
 
 | 功能 | 与 3.5 SP1 的差异 | 建议的更改 |
 | ------- | ------------------------ | ------------------- |
-| **损坏进程状态的异常** | CLR 不再将损坏进程状态的异常传递给托管代码中的异常处理程序。 | 这些异常指示进程状态已损坏。 建议不要在此状态下运行应用程序。<br><br>有关详细信息，请参阅 <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> 和“CLR 完全介绍”博客中的条目[处理损坏状态异常](https://go.microsoft.com/fwlink/?LinkID=179681)。 |
+| **损坏进程状态的异常** | CLR 不再将损坏进程状态的异常传递给托管代码中的异常处理程序。 | 这些异常指示进程状态已损坏。 建议不要在此状态下运行应用程序。<br><br>有关详细信息，请参阅 <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> 和 MSDN 杂志中的条目[处理损坏状态异常](https://docs.microsoft.com/archive/msdn-magazine/2009/february/clr-inside-out-handling-corrupted-state-exceptions)。 |
 | **执行引擎异常** | <xref:System.ExecutionEngineException> 现已过时，因为可捕获的异常将允许不稳定的进程继续运行。 此更改提高了运行时中的可预见性和可靠性。 | 使用 <xref:System.InvalidOperationException> 来表示此情况。 |
 
 ### <a name="reflection"></a>映像
@@ -291,7 +277,7 @@ ms.locfileid: "73126044"
 | **命名空间特性** | 为了防止数据损坏，<xref:System.Xml.XPath.XPathNavigator> 对象现正确返回 `x:xmlns` 特性的本地名称。 |
 | **命名空间声明** | 子树中的 <xref:System.Xml.XmlReader> 对象不再在单个 XML 元素中创建重复的命名空间声明。 |
 | **架构验证** | 为了阻止错误的架构验证，<xref:System.Xml.Schema.XmlSchemaSet> 类确保 XSD 架构编译的正确性和一致性。 这些架构可包含其他架构；例如，`A.xsd` 可包含 `B.xsd`，而后者又可包含 `C.xsd`。 编译上述任意架构会导致遍历依赖项图。 |
-| **脚本函数** | 当 [function-available 函数](https://msdn.microsoft.com/library/ms256124(v=vs.110).aspx) 实际可用时，它不再错误返回 `false`。 |
+| **脚本函数** | 当 [function-available 函数](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256124(v=vs.100)) 实际可用时，它不再错误返回 `false`。 |
 | **URI** | <xref:System.Xml.Linq.XElement.Load%2A> 方法现会在 LINQ 查询中返回正确的 BaseURI。 |
 
 ### <a name="validation"></a>验证

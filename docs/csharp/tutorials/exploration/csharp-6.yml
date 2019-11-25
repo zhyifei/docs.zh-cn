@@ -8,19 +8,19 @@ metadata:
   ms.date: 12/11/2018
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: e1414c17cefd0fb31bb782a311e11dbd4cc056bb
-  ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+  ms.openlocfilehash: bd11bda04ccf7d8253907bee8f17fc2b86ed76cd
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 09/06/2019
-  ms.locfileid: "70394091"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969494"
 items:
 - durationInMinutes: 1
   content: >
     通过本教程，使用浏览器编写 C#，并查看代码编译和运行结果，以交互方式探索 C# 6。 本教程包含一系列课程，这些课程修改了早期的 C# 做法，以使用更新、更简洁的 C# 6 功能。 本文的其余部分是对每个功能的概述，并提供用于探索每个功能的链接。
 - title: 只读自动属性支持只读类型
   durationInMinutes: 2
-  content: "通过自动属性语法的两个改进，可以更轻松地在更多位置使用自动属性：只读自动属性和自动属性初始值设定项。 请参考此小程序：\n\n[!code-csharp[Starter](../../../../samples/csharp/tutorials/exploration/csharp6-starter/Program.cs)]  \n\n    \n 进入焦点模式，将前面的代码复制到 C# 交互窗口。 然后，单击“运行”查看代码效果。 `AllCaps` 具有不良副作用，即它会修改属性值并返回大写字符串。 `Person` 类的创建者希望 `FirstName` 和 `LastName` 的字符串为只读字符串。 使用 C#6，可以清楚地表达该意图。 从这两个属性中删除 `private set` 以创建只读自动属性。 单击“运行”，可以看到编译器发现 `FirstName` 和 `LastName` 属性在两个位置发生了更改，而这两个属性在这两个位置本不应更改。 可以将 `AllCaps` 方法更改为以下代码，以修复编译器错误：\n\n```csharp\npublic string AllCaps()\n{\n  return ToString().ToUpper();\n}\n```\n\n使用这种新语法，编译器可以确保属性是不可变的。\n"
+  content: "通过自动属性语法的两个改进，可以更轻松地在更多位置使用自动属性：只读自动属性和自动属性初始值设定项。 请参考此小程序：\n\n[!code-csharp[Starter](../../../../samples/csharp/tutorials/exploration/csharp6-starter/Program.cs)]  \n\n    \n 进入焦点模式，将前面的代码复制到 C# 交互窗口。 然后，选择“运行”查看代码效果。 `AllCaps` 具有不良副作用，即它会修改属性值并返回大写字符串。 `Person` 类的创建者希望 `FirstName` 和 `LastName` 的字符串为只读字符串。 使用 C#6，可以清楚地表达该意图。 从这两个属性中删除 `private set` 以创建只读自动属性。 选择“运行”，可以看到编译器发现 `FirstName` 和 `LastName` 属性在两个位置发生了更改，而这两个属性在这两个位置本不应更改。 可以将 `AllCaps` 方法更改为以下代码，以修复编译器错误：\n\n```csharp\npublic string AllCaps()\n{\n  return ToString().ToUpper();\n}\n```\n\n使用这种新语法，编译器可以确保属性是不可变的。\n"
 - title: 初始化自动属性的支持字段
   durationInMinutes: 1
   content: "C# 6 中的新语法支持使用自动属性的初始值设定项。 随着类增加新的功能，这一点变得越来越重要。 添加一个中间名称属性和一个新的构造函数，该构造函数会将三个字符串添加到 `Person` 类中：\n\n[!code-csharp[MiddleName](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#MiddleName)]  \n\n`MiddleName` 属性上的赋值为初始值设定项。 它初始化用于中间名称的由编译器生成的支持字段。\n"

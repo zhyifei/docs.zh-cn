@@ -4,12 +4,12 @@ description: 安装和使用 dotnet-dump 命令行工具。
 author: sdmaclea
 ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: 7eba0cba28f0575be4b374b26e9aca26a70df603
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: bb4f7827f898431c55603b070f5b7a23fe44cba5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321542"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973459"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>转储收集和分析实用工具 (`dotnet-dump`)
 

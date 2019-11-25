@@ -2,12 +2,12 @@
 title: 实现断路器模式
 description: 了解如何实现断路器模式作为 Http 重试的互补系统。
 ms.date: 10/16/2018
-ms.openlocfilehash: a1a24094ae98d8c767ccf692fe8ded6e28d47854
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 00ca39b4b6fac37ff60adf128c3f4e22c5fc14e2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094118"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732857"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>实现断路器模式
 
@@ -94,7 +94,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 然后可以使用 URI `http://localhost:5103/failing` 检查状态，如图 8-5 中所示。
 
-![检查失败中间件模拟状态的结果的浏览器视图](./media/image4.png)
+![查看中间件模拟失败状态的屏幕截图。](./media/implement-circuit-breaker-pattern/failing-middleware-simulation.png)
 
 **图 8-5**。 正在检查“失败”的 ASP.NET 中间件的状态 – 在此例中为禁用状态。
 
@@ -134,7 +134,7 @@ public class CartController : Controller
 
 下面是摘要。 重试策略尝试数次发出 HTTP 请求，并获取 HTTP 错误。 当重试次数达到断路器策略设置的最大次数时（此例中为 5），应用程序会引发 BrokenCircuitException。 结果是一条友好消息，如图 8-6 中所示。
 
-![MVC Web 应用的浏览器视图，显示由断路器策略触发的“basket 服务不起作用”消息](./media/image5.png)
+![出现市场篮服务无效错误的 MVC Web 应用的屏幕截图。](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
 
 **图 8-6**。 断路器向 UI 返回一个错误
 

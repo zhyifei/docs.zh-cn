@@ -2,33 +2,36 @@
 title: WCF Web HTTP 错误处理
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-ms.openlocfilehash: 491c39d97c48e2f92ff258ac42b9576d407b898e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34912bccaefb645541f47d083c5c307b20ff77c5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648424"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975960"
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF Web HTTP 错误处理
-Windows Communication Foundation (WCF) Web HTTP 错误处理，可从指定 HTTP 状态代码，并返回错误详细信息使用相同的格式与操作 （例如，XML 或 JSON） 的 WCF Web HTTP 服务返回的错误。  
+Windows Communication Foundation （WCF） Web HTTP 错误处理使你能够从 WCF Web HTTP 服务返回错误，该服务指定 HTTP 状态代码，并使用与操作相同的格式（例如，XML 或 JSON）返回错误详细信息。  
   
 ## <a name="wcf-web-http-error-handling"></a>WCF Web HTTP 错误处理  
  <xref:System.ServiceModel.Web.WebFaultException> 类定义可用于指定 HTTP 状态代码的构造函数。 随后会将此状态代码返回到客户端。 <xref:System.ServiceModel.Web.WebFaultException> 类的泛型版本 <xref:System.ServiceModel.Web.WebFaultException%601> 可用于返回用户定义的类型，该类型中包含有关所出现错误的信息。 将使用由操作指定的格式序列化此自定义对象，并将它返回到客户端。 下面的示例演示如何返回 HTTP 状态代码。  
   
-```  
-Public string Operation1()  
-{   // Operation logic  
-   // ...  
-   Throw new WebFaultException(HttpStatusCode.Forbidden);  
+```csharp
+public string Operation1()
+{
+    // Operation logic  
+   // ...
+   throw new WebFaultException(HttpStatusCode.Forbidden);
 }  
 ```  
   
  下面的示例演示如何在用户定义的类型中返回 HTTP 状态代码和额外信息。 `MyErrorDetail` 是用户定义的类型，其中包含有关所出现错误的额外信息。  
   
-```  
-Public string Operation2()  
+```csharp
+public string Operation2()
+{
    // Operation logic  
-   // ...   MyErrorDetail detail = new MyErrorDetail  
+   // ...
+   MyErrorDetail detail = new MyErrorDetail()
    {  
       Message = "Error Message",  
       ErrorCode = 123,  
@@ -45,7 +48,7 @@ Public string Operation2()
   
 - 通过访问 <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> 得到的 <xref:System.ServiceModel.Web.OutgoingWebResponseContext> 属性值。  
   
- 有关这些值如何影响操作的格式设置的详细信息，请参阅[WCF Web HTTP 格式设置](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)。  
+ 有关这些值如何影响操作格式的详细信息，请参阅[WCF WEB HTTP 格式设置](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)。  
   
  <xref:System.ServiceModel.Web.WebFaultException> 是一个 <xref:System.ServiceModel.FaultException>，因此可用作公开 SOAP 终结点和 Web HTTP 终结点的服务的错误异常编程模型。  
   

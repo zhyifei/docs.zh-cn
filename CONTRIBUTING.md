@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 624814e40c361c30e251a9388f1444734a276c0a
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 25615dd43f1ae4f56c7bced7f79a0612093a21fb
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315866"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191692"
 ---
 # <a name="contributing"></a>参与
 
@@ -15,9 +15,9 @@ ms.locfileid: "72315866"
 
 本文档介绍了参与到 [.NET 文档站点](https://docs.microsoft.com/dotnet)上托管的文章和代码示例中的过程。 参与内容可简（更正拼写错误），可繁（编写新文章）。
 
+- [注意事项](#dos-and-donts)
 - [参与流程](#process-for-contributing)
 - [C# 交互式体验](#the-c-interactive-experience)
-- [注意事项](#dos-and-donts)
 - [参与者许可协议](#contributor-license-agreement)
 
 此存储库包含适用于 .NET 的概念文档。 .NET 文档站点建立在多个存储库的基础上，还包括下面这个：
@@ -28,6 +28,24 @@ ms.locfileid: "72315866"
     此存储库的问题和任务在 [dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues) 中进行跟踪。
 - [.NET Compiler Platform SDK 参考](https://github.com/dotnet/roslyn-api-docs)  
     此存储库的问题和任务在 [dotnet/docs/issues](https://github.com/dotnet/docs/issues) 中进行跟踪。
+
+## <a name="dos-and-donts"></a>注意事项
+
+以下列表显示了一些指导规则，当你参与 .NET 文档时应牢记其中的内容：
+
+- 请勿  发出大型拉取请求。 可以提出问题并发起讨论，以便我们在你花费大量时间前确定方向。 对于批量更改，将工作分解为较小的拉取请求（最多 100 个文件）。 如果拉取请求未遵循以下准则，则强烈建议遵循此准则。
+- 查看当前的  [容易作答](https://github.com/dotnet/docs/labels/up-for-grabs)问题，获取有关这些任务的建议。
+- 为每个任务创建一个拉取请求。  包含多个无关更改的拉取请求更加难以评审。 这会延迟拉取请求的评审和合并。 此准则同时适用于评审：我们尽量不在评审中建议无关的更改；我们要求社区评审遵循此准则。
+- 在拉取请求中提供清晰工作描述。  说明更改的内容和原因。 “update article.md”的默认描述对审阅者没有帮助。
+- 未经提前讨论，不要提交仅样式更改的拉取请求。  处理这些拉取请求需要花费额外的时间来评审其准确性，而且合并它们往往会与其他重要更新导致合并冲突。 我们正在努力采用一致的样式，并协调此项工作与其他任务的平衡。 当我们出于其他原因进行重大更新时，会将文章样式更新为一致。 
+- 请务必阅读[风格指南](./styleguide/template.md)以及[语气和语调](./styleguide/voice-tone.md)指南  。 新增内容应遵循以下准则。
+- 请务必在处理文章前，在分叉上创建一个单独的分支  。
+- 请务必遵循 [GitHub 流工作流](https://guides.github.com/introduction/flow/)  。
+- 请务必在博客和推文（或任何社交软件上）频繁地发布你的参与内容  ！
+
+这些准则有助于我们尊重每个人的时间。 很多人会对这些存储库作出贡献。 遵循这些准则便于我们及时评审和合并拉取请求。 这些做法可最大程度地减少与其他社区成员以及我们团队的拉取请求的冲突。 由于不遵循这些准则的拉取请求往往会为我们及社区成员带来额外的工作，因此，这些拉取请求可能会被拒绝。 如果想要提出不同的意见，请从创建问题开始。
+
+> 注意：你或许会注意到某些主题目前并没有遵循此处指定的所有准则和[风格指南](./styleguide/template.md)。 我们正努力实现整个站点的一致性。
 
 ## <a name="process-for-contributing"></a>参与流程
 
@@ -79,7 +97,7 @@ docs
 
 **步骤 4：** 从分支中将拉取请求 (PR) 提交到 `dotnet/docs/master`、`dotnet/dotnet-api-docs/master` 或 `dotnet/samples/master`。
 
-PR 应始终面向主分支  。 你应从不打开面向活动分支的 PR  。
+你的拉取请求应始终针对存储库的默认分支（使用发布分支时除外）。  对于 dotnet/docs，主分支是默认分支。 对于本地化的存储库，活动分支是默认分支。 在任何情况下，都不应该打开针对 dotnet/docs 的活动分支的拉取请求  。
 
 每个 PR 通常应该一次解决一个问题。 PR 可以修改一个或多个文件。 如果要处理不同文件的多个修补程序，最好是使用单独的 PR。
 
@@ -135,19 +153,6 @@ C# 交互式体验改变了我们使用示例的方式。 访问者可以运行�
 
 - 示例生成较大输出的文章不应在注释中包含该输出。 运行该示例后，它会遮盖代码。
 - 示例演示一个主题但输出并不是理解它的必要条件的文章。 例如，运行 LINQ 查询来解释查询语法，然后显示输出集合中的每个项的代码。
-
-## <a name="dos-and-donts"></a>注意事项
-
-以下列表显示了一些指导规则，当你参与 .NET 文档时应牢记其中的内容：
-
-- 请勿  发出大型拉取请求。 可以提出问题并发起讨论，以便我们在你花费大量时间前确定方向。
-- 请务必阅读[风格指南](./styleguide/template.md)以及[语气和语调](./styleguide/voice-tone.md)指南  。
-- 请务必使用[模板](./styleguide/template.md)文件作为工作的起点  。
-- 请务必在处理文章前，在分叉上创建一个单独的分支  。
-- 请务必遵循 [GitHub 流工作流](https://guides.github.com/introduction/flow/)  。
-- 请务必在博客和推文（或任何社交软件上）频繁地发布你的参与内容  ！
-
-> 注意：你或许会注意到某些主题目前并没有遵循此处指定的所有准则和[风格指南](./styleguide/template.md)。 我们正努力实现整个站点的一致性。 请查看我们当前正在跟踪的有关此特定目标的[未解决问题](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Aguidelines-adherence)列表。
 
 ## <a name="contributor-license-agreement"></a>贡献者许可协议
 

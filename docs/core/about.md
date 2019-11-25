@@ -2,12 +2,12 @@
 title: 关于 .NET Core
 description: 了解 .NET Core。
 ms.date: 09/17/2019
-ms.openlocfilehash: 8b96e1e8f882ee69bcf7db58ca7a5eeab89fb4fd
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: a1127a39d67b6c24994a2957298c62d87703950d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395181"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416749"
 ---
 # <a name="about-net-core"></a>关于 .NET Core
 
@@ -16,7 +16,7 @@ ms.locfileid: "72395181"
 - **跨平台：** 可在 Windows、macOS 和 Linux [操作系统](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)上运行。
 - **跨体系结构保持一致：** 在多个体系结构（包括 x64、x86 和 ARM）上以相同的行为运行代码。
 - **命令行工具：** 包括可用于本地开发和持续集成方案中的易于使用的命令行工具。
-- **部署灵活：** 可以包含在应用或已安装的并行（用户或系统范围安装）中。 可搭配 [Docker 容器](docker/index.md)使用。
+- **部署灵活：** 可以包含在应用或已安装的并行（用户或系统范围安装）中。 可搭配 [Docker 容器](docker/introduction.md)使用。
 - **兼容性：** .NET Core 通过 [.NET Standard](../standard/net-standard.md) 与 .NET Framework、Xamarin 和 Mono 兼容。
 - **开放源代码：** .NET Core 平台是开放源代码，使用 MIT 和 Apache 2 许可证。 .NET Core 是一个 [.NET Foundation](https://dotnetfoundation.org/) 项目。
 - **由 Microsoft 支持：** .NET Core 由 Microsoft 依据 [.NET Core 支持](https://dotnet.microsoft.com/platform/support/policy)提供支持。
@@ -113,7 +113,7 @@ Windows 和 Unix 实现大小相似。 Windows 的实现范围更广，这是因
 
 ### <a name="comparison-with-mono"></a>与 Mono 比较
 
-[Mono](https://www.mono-project.com/) 是 .NET 的原始跨平台。 它一开始是用作 .NET Framework 的[开放源代码](https://github.com/mono/mono)替代项，之后随着 iOS 和 Android 设备变得流行，过渡到面向移动设备。 可将它看作是 .NET Framework 的社区克隆。 Mono 项目团队依赖于 Microsoft 发布的开放 [.NET 标准](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)（尤其是 ECMA 335）来实现兼容性。
+[Mono](https://www.mono-project.com/) 是 .NET 的初始跨平台实现。 它一开始是用作 .NET Framework 的[开源](https://github.com/mono/mono)替代项，之后随着 iOS 和 Android 设备变得流行，过渡到面向移动设备。 可将它看作是 .NET Framework 的社区克隆。 Mono 项目团队依赖于 Microsoft 发布的开放 [.NET 标准](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)（尤其是 ECMA 335）来实现兼容性。
 
 .NET Core 和 Mono 的主要差异在于：
 

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 9e70e2fff0bee22bcb7d7668f33302f7e7013117
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 50e481dd67a56233fcbb3714c86d71dd7e5307e8
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71273139"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975419"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>应用程序方案（WCF 数据服务）
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]支持一组核心方案，用于以源方式[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]公开和使用数据。 本主题提供与这些方案相关的主题的链接。
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支持一组核心方案，用于将数据作为 Open Data Protocol （OData）源公开和使用。 本主题提供与这些方案相关的主题的链接。
 
-将数据库中的关系数据作为[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源公开。
+将数据库中的关系数据作为 OData 源公开。
 
 - [快速入门](quickstart-wcf-data-services.md)
 
@@ -24,7 +24,7 @@ ms.locfileid: "71273139"
 
 - [如何：使用 ADO.NET 实体框架数据源创建数据服务](create-a-data-service-using-an-adonet-ef-data-wcf.md)
 
-将任意 CLR 数据类作为 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源公开。
+将任意 CLR 数据类作为 OData 源公开。
 
 - [将数据公开为服务](exposing-your-data-as-a-service-wcf-data-services.md)
 
@@ -32,7 +32,7 @@ ms.locfileid: "71273139"
 
 - [数据服务提供程序](data-services-providers-wcf-data-services.md)
 
-在基于 .NET Framework 的客户端应用程序中使用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源。
+在基于 .NET Framework 的客户端应用程序中使用 OData 源。
 
 - [快速入门](quickstart-wcf-data-services.md)
 
@@ -40,7 +40,7 @@ ms.locfileid: "71273139"
 
 - [WCF Data Services 客户端库](wcf-data-services-client-library.md)
 
-在基于 Silverlight 的客户端应用程序中使用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源。
+在基于 Silverlight 的客户端应用程序中使用 OData 源。
 
 - [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
 
@@ -48,15 +48,15 @@ ms.locfileid: "71273139"
 
 - [如何：将数据服务数据绑定到控件（Silverlight 客户端）](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee681614(v=vs.103))
 
-在基于 AJAX 的客户端应用程序中使用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源。
+在基于 AJAX 的客户端应用程序中使用 OData 源。
 
 - [在客户端应用程序中使用数据服务](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
-- [ODataURI 约定](https://go.microsoft.com/fwlink/?LinkId=185564)
+- [OData： URI 约定](https://go.microsoft.com/fwlink/?LinkId=185564)
 
-- [ODataJavaScript 对象表示法（JSON）格式](https://go.microsoft.com/fwlink/?LinkId=185790)
+- [OData： JavaScript 对象表示法（JSON）格式](https://go.microsoft.com/fwlink/?LinkId=185790)
 
-创建用于在客户端和服务器之间传输数据的[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]端到端数据解决方案。
+创建使用 OData 在客户端和服务器之间传输数据的端到端数据解决方案。
 
 - [快速入门](quickstart-wcf-data-services.md)
 
@@ -64,7 +64,7 @@ ms.locfileid: "71273139"
 
 - [WCF Data Services 客户端库](wcf-data-services-client-library.md)
 
-创建一个基于 .NET Framework 的客户端应用程序，它以异步方式使用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源以避免客户端上的延迟问题。
+创建一个基于 .NET Framework 的客户端应用程序，该应用程序以异步方式使用 OData 数据源以避免在客户端上出现延迟问题。
 
 - [如何：执行异步数据服务查询](how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)
 
@@ -72,13 +72,13 @@ ms.locfileid: "71273139"
 
 - [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
 
-公开和使用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]以流形式访问和更改的二进制大型对象的源。
+公开和使用以流形式访问和更改的二进制大型对象的 OData 源。
 
 - [流提供程序](streaming-provider-wcf-data-services.md)
 
 - [处理二进制数据](working-with-binary-data-wcf-data-services.md)
 
-将[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源绑定到 Windows Presentation Framework （WPF）应用程序中的控件。
+将 OData 源绑定到 Windows Presentation Framework （WPF）应用程序中的控件。
 
 - [将数据绑定到控件](binding-data-to-controls-wcf-data-services.md)
 

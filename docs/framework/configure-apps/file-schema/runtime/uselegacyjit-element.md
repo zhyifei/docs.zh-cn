@@ -2,12 +2,12 @@
 title: <useLegacyJit> 元素
 ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
-ms.openlocfilehash: 47aacb629dc234d9aeaab1ef6e6844fbbe5dbfdb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a126b8c0050a8d1fd96a3d090f9b018a9faa07a7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115112"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968856"
 ---
 # <a name="uselegacyjit-element"></a>\<useLegacyJit> 元素
 
@@ -66,7 +66,7 @@ None
 
   将 `COMPLUS_useLegacyJit` 环境变量设置为 `0` （使用新的64位 JIT 编译器）或 `1` （使用较旧的64位 JIT 编译器）：
   
-  ```  
+  ```env  
   COMPLUS_useLegacyJit=0|1  
   ```  
   

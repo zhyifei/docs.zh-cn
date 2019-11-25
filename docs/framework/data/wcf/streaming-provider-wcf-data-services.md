@@ -10,22 +10,22 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 4d51011fddb856cf1ebd00943e9b79776d9181d0
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: da575c65902ec8751c12482d0c8d0abd523623e4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854108"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975124"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>流提供程序（WCF 数据服务）
 
-数据服务可公开二进制大型对象数据。 此二进制数据可以表示视频和音频流、图像、文档文件或其他类型的二进制媒体。 当数据模型中的某个实体包括一个或多个二进制属性时，数据服务会在响应源的入口内以 base-64 编码形式返回此二进制数据。 由于以这种方式加载和序列化大型二进制数据会影响性能[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ，因此定义了一种机制，用于独立于其所属的实体来检索二进制数据。 这一点是通过将实体和二进制数据分隔到一个或多个数据流来实现的。
+数据服务可公开二进制大型对象数据。 此二进制数据可以表示视频和音频流、图像、文档文件或其他类型的二进制媒体。 当数据模型中的某个实体包括一个或多个二进制属性时，数据服务会在响应源的入口内以 base-64 编码形式返回此二进制数据。 由于以这种方式加载和序列化大型二进制数据会影响性能，因此 Open Data Protocol （OData）定义了一种机制，该机制独立于其所属的实体来检索二进制数据。 这一点是通过将实体和二进制数据分隔到一个或多个数据流来实现的。
 
 - 媒体资源 - 属于某个实体的二进制数据，例如视频、音频、图像或其他类型的媒体资源流。
 
 - 媒体链接入口 - 引用相关媒体资源流的实体。
 
-利用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，可通过实现流数据提供程序定义二进制资源流。 流提供程序实现以<xref:System.IO.Stream>对象的形式向数据服务提供与特定实体关联的媒体资源流。 有了此实现，数据服务能够以指定 MIME 类型的二进制数据流的形式通过 HTTP 接受和返回媒体资源。
+利用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，可通过实现流数据提供程序定义二进制资源流。 流提供程序实现以 <xref:System.IO.Stream> 对象的形式向数据服务提供与特定实体关联的媒体资源流。 有了此实现，数据服务能够以指定 MIME 类型的二进制数据流的形式通过 HTTP 接受和返回媒体资源。
 
 将数据服务配置为支持二进制数据流需要以下步骤：
 
@@ -39,7 +39,7 @@ ms.locfileid: "70854108"
 
 5. 启用对服务器上或数据源中的二进制资源的访问。
 
-本主题中的示例基于示例流照片服务，该服务在[数据服务流提供程序系列中进行了深入讨论：实现流提供程序（第1部分](https://go.microsoft.com/fwlink/?LinkID=198989)）。 MSDN 代码库上的 "[流式处理照片数据服务示例" 页](https://go.microsoft.com/fwlink/?LinkID=198988)上提供了此示例服务的源代码。
+本主题中的示例基于示例流照片服务，该服务是发布[数据服务流提供程序系列：实现流提供程序（第1部分）](https://go.microsoft.com/fwlink/?LinkID=198989)的深入介绍。 MSDN 代码库上的 "[流式处理照片数据服务示例" 页](https://go.microsoft.com/fwlink/?LinkID=198988)上提供了此示例服务的源代码。
 
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>在数据模型中定义媒体链接入口
 
@@ -53,7 +53,7 @@ ms.locfileid: "70854108"
 
 还必须将命名空间 `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` 添加到实体，或添加到定义数据模型的 .edmx 或 .csdl 文件的根目录中。
 
-有关使用实体框架提供程序并公开媒体资源的数据服务的示例，请参阅文章[数据服务流提供程序系列：实现流提供程序（第1部分](https://go.microsoft.com/fwlink/?LinkID=198989)）。
+有关使用实体框架提供程序并公开媒体资源的数据服务的示例，请参阅文章[数据服务流提供程序系列：实现流提供程序（第1部分）](https://go.microsoft.com/fwlink/?LinkID=198989)。
 
 **反射提供程序**
 
@@ -91,11 +91,11 @@ ms.locfileid: "70854108"
 在 ASP.NET Web 应用程序中创建数据服务时，Windows Communication Foundation （WCF）用于提供 HTTP 协议实现。 默认情况下，WCF 将 HTTP 消息的大小限制为仅 65K 字节。 为了使大型二进制数据能够流入或流出数据服务，还必须将 Web 应用程序配置为启用大型二进制文件并使用流进行转换。 为此，请将以下内容添加到应用程序的 Web.config 文件的 `<configuration />` 元素中：
 
 > [!NOTE]
-> 必须使用<xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType>传输模式来确保请求消息和响应消息中的二进制数据都经过流处理，并且不会被 WCF 缓冲。
+> 必须使用 <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> 传输模式来确保请求消息和响应消息中的二进制数据都经过流处理，并且不会通过 WCF 进行缓冲处理。
 
 有关详细信息，请参阅[流式传输消息传输](../../wcf/feature-details/streaming-message-transfer.md)和[传输配额](../../wcf/feature-details/transport-quotas.md)。
 
-默认情况下，Internet 信息服务 (IIS) 还将请求的大小限制为 4MB。 若要允许数据服务在 IIS 上运行时接收大于4mb 的流，还必须在`maxRequestLength` `<system.web />`配置节中设置[httpRuntime 元素（ASP.NET 设置架构）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100))的属性，如下所示实例
+默认情况下，Internet 信息服务 (IIS) 还将请求的大小限制为 4MB。 若要允许数据服务在 IIS 上运行时接收大于4MB 的流，还必须在 `<system.web />` 配置节中设置[HttpRuntime 元素（ASP.NET 设置架构）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100))的 `maxRequestLength` 属性，如以下示例中所示：
 
 ## <a name="using-data-streams-in-a-client-application"></a>在客户端应用程序中使用数据流
 
@@ -131,9 +131,9 @@ ms.locfileid: "70854108"
 
 ## <a name="versioning-requirements"></a>版本控制要求
 
-流提供程序具有以下 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 协议版本控制要求：
+流提供程序具有以下 OData 协议版本要求：
 
-- 流提供程序要求数据服务支持 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 协议的 2.0 版本以及更高版本。
+- 流提供程序要求数据服务支持 OData 协议版本2.0 和更高版本。
 
 有关详细信息，请参阅[数据服务版本控制](data-service-versioning-wcf-data-services.md)。
 

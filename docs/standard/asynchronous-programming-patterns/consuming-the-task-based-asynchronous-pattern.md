@@ -9,14 +9,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e89545b5fa29f6e5bf99bb9b85322d7ee14422a4
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f80e6ae520ab03c0f5f4edc30c0b7102193ee6c5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929007"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139812"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>使用基于任务的异步模式
 
@@ -633,7 +631,7 @@ double currentPrice = await NeedOnlyOne(
 ```
 
 ### <a name="interleaved-operations"></a>交错操作
- 处理大型任务集时，如果使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法支持交错方案，可能存在潜在性能问题。  每次调用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 都会向每个任务注册延续。 对于 N 个任务，这将导致在交错操作操作期间创建 O(N2) 次延续。  如果处理大型任务集，则可以使用连结符（以下示例中的 `Interleaved`）来解决性能问题：
+ 处理大型任务集时，如果使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法支持交错方案，可能存在潜在性能问题。 每次调用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 都会向每个任务注册延续。 对于 N 个任务，这将导致在交错操作的操作期间创建 O(N<sup>2</sup>) 次延续。 如果处理大型任务集，则可以使用连结符（以下示例中的 `Interleaved`）来解决性能问题：
 
 ```csharp
 static IEnumerable<Task<T>> Interleaved<T>(IEnumerable<Task<T>> tasks)

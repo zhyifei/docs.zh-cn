@@ -4,12 +4,12 @@ description: 本教程演示如何创建 .NET Core 控制台应用程序，该�
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 454b9c94d717d7af098ee982d9eaffe18f1c347c
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1b5a3f6c7d70c95916b99d386924347642e6d7e3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774407"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974779"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>教程：在 ML.NET 中使用二元分类分析网站评论的情绪
 
@@ -80,6 +80,7 @@ ms.locfileid: "72774407"
     [!code-csharp[DeclareTypes](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#DeclareTypes "Declare data record types")]
 
 ### <a name="how-the-data-was-prepared"></a>如何准备数据
+
 输入数据集类 `SentimentData` 拥有一个用于用户评论 (`SentimentText`) 的 `string`，以及一个用于情绪的 `bool` (`Sentiment`)，值为 1（正面）或 0（负面）。 这两个字段都附加了 [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) 特性，其描述了每个字段的数据文件顺序。  此外，`Sentiment` 属性具有 [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute.%23ctor%2A) 特性，以将其指定为 `Label` 字段。 下面的示例文件没有标题行，如下所示：
 
 |情绪文本                         |情绪（标签） |
@@ -96,6 +97,7 @@ ms.locfileid: "72774407"
 在本教程中，最重要的属性是 `Prediction`。
 
 ## <a name="load-the-data"></a>加载数据
+
 ML.NET 中的数据表示为 [IDataView 类](xref:Microsoft.ML.IDataView)。 `IDataView` 是用于描述表格数据（数字和文本）的一种灵活且有效的方法。 可从文本文件或实时（例如，SQL 数据库或日志文件）将数据加载到 `IDataView` 对象。
 
 [MLContext 类](xref:Microsoft.ML.MLContext)是所有 ML.NET 操作的起点。 初始化 `mlContext` 会创建一个新的 ML.NET 环境，可在模型创建工作流对象之间共享该环境。 从概念上讲，它与实体框架中的 `DBContext` 类似。

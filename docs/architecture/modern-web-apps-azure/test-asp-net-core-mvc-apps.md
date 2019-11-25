@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 测�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9bc97efdda44ca4dfa4a583c32e9e55c9502d975
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6096bd3aa35a27c97862089d09d537bdc5b1fff0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089686"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971533"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>测试 ASP.NET Core MVC 应用
 
@@ -285,12 +285,16 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 
 > ### <a name="references--test-aspnet-core-mvc-apps"></a>参考 - 测试 ASP.NET Core MVC 应用
 >
-> - **在 ASP.NET Core 进行测试**  
+> - 在 ASP.NET Core 中进行测试   \
 >   <https://docs.microsoft.com/aspnet/core/testing/>
-> - **单元测试命名约定**  
+> - 单元测试命名约定   \
 >   <https://ardalis.com/unit-test-naming-convention>
-> - **测试 EF Core**  
+> - 测试 EF Core   \
 >   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
+> - ASP.NET Core 中的集成测试   \
+>   <https://docs.microsoft.com/aspnet/core/test/integration-tests>
+> - ASP.NET Community Standup - 2018 年 5 月 15 日 - 使用 Javier C. Nelson 进行 MVC 测试 - YouTube 视频 \ 
+>   <https://www.youtube.com/watch?v=wtOE-xmFJkw&list=PL1rZQsJPBU2StolNg0aqvQswETPcYnNKL&index=5>
 
 >[!div class="step-by-step"]
 >[上一页](work-with-data-in-asp-net-core-apps.md)

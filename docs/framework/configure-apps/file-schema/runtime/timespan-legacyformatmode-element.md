@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <TimeSpan_LegacyFormatMode> element
 - TimeSpan_LegacyFormatMode element
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
-ms.openlocfilehash: c835e1bcef7bbfdc990c8db177eafed4ec6bb30c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d9eedf52f5d711412e4549e39e6ea23abb68ff3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115210"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968911"
 ---
 # <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > 元素
 
@@ -21,7 +21,7 @@ ms.locfileid: "73115210"
 
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<TimeSpan_LegacyFormatMode >**  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<TimeSpan_LegacyFormatMode** >  
 
 ## <a name="syntax"></a>语法
 
@@ -75,13 +75,13 @@ ms.locfileid: "73115210"
 
 在 .NET Framework 3.5 或更早版本上运行此示例时，将显示以下输出：
 
-```
+```console
 12:30:45
 ```
 
 如果在 .NET Framework 4 或更高版本上运行此示例，则这与输出明显不同：
 
-```
+```console
 Invalid Format
 ```
 

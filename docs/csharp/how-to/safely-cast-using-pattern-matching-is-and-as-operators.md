@@ -1,19 +1,19 @@
 ---
-title: 如何：使用模式匹配以及 is 和 as 运算符安全地进行强制转换
+title: 如何使用模式匹配以及 is 和 as 运算符安全地进行强制转换
 description: 了解如何使用模式匹配方法将变量安全地转换为其他类型。 可以使用模式匹配以及 is 和 as 运算符来安全地转换类型。
 ms.date: 09/05/2018
 helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 8d090df1338c535b11a7fd3ec32f6d1cb00b338f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 762f8135063f7256ce7a167c65013703d9249039
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739681"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973089"
 ---
-# <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>如何：使用模式匹配以及 is 和 as 运算符安全地进行强制转换
+# <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>如何使用模式匹配以及 is 和 as 运算符安全地进行强制转换
 
 由于是多态对象，基类类型的变量可以保存派生[类型](../programming-guide/types/index.md)。 要访问派生类型的实例成员，必须将值[强制转换](../programming-guide/types/casting-and-type-conversions.md)回派生类型。 但是，强制转换会引发 <xref:System.InvalidCastException> 风险。 C# 提供[模式匹配](../pattern-matching.md)语句，该语句只有在成功时才会有条件地执行强制转换。 C# 还提供 [is](../language-reference/operators/type-testing-and-cast.md#is-operator) 和 [as](../language-reference/operators/type-testing-and-cast.md#as-operator) 运算符来测试值是否属于特定类型。
 

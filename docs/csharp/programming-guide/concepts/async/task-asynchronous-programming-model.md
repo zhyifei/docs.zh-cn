@@ -2,12 +2,12 @@
 title: 使用 Async和 Await 的任务异步编程模型 (TAP) (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 644830ac62a4df23f22d8f91e9b3c768dd611451
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8f88ecc05fd21a3526478cf564dc4fa97f309f7e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395695"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969965"
 ---
 # <a name="task-asynchronous-programming-model"></a>异步编程模型
 
@@ -243,8 +243,8 @@ Windows 运行时编程中的异步 API 具有下列返回类型之一（类似�
 |标题|说明|示例|
 |-----------|-----------------|------------|
 |[演练：使用 Async 和 Await 访问 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)|演示如何将一个同步 WPF 解决方案转换成一个异步 WPF 解决方案。 应用程序下载一系列网站。|[异步示例：“访问 Web”演练](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|
-|[如何：使用 Task.WhenAll 扩展异步演练 (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|将 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 添加到上一个演练。 使用 `WhenAll` 同时启动所有下载。||
-|[如何：使用 Async 和 Await 并行发出多个 Web 请求 (C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|演示如何同时开始几个任务。|[异步示例：并行发出多个 Web 请求](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|
+|[如何使用 Task.WhenAll 扩展异步演练 (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|将 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 添加到上一个演练。 使用 `WhenAll` 同时启动所有下载。||
+|[如何使用 Async 和 Await 并行发出多个 Web 请求 (C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|演示如何同时开始几个任务。|[异步示例：并行发出多个 Web 请求](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|
 |[异步返回类型 (C#)](./async-return-types.md)|描述异步方法可返回的类型，并解释每种类型适用于的情况。||
 |[异步程序中的控制流 (C#)](./control-flow-in-async-programs.md)|通过异步程序中的一系列 await 表达式来详细跟踪控制流。|[异步示例：异步程序中的控制流](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|
 |[微调异步应用程序 (C#)](./fine-tuning-your-async-application.md)|演示如何将以下功能添加到异步解决方案：<br /><br /> - [取消一个异步任务或一组任务(C#)](./cancel-an-async-task-or-a-list-of-tasks.md)<br />- [在一段时间后取消异步任务 (C#)](./cancel-async-tasks-after-a-period-of-time.md)<br />- [在完成一个异步任务后取消剩余任务 (C#)](./cancel-remaining-async-tasks-after-one-is-complete.md)<br />- [启动多个异步任务并在其完成时进行处理 (C#)](./start-multiple-async-tasks-and-process-them-as-they-complete.md)|[异步示例：微调应用程序](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 62186409fdc1abb2275af535be3ae939a1e63323
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c3550a593eafb9b50fa7e419e2f747c3e7a0e2ea
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922284"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972653"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>类型测试和强制转换运算符（C# 引用）
 
@@ -36,7 +36,7 @@ ms.locfileid: "69922284"
 
 ## <a name="is-operator"></a>is 运算符
 
-`is` 运算符检查表达式结果的运行时类型是否与给定类型兼容。 从 C# 7.0 开始，`is` 运算符还对照某个模式测试表达式结果。
+`is` 运算符检查表达式结果的运行时类型是否与给定类型兼容。 从 C# 7.0 开始，`is` 运算符还会对照某个模式测试表达式结果。
 
 具有类型测试 `is` 运算符的表达式具有以下形式
 
@@ -52,7 +52,7 @@ E is T
 
 [!code-csharp[is with reference conversion](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsWithReferenceConversion)]
 
-以下示例演示，`is` 运算符将考虑装箱和取消装箱转换，但不会考虑数值转换：
+以下示例演示，`is` 运算符将考虑装箱和取消装箱转换，但不会考虑[数值转换](../builtin-types/numeric-conversions.md)：
 
 [!code-csharp-interactive[is with int](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsWithInt)]
 
@@ -60,7 +60,7 @@ E is T
 
 ### <a name="type-testing-with-pattern-matching"></a>有模式匹配的类型测试
 
-从 C# 7.0 开始，`is` 运算符还对照某个模式测试表达式结果。 具体而言，它支持以下形式的类型模式：
+从 C# 7.0 开始，`is` 运算符还会对照某个模式测试表达式结果。 具体而言，它支持以下形式的类型模式：
 
 ```csharp
 E is T v
@@ -99,7 +99,7 @@ E is T ? (T)(E) : (T)null
 [!code-csharp-interactive[as operator](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#AsOperator)]
 
 > [!NOTE]
-> 如之前的示例所示，你需要将 `as` 表达式的结果与 `null` 进行比较，以检查转换是否成功。 从 C# 7.0 开始，可以使用 [is 运算符](#type-testing-with-pattern-matching)测试转换是否成功，如果成功，则将其结果分配给新变量。
+> 如之前的示例所示，你需要将 `as` 表达式的结果与 `null` 进行比较，以检查转换是否成功。 从 C# 7.0 开始，你可以使用 [is 运算符](#type-testing-with-pattern-matching)测试转换是否成功，如果成功，则将其结果分配给新变量。
 
 ## <a name="cast-operator-"></a>强制转换运算符 ()
 
@@ -117,7 +117,7 @@ E is T ? (T)(E) : (T)null
 
 括号的其他用法是调整表达式中计算操作的顺序。 有关详细信息，请参阅 [C# 运算符](index.md)。
 
-## <a name="typeof-operator"></a>TypeOf 运算符
+## <a name="typeof-operator"></a>typeof 运算符
 
 `typeof` 运算符用于获取某个类型的 <xref:System.Type?displayProperty=nameWithType> 实例。 `typeof` 运算符的实参必须是类型或类型形参的名称，如以下示例所示：
 
@@ -137,7 +137,7 @@ E is T ? (T)(E) : (T)null
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 
-`is`、`as` 和 `typeof` 运算符不可重载。
+`is`、`as` 和 `typeof` 运算符无法进行重载。
 
 用户定义的类型不能重载 `()` 运算符，但可以定义可由强制转换表达式执行的自定义类型转换。 有关详细信息，请参阅[用户定义转换运算符](user-defined-conversion-operators.md)。
 
@@ -154,4 +154,5 @@ E is T ? (T)(E) : (T)null
 
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)
-- [操作说明：使用模式匹配以及 is 和 as 运算符安全地进行强制转换](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [如何使用模式匹配以及 is 和 as 运算符安全地进行强制转换](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [.NET 中的泛型](../../../standard/generics/index.md)

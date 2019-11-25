@@ -2,12 +2,12 @@
 title: 从 XML 生成数据类型类
 ms.date: 03/30/2017
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
-ms.openlocfilehash: bf5596211e78842153b7406273626a7fa3c3aeea
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 977b12b5c61c196a4f033361d37785e4ed0af73a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990277"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975853"
 ---
 # <a name="generating-data-type-classes-from-xml"></a>从 XML 生成数据类型类
 .NET Framework 4.5 包含一项新功能，可用于从 XML 生成数据类型类。 本主题介绍如何为 .NET 博客 RSS 源自动生成数据类型。  
@@ -28,13 +28,13 @@ ms.locfileid: "70990277"
   
 3. 选择 "**编辑**"、"**粘贴特殊**"、"将**XML 粘贴为类**"。  
   
-4. 将创建`link`名`rss`为`rssChannelImage` `rssChannelItem` 、、、和`rssChannelItemGuid`的类，其中包含访问RSS源中的元素所需的成员。`rssChannel`  
+4. 将创建名为 `link`、`rss`、`rssChannel`、`rssChannelImage`、`rssChannelItem` 和 `rssChannelItemGuid` 的类，其中包含访问 RSS 源中的元素所需的成员。  
   
 ### <a name="using-the-generated-classes"></a>使用生成的类  
   
 1. 一旦生成了类，这些类就可以像任何其他类一样在代码中使用。 下面的代码示例返回 `rssChannelImage` 类的新实例。  
   
-    ```csharp  
+    ```csharp
     var channelImage = new rssChannelImage()   
     {   
         title = "MyImage",   

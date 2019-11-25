@@ -17,15 +17,16 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: 5284eb52d7b50307e51945fc0b4a9deb8818f2e2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c699ed68606293b1a49a540e00636cf7f56bdf2f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121684"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972095"
 ---
 # <a name="standard-timespan-format-strings"></a>标准 TimeSpan 格式字符串
-<a name="Top"></a> 标准 <xref:System.TimeSpan> 格式字符串使用一个格式说明符，定义格式设置操作生成的 <xref:System.TimeSpan> 值的文本表示形式。 任何包含一个以上字符（包括空格）的格式字符串都被解释为自定义 <xref:System.TimeSpan> 格式字符串。 有关详细信息，请参阅[自定义 TimeSpan 格式字符串](../../../docs/standard/base-types/custom-timespan-format-strings.md)。  
+
+标准 <xref:System.TimeSpan> 格式字符串使用一个格式说明符，定义格式设置操作生成的 <xref:System.TimeSpan> 值的文本表示形式。 任何包含一个以上字符（包括空格）的格式字符串都被解释为自定义 <xref:System.TimeSpan> 格式字符串。 有关详细信息，请参阅[自定义 TimeSpan 格式字符串](../../../docs/standard/base-types/custom-timespan-format-strings.md)。  
   
  通过调用 <xref:System.TimeSpan> 方法的重载以及通过支持复合格式设置的方法（如 <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>）产生 <xref:System.String.Format%2A?displayProperty=nameWithType> 值的字符串表示形式。 有关更多信息，请参见[格式设置类型](../../../docs/standard/base-types/formatting-types.md)和[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)。 以下示例演示了标准格式字符串在格式设置操作中的用法。  
   
@@ -37,15 +38,14 @@ ms.locfileid: "73121684"
  [!code-csharp[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/parseexample1.cs#3)]
  [!code-vb[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/parseexample1.vb#3)]  
   
-<a name="top"></a>下表列出了标准时间间隔格式说明符。  
+下表列出了标准时间间隔格式说明符。  
   
 |格式说明符|name|说明|示例|  
 |----------------------|----------|-----------------|--------------|  
-|“c”|常量（固定）格式|此说明符不区分区域性。 它的形式是 `[-][d'.']hh':'mm':'ss['.'fffffff]`。<br /><br /> （“t”格式与“T”格式字符串产生的结果相同。）<br /><br /> 更多信息：[常量（“c”）格式说明符](#Constant)。|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
-|“g”|常规短格式|该说明符仅输出需要的内容。 它区分区域性并采用 `[-][d':']h':'mm':'ss[.FFFFFFF]` 形式。<br /><br /> 更多信息：[常规短（“g”）格式说明符](#GeneralShort)。|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
-|“G”|常规长格式|此说明符始终输出天数和七个小数位。 它区分区域性并采用 `[-]d':'hh':'mm':'ss.fffffff` 形式。<br /><br /> 更多信息：[常规长（“G”）格式说明符](#GeneralLong)。|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
-  
-<a name="Constant"></a>   
+|“c”|常量（固定）格式|此说明符不区分区域性。 它的形式是 `[-][d'.']hh':'mm':'ss['.'fffffff]`。<br /><br /> （“t”格式与“T”格式字符串产生的结果相同。）<br /><br /> 更多信息：[常量（“c”）格式说明符](#the-constant-c-format-specifier)。|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
+|“g”|常规短格式|该说明符仅输出需要的内容。 它区分区域性并采用 `[-][d':']h':'mm':'ss[.FFFFFFF]` 形式。<br /><br /> 更多信息：[常规短（“g”）格式说明符](#the-general-short-g-format-specifier)。|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
+|“G”|常规长格式|此说明符始终输出天数和七个小数位。 它区分区域性并采用 `[-]d':'hh':'mm':'ss.fffffff` 形式。<br /><br /> 更多信息：[常规长（“G”）格式说明符](#the-general-long-g-format-specifier)。|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
+
 ## <a name="the-constant-c-format-specifier"></a>常量（“c”）格式说明符。  
  “c”格式说明符返回的 <xref:System.TimeSpan> 值的字符串表示形式具有以下形式：  
   
@@ -71,10 +71,7 @@ ms.locfileid: "73121684"
   
  [!code-csharp[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardc1.cs#1)]
  [!code-vb[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardc1.vb#1)]  
-  
- [返回表首](#Top)  
-  
-<a name="GeneralShort"></a>   
+
 ## <a name="the-general-short-g-format-specifier"></a>常规短（“g”）格式说明符  
  “g”<xref:System.TimeSpan> 格式说明符通过只包含所需元素来返回简洁形式的 <xref:System.TimeSpan> 值的字符串表示形式。 它具有以下形式：  
   
@@ -98,10 +95,7 @@ ms.locfileid: "73121684"
   
  [!code-csharp[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardshort1.cs#4)]
  [!code-vb[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardshort1.vb#4)]  
-  
- [返回表首](#Top)  
-  
-<a name="GeneralLong"></a>   
+
 ## <a name="the-general-long-g-format-specifier"></a>常规长（“G”）格式说明符  
  （“G”）<xref:System.TimeSpan> 格式说明符用始终包含日期和秒的小数部分的长格式返回 <xref:System.TimeSpan> 值的字符串表示形式。 “G”标准格式说明符生成的字符串具有以下形式：  
   
@@ -124,9 +118,7 @@ ms.locfileid: "73121684"
  以下示例对两个 <xref:System.TimeSpan> 对象进行了实例化，使用它们来执行算术运算并显示结果。 在每种情况下，它都通过“G”格式说明符使用复合格式设置来显示 <xref:System.TimeSpan> 值。 此外，它通过使用当前系统区域（在此情况下为“英语 - 美国”或“en-US”）和“法语 - 法国 (fr-FR)”区域的格式设置约定来设置 <xref:System.TimeSpan> 值的格式。  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardlong1.cs#5)]
- [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]  
-  
- [返回表首](#Top)  
+ [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]
   
 ## <a name="see-also"></a>请参阅
 

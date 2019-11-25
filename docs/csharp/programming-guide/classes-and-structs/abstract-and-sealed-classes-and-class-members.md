@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: 1c98e2979ee96d4bcc885b8cc797eaac28c8d2ed
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 97b367b5c3d09087541ee206a2899a7aefd95305
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597289"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971349"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>抽象类、密封类及类成员（C# 编程指南）
 使用 [abstract](../../language-reference/keywords/abstract.md) 关键字可以创建不完整且必须在派生类中实现的类和 [class](../../language-reference/keywords/class.md) 成员。  
@@ -55,4 +55,4 @@ ms.locfileid: "69597289"
 - [继承](./inheritance.md)
 - [方法](./methods.md)
 - [字段](./fields.md)
-- [如何：定义抽象属性](./how-to-define-abstract-properties.md)
+- [如何定义抽象属性](./how-to-define-abstract-properties.md)

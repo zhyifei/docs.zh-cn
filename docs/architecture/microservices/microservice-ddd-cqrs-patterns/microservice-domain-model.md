@@ -2,12 +2,12 @@
 title: 设计微服务域模型
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解设计面向 DDD 的域模型时的关键概念。
 ms.date: 10/08/2018
-ms.openlocfilehash: c6d2e84189ff542a2ed4c584c4a47bf7bf0e946a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3a02059064305ca148b7909923e2f51e60ee54d5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676444"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737382"
 ---
 # <a name="design-a-microservice-domain-model"></a>设计微服务域模型
 
@@ -31,11 +31,11 @@ DDD 中的域实体必须实现与实体数据（在内存中访问的对象）�
 
 图 7-8 展示了一个域实体，它不仅实现数据属性，还实现具有相关域逻辑的操作或方法。
 
-![域模型实体通过方法实现行为，即，它不是“贫乏”模型。](./media/image9.png)
+![显示域实体模式的关系图。](./media/microservice-domain-model/domain-entity-pattern.png)
 
 **图 7-8**。 实现数据加行为的域实体设计示例
 
-当然，实体有时可能不会在实体类中实现任何逻辑。 如果某个聚合内的子实体没有任何特殊逻辑，因为大多数逻辑都在聚合根中定义，则该子实体可能出现这种情况。 如果你有一个复杂的微服务，它在服务类而非域实体中实现了大量逻辑，那么你可能会陷入贫乏域模型中，下一节将对此进行解释。
+域模型实体通过方法实现行为，即，它不是“贫乏”模型。 当然，实体有时可能不会在实体类中实现任何逻辑。 如果某个聚合内的子实体没有任何特殊逻辑，因为大多数逻辑都在聚合根中定义，则该子实体可能出现这种情况。 如果你有一个复杂的微服务，它在服务类而非域实体中实现了大量逻辑，那么你可能会陷入贫乏域模型中，下一节将对此进行解释。
 
 ### <a name="rich-domain-model-versus-anemic-domain-model"></a>丰富域模型与贫乏域模型
 
@@ -108,11 +108,11 @@ EF Core 2.0 包含[实体](https://devblogs.microsoft.com/dotnet/announcing-enti
 
 在图 7-9 中，可以看到一些示例聚合，例如买家聚合，其中包含一个实体（聚合根 Buyer）。 订单聚合包含多个实体和一个值对象。
 
-![DDD 域模型由聚合组成，聚合可以只具有一个实体或多个实体，并且还可以包含值对象。](./media/image10.png)
+![比较买家聚合和订单聚合的关系图。](./media/microservice-domain-model/buyer-order-aggregate-pattern.png)
 
 **图 7-9**。 包含多个或单个实体的聚合示例
 
-请注意，视你的域而定，Buyer 聚合可能会有其他子实体，就像在 eShopOnContainers 参考应用程序的订购微服务中那样。 图 7-9 仅列举了买家具有单个实体的情况，作为仅包含聚合根的聚合示例。
+DDD 域模型由聚合组成，聚合可以只具有一个实体或多个实体，并且还可以包含值对象。 请注意，视你的域而定，Buyer 聚合可能会有其他子实体，就像在 eShopOnContainers 参考应用程序的订购微服务中那样。 图 7-9 仅列举了买家具有单个实体的情况，作为仅包含聚合根的聚合示例。
 
 为了让聚合一直相互隔离并保持它们之间的清晰界限，建议禁止在 DDD 域模型中的聚合之间直接导航，并且模型仅具有外键 (FK) 字段，正如在 eShopOnContainers 的[订购微服务域模型](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs)中所实现的那样。 Order 实体针对买家只有 FK 字段，没有 EF Core 导航属性，如以下代码所示：
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 246dbeed69fbd54c2c52bce2414363ddc9c62204
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: d384aa2daea17581402dc45dc3104a0d97f77f3a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658438"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035448"
 ---
 # <a name="net-docs"></a>.NET Docs
 
@@ -16,7 +16,9 @@ ms.locfileid: "69658438"
 
 此处跟踪除 API 参考存储库之外的所有问题和任务。 我们有一个大型社区在使用这些资源。 我们将最大程度地及时答复问题。 你可在[问题政策](issues-policy.md)主题中详细了解问题归类和解决的过程。
 
-欢迎大家积极参与，帮助我们改进并完成 .NET 文档。若要参与，请参阅 [.NET 社区参与者项目](https://github.com/dotnet/docs/projects/35)，了解相关信息。 [参与指南](CONTRIBUTING.md)提供所涉及过程的说明。 或者查看[问题列表](https://github.com/dotnet/docs/issues)，了解你感兴趣的任务。 
+欢迎大家积极参与，帮助我们改进并完成 .NET 文档。这是一个非常大的存储库，涵盖很大区域。 如果这是你首次访问，请查看我们的[标签和项目路线图](styleguide/labels-projects.md)，将有助于浏览此存储库中的问题和项目。
+
+若要参与，请参阅 [.NET 社区参与者项目](https://github.com/dotnet/docs/projects/35)，了解相关信息。 [参与指南](CONTRIBUTING.md)提供所涉及过程的说明。 
 
 如果你有兴趣帮助将面向 .NET Framework 的现有代码从[代码库](https://code.msdn.microsoft.com)迁移到存储在[示例存储库](https://github.com/dotnet/samples)中的 .NET Core 应用程序，并使其可从[示例浏览器](https://docs.microsoft.com/samples/browse)中下载，请参阅[代码库迁移](https://github.com/dotnet/docs/projects/88)项目。 
 

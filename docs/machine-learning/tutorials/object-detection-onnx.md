@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 6d13e7e4788dfd2bad6fd26015d76342b38f1142
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1364b6a1cf6d424975828185a50175b2763c6516
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774449"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420021"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>教程：在 ML.NET 中使用 ONNX 检测对象
 
@@ -45,7 +45,7 @@ ms.locfileid: "72774449"
 
 对象检测是计算机视觉问题。 虽然与图像分类密切相关，但是对象检测以更精细的比例执行图像分类。 对象检测用于定位  图像中的实体并对其进行分类。 如果图像包含多个不同类型的对象，请使用对象检测。
 
-![并排图像，左侧显示犬的图像分类，右侧显示组的对象分类](./media/object-detection-onnx/img-classification-obj-detection.PNG)
+![显示图像分类与对象分类的屏幕截图。](./media/object-detection-onnx/img-classification-obj-detection.png)
 
 对象检测的一些用例包括：
 
@@ -66,7 +66,7 @@ ms.locfileid: "72774449"
 
 对象检测是图像处理任务。 因此，训练解决该问题的大多数深度学习模型都是 CNN。 本教程中使用的模型是 Tiny YOLOv2 模型，这是该文件中描述的 YOLOv2 模型的一个更紧凑版本：[“YOLO9000：更好、更快、更强”，作者：Redmon 和 Fadhari](https://arxiv.org/pdf/1612.08242.pdf)。 Tiny YOLOv2 在 Pascal VOC 数据集上进行训练，共包含 15 层，可预测 20 种不同类别的对象。 由于 Tiny YOLOv2 是原始 YOLOv2 模型的精简版本，因此需要在速度和精度之间进行权衡。 构成模型的不同层可以使用 Neutron 等工具进行可视化。 检查模型将在构成神经网络的所有层之间生成连接映射，其中每个层都将包含层名称以及各自输入/输出的维度。 用于描述模型输入和输出的数据结构称为张量。 可以将张量视为以 N 维存储数据的容器。 对于 Tiny YOLOv2，输入层名称为 `image`，它需要一个维度为 `3 x 416 x 416` 的张量。 输出层名称为 `grid`，且生成维度为 `125 x 13 x 13` 的输出张量。
 
-![将输入层拆分为隐藏层，然后拆分输出层](./media/object-detection-onnx/netron-model-map.png)
+![将输入层拆分为隐藏层，然后拆分输出层](./media/object-detection-onnx/netron-model-map-layers.png)
 
 YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并将其传递到不同的层以生成输出。 输出将输入图像划分为一个 `13 x 13` 网格，网格中的每个单元格由 `125` 值组成。
 
@@ -74,11 +74,11 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
 
 开放神经网络交换 (ONNX) 是 AI 模型的开放源代码格式。 ONNX 支持框架之间的互操作性。 这意味着，你可以在许多常见的机器学习框架（如 pytorch）中训练模型，将其转换为 ONNX 格式，并在其他框架（如 ML.NET）中使用 ONNX 模型。 有关详细信息，请参阅 [ONNX 网站](https://onnx.ai/)。
 
-![将 ONNX 支持的格式导入到 ONNX，然后供其他 ONNX 支持的格式使用](./media/object-detection-onnx/onnx-frameworks.png)
+![所使用的 ONNX 支持格式的关系图。](./media/object-detection-onnx/onyx-supported-formats.png)
 
 预训练的 Tiny YOLOv2 模型以 ONNX 格式存储，这是层的序列化表示形式，也是这些层的已知模式。 在 ML.NET 中，使用 [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) 和 [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) NuGet 包实现了与 ONNX 的互操作性。 [ `ImageAnalytics` ](xref:Microsoft.ML.Transforms.Image) 包包含一系列转换，这些转换采用图像并将其编码为可用作预测或训练管道输入的数值。 [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) 包利用 ONNX 运行时加载 ONNX 模型并使用它根据提供的输入进行预测。
 
-![ONNX 文件进入 ONNX 运行时并最终进入 C# 应用程序的数据流](./media/object-detection-onnx/onnx-ml-net-integration.png)
+![ONNX 文件到 ONNX 运行时的数据流。](./media/object-detection-onnx/onnx-ml-net-integration.png)
 
 ## <a name="set-up-the-net-core-project"></a>设置 .NET Core 项目
 
@@ -703,7 +703,7 @@ person and its Confidence score: 0.5551759
 
 若要查看带有边界框的图像，请导航到 `assets/images/output/` 目录。 以下是其中一个已处理的图像示例。
 
-![已处理的餐厅图像示例](./media/object-detection-onnx/image3.jpg)
+![已处理的餐厅图像示例](./media/object-detection-onnx/dinning-room-table-chairs.png)
 
 祝贺你！ 现已通过重用 ML.NET 中的预训练 `ONNX` 模型，成功生成了对象检测机器学习模型。
 

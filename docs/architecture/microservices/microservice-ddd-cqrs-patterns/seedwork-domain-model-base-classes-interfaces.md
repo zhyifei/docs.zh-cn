@@ -2,12 +2,12 @@
 title: Seedwork（适用于域模型的可重用基类和接口）
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用 seedwork 概念作为开始实现面向 DDD 的域模型的起点。
 ms.date: 10/08/2018
-ms.openlocfilehash: 87cbc5ce96b66a9ac3e1c2bfc8c863d1b20714db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f53988b92a05fb54f3f05d9f463450d1a11a0843
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093805"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737215"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork（适用于域模型的可重用基类和接口）
 
@@ -15,7 +15,9 @@ ms.locfileid: "73093805"
 
 图 7-12 显示在排序的微服务中形成域模型的 seedwork 的类。 它还包含 Entity、ValueObject 和 Enumeration 等自定义基类，以及一些接口。 这些接口（IRepository 和 IUnitOfWork）告知基础结构层需要实现的内容。 还可通过应用程序层中的依赖关系注入使用这些接口。
 
-![SeedWork 文件夹的详细内容，包含基类和接口：Entity.cs、Enumeration.cs、IAggregateRoot.cs、IRepository.cs、IUnitOfWork.cs 和 ValueObject.cs](./media/image13.PNG)
+:::image type="complex" source="./media/seedwork-domain-model-base-classes-interfaces/vs-solution-seedwork-classes.png" alt-text="SeedWork 文件夹中包含的类的屏幕截图。":::
+SeedWork 文件夹的详细内容，包含基类和接口：Entity.cs、Enumeration.cs、IAggregateRoot.cs、IRepository.cs、IUnitOfWork.cs 和 ValueObject.cs。
+:::image-end:::
 
 **图 7-12**。 域模型“seedwork”基类和接口的示例集
 

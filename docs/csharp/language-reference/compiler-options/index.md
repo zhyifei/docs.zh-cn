@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-ms.openlocfilehash: dab91ddd1f2b9c91560329eeb1c51ca7f6f175bd
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 787f9c5fff79eb67e2d74043782532c1fc4034b5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455246"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972753"
 ---
 # <a name="c-compiler-options"></a>C# 编译器选项
 
@@ -29,7 +29,7 @@ ms.locfileid: "73455246"
 
 - [使用 csc.exe 的命令行生成](command-line-building-with-csc-exe.md) 有关从命令行生成 Visual C# 应用程序的信息。
 
-- [如何：为 Visual Studio 命令行设置环境变量](how-to-set-environment-variables-for-the-visual-studio-command-line.md) 提供运行 vsvars32.bat  以启用命令行生成的步骤。
+- [如何为 Visual Studio 命令行设置环境变量](how-to-set-environment-variables-for-the-visual-studio-command-line.md) 提供运行 vsvars32.bat  以启用命令行生成的步骤。
 
 - [按类别列出的 C# 编译器选项](listed-by-category.md) 编译器选项的分类列表。
 

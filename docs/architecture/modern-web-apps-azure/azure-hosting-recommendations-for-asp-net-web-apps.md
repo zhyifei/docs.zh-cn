@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 关�
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: ed8771a4d79b45d8fad0e5309c886c2e00402ec7
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 5587b8b20da8a6801d77b722e9c3326f6e695574
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71331991"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416718"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>关于 ASP.NET Core Web 应用的 Azure 托管建议
 
@@ -116,7 +116,7 @@ Azure 提供多种数据存储选择，以便应用程序可使用恰当的数�
 
 对于事务和关系数据，Azure SQL 数据库是最佳选择。 对于以读取为主的高性能数据，受 Azure SQL 数据库支持的 Redis 缓存是一个不错的解决方案。
 
-可使用多种方式存储非结构化 JSON 数据，包括 SQL 数据库列、Blob、Azure 存储中的表以及 Cosmos DB。 其中，Cosmos DB 提供最佳查询功能，建议用于必须支持查询的大量基于 JSON 的文档。
+非结构化 JSON 数据可用多种方式进行存储，包括 SQL 数据库列、Blob、Azure 存储中的表，以及 Azure Cosmos DB。 其中，Azure Cosmos DB 可提供最佳的查询功能，建议用于必须支持查询的大量基于 JSON 的文档。
 
 暂时命令或者用于安排应用程序行为的基于事件的数据可使用 Azure 服务总线或 Azure 存储队列。 Azure 存储总线具有更强的灵活性，建议将该服务用于处理应用程序内和应用程序间的非普通消息传递。
 

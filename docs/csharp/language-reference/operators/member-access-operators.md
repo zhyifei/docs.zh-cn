@@ -32,16 +32,16 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 45af31d10d77f4c63b27b34595b97fdd11ef95a1
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: ba2a8cd4995b9baab2071d3fb3c7980e45565692
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116135"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039002"
 ---
 # <a name="member-access-operators-c-reference"></a>成员访问运算符（C# 参考）
 
-访问类型成员时，可能会使用以下运算符：
+访问类型成员时，可以使用以下运算符：
 
 - [`.`（成员访问）](#member-access-operator-)：用于访问命名空间或类型的成员
 - [`[]`（数组元素或索引器访问）](#indexer-operator-)：用于访问数组元素或类型索引器
@@ -88,7 +88,7 @@ ms.locfileid: "71116135"
 
 ### <a name="indexer-access"></a>索引器访问
 
-下面的示例使用 .NET <xref:System.Collections.Generic.Dictionary%602>类型来演示索引器访问：
+下面的示例使用 .NET <xref:System.Collections.Generic.Dictionary%602> 类型来演示索引器访问：
 
 [!code-csharp-interactive[indexer access](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Indexers)]
 
@@ -122,7 +122,7 @@ A?.B?[C];
 
 [!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
 
-上述示例还展示了 [null 合并运算符](null-coalescing-operator.md)的用法。 可能会使用 null 合并运算符来提供替代表达式，以便在 null 条件运算的结果为 `null` 时用于计算。
+前面的示例还使用 [Null 合并运算符 `??`](null-coalescing-operator.md) 来指定替代表达式，以便在 null 条件运算的结果为 `null` 时用于计算。
 
 ### <a name="thread-safe-delegate-invocation"></a>线程安全的委托调用
 
@@ -198,6 +198,8 @@ if (handler != null)
 - [元素访问](~/_csharplang/spec/expressions.md#element-access)
 - [Null 条件运算符](~/_csharplang/spec/expressions.md#null-conditional-operator)
 - [调用表达式](~/_csharplang/spec/expressions.md#invocation-expressions)
+
+有关索引和范围的详细信息，请参阅[功能建议说明](~/_csharplang/proposals/csharp-8.0/ranges.md)。
 
 ## <a name="see-also"></a>请参阅
 

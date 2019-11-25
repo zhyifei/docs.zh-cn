@@ -7,15 +7,13 @@ helpviewer_keywords:
 - strings [.NET Framework], basic string operations
 - custom strings
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seadec18
-ms.openlocfilehash: 8621e79ad6e305f3859dc269965ecd216081f695
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 05cdf399e104fc9e528c954adb19634a5c136664
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150675"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132916"
 ---
 # <a name="basic-string-operations-in-net"></a>.NET 中的基本字符串操作
 应用程序经常通过构造基于用户输入的消息来响应用户。 例如，网站用包含用户名的专用问候语来响应新登录的用户的情况并不少见。 使用 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 类中的多个方法，可以动态构造要在用户界面中显示的自定义字符串。 借助这些方法还可执行许多基本字符串操作，例如，从字节数组创建新字符串，比较字符串的值和修改现有字符串。  
@@ -39,7 +37,7 @@ ms.locfileid: "53150675"
  [使用 StringBuilder 类](../../../docs/standard/base-types/stringbuilder.md)  
  介绍了如何使用 <xref:System.Text.StringBuilder> 类创建和修改动态字符串对象。  
   
- [如何：执行基本的字符串控制](../../../docs/standard/base-types/basic-manipulations.md)  
+ [如何：执行基本字符串控制](../../../docs/standard/base-types/basic-manipulations.md)  
  展示了如何使用基本字符串操作。  
   
 ## <a name="related-sections"></a>相关章节  

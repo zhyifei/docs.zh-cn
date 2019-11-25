@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: b5ef70967c8404dc5ce5b816bb9a1c3b1d7e4230
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: cf8c3ae070f4c77789dc55ba4d7888c7b15c8653
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117352"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736988"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>通过命令行开始在 Windows/Linux/macOS 上使用 .NET Core
 
@@ -39,22 +39,22 @@ dotnet run
 
 1. `dotnet new console`
 
-   [`dotnet new`](../tools/dotnet-new.md) 会创建一个最新的 `Hello.csproj` 项目文件，其中包含生成控制台应用所必需的依赖项。  它还将创建 `Program.cs`，这是包含应用程序的入口点的基本文件。
+   [`dotnet new`](../tools/dotnet-new.md) 会创建一个最新的 Hello.csproj  项目文件，其中包含生成控制台应用所必需的依赖项。 此外，它还会创建一个 Program.cs  ，这是包含应用程序入口点的基本文件。
 
-   `Hello.csproj`：
+   Hello.csproj  ：
 
-   [!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]
+   [!code-xml[Hello.csproj](~/samples/core/console-apps/HelloMsBuild/Hello.csproj)]
 
    项目文件指定还原依赖项和生成程序所需的一切。
 
    - `OutputType` 标记指定我们要生成的可执行文件，即控制台应用程序。
    - `TargetFramework` 标记指定要定位的 .NET 实现代码。 在高级方案中，可以指定多个目标框架，并在单个操作中生成所有目标框架。 在本教程中，我们将仅针对 .NET Core 2.1 进行生成。
 
-   `Program.cs`：
+   Program.cs  :
 
-   [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]
+   [!code-csharp[Program.cs](~/samples/core/console-apps/HelloMsBuild/Program.cs)]
 
-   该程序从 `using System` 开始，这意味着“将 `System` 命名空间中的所有内容都纳入此文件的作用域”。 `System` 命名空间包括基本结构，如 `string` 或数值类型。
+   该程序从 `using System` 开始，这意味着“将 `System` 命名空间中的所有内容都纳入此文件的作用域”。 `System` 命名空间包括 `Console` 类。
 
    接着定义一个名为 `Hello` 的命名空间。 你可以将其更改为任何你喜欢的名称。 在该命名空间中定义了一个名为 `Program` 的类，其中 `Main` 方法将字符串数组作为其参数。 此数组包含在调用编译的程序时所传递的参数列表。 按照这样，不使用此数组：程序所进行的全部操作就是编写“Hello World!” “Hello World!”。 稍后将对使用此参数的代码进行更改。
 
@@ -116,7 +116,7 @@ dotnet run
    15: 377
    ```
 
-就是这么简单！  可以按任意喜欢的方式扩充 `Program.cs`。
+就是这么简单！  可以按任意喜欢的方式扩充 Program.cs  。
 
 ## <a name="working-with-multiple-files"></a>使用多个文件
 
@@ -125,11 +125,11 @@ dotnet run
 
 1. 使用以下代码将新文件添加到名为 *FibonacciGenerator.cs* 的 *Hello* 目录：
 
-   [!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
+   [!code-csharp[Fibonacci Generator](~/samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
 
 2. 更改 *Program.cs* 文件中的 `Main` 方法，以实例化新的类并调用其方法，如下例所示：
 
-   [!code-csharp[New Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+   [!code-csharp[New Program.cs](~/samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
 
 3. 执行 [`dotnet build`](../tools/dotnet-build.md) 以编译更改。
 

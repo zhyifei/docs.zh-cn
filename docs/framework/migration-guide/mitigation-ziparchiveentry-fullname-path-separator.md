@@ -8,14 +8,12 @@ helpviewer_keywords:
 - .NET Framework 4.6.1 retargeting changes
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b97436ca2f81fea139689c7c2c2348718827b90f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 021d22e90ba39a4d01cf7d64588fab2d724b6640
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70778861"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457733"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>缓解：ZipArchiveEntry.FullName 路径分隔符
 自面向 .NET Framework 4.6.1 的应用起，<xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> 属性中使用的路径分隔符已从旧版 .NET Framework 中使用的反斜杠（“\\”）更改为正斜杠（“/”）。   <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType> 对象是通过调用 <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType> 方法的重载之一进行创建。  
@@ -47,4 +45,4 @@ ms.locfileid: "70778861"
 ## <a name="see-also"></a>请参阅
 
 - [重定目标更改](retargeting-changes-in-the-net-framework-4-6-1.md)
-- [4.6.1 中的应用程序兼容性](application-compatibility-in-the-net-framework-4-6-1.md)
+- [应用程序兼容性](application-compatibility.md)

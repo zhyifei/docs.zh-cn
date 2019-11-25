@@ -3,14 +3,14 @@ title: 从方法中返回查询
 description: 如何返回查询。
 ms.date: 11/30/2016
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
-ms.openlocfilehash: fe2192a3edb683d7284ffae3b66cb9f70e8854b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1df533770f76301432b104d6f8398f1687750cce
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519094"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972514"
 ---
-# <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>如何：从方法中返回查询（C# 编程指南）
+# <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>如何从方法中返回查询（C# 编程指南）
 此示例演示如何以返回值和 `out` 参数形式从方法中返回查询。  
   
  查询对象可编写，这意味着你可以从方法中返回查询。 表示查询的对象不会存储生成的集合，而会根据需要存储生成结果的步骤。 从方法中返回查询对象的好处是可以进一步编写或修改这些对象。 因此，返回查询的方法的任何返回值或 `out` 输出参数也必须具有该类型。 如果某个方法可将查询具体化为具体的 <xref:System.Collections.Generic.List%601> 或 <xref:System.Array> 类型，则认为该方法在返回查询结果（而不是查询本身）。 仍然能够编写或修改从方法中返回的查询变量。  

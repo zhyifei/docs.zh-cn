@@ -5,14 +5,12 @@ ms.date: 02/06/2019
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d7c282157639a6a60270ce8dbebbc91dd0e0a3f3
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 45dcc58b252963e80798ba86ca5c4f461d493fac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826611"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120144"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Expression-bodied 成员（C# 编程指南）
 
@@ -22,7 +20,7 @@ ms.locfileid: "55826611"
 member => expression;
 ```
 
-其中“expression”是有效的表达式。
+其中“expression”  是有效的表达式。
 
 C# 6 中引入了针对方法和只读属性的表达式主体定义支持，并在 C# 7.0 中进行了扩展。 表达式主体定义可用于下表列出的类型成员：
 
@@ -71,7 +69,7 @@ PropertyType PropertyName => expression;
 
 构造函数的表达式主体定义通常包含单个赋值表达式或一个方法调用，该方法调用可处理构造函数的参数，也可初始化实例状态。
 
-以下示例定义 `Location` 类，其构造函数具有一个名为“name”的字符串参数。 表达式主体定义向 `Name` 属性分配参数。
+以下示例定义 `Location` 类，其构造函数具有一个名为“name”  的字符串参数。 表达式主体定义向 `Name` 属性分配参数。
 
 [!code-csharp[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
 
@@ -89,9 +87,9 @@ PropertyType PropertyName => expression;
 
 ## <a name="indexers"></a>索引器
 
-与属性一样，如果索引器的 Get 访问器包含单个返回值的语句或其 Set 访问器执行简单的赋值，则 Get 和 Set 访问器包含表达式主体定义。
+与使用属性一样，如果 `get` 访问器包含返回值的单个表达式或 `set` 访问器执行简单的赋值，则索引器 `get` 和 `set` 访问器包含表达式主体定义。
 
-下面的示例定义名为 `Sports` 的类，其中包含一个内部 <xref:System.String> 数组，该数组包含大量体育运动的名称。 索引器的 Get 和 Set 访问器都以表达式主体定义的形式实现。
+下面的示例定义名为 `Sports` 的类，其中包含一个内部 <xref:System.String> 数组，该数组包含大量体育运动的名称。 索引器的 `get` 和 `set` 访问器都以表达式主体定义的形式实现。
 
 [!code-csharp[expression-bodied-indexer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)]
 

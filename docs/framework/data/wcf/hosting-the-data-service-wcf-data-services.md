@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: 15122984dbaf3245436ff21836065c05131f71d1
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 3abcd901bcb8a175aa6f30e53b142cbbde56a579
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894325"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975244"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>承载数据服务（WCF 数据服务）
-通过使用 WCF 数据服务，你可以创建一个将数据公开为[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源的服务。 此数据服务定义为从 <xref:System.Data.Services.DataService%601> 继承的类。 此类提供处理请求消息、对数据源执行更新以及根据 OData 生成响应消息所需的功能。 但是，数据服务不能绑定到网络套接字并侦听传入的 HTTP 请求。 对于这一必需的功能，数据服务依赖于宿主计算机。
+通过使用 WCF 数据服务，你可以创建一个将数据公开为 Open Data Protocol （OData）源的服务。 此数据服务定义为从 <xref:System.Data.Services.DataService%601> 继承的类。 此类提供处理请求消息、对数据源执行更新以及根据 OData 生成响应消息所需的功能。 但是，数据服务不能绑定到网络套接字并侦听传入的 HTTP 请求。 对于这一必需的功能，数据服务依赖于宿主计算机。
 
  数据服务主机可代表数据服务执行以下任务：
 

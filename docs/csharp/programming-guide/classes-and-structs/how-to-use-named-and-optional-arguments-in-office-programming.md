@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Office 编程中使用命名参数和可选参数 - C# 编程指南
+title: 如何在 Office 编程中使用命名实参和可选实参（C# 编程指南）
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: 90b60a6410ffbe7f9802b01bf3303b6e842a1424
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: d7efd13f26912f8cd944bcbc5568e9bbca92c3a0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002792"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970496"
 ---
-# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>如何：在 Office 编程中使用命名参数和可选参数（C# 编程指南）
+# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>如何在 Office 编程中使用命名实参和可选实参（C# 编程指南）
 
 在 C# 4 中引入的命名参数和可选参数增强了 C# 编程中的便利性、灵活性和可读性。 另外，这些功能显著方便了对 COM 接口（如 Microsoft Office 自动化 API）的访问。
 

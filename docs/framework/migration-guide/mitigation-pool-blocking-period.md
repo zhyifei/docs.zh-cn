@@ -2,14 +2,12 @@
 title: 缓解：池阻止时间段
 ms.date: 03/30/2017
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 71f1b06e53b3851ca3f65edc1755527779b42a67
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 98396d4254975d1806a8477cbcd2380cb52ceaf3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789968"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457842"
 ---
 # <a name="mitigation-pool-blocking-period"></a>缓解：池阻止时间段
 与 Azure SQL 数据库的连接已删除连接池阻止时间段。  
@@ -35,4 +33,4 @@ ms.locfileid: "70789968"
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时更改](runtime-changes-in-the-net-framework-4-6-2.md)
+- [应用程序兼容性](application-compatibility.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 93f02b8a0f828be89c6a1b7bfcdc6ba2a2a93e81
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: c6eff1cae79e7b555c5a41d10712b4f3022ff793
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597191"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419492"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>匿名类型（C# 编程指南）
 
@@ -29,7 +29,7 @@ var v = new { Amount = 108, Message = "Hello" };
 Console.WriteLine(v.Amount + v.Message);  
 ```  
   
- 匿名类型通常用在查询表达式的 [select](../../language-reference/keywords/select-clause.md) 子句中，以便返回源序列中每个对象的属性子集。 有关查询的详细信息，请参阅 [LINQ 查询表达式](../linq-query-expressions/index.md)。  
+ 匿名类型通常用在查询表达式的 [select](../../language-reference/keywords/select-clause.md) 子句中，以便返回源序列中每个对象的属性子集。 有关查询的详细信息，请参阅[C# 中的 LINQ](../../linq/index.md)。  
   
  匿名类型包含一个或多个公共只读属性。 包含其他种类的类成员（如方法或事件）为无效。 用来初始化属性的表达式不能为 `null`、匿名函数或指针类型。  
   
@@ -48,7 +48,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
 ```  
   
 ## <a name="remarks"></a>备注  
- 匿名类型是直接从[对象](../../language-reference/keywords/object.md)派生的[类](../../language-reference/keywords/class.md)类型，并且其无法强制转换为除[对象](../../language-reference/keywords/object.md)外的任意类型。 虽然你的应用程序不能访问它，编译器还是提供了每一个匿名类型的名称。 从公共语言运行时的角度来看，匿名类型与任何其他引用类型没有什么不同。  
+ 匿名类型是直接从[对象](../../language-reference/builtin-types/reference-types.md)派生的[类](../../language-reference/keywords/class.md)类型，并且其无法强制转换为除[对象](../../language-reference/builtin-types/reference-types.md)外的任意类型。 虽然你的应用程序不能访问它，编译器还是提供了每一个匿名类型的名称。 从公共语言运行时的角度来看，匿名类型与任何其他引用类型没有什么不同。  
   
  如果程序集中的两个或多个匿名对象初始值指定了属性序列，这些属性采用相同顺序且具有相同的名称和类型，则编译器将对象视为相同类型的实例。 它们共享同一编译器生成的类型信息。  
   
@@ -60,5 +60,5 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
 
 - [C# 编程指南](../index.md)
 - [对象和集合初始值设定项](./object-and-collection-initializers.md)
-- [C# 中的 LINQ 入门](../concepts/linq/getting-started-with-linq.md)
-- [LINQ 查询表达式](../linq-query-expressions/index.md)
+- [C# 中的 LINQ 入门](/dotnet/csharp/programming-guide/concepts/linq/)
+- [C# 中的 LINQ](../../linq/index.md)

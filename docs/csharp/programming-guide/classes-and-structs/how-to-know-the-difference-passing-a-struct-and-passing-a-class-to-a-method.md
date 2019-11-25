@@ -1,5 +1,5 @@
 ---
-title: 如何：了解向方法传递结构与类引用的区别 - C# 编程指南
+title: 如何了解向方法传递结构和向方法传递类引用之间的区别（C# 编程指南）
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: 09b40a1ee8ab57a4b8a641acae49ab31a14d3d5b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9bacc7b3913a6e353e39f1e45fa99ea2dcdbe668
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70893139"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970547"
 ---
-# <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>如何：了解向方法传递结构与类引用的区别（C# 编程指南）
+# <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>如何了解向方法传递结构和向方法传递类引用之间的区别（C# 编程指南）
 下面的示例演示向方法传递[结构](../../language-reference/keywords/struct.md)和向方法传递[类](../../language-reference/keywords/class.md)实例之间的区别。 在此示例中，这两个参数（结构和类实例）都按值传递，并且两个方法都更改了参数的一个字段的值。 但是，由于传递结构和传递类实例时所传递的内容不同，所以这两个方法的结果不同。  
   
  因为结构是[值类型](../../language-reference/keywords/value-types.md)，所以[按值将结构传递](./passing-value-type-parameters.md)给方法时，该方法接收结构参数的副本并在其上运行。 该方法无法访问调用方法中的原始结构，因此无法对其进行任何更改。 它只能更改副本。  

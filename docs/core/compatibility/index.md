@@ -2,12 +2,12 @@
 title: 评估 NET Core 中的中断性变更
 description: 了解 .NET Core 为开发人员保持各 .NET 版本兼容性所使用的方法。
 ms.date: 06/10/2019
-ms.openlocfilehash: f4e18a17f58452c9325f36390626ae690f5ed777
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3ad3cbe36ee09d371e26dc7da36a31207a6c1b25
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739349"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973649"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>评估 .NET Core 中的中断性变更
 
@@ -103,7 +103,7 @@ ms.locfileid: "73739349"
 
   请注意，引入重写可能会导致先前的使用者在调用[基](../../csharp/language-reference/keywords/base.md)时跳过重写。
 
-- **✔️ 若类过去不包含任何构造函数，向类添加构造函数及默认的（无参数）构造函数**
+- **✔️ 若类过去不包含任何构造函数，则向类添加一个构造函数及无参数构造函数**
 
    但是，不允许在未对过去不包含任何构造函数的类添加无参数构造函数的情况下向其添加构造函数。 
 

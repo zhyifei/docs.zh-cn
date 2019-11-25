@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: fe7704b9366bf46f0c9965f78ce441000ead6334
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 1ac8964f915206205d5c9e6ab782fcaa59bf2a99
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460790"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975717"
 ---
 # <a name="control-authoring-overview"></a>控件创作概述
 
@@ -36,7 +36,7 @@ ms.locfileid: "73460790"
   > [!NOTE]
   > 尽管 <xref:System.Windows.Controls.RadioButton> 可以使用 <xref:System.Windows.DataTemplate>，但在此示例中，<xref:System.Windows.DataTemplate> 不足。  <xref:System.Windows.DataTemplate> 定义控件内容的外观。 在 <xref:System.Windows.Controls.RadioButton>的情况下，内容就是显示 <xref:System.Windows.Controls.RadioButton> 是否选中的圆圈右侧显示的任何内容。  在交通信号灯的示例中，单选按钮只需要是可“点亮”的圆圈。 因为交通信号灯的外观要求与 <xref:System.Windows.Controls.RadioButton>默认外观有所不同，所以需要重新定义 <xref:System.Windows.Controls.ControlTemplate>。  通常，<xref:System.Windows.DataTemplate> 用于定义控件的内容（或数据），而 <xref:System.Windows.Controls.ControlTemplate> 用于定义控件的构建方式。
 
-- **触发器。** <xref:System.Windows.Trigger> 允许动态更改控件的外观和行为，而无需创建新的控件。 例如，假设应用程序中有多个 <xref:System.Windows.Controls.ListBox> 控件，并希望每个 <xref:System.Windows.Controls.ListBox> 中的项在被选中时均为粗体和红色。 你的第一个 instinct 可能是创建一个继承自 <xref:System.Windows.Controls.ListBox> 的类，并重写 <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> 方法来更改所选项的外观，但更好的方法是将触发器添加到更改所选项外观的 <xref:System.Windows.Controls.ListBoxItem> 的样式. 触发器可以更改属性值或根据属性值执行操作。 使用 <xref:System.Windows.EventTrigger> 可以在发生事件时执行操作。
+- **触发器。** <xref:System.Windows.Trigger> 允许动态更改控件的外观和行为，而无需创建新的控件。 例如，假设应用程序中有多个 <xref:System.Windows.Controls.ListBox> 控件，并希望每个 <xref:System.Windows.Controls.ListBox> 中的项在被选中时均为粗体和红色。 你的第一个 instinct 可能是创建一个继承自 <xref:System.Windows.Controls.ListBox> 的类，并重写 <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> 方法以更改选定项的外观，但更好的方法是将触发器添加到更改所选项外观的 <xref:System.Windows.Controls.ListBoxItem> 的样式中。 触发器可以更改属性值或根据属性值执行操作。 使用 <xref:System.Windows.EventTrigger> 可以在发生事件时执行操作。
 
 有关样式、模板和触发器的详细信息，请参阅[样式设置和模板化](styling-and-templating.md)。
 
@@ -187,7 +187,7 @@ ms.locfileid: "73460790"
 
 ### <a name="design-for-designers"></a>设计器的设计
 
-若要在 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 中获得对自定义 WPF 控件的支持（例如，使用“属性”窗口编辑属性），请遵循以下准则。  有关为 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]进行开发的详细信息，请参阅[在 Visual Studio 中设计 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)。
+若要在 Visual Studio 的 WPF 设计器中接收自定义 WPF 控件的支持（例如，用属性窗口的属性编辑），请遵循以下准则。  有关开发 WPF 设计器的详细信息，请参阅[在 Visual Studio 中设计 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)。
 
 #### <a name="dependency-properties"></a>依赖项属性
 

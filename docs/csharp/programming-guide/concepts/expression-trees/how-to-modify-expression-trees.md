@@ -1,15 +1,15 @@
 ---
-title: 如何：修改表达式树 (C#)
+title: 如何修改表达式树 (C#)
 ms.date: 07/20/2015
 ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
-ms.openlocfilehash: 7875cf1ccca8866cc87ebec80701ad77ad2bea2d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e921c594497d02f5eb16cc60294e947e83636d7a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595054"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969893"
 ---
-# <a name="how-to-modify-expression-trees-c"></a>如何：修改表达式树 (C#)
+# <a name="how-to-modify-expression-trees-c"></a>如何修改表达式树 (C#)
 本主题演示如何修改表达式树。 表达式树是不可变的，这意味着不能直接对它们进行修改。 若要更改表达式树，必须创建现有表达式树的副本，创建此副本后，进行必要的更改。 可以使用 <xref:System.Linq.Expressions.ExpressionVisitor> 类遍历现有表达式树，以及复制它访问的每个节点。  
   
 ### <a name="to-modify-an-expression-tree"></a>修改表达式树  
@@ -72,5 +72,5 @@ ms.locfileid: "69595054"
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：执行表达式树 (C#)](./how-to-execute-expression-trees.md)
+- [如何执行表达式树 (C#)](./how-to-execute-expression-trees.md)
 - [表达式树 (C#)](./index.md)

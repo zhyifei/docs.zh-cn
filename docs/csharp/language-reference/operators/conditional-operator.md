@@ -10,16 +10,16 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 923591634599a6bbac74d43b105f4e46b492fa1a
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 7397c5b2b2278f487a98b029b00924d3151913db
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796462"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036293"
 ---
 # <a name="-operator-c-reference"></a>?: 运算符（C# 参考）
 
-条件运算符 (`?:`) 通常被称为三元条件运算符，用于计算 Boolean 表达式，并根据 Boolean 表达式的计算结果为 `true` 还是 `false` 来返回计算两个表达式其中之一的结果。 从 C# 7.2 开始，[ref 条件表达式](#conditional-ref-expression)将返回对两个表示式之一的结果的引用。
+条件运算符 (`?:`) 也被称为三元条件运算符，用于计算布尔表达式，并根据布尔表达式的计算结果为 `true` 还是 `false` 来返回两个表达式中的一个结果。 从 C# 7.2 开始，[ref 条件表达式](#conditional-ref-expression)将返回对两个表示式之一的结果的引用。
 
 条件运算符的语法如下所示：
 
@@ -72,21 +72,21 @@ ref 条件表达式与原始的条件运算符相似，仅计算两个表达式�
 
 [!code-csharp-interactive[conditional ref](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalRef)]
 
-有关详细信息，请参阅[功能建议说明](~/_csharplang/proposals/csharp-7.2/conditional-ref.md)。
-
 ## <a name="conditional-operator-and-an-ifelse-statement"></a>条件运算符和 `if..else` 语句
 
-需要根据条件计算值时，在 [if-else](../keywords/if-else.md) 语句中使用条件运算符可以使代码更简洁。 下面的示例演示了将整数归类为负数或非负数的两种方法：
+需要根据条件计算值时，使用条件运算符而不是 [if-else](../keywords/if-else.md) 语句可以使代码更简洁。 下面的示例演示了将整数归类为负数或非负数的两种方法：
 
 [!code-csharp[conditional and if-else](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#CompareWithIf)]
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 
-无法重载条件运算符。
+用户定义类型不能重载条件运算符。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
 有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[条件运算符](~/_csharplang/spec/expressions.md#conditional-operator)部分。
+
+有关条件 ref 表达式的详细信息，请参阅[功能建议说明](~/_csharplang/proposals/csharp-7.2/conditional-ref.md)。
 
 ## <a name="see-also"></a>请参阅
 
@@ -94,5 +94,5 @@ ref 条件表达式与原始的条件运算符相似，仅计算两个表达式�
 - [C# 运算符](index.md)
 - [if-else 语句](../keywords/if-else.md)
 - [?. 和 ?[] 运算符](member-access-operators.md#null-conditional-operators--and-)
-- [?? 运算符](null-coalescing-operator.md)
+- [?? 和 ??= 运算符](null-coalescing-operator.md)
 - [ref 关键字](../keywords/ref.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：确定安装了哪些 .NET Framework 安全更新和修补程序
+title: 安装了哪些 .NET Framework 安全更新和修补程序
 description: 了解如何确定计算机上安装了哪些 .NET Framework 安全更新和修补程序。
 ms.date: 11/27/2017
 dev_langs:
@@ -11,35 +11,35 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c69d4bb370087dddafbfed41cbfb1fef229677c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: aad202e7c9df01c2893e74a39744f2c32783f1f0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318951"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735200"
 ---
-# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>如何：确定安装了哪些 .NET Framework 安全更新和修补程序
+# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>如何确定安装了哪些 .NET Framework 安全更新和修补程序
 
 本文介绍如何找出计算机上安装了哪些 .NET Framework 安全更新和修补程序。
 
 > [!NOTE]
 > 本文中介绍的所有方法均需要具有管理权限的帐户。
 
-## <a name="to-find-installed-updates-using-the-registry"></a>使用注册表找到已安装的更新
+## <a name="use-registry-editor"></a>使用注册表编辑器
 
 安装在计算机上的各个版本 .NET Framework 的已安装安全更新和修补程序都列在 Windows 注册表中。 可以使用注册表编辑器 (regedit.exe) 程序查看此信息  。
 
-1. 打开程序 **regedit.exe**。 在 Windows 8 和更高版本中，右键单击“开始”![Windows 徽标键徽标的屏幕截图。](./media/how-to-determine-which-net-framework-updates-are-installed/windows-keyboard-logo.png "Windowskeyboardlogo")，然后选择“运行”   。 在“打开”对话框中，输入“regedit.exe”并选择“确定”    。
+1. 打开程序 **regedit.exe**。 在 Windows 8 和更高版本中，右键单击“开始”![Windows 键徽标的屏幕截图 ](./media/how-to-determine-which-net-framework-updates-are-installed/windows-keyboard-logo.png "Windowskeyboardlogo")，然后选择“运行”   。 在“打开”对话框中，输入“regedit.exe”并选择“确定”    。
 
 2. 在注册表编辑器中，打开以下子项：
 
-     `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates`
+     **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates**
 
      已安装的更新在标识适用的 .NET Framework 版本的子项下方列出。 每个更新均由知识库 (KB) 编号进行标识。
 
 在注册表编辑器中，.NET Framework 版本和每个版本已安装的更新都保存在不同的子项中。 有关检测已安装版本号的信息，请参阅[如何：确定已安装的 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)。
 
-## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>通过在代码中查询注册表找到已安装的更新
+## <a name="query-the-registry-using-code"></a>使用代码查询注册表
 
 以下示例以编程方式确定已安装在计算机上的 .NET Framework 安全更新和修补程序：
 
@@ -67,7 +67,7 @@ Microsoft .NET Framework 4 Extended
   KB2600217
 ```
 
-## <a name="to-find-installed-updates-by-querying-the-registry-in-powershell"></a>在 PowerShell 中查询注册表找到已安装的更新
+## <a name="use-powershell-to-query-the-registry"></a>使用 PowerShell 查询注册表
 
 以下示例介绍如何使用 PowerShell 确定已安装在计算机上的 .NET Framework 安全更新和修补程序：
 

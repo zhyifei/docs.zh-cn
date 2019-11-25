@@ -2,12 +2,12 @@
 title: 使用 HttpClientFactory 实现复原 HTTP 请求
 description: 了解如何使用自 .NET Core 2.1 起可用的 HttpClientFactory 来创建 `HttpClient` 实例，使其更轻松地在应用程序中使用。
 ms.date: 08/08/2019
-ms.openlocfilehash: 3f9b3b18cede07e4c5c56600634ae230c0e251bb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9eff4a01361b3dc6f7471bc012c945d048b9a276
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72578912"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737740"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 实现复原 HTTP 请求
 
@@ -21,7 +21,7 @@ ms.locfileid: "72578912"
 
 因此，`HttpClient` 应进行一次实例化并在应用程序的生命周期中重复使用。 在负载较重的情况下，实例化每个请求的 `HttpClient` 类将耗尽可用的套接字数。 该问题会导致 `SocketException` 错误。 要解决此问题，可能的方法是将 `HttpClient` 对象创建为单一对象或静态对象，请参阅[关于 HttpClient 用法的 Microsoft 文章](../../../csharp/tutorials/console-webapiclient.md)中的说明。
 
-但将 `HttpClient` 对象用作单一对象或静态对象时还有一个问题。 在这种情况下，单一实例或静态 `HttpClient` 不考虑 DNS 更改，请参阅 dotnet/corefx GitHub 存储库中的此[问题](https://github.com/dotnet/corefx/issues/11224)中的说明。 
+但将 `HttpClient` 对象用作单一对象或静态对象时还有一个问题。 在这种情况下，单一实例或静态 `HttpClient` 不考虑 DNS 更改，请参阅 dotnet/corefx GitHub 存储库中的此[问题](https://github.com/dotnet/corefx/issues/11224)中的说明。
 
 为解决上述问题并使 `HttpClient` 实例管理更轻松，.NET Core 2.1 引入了新的 `HttpClientFactory`，后者可与 Polly 集成来实现弹性 HTTP 调用。
 
@@ -35,6 +35,9 @@ ms.locfileid: "72578912"
 - 通过后列方式整理出站中间件的概念：在 `HttpClient` 中委托处理程序并实现基于 Polly 的中间件以利用 Polly 的复原策略。
 - `HttpClient` 已经具有委托处理程序的概念，这些委托处理程序可以链接在一起，处理出站 HTTP 请求。 将 HTTP 客户端注册到工厂后，可使用一个 Polly 处理程序将 Polly 策略用于重试、断路器等。
 - 管理 `HttpClientMessageHandlers` 的生存期，避免在自行管理 `HttpClient` 生存期时出现上述问题。
+
+> [!NOTE]
+> `HttpClientFactory` 与 `Microsoft.Extensions.DependencyInjection` NuGet 包中的依赖项注入 (DI) 实现紧密相关。 有关使用其他依赖项注入容器的详细信息，请参阅此 [GitHub 讨论](https://github.com/aspnet/Extensions/issues/1345)。
 
 ## <a name="multiple-ways-to-use-httpclientfactory"></a>HttpClientFactory 的多种用法
 
@@ -53,17 +56,19 @@ ms.locfileid: "72578912"
 
 下图显示了如何将类型化客户端与 `HttpClientFactory` 结合使用：
 
-![ClientService（由控制器或客户端代码使用）使用由注册的 IHttpClientFactory 创建的 HttpClient。 此工厂从它管理的池中向 HttpClient 分配一个 HttpMessageHandler。 当使用扩展方法 AddHttpClient 在 DI 容器中注册 IHttpClientFactory 时，可以使用 Polly 策略配置 HttpClient。](./media/image3.5.png)
+![展示如何将类型化客户端与 HttpClientFactory 结合使用的图表。](./media/use-httpclientfactory-to-implement-resilient-http-requests/client-application-code.png)
 
 **图 8-4**。 将 HttpClientFactory 与类型化客户端类结合使用。
 
-首先，通过安装包含 `IServiceCollection` 的 `AddHttpClient()` 扩展方法的 `Microsoft.Extensions.Http` NuGet 包，在应用程序中设置 `HttpClientFactory`。 此扩展方法用于注册 `DefaultHttpClientFactory`，后者用作接口 `IHttpClientFactory` 的单一实例。 它定义 `HttpMessageHandlerBuilder` 的临时配置。 此消息处理程序（`HttpMessageHandler` 对象）获取自池，可供从工厂返回的 `HttpClient` 使用。
+在上图中，ClientService（由控制器或客户端代码使用）使用由注册的 `IHttpClientFactory` 创建的 `HttpClient`。 此工厂从它所管理的池中为 `HttpClient` 分配 `HttpMessageHandler`。 当使用扩展方法 `AddHttpClient` 在 DI 容器中注册 `IHttpClientFactory` 时，可以使用 Polly 策略配置 `HttpClient`。
+
+要配置上述结构，请通过安装包含 `IServiceCollection` 的 `AddHttpClient()` 扩展方法的 `Microsoft.Extensions.Http` NuGet 包，在应用程序中添加 `HttpClientFactory`。 此扩展方法用于注册 `DefaultHttpClientFactory`，后者用作接口 `IHttpClientFactory` 的单一实例。 它定义 `HttpMessageHandlerBuilder` 的临时配置。 此消息处理程序（`HttpMessageHandler` 对象）获取自池，可供从工厂返回的 `HttpClient` 使用。
 
 在下一个代码中，可以看到如何使用 `AddHttpClient()` 注册需要使用 `HttpClient` 的类型化客户端（服务代理）。
 
 ```csharp
 // Startup.cs
-//Add http client services at ConfigureServices(IServiceCollection services) 
+//Add http client services at ConfigureServices(IServiceCollection services)
 services.AddHttpClient<ICatalogService, CatalogService>();
 services.AddHttpClient<IBasketService, BasketService>();
 services.AddHttpClient<IOrderingService, OrderingService>();
@@ -105,7 +110,7 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 池中的 `HttpMessageHandler` 对象的生存期就是池中的 `HttpMessageHandler` 实例可重用的时间长度。 默认值为两分钟，但可基于每个类型化客户端重写此值。 要重写该值，请在创建客户端时在返回的 `IHttpClientBuilder` 上调用 `SetHandlerLifetime()`，如以下代码所示：
 
 ```csharp
-//Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client 
+//Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client
 services.AddHttpClient<ICatalogService, CatalogService>()
     .SetHandlerLifetime(TimeSpan.FromMinutes(5));
 ```
@@ -127,10 +132,10 @@ public class CatalogService : ICatalogService
         _httpClient = httpClient;
     }
 
-    public async Task<Catalog> GetCatalogItems(int page, int take, 
+    public async Task<Catalog> GetCatalogItems(int page, int take,
                                                int? brand, int? type)
     {
-        var uri = API.Catalog.GetAllCatalogItems(_remoteServiceBaseUrl, 
+        var uri = API.Catalog.GetAllCatalogItems(_remoteServiceBaseUrl,
                                                  page, take, brand, type);
 
         var responseString = await _httpClient.GetStringAsync(uri);
@@ -180,14 +185,17 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 
 ## <a name="additional-resources"></a>其他资源
 
-- **在 .NET Core 中使用 HttpClientFactory** \
+- 在 .NET Core 中使用 HttpClientFactory   
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
-- **HttpClientFactory GitHub 存储库** \
+- `aspnet/Extensions` GitHub 存储库中的 HttpClientFactory 源代码   
   <https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory>
 
-- **Polly（.NET 复原能力和暂时性故障处理库）**  \
+- **Polly（.NET 的恢复和暂时性故障处理库）**  
   <http://www.thepollyproject.org/>
+  
+- **使用无依赖项注入的 HttpClientFactory（GitHub 问题）**  
+  <https://github.com/aspnet/Extensions/issues/1345>
 
 >[!div class="step-by-step"]
 >[上一页](explore-custom-http-call-retries-exponential-backoff.md)

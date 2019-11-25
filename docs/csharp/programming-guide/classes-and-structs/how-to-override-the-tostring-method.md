@@ -1,19 +1,19 @@
 ---
-title: 如何：重写 ToString 方法 - C# 编程指南
+title: 如何替代 ToString 方法（C# 编程指南）
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: 9dd567e537768ceb8b9f61ce58dccd443db38ec7
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 3d5b63609ea61764d4042d534c40d8032fb82841
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419340"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970474"
 ---
-# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>如何：重写 ToString 方法（C# 编程指南）
+# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>如何替代 ToString 方法（C# 编程指南）
 
 C# 中的每个类或结构都可隐式继承 <xref:System.Object> 类。 因此，C# 中的每个对象都会获取 <xref:System.Object.ToString%2A> 方法，该方法返回该对象的字符串表示形式。 例如，类型为 `int` 的所有变量都有一个 `ToString` 方法，使它们可以将其内容作为字符串返回：  
   

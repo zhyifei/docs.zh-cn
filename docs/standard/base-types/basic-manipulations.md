@@ -9,15 +9,13 @@ dev_langs:
 helpviewer_keywords:
 - strings [.NET Framework], examples
 ms.assetid: 121d1eae-251b-44c0-8818-57da04b8215e
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 11f8043745c631a642b437339240cbf06fc8df5b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9c5cdd15e189b8f0821f52d216c398299d44a5ba
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130632"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105736"
 ---
 # <a name="how-to-perform-basic-string-manipulations-in-net"></a>如何：执行 .NET 中的基本字符串控制
 下面的示例使用[基本字符串操作](../../../docs/standard/base-types/basic-string-operations.md)主题中介绍的一些方法，构造模拟现实应用执行字符串控制的类。 `MailToData` 类将个人的姓名和地址存储在单独的属性中，并提供一种将 `City`、`State` 和 `Zip` 字段合并成向用户显示的单个字符串的方式。 此外，该类允许用户以单个字符串的形式输入将城市、州/省和邮政编码信息；应用程序会自动分析此字符串，并将正确的信息输入到相应的属性中。  

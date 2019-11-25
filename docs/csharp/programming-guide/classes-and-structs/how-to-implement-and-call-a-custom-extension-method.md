@@ -1,18 +1,18 @@
 ---
-title: 如何：实现和调用自定义扩展方法 - C# 编程指南
+title: 如何实现和调用自定义扩展方法 - C# 编程指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: 26ad1d2251388237e186d1ba0e885fd7def66467
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f3d96c033380698ade37c49ecbfeed14f05d3e11
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596879"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970895"
 ---
-# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>如何：实现和调用自定义扩展方法（C# 编程指南）
+# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>如何实现和调用自定义扩展方法（C# 编程指南）
 本主题将介绍如何为任意 .NET 类型实现自定义扩展方法。 客户端代码可以通过以下方法使用扩展方法，添加包含这些扩展方法的 DLL 的引用，以及添加 [using](../../language-reference/keywords/using-directive.md) 指令，该指令指定在其中定义扩展方法的命名空间。  
   
 ## <a name="to-define-and-call-the-extension-method"></a>定义和调用扩展方法  

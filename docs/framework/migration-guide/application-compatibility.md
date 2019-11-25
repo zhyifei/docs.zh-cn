@@ -1,81 +1,69 @@
 ---
-title: .NET Framework 中的应用程序兼容性
-ms.date: 05/19/2017
+title: 运行时和重定向更改 - .NET Framework
+ms.date: 10/29/2019
 helpviewer_keywords:
 - application compatibility
 - .NET Framework application compatibility
 - .NET Framework changes
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f547180995ec155f9121eeace109e7dfb07c7827
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c46f781d495b87a4f24e77935df7c4814c8567ae
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790124"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196695"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework 中的应用程序兼容性
 
-## <a name="introduction"></a>介绍
-兼容性是每版 .NET 要实现的非常重要的目标。 兼容性可确保每个版本都具有累加特征，以便旧版本仍能正常使用。 然而，更改旧功能（以便提升性能、解决安全问题或修复 bug）可能会导致在更高版本 .NET 上运行的现有代码或应用出现兼容性问题。 .NET Framework 可识别重定目标更改和运行时更改。 重定目标更改会影响定位特定版本的 .NET Framework、但在更高版本 .NET 上运行的应用。 运行时更改会影响在特定版本 .NET 上运行的所有应用。
+兼容性是每个 .NET 版本的重要目标。 兼容性可确保每个版本都具有累加特征，以便旧版本继续正常使用。 然而，更改旧功能（例如，用来提升性能、解决安全性问题或修复 bug 等）可能会导致在更高版本 .NET 上运行的现有代码或应用程序出现兼容性问题。
 
-每个应用都定位特定版本的 .NET Framework，这可以通过下列方式指定：
+每个应用都通过以下方式面向特定版本的 .NET Framework：
 
 - 在 Visual Studio 中定义目标框架。
 - 在项目文件中指定目标框架。
 - 向源代码应用 <xref:System.Runtime.Versioning.TargetFrameworkAttribute>。
 
-如果应用在比目标 .NET 版本更高的版本上运行，.NET Framework 会通过怪异的行为来模拟旧版目标版本。 也就是说，应用虽然在更高版本的 Framework 上运行，但行为就像在旧版本 .NET 上运行一样。 .NET Framework 各版本之间的许多兼容性问题都是通过这种怪异的模型进行缓解。 应用程序面向的 .NET Framework 版本取决于运行代码的应用程序域的输入程序集的目标版本。 该应用程序域中加载的所有附加程序集都面向此 .NET Framework 版本。 例如，如果是可执行文件，该可执行文件面向的框架就是一个兼容模式，应用程序域中的所有程序集都将在这个兼容模式下运行。
+从一个 .NET Framework 版本迁移到另一个版本时，需注意以下两种类型的更改：
+
+- [运行时更改](#runtime-changes)
+- [重定目标更改](#retargeting-changes)
 
 ## <a name="runtime-changes"></a>运行时更改
 
-运行时问题是指当新的运行时出现在计算机上、运行的二进制文件相同、但行为不同时出现的问题。 如果二进制文件的编译目标为 .NET Framework 4.0，它将在 4.5 或更高版本上的 .NET Framework 4.0 兼容性模式下运行。 许多影响 4.5 的更改将不会影响编译目标为 4.0 的二进制文件。 这是 AppDomain 才会出现的问题，具体视输入程序集的设置而定。
+运行时问题是指当新的运行时出现在计算机上并且应用的行为更改时出现的问题。 如果应用在比目标 .NET 版本更高的版本上运行，.NET Framework 会通过怪异的行为来模拟旧版目标版本。  应用在较高的版本中运行，但其行为方式如同运行于较低版本中一样。 .NET Framework 各版本之间的许多兼容性问题都是通过这种怪异的模型进行缓解。 例如，如果编译了用于 .NET Framework 4.0 的二进制文件，但在安装了 .NET Framework 4.5 或更高版本的计算机上运行它，它就会采用 .NET Framework 4.0 兼容模式运行。 这意味着，较高版本中的许多更改不影响此二进制文件。
+
+应用程序面向的 .NET Framework 版本取决于运行代码的应用程序域的输入程序集的目标版本。 该应用程序域中加载的所有附加程序集都面向此版本。 例如，如果是可执行文件，则该可执行文件面向的版本就是一个兼容模式，应用程序域中的所有程序集都在这个兼容模式下运行。
+
+如果要查看适用于你的环境的运行时更改列表，请选择当前面向的 .NET Framework 版本，然后选择要迁移到的版本：
+
+[!INCLUDE[versionselector](../../../includes/migration-guide/runtime/versionselector.md)]
 
 ## <a name="retargeting-changes"></a>重定目标更改
 
-重定目标问题是指当原本定位 4.0 的程序集现在设为定位 4.5 时出现的问题。 此时，程序集启用新功能，并存在与旧功能的潜在兼容性问题。 再强调一遍，这取决于输入程序集，同样也取决于使用此程序集的控制台应用或引用此程序集的网站。
+重定向更改是指在将程序集重写编译为面向较高版本时发生的更改。 面向较高版本意味着程序集会选择加入新功能，同时可能存在与旧功能的兼容性问题。
 
-## <a name="net-compatibility-diagnostics"></a>.NET 兼容性诊断
+如果要查看适用于你的环境的重定目标更改列表，请选择当前面向的 .NET Framework 版本，然后选择要迁移到的版本：
 
-.NET 兼容性诊断是 Roslyn 提供技术支持的分析器，有助于确定 .NET Framework 不同版本之间的应用程序兼容性问题。 此列表包含所有可用的分析器，尽管仅部分分析器适用于任何具体的迁移。 这些分析器可确定计划迁移会发生的问题，并仅显示这些问题。
+[!INCLUDE[versionselector](../../../includes/migration-guide/retargeting/versionselector.md)]
 
-每个问题包含以下信息：
+## <a name="impact-classification"></a>影响分类
 
-- 从以前版本发生的更改的介绍。
+在介绍运行时和重定向更改的主题中（例如，[从 4.7.2 迁移到 4.8 的重定向更改](retargeting/4.7.2-4.8.md)），已根据其预期影响为各项进行了分类，如下所示：
 
-- 更改对客户造成了哪些影响，以及是否有任何解决办法可以保持各版本的兼容性。
+**Major**\
+显著的更改，可影响大量应用或需要修改大量代码。
 
-- 对于更改重要性的评估。 应用程序兼容性问题可分成以下几类：
+**Minor**\
+影响少量应用或需要修改少量代码的更改。
 
-    |   |   |
-    |---|---|
-    |主要|影响大量应用或需要修改大量代码的重大更改。|
-    |次要|影响少量应用或需要修改少量代码的更改。|
-    |边缘情况|在极少数特定的情况下影响应用的更改。|
-    |透明|对应用开发者或用户没有造成显著影响的更改。|
+**边缘情况**\
+仅在少数非常特定的情况下影响应用的更改。
 
-- 版本指示了更改首次出现在框架中的时间。 某些更改会在特定版本中引入，并在以后的版本中进行还原；这也会在版本中指出。
-
-- 更改类型：
-
-    |   |   |
-    |---|---|
-    |重定目标|更改会影响重新编译以面向新版 .NET Framework 的应用。|
-    |运行时|更改会影响面向以前版本的 .NET Framework 但在更高版本上运行的现有应用。|
-
-- 受影响的 API（如果有）。
-
-- 可用诊断的 ID
-
-## <a name="usage"></a>用法
-首先，从下面选择一种兼容性更改类型：
-
-- [重定目标更改](./retargeting/index.md)
-- [运行时更改](./runtime/index.md)
+**透明**\
+对应用的开发人员或用户没有明显影响的更改。 不需要由于此更改而修改应用。
 
 ## <a name="see-also"></a>请参阅
 
 - [版本和依赖关系](versions-and-dependencies.md)
 - [新增功能](../whats-new/index.md)
-- [类库中过时的内容](../whats-new/whats-obsolete.md)
+- [过时内容](../whats-new/whats-obsolete.md)

@@ -14,32 +14,32 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 41355dbadd566648b45d825cdd6515bfc6d411aa
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: e6a190e3d6e283f2ce3b1690ec2bfd15d50dfc6e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610040"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972640"
 ---
 # <a name="-and--operators-c-reference"></a>+ 和 += 运算符（C# 参考）
 
-`+` 运算符受内置数字类型、[字符串](../keywords/string.md)类型和[委托](../keywords/delegate.md)类型的支持。
+内置[整型](../builtin-types/integral-numeric-types.md)和[浮点](../builtin-types/floating-point-numeric-types.md)数值类型、[字符串](../builtin-types/reference-types.md#the-string-type)类型以及[委托](../builtin-types/reference-types.md#the-delegate-type)类型支持 `+` 和 `+=` 运算符。
 
 有关算术 `+` 运算符的信息，请参阅[一元加和减运算符](arithmetic-operators.md#unary-plus-and-minus-operators)和[算术运算符](arithmetic-operators.md)文章的[加法运算符 +](arithmetic-operators.md#addition-operator-) 部分。
 
 ## <a name="string-concatenation"></a>字符串串联
 
-当其中的一个操作数是[字符串](../keywords/string.md)类型或两个操作数都是字符串类型时，`+` 运算符将其操作数的字符串表示形式串联在一起：
+当其中的一个操作数是[字符串](../builtin-types/reference-types.md#the-string-type)类型或两个操作数都是字符串类型时，`+` 运算符将其操作数的字符串表示形式串联在一起：
 
 [!code-csharp-interactive[string concatenation](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddStrings)]
 
-从 C# 6 开始，[字符串内插](../tokens/interpolated.md)提供了格式化字符串的更便捷方式：
+从 C# 6 开始，[字符串内插](../tokens/interpolated.md)提供了格式化字符串更为便捷的方式：
 
 [!code-csharp-interactive[string interpolation](~/samples/csharp/language-reference/operators/AdditionOperator.cs#UseStringInterpolation)]
 
 ## <a name="delegate-combination"></a>委托组合
 
-对于[委托](../keywords/delegate.md)类型相同的操作数，`+` 运算符在调用时返回新的委托实例，调用左侧的操作数，然后调用右侧的操作数。 如果任何操作数均为 `null`，则 `+` 运算符将返回另一个操作数（也可能是 `null`）的值。 下面的示例演示如何组合使用委托和 `+` 运算符：
+对于[委托](../builtin-types/reference-types.md#the-delegate-type)类型相同的操作数，`+` 运算符在调用时返回新的委托实例，调用左侧的操作数，然后调用右侧的操作数。 如果任何操作数均为 `null`，则 `+` 运算符将返回另一个操作数（也可能是 `null`）的值。 下面的示例演示如何组合使用委托和 `+` 运算符：
 
 [!code-csharp-interactive[delegate combination](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddDelegates)]
 
@@ -62,7 +62,7 @@ x = x + y
 ```
 
 不同的是 `x` 只计算一次。
-  
+
 下面的示例演示 `+=` 运算符的用法：
 
 [!code-csharp-interactive[+= examples](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddAndAssign)]
@@ -81,9 +81,7 @@ x = x + y
 
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)
-- [字符串内插](../tokens/interpolated.md)
-- [如何：连接多个字符串](../../how-to/concatenate-multiple-strings.md)
-- [委托](../../programming-guide/delegates/index.md)
+- [如何连接多个字符串](../../how-to/concatenate-multiple-strings.md)
 - [事件](../../programming-guide/events/index.md)
 - [算术运算符](arithmetic-operators.md)
 - [- 和 -= 运算符](subtraction-operator.md)

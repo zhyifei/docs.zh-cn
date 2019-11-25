@@ -12,14 +12,12 @@ api_type:
 ms.assetid: b91765e4-82db-46f9-a6dc-6b80610276af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fea08331fffb85c91721d60764bae8bfe8b30e27
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: b59fbc2acefa907bb3f881b7ed183388d2e4c368
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928805"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103373"
 ---
 # <a name="ilcodekind-enumeration"></a>ILCodeKind 枚举
 [仅在 .NET Framework 4.5.2 及更高版本中受支持]  
@@ -35,7 +33,7 @@ typedef enum ILCodeKind {
 } ILCodeKind;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员名称|描述|  
 |-----------------|-----------------|  
@@ -43,19 +41,19 @@ typedef enum ILCodeKind {
 |`ILCODE_REJIT_IL`|调试器可以访问 ReJIT 检测的信息。|  
   
 ## <a name="remarks"></a>备注  
- `ILCodeKind`枚举的成员可以传递给[EnumerateLocalVariablesEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md)和[GetLocalVariableEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md)方法，以确定调试器是否可以访问在探查器 ReJIT 检测中添加的变量，以及[GetCodeEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md)方法，用于确定调试器是否可以访问已检测的 IL。  
+ 可以将 `ILCodeKind` 枚举的成员传递给 [EnumerateLocalVariablesEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) 和 [GetLocalVariableEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) 方法，以确定调试器是否可以访问在探查器 ReJIT 检测中添加的变量，还可以传递给 [GetCodeEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) 方法以确定调试器是否可以访问检测到的 IL。  
   
 ## <a name="requirements"></a>要求  
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl，Cordebug.idl  
+ **标头**：CorDebug.idl、CorDebug.h  
   
- **类库**CorGuids.lib  
+ **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
 - [ICorDebugILFrame4 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)
-- [ReJIT操作方法指南](https://blogs.msdn.microsoft.com/davbr/2011/10/12/rejit-a-how-to-guide/)
+- [ReJIT：操作方法指南](https://blogs.msdn.microsoft.com/davbr/2011/10/12/rejit-a-how-to-guide/)

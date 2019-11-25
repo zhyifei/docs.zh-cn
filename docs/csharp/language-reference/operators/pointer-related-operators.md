@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 830aef8546191df3df4a70e350ba561367a9e474
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 9851fcd056eeee33b8f3d7e9d541f9fa43b36d29
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512357"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036150"
 ---
 # <a name="pointer-related-operators-c-reference"></a>指针相关运算符（C# 参考）
 
@@ -48,7 +48,7 @@ ms.locfileid: "68512357"
 
 [!code-csharp[address of local](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOf)]
 
-`&` 运算符的操作数必须是固定变量。 固定变量是驻留在不受[垃圾回收器](../../../standard/garbage-collection/index.md)操作影响的存储位置的变量  。 在上述示例中，局部变量 `number` 是固定变量，因为它驻留在堆栈上。 驻留在可能受垃圾回收器影响的存储位置的变量（如重定位）称为可移动变量  。 对象字段和数组元素是可移动变量的示例。 如果使用[固定](../keywords/fixed-statement.md)语句“固定”，则可以获取可移动变量的地址。 获取的地址仅在 `fixed` 语句块的持续时间内有效。 以下示例显示如何使用 `fixed` 语句和 `&` 运算符：
+`&` 运算符的操作数必须是固定变量。 固定变量是驻留在不受[垃圾回收器](../../../standard/garbage-collection/index.md)操作影响的存储位置的变量  。 在上述示例中，局部变量 `number` 是固定变量，因为它驻留在堆栈上。 驻留在可能受垃圾回收器影响的存储位置的变量（如重定位）称为可移动变量  。 对象字段和数组元素是可移动变量的示例。 如果使用 [`fixed` 语句](../keywords/fixed-statement.md)“固定”，则可以获取可移动变量的地址。 获取的地址仅在 `fixed` 语句块中有效。 以下示例显示如何使用 `fixed` 语句和 `&` 运算符：
 
 [!code-csharp[address of fixed](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOfFixed)]
 
@@ -70,7 +70,7 @@ ms.locfileid: "68512357"
 
 ## <a name="pointer-member-access-operator--"></a>指针成员访问运算符 ->
 
-`->` 运算符将[指针间接](#pointer-indirection-operator-)和[成员访问](member-access-operators.md#member-access-operator-)合并。 也就是说，如果 `x` 是类型为 `T*` 的指针且 `y` 是 `T` 的可访问成员，则形式的表达式
+`->` 运算符将[指针间接](#pointer-indirection-operator-)和[成员访问](member-access-operators.md#member-access-operator-)合并。 也就是说，如果 `x` 是类型为 `T*` 的指针且 `y` 是类型 `T` 的可访问成员，则形式的表达式
 
 ```csharp
 x->y
@@ -166,7 +166,7 @@ x->y
 
 使用括号 `()` 更改运算符优先级所施加的计算顺序。
 
-要了解按优先级排序的完整 C# 运算符列表，请参阅 [C# 运算符](index.md)。
+要了解按优先级排序的完整 C# 运算符列表，请参阅 [C# 运算符](index.md#operator-precedence)一文中的[运算符优先级](index.md)部分。
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 

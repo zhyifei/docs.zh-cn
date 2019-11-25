@@ -2,12 +2,12 @@
 title: 针对相关的疑难解答
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-ms.openlocfilehash: d4b7b4ecd724416256cf0b2499d7180200f4e75c
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: be48a55a87d199829de4038e7e2a7642c102acf2
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291552"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976016"
 ---
 # <a name="troubleshooting-correlation"></a>针对相关的疑难解答
 相关用于在工作流服务消息之间和工作流服务消息与正确的工作流实例之间建立关联，如果未正确配置相关，则将接收不到消息，且应用程序无法正常运行。 本主题概述了对相关问题进行疑难解答的几种方法，还列出了使用相关时可能出现的一些常见问题。
@@ -47,9 +47,7 @@ class CustomFactory : WorkflowServiceHostFactory
 
  随后可在服务的 <xref:System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory> 文件中指定此自定义 `svc`。
 
-```
-<% @ServiceHost Language="C#" Service="OrderServiceWorkflow" Factory="CustomFactory" %>
-```
+`<% @ServiceHost Language="C#" Service="OrderServiceWorkflow" Factory="CustomFactory" %>`
 
  调用此处理程序时，消息可以使用 <xref:System.ServiceModel.UnknownMessageReceivedEventArgs.Message%2A> 的 <xref:System.ServiceModel.UnknownMessageReceivedEventArgs> 属性进行检索，并且类似于下面的消息。
 
@@ -70,13 +68,13 @@ class CustomFactory : WorkflowServiceHostFactory
  检查调度到 <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived> 处理程序的消息可能会提供有关消息未与工作流服务实例关联的原因的线索。
 
 ## <a name="use-tracking-to-monitor-the-progress-of-the-workflow"></a>使用跟踪监视工作流进度
- 通过跟踪可监视工作流的进度。 默认情况下，将针对工作流生命周期事件、活动生命周期事件、错误传播以及书签恢复发出跟踪记录。 此外，自定义活动也可以发出自定义跟踪记录。 对相关问题进行疑难解答时，活动跟踪记录、书签恢复记录以及错误传播记录是最有用的。 活动跟踪记录可用于确定工作流的当前进度，并有助于识别当前正等待消息的消息传递活动。 书签恢复记录很有用是因为这些记录可指示工作流已接收到消息，而错误传播记录则提供工作流中所有错误的记录。 若要启用跟踪，请在 <xref:System.Activities.Tracking.TrackingParticipant> 的 <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> 中指定所需 <xref:System.ServiceModel.Activities.WorkflowServiceHost>。 在下面的示例中，使用默认跟踪配置文件配置 @no__t 0 （来自[自定义跟踪](../../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md)示例）。
+ 通过跟踪可监视工作流的进度。 默认情况下，将针对工作流生命周期事件、活动生命周期事件、错误传播以及书签恢复发出跟踪记录。 此外，自定义活动也可以发出自定义跟踪记录。 对相关问题进行疑难解答时，活动跟踪记录、书签恢复记录以及错误传播记录是最有用的。 活动跟踪记录可用于确定工作流的当前进度，并有助于识别当前正等待消息的消息传递活动。 书签恢复记录很有用是因为这些记录可指示工作流已接收到消息，而错误传播记录则提供工作流中所有错误的记录。 若要启用跟踪，请在 <xref:System.Activities.Tracking.TrackingParticipant> 的 <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> 中指定所需 <xref:System.ServiceModel.Activities.WorkflowServiceHost>。 在下面的示例中，使用默认跟踪配置文件配置 `ConsoleTrackingParticipant` （来自[自定义跟踪](../../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md)示例）。
 
 ```csharp
 host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 ```
 
- 跟踪参与者（如 ConsoleTrackingParticipant）对于具有控制台窗口的自承载工作流服务很有用。 对于 Web 承载的服务，应使用将跟踪信息记录到持久存储区的跟踪参与者，例如内置 @no__t 0 或将信息记录到文件的自定义跟踪参与者。
+ 跟踪参与者（如 ConsoleTrackingParticipant）对于具有控制台窗口的自承载工作流服务很有用。 对于 Web 承载的服务，应使用将跟踪信息记录到持久存储区的跟踪参与者，例如内置 <xref:System.Activities.Tracking.EtwTrackingParticipant>或将信息记录到文件的自定义跟踪参与者。
 
  有关跟踪和配置 Web 承载的工作流服务跟踪的详细信息，请参阅[工作流跟踪和跟踪](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)、[为工作流配置跟踪](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)和[跟踪&#91;WF 示例&#93; ](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md)示例。
 
@@ -116,7 +114,7 @@ host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 </configuration>
 ```
 
- 若要查看 `service.svclog` 中包含的跟踪信息，请使用[服务跟踪查看器工具（svctraceviewer.exe）](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) 。 对基于内容的相关问题进行疑难解答时，此工具尤其有用，因为您可查看消息内容，并准确了解传递的内容以及它是否与基于内容的相关的 <xref:System.ServiceModel.CorrelationQuery> 匹配。 有关 WCF 跟踪的详细信息，请参阅[服务跟踪查看器工具（svctraceviewer.exe）](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)、[配置跟踪](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)和[使用跟踪对应用程序进行故障排除](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)。
+ 若要查看 `service.svclog`中包含的跟踪信息，请使用[服务跟踪查看器工具（svctraceviewer.exe）](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) 。 对基于内容的相关问题进行疑难解答时，此工具尤其有用，因为您可查看消息内容，并准确了解传递的内容以及它是否与基于内容的相关的 <xref:System.ServiceModel.CorrelationQuery> 匹配。 有关 WCF 跟踪的详细信息，请参阅[服务跟踪查看器工具（svctraceviewer.exe）](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)、[配置跟踪](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)和[使用跟踪对应用程序进行故障排除](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)。
 
 ## <a name="common-context-exchange-correlation-issues"></a>常见上下文交换相关问题
  某些类型的相关需要使用特定类型的绑定才能正常工作。 例如需要双向绑定（如 <xref:System.ServiceModel.BasicHttpBinding>）的请求-答复相关和需要基于上下文的绑定（如 <xref:System.ServiceModel.BasicHttpContextBinding>）的上下文交换相关。 大多数绑定支持双向操作，因此这对于请求-答复相关并不是常见问题，但是只有几种基于上下文的绑定，包括 <xref:System.ServiceModel.BasicHttpContextBinding>、<xref:System.ServiceModel.WSHttpContextBinding> 和 <xref:System.ServiceModel.NetTcpContextBinding>。 如果未使用这些绑定中的一种，则对工作流服务的初次调用会成功，但是后续调用会失败并出现下面的 <xref:System.ServiceModel.FaultException>。
@@ -131,9 +129,9 @@ supports the context protocol and has a valid context initialized.
  用于上下文相关的上下文信息可由 <xref:System.ServiceModel.Activities.SendReply> 返回到 <xref:System.ServiceModel.Activities.Receive> 活动，该活动在使用双向操作时初始化上下文相关，如果操作是单向的，则上下文信息也可由调用方指定。 如果调用方未发送上下文，或工作流服务未返回上下文，则当调用后续操作时，会返回前面介绍的 <xref:System.ServiceModel.FaultException>。
 
 ## <a name="common-request-reply-correlation-issues"></a>常见请求-答复相关问题
- 请求-答复相关与 <xref:System.ServiceModel.Activities.Receive> @ no__t-1 @ no__t-2 对一起使用，以便在工作流服务中实现双向操作，并使用 @no__t 3 @ no__t @ no__t-5 对调用另一个 Web 服务中的双向操作。 在 WCF 服务中调用双向操作时，该服务可以是传统的基于命令性代码的 WCF 服务，也可以是工作流服务。 若要使用请求-答复相关，必须使用双向绑定（如 <xref:System.ServiceModel.BasicHttpBinding>），且操作则必须是双向的。
+ 请求-答复相关与 <xref:System.ServiceModel.Activities.Receive>/<xref:System.ServiceModel.Activities.SendReply> 对一起使用，以便在工作流服务中实现双向操作，并使用在另一个 Web 服务中调用双向操作的 <xref:System.ServiceModel.Activities.Send>/<xref:System.ServiceModel.Activities.ReceiveReply> 对。 在 WCF 服务中调用双向操作时，该服务可以是传统的基于命令性代码的 WCF 服务，也可以是工作流服务。 若要使用请求-答复相关，必须使用双向绑定（如 <xref:System.ServiceModel.BasicHttpBinding>），且操作则必须是双向的。
 
- 如果工作流服务有并行的双向操作，或者重叠 <xref:System.ServiceModel.Activities.Receive> @ no__t-1 @ no__t; 或 <xref:System.ServiceModel.Activities.Send> @ no__t @ no__t 对，则 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 提供的隐式相关句柄管理可能不足，尤其是在高压力方案和消息可能无法正确路由。 若要防止此问题发生，我们建议您在使用请求-答复相关时，始终显式指定 <xref:System.ServiceModel.Activities.CorrelationHandle>。 使用工作流设计器中 "**工具箱**" 的 "消息传送" 部分中的**SendAndReceiveReply**和**ReceiveAndSendReply**模板时，默认情况下会显式配置 @no__t。 使用代码生成工作流时，将在对中第一个活动的 <xref:System.ServiceModel.Activities.CorrelationHandle> 中指定 <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A>。 在下面的示例中，使用 <xref:System.ServiceModel.Activities.Receive> 中指定的显式 <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A> 来配置 <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> 活动。
+ 如果工作流服务具有并行的双向操作，或重叠 <xref:System.ServiceModel.Activities.Receive>/<xref:System.ServiceModel.Activities.SendReply> 或 <xref:System.ServiceModel.Activities.Send>/<xref:System.ServiceModel.Activities.ReceiveReply> 对，则 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 提供的隐式相关句柄管理可能不足，特别是在高压力方案下，消息可能无法正确路由。 若要防止此问题发生，我们建议您在使用请求-答复相关时，始终显式指定 <xref:System.ServiceModel.Activities.CorrelationHandle>。 使用工作流设计器中 "**工具箱**" 的 "消息传送" 部分中的**SendAndReceiveReply**和**ReceiveAndSendReply**模板时，默认情况下显式配置 <xref:System.ServiceModel.Activities.CorrelationHandle>。 使用代码生成工作流时，将在对中第一个活动的 <xref:System.ServiceModel.Activities.CorrelationHandle> 中指定 <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A>。 在下面的示例中，使用 <xref:System.ServiceModel.Activities.Receive> 中指定的显式 <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A> 来配置 <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> 活动。
 
 ```csharp
 Variable<CorrelationHandle> RRHandle = new Variable<CorrelationHandle>();
@@ -161,7 +159,7 @@ SendReply ReplyToStartOrder = new SendReply
 // Construct a workflow using StartOrder and ReplyToStartOrder.
 ```
 
- 不允许在 <xref:System.ServiceModel.Activities.Receive> @ no__t-1 @ no__t-2 对或 <xref:System.ServiceModel.Activities.Send> @ no__t @ no__t 对之间使用持久性。 会创建一个非永久性区域，该区域会持续到两个活动都已完成。 如果某个活动（如延迟活动）处于此非永久性区域中，并使工作流成为空闲状态，则工作流不会持久，即使主机配置为在工作流成为空闲状态时保持工作流也是如此。 如果某个活动（如 Persist 活动）尝试在非永久性区域中显式保持，则会引发严重异常，工作流会中止，并将 <xref:System.ServiceModel.FaultException> 返回给调用方。 严重异常消息为 "InvalidOperationException：不能在无持久性块中包含持久活动。 "。 此异常不会返回给调用方，但是可以观察到（如果启用了跟踪）。 返回给调用方的 <xref:System.ServiceModel.FaultException> 消息为“无法执行操作，因为 WorkflowInstance‘5836145b-7da2-49d0-a052-a49162adeab6’已完成”。
+ 在 <xref:System.ServiceModel.Activities.Receive>/<xref:System.ServiceModel.Activities.SendReply> 对或 <xref:System.ServiceModel.Activities.Send>/<xref:System.ServiceModel.Activities.ReceiveReply> 对之间不允许使用持久性。 会创建一个非永久性区域，该区域会持续到两个活动都已完成。 如果某个活动（如延迟活动）处于此非永久性区域中，并使工作流成为空闲状态，则工作流不会持久，即使主机配置为在工作流成为空闲状态时保持工作流也是如此。 如果某个活动（如 Persist 活动）尝试在非永久性区域中显式保持，则会引发严重异常，工作流会中止，并将 <xref:System.ServiceModel.FaultException> 返回给调用方。 严重异常消息为“System.InvalidOperationException: 非永久性块内不能包含 Persist 活动”。 此异常不会返回给调用方，但是可以观察到（如果启用了跟踪）。 返回给调用方的 <xref:System.ServiceModel.FaultException> 消息为“无法执行操作，因为 WorkflowInstance‘5836145b-7da2-49d0-a052-a49162adeab6’已完成”。
 
  有关请求-答复相关性的详细信息，请参阅[请求-答复](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)。
 
@@ -188,7 +186,7 @@ MessageQuerySet = new MessageQuerySet
 }
 ```
 
- 如果未正确配置 XPath 查询以便检索不到相关数据，则会返回带有以下消息的错误："相关查询生成了一个空的结果集。 请确保正确配置了终结点的相关查询。” 解决此问题的一种快速方式是将 XPath 查询替换为文本值，如上一节中所述。 如果使用 "**添加相关初始值设定项**" 或 " **CorrelatesOn 定义**" 对话框中的 XPath 查询生成器，并且工作流服务使用消息协定，则会出现此问题。 下面的示例定义了一个消息协定类。
+ 如果 XPath 查询配置不正确，从而未检索到任何相关数据，则会返回错误，同时显示下面的消息：“相关查询生成了空结果集。 请确保正确配置了终结点的相关查询。” 解决此问题的一种快速方式是将 XPath 查询替换为文本值，如上一节中所述。 如果使用 "**添加相关初始值设定项**" 或 " **CorrelatesOn 定义**" 对话框中的 XPath 查询生成器，并且工作流服务使用消息协定，则会出现此问题。 下面的示例定义了一个消息协定类。
 
 ```csharp
 [MessageContract]

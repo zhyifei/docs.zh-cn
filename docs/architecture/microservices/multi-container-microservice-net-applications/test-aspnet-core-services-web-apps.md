@@ -2,12 +2,12 @@
 title: 测试 ASP.NET Core 服务和 Web 应用
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 探索用于在容器中测试 ASP.NET Core 服务和 Web 应用的体系结构。
 ms.date: 10/02/2018
-ms.openlocfilehash: 278d12b8215195351673a41149db5af6fcecddfb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 324b71d830bca43be71e8847fe2dd1b8b1593556
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772020"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739478"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>测试 ASP.NET Core 服务和 Web 应用
 
@@ -144,7 +144,7 @@ compose 应用程序运行后，如果运行 Visual Studio，可利用断点和�
 
 每个微服务的单元和集成测试包含在每个微服务的测试文件夹中，应用程序负载测试包含在解决方案文件夹中的测试文件夹下，如图 6-25 所示。
 
-![eShopOnContainers 中的测试结构：每个服务都具有包含单元和功能测试的“测试”文件夹。 解决方案“测试”文件夹下是应用程序范围功能测试和负载测试。](./media/image42.png)
+![VS 指出解决方案中某些测试项目的屏幕截图。](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
 
 **图 6-25**。 eShopOnContainers 中的测试文件夹结构
 

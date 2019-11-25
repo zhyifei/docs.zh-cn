@@ -5,14 +5,14 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: 7480c86af1acd482adff5e3e24dc229f24af0e5b
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 64920f1d226fcc8265d0be252d4751f2ba278cc1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216315"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973279"
 ---
-# <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>如何：将 Windows 窗体桌面应用程序移植到 .NET Core
+# <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>如何将 Windows 窗体桌面应用程序移植到 .NET Core
 
 本文介绍如何将基于 Windows 窗体的桌面应用程序从 .NET Framework 移植到 .NET Core 3.0。 .NET Core 3.0 SDK 支持 Windows 窗体应用程序。 Windows 窗体仍是仅适用于 Windows 的框架，并且只能在 Windows 上运行。 示例使用 .NET Core SDK CLI 创建和管理项目。
 

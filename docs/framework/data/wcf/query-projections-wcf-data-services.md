@@ -10,22 +10,22 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 8128fd3cab0ca20da87a1a98c2657aefab96beaf
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17475cccf461371a909660bfe3f8db29bf1fa2fe
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779828"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975177"
 ---
 # <a name="query-projections-wcf-data-services"></a>查询投影（WCF 数据服务）
 
-投影在中[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]提供了一种机制，可通过指定仅在响应中返回实体的某些属性来减少查询返回的源中的数据量。 有关详细信息，请[参阅 OData：选择系统查询选项（$select）](https://go.microsoft.com/fwlink/?LinkId=186076)。
+投影在 Open Data Protocol （OData）中提供了一种机制，用于通过指定在响应中仅返回某个实体的某些属性来减少查询返回的源中的数据量。 有关详细信息，请参阅[OData：选择系统查询选项（$select）](https://go.microsoft.com/fwlink/?LinkId=186076)。
 
 本主题介绍如何定义查询投影、实体和非实体类型的需求、对投影的结果进行更新、创建投影的类型，还列出一些投影的注意事项。
 
 ## <a name="defining-a-query-projection"></a>定义查询投影
 
-您可以通过使用 URI 中的`$select`查询选项或在 LINQ 查询中使用[select](../../../csharp/language-reference/keywords/select-clause.md)子句（在 Visual Basic 中[选择](../../../visual-basic/language-reference/queries/select-clause.md)），将投影子句添加到查询中。 可以将返回的实体数据投影到客户端上的实体类型或非实体类型。 本主题中的示例演示如何在 LINQ 查询中使用 `select` 子句。
+您可以通过使用 URI 中的 `$select` 查询选项或在 LINQ 查询中使用[select](../../../csharp/language-reference/keywords/select-clause.md)子句（在 Visual Basic 中[选择](../../../visual-basic/language-reference/queries/select-clause.md)），将投影子句添加到查询中。 可以将返回的实体数据投影到客户端上的实体类型或非实体类型。 本主题中的示例演示如何在 LINQ 查询中使用 `select` 子句。
 
 > [!IMPORTANT]
 > 保存对投影的类型所进行的更新时，数据服务中可能会发生数据丢失。 有关详细信息，请参阅[投影注意事项](#considerations)。
@@ -38,7 +38,7 @@ ms.locfileid: "70779828"
 
 - 当类型拥有一个名为 `ID` 的属性时。
 
-- 当该类型具有一个名为*type*`ID`的属性时，其中*type*是该类型的名称。
+- 当该类型具有一个名为*type*的属性`ID`时，其中*type*是该类型的名称。
 
 默认情况下，将查询结果投影到在客户端定义的类型时，投影中所请求的属性必须存在于客户端类型中。 但是，当为 `true` 的 <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> 属性指定值 <xref:System.Data.Services.Client.DataServiceContext> 时，投影中指定的属性不必出现在客户端类型中。
 
@@ -65,36 +65,36 @@ ms.locfileid: "70779828"
 
 **使用初始值设定项创建新的投影实例**
 
-- 示例：
+- 示例:
 
    [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithinitializer)]
    [!code-vb[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithinitializer)]
 
-- 实体类型：支持
+- 实体类型：受支持
 
-- 非实体类型：支持
+- 非实体类型：受支持
 
 **使用构造函数创建新的投影实例**
 
-- 示例：
+- 示例:
 
    [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithconstructor)]
    [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithconstructor)]
 
 - 实体类型：引发 <xref:System.NotSupportedException>。
 
-- 非实体类型：支持
+- 非实体类型：受支持
 
 **使用投影转换属性值**
 
-- 示例：
+- 示例:
 
    [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithtransform)]
    [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithtransform)]
 
-- 实体类型：实体类型不支持此转换，因为这会导致混淆并且可能会覆盖数据源中属于另一个实体的数据。 引发 <xref:System.NotSupportedException>。
+- 实体类型：此转换对于实体类型不受支持，因为这可能会导致混淆，并可能会覆盖属于另一实体的数据源中的数据。 引发 <xref:System.NotSupportedException>。
 
-- 非实体类型：支持
+- 非实体类型：受支持
 
 <a name="considerations"></a>
 
@@ -114,7 +114,7 @@ ms.locfileid: "70779828"
 
 - 在客户端上进行查询的查询投影在请求 URI 中转换为使用 `$select` 查询选项。 基于不支持 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 查询选项的早期 `$select` 版本执行具有投影的查询时，将会返回错误。 当数据服务的 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> 的 <xref:System.Data.Services.DataServiceBehavior> 设置为值 <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1> 时也会发生这种情况。 有关详细信息，请参阅[数据服务版本控制](data-service-versioning-wcf-data-services.md)。
 
-有关详细信息，请参阅[如何：项目查询结果](how-to-project-query-results-wcf-data-services.md)。
+有关详细信息，请参阅[如何：投影查询结果](how-to-project-query-results-wcf-data-services.md)。
 
 ## <a name="see-also"></a>请参阅
 

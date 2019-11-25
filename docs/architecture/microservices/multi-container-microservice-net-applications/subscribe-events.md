@@ -2,12 +2,12 @@
 title: 订阅事件
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解发布和订阅集成事件的详细信息。
 ms.date: 10/02/2018
-ms.openlocfilehash: 208b0f27aa1e6ceb6686e9e846b6e31d9f1c74df
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c607f8b980f7dffacf3564688c6c9bb498264d96
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035641"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737057"
 ---
 # <a name="subscribing-to-events"></a>订阅事件
 
@@ -139,7 +139,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 图 6-22 展示了第一种方法的体系结构。
 
-![在发布事件时处理原子性的一种方法是：使用一个事务将事件提交到事件日志表，然后使用另一个事务进行发布（在 eShopOnContainers 中使用）](./media/image23.png)
+![不使用辅助角色微服务发布时的原子性关系图。](./media/subscribe-events/atomicity-publish-event-bus.png)
 
 图 6-22  。 将事件发布到事件总线时的原子性
 
@@ -147,7 +147,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 关于第二种方法：将 EventLog 表用作队列，并始终使用辅助微服务来发布消息。 在这种情况下，其过程如图 6-23 所示。 图中显示了一个附加的微服务，并且该表作为发布事件时的单一事件源。
 
-![处理原子性的另一种方法：发布到事件日志表，然后由另一个微服务（后台辅助角色）发布该事件。](./media/image24.png)
+![使用辅助角色微服务发布时的原子性关系图。](./media/subscribe-events/atomicity-publish-worker-microservice.png)
 
 图 6-23  。 使用辅助微服务将事件发布到事件总线时的原子性
 
@@ -279,7 +279,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 事件处理程序需要验证该产品是否存在于任何购物车实例中。 它还会更新每个相关购物车订单项的商品价格。 最后，它会创建一个警报，以向用户显示价格变化，如图 6-24 所示。
 
-![显示用户购物车中的进程更改通知的浏览器视图。](./media/image25.png)
+![显示用户购物车的价格变化通知的浏览器屏幕截图。](./media/subscribe-events/display-item-price-change.png)
 
 图 6-24  。 根据集成事件传达的信息显示购物车中商品的价格变化
 

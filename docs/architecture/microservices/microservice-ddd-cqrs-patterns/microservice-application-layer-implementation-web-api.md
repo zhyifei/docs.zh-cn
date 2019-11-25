@@ -2,12 +2,12 @@
 title: 使用 Web API 实现微服务应用层
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解依赖关系注入和转存进程模式及其在 Web API 应用层中的实现详细信息。
 ms.date: 10/08/2018
-ms.openlocfilehash: c73823a0449fdf81ba3d886efdef540bd1aa6121
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 08cb409b06a54c6b30afa393a817e14bd64fbcbf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454845"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737521"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 实现微服务应用层
 
@@ -17,7 +17,9 @@ ms.locfileid: "73454845"
 
 例如，订购微服务的应用层代码直接在 Ordering.API 项目（ASP.NET Core Web API 项目）中实现，如图 7-23 所示  。
 
-![Ordering.API 微服务的解决方案资源管理器视图，显示“应用程序”文件夹下的子文件夹：行为、命令、DomainEventHandler、IntegrationEvent、模型、查询和验证。](./media/image20.png)
+:::image type="complex" source="./media/microservice-application-layer-implementation-web-api/ordering-api-microservice.png" alt-text="解决方案资源管理器中 Ordering.API 微服务的屏幕截图。":::
+Ordering.API 微服务的解决方案资源管理器视图，显示“应用程序”文件夹下的子文件夹：行为、命令、DomainEventHandler、IntegrationEvent、模型、查询和验证。
+:::image-end:::
 
 **图 7-23**。 Ordering.API ASP.NET Core Web API 项目中的应用程序层
 
@@ -181,9 +183,11 @@ Autofac 还具有用于[按名称约定扫描程序集和注册类型](https://a
 
 如图 7-24 所示，该模式基于接受客户端的命令、根据域模式规则进行处理，最后保持事务状态。
 
-![CQRS 中写入端的高级视图：UI 应用通过 API 发送命令，命令会到达 CommandHandler，后者依赖于域模型和基础结构来更新数据库。](./media/image21.png)
+![显示从客户端到数据库的高级别数据流的关系图。](./media/microservice-application-layer-implementation-web-api/high-level-writes-side.png)
 
 **图 7-24**。 CQRS 模式中的命令高级别视图或“事务端”
+
+图 7-24 显示 UI 应用通过 API 向 `CommandHandler` 发送命令以更新数据库，此命令取决于域模型和基础结构。
 
 ### <a name="the-command-class"></a>命令类
 
@@ -423,9 +427,11 @@ public class CreateOrderCommandHandler
 
 如图 7-25 所示，在 CQRS 方法中使用类似于内存中总线的智能转存进程，该进程非常智能，可基于要接收的命令或 DTO 的类型重定向到正确的命令处理程序。 组件之间的黑色箭头表示对象（许多情况下，通过 DI 注入）之间的依赖关系及其相关交互。
 
-![从上一张图中进行放大：ASP.NET Core 控制器将命令发送到 MediatR 的命令管道，使它们到达相应的处理程序。](./media/image22.png)
+![显示从客户端到数据库的详细数据流的关系图。](./media/microservice-application-layer-implementation-web-api/mediator-cqrs-microservice.png)
 
 **图 7-25**。 在单个 CQRS 微服务进程中使用转存进程模式
+
+上图显示了图 7-24 的放大图：ASP.NET Core 控制器将命令发送到 MediatR 的命令管道，使它们到达相应的处理程序。
 
 使用转存进程模式的原因是对于企业应用程序，处理请求可能很复杂。 你需要添加具有开放数量的整合问题，例如登录、验证、审核和安全性。 在这些情况下，可以依赖转存进程管道（请参阅[转存进程模式](https://en.wikipedia.org/wiki/Mediator_pattern)），以提供应对这些额外行为或整合问题的方法。
 
@@ -439,11 +445,11 @@ public class CreateOrderCommandHandler
 
 另一种选择是使用基于中转站或消息队列的异步消息，如图 7-26 所示。 可在命令处理程序前，将此选项与转存进程组件合并。
 
-![还可以通过高可用性消息队列处理命令的管道，以将命令传递到相应的处理程序。](./media/image23.png)
+![使用 HA 消息队列显示数据流的关系图。](./media/microservice-application-layer-implementation-web-api/add-ha-message-queue.png)
 
 **图 7-26**。 通过 CQRS 命令使用消息队列（进程外和进程间通信）
 
-使用消息队列接受命令可能会进一步复杂化命令管道，因为很可能需要将管道拆分为通过外部消息队列连接的两个进程。 如果需要基于异步消息传送，提高可伸缩性和性能，则仍应使用此方法。 请思考图 7-26 的情况，控制器将命令消息发布到队列，然后返回。 然后命令处理程序按自己的步调处理消息。 这是队列的一大优点：消息队列可在需要超高可伸缩性时（例如股票或具有大量传入数据的任何其他方案）充当缓冲区。
+还可以通过高可用性消息队列处理命令的管道，以将命令传递到相应的处理程序。 使用消息队列接受命令可能会进一步复杂化命令管道，因为很可能需要将管道拆分为通过外部消息队列连接的两个进程。 如果需要基于异步消息传送，提高可伸缩性和性能，则仍应使用此方法。 请思考图 7-26 的情况，控制器将命令消息发布到队列，然后返回。 然后命令处理程序按自己的步调处理消息。 这是队列的一大优点：消息队列可在需要超高可伸缩性时（例如股票或具有大量传入数据的任何其他方案）充当缓冲区。
 
 但是，由于消息队列具有异步性质，你需要解决如何就命令进程的成功或失败，与客户端应用程序通信。 一般来说，应永远不要使用“发后不理”命令。 每个业务应用程序需要了解命令是否处理成功，或至少了解是否已验证和接受。
 

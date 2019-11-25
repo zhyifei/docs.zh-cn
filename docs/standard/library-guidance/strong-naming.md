@@ -4,12 +4,12 @@ description: 强命名 .NET 库的最佳实践建议。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 3a623f65d95d776e45af245a1fe241cc5ee25b93
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 3e7cc9a3a1be05d8fcb02b34f7027126697d15d0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70968972"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196970"
 ---
 # <a name="strong-naming"></a>强命名
 
@@ -53,7 +53,7 @@ ms.locfileid: "70968972"
 
 > 公开提供的密钥可让开发人员修改库源代码并使用相同的密钥进行重新编译。
 > 
-> 如果强命名密钥过去用于在[部分信任的方案](/dotnet/framework/misc/using-libraries-from-partially-trusted-code)中授予特殊权限，则不得公开该强命名密钥。 或者，可能会破坏现有环境。
+> 如果强命名密钥过去用于在[部分信任的方案](../../framework/misc/using-libraries-from-partially-trusted-code.md)中授予特殊权限，则不得公开该强命名密钥。 或者，可能会破坏现有环境。
 
 > [!IMPORTANT]
 > 需要了解代码发布者的身份时，建议使用[验证码](/windows-hardware/drivers/install/authenticode)和 [NuGet 包签名](/nuget/create-packages/sign-a-package)。 代码访问安全性 (CAS) 不得用作安全缓解。
@@ -62,11 +62,11 @@ ms.locfileid: "70968972"
 
 > 详细了解[版本控制和程序集版本](./versioning.md#assembly-version)。
 
- ❌请勿添加、删除或更改强命名密钥。
+ ❌ 请勿添加、删除或更改强命名密钥。
 
 > 修改程序集的强命名密钥会更改程序集的标识并破坏使用该标识的已编译代码。 有关详细信息，请参阅[二进制重大更改](./breaking-changes.md#binary-breaking-change)。
 
-❌请勿发布库的强名称或非强名称版本  。 例如，`Contoso.Api` 和 `Contoso.Api.StrongNamed`。
+ ❌ 请勿发布库的强名称或非强名称版本。 例如，`Contoso.Api` 和 `Contoso.Api.StrongNamed`。
 
 > 发布两个包会为开发人员生态系统创建分支。 此外，如果应用程序依赖于这两个包，则开发人员可能会遇到类型名称冲突。 就 .NET 而言，它们是不同程序集中的不同类型。
 

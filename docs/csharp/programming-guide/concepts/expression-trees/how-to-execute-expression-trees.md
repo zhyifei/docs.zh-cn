@@ -1,15 +1,15 @@
 ---
-title: 如何：执行表达式树 (C#)
+title: 如何执行表达式树 (C#)
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: 4a73201d06d21964a40fbbe57fa952da35c5942c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e7d408ea154572dc8b45d2e67bca3f05837868d2
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924360"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969878"
 ---
-# <a name="how-to-execute-expression-trees-c"></a>如何：执行表达式树 (C#)
+# <a name="how-to-execute-expression-trees-c"></a>如何执行表达式树 (C#)
 本主题演示如何执行表达式树。 执行表达式树可能返回一个值，或者它可能只是执行操作，例如调用方法。  
   
  仅可以执行表示 lambda 表达式的表达式树。 表示 Lambda 表达式的表达式树的类型为 <xref:System.Linq.Expressions.LambdaExpression> 或 <xref:System.Linq.Expressions.Expression%601>。 若要执行这些表达式树，请调用 <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> 方法来创建一个可执行的委托，然后调用该委托。  
@@ -49,4 +49,4 @@ Console.WriteLine(result);
 ## <a name="see-also"></a>请参阅
 
 - [表达式树 (C#)](./index.md)
-- [如何：修改表达式树 (C#)](./how-to-modify-expression-trees.md)
+- [如何修改表达式树 (C#)](./how-to-modify-expression-trees.md)

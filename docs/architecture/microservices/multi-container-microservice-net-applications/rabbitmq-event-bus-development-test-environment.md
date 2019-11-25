@@ -2,12 +2,12 @@
 title: 使用 RabbitMQ 实现用于开发或测试环境的事件总线
 description: 容器化 .NET 应用程序的 .NET 微服务架构 | 使用 RabbitMQ 实现用于开发或测试环境的集成事件的事件总线消息传递。
 ms.date: 10/02/2018
-ms.openlocfilehash: 7d51054d444ce1e35fabab94cc803e74dbd96f19
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 211348caec3c101435fcdd99bd96fd8e17a6456b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089739"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739509"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>使用 RabbitMQ 实现用于开发或测试环境的事件总线
 
@@ -17,11 +17,11 @@ eShopOnContainers 中的事件总线自定义实现之一基本上是一个使�
 
 借助 RabbitMQ 的事件总线实现，微服务可订阅事件、发布事件和接收事件，如图 6-21 所示。
 
-![RabbitMQ 充当消息发布服务器和订阅者之间的中介，处理分发。](./media/image22.png)
+![显示消息发送方和消息接收方之间的 RabbitMQ 的关系图。](./media/rabbitmq-event-bus-development-test-environment/rabbitmq-implementation.png)
 
 **图 6-21。** 事件总线的 RabbitMQ 实现
 
-在代码中，EventBusRabbitMQ 类实现了泛型 IEventBus 接口。 这基于依赖项注入，以便可以从此开发/测试版本交换到生产版本。
+RabbitMQ 充当消息发布服务器和订阅者之间的中介，处理分发。 在代码中，EventBusRabbitMQ 类实现了泛型 IEventBus 接口。 这基于依赖项注入，以便可以从此开发/测试版本交换到生产版本。
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable

@@ -2,12 +2,12 @@
 title: 安全注意事项（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: d9adf4ed9e340ff589117f160e370c7d1595a207
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9a560db5dbcb7a87a1c933febfb8bf676cc8816b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039868"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968407"
 ---
 # <a name="security-considerations-entity-framework"></a>安全注意事项（实体框架）
 本主题介绍特定于开发、部署和运行实体框架应用程序的安全注意事项。 还应遵循创建安全 .NET Framework 应用程序的建议。 有关详细信息，请参阅[安全性概述](../security-overview.md)。  
@@ -119,11 +119,11 @@ ms.locfileid: "73039868"
  避免公开给可能不受信任的调用方的方法返回 <xref:System.Linq.IQueryable%601> 类型的原因如下：  
   
 - 公开 <xref:System.Linq.IQueryable%601> 类型的查询的使用方可以对公开安全数据或增大结果集大小的结果调用方法。 例如，请考虑使用以下方法签名：  
-  
-    ```csharp  
-    public IQueryable<Customer> GetCustomer(int customerId)  
-    ```  
-  
+
+    ```csharp
+    public IQueryable<Customer> GetCustomer(int customerId)
+    ```
+
     此查询的使用方可以对返回的 `.Include("Orders")` 调用 `IQueryable<Customer>`，以检索查询不打算公开的数据。 通过将方法的返回类型更改为 <xref:System.Collections.Generic.IEnumerable%601> 并调用具体化结果的方法（如 `.ToList()`），可以避免此问题。  
   
 - 由于 <xref:System.Linq.IQueryable%601> 查询在循环访问结果时执行，因此公开 <xref:System.Linq.IQueryable%601> 类型的查询的使用方可能会捕捉引发的异常。 这些异常可能包含不适用于使用方的信息。  

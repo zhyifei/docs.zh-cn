@@ -27,21 +27,21 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 9760be0fcfe29d2c11cbb1f4d4d81c5a79261a0d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ca2513a0f865fd7da728f7d3247bdb7b50a2f48a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771738"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036429"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算术运算符（C# 参考）
 
-以下运算符对数值类型执行算术运算：
+以下运算符对数值类型的操作数执行算术运算：
 
 - 一元 [`++`（增量）](#increment-operator-)、[`--`（减量）](#decrement-operator---)、[`+`（加）](#unary-plus-and-minus-operators)和 [`-`（减）](#unary-plus-and-minus-operators)运算符
 - 二元 [`*`（乘法）](#multiplication-operator-)、[`/`（除法）](#division-operator-)、[`%`（余数）](#remainder-operator-)、[`+`（加法）](#addition-operator-)和 [`-`（减法）](#subtraction-operator--)运算符
 
-这些运算符支持所有[整型](../builtin-types/integral-numeric-types.md)和[浮动](../builtin-types/floating-point-numeric-types.md)数值类型。
+所有[整型](../builtin-types/integral-numeric-types.md)和[浮点](../builtin-types/floating-point-numeric-types.md)数值类型都支持这些运算符。
 
 ## <a name="increment-operator-"></a>增量运算符 ++
 
@@ -85,7 +85,7 @@ ms.locfileid: "72771738"
 
 [!code-csharp-interactive[unary plus and minus](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#UnaryPlusAndMinus)]
 
-一元 `-` 运算符不支持 [ulong](../builtin-types/integral-numeric-types.md) 类型。
+[ulong](../builtin-types/integral-numeric-types.md) 类型不支持一元 `-` 运算符。
 
 ## <a name="multiplication-operator-"></a>乘法运算符 *
 
@@ -122,7 +122,7 @@ ms.locfileid: "72771738"
 余数运算符 `%` 计算左侧操作数除以右侧操作数后的余数。
 
 ### <a name="integer-remainder"></a>整数余数
-  
+
 对于整数类型的操作数，`a % b` 的结果是 `a - (a / b) * b` 得出的值。 非零余数的符号与左侧操作数的符号相同，如下例所示：
 
 [!code-csharp-interactive[integer remainder](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerRemainder)]
@@ -137,7 +137,7 @@ ms.locfileid: "72771738"
 - `z` 的绝对值是 `|x| - n * |y|` 得出的值，其中 `n` 是小于或等于 `|x| / |y|` 的最大可能整数，`|x|` 和 `|y|` 分别是 `x` 和 `y` 的绝对值。
 
 > [!NOTE]
-> 计算余数的此方法类似于用于整数操作数的方法，但与 IEEE 754 不同。 如果需要符合 IEEE 754 的余数运算，使用 <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> 方法。
+> 计算余数的此方法类似于用于整数操作数的方法，但与 IEEE 754 规范不同。 如果需要符合 IEEE 754 规范的余数运算，请使用 <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> 方法。
 
 有关非限定操作数的 `%` 运算符行为的信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[余数运算符](~/_csharplang/spec/expressions.md#remainder-operator)章节。
 
@@ -161,7 +161,7 @@ ms.locfileid: "72771738"
 
 [!code-csharp-interactive[subtraction operator](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#Subtraction)]
 
-还可以使用 `-` 运算符删除委托。 有关详细信息，请参阅[`-`运算符](subtraction-operator.md)一文。
+还可以使用 `-` 运算符删除委托。 有关详细信息，请参阅 [`-` 和 `-=` 运算符](subtraction-operator.md)一文。
 
 ## <a name="compound-assignment"></a>复合赋值
 
@@ -187,7 +187,7 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
-还可以使用 `+=` 和 `-=` 运算符订阅和取消订阅[事件](../keywords/event.md)。 有关详细信息，请参阅[如何：订阅和取消订阅事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
+你还可以使用 `+=` 和 `-=` 运算符分别订阅和取消订阅[事件](../keywords/event.md)。 有关详细信息，请参阅[如何：订阅和取消订阅事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
 
 ## <a name="operator-precedence-and-associativity"></a>运算符优先级和关联性
 
@@ -204,7 +204,7 @@ x = x op y
 
 [!code-csharp-interactive[precedence and associativity](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
 
-要了解按优先级排序的完整 C# 运算符列表，请参阅 [C# 运算符](index.md)。
+如需了解按优先级排序的完整 C# 运算符列表，请参阅 [C# 运算符](index.md#operator-precedence)一文中的[运算符优先级](index.md)部分。
 
 ## <a name="arithmetic-overflow-and-division-by-zero"></a>算术溢出和被零除
 
@@ -239,7 +239,7 @@ x = x op y
 
 [!code-csharp-interactive[round-off errors](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#RoundOffErrors)]
 
-有关详细信息，请参阅 [System.Double](/dotnet/api/system.double#remarks)、[System.Single](/dotnet/api/system.single#remarks) 或 [System.Decimal](/dotnet/api/system.decimal#remarks) 参考页面上的注解。
+有关详细信息，请参阅 [System.Double](/dotnet/api/system.double#remarks)、[System.Single](/dotnet/api/system.single#remarks) 或 [System.Decimal](/dotnet/api/system.decimal#remarks) 参考页上的注解。
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 

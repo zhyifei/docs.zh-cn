@@ -6,12 +6,12 @@ f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: 9ef5f98f2b4973c5873417ecc9a71c187e7299b9
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 82fc1649bac66c0e934db13c50390b977432c34c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182416"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036142"
 ---
 # <a name="stackalloc-operator-c-reference"></a>stackalloc 运算符（C# 参考）
 
@@ -21,7 +21,7 @@ ms.locfileid: "71182416"
 
 可以将 `stackalloc` 运算符的结果分配给以下任一类型的变量：
 
-- 从 C# 7.2 开始的 <xref:System.Span%601?displayProperty=nameWithType> 或 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>，如以下示例所示：
+- 从 C# 7.2 开始，<xref:System.Span%601?displayProperty=nameWithType> 或 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> 将如下例所示：
 
   [!code-csharp[stackalloc span](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToSpan)]
 
@@ -31,7 +31,7 @@ ms.locfileid: "71182416"
 
   [!code-csharp[stackalloc expression](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AsExpression)]
 
-  从 C#8.0 开始，只要允许使用 <xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601> 变量，就可以在其他表达式中使用 `stackalloc` 表达式，如以下示例所示：
+  从 C#8.0 开始，只要允许使用 <xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601> 变量，就可以在其他表达式中使用 `stackalloc` 表达式，如下例所示：
 
   [!code-csharp[stackalloc in nested expressions](~/samples/csharp/language-reference/operators/StackallocOperator.cs#Nested)]
 
@@ -46,7 +46,7 @@ ms.locfileid: "71182416"
 
   对于指针类型，只能在局部变量声明中使用 `stackalloc` 表达式来初始化变量。
 
-新分配的内存的内容未定义。 从 C# 7.3 开始，可以使用数组初始值设定项语法来定义新分配的内存的内容。 下面的示例演示执行此操作的各种方法：
+新分配的内存的内容未定义。 从 C# 7.3 开始，可以使用数组初始值设定项语法来定义新分配内存的内容。 下面的示例演示执行此操作的各种方法：
 
 [!code-csharp[stackalloc initialization](~/samples/csharp/language-reference/operators/StackallocOperator.cs#StackallocInit)]
 

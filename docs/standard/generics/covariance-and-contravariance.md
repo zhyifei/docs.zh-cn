@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08e6458f0a14b78c6d05f706afa710931d60094a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee8cc1b677ad6f6c2718c155edbba632df38dbd3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948790"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974700"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>泛型中的协变和逆变
-<a name="top"></a> 协变和逆变都是术语，前者指能够使用比原始指定的派生类型的派生程度更大（更具体的）的类型，后者指能够使用比原始指定的派生类型的派生程度更小（不太具体的）的类型。 泛型类型参数支持协变和逆变，可在分配和使用泛型类型方面提供更大的灵活性。 在引用类型系统时，协变、逆变和不变性具有如下定义。 这些示例假定一个名为 `Base` 的基类和一个名为 `Derived`的派生类。  
+协变和逆变都是术语，前者指能够使用比原始指定的派生类型的派生程度更大（更具体的）的类型，后者指能够使用比原始指定的派生类型的派生程度更小（不太具体的）的类型。 泛型类型参数支持协变和逆变，可在分配和使用泛型类型方面提供更大的灵活性。 在引用类型系统时，协变、逆变和不变性具有如下定义。 这些示例假定一个名为 `Base` 的基类和一个名为 `Derived`的派生类。  
   
 - `Covariance`  
   
@@ -65,21 +65,9 @@ ms.locfileid: "69948790"
   
 - 变体仅适用于引用类型；如果为 Variant 类型参数指定值类型，则该类型参数对于生成的构造类型是不变的。  
   
-- 变体不适用于委托组合。 也就是说，在给定类型 `Action<Derived>` 和 `Action<Base>` （在 Visual Basic 中为`Action(Of Derived)` 和 `Action(Of Base)` ）的两个委托的情况下，无法将第二个委托与第一个委托结合起来，尽管结果将是类型安全的。 变体允许将第二个委托分配给类型 `Action<Derived>`的变量，但只能在这两个委托的类型完全匹配的情况下对它们进行组合。  
-  
- 以下各小节将详细介绍协变和逆变类型参数：  
-  
-- [具有协变类型参数的泛型接口](#InterfaceCovariantTypeParameters)  
-  
-- [具有逆变泛型类型参数的泛型接口](#InterfaceCovariantTypeParameters)  
-  
-- [具有 Variant 类型参数的泛型委托](#DelegateVariantTypeParameters)  
-  
-- [定义 Variant 泛型接口和委托](#DefiningVariantTypeParameters)  
-  
-- [Variant 泛型接口和委托类型的列表](#VariantList)  
-  
-<a name="InterfaceCovariantTypeParameters"></a>   
+- 变体不适用于委托组合。 也就是说，在给定类型 `Action<Derived>` 和 `Action<Base>` （在 Visual Basic 中为`Action(Of Derived)` 和 `Action(Of Base)` ）的两个委托的情况下，无法将第二个委托与第一个委托结合起来，尽管结果将是类型安全的。 变体允许将第二个委托分配给类型 `Action<Derived>`的变量，但只能在这两个委托的类型完全匹配的情况下对它们进行组合。
+
+<a name="InterfaceCovariantTypeParameters"></a>
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>具有协变类型参数的泛型接口  
  从 .NET Framework 4 开始，某些泛型接口具有协变类型参数；例如：<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.Generic.IEnumerator%601>、<xref:System.Linq.IQueryable%601> 和 <xref:System.Linq.IGrouping%602>。 由于这些接口的所有类型参数都是协变类型参数，因此这些类型参数只用于成员的返回类型。  
   
@@ -88,9 +76,6 @@ ms.locfileid: "69948790"
  [!code-csharp[CoContravarianceInClrGenericI#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravarianceinclrgenerici/cs/example.cs#1)]
  [!code-vb[CoContravarianceInClrGenericI#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravarianceinclrgenerici/vb/example.vb#1)]  
   
- [返回页首](#top)  
-  
-<a name="InterfaceContravariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-contravariant-generic-type-parameters"></a>具有逆变泛型类型参数的泛型接口  
  从 .NET Framework 4 开始，某些泛型接口具有逆变类型参数；例如：<xref:System.Collections.Generic.IComparer%601>、<xref:System.IComparable%601> 和 <xref:System.Collections.Generic.IEqualityComparer%601>。 由于这些接口只具有逆变类型参数，因此这些类型参数只用作接口成员中的参数类型。  
   
@@ -102,10 +87,7 @@ ms.locfileid: "69948790"
   
  [!code-csharp[CoContravarianceInClrGenericI2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravarianceinclrgenerici2/cs/example.cs#1)]
  [!code-vb[CoContravarianceInClrGenericI2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravarianceinclrgenerici2/vb/example.vb#1)]  
-  
- [返回页首](#top)  
-  
-<a name="DelegateVariantTypeParameters"></a>   
+
 ## <a name="generic-delegates-with-variant-type-parameters"></a>具有 Variant 类型参数的泛型委托  
  在 .NET Framework 4 中，`Func` 泛型委托（如 <xref:System.Func%602>）具有协变返回类型和逆变参数类型。 `Action` 泛型委托（如 <xref:System.Action%602>）具有逆变参数类型。 这意味着，可以将委托指派给具有派生程度较高的参数类型和（对于 `Func` 泛型委托）派生程度较低的返回类型的变量。  
   
@@ -141,11 +123,8 @@ ms.locfileid: "69948790"
   
  [!code-csharp[CoContravarianceDelegatesGenRelaxed#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravariancedelegatesgenrelaxed/cs/example.cs#1)]
  [!code-vb[CoContravarianceDelegatesGenRelaxed#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravariancedelegatesgenrelaxed/vb/example.vb#1)]  
-  
- [返回页首](#top)  
-  
-<a name="DefiningVariantTypeParameters"></a>   
-## <a name="defining-variant-generic-interfaces-and-delegates"></a>定义 Variant 泛型接口和委托  
+
+## <a name="defining-variant-generic-interfaces-and-delegates"></a>定义 Variant 泛型接口和委托
  从 .NET Framework 4 开始，Visual Basic 和 C# 提供了一些关键字，利用这些关键字，可以将接口和委托的泛型类型参数标记为协变或逆变。  
   
 > [!NOTE]
@@ -163,11 +142,8 @@ ms.locfileid: "69948790"
  Visual Basic 和 C# 不允许违反协变和逆变类型参数的使用规则，也不允许将协变和逆变批注添加到接口和委托类型之外的类型参数中。 [MSIL 汇编程序](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 不执行此类检查，但如果你尝试加载违反规则的类型，则会引发 <xref:System.TypeLoadException> 。  
   
  有关信息和示例代码，请参阅[泛型接口中的差异 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) 和[泛型接口中的差异 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)。  
-  
- [返回页首](#top)  
-  
-<a name="VariantList"></a>   
-## <a name="list-of-variant-generic-interface-and-delegate-types"></a>Variant 泛型接口和委托类型的列表  
+
+## <a name="list-of-variant-generic-interface-and-delegate-types"></a>Variant 泛型接口和委托类型的列表
  在 .NET Framework 4 中，下面的接口和委托类型具有协变和/或逆变类型参数。  
   
 |类型|协变类型参数|逆变类型参数|  

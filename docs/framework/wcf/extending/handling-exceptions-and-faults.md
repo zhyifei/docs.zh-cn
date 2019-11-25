@@ -2,31 +2,31 @@
 title: 处理异常和错误
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: 4f95907d4f88315f2815b84e2ceb4e069783438d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: c28b4420be82562a30873b65113811da06cee761
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851275"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975478"
 ---
 # <a name="handling-exceptions-and-faults"></a>处理异常和错误
 异常用来在服务或客户端实现中在本地传达错误， 而错误则用来跨服务边界传达错误，如在服务器与客户端之间传达。 除了错误以外，传输通道也常常使用传输特定的机制来传达传输级错误。 例如，HTTP 传输机制使用状态码（如 404）来传达不存在的终结点 URL（不存在发回错误的终结点）。 本文档由三部分组成，它们为自定义通道的作者提供指南。 第一部分提供关于何时以及如何定义和引发异常的指南。 第二部分提供关于生成和使用错误的指南。 第三部分说明如何提供跟踪信息来帮助自定义通道用户对所运行的应用程序进行疑难解答。  
   
-## <a name="exceptions"></a>Exceptions  
- 引发异常时，需要注意两个事项：首先，它必须是一种允许用户编写正确的代码的类型，此代码可以相应地对异常做出反应。 第二，异常必须为用户提供足够的信息，使用户能了解究竟哪里出现了故障，该故障带来的影响以及如何修复该故障。 以下各节提供有关 Windows Communication Foundation （WCF）通道的异常类型和消息的指导。 “异常的设计准则”文档中也有关于 .NET 中的异常的一般性指南。  
+## <a name="exceptions"></a>异常  
+ 在引发异常时需要牢记两件事情：第一，异常的类型必须允许用户编写能对异常做出适当反应的正确代码。 第二，异常必须为用户提供足够的信息，使用户能了解究竟哪里出现了故障，该故障带来的影响以及如何修复该故障。 以下各节提供有关 Windows Communication Foundation （WCF）通道的异常类型和消息的指导。 “异常的设计准则”文档中也有关于 .NET 中的异常的一般性指南。  
   
 ### <a name="exception-types"></a>异常类型  
- 由通道引发的所有异常都必须是 <xref:System.TimeoutException?displayProperty=nameWithType>、<xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> 或者是派生自 <xref:System.ServiceModel.CommunicationException> 的类型 （还可能会引发诸如 <xref:System.ObjectDisposedException> 之类的异常，但这仅仅是为了指示调用代码误用了通道。 如果某个通道的使用正确无误，则它只能引发给定的异常）。WCF 提供了七个派生自<xref:System.ServiceModel.CommunicationException>的异常类型，并设计为由通道使用。 还存在其他从 <xref:System.ServiceModel.CommunicationException> 派生的异常，这些异常设计用于系统的其他部分。 这些异常类型包括：  
+ 由通道引发的所有异常都必须是 <xref:System.TimeoutException?displayProperty=nameWithType>、<xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> 或者是派生自 <xref:System.ServiceModel.CommunicationException> 的类型 （还可能会引发诸如 <xref:System.ObjectDisposedException> 之类的异常，但这仅仅是为了指示调用代码误用了通道。 如果通道使用正确，则它必须仅引发给定的异常。）WCF 提供了七个派生自 <xref:System.ServiceModel.CommunicationException> 的异常类型，并旨在供通道使用。 还存在其他从 <xref:System.ServiceModel.CommunicationException> 派生的异常，这些异常设计用于系统的其他部分。 这些异常类型包括：  
   
 |异常类型|含义|内部异常的内容|恢复策略|  
 |--------------------|-------------|-----------------------------|-----------------------|  
 |<xref:System.ServiceModel.AddressAlreadyInUseException>|为进行侦听而指定的终结点地址已在使用。|如果存在，则提供有关引起此异常的传输错误的更多详细信息。 例如， <xref:System.IO.PipeException>, <xref:System.Net.HttpListenerException> 或 <xref:System.Net.Sockets.SocketException>。|请尝试使用其他地址。|  
 |<xref:System.ServiceModel.AddressAccessDeniedException>|不允许该进程访问为进行侦听而指定的终结点地址。|如果存在，则提供有关引起此异常的传输错误的更多详细信息。 例如，<xref:System.IO.PipeException> 或 <xref:System.Net.HttpListenerException>。|请尝试使用其他凭据。|  
-|<xref:System.ServiceModel.CommunicationObjectFaultedException>|正在<xref:System.ServiceModel.ICommunicationObject>使用的处于 "出错" 状态（有关详细信息，请参阅[了解状态更改](understanding-state-changes.md)）。 请注意，当具有多个挂起调用的对象转变为“出错”状态时，只有一个调用引发与该故障有关的异常，而其余调用都引发 <xref:System.ServiceModel.CommunicationObjectFaultedException>。 引发此异常的原因通常在于，应用程序忽略了某个异常并尝试使用已出错的对象，而在其中使用该对象的线程可能不是捕获原始异常的线程。|如果存在，则提供有关内部异常的详细信息。|新建一个对象。 请注意，根据首先导致 <xref:System.ServiceModel.ICommunicationObject> 出错的原因，可能还需要完成其他工作来进行恢复。|  
-|<xref:System.ServiceModel.CommunicationObjectAbortedException>|正在<xref:System.ServiceModel.ICommunicationObject>使用的已中止（有关详细信息，请参阅[了解状态更改](understanding-state-changes.md)）。 与 <xref:System.ServiceModel.CommunicationObjectFaultedException> 相似，此异常指示应用程序已在该对象上调用了 <xref:System.ServiceModel.ICommunicationObject.Abort%2A>（有可能是从另一个线程调用的），而且该对象会因此而不再可用。|如果存在，则提供有关内部异常的详细信息。|新建一个对象。 请注意，根据首先导致 <xref:System.ServiceModel.ICommunicationObject> 中止的原因，可能还需要完成其他工作来进行恢复。|  
+|<xref:System.ServiceModel.CommunicationObjectFaultedException>|正在使用的 <xref:System.ServiceModel.ICommunicationObject> 处于出错状态（有关详细信息，请参阅[了解状态更改](understanding-state-changes.md)）。 请注意，当具有多个挂起调用的对象转变为“出错”状态时，只有一个调用引发与该故障有关的异常，而其余调用都引发 <xref:System.ServiceModel.CommunicationObjectFaultedException>。 引发此异常的原因通常在于，应用程序忽略了某个异常并尝试使用已出错的对象，而在其中使用该对象的线程可能不是捕获原始异常的线程。|如果存在，则提供有关内部异常的详细信息。|新建一个对象。 请注意，根据首先导致 <xref:System.ServiceModel.ICommunicationObject> 出错的原因，可能还需要完成其他工作来进行恢复。|  
+|<xref:System.ServiceModel.CommunicationObjectAbortedException>|所使用的 <xref:System.ServiceModel.ICommunicationObject> 已中止（有关详细信息，请参阅[了解状态更改](understanding-state-changes.md)）。 与 <xref:System.ServiceModel.CommunicationObjectFaultedException> 相似，此异常指示应用程序已在该对象上调用了 <xref:System.ServiceModel.ICommunicationObject.Abort%2A>（有可能是从另一个线程调用的），而且该对象会因此而不再可用。|如果存在，则提供有关内部异常的详细信息。|新建一个对象。 请注意，根据首先导致 <xref:System.ServiceModel.ICommunicationObject> 中止的原因，可能还需要完成其他工作来进行恢复。|  
 |<xref:System.ServiceModel.EndpointNotFoundException>|目标远程终结点未在进行侦听。 这可能是由于终结点地址的任何部分不正确、无法解析或者终结点已关闭。 这方面的例子有 DNS 错误、队列管理器不可用以及服务未在运行。|内部异常提供通常来自基础传输的详细信息。|请尝试使用其他地址。 或者，对于服务已关闭的情况，发送方可以稍等片刻再重试。|  
-|<xref:System.ServiceModel.ProtocolException>|终结点策略中所描述的通信协议在终结点之间不符。 例如，组帧内容类型不匹配或者超过了最大消息大小。|如果存在，则提供有关特定协议错误的更多信息。 例如，如果出错原因是由于超过了 MaxReceivedMessageSize，则 <xref:System.ServiceModel.QuotaExceededException> 为内部异常。|修复确保发送方和接收的协议设置匹配。 保证这一点的一种方法是，重新导入服务终结点的元数据（策略）并使用所生成的绑定来重新创建通道。|  
-|<xref:System.ServiceModel.ServerTooBusyException>|远程终结点正在侦听，但不准备处理消息。|如果存在，则该内部异常提供有关 SOAP 错误或传输级错误的详细信息。|修复请稍等片刻再重试该操作。|  
+|<xref:System.ServiceModel.ProtocolException>|终结点策略中所描述的通信协议在终结点之间不符。 例如，组帧内容类型不匹配或者超过了最大消息大小。|如果存在，则提供有关特定协议错误的更多信息。 例如，如果出错原因是由于超过了 MaxReceivedMessageSize，则 <xref:System.ServiceModel.QuotaExceededException> 为内部异常。|恢复：请确保发送方的协议设置与接收方的协议设置相匹配。 保证这一点的一种方法是，重新导入服务终结点的元数据（策略）并使用所生成的绑定来重新创建通道。|  
+|<xref:System.ServiceModel.ServerTooBusyException>|远程终结点正在侦听，但不准备处理消息。|如果存在，则该内部异常提供有关 SOAP 错误或传输级错误的详细信息。|恢复：请稍等片刻再重试该操作。|  
 |<xref:System.TimeoutException>|该操作未能在超时期限内完成。|可能会提供有关超时的详细信息。|请稍等片刻再重试该操作。|  
   
  只有在该类型所对应的特定恢复策略不同于现有的全部异常类型时，才定义新的异常类型。 如果您非要确定义新的异常类型，则必须从 <xref:System.ServiceModel.CommunicationException> 或其派生类之一来派生该新类型。  
@@ -34,11 +34,11 @@ ms.locfileid: "70851275"
 ### <a name="exception-messages"></a>异常消息  
  异常消息面向用户（而非程序），因此它们应提供足以帮助用户了解和解决问题的信息。 好的异常消息应包括以下三个基本部分：  
   
- 所发生的情况。 使用与用户体验相关的术语明确说明问题所在。 例如，“Invalid configuration section”（配置节无效）是糟糕的异常消息。 这会令用户想知道哪个配置节有误以及它为何有误。 改进后的消息为 "配置节\<customBinding > 无效"。 “Cannot add the transport named myTransport to the binding named myBinding because the binding already has a transport named myTransport”（无法将名为 myTransport 的传输添加到名为 myBinding 的绑定中，因为该绑定已经有一个名为 myTransport 的传输）是较好的消息。 这个消息非常具体，用户可以在应用程序的配置文件中方便地标识该消息中所使用的术语和名称。 但是，仍缺少几个关键部分。  
+ 所发生的情况。 使用与用户体验相关的术语明确说明问题所在。 例如，“Invalid configuration section”（配置节无效）是糟糕的异常消息。 这会令用户想知道哪个配置节有误以及它为何有误。 改进后的消息为 "配置节 \<customBinding > 无效"。 “Cannot add the transport named myTransport to the binding named myBinding because the binding already has a transport named myTransport”（无法将名为 myTransport 的传输添加到名为 myBinding 的绑定中，因为该绑定已经有一个名为 myTransport 的传输）是较好的消息。 这个消息非常具体，用户可以在应用程序的配置文件中方便地标识该消息中所使用的术语和名称。 但是，仍缺少几个关键部分。  
   
- 错误的重要性。 除非该消息明确声明了错误的含义，否则用户很可能想知道它是否为致命错误，或者是否可以忽略它。 通常，消息中应首先声明错误的含义或重要性。 若要改善前面的示例，消息可能是由于配置错误而无法打开 ServiceHost：无法将名为 myTransport 的传输添加到名为 myBinding 的绑定中，因为该绑定已经有一个名为 myTransport 的传输。  
+ 错误的重要性。 除非该消息明确声明了错误的含义，否则用户很可能想知道它是否为致命错误，或者是否可以忽略它。 通常，消息中应首先声明错误的含义或重要性。 为了改善上面的示例，可以将消息改为“ServiceHost failed to Open due to a configuration error: Cannot add the transport named myTransport to the binding named myBinding because the binding already has a transport named myTransport”（ServiceHost 因配置错误而未能打开: 无法将名为 myTransport 的传输添加到名为 myBinding 的绑定中，因为该绑定已经有一个名为 myTransport 的传输）。  
   
- 用户应如何更正问题。 消息中最重要部分就是帮助用户修复问题。 消息中应包括为纠正相关问题而需要检查或修复的内容的一些指南或提示。 例如，由于配置错误，"ServiceHost 未能打开：无法将名为 myTransport 的传输添加到名为 myBinding 的绑定中，因为该绑定已经有一个名为 myTransport 的传输。 Please ensure there is only one transport in the binding”（ServiceHost 因配置错误而未能打开: 无法将名为 myTransport 的传输添加到名为 myBinding 的绑定中，因为该绑定已经有一个名为 myTransport 的传输。请确保该绑定中只有一个传输）。  
+ 用户应如何更正问题。 消息中最重要部分就是帮助用户修复问题。 消息中应包括为纠正相关问题而需要检查或修复的内容的一些指南或提示。 例如，“ServiceHost failed to Open due to a configuration error: Cannot add the transport named myTransport to the binding named myBinding because the binding already has a transport named myTransport. Please ensure there is only one transport in the binding”（ServiceHost 因配置错误而未能打开: 无法将名为 myTransport 的传输添加到名为 myBinding 的绑定中，因为该绑定已经有一个名为 myTransport 的传输。请确保该绑定中只有一个传输）。  
   
 ## <a name="communicating-faults"></a>传达错误  
  SOAP 1.1 和 SOAP 1.2 均为错误定义了一个特定的结构。 这两个规范之间存在一些差异，但是，在创建和使用错误时通常使用 Message 和 MessageFault 类型。  
@@ -68,13 +68,13 @@ public abstract class MessageFault
 }  
 ```  
   
- `Code` 属性对应于 `env:Code`（或 SOAP 1.1 中的 `faultCode`），可用来标识错误的类型。 SOAP 1.2 定义了五个 `faultCode` 所允许的值（例如，Sender（发送方）和 Receiver（接收方）），并定义了一个可以包含任何子代码值的 `Subcode` 元素 （有关允许的错误代码及其含义的列表，请参阅[SOAP 1.2 规范](https://go.microsoft.com/fwlink/?LinkId=95176)。）SOAP 1.1 具有略微不同的机制：它定义了`faultCode`四个值（例如，客户端和服务器），可以通过定义全新的值来扩展，也可以通过使用点表示法来`faultCodes`创建更具体的客户端身份验证。  
+ `Code` 属性对应于 `env:Code`（或 SOAP 1.1 中的 `faultCode`），可用来标识错误的类型。 SOAP 1.2 定义了五个 `faultCode` 所允许的值（例如，Sender（发送方）和 Receiver（接收方）），并定义了一个可以包含任何子代码值的 `Subcode` 元素 （有关允许的错误代码及其含义的列表，请参阅[SOAP 1.2 规范](https://go.microsoft.com/fwlink/?LinkId=95176)。）SOAP 1.1 具有略微不同的机制：它定义了四个 `faultCode` 值（例如客户端和服务器），可以通过定义全新的值来扩展，也可以通过使用点表示法来创建更具体的 `faultCodes`，例如客户端身份验证。  
   
  在使用 MessageFault 对错误进行编程时，FaultCode.Name 和 FaultCode.Namespace 会映射到 `env:Code`（在 SOAP 1.2 中）或 `faultCode`（在 SOAP 1.1 中）的名称和命名空间。 FaultCode.SubCode 会映射到 `env:Subcode`（在 SOAP 1.2 中）或为 null（在 SOAP 1.1 中）。  
   
  如果想要以编程方式区分某个错误，则应创建新的错误子代码（如果使用的是 SOAP 1.1，则应创建新的错误代码）。 这与创建新的异常类型相似。 应避免在 SOAP 1.1 错误代码中使用点表示法 （ [Ws-i 基本配置文件](https://go.microsoft.com/fwlink/?LinkId=95177)还不鼓励使用错误代码点表示法。）  
   
-```csharp  
+```csharp
 public class FaultCode  
 {  
     public FaultCode(string name);  
@@ -96,7 +96,7 @@ public class FaultCode
   
  `Reason` 属性对应于 `env:Reason`（在 SOAP 1.1 中为 `faultString`），这是关于错误条件的可读说明，与异常消息相似。 `FaultReason` 类（和 SOAP `env:Reason/faultString`）对于为实现全球化而提供多种翻译具有内置的支持。  
   
-```csharp  
+```csharp
 public class FaultReason  
 {  
     public FaultReason(FaultReasonText translation);  
@@ -111,14 +111,14 @@ public class FaultReason
  }  
 ```  
   
- 在 MessageFault 上使用各种方法（包括`GetDetail` \<T > 和`GetReaderAtDetailContents`（））公开错误详细信息内容。 错误详细信息是一个不透明的元素，其中包含有关错误的附加详细信息。 如果您希望错误中包含一些任意的结构化详细信息，则这非常有用。  
+ 在 MessageFault 上使用各种方法（包括 `GetDetail`\<T > 和 `GetReaderAtDetailContents`（））公开错误详细信息内容。 错误详细信息是一个不透明的元素，其中包含有关错误的附加详细信息。 如果您希望错误中包含一些任意的结构化详细信息，则这非常有用。  
   
 ### <a name="generating-faults"></a>生成错误  
  本节介绍为响应在通道中或通道所创建的消息属性中检测到的错误条件而生成错误的过程。 典型的示例是发回错误以响应包含无效数据的请求消息。  
   
  在生成错误时，自定义通道不应直接发送错误，而是应引发异常，并让上一层决定是否将该异常转换为错误以及如何发送它。 为了帮助进行此转换，该通道应提供一个 `FaultConverter` 实现，以便可以将自定义通道所引发的异常转换为相应的错误。 `FaultConverter` 定义为：  
   
-```csharp  
+```csharp
 public class FaultConverter  
 {  
     public static FaultConverter GetDefaultFaultConverter(  
@@ -132,9 +132,9 @@ public class FaultConverter
 }  
 ```  
   
- 用来生成自定义错误的每个通道都必须实现 `FaultConverter` 并通过调用 `GetProperty<FaultConverter>` 来返回它。 自定义 `OnTryCreateFaultMessage` 实现必须将异常转换为错误或者将异常委托给内部通道的 `FaultConverter`。 如果通道是传输通道，则必须将异常或委托转换为解码器`FaultConverter`或 WCF 中提供的默认值。 `FaultConverter` 默认的 `FaultConverter` 会转换与 WS-Addressing 和 SOAP 所指定的错误消息相对应的错误。 下面是一个示例 `OnTryCreateFaultMessage` 实现。  
+ 用来生成自定义错误的每个通道都必须实现 `FaultConverter` 并通过调用 `GetProperty<FaultConverter>` 来返回它。 自定义 `OnTryCreateFaultMessage` 实现必须将异常转换为错误或者将异常委托给内部通道的 `FaultConverter`。 如果通道是传输通道，则必须将异常或委托转换为编码器的 `FaultConverter` 或 WCF 中提供的默认 `FaultConverter`。 默认的 `FaultConverter` 会转换与 WS-Addressing 和 SOAP 所指定的错误消息相对应的错误。 下面是一个示例 `OnTryCreateFaultMessage` 实现。  
   
-```csharp  
+```csharp
 public override bool OnTryCreateFaultMessage(Exception exception,   
                                              out Message message)  
 {  
@@ -187,7 +187,7 @@ public override bool OnTryCreateFaultMessage(Exception exception,
   
 3. 针对堆栈中单个层的错误，例如，像 WS-RM 序列号错误之类的错误。  
   
- 类别1。 的错误通常是 WS-Addressing 和 SOAP 错误。 WCF 提供`FaultConverter`的基类转换与 ws-addressing 和 SOAP 所指定的错误消息相对应的错误，因此您无需自行处理这些异常的转换。  
+ 类别1。 的错误通常是 WS-Addressing 和 SOAP 错误。 WCF 提供的基本 `FaultConverter` 类转换与 WS-ADDRESSING 和 SOAP 所指定的错误消息相对应的错误，这样您就不必自行处理这些异常的转换。  
   
  类别2。 的错误在以下情况下出现：某个层向消息中添加一个属性，而该消息不完全使用与此层有关的消息信息。 当高层以后请求消息属性进一步处理消息信息时，则可能会检测到错误。 这样的通道应实现以前指定的 `GetProperty`，以使高层可以发回正确的错误。 TransactionMessageProperty 就是这方面的一个示例。 此属性会添加到消息中，而不会完全验证标头中的所有数据（完全验证可能涉及到与分布式事务处理协调器 (DTC) 联系）。  
   
@@ -204,7 +204,7 @@ public override bool OnTryCreateFaultMessage(Exception exception,
   
  下面的对象模型支持将消息转换为异常：  
   
-```csharp  
+```csharp
 public class FaultConverter  
 {  
     public static FaultConverter GetDefaultFaultConverter(  
@@ -224,7 +224,7 @@ public class FaultConverter
   
  典型的实现应如下所示：  
   
-```csharp  
+```csharp
 public override bool OnTryCreateException(  
                             Message message,   
                             MessageFault fault,   
@@ -286,11 +286,11 @@ public override bool OnTryCreateException(
  对于具有不同恢复方案的特定错误条件，请考虑定义 `ProtocolException` 的派生类。  
   
 ### <a name="mustunderstand-processing"></a>MustUnderstand 处理  
- SOAP 定义一个用于指示接收方未理解必需的标头的通用错误。 此错误称为 `mustUnderstand` 错误。 在 WCF 中，自定义通道`mustUnderstand`从不生成故障。 相反，WCF 调度程序（位于 WCF 通信堆栈顶部）将进行检查，以查看已标记为 MustUnderstand = true 的所有标头是否已被基础堆栈理解。 如果均未理解，则此时会生成一个 `mustUnderstand` 错误 （用户可以选择关闭此 `mustUnderstand` 处理，并让应用程序接收所有消息头。 在这种情况下，应用程序负责执行 `mustUnderstand` 处理)。所生成的错误包括一个 NotUnderstood 标头，其中包含未理解且 MustUnderstand=true 的所有标头的名称。  
+ SOAP 定义一个用于指示接收方未理解必需的标头的通用错误。 此错误称为 `mustUnderstand` 错误。 在 WCF 中，自定义通道从不产生 `mustUnderstand` 错误。 相反，WCF 调度程序（位于 WCF 通信堆栈顶部）将进行检查，以查看已标记为 MustUnderstand = true 的所有标头是否已被基础堆栈理解。 如果均未理解，则此时会生成一个 `mustUnderstand` 错误 （用户可以选择关闭此 `mustUnderstand` 处理，并让应用程序接收所有消息头。 在这种情况下，应用程序负责执行 `mustUnderstand` 处理。）生成的错误包括一个 NotUnderstood 标头，其中包含 MustUnderstand = true 的所有标头的名称，但无法理解。  
   
  如果协议通道发送一个 MustUnderstand=true 的自定义标头，并收到一个 `mustUnderstand` 错误，则这个协议通道必须确定该错误是否起因它所发送的标头。 `MessageFault` 类有两个可用来执行此操作的成员：  
   
-```csharp  
+```csharp
 public class MessageFault  
 {  
     ...  
@@ -311,12 +311,12 @@ public class MessageFault
   
 - <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>（要写入的跟踪信息的源）、<xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>（具体侦听器的抽象基类，具体侦听器接收要从 <xref:System.Diagnostics.TraceSource> 跟踪的信息并将其输出到侦听器特定的目标， 例如，<xref:System.Diagnostics.XmlWriterTraceListener> 将跟踪信息输出到 XML 文件中。) 以及 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>（允许应用程序用户控制跟踪的详细级别，通常在配置中指定）。  
   
-- 除了核心组件以外，还可以使用[服务跟踪查看器工具（svctraceviewer.exe）](../service-trace-viewer-tool-svctraceviewer-exe.md)来查看和搜索 WCF 跟踪。 该工具专门针对 WCF 生成并使用<xref:System.Diagnostics.XmlWriterTraceListener>编写的跟踪文件而设计。 下图演示了跟踪中涉及到的各种组件。  
+- 除了核心组件以外，还可以使用[服务跟踪查看器工具（svctraceviewer.exe）](../service-trace-viewer-tool-svctraceviewer-exe.md)来查看和搜索 WCF 跟踪。 该工具专门设计用于由 WCF 生成并使用 <xref:System.Diagnostics.XmlWriterTraceListener>写出的跟踪文件。 下图演示了跟踪中涉及到的各种组件。  
   
  ![处理异常和错误](./media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
   
 ### <a name="tracing-from-a-custom-channel"></a>从自定义通道跟踪  
- 自定义通道应写出跟踪消息，以便在无法向正在运行的应用程序附加调试器时帮助诊断问题。 这涉及两个高级任务：实例化<xref:System.Diagnostics.TraceSource>并调用其方法来编写跟踪。  
+ 自定义通道应写出跟踪消息，以便在无法向正在运行的应用程序附加调试器时帮助诊断问题。 这涉及到两个高级任务：实例化 <xref:System.Diagnostics.TraceSource> 和调用其方法来写入跟踪。  
   
  在实例化 <xref:System.Diagnostics.TraceSource> 时，所指定的字符串将成为该源的名称。 此名称用来配置（启用/禁用/设置跟踪级别）跟踪源。 此名称还显示在跟踪输出本身当中。 自定义通道应使用唯一的源名称来帮助该跟踪输出的读取器了解跟踪信息的出处。 常见的做法是将正在写入信息的程序集的名称用作跟踪源的名称。 例如，WCF 使用 System.servicemodel 作为从 System.servicemodel 程序集写入的信息的跟踪源。  
   
@@ -325,7 +325,7 @@ public class MessageFault
 ```csharp
 using System.Diagnostics;  
 //...  
-TraceSource udpSource=new TraceSource("Microsoft.Samples.Udp");  
+TraceSource udpSource = new TraceSource("Microsoft.Samples.Udp");  
 //...  
 udpsource.TraceInformation("UdpInputChannel received a message");  
 ```  
@@ -334,7 +334,7 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 > 强烈建议您指定一个对于自定义通道保持唯一的跟踪源名称，以帮助跟踪输出读取器了解该输出的出处。  
   
 #### <a name="integrating-with-the-trace-viewer"></a>与跟踪查看器集成  
- 你的通道生成的跟踪可以通过[服务跟踪查看器工具（svctraceviewer.exe）](../service-trace-viewer-tool-svctraceviewer-exe.md)可读的格式输出，方法是使用<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>作为跟踪侦听器。 此操作无需由通道开发人员来执行， 而是应由应用程序用户（或者对应用程序进行疑难解答的人员）在应用程序的配置文件中配置该跟踪侦听器。 例如，下面的配置将 <xref:System.ServiceModel?displayProperty=nameWithType> 和 `Microsoft.Samples.Udp` 中的跟踪信息均输出到名为 `TraceEventsFile.e2e` 的文件中：  
+ 可以使用 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 作为跟踪侦听器，以[服务跟踪查看器工具（svctraceviewer.exe）](../service-trace-viewer-tool-svctraceviewer-exe.md)可读的格式输出由通道生成的跟踪。 此操作无需由通道开发人员来执行， 而是应由应用程序用户（或者对应用程序进行疑难解答的人员）在应用程序的配置文件中配置该跟踪侦听器。 例如，下面的配置将 <xref:System.ServiceModel?displayProperty=nameWithType> 和 `Microsoft.Samples.Udp` 中的跟踪信息均输出到名为 `TraceEventsFile.e2e` 的文件中：  
   
 ```xml  
 <configuration>  
@@ -403,4 +403,4 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 </E2ETraceEvent>  
 ```  
   
- WCF 跟踪查看器了解之前显示的`TraceRecord`元素的架构，并从其子元素中提取数据，并以表格格式显示数据。 在跟踪结构化应用程序数据以帮助 Svctraceviewer.exe 用户读取数据时，通道应使用此架构。
+ WCF 跟踪查看器了解之前显示的 `TraceRecord` 元素的架构，并从其子元素中提取数据，并以表格格式显示数据。 在跟踪结构化应用程序数据以帮助 Svctraceviewer.exe 用户读取数据时，通道应使用此架构。

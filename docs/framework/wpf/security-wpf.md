@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 908c3fb0baacc7fd75dae875e9a9d49a08fe5401
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a88159085e48d69550320ffabe3035f549c78653
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459721"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975610"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a>开发 Windows Presentation Foundation （WPF）独立应用程序和浏览器托管应用程序时，必须考虑安全模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 独立的应用程序使用无限制权限（CA**FullTrust**权限集）执行，不管是使用 Windows Installer （.msi）、XCopy 还是 ClickOnce 部署的。 不支持使用 ClickOnce 部署部分信任的独立 WPF 应用程序。 不过，完全信任的主机应用程序可以使用 .NET Framework 外接程序模型创建部分信任 <xref:System.AppDomain>。 有关详细信息，请参阅[WPF 外接程序概述](./app-development/wpf-add-ins-overview.md)。  
@@ -209,7 +209,7 @@ ms.locfileid: "73459721"
   
  如果在 Windows Internet Explorer 中运行包含 WPF <xref:System.Windows.Controls.WebBrowser> 控件的部分信任 XAML 浏览器应用程序（XBAP），则 WPF 会在 Internet Explorer 进程的地址空间中承载 WebBrowser ActiveX 控件。 由于 WebBrowser ActiveX 控件承载于 Internet Explorer 进程中，因此还为 WebBrowser ActiveX 控件启用了 Internet Explorer 的所有功能控件。  
   
- 与普通的独立应用程序相比，运行于 Internet Explorer 中的 XBAP 还将另外获得一层安全保护。 这种附加安全性是因为 Internet Explorer 会默认在 [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] 和 [!INCLUDE[win7](../../../includes/win7-md.md)]上以受保护模式运行。 有关保护模式的详细信息，请参阅[了解和使用受保护模式的 Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393)。  
+ 与普通的独立应用程序相比，运行于 Internet Explorer 中的 XBAP 还将另外获得一层安全保护。 这种附加安全性是因为 Internet Explorer 和 WebBrowser ActiveX 控件在默认情况下在 Windows Vista 和 [!INCLUDE[win7](../../../includes/win7-md.md)]上以受保护模式运行。 有关保护模式的详细信息，请参阅[了解和使用受保护模式的 Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393)。  
   
 > [!NOTE]
 > 如果尝试在 Firefox 中运行包含 WPF <xref:System.Windows.Controls.WebBrowser> 控件的 XBAP，则在 Internet 区域中，将会引发 <xref:System.Security.SecurityException>。 这是由于 WPF 安全策略造成的。  
@@ -258,7 +258,7 @@ ms.locfileid: "73459721"
  使用此设置，外部内容将加载到不同于承载应用程序的进程的进程中。 此进程被限制在默认 Internet 区域权限集中，从而有效地将其与承载应用程序和客户端计算机隔离。  
   
 > [!NOTE]
-> 尽管从独立应用程序中的 <xref:System.Windows.Navigation.NavigationWindow> 或 <xref:System.Windows.Controls.Frame> 导航到松散 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 文件的操作是基于 WPF 浏览器宿主基础结构（涉及 Presentationhost.exe 进程）实现的，但安全级别略微小于内容直接在 Internet Explorer 中的 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 和 [!INCLUDE[win7](../../../includes/win7-md.md)] 上加载（这仍通过 Presentationhost.exe）。 这是因为使用 Web 浏览器的独立 WPF 应用程序不提供 Internet Explorer 的额外“保护模式”安全功能。  
+> 尽管从独立应用程序中的 <xref:System.Windows.Navigation.NavigationWindow> 或 <xref:System.Windows.Controls.Frame> 导航到松散 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 文件是基于 WPF 浏览器宿主基础结构（涉及 Presentationhost.exe 过程）实现的，但安全级别略小于直接在 Windows Vista 上的 Internet Explorer 中加载内容的时间，并 [!INCLUDE[win7](../../../includes/win7-md.md)] （这仍是通过 Presentationhost.exe）。 这是因为使用 Web 浏览器的独立 WPF 应用程序不提供 Internet Explorer 的额外“保护模式”安全功能。  
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>用于开发可提高安全性的 WPF 应用程序的资源  

@@ -2,12 +2,12 @@
 title: 使用 Entity Framework Core 实现基础结构持久性层
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 探索使用 Entity Framework Core 实现基础结构持久性层的细节。
 ms.date: 10/08/2018
-ms.openlocfilehash: 7e3480999b115ac13f8d7ebcaed826b407aa7637
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b70ede6b47cbf990d0435aef841416c68f6439b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674094"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737916"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>使用 Entity Framework Core 实现基础结构持久性层
 
@@ -174,11 +174,11 @@ Entity Framework DbContext 类基于工作单元和存储库模式，且可直�
 
 图 7-18 中可以看到不使用存储库（直接使用 EF DbContext）与使用存储库（更易于模拟这些存储库）之间的差异。
 
-![使用自定义存储库和普通 DbContext 之间的对比：自定义存储库添加了抽象层，可用于通过模拟存储库来简化测试。](./media/image19.png)
+![显示两个存储库中的组件和数据流的关系图。](./media/infrastructure-persistence-layer-implemenation-entity-framework-core/custom-repo-versus-db-context.png)
 
 **图 7-18**。 使用自定义存储库与纯 DbContext
 
-模拟时有多个备选项。 只模拟存储库或模拟整个工作单元。 通常情况下，只模拟存储库就足够了，不需要提取并模拟整个工作单元那般的复杂。
+图 7-18 显示了使用自定义存储库添加了抽象层，可用于通过模拟存储库来简化测试。 模拟时有多个备选项。 只模拟存储库或模拟整个工作单元。 通常情况下，只模拟存储库就足够了，不需要提取并模拟整个工作单元那般的复杂。
 
 稍后，当我们关注应用程序层时，将看到依赖关系注入在 ASP.NET Core 中的工作方式，以及使用存储库时的实现方式。
 

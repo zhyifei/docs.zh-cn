@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9e40f93be7f2dad4a80a4f4d23f61f3c93061751
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 103d668dd7a7436fd1acdccdc0afc2431ed8372a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874934"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975013"
 ---
 # <a name="code-contracts"></a>代码协定
 
@@ -24,11 +24,11 @@ ms.locfileid: "61874934"
 
 代码协定包括以下优点：
 
-- 改进了测试：代码协定提供静态协定验证、 运行时检查和文档生成。
+- 改进测试：代码协定提供静态协定验证、运行时检查和文档生成。
 
-- 自动测试工具：您可以使用代码约定通过过滤掉不满足前置条件的无意义的测试参数生成更有意义的单元测试。
+- 自动测试工具：可通过过滤掉不满足前置条件的无意义的测试参数，使用代码协定来生成更有意义的单元测试。
 
-- 静态验证：静态检查程序可以决定是否存在任何协定冲突而无需运行该程序。 它可检查隐式协定（如 null 取消引用和数组绑定）和显式协定。
+- 静态验证：静态检查器无需运行程序即可决定是否存在任何协定冲突。 它可检查隐式协定（如 null 取消引用和数组绑定）和显式协定。
 
 - 参考文档：文档生成器扩充具有协定信息的现有 XML 文档文件。 还提供了可与 [Sandcastle ](https://github.com/EWSoftware/SHFB)一起使用的样式表，因此，生成的文档页具有协定部分。
 
@@ -36,7 +36,7 @@ ms.locfileid: "61874934"
 
 协定类中的大多数方法都进行条件编译；即，编译器仅在你定义特殊符号 CONTRACTS_FULL 时才使用 `#define` 指令发出对这些方法的调用。 借助 CONTRACTS_FULL，你无需需使用 `#ifdef` 指令就可将协定写入代码；还可生成两种不同的版本：一种带有协定，一种未带协定。
 
-有关使用代码协定的工具和详细说明，请参阅 MSDN DevLabs 网站上的[代码协定](https://go.microsoft.com/fwlink/?LinkId=152461)。
+有关使用代码协定的工具和详细说明，请参阅 Visual Studio marketplace 网站上的[代码协定](https://marketplace.visualstudio.com/items?itemName=RiSEResearchinSoftwareEngineering.CodeContractsforNET)。
 
 ## <a name="preconditions"></a>前置条件
 
@@ -69,7 +69,7 @@ if (x == null) throw new ...
 Contract.EndContractBlock(); // All previous "if" checks are preconditions
 ```
 
-请注意，上述测试中的条件是取反的前置条件。 （实际前置条件为 `x != null`。）求反的前置条件是高度受限：必须按上例; 中所示进行编写也就是说，不应包含`else`子句，并且正文`then`子句必须是单个`throw`语句。 `if` 测试受纯度和可见性规则约束（请参阅[使用准则](#usage_guidelines)），但 `throw` 表达式仅受纯度规则约束。 但是，引发的异常类型必须与发生协定的方法同样可见。
+请注意，上述测试中的条件是取反的前置条件。 （实际的前提条件将为 `x != null`。）求反的前置条件受到严格限制：必须按前面的示例所示编写：也就是说，它不应包含任何 `else` 子句，`then` 子句的主体必须是单个 `throw` 语句。 `if` 测试受纯度和可见性规则约束（请参阅[使用准则](#usage_guidelines)），但 `throw` 表达式仅受纯度规则约束。 但是，引发的异常类型必须与发生协定的方法同样可见。
 
 ## <a name="postconditions"></a>Postconditions
 
@@ -101,11 +101,11 @@ Contract.EnsuresOnThrow<T>(this.F > 0);
 
 以下方法可能仅在后置条件中使用：
 
-- 通过使用表达式 `Contract.Result<T>()`（其中 `T` 替换为方法的返回类型），可引用后置条件中的方法返回值。 编译器无法推断出类型时，必须显式提供此类型。 例如，C#编译器不能推断类型的方法不采用任何参数，因此它需要后置条件：`Contract.Ensures(0 <Contract.Result<int>())` 方法的返回类型`void`不能引用`Contract.Result<T>()`后置条件中。
+- 通过使用表达式 `Contract.Result<T>()`（其中 `T` 替换为方法的返回类型），可引用后置条件中的方法返回值。 编译器无法推断出类型时，必须显式提供此类型。 例如，C# 编译器无法推断不带任何参数的方法类型，因此它需要后置条件 `Contract.Ensures(0 <Contract.Result<int>())`。返回类型为 `void` 的方法无法引用后置条件中的 `Contract.Result<T>()`。
 
-- 后置条件中的预状态值是指方法或属性开头的表达式的值。 它使用表达式 `Contract.OldValue<T>(e)`，其中 `T` 是 `e` 的类型。 每次编译器可推断出类型时，都可发出泛型类型参数。 （例如，C# 编译器始终可推断出类型，因为它采用了参数。）对于 `e` 和可能出现旧表达式的上下文中会执行的操作，存在一些限制。 旧表达式中不能包含其他旧表达式。 最重要的是，旧表达式必须引用方法前置条件状态中的一个值。 换言之，只要方法前置条件为 `true`，此表达式都必须可以进行计算。 以下是此规则的几个实例。
+- 后置条件中的预状态值是指方法或属性开头的表达式的值。 它使用表达式 `Contract.OldValue<T>(e)`，其中 `T` 是 `e` 的类型。 每次编译器可推断出类型时，都可发出泛型类型参数。 （例如， C#编译器始终会推断类型，因为它采用了参数。）`e` 和可能出现旧表达式的上下文有几个限制。 旧表达式中不能包含其他旧表达式。 最重要的是，旧表达式必须引用方法前置条件状态中的一个值。 换言之，只要方法前置条件为 `true`，此表达式都必须可以进行计算。 以下是此规则的几个实例。
 
-  - 方法的前置条件状态中必须存在值。 若要引用的对象上的字段，前置条件必须保证对象始终为非 null。
+  - 方法的前置条件状态中必须存在值。 若要引用对象上的字段，前提条件必须保证对象始终为非 null。
 
   - 不能引用旧表达式中方法的返回值：
 
@@ -165,7 +165,7 @@ protected void ObjectInvariant ()
 }
 ```
 
-固定协定由 CONTRACTS_FULL 预处理器符号有条件地进行定义。 在运行时检查期间，每次公共方法结束都要检查固定协定。 如果固定协定提到相同类中的公共方法，则将禁用通常在此公共方法结束时执行的固定协定检查。 相反，仅在此方法的最外层方法调用结束时进行检查。 如果因调用其他类上的方法而重新输入类，也会发生此类情况。 对于对象终结器不检查固定条件和一个<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>实现。
+固定协定由 CONTRACTS_FULL 预处理器符号有条件地进行定义。 在运行时检查期间，每次公共方法结束都要检查固定协定。 如果固定协定提到相同类中的公共方法，则将禁用通常在此公共方法结束时执行的固定协定检查。 相反，仅在此方法的最外层方法调用结束时进行检查。 如果因调用其他类上的方法而重新输入类，也会发生此类情况。 不会检查对象终结器和 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 实现的固定条件。
 
 <a name="usage_guidelines"></a>
 

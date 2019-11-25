@@ -2,12 +2,12 @@
 title: 使用 .NET Core 实现微服务域模型
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 获取面向 DDD 的域模型的实现详细信息。
 ms.date: 10/08/2018
-ms.openlocfilehash: b2ad62c2a16dd3993b9624ec14f0070e934ac2de
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bff9cbda08e519038056268151a1721427f0ac01
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676584"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972045"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>使用 .NET Core 实现微服务域模型
 
@@ -17,7 +17,9 @@ ms.locfileid: "68676584"
 
 用于 eShopOnContainers 参考应用程序的文件夹组织演示了该应用程序的 DDD 模型。 你可能会发现，不同的文件夹组织能更清楚地传达为应用程序所做的设计选择。 如图 7-10 所示，订购域模型包含两个聚合，即订单聚合和买方聚合。 每个聚合都是一组域实体和值对象，但聚合也可以由单个域实体（聚合根或根实体）组成。
 
-![Ordering.Domain 项目的解决方案资源管理器视图，其中显示包含 BuyerAggregate 和 OrderAggregate 文件夹的 AggregatesModel 文件夹，这两个文件夹各自包含其实体类、值对象文件等。 ](./media/image11.png)
+:::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="解决方案资源管理器中的 Ordering.Domain 项目的屏幕截图。":::
+Ordering.Domain 项目的解决方案资源管理器视图，其中显示包含 BuyerAggregate 和 OrderAggregate 文件夹的 AggregatesModel 文件夹，这两个文件夹各自包含其实体类、值对象文件等。
+:::image-end:::
 
 **图 7-10**。 eShopOnContainers 中订购微服务的域模型结构
 
@@ -31,7 +33,9 @@ ms.locfileid: "68676584"
 
 事务一致性意味着，保证聚合在业务操作结束时保持一致且处于最新状态。 例如，eShopOnContainers 订购微服务域模型中订单聚合的组成如图 7-11 所示。
 
-![OrderAggregate 文件夹的详细视图：Address.cs 是值对象，IOrderRepository 是存储库接口，Order.cs 是聚合根，OrderItem.cs 是子实体，而 OrderStatus.cs 是枚举类。](./media/image12.png)
+:::image type="complex" source="./media/net-core-microservice-domain-model/vs-solution-explorer-order-aggregate.png" alt-text="OrderAggregate 文件夹及其类的屏幕截图。":::
+OrderAggregate 文件夹的详细视图：Address.cs 是值对象，IOrderRepository 是存储库接口，Order.cs 是聚合根，OrderItem.cs 是子实体，而 OrderStatus.cs 是枚举类。
+:::image-end:::
 
 **图 7-11**。 Visual Studio 解决方案中的订单聚合
 
@@ -170,7 +174,7 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
 - **Julie Lerman.数据点 - 域驱动设计的编码：面向数据聚焦型开发人员的提示** \
-  <https://msdn.microsoft.com/magazine/dn342868.aspx>
+  <https://docs.microsoft.com/archive/msdn-magazine/2013/august/data-points-coding-for-domain-driven-design-tips-for-data-focused-devs>
 
 - **Udi Dahan.如何创建完全封装的域模型** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>

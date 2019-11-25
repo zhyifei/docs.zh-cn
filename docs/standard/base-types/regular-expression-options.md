@@ -12,29 +12,29 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: 4cc62696cb6589151e3abc59bbea64b693e8b3a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a53d7517485d2a0b02b6f11928f478a7da3f9503
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121735"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972103"
 ---
 # <a name="regular-expression-options"></a>正则表达式选项
 
-<a name="Top"></a>默认情况下，正则表达式模式中带有任意文本字符的输入字符串比较区分大小写，正则表达式模式中的空白将被解释为文本空白字符且正则表达式中的捕获组通过隐式和显式命名。 可通过指定正则表达式选项修改默认正则表达式行为的这些和其他数个方面。 列于下表的这些选项，可将内联作为正则表达式的一部分包含，或者可将它们作为 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 枚举值提供给 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 类构造函数或静态模式匹配方法。
+默认情况下，正则表达式模式中带有任意文本字符的输入字符串比较区分大小写，正则表达式模式中的空白将被解释为文本空白字符且正则表达式中的捕获组通过隐式和显式命名。 可通过指定正则表达式选项修改默认正则表达式行为的这些和其他数个方面。 列于下表的这些选项，可将内联作为正则表达式的一部分包含，或者可将它们作为 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 枚举值提供给 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 类构造函数或静态模式匹配方法。
 
 |RegexOptions 成员|内联字符|效果|
 |-------------------------|----------------------|------------|
-|<xref:System.Text.RegularExpressions.RegexOptions.None>|不可用|使用默认行为。 有关更多信息，请参见[默认选项](#Default)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|使用不区分大小写的匹配。 有关更多信息，请参见[不区分大小写的匹配](#Case)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|使用多线模式，其中 `^` 和 `$` 匹配每行的开头和末尾（不是输入字符串的开头和末尾）。 有关更多信息，请参见[多行模式](#Multiline)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|使用单行模式，其中的句号 (.) 匹配每个字符（而不是除了 `\n` 以外的每个字符)。 有关更多信息，请参见[单行模式](#Singleline)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|不捕获未命名的组。 唯一有效的捕获是显式命名或编号的 `(?<`*name*`>` *subexpression*`)` 形式的组。 有关更多信息，请参见[仅显式捕获](#Explicit)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|不可用|将正则表达式编译为程序集。 有关更多信息，请参见[已编译的正则表达式](#Compiled)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|从模式中排除保留的空白并启用数字符号 (`#`) 后的注释。 有关更多信息，请参见[忽略空白](#Whitespace)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|不可用|更改搜索方向。 搜索是从右向左而不是从左向右进行。 有关更多信息，请参见[从右向左模式](#RightToLeft)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|不可用|为表达式启用符合 ECMAScript 的行为。 有关更多信息，请参见 [ECMAScript 匹配行为](#ECMAScript)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|不可用|忽略语言的区域性差异。 有关更多信息，请参见[使用固定区域性的比较](#Invariant)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.None>|不可用|使用默认行为。 有关更多信息，请参见[默认选项](#default-options)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|使用不区分大小写的匹配。 有关更多信息，请参见[不区分大小写的匹配](#case-insensitive-matching)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|使用多线模式，其中 `^` 和 `$` 匹配每行的开头和末尾（不是输入字符串的开头和末尾）。 有关更多信息，请参见[多行模式](#multiline-mode)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|使用单行模式，其中的句号 (.) 匹配每个字符（而不是除了 `\n` 以外的每个字符)。 有关详细信息，请参阅[单行模式](#single-line-mode)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|不捕获未命名的组。 唯一有效的捕获是显式命名或编号的 `(?<`*name*`>` *subexpression*`)` 形式的组。 有关更多信息，请参见[仅显式捕获](#explicit-captures-only)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|不可用|将正则表达式编译为程序集。 有关更多信息，请参见[已编译的正则表达式](#compiled-regular-expressions)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|从模式中排除保留的空白并启用数字符号 (`#`) 后的注释。 有关更多信息，请参见[忽略空白](#ignore-white-space)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|不可用|更改搜索方向。 搜索是从右向左而不是从左向右进行。 有关更多信息，请参见[从右向左模式](#right-to-left-mode)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|不可用|为表达式启用符合 ECMAScript 的行为。 有关更多信息，请参见 [ECMAScript 匹配行为](#ecmascript-matching-behavior)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|不可用|忽略语言的区域性差异。 有关更多信息，请参见[使用固定区域性的比较](#comparison-using-the-invariant-culture)。|
 
 ## <a name="specifying-the-options"></a>指定选项
 
@@ -108,8 +108,6 @@ ms.locfileid: "73121735"
 
 下面各部分列出了 .NET 正则表达式支持的选项。
 
-<a name="Default"></a>
-
 ## <a name="default-options"></a>默认选项
 
 <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 选项指示尚未指定任何选项，正则表达式引擎使用其默认行为。 这包括：
@@ -135,10 +133,6 @@ ms.locfileid: "73121735"
 
 因为 <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 选项表示正则表达式引擎的默认行为，因此它很少显式地在方法调用中指定。 而改为调用构造函数或静态模式匹配的方法，其中不包含 `options` 参数。
 
-[返回页首](#Top)
-
-<a name="Case"></a>
-
 ## <a name="case-insensitive-matching"></a>不区分大小写的匹配
 
 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase> 选项或 `i` 内联选项提供了不区分大小写匹配。 默认情况下，使用当前区域性的大小写约定。
@@ -152,10 +146,6 @@ ms.locfileid: "73121735"
 
 [!code-csharp[Conceptual.Regex.Language.Options#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/case2.cs#2)]
 [!code-vb[Conceptual.Regex.Language.Options#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/case2.vb#2)]
-
-[返回页首](#Top)
-
-<a name="Multiline"></a>
 
 ## <a name="multiline-mode"></a>多行模式
 
@@ -184,10 +174,6 @@ ms.locfileid: "73121735"
 [!code-csharp[Conceptual.Regex.Language.Options#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/multiline2.cs#4)]
 [!code-vb[Conceptual.Regex.Language.Options#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/multiline2.vb#4)]
 
-[返回页首](#Top)
-
-<a name="Singleline"></a>
-
 ## <a name="single-line-mode"></a>单行模式
 
 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 选项或 `s` 内联选项导致正则表达式引擎将输入字符串视为由单行组成。 它通过更改句号 (`.`) 语言元素的行为，使其与每个字符匹配，而不是与除换行符 `\n` 或 \u000A 之外的每个字符匹配来执行此操作。
@@ -201,10 +187,6 @@ ms.locfileid: "73121735"
 
 [!code-csharp[Conceptual.Regex.Language.Options#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/singleline1.cs#5)]
 [!code-vb[Conceptual.Regex.Language.Options#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/singleline1.vb#5)]
-
-[返回页首](#Top)
-
-<a name="Explicit"></a>
 
 ## <a name="explicit-captures-only"></a>仅显式捕获
 
@@ -244,10 +226,6 @@ ms.locfileid: "73121735"
 [!code-csharp[Conceptual.Regex.Language.Options#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/explicit3.cs#11)]
 [!code-vb[Conceptual.Regex.Language.Options#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/explicit3.vb#11)]
 
-[返回页首](#Top)
-
-<a name="Compiled"></a>
-
 ## <a name="compiled-regular-expressions"></a>已编译的正则表达式
 
 默认情况下，.NET 中的正则表达式会有解释。 当实例化 <xref:System.Text.RegularExpressions.Regex> 对象或者调用静态 <xref:System.Text.RegularExpressions.Regex> 方法时，将把正则表达式模式解析为一组自定义操作代码，并且解释器使用这些操作代码来运行正则表达式。 这涉及一个权衡：初始化正则表达式引擎的成本通过运行时性能的消耗而最小化。
@@ -269,10 +247,6 @@ ms.locfileid: "73121735"
 
 > [!NOTE]
 > <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> 选项与 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> 方法无关，该方法创建一个特殊用途的程序集，其中包含预定义的已编译的正则表达式。
-
-[返回页首](#Top)
-
-<a name="Whitespace"></a>
 
 ## <a name="ignore-white-space"></a>忽略空白
 
@@ -302,7 +276,7 @@ ms.locfileid: "73121735"
 
 `\b \(? ( (?>\w+) ,?\s? )+  [\.!?] \)? # Matches an entire sentence.`
 
-此模式与[仅显式捕获](#Explicit)部分中定义的模式相似，不同之处在于它使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 选项忽略模式空格。
+此模式与[仅显式捕获](#explicit-captures-only)部分中定义的模式相似，不同之处在于它使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 选项忽略模式空格。
 
 [!code-csharp[Conceptual.Regex.Language.Options#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace1.cs#12)]
 [!code-vb[Conceptual.Regex.Language.Options#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace1.vb#12)]
@@ -311,10 +285,6 @@ ms.locfileid: "73121735"
 
 [!code-csharp[Conceptual.Regex.Language.Options#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace2.cs#13)]
 [!code-vb[Conceptual.Regex.Language.Options#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace2.vb#13)]
-
-[返回页首](#Top)
-
-<a name="RightToLeft"></a>
 
 ## <a name="right-to-left-mode"></a>从右到左模式
 
@@ -342,10 +312,6 @@ ms.locfileid: "73121735"
 |`,?`|匹配零个或一个逗号字符。|
 |`\s`|与空白字符匹配。|
 |`\d{4}`|匹配四个十进制数字。|
-
-[返回页首](#Top)
-
-<a name="ECMAScript"></a>
 
 ## <a name="ecmascript-matching-behavior"></a>ECMAScript 匹配行为
 
@@ -386,10 +352,6 @@ ECMAScript 和规范化正则表达式的行为在三个方面不同：字符类
   |`\0` 后跟 0 到 2 个八进制数字|解释为八进制。 例如，`\044` 总是解释为八进制值并表示“$”。|行为相同。|
   |`\` 后跟一个从 1 到 9 的数字，后面再没有任何其他十进制数字，|解释为反向引用。 例如，`\9` 始终表示后向引用 9，即使第九捕获组不存在。 如果捕获组不存在，则正则表达式分析器将引发 <xref:System.ArgumentException>。|如果存在单个十进制数字捕获组，则后向引用该数字。 否则将该值解释为文本。|
   |`\` 后跟一个从 1 到 9 的数字，后跟其他十进制数字|将数字解释为十进制值。 如果存在该捕获组，则将该表达式解释为后向引用。<br /><br /> 否则，将前导的八进制数字解释为不超过八进制值 377 的八进制数字；也就是说，仅考虑该值的后八位。 将其余数字解释为文本。 例如，如果表达式 `\3000` 中存在捕获组 300，则解释为后向引用 300；如果捕获组 300 不存在，则解释为后跟 0 的八进制数字 300。|通过将尽可能多的数字转换为可引用捕获的十进制值解释为反向引用。 如果任何数字都不能转换，则解释为使用其值不超过八进制值 377 的前导八进制数字的八进制数字；将其余数字解释为文本。|
-
-[返回页首](#Top)
-
-<a name="Invariant"></a>
 
 ## <a name="comparison-using-the-invariant-culture"></a>使用固定区域性的比较
 

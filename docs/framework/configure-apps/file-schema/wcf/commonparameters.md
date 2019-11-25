@@ -2,21 +2,21 @@
 title: <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
-ms.openlocfilehash: 6f187e9cdcabc358ee69d65e392bc59aa38e52ca
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: ab21be7b5e2738ac6a7c9bea676d8180c69d1afd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398170"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968569"
 ---
-# <a name="commonparameters"></a>\<commonParameters>
+# <a name="commonparameters"></a>\<commonParameters >
 表示在多个服务之间全局使用的参数的集合。 此集合通常将包括可由持久性服务共享的数据库连接字符串。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behaviors.md)\
+\<system &nbsp; &nbsp;[ **>** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为**](behaviors.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **&nbsp;&nbsp;\<** ](behavior-of-servicebehaviors.md) >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<workflowRuntime >** ](workflowruntime.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<commonParameters >**  
   
@@ -47,19 +47,19 @@ ms.locfileid: "70398170"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<workflowRuntime>](workflowruntime.md)|指定用于承载基于工作流<xref:System.Workflow.Runtime.WorkflowRuntime>的 Windows Communication Foundation （WCF）服务的实例的设置。|  
+|[\<workflowRuntime >](workflowruntime.md)|指定用于承载基于工作流的 Windows Communication Foundation （WCF）服务的 <xref:System.Workflow.Runtime.WorkflowRuntime> 实例的设置。|  
   
 ## <a name="remarks"></a>备注  
  `<commonParameters>` 元素定义在多个服务之间全局使用的任何参数，例如，使用 `ConnectionString` 时的<xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>。  
   
 > [!NOTE]
 > 如果在 `ConnectionString` 一节中指定了 `<commonParameters>` 值，则 SQL Tracking 服务并不始终使用该值。 它的某些操作可能会失败，例如检索 `StateMachineWorkflowInstance.StateHistory` 属性。 若要解决此问题，请在跟踪提供程序的配置节指定 `ConnectionString` 属性，如下面的示例所示。  
-  
- `<add`  
-  
- `type="System.Workflow.Runtime.Tracking.SqlTrackingService, System.Workflow.Runtime, Version=3.0.00000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"`  
-  
- `ConnectionString="Data Source=localhost;Initial Catalog=Partner20WFTP;Integrated Security=True;" />`  
+
+```xml  
+<add
+type="System.Workflow.Runtime.Tracking.SqlTrackingService, System.Workflow.Runtime, Version=3.0.00000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" 
+ConnectionString="Data Source=localhost;Initial Catalog=Partner20WFTP;Integrated Security=True;" />
+```  
   
  对于提交批处理工作进行永久性存储的服务，如 <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> 和 <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>，可以通过使用 `EnableRetries` 参数来允许它们重试其事务，如以下示例所示：  
   
@@ -80,19 +80,19 @@ ms.locfileid: "70398170"
 </workflowRuntime>
 ```  
   
- 请注意， `EnableRetries`参数可以在全局级别设置（如*CommonParameters*部分所示），也可以为支持`EnableRetries`的个别服务设置（如 "*服务*" 一节中所示）。  
+ 请注意，可以在全局级别（如*CommonParameters*部分所示）或支持 `EnableRetries` 的单个服务（如 "*服务*" 一节中所示）设置 `EnableRetries` 参数。  
   
- 下面的示例代码演示如何通过编程方式更改公共参数。  
+ 下面的示例代码演示如何以编程方式更改公共参数：
   
-```  
-Configuration config=WebConfigurationManager.OpenWebConfiguration("/Workflow", "Default Web Site", null, "localhost");  
-WorkflowRuntimeSection wfruntime=config.GetSection("WorkflowRuntime") as WorkflowRuntimeSection;  
-NameValueConfigurationCollection commonParameters=wfruntime.CommonParameters;  
+```csharp  
+Configuration config = WebConfigurationManager.OpenWebConfiguration("/Workflow", "Default Web Site", null, "localhost");
+var wfruntime = config.GetSection("WorkflowRuntime") as WorkflowRuntimeSection;  
+NameValueConfigurationCollection commonParameters = wfruntime.CommonParameters;
 commonParameters["ConnectionString"].Value="another connection string";  
 config.Save();  
 ```  
   
- 有关使用配置文件控制 Windows Workflow Foundation 主机应用程序的<xref:System.Workflow.Runtime.WorkflowRuntime>对象的行为的详细信息，请参阅[工作流配置文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))。  
+ 有关使用配置文件控制 Windows Workflow Foundation 主机应用程序的 <xref:System.Workflow.Runtime.WorkflowRuntime> 对象的行为的详细信息，请参阅[工作流配置文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))。  
   
 ## <a name="example"></a>示例  
   

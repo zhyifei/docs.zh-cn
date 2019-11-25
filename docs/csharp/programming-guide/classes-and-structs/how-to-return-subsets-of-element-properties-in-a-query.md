@@ -1,18 +1,18 @@
 ---
-title: 如何：在查询中返回元素属性的子集 - C# 编程指南
+title: 如何在查询中返回元素属性的子集 - C# 编程指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 196383731507137bf4309d38d27b36f29b23a06c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1266b866d671854c787d907b91f654c128681de9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419306"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970463"
 ---
-# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>如何：在查询中返回元素属性的子集（C# 编程指南）
+# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>如何在查询中返回元素属性的子集（C# 编程指南）
 当下列两个条件都满足时，可在查询表达式中使用匿名类型：  
   
 - 只想返回每个源元素的某些属性。  

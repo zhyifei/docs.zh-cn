@@ -5,16 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: 582f5f2d6d82613736ed795eebe5129284cdac6e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d30b2e30639837730ecb185a2c0f659a63955004
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052986"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975401"
 ---
 # <a name="create-the-data-service"></a>创建数据服务
 
-在本主题中，你将创建一个示例数据服务，该服务使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] WCF 数据服务来公开基于 Northwind 示例数据库的源。 此任务涉及以下几个基本步骤：
+在本主题中，您将创建一个示例数据服务，该服务使用 WCF 数据服务公开基于 Northwind 示例数据库的 Open Data Protocol （OData）源。 此任务涉及以下几个基本步骤：
 
 1. 创建 ASP.NET Web 应用程序。
 
@@ -30,15 +30,15 @@ ms.locfileid: "71052986"
 
 1. 在 "**新建项目**" 对话框中的 "Visual Basic" 或C# "Visual" 下选择 " **web** " 类别，然后选择 " **ASP.NET web 应用程序**"。
 
-1. 输入`NorthwindService`作为项目名称，然后选择 **"确定"** 。
+1. 输入 `NorthwindService` 作为项目名称，然后选择 **"确定"** 。
 
 1. 在 "**新建 ASP.NET Web 应用程序**" 对话框中，选择 "**空**"，然后选择 **"确定"** 。
 
-1. （可选）为 Web 应用程序指定一个特定的端口号。 注意：此系列快速`12345`入门主题中使用了端口号。
+1. （可选）为 Web 应用程序指定一个特定的端口号。 注意：此系列快速入门主题中使用了端口号 `12345`。
 
     1. 在**解决方案资源管理器**中，右键单击刚创建的 ASP.NET 项目，然后选择 "**属性**"。
 
-    2. 选择 " **Web** " 选项卡，并将 "**特定端口**" 文本框的值`12345`设置为。
+    2. 选择 " **Web** " 选项卡，并将 "**特定端口**" 文本框的值设置为 `12345`。
 
 ## <a name="define-the-data-model"></a>定义数据模型
 
@@ -46,13 +46,13 @@ ms.locfileid: "71052986"
 
 2. 在 "**添加新项**" 对话框中，选择 "**数据**" 类别，然后选择 " **ADO.NET 实体数据模型**"。
 
-3. 对于数据模型的名称，请输入`Northwind.edmx`。
+3. 对于数据模型的名称，请输入 `Northwind.edmx`。
 
 4. 在**实体数据模型向导**中，选择 "**数据库中的 EF 设计器**"，然后单击 "**下一步**"。
 
 5. 执行以下步骤之一，将数据模型连接到数据库，然后单击 "**下一步**"：
 
-    - 如果尚未配置数据库连接，请单击 "**新建连接**" 并创建一个新连接。 有关详细信息，请参阅[如何：创建与 SQL Server 数据库](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))的连接。 此 SQL Server 实例必须附加了 Northwind 示例数据库。
+    - 如果尚未配置数据库连接，请单击 "**新建连接**" 并创建一个新连接。 有关详细信息，请参阅 [How to: Create Connections to SQL Server Databases](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))。 此 SQL Server 实例必须附加了 Northwind 示例数据库。
 
          \- 或 -
 
@@ -73,7 +73,7 @@ ms.locfileid: "71052986"
    > [!NOTE]
    > **WCF 数据服务**模板在 visual studio 2015 中提供，但在 visual studio 2017 中不可用。
 
-3. 对于服务的名称，请键入`Northwind`。
+3. 对于服务的名称，请键入 `Northwind`。
 
      Visual Studio 将为新服务创建 XML 标记和代码文件。 默认情况下，代码编辑器窗口将打开。 在**解决方案资源管理器**中，该服务的名称为 Northwind，扩展名为*svc.cs*或 *.svc*。
 

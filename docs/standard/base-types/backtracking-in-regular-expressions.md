@@ -18,30 +18,19 @@ helpviewer_keywords:
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 ms.custom: seodec18
-ms.openlocfilehash: 06f1094d872c84f2f277c7695a8858edc285449f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6504430f94f800bb9f41761ad64c65fefecb68d6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140514"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968257"
 ---
 # <a name="backtracking-in-regular-expressions"></a>正则表达式中的回溯
-<a name="top"></a> 当正则表达式模式包含可选 [限定符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 或 [替换构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)时，会发生回溯，并且正则表达式引擎会返回以前保存的状态，以继续搜索匹配项。 回溯是正则表达式的强大功能的中心；它使得表达式强大、灵活，可以匹配非常复杂的模式。 同时，这种强大功能需要付出一定代价。 通常，回溯是影响正则表达式引擎性能的单个最重要的因素。 幸运的是，开发人员可以控制正则表达式引擎的行为及其使用回溯的方式。 本主题说明回溯的工作方式以及如何对其进行控制。  
+当正则表达式模式包含可选[限定符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)或[备用构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)时，会发生回溯，并且正则表达式引擎会返回以前保存的状态，以继续搜索匹配项。 回溯是正则表达式的强大功能的中心；它使得表达式强大、灵活，可以匹配非常复杂的模式。 同时，这种强大功能需要付出一定代价。 通常，回溯是影响正则表达式引擎性能的单个最重要的因素。 幸运的是，开发人员可以控制正则表达式引擎的行为及其使用回溯的方式。 本主题说明回溯的工作方式以及如何对其进行控制。  
   
 > [!NOTE]
 > 通常情况下，非确定性有限自动机 (NFA) 引擎（如 .NET 正则表达式引擎）会将构造快速高效的正则表达式的职责交给开发人员。  
-  
- 本主题包含以下各节：  
-  
-- [不使用回溯的线性比较](#linear_comparison_without_backtracking)  
-  
-- [使用可选限定符或替换构造的回溯](#backtracking_with_optional_quantifiers_or_alternation_constructs)  
-  
-- [使用嵌套的可选限定符的回溯](#backtracking_with_nested_optional_quantifiers)  
-  
-- [控制回溯](#controlling_backtracking)  
-  
-<a name="linear_comparison_without_backtracking"></a>   
+
 ## <a name="linear-comparison-without-backtracking"></a>不使用回溯的线性比较  
  如果正则表达式模式没有可选限定符或替换构造，正则表达式引擎将以线性时间执行。 也就是说，在正则表达式引擎将模式中的第一个语言元素与输入字符串中的文本匹配后，它尝试将模式中的下一个语言元素与输入字符串中的下一个字符或字符组匹配。 此操作将继续，直至匹配成功或失败。 在任何一种情况下，在同一时间，正则表达式引擎都比输入字符串中提前一个字符。  
   
@@ -74,11 +63,8 @@ ms.locfileid: "73140514"
 |18|\w|“d”（索引 13）|可能匹配。|  
 |19|\b|“”(索引 14)|匹配。|  
   
- 如果正则表达式模式中不包括可选限定符或替换构造，则将正则表达式模式与输入字符串匹配所需要的最大比较数大致等于输入字符串中的字符数。 在这种情况下，正则表达式引擎通过 19 次比较来标识该 13 个字符的字符串中可能的匹配项。  换句话说，如果正则表达式引擎不包含可选限定符或替换构造，则正则表达式引擎将以近线性时间运行。  
-  
- [返回页首](#top)  
-  
-<a name="backtracking_with_optional_quantifiers_or_alternation_constructs"></a>   
+ 如果正则表达式模式中不包括可选限定符或替换构造，则将正则表达式模式与输入字符串匹配所需要的最大比较数大致等于输入字符串中的字符数。 在这种情况下，正则表达式引擎通过 19 次比较来标识该 13 个字符的字符串中可能的匹配项。  换句话说，如果正则表达式引擎不包含可选限定符或替换构造，则正则表达式引擎将以近线性时间运行。   
+
 ## <a name="backtracking-with-optional-quantifiers-or-alternation-constructs"></a>使用可选限定符或替换构造的回溯  
  当正则表达式模式包含可选限定符或替换构造时，输入字符串的计算将不再为线性。 使用 NFA 引擎的模式匹配由正则表达式中的语言元素驱动，而不是由输入字符串中要匹配的字符驱动。 因此，正则表达式引擎将尝试完全匹配可选或可替换的子表达式。 当它前进到子表达式中的下一个语言元素并且匹配不成功时，正则表达式引擎可放弃其成功匹配的一部分，并返回以前保存的与将正则表达式作为一个整体与输入字符串匹配有关的状态。 返回到以前保存状态以查找匹配的这一过程称为回溯。  
   
@@ -99,11 +85,8 @@ ms.locfileid: "73140514"
   
 - 它将模式中的“s”与匹配的“e”字符之后的“s”（“expressions”中的第一个“s”）进行比较。 匹配成功。  
   
- 当您使用回溯将正则表达式模式与输入字符串（长度为 55 个字符）匹配时，需要执行 67 次比较操作。 通常，如果正则表达式模式包括单个替换构造或单个可选限定符，则匹配模式所需要的比较操作数大于输入字符串中字符数的两倍。  
-  
- [返回页首](#top)  
-  
-<a name="backtracking_with_nested_optional_quantifiers"></a>   
+ 当您使用回溯将正则表达式模式与输入字符串（长度为 55 个字符）匹配时，需要执行 67 次比较操作。 通常，如果正则表达式模式包括单个替换构造或单个可选限定符，则匹配模式所需要的比较操作数大于输入字符串中字符数的两倍。   
+
 ## <a name="backtracking-with-nested-optional-quantifiers"></a>使用嵌套的可选限定符的回溯  
  如果模式中包括大量替换构造、嵌套的替换构造（或最常见的是嵌套的可选限定符），则匹配正则表达式模式所需要的比较操作数会成指数增加。 例如，正则表达式模式 `^(a+)+$` 用于匹配包含一个或多个“a”字符的完整字符串。 该示例提供了两个长度相同的输入字符串，但只有第一个字符串与模式匹配。 <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType> 类用于确定匹配操作所需的时间。  
   
@@ -118,15 +101,11 @@ ms.locfileid: "73140514"
   
 - 它返回到以前保存的匹配 3。 它确定有两个附加的“a”字符可分配给其他捕获的组。 但是，字符串末尾测试失败。 然后，它返回 match3 并尝试在两个附加的捕获组中匹配两个附加的“a”字符。 字符串末尾测试仍失败。 这些失败的匹配需要进行 12 次比较。 到目前为止，总共执行了 25 次比较。  
   
- 输入字符串与正则表达式的比较将以此方式继续，直到正则表达式引擎已尝试所有可能的匹配组合然后得出无匹配的结论。 因为存在嵌套的限定符，所以此比较为 O(2<sup>n</sup>) 或指数操作，其中 n 是输入字符串中的字符数  。 这意味着在最糟糕的情况下，包含 30 个字符的输入字符串大约需要进行 1,073,741,824 次比较，包含 40 个字符的输入字符串大约需要进行 1,099,511,627,776 次比较。 如果使用上述长度甚至更长的字符串，则正则表达式方法在处理与正则表达式模式不匹配的输入时，会需要超长的时间来完成。  
-  
- [返回页首](#top)  
-  
-<a name="controlling_backtracking"></a>   
+ 输入字符串与正则表达式的比较将以此方式继续，直到正则表达式引擎已尝试所有可能的匹配组合然后得出无匹配的结论。 因为存在嵌套的限定符，所以此比较为 O(2<sup>n</sup>) 或指数操作，其中 n 是输入字符串中的字符数  。 这意味着在最糟糕的情况下，包含 30 个字符的输入字符串大约需要进行 1,073,741,824 次比较，包含 40 个字符的输入字符串大约需要进行 1,099,511,627,776 次比较。 如果使用上述长度甚至更长的字符串，则正则表达式方法在处理与正则表达式模式不匹配的输入时，会需要超长的时间来完成。 
+
 ## <a name="controlling-backtracking"></a>控制回溯  
- 通过回溯可以创建强大、灵活的正则表达式。 但如上一节所示，回溯在提供这些优点的同时，可能也会使性能差的无法接受。 若要防止过度回溯，则应在实例化 <xref:System.Text.RegularExpressions.Regex> 对象或调用静态正则表达式匹配方法时定义超时间隔。 下一节中将对此进行讨论。 此外，.NET 还支持以下三个正则表达式语言元素，这些元素限制或禁止回溯，并支持几乎不会或完全不会导致性能损失的复杂正则表达式：[非回溯子表达式](#Nonbacktracking)、[回顾断言](#Lookbehind)和[预测先行断言](#Lookahead)。 有关每个语言元素的详细信息，请参见 [分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
-  
-<a name="Timeout"></a>   
+ 通过回溯可以创建强大、灵活的正则表达式。 但如上一节所示，回溯在提供这些优点的同时，可能也会使性能差的无法接受。 若要防止过度回溯，则应在实例化 <xref:System.Text.RegularExpressions.Regex> 对象或调用静态正则表达式匹配方法时定义超时间隔。 下一节中将对此进行讨论。 此外，.NET 还支持以下三个正则表达式语言元素，这些元素限制或禁止回溯，并支持几乎不会或完全不会导致性能损失的复杂正则表达式：[非回溯子表达式](#nonbacktracking-subexpression)、[回顾断言](#lookbehind-assertions)和[预测先行断言](#lookahead-assertions)。 有关每个语言元素的详细信息，请参见 [分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+
 ### <a name="defining-a-time-out-interval"></a>定义超时间隔  
  从 .NET Framework 4.5 开始，可以设置超时值，该值表示正则表达式引擎在放弃尝试并引发 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 异常之前将搜索单个匹配项的最长间隔。 你可以通过向实例正则表达式的 <xref:System.TimeSpan> 构造函数提供 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 值来指定超时间隔。 此外，每种静态模式匹配方法都具有带 <xref:System.TimeSpan> 参数的重载，该参数允许你指定超时值。 默认情况下，超时间隔设置为 <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> 且正则表达式引擎不会超时。  
   
@@ -139,8 +118,7 @@ ms.locfileid: "73140514"
   
  [!code-csharp[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/cs/ctor1.cs#1)]
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  
-  
-<a name="Nonbacktracking"></a>   
+
 ### <a name="nonbacktracking-subexpression"></a>非回溯子表达式  
  `(?>` *subexpression*`)` 语言元素禁止在子表达式中使用回溯。 它可用于预防与匹配失败关联的性能问题。  
   
@@ -148,8 +126,7 @@ ms.locfileid: "73140514"
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking4.cs#4)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking4.vb#4)]  
-  
-<a name="Lookbehind"></a>   
+
 ### <a name="lookbehind-assertions"></a>回顾断言  
  .NET 包括两个语言元素（`(?<=`subexpression  `)` 和 `(?<!`subexpression  `)`），它们与输入字符串中之前的一个或多个字符匹配。 这两个语言元素都是零宽度断言；也就是说，它们通过 *subexpression*而不是前移或回溯来确定当前字符之前紧挨着的一个或多个字符是否匹配。  
   
@@ -180,8 +157,7 @@ ms.locfileid: "73140514"
 |`[-.\w]*`|匹配零个或多个连字符、句号或单词字符。|  
 |`(?<=[0-9A-Z])`|回顾最后一个匹配的字符，如果该字符是字母数字字符，则继续匹配。 请注意，字母数字字符是由句号、连字符和所有单词字符构成的集合的子集。|  
 |`@`|匹配 at 符号（“\@”）。|  
-  
-<a name="Lookahead"></a>   
+
 ### <a name="lookahead-assertions"></a>预测先行断言  
  .NET 包括两个语言元素（`(?=`subexpression  `)` 和 `(?!`subexpression  `)`），它们与输入字符串中接下来的一个或多个字符匹配。 这两个语言元素都是零宽度断言；也就是说，它们通过 *subexpression*而不是前移或回溯来确定当前字符之后紧挨着的一个或多个字符是否匹配。  
   
@@ -212,8 +188,6 @@ ms.locfileid: "73140514"
 |`((?=[A-Z])\w+\.)*`|对一个或多个单词字符后跟句号的模式进行一次或多次匹配。 初始单词字符必须为字母字符。|  
 |`[A-Z]\w*`|匹配后跟零个或多个单词字符的字母字符。|  
 |`$`|在输入字符串末尾结束匹配。|  
-  
- [返回页首](#top)  
   
 ## <a name="see-also"></a>请参阅
 

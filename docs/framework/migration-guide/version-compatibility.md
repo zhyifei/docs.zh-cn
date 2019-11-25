@@ -7,14 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8db23f8e670406faff01644e751a948096f5fc7c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e0de18b5a40875d1fec2633c16688111d8f4b9ee
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592881"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974955"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework 的版本兼容性
 
@@ -51,13 +49,13 @@ ms.locfileid: "64592881"
 
 如果应用或组件在 .NET Framework 4.5（包括其单点版本，即 .NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 或 4.8）上未按预期运行，请使用以下清单：
 
-- 如果应用开发为在从 .NET Framework 4.0 开始的任何 .NET Framework 版本上运行，请参阅 [.NET Framework 中的应用程序兼容性](application-compatibility.md)，生成目标 .NET Framework 版本与运行应用的版本之间的更改列表。
+- 如果你开发的应用是为在 .NET Framework 4.0 以后的任何 .NET Framework 版本上运行，请参阅[应用程序兼容性](application-compatibility.md)，以生成目标 .NET Framework 版本与运行应用的版本之间的更改列表。
 
 - 如果使用 .NET Framework 3.5 应用，另请参阅 [.NET Framework 4 迁移问题](../migration-guide/net-framework-4-migration-issues.md)。
 
-- 如果使用 .NET Framework 2.0 应用，另请参阅 [.NET Framework 3.5 SP1 中的更改](https://go.microsoft.com/fwlink/?LinkId=186989)。
+- 如果使用 .NET Framework 2.0 应用，另请参阅 [.NET Framework 3.5 SP1 中的更改](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10))。
 
-- 如果使用 .NET Framework 1.1 应用，另请参阅 [.NET Framework 2.0 中的更改](https://go.microsoft.com/fwlink/?LinkID=125263)。
+- 如果使用 .NET Framework 1.1 应用，另请参阅 [.NET Framework 2.0 中的更改](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10))。
 
 - 如果要重新编译现有源代码以在 .NET Framework 4.5 或其单点版本上运行，或如果要通过现有源代码库开发面向 .NET Framework 4.5 或其单点版本的新版本应用或组件，请查看[类库中的过时内容](../whats-new/whats-obsolete.md)以了解过时的类型和成员，并应用所述的解决方法。 （以前编译的代码将继续针对已标记为过时的类型和成员运行。）
 
@@ -74,5 +72,5 @@ ms.locfileid: "64592881"
 - [新增功能](../whats-new/index.md)
 - [类库中过时的内容](../whats-new/whats-obsolete.md)
 - [应用程序兼容性](../migration-guide/application-compatibility.md)
-- [Microsoft .NET Framework 支持生命周期策略](https://go.microsoft.com/fwlink/p/?LinkId=248212)
+- [.NET Framework 官方支持策略](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
 - [.NET Framework 4 迁移问题](../migration-guide/net-framework-4-migration-issues.md)

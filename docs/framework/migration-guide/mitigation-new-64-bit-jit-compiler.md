@@ -6,14 +6,12 @@ helpviewer_keywords:
 - JIT compilation, 64-bit
 - RyuJIT compiler
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 07f9ae01fae5e4badbc13670ee56a2f05e303c0c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dd8c2c6b3cfa919970f68f2faae2044568f6c9ac
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779352"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457915"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>缓解：新的 64 位 JIT 编译器
 自 .NET Framework 4.6 起，运行时包括新版 64 位 JIT 编译器，用于执行实时编译。 此更改不会影响 32 位 JIT 编译器的编译。  
@@ -71,5 +69,5 @@ ms.locfileid: "70779352"
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时更改](runtime-changes-in-the-net-framework-4-6.md)
+- [应用程序兼容性](application-compatibility.md)
 - [\<useLegacyJit> 元素](../configure-apps/file-schema/runtime/uselegacyjit-element.md)

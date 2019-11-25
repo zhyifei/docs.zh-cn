@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: ea780fc983ed46c8a5ccb54ab618d1a0a2a928d1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 13597275460c075309b7457485a17655cf93f251
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597100"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971099"
 ---
 # <a name="constructors-c-programming-guide"></a>构造函数（C# 编程指南）
 
@@ -55,7 +55,7 @@ ms.locfileid: "69597100"
   
  [静态构造函数](./static-constructors.md)  
   
- [如何：编写复制构造函数](./how-to-write-a-copy-constructor.md)  
+ [如何编写复制构造函数](./how-to-write-a-copy-constructor.md)  
   
 ## <a name="see-also"></a>请参阅
 

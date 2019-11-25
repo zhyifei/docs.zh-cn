@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: f7f8c25844f41dd8915c0f4404d6714b4c81233c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 039ae0cb314eba2f1bb3e5b39f2127a5e694f334
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458474"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974155"
 ---
 # <a name="collection-type-dependency-properties"></a>集合类型依赖项属性
 本主题就如何实现属性类型为集合类型的依赖属性提供相应指导和建议模式。  
@@ -28,8 +28,11 @@ ms.locfileid: "73458474"
 ## <a name="initializing-the-collection-beyond-the-default-value"></a>不使用默认值初始化集合  
  创建依赖属性时，不要将属性默认值指定为初始字段值。 相反，应通过依赖属性元数据指定默认值。 如果属性为引用类型，则依赖属性元数据中指定的默认值不是每个实例分别的默认值，而是应用到类型的所有实例的默认值。 因此，对于类型的新创建实例，必须小心，不要将集合属性元数据定义的单个静态集合用作工作默认值。 相反，必须确保有意将集合值设置为唯一（实例）集合，作为类构造函数逻辑的一部分。 否则，你会创建一个不需要的单例类。  
   
- 请看下面的示例。 示例的以下部分显示类 `Aquarium` 的定义。 类定义 `AquariumObjects`的集合类型依赖项属性，该属性使用具有 <xref:System.Windows.FrameworkElement> 类型约束的泛型 <xref:System.Collections.Generic.List%601> 类型。 在 <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> 的依赖属性调用中，元数据将默认值建立为新的泛型 <xref:System.Collections.Generic.List%601>。  
-  
+ 请看下面的示例。 下面的示例部分演示了类 `Aquarium`的定义，该类包含一个具有默认值的漏洞。 类定义 `AquariumObjects`的集合类型依赖项属性，该属性使用具有 <xref:System.Windows.FrameworkElement> 类型约束的泛型 <xref:System.Collections.Generic.List%601> 类型。 在 <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> 的依赖属性调用中，元数据将默认值建立为新的泛型 <xref:System.Collections.Generic.List%601>。
+
+> [!WARNING]
+> 以下代码的行为不正确。
+
  [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
  [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
   

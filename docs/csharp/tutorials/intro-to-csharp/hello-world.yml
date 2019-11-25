@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 36254062835b9ab70ba470f6286b7515003dec11
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: 365cf0b2ef36dd0be624d022e3dea5e16a9eb58c
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850796"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969413"
 items:
 - durationInMinutes: 1
   content: >
@@ -24,7 +24,7 @@ items:
 - title: 运行首个 C# 程序
   durationInMinutes: 2
   content: >
-    在交互式窗口中，运行以下代码。 为此，请在交互式窗口中键入以下代码块，再单击“运行”按钮：
+    在交互式窗口中，运行以下代码。 选择“进入焦点模式”按钮。 然后，在交互式窗口中键入以下代码块，并选择“运行”：
 
 
     ```csharp
@@ -96,7 +96,7 @@ items:
     ```
 
 
-    再次单击“运行”，看看结果如何。
+    再次选择“运行”，看看结果如何。
 
 
     你一直在使用 `+` 从变量和常量字符串构建字符串。 但还有一种更好的方法。
@@ -118,7 +118,7 @@ items:
     ```
 
 
-    再次单击“运行”，看看结果如何。 消息应该是“Hello Maira”，而不是“Hello {aFriend}”。
+    再次选择“运行”，看看结果如何。 消息应该是“Hello Maira”，而不是“Hello {aFriend}”。
 
 
     > [!NOTE]
@@ -296,7 +296,7 @@ items:
 
     > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - content: >-
-    你已完成“C# 初探”C# 教程简介。 可单击下方的“C# 中的数字”链接开始下一个交互式教程，或者可访问 [.NET 站点](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)下载 .NET Core SDK，在计算机上创建项目，并继续编码。 请通过“后续步骤”部分返回到这些教程。
+    你已完成“C# 初探”C# 教程简介。 可选择下方的“C# 中的数字”链接开始下一个交互式教程，或者可访问 [.NET 站点](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)下载 .NET Core SDK，在计算机上创建项目，并继续编码。 请通过“后续步骤”部分返回到这些教程。
 
 
     有关 `string` 类型的其他阅读材料：

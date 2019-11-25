@@ -5,22 +5,22 @@ helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-ms.openlocfilehash: f74b75827770524299f9a25a5854503186139cb4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11fe9ba36d32a4c9fe363b48f76a8bb2b24f073b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126292"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974970"
 ---
-# <a name="migrating-from-the-net-framework-11"></a>从 .NET Framework 1.1 迁移
+# <a name="migrate-from-the-net-framework-11"></a>从 .NET Framework 1.1 迁移
 
-[!INCLUDE[win7](../../../includes/win7-md.md)] 及更高版本的 Windows 操作系统不支持 .NET Framework 1.1。 因此，面向 .NET Framework 1.1 的应用程序在未进行修改的情况下将不会在 [!INCLUDE[win7](../../../includes/win7-md.md)] 或更高版本的操作系统上运行。 本主题介绍了在 [!INCLUDE[win7](../../../includes/win7-md.md)] 及更高版本的 Windows 操作系统控制下运行面向 .NET Framework 1.1 的应用程序时需要执行的步骤。 有关 .NET Framework 1.1 和 [!INCLUDE[win8](../../../includes/win8-md.md)] 的详细信息，请参阅[在 Windows 8 及更高版本上运行 .NET Framework 1.1 应用](../install/run-net-framework-1-1-apps.md)。
+Windows 7 及更高版本的 Windows 操作系统不支持 .NET Framework 1.1。 因此，面向 .NET Framework 1.1 的应用程序在未进行修改的情况下将不会在 Windows 7 或更高版本的操作系统上运行。 本主题介绍了在 Windows 7 及更高版本的 Windows 操作系统控制下运行面向 .NET Framework 1.1 的应用程序时需要执行的步骤。 有关 .NET Framework 1.1 和 Windows 8 的详细信息，请参阅[在 Windows 8 及更高版本上运行 .NET Framework 1.1 应用](../install/run-net-framework-1-1-apps.md)。
 
-## <a name="retargeting-or-recompiling"></a>重定目标或重新编译
+## <a name="retarget-or-recompile"></a>重定向或重新编译
 
-可通过两种方式让使用 .NET Framework 1.1 编译的应用程序在 [!INCLUDE[win7](../../../includes/win7-md.md)] 或更高版本的 Windows 操作系统上运行：
+可通过两种方式让使用 .NET Framework 1.1 编译的应用程序在 Windows 7 或更高版本的 Windows 操作系统上运行：
 
-- 你可以重定向应用程序以在 .NET Framework 4 及更高版本中运行。 重定向要求将 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 元素添加到应用程序的配置文件中，以允许它在 .NET Framework 4 及更高版本中运行。 此配置文件采用以下形式：
+- 重定向应用程序以在 .NET Framework 4 及更高版本中运行。 重定向要求将 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 元素添加到应用程序的配置文件中，以允许它在 .NET Framework 4 及更高版本中运行。 此配置文件采用以下形式：
 
     ```xml
     <configuration>
@@ -56,9 +56,9 @@ ms.locfileid: "73126292"
 
 若要评估重大更改对应用程序产生的影响，您必须查看以下更改列表：
 
-- [.NET Framework 2.0 中的重大更改](https://go.microsoft.com/fwlink/?LinkId=125263)记录了 .NET Framework 2.0 SP1 中会影响面向 .NET Framework 1.1 的应用程序的更改。
+- [.NET Framework 2.0 中的重大更改](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10))记录了 .NET Framework 2.0 SP1 中会影响面向 .NET Framework 1.1 的应用程序的更改。
 
-- [.NET Framework 3.5 SP1 中的更改](https://go.microsoft.com/fwlink/?LinkID=186989)记录了 .NET Framework 3.5 和 .NET Framework 3.5 SP1 之间的更改。
+- [.NET Framework 3.5 SP1 中的更改](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10))记录了 .NET Framework 3.5 和 .NET Framework 3.5 SP1 之间的更改。
 
 - [.NET Framework 4 迁移问题](net-framework-4-migration-issues.md)记录了 .NET Framework 3.5 SP1 和 .NET Framework 4 之间的更改。
 

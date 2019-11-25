@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: cf621ab5f423e2465999b26f32489af1132bece0
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 6b4a5379145ebdffde0d5b76d8c7b9ab57261007
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582451"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975791"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>优化性能：其他建议
 <a name="introduction"></a>本主题提供[优化 WPF 应用程序性能](optimizing-wpf-application-performance.md)这一节中各主题内容之外的性能改进建议。  
@@ -41,7 +41,7 @@ ms.locfileid: "72582451"
   
 <a name="Navigation_Objects"></a>   
 ## <a name="navigation-to-object"></a>导航到对象  
- @No__t_0 对象派生自 <xref:System.Windows.Window> 并通过内容导航支持对其进行扩展，主要通过聚合 <xref:System.Windows.Navigation.NavigationService> 和日志。 您可以通过指定统一资源标识符（URI）或对象来更新 <xref:System.Windows.Navigation.NavigationWindow> 的工作区。 以下示例演示了这两种方法：  
+ <xref:System.Windows.Navigation.NavigationWindow> 对象派生自 <xref:System.Windows.Window> 并通过内容导航支持对其进行扩展，主要通过聚合 <xref:System.Windows.Navigation.NavigationService> 和日志。 您可以通过指定统一资源标识符（URI）或对象来更新 <xref:System.Windows.Navigation.NavigationWindow> 的工作区。 以下示例演示了这两种方法：  
   
  [!code-csharp[Performance#PerformanceSnippet14](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/TestNavigation.xaml.cs#performancesnippet14)]
  [!code-vb[Performance#PerformanceSnippet14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/testnavigation.xaml.vb#performancesnippet14)]  
@@ -56,21 +56,21 @@ ms.locfileid: "72582451"
   
 <a name="Hit_Testing"></a>   
 ## <a name="hit-testing-on-large-3d-surfaces"></a>对大型 3D 图面进行命中测试  
- 就 CPU 消耗而言，对大型 3D 图面进行命中测试是一项非常占用资源的操作。 3D 图面显示动画效果时更是如此。 如果不需要对这些图面进行命中测试，请禁用命中测试。 派生自 <xref:System.Windows.UIElement> 的对象可以通过将 <xref:System.Windows.UIElement.IsHitTestVisible%2A> 属性设置为 `false` 来禁用命中测试。  
+ 就 CPU 消耗而言，对大型 3D 图面进行命中测试是一项非常占用资源的操作。 3D 图面显示动画效果时更是如此。 如果不需要对这些图面进行命中测试，请禁用命中测试。 派生自 <xref:System.Windows.UIElement> 的对象可以通过将 <xref:System.Windows.UIElement.IsHitTestVisible%2A> 属性设置为 `false`来禁用命中测试。  
   
 <a name="CompositionTarget_Rendering_Event"></a>   
 ## <a name="compositiontargetrendering-event"></a>CompositionTarget.Rendering 事件  
- @No__t_0 事件会使 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 持续进行动画处理。 使用此事件时，应尽可能将其分离。  
+ <xref:System.Windows.Media.CompositionTarget.Rendering?displayProperty=nameWithType> 事件会使 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 持续进行动画处理。 使用此事件时，应尽可能将其分离。  
   
 <a name="Avoid_Using_ScrollBarVisibility"></a>   
 ## <a name="avoid-using-scrollbarvisibilityauto"></a>避免使用 ScrollBarVisibility=Auto  
  请尽可能避免使用 `HorizontalScrollBarVisibility` 和 `VerticalScrollBarVisibility` 属性的 <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> 值。 这些属性是为 <xref:System.Windows.Controls.RichTextBox>、<xref:System.Windows.Controls.ScrollViewer> 和 <xref:System.Windows.Controls.TextBox> 对象定义的，后者是 <xref:System.Windows.Controls.ListBox> 对象的附加属性。 相反，请将 <xref:System.Windows.Controls.ScrollBarVisibility> 设置为 <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>、<xref:System.Windows.Controls.ScrollBarVisibility.Hidden> 或 <xref:System.Windows.Controls.ScrollBarVisibility.Visible>。  
   
- @No__t_0 值适用于空间有限的情况，滚动条仅在必要时才显示。 例如，将此 <xref:System.Windows.Controls.ScrollBarVisibility> 值与 <xref:System.Windows.Controls.ListBox> 为30项（而不是包含数百行文本的 <xref:System.Windows.Controls.TextBox>）结合使用可能会很有用。  
+ <xref:System.Windows.Controls.ScrollBarVisibility.Auto> 值适用于空间有限的情况，滚动条仅在必要时才显示。 例如，将此 <xref:System.Windows.Controls.ScrollBarVisibility> 值与 <xref:System.Windows.Controls.ListBox> 为30项（而不是包含数百行文本的 <xref:System.Windows.Controls.TextBox>）结合使用可能会很有用。  
   
 <a name="FontCache"></a>   
 ## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>配置字体缓存服务以缩短启动时间  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 字体缓存服务会在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序之间共享字体数据。 如果该服务尚未运行，则首个运行的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序将启动此服务。 如果使用 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]，则可以将 "Windows Presentation Foundation （WPF） Font Cache 3.0.0.0" 服务从 "手动" （默认值）设置为 "自动（延迟启动）" 以减少 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的初始启动时间。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 字体缓存服务会在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序之间共享字体数据。 如果该服务尚未运行，则首个运行的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序将启动此服务。 如果使用的是 Windows Vista，则可以将 "Windows Presentation Foundation （WPF） Font Cache 3.0.0.0" 服务从 "手动" （默认值）设置为 "自动（延迟启动）"，以减少 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的初始启动时间。  
   
 ## <a name="see-also"></a>请参阅
 

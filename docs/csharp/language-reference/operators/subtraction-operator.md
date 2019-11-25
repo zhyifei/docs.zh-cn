@@ -13,22 +13,22 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 80603107beb708e76a2c7446f300d71ede411570
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: cf642fcac7233d27f2ed9052829c145038e93419
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609857"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038877"
 ---
 # <a name="--and---operators-c-reference"></a>- 和 -= 运算符（C# 参考）
 
-`-` 运算符受内置数字类型和[委托](../keywords/delegate.md)类型的支持。
+内置[整型](../builtin-types/integral-numeric-types.md)和[浮点](../builtin-types/floating-point-numeric-types.md)数字类型以及[委托](../builtin-types/reference-types.md#the-delegate-type)类型支持 `-` 和 `-=` 运算符。
 
 有关算术 `-` 运算符的信息，请参阅[一元加和减运算符](arithmetic-operators.md#unary-plus-and-minus-operators)和[算术运算符](arithmetic-operators.md)文章的[减法运算符 -](arithmetic-operators.md#subtraction-operator--) 部分。
 
 ## <a name="delegate-removal"></a>委托删除
 
-对于[委托](../keywords/delegate.md)类型相同的操作数，`-` 运算符返回如下计算的委托实例：
+对于[委托](../builtin-types/reference-types.md#the-delegate-type)类型相同的操作数，`-` 运算符返回如下计算的委托实例：
 
 - 如果两个操作数都为非空，并且右侧操作数的调用列表是左侧操作数调用列表的正确连续子列表，则该操作的结果是通过从左侧操作数的调用列表中删除右侧操作数的条目而获得的新调用列表。 如果右侧操作数的列表与左侧操作数列表中的多个连续子列表匹配，则仅删除最右侧的匹配子列表。 如果删除行为导致出现空列表，则结果为 `null`。
 
@@ -38,7 +38,7 @@ ms.locfileid: "67609857"
 
   [!code-csharp-interactive[delegate removal with no effect](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
-  前面的示例还演示了在删除委托期间对委托实例进行比较。 例如，通过计算相同的 [Lambda 表达式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)生成的委托不相等。 有关委托相等性的详细信息，请参阅 [C# 语言规范](../language-specification/index.md)的[委托相等运算符](~/_csharplang/spec/expressions.md#delegate-equality-operators)部分。
+  前面的示例还演示了在删除委托期间对委托实例进行比较。 例如，通过计算相同的 [Lambda 表达式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)生成的委托不相等。 有关委托相等性的详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[委托相等运算符](~/_csharplang/spec/expressions.md#delegate-equality-operators)部分。
 
 - 如果左侧操作数为 `null`，则操作结果为 `null`。 如果右侧操作数为 `null`，则操作的结果是左侧操作数。
 
@@ -63,7 +63,7 @@ x = x - y
 ```
 
 不同的是 `x` 只计算一次。
-  
+
 下面的示例演示 `-=` 运算符的用法：
 
 [!code-csharp-interactive[-= examples](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#SubtractAndAssign)]
@@ -82,7 +82,6 @@ x = x - y
 
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)
-- [委托](../../programming-guide/delegates/index.md)
 - [事件](../../programming-guide/events/index.md)
 - [算术运算符](arithmetic-operators.md)
 - [+ 和 += 运算符](addition-operator.md)

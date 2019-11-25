@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: d56968ad390d4681b3c1bb1580a864f9a9f0e10c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ff0555105f219db5ed891c02400b0587c825718e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424302"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974650"
 ---
 # <a name="document-serialization-and-storage"></a>文档序列化和存储
 
@@ -43,7 +43,7 @@ Microsoft .NET Framework 提供了一个功能强大的环境，用于创建和�
 
 ### <a name="xps-print-path"></a>XPS 打印路径
 
-Microsoft .NET Framework XPS 打印路径还提供了一种可扩展的机制，用于通过打印输出来写入文档。  XPS 作为文档文件格式，是 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]的本机打印后台处理格式。  XPS 文档可以直接发送到与 XPS 兼容的打印机，而无需转换为中间格式。  有关打印路径输出选项和功能的其他信息，请参阅[打印概述](printing-overview.md)。
+Microsoft .NET Framework XPS 打印路径还提供了一种可扩展的机制，用于通过打印输出来写入文档。  XPS 既作为文档文件格式，也用作 Windows Vista 的本机打印后台处理格式。  XPS 文档可以直接发送到与 XPS 兼容的打印机，而无需转换为中间格式。  有关打印路径输出选项和功能的其他信息，请参阅[打印概述](printing-overview.md)。
 
 <a name="PluginSerializers"></a>
 
@@ -55,7 +55,7 @@ Microsoft .NET Framework XPS 打印路径还提供了一种可扩展的机制，
 
 ### <a name="using-a-plug-in-serializer"></a>使用插件序列化程序
 
-插件序列化程序易于使用。  <xref:System.Windows.Documents.Serialization.SerializerProvider> 类枚举系统上安装的每个插件的 <xref:System.Windows.Documents.Serialization.SerializerDescriptor> 对象。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> 属性根据当前配置筛选已安装的插件，并验证应用程序是否可以加载和使用序列化程序。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor> 还提供了其他属性，例如 <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> 和 <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>，应用程序可以使用这些属性来提示用户选择可用输出格式的序列化程序。  用于 XPS 的默认插件序列化程序随 .NET Framework 提供，并始终枚举。  用户选择输出格式后，<xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> 方法用于创建特定格式的 <xref:System.Windows.Documents.Serialization.SerializerWriter>。  <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> 然后，可以调用方法将文档流输出到数据存储区。
+插件序列化程序易于使用。  <xref:System.Windows.Documents.Serialization.SerializerProvider> 类枚举系统上安装的每个插件的 <xref:System.Windows.Documents.Serialization.SerializerDescriptor> 对象。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> 属性根据当前配置筛选已安装的插件，并验证应用程序是否可以加载和使用序列化程序。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor> 还提供了其他属性，例如 <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> 和 <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>，应用程序可以使用这些属性来提示用户选择可用输出格式的序列化程序。  用于 XPS 的默认插件序列化程序随 .NET Framework 提供，并始终枚举。  用户选择输出格式后，<xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> 方法用于创建特定格式的 <xref:System.Windows.Documents.Serialization.SerializerWriter>。  然后，可以调用 <xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A?displayProperty=nameWithType> 方法将文档流输出到数据存储区。
 
 下面的示例演示了在 "PlugInFileFilter" 属性中使用 <xref:System.Windows.Documents.Serialization.SerializerProvider> 方法的应用程序。  PlugInFileFilter 枚举安装的插件，并使用 <xref:Microsoft.Win32.SaveFileDialog>的可用文件选项生成筛选器字符串。
 

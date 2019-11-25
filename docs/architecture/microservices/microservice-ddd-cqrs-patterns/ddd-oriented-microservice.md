@@ -2,12 +2,12 @@
 title: 设计面向 DDD 的微服务
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解面向 DDD 的订购微服务及其应用层的设计。
 ms.date: 10/08/2018
-ms.openlocfilehash: 303f8909d12dddef93b20604a00b9ea8e8493ee5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c5ac55978ca979a3ae055d9b0cd2d3c6b3187b4e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674344"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739939"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>设计面向 DDD 的微服务
 
@@ -37,13 +37,13 @@ ms.locfileid: "68674344"
 
 图 7-5 演示如何在 eShopOnContainers 应用程序中实现分层设计。
 
-![DDD 微服务（例如，订购）中的三个层。 每层都是一个 VS 项目：应用程序层是 Ordering.API，域层是 Ordering.Domain，基础结构层是 Ordering.Infrastructure。](./media/image6.png)
+![显示域驱动设计微服务中的层的关系图。](./media/ddd-oriented-microservice/domain-driven-design-microservice.png)
 
 **图 7-5**。 eShopOnContainers 订单微服务中的 DDD 层
 
-需要将系统设计为每个层只与某个其他层进行通信。 为了更轻松的实现这种设计，应将层实现为不同的类库，因为这样可以清楚地确定库之间的依赖关系。 例如，域模型层不应在任何其他层（域模型类应为普通旧 CLR 对象（简称 [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)）类）上设置依赖关系。 如图 7-6 所示，**Ordering.Domain** 层库只在 .NET Core 库或 NuGet 包上具有依赖项，而在任何其他自定义库（如数据库或持久性库）上不具有依赖项。
+DDD 微服务（例如，订购）中的三个层。 每层都是一个 VS 项目：应用程序层是 Ordering.API，域层是 Ordering.Domain，基础结构层是 Ordering.Infrastructure。 需要将系统设计为每个层只与某个其他层进行通信。 为了更轻松的实现这种设计，应将层实现为不同的类库，因为这样可以清楚地确定库之间的依赖关系。 例如，域模型层不应在任何其他层（域模型类应为普通旧 CLR 对象（简称 [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)）类）上设置依赖关系。 如图 7-6 所示，**Ordering.Domain** 层库只在 .NET Core 库或 NuGet 包上具有依赖项，而在任何其他自定义库（如数据库或持久性库）上不具有依赖项。
 
-![显示 Ordering.Domain 依赖项仅依赖于 .NET Core 库的解决方案资源管理器视图。](./media/image7.png)
+![Ordering.Domain 依赖项的屏幕截图。](./media/ddd-oriented-microservice/ordering-domain-dependencies.png)
 
 **图7-6**。 通过作为库实现的层，可以更好地控制各层之间的依赖关系
 
@@ -85,11 +85,11 @@ ms.locfileid: "68674344"
 
 因此，层或类库和项目应最终依赖于域模型层（库），但反之则不成立，如图 7-7 所示。
 
-![DDD 服务中的依赖项（应用层）依赖于域和基础结构，基础结构依赖于域，但域不依赖于任何层。](./media/image8.png)
+![显示 DDD 服务层之间存在的依赖项的关系图。](./media/ddd-oriented-microservice/ddd-service-layer-dependencies.png)
 
 **图 7-7**。 DDD 中层之间的依赖关系
 
-这一层设计对每个微服务应是独立的。 如之前所述，可以实现遵循 DDD 模式的最复杂的微服务，也可以使用简单的方法实现简单的数据驱动微服务（单个层中的简单 CRUD）。
+DDD 服务中的依赖项（应用层）依赖于域和基础结构，基础结构依赖于域，但域不依赖于任何层。 这一层设计对每个微服务应是独立的。 如之前所述，可以实现遵循 DDD 模式的最复杂的微服务，也可以使用简单的方法实现简单的数据驱动微服务（单个层中的简单 CRUD）。
 
 #### <a name="additional-resources"></a>其他资源
 

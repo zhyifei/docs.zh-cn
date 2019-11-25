@@ -2,12 +2,12 @@
 title: 微服务体系结构中的通信
 description: 探索微服务之间的不同通信方式，了解同步和异步方法的含义。
 ms.date: 09/20/2018
-ms.openlocfilehash: 25d99d3d9b00b8c20c5ded6d8b40c77fcbe0eb46
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7bd45e0b8f8ea3330cf8d2b613e54111cc72f14f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673294"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966982"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>微服务体系结构中的通信
 
@@ -51,9 +51,11 @@ ms.locfileid: "68673294"
 
 在微服务间添加的同步依赖项（如查询请求）越多，客户端应用的整体响应时间就越长。
 
-![在同步通信中，在处理客户端请求的同时，在微服务之间创建请求“链”。 这是一种反模式。 在异步通信中，微服务使用异步消息或 http 轮询与其他微服务通信，但是会立即处理客户端请求。](./media/image15.png)
+![显示微服务中的三种通信类型的关系图。](./media/communication-in-microservice-architecture/sync-vs-async-patterns-across-microservices.png)
 
 **图 4-15**。 微服务间通信的反模式和模式
+
+如上图所示，在同步通信中，在处理客户端请求的同时，在微服务之间创建请求“链”。 这是一种反模式。 在异步通信中，微服务使用异步消息或 http 轮询与其他微服务通信，但是会立即处理客户端请求。
 
 如果微服务需要在另一个微服务中引发其他操作，请尽可能不要在原始微服务请求和回复操作中同步执行该操作。 而是以异步方式执行（使用异步消息传送或集成事件、队列等）。 但尽可能不要在原始同步请求和回复操作中同步调用操作。
 
@@ -75,7 +77,7 @@ ms.locfileid: "68673294"
 
 当客户端使用请求/响应通信时，它将请求发送到服务，然后服务处理请求并返回响应。 请求/响应通信特别适用于查询客户端应用的实时 UI（实时用户界面）数据。 因此，在微服务体系结构中，此通信机制可能会用于大多数查询，如图 4-16 所示。
 
-![当客户端将请求发送到 API 网关时，可以将请求/响应通信用于实时查询（假设来自微服务的响应会在很短时间内到达）。](./media/image16.png)
+![显示实时查询和更新的请求/响应通信的关系图。](./media/communication-in-microservice-architecture/request-response-comms-live-queries-updates.png)
 
 **图 4-16**。 使用 HTTP 请求/响应通信（同步或异步）
 
@@ -99,11 +101,11 @@ ms.locfileid: "68673294"
 
 如图 4-17 所示，实时 HTTP 通信意味着可以让服务器代码在数据可用时将内容推送到连接的客户端，而不是让服务器等待客户端请求新数据。
 
-![SignalR 是实现用于将内容从后端服务器推送到客户端的实时通信的好方法。](./media/image17.png)
+![显示基于 SignalR 的推送和实时通信的关系图。](./media/communication-in-microservice-architecture/one-to-many-communication.png)
 
 **图 4-17**。 一对一实时异步消息通信
 
-由于通信是实时的，客户端应用几乎立即显示更改。 这通常由 WebSocket 之类的协议使用多个 WebSocket 连接（每个客户端一个）处理。 一个典型示例是将体育比赛的比分变化同时传送到多个客户端 Web 应用。
+SignalR 是实现用于将内容从后端服务器推送到客户端的实时通信的好方法。 由于通信是实时的，客户端应用几乎立即显示更改。 这通常由 WebSocket 之类的协议使用多个 WebSocket 连接（每个客户端一个）处理。 一个典型示例是将体育比赛的比分变化同时传送到多个客户端 Web 应用。
 
 >[!div class="step-by-step"]
 >[上一页](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)

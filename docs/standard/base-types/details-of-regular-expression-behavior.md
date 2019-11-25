@@ -9,14 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f4d7cbd00dbf94900185643490b952ced7887965
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 6a7f29a95cd3042cda1c508ad7472e9378817ebe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895221"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126435"
 ---
 # <a name="details-of-regular-expression-behavior"></a>正则表达式行为的详细信息
 .NET Framework 正则表达式引擎是回溯正则表达式匹配程序，其中包含传统的非确定性有限自动机 (NFA) 引擎（如 Perl、Python、Emacs 和 Tcl 所使用的引擎）。 这使它有别于速度更快、但是限制更多的纯正则表达式确定性有限自动机 (DFA) 引擎（如 awk、egrep 或 lex 中的引擎）。 这也使它有别于标准化、但速度较慢的 POSIX NFA。 下面的部分介绍了正则表达式引擎的三种类型，并解释了为何要在 .NET Framework 中使用传统 NFA 引擎实现正则表达式。  

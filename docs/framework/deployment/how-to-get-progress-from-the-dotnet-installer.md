@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdd2832f112706cef6050774ce3f6db5a940424a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e07bb3443fb9461fa707d66e74350a39980c60c0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052085"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975557"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>如何：获取 .NET Framework 4.5 安装程序的进度
 
@@ -55,13 +55,13 @@ ms.locfileid: "71052085"
 > [!WARNING]
 > 必须以管理员身份运行此示例。
 
-可从 MSDN 示例库下载针对 [.NET Framework 4.5 链接器示例](https://go.microsoft.com/fwlink/?LinkId=231345)的完整 Visual Studio 解决方案。
+可从 MSDN 示例库下载针对 [.NET Framework 4.5 链接器示例](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba)的完整 Visual Studio 解决方案。
 
 以下章节对此示例中的重要文件进行了介绍：MMIOChainer.h、ChainingdotNet4.cpp 和 IProgressObserver.h。
 
 #### <a name="mmiochainerh"></a>MMIOChainer.h
 
-- MMIOChainer.h 文件（请参阅[完整代码](https://go.microsoft.com/fwlink/?LinkId=231369)）包含数据结构定义和链接器类应派生自的基类。 .NET Framework 4.5 扩展 MMIO 数据结构，处理 .NET Framework 4.5 安装程序需要的数据。 对 MMIO 结构的更改为后向兼容，因此 .NET Framework 4 链接器可在无需重新编译的情况下与 .NET Framework 4.5 安装程序结合使用。 但是，此方案不支持用于减少系统重启的功能。
+- MMIOChainer.h 文件（请参阅[完整代码](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=663039622)）包含数据结构定义和链接器类应派生自的基类。 .NET Framework 4.5 扩展 MMIO 数据结构，处理 .NET Framework 4.5 安装程序需要的数据。 对 MMIO 结构的更改为后向兼容，因此 .NET Framework 4 链接器可在无需重新编译的情况下与 .NET Framework 4.5 安装程序结合使用。 但是，此方案不支持用于减少系统重启的功能。
 
     版本字段提供标识结构和消息格式的修订的方法。 .NET Framework 安装程序通过调用 `VirtualQuery` 函数来确定文件映射的大小，从而确定链接器接口的版本。 如果大小足以容纳版本字段，则 .NET framework 安装程序将使用该指定值。 如果文件映射因过小而无法包含版本字段（.NET framework 4 即是这种情况），则安装过程假定为版本 0 (4)。 如果链接器不支持 .NET framework 安装程序希望发送的消息版本，则 .NET framework 安装程序会假定一个忽略响应。
 
@@ -98,7 +98,7 @@ ms.locfileid: "71052085"
 
 #### <a name="iprogressobserverh"></a>IProgressObserver.h
 
-- IProgressObserver.h 文件实现进度观察器（[请参阅完整代码](https://go.microsoft.com/fwlink/?LinkId=231370)）。 此观察程序会获得下载和安装进度通知（指定为无符号 `char`，0-255，指示 1%-100% 完成进度）。 链接发送消息时，观察程序也会得到通知，并且观察程序应该发送一个答复。
+- IProgressObserver.h 文件实现进度观察器（[请参阅完整代码](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=1263700592)）。 此观察程序会获得下载和安装进度通知（指定为无符号 `char`，0-255，指示 1%-100% 完成进度）。 链接发送消息时，观察程序也会得到通知，并且观察程序应该发送一个答复。
 
     ```cpp
         class IProgressObserver
@@ -112,7 +112,7 @@ ms.locfileid: "71052085"
 
 #### <a name="chainingdotnet45cpp"></a>ChainingdotNet4.5.cpp
 
-- [ChainingdotNet4.5.cpp](https://go.microsoft.com/fwlink/?LinkId=231368) 文件实现从 `MmioChainer` 派生的 `Server` 类，并重写了相应方法以显示进度信息。 MmioChainer 使用指定的节名称创建一节并使用指定的事件名称初始化链接器。 事件名称会保存在映射数据结构中。 应确保节和事件名称的唯一性。 以下代码中的 `Server` 类会启动指定的安装程序，监视其进度并返回退出代码。
+- [ChainingdotNet4.5.cpp](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=1757268882) 文件实现从 `MmioChainer` 派生的 `Server` 类，并重写了相应方法以显示进度信息。 MmioChainer 使用指定的节名称创建一节并使用指定的事件名称初始化链接器。 事件名称会保存在映射数据结构中。 应确保节和事件名称的唯一性。 以下代码中的 `Server` 类会启动指定的安装程序，监视其进度并返回退出代码。
 
     ```cpp
     class Server : public ChainerSample::MmioChainer, public ChainerSample::IProgressObserver

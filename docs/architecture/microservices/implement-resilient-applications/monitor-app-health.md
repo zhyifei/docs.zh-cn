@@ -2,12 +2,12 @@
 title: 运行状况监视
 description: 了解实现运行状况监视的一种方法。
 ms.date: 01/07/2019
-ms.openlocfilehash: 2d43efa7b6cfb855a033ee4d766c64c2472ceb36
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f1d63e04bbea95fcf0a9f9d3b50aef0e7d4a830e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094069"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732892"
 ---
 # <a name="health-monitoring"></a>运行状况监视
 
@@ -123,7 +123,7 @@ eShopOnContainers 中的微服务依赖多个服务来执行其任务。 例如�
 
 例如，在 `Catalog.API` 微服务中，添加了以下 NuGet 包：
 
-![Catalog.API 项目的解决方案资源管理器视图，其中引用了 AspNetCore.Diagnostics.HealthChecks NuGet 包](./media/image6.png)
+![AspNetCore.Diagnostics.HealthChecks NuGet 包的屏幕截图。](./media/monitor-app-health/aspnet-core-diagnostics-health-checks.png)
 
 **图 8-7**。 使用 AspNetCore.Diagnostics.HealthChecks 在 Catalog.API 中实现的运行状况检查
 
@@ -191,7 +191,7 @@ app.UseHealthChecks("/hc", new HealthCheckOptions()
 
 按照本文所述配置好运行状况检查后，每当在 Docker 上运行该微服务，便可直接通过浏览器检查其运行状况是否正常。 必须在 Docker 主机中发布容器端口，以便通过外部 Docker 主机 IP 或 `localhost` 访问该容器，如图 8-8 所示。
 
-![运行状况检查返回的 JSON 响应的浏览器视图](./media/image7.png)
+![运行状况检查返回的 JSON 响应的屏幕截图。](./media/monitor-app-health/health-check-json-response.png)
 
 **图 8-8**。 通过浏览器检查单个服务的运行状况状态
 
@@ -205,7 +205,7 @@ eShopOnContainers 示例包含一个网页，该网页显示了示例运行状�
 
 幸运的是，[AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) 还提供 [AspNetCore.HealthChecks.UI](https://www.nuget.org/packages/AspNetCore.HealthChecks.UI/) NuGet 包，可用于通过已配置的 URI 显示运行状况检查结果。
 
-![WebStatus 应用的浏览器视图，显示来自 eShopOnContainers 的所有微服务的运行状况](./media/image8.png)
+![运行状况检查 UI eShopOnContainers 运行状况状态的屏幕截图。](./media/monitor-app-health/health-check-status-ui.png)
 
 **图 8-9**。 eShopOnContainers 中的示例运行状况检查报告
 

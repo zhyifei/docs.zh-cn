@@ -4,25 +4,25 @@ description: 了解如何使用可回收的 AssemblyLoadContext 来加载和卸�
 author: janvorli
 ms.author: janvorli
 ms.date: 02/05/2019
-ms.openlocfilehash: 52cd864393342e2bc31f872b9d09cb484c2c8463
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 462e6d2c7f135d2ba274d78fe31ad27391eac416
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972491"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740449"
 ---
 # <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>如何在 .NET Core 中使用和调试程序集可卸载性
 
 从 .NET Core 3.0 开始，支持加载和随后卸载一组程序集功能。 在 .NET Framework 中，自定义应用域用于此目的，但 .NET Core 仅支持单个默认应用域。
 
-.NET Core 3.0 及更高版本支持通过 <xref:System.Runtime.Loader.AssemblyLoadContext> 进行卸载。 可将一组程序集加载到可回收的 `AssemblyLoadContext` 中，在其中执行方法或仅使用反射检查它们，最后卸载 `AssemblyLoadContext`。 这会卸载加载到该 `AssemblyLoadContext` 中的程序集。
+.NET Core 3.0 及更高版本支持通过 <xref:System.Runtime.Loader.AssemblyLoadContext> 进行卸载。 可将一组程序集加载到可回收的 `AssemblyLoadContext` 中，在其中执行方法或仅使用反射检查它们，最后卸载 `AssemblyLoadContext`。 这会卸载加载到 `AssemblyLoadContext` 中的程序集。
 
-使用 `AssemblyLoadContext` 和使用 AppDomain 进行卸载之间存在一个值得注意的差异。 对于 Appdomain，卸载为强制执行。 卸载时，会中止目标 AppDomain 中运行的所有线程，会销毁目标 AppDomain 中创建的托管 COM 对象，等等。对于 `AssemblyLoadContext`，卸载是“协作式的”。 调用 <xref:System.Runtime.Loader.AssemblyLoadContext.Unload%2A?displayProperty=nameWithType> 方法只是为了启动卸载。 以下目标达成后，卸载完成：
+使用 `AssemblyLoadContext` 和使用 AppDomain 进行卸载之间存在一个值得注意的差异。 对于 Appdomain，卸载为强制执行。 卸载时，会中止目标 AppDomain 中运行的所有线程，会销毁目标 AppDomain 中创建的托管 COM 对象，等等。 对于 `AssemblyLoadContext`，卸载是“协作式的”。 调用 <xref:System.Runtime.Loader.AssemblyLoadContext.Unload%2A?displayProperty=nameWithType> 方法只是为了启动卸载。 以下目标达成后，卸载完成：
 
 - 没有线程将程序集中的方法加载到其调用堆栈上的 `AssemblyLoadContext` 中。
-- 程序集中的任何类型都不会加载到 `AssemblyLoadContext`，这些类型的实例以及 `AssemblyLoadContext` 外部的程序集本身由以下引用：
+- 程序集中的任何类型都不会加载到 `AssemblyLoadContext`，这些类型的实例本身由以下引用：
   - `AssemblyLoadContext` 外部的引用，弱引用（<xref:System.WeakReference> 或 <xref:System.WeakReference%601>）除外。
-  - 强 GC 句柄（<xref:System.Runtime.InteropServices.GCHandleType>.<xref:System.Runtime.InteropServices.GCHandleType.Normal> 或 <xref:System.Runtime.InteropServices.GCHandleType>.<xref:System.Runtime.InteropServices.GCHandleType.Pinned>），来自 `AssemblyLoadContext` 的内部和外部。
+  - `AssemblyLoadContext` 内部和外部的强垃圾回收器 (GC) 句柄（[GCHandleType.Normal](xref:System.Runtime.InteropServices.GCHandleType.Normal) 或 [GCHandleType.Pinned](xref:System.Runtime.InteropServices.GCHandleType.Pinned)）。
 
 ## <a name="use-collectible-assemblyloadcontext"></a>使用可回收的 AssemblyLoadContext
 
@@ -31,13 +31,14 @@ ms.locfileid: "70972491"
 ### <a name="create-a-collectible-assemblyloadcontext"></a>创建可回收的 AssemblyLoadContext
 
 需要从 <xref:System.Runtime.Loader.AssemblyLoadContext> 派生类，并重载其 <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> 方法。 该方法解析对所有程序集的引用，这些程序集是加载到该 `AssemblyLoadContext` 中的程序集的依赖项。
+
 以下代码是最简单的自定义 `AssemblyLoadContext` 示例：
 
 [!code-csharp[Simple custom AssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/simple_example.cs#1)]
 
 如你所见，`Load` 方法返回 `null`。 这意味着所有依赖项程序集都会加载到默认上下文中，而新上下文仅包含显式加载到其中的程序集。
 
-若要在 `AssemblyLoadContext` 中加载部分或全部依赖项，可以在 `Load` 方法中使用 `AssemblyDependencyResolver`。 `AssemblyDependencyResolver` 使用加载到上下文中的主程序集目录中包含的 .deps.json 文件并使用该目录中的程序集文件将程序集名称解析为绝对程序集文件路径  。
+若要在 `AssemblyLoadContext` 中加载部分或全部依赖项，可以在 `Load` 方法中使用 `AssemblyDependencyResolver`。 `AssemblyDependencyResolver` 将程序集名称解析为绝对程序集文件路径。 解析程序使用加载到上下文中的主程序集的目录中的 .deps.json 文件和程序集文件  。
 
 [!code-csharp[Advanced custom AssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/complex_assemblyloadcontext.cs)]
 
@@ -69,36 +70,36 @@ ms.locfileid: "70972491"
 
 [!code-csharp[Part 5](~/samples/snippets/standard/assembly/unloading/simple_example.cs#6)]
 
-但是，卸载不会立即完成。 如上所述，它依赖于 GC 来收集测试程序集中的所有对象。 在许多情况下，没有必要等待卸载完成。 但是，某些情况下，了解卸载已经完成非常有用。 例如，你可能希望删除从磁盘加载到自定义 `AssemblyLoadContext` 中的程序集文件。 在这种情况下，可以使用以下代码片段。 它会触发 GC 并等待循环中挂起的终结器，直到自定义 `AssemblyLoadContext` 的弱引用被设置为 `null`，表示已收集目标对象。 请注意，在大多数情况下，只需要通过循环传递一次。 但对于更复杂的情况，由 `AssemblyLoadContext` 中运行的代码所创建的对象具有终结器，则可能需要更多传递。
+但是，卸载不会立即完成。 如上所述，它依赖于垃圾回收器来收集测试程序集中的所有对象。 在许多情况下，没有必要等待卸载完成。 但是，某些情况下，了解卸载已经完成非常有用。 例如，你可能希望删除从磁盘加载到自定义 `AssemblyLoadContext` 中的程序集文件。 在这种情况下，可以使用以下代码片段。 它会触发垃圾回收并等待循环中挂起的终结器，直到自定义 `AssemblyLoadContext` 的弱引用被设置为 `null`，表示已收集目标对象。 在大多数情况下，只需要通过循环传递一次。 但对于更复杂的情况，由 `AssemblyLoadContext` 中运行的代码所创建的对象具有终结器，则可能需要更多传递。
 
 [!code-csharp[Part 6](~/samples/snippets/standard/assembly/unloading/simple_example.cs#7)]
 
 ### <a name="the-unloading-event"></a>卸载事件
 
-某些情况下，加载到自定义 `AssemblyLoadContext` 中的代码可能需要在启动卸载时执行一些清理。 例如，可能需要停止线程、清理某些强 GC 句柄等。在这种情况下可以使用 `Unloading` 事件。 执行必要清理的处理程序可与此事件挂钩。
+某些情况下，加载到自定义 `AssemblyLoadContext` 中的代码可能需要在启动卸载时执行一些清理。 例如，可能需要停止线程或清理某些强 GC 句柄。 在这种情况下可以使用 `Unloading` 事件。 执行必要清理的处理程序可与此事件挂钩。
 
 ### <a name="troubleshoot-unloadability-issues"></a>解决可卸载性问题
 
-由于卸载的协作性质，很容易忘记使内容在可回收的 `AssemblyLoadContext` 中保持活动状态并阻止卸载的引用。 以下是可以包含引用内容（其中一些不明显）的摘要：
+由于卸载的协作性质，很容易忘记可能使内容在可回收的 `AssemblyLoadContext` 中保持活动状态并阻止卸载的引用。 以下是可以包含引用实体（其中一些不明显）的摘要：
 
-- 保存于可回收的 `AssemblyLoadContext` 外部、存储在堆栈槽或处理器寄存器（由用户代码显式创建或由 JIT 隐式创建的方法本地变量）中的常规引用、静态变量或强/固定 GC 句柄以及以可传递的方式指向：
+- 保存于可回收的 `AssemblyLoadContext` 外部、存储在堆栈槽或处理器寄存器（由用户代码显式创建或由实时 (JIT) 编译器隐式创建的方法本地变量）中的常规引用、静态变量或强（固定）GC 句柄以及以可传递的方式指向：
   - 加载到可回收的 `AssemblyLoadContext` 中的程序集。
   - 此类程序集中的类型。
   - 此类程序集中的类型的实例。
 - 从加载到可回收的 `AssemblyLoadContext` 程序集中运行代码的线程。
-- 在可回收的 `AssemblyLoadContext` 中创建的自定义非可回收 `AssemblyLoadContext` 类型的实例
-- 将回调设置为自定义 `AssemblyLoadContext` 中的方法的挂起 <xref:System.Threading.RegisteredWaitHandle> 实例
+- 在可回收的 `AssemblyLoadContext` 中创建的自定义非可回收 `AssemblyLoadContext` 类型的实例。
+- 将回调设置为自定义 `AssemblyLoadContext` 中的方法的挂起 <xref:System.Threading.RegisteredWaitHandle> 实例。
 
-查找堆栈槽/处理器寄存器根对象的提示：
-
-- 即使没有用户创建的本地变量，也可以通过直接将函数调用结果传递给另一个函数来创建根。
-- 如果在方法中随时都可以获得对象的引用，则 JIT 可能决定将引用保留在堆栈槽/处理器寄存器中，只要它在当前函数中有所需要。
+> [!TIP]
+> 在以下情况下可能会出现存储在堆栈槽或处理器寄存器中、可阻止卸载 `AssemblyLoadContext` 的对象引用：
+>
+> - 当直接将函数调用结果传递给另一个函数时，即使没有用户创建的本地变量。
+> - 当 JIT 编译器保留对可在方法中的某个点使用的对象的引用时。
 
 ## <a name="debug-unloading-issues"></a>调试卸载问题
 
-调试卸载问题可能比较繁琐。 你可能会遇到这样的情况：你不知道哪些内容可以使 `AssemblyLoadContext` 保持活动状态，但卸载会失败。
-帮助解决此问题的最佳武器是带有 SOS 插件的 WinDbg（Unix 上的 LLDB）。 需要查找哪些内容使属于特定 `AssemblyLoadContext` 的 `LoaderAllocator` 保持活动状态。
-此插件可让你查看 GC 堆对象、其层次结构和根。
+调试卸载问题可能比较繁琐。 你可能会遇到这样的情况：你不知道哪些内容可以使 `AssemblyLoadContext` 保持活动状态，但卸载会失败。 帮助解决此问题的最佳武器是带有 SOS 插件的 WinDbg（Unix 上的 LLDB）。 需要查找哪些内容使属于特定 `AssemblyLoadContext` 的 `LoaderAllocator` 保持活动状态。 SOS 插件可让你查看 GC 堆对象、其层次结构和根。
+
 若要将插件加载到调试器中，请在调试器命令行中输入以下命令：
 
 在 WinDbg（似乎 WinDbg 在进入 .NET Core 应用程序时会自动执行此操作）中：
@@ -113,9 +114,10 @@ ms.locfileid: "70972491"
 plugin load /path/to/libsosplugin.so
 ```
 
-尝试调试卸载时出现问题的示例程序。 源代码包含在以下内容中。 在 WinDbg 下运行它时，程序将在尝试检查卸载是否成功后立即进入调试器。 然后即可开始查找原因。
+调试卸载时出现问题的示例程序。 源代码包含在以下内容中。 在 WinDbg 下运行它时，程序将在尝试检查卸载是否成功后立即进入调试器。 然后即可开始查找原因。
 
-请注意，如果使用 Unix 上的 LLDB 进行调试，则以下示例中的 SOS 命令没有在它们前面的 `!`。
+> [!TIP]
+> 如果使用 Unix 上的 LLDB 进行调试，则以下示例中的 SOS 命令的前面没有 `!`。
 
 ```console
 !dumpheap -type LoaderAllocator
@@ -135,15 +137,15 @@ Statistics:
 Total 2 objects
 ```
 
-在下面的“Statistics:”部分中，检查属于 `System.Reflection.LoaderAllocator` 的 `MT` (`MethodTable`)，这是我们关注的对象。 然后在开头的列表中，查找 `MT` 匹配该条目的条目，并获取对象本身的地址。 在示例中，其为“000002b78000ce40”
+在下面的“Statistics:”部分中，检查属于 `System.Reflection.LoaderAllocator` 的 `MT` (`MethodTable`)，这是我们关注的对象。 然后在开头的列表中，查找 `MT` 匹配该条目的条目，并获取对象本身的地址。 在示例中，其为“000002b78000ce40”。
 
-现在我们知道了 `LoaderAllocator` 对象的地址，可使用另一个命令来查找其 GC 根
+现在我们知道了 `LoaderAllocator` 对象的地址，可使用另一个命令来查找其 GC 根：
 
 ```console
-!gcroot -all 0x000002b78000ce40 
+!gcroot -all 0x000002b78000ce40
 ```
 
-此命令转储通向 `LoaderAllocator` 实例的对象引用链。 该列表以根（使 `LoaderAllocator` 保持活动状态的实体）开头，因此为正在调试的问题的核心。 根可以是堆栈槽、处理器寄存器、GC 句柄或静态变量。
+此命令转储通向 `LoaderAllocator` 实例的对象引用链。 该列表以根（使 `LoaderAllocator` 保持活动状态的实体）开头，因此为问题的核心。 根可以是堆栈槽、处理器寄存器、GC 句柄或静态变量。
 
 以下是 `gcroot` 命令输出的示例：
 
@@ -172,13 +174,13 @@ HandleTable:
 Found 3 roots.
 ```
 
-现在需要确定根所在的位置以便对其进行修复。 最简单的情况是根为堆栈槽或处理器寄存器。 在这种情况下，`gcroot` 会显示其框架包含根的函数的名称以及执行该函数的线程。 困难的情况是根为静态变量或 GC 句柄。 
+下一步是确定根所在的位置以便对其进行修复。 最简单的情况是根为堆栈槽或处理器寄存器。 在这种情况下，`gcroot` 会显示其框架包含根的函数的名称以及执行该函数的线程。 困难的情况是根为静态变量或 GC 句柄。
 
 在上面的示例中，第一个根为 `System.Reflection.RuntimeMethodInfo` 类型的本地变量，存储在函数 `example.Program.Main(System.String[])` 的框架中，地址为 `rbp-20`（`rbp` 意为处理器寄存器 `rbp`，-20 意为该寄存器的十六进制偏移量）。
 
-第二个根为普通（强）`GCHandle`，其包含对 `test.Test` 类实例的引用。 
+第二个根为普通（强）`GCHandle`，其包含对 `test.Test` 类实例的引用。
 
-第三个根为固定的 `GCHandle`。 此变量实际上是一个静态变量。 遗憾的是，无法进行澄清。 引用类型的静态变量存储在内部运行时结构中的托管对象数组中。
+第三个根为固定的 `GCHandle`。 这实际上是一个静态变量，但遗憾的是，无法进行澄清。 引用类型的静态变量存储在内部运行时结构中的托管对象数组中。
 
 另一种可阻止卸载 `AssemblyLoadContext` 的情况为，线程具有来源于加载到其堆栈上的 `AssemblyLoadContext` 程序集的方法框架。 可通过转储所有线程的托管调用堆栈进行检查：
 
@@ -186,8 +188,7 @@ Found 3 roots.
 ~*e !clrstack
 ```
 
-此命令表示“将 `!clrstack` 命令应用于所有线程”。 以下是此示例中该命令的输出。 遗憾的是，Unix 上的 LLDB 无法将命令应用于所有线程，因此，需要手动切换线程并重复 `clrstack` 命令。
-忽略调试器显示“无法审核托管堆栈”的所有线程。
+此命令表示“将 `!clrstack` 命令应用于所有线程”。 以下是此示例中该命令的输出。 遗憾的是，Unix 上的 LLDB 无法将命令应用于所有线程，因此，必须手动切换线程并重复 `clrstack` 命令。 忽略调试器显示“无法审核托管堆栈”的所有线程。
 
 ```console
 OS Thread Id: 0x6ba8 (0)

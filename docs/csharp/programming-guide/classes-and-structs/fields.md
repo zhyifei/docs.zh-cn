@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: c07f058eb081fa1c9e0a3756959570d1ba9e47f6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3a04d07f90ea9e1e536082f2cf0151555305d9e6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924516"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971046"
 ---
 # <a name="fields-c-programming-guide"></a>字段（C# 编程指南）
 字段  是在[类](../../language-reference/keywords/class.md)或[结构](../../language-reference/keywords/struct.md)中直接声明的任意类型的变量。 字段是其包含类型的成员  。  

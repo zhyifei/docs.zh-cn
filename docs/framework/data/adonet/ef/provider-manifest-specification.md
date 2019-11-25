@@ -2,12 +2,12 @@
 title: 提供程序清单规范
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: bef4868ccc52d287baaceca32c4943723be7531f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a9dca140588be26035b235109c48049ce01e9ce1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040496"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973883"
 ---
 # <a name="provider-manifest-specification"></a>提供程序清单规范
 本节讨论数据存储提供程序如何可以支持数据存储中的类型和功能。  
@@ -93,7 +93,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 #### <a name="using-a-provider-manifest-token"></a>使用提供程序清单标记  
  对于脱机方案，此标记从 SSDL 表示形式中选取。 SSDL 允许您指定 ProviderManifestToken （有关详细信息，请参阅[Schema 元素（SSDL）](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) ）。 例如，如果无法打开某个连接，则 SSDL 会具有一个提供程序清单标记，用于指定有关清单的信息。  
   
-```csharp  
+```csharp
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  
   

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b95f0a3535716c4a01dae52abe38eb850f080cf0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: aa175d95f27fcbf28c3f3da3eaa7b8f7988681e1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345191"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140089"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>如何：取消数据流块
 本文档介绍如何在应用程序中启用取消。 此示例使用 Windows 窗体显示数据流管道中工作项的活动位置以及取消的效果。  
@@ -30,9 +28,9 @@ ms.locfileid: "59345191"
   
 2. 在主窗体的窗体设计器中，Form1.cs（对于 Visual Basic，则为 Form1.vb）添加了 <xref:System.Windows.Forms.ToolStrip> 控件。  
   
-3. 向 <xref:System.Windows.Forms.ToolStrip> 控件添加 <xref:System.Windows.Forms.ToolStripButton> 控件。 将 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 属性设置为 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>，并将 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为“添加工作项”。  
+3. 向 <xref:System.Windows.Forms.ToolStrip> 控件添加 <xref:System.Windows.Forms.ToolStripButton> 控件。 将 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 属性设置为 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>，并将 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为“添加工作项”  。  
   
-4. 向 <xref:System.Windows.Forms.ToolStrip> 控件再添加一个 <xref:System.Windows.Forms.ToolStripButton> 控件。 将 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 属性设置为 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>，将 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为“Cancel”，并将 <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> 属性设置为 `False`。  
+4. 向 <xref:System.Windows.Forms.ToolStrip> 控件再添加一个 <xref:System.Windows.Forms.ToolStripButton> 控件。 将 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 属性设置为 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>，将 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为“Cancel”  ，并将 <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> 属性设置为 `False`。  
   
 5. 向 <xref:System.Windows.Forms.ToolStrip> 控件添加四个 <xref:System.Windows.Forms.ToolStripProgressBar> 对象。  
   
@@ -68,20 +66,20 @@ ms.locfileid: "59345191"
  此示例在构造管道成员时设置 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 属性。 由于 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 属性永久取消数据流块执行，因此如果用户在取消操作后又想再将更多工作项添加到管道中，必须重新创建整个管道。 有关演示使用另一种方法取消数据流块以便在取消操作后可以执行其他工作的示例，请参阅[演练：在 Windows 窗体应用程序中使用数据流](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   
 ## <a name="connecting-the-dataflow-pipeline-to-the-user-interface"></a>将数据流管道连接到用户界面  
- 本节介绍如何将数据流管道连接到用户界面。 创建管道以及将工作项添加到管道中都由“添加工作项”按钮的事件处理程序控制。 通过“取消”按钮启动取消操作。 用户单击以上任一按钮时，都会以异步方式启动相应操作。  
+ 本节介绍如何将数据流管道连接到用户界面。 创建管道以及将工作项添加到管道中都由“添加工作项”  按钮的事件处理程序控制。 通过“取消”  按钮启动取消操作。 用户单击以上任一按钮时，都会以异步方式启动相应操作。  
   
 ### <a name="to-connect-the-dataflow-pipeline-to-the-user-interface"></a>将数据流管道连接到用户界面  
   
-1. 在主窗体的窗体设计器中，创建“添加工作项”按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件的事件处理程序。  
+1. 在主窗体的窗体设计器中，创建“添加工作项”  按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件的事件处理程序。  
   
-2. 实现“添加工作项”按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件。  
+2. 实现“添加工作项”  按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件。  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#5)]
      [!code-vb[TPLDataflow_CancellationWinForms#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#5)]  
   
-3. 在主窗体的窗体设计器中，创建“取消”按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件的事件处理程序。  
+3. 在主窗体的窗体设计器中，创建“取消”  按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件的事件处理程序。  
   
-4. 实现“取消”按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件处理程序。  
+4. 实现“取消”  按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件处理程序。  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#6)]
      [!code-vb[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#6)]  

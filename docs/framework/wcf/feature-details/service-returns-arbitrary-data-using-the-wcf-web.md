@@ -2,21 +2,21 @@
 title: 如何：使用 WCF Web HTTP 编程模型创建返回任意数据的服务
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 6c7dd0debb5c491bca84ea9a4845f46b6b57b4a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41d9f0e53401bcd6b57b04a38e76af5ddb9fb4cc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586246"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976105"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>如何：使用 WCF Web HTTP 编程模型创建返回任意数据的服务
-有时，开发人员必须完全控制从服务操作返回数据的方式。 当服务操作必须由 WCF 不支持的格式返回数据时，这是这种情况。 本主题讨论如何使用 WCF WEB HTTP 编程模型来创建此类服务。 此服务具有一个返回流的操作。  
+有时，开发人员必须完全控制从服务操作返回数据的方式。 当服务操作必须返回 WCF 不支持的格式的数据时，就会出现这种情况。 本主题讨论如何使用 WCF WEB HTTP 编程模型来创建此类服务。 此服务具有一个返回流的操作。  
   
 ### <a name="to-implement-the-service-contract"></a>实现服务协定  
   
 1. 定义服务协定。 该协定名为 `IImageServer`，具有一个名为 `GetImage` 的方法，该方法返回 <xref:System.IO.Stream>。  
   
-    ```  
+    ```csharp  
     [ServiceContract]  
         public interface IImageServer  
         {  
@@ -25,41 +25,41 @@ ms.locfileid: "64586246"
         }  
     ```  
   
-     因为该方法将返回<xref:System.IO.Stream>、 WCF 假定该操作具有完全控制从服务操作返回的字节数和其应用任何格式设置为返回的数据。  
+     由于方法返回 <xref:System.IO.Stream>，因此 WCF 假设操作对从服务操作返回的字节具有完全控制，并且不会对返回的数据应用任何格式设置。  
   
 2. 实现服务协定。 该协定只有一个操作：`GetImage`。 此方法生成一个位图，再以 .jpg 格式将其保存到 <xref:System.IO.MemoryStream>。 随后，操作将该流返回给调用方。  
   
-    ```  
-    public class Service : IImageServer  
-       {  
-           public Stream GetImage(int width, int height)  
-           {  
-               Bitmap bitmap = new Bitmap(width, height);  
-               for (int i = 0; i < bitmap.Width; i++)  
-               {  
-                   for (int j = 0; j < bitmap.Height; j++)  
-                   {  
-                       bitmap.SetPixel(i, j, (Math.Abs(i - j) < 2) ? Color.Blue : Color.Yellow);  
-                   }  
-               }  
-               MemoryStream ms = new MemoryStream();  
-               bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);  
-               ms.Position = 0;  
-               WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";  
-               return ms;  
-           }  
-       }  
+    ```csharp
+    public class Service : IImageServer
+    {
+        public Stream GetImage(int width, int height)
+        {
+            Bitmap bitmap = new Bitmap(width, height);
+            for (int i = 0; i < bitmap.Width; i++)
+            {
+                for (int j = 0; j < bitmap.Height; j++)
+                {
+                    bitmap.SetPixel(i, j, (Math.Abs(i - j) < 2) ? Color.Blue : Color.Yellow);
+                }
+            }
+            MemoryStream ms = new MemoryStream();
+            bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            ms.Position = 0;
+            WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";
+            return ms;
+        }
+    }
     ```  
   
      请注意代码的倒数第二行：`WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
-     这会设置内容类型标头`"image/jpeg"`。 虽然此示例演示如何返回 .jpg 文件，但可以对其进行修改，以任意格式返回所需的任意类型的数据。 该操作必须检索或生成数据，然后将它写入流。  
+     这会将内容类型标头设置为 `"image/jpeg"`。 虽然此示例演示如何返回 .jpg 文件，但可以对其进行修改，以任意格式返回所需的任意类型的数据。 该操作必须检索或生成数据，然后将它写入流。  
   
 ### <a name="to-host-the-service"></a>承载服务  
   
 1. 创建用于承载服务的控制台应用程序。  
   
-    ```  
+    ```csharp
     class Program  
     {  
         static void Main(string[] args)  
@@ -70,31 +70,31 @@ ms.locfileid: "64586246"
   
 2. 在 `Main` 方法中创建一个变量以保存服务的基址。  
   
-    ```  
+    ```csharp
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
 3. 为服务创建一个 <xref:System.ServiceModel.ServiceHost> 实例，指定服务类和基址。  
   
-    ```  
+    ```csharp
     ServiceHost host = new ServiceHost(typeof(Service), new Uri(baseAddress));  
     ```  
   
 4. 使用 <xref:System.ServiceModel.WebHttpBinding> 和 <xref:System.ServiceModel.Description.WebHttpBehavior> 添加一个终结点。  
   
-    ```  
+    ```csharp  
     host.AddServiceEndpoint(typeof(IImageServer), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
     ```  
   
 5. 打开服务主机。  
   
-    ```  
-    host.Open()  
+    ```csharp  
+    host.Open();  
     ```  
   
 6. 等待用户按 Enter 终止服务。  
   
-    ```  
+    ```csharp
     Console.WriteLine("Service is running");  
     Console.Write("Press ENTER to close the host");  
     Console.ReadLine();  
@@ -110,7 +110,7 @@ ms.locfileid: "64586246"
 ## <a name="example"></a>示例  
  下面列出了此主题的完整代码。  
   
-```  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Text;  

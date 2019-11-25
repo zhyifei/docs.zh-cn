@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f4d4e2b3806d2c4d84b59e1cd44eb03ab7b278c9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: be619f8e84b176872361fdd43faa9c704832c8e0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052829"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975588"
 ---
 # <a name="enabling-jit-attach-debugging"></a>启用 JIT 附加调试
 JIT 附加调试是用于描述如何在发生错误时将调试器附加到进程的词组，它也可以由特定的方法或函数触发。  
@@ -21,7 +21,7 @@ JIT 附加调试是用于描述如何在发生错误时将调试器附加到进�
   
 - 未经处理的异常（在本机代码和托管代码中）。  
   
-- <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> 方法或 [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) 函数（Windows 7 系列）。  
+- <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> 方法或 [RaiseFailFastException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raisefailfastexception) 函数（Windows 7 系列）。  
   
 - 运行时灾难性错误。  
   
@@ -31,9 +31,9 @@ JIT 附加调试是用于描述如何在发生错误时将调试器附加到进�
   
 - <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> 方法。  
   
-- [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) 函数 (Win32)。  
+- [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak) 函数 (Win32)。  
   
- 在 .NET Framework 4 之前，.NET Framework 提供了单独的注册表项来控制本机调试器和托管调试器的行为。 从 .NET Framework 4 开始，将控件合并到一个注册表项下：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug. 用户可为该注册表项设置值来确定是否调用调试器，如果调用，则确定是否使用需用户交互的对话框来调用。 有关设置此注册表项的信息，请参阅[配置自动调试](https://go.microsoft.com/fwlink/?LinkId=181767)。  
+ 在 .NET Framework 4 之前，.NET Framework 提供了单独的注册表项来控制本机调试器和托管调试器的行为。 从 .NET Framework 4 开始，将控件合并到一个注册表项下： HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug。 用户可为该注册表项设置值来确定是否调用调试器，如果调用，则确定是否使用需用户交互的对话框来调用。 有关设置此注册表项的信息，请参阅[配置自动调试](/windows/win32/debug/configuring-automatic-debugging)。  
   
 ## <a name="see-also"></a>请参阅
 

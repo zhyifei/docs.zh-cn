@@ -4,12 +4,12 @@ description: 了解在生成 Web 应用时，如何在传统 Web 应用和单页
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: d68c167dce791a31eeb5ca5729b50ec22c64f9b0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9ede64249705aba3f22a9663b8a258e41f030aca
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675474"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739453"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>在传统 Web 应用和单页应用 (SPA) 之间选择
 
@@ -40,7 +40,7 @@ ms.locfileid: "68675474"
 
 ## <a name="blazor"></a>Blazor
 
-ASP.NET Core 3.0 引入了一种新模型，用于构建称为 Blazor 的丰富的、交互式和可组合的 UI。 Blazor 服务器端允许开发人员在服务器上使用 Razor 构建 UI，并使用名为 WebAssembly 的 JavaScript 库将此代码传递到浏览器和执行客户端。 ASP.NET Core 3.0 仍在开发中，但你应该会期望在本电子书的 3.0 更新中看到有关此技术的详细信息。 有关 Blazor 的详细信息，请参阅 [Blazor 入门](https://blazor.net/docs/get-started.html)。
+ASP.NET Core 3.0 引入了一种新模型，用于构建称为 Blazor 的丰富的、交互式和可组合的 UI。 Blazor 服务器端允许开发人员在服务器上使用 Razor 构建 UI，还使用 [WebAssembly](https://webassembly.org/) 将此代码传递到浏览器和执行客户端。 ASP.NET Core 3.0 仍在开发中，但你应该会期望在本电子书的 3.0 更新中看到有关此技术的详细信息。 有关 Blazor 的详细信息，请参阅 [Blazor 入门](https://blazor.net/docs/get-started.html)。
 
 ## <a name="when-to-choose-traditional-web-apps"></a>何时选择传统 Web 应用
 
@@ -87,9 +87,9 @@ SPA 可支持丰富客户端功能，当用户执行操作或在应用的各区�
 
 下面的决策表总结了在传统 Web 应用程序和 SPA 之间进行选择时要考虑的一些基本因素。
 
-| **因素**                                           | **传统 Web 应用** | **单页应用程序** |
+| **因素**                                           | **传统 Web 应用** | **单页面应用程序** |
 | ---------------------------------------------------- | ----------------------- | --------------------------- |
-| 需要团队熟悉 JavaScript/TypeScript | **最少**             | **必需**                |
+| 需要团队熟悉 JavaScript/TypeScript | **最低**             | **必需**                |
 | 支持不带脚本的浏览器                   | **支持**           | **不支持**           |
 | 客户端应用程序行为极少             | **适合**         | **不必要**                |
 | 丰富而复杂的用户界面要求            | **受限**             | **适合**             |

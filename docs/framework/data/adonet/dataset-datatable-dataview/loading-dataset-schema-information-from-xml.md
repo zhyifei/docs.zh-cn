@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-ms.openlocfilehash: db0df68aa89cdd5c8bf94ad95a2b8bc9b36d5685
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d834f0c4517f4ff9fe8645257d5a947c03893881
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786221"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968399"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>从 XML 加载数据集架构信息
-可以通过编程方式<xref:System.Data.DataSet>定义的架构（表、列、关系和约束），也可以通过的**Fill**或**FillSchema**方法<xref:System.Data.Common.DataAdapter>创建，或从 XML 文档加载。 若要从 XML 文档加载**数据集**架构信息，可以使用**数据集**的**ReadXmlSchema**或**InferXmlSchema**方法。 通过**ReadXmlSchema** ，您可以从包含 XML 架构定义语言（XSD）架构的文档或使用内联 xml 架构的 xml 文档中加载或推断**数据集**架构信息。 **InferXmlSchema**允许从 xml 文档推断架构，同时忽略指定的某些 XML 命名空间。  
+可以通过编程方式定义 <xref:System.Data.DataSet> （其表、列、关系和约束）的架构，该架构由 <xref:System.Data.Common.DataAdapter>的**Fill**或**FillSchema**方法创建，或从 XML 文档加载。 若要从 XML 文档加载**数据集**架构信息，可以使用**数据集**的**ReadXmlSchema**或**InferXmlSchema**方法。 通过**ReadXmlSchema** ，您可以从包含 XML 架构定义语言（XSD）架构的文档或使用内联 xml 架构的 xml 文档中加载或推断**数据集**架构信息。 **InferXmlSchema**允许从 xml 文档推断架构，同时忽略指定的某些 XML 命名空间。  
   
 > [!NOTE]
 > 使用 Web 服务或 XML 序列化传输在内存中使用 XSD 构造（如嵌套关系）创建的**数据集**时，可能不会保留**数据集中**的表顺序。 因此，在这种情况下，**数据集**的接收方不应依赖于表排序。 但是，如果要传输的**数据集**的架构是从 XSD 文件中读取的，而不是在内存中创建的，则始终保留表排序。  
@@ -40,7 +40,7 @@ dataSet.ReadXmlSchema("schema.xsd");
 ```  
   
 ```vb  
-Dim xmlStream As System.IO.StreamReader = New System.IO.StreamReader ("schema.xsd");  
+Dim xmlStream As New System.IO.StreamReader("schema.xsd")
 Dim dataSet As DataSet = New DataSet  
 dataSet.ReadXmlSchema(xmlStream)  
 xmlStream.Close()  
@@ -73,7 +73,7 @@ xmlStream.Close();
 </NewDataSet>  
 ```  
   
- 由于为前面的 XML 文档中的元素指定了属性， **ReadXmlSchema**方法和**XmlReadMode**为**InferSchema**的**ReadXml**方法将为文档**类别、类别** **id**、**类别名称**、**说明**、**产品**、 **ProductID**、 **ReorderLevel**和**废止**。 （有关详细信息，请参阅[从 XML 推断数据集关系结构](inferring-dataset-relational-structure-from-xml.md)。）但是，更合适的结构是仅创建 "**类别**" 和 "**产品**" 表，然后在 "**类别**" 表中创建 "类别**id**"、"**类别名称**" 和 "**说明**" 列，并 **Products**表中的 ProductID、 **ReorderLevel**和**废止**列。 若要确保推断的架构忽略 XML 元素中指定的属性，请使用**InferXmlSchema**方法并指定要忽略的**officedata**的 XML 命名空间，如以下示例中所示。  
+ 由于为前面的 XML 文档中的元素指定了属性， **ReadXmlSchema**方法和**XmlReadMode**为**InferSchema**的**ReadXml**方法将为文档中的每个元素创建表：**类别、类别**名称、**类别**、**说明**、**产品**、 **ProductID** **、** **ReorderLevel**和**废止**。 （有关详细信息，请参阅[从 XML 推断数据集关系结构](inferring-dataset-relational-structure-from-xml.md)。）但是，更合适的结构是仅创建 "**类别**" 和 "**产品**" 表，然后在 "类别" 表中创建 "**类别** **id**"、"类别**名称**" 和 "**说明**" 列，在**Products**表中创建**ProductID**、 **ReorderLevel**和**废止**列。 若要确保推断的架构忽略 XML 元素中指定的属性，请使用**InferXmlSchema**方法并指定要忽略的**officedata**的 XML 命名空间，如以下示例中所示。  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  

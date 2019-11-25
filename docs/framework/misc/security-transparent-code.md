@@ -7,33 +7,21 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e4e472185b3b2ba39393c029bca3966fb5ec4b3
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f90b64b5e9ab5a167333a594ace7f247b1b2b7e7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206057"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975528"
 ---
 # <a name="security-transparent-code"></a>安全透明的代码
-
-<a name="top"></a>
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
 安全性涉及三个交互部分：沙盒处理、权限和强制。 沙盒处理是指创建隔离域的做法，在隔离域中某些代码被视为完全信任，而其他代码则被限制为沙盒授予集中的权限。 在沙盒授予集内运行的应用程序代码被视为透明的，也就是说，它不能执行任何影响安全性的操作。 沙盒的授予集由证据（<xref:System.Security.Policy.Evidence> 类）决定。 证据标识沙盒需要哪些特定权限，以及可以创建哪种沙盒。 强制是指允许透明代码仅在其授予集内执行。
 
 > [!IMPORTANT]
-> 安全策略是旧版 .NET Framework 中的关键元素。 从 .NET Framework 4 开始, 安全策略已过时。 安全策略的取消独立于安全透明度。 有关此更改的效果的信息, 请参阅[代码访问安全策略兼容性和迁移](code-access-security-policy-compatibility-and-migration.md)。
-
-本主题更详细地介绍透明度模型。 它包含下列部分：
-
-- [透明度模型的用途](#purpose)
-
-- [指定透明度级别](#level)
-
-- [透明度强制](#enforcement)
-
-<a name="purpose"></a>
+> 安全策略是旧版 .NET Framework 中的关键元素。 从 .NET Framework 4 开始，安全策略已过时。 安全策略的取消独立于安全透明度。 有关此更改的效果的信息，请参阅[代码访问安全策略兼容性和迁移](code-access-security-policy-compatibility-and-migration.md)。
 
 ## <a name="purpose-of-the-transparency-model"></a>透明度模型的用途
 
@@ -47,11 +35,7 @@ ms.locfileid: "70206057"
 .NET Framework 2.0 版中引入了透明度，用于简化安全模型，使其更易于编写和部署安全库和应用程序。 Microsoft Silverlight 中也使用了透明代码，用于简化部分信任的应用程序的开发。
 
 > [!NOTE]
-> 当开发部分信任的应用程序时，必须知道目标主机的权限要求。 你可以开发使用某些主机不允许的资源的应用程序。 此应用程序编译时不会出错，但将无法加载到托管环境中。 如果已使用 Visual Studio 开发了应用程序，就可以在部分信任的环境中启用调试或在开发环境中启用受限的权限集。 有关详细信息，请参阅[如何：使用受限权限调试 ClickOnce 应用程序](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)。 为 ClickOnce 应用程序提供的计算权限功能也可用于部分信任的任何应用程序。
-
-[返回页首](#top)
-
-<a name="level"></a>
+> 当开发部分信任的应用程序时，必须知道目标主机的权限要求。 你可以开发使用某些主机不允许的资源的应用程序。 此应用程序编译时不会出错，但将无法加载到托管环境中。 如果已使用 Visual Studio 开发了应用程序，就可以在部分信任的环境中启用调试或在开发环境中启用受限的权限集。 有关更多信息，请参见 [如何：使用受限权限对 ClickOnce 应用程序进行调试](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)。 为 ClickOnce 应用程序提供的计算权限功能也可用于部分信任的任何应用程序。
 
 ## <a name="specifying-the-transparency-level"></a>指定透明度级别
 
@@ -59,14 +43,14 @@ ms.locfileid: "70206057"
 
 级别如下：
 
-- Level 2 (<xref:System.Security.SecurityRuleSet.Level2>) – .NET Framework 4 透明度规则。
+- 级别2（<xref:System.Security.SecurityRuleSet.Level2>）– .NET Framework 4 透明度规则。
 
 - 1 级 (<xref:System.Security.SecurityRuleSet.Level1>) –.NET Framework 2.0 透明度规则。
 
 这两个透明度级别之间的主要区别是 1 级不对程序集外部的调用强制实施透明度规则，并且预期仅用于实现兼容性。
 
 > [!IMPORTANT]
-> 你应仅出于兼容性目的指定 1 级透明度，也就是说，仅为使用 .NET Framework 3.5 或更早版本（这些版本使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性或不使用透明度模型）开发的代码指定 1 级。 例如，对允许从部分信任的调用方 (APTCA) 调用的 .NET Framework 2.0 程序集使用 1 级透明度。 对于为 .NET Framework 4 开发的代码, 请始终使用2级透明度。
+> 你应仅出于兼容性目的指定 1 级透明度，也就是说，仅为使用 .NET Framework 3.5 或更早版本（这些版本使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性或不使用透明度模型）开发的代码指定 1 级。 例如，对允许从部分信任的调用方 (APTCA) 调用的 .NET Framework 2.0 程序集使用 1 级透明度。 对于为 .NET Framework 4 开发的代码，请始终使用2级透明度。
 
 ### <a name="level-2-transparency"></a>2 级透明度
 
@@ -108,15 +92,11 @@ ms.locfileid: "70206057"
 
 - 在完全信任模式下运行时，透明代码可能会执行有害的操作。
 
-[返回页首](#top)
-
-<a name="enforcement"></a>
-
 ## <a name="transparency-enforcement"></a>透明度强制
 
-在计算透明度之前，不会强制执行透明度规则。 那时，如果违反了透明度规则，则将引发 <xref:System.InvalidOperationException>。 计算透明度的时间取决于多种因素，并且无法预测。 应尽可能晚地计算。 在 .NET Framework 4 中, 程序集级别的透明度计算比 .NET Framework 2.0 更早。 只能保证透明度计算将在需要的时间之前发生。 这类似于在编译某种方法且在该方法中检测到错误时实时 (JIT) 编译器将如何更改时间点。 如果你的代码没有透明度错误，则透明度计算是不可见的。
+在计算透明度之前，不会强制执行透明度规则。 那时，如果违反了透明度规则，则将引发 <xref:System.InvalidOperationException>。 计算透明度的时间取决于多种因素，并且无法预测。 应尽可能晚地计算。 在 .NET Framework 4 中，程序集级别的透明度计算比 .NET Framework 2.0 更早。 只能保证透明度计算将在需要的时间之前发生。 这类似于在编译某种方法且在该方法中检测到错误时实时 (JIT) 编译器将如何更改时间点。 如果你的代码没有透明度错误，则透明度计算是不可见的。
 
 ## <a name="see-also"></a>请参阅
 
-- [安全透明代码, 级别1](security-transparent-code-level-1.md)
-- [安全透明代码, 级别2](security-transparent-code-level-2.md)
+- [安全透明代码，级别1](security-transparent-code-level-1.md)
+- [安全透明代码，级别2](security-transparent-code-level-2.md)

@@ -2,12 +2,12 @@
 title: 使用 docker-compose.yml 定义多容器应用程序
 description: 如何使用 docker-compose.yml 指定多容器应用程序的微服务组合。
 ms.date: 10/02/2018
-ms.openlocfilehash: 938a9aa192f82628051bd7dc065f661f510ba544
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 02db27feb1320d8b9c6823b8f9ef51c2ddf9791c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416704"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737075"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定义多容器应用程序
 
@@ -177,9 +177,15 @@ docker-compose -f docker-compose.yml -f docker-compose.test.override.yml down
 
 默认情况下，Compose 读取两个文件，docker-compose.yml 和可选的 docker-compose.override.yml 文件。 如图 6-11 所示，使用 Visual Studio 并启用 Docker 支持时，Visual Studio 还会创建另一个用于调试应用程序的 docker compose.vs.debug.g.yml 文件，可在主解决方案文件夹的 obj\\Docker\\ 文件夹中查看此文件。
 
-![docker-compose 项目文件结构：.dockerignore，用于忽略文件；docker-compose.yml，用于组合微服务；docker-compose.override.yml，用于配置微服务环境。](./media/image12.png)
+![Docker 撰写项目中的文件的屏幕截图。](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 
 图 6-11  。 Visual Studio 2017 中的 docker-compose 文件
+
+**docker-compose** 项目文件结构：
+
+* *.dockerignore* - 用于忽略文件
+* *docker-compose.yml* - 用于撰写微服务
+* *docker-compose.override.yml* - 用于配置微服务环境
 
 可使用任何编辑器（如 Visual Studio Code 或 Sublime）编辑 docker-compose 文件，并使用 docker-compose up 命令运行该应用程序。
 
@@ -191,11 +197,11 @@ docker-compose -f docker-compose.yml -f docker-compose.test.override.yml down
 
 典型的用例是定义多个 compose 文件时，可针对多个环境，如生产、暂存、CI 或开发环境。 为支持这些差异，可将 Compose 配置拆分成多个文件，如图 6-12 所示。
 
-![可组合多个 docker compose*.fml 文件来应对不同的环境。](./media/image13.png)
+![三个 docker-compose 文件设置为替代基文件的关系图。](./media/multi-container-applications-docker-compose/multiple-docker-compose-files-override-base.png)
 
 图 6-12  。 重写基本 docker-compose.yml 文件中的值的多个 docker-compose 文件
 
-从基本 docker-compose.yml 文件开始。 此基本文件必须包含不会根据环境更改的基本或静态配置设置。 例如，eShopOnContainers 将以下 docker-compose.yml 文件（使用少量服务以进行简化）作为基本文件。
+可组合多个 docker compose*.yml 文件来应对不同的环境。 从基本 docker-compose.yml 文件开始。 此基本文件必须包含不会根据环境更改的基本或静态配置设置。 例如，eShopOnContainers 将以下 docker-compose.yml 文件（使用少量服务以进行简化）作为基本文件。
 
 ```yml
 #docker-compose.yml (Base)

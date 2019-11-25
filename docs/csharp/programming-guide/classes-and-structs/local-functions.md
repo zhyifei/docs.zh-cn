@@ -4,12 +4,12 @@ ms.custom: seodec18
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 7b6b46a33430a4a58c78245a0ab3bed1e0fbcd9c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 24b7d6f98e331110ddcd971d0d0b21003dbe023d
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455378"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736850"
 ---
 # <a name="local-functions-c-programming-guide"></a>本地函数（C# 编程指南）
 
@@ -43,11 +43,10 @@ ms.locfileid: "73455378"
 
 请注意，在包含成员中定义的所有本地变量（包括其方法参数）都可在本地函数中访问。 
 
-与方法定义不同，本地函数定义不能包含下列元素：
+与方法定义不同，本地函数定义不能包含成员访问修饰符。 因为所有本地函数都是私有的，包括访问修饰符（如 `private` 关键字）会生成编译器错误 CS0106“修饰符‘private’对于此项无效”。
 
-- 成员访问修饰符。 因为所有本地函数都是私有的，包括访问修饰符（如 `private` 关键字）会生成编译器错误 CS0106“修饰符‘private’对于此项无效”。
- 
-- [Static](../../language-reference/keywords/static.md) 关键字。 包括 `static` 关键字将生成编译器错误 CS0106“修饰符‘static’对于此项无效”。
+> [!NOTE]
+> 在 C# 8.0 之前，本地函数不能包含 `static` 修饰符。 包括 `static` 关键字将生成编译器错误 CS0106“修饰符‘static’对于此项无效”。
 
 此外，属性不能应用于本地函数或其参数和类型参数。 
  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: e98399ac49e70f9139281ab75947c4acaf2dee7c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: be075c358d9ca2c36b6d173fca983c16f6b0d78c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922074"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970341"
 ---
 # <a name="polymorphism-c-programming-guide"></a>多态性（C# 编程指南）
 多态性常被视为自封装和继承之后，面向对象的编程的第三个支柱。 Polymorphism（多态性）是一个希腊词，指“多种形态”，多态性具有两个截然不同的方面：  
@@ -93,7 +93,7 @@ ms.locfileid: "69922074"
   
 - [了解何时使用 Override 和 New 关键字](./knowing-when-to-use-override-and-new-keywords.md)  
   
-- [如何：重写 ToString 方法](./how-to-override-the-tostring-method.md)  
+- [如何替代 ToString 方法](./how-to-override-the-tostring-method.md)
   
 ## <a name="see-also"></a>请参阅
 

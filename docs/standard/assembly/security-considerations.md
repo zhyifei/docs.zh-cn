@@ -15,15 +15,15 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-ms.openlocfilehash: 2cd12ea49723bdac734c6847d337d945a5cfcb5e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 77c9f9131b556e0b8fa639cd723bf1ca8cd6602e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138620"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972312"
 ---
 # <a name="assembly-security-considerations"></a>程序集安全注意事项
-<a name="top"></a>在生成程序集时，可指定该程序集运行所需的一组权限。 是否将特定的权限授予程序集是基于证据的。  
+在生成程序集时，可指定该程序集运行所需的一组权限。 是否将特定的权限授予程序集是基于证据的。  
   
  使用证据有两种截然不同的方式：  
   

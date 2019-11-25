@@ -1,17 +1,21 @@
 ---
 title: dotnet run 命令
 description: dotnet run 命令可便于使用源代码运行应用程序。
-ms.date: 05/29/2018
-ms.openlocfilehash: ec2a24b78f435dd1905ec67b6f3f4a4ec3f7e7fa
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 10/31/2019
+ms.openlocfilehash: 87e9a57e874116533951a9c5eb676be76be2c98d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117481"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454774"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
+**本文适用于：✓** .NET Core 1.x SDK 及更高版本
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 
@@ -20,6 +24,14 @@ ms.locfileid: "71117481"
 ## <a name="synopsis"></a>摘要
 
 <!-- markdownlint-disable MD025 -->
+
+# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+
+```dotnetcli
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile] [--no-build] [--no-dependencies]
+    [--no-launch-profile] [--no-restore] [-p|--project] [-r|--runtime] [-v|--verbosity] [[--] [application arguments]]
+dotnet run [-h|--help]
+```
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -68,6 +80,64 @@ dotnet myapp.dll
 
 ## <a name="options"></a>选项
 
+# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+
+`--`
+
+将参数分隔到正在运行的应用程序的参数的 `dotnet run`。 在此分隔符后的所有参数均传递给已运行的应用程序。
+
+`-c|--configuration {Debug|Release}`
+
+定义生成配置。 大多数项目的默认值为 `Debug`。
+
+`-f|--framework <FRAMEWORK>`
+
+使用指定[框架](../../standard/frameworks.md)生成并运行应用。 框架必须在项目文件中进行指定。
+
+`--force`
+
+强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件  。
+
+`-h|--help`
+
+打印出有关命令的简短帮助。
+
+`--interactive`
+
+允许命令停止并等待用户输入或操作（例如，完成身份验证）。
+
+`--launch-profile <NAME>`
+
+启动应用程序时要使用的启动配置文件（若有）的名称。 启动配置文件在 launchSettings.json 文件中进行定义，通常称为 `Development`、`Staging` 和 `Production`  。 有关详细信息，请参阅[使用多个环境](/aspnet/core/fundamentals/environments)。
+
+`--no-build`
+
+运行前不生成项目。 还隐式设置 `--no-restore` 标记。
+
+`--no-dependencies`
+
+当使用项目到项目 (P2P) 引用还原项目时，还原根项目，不还原引用。
+
+`--no-launch-profile`
+
+不尝试使用 launchSettings.json 配置应用程序  。
+
+`--no-restore`
+
+运行此命令时不执行隐式还原。
+
+`-p|--project <PATH>`
+
+指定要运行的项目文件的路径（文件夹名称或完整路径）。 如果未指定，则默认为当前目录。
+
+`--runtime <RUNTIME_IDENTIFIER>`
+
+指定要为其还原包的目标运行时。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。
+
+`-v|--verbosity <LEVEL>`
+
+设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--`
@@ -76,7 +146,7 @@ dotnet myapp.dll
 
 `-c|--configuration {Debug|Release}`
 
-定义生成配置。 默认值为 `Debug`。
+定义生成配置。 大多数项目的默认值为 `Debug`。
 
 `-f|--framework <FRAMEWORK>`
 
@@ -130,7 +200,7 @@ dotnet myapp.dll
 
 `-c|--configuration {Debug|Release}`
 
-定义生成配置。 默认值为 `Debug`。
+定义生成配置。 大多数项目的默认值为 `Debug`。
 
 `-f|--framework <FRAMEWORK>`
 
@@ -180,7 +250,7 @@ dotnet myapp.dll
 
 `-c|--configuration {Debug|Release}`
 
-定义生成配置。 默认值为 `Debug`。
+定义生成配置。 大多数项目的默认值为 `Debug`。
 
 `-f|--framework <FRAMEWORK>`
 

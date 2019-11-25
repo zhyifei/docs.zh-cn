@@ -3,12 +3,12 @@ title: C# 发展历史 - C# 指南
 description: 这些语言在最早版本中是什么样的，它又是如何演化的？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: bce61d7a1838753f6cc2397440208e0c02b8194a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 83934d9c8194d5109cea0e847d287c01c32a2955
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002689"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739102"
 ---
 # <a name="the-history-of-c"></a>C\# 发展历史
 
@@ -57,7 +57,7 @@ C# 1.0 的主要功能包括：
 - [泛型](../programming-guide/generics/index.md)
 - [分部类型](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [匿名方法](../language-reference/operators/delegate-operator.md)
-- [可以为 null 的值类型](../programming-guide/nullable-types/index.md)
+- [可以为 null 的值类型](../language-reference/builtin-types/nullable-value-types.md)
 - [迭代器](../programming-guide/concepts/iterators.md)
 - [协变和逆变](../programming-guide/concepts/covariance-contravariance/index.md)
 
@@ -104,7 +104,7 @@ C# 版本 4.0 随 Visual Studio 2010 一起发布，很难达到版本 3.0 的�
 
 下一版本引入了一些有趣的新功能：
 
-- [动态绑定](../language-reference/keywords/dynamic.md)
+- [动态绑定](../language-reference/builtin-types/reference-types.md)
 - [命名参数/可选参数](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [泛型协变和逆变](../../standard/generics/covariance-and-contravariance.md)
 - [嵌入的互操作类型](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
@@ -132,7 +132,7 @@ C# 版本 5.0 随 Visual Studio 2012 一起发布，是该语言有针对性的�
 
 ## <a name="c-version-60"></a>C# 6.0 版
 
-C# 在 3.0 版和 5.0 版对面向对象的语言添加了主要的新功能。 版本 6.0 随 Visual Studio 2013 一起发布，通过该版本，它不再推出主导性的杀手锏，而是发布了很多使得 C# 编程更有效率的小功能。 以下介绍了部分功能：
+C# 在 3.0 版和 5.0 版对面向对象的语言添加了主要的新功能。 版本 6.0 随 Visual Studio 2015 一起发布，通过该版本，它不再推出主导性的杀手锏，而是发布了很多使得 C# 编程更有效率的小功能。 以下介绍了部分功能：
 
 - [静态导入](./csharp-6.md#using-static)
 - [异常筛选器](./csharp-6.md#exception-filters)

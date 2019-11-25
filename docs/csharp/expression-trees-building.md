@@ -2,13 +2,14 @@
 title: 生成表达式树
 description: 了解生成表达式树的方法。
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: 7751af17aafa8e2d1a14125da43352108b1c1f95
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 45628b00633c8d6ff51dbd5f5dbdda7ca25dd7c4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207184"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037098"
 ---
 # <a name="building-expression-trees"></a>生成表达式树
 
@@ -16,7 +17,7 @@ ms.locfileid: "36207184"
 
 到目前为止，你所看到的所有表达式树都是由 C# 编译器创建的。 你所要做的是创建一个 lambda 表达式，将其分配给一个类型为 `Expression<Func<T>>` 或某种相似类型的变量。 这不是创建表达式树的唯一方法。 很多情况下，可能需要在运行时在内存中生成一个表达式。 
 
-由于这些表达式树是不可变的，所以生成表达式树很复杂。 不可变意味着必须以从叶到根的方式生成表达式树。 用于生成表达式树的 API 体现了这一点：用于生成节点的方法将其所有子级用作参数。 让我们通过几个示例来了解相关技巧。
+由于这些表达式树是不可变的，所以生成表达式树很复杂。 不可变意味着必须以从叶到根的方式生成表达式树。 你将用于生成表达式树的 API 反映了这一事实：你将用于生成节点的方法会将其所有子节点作为参数。 让我们通过几个示例来了解相关技巧。
 
 ## <a name="creating-nodes"></a>创建节点
 

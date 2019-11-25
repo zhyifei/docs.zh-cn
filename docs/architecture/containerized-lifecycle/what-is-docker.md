@@ -2,22 +2,22 @@
 title: 什么是 Docker？
 description: 深入了解 Docker，这里的一个简单类比可能会对你有所帮助。
 ms.date: 02/15/2019
-ms.openlocfilehash: 7fd3c599afda2d59e0d56756bd61495f2d0370a0
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8636ae3b1ad32158e10ce2aa58423f9c9824d8c0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770721"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738160"
 ---
 # <a name="what-is-docker"></a>什么是 Docker？
 
 [Docker](https://www.docker.com/) 是一种[开源项目](https://github.com/docker/docker)，用于将应用程序自动部署为可在云或本地运行的便携式独立容器。 Docker 也是一家[公司](https://www.docker.com/)，它与云、Linux 和 Windows 供应商（包括 Microsoft）协作，致力于推广和发展这项技术。
 
-![Docker 容器可以在任意位置运行：在客户数据中心本地、在外部服务提供商或在 Azure 云中。](./media/image2.png)
+![显示 Docker 容器可运行位置的关系图。](./media/what-is-docker/docker-containers-run-anywhere.png)
 
 **图 1-2**。 Docker 在混合云的所有层部署容器
 
-Docker 映像容器可以在 Linux 和 Windows 上本机运行。 但是，Windows 映像仅能在 Windows 主机上运行，Linux 映像可以在 Linux 主机和 Windows 主机上运行（到目前为止，使用 Hyper-V Linux VM），其中主机是指服务器或 VM。
+如上图所述，Docker 容器可以在任意位置运行：在客户数据中心本地、在外部服务提供商或在 Azure 云中。 Docker 映像容器还可以在 Linux 和 Windows 上本机运行。 但是，Windows 映像仅能在 Windows 主机上运行，Linux 映像可以在 Linux 主机和 Windows 主机上运行（到目前为止，使用 Hyper-V Linux VM），其中主机是指服务器或 VM。
 
 开发人员可以在 Windows、Linux 或 macOS 上使用开发环境。 在开发计算机上，开发人员运行部署了 Docker 映像（包括应用及其依赖项）的 Docker 主机。 在 Linux 或 Mac 上进行开发的开发人员使用基于 Linux 的 Docker 主机，并且他们可以仅为 Linux 容器创建映像。 （在 Mac 上进行开发的开发人员可以从 macOS 中编辑代码或运行 Docker 命令行接口 (CLI)，但在撰写本文时，容器不在 macOS 上直接运行。）在 Windows 上进行开发的开发人员可以为 Linux 或 Windows 容器创建映像。
 
@@ -35,9 +35,11 @@ Docker 映像容器可以在 Linux 和 Windows 上本机运行。 但是，Windo
 
 图 1-3 显示了 VM 和 Docker 容器之间的比较。
 
-![对于 VM，在主机服务器中有三个基本层，从底部向上依次为：基础结构、主机操作系统和虚拟机监控程序，在所有这些层的顶部，每个 VM 都有其自己的 OS 和所有必需的库。 另一方面，对于 Docker，主机服务器仅包含基础结构和 OS，除此以外，就是用于隔离容器但共享基础 OS 服务的容器引擎。](./media/image3.png)
+![显示 VM 和容器环境比较的关系图。](./media/what-is-docker/comparison-vms-docker-conatiners.png)
 
 **图 1-3**。 比较传统虚拟机与 Docker 容器
+
+如上图所示，对于 VM，主机服务器中有三个基本层。 从下到上依次为：基础结构、主机操作系统和虚拟机监控程序。 毕竟，每个 VM 都有自己的操作系统和所有必需的库。 另一方面，对于 Docker，主机服务器仅具有基础结构和操作系统。 在此基础上，容器引擎会使容器保持隔离，但允许它们共享单个基本操作系统的服务。
 
 由于容器所需的资源要少得多（例如，它们不需要一个完整的 OS），所以它们易于部署且可快速启动。 这使你能够具有更高的密度，也就是说，这允许你在同一硬件单元上运行更多服务，从而降低了成本。
 

@@ -6,12 +6,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4a97fb70caafd7b0003830259ddbb0ec72a2ca8a
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 5e5b60a53db70b33ed798bcf33497b74911ba727
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180272"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974800"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>教程：使用 ML.NET 模型生成器在 Web 应用程序中分析网站评论的情绪
 
@@ -160,7 +160,7 @@ wikipedia-detox-250-line-data.tsv  数据集中的每一行都代表一个用户
 
         string fullPath = Path.Combine(assemblyFolderPath, relativePath);
         return fullPath;
-    }    
+    }
     ```
 
 1. 使用 `Startup` 类构造函数中的 `GetAbsolutePath` 方法来设置 `_modelPath`。
@@ -201,7 +201,7 @@ wikipedia-detox-250-line-data.tsv  数据集中的每一行都代表一个用户
     public IndexModel(PredictionEnginePool<ModelInput, ModelOutput> predictionEnginePool)
     {
         _predictionEnginePool = predictionEnginePool;
-    }    
+    }
     ```
 
 1. 创建一个方法处理程序，该处理程序使用 `PredictionEnginePool` 来对从网页接收的用户输入进行预测。

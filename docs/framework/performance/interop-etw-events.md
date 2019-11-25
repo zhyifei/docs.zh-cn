@@ -7,33 +7,27 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 787c6221b651a53dbb932a5a9d0edea123e1d97d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5db68cdce0db4f8f4d85e9d1dd03720bf235d865
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046440"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974931"
 ---
 # <a name="interop-etw-events"></a>互操作 ETW 事件
-<a name="top"></a> 互操作事件捕获有关 Microsoft 中间语言 (MSIL) 存根生成和缓存的信息。  
+互操作事件捕获有关 Microsoft 中间语言 (MSIL) 存根生成和缓存的信息。  
+
+## <a name="ilstubgenerated-event"></a>ILStubGenerated 事件
+
+下表显示了关键字和级别。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)。）  
   
- 此类别包含以下事件：  
-  
-- [ILStubGenerated 事件](#ilstubgenerated_event)  
-  
-- [ILStubCacheHit 事件](#ilstubcachehit_event)  
-  
-<a name="ilstubgenerated_event"></a>   
-## <a name="ilstubgenerated-event"></a>ILStubGenerated 事件  
- 下表显示了关键字和级别。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)。）  
-  
-|引发事件的关键字|Level|  
+|引发事件的关键字|层次|  
 |-----------------------------------|-----------|  
 |`InteropKeyword` (0x2000)|信息性 (4)|  
   
  下表显示了事件信息。  
   
-|Event|事件 ID|在发生以下情况时引发|  
+|Event — 事件|事件 ID|在发生以下情况时引发|  
 |-----------|--------------|-----------------|  
 |`ILStubGenerated`|88|已生成 MSIL 存根。|  
   
@@ -53,19 +47,17 @@ ms.locfileid: "71046440"
 |StubMethodILCode|win:UnicodeString|存根方法的 MSIL 代码。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
   
- [返回页首](#top)  
-  
-<a name="ilstubcachehit_event"></a>   
 ## <a name="ilstubcachehit-event"></a>ILStubCacheHit 事件  
- 下表显示了关键字和级别。  
+
+下表显示了关键字和级别。  
   
-|引发事件的关键字|Level|  
+|引发事件的关键字|层次|  
 |-----------------------------------|-----------|  
 |`InteropKeyword` (0x2000)|信息性 (4)|  
   
  下表显示了事件信息。  
   
-|Event|事件 ID|在发生以下情况时引发|  
+|Event — 事件|事件 ID|在发生以下情况时引发|  
 |-----------|--------------|-----------------|  
 |`ILStubCacheHit`|89|已访问 MSIL 缓存。|  
   
@@ -80,8 +72,6 @@ ms.locfileid: "71046440"
 |ManagedInteropMethodName|win:UnicodeString|托管互操作方法的名称。|  
 |ManagedInteropMethodName|win:UnicodeString|托管互操作方法的签名。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
-  
- [返回页首](#top)  
   
 ## <a name="see-also"></a>请参阅
 

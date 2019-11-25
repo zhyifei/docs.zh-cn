@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: ae4b89eb45a82299b6f35827eb576968f6cc5bae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0ae9c406e91bc947ec73bb2393bb05962ca41177
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962584"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974356"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>文件对话框自定义区域的已知文件夹 GUID
-向<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>集合中<xref:System.Guid>添加文件夹时[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] , 可以使用指定已知文件夹。 已知文件夹 Guid 不区分大小写, 并且在 Windows SDK 的 Knownfolders.h 文件中定义。  
+向 <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> 集合添加文件夹时，可以使用 <xref:System.Guid> 指定 Windows Vista 已知文件夹。 已知文件夹 Guid 不区分大小写，并且在 Windows SDK 的 Knownfolders.h 文件中定义。  
   
 > [!NOTE]
-> 在某些情况下, 添加到的已知文件夹<xref:System.Windows.Forms.FileDialogCustomPlacesCollection>将不会显示在 "**收藏夹链接**" 区域中。 例如, 如果指定的已知文件夹在运行该应用程序的计算机上不存在, 则不会显示该已知文件夹。  
+> 在某些情况下，添加到 <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> 的已知文件夹将不会显示在 "**收藏夹链接**" 区域中。 例如，如果指定的已知文件夹在运行该应用程序的计算机上不存在，则不会显示该已知文件夹。  
   
 ## <a name="list-of-guids"></a>Guid 列表  
- 下表列出了[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]已知文件夹及其关联<xref:System.Guid>的。  
+ 下表列出了 Windows Vista 已知文件夹及其关联的 <xref:System.Guid>。  
   
  AddNewPrograms  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
@@ -106,7 +106,7 @@ ms.locfileid: "69962584"
  InternetCache  
  352481E8-33BE-4251-BA85-6007CAEDCF9D  
   
- 链接  
+ “链接”  
  BFB9D5E0-C6A9-404C-B2B2-AE6DB6AF4968  
   
  LocalAppData  
@@ -142,7 +142,7 @@ ms.locfileid: "69962584"
  PrintHood  
  9274BD8D-CFD1-41C3-B35E-B13F55A758F4  
   
- 配置文件  
+ Profile  
  5E6C858F-0E22-4760-9AFE-EA3317B67173  
   
  ProgramData  
@@ -193,7 +193,7 @@ ms.locfileid: "69962584"
  PublicVideos  
  2400183A-6185-49FB-A2D8-4A392A602BA3  
   
- QuickLaunch  
+ 快速启动  
  52A4F021-7B75-48A9-9F6B-4B87A210BC8F  
   
  Recent  
@@ -289,4 +289,4 @@ ms.locfileid: "69962584"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [如何：向文件对话框添加自定义位置](how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [如何：向文件对话框添加自定义区域](how-to-add-a-custom-place-to-a-file-dialog-box.md)

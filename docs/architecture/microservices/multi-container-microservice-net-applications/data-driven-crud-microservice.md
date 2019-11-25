@@ -2,12 +2,12 @@
 title: 创建简单的数据驱动 CRUD 微服务
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解如何在微服务应用程序的上下文中创建简单的 CRUD（数据驱动）微服务。
 ms.date: 01/07/2019
-ms.openlocfilehash: db179d9d7d5be5b03f8409b823ee87e71e1c7135
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 56cec488c22b0f3b45b9c1dae9d2f4fd7ef7beaa
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771208"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737331"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>创建简单的数据驱动 CRUD 微服务
 
@@ -17,17 +17,17 @@ ms.locfileid: "72771208"
 
 从设计的角度来看，这种类型的容器化微服务是非常简单的。 这有可能是由于要解决的问题很简单，也可能是由于其实现只是一个概念证明。
 
-![简单 CRUD 微服务是一种内部设计模式。](./media/image4.png)
+![显示简单 CRUD 微服务内部设计模式的关系图。](./media/data-driven-crud-microservice/internal-design-simple-crud-microservices.png)
 
 图 6-4  。 简单 CRUD 微服务的内部设计
 
 这种由数据驱动的简单服务的一个例子是 eShopOnContainers 示例应用程序的目录微服务。 此类型的服务在单个 ASP.NET Core Web API 项目中实现其全部功能，该项目包含用于其数据模型、业务逻辑和数据访问代码的类。 它还将其相关数据存储在 SQL Server 上运行的数据库（作为另一个用于开发/测试的容器）中，但也可以存储在任何常规 SQL Server 主机上，如图 6-5 中所示。
 
-![逻辑 Catalog 微服务包括其 Catalog 数据库，该数据库无论是否与其位于同一 Docker 主机均可。 若该数据库位于同一 Docker 主机，则更利于开发，但不利于生产。](./media/image5.png)
+![显示数据驱动/CRUD 微服务容器的关系图。](./media/data-driven-crud-microservice/simple-data-driven-crud-microservice.png)
 
 图 6-5  。 简单的数据驱动 CRUD 微服务设计
 
-开发这种类型的服务时，只需要 [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) 和数据访问 API 或 ORM（如 [Entity Framework Core](https://docs.microsoft.com/ef/core/index)）。 还可以通过 [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) 自动生成 [Swagger](https://swagger.io/) 元数据，用于提供有关服务功能的说明，如下一部分中所述。
+上一个关系图显示了逻辑 Catalog 微服务包括其 Catalog 数据库，该数据库无论是否与其位于同一 Docker 主机均可。 若该数据库位于同一 Docker 主机，可能更利于开发，但不利于生产。 开发这种类型的服务时，只需要 [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) 和数据访问 API 或 ORM（如 [Entity Framework Core](https://docs.microsoft.com/ef/core/index)）。 还可以通过 [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) 自动生成 [Swagger](https://swagger.io/) 元数据，用于提供有关服务功能的说明，如下一部分中所述。
 
 请注意，在 Docker 容器中运行 SQL Server 这样的数据库服务器十分适用于开发环境，因为可以设置和运行全部所需的依赖关系，而无需在云中或本地预配数据库。 这在运行集成测试时十分方便。 但是对于生产环境，则不建议在容器中运行数据库服务器，因为这种方法通常无法实现高可用性。 对于 Azure 中的生产环境，建议使用 Azure SQL 数据库或任何其他可提供高可用性和高扩展性的数据库技术。 例如，对于 NoSQL 方法，可选择 CosmosDB。
 
@@ -37,15 +37,17 @@ ms.locfileid: "72771208"
 
 要使用 .NET Core 和 Visual Studio 实现简单 CRUD 微服务，需先创建一个简单的 ASP.NET Core Web API 项目（在 .NET Core 上运行以便可在 Linux Docker 主机上运行），如图 6 6 所示。
 
-![要创建 ASP.NET Core Web API 项目，首先需选择 ASP.NET Core Web 应用程序，然后选择 API 类型。](./media/image6.png)
+![显示项目设置的 Visual studio 的屏幕截图。](./media/data-driven-crud-microservice/create-asp-net-core-web-api-project.png)
 
 图 6-6  。 在 Visual Studio 中创建 ASP.NET Core Web API 项目
 
-创建该项目之后，便可使用 Entity Framework API 或其他 API 实现 MVC 控制器，与任何其他 Web API 项目中的操作一样。 在新的 Web API 项目中，可以看到该微服务中的唯一依赖关系在 ASP.NET Core 本身上。 在内部，Microsoft.AspNetCore.All 依赖项内引用的是实体框架和许多其他 .NET Core NuGet 包，如图 6-7 所示  。
+要创建 ASP.NET Core Web API 项目，首先需选择 ASP.NET Core Web 应用程序，然后选择 API 类型。 创建该项目之后，便可使用 Entity Framework API 或其他 API 实现 MVC 控制器，与任何其他 Web API 项目中的操作一样。 在新的 Web API 项目中，可以看到该微服务中的唯一依赖关系在 ASP.NET Core 本身上。 在内部，Microsoft.AspNetCore.All 依赖项内引用的是实体框架和许多其他 .NET Core NuGet 包，如图 6-7 所示  。
 
-![API 项目包括对 Microsoft.AspNetCore.App NuGet 包的引用，其中包括对所有基本包的引用。 它也可能包含其他一些包。](./media/image8.png)
+![VS 显示 Catalog.Api 的 NuGet 依赖项的屏幕截图。](./media/data-driven-crud-microservice/simple-crud-web-api-microservice-dependencies.png)
 
 图 6-7  。 简单 CRUD Web API 微服务中的依赖关系
+
+API 项目包括对 Microsoft.AspNetCore.App NuGet 包的引用，其中包括对所有基本包的引用。 它也可能包含其他一些包。
 
 ### <a name="implementing-crud-web-api-services-with-entity-framework-core"></a>使用 Entity Framework Core 实现 CRUD Web API 服务
 
@@ -340,11 +342,11 @@ Swashbuckle 将 API 资源管理器和 Swagger 或 [swagger ui](https://github.c
 
 这意味除 API 外，又有了一个好用的发现 UI，可帮助开发人员使用 API。 它只需要少量代码和维护，因为它自动生成，这让用户能够专注于生成 API。 API 资源管理器的结果如图 6-8 所示。
 
-![Swashbuckle 生成的 Swagger UI API 文档包括所有已发布操作。](./media/image9.png)
+![显示 eShopOContainers API 的 Swagger API 资源管理器的屏幕截图。](./media/data-driven-crud-microservice/swagger-metadata-eshoponcontainers-catalog-microservice.png)
 
 图 6-8  。 基于 Swagger 元数据的 Swashbuckle API 资源管理器—eShopOnContainers 目录微服务
 
-此处，API 资源管理器不是最重要的部分。 一旦具有可在 Swagger 元数据中进行自我描述的 Web API 后，便可从基于 Swagger 的工具中无缝使用 API，这些工具包括可面向多个平台的客户端代理类代码生成器。 例如，之前提到过，[AutoRest](https://github.com/Azure/AutoRest) 可自动生成 .NET 客户端类。 同时还有 [swagger-codegen](https://github.com/swagger-api/swagger-codegen) 等其他工具可用，这些工具可用于自动生成 API 客户端库、服务器存根（stub）和文档的代码。
+Swashbuckle 生成的 Swagger UI API 文档包括所有已发布操作。 此处，API 资源管理器不是最重要的部分。 一旦具有可在 Swagger 元数据中进行自我描述的 Web API 后，便可从基于 Swagger 的工具中无缝使用 API，这些工具包括可面向多个平台的客户端代理类代码生成器。 例如，之前提到过，[AutoRest](https://github.com/Azure/AutoRest) 可自动生成 .NET 客户端类。 同时还有 [swagger-codegen](https://github.com/swagger-api/swagger-codegen) 等其他工具可用，这些工具可用于自动生成 API 客户端库、服务器存根（stub）和文档的代码。
 
 目前，Swashbuckle 在用于 ASP.NET Core 应用程序的高级元包 [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore) 下包含五个内部 NuGet 包。
 
@@ -401,13 +403,13 @@ public class Startup
 
 之前已展示由 Swashbuckle 为类似于 `http://<your-root-url>/swagger` 的 URL 生成的 UI。 图 6-9 中还展示了如何测试 API 方法。
 
-![Swagger UI API 详细信息显示了一个响应示例，可用于执行真正的 API，这对于开发人员发现非常有用。](./media/image10.png)
+![显示可用测试工具的 Swagger UI 的屏幕截图。](./media/data-driven-crud-microservice/swashbuckle-ui-testing.png)
 
 图 6-9  。 Swashbuckle UI 测试目录/项目 API 方法
 
-图 6-10 显示了当使用 [Postman](https://www.getpostman.com/) 请求 `http://<your-root-url>/swagger/v1/swagger.json` 时，从 eShopOnContainers 微服务（工具在下方使用此微服务）中生成的 Swagger JSON 元数据。
+Swagger UI API 详细信息显示了一个响应示例，可用于执行真正的 API，这对于开发人员发现非常有用。 图 6-10 显示了当使用 [Postman](https://www.getpostman.com/) 请求 `http://<your-root-url>/swagger/v1/swagger.json` 时，从 eShopOnContainers 微服务（工具在下方使用此微服务）中生成的 Swagger JSON 元数据。
 
-![显示 Swagger JSON 元数据的示例 Postman UI](./media/image11.png)
+![显示 Swagger JSON 元数据的示例 Postman UI 的屏幕截图。](./media/data-driven-crud-microservice/swagger-json-metadata.png)
 
 图 6-10  。 Swagger JSON 元数据
 

@@ -4,12 +4,12 @@ description: 如何使用 ML.NET 模型生成器自动训练机器学习模型
 author: natke
 ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: 77b5e75fede1a4aa93eadcf7e21591d82f565cab
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 77fe56dba3532617ad9fb0c89bfaac7c8e031ce7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929470"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971523"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>什么是模型生成器，它的工作原理是怎样的？
 
@@ -60,7 +60,7 @@ ML.NET 模型生成器是一个直观的图形化 Visual Studio 扩展，用于�
 
 #### <a name="predict-a-category-when-there-are-three-or-more-categories"></a>预测类别（有三个或更多个类别时）
 
-多类分类可用于将数据分为三类或更多类。 
+多类分类可用于将数据分为三类或更多类。
 
 ![多类分类示例，包括文档和产品分类、支持票证路由以及客户问题优先级](media/multiclass-classification-examples.png)
 

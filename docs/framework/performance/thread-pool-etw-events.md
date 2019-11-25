@@ -7,36 +7,35 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a96fd4c45113afd2ab918b714bd6e12a429917c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8f1c92154fe62b1b6ba6981606680daf37d087f4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046191"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974867"
 ---
 # <a name="thread-pool-etw-events"></a>线程池 ETW 事件
-<a name="top"></a> 这些事件收集有关工作线程和 I/O 线程的信息。  
+这些事件收集有关工作线程和 I/O 线程的信息。  
   
  存在两组线程池事件：  
   
-- [工作线程池事件](#worker)：提供有关应用程序如何使用线程池以及工作负荷如何影响并发控制的信息。  
+- [工作线程池事件](#worker-thread-pool-events)：提供有关应用程序如何使用线程池以及工作负荷如何影响并发控制的信息。  
   
-- [I/O 线程池事件](#io)：提供有关线程池中创建、停用、恢复或终止的 I/O 线程的信息。  
-  
-<a name="worker"></a>   
-## <a name="worker-thread-pool-events"></a>工作线程池事件  
+- [I/O 线程池事件](#io-thread-events)：提供有关线程池中创建、停用、恢复或终止的 I/O 线程的信息。  
+
+## <a name="worker-thread-pool-events"></a>工作线程池事件
  这些事件与运行时工作线程池相关，并提供有关线程事件的通知（例如，创建或停止线程时）。 工作线程池使用自适应算法进行并发控制，其中的线程数基于测得的吞吐量来计算。 工作线程池事件可用于了解应用程序如何使用线程池，以及某些工作负荷可能会对并发控制怎样的影响。  
   
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart 和 ThreadPoolWorkerThreadStop  
  下表显示这些事件的关键字和级别。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)。）  
   
-|引发事件的关键字|Level|  
+|引发事件的关键字|层次|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|信息性 (4)|  
   
  下表显示了事件信息。  
   
-|Event|事件 ID|在发生以下情况时引发|  
+|Event — 事件|事件 ID|在发生以下情况时引发|  
 |-|-|-|  
 |`ThreadPoolWorkerThreadStart`|50|创建工作线程。|  
 |`ThreadPoolWorkerThreadStop`|51|停止工作线程。|  
@@ -57,13 +56,13 @@ ms.locfileid: "71046191"
 #### <a name="threadpoolworkerthreadadjustmentsample"></a>ThreadPoolWorkerThreadAdjustmentSample  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Level|  
+|引发事件的关键字|层次|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|信息性 (4)|  
   
  下表显示了事件信息。  
   
-|Event|事件 ID|描述|  
+|Event — 事件|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentSample`|54|指一个示例的信息收集，即具有一定并发级别的即时吞吐量测量。|  
   
@@ -77,13 +76,13 @@ ms.locfileid: "71046191"
 #### <a name="threadpoolworkerthreadadjustmentadjustment"></a>ThreadPoolWorkerThreadAdjustmentAdjustment  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Level|  
+|引发事件的关键字|层次|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|信息性 (4)|  
   
  下表显示了事件信息。  
   
-|Event|事件 ID|描述|  
+|Event — 事件|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|当线程注入（爬山）算法确定并发级别发生更改时，在控件中记录更改。|  
   
@@ -99,13 +98,13 @@ ms.locfileid: "71046191"
 #### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Level|  
+|引发事件的关键字|层次|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|信息性 (4)|  
   
  下表显示了事件信息。  
   
-|Event|事件 ID|描述|  
+|Event — 事件|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentStats`|56|在线程池上收集数据。|  
   
@@ -124,23 +123,20 @@ ms.locfileid: "71046191"
 |NewcontrolSetting|win:Double|将作为活动线程计数未来变化基线的活动工作线程数。|  
 |NewThreadWaveMagnitude|Win:UInt16|活动线程计数的未来变化量值。|  
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
-  
- [返回页首](#top)  
-  
-<a name="io"></a>   
+
 ## <a name="io-thread-events"></a>I/O 线程事件  
  这些线程池事件针对 I/O 线程池（完成端口）中的线程发生，该过程是异步的。  
   
 ### <a name="iothreadcreate_v1"></a>IOThreadCreate_V1  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Level|  
+|引发事件的关键字|层次|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|信息性 (4)|  
   
  下表显示了事件信息。  
   
-|Event|事件 ID|在发生以下情况时引发|  
+|Event — 事件|事件 ID|在发生以下情况时引发|  
 |-|-|-|  
 |`IOThreadCreate_V1`|44|在线程池中创建 I/O 线程。|  
   
@@ -155,13 +151,13 @@ ms.locfileid: "71046191"
 ### <a name="iothreadretire_v1"></a>IOThreadRetire_V1  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Level|  
+|引发事件的关键字|层次|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|信息性 (4)|  
   
  下表显示了事件信息。  
   
-|Event|事件 ID|在发生以下情况时引发|  
+|Event — 事件|事件 ID|在发生以下情况时引发|  
 |-----------|--------------|-----------------|  
 |`IOThreadRetire_V1`|46|I/O 线程变为停用候选项。|  
   
@@ -176,13 +172,13 @@ ms.locfileid: "71046191"
 ### <a name="iothreadunretire_v1"></a>IOThreadUnretire_V1  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Level|  
+|引发事件的关键字|层次|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|信息性 (4)|  
   
  下表显示了事件信息。  
   
-|Event|事件 ID|在发生以下情况时引发|  
+|Event — 事件|事件 ID|在发生以下情况时引发|  
 |-----------|--------------|-----------------|  
 |`IOThreadUnretire_V1`|47|I/O 线程因在该线程变为停用候选项后的等待期间内达到 I/O 而恢复使用。|  
   
@@ -197,13 +193,13 @@ ms.locfileid: "71046191"
 ### <a name="iothreadterminate"></a>IOThreadTerminate  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Level|  
+|引发事件的关键字|层次|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|信息性 (4)|  
   
  下表显示了事件信息。  
   
-|Event|事件 ID|在发生以下情况时引发|  
+|Event — 事件|事件 ID|在发生以下情况时引发|  
 |-----------|--------------|-----------------|  
 |`IOThreadTerminate`|45|在线程池中创建 I/O 线程。|  
   

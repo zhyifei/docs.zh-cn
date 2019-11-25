@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 1a608a9102e5fb19e40294761c0de98f7e008133
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: d401c832dd3b29de609e9eaab69ea3334d6591b9
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168984"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417683"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 表达式（C# 编程指南）
 
@@ -42,7 +42,7 @@ ms.locfileid: "70168984"
 
 [!code-csharp-interactive[lambda is expression tree](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#ExpressionTree)]
 
-可在需要委托类型或表达式树的实例的任何代码中使用 lambda 表达式，例如，作为 <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType> 方法的参数传递应在后台执行的代码。 编写 [LINQ 查询表达式](../../linq/index.md)时，还可以使用 lambda 表达式，如下例所示：
+可在需要委托类型或表达式树的实例的任何代码中使用 lambda 表达式，例如，作为 <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType> 方法的参数传递应在后台执行的代码。 用 C# 编写 [LINQ](../../linq/index.md) 时，还可以使用 lambda 表达式，如下例所示：
 
 [!code-csharp-interactive[lambda is argument in LINQ](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
 

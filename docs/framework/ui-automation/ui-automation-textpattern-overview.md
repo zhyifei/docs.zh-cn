@@ -6,19 +6,19 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: 15638e7da99ef15be58052849bf0675cc21941c9
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 2f417aaba5361bea3bf2493001bca938d9dd08cb
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180167"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975483"
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI 自动化 TextPattern 概述
 
 > [!NOTE]
-> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新信息，请参阅 @no__t 1Windows 自动化 API：UI Automation @ no__t。
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。
 
-本概述介绍如何使用 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 公开文本内容，其中包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支持的平台中的文本控件的格式和样式特性。 这些控件包括但不限于 Microsoft .NET 框架 <xref:System.Windows.Controls.TextBox>，并 <xref:System.Windows.Controls.RichTextBox> 以及它们的 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 等效项。
+本概述介绍如何使用 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 公开文本内容，其中包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支持的平台中的文本控件的格式和样式特性。 这些控件包括但不限于 Microsoft .NET 框架 <xref:System.Windows.Controls.TextBox> 和 <xref:System.Windows.Controls.RichTextBox> 以及其 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 等效项。
 
 控件文本内容的功能通过使用 <xref:System.Windows.Automation.TextPattern> 控件模式完成，该控件模式表示作为文本流的文本容器的内容。 与之相反， <xref:System.Windows.Automation.TextPattern> 需要 <xref:System.Windows.Automation.Text.TextPatternRange> 的支持，以公开格式和样式特性。 <xref:System.Windows.Automation.Text.TextPatternRange> 通过采用一系列 <xref:System.Windows.Automation.TextPattern> 和 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 终结点表示文本容器中连续或多个不连续的的文本段来支持 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 。 <xref:System.Windows.Automation.Text.TextPatternRange> 支持功能包括选择、比较、检索和遍历。
 
@@ -33,7 +33,7 @@ ms.locfileid: "72180167"
 
 文本服务框架（TSF）是一个简单的可伸缩系统框架，可在桌面上和应用程序中启用自然语言服务和高级文本输入。 除了为应用程序提供接口以公开其文本存储，它还支持该文本存储的元数据。
 
-但是，TSF 是针对需要将输入注入到上下文感知方案中的应用程序而设计的，而 @no__t 为只读解决方案（如上所述的有限解决方法），旨在为屏幕阅读器和盲文提供对文本存储的优化访问。装置.
+不过，TSF 是针对需要将输入注入到上下文感知方案中的应用程序而设计的，而 <xref:System.Windows.Automation.TextPattern> 是只读的解决方案（如上所述的有限解决方法），旨在提供对屏幕阅读器和盲文设备的文本存储的优化访问。
 
 简而言之，需要对文本存储的只读访问权限的可访问技术可以使用 <xref:System.Windows.Automation.TextPattern>，但对于上下文感知输入，需要 TSF 更复杂的功能。
 
@@ -41,7 +41,7 @@ ms.locfileid: "72180167"
 
 ## <a name="control-types"></a>控件类型
 
-### <a name="text"></a>文本
+### <a name="text"></a>Text
 
 Text 控件是表示屏幕上一段文本的基本元素。
 
@@ -50,7 +50,7 @@ Text 控件是表示屏幕上一段文本的基本元素。
 > [!NOTE]
 > 文本控件可能不会显示在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的内容视图中（请参阅 [UI Automation Tree Overview](ui-automation-tree-overview.md)）。 这是因为文本控件通常通过另一个控件的 Name 属性显示。 例如，用于标记编辑控件的文本是通过编辑控件的 Name 属性公开的。 因为，此编辑控件位于 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的内容视图中，文本元素自身没有必要处于 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的视图中。 在内容视图中显示的唯一文本为不是冗余信息的文本。 这能让任何辅助技术仅对其用户需要的信息段进行快速筛选。
 
-### <a name="edit"></a>编辑
+### <a name="edit"></a>Edit
 
 编辑控件使用户可以查看和编辑单个文本行。
 
@@ -94,9 +94,9 @@ Text 控件是表示屏幕上一段文本的基本元素。
 
 <a name="Security"></a>
 
-## <a name="security"></a>安全性
+## <a name="security"></a>安全
 
-@No__t-0 体系结构的设计考虑到了安全性（请参阅[UI 自动化安全性概述](ui-automation-security-overview.md)）。 但是，此概述中所述的 TextPattern 类需要一些特定的安全注意事项。
+[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 体系结构的设计考虑到了安全性（请参阅[UI 自动化安全性概述](ui-automation-security-overview.md)）。 但是，此概述中所述的 TextPattern 类需要一些特定的安全注意事项。
 
 - [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 文本提供程序提供只读接口，并且不提供能够更改控件中的现有文本的功能。
 
@@ -104,7 +104,7 @@ Text 控件是表示屏幕上一段文本的基本元素。
 
 - UI 自动化提供程序的开发人员应注意：所有他们选择通过 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 在控件中公开的信息实质上是公用的并且其他代码都可访问。 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 不会尝试确定任何 UI 自动化客户端的可信度，因此 UI 自动化提供程序不应公开受保护内容或敏感文本信息（如密码字段）。
 
-- [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] 安全性最重要的更改之一是：广泛地称为“安全输入”，其包括如最低特权（或有限权限）、用户帐户 (LUA) 和用户界面特权级别隔离 (UIPI) 在内的技术。
+- Windows Vista 安全性的最重大更改之一被广泛称为 "安全输入"，其中包含一些技术（例如最小特权（或有限）用户帐户（LUA）和用户界面特权级别隔离（UIPI））。
 
   - UIPI 防止一个程序控制和/或监控另一个具有更多“特权”的程序，防止欺骗用户输入的跨进程窗口消息攻击。
 
@@ -126,7 +126,7 @@ Text 控件是表示屏幕上一段文本的基本元素。
 文本范围的格式特性（例如， <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> 或 <xref:System.Windows.Automation.TextPattern.FontNameAttribute>）。
 
 **退化范围**\
-退化范围为空或零字符文本区域。 出于 TextPattern 控件模式的目的，文本插入点（或系统插入标记）被视为退化范围。 如果未选择文本， <xref:System.Windows.Automation.TextPattern.GetSelection%2A> 将返回文本插入点处的退化范围， <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> 将返回退化范围作为其起始终结点。 文本提供程序找不到任何与给定条件相匹配的文本范围时，<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 和 <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> 可能会返回退化范围。 此退化范围可用作文本提供程序内的起始终结点。 <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> 和 <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> 返回空引用（Microsoft Visual Basic .NET 中的 `Nothing`），以避免与发现的范围和退化范围相混淆。
+退化范围为空或零字符文本区域。 出于 TextPattern 控件模式的目的，文本插入点（或系统插入标记）被视为退化范围。 如果未选择文本， <xref:System.Windows.Automation.TextPattern.GetSelection%2A> 将返回文本插入点处的退化范围， <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> 将返回退化范围作为其起始终结点。 文本提供程序找不到任何与给定条件相匹配的文本范围时，<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 和 <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> 可能会返回退化范围。 此退化范围可用作文本提供程序内的起始终结点。 <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> 和 <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> 返回空引用（在 Microsoft Visual Basic .NET 中为`Nothing`），以避免与发现的范围和退化范围相混淆。
 
 **嵌入对象**\
 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 文本模型中，有两种类型的嵌入对象。 它们包含基于文本的内容元素，如超链接或表，以及控制元素（如图像和按钮）。 有关详细信息，请参见 [Access Embedded Objects Using UI Automation](access-embedded-objects-using-ui-automation.md)。
@@ -134,7 +134,8 @@ Text 控件是表示屏幕上一段文本的基本元素。
 **终结点**\
 文本容器内的文本范围的绝对 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 或 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 点。
 
-![TextPatternRangeEndpoints &#40;开始和结束&#41;。](./media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")下面说明了一组开始点和终结点。
+![TextPatternRangeEndpoints &#40;开始和结束&#41;。](./media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")
+下面显示了一套起始点和终结点。
 
 **TextRange**\
 表示包括所有的相关特性和功能的文本容器中带起始点和终结点的一段文本。

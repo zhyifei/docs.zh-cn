@@ -1,16 +1,16 @@
 ---
-title: 如何：修改字符串内容 - C# 指南
+title: 如何修改字符串内容 - C# 指南
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 2cc1166d98a6cc07e0827a138cecb09c0530b899
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 539e313173d46c2c92399cefe94207c8beed03b4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267759"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973256"
 ---
-# <a name="how-to-modify-string-contents-in-c"></a>如何：修改以 C\# 编写的字符串内容
+# <a name="how-to-modify-string-contents-in-c"></a>如何修改以 C\# 编写的字符串内容
 
 本文演示通过修改现有 `string` 来生成 `string` 的几种方法。 演示的所有方法均将修改的结果返回为新的 `string` 对象。 为了清楚地演示这一点，所有示例均将结果存储在新的变量中。 之后，你可以检查原始 `string` 和运行每个示例时从修改中得到的 `string`。
 
@@ -48,7 +48,7 @@ ms.locfileid: "67267759"
 
 可使用[正则表达式](../../standard/base-types/regular-expressions.md)将匹配模式的文本替换为新文本，新文本可能由模式定义。 下面的示例使用 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 类从源字符串中查找模式并将其替换为正确的大写。 <xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)?displayProperty=nameWithType> 方法使用将替换逻辑提供为其参数之一的函数。 在本示例中，该函数 `LocalReplaceMatchCase` 是在示例方法中声明的本地函数  。 `LocalReplaceMatchCase` 使用 <xref:System.Text.StringBuilder?displayProperty=nameWithType>类，以生成具有正确大写的替换字符串。
 
-正则表达式最适合用于搜索和替换遵循模式的文本，而不是已知的文本。 请参阅[如何：搜索字符串](search-strings.md)了解详细信息。 搜索模式“the\s”搜索“the”后接空格字符的单词。 该部分的模式可确保它不与源字符串中的“there”相匹配。 有关正则表达式语言元素的更多信息，请参阅[正则表达式语言 - 快速参考](../../standard/base-types/regular-expression-language-quick-reference.md)。
+正则表达式最适合用于搜索和替换遵循模式的文本，而不是已知的文本。 请参阅[如何搜索字符串](search-strings.md)了解详细信息。 搜索模式“the\s”搜索“the”后接空格字符的单词。 该部分的模式可确保它不与源字符串中的“there”相匹配。 有关正则表达式语言元素的更多信息，请参阅[正则表达式语言 - 快速参考](../../standard/base-types/regular-expression-language-quick-reference.md)。
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#5)]
 

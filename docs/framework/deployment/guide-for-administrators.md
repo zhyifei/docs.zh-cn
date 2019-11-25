@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91099b9b4d230839bc14c5fe4d5eafd05ac95541
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dc842713a16df8e5ada5ad6c71ca19f91ecbc405
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052156"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975570"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 部署指南（针对管理员）
 
@@ -21,7 +21,7 @@ ms.locfileid: "71052156"
 > [!NOTE]
 > 本文档中提到的软件（包括但不限于 .NET Framework 4.5、System Center Configuration Manager 和 Active Directory）均受许可条款和条件的约束。 下列说明假定，软件的适当被许可方已查看并接受此类许可条款和条件。 这些说明不免除此类许可协议中的任何条款和条件。
 >
-> 有关对 .NET Framework 的支持的信息，请参阅 Microsoft 支持网站上的 [Microsoft .NET Framework 支持生命周期策略](https://go.microsoft.com/fwlink/?LinkId=196607)。
+> 有关对 .NET Framework 的支持的信息，请参阅 Microsoft 支持网站上的 [.NET Framework 官方支持策略](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)。
 
 本主题包含以下各节：
 
@@ -135,9 +135,9 @@ ms.locfileid: "71052156"
 |------------|-----------------|
 |**/q**|设置安静模式。 不需要用户输入，也不显示输出。|
 |**/norestart**|防止安装程序自动重新启动。 如果你使用此选项，则 Configuration Manager 必须处理计算机重新启动。|
-|/chainingpackage  PackageName |指定执行链接的包的名称。 该信息与注册了 [Microsoft 客户体验改善计划 (CEIP)](https://go.microsoft.com/fwlink/p/?LinkId=248244) 的用户的其他安装会话信息一起报告。 如果包名称包含空格，则可以用双引号作为分隔符；例如：/chainingpackage "Chaining Product"  。|
+|/chainingpackage  PackageName |指定执行链接的包的名称。 该信息与注册了 Microsoft 客户体验改善计划 (CEIP) 的用户的其他安装会话信息一起报告。 如果包名称包含空格，则可以用双引号作为分隔符；例如：/chainingpackage "Chaining Product"  。|
 
-这些步骤创建了一个名为“.NET Framework 4.5”的包。 程序将部署 .NET Framework 4.5 的无提示安装。 在无提示安装中，用户不与安装过程进行交互，并且链接应用程序必须捕获返回代码并处理重启操作；请参阅[从安装软件包获取进度信息](https://go.microsoft.com/fwlink/?LinkId=179606)。
+这些步骤创建了一个名为“.NET Framework 4.5”的包。 程序将部署 .NET Framework 4.5 的无提示安装。 在无提示安装中，用户不与安装过程进行交互，并且链接应用程序必须捕获返回代码并处理重启操作；请参阅[从安装软件包获取进度信息](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))。
 
 <a name="select_dist_point"></a>
 

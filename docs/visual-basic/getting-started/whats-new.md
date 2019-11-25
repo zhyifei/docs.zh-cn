@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: f5630f7947125dd5eb8a5b58e79add1aec4c689b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1efcee0ac3bdba1b7e1379a0ac072ea714add756
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774923"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423907"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新增功能
 
@@ -206,13 +206,13 @@ Visual Basic 命令行编译器现在支持 [-refout](../reference/command-line-
 
 ## <a name="visual-basic-14"></a>Visual Basic 14
 
-[Nameof](../../csharp/language-reference/operators/nameof.md)
+[NameOf](../language-reference/operators/nameof.md)
 
 可以在错误消息中使用类型或成员的非限定字符串名，而无需对字符串进行硬编码。  这使代码可以在重构时保持正确。  此功能也可用于挂接“模型-视图-控制器”MVC 链接并触发属性更改事件。
 
 [字符串内插](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
 
-可以使用字符串内插表达式构造字符串。  内插字符串表达式类似于包含表达式的模板字符串。  与[复合格式设置](../../standard/base-types/composite-format.md)相比，内插字符串在自变量方面更易于理解。
+可以使用字符串内插表达式构造字符串。  内插字符串表达式类似于包含表达式的模板字符串。  与[复合格式设置](../../standard/base-types/composite-formatting.md)相比，内插字符串在自变量方面更易于理解。
 
 [NULL 条件成员访问和索引](../language-reference/operators/null-conditional-operators.md)
 
@@ -291,4 +291,4 @@ End Interface
 
 ## <a name="see-also"></a>请参阅
 
-- [Visual Studio 2017 中的新增功能](/visualstudio/ide/whats-new-in-visual-studio)
+- [Visual Studio 2017 中的新增功能](/visualstudio/ide/whats-new-visual-studio-2017)

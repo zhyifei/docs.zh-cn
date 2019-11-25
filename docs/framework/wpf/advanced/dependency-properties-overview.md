@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 663dd7a785200ddbc78cc0cd1fb5b43531982f42
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5803d656d765f3f4fe3039e28b9c06202218fcfc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458953"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973991"
 ---
 # <a name="dependency-properties-overview"></a>依赖属性概述
 
@@ -168,7 +168,7 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 有关详细信息，请参阅[属性值继承](property-value-inheritance.md)。
 
 ### <a name="wpf-designer-integration"></a>WPF 设计器集成
-如果自定义控件具有实现为依赖属性的属性，则它会收到相应的[!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]支持。 一个示例就是能够在“属性”窗口中编辑直接依赖属性和附加依赖属性。 有关详细信息，请参阅[控件创作概述](../controls/control-authoring-overview.md)。
+具有作为依赖属性实现的属性的自定义控件将接收适用于 Visual Studio 支持的相应 WPF 设计器。 一个示例就是能够在“属性”窗口中编辑直接依赖属性和附加依赖属性。 有关详细信息，请参阅[控件创作概述](../controls/control-authoring-overview.md)。
 
 ## <a name="dependency-property-value-precedence"></a>依赖项属性值优先级
 获取依赖属性的值时，获得的值可能是通过参与 WPF 属性系统的其他任一基于属性的输入而在该属性上设置的。 由于存在依赖属性值优先级，使得属性获取值的方式的各种方案得以按可预测的方式交互。

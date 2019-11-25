@@ -2,12 +2,12 @@
 title: 何时为 Docker 容器选择 .NET Framework
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 何时为 Docker 容器选择 .NET Framework
 ms.date: 01/07/2019
-ms.openlocfilehash: 8316d17aae09ddbd70bd80af4f06d8cb029f2752
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9e5b18e8e3482eb86c0d9dea5de56fb12f9d6256
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093768"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966891"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>何时为 Docker 容器选择 .NET Framework
 
@@ -51,15 +51,16 @@ ms.locfileid: "73093768"
 
 ### <a name="additional-resources"></a>其他资源
 
-- **.NET Core 指南**  
+- **.NET Core 指南** \
   [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
 
-- **从 .NET Framework 移植到 .NET Core**  
+- **从 .NET Framework 移植到 .NET Core** \
   [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
-- **Docker 上的 .NET Core 指南** [https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
+- Docker 上的 .NET Core 指南   \
+  [https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
 
-- **.NET 组件概述**  
+- **.NET 组件概述** \
   [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)
 
 >[!div class="step-by-step"]

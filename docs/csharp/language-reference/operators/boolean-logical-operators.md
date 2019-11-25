@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: e355a89e27ea5bd6e4335b39c4e669610c4b0553
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 327a2a8a95809923446107e6ba1c4b331eee82b7
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319110"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737891"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>布尔逻辑运算符（C# 参考）
 
@@ -47,7 +47,7 @@ ms.locfileid: "72319110"
 - 二元 [`&`（逻辑与）](#logical-and-operator-)、[`|`（逻辑或）](#logical-or-operator-)和 [`^`（逻辑异或）](#logical-exclusive-or-operator-)运算符。 这些运算符始终计算两个操作数。
 - 二元 [`&&`（条件逻辑与）](#conditional-logical-and-operator-)和 [`||`（条件逻辑或）](#conditional-logical-or-operator-)运算符。 这些运算符仅在必要时才计算右侧操作数。
 
-对于[整型](../builtin-types/integral-numeric-types.md)类型的操作数，`&`、`|` 和 `^` 运算符执行位逻辑运算。 有关详细信息，请参阅[位运算符和移位运算符](bitwise-and-shift-operators.md)。
+对于[整型数值类型](../builtin-types/integral-numeric-types.md)的操作数，`&`、`|` 和 `^` 运算符执行位逻辑运算。 有关详细信息，请参阅[位运算符和移位运算符](bitwise-and-shift-operators.md)。
 
 ## <a name="logical-negation-operator-"></a>逻辑非运算符 !
 
@@ -61,7 +61,7 @@ ms.locfileid: "72319110"
 
 `&` 运算符计算操作数的逻辑与。 如果 `x` 和 `y` 的计算结果都为 `true`，则 `x & y` 的结果为 `true`。 否则，结果为 `false`。
 
-即使左侧操作数计算结果为 `false`，`&` 运算符也会计算这两个操作数，而在这种情况下，无论右侧操作数的值为何，结果都肯定为 `false`。
+即使左侧操作数计算结果为 `false`，`&` 运算符也会计算这两个操作数，而在这种情况下，无论右侧操作数的值为何，运算结果都为 `false`。
 
 在下面的示例中，`&` 运算符的右侧操作数是方法调用，无论左侧操作数的值如何，都会执行方法调用：
 
@@ -69,7 +69,7 @@ ms.locfileid: "72319110"
 
 [条件逻辑 AND 运算符](#conditional-logical-and-operator-) `&&` 也计算操作数的逻辑 AND，但如果左侧操作数的计算结果为 `false`，它就不会计算右侧操作数。
 
-对于整型类型的操作数，`&` 运算符计算其操作数的[位逻辑 AND](bitwise-and-shift-operators.md#logical-and-operator-)。 一元 `&` 运算符是 [address-of 运算符](pointer-related-operators.md#address-of-operator-)。
+对于[整型数值类型](../builtin-types/integral-numeric-types.md)的操作数，`&` 运算符计算其操作数的[位逻辑 AND](bitwise-and-shift-operators.md#logical-and-operator-)。 一元 `&` 运算符是 [address-of 运算符](pointer-related-operators.md#address-of-operator-)。
 
 ## <a name="logical-exclusive-or-operator-"></a>逻辑异或运算符 ^
 
@@ -77,13 +77,13 @@ ms.locfileid: "72319110"
 
 [!code-csharp-interactive[logical exclusive OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Xor)]
 
-对于整型类型的操作数，`^` 运算符计算其操作数的[位逻辑异或](bitwise-and-shift-operators.md#logical-exclusive-or-operator-)。
+对于[整型数值类型](../builtin-types/integral-numeric-types.md)的操作数，`^` 运算符计算其操作数的[位逻辑异或](bitwise-and-shift-operators.md#logical-exclusive-or-operator-)。
 
 ## <a name="logical-or-operator-"></a>逻辑或运算符 |
 
 `|` 运算符计算操作数的逻辑或。 如果 `x` 或 `y` 的计算结果为 `true`，则 `x | y` 的结果为 `true`。 否则，结果为 `false`。
 
-即使左侧操作数计算结果为 `true`，`|` 运算符也会计算这两个操作数，而在这种情况下，无论右侧操作数的值为何，结果都肯定为 `true`。
+即使左侧操作数计算结果为 `true`，`|` 运算符也会计算这两个操作数，而在这种情况下，无论右侧操作数的值为何，运算结果都为 `true`。
 
 在下面的示例中，`|` 运算符的右侧操作数是方法调用，无论左侧操作数的值如何，都会执行方法调用：
 
@@ -91,7 +91,7 @@ ms.locfileid: "72319110"
 
 [条件逻辑 OR 运算符](#conditional-logical-or-operator-) `||` 也计算操作数的逻辑 OR，但如果左侧操作数的计算结果为 `true`，它就不会计算右侧操作数。
 
-对于整型类型的操作数，`|` 运算符计算其操作数的[位逻辑 OR](bitwise-and-shift-operators.md#logical-or-operator-)。
+对于[整型数值类型](../builtin-types/integral-numeric-types.md)的操作数，`|` 运算符计算其操作数的[位逻辑 OR](bitwise-and-shift-operators.md#logical-or-operator-)。
 
 ## <a name="conditional-logical-and-operator-"></a> 条件逻辑 AND 运算符 &amp;&amp;
 
@@ -129,9 +129,9 @@ ms.locfileid: "72319110"
 |null|false|false|null|  
 |null|null|null|null|  
 
-这些运算符的行为不同于值类型可以为 null 的典型运算符行为。 通常情况下，为值类型的操作数定义的运算符也能与值类型可以为 null 的相应操作数一起使用。 如果任何操作数是 `null`，此类运算符都会生成 `null`。 不过，即使操作数之一是 `null`，`&` 和 `|` 运算符也可以生成非 null。 若要详细了解值类型可为空的运算符行为，请参阅[使用可为空的值类型](../../programming-guide/nullable-types/using-nullable-types.md)一文的[运算符](../../programming-guide/nullable-types/using-nullable-types.md#operators)部分。
+这些运算符的行为不同于值类型可以为 null 的典型运算符行为。 通常情况下，为值类型的操作数定义的运算符也能与值类型可以为 null 的相应操作数一起使用。 如果其任一操作数的计算结果为 `null`，此类运算符都会生成 `null`。 不过，即使操作数之一的计算结果为 `null`，`&` 和 `|` 运算符也可以生成非 null。 有关值类型可为空的运算符行为的详细信息，请参阅[可为空的值类型](../builtin-types/nullable-value-types.md)一文的[提升的运算符](../builtin-types/nullable-value-types.md#lifted-operators)部分。
 
-还可以将 `!` 和 `^` 运算符与 `bool?` 操作数结合使用，如下面的示例所示：
+此外，你还可以将 `!` 和 `^` 运算符与 `bool?` 操作数结合使用，如下例所示：
 
 [!code-csharp-interactive[lifted negation and xor](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#WithNullableBoolean)]
 
@@ -174,7 +174,7 @@ x = x op y
 
 [!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Precedence)]
 
-要了解按优先级排序的完整 C# 运算符列表，请参阅 [C# 运算符](index.md)。
+要了解按优先级排序的完整 C# 运算符列表，请参阅 [C# 运算符](index.md#operator-precedence)一文中的[运算符优先级](index.md)部分。
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 

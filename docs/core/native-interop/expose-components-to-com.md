@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 8f9624414a2b423bd43e8790d11b70ae1ca6286d
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 8d9b8eb274777a0ed019a207c6e8610cc73ec390
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216223"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973315"
 ---
 # <a name="exposing-net-core-components-to-com"></a>向 COM 公开 .NET Core 组件
 
@@ -76,6 +76,6 @@ GitHub 上的 dotnet/samples 存储库中有一个正常运行的 [COM 服务器
 
 ## <a name="additional-notes"></a>附加说明
 
-与 .NET Framework 不同，.NET Core 不支持从 .NET Core 程序集生成 COM 类型库 (TLB)。 对于接口的本机声明，必须手动编写 IDL 文件或 C++ 标头。
+与 .NET Framework 不同，.NET Core 不支持从 .NET Core 程序集生成 COM 类型库 (TLB)。 本指南旨在说明如何为 COM 接口的本机声明手动编写 IDL 文件或 C/C++ 标头。
 
-此外，不支持将 .NET Framework 和 .NET Core 加载到同一进程中，因此，不支持将 .NET Core COM 服务器加载到 .NET Framework COM 客户端进程，反之亦然。
+此外，将 .NET Framework 和 .NET Core 同时加载到同一进程具有诊断限制。 主要限制是调试托管组件，因为不能同时调试 .NET Framework 和 .NET Core。 此外，这两个运行时实例不共享托管程序集。 这意味着无法在两个运行时之间共享实际的 .NET 类型，所有交互必须仅限于公开的 COM 接口协定。

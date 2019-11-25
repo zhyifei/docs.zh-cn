@@ -4,12 +4,12 @@ description: .NET Core 中托管程序集加载算法的详细信息说明
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: bf95cbd0eebed064f0198ae9b0f7a4288a938f8a
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 312a320676be6eb453697e0704ab771a6707618b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "72303628"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973499"
 ---
 # <a name="managed-assembly-loading-algorithm"></a>托管程序集加载算法
 
@@ -31,7 +31,7 @@ ms.locfileid: "72303628"
 |<xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>|在新的 <xref:System.Runtime.Loader.AssemblyLoadContext> 实例中从路径加载|新的 <xref:System.Runtime.Loader.AssemblyLoadContext> 实例。|
 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>|在 <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> 实例中从路径加载。<p>向 <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> 添加 <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving> 处理程序。 处理程序将从其目录加载程序集的依赖项。|<xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> 实例。|
 |<xref:System.Reflection.Assembly.Load(System.Reflection.AssemblyName)?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.Load(System.String)?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>|`Load-by-name`。|从调用方推断。<p>首选 <xref:System.Runtime.Loader.AssemblyLoadContext> 方法。|
-|<xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.Load(System.Byte[],System.Byte[])?displayProperty=nameWithType>|从对象加载。|从调用方推断。<p>首选 <xref:System.Runtime.Loader.AssemblyLoadContext> 方法。|
+|<xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.Load(System.Byte[],System.Byte[])?displayProperty=nameWithType>|从新 <xref:System.Runtime.Loader.AssemblyLoadContext> 实例的对象中加载。|新的 <xref:System.Runtime.Loader.AssemblyLoadContext> 实例。|
 <xref:System.Type.GetType(System.String)?displayProperty=nameWithType><p><xref:System.Type.GetType(System.String,System.Boolean)?displayProperty=nameWithType><p><xref:System.Type.GetType(System.String,System.Boolean,System.Boolean)?displayProperty=nameWithType>|`Load-by-name`。|从调用方推断。<p>首选使用 `assemblyResolver` 参数的 <xref:System.Type.GetType%2A?displayProperty=nameWithType> 方法。|
 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>|如果类型 `name` 描述程序集限定的泛型类型，则触发 `Load-by-name`。|从调用方推断。<p>使用程序集限定的类型名称时，首选 <xref:System.Type.GetType%2A?displayProperty=nameWithType>。|
 <xref:System.Activator.CreateInstance(System.String,System.String)?displayProperty=nameWithType><p><xref:System.Activator.CreateInstance(System.String,System.String,System.Object[])?displayProperty=nameWithType><p><xref:System.Activator.CreateInstance(System.String,System.String,System.Boolean,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo,System.Object[])?displayProperty=nameWithType>|`Load-by-name`。|从调用方推断。<p>首选采用 <xref:System.Type> 参数的 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 方法。|

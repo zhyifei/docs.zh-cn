@@ -5,12 +5,12 @@ author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
 ms.custom: seodec18
-ms.openlocfilehash: db42ba4916aad739bd2c9d8b547f16022fce44bd
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 043b9b85633e81670783e7870f1be7726ab07e81
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104950"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454619"
 ---
 # <a name="select-the-net-core-version-to-use"></a>选择要使用的 .NET Core 版本
 
@@ -39,7 +39,7 @@ SDK 命令包括 `dotnet new` 和 `dotnet run`。 .NET Core CLI 必须为每个 
 
 在少数情况下，可能需要使用版本较旧的 SDK。 在 [global.json 文件](../tools/global-json.md)中指定该版本  。 “使用最新”策略表示仅使用 global.json 指定早于最新安装版本的一个 .NET Core SDK 版本  。
 
-可将 global.json 放置在文件层次结构中的任何位置  。 CLI 从项目目录中向上搜索其找到的第一个 global.json  。 由用户控制对哪些项目应用给定的 global.json（按其在文件系统中的位置）  。 .NET CLI 从当前工作目录路径向上导航，以迭代方式搜索 global.json 文件  。 找到的第一个 global.json 文件指定要使用的版本  。 如果已安装该版本，则使用该版本。 如果未找到 global.json 中指定的 SDK，则 .NET CLI 前滚到安装的最新 SDK  。 前滚操作与未找到 global.json 文件时的默认行为相同  。
+可将 global.json 放置在文件层次结构中的任何位置  。 CLI 从项目目录中向上搜索其找到的第一个 global.json  。 由用户控制对哪些项目应用给定的 global.json（按其在文件系统中的位置）  。 .NET CLI 从当前工作目录路径向上导航，以迭代方式搜索 global.json 文件  。 找到的第一个 global.json 文件指定要使用的版本  。 如果已安装该 SDK 版本，则使用该版本。 如果找不到 global.json  中指定的 SDK，则 .NET CLI 将使用[匹配规则](../tools/global-json.md#matching-rules)来选择兼容的 SDK，如果找不到，则会失败。
 
 下面的示例演示 global.json 语法  ：
 
