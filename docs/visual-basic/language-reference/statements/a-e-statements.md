@@ -1,13 +1,13 @@
 ---
-title: E 语句（Visual Basic）
+title: A-E 语句
 ms.date: 07/20/2015
 ms.assetid: af97c2bf-dddb-48a8-8eb6-798cd219430b
-ms.openlocfilehash: cfe28b28f197759bb2620d12d550a057d47f4d74
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 7d56c059ac4f2f136e57aedc161c4819022f028a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591991"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350228"
 ---
 # <a name="a-e-statements"></a>A-E 语句
 下表包含 Visual Basic 语言语句的列表。  
