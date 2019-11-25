@@ -10,37 +10,36 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: 5dcb990266b94916bec715520a61f6a102c1e6ef
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: db9be1f57e15baac4820d33f6f245d69bd1ab430
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015751"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351954"
 ---
-# <a name="how-to-use-a-background-thread-to-search-for-files"></a><span data-ttu-id="310f8-102">如何：使用后台线程搜索文件</span><span class="sxs-lookup"><span data-stu-id="310f8-102">How to: Use a Background Thread to Search for Files</span></span>
-<span data-ttu-id="310f8-103">组件替换命名空间<xref:System.Threading>并将其添加到命名空间; 但是, 如果你选择, 则会保留命名空间以实现向后兼容性和将来使用。<xref:System.Threading> <xref:System.ComponentModel.BackgroundWorker></span><span class="sxs-lookup"><span data-stu-id="310f8-103">The <xref:System.ComponentModel.BackgroundWorker> component replaces and adds functionality to the <xref:System.Threading> namespace; however, the <xref:System.Threading> namespace is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="310f8-104">有关详细信息, 请参阅[BackgroundWorker 组件概述](backgroundworker-component-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="310f8-104">For more information, see [BackgroundWorker Component Overview](backgroundworker-component-overview.md).</span></span>
+# <a name="how-to-use-a-background-thread-to-search-for-files"></a><span data-ttu-id="aa6b5-102">如何：使用后台线程搜索文件</span><span class="sxs-lookup"><span data-stu-id="aa6b5-102">How to: Use a Background Thread to Search for Files</span></span>
+<span data-ttu-id="aa6b5-103">The <xref:System.ComponentModel.BackgroundWorker> component replaces and adds functionality to the <xref:System.Threading> namespace; however, the <xref:System.Threading> namespace is retained for both backward compatibility and future use, if you choose.</span><span class="sxs-lookup"><span data-stu-id="aa6b5-103">The <xref:System.ComponentModel.BackgroundWorker> component replaces and adds functionality to the <xref:System.Threading> namespace; however, the <xref:System.Threading> namespace is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="aa6b5-104">For more information, see [BackgroundWorker Component Overview](backgroundworker-component-overview.md).</span><span class="sxs-lookup"><span data-stu-id="aa6b5-104">For more information, see [BackgroundWorker Component Overview](backgroundworker-component-overview.md).</span></span>
 
- <span data-ttu-id="310f8-105">Windows 窗体使用单线程单元 (STA) 模型, 因为 Windows 窗体是基于本质上是单元线程的本机 Win32 窗口的。</span><span class="sxs-lookup"><span data-stu-id="310f8-105">Windows Forms uses the single-threaded apartment (STA) model because Windows Forms is based on native Win32 windows that are inherently apartment-threaded.</span></span> <span data-ttu-id="310f8-106">STA 模型意味着可以在任何线程上创建一个窗口, 但它在创建后无法切换线程, 并且它必须在创建线程上出现。</span><span class="sxs-lookup"><span data-stu-id="310f8-106">The STA model implies that a window can be created on any thread, but it cannot switch threads once created, and all function calls to it must occur on its creation thread.</span></span> <span data-ttu-id="310f8-107">在 Windows 窗体之外, .NET Framework 中的类使用自由线程处理模型。</span><span class="sxs-lookup"><span data-stu-id="310f8-107">Outside Windows Forms, classes in the .NET Framework use the free threading model.</span></span> <span data-ttu-id="310f8-108">有关 .NET Framework 中的线程处理的信息, 请参阅[线程处理](../../../standard/threading/index.md)。</span><span class="sxs-lookup"><span data-stu-id="310f8-108">For information about threading in the .NET Framework, see [Threading](../../../standard/threading/index.md).</span></span>
+ <span data-ttu-id="aa6b5-105">Windows Forms uses the single-threaded apartment (STA) model because Windows Forms is based on native Win32 windows that are inherently apartment-threaded.</span><span class="sxs-lookup"><span data-stu-id="aa6b5-105">Windows Forms uses the single-threaded apartment (STA) model because Windows Forms is based on native Win32 windows that are inherently apartment-threaded.</span></span> <span data-ttu-id="aa6b5-106">The STA model implies that a window can be created on any thread, but it cannot switch threads once created, and all function calls to it must occur on its creation thread.</span><span class="sxs-lookup"><span data-stu-id="aa6b5-106">The STA model implies that a window can be created on any thread, but it cannot switch threads once created, and all function calls to it must occur on its creation thread.</span></span> <span data-ttu-id="aa6b5-107">Outside Windows Forms, classes in the .NET Framework use the free threading model.</span><span class="sxs-lookup"><span data-stu-id="aa6b5-107">Outside Windows Forms, classes in the .NET Framework use the free threading model.</span></span> <span data-ttu-id="aa6b5-108">For information about threading in the .NET Framework, see [Threading](../../../standard/threading/index.md).</span><span class="sxs-lookup"><span data-stu-id="aa6b5-108">For information about threading in the .NET Framework, see [Threading](../../../standard/threading/index.md).</span></span>
 
- <span data-ttu-id="310f8-109">STA 模型要求要从控件的创建线程外部调用的控件上的任何方法都必须封送到控件的创建线程 (在上执行)。</span><span class="sxs-lookup"><span data-stu-id="310f8-109">The STA model requires that any methods on a control that need to be called from outside the control's creation thread must be marshaled to (executed on) the control's creation thread.</span></span> <span data-ttu-id="310f8-110">基类<xref:System.Windows.Forms.Control>为此目的提供了若干<xref:System.Windows.Forms.Control.Invoke%2A>方法<xref:System.Windows.Forms.Control.BeginInvoke%2A>(、 <xref:System.Windows.Forms.Control.EndInvoke%2A>和)。</span><span class="sxs-lookup"><span data-stu-id="310f8-110">The base class <xref:System.Windows.Forms.Control> provides several methods (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, and <xref:System.Windows.Forms.Control.EndInvoke%2A>) for this purpose.</span></span> <span data-ttu-id="310f8-111"><xref:System.Windows.Forms.Control.Invoke%2A>进行同步方法调用;<xref:System.Windows.Forms.Control.BeginInvoke%2A>进行异步方法调用。</span><span class="sxs-lookup"><span data-stu-id="310f8-111"><xref:System.Windows.Forms.Control.Invoke%2A> makes synchronous method calls; <xref:System.Windows.Forms.Control.BeginInvoke%2A> makes asynchronous method calls.</span></span>
+ <span data-ttu-id="aa6b5-109">The STA model requires that any methods on a control that need to be called from outside the control's creation thread must be marshaled to (executed on) the control's creation thread.</span><span class="sxs-lookup"><span data-stu-id="aa6b5-109">The STA model requires that any methods on a control that need to be called from outside the control's creation thread must be marshaled to (executed on) the control's creation thread.</span></span> <span data-ttu-id="aa6b5-110">The base class <xref:System.Windows.Forms.Control> provides several methods (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, and <xref:System.Windows.Forms.Control.EndInvoke%2A>) for this purpose.</span><span class="sxs-lookup"><span data-stu-id="aa6b5-110">The base class <xref:System.Windows.Forms.Control> provides several methods (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, and <xref:System.Windows.Forms.Control.EndInvoke%2A>) for this purpose.</span></span> <span data-ttu-id="aa6b5-111"><xref:System.Windows.Forms.Control.Invoke%2A> makes synchronous method calls; <xref:System.Windows.Forms.Control.BeginInvoke%2A> makes asynchronous method calls.</span><span class="sxs-lookup"><span data-stu-id="aa6b5-111"><xref:System.Windows.Forms.Control.Invoke%2A> makes synchronous method calls; <xref:System.Windows.Forms.Control.BeginInvoke%2A> makes asynchronous method calls.</span></span>
 
- <span data-ttu-id="310f8-112">如果对资源密集型任务使用控件中的多线程处理, 则在后台线程上执行资源密集型计算时, 用户界面可以保持响应。</span><span class="sxs-lookup"><span data-stu-id="310f8-112">If you use multithreading in your control for resource-intensive tasks, the user interface can remain responsive while a resource-intensive computation executes on a background thread.</span></span>
+ <span data-ttu-id="aa6b5-112">If you use multithreading in your control for resource-intensive tasks, the user interface can remain responsive while a resource-intensive computation executes on a background thread.</span><span class="sxs-lookup"><span data-stu-id="aa6b5-112">If you use multithreading in your control for resource-intensive tasks, the user interface can remain responsive while a resource-intensive computation executes on a background thread.</span></span>
 
- <span data-ttu-id="310f8-113">下面的示例 (`DirectorySearcher`) 演示一个多线程 Windows 窗体控件, 该控件使用后台线程以递归方式搜索目录中与指定的搜索字符串匹配的文件, 然后使用搜索结果填充列表框。</span><span class="sxs-lookup"><span data-stu-id="310f8-113">The following sample (`DirectorySearcher`) shows a multithreaded Windows Forms control that uses a background thread to recursively search a directory for files matching a specified search string and then populates a list box with the search result.</span></span> <span data-ttu-id="310f8-114">该示例演示的主要概念如下:</span><span class="sxs-lookup"><span data-stu-id="310f8-114">The key concepts illustrated by the sample are as follows:</span></span>
+ <span data-ttu-id="aa6b5-113">The following sample (`DirectorySearcher`) shows a multithreaded Windows Forms control that uses a background thread to recursively search a directory for files matching a specified search string and then populates a list box with the search result.</span><span class="sxs-lookup"><span data-stu-id="aa6b5-113">The following sample (`DirectorySearcher`) shows a multithreaded Windows Forms control that uses a background thread to recursively search a directory for files matching a specified search string and then populates a list box with the search result.</span></span> <span data-ttu-id="aa6b5-114">The key concepts illustrated by the sample are as follows:</span><span class="sxs-lookup"><span data-stu-id="aa6b5-114">The key concepts illustrated by the sample are as follows:</span></span>
 
-- <span data-ttu-id="310f8-115">`DirectorySearcher`启动新线程以执行搜索。</span><span class="sxs-lookup"><span data-stu-id="310f8-115">`DirectorySearcher` starts a new thread to perform the search.</span></span> <span data-ttu-id="310f8-116">线程会执行`ThreadProcedure`方法, 该方法将调用帮助器`RecurseDirectory`方法来执行实际搜索, 并填充列表框。</span><span class="sxs-lookup"><span data-stu-id="310f8-116">The thread executes the `ThreadProcedure` method that in turn calls the helper `RecurseDirectory` method to do the actual search and to populate the list box.</span></span> <span data-ttu-id="310f8-117">但是, 填充列表框需要一个跨线程调用, 如接下来的两个项目符号项中所述。</span><span class="sxs-lookup"><span data-stu-id="310f8-117">However, populating the list box requires a cross-thread call, as explained in the next two bulleted items.</span></span>
+- <span data-ttu-id="aa6b5-115">`DirectorySearcher` starts a new thread to perform the search.</span><span class="sxs-lookup"><span data-stu-id="aa6b5-115">`DirectorySearcher` starts a new thread to perform the search.</span></span> <span data-ttu-id="aa6b5-116">The thread executes the `ThreadProcedure` method that in turn calls the helper `RecurseDirectory` method to do the actual search and to populate the list box.</span><span class="sxs-lookup"><span data-stu-id="aa6b5-116">The thread executes the `ThreadProcedure` method that in turn calls the helper `RecurseDirectory` method to do the actual search and to populate the list box.</span></span> <span data-ttu-id="aa6b5-117">However, populating the list box requires a cross-thread call, as explained in the next two bulleted items.</span><span class="sxs-lookup"><span data-stu-id="aa6b5-117">However, populating the list box requires a cross-thread call, as explained in the next two bulleted items.</span></span>
 
-- <span data-ttu-id="310f8-118">`DirectorySearcher`定义用于`AddFiles`向列表框添加文件的方法; 但是, 不`RecurseDirectory`能直接调用`AddFiles` , `AddFiles`因为只能在创建`DirectorySearcher`的 STA 线程中执行。</span><span class="sxs-lookup"><span data-stu-id="310f8-118">`DirectorySearcher` defines the `AddFiles` method to add files to a list box; however, `RecurseDirectory` cannot directly invoke `AddFiles` because `AddFiles` can execute only in the STA thread that created `DirectorySearcher`.</span></span>
+- <span data-ttu-id="aa6b5-118">`DirectorySearcher` defines the `AddFiles` method to add files to a list box; however, `RecurseDirectory` cannot directly invoke `AddFiles` because `AddFiles` can execute only in the STA thread that created `DirectorySearcher`.</span><span class="sxs-lookup"><span data-stu-id="aa6b5-118">`DirectorySearcher` defines the `AddFiles` method to add files to a list box; however, `RecurseDirectory` cannot directly invoke `AddFiles` because `AddFiles` can execute only in the STA thread that created `DirectorySearcher`.</span></span>
 
-- <span data-ttu-id="310f8-119">唯一的方法`RecurseDirectory` `AddFiles`是通过跨线程调用, 即通过调用`DirectorySearcher` <xref:System.Windows.Forms.Control.Invoke%2A>或<xref:System.Windows.Forms.Control.BeginInvoke%2A>封送`AddFiles`到的创建线程。</span><span class="sxs-lookup"><span data-stu-id="310f8-119">The only way `RecurseDirectory` can call `AddFiles` is through a cross-thread call — that is, by calling <xref:System.Windows.Forms.Control.Invoke%2A> or <xref:System.Windows.Forms.Control.BeginInvoke%2A> to marshal `AddFiles` to the creation thread of `DirectorySearcher`.</span></span> <span data-ttu-id="310f8-120">`RecurseDirectory`使用<xref:System.Windows.Forms.Control.BeginInvoke%2A>以便能够以异步方式进行调用。</span><span class="sxs-lookup"><span data-stu-id="310f8-120">`RecurseDirectory` uses <xref:System.Windows.Forms.Control.BeginInvoke%2A> so that the call can be made asynchronously.</span></span>
+- <span data-ttu-id="aa6b5-119">The only way `RecurseDirectory` can call `AddFiles` is through a cross-thread call — that is, by calling <xref:System.Windows.Forms.Control.Invoke%2A> or <xref:System.Windows.Forms.Control.BeginInvoke%2A> to marshal `AddFiles` to the creation thread of `DirectorySearcher`.</span><span class="sxs-lookup"><span data-stu-id="aa6b5-119">The only way `RecurseDirectory` can call `AddFiles` is through a cross-thread call — that is, by calling <xref:System.Windows.Forms.Control.Invoke%2A> or <xref:System.Windows.Forms.Control.BeginInvoke%2A> to marshal `AddFiles` to the creation thread of `DirectorySearcher`.</span></span> <span data-ttu-id="aa6b5-120">`RecurseDirectory` uses <xref:System.Windows.Forms.Control.BeginInvoke%2A> so that the call can be made asynchronously.</span><span class="sxs-lookup"><span data-stu-id="aa6b5-120">`RecurseDirectory` uses <xref:System.Windows.Forms.Control.BeginInvoke%2A> so that the call can be made asynchronously.</span></span>
 
-- <span data-ttu-id="310f8-121">封送方法要求等效于函数指针或回调。</span><span class="sxs-lookup"><span data-stu-id="310f8-121">Marshaling a method requires the equivalent of a function pointer or callback.</span></span> <span data-ttu-id="310f8-122">这是使用 .NET Framework 中的委托实现的。</span><span class="sxs-lookup"><span data-stu-id="310f8-122">This is accomplished using delegates in the .NET Framework.</span></span> <span data-ttu-id="310f8-123"><xref:System.Windows.Forms.Control.BeginInvoke%2A>采用委托作为参数。</span><span class="sxs-lookup"><span data-stu-id="310f8-123"><xref:System.Windows.Forms.Control.BeginInvoke%2A> takes a delegate as an argument.</span></span> <span data-ttu-id="310f8-124">`DirectorySearcher`因此, 在其构造`FileListDelegate`函数中定义`AddFiles`委托 (), `FileListDelegate`并将其绑定到的实例, 并将<xref:System.Windows.Forms.Control.BeginInvoke%2A>此委托实例传递给。</span><span class="sxs-lookup"><span data-stu-id="310f8-124">`DirectorySearcher` therefore defines a delegate (`FileListDelegate`), binds `AddFiles` to an instance of `FileListDelegate` in its constructor, and passes this delegate instance to <xref:System.Windows.Forms.Control.BeginInvoke%2A>.</span></span> <span data-ttu-id="310f8-125">`DirectorySearcher`还定义在搜索完成时封送的事件委托。</span><span class="sxs-lookup"><span data-stu-id="310f8-125">`DirectorySearcher` also defines an event delegate that is marshaled when the search is completed.</span></span>
+- <span data-ttu-id="aa6b5-121">Marshaling a method requires the equivalent of a function pointer or callback.</span><span class="sxs-lookup"><span data-stu-id="aa6b5-121">Marshaling a method requires the equivalent of a function pointer or callback.</span></span> <span data-ttu-id="aa6b5-122">This is accomplished using delegates in the .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="aa6b5-122">This is accomplished using delegates in the .NET Framework.</span></span> <span data-ttu-id="aa6b5-123"><xref:System.Windows.Forms.Control.BeginInvoke%2A> takes a delegate as an argument.</span><span class="sxs-lookup"><span data-stu-id="aa6b5-123"><xref:System.Windows.Forms.Control.BeginInvoke%2A> takes a delegate as an argument.</span></span> <span data-ttu-id="aa6b5-124">`DirectorySearcher` therefore defines a delegate (`FileListDelegate`), binds `AddFiles` to an instance of `FileListDelegate` in its constructor, and passes this delegate instance to <xref:System.Windows.Forms.Control.BeginInvoke%2A>.</span><span class="sxs-lookup"><span data-stu-id="aa6b5-124">`DirectorySearcher` therefore defines a delegate (`FileListDelegate`), binds `AddFiles` to an instance of `FileListDelegate` in its constructor, and passes this delegate instance to <xref:System.Windows.Forms.Control.BeginInvoke%2A>.</span></span> <span data-ttu-id="aa6b5-125">`DirectorySearcher` also defines an event delegate that is marshaled when the search is completed.</span><span class="sxs-lookup"><span data-stu-id="aa6b5-125">`DirectorySearcher` also defines an event delegate that is marshaled when the search is completed.</span></span>
 
 ```vb
 Option Strict
 Option Explicit
 
-Imports System
 Imports System.IO
 Imports System.Threading
 Imports System.Windows.Forms
@@ -569,20 +568,19 @@ namespace Microsoft.Samples.DirectorySearcher
 }
 ```
 
-## <a name="using-the-multithreaded-control-on-a-form"></a><span data-ttu-id="310f8-126">在窗体上使用多线程控件</span><span class="sxs-lookup"><span data-stu-id="310f8-126">Using the Multithreaded Control on a Form</span></span>
- <span data-ttu-id="310f8-127">下面的示例演示如何在窗`DirectorySearcher`体上使用多线程控件。</span><span class="sxs-lookup"><span data-stu-id="310f8-127">The following example shows how the multithreaded `DirectorySearcher` control can be used on a form.</span></span>
+## <a name="using-the-multithreaded-control-on-a-form"></a><span data-ttu-id="aa6b5-126">Using the Multithreaded Control on a Form</span><span class="sxs-lookup"><span data-stu-id="aa6b5-126">Using the Multithreaded Control on a Form</span></span>
+ <span data-ttu-id="aa6b5-127">The following example shows how the multithreaded `DirectorySearcher` control can be used on a form.</span><span class="sxs-lookup"><span data-stu-id="aa6b5-127">The following example shows how the multithreaded `DirectorySearcher` control can be used on a form.</span></span>
 
 ```vb
 Option Explicit
 Option Strict
 
-Imports Microsoft.Samples.DirectorySearcher
-Imports System
-Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
-Imports System.Windows.Forms
 Imports System.Data
+Imports System.Drawing
+Imports System.Windows.Forms
+Imports Microsoft.Samples.DirectorySearcher
 
 Namespace SampleUsage
 
@@ -664,14 +662,14 @@ End Namespace
 ```csharp
 namespace SampleUsage
 {
-   using Microsoft.Samples.DirectorySearcher;
    using System;
-   using System.Drawing;
    using System.Collections;
    using System.ComponentModel;
-   using System.Windows.Forms;
    using System.Data;
-
+   using System.Drawing;
+   using System.Windows.Forms;
+   using Microsoft.Samples.DirectorySearcher;
+   
    /// <summary>
    ///      Summary description for Form1.
    /// </summary>
@@ -762,8 +760,8 @@ namespace SampleUsage
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="310f8-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="310f8-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aa6b5-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="aa6b5-128">See also</span></span>
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [<span data-ttu-id="310f8-129">使用 .NET Framework 开发自定义 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="310f8-129">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](developing-custom-windows-forms-controls.md)
-- [<span data-ttu-id="310f8-130">基于事件的异步模式概述</span><span class="sxs-lookup"><span data-stu-id="310f8-130">Event-based Asynchronous Pattern Overview</span></span>](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [<span data-ttu-id="aa6b5-129">使用 .NET Framework 开发自定义 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="aa6b5-129">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](developing-custom-windows-forms-controls.md)
+- [<span data-ttu-id="aa6b5-130">基于事件的异步模式概述</span><span class="sxs-lookup"><span data-stu-id="aa6b5-130">Event-based Asynchronous Pattern Overview</span></span>](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

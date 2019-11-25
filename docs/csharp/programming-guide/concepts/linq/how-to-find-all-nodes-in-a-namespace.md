@@ -1,19 +1,19 @@
 ---
-title: 如何：查找命名空间中的所有节点 (C#)
+title: 如何查找命名空间中的所有节点 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: f8a6f33084417e0dd489002eaa5d2de509e30d39
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 408f4207798720428d0dd3821d33fd3edf2f897e
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253788"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141184"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a><span data-ttu-id="50675-102">如何：查找命名空间中的所有节点 (C#)</span><span class="sxs-lookup"><span data-stu-id="50675-102">How to: Find All Nodes in a Namespace (C#)</span></span>
-<span data-ttu-id="50675-103">您可以对每个元素或属性的命名空间进行筛选，以便查找该特定命名空间中的所有节点。</span><span class="sxs-lookup"><span data-stu-id="50675-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a><span data-ttu-id="cadad-102">如何查找命名空间中的所有节点 (C#)</span><span class="sxs-lookup"><span data-stu-id="cadad-102">How to find all nodes in a namespace (C#)</span></span>
+<span data-ttu-id="cadad-103">您可以对每个元素或属性的命名空间进行筛选，以便查找该特定命名空间中的所有节点。</span><span class="sxs-lookup"><span data-stu-id="cadad-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="50675-104">示例</span><span class="sxs-lookup"><span data-stu-id="50675-104">Example</span></span>  
- <span data-ttu-id="50675-105">下面的示例创建一个包含两个命名空间的 XML 树。</span><span class="sxs-lookup"><span data-stu-id="50675-105">The following example creates an XML tree with two namespaces.</span></span> <span data-ttu-id="50675-106">然后循环访问该树并将打印其中一个命名空间中所有元素和属性的名称。</span><span class="sxs-lookup"><span data-stu-id="50675-106">It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.</span></span>  
+## <a name="example"></a><span data-ttu-id="cadad-104">示例</span><span class="sxs-lookup"><span data-stu-id="cadad-104">Example</span></span>  
+ <span data-ttu-id="cadad-105">下面的示例创建一个包含两个命名空间的 XML 树。</span><span class="sxs-lookup"><span data-stu-id="cadad-105">The following example creates an XML tree with two namespaces.</span></span> <span data-ttu-id="cadad-106">然后循环访问该树并将打印其中一个命名空间中所有元素和属性的名称。</span><span class="sxs-lookup"><span data-stu-id="cadad-106">It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.</span></span>  
   
 ```csharp  
 string markup = @"<aw:Root xmlns:aw='http://www.adventure-works.com' xmlns:fc='www.fourthcoffee.com'>  
@@ -35,7 +35,7 @@ foreach (XElement el in awElements)
     Console.WriteLine(el.Name.ToString());  
 ```  
   
- <span data-ttu-id="50675-107">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="50675-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="cadad-107">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="cadad-107">This code produces the following output:</span></span>  
   
 ```output  
 Nodes in the http://www.adventure-works.com namespace  
@@ -43,10 +43,10 @@ Nodes in the http://www.adventure-works.com namespace
 {http://www.adventure-works.com}GrandChild2  
 ```  
   
-## <a name="example"></a><span data-ttu-id="50675-108">示例</span><span class="sxs-lookup"><span data-stu-id="50675-108">Example</span></span>  
- <span data-ttu-id="50675-109">下面的查询所访问的 XML 文件包含两个位于不同命名空间中的采购订单。</span><span class="sxs-lookup"><span data-stu-id="50675-109">The XML file accessed by the following query contains purchase orders in two different namespaces.</span></span> <span data-ttu-id="50675-110">该查询只用其中一个命名空间中的元素创建一个新树。</span><span class="sxs-lookup"><span data-stu-id="50675-110">The query creates a new tree with just the elements in one of the namespaces.</span></span>  
+## <a name="example"></a><span data-ttu-id="cadad-108">示例</span><span class="sxs-lookup"><span data-stu-id="cadad-108">Example</span></span>  
+ <span data-ttu-id="cadad-109">下面的查询所访问的 XML 文件包含两个位于不同命名空间中的采购订单。</span><span class="sxs-lookup"><span data-stu-id="cadad-109">The XML file accessed by the following query contains purchase orders in two different namespaces.</span></span> <span data-ttu-id="cadad-110">该查询只用其中一个命名空间中的元素创建一个新树。</span><span class="sxs-lookup"><span data-stu-id="cadad-110">The query creates a new tree with just the elements in one of the namespaces.</span></span>  
   
- <span data-ttu-id="50675-111">此示例使用下面的 XML 文档：[示例 XML 文件：合并采购单](./sample-xml-file-consolidated-purchase-orders.md)。</span><span class="sxs-lookup"><span data-stu-id="50675-111">This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](./sample-xml-file-consolidated-purchase-orders.md).</span></span>  
+ <span data-ttu-id="cadad-111">本示例使用下面的 XML 文档：[示例 XML 文件：合并采购单](./sample-xml-file-consolidated-purchase-orders.md)。</span><span class="sxs-lookup"><span data-stu-id="cadad-111">This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](./sample-xml-file-consolidated-purchase-orders.md).</span></span>  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  
@@ -59,7 +59,7 @@ XElement newTree = new XElement("Root",
 Console.WriteLine(newTree);  
 ```  
   
- <span data-ttu-id="50675-112">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="50675-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="cadad-112">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="cadad-112">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
