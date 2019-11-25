@@ -1,13 +1,13 @@
 ---
-title: 如何：按任意词或字段对文本数据进行排序或筛选 (LINQ) (Visual Basic)
+title: 如何：按任意词或字段对文本数据进行排序或筛选 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: fa9efc51f72a47acfa32d42fc9ff8e5aadf61721
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 15e7666a5fcb5a16628216354c18599f87c7d905
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524124"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341518"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>如何：按任意词或字段对文本数据进行排序或筛选 (LINQ) (Visual Basic)
 
@@ -15,7 +15,7 @@ ms.locfileid: "72524124"
 
 ### <a name="to-create-a-file-that-contains-data"></a>创建包含数据的文件
 
-复制主题[如何：联接不同文件（LINQ）中的内容（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)中的评分 .csv 数据，并将其保存到解决方案文件夹中。
+Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.
 
 ## <a name="example"></a>示例
 
@@ -70,12 +70,12 @@ End Class
 ' 115, 35, 72, 91, 70
 ```
 
-此示例还演示如何从函数返回查询变量。
+This example also demonstrates how to return a query variable from a Function.
 
 ## <a name="compiling-the-code"></a>编译代码
 
-使用 VB.NET 命名空间的 `Imports` 语句创建一个控制台应用程序项目。
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
 
 ## <a name="see-also"></a>请参阅
 
-- [LINQ 和字符串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

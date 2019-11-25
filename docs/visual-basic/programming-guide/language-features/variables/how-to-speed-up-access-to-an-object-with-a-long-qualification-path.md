@@ -1,5 +1,5 @@
 ---
-title: 如何：加速访问具有长限定路径的对象 (Visual Basic)
+title: 如何：加速访问具有长限定路径的对象
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], accessing
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-ms.openlocfilehash: a8e50a2ed04037b48091321dc0c9ac2ea1db35f4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 83670ae6af0904156b08398024658cf504b7663f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631094"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346821"
 ---
 # <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>如何：加速访问具有长限定路径的对象 (Visual Basic)
 
-如果经常访问的对象需要多个方法和属性的限定路径, 则可以通过不重复限定路径来加快代码的速度。
+If you frequently access an object that requires a qualification path of several methods and properties, you can speed up your code by not repeating the qualification path.
 
-可以通过两种方法来避免重复限定路径。 可以将对象分配给一个变量, 也可以将其`With`用于 ...`End With`块。
+There are two ways you can avoid repeating the qualification path. You can assign the object to a variable, or you can use it in a `With`...`End With` block.
 
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>通过将严重限定对象赋给变量来加快对该对象的访问速度
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>To speed up access to a heavily qualified object by assigning it to a variable
 
-1. 声明经常访问的对象类型的变量。 指定声明的初始化部分中的限定路径。
+1. Declare a variable of the type of the object that you are accessing frequently. Specify the qualification path in the initialization part of the declaration.
 
     ```vb
     Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl
     ```
 
-2. 使用变量访问对象的成员。
+2. Use the variable to access the object's members.
 
     ```vb
     ctrlActv.Text = "Test"
@@ -37,15 +37,15 @@ ms.locfileid: "68631094"
     ctrlActv.Show()
     ```
 
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>若要通过使用 With, 加速对严重限定对象的访问结尾为块
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>To speed up access to a heavily qualified object by using a With...End With block
 
-1. 将限定路径放在`With`语句中。
+1. Put the qualification path in a `With` statement.
 
     ```vb
     With someForm.ActiveForm.ActiveControl
     ```
 
-2. 在`With` 语句`End With`前面的块内访问对象的成员。
+2. Access the object's members inside the `With` block, before the `End With` statement.
 
     ```vb
         .Text = "Test"

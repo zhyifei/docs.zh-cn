@@ -1,13 +1,13 @@
 ---
-title: 已声明的元素 (Visual Basic)
+title: 已声明的元素
 ms.date: 07/20/2015
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
-ms.openlocfilehash: 3430517aea32eeb79aeb586d3a1eb0df1524998b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a61ba32e2235bfb6a2112a28f1de7479ca82556c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639177"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345335"
 ---
 # <a name="declared-elements-in-visual-basic"></a>已声明的元素 (Visual Basic)
 已声明的元素是在声明语句中定义的编程元素。 已声明的元素包括变量、常量、枚举、类，结构、模块、接口、过程、过程参数、函数返回、外部过程引用、运算符、属性、事件和委托。  

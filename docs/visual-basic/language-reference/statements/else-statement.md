@@ -1,20 +1,20 @@
 ---
-title: Else 语句 (Visual Basic)
+title: Else 语句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.else
 helpviewer_keywords:
 - Else keyword [Visual Basic]
 ms.assetid: 154dd3d3-137b-4de6-a5aa-699b18dfb639
-ms.openlocfilehash: f249ac0816ae9375b081709900299a7ef8961880
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3b10420bd45c4a35c0a5de66b751149c4e41464
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638163"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343757"
 ---
 # <a name="else-statement-visual-basic"></a>Else 语句 (Visual Basic)
-引入了一组要运行或编译如果运行任何其他条件组语句或将其编译的语句。  
+Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.  
   
 ## <a name="remarks"></a>备注  
  `Else` 关键字可用于以下上下文中：  
@@ -23,7 +23,7 @@ ms.locfileid: "61638163"
   
  [Select...Case 语句](../../../visual-basic/language-reference/statements/select-case-statement.md)  
   
- [#If......#Else 指令](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#If...Then...#Else Directive](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
 ## <a name="see-also"></a>请参阅
 

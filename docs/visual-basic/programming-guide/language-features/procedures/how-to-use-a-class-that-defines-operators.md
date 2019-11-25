@@ -1,5 +1,5 @@
 ---
-title: 如何：使用定义运算符 (Visual Basic) 的类
+title: 如何：使用定义运算符的类
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -11,33 +11,33 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-ms.openlocfilehash: bd512adf2f06ed0fbd3d36ed3175a0928bf1c57c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ec4b4c07910100dd02cc86e882b44aa7dbd2ced
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863488"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346035"
 ---
-# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>如何：使用定义运算符 (Visual Basic) 的类
-如果使用的类或结构，它定义自己的运算符，则可以在 Visual Basic 中访问这些运算符。  
+# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>如何：使用定义运算符的类 (Visual Basic)
+If you are using a class or structure that defines its own operators, you can access those operators from Visual Basic.  
   
- 在类或结构上定义一个运算符也称为*重载*运算符。  
+ Defining an operator on a class or structure is also called *overloading* the operator.  
   
 ## <a name="example"></a>示例  
- 以下示例将访问 SQL 结构<xref:System.Data.SqlTypes.SqlString>，用于定义转换运算符 ([CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)) 中的 SQL 字符串和 Visual Basic 字符串之间的两个方向。 使用`CType(` *SQL 字符串表达式*，`String)`若要将 SQL 字符串转换为 Visual Basic 字符串，并`CType(` *Visual Basic 字符串表达式*， <xref:System.Data.SqlTypes.SqlString> `)`将另一个方向。  
+ The following example accesses the SQL structure <xref:System.Data.SqlTypes.SqlString>, which defines the conversion operators ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) in both directions between a SQL string and a Visual Basic string. Use `CType(`*SQL string expression*, `String)` to convert a SQL string to a Visual Basic string, and `CType(`*Visual Basic string expression*, <xref:System.Data.SqlTypes.SqlString>`)` to convert in the other direction.  
   
  [!code-vb[VbVbcnProcedures#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#30)]  
   
  [!code-vb[VbVbcnProcedures#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#31)]  
   
- <xref:System.Data.SqlTypes.SqlString>结构定义转换运算符 ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) 从`String`到<xref:System.Data.SqlTypes.SqlString>，从另一个<xref:System.Data.SqlTypes.SqlString>到`String`。 将分配的语句`title`到`jobTitle`利用了第一个运算符和<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>函数调用使用第二个。  
+ The <xref:System.Data.SqlTypes.SqlString> structure defines a conversion operator ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) from `String` to <xref:System.Data.SqlTypes.SqlString> and another from <xref:System.Data.SqlTypes.SqlString> to `String`. The statement that assigns `title` to `jobTitle` makes use of the first operator, and the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function call uses the second.  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 请确保类或结构使用定义你想要使用的运算符。 不要假定类或结构具有定义每个运算符可进行重载。 可用运算符列表，请参阅[Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)。  
+ Be sure the class or structure you are using defines the operator you want to use. Do not assume that the class or structure has defined every operator available for overloading. For a list of available operators, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   
- 包括相应`Imports`语句处开始的 SQL 字符串的源文件 (在这种情况下<xref:System.Data.SqlTypes>)。  
+ Include the appropriate `Imports` statement for the SQL string at the beginning of your source file (in this case <xref:System.Data.SqlTypes>).  
   
- 你的项目必须具有对 System.Data 和 System.XML 的引用。  
+ Your project must have references to System.Data and System.XML.  
   
 ## <a name="see-also"></a>请参阅
 

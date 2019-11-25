@@ -1,5 +1,5 @@
 ---
-title: '- 运算符（Visual Basic）'
+title: '- 运算符'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Negate
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-ms.openlocfilehash: 5f6b6b67e2999d380cfca078a43162b3e1db2206
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 9687c366c5b23693c05ab5c6b34f50c04131dfda
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701303"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348223"
 ---
 # <a name="--operator-visual-basic"></a>- 运算符 (Visual Basic)
-返回数值表达式的两个数值表达式或负值之间的差。  
+Returns the difference between two numeric expressions or the negative value of a numeric expression.  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,40 +41,40 @@ expression1 – expression2
   
 ## <a name="parts"></a>部件  
  `expression1`  
- 必需。 任何数值表达式。  
+ 必须的。 任何数值表达式。  
   
  `expression2`  
- 必需， `–`除非操作员计算负值。 任何数值表达式。  
+ Required unless the `–` operator is calculating a negative value. 任何数值表达式。  
   
 ## <a name="result"></a>结果  
- 结果是`expression1`与`expression2`的差`expression1`或的求反值。  
+ The result is the difference between `expression1` and `expression2`, or the negated value of `expression1`.  
   
- Result 数据类型是适用于`expression1`和`expression2`的数据类型的数值类型。 请参阅[运算符结果的数据类型](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)中的 "整数算法" 表。  
+ The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`. See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
   
 ## <a name="supported-types"></a>支持的类型  
- 所有数值类型。 这包括无符号和浮点类型和`Decimal`。  
+ 所有数值类型。 This includes the unsigned and floating-point types and `Decimal`.  
   
 ## <a name="remarks"></a>备注  
- 在前面所示的语法中所示的第一个用法中，`–` 运算符是两个数值表达式之差的*二进制*算术减法运算符。  
+ In the first usage shown in the syntax shown previously, the `–` operator is the *binary* arithmetic subtraction operator for the difference between two numeric expressions.  
   
- 在前面所示的语法中所示的第二个用法中，`–` 运算符是表达式的负值的*一元*求反运算符。 在这种意义上，否定包含反转的符号`expression1` ，因此如果`expression1`为负，则结果为正。  
+ In the second usage shown in the syntax shown previously, the `–` operator is the *unary* negation operator for the negative value of an expression. In this sense, the negation consists of reversing the sign of `expression1` so that the result is positive if `expression1` is negative.  
   
- 如果其中一个表达式的计算结果为 [Nothing](../../../visual-basic/language-reference/nothing.md)，则 `–` 运算符将其视为零。  
+ If either expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the `–` operator treats it as zero.  
   
 > [!NOTE]
-> @No__t-0 运算符可*重载*，这意味着当操作数具有该类或结构的类型时，该类或结构可以重新定义其行为。 如果代码对这样的类或结构使用此运算符，请确保了解其重新定义的行为。 有关详细信息，请参阅 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+> The `–` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, make sure that you understand its redefined behavior. 有关更多信息，请参见 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用`–`运算符计算并返回两个数字之间的差，然后对数字求反。  
+ The following example uses the `–` operator to calculate and return the difference between two numbers, and then to negate a number.  
   
  [!code-vb[VbVbalrOperators#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#10)]  
   
- 执行这些语句后，`binaryResult` 包含124.45，`unaryResult` 包含–334.90。  
+ Following the execution of these statements, `binaryResult` contains 124.45 and `unaryResult` contains –334.90.  
   
 ## <a name="see-also"></a>请参阅
 
-- [-= 运算符（Visual Basic）](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
+- [-= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
 - [算术运算符](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Visual Basic 中的算术运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

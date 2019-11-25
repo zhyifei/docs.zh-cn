@@ -1,49 +1,49 @@
 ---
-title: 如何：将过程传递给 Visual Basic 中的另一个过程
+title: 'How to: Pass Procedures to Another Procedure'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-ms.openlocfilehash: 312c0e0f100e85256ad4ca856ccf7f35dbaa36dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 300489935ce54d78b989d09211a7f6ba95c2f514
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973273"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345250"
 ---
-# <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>如何：将过程传递给 Visual Basic 中的另一个过程
-此示例演示如何使用委托来将过程传递给另一个过程。  
+# <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>如何：在 Visual Basic 中将过程传递给另一过程
+This example shows how to use delegates to pass a procedure to another procedure.  
   
- 委托是可以使用类似于在 Visual Basic 中的任何其他类型的类型。 `AddressOf`运算符返回的委托对象时应用于过程名称。  
+ A delegate is a type that you can use like any other type in Visual Basic. The `AddressOf` operator returns a delegate object when applied to a procedure name.  
   
- 此示例中有一个具有一个委托参数，可能需要对另一个过程，获得的引用过程`AddressOf`运算符。  
+ This example has a procedure with a delegate parameter that can take a reference to another procedure, obtained with the `AddressOf` operator.  
   
-### <a name="create-the-delegate-and-matching-procedures"></a>创建委托和匹配过程  
+### <a name="create-the-delegate-and-matching-procedures"></a>Create the delegate and matching procedures  
   
-1. 创建名为的委托`MathOperator`。  
+1. Create a delegate named `MathOperator`.  
   
      [!code-vb[VbVbalrDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#1)]  
   
-2. 创建一个名为过程`AddNumbers`使用参数和返回值相匹配的`MathOperator`，以便签名匹配。  
+2. Create a procedure named `AddNumbers` with parameters and return value that match those of `MathOperator`, so that the signatures match.  
   
      [!code-vb[VbVbalrDelegates#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#2)]  
   
-3. 创建一个名为过程`SubtractNumbers`相匹配的签名与`MathOperator`。  
+3. Create a procedure named `SubtractNumbers` with a signature that matches `MathOperator`.  
   
      [!code-vb[VbVbalrDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#3)]  
   
-4. 创建一个名为过程`DelegateTest`采用委托作为参数。  
+4. Create a procedure named `DelegateTest` that takes a delegate as a parameter.  
   
-     此过程可以接受的引用`AddNumbers`或`SubtractNumbers`，因为它们的签名匹配`MathOperator`签名。  
+     This procedure can accept a reference to `AddNumbers` or `SubtractNumbers`, because their signatures match the `MathOperator` signature.  
   
      [!code-vb[VbVbalrDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#4)]  
   
-5. 创建一个名为过程`Test`的调用`DelegateTest`一次使用的委托`AddNumbers`作为参数，并再次使用的委托`SubtractNumbers`作为参数。  
+5. Create a procedure named `Test` that calls `DelegateTest` once with the delegate for `AddNumbers` as a parameter, and again with the delegate for `SubtractNumbers` as a parameter.  
   
      [!code-vb[VbVbalrDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#5)]  
   
-     当`Test`是其调用，首先显示的结果`AddNumbers`作用于`5`和`3`，也就是 8。 然后的结果`SubtractNumbers`对操作`9`和`3`显示，则其为 6。  
+     When `Test` is called, it first displays the result of `AddNumbers` acting on `5` and `3`, which is 8. Then the result of `SubtractNumbers` acting on `9` and `3` is displayed, which is 6.  
   
 ## <a name="see-also"></a>请参阅
 

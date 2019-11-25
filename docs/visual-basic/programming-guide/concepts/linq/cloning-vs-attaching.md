@@ -1,15 +1,15 @@
 ---
-title: 克隆与附加（Visual Basic）
+title: 克隆与附加
 ms.date: 07/20/2015
 ms.assetid: 3c3bd105-c9d3-49bd-875b-27ab4e8bc7a3
-ms.openlocfilehash: 2849c648d8d280200d742663cbc7188b344d8306
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 22e86ee78d5c3fa0a7b80ae559c39f424fc9d61a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352964"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345692"
 ---
-# <a name="cloning-vs-attaching-visual-basic"></a>克隆与附加（Visual Basic）
+# <a name="cloning-vs-attaching-visual-basic"></a>Cloning vs. Attaching (Visual Basic)
 在将 <xref:System.Xml.Linq.XNode>（包括 <xref:System.Xml.Linq.XElement>）或 <xref:System.Xml.Linq.XAttribute> 对象添加到新树中时，如果新内容没有父级，则直接将这些对象附加到 XML 树中。 如果新内容已经有父级，并且是另一 XML 树的一部分，则克隆新内容。 然后将新克隆的内容附加到 XML 树中。  
   
 ## <a name="example"></a>示例  
@@ -52,4 +52,4 @@ Child2 was attached
   
 ## <a name="see-also"></a>请参阅
 
-- [创建 XML 树（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

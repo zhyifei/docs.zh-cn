@@ -1,5 +1,5 @@
 ---
-title: Private (Visual Basic)
+title: Private
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Private
@@ -7,31 +7,31 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: ddb2d165de330758f58fbbcb5872e820e639808f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5600744aeca79a54f51a1f9ecd0ef00fed4b00fd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642783"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351333"
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
-指定一个或多个声明的编程元素中包含的任何类型包括从其声明上下文中只能从可访问。  
+Specifies that one or more declared programming elements are accessible only from within their declaration context, including from within any contained types.  
   
 ## <a name="remarks"></a>备注  
- 如果编程元素表示专有的功能，或包含机密数据，你通常想要尽可能严格限制对它的访问。 模块、 类或结构，它定义其进行访问，从而实现最大限制。 若要限制到这种方式中的元素的访问，可将其与声明`Private`。  
+ If a programming element represents proprietary functionality, or contains confidential data, you usually want to limit access to it as strictly as possible. You achieve the maximum limitation by allowing only the module, class, or structure that defines it to access it. To limit access to an element in this way, you can declare it with `Private`.  
 
 > [!NOTE]
-> 此外可以使用[Private Protected](private-protected.md)访问修饰符，使成员可访问从使该类中和从派生类中包含的程序集。
+> You can also use the [Private Protected](private-protected.md) access modifier, which makes a member accessible from within that class and from derived classes located in its containing assembly.
 
 ## <a name="rules"></a>规则  
 
-- **声明上下文。** 只能在模块级别使用 `Private`。 这意味着声明上下文`Private`元素必须是模块、 类或结构，并且不能为源文件、 命名空间、 接口或过程。  
+- **Declaration Context.** 只能在模块级别使用 `Private`。 This means the declaration context for a `Private` element must be a module, class, or structure, and cannot be a source file, namespace, interface, or procedure.  
   
 ## <a name="behavior"></a>行为  
   
-- **访问级别。** 声明上下文中的所有代码可以都访问其`Private`元素。 这包括所包含的类型，例如嵌套的类或枚举中的赋值表达式中的代码。 声明上下文以外的任何代码可以访问其`Private`元素。  
+- **Access Level.** All code within a declaration context can access its `Private` elements. This includes code within a contained type, such as a nested class or an assignment expression in an enumeration. No code outside of the declaration context can access its `Private` elements.  
   
-- **访问修饰符。** 指定的访问级别的关键字称为*访问修饰符*。 访问修饰符的比较，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  `Private` 修饰符可用于下面的上下文中：  
   
@@ -61,11 +61,11 @@ ms.locfileid: "64642783"
   
 ## <a name="see-also"></a>请参阅
 
-- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+- [COMClassAttribute](../../../visual-basic/language-reference/modifiers/public.md)
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private Protected](./private-protected.md)
-- [受保护的友元](./protected-friend.md)[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Protected Friend](./protected-friend.md)    [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [过程](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

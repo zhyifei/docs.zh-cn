@@ -1,5 +1,5 @@
 ---
-title: 使用 My 开发 (Visual Basic)
+title: 使用 My 开发
 ms.date: 07/20/2015
 f1_keywords:
 - My.MyWpfExtension.Windows
@@ -9,23 +9,25 @@ helpviewer_keywords:
 - My feature
 - Visual Basic, programming in
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
-ms.openlocfilehash: 1d9dc1cd26b4bf110526fe6d136e943be730a443
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ee9373098d4355628a43ec46302c97c26de5bf9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014164"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330286"
 ---
 # <a name="development-with-my-visual-basic"></a>使用 My 开发 (Visual Basic)
+
 Visual Basic 提供了支持快速应用程序开发的新功能，不仅功能强大，还有助于提高工作效率和易用性。 其中一项功能称为 `My`，可提供对与应用程序及其运行时环境相关的信息和默认对象实例的访问权限。 此类信息按可通过 IntelliSense 搜索的格式进行编排，并根据用途进行了逻辑界定。  
   
  `My` 的顶级成员作为对象公开。 每个对象的行为类似于包含 `Shared` 成员的命名空间或类，可公开一组相关成员。  
   
  下表展示了顶级 `My` 对象及其相互之间的关系。  
   
- ![关系图显示的对象模型我。](./media/index/my-object-model-relationships.gif)  
+ ![Diagram shows the object model for My.](./media/index/my-object-model-relationships.gif)  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [使用 My.Application、My.Computer 和 My.User 执行任务](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
  介绍了三个主要 `My` 对象（`My.Application`、`My.Computer` 和 `My.User`），这些对象提供对信息和功能的访问权限  
   
@@ -36,7 +38,7 @@ Visual Basic 提供了支持快速应用程序开发的新功能，不仅功能�
  介绍了 `My.Resources` 和 `My.Settings` 对象，这些对象提供对应用程序资源和设置的访问权限。  
   
  [Visual Basic 应用程序模型概述](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- 介绍 Visual Basic 应用程序启动/关闭模型。  
+ Describes the Visual Basic Application Startup/Shutdown model.  
   
  [My 对项目类型的依赖方式](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  详细介绍了不同项目类型中可用的 `My` 功能。  

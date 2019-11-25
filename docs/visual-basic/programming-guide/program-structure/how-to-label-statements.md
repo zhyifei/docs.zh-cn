@@ -1,5 +1,5 @@
 ---
-title: 如何：标签语句（Visual Basic）
+title: 如何：标记语句
 ms.date: 07/20/2015
 helpviewer_keywords:
 - colons (:)
@@ -7,31 +7,31 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: 9a5f2039716a18011cac3dfd9b011d5b3868c294
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: be116ac8046c43e89e44c2d9127c6131e4dfaa52
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054057"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347385"
 ---
-# <a name="how-to-label-statements-visual-basic"></a>如何：标签语句（Visual Basic）
+# <a name="how-to-label-statements-visual-basic"></a>如何：标记语句 (Visual Basic)
 
-语句块由用冒号分隔的代码行组成。 以标识字符串或整数开头的代码行称为 "*标记*"。 语句标签用于标记代码行，以将其标识为与等`On Error Goto`语句一起使用。
+Statement blocks are made up of lines of code delimited by colons. Lines of code preceded by an identifying string or integer are said to be *labeled*. Statement labels are used to mark a line of code to identify it for use with statements such as `On Error Goto`.
 
-标签可以是有效 Visual Basic 标识符（如标识编程元素的标识符），也可以是整数文本。 标签必须出现在源代码行的开头，并且必须后跟一个冒号，而不考虑它是否后跟同一行中的语句。
+Labels may be either valid Visual Basic identifiers—such as those that identify programming elements—or integer literals. A label must appear at the beginning of a line of source code and must be followed by a colon, regardless of whether it is followed by a statement on the same line.
 
-编译器通过检查行首是否与任何已定义的标识符匹配来标识标签。 如果不是，编译器将假定它是一个标签。
+The compiler identifies labels by checking whether the beginning of the line matches any already-defined identifier. If it does not, the compiler assumes it is a label.
 
-标签具有自己的声明空间，不会干扰其他标识符。 标签的范围是方法的主体。 标签声明优先于任何不明确的情况。
+Labels have their own declaration space and do not interfere with other identifiers. A label's scope is the body of the method. Label declaration takes precedence in any ambiguous situation.
 
 > [!NOTE]
-> 标签只能用于方法中的可执行语句。
+> Labels can be used only on executable statements inside methods.
 
-## <a name="to-label-a-line-of-code"></a>为代码行添加标签
+## <a name="to-label-a-line-of-code"></a>To label a line of code
 
-在源代码行的开头放置一个标识符，后跟一个冒号。
+Place an identifier, followed by a colon, at the beginning of the line of source code.
 
-例如，以下代码行分别标记有`Jump`和： `120`
+For example, the following lines of code are labeled with `Jump` and `120`, respectively:
 
 [!code-vb[VbVbalrStatements#708](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#708)]
 

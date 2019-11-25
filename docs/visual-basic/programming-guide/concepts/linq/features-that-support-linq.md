@@ -1,93 +1,93 @@
 ---
-title: 支持 LINQ 的 Visual Basic 功能
+title: Features That Support LINQ
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: 155d5c36483accc12d066a5530fea20a563e1498
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e81d0434aa60e0c7b316b72fb78ebfe2a3782cbb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61977556"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353518"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>支持 LINQ 的 Visual Basic 功能
-名称[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]指的是在 Visual Basic 支持查询语法和其他语言构造大大降低直接在语言中的技术。 使用[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，无需学习新语言对外部数据源的查询。 可以通过使用 Visual Basic 针对关系数据库、 XML 存储或对象中的数据进行查询。 此集成的语言的查询功能，编译时检查语法错误和类型安全。 这种集成还可确保您已知道大多数您需要了解在 Visual Basic 中编写丰富而各不相同的查询。  
+The name [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] refers to technology in Visual Basic that supports query syntax and other language constructs directly in the language. With [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], you do not have to learn a new language to query against an external data source. You can query against data in relational databases, XML stores, or objects by using Visual Basic. This integration of query capabilities into the language enables compile-time checking for syntax errors and type safety. This integration also ensures that you already know most of what you have to know to write rich, varied queries in Visual Basic.  
   
- 以下部分介绍在足够的详细信息，以便可以开始阅读介绍性文档、 代码示例和示例应用程序中支持 LINQ 的语言构造。 您还可以单击链接，以了解如何语言功能组合在一起以实现语言集成查询的更详细的解释。 启动的好时机是[演练：在 Visual Basic 中编写查询](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)。  
+ The following sections describe the language constructs that support LINQ in enough detail to enable you to get started in reading the introductory documentation, code examples, and sample applications. You can also click the links to find more detailed explanations of how the language features come together to enable language-integrated query. A good place to start is [Walkthrough: Writing Queries in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
   
 ## <a name="query-expressions"></a>查询表达式  
- 在 Visual Basic 中的查询表达式可以用类似于 SQL 或 XQuery 的声明性语法来表示。 在编译时，查询语法转换为对标准查询运算符扩展方法的 LINQ 提供程序实现的方法调用。 应用程序控制的标准查询运算符是在范围内通过指定适当的命名空间与`Imports`语句。 Visual Basic 查询表达式的语法如下所示：  
+ Query expressions in Visual Basic can be expressed in a declarative syntax similar to that of SQL or XQuery. At compile time, query syntax is converted into method calls to a LINQ provider's implementation of the standard query operator extension methods. Applications control which standard query operators are in scope by specifying the appropriate namespace with an `Imports` statement. Syntax for a Visual Basic query expression looks like this:  
   
  [!code-vb[VbLINQVbFeatures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#1)]  
   
  有关详细信息，请参阅[Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)。  
   
-## <a name="implicitly-typed-variables"></a>隐式类型化的变量  
- 而不是显式指定类型声明和初始化一个变量时，可以使编译器能够推断和分配类型。 这被称为*局部类型推理*。  
+## <a name="implicitly-typed-variables"></a>Implicitly Typed Variables  
+ Instead of explicitly specifying a type when you declare and initialize a variable, you can enable the compiler to infer and assign the type. This is referred to as *local type inference*.  
   
- 变量推断其类型强类型，就像您显式指定其类型的变量一样。 局部类型推理仅适用于定义方法体内局部变量。 有关详细信息，请参阅[Option Infer 语句](../../../../visual-basic/language-reference/statements/option-infer-statement.md)并[本地类型推断](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
+ Variables whose types are inferred are strongly typed, just like variables whose type you specify explicitly. Local type inference works only when you are defining a local variable inside a method body. For more information, see [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md) and [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
- 下面的示例说明了局部类型推理。 若要使用此示例中，必须设置`Option Infer`到`On`。  
+ The following example illustrates local type inference. To use this example, you must set `Option Infer` to `On`.  
   
  [!code-vb[VbLINQVbFeatures#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#2)]  
   
- 局部类型推理还，可以创建匿名类型，也不能在本部分稍后介绍 LINQ 查询所必需的。  
+ Local type inference also makes it possible to create anonymous types, which are described later in this section and are necessary for LINQ queries.  
   
- 在下面的 LINQ 示例中，类型推理发生如果`Option Infer`可以是`On`或`Off`。 如果会发生编译时错误`Option Infer`是`Off`并`Option Strict`是`On`。  
+ In the following LINQ example, type inference occurs if `Option Infer` is either `On` or `Off`. A compile-time error occurs if `Option Infer` is `Off` and `Option Strict` is `On`.  
   
  [!code-vb[VbLINQVbFeatures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#3)]  
   
 ## <a name="object-initializers"></a>对象初始值设定项  
- 您必须创建匿名类型来存储查询的结果时，将在查询表达式中使用对象初始值设定项。 它们还可用于初始化外部查询的命名类型的对象。 通过使用对象初始值设定项，可以无需显式调用构造函数初始化单个行中的对象。 假设你有一个名为类`Customer`具有公共`Name`和`Phone`属性，以及其他属性，可以以这种方式使用对象初始值设定项：  
+ Object initializers are used in query expressions when you have to create an anonymous type to hold the results of a query. They also can be used to initialize objects of named types outside of queries. By using an object initializer, you can initialize an object in a single line without explicitly calling a constructor. Assuming that you have a class named `Customer` that has public `Name` and `Phone` properties, along with other properties, an object initializer can be used in this manner:  
   
  [!code-vb[VbLINQVbFeatures#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#4)]  
   
- 有关详细信息，请参阅[对象初始值设定项：命名和匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)。  
+ For more information, see [Object Initializers: Named and Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="anonymous-types"></a>匿名类型  
- 匿名类型提供的一组属性临时分组你想要在查询结果中包含的元素的简便方法。 这使您可以在查询中，按任意顺序中，选择可用字段的任意组合，而无需定义元素的已命名的数据类型。  
+ Anonymous types provide a convenient way to temporarily group a set of properties into an element that you want to include in a query result. This enables you to choose any combination of available fields in the query, in any order, without defining a named data type for the element.  
   
- *匿名类型*编译器动态构造。 类型的名称分配由编译器，并且它可能会更改与每个新的编译。 因此，不能直接使用该名称。 按以下方式初始化匿名类型：  
+ An *anonymous type* is constructed dynamically by the compiler. The name of the type is assigned by the compiler, and it might change with each new compilation. Therefore, the name cannot be used directly. Anonymous types are initialized in the following way:  
   
  [!code-vb[VbLINQVbFeatures#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#5)]  
   
  有关详细信息，请参阅[匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
   
 ## <a name="extension-methods"></a>扩展方法  
- 扩展方法，可将方法添加到数据类型或接口定义之外的位置。 此功能可以以，实际上，向现有类型添加新方法，而无需实际修改类型。 标准查询运算符本身就是一组提供的扩展方法[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查询功能实现的任何类型<xref:System.Collections.Generic.IEnumerable%601>。 其他扩展<xref:System.Collections.Generic.IEnumerable%601>包括<xref:System.Linq.Enumerable.Count%2A>， <xref:System.Linq.Enumerable.Union%2A>，和<xref:System.Linq.Enumerable.Intersect%2A>。  
+ Extension methods enable you to add methods to a data type or interface from outside the definition. This feature enables you to, in effect, add new methods to an existing type without actually modifying the type. The standard query operators are themselves a set of extension methods that provide [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query functionality for any type that implements <xref:System.Collections.Generic.IEnumerable%601>. Other extensions to <xref:System.Collections.Generic.IEnumerable%601> include <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Intersect%2A>.  
   
- 以下扩展方法将添加到了 print 方法<xref:System.String>类。  
+ The following extension method adds a print method to the <xref:System.String> class.  
   
  [!code-vb[VbLINQVbFeatures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#6)]  
   
- 类似于普通实例方法的调用的方法<xref:System.String>:  
+ The method is called like an ordinary instance method of <xref:System.String>:  
   
  [!code-vb[VbLINQVbFeatures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#7)]  
   
  有关详细信息，请参阅[扩展方法](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)。  
   
 ## <a name="lambda-expressions"></a>Lambda 表达式  
- Lambda 表达式是没有名称，用于计算并返回单个值的函数。 命名与函数不同，可以定义并在同一时间执行 lambda 表达式。 以下示例显示 4。  
+ A lambda expression is a function without a name that calculates and returns a single value. Unlike named functions, a lambda expression can be defined and executed at the same time. The following example displays 4.  
   
  [!code-vb[VbLINQVbFeatures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#8)]  
   
- 您可以将 lambda 表达式定义分配给变量的名称，然后使用名称来调用该函数。 下面的示例还显示 4。  
+ You can assign the lambda expression definition to a variable name and then use the name to call the function. The following example also displays 4.  
   
  [!code-vb[VbLINQVbFeatures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#12)]  
   
- 在[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，lambda 表达式基础许多标准查询运算符。 编译器会创建 lambda 表达式，以捕获等基本查询方法中定义的计算`Where`， `Select`， `Order By`， `Take While`，等等。  
+ In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], lambda expressions underlie many of the standard query operators. The compiler creates lambda expressions to capture the calculations that are defined in fundamental query methods such as `Where`, `Select`, `Order By`, `Take While`, and others.  
   
- 例如，以下代码定义学生列表中返回所有高年级学生的查询。  
+ For example, the following code defines a query that returns all senior students from a list of students.  
   
  [!code-vb[VbLINQVbFeatures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#9)]  
   
- 查询定义编译为类似于下面的示例使用两个 lambda 表达式来指定的参数的代码`Where`和`Select`。  
+ The query definition is compiled into code that is similar to the following example, which uses two lambda expressions to specify the arguments for `Where` and `Select`.  
   
  [!code-vb[VbLINQVbFeatures#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#10)]  
   
- 可以使用运行任一版本`For Each`循环：  
+ Either version can be run by using a `For Each` loop:  
   
  [!code-vb[VbLINQVbFeatures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#11)]  
   
@@ -97,6 +97,6 @@ ms.locfileid: "61977556"
 
 - [语言集成查询 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Visual Basic 中的 LINQ 入门](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [Option Infer 语句](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
 - [Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

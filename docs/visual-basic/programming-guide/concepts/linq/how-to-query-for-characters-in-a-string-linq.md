@@ -1,15 +1,15 @@
 ---
-title: 如何：查询字符串中的字符（LINQ）（Visual Basic）
+title: 如何：查询字符串中的字符 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
-ms.openlocfilehash: f2102a8cb149fa9c7886826e509bf254fad5eb95
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9da6d5abd6155a7af5ec59e17693e8acae7e7b73
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582716"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347712"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>如何：查询字符串中的字符（LINQ）（Visual Basic）
+# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>How to: Query for Characters in a String (LINQ) (Visual Basic)
 
 因为 <xref:System.String> 类可实现泛型 <xref:System.Collections.Generic.IEnumerable%601> 接口，因此任何字符串都可以字符序列的形式进行查询。 但是，这不是 LINQ 的一般用法。 对于复杂的模式匹配操作，请使用 <xref:System.Text.RegularExpressions.Regex> 类。
 
@@ -58,9 +58,9 @@ End Class
 
 ## <a name="compiling-the-code"></a>编译代码
 
-使用 VB.NET 命名空间的 `Imports` 语句创建一个控制台应用程序项目。
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
 
 ## <a name="see-also"></a>请参阅
 
-- [LINQ 和字符串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [如何：将 LINQ 查询与正则表达式合并（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)
+- [LINQ and Strings (Visual Basic)](linq-and-strings.md)
+- [How to combine LINQ queries with regular expressions (Visual Basic)](how-to-combine-linq-queries-with-regular-expressions.md)

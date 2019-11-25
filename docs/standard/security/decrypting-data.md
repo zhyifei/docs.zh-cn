@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4cf0ffae2c5803324d4941581855d5dc10224e07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e287d3c73df247febf99967a9dc4b0413f01def0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795221"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353854"
 ---
 # <a name="decrypting-data"></a>解密数据
 
@@ -43,12 +43,11 @@ CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateDecryptor(K
 下面的示例显示创建流、解密流、从流中读取和关闭流的整个过程。 创建一个 <xref:System.Net.Sockets.TcpListener> 对象，它在建立到侦听对象的连接时初始化一个网络流。 然后，使用 **CryptoStream** 类和 **RijndaelManaged** 类解密该网络流。 此示例假定已成功传输或已预先商定密钥和 IV。 它不会显示加密和传输这些值所需的代码。
 
 ```vb
-Imports System
-Imports System.Net.Sockets
-Imports System.Threading
 Imports System.IO
 Imports System.Net
+Imports System.Net.Sockets
 Imports System.Security.Cryptography
+Imports System.Threading
 
 Module Module1
     Sub Main()
@@ -105,11 +104,11 @@ End Module
 
 ```csharp
 using System;
-using System.Net.Sockets;
-using System.Threading;
 using System.IO;
 using System.Net;
+using System.Net.Sockets;
 using System.Security.Cryptography;
+using System.Threading;
 
 class Class1
 {
@@ -175,9 +174,9 @@ class Class1
 
 ## <a name="asymmetric-decryption"></a>不对称解密
 
-通常，一方（A 方）同时生成公钥和私钥，并将其存储在内存或加密密钥容器中。 然后 A 方将公钥发送到另一方（B 方）。 B 方使用的公钥，对数据进行加密并将数据发送回 a 方。接收到数据后, 参与方 A 将其解密使用对应的私钥。 A 方只有使用与 B 方用于加密数据的公钥相对应的私钥，解密才能成功。
+通常，一方（A 方）同时生成公钥和私钥，并将其存储在内存或加密密钥容器中。 然后 A 方将公钥发送到另一方（B 方）。 Using the public key, party B encrypts data and sends the data back to party A. After receiving the data, party A decrypts it using the private key that corresponds. A 方只有使用与 B 方用于加密数据的公钥相对应的私钥，解密才能成功。
 
-了解如何存储的非对称密钥在安全加密的密钥容器中以及随后如何获取非对称密钥，请参阅[如何：将非对称密钥存储在密钥容器](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)。
+有关如何将非对称密钥存储在安全加密密钥容器中以及随后如何获取非对称密钥的信息，请参阅 [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)。
 
 下面的示例阐释如何对表示一个对称密钥和 IV 的两个字节数组进行解密。 有关如何以可方便地发送到第三方的格式从 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 对象提取非对称公钥的信息，请参阅 [Encrypting Data](../../../docs/standard/security/encrypting-data.md)的托管流的值。
 
@@ -209,4 +208,4 @@ symmetricIV = rsa.Decrypt(encryptedSymmetricIV , false);
 
 - [生成加密和解密密钥](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
 - [加密数据](../../../docs/standard/security/encrypting-data.md)
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [加密服务](../../../docs/standard/security/cryptographic-services.md)

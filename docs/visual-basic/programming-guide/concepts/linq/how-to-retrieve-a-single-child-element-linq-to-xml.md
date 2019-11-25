@@ -1,15 +1,15 @@
 ---
-title: 如何：检索单个子元素 (LINQ to XML) (Visual Basic)
+title: 如何：检索单个子元素 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0033e258-d9c4-4569-86f6-79b7c06d1204
-ms.openlocfilehash: a1b4e5e0a6668258cef7b474c416fc572bdf2625
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 2e89df700c505eca9d1c91634e4cce8594a1d599
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710517"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347549"
 ---
-# <a name="how-to-retrieve-a-single-child-element-linq-to-xml-visual-basic"></a>如何：检索单个子元素 (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-a-single-child-element-linq-to-xml-visual-basic"></a>How to: Retrieve a Single Child Element (LINQ to XML) (Visual Basic)
 本主题说明如何在给定子元素名称的情况下检索单个子元素。 如果知道子元素的名称并且只有一个元素具有此名称，则只检索一个元素而不是一个集合会很方便。  
   
  <xref:System.Xml.Linq.XContainer.Element%2A> 方法返回具有指定 <xref:System.Xml.Linq.XElement> 的第一个子 <xref:System.Xml.Linq.XName>。  
@@ -21,7 +21,7 @@ ms.locfileid: "68710517"
   
  Visual Basic 示例演示如何使用数组索引器表示法来检索单个元素。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。  
+ 本示例使用以下 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。  
   
 ```vb  
 Dim po As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -36,9 +36,9 @@ Console.WriteLine(e)
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何对命名空间中的 XML 使用相同的代码。 有关详细信息, 请参阅[命名空间概述 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)。  
+ 下面的示例演示如何对命名空间中的 XML 使用相同的代码。 For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的典型采购单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)。  
+ 本示例使用以下 XML 文档：[示例 XML 文件：命名空间中的典型采购订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)。  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  

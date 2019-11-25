@@ -1,5 +1,5 @@
 ---
-title: Visual Basic 中的过程
+title: 过程
 ms.date: 04/28/2017
 helpviewer_keywords:
 - procedures [Visual Basic], structured code
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: 4b6dfe30268aef7dc61f130c2775e2cc0d1503e8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b959f4b6986bc325c97c7cbe9aeee0341832f6cc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635631"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345984"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic 中的过程
-一个*过程*是 Visual Basic 语句括在声明语句块 (`Function`， `Sub`， `Operator`， `Get`， `Set`) 和一个匹配`End`声明。 在 Visual Basic 中的所有可执行语句必须位于某个过程内。  
+A *procedure* is a block of Visual Basic statements enclosed by a declaration statement (`Function`, `Sub`, `Operator`, `Get`, `Set`) and a matching `End` declaration. All executable statements in Visual Basic must be within some procedure.  
   
 ## <a name="calling-a-procedure"></a>调用过程  
  从代码中的其他位置调用过程。 这称为过程调用。 过程运行完毕后，会将控件返回到调用它的代码，称为调用代码。 调用代码是一个语句或语句中的一个表达式，它通过名称指定过程并将控件转移给该过程。  
@@ -34,7 +34,7 @@ ms.locfileid: "64635631"
  在大多数情况下，每次调用过程时，过程都需对不同数据进行操作。 可将此信息作为过程调用的一部分传递给该过程。 过程定义零个或多个形参，每个形参表示一个该过程希望你传递给它的值。 过程调用中，与过程定义中每个形参相对应的是的实参。 实参表示给定过程调用中传递给相应形参的值。  
   
 ## <a name="types-of-procedures"></a>过程类型  
- Visual Basic 使用几种类型的过程：  
+ Visual Basic uses several types of procedures:  
   
 - [Sub 过程](./sub-procedures.md)执行操作，但不向调用代码返回值。  
   

@@ -1,15 +1,15 @@
 ---
-title: 处理异步应用中的重新进入（Visual Basic）
+title: 处理异步应用程序中的重入
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 466ff3ba4cdb627143b3ffc988ae4a16348e6ca6
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: cd8b43aa9b2373b5ce038e5007678778201f0746
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775528"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354268"
 ---
-# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>处理异步应用中的重新进入（Visual Basic）
+# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Handling Reentrancy in Async Apps (Visual Basic)
 
 在应用中包含异步代码时，应考虑并且可以阻止重新进入（指在异步操作完成之前重新进入它）。 如果不识别并处理重新进入的可能性，则它可能会导致意外结果。
 
@@ -17,7 +17,7 @@ ms.locfileid: "72775528"
 > 若要运行该示例，计算机上必须安装 Visual Studio 2012 或更高版本和 .NET Framework 4.5 或更高版本。
 
 > [!NOTE]
-> 传输层安全性（TLS）版本1.2 现在是要在应用程序开发中使用的最低版本。 如果你的应用面向早于4.7 的 .NET framework 版本，请参阅以下文章，了解[.NET Framework 的传输层安全性（TLS）最佳做法](../../../../framework/network-programming/tls.md) 
+> 传输层安全性 (TLS) 版本 1.2 现在是在应用开发中使用的最低版本。 如果应用面向低于 4.7 的 .NET Framework 版本，请参阅以下文章，了解 [.NET Framework 传输层安全性 (TLS) 的最佳做法](../../../../framework/network-programming/tls.md) 
 
 ## <a name="BKMK_RecognizingReentrancy"></a>识别重新进入
 
@@ -126,7 +126,7 @@ End Sub
 
 可以使“开始”按钮保持活动状态而不是禁用该按钮，但是如果用户再次选择该按钮，则取消已在运行的操作，让最近开始的操作继续运行。
 
-有关取消的详细信息，请参阅[微调异步应用程序（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)。
+For more information about cancellation, see [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).
 
 若要设置此方案，请对[检查并运行示例应用](#BKMD_SettingUpTheExample)中提供的基本代码进行以下更改。 还可以从[异步示例：.NET 桌面应用中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下载已完成的应用。 此项目的名称是 CancelAndRestart。
 
@@ -139,7 +139,7 @@ End Sub
         Dim cts As CancellationTokenSource
     ```
 
-2. 在 `StartButton_Click` 中，确定操作是否已在进行。 如果 `cts` 的值 `Nothing`，则没有任何操作处于活动状态。 如果值不 `Nothing`，则取消已在运行的操作。
+2. 在 `StartButton_Click` 中，确定操作是否已在进行。 If the value of `cts` is `Nothing`, no operation is already active. If the value isn't `Nothing`, the operation that is already running is canceled.
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -156,7 +156,7 @@ End Sub
     cts = newCTS
     ```
 
-4. 在 `StartButton_Click` 结束时，当前进程完成，因此将 `cts` 的值设置为 "`Nothing`"。
+4. At the end of `StartButton_Click`, the current process is complete, so set the value of `cts` back to `Nothing`.
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -248,7 +248,7 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
 End Function
 ```
 
-如果在此应用运行期间多次选择 "**开始**" 按钮，则它应生成类似于以下输出的结果：
+If you choose the **Start** button several times while this app is running, it should produce results that resemble the following output:
 
 ```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
@@ -516,7 +516,7 @@ End Function
   TOTAL bytes returned:  915908
   ```
 
-- @No__t_0 任务仅在 `FinishOneGroupAsync` 的开头 `Nothing`，后者首先启动。 组 A 在它到达 `FinishOneGroupAsync` 时尚未尚未完成 await 表达式。 因此，控制权未返回给 `AccessTheWebAsync`，对 `pendingWork` 的第一个分配尚未发生。
+- The `pendingWork` task is `Nothing` at the start of `FinishOneGroupAsync` only for group A, which started first. 组 A 在它到达 `FinishOneGroupAsync` 时尚未尚未完成 await 表达式。 因此，控制权未返回给 `AccessTheWebAsync`，对 `pendingWork` 的第一个分配尚未发生。
 
 - 下面两行始终在输出中一起显示。 该代码从不会在于 `StartButton_Click` 中启动组操作与将组的任务分配给 `pendingWork` 之间中断。
 
@@ -560,11 +560,11 @@ End Function
 
      **“新建项目”** 对话框随即打开。
 
-3. 在 "**已安装的模板**" 窗格中，展开 " **Visual Basic**"，然后展开 " **Windows**"。
+3. In the **Installed Templates** pane, expand **Visual Basic**, and then expand **Windows**.
 
 4. 在项目类型列表中，选择“WPF 应用程序”。
 
-5. 将项目命名为 `WebsiteDownloadWPF`，选择4.6 或更高版本的 .NET Framework 版本，然后单击 **"确定"** 按钮。
+5. 将项目命名为 `WebsiteDownloadWPF`，选择 .NET Framework 版本 4.6 或更高版本，然后单击“确定”按钮。
 
      新项目将出现在“解决方案资源管理器”中。
 
@@ -592,13 +592,13 @@ End Function
 
      MainWindow.xaml 的“设计”视图中将显示一个简单的窗口，其中包含一个文本框和一个按钮。
 
-8. 在**解决方案资源管理器**中，右键单击 "**引用**"，然后选择 "**添加引用**"。
+8. 在“解决方案资源管理器”中，右键单击“引用”并选择“添加引用”。
 
-     为 <xref:System.Net.Http> 添加引用（如果尚未选择）。
+     如果尚未选择，请为 <xref:System.Net.Http> 添加引用。
 
-9. 在**解决方案资源管理器**中，打开 mainwindow.xaml 的快捷菜单，然后选择 "**查看代码**"。
+9. In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.
 
-10. 在 Mainwindow.xaml 中，将代码替换为以下代码。
+10. In MainWindow.xaml.vb , replace the code with the following code.
 
     ```vb
     ' Add the following Imports statements, and add a reference for System.Net.Http.

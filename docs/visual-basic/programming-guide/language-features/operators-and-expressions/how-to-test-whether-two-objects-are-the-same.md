@@ -1,5 +1,5 @@
 ---
-title: 如何：测试两个对象是否相同 (Visual Basic)
+title: 如何：测试两个对象是否相同
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], reference
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - objects [Visual Basic], variables referring to same
 - Visual Basic code, operators
 ms.assetid: f760e828-8704-4256-bc2d-c22a4c93b524
-ms.openlocfilehash: 6301228d786fe55e8851b6207dd84819671656f4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 22e8e1e688d9e3bc3804899103ee78814aac235b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649683"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343619"
 ---
 # <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>如何：测试两个对象是否相同 (Visual Basic)
-如果您有两个引用的对象的变量，可以使用`Is`或`IsNot`运算符，或两者，以确定它们是否引用同一个实例。  
+If you have two variables that refer to objects, you can use either the `Is` or `IsNot` operator, or both, to determine whether they refer to the same instance.  
   
-### <a name="to-test-whether-two-objects-are-the-same"></a>若要测试两个对象是否相同  
+### <a name="to-test-whether-two-objects-are-the-same"></a>To test whether two objects are the same  
   
-- 使用[Is 运算符](../../../../visual-basic/language-reference/operators/is-operator.md)或[IsNot 运算符](../../../../visual-basic/language-reference/operators/isnot-operator.md)与两个变量作为操作数。  
+- Use the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) or the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) with the two variables as operands.  
   
      [!code-vb[VbVbalrOperators#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#69)]  
   
- 您可能想要执行的具体操作取决于两个对象是否引用相同的实例。 前面的示例进行比较的控件`c`窗体上的活动控件针对`f`。 如果没有活动的控件，或者如果没有一个但这不是相同的控件实例作为`c`，则`If`语句将失败，该过程将返回而不会进一步处理。  
+ You might want to take a certain action depending on whether two objects refer to the same instance. The preceding example compares control `c` against the active control on form `f`. If there is no active control, or if there is one but it is not the same control instance as `c`, then the `If` statement fails and the procedure returns without further processing.  
   
- 无论是使用`Is`或`IsNot`是对您的个人方便起见。 一个可能更易读比另一个给定表达式中。  
+ Whether you use `Is` or `IsNot` is a matter of personal convenience to you. One might be easier to read than the other in a given expression.  
   
 ## <a name="see-also"></a>请参阅
 
-- [在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

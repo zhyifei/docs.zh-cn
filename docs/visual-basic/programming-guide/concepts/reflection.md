@@ -1,15 +1,15 @@
 ---
-title: 反射（Visual Basic）
+title: 映像
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-ms.openlocfilehash: 6d1206d84dec4202a7dad8f03c3d88c8a97ff5ba
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 28f33c88f7aaaf51938a7d27fd2218a97b628acd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972123"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349283"
 ---
-# <a name="reflection-visual-basic"></a>反射（Visual Basic）
+# <a name="reflection-visual-basic"></a>Reflection (Visual Basic)
 反射提供描述程序集、模块和类型的对象（<xref:System.Type> 类型）。 可以使用反射动态地创建类型的实例，将类型绑定到现有对象，或从现有对象中获取类型，然后调用其方法或访问其字段和属性。 如果代码中使用了特性，可以利用反射来访问它们。 有关更多信息，请参阅[特性](../../../standard/attributes/index.md)。  
   
  下面一个简单的反射示例，使用静态方法 `GetType`被 `Object` 基类的所有类型继承）以获取变量类型：  

@@ -1,17 +1,17 @@
 ---
-title: 异步返回类型（Visual Basic）
+title: 异步返回类型
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: a5553070dd68a0bc3eaad1c5e8c000f7a31f8783
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 96d3a945a49a12f7c2d5d60e8ee59ce047a0bae6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423959"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347981"
 ---
-# <a name="async-return-types-visual-basic"></a>异步返回类型（Visual Basic）
+# <a name="async-return-types-visual-basic"></a>Async Return Types (Visual Basic)
 
-异步方法具有三个可能的返回类型：<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task>和 void。 在 Visual Basic 中，void 返回类型被写为 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 过程。 有关异步方法的详细信息，请参阅[采用 async 和 Await 的异步编程（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/index.md)。
+异步方法具有三个可能的返回类型：<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task>和 void。 在 Visual Basic 中，void 返回类型被写为 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 过程。 For more information about async methods, see [Asynchronous Programming with Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).
 
 在以下其中一节检查每个返回类型，且在本主题末尾可以找到使用全部三种类型的完整示例。
 
@@ -20,7 +20,7 @@ ms.locfileid: "73423959"
 
 ## <a name="BKMK_TaskTReturnType"></a>Task(T) 返回类型
 
-<xref:System.Threading.Tasks.Task%601> 返回类型用于包含[return](../../../../visual-basic/language-reference/statements/return-statement.md)语句的异步方法，其中操作数的类型为 `TResult`。
+The <xref:System.Threading.Tasks.Task%601> return type is used for an async method that contains a [Return](../../../../visual-basic/language-reference/statements/return-statement.md) statement in which the operand has type `TResult`.
 
 在下面的示例中，`TaskOfT_MethodAsync` 异步方法包含返回整数的 return 语句。 因此，该方法声明必须指定 `Task(Of Integer)` 的返回类型。
 
@@ -47,7 +47,7 @@ Async Function TaskOfT_MethodAsync() As Task(Of Integer)
 End Function
 ```
 
-当 `TaskOfT_MethodAsync` 从 await 表达式中调用时，await 表达式将检索存储在由 `TaskOfT_MethodAsync` 返回的任务中的整数值（`leisureHours` 的值）。 有关 await 表达式的详细信息，请参阅[Await 运算符](../../../../visual-basic/language-reference/operators/await-operator.md)。
+当 `TaskOfT_MethodAsync` 从 await 表达式中调用时，await 表达式将检索存储在由 `TaskOfT_MethodAsync` 返回的任务中的整数值（`leisureHours` 的值）。 For more information about await expressions, see [Await Operator](../../../../visual-basic/language-reference/operators/await-operator.md).
 
 以下代码调用和等待方法 `TaskOfT_MethodAsync`。 此结果分配给 `result1` 变量。
 
@@ -83,7 +83,7 @@ textBox1.Text &= $"Value of resultTask.Result:  {integerTask.Result}" & vbCrLf
 
 ## <a name="BKMK_TaskReturnType"></a>任务返回类型
 
-不包含 return 语句或包含不返回操作数的 return 语句的异步方法通常具有返回类型 <xref:System.Threading.Tasks.Task>。 如果将这些方法编写为同步运行，则这些方法将是[Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)过程。 如果在异步方法中使用 `Task` 返回类型，调用方法可以使用 `Await` 运算符暂停调用方的完成，直至被调用的异步方法结束。
+不包含 return 语句或包含不返回操作数的 return 语句的异步方法通常具有返回类型 <xref:System.Threading.Tasks.Task>。 Such methods would be [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) procedures if they were written to run synchronously. 如果在异步方法中使用 `Task` 返回类型，调用方法可以使用 `Await` 运算符暂停调用方的完成，直至被调用的异步方法结束。
 
 在下面的示例中，异步方法 `Task_MethodAsync` 不包含 return 语句。 因此，为此方法指定 `Task` 返回类型，这将启用 `Task_MethodAsync` 为等待。 `Task` 类型的定义不包括存储返回值的 `Result` 属性。
 
@@ -101,7 +101,7 @@ Async Function Task_MethodAsync() As Task
 End Function
 ```
 
-通过使用 await 语句而不是 await 表达式来调用和等待 `Task_MethodAsync`，类似于异步 `Sub` 或返回返回 void 的方法的调用语句。 在这种情况下，`Await` 运算符的应用程序不会生成值。
+通过使用 await 语句而不是 await 表达式来调用和等待 `Task_MethodAsync`，类似于异步 `Sub` 或返回返回 void 的方法的调用语句。 The application of an `Await` operator in this case doesn't produce a value.
 
 以下代码调用和等待方法 `Task_MethodAsync`。
 
@@ -110,7 +110,7 @@ End Function
 Await Task_MethodAsync()
 ```
 
-如前面的 <xref:System.Threading.Tasks.Task%601> 示例中所示，可以将对 `Task_MethodAsync` 的调用从 `Await` 运算符的应用程序中分离出来，如以下代码所示。 但是，请记住，`Task` 没有 `Result` 属性，并且当 await 运算符应用于 `Task` 时不产生值。
+As in the previous <xref:System.Threading.Tasks.Task%601> example, you can separate the call to `Task_MethodAsync` from the application of an `Await` operator, as the following code shows. 但是，请记住，`Task` 没有 `Result` 属性，并且当 await 运算符应用于 `Task` 时不产生值。
 
 以下代码从等待 `Task_MethodAsync` 返回的任务中分离调用 `Task_MethodAsync`。
 
@@ -126,7 +126,7 @@ Await simpleTask
 
 ## <a name="BKMK_VoidReturnType"></a>返回类型为 void
 
-`Sub` 过程的主要用途是在事件处理程序中，其中没有返回类型（在其他语言中称为 void 返回类型）。 Void 返回还可用于替代返回 void 的方法，或者用于执行可分类为"发后不理"活动的方法。 但是，你应尽可能地返回 `Task`，因为不能等待返回 void 的异步方法。 这种方法的任何调用方必须能够继续完成，而无需等待调用的异步方法完成，并且调用方必须独立于异步方法生成的任何值或异常。
+The primary use of `Sub` procedures is in event handlers, where there is no return type (referred to as a void return type in other languages). Void 返回还可用于替代返回 void 的方法，或者用于执行可分类为"发后不理"活动的方法。 但是，你应尽可能地返回 `Task`，因为不能等待返回 void 的异步方法。 这种方法的任何调用方必须能够继续完成，而无需等待调用的异步方法完成，并且调用方必须独立于异步方法生成的任何值或异常。
 
 返回 void 的异步方法的调用方无法捕获从该方法引发的异常，且此类未经处理的异常可能会导致应用程序故障。 如果返回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 的异步方法中出现异常，此异常将存储于返回的任务中，并在等待该任务时再次引发。 因此，请确保可以产生异常的任何异步方法都具有返回类型 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>，并确保会等待对方法的调用。
 
@@ -161,7 +161,7 @@ End Sub
 
      **“新建项目”** 对话框随即打开。
 
-3. 在 "**已安装**的**模板**" 类别中，选择 " **Visual Basic**"，然后选择 " **Windows**"。 从项目类型列表中，选择“WPF 应用程序”。
+3. In the **Installed**, **Templates** category, choose **Visual Basic**, and then choose **Windows**. 从项目类型列表中，选择“WPF 应用程序”。
 
 4. 输入 `AsyncReturnTypes` 作为项目名称，然后选择“确定”按钮。
 
@@ -188,7 +188,7 @@ End Sub
 
      MainWindow.xaml 的“设计”视图中将显示一个简单的窗口，其中包含一个文本框和一个按钮。
 
-7. 在**解决方案资源管理器**中，打开 mainwindow.xaml 的快捷菜单，然后选择 "**查看代码**"。
+7. In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.
 
 8. 将 MainWindow.xaml.vb 中的代码替换为以下代码。
 
@@ -279,7 +279,7 @@ End Sub
 
 9. 按 F5 键以运行程序，然后选择 **“启动”** 按钮。
 
-     应显示以下输出：
+     The following output should appear:
 
     ```console
     Application can continue working while the Task<T> runs. . . .

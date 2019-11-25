@@ -1,16 +1,16 @@
 ---
-title: Visual Basic 入门
+title: 入门
 ms.date: 09/10/2018
 helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: c5cd4ab82fde1604dea14718b3cdd1a104fdf922
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 386f7aa74efbcb69e1a2fc0e528c88f25b1d5e2b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425154"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344814"
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic 入门
 
@@ -53,7 +53,7 @@ ms.locfileid: "73425154"
 - [Visual Studio](/visualstudio/)\
 在 Visual Studio 文档中提供链接。
 
-- [C#](../../csharp/index.md)\
+- [C#](../../csharp/index.yml)\
 提供文档链接，该文档描述有关使用 Visual C# 进行应用程序开发的信息。
 
 - [Visual C++](/cpp/)\

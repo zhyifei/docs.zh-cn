@@ -1,50 +1,50 @@
 ---
-title: 如何：确定两个对象是否相同 (Visual Basic)
+title: 如何：确定两个对象是否相同
 ms.date: 07/20/2015
 helpviewer_keywords:
 - testing [Visual Basic], objects
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: aae053ae0473ed6ced0f28da3d5e5afc0be629df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5deebd4ffc5b277c94f5ae36c00fd6e5010a1551
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769078"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348602"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>如何：确定两个对象是否相同 (Visual Basic)
-在 Visual Basic 中，两个变量的引用被视为相同的条件是其指针是相同的也就是说，如果这两个变量指向内存中的同一个类实例。 例如，在 Windows 窗体应用程序中，可能想要进行比较以确定是否当前实例 (`Me`) 等同于一个特定实例，如`Form2`。  
+In Visual Basic, two variable references are considered identical if their pointers are the same, that is, if both variables point to the same class instance in memory. For example, in a Windows Forms application, you might want to make a comparison to determine whether the current instance (`Me`) is the same as a particular instance, such as `Form2`.  
   
- Visual Basic 提供了两个运算符比较指针。 [Is 运算符](../../../../visual-basic/language-reference/operators/is-operator.md)返回`True`如果对象相同的并且[IsNot 运算符](../../../../visual-basic/language-reference/operators/isnot-operator.md)返回`True`如果它们不是。  
+ Visual Basic provides two operators to compare pointers. The [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) returns `True` if the objects are identical, and the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) returns `True` if they are not.  
   
-## <a name="determining-if-two-objects-are-identical"></a>确定两个对象是否相同  
+## <a name="determining-if-two-objects-are-identical"></a>Determining if Two Objects Are Identical  
   
-#### <a name="to-determine-if-two-objects-are-identical"></a>若要确定两个对象是否相同  
+#### <a name="to-determine-if-two-objects-are-identical"></a>To determine if two objects are identical  
   
-1. 设置`Boolean`要测试两个对象表达式。  
+1. Set up a `Boolean` expression to test the two objects.  
   
-2. 测试表达式中，在使用`Is`运算符具有两个对象作为操作数。  
+2. In your testing expression, use the `Is` operator with the two objects as operands.  
   
-     `Is` 返回`True`如果对象指向同一个类实例。  
+     `Is` returns `True` if the objects point to the same class instance.  
   
-## <a name="determining-if-two-objects-are-not-identical"></a>确定两个对象是否不相同  
- 有时您想要执行的操作，如果两个对象不完全相同，并且可以适于组合`Not`并`Is`，例如`If Not obj1 Is obj2`。 在这种情况下可以使用`IsNot`运算符。  
+## <a name="determining-if-two-objects-are-not-identical"></a>Determining if Two Objects Are Not Identical  
+ Sometimes you want to perform an action if the two objects are not identical, and it can be awkward to combine `Not` and `Is`, for example `If Not obj1 Is obj2`. In such a case you can use the `IsNot` operator.  
   
-#### <a name="to-determine-if-two-objects-are-not-identical"></a>若要确定两个对象是否不相同  
+#### <a name="to-determine-if-two-objects-are-not-identical"></a>To determine if two objects are not identical  
   
-1. 设置`Boolean`要测试两个对象表达式。  
+1. Set up a `Boolean` expression to test the two objects.  
   
-2. 测试表达式中，在使用`IsNot`运算符具有两个对象作为操作数。  
+2. In your testing expression, use the `IsNot` operator with the two objects as operands.  
   
-     `IsNot` 返回`True`如果对象未指向同一类实例。  
+     `IsNot` returns `True` if the objects do not point to the same class instance.  
   
 ## <a name="example"></a>示例  
- 下面的示例测试对`Object`变量以查看是否指向同一个类实例。  
+ The following example tests pairs of `Object` variables to see if they point to the same class instance.  
   
  [!code-vb[VbVbalrKeywords#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#14)]  
   
- 前面的示例中显示以下输出。  
+ The preceding example displays the following output.  
   
  `objA different from objB? True`  
   

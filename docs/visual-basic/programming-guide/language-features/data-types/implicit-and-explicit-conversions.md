@@ -1,5 +1,5 @@
 ---
-title: 隐式转换和显式转换 (Visual Basic)
+title: 隐式转换和显式转换
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conversions [Visual Basic], type
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-ms.openlocfilehash: 4bcf2d76a2983294f244b72f286842a92fb5e64e
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: b7215933cec89b7023f08e8996a283b39b3a3c83
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512871"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346361"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>隐式转换和显式转换 (Visual Basic)
 
-*隐式转换*在源代码中无需任何特殊语法。 在下面的示例中, Visual Basic 将值`k`隐式转换为单精度浮点值, 然后再将其赋值给。 `q`
+An *implicit conversion* does not require any special syntax in the source code. In the following example, Visual Basic implicitly converts the value of `k` to a single-precision floating-point value before assigning it to `q`.
 
 ```vb
 Dim k As Integer
@@ -39,9 +39,9 @@ k = 432
 q = k
 ```
 
-*显式转换*使用类型转换关键字。 Visual Basic 提供了几个这样的关键字, 这些关键字将括号中的表达式强制转换为所需的数据类型。 这些关键字的作用类似于函数, 但编译器将生成内联代码, 因此执行速度要比使用函数调用稍快。
+An *explicit conversion* uses a type conversion keyword. Visual Basic provides several such keywords, which coerce an expression in parentheses to the desired data type. These keywords act like functions, but the compiler generates the code inline, so execution is slightly faster than with a function call.
 
-在前面的示例的以下扩展中, `CInt`关键字将`q`值转换为整数, 然后将其分配给`k`。
+In the following extension of the preceding example, the `CInt` keyword converts the value of `q` back to an integer before assigning it to `k`.
 
 ```vb
 ' q had been assigned the value 432 from k.
@@ -52,37 +52,37 @@ k = CInt(q)
 
 ## <a name="conversion-keywords"></a>转换关键字
 
-下表显示了可用的转换关键字。
+The following table shows the available conversion keywords.
 
-|类型转换关键字|将表达式转换为数据类型|允许转换的表达式的数据类型|
+|Type conversion keyword|Converts an expression to data type|Allowable data types of expression to be converted|
 |---|---|---|
-|`CBool`|[Boolean 数据类型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)|任何数值类型 (包括`Byte`、 `SByte`、和枚举类型)、 `String`、`Object`|
-|`CByte`|[Byte 数据类型](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|任何数值类型 (包括`SByte`和枚举类型)、 `Boolean`、 `String`、`Object`|
-|`CChar`|[Char 数据类型](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`String`， `Object`|
-|`CDate`|[Date 数据类型](../../../../visual-basic/language-reference/data-types/date-data-type.md)|`String`， `Object`|
-|`CDbl`|[Double 数据类型](../../../../visual-basic/language-reference/data-types/double-data-type.md)|任何数值类型 (包括`Byte`、 `SByte`、和枚举类型)、 `Boolean`、 `String`、`Object`|
-|`CDec`|[Decimal 数据类型](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|任何数值类型 (包括`Byte`、 `SByte`、和枚举类型)、 `Boolean`、 `String`、`Object`|
-|`CInt`|[Integer 数据类型](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|任何数值类型 (包括`Byte`、 `SByte`、和枚举类型)、 `Boolean`、 `String`、`Object`|
-|`CLng`|[Long 数据类型](../../../../visual-basic/language-reference/data-types/long-data-type.md)|任何数值类型 (包括`Byte`、 `SByte`、和枚举类型)、 `Boolean`、 `String`、`Object`|
+|`CBool`|[Boolean 数据类型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Any numeric type (including `Byte`, `SByte`, and enumerated types), `String`, `Object`|
+|`CByte`|[Byte 数据类型](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|Any numeric type (including `SByte` and enumerated types), `Boolean`, `String`, `Object`|
+|`CChar`|[Char 数据类型](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`String`，`Object`|
+|`CDate`|[Date 数据类型](../../../../visual-basic/language-reference/data-types/date-data-type.md)|`String`，`Object`|
+|`CDbl`|[Double 数据类型](../../../../visual-basic/language-reference/data-types/double-data-type.md)|Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`|
+|`CDec`|[Decimal 数据类型](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`|
+|`CInt`|[Integer 数据类型](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`|
+|`CLng`|[Long 数据类型](../../../../visual-basic/language-reference/data-types/long-data-type.md)|Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`|
 |`CObj`|[Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)|任何类型|
-|`CSByte`|[SByte 数据类型](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|任何数值类型 (包括`Byte`和枚举类型)、 `Boolean`、 `String`、`Object`|
-|`CShort`|[Short 数据类型](../../../../visual-basic/language-reference/data-types/short-data-type.md)|任何数值类型 (包括`Byte`、 `SByte`、和枚举类型)、 `Boolean`、 `String`、`Object`|
-|`CSng`|[Single 数据类型](../../../../visual-basic/language-reference/data-types/single-data-type.md)|任何数值类型 (包括`Byte`、 `SByte`、和枚举类型)、 `Boolean`、 `String`、`Object`|
-|`CStr`|[String 数据类型](../../../../visual-basic/language-reference/data-types/string-data-type.md)|任何数值类型 (包括`Byte`、 `SByte`、和枚举类型)、 `Boolean`、 `Char`、 `Char`数组、 `Date`、`Object`|
-|`CType`|在逗号 (`,`) 之后指定的类型|转换为*基本数据类型*(包括基本类型的数组) 时, 为相应的转换关键字允许的相同类型<br /><br /> 转换为*复合数据类型*时, 它实现的接口和它所继承的类<br /><br /> 转换为您在其上重载`CType`的类或结构时, 该类或结构|
-|`CUInt`|[UInteger 数据类型](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|任何数值类型 (包括`Byte`、 `SByte`、和枚举类型)、 `Boolean`、 `String`、`Object`|
-|`CULng`|[ULong 数据类型](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|任何数值类型 (包括`Byte`、 `SByte`、和枚举类型)、 `Boolean`、 `String`、`Object`|
-|`CUShort`|[UShort 数据类型](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)|任何数值类型 (包括`Byte`、 `SByte`、和枚举类型)、 `Boolean`、 `String`、`Object`|
+|`CSByte`|[SByte 数据类型](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|Any numeric type (including `Byte` and enumerated types), `Boolean`, `String`, `Object`|
+|`CShort`|[Short 数据类型](../../../../visual-basic/language-reference/data-types/short-data-type.md)|Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`|
+|`CSng`|[Single 数据类型](../../../../visual-basic/language-reference/data-types/single-data-type.md)|Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`|
+|`CStr`|[String 数据类型](../../../../visual-basic/language-reference/data-types/string-data-type.md)|Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `Char`, `Char` array, `Date`, `Object`|
+|`CType`|Type specified following the comma (`,`)|When converting to an *elementary data type* (including an array of an elementary type), the same types as allowed for the corresponding conversion keyword<br /><br /> When converting to a *composite data type*, the interfaces it implements and the classes from which it inherits<br /><br /> When converting to a class or structure on which you have overloaded `CType`, that class or structure|
+|`CUInt`|[UInteger 数据类型](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`|
+|`CULng`|[ULong 数据类型](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`|
+|`CUShort`|[UShort 数据类型](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)|Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`|
 
-## <a name="the-ctype-function"></a>CType 函数
+## <a name="the-ctype-function"></a>The CType Function
 
-[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)对两个参数进行运算。 第一个是要转换的表达式, 第二个是目标数据类型或对象类。 请注意, 第一个参数必须是表达式, 而不能是类型。
+The [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) operates on two arguments. The first is the expression to be converted, and the second is the destination data type or object class. Note that the first argument must be an expression, not a type.
 
-`CType`是*内联函数*, 这意味着编译的代码通常会进行转换, 而不会生成函数调用。 这可以提高性能。
+`CType` is an *inline function*, meaning the compiled code makes the conversion, often without generating a function call. This improves performance.
 
-有关`CType`与其他类型转换关键字的比较, 请参阅[DirectCast 运算符](../../../../visual-basic/language-reference/operators/directcast-operator.md)和[TryCast 运算符](../../../../visual-basic/language-reference/operators/trycast-operator.md)。
+For a comparison of `CType` with the other type conversion keywords, see [DirectCast Operator](../../../../visual-basic/language-reference/operators/directcast-operator.md) and [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md).
 
-### <a name="elementary-types"></a>基本类型
+### <a name="elementary-types"></a>Elementary Types
 
 以下示例演示了 `CType` 的用法。
 
@@ -92,9 +92,9 @@ k = CType(q, Integer)
 f = CType(w, Label)
 ```
 
-### <a name="composite-types"></a>复合类型
+### <a name="composite-types"></a>Composite Types
 
-您可以使用`CType`将值转换为复合数据类型和基本类型。 你还可以使用它将对象类强制转换为它的某个接口的类型, 如下例所示。
+You can use `CType` to convert values to composite data types as well as to elementary types. You can also use it to coerce an object class to the type of one of its interfaces, as in the following example.
 
 ```vb
 ' Assume class cZone implements interface iZone.
@@ -105,9 +105,9 @@ Dim cZ As cZone
 h = CType(cZ, iZone)
 ```
 
-### <a name="array-types"></a>数组类型
+### <a name="array-types"></a>Array Types
 
-`CType`还可以转换数组数据类型, 如下面的示例中所示。
+`CType` can also convert array data types, as in the following example.
 
 ```vb
 Dim v() As classV
@@ -120,27 +120,27 @@ If TypeOf obArray Is classV()
 End If
 ```
 
-有关详细信息和示例, 请参阅[数组转换](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)。
+For more information and an example, see [Array Conversions](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md).
 
-### <a name="types-defining-ctype"></a>定义 CType 的类型
+### <a name="types-defining-ctype"></a>Types Defining CType
 
-你可以对`CType`已定义的类或结构进行定义。 这使你可以将值转换为类或结构的类型。 有关详细信息和示例, 请参阅[如何:定义转换运算符](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)。
+You can define `CType` on a class or structure you have defined. This allows you to convert values to and from the type of your class or structure. For more information and an example, see [How to: Define a Conversion Operator](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).
 
 > [!NOTE]
-> 与转换关键字一起使用的值必须对目标数据类型有效, 否则会发生错误。 例如, `Long`如果尝试将转换`Integer`为, 则的`Long`值`Integer`必须在数据类型的有效范围内。
+> Values used with a conversion keyword must be valid for the destination data type, or an error occurs. For example, if you attempt to convert a `Long` to an `Integer`, the value of the `Long` must be within the valid range for the `Integer` data type.
 
 > [!CAUTION]
-> 如果`CType`源类型不是从目标类型派生的, 则指定从一个类类型转换为另一个类类型会在运行时失败。 此类故障会引发<xref:System.InvalidCastException>异常。
+> Specifying `CType` to convert from one class type to another fails at run time if the source type does not derive from the destination type. Such a failure throws an <xref:System.InvalidCastException> exception.
 
-但是, 如果其中一个类型是你已定义的结构或类, 并且在该结构或类`CType`上定义了, 则如果转换满足你`CType`的要求, 则转换可能会成功。 请参阅[如何：定义转换运算符](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)。
+However, if one of the types is a structure or class you have defined, and if you have defined `CType` on that structure or class, a conversion can succeed if it satisfies the requirements of your `CType`. See [How to: Define a Conversion Operator](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).
 
-执行显式转换也称为将表达式*强制转换*为给定的数据类型或对象类。
+Performing an explicit conversion is also known as *casting* an expression to a given data type or object class.
 
 ## <a name="see-also"></a>请参阅
 
-- [Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [字符串和其他类型之间的转换](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
-- [如何：在 Visual Basic 中将对象转换为另一种类型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [How to: Convert an Object to Another Type in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
 - [结构](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [数据类型](../../../../visual-basic/language-reference/data-types/index.md)
 - [类型转换函数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

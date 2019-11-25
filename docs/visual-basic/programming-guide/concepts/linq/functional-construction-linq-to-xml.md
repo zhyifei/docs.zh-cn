@@ -1,15 +1,15 @@
 ---
-title: 功能构造 (LINQ to XML) (Visual Basic)
+title: 功能构造 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: feac4273-39ab-43ae-bab7-4059c807a785
-ms.openlocfilehash: a942d4a0fa4c33cf4699c5825ea05403bdfce48f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6366c7781372d34e15d62f81a5ceae8ff4ccda2e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618325"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353465"
 ---
-# <a name="functional-construction-linq-to-xml-visual-basic"></a>功能构造 (LINQ to XML) (Visual Basic)
+# <a name="functional-construction-linq-to-xml-visual-basic"></a>Functional Construction (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 为创建 XML 元素提供了一种称为“函数构造”的有效方式。 函数构造是指在单个语句中创建 XML 树的能力。  
   
  启用函数构造的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 编程接口有几个重要功能：  
@@ -22,7 +22,7 @@ ms.locfileid: "64618325"
   
  下面是一个示例：  
   
- 这些功能使您能够编写代码以创建 XML 树，以及编写使用的结果的代码使用 XML 文本[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查询创建 XML 树时：  
+ These features enable you to write code using XML literals to create an XML tree, and also to write code that uses the results of [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries when you create an XML tree:  
   
 ```vb  
 Dim srcTree As XElement = _  
@@ -58,4 +58,4 @@ Console.WriteLine(xmlTree)
   
 ## <a name="see-also"></a>请参阅
 
-- [创建 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

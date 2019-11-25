@@ -8,21 +8,21 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 3fe6b19d0055aafad859b55960800d9786d7fa08
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 58a2bf5118a3a2cd9c33301eca5dcc751c2351bf
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698001"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283082"
 ---
 # <a name="performancecounter-element-network-settings"></a>\<performanceCounter > 元素（网络设置）
 启用或禁用网络性能计数器。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<settings >** ](settings-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<performanceCounters >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+\<&nbsp;&nbsp;[ **> 的**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**设置 >** ](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<performanceCounters >**
+
 ## <a name="syntax"></a>语法  
   
 ```xml  
@@ -36,7 +36,7 @@ ms.locfileid: "71698001"
   
 ### <a name="attributes"></a>特性  
   
-|特性|描述|  
+|属性|描述|  
 |---------------|-----------------|  
 |`enabled`|指定是否启用网络性能计数器。 默认值为 `false`。|  
   
@@ -52,14 +52,14 @@ ms.locfileid: "71698001"
 ## <a name="remarks"></a>备注  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
- 需要在要使用的配置文件中启用网络性能计数器。 通过配置文件中的单个设置即可启用或禁用所有网络性能计数器。 不能启用或禁用单个网络性能计数器。 有关特定的网络性能计数器的详细信息，请参阅[联网性能计数器](../../../debug-trace-profile/performance-counters.md#networking)。  
+ 需要在要使用的配置文件中启用网络性能计数器。 通过配置文件中的单个设置即可启用或禁用所有网络性能计数器。 不能启用或禁用单个网络性能计数器。 有关特定的网络性能计数器的详细信息，请参阅[联网性能计数器](../../../debug-trace-profile/performance-counters.md#networking-performance-counters)。  
   
  默认值是禁用网络性能计数器。  
   
- @No__t-0 属性可用于从适用的配置文件中获取**已启用**属性的当前值。  
+ <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> 属性可用于从适用的配置文件中获取**已启用**属性的当前值。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何配置 @no__t 0 和相关命名空间，以启用网络性能计数器。  
+ 下面的示例演示如何配置 <xref:System.Net> 和相关命名空间，以启用网络性能计数器。  
   
 ```xml  
 <configuration>  
@@ -73,9 +73,9 @@ ms.locfileid: "71698001"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>
 - [网络设置架构](index.md)
-- [网络性能计数器](../../../debug-trace-profile/performance-counters.md#networking)
+- [网络性能计数器](../../../debug-trace-profile/performance-counters.md#networking-performance-counters)

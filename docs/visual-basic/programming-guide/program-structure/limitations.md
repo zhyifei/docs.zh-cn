@@ -1,5 +1,5 @@
 ---
-title: Visual Basic 限制
+title: 限制
 ms.date: 07/20/2015
 helpviewer_keywords:
 - limits
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-ms.openlocfilehash: 9fa0844f4508906ae30b936e41fb4392b74d1437
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f7e19977a011565bb4b1536af5cab195f8a01017
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648734"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347368"
 ---
 # <a name="visual-basic-limitations"></a>Visual Basic 限制
-早期版本的 Visual Basic 强制执行在代码中，如变量的名称，在模块和模块大小允许的变量数的长度的边界。 在 Visual Basic.NET 中，这些限制已放宽，为您提供编写和安排你的代码以更大的自由度。  
+Earlier versions of Visual Basic enforced boundaries in code, such as the length of variable names, the number of variables allowed in modules, and module size. In Visual Basic .NET, these restrictions have been relaxed, giving you greater freedom in writing and arranging your code.  
   
- 都依赖在编译时的注意事项的更多运行时内存比物理限制。 如果使用比较明智的做法的编程方法，并将大型应用程序划分为多个类和模块，则遇到了内部 Visual Basic 限制的可能性很小。  
+ Physical limits are dependent more on run-time memory than on compile-time considerations. If you use prudent programming practices, and divide large applications into multiple classes and modules, then there is very little chance of encountering an internal Visual Basic limitation.  
   
- 以下是在极端情况下可能会遇到一些限制：  
+ The following are some limitations that you might encounter in extreme cases:  
   
-- **名称的长度。** 没有最大为每个声明的编程元素的名称的字符数。 如果元素名称进行限定，此最大值适用于整个限定字符串。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+- **Name Length.** There is a maximum number of characters for the name of every declared programming element. This maximum applies to an entire qualification string if the element name is qualified. 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
-- **行长度。** 没有源代码的物理行中的 65535 个字符的最大值。 逻辑源的代码行可以是使用行继续符的情况下更长。 请参阅[如何：拆分和合并代码中的语句](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)。  
+- **Line Length.** There is a maximum of 65535 characters in a physical line of source code. The logical source code line can be longer if you use line continuation characters. See [How to: Break and Combine Statements in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
-- **数组维数。** 没有可以声明为数组的维度的最大数目。 这就限制了多少个索引可用于指定的数组元素。 请参阅[数组中 Visual Basic 的维度](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)。  
+- **Array Dimensions.** There is a maximum number of dimensions you can declare for an array. This limits how many indexes you can use to specify an array element. See [Array Dimensions in Visual Basic](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
   
-- **字符串长度。** 没有可以在单个字符串中存储的 Unicode 字符的最大数目。 请参阅[字符串数据类型](../../../visual-basic/language-reference/data-types/string-data-type.md)。  
+- **String Length.** There is a maximum number of Unicode characters you can store in a single string. See [String Data Type](../../../visual-basic/language-reference/data-types/string-data-type.md).  
   
-- **环境字符串长度。** 没有 32768 个字符作为命令行参数使用任何环境字符串的最大值。 这是在所有平台上的限制。  
+- **Environment String Length.** There is a maximum of 32768 characters for any environment string used as a command-line argument. This is a limitation on all platforms.  
   
 ## <a name="see-also"></a>请参阅
 
 - [程序结构和代码约定](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [Visual Basic 命名约定](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

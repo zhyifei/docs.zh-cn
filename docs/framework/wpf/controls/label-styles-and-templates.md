@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Label [WPF], styles and templates
 - states [WPF], Label
 ms.assetid: c1d5359a-8e4a-4925-ab3e-e92bf6694859
-ms.openlocfilehash: c3bf4dc629bbb3e4ea21862c6893b001749f4649
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 35fcd9c15bf44d15a08c16d58847698c5ec6e574
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459401"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283506"
 ---
 # <a name="label-styles-and-templates"></a>Label 样式和模板
-本主题介绍 <xref:System.Windows.Controls.Label> 控件的样式和模板。 您可以修改默认 <xref:System.Windows.Controls.ControlTemplate> 以使控件具有独特的外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
+本主题介绍 <xref:System.Windows.Controls.Label> 控件的样式和模板。 您可以修改默认 <xref:System.Windows.Controls.ControlTemplate> 以使控件具有独特的外观。 有关详细信息，请参阅为[控件创建模板](../../../desktop-wpf/themes/how-to-create-apply-template.md)。  
   
 ## <a name="label-parts"></a>标签部件  
  <xref:System.Windows.Controls.Label> 控件没有任何命名部分。  
@@ -42,11 +42,11 @@ ms.locfileid: "73459401"
   
  有关完整示例，请参阅[使用 ControlTemplates 设置样式示例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [控件样式和模板](control-styles-and-templates.md)
 - [控件自定义](control-customization.md)
 - [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)
+- [为控件创建模板](../../../desktop-wpf/themes/how-to-create-apply-template.md)

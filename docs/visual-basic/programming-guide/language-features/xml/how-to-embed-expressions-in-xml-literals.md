@@ -1,29 +1,29 @@
 ---
-title: 如何：在 XML 文本 (Visual Basic 中) 中嵌入表达式
+title: 如何：在 XML 文本中嵌入表达式
 ms.date: 07/20/2015
 helpviewer_keywords:
 - embedded expressions [Visual Basic]
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
-ms.openlocfilehash: 9d0fd1e3713dc5b81cfca0ce54b571b38e648f87
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2e8dd10b334b0271e3c9de11ed155c9d5d7aae48
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879103"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332932"
 ---
-# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>如何：在 XML 文本 (Visual Basic 中) 中嵌入表达式
-您可以将 XML 文本与嵌入的表达式来创建 XML 文档、 片段或包含在运行时创建的内容的元素。 以下示例演示如何使用嵌入式的表达式在运行时填充元素内容、 属性和元素名称。  
+# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>如何：在 XML 文本中嵌入表达式 (Visual Basic)
+You can combine XML literals with embedded expressions to create an XML document, fragment, or element that contains content created at run time. The following examples demonstrate how to use embedded expressions to populate element content, attributes, and element names at run time.  
   
- 嵌入式表达式的语法是`<%=` `exp` `%>`，这是 ASP.NET 使用相同的语法。 有关详细信息，请参阅[XML 中的嵌入式表达式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。  
+ The syntax for an embedded expression is `<%=` `exp` `%>`, which is the same syntax that ASP.NET uses. For more information, see [Embedded Expressions in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   
- 此外可以使用[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Api 来创建[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]对象。 有关详细信息，请参阅 <xref:System.Xml.Linq.XElement>。  
+ You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects. 有关更多信息，请参见<xref:System.Xml.Linq.XElement>。  
   
 ## <a name="procedures"></a>过程  
   
-#### <a name="to-insert-text-as-element-content"></a>若要作为元素内容中插入文本  
+#### <a name="to-insert-text-as-element-content"></a>To insert text as element content  
   
-- 下面的示例演示如何插入文本中包含的`contactName`变量之间的开始和结束的名称元素。  
+- The following example shows how to insert the text that is contained in the `contactName` variable between the opening and closing name elements.  
   
      [!code-vb[VbXMLSamples#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#39)]  
   
@@ -35,9 +35,9 @@ ms.locfileid: "65879103"
     </contact>  
     ```  
   
-#### <a name="to-insert-text-as-an-attribute-value"></a>作为属性值中插入文本  
+#### <a name="to-insert-text-as-an-attribute-value"></a>To insert text as an attribute value  
   
-- 下面的示例演示如何插入中包含的文本`phoneType`变量的值作为`type`属性。  
+- The following example shows how to insert the text that is contained in the `phoneType` variable as the value of the `type` attribute.  
   
      [!code-vb[VbXMLSamples#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#40)]  
   
@@ -49,11 +49,11 @@ ms.locfileid: "65879103"
     </contact>  
     ```  
   
-#### <a name="to-insert-text-for-an-element-name"></a>若要插入的元素名称的文本  
+#### <a name="to-insert-text-for-an-element-name"></a>To insert text for an element name  
   
-- 下面的示例演示如何插入文本中包含的`elementName`变量作为元素的名称。  
+- The following example shows how to insert the text that is contained in the `elementName` variable as the name of an element.  
   
-     创建元素时使用此技术，必须将它们与\</ > 标记。  
+     When creating elements by using this technique, you must close them with the \</> tag.  
   
      [!code-vb[VbXMLSamples#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#41)]  
   

@@ -1,5 +1,5 @@
 ---
-title: 处理事件 (Visual Basic)
+title: 处理事件
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handling [Visual Basic], walkthroughs
@@ -9,112 +9,112 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 12267e0a70419298bc581421c4f3a220088d205f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb42f2e41e366cf8765cb9395d1a5641434bab40
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956303"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345074"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>演练：处理事件 (Visual Basic)
-这是演示如何处理事件的两个主题中的第二个。 第一主题[演练:声明和引发事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), 演示如何声明和引发事件。 本部分使用该演练中的窗体和类来演示如何在事件发生时对其进行处理。  
+This is the second of two topics that demonstrate how to work with events. The first topic, [Walkthrough: Declaring and Raising Events](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), shows how to declare and raise events. This section uses the form and class from that walkthrough to show how to handle events when they take place.  
   
- `Widget`类示例使用传统的事件处理语句。 Visual Basic 提供了用于处理事件的其他技术。 作为练习, 您可以修改此示例以使用`AddHandler`和`Handles`语句。  
+ The `Widget` class example uses traditional event-handling statements. Visual Basic provides other techniques for working with events. As an exercise, you can modify this example to use the `AddHandler` and `Handles` statements.  
   
-### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>处理小组件类的 PercentDone 事件  
+### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>To handle the PercentDone event of the Widget class  
   
-1. 将以下代码放入`Form1`:  
+1. Place the following code in `Form1`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#4)]  
   
-     关键字指定该变量`mWidget`用于处理对象的事件。 `WithEvents` 通过提供要从中创建对象的类的名称, 指定对象的类型。  
+     The `WithEvents` keyword specifies that the variable `mWidget` is used to handle an object's events. You specify the kind of object by supplying the name of the class from which the object will be created.  
   
-     变量`mWidget`在中`Form1`声明, 因为`WithEvents`变量必须是类级别。 无论你将其放入哪类类型, 都是如此。  
+     The variable `mWidget` is declared in `Form1` because `WithEvents` variables must be class-level. This is true regardless of the type of class you place them in.  
   
-     变量`mblnCancel` 用于`LongTask`取消方法。  
+     The variable `mblnCancel` is used to cancel the `LongTask` method.  
   
-## <a name="writing-code-to-handle-an-event"></a>编写代码来处理事件  
- 一旦使用`WithEvents`声明变量, 变量名称就会出现在类的**代码编辑器**的左侧下拉列表中。 选择`mWidget`后`Widget` , 类的事件将出现在右侧下拉列表中。 选择事件会显示相应的事件过程, 其中包含前缀`mWidget`和下划线。 与`WithEvents`变量关联的所有事件过程都被赋予变量名称作为前缀。  
+## <a name="writing-code-to-handle-an-event"></a>Writing Code to Handle an Event  
+ As soon as you declare a variable using `WithEvents`, the variable name appears in the left drop-down list of the class's **Code Editor**. When you select `mWidget`, the `Widget` class's events appear in the right drop-down list. Selecting an event displays the corresponding event procedure, with the prefix `mWidget` and an underscore. All the event procedures associated with a `WithEvents` variable are given the variable name as a prefix.  
   
-#### <a name="to-handle-an-event"></a>处理事件  
+#### <a name="to-handle-an-event"></a>To handle an event  
   
-1. 从`mWidget` **代码编辑器**的左侧下拉列表中选择。  
+1. Select `mWidget` from the left drop-down list in the **Code Editor**.  
   
-2. 从右侧下拉列表中选择事件。`PercentDone` "**代码编辑器**" 将`mWidget_PercentDone`打开事件过程。  
+2. Select the `PercentDone` event from the right drop-down list. The **Code Editor** opens the `mWidget_PercentDone` event procedure.  
   
     > [!NOTE]
-    > **代码编辑器**对于插入新的事件处理程序非常有用, 但不是必需的。 在本演练中, 只需直接将事件处理程序复制到代码中即可。  
+    > The **Code Editor** is useful, but not required, for inserting new event handlers. In this walkthrough, it is more direct to just copy the event handlers directly into your code.  
   
 3. 将以下代码添加到 `mWidget_PercentDone` 事件处理程序中：  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#5)]  
   
-     每当引发`Label`事件时, 事件过程就会在控件中显示完成百分比。 `PercentDone` 方法允许重绘标签, 并为用户提供单击 "取消" 按钮的机会。 `DoEvents`  
+     Whenever the `PercentDone` event is raised, the event procedure displays the percent complete in a `Label` control. The `DoEvents` method allows the label to repaint, and also gives the user the opportunity to click the **Cancel** button.  
   
-4. 为`Button2_Click`事件处理程序添加以下代码:  
+4. Add the following code for the `Button2_Click` event handler:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#6)]  
   
- 如果用户在运行时 `LongTask`单击 "取消" 按钮, 则`Button2_Click`只要`DoEvents`语句允许事件处理, 就会立即执行该事件。 类级别`mblnCancel`变量设置为`mWidget_PercentDone` `True`, 然后事件对其进行测试, 并将`ByRef Cancel`参数设置为`True`。  
+ If the user clicks the **Cancel** button while `LongTask` is running, the `Button2_Click` event is executed as soon as the `DoEvents` statement allows event processing to occur. The class-level variable `mblnCancel` is set to `True`, and the `mWidget_PercentDone` event then tests it and sets the `ByRef Cancel` argument to `True`.  
   
-## <a name="connecting-a-withevents-variable-to-an-object"></a>将 WithEvents 变量连接到对象  
- `Form1`现已设置为处理`Widget`对象的事件。 剩下的就是找到某个`Widget`地方。  
+## <a name="connecting-a-withevents-variable-to-an-object"></a>Connecting a WithEvents Variable to an Object  
+ `Form1` is now set up to handle a `Widget` object's events. All that remains is to find a `Widget` somewhere.  
   
- 当在设计时声明`WithEvents`变量时, 没有与之关联的对象。 `WithEvents`变量与任何其他对象变量一样。 您必须创建一个对象, 并使用`WithEvents`变量为其分配一个引用。  
+ When you declare a variable `WithEvents` at design time, no object is associated with it. A `WithEvents` variable is just like any other object variable. You have to create an object and assign a reference to it with the `WithEvents` variable.  
   
-#### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>创建对象并为其分配引用  
+#### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>To create an object and assign a reference to it  
   
-1. 从**代码编辑器**的左侧下拉列表中选择 " **(Form1 事件)** "。  
+1. Select **(Form1 Events)** from the left drop-down list in the **Code Editor**.  
   
-2. 从右侧下拉列表中选择事件。`Load` "**代码编辑器**" 将`Form1_Load`打开事件过程。  
+2. Select the `Load` event from the right drop-down list. The **Code Editor** opens the `Form1_Load` event procedure.  
   
-3. 为`Form1_Load`事件过程添加以下代码以`Widget`创建:  
+3. Add the following code for the `Form1_Load` event procedure to create the `Widget`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#7)]  
   
- 执行此代码时, Visual Basic 将创建`Widget`一个对象, 并将其事件连接到与`mWidget`关联的事件过程。 从该点开始, 无论何时`Widget` `PercentDone`引发事件, `mWidget_PercentDone`都将执行事件过程。  
+ When this code executes, Visual Basic creates a `Widget` object and connects its events to the event procedures associated with `mWidget`. From that point on, whenever the `Widget` raises its `PercentDone` event, the `mWidget_PercentDone` event procedure is executed.  
   
-#### <a name="to-call-the-longtask-method"></a>调用 LongTask 方法  
+#### <a name="to-call-the-longtask-method"></a>To call the LongTask method  
   
 - 将以下代码添加到 `Button1_Click` 事件处理程序中：  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#8)]  
   
- 在调用`Boolean` `False`方法之前, 必须初始化显示完成百分比的标签, 并且用于取消方法的类级别标志必须设置为。 `LongTask`  
+ Before the `LongTask` method is called, the label that displays the percent complete must be initialized, and the class-level `Boolean` flag for canceling the method must be set to `False`.  
   
- `LongTask`调用时, 任务持续时间为12.2 秒。 每隔一秒引发一次事件。`PercentDone` 每次引发事件时, `mWidget_PercentDone`都会执行事件过程。  
+ `LongTask` is called with a task duration of 12.2 seconds. The `PercentDone` event is raised once every one-third of a second. Each time the event is raised, the `mWidget_PercentDone` event procedure is executed.  
   
- `mblnCancel` `LongTask` `mblnCancel`完成后, 将测试, 以查看是否正常结束, 或是否由于设置为`True`而停止。 `LongTask` 只有在前一种情况下才会更新完成百分比。  
+ When `LongTask` is done, `mblnCancel` is tested to see if `LongTask` ended normally, or if it stopped because `mblnCancel` was set to `True`. The percent complete is updated only in the former case.  
   
 #### <a name="to-run-the-program"></a>运行程序  
   
-1. 按 F5 将项目置于运行模式。  
+1. Press F5 to put the project in run mode.  
   
-2. 单击 "**启动任务**" 按钮。 每次`PercentDone`引发事件时, 都会将标签更新为已完成的任务的百分比。  
+2. Click the **Start Task** button. Each time the `PercentDone` event is raised, the label is updated with the percentage of the task that is complete.  
   
-3. 单击 "**取消**" 按钮停止任务。 请注意, 当你单击 "**取消**" 按钮时, 该按钮的外观不会立即更改。 只有语句允许事件处理后, 才能发生事件。`Click` `My.Application.DoEvents`  
+3. Click the **Cancel** button to stop the task. Notice that the appearance of the **Cancel** button does not change immediately when you click it. The `Click` event cannot happen until the `My.Application.DoEvents` statement allows event processing.  
   
     > [!NOTE]
-    > `My.Application.DoEvents`方法不以与窗体相同的方式处理事件。 例如, 在本演练中, 必须单击 "**取消**" 按钮两次。 若要允许窗体直接处理事件, 可以使用多线程处理。 有关详细信息, 请参阅[托管线程处理](../../../../standard/threading/index.md)。
+    > The `My.Application.DoEvents` method does not process events in exactly the same way as the form does. For example, in this walkthrough, you must click the **Cancel** button twice. To allow the form to handle the events directly, you can use multithreading. For more information, see [Managed Threading](../../../../standard/threading/index.md).
   
- 你可能会发现, 通过 F11 运行程序并单步执行代码行来单步执行代码是有益的。 您可以清楚地了解执行的`LongTask` `PercentDone`输入方式, 然后在每次`Form1`引发事件时短暂重新进入。  
+ You may find it instructive to run the program with F11 and step through the code a line at a time. You can clearly see how execution enters `LongTask`, and then briefly re-enters `Form1` each time the `PercentDone` event is raised.  
   
- 如果在的代码`Form1`中返回执行时, 会发生什么情况, 再次调用该`LongTask`方法呢？ 在最糟糕的情况下, 如果`LongTask`每次引发事件时调用, 则可能会发生堆栈溢出。  
+ What would happen if, while execution was back in the code of `Form1`, the `LongTask` method were called again? At worst, a stack overflow might occur if `LongTask` were called every time the event was raised.  
   
- 您可以通过将对`mWidget`新`Widget`的`mWidget`引用分配给, `Widget`使变量处理不同对象的事件。 事实上, 每次单击按钮时, 都`Button1_Click`可以使代码执行此操作。  
+ You can cause the variable `mWidget` to handle events for a different `Widget` object by assigning a reference to the new `Widget` to `mWidget`. In fact, you can make the code in `Button1_Click` do this every time you click the button.  
   
-#### <a name="to-handle-events-for-a-different-widget"></a>处理不同小组件的事件  
+#### <a name="to-handle-events-for-a-different-widget"></a>To handle events for a different widget  
   
-- 将以下代码行添加到`Button1_Click`过程中, 紧靠在读取`mWidget.LongTask(12.2, 0.33)`的行之前:  
+- Add the following line of code to the `Button1_Click` procedure, immediately preceding the line that reads `mWidget.LongTask(12.2, 0.33)`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#9)]  
   
- 每次单击按钮时, `Widget`上面的代码都会创建一个新的。 `LongTask`方法完成后, 将立即释放对的`Widget`引用并`Widget`销毁。  
+ The code above creates a new `Widget` each time the button is clicked. As soon as the `LongTask` method completes, the reference to the `Widget` is released, and the `Widget` is destroyed.  
   
- 一个变量一次只能包含一个对象引用, 因此, 如果您`mWidget`向分配不同`Widget`的对象, 则不会`Widget`再处理上一个对象的事件。 `WithEvents` 如果`mWidget`是唯一包含对旧`Widget`对象的引用的对象变量, 则销毁该对象。 如果要处理来自多个`Widget`对象的事件, 请`AddHandler`使用语句分别处理每个对象中的事件。  
+ A `WithEvents` variable can contain only one object reference at a time, so if you assign a different `Widget` object to `mWidget`, the previous `Widget` object's events will no longer be handled. If `mWidget` is the only object variable containing a reference to the old `Widget`, the object is destroyed. If you want to handle events from several `Widget` objects, use the `AddHandler` statement to process events from each object separately.  
   
 > [!NOTE]
-> 您可以根据需要声明`WithEvents`多个变量, 但不支持变量`WithEvents`的数组。  
+> You can declare as many `WithEvents` variables as you need, but arrays of `WithEvents` variables are not supported.  
   
 ## <a name="see-also"></a>请参阅
 

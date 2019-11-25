@@ -1,5 +1,5 @@
 ---
-title: '#If .。。Then ... #Else 指令（Visual Basic）'
+title: '#If...Then...#Else 指令'
 ms.date: 04/11/2018
 f1_keywords:
 - vb.#EndIf
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-ms.openlocfilehash: aaf5e7dd82cebf734da59e9feb89174705468a4b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 40e93b718241c9819e3c0fd84595e76eb0c86472
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580090"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343818"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else 指令
 
-有条件地编译选定的 Visual Basic 代码块。
+Conditionally compiles selected blocks of Visual Basic code.
 
 ## <a name="syntax"></a>语法
 
@@ -47,26 +47,26 @@ ms.locfileid: "72580090"
 ## <a name="parts"></a>部件
 
 `expression`  
-@No__t_0 和 `#ElseIf` 语句需要，在其他位置为可选。 任何表达式（仅包含一个或多个条件编译器常量、文本和运算符），其计算结果为 `True` 或 `False`。
+Required for `#If` and `#ElseIf` statements, optional elsewhere. Any expression, consisting exclusively of one or more conditional compiler constants, literals, and operators, that evaluates to `True` or `False`.
 
 `statements`  
-@No__t_0 语句块需要，在其他位置为可选。 如果关联的表达式的计算结果为 `True`，则 Visual Basic 编译的程序行或编译器指令。
+Required for `#If` statement block, optional elsewhere. Visual Basic program lines or compiler directives that are compiled if the associated expression evaluates to `True`.
 
 `#End If`  
-终止 `#If` 语句块。
+Terminates the `#If` statement block.
 
 ## <a name="remarks"></a>备注
 
-在表面上，`#If...Then...#Else` 指令的行为与 `If...Then...Else` 语句的行为相同。 但 `#If...Then...#Else` 指令计算编译器编译的内容，而 `If...Then...Else` 语句则在运行时计算条件。
+On the surface, the behavior of the `#If...Then...#Else` directives appears the same as that of the `If...Then...Else` statements. However, the `#If...Then...#Else` directives evaluate what is compiled by the compiler, whereas the `If...Then...Else` statements evaluate conditions at run time.
 
-条件编译通常用于针对不同平台编译相同的程序。 它还用于阻止调试代码出现在可执行文件中。 在条件编译期间排除的代码在最终可执行文件中被完全省略，因此它不会对大小或性能产生任何影响。
+Conditional compilation is typically used to compile the same program for different platforms. It is also used to prevent debugging code from appearing in an executable file. Code excluded during conditional compilation is completely omitted from the final executable file, so it has no effect on size or performance.
 
-不管任何计算结果如何，都将使用 `Option Compare Binary` 来计算所有表达式。 @No__t_0 语句不会影响 `#If` 和 `#ElseIf` 语句中的表达式。
+Regardless of the outcome of any evaluation, all expressions are evaluated using `Option Compare Binary`. The `Option Compare` statement does not affect expressions in `#If` and `#ElseIf` statements.
 
 > [!NOTE]
-> @No__t_0、`#Else`、`#ElseIf` 和 `#End If` 指令不存在单行形式。 任何其他代码都不能与任何指令出现在同一行上。
+> No single-line form of the `#If`, `#Else`, `#ElseIf`, and `#End If` directives exists. No other code can appear on the same line as any of the directives.
 
-条件编译块内的语句必须是完整的逻辑语句。 例如，你无法有条件地仅编译函数的属性，但你可以有条件地声明函数及其属性：
+The statements within a conditional compilation block must be complete logical statements. For example, you cannot conditionally compile only the attributes of a function, but you can conditionally declare the function along with its attributes:
 
 ```vb
 #If DEBUG Then
@@ -80,7 +80,7 @@ Public Function SomeFunction() As String
 
 ## <a name="example"></a>示例
 
-此示例使用 `#If...Then...#Else` 构造来确定是否编译某些语句。
+This example uses the `#If...Then...#Else` construct to determine whether to compile certain statements.
 
 [!code-vb[VbVbalrConditionalComp#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#1)]
 

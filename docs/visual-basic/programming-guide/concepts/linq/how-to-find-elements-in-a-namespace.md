@@ -1,15 +1,15 @@
 ---
-title: 如何：查找命名空间中的元素（LINQ to XML）（Visual Basic）
+title: 如何：查找命名空间中的元素 (XPath-LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: c7cb3b77-3424-4b54-9efa-4dc715948e41
-ms.openlocfilehash: 98afdd7fc67895eaad5703cfb32c2b4000deb87f
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 822af6367fab707f52e2dcb7a130d899be1fba26
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250117"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344666"
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>如何：查找命名空间中的元素（LINQ to XML）（Visual Basic）
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>How to: Find Elements in a Namespace (XPath-LINQ to XML) (Visual Basic)
 XPath 表达式可以在特定命名空间中查找节点。 XPath 表达式使用命名空间前缀来指定命名空间。 若要分析包含命名空间前缀的 XPath 表达式，必须向实现 <xref:System.Xml.IXmlNamespaceResolver> 的 XPath 方法传递一个对象。 本示例使用 <xref:System.Xml.XmlNamespaceManager>。  
   
  XPath 表达式为：  
@@ -82,4 +82,4 @@ Results are identical
   
 ## <a name="see-also"></a>请参阅
 
-- [XPath 用户的 LINQ to XML （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

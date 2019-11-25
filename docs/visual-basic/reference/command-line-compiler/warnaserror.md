@@ -1,17 +1,17 @@
 ---
-title: -warnaserror (Visual Basic)
+title: -warnaserror
 ms.date: 03/13/2018
 helpviewer_keywords:
 - warnaserror compiler option [Visual Basic]
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-ms.openlocfilehash: 8af6d3ef4efecd53dcf38c33d0aa2cf182f07d30
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: f9ca5575e2a042d68fc490494f2e86991d58b80c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004645"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351711"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
 使编译器将第一次出现的警告视为错误。  
@@ -22,7 +22,7 @@ ms.locfileid: "72004645"
 -warnaserror[+ | -][:numberList]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
   
 |术语|定义|  
 |---|---|  
@@ -41,11 +41,11 @@ ms.locfileid: "72004645"
   
 |设置 -warnaserror 以将所有警告视为 Visual Studio IDE 中的错误|  
 |---|  
-|1.在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。 <br />2.单击“编译”选项卡。<br />3.确保“禁用所有警告”复选框处于未选中状态。<br />4.选中“将所有警告视为错误”复选框。|  
+|1.  Have a project selected in **Solution Explorer**. 在“项目”菜单上，单击“属性”。 <br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Check the **Treat all warnings as errors** check box.|  
   
 |设置 -warnaserror 以将特定警告视为 Visual Studio IDE 中的错误|  
 |---|  
-|1.在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。<br />2.单击“编译”选项卡。<br />3.确保“禁用所有警告”复选框处于未选中状态。<br />4.确保“将所有警告视为错误”复选框处于未选中状态。<br />5.从应将其视为错误的警告旁的“通知”列中选择“错误”。|  
+|1.  Have a project selected in **Solution Explorer**. 在“项目”菜单上，单击“属性”。<br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Make sure the **Treat all warnings as errors** check box is unchecked.<br />5.  Select **Error** from the **Notification** column adjacent to the warning that should be treated as an error.|  
   
 ## <a name="example"></a>示例  
  以下代码编译 `In.vb` 并指示编译器在第一次发现每个警告时显示错误。  

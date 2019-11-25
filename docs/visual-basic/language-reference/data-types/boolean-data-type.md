@@ -1,5 +1,5 @@
 ---
-title: Boolean 数据类型 (Visual Basic)
+title: boolean 数据类型
 ms.date: 07/20/2015
 f1_keywords:
 - vb.FALSE
@@ -12,38 +12,42 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: b1e4add39cee6c733a6f4b95aa1668975f2f2d6d
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 5d05514207c5d07e81aab897f40f728570f6bd87
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268252"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347845"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean 数据类型 (Visual Basic)
-可以仅由值保存`True`或`False`。 关键字`True`并`False`对应的两种状态`Boolean`变量。  
+
+Holds values that can be only `True` or `False`. The keywords `True` and `False` correspond to the two states of `Boolean` variables.  
   
 ## <a name="remarks"></a>备注  
- 使用[布尔数据类型 (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md)是/否或开/关包含两个状态的值，如 true/false。  
+
+ Use the [Boolean Data Type (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) to contain two-state values such as true/false, yes/no, or on/off.  
   
  `Boolean` 的默认值为 `False`。  
   
- `Boolean` 值不存储为数字，并存储的值并不等同于数字。 绝不应编写依赖于等效的数值的代码`True`和`False`。 只要有可能，应限制的使用情况`Boolean`它们设计的逻辑值的变量。  
+ `Boolean` values are not stored as numbers, and the stored values are not intended to be equivalent to numbers. You should never write code that relies on equivalent numeric values for `True` and `False`. Whenever possible, you should restrict usage of `Boolean` variables to the logical values for which they are designed.  
   
 ## <a name="type-conversions"></a>类型转换  
- 当 Visual Basic 将转换为数值数据类型值`Boolean`，将 0 变为`False`和所有其他值将成为`True`。 当 Visual Basic 转换`Boolean`值为数值类型，`False`变为 0 和`True`变得为-1。  
+
+ When Visual Basic converts numeric data type values to `Boolean`, 0 becomes `False` and all other values become `True`. When Visual Basic converts `Boolean` values to numeric types, `False` becomes 0 and `True` becomes -1.  
   
- 之间转换时`Boolean`值和数值数据类型，请记住，.NET Framework 转换方法不始终生成与 Visual Basic 转换关键字相同的结果。 这是因为 Visual Basic 转换可以保留行为与早期版本兼容。 有关详细信息，请参阅"布尔值类型不会不转换到数值类型准确"中[故障排除数据类型](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。  
+ When you convert between `Boolean` values and numeric data types, keep in mind that the .NET Framework conversion methods do not always produce the same results as the Visual Basic conversion keywords. This is because the Visual Basic conversion retains behavior compatible with previous versions. For more information, see "Boolean Type Does Not Convert to Numeric Type Accurately" in [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 ## <a name="programming-tips"></a>编程提示  
   
-- **负号。** `Boolean` 不是数值类型，不能表示为负值。 在任何情况下，不应使用`Boolean`来保存数值。  
+- **Negative Numbers.** `Boolean` is not a numeric type and cannot represent a negative value. In any case, you should not use `Boolean` to hold numeric values.  
   
-- **类型字符。** `Boolean` 不包含文本类型字符或标识符类型字符。  
+- **Type Characters.** `Boolean` has no literal type character or identifier type character.  
   
-- **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.Boolean?displayProperty=nameWithType> 结构。  
+- **Framework Type.** .NET Framework 中的对应类型是 <xref:System.Boolean?displayProperty=nameWithType> 结构。  
   
 ## <a name="example"></a>示例  
- 在以下示例中，`runningVB`是`Boolean`变量，其中存储一个简单的是/否设置。  
+
+ In the following example, `runningVB` is a `Boolean` variable, which stores a simple yes/no setting.  
   
 ```vb  
 Dim runningVB As Boolean  

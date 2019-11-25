@@ -1,26 +1,26 @@
 ---
-title: 权限被拒绝 (Visual Basic)
+title: 权限被拒绝
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID70
 ms.assetid: 71f46756-f522-4814-aab4-492bf9924245
-ms.openlocfilehash: ad75c556748bf5c0f9cef55310c4ffa7b01fd458
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 410301a1e99040fc617ab1bf1e851329ab3072d2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920830"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347004"
 ---
 # <a name="permission-denied-visual-basic"></a>权限被拒绝 (Visual Basic)
-尝试写入受写保护的磁盘或访问锁定的文件。  
+An attempt was made to write to a write-protected disk or to access a locked file.  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1. 若要打开受写保护的文件，请更改文件的写保护属性。  
+1. To open a write-protected file, change the write-protection attribute of the file.  
   
-2. 请确保另一个进程已不锁定该文件，并等待，直到另一个进程释放它打开该文件。  
+2. Make sure that another process has not locked the file, and wait to open the file until the other process releases it.  
   
-3. 若要访问注册表，请检查您的用户权限，包括此类型的注册表访问。  
+3. To access the registry, check that your user permissions include this type of registry access.  
   
 ## <a name="see-also"></a>请参阅
 

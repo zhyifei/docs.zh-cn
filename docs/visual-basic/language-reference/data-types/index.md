@@ -1,5 +1,5 @@
 ---
-title: 数据类型摘要 (Visual Basic)
+title: 数据类型摘要
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Boolean data type [Visual Basic], supported types in Visual Basic
@@ -37,59 +37,63 @@ helpviewer_keywords:
 - storage order, controlling in Visual Basic
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-ms.openlocfilehash: 57f6caa00806f4874cb8070805e8b6784ec82e40
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 72bd8158880c602fb2cde92a3851c4e8a702c70b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956807"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344003"
 ---
 # <a name="data-type-summary-visual-basic"></a>数据类型摘要 (Visual Basic)
-下表显示了 Visual Basic 的数据类型、其支持的公共语言运行时类型、其名义存储分配及其值范围。  
+
+The following table shows the Visual Basic data types, their supporting common language runtime types, their nominal storage allocation, and their value ranges.  
   
-|Visual Basic 类型|公共语言运行时类型结构|标称存储分配|取值范围|  
+|Visual Basic type|Common language runtime type structure|Nominal storage allocation|取值范围|  
 |-----------------------|--------------------------------------------|--------------------------------|-----------------|  
-|[布尔值](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|<xref:System.Boolean>|依赖于实现平台|`True` 或 `False`|  
-|[Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte>|1 个字节|0到 255 (无符号)|  
-|[Char](../../../visual-basic/language-reference/data-types/char-data-type.md)(单个字符)|<xref:System.Char>|2 个字节|0到 65535 (无符号)|  
-|[Date](../../../visual-basic/language-reference/data-types/date-data-type.md)|<xref:System.DateTime>|8 个字节|0:00:00 年1月1日至12月31日下午 11:59:59, (午夜) 9999|  
-|[小数](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|<xref:System.Decimal>|16 个字节|0到 +/-79228162514264337593543950335 (+/-7.9...E + 28) <sup>†</sup> , 无小数点;0到 +/-7.9228162514264337593543950335, 小数点右侧有28个位置;<br /><br /> 最小非零数字为 +/-0.0000000000000000000000000001 (+/-1E-28) <sup>†</sup>|  
-|[Double](../../../visual-basic/language-reference/data-types/double-data-type.md)(双精度浮点)|<xref:System.Double>|8 个字节|-1.79769313486231570 e + 308 到-4.94065645841246544 E-324 <sup>†</sup>表示负值;<br /><br /> 4.94065645841246544 e-324 到 1.79769313486231570 E + 308 <sup>†</sup>用于正值|  
-|[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4 个字节|-2147483648 到 2147483647 (有符号)|  
-|[Long](../../../visual-basic/language-reference/data-types/long-data-type.md)(长整型)|<xref:System.Int64>|8 个字节|-9223372036854775808 到 9223372036854775807 (9.2. E + 18 <sup>†</sup>) (有符号)|  
-|[对象](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object>班级|32位平台上的4个字节<br /><br /> 64位平台上的8个字节|任何类型都可以存储在类型的变量中`Object`|  
-|[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 个字节|-128 到 127 (有符号)|  
-|[Short](../../../visual-basic/language-reference/data-types/short-data-type.md)(短整型)|<xref:System.Int16>|2 个字节|-32768 到 32767 (有符号)|  
-|[单个](../../../visual-basic/language-reference/data-types/single-data-type.md)(单精度浮点)|<xref:System.Single>|4 个字节|-3.4028235 e + 38 到-1.401298 E-45 <sup>†</sup>表示负值;<br /><br /> 1.401298 e-45 到 3.4028235 E + 38 <sup>†</sup>用于正值|  
-|[字符串](../../../visual-basic/language-reference/data-types/string-data-type.md)(可变长度)|<xref:System.String>班级|依赖于实现平台|0到约 2000000000 Unicode 字符|  
-|[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|4 个字节|0到 4294967295 (无符号)|  
-|[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8 个字节|0到 18446744073709551615 (1.8 ... E + 19 <sup>†</sup>) (无符号)|  
-|[用户定义](../../../visual-basic/language-reference/data-types/user-defined-data-type.md)构造|(继承自<xref:System.ValueType>)|依赖于实现平台|结构的每个成员都有一个由其数据类型确定的范围, 并与其他成员的范围无关|  
-|[UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<xref:System.UInt16>|2 个字节|0到 65535 (无符号)|  
+|[布尔值](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|<xref:System.Boolean>|Depends on implementing platform|`True` 或 `False`|  
+|[Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte>|1 个字节|0 through 255 (unsigned)|  
+|[Char](../../../visual-basic/language-reference/data-types/char-data-type.md) (single character)|<xref:System.Char>|2 个字节|0 through 65535 (unsigned)|  
+|[Date](../../../visual-basic/language-reference/data-types/date-data-type.md)|<xref:System.DateTime>|8 个字节|0:00:00 (midnight) on January 1, 0001 through 11:59:59 PM on December 31, 9999|  
+|[小数](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|<xref:System.Decimal>|16 个字节|0 through +/-79,228,162,514,264,337,593,543,950,335 (+/-7.9...E+28) <sup>†</sup> with no decimal point; 0 through +/-7.9228162514264337593543950335 with 28 places to the right of the decimal;<br /><br /> smallest nonzero number is +/-0.0000000000000000000000000001 (+/-1E-28) <sup>†</sup>|  
+|[Double](../../../visual-basic/language-reference/data-types/double-data-type.md) (double-precision floating-point)|<xref:System.Double>|8 个字节|-1.79769313486231570E+308 through -4.94065645841246544E-324 <sup>†</sup> for negative values;<br /><br /> 4.94065645841246544E-324 through 1.79769313486231570E+308 <sup>†</sup> for positive values|  
+|[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4 个字节|-2,147,483,648 through 2,147,483,647 (signed)|  
+|[Long](../../../visual-basic/language-reference/data-types/long-data-type.md) (long integer)|<xref:System.Int64>|8 个字节|-9,223,372,036,854,775,808 through 9,223,372,036,854,775,807 (9.2...E+18 <sup>†</sup>) (signed)|  
+|[对象](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> (class)|4 bytes on 32-bit platform<br /><br /> 8 bytes on 64-bit platform|Any type can be stored in a variable of type `Object`|  
+|[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 个字节|-128 through 127 (signed)|  
+|[Short](../../../visual-basic/language-reference/data-types/short-data-type.md) (short integer)|<xref:System.Int16>|2 个字节|-32,768 through 32,767 (signed)|  
+|[Single](../../../visual-basic/language-reference/data-types/single-data-type.md) (single-precision floating-point)|<xref:System.Single>|4 个字节|-3.4028235E+38 through -1.401298E-45 <sup>†</sup> for negative values;<br /><br /> 1.401298E-45 through 3.4028235E+38 <sup>†</sup> for positive values|  
+|[String](../../../visual-basic/language-reference/data-types/string-data-type.md) (variable-length)|<xref:System.String> (class)|Depends on implementing platform|0 to approximately 2 billion Unicode characters|  
+|[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|4 个字节|0 through 4,294,967,295 (unsigned)|  
+|[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8 个字节|0 through 18,446,744,073,709,551,615 (1.8...E+19 <sup>†</sup>) (unsigned)|  
+|[User-Defined](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) (structure)|(inherits from <xref:System.ValueType>)|Depends on implementing platform|Each member of the structure has a range determined by its data type and independent of the ranges of the other members|  
+|[UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<xref:System.UInt16>|2 个字节|0 through 65,535 (unsigned)|  
   
- <sup>†</sup>使用*科学记数法*时, "E" 指的是10的幂。 因此, 3.56 E + 2 表示 3.56 x 10<sup>2</sup>或 356, 3.56 e-2 表示 3.56/10<sup>2</sup>或0.0356。  
+ <sup>†</sup> In *scientific notation*, "E" refers to a power of 10. So 3.56E+2 signifies 3.56 x 10<sup>2</sup> or 356, and 3.56E-2 signifies 3.56 / 10<sup>2</sup> or 0.0356.  
   
 > [!NOTE]
-> 对于包含文本的字符串, 请<xref:Microsoft.VisualBasic.Strings.StrConv%2A>使用函数从一种文本格式转换为另一种文本格式。  
+> For strings containing text, use the <xref:Microsoft.VisualBasic.Strings.StrConv%2A> function to convert from one text format to another.  
   
- 除了在声明语句中指定数据类型之外, 还可以使用类型字符强制某些编程元素的数据类型。 请参阅[类型字符](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)。  
+ In addition to specifying a data type in a declaration statement, you can force the data type of some programming elements by using a type character. See [Type Characters](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
   
 ## <a name="memory-consumption"></a>内存消耗  
- 在声明基本数据类型时, 不安全地假定其内存消耗与其名义存储分配相同。 这是由于下列注意事项:  
+
+ When you declare an elementary data type, it is not safe to assume that its memory consumption is the same as its nominal storage allocation. This is due to the following considerations:  
   
-- **存储分配。** 公共语言运行时可以基于执行应用程序的平台的当前特性来分配存储空间。 如果内存几乎已满, 则可能会将声明的元素尽可能紧密地打包在一起。 在其他情况下, 它可能会将内存地址与自然硬件边界对齐, 以优化性能。  
+- **Storage Assignment.** The common language runtime can assign storage based on the current characteristics of the platform on which your application is executing. If memory is nearly full, it might pack your declared elements as closely together as possible. In other cases it might align their memory addresses to natural hardware boundaries to optimize performance.  
   
-- **平台宽度。** 64位平台上的存储分配不同于32位平台上的分配。  
+- **Platform Width.** Storage assignment on a 64-bit platform is different from assignment on a 32-bit platform.  
   
 ### <a name="composite-data-types"></a>复合数据类型  
- 相同的注意事项也适用于复合数据类型的每个成员, 如结构或数组。 你不能只是将类型成员的标称存储分配组合在一起。 此外, 还有其他注意事项, 如以下内容:  
+
+ The same considerations apply to each member of a composite data type, such as a structure or an array. You cannot rely on simply adding together the nominal storage allocations of the type's members. Furthermore, there are other considerations, such as the following:  
   
-- **费用.** 某些复合类型具有额外的内存需求。 例如, 数组对数组本身和每个维度使用额外的内存。 在32位平台上, 此开销目前为每个维度12个字节加上8个字节。 在64位平台上, 此要求翻倍。  
+- **Overhead.** Some composite types have additional memory requirements. For example, an array uses extra memory for the array itself and also for each dimension. On a 32-bit platform, this overhead is currently 12 bytes plus 8 bytes for each dimension. On a 64-bit platform this requirement is doubled.  
   
-- **存储布局。** 不能安全地假设内存中存储的顺序与声明顺序相同。 甚至不能对字节对齐进行假设, 如2字节或4字节边界。 如果要定义类或结构, 并且需要控制其成员的存储布局, 则可以将<xref:System.Runtime.InteropServices.StructLayoutAttribute>属性应用于类或结构。  
+- **Storage Layout.** You cannot safely assume that the order of storage in memory is the same as your order of declaration. You cannot even make assumptions about byte alignment, such as a 2-byte or 4-byte boundary. If you are defining a class or structure and you need to control the storage layout of its members, you can apply the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute to the class or structure.  
   
-### <a name="object-overhead"></a>对象开销  
- 除数据类型中包含的数据外,引用任何基本数据类型或复合数据类型的也使用4个字节。`Object`  
+### <a name="object-overhead"></a>Object Overhead  
+
+ An `Object` referring to any elementary or composite data type uses 4 bytes in addition to the data contained in the data type.  
   
 ## <a name="see-also"></a>请参阅
 

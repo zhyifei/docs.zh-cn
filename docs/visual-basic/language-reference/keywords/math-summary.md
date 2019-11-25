@@ -1,5 +1,5 @@
 ---
-title: 数学摘要 (Visual Basic)
+title: 数学摘要
 ms.date: 07/20/2015
 helpviewer_keywords:
 - math functions, summary
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - math functions, Visual Basic
 - math functions
 ms.assetid: 6abf2dd7-92d2-488a-8e2b-819be9b30c3f
-ms.openlocfilehash: d7447a3155c9727a9c55ea86826d1ef15ac21243
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21c6d35b4e6aa17bb29be1c1e4b5e88a5fb389d8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802943"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348493"
 ---
 # <a name="math-summary-visual-basic"></a>数学摘要 (Visual Basic)
-Visual Basic 语言关键字和运行时库成员按目的组织和使用。  
+Visual Basic language keywords and run-time library members are organized by purpose and use.  
   
 |操作|语言元素|  
 |------------|----------------------|  
-|派生三角函数。|<xref:System.Math.Atan%2A>, <xref:System.Math.Cos%2A>, <xref:System.Math.Sin%2A>, <xref:System.Math.Tan%2A>|  
-|常规计算。|<xref:System.Math.Exp%2A>, <xref:System.Math.Log%2A>, <xref:System.Math.Sqrt%2A>|  
-|生成随机数字。|<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>， <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|  
-|获取绝对值的数值。|<xref:System.Math.Abs%2A>|  
-|获取一个表达式的符号。|<xref:System.Math.Sign%2A>|  
-|执行数字转换。|<xref:Microsoft.VisualBasic.Conversion.Fix%2A>， <xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
+|Derive trigonometric functions.|<xref:System.Math.Atan%2A>, <xref:System.Math.Cos%2A>, <xref:System.Math.Sin%2A>, <xref:System.Math.Tan%2A>|  
+|General calculations.|<xref:System.Math.Exp%2A>中， <xref:System.Math.Log%2A>中， <xref:System.Math.Sqrt%2A>|  
+|Generate random numbers.|<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>，<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|  
+|Get absolute value.|<xref:System.Math.Abs%2A>|  
+|Get the sign of an expression.|<xref:System.Math.Sign%2A>|  
+|Perform numeric conversions.|<xref:Microsoft.VisualBasic.Conversion.Fix%2A>，<xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
   
 ## <a name="see-also"></a>请参阅
 

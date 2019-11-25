@@ -1,5 +1,5 @@
 ---
-title: 重载的属性和方法 (Visual Basic)
+title: Overloaded properties and methods
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [Visual Basic], overloading
@@ -12,77 +12,77 @@ helpviewer_keywords:
 - method overloading
 - Overloads keyword [Visual Basic], overloaded members
 ms.assetid: b686fb97-e7d7-4001-afaa-6650cba08f0d
-ms.openlocfilehash: 8d7341370d9770d2e57f786ac7c68277e66a9bbd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5017d371f8a01436020443b2e3466c78fc35d21
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864866"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346091"
 ---
-# <a name="overloaded-properties-and-methods-visual-basic"></a>重载的属性和方法 (Visual Basic)
+# <a name="overloaded-properties-and-methods-visual-basic"></a>Overloaded properties and methods (Visual Basic)
 
-重载是创建多个过程、 实例构造函数或属性中具有相同名称但不同的参数类型的类。
+Overloading is the creation of more than one procedure, instance constructor, or property in a class with the same name but different argument types.
 
-## <a name="overloading-usage"></a>重载使用情况
+## <a name="overloading-usage"></a>Overloading usage
 
-当您的对象模型指示你使用有关对不同的数据类型进行操作的过程相同的名称，则重载是特别有用。 例如，可以显示多种不同的数据类型的类可以具有`Display`过程如下所示：
+Overloading is especially useful when your object model dictates that you employ identical names for procedures that operate on different data types. For example, a class that can display several different data types could have `Display` procedures that look like this:
 
 [!code-vb[VbVbalrOOP#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#64)]
 
-无需使用重载，您将需要创建不同的名称，对于每个过程，即使它们执行相同的操作中，按如下所示：
+Without overloading, you would need to create distinct names for each procedure, even though they do the same thing, as shown next:
 
 [!code-vb[VbVbalrOOP#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#65)]
 
-重载，使得更轻松地使用属性或方法，因为它提供了可用的数据类型的选择。 例如，重载`Display`之前可以使用以下代码行的任何调用所述的方法：
+Overloading makes it easier to use properties or methods because it provides a choice of data types that can be used. For example, the overloaded `Display` method discussed previously can be called with any of the following lines of code:
 
 [!code-vb[VbVbalrOOP#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#66)]
 
-在运行时，Visual Basic 调用正确的过程基于你指定的参数的数据类型。
+At run time, Visual Basic calls the correct procedure based on the data types of the parameters you specify.
 
-## <a name="overloading-rules"></a>重载规则
+## <a name="overloading-rules"></a>Overloading rules
 
- 通过添加两个或多个属性或方法具有相同名称创建一个类的重载的成员。 除非是重载派生的成员，每个重载的成员必须具有不同的参数列表和重载属性或过程时，不能作为区别性功能使用以下各项：
+ You create an overloaded member for a class by adding two or more properties or methods with the same name. Except for overloaded derived members, each overloaded member must have different parameter lists, and the following items cannot be used as a differentiating feature when overloading a property or procedure:
 
-- 修饰符，如`ByVal`或`ByRef`，适用于成员或该成员的参数。
+- Modifiers, such as `ByVal` or `ByRef`, that apply to a member, or parameters of the member.
 
-- 参数的名称
+- Names of parameters
 
-- 返回类型的过程
+- Return types of procedures
 
-`Overloads`关键字是可选的重载时，但如果任一重载成员均使用`Overloads`关键字，则所有其他重载的成员具有相同名称还必须指定此关键字。
+The `Overloads` keyword is optional when overloading, but if any overloaded member uses the `Overloads` keyword, then all other overloaded members with the same name must also specify this keyword.
 
-派生的类可以重载具有相同的参数和参数类型，该过程称为的成员的继承的成员*按名称和签名隐藏*。 如果`Overloads`按名称和签名隐藏，成员的派生的类的实现将使用而不是在基类中实现且该成员的所有其他重载将可供使用的实例时，使用关键字在派生的类。
+Derived classes can overload inherited members with members that have identical parameters and parameter types, a process known as *shadowing by name and signature*. If the `Overloads` keyword is used when shadowing by name and signature, the derived class's implementation of the member will be used instead of the implementation in the base class, and all other overloads for that member will be available to instances of the derived class.
 
-如果`Overloads`重载继承的成员具有相同的参数和参数类型的成员时省略了关键字，则该重载称为*按名称隐藏*。 按名称隐藏替换继承的成员，实现并使所有其他重载到派生的类和其对于实例不可用。
+If the `Overloads` keyword is omitted when overloading an inherited member with a member that has identical parameters and parameter types, then the overloading is called *shadowing by name*. Shadowing by name replaces the inherited implementation of a member, and it makes all other overloads unavailable to instances of the derived class and its decedents.
 
-`Overloads`和`Shadows`修饰符不能同时使用具有相同属性或方法。
+The `Overloads` and `Shadows` modifiers cannot both be used with the same property or method.
 
 ### <a name="example"></a>示例
 
-下面的示例创建重载的方法均接受`String`或`Decimal`的美元金额限度并返回一个包含销售税的字符串表示形式。
+The following example creates overloaded methods that accept either a `String` or `Decimal` representation of a dollar amount and return a string containing the sales tax.
 
-#### <a name="to-use-this-example-to-create-an-overloaded-method"></a>若要使用此示例创建一个重载的方法
+#### <a name="to-use-this-example-to-create-an-overloaded-method"></a>To use this example to create an overloaded method
 
-1. 打开新项目并添加一个名为类`TaxClass`。
+1. Open a new project and add a class named `TaxClass`.
 
 2. 向 `TaxClass` 类添加下面的代码。
 
     [!code-vb[VbVbalrOOP#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#67)]
 
-3. 将以下过程添加到你的窗体。
+3. Add the following procedure to your form.
 
     [!code-vb[VbVbalrOOP#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#68)]
 
-4. 将按钮添加到表单中，然后调用`ShowTax`过程从`Button1_Click`按钮的事件。
+4. Add a button to your form and call the `ShowTax` procedure from the `Button1_Click` event of the button.
 
-5. 运行该项目并单击要测试的重载的窗体上的按钮`ShowTax`过程。
+5. Run the project and click the button on the form to test the overloaded `ShowTax` procedure.
 
-在运行时，编译器将选择与正在使用的参数匹配的适当重载的函数。 重载的方法时单击按钮时，使用第一次调用`Price`参数，它是一个字符串，该消息，"价格是一个字符串。 税务是 $5.12"显示。 `TaxAmount` 使用调用`Decimal`值的第二个时间和消息，"价格是十进制数字。 税务是 $5.12"显示。
+At run time, the compiler chooses the appropriate overloaded function that matches the parameters being used. When you click the button, the overloaded method is called first with a `Price` parameter that is a string and the message, "Price is a String. Tax is $5.12" is displayed. `TaxAmount` is called with a `Decimal` value the second time and the message, "Price is a Decimal. Tax is $5.12" is displayed.
 
 ## <a name="see-also"></a>请参阅
 
 - [对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [在 Visual Basic 中隐藏](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Sub 语句](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [继承的基础知识](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
 - [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)

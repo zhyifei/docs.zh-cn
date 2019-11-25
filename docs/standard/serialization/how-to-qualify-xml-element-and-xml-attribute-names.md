@@ -9,16 +9,16 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 04e9dd3c135c516fa5554b9b547306337fb6a668
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f79caf6ff295d793c615b17d387cdd165e440e7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755399"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353101"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>如何：限定 XML 元素和 XML 属性名
 
-实例所包含的 XML 命名空间<xref:System.Xml.Serialization.XmlSerializerNamespaces>类必须符合万维网联合会 (W3C) 规范[XML 中的命名空间](https://www.w3.org/TR/REC-xml-names/)。
+XML namespaces contained by instances of the <xref:System.Xml.Serialization.XmlSerializerNamespaces> class must conform to the World Wide Web Consortium (W3C) specification called [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).
 
 XML 命名空间提供了一种方法，用来限定 XML 文档中 XML 元素和 XML 特性的名称。 限定名由前缀和本地名称组成，两者之间用冒号分隔。 前缀仅用作占位符；它将映射到用于指定命名空间的 URI。 统一管理的 URI 命名空间和本地名称的组合能够产生保证为全局唯一的名称。
 
@@ -42,6 +42,7 @@ XML 命名空间提供了一种方法，用来限定 XML 文档中 XML 元素和
 
 下面的示例创建一个 `XmlSerializerNamespaces`，并向对象添加两个前缀和命名空间对。 该代码创建了用来序列化 `XmlSerializer` 类实例的 `Books`， 并通过 `Serialize` 调用 `XmlSerializerNamespaces` 方法，使 XML 可以包含带前缀的命名空间。
 
+<!-- TODO: THE FOLLOWING VB SNIPPET ISN'T CORRECT!! -->
 ```vb
 Option Explicit
 public class Price
@@ -174,8 +175,8 @@ public class Book
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [XML 架构定义工具和 XML 序列化](the-xml-schema-definition-tool-and-xml-serialization.md)
 - [XML 序列化简介](introducing-xml-serialization.md)
-- [XmlSerializer 类](xref:System.Xml.Serialization.XmlSerializer)
+- [XmlSerializer Class](xref:System.Xml.Serialization.XmlSerializer)
 - [用来控制 XML 序列化的属性](attributes-that-control-xml-serialization.md)
-- [如何：指定 XML Stream 的替代元素名称](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [如何：将对象序列化](how-to-serialize-an-object.md)
+- [如何：指定 XML 流的替代元素名称](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [如何：序列化对象](how-to-serialize-an-object.md)
 - [如何：反序列化对象](how-to-deserialize-an-object.md)

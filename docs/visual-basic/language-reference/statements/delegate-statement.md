@@ -1,5 +1,5 @@
 ---
-title: Delegate 语句（Visual Basic）
+title: Delegate 语句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Delegate
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 4a8260da4d2224551de71fd54f734007c7fa214f
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 662d2c3c0767adfe406e0a6f1b1e6dccd704e795
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583461"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354077"
 ---
 # <a name="delegate-statement"></a>Delegate 语句
-用于声明委托。 委托是一种引用类型，引用类型的 `Shared` 方法或对象的实例方法。 任何具有匹配参数和返回类型的过程都可以用于创建此委托类的实例。 稍后可以通过委托实例调用该过程。  
+Used to declare a delegate. A delegate is a reference type that refers to a `Shared` method of a type or to an instance method of an object. Any procedure with matching parameter and return types can be used to create an instance of this delegate class. The procedure can then later be invoked by means of the delegate instance.  
   
 ## <a name="syntax"></a>语法  
   
@@ -28,20 +28,20 @@ ms.locfileid: "72583461"
   
 |术语|定义|  
 |---|---|  
-|`attrlist`|可选。 应用于此委托的特性的列表。 用逗号分隔多个属性。 必须将[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)用尖括号括起来（"`<`" 和 "`>`"）。|  
-|`accessmodifier`|可选。 指定哪些代码可以访问委托。 可以是以下各项之一：<br /><br /> - [公共](../../../visual-basic/language-reference/modifiers/public.md)。 可以访问声明委托的元素的任何代码都可以访问它。<br />-   [受保护](../../../visual-basic/language-reference/modifiers/protected.md)。 只有委托的类或派生类中的代码可以访问它。<br />-   [朋友](../../../visual-basic/language-reference/modifiers/friend.md)。 只有同一程序集中的代码才能访问该委托。<br />- [专用](../../../visual-basic/language-reference/modifiers/private.md)。 只有声明委托的元素中的代码才能访问它。<br /><br /> 仅 - [受保护的 Friend](../../language-reference/modifiers/protected-friend.md) ：委托的类、派生类或同一程序集内的代码可以访问该委托。 <br />仅 -  委托的类中或同一程序集中的派生类中的[私有受保护](../../language-reference/modifiers/private-protected.md)代码可以访问该委托。 |  
-|`Shadows`|可选。 指示此委托重新声明并隐藏基类中具有相同名称的编程元素或重载元素集。 可以与任何其他类型一起隐藏任何类型的已声明元素。<br /><br /> 隐藏的元素不可在隐藏它的派生类中使用（除了从隐藏元素不可访问的位置）。 例如，如果 `Private` 元素隐藏了基类元素，则没有权限访问 `Private` 元素的代码将改为访问基类元素。|  
-|`Sub`|可选，但必须出现 `Sub` 或 `Function`。 将此过程声明为不返回值的委托 `Sub` 过程。|  
-|`Function`|可选，但必须出现 `Sub` 或 `Function`。 将此过程声明为委托 `Function` 返回值的过程。|  
-|`name`|必须的。 委托类型的名称;遵循标准变量命名约定。|  
-|`typeparamlist`|可选。 此委托的类型参数列表。 多个类型参数之间用逗号分隔。 根据需要，可以使用 `In` 和 `Out` 泛型修饰符将每个类型参数声明为变体。 必须将[类型列表](../../../visual-basic/language-reference/statements/type-list.md)括在括号内，并将其与 `Of` 关键字一起引入。|  
-|`parameterlist`|可选。 调用时传递给过程的参数的列表。 必须将[参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)括在括号中。|  
-|`type`|如果指定 `Function` 过程，则为必需。 返回值的数据类型。|  
+|`attrlist`|可选。 List of attributes that apply to this delegate. 用逗号分隔多个属性。 You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").|  
+|`accessmodifier`|可选。 Specifies what code can access the delegate. 可以是以下各项之一：<br /><br /> - [Public](../../../visual-basic/language-reference/modifiers/public.md). Any code that can access the element that declares the delegate can access it.<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md). Only code within the delegate's class or a derived class can access it.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md). Only code within the same assembly can access the delegate.<br />- [Private](../../../visual-basic/language-reference/modifiers/private.md). Only code within the element that declares the delegate can access it.<br /><br /> - [Protected Friend](../../language-reference/modifiers/protected-friend.md) Only code within the delegate's class, a derived class, or the same assembly can access the delegate. <br />- [Private Protected](../../language-reference/modifiers/private-protected.md) Only code within the delegate's class or in a derived class in the same assembly can access the delegate. |  
+|`Shadows`|可选。 Indicates that this delegate redeclares and hides an identically named programming element, or set of overloaded elements, in a base class. 可以与任何其他类型一起隐藏任何类型的已声明元素。<br /><br /> 隐藏的元素不可在隐藏它的派生类中使用（除了从隐藏元素不可访问的位置）。 For example, if a `Private` element shadows a base class element, code that does not have permission to access the `Private` element accesses the base class element instead.|  
+|`Sub`|Optional, but either `Sub` or `Function` must appear. Declares this procedure as a delegate `Sub` procedure that does not return a value.|  
+|`Function`|Optional, but either `Sub` or `Function` must appear. Declares this procedure as a delegate `Function` procedure that returns a value.|  
+|`name`|必须的。 Name of the delegate type; follows standard variable naming conventions.|  
+|`typeparamlist`|可选。 List of type parameters for this delegate. Multiple type parameters are separated by commas. Optionally, each type parameter can be declared variant by using `In` and `Out` generic modifiers. You must enclose the [Type List](../../../visual-basic/language-reference/statements/type-list.md) in parentheses and introduce it with the `Of` keyword.|  
+|`parameterlist`|可选。 List of parameters that are passed to the procedure when it is called. You must enclose the [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md) in parentheses.|  
+|`type`|Required if you specify a `Function` procedure. Data type of the return value.|  
   
 ## <a name="remarks"></a>备注  
- @No__t_0 语句定义委托类的参数和返回类型。 任何具有匹配参数和返回类型的过程都可以用于创建此委托类的实例。 然后，可以通过调用委托的 `Invoke` 方法，稍后通过委托实例调用该过程。  
+ The `Delegate` statement defines the parameter and return types of a delegate class. Any procedure with matching parameters and return types can be used to create an instance of this delegate class. The procedure can then later be invoked by means of the delegate instance, by calling the delegate's `Invoke` method.  
   
- 委托可以在命名空间、模块、类或结构级别进行声明，但不能在过程中声明。  
+ Delegates can be declared at the namespace, module, class, or structure level, but not within a procedure.  
   
  每个委托类均可定义将对象方法指定传递到的构造函数。 委托构造函数的自变量必须是对方法的引用或 lambda 表达式。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "72583461"
  有关委托的详细信息，请参阅[委托](../../../visual-basic/programming-guide/language-features/delegates/index.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用 `Delegate` 语句声明一个用于对两个数字进行操作并返回一个数字的委托。 @No__t_0 方法获取此类型的委托的一个实例，并使用该实例对一对数字进行操作。  
+ The following example uses the `Delegate` statement to declare a delegate for operating on two numbers and returning a number. The `DelegateTest` method takes an instance of a delegate of this type and uses it to operate on pairs of numbers.  
   
  [!code-vb[VbVbalrDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#14)]  
   

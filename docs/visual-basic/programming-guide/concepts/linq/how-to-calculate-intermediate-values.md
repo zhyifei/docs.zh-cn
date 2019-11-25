@@ -1,15 +1,15 @@
 ---
-title: 如何：计算中间值（Visual Basic）
+title: 如何：计算中间值
 ms.date: 07/20/2015
 ms.assetid: 933a97b2-dfe7-4f4d-94ad-e6e20df84abd
-ms.openlocfilehash: 63067c42da37d71ad0fc5488c68d296ac7589aec
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 167293a9af94a0991505b6e9edf225e6d3382bee
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352904"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353355"
 ---
-# <a name="how-to-calculate-intermediate-values-visual-basic"></a>如何：计算中间值（Visual Basic）
+# <a name="how-to-calculate-intermediate-values-visual-basic"></a>How to: Calculate Intermediate Values (Visual Basic)
 本示例演示如何计算可用于进行排序、筛选和选择的中间值。  
   
 ## <a name="example"></a>示例  
@@ -41,7 +41,7 @@ Next
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息，请参阅[命名空间概述（LINQ to XML）（Visual Basic）](namespaces-overview-linq-to-xml.md)。  
+ 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
  本示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的数值数据](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)。  
   
@@ -76,4 +76,4 @@ End Module
   
 ## <a name="see-also"></a>请参阅
 
-- [基本查询（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

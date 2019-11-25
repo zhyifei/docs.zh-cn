@@ -1,21 +1,21 @@
 ---
-title: 如何：创建层次结构使用分组 (Visual Basic)
+title: 如何：使用分组创建层次结构
 ms.date: 07/20/2015
 ms.assetid: 4eb3ca6b-1aed-43de-b8b9-41c769c993f8
-ms.openlocfilehash: dea189d9d689cfba661fd84cb52f8e6658935a30
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3fea3e008e0bb18ae92f8883d08be4f27929b9fd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855408"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341599"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>如何：创建层次结构使用分组 (Visual Basic)
+# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>How to: Create Hierarchy Using Grouping (Visual Basic)
 本示例演示如何将数据分组，再基于分组生成 XML。  
   
 ## <a name="example"></a>示例  
  本示例首先按类别对数据分组，再生成新的 XML 文件，其中的 XML 层次结构反映了分组。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：数值数据 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：数值数据 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)。  
   
 ```vb  
 Dim doc As XElement = XElement.Load("Data.xml")  
@@ -81,4 +81,4 @@ Console.WriteLine(newData)
   
 ## <a name="see-also"></a>请参阅
 
-- [高级查询技术 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

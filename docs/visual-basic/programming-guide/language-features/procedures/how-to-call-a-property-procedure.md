@@ -1,5 +1,5 @@
 ---
-title: 如何：调用 Property 过程 (Visual Basic)
+title: 如何：调用 Property 过程
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -8,60 +8,60 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-ms.openlocfilehash: d05c1b63f5567ade9935f80ecc022eb4840e0af0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52e6c62ffb81c480ccc1abf06f04eb780218dbf1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864359"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340557"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>如何：调用 Property 过程 (Visual Basic)
-在属性中存储一个值，或检索其值由调用 property 过程。 访问属性访问的变量的相同方法。  
+You call a property procedure by storing a value in the property or retrieving its value. You access a property the same way you access a variable.  
   
- 该属性的`Set`过程存储一个值，并将其`Get`过程检索的值。 但是，不显式调用这些过程的名称。 就像将存储或检索变量的值使用赋值语句或表达式中的属性。 Visual Basic 可以对该属性的过程的调用。  
+ The property's `Set` procedure stores a value, and its `Get` procedure retrieves the value. However, you do not explicitly call these procedures by name. You use the property in an assignment statement or an expression, just as you would store or retrieve the value of a variable. Visual Basic makes the calls to the property's procedures.  
   
-### <a name="to-call-a-propertys-get-procedure"></a>若要调用 property Get 过程  
+### <a name="to-call-a-propertys-get-procedure"></a>To call a property's Get procedure  
   
-1. 将使用变量名的相同方式在表达式中使用的属性名称。 可以使用属性可以在任意位置使用一个变量或常量。  
+1. Use the property name in an expression the same way you would use a variable name. You can use a property anywhere you can use a variable or a constant.  
   
      或  
   
-     使用属性名称之后等号 (`=`) 在赋值语句登录。  
+     Use the property name following the equal (`=`) sign in an assignment statement.  
   
-     下面的示例读取的值<xref:Microsoft.VisualBasic.DateAndTime.Now%2A>属性外，隐式调用其`Get`过程。  
+     The following example reads the value of the <xref:Microsoft.VisualBasic.DateAndTime.Now%2A> property, implicitly calling its `Get` procedure.  
   
      [!code-vb[VbVbalrDateProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#4)]  
   
-2. 如果该属性接受参数，请按照使用括号将参数列表括起来的属性名称。 如果没有任何自变量，可以选择性地省略括号。  
+2. If the property takes arguments, follow the property name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses.  
   
-3. 将参数放在括号中，由逗号分隔参数列表中。 请确保提供的属性定义的相应参数的相同顺序中的自变量。  
+3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the property defines the corresponding parameters.  
   
- 属性的值出现在中，只需为变量表达式或常数那样，或存储在变量或赋值语句左侧的属性。  
+ The value of the property participates in the expression just as a variable or constant would, or it is stored in the variable or property on the left side of the assignment statement.  
   
-### <a name="to-call-a-propertys-set-procedure"></a>若要调用属性的设置过程  
+### <a name="to-call-a-propertys-set-procedure"></a>To call a property's Set procedure  
   
-1. 在赋值语句左侧使用属性名称。  
+1. Use the property name on the left side of an assignment statement.  
   
-     下面的示例设置的值<xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>属性外，隐式调用`Set`过程。  
+     The following example sets the value of the <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A> property, implicitly calling the `Set` procedure.  
   
      [!code-vb[VbVbcnProcedures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#11)]  
   
-2. 如果该属性接受参数，请按照使用括号将参数列表括起来的属性名称。 如果没有任何自变量，可以选择性地省略括号。  
+2. If the property takes arguments, follow the property name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses.  
   
-3. 将参数放在括号中，由逗号分隔参数列表中。 请确保提供的属性定义的相应参数的相同顺序中的自变量。  
+3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the property defines the corresponding parameters.  
   
- 在属性中存储生成的赋值语句右侧的值。  
+ The value generated on the right side of the assignment statement is stored in the property.  
   
 ## <a name="see-also"></a>请参阅
 
 - [属性过程](./property-procedures.md)
 - [过程参数和自变量](./procedure-parameters-and-arguments.md)
 - [Property 语句](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [在 Visual Basic 中属性和变量之间的差异](./differences-between-properties-and-variables.md)
+- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
 - [如何：创建属性](./how-to-create-a-property.md)
-- [如何：声明具有混合的访问级别的属性](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [如何：声明并在 Visual Basic 中调用默认属性](./how-to-declare-and-call-a-default-property.md)
+- [如何：声明具有混合访问级别的属性](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [如何：在属性中放置值](./how-to-put-a-value-in-a-property.md)
-- [如何：从属性获取一个值](./how-to-get-a-value-from-a-property.md)
+- [如何：从属性获取值](./how-to-get-a-value-from-a-property.md)
 - [Get 语句](../../../../visual-basic/language-reference/statements/get-statement.md)
 - [Set 语句](../../../../visual-basic/language-reference/statements/set-statement.md)

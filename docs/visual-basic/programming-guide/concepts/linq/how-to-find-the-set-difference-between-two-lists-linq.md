@@ -1,20 +1,20 @@
 ---
-title: 如何：查找两个列表 (LINQ) (Visual Basic 中) 之间的差集
+title: 如何：查找两个列表之间的差集 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-ms.openlocfilehash: a5c08e270059cd4ab127051d091deff221091fbc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cd33c08416cce5afb6cf7507335f753160b8c6ff
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593463"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344586"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>如何：查找两个列表 (LINQ) (Visual Basic 中) 之间的差集
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)
 此示例演示如何使用 LINQ 对两个字符串列表进行比较，并输出那些位于 names1.txt 中但不在 names2.txt 中的行。  
   
 ### <a name="to-create-the-data-files"></a>创建数据文件  
   
-1. 按照[如何：合并和比较字符串集合 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)。  
+1. Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
   
 ## <a name="example"></a>示例  
   
@@ -51,11 +51,11 @@ End Class
 ' Garcia, Debra  
 ```  
   
- 某些类型的查询在 Visual Basic 中的操作，例如<xref:System.Linq.Enumerable.Except%2A>， <xref:System.Linq.Enumerable.Distinct%2A>， <xref:System.Linq.Enumerable.Union%2A>，和<xref:System.Linq.Enumerable.Concat%2A>，仅采用基于方法的语法进行表示。  
+ Some types of query operations in Visual Basic, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.  
   
 ## <a name="compiling-the-code"></a>编译代码  
-创建一个 VB.NET 控制台应用程序项目，与`Imports`System.Linq 命名空间的语句。
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
   
 ## <a name="see-also"></a>请参阅
 
-- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

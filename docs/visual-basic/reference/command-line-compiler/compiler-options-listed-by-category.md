@@ -1,22 +1,22 @@
 ---
-title: 按类别列出的 Visual Basic 编译器选项
+title: 按类别列出的编译器选项
 ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 8f09566585c06531a346b0143a6002c2854a0b01
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 8b6c142041024e672fe42c8c6f2d3ebe7b07cd65
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182566"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344808"
 ---
-# <a name="visual-basic-compiler-options-listed-by-category"></a>按类别列出的 Visual Basic 编译器选项
-作为从 Visual Studio 集成开发环境 (IDE) 中编译程序的替代方法, 可以使用 Visual Basic 命令行编译器。 下面是按功能类别排序 Visual Basic 命令行编译器选项的列表。  
+# <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic compiler options listed by category
+The Visual Basic command-line compiler is provided as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE). The following is a list of the Visual Basic command-line compiler options sorted by functional category.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
-## <a name="compiler-output"></a>编译器输出  
+## <a name="compiler-output"></a>Compiler output  
   
 |选项|目标|  
 |---|---|  
@@ -39,13 +39,13 @@ ms.locfileid: "71182566"
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|处理 XML 文件的文档注释。|  
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|如果输入相同，则会导致编译器输出的程序集其二进制内容在整个编译中相同。|
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|设置编译器以面向 .NET Compact Framework。|  
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Sets the compiler to target the .NET Compact Framework.|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|指定输出目录。|  
-|[/refonly](refonly-compiler-option.md)|仅输出引用程序集。|
-|[/refout](refout-compiler-option.md)|指定引用程序集的输出路径。|
+|[/refonly](refonly-compiler-option.md)|Outputs only a reference assembly.|
+|[/refout](refout-compiler-option.md)|Specifies the output path of a reference assembly.|
 |[-target](../../../visual-basic/reference/command-line-compiler/target.md)|指定输出的格式。|  
   
-## <a name="net-assemblies"></a>.NET 程序集  
+## <a name="net-assemblies"></a>.NET assemblies  
   
 |选项|目标|  
 |---|---|  
@@ -54,13 +54,13 @@ ms.locfileid: "71182566"
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|从指定的程序集导入命名空间。|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|指定密钥对的密钥容器名称从而为程序集赋予强名称。|  
 |[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|指定包含密钥或密钥对的文件从而为程序集赋予强名称。|  
-|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|指定由[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)选项引用的程序集的位置。|  
+|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|Specifies the location of assemblies referenced by the [-reference](../../../visual-basic/reference/command-line-compiler/reference.md) option.|  
 |[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|从程序集导入元数据。|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|指定模块所属程序集的名称。|  
 |`-analyzer`|从此程序集（缩写形式：-a）运行分析器|  
 |`-additionalfile`|命名其他文件，这些文件不会直接影响代码生成，但可能由分析器用于生成错误或警告。|  
   
-## <a name="debuggingerror-checking"></a>调试/错误检查  
+## <a name="debuggingerror-checking"></a>Debugging/error checking  
   
 |选项|目标|  
 |---|---|  
@@ -83,7 +83,7 @@ ms.locfileid: "71182566"
   
 |选项|目标|  
 |---|---|  
-|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|指定语言版本：9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
+|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Specify language version: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
 |[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|强制执行显式声明变量。|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|执行严格的类语义。|  
 |[-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|指定字符串比较是否应为二进制，或是否应使用特定于区域设置的文本语义。|  
@@ -111,9 +111,9 @@ ms.locfileid: "71182566"
 |[@（指定响应文件）](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|指定响应文件。|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|指定的 DLL 的基址。|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|指定要用于编译中所有源代码文件的代码页。|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|指定 Visual Basic 编译器如何报告内部编译器错误。|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Specifies how the Visual Basic compiler should report internal compiler errors.|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|向 Windows 内核提供下列信息：特定的可执行文件是否支持高熵地址空间布局随机化 (ASLR)。|  
-|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|指定包含启动时要使用`Sub Main`的过程的类。|  
+|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Specifies the class that contains the `Sub Main` procedure to use at startup.|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|不要使用 Vbc.rsp 进行编译|  
 |[-nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|导致编译器不引用标准库。|  
 |[-nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|指示编译器不在可执行文件中嵌入任何应用程序清单。|  
@@ -124,7 +124,7 @@ ms.locfileid: "71182566"
 |[-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)|指定编译器应在不引用 Visual Basic 运行库的情况下进行编译，或在引用特定运行库的情况下进行编译。|  
 |[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|标识用户定义的 Win32 应用程序清单文件要嵌入到项目的可移植可执行 (PE) 文件。|  
 |`-parallel[+&#124;-]`|指定是否使用并发生成 (+)。|  
-|`-checksumalgorithm:<alg>`|指定用于计算 PDB 中存储的源文件校验和的算法。  受支持的值为:SHA1（默认值）或 SHA256。 <br>由于 SHA1 出现冲突, Microsoft 建议 SHA256 或更好。|  
+|`-checksumalgorithm:<alg>`|指定用于计算 PDB 中存储的源文件校验和的算法。  支持的值为：SHA1（默认值）或 SHA256。 <br>Due to collision problems with SHA1, Microsoft recommends SHA256 or better.|  
   
 ## <a name="see-also"></a>请参阅
 

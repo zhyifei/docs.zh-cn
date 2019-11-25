@@ -1,5 +1,5 @@
 ---
-title: Throw 语句 (Visual Basic)
+title: Throw 语句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Throw
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-ms.openlocfilehash: 9680700267f17c8e316de351fead61f1dc4aded0
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 147345990b625e034e651e69b322bc098d0bd8de
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869024"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352784"
 ---
 # <a name="throw-statement-visual-basic"></a>Throw 语句 (Visual Basic)
 
-在过程中引发异常。
+Throws an exception within a procedure.
 
 ## <a name="syntax"></a>语法
 
@@ -34,19 +34,19 @@ Throw [ expression ]
 ## <a name="part"></a>部件
 
 `expression`\
-提供有关要引发的异常的信息。 如果位于`Catch`语句中, 则为可选; 否则为必需。
+Provides information about the exception to be thrown. Optional when residing in a `Catch` statement, otherwise required.
 
 ## <a name="remarks"></a>备注
 
-语句引发异常, 你可以使用结构化异常处理代码 (`Try`... `Throw` `Catch`...) 或非结构化异常处理代码`On Error GoTo`()。 `Finally` 您可以使用`Throw`语句来捕获代码中的错误, 因为 Visual Basic 在调用堆栈中向上移动, 直到找到相应的异常处理代码。
+The `Throw` statement throws an exception that you can handle with structured exception-handling code (`Try`...`Catch`...`Finally`) or unstructured exception-handling code (`On Error GoTo`). You can use the `Throw` statement to trap errors within your code because Visual Basic moves up the call stack until it finds the appropriate exception-handling code.
 
-不带 expression 的`Catch` `Catch`语句只能用在语句中, 在这种情况下, 该语句重新引发语句当前正在处理的异常。 `Throw`
+A `Throw` statement with no expression can only be used in a `Catch` statement, in which case the statement rethrows the exception currently being handled by the `Catch` statement.
 
-语句重置`expression`异常的调用堆栈。 `Throw` 如果`expression`未提供, 则调用堆栈保持不变。 您可以通过<xref:System.Exception.StackTrace%2A>属性访问异常的调用堆栈。
+The `Throw` statement resets the call stack for the `expression` exception. If `expression` is not provided, the call stack is left unchanged. You can access the call stack for the exception through the <xref:System.Exception.StackTrace%2A> property.
 
 ## <a name="example"></a>示例
 
-下面的代码使用`Throw`语句引发异常:
+The following code uses the `Throw` statement to throw an exception:
 
 [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]
 

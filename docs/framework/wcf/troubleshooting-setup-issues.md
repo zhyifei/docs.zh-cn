@@ -2,12 +2,12 @@
 title: 安装问题疑难解答
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 02e6446893e661a0ec0553b0ddf254c40595595c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 586defea0f761f8b6dea691b778d221cff62c7cf
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321353"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281607"
 ---
 # <a name="troubleshooting-setup-issues"></a>安装问题疑难解答
 本主题介绍如何对 Windows Communication Foundation （WCF）设置问题进行故障排除。  
@@ -25,7 +25,7 @@ ms.locfileid: "72321353"
   
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC Bridge 3.0.0.0  
   
- 如果使用从**控制面板**中的 "**添加/删除程序**" 小程序启动的 .NET Framework 3.0 安装程序运行修复，则不会重新创建这些密钥。 若要重新正确创建这些项，用户必须卸载并重新安装 .NET Framework 3.0。  
+ 则在使用从 **“控制面板”** 中的 **“添加/删除程序”** 小程序中启动的 .NET Framework 3.0 安装程序运行修复时，不会重新创建这些项。 若要重新正确创建这些项，用户必须卸载并重新安装 .NET Framework 3.0。  
   
 ## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>在安装 .NET Framework 3.0 软件包过程中 WMI Service Corruption 阻止 Windows Communication Foundation WMI 提供程序的安装  
  WMI Service Corruption 可能阻止 Windows Communication Foundation WMI 提供程序的安装。 在安装过程中，Windows Communication Foundation 安装程序无法使用 mofcomp.exe 组件注册 WCF .mof 文件。 下面列出了几个症状：  
@@ -54,25 +54,25 @@ ms.locfileid: "72321353"
   
 1. 运行[WMI Diagnosis Utility 版本 2.0](https://go.microsoft.com/fwlink/?LinkId=94685)以修复 WMI 服务。 有关使用此工具的详细信息，请参阅[WMI Diagnosis Utility](https://go.microsoft.com/fwlink/?LinkId=94686)主题。  
   
- 使用**控制面板**中的 "**添加/删除程序**" 小程序修复 .NET Framework 3.0 安装，或卸载/重新安装 .NET Framework 3.0。  
+ 使用 **“控制面板”** 中的 **“添加/删除程序”** 小程序修复 .NET Framework 3.0 安装，或卸载/重新安装 .NET Framework 3.0。  
   
 ## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>在安装 .NET Framework 3.5 后修复 .NET Framework 3.0 会移除 .NET Framework 3.5 在 machine.config 中引入的配置元素  
- 如果在安装 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 后修复 .NET Framework 3.0，则会从 machine.config 中移除由 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 引入的配置元素。 但是，web.config 保持不变。 解决方法是在此之后通过 ARP 修复 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]，或将[工作流服务注册工具（wfservicesreg.exe）](workflow-service-registration-tool-wfservicesreg-exe.md)与 `/c` 开关一起使用。  
+ 如果在安装 .NET Framework 3.5 后修复 .NET Framework 3.0，则会删除在 machine.config 中 .NET Framework 3.5 引入的配置元素。 但是，web.config 保持不变。 解决方法是在此之后通过 ARP 修复 .NET Framework 3.5，或将[工作流服务注册工具（wfservicesreg.exe）](workflow-service-registration-tool-wfservicesreg-exe.md)与 `/c` 开关一起使用。  
   
  可以在%windir%\Microsoft.NET\framework\v3.5\ 或%Windir%\microsoft.net\framework64\v3.5\ 中找到中找到[工作流服务注册工具（wfservicesreg.exe）](workflow-service-registration-tool-wfservicesreg-exe.md)  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>安装 .NET Framework 3.5 之后，为 WCF/WF Webhost 正确配置 IIS  
- 如果 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 安装无法配置与 WCF 相关的其他 IIS 配置设置，则会在安装日志中记录错误并继续。 对运行 WorkflowServices 应用程序的任何尝试都将失败，因为缺少必需的配置设置。 例如，加载 xoml 或规则服务会失败。  
+ 如果 .NET Framework 3.5 安装无法配置与 WCF 相关的其他 IIS 配置设置，则会在安装日志中记录错误并继续。 对运行 WorkflowServices 应用程序的任何尝试都将失败，因为缺少必需的配置设置。 例如，加载 xoml 或规则服务会失败。  
   
  若要解决此问题，请将[工作流服务注册工具（wfservicesreg.exe）](workflow-service-registration-tool-wfservicesreg-exe.md)与 `/c` 开关一起使用，以正确配置计算机上的 IIS 脚本映射。 可以在%windir%\Microsoft.NET\framework\v3.5\ 或%Windir%\microsoft.net\framework64\v3.5\ 中找到中找到[工作流服务注册工具（wfservicesreg.exe）](workflow-service-registration-tool-wfservicesreg-exe.md)  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>无法从程序集“System.ServiceModel, Version 3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089”加载类型“System.ServiceModel.Activation.HttpModule”  
- 如果安装 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 并启用 WCF HTTP 激活，则会发生此错误。 若要解决此问题，请从 Visual Studio 的开发人员命令提示中运行以下命令行：  
+ 如果安装 .NET Framework 4 并启用 WCF HTTP 激活，则会发生此错误。 若要解决此问题，请从 Visual Studio 的开发人员命令提示中运行以下命令行：  
   
 ```console
 aspnet_regiis.exe -i -enable  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [设置说明](./samples/set-up-instructions.md)

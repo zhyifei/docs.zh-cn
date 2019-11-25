@@ -1,15 +1,15 @@
 ---
-title: 如何：检索单个属性（LINQ to XML）（Visual Basic）
+title: 如何：检索单个特性 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
-ms.openlocfilehash: f56ec18933856d862f9ef9630ce3d33805f96894
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 02afbc987cf9f55d16bb56912f3eaf45cd8c9a37
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321316"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347564"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>如何：检索单个属性（LINQ to XML）（Visual Basic）
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>How to: Retrieve a Single Attribute (LINQ to XML) (Visual Basic)
 本主题说明在给定属性名称的情况下，如何检索元素的单个属性。 这对于编写查询表达式查找具有特定属性的元素十分有用。  
   
  <xref:System.Xml.Linq.XElement.Attribute%2A> 类的 <xref:System.Xml.Linq.XElement> 方法返回具有指定名称的 <xref:System.Xml.Linq.XAttribute>。  
@@ -63,7 +63,7 @@ work
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 为 <xref:System.Xml.Linq.XAttribute> 类提供了以下类型的显式强制转换运算符：`string`、`bool`、`bool?`、`int`、`int?`、`uint`、`uint?`、`long`、`long?`、`ulong`、`ulong?`、`float`、`float?`、`double`、`double?`、`decimal`、`decimal?`、`DateTime`、`DateTime?`、`TimeSpan`、`TimeSpan?`、`GUID` 和 `GUID?`。  
   
 ## <a name="example"></a>示例  
- 下面的示例显式命名空间中的属性的相同代码。 有关详细信息，请参阅[命名空间概述（LINQ to XML）（Visual Basic）](namespaces-overview-linq-to-xml.md)。  
+ 下面的示例显式命名空间中的属性的相同代码。 For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  

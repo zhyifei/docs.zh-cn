@@ -1,5 +1,5 @@
 ---
-title: 使用 DebugView 属性 (Visual Basic) 语法
+title: Syntax used by DebugView property
 description: 描述 DebugView 属性使用的特殊语法以生成表达式数的字符串表示形式
 author: zspitz
 ms.author: wiwagn
@@ -8,18 +8,18 @@ ms.topic: reference
 helpviewer_keywords:
 - expression trees
 - debugview
-ms.openlocfilehash: ae2c75607f7b9cdc40fc5c163ce533f0472ab454
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 98ceba37aa226fab68ae1c1028e2a1139b3b8e7e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689535"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346870"
 ---
 # <a name="debugview-syntax"></a>`DebugView` 语法
 
 `DebugView` 属性（仅在调试时可用）提供表达式树的字符串呈现。 大部分语法都相当容易理解；特殊情况将在以下部分中介绍。
 
-每个示例后跟一个注释块，其中包含`DebugView`。
+Each example is followed by a comment block containing the `DebugView`.
 
 ## <a name="parameterexpression"></a>ParameterExpression
 
@@ -45,15 +45,15 @@ Dim numParam As ParameterExpression = Expression.Parameter(GetType(Integer))
 
 对于表示整数值、字符串和 `null` 的 <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> 对象，将显示常数的值。
 
-对于某些数值类型，将后缀添加到值：
+For some numeric types, a suffix is added to the value:
 
-| 类型 | 关键字 | Suffix |
+| 键入 | 关键字 | 后缀 |
 |--|--|--|
 | <xref:System.UInt32> | [UInteger](../../../language-reference/data-types/uinteger-data-type.md) | U |
 | <xref:System.Int64> | [Long](../../../language-reference/data-types/long-data-type.md) | L |
 | <xref:System.UInt64> | [ULong](../../../language-reference/data-types/ulong-data-type.md) | UL |
-| <xref:System.Double> | [Double](../../../language-reference/data-types/double-data-type.md) | D |
-| <xref:System.Single> | [Single](../../../language-reference/data-types/single-data-type.md) | F |
+| <xref:System.Double> | [双精度](../../../language-reference/data-types/double-data-type.md) | D |
+| <xref:System.Single> | [单精度](../../../language-reference/data-types/single-data-type.md) | F |
 | <xref:System.Decimal> | [小数](../../../language-reference/data-types/decimal-data-type.md) | M |
 
 ### <a name="examples"></a>示例

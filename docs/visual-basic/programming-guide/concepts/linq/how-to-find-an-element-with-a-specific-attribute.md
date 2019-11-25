@@ -1,21 +1,21 @@
 ---
-title: 如何：查找具有特定特性的元素 (Visual Basic)
+title: 如何：查找具有特定特性的元素
 ms.date: 07/20/2015
 ms.assetid: 59fb7c19-d42f-40eb-8cf8-f1d5b9658eb7
-ms.openlocfilehash: 615dc9bb4ee9b90c0e7b9ecb86d9342bc688f3b1
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: c27905f286d6b346e7615baeda15e156afb366f2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710278"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352939"
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>如何：查找具有特定特性的元素 (Visual Basic)
+# <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>How to: Find an Element with a Specific Attribute (Visual Basic)
 本主题演示如何查找其属性具有特定值的元素。  
   
 ## <a name="example"></a>示例  
  本示例演示如何查找具有值为“Billing”的 `Address` 属性的 `Type` 元素。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。  
+ 本示例使用以下 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。  
   
 ```vb  
 Dim root As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -41,12 +41,12 @@ Next
 </Address>  
 ```  
   
- 请注意, 此示例使用[Xml 子轴属性](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)、 [xml 属性轴属性](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)和[xml 值属性](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。  
+ Note that this example uses the [XML Child axis property](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), the [XML Attribute axis property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md), and the [XML Value property](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息, 请参阅[命名空间概述 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)。  
+ 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的典型采购单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)。  
+ 本示例使用以下 XML 文档：[示例 XML 文件：命名空间中的典型采购订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)。  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -82,6 +82,6 @@ End Module
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [基本查询 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
 - [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [投影操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [Projection Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)

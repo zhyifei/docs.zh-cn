@@ -1,17 +1,17 @@
 ---
-title: 面向对象的编程 (Visual Basic)
+title: Object-oriented programming
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
-ms.openlocfilehash: 058d8b932e50f784d4a5cefa9fadfb31953687f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3739919273f4cdd285d519c414c542f1a82a16d2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783508"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348163"
 ---
-# <a name="object-oriented-programming-visual-basic"></a>面向对象的编程 (Visual Basic)
+# <a name="object-oriented-programming-visual-basic"></a>Object-oriented programming (Visual Basic)
 
-Visual Basic 为面向对象的编程，包括封装、 继承和多态性提供完整支持。
+Visual Basic provides full support for object-oriented programming including encapsulation, inheritance, and polymorphism.
 
  “封装”意味着将一组相关属性、方法和其他成员视为一个单元或对象。
 
@@ -23,18 +23,18 @@ Visual Basic 为面向对象的编程，包括封装、 继承和多态性提供
 
 - [类和对象](#classes-and-objects)
   - [类成员](#class-members)
-    - [属性和字段](#properties-and-fields)
+    - [Properties and fields](#properties-and-fields)
     - [方法](#methods)
     - [构造函数](#constructors)
     - [析构函数](#destructors)
     - [事件](#events)
-    - [嵌套的类](#nested-classes)
-  - [访问修饰符和访问级别](#access-modifiers-and-access-levels)
-    - [实例化类](#instantiating-classes)
-    - [共享的类和成员](#shared-classes-and-members)
+    - [Nested classes](#nested-classes)
+  - [Access modifiers and access levels](#access-modifiers-and-access-levels)
+    - [Instantiating classes](#instantiating-classes)
+    - [Shared classes and members](#shared-classes-and-members)
     - [匿名类型](#anonymous-types)
 - [继承](#inheritance)
-  - [重写成员](#overriding-members)
+  - [Overriding members](#overriding-members)
 - [接口](#interfaces)
 - [泛型](#generics)
 - [委托](#delegates)
@@ -50,7 +50,7 @@ Class SampleClass
 End Class
 ```
 
-Visual Basic 还提供了名为 structure 的类的轻量级版本，当您需要创建大量对象并且不想为此消耗太多内存时，这些类非常有用。
+Visual Basic also provides a light version of classes called *structures* that are useful when you need to create large array of objects and do not want to consume too much memory for that.
 
 定义结构：
 
@@ -64,11 +64,11 @@ End Structure
 - [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)
 - [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)
 
-### <a name="class-members"></a>类成员
+### <a name="class-members"></a>Class members
 
 每个类都可以具有不同的“类成员”。类成员包括属性（用于描述类数据）、方法（用于定义类行为）和事件（用于在不同的类和对象之间提供通信）。
 
-#### <a name="properties-and-fields"></a>属性和字段
+#### <a name="properties-and-fields"></a>Properties and fields
 
 字段和属性表示对象包含的信息。 字段类似于变量，因为可以直接读取或设置它们。
 
@@ -82,7 +82,7 @@ End Class
 
 属性具有 get 和 set 过程，它们对如何设置或返回值提供更多的控制。
 
-Visual Basic 允许你创建私有字段来存储属性值，或者使用所谓的自动实现属性，创建此字段自动在后台，并为属性过程提供基本逻辑。
+Visual Basic allows you either to create a private field for storing the property value or use so-called auto-implemented properties that create this field automatically behind the scenes and provide the basic logic for the property procedures.
 
 定义自动实现的属性：
 
@@ -150,7 +150,7 @@ Overloads Sub Display(ByVal theInteger As Integer)
 End Sub
 ```
 
-大多数情况下，方法是在类定义中声明的。 但是，Visual Basic 还支持*扩展方法*，可以将方法添加到现有类之外的类的实际定义。
+大多数情况下，方法是在类定义中声明的。 However, Visual Basic also supports *extension methods* that allow you to add methods to an existing class outside the actual definition of the class.
 
 有关详细信息，请参见:
 
@@ -173,7 +173,7 @@ Class SampleClass
 End Class
 ```
 
-有关详细信息，请参见:[对象生存期：如何创建和销毁对象](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。
+For more information, see: [Object Lifetime: How Objects Are Created and Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
 
 #### <a name="destructors"></a>析构函数
 
@@ -185,15 +185,15 @@ End Class
 
 类或对象可以通过事件向其他类或对象通知发生的相关事情。 发送（或引发）事件的类称为“发行者”，接收（或处理）事件的类称为“订户”。 有关事件以及如何引发和处理事件的详细信息，请参阅[事件](../../../standard/events/index.md)。
 
-- 若要声明事件，请使用[Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)。
+- To declare events, use the [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).
 
-- 若要引发事件，请使用[RaiseEvent 语句](../../../visual-basic/language-reference/statements/raiseevent-statement.md)。
+- To raise events, use the [RaiseEvent Statement](../../../visual-basic/language-reference/statements/raiseevent-statement.md).
 
-- 若要指定事件处理程序声明的方式，请使用[WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)语句和[处理](../../../visual-basic/language-reference/statements/handles-clause.md)子句。
+- To specify event handlers using a declarative way, use the [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) statement and the [Handles](../../../visual-basic/language-reference/statements/handles-clause.md) clause.
 
-- 若要能够动态地添加、 删除和更改与事件关联的事件处理程序，请使用[AddHandler 语句](../../../visual-basic/language-reference/statements/addhandler-statement.md)并[RemoveHandler 语句](../../../visual-basic/language-reference/statements/removehandler-statement.md)一起使用[AddressOf运算符](../../../visual-basic/language-reference/operators/addressof-operator.md)。
+- To be able to dynamically add, remove, and change the event handler associated with an event, use the [AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md) and [RemoveHandler Statement](../../../visual-basic/language-reference/statements/removehandler-statement.md) together with the [AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md).
 
-#### <a name="nested-classes"></a>嵌套的类
+#### <a name="nested-classes"></a>Nested classes
 
 在另一个类中定义的类称为“嵌套”。 默认情况下，嵌套类是私有类。
 
@@ -211,7 +211,7 @@ End Class
 Dim nestedInstance As Container.Nested = New Container.Nested()
 ```
 
-### <a name="access-modifiers-and-access-levels"></a>访问修饰符和访问级别
+### <a name="access-modifiers-and-access-levels"></a>Access modifiers and access levels
 
 所有类和类方法都可以使用“访问修饰符”指定自己为其他类提供的访问级别。
 
@@ -219,15 +219,15 @@ Dim nestedInstance As Container.Nested = New Container.Nested()
 
 |Visual Basic 修饰符|定义|
 |---------------------------|----------------|
-|[Public](../../../visual-basic/language-reference/modifiers/public.md)|同一程序集中的任何其他代码或引用该程序集的其他程序集都可以访问该类型或成员。|
+|[COMClassAttribute](../../../visual-basic/language-reference/modifiers/public.md)|同一程序集中的任何其他代码或引用该程序集的其他程序集都可以访问该类型或成员。|
 |[Private](../../../visual-basic/language-reference/modifiers/private.md)|只有同一类中的代码可以访问该类型或成员。|
 |[Protected](../../../visual-basic/language-reference/modifiers/protected.md)|只有同一类或派生类中的代码可以访问该类型或成员。|
 |[Friend](../../../visual-basic/language-reference/modifiers/friend.md)|同一程序集中的任何代码都可以访问该类型或成员，但其他程序集中的代码不可以。|
 |`Protected Friend`|同一程序集中的任何代码或其他程序集中的任何派生类都可以访问该类型或成员。|
 
-有关详细信息，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。
+For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
-### <a name="instantiating-classes"></a>实例化类
+### <a name="instantiating-classes"></a>Instantiating classes
 
 若要创建对象，你需要实例化类，即创建类实例。
 
@@ -254,13 +254,13 @@ Dim sampleObject = New SampleClass With
 有关详细信息，请参见:
 
 - [New 运算符](../../../visual-basic/language-reference/operators/new-operator.md)
-- [对象初始值设定项：命名和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [对象初始值设定项：命名类型和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-### <a name="shared-classes-and-members"></a>共享的类和成员
+### <a name="shared-classes-and-members"></a>Shared classes and members
 
- 类的共享的成员是类的属性、 过程或字段的所有实例共享。
+ A shared member of the class is a property, procedure, or field that is shared by all instances of a class.
 
- 若要定义的共享的成员：
+ To define a shared member:
 
 ```vb
 Class SampleClass
@@ -268,13 +268,13 @@ Class SampleClass
 End Class
 ```
 
- 若要访问共享的成员，而无需创建此类的对象使用的类的名称：
+ To access the shared member, use the name of the class without creating an object of this class:
 
 ```vb
 MsgBox(SampleClass.SampleString)
 ```
 
- 在 Visual Basic 中的共享的模块共享了仅限成员并不能实例化。 共享的成员也不能访问非共享的属性、 字段或方法
+ Shared modules in Visual Basic have shared members only and cannot be instantiated. Shared members also cannot access non-shared properties, fields or methods
 
  有关详细信息，请参见:
 
@@ -293,14 +293,14 @@ Dim sampleObject =
     New With {Key .FirstProperty = "A", .SecondProperty = "B"}
 ```
 
-有关详细信息，请参见:[匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。
+有关详细信息，请参阅：[匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。
 
 ## <a name="inheritance"></a>继承
 
-通过继承，可以创建一个新类，它重用、扩展和修改另一个类中定义的行为。 其成员被继承的类称为“基类”，继承这些成员的类称为“派生类”。 但是，在 Visual Basic 中的所有类隐式都继承自<xref:System.Object>类，该类支持.NET 类层次结构，并向所有类提供低级服务。
+通过继承，可以创建一个新类，它重用、扩展和修改另一个类中定义的行为。 其成员被继承的类称为“基类”，继承这些成员的类称为“派生类”。 However, all classes in Visual Basic implicitly inherit from the <xref:System.Object> class that supports .NET class hierarchy and provides low-level services to all classes.
 
 > [!NOTE]
-> Visual Basic 不支持多重继承。 即，只能为一个派生类指定一个基类。
+> Visual Basic doesn't support multiple inheritance. 即，只能为一个派生类指定一个基类。
 
 从基类继承：
 
@@ -332,7 +332,7 @@ End Class
 - [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
 
-### <a name="overriding-members"></a>重写成员
+### <a name="overriding-members"></a>Overriding members
 
 默认情况下，派生类继承其基类的所有成员。 若希望更改继承成员的行为，则需要重写该成员。 即，可以在派生类中定义方法、属性或事件的新实现。
 
@@ -343,7 +343,7 @@ End Class
 |[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)|允许在派生类中重写类成员。|
 |[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)|重写基类中定义的虚拟（可重写）成员。|
 |[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|禁止在继承类中重写成员。|
-|[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|要求在派生类中重写类成员。|
+|[New](../../../visual-basic/language-reference/modifiers/mustoverride.md)|要求在派生类中重写类成员。|
 |[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)|隐藏继承自基类的成员|
 
 ## <a name="interfaces"></a>接口
@@ -377,7 +377,7 @@ End Class
 
 ## <a name="generics"></a>泛型
 
-类、 结构、 接口和.NET 中的方法可以包括*类型参数*定义类型的对象，它们可以存储或使用。 最常见的泛型示例是集合，从中可以指定要存储在集合中的对象的类型。
+Classes, structures, interfaces and methods in .NET can include *type parameters* that define types of objects that they can store or use. 最常见的泛型示例是集合，从中可以指定要存储在集合中的对象的类型。
 
 定义泛型类：
 
@@ -397,7 +397,7 @@ sampleObject.Field = "Sample string"
 有关详细信息，请参见:
 
 - [泛型](../../../standard/generics/index.md)
-- [Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 
 ## <a name="delegates"></a>委托
 

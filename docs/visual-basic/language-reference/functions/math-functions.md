@@ -1,5 +1,5 @@
 ---
-title: 数学函数 (Visual Basic)
+title: 数学函数
 ms.date: 07/20/2015
 helpviewer_keywords:
 - math functions, Visual Basic
@@ -7,56 +7,56 @@ helpviewer_keywords:
 - math routines
 - Atn function
 ms.assetid: 4d2d82e7-6924-42fe-a4a7-b4dd5bebbd0c
-ms.openlocfilehash: e5f87a8e367e8c9df65b979fea3781b42ee3ce83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1cd6a846a7dc1dddcf6bdb5eb99ebc1c57a012c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801343"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348066"
 ---
 # <a name="math-functions-visual-basic"></a>数学函数 (Visual Basic)
-方法<xref:System.Math?displayProperty=nameWithType>类提供三角、 对数和其他通用数学函数。  
+The methods of the <xref:System.Math?displayProperty=nameWithType> class provide trigonometric, logarithmic, and other common mathematical functions.  
   
 ## <a name="remarks"></a>备注  
- 下表列出了方法的<xref:System.Math?displayProperty=nameWithType>类。 您可以使用这些在 Visual Basic 程序中。  
+ The following table lists methods of the <xref:System.Math?displayProperty=nameWithType> class. You can use these in a Visual Basic program.  
   
-|.NET 方法|描述|  
+|.NET method|描述|  
 |---------------------------|-----------------|  
 |<xref:System.Math.Abs%2A>|返回数字的绝对值。|  
 |<xref:System.Math.Acos%2A>|返回余弦值为指定数字的角度。|  
 |<xref:System.Math.Asin%2A>|返回正弦值为指定数字的角度。|  
 |<xref:System.Math.Atan%2A>|返回正切值为指定数字的角度。|  
 |<xref:System.Math.Atan2%2A>|返回正切值为两个指定数字的商的角度。|  
-|<xref:System.Math.BigMul%2A>|返回两个 32 位数字的完整的产品。|  
-|<xref:System.Math.Ceiling%2A>|返回大于或等于指定的最小整数值`Decimal`或`Double`。|  
+|<xref:System.Math.BigMul%2A>|Returns the full product of two 32-bit numbers.|  
+|<xref:System.Math.Ceiling%2A>|Returns the smallest integral value that's greater than or equal to the specified `Decimal` or `Double`.|  
 |<xref:System.Math.Cos%2A>|返回指定角度的余弦值。|  
 |<xref:System.Math.Cosh%2A>|返回指定角度的双曲余弦值。|  
-|<xref:System.Math.DivRem%2A>|返回两个 32 位或 64 位有符号整数的商和输出参数中返回余数。|  
-|<xref:System.Math.Exp%2A>|返回 e （自然对数的底数） 指定次幂。|  
-|<xref:System.Math.Floor%2A>|返回小于或等于指定的最大整数`Decimal`或`Double`数。|  
-|<xref:System.Math.IEEERemainder%2A>|返回由另一个相除所得的指定数量的其余部分指定的数量。|  
-|<xref:System.Math.Log%2A>|在使用指定底返回指定数字的自然 （以 e） 对数或指定数量的对数。|  
+|<xref:System.Math.DivRem%2A>|Returns the quotient of two 32-bit or 64-bit signed integers, and also returns the remainder in an output parameter.|  
+|<xref:System.Math.Exp%2A>|Returns e (the base of natural logarithms) raised to the specified power.|  
+|<xref:System.Math.Floor%2A>|Returns the largest integer that's less than or equal to the specified `Decimal` or `Double` number.|  
+|<xref:System.Math.IEEERemainder%2A>|Returns the remainder that results from the division of a specified number by another specified number.|  
+|<xref:System.Math.Log%2A>|Returns the natural (base e) logarithm of a specified number or the logarithm of a specified number in a specified base.|  
 |<xref:System.Math.Log10%2A>|返回指定数字以 10 为底的对数。|  
-|<xref:System.Math.Max%2A>|返回较大的两个数字。|  
+|<xref:System.Math.Max%2A>|Returns the larger of two numbers.|  
 |<xref:System.Math.Min%2A>|返回两个数字中较小的一个。|  
 |<xref:System.Math.Pow%2A>|返回指定数字的指定次幂。|  
-|<xref:System.Math.Round%2A>|返回`Decimal`或`Double`值舍入为最接近的整数值或指定数量的小数位数。|  
-|<xref:System.Math.Sign%2A>|返回`Integer`值，该值指示数字的符号。|  
+|<xref:System.Math.Round%2A>|Returns a `Decimal` or `Double` value rounded to the nearest integral value or to a specified number of fractional digits.|  
+|<xref:System.Math.Sign%2A>|Returns an `Integer` value indicating the sign of a number.|  
 |<xref:System.Math.Sin%2A>|返回指定角度的正弦值。|  
 |<xref:System.Math.Sinh%2A>|返回指定角度的双曲正弦值。|  
 |<xref:System.Math.Sqrt%2A>|返回指定数字的平方根。|  
 |<xref:System.Math.Tan%2A>|返回指定角度的正切值。|  
 |<xref:System.Math.Tanh%2A>|返回指定角度的双曲正切值。|  
-|<xref:System.Math.Truncate%2A>|计算指定的整数部分`Decimal`或`Double`数。|  
+|<xref:System.Math.Truncate%2A>|Calculates the integral part of a specified `Decimal` or `Double` number.|  
   
- 若要使用这些函数而无需限定，导入<xref:System.Math?displayProperty=nameWithType>到项目中通过将以下代码添加到源文件顶部的命名空间：  
+ To use these functions without qualification, import the <xref:System.Math?displayProperty=nameWithType> namespace into your project by adding the following code to the top of your source file:  
   
 ```vb
 Imports System.Math  
 ```  
   
 ## <a name="example"></a>示例  
- 此示例使用<xref:System.Math.Abs%2A>方法的<xref:System.Math>类，以计算一个数字的绝对值。  
+ This example uses the <xref:System.Math.Abs%2A> method of the <xref:System.Math> class to compute the absolute value of a number.  
   
 ```vb
 ' Returns 50.3.  
@@ -66,7 +66,7 @@ Dim MyNumber2 As Double = Math.Abs(-50.3)
 ```  
   
 ## <a name="example"></a>示例  
- 此示例使用<xref:System.Math.Atan%2A>方法的<xref:System.Math>类来计算 pi 的值。  
+ This example uses the <xref:System.Math.Atan%2A> method of the <xref:System.Math> class to calculate the value of pi.  
   
 ```vb
 Public Function GetPi() As Double  
@@ -76,7 +76,7 @@ End Function
 ```  
   
 ## <a name="example"></a>示例  
- 此示例使用<xref:System.Math.Cos%2A>方法的<xref:System.Math>类以返回角度的余弦值。  
+ This example uses the <xref:System.Math.Cos%2A> method of the <xref:System.Math> class to return the cosine of an angle.  
   
 ```vb
 Public Function Sec(ByVal angle As Double) As Double  
@@ -86,7 +86,7 @@ End Function
 ```  
   
 ## <a name="example"></a>示例  
- 此示例使用<xref:System.Math.Exp%2A>方法的<xref:System.Math>类以返回 e 的幂。  
+ This example uses the <xref:System.Math.Exp%2A> method of the <xref:System.Math> class to return e raised to a power.  
   
 ```vb
 Public Function Sinh(ByVal angle As Double) As Double  
@@ -96,7 +96,7 @@ End Function
 ```  
   
 ## <a name="example"></a>示例  
- 此示例使用<xref:System.Math.Log%2A>方法的<xref:System.Math>类，以返回一个数字的自然对数。  
+ This example uses the <xref:System.Math.Log%2A> method of the <xref:System.Math> class to return the natural logarithm of a number.  
   
 ```vb
 Public Function Asinh(ByVal value As Double) As Double  
@@ -106,7 +106,7 @@ End Function
 ```  
   
 ## <a name="example"></a>示例  
- 此示例使用<xref:System.Math.Round%2A>方法的<xref:System.Math>类要舍入到最接近的整数的数字。  
+ This example uses the <xref:System.Math.Round%2A> method of the <xref:System.Math> class to round a number to the nearest integer.  
   
 ```vb
 ' Returns 3.  
@@ -114,7 +114,7 @@ Dim MyVar2 As Double = Math.Round(2.8)
 ```  
   
 ## <a name="example"></a>示例  
- 此示例使用<xref:System.Math.Sign%2A>方法的<xref:System.Math>类来确定数字的符号。  
+ This example uses the <xref:System.Math.Sign%2A> method of the <xref:System.Math> class to determine the sign of a number.  
   
 ```vb
 ' Returns 1.  
@@ -126,7 +126,7 @@ Dim MySign3 As Integer = Math.Sign(0)
 ```  
   
 ## <a name="example"></a>示例  
- 此示例使用<xref:System.Math.Sin%2A>方法的<xref:System.Math>类以返回角度的正弦值。  
+ This example uses the <xref:System.Math.Sin%2A> method of the <xref:System.Math> class to return the sine of an angle.  
   
 ```vb
 Public Function Csc(ByVal angle As Double) As Double  
@@ -136,7 +136,7 @@ End Function
 ```  
   
 ## <a name="example"></a>示例  
- 此示例使用<xref:System.Math.Sqrt%2A>方法的<xref:System.Math>类，以计算一个数字的平方根。  
+ This example uses the <xref:System.Math.Sqrt%2A> method of the <xref:System.Math> class to calculate the square root of a number.  
   
 ```vb
 ' Returns 2.  
@@ -150,7 +150,7 @@ Dim MySqr4 As Double = Math.Sqrt(-4)
 ```  
   
 ## <a name="example"></a>示例  
- 此示例使用<xref:System.Math.Tan%2A>方法的<xref:System.Math>类以返回角度的正切值。  
+ This example uses the <xref:System.Math.Tan%2A> method of the <xref:System.Math> class to return the tangent of an angle.  
   
 ```vb
 Public Function Ctan(ByVal angle As Double) As Double  
@@ -160,11 +160,11 @@ End Function
 ```  
   
 ## <a name="requirements"></a>要求  
- **类：** <xref:System.Math>  
+ **Class:** <xref:System.Math>  
   
- **Namespace**：<xref:System>  
+ **命名空间：** <xref:System>  
   
- **程序集：** mscorlib （在 mscorlib.dll 中)  
+ **Assembly:** mscorlib (in mscorlib.dll)  
   
 ## <a name="see-also"></a>请参阅
 

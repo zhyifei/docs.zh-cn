@@ -1,5 +1,5 @@
 ---
-title: Option Strict 语句（Visual Basic）
+title: Option Strict Statement
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Strict
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: 8b7dfcfa394ed2c45adec9661ee1ea5823435223
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: a002526a107fdc6e8e02890d11db94a3d224c94b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775442"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353765"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
-将隐式数据类型转换限制为仅进行扩大转换，不允许后期绑定，而不允许导致 `Object` 类型的隐式类型转换。  
+Restricts implicit data type conversions to only widening conversions, disallows late binding, and disallows implicit typing that results in an `Object` type.  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,11 +31,11 @@ Option Strict { On | Off }
   
 |术语|定义|  
 |---|---|  
-|`On`|可选。 启用 `Option Strict` 检查。|  
-|`Off`|可选。 禁用 `Option Strict` 检查。|  
+|`On`|可选。 Enables `Option Strict` checking.|  
+|`Off`|可选。 Disables `Option Strict` checking.|  
   
 ## <a name="remarks"></a>备注  
- 在文件中出现 `Option Strict On` 或 `Option Strict` 时，以下情况会导致编译时错误：  
+ When `Option Strict On` or `Option Strict` appears in a file, the following conditions cause a compile-time error:  
   
 - 隐式收缩转换  
   
@@ -44,77 +44,77 @@ Option Strict { On | Off }
 - 隐式键入会导致 `Object` 类型  
   
 > [!NOTE]
-> 在可以在 "编译" 页上的 "[项目设计器" （Visual Basic）](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)上设置的警告配置中，有三个与导致编译时错误的三个条件相对应的设置。 有关如何使用这些设置的详细信息，请参阅本主题后面的将[警告配置设置到 IDE](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions)中。  
+> In the warning configurations that you can set on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), there are three settings that correspond to the three conditions that cause a compile-time error. For information about how to use these settings, see [To set warning configurations in the IDE](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions) later in this topic.  
   
- 即使关联的 IDE 设置指定打开这些错误或警告，`Option Strict Off` 语句也会关闭所有三个条件的错误和警告检查。 即使关联的 IDE 设置指定关闭这些错误或警告，`Option Strict On` 语句也会对所有三个条件启用错误和警告检查。  
+ The `Option Strict Off` statement turns off error and warning checking for all three conditions, even if the associated IDE settings specify to turn on these errors or warnings. The `Option Strict On` statement turns on error and warning checking for all three conditions, even if the associated IDE settings specify to turn off these errors or warnings.  
   
- 如果使用，则 `Option Strict` 语句必须出现在文件中的任何其他代码语句之前。  
+ If used, the `Option Strict` statement must appear before any other code statements in a file.  
   
- 将 `Option Strict` 设置为 `On` 时，Visual Basic 将检查是否为所有编程元素指定了数据类型。 可以显式指定数据类型，也可以使用局部类型推理来指定数据类型。 建议为所有编程元素指定数据类型，原因如下：  
+ When you set `Option Strict` to `On`, Visual Basic checks that data types are specified for all programming elements. Data types can be specified explicitly, or specified by using local type inference. Specifying data types for all your programming elements is recommended, for the following reasons:  
   
-- 它为你的变量和参数启用 IntelliSense 支持。 这使您可以在键入代码时查看它们的属性和其他成员。  
+- It enables IntelliSense support for your variables and parameters. This enables you to see their properties and other members as you type code.  
   
-- 它使编译器可以执行类型检查。 类型检查有助于在运行时查找可能因类型转换错误而失败的语句。 它还标识对不支持这些方法的对象上的方法的调用。  
+- It enables the compiler to perform type checking. Type checking helps you find statements that can fail at run time because of type conversion errors. It also identifies calls to methods on objects that do not support those methods.  
   
-- 它可加速代码的执行。 导致这种情况的原因之一是，如果未指定编程元素的数据类型，则 Visual Basic 编译器会为其分配 `Object` 类型。 编译的代码可能必须在 `Object` 和其他数据类型之间来回转换，这会降低性能。  
+- It speeds up the execution of code. One reason for this is that if you do not specify a data type for a programming element, the Visual Basic compiler assigns it the `Object` type. Compiled code might have to convert back and forth between `Object` and other data types, which reduces performance.  
   
-## <a name="implicit-narrowing-conversion-errors"></a>隐式收缩转换错误  
+## <a name="implicit-narrowing-conversion-errors"></a>Implicit Narrowing Conversion Errors  
  隐式数据类型转换为收缩转换时，将发生隐式收缩转换错误。  
   
- Visual Basic 可以将多个数据类型转换为其他数据类型。 当一种数据类型的值转换为精度较低或容量较小的数据类型时，可能会发生数据丢失。 如果这种收缩转换失败，则会发生运行时错误。 `Option Strict` 确保这些收缩转换的编译时通知，以便你可以避免这些转换。 有关详细信息，请参阅[隐式和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)以及[扩大和收缩转换](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
+ Visual Basic can convert many data types to other data types. Data loss can occur when the value of one data type is converted to a data type that has less precision or a smaller capacity. A run-time error occurs if such a narrowing conversion fails. `Option Strict` ensures compile-time notification of these narrowing conversions so that you can avoid them. For more information, see [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) and [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
- 可能导致错误的转换包括表达式中发生的隐式转换。 有关更多信息，请参见下列主题：  
+ Conversions that can cause errors include implicit conversions that occur in expressions. 有关更多信息，请参见下列主题：  
   
 - [+ 运算符](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
 - [+= 运算符](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
-- [\ 运算符（Visual Basic）](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+- [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
-- [/= 运算符（Visual Basic）](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+- [/= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
 - [Char 数据类型](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
- 通过使用[& 运算符](../../../visual-basic/language-reference/operators/concatenation-operator.md)来串联字符串时，将所有字符串转换都视为扩大。 因此，这些转换不会生成隐式收缩转换错误，即使 `Option Strict` 是打开的也是如此。  
+ When you concatenate strings by using the [& Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md), all conversions to the strings are considered to be widening. So these conversions do not generate an implicit narrowing conversion error, even if `Option Strict` is on.  
   
- 如果调用的方法具有的数据类型与相应的参数不同，则收缩转换会导致编译时错误，前提是 `Option Strict` 为 on。 您可以通过使用扩大转换或显式转换来避免编译时错误。  
+ When you call a method that has an argument that has a data type different from the corresponding parameter, a narrowing conversion causes a compile-time error if `Option Strict` is on. You can avoid the compile-time error by using a widening conversion or an explicit conversion.  
   
- 在编译时，将取消隐式收缩转换错误，以便从 `For Each…Next` 集合中的元素转换为循环控制变量。 即使 `Option Strict` 是打开的也是如此。 有关详细信息，请参阅中的 "收缩转换" 一节[。下一语句](../../../visual-basic/language-reference/statements/for-each-next-statement.md)。  
+ Implicit narrowing conversion errors are suppressed at compile-time for conversions from the elements in a `For Each…Next` collection to the loop control variable. This occurs even if `Option Strict` is on. For more information, see the "Narrowing Conversions" section in [For Each...Next Statement](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
-## <a name="late-binding-errors"></a>后期绑定错误  
- 如果将对象分配给声明为 `Object` 类型的变量，则该对象为晚期绑定。 有关详细信息，请参阅[早期和后期绑定](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)。  
+## <a name="late-binding-errors"></a>Late Binding Errors  
+ 如果将对象分配给声明为 `Object` 类型的变量，则该对象为晚期绑定。 For more information, see [Early and Late Binding](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
   
-## <a name="implicit-object-type-errors"></a>隐式对象类型错误  
- 如果无法为已声明的变量推断出合适的类型，则会发生隐式对象类型错误，因此 `Object` 类型是推断出来的。 这主要是在未使用 `As` 子句的情况下使用 `Dim` 语句声明变量，且 `Option Infer` 为关闭时发生的。 有关详细信息，请参阅[选项推断语句](../../../visual-basic/language-reference/statements/option-infer-statement.md)和[Visual Basic 语言规范](../../../visual-basic/reference/language-specification/index.md)。  
+## <a name="implicit-object-type-errors"></a>Implicit Object Type Errors  
+ 如果无法为已声明的变量推断出合适的类型，则会发生隐式对象类型错误，因此 `Object` 类型是推断出来的。 这主要是在未使用 `As` 子句的情况下使用 `Dim` 语句声明变量，且 `Option Infer` 为关闭时发生的。 For more information, see [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) and the [Visual Basic Language Specification](../../../visual-basic/reference/language-specification/index.md).  
   
- 对于方法参数，如果 `Option Strict` 为 off，则 `As` 子句是可选的。 但是，如果任何一个参数使用 `As` 子句，则所有参数都必须使用它。 如果 `Option Strict` 为 on，则每个参数定义都需要 `As` 子句。  
+ For method parameters, the `As` clause is optional if `Option Strict` is off. However, if any one parameter uses an `As` clause, they all must use it. If `Option Strict` is on, the `As` clause is required for every parameter definition.  
   
- 如果在不使用 `As` 子句的情况下声明变量并将其设置为 `Nothing`，则该变量具有 `Object` 类型。 如果 `Option Strict` 为 on 且 `Option Infer` 为 on，则不会发生编译时错误。 @No__t_0 的示例。  
+ If you declare a variable without using an `As` clause and set it to `Nothing`, the variable has a type of `Object`. No compile-time error occurs in this case when `Option Strict` is on and `Option Infer` is on. An example of this is `Dim something = Nothing`.  
   
 ### <a name="default-data-types-and-values"></a>默认数据类型和值  
- 下表描述了在[Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)中指定数据类型和初始值设定项的各种组合的结果。  
+ The following table describes the results of various combinations of specifying the data type and initializer in a [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md).  
   
 |是否指定数据类型？|是否指定初始值设定项？|示例|结果|  
 |---|---|---|---|  
 |No|No|`Dim qty`|如果 `Option Strict` 处于关闭状态（默认），则将变量设置为 `Nothing`。<br /><br /> 如果 `Option Strict` 处于打开状态，则发生编译时错误。|  
-|No|是|`Dim qty = 5`|如果 `Option Infer` 处于打开状态（默认），则变量采用初始值设定项的数据类型。 请参阅[局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。<br /><br /> 如果 `Option Infer` 和 `Option Strict` 均处于关闭状态，则变量采用 `Object` 的数据类型。<br /><br /> 如果 `Option Infer` 处于关闭状态但 `Option Strict` 处于打开状态，则发生编译时错误。|  
-|是|No|`Dim qty As Integer`|将变量初始化为数据类型的默认值。 有关详细信息，请参阅[Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)。|  
+|No|是|`Dim qty = 5`|如果 `Option Infer` 处于打开状态（默认），则变量采用初始值设定项的数据类型。 See [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> 如果 `Option Infer` 和 `Option Strict` 均处于关闭状态，则变量采用 `Object` 的数据类型。<br /><br /> 如果 `Option Infer` 处于关闭状态但 `Option Strict` 处于打开状态，则发生编译时错误。|  
+|是|No|`Dim qty As Integer`|将变量初始化为数据类型的默认值。 For more information, see [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md).|  
 |是|是|`Dim qty  As Integer = 5`|如果初始值设定项的数据类型不可转换为指定数据类型，则会发生编译时错误。|  
   
-## <a name="when-an-option-strict-statement-is-not-present"></a>当 Option Strict 语句不存在时  
- 如果源代码不包含 `Option Strict` 语句，则使用 "编译" 页上的 " **Option strict** " 设置[，"项目设计器" （Visual Basic）](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 。 "**编译" 页**中的设置提供对生成错误的条件的更多控制。  
+## <a name="when-an-option-strict-statement-is-not-present"></a>When an Option Strict Statement Is Not Present  
+ If the source code does not contain an `Option Strict` statement, the **Option strict** setting on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) is used. The **Compile Page** has settings that provide additional control over the conditions that generate an error.  
   
- 如果使用的是命令行编译器，可以使用[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)编译器选项指定 `Option Strict` 的设置。  
+ If you are using the command-line compiler, you can use the [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) compiler option to specify a setting for `Option Strict`.  
   
-### <a name="to-set-option-strict-in-the-ide"></a>在 IDE 中设置 Option Strict  
+### <a name="to-set-option-strict-in-the-ide"></a>To set Option Strict in the IDE  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 1. 在“解决方案资源管理器”中，选择一个项目。 在“项目”菜单上，单击“属性”。  
   
-2. 在 "**编译**" 选项卡上，在 "**选项严格限制**" 框中设置值。  
+2. On the **Compile** tab, set the value in the **Option Strict** box.  
   
-### <a name="conditions"></a>在 IDE 中设置警告配置  
- 使用 "编译"[页时，项目设计器（Visual Basic）](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)而不是 `Option Strict` 语句，您可以对生成错误的条件进行其他控制。 "**编译" 页**的 "**警告配置**" 部分具有与在 `Option Strict` 时导致编译时错误的三个条件对应的设置。 这些设置如下：  
+### <a name="conditions"></a> To set warning configurations in the IDE  
+ When you use the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) instead of an `Option Strict` statement, you have additional control over the conditions that generate errors. The **Warning configurations** section of the **Compile Page** has settings that correspond to the three conditions that cause a compile-time error when `Option Strict` is on. 这些设置如下：  
   
 - 隐式转换  
   
@@ -126,26 +126,26 @@ Option Strict { On | Off }
   
  可单独将各个警告配置设置更改为“无”、“警告”或“错误”。 如果三个警告配置都设置为“错误”，则 `On` 会出现在 `Option strict` 框中。 如果三个都设置为“无”，则 `Off` 会出现在此框中。 对于这些配置的任何其他组合，显示“(自定义)”。  
   
-### <a name="to-set-the-option-strict-default-setting-for-new-projects"></a>为新项目设置选项 Strict 默认设置  
- 创建项目时，"**编译**" 选项卡上的 " **option strict** " 设置设置为 "**选项**" 对话框中的 " **option strict** " 设置。  
+### <a name="to-set-the-option-strict-default-setting-for-new-projects"></a>To set the Option Strict default setting for new projects  
+ When you create a project, the **Option Strict** setting on the **Compile** tab is set to the **Option Strict** setting in the **Options** dialog box.  
   
- 若要在此对话框中设置 `Option Strict`，请在 "**工具**" 菜单上单击 "**选项**"。 在“选项”对话框中，展开“项目和解决方案”，然后单击“VB 默认值”。 默认情况下， **VB**默认设置中的初始默认设置为 `Off`。  
+ To set `Option Strict` in this dialog box, on the **Tools** menu, click **Options**. 在“选项”对话框中，展开“项目和解决方案”，然后单击“VB 默认值”。 The initial default setting in **VB Defaults** is `Off`.  
   
-### <a name="to-set-option-strict-on-the-command-line"></a>在命令行上设置 Option Strict  
- 在**vbc**命令中包含[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)编译器选项。  
+### <a name="to-set-option-strict-on-the-command-line"></a>To set Option Strict on the command line  
+ Include the [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) compiler option in the **vbc** command.  
   
 ## <a name="example"></a>示例  
- 下面的示例演示由收缩转换的隐式类型转换导致的编译时错误。 此类别的错误对应于 "**编译" 页**上的**隐式转换**条件。  
+ The following examples demonstrate compile-time errors caused by implicit type conversions that are narrowing conversions. This category of errors corresponds to the **Implicit conversion** condition on the **Compile Page**.  
   
  [!code-vb[VbVbalrStatements#161](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#161)]  
   
 ## <a name="example"></a>示例  
- 下面的示例演示后期绑定导致的编译时错误。 此类别的错误对应于后期绑定; "**编译" 页**上的 "**调用可能在运行时失败**" 条件。  
+ The following example demonstrates a compile-time error caused by late binding. This category of errors corresponds to the **Late binding; call could fail at run time** condition on the **Compile Page**.  
   
  [!code-vb[VbVbalrStatements#162](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#162)]  
   
 ## <a name="example"></a>示例  
- 下面的示例演示由使用隐式类型的 `Object` 声明的变量导致的错误。 此类别的错误对应于**隐式类型;** "**编译" 页**上的 "对象假定" 条件。  
+ The following examples demonstrate errors caused by variables that are declared with an implicit type of `Object`. This category of errors corresponds to the **Implicit type; object assumed** condition on the **Compile Page**.  
   
  [!code-vb[VbVbalrStatements#163](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#163)]  
   

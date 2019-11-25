@@ -1,15 +1,15 @@
 ---
-title: 启动多个异步任务并在其完成时进行处理（Visual Basic）
+title: 启动多个异步任务并在其完成时进行处理
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: b103f385c804061c4df99dc9d1fdd54c7876151a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5293c2f6e1a17d3645fd1ce5a4ba61eac4d8b3a2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928454"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346682"
 ---
-# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>启动多个异步任务并在其完成时进行处理（Visual Basic）
+# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>Start Multiple Async Tasks and Process Them As They Complete (Visual Basic)
 通过使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>，可以同时启动多个任务，并在它们完成时逐个对它们进行处理，而不是按照它们的启动顺序进行处理。  
   
  下面的示例使用查询来创建一组任务。 每个任务都下载指定网站的内容。 在对 while 循环的每次迭代中，对 `WhenAny` 的等待调用返回任务集合中首先完成下载的任务。 此任务从集合中删除并进行处理。 循环重复进行，直到集合中不包含任何任务。  
@@ -18,7 +18,7 @@ ms.locfileid: "70928454"
 > 若要运行示例，计算机上必须安装有 Visual Studio 2012 或更高版本和 .NET Framework 4.5 或更高版本。  
   
 ## <a name="downloading-the-example"></a>下载示例  
- 若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）。  
+ 若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序），然后遵循以下步骤。  
   
 1. 解压缩下载的文件，然后启动 Visual Studio。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "70928454"
  如果不想下载项目，可在本主题末尾处查看 MainWindow.xaml.vb 文件。  
   
 ## <a name="building-the-example"></a>生成示例  
- 此示例将添加到在[完成一个异步任务（Visual Basic）后取消剩余异步任务](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)中开发的代码，并使用相同的 UI。  
+ This example adds to the code that’s developed in [Cancel Remaining Async Tasks after One Is Complete (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) and uses the same UI.  
   
  若要自行生成示例，请按“下载示例”部分的说明逐步操作，但选择“CancelAfterOneTask”作为“启动项目”。 将此主题中的更改添加到项目中的 `AccessTheWebAsync` 方法。 这些更改标有星号。  
   
@@ -48,7 +48,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
     From url In urlList Select ProcessURLAsync(url, client, ct)  
 ```  
   
- 在项目的 mainwindow.xaml 文件中，对`AccessTheWebAsync`方法进行以下更改。  
+ In the MainWindow.xaml.vb file of the  project, make the following changes to the `AccessTheWebAsync` method.  
   
 - 通过应用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 而非 <xref:System.Linq.Enumerable.ToArray%2A> 执行查询。  
   
@@ -87,7 +87,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
   
  请注意，必须为 <xref:System.Net.Http> 添加引用。  
   
- 可以从 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）下载这些项目。  
+ 可以从 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）下载这些项目。  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  

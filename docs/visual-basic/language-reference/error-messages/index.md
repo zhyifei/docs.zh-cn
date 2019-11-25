@@ -1,5 +1,5 @@
 ---
-title: 错误消息 (Visual Basic)
+title: 错误消息
 ms.date: 07/20/2015
 helpviewer_keywords:
 - errors [Visual Basic]
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - trappable errors
 - errors [Visual Basic], trappable
 ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
-ms.openlocfilehash: 822c0f266e7dd68f063043d98a9f4af308ae93fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 15d12802c92e7b9ed99c83885bd38e381c8b687d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013811"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353714"
 ---
 # <a name="error-messages-visual-basic"></a>错误消息 (Visual Basic)
 编写、编译或运行 Visual Basic 应用程序时，可能会生成以下类型的错误：  
@@ -26,7 +26,7 @@ ms.locfileid: "62013811"
  若要了解如何排查特定错误，请参阅[为 Visual Basic 程序员提供的附加资源](../../../visual-basic/getting-started/additional-resources.md)。  
   
 ## <a name="run-time-errors"></a>运行时错误  
- 如果 Visual Basic 应用程序试图执行系统无法执行的操作，运行时错误发生，并且 Visual Basic 将引发`Exception`对象。 Visual Basic 可以生成自定义错误的任何数据类型，包括`Exception`通过使用对象`Throw`语句。 应用程序可以通过显示捕获到的异常的错误号和消息来识别错误。 如果未捕获到错误，应用程序会结束。  
+ If a Visual Basic application tries to perform an action that the system can't execute, a run-time error occurs, and Visual Basic throws an `Exception` object. Visual Basic can generate custom errors of any data type, including `Exception` objects, by using the `Throw` statement. 应用程序可以通过显示捕获到的异常的错误号和消息来识别错误。 如果未捕获到错误，应用程序会结束。  
   
  代码可用于捕获和检查运行时错误。 如果将生成错误的代码封闭在 `Try` 代码块中，则可以在匹配的 `Catch` 代码块中捕获抛出的任何错误。 若要了解如何在运行时捕获错误并在代码中响应错误，请参阅 [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
   

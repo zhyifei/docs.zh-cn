@@ -1,27 +1,27 @@
 ---
-title: 如何：调用委托方法 (Visual Basic)
+title: 如何：调用委托方法
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: c2bdb65c9d060e854db3319e4aa5b2e93b9681af
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 520bacfbe6103490e0459cd5af149c1d55a8fce4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629592"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345256"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>如何：调用委托方法 (Visual Basic)
 
-此示例演示如何将方法与委托相关联, 然后通过委托调用该方法。
+This example shows how to associate a method with a delegate and then invoke that method through the delegate.
 
-### <a name="create-the-delegate-and-matching-procedures"></a>创建委托和匹配过程
+### <a name="create-the-delegate-and-matching-procedures"></a>Create the delegate and matching procedures
 
-1. 创建一个名为`MySubDelegate`的委托。
+1. Create a delegate named `MySubDelegate`.
 
     ```vb
     Delegate Sub MySubDelegate(ByVal x As Integer)
     ```
 
-2. 声明一个类, 该类包含具有与委托相同的签名的方法。
+2. Declare a class that contains a method with the same signature as the delegate.
 
     ```vb
     Class class1
@@ -31,7 +31,7 @@ ms.locfileid: "68629592"
     End Class
     ```
 
-3. 定义一个方法, 该方法通过调用内置`Invoke`方法来创建委托的实例并调用与该委托关联的方法。
+3. Define a method that creates an instance of the delegate and invokes the method associated with the delegate by calling the built-in `Invoke` method.
 
     ```vb
     Protected Sub DelegateTest()

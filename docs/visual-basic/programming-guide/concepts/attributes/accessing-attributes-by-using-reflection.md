@@ -1,15 +1,15 @@
 ---
-title: 使用反射访问特性（Visual Basic）
+title: 使用反射访问特性
 ms.date: 07/20/2015
 ms.assetid: c56e41da-5433-464f-a7bf-2a722e78bc9f
-ms.openlocfilehash: a50c308a66637768dbe0089e612fcfe73bafdfa2
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 94352f07cf1f7e4a35f023503f138596ae5ac227
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524342"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353559"
 ---
-# <a name="accessing-attributes-by-using-reflection-visual-basic"></a>使用反射访问特性（Visual Basic）
+# <a name="accessing-attributes-by-using-reflection-visual-basic"></a>Accessing Attributes by Using Reflection (Visual Basic)
 
 你可以定义自定义特性并将其放入源代码中这一事实，在没有检索该信息并对其进行操作的方法的情况下将没有任何价值。 通过使用反射，可以检索通过自定义特性定义的信息。 主要方法是 `GetCustomAttributes`，它返回对象数组，这些对象在运行时等效于源代码特性。 此方法有多个重载版本。 有关更多信息，请参见<xref:System.Attribute>。
 

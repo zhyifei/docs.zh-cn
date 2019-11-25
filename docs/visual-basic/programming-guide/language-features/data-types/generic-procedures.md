@@ -1,5 +1,5 @@
 ---
-title: Generic Procedures in Visual Basic
+title: 泛型过程
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generic methods [Visual Basic], type inference
@@ -12,26 +12,26 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 4aed16ce9eb59da54156a0cd5f1594819788521b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16a629e07cf711778b3d8d1863958ec7a6300649
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906589"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350088"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Generic Procedures in Visual Basic
-一个*泛型过程*，也称为*泛型方法*，是使用至少一个类型参数定义的过程。 这使得调用代码来定制其要求的数据类型的每次调用该过程。  
+A *generic procedure*, also called a *generic method*, is a procedure defined with at least one type parameter. This allows the calling code to tailor the data types to its requirements each time it calls the procedure.  
   
- 过程是不是简单地由于正在定义在泛型类或泛型结构。 若要为泛型，该过程必须采用至少一个类型参数，除了可能需要的所有普通参数。 泛型类或结构可以包含非泛型过程和非泛型类、 结构或模块可以包含泛型过程。  
+ A procedure is not generic simply by virtue of being defined inside a generic class or a generic structure. To be generic, the procedure must take at least one type parameter, in addition to any normal parameters it might take. A generic class or structure can contain nongeneric procedures, and a nongeneric class, structure, or module can contain generic procedures.  
   
- 泛型过程可以在其正常参数列表中，其返回类型，如果它有一个，并在其过程代码中使用其类型参数。  
+ A generic procedure can use its type parameters in its normal parameter list, in its return type if it has one, and in its procedure code.  
   
 ## <a name="type-inference"></a>类型推断  
- 未提供任何类型参数在所有情况下，可以调用泛型过程。 如果您以这种方式，编译器将尝试确定要传递给过程的类型参数的相应的数据类型。 这称为*类型推理*。 下面的代码演示如何调用中，编译器推断它应将类型传递`String`对该类型参数`t`。  
+ You can call a generic procedure without supplying any type arguments at all. If you call it this way, the compiler attempts to determine the appropriate data types to pass to the procedure's type arguments. This is called *type inference*. The following code shows a call in which the compiler infers that it should pass type `String` to the type parameter `t`.  
   
  [!code-vb[VbVbalrDataTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#15)]  
   
- 如果编译器无法推断调用上下文的类型参数，则将报告错误。 此类错误的一个可能原因是数组秩不匹配。 例如，假设您定义普通参数作为数组的类型参数。 如果调用的泛型过程提供不同的秩 （维数），数组不匹配会导致类型推理失败。 下面的代码演示如何调用中的二维数组传递给过程所需的一维数组。  
+ If the compiler cannot infer the type arguments from the context of your call, it reports an error. One possible cause of such an error is an array rank mismatch. For example, suppose you define a normal parameter as an array of a type parameter. If you call the generic procedure supplying an array of a different rank (number of dimensions), the mismatch causes type inference to fail. The following code shows a call in which a two-dimensional array is passed to a procedure that expects a one-dimensional array.  
   
 ```vb  
 Public Sub demoSub(Of t)(ByVal arg() As t)
@@ -43,30 +43,30 @@ Public Sub callDemoSub()
 End Sub
 ```
   
- 可以仅通过省略的所有类型参数调用类型推理。 如果您提供一个类型实参，则必须提供所有这些。  
+ You can invoke type inference only by omitting all the type arguments. If you supply one type argument, you must supply them all.  
   
- 仅对泛型过程支持的类型推理。 不能调用上泛型类、 结构、 接口或委托的类型推理。  
+ Type inference is supported only for generic procedures. You cannot invoke type inference on generic classes, structures, interfaces, or delegates.  
   
 ## <a name="example"></a>示例  
   
 ### <a name="description"></a>描述  
- 下面的示例定义了一个泛型`Function`过程，用于在数组中查找特定元素。 它定义一个类型参数，并使用它来构建在参数列表中的两个参数。  
+ The following example defines a generic `Function` procedure to find a particular element in an array. It defines one type parameter and uses it to construct the two parameters in the parameter list.  
   
 ### <a name="code"></a>代码  
  [!code-vb[VbVbalrDataTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#14)]  
   
 ### <a name="comments"></a>注释  
- 前面的示例要求进行比较的能力`searchValue`针对每个元素的`searchArray`。 若要确保此功能，它可以约束类型参数`T`实现<xref:System.IComparable%601>接口。 该代码使用<xref:System.IComparable%601.CompareTo%2A>方法而不是`=`运算符，因为没有为提供的类型参数不能保证`T`支持`=`运算符。  
+ The preceding example requires the ability to compare `searchValue` against each element of `searchArray`. To guarantee this ability, it constrains the type parameter `T` to implement the <xref:System.IComparable%601> interface. The code uses the <xref:System.IComparable%601.CompareTo%2A> method instead of the `=` operator, because there is no guarantee that a type argument supplied for `T` supports the `=` operator.  
   
- 你可以测试`findElement`用下面的代码的过程。  
+ You can test the `findElement` procedure with the following code.  
   
  [!code-vb[VbVbalrDataTypes#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#13)]  
   
- 上述调用`MsgBox`分别显示"0"、"1"和"-1"。  
+ The preceding calls to `MsgBox` display "0", "1", and "-1" respectively.  
   
 ## <a name="see-also"></a>请参阅
 
-- [Visual Basic 中的泛型类型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [如何：定义可对不同数据类型提供相同功能的类](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
 - [如何：使用泛型类](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [过程](../../../../visual-basic/programming-guide/language-features/procedures/index.md)

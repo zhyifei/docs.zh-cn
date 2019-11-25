@@ -1,5 +1,5 @@
 ---
-title: 如何：定义参数的过程 (Visual Basic)
+title: 如何：为过程定义参数
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedure parameters [Visual Basic], defining data types for
@@ -8,56 +8,56 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: bf57d4dbd7e8596396fb2e9099d5984759d6e90d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 411959a7be92ea49a59558b508e992bfba8eff95
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665382"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344889"
 ---
-# <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>如何：定义参数的过程 (Visual Basic)
-一个*参数*允许调用代码将调用它时，将值传递给过程。 声明过程每个参数相同的方式声明变量，指定其名称和数据类型。 您还指定的传递机制，以及该参数是否可选。  
+# <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>如何：为过程定义参数 (Visual Basic)
+A *parameter* allows the calling code to pass a value to the procedure when it calls it. You declare each parameter for a procedure the same way you declare a variable, specifying its name and data type. You also specify the passing mechanism, and whether the parameter is optional.  
   
- 有关详细信息，请参阅[过程形参和实参](./procedure-parameters-and-arguments.md)。  
+ For more information, see [Procedure Parameters and Arguments](./procedure-parameters-and-arguments.md).  
   
-### <a name="to-define-a-procedure-parameter"></a>若要定义过程参数  
+### <a name="to-define-a-procedure-parameter"></a>To define a procedure parameter  
   
-1. 在过程声明中，将添加到过程的参数列表中，使用逗号将其与其他参数的参数名称。  
+1. In the procedure declaration, add the parameter name to the procedure's parameter list, separating it from other parameters by commas.  
   
-2. 决定参数的数据类型。  
+2. Decide the data type of the parameter.  
   
-3. 在参数名称后的加`As`子句指定的数据类型。  
+3. Follow the parameter name with an `As` clause to specify the data type.  
   
-4. 确定所需的参数的传递机制。 通常情况下，按值传递参数，除非你想要能够调用代码中更改其值的过程。  
+4. Decide the passing mechanism you want for the parameter. Normally you pass a parameter by value, unless you want the procedure to be able to change its value in the calling code.  
   
-5. 参数名称前面加上[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)指定的传递机制。 有关详细信息，请参阅[差异之间传递参数值和按引用来](./differences-between-passing-an-argument-by-value-and-by-reference.md)。  
+5. Precede the parameter name with [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) to specify the passing mechanism. For more information, see [Differences Between Passing an Argument By Value and By Reference](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
-6. 如果参数是可选的前, 加上使用的传递机制[可选](../../../../visual-basic/language-reference/modifiers/optional.md)并按照参数的数据类型以等号 (`=`) 和默认值。  
+6. If the parameter is optional, precede the passing mechanism with [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) and follow the parameter data type with an equal sign (`=`) and a default value.  
   
-     下面的示例定义的大纲`Sub`具有三个参数的过程。 所需的前两个和第三个是可选的。 参数声明由逗号分隔参数列表中。  
+     The following example defines the outline of a `Sub` procedure with three parameters. The first two are required and the third is optional. The parameter declarations are separated in the parameter list by commas.  
   
      [!code-vb[VbVbcnProcedures#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#33)]  
   
-     第一个参数接受`customer`对象，并`updateCustomer`可以直接更新变量传递给`c`因为将实参传递[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)。 该过程不能更改的最后两个参数的值，因为它们的传递[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)。  
+     The first parameter accepts a `customer` object, and `updateCustomer` can directly update the variable passed to `c` because the argument is passed [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). The procedure cannot change the values of the last two arguments because they are passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
   
-     如果调用代码不会提供的值`level`参数，Visual Basic 将其设置为默认值为 0。  
+     If the calling code does not supply a value for the `level` parameter, Visual Basic sets it to the default value of 0.  
   
-     如果类型检查开关 ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) 是`Off`，则`As`子句是可选的时定义的参数。 但是，如果任何一个参数使用`As`子句中，所有这些必须使用它。 如果类型检查开关`On`，则`As`子句是必需的每个参数定义。  
+     If the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `Off`, the `As` clause is optional when you define a parameter. However, if any one parameter uses an `As` clause, all of them must use it. If the type checking switch is `On`, the `As` clause is required for every parameter definition.  
   
-     指定所有编程元素的数据类型被称为*强类型化*。 当您将设置`Option Strict On`，Visual Basic 强制实施强类型化。 这是强烈建议，原因如下：  
+     Specifying data types for all your programming elements is known as *strong typing*. When you set `Option Strict On`, Visual Basic enforces strong typing. This is strongly recommended, for the following reasons:  
   
-    - 这样，对变量和参数的 IntelliSense 支持。 这样可以查看其属性和其他成员，当您键入代码。  
+    - It enables IntelliSense support for your variables and parameters. This allows you to see their properties and other members as you type in your code.  
   
-    - 它允许编译器执行类型检查。 这有助于 catch 语句可以在运行时因等溢出错误而失败。 不支持它们的对象，它还捕获对方法的调用。  
+    - It allows the compiler to perform type checking. This helps catch statements that can fail at run time due to errors such as overflow. It also catches calls to methods on objects that do not support them.  
   
-    - 这会导致代码更快地执行。 原因之一就是，如果不指定编程元素的数据类型，Visual Basic 编译器为其分配`Object`类型。 已编译的代码可能需要将之间来回转换`Object`和其他数据类型，这会降低性能。  
+    - It results in faster execution of your code. One reason for this is that if you do not specify a data type for a programming element, the Visual Basic compiler assigns it the `Object` type. Your compiled code might have to convert back and forth between `Object` and other data types, which reduces performance.  
   
 ## <a name="see-also"></a>请参阅
 
 - [过程](./index.md)
 - [Sub 过程](./sub-procedures.md)
 - [Function 过程](./function-procedures.md)
-- [如何：将参数传递给过程](./how-to-pass-arguments-to-a-procedure.md)
+- [如何：将自变量传递给过程](./how-to-pass-arguments-to-a-procedure.md)
 - [按值和按引用传递自变量](./passing-arguments-by-value-and-by-reference.md)
 - [递归过程](./recursive-procedures.md)
 - [过程重载](./procedure-overloading.md)

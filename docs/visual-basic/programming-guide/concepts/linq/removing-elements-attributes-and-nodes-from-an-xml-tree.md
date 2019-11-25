@@ -1,20 +1,20 @@
 ---
-title: 从 XML 树 (Visual Basic 中) 中删除元素、 属性和节点
+title: 从 XML 树中移除元素、特性和节点
 ms.date: 07/20/2015
 ms.assetid: 5cf21919-4360-4b49-b29d-58ea3164ac72
-ms.openlocfilehash: 85a7a3b4047e269c562177cfa045b952472aaac2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4cce1eff469c1f737e18b88cce30155547d9f11b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787065"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348956"
 ---
-# <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-visual-basic"></a>从 XML 树 (Visual Basic 中) 中删除元素、 属性和节点
+# <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-visual-basic"></a>Removing Elements, Attributes, and Nodes from an XML Tree (Visual Basic)
 可以修改 XML 树，移除元素、属性和其他类型的节点。  
   
  从 XML 文档中移除单个元素或单个属性的操作非常简单。 但是，若要移除多个元素或属性的集合，则应首先将一个集合具体化为一个列表，然后从该列表中删除相应元素或属性。 最好的方法是使用 <xref:System.Xml.Linq.Extensions.Remove%2A> 扩展方法，该方法可以实现此操作。  
   
- 这么做的主要原因在于，从 XML 树检索的大多数集合都是用延迟执行生成的。 如果不首先将集合具体化为列表，或者不使用扩展方法，则可能会遇到某类 Bug。 有关详细信息，请参阅[混合声明性代码/命令性代码问题 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md)。  
+ 这么做的主要原因在于，从 XML 树检索的大多数集合都是用延迟执行生成的。 如果不首先将集合具体化为列表，或者不使用扩展方法，则可能会遇到某类 Bug。 For more information, see [Mixed Declarative Code/Imperative Code Bugs (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).  
   
  下列方法可以从 XML 树中移除节点和属性。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "61787065"
 ### <a name="description"></a>描述  
  此示例演示三种移除元素的方法。 第一种，移除单个元素。 第二种，检索元素的集合，使用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 运算符将它们具体化，然后移除集合。 最后一种，检索元素的集合，使用 <xref:System.Xml.Linq.Extensions.Remove%2A> 扩展方法移除元素。  
   
- 有关详细信息<xref:System.Linq.Enumerable.ToList%2A>运算符，请参阅[转换数据类型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)。  
+ For more information on the <xref:System.Linq.Enumerable.ToList%2A> operator, see [Converting Data Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md).  
   
 ### <a name="code"></a>代码  
   
@@ -81,4 +81,4 @@ Console.WriteLine(root)
   
 ## <a name="see-also"></a>请参阅
 
-- [修改 XML 树 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

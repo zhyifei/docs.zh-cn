@@ -1,5 +1,5 @@
 ---
-title: 如何：防止过程自变量的值发生更改 (Visual Basic)
+title: 如何：防止过程参数的值被更改
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-ms.openlocfilehash: 70378b57c6d3af5a98e0ba9c6e3aebc319561b1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36092eb597b5b20e1da42cd9d15ab8633636cfb1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665736"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344863"
 ---
-# <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>如何：防止过程自变量的值发生更改 (Visual Basic)
-如果一个过程声明为参数[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，Visual Basic 使过程代码中调用代码参数的基础的编程元素直接引用。 这将允许更改调用代码中的实参的值的过程。 在某些情况下调用的代码可能想要防止此类更改。  
+# <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>如何：防止过程自变量的值被更改 (Visual Basic)
+If a procedure declares a parameter as [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic gives the procedure code a direct reference to the programming element underlying the argument in the calling code. This permits the procedure to change the value underlying the argument in the calling code. In some cases the calling code might want to protect against such a change.  
   
- 你可以始终防止自变量的更改中通过声明的相应参数[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)过程中。 如果你想要将无法更改在某些情况下，而不是其他中给定的参数，可以将其声明`ByRef`并让调用代码确定每个调用中的传递机制。 之所以如此是因为相应的参数中括号括起来，将它传递的值，或不将其括起来在括号中以通过引用进行传递。 有关详细信息，请参阅[如何：强制通过值传递自变量](./how-to-force-an-argument-to-be-passed-by-value.md)。  
+ You can always protect an argument from change by declaring the corresponding parameter [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) in the procedure. If you want to be able to change a given argument in some cases but not others, you can declare it `ByRef` and let the calling code determine the passing mechanism in each call. It does this by enclosing the corresponding argument in parentheses to pass it by value, or not enclosing it in parentheses to pass it by reference. For more information, see [How to: Force an Argument to Be Passed by Value](./how-to-force-an-argument-to-be-passed-by-value.md).  
   
 ## <a name="example"></a>示例  
- 下面的示例演示两个过程采用一个数组变量并运行它的元素。 `increase`过程只需添加一个到每个元素。 `replace`过程将一个新数组分配给该参数`a()`，然后添加一个到每个元素。 但是，重新分配不影响调用代码中的基础数组变量。  
+ The following example shows two procedures that take an array variable and operate on its elements. The `increase` procedure simply adds one to each element. The `replace` procedure assigns a new array to the parameter `a()` and then adds one to each element. However, the reassignment does not affect the underlying array variable in the calling code.  
   
  [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
@@ -35,18 +35,18 @@ ms.locfileid: "61665736"
   
  [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
- 第一个`MsgBox`调用显示"increase(n) 后：11, 21, 31, 41". 因为数组`n`是引用类型，`increase`可以更改其中一个成员，即使传递机制是`ByVal`。  
+ The first `MsgBox` call displays "After increase(n): 11, 21, 31, 41". Because the array `n` is a reference type, `increase` can change its members, even though the passing mechanism is `ByVal`.  
   
- 第二个`MsgBox`调用显示"replace(n) 后：11, 21, 31, 41". 因为`n`传递`ByVal`，`replace`不能修改变量`n`通过向它分配一个新数组，调用代码中。 当`replace`创建新的数组实例`k`并将其分配给本地变量`a`，它将失去对引用`n`由调用代码传入。 当其更改的成员`a`，只有本地数组`k`受到影响。 因此，`replace`不会增加数组的值`n`调用代码中。  
+ The second `MsgBox` call displays "After replace(n): 11, 21, 31, 41". Because `n` is passed `ByVal`, `replace` cannot modify the variable `n` in the calling code by assigning a new array to it. When `replace` creates the new array instance `k` and assigns it to the local variable `a`, it loses the reference to `n` passed in by the calling code. When it changes the members of `a`, only the local array `k` is affected. Therefore, `replace` does not increment the values of array `n` in the calling code.  
   
 ## <a name="compiling-the-code"></a>编译代码  
- Visual Basic 中的默认值是按值传递参数。 但是，它是一个良好的编程做法包括[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)关键字与每个声明的参数。 这使您的代码易于阅读。  
+ The default in Visual Basic is to pass arguments by value. However, it is good programming practice to include either the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword with every declared parameter. This makes your code easier to read.  
   
 ## <a name="see-also"></a>请参阅
 
 - [过程](./index.md)
 - [过程参数和自变量](./procedure-parameters-and-arguments.md)
-- [如何：将参数传递给过程](./how-to-pass-arguments-to-a-procedure.md)
+- [如何：将自变量传递给过程](./how-to-pass-arguments-to-a-procedure.md)
 - [按值和按引用传递自变量](./passing-arguments-by-value-and-by-reference.md)
 - [可修改和不可修改自变量之间的差异](./differences-between-modifiable-and-nonmodifiable-arguments.md)
 - [通过值传递自变量和通过引用传递自变量之间的差异](./differences-between-passing-an-argument-by-value-and-by-reference.md)

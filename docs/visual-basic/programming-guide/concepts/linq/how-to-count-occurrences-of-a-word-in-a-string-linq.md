@@ -1,15 +1,15 @@
 ---
-title: 如何：对某个词在字符串中出现的次数进行计数（LINQ）（Visual Basic）
+title: 如何：对某个词在字符串中出现的次数进行计数 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: bc367e46-f7cc-45f9-936f-754e661b7bb9
-ms.openlocfilehash: 3a2ae52a3380e4a0d8df4adb580e84362e3f13f3
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 92e0b522a1367566c64d6158fd239534e37ad44f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524160"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353701"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>如何：对某个词在字符串中出现的次数进行计数（LINQ）（Visual Basic）
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)
 
 此示例演示如何使用 LINQ 查询对指定词在字符串中出现的次数进行计数。 请注意，若要执行计数，首先需调用 <xref:System.String.Split%2A> 方法来创建词数组。 <xref:System.String.Split%2A> 方法存在性能开销。 如果只需要统计字符串的字数，则应考虑改用 <xref:System.Text.RegularExpressions.Regex.Matches%2A> 或 <xref:System.String.IndexOf%2A> 方法。 但是，如果性能不是关键问题，或者已拆分句子以对其执行其他类型的查询，则使用 LINQ 来计数词或短语同样有意义。
 
@@ -60,8 +60,8 @@ End Class
 
 ## <a name="compiling-the-code"></a>编译代码
 
-使用 VB.NET 命名空间的 `Imports` 语句创建一个控制台应用程序项目。
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
 
 ## <a name="see-also"></a>请参阅
 
-- [LINQ 和字符串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

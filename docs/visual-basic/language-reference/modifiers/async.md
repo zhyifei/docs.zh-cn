@@ -1,5 +1,5 @@
 ---
-title: Async (Visual Basic)
+title: Async
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Async
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: aaf5a95edb9cba9726163be3925b006a7641597c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 73d433c66750ead3a97b1c283cc26b4c43f078df
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040860"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351631"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
 
-`Async` 修饰符指示它修改的方法或[lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)是异步的。 此类方法称为*异步方法*。
+The `Async` modifier indicates that the method or [lambda expression](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) that it modifies is asynchronous. Such methods are referred to as *async methods*.
 
-异步方法提供了一种简便方式来完成可能需要长时间运行的工作，而不必阻止调用方的线程。 异步方法的调用方可以恢复其工作，而无需等待异步方法完成。
+异步方法提供了一种简便方式来完成可能需要长时间运行的工作，而不必阻止调用方的线程。 The caller of an async method can resume its work without waiting for the async method to finish.
 
 > [!NOTE]
-> `Async` 和 `Await` 关键字是在 Visual Studio 2012 中引入的。 有关异步编程的介绍，请参阅[使用 async 和 Await 进行异步编程](../../../visual-basic/programming-guide/concepts/async/index.md)。
+> `Async` 和 `Await` 关键字是在 Visual Studio 2012 中引入的。 For an introduction to async programming, see [Asynchronous Programming with Async and Await](../../../visual-basic/programming-guide/concepts/async/index.md).
 
 下面的示例显示一个异步方法的结构。 按照约定，异步方法名的结尾为“Async”。
 
@@ -43,15 +43,15 @@ Public Async Function ExampleMethodAsync() As Task(Of Integer)
 End Function
 ```
 
-通常，由 `Async` 关键字修改的方法包含至少一个[Await](../../../visual-basic/language-reference/modifiers/async.md)表达式或语句。 方法同步运行，直至到达第一个 `Await`，此时暂停，直到等待的任务完成。 同时，控制权返回给方法的调用方。 如果该方法不包含 `Await` 表达式或语句，则该方法将不会被挂起并作为同步方法执行。 编译器警告将通知你不包含 `Await` 的任何异步方法，因为该情况可能表示存在错误。 有关详细信息，请参阅[编译器错误](../error-messages/bc42358.md)。
+Typically, a method modified by the `Async` keyword contains at least one [Await](../../../visual-basic/language-reference/modifiers/async.md) expression or statement. 方法同步运行，直至到达第一个 `Await`，此时暂停，直到等待的任务完成。 同时，控制权返回给方法的调用方。 If the method doesn't contain an `Await` expression or statement, the method isn't suspended and executes as a synchronous method does. A compiler warning alerts you to any async methods that don't contain `Await` because that situation might indicate an error. For more information, see the [compiler error](../error-messages/bc42358.md).
 
 `Async` 关键字是一个非保留的关键字。 在修饰方法或 lambda 表达式时，它是关键字。 在所有其他上下文中，都会将其解释为标识符。
 
 ## <a name="return-types"></a>返回类型
 
-异步方法可以是[Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)过程，也可以是返回类型为 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>的[函数](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)过程。 方法不能声明任何[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)参数。
+An async method is either a [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) procedure, or a [Function](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) procedure that has a return type of <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601>. The method cannot declare any [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) parameters.
 
-如果方法的[返回](../../../visual-basic/language-reference/statements/return-statement.md)语句具有类型为 TResult 的操作数，则为异步方法的返回类型指定 `Task(Of TResult)`。 如果当方法完成时未返回有意义的值，则应使用 `Task`。 即对方法的调用返回 `Task`，但 `Task` 完成时，等待 `Await` 的任何 `Task` 语句不会产生结果值。
+You specify `Task(Of TResult)` for the return type of an async method if the [Return](../../../visual-basic/language-reference/statements/return-statement.md) statement of the method has an operand of type TResult. 如果当方法完成时未返回有意义的值，则应使用 `Task`。 即对方法的调用返回 `Task`，但 `Task` 完成时，等待 `Await` 的任何 `Task` 语句不会产生结果值。
 
 异步子例程主要用于定义需要 `Sub` 程序的事件处理程序。 异步子程序的调用方不能等待它，并且无法捕获该方法引发的异常。
 
@@ -59,7 +59,7 @@ End Function
 
 ## <a name="example"></a>示例
 
-下面的示例显示一个异步事件处理程序、一个异步 lambda 表达式和一个异步方法。 有关使用这些元素的完整示例，请参阅[演练：使用 Async 和 Await 访问 Web](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 可从[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下载演练代码。
+下面的示例显示一个异步事件处理程序、一个异步 lambda 表达式和一个异步方法。 For a full example that uses these elements, see [Walkthrough: Accessing the Web by Using Async and Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). 可从[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下载演练代码。
 
 ```vb
 ' An event handler must be a Sub procedure.

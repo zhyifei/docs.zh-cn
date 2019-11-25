@@ -1,15 +1,15 @@
 ---
-title: 如何：查找前面的同级（XPath LINQ to XML）（Visual Basic）
+title: 如何：查找前面的同级 (XPath-LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 59055718-d0a7-4db3-8901-18dd33587703
-ms.openlocfilehash: 1ad57c1b6f06843bd757257c8ecda637ad0e71b6
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: be6c546465f659eb633017e47434c86b9f036bf2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250090"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344688"
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-visual-basic"></a>如何：查找前面的同级（XPath LINQ to XML）（Visual Basic）
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-visual-basic"></a>How to: Find Preceding Siblings (XPath-LINQ to XML) (Visual Basic)
 本主题将 XPath `preceding-sibling` 轴与 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 子 <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> 轴进行比较。  
   
  XPath 表达式为：  
@@ -57,4 +57,4 @@ Results are identical
   
 ## <a name="see-also"></a>请参阅
 
-- [XPath 用户的 LINQ to XML （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

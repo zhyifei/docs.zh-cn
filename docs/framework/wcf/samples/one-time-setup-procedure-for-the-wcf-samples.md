@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 示例的一次性安装过程
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 90463a83b8a10085d4df90a2832886e43c51c734
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7dbc4a1b5235c0cb6aa154379358c7761bc4ab1d
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424930"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141852"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 示例的一次性安装过程
 
@@ -22,7 +22,7 @@ ms.locfileid: "73424930"
 
 1. 确保已设置 ASP.NET。 有关如何设置 ASP.NET 的详细信息，请参阅[Internet 信息服务托管说明](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)。
 
-2. 确保已安装 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]。 在以下目录中搜索 v2.0 （或更高版本）： **\Windows\Microsoft.NET\Framework**
+2. 确保安装 .NET Framework 4。 在以下目录中搜索 v2.0 （或更高版本）： **\Windows\Microsoft.NET\Framework**
 
 3. 如果未安装 Visual Studio 2012，并且你的操作系统不是 Windows Server 2008 SP2 或更高版本，请安装[修补程序 251798](https://go.microsoft.com/fwlink/?LinkId=184693)。
 
@@ -37,15 +37,15 @@ ms.locfileid: "73424930"
     ```
 
     > [!WARNING]
-    > 运行命令 `aspnet_regiis –i –enable` 会使默认应用池使用 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]运行，这可能会对同一台计算机上的其他应用程序产生不兼容问题。
+    > 运行命令 `aspnet_regiis –i –enable` 会使默认应用池使用 .NET Framework 4 运行，这可能会为同一台计算机上的其他应用程序产生不兼容问题。
 
 5. 按照[防火墙说明](../../../../docs/framework/wcf/samples/firewall-instructions.md)启用示例使用的端口。
 
-6. 检查以下默认目录： \<安装驱动器 >： **\WF_WCF_Samples**。 如果之前已安装这些示例，则该目录为默认目录。
+6. 检查以下默认目录： \<安装驱动器 >： **\ WF_WCF_Samples**。 如果之前已安装这些示例，则该目录为默认目录。
 
 7. 如果未安装这些示例，请从的示例下载位置安装这些示例[C#](https://go.microsoft.com/fwlink/?LinkId=190939)。
 
-8. 安装示例后，请参阅： \<安装驱动器 >： **\WF_WCF_Samples\WCF\Setup\\**
+8. 安装示例后，请参阅： \<安装驱动器 >： **\ WF_WCF_Samples \wcf\setup\\**
 
 9. 运行**setupvroot.bat**批处理文件。 将执行以下步骤：
 
@@ -65,7 +65,7 @@ ms.locfileid: "73424930"
 
 11. 在计算机上创建一个 C:\logs 目录；某些示例可能需要此目录。 确保向合适的帐户授予了对此文件夹的写访问权限。 对于 Windows 7、[!INCLUDE[wv](../../../../includes/wv-md.md)]和 Windows Server 2008 R2，此帐户为**Network Service**。 对于 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]，该帐户为 NT Authority\Network Service。 对于 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，该帐户为 ASPNET。
 
-12. 运行 Setupcerttool.bat 文件。 此文件位于 \<InstallPath > \WF_WCF_Samples\WCF\Setup\ 文件夹中。  此脚本将执行以下任务：
+12. 运行 Setupcerttool.bat 文件。 此文件位于 \<InstallPath > \ WF_WCF_Samples \WCF\Setup\ 文件夹中。  此脚本将执行以下任务：
 
     - 生成 FindPrivateKey 工具。
 

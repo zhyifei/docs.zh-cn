@@ -1,15 +1,15 @@
 ---
-title: 如何：联接不同文件的内容（LINQ）（Visual Basic）
+title: 如何：联接不同文件的内容 (LINQ)
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: f5bdfecc91f5b2f0ed3764d0f38dee99570d66d4
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: a6528f623d084003bb85dc5bae784b8d96c84d02
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524205"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344552"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>如何：联接不同文件的内容（LINQ）（Visual Basic）
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)
 
 本示例演示如何联接两个逗号分隔文件中的数据，这两个文件共享一个用作匹配键的公共值。 如果需要合并来自两个电子表格的数据，或者从一个电子表格和具有另一种格式的文件合并到一个新文件时，此技术很有用。 可以修改此示例以用于任何类型的结构化文本。
 
@@ -122,5 +122,5 @@ End Class
 
 ## <a name="see-also"></a>请参阅
 
-- [LINQ 和字符串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

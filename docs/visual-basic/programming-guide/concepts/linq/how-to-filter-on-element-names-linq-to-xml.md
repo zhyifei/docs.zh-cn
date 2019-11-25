@@ -1,21 +1,21 @@
 ---
-title: 如何：筛选元素名称（LINQ to XML）（Visual Basic）
+title: 如何：筛选元素名称 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: b1437b4a-48aa-4546-834a-d6d3ab015fe1
-ms.openlocfilehash: 9af4b11d6b539b976e225df6a911e2a80429d2fb
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 0c443ffa17f7bd4f7537068b97165cda97a37ced
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250008"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353025"
 ---
-# <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a>如何：筛选元素名称（LINQ to XML）（Visual Basic）
+# <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a>How to: Filter on Element Names (LINQ to XML) (Visual Basic)
 当调用返回 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement> 的方法之一时，可以根据元素名称进行筛选。  
   
 ## <a name="example"></a>示例  
  本示例说明如何检索经过筛选仅包含具有指定名称的子代的集合。  
   
- 本示例使用下面的 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。  
+ 本示例使用以下 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。  
   
 ```vb  
 Dim po As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -51,9 +51,9 @@ ProductName:Baby Monitor
 - <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息，请参阅[命名空间概述（LINQ to XML）（Visual Basic）](namespaces-overview-linq-to-xml.md)。  
+ 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- 本示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的典型采购单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)。  
+ 本示例使用以下 XML 文档：[示例 XML 文件：命名空间中的典型采购订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)。  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  

@@ -1,16 +1,16 @@
 ---
-title: 使用异步进行文件访问 (Visual Basic)
+title: 使用异步进行文件访问
 ms.date: 07/20/2015
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
-ms.openlocfilehash: dac3348657310a38284d9b6680082050a07e19bb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 803d182f5b0f3071feb7aae4945bc3c0a1fd82c3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642414"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349112"
 ---
 # <a name="using-async-for-file-access-visual-basic"></a>使用异步进行文件访问 (Visual Basic)
-可以使用异步功能来访问文件。 通过使用异步功能，你可以调用异步方法而无需使用回调，也不需要跨多个方法或 Lambda 表达式来拆分代码。 若要使同步代码异步，只需调用异步方法而非同步方法，并向代码中添加几个关键字。  
+You can use the Async feature to access files. 通过使用异步功能，你可以调用异步方法而无需使用回调，也不需要跨多个方法或 Lambda 表达式来拆分代码。 若要使同步代码异步，只需调用异步方法而非同步方法，并向代码中添加几个关键字。  
   
  可能出于以下原因向文件访问调用中添加异步：  
   
@@ -73,10 +73,10 @@ Dim theTask As Task = sourceStream.WriteAsync(encodedText, 0, encodedText.Length
 Await theTask  
 ```  
   
- 第一条语句返回任务，并会导致文件处理启动。 具有 await 的第二条语句将使方法立即退出并返回一个不同的任务。 文件处理稍后完成后，执行将返回到 await 后面的语句中。 有关详细信息，请参阅[异步程序 (Visual Basic 中) 中的控制流](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)。  
+ 第一条语句返回任务，并会导致文件处理启动。 具有 await 的第二条语句将使方法立即退出并返回一个不同的任务。 文件处理稍后完成后，执行将返回到 await 后面的语句中。 For more information, see  [Control Flow in Async Programs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).  
   
 ## <a name="reading-text"></a>读取文本  
- 下面的示例读取文件中的文本。 将会缓冲文本，并且在此情况下，会将其放入 <xref:System.Text.StringBuilder>。 与前一示例不同，await 的计算将生成一个值。 <xref:System.IO.Stream.ReadAsync%2A> 方法返回 <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>，因此在操作完成后 await 的评估会得出 `Int32` 值 (`numRead`)。 有关详细信息，请参阅[异步返回类型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)。  
+ 下面的示例读取文件中的文本。 将会缓冲文本，并且在此情况下，会将其放入 <xref:System.Text.StringBuilder>。 与前一示例不同，await 的计算将生成一个值。 <xref:System.IO.Stream.ReadAsync%2A> 方法返回 <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>，因此在操作完成后 await 的评估会得出 `Int32` 值 (`numRead`)。 For more information, see [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
   
 ```vb  
 Public Async Sub ProcessRead()  
@@ -158,7 +158,7 @@ Public Async Sub ProcessWriteMult()
 End Sub  
 ```  
   
- 当使用 <xref:System.IO.Stream.WriteAsync%2A> 和 <xref:System.IO.Stream.ReadAsync%2A> 方法时，可以指定可用于取消操作中间流的 <xref:System.Threading.CancellationToken>。 有关详细信息，请参阅[微调异步应用程序 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)并[托管线程中的取消](../../../../standard/threading/cancellation-in-managed-threads.md)。  
+ 当使用 <xref:System.IO.Stream.WriteAsync%2A> 和 <xref:System.IO.Stream.ReadAsync%2A> 方法时，可以指定可用于取消操作中间流的 <xref:System.Threading.CancellationToken>。 For more information, see [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) and [Cancellation in Managed Threads](../../../../standard/threading/cancellation-in-managed-threads.md).  
   
 ## <a name="see-also"></a>请参阅
 

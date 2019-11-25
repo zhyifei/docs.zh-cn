@@ -1,5 +1,5 @@
 ---
-title: REM 语句 (Visual Basic)
+title: REM 语句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.'
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Visual Basic code, comments
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
-ms.openlocfilehash: 729d0710d65c0cda750061e72309ced527bbcfe7
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: bdde4beae242c3175b02cd2af252babb850416f6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582064"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346727"
 ---
 # <a name="rem-statement-visual-basic"></a>REM 语句 (Visual Basic)
-用于在程序的源代码中包括解释性注释。  
+Used to include explanatory remarks in the source code of a program.  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,18 +32,18 @@ REM comment
   
 ## <a name="parts"></a>部件  
  `comment`  
- 可选。 要包括的任何注释的文本。 @No__t_0 关键字和 `comment` 之间需要空格。  
+ 可选。 The text of any comment you want to include. A space is required between the `REM` keyword and `comment`.  
   
 ## <a name="remarks"></a>备注  
- 您可以将 `REM` 语句单独放在一行上，也可以将其放在另一语句后面的行上。 @No__t_0 语句必须是该行上的最后一条语句。 如果它跟在另一语句之后，则 `REM` 必须通过空格与该语句分隔开。  
+ You can put a `REM` statement alone on a line, or you can put it on a line following another statement. The `REM` statement must be the last statement on the line. If it follows another statement, the `REM` must be separated from that statement by a space.  
   
- 您可以使用单引号（`'`）而不是 `REM`。 无论您的注释是在同一行后面还是单独的行上，都是如此。  
+ You can use a single quotation mark (`'`) instead of `REM`. This is true whether your comment follows another statement on the same line or sits alone on a line.  
   
 > [!NOTE]
-> 不能使用行继续符（`_`）继续 `REM` 语句。 注释开始后，编译器不会检查字符的特殊含义。 对于多行注释，请在每行上使用另一个 `REM` 语句或注释符号（`'`）。  
+> You cannot continue a `REM` statement by using a line-continuation sequence (`_`). Once a comment begins, the compiler does not examine the characters for special meaning. For a multiple-line comment, use another `REM` statement or a comment symbol (`'`) on each line.  
   
 ## <a name="example"></a>示例  
- 下面的示例演示了 `REM` 语句，该语句用于在程序中包含解释性注释。 它还显示使用单引号（`'`）而不是 `REM` 的替代方法。  
+ The following example illustrates the `REM` statement, which is used to include explanatory remarks in a program. It also shows the alternative of using the single quotation-mark character (`'`) instead of `REM`.  
   
  [!code-vb[VbVbalrStatements#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#6)]  
   

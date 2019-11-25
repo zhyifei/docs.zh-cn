@@ -1,5 +1,5 @@
 ---
-title: Decimal 数据类型 (Visual Basic)
+title: Decimal 数据类型
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Decimal
@@ -20,32 +20,32 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-ms.openlocfilehash: 892824b61cfb6a0172361d220c638cab0a78565d
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 6d62bcc1d043b45c0fc30154d9dc633b998f97b7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700865"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344032"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal 数据类型 (Visual Basic)
 
-保存有符号128位（16字节）的值，这些值表示按10的可变幂进行缩放的96位（12字节）整数。 缩放系数指定小数点右侧的数字位数;范围为0到28。 当小数位数为0（没有小数位数）时，可能的最大值为 +/-79228162514264337593543950335 （+/-7.9228162514264337593543950335E + 28）。 如果有28个小数位数，则最大值为 +/-7.9228162514264337593543950335，最小非零值为 +/-0.0000000000000000000000000001 （+/-1E-28）。
+Holds signed 128-bit (16-byte) values representing 96-bit (12-byte) integer numbers scaled by a variable power of 10. The scaling factor specifies the number of digits to the right of the decimal point; it ranges from 0 through 28. With a scale of 0 (no decimal places), the largest possible value is +/-79,228,162,514,264,337,593,543,950,335 (+/-7.9228162514264337593543950335E+28). With 28 decimal places, the largest value is +/-7.9228162514264337593543950335, and the smallest nonzero value is +/-0.0000000000000000000000000001 (+/-1E-28).
 
 ## <a name="remarks"></a>备注
 
-@No__t 的数据类型为数字提供了最大的有效位数。 它最多支持29个有效位数，并可表示超过 7.9228 x 10 ^ 28 的值。 它特别适用于需要大量数字但不允许舍入误差的计算（例如财务）。
+The `Decimal` data type provides the greatest number of significant digits for a number. It supports up to 29 significant digits and can represent values in excess of 7.9228 x 10^28. It is particularly suitable for calculations, such as financial, that require a large number of digits but cannot tolerate rounding errors.
 
 `Decimal` 的默认值为 0。
 
 ## <a name="programming-tips"></a>编程提示
 
-- **Precision.** `Decimal` 不是浮点数据类型。 @No__t-0 结构保存二进制整数值，同时包含一个符号位和一个整数比例因子，用于指定值的哪一部分是小数部分。 因此，@no__t 0 数字在内存中的表示形式比浮点类型（`Single` 和 `Double`）更精确。
+- **Precision.** `Decimal` is not a floating-point data type. The `Decimal` structure holds a binary integer value, together with a sign bit and an integer scaling factor that specifies what portion of the value is a decimal fraction. Because of this, `Decimal` numbers have a more precise representation in memory than floating-point types (`Single` and `Double`).
 
-- **性能。** @No__t 的数据类型是所有数值类型最慢的一个。 在选择数据类型之前，应权衡精度与性能的重要性。
+- **性能。** The `Decimal` data type is the slowest of all the numeric types. You should weigh the importance of precision against performance before choosing a data type.
 
-- **扩大.** @No__t 的数据类型扩大到 @no__t 或 @no__t。 这意味着可以将 `Decimal` 转换为这些类型中的任何一种，而不会遇到 @no__t 错误。
+- **Widening.** The `Decimal` data type widens to `Single` or `Double`. This means you can convert `Decimal` to either of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
 
-- **尾随零。** Visual Basic 不会在 @no__t 0 文本中存储尾随零。 但是，@no__t 0 变量保留了任何尾随零获取计算。 下面的示例阐释了这一点。
+- **Trailing Zeros.** Visual Basic does not store trailing zeros in a `Decimal` literal. However, a `Decimal` variable preserves any trailing zeros acquired computationally. 下面的示例阐释了这一点。
 
   ```vb
   Dim d1, d2, d3, d4 As Decimal
@@ -57,18 +57,19 @@ ms.locfileid: "71700865"
         ", d3 = " & CStr(d3) & ", d4 = " & CStr(d4))
   ```
 
-  上述示例中 `MsgBox` 的输出如下所示：
+  The output of `MsgBox` in the preceding example is as follows:
 
   ```console
   d1 = 2.375, d2 = 1.625, d3 = 4.000, d4 = 4
   ```
 
-- **键入字符。** 将文本类型字符 `D` 追加到文本会将其强制转换为 `Decimal` 数据类型。 将标识符类型字符 `@` 追加到任何标识符会将其强制转换为 `Decimal`。
+- **Type Characters.** 将文本类型字符 `D` 追加到文本会将其强制转换为 `Decimal` 数据类型。 将标识符类型字符 `@` 追加到任何标识符会将其强制转换为 `Decimal`。
 
-- **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.Decimal?displayProperty=nameWithType> 结构。
+- **Framework Type.** .NET Framework 中的对应类型是 <xref:System.Decimal?displayProperty=nameWithType> 结构。
 
 ## <a name="range"></a>范围
- 你可能需要使用 @no__t 类型的字符将较大的值分配给 @no__t 1 变量或常量。 此要求的原因是编译器将文本解释为 `Long`，除非文本类型字符跟随文本，如下面的示例所示。
+
+ You might need to use the `D` type character to assign a large value to a `Decimal` variable or constant. This requirement is because the compiler interprets a literal as `Long` unless a literal type character follows the literal, as the following example shows.
 
 ```vb
 Dim bigDec1 As Decimal = 9223372036854775807   ' No overflow.
@@ -76,11 +77,11 @@ Dim bigDec2 As Decimal = 9223372036854775808   ' Overflow.
 Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.
 ```
 
-@No__t 的声明不会产生溢出，因为赋给它的值落在 @no__t 的范围内。 可以将 `Long` 值分配给 @no__t 变量。
+The declaration for `bigDec1` doesn't produce an overflow because the value that's assigned to it falls within the range for `Long`. The `Long` value can be assigned to the `Decimal` variable.
 
-@No__t 的声明生成溢出错误，因为赋给它的值太大，无法用于 `Long`。 因为数值不能首先被解释为 `Long`，所以不能将其分配给 @no__t 变量。
+The declaration for `bigDec2` generates an overflow error because the value that's assigned to it is too large for `Long`. Because the numeric literal can't first be interpreted as a `Long`, it can't be assigned to the `Decimal` variable.
 
-对于 `bigDec3`，通过强制编译器将文本解释为 `Decimal` 而不是 @no__t 3 @no__t，可以解决此问题。
+For `bigDec3`, the literal type character `D` solves the problem by forcing the compiler to interpret the literal as a `Decimal` instead of as a `Long`.
 
 ## <a name="see-also"></a>请参阅
 

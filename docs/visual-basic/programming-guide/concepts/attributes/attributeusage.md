@@ -1,15 +1,15 @@
 ---
-title: AttributeUsage （Visual Basic）
+title: AttributeUsage
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: dbfbfaa6124eacfd9e4043eab9e4769103e554ca
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 7e54e82c1e9edfd0d9d393a014f9d91f82970363
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524314"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353546"
 ---
-# <a name="attributeusage-visual-basic"></a>AttributeUsage （Visual Basic）
+# <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 
 确定如何使用自定义特性类。 `AttributeUsage` 是一个特性，可应用于自定义特性定义，以控制如何应用新特性。 在显式应用时的默认设置如下：
 
@@ -36,10 +36,6 @@ End Class
 第一个 `AttributeUsage` 参数必须是 <xref:System.AttributeTargets> 枚举的一个或多个元素。 可将多个目标类型与 OR 运算符链接在一起，如下所示：
 
 ```vb
-Imports System
-```
-
-```vb
 <AttributeUsage(AttributeTargets.Property Or AttributeTargets.Field)>
 Class NewPropertyOrFieldAttribute
     Inherits Attribute
@@ -47,10 +43,6 @@ End Class
 ```
 
 如果 `AllowMultiple` 参数设置为 `true`，则结果特性可多次应用于单个实体，如下所示：
-
-```vb
-Imports System
-```
 
 ```vb
 <AttributeUsage(AttributeTargets.Class, AllowMultiple:=True)>
@@ -66,10 +58,6 @@ End Class
 在本例中，`MultiUseAttr` 可重复应用，因为 `AllowMultiple` 设置为 `true`。 所显示的两种用于应用多个特性的格式均有效。
 
 如果 `Inherited` 设置为 `false`，那么特性不会由派生自已特性化的类的类继承。 例如:
-
-```vb
-Imports System
-```
 
 ```vb
 <AttributeUsage(AttributeTargets.Class, Inherited:=False)>
@@ -98,10 +86,6 @@ End Class
 ## <a name="example"></a>示例
 
 以下示例演示 `Inherited` 和 `AllowMultiple` 参数对 `AttributeUsage` 特性的影响，以及如何枚举应用于类的自定义特性。
-
-```vb
-Imports System
-```
 
 ```vb
 ' Create some custom attributes:

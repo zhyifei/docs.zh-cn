@@ -1,5 +1,5 @@
 ---
-title: Function 语句 (Visual Basic)
+title: Function 语句
 ms.date: 05/12/2018
 f1_keywords:
 - vb.Function
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: 046a3a7d50d15cd3e59205998554a4c330d4552c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 8140c7e6267e66c69c20d413a11d04372400c581
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581837"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345923"
 ---
 # <a name="function-statement-visual-basic"></a>Function 语句 (Visual Basic)
 
-声明定义 `Function` 过程的名称、参数和代码。
+Declares the name, parameters, and code that define a `Function` procedure.
 
 ## <a name="syntax"></a>语法
 
@@ -54,7 +54,7 @@ End Function
 
 - `attributelist`
 
-  可选。 请参阅[特性列表](attribute-list.md)。
+  可选。 See [Attribute List](attribute-list.md).
 
 - `accessmodifier`
 
@@ -94,39 +94,39 @@ End Function
 
 - `Shared`
 
-  可选。 请参阅[共享](../../../visual-basic/language-reference/modifiers/shared.md)。
+  可选。 See [Shared](../../../visual-basic/language-reference/modifiers/shared.md).
 
 - `Shadows`
 
-  可选。 请参阅[阴影](../../../visual-basic/language-reference/modifiers/shadows.md)。
+  可选。 See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
 
 - `Async`
 
-  可选。 请参阅[Async](../../../visual-basic/language-reference/modifiers/async.md)。
+  可选。 See [Async](../../../visual-basic/language-reference/modifiers/async.md).
 
 - `Iterator`
 
-  可选。 请参阅[迭代器](../../../visual-basic/language-reference/modifiers/iterator.md)。
+  可选。 See [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md).
 
 - `name`
 
-  必须的。 过程的名称。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。
+  必须的。 Name of the procedure. 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。
 
 - `typeparamlist`
 
-  可选。 泛型过程的类型参数的列表。 请参阅[类型列表](type-list.md)。
+  可选。 List of type parameters for a generic procedure. See [Type List](type-list.md).
 
 - `parameterlist`
 
-  可选。 表示此过程参数的本地变量名称列表。 请参阅[参数列表](parameter-list.md)。
+  可选。 List of local variable names representing the parameters of this procedure. See [Parameter List](parameter-list.md).
 
 - `returntype`
 
-  如果 `Option Strict` `On`，则为必需。 此过程返回的值的数据类型。
+  Required if `Option Strict` is `On`. Data type of the value returned by this procedure.
 
 - `Implements`
 
-  可选。 指示此过程实现一个或多个 `Function` 过程，每个过程都在此过程的包含类或结构实现的接口中定义。 请参阅[Implements 语句](implements-statement.md)。
+  可选。 Indicates that this procedure implements one or more `Function` procedures, each one defined in an interface implemented by this procedure's containing class or structure. See [Implements Statement](implements-statement.md).
 
 - `implementslist`
 
@@ -140,16 +140,16 @@ End Function
 
   |部件|描述|
   |---|---|
-  |`interface`|必须的。 此过程的包含类或结构实现的接口的名称。|
+  |`interface`|必须的。 Name of an interface implemented by this procedure's containing class or structure.|
   |`definedname`|必须的。 在 `interface` 中用于定义过程的名称。|
 
 - `Handles`
 
-  可选。 指示此过程可以处理一个或多个特定事件。 请参阅[句柄](handles-clause.md)。
+  可选。 Indicates that this procedure can handle one or more specific events. See [Handles](handles-clause.md).
 
 - `eventlist`
 
-  如果提供 `Handles`，则是必需的。 此过程处理的事件列表。
+  如果提供 `Handles`，则是必需的。 List of events this procedure handles.
 
   `eventspecifier [ , eventspecifier ... ]`
 
@@ -159,108 +159,108 @@ End Function
 
   |部件|描述|
   |---|---|
-  |`eventvariable`|必须的。 用引发事件的类或结构的数据类型声明的对象变量。|
-  |`event`|必须的。 此过程处理的事件的名称。|
+  |`eventvariable`|必须的。 Object variable declared with the data type of the class or structure that raises the event.|
+  |`event`|必须的。 Name of the event this procedure handles.|
 
 - `statements`
 
-  可选。 要在此过程中执行的语句块。
+  可选。 Block of statements to be executed within this procedure.
 
 - `End Function`
 
-  终止此过程的定义。
+  Terminates the definition of this procedure.
 
 ## <a name="remarks"></a>备注
 
-所有可执行代码都必须在过程内。 反过来，每个过程都在类、结构或模块（称为包含类、结构或模块）中声明。
+All executable code must be inside a procedure. Each procedure, in turn, is declared within a class, a structure, or a module that is referred to as the containing class, structure, or module.
 
-若要将值返回到调用代码，请使用 `Function` 过程;否则，请使用 `Sub` 过程。
+To return a value to the calling code, use a `Function` procedure; otherwise, use a `Sub` procedure.
 
-## <a name="defining-a-function"></a>定义函数
+## <a name="defining-a-function"></a>Defining a Function
 
-只能在模块级别定义 `Function` 过程。 因此，函数的声明上下文必须是类、结构、模块或接口，不能是源文件、命名空间、过程或块。 有关详细信息，请参阅[声明上下文和默认访问级别](declaration-contexts-and-default-access-levels.md)。
+You can define a `Function` procedure only at the module level. Therefore, the declaration context for a function must be a class, a structure, a module, or an interface and can't be a source file, a namespace, a procedure, or a block. 有关详细信息，请参阅[声明上下文和默认访问级别](declaration-contexts-and-default-access-levels.md)。
 
-`Function` 过程默认为公共访问。 您可以使用访问修饰符调整其访问级别。
+`Function` procedures default to public access. You can adjust their access levels with the access modifiers.
 
-@No__t_0 过程可以声明过程返回的值的数据类型。 您可以指定任何数据类型或枚举、结构、类或接口的名称。 如果未指定 `returntype` 参数，则该过程将返回 `Object`。
+A `Function` procedure can declare the data type of the value that the procedure returns. You can specify any data type or the name of an enumeration, a structure, a class, or an interface. If you don't specify the `returntype` parameter, the procedure returns `Object`.
 
-如果此过程使用 `Implements` 关键字，则包含类或结构还必须具有紧跟其 `Class` 或 `Structure` 语句的 `Implements` 语句。 @No__t_0 语句必须包括 `implementslist` 中指定的每个接口。 但是，接口用于定义 `Function` 的名称（在 `definedname` 中）无需与此过程的名称匹配（在 `name` 中）。
+If this procedure uses the `Implements` keyword, the containing class or structure must also have an `Implements` statement that immediately follows its `Class` or `Structure` statement. The `Implements` statement must include each interface that's specified in `implementslist`. However, the name by which an interface defines the `Function` (in `definedname`) doesn't need to match the name of this procedure (in `name`).
 
 > [!NOTE]
-> 您可以使用 lambda 表达式来定义内联函数表达式。 有关详细信息，请参阅[函数表达式](../../../visual-basic/language-reference/operators/function-expression.md)和[Lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。
+> You can use lambda expressions to define function expressions inline. For more information, see [Function Expression](../../../visual-basic/language-reference/operators/function-expression.md) and [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
 
-## <a name="returning-from-a-function"></a>从函数返回
+## <a name="returning-from-a-function"></a>Returning from a Function
 
-当 `Function` 过程返回到调用代码时，执行将继续执行调用该过程的语句后面的语句。
+When the `Function` procedure returns to the calling code, execution continues with the statement that follows the statement that called the procedure.
 
-若要从函数返回值，可以将值分配给函数名称，或者将其包含在 `Return` 语句中。
+To return a value from a function, you can either assign the value to the function name or include it in a `Return` statement.
 
-@No__t_0 语句同时分配返回值并退出函数，如下面的示例所示。
+The `Return` statement simultaneously assigns the return value and exits the function, as the following example shows.
 
 [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]
 
-下面的示例将返回值分配给函数名称 `myFunction`，然后使用 `Exit Function` 语句返回。
+The following example assigns the return value to the function name `myFunction` and then uses the `Exit Function` statement to return.
 
 [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]
 
-@No__t_0 和 `Return` 语句导致立即退出 `Function` 过程。 任意数量的 `Exit Function` 和 `Return` 语句可以出现在过程中的任何位置，并且可以混合 `Exit Function` 和 `Return` 语句。
+The `Exit Function` and `Return` statements cause an immediate exit from a `Function` procedure. Any number of `Exit Function` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Function` and `Return` statements.
 
-如果在不指定 `name` 值的情况下使用 `Exit Function`，则该过程将返回 `returntype` 中指定的数据类型的默认值。 如果未指定 `returntype`，则该过程将返回 `Nothing`，这是 `Object` 的默认值。
+If you use `Exit Function` without assigning a value to `name`, the procedure returns the default value for the data type that's specified in `returntype`. If `returntype` isn't specified, the procedure returns `Nothing`, which is the default value for `Object`.
 
 ## <a name="calling-a-function"></a>调用函数
 
-通过在表达式中使用过程名称后跟括号中的参数列表，可以调用 `Function` 过程。 仅当未提供任何参数时，才可以省略括号。 但是，如果你始终包含括号，你的代码将更具可读性。
+You call a `Function` procedure by using the procedure name, followed by the argument list in parentheses, in an expression. You can omit the parentheses only if you aren't supplying any arguments. However, your code is more readable if you always include the parentheses.
 
-调用 `Function` 过程的方式与调用任何库函数（如 `Sqrt`、`Cos` 或 `ChrW`）的方式相同。
+You call a `Function` procedure the same way that you call any library function such as `Sqrt`, `Cos`, or `ChrW`.
 
-还可以通过使用 `Call` 关键字调用函数。 在这种情况下，将忽略返回值。 在大多数情况下不建议使用 `Call` 关键字。 有关详细信息，请参阅[Call 语句](call-statement.md)。
+You can also call a function by using the `Call` keyword. In that case, the return value is ignored. Use of the `Call` keyword isn't recommended in most cases. For more information, see [Call Statement](call-statement.md).
 
-Visual Basic 有时会重新排列算术表达式以提高内部效率。 出于此原因，当函数更改同一表达式中变量的值时，不应使用算术表达式中的 `Function` 过程。
+Visual Basic sometimes rearranges arithmetic expressions to increase internal efficiency. For that reason, you shouldn't use a `Function` procedure in an arithmetic expression when the function changes the value of variables in the same expression.
 
-## <a name="async-functions"></a>异步函数
+## <a name="async-functions"></a>Async Functions
 
-使用*异步*功能可以调用异步函数，而无需使用显式回调或在多个函数或 lambda 表达式中手动拆分代码。
+The *Async* feature allows you to invoke asynchronous functions without using explicit callbacks or manually splitting your code across multiple functions or lambda expressions.
 
-如果使用[Async](../../../visual-basic/language-reference/modifiers/async.md)修饰符标记函数，则可以在函数中使用[Await](../../../visual-basic/language-reference/operators/await-operator.md)运算符。 当控件在 `Async` 函数中到达 `Await` 表达式时，控件将返回到调用方，并且在等待的任务完成之前，将挂起该函数中的进度。 任务完成后，可以在函数中继续执行。
+If you mark a function with the [Async](../../../visual-basic/language-reference/modifiers/async.md) modifier, you can use the [Await](../../../visual-basic/language-reference/operators/await-operator.md) operator in the function. When control reaches an `Await` expression in the `Async` function, control returns to the caller, and progress in the function is suspended until the awaited task completes. When the task is complete, execution can resume in the function.
 
 > [!NOTE]
-> 当某个 `Async` 过程遇到尚未完成的第一个等待对象时，它将返回到调用方，或者到达 `Async` 过程的末尾，以先发生者为准。
+> An `Async` procedure returns to the caller when either it encounters the first awaited object that’s not yet complete, or it gets to the end of the `Async` procedure, whichever occurs first.
 
-@No__t_0 函数的返回类型可以是 <xref:System.Threading.Tasks.Task%601> 或 <xref:System.Threading.Tasks.Task>。 下面提供了返回类型为 <xref:System.Threading.Tasks.Task%601> 的 `Async` 函数的示例。
+An `Async` function can have a return type of <xref:System.Threading.Tasks.Task%601> or <xref:System.Threading.Tasks.Task>. An example of an `Async` function that has a return type of <xref:System.Threading.Tasks.Task%601> is provided below.
 
-@No__t_0 函数不能声明任何[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)参数。
+An `Async` function cannot declare any [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) parameters.
 
-还可以使用 `Async` 修饰符来标记[Sub 语句](sub-statement.md)。 这主要用于事件处理程序，其中不能返回值。 无法等待 `Async` 的 `Sub` 过程，并且 `Async` `Sub` 过程的调用方无法捕获由 `Sub` 过程引发的异常。
+A [Sub Statement](sub-statement.md) can also be marked with the `Async` modifier. This is primarily used for event handlers, where a value cannot be returned. An `Async` `Sub` procedure can't be awaited, and the caller of an `Async` `Sub` procedure can't catch exceptions that are thrown by the `Sub` procedure.
 
-有关 `Async` 函数的详细信息，请参阅[采用 async 和 Await 的异步编程](../../../visual-basic/programming-guide/concepts/async/index.md)、[异步程序中的控制流](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)和[异步返回类型](../../../visual-basic/programming-guide/concepts/async/async-return-types.md)。
+For more information about `Async` functions, see [Asynchronous Programming with Async and Await](../../../visual-basic/programming-guide/concepts/async/index.md), [Control Flow in Async Programs](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md), and [Async Return Types](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
 
-## <a name="iterator-functions"></a>迭代器函数
+## <a name="iterator-functions"></a>Iterator Functions
 
-*迭代器*函数在集合上执行自定义迭代，如列表或数组。 Iterator 函数使用[Yield](yield-statement.md)语句每次返回一个元素。 当到达[Yield](yield-statement.md)语句时，将记住代码中的当前位置。 下次调用迭代器函数时，将从该位置重新开始执行。
+An *iterator* function performs a custom iteration over a collection, such as a list or array. An iterator function uses the [Yield](yield-statement.md) statement to return each element one at a time. When a [Yield](yield-statement.md) statement is reached, the current location in code is remembered. 下次调用迭代器函数时，将从该位置重新开始执行。
 
-使用 For Each ... 将从客户端代码调用迭代器[下一](for-each-next-statement.md)语句。
+You call an iterator from client code by using a [For Each…Next](for-each-next-statement.md) statement.
 
-迭代器函数的返回类型可以是 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601>。
+The return type of an iterator function can be <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, or <xref:System.Collections.Generic.IEnumerator%601>.
 
 有关详细信息，请参阅[迭代器](../../programming-guide/concepts/iterators.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例使用 `Function` 语句来声明构成 `Function` 过程正文的名称、参数和代码。 @No__t_0 修饰符使函数可以接受数量可变的参数。
+The following example uses the `Function` statement to declare the name, parameters, and code that form the body of a `Function` procedure. The `ParamArray` modifier enables the function to accept a variable number of arguments.
 
 [!code-vb[VbVbalrStatements#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#25)]
 
 ## <a name="example"></a>示例
 
-下面的示例调用在前面的示例中声明的函数。
+The following example invokes the function declared in the preceding example.
 
 [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]
 
 ## <a name="example"></a>示例
 
-在下面的示例中，`DelayAsync` 是返回类型为 <xref:System.Threading.Tasks.Task%601> 的 `Async` `Function`。 `DelayAsync` 具有返回整数的 `Return` 语句。 因此，`DelayAsync` 的函数声明需要具有 `Task(Of Integer)` 的返回类型。 由于返回类型为 `Task(Of Integer)`，因此 `DoSomethingAsync` 中 `Await` 表达式的计算将产生整数。 此语句演示了这一点： `Dim result As Integer = Await delayTask`。
+In the following example, `DelayAsync` is an `Async` `Function` that has a return type of <xref:System.Threading.Tasks.Task%601>. `DelayAsync` 具有返回整数的 `Return` 语句。 Therefore the function declaration of `DelayAsync` needs to have a return type of `Task(Of Integer)`. Because the return type is `Task(Of Integer)`, the evaluation of the `Await` expression in `DoSomethingAsync` produces an integer. This is demonstrated in this statement: `Dim result As Integer = Await delayTask`.
 
-@No__t_0 过程是 `Async Sub` 过程的示例。 由于 `DoSomethingAsync` 是 `Async` 函数，因此对 `DoSomethingAsync` 的调用的任务必须等待，如以下语句所示： `Await DoSomethingAsync()`。 必须使用 `Async` 修饰符定义 `startButton_Click` `Sub` 过程，因为它具有 `Await` 表达式。
+The `startButton_Click` procedure is an example of an `Async Sub` procedure. Because `DoSomethingAsync` is an `Async` function, the task for the call to `DoSomethingAsync` must be awaited, as the following statement demonstrates: `Await DoSomethingAsync()`. The `startButton_Click` `Sub` procedure must be defined with the `Async` modifier because it has an `Await` expression.
 
 [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]
 

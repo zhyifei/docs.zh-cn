@@ -1,15 +1,15 @@
 ---
-title: 如何：使用组将一个文件拆分成多个文件（LINQ）（Visual Basic）
+title: 如何：使用组将一个文件拆分成多个文件 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: d438da7eb50e13c23a9c1b77a74f19fba8d95e04
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: bd210f5119540bd35c18a07a21fc836339222bd0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524057"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341359"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>如何：使用组将一个文件拆分成多个文件（LINQ）（Visual Basic）
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)
 
 此示例演示一种进行以下操作的方法：合并两个文件的内容，然后创建一组以新方式整理数据的新文件。
 
@@ -118,9 +118,9 @@ End Class
 
 ## <a name="compiling-the-code"></a>编译代码
 
-使用 VB.NET 命名空间的 `Imports` 语句创建一个控制台应用程序项目。
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
 
 ## <a name="see-also"></a>请参阅
 
-- [LINQ 和字符串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

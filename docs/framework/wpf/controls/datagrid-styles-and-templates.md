@@ -9,20 +9,20 @@ helpviewer_keywords:
 - styles [WPF], DataGrid
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-ms.openlocfilehash: d1ef962132f4c057229c8150a8d49809ce8c7430
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 066e8c9ce1112399be8128d0821498f0d56a3dc3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460400"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283808"
 ---
 # <a name="datagrid-styles-and-templates"></a>DataGrid 样式和模板
-本主题介绍 <xref:System.Windows.Controls.DataGrid> 控件的样式和模板。 您可以修改默认 <xref:System.Windows.Controls.ControlTemplate> 以使控件具有独特的外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
+本主题介绍 <xref:System.Windows.Controls.DataGrid> 控件的样式和模板。 您可以修改默认 <xref:System.Windows.Controls.ControlTemplate> 以使控件具有独特的外观。 有关详细信息，请参阅为[控件创建模板](../../../desktop-wpf/themes/how-to-create-apply-template.md)。  
   
 ## <a name="datagrid-parts"></a>DataGrid 部分  
  下表列出了 <xref:System.Windows.Controls.DataGrid> 控件的已命名部分。  
   
-|部件|键入|描述|  
+|部件|Type|描述|  
 |-|-|-|  
 |PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|包含列标题的行。|  
   
@@ -35,7 +35,7 @@ ms.locfileid: "73460400"
   
 |VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
-|普通|CommonStates|默认状态。|  
+|一般|CommonStates|默认状态。|  
 |Disabled|CommonStates|已禁用控件。|  
 |InvalidFocused|ValidationStates|控件无效，但具有焦点。|  
 |InvalidUnfocused|ValidationStates|控件无效，并且没有焦点。|  
@@ -49,7 +49,7 @@ ms.locfileid: "73460400"
   
 |VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
-|普通|CommonStates|默认状态。|  
+|一般|CommonStates|默认状态。|  
 |MouseOver|CommonStates|鼠标指针位于单元格上。|  
 |已设定焦点|FocusStates|单元格有焦点。|  
 |失去焦点|FocusStates|单元格没有焦点|  
@@ -71,7 +71,7 @@ ms.locfileid: "73460400"
   
 |VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
-|普通|CommonStates|默认状态。|  
+|一般|CommonStates|默认状态。|  
 |MouseOver|CommonStates|鼠标指针置于行的上方。|  
 |MouseOver_Editing|CommonStates|鼠标指针置于行的上方，行处于编辑模式。|  
 |MouseOver_Selected|CommonStates|鼠标指针置于行上方，并选中行。|  
@@ -89,7 +89,7 @@ ms.locfileid: "73460400"
 ## <a name="datagridrowheader-parts"></a>DataGridRowHeader 部件  
  下表列出了 <xref:System.Windows.Controls.Primitives.DataGridRowHeader> 元素的已命名部分。  
   
-|部件|键入|描述|  
+|部件|Type|描述|  
 |-|-|-|  
 |PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|用于从顶部调整行标题大小的元素。|  
 |PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|用于从底部调整行标题大小的元素。|  
@@ -99,7 +99,7 @@ ms.locfileid: "73460400"
   
 |VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
-|普通|CommonStates|默认状态。|  
+|一般|CommonStates|默认状态。|  
 |MouseOver|CommonStates|鼠标指针置于行的上方。|  
 |MouseOver_CurrentRow|CommonStates|鼠标指针置于行的上方，行是当前行。|  
 |MouseOver_CurrentRow_Selected|CommonStates|鼠标指针置于行的上方，行是当前行并处于选定状态。|  
@@ -122,7 +122,7 @@ ms.locfileid: "73460400"
 ## <a name="datagridcolumnheaderspresenter-parts"></a>DataGridColumnHeadersPresenter 部件  
  下表列出了 <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> 元素的已命名部分。  
   
-|部件|键入|描述|  
+|部件|Type|描述|  
 |-|-|-|  
 |PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|列标题的占位符。|  
   
@@ -138,7 +138,7 @@ ms.locfileid: "73460400"
 ## <a name="datagridcolumnheader-parts"></a>DataGridColumnHeader 部件  
  下表列出了 <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> 元素的已命名部分。  
   
-|部件|键入|描述|  
+|部件|Type|描述|  
 |-|-|-|  
 |PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|用于从左侧调整列标题大小的元素。|  
 |PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|用于从右侧调整列标题大小的元素。|  
@@ -148,7 +148,7 @@ ms.locfileid: "73460400"
   
 |VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
-|普通|CommonStates|默认状态。|  
+|一般|CommonStates|默认状态。|  
 |MouseOver|CommonStates|鼠标指针悬停在控件上。|  
 |已按下|CommonStates|已按下控件。|  
 |SortAscending|SortStates|列按升序排序。|  
@@ -169,11 +169,11 @@ ms.locfileid: "73460400"
   
  有关完整示例，请参阅[使用 ControlTemplates 设置样式示例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [控件样式和模板](control-styles-and-templates.md)
 - [控件自定义](control-customization.md)
 - [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)
+- [为控件创建模板](../../../desktop-wpf/themes/how-to-create-apply-template.md)

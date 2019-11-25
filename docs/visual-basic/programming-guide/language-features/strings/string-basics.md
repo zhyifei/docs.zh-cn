@@ -1,23 +1,23 @@
 ---
-title: 字符串基础 (Visual Basic)
+title: 字符串基础
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], Like operator
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: f1f6b98d7db510373f2729fab2a6e0ad993ea086
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7141966e3c8a8cbce42111c56a85a00709e8fe1a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591379"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344284"
 ---
 # <a name="string-basics-in-visual-basic"></a>字符串基础 (Visual Basic)
-`String` 数据类型表示一系列字符（每个字符都进而表示 `Char` 数据类型的一个实例）。 本主题介绍在 Visual Basic 中的字符串的基本概念。  
+`String` 数据类型表示一系列字符（每个字符都进而表示 `Char` 数据类型的一个实例）。 This topic introduces the basic concepts of strings in Visual Basic.  
   
 ## <a name="string-variables"></a>字符串变量  
- 可以向字符串的实例分配表示一系列字符的文本值。 例如：  
+ 可以向字符串的实例分配表示一系列字符的文本值。 例如:  
   
  [!code-vb[VbVbalrStrings#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#63)]  
   
@@ -29,7 +29,7 @@ ms.locfileid: "65591379"
   
  [!code-vb[VbVbalrStrings#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#65)]  
   
- 此代码会导致错误，因为编译器会在第二个引号之后终止字符串，字符串的其余部分会解释为代码。 若要解决此问题，Visual Basic 会将字符串文本字符串中的一个引号中的两个引号解释。 下面的示例演示在字符串中包含引号的正确方法：  
+ 此代码会导致错误，因为编译器会在第二个引号之后终止字符串，字符串的其余部分会解释为代码。 To solve this problem, Visual Basic interprets two quotation marks in a string literal as one quotation mark in the string. 下面的示例演示在字符串中包含引号的正确方法：  
   
  [!code-vb[VbVbalrStrings#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#66)]  
   
@@ -50,18 +50,18 @@ World]]></xml>.Value
 ```  
   
 ## <a name="characters-in-strings"></a>字符串中的字符  
- 可以将字符串视为一系列 `Char` 值，`String` 类型具有内置函数，可用于对字符串执行很多操作（类似于数组允许的操作）。 与.NET Framework 中的所有数组，这些是从零开始的数组。 还可以通过 `Chars` 属性引用字符串中的特定字符，该属性提供了一种方法，用于通过字符在字符串中出现的位置来访问它。 例如：  
+ 可以将字符串视为一系列 `Char` 值，`String` 类型具有内置函数，可用于对字符串执行很多操作（类似于数组允许的操作）。 Like all array in .NET Framework, these are zero-based arrays. 还可以通过 `Chars` 属性引用字符串中的特定字符，该属性提供了一种方法，用于通过字符在字符串中出现的位置来访问它。 例如:  
   
  [!code-vb[VbVbalrStrings#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#67)]  
   
- 在上面的示例中，字符串的 `Chars` 属性返回字符串中的第四个字符（即 `D`），并将它分配给 `myChar`。 还可以通过 `Length` 属性获取特定字符串的长度。 如果需要对字符串执行多个数组类型的操作，则可以使用字符串的 `ToCharArray` 函数将它转换为 `Char` 实例的数组。 例如：  
+ 在上面的示例中，字符串的 `Chars` 属性返回字符串中的第四个字符（即 `D`），并将它分配给 `myChar`。 还可以通过 `Length` 属性获取特定字符串的长度。 如果需要对字符串执行多个数组类型的操作，则可以使用字符串的 `ToCharArray` 函数将它转换为 `Char` 实例的数组。 例如:  
   
  [!code-vb[VbVbalrStrings#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#68)]  
   
  变量 `myArray` 现在包含 `Char` 值的数组，其中每个值都表示 `myString` 中的一个字符。  
   
 ## <a name="the-immutability-of-strings"></a>字符串的不可变性  
- 字符串是*不可变*，这意味着不能一次更改其值创建。 但是，这不会阻止你将多个值分配给字符串变量。 请看下面的示例：  
+ A string is *immutable*, which means its value cannot be changed once it has been created. 但是，这不会阻止你将多个值分配给字符串变量。 请看下面的示例：  
   
  [!code-vb[VbVbalrStrings#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#69)]  
   

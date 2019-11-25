@@ -1,5 +1,5 @@
 ---
-title: Visual Basic 中的对象变量
+title: 对象变量
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object variables [Visual Basic], about object variables
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - objects [Visual Basic], accessing
 - object variables [Visual Basic]
 ms.assetid: 6169a196-2b13-4ba5-a205-154bc1b87844
-ms.openlocfilehash: cc5be13293a89e73d1790e94a99d7936f1711e12
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7eb860bc732f923316b8ce1d7b94ecdb368bfec3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961229"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351782"
 ---
 # <a name="object-variables-in-visual-basic"></a>Visual Basic 中的对象变量
 
-除了直接存储值，变量还可以引用的对象。 出于相同原因的任何值分配给一个变量可将对象分配给一个变量中：
+In addition to storing values directly, a variable can refer to an object. You assign an object to a variable for the same reasons you assign any value to a variable:
 
-- 变量名称通常是较短且更易于记住比的方法和属性访问该对象本身所需的完整路径。
+- A variable name is often shorter and easier to remember than the full path of methods and properties necessary to access the object itself.
 
-- 使用引用的对象的变量是重复通过所必需的方法或属性访问该对象本身相比更高效。
+- Using a variable that refers to an object is more efficient than repeatedly accessing the object itself through the necessary methods or properties.
 
-- 你可以为你的代码运行时引用其他对象的变量。
+- You can change a variable to refer to other objects while your code is running.
 
-## <a name="making-code-shorter"></a>从而使代码更短
+## <a name="making-code-shorter"></a>Making Code Shorter
 
-可以使用对象变量来缩短您必须键入的代码。 下面的示例使用的方法和属性的完整路径来访问<xref:System.Windows.Forms.Control>对象。
+You can use object variables to shorten the code you have to type. The following example uses the full path of methods and properties to access a <xref:System.Windows.Forms.Control> object.
 
 ```vb
 ' Assume Me is a valid Form, or replace Me with a valid Form.
@@ -35,7 +35,7 @@ Me.ActiveForm.ActiveControl.Location = New Point(100, 100)
 Me.ActiveForm.ActiveControl.Show()
 ```
 
-您可以缩短此代码中，并加快执行，如果控件使用的对象变量。 应该声明对象变量与你想要为其分配的特定类 (`Control`这种情况下)。 一旦将对象分配给变量，可视为它完全相同对待它所引用的对象。 可以设置或检索该对象的属性或使用任何方法。 下面的示例使用对象变量来简化在前面的示例代码。
+You can shorten this code, and speed up execution, if you use an object variable for the control. You should declare the object variable with the specific class that you intend to assign to it (`Control` in this case). Once you assign an object to the variable, you can treat it exactly the same as you treat the object to which it refers. You can set or retrieve the properties of the object or use any of its methods. The following example uses an object variable to simplify the code in the preceding example.
 
 ```vb
 Dim ctrlActv As System.Windows.Forms.Control = Me.ActiveForm.ActiveControl

@@ -1,15 +1,15 @@
 ---
-title: 如何：查询具有指定的特性或名称 (Visual Basic 中) 的文件
+title: 如何：查询具有指定特性或名称的文件
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 05dfe3e88274efe8d817defcac2f47efe053b12b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 68b8f02e3c7f53092ef91f2b8b96736a644a7fd1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586488"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347692"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>如何：查询具有指定的特性或名称 (Visual Basic 中) 的文件
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>How to: Query for Files with a Specified Attribute or Name (Visual Basic)
 此示例演示了如何在指定目录树中查找具有指定文件扩展名（如“.txt”）的所有文件。 它还演示了如何基于时间在树中返回最新或最旧的文件。  
   
 ## <a name="example"></a>示例  
@@ -61,7 +61,7 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>编译代码  
-创建一个 VB.NET 控制台应用程序项目，与`Imports`System.Linq 命名空间的语句。
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
   
 ## <a name="see-also"></a>请参阅
 

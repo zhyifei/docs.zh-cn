@@ -1,21 +1,23 @@
 ---
-title: 使用 Visual Basic 开发应用程序
+title: 开发应用程序
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, developing applications
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
-ms.openlocfilehash: a8f3b530c6205572ccf6944af1620cb54486b306
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8eed001ed1daccdfb861b1bcc13337122133ab0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014422"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349252"
 ---
 # <a name="developing-applications-with-visual-basic"></a>使用 Visual Basic 开发应用程序
+
 本节介绍有关 Visual Basic 语言的概念文档。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [Visual Basic 编程](../../visual-basic/developing-apps/programming/index.md)  
  涵盖各种编程主题。  
   
@@ -26,7 +28,7 @@ ms.locfileid: "62014422"
  包含有关在 Visual Basic 中访问数据的帮助信息。  
   
  [在 Visual Basic 中创建和使用组件](../../visual-basic/developing-apps/creating-and-using-components.md)  
- 定义术语“组件”，并讨论如何以及何时创建组件。  
+ 定义术语“组件”  ，并讨论如何以及何时创建组件。  
   
  [Windows 窗体应用程序基础知识](../../visual-basic/developing-apps/windows-forms/index.md)  
  提供有关使用 Visual Studio 创建 Windows 窗体应用程序的信息。  
@@ -35,6 +37,7 @@ ms.locfileid: "62014422"
  描述如何自定义项目模板以提供其他 `My` 对象。  
   
 ## <a name="related-sections"></a>相关章节  
+
  [Visual Basic 编程指南](../../visual-basic/programming-guide/index.md)  
  演练使用 Visual Basic 进行编程的基本元素。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-ms.openlocfilehash: d62011728b6b03023ef4039480cea8dfa0ec8f02
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: df18f89ee18bfa33ecc0aced617d168c805e3515
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321287"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138573"
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>如何：指定客户端凭据类型
 设置安全模式（传输或消息）后，您可以设置客户端凭据类型。 此属性指定客户端必须向服务提供以进行身份验证的凭据类型。 有关设置安全模式（设置客户端凭据类型前的必需步骤）的详细信息，请参阅[如何：设置安全模式](how-to-set-the-security-mode.md)。  
@@ -37,7 +37,7 @@ ms.locfileid: "72321287"
   
 3. 添加一个相应的绑定。 此示例使用[\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md)元素。  
   
-4. 添加一个[\<binding >](../misc/binding.md)元素，并将 `name` 特性设置为合适的值。 本示例使用名称“SecureBinding”。  
+4. 添加一个[\<binding >](../configure-apps/file-schema/wcf/bindings.md)元素，并将 `name` 特性设置为合适的值。 本示例使用名称“SecureBinding”。  
   
 5. 添加一个 `<security>` 绑定。 将 `mode` 属性设置为适当的值。 本示例将其设置为 `"Message"`。  
   

@@ -1,5 +1,5 @@
 ---
-title: 过程参数和自变量 (Visual Basic)
+title: 过程参数和自变量
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -18,45 +18,45 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: 08bb05f681d5f795bc448ddc62976d7675696023
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7dfbbcb39cf7bb05c8a62a7a252e425f287c9a09
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638839"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352583"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>过程参数和自变量 (Visual Basic)
-在大多数情况下，一个过程需要一些信息已在其中调用它的情况。 执行重复或共享任务的过程为每个调用使用不同的信息。 此信息包括变量、 常量和表达式在调用时传递给该过程。  
+In most cases, a procedure needs some information about the circumstances in which it has been called. A procedure that performs repeated or shared tasks uses different information for each call. This information consists of variables, constants, and expressions that you pass to the procedure when you call it.  
   
- 一个*参数*表示一个值，此过程需要您提供时调用它。 该过程的声明定义其参数。  
+ A *parameter* represents a value that the procedure expects you to supply when you call it. The procedure's declaration defines its parameters.  
   
- 你可以定义不使用参数、 一个参数，或者多个过程。 指定的参数在过程定义的一部分被称作*参数列表*。  
+ You can define a procedure with no parameters, one parameter, or more than one. The part of the procedure definition that specifies the parameters is called the *parameter list*.  
   
- *自变量*调用过程时对过程参数表示所提供的值。 当调用该过程时，调用代码将提供参数。 指定的参数在过程调用的一部分被称作*自变量列表*。  
+ An *argument* represents the value you supply to a procedure parameter when you call the procedure. The calling code supplies the arguments when it calls the procedure. The part of the procedure call that specifies the arguments is called the *argument list*.  
   
- 下图显示了代码调用该过程`safeSquareRoot`从两个不同的位置。 第一次调用将变量的值传递`x`(4.0) 给参数`number`，和中的返回值`root`(2.0) 赋给变量`y`。 第二次调用将传递到的文本值 9.0 `number`，并将返回值 (3.0) 赋给变量`z`。  
+ The following illustration shows code calling the procedure `safeSquareRoot` from two different places. The first call passes the value of the variable `x` (4.0) to the parameter `number`, and the return value in `root` (2.0) is assigned to the variable `y`. The second call passes the literal value 9.0 to `number`, and assigns the return value (3.0) to variable `z`.  
   
- ![显示了将自变量传递给参数的关系图](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
+ ![Diagram that shows passing an argument to a parameter](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
   
- 有关详细信息，请参阅[差异之间形参和实参](./differences-between-parameters-and-arguments.md)。  
+ For more information, see [Differences Between Parameters and Arguments](./differences-between-parameters-and-arguments.md).  
   
-## <a name="parameter-data-type"></a>参数数据类型  
- 使用定义为参数的数据类型`As`其声明中的子句。 例如，以下函数接受一个字符串和整数。  
+## <a name="parameter-data-type"></a>Parameter Data Type  
+ You define a data type for a parameter by using the `As` clause in its declaration. For example, the following function accepts a string and an integer.  
   
  [!code-vb[VbVbcnProcedures#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#32)]  
   
- 如果类型检查开关 ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) 是`Off,``As`子句是可选的只不过如果任一参数使用它，则所有参数必须都使用它。 如果类型检查`On`，则`As`子句是必需的所有过程的参数。  
+ If the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `Off,` the `As` clause is optional, except that if any one parameter uses it, all parameters must use it. If type checking is `On`, the `As` clause is required for all procedure parameters.  
   
- 如果调用代码需要具有数据类型不同于其相应的参数，如提供参数`Byte`到`String`参数，它必须执行下列操作之一：  
+ If the calling code expects to supply an argument with a data type different from that of its corresponding parameter, such as `Byte` to a `String` parameter, it must do one of the following:  
   
-- 提供唯一的参数和扩大到参数的数据类型; 的数据类型  
+- Supply only arguments with data types that widen to the parameter data type;  
   
-- 设置`Option Strict Off`以允许隐式收缩转换; 或  
+- Set `Option Strict Off` to allow implicit narrowing conversions; or  
   
-- 使用转换关键字可以显式转换的数据类型。  
+- Use a conversion keyword to explicitly convert the data type.  
   
 ### <a name="type-parameters"></a>类型参数  
- 一个*泛型过程*还定义了一个或多个*类型参数*除了其正常参数。 泛型过程，调用代码，以便它可以调整每个调用的要求的数据类型，它调用过程时，每次传递不同的数据类型。 请参阅 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)。  
+ A *generic procedure* also defines one or more *type parameters* in addition to its normal parameters. A generic procedure allows the calling code to pass different data types each time it calls the procedure, so it can tailor the data types to the requirements of each individual call. 请参阅 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)。  
   
 ## <a name="see-also"></a>请参阅
 
@@ -66,7 +66,7 @@ ms.locfileid: "64638839"
 - [属性过程](./property-procedures.md)
 - [运算符过程](./operator-procedures.md)
 - [如何：为过程定义参数](./how-to-define-a-parameter-for-a-procedure.md)
-- [如何：将参数传递给过程](./how-to-pass-arguments-to-a-procedure.md)
+- [如何：将自变量传递给过程](./how-to-pass-arguments-to-a-procedure.md)
 - [按值和按引用传递自变量](./passing-arguments-by-value-and-by-reference.md)
 - [过程重载](./procedure-overloading.md)
-- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

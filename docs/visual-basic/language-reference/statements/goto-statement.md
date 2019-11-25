@@ -1,5 +1,5 @@
 ---
-title: GoTo 语句（Visual Basic）
+title: GoTo 语句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.GoTo
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 4b7a5cce56dfdd2bdc7e068aadbc18b92bba269d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: d5cdcd214c9679e245645505fe11cb5d521ce085
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581820"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351090"
 ---
 # <a name="goto-statement"></a>GoTo 语句
-无条件地分支到过程中的指定行。  
+Branches unconditionally to a specified line in a procedure.  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,33 +31,33 @@ GoTo line
   
 ## <a name="part"></a>部件  
  `line`  
- 必须的。 任何行标签。  
+ 必须的。 Any line label.  
   
 ## <a name="remarks"></a>备注  
- @No__t_0 语句只能分支到它所显示的过程中的行。 该行必须有 `GoTo` 可以引用的行标签。 有关详细信息，请参阅[如何：标签语句](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)。  
+ The `GoTo` statement can branch only to lines in the procedure in which it appears. The line must have a line label that `GoTo` can refer to. For more information, see [How to: Label Statements](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 > [!NOTE]
-> `GoTo` 语句可以使代码难以阅读和维护。 请尽可能使用控制结构。 有关详细信息，请参阅[控制流](../../../visual-basic/programming-guide/language-features/control-flow/index.md)。  
+> `GoTo` statements can make code difficult to read and maintain. Whenever possible, use a control structure instead. For more information, see [Control Flow](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
   
- 不能使用`GoTo`语句从`For`...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`, 或`Using`...`End Using`构造到中的标签。  
+ You cannot use a `GoTo` statement to branch from outside a `For`...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`, or `Using`...`End Using` construction to a label inside.  
   
-## <a name="branching-and-try-constructions"></a>分支和尝试构造  
- `Try`在 ...`Catch`...构造, 以下规则适用于`GoTo`使用语句的分支。 `Finally`  
+## <a name="branching-and-try-constructions"></a>Branching and Try Constructions  
+ Within a `Try`...`Catch`...`Finally` construction, the following rules apply to branching with the `GoTo` statement.  
   
-|块或区域|从外部分支|从内部分支出|  
+|Block or region|Branching in from outside|Branching out from inside|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try` 块|仅从同一构造<sup>1</sup>的 `Catch` 块|仅限于整个构造之外|  
-|`Catch` 块|不允许|仅对整个构造以外的或同一构造<sup>1</sup>的 `Try` 块|  
-|`Finally` 块|不允许|不允许|  
+|`Try` block|Only from a `Catch` block of the same construction <sup>1</sup>|Only to outside the whole construction|  
+|`Catch` block|Never allowed|Only to outside the whole construction, or to the `Try` block of the same construction <sup>1</sup>|  
+|`Finally` block|Never allowed|Never allowed|  
   
- <sup>1</sup> (如果`Try`有) ...`Catch`...构造嵌套在另一个块中`Catch` , `Try`块可以在其自身的嵌套级别 (而不是其他`Try`块) 分支到块。 `Finally` 嵌套`Try`...`Catch`...构造必须完全包含在它所`Try`嵌套`Catch`到的构造内或块中。 `Finally`  
+ <sup>1</sup> If one `Try`...`Catch`...`Finally` construction is nested within another, a `Catch` block can branch into the `Try` block at its own nesting level, but not into any other `Try` block. A nested `Try`...`Catch`...`Finally` construction must be contained completely in a `Try` or `Catch` block of the construction within which it is nested.  
   
- 下图显示了嵌套在另一个 `Try` 构造。 这两个构造的块中的各种分支都指示为有效或无效。  
+ The following illustration shows one `Try` construction nested within another. Various branches among the blocks of the two constructions are indicated as valid or invalid.  
   
  ![Try 结构分支示意图](./media/goto-statement/try-construction-branching.gif)  
   
 ## <a name="example"></a>示例  
- 下面的示例使用 `GoTo` 语句分支到过程中的行标签。  
+ The following example uses the `GoTo` statement to branch to line labels in a procedure.  
   
  [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  
   

@@ -1,5 +1,5 @@
 ---
-title: 比较运算符 (Visual Basic)
+title: 比较运算符
 ms.date: 07/20/2015
 f1_keywords:
 - vb.<>
@@ -30,27 +30,27 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basic
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-ms.openlocfilehash: ddb07bdf5f67e281847082ba4487568e9ba3c9f5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ea7604626ede66da818e4bc22fe4922bc752dc2c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962233"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336086"
 ---
 # <a name="comparison-operators-visual-basic"></a>比较运算符 (Visual Basic)
-下面是 Visual Basic 中定义的比较运算符。
+The following are the comparison operators defined in Visual Basic.
 
- `<`操作员
+ `<` operator
 
- `<=`操作员
+ `<=` operator
 
- `>`操作员
+ `>` operator
 
- `>=`操作员
+ `>=` operator
 
- `=`操作员
+ `=` operator
 
- `<>`操作员
+ `<>` operator
 
  [Is 运算符](../../../visual-basic/language-reference/operators/is-operator.md)
 
@@ -58,7 +58,7 @@ ms.locfileid: "69962233"
 
  [Like 运算符](../../../visual-basic/language-reference/operators/like-operator.md)
 
- 这些运算符比较两个表达式以确定它们是否相等, 如果不相等, 则确定它们之间的差异。 `Is`在`IsNot`单独的`Like`帮助页上详细讨论了、和。 此页上详细讨论了关系比较运算符。
+ These operators compare two expressions to determine whether or not they are equal, and if not, how they differ. `Is`, `IsNot`, and `Like` are discussed in detail on separate Help pages. The relational comparison operators are discussed in detail on this page.
 
 ## <a name="syntax"></a>语法
   
@@ -70,85 +70,85 @@ result = string Like pattern
   
 ## <a name="parts"></a>部件
  `result`  
- 必需。 一个`Boolean`值, 该值表示比较的结果。
+ 必须的。 A `Boolean` value representing the result of the comparison.
 
- `expression1`， `expression2`  
- 必需。 任何表达式。
+ `expression1`，`expression2`  
+ 必须的。 任何表达式。
 
  `comparisonoperator`  
- 必需。 任何关系比较运算符。
+ 必须的。 Any relational comparison operator.
 
- `object1`， `object2`  
- 必需。 任何引用对象的名称。
+ `object1`，`object2`  
+ 必须的。 Any reference object names.
 
  `string`  
- 必需。 任何 `String` 表达式。
+ 必须的。 任何 `String` 表达式。
 
  `pattern`  
- 必需。 任何`String`表达式或字符范围。
+ 必须的。 Any `String` expression or range of characters.
 
 ## <a name="remarks"></a>备注
- 下表包含关系比较运算符和确定`result`是`True`还是`False`的条件的列表。
+ The following table contains a list of the relational comparison operators and the conditions that determine whether `result` is `True` or `False`.
 
 |运算符|`True` 是否|`False` 是否|
 |--------------|---------------|----------------|
-|`<`(小于)|`expression1` < `expression2`|`expression1` >= `expression2`|
-|`<=`(小于或等于)|`expression1` <= `expression2`|`expression1` > `expression2`|
-|`>`(大于)|`expression1` > `expression2`|`expression1` <= `expression2`|
-|`>=`(大于或等于)|`expression1` >= `expression2`|`expression1` < `expression2`|
-|`=`(等于)|`expression1` = `expression2`|`expression1` <> `expression2`|
-|`<>`(不等于)|`expression1` <> `expression2`|`expression1` = `expression2`|
+|`<` (Less than)|`expression1` < `expression2`|`expression1` >= `expression2`|
+|`<=` (Less than or equal to)|`expression1` <= `expression2`|`expression1` > `expression2`|
+|`>` (Greater than)|`expression1` > `expression2`|`expression1` <= `expression2`|
+|`>=` (Greater than or equal to)|`expression1` >= `expression2`|`expression1` < `expression2`|
+|`=` (Equal to)|`expression1` = `expression2`|`expression1` <> `expression2`|
+|`<>` (Not equal to)|`expression1` <> `expression2`|`expression1` = `expression2`|
 
 > [!NOTE]
-> [= 运算符](../../../visual-basic/language-reference/operators/assignment-operator.md)也用作赋值运算符。
+> The [= Operator](../../../visual-basic/language-reference/operators/assignment-operator.md) is also used as an assignment operator.
 
- 运算符、运算符和`Like`运算符具有特定的比较功能, 这些功能不同于上表中的运算符。 `IsNot` `Is`
+ The `Is` operator, the `IsNot` operator, and the `Like` operator have specific comparison functionalities that differ from the operators in the preceding table.
 
-## <a name="comparing-numbers"></a>比较数字
- 将类型`Single`的表达式与类型`Double`的表达式进行比较时, `Single`表达式将转换为`Double`。 此行为与 Visual Basic 6 中的行为相反。
+## <a name="comparing-numbers"></a>Comparing Numbers
+ When you compare an expression of type `Single` to one of type `Double`, the `Single` expression is converted to `Double`. This behavior is opposite to the behavior found in Visual Basic 6.
 
- `Decimal`同样, 将类型的表达式与或`Double`类型`Single`的表达式进行比较时, `Decimal`表达式将转换为`Single`或`Double`。 对于`Decimal`表达式, 小于 1e-28 的任何小数值都可能会丢失。 此类小数值损失可能导致两个值在不时比较为相等。 出于此原因, 应小心使用相等 (`=`) 来比较两个浮点变量。 更安全的做法是测试两个数字之差的绝对值是否小于可接受的小容差。
+ Similarly, when you compare an expression of type `Decimal` to an expression of type `Single` or `Double`, the `Decimal` expression is converted to `Single` or `Double`. For `Decimal` expressions, any fractional value less than 1E-28 might be lost. Such fractional value loss may cause two values to compare as equal when they are not. For this reason, you should take care when using equality (`=`) to compare two floating-point variables. It is safer to test whether the absolute value of the difference between the two numbers is less than a small acceptable tolerance.
 
-### <a name="floating-point-imprecision"></a>浮点不精确性
- 使用浮点数时, 请记住, 它们在内存中不一定有精确的表示形式。 这可能会导致某些操作产生意外结果, 如值比较和[Mod 运算符](../../../visual-basic/language-reference/operators/mod-operator.md)。 有关详细信息, 请参阅[数据类型疑难解答](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。
+### <a name="floating-point-imprecision"></a>Floating-point Imprecision
+ When you work with floating-point numbers, keep in mind that they do not always have a precise representation in memory. This could lead to unexpected results from certain operations, such as value comparison and the [Mod Operator](../../../visual-basic/language-reference/operators/mod-operator.md). For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
 
 ## <a name="comparing-strings"></a>比较字符串
- 在比较字符串时, 将根据`Option Compare`设置的字母顺序对字符串表达式进行计算。
+ When you compare strings, the string expressions are evaluated based on their alphabetical sort order, which depends on the `Option Compare` setting.
 
- `Option Compare Binary`对从字符的内部二进制表示形式派生的排序顺序进行字符串比较。 排序顺序由代码页确定。 下面的示例显示了一个典型的二进制排序顺序。
+ `Option Compare Binary` bases string comparisons on a sort order derived from the internal binary representations of the characters. The sort order is determined by the code page. The following example shows a typical binary sort order.
 
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`
 
- `Option Compare Text`基于不区分大小写的文本排序顺序对应用程序的区域设置进行字符串比较。 设置`Option Compare Text`和排序前面的示例中的字符时, 将应用以下文本排序顺序:
+ `Option Compare Text` bases string comparisons on a case-insensitive, textual sort order determined by your application's locale. When you set `Option Compare Text` and sort the characters in the preceding example, the following text sort order applies:
 
  `(A=a) < (À= à) < (B=b) < (E=e) < (Ê= ê) < (Ø = ø) < (Z=z)`
 
-### <a name="locale-dependence"></a>区域设置依赖关系
- 设置`Option Compare Text`时, 字符串比较的结果可能取决于应用程序运行所在的区域设置。 在一个区域设置中, 两个字符的比较结果可能不相同, 而在另一个区域中 如果使用字符串比较来做出重要决策 (例如是否接受登录尝试), 则应注意区域设置的敏感性。 请考虑设置`Option Compare Binary`或<xref:Microsoft.VisualBasic.Strings.StrComp%2A>调用, 这会使区域设置生效。
+### <a name="locale-dependence"></a>Locale Dependence
+ When you set `Option Compare Text`, the result of a string comparison can depend on the locale in which the application is running. Two characters might compare as equal in one locale but not in another. If you are using a string comparison to make important decisions, such as whether to accept an attempt to log on, you should be alert to locale sensitivity. Consider either setting `Option Compare Binary` or calling the <xref:Microsoft.VisualBasic.Strings.StrComp%2A>, which takes the locale into account.
 
-## <a name="typeless-programming-with-relational-comparison-operators"></a>用关系比较运算符进行无方式编程
- 不允许在下`Object` `Option Strict On`使用带有表达式的关系比较运算符。 如果`Option Strict`为`Off`,并且`expression1` 或`expression2`是表达式,则运行时类型确定如何比较它们。`Object` 下表显示了如何比较表达式和比较的结果, 具体取决于操作数的运行时类型。
+## <a name="typeless-programming-with-relational-comparison-operators"></a>Typeless Programming with Relational Comparison Operators
+ The use of relational comparison operators with `Object` expressions is not allowed under `Option Strict On`. When `Option Strict` is `Off`, and either `expression1` or `expression2` is an `Object` expression, the run-time types determine how they are compared. The following table shows how the expressions are compared and the result from the comparison, depending on the runtime type of the operands.
 
-|如果操作数为|比较是|
+|If operands are|Comparison is|
 |---------------------|-------------------|
-|全部`String`|基于字符串排序特性的排序比较。|
-|均为数值|转换为`Double`数值比较的对象。|
-|一个数字和一个`String`|`String` 转换`Double`为并执行数值比较。 如果无法转换为`Double`, <xref:System.InvalidCastException>则会引发。 `String`|
-|其中一个或两个都是引用类型, 而不是`String`|引发 <xref:System.InvalidCastException>。|
+|Both `String`|Sort comparison based on string sorting characteristics.|
+|Both numeric|Objects converted to `Double`, numeric comparison.|
+|One numeric and one `String`|The `String` is converted to a `Double` and numeric comparison is performed. If the `String` cannot be converted to `Double`, an <xref:System.InvalidCastException> is thrown.|
+|Either or both are reference types other than `String`|引发 <xref:System.InvalidCastException>。|
 
- 数值比较视为`Nothing` 0。 字符串比较视为`Nothing` `""` (空字符串)。
+ Numeric comparisons treat `Nothing` as 0. String comparisons treat `Nothing` as `""` (an empty string).
 
 ## <a name="overloading"></a>重载
- 关系比较运算符 (`<`。 `<=`可以重载`>=`、 `=`、、 、`<>`), 这意味着当操作数具有该类或结构的类型时, 该类或结构可以重新定义它们的行为。 `>` 如果你的代码在此类或结构上使用这些运算符中的任何一种, 请确保了解重定义的行为。 有关详细信息，请参阅 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。
+ The relational comparison operators (`<`. `<=`, `>`, `>=`, `=`, `<>`) can be *overloaded*, which means that a class or structure can redefine their behavior when an operand has the type of that class or structure. If your code uses any of these operators on such a class or structure, be sure you understand the redefined behavior. 有关更多信息，请参见 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。
 
- 请注意, [= 运算符](../../../visual-basic/language-reference/operators/assignment-operator.md)只能作为关系比较运算符重载, 而不能作为赋值运算符重载。
+ Notice that the [= Operator](../../../visual-basic/language-reference/operators/assignment-operator.md) can be overloaded only as a relational comparison operator, not as an assignment operator.
 
 ## <a name="example"></a>示例
- 下面的示例演示了用于比较表达式的关系比较运算符的各种用法。 关系比较运算符返回一个`Boolean`结果, 该结果表示指定表达式的计算结果是否`True`为。 将`>` and`<`运算符应用到字符串时, 将使用标准的按字母顺序排序的字符串进行比较。 此顺序可能取决于区域设置。 排序是否区分大小写取决于 "[选项比较](../../../visual-basic/language-reference/statements/option-compare-statement.md)" 设置。
+ The following example shows various uses of relational comparison operators, which you use to compare expressions. Relational comparison operators return a `Boolean` result that represents whether or not the stated expression evaluates to `True`. When you apply the `>` and `<` operators to strings, the comparison is made using the normal alphabetical sorting order of the strings. This order can be dependent on your locale setting. Whether the sort is case-sensitive or not depends on the [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) setting.
 
  [!code-vb[VbVbalrOperators#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#1)]
 
- 在前面的示例中, 第一个比较`False`返回, 其余比较返回`True`。
+ In the preceding example, the first comparison returns `False` and the remaining comparisons return `True`.
 
 ## <a name="see-also"></a>请参阅
 
@@ -157,4 +157,4 @@ result = string Like pattern
 - [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [数据类型疑难解答](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Visual Basic 中的比较运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

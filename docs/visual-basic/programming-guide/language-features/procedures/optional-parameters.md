@@ -1,5 +1,5 @@
 ---
-title: 可选参数 (Visual Basic)
+title: 可选参数
 ms.date: 07/20/2015
 helpviewer_keywords:
 - parameters [Visual Basic], optional
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: 9236080d50638bc38bbdd3ddaf8aabf9e675e43f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d859f7eaaefa051cfdf703d8589bc8c679a3ee85
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639129"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345967"
 ---
 # <a name="optional-parameters-visual-basic"></a>可选参数 (Visual Basic)
-可以指定过程参数是可选的，并且在调用过程时不必为其提供自变量。 *可选参数*所指示的`Optional`过程定义中的关键字。 适用以下规则：  
+可以指定过程参数是可选的，并且在调用过程时不必为其提供自变量。 *Optional parameters* are indicated by the `Optional` keyword in the procedure definition. 适用以下规则：  
   
 - 过程定义中的每个可选参数都必须指定默认值。  
   
@@ -50,7 +50,7 @@ Sub name(argument 1, , , argument 4)
  [!code-vb[VbVbcnProcedures#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#47)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>确定可选自变量是否存在  
- 过程在运行时无法检测到给定的自变量是否已被省略，或者调用代码是否已显式提供默认值。 如果需要弄清楚这一点，可以设置一个不可能的值作为默认值。 下面的过程定义的可选参数`office`，并测试其默认值， `QJZ`，以查看它是否在调用中被省略：  
+ 过程在运行时无法检测到给定的自变量是否已被省略，或者调用代码是否已显式提供默认值。 如果需要弄清楚这一点，可以设置一个不可能的值作为默认值。 The following procedure defines the optional parameter `office`, and tests for its default value, `QJZ`, to see if it has been omitted in the call:  
   
  [!code-vb[VbVbcnProcedures#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#46)]  
   

@@ -1,15 +1,15 @@
 ---
-title: 如何：对多个键上的元素进行排序（Visual Basic）
+title: 如何：对多个键上的元素进行排序
 ms.date: 07/20/2015
 ms.assetid: 0c4c1462-3047-4766-b9e2-7e0e9cc7f421
-ms.openlocfilehash: 9e70a54dcf7ff8cd2e0f767773ad7a56b1da2330
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: bf1749983700656508b781091ab349943dbc7bc1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835131"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333740"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>如何：对多个键上的元素进行排序（Visual Basic）
+# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>How to: Sort Elements on Multiple Keys (Visual Basic)
 本主题演示如何对多个键进行排序。  
   
 ## <a name="example"></a>示例  
@@ -62,7 +62,7 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息，请参阅[命名空间概述（LINQ to XML）（Visual Basic）](namespaces-overview-linq-to-xml.md)。  
+ 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
  本示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的客户和订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)。  
   
@@ -118,4 +118,4 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
   
 ## <a name="see-also"></a>请参阅
 
-- [基本查询（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

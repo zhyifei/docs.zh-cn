@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 LINQ (Visual Basic 中) 的查询结果进行排序
+title: 'How to: Sort Query Results by Using LINQ'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - sorting query results, multiple columns
@@ -11,67 +11,67 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
-ms.openlocfilehash: d2114e908077ec947164a28f48841282abefda2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 020e4a3800515329b29e2941baf50d3d8add4605
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053738"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354170"
 ---
-# <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>如何：使用 LINQ (Visual Basic 中) 的查询结果进行排序
-语言集成查询 (LINQ) 轻松地访问数据库的信息和执行查询。  
+# <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>如何：使用 LINQ 排序查询结果 (Visual Basic)
+Language-Integrated Query (LINQ) makes it easy to access database information and execute queries.  
   
- 下面的示例演示如何创建新应用程序对 SQL Server 数据库执行查询并对按多个字段对结果进行排序通过使用`Order By`子句。 可以按升序或降序排序的每个字段的排序顺序。 有关详细信息，请参阅[Order By 子句](../../../../visual-basic/language-reference/queries/order-by-clause.md)。  
+ The following example shows how to create a new application that performs queries against a SQL Server database and sorts the results by multiple fields by using the `Order By` clause. The sort order for each field can be ascending order or descending order. For more information, see [Order By Clause](../../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- 本主题中的示例使用 Northwind 示例数据库。 如果在开发计算机上没有此数据库，您可以从 Microsoft 下载中心下载它。 有关说明，请参阅[下载示例数据库](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
+ The examples in this topic use the Northwind sample database. If you do not have this database on your development computer, you can download it from the Microsoft Download Center. For instructions, see [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-a-connection-to-a-database"></a>若要创建与数据库的连接  
+### <a name="to-create-a-connection-to-a-database"></a>To create a connection to a database  
   
-1. 在 Visual Studio 中打开**服务器资源管理器**/**数据库资源管理器**通过单击**服务器资源管理器**/**数据库资源管理器**上**视图**菜单。  
+1. In Visual Studio, open **Server Explorer**/**Database Explorer** by clicking **Server Explorer**/**Database Explorer** on the **View** menu.  
   
-2. 右键单击**数据连接**中**服务器资源管理器**/**数据库资源管理器**，然后单击**添加连接**。  
+2. Right-click **Data Connections** in **Server Explorer**/**Database Explorer** and then click **Add Connection**.  
   
-3. 指定到 Northwind 示例数据库的有效连接。  
+3. Specify a valid connection to the Northwind sample database.  
   
-### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>若要添加包含 LINQ to SQL 文件的项目  
+### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>To add a project that contains a LINQ to SQL file  
   
-1. 在 Visual Studio 中的“文件”菜单上，指向“新建”，然后单击“项目”。 选择 Visual Basic **Windows 窗体应用程序**作为项目类型。  
+1. 在 Visual Studio 中的“文件”菜单上，指向“新建”，然后单击“项目”。 Select Visual Basic **Windows Forms Application** as the project type.  
   
-2. 在 **“项目”** 菜单上，单击 **“添加新项”**。 选择**LINQ to SQL 类**项模板。  
+2. 在 **“项目”** 菜单上，单击 **“添加新项”** 。 Select the **LINQ to SQL Classes** item template.  
   
-3. 为 `northwind.dbml` 文件命名。 单击 **添加**。 此时，northwind.dbml 文件打开时对象关系设计器 （O/R 设计器）。  
+3. 为 `northwind.dbml` 文件命名。 单击 **添加**。 The Object Relational Designer (O/R Designer) is opened for the northwind.dbml file.  
   
-### <a name="to-add-tables-to-query-to-the-or-designer"></a>若要添加到 O/R 设计器查询的表  
+### <a name="to-add-tables-to-query-to-the-or-designer"></a>To add tables to query to the O/R Designer  
   
-1. 在中**服务器资源管理器**/**数据库资源管理器**，扩展连接到 Northwind 数据库。 展开**表**文件夹。  
+1. In **Server Explorer**/**Database Explorer**, expand the connection to the Northwind database. Expand the **Tables** folder.  
   
-     如果已关闭 O/R 设计器，您可以通过双击前面添加的 northwind.dbml 文件重新打开它。  
+     If you have closed the O/R Designer, you can reopen it by double-clicking the northwind.dbml file that you added earlier.  
   
-2. 单击客户表并将其拖到设计器的左窗格中。 单击订单表并将其拖到设计器的左窗格中。  
+2. Click the Customers table and drag it to the left pane of the designer. Click the Orders table and drag it to the left pane of the designer.  
   
-     在设计器创建新`Customer`和`Order`为你的项目的对象。 请注意，在设计器会自动检测表之间的关系并创建子相关对象的属性。 例如，IntelliSense 将显示`Customer`对象具有`Orders`与该客户相关的所有订单的属性。  
+     The designer creates new `Customer` and `Order` objects for your project. Notice that the designer automatically detects relationships between the tables and creates child properties for related objects. For example, IntelliSense will show that the `Customer` object has an `Orders` property for all orders related to that customer.  
   
-3. 保存所做的更改并关闭设计器。  
+3. Save your changes and close the designer.  
   
 4. 保存你的项目。  
   
-### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>添加代码以查询数据库并显示结果  
+### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>To add code to query the database and display the results  
   
-1. 从**工具箱**，拖动<xref:System.Windows.Forms.DataGridView>控件拖到你的项目，Form1 的默认 Windows 窗体上。  
+1. From the **Toolbox**, drag a <xref:System.Windows.Forms.DataGridView> control onto the default Windows Form for your project, Form1.  
   
-2. 双击 Form1 以将代码添加到`Load`窗体的事件。  
+2. Double-click Form1 to add code to the `Load` event of the form.  
   
-3. 当表添加到 O/R 设计器时，在设计器添加<xref:System.Data.Linq.DataContext>到你的项目的对象。 此对象包含必须具有访问这些表，以及访问单个对象和集合的每个表的代码。 <xref:System.Data.Linq.DataContext>对象将项目命名为根据.dbml 文件的名称。 对于此项目，<xref:System.Data.Linq.DataContext>对象被命名为`northwindDataContext`。  
+3. When you added tables to the O/R Designer, the designer added a <xref:System.Data.Linq.DataContext> object to your project. This object contains the code that you must have to access those tables, and to access individual objects and collections for each table. The <xref:System.Data.Linq.DataContext> object for your project is named based on the name of your .dbml file. For this project, the <xref:System.Data.Linq.DataContext> object is named `northwindDataContext`.  
   
-     可以创建的实例<xref:System.Data.Linq.DataContext>代码和查询中指定由 O/R 设计器的表。  
+     You can create an instance of the <xref:System.Data.Linq.DataContext> in your code and query the tables specified by the O/R Designer.  
   
-     将以下代码添加到`Load`事件，以查询方式被称为数据上下文的属性和对结果进行排序的表。 查询对客户的订单，按降序顺序数排序结果。 具有相同数目的订单的客户按升序排序 （默认值） 的公司名称进行排序。  
+     Add the following code to the `Load` event to query the tables that are exposed as properties of your data context and sort the results. The query sorts the results by the number of customer orders, in descending order. Customers that have the same number of orders are ordered by company name in ascending order (the default).  
   
      [!code-vb[VbLINQToSQLHowTos#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form4.vb#10)]  
   
-4. 按 F5 以运行您的项目并查看结果。  
+4. Press F5 to run your project and view the results.  
   
 ## <a name="see-also"></a>请参阅
 

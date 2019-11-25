@@ -1,5 +1,5 @@
 ---
-title: 递归过程 (Visual Basic)
+title: 递归过程
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -10,34 +10,34 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: b08a06a07f134b7c95251848862d39339e59fe61
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 646d4e29ed7a0b6367d4b35a7f8641bcf659e616
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274345"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352559"
 ---
 # <a name="recursive-procedures-visual-basic"></a>递归过程 (Visual Basic)
 
-*递归*过程是指调用自身的过程。 通常，这并不是编写 Visual Basic 代码的最有效方法。  
+A *recursive* procedure is one that calls itself. In general, this is not the most effective way to write Visual Basic code.  
   
- 下面的过程使用递归来计算其原始参数的阶乘。  
+ The following procedure uses recursion to calculate the factorial of its original argument.  
   
  [!code-vb[VbVbcnProcedures#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#51)]  
   
-## <a name="considerations-with-recursive-procedures"></a>递归过程的注意事项
+## <a name="considerations-with-recursive-procedures"></a>Considerations with Recursive Procedures
 
- **限制条件**。 必须设计一个递归过程来测试至少一个可以终止递归的条件，并且还必须处理在合理的递归调用中不满足此类条件的情况。 如果至少有一种情况不会失败，则您的过程会在无限循环中运行。
+ **Limiting Conditions**. You must design a recursive procedure to test for at least one condition that can terminate the recursion, and you must also handle the case where no such condition is satisfied within a reasonable number of recursive calls. Without at least one condition that can be met without fail, your procedure runs a high risk of executing in an infinite loop.
 
- **内存使用率**。 应用程序的本地变量空间量有限。 当过程每次调用自身时，它会使用更多的空间来获取其局部变量的其他副本。 如果此过程持续下去，最终会导致<xref:System.StackOverflowException>错误。
+ **内存使用率**。 Your application has a limited amount of space for local variables. Each time a procedure calls itself, it uses more of that space for additional copies of its local variables. If this process continues indefinitely, it eventually causes a <xref:System.StackOverflowException> error.
 
- **效率**。 几乎始终可以将递归替换为循环。 循环不会产生传递参数的开销、初始化附加存储以及返回值。 如果没有递归调用，性能可能会更好。
+ **Efficiency**. You can almost always substitute a loop for recursion. A loop does not have the overhead of passing arguments, initializing additional storage, and returning values. Your performance can be much better without recursive calls.
 
- **相互递归**。 如果两个过程相互调用，你可能会发现性能非常差，甚至会出现无限循环。 此类设计与单个递归过程表现出相同的问题，但可以更难检测和调试。
+ **Mutual Recursion**. You might observe very poor performance, or even an infinite loop, if two procedures call each other. Such a design presents the same problems as a single recursive procedure, but can be harder to detect and debug.
 
- **调用括号**。 `Function`如果过程以递归方式调用自身，则必须在过程名称后面加上括号，即使没有参数列表也是如此。 否则，函数名称将采用表示函数的返回值的形式。
+ **Calling with Parentheses**. When a `Function` procedure calls itself recursively, you must follow the procedure name with parentheses, even if there is no argument list. Otherwise, the function name is taken as representing the return value of the function.
 
- **测试**。 如果编写递归过程，应仔细测试该过程，以确保它始终满足某些限制条件。 你还应确保不会因为有太多递归调用而耗尽内存。
+ **Testing**. If you write a recursive procedure, you should test it very carefully to make sure it always meets some limiting condition. You should also ensure that you cannot run out of memory due to having too many recursive calls.
 
 ## <a name="see-also"></a>请参阅
 

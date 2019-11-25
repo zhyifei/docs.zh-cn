@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 LINQ (Visual Basic 中) 调用存储的过程
+title: 'How to: Call a Stored Procedure by Using LINQ'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], stored procedure calls
@@ -7,66 +7,66 @@ helpviewer_keywords:
 - stored procedures [LINQ to SQL]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
-ms.openlocfilehash: af25ebe10681ebb1c346f90afc0291e53224833a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: f91ccda1842887b3785ce304fd41bdd020a55479
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319568"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345028"
 ---
-# <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>如何：使用 LINQ (Visual Basic 中) 调用存储的过程
-语言集成查询 (LINQ)，使得可以轻松地访问数据库的信息，包括数据库对象，如存储过程。  
+# <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>如何：使用 LINQ 调用存储过程 (Visual Basic)
+Language-Integrated Query (LINQ) makes it easy to access database information, including database objects such as stored procedures.  
   
- 下面的示例演示如何创建 SQL Server 数据库中调用存储的过程的应用程序。 此示例演示如何调用数据库中的两个不同的存储的过程。 每个过程返回查询的结果。 一个过程将输入的参数，而其他过程不使用参数。  
+ The following example shows how to create an application that calls a stored procedure in a SQL Server database. The sample shows how to call two different stored procedures in the database. Each procedure returns the results of a query. One procedure takes input parameters, and the other procedure does not take parameters.  
   
- 本主题中的示例使用 Northwind 示例数据库。 如果在开发计算机上没有此数据库，您可以从 Microsoft 下载中心下载它。 有关说明，请参阅[下载示例数据库](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
+ The examples in this topic use the Northwind sample database. If you do not have this database on your development computer, you can download it from the Microsoft Download Center. For instructions, see [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-a-connection-to-a-database"></a>若要创建与数据库的连接  
+### <a name="to-create-a-connection-to-a-database"></a>To create a connection to a database  
   
-1. 在 Visual Studio 中打开**服务器资源管理器**/**数据库资源管理器**通过单击**服务器资源管理器**/**数据库资源管理器**上**视图**菜单。  
+1. In Visual Studio, open **Server Explorer**/**Database Explorer** by clicking **Server Explorer**/**Database Explorer** on the **View** menu.  
   
-2. 右键单击**数据连接**中**服务器资源管理器**/**数据库资源管理器**，然后单击**添加连接**。  
+2. Right-click **Data Connections** in **Server Explorer**/**Database Explorer** and then click **Add Connection**.  
   
-3. 指定到 Northwind 示例数据库的有效连接。  
+3. Specify a valid connection to the Northwind sample database.  
   
-### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>若要添加包含 LINQ to SQL 文件的项目  
+### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>To add a project that contains a LINQ to SQL file  
   
-1. 在 Visual Studio 中的“文件”菜单上，指向“新建”，然后单击“项目”。 选择 Visual Basic **Windows 窗体应用程序**作为项目类型。  
+1. 在 Visual Studio 中的“文件”菜单上，指向“新建”，然后单击“项目”。 Select Visual Basic **Windows Forms Application** as the project type.  
   
-2. 在 **“项目”** 菜单上，单击 **“添加新项”**。 选择**LINQ to SQL 类**项模板。  
+2. 在 **“项目”** 菜单上，单击 **“添加新项”** 。 Select the **LINQ to SQL Classes** item template.  
   
-3. 为 `northwind.dbml` 文件命名。 单击 **添加**。 此时，northwind.dbml 文件打开时对象关系设计器 （O/R 设计器）。  
+3. 为 `northwind.dbml` 文件命名。 单击 **添加**。 The Object Relational Designer (O/R Designer) is opened for the northwind.dbml file.  
   
-### <a name="to-add-stored-procedures-to-the-or-designer"></a>若要将存储的过程添加到 O/R 设计器  
+### <a name="to-add-stored-procedures-to-the-or-designer"></a>To add stored procedures to the O/R Designer  
   
-1. 在中**服务器资源管理器**/**数据库资源管理器**，扩展连接到 Northwind 数据库。 展开**存储过程**文件夹。  
+1. In **Server Explorer**/**Database Explorer**, expand the connection to the Northwind database. Expand the **Stored Procedures** folder.  
   
-     如果已关闭 O/R 设计器，您可以通过双击前面添加的 northwind.dbml 文件重新打开它。  
+     If you have closed the O/R Designer, you can reopen it by double-clicking the northwind.dbml file that you added earlier.  
   
-2. 单击**基于年份的销售额**存储过程并将其拖到设计器的右窗格中。 单击**Ten Most Expensive Products**存储的过程将将其拖到设计器的右窗格中。  
+2. Click the **Sales by Year** stored procedure and drag it to the right pane of the designer. Click the **Ten Most Expensive Products** stored procedure drag it to the right pane of the designer.  
   
-3. 保存所做的更改并关闭设计器。  
+3. Save your changes and close the designer.  
   
 4. 保存你的项目。  
   
-### <a name="to-add-code-to-display-the-results-of-the-stored-procedures"></a>若要添加代码以显示存储过程的结果  
+### <a name="to-add-code-to-display-the-results-of-the-stored-procedures"></a>To add code to display the results of the stored procedures  
   
-1. 从**工具箱**，拖动<xref:System.Windows.Forms.DataGridView>控件拖到你的项目，Form1 的默认 Windows 窗体上。  
+1. From the **Toolbox**, drag a <xref:System.Windows.Forms.DataGridView> control onto the default Windows Form for your project, Form1.  
   
-2. 双击 Form1 以将代码添加到其`Load`事件。  
+2. Double-click Form1 to add code to its `Load` event.  
   
-3. 当存储的过程添加到 O/R 设计器中时，在设计器添加<xref:System.Data.Linq.DataContext>为你的项目的对象。 此对象包含必须具有访问这些过程的代码。 <xref:System.Data.Linq.DataContext>对象项目命名为根据.dbml 文件的名称。 对于此项目，<xref:System.Data.Linq.DataContext>对象被命名为`northwindDataContext`。  
+3. When you added stored procedures to the O/R Designer, the designer added a <xref:System.Data.Linq.DataContext> object for your project. This object contains the code that you must have to access those procedures. The <xref:System.Data.Linq.DataContext> object for the project is named based on the name of the .dbml file. For this project, the <xref:System.Data.Linq.DataContext> object is named `northwindDataContext`.  
   
-     可以创建的实例<xref:System.Data.Linq.DataContext>O/R 设计器中，代码并调用指定的存储的过程方法。 若要将绑定到<xref:System.Windows.Forms.DataGridView>对象，你可能必须强制查询立即执行通过调用<xref:System.Linq.Enumerable.ToList%2A>方法上的存储过程的结果。  
+     You can create an instance of the <xref:System.Data.Linq.DataContext> in your code and call the stored procedure methods specified by the O/R Designer. To bind to the <xref:System.Windows.Forms.DataGridView> object, you may have to force the query to execute immediately by calling the <xref:System.Linq.Enumerable.ToList%2A> method on the results of the stored procedure.  
   
-     将以下代码添加到`Load`事件以调用存储过程公开为数据上下文的方法之一。  
+     Add the following code to the `Load` event to call either of the stored procedures exposed as methods for your data context.  
   
      [!code-vb[VbLINQtoSQLHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form3.vb#1)]  
     [!code-vb[VbLINQtoSQLHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form3.vb#2)]  
   
-4. 按 F5 以运行您的项目并查看结果。  
+4. Press F5 to run your project and view the results.  
   
 ## <a name="see-also"></a>请参阅
 

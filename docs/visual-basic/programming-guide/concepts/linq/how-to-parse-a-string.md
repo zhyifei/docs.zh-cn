@@ -1,21 +1,21 @@
 ---
-title: 如何：分析字符串 (Visual Basic)
+title: 如何：对字符串进行分析
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: b97ce93c1018ec48649ab8b259d5f1a07109b9fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 31bae00eb3ebf0d8e64fc657693e8c0767c4f5d4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956379"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344489"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a>如何：分析字符串 (Visual Basic)
-本主题说明如何在中C#创建 XML 树。  
+# <a name="how-to-parse-a-string-visual-basic"></a>How to: Parse a String (Visual Basic)
+This topic shows how to create an XML tree in C#.  
   
 ## <a name="example"></a>示例  
- 您可以使用`XElement.Parse`方法分析 Visual Basic 中的字符串。 但是, 使用 XML 文本比使用 XML 文本更高效, 如以下代码所示, 因为 XML 文本与从字符串分析 XML 相比, 其性能会受到影响。  
+ You can parse a string in Visual Basic by using the `XElement.Parse` method. However, it is more efficient to use XML literals, as shown in following code, because XML literals do not suffer from the same performance penalties as parsing XML from a string.  
   
- 通过使用 XML 文本, 只需将 XML 复制并粘贴到 Visual Basic 程序中即可。  
+ By using XML literals, you can just copy and paste your XML into your Visual Basic program.  
   
 > [!NOTE]
 > 分析文本或从文本文件加载 XML 文档比函数构造的效率更低。 如果要从代码初始化 XML 树，使用函数构造比分析文本所占用的处理器时间更少。  
@@ -51,4 +51,4 @@ Dim contacts as XElement = _
   
 ## <a name="see-also"></a>请参阅
 
-- [分析 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

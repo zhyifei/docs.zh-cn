@@ -6,21 +6,21 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: fce17979fbd43df0496f972cac525fd79dcbfe32
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 66e380a9428395c772d0dcfe45a995374774aec6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991823"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283833"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObject 的安全构造函数模式
-通常，类构造函数不应调用诸如虚拟方法或委托等回叫，其原因是构造函数可作为派生类的构造函数的基本初始化进行调用。 输入该虚拟的操作可能会在任何给定对象的不完全初始化状态下进行。 但是，属性系统本身在内部调用并公开回叫，作为依赖属性系统的一部分。 简单的操作是使用 call 设置依赖属性值, <xref:System.Windows.DependencyObject.SetValue%2A>这可能会在确定的某个位置包含回调。 因此，在构造函数体内设置依赖属性值时应保持谨慎（将类型用作基类可能会导致问题）。 有一种用于实现<xref:System.Windows.DependencyObject>构造函数的特定模式, 该模式可避免依赖属性状态和内在回调的特定问题, 此处对此进行了介绍。  
+通常，类构造函数不应调用诸如虚拟方法或委托等回叫，其原因是构造函数可作为派生类的构造函数的基本初始化进行调用。 输入该虚拟的操作可能会在任何给定对象的不完全初始化状态下进行。 但是，属性系统本身在内部调用并公开回叫，作为依赖属性系统的一部分。 简单的操作是使用 <xref:System.Windows.DependencyObject.SetValue%2A> 调用设置依赖属性值，这可能会在确定的某个位置包含回调。 因此，在构造函数体内设置依赖属性值时应保持谨慎（将类型用作基类可能会导致问题）。 提供了一种特定模式来实现 <xref:System.Windows.DependencyObject> 构造函数，这些构造函数避免了依赖属性状态和内在回调的特定问题，此处对此进行了介绍。  
 
 <a name="Property_System_Virtual_Methods"></a>   
 ## <a name="property-system-virtual-methods"></a>属性系统虚拟方法  
- 在设置依赖属性<xref:System.Windows.DependencyObject.SetValue%2A>值的调用的计算过程中, 可能会调用以下虚拟方法或回调: <xref:System.Windows.ValidateValueCallback>、 <xref:System.Windows.PropertyChangedCallback>、 <xref:System.Windows.CoerceValueCallback>和<xref:System.Windows.DependencyObject.OnPropertyChanged%2A>。 这些虚拟方法或回叫中的每一个在扩展 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统和依赖属性的多样性方面都具有特定的用途。 有关如何使用这些虚拟方法对属性值确定进行自定义的详细信息，请参阅[依赖属性回调和验证](dependency-property-callbacks-and-validation.md)。  
+ 在设置依赖属性值的 <xref:System.Windows.DependencyObject.SetValue%2A> 调用的计算过程中，可能会调用以下虚拟方法或回调： <xref:System.Windows.ValidateValueCallback>、<xref:System.Windows.PropertyChangedCallback>、<xref:System.Windows.CoerceValueCallback>、<xref:System.Windows.DependencyObject.OnPropertyChanged%2A>。 这些虚拟方法或回叫中的每一个在扩展 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统和依赖属性的多样性方面都具有特定的用途。 有关如何使用这些虚拟方法对属性值确定进行自定义的详细信息，请参阅[依赖属性回调和验证](dependency-property-callbacks-and-validation.md)。  
   
-### <a name="fxcop-rule-enforcement-vs-property-system-virtuals"></a>FXCop 规则强制与属性系统虚拟方法  
+### <a name="fxcop-rule-enforcement-vs-property-system-virtuals"></a>FXCop 规则强制与属性系统虚方法  
  如果将 Microsoft 工具 FXCop 用作生成过程的一部分，并从某些调用基构造函数的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 框架类派生，或在派生的类上实现自己的依赖属性，则可能会违反某个 FXCop 规则。 此违反事件的名称字符串为：  
   
  `DoNotCallOverridableMethodsInConstructors`  
@@ -31,7 +31,7 @@ ms.locfileid: "70991823"
  当按构造顺序使用虚拟方法实现一个类后从该类进行派生时，便会发生此规则所报告的问题。 如果密封了类，或者确信不会派生自此类或强制不得派生自此类，则此处介绍的注意事项和触发 FXCop 规则的问题将不适用。 但是，如果出于将类用作基类的目的来创作类，例如，如果正创建模板或可扩展的控件库集，则应遵循此处建议的用于构造函数的模式。  
   
 ### <a name="default-constructors-must-initialize-all-values-requested-by-callbacks"></a>默认构造函数必须初始化由回叫请求的所有值  
- 您的类所使用的任何实例成员 (从属性系统虚方法部分的列表中的回调) 都必须在您的类无参数构造函数中进行初始化, 即使其中一些值通过 "真实" 值填充nonparameterless 构造函数的参数。  
+ 您的类所使用的任何实例成员（从属性系统虚方法部分的列表中的回调）都必须在您的类无参数构造函数中进行初始化，即使其中一些值通过 "真实" 值填充nonparameterless 构造函数的参数。  
   
  以下代码示例（和后面的示例）是一个与此规则冲突的伪 C# 示例，其中对问题进行了说明：  
   
@@ -60,7 +60,7 @@ public class MyClass : DependencyObject
 }  
 ```  
   
- 当应用程序代码`new MyClass(objectvalue)`调用时, 这将调用无参数的构造函数和基类构造函数。 然后, 它`Property1 = object1`会设置, 它对拥有`OnPropertyChanged` `MyClass` <xref:System.Windows.DependencyObject>的调用虚拟方法。  重写引用尚未初始化的 `_myList`。  
+ 当应用程序代码调用 `new MyClass(objectvalue)`时，这将调用无参数构造函数和基类构造函数。 然后，它会设置 `Property1 = object1`，这将对所属 `MyClass` <xref:System.Windows.DependencyObject>调用虚拟方法 `OnPropertyChanged`。  重写引用尚未初始化的 `_myList`。  
   
  避免这些问题的一个方法是：确保回叫仅使用其他依赖属性，并且每个这样的依赖属性都有一个确立的默认值作为其注册元数据的一部分。  
   
@@ -81,7 +81,7 @@ public MyClass : SomeBaseClass {
 ```  
   
 #### <a name="non-default-convenience-constructors-not-matching-any-base-signatures"></a>非默认（方便）构造函数，不与任何基本签名匹配  
- 如果这些构造函数使用参数设置初始化中的依赖项属性, 请首先调用自己的类参数构造函数进行初始化, 然后使用参数设置依赖属性。 这些可能是类所定义的依赖属性，也可能是从基类继承的依赖属性，但在这两种情况下都使用以下模式：  
+ 如果这些构造函数使用参数设置初始化中的依赖项属性，请首先调用自己的类参数构造函数进行初始化，然后使用参数设置依赖属性。 这些可能是类所定义的依赖属性，也可能是从基类继承的依赖属性，但在这两种情况下都使用以下模式：  
   
 ```csharp  
 public MyClass : SomeBaseClass {  
@@ -94,9 +94,9 @@ public MyClass : SomeBaseClass {
 ```  
   
 #### <a name="non-default-convenience-constructors-which-do-match-base-signatures"></a>非默认（方便）构造函数，确实与基本签名匹配  
- 不要用相同的参数化调用基构造函数, 而应再次调用自己的类的无参数构造函数。 请勿调用基本初始值设定项，而应调用 `this()`。 然后使用传递的参数作为用于设置相关属性的值来重现原始构造函数行为。 将原始基本构造函数文档用作指导依据，确定要对特定参数设置的属性：  
+ 不要用相同的参数化调用基构造函数，而应再次调用自己的类的无参数构造函数。 请勿调用基本初始值设定项，而应调用 `this()`。 然后使用传递的参数作为用于设置相关属性的值来重现原始构造函数行为。 将原始基本构造函数文档用作指导依据，确定要对特定参数设置的属性：  
   
-```  
+```csharp  
 public MyClass : SomeBaseClass {  
     public MyClass(object toSetProperty1) : this() {  
         // Class initialization NOT done by default.  
@@ -107,12 +107,12 @@ public MyClass : SomeBaseClass {
 ```  
   
 #### <a name="must-match-all-signatures"></a>必须匹配所有签名  
- 对于基类型具有多个签名的情况, 你必须将所有可能的签名与你自己的构造函数实现进行了匹配, 以便在进一步设置之前使用调用类无参数构造函数的推荐模式属性.  
+ 对于基类型具有多个签名的情况，你必须将所有可能的签名与你自己的构造函数实现进行了匹配，以便在进一步设置之前使用调用类无参数构造函数的推荐模式属性.  
   
 #### <a name="setting-dependency-properties-with-setvalue"></a>使用 SetValue 设置依赖属性  
- 如果要设置的属性没有属性设置的包装, 并且使用<xref:System.Windows.DependencyObject.SetValue%2A>设置值, 则这些相同的模式适用。 对通过构造<xref:System.Windows.DependencyObject.SetValue%2A>函数参数的的调用还应调用类的无参数构造函数以进行初始化。  
+ 如果要设置的属性没有属性设置的包装，则这些相同的模式也适用，并使用 <xref:System.Windows.DependencyObject.SetValue%2A>设置值。 对通过构造函数参数的 <xref:System.Windows.DependencyObject.SetValue%2A> 的调用还应调用类的无参数构造函数以进行初始化。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [自定义依赖属性](custom-dependency-properties.md)
 - [依赖项属性概述](dependency-properties-overview.md)

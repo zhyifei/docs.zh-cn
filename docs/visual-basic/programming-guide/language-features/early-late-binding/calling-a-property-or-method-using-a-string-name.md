@@ -1,5 +1,5 @@
 ---
-title: 使用字符串名调用属性或方法 (Visual Basic)
+title: 使用字符串名调用属性或方法
 ms.date: 07/20/2015
 helpviewer_keywords:
 - passing operators [Visual Basic]
@@ -12,39 +12,39 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 0683047865f520a09b2d2fe196096286b7d78714
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb584f0dfbd905ca071f9a86b1eab231f3017538
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965395"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345213"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>使用字符串名调用属性或方法 (Visual Basic)
-在大多数情况下, 你可以在设计时发现对象的属性和方法, 并编写代码来处理它们。 但是, 在某些情况下, 您可能事先不知道对象的属性和方法, 或者您可能只是想让最终用户能够在运行时指定属性或执行方法。  
+In most cases, you can discover the properties and methods of an object at design time, and write code to handle them. However, in some cases you may not know about an object's properties and methods in advance, or you may just want the flexibility of enabling an end user to specify properties or execute methods at run time.  
   
-## <a name="callbyname-function"></a>CallByName 函数  
- 例如, 考虑一个客户端应用程序, 该应用程序通过将运算符传递到 COM 组件来计算用户输入的表达式。 假设您不断地向需要新运算符的组件添加新函数。 使用标准对象访问技术时, 必须先重新编译并重新发布客户端应用程序, 然后才能使用新的运算符。 若要避免这种情况, 可以`CallByName`使用函数将新运算符作为字符串传递, 而无需更改应用程序。  
+## <a name="callbyname-function"></a>CallByName Function  
+ Consider, for example, a client application that evaluates expressions entered by the user by passing an operator to a COM component. Suppose you are constantly adding new functions to the component that require new operators. When you use standard object access techniques, you must recompile and redistribute the client application before it could use the new operators. To avoid this, you can use the `CallByName` function to pass the new operators as strings, without changing the application.  
   
- `CallByName`函数使您可以在运行时使用字符串来指定属性或方法。 `CallByName`函数的签名如下所示:  
+ The `CallByName` function lets you use a string to specify a property or method at run time. The signature for the `CallByName` function looks like this:  
   
- *Result*(Object、ProcedureName、CallType、Arguments ()) = `CallByName`  
+ *Result* = `CallByName`(*Object*, *ProcedureName*, *CallType*, *Arguments*())  
   
- 第一个参数 "*对象*" 采用要对其执行操作的对象的名称。 *ProcedureName*参数采用一个字符串, 该字符串包含要调用的方法或属性过程的名称。 *CallType*参数采用一个常数, 该常数表示要调用的过程的类型: 方法 (`Microsoft.VisualBasic.CallType.Method`)、属性读取 (`Microsoft.VisualBasic.CallType.Get`) 或属性集 (`Microsoft.VisualBasic.CallType.Set`)。 *参数*自变量是可选的, 它采用类型`Object`为的数组, 该数组包含过程的所有参数。  
+ The first argument, *Object*, takes the name of the object you want to act upon. The *ProcedureName* argument takes a string that contains the name of the method or property procedure to be invoked. The *CallType* argument takes a constant that represents the type of procedure to invoke: a method (`Microsoft.VisualBasic.CallType.Method`), a property read (`Microsoft.VisualBasic.CallType.Get`), or a property set (`Microsoft.VisualBasic.CallType.Set`). The *Arguments* argument, which is optional, takes an array of type `Object` that contains any arguments to the procedure.  
   
- 你可以在`CallByName`当前解决方案中将与类一起使用, 但它通常用于从 .NET Framework 程序集访问 COM 对象或对象。  
+ You can use `CallByName` with classes in your current solution, but it is most often used to access COM objects or objects from .NET Framework assemblies.  
   
- 假设你添加对程序集的引用, 该程序集包含`MathClass`名为的类, 该类具有`SquareRoot`名为的新函数, 如以下代码所示:  
+ Suppose you add a reference to an assembly that contains a class named `MathClass`, which has a new function named `SquareRoot`, as shown in the following code:  
   
  [!code-vb[VbVbalrOOP#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#53)]  
   
- 应用程序可以使用文本框控件控制将调用的方法及其参数。 例如, 如果`TextBox1`包含要计算的表达式, 并`TextBox2`用于输入函数的名称, 则可以使用`SquareRoot`以下代码在中`TextBox1`对表达式调用函数:  
+ Your application could use text box controls to control which method will be called and its arguments. For example, if `TextBox1` contains the expression to be evaluated, and `TextBox2` is used to enter the name of the function, you can use the following code to invoke the `SquareRoot` function on the expression in `TextBox1`:  
   
  [!code-vb[VbVbalrOOP#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#54)]  
   
- 如果在中输入 "64" `TextBox1`, 在中`TextBox2`输入 "SquareRoot", 然后调用`CallMath`该过程, 则计算中`TextBox1`的数字的平方根。 该示例中的代码调用`SquareRoot`函数 (该函数采用包含要作为必选参数进行计算的表达式的字符串) 并返回中`TextBox1`的 "8" (64 的平方根)。 当然, 如果用户在中`TextBox2`输入了无效的字符串, 且该字符串包含属性的名称而不是方法, 或者如果该方法有额外的必需参数, 则会发生运行时错误。 使用`CallByName`来预见这些错误或任何其他错误时, 必须添加可靠的错误处理代码。  
+ If you enter "64" in `TextBox1`, "SquareRoot" in `TextBox2`, and then call the `CallMath` procedure, the square root of the number in `TextBox1` is evaluated. The code in the example invokes the `SquareRoot` function (which takes a string that contains the expression to be evaluated as a required argument) and returns "8" in `TextBox1` (the square root of 64). Of course, if the user enters an invalid string in `TextBox2`, if the string contains the name of a property instead of a method, or if the method had an additional required argument, a run-time error occurs. You have to add robust error-handling code when you use `CallByName` to anticipate these or any other errors.  
   
 > [!NOTE]
-> 尽管函数在某些情况下可能有用, 但你必须权衡其对性能影响的有用性, 使用`CallByName`调用过程比后期绑定调用略慢。 `CallByName` 如果调用的是重复调用的函数 (如循环`CallByName`内), 则可能会对性能产生严重影响。  
+> While the `CallByName` function may be useful in some cases, you must weigh its usefulness against the performance implications — using `CallByName` to invoke a procedure is slightly slower than a late-bound call. If you are invoking a function that is called repeatedly, such as inside a loop, `CallByName` can have a severe effect on performance.  
   
 ## <a name="see-also"></a>请参阅
 

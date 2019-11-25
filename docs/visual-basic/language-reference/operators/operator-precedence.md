@@ -1,5 +1,5 @@
 ---
-title: Visual Basic 中的运算符优先级
+title: 运算符优先级
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arithmetic operators [Visual Basic], precedence
@@ -14,71 +14,71 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: df40aced45442c9c7895c8d10ece64b21e292508
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 318fcc3f35276ba0b2061ba9677c5fde29429f6f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659929"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348278"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic 中的运算符优先级
-当表达式中发生多个操作时, 将按预先确定的顺序 (称为*运算符优先级*) 来计算和解析各个部分。
+When several operations occur in an expression, each part is evaluated and resolved in a predetermined order called *operator precedence*.
 
-## <a name="precedence-rules"></a>优先规则
- 当表达式包含多个类别中的运算符时, 将根据以下规则对其进行评估:
+## <a name="precedence-rules"></a>Precedence Rules
+ When expressions contain operators from more than one category, they are evaluated according to the following rules:
 
-- 算术运算符和串联运算符具有以下部分中描述的优先级顺序, 并且其优先级比比较、逻辑和按位运算符的优先级高。
+- The arithmetic and concatenation operators have the order of precedence described in the following section, and all have greater precedence than the comparison, logical, and bitwise operators.
 
-- 所有比较运算符都具有相同的优先级, 并且其优先级比逻辑 and 位运算符更高, 但优先级低于算术运算符和串联运算符。
+- All comparison operators have equal precedence, and all have greater precedence than the logical and bitwise operators, but lower precedence than the arithmetic and concatenation operators.
 
-- 逻辑运算符和位运算符具有以下部分中描述的优先级顺序, 并且其优先级低于算术运算符、串联运算符和比较运算符。
+- The logical and bitwise operators have the order of precedence described in the following section, and all have lower precedence than the arithmetic, concatenation, and comparison operators.
 
-- 具有相同优先级的运算符将按照它们在表达式中出现的顺序从左到右进行计算。
+- Operators with equal precedence are evaluated left to right in the order in which they appear in the expression.
 
-## <a name="precedence-order"></a>优先顺序
- 运算符的优先顺序如下:
+## <a name="precedence-order"></a>Precedence Order
+ Operators are evaluated in the following order of precedence:
 
 ### <a name="await-operator"></a>Await 运算符
  Await
 
-### <a name="arithmetic-and-concatenation-operators"></a>算术和串联运算符
- 幂 (`^`)
+### <a name="arithmetic-and-concatenation-operators"></a>Arithmetic and Concatenation Operators
+ Exponentiation (`^`)
 
- 一元恒等运算 (`+`, `–`)
+ Unary identity and negation (`+`, `–`)
 
- 乘法和浮点除法 (`*`,) `/`
+ Multiplication and floating-point division (`*`, `/`)
 
- 整数除法 (`\`)
+ Integer division (`\`)
 
- 模块化算法`Mod`()
+ Modular arithmetic (`Mod`)
 
- 加法和减法 (`+`, `–`)
+ Addition and subtraction (`+`, `–`)
 
- 字符串串联 (`&`)
+ String concatenation (`&`)
 
- 算术移位 (`<<`, `>>`)
+ Arithmetic bit shift (`<<`, `>>`)
 
 ### <a name="comparison-operators"></a>比较运算符
- 所有比较运算符 (`=`、`<>`、`<`、`<=`、`>`、`>=`、...`TypeOf`、`Like`、`Is`、`IsNot`、`Is`)
+ All comparison operators (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`...`Is`)
 
 ### <a name="logical-and-bitwise-operators"></a>逻辑运算符和位运算符
- 求反`Not`()
+ Negation (`Not`)
 
- 结合 (`And`、 `AndAlso`)
+ Conjunction (`And`, `AndAlso`)
 
- 包含析取`Or`( `OrElse`,)
+ Inclusive disjunction (`Or`, `OrElse`)
 
- 排他性析取`Xor`()
+ Exclusive disjunction (`Xor`)
 
 ### <a name="comments"></a>注释
- `=`运算符只是相等比较运算符, 而不是赋值运算符。
+ The `=` operator is only the equality comparison operator, not the assignment operator.
 
- 字符串串联运算符 (`&`) 不是算术运算符, 但其优先级与算术运算符组合在一起。
+ The string concatenation operator (`&`) is not an arithmetic operator, but in precedence it is grouped with the arithmetic operators.
 
- `Is` 和`IsNot`运算符是对象引用比较运算符。 它们不会比较两个对象的值;它们仅检查以确定两个对象变量是否引用同一对象实例。
+ The `Is` and `IsNot` operators are object reference comparison operators. They do not compare the values of two objects; they check only to determine whether two object variables refer to the same object instance.
 
 ## <a name="associativity"></a>结合性
- 当相同优先级的运算符同时出现在表达式中时 (例如, 乘法和除法), 编译器将按从左至右的顺序计算每个运算。 下面的示例阐释了这一点。
+ When operators of equal precedence appear together in an expression, for example multiplication and division, the compiler evaluates each operation as it encounters it from left to right. 下面的示例阐释了这一点。
 
 ```vb
 Dim n1 As Integer = 96 / 8 / 4
@@ -86,12 +86,12 @@ Dim n2 As Integer = (96 / 8) / 4
 Dim n3 As Integer = 96 / (8 / 4)
 ```
 
- 第一个表达式计算相除后的 96/8 (结果为 12), 然后是除法 12/4, 这会产生三个结果。 由于编译器会按`n1`从左至右的顺序计算运算, 因此当显式`n2`指示该顺序时, 计算是相同的。 `n1` 和`n2`都具有三个结果。 相反, `n3`结果为 48, 因为括号强制编译器首先计算 8/4。
+ The first expression evaluates the division 96 / 8 (which results in 12) and then the division 12 / 4, which results in three. Because the compiler evaluates the operations for `n1` from left to right, the evaluation is the same when that order is explicitly indicated for `n2`. Both `n1` and `n2` have a result of three. By contrast, `n3` has a result of 48, because the parentheses force the compiler to evaluate 8 / 4 first.
 
- 由于此行为, 在 Visual Basic 中, 运算符被称为*左结合*。
+ Because of this behavior, operators are said to be *left associative* in Visual Basic.
 
-## <a name="overriding-precedence-and-associativity"></a>重写优先级和关联性
- 您可以使用括号来强制在其他部分中计算表达式。 这可以覆盖优先级顺序和左侧相关性。 Visual Basic 始终执行括在括号内的操作。 但在括号中, 它将保持普通的优先级和关联性, 除非在括号内使用括号。 下面的示例阐释了这一点。
+## <a name="overriding-precedence-and-associativity"></a>Overriding Precedence and Associativity
+ You can use parentheses to force some parts of an expression to be evaluated before others. This can override both the order of precedence and the left associativity. Visual Basic always performs operations that are enclosed in parentheses before those outside. However, within parentheses, it maintains ordinary precedence and associativity, unless you use parentheses within the parentheses. 下面的示例阐释了这一点。
 
 ```vb
 Dim a, b, c, d, e, f, g As Double
