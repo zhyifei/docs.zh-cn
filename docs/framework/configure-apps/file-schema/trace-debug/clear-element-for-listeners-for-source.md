@@ -1,5 +1,5 @@
 ---
-title: <source> 的 @no__t <listeners> 元素
+title: <source> 的 <listeners> 的 <clear> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -7,23 +7,23 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 05c20040ef59f4dee6b15bbe0b0369281b532754
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4567f236397435e89371ca4c80730ff964fddd21
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697196"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088935"
 ---
-# <a name="clear-element-for-listeners-for-source"></a>\<clear > 元素，用于 2source @no__t 的 \<listeners >
+# <a name="clear-element-for-listeners-for-source"></a>\<清除 \<源的 \<侦听器 > > 元素 >
 清除跟踪源的 `Listeners` 集合。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<sources >** ](sources-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0listeners >** ](listeners-element-for-source.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<的 >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](sources-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **&nbsp;&nbsp;\<** ](source-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**侦听器 >** ](listeners-element-for-source.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<清除 >**
+
 ## <a name="syntax"></a>语法  
   
 ```xml  
@@ -50,13 +50,13 @@ ms.locfileid: "71697196"
 |`listeners`|指定用于收集、存储和路由消息的侦听器。|  
   
 ## <a name="remarks"></a>备注  
- @No__t 0 元素从跟踪源的 @no__t 集合（包括 <xref:System.Diagnostics.DefaultTraceListener>）中删除所有侦听器。 你可以使用 `<clear>` 元素，然后才能使用 @no__t 元素，以确定集合中没有其他活动的侦听器。  
+ `<clear>` 元素将从跟踪源（包括 <xref:System.Diagnostics.DefaultTraceListener>）的 `Listeners` 集合中删除所有侦听器。 在使用 `<add>` 元素之前，可以使用 `<clear>` 元素，以确定集合中没有其他活动侦听器。  
   
 ## <a name="configuration-file"></a>配置文件  
  此元素可在计算机配置文件（Machine.config）和应用程序配置文件中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示了如何使用 `<clear>` 元素，然后再使用 `<add>` 元素将侦听器添加到 @no__t 的跟踪源的 @no__t 集合 `console` 和 @no__t。  
+ 下面的示例演示如何使用 `<clear>` 元素，然后再使用 `<add>` 元素向跟踪源 `Listeners` 的 `TraceSourceApp`集合添加侦听器 `console` 和 `textListener`。  
   
 ```xml  
 <configuration>  

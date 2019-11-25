@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: fa00aed2cd1e96ec788d4bc9c1c63f20561d8d1c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d33dadc14510feb00e05ca557b507b0cf8fa0dd0
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698175"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087461"
 ---
 # <a name="httpwebrequest-element-network-settings"></a>\<httpWebRequest > 元素（网络设置）
 自定义 Web 请求参数。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<settings >** ](settings-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<httpWebRequest >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+\<&nbsp;&nbsp;[ **> 的**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**设置 >** ](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<httpWebRequest >**
+
 ## <a name="syntax"></a>语法  
   
 ```xml  
@@ -39,7 +39,7 @@ ms.locfileid: "71698175"
   
 ### <a name="attributes"></a>特性  
   
-|**特性**|**说明**|  
+|**特性**|**描述**|  
 |-------------------|---------------------|  
 |`maximumResponseHeadersLength`|指定响应标头的最大长度（以 kb 为单位）。 默认值为 64。 如果值为-1，则指示不会对响应标头施加大小限制。|  
 |`maximumErrorResponseLength`|指定错误响应的最大长度（以 kb 为单位）。 默认值为 64。 如果值为-1，则表示不对错误响应施加大小限制。|  
@@ -51,12 +51,12 @@ ms.locfileid: "71698175"
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[设置](settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
   
 ## <a name="remarks"></a>备注  
- 默认情况下，.NET Framework 严格地强制执行 RFC 2616，以便进行 URI 分析。 某些服务器响应可能在禁止字段中包含控制字符，这将导致 @no__t 0 方法引发 @no__t。 如果**useUnsafeHeaderParsing**设置为**true**，则在这种情况下不会引发 <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType>;但是，您的应用程序容易受到多种形式的 URI 分析攻击。 最佳解决方案是更改服务器，使响应不包含控制字符。  
+ 默认情况下，.NET Framework 严格地强制执行 RFC 2616，以便进行 URI 分析。 某些服务器响应可能在禁止字段中包含控制字符，这将导致 <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> 方法引发 <xref:System.Net.WebException>。 如果**useUnsafeHeaderParsing**设置为**true**，则在这种情况下不会引发 <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType>;但是，您的应用程序容易受到多种形式的 URI 分析攻击。 最佳解决方案是更改服务器，使响应不包含控制字符。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  

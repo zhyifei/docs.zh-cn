@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: f8209ea89ac8cd214389feddee8c475e10bc939a
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: ca3a78a491c61b6e23dab0f96eebceb3157706ae
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697821"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089135"
 ---
-# <a name="remove-element-for-webrequestmodules-network-settings"></a>用于 webRequestModules 的 0remove > 元素（网络设置） @no__t
+# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<删除 webRequestModules 的 > 元素（网络设置）
 从应用程序中移除自定义 Web 请求模块。  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<remove >**  
+[ **\<configuration>** ](../configuration-element.md)\
+\<&nbsp;&nbsp;[ **> 的**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<删除 >**
   
 ## <a name="syntax"></a>语法  
   
@@ -38,7 +38,7 @@ ms.locfileid: "71697821"
   
 ### <a name="attributes"></a>特性  
   
-|**特性**|**说明**|  
+|**特性**|**描述**|  
 |-------------------|---------------------|  
 |`prefix`|此 Web 请求模块处理的请求的 URI 前缀。|  
   
@@ -47,21 +47,21 @@ ms.locfileid: "71697821"
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[webRequestModules](webrequestmodules-element-network-settings.md)|指定用于从网络主机请求信息的模块。|  
   
 ## <a name="remarks"></a>备注  
- @No__t-0 元素删除指定 URI 前缀的已注册 Web 请求模块。  
+ `remove` 元素将为指定的 URI 前缀删除已注册的 Web 请求模块。  
   
- @No__t-0 属性的值应为有效 URI 的前导字符，例如 "`http`" 或 "`http://www.contoso.com`"。  
+ `prefix` 属性的值应为有效 URI 的前导字符，例如 "`http`" 或 "`http://www.contoso.com`"。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
 
-下面的示例将删除 HTTP 的现有 Web 请求模块，然后将 HTTP 请求的新的自定义 Web 请求模块注册到 `www.contoso.com`。
+下面的示例将删除 HTTP 的现有 Web 请求模块，然后为 `www.contoso.com`的 HTTP 请求注册新的自定义 Web 请求模块。
   
 ```xml  
 <configuration>  

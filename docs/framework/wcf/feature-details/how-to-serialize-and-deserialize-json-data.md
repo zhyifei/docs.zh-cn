@@ -2,23 +2,23 @@
 title: 如何：使用 DataContractJsonSerializer
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: ad126616e0665c6de3aa7a64969c83b23be9f830
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 354f0c58a83e07ff3180977311adf85ae306dd21
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395995"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976873"
 ---
-# <a name="how-to-use-datacontractjsonserializer"></a>如何：使用 DataContractJsonSerializer
-
-JSON（JavaScript 对象符号）是一种高效的数据编码格式，可用于在客户端浏览器和支持 AJAX 的 Web 服务之间快速交换少量数据。
-
-本文演示如何将 .NET 类型对象序列化为 JSON 编码数据，然后将 JSON 格式的数据反序列化为 .NET 类型的实例。 此示例使用数据协定演示用户定义的 @no__t 0 类型的序列化和反序列化，并使用 @no__t。
-
-通常，当你在服务操作中使用在支持 AJAX 的终结点上公开的数据协定类型时，将 Windows Communication Foundation 自动处理 JSON 序列化和反序列化。 但是，在某些情况下，您可能需要直接处理 JSON 数据。
+# <a name="how-to-use-datacontractjsonserializer"></a>如何使用 DataContractJsonSerializer
 
 > [!NOTE]
 > 本文介绍 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。 对于涉及对 JSON 进行序列化和反序列化的大多数方案，建议采用[system.web 命名空间](../../../standard/serialization/system-text-json-overview.md)中的工具。
+
+JSON（JavaScript 对象符号）是一种高效的数据编码格式，可用于在客户端浏览器和支持 AJAX 的 Web 服务之间快速交换少量数据。
+
+本文演示如何将 .NET 类型对象序列化为 JSON 编码数据，然后将 JSON 格式的数据反序列化为 .NET 类型的实例。 此示例使用数据协定演示用户定义的 `Person` 类型的序列化和反序列化，并使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。
+
+通常，当你在服务操作中使用在支持 AJAX 的终结点上公开的数据协定类型时，将 Windows Communication Foundation 自动处理 JSON 序列化和反序列化。 但是，在某些情况下，您可能需要直接处理 JSON 数据。
 
 本文基于[DataContractJsonSerializer 示例](../samples/json-serialization.md)。
 
@@ -51,7 +51,7 @@ JSON（JavaScript 对象符号）是一种高效的数据编码格式，可用�
     p.age = 42;
     ```
 
-2. 使用 @no__t 将 @no__t 0 对象序列化到内存流。
+2. 使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>将 `Person` 对象序列化到内存流。
 
     ```csharp
     var stream1 = new MemoryStream();

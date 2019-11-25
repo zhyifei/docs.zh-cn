@@ -1,13 +1,13 @@
 ---
 title: 计算表达式
 description: 了解如何创建方便的语法，以便在中F#写入可使用控制流结构和绑定进行排序和组合的计算。
-ms.date: 03/15/2019
-ms.openlocfilehash: 2f0eb7686378766f6b379f0401589490f01a1963
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: c9ac0454221782a7ccb3d41850ca6aba4e20a72a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424745"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976790"
 ---
 # <a name="computation-expressions"></a>计算表达式
 
@@ -112,6 +112,34 @@ for sq in squares do
     printfn "%d" sq
 ```
 
+在大多数情况下，调用方可以省略它。 省略 `yield` 的最常见方法是 `->` 运算符：
+
+```fsharp
+let squares =
+    seq {
+        for i in 1..10 -> i * i
+    }
+
+for sq in squares do
+    printfn "%d" sq
+```
+
+对于更复杂的表达式，可能会产生许多不同的值，并且可能有条件地省略关键字：
+
+```fsharp
+let weekdays includeWeekend =
+    seq {
+        "Monday"
+        "Tuesday"
+        "Wednesday"
+        "Thursday"
+        "Friday"
+        if includeWeekend then
+            "Saturday"
+            "Sunday"
+    }
+```
+
 与[ C#中的 yield 关键字](../../csharp/language-reference/keywords/yield.md)一样，计算表达式中的每个元素都是在迭代时重新生成的。
 
 `yield` 由生成器类型上的 `Yield(x)` 成员定义，其中 `x` 是要返回的项。
@@ -143,6 +171,8 @@ printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
 计算时，`yield!` 调用的计算表达式会将其项逐个返回，从而平展结果。
 
 `yield!` 由生成器类型上的 `YieldFrom(x)` 成员定义，其中 `x` 是值的集合。
+
+与 `yield`不同，必须显式指定 `yield!`。 它的行为在计算表达式中是隐式的。
 
 ### `return`
 
@@ -394,7 +424,7 @@ comp |> step |> step |> step |> step
 type Microsoft.FSharp.Linq.QueryBuilder with
 
     [<CustomOperation("existsNot")>]
-    member __.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
+    member _.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
         Enumerable.Any (source.Source, Func<_,_>(predicate)) |> not
 ```
 

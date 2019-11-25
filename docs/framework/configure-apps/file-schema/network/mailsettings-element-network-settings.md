@@ -8,20 +8,20 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: fb4c8844ed3eb13af483c214d659090c0c563c33
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4e8bf23ce39edadf80f019315c690b597b3d7361
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698075"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089236"
 ---
 # <a name="mailsettings-element-network-settings"></a>\<mailSettings > 元素（网络设置）
 配置邮件发送选项。  
 
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t **\<mailSettings >**  
-  
+[ **\<configuration>** ](../configuration-element.md)\
+\<&nbsp;&nbsp;[ **> 的**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<mailSettings >**
+
 ## <a name="syntax"></a>语法  
   
 ```xml  
@@ -44,7 +44,7 @@ ms.locfileid: "71698075"
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[\<system.Net> 元素（网络设置）](system-net-element-network-settings.md)|包含指定 .NET Framework 如何连接到网络的设置。|  
   

@@ -1,5 +1,5 @@
 ---
-title: 使用 Visual Basic 访问文件
+title: 文件访问
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file access
@@ -14,17 +14,19 @@ helpviewer_keywords:
 - I/O [Visual Basic]
 - sequential access
 ms.assetid: 231533bf-d049-4345-befa-3fb78fe6517d
-ms.openlocfilehash: f9cbb255dea8c6915951b5099f40bfd0ba66c8aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 22bcd0f1f3acb0c0ad899b83ad2d879ead948f12
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583300"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348901"
 ---
 # <a name="file-access-with-visual-basic"></a>使用 Visual Basic 访问文件
+
 `My.Computer.FileSystem` 对象提供用于处理文件和文件夹的工具。 它的属性、方法和事件使你可以创建、复制、移动、调查以及删除文件和文件夹。 `My.Computer.FileSystem` 提供的性能比 Visual Basic 为后向兼容性提供的旧版功能（`FileOpen`、`FileClose`、`Input`、`InputString`、`LineInput` 等）的性能更好。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [从文件读取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  列出有关使用 `My.Computer.FileSystem` 对象读取文件的主题  
   
@@ -43,5 +45,5 @@ ms.locfileid: "33583300"
  [演练：在 Visual Basic 中操作文件和目录](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  演示如何创建报告文件和文件夹相关信息的实用工具。  
   
- [疑难解答：读取和写入文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  
+ [排除故障：读取和写入文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  
  列出读取和写入文本文件时遇到的常见问题，并为每个问题提供补救措施。

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: f3b029e8b931e976bee85c98dd926e020c5b8743
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: c5029a7d1e53c28d0abb232efdc3e0bd2c9658d4
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698267"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088423"
 ---
 # <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy > 元素（网络设置）
 描述 HTTP 缓存是否处于活动状态，并描述默认缓存策略。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<requestCaching >** ](requestcaching-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<defaultHttpCachePolicy >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+\<&nbsp;&nbsp;[ **> 的**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<requestCaching >** ](requestcaching-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<defaultHttpCachePolicy >**
+
 ## <a name="syntax"></a>语法  
   
 ```xml  
@@ -56,9 +56,9 @@ ms.locfileid: "71698267"
 |[requestCaching](requestcaching-element-network-settings.md)|控制网络请求的缓存机制。|  
   
 ## <a name="remarks"></a>备注  
- @No__t-0 属性的值为 `BypassCache` 或 `Default`。  
+ `policyLevel` 特性的值为 `BypassCache` 或 `Default`。  
   
- @No__t 的值为-0、@no__t 为-1，`minimumFresh` 元素是采用*d*格式的显式时间间隔。*hh*：*mm*：*ss* （天、小时、分钟和秒），或常量 `minValue` 或 `maxValue` （视情况而成）。  
+ `maximumAge`、`maximumStale`和 `minimumFresh` 元素的值是格式为*d*的显式时间间隔。*hh*：*mm*：*ss* （天、小时、分钟和秒），或常数 `minValue` 或 `maxValue`（视情况而成）。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  

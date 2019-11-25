@@ -10,21 +10,21 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: 0248706ed78de160ef0131a0c7595374febf1aa9
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 76dad0c0b75d20627e9f57fd1bb467bf17c9294c
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699579"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088504"
 ---
-# <a name="add-element-for-webrequestmodules-network-settings"></a>用于 webRequestModules 的 0add > 元素（网络设置） @no__t
+# <a name="add-element-for-webrequestmodules-network-settings"></a>\<为 webRequestModules 添加 > 元素（网络设置）
 向应用程序添加自定义 Web 请求模块。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<添加 >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+\<&nbsp;&nbsp;[ **> 的**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<添加 >**
+
 ## <a name="syntax"></a>语法  
   
 ```xml  
@@ -39,7 +39,7 @@ ms.locfileid: "71699579"
   
 ### <a name="attributes"></a>特性  
   
-|**特性**|**说明**|  
+|**特性**|**描述**|  
 |-------------------|---------------------|  
 |`prefix`|此 Web 请求模块处理的请求的 URI 前缀。|  
 |`type`|实现此 Web 请求模块的由逗号分隔的完全限定的类型名称（由 <xref:System.Type.FullName%2A> 属性指示）和程序集名称（由 <xref:System.Reflection.Assembly.FullName%2A> 属性指示）。|  
@@ -49,18 +49,18 @@ ms.locfileid: "71699579"
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[webRequestModules](webrequestmodules-element-network-settings.md)|指定用于从网络主机请求信息的模块。|  
   
 ## <a name="remarks"></a>备注  
- @No__t-0 特性定义使用指定 Web 请求模块的 URI 前缀。 通常会将 Web 请求模块注册为处理特定协议（如 HTTP 或 FTP），但可以注册它来处理对服务器上特定服务器或路径的请求。  
+ `prefix` 特性定义使用指定 Web 请求模块的 URI 前缀。 通常会将 Web 请求模块注册为处理特定协议（如 HTTP 或 FTP），但可以注册它来处理对服务器上特定服务器或路径的请求。  
   
  当 URI 匹配前缀传递到 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 方法时，将创建 Web 请求模块。  
   
- @No__t-0 属性的值应为有效 URI 的前导字符。 例如，`http` 或 `http://www.contoso.com`。
+ `prefix` 特性的值应为有效 URI 的前导字符。 例如，`http` 或 `http://www.contoso.com`。
   
- @No__t-0 属性的值应为有效的类型名称和相应的程序集名称，用逗号分隔。
+ `type` 属性的值应为有效的类型名称和相应的程序集名称，用逗号分隔。
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  

@@ -1,15 +1,15 @@
 ---
-title: 如何：将支持 AJAX 的 ASP.NET Web 服务迁移到 WCF
+title: 如何：将启用了 AJAX 的 ASP.NET Web 服务迁移到 WCF
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: f492efe9e364195dce6b73a14e9ca5fa34a6df25
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 60e3088b9075464176c328af1f52676a69c4990f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972306"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976132"
 ---
-# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>如何：将支持 AJAX 的 ASP.NET Web 服务迁移到 WCF
+# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>如何：将启用了 AJAX 的 ASP.NET Web 服务迁移到 WCF
 本主题概述将基本 ASP.NET AJAX 服务迁移到等效的启用 AJAX Windows Communication Foundation （WCF）服务的过程。 它演示如何创建 ASP.NET AJAX 服务的功能等效的 WCF 版本。 然后，可以并行使用这两个服务，或者可以使用 WCF 服务来替换 ASP.NET AJAX 服务。
 
  将现有的 ASP.NET AJAX 服务迁移到 WCF AJAX 服务可提供以下优势：
@@ -30,7 +30,7 @@ ms.locfileid: "70972306"
 
 2. 从 "**文件**" 菜单中依次选择 "**新建**"、"**项目**"、" **Web**"，然后选择 " **ASP.NET Web 服务应用程序**"。
 
-3. 将项目`ASPHello`命名为，然后单击 **"确定"** 。
+3. 将项目命名为 "`ASPHello`"，然后单击 **"确定"** 。
 
 4. 在 Service1.asmx.cs 文件中，取消对包含 `System.Web.Script.Services.ScriptService]` 的行的注释，以便为此服务启用 AJAX。
 
@@ -40,7 +40,7 @@ ms.locfileid: "70972306"
 
 7. 在生成的网页上，选择 `HelloWorld` 操作。
 
-8. 单击 "测试" `HelloWorld`页上的 "调用" 按钮。 您应收到以下 XML 响应。
+8. 单击 "`HelloWorld` 测试" 页上的 "**调用**" 按钮。 您应收到以下 XML 响应。
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -55,20 +55,20 @@ ms.locfileid: "70972306"
 
 1. 右键单击 " **ASPHello** " 项目，然后依次选择 "**添加**"、"**新建项**" 和 "**启用 AJAX 的 WCF 服务**"。
 
-2. 为服务`WCFHello`命名，然后单击 "**添加**"。
+2. 将服务命名为 "`WCFHello`"，然后单击 "**添加**"。
 
 3. 打开 WCFHello.svc.cs 文件。
 
-4. 从 Service1.asmx.cs 复制`HelloWorld`操作的以下实现。
+4. 从 Service1.asmx.cs 复制 `HelloWorld` 操作的以下实现。
 
     ```csharp
     public string HelloWorld()
     {
-         return "Hello World";
+        return "Hello World";
     }
     ```
 
-5. 将`HelloWorld`操作的复制实现粘贴到 WCFHello.svc.cs 文件中以替代以下代码。
+5. 粘贴到 WCFHello.svc.cs 文件中复制的 `HelloWorld` 操作的实现，以替代以下代码。
 
     ```csharp
     public void DoWork()
@@ -78,7 +78,7 @@ ms.locfileid: "70972306"
     }
     ```
 
-6. 将`Namespace`的`WCFHello`属性指定为。 <xref:System.ServiceModel.ServiceContractAttribute>
+6. 为 <xref:System.ServiceModel.ServiceContractAttribute> 指定 `WCFHello`的 `Namespace` 属性。
 
     ```csharp
     [ServiceContract(Namespace="WCFHello")]
@@ -87,7 +87,7 @@ ms.locfileid: "70972306"
     { … }
     ```
 
-7. <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A>将添加<xref:System.ServiceModel.Web.WebInvokeAttribute>到操作，并将属性设置为返回<xref:System.ServiceModel.Web.WebMessageFormat.Xml>。 `HelloWorld` 请注意，如果未设置此属性，则默认返回类型为 <xref:System.ServiceModel.Web.WebMessageFormat.Json>。
+7. 将 <xref:System.ServiceModel.Web.WebInvokeAttribute> 添加到 `HelloWorld` 操作，并将 <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> 属性设置为返回 <xref:System.ServiceModel.Web.WebMessageFormat.Xml>。 请注意，如果未设置此属性，则默认返回类型为 <xref:System.ServiceModel.Web.WebMessageFormat.Json>。
 
     ```csharp
     [OperationContract]
@@ -102,13 +102,13 @@ ms.locfileid: "70972306"
 
 9. 打开 Wcfhello.svc 文件，并从 "**调试**" 菜单中选择 "**启动（不调试**）"。
 
-10. 现在，服务在`WCFHello.svc/HelloWorld`中公开一个终结点，该终结点响应 HTTP POST 请求。 HTTP POST 请求不能从浏览器进行测试，但终结点会返回以下 XML。
+10. 现在，服务在 `WCFHello.svc/HelloWorld`公开一个终结点，该终结点响应 HTTP POST 请求。 HTTP POST 请求不能从浏览器进行测试，但终结点会返回以下 XML。
 
     ```xml
     <string xmlns="http://schemas.microsoft.com/2003/10/Serialization/">Hello World</string>
     ```
 
-11. `WCFHello.svc/HelloWorld` 和`Service1.aspx/HelloWorld`端点现在功能等效。
+11. `WCFHello.svc/HelloWorld` 和 `Service1.aspx/HelloWorld` 端点现在具有相同的功能。
 
 ## <a name="example"></a>示例
  从本主题概述的过程中得到的代码将在下面的示例中提供。
@@ -179,9 +179,9 @@ namespace ASPHello
 
  如果要将 .ASMX Web 服务并行升级并迁移到 WCF 服务，请避免将两个类型映射到客户端上的同一名称。 如果 <xref:System.Web.Services.WebMethodAttribute> 和 <xref:System.ServiceModel.ServiceContractAttribute> 中使用了同一类型，则这将导致序列化程序中出现异常：
 
-- 如果首先添加 WCF 服务，则对该方法调用方法会导致中<xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29>出现异常，因为代理中顺序的 WCF 样式定义优先。
+- 如果首先添加 WCF 服务，则在 <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> 上调用方法将导致中的异常，因为代理中顺序的 WCF 样式定义优先。
 
-- 如果首先添加了 .asmx Web 服务，则对 WCF 服务调用方法将导致<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>中出现异常，因为代理中顺序的 Web 服务样式定义优先。
+- 如果首先添加了 .ASMX Web 服务，则对 WCF 服务调用方法将导致 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 中的异常，因为代理中顺序的 Web 服务样式定义优先。
 
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 和 ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> 在行为上存在很大差异。 例如，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 将字典表示为键/值对的数组，而 ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> 则将字典表示为实际的 JSON 对象。 因此，下面是用 ASP.NET AJAX 表示的字典。
 
@@ -195,7 +195,7 @@ d.Add("two", 2);
 
 - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 将其表示为 [{"Key":"one","Value":1},{"Key":"two","Value":2}]
 
-- ASP.NET AJAX {"one"：1，"两个"： 2}<xref:System.Web.Script.Serialization.JavaScriptSerializer>
+- ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> {"one"：1，"两个"： 2}
 
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 可以处理其中的键类型不是字符串的词典，而 <xref:System.Web.Script.Serialization.JavaScriptSerializer> 则无法处理，在这一方面前者的功能更为强大。 但后者与 JSON 的兼容性更好。
 
@@ -204,14 +204,14 @@ d.Add("two", 2);
 |差异类别|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|
 |-----------------------------|--------------------------------|---------------------------------------|
 |将空缓冲区（新 byte[0]）反序列化为 <xref:System.Object>（或 <xref:System.Uri>，或某些其他类）。|SerializationException|null|
-|<xref:System.DBNull.Value> 的序列化|{}（或 {"__type"： "#System"}）|null|
+|<xref:System.DBNull.Value> 的序列化|{} （或 {"__type"： "#System"}）|null|
 |[Serializable] 类型的私有成员的序列化。|已序列化|未序列化|
 |<xref:System.Runtime.Serialization.ISerializable> 类型的公共属性的序列化。|未序列化|已序列化|
 |JSON 的“扩展”|遵循 JSON 规范，该规范要求为对象成员名称加上引号 ({"a":"hello"})。|支持不带引号的对象成员名称 ({a:"hello"})。|
-|<xref:System.DateTime> 协调世界时 (UTC)|不支持格式 "\\/Date （123456789U）\\{4}\\+&#124;\\\\\\/" 或 "/Date\\（\d + （U （-[\d]））？）\\\\/)".|支持格式 "\\/Date （123456789U）\\/" 和 "\\/Date\\（\d + （U&#124;（\\{4}+\\-[\d]））？\\）\\ /）\\"为 DateTime 值。|
-|词典的表示形式|KeyValuePair\<K，V > 的数组，处理不是字符串的键类型。|作为实际的 JSON 对象 - 但仅处理是字符串的键类型。|
+|<xref:System.DateTime> 协调世界时 (UTC)|不支持格式 "\\/Date （123456789U）\\/" 或 "\\/Date\\（\d + （U&#124;（\\+\\-[\d{4}]））？\\）\\\\/） "。|支持格式 "\\/Date （123456789U）\\/" 和 "\\/Date\\（\d + （U&#124;（\\+\\-[\d{4}]））？\\）\\\\/） "作为 DateTime 值。|
+|词典的表示形式|KeyValuePair\<K，V > 的数组处理不是字符串的键类型。|作为实际的 JSON 对象 - 但仅处理是字符串的键类型。|
 |转义符|始终应带有转义正斜杠 (/)；切勿使用非转义的无效 JSON 字符，例如“\n”。|对于 DateTime 值，带有转义正斜杠 (/)。|
 
 ## <a name="see-also"></a>请参阅
 
-- [如何：使用配置添加 ASP.NET AJAX 终结点](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+- [如何：使用配置来添加 ASP.NET AJAX 终结点](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

@@ -5,12 +5,12 @@ author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 51dcf5cd85913f0e69ea51dff5101426cc57390f
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 5b4541b527559ee05c9b97d84324e9e70599a014
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774468"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977379"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>教程：使用矩阵因子分解和 ML.NET 生成影片推荐系统
 
@@ -73,7 +73,7 @@ ms.locfileid: "72774468"
 
 2. 在“解决方案资源管理器”中，右键单击每个 \*.csv 文件，然后选择“属性”  。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”    。
 
-   ![如果在 VS 中较新则复制](./media/movie-recommendation/copytoout.gif)
+   ![如果在 VS 中较新，则用户选择“复制”的 GIF。](./media/movie-recommendation/copy-to-output-if-newer.gif)
 
 ## <a name="load-your-data"></a>加载数据
 
@@ -83,7 +83,7 @@ ML.NET 过程的第一步是准备并加载用于训练和测试数据的模型�
 
 以下是 .csv 文件中数据的预览：\*
 
-![数据的预览](./media/movie-recommendation/csv-dataset-preview.png)
+![CVS 数据集预览的屏幕截图。](./media/movie-recommendation/csv-file-dataset-preview.png)
 
 在 .csv 文件中，有四列：\*
 
@@ -102,7 +102,7 @@ ML.NET 过程的第一步是准备并加载用于训练和测试数据的模型�
 | `movieId`      |               |
 | `timestamp`     |               |
 
-由你来决定使用哪个 `Features` 来预测 `Label`。 你还可以使用[特征排列重要性](../how-to-guides/determine-global-feature-importance-in-model.md)等方法来帮助选择最佳 `Features`。
+由你来决定使用哪个 `Features` 来预测 `Label`。 你还可以使用[排列特征重要性](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)等方法来帮助选择最佳 `Features`。
 
 在此示例中，应将 `timestamp` 列排除为 `Feature`，因为时间戳并不会真正影响用户对给定影片的评分方式，因此无法进行更准确的预测：
 
@@ -171,11 +171,11 @@ ML.NET 中包含三个主要概念：[数据](../resources/glossary.md#data)、[
 
 机器学习训练算法需要特定格式的数据。 `Transformers` 用于将表格数据转换为兼容格式。
 
-![转换器图像](./media/movie-recommendation/transformer.png)
+![转换器数据流的关系图。](./media/movie-recommendation/data-transformer-transformed.png)
 
 可以通过创建 `Estimators` 在 ML.NET 中创建 `Transformers`。 `Estimators` 接收数据并返回 `Transformers`。
 
-![估算器图像](./media/movie-recommendation/estimator.png)
+![估算器数据流的关系图。](./media/movie-recommendation/data-estimator-transformer.png)
 
 将用于训练模型的推荐训练算法就是一个 `Estimator` 示例。
 
@@ -373,7 +373,7 @@ public static void SaveModel(MLContext mlContext, DataViewSchema trainingDataVie
 
 ### <a name="use-your-saved-model"></a>使用保存的模型
 
-保存经过训练的模型后，可以在不同环境中使用模型（请参阅[“操作指南”](../how-to-guides/consuming-model-ml-net.md)，了解如何在应用程序中操作经过训练的机器学习模型）。
+保存已定型模型后，可以在不同的环境中使用该模型。 请参阅[保存和加载已定型模型](../how-to-guides/save-load-machine-learning-models-ml-net.md)，了解如何在应用中操作定型的机器学习模型。
 
 ## <a name="results"></a>结果
 
@@ -420,7 +420,7 @@ Movie 10 is recommended for user 6
 
 可添加更多训练数据，并在其中包括针对每个用户和影片 ID 的足够样本，以帮助提升推荐模型的质量。
 
-[交叉验证](../how-to-guides/train-cross-validation-ml-net.md)是一种评估模型的方法，它将数据随机分成子集（而不是像你在本教程中那样从数据集中提取测试数据），并将一些组作为训练数据，一些组作为测试数据。 从模型质量方面看，该方法优于进行训练-测试拆分。
+[交叉验证](../how-to-guides/train-machine-learning-model-cross-validation-ml-net.md)是一种评估模型的方法，它将数据随机分成子集（而不是像你在本教程中那样从数据集中提取测试数据），并将一些组作为训练数据，一些组作为测试数据。 从模型质量方面看，该方法优于进行训练-测试拆分。
 
 ### <a name="features"></a>特征
 
@@ -428,7 +428,7 @@ Movie 10 is recommended for user 6
 
 虽然这是一个良好的开端，但实际上你可能希望添加其他属性或 `Features`（例如，年龄、性别、地理位置等），如果它们包含在数据集中。 添加更相关的 `Features` 有助于提升推荐模型的性能。
 
-如果你不确定哪个 `Features` 可能与机器学习任务最相关，还可以使用 ML.NET 提供的特征贡献计算 (FCC) 和[特征排列重要性](../how-to-guides/determine-global-feature-importance-in-model.md)来发现最有影响力的 `Features`。
+如果你不确定哪个 `Features` 可能与机器学习任务最相关，还可以使用 ML.NET 提供的特征贡献计算 (FCC) 和[排列特征重要性](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)来发现最有影响力的 `Features`。
 
 ### <a name="algorithm-hyperparameters"></a>算法超参数
 

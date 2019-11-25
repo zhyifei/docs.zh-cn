@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: a68434aaa118db60a502c2bcc0bb188b83b0f463
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 9c011cf1216b98fa20e330e185e4cf2c331b31d4
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698421"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087954"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a>用于 authenticationModules 的 0add > 元素（网络设置） @no__t
+# <a name="add-element-for-authenticationmodules-network-settings"></a>\<为 authenticationModules 添加 > 元素（网络设置）
 向应用程序添加身份验证模块。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<添加 >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+\<&nbsp;&nbsp;[ **> 的**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<添加 >**
+
 ## <a name="syntax"></a>语法  
   
 ```xml  
@@ -38,7 +38,7 @@ ms.locfileid: "71698421"
   
 ### <a name="attributes"></a>特性  
   
-|**特性**|**说明**|  
+|**特性**|**描述**|  
 |-------------------|---------------------|  
 |`type`|完全限定的类型名称（由 <xref:System.Type.FullName%2A> 属性指示）和程序集名称（由 <xref:System.Reflection.Assembly.FullName%2A> 属性指示），用逗号分隔。|  
   
@@ -47,14 +47,14 @@ ms.locfileid: "71698421"
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[authenticationModules](authenticationmodules-element-network-settings.md)|指定用于对网络请求进行身份验证的模块。|  
   
 ## <a name="remarks"></a>备注  
  `add` 元素会在已注册的身份验证模块列表末尾添加一个身份验证模块。 身份验证模块按照它们添加到列表中的顺序进行调用。  
   
- @No__t-0 属性的值应为有效的类型名称和相应的程序集名称，用逗号分隔。  
+ `type` 属性的值应为有效的类型名称和相应的程序集名称，用逗号分隔。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  

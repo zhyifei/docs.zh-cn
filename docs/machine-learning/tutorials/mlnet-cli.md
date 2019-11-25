@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 5b3b0af5b46774beff9fb7a2a86c37e5399c0dd2
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: bea5cd1b42773e62601edbc113b2155ff78cf884
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957393"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977401"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>使用 ML.NET CLI 分析情绪
 
@@ -105,7 +105,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
 
     ![PowerShell 上的 ML.NET CLI auto-train](./media/mlnet-cli/mlnet-auto-train-binary-classification-bash.gif)
 
-    在此特殊情况下，只需 10 秒且只需提供小型数据集，CLI 工具就能够运行相当多次迭代，这意味着基于不同的算法/配置组合，以及不同的内部数据转换和算法的超参数进行多次训练。 
+    在此特殊情况下，只需 10 秒且只需提供小型数据集，CLI 工具就能够运行相当多次迭代，这意味着基于不同的算法/配置组合，以及不同的内部数据转换和算法的超参数进行多次训练。
 
     最后，10 秒内找到的“最佳质量”模型是使用具有任何特定配置的特定训练程序/算法的模型。 根据探索时间，命令可以生成不同的结果。 选择基于显示的多个指标，例如 `Accuracy`。
 
@@ -118,16 +118,16 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
     如需其他指标和更多**有关指标的详细信息**（例如准确性、AUC、AUCPR、用于评估不同模型的 F1 分数），可以阅读[了解 ML.NET 指标](../resources/metrics.md)
 
     > [!NOTE]
-    > 可以尝试使用完全相同的数据集并为 `--max-exploration-time` 指定数分钟时间（例如三分钟，因此指定 180 秒），这将找到一个更好的“最佳模型”，其具有用于此数据集（非常小，1,000 行）的不同训练管道配置。 
-        
-    为了找到针对较大数据集的“生产就绪模型”“最佳/优质”模型，应该使用 CLI 进行试验，其通常根据数据集的大小指定更多探索时间。 实际上，在许多情况下，可能需要进行多个小时的探索，特别是在数据集的行数和列数很多的情况下。 
+    > 可以尝试使用完全相同的数据集并为 `--max-exploration-time` 指定数分钟时间（例如三分钟，因此指定 180 秒），这将找到一个更好的“最佳模型”，其具有用于此数据集（非常小，1,000 行）的不同训练管道配置。
+
+    为了找到针对较大数据集的“生产就绪模型”“最佳/优质”模型，应该使用 CLI 进行试验，其通常根据数据集的大小指定更多探索时间。 实际上，在许多情况下，可能需要进行多个小时的探索，特别是在数据集的行数和列数很多的情况下。
 
 1. 之前的命令执行生成了以下资产：
 
-    - 可供使用的序列化模型 .zip 文件（“最佳模型”）。 
+    - 可供使用的序列化模型 .zip 文件（“最佳模型”）。
     - 用于运行生成的模型/对生成的模型评分的 C# 代码（使用该模型在最终用户应用中进行预测）。
     - 用于生成模型的 C# 训练代码（学习目的）。
-    - 具有探索过的所有迭代的日志文件，其中包含有关使用其超参数和数据转换组合尝试过的每个算法的特定详细信息。 
+    - 具有探索过的所有迭代的日志文件，其中包含有关使用其超参数和数据转换组合尝试过的每个算法的特定详细信息。
 
     前两个资产（.zip 文件模型和用于运行该模型的 C# 代码）可以直接用于最终用户应用（ASP.NET Core Web 应用、服务、桌面应用等），以使用生成的 ML 模型进行预测。
 
@@ -145,10 +145,10 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
     ![CLI 生成的 VS 解决方案](./media/mlnet-cli/generated-csharp-solution-detailed.png)
 
     - 生成的**类库**（包含序列化 ML 模型（.zip 文件）和数据类（数据模型））可以直接用于最终用户应用程序，甚至可以通过直接引用该类库（或根据需要移动代码）进行使用。
-    - 生成的**控制台应用**包含必须查看的执行代码，随后通常会重用“评分代码”（运行 ML 模型以进行预测的代码），方法是将该简单代码（仅几行）移至想要进行预测的最终用户应用程序。 
+    - 生成的**控制台应用**包含必须查看的执行代码，随后通常会重用“评分代码”（运行 ML 模型以进行预测的代码），方法是将该简单代码（仅几行）移至想要进行预测的最终用户应用程序。
 
-1. 打开类库项目中的 ModelInput.cs  和 ModelOutput.cs  类文件。 可发现这些类是用于保存数据的“数据类”或 POCO 类。 它是“样板代码”，但如果数据集有数十甚至数百列，则生成它很有用。 
-    - 从数据集中读取数据时使用 `ModelInput` 类。 
+1. 打开类库项目中的 ModelInput.cs  和 ModelOutput.cs  类文件。 可发现这些类是用于保存数据的“数据类”或 POCO 类。 它是“样板代码”，但如果数据集有数十甚至数百列，则生成它很有用。
+    - 从数据集中读取数据时使用 `ModelInput` 类。
     - `ModelOutput` 类用于获取预测结果（预测数据）。
 
 1. 打开 Program.cs 文件并浏览代码。 只需几行，就能够运行模型并进行示例预测。
@@ -164,7 +164,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
         ITransformer mlModel = mlContext.Model.Load(MODEL_FILEPATH, out DataViewSchema inputSchema);
         var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
 
-        // Create sample data to do a single prediction with it 
+        // Create sample data to do a single prediction with it
         ModelInput sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
 
         // Try a single prediction
@@ -174,7 +174,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
     }
     ```
 
-- 第一行代码创建运行 ML.NET 代码时需要的 `MLContext` 对象。 
+- 第一行代码创建运行 ML.NET 代码时需要的 `MLContext` 对象。
 
 - 第二行代码因不需要训练模型而被注释，这是因为模型已经由 CLI 工具进行训练并保存到模型的序列化 .zip 文件中。 但是，如果想要查看 CLI *“如何训练模型”* ，可以取消注释该行并运行/调试用于该特定 ML 模型的训练代码。
 
@@ -215,11 +215,11 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
 
     ---
 
-1. 尝试将硬编码示例数据更改为具有不同情绪的其他句子，并查看模型预测正面或负面情绪的表现如何。 
+1. 尝试将硬编码示例数据更改为具有不同情绪的其他句子，并查看模型预测正面或负面情绪的表现如何。
 
 ## <a name="infuse-your-end-user-applications-with-ml-model-predictions"></a>为最终用户应用程序注入 ML 模型预测
 
-可以使用类似的“ML 模型评分代码”在最终用户应用程序中运行模型并进行预测。 
+可以使用类似的“ML 模型评分代码”在最终用户应用程序中运行模型并进行预测。
 
 例如，可以直接将该代码移至任何 Windows 桌面应用程序（例如 WPF  和 WinForms  ），并以与在控制台应用中相同的方式运行模型。
 
@@ -229,14 +229,14 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
 
 应该优化模型对象（从模型的 .zip 文件加载的 `ITransformer`）和 `PredictionEngine` 对象的创建，尤其是在可缩放的 Web 应用和分布式服务上运行时。 对于第一种情况，模型对象 (`ITransformer`) 的优化很简单。 由于 `ITransformer` 对象为线程安全型，所以可将该对象作为单一实例或静态对象进行缓存，这样就只需加载模型一次。
 
-对于第二个对象（`PredictionEngine` 对象），优化并不容易，因为 `PredictionEngine` 对象不为线程安全型，所以无法在 ASP.NET Core 应用中将此对象实例化为单一实例或静态对象。 此[博客文章](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/)深入讨论了此线程安全和可伸缩性问题。 
+对于第二个对象（`PredictionEngine` 对象），优化并不容易，因为 `PredictionEngine` 对象不为线程安全型，所以无法在 ASP.NET Core 应用中将此对象实例化为单一实例或静态对象。 此[博客文章](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/)深入讨论了此线程安全和可伸缩性问题。
 
 然而，事情已经变得比博客文章中解释的容易得多。 我们开发出一个更简单的方法，并创建了一个很不错的 **“.NET Core 集成包”** ，用户可通过在应用程序 DI 服务（依赖项注入服务）中注册它来轻松地在 ASP.NET Core 应用和服务中使用它，然后可通过代码直接使用它。 查看以下相关教程和示例：
 
 - [教程：在可缩放的 ASP.NET Core Web 应用和 WebAPI 上运行 ML.NET 模型](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
 - [示例：ASP.NET Core WebAPI 上的可缩放 ML.NET 模型](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
 
-## <a name="explore-the-generated-c-code-that-was-used-to-train-the-best-quality-model"></a>探索生成用于训练“最佳质量”模型的的 C# 代码 
+## <a name="explore-the-generated-c-code-that-was-used-to-train-the-best-quality-model"></a>探索生成用于训练“最佳质量”模型的的 C# 代码
 
 出于更高级的学习目的，还可以探索 CLI 工具生成用于训练生成的模型的 C# 代码。
 
@@ -253,7 +253,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
 - [使用 ML.NET CLI 自动进行模型训练](../automate-training-with-cli.md)
 - [教程：在可缩放的 ASP.NET Core Web 应用和 WebAPI 上运行 ML.NET 模型](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
 - [示例：ASP.NET Core WebAPI 上的可缩放 ML.NET 模型](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
-- [ML.NET CLI auto-train 命令参考指南](../reference/ml-net-cli-reference.md) 
+- [ML.NET CLI auto-train 命令参考指南](../reference/ml-net-cli-reference.md)
 - [如何安装 ML.NET 命令行接口 (CLI) 工具](../how-to-guides/install-ml-net-cli.md)
 - [ML.NET CLI 中的遥测](../resources/ml-net-cli-telemetry.md)
 

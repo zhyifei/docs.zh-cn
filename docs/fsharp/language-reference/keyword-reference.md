@@ -1,13 +1,13 @@
 ---
 title: 关键字参考
 description: 查找有关所有F#语言关键字的信息的链接。
-ms.date: 05/16/2016
-ms.openlocfilehash: 2be6d078653a4595cbdfe97be7aab8e3b3c10ea9
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: 64bb680a0861f4b8287f887ea67edb6fcf4f88a6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425088"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976620"
 ---
 # <a name="keyword-reference"></a>关键字参考
 
@@ -87,7 +87,7 @@ ms.locfileid: "73425088"
 |`when`|[约束](./generics/constraints.md)|用于模式匹配的布尔条件（*临界*条件）以及为泛型类型参数引入约束子句。|
 |`while`|[循环：`while...do` 表达式](loops-while-do-expression.md)|引入循环构造。|
 |`with`|[match 表达式](match-expressions.md)<br /><br />[对象表达式](object-expressions.md)<br /><br />[复制和更新记录表达式](copy-and-update-record-expressions.md)<br /><br />[类型扩展](type-extensions.md)<br /><br />[异常：`try...with` 表达式](./exception-handling/the-try-with-expression.md)|与模式匹配表达式中的 `match` 关键字一起使用。 还在对象表达式、记录复制表达式和类型扩展中用于引入成员定义，并用于引入异常处理程序。|
-|`yield`|[序列](sequences.md)|在序列表达式中用于生成序列的值。|
+|`yield`|[列表](lists.md)、[数组](arrays.md)、[序列](sequences.md)|在列表、数组或序列表达式中用于生成序列的值。 通常可以省略，因为在大多数情况下它是隐式的。|
 |`yield!`|[计算表达式](computation-expressions.md)<br /><br />[异步工作流](asynchronous-workflows.md)|在计算表达式中用于将给定计算表达式的结果追加到包含计算表达式的结果集合。|
 
 以下令牌在中F#是保留的，因为它们是 OCaml 语言的关键字：

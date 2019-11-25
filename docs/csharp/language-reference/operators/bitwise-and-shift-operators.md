@@ -29,16 +29,16 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 0a251e8d04f31a736ee6acbf4b8e913cfb8ca6df
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 27f7cf46bd3e344503f74527df34506d38ad4545
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771721"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428447"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>位运算符和移位运算符（C# 参考）
 
-以下运算符使用[整数类型](../builtin-types/integral-numeric-types.md)的操作数执行位运算或移位运算：
+以下运算符使用[整数类型](../builtin-types/integral-numeric-types.md)或 [char](../builtin-types/char.md) 类型的操作数执行位运算或移位运算：
 
 - 一元 [`~`（按位求补）](#bitwise-complement-operator-)运算符
 - 二进制 [`<<`（向左移位）](#left-shift-operator-)和 [`>>`（向右移位）](#right-shift-operator-)移位运算符
@@ -82,11 +82,11 @@ ms.locfileid: "72771721"
 
 高顺序空位位置是根据左侧操作数类型设置的，如下所示：
 
-- 如果左侧操作数的类型是 [int](../builtin-types/integral-numeric-types.md) 或 [long](../builtin-types/integral-numeric-types.md)，右移运算符将执行算术  移位：左侧操作数的最高有效位（符号位）的值将传播到高顺序空位位置。 也就是说，如果左侧操作数为非负，高顺序空位位置设置为零，如果为负，则将该位置设置为 1。
+- 如果左侧操作数的类型是 `int` 或 `long`，则右移运算符将执行  算术移位：左侧操作数的最高有效位（符号位）的值将传播到高顺序空位位置。 也就是说，如果左侧操作数为非负，高顺序空位位置设置为零，如果为负，则将该位置设置为 1。
 
   [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
-- 如果左侧操作数的类型是 [uint](../builtin-types/integral-numeric-types.md) 或 [ulong](../builtin-types/integral-numeric-types.md)，则右移运算符执行逻辑  移位：高顺序空位位置始终设置为零。
+- 如果左侧操作数的类型是 `uint` 或 `ulong`，则右移运算符执行逻辑移位：高顺序空位位置始终设置为零。 
 
   [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
@@ -98,7 +98,7 @@ ms.locfileid: "72771721"
 
 [!code-csharp-interactive[bitwise AND](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseAnd)]
 
-对于 `bool` 类型的操作数，`&` 运算符计算其操作数的[逻辑 AND](boolean-logical-operators.md#logical-and-operator-)。 一元 `&` 运算符是 [address-of 运算符](pointer-related-operators.md#address-of-operator-)。
+对于 `bool` 操作数，`&` 运算符对其操作数执行[逻辑 AND](boolean-logical-operators.md#logical-and-operator-) 运算。 一元 `&` 运算符是 [address-of 运算符](pointer-related-operators.md#address-of-operator-)。
 
 ## <a name="logical-exclusive-or-operator-"></a>逻辑异或运算符 ^
 
@@ -106,7 +106,7 @@ ms.locfileid: "72771721"
 
 [!code-csharp-interactive[bitwise XOR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseXor)]
 
-对于 `bool` 类型的操作数，`^` 运算符计算其操作数的[逻辑异或](boolean-logical-operators.md#logical-exclusive-or-operator-)。
+对于 `bool` 操作数，`^` 运算符对其操作数执行[逻辑异或](boolean-logical-operators.md#logical-exclusive-or-operator-)运算。
 
 ## <a name="logical-or-operator-"></a>逻辑或运算符 |
 
@@ -114,7 +114,7 @@ ms.locfileid: "72771721"
 
 [!code-csharp-interactive[bitwise OR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseOr)]
 
-对于 `bool` 类型的操作数，`|` 运算符计算其操作数的[逻辑 OR](boolean-logical-operators.md#logical-or-operator-)。
+对于 `bool` 操作数，`|` 运算符对其操作数执行[逻辑 OR](boolean-logical-operators.md#logical-or-operator-) 运算。
 
 ## <a name="compound-assignment"></a>复合赋值
 
@@ -154,17 +154,17 @@ x = x op y
 
 [!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
 
-要了解按优先级排序的完整 C# 运算符列表，请参阅 [C# 运算符](index.md)。
+要了解按优先级排序的完整 C# 运算符列表，请参阅 [C# 运算符](index.md#operator-precedence)一文中的[运算符优先级](index.md)部分。
 
 ## <a name="shift-count-of-the-shift-operators"></a>移位运算符的移位计数
 
-对于移位运算符 `<<` 和 `>>`，右侧操作数的类型必须为 [int](../builtin-types/integral-numeric-types.md) 或具有[预定义隐式数值转换](../builtin-types/numeric-conversions.md#implicit-numeric-conversions) 为 `int` 的类型。
+对于移位运算符 `<<` 和 `>>`，右侧操作数的类型必须为 `int`，或具有[预定义隐式数值转换](../builtin-types/numeric-conversions.md#implicit-numeric-conversions) 为 `int` 的类型。
 
 对于 `x << count` 和 `x >> count` 表达式，实际移位计数取决于 `x` 的类型，如下所示：
 
-- 如果 `x` 的类型为 [int](../builtin-types/integral-numeric-types.md) 或 [unit](../builtin-types/integral-numeric-types.md)，则移位计数由右侧操作数的低阶五位定义  。 也就是说，移位计数通过 `count & 0x1F`（或 `count & 0b_1_1111`）计算得出。
+- 如果 `x` 的类型为 `int` 或 `uint`，则移位计数由右侧操作数的低阶五位定义。  也就是说，移位计数通过 `count & 0x1F`（或 `count & 0b_1_1111`）计算得出。
 
-- 如果 `x` 的类型为 [long](../builtin-types/integral-numeric-types.md) 或 [unlong](../builtin-types/integral-numeric-types.md)，则移位计数由右侧操作数的低阶六位定义  。 也就是说，移位计数通过 `count & 0x3F`（或 `count & 0b_11_1111`）计算得出。
+- 如果 `x` 的类型为 `long` 或 `ulong`，则移位计数由右侧操作数的低阶六位定义。  也就是说，移位计数通过 `count & 0x3F`（或 `count & 0b_11_1111`）计算得出。
 
 以下示例演示了该行为：
 
@@ -172,7 +172,7 @@ x = x op y
 
 ## <a name="enumeration-logical-operators"></a>枚举逻辑运算符
 
-还为所有[枚举](../keywords/enum.md)类型定义了 `~`、`&`、`|` 和 `^` 运算符。 对于相同枚举类型的操作数，对底层整数类型的相应值执行逻辑运算。 例如，对于具有底层类型 `U` 的枚举类型 `T` 的任何 `x` 和 `y`，`x & y` 表达式生成与 `(T)((U)x & (U)y)` 表达式相同的结果。
+所有[枚举](../keywords/enum.md)类型还支持 `~`、`&`、`|` 和 `^` 运算符。 对于相同枚举类型的操作数，对底层整数类型的相应值执行逻辑运算。 例如，对于具有底层类型 `U` 的枚举类型 `T` 的任何 `x` 和 `y`，`x & y` 表达式生成与 `(T)((U)x & (U)y)` 表达式相同的结果。
 
 通常使用具有枚举类型的位逻辑运算符，该枚举类型使用 [Flags](xref:System.FlagsAttribute) 属性定义。 有关详细信息，请参阅[枚举类型](../../programming-guide/enumeration-types.md)一文的[作为位标记的枚举类型](../../programming-guide/enumeration-types.md#enumeration-types-as-bit-flags)部分。
 

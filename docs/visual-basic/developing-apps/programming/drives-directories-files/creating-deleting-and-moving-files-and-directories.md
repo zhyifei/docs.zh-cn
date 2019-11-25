@@ -1,5 +1,5 @@
 ---
-title: 创建、删除和移动文件和目录 (Visual Basic)
+title: 创建、删除和移动文件和目录
 ms.date: 07/20/2015
 helpviewer_keywords:
 - examples [Visual Basic], moving files and directories
@@ -22,17 +22,19 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming folders
 - I/O [Visual Basic], moving files
 ms.assetid: 8f814fcc-4c42-4dbb-a131-005ec445ac9e
-ms.openlocfilehash: 8b734b553e0ef4c14e372892e53b1184798390e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e0b291c0bb526c21654a1e8c08bd168d95ac53a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590941"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348911"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>创建、删除和移动文件和目录 (Visual Basic)
+
 本节列出了与在 Visual Basic 中创建、删除、移动和重命名文件及目录相关的任务。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [如何：将具有特定模式的文件复制到目录中](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
  演示如何将具有特定文件名模式的文件（例如仅 .txt 文件）复制到目录。  
   
@@ -57,7 +59,7 @@ ms.locfileid: "33590941"
  [如何：重命名文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
  演示如何重命名文件。  
   
- [如何：将一个目录复制到另一个目录](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
+ [如何：将目录复制到另一个目录](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
  演示如何将目录复制到另一位置。  
   
  [如何：创建目录](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)  
@@ -76,6 +78,7 @@ ms.locfileid: "33590941"
  演示如何使用 `My` 方法合并文件路径。  
   
 ## <a name="reference"></a>参考  
+
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  介绍 `My.Computer.FileSystem` 对象及其成员。  
   
@@ -116,6 +119,7 @@ ms.locfileid: "33590941"
  描述 `SpecialDirectories` 对象。  
   
 ## <a name="related-sections"></a>相关章节  
+
  [从文件读取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  列出与读取文件相关的任务。  
   

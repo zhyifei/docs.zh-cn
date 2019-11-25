@@ -8,21 +8,21 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: 1dda43be8c0e0c94bdf7b57b67aa4d403b547f97
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 7a6c1282c9ca8381d2dbb21ffdc82f95732c42b3
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699546"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087522"
 ---
 # <a name="bypasslist-element-network-settings"></a>\<bypasslist > 元素（网络设置）
 提供了一组正则表达式，描述不使用代理的地址。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<bypasslist >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+\<&nbsp;&nbsp;[ **> 的**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bypasslist >**
+
 ## <a name="syntax"></a>语法  
   
 ```xml  
@@ -38,7 +38,7 @@ ms.locfileid: "71699546"
   
 ### <a name="child-elements"></a>子元素  
   
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[add](add-element-for-bypasslist-network-settings.md)|将 IP 地址或 DNS 名称添加到代理跳过列表。|  
 |[clear](clear-element-for-bypasslist-network-settings.md)|清除跳过列表。|  
@@ -46,14 +46,14 @@ ms.locfileid: "71699546"
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[defaultProxy](defaultproxy-element-network-settings.md)|配置超文本传输协议 (HTTP) 代理服务器。|  
   
 ## <a name="remarks"></a>备注  
- "绕过列表" 包含描述 <xref:System.Net.WebRequest> 实例直接访问而不是通过代理服务器访问的 Uri 的正则表达式。  
+ 旁路列表包含用于描述 Uri 的正则表达式，这些 Uri <xref:System.Net.WebRequest> 实例直接访问而不是通过代理服务器访问。  
   
- 为此元素指定正则表达式时，应格外小心。 正则表达式 "[a-z] + \\.contoso\\.com" 可匹配 contoso.com 域中的任何主机，但它还匹配 contoso.com.cpandl.com 域中的任何主机。 若要只匹配 contoso.com 域中的主机，请使用定位点（"$"）： "[a-z] + \\.contoso\\.com $"。  
+ 为此元素指定正则表达式时，应格外小心。 正则表达式 "[a-z] +\\contoso\\" 匹配 contoso.com 域中的任何主机，但它还匹配 contoso.com.cpandl.com 域中的任何主机。 若要仅匹配 contoso.com 域中的主机，请使用锚点（"$"）： "[a-z] +\\contoso\\.com $"。  
   
  有关正则表达式的详细信息，请参阅。[.NET Framework 正则表达式](../../../../standard/base-types/regular-expressions.md)。  
   

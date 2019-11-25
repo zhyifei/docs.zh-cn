@@ -4,12 +4,12 @@ description: 了解如何为机器学习模型选择 ML.NET 算法
 author: natke
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: dfea21908258e6eb0b696de7affe1b03cff5cb3b
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 0721418d8b0b3c9ab645eb9885b0f4951c37762e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972091"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976701"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>如何选择 ML.NET 算法
 
@@ -19,9 +19,9 @@ ms.locfileid: "68972091"
 
 ## <a name="trainer--algorithm--task"></a>训练程序 = 算法 + 任务
 
-算法是执行后可生成**模型**的数学运算。 不同的算法生成具有不同特征的模型。 
+算法是执行后可生成**模型**的数学运算。 不同的算法生成具有不同特征的模型。
 
-借助 ML.NET，同一算法可以应用于不同的任务。 例如，随机双坐标上升可用于二元分类、多类分类和回归。 区别在于如何解释算法的输出来匹配任务。 
+借助 ML.NET，同一算法可以应用于不同的任务。 例如，随机双坐标上升可用于二元分类、多类分类和回归。 区别在于如何解释算法的输出来匹配任务。
 
 对于每个算法/任务组合，ML.NET 提供执行训练算法并进行解释的组件。 这些组件称为训练程序。 例如，<xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> 使用应用于**回归**任务的 **StochasticDualCoordinatedAscent** 算法。
 

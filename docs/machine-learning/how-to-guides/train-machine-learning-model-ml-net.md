@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: fc735f28bad91b9714d7e6bf2a9c7c620acacc4d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0e0f43225b9bf243c31b3095817bdcbdb3123012
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929344"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976757"
 ---
 # <a name="train-and-evaluate-a-model"></a>训练和评估模型
 
@@ -98,9 +98,9 @@ ML.NET 算法对输入列类型存在约束。 此外，如果未指定任何值
 
 ### <a name="working-with-expected-column-types"></a>使用预期的列类型
 
-ML.NET 中的机器学习算法预期使用大小已知的浮点向量作为输入。 当所有数据都已经是数字格式并且打算一起处理（即图像像素）时，将 [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) 属性应用于数据模型。 
+ML.NET 中的机器学习算法预期使用大小已知的浮点向量作为输入。 当所有数据都已经是数字格式并且打算一起处理（即图像像素）时，将 [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) 属性应用于数据模型。
 
-如果数据不全为数字格式，并且想要单独对每个列应用不同的数据转换，请在处理所有列后使用 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) 方法，以将所有单独的列合并为一个特征向量并将特征向量输出到新列。 
+如果数据不全为数字格式，并且想要单独对每个列应用不同的数据转换，请在处理所有列后使用 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) 方法，以将所有单独的列合并为一个特征向量并将特征向量输出到新列。
 
 以下代码片段将 `Size` 和 `HistoricalPrices` 列合并为一个特征向量，该特征向量输出到名为 `Features` 的新列。 由于比例存在差异，将 [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) 应用于 `Features` 列来规范化数据。
 
@@ -121,9 +121,9 @@ IDataView transformedTrainingData = dataPrepTransformer.Transform(trainData);
 
 ### <a name="working-with-default-column-names"></a>使用默认列名
 
-未指定列名时，ML.NET 算法会使用默认列名。 所有训练程序都有一个名为 `featureColumnName` 的参数可用于算法的输入，并且在适用情况下，它们还有一个用于预期值的名为 `labelColumnName` 的参数。 默认情况下，这些值分别为 `Features` 和 `Label`。 
+未指定列名时，ML.NET 算法会使用默认列名。 所有训练程序都有一个名为 `featureColumnName` 的参数可用于算法的输入，并且在适用情况下，它们还有一个用于预期值的名为 `labelColumnName` 的参数。 默认情况下，这些值分别为 `Features` 和 `Label`。
 
-通过在预处理期间使用 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) 方法创建名为 `Features` 的新列，无需在算法的参数中指定特征列名，因为它已存在于预处理的 `IDataView` 中。 标签列为 `CurrentPrice`，但由于数据模型中使用了 [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) 属性，ML.NET 将 `CurrentPrice` 列重命名为 `Label`，因而无需向机器学习算法估算器提供 `labelColumnName` 参数。 
+通过在预处理期间使用 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) 方法创建名为 `Features` 的新列，无需在算法的参数中指定特征列名，因为它已存在于预处理的 `IDataView` 中。 标签列为 `CurrentPrice`，但由于数据模型中使用了 [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) 属性，ML.NET 将 `CurrentPrice` 列重命名为 `Label`，因而无需向机器学习算法估算器提供 `labelColumnName` 参数。
 
 如果不想使用默认列名，请在定义机器学习算法估算器时将特征和标签列的名称作为参数传入，如以下代码片段所示：
 
@@ -145,21 +145,21 @@ var trainedModel = sdcaEstimator.Fit(transformedTrainingData);
 
 ## <a name="extract-model-parameters"></a>提取模型参数
 
-训练模型后，提取已学习的 [`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase%601) 用于检查或重新训练。 [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) 提供经过训练的模型的偏差和已学习的系数或权重。 
+训练模型后，提取已学习的 [`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase%601) 用于检查或重新训练。 [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) 提供经过训练的模型的偏差和已学习的系数或权重。
 
 ```csharp
 var trainedModelParameters = trainedModel.Model as LinearRegressionModelParameters;
 ```
 
 > [!NOTE]
-> 其他模型具有特定于其任务的参数。 例如，[K-Means 算法](xref:Microsoft.ML.Trainers.KMeansTrainer)基于形心将数据放入群集中，[`KMeansModelParameters`](xref:Microsoft.ML.Trainers.KMeansModelParameters) 包含存储这些已学习的形心的属性。 若要了解详细信息，请访问 [`Microsoft.ML.Trainers` API 文档](xref:Microsoft.ML.Trainers)并查找名称中包含 `ModelParameters` 的类。 
+> 其他模型具有特定于其任务的参数。 例如，[K-Means 算法](xref:Microsoft.ML.Trainers.KMeansTrainer)基于形心将数据放入群集中，[`KMeansModelParameters`](xref:Microsoft.ML.Trainers.KMeansModelParameters) 包含存储这些已学习的形心的属性。 若要了解详细信息，请访问 [`Microsoft.ML.Trainers` API 文档](xref:Microsoft.ML.Trainers)并查找名称中包含 `ModelParameters` 的类。
 
 ## <a name="evaluate-model-quality"></a>评估模型质量
 
 若要帮助选择性能最佳的模型，必须评估其在测试数据中的性能。 使用 [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*) 方法测量经过训练的模型的各种指标。
 
 > [!NOTE]
-> `Evaluate` 方法根据执行的机器学习任务生成不同的指标。 有关更多详细信息，请访问 [`Microsoft.ML.Data` API 文档](xref:Microsoft.ML.Data)并查找名称中包含 `Metrics` 的类。 
+> `Evaluate` 方法根据执行的机器学习任务生成不同的指标。 有关更多详细信息，请访问 [`Microsoft.ML.Data` API 文档](xref:Microsoft.ML.Data)并查找名称中包含 `Metrics` 的类。
 
 ```csharp
 // Measure trained model performance
@@ -174,9 +174,9 @@ RegressionMetrics trainedModelMetrics = mlContext.Regression.Evaluate(testDataPr
 double rSquared = trainedModelMetrics.RSquared;
 ```
 
-在上一代码示例中：  
+在上一代码示例中：
 
-1. 测试数据集使用之前定义的数据准备转换进行预处理。 
+1. 测试数据集使用之前定义的数据准备转换进行预处理。
 2. 经过训练的机器学习模型用于对测试数据进行预测。
 3. 在 `Evaluate` 方法中，将测试数据集 `CurrentPrice` 列中的值与新输出预测的 `Score` 列进行比较，以计算回归模型的指标，其中之一是 R 平方，它存储在 `rSquared` 变量中。
 

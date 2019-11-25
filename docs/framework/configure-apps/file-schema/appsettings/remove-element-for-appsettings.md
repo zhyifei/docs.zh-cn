@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0695d5638589d1afe48553fe32b8d070e3938353
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a0fcdb75aa733a9d7634ec1c3b31dcbbb87e090e
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119204"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088717"
 ---
 # <a name="remove-element-for-appsettings"></a>\<删除 \<appSettings > 元素 >
 
 删除自定义应用程序设置。
 
-[ **\<configuration>** ](../configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<删除 >**
 
 ## <a name="syntax"></a>语法

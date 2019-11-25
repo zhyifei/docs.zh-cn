@@ -9,12 +9,12 @@ helpviewer_keywords:
 - configuration files [ASP.NET]
 - configuration schema [.NET Framework], Web settings
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
-ms.openlocfilehash: 71b9e46a8c2d60c853af63ee78e2ed5dbe6e98f4
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 030841330ff37cddb0c9e3e466a55a4be098e784
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699137"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088792"
 ---
 # <a name="web-settings-schema"></a>Web 设置架构
 Web 设置指定 CPU 和执行级别 ASP.NET 设置，后者应用于由 ASP.NET 承载层托管的进程范围行为。 这些设置与 ASP.NET 应用程序的 Web.config 文件中指定的应用程序域类型设置不同。  
@@ -24,11 +24,11 @@ Web 设置包含在 Aspnet.config 文件中，该文件位于各版本 .NET Fram
 `C:\Windows\Microsoft.NET\Framework\v2.0.50727\`  
   
 其他任何配置文件（如 machine.config 文件、根 Web.config 或应用程序级别的 Web.config 文件）中都不使用 Web 设置。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t[ **\<system >** ](system-web-element-web-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<applicationPool >** ](applicationpool-element-web-settings.md)  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<** ](system-web-element-web-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<applicationPool >** ](applicationpool-element-web-settings.md)
+
 |元素|描述|  
 |-------------|-----------------|  
 |[\<system.web>](system-web-element-web-settings.md)|包含 ASP.NET 承载层使用的信息。|  

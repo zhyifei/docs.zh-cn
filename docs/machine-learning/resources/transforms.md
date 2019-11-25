@@ -4,12 +4,12 @@ description: 了解在 ML.NET 中受支持的特征工程组件。
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: 25da3cceb3c9090661b34254ed240207aaf3b9d7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cb191b1688dce8f703bdabcd220eb39efe68fd48
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929256"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977238"
 ---
 # <a name="data-transformations"></a>数据转换
 
@@ -21,7 +21,7 @@ ms.locfileid: "70929256"
 
 本指南中的数据转换返回实现 [IEstimator](xref:Microsoft.ML.IEstimator%601) 接口的类。 数据转换可以链接在一起。 每个数据转换都需要获取并生成特定类型和格式的数据，链接的参考文档中规定了具体类型和格式。
 
-一些数据转换需要通过定型数据来计算参数。 例如，<xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> 转换器计算 `Fit()` 操作期间定型数据的平均值和方差，并在 `Transform()` 操作中使用这些参数。 
+一些数据转换需要通过定型数据来计算参数。 例如，<xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> 转换器计算 `Fit()` 操作期间定型数据的平均值和方差，并在 `Transform()` 操作中使用这些参数。
 
 另一些数据转换不需要定型数据。 例如，<xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*> 转换可以执行 `Transform()` 操作，而无需在 `Fit()` 操作期间看到任何定型数据。
 
@@ -62,7 +62,7 @@ ms.locfileid: "70929256"
 
 | Transform | 定义 |
 | --- | --- |
-| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | 将文本列转换为规范化 ngram 和 char-gram 计数的浮点数组 | 
+| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | 将文本列转换为规范化 ngram 和 char-gram 计数的浮点数组 |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoWords*> | 将一个或多个文本列拆分为各个字词 |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoCharactersAsKeys*> | 将一个或多个文本列拆分为关于一组主题的各个字符浮点数 |
 | <xref:Microsoft.ML.TextCatalog.NormalizeText*> | 更改大小写、删除标注字符、标点符号和数字 |

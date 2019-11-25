@@ -4,12 +4,12 @@ description: 了解收集使用情况信息以供分析的 ML.NET CLI 遥测功�
 ms.topic: conceptual
 ms.date: 09/03/2019
 ms.custom: ''
-ms.openlocfilehash: 77a24416a8008d36006c293cb174b5a8c2f516b7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: edd74b6f3d3c50d5eff012629f0b1db6b62d9021
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929281"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977267"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI 遥测收集
 
@@ -17,7 +17,7 @@ ms.locfileid: "70929281"
 
 ## <a name="how-microsoft-uses-the-data"></a>Microsoft 如何使用这些数据
 
-产品团队使用 ML.NET CLI 遥测数据来帮助了解如何改进工具。 例如，如果客户不经常使用特定机器学习任务，则产品团队可调查原因并使用调查结果来确定功能开发的优先级。 ML.NET CLI 遥测还可以帮助调试崩溃和代码异常等问题。 
+产品团队使用 ML.NET CLI 遥测数据来帮助了解如何改进工具。 例如，如果客户不经常使用特定机器学习任务，则产品团队可调查原因并使用调查结果来确定功能开发的优先级。 ML.NET CLI 遥测还可以帮助调试崩溃和代码异常等问题。
 
 尽管产品团队很感激大家提供此类见解，我们也知道并非每位用户都愿意发送此类数据。 [了解如何禁用遥测。](#opt-out-of-data-collection)
 
@@ -57,6 +57,7 @@ ML.NET CLI 遥测功能默认处于启用状态。
 数据通过 [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) 技术安全地发送到 Microsoft 服务器，提供对保留数据的受限访问权限，并在严格的安全控制下从安全的 [Azure 存储](https://azure.microsoft.com/services/storage/)系统进行使用。
 
 ### <a name="data-points-not-collected"></a>未收集的数据点
+
 遥测功能*不*收集：
 
 - 个人数据，例如用户名

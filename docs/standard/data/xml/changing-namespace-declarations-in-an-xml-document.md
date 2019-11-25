@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: a2758f40-e497-4964-8d8d-1bb68af14dcd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a6b80a885f43facf4b3d4dd1dcb56d937d4f8de
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: HT
+ms.openlocfilehash: 5457eab1f34eb3e7424d508509f5dd6a42ffb51f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188795"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976938"
 ---
 # <a name="changing-namespace-declarations-in-an-xml-document"></a>更改 XML 文档中的命名空间声明
 XmlDocument 将命名空间声明和 xmlns 属性公开为文档对象模型的一部分。 这些声明和属性存储在 XmlDocument 中，因此在可以保存文档时暂留这些属性的位置。 更改这些属性对树中现有其他节点的 Name、NamespaceURI 和 Prefix 属性没有影响。 例如，如果加载以下文档，`test` 元素包含 NamespaceURI `123.`  
@@ -35,7 +35,7 @@ doc.documentElement.RemoveAttribute("xmlns");
  同样，如果将不同的 `xmlns` 属性添加到 `doc` 元素（如下所示），`test` 元素仍包含 NamespaceURI `123`。  
   
 ```vb  
-doc.documentElement.SetAttribute("xmlns","456");  
+doc.documentElement.SetAttribute("xmlns","456")
 ```  
   
 ```csharp  

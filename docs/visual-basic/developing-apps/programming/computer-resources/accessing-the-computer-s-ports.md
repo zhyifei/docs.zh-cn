@@ -1,21 +1,23 @@
 ---
-title: 访问计算机的端口 (Visual Basic)
+title: 访问计算机的端口
 ms.date: 07/20/2015
 helpviewer_keywords:
 - serial ports
 - My.Computer.Ports object [Visual Basic], tasks
 ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
-ms.openlocfilehash: 7788e08c1257ff900b08ef6b8d26d3fe42ad9116
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e790a41fc945a395feebc63f8d26efdc51dc4fa9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589325"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329598"
 ---
 # <a name="accessing-the-computers-ports-visual-basic"></a>访问计算机的端口 (Visual Basic)
+
 `My.Computer.Ports` 对象提供用于访问计算机的串行端口的属性和方法。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [如何：显示可用的串行端口](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
  演示如何显示可用的串行端口。  
   
@@ -32,6 +34,7 @@ ms.locfileid: "65589325"
  介绍执行端口操作时使用 .NET Framework 的方式。  
   
 ## <a name="reference"></a>参考  
+
  <xref:Microsoft.VisualBasic.Devices.Ports>  
  介绍 `My.Computer.Ports` 对象及其成员。  
   
@@ -42,5 +45,6 @@ ms.locfileid: "65589325"
  描述 `OpenSerialPort` 方法，该方法将创建并打开 <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> 对象。  
   
 ## <a name="related-sections"></a>相关章节  
+
  <xref:System.IO.Ports.SerialPort>  
  描述 .NET Framework <xref:System.IO.Ports.SerialPort> 类。

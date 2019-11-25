@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-ms.openlocfilehash: 9643d14b3e94e814c492b362b9db3e37cff4ce9f
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 640e32dc7f748ecd0a999a8432512103f46862c2
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197371"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976180"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>发生错误，因为无法获得单个实例启动所需的操作系统资源
+
 应用程序未能获取所需的操作系统资源。 一些可能导致此问题的原因是：  
   
 - 应用程序不具备创建命名操作系统对象的权限。  

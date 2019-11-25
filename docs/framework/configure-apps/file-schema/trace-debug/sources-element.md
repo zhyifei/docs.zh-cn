@@ -9,20 +9,20 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: 0ca35d9be5e1eaf36a2c9cae99efc2736ef3403d
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: a903d009f2056e65414c1792494fbbd20e224413
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699208"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088818"
 ---
-# <a name="sources-element"></a>\<sources > 元素
+# <a name="sources-element"></a>\<源 > 元素
 指定启动跟踪消息的跟踪源。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t **\<sources >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<的 >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<源 >**
+
 ## <a name="syntax"></a>语法  
   
 ```xml  
@@ -54,7 +54,7 @@ ms.locfileid: "71699208"
  此元素可在计算机配置文件（Machine.config）和应用程序配置文件中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 `<sources>` 元素将跟踪源添加 @no__t，并设置名为 `sourceSwitch` 的源开关的级别。 添加了控制台跟踪侦听器，用于将跟踪信息写入控制台。  
+ 下面的示例演示如何使用 `<sources>` 元素将跟踪源添加 `mySource` 并设置名为 `sourceSwitch`的源开关的级别。 添加了控制台跟踪侦听器，用于将跟踪信息写入控制台。  
   
 ```xml  
 <configuration>  

@@ -1,18 +1,19 @@
 ---
-title: 如何：在 Visual Basic 中记录异常
+title: 如何：记录异常
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions, logging
 - exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
-ms.openlocfilehash: 53bf93a326123ddb1e26ef5964fa057148505116
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fe6949d727fae0c230ce7421b32fdaf2a498edbc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307218"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352085"
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>如何：在 Visual Basic 中记录异常
+
 可以使用 `My.Application.Log` 和 `My.Log` 对象来记录有关应用程序中所发生异常的信息。 这些示例演示如何使用 `My.Application.Log.WriteException` 方法来记录显式捕获的异常和未处理的异常。  
   
  若要记录跟踪信息，请使用 `My.Application.Log.WriteEntry` 方法。 有关详细信息，请参阅<xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>。  
@@ -43,7 +44,7 @@ ms.locfileid: "59307218"
   
 ### <a name="to-log-an-unhandled-exception"></a>记录未处理的异常  
   
-1. 在 “解决方案资源管理器”中选择一个项目。 在 **“项目”** 菜单上，选择 **“属性”**。  
+1. 在 “解决方案资源管理器”中选择一个项目。  在 **“项目”** 菜单上，选择 **“属性”** 。  
   
 2. 单击“应用程序”  选项卡。  
   
@@ -51,9 +52,9 @@ ms.locfileid: "59307218"
   
      此时将打开 ApplicationEvents.vb 文件。  
   
-4. 在“代码编辑器”中打开 ApplicationEvents.vb 文件。 在“常规”  菜单上，选择“MyApplication 事件”。  
+4. 在“代码编辑器”中打开 ApplicationEvents.vb 文件。 在“常规”  菜单上，选择“MyApplication 事件”。    
   
-5. 在“声明”菜单上，选择“UnhandledException”。  
+5. 在“声明”  菜单上，选择“UnhandledException”  。  
   
      在主应用程序运行之前，应用程序将引发 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> 事件。  
   

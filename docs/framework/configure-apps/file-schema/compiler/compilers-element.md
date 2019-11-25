@@ -9,20 +9,20 @@ helpviewer_keywords:
 - <compilers> element
 - compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
-ms.openlocfilehash: 5232c5bd2d4fad8104d156bfa86141ceb7f0dd93
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: b09c2a1f67974a67a3f9d58af7cb8cf66a197026
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167693"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088698"
 ---
 # <a name="compilers-element"></a>\<编译器 > 元素
 编译器配置元素的容器；包含零个或多个 [\<compiler>](compiler-element.md) 元素。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<system.object >** ](system-codedom-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<编译器 >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+\<&nbsp;&nbsp;[ **>** ](system-codedom-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<编译器 >**
+
 ## <a name="syntax"></a>语法  
   
 ```xml  
@@ -51,9 +51,9 @@ ms.locfileid: "70167693"
 |[\<system.object > 元素](system-codedom-element.md)|指定可用语言提供程序的编译器配置设置。|  
   
 ## <a name="remarks"></a>备注  
- 编译器 > 元素包含计算机上的语言提供程序的编译器配置设置。 [ \<](compilers-element.md) 每个[ \<编译器 >](compiler-element.md)元素指定特定语言提供程序的编译器配置特性。  
+ [\<编译器 >](compilers-element.md)元素包含计算机上的语言提供程序的编译器配置设置。 每个[\<编译器 >](compiler-element.md)元素指定特定语言提供程序的编译器配置特性。  
   
- .NET Framework 在计算机配置文件 (machine.config) 中定义初始编译器和语言提供程序设置。 开发人员和编译器供应商可以添加新 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 实现的配置设置。 使用 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 方法，以编程方式枚举计算机上的语言提供程序和编译器配置设置。  
+ .NET Framework 在计算机配置文件（machine.config）中定义初始编译器和语言提供程序设置。 开发人员和编译器供应商可以添加新 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 实现的配置设置。 使用 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 方法，以编程方式枚举计算机上的语言提供程序和编译器配置设置。  
   
 ## <a name="configuration-file"></a>配置文件  
  此元素可在计算机配置文件和应用程序配置文件中使用。  

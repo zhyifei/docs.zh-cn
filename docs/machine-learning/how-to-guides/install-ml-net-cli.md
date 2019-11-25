@@ -3,12 +3,12 @@ title: 如何安装 ML.NET 命令行接口 (CLI) 工具
 description: ML.NET 命令行接口 (CLI) 工具的概述和安装。
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: baced9bbcc72153458d42d4b6d8206921bf187b8
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: feeb4832b5bbd39f28ac2c6f6caa40d60b4f3aa9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118006"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977081"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>如何安装 ML.NET 命令行接口 (CLI) 工具
 
@@ -29,7 +29,7 @@ ML.NET CLI（命令行接口）是可以在任何命令提示符（Windows、Mac
 
 ## <a name="install"></a>安装
 
-ML.NET CLI 的安装方式与任何其他 dotnet 全局工具一样。 使用 `dotnet tool install` .NET Core CLI 命令。 
+ML.NET CLI 的安装方式与任何其他 dotnet 全局工具一样。 使用 `dotnet tool install` .NET Core CLI 命令。
 
 以下示例显示如何在默认 NuGet 源位置安装 ML.NET CLI：
 
@@ -112,7 +112,7 @@ Tab 自动补全工作原理的示例如以下动画所示：
 
     ```console
     echo $profile
-    ``` 
+    ```
 
 （对于其他 shell，[查找](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22)或创建[问题](https://github.com/dotnet/System.CommandLine/issues)。）
 
@@ -136,5 +136,5 @@ ML.NET CLI 可安装在默认目录或特定位置。 默认目录为：
 
 - [“ML.NET CLI 工具入门”教程](../tutorials/mlnet-cli.md)
 - [如何使用 ML.NET CLI 工具自动训练模型](../automate-training-with-cli.md)
-- [ML.NET CLI auto-train 命令参考指南](../reference/ml-net-cli-reference.md) 
+- [ML.NET CLI auto-train 命令参考指南](../reference/ml-net-cli-reference.md)
 - [ML.NET CLI 中的遥测](../resources/ml-net-cli-telemetry.md)

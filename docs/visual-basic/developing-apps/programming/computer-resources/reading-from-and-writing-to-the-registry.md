@@ -1,24 +1,26 @@
 ---
-title: 读取和写入注册表 (Visual Basic)
+title: 读取和写入注册表
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Registry object, tasks
 - registry [Visual Basic], writing to
 - registry [Visual Basic], reading
 ms.assetid: a13da106-185b-41d7-b23c-416da65e21e4
-ms.openlocfilehash: fcc13d82a2b27221c13f9277585c21196b47003d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 89db9ef9db4235c069d6239d32e4f8679fbabf0b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591476"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349754"
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>读取和写入注册表 (Visual Basic)
+
 本主题介绍与注册表相关的任务和概念性主题。  
   
  在 Visual Basic 中编程时，可以通过 Visual Basic 提供的函数或者通过 .NET Framework 的注册表类访问注册表。 注册表托管有关操作系统的信息，以及有关计算机上托管的应用程序的信息。 对注册表进行操作时，如果允许对系统资源或受保护的信息进行不适当的访问，则可能会降低安全性。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [如何：创建注册表项并设置其值](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
  介绍如何使用 `My.Computer.Registry` 对象的 `CreateSubKey` 和 `SetValue` 方法创建注册表项并设置其值。  
   
@@ -35,6 +37,7 @@ ms.locfileid: "65591476"
  讨论与注册表相关的安全问题。  
   
 ## <a name="related-sections"></a>相关章节  
+
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
  列出并说明 `My.Computer.Registry` 对象的成员。  
   

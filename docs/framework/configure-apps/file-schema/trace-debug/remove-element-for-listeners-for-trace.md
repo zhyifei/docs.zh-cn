@@ -1,5 +1,5 @@
 ---
-title: <trace> 的 @no__t <listeners> 元素
+title: <trace> 的 <listeners> 的 <remove> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: 56d1e56514aed98d5f3b9f7363e461af6ac68a8c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: f06973ec30d5061e4a200d6bf7e68adcf6302018
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697221"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088837"
 ---
-# <a name="remove-element-for-listeners-for-trace"></a>\<remove > 元素，用于 2trace @no__t 的 \<listeners >
+# <a name="remove-element-for-listeners-for-trace"></a>\<删除 \<跟踪的 \<侦听器 > > 元素 >
 从**侦听器**集合中删除侦听器。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<trace >** ](trace-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<listeners >** ](listeners-element-for-trace.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<remove >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<的 >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<跟踪 >** ](trace-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**侦听器**](listeners-element-for-trace.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<删除 >**
+
 ## <a name="syntax"></a>语法  
   
 ```xml  
@@ -53,7 +53,7 @@ ms.locfileid: "71697221"
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
-> 从 @no__t 集合中删除 @no__t 0 会改变 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>、<xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>、@no__t、@no__t 和方法的行为。 调用 @no__t 0 或 @no__t 方法通常会导致显示消息框，但如果 <xref:System.Diagnostics.DefaultTraceListener> 不在 @no__t 集合中，则不会显示消息框。  
+> 从 `Listeners` 集合中删除 <xref:System.Diagnostics.DefaultTraceListener> 会改变 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>、<xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>和 <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> 方法的行为。 通常调用 `Assert` 或 `Fail` 方法会导致显示消息框，但如果 <xref:System.Diagnostics.DefaultTraceListener> 不在 `Listeners` 集合中，则不会显示消息框。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何从跟踪**侦听器**集合中删除默认的跟踪侦听器。  

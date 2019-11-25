@@ -8,21 +8,21 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: 95ad1880cbb832a17311e7e63e9203f53257f65f
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: b7333016fea2d46285d3c98181c0ca4904c376f8
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697717"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089129"
 ---
 # <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager > 元素（网络设置）
 配置与网络资源的连接。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<settings >** ](settings-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<servicePointManager >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+\<&nbsp;&nbsp;[ **> 的**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**设置 >** ](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<servicePointManager >**
+
 ## <a name="syntax"></a>语法  
   
 ```xml  
@@ -42,14 +42,14 @@ ms.locfileid: "71697717"
   
 ### <a name="attributes"></a>特性  
   
-|**特性**|**说明**|  
+|**特性**|**描述**|  
 |-------------------|---------------------|  
 |`checkCertificateName`|指定在使用证书之前，系统是否应验证证书上的名称是否与服务器主机名匹配。 默认值为 `true`。|  
 |`checkCertificateRevocationList`|指定在使用证书之前系统是否应检查证书是否已吊销。 默认值为 `false`。|  
 |`dnsRefreshTimeout`|指定域名服务（DNS）解析与 DNS 轮循机制选项一起缓存的时间长度（以毫秒为单位）。 默认值是 120,000 毫秒（2 分钟）。|  
 |`enableDnsRoundRobin`|指定具有多个 Internet 协议（IP）地址的主机名的 DNS 解析是返回所有地址，还是只返回第一个地址。 默认值为 `false`。|  
-|`encryptionPolicy`|指定应用到 <xref:System.Net.ServicePointManager> 实例上的 SSL/TLS 会话的加密策略。 可能的值与 <xref:System.Net.Security.EncryptionPolicy> 枚举的值等效。 当加密策略设置为 `NoEncryption` 时，需要使用 <xref:System.Security.Authentication.CipherAlgorithmType.Null>。 默认值为 `RequireEncryption`。|  
-|`expect100Continue`|指定 POST 方法是否应接收来自服务器 @no__t 0 的响应。 默认值为 `true`。|  
+|`encryptionPolicy`|指定应用于 <xref:System.Net.ServicePointManager> 实例上的 SSL/TLS 会话的加密策略。 可能的值与 <xref:System.Net.Security.EncryptionPolicy> 枚举的值等效。 当加密策略设置为 `NoEncryption`时，需要使用 <xref:System.Security.Authentication.CipherAlgorithmType.Null>。 默认值为 `RequireEncryption`。|  
+|`expect100Continue`|指定 POST 方法是否应该接收来自服务器的 `100-continue` 响应。 默认值为 `true`。|  
 |`useNagleAlgorithm`|指定由服务点管理器控制的连接是否使用 Nagle 算法。 默认值为 `true`。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -57,7 +57,7 @@ ms.locfileid: "71697717"
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[设置](settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
   

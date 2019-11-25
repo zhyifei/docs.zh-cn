@@ -2,12 +2,12 @@
 title: 了解 WebRequest 问题和异常
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-ms.openlocfilehash: c5712467cdebb854d09cb55c29878cb8b553f271
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: af859d9ad8ac69bfe636384832f0fb62e0771b48
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047091"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448400"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>了解 WebRequest 问题和异常
 <xref:System.Net.WebRequest> 及其派生类（<xref:System.Net.HttpWebRequest>、<xref:System.Net.FtpWebRequest> 和 <xref:System.Net.FileWebRequest>）引发异常以指示异常状态。 有时这些问题的解决方法并不明显。  
@@ -26,7 +26,7 @@ ms.locfileid: "71047091"
 |<xref:System.Net.WebExceptionStatus.ConnectionClosed>|应用程序尝试写入已关闭的套接字。|客户端或服务器重载。 请减小负载。<br /><br /> 增大 <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 设置。<br /><br /> 请参阅 <https://support.microsoft.com/?id=821268> 以修改 Web 服务性能设置。|  
 |<xref:System.Net.WebExceptionStatus.MessageLengthLimitExceeded>|已超出对消息长度设置的限制 (<xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>)。|增大 <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A> 属性的值。|  
 |<xref:System.Net.WebExceptionStatus.ProxyNameResolutionFailure>|域名服务无法解析代理主机名。|正确配置代理。 请参阅 <https://support.microsoft.com/?id=318140>。<br /><br /> 将 <xref:System.Net.HttpWebRequest.Proxy%2A> 属性设置为 `null`，强制 <xref:System.Net.HttpWebRequest> 不使用任何代理。|  
-|<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|来自服务器的响应不是有效的 HTTP 响应。 .NET Framework 检测到服务器响应不符合 HTTP 1.1 RFC 时，会出现此问题。 如果响应包含错误标头或标头分隔符时，可能会出现此问题。RFC 2616 定义 HTTP 1.1 和来自服务器响应的有效格式。 有关详细信息，请参阅 [Internet 工程任务组 (IETF)](https://www.ietf.org/)网站上的 [RFC 2616 - 超文本传输协议 -- HTTP/1.1](https://go.microsoft.com/fwlink/?LinkID=147388)。|获取事务网络跟踪并检查响应中的标头。<br /><br /> 如果应用程序需要服务器响应，而无需解析（这可能是一个安全问题），请在配置文件中将 `useUnsafeHeaderParsing` 设置为 `true`。 请参阅 [\<httpWebRequest> 元素（网络设置）](../configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)。|  
+|<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|来自服务器的响应不是有效的 HTTP 响应。 .NET Framework 检测到服务器响应不符合 HTTP 1.1 RFC 时，会出现此问题。 如果响应包含错误标头或标头分隔符时，可能会出现此问题。RFC 2616 定义 HTTP 1.1 和来自服务器响应的有效格式。 有关详细信息，请参阅 [Internet 工程任务组 (IETF)](https://www.ietf.org/)网站上的 [RFC 2616 - 超文本传输协议 -- HTTP/1.1](https://tools.ietf.org/html/rfc2616)。|获取事务网络跟踪并检查响应中的标头。<br /><br /> 如果应用程序需要服务器响应，而无需解析（这可能是一个安全问题），请在配置文件中将 `useUnsafeHeaderParsing` 设置为 `true`。 请参阅 [\<httpWebRequest> 元素（网络设置）](../configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)。|  
   
 ## <a name="see-also"></a>请参阅
 

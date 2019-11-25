@@ -1,18 +1,18 @@
 ---
-title: 如何：注册和配置服务名字对象
+title: 如何：注册和配置服务标记
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 547e507b4a1115de81532263c34964cd20f15d4e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 47e11ff2bc5b1c3eca152ba1fa429b5785c2f01b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972147"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976129"
 ---
-# <a name="how-to-register-and-configure-a-service-moniker"></a>如何：注册和配置服务名字对象
+# <a name="how-to-register-and-configure-a-service-moniker"></a>如何：注册和配置服务标记
 在使用具有类型协定的 COM 应用程序中使用 Windows Communication Foundation （WCF）服务名字对象之前，必须使用 COM 注册所需的属性化类型，并使用所需的绑定配置 COM 应用程序和名字对象configuration.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>向 COM 注册所需的属性化类型  
@@ -67,7 +67,7 @@ ms.locfileid: "70972147"
   
      在将引用添加到包含 `IMathService` 类型的程序集后，你可以使用 Visual Basic 6.0 应用程序中的这些标记字符串中的任何一个，如下面的示例代码中所示。  
   
-    ```vb  
+    ```vb
     Dim MathProxy As IMathService  
     Dim result As Integer  
   
@@ -85,7 +85,7 @@ ms.locfileid: "70972147"
     > 你可以在 C#、C++ 或其他任何 .NET 语言的应用程序中使用类似的代码。  
   
     > [!NOTE]
-    > :如果标记格式不正确，或者服务不可用，则对的调用`GetObject`将返回 "语法无效" 错误。 如果您收到此错误，请确保所使用的标记正确无误且服务可用。  
+    > ：如果标记格式不正确，或者服务不可用，则对 `GetObject` 的调用会返回一个“语法无效”错误。 如果您收到此错误，请确保所使用的标记正确无误且服务可用。  
   
      尽管此主题重点介绍通过 VB 6.0 代码使用服务标记，你还是可以通过其他语言使用服务标记。 当通过 C++ 代码使用标记时，应使用“no_namespace named_guids raw_interfaces_only”导入 Svcutil.exe 生成的程序集，如下面的代码中所示。  
   

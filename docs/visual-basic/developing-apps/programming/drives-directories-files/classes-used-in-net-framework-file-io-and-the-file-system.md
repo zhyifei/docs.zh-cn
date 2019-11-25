@@ -1,22 +1,24 @@
 ---
-title: 在 .NET Framework 文件 I/O 和文件系统中使用的类 (Visual Basic)
+title: 在 .NET Framework 文件 I/O 和文件系统中使用的类
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: f9d898756b6b17ae69d1af7dd747c20a26d88417
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: fe70f8fb655579049bb36fc324d04530259d25f2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348005"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348932"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>在 .NET Framework 文件 I/O 和文件系统中使用的类 (Visual Basic)
+
 下列各表列出了常用于 .NET Framework 文件 I/O 的类，将这些类分为文件 I/O 类、用于创建流的类和用于读取和写入流的类。  
   
 要获取更完整的列表，请参阅[类库概述](../../../../standard/class-library-overview.md)。  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>用于文件、驱动器和目录的基本 I/O 类  
+
  下表列出并说明了用于文件 I/O 的主类。  
   
 |类|说明|  
@@ -34,6 +36,7 @@ ms.locfileid: "67348005"
 |<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>|通过定义 <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>、<xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>、<xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> 和 <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> 权限来控制对文件和文件夹的访问。|  
   
 ## <a name="classes-used-to-create-streams"></a>用于创建流的类  
+
  下表列出并说明了用于创建流的主类。  
   
 |类|说明|  
@@ -45,6 +48,7 @@ ms.locfileid: "67348005"
 |<xref:System.Security.Cryptography.CryptoStream?displayProperty=nameWithType>|定义将数据流链接到加密转换的流。|  
   
 ## <a name="classes-used-to-read-from-and-write-to-streams"></a>用于读取和写入到流的类  
+
  下表显示使用流读取和写入到文件的特定类。  
   
 |**类**|**说明**|  

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 417f02ce9e8ee88edeb2a4dab88111cae39a8a4b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 639a3a01c9c4da13e0212bd0230acbd2af170b25
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771869"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428519"
 ---
 # <a name="enum-c-reference"></a>enum（C# 参考）
 
@@ -35,7 +35,7 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 在此枚举中，强制元素的序列从 `1` 开始，而不是 `0`。 但建议包括一个值为 0 的常量。 有关详细信息，请参阅[枚举类型](../../programming-guide/enumeration-types.md)。
 
-每个枚举类型都有一个可以为任意[整型数值类型](../builtin-types/integral-numeric-types.md)的基础类型。 [char](char.md) 类型不能为枚举的基础类型。 枚举元素的默认基础类型是 [int](../builtin-types/integral-numeric-types.md)。若要声明另一整型的枚举（如 [byte](../builtin-types/integral-numeric-types.md)），则请在后跟该类型的标识符后使用冒号，如以下示例所示。
+每个枚举类型都有一个可以为任意[整型数值类型](../builtin-types/integral-numeric-types.md)的基础类型。 [char](../builtin-types/char.md) 类型不能为枚举的基础类型。 枚举元素的默认基础类型是 [int](../builtin-types/integral-numeric-types.md)。若要声明另一整型的枚举（如 [byte](../builtin-types/integral-numeric-types.md)），则请在后跟该类型的标识符后使用冒号，如以下示例所示。
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};

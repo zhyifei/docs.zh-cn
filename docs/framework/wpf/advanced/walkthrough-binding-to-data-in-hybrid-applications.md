@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 99f0e621c7dd56c0a26b51b4725f9fb96ab3cbf9
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 92d267ee9e87e9d204fe76172ca7e0fe33cf1a1b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197913"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976582"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>演练：绑定到混合应用程序中的数据
 
@@ -59,7 +59,7 @@ ms.locfileid: "73197913"
 
     - System.Windows.Forms
 
-3. 在 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]中打开 Mainwindow.xaml。
+3. 在 WPF 设计器中打开 Mainwindow.xaml。
 
 4. 在 <xref:System.Windows.Window> 元素中，添加以下 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 命名空间映射。
 

@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: f43cd61fbcb3c1c872961476449822c574f76cff
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: b55b2f9266477a0bb12c39840c9f2108a5c0f0c4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835283"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283923"
 ---
 # <a name="net-architectural-components"></a>.NET 体系结构组件
 
@@ -110,6 +110,6 @@ C# 语言和公共语言基础结构 (CLI) 规范通过 [Ecma International®](h
 - [.NET Standard](net-standard.md)
 - [.NET Core 指南](../core/index.md)
 - [.NET Framework 指南](../framework/index.md)
-- [C# 指南](../csharp/index.md)
+- [C# 指南](../csharp/index.yml)
 - [F# 指南](../fsharp/index.md)
 - [VB.NET 指南](../visual-basic/index.md)

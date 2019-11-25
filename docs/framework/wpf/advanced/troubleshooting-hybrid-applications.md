@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: 541d71efa66d14855704797892cac68799215159
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: f3cddcd6cd90e7e43ea6af67725e709673f7650f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919759"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978343"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>混合应用程序疑难解答
 <a name="introduction"></a>本主题列出了在创作同时使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]技术的混合应用程序时可能发生的一些常见问题。  
@@ -96,7 +96,7 @@ ms.locfileid: "72919759"
   
 <a name="wpf_designer"></a>   
 ## <a name="wpf-designer"></a>WPF 设计器  
- 可以使用 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 设计你的 WPF 内容。 以下部分列出了在使用 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] 创作混合应用程序时可能发生的一些常见问题。  
+ 可以通过使用 Visual Studio 的 WPF 设计器来设计 WPF 内容。 以下部分列出了用 WPF 设计器创作混合应用程序时可能出现的一些常见问题。  
   
 ### <a name="backcolortransparent-is-ignored-at-design-time"></a>在设计时忽略 BackColorTransparent  
  在设计时，<xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> 属性可能不会按预期方式工作。  

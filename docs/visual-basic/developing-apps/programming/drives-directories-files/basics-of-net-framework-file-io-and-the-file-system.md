@@ -1,5 +1,5 @@
 ---
-title: .NET Framework 文件 I/O 和文件系统基础知识 (Visual Basic)
+title: .NET Framework 文件 I/O 和文件系统基础知识
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file access, file I/O in Visual Basic
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 3ff305a6b22918681561ed7262a7377dbdf7aadc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5d60d0089d042c0be343c741c26de0b4b7778d6d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591513"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348936"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 文件 I/O 和文件系统基础知识 (Visual Basic)
 
@@ -84,7 +84,7 @@ ms.locfileid: "65591513"
 
 ## <a name="file-permissions"></a>文件权限
 
-可使用 <xref:System.Security.Permissions.FileIOPermission> 类控制对文件和目录的访问权限。 这对使用 Web 窗体的开发人员来说尤其重要，这些窗体默认在名为 ASPNET 的特殊本地用户帐户上下文中运行，该帐户作为 ASP.NET 和 .NET Framework 安装的一部分创建。 此类应用程序请求对资源的访问权限时，ASPNET 用户帐户的权限有限，这可能会阻止用户执行从 Web 应用程序写入到文件等操作。 有关更多信息，请参见<xref:System.Security.Permissions.FileIOPermission>。
+可使用 <xref:System.Security.Permissions.FileIOPermission> 类控制对文件和目录的访问权限。 这对使用 Web 窗体的开发人员来说尤其重要，这些窗体默认在名为 ASPNET 的特殊本地用户帐户上下文中运行，该帐户作为 ASP.NET 和 .NET Framework 安装的一部分创建。 此类应用程序请求对资源的访问权限时，ASPNET 用户帐户的权限有限，这可能会阻止用户执行从 Web 应用程序写入到文件等操作。 有关详细信息，请参阅 <xref:System.Security.Permissions.FileIOPermission>。
 
 ## <a name="isolated-file-storage"></a>独立的文件存储
 

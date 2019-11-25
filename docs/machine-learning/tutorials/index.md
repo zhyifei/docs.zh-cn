@@ -3,20 +3,20 @@ title: ML.NET 教程
 description: 浏览以下 ML.NET 教程，了解如何生成自定义 AI 解决方案并将其集成到 .NET 应用程序。
 ms.custom: seodec18
 ms.date: 07/08/2019
-ms.openlocfilehash: 6d5b622194cbaa20ed4e7283e6f1ea66f16a7b47
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bf59efb4118d9d4fac24413d7568df412a0e9475
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054015"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977175"
 ---
-# <a name="mlnet-tutorials"></a>ML.NET 教程 
+# <a name="mlnet-tutorials"></a>ML.NET 教程
 
 学习以下教程，可以了解如何使用 [ML.NET](../index.yml) 生成自定义机器学习解决方案并将其集成到 .NET 应用程序：
 
 - [情绪分析](sentiment-analysis.md)：演示如何使用 ML.NET 应用二元分类任务  。
 - [GitHub 问题分类](github-issue-classification.md)：演示如何使用 ML.NET 应用多类分类  任务。
-- [价格预测器](taxi-fare.md)：演示如何使用 ML.NET 应用回归任务  。
+- [价格预测器](predict-prices.md)：演示如何使用 ML.NET 应用回归任务  。
 - [Iris 聚类分析](iris-clustering.md)：演示如何使用 ML.NET 应用聚类分析任务  。
 - [建议](movie-recommendation.md)：根据以前的用户评级生成影片推荐 
 - [图像分类](image-classification.md)：展示了如何将现有 Tensorflow 模型重新训练为使用 ML.NET 创建自定义图像分类器。

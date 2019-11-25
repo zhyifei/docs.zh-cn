@@ -8,22 +8,22 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: eed2a4d06906d2928be62aed20a75484c3eea946
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4564cf59e3b6cfbdcd9dca06cd0f966d524834de
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699770"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088551"
 ---
-# <a name="oidentry-element"></a>\<oidEntry > 元素
+# <a name="oidentry-element"></a>\<y > 元素
 将 ASN.1 对象标识符 (OID) 映射到友好名称。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<oidMap >** ](oidmap-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 **\<oidEntry >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<g s >** ](cryptographysettings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<oidMap >** ](oidmap-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<y >**
+
 ## <a name="syntax"></a>语法  
   
 ```xml  
@@ -38,7 +38,7 @@ ms.locfileid: "71699770"
 |特性|描述|  
 |---------------|-----------------|  
 |**OID**|必需的特性。<br /><br /> 指定与您的类实现的算法相对应的第1个 OID。|  
-|**name**|必需的特性。<br /><br /> 指定[\<nameEntry >](nameentry-element.md)标记中**name**属性的值。|  
+|**name**|必需的特性。<br /><br /> 指定[\<y >](nameentry-element.md)标记中**name**属性的值。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -49,14 +49,14 @@ ms.locfileid: "71699770"
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`cryptographySettings`|包含加密设置。|  
-|`mscorlib`|`cryptographySettings`包含元素。|  
+|`mscorlib`|包含 `cryptographySettings` 元素。|  
 |`oidMap`|包含与类的 ASN 对象标识符（OID）映射。|  
   
 ## <a name="remarks"></a>备注  
  ASN. 1 对象标识符以某些加密格式标识算法。 将对象标识符映射到要标识的算法的友好名称。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 **\<oidEntry >** 元素将 160 RIPEMD 哈希算法的对象标识符映射到该哈希算法的实现。  
+ 下面的示例演示如何使用 **\<y >** 元素将 160 RIPEMD 哈希算法的对象标识符映射到该哈希算法的实现。  
   
 ```xml  
 <configuration>  
@@ -82,6 +82,6 @@ ms.locfileid: "71699770"
 
 - [配置文件架构](../index.md)
 - [加密设置架构](index.md)
-- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [加密服务](../../../../standard/security/cryptographic-services.md)
 - [配置加密类](../../configure-cryptography-classes.md)
 - [将对象标识符映射到加密算法](../../map-object-identifiers-to-cryptography-algorithms.md)

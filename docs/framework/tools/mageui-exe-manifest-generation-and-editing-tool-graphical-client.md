@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 2502d542513ace1173b6c33a2399ce010620b888
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 99f522181232d16b9913ba3c55f34274b75d8966
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044454"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449411"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe（图形化客户端中的清单生成和编辑工具）
 
@@ -66,7 +66,7 @@ ms.locfileid: "71044454"
 |**新建**|生成一个无法通过证书颁发机构 (CA) 验证的新 .pfx。 要详细了解用于对 ClickOnce 部署进行签名的证书类型，请参阅[受信任的应用程序部署概述](/visualstudio/deployment/trusted-application-deployment-overview)。|  
 |**密码**|提供一个可以键入在使用此证书进行签名时所需要的密码的区域。 如果不适用，则可以保留为空白。|  
 |**使用存储的证书签名**|显示计算机的证书存储区中存储的可选数字证书的列表。|  
-|**时间戳 URI**|显示数字时间戳服务的统一资源定位器 (URI)。 如果数字证书在你部署应用程序的下一个版本之前过期，则为清单加盖时间戳可以让你不必对清单进行重新签名。 有关详细信息，请参阅 [Windows 根证书程序成员](https://go.microsoft.com/fwlink/?LinkId=159000)以及 [ClickOnce 和 Authenticode](/visualstudio/deployment/clickonce-and-authenticode)。|  
+|**时间戳 URI**|显示数字时间戳服务的统一资源定位器 (URI)。 如果数字证书在你部署应用程序的下一个版本之前过期，则为清单加盖时间戳可以让你不必对清单进行重新签名。 有关详细信息，请参阅 [Windows 根证书程序成员](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11))以及 [ClickOnce 和 Authenticode](/visualstudio/deployment/clickonce-and-authenticode)。|  
 |**不签名**|允许你保存清单，而无需添加数字证书签名。|  
   
 ## <a name="tab-and-panel-descriptions"></a>选项卡和面板的说明  

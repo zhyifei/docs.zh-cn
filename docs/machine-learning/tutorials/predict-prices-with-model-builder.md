@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 10/08/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a851bf3c405d15243bc1457b8c3dff815d072ebe
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: bd6acd83df4d2d5f19d30da847212d60b1576199
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180285"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977360"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>教程：将回归与模型生成器配合使用以预测价格
 
@@ -83,8 +83,8 @@ ms.locfileid: "72180285"
 
 1. 在模型生成器工具的数据步骤中，选择数据源下拉列表中的“文件”  。
 1. 选择“选择文件”文本框旁边的按钮，并使用文件资源管理器浏览到“数据”目录中的“taxi-fare-test.csv”，然后选择该文件   
-1. 在“要预测的列(标签)”下拉列表中选择“fare_amount”，并导航到模型生成器工具的训练步骤   。
-1. 展开“输入列(特征)”下拉列表，取消选中 trip_time_in_secs 列，以在训练时排除，不其作为特征。  
+1. 在“要预测的列(标签)”下拉列表中选择“fare_amount”   。
+1. 展开“输入列(特征)”下拉列表，取消选中 trip_time_in_secs 列，以在训练时排除，不其作为特征。    导航到模型生成器工具的训练步骤。
 
 ## <a name="train-the-model"></a>定型模型
 
@@ -126,7 +126,7 @@ ms.locfileid: "72180285"
     using TaxiFarePredictionML.Model;
     ```
 
-1. 要使用模型对新数据进行预测，请在应用程序的 `Main` 方法内创建 `ModelInput` 类的新实例。 请注意，费用金额不是输入的一部分。 这是因为模型将为它生成预测。 
+1. 要使用模型对新数据进行预测，请在应用程序的 `Main` 方法内创建 `ModelInput` 类的新实例。 请注意，费用金额不是输入的一部分。 这是因为模型将为它生成预测。
 
     ```csharp
     // Create sample data
@@ -140,7 +140,7 @@ ms.locfileid: "72180285"
     };
     ```
 
-1. 使用 `ConsumeModel` 类中的 `Predict` 方法。 `Predict` 方法将加载经过训练的模型，为模型创建 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 并使用它对新数据进行预测。 
+1. 使用 `ConsumeModel` 类中的 `Predict` 方法。 `Predict` 方法将加载经过训练的模型，为模型创建 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 并使用它对新数据进行预测。
 
     ```csharp
     // Make prediction
@@ -180,4 +180,4 @@ ms.locfileid: "72180285"
 - [模型生成器应用场景](../automate-training-with-model-builder.md#scenarios)
 - [回归](../resources/glossary.md#regression)
 - [回归模型指标](../resources/metrics.md#metrics-for-regression)
-- [NYC TLC 出租车行程数据集](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
+- [NYC TLC 出租车行程数据集](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)

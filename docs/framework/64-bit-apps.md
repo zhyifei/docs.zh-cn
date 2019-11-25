@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 64-bit applications [C++]
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
-ms.openlocfilehash: 3ef6d02023570f5ec4013b070317c272a94b8212
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 90e022d5643dc49ccc5b78d071b3b473c92f0670
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120099"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429666"
 ---
 # <a name="64-bit-applications"></a>64 位应用程序
 编译应用程序时，您可以将其指定为在 Windows 64 位操作系统上作为本机应用程序或在 WOW64（Windows 64 位下的 Windows 32 位）下运行。 WOW64 是一种兼容性环境，它使 32 位应用能够在 64 位系统上运行。 WOW64 包括在所有 64 位版本的 Windows 操作系统中。  
@@ -41,11 +41,7 @@ ms.locfileid: "73120099"
 ## <a name="general-64-bit-programming-information"></a>常规 64 位编程信息  
  有关 64 位编程的常规信息，请参阅以下文档：  
   
-- 有关 64 位 Windows 计算机上的 64 位版 CLR 的详细信息，请参阅 MSDN 网站上的 [.NET Framework 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=37079)。  
-  
-- 在 Windows SDK 文档中，请参阅 [64 位 Windows 编程指南](https://go.microsoft.com/fwlink/p/?LinkId=253512)。  
-  
-- 有关如何下载 64 位版 CLR 的信息，请参阅 MSDN 网站上的 [.NET Framework 开发人员中心下载](https://go.microsoft.com/fwlink/?LinkId=50953)。  
+- 在 Windows SDK 文档中，请参阅 [64 位 Windows 编程指南](/windows/win32/winprog64/programming-guide-for-64-bit-windows)。  
   
 - 有关 Visual Studio 对创建 64 位应用程序提供的支持的信息，请参阅 [Visual Studio IDE 64 位支持](/visualstudio/ide/visual-studio-ide-64-bit-support)。  
   

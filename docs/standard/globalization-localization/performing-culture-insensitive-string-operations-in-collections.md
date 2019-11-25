@@ -15,12 +15,12 @@ helpviewer_keywords:
 - SortedList class, culture-insensitive string operations
 - culture parameter
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
-ms.openlocfilehash: 5bd6e49f23ca5b694664393f3eb18cc72ada7bdd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 13a9f4896a37be4297f2a1a11435b85ade381c66
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120818"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353673"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>在集合中执行不区分区域性的字符串操作
 
@@ -78,7 +78,6 @@ internalHashtable = new Hashtable(new CaseInsensitiveHashCodeProvider
 `SortedList` 表示键值对的集合，这些键值对按键排序，并可按照键和索引进行访问。 在使用以字符串作为键的 `SortedList` 时，排序和查找会受 `Thread.CurrentCulture` 属性的影响。 若要从 `SortedList` 获取不区分区域性的行为，请使用一个接受 `comparer` 参数的构造函数来创建 `SortedList`。 `comparer` 参数指定要在比较键时使用的 <xref:System.Collections.IComparer> 实现。 对于该参数，请指定使用 `CultureInfo.InvariantCulture` 来比较键的自定义比较器类。 下面的示例说明一个不区分区域性的自定义比较器类，可将该比较器类指定为 `SortedList` 构造函数的 `comparer` 参数。
 
 ```vb
-Imports System
 Imports System.Collections
 Imports System.Globalization
 

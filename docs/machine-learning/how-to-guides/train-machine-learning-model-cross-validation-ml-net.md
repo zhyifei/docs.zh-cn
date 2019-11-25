@@ -5,16 +5,16 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to,title-hack-0625
-ms.openlocfilehash: f29103d0cf59cdec10a641b05ce359bf95c01ccd
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 87eae789478752423f3e682d4db6cead0391aa6e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169060"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976930"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation"></a>使用交叉验证来训练机器学习模型
 
-了解如何使用交叉验证在 ML.NET 中训练更强大的机器学习模型。 
+了解如何使用交叉验证在 ML.NET 中训练更强大的机器学习模型。
 
 交叉验证是一种训练和模型评估技术，可将数据拆分为多个分区，并利用这些分区训练多个算法。 此技术通过保留来自训练过程的数据来提高模型的可靠性。 除提高不可见观测的性能之外，在数据受限的环境中，它还可用作使用较小数据集训练模型的有效工具。
 
@@ -37,7 +37,7 @@ public class HousingData
 {
     [LoadColumn(0)]
     public float Size { get; set; }
- 
+
     [LoadColumn(1, 3)]
     [VectorType(3)]
     public float[] HistoricalPrices { get; set; }
@@ -50,13 +50,13 @@ public class HousingData
 
 ## <a name="prepare-the-data"></a>准备数据
 
-在使用数据生成机器学习模型之前预处理数据。 在此示例中，`Size` 和 `HistoricalPrices` 列合并为一个特征向量，其使用 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) 方法输出到名为 `Features` 的新列。 除了将数据转换为 ML.NET 算法所期望的格式之外，连接列还通过对连接的列应用一次操作（而不是对每个单独的列应用操作），优化了管道中的后续操作。 
+在使用数据生成机器学习模型之前预处理数据。 在此示例中，`Size` 和 `HistoricalPrices` 列合并为一个特征向量，其使用 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) 方法输出到名为 `Features` 的新列。 除了将数据转换为 ML.NET 算法所期望的格式之外，连接列还通过对连接的列应用一次操作（而不是对每个单独的列应用操作），优化了管道中的后续操作。
 
-将列合并为单个向量后，[`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) 将应用于 `Features` 列，以使 `Size` 和 `HistoricalPrices` 处于 0-1 之间的同一范围内。 
+将列合并为单个向量后，[`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) 将应用于 `Features` 列，以使 `Size` 和 `HistoricalPrices` 处于 0-1 之间的同一范围内。
 
 ```csharp
 // Define data prep estimator
-IEstimator<ITransformer> dataPrepEstimator = 
+IEstimator<ITransformer> dataPrepEstimator =
     mlContext.Transforms.Concatenate("Features", new string[] { "Size", "HistoricalPrices" })
         .Append(mlContext.Transforms.NormalizeMinMax("Features"));
 
@@ -69,7 +69,7 @@ IDataView transformedData = dataPrepTransformer.Transform(data);
 
 ## <a name="train-model-with-cross-validation"></a>使用交叉验证训练模型
 
-预处理数据后，即可开始训练模型。 首先，选择最符合要执行的机器学习任务要求的算法。 因为预测值是数字连续值，所以任务是回归任务。 ML.NET 实现的其中一个回归算法是 [`StochasticDualCoordinateAscentCoordinator`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) 算法。 若要使用交叉验证来训练模型，请使用 [`CrossValidate`](xref:Microsoft.ML.RegressionCatalog.CrossValidate*) 方法。 
+预处理数据后，即可开始训练模型。 首先，选择最符合要执行的机器学习任务要求的算法。 因为预测值是数字连续值，所以任务是回归任务。 ML.NET 实现的其中一个回归算法是 [`StochasticDualCoordinateAscentCoordinator`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) 算法。 若要使用交叉验证来训练模型，请使用 [`CrossValidate`](xref:Microsoft.ML.RegressionCatalog.CrossValidate*) 方法。
 
 > [!NOTE]
 > 尽管此示例使用线性回归模型，但 CrossValidate 适用于 ML.NET 中除异常情况检测之外的所有其他机器学习任务。
@@ -86,17 +86,17 @@ var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimato
 
 1. 将数据分为多个分区，数量为 `numberOfFolds` 参数中指定的值。 每个分区的结果是一个 [`TrainTestData`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) 对象。
 1. 使用训练数据集上的指定机器学习算法估算器在每个分区上训练模型。
-1. 每个模型的性能在测试数据集上使用 [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*) 方法进行评估。 
+1. 每个模型的性能在测试数据集上使用 [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*) 方法进行评估。
 1. 为每个模型返回模型及其指标。
 
-`cvResults` 中存储的结果是 [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) 对象的集合。 此对象包括经过训练的模型以及可分别从 [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) 和 [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics) 属性访问的指标。 在此示例中，`Model` 属性为 [`ITransformer`](xref:Microsoft.ML.ITransformer) 类型，`Metrics` 属性为 [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) 类型。 
+`cvResults` 中存储的结果是 [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) 对象的集合。 此对象包括经过训练的模型以及可分别从 [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) 和 [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics) 属性访问的指标。 在此示例中，`Model` 属性为 [`ITransformer`](xref:Microsoft.ML.ITransformer) 类型，`Metrics` 属性为 [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) 类型。
 
 ## <a name="evaluate-the-model"></a>评估模型
 
-可以通过单个 [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) 对象的 `Metrics` 属性访问不同的经过训练的模型的指标。 在本例中，通过变量 `rSquared` 访问和存储 [R 平方指标](https://en.wikipedia.org/wiki/Coefficient_of_determination)。 
+可以通过单个 [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) 对象的 `Metrics` 属性访问不同的经过训练的模型的指标。 在本例中，通过变量 `rSquared` 访问和存储 [R 平方指标](https://en.wikipedia.org/wiki/Coefficient_of_determination)。
 
 ```csharp
-IEnumerable<double> rSquared = 
+IEnumerable<double> rSquared =
     cvResults
         .Select(fold => fold.Metrics.RSquared);
 ```

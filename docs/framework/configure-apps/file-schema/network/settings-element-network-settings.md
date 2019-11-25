@@ -8,20 +8,20 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: ba08f630dc602c950da309bf29482d85b41af7ef
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d510c445c585a36005ed415b14188efc4be03984
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697680"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089109"
 ---
-# <a name="settings-element-network-settings"></a>\<settings > 元素（网络设置）
+# <a name="settings-element-network-settings"></a>\<设置 > 元素（网络设置）
 配置 <xref:System.Net?displayProperty=nameWithType> 命名空间的基本网络选项。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t **\<settings >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+\<&nbsp;&nbsp;[ **> 的**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<设置 >**
+
 ## <a name="syntax"></a>语法  
   
 ```xml  
@@ -51,8 +51,8 @@ ms.locfileid: "71697680"
 |[ipv6](ipv6-element-network-settings.md)|启用 Internet 协议版本6（IPv6）支持。|  
 |[\<performanceCounter > 元素（网络设置）](performancecounter-element-network-settings.md)|启用网络性能计数器。|  
 |[servicePointManager](servicepointmanager-element-network-settings.md)|配置与网络资源的连接。|  
-|[socket](socket-element-network-settings.md)|指定套接字操作是否使用完成端口。|  
-|[\<webProxyScript > 元素（网络设置）](webproxyscript-element-network-settings.md)|配置用于发现 Web 代理的脚本的特征。|  
+|[片](socket-element-network-settings.md)|指定套接字操作是否使用完成端口。|  
+|[\<w > 元素（网络设置）](webproxyscript-element-network-settings.md)|配置用于发现 Web 代理的脚本的特征。|  
   
 ### <a name="parent-elements"></a>父元素  
   

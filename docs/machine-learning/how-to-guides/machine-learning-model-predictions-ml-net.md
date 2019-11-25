@@ -5,12 +5,12 @@ ms.date: 09/18/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: f764d2147ec56f8dcc38f96d566ac746cf205650
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 182350cc5143155133385c6fd77986b271f6db91
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799132"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977044"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>使用经过训练的模型进行预测
 
@@ -55,7 +55,7 @@ class HousingPrediction
 无论是进行单一预测还是批量预测，都需要将预测管道加载到应用程序中。 此管道包含数据预处理转换以及经过训练的模型。 下面的代码片段从名为 `model.zip` 的文件中加载预测管道。
 
 ```csharp
-//Create MLContext 
+//Create MLContext
 MLContext mlContext = new MLContext();
 
 // Load Trained Model

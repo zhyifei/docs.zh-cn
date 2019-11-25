@@ -1,5 +1,5 @@
 ---
-title: 访问应用程序窗体 (Visual Basic)
+title: 访问应用程序窗体
 ms.date: 07/20/2015
 helpviewer_keywords:
 - forms [Visual Basic], communicating between
@@ -8,17 +8,19 @@ helpviewer_keywords:
 - My.Forms object
 - forms [Visual Basic], accessing all open
 ms.assetid: 9aaf5aaf-2012-4f97-89c7-6e62b9d17863
-ms.openlocfilehash: 85de915f4dc9a79e0161411951062afbeb764513
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 332b6a7563160528b6c17210170af0db6e9bc0e7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821681"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349242"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>访问应用程序窗体 (Visual Basic)
+
 `My.Forms` 对象提供一种简单方法，用于访问在应用程序项目中声明的每个 Windows 窗体的实例。 还可以使用 `My.Application` 对象的属性来访问应用程序的初始屏幕和主窗体，并获取应用程序的打开的窗体的列表。  
   
 ## <a name="tasks"></a>任务  
+
  下表列出了演示如何访问应用程序窗体的示例。  
   
 |功能|请参阅|  

@@ -1,5 +1,5 @@
 ---
-title: 访问用户数据 (Visual Basic)
+title: 访问用户数据
 ms.date: 07/20/2015
 helpviewer_keywords:
 - domain names [Visual Basic], retrieving
@@ -11,14 +11,15 @@ helpviewer_keywords:
 - login names [Visual Basic]
 - examples [Visual Basic], accessing user data
 ms.assetid: 32492a15-ee59-4a63-a1f1-9b24cc13140a
-ms.openlocfilehash: e5d18adcb331162a72da0adb4018d1d59ecc072e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 463d3bc77237482d4cd568b9558bb72cd19e7216
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825284"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349207"
 ---
 # <a name="accessing-user-data-visual-basic"></a>访问用户数据 (Visual Basic)
+
 本部分包含有关处理 `My.User` 对象的主题以及可通过该操作完成的任务。  
   
  `My.User` 对象通过返回实现 <xref:System.Security.Principal.IPrincipal> 接口的对象，提供有关登录用户的信息的访问权限。  

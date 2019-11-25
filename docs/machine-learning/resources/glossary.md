@@ -4,12 +4,12 @@ description: 一个重要的机器学习术语表，可在 ML.NET 中生成自�
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: cb5681f1f72776ec9a8cbcfe45519befe02b8caf
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: bd4f2db701f537d5c87529115a6bd44035432534
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180174"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977289"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>机器学习重要术语词汇表
 
@@ -29,9 +29,9 @@ ms.locfileid: "72180174"
 
 ## <a name="calibration"></a>校准
 
-校准是将原始分数映射到类成员身份的过程，用于二元和多类分类。 一些 ML.NET 训练程序的后缀为 `NonCalibrated`。 这些算法会生成一个原始分数，该分数之后必须映射到类概率。 
+校准是将原始分数映射到类成员身份的过程，用于二元和多类分类。 一些 ML.NET 训练程序的后缀为 `NonCalibrated`。 这些算法会生成一个原始分数，该分数之后必须映射到类概率。
 
-## <a name="catalog"></a>Catalog 
+## <a name="catalog"></a>Catalog
 
 在 ML.NET 中，目录是扩展函数的集合，按常见用途进行分组。
 
@@ -170,7 +170,7 @@ ML.NET 中实现 <xref:Microsoft.ML.IEstimator%601> 接口的类。
 
 一个实现 <xref:Microsoft.ML.ITransformer> 接口的 ML.NET 类。
 
-转换器可将一个 <xref:Microsoft.ML.IDataView> 转换为另一个 IDataView。 转换器是通过训练[估算器](#estimator)或估算器管道创建的。 
+转换器可将一个 <xref:Microsoft.ML.IDataView> 转换为另一个 IDataView。 转换器是通过训练[估算器](#estimator)或估算器管道创建的。
 
 ## <a name="unsupervised-machine-learning"></a>非监管式机器学习
 

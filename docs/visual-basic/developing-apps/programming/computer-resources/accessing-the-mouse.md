@@ -1,21 +1,23 @@
 ---
-title: 访问鼠标 (Visual Basic)
+title: 访问鼠标
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Mouse object [Visual Basic], tasks
 - mouse [Visual Basic], accessing [Visual Basic]
 ms.assetid: 6d31a3d2-d860-459d-9d13-3aa192d62ba2
-ms.openlocfilehash: 0297df4ebfbbe718dd553b279ad62a6b30f0e7e4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: cd0b7664ea17a9280c6d142d377f7c3601dce9af
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837981"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347021"
 ---
 # <a name="accessing-the-mouse-visual-basic"></a>访问鼠标 (Visual Basic)
+
 `My.Computer.Mouse` 对象提供一种方法用于查找有关计算机鼠标的信息，例如是否存在鼠标、鼠标按钮数，以及有关鼠标轮的详细信息。  
   
 ## <a name="remarks"></a>备注  
+
  下表列出了与 `My.Computer.Mouse` 对象相关联的任务，并提供了演示如何完成每个任务的主题链接。  
   
 |功能|查看|  

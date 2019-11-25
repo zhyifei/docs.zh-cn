@@ -5,16 +5,16 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: f1a3131126f9f3af0bab0b1592430fbf7dddf78a
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: e3cebe979b5c279ce8cb90db5510f8758c24c2b4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799088"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976998"
 ---
 # <a name="save-and-load-trained-models"></a>保存和加载经过训练的模型
 
-了解如何在应用程序中保存和加载经过训练的模型。 
+了解如何在应用程序中保存和加载经过训练的模型。
 
 在整个模型生成过程中，模型位于内存中，并且可以在整个应用程序生命周期中访问。 但是，一旦应用程序停止运行，而模型未在本地或远程的某个位置保存，则无法再访问该模型。 通常情况下，在其他应用程序中训练模型之后，某些时候会使用模型进行推理或重新训练。 因此，存储模型很重要。 使用类似下文详述的数据准备和模型训练管道时，请使用本文档后续部分中介绍的步骤保存和加载模型。 虽然此示例使用线性回归模型，但相同的过程适用于其他 ML.NET 算法。
 
@@ -60,7 +60,7 @@ ITransformer trainedModel = pipelineEstimator.Fit(data);
 mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 ```
 
-由于大部分模型和数据准备管道都继承自同一组类，这些组件的保存和加载方法签名相同。 根据用例，可以将数据准备管道和模型合并为单个 [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601)（输出单个 [`ITransformer`](xref:Microsoft.ML.ITransformer)），也可将它们分隔，从而为其各自创建单独的 [`ITransformer`](xref:Microsoft.ML.ITransformer)。 
+由于大部分模型和数据准备管道都继承自同一组类，这些组件的保存和加载方法签名相同。 根据用例，可以将数据准备管道和模型合并为单个 [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601)（输出单个 [`ITransformer`](xref:Microsoft.ML.ITransformer)），也可将它们分隔，从而为其各自创建单独的 [`ITransformer`](xref:Microsoft.ML.ITransformer)。
 
 ## <a name="save-a-model-locally"></a>在本地保存模型
 
@@ -69,7 +69,7 @@ mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 1. 模型的 [`ITransformer`](xref:Microsoft.ML.ITransformer)。
 2. [`ITransformer`](xref:Microsoft.ML.ITransformer) 预期输入的 [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema)。
 
-训练模型后，通过 [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) 方法使用输入数据的 `DataViewSchema` 将经过训练的模型保存到名为 `model.zip` 的文件中。 
+训练模型后，通过 [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) 方法使用输入数据的 `DataViewSchema` 将经过训练的模型保存到名为 `model.zip` 的文件中。
 
 ```csharp
 // Save Trained Model
@@ -78,7 +78,7 @@ mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 
 ## <a name="load-a-model-stored-locally"></a>加载本地存储的模型
 
-本地存储的模型可用于其他进程或应用程序，如 `ASP.NET Core` 和 `Serverless Web Applications`。 若要了解详细信息，请参阅[在 Web API 中使用 ML.NET](./serve-model-web-api-ml-net.md) 和[部署 ML.NET 无服务器 Web 应用](./serve-model-serverless-azure-functions-ml-net.md)操作说明文章。 
+本地存储的模型可用于其他进程或应用程序，如 `ASP.NET Core` 和 `Serverless Web Applications`。 若要了解详细信息，请参阅[在 Web API 中使用 ML.NET](./serve-model-web-api-ml-net.md) 和[部署 ML.NET 无服务器 Web 应用](./serve-model-serverless-azure-functions-ml-net.md)操作说明文章。
 
 在单独的应用程序或进程中，配合使用 [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) 方法和文件路径将经过训练的模型载入应用程序。
 
@@ -102,7 +102,7 @@ MLContext mlContext = new MLContext();
 DataViewSchema modelSchema;
 ITransformer trainedModel;
 
-// Load data prep pipeline and trained model 
+// Load data prep pipeline and trained model
 using (HttpClient client = new HttpClient())
 {
     Stream modelFile = await client.GetStreamAsync("<YOUR-REMOTE-FILE-LOCATION>");
@@ -151,7 +151,7 @@ mlContext.Model.Save(dataPrepTransformer, data.Schema, "data_preparation_pipelin
 mlContext.Model.Save(trainedModel, transformedData.Schema, "model.zip");
 ```
 
-### <a name="load-data-preparation-pipeline-and-trained-model"></a>加载数据准备管道和经过训练的模型 
+### <a name="load-data-preparation-pipeline-and-trained-model"></a>加载数据准备管道和经过训练的模型
 
 在单独的进程或应用程序中，同时加载数据准备管道和经过训练的模型，如下所示：
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: 399e4ac223d2fcb728ece2c92d25a087990992f2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 6d89978b907c8f124b5162c97de5edc034cf1e95
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458666"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976675"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding 标记扩展
 连接某一控件模板中的属性值，使之成为模板化控件上另一个属性的值。  
@@ -38,7 +38,7 @@ ms.locfileid: "73458666"
 |`sourceProperty`|另一个在要模板化的类型上存在的依赖项属性，由其 <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> 来指定。<br /><br /> - 或 -<br /><br /> 由要模板化的目标类型之外的类型所定义的“dotted-down”属性名称。 这实际上是 <xref:System.Windows.PropertyPath>。 请参阅[PROPERTYPATH XAML 语法](propertypath-xaml-syntax.md)。|  
   
 ## <a name="remarks"></a>备注  
- 对于模板方案，`TemplateBinding` 是一种经过优化的[绑定](binding-markup-extension.md)形式，类似于用 `{Binding RelativeSource={RelativeSource TemplatedParent}}`构造的 `Binding`。 `TemplateBinding` 始终为单向绑定，即使所涉及的属性默认为双向绑定。 所涉及的两个属性都必须是依赖项属性。 为了实现到模板化父对象的双向绑定，请改用以下绑定语句 `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`。 
+ 对于模板方案，`TemplateBinding` 是一种经过优化的[绑定](binding-markup-extension.md)形式，类似于用 `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}`构造的 `Binding`。 `TemplateBinding` 始终为单向绑定，即使所涉及的属性默认为双向绑定。 所涉及的两个属性都必须是依赖项属性。 为了实现到模板化父对象的双向绑定，请改用以下绑定语句 `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`。 
   
  [RelativeSource](relativesource-markupextension.md)是另一个标记扩展，有时与 `TemplateBinding` （而不是）结合使用，以便在模板中执行相对属性绑定。  
   

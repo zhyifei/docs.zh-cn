@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: bef296d5de4735780c839af312b5d4fe7eeeb960
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 281afad0c0de856ca67abc74c65aff0e7afc3e01
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197857"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976500"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>演练：本地化混合应用程序
 
@@ -56,7 +56,7 @@ ms.locfileid: "73197857"
 
 ### <a name="to-add-localizable-content"></a>添加可本地化的内容
 
-1. 在**解决方案资源管理器**中，双击**simplecontrol.xaml**以在 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]中打开它。
+1. 在**解决方案资源管理器**中，双击**SIMPLECONTROL.XAML**以在 WPF 设计器中将其打开。
 
 2. 使用以下代码设置 <xref:System.Windows.Controls.Button> 控件的内容。
 

@@ -7,21 +7,21 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: 84b67532825372e7f69d86e1ef6060f4263587eb
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 10530cfadf2e182f912c699e50294af4b57f47b5
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699356"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088863"
 ---
-# <a name="listeners-element-for-trace"></a>\<trace 的 @no__t 0listeners > 元素 >
+# <a name="listeners-element-for-trace"></a>\<跟踪的 \<侦听器 > 元素 >
 指定用于收集、存储和路由消息的侦听器。 侦听器将跟踪输出定向到适当的目标。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<trace >** ](trace-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<listeners >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<的 >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<跟踪 >** ](trace-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<侦听器**>
+
 ## <a name="syntax"></a>语法  
   
 ```xml  
@@ -44,7 +44,7 @@ ms.locfileid: "71699356"
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-trace.md)|将侦听器添加到 `Listeners` 集合中。|  
 |[\<clear>](clear-element-for-listeners-for-trace.md)|清除跟踪的 `Listeners` 集合。|  
-|[\<remove>](remove-element-for-listeners-for-trace.md)|从 @no__t 集合中删除侦听器。|  
+|[\<remove>](remove-element-for-listeners-for-trace.md)|从 `Listeners` 集合中删除侦听器。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -55,13 +55,13 @@ ms.locfileid: "71699356"
 |`trace`|包含用于收集、存储和路由跟踪消息的侦听器。|  
   
 ## <a name="remarks"></a>备注  
- @No__t 0 和 @no__t 1 类共享相同的**侦听器**集合。 如果将侦听器对象添加到其中一个类的集合中，则其他类将使用同一侦听器。 随 .NET Framework 附带的侦听器类派生自 @no__t 的类。  
+ <xref:System.Diagnostics.Debug> 和 <xref:System.Diagnostics.Trace> 类共享相同的**侦听器**集合。 如果将侦听器对象添加到其中一个类的集合中，则其他类将使用同一侦听器。 附带的侦听器类派生自 <xref:System.Diagnostics.TraceListener> 类 .NET Framework。  
   
 ## <a name="configuration-file"></a>配置文件  
  此元素可在计算机配置文件（Machine.config）和应用程序配置文件中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 **\<侦听器>** 元素添加侦听器`MyListener`并`MyEventListener`到**侦听器**集合。 @no__t 创建一个名为 @no__t 的文件，并将输出写入文件。 `MyEventListener` 会在事件日志中创建一个条目。  
+ 下面的示例演示如何使用 **\<侦听器 >** 元素向**侦听器**集合添加侦听器 `MyListener` 和 `MyEventListener`。 `MyListener` 创建一个名为 `MyListener.log` 的文件，并将输出写入文件。 `MyEventListener` 将在事件日志中创建一个条目。  
   
 ```xml  
 <configuration>  

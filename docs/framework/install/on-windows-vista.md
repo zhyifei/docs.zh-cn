@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: a5668d36e972699218633d8b8630d38a5c7cc9a3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 630ab717e44d72de248bb0f0b1abf3d781d26a93
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853870"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204728"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>在 Windows Vista 和 Windows Server 2008 上安装 .NET Framework
 
@@ -28,7 +28,7 @@ ms.locfileid: "70853870"
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 
-可以在 Windows Vista 上安装 [.NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs)。
+可以在 Windows Vista 上安装 [.NET Framework 3.5](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1)。
 
 .NET Framework 3.5 支持为 .NET Framework 1.0 到 3.5 生成的应用。
 

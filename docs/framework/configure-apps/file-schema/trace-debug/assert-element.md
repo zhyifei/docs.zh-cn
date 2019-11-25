@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <assert> element
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
-ms.openlocfilehash: 30ec24aefcf8c4d1e110238a2c60a958eded5545
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: f3c1a1670139a8262dea449bfff99c7c1c19f088
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699388"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088947"
 ---
-# <a name="assert-element"></a>\<assert > 元素
+# <a name="assert-element"></a>\<断言 > 元素
 指定调用 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 方法时是否显示消息框；另外指定要写入消息的文件的名称。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t **\<assert >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<的 >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<断言 >**
+
 ## <a name="syntax"></a>语法  
   
 ```xml  
@@ -40,7 +40,7 @@ ms.locfileid: "71699388"
   
 ## <a name="assertuienabled-attribute"></a>assertuienabled 特性  
   
-|ReplTest1|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`true`|显示消息框。 这是默认设置。|  
 |`false`|不显示消息框。|  
@@ -56,10 +56,10 @@ ms.locfileid: "71699388"
 |`system.diagnostics`|指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。|  
   
 ## <a name="remarks"></a>备注  
- **@No__t-1assert >** 元素中的两个特性都是可选的。 您可以禁用消息框而不指定要向其中写入消息的文件，也可以指定在使消息框处于启用状态时要将消息写入到的文件。  
+ **\<断言 >** 元素中的两个特性都是可选的。 您可以禁用消息框而不指定要向其中写入消息的文件，也可以指定在使消息框处于启用状态时要将消息写入到的文件。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示了如何在调用**Debug. 断言**并将消息写入 `c:\log.txt` 时禁用显示消息框。  
+ 下面的示例演示如何在调用**debug.exe**时禁用显示消息框，并将消息写入 `c:\log.txt`。  
   
 ```xml  
 <configuration>  

@@ -5,22 +5,22 @@ author: luisquintanilla
 ms.author: luquinta
 ms.date: 09/11/2019
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 4452aef351f33df532f3c673307dedbbf71631b8
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: e9bfad4724b353b0f3bfc615a40f1d72b80a2cd4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929371"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976983"
 ---
 # <a name="prepare-data-for-building-a-model"></a>准备建模的数据
 
 了解如何使用 ML.NET 来准备数据用于进行其他处理或生成模型。
 
-数据通常是不干净的和稀疏的。 ML.NET 机器学习算法期望输入或特征位于单个数字向量中。 同样，必须对要预测的值（标签）进行编码，尤其当该值是分类数据时。 因此，数据准备的目标之一是将数据转换为 ML.NET 算法所期望的格式。 
+数据通常是不干净的和稀疏的。 ML.NET 机器学习算法期望输入或特征位于单个数字向量中。 同样，必须对要预测的值（标签）进行编码，尤其当该值是分类数据时。 因此，数据准备的目标之一是将数据转换为 ML.NET 算法所期望的格式。
 
 ## <a name="filter-data"></a>筛选数据
 
-有时，并非数据集中的所有数据都与分析相关。 删除不相关数据的方法之一是筛选。 [`DataOperationsCatalog`](xref:Microsoft.ML.DataOperationsCatalog) 包含一组筛选操作，这些操作接收包含所有数据的 [`IDataView`](xref:Microsoft.ML.IDataView)，并返回仅包含关注数据点的 [IDataView](xref:Microsoft.ML.IDataView)。 值得注意的是，因为筛选操作不像 [`TransformsCatalog`](xref:Microsoft.ML.TransformsCatalog) 中的操作那样是 [`IEstimator`](xref:Microsoft.ML.IEstimator%601) 或 [`ITransformer`](xref:Microsoft.ML.ITransformer)，所以它们不能作为 [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) 或 [`TransformerChain`](xref:Microsoft.ML.Data.TransformerChain%601) 数据准备管道的一部分包含在内。 
+有时，并非数据集中的所有数据都与分析相关。 删除不相关数据的方法之一是筛选。 [`DataOperationsCatalog`](xref:Microsoft.ML.DataOperationsCatalog) 包含一组筛选操作，这些操作接收包含所有数据的 [`IDataView`](xref:Microsoft.ML.IDataView)，并返回仅包含关注数据点的 [IDataView](xref:Microsoft.ML.IDataView)。 值得注意的是，因为筛选操作不像 [`TransformsCatalog`](xref:Microsoft.ML.TransformsCatalog) 中的操作那样是 [`IEstimator`](xref:Microsoft.ML.IEstimator%601) 或 [`ITransformer`](xref:Microsoft.ML.ITransformer)，所以它们不能作为 [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) 或 [`TransformerChain`](xref:Microsoft.ML.Data.TransformerChain%601) 数据准备管道的一部分包含在内。
 
 使用加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中的以下输入数据：
 
@@ -56,7 +56,7 @@ IDataView filteredData = mlContext.Data.FilterRowsByColumn(data, "Price", lowerB
 
 ## <a name="replace-missing-values"></a>替换缺失值
 
-缺失值在数据集中是常见现象。 处理缺失值的一种方法是使用给定类型的默认值（如有）或其他有意义的值（例如数据中的平均值）替换它们。 
+缺失值在数据集中是常见现象。 处理缺失值的一种方法是使用给定类型的默认值（如有）或其他有意义的值（例如数据中的平均值）替换它们。
 
 使用加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中的以下输入数据：
 
@@ -98,11 +98,11 @@ ITransformer replacementTransformer = replacementEstimator.Fit(data);
 IDataView transformedData = replacementTransformer.Transform(data);
 ```
 
-ML.NET 支持各种[替换模式](xref:Microsoft.ML.Transforms.MissingValueReplacingEstimator.ReplacementMode)。 上述示例使用 `Mean` 替换模式，该模式将使用该列的平均值填充缺失值。 替换的结果使用 200,000 填充数据中最后一个元素的 `Price` 属性，因为它是 100,000 和 300,000 的平均值。 
+ML.NET 支持各种[替换模式](xref:Microsoft.ML.Transforms.MissingValueReplacingEstimator.ReplacementMode)。 上述示例使用 `Mean` 替换模式，该模式将使用该列的平均值填充缺失值。 替换的结果使用 200,000 填充数据中最后一个元素的 `Price` 属性，因为它是 100,000 和 300,000 的平均值。
 
 ## <a name="use-normalizers"></a>使用规范化程序
 
-[规范化](https://en.wikipedia.org/wiki/Feature_scaling)是一种数据预处理技术，用于标准化比例不同的特征，这有助于算法更快地融合。 例如，年龄和收入等值的范围存在明显差异，年龄的范围通常为 0-100，而收入的范围通常为零到数千。 访问[转换页面](../resources/transforms.md)，获取更详细的规范化转换列表和说明。 
+[规范化](https://en.wikipedia.org/wiki/Feature_scaling)是一种数据预处理技术，用于标准化比例不同的特征，这有助于算法更快地融合。 例如，年龄和收入等值的范围存在明显差异，年龄的范围通常为 0-100，而收入的范围通常为零到数千。 访问[转换页面](../resources/transforms.md)，获取更详细的规范化转换列表和说明。
 
 ### <a name="min-max-normalization"></a>最小-最大规范化
 
@@ -142,7 +142,7 @@ IDataView transformedData = minMaxTransformer.Transform(data);
 
 ### <a name="binning"></a>分箱
 
-[分箱](https://en.wikipedia.org/wiki/Data_binning)将连续值转换为输入的离散表示形式。 例如，假设某个特征为年龄。 分箱不使用实际年龄值，而是为该值创建范围。 0-18 可以是一个箱，另一个箱可以是 19-35，依此类推。 
+[分箱](https://en.wikipedia.org/wiki/Data_binning)将连续值转换为输入的离散表示形式。 例如，假设某个特征为年龄。 分箱不使用实际年龄值，而是为该值创建范围。 0-18 可以是一个箱，另一个箱可以是 19-35，依此类推。
 
 使用加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中的以下输入数据：
 
@@ -167,7 +167,7 @@ HomeData[] homeDataList = new HomeData[]
 };
 ```
 
-使用 [`NormalizeBinning`](xref:Microsoft.ML.NormalizationCatalog.NormalizeBinning*) 方法将数据规范化为箱。 `maximumBinCount` 参数使你可以指定对数据进行分类所需的箱数。 在此示例中，数据将放入两个箱中。  
+使用 [`NormalizeBinning`](xref:Microsoft.ML.NormalizationCatalog.NormalizeBinning*) 方法将数据规范化为箱。 `maximumBinCount` 参数使你可以指定对数据进行分类所需的箱数。 在此示例中，数据将放入两个箱中。
 
 ```csharp
 // Define binning estimator
@@ -185,12 +185,12 @@ IDataView transformedData = binningTransformer.Transform(data);
 
 ## <a name="work-with-categorical-data"></a>使用分类数据
 
-在用于生成机器学习模型之前，需要将非数字分类数据转换为数字。 
+在用于生成机器学习模型之前，需要将非数字分类数据转换为数字。
 
 使用加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中的以下输入数据：
 
 ```csharp
-CarData[] cars = new CarData[] 
+CarData[] cars = new CarData[]
 {
     new CarData
     {
@@ -210,7 +210,7 @@ CarData[] cars = new CarData[]
 };
 ```
 
-分类 `VehicleType` 属性可以使用 [`OneHotEncoding`](xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*) 方法转换为数字。 
+分类 `VehicleType` 属性可以使用 [`OneHotEncoding`](xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*) 方法转换为数字。
 
 ```csharp
 // Define categorical transform estimator
@@ -224,7 +224,7 @@ ITransformer categoricalTransformer = categoricalEstimator.Fit(data);
 IDataView transformedData = categoricalTransformer.Transform(data);
 ```
 
-生成的转换将 `VehicleType` 的文本值转换为数字。 应用转换后，`VehicleType` 列中的条目将变为以下内容： 
+生成的转换将 `VehicleType` 的文本值转换为数字。 应用转换后，`VehicleType` 列中的条目将变为以下内容：
 
 ```text
 [
@@ -256,7 +256,7 @@ ReviewData[] reviews = new ReviewData[]
 };
 ```
 
-将文本转换为数字向量表示形式的最简单步骤是使用 [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) 方法。 通过使用 [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) 转换，将一系列转换应用于输入文本列，从而生成表示 lp 规范化字词和 n 元语法的数字向量。 
+将文本转换为数字向量表示形式的最简单步骤是使用 [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) 方法。 通过使用 [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) 转换，将一系列转换应用于输入文本列，从而生成表示 lp 规范化字词和 n 元语法的数字向量。
 
 ```csharp
 // Define text transform estimator
@@ -288,7 +288,7 @@ var textEstimator = mlContext.Transforms.Text.NormalizeText("Description")
     .Append(mlContext.Transforms.NormalizeLpNorm("Description"));
 ```
 
-`textEstimator` 包含 [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) 方法执行的一组操作。 更复杂管道的好处在于对应用于数据的转换的控制和可见性。 
+`textEstimator` 包含 [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) 方法执行的一组操作。 更复杂管道的好处在于对应用于数据的转换的控制和可见性。
 
 以第一个条目为例，以下是对 `textEstimator` 定义的转换步骤产生的结果的详细说明：
 

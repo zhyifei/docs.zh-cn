@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 8a2904d02b34058a87a77bbedbed3ccba4c80c58
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e0e35562e2351f9b985c74b60d8769577c3e3f56
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421575"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283899"
 ---
 # <a name="tour-of-net"></a>.NET 教程
 
@@ -29,7 +29,7 @@ ms.locfileid: "73421575"
 
 Microsoft 积极开发和支持三种 .NET 语言：C#、F# 和 Visual Basic (VB)。 
 
-* C# 是一种简单、强大、类型安全、面向对象的语言，同时保留了 C 语言的表达力度和简洁性。 熟悉 C 和类似语言的任何人在适应 C# 的过程中几乎不会遇到什么问题。 请查看 [C# 指南](../csharp/index.md)，了解有关 C# 的详细信息。
+* C# 是一种简单、强大、类型安全、面向对象的语言，同时保留了 C 语言的表达力度和简洁性。 熟悉 C 和类似语言的任何人在适应 C# 的过程中几乎不会遇到什么问题。 请查看 [C# 指南](../csharp/index.yml)，了解有关 C# 的详细信息。
 
 * F# 是一种跨平台、函数优先的编程语言，它也支持传统的面向对象的编程和命令式编程。 请查看 [F# 指南](../fsharp/index.md)，了解有关 F# 的详细信息。
 

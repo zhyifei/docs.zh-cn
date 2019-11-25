@@ -1,5 +1,5 @@
 ---
-title: 访问键盘 (Visual Basic)
+title: 访问键盘
 ms.date: 07/20/2015
 helpviewer_keywords:
 - keyboards [Visual Basic], accessing [Visual Basic]
@@ -7,17 +7,19 @@ helpviewer_keywords:
 - keystrokes
 - CapsLock property
 ms.assetid: aa37d54c-5c98-4b44-b98a-c26d2a03c038
-ms.openlocfilehash: 00cdf18d057ca8a5c59cde02759b5c8c572a8bba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4e4a6aa3567094ca87e41367e82d5fa6c61fe100
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823566"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329540"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a>访问键盘 (Visual Basic)
+
 `My.Computer.Keyboard` 对象提供用于访问键盘当前状态的属性（例如当前按下的键），并提供将击键发送到活动窗口的方法。  
   
 ## <a name="tasks"></a>任务  
+
  下表列出了与 `My.Computer.Keyboard` 对象相关联的任务，并提供了演示如何执行每个任务的主题链接。  
   
 |功能|查看|  

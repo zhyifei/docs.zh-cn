@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: 02a964506d976cb10f3f28f83f0655fecc447e59
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 46c18ab540c90c4147514685c2acc824755b435f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582762"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976862"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>扩展 Visual Basic 应用程序模型
 
@@ -31,7 +31,7 @@ Visual Basic 应用程序模型还提供 <xref:Microsoft.VisualBasic.Application
 
 ## <a name="overriding-the-base-methods"></a>重写基方法
 
-@No__t_0 方法定义 `Application` 方法的运行顺序。 默认情况下，Windows 窗体应用程序的 `Sub Main` 过程将调用 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> 方法。
+<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> 方法定义 `Application` 方法的运行顺序。 默认情况下，Windows 窗体应用程序的 `Sub Main` 过程将调用 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> 方法。
 
 如果应用程序是普通的应用程序（多实例应用程序）或单实例应用程序的第一个实例，则 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> 方法按以下顺序执行 `Overridable` 方法：
 
@@ -39,11 +39,11 @@ Visual Basic 应用程序模型还提供 <xref:Microsoft.VisualBasic.Application
 
      如果此函数返回 `False`，则将取消应用程序启动顺序。 在某些情况下，如果应用程序不应运行，这会很有用。
 
-     @No__t_0 方法调用以下方法：
+     <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> 方法调用以下方法：
 
     1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> 确定应用程序是否定义了初始屏幕，如果是，则在单独的线程上显示初始屏幕。
 
-         @No__t_0 方法包含的代码显示初始屏幕，其中至少显示了 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A> 属性指定的毫秒数。 若要使用此功能，必须使用**项目设计器**将初始屏幕添加到应用程序（这会将 `My.Application.MinimumSplashScreenDisplayTime` 属性设置为两秒钟），或在重写 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> 或 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> 方法的方法中设置 `My.Application.MinimumSplashScreenDisplayTime` 属性。 有关更多信息，请参见<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>。
+         <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> 方法包含的代码显示初始屏幕，其中至少显示了 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A> 属性指定的毫秒数。 若要使用此功能，必须使用**项目设计器**将初始屏幕添加到应用程序（这会将 `My.Application.MinimumSplashScreenDisplayTime` 属性设置为两秒钟），或在重写 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> 或 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> 方法的方法中设置 `My.Application.MinimumSplashScreenDisplayTime` 属性。 有关更多信息，请参见<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>。
 
     2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> 允许设计器发出初始化初始屏幕的代码。
 
@@ -79,9 +79,10 @@ Visual Basic 应用程序模型还提供 <xref:Microsoft.VisualBasic.Application
 
  如果应用程序为单实例应用程序，并且该应用程序已在运行，则应用程序的后续实例将对该应用程序的原始实例调用 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A> 方法，然后退出。
 
- @No__t_0 构造函数调用 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 属性，以确定要用于应用程序窗体的文本呈现引擎。 默认情况下，<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 属性返回 `False`，指示使用的是 GDI 文本呈现引擎，这是 Visual Basic 2005 及更高版本中的默认值。 您可以重写 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 属性以返回 `True`，这表示使用的是 GDI + 文本呈现引擎，这是 Visual Basic .NET 2002 和 Visual Basic .NET 2003 中的默认值。
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> 构造函数调用 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 属性，以确定要用于应用程序窗体的文本呈现引擎。 默认情况下，<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 属性返回 `False`，指示使用的是 GDI 文本呈现引擎，这是 Visual Basic 2005 及更高版本中的默认值。 您可以重写 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 属性以返回 `True`，这表示使用的是 GDI + 文本呈现引擎，这是 Visual Basic .NET 2002 和 Visual Basic .NET 2003 中的默认值。
 
 ## <a name="configuring-the-application"></a>配置应用程序
+
  作为 Visual Basic 应用程序模型的一部分，<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 类提供了用于配置应用程序的受保护的属性。 应在实现类的构造函数中设置这些属性。
 
  在默认 Windows 窗体项目中，**项目设计器**将创建代码以使用设计器设置来设置属性。 属性仅在应用程序启动时使用;在应用程序启动后设置它们不起作用。

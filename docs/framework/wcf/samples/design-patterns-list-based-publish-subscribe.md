@@ -2,12 +2,12 @@
 title: 设计模式：基于列表的发布-订阅
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 3c05e66affad8e517b0b1b5001f726abeae7b100
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cd7cc6f68362c7a69256f0488e2fa00caffdabc7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928842"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978212"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>设计模式：基于列表的发布-订阅
 此示例演示了作为 Windows Communication Foundation （WCF）程序实现的基于列表的发布-订阅模式。  
@@ -48,7 +48,7 @@ public interface ISampleClientContract
   
  服务使用 .NET Framework 事件作为向所有订户通知新信息的机制。 如果客户端通过调用 Subscribe 加入服务，服务将提供一个事件处理程序。 如果客户端离开，服务将取消其事件处理程序对事件的订阅。 当数据源调用服务以报告价格变化时，服务将引发事件。 这将调用服务的每个实例（订阅服务的每个客户端一个实例），并导致其事件处理程序执行。 每个事件处理程序都通过其回调函数向其客户端传递信息。  
   
-```csharp  
+```csharp
 public class PriceChangeEventArgs : EventArgs  
     {  
         public string Item;  
@@ -120,9 +120,9 @@ public class PriceChangeEventArgs : EventArgs
   
 1. 通过输入以下地址来测试是否可以使用浏览器访问服务： `http://localhost/servicemodelsamples/service.svc`。 在响应中应显示确认页。  
   
-2. 从 \client\bin\\的特定于语言的文件夹中运行客户端。 客户端活动将显示在客户端控制台窗口上。 启动多个客户端。  
+2. 从语言特定文件夹下的 \client\bin\\中运行。 客户端活动将显示在客户端控制台窗口上。 启动多个客户端。  
   
-3. 从 \datasource\bin\\的特定于语言的文件夹中运行 Datasource。 数据源活动将显示在控制台窗口中。 数据源向服务发送信息后，信息应传递到每个客户端。  
+3. 从 \datasource\bin\\中，从语言特定的文件夹下运行 Datasource。 数据源活动将显示在控制台窗口中。 数据源向服务发送信息后，信息应传递到每个客户端。  
   
 4. 如果客户端、数据源和服务程序无法通信，请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
@@ -157,6 +157,6 @@ public class PriceChangeEventArgs : EventArgs
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  

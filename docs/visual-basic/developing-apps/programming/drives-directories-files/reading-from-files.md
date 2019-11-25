@@ -1,5 +1,5 @@
 ---
-title: 从文件读取 (Visual Basic)
+title: 从文件读取
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data [Visual Basic], reading from files
@@ -8,17 +8,19 @@ helpviewer_keywords:
 - files [Visual Basic], reading
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
-ms.openlocfilehash: f81ee980d861ac0eb41df9c41b3966512589af12
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: afba0df89aabad7ddf8b641fbab421800718deb3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593371"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333825"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>从文件读取 (Visual Basic)
+
 本节说明如何执行与读取文件相关的任务。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [如何：读取文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
  演示如何从文本文件中读取数据。  
   
@@ -38,6 +40,7 @@ ms.locfileid: "65593371"
  演示如何使用 <xref:System.IO.StreamReader> 读取文件。  
   
 ## <a name="reference"></a>参考  
+
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  介绍 `My.Computer.FileSystem` 对象及其成员。  
   
@@ -54,6 +57,7 @@ ms.locfileid: "65593371"
  介绍 `OpenTextFileReader` 方法。  
   
 ## <a name="related-sections"></a>相关章节  
+
  [将数据存储到剪贴板以及从剪贴板读取数据](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
  解释如何执行与 `My.Computer.Clipboard` 相关联的任务，例如从剪贴板读取数据或向剪贴板写入数据。  
   

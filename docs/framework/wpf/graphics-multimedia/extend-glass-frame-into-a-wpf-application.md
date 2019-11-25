@@ -10,27 +10,27 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: f8d50cb4d0112232f86579542650418a1906bda2
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ae4d7f23729f5bd39558902a58d33c6c45572d85
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039835"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977010"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>将玻璃框扩展到 WPF 应用程序
 
-本主题演示如何将[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]玻璃框扩展到 Windows Presentation Foundation (WPF) 应用程序的工作区。
+本主题演示如何将 Windows Vista 玻璃框架扩展到 Windows Presentation Foundation （WPF）应用程序的工作区。
 
 > [!NOTE]
-> 此示例仅在运行已启用玻璃效果的桌面窗口管理器 (DWM) 的 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 计算机上才起作用。 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 家庭普通版不支持透明玻璃效果。 在 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 的其他版本上通常使用透明玻璃效果呈现的区域呈现为不透明。
+> 此示例仅适用于运行启用了玻璃的桌面窗口管理器（DWM）的 Windows Vista 计算机。 Windows Vista Home Basic 版本不支持透明玻璃效果。 通常会在其他版本的 Windows Vista 上呈现透明玻璃效果的区域呈现为不透明。
 
 ## <a name="example"></a>示例
 
-下图说明了扩展到 Internet Explorer 7 的地址栏中的玻璃框:
+下图说明了扩展到 Internet Explorer 7 的地址栏中的玻璃框：
 
 ![显示在 IE7 地址栏后扩展的玻璃帧的屏幕截图。](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-若要在[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序上扩展玻璃帧, 需要访问非托管 API。 下面的代码示例为两个 API 执行平台调用 (pinvoke), 以将框架扩展到工作区。 其中每个 API 在名为**NonClientRegionAPI**的类中声明。
+若要在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序上扩展玻璃帧，需要访问非托管 API。 下面的代码示例为两个 API 执行平台调用（pinvoke），以将框架扩展到工作区。 其中每个 API 在名为**NonClientRegionAPI**的类中声明。
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]
@@ -66,7 +66,7 @@ End Function
 
 ## <a name="example"></a>示例
 
-若要使用 [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) 函数，必须获取窗口句柄。 在[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中, 可以<xref:System.Windows.Interop.HwndSource.Handle%2A>从的属性<xref:System.Windows.Interop.HwndSource>获取窗口句柄。 在下面的示例中, 将框架扩展到窗口<xref:System.Windows.FrameworkElement.Loaded>事件的工作区中。
+若要使用 [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) 函数，必须获取窗口句柄。 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中，可以从 <xref:System.Windows.Interop.HwndSource>的 <xref:System.Windows.Interop.HwndSource.Handle%2A> 属性中获取窗口句柄。 在下面的示例中，框架扩展到窗口的 <xref:System.Windows.FrameworkElement.Loaded> 事件的工作区中。
 
 ```csharp
 void OnLoaded(object sender, RoutedEventArgs e)
@@ -111,7 +111,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
 
 ## <a name="example"></a>示例
 
-以下示例演示一个简单的窗口，在该窗口中框扩展到工作区。 该帧在包含两个<xref:System.Windows.Controls.TextBox>对象的上边框的上方扩展。
+以下示例演示一个简单的窗口，在该窗口中框扩展到工作区。 框架在包含两个 <xref:System.Windows.Controls.TextBox> 对象的上边框的上方扩展。
 
 ```xaml
 <Window x:Class="SDKSample.Window1"
@@ -145,7 +145,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
 </Window>
 ```
 
-下图说明扩展到[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序中的玻璃帧:
+下图说明扩展到 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序中的玻璃帧：
 
 ![显示扩展到 WPF 应用程序中的玻璃框的屏幕截图。](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 

@@ -1,25 +1,29 @@
 ---
 title: 什么是 ML.NET 以及它如何工作？
 description: ML.NET 使你能够在联机或脱机场景中将机器学习添加到 .NET 应用程序中。 借助此功能，可以使用应用程序的可用数据进行自动预测，而无需连接到网络以使用 ML.NET。 本文介绍 ML.NET 中机器学习的基础知识。
-ms.date: 09/27/2019
+ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 1ae6b82ada841ad172cbe6a59b667aaaf619e714
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 5d8093c77799a55f4bc13e82c06c856dbb8d85cd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592052"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976742"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什么是 ML.NET 以及它如何工作？
 
-ML.NET 使你能够在联机或脱机场景中将机器学习添加到 .NET 应用程序中。 借助此功能，可以使用应用程序的可用数据进行自动预测，而无需连接到网络。 本文介绍 ML.NET 中机器学习的基础知识。
+ML.NET 使你能够在联机或脱机场景中将机器学习添加到 .NET 应用程序中。 借助此功能，可以使用应用程序的可用数据进行自动预测。
+
+ML.NET 的核心是机器学习模型  。 该模型指定将输入数据转换为预测所需的步骤。 借助 ML.NET，可以通过指定算法来训练自定义模型，也可以导入预训练的 TensorFlow 和 ONNX 模型。
+
+拥有模型后，可以将其添加到应用程序中进行预测。
 
 ML.NET 在使用 .NET Core 的 Windows、Linux 和 macOS 或使用 .NET Framework 的 Windows 上运行。 所有平台均支持 64 位。 Windows 支持 32 位，TensorFlow、LightGBM 和 ONNX 相关功能除外。
 
-可以使用 ML.NET 进行的预测类型的示例包括：
+可以使用 ML.NET 进行的预测类型的示例：
 
 |||
 |-|-|
@@ -27,16 +31,18 @@ ML.NET 在使用 .NET Core 的 Windows、Linux 和 macOS 或使用 .NET Framewor
 |回归/预测连续值|根据大小和位置预测房屋价格|
 |异常情况检测|检测欺诈性银行交易 |
 |建议|根据在线购物者之前的购买情况向其建议可能想要购买的产品|
+|时序/顺序数据|预测天气/产品销售额|
+|图像分类|对医学影像中的病状进行分类|
 
 ## <a name="hello-mlnet-world"></a>Hello ML.NET World
 
-以下代码片段中的代码演示了最简单的 ML.NET 应用程序。 此示例构造线性回归模型，使用房屋大小和价格数据预测房屋价格。 在实际应用程序中，数据和模型将复杂得多。
+以下代码片段中的代码演示了最简单的 ML.NET 应用程序。 此示例构造线性回归模型，使用房屋大小和价格数据预测房屋价格。 
 
  ```csharp
     using System;
     using Microsoft.ML;
     using Microsoft.ML.Data;
-    
+
     class Program
     {
         public class HouseData
@@ -44,17 +50,17 @@ ML.NET 在使用 .NET Core 的 Windows、Linux 和 macOS 或使用 .NET Framewor
             public float Size { get; set; }
             public float Price { get; set; }
         }
-    
+
         public class Prediction
         {
             [ColumnName("Score")]
             public float Price { get; set; }
         }
-    
+
         static void Main(string[] args)
         {
             MLContext mlContext = new MLContext();
-    
+
             // 1. Import or create training data
             HouseData[] houseData = {
                 new HouseData() { Size = 1.1F, Price = 1.2F },
@@ -66,10 +72,10 @@ ML.NET 在使用 .NET Core 的 Windows、Linux 和 macOS 或使用 .NET Framewor
             // 2. Specify data preparation and model training pipeline
             var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
                 .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100));
-    
+
             // 3. Train model
             var model = pipeline.Fit(trainingData);
-    
+
             // 4. Make a prediction
             var size = new HouseData() { Size = 2.5F };
             var price = mlContext.Model.CreatePredictionEngine<HouseData, Prediction>(model).Predict(size);
@@ -78,7 +84,7 @@ ML.NET 在使用 .NET Core 的 Windows、Linux 和 macOS 或使用 .NET Framewor
 
             // Predicted price for size: 2500 sq ft= $261.98k
         }
-    } 
+    }
 ```
 
 ## <a name="code-workflow"></a>代码工作流
@@ -93,7 +99,7 @@ ML.NET 在使用 .NET Core 的 Windows、Linux 和 macOS 或使用 .NET Framewor
 - 将模型加载回 **ITransformer** 对象
 - 通过调用 **CreatePredictionEngine.Predict()** 进行预测
 
-![ML.NET 应用程序开发流包括用于数据生成、管道开发、模型训练、模型评估和模型使用的组件](./media/mldotnet-annotated-workflow.png) 
+![ML.NET 应用程序开发流包括用于数据生成、管道开发、模型训练、模型评估和模型使用的组件](./media/mldotnet-annotated-workflow.png)
 
 让我们更深入地探讨这些概念。
 
@@ -103,7 +109,7 @@ ML.NET 模型是一个对象，它包含为了获得预测输出而要对输入�
 
 ### <a name="basic"></a>Basic
 
-最基本的模型是二维线性回归，其中一个连续数量与另一个连续数量成比例关系，如上述房价示例所示。 
+最基本的模型是二维线性回归，其中一个连续数量与另一个连续数量成比例关系，如上述房价示例所示。
 
 ![具有偏差和权重参数的线性回归模型](./media/linear-regression-model.svg)
 
@@ -113,7 +119,7 @@ ML.NET 模型是一个对象，它包含为了获得预测输出而要对输入�
 
 更复杂的模型使用事务文本描述将金融事务分类为类别。
 
-通过删除冗余的字词和字符，以及对字词和字符组合进行计数，每个事务描述都被分解为一组特征。 该特征集用于基于训练数据中的类别集训练线性模型。 新描述与训练集中的描述越相似，它就越有可能被分配到同一类别。 
+通过删除冗余的字词和字符，以及对字词和字符组合进行计数，每个事务描述都被分解为一组特征。 该特征集用于基于训练数据中的类别集训练线性模型。 新描述与训练集中的描述越相似，它就越有可能被分配到同一类别。
 
 ![文本分类模型](./media/text-classification-model.svg)
 
@@ -131,7 +137,7 @@ ML.NET 模型是一个对象，它包含为了获得预测输出而要对输入�
 
 ## <a name="model-evaluation"></a>模型评估
 
-训练模型后，如何了解其进行未来预测的表现如何？ 借助 ML.NET，可以根据一些新的测试数据评估模型。 
+训练模型后，如何了解其进行未来预测的表现如何？ 借助 ML.NET，可以根据一些新的测试数据评估模型。
 
 每种类型的机器学习任务都具有用于根据测试数据集评估模型的准确性和精确性的指标。
 
@@ -148,7 +154,7 @@ ML.NET 模型是一个对象，它包含为了获得预测输出而要对输入�
 
         var testHouseDataView = mlContext.Data.LoadFromEnumerable(testHouseData);
         var testPriceDataView = model.Transform(testHouseDataView);
-                
+
         var metrics = mlContext.Regression.Evaluate(testPriceDataView, labelColumnName: "Price");
 
         Console.WriteLine($"R^2: {metrics.RSquared:0.##}");
@@ -225,7 +231,7 @@ ML.NET 应用程序从 <xref:Microsoft.ML.MLContext> 对象开始。 此单一�
     var predEngine = mlContext.CreatePredictionEngine<HouseData, Prediction>(model);
     var price = predEngine.Predict(size);
 ```
- 
+
 `CreatePredictionEngine()` 方法接受一个输入类和一个输出类。 字段名称和/或代码属性确定模型训练和预测期间使用的数据列的名称。 可以在“操作说明”部分中了解[如何进行单个预测](./how-to-guides/single-predict-model-ml-net.md)。
 
 ### <a name="data-models-and-schema"></a>数据模型和架构
@@ -254,7 +260,7 @@ ML.NET 机器学习管道的核心是 [DataView](xref:Microsoft.ML.IDataView) �
         [ColumnName("Score")]
         public float Price { get; set; }
     }
-```    
+```
 
 可以在[机器学习任务](resources/tasks.md)指南中找到有关不同机器学习任务的输出列的详细信息。
 
@@ -270,14 +276,14 @@ DataView 对象的一个​​重要属性是它们被**惰性**求值。 数据
 
 在实际应用程序中，模型训练和评估代码将与预测分离。 事实上，这两项活动通常由单独的团队执行。 模型开发团队可以保存模型以便用于预测应用程序。
 
-```csharp   
+```csharp
    mlContext.Model.Save(model, trainingData.Schema,"model.zip");
 ```
 
-## <a name="where-to-now"></a>接下来做什么？
+## <a name="next-steps"></a>后续步骤
 
-可以在[教程](./tutorials/index.md)中了解如何使用不同的机器学习任务和更实际的数据集来生成应用程序。
+* 在[教程](./tutorials/index.md)中了解如何使用不同的机器学习任务和更实际的数据集来生成应用程序。
 
-或者，可以在[操作指南](./how-to-guides/index.md)中更深入地了解特定主题。
+* 在[操作指南](./how-to-guides/index.md)中更深入地了解特定主题。
 
-如果非常感兴趣，可以直接阅读 [API 参考文档](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)！
+* 如果非常感兴趣，可以直接阅读 [API 参考文档](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)。

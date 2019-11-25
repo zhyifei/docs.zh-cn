@@ -1,21 +1,21 @@
 ---
 title: 调用方信息
 description: 介绍如何使用调用方信息参数特性从方法获取调用方信息。
-ms.date: 04/25/2017
-ms.openlocfilehash: e7bbc3830a95bd25cfc2fb369b204d367b775815
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.date: 11/04/2019
+ms.openlocfilehash: d995b37149277b7c7d1b6217ee484d3c90a7f8b3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106586"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976801"
 ---
 # <a name="caller-information"></a>调用方信息
 
 通过使用调用方信息特性，可获取有关方法的调用方的信息。 可以获取源代码的文件路径、源代码中的行号和调用方的成员名称。 此信息有助于跟踪、调试和创建诊断工具。
 
-若要获取此信息，可以使用应用于可选参数的特性，每个特性都具有默认值。 下表列出了在[system.runtime.compilerservices](/dotnet/api/system.runtime.compilerservices)命名空间中定义的调用方信息特性:
+若要获取此信息，可以使用应用于可选参数的特性，每个特性都具有默认值。 下表列出了在[system.runtime.compilerservices](/dotnet/api/system.runtime.compilerservices)命名空间中定义的调用方信息特性：
 
-|特性|描述|类型|
+|特性|描述|键入|
 |---------|-----------|----|
 |[CallerFilePath](/dotnet/api/system.runtime.compilerservices.callerfilepathattribute)|包含调用方的源文件的完整路径。 这是编译时的文件路径。|`String`
 |[CallerLineNumber](/dotnet/api/system.runtime.compilerservices.callerlinenumberattribute)|源文件中调用方法的行号。|`Integer`|
@@ -31,7 +31,7 @@ open System.Runtime.CompilerServices
 open System.Runtime.InteropServices
 
 type Tracer() =
-    member __.DoTrace(message: string,
+    member _.DoTrace(message: string,
                       [<CallerMemberName; Optional; DefaultParameterValue("")>] memberName: string,
                       [<CallerFilePath; Optional; DefaultParameterValue("")>] path: string,
                       [<CallerLineNumber; Optional; DefaultParameterValue(0)>] line: int) =
@@ -45,16 +45,16 @@ type Tracer() =
 
 调用方信息属性只能应用于可选参数。 调用方信息特性导致编译器为使用调用方信息特性修饰的每个可选参数写入正确的值。
 
-在编译时，调用方信息值将作为文本传入中间语言 (IL)。 不同于异常的[StackTrace](/dotnet/api/system.diagnostics.stacktrace)属性的结果, 结果不受模糊处理的影响。
+在编译时，调用方信息值将作为文本传入中间语言 (IL)。 不同于异常的[StackTrace](/dotnet/api/system.diagnostics.stacktrace)属性的结果，结果不受模糊处理的影响。
 
 你可显式提供可选参数来控制调用方信息或隐藏调用方信息。
 
 ## <a name="member-names"></a>成员名称
 
-可以使用[`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)特性来避免将成员名称指定`String`为所调用的方法的参数。 通过使用此方法, 您可以避免 "重命名重构" 不更改`String`值的问题。 此好处对于以下任务特别有用：
+您可以使用[`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)特性来避免将成员名称指定为所调用方法的 `String` 参数。 通过使用此方法，您可以避免 "重命名重构" 不更改 `String` 值的问题。 此好处对于以下任务特别有用：
 
 - 使用跟踪和诊断例程。
-- 在绑定数据时实现[INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged)接口。 此接口允许对象的属性通知绑定控件该属性已更改，以便此控件能够显示更新的信息。 如果没有[`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)特性, 则必须将属性名称指定为文本。
+- 在绑定数据时实现[INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged)接口。 此接口允许对象的属性通知绑定控件该属性已更改，以便此控件能够显示更新的信息。 如果没有[`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)特性，则必须将属性名称指定为文本。
 
 下图显示了使用 CallerMemberName 特性时返回的成员名称。
 

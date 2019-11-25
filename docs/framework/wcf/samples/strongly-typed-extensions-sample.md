@@ -2,12 +2,12 @@
 title: 强类型扩展示例
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: 5ee2f13df9d3c0841b3e8b62b1633ea4520d3860
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8dc6bca87989b1ee8e1ee440b0d64e2c196cc28f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421515"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978240"
 ---
 # <a name="strongly-typed-extensions-sample"></a>强类型扩展示例
 此示例使用 <xref:System.ServiceModel.Syndication.SyndicationFeed> 类作为示例。 但是，此示例中演示的模式可用于支持扩展数据的所有 Syndication 类。  
@@ -90,7 +90,7 @@ public class InReplyToElement : IXmlSerializable
   
  `InReplyToElement` 类实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口，该接口允许直接控制从 XML 读取对象实例和向 XML 写入对象实例的方式。 `ReadXml` 方法首先从传递给它的 `Ref` 读取 `HRef`、`Source`、`MediaType` 和 <xref:System.Xml.XmlReader> 属性的值。 所有未知的属性都存储在 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 集合中。 读取所有属性之后，将调用 <xref:System.Xml.XmlReader.ReadStartElement> 使读取器前进到下一个元素。 由于由该类建模的元素没有所需的子元素，因此子元素缓冲到 `XElement` 实例中并存储在 <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> 集合中，如下面的代码所示。  
   
-```csharp  
+```csharp
 public void ReadXml(System.Xml.XmlReader reader)  
 {  
     bool isEmpty = reader.IsEmptyElement;  
@@ -146,7 +146,7 @@ public void ReadXml(System.Xml.XmlReader reader)
   
  在 `WriteXml` 中，`InReplyToElement` 方法首先将 `Ref`、`HRef`、`Source` 和 `MediaType` 属性的值写出为 XML 属性。（`WriteXml` 并不负责编写实际的外部元素本身，该工作是由 `WriteXml` 的调用方完成的。） 它还将 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 和 <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> 的内容写入编写器，如下面的代码所示。  
   
-```csharp  
+```csharp
 public void WriteXml(System.Xml.XmlWriter writer)  
 {  
     if (this.Ref != null)  
@@ -189,7 +189,7 @@ public void WriteXml(System.Xml.XmlWriter writer)
   
  `ThreadedFeed` 类从 `SyndicationFeed` 继承，并重写 `OnCreateItem` 以返回一个 `ThreadedItem`。 它还实现用于将 `Items` 集合作为 `ThreadedItems` 访问的方法，如下面的代码所示。  
   
-```csharp  
+```csharp
 public class ThreadedFeed : SyndicationFeed  
 {  
     public ThreadedFeed()  
@@ -213,7 +213,7 @@ public class ThreadedFeed : SyndicationFeed
   
  类 `ThreadedItem` 从 `SyndicationItem` 继承，并使 `InReplyToElement` 成为强类型属性。 这样便可以方便地对 `InReplyTo` 扩展数据进行编程访问。 它还实现 `TryParseElement` 和 `WriteElementExtensions`，用于读取和写入其扩展数据，如下面的代码所示。  
   
-```csharp  
+```csharp
 public class ThreadedItem : SyndicationItem  
 {  
     private InReplyToElement inReplyTo;  

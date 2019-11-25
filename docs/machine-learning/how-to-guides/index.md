@@ -3,24 +3,20 @@ title: ML.NET 操作指南
 description: 了解如何执行特定任务，以帮助自定义创建 AI 解决方案并将机器学习集成到 .NET 应用程序。
 ms.custom: seodec18
 ms.date: 03/01/2019
-ms.openlocfilehash: c16adf6bf85aec1aef51751c6d4fe8c7f0f3c9f4
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e2b4ff77c7f76282d70c06b5ef534306fe4e93a6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645035"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977112"
 ---
-# <a name="net-machine-learning-how-to-guides"></a>.NET 机器学习操作指南 
+# <a name="net-machine-learning-how-to-guides"></a>.NET 机器学习操作指南
 
 在 ML.NET 指南中的操作指南部分快速了解常见问题的答案。 在某些情况下，可能会在多个部分列出相关文章以便查找。
 
-## <a name="load-the-data"></a>加载数据
+## <a name="load-data"></a>加载数据
 
-* [从 CSV 文件中加载包含多个列的数据，以便进行机器学习处理。](load-data-from-mult-column-csv-ml-net.md)
-
-* [从多个文件加载数据用于机器学习处理。](load-data-from-multiple-files-ml-net.md)
-
-* [从文本文件加载数据用于机器学习处理。](load-data-from-text-file-ml-net.md)
+* [从文件和 SQL 数据库加载数据](load-data-ml-net.md)。
 
 ### <a name="prepare-the-data"></a>准备数据
 
@@ -28,11 +24,9 @@ ms.locfileid: "65645035"
 
 ## <a name="train-the-model"></a>定型模型
 
-* [使用非文本文件数据定型机器学习模型。](load-non-file-training-data-ml-net.md)
+* [使用交叉验证来定型机器学习模型。](train-machine-learning-model-cross-validation-ml-net.md)
 
-* [使用交叉验证来定型机器学习模型。](train-cross-validation-ml-net.md)
-
-* [使用 ML.NET 定型回归模型来预测某个值。](train-regression-model-ml-net.md)
+* [使用 ML.NET 定型回归模型来预测某个值。](train-machine-learning-model-ml-net.md)
 
 ### <a name="evaluate-the-model-quality"></a>评估模型质量
 
@@ -40,23 +34,17 @@ ms.locfileid: "65645035"
 
 ### <a name="model-explainability"></a>模型可解释性
 
-* [使用排列特征的重要性来确定模型特征的重要性。](determine-global-feature-importance-in-model.md)
+* [使用排列特征的重要性来确定模型特征的重要性。](explain-machine-learning-model-permutation-feature-importance-ml-net.md)
 
 * [使用广义加性模型和形状函数来解释模型。](use-gams-for-model-explainability.md)
-
-### <a name="feature-engineering"></a>特征工程
-
-* [应用特征工程学来进行分类数据模型定型。](train-model-categorical-ml-net.md)
-
-* [使用 ML.NET 应用特征工程学来进行文本数据模型定型。](train-model-textual-ml-net.md)
 
 ## <a name="run"></a>运行
 
 * [在 ML.NET 管道处理期间检查中间数据值。](inspect-intermediate-data-ml-net.md)
 
-* [在应用程序中操作定型的机器学习模型。](consuming-model-ml-net.md)
+* [加载已定型的机器学习模型](save-load-machine-learning-models-ml-net.md)。
 
-* [使用 PredictionFunction 一次执行一个预测。](single-predict-model-ml-net.md)
+* [使用已定型的模型进行预测](machine-learning-model-predictions-ml-net.md)。
 
 ## <a name="probabilistic-infernet"></a>概率 (Infer.NET)
 
