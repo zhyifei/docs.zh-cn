@@ -2,12 +2,12 @@
 title: <netTcpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
-ms.openlocfilehash: 8e3feeea7d94048985c7bf864b95ee90f5f53798
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 360cdf76e013d085022f45eba5f8549e11cd68d3
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736553"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140701"
 ---
 # <a name="nettcpcontextbinding"></a>\<netTcpContextBinding >
 为要求对保护级别进行签名的 <xref:System.ServiceModel.NetTcpBinding> 指定上下文。 NetTcpContextBinding 的 contextExchangeMechanism 是 SOAPHeader。  
@@ -76,7 +76,7 @@ ms.locfileid: "73736553"
 |maxBufferSize|一个正整数，指定内存中用于存储消息的缓冲区的最大大小（字节）。 如果缓冲区已满，则多余的数据会保留在基础套接字中，直到缓冲区重新具有可用空间。 该值不能小于 `maxReceivedMessageSize` 属性。 默认值为 65536。 有关更多信息，请参见<xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.MaxBufferSize%2A>。|  
 |maxConnections|一个整数，指定服务将创建/接受的最大出站和入站连接数。 传入和传出连接分别根据此属性指定的限制进行计数。<br /><br /> 超出此限制的入站连接需要排队，直到连接数低于限制值。<br /><br /> 超出此限制的出站连接需要排队，直到连接数低于限制值。<br /><br /> 默认值为 10。|  
 |maxReceivedMessageSize|一个正整数，指定采用此绑定配置的通道上可以接收的最大消息大小（字节），包括消息头。 如果消息超出此限制，则发送方将收到 SOAP 错误。 接收方将删除该消息，并在跟踪日志中创建事件项。 默认值为 65536。|  
-|NAME|一个包含绑定的配置名称的字符串。 因为此值用作绑定的标识，所以它应该是唯一的。 从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。 有关默认配置和无值绑定和行为的详细信息，请参阅[WCF 服务的](../../../wcf/samples/simplified-configuration-for-wcf-services.md)[简化配置](../../../wcf/simplified-configuration.md)和简化配置。|  
+|NAME|一个包含绑定的配置名称的字符串。 因为此值用作绑定的标识，所以它应该是唯一的。 从 .NET Framework 4 开始，绑定和行为不需要具有名称。 有关默认配置和无值绑定和行为的详细信息，请参阅[WCF 服务的](../../../wcf/samples/simplified-configuration-for-wcf-services.md)[简化配置](../../../wcf/simplified-configuration.md)和简化配置。|  
 |openTimeout|一个 <xref:System.TimeSpan> 值，指定为完成打开操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:01:00。|  
 |portSharingEnabled|一个布尔值，指定是否为此连接启用 TCP 端口共享。 如果此值为 `false`，则每个绑定都使用自己的独占端口。 此设置只与服务相关，因为客户端不受影响。|  
 |receiveTimeout|一个 <xref:System.TimeSpan> 值，指定为完成接收操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:10:00。|  

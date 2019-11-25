@@ -2,12 +2,12 @@
 title: 自定义跟踪
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: 32abf1dc4c9607b4a86f836fa2c759af1dbf1b69
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 5b6bcee2e889a7f7e64eb83155a92e5b4c27d719
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989402"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141965"
 ---
 # <a name="custom-tracking"></a>自定义跟踪
 此示例演示如何创建自定义跟踪参与者并将跟踪数据的内容写入控制台。 另外，此示例还演示如何发出使用用户定义的数据填充的 <xref:System.Activities.Tracking.CustomTrackingRecord> 对象。 基于控制台的跟踪参与者将使用代码中创建的跟踪配置文件对象来筛选由工作流发出的 <xref:System.Activities.Tracking.TrackingRecord> 对象。
@@ -18,7 +18,7 @@ ms.locfileid: "70989402"
 |组件|描述|
 |---------------|-----------------|
 |跟踪运行时|提供基础结构以发出跟踪记录。|
-|跟踪参与者|使用跟踪记录。 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 附带了一个跟踪参与者，它作为 Windows 跟踪记录 (ETW) 事件写入跟踪记录。|
+|跟踪参与者|使用跟踪记录。 .NET Framework 4 附带了一个跟踪参与者，该参与者将跟踪记录作为 Windows 事件跟踪（ETW）事件写入。|
 |跟踪配置文件|筛选机制，允许跟踪参与者订阅从工作流实例发出的跟踪记录的子集。|
 
  下表详细介绍工作流运行时发出的跟踪记录。
@@ -47,7 +47,7 @@ public abstract class TrackingParticipant
 }
 ```
 
- 完整的跟踪参与者是在 ConsoleTrackingParticipant.cs 文件中实现的。 下面的代码示例是<xref:System.Activities.Tracking.TrackingParticipant.Track%2A>自定义跟踪参与者的方法。
+ 完整的跟踪参与者是在 ConsoleTrackingParticipant.cs 文件中实现的。 下面的代码示例是自定义跟踪参与者的 <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> 方法。
 
 ```csharp
 protected override void Track(TrackingRecord record, TimeSpan timeout)
@@ -112,7 +112,7 @@ invoker.Extensions.Add(customTrackingParticipant);
 
 - 创建 <xref:System.Activities.Tracking.CustomTrackingRecord> 对象，并使用用户定义的数据（此数据必须与记录一起发出）对其进行填充。
 
-- 通过调用的<xref:System.Activities.ActivityContext>track 方法发出。 <xref:System.Activities.Tracking.CustomTrackingRecord>
+- <xref:System.Activities.Tracking.CustomTrackingRecord> 通过调用 <xref:System.Activities.ActivityContext>的 track 方法发出。
 
  下面的示例演示如何发出自定义活动内的 <xref:System.Activities.Tracking.CustomTrackingRecord> 对象。
 
@@ -144,7 +144,7 @@ context.Track(customRecord);
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   

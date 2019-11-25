@@ -1,5 +1,5 @@
 ---
-title: Visual Basic 运行库成员
+title: Runtime Library Members
 ms.date: 07/20/2015
 f1_keywords:
 - VisualBasic
@@ -9,24 +9,25 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-ms.openlocfilehash: 061782dbd0ac54286a6c0da74fe769d98848f118
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a73589c4b0d0faeac321090e6030f1f8392a5342
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945179"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349618"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Visual Basic 运行库成员
-`Microsoft.VisualBasic`命名空间包含类、 模块、 常量和枚举构成 Visual Basic 运行库。 这些库成员提供过程、 属性和可以在代码中使用的常量值。 每个模块和类表示特定的功能类别。  
+
+The `Microsoft.VisualBasic` namespace contains the classes, modules, constants, and enumerations that constitute the Visual Basic runtime library. These library members provide procedures, properties, and constant values you can use in your code. Each module and class represents a particular category of functionality.  
   
-## <a name="microsoftvisualbasiccollection-class"></a>Microsoft.VisualBasic.Collection 类  
+## <a name="microsoftvisualbasiccollection-class"></a>Microsoft.VisualBasic.Collection Class  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.Collection.Add%2A>|<xref:Microsoft.VisualBasic.Collection.Clear%2A>|<xref:Microsoft.VisualBasic.Collection.Contains%2A>|<xref:Microsoft.VisualBasic.Collection.Count%2A>|  
 |<xref:Microsoft.VisualBasic.Collection.GetEnumerator%2A>|<xref:Microsoft.VisualBasic.Collection.Item%2A>|<xref:Microsoft.VisualBasic.Collection.Remove%2A>||  
   
-## <a name="microsoftvisualbasiccomclassattribute-class"></a>Microsoft.VisualBasic.ComClassAttribute 类  
+## <a name="microsoftvisualbasiccomclassattribute-class"></a>Microsoft.VisualBasic.ComClassAttribute Class  
   
 |||||  
 |---|---|---|---|  
@@ -89,7 +90,7 @@ ms.locfileid: "61945179"
 |<xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>|<xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|<xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|<xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>|  
 |<xref:Microsoft.VisualBasic.DateAndTime.WeekdayName%2A>|<xref:Microsoft.VisualBasic.DateAndTime.Year%2A>|||  
   
-## <a name="microsoftvisualbasicerrobject-class"></a>Microsoft.VisualBasic.ErrObject 类  
+## <a name="microsoftvisualbasicerrobject-class"></a>Microsoft.VisualBasic.ErrObject Class  
   
 |||||  
 |---|---|---|---|  
@@ -112,7 +113,7 @@ ms.locfileid: "61945179"
 |<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|<xref:Microsoft.VisualBasic.FileSystem.SPC%2A>|<xref:Microsoft.VisualBasic.FileSystem.TAB%2A>|<xref:Microsoft.VisualBasic.FileSystem.Unlock%2A>|  
 |<xref:Microsoft.VisualBasic.FileSystem.Write%2A>|<xref:Microsoft.VisualBasic.FileSystem.WriteLine%2A>|||  
   
-## <a name="microsoftvisualbasicfinancial-module"></a>Microsoft.VisualBasic.Financial 模块  
+## <a name="microsoftvisualbasicfinancial-module"></a>Microsoft.VisualBasic.Financial Module  
   
 |||||  
 |---|---|---|---|  
@@ -127,13 +128,13 @@ ms.locfileid: "61945179"
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.Globals.ScriptEngine%2A>|<xref:Microsoft.VisualBasic.Globals.ScriptEngineBuildVersion%2A>|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMajorVersion%2A>|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMinorVersion%2A>|  
   
-## <a name="microsoftvisualbasichidemodulenameattribute-class"></a>Microsoft.VisualBasic.HideModuleNameAttribute 类  
+## <a name="microsoftvisualbasichidemodulenameattribute-class"></a>Microsoft.VisualBasic.HideModuleNameAttribute Class  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.HideModuleNameAttribute>||||  
   
-## <a name="microsoftvisualbasicinformation-module"></a>Microsoft.VisualBasic.Information 模块  
+## <a name="microsoftvisualbasicinformation-module"></a>Microsoft.VisualBasic.Information Module  
   
 |||||  
 |---|---|---|---|  
@@ -143,7 +144,7 @@ ms.locfileid: "61945179"
 |<xref:Microsoft.VisualBasic.Information.SystemTypeName%2A>|<xref:Microsoft.VisualBasic.Information.TypeName%2A>|<xref:Microsoft.VisualBasic.Information.UBound%2A>|<xref:Microsoft.VisualBasic.Information.VarType%2A>|  
 |<xref:Microsoft.VisualBasic.Information.VbTypeName%2A>||||  
   
-## <a name="microsoftvisualbasicinteraction-module"></a>Microsoft.VisualBasic.Interaction 模块  
+## <a name="microsoftvisualbasicinteraction-module"></a>Microsoft.VisualBasic.Interaction Module  
   
 |||||  
 |---|---|---|---|  
@@ -153,7 +154,7 @@ ms.locfileid: "61945179"
 |<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>|<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|<xref:Microsoft.VisualBasic.Interaction.Partition%2A>|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
 |<xref:Microsoft.VisualBasic.Interaction.Shell%2A>|<xref:Microsoft.VisualBasic.Interaction.Switch%2A>|||  
   
-## <a name="microsoftvisualbasicmygroupcollectionattribute-class"></a>Microsoft.VisualBasic.MyGroupCollectionAttribute 类  
+## <a name="microsoftvisualbasicmygroupcollectionattribute-class"></a>Microsoft.VisualBasic.MyGroupCollectionAttribute Class  
   
 |||||  
 |---|---|---|---|  
@@ -172,26 +173,27 @@ ms.locfileid: "61945179"
 |<xref:Microsoft.VisualBasic.Strings.Space%2A>|<xref:Microsoft.VisualBasic.Strings.Split%2A>|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|  
 |<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|  
   
-## <a name="microsoftvisualbasicvbfixedarrayattribute-class"></a>Microsoft.VisualBasic.VBFixedArrayAttribute 类  
+## <a name="microsoftvisualbasicvbfixedarrayattribute-class"></a>Microsoft.VisualBasic.VBFixedArrayAttribute Class  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.VBFixedArrayAttribute.Bounds%2A>|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute.Length%2A>|||  
   
-## <a name="microsoftvisualbasicvbfixedstringattribute-class"></a>Microsoft.VisualBasic.VBFixedStringAttribute 类  
+## <a name="microsoftvisualbasicvbfixedstringattribute-class"></a>Microsoft.VisualBasic.VBFixedStringAttribute Class  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.VBFixedStringAttribute.Length%2A>||||  
   
-## <a name="microsoftvisualbasicvbmath-module"></a>Microsoft.VisualBasic.VbMath 模块  
+## <a name="microsoftvisualbasicvbmath-module"></a>Microsoft.VisualBasic.VbMath Module  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
-## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic 常量和枚举  
- `Microsoft.VisualBasic`命名空间提供常量和枚举作为 Visual Basic 运行时库的一部分。 可以在代码中使用这些常量的值。 每个枚举表示特定的功能类别。 有关详细信息，请参阅[常量和枚举](../../visual-basic/language-reference/constants-and-enumerations.md)。  
+## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic Constants and Enumerations  
+
+ The `Microsoft.VisualBasic` namespace provides constants and enumerations as part of the Visual Basic run-time library. You can use these constant values in your code. Each enumeration represents a particular category of functionality. For more information, see [Constants and Enumerations](../../visual-basic/language-reference/constants-and-enumerations.md).  
   
 ## <a name="see-also"></a>请参阅
 

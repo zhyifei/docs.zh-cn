@@ -1,15 +1,15 @@
 ---
-title: 如何：联接两个集合（LINQ to XML）（Visual Basic）
+title: 'How to: Join Two Collections (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 5a5758d4-906b-4285-908d-5b930db192e6
-ms.openlocfilehash: cb39895ec5916eb417fb2a161e7c1307087c09c5
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 404a43f52fce141b515da389090c81c57186f2e2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320577"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344538"
 ---
-# <a name="how-to-join-two-collections-linq-to-xml-visual-basic"></a>如何：联接两个集合（LINQ to XML）（Visual Basic）
+# <a name="how-to-join-two-collections-linq-to-xml-visual-basic"></a>How to: Join Two Collections (LINQ to XML) (Visual Basic)
 XML 文档中的元素或属性有时可以引用另一个其他元素或属性。 例如，[示例 XML 文件：客户和订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) XML 文档包含一个客户列表和一个订单列表。 每个 `Customer` 元素都包含一个 `CustomerID` 属性。 每个 `Order` 元素都包含一个 `CustomerID` 元素。 每个订单中的 `CustomerID` 元素都引用客户中的 `CustomerID` 属性。  
   
  主题[示例 XSD 文件：客户和订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)包含一个可用于验证此文档的 XSD。 它使用 XSD 的 `xs:key` 和 `xs:keyref` 功能，将 `CustomerID` 元素的 `Customer` 属性设置为键，并在每个 `CustomerID` 元素的 `Order` 元素和每个 `CustomerID` 元素的 `Customer` 属性之间建立关系。  
@@ -18,7 +18,7 @@ XML 文档中的元素或属性有时可以引用另一个其他元素或属性�
   
  请注意，由于没有可用的索引，这种联接的运行时性能较差。  
   
- 有关 `Join` 的详细信息，请参阅[联接操作（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)。  
+ For more detailed information about `Join`, see [Join Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md).  
   
 ## <a name="example"></a>示例  
  下面的示例将 `Customer` 元素与 `Order` 元素联接在一起，并生成一个新的 XML 文档，该文档包含订单中的 `CompanyName` 元素。  
@@ -137,4 +137,4 @@ Attempting to validate, custOrdDoc validated
   
 ## <a name="see-also"></a>请参阅
 
-- [高级查询技术（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

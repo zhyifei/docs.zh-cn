@@ -1,38 +1,38 @@
 ---
-title: 如何：创建一个过程，返回值 (Visual Basic)
+title: 如何：创建返回值的过程
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
-ms.openlocfilehash: 115c1df4bd49d5848d72c4cbd0242a49a12740c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 218dbb52abc0100724d38d10be91ef24252d5226
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863722"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349718"
 ---
-# <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>如何：创建一个过程，返回值 (Visual Basic)
-您使用`Function`值返回给调用代码的过程。  
+# <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>如何：创建返回值的过程 (Visual Basic)
+You use a `Function` procedure to return a value to the calling code.  
   
-### <a name="to-create-a-procedure-that-returns-a-value"></a>若要创建的过程将返回一个值  
+### <a name="to-create-a-procedure-that-returns-a-value"></a>To create a procedure that returns a value  
   
-1. 任何其他过程之外，使用`Function`语句后, 跟`End Function`语句。  
+1. Outside any other procedure, use a `Function` statement, followed by an `End Function` statement.  
   
-2. 在中`Function`语句，请按照`Function`关键字的过程，然后在括号中的参数列表的名称。  
+2. In the `Function` statement, follow the `Function` keyword with the name of the procedure, and then the parameter list in parentheses.  
   
-3. 括号后跟`As`子句指定返回的值的数据类型。  
+3. Follow the parentheses with an `As` clause to specify the data type of the returned value.  
   
-4. 将过程的代码语句之间`Function`和`End Function`语句。  
+4. Place the procedure's code statements between the `Function` and `End Function` statements.  
   
-5. 使用`Return`语句以返回到调用代码的值。  
+5. Use a `Return` statement to return the value to the calling code.  
   
-     以下`Function`过程计算的最长边或斜边的直角三角形而言，其他两个方面为给定的值。  
+     The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, given the values for the other two sides.  
   
      [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
-     下面的示例演示对典型调用`hypotenuse`。  
+     The following example shows a typical call to `hypotenuse`.  
   
      [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
@@ -45,4 +45,4 @@ ms.locfileid: "61863722"
 - [过程参数和自变量](./procedure-parameters-and-arguments.md)
 - [Function 语句](../../../../visual-basic/language-reference/statements/function-statement.md)
 - [如何：从过程返回值](./how-to-return-a-value-from-a-procedure.md)
-- [如何：调用返回的值的过程](./how-to-call-a-procedure-that-returns-a-value.md)
+- [如何：调用返回值的过程](./how-to-call-a-procedure-that-returns-a-value.md)

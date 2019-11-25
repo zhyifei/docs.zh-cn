@@ -1,5 +1,5 @@
 ---
-title: UShort 数据类型 (Visual Basic)
+title: Ushort 数据类型
 ms.date: 01/31/2018
 f1_keywords:
 - vb.ushort
@@ -16,39 +16,39 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: d85219fad631b09c19eac054b87d4843b0c73a45
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7cdbd5fb192fd5cc1be6260dcdcdb1f30cf3f865
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646936"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343854"
 ---
-# <a name="ushort-data-type-visual-basic"></a>UShort 数据类型 (Visual Basic)
+# <a name="ushort-data-type-visual-basic"></a>UShort data type (Visual Basic)
 
-包含无符号的 16 位 （2 个字节） 整数取值范围为 0 到 65,535。  
+Holds unsigned 16-bit (2-byte) integers ranging in value from 0 through 65,535.  
   
 ## <a name="remarks"></a>备注
 
- 使用`UShort`数据类型来包含二进制数据太大， `Byte`。  
+ Use the `UShort` data type to contain binary data too large for `Byte`.  
   
  `UShort` 的默认值为 0。  
 
-## <a name="literal-assignments"></a>文本分配
+## <a name="literal-assignments"></a>Literal assignments
 
-您可以声明并初始化`UShort`变量由将其分配十进制文本、 十六进制文本八进制文本，或 （Visual Basic 从 2017年开始） 二进制文本。 如果整数文本在 `UShort` 范围之外（即，如果它小于 <xref:System.UInt16.MinValue?displayProperty=nameWithType> 或大于 <xref:System.UInt16.MaxValue?displayProperty=nameWithType>），会发生编译错误。
+You can declare and initialize a `UShort` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal. 如果整数文本在 `UShort` 范围之外（即，如果它小于 <xref:System.UInt16.MinValue?displayProperty=nameWithType> 或大于 <xref:System.UInt16.MaxValue?displayProperty=nameWithType>），会发生编译错误。
 
-在以下示例中，整数等于 65034、 表示为十进制、 十六进制和二进制文本分配给`UShort`值。
+In the following example, integers equal to 65,034 that are represented as decimal, hexadecimal, and binary literals are assigned to `UShort` values.
   
 [!code-vb[UShort](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UShort)]
 
 > [!NOTE]
-> 使用前缀`&h`或`&H`来表示十六进制文本前缀`&b`或`&B`来表示二进制文本和前缀`&o`或`&O`来表示八进制文本。 十进制文本没有前缀。
+> You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal. 十进制文本没有前缀。
 
-从 Visual Basic 2017 开始，你还可以使用下划线字符， `_`，作为数字分隔符，以增强可读性，如以下示例所示。
+Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.
 
 [!code-vb[UShort](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UShortS)]
 
-从 Visual Basic 15.5 开始，还可以使用下划线字符 (`_`) 作为前缀和十六进制、二进制或八进制数字之间的前导分隔符。 例如：
+Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. 例如:
 
 ```vb
 Dim number As UShort = &H_FF8C
@@ -56,7 +56,7 @@ Dim number As UShort = &H_FF8C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-此外可以包含数值`US`或`us`[键入字符](../../programming-guide/language-features/data-types/type-characters.md)来表示`UShort`数据类型，如以下示例所示。
+Numeric literals can also include the `US` or `us` [type character](../../programming-guide/language-features/data-types/type-characters.md) to denote the `UShort` data type, as the following example shows.
 
 ```vb
 Dim number = &H_5826us
@@ -64,15 +64,15 @@ Dim number = &H_5826us
 
 ## <a name="programming-tips"></a>编程提示
   
-- **负号。** 因为`UShort`是无符号的类型，它不能表示为负数。 如果使用一元负 (`-`) 运算符的表达式的计算结果为类型`UShort`，Visual Basic 将转换为表达式`Integer`第一个。  
+- **Negative Numbers.** Because `UShort` is an unsigned type, it cannot represent a negative number. If you use the unary minus (`-`) operator on an expression that evaluates to type `UShort`, Visual Basic converts the expression to `Integer` first.  
   
-- **CLS 遵从性。** `UShort`数据类型不属于[公共语言规范](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS)，因此符合 cls 的代码不能使用使用它的组件。
+- **CLS Compliance.** The `UShort` data type is not part of the [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), so CLS-compliant code cannot consume a component that uses it.
   
-- **扩大转换。** `UShort`数据类型加宽到`Integer`， `UInteger`， `Long`， `ULong`， `Decimal`， `Single`，和`Double`。 这意味着可以将转换`UShort`而不会遇到这些类型的任何<xref:System.OverflowException?displayProperty=nameWithType>错误。  
+- **Widening.** The `UShort` data type widens to `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, and `Double`. This means you can convert `UShort` to any of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.  
   
-- **类型字符。** 追加文本类型字符`US`为文本将其强制转换到`UShort`数据类型。 `UShort` 有没有标识符类型字符。  
+- **Type Characters.** Appending the literal type characters `US` to a literal forces it to the `UShort` data type. `UShort` has no identifier type character.  
   
-- **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.UInt16?displayProperty=nameWithType> 结构。  
+- **Framework Type.** .NET Framework 中的对应类型是 <xref:System.UInt16?displayProperty=nameWithType> 结构。  
   
 ## <a name="see-also"></a>请参阅
 
@@ -80,5 +80,5 @@ Dim number = &H_5826us
 - [数据类型](../../../visual-basic/language-reference/data-types/index.md)
 - [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [如何：调用需要使用无符号类型的 Windows 函数](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [如何：调用采用无符号类型的 Windows 函数](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
 - [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

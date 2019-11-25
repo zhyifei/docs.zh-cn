@@ -1,15 +1,15 @@
 ---
-title: 创建自定义特性（Visual Basic）
+title: 创建自定义特性
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-ms.openlocfilehash: 3b1b03f69229bd4d824d6fff734b83400c2aab44
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 773a3e8e974f37a1554892dd3441c115681c5bae
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524301"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350147"
 ---
-# <a name="creating-custom-attributes-visual-basic"></a>创建自定义特性（Visual Basic）
+# <a name="creating-custom-attributes-visual-basic"></a>Creating Custom Attributes (Visual Basic)
 
 可通过定义特性类创建自己的自定义特性，特性类是直接或间接派生自 <xref:System.Attribute> 的类，可快速轻松地识别元数据中的特性定义。 假设希望使用编写类型的程序员的姓名来标记该类型。 可能需要定义一个自定义 `Author` 特性类：
 
@@ -71,4 +71,4 @@ End Class
 - [反射 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
 - [属性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
 - [使用反射访问特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-- [AttributeUsage （Visual Basic）](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+- [AttributeUsage (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)

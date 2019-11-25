@@ -1,34 +1,34 @@
 ---
-title: 其他数据类型 (Visual Basic)
+title: 其他数据类型
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-ms.openlocfilehash: 4808d87322d5b21b70ec38e2eb31b2b204938745
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cc6262b5bb305bb839917e222d831fa3340a1b14
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008236"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346337"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>其他数据类型 (Visual Basic)
-Visual Basic 提供几种数据类型不是针对数字或字符。 相反，它们处理专用数据如是/否值、 日期/时间值和对象地址。  
+Visual Basic supplies several data types that are not oriented toward numbers or characters. Instead, they deal with specialized data such as yes/no values, date/time values, and object addresses.  
   
- 显示 Visual Basic 数据类型的并排比较的表，请参阅[数据类型](../../../../visual-basic/language-reference/data-types/index.md)。  
+ For a table showing a side-by-side comparison of the Visual Basic data types, see [Data Types](../../../../visual-basic/language-reference/data-types/index.md).  
   
-## <a name="boolean-type"></a>布尔值类型  
- [布尔数据类型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)是一个无符号的值，将被解释为任一`True`或`False`。 其数据宽度取决于实现的平台。 如果一个变量可以包含仅两个状态如 true/false 的值是/否或开/关，将其声明为`Boolean`。  
+## <a name="boolean-type"></a>Boolean Type  
+ The [Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) is an unsigned value that is interpreted as either `True` or `False`. Its data width depends on the implementing platform. If a variable can contain only two-state values such as true/false, yes/no, or on/off, declare it as `Boolean`.  
   
-## <a name="date-type"></a>日期类型  
- [日期数据类型](../../../../visual-basic/language-reference/data-types/date-data-type.md)是一个 64 位值，包含日期和时间信息。 每个增量表示自 （上午 12:00） 开始后所用时间的 100 纳秒为单位的 1 公历日历中每 1 年月 1 日。 如果一个变量可以包含日期值、 时间值，或同时，将其声明为`Date`。  
+## <a name="date-type"></a>Date Type  
+ The [Date Data Type](../../../../visual-basic/language-reference/data-types/date-data-type.md) is a 64-bit value that holds both date and time information. Each increment represents 100 nanoseconds of elapsed time since the beginning (12:00 AM) of January 1 of the year 1 in the Gregorian calendar. If a variable can contain a date value, a time value, or both, declare it as `Date`.  
   
 ## <a name="object-type"></a>对象类型  
- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)是指向你的应用程序或通过在其他一些应用程序中的对象实例的 32 位地址。 `Object`变量可以是指你的应用程序识别的任何对象或任何数据类型的数据。 这包括*值类型*，如`Integer`， `Boolean`，和结构实例，并*引用类型*，这是实例创建的对象的类如`String`和<xref:System.Windows.Forms.Form>，以及数组实例。  
+ The [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) is a 32-bit address that points to an object instance within your application or in some other application. An `Object` variable can refer to any object your application recognizes, or to data of any data type. This includes both *value types*, such as `Integer`, `Boolean`, and structure instances, and *reference types*, which are instances of objects created from classes such as `String` and <xref:System.Windows.Forms.Form>, and array instances.  
   
- 如果一个变量存储指向你在编译时，不知道类的实例或者它可以指向不同的数据类型的数据，将其声明为`Object`。  
+ If a variable stores a pointer to an instance of a class that you do not know at compile time, or if it can point to data of various data types, declare it as `Object`.  
   
- 利用`Object`数据类型是，可以使用它来存储任何数据类型的数据。 缺点是会产生额外的操作，需要更多的执行时间并提高执行速度慢的应用程序。 如果您使用`Object`对于值类型变量，则会产生*装箱*并*取消装箱*。 如果将其用于引用类型，则会产生*后期绑定*。  
+ The advantage of the `Object` data type is that you can use it to store data of any data type. The disadvantage is that you incur extra operations that take more execution time and make your application perform slower. If you use an `Object` variable for value types, you incur *boxing* and *unboxing*. If you use it for reference types, you incur *late binding*.  
   
 ## <a name="see-also"></a>请参阅
 

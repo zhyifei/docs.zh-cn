@@ -1,15 +1,15 @@
 ---
-title: 教程：延迟的执行 (Visual Basic)
+title: 'Tutorial: Deferred Execution'
 ms.date: 07/20/2015
 ms.assetid: c80d53a8-1a30-4115-b232-52f0d089fec5
-ms.openlocfilehash: d78d298f7691c4f1df291fa865c92894414ead58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a38ec1540d44dbc8710866de804a4935f8d17a2c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907746"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350535"
 ---
-# <a name="tutorial-deferred-execution-visual-basic"></a>教程：延迟的执行 (Visual Basic)
+# <a name="tutorial-deferred-execution-visual-basic"></a>Tutorial: Deferred Execution (Visual Basic)
 本教程阐释将查询链接在一起时的处理模型。 将查询链接在一起是编写函数转换的一个关键部分。 确切理解链接的查询如何工作非常重要。  
   
  处理 Office Open XML 文档的查询广泛使用了这种方法。  
@@ -18,9 +18,9 @@ ms.locfileid: "61907746"
   
 |主题|描述|  
 |-----------|-----------------|  
-|[延迟的执行和迟缓计算在 LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)|描述延迟执行和迟缓计算的概念。|  
-|[延迟的执行示例 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)|提供一个延迟执行的示例。|  
+|[Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)|描述延迟执行和迟缓计算的概念。|  
+|[Deferred Execution Example (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)|提供一个延迟执行的示例。|  
   
 ## <a name="see-also"></a>请参阅
 
-- [XML (Visual Basic 中) 的纯功能转换](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
+- [Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

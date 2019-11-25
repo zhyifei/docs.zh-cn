@@ -14,16 +14,16 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 4f50d4d446896e12b5beb86fc649ea4fa7c82718
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ed9fd55fd84606d2083e0576581391331769a1e6
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775542"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089280"
 ---
 # <a name="metadata-and-markdown-template"></a>元数据和 Markdown 模板
 
-此 dotnet/文档模板包含 Markdown 语法的示例以及有关设置元数据的指南。 若要充分利用此模板，必须同时查看[原始 Markdown](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md)和[呈现的视图](https://github.com/dotnet/docs/blob/master/styleguide/template.md)（例如，原始 Markdown 显示元数据块，而呈现的视图不显示）。
+此 dotnet/文档模板包含 Markdown 语法的示例以及有关设置元数据的指南。 若要充分利用该模板，则必须查看[原始 Markdown](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md) 和[呈现的视图](https://github.com/dotnet/docs/blob/master/styleguide/template.md)。
 
 创建 Markdown 文件时，应将此模板复制到新文件中，按下面的指定填写元数据，将上面的 H1 标题设置为本文的标题，并删除内容。
 
@@ -38,7 +38,7 @@ ms.locfileid: "72775542"
 - **描述**：概括文章内容。 它通常显示在搜索结果页中，但不用于搜索排名。 其长度应为 115-145 个字符，包括空格。
 - “作者”和“ ms.author”   ：“作者”字段应包含作者的“GitHub 用户名”，而不是其别名  。  另一方面，“ms.author”字段应包含 Microsoft 别名，并指示负责维护该文章的人员  。
 - **ms.topic**：主题类型。 最常见的值为 `conceptual` 并且在全局级别进行设置。 使用的其他常用值为 `tutorial`、`overview` 和 `reference`。
-- “ms.devlang”定义主题显示的语言筛选器  。 可以在[支持的语言](#supported-languages)部分中查看受支持的值列表。 仅当主题涵盖了多个编程语言时才需要设置。 通常，只在内容中使用 `csharp`、`vb`、`fsharp` 和 `cpp` 作为值。
+- “dev_langs”  定义主题显示的语言筛选器。 可以在[支持的语言](#supported-languages)部分中查看受支持的值列表。 仅当主题涵盖了多个编程语言时才需要设置。 通常，只在内容中使用 `csharp`、`vb`、`fsharp` 和 `cpp` 作为值。
 - **ms-chap**：用于 BI 目的的产品标识。 它们通常在全局级别进行设置，因此通常不会出现在每篇文章的元数据块中。
 - **ms.technology**：其他 BI 分类。 一些受支持的值是：适用于 C# 主题的 `devlang-csharp`、适用于 F# 主题的 `devlang-fsharp` 和适用于 VB 主题的 `devlang-visual-basic`。 对于其他指南，值将有所不同，因此请让团队成员提供指导。
 - **ms.date**：采用 MM/dd/yyyy 格式的日期。 显示在“已发布”页面上，表明刚对文章进行了重大编辑或保证是“最新”的（即项目已查看并被视为最新）。
@@ -70,7 +70,9 @@ Markdown 使用特殊字符如 \*、\` 和 \# 进行格式化。 如果要在内
 
 ## <a name="headings"></a>标题
 
-使用句式单词首字母大写。 始终将标题的第一个单词变成大写，但不要将标题中的冒号后面的单词大写（例如“How to: sort an array”）。
+使用句式单词首字母大写。 将标题、专有名词的第一个单词的第一个字母和冒号后的第一个字母大写（例如，“Tutorial:Predict prices using regression with ML.NET”）。
+
+请勿在“How to”之后添加冒号（例如，“How to sort an array”而不是“How to:Sort an array”）。
 
 标题使用 atx 样式，即在行的开头使用 1-6 个哈希字符 (#) 来表示标题，对应于 HTML 标题级别 H1 到 H6。 上面使用的是第一和第二级别标题示例。
 
@@ -140,9 +142,9 @@ UID 等同于完全限定的类型和成员名称。
 
 如果在 UID 后面添加 \*（或 %2A），则该链接将表示重载页，而不是特定的 API。 例如，如果希望使用通用方法而不是特定重载（比如 [List\<T>.BinarySearch(T, IComparer\<T>)](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch#System_Collections_Generic_List_1_BinarySearch__0_)）链接到 [List\<T>.BinarySearch 方法](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch)页，可以使用该类型。 当成员未重载时，还可以使用 \* 链接到成员页；这样可以避免在 UID 中包含参数列表。
 
-若要链接到特定的方法重载，必须包括该方法每个参数的完全限定类型名称。 例如，\<xref:System.DateTime.ToString> 链接到无参数的 [DateTime.ToString](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString) 方法，而 \<xref:System.DateTime.ToString(System.String,System.IFormatProvider)> 链接到 [DateTime.ToString(String,IFormatProvider)](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString_System_String_System_IFormatProvider_) 方法。 可以从 `https://xref.docs.microsoft.com/autocomplete` 中查找特定重载成员的 UID。 查询字符串“?text==\<type-member-name>”标识要查看其 UID 的类型或成员  。 例如，`https://xref.docs.microsoft.com/autocomplete?text=string.format` 检索 [String.Format](https://docs.microsoft.com/dotnet/api/system.string.format) 重载。
+若要链接到特定的方法重载，必须包括该方法每个参数的完全限定类型名称。 例如，\<xref:System.DateTime.ToString> 链接到无参数的 [DateTime.ToString](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString) 方法，而 \<xref:System.DateTime.ToString(System.String,System.IFormatProvider)> 链接到 [DateTime.ToString(String,IFormatProvider)](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString_System_String_System_IFormatProvider_) 方法。 可以从 <https://xref.docs.microsoft.com/autocomplete> 中查找特定重载成员的 UID。 查询字符串“?text==\<type-member-name>”标识要查看其 UID 的类型或成员  。 例如，<https://xref.docs.microsoft.com/autocomplete?text=string.format> 检索 [String.Format](https://docs.microsoft.com/dotnet/api/system.string.format) 重载。
 
-若要链接到泛型类型（如 [System.Collections.Generic.List\<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1)），请在泛型类型参数后面使用 ` (%60) 字符。 例如，\<xref:System.Nullable%601> 链接到 [System.Nullable\<T>](https://docs.microsoft.com/dotnet/api/system.nullable-1) 类型，而 \<xref:System.Func%602> 链接到 [System.Func\<T,TResult>](https://docs.microsoft.com/dotnet/api/system.func-2) 委托。
+若要链接到泛型类型（如 [System.Collections.Generic.List\<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1)），请在泛型类型参数后面使用 \` (%60) 字符。 例如，\<xref:System.Nullable%601> 链接到 [System.Nullable\<T>](https://docs.microsoft.com/dotnet/api/system.nullable-1) 类型，而 \<xref:System.Func%602> 链接到 [System.Func\<T,TResult>](https://docs.microsoft.com/dotnet/api/system.func-2) 委托。
 
 可以使用以下任一种语法：
 
@@ -165,7 +167,7 @@ UID 等同于完全限定的类型和成员名称。
 有两种方法可以查找 UID：
 
 - 查看要链接到的 API 页面的源，并找到 assetid 值。 请注意，各个重载值不会显示在源中。
-- 使用以下工具搜索 UID： https://xref.docs.microsoft.com/autocomplete?text=tostring （将 tostring 替换为尝试查找的部分 API 名称）。 该工具在 UID 的任何部分中搜索提供的 `text` 查询参数。 例如，可以搜索成员名称 (ToString)、部分成员名称 (ToStri)、类型和成员名称 (Double.ToString) 等。
+- 使用以下工具搜索 UID：<https://xref.docs.microsoft.com/autocomplete?text=tostring>（将 tostring 替换为尝试查找的部分 API 名称）。 该工具在 UID 的任何部分中搜索提供的 `text` 查询参数。 例如，可以搜索成员名称 (ToString)、部分成员名称 (ToStri)、类型和成员名称 (Double.ToString) 等。
 
 如果 UID 包含特殊字符 \`、\# 或 \*，则 UID 值需要分别使用 HTML 编码为 `%60`、`%23` 和 `%2A`。 有时会看到对括号进行编码，但这并不是必需的。
 
@@ -305,6 +307,7 @@ UID 等同于完全限定的类型和成员名称。
 |Objective-C|objc|
 |OData|odata|
 |PHP|php|
+|protobuf|protobuf|
 |PowerApps（小数点分隔符）|powerapps-dot|
 |PowerApps（逗号分隔符）|powerapps-comma|
 |PowerShell|powershell|
@@ -319,12 +322,13 @@ UID 等同于完全限定的类型和成员名称。
 |VBScript|vbscript|
 |XAML|xaml|
 |XML|xml|
+|yml|yml|
 
 `csharp-interactive` 名称指定 C# 语言，以及从浏览器中运行示例的能力。 这些代码片段在 Docker 容器中进行编译和执行，并且该程序执行的结果在用户浏览器窗口中显示。
 
 以下是使用 C# (\`\`\`csharp)、Python (\`\`\`python) 和 PowerShell (\`\`\`powershell) 的语言 ID 的代码块示例。
 
-##### <a name="c9839"></a>C&#9839;
+##### <a name="c"></a>C\#
 
 ```csharp
 using System;

@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-ms.openlocfilehash: d5bb81c618e3b27df32763948dbe56c9b37995e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8c8c9ebff259ccd991768afb8cdf9925a66aad0
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747701"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141613"
 ---
 # <a name="servicemodel-transaction-configuration"></a>ServiceModel 事务配置
-Windows Communication Foundation (WCF) 提供三个属性用于配置服务事务： `transactionFlow`， `transactionProtocol`，和`transactionTimeout`。  
+Windows Communication Foundation （WCF）提供了三个属性，用于为服务配置事务： `transactionFlow`、`transactionProtocol`和 `transactionTimeout`。  
   
 ## <a name="configuring-transactionflow"></a>配置 transactionFlow  
- WCF 提供了包含的预定义绑定的大多数`transactionFlow`和`transactionProtocol`属性，以便你可以配置为接受传入事务使用的是特定事务流协议特定的终结点的绑定。 此外，你可以使用 `transactionFlow` 元素及其 `transactionProtocol` 特性生成你自己的自定义绑定。 有关设置的配置元素的详细信息，请参阅[\<绑定 >](../../../../docs/framework/misc/binding.md)并[WCF 配置架构](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。  
+ WCF 提供的大多数预定义绑定都包含 `transactionFlow` 和 `transactionProtocol` 属性，以便您可以使用特定的事务流协议将绑定配置为接受特定终结点的传入事务。 此外，你可以使用 `transactionFlow` 元素及其 `transactionProtocol` 特性生成你自己的自定义绑定。 有关设置配置元素的详细信息，请参阅[\<绑定 >](../../configure-apps/file-schema/wcf/bindings.md)和[WCF 配置架构](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。  
   
  `transactionFlow` 属性指定是否为使用绑定的服务终结点启用事务流。  
   
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) 提供三个属性用于配置服务事�
 ```  
   
 ## <a name="configuring-transactiontimeout"></a>配置 transactionTimeout  
- 你可以配置`transactionTimeout`属性中，WCF 服务`behavior`配置文件元素。 下面的代码演示如何执行此操作。  
+ 可以在配置文件的 `behavior` 元素中为 WCF 服务配置 `transactionTimeout` 特性。 下面的代码演示如何执行此操作。  
   
 ```xml  
 <configuration>  
@@ -64,5 +64,5 @@ Windows Communication Foundation (WCF) 提供三个属性用于配置服务事�
   
 ## <a name="see-also"></a>请参阅
 
-- [\<binding>](../../../../docs/framework/misc/binding.md)
+- [\<binding >](../../configure-apps/file-schema/wcf/bindings.md)
 - [WCF 配置架构](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)

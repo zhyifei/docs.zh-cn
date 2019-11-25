@@ -1,5 +1,5 @@
 ---
-title: Public (Visual Basic)
+title: Public
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Public
@@ -8,32 +8,32 @@ helpviewer_keywords:
 - Public keyword [Visual Basic], syntax
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
-ms.openlocfilehash: 0b8c31facc3605ff5a77aecf7b11456b33fbab72
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 35bf1a65e0b8f24a1263adc480719c69b95dff9b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647744"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351296"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
-指定一个或多个声明的编程元素没有任何访问限制。  
+Specifies that one or more declared programming elements have no access restrictions.  
   
 ## <a name="remarks"></a>备注  
- 如果您要发布一个组件或一组组件，如类库，您通常希望可以访问您的程序集与互操作的任何代码的编程元素。 若要授予此类元素上的无限制访问权限，可将其与声明`Public`。  
+ If you are publishing a component or set of components, such as a class library, you usually want the programming elements to be accessible by any code that interoperates with your assembly. To confer such unlimited access on an element, you can declare it with `Public`.  
   
- 公共访问是编程元素的普通级别时不需要限制对它的访问。 请注意，接口、 模块、 类或结构声明一个元素的访问级别将默认为`Public`如果未另行声明。  
+ Public access is the normal level for a programming element when you do not need to limit access to it. Note that the access level of an element declared within an interface, module, class, or structure defaults to `Public` if you do not declare it otherwise.  
   
 ## <a name="rules"></a>规则  
   
-- **声明上下文。** 可以使用`Public`仅在模块、 接口或命名空间级别。 这意味着声明上下文`Public`元素必须是源文件、 命名空间、 接口、 模块、 类或结构，并且不能为一个过程。  
+- **Declaration Context.** You can use `Public` only at module, interface, or namespace level. This means the declaration context for a `Public` element must be a source file, namespace, interface, module, class, or structure, and cannot be a procedure.  
   
 ## <a name="behavior"></a>行为  
   
-- **访问级别。** 模块、 类或结构可以访问所有代码都可以都访问其`Public`元素。  
+- **Access Level.** All code that can access a module, class, or structure can access its `Public` elements.  
   
-- **默认访问权限。** 到公共访问权限，并且您过程默认值中的局部变量不能对其使用任何访问修饰符。  
+- **Default Access.** Local variables inside a procedure default to public access, and you cannot use any access modifiers on them.  
   
-- **访问修饰符。** 指定的访问级别的关键字称为*访问修饰符*。 访问修饰符的比较，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  `Public` 修饰符可用于下面的上下文中：  
   
@@ -72,7 +72,7 @@ ms.locfileid: "64647744"
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](private-protected.md)
 - [Protected Friend](protected-friend.md)
-- [在 Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [过程](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

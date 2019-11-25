@@ -1,5 +1,5 @@
 ---
-title: 记录来自应用程序的信息 (Visual Basic)
+title: 记录来自应用程序的信息
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Log object
@@ -9,19 +9,20 @@ helpviewer_keywords:
 - My.Application.Log object
 - examples [Visual Basic], logging application information
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
-ms.openlocfilehash: 3202bdb2c4274e6d3127537b7cae661ba6e63a35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dace4bac3bf7529b8c50a492a092ad478f4d9e2d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052503"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353254"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>记录来自应用程序的信息 (Visual Basic)
+
 本节包含的主题介绍如何使用 `My.Application.Log` 或 `My.Log` 对象记录来自应用程序的信息，以及如何扩展应用程序的日志记录功能。  
   
  `Log` 对象提供用于将信息写入应用程序的日志侦听器的方法，而 `Log` 对象的高级 `TraceSource` 属性提供详细的配置信息。 `Log` 对象由应用程序的配置文件配置。  
   
- `My.Log` 对象仅适用于 ASP.NET 应用程序。 对于客户端应用程序，请使用 `My.Application.Log`。 有关更多信息，请参见<xref:Microsoft.VisualBasic.Logging.Log>。  
+ `My.Log` 对象仅适用于 ASP.NET 应用程序。 对于客户端应用程序，请使用 `My.Application.Log`。 有关详细信息，请参阅 <xref:Microsoft.VisualBasic.Logging.Log>。  
   
 ## <a name="tasks"></a>任务  
   

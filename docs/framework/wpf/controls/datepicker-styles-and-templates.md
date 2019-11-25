@@ -9,20 +9,20 @@ helpviewer_keywords:
 - styles [WPF], DatePicker
 - states [WPF], DatePicker
 ms.assetid: c430a657-692f-44bd-a549-2341f92d6115
-ms.openlocfilehash: 323768b6221061d46446ab18f85555f5f7415e74
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 002d1c3271827239dcd3a319621f66fb5bc68d4e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460364"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283775"
 ---
 # <a name="datepicker-styles-and-templates"></a>DatePicker 样式和模板
-本主题介绍 <xref:System.Windows.Controls.DatePicker> 控件的样式和模板。 您可以修改默认 <xref:System.Windows.Controls.ControlTemplate> 以使控件具有独特的外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
+本主题介绍 <xref:System.Windows.Controls.DatePicker> 控件的样式和模板。 您可以修改默认 <xref:System.Windows.Controls.ControlTemplate> 以使控件具有独特的外观。 有关详细信息，请参阅为[控件创建模板](../../../desktop-wpf/themes/how-to-create-apply-template.md)。  
   
 ## <a name="datepicker-parts"></a>DatePicker 部件  
  下表列出了 <xref:System.Windows.Controls.DatePicker> 控件的已命名部分。  
   
-|部件|键入|描述|  
+|部件|Type|描述|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.Controls.Grid>|控件的根。|  
 |PART_Button|<xref:System.Windows.Controls.Button>|用于打开和关闭 <xref:System.Windows.Controls.Calendar>的按钮。|  
@@ -34,7 +34,7 @@ ms.locfileid: "73460364"
   
 |VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
-|普通|CommonStates|默认状态。|  
+|一般|CommonStates|默认状态。|  
 |Disabled|CommonStates|<xref:System.Windows.Controls.DatePicker> 处于禁用状态。|  
 |有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  
@@ -43,7 +43,7 @@ ms.locfileid: "73460364"
 ## <a name="datepickertextbox-parts"></a>DatePickerTextBox 部件  
  下表列出了 <xref:System.Windows.Controls.Primitives.DatePickerTextBox> 控件的已命名部分。  
   
-|部件|键入|描述|  
+|部件|Type|描述|  
 |-|-|-|  
 |PART_Watermark|<xref:System.Windows.Controls.ContentControl>|包含 <xref:System.Windows.Controls.DatePicker>中的初始文本的元素。|  
 |PART_ContentElement|<xref:System.Windows.FrameworkElement>|可包含 <xref:System.Windows.FrameworkElement>的可视元素。 <xref:System.Windows.Controls.TextBox> 的文本显示在此元素中。|  
@@ -53,7 +53,7 @@ ms.locfileid: "73460364"
   
 |VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
-|普通|CommonStates|默认状态。|  
+|一般|CommonStates|默认状态。|  
 |Disabled|CommonStates|<xref:System.Windows.Controls.Primitives.DatePickerTextBox> 处于禁用状态。|  
 |MouseOver|CommonStates|鼠标指针置于 <xref:System.Windows.Controls.Primitives.DatePickerTextBox>上。|  
 |ReadOnly|CommonStates|用户无法更改 <xref:System.Windows.Controls.Primitives.DatePickerTextBox>中的文本。|  
@@ -76,11 +76,11 @@ ms.locfileid: "73460364"
   
  有关完整示例，请参阅[使用 ControlTemplates 设置样式示例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [控件样式和模板](control-styles-and-templates.md)
 - [控件自定义](control-customization.md)
 - [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)
+- [为控件创建模板](../../../desktop-wpf/themes/how-to-create-apply-template.md)

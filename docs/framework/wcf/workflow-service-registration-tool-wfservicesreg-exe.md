@@ -2,12 +2,12 @@
 title: 工作流服务注册工具 (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: bb0989fb8747a5065ce3d7332311cdefba95b80d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 6b1a0b990b1657e724f527b5beccce0e8a6391a6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425291"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281669"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>工作流服务注册工具 (WFServicesReg.exe)
 工作流服务注册工具 (WFServicesReg.exe) 是一个独立的工具，可用于添加、移除或修复 Windows Workflow Foundation (WF) 服务的配置元素。  
@@ -19,7 +19,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ```  
   
 ## <a name="remarks"></a>备注  
- 该工具可以在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 安装位置（具体为 %windir%\Microsoft.NET\Framework\v3.5）或 64 位计算机上的 %windir%\Microsoft.NET\Framework64\v3.5 中找到。  
+ 此工具可在 .NET Framework 3.5 安装位置（具体来说就是%windir%\Microsoft.NET\Framework\v3.5）或64位计算机上的%windir%\Microsoft.NET\Framework64\v3.5 中找到。  
   
  下表说明了可用于工作流服务注册工具 (WFServicesReg.exe) 的选项。  
   
@@ -34,7 +34,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="registration"></a>注册  
  该工具检查 Web.config 文件并注册以下内容：  
   
-- [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 引用程序集。  
+- .NET Framework 3.5 引用程序集。  
   
 - 用于 .xoml 文件的生成提供程序。  
   
@@ -70,7 +70,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="usage-scenarios"></a>使用方案  
   
 ### <a name="installing-iis-after-net-framework-35-is-installed"></a>安装 .NET Framework 3.5 之后安装 IIS  
- 在 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 计算机上，在安装 IIS 之前应安装 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]。 由于 IIS 元数据库不可用，[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 安装将在不安装 .xoml 和 .rules 脚本映射的情况下成功完成。  
+ 在 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 计算机上，在安装 IIS 之前，.NET Framework 3.5。 由于 IIS 元数据库不可用，.NET Framework 3.5 的安装成功，无需安装 xoml 和。  
   
  安装 IIS 后，可以使用具有 `/c` 开关的 WFServicesReg.exe 工具来安装这些特定的脚本映射。  
   
@@ -85,4 +85,4 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
  若要修复特定网站的已删除处理程序，您应运行 "Wfservicesreg.exe/r" 以从所有网站中删除处理程序，然后运行 "Wfservicesreg.exe/c" 为所有网站创建适当的处理程序。  
   
 ### <a name="configuring-handlers-after-switching-iis-mode"></a>切换 IIS 模式后配置处理程序  
- 当 IIS 处于共享配置模式并且已安装 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 时，IIS 元数据库将配置在共享位置下。 如果将 IIS 切换到非共享配置模式，则本地元数据库将不包含必需的处理程序。 若要正确配置本地元数据库，你可以将共享元数据库导入到本地，或运行 "Wfservicesreg.exe/c"，这将配置本地元数据库。
+ 如果 IIS 处于共享配置模式并且安装了 .NET Framework 3.5，则会在共享位置下配置 IIS 元数据库。 如果将 IIS 切换到非共享配置模式，则本地元数据库将不包含必需的处理程序。 若要正确配置本地元数据库，你可以将共享元数据库导入到本地，或运行 "Wfservicesreg.exe/c"，这将配置本地元数据库。

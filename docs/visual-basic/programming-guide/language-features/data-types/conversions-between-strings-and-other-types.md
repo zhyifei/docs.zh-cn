@@ -1,5 +1,5 @@
 ---
-title: 字符串和其他类型之间的转换 (Visual Basic)
+title: 字符串和其他类型之间的转换
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data type conversion [Visual Basic], string
@@ -9,43 +9,43 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-ms.openlocfilehash: 06dabbb5d5dfbfb545f01afb157fd532ca0551df
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: ac2e8ce912080c284d8ba0228830dd6b3ddf5f6e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197331"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350141"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>字符串和其他类型之间的转换 (Visual Basic)
-您可以将数字、`Boolean` 或日期/时间值转换为 `String`。 还可以反向转换（从字符串值转换为数字、`Boolean` 或 `Date`），前提是字符串的内容可以解释为目标数据类型的有效值。 如果无法运行，则会发生运行时错误。  
+You can convert a numeric, `Boolean`, or date/time value to a `String`. You can also convert in the reverse direction — from a string value to numeric, `Boolean`, or `Date` — provided the contents of the string can be interpreted as a valid value of the destination data type. If they cannot, a run-time error occurs.  
   
- 所有这些分配的转换均为任意方向，均为收缩转换。 应使用类型转换关键字（`CBool`、`CByte`、`CDate`、`CDbl`、`CDec`、`CInt`、`CLng`、`CSByte`、`CShort`、`CSng`、0、1、2、3 和 4）。 <xref:Microsoft.VisualBasic.Strings.Format%2A> 和 <xref:Microsoft.VisualBasic.Conversion.Val%2A> 函数使你可以更进一步控制字符串和数字之间的转换。  
+ The conversions for all these assignments, in either direction, are narrowing conversions. You should use the type conversion keywords (`CBool`, `CByte`, `CDate`, `CDbl`, `CDec`, `CInt`, `CLng`, `CSByte`, `CShort`, `CSng`, `CStr`, `CUInt`, `CULng`, `CUShort`, and `CType`). The <xref:Microsoft.VisualBasic.Strings.Format%2A> and <xref:Microsoft.VisualBasic.Conversion.Val%2A> functions give you additional control over conversions between strings and numbers.  
   
- 如果已定义类或结构，则可以定义 `String` 与类或结构的类型之间的类型转换运算符。 有关更多信息，请参见 [How to: Define a Conversion Operator](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)。  
+ If you have defined a class or structure, you can define type conversion operators between `String` and the type of your class or structure. 有关更多信息，请参见 [How to: Define a Conversion Operator](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)。  
   
-## <a name="conversion-of-numbers-to-strings"></a>将数字转换为字符串  
- 您可以使用 `Format` 函数将数字转换为带格式的字符串，该字符串不仅可以包含适当的数字，还可以包含格式符号，如货币符号（如 `$`）、千位分隔符或*数字分组符号*（如 `,`）和十进制分隔符（如 `.`）。 `Format` 根据 Windows**控制面板**中指定的**区域选项**设置自动使用适当的符号。  
+## <a name="conversion-of-numbers-to-strings"></a>Conversion of Numbers to Strings  
+ You can use the `Format` function to convert a number to a formatted string, which can include not only the appropriate digits but also formatting symbols such as a currency sign (such as `$`), thousands separators or *digit grouping symbols* (such as `,`), and a decimal separator (such as `.`). `Format` automatically uses the appropriate symbols according to the **Regional Options** settings specified in the Windows **Control Panel**.  
   
- 请注意，串联（`&`）运算符可以隐式地将数字转换为字符串，如下面的示例所示。  
+ Note that the concatenation (`&`) operator can convert a number to a string implicitly, as the following example shows.  
   
 ```vb  
 ' The following statement converts count to a String value.  
 Str = "The total count is " & count  
 ```  
   
-## <a name="conversion-of-strings-to-numbers"></a>将字符串转换为数字  
- 您可以使用 `Val` 函数将字符串中的数字显式转换为数字。 `Val` 读取字符串，直到遇到数字、空格、制表符、换行符或句点以外的字符。 序列 "& O" 和 "& H" 改变数值系统的基数，并终止扫描。 在停止读取之前，`Val` 会将所有合适的字符都转换为数值。 例如，下面的语句返回 `141.825` 的值。  
+## <a name="conversion-of-strings-to-numbers"></a>Conversion of Strings to Numbers  
+ You can use the `Val` function to explicitly convert the digits in a string to a number. `Val` reads the string until it encounters a character other than a digit, space, tab, line feed, or period. The sequences "&O" and "&H" alter the base of the number system and terminate the scanning. Until it stops reading, `Val` converts all appropriate characters to a numeric value. For example, the following statement returns the value `141.825`.  
   
  `Val("   14   1.825 miles")`  
   
- 当 Visual Basic 将字符串转换为数值时，它将使用 Windows**控制面板**中指定的 "**区域选项**" 设置来解释千位分隔符、小数点分隔符和货币符号。 这意味着，转换可能会在一个设置中失败，而不是另一个设置。 例如，`"$14.20"` 在英语（美国）区域设置中是可接受的，而不是任何法语区域设置。  
+ When Visual Basic converts a string to a numeric value, it uses the **Regional Options** settings specified in the Windows **Control Panel** to interpret the thousands separator, decimal separator, and currency symbol. This means that a conversion might succeed under one setting but not another. For example, `"$14.20"` is acceptable in the English (United States) locale but not in any French locale.  
   
 ## <a name="see-also"></a>请参阅
 
-- [Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [扩大转换和收缩转换](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [隐式转换和显式转换](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [如何：在 Visual Basic 中将对象转换为另一种类型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [How to: Convert an Object to Another Type in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
 - [数组转换](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
 - [数据类型](../../../../visual-basic/language-reference/data-types/index.md)
 - [类型转换函数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

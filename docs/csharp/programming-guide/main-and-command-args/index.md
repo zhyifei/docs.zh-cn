@@ -13,12 +13,12 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: 5de7e565560928b1867ba96c8937fd354c276806
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: a5707e8cfff11dd9d27fffc9deb41662fb2c4460
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774124"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281757"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() 和命令行参数（C# 编程指南）
 
@@ -35,6 +35,19 @@ ms.locfileid: "72774124"
 - `Main` 可以具有 `void`、`int`，或者以 C# 7.1、`Task` 或 `Task<int>` 返回类型开头。
 - 当且仅当 `Main` 返回 `Task` 或 `Task<int>` 时，`Main` 的声明可包括 [`async`](../../language-reference/keywords/async.md) 修饰符。 请注意，该操作可明确排除 `async void Main` 方法。
 - 使用或不使用包含命令行自变量的 `string[]` 参数声明 `Main` 方法都行。 使用 Visual Studio 创建 Windows 应用程序时，可以手动添加此形参，也可以使用 <xref:System.Environment.GetCommandLineArgs> 方法来获取[命令行实参](command-line-arguments.md)。 参数被读取为从零开始编制索引的命令行自变量。 与 C 和 C++ 不同，程序的名称不被视为 `args` 数组中的第一个命令行实参，但它是 <xref:System.Environment.GetCommandLineArgs> 方法中的第一个元素。
+
+以下是有效 `Main` 签名的列表：
+
+```csharp
+public static void Main() { }
+public static int Main() { }
+public static void Main(string[] args) { }
+public static int Main(string[] args) { }
+public static async Task Main() { }
+public static async Task<int> Main() { }
+public static async Task Main(string[] args) { }
+public static async Task<int> Main(string[] args) { }
+```
 
 添加 `async`、`Task` 和 `Task<int>` 返回类型可简化控制台应用程序需要启动时的程序代码，以及 `Main` 中的 `await` 异步操作。
 

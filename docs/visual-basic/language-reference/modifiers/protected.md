@@ -1,5 +1,5 @@
 ---
-title: Protected (Visual Basic)
+title: Protected
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Protected
@@ -10,38 +10,38 @@ helpviewer_keywords:
 - Protected access modifier
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-ms.openlocfilehash: 8370d15e99a6f7ed0868441a4e44360fb258be13
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 740c998b8a6ccc6798bce37e9b08e408dac7c17d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583066"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351303"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
 
-一个成员访问修饰符，它指定一个或多个已声明的编程元素只能从自己的类或派生类中访问。
+A member access modifier that specifies that one or more declared programming elements are accessible only from within their own class or from a derived class.
 
 ## <a name="remarks"></a>备注
 
-有时，在类中声明的编程元素包含敏感数据或受限制的代码，并希望限制对元素的访问。 但是，如果类可继承并且你需要派生类的层次结构，则这些派生类可能需要访问数据或代码。 在这种情况下，你希望可以从基类和所有派生类中访问元素。 若要以这种方式限制对某个元素的访问，可使用 `Protected` 声明该元素。
+Sometimes a programming element declared in a class contains sensitive data or restricted code, and you want to limit access to the element. However, if the class is inheritable and you expect a hierarchy of derived classes, it might be necessary for these derived classes to access the data or code. In such a case, you want the element to be accessible both from the base class and from all derived classes. To limit access to an element in this manner, you can declare it with `Protected`.
 
 > [!NOTE]
-> @No__t_0 访问修饰符可以与其他两个修饰符结合使用：
+> The `Protected` access modifier can be combined with two other modifiers:
 >
-> - [受保护的 Friend](protected-friend.md)修饰符使类成员可从该类、派生类以及在其中定义该类的同一程序集中访问。
-> - [私有受保护](private-protected.md)的修饰符使类成员可由派生类型访问，但仅包含在其包含的程序集中。
+> - The [Protected Friend](protected-friend.md) modifier makes a class member accessible from within that class, from derived classes, and from the same assembly in which the class is defined.
+> - The [Private Protected](private-protected.md) modifier makes a class member accessible by derived types, but only within its containing assembly.
 
 ## <a name="rules"></a>规则
 
-**声明上下文。** 只能在类级别使用 `Protected`。 这意味着 `Protected` 元素的声明上下文必须是类，且不能是源文件、命名空间、接口、模块、结构或过程。
+**Declaration Context.** You can use `Protected` only at the class level. This means the declaration context for a `Protected` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
 
 ## <a name="behavior"></a>行为
 
-- **访问级别。** 类中的所有代码都可以访问其元素。 从基类派生的任何类中的代码都可以访问基类的所有 `Protected` 元素。 这适用于派生的所有代。 这意味着，类可以访问基类的基类的 `Protected` 元素，等等。
+- **Access Level.** All code in a class can access its elements. Code in any class that derives from a base class can access all the `Protected` elements of the base class. This is true for all generations of derivation. This means that a class can access `Protected` elements of the base class of the base class, and so on.
 
-     受保护的访问不是友元访问的超集或子集。
+     Protected access is not a superset or subset of friend access.
 
-- **访问修饰符。** 指定访问级别的关键字称为*访问修饰符*。 有关访问修饰符的比较，请参阅[Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。
+- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
 `Protected` 修饰符可用于下面的上下文中：
 
@@ -76,7 +76,7 @@ ms.locfileid: "72583066"
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](private-protected.md)
 - [Protected Friend](protected-friend.md)
-- [Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [过程](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

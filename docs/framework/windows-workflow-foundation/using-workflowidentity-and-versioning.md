@@ -2,16 +2,16 @@
 title: 使用 WorkflowIdentity 和版本控制
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: 6b769224edcd9dfc51879c2c99e061a0e3f77e8d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 66ef4fed682554d9fab2a7b0f85bb9cfaf8e8a29
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958392"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74142044"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>使用 WorkflowIdentity 和版本控制
 
-<xref:System.Activities.WorkflowIdentity> 为工作流应用程序开发人员提供了一种将名称和 <xref:System.Version> 与工作流定义关联的方法，这种方法还可用于将此信息与持久化工作流实例相关联。 工作流应用程序开发人员可以使用这些标识信息，为一些情景（如并行执行一个工作流定义的多个版本）提供支持，并为其他功能（如动态更新）提供基础。 此主题概述了如何将 <xref:System.Activities.WorkflowIdentity> 与 <xref:System.Activities.WorkflowApplication> 承载一起使用。 有关工作流服务中工作流定义的并行执行的信息, 请参阅[WorkflowServiceHost 中的并行版本控制](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)。 有关动态更新的信息, 请参阅[动态更新](dynamic-update.md)。
+<xref:System.Activities.WorkflowIdentity> 为工作流应用程序开发人员提供了一种将名称和 <xref:System.Version> 与工作流定义关联的方法，这种方法还可用于将此信息与持久化工作流实例相关联。 工作流应用程序开发人员可以使用这些标识信息，为一些情景（如并行执行一个工作流定义的多个版本）提供支持，并为其他功能（如动态更新）提供基础。 此主题概述了如何将 <xref:System.Activities.WorkflowIdentity> 与 <xref:System.Activities.WorkflowApplication> 承载一起使用。 有关工作流服务中工作流定义的并行执行的信息，请参阅[WorkflowServiceHost 中的并行版本控制](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)。 有关动态更新的信息，请参阅[动态更新](dynamic-update.md)。
 
 ## <a name="in-this-topic"></a>在本主题中
 
@@ -89,9 +89,9 @@ The WorkflowIdentity ('MortgageWorkflow v1; Version=1.0.0.0') of the loaded inst
 为检索持久化工作流实例的 <xref:System.Activities.WorkflowIdentity>，将使用 <xref:System.Activities.WorkflowApplication.GetInstance%2A> 方法。 <xref:System.Activities.WorkflowApplication.GetInstance%2A> 方法使用持久化工作流实例的 <xref:System.Activities.WorkflowApplication.Id%2A> 和包含该持久化实例的 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>，并返回一个 <xref:System.Activities.WorkflowApplicationInstance>。 <xref:System.Activities.WorkflowApplicationInstance> 包含有关持久化工作流实例的信息，包括其关联的 <xref:System.Activities.WorkflowIdentity>。 主机可使用此关联 <xref:System.Activities.WorkflowIdentity> 在加载和恢复工作流实例时提供正确的工作流定义。
 
 > [!NOTE]
-> 空 <xref:System.Activities.WorkflowIdentity> 是有效的，主机可以用它将没有关联 <xref:System.Activities.WorkflowIdentity> 的持久化实例映射到正确的工作流定义。 如果最初编写工作流应用程序时没有采用工作流版本控制，或者应用程序从 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 升级而来，则可能发生这种情况。 有关详细信息, 请参阅[升级 .NET Framework 4 持久性数据库以支持工作流版本控制](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)。
+> 空 <xref:System.Activities.WorkflowIdentity> 是有效的，主机可以用它将没有关联 <xref:System.Activities.WorkflowIdentity> 的持久化实例映射到正确的工作流定义。 当最初未使用工作流版本写入工作流应用程序时，或者从 .NET Framework 4 升级应用程序时，可能会出现这种情况。 有关详细信息，请参阅[升级 .NET Framework 4 持久性数据库以支持工作流版本控制](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)。
 
-在下面的`Dictionary<WorkflowIdentity, Activity>`示例中, 用于将实例与其匹配的工作流定义相关联<xref:System.Activities.WorkflowIdentity> , 并使用`MortgageWorkflow` `identityV1`工作流定义启动工作流, 该工作流定义与<xref:System.Activities.WorkflowIdentity>.
+在下面的示例中，`Dictionary<WorkflowIdentity, Activity>` 用于将 <xref:System.Activities.WorkflowIdentity> 实例与其匹配的工作流定义进行关联，并使用与 `identityV1` <xref:System.Activities.WorkflowIdentity>关联的 `MortgageWorkflow` 工作流定义启动工作流。
 
 ```csharp
 WorkflowIdentity identityV1 = new WorkflowIdentity
@@ -146,9 +146,9 @@ wfApp.Load(instance);
 
 ## <a name="UpdatingWF4PersistenceDatabases"></a>升级 .NET Framework 4 持久性数据库以支持工作流版本控制
 
-SqlWorkflowInstanceStoreSchemaUpgrade.sql 数据库脚本旨在用于升级使用 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 数据库脚本创建的持久性数据库。 此脚本更新数据库以支持 .NET Framework 4.5 中引入的新版本控制功能。 数据库中任何持久化工作流实例都将获得默认的版本控制值，然后就可以参与并行执行和动态更新。
+提供 Sqlworkflowinstancestoreschemaupgrade.sql 数据库脚本来升级使用 .NET Framework 4 数据库脚本创建的持久性数据库。 此脚本更新数据库以支持 .NET Framework 4.5 中引入的新版本控制功能。 数据库中任何持久化工作流实例都将获得默认的版本控制值，然后就可以参与并行执行和动态更新。
 
-如果 .NET Framework 4.5 工作流应用程序尝试在未使用提供的脚本进行升级的持久性数据库上使用新的版本控制功能的任何持久性操作, <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException>将引发并带有类似于以下内容的消息:以下消息。
+如果 .NET Framework 4.5 工作流应用程序尝试在尚未使用提供的脚本进行升级的持久性数据库上使用新版本控制功能的任何持久性操作，将引发 <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException>，并附带类似于以下消息的消息。
 
 ```
 The SqlWorkflowInstanceStore has a database version of '4.0.0.0'. InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' cannot be run against this database version.  Please upgrade the database to '4.5.0.0'.
@@ -156,9 +156,9 @@ The SqlWorkflowInstanceStore has a database version of '4.0.0.0'. InstancePersis
 
 ### <a name="ToUpgrade"></a>升级数据库架构
 
-1. 打开 SQL Server Management Studio 并连接到持久性数据库服务器, 例如 **.\SQLEXPRESS**。
+1. 打开 SQL Server Management Studio 并连接到持久性数据库服务器，例如 **.\SQLEXPRESS**。
 
-2. 从 "**文件**" 菜单中选择 "**打开**"。 浏览到以下文件夹：`C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`
+2. 从 "**文件**" 菜单中**选择 "** **打开**"。 浏览到以下文件夹：`C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`
 
 3. 选择**sqlworkflowinstancestoreschemaupgrade.sql**并单击 "**打开**"。
 
@@ -166,4 +166,4 @@ The SqlWorkflowInstanceStore has a database version of '4.0.0.0'. InstancePersis
 
 5. 从 "**查询**" 菜单中选择 "**执行**"。
 
-查询完成时，数据库架构将升级，您可以根据需要查看分配给持久化工作流实例的默认工作流标识。 在**对象资源管理器**的 "**数据库**" 节点中展开持久性数据库, 然后展开 "**视图**" 节点。 右键单击 " **DurableInstancing** ", 然后选择 "**选择前1000行**"。 滚动到列的末尾, 并注意向视图添加了六个附加列:**IdentityName**、 **IdentityPackage**、 **Build**、**主要**、**次要**和**修订**。 对于这些字段, 任何持久化工作流的值都将为**null** , 表示 NULL 工作流标识。
+查询完成时，数据库架构将升级，您可以根据需要查看分配给持久化工作流实例的默认工作流标识。 在**对象资源管理器**的 "**数据库**" 节点中展开持久性数据库，然后展开 "**视图**" 节点。 右键单击 " **DurableInstancing** "，然后选择 "**选择前1000行**"。 滚动到列的末尾，并注意向视图添加了六个附加列： **IdentityName**、 **IdentityPackage**、 **Build**、**主要**、**次要**和**修订**。 对于这些字段，任何持久化工作流的值都将为**null** ，表示 NULL 工作流标识。

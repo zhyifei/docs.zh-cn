@@ -9,15 +9,15 @@ helpviewer_keywords:
 - templates [WPF], Menu
 - parts [WPF], Menu
 ms.assetid: b89da183-9b87-42c6-ac53-731a42c7b09e
-ms.openlocfilehash: 979ed7292a0f6582753305d1a7704c48aa751003
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3ce0be1fdeeee1465c2facb414cc7a081b268eb5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460219"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283476"
 ---
 # <a name="menu-styles-and-templates"></a>Menu 样式和模板
-本主题介绍 <xref:System.Windows.Controls.Menu> 控件的样式和模板。 您可以修改默认 <xref:System.Windows.Controls.ControlTemplate> 以使控件具有独特的外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
+本主题介绍 <xref:System.Windows.Controls.Menu> 控件的样式和模板。 您可以修改默认 <xref:System.Windows.Controls.ControlTemplate> 以使控件具有独特的外观。 有关详细信息，请参阅为[控件创建模板](../../../desktop-wpf/themes/how-to-create-apply-template.md)。  
   
 ## <a name="menu-parts"></a>菜单部件  
  <xref:System.Windows.Controls.Menu> 控件没有任何命名部分。  
@@ -36,7 +36,7 @@ ms.locfileid: "73460219"
 ## <a name="menuitem-parts"></a>MenuItem 部分  
  下表列出了 <xref:System.Windows.Controls.Menu> 控件的已命名部分。  
   
-|部件|键入|描述|  
+|部件|Type|描述|  
 |-|-|-|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|子菜单的区域。|  
   
@@ -70,11 +70,11 @@ ms.locfileid: "73460219"
   
  有关完整示例，请参阅[使用 ControlTemplates 设置样式示例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [控件样式和模板](control-styles-and-templates.md)
 - [控件自定义](control-customization.md)
 - [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)
+- [为控件创建模板](../../../desktop-wpf/themes/how-to-create-apply-template.md)

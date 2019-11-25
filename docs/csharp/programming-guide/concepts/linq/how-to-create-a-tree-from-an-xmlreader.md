@@ -1,15 +1,15 @@
 ---
-title: 如何：从 XmlReader 创建树 (C#)
+title: 如何从 XmlReader 创建树 (C#)
 ms.date: 07/20/2015
 ms.assetid: 60951c9c-7087-406c-b5bb-c60e58609b21
-ms.openlocfilehash: a0cff596e0a6d50aefab3645a99beec3277d05ec
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 196779a10678bdd3aa5399cf883af8c4b074e5df
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418313"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141312"
 ---
-# <a name="how-to-create-a-tree-from-an-xmlreader-c"></a>如何：从 XmlReader 创建树 (C#)
+# <a name="how-to-create-a-tree-from-an-xmlreader-c"></a>如何从 XmlReader 创建树 (C#)
 本主题演示如何直接从 <xref:System.Xml.XmlReader> 创建 XML 树。 若要从 <xref:System.Xml.Linq.XElement> 创建 <xref:System.Xml.XmlReader>，必须将 <xref:System.Xml.XmlReader> 定位在元素节点上。 <xref:System.Xml.XmlReader> 将跳过注释和处理指令，但如果 <xref:System.Xml.XmlReader> 定位在文本节点上，则将引发错误。 若要避免这类错误，请在从 <xref:System.Xml.XmlReader> 创建 XML 树之前，始终将 <xref:System.Xml.XmlReader> 定位在元素上。  
   
 ## <a name="example"></a>示例  

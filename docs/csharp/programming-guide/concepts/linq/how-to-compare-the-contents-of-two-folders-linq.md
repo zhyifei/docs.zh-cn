@@ -1,15 +1,15 @@
 ---
-title: 如何：比较两个文件夹的内容 (LINQ) (C#)
+title: 如何比较两个文件夹的内容 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: df71712ca1b59c706ede66488af8b1580677e299
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f64c82fcc63085c9479b0a3af91f0bdf5ee9eb95
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924228"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141392"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>如何：比较两个文件夹的内容 (LINQ) (C#)
+# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>如何比较两个文件夹的内容 (LINQ) (C#)
 此示例演示了比较两个文件列表的 3 种方法：  
   
 - 通过查询布尔值指定两个文件列表是否相同。  

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ToolBar [WPF], styles and templates
 - templates [WPF], ToolBar
 ms.assetid: bd875f46-4690-46f5-81e0-f11a9822484f
-ms.openlocfilehash: b782e62500edd14b40b1267c3b7f92758210a5c0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a984311234386cb205d5db35f18a743ca535ff05
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458207"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283660"
 ---
 # <a name="toolbar-styles-and-templates"></a>ToolBar 样式和模板
-本主题介绍 <xref:System.Windows.Controls.ToolBar> 控件的样式和模板。 您可以修改默认 <xref:System.Windows.Controls.ControlTemplate> 以使控件具有独特的外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
+本主题介绍 <xref:System.Windows.Controls.ToolBar> 控件的样式和模板。 您可以修改默认 <xref:System.Windows.Controls.ControlTemplate> 以使控件具有独特的外观。 有关详细信息，请参阅为[控件创建模板](../../../desktop-wpf/themes/how-to-create-apply-template.md)。  
   
 ## <a name="toolbar-parts"></a>工具栏部件  
  下表列出了 <xref:System.Windows.Controls.ToolBar> 控件的已命名部分。  
   
-|部件|键入|描述|  
+|部件|Type|描述|  
 |-|-|-|  
 |PART_ToolBarPanel|<xref:System.Windows.Controls.Primitives.ToolBarPanel>|包含 <xref:System.Windows.Controls.ToolBar>上的控件的对象。|  
 |PART_ToolBarOverflowPanel|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|对象，包含位于 <xref:System.Windows.Controls.ToolBar>溢出区中的控件。|  
@@ -49,11 +49,11 @@ ms.locfileid: "73458207"
   
  有关完整示例，请参阅[使用 ControlTemplates 设置样式示例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [控件样式和模板](control-styles-and-templates.md)
 - [控件自定义](control-customization.md)
 - [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)
+- [为控件创建模板](../../../desktop-wpf/themes/how-to-create-apply-template.md)

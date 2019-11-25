@@ -9,12 +9,12 @@ ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 581fcbfdfd7806b8f0f70347ac96f1bf09fa9098
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d0aa2c54f05cea658c95dc2c23b7ba4bb78835c9
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460945"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138924"
 ---
 # <a name="walkthrough-style-wpf-content"></a>演练：样式 WPF 内容
 
@@ -61,7 +61,7 @@ ms.locfileid: "73460945"
 
    `UserControl1` 在 WPF 设计器中打开。
 
-1. 在 XAML 视图中，将以下 XAML 插到 `<UserControl>` 开始标记后面。 此 XAML 创建具有对比渐变边框的渐变。 单击此控件后，将更改渐变以生成按下按钮的外观。 有关详细信息，请参阅[样式设置和模板化](../../wpf/controls/styling-and-templating.md)。
+1. 在 XAML 视图中，将以下 XAML 插到 `<UserControl>` 开始标记后面。 此 XAML 创建具有对比渐变边框的渐变。 单击此控件后，将更改渐变以生成按下按钮的外观。 有关详细信息，请参阅[样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)。
 
    ```xaml
    <UserControl.Resources>
@@ -142,4 +142,4 @@ ms.locfileid: "73460945"
 - [使用 WPF 控件](using-wpf-controls.md)
 - [在 Visual Studio 中设计 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [XAML 概述 (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
-- [样式设置和模板化](../../wpf/controls/styling-and-templating.md)
+- [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

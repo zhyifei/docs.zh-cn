@@ -1,12 +1,12 @@
 ---
 title: 特性 (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 7b78d5832c15d3d1142b80d2ccb96a72e4e20390
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374373"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141562"
 ---
 # <a name="attributes-c"></a>特性 (C#)
 
@@ -25,7 +25,7 @@ ms.locfileid: "70374373"
 
 在此示例中，<xref:System.SerializableAttribute> 特性用于将具体特征应用于类：
 
-[!code-csharp[Using the serializable attribute](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#1)]
+[!code-csharp[Using the serializable attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#1)]
 
 下方示例声明了一个具有特性 <xref:System.Runtime.InteropServices.DllImportAttribute> 的方法：
 
@@ -33,12 +33,12 @@ ms.locfileid: "70374373"
 
 如下方示例所示，可以将多个特性附加到声明中：
 
-[!code-csharp[Including the interop namespace](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#3)]
-[!code-csharp[Declaring two way marshaling for arguments](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#4)]
+[!code-csharp[Including the interop namespace](~/samples/snippets/csharp/attributes/AttributesOverview.cs#3)]
+[!code-csharp[Declaring two way marshaling for arguments](~/samples/snippets/csharp/attributes/AttributesOverview.cs#4)]
 
 对于给定实体，一些特性可以指定多次。 <xref:System.Diagnostics.ConditionalAttribute> 便属于此类多用途特性：
 
-[!code-csharp[Using the conditional attribute](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
+[!code-csharp[Using the conditional attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
 
 > [!NOTE]
 > 按照约定，所有特性名称均以“Attribute”一词结尾，以便与 .NET 库中的其他项区分开来。 不过，在代码中使用特性时，无需指定特性后缀。 例如，`[DllImport]` 等同于 `[DllImportAttribute]`，但 `DllImportAttribute` 是此特性在 .NET Framework 类库中的实际名称。
@@ -75,7 +75,7 @@ ms.locfileid: "70374373"
 |`event`|事件|
 |`method`|方法或 `get` 和 `set` 属性访问器|
 |`param`|方法参数或 `set` 属性访问器参数|
-|`property`|Property|
+|`property`|属性|
 |`return`|方法、属性索引器或 `get` 属性访问器的返回值|
 |`type`|结构、类、接口、枚举或委托|
 
@@ -119,7 +119,7 @@ using System.Reflection;
 
 - [创建自定义特性 (C#)](creating-custom-attributes.md)  
 - [使用反射访问特性 (C#)](accessing-attributes-by-using-reflection.md)  
-- [如何：使用属性创建 C/C++ 联合 (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [如何使用特性创建 C/C++ 联合 (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [通用特性 (C#)](common-attributes.md)  
 - [调用方信息 (C#)](../caller-information.md)  
 

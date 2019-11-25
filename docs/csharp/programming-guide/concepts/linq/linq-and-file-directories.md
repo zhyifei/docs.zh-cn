@@ -2,12 +2,12 @@
 title: LINQ 和文件目录 (C#)
 ms.date: 07/20/2015
 ms.assetid: b66c55e4-0f72-44e5-b086-519f9962335c
-ms.openlocfilehash: 1d2109fe7f4f907317275188057fa6e5e71b2679
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2a91e397686b329d47380a8b03f61be2e2ec5043
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591971"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140944"
 ---
 # <a name="linq-and-file-directories-c"></a>LINQ 和文件目录 (C#)
 许多文件系统操作实质上是查询，因此非常适合使用 LINQ 方法。  
@@ -25,7 +25,7 @@ ms.locfileid: "69591971"
  [如何：查询一组文件夹中的总字节数 (LINQ) (C#)](./how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)  
  演示如何返回指定目录树中所有文件的总字节数。  
   
- [如何：比较两个文件夹的内容 (LINQ) (C#)](./how-to-compare-the-contents-of-two-folders-linq.md)  
+ [如何比较两个文件夹的内容 (LINQ) (C#)](./how-to-compare-the-contents-of-two-folders-linq.md)  
  演示如何返回位于两个指定文件夹中的所有文件，以及仅位于其中一个文件夹中的所有文件。  
   
  [如何：查询最大的文件或目录树中的文件 (LINQ) (C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)  

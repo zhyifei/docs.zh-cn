@@ -1,5 +1,5 @@
 ---
-title: Narrowing (Visual Basic)
+title: Narrowing
 ms.date: 07/20/2015
 f1_keywords:
 - vb.narrowing
@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Narrowing keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: a207ee91-aca4-4771-b4e2-713f029bf2bb
-ms.openlocfilehash: eb5f021371291483b8eb2a13727a9fda94540638
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b252f7939e812f31103d4bd98ffd50953679f042
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920635"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351478"
 ---
 # <a name="narrowing-visual-basic"></a>Narrowing (Visual Basic)
-指示转换运算符 (`CType`) 将类或结构转换为可能无法保存某些原始类或结构的可能值的类型。  
+Indicates that a conversion operator (`CType`) converts a class or structure to a type that might not be able to hold some of the possible values of the original class or structure.  
   
-## <a name="converting-with-the-narrowing-keyword"></a>转换与收缩关键字  
- 转换过程都必须指定`Public Shared`除了`Narrowing`。  
+## <a name="converting-with-the-narrowing-keyword"></a>Converting with the Narrowing Keyword  
+ The conversion procedure must specify `Public Shared` in addition to `Narrowing`.  
   
- 收缩转换执行不总是在运行时，成功和可以故障或会导致数据丢失。 示例包括`Long`到`Integer`，`String`到`Date`，并为派生类型的基类型。 最后一个转换收缩转换，因为基类型可能不包含派生类型的所有成员，因此不是派生类型的实例。  
+ Narrowing conversions do not always succeed at run time, and can fail or incur data loss. Examples are `Long` to `Integer`, `String` to `Date`, and a base type to a derived type. This last conversion is narrowing because the base type might not contain all the members of the derived type and thus is not an instance of the derived type.  
   
- 如果`Option Strict`是`On`，则使用代码必须使用`CType`收缩的所有转换。  
+ If `Option Strict` is `On`, the consuming code must use `CType` for all narrowing conversions.  
   
- `Narrowing`关键字可在此上下文中：  
+ The `Narrowing` keyword can be used in this context:  
   
  [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   

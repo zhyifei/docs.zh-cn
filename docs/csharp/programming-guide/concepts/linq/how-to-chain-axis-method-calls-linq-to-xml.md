@@ -1,15 +1,15 @@
 ---
-title: 如何：链接轴方法调用 (LINQ to XML) (C#)
+title: 如何链接轴方法调用 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-ms.openlocfilehash: 3dfb2849bc2e2af9290738ed06938f80f3416f72
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ccfbf516a7fddbef357bfb0072288e250768616b
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418409"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141430"
 ---
-# <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>如何：链接轴方法调用 (LINQ to XML) (C#)
+# <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>如何链接轴方法调用 (LINQ to XML) (C#)
 一个在代码中常用的模式是调用轴方法，然后调用一个扩展方法轴。  
   
  有两个返回元素集合、名称为 `Elements` 的轴：<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> 方法和 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> 方法。 可以合并这两个轴，在树的给定深度，查找具有指定名称的所有元素。  

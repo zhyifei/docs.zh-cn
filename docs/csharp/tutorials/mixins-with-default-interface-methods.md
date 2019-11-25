@@ -3,14 +3,14 @@ title: 使用默认接口方法创建 mixin 类型
 description: 使用默认接口成员，可以通过实现器的可选默认实现来扩展接口。
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: 798413f0071159893de39f3e190a9b2693571bb7
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fb8fc1f432bdf909bae4f54bb76d10d7619f71a3
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039278"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140844"
 ---
-# <a name="tutorial-mix-in-functionality-when-creating-classes-using-interfaces-with-default-interface-methods"></a>教程：当通过默认接口方法创建使用接口的类时实现的混入功能
+# <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>教程：当通过默认接口方法创建使用接口的类时实现的混入功能
 
 从 .NET Core 3.0 上的 C# 8.0 开始，可以在声明接口成员时定义实现。 此功能提供了一些新功能，可以在其中为接口中声明的功能定义默认实现。 类可以选择何时替代功能、何时使用默认功能以及何时不声明对离散功能的支持。
 

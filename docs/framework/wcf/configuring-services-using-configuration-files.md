@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 9a8db0670fff604cc9db8279ab1566e6e3fd3c8d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 29792726567373c907898cf6ced9891577f11588
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320679"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141624"
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用配置文件配置服务
 使用配置文件配置 Windows Communication Foundation （WCF）服务使你可以灵活地在部署时（而不是在设计时）提供终结点和服务行为数据。 本主题概述了当前可用的主要技术。  
   
- WCF 服务可使用 .NET Framework 配置技术进行配置。 最常见的情况是，将 XML 元素添加到承载 WCF 服务的 Internet Information Services （IIS）站点的 web.config 文件中。 通过这些元素，可以逐台计算机更改详细信息，例如终结点地址（用于与服务进行通信的实际地址）。 此外，WCF 还包含多个系统提供的元素，可用于快速选择服务的最基本功能。 从 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 开始，WCF 附带了新的默认配置模型，该模型可简化 WCF 配置要求。 如果你没有为特定服务提供任何 WCF 配置，则运行时将自动使用一些标准终结点和默认绑定/行为配置你的服务。 实际上，编写配置是 WCF 应用程序编程的主要部分。  
+ WCF 服务可使用 .NET Framework 配置技术进行配置。 最常见的情况是，将 XML 元素添加到承载 WCF 服务的 Internet Information Services （IIS）站点的 web.config 文件中。 通过这些元素，可以逐台计算机更改详细信息，例如终结点地址（用于与服务进行通信的实际地址）。 此外，WCF 还包含多个系统提供的元素，可用于快速选择服务的最基本功能。 从 .NET Framework 4 开始，WCF 附带了新的默认配置模型，该模型可简化 WCF 配置要求。 如果你没有为特定服务提供任何 WCF 配置，则运行时将自动使用一些标准终结点和默认绑定/行为配置你的服务。 实际上，编写配置是 WCF 应用程序编程的主要部分。  
   
  有关详细信息，请参阅[配置服务的绑定](configuring-bindings-for-wcf-services.md)。 有关最常使用的元素的列表，请参阅[系统提供的绑定](system-provided-bindings.md)。 有关默认终结点、绑定和行为的详细信息，请参阅[简化配置](simplified-configuration.md)和 [WCF 服务的简化配置](./samples/simplified-configuration-for-wcf-services.md)。  
   
@@ -66,12 +66,12 @@ ms.locfileid: "72320679"
 > [!NOTE]
 > 绑定部分和行为部分是可选的，只在需要时才包括。  
   
-### <a name="the-services-element"></a>@No__t_0services > 元素  
- `services` 元素包含应用程序承载的所有服务的规范。 从 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]中的简化配置模型开始，此部分是可选的。  
+### <a name="the-services-element"></a>\<services > 元素  
+ `services` 元素包含应用程序承载的所有服务的规范。 从 .NET Framework 4 的简化配置模型开始，此部分是可选的。  
   
  [\<services >](../configure-apps/file-schema/wcf/services.md)  
   
-### <a name="the-service-element"></a>@No__t_0service > 元素  
+### <a name="the-service-element"></a>\<服务 > 元素  
  每个服务都具有以下属性：  
   
 - `name` 指定提供服务协定的实现的类型。 这是完全限定名称，其中包含命名空间、句点和类型名称。 例如， `"MyNameSpace.myServiceType"`。  
@@ -80,7 +80,7 @@ ms.locfileid: "72320679"
   
 - [\<service >](../configure-apps/file-schema/wcf/service.md)  
   
-### <a name="the-endpoint-element"></a>@No__t_0endpoint > 元素  
+### <a name="the-endpoint-element"></a>\<终结点 > 元素  
  每个终结点都需要以下属性表示的地址、绑定和协定：  
   
 - `address` 指定服务的统一资源标识符 (URI)，它可以是一个绝对地址，或是一个相对于服务基址给定的地址。 如果设置为空字符串，则指示在创建服务的 <xref:System.ServiceModel.ServiceHost> 时，终结点在指定的基址上可用。  
@@ -93,24 +93,24 @@ ms.locfileid: "72320679"
   
 - [\<endpoint >](../configure-apps/file-schema/wcf/endpoint-element.md)  
   
-### <a name="the-bindings-element"></a>@No__t_0bindings > 元素  
+### <a name="the-bindings-element"></a>\<绑定 > 元素  
  `bindings` 元素包含可由任何服务中定义的任何终结点使用的所有绑定的规范。  
   
  [\<bindings >](../configure-apps/file-schema/wcf/bindings.md)  
   
-### <a name="the-binding-element"></a>@No__t_0binding > 元素  
+### <a name="the-binding-element"></a>绑定 > 元素的 \<  
  在 `binding` 元素中包含的 `bindings` 元素可以是系统提供的绑定之一（请参阅 [System-Provided Bindings](system-provided-bindings.md)），也可以是自定义绑定（请参阅 [Custom Bindings](./extending/custom-bindings.md)）。 `binding` 元素具有 `name` 属性，此属性将绑定与 `bindingConfiguration` 元素的 `endpoint` 属性中指定的终结点相关联。 如果未指定任何名称，则该绑定对应于该绑定类型的默认值。  
   
 有关配置服务和客户端的详细信息，请参阅[配置 WCF 服务](configuring-services.md)。
   
- [\<binding >](../misc/binding.md)  
+ [\<binding >](../configure-apps/file-schema/wcf/bindings.md)  
   
-### <a name="the-behaviors-element"></a>@No__t_0behaviors > 元素  
+### <a name="the-behaviors-element"></a>\<行为 > 元素  
  这是定义服务行为的 `behavior` 元素的容器元素。  
   
  [\<behaviors >](../configure-apps/file-schema/wcf/behaviors.md)  
   
-### <a name="the-behavior-element"></a>@No__t_0behavior > 元素  
+### <a name="the-behavior-element"></a>> 元素的 \<行为  
  每个 `behavior` 元素都由 `name` 属性标识，并提供系统提供的行为，如 < `throttling` > 或自定义行为。 如果未提供任何名称，则该行为元素对应于默认服务或终结点行为。  
   
  [\<behavior >](../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
@@ -148,7 +148,7 @@ ms.locfileid: "72320679"
 </configuration>  
 ```  
   
- 在 `name` 元素中设置 `bindingConfiguration` 的 `<binding>` 。 @No__t_0 必须是绑定类型范围内的唯一字符串（在本例中为[< basicHttpBinding \>](../configure-apps/file-schema/wcf/basichttpbinding.md)）或空值来引用默认绑定。 通过将 `bindingConfiguration` 属性设置为此字符串，终结点链接到该配置。  
+ 在 `name` 元素中设置 `bindingConfiguration` 的 `<binding>` 。 `name` 必须是绑定类型范围内的唯一字符串（在本例中为[< basicHttpBinding\>](../configure-apps/file-schema/wcf/basichttpbinding.md)）或空值来引用默认绑定。 通过将 `bindingConfiguration` 属性设置为此字符串，终结点链接到该配置。  
   
  以相同方式实现 `behaviorConfiguration` ，如以下示例中所示。  
   
@@ -188,7 +188,7 @@ ms.locfileid: "72320679"
   
  `~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc`
   
- @No__t_0 文件包含以下内容：  
+ `~\Web.config` 文件包含以下内容：  
   
 ```xml  
 <configuration>  
@@ -267,4 +267,4 @@ ms.locfileid: "72320679"
 - [简化配置](simplified-configuration.md)
 - [配置 WCF 服务](configuring-services.md)
 - [\<service >](../configure-apps/file-schema/wcf/service.md)
-- [\<binding >](../misc/binding.md)
+- [\<binding >](../configure-apps/file-schema/wcf/bindings.md)

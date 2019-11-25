@@ -1,15 +1,15 @@
 ---
-title: 如何：调试空查询结果集 (C#)
+title: 如何调试空查询结果集 (C#)
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: 12d2132f1f088050fdd109d067069870b82f2661
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 2716f7c525ac6bee8d2fb374e4ecc4c975d852a0
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205318"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141290"
 ---
-# <a name="how-to-debug-empty-query-results-sets-c"></a>如何：调试空查询结果集 (C#)
+# <a name="how-to-debug-empty-query-results-sets-c"></a>如何调试空查询结果集 (C#)
 查询 XML 树时遇到的一个最常见问题是，如果 XML 树具有默认命名空间，开发人员在编写查询时，有时会将 XML 视为不在命名空间内。  
   
  本主题的第一个示例集演示一种加载并按不正确方式查询默认命名空间中的 XML 的典型方式。  

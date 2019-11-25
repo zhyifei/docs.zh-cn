@@ -1,5 +1,5 @@
 ---
-title: My.Forms 和 My.WebServices 提供的默认对象实例 (Visual Basic)
+title: My.Forms 和 My.WebServices 提供的默认对象实例
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.WebServices object [Visual Basic], developing applications
@@ -7,24 +7,26 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Forms
 - rapid application development (RAD), My.WebServices
 ms.assetid: de930027-9108-4f0c-b97c-5e7db4d6ef79
-ms.openlocfilehash: ca31e1c40c77bf7f42d246019d81f4ffaed646e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d06df4bd023892429b2aaefdd624398a6546d06d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014448"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330205"
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>My.Forms 和 My.WebServices 提供的默认对象实例 (Visual Basic)
-[My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)并[My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)对象提供对窗体、 数据源和 XML Web 服务使用你的应用程序的访问权限。 它们执行此操作的集合，从而*默认实例*的每个对象。  
+
+The [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) and [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) objects provide access to forms, data sources, and XML Web services used by your application. They do this by providing collections of *default instances* of each of these objects.  
   
-## <a name="default-instances"></a>默认实例  
- 默认实例是由运行时提供，不需要进行的类的实例声明并实例化使用`Dim`和`New`语句。 下面的示例演示如何必须声明和实例化的实例<xref:System.Windows.Forms.Form>类调用`Form1`，，如何现在能够获得的默认实例<xref:System.Windows.Forms.Form>类通过`My.Forms`。  
+## <a name="default-instances"></a>Default Instances  
+
+ A default instance is an instance of the class that is provided by the runtime and does not need to be declared and instantiated using the `Dim` and `New` statements. The following example demonstrates how you might have declared and instantiated an instance of a <xref:System.Windows.Forms.Form> class called `Form1`, and how you are now able to get a default instance of this <xref:System.Windows.Forms.Form> class through `My.Forms`.  
   
  [!code-vb[VbVbcnMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#5)]  
   
  [!code-vb[VbVbcnMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#6)]  
   
- `My.Forms`对象返回的默认实例的集合，每个`Form`在项目中存在的类。 同样，`My.WebServices`提供你的应用程序中创建了对引用的每个 Web 服务代理类的默认实例。  
+ The `My.Forms` object returns a collection of default instances for every `Form` class that exists in your project. Similarly, `My.WebServices` provides a default instance of the proxy class for every Web service that you have created a reference to in your application.  
   
 ## <a name="see-also"></a>请参阅
 

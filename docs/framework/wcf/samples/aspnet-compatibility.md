@@ -2,38 +2,38 @@
 title: ASP.NET 兼容性
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: e9566c24756afef98c8594c8d7b542bd2ad1e5b5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: af03b16081f0e33764d3ef83519f6e50e6b97152
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045174"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141791"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 兼容性
 
-此示例演示如何在 Windows Communication Foundation (WCF) 中启用 ASP.NET 兼容性模式。 在 ASP.NET 兼容模式下运行的服务完全参与 ASP.NET 应用程序管道, 并可利用 ASP.NET 功能, 如文件/URL 授权、会话状态和<xref:System.Web.HttpContext>类。 <xref:System.Web.HttpContext>类允许访问 cookie、会话和其他 ASP.NET 功能。 此模式要求绑定使用 HTTP 传输，且服务本身必须承载于 IIS 中。
+此示例演示如何在 Windows Communication Foundation （WCF）中启用 ASP.NET 兼容性模式。 在 ASP.NET 兼容模式下运行的服务完全参与 ASP.NET 应用程序管道，并可利用 ASP.NET 功能，如文件/URL 授权、会话状态和 <xref:System.Web.HttpContext> 类。 <xref:System.Web.HttpContext> 类允许访问 cookie、会话和其他 ASP.NET 功能。 此模式要求绑定使用 HTTP 传输，且服务本身必须承载于 IIS 中。
 
 在此示例中，客户端是一个控制台应用程序（一个可执行文件），服务由 Internet 信息服务 (IIS) 承载。
 
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。
 
-此示例需要 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] 应用程序池才能运行。 若要创建新的应用程序池或修改默认应用程序池，请按照以下步骤操作。
+此示例需要 .NET Framework 4 应用程序池才能运行。 若要创建新的应用程序池或修改默认应用程序池，请按照以下步骤操作。
 
-1. 打开“控制面板”。  打开 "**系统和安全**" 标题下的 "**管理工具**" 小程序。 打开**Internet Information Services (IIS) 管理器**小程序。
+1. 打开“控制面板”。  打开 "**系统和安全**" 标题下的 "**管理工具**" 小程序。 打开**Internet Information Services （IIS）管理器**小程序。
 
 2. 展开 "**连接**" 窗格中的 treeview。 选择 "**应用程序池**" 节点。
 
-3. 若要将默认应用程序池设置[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]为使用 (这可能会导致与现有站点的不兼容问题), 请右键单击 " **DefaultAppPool** " 列表项并选择 "**基本设置 ...** "。 设置 **.Net Framework 版本**下拉到 **.Net Framework v4.0.30128** （或更高版本）。
+3. 若要将默认应用程序池设置为使用 .NET Framework 4 （这可能会导致与现有站点的不兼容问题），请右键单击 " **DefaultAppPool** " 列表项并选择 "**基本设置 ...** "。 将 **.Net Framework 版本**下拉菜单设置为 **.net framework v v4.0.30128** （或更高版本）。
 
-4. 若要创建使用[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]的新应用程序池 (为了保留其他应用程序的兼容性), 请右键单击 "**应用程序**池" 节点, 然后选择 "**添加应用程序池 ...** "。 命名新的应用程序池，并将设置 **.Net Framework 版本**下拉到 **.Net Framework v4.0.30128** （或更高版本）。 运行以下安装步骤后, 右键单击**ServiceModelSamples**应用程序, 然后选择 "**管理应用程序**、**高级设置 ...** "。 将**应用程序池**设置为新的应用程序池。
+4. 若要创建使用 .NET Framework 4 的新应用程序池（保持其他应用程序的兼容性），请右键单击 "**应用程序**池" 节点，然后选择 "**添加应用程序池 ...** "。 命名新的应用程序池，并将 **.Net Framework 版本**下拉菜单设置为 **.net framework v v4.0.30128** （或更高版本）。 运行以下安装步骤后，右键单击**ServiceModelSamples**应用程序，然后选择 "**管理应用程序**、**高级设置 ...** "。 将**应用程序池**设置为新的应用程序池。
 
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebHost\ASPNetCompatibility`
 
@@ -63,9 +63,9 @@ public interface ICalculatorSession
 服务使用 ASP.NET 会话存储每个客户端会话的结果。 这使服务可以为跨多个服务调用的每个客户端保持运行结果。
 
 > [!NOTE]
-> ASP.NET 会话状态和 WCF 会话的用途非常不同。 有关 WCF 会话的详细信息, 请参阅[会话](../../../../docs/framework/wcf/samples/session.md)。
+> ASP.NET 会话状态和 WCF 会话的用途非常不同。 有关 WCF 会话的详细信息，请参阅[会话](../../../../docs/framework/wcf/samples/session.md)。
 
-该服务对 ASP.NET 会话状态的依赖非常熟悉, 需要 ASP.NET 兼容模式才能正常运行。 这些需求是通过应用 `AspNetCompatibilityRequirements` 属性以声明性方式表示的。
+该服务对 ASP.NET 会话状态的依赖非常熟悉，需要 ASP.NET 兼容模式才能正常运行。 这些需求是通过应用 `AspNetCompatibilityRequirements` 属性以声明性方式表示的。
 
 ```csharp
 [AspNetCompatibilityRequirements(RequirementsMode =
@@ -124,9 +124,9 @@ Press <ENTER> to terminate client.
 
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
-3. 构建解决方案后, 请运行 ServiceModelSamples 以在 IIS 7.0 中设置该应用程序。 现在, ServiceModelSamples 目录应显示为 IIS 7.0 应用程序。
+3. 构建解决方案后，请运行 ServiceModelSamples 以在 IIS 7.0 中设置该应用程序。 现在，ServiceModelSamples 目录应显示为 IIS 7.0 应用程序。
 
-4. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
+4. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
 
 ## <a name="see-also"></a>请参阅
 

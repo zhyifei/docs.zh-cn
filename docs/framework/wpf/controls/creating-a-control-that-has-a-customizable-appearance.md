@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: c98035ef0b4ea1add22b09fb9927bcd49c00cd9b
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: d9cf092cf47d4fb70b15033d039777d3279b633a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920045"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283564"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>创建具有可自定义外观的控件
 
@@ -38,7 +38,7 @@ ms.locfileid: "72920045"
 
 本主题包含以下各节：
 
-- [系统必备](#prerequisites)
+- [先决条件](#prerequisites)
 
 - [部件和状态模型](#parts_and_states_model)
 
@@ -52,9 +52,9 @@ ms.locfileid: "72920045"
 
 <a name="prerequisites"></a>
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
-本主题假设你知道如何为现有控件创建新的 <xref:System.Windows.Controls.ControlTemplate>，熟悉控件协定上的元素，并了解[通过创建以下内容在自定义现有控件的外观中讨论的概念：System.windows.controls.controltemplate>](customizing-the-appearance-of-an-existing-control.md)。
+本主题假设你知道如何为现有控件创建新的 <xref:System.Windows.Controls.ControlTemplate>，熟悉控件协定上的元素，并了解在[创建控件模板](../../../desktop-wpf/themes/how-to-create-apply-template.md)中所述的概念。
 
 > [!NOTE]
 > 若要创建可自定义其外观的控件，您必须创建一个继承自 <xref:System.Windows.Controls.Control> 类或 <xref:System.Windows.Controls.UserControl>以外的子类之一的控件。  继承自 <xref:System.Windows.Controls.UserControl> 的控件是可快速创建的控件，但不使用 <xref:System.Windows.Controls.ControlTemplate>，因此无法自定义其外观。
@@ -77,7 +77,7 @@ ms.locfileid: "72920045"
 
 ## <a name="defining-the-visual-structure-and-visual-behavior-of-a-control-in-a-controltemplate"></a>定义 System.windows.controls.controltemplate> 中控件的可视结构和可视行为
 
-使用 "部件" 和 "状态" 模型创建自定义控件时，可以在其 <xref:System.Windows.Controls.ControlTemplate> 而不是其逻辑中定义控件的可视结构和视觉行为。  控件的可视结构是组成控件 <xref:System.Windows.FrameworkElement> 对象的组合。  视觉对象行为是控件在处于某种状态时的显示方式。   若要详细了解如何创建指定控件的可视结构和可视行为的 <xref:System.Windows.Controls.ControlTemplate>，请参阅[通过创建 System.windows.controls.controltemplate> 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。
+使用 "部件" 和 "状态" 模型创建自定义控件时，可以在其 <xref:System.Windows.Controls.ControlTemplate> 而不是其逻辑中定义控件的可视结构和视觉行为。  控件的可视结构是组成控件 <xref:System.Windows.FrameworkElement> 对象的组合。  视觉对象行为是控件在处于某种状态时的显示方式。   有关创建指定控件的可视结构和可视行为的 <xref:System.Windows.Controls.ControlTemplate> 的详细信息，请参阅为[控件创建模板](../../../desktop-wpf/themes/how-to-create-apply-template.md)。
 
 在 `NumericUpDown` 控件的示例中，可视结构包括两个 <xref:System.Windows.Controls.Primitives.RepeatButton> 控件和一个 <xref:System.Windows.Controls.TextBlock>。  如果在 `NumericUpDown` 控件的代码中添加这些控件--在其构造函数中，例如，这些控件的位置将为方式更改。  你应在 <xref:System.Windows.Controls.ControlTemplate>中定义控件的可视结构和可视行为，而不是在其代码中定义它。  然后，应用程序开发人员可以自定义按钮和 <xref:System.Windows.Controls.TextBlock> 的位置，并指定当 `Value` 为负值时所发生的行为，因为 <xref:System.Windows.Controls.ControlTemplate> 可以被替换。
 
@@ -85,7 +85,7 @@ ms.locfileid: "72920045"
 
 [!code-xaml[VSMCustomControl#VisualStructure](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#visualstructure)]
 
-`NumericUpDown` 控件的可视行为是：如果该值为负数，则该值为红色。  如果在 `Value` 为负数时更改代码中 <xref:System.Windows.Controls.TextBlock> 的 <xref:System.Windows.Controls.TextBlock.Foreground%2A>，则 `NumericUpDown` 将始终显示一个红色的负值。 您可以通过将 <xref:System.Windows.VisualState> 对象添加到 <xref:System.Windows.Controls.ControlTemplate>指定 <xref:System.Windows.Controls.ControlTemplate> 控件的可视行为。  下面的示例演示了 `Positive` 和 `Negative` 状态的 <xref:System.Windows.VisualState> 对象。  `Positive` 和 `Negative` 互斥（控件始终只是两个），因此该示例将 <xref:System.Windows.VisualState> 对象置于单个 <xref:System.Windows.VisualStateGroup>中。  当控件进入 `Negative` 状态时，<xref:System.Windows.Controls.TextBlock> 的 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 变成红色。  当控件处于 `Positive` 状态时，<xref:System.Windows.Controls.TextBlock.Foreground%2A> 返回到其原始值。  [通过创建 System.windows.controls.controltemplate> 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)中进一步讨论了如何定义 <xref:System.Windows.Controls.ControlTemplate> 中的 <xref:System.Windows.VisualState> 对象。
+`NumericUpDown` 控件的可视行为是：如果该值为负数，则该值为红色。  如果在 `Value` 为负数时更改代码中 <xref:System.Windows.Controls.TextBlock> 的 <xref:System.Windows.Controls.TextBlock.Foreground%2A>，则 `NumericUpDown` 将始终显示一个红色的负值。 您可以通过将 <xref:System.Windows.VisualState> 对象添加到 <xref:System.Windows.Controls.ControlTemplate>指定 <xref:System.Windows.Controls.ControlTemplate> 控件的可视行为。  下面的示例演示了 `Positive` 和 `Negative` 状态的 <xref:System.Windows.VisualState> 对象。  `Positive` 和 `Negative` 互斥（控件始终只是两个），因此该示例将 <xref:System.Windows.VisualState> 对象置于单个 <xref:System.Windows.VisualStateGroup>中。  当控件进入 `Negative` 状态时，<xref:System.Windows.Controls.TextBlock> 的 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 变成红色。  当控件处于 `Positive` 状态时，<xref:System.Windows.Controls.TextBlock.Foreground%2A> 返回到其原始值。  为[控件创建模板](../../../desktop-wpf/themes/how-to-create-apply-template.md)中进一步讨论了在 <xref:System.Windows.Controls.ControlTemplate> 中定义 <xref:System.Windows.VisualState> 对象。
 
 > [!NOTE]
 > 请确保在 <xref:System.Windows.Controls.ControlTemplate>的根 <xref:System.Windows.FrameworkElement> 上设置 <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> 附加属性。
@@ -132,7 +132,7 @@ ms.locfileid: "72920045"
 
 <xref:System.Windows.VisualStateManager> 跟踪控件的状态，并执行在状态之间转换所需的逻辑。 向 <xref:System.Windows.Controls.ControlTemplate>中添加 <xref:System.Windows.VisualState> 对象时，请将它们添加到 <xref:System.Windows.VisualStateGroup>，并将 <xref:System.Windows.VisualStateGroup> 添加到 <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> 附加属性，以便 <xref:System.Windows.VisualStateManager> 有权访问它们。
 
-下面的示例重复了前面的示例，该示例显示了与控件的 `Positive` 和 `Negative` 状态相对应的 <xref:System.Windows.VisualState> 对象。 `Negative`中的 <xref:System.Windows.Media.Animation.Storyboard><xref:System.Windows.VisualState> 将 <xref:System.Windows.Controls.TextBlock> 的 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 变为红色。   如果 `NumericUpDown` 控件处于 `Negative` 状态，则处于 `Negative` 状态的情节提要将开始。  当控件返回到 `Positive` 状态时，`Negative` 状态中的 <xref:System.Windows.Media.Animation.Storyboard> 将停止。  `Positive`<xref:System.Windows.VisualState> 不需要包含 <xref:System.Windows.Media.Animation.Storyboard>，因为当 `Negative` 的 <xref:System.Windows.Media.Animation.Storyboard> 停止时，<xref:System.Windows.Controls.TextBlock.Foreground%2A> 将恢复为其原始颜色。
+下面的示例重复了前面的示例，该示例显示了与控件的 `Positive` 和 `Negative` 状态相对应的 <xref:System.Windows.VisualState> 对象。 `Negative`中的 <xref:System.Windows.Media.Animation.Storyboard> <xref:System.Windows.VisualState> 将 <xref:System.Windows.Controls.TextBlock> 的 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 变为红色。   如果 `NumericUpDown` 控件处于 `Negative` 状态，则处于 `Negative` 状态的情节提要将开始。  当控件返回到 `Positive` 状态时，`Negative` 状态中的 <xref:System.Windows.Media.Animation.Storyboard> 将停止。  `Positive`<xref:System.Windows.VisualState> 不需要包含 <xref:System.Windows.Media.Animation.Storyboard>，因为当 `Negative` 的 <xref:System.Windows.Media.Animation.Storyboard> 停止时，<xref:System.Windows.Controls.TextBlock.Foreground%2A> 将恢复为其原始颜色。
 
 [!code-xaml[VSMCustomControl#ValueStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#valuestates)]
 
@@ -168,7 +168,7 @@ ms.locfileid: "72920045"
 
 如果在控件已经处于该状态时将状态名称传递到 <xref:System.Windows.VisualStateManager.GoToState%2A>，则 <xref:System.Windows.VisualStateManager.GoToState%2A> 不会执行任何操作，因此不需要检查控件的当前状态。  例如，如果 `Value` 从一个负数更改为另一个负数，则 `Negative` 状态的情节提要不会中断，用户将看不到控件中的更改。
 
-<xref:System.Windows.VisualStateManager> 使用 <xref:System.Windows.VisualStateGroup> 对象确定在调用 <xref:System.Windows.VisualStateManager.GoToState%2A>时要退出的状态。 对于在其 <xref:System.Windows.Controls.ControlTemplate> 中定义的每个 <xref:System.Windows.VisualStateGroup>，控件始终处于一种状态，并且仅当进入同一 <xref:System.Windows.VisualStateGroup>的另一状态时才会离开状态。 例如，`NumericUpDown` 控件的 <xref:System.Windows.Controls.ControlTemplate> 定义一个<xref:System.Windows.VisualState> 中的 `Positive` 和 `Negative`<xref:System.Windows.VisualStateGroup> 对象，而在另一个 `Focused` 中定义 `Unfocused`和<xref:System.Windows.VisualState> 对象。 （当控件从 `Positive` 状态转为 `Negative` 状态时，可以查看本主题的 "[完整示例](#complete_example)" 部分中定义的 `Focused` 和 `Unfocused`<xref:System.Windows.VisualState>，反之亦然，控件将保留在 `Focused` 或 `Unfocused` 中状态.
+<xref:System.Windows.VisualStateManager> 使用 <xref:System.Windows.VisualStateGroup> 对象确定在调用 <xref:System.Windows.VisualStateManager.GoToState%2A>时要退出的状态。 对于在其 <xref:System.Windows.Controls.ControlTemplate> 中定义的每个 <xref:System.Windows.VisualStateGroup>，控件始终处于一种状态，并且仅当进入同一 <xref:System.Windows.VisualStateGroup>的另一状态时才会离开状态。 例如，`NumericUpDown` 控件的 <xref:System.Windows.Controls.ControlTemplate> 定义一个 <xref:System.Windows.VisualState> 中的 `Positive` 和 `Negative`<xref:System.Windows.VisualStateGroup> 对象，而在另一个 `Focused` 中定义 `Unfocused`和 <xref:System.Windows.VisualState> 对象。 （当控件从 `Positive` 状态转为 `Negative` 状态时，可以查看本主题的 "[完整示例](#complete_example)" 部分中定义的 `Focused` 和 `Unfocused`<xref:System.Windows.VisualState>，反之亦然，控件仍处于 `Focused` 或 `Unfocused` 状态。
 
 有三个典型位置，控件的状态可能会发生更改：
 
@@ -253,7 +253,7 @@ ms.locfileid: "72920045"
 [!code-csharp[VSMCustomControl#ControlLogic](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#controllogic)]
 [!code-vb[VSMCustomControl#ControlLogic](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#controllogic)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)
+- [为控件创建模板](../../../desktop-wpf/themes/how-to-create-apply-template.md)
 - [控件自定义](control-customization.md)

@@ -26,6 +26,8 @@
               href: fundamentals/styles-templates-overview.md
             - name: 创建和应用样式
               href: fundamentals/styles-templates-create-apply-style.md
+            - name: 创建和应用模板
+              href: themes/how-to-create-apply-template.md
     - name: 使用数据
       items:
         - name: 数据绑定概述

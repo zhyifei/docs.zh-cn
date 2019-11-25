@@ -1,15 +1,15 @@
 ---
-title: Visual Basic 中的 LINQ
+title: LINQ
 ms.date: 07/20/2015
 helpviewer_keywords:
 - what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
-ms.openlocfilehash: 286e6266ef8f11a7a09a9e9fe898276a6734a96d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea6754d9d93a7d400ac3494b01b850374e9ec02d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756489"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354178"
 ---
 # <a name="linq-in-visual-basic"></a>Visual Basic 中的 LINQ
 此部分收录了有助于你了解和使用 Visual Basic 和 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 的概述、示例和背景信息。  
@@ -21,7 +21,7 @@ ms.locfileid: "61756489"
  [如何：查询数据库](../../../../visual-basic/programming-guide/language-features/linq/how-to-query-a-database-by-using-linq.md)  
  通过示例展示了如何连接 SQL Server 数据库，并使用 LINQ 执行查询。  
   
- [如何：调用存储的过程](../../../../visual-basic/programming-guide/language-features/linq/how-to-call-a-stored-procedure-by-using-linq.md)  
+ [如何：调用存储过程](../../../../visual-basic/programming-guide/language-features/linq/how-to-call-a-stored-procedure-by-using-linq.md)  
  通过示例展示了如何连接 SQL Server 数据库，并使用 LINQ 调用存储过程。  
   
  [如何：修改数据库中的数据](../../../../visual-basic/programming-guide/language-features/linq/how-to-modify-data-in-a-database-by-using-linq.md)  
@@ -36,13 +36,13 @@ ms.locfileid: "61756489"
  [如何：筛选查询结果](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)  
  通过示例展示了如何使用 LINQ 在查询中添加搜索条件。  
   
- [如何：计数、 求和或平均数据](../../../../visual-basic/programming-guide/language-features/linq/how-to-count-sum-or-average-data-by-using-linq.md)  
+ [如何：对数据进行计数、求和与求平均值计算](../../../../visual-basic/programming-guide/language-features/linq/how-to-count-sum-or-average-data-by-using-linq.md)  
  通过示例展示了如何使用 LINQ 来添加聚合函数，从而对从查询返回的数据进行计数、求和与求平均值计算。  
   
  [如何：查找查询结果中的最小值或最大值](../../../../visual-basic/programming-guide/language-features/linq/how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
  通过示例展示了如何使用 LINQ 来添加聚合函数，从而确定从查询返回的数据中的最大值和最小值。  
   
- [如何：为特定类型返回 LINQ 查询结果](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)  
+ [如何：以特定类型返回 LINQ 查询结果](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)  
  通过示例展示了如何将 LINQ 查询结果作为特定类型（而不是匿名类型）返回。  
   
 ## <a name="see-also"></a>请参阅

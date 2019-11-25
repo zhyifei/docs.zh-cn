@@ -1,15 +1,15 @@
 ---
-title: 在完成一个异步任务后取消剩余任务（Visual Basic）
+title: 在完成一个异步任务后取消剩余任务
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: 329c1eb738f065ae34540e9980c80d44248da05c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e6747f35e665611ac7a48a87f955c8b893ee2b99
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419800"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347925"
 ---
-# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>在完成一个异步任务后取消剩余任务（Visual Basic）
+# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Cancel Remaining Async Tasks after One Is Complete (Visual Basic)
 
 通过结合使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 方法和 <xref:System.Threading.CancellationToken>，可在一个任务完成时取消所有剩余任务。 `WhenAny` 方法采用任务集合中的一个参数。 该方法启动所有任务，并返回单个任务。 当集合中任意任务完成时，完成单个任务。
 
@@ -40,11 +40,11 @@ ms.locfileid: "73419800"
 
 ## <a name="building-the-example"></a>生成示例
 
-本主题中的示例将添加到[取消异步任务或任务列表](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)中开发的项目，以取消任务列表。 该示例使用相同的 UI，但未显示使用“取消”按钮。
+The example in this topic adds to the project that's developed in [Cancel an Async Task or a List of Tasks](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) to cancel a list of tasks. 该示例使用相同的 UI，但未显示使用“取消”按钮。
 
 若要自行生成示例，请按“下载示例”部分的说明逐步操作，选择“CancelAListOfTasks”作为“启动项目”。 将此主题中的更改添加到该项目。
 
-在**CancelAListOfTasks**项目的 mainwindow.xaml 文件中，通过将每个网站的处理步骤从 `AccessTheWebAsync` 中的循环移至以下异步方法来启动转换。
+In the MainWindow.xaml.vb file of the **CancelAListOfTasks** project, start the transition by moving the processing steps for each website from the loop in `AccessTheWebAsync` to the following async method.
 
 ```vb
 ' ***Bundle the processing steps for a website into one async method.
@@ -107,7 +107,7 @@ End Function
 
 ## <a name="complete-example"></a>完整的示例
 
-下面的代码是该示例的完整 Mainwindow.xaml 或 MainWindow.xaml.cs 文件。 对添加到此示例的元素进行了星号标记。
+The following code is the complete MainWindow.xaml.vb or MainWindow.xaml.cs file for the example. 对添加到此示例的元素进行了星号标记。
 
 请注意，必须为 <xref:System.Net.Http> 添加引用。
 

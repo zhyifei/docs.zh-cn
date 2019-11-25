@@ -6,19 +6,19 @@ helpviewer_keywords:
 - application domains, shadow copying assemblies
 - shadow copying assemblies
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
-ms.openlocfilehash: 40a1b5062d45b7b540af7058b82b77c664070d2e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9fc8a4aeeeca40f71ed9114a9db40b9a56e5fe6b
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119783"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204563"
 ---
 # <a name="shadow-copying-assemblies"></a>卷影复制程序集
 
 借助卷影复制，无需卸载应用程序域就可更新用于此应用程序域的程序集。 这对必须连续可用的应用程序（如 ASP.NET 网站）特别有用。
 
 > [!IMPORTANT]
-> 卷影复制在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用中不受支持。
+> Shadow copying is not supported in Windows 8.x Store apps.
 
 公共语言运行时会在加载程序集时锁定程序集文件，因此只有卸载此程序集才能更新此文件。 从应用程序域中卸载程序集的唯一方法是卸载应用程序域，因此在正常情况下，只有卸载了正在使用程序集的所有应用程序域才能在磁盘中更新此程序集。
 

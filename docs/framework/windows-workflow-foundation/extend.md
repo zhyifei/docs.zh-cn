@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], extending
 - extending [WF]
 ms.assetid: d6861f28-9c8c-4225-872d-9a80e2e59034
-ms.openlocfilehash: 8449c1f229ffb993036dbb909d6f4c98c47498af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1394e86738ce38683bb3f5b0e847b952cf6138eb
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945686"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141882"
 ---
 # <a name="extending-windows-workflow-foundation"></a>扩展 Windows Workflow Foundation
-以下部分介绍如何使用自定义活动和设计人员在 Visual Studio 2010 之外重新承载的环境中扩展 Windows Workflow Foundation (WF)。
+以下部分介绍如何在 Visual Studio 2010 以外的重新承载环境中将 Windows Workflow Foundation （WF）与自定义活动和设计器进行扩展。
 
 ## <a name="in-this-section"></a>本节内容
- [自定义工作流设计体验](customizing-the-workflow-design-experience.md)指示如何设计自定义活动以及重新承载的方案[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]极大地简化在[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]。 开发和部署现在都更轻松、 更灵活因为新的活动设计器编程模型构建在 Windows Presentation Foundation (WPF)。
+ [自定义工作流设计体验](customizing-the-workflow-design-experience.md)指示如何设计自定义活动的方案以及如何在 .NET Framework 4 中大大简化 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 的重新承载。 由于新的活动设计器编程模型是基于 Windows Presentation Foundation （WPF）构建的，因此开发和部署现在更容易且更灵活。
 
 ## <a name="see-also"></a>请参阅
 

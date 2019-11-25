@@ -3,6 +3,8 @@
   items:
     - name: 安全性的基础概念
       href: key-security-concepts.md
+    - name: .NET Core FIPS 合规性
+      href: fips-compliance.md
     - name: 基于角色的安全性
       href: role-based-security.md
       items:

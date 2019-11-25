@@ -1,15 +1,15 @@
 ---
-title: 如何：查找前面紧邻的同级 (XPath-LINQ to XML) (C#)
+title: 如何查找前面紧邻的同级 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 74c06201-0b1b-4b5e-b3ac-0092980614e6
-ms.openlocfilehash: bc0a3250cf1f56ebf9a367f6472be8f3230cee5a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 1e5aece41021642d43b7f6f7b78bb105156ee4ee
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253634"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141001"
 ---
-# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>如何：查找前面紧邻的同级 (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>如何查找前面紧邻的同级 (XPath-LINQ to XML) (C#)
 有时，您需要查找某一节点的前面紧邻同级。 由于与 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 相比，XPath 中前面紧邻轴的位置谓词的语义同，因此这是一个更值得关注的比较。  
   
 ## <a name="example"></a>示例  

@@ -1,15 +1,15 @@
 ---
-title: 如何：为 LINQ 查询添加自定义方法 (C#)
+title: 如何为 LINQ 查询添加自定义方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
-ms.openlocfilehash: fcf6814c8b3076a18e807a378796094a9ce2cf84
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e16175d3332b6ce36458eaa78af093e4f8772723
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594147"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141469"
 ---
-# <a name="how-to-add-custom-methods-for-linq-queries-c"></a>如何：为 LINQ 查询添加自定义方法 (C#)
+# <a name="how-to-add-custom-methods-for-linq-queries-c"></a>如何为 LINQ 查询添加自定义方法 (C#)
 
 可通过向 <xref:System.Collections.Generic.IEnumerable%601> 接口添加扩展方法扩展可用于 LINQ 查询的方法集。 例如，除了标准平均值或最大值运算，还可以创建自定义聚合方法，从一系列值计算单个值。 此外可以创建一个方法，用作一个值序列的自定义筛选器或用于对其进行特定数据转换，并返回新的序列。 <xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Reverse%2A> 就是此类方法的示例。
 

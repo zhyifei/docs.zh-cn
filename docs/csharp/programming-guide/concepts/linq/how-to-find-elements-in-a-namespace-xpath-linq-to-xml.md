@@ -1,15 +1,15 @@
 ---
-title: 如何：查找命名空间中的元素 (XPath-LINQ to XML) (C#)
+title: 如何查找命名空间中的元素 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: cae1c4ac-6cd5-46cf-9b1c-bd85bc9b7ea9
-ms.openlocfilehash: d85426cf7a7073c35b51157e59687e2b3bcdcf8a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: da9d819be5234a2429b6eab276f89bd0d877d4a7
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253683"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141067"
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a>如何：查找命名空间中的元素 (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a>如何查找命名空间中的元素 (XPath-LINQ to XML) (C#)
 
 XPath 表达式可以在特定命名空间中查找节点。 XPath 表达式使用命名空间前缀来指定命名空间。 若要分析包含命名空间前缀的 XPath 表达式，必须向实现 <xref:System.Xml.IXmlNamespaceResolver> 的 XPath 方法传递一个对象。 本示例使用 <xref:System.Xml.XmlNamespaceManager>。
 

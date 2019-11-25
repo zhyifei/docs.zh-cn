@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 230825c5259807cf693179878a45aeb3fdcbf0ac
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1e7f0123ab07fd4e83eea957b72bf79eeeecef2b
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047996"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204692"
 ---
 # <a name="network-programming-in-the-net-framework"></a>.NET Framework 中的网络编程
 Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且托管的实现，可以快速、轻松地将其集成到你的应用程序中。 你的网络应用程序可以基于可插入协议而构建，以便自动利用新的 Internet 协议，或者，它们可以使用 Windows 套接字接口的托管实现在套接字级别上使用网络。  
@@ -80,7 +80,7 @@ Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且
  描述添加到 <xref:System.Net?displayProperty=nameWithType>、 <xref:System.Net.NetworkInformation?displayProperty=nameWithType>和 <xref:System.Net.Sockets?displayProperty=nameWithType> 命名空间的增强，这些增强用于支持使用 IPv6 和 Teredo 进行 NAT 遍历。  
   
  [Windows 应用商店应用的网络隔离](network-isolation-for-windows-store-apps.md)  
- 描述当在 <xref:System.Net>应用中使用 <xref:System.Net.Http>、 <xref:System.Net.Http.Headers> 和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 命名空间中的类时，网络隔离所产生的影响。  
+ 描述当在 Windows 8.x 应用商店应用中使用 <xref:System.Net>、<xref:System.Net.Http> 和 <xref:System.Net.Http.Headers> 命名空间中的类时，网络隔离所产生的影响。  
   
  [网络编程示例](network-programming-samples.md)  
  可下载网络编程示例的链接，这些示例使用 <xref:System.Net>、 <xref:System.Net.Cache>、 <xref:System.Net.Configuration>、 <xref:System.Net.Mail>、 <xref:System.Net.Mime>、 <xref:System.Net.NetworkInformation>、 <xref:System.Net.PeerToPeer>、 <xref:System.Net.Security>、 <xref:System.Net.Sockets> 命名空间中的类。  

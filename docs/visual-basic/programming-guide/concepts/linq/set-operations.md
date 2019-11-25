@@ -1,15 +1,15 @@
 ---
-title: 设置操作（Visual Basic）
+title: Set 运算
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: fe8dbff00ecd6da9b3b0e9792e67422583a00180
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: fe9d910415f30fe672dc702f719fdefdb9c0b3d1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582926"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350620"
 ---
-# <a name="set-operations-visual-basic"></a>设置操作（Visual Basic）
+# <a name="set-operations-visual-basic"></a>Set Operations (Visual Basic)
 
 LINQ 中的集运算是指根据相同或不同集合（或集）中是否存在等效元素来生成结果集的查询运算。
 
@@ -17,7 +17,7 @@ LINQ 中的集运算是指根据相同或不同集合（或集）中是否存在
 
 ## <a name="methods"></a>方法
 
-|方法名|描述|Visual Basic 查询表达式语法|详细信息|
+|方法名|描述|Visual Basic Query Expression Syntax|详细信息|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |Distinct|删除集合中的重复值。|`Distinct`|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=nameWithType>|
 |不包括|返回差集，差集指位于一个集合但不位于另一个集合的元素。|不适用。|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|
@@ -36,7 +36,7 @@ LINQ 中的集运算是指根据相同或不同集合（或集）中是否存在
 
 下图演示 <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType> 的行为。 返回的序列只包含位于第一个输入序列但不位于第二个输入序列的元素。
 
-![显示除之外&#40;&#41;的操作的图。](./media/set-operations/except-behavior-graphic.png "显示的行为，但除外。")
+![Graphic showing the action of Except&#40;&#41;.](./media/set-operations/except-behavior-graphic.png "Shows the behavior of Except.")
 
 ### <a name="intersect"></a>相交
 
@@ -52,7 +52,7 @@ LINQ 中的集运算是指根据相同或不同集合（或集）中是否存在
 
 ## <a name="query-expression-syntax-example"></a>查询表达式语法示例
 
-下面的示例使用 LINQ 查询中的 `Distinct` 子句从整数列表中返回唯一的数字。
+The following example uses the `Distinct` clause in a LINQ query to return the unique numbers from a list of integers.
 
 [!code-vb[CsLINQSetOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQSetOps/VB/setops.vb#1)]
 
@@ -61,5 +61,5 @@ LINQ 中的集运算是指根据相同或不同集合（或集）中是否存在
 - <xref:System.Linq>
 - [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Distinct 子句](../../../../visual-basic/language-reference/queries/distinct-clause.md)
-- [如何：合并和比较字符串集合（LINQ）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
-- [如何：查找两个列表之间的差集（LINQ）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+- [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)

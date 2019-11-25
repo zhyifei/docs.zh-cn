@@ -1,5 +1,5 @@
 ---
-title: As 子句 (Visual Basic)
+title: As 子句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.as
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - As keyword [Visual Basic], statement syntax
 - As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-ms.openlocfilehash: 4b0ebbb6a86cc2c71882427afd33e7d9e0fe7a04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf1acbfeee150f1ea353ce134a4e94dab9928e8a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945088"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350175"
 ---
 # <a name="as-clause-visual-basic"></a>As 子句 (Visual Basic)
-引入了`As`子句，用于标识声明语句或泛型类型参数上的约束列表中的数据类型。  
+Introduces an `As` clause, which identifies a data type in a declaration statement or a constraint list on a generic type parameter.  
   
 ## <a name="remarks"></a>备注  
  `As` 关键字可用于以下上下文中：  
@@ -37,9 +37,9 @@ ms.locfileid: "61945088"
   
  [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [为...下一语句](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [For...Next Statements](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
- [每个...下一语句](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [For Each...Next Statements](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
  [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
   
@@ -57,13 +57,13 @@ ms.locfileid: "61945088"
   
  [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
- [重试...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Try...Catch...Finally Statements](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：创建新的变量](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
+- [如何：创建新变量](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
 - [数据类型](../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [变量声明](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [类型列表](../../../visual-basic/language-reference/statements/type-list.md)
-- [Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [关键字](../../../visual-basic/language-reference/keywords/index.md)

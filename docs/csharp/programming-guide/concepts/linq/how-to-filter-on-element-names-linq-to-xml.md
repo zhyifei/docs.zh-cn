@@ -1,21 +1,21 @@
 ---
-title: 如何：筛选元素名称 (LINQ to XML) (C#)
+title: 如何筛选元素名称 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
-ms.openlocfilehash: 2a4eccac3bc24005af0efee0785393de00039228
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 74efb19ef5ec77ca29145d27a8e5aa977530b68b
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253810"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141263"
 ---
-# <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>如何：筛选元素名称 (LINQ to XML) (C#)
+# <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>如何筛选元素名称 (LINQ to XML) (C#)
 当调用返回 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement> 的方法之一时，可以根据元素名称进行筛选。  
   
 ## <a name="example"></a>示例  
  本示例说明如何检索经过筛选仅包含具有指定名称的子代的集合。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md)。  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrder.xml");  
@@ -52,7 +52,7 @@ ProductName:Baby Monitor
 ## <a name="example"></a>示例  
  下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息，请参阅[命名空间概述(LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的典型采购单](./sample-xml-file-typical-purchase-order-in-a-namespace.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的典型采购单](./sample-xml-file-typical-purchase-order-in-a-namespace.md)。  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  

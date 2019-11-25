@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Basic 中的字符串和其他数据类型之间进行转换
+title: Converting between strings and other data types
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, strings
@@ -7,33 +7,33 @@ helpviewer_keywords:
 - conversions [Visual Basic], Visual Basic
 - string conversion [Visual Basic], Visual Basic
 ms.assetid: 06085ed5-191d-4930-8fbc-da63930da400
-ms.openlocfilehash: 5b30bfe180bed62ea330b78ec50d8fbfa1bcd9c1
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: da9f4fb707b2df2812afd0f8b0a5317a75e69935
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580995"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352488"
 ---
-# <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a>在 Visual Basic 中的字符串和其他数据类型之间进行转换
+# <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a>Converting between strings and other data types in Visual Basic
 
-本节介绍如何将字符串转换为其他数据类型。
+This section describes how to convert strings into other data types.
 
 ## <a name="in-this-section"></a>本节内容
 
-[如何：在 Visual Basic 中将字节数组转换为字符串](how-to-convert-an-array-of-bytes-into-a-string.md)  
-如何将字节数组中的字节转换为字符串。
+[How to: Convert an Array of Bytes into a String in Visual Basic](how-to-convert-an-array-of-bytes-into-a-string.md)  
+How to convert the bytes from a byte array into a string.
 
-[如何：在 Visual Basic 中将字符串转换为字节数组](how-to-convert-strings-into-an-array-of-bytes.md)  
-如何将字符串转换为字节数组。
+[How to: Convert Strings into an Array of Bytes in Visual Basic](how-to-convert-strings-into-an-array-of-bytes.md)  
+How to convert a string into an array of bytes.
 
 [如何：从 Char 值的数组创建字符串](how-to-create-a-string-from-an-array-of-char-values.md)  
-如何从单个字符创建字符串 "abcd"。
+How to create the string "abcd" from individual characters.
 
 [如何：将十六进制字符串转换为数字](how-to-convert-hexadecimal-strings-to-numbers.md)  
-如何将十六进制字符串转换为整数。
+How to convert a hexadecimal string into an integer.
 
-[如何：将字符串转换为 Visual Basic 中的字符数组](how-to-convert-a-string-to-an-array-of-characters.md)  
-如何将字符串转换为字符数组。
+[How to: Convert a String to an Array of Characters in Visual Basic](how-to-convert-a-string-to-an-array-of-characters.md)  
+How to convert a string into an array of characters.
 
-[如何：在 Visual Basic 中访问字符串中的字符](how-to-access-characters-in-strings.md)  
-如何通过索引访问字符串中的字符。
+[How to: Access Characters in Strings in Visual Basic](how-to-access-characters-in-strings.md)  
+How to access a character in a string by its index.

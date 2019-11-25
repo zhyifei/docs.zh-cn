@@ -1,5 +1,5 @@
 ---
-title: 类型转换函数 (Visual Basic)
+title: Type Conversion Functions
 ms.date: 10/24/2018
 f1_keywords:
 - vb.CUShort
@@ -81,16 +81,16 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: 0516a579c1ad9944284d25f2f057f2f03619bbab
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 3924da6ccbfea00668370f2fbcf4baf289be80db
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582990"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349968"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>类型转换函数 (Visual Basic)
 
-这些函数是内联编译的，这意味着转换代码是用于计算表达式的代码的一部分。 有时不会调用过程来完成转换，从而提高性能。 每个函数都将表达式强制转换为特定的数据类型。
+These functions are compiled inline, meaning the conversion code is part of the code that evaluates the expression. Sometimes there is no call to a procedure to accomplish the conversion, which improves performance. Each function coerces an expression to a specific data type.
 
 ## <a name="syntax"></a>语法
 
@@ -116,38 +116,38 @@ CUShort(expression)
 ## <a name="part"></a>部件
 
 `expression`  
-必须的。 源数据类型的任何表达式。
+必须的。 Any expression of the source data type.
 
-## <a name="return-value-data-type"></a>返回值数据类型
+## <a name="return-value-data-type"></a>Return Value Data Type
 
-函数名称确定它返回的值的数据类型，如下表所示。
+The function name determines the data type of the value it returns, as shown in the following table.
 
-|功能名称|返回数据类型|@No__t_0 参数的范围|
+|功能名称|Return data type|Range for `expression` argument|
 |-------------------|----------------------|-------------------------------------|
-|`CBool`|[Boolean 数据类型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|任何有效 `Char` 或 `String` 或数值表达式。|
-|`CByte`|[Byte 数据类型](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte.MinValue?displayProperty=nameWithType> （0）到 <xref:System.Byte.MaxValue?displayProperty=nameWithType> （255）（无符号）;小数部分被舍入。<sup>1</sup><br/><br/>从 Visual Basic 15.8 开始，Visual Basic 通过 `CByte` 函数优化浮点到字节转换的性能;有关详细信息，请参阅 "[备注](#remarks)" 部分。 有关示例，请参阅[CInt 示例](#cint-example)部分。|
-|`CChar`|[Char 数据类型](../../../visual-basic/language-reference/data-types/char-data-type.md)|任何有效 `Char` 或 `String` 表达式;仅转换 `String` 的第一个字符;值可以为0到65535（无符号）。|
-|`CDate`|[Date 数据类型](../../../visual-basic/language-reference/data-types/date-data-type.md)|任何有效的日期和时间表示形式。|
-|`CDbl`|[Double 数据类型](../../../visual-basic/language-reference/data-types/double-data-type.md)|-1.79769313486231570 e + 308 到-4.94065645841246544 E-324 for 负值;4.94065645841246544 e-324 到 1.79769313486231570 E + 308 的正值。|
-|`CDec`|[Decimal 数据类型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|对于零缩放数字，为 +/-79228162514264337593543950335，即无小数位的数字。 对于包含28位小数位数的数字，范围为 +/-7.9228162514264337593543950335。 可能的最小非零数字为0.0000000000000000000000000001 （+/-1E-28）。|
-|`CInt`|[Integer 数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> （-2147483648）到 <xref:System.Int32.MaxValue?displayProperty=nameWithType> （2147483647）;小数部分被舍入。<sup>1</sup> <br/><br/>从 Visual Basic 15.8 开始，Visual Basic 通过 `CInt` 函数优化浮点到整数的转换性能;有关详细信息，请参阅 "[备注](#remarks)" 部分。 有关示例，请参阅[CInt 示例](#cint-example)部分。 |
-|`CLng`|[Long 数据类型](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MinValue?displayProperty=nameWithType> （-9223372036854775808）到 <xref:System.Int64.MaxValue?displayProperty=nameWithType> （9223372036854775807）;小数部分被舍入。<sup>1</sup><br/><br/>从 Visual Basic 15.8 开始，Visual Basic 通过 `CLng` 函数优化浮点到64位整数转换的性能;有关详细信息，请参阅 "[备注](#remarks)" 部分。 有关示例，请参阅[CInt 示例](#cint-example)部分。|
+|`CBool`|[Boolean 数据类型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Any valid `Char` or `String` or numeric expression.|
+|`CByte`|[Byte 数据类型](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte.MinValue?displayProperty=nameWithType> (0) through <xref:System.Byte.MaxValue?displayProperty=nameWithType> (255) (unsigned); fractional parts are rounded.<sup>1</sup><br/><br/>Starting with Visual Basic 15.8, Visual Basic optimizes the performance of floating-point to byte conversion with the `CByte` function; see the [Remarks](#remarks) section for more information. See the [CInt Example](#cint-example) section for an example.|
+|`CChar`|[Char 数据类型](../../../visual-basic/language-reference/data-types/char-data-type.md)|Any valid `Char` or `String` expression; only first character of a `String` is converted; value can be 0 through 65535 (unsigned).|
+|`CDate`|[Date 数据类型](../../../visual-basic/language-reference/data-types/date-data-type.md)|Any valid representation of a date and time.|
+|`CDbl`|[Double 数据类型](../../../visual-basic/language-reference/data-types/double-data-type.md)|-1.79769313486231570E+308 through -4.94065645841246544E-324 for negative values; 4.94065645841246544E-324 through 1.79769313486231570E+308 for positive values.|
+|`CDec`|[Decimal 数据类型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|+/-79,228,162,514,264,337,593,543,950,335 for zero-scaled numbers, that is, numbers with no decimal places. For numbers with 28 decimal places, the range is +/-7.9228162514264337593543950335. The smallest possible non-zero number is 0.0000000000000000000000000001 (+/-1E-28).|
+|`CInt`|[Integer 数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> (-2,147,483,648) through <xref:System.Int32.MaxValue?displayProperty=nameWithType> (2,147,483,647); fractional parts are rounded.<sup>1</sup> <br/><br/>Starting with Visual Basic 15.8, Visual Basic optimizes the performance of floating-point to integer conversion with the `CInt` function; see the [Remarks](#remarks) section for more information. See the [CInt Example](#cint-example) section for an example. |
+|`CLng`|[Long 数据类型](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MinValue?displayProperty=nameWithType> (-9,223,372,036,854,775,808) through <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9,223,372,036,854,775,807); fractional parts are rounded.<sup>1</sup><br/><br/>Starting with Visual Basic 15.8, Visual Basic optimizes the performance of floating-point to 64-bit integer conversion with the `CLng` function; see the [Remarks](#remarks) section for more information. See the [CInt Example](#cint-example) section for an example.|
 |`CObj`|[Object 数据类型](../../../visual-basic/language-reference/data-types/object-data-type.md)|任何有效表达式。|
-|`CSByte`|[SByte 数据类型](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType> （-128）到 <xref:System.SByte.MaxValue?displayProperty=nameWithType> （127）;小数部分被舍入。<sup>1</sup><br/><br/>从 Visual Basic 15.8 开始，Visual Basic 通过 `CSByte` 函数优化浮点到带符号字节转换的性能;有关详细信息，请参阅 "[备注](#remarks)" 部分。 有关示例，请参阅[CInt 示例](#cint-example)部分。|
-|`CShort`|[Short 数据类型](../../../visual-basic/language-reference/data-types/short-data-type.md)|<xref:System.Int16.MinValue?displayProperty=nameWithType> （-32768）到 <xref:System.Int16.MaxValue?displayProperty=nameWithType> （32767）;小数部分被舍入。<sup>1</sup><br/><br/>从 Visual Basic 15.8 开始，Visual Basic 通过 `CShort` 函数优化浮点到16位整数转换的性能;有关详细信息，请参阅 "[备注](#remarks)" 部分。 有关示例，请参阅[CInt 示例](#cint-example)部分。|
-|`CSng`|[Single 数据类型](../../../visual-basic/language-reference/data-types/single-data-type.md)|-3.402823 e + 38 到-1.401298 E-45 for 负值;1.401298 e-45 到 3.402823 E + 38 表示正值。|
-|`CStr`|[String 数据类型](../../../visual-basic/language-reference/data-types/string-data-type.md)|@No__t_0 的返回取决于 `expression` 参数。 请参阅[CStr 函数的返回值](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md)。|
-|`CUInt`|[UInteger 数据类型](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32.MinValue?displayProperty=nameWithType> （0）到 <xref:System.UInt32.MaxValue?displayProperty=nameWithType> （4294967295）（无符号）;小数部分被舍入。<sup>1</sup><br/><br/>从 Visual Basic 15.8 开始，Visual Basic 通过 `CUInt` 函数优化浮点到无符号整数转换的性能;有关详细信息，请参阅 "[备注](#remarks)" 部分。 有关示例，请参阅[CInt 示例](#cint-example)部分。|
-|`CULng`|[ULong 数据类型](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64.MinValue?displayProperty=nameWithType> （0）到 <xref:System.UInt64.MaxValue?displayProperty=nameWithType> （18446744073709551615）（无符号）;小数部分被舍入。<sup>1</sup><br/><br/>从 Visual Basic 15.8 开始，Visual Basic 通过 `CULng` 函数优化浮点到无符号长整数转换的性能;有关详细信息，请参阅 "[备注](#remarks)" 部分。 有关示例，请参阅[CInt 示例](#cint-example)部分。|
-|`CUShort`|[UShort 数据类型](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<xref:System.UInt16.MinValue?displayProperty=nameWithType> （0）到 <xref:System.UInt16.MaxValue?displayProperty=nameWithType> （65535）（无符号）;小数部分被舍入。<sup>1</sup><br/><br/>从 Visual Basic 15.8 开始，Visual Basic 通过 `CUShort` 函数优化浮点到无符号16位整数转换的性能;有关详细信息，请参阅 "[备注](#remarks)" 部分。 有关示例，请参阅[CInt 示例](#cint-example)部分。|
+|`CSByte`|[SByte 数据类型](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType> (-128) through <xref:System.SByte.MaxValue?displayProperty=nameWithType> (127); fractional parts are rounded.<sup>1</sup><br/><br/>Starting with Visual Basic 15.8, Visual Basic optimizes the performance of floating-point to signed byte conversion with the `CSByte` function; see the [Remarks](#remarks) section for more information. See the [CInt Example](#cint-example) section for an example.|
+|`CShort`|[Short 数据类型](../../../visual-basic/language-reference/data-types/short-data-type.md)|<xref:System.Int16.MinValue?displayProperty=nameWithType> (-32,768) through <xref:System.Int16.MaxValue?displayProperty=nameWithType> (32,767); fractional parts are rounded.<sup>1</sup><br/><br/>Starting with Visual Basic 15.8, Visual Basic optimizes the performance of floating-point to 16-bit integer conversion with the `CShort` function; see the [Remarks](#remarks) section for more information. See the [CInt Example](#cint-example) section for an example.|
+|`CSng`|[Single 数据类型](../../../visual-basic/language-reference/data-types/single-data-type.md)|-3.402823E+38 through -1.401298E-45 for negative values; 1.401298E-45 through 3.402823E+38 for positive values.|
+|`CStr`|[String 数据类型](../../../visual-basic/language-reference/data-types/string-data-type.md)|Returns for `CStr` depend on the `expression` argument. See [Return Values for the CStr Function](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).|
+|`CUInt`|[UInteger 数据类型](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32.MinValue?displayProperty=nameWithType> (0) through <xref:System.UInt32.MaxValue?displayProperty=nameWithType> (4,294,967,295) (unsigned); fractional parts are rounded.<sup>1</sup><br/><br/>Starting with Visual Basic 15.8, Visual Basic optimizes the performance of floating-point to unsigned integer conversion with the `CUInt` function; see the [Remarks](#remarks) section for more information. See the [CInt Example](#cint-example) section for an example.|
+|`CULng`|[ULong 数据类型](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64.MinValue?displayProperty=nameWithType> (0) through <xref:System.UInt64.MaxValue?displayProperty=nameWithType> (18,446,744,073,709,551,615) (unsigned); fractional parts are rounded.<sup>1</sup><br/><br/>Starting with Visual Basic 15.8, Visual Basic optimizes the performance of floating-point to unsigned long integer conversion with the `CULng` function; see the [Remarks](#remarks) section for more information. See the [CInt Example](#cint-example) section for an example.|
+|`CUShort`|[UShort 数据类型](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<xref:System.UInt16.MinValue?displayProperty=nameWithType> (0) through <xref:System.UInt16.MaxValue?displayProperty=nameWithType> (65,535) (unsigned); fractional parts are rounded.<sup>1</sup><br/><br/>Starting with Visual Basic 15.8, Visual Basic optimizes the performance of floating-point to unsigned 16-bit integer conversion with the `CUShort` function; see the [Remarks](#remarks) section for more information. See the [CInt Example](#cint-example) section for an example.|
 
-<sup>1</sup>小数部分可服从一种特殊类型的舍入，称为 "*银行家舍入*"。 有关详细信息，请参阅 "备注"。
+<sup>1</sup> Fractional parts can be subject to a special type of rounding called *banker's rounding*. See "Remarks" for more information.
 
 ## <a name="remarks"></a>备注
 
-作为一种规则，应优先使用 Visual Basic 类型转换函数，以便在 <xref:System.Convert> 类上或单个类型结构或类 .NET Framework 方法（如 `ToString()`）。 Visual Basic 函数旨在实现与 Visual Basic 代码的最佳交互，并使源代码更简单、更易于阅读。 此外，.NET Framework 转换方法不会始终产生与 Visual Basic 函数相同的结果，例如将 `Boolean` 转换为 `Integer` 时。 有关详细信息，请参阅[数据类型疑难解答](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。
+As a rule, you should use the Visual Basic type conversion functions in preference to the .NET Framework methods such as `ToString()`, either on the <xref:System.Convert> class or on an individual type structure or class. The Visual Basic functions are designed for optimal interaction with Visual Basic code, and they also make your source code shorter and easier to read. In addition, the .NET Framework conversion methods do not always produce the same results as the Visual Basic functions, for example when converting `Boolean` to `Integer`. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
 
-从 Visual Basic 15.8 开始，当你将以下方法返回的 <xref:System.Single> 或 <xref:System.Double> 值传递到一个整数转换函数（`CByte`、`CShort`、`CInt`、@no__ 时，将优化浮点到整数转换的性能。t_5、`CSByte`、`CUShort`、`CUInt`、`CULng`）：
+Starting with Visual Basic 15.8, the performance of floating-point-to-integer conversion is optimized when you pass the <xref:System.Single> or <xref:System.Double> value returned by the following methods to one of the integer conversion functions (`CByte`, `CShort`, `CInt`, `CLng`, `CSByte`, `CUShort`, `CUInt`, `CULng`):
 
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>
@@ -160,7 +160,7 @@ CUShort(expression)
 - <xref:System.Math.Round(System.Double)?displayProperty=nameWithType>
 - <xref:System.Math.Truncate(System.Double)?displayProperty=nameWithType>
 
-此优化允许执行大量整数转换的代码最多运行两次。 下面的示例阐释了这些优化的浮点到整数转换：
+This optimization allows code that does a large number of integer conversions to run up to twice as fast. The following example illustrates these optimized floating-point-to-integer conversions:
 
 ```vb
 Dim s As Single = 173.7619
@@ -175,133 +175,133 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 
 ## <a name="behavior"></a>行为
 
-- **强制.** 通常，可以使用数据类型转换函数将操作的结果强制转换为特定的数据类型，而不是默认的数据类型。 例如，在通常会发生单精度、双精度或整数算术运算的情况下，可以使用 `CDec` 来强制进行十进制运算。
+- **Coercion.** In general, you can use the data type conversion functions to coerce the result of an operation to a particular data type rather than the default data type. For example, use `CDec` to force decimal arithmetic in cases where single-precision, double-precision, or integer arithmetic would normally take place.
 
-- **转换失败。** 如果传递到函数的 `expression` 超出了要转换到的数据类型的范围，则会发生 <xref:System.OverflowException>。
+- **Failed Conversions.** If the `expression` passed to the function is outside the range of the data type to which it is to be converted, an <xref:System.OverflowException> occurs.
 
-- **小数部分。** 将非整数值转换为整型类型时，整数转换函数（`CByte`、`CInt`、`CLng`、`CSByte`、`CShort`、`CUInt`、`CULng` 和 `CUShort`）将删除小数部分，并将值舍入到最接近的整数。
+- **Fractional Parts.** When you convert a nonintegral value to an integral type, the integer conversion functions (`CByte`, `CInt`, `CLng`, `CSByte`, `CShort`, `CUInt`, `CULng`, and `CUShort`) remove the fractional part and round the value to the closest integer.
 
-     如果小数部分正好为0.5，则整数转换函数会将其舍入到最接近的偶数。 例如，0.5 舍入为0，1.5 和2.5 都舍入到2。 这有时称为 "*银行家舍入*"，它的目的是为了弥补在一起添加多个这类数字时可能累积的偏差。
+     If the fractional part is exactly 0.5, the integer conversion functions round it to the nearest even integer. For example, 0.5 rounds to 0, and 1.5 and 2.5 both round to 2. This is sometimes called *banker's rounding*, and its purpose is to compensate for a bias that could accumulate when adding many such numbers together.
 
-     `CInt` 和 `CLng` 与 <xref:Microsoft.VisualBasic.Conversion.Int%2A> 和 <xref:Microsoft.VisualBasic.Conversion.Fix%2A> 函数不同，后者会截断而不是舍入数字的小数部分。 此外，`Fix` 和 `Int` 总是返回与传入的数据类型相同的值。
+     `CInt` and `CLng` differ from the <xref:Microsoft.VisualBasic.Conversion.Int%2A> and <xref:Microsoft.VisualBasic.Conversion.Fix%2A> functions, which truncate, rather than round, the fractional part of a number. Also, `Fix` and `Int` always return a value of the same data type as you pass in.
 
-- **日期/时间转换。** 使用 <xref:Microsoft.VisualBasic.Information.IsDate%2A> 函数确定是否可将值转换为日期和时间。 `CDate` 可识别日期文本和时间文本，而不是数值。 若要将 Visual Basic 6.0 `Date` 值转换为 Visual Basic 2005 或更高版本中的 `Date` 值，可以使用 <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> 方法。
+- **Date/Time Conversions.** Use the <xref:Microsoft.VisualBasic.Information.IsDate%2A> function to determine if a value can be converted to a date and time. `CDate` recognizes date literals and time literals but not numeric values. To convert a Visual Basic 6.0 `Date` value to a `Date` value in Visual Basic 2005 or later versions, you can use the <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> method.
 
-- **非特定日期/时间值。** [日期数据类型](../../../visual-basic/language-reference/data-types/date-data-type.md)始终包含日期和时间信息。 出于类型转换的目的，Visual Basic 将1/1/0001 （第1年1月1日）视为日期的*非特定值*，00:00:00 （午夜）为时间的非特定值。 如果将 `Date` 值转换为字符串，`CStr` 不会在生成的字符串中包含非特定值。 例如，如果将 `#January 1, 0001 9:30:00#` 转换为字符串，则结果为 "9:30:00 AM";禁止显示日期信息。 但是，日期信息仍以原始 `Date` 值形式存在，可以通过函数（如 <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> 函数）进行恢复。
+- **Neutral Date/Time Values.** The [Date Data Type](../../../visual-basic/language-reference/data-types/date-data-type.md) always contains both date and time information. For purposes of type conversion, Visual Basic considers 1/1/0001 (January 1 of the year 1) to be a *neutral value* for the date, and 00:00:00 (midnight) to be a neutral value for the time. If you convert a `Date` value to a string, `CStr` does not include neutral values in the resulting string. For example, if you convert `#January 1, 0001 9:30:00#` to a string, the result is "9:30:00 AM"; the date information is suppressed. However, the date information is still present in the original `Date` value and can be recovered with functions such as <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> function.
 
-- **区分区域性。** 涉及字符串的类型转换函数根据应用程序的当前区域性设置执行转换。 例如，`CDate` 根据系统的区域设置来识别日期格式。 必须以正确的顺序为你的区域设置提供日期、月份和年份，否则可能无法正确解释日期。 如果长日期格式包含一周内的字符串（如 "星期三"），则不能识别该格式。
+- **Culture Sensitivity.** The type conversion functions involving strings perform conversions based on the current culture settings for the application. For example, `CDate` recognizes date formats according to the locale setting of your system. You must provide the day, month, and year in the correct order for your locale, or the date might not be interpreted correctly. A long date format is not recognized if it contains a day-of-the-week string, such as "Wednesday".
 
-     如果需要转换为或从值的字符串表示形式转换而不是由区域设置指定的格式，则不能使用 Visual Basic 类型转换函数。 为此，请使用该值的类型的 `ToString(IFormatProvider)` 和 `Parse(String, IFormatProvider)` 方法。 例如，在将字符串转换为 `Double` 时使用 <xref:System.Double.Parse%2A?displayProperty=nameWithType>，并在将 `Double` 类型的值转换为字符串时使用 <xref:System.Double.ToString%2A?displayProperty=nameWithType>。
+     If you need to convert to or from a string representation of a value in a format other than the one specified by your locale, you cannot use the Visual Basic type conversion functions. To do this, use the `ToString(IFormatProvider)` and `Parse(String, IFormatProvider)` methods of that value's type. For example, use <xref:System.Double.Parse%2A?displayProperty=nameWithType> when converting a string to a `Double`, and use <xref:System.Double.ToString%2A?displayProperty=nameWithType> when converting a value of type `Double` to a string.
 
 ## <a name="ctype-function"></a>CType Function
 
-[CType 函数](../../../visual-basic/language-reference/functions/ctype-function.md)使用第二个参数 `typename`，并将 `expression` 强制转换为 `typename`，其中 `typename` 可以是存在有效转换的任何数据类型、结构、类或接口。
+The [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md) takes a second argument, `typename`, and coerces `expression` to `typename`, where `typename` can be any data type, structure, class, or interface to which there exists a valid conversion.
 
-有关使用其他类型转换关键字的 `CType` 比较，请参阅[DirectCast operator](../../../visual-basic/language-reference/operators/directcast-operator.md) And [TryCast operator](../../../visual-basic/language-reference/operators/trycast-operator.md)。
+For a comparison of `CType` with the other type conversion keywords, see [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) and [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md).
 
-## <a name="cbool-example"></a>CBool 示例
+## <a name="cbool-example"></a>CBool Example
 
-下面的示例使用 `CBool` 函数将表达式转换为 `Boolean` 值。 如果表达式的计算结果为非零值，`CBool` 将返回 `True`;否则，它将返回 `False`。
+The following example uses the `CBool` function to convert expressions to `Boolean` values. If an expression evaluates to a nonzero value, `CBool` returns `True`; otherwise, it returns `False`.
 
 [!code-vb[VbVbalrFunctions#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#1)]
 
-## <a name="cbyte-example"></a>CByte 示例
+## <a name="cbyte-example"></a>CByte Example
 
-下面的示例使用 `CByte` 函数将表达式转换为 `Byte`。
+The following example uses the `CByte` function to convert an expression to a `Byte`.
 
 [!code-vb[VbVbalrFunctions#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#2)]
 
-## <a name="cchar-example"></a>CChar 示例
+## <a name="cchar-example"></a>CChar Example
 
-下面的示例使用 `CChar` 函数将 `String` 表达式的第一个字符转换为 `Char` 类型。
+The following example uses the `CChar` function to convert the first character of a `String` expression to a `Char` type.
 
 [!code-vb[VbVbalrFunctions#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#3)]
 
-@No__t_0 的输入参数的数据类型必须为 `Char` 或 `String`。 不能使用 `CChar` 将数字转换为字符，因为 `CChar` 无法接受数字数据类型。 下面的示例获取一个表示码位（字符代码）的数字，并将其转换为相应的字符。 它使用 <xref:Microsoft.VisualBasic.Interaction.InputBox%2A> 函数获取数字的字符串，`CInt` 将字符串转换为类型 `Integer`，并使用 `ChrW` 将数字转换为类型 `Char`。
+The input argument to `CChar` must be of data type `Char` or `String`. You cannot use `CChar` to convert a number to a character, because `CChar` cannot accept a numeric data type. The following example obtains a number representing a code point (character code) and converts it to the corresponding character. It uses the <xref:Microsoft.VisualBasic.Interaction.InputBox%2A> function to obtain the string of digits, `CInt` to convert the string to type `Integer`, and `ChrW` to convert the number to type `Char`.
 
 [!code-vb[VbVbalrFunctions#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#4)]
 
-## <a name="cdate-example"></a>CDate 示例
+## <a name="cdate-example"></a>CDate Example
 
-下面的示例使用 `CDate` 函数将字符串转换为 `Date` 值。 通常，不建议将日期和时间作为字符串进行硬编码（如本示例所示）。 改为使用日期文本和时间文本（如 #Feb 12、1969 # 和 #4： 45:23 PM #）。
+The following example uses the `CDate` function to convert strings to `Date` values. In general, hard-coding dates and times as strings (as shown in this example) is not recommended. Use date literals and time literals, such as #Feb 12, 1969# and #4:45:23 PM#, instead.
 
 [!code-vb[VbVbalrFunctions#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#5)]
 
-## <a name="cdbl-example"></a>CDbl 示例
+## <a name="cdbl-example"></a>CDbl Example
 
 [!code-vb[VbVbalrFunctions#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#6)]
 
-## <a name="cdec-example"></a>CDec 示例
+## <a name="cdec-example"></a>CDec Example
 
-下面的示例使用 `CDec` 函数将数值转换为 `Decimal`。
+The following example uses the `CDec` function to convert a numeric value to `Decimal`.
 
 [!code-vb[VbVbalrFunctions#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#7)]
 
-## <a name="cint-example"></a>CInt 示例
+## <a name="cint-example"></a>CInt Example
 
-下面的示例使用 `CInt` 函数将值转换为 `Integer`。
+The following example uses the `CInt` function to convert a value to `Integer`.
 
 [!code-vb[VbVbalrFunctions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#8)]
 
-## <a name="clng-example"></a>CLng 示例
+## <a name="clng-example"></a>CLng Example
 
-下面的示例使用 `CLng` 函数将值转换为 `Long`。
+The following example uses the `CLng` function to convert values to `Long`.
 
 [!code-vb[VbVbalrFunctions#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#9)]
 
-## <a name="cobj-example"></a>CObj 示例
+## <a name="cobj-example"></a>CObj Example
 
-下面的示例使用 `CObj` 函数将数值转换为 `Object`。 @No__t_0 变量本身只包含一个四字节指针，该指针指向分配给它的 `Double` 值。
+The following example uses the `CObj` function to convert a numeric value to `Object`. The `Object` variable itself contains only a four-byte pointer, which points to the `Double` value assigned to it.
 
 [!code-vb[VbVbalrFunctions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#10)]
 
-## <a name="csbyte-example"></a>CSByte 示例
+## <a name="csbyte-example"></a>CSByte Example
 
-下面的示例使用 `CSByte` 函数将数值转换为 `SByte`。
+The following example uses the `CSByte` function to convert a numeric value to `SByte`.
 
 [!code-vb[VbVbalrFunctions#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#11)]
 
-## <a name="cshort-example"></a>CShort 示例
+## <a name="cshort-example"></a>CShort Example
 
-下面的示例使用 `CShort` 函数将数值转换为 `Short`。
+The following example uses the `CShort` function to convert a numeric value to `Short`.
 
 [!code-vb[VbVbalrFunctions#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#12)]
 
-## <a name="csng-example"></a>CSng 示例
+## <a name="csng-example"></a>CSng Example
 
-下面的示例使用 `CSng` 函数将值转换为 `Single`。
+The following example uses the `CSng` function to convert values to `Single`.
 
 [!code-vb[VbVbalrFunctions#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#13)]
 
-## <a name="cstr-example"></a>CStr 示例
+## <a name="cstr-example"></a>CStr Example
 
-下面的示例使用 `CStr` 函数将数值转换为 `String`。
+The following example uses the `CStr` function to convert a numeric value to `String`.
 
 [!code-vb[VbVbalrFunctions#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#14)]
 
-下面的示例使用 `CStr` 函数将 `Date` 值转换为 `String` 值。
+The following example uses the `CStr` function to convert `Date` values to `String` values.
 
 [!code-vb[VbVbalrFunctions#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#15)]
 
-`CStr` 始终以标准短格式为当前区域设置呈现 `Date` 值，例如 "6/15/2003 4:35:47 PM"。 不过，`CStr` 会将日期和00:00:00 的*非特定值*取消为1/1/0001。
+`CStr` always renders a `Date` value in the standard short format for the current locale, for example, "6/15/2003 4:35:47 PM". However, `CStr` suppresses the *neutral values* of 1/1/0001 for the date and 00:00:00 for the time.
 
-有关 `CStr` 返回的值的更多详细信息，请参阅[CStr 函数的返回值](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md)。
+For more detail on the values returned by `CStr`, see [Return Values for the CStr Function](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).
 
-## <a name="cuint-example"></a>CUInt 示例
+## <a name="cuint-example"></a>CUInt Example
 
-下面的示例使用 `CUInt` 函数将数值转换为 `UInteger`。
+The following example uses the `CUInt` function to convert a numeric value to `UInteger`.
 
 [!code-vb[VbVbalrFunctions#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#16)]
 
-## <a name="culng-example"></a>CULng 示例
+## <a name="culng-example"></a>CULng Example
 
-下面的示例使用 `CULng` 函数将数值转换为 `ULong`。
+The following example uses the `CULng` function to convert a numeric value to `ULong`.
 
 [!code-vb[VbVbalrFunctions#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#17)]
 
-## <a name="cushort-example"></a>CUShort 示例
+## <a name="cushort-example"></a>CUShort Example
 
-下面的示例使用 `CUShort` 函数将数值转换为 `UShort`。
+The following example uses the `CUShort` function to convert a numeric value to `UShort`.
 
 [!code-vb[VbVbalrFunctions#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#18)]
 
@@ -319,4 +319,4 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 - <xref:Microsoft.VisualBasic.Conversion.Str%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Val%2A>
 - [转换函数](../../../visual-basic/language-reference/functions/conversion-functions.md)
-- [Visual Basic 中的类型转换](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Type Conversions in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

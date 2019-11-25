@@ -1,15 +1,15 @@
 ---
-title: 如何：链接轴方法调用 (LINQ to XML) (Visual Basic)
+title: 如何：链接轴方法调用 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: e4e22942-39bd-460f-b3c0-9f09e53d3aa9
-ms.openlocfilehash: 8c607915d83c49958e3aa86c9625fa1311a2274b
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: de6fbec9fa7948c618252415774ff6a2e9289c74
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709838"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346936"
 ---
-# <a name="how-to-chain-axis-method-calls-linq-to-xml-visual-basic"></a>如何：链接轴方法调用 (LINQ to XML) (Visual Basic)
+# <a name="how-to-chain-axis-method-calls-linq-to-xml-visual-basic"></a>How to: Chain Axis Method Calls (LINQ to XML) (Visual Basic)
 一个在代码中常用的模式是调用轴方法，然后调用一个扩展方法轴。  
   
  有两个返回元素集合、名称为 `Elements` 的轴：<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> 方法和 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> 方法。 可以合并这两个轴，在树的给定深度，查找具有指定名称的所有元素。  
@@ -17,7 +17,7 @@ ms.locfileid: "68709838"
 ## <a name="example"></a>示例  
  本示例使用 <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> 和 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> 在所有 `Name` 元素中查找所有 `Address` 元素中的所有 `PurchaseOrder` 元素。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ 本示例使用以下 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```vb  
 Dim purchaseOrders As XElement = XElement.Load("PurchaseOrders.xml")  
@@ -86,9 +86,9 @@ Next
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例演示针对命名空间中的 XML 的相同技术。 有关详细信息, 请参阅[命名空间概述 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)。  
+ 下面的示例演示针对命名空间中的 XML 的相同技术。 For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的多个采购订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。  
+ 本示例使用以下 XML 文档：[示例 XML 文件：命名空间中的多个采购订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  

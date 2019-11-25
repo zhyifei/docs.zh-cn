@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: 95942e9818eccc018c123148949c6f2dee4fa6e0
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ba28a81dd2ea0684ed863821afd3a8f31c0fb064
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736621"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140765"
 ---
 # <a name="msmqintegrationbinding"></a>\<msmqIntegrationBinding >
 定义一个绑定，此绑定通过利用 MSMQ 路由消息来提供队列支持。  
@@ -62,7 +62,7 @@ ms.locfileid: "73736621"
 |exactlyOnce|一个布尔值，指示每个消息是否只传递一次。 然后，将通知发送方有关传递失败的信息。 如果 `durable` 为 `false`，则将忽略此属性并且传输消息，而不会提供传递保证。 默认值为 `true`。 有关更多信息，请参见<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>。|  
 |maxReceivedMessageSize|一个正整数，定义此绑定所处理的最大消息大小（以字节为单位），其中包括标头。 如果消息超出此限制，则发送方将收到 SOAP 错误。 接收方将删除该消息，并在跟踪日志中创建事件项。 默认值为 65536。 对消息大小进行的此限制旨在降低遭受拒绝服务 (DoS) 攻击的可能性。|  
 |maxRetryCycles|一个整数，指示病毒消息检测功能所使用的重试周期数。 如果所有周期的所有传递尝试均失败，则消息将变为病毒消息。 默认值为 2。 有关更多信息，请参见<xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>。|  
-|NAME|一个包含绑定的配置名称的字符串。 因为此值用作绑定的标识，所以它应该是唯一的。 从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。 有关默认配置和无值绑定和行为的详细信息，请参阅[WCF 服务的](../../../wcf/samples/simplified-configuration-for-wcf-services.md)[简化配置](../../../wcf/simplified-configuration.md)和简化配置。|  
+|NAME|一个包含绑定的配置名称的字符串。 因为此值用作绑定的标识，所以它应该是唯一的。 从 .NET Framework 4 开始，绑定和行为不需要具有名称。 有关默认配置和无值绑定和行为的详细信息，请参阅[WCF 服务的](../../../wcf/samples/simplified-configuration-for-wcf-services.md)[简化配置](../../../wcf/simplified-configuration.md)和简化配置。|  
 |openTimeout|一个 <xref:System.TimeSpan> 值，指定为完成打开操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:01:00。|  
 |receiveErrorHandling|一个 <xref:System.ServiceModel.ReceiveErrorHandling> 值，指定如何处理病毒消息和不可调度的消息。|  
 |receiveRetryCount|一个整数，指定在从应用程序队列到应用程序的消息传输失败时，队列管理器应尝试的最大立即重试次数。<br /><br /> 如果达到尝试传递的最大次数且应用程序仍未访问消息，则会将消息发送到重试队列，以便在以后重新进行传递。 将消息传输回发送队列之前的时间量由 `retryCycleDelay` 控制。 如果重试周期达到 `maxRetryCycles` 值，则或者将消息发送到病毒消息队列，或者将否定确认发送回发送方。|  

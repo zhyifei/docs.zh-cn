@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: 572537826074dd51b56f1cae9edb767708bc1c3d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c9a1e889ab5adcb8f0eb5ea851c81a4f9ee56e95
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321034"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138541"
 ---
 # <a name="load-balancing"></a>负载平衡
 增加 Windows Communication Foundation （WCF）应用程序容量的一种方法是通过将它们部署到负载平衡的服务器场来扩展它们。 可以使用标准负载平衡技术（包括软件负载平衡器，例如 Windows 网络负载平衡）以及基于硬件的负载平衡设备对 WCF 应用程序进行负载平衡。  
@@ -56,7 +56,7 @@ ms.locfileid: "72321034"
 </configuration>  
 ```  
   
- 通过 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中引入的简化配置，可以使用下面的简化配置实现相同行为。  
+ 使用 .NET Framework 4 中引入的简化配置，可以使用以下简化的配置来实现相同的行为。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

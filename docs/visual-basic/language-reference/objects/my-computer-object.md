@@ -1,28 +1,28 @@
 ---
-title: My.Computer 对象 (Visual Basic)
+title: My.Computer 对象
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer object
 ms.assetid: cc814d79-6f7f-4e54-8b9d-5ecfdd77a0b8
-ms.openlocfilehash: f0fbd2a795d90cb88a4b185669a6393c5ef22752
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1d6113872f2196f2db4ac1849222cd69f95ffd7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62031078"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332118"
 ---
 # <a name="mycomputer-object"></a>My.Computer 对象
 提供了用于操控计算机组件（如音频、时钟、键盘、文件系统等）的属性。  
   
 ## <a name="remarks"></a>备注  
- 有关 `My.Computer` 对象所使用方法和属性的信息，请参阅 <xref:Microsoft.VisualBasic.Devices.Computer>。 类的基类<xref:Microsoft.VisualBasic.Devices.ServerComputer>提供了可在所有项目中的成员。  
+ 有关 `My.Computer` 对象所使用方法和属性的信息，请参阅 <xref:Microsoft.VisualBasic.Devices.Computer>。 The base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects.  
   
 ## <a name="requirements"></a>要求  
- **Namespace**：<xref:Microsoft.VisualBasic.Devices>  
+ **命名空间：** <xref:Microsoft.VisualBasic.Devices>  
   
- **类：** <xref:Microsoft.VisualBasic.Devices.Computer> (基类<xref:Microsoft.VisualBasic.Devices.ServerComputer>提供了可在所有项目中的成员)。  
+ **Class:** <xref:Microsoft.VisualBasic.Devices.Computer> (the base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects).  
   
- **程序集：** Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>请参阅
 

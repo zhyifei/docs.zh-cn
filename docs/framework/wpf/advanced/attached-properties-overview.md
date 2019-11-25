@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: 403c4e76e302536513b9de0694ab7b0de621d5d2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f4e8ea9fb0643a4a434bf20fa719c3fd2d01435b
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455517"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089323"
 ---
 # <a name="attached-properties-overview"></a>附加属性概述
 
@@ -60,7 +60,7 @@ WPF 定义附加属性的最典型方案是：当父元素支持子元素集合�
 
 ## 代码中的附加属性<a name="attached_properties_code"></a>
 
-WPF 中的附加属性没有用于轻松获取/设置访问的典型 CLR "包装器" 方法。 这是因为，附加属性不一定是设置了属性的实例的 CLR 命名空间的一部分。 但是，分析 XAML 时，XAML 处理器必须能够设置这些值。 若要支持有效的附加属性用法，附加属性的所有者类型必须以**Get_PropertyName_** 和**Set_PropertyName_** 的形式实现专用访问器方法。 这些专用访问器方法对在代码中设置附加属性也很有帮助。 从代码的角度来看，附加属性类似于具有方法访问器而不是属性访问器的支持字段，且支持字段可在任何对象上存在，无需专门定义。
+WPF 中的附加属性没有用于轻松获取/设置访问的典型 CLR "包装器" 方法。 这是因为，附加属性不一定是设置了属性的实例的 CLR 命名空间的一部分。 但是，分析 XAML 时，XAML 处理器必须能够设置这些值。 若要支持有效的附加属性用法，附加属性的所有者类型必须以**Get_PropertyName_** 和**Set_PropertyName_** 形式实现专用访问器方法。 这些专用访问器方法对在代码中设置附加属性也很有帮助。 从代码的角度来看，附加属性类似于具有方法访问器而不是属性访问器的支持字段，且支持字段可在任何对象上存在，无需专门定义。
 
 下面的示例演示如何在代码中设置附加属性。 在此示例中，`myCheckBox` 是 <xref:System.Windows.Controls.CheckBox> 类的实例。
 
@@ -123,7 +123,7 @@ WPF 中的附加属性没有用于轻松获取/设置访问的典型 CLR "包装
 
 #### <a name="attached-property-attributes"></a>附加属性特性
 
-WPF 定义了多个 [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)]，旨在向反射进程提供附加属性的相关信息，并定义了反射的典型用户和属性信息（如设计器）。 由于附加属性的类型没有范围限制，因此设计者需要一种方法来避免用户查看全局列表时，看到使用 XAML 的特定技术实现中定义的所有附加属性。 WPF 为附加属性定义的 [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] 可用于确定应该在 "属性" 窗口中显示给定附加属性的情况的作用域。 你还可考虑对自己的自定义附加属性应用这些特性。 有关 [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] 的用途和语法说明，请参阅相应的参考页面：
+WPF 定义了多个 .NET 特性，旨在向反射进程提供附加属性的相关信息，并定义了反射的典型用户和属性信息（如设计器）。 由于附加属性的类型没有范围限制，因此设计者需要一种方法来避免用户查看全局列表时，看到使用 XAML 的特定技术实现中定义的所有附加属性。 WPF 为附加属性定义的 .NET 特性可用于确定应该在 "属性" 窗口中显示给定附加属性的情况的作用域。 你还可考虑对自己的自定义附加属性应用这些特性。 .NET 特性的目的和语法在相应的参考页上进行了说明：
 
 - <xref:System.Windows.AttachedPropertyBrowsableAttribute>
 

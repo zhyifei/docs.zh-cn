@@ -1,15 +1,15 @@
 ---
-title: 如何：创建包含命名空间的文档 (C#) (LINQ to XML)
+title: 如何使用命名空间创建文档 (C#) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: 180dc5138f8f21b3e52e4a8b3cee4748cafdd0f5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 429b0b0b41f2201b983f931e469b25ff406b91ac
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593892"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141333"
 ---
-# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>如何：创建包含命名空间的文档 (C#) (LINQ to XML)
+# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>如何使用命名空间创建文档 (C#) (LINQ to XML)
 本主题演示如何创建包含命名空间的文档。  
   
 ## <a name="example"></a>示例  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-ms.openlocfilehash: b00218623add052e135bc5815d615fe7cdf002ee
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8321a09db31c9f6d2103a252a195fcdbf8da3e66
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459953"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283859"
 ---
 # <a name="xkey-directive"></a>x:Key 指令
 唯一标识在 XAML 定义的字典中创建和引用的元素。 将 `x:Key` 值添加到 XAML 对象元素是在资源字典中标识资源的最常见方法，例如在 WPF <xref:System.Windows.ResourceDictionary>中。  
@@ -86,7 +86,7 @@ ms.locfileid: "73459953"
   
 ### <a name="xaml-element-usage-xaml-2009-only"></a>XAML 元素用法（仅适用于 XAML 2009）  
   
-```  
+```xaml  
 <object>  
   <x:Key>  
 keyObject  
@@ -110,7 +110,7 @@ keyObject
 ## <a name="silverlight-usage-notes"></a>Silverlight 使用说明  
  Silverlight `x:Key` 分别进行了说明。 有关详细信息，请参阅[XAML 命名空间（x：）语言功能（Silverlight）](https://go.microsoft.com/fwlink/?LinkId=199081)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XAML 资源](../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [资源和代码](../wpf/advanced/resources-and-code.md)

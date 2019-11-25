@@ -9,15 +9,15 @@ helpviewer_keywords:
 - styles [WPF], TreeView
 - TreeView [WPF], styles and templates
 ms.assetid: a49adb77-0202-4caa-b94a-8bb110d7fa9a
-ms.openlocfilehash: f6dbe54324a5ad5e2f85719d819c035abfd644b1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 45276d23380fe956fc3d59b90d5baae23ee8a7e2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460183"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283637"
 ---
 # <a name="treeview-styles-and-templates"></a>TreeView 样式和模板
-本主题介绍 <xref:System.Windows.Controls.TreeView> 控件的样式和模板。 您可以修改默认 <xref:System.Windows.Controls.ControlTemplate> 以使控件具有独特的外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
+本主题介绍 <xref:System.Windows.Controls.TreeView> 控件的样式和模板。 您可以修改默认 <xref:System.Windows.Controls.ControlTemplate> 以使控件具有独特的外观。 有关详细信息，请参阅为[控件创建模板](../../../desktop-wpf/themes/how-to-create-apply-template.md)。  
   
 ## <a name="treeview-parts"></a>TreeView 部件  
  <xref:System.Windows.Controls.TreeView> 控件没有任何命名部分。  
@@ -36,7 +36,7 @@ ms.locfileid: "73460183"
 ## <a name="treeviewitem-parts"></a>TreeViewItem 部件  
  下表列出了 <xref:System.Windows.Controls.TreeViewItem> 控件的已命名部分。  
   
-|部件|键入|描述|  
+|部件|Type|描述|  
 |----------|----------|-----------------|  
 |PART_Header|<xref:System.Windows.FrameworkElement>|一个包含 <xref:System.Windows.Controls.TreeView> 控件标题内容的视觉元素。|  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73460183"
   
 |VisualState 名称|VisualStateGroup 名称|描述|  
 |----------------------|---------------------------|-----------------|  
-|普通|CommonStates|默认状态。|  
+|一般|CommonStates|默认状态。|  
 |MouseOver|CommonStates|鼠标指针置于 <xref:System.Windows.Controls.TreeViewItem>上。|  
 |Disabled|CommonStates|<xref:System.Windows.Controls.TreeViewItem> 处于禁用状态。|  
 |已设定焦点|FocusStates|<xref:System.Windows.Controls.TreeViewItem> 具有焦点。|  
@@ -72,11 +72,11 @@ ms.locfileid: "73460183"
   
  有关完整示例，请参阅[使用 ControlTemplates 设置样式示例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [控件样式和模板](control-styles-and-templates.md)
 - [控件自定义](control-customization.md)
 - [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)
+- [为控件创建模板](../../../desktop-wpf/themes/how-to-create-apply-template.md)

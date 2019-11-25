@@ -1,5 +1,5 @@
 ---
-title: 如何：创建一个属性 (Visual Basic)
+title: 如何：创建属性
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -7,56 +7,56 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: 91f34de36e88724ccab21097bf54a4604f7eee37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee5a9f687765ce064eb3c3f84218ed36eb916d9d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665775"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349704"
 ---
-# <a name="how-to-create-a-property-visual-basic"></a>如何：创建一个属性 (Visual Basic)
-将属性定义之间`Property`语句和一个`End Property`语句。 在此定义中，定义`Get`过程中，`Set`过程中，或两者。 该属性的所有代码均位于这些过程中。  
+# <a name="how-to-create-a-property-visual-basic"></a>如何：创建属性 (Visual Basic)
+You enclose a property definition between a `Property` statement and an `End Property` statement. Within this definition you define a `Get` procedure, a `Set` procedure, or both. All the property's code lies within these procedures.  
   
- `Get`过程中检索该属性的值和`Set`过程存储一个值。 如果你想要具有读/写访问权限的属性，则必须定义这两个过程。 对于只读属性，只需定义`Get`，并只写属性，只需定义`Set`。  
+ The `Get` procedure retrieves the property's value, and the `Set` procedure stores a value. If you want the property to have read/write access, you must define both procedures. For a read-only property, you define only `Get`, and for a write-only property, you define only `Set`.  
   
-### <a name="to-create-a-property"></a>若要创建属性  
+### <a name="to-create-a-property"></a>To create a property  
   
-1. 外部任何属性或过程，使用[Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)后, 跟`End Property`语句。  
+1. Outside any property or procedure, use a [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md), followed by an `End Property` statement.  
   
-2. 如果该属性会采用参数，请按照`Property`关键字的过程，然后在括号中的参数列表的名称。  
+2. If the property takes parameters, follow the `Property` keyword with the name of the procedure, then the parameter list in parentheses.  
   
-3. 括号后跟`As`子句来指定属性的值的数据类型。 必须指定即使对于只写属性的数据类型。  
+3. Follow the parentheses with an `As` clause to specify the data type of the property's value. You must specify the data type even for a write-only property.  
   
-4. 添加`Get`和`Set`过程，根据需要。 请参阅下面的说明。  
+4. Add `Get` and `Set` procedures, as appropriate. See the following directions.  
   
-### <a name="to-create-a-get-procedure-that-retrieves-a-property-value"></a>若要创建用于检索属性值的获取过程  
+### <a name="to-create-a-get-procedure-that-retrieves-a-property-value"></a>To create a Get procedure that retrieves a property value  
   
-1. 之间`Property`并`End Property`语句，编写[Get 语句](../../../../visual-basic/language-reference/statements/get-statement.md)后, 跟`End Get`语句。 不需要定义任何参数`Get`过程。  
+1. Between the `Property` and `End Property` statements, write a [Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md), followed by an `End Get` statement. You do not need to define any parameters for the `Get` procedure.  
   
-2. 若要检索的属性值之间的代码语句放`Get`和`End Get`语句。 此代码还可以包括其他计算和数据操作，除了生成和返回属性的值。  
+2. Place the code statements to retrieve the property's value between the `Get` and `End Get` statements. This code can include other calculations and data manipulations in addition to generating and returning the property's value.  
   
-3. 使用`Return`语句可以返回到调用代码的属性的值。  
+3. Use a `Return` statement to return the property's value to the calling code.  
   
- 您必须编写`Get`过程为读写属性以及只读属性。 无需定义`Get`只写属性的过程。  
+ You must write a `Get` procedure for a read-write property and for a read-only property. You must not define a `Get` procedure for a write-only property.  
   
-### <a name="to-create-a-set-procedure-that-writes-a-propertys-value"></a>若要创建组过程，它将写入属性的值  
+### <a name="to-create-a-set-procedure-that-writes-a-propertys-value"></a>To create a Set procedure that writes a property's value  
   
-1. 之间`Property`并`End Property`语句，编写[Set 语句](../../../../visual-basic/language-reference/statements/set-statement.md)后, 跟`End Set`语句。  
+1. Between the `Property` and `End Property` statements, write a [Set Statement](../../../../visual-basic/language-reference/statements/set-statement.md), followed by an `End Set` statement.  
   
-2. 在`Set`语句，请按照`Set`关键字与在括号中的参数列表。 此参数列表必须包含通过调用代码传递的值至少为值参数。 此值参数的默认名称是`Value`，但是如果需要，可以使用不同的名称。 值参数必须具有相同的数据类型与属性本身。  
+2. In the `Set` statement, follow the `Set` keyword with a parameter list in parentheses. This parameter list must include at least a value parameter for the value passed by the calling code. The default name for this value parameter is `Value`, but you can use a different name if appropriate. The value parameter must have the same data type as the property itself.  
   
-3. 将代码语句之间的属性中存储值`Set`和`End Set`语句。 此代码还可以包括其他计算和数据操作除了验证和存储属性的值。  
+3. Place the code statements to store a value in the property between the `Set` and `End Set` statements. This code can include other calculations and data manipulations in addition to validating and storing the property's value.  
   
-4. 使用值参数以接受由调用代码提供的值。 可以直接在赋值语句中，存储此值，也可以使用它在表达式中计算要存储的内部值。  
+4. Use the value parameter to accept the value supplied by the calling code. You can either store this value directly in an assignment statement, or use it in an expression to calculate the internal value to be stored.  
   
- 您必须编写`Set`过程对于读写属性和只写属性。 无需定义`Set`只读属性的过程。  
+ You must write a `Set` procedure for a read-write property and for a write-only property. You must not define a `Set` procedure for a read-only property.  
   
 ## <a name="example"></a>示例  
- 以下示例创建一个将完整的名称存储为两个构成的名称、 名字和姓氏的读/写属性。 当调用代码中读取`fullName`，则`Get`过程组合姓名的两个组成部分，并返回的完整名称。 当调用代码将分配新的完整名称，`Set`过程尝试将其分为两个构成的名称。 如果找不到空间，它将其存储所有为第一个名称。  
+ The following example creates a read/write property that stores a full name as two constituent names, the first name and the last name. When the calling code reads `fullName`, the `Get` procedure combines the two constituent names and returns the full name. When the calling code assigns a new full name, the `Set` procedure attempts to break it into two constituent names. If it does not find a space, it stores it all as the first name.  
   
  [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
- 下面的示例演示的属性过程的典型调用`fullName`。 第一次调用设置的属性值和第二个调用会检索它。  
+ The following example shows typical calls to the property procedures of `fullName`. The first call sets the property value and the second call retrieves it.  
   
  [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
@@ -65,9 +65,9 @@ ms.locfileid: "61665775"
 - [过程](./index.md)
 - [属性过程](./property-procedures.md)
 - [过程参数和自变量](./procedure-parameters-and-arguments.md)
-- [在 Visual Basic 中属性和变量之间的差异](./differences-between-properties-and-variables.md)
-- [如何：声明具有混合的访问级别的属性](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
+- [如何：声明具有混合访问级别的属性](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [如何：调用 Property 过程](./how-to-call-a-property-procedure.md)
-- [如何：声明并在 Visual Basic 中调用默认属性](./how-to-declare-and-call-a-default-property.md)
+- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [如何：在属性中放置值](./how-to-put-a-value-in-a-property.md)
-- [如何：从属性获取一个值](./how-to-get-a-value-from-a-property.md)
+- [如何：从属性获取值](./how-to-get-a-value-from-a-property.md)

@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b25d35f9c356b6d55806611a3ce39d193b42586
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: bb231df9ed33b89fa15cde998379b2964cf32ff9
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66491035"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204774"
 ---
 # <a name="collections-and-data-structures"></a>集合和数据结构
 类似的数据在作为集合而存储和操作时通常可以得到更高效地处理。 可使用 <xref:System.Array?displayProperty=nameWithType> 类或 <xref:System.Collections>、<xref:System.Collections.Generic>、 <xref:System.Collections.Concurrent> 和 System.Collections.Immutable 命令空间中的类来添加、移除和修改集合中的单个元素或一系列元素。  
   
- 有两种主要的集合类型：泛型集合和非泛型集合。 泛型集合被添加在 .NET Framework 2.0 中，并提供编译时类型安全的集合。 因此，泛型集合通常能提供更好的性能。 构造泛型集合时，它们接受类型形参；并在向该集合添加项或从该集合删除项时无需在 <xref:System.Object> 类型间来回转换。  此外，[!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)] 应用程序支持大多数泛型集合。 非泛型集合将项存储为 <xref:System.Object>，需要强制转换，并且大多数不支持 [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)] 应用程序开发。 但是，你可能会看到在较旧的代码中有非泛型集合。  
+ 有两种主要的集合类型：泛型集合和非泛型集合。 泛型集合被添加在 .NET Framework 2.0 中，并提供编译时类型安全的集合。 因此，泛型集合通常能提供更好的性能。 构造泛型集合时，它们接受类型形参；并在向该集合添加项或从该集合删除项时无需在 <xref:System.Object> 类型间来回转换。  此外，Windows 应用商店应用支持大多数泛型集合。 非泛型集合将项存储为 <xref:System.Object>，需要强制转换，并且大多数不支持 Windows 应用商店应用开发。 但是，你可能会看到在较旧的代码中有非泛型集合。  
   
  自 .NET Framework 4 起，<xref:System.Collections.Concurrent> 命名空间中的集合可提供高效的线程安全操作，以便从多个线程访问集合项。 System.Collections.Immutable 命名空间（[NuGet 包](https://www.nuget.org/packages/System.Collections.Immutable)）中的不可变集合类本质上就是线程安全的，因为是在原始集合的副本上执行操作，且不能修改原始集合。  
 

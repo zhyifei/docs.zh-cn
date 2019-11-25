@@ -2,15 +2,15 @@
 title: 如何：查询文件夹中文本文件的内容 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
-ms.openlocfilehash: ad0be3b4206d0aca649987bc3fbbc26102de77c4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 41be9aadcea3999cb7ea8c01460e72ff99e01765
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592680"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140952"
 ---
 # <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>如何：查询文件夹中文本文件的内容 (LINQ) (C#)
-此示例演示如何查询指定目录树中的所有文件、打开每个文件并检查其内容。 此类技术可用于对目录树的内容创建索引或反向索引。 此示例中执行的是简单的字符串搜索。 但是，可使用正则表达式执行类型更复杂的模式匹配。 有关详细信息，请参阅[如何：将 LINQ 查询与正则表达式合并 (C#)](./how-to-combine-linq-queries-with-regular-expressions.md)。  
+此示例演示如何查询指定目录树中的所有文件、打开每个文件并检查其内容。 此类技术可用于对目录树的内容创建索引或反向索引。 此示例中执行的是简单的字符串搜索。 但是，可使用正则表达式执行类型更复杂的模式匹配。 有关详细信息，请参阅[如何将 LINQ 查询与正则表达式合并 (C#)](./how-to-combine-linq-queries-with-regular-expressions.md)。  
   
 ## <a name="example"></a>示例  
   

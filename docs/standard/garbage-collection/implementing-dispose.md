@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 95726d4bfae6da43cd845d461caf8f1848d774f1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 0583329ae75fa54cf000212479895ccebdbd30d8
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424335"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74142052"
 ---
 # <a name="implementing-a-dispose-method"></a>实现 Dispose 方法
 
@@ -103,7 +103,7 @@ ms.locfileid: "73424335"
   
 ## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a>实现派生类的释放模式
 
-从实现 <xref:System.IDisposable> 接口的类派生的类不应实现 <xref:System.IDisposable>，因为 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 的基类实现由其派生类继承。 相反，若要实现派生类的释放模式，你可提供以下内容：  
+从实现 <xref:System.IDisposable> 接口的类派生的类不应实现 <xref:System.IDisposable>，因为 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 的基类实现由其派生类继承。 若要释放派生类的资源，请提供以下内容：  
   
 - `protected Dispose(Boolean)` 方法，用于替代基类方法并执行释放派生类的资源的实际工作。 此方法还应调用基类的 `Dispose(Boolean)` 方法并传递参数的释放状态。  
   
