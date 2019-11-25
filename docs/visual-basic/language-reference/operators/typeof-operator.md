@@ -1,5 +1,5 @@
 ---
-title: TypeOf 运算符 (Visual Basic)
+title: TypeOf 运算符
 ms.date: 07/20/2015
 f1_keywords:
 - TypeOf
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: c6028f524a16b836310f0c8d564205244515cdc9
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 22af5b8f8488ca44e388596530decd52e33525dc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701287"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350895"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf 运算符 (Visual Basic)
-检查表达式的结果的运行时类型是否与指定的类型兼容。
+Checks whether the runtime type of an expression's result is type-compatible with the specified type.
   
 ## <a name="syntax"></a>语法  
   
@@ -37,17 +37,17 @@ result = TypeOf objectexpression IsNot typename
  返回。 一个 `Boolean` 值。  
   
  `objectexpression`  
- 必需。 计算结果为引用类型的任何表达式。  
+ 必须的。 计算结果为引用类型的任何表达式。  
   
  `typename`  
- 必需。 任何数据类型名。  
+ 必须的。 任何数据类型名。  
   
 ## <a name="remarks"></a>备注  
  `TypeOf` 运算符确定 `objectexpression` 的运行时类型是否与 `typename` 兼容。 兼容性取决于 `typename` 的类型类别。 下表显示如何确定兼容性。  
   
 |`typename` 的类型类别|兼容性条件|  
 |---------------------------------|-----------------------------|  
-|类|`objectexpression` 属于类型 `typename` 或继承自 `typename`|  
+|实例|`objectexpression` 属于类型 `typename` 或继承自 `typename`|  
 |结构|`objectexpression` 属于类型 `typename`|  
 |接口|`objectexpression` 实现 `typename` 或继承自实现 `typename` 的类|  
   
@@ -66,7 +66,7 @@ result = TypeOf objectexpression IsNot typename
 
 - [Is 运算符](../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot 运算符](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Visual Basic 中的比较运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [运算符和表达式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

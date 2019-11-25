@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Visual Basic 中调用事件处理程序
+title: 'How to: Call an Event Handler'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -8,50 +8,50 @@ helpviewer_keywords:
 - procedures [Visual Basic], event handlers
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-ms.openlocfilehash: a9e090e83b180686ccb832aa6efb314c7e0fcc9a
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 0c626a9ad92fe2cd0ea117a9abdd2965a09df2ea
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216614"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340425"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>如何：在 Visual Basic 中调用事件处理程序
 
-事件是指由某些程序组件识别的操作或*事件*（例如鼠标单击或信用限制），可以为其编写代码来做出响应。 *事件处理程序*是为响应事件而编写的代码。
+An *event* is an action or occurrence — such as a mouse click or a credit limit exceeded — that is recognized by some program component, and for which you can write code to respond. An *event handler* is the code you write to respond to an event.
 
- Visual Basic 中的事件处理程序是`Sub`一个过程。 不过，通常不会像其他`Sub`过程那样调用它。 而是将该过程标识为事件的处理程序。 您可以使用[Handles](../../../language-reference/statements/handles-clause.md)子句和[WithEvents](../../../language-reference/modifiers/withevents.md)变量或使用[AddHandler 语句](../../../language-reference/statements/addhandler-statement.md)来执行此操作。 `Handles`使用子句是在 Visual Basic 中声明事件处理程序的默认方式。 当你在集成开发环境（IDE）中编程时，这就是设计器编写事件处理程序的方式。 `AddHandler`语句适用于在运行时动态引发事件。
+ An event handler in Visual Basic is a `Sub` procedure. However, you do not normally call it the same way as other `Sub` procedures. Instead, you identify the procedure as a handler for the event. You can do this either with a [Handles](../../../language-reference/statements/handles-clause.md) clause and a [WithEvents](../../../language-reference/modifiers/withevents.md) variable, or with an [AddHandler Statement](../../../language-reference/statements/addhandler-statement.md). Using a `Handles` clause is the default way to declare an event handler in Visual Basic. This is the way the event handlers are written by the designers when you program in the integrated development environment (IDE). The `AddHandler` statement is suitable for raising events dynamically at run time.
 
- 事件发生时，Visual Basic 会自动调用事件处理程序过程。 有权访问事件的任何代码都可以通过执行[RaiseEvent 语句](../../../language-reference/statements/raiseevent-statement.md)来导致事件发生。
+ When the event occurs, Visual Basic automatically calls the event handler procedure. Any code that has access to the event can cause it to occur by executing a [RaiseEvent Statement](../../../language-reference/statements/raiseevent-statement.md).
 
- 可以将多个事件处理程序与同一事件关联。 在某些情况下，您可以取消关联事件的处理程序。 有关详细信息，请参阅[事件](../events/index.md)。
+ You can associate more than one event handler with the same event. In some cases you can dissociate a handler from an event. 有关详细信息，请参阅[事件](../events/index.md)。
 
-### <a name="to-call-an-event-handler-using-handles-and-withevents"></a>使用 Handles 和 WithEvents 调用事件处理程序
+### <a name="to-call-an-event-handler-using-handles-and-withevents"></a>To call an event handler using Handles and WithEvents
 
-1. 请确保事件是用[事件语句](../../../language-reference/statements/event-statement.md)声明的。
+1. Make sure the event is declared with an [Event Statement](../../../language-reference/statements/event-statement.md).
 
-2. 使用[WithEvents](../../../language-reference/modifiers/withevents.md)关键字在模块或类级别声明对象变量。 此`As`变量的子句必须指定引发事件的类。
+2. Declare an object variable at module or class level, using the [WithEvents](../../../language-reference/modifiers/withevents.md) keyword. The `As` clause for this variable must specify the class that raises the event.
 
-3. 在事件处理`Sub`过程的声明中，添加一个指定`WithEvents`变量和事件名称的[Handles](../../../language-reference/statements/handles-clause.md)子句。
+3. In the declaration of the event-handling `Sub` procedure, add a [Handles](../../../language-reference/statements/handles-clause.md) clause that specifies the `WithEvents` variable and the event name.
 
-4. 事件发生时，Visual Basic 自动调用`Sub`过程。 你的`RaiseEvent`代码可以使用语句来使事件发生。
+4. When the event occurs, Visual Basic automatically calls the `Sub` procedure. Your code can use a `RaiseEvent` statement to make the event occur.
 
-     下面的示例定义了一个事件和`WithEvents`一个引用引发事件的类的变量。 事件处理`Sub`过程`Handles`使用子句来指定它处理的类和事件。
+     The following example defines an event and a `WithEvents` variable that refers to the class that raises the event. The event-handling `Sub` procedure uses a `Handles` clause to specify the class and event it handles.
 
      [!code-vb[VbVbcnProcedures#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#4)]
 
-### <a name="to-call-an-event-handler-using-addhandler"></a>使用 AddHandler 调用事件处理程序
+### <a name="to-call-an-event-handler-using-addhandler"></a>To call an event handler using AddHandler
 
-1. 请确保用`Event`语句声明了该事件。
+1. Make sure the event is declared with an `Event` statement.
 
-2. 执行[AddHandler 语句](../../../language-reference/statements/addhandler-statement.md)以使用事件动态连接事件处理`Sub`过程。
+2. Execute an [AddHandler Statement](../../../language-reference/statements/addhandler-statement.md) to dynamically connect the event-handling `Sub` procedure with the event.
 
-3. 事件发生时，Visual Basic 自动调用`Sub`过程。 你的`RaiseEvent`代码可以使用语句来使事件发生。
+3. When the event occurs, Visual Basic automatically calls the `Sub` procedure. Your code can use a `RaiseEvent` statement to make the event occur.
 
-     下面的示例定义`Sub`处理窗体的<xref:System.Windows.Forms.Form.Closing>事件的过程。 然后，它使用[AddHandler 语句](../../../language-reference/statements/addhandler-statement.md)将`catchClose`过程与的事件处理程序<xref:System.Windows.Forms.Form.Closing>相关联。
+     The following example defines a `Sub` procedure to handle the <xref:System.Windows.Forms.Form.Closing> event of a form. It then uses the [AddHandler Statement](../../../language-reference/statements/addhandler-statement.md) to associate the `catchClose` procedure as an event handler for <xref:System.Windows.Forms.Form.Closing>.
 
      [!code-vb[VbVbcnProcedures#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#5)]
 
-     可以通过执行[RemoveHandler 语句](../../../language-reference/statements/removehandler-statement.md)，将事件处理程序与事件取消关联。
+     You can dissociate an event handler from an event by executing the [RemoveHandler Statement](../../../language-reference/statements/removehandler-statement.md).
 
 ## <a name="see-also"></a>请参阅
 

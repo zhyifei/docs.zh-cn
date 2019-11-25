@@ -1,28 +1,28 @@
 ---
-title: 如何：创建 XML 文本 (Visual Basic)
+title: 如何：创建 XML 文本
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: 991f10b00082bb4eb2b54f10c1b85cdc2c9009d2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e3af5185d2c2106e6a696a6569ef59897d0f1fe1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598539"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333007"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>如何：创建 XML 文本 (Visual Basic)
-通过使用 XML 文本，可以直接在代码中创建 XML 文档、 片段或元素。 本主题中的示例演示如何创建 XML 元素具有三个子元素，以及如何创建 XML 文档。  
+You can create an XML document, fragment, or element directly in code by using an XML literal. The examples in this topic demonstrate how to create an XML element that has three child elements, and how to create an XML document.  
   
- 此外可以使用[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Api 来创建[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]对象。 有关详细信息，请参阅 <xref:System.Xml.Linq.XElement>。  
+ You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects. 有关更多信息，请参见<xref:System.Xml.Linq.XElement>。  
   
-### <a name="to-create-an-xml-element"></a>若要创建一个 XML 元素  
+### <a name="to-create-an-xml-element"></a>To create an XML element  
   
-- 使用 XML 文本语法，这是实际的 XML 语法相同创建内嵌的 XML。  
+- Create the XML inline by using the XML literal syntax, which is the same as the actual XML syntax.  
   
      [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
-     运行代码。 此代码的输出为：  
+     运行代码。 The output of this code is:  
   
      `<contact>`  
   
@@ -34,13 +34,13 @@ ms.locfileid: "64598539"
   
      `</contact>`  
   
-### <a name="to-create-an-xml-document"></a>若要创建 XML 文档  
+### <a name="to-create-an-xml-document"></a>To create an XML document  
   
-- 创建内联 XML 文档。 以下代码将创建具有文本语法、 XML 声明、 处理指令、 注释和一个包含另一个元素的元素的 XML 文档。  
+- Create the XML document inline. The following code creates an XML document that has literal syntax, an XML declaration, a processing instruction, a comment, and an element that contains another element.  
   
      [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
-     运行代码。 此代码的输出为：  
+     运行代码。 The output of this code is:  
   
      `<?xml-stylesheet type="text/xsl" href="show_book.xsl"?>`  
   

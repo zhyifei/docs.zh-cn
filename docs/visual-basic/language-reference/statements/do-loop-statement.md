@@ -1,5 +1,5 @@
 ---
-title: Do...Loop 语句 (Visual Basic)
+title: Do...Loop 语句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Do
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-ms.openlocfilehash: eff5239e07ca27f40ece5af68f46c491be91cf09
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9384cbb355189be448fa4b8d274721b4a7ca6a20
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583445"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351259"
 ---
 # <a name="doloop-statement-visual-basic"></a>Do...Loop 语句 (Visual Basic)
-当 `True` `Boolean` 条件或条件变为 `True` 之前，重复语句块。  
+Repeats a block of statements while a `Boolean` condition is `True` or until the condition becomes `True`.  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,55 +54,55 @@ Loop { While | Until } condition
   
 |术语|定义|  
 |---|---|  
-|`Do`|必须的。 开始 `Do` 循环的定义。|  
-|`While`|必选项（除非使用了 `Until`）。 重复循环，直到 `False` `condition`。|  
-|`Until`|必选项（除非使用了 `While`）。 重复循环，直到 `True` `condition`。|  
-|`condition`|可选。 `Boolean` 表达式。 如果 `Nothing` `condition`，Visual Basic 将其视为 `False`。|  
-|`statements`|可选。 一个或多个语句，这些语句在 `condition` 时重复，或直到 `True`。|  
-|`Continue Do`|可选。 将控制转移到 `Do` 循环的下一次迭代。|  
-|`Exit Do`|可选。 将控制转移 `Do` 循环。|  
-|`Loop`|必须的。 终止 `Do` 循环的定义。|  
+|`Do`|必须的。 Starts the definition of the `Do` loop.|  
+|`While`|必选项（除非使用了 `Until`）。 Repeat the loop until `condition` is `False`.|  
+|`Until`|必选项（除非使用了 `While`）。 Repeat the loop until `condition` is `True`.|  
+|`condition`|可选。 `Boolean` expression. If `condition` is `Nothing`, Visual Basic treats it as `False`.|  
+|`statements`|可选。 One or more statements that are repeated while, or until, `condition` is `True`.|  
+|`Continue Do`|可选。 Transfers control to the next iteration of the `Do` loop.|  
+|`Exit Do`|可选。 Transfers control out of the `Do` loop.|  
+|`Loop`|必须的。 Terminates the definition of the `Do` loop.|  
   
 ## <a name="remarks"></a>备注  
- 如果希望在满足条件之前重复一组语句，请使用 `Do...Loop` 结构。 如果要将语句重复一组次数[，则下一条语句](../../../visual-basic/language-reference/statements/for-next-statement.md)通常是更好的选择。  
+ Use a `Do...Loop` structure when you want to repeat a set of statements an indefinite number of times, until a condition is satisfied. If you want to repeat the statements a set number of times, the [For...Next Statement](../../../visual-basic/language-reference/statements/for-next-statement.md) is usually a better choice.  
   
- 您可以使用 `While` 或 `Until` 来指定 `condition`，但不能同时指定两者。  
+ You can use either `While` or `Until` to specify `condition`, but not both.  
   
- 只能在循环的开头或结尾测试一次 `condition`。 如果在循环开始时测试 `condition` （在 `Do` 语句中），则循环可能不会运行一次。 如果在循环结束时（在 `Loop` 语句中）进行测试，则循环始终至少运行一次。  
+ You can test `condition` only one time, at either the start or the end of the loop. If you test `condition` at the start of the loop (in the `Do` statement), the loop might not run even one time. If you test at the end of the loop (in the `Loop` statement), the loop always runs at least one time.  
   
- 这种情况通常是由两个值比较导致的，但它可以是计算结果为[布尔数据类型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)值（`True` 或 `False`）的任何表达式。 这包括已转换为 `Boolean` 的其他数据类型（如数值类型）的值。  
+ The condition usually results from a comparison of two values, but it can be any expression that evaluates to a [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md) value (`True` or `False`). This includes values of other data types, such as numeric types, that have been converted to `Boolean`.  
   
- 可以通过在另一个循环中放置一个循环来嵌套 `Do` 循环。 您还可以在彼此之间嵌套不同种类的控制结构。 有关详细信息，请参阅[嵌套控制结构](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)。  
+ You can nest `Do` loops by putting one loop within another. You can also nest different kinds of control structures within each other. For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
 > [!NOTE]
-> @No__t_0 结构提供的灵活性比[.。。End While 语句](../../../visual-basic/language-reference/statements/while-end-while-statement.md)，因为它可用于决定在 `condition` 停止时 `True` 或第一次变为 `True` 时是否终止循环。 它还使你能够在循环的开头或结尾测试 `condition`。  
+> The `Do...Loop` structure gives you more flexibility than the [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md) because it enables you to decide whether to end the loop when `condition` stops being `True` or when it first becomes `True`. It also enables you to test `condition` at either the start or the end of the loop.  
   
-## <a name="exit-do"></a>退出 Do  
- [Exit Do](../../../visual-basic/language-reference/statements/exit-statement.md)语句可以提供退出 `Do…Loop` 的替代方法。 `Exit Do` 将控制立即传输到 `Loop` 语句后面的语句。  
+## <a name="exit-do"></a>Exit Do  
+ The [Exit Do](../../../visual-basic/language-reference/statements/exit-statement.md) statement can provide an alternative way to exit a `Do…Loop`. `Exit Do` transfers control immediately to the statement that follows the `Loop` statement.  
   
- 在计算某些条件（例如在 `If...Then...Else` 结构中）后，通常使用 `Exit Do`。 如果检测到可能导致不必要或无法继续迭代的条件（如错误值或终止请求），则可能需要退出循环。 @No__t_0 的一种用途是测试可能导致*无限循环*的情况，这是一个可运行很大甚至无限次的循环。 您可以使用 `Exit Do` 来转义循环。  
+ `Exit Do` is often used after some condition is evaluated, for example in an `If...Then...Else` structure. You might want to exit a loop if you detect a condition that makes it unnecessary or impossible to continue iterating, such as an erroneous value or a termination request. One use of `Exit Do` is to test for a condition that could cause an *endless loop*, which is a loop that could run a large or even infinite number of times. You can use `Exit Do` to escape the loop.  
   
- 可以将任意数量的 `Exit Do` 语句包含在 `Do…Loop` 中的任意位置。  
+ You can include any number of `Exit Do` statements anywhere in a `Do…Loop`.  
   
- 在嵌套的 `Do` 循环中使用时，`Exit Do` 将控制转移出最内层的循环，并移到下一个更高的嵌套级别。  
+ When used within nested `Do` loops, `Exit Do` transfers control out of the innermost loop and into the next higher level of nesting.  
   
 ## <a name="example"></a>示例  
- 在下面的示例中，循环中的语句将继续运行，直至 `index` 变量大于10。 @No__t_0 子句位于循环的结尾。  
+ In the following example, the statements in the loop continue to run until the `index` variable is greater than 10. The `Until` clause is at the end of the loop.  
   
  [!code-vb[VbVbalrStatements#131](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#131)]  
   
 ## <a name="example"></a>示例  
- 下面的示例使用 `While` 子句而不是 `Until` 子句，而 `condition` 在循环开始而不是在结束时进行测试。  
+ The following example uses a `While` clause instead of an `Until` clause, and `condition` is tested at the start of the loop instead of at the end.  
   
  [!code-vb[VbVbalrStatements#132](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#132)]  
   
 ## <a name="example"></a>示例  
- 在下面的示例中，当 `index` 变量大于100时，`condition` 停止循环。 但是，循环中的 `If` 语句导致 `Exit Do` 语句在索引变量大于10时停止循环。  
+ In the following example, `condition` stops the loop when the `index` variable is greater than 100. The `If` statement in the loop, however, causes the `Exit Do` statement to stop the loop when the index variable is greater than 10.  
   
  [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]  
   
 ## <a name="example"></a>示例  
- 下面的示例读取文本文件中的所有行。 @No__t_0 方法将打开文件并返回读取字符的 <xref:System.IO.StreamReader>。 在 `Do...Loop` 条件下，`StreamReader` 的 <xref:System.IO.StreamReader.Peek%2A> 方法决定是否有任何其他字符。  
+ The following example reads all lines in a text file. The <xref:System.IO.File.OpenText%2A> method opens the file and returns a <xref:System.IO.StreamReader> that reads the characters. In the `Do...Loop` condition, the <xref:System.IO.StreamReader.Peek%2A> method of the `StreamReader` determines whether there are any additional characters.  
   
  [!code-vb[VbVbalrStatements#134](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#134)]  
   

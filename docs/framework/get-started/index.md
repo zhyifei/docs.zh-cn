@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: cb56097d49b194234031aba3ee9811b961ae6c64
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ca2a4e6c44a26889a2fffa5cc5fa2cbba3eab782
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107723"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281820"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 入门
 
@@ -65,7 +65,7 @@ ms.locfileid: "73107723"
 
 1. 如果未在操作系统上预安装 .NET Framework，请安装应用所面向的 .NET Framework 版本。 最新生产版本是 .NET Framework 4.8。 此版本预安装在 Windows 10 2019 年 5 月更新中，并可下载到旧版 Windows 操作系统中。 有关 .NET Framework 系统要求，请参阅[系统要求](system-requirements.md)。 有关安装其他版本的 .NET Framework 的信息，请参阅[安装指南](../install/guide-for-developers.md)。 其他 .NET Framework 包为带外发布，这意味着这些包在滚动基础上发布，没有任何定期或计划的发布周期。 有关这些包的信息，请参阅 [.NET Framework 和带外版本](the-net-framework-and-out-of-band-releases.md)。
 
-2. 选择要用于开发应用的 .NET Framework 所支持的语言。 大量语言可供选择，包括来自 Microsoft 的 [Visual Basic](../../visual-basic/index.md)、[C#](../../csharp/index.md)、[F#](../../fsharp/index.md), 和 [C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp)。 （一种用于开发 .NET Framework 应用的编程语言，它遵循[公共语言基础结构 (CLI) 规范](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)。）
+2. 选择要用于开发应用的 .NET Framework 所支持的语言。 大量语言可供选择，包括来自 Microsoft 的 [Visual Basic](../../visual-basic/index.md)、[C#](../../csharp/index.yml)、[F#](../../fsharp/index.md), 和 [C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp)。 （一种用于开发 .NET Framework 应用的编程语言，它遵循[公共语言基础结构 (CLI) 规范](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)。）
 
 3. 选择并安装将用于创建应用并支持所选程序语言的开发环境。 适用于 .NET Framework 应用的 Microsoft 集成开发环境 (IDE) 是 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。 它提供多种版本。
 
