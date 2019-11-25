@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], designing workflows
 ms.assetid: 41f727b5-b142-4c1b-b046-492b96135ae6
-ms.openlocfilehash: a6624b06d9bdb4523cec5c98a199835bf55d9fd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c774161fb5adbc5fc8e44b22d994d15fa0d2e489
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774031"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141918"
 ---
 # <a name="designing-workflows"></a>设计工作流
 本节中的主题介绍在工作流开发中使用的流控制范例。  
@@ -22,7 +22,7 @@ ms.locfileid: "61774031"
  演示如何使用按顺序执行的基本范例创建工作流。  
   
  [状态机工作流](state-machine-workflows.md)  
- 讨论如何在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中使用流程图工作流实现事件驱动的工作流，以取代以前版本中使用的状态机模型。  
+ 讨论如何使用流程图工作流在 .NET Framework 4 中实现事件驱动的工作流，作为以前版本中使用的状态机模型的替换。  
   
  [使用强制性代码创建工作流、活动和表达式](authoring-workflows-activities-and-expressions-using-imperative-code.md)  
  介绍如何使用命令性代码创作工作流。

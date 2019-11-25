@@ -1,24 +1,25 @@
 ---
-title: 非可选自变量 (Visual Basic)
+title: 自变量不可选
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID449
 ms.assetid: 76e7bcf3-24ed-4cd5-945b-b98f1c76944b
-ms.openlocfilehash: bd5c5c498fb489f01e8a867e3400a06ef7905173
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 043d126b07838f1a98788021048e5f22e3bc42ed
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61751574"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353902"
 ---
 # <a name="argument-not-optional-visual-basic"></a>非可选自变量 (Visual Basic)
-数量和类型的参数必须符合要求。 参数，数目不正确，或者省略自变量不可选。 如果已声明自变量可以仅中对用户定义过程的调用省略`Optional`过程定义中。  
+
+The number and types of arguments must match those expected. Either there is an incorrect number of arguments, or an omitted argument is not optional. An argument can only be omitted from a call to a user-defined procedure if it was declared `Optional` in the procedure definition.  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1. 提供所有必需的参数。  
+1. Supply all necessary arguments.  
   
-2. 请确保省略的参数是可选的。 如果它们不是，则提供的参数在调用中，或将参数声明`Optional`定义中。  
+2. Make sure omitted arguments are optional. If they are not, either supply the argument in the call, or declare the parameter `Optional` in the definition.  
   
 ## <a name="see-also"></a>请参阅
 

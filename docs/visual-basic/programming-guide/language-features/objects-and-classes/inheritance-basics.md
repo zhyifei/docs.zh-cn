@@ -1,5 +1,5 @@
 ---
-title: 继承的基础知识 (Visual Basic)
+title: 继承的基础知识
 ms.date: 07/20/2015
 helpviewer_keywords:
 - derived classes [Visual Basic], inheritance
@@ -20,98 +20,98 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-ms.openlocfilehash: 8a75b75ef9acb4c89f4c7d05f1410d4ca70e680b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 89fcf2a14d8938d536aa72628218242811baa1a2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582750"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350824"
 ---
 # <a name="inheritance-basics-visual-basic"></a>继承的基础知识 (Visual Basic)
 
-@No__t_0 语句用于声明一个名为*派生类*的新类，该类基于现有类（称为*基类*）。 派生类继承和可以扩展基类中定义的属性、方法、事件、字段和常量。 以下部分介绍了一些继承规则，以及可用于更改类继承或继承方式的修饰符：
+The `Inherits` statement is used to declare a new class, called a *derived class*, based on an existing class, known as a *base class*. Derived classes inherit, and can extend, the properties, methods, events, fields, and constants defined in the base class. The following section describes some of the rules for inheritance, and the modifiers you can use to change the way classes inherit or are inherited:
 
-- 默认情况下，所有类都是可继承的，除非使用 `NotInheritable` 关键字进行标记。 类可以继承自你的项目中的其他类，也可以来自你的项目引用的其他程序集中的类。
+- By default, all classes are inheritable unless marked with the `NotInheritable` keyword. Classes can inherit from other classes in your project or from classes in other assemblies that your project references.
 
-- 与允许多重继承的语言不同，Visual Basic 只允许在类中进行单一继承;也就是说，派生类只能有一个基类。 尽管类中不允许使用多个继承，但类可实现多个接口，这些接口可以有效地实现相同的结束。
+- Unlike languages that allow multiple inheritance, Visual Basic allows only single inheritance in classes; that is, derived classes can have only one base class. Although multiple inheritance is not allowed in classes, classes can implement multiple interfaces, which can effectively accomplish the same ends.
 
-- 若要防止公开基类中的受限制项，派生类的访问类型必须等于或大于其基类的限制。 例如，`Public` 类无法继承 `Friend` 或 `Private` 类，并且 `Friend` 类不能继承 `Private` 类。
+- To prevent exposing restricted items in a base class, the access type of a derived class must be equal to or more restrictive than its base class. For example, a `Public` class cannot inherit a `Friend` or a `Private` class, and a `Friend` class cannot inherit a `Private` class.
 
-## <a name="inheritance-modifiers"></a>继承修饰符
+## <a name="inheritance-modifiers"></a>Inheritance Modifiers
 
-Visual Basic 引入了以下类级语句和修饰符来支持继承：
+Visual Basic introduces the following class-level statements and modifiers to support inheritance:
 
-- `Inherits` 语句—指定基类。
+- `Inherits` statement — Specifies the base class.
 
-- `NotInheritable` 修饰符-阻止程序员使用类作为基类。
+- `NotInheritable` modifier — Prevents programmers from using the class as a base class.
 
-- `MustInherit` 修饰符-指定类仅用作基类。 不能直接创建 `MustInherit` 类的实例;它们只能作为派生类的基类实例来创建。 （其他编程语言（例如C++和C#）使用字词*抽象类*来描述此类。）
+- `MustInherit` modifier — Specifies that the class is intended for use as a base class only. Instances of `MustInherit` classes cannot be created directly; they can only be created as base class instances of a derived class. (Other programming languages, such as C++ and C#, use the term *abstract class* to describe such a class.)
 
-## <a name="overriding-properties-and-methods-in-derived-classes"></a>重写派生类中的属性和方法
+## <a name="overriding-properties-and-methods-in-derived-classes"></a>Overriding Properties and Methods in Derived Classes
 
-默认情况下，派生类继承其基类的属性和方法。 如果继承的属性或方法在派生类中具有不同的行为，则可以将其*重写*。 也就是说，您可以在派生类中定义方法的新实现。 下列修饰符用于控制如何重写属性和方法：
+By default, a derived class inherits properties and methods from its base class. If an inherited property or method has to behave differently in the derived class it can be *overridden*. That is, you can define a new implementation of the method in the derived class. 下列修饰符用于控制如何重写属性和方法：
 
-- `Overridable`-允许在派生类中重写类中的属性或方法。
+- `Overridable` — Allows a property or method in a class to be overridden in a derived class.
 
-- `Overrides`-重写基类中定义的 `Overridable` 属性或方法。
+- `Overrides` — Overrides an `Overridable` property or method defined in the base class.
 
-- `NotOverridable`-防止在继承类中重写属性或方法。 默认情况下，将 `NotOverridable` `Public` 方法。
+- `NotOverridable` — Prevents a property or method from being overridden in an inheriting class. By default, `Public` methods are `NotOverridable`.
 
-- `MustOverride`-要求派生类重写属性或方法。 使用 `MustOverride` 关键字时，方法定义只包含 `Sub`、`Function` 或 `Property` 语句。 不允许使用其他语句，特别是没有 `End Sub` 或 `End Function` 语句。 `MustOverride` 方法必须在 `MustInherit` 类中声明。
+- `MustOverride` — Requires that a derived class override the property or method. When the `MustOverride` keyword is used, the method definition consists of just the `Sub`, `Function`, or `Property` statement. No other statements are allowed, and specifically there is no `End Sub` or `End Function` statement. `MustOverride` methods must be declared in `MustInherit` classes.
 
-假设您要定义用于处理工资单的类。 您可以定义一个泛型 `Payroll` 类，该类包含计算典型周工资单的 `RunPayroll` 方法。 然后，可以使用 `Payroll` 作为更专业化 `BonusPayroll` 类的基类，这些类可在分发员工奖金时使用。
+Suppose you want to define classes to handle payroll. You could define a generic `Payroll` class that contains a `RunPayroll` method that calculates payroll for a typical week. You could then use `Payroll` as a base class for a more specialized `BonusPayroll` class, which could be used when distributing employee bonuses.
 
-@No__t_0 类可以继承和重写在基本 `Payroll` 类中定义的 `PayEmployee` 方法。
+The `BonusPayroll` class can inherit, and override, the `PayEmployee` method defined in the base `Payroll` class.
 
-下面的示例定义了一个基类，`Payroll,` 和一个派生类 `BonusPayroll`，后者重写继承的方法 `PayEmployee`。 @No__t_0，将创建一个 `Payroll` 对象，然后将 `BonusPayroll` 对象传递到执行两个对象的 `PayEmployee` 方法的函数 `Pay`。
+The following example defines a base class, `Payroll,` and a derived class, `BonusPayroll`, which overrides an inherited method, `PayEmployee`. A procedure, `RunPayroll`, creates and then passes a `Payroll` object and a `BonusPayroll` object to a function, `Pay`, that executes the `PayEmployee` method of both objects.
 
 [!code-vb[VbVbalrOOP#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#28)]
 
-## <a name="the-mybase-keyword"></a>MyBase 关键字
+## <a name="the-mybase-keyword"></a>The MyBase Keyword
 
-@No__t_0 关键字的行为类似于引用类的当前实例的基类的对象变量。 `MyBase` 经常用于访问派生类中被重写或隐藏的基类成员。 具体而言，`MyBase.New` 用于从派生类构造函数中显式调用基类构造函数。
+The `MyBase` keyword behaves like an object variable that refers to the base class of the current instance of a class. `MyBase` is frequently used to access base class members that are overridden or shadowed in a derived class. In particular, `MyBase.New` is used to explicitly call a base class constructor from a derived class constructor.
 
-例如，假设您正在设计一个派生类，该派生类重写从基类继承的方法。 重写的方法可以调用基类中的方法并修改返回值，如下面的代码段所示：
+For example, suppose you are designing a derived class that overrides a method inherited from the base class. The overridden method can call the method in the base class and modify the return value as shown in the following code fragment:
 
 [!code-vb[VbVbalrOOP#109](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#109)]
 
-以下列表描述了使用 `MyBase` 的限制：
+The following list describes restrictions on using `MyBase`:
 
-- `MyBase` 指的是直接基类及其继承的成员。 它不能用于访问类中的 `Private` 成员。
+- `MyBase` refers to the immediate base class and its inherited members. It cannot be used to access `Private` members in the class.
 
-- `MyBase` 是关键字，而不是实际对象。 不能将 `MyBase` 分配给变量、传递给过程或用于 `Is` 比较。
+- `MyBase` is a keyword, not a real object. `MyBase` cannot be assigned to a variable, passed to procedures, or used in an `Is` comparison.
 
-- 无需在直接基类中定义 `MyBase` 限定的方法;可以改为在间接继承基类中定义它。 为了使 `MyBase` 限定的引用正确编译，某些基类必须包含与调用中显示的参数的名称和类型匹配的方法。
+- The method that `MyBase` qualifies does not have to be defined in the immediate base class; it may instead be defined in an indirectly inherited base class. In order for a reference qualified by `MyBase` to compile correctly, some base class must contain a method matching the name and types of parameters that appear in the call.
 
-- 不能使用 `MyBase` 调用 `MustOverride` 基类方法。
+- You cannot use `MyBase` to call `MustOverride` base class methods.
 
-- `MyBase` 不能用于限定自身。 因此，以下代码无效：
+- `MyBase` cannot be used to qualify itself. Therefore, the following code is not valid:
 
   `MyBase.MyBase.BtnOK_Click()`
 
-- 不能在模块中使用 `MyBase`。
+- `MyBase` cannot be used in modules.
 
-- 如果基类在不同的程序集中，`MyBase` 不能用于访问标记为 `Friend` 的基类成员。
+- `MyBase` cannot be used to access base class members that are marked as `Friend` if the base class is in a different assembly.
 
-有关详细信息和其他示例，请参阅[如何：访问被派生类隐藏的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)。
+For more information and another example, see [How to: Access a Variable Hidden by a Derived Class](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md).
 
-## <a name="the-myclass-keyword"></a>MyClass 关键字
+## <a name="the-myclass-keyword"></a>The MyClass Keyword
 
-@No__t_0 关键字的行为类似于引用最初实现的类的当前实例的对象变量。 `MyClass` 类似于 `Me`，但 `MyClass` 上的每个方法和属性调用都被视为[NotOverridable](../../../../visual-basic/language-reference/modifiers/notoverridable.md)方法或属性。 因此，方法或属性不受派生类中重写的影响。
+The `MyClass` keyword behaves like an object variable that refers to the current instance of a class as originally implemented. `MyClass` resembles `Me`, but every method and property call on `MyClass` is treated as if the method or property were [NotOverridable](../../../../visual-basic/language-reference/modifiers/notoverridable.md). Therefore, the method or property is not affected by overriding in a derived class.
 
-- `MyClass` 是关键字，而不是实际对象。 不能将 `MyClass` 分配给变量、传递给过程或用于 `Is` 比较。
+- `MyClass` is a keyword, not a real object. `MyClass` cannot be assigned to a variable, passed to procedures, or used in an `Is` comparison.
 
-- `MyClass` 引用包含类及其继承成员。
+- `MyClass` refers to the containing class and its inherited members.
 
-- `MyClass` 可以用作 `Shared` 成员的限定符。
+- `MyClass` can be used as a qualifier for `Shared` members.
 
-- `MyClass` 不能用于 `Shared` 方法中，但可以在实例方法内部使用以访问类的共享成员。
+- `MyClass` cannot be used inside a `Shared` method, but can be used inside an instance method to access a shared member of a class.
 
-- `MyClass` 不能用于标准模块。
+- `MyClass` cannot be used in standard modules.
 
-- `MyClass` 可用于限定在基类中定义的方法，该方法没有该类中提供的方法的实现。 此类引用与 `MyBase.`*方法*具有相同的含义。
+- `MyClass` can be used to qualify a method that is defined in a base class and that has no implementation of the method provided in that class. Such a reference has the same meaning as `MyBase.`*Method*.
 
-下面的示例将 `Me` 和 `MyClass` 进行比较。
+The following example compares `Me` and `MyClass`.
 
 ```vb
 Class baseClass
@@ -145,7 +145,7 @@ Class testClasses
 End Class
 ```
 
-即使 `derivedClass` 重写 `testMethod`，`useMyClass` 中的 `MyClass` 关键字 nullifies 重写的效果，并且编译器解析对 `testMethod` 的基类版本的调用。
+Even though `derivedClass` overrides `testMethod`, the `MyClass` keyword in `useMyClass` nullifies the effects of overriding, and the compiler resolves the call to the base class version of `testMethod`.
 
 ## <a name="see-also"></a>请参阅
 

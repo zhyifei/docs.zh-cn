@@ -9,20 +9,20 @@ helpviewer_keywords:
 - templates [WPF], ScrollBar
 - parts [WPF], ScrollBar
 ms.assetid: 066ea45a-e27d-43b0-adfe-cce6934c22f5
-ms.openlocfilehash: f30a0abb3e4252737e513b531b8d5f49a0d47f0b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7093a78555aefd73f9bb05c0a7b5fab6b66176fc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458441"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283417"
 ---
 # <a name="scrollbar-styles-and-templates"></a>ScrollBar 样式和模板
-本主题介绍 <xref:System.Windows.Controls.Primitives.ScrollBar> 控件的样式和模板。 您可以修改默认 <xref:System.Windows.Controls.ControlTemplate> 以使控件具有独特的外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
+本主题介绍 <xref:System.Windows.Controls.Primitives.ScrollBar> 控件的样式和模板。 您可以修改默认 <xref:System.Windows.Controls.ControlTemplate> 以使控件具有独特的外观。 有关详细信息，请参阅为[控件创建模板](../../../desktop-wpf/themes/how-to-create-apply-template.md)。  
   
 ## <a name="scrollbar-parts"></a>滚动条部件  
  下表列出了 <xref:System.Windows.Controls.Primitives.ScrollBar> 控件的已命名部分。  
   
-|部件|键入|描述|  
+|部件|Type|描述|  
 |-|-|-|  
 |PART_Track|<xref:System.Windows.Controls.Primitives.Track>|指示 <xref:System.Windows.Controls.Primitives.ScrollBar>位置的元素的容器。|  
   
@@ -31,7 +31,7 @@ ms.locfileid: "73458441"
   
 |VisualState 名称|VisualStateGroup 名称|描述|  
 |----------------------|---------------------------|-----------------|  
-|普通|CommonStates|默认状态。|  
+|一般|CommonStates|默认状态。|  
 |MouseOver|CommonStates|鼠标指针悬停在控件上。|  
 |Disabled|CommonStates|已禁用控件。|  
 |有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
@@ -49,11 +49,11 @@ ms.locfileid: "73458441"
   
  有关完整示例，请参阅[使用 ControlTemplates 设置样式示例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [控件样式和模板](control-styles-and-templates.md)
 - [控件自定义](control-customization.md)
 - [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)
+- [为控件创建模板](../../../desktop-wpf/themes/how-to-create-apply-template.md)

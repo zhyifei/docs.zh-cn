@@ -1,15 +1,15 @@
 ---
-title: 如何：将 LINQ 查询与正则表达式合并 (C#)
+title: 如何将 LINQ 查询与正则表达式合并 (C#)
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
-ms.openlocfilehash: 7e3540dfe6d93f5262790bce615cc7fe3f1fbb93
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 97551f7d9d8cf13f05449c2f825ed4d29eb3d86e
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594040"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141409"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>如何：将 LINQ 查询与正则表达式合并 (C#)
+# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>如何将 LINQ 查询与正则表达式合并 (C#)
 此示例演示如何使用 <xref:System.Text.RegularExpressions.Regex> 类在文本字符串中为更复杂的匹配创建正则表达式。 通过 LINQ 查询可以轻松地准确筛选要用正则表达式搜索的文件，并对结果进行改良。  
   
 ## <a name="example"></a>示例  

@@ -1,5 +1,5 @@
 ---
-title: Out（泛型修饰符）(Visual Basic)
+title: Out（泛型修饰符）
 ms.date: 07/20/2015
 f1_keywords:
 - vb.VarianceOut
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-ms.openlocfilehash: fa14e83af16cd30a72ca1c165596fa9320842fce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0460015b44971fa638dba47183690ffcc89ca55f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053920"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351423"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out（泛型修饰符）(Visual Basic)
 
-对于泛型类型参数，`Out`关键字指定的类型是协变。
+For generic type parameters, the `Out` keyword specifies that the type is covariant.
 
 ## <a name="remarks"></a>备注
 
@@ -37,11 +37,11 @@ ms.locfileid: "62053920"
 
 - 类型参数不用作接口方法的泛型约束。
 
-在泛型委托中，类型参数可以声明为协变如果它是仅用作方法返回类型，不用于方法参数。
+In a generic delegate, a type parameter can be declared covariant if it is used only as a method return type and not used for method arguments.
 
 引用类型支持协变和逆变，但值类型不支持它们。
 
-在 Visual Basic 中，不能声明协变接口中的事件，而不指定委托类型。 此外，协变接口不能包含嵌套类、 枚举或结构，但它们可以嵌套接口。
+In Visual Basic, you cannot declare events in covariant interfaces without specifying the delegate type. Also, covariant interfaces cannot have nested classes, enums, or structures, but they can have nested interfaces.
 
 ## <a name="behavior"></a>行为
 
@@ -57,7 +57,7 @@ ms.locfileid: "62053920"
 
 ## <a name="example"></a>示例
 
-以下示例演示如何声明、实例化和调用协变泛型委托。 它还显示如何使用隐式转换为委托类型。
+以下示例演示如何声明、实例化和调用协变泛型委托。 It also shows how you can use implicit conversion for delegate types.
 
 [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]
 

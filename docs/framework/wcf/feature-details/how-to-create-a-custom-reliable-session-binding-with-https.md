@@ -1,19 +1,19 @@
 ---
-title: 如何：使用 HTTPS 创建自定义可靠会话绑定
+title: 如何：创建使用 HTTPS 的自定义可靠会话绑定
 ms.date: 03/30/2017
 ms.assetid: fa772232-da1f-4c66-8c94-e36c0584b549
-ms.openlocfilehash: 7f22eeaae39b4d9a83c77c7f3e9db1d7d3f04e8e
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 26466a97ae44e6852c189d0b72bdba1b93d86141
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895197"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141731"
 ---
-# <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>如何：使用 HTTPS 创建自定义可靠会话绑定
+# <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>如何：创建使用 HTTPS 的自定义可靠会话绑定
 
-本主题演示如何对可靠会话使用安全套接字层 (SSL) 传输安全。 若要通过 HTTPS 使用可靠会话，必须创建使用可靠会话和 HTTPS 传输协议的自定义绑定。 可以通过使用代码以强制方式或在配置文件中以声明方式启用可靠会话。 此过程使用客户端和服务配置文件来启用可靠会话和[ **\<httpsTransport >** ](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md)元素。
+本主题演示如何对可靠会话使用安全套接字层 (SSL) 传输安全。 若要通过 HTTPS 使用可靠会话，必须创建使用可靠会话和 HTTPS 传输协议的自定义绑定。 可以通过使用代码以强制方式或在配置文件中以声明方式启用可靠会话。 此过程使用客户端和服务配置文件来启用可靠会话，并使用[ **\<httpsTransport >** ](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md)元素。
 
-此过程的关键部分是 **\<端点 >** 配置元素包含一个`bindingConfiguration`属性，该属性引用名为`reliableSessionOverHttps`的自定义绑定配置。 绑定 > 配置元素通过包括 **\<reliableSession >** 和 httpsTransport， [ **\<** ](../../../../docs/framework/misc/binding.md)  **\<来指定是否使用可靠会话和 HTTPS 传输 >** 元素。
+此过程的关键部分是 **\<终结点 >** 配置元素包含一个 `bindingConfiguration` 属性，该属性引用名为 `reliableSessionOverHttps`的自定义绑定配置。 [ **\<绑定 >** ](../../configure-apps/file-schema/wcf/bindings.md)配置元素引用此名称以指定使用可靠会话和 HTTPS 传输，方法是将 **\<reliableSession >** 和 **\<httpsTransport >** 元素包括在内。
 
 有关此示例的源副本，请参阅[通过 HTTPS 自定义绑定可靠会话](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md)。
 
@@ -27,7 +27,7 @@ ms.locfileid: "70895197"
 
    [!code-csharp[c_HowTo_CreateReliableSessionHTTPS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/service.cs#1122)]
 
-1. 创建一个*web.config*文件，以便`CalculatorService`使用一个名`reliableSessionOverHttps`为的自定义绑定（使用可靠会话和 HTTPS 传输）为设置终结点。
+1. 创建 web.config*文件，* 以使用名为 `reliableSessionOverHttps` 的自定义绑定为 `CalculatorService` 配置终结点，该绑定使用可靠会话和 HTTPS 传输。
 
    [!code-xml[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]
 
@@ -45,7 +45,7 @@ ms.locfileid: "70895197"
    Svcutil.exe <Metadata Exchange (MEX) address or HTTP GET address>
    ```
 
-1. 生成的客户端包含`ICalculator`定义客户端实现必须满足的服务协定的接口。
+1. 生成的客户端包含定义客户端实现必须满足的服务协定的 `ICalculator` 接口。
 
    [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1221)]
 
@@ -53,7 +53,7 @@ ms.locfileid: "70895197"
 
    [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1222)]
 
-1. 将名`reliableSessionOverHttps`为的自定义绑定配置为使用 HTTPS 传输和可靠会话。
+1. 将名为 `reliableSessionOverHttps` 的自定义绑定配置为使用 HTTPS 传输和可靠会话。
 
    [!code-xml[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]
 
@@ -65,7 +65,7 @@ ms.locfileid: "70895197"
 
 ## <a name="net-framework-security"></a>.NET Framework 安全性
 
-由于本示例中使用的证书是用*Makecert*创建的测试证书，因此当你尝试从浏览器访问 HTTPS 地址（例如`https://localhost/servicemodelsamples/service.svc`）时，会出现安全警报。
+由于本示例中使用的证书是用 Makecert 创建的测试证书，因此，当你尝试从浏览器访问 HTTPS 地址（如 `https://localhost/servicemodelsamples/service.svc`）时，将出现安全警报 *。*
 
 ## <a name="see-also"></a>请参阅
 

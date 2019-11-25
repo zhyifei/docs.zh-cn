@@ -2,12 +2,12 @@
 title: LINQ to Objects (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: 8c0eb71fffdd29d9599d74c789a66ec7caf1faeb
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b0cc47604b65a5883643d61b44b1e9878ec4b1bf
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418174"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140887"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
 术语“LINQ to Objects”指直接将 LINQ 查询与任何 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 集合一起使用，而不使用中间 LINQ 提供程序或 API，例如 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) 或 [LINQ to XML](./linq-to-xml-overview.md)。 可以使用 LINQ 来查询任何可枚举的集合，例如 <xref:System.Collections.Generic.List%601>、<xref:System.Array> 或 <xref:System.Collections.Generic.Dictionary%602>。 该集合可以是用户定义的集合，也可以是由 .NET Framework API 返回的集合。  
@@ -39,7 +39,7 @@ ms.locfileid: "73418174"
  [如何：使用 LINQ 查询 ArrayList (C#)](./how-to-query-an-arraylist-with-linq.md)  
  演示如何使用 C# 查询 ArrayList。  
   
- [如何：为 LINQ 查询添加自定义方法 (C#)](./how-to-add-custom-methods-for-linq-queries.md)  
+ [如何为 LINQ 查询添加自定义方法 (C#)](./how-to-add-custom-methods-for-linq-queries.md)  
  阐释如何通过向 <xref:System.Collections.Generic.IEnumerable%601> 接口中添加扩展方法来扩展可用于 LINQ 查询的方法集。  
   
  [语言集成查询 (LINQ) (C#)](./index.md)  

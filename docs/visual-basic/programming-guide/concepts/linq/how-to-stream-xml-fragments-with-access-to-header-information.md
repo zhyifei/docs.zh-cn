@@ -1,18 +1,18 @@
 ---
-title: 如何：Stream 处理访问标头信息 (Visual Basic 中) 的 XML 片段
+title: 如何：通过对标头信息的访问流式处理 XML 片段
 ms.date: 07/20/2015
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-ms.openlocfilehash: c11a64eb28e8952636ab877479852bd883fc7eba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 489e128e86a47e0e7f76c14a6cf1baf80fb0c406
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614642"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332456"
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>如何：Stream 处理访问标头信息 (Visual Basic 中) 的 XML 片段
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>How to: Stream XML Fragments with Access to Header Information (Visual Basic)
 有时，您必须读取任意大的 XML 文件并在编写您的应用程序时可以预测应用程序的内存需求量。 如果您试图用大 XML 文件填充 XML 树，则内存占用量将与文件大小成正比，也就是说会占用过多内存。 因此，您应改用流处理技术。  
   
- 一种选择是使用 <xref:System.Xml.XmlReader> 来编写应用程序。 但您可能需要使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 来查询 XML 树。 在这种情况下，您可以编写自己的自定义轴方法。 有关详细信息，请参阅[如何：编写 LINQ to XML 轴方法 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)。  
+ 一种选择是使用 <xref:System.Xml.XmlReader> 来编写应用程序。 但您可能需要使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 来查询 XML 树。 在这种情况下，您可以编写自己的自定义轴方法。 For more information, see [How to: Write a LINQ to XML Axis Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
   
  若要编写您自己的轴方法，请编写一个小方法，让该方法使用 <xref:System.Xml.XmlReader> 来读取各个节点，直到达到您感兴趣的节点之一。 该方法然后调用 <xref:System.Xml.Linq.XNode.ReadFrom%2A>，后者将从 <xref:System.Xml.XmlReader> 中读取数据并实例化 XML 片段。 然后，您可以对自定义轴方法编写 LINQ 查询。  
   
@@ -232,4 +232,4 @@ End Class
   
 ## <a name="see-also"></a>请参阅
 
-- [高级的 LINQ to XML 编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

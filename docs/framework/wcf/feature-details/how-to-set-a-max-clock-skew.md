@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MaxClockSkew property
 - WCF, custom bindings
 ms.assetid: 491d1705-eb29-43c2-a44c-c0cf996f74eb
-ms.openlocfilehash: 3bcd128e6e9f53f662dd3fc99336b5b45faebf5f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 96afa61d32e1ba744c9f3dbbeeb7fb2e55157f4c
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943122"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141654"
 ---
 # <a name="how-to-set-a-max-clock-skew"></a>如何：设置最大时钟偏差
 如果两台计算机上的时钟设置不同，时间关键函数可能无法正常执行。 若要减小这种可能性，可以将 `MaxClockSkew` 属性设置为一个 <xref:System.TimeSpan>。 可在两个类上获得此属性：  
@@ -23,14 +23,14 @@ ms.locfileid: "69943122"
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
   
 > [!IMPORTANT]
-> 对于安全对话, 在引导服务或`MaxClockSkew`客户端时必须进行对属性的更改。 为此, 必须在<xref:System.ServiceModel.Channels.SecurityBindingElement> <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.BootstrapSecurityBindingElement%2A?displayProperty=nameWithType>属性返回的上设置属性。  
+> 对于安全对话，在引导服务或客户端时必须进行对 `MaxClockSkew` 属性的更改。 为此，必须在 <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.BootstrapSecurityBindingElement%2A?displayProperty=nameWithType> 属性返回的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 上设置属性。  
   
- 若要更改系统提供的绑定之一上的属性，必须在绑定集合中找到安全绑定元素，然后将 `MaxClockSkew` 属性设置为一个新值。 两个类派生自 <xref:System.ServiceModel.Channels.SecurityBindingElement>: <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 和 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>。 从该集合中检索安全绑定时，必须将其强制转换为上述类型之一，以便正确设置 `MaxClockSkew` 属性。 下面的示例使用了一个 <xref:System.ServiceModel.WSHttpBinding>，它使用了 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>。 有关指定要在每个系统提供的绑定中使用哪种类型的安全绑定的列表, 请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。  
+ 若要更改系统提供的绑定之一上的属性，必须在绑定集合中找到安全绑定元素，然后将 `MaxClockSkew` 属性设置为一个新值。 两个类派生自 <xref:System.ServiceModel.Channels.SecurityBindingElement>: <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 和 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>。 从该集合中检索安全绑定时，必须将其强制转换为上述类型之一，以便正确设置 `MaxClockSkew` 属性。 下面的示例使用了一个 <xref:System.ServiceModel.WSHttpBinding>，它使用了 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>。 有关指定要在每个系统提供的绑定中使用哪种类型的安全绑定的列表，请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。  
   
 ## <a name="to-create-a-custom-binding-with-a-new-clock-skew-value-in-code"></a>在代码中使用新的时钟偏差值创建自定义绑定  
   
 > [!WARNING]
-> 在代码中添加对以下命名空间的引用<xref:System.ServiceModel.Channels>: <xref:System.ServiceModel.Description>、 <xref:System.Security.Permissions>、和<xref:System.ServiceModel.Security.Tokens>。  
+> 在代码中添加对以下命名空间的引用： <xref:System.ServiceModel.Channels>、<xref:System.ServiceModel.Description>、<xref:System.Security.Permissions>和 <xref:System.ServiceModel.Security.Tokens>。  
   
 1. 创建 <xref:System.ServiceModel.WSHttpBinding> 类的一个实例，并将其安全模式设置为 <xref:System.ServiceModel.SecurityMode.Message?displayProperty=nameWithType>。  
   
@@ -51,19 +51,19 @@ ms.locfileid: "69943122"
   
 ## <a name="to-set-the-maxclockskew-in-configuration"></a>在配置中设置 MaxClockSkew  
   
-1. 在绑定 > 元素部分创建[customBinding >。 \<](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+1. 在[\<绑定 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)元素部分创建[\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) 。  
   
-2. 创建[绑定 > 元素, 并将属性设置为合适的值。 \<](../../../../docs/framework/misc/binding.md) `name` 下面的示例将其设置为 `MaxClockSkewBinding`。  
+2. 创建一个[\<绑定 >](../../configure-apps/file-schema/wcf/bindings.md)元素，并将 `name` 特性设置为合适的值。 下面的示例将其设置为 `MaxClockSkewBinding`。  
   
-3. 添加一个编码元素。 下面的示例添加了一个[ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)。  
+3. 添加一个编码元素。 下面的示例添加了一个[\<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)。  
   
-4. 添加[security > 元素, 并将属性设置为适当的设置。 \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) `authenticationMode` 下面的示例将该属性设置为 `Kerberos`，以指定服务使用 Windows 身份验证。  
+4. 添加[\<security >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)元素，并将 `authenticationMode` 属性设置为适当的设置。 下面的示例将该属性设置为 `Kerberos`，以指定服务使用 Windows 身份验证。  
   
-5. 添加一个[ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) , 并将`maxClockSkew`属性设置为形式的`"##:##:##"`值。 下面的示例将其设置为 7 分钟。 (可选) 添加[ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)并将`maxClockSkew`属性设置为适当的设置。  
+5. 添加一个[\<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)并将 `maxClockSkew` 特性设置为 `"##:##:##"`形式的值。 下面的示例将其设置为 7 分钟。 （可选）添加一个[\<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)并将 `maxClockSkew` 特性设置为适当的设置。  
   
-6. 添加一个传输元素。 下面的示例使用[ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)。  
+6. 添加一个传输元素。 下面的示例使用[\<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)。  
   
-7. 对于安全对话, 安全设置必须出现在[ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)元素中的启动时。  
+7. 对于安全对话，安全设置必须出现在[\<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)元素中的启动时。  
   
     ```xml  
     <bindings>  

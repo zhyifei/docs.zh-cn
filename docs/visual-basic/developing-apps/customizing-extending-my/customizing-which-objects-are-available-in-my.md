@@ -1,76 +1,76 @@
 ---
-title: 自定义 My 中可用的对象 (Visual Basic)
+title: 自定义 My 中可用的对象
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-ms.openlocfilehash: bb3f8eb2e8b1cf5bce364fc4b3ce0587769bb5f9
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 0387aca08e3a31b0a2045369919894d88caf5b76
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775214"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330307"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>自定义 My 中可用的对象 (Visual Basic)
 
-本主题介绍如何通过设置项目的 `_MYTYPE` 条件编译常量，来控制要启用的 `My` 对象。 Visual Studio 集成开发环境（IDE）为与项目的类型同步的项目保留 `_MYTYPE` 条件编译常量。  
+This topic describes how you can control which `My` objects are enabled by setting your project's `_MYTYPE` conditional-compilation constant. The Visual Studio Integrated Development Environment (IDE) keeps the `_MYTYPE` conditional-compilation constant for a project in sync with the project's type.  
   
-## <a name="predefined-_mytype-values"></a>预定义 \_MYTYPE 值  
+## <a name="predefined-_mytype-values"></a>Predefined \_MYTYPE Values  
 
-必须使用 `/define` 编译器选项来设置 `_MYTYPE` 条件编译常量。 为 `_MYTYPE` 常量指定自己的值时，必须将字符串值用反斜杠/引号（\\ "）序列引起来。 例如，可以使用：  
+You must use the `/define` compiler option to set the `_MYTYPE` conditional-compilation constant. When specifying your own value for the `_MYTYPE` constant, you must enclose the string value in backslash/quotation mark (\\") sequences. For example, you could use:  
   
 ```console  
 /define:_MYTYPE=\"WindowsForms\"  
 ```  
   
- 下表显示了几个项目类型的 `_MYTYPE` 条件编译常量。  
+ This table shows what the `_MYTYPE` conditional-compilation constant is set to for several project types.  
   
-|项目类型|\_MYTYPE 值|  
+|项目类型|\_MYTYPE value|  
 |------------------|--------------------|  
-|类库|Windows|  
-|控制台应用程序|控制台|  
-|Web|站点|  
-|Web 控件库|WebControl|  
-|Windows 应用程序|WindowsForms|  
-|Windows 应用程序（从自定义 `Sub Main` 开始时）|"WindowsFormsWithCustomSubMain"|  
-|Windows 控件库|Windows|  
-|Windows 服务|控制台|  
-|空|空白处|  
+|类库|"Windows"|  
+|控制台应用程序|"Console"|  
+|Web|"Web"|  
+|Web Control Library|"WebControl"|  
+|Windows 应用程序|"WindowsForms"|  
+|Windows Application, when starting with custom `Sub Main`|"WindowsFormsWithCustomSubMain"|  
+|Windows Control Library|"Windows"|  
+|Windows 服务|"Console"|  
+|空|"Empty"|  
   
 > [!NOTE]
-> 不管 `Option Compare` 语句如何设置，所有条件编译字符串比较均区分大小写。  
+> All conditional-compilation string comparisons are case-sensitive, regardless of how the `Option Compare` statement is set.  
   
-## <a name="dependent-_my-compilation-constants"></a>从属 \_MY 编译常量  
+## <a name="dependent-_my-compilation-constants"></a>Dependent \_MY Compilation Constants  
 
-相反，`_MYTYPE` 条件编译常量控制多个其他 `_MY` 编译常数的值：  
+The `_MYTYPE` conditional-compilation constant, in turn, controls the values of several other `_MY` compilation constants:  
   
 |\_MYTYPE|\_MYAPPLICATIONTYPE|\_MYCOMPUTERTYPE|\_MYFORMS|\_MYUSERTYPE|\_MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
-|控制台|控制台|Windows|未定义|Windows|true|  
-|客户|未定义|未定义|未定义|未定义|未定义|  
-|空白处|未定义|未定义|未定义|未定义|未定义|  
-|站点|未定义|站点|false|站点|false|  
-|WebControl|未定义|站点|false|站点|true|  
-|"Windows" 或 ""|Windows|Windows|未定义|Windows|true|  
-|WindowsForms|WindowsForms|Windows|true|Windows|true|  
-|"WindowsFormsWithCustomSubMain"|控制台|Windows|true|Windows|true|  
+|"Console"|"Console"|"Windows"|未定义|"Windows"|true|  
+|"Custom"|未定义|未定义|未定义|未定义|未定义|  
+|"Empty"|未定义|未定义|未定义|未定义|未定义|  
+|"Web"|未定义|"Web"|false|"Web"|false|  
+|"WebControl"|未定义|"Web"|false|"Web"|true|  
+|"Windows" or ""|"Windows"|"Windows"|未定义|"Windows"|true|  
+|"WindowsForms"|"WindowsForms"|"Windows"|true|"Windows"|true|  
+|"WindowsFormsWithCustomSubMain"|"Console"|"Windows"|true|"Windows"|true|  
   
- 默认情况下，未定义的条件编译常量解析为 `FALSE`。 在编译项目时，可以指定未定义的常量的值，以重写默认行为。  
+ By default, undefined conditional-compilation constants resolve to `FALSE`. You can specify values for the undefined constants when compiling your project to override the default behavior.  
   
 > [!NOTE]
-> 如果 `_MYTYPE` 设置为 "Custom"，则项目将包含 `My` 命名空间，但不包含任何对象。 但是，将 `_MYTYPE` 设置为 "Empty" 可阻止编译器添加 `My` 命名空间及其对象。  
+> When `_MYTYPE` is set to "Custom", the project contains the `My` namespace, but it contains no objects. However, setting `_MYTYPE` to "Empty" prevents the compiler from adding the `My` namespace and its objects.  
   
- 下表描述了 `_MY` 编译常量的预定义值的效果。  
+ This table describes the effects of the predefined values of the `_MY` compilation constants.  
   
 |返回的常量|含义|  
 |--------------|-------------|  
-|`_MYAPPLICATIONTYPE`|如果常量为 "Console"、"Windows" 或 "WindowsForms"，则启用 `My.Application`：<br /><br /> -从 <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> 派生的 "控制台" 版本。 和具有比 "Windows" 版本少的成员。<br />-"Windows" 版本派生自 <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>。与 "WindowsForms" 版本相比，该版本具有更少的成员。<br />-@No__t_0 的 "WindowsForms" 版本从 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 派生。 如果 `TARGET` 常量定义为 "winexe"，则类包括 `Sub Main` 方法。|  
-|`_MYCOMPUTERTYPE`|如果常量为 "Web" 或 "Windows"，则启用 `My.Computer`：<br /><br /> -"Web" 版本派生自 <xref:Microsoft.VisualBasic.Devices.ServerComputer>，其成员少于 "Windows" 版本。<br />-从 <xref:Microsoft.VisualBasic.Devices.Computer> 派生的 `My.Computer` 的 "Windows" 版本。|  
-|`_MYFORMS`|如果 `TRUE` 常数，则启用 `My.Forms`。|  
-|`_MYUSERTYPE`|如果常量为 "Web" 或 "Windows"，则启用 `My.User`：<br /><br /> -@No__t_0 的 "Web" 版本与当前 HTTP 请求的用户标识相关联。<br />-@No__t_0 的 "Windows" 版本与线程的当前主体关联。|  
-|`_MYWEBSERVICES`|如果 `TRUE` 常数，则启用 `My.WebServices`。|  
-|`_MYTYPE`|如果常量为 "Web"，则启用 `My.Log`、`My.Request` 和 `My.Response`。|  
+|`_MYAPPLICATIONTYPE`|Enables `My.Application`, if the constant is "Console," Windows," or "WindowsForms":<br /><br /> -   The "Console" version derives from <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>. and has fewer members than the "Windows" version.<br />-   The "Windows" version derives from <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>.and has fewer members than the "WindowsForms" version.<br />-   The "WindowsForms" version of `My.Application` derives from <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>. If the `TARGET` constant is defined to be "winexe", then the class includes a `Sub Main` method.|  
+|`_MYCOMPUTERTYPE`|Enables `My.Computer`, if the constant is "Web" or "Windows":<br /><br /> -   The "Web" version derives from <xref:Microsoft.VisualBasic.Devices.ServerComputer>, and has fewer members than the "Windows" version.<br />-   The "Windows" version of `My.Computer` derives from <xref:Microsoft.VisualBasic.Devices.Computer>.|  
+|`_MYFORMS`|Enables `My.Forms`, if the constant is `TRUE`.|  
+|`_MYUSERTYPE`|Enables `My.User`, if the constant is "Web" or "Windows":<br /><br /> -   The "Web" version of `My.User` is associated with the user identity of the current HTTP request.<br />-   The "Windows" version of `My.User` is associated with the thread's current principal.|  
+|`_MYWEBSERVICES`|Enables `My.WebServices`, if the constant is `TRUE`.|  
+|`_MYTYPE`|Enables `My.Log`, `My.Request`, and `My.Response`, if the constant is "Web".|  
   
 ## <a name="see-also"></a>请参阅
 
@@ -80,7 +80,7 @@ ms.locfileid: "72775214"
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>
 - [My 对项目类型的依赖方式](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
 - [条件编译](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
-- [-define （Visual Basic）](../../../visual-basic/reference/command-line-compiler/define.md)
+- [-define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
 - [My.Forms 对象](../../../visual-basic/language-reference/objects/my-forms-object.md)
 - [My.Request 对象](../../../visual-basic/language-reference/objects/my-request-object.md)
 - [My.Response 对象](../../../visual-basic/language-reference/objects/my-response-object.md)

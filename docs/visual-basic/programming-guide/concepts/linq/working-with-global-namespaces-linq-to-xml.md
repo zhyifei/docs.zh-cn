@@ -1,16 +1,16 @@
 ---
-title: 使用全局命名空间 (Visual Basic) (LINQ to XML)
+title: 使用全局命名空间 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: 93c7c654e43b579456633dea90ba6a362ff095f7
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 80510e370e0a9c7ab27cb5177d9b547ead82715c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582363"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350998"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>使用全局命名空间 (Visual Basic) (LINQ to XML)
-Visual Basic 中的 XML 文本的主要功能之一是使用 `Imports` 语句来声明 XML 命名空间的功能。 使用此功能时，您可以声明使用前缀的 XML 命名空间，也可以声明默认的 XML 命名空间。  
+One of the key features of XML literals in Visual Basic is the capability to declare XML namespaces by using the `Imports` statement. 使用此功能时，您可以声明使用前缀的 XML 命名空间，也可以声明默认的 XML 命名空间。  
   
  此功能在两种情况下有用。 首先，使用 XML 文本声明的命名空间不会延续到嵌入的表达式。 声明全局命名空间可减少与命名空间一起使用嵌入表达式所必须执行的工作量。 其次，您必须声明全局命名空间才能与 XML 属性一起使用命名空间。  
   
@@ -199,4 +199,4 @@ http://www.adventure-works.com
   
 ## <a name="see-also"></a>请参阅
 
-- [命名空间概述（LINQ to XML）（Visual Basic）](namespaces-overview-linq-to-xml.md)
+- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

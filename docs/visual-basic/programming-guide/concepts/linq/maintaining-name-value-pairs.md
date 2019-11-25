@@ -1,15 +1,15 @@
 ---
-title: 维护名称 / 值对 (Visual Basic)
+title: 维护名称/值对
 ms.date: 07/20/2015
 ms.assetid: 57ac2072-d9f5-432b-84f0-a889c62fd813
-ms.openlocfilehash: e95e8c751211d59d5bffbf3e625665703e01429c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ed9c7f0aae2fe646cd723321f45455f89dd7c370
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649801"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331667"
 ---
-# <a name="maintaining-namevalue-pairs-visual-basic"></a>维护名称/值对 (Visual Basic)
+# <a name="maintaining-namevalue-pairs-visual-basic"></a>Maintaining Name/Value Pairs (Visual Basic)
 很多应用程序都必须维护需要保存为名称/值对的信息。 此信息可能是配置信息或全局设置。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 包含一些方法，能轻松保存一组名称/值对。 可以将这些信息保存为属性，也可以保存为一组子元素。  
   
  将信息保存为属性和保存为子元素之间的区别在于属性具有约束，对于一个元素，只能有一个属性具有特定的名称。 而这种限制不适用于子元素。  
@@ -122,4 +122,4 @@ Console.WriteLine(root)
 
 - <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>
 - <xref:System.Xml.Linq.XElement.SetElementValue%2A>
-- [修改 XML 树 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

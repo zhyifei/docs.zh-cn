@@ -1,15 +1,15 @@
 ---
-title: 如何：查找子元素列表 (XPath-LINQ to XML) (C#)
+title: 如何查找子元素的列表 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589dd8-f680-4cdb-9d6a-78d57e2555e8
-ms.openlocfilehash: 63b0fec504ff8424e9e96318c46191a150b72f46
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 2b6f6031441e7d1bd015e25a8debad7dd7f3b261
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253840"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141224"
 ---
-# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a>如何：查找子元素列表 (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a>如何查找子元素的列表 (XPath-LINQ to XML) (C#)
 本主题将 XPath 子元素轴与 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> 轴进行比较。  
   
  XPath 表达式为：`./*`  
@@ -17,7 +17,7 @@ ms.locfileid: "70253840"
 ## <a name="example"></a>示例  
  本示例查找 `Address` 元素的所有子元素。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```csharp  
 XDocument cpo = XDocument.Load("PurchaseOrders.xml");  

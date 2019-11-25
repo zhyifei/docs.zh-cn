@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: ac69b38df3439932be7f65d871c64700585538cb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 65990c699bafa8eec1ba7dcbce624c88316cbb72
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774288"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283287"
 ---
 # <a name="working-with-certificates"></a>使用证书
 
@@ -72,7 +72,7 @@ ms.locfileid: "72774288"
 
 在创建新服务时，可能会使用不是由受信任的根证书颁发的证书，或者颁发证书本身可能不在受信任的根证书颁发机构存储区中。 如果仅为了开发目的，可以暂时禁用检查证书信任链的机制。 为此，需要将 `CertificateValidationMode` 属性设置为 `PeerTrust` 或 `PeerOrChainTrust`。 这两种模式都指定，证书可以是自行颁发的（对等信任），也可以是信任链的一部分。 在下列所有类上，都可以设置此属性。
 
-|实例|Property|
+|实例|属性|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -113,7 +113,7 @@ PowerShell New-selfsignedcertificate cmdlet 创建 x.509 证书和私钥/公钥�
 
 ### <a name="service-certificates"></a>服务证书
 
-服务证书的主要任务是向客户端验证服务器的身份。 客户端对服务器进行身份验证时所进行的初始检查之一是将“使用者”字段的值与用来联系服务的统一资源标识符 (URI) 进行比较：二者的 DNS 必须匹配。 例如，如果 `http://www.contoso.com/endpoint/` 服务的 URI，则 "**使用者**" 字段还必须包含 `www.contoso.com` 值。
+服务证书的主要任务是向客户端验证服务器的身份。 客户端对服务器进行身份验证时所进行的初始检查之一是将“使用者”字段的值与用来联系服务的统一资源标识符 (URI) 进行比较：二者的 DNS 必须匹配。 例如，如果 `http://www.contoso.com/endpoint/` 服务的 URI，则 "**使用者**" 字段还必须包含 `www.contoso.com`值。
 
 请注意，该字段可以包含多个值，每个值都以一个起始值前缀来指示其值。 最常见的情况是，初始化为公用名 "CN"，例如 `CN = www.contoso.com`。 “使用者”字段还可能为空白，这种情况下，“使用者可选名称”字段可以包含“DNS 名称”值。
 
@@ -135,7 +135,7 @@ PowerShell New-selfsignedcertificate cmdlet 创建 x.509 证书和私钥/公钥�
 
 如果证书吊销，则从被吊销证书继承的任何链都将无效，在身份验证过程中也不受信任。 为了查看吊销了哪些证书，每个证书颁发者都发布一个加盖了时间戳和日期戳的证书吊销列表 (CRL)。 可以使用联机吊销或脱机吊销来查看此列表，方法是将以下类的 `RevocationMode` 或 `DefaultRevocationMode` 属性设置为 <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> 枚举值之一：<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>、<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>、<xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> 和 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 类。 所有属性的默认值都是 `Online`。
 
-还可使用 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)（属于 [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)）和 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)（属于 [\<endpointBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)）的 `revocationMode` 属性在配置中设置模式。
+还可使用 `revocationMode`[authentication>\<（属于 ](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)[serviceBehaviors>\<）和 ](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)[authentication>\<（属于 ](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)[endpointBehaviors>\<）的 ](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) 属性在配置中设置模式。
 
 ## <a name="the-setcertificate-method"></a>SetCertificate 方法
 
@@ -168,7 +168,7 @@ IIS 和 Active Directory 的一个功能是将证书映射到 Windows 用户帐�
 
 有关使用 Active Directory 映射的详细信息，请参阅 [Mapping Client Certificates with Directory Service Mapping](https://go.microsoft.com/fwlink/?LinkId=88918)（使用目录服务映射来映射客户端证书）。
 
-如果启用了这一功能，则可以将 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> 类的 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 属性设置为 `true`。 在配置中，可以将 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 元素的 `mapClientCertificateToWindowsAccount` 属性设置为 `true`，如下面的代码所示。
+如果启用了这一功能，则可以将 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> 类的 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 属性设置为 `true`。 在配置中，可以将 `mapClientCertificateToWindowsAccount`[authentication>\< 元素的 ](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 属性设置为 `true`，如下面的代码所示。
 
 ```xml
 <serviceBehaviors>
@@ -184,14 +184,14 @@ IIS 和 Active Directory 的一个功能是将证书映射到 Windows 用户帐�
 
 将 X.509 证书映射到表示 Windows 用户帐户的令牌，这一过程视为权限提升，这是因为一旦执行了映射，就可使用 Windows 令牌获得对受保护资源的访问权限。 因此，域策略要求 X.509 证书在映射之前符合其策略。 SChannel 安全数据包强制执行此要求。
 
-使用 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 或更高版本时，WCF 可以确保证书在映射到 Windows 帐户之前符合域策略。
+使用 .NET Framework 3.5 或更高版本时，在将证书映射到 Windows 帐户之前，WCF 确保证书符合域策略。
 
 在 WCF 第一版中，可在无需考虑域策略的情况下，执行映射。 因此，如果启用了映射，而 X.509 证书不满足域策略，则在第一版下运行正常的早期应用程序，可能会失败。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>
 - <xref:System.ServiceModel>
 - <xref:System.Security.Cryptography.X509Certificates.X509FindType>
-- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
