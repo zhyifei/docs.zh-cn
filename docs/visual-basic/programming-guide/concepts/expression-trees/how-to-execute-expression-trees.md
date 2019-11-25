@@ -1,26 +1,26 @@
 ---
-title: 如何：执行表达式树 (Visual Basic)
+title: 如何：执行表达式树
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-ms.openlocfilehash: 135c295070ea591f3b494734f9d236e36b9c3c5d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 82801728596449869e5124c3fc92c9c0673f5dd9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916504"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332985"
 ---
-# <a name="how-to-execute-expression-trees-visual-basic"></a><span data-ttu-id="97feb-102">如何：执行表达式树 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="97feb-102">How to: Execute Expression Trees (Visual Basic)</span></span>
-<span data-ttu-id="97feb-103">本主题演示如何执行表达式树。</span><span class="sxs-lookup"><span data-stu-id="97feb-103">This topic shows you how to execute an expression tree.</span></span> <span data-ttu-id="97feb-104">执行表达式树可能返回一个值，或者它可能只是执行操作，例如调用方法。</span><span class="sxs-lookup"><span data-stu-id="97feb-104">Executing an expression tree may return a value, or it may just perform an action such as calling a method.</span></span>  
+# <a name="how-to-execute-expression-trees-visual-basic"></a><span data-ttu-id="5ea45-102">How to: Execute Expression Trees (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ea45-102">How to: Execute Expression Trees (Visual Basic)</span></span>
+<span data-ttu-id="5ea45-103">本主题演示如何执行表达式树。</span><span class="sxs-lookup"><span data-stu-id="5ea45-103">This topic shows you how to execute an expression tree.</span></span> <span data-ttu-id="5ea45-104">执行表达式树可能返回一个值，或者它可能只是执行操作，例如调用方法。</span><span class="sxs-lookup"><span data-stu-id="5ea45-104">Executing an expression tree may return a value, or it may just perform an action such as calling a method.</span></span>  
   
- <span data-ttu-id="97feb-105">仅可以执行表示 lambda 表达式的表达式树。</span><span class="sxs-lookup"><span data-stu-id="97feb-105">Only expression trees that represent lambda expressions can be executed.</span></span> <span data-ttu-id="97feb-106">表示 Lambda 表达式的表达式树的类型为 <xref:System.Linq.Expressions.LambdaExpression> 或 <xref:System.Linq.Expressions.Expression%601>。</span><span class="sxs-lookup"><span data-stu-id="97feb-106">Expression trees that represent lambda expressions are of type <xref:System.Linq.Expressions.LambdaExpression> or <xref:System.Linq.Expressions.Expression%601>.</span></span> <span data-ttu-id="97feb-107">若要执行这些表达式树，请调用 <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> 方法来创建一个可执行的委托，然后调用该委托。</span><span class="sxs-lookup"><span data-stu-id="97feb-107">To execute these expression trees, call the <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> method to create an executable delegate, and then invoke the delegate.</span></span>  
+ <span data-ttu-id="5ea45-105">仅可以执行表示 lambda 表达式的表达式树。</span><span class="sxs-lookup"><span data-stu-id="5ea45-105">Only expression trees that represent lambda expressions can be executed.</span></span> <span data-ttu-id="5ea45-106">表示 Lambda 表达式的表达式树的类型为 <xref:System.Linq.Expressions.LambdaExpression> 或 <xref:System.Linq.Expressions.Expression%601>。</span><span class="sxs-lookup"><span data-stu-id="5ea45-106">Expression trees that represent lambda expressions are of type <xref:System.Linq.Expressions.LambdaExpression> or <xref:System.Linq.Expressions.Expression%601>.</span></span> <span data-ttu-id="5ea45-107">若要执行这些表达式树，请调用 <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> 方法来创建一个可执行的委托，然后调用该委托。</span><span class="sxs-lookup"><span data-stu-id="5ea45-107">To execute these expression trees, call the <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> method to create an executable delegate, and then invoke the delegate.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="97feb-108">如果委托的类型未知，也就是说 Lambda 表达式的类型为 <xref:System.Linq.Expressions.LambdaExpression>，而不是 <xref:System.Linq.Expressions.Expression%601>，则必须对委托调用 <xref:System.Delegate.DynamicInvoke%2A> 方法，而不是直接调用委托。</span><span class="sxs-lookup"><span data-stu-id="97feb-108">If the type of the delegate is not known, that is, the lambda expression is of type <xref:System.Linq.Expressions.LambdaExpression> and not <xref:System.Linq.Expressions.Expression%601>, you must call the <xref:System.Delegate.DynamicInvoke%2A> method on the delegate instead of invoking it directly.</span></span>  
+> <span data-ttu-id="5ea45-108">如果委托的类型未知，也就是说 Lambda 表达式的类型为 <xref:System.Linq.Expressions.LambdaExpression>，而不是 <xref:System.Linq.Expressions.Expression%601>，则必须对委托调用 <xref:System.Delegate.DynamicInvoke%2A> 方法，而不是直接调用委托。</span><span class="sxs-lookup"><span data-stu-id="5ea45-108">If the type of the delegate is not known, that is, the lambda expression is of type <xref:System.Linq.Expressions.LambdaExpression> and not <xref:System.Linq.Expressions.Expression%601>, you must call the <xref:System.Delegate.DynamicInvoke%2A> method on the delegate instead of invoking it directly.</span></span>  
   
- <span data-ttu-id="97feb-109">如果表达式树不表示 Lambda 表达式，可以通过调用 <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> 方法创建一个新的 Lambda 表达式，此表达式的主体为原始表达式树。</span><span class="sxs-lookup"><span data-stu-id="97feb-109">If an expression tree does not represent a lambda expression, you can create a new lambda expression that has the original expression tree as its body, by calling the <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> method.</span></span> <span data-ttu-id="97feb-110">然后，按本节前面所述执行此 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="97feb-110">Then, you can execute the lambda expression as described earlier in this section.</span></span>  
+ <span data-ttu-id="5ea45-109">如果表达式树不表示 Lambda 表达式，可以通过调用 <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> 方法创建一个新的 Lambda 表达式，此表达式的主体为原始表达式树。</span><span class="sxs-lookup"><span data-stu-id="5ea45-109">If an expression tree does not represent a lambda expression, you can create a new lambda expression that has the original expression tree as its body, by calling the <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> method.</span></span> <span data-ttu-id="5ea45-110">然后，按本节前面所述执行此 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="5ea45-110">Then, you can execute the lambda expression as described earlier in this section.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="97feb-111">示例</span><span class="sxs-lookup"><span data-stu-id="97feb-111">Example</span></span>  
- <span data-ttu-id="97feb-112">下面的代码示例演示如何通过创建 lambda 表达式并执行它来执行代表幂运算的表达式树。</span><span class="sxs-lookup"><span data-stu-id="97feb-112">The following code example demonstrates how to execute an expression tree that represents raising a number to a power by creating a lambda expression and executing it.</span></span> <span data-ttu-id="97feb-113">示例最后显示幂运算的结果。</span><span class="sxs-lookup"><span data-stu-id="97feb-113">The result, which represents the number raised to the power, is displayed.</span></span>  
+## <a name="example"></a><span data-ttu-id="5ea45-111">示例</span><span class="sxs-lookup"><span data-stu-id="5ea45-111">Example</span></span>  
+ <span data-ttu-id="5ea45-112">下面的代码示例演示如何通过创建 lambda 表达式并执行它来执行代表幂运算的表达式树。</span><span class="sxs-lookup"><span data-stu-id="5ea45-112">The following code example demonstrates how to execute an expression tree that represents raising a number to a power by creating a lambda expression and executing it.</span></span> <span data-ttu-id="5ea45-113">示例最后显示幂运算的结果。</span><span class="sxs-lookup"><span data-stu-id="5ea45-113">The result, which represents the number raised to the power, is displayed.</span></span>  
   
 ```vb  
 ' The expression tree to execute.  
@@ -42,11 +42,11 @@ MsgBox(result)
 ' 8  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="97feb-114">编译代码</span><span class="sxs-lookup"><span data-stu-id="97feb-114">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="5ea45-114">编译代码</span><span class="sxs-lookup"><span data-stu-id="5ea45-114">Compiling the Code</span></span>  
   
-- <span data-ttu-id="97feb-115">包括 System.Linq.Expressions 命名空间。</span><span class="sxs-lookup"><span data-stu-id="97feb-115">Include the System.Linq.Expressions namespace.</span></span>  
+- <span data-ttu-id="5ea45-115">包括 System.Linq.Expressions 命名空间。</span><span class="sxs-lookup"><span data-stu-id="5ea45-115">Include the System.Linq.Expressions namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="97feb-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="97feb-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5ea45-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="5ea45-116">See also</span></span>
 
-- [<span data-ttu-id="97feb-117">表达式树 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="97feb-117">Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [<span data-ttu-id="97feb-118">如何：修改表达式树 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="97feb-118">How to: Modify Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [<span data-ttu-id="5ea45-117">表达式树 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ea45-117">Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [<span data-ttu-id="5ea45-118">How to: Modify Expression Trees (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ea45-118">How to: Modify Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)

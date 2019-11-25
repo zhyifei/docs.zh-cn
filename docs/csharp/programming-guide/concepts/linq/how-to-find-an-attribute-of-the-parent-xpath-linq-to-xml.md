@@ -1,27 +1,27 @@
 ---
-title: 如何：查找父元素的属性 (XPath-LINQ to XML) (C#)
+title: 如何查找父级的属性 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: dbef9d89-a5c4-431f-80cc-7a2ebf323f86
-ms.openlocfilehash: aa602f6876b014c48a73dea9b2ff42eb953e5c4c
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: bfe7554a5c767adde5e7170c8e1ea0537155f6df
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253777"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141174"
 ---
-# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-c"></a><span data-ttu-id="cbe0b-102">如何：查找父元素的属性 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="cbe0b-102">How to: Find an Attribute of the Parent (XPath-LINQ to XML) (C#)</span></span>
+# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-c"></a><span data-ttu-id="d792f-102">如何查找父级的属性 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="d792f-102">How to find an attribute of the parent (XPath-LINQ to XML) (C#)</span></span>
 
-<span data-ttu-id="cbe0b-103">本主题演示如何定位到父元素并查找其属性。</span><span class="sxs-lookup"><span data-stu-id="cbe0b-103">This topic shows how to navigate to the parent element and find an attribute of it.</span></span>
+<span data-ttu-id="d792f-103">本主题演示如何定位到父元素并查找其属性。</span><span class="sxs-lookup"><span data-stu-id="d792f-103">This topic shows how to navigate to the parent element and find an attribute of it.</span></span>
 
-<span data-ttu-id="cbe0b-104">XPath 表达式为：</span><span class="sxs-lookup"><span data-stu-id="cbe0b-104">The XPath expression is:</span></span>
+<span data-ttu-id="d792f-104">XPath 表达式为：</span><span class="sxs-lookup"><span data-stu-id="d792f-104">The XPath expression is:</span></span>
 
 `../@id`
 
-## <a name="example"></a><span data-ttu-id="cbe0b-105">示例</span><span class="sxs-lookup"><span data-stu-id="cbe0b-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d792f-105">示例</span><span class="sxs-lookup"><span data-stu-id="d792f-105">Example</span></span>
 
-<span data-ttu-id="cbe0b-106">此示例首先查找 `Author` 元素。</span><span class="sxs-lookup"><span data-stu-id="cbe0b-106">This example first finds an `Author` element.</span></span> <span data-ttu-id="cbe0b-107">然后，查找父元素的 `id` 属性。</span><span class="sxs-lookup"><span data-stu-id="cbe0b-107">It then finds the `id` attribute of the parent element.</span></span>
+<span data-ttu-id="d792f-106">此示例首先查找 `Author` 元素。</span><span class="sxs-lookup"><span data-stu-id="d792f-106">This example first finds an `Author` element.</span></span> <span data-ttu-id="d792f-107">然后，查找父元素的 `id` 属性。</span><span class="sxs-lookup"><span data-stu-id="d792f-107">It then finds the `id` attribute of the parent element.</span></span>
 
-<span data-ttu-id="cbe0b-108">此示例使用下面的 XML 文档：[示例 XML 文件：图书 (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="cbe0b-108">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).</span></span>
+<span data-ttu-id="d792f-108">本示例使用下面的 XML 文档：[示例 XML 文件：图书 (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="d792f-108">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).</span></span>
 
 ```csharp
 XDocument books = XDocument.Load("Books.xml");
@@ -48,7 +48,7 @@ else
 Console.WriteLine(att1);
 ```
 
-<span data-ttu-id="cbe0b-109">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="cbe0b-109">This example produces the following output:</span></span>
+<span data-ttu-id="d792f-109">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="d792f-109">This example produces the following output:</span></span>
 
 ```output
 Results are identical

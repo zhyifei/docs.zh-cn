@@ -1,25 +1,25 @@
 ---
-title: 如何：根据属性进行筛选 (XPath-LINQ to XML) (C#)
+title: 如何根据属性进行筛选 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
-ms.openlocfilehash: 2537fbbac4f16a56d8a7f074b5fd10a4fcd0c09c
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: ab2cd439f4dd1454de4fa565658ef5dac14b8c22
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205297"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141273"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="1238d-102">如何：根据属性进行筛选 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="1238d-102">How to: Filter on an Attribute (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="1238d-103">本主题演示如何获取具有指定名称、并具有一个带指定值的属性的子代元素。</span><span class="sxs-lookup"><span data-stu-id="1238d-103">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="794fb-102">如何根据属性进行筛选 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="794fb-102">How to filter on an attribute (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="794fb-103">本主题演示如何获取具有指定名称、并具有一个带指定值的属性的子代元素。</span><span class="sxs-lookup"><span data-stu-id="794fb-103">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  
   
- <span data-ttu-id="1238d-104">XPath 表达式为：</span><span class="sxs-lookup"><span data-stu-id="1238d-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="794fb-104">XPath 表达式为：</span><span class="sxs-lookup"><span data-stu-id="794fb-104">The XPath expression is:</span></span>  
   
  `.//Address[@Type='Shipping']`  
   
-## <a name="example"></a><span data-ttu-id="1238d-105">示例</span><span class="sxs-lookup"><span data-stu-id="1238d-105">Example</span></span>  
- <span data-ttu-id="1238d-106">本示例查找名称为 `Address`，`Type`、并具有一个带“Shipping”值的属性的子代元素。</span><span class="sxs-lookup"><span data-stu-id="1238d-106">This example finds all descendants elements with the name of `Address`, and with a `Type` attribute with a value of "Shipping".</span></span>  
+## <a name="example"></a><span data-ttu-id="794fb-105">示例</span><span class="sxs-lookup"><span data-stu-id="794fb-105">Example</span></span>  
+ <span data-ttu-id="794fb-106">本示例查找名称为 `Address`，`Type`、并具有一个带“Shipping”值的属性的子代元素。</span><span class="sxs-lookup"><span data-stu-id="794fb-106">This example finds all descendants elements with the name of `Address`, and with a `Type` attribute with a value of "Shipping".</span></span>  
   
- <span data-ttu-id="1238d-107">此示例使用下面的 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="1238d-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="794fb-107">本示例使用下面的 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="794fb-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -42,7 +42,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="1238d-108">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="1238d-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="794fb-108">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="794fb-108">This example produces the following output:</span></span>  
   
 ```output  
 Results are identical  

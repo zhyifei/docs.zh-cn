@@ -1,56 +1,56 @@
 ---
-title: -win32manifest （Visual Basic）
+title: -win32manifest
 ms.date: 03/13/2018
 helpviewer_keywords:
 - /win32manifest compiler option [Visual Basic]
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: cae6b34aadf6698a337e52aa1ea1ce44206836ac
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: cef1e6c19e7fdd6fc9f42c8fc36008314ea80a80
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004622"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349134"
 ---
-# <a name="-win32manifest-visual-basic"></a><span data-ttu-id="7c389-102">-win32manifest （Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="7c389-102">-win32manifest (Visual Basic)</span></span>
-<span data-ttu-id="7c389-103">标识用户定义的 Win32 应用程序清单文件要嵌入到项目的可移植可执行 (PE) 文件。</span><span class="sxs-lookup"><span data-stu-id="7c389-103">Identifies a user-defined Win32 application manifest file to be embedded into a project's portable executable (PE) file.</span></span>  
+# <a name="-win32manifest-visual-basic"></a><span data-ttu-id="6a97f-102">-win32manifest (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6a97f-102">-win32manifest (Visual Basic)</span></span>
+<span data-ttu-id="6a97f-103">标识用户定义的 Win32 应用程序清单文件要嵌入到项目的可移植可执行 (PE) 文件。</span><span class="sxs-lookup"><span data-stu-id="6a97f-103">Identifies a user-defined Win32 application manifest file to be embedded into a project's portable executable (PE) file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7c389-104">语法</span><span class="sxs-lookup"><span data-stu-id="7c389-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6a97f-104">语法</span><span class="sxs-lookup"><span data-stu-id="6a97f-104">Syntax</span></span>  
   
 ```console  
 -win32manifest: fileName  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="7c389-105">参数</span><span class="sxs-lookup"><span data-stu-id="7c389-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="6a97f-105">自变量</span><span class="sxs-lookup"><span data-stu-id="6a97f-105">Arguments</span></span>  
   
-|<span data-ttu-id="7c389-106">术语</span><span class="sxs-lookup"><span data-stu-id="7c389-106">Term</span></span>|<span data-ttu-id="7c389-107">定义</span><span class="sxs-lookup"><span data-stu-id="7c389-107">Definition</span></span>|  
+|<span data-ttu-id="6a97f-106">术语</span><span class="sxs-lookup"><span data-stu-id="6a97f-106">Term</span></span>|<span data-ttu-id="6a97f-107">定义</span><span class="sxs-lookup"><span data-stu-id="6a97f-107">Definition</span></span>|  
 |---|---|  
-|`fileName`|<span data-ttu-id="7c389-108">自定义清单文件的路径。</span><span class="sxs-lookup"><span data-stu-id="7c389-108">The path of the custom manifest file.</span></span>|  
+|`fileName`|<span data-ttu-id="6a97f-108">The path of the custom manifest file.</span><span class="sxs-lookup"><span data-stu-id="6a97f-108">The path of the custom manifest file.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7c389-109">备注</span><span class="sxs-lookup"><span data-stu-id="7c389-109">Remarks</span></span>  
- <span data-ttu-id="7c389-110">默认情况下，Visual Basic 编译器嵌入指定请求的 asInvoker 执行级别的应用程序清单。</span><span class="sxs-lookup"><span data-stu-id="7c389-110">By default, the Visual Basic compiler embeds an application manifest that specifies a requested execution level of asInvoker.</span></span> <span data-ttu-id="7c389-111">它在生成可执行文件的同一文件夹中创建清单，通常在使用 Visual Studio 时是 bin\Debug 或 bin\Release 文件夹。</span><span class="sxs-lookup"><span data-stu-id="7c389-111">It creates the manifest in the same folder in which the executable file is built, typically the bin\Debug or bin\Release folder when you use Visual Studio.</span></span> <span data-ttu-id="7c389-112">如果要提供自定义清单（例如，若要指定 highestAvailable 或 requireAdministrator 的请求执行级别），请使用此选项指定文件的名称。</span><span class="sxs-lookup"><span data-stu-id="7c389-112">If you want to supply a custom manifest, for example to specify a requested execution level of highestAvailable or requireAdministrator, use this option to specify the name of the file.</span></span>  
-  
-> [!NOTE]
-> <span data-ttu-id="7c389-113">此选项和[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)选项是互斥的。</span><span class="sxs-lookup"><span data-stu-id="7c389-113">This option and the [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) option are mutually exclusive.</span></span> <span data-ttu-id="7c389-114">如果尝试在同一命令行中使用这两个选项，将会出现生成错误。</span><span class="sxs-lookup"><span data-stu-id="7c389-114">If you try to use both options in the same command line, you will get a build error.</span></span>  
-  
- <span data-ttu-id="7c389-115">如果应用程序没有用于指定请求执行级别的应用程序清单，将受到 Windows Vista 的用户帐户控制功能下的文件/注册表虚拟化的影响。</span><span class="sxs-lookup"><span data-stu-id="7c389-115">An application that has no application manifest that specifies a requested execution level will be subject to file/registry virtualization under the User Account Control feature in Windows Vista.</span></span> <span data-ttu-id="7c389-116">有关虚拟化的详细信息，请参阅 [Windows Vista 上的 ClickOnce 部署](/visualstudio/deployment/clickonce-deployment-on-windows-vista)。</span><span class="sxs-lookup"><span data-stu-id="7c389-116">For more information about virtualization, see [ClickOnce Deployment on Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).</span></span>  
-  
- <span data-ttu-id="7c389-117">如果满足以下任一条件，你的应用程序将受到虚拟化的限制：</span><span class="sxs-lookup"><span data-stu-id="7c389-117">Your application will be subject to virtualization if either of the following conditions is true:</span></span>  
-  
-1. <span data-ttu-id="7c389-118">使用 `-nowin32manifest` 选项，并且不会在以后的生成步骤中提供清单，也不会使用 `-win32resource` 选项在 Windows 资源（.res）文件中提供清单。</span><span class="sxs-lookup"><span data-stu-id="7c389-118">You use the `-nowin32manifest` option and you do not provide a manifest in a later build step or as part of a Windows Resource (.res) file by using the `-win32resource` option.</span></span>  
-  
-2. <span data-ttu-id="7c389-119">提供的自定义清单未指定请求执行级别。</span><span class="sxs-lookup"><span data-stu-id="7c389-119">You provide a custom manifest that does not specify a requested execution level.</span></span>  
-  
- <span data-ttu-id="7c389-120">Visual Studio 创建默认 .manifest 文件，并将它与可执行文件一起存储在“调试”和“发布”目录中。</span><span class="sxs-lookup"><span data-stu-id="7c389-120">Visual Studio creates a default .manifest file and stores it in the debug and release directories alongside the executable file.</span></span> <span data-ttu-id="7c389-121">您可以通过在项目设计器中单击 "**应用程序**" 选项卡上的 "**查看 UAC 设置**" 来查看或编辑默认的 app.config 文件。</span><span class="sxs-lookup"><span data-stu-id="7c389-121">You can view or edit the default app.manifest file by clicking **View UAC Settings** on the **Application** tab in the Project Designer.</span></span> <span data-ttu-id="7c389-122">有关详细信息，请参阅 [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)（应用程序页、项目设计器 (Visual Basic)。</span><span class="sxs-lookup"><span data-stu-id="7c389-122">For more information, see [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).</span></span>  
-  
- <span data-ttu-id="7c389-123">可以通过使用 `-nowin32manifest` 选项，将应用程序清单作为自定义后期生成步骤或 Win32 资源文件的一部分提供。</span><span class="sxs-lookup"><span data-stu-id="7c389-123">You can provide the application manifest as a custom post-build step or as part of a Win32 resource file by using the `-nowin32manifest` option.</span></span> <span data-ttu-id="7c389-124">如果希望应用程序受到 Windows Vista 的文件或注册表虚拟化的影响，请使用该选项。</span><span class="sxs-lookup"><span data-stu-id="7c389-124">Use that same option if you want your application to be subject to file or registry virtualization on Windows Vista.</span></span> <span data-ttu-id="7c389-125">这会阻止编译器在 PE 文件中创建和嵌入默认清单。</span><span class="sxs-lookup"><span data-stu-id="7c389-125">This will prevent the compiler from creating and embedding a default manifest in the PE file.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="7c389-126">示例</span><span class="sxs-lookup"><span data-stu-id="7c389-126">Example</span></span>  
- <span data-ttu-id="7c389-127">下面的示例演示 Visual Basic 编译器插入到 PE 中的默认清单。</span><span class="sxs-lookup"><span data-stu-id="7c389-127">The following example shows the default manifest that the Visual Basic compiler inserts into a PE.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6a97f-109">备注</span><span class="sxs-lookup"><span data-stu-id="6a97f-109">Remarks</span></span>  
+ <span data-ttu-id="6a97f-110">By default, the Visual Basic compiler embeds an application manifest that specifies a requested execution level of asInvoker.</span><span class="sxs-lookup"><span data-stu-id="6a97f-110">By default, the Visual Basic compiler embeds an application manifest that specifies a requested execution level of asInvoker.</span></span> <span data-ttu-id="6a97f-111">It creates the manifest in the same folder in which the executable file is built, typically the bin\Debug or bin\Release folder when you use Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="6a97f-111">It creates the manifest in the same folder in which the executable file is built, typically the bin\Debug or bin\Release folder when you use Visual Studio.</span></span> <span data-ttu-id="6a97f-112">If you want to supply a custom manifest, for example to specify a requested execution level of highestAvailable or requireAdministrator, use this option to specify the name of the file.</span><span class="sxs-lookup"><span data-stu-id="6a97f-112">If you want to supply a custom manifest, for example to specify a requested execution level of highestAvailable or requireAdministrator, use this option to specify the name of the file.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="7c389-128">编译器将标准应用程序名称 MyApplication 插入到清单 XML 中。</span><span class="sxs-lookup"><span data-stu-id="7c389-128">The compiler inserts a standard application name MyApplication.app into the manifest XML.</span></span> <span data-ttu-id="7c389-129">这是一种使应用程序可以在 Windows Server 2003 Service Pack 3 上运行的解决方法。</span><span class="sxs-lookup"><span data-stu-id="7c389-129">This is a workaround to enable applications to run on Windows Server 2003 Service Pack 3.</span></span>  
+> <span data-ttu-id="6a97f-113">This option and the [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) option are mutually exclusive.</span><span class="sxs-lookup"><span data-stu-id="6a97f-113">This option and the [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) option are mutually exclusive.</span></span> <span data-ttu-id="6a97f-114">If you try to use both options in the same command line, you will get a build error.</span><span class="sxs-lookup"><span data-stu-id="6a97f-114">If you try to use both options in the same command line, you will get a build error.</span></span>  
+  
+ <span data-ttu-id="6a97f-115">如果应用程序没有用于指定请求执行级别的应用程序清单，将受到 Windows Vista 的用户帐户控制功能下的文件/注册表虚拟化的影响。</span><span class="sxs-lookup"><span data-stu-id="6a97f-115">An application that has no application manifest that specifies a requested execution level will be subject to file/registry virtualization under the User Account Control feature in Windows Vista.</span></span> <span data-ttu-id="6a97f-116">有关虚拟化的详细信息，请参阅 [Windows Vista 上的 ClickOnce 部署](/visualstudio/deployment/clickonce-deployment-on-windows-vista)。</span><span class="sxs-lookup"><span data-stu-id="6a97f-116">For more information about virtualization, see [ClickOnce Deployment on Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).</span></span>  
+  
+ <span data-ttu-id="6a97f-117">Your application will be subject to virtualization if either of the following conditions is true:</span><span class="sxs-lookup"><span data-stu-id="6a97f-117">Your application will be subject to virtualization if either of the following conditions is true:</span></span>  
+  
+1. <span data-ttu-id="6a97f-118">You use the `-nowin32manifest` option and you do not provide a manifest in a later build step or as part of a Windows Resource (.res) file by using the `-win32resource` option.</span><span class="sxs-lookup"><span data-stu-id="6a97f-118">You use the `-nowin32manifest` option and you do not provide a manifest in a later build step or as part of a Windows Resource (.res) file by using the `-win32resource` option.</span></span>  
+  
+2. <span data-ttu-id="6a97f-119">提供的自定义清单未指定请求执行级别。</span><span class="sxs-lookup"><span data-stu-id="6a97f-119">You provide a custom manifest that does not specify a requested execution level.</span></span>  
+  
+ <span data-ttu-id="6a97f-120">Visual Studio 创建默认 .manifest 文件，并将它与可执行文件一起存储在“调试”和“发布”目录中。</span><span class="sxs-lookup"><span data-stu-id="6a97f-120">Visual Studio creates a default .manifest file and stores it in the debug and release directories alongside the executable file.</span></span> <span data-ttu-id="6a97f-121">You can view or edit the default app.manifest file by clicking **View UAC Settings** on the **Application** tab in the Project Designer.</span><span class="sxs-lookup"><span data-stu-id="6a97f-121">You can view or edit the default app.manifest file by clicking **View UAC Settings** on the **Application** tab in the Project Designer.</span></span> <span data-ttu-id="6a97f-122">有关详细信息，请参阅 [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)（应用程序页、项目设计器 (Visual Basic)。</span><span class="sxs-lookup"><span data-stu-id="6a97f-122">For more information, see [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).</span></span>  
+  
+ <span data-ttu-id="6a97f-123">You can provide the application manifest as a custom post-build step or as part of a Win32 resource file by using the `-nowin32manifest` option.</span><span class="sxs-lookup"><span data-stu-id="6a97f-123">You can provide the application manifest as a custom post-build step or as part of a Win32 resource file by using the `-nowin32manifest` option.</span></span> <span data-ttu-id="6a97f-124">如果希望应用程序受到 Windows Vista 的文件或注册表虚拟化的影响，请使用该选项。</span><span class="sxs-lookup"><span data-stu-id="6a97f-124">Use that same option if you want your application to be subject to file or registry virtualization on Windows Vista.</span></span> <span data-ttu-id="6a97f-125">This will prevent the compiler from creating and embedding a default manifest in the PE file.</span><span class="sxs-lookup"><span data-stu-id="6a97f-125">This will prevent the compiler from creating and embedding a default manifest in the PE file.</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="6a97f-126">示例</span><span class="sxs-lookup"><span data-stu-id="6a97f-126">Example</span></span>  
+ <span data-ttu-id="6a97f-127">The following example shows the default manifest that the Visual Basic compiler inserts into a PE.</span><span class="sxs-lookup"><span data-stu-id="6a97f-127">The following example shows the default manifest that the Visual Basic compiler inserts into a PE.</span></span>  
+  
+> [!NOTE]
+> <span data-ttu-id="6a97f-128">The compiler inserts a standard application name MyApplication.app into the manifest XML.</span><span class="sxs-lookup"><span data-stu-id="6a97f-128">The compiler inserts a standard application name MyApplication.app into the manifest XML.</span></span> <span data-ttu-id="6a97f-129">这是一种使应用程序可以在 Windows Server 2003 Service Pack 3 上运行的解决方法。</span><span class="sxs-lookup"><span data-stu-id="6a97f-129">This is a workaround to enable applications to run on Windows Server 2003 Service Pack 3.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -66,7 +66,7 @@ ms.locfileid: "72004622"
 </assembly>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7c389-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="7c389-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6a97f-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="6a97f-130">See also</span></span>
 
-- [<span data-ttu-id="7c389-131">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="7c389-131">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="7c389-132">-nowin32manifest （Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="7c389-132">-nowin32manifest (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)
+- [<span data-ttu-id="6a97f-131">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="6a97f-131">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="6a97f-132">-nowin32manifest (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6a97f-132">-nowin32manifest (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)

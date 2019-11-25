@@ -394,8 +394,8 @@
       items:
         - name: 样式设置和模板化
           href: styling-and-templating.md
-        - name: 通过创建 ControlTemplate 自定义现有控件的外观
-          href: customizing-the-appearance-of-an-existing-control.md
+        - name: 使用 ControlTemplate 自定义现有控件
+          href: ../../../desktop-wpf/themes/how-to-create-apply-template.md
         - name: 如何：查找由 ControlTemplate 生成的元素
           href: how-to-find-controltemplate-generated-elements.md
     - name: 控件自定义
