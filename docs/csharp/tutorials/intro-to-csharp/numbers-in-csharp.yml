@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: C# 中的分支和循环
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 31647906dd3e1286220077831d2ce90b65a5b73c
-  ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+  ms.openlocfilehash: b417ba7ff340019c74b0c3430242f59d6217b07f
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 10/22/2019
-  ms.locfileid: "72774002"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969358"
 items:
 - durationInMinutes: 1
   content: >
@@ -24,7 +24,7 @@ items:
 - title: 探索整数数学运算
   durationInMinutes: 4
   content: >
-    在交互式窗口中，运行以下代码。 为此，请在交互式窗口中键入以下代码块，再单击“运行”按钮：
+    在交互式窗口中，运行以下代码。 选择“进入焦点模式”按钮。 然后，在交互式窗口中键入以下代码块，并选择“运行”：
 
 
     ```csharp
@@ -58,7 +58,7 @@ items:
     > 在本交互式教程中，可以修改在交互式窗口中已编写的代码，自行进行探索。 本教程提供了可分步试运行的示例。
 
 
-    首先，探索这些不同类型的运算。 修改第三行代码，尝试执行所有这些运算。 每次编辑后，单击“运行”按钮。
+    首先，探索这些不同类型的运算。 修改第三行代码，尝试执行所有这些运算。 每次编辑后，选择“运行”按钮。
 
 
     减法：
@@ -181,7 +181,7 @@ items:
     ```
 
 
-    再次单击“运行”，看看结果如何。
+    再次选择“运行”，看看结果如何。
 
 
     > [!NOTE]
@@ -415,7 +415,7 @@ items:
 
     > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - content: >-
-    你已完成“C# 中的数字”交互式教程。 可单击下方的“分支和循环”链接开始下一个交互式教程，或者可访问 [.NET 站点](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)下载 .NET Core SDK，在计算机上创建项目，并继续编码。 请通过“后续步骤”部分返回到这些教程。
+    你已完成“C# 中的数字”交互式教程。 可选择下方的“分支和循环”链接开始下一个交互式教程，或者可访问 [.NET 站点](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)下载 .NET Core SDK，在计算机上创建项目，并继续编码。 请通过“后续步骤”部分返回到这些教程。
 
 
     可以参阅下面的主题，详细了解 C# 中的数字：

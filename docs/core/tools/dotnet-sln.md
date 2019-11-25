@@ -1,98 +1,174 @@
 ---
 title: dotnet sln 命令
 description: 使用 dotnet-sln 命令，可以便捷地在解决方案文件中添加、删除和列出项目。
-ms.date: 06/13/2018
-ms.openlocfilehash: 84508aaefff61b31e2965576ebc2daaae7331951
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 10/29/2019
+ms.openlocfilehash: 18702c7638798117bd04d5c6a829d64cc6bf18a8
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117587"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191819"
 ---
-# <a name="dotnet-sln"></a><span data-ttu-id="57859-103">dotnet sln</span><span class="sxs-lookup"><span data-stu-id="57859-103">dotnet sln</span></span>
+# <a name="dotnet-sln"></a><span data-ttu-id="b2080-103">dotnet sln</span><span class="sxs-lookup"><span data-stu-id="b2080-103">dotnet sln</span></span>
 
+<span data-ttu-id="b2080-104">**本文适用于：✓** .NET Core 1.x SDK 及更高版本</span><span class="sxs-lookup"><span data-stu-id="b2080-104">**This article applies to: ✓** .NET Core 1.x SDK and later versions</span></span>
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
-## <a name="name"></a><span data-ttu-id="57859-104">name</span><span class="sxs-lookup"><span data-stu-id="57859-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="b2080-105">name</span><span class="sxs-lookup"><span data-stu-id="b2080-105">Name</span></span>
 
-<span data-ttu-id="57859-105">`dotnet sln` - 修改 .NET Core 解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="57859-105">`dotnet sln` - Modifies a .NET Core solution file.</span></span>
+<span data-ttu-id="b2080-106">`dotnet sln` - 修改 .NET Core 解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="b2080-106">`dotnet sln` - Modifies a .NET Core solution file.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="57859-106">摘要</span><span class="sxs-lookup"><span data-stu-id="57859-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="b2080-107">摘要</span><span class="sxs-lookup"><span data-stu-id="b2080-107">Synopsis</span></span>
 
 ```dotnetcli
-dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...
-dotnet sln [<SOLUTION_NAME>] add <GLOBBING_PATTERN>
-dotnet sln [<SOLUTION_NAME>] remove <PROJECT> <PROJECT> ...
-dotnet sln [<SOLUTION_NAME>] remove <GLOBBING_PATTERN>
-dotnet sln [<SOLUTION_NAME>] list
-dotnet sln [-h|--help]
+dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 ```
 
-## <a name="description"></a><span data-ttu-id="57859-107">说明</span><span class="sxs-lookup"><span data-stu-id="57859-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="b2080-108">说明</span><span class="sxs-lookup"><span data-stu-id="b2080-108">Description</span></span>
 
-<span data-ttu-id="57859-108">使用 `dotnet sln` 命令，可以便捷地在解决方案文件中添加、删除和列出项目。</span><span class="sxs-lookup"><span data-stu-id="57859-108">The `dotnet sln` command provides a convenient way to add, remove, and list projects in a solution file.</span></span>
+<span data-ttu-id="b2080-109">使用 `dotnet sln` 命令，可以便捷地在解决方案文件中添加、删除和列出项目。</span><span class="sxs-lookup"><span data-stu-id="b2080-109">The `dotnet sln` command provides a convenient way to add, remove, and list projects in a solution file.</span></span>
 
-<span data-ttu-id="57859-109">若要使用 `dotnet sln` 命令，必须存在解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="57859-109">To use the `dotnet sln` command, the solution file must already exist.</span></span> <span data-ttu-id="57859-110">如果需要创建一个解决方案文件，请使用 [dotnet new](dotnet-new.md) 命令，如下例所示：</span><span class="sxs-lookup"><span data-stu-id="57859-110">If you need to create one, use the [dotnet new](dotnet-new.md) command, like in the following example:</span></span>
+<span data-ttu-id="b2080-110">若要使用 `dotnet sln` 命令，必须存在解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="b2080-110">To use the `dotnet sln` command, the solution file must already exist.</span></span> <span data-ttu-id="b2080-111">如果需要创建一个解决方案文件，请使用 [dotnet new](dotnet-new.md) 命令，如下例所示：</span><span class="sxs-lookup"><span data-stu-id="b2080-111">If you need to create one, use the [dotnet new](dotnet-new.md) command, like in the following example:</span></span>
 
 ```dotnetcli
 dotnet new sln
 ```
 
-## <a name="commands"></a><span data-ttu-id="57859-111">命令</span><span class="sxs-lookup"><span data-stu-id="57859-111">Commands</span></span>
+## <a name="arguments"></a><span data-ttu-id="b2080-112">自变量</span><span class="sxs-lookup"><span data-stu-id="b2080-112">Arguments</span></span>
 
-`add <PROJECT> ...`
+- **`SOLUTION_FILE`**
 
-`add <GLOBBING_PATTERN>`
+  <span data-ttu-id="b2080-113">要使用的解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="b2080-113">The solution file to use.</span></span> <span data-ttu-id="b2080-114">如果未指定，此命令会搜索当前目录来获取一个项目文件。</span><span class="sxs-lookup"><span data-stu-id="b2080-114">If not specified, the command searches the current directory for one.</span></span> <span data-ttu-id="b2080-115">如果目录中有多个解决方案文件，必须指定一个。</span><span class="sxs-lookup"><span data-stu-id="b2080-115">If there are multiple solution files in the directory, one must be specified.</span></span>
 
-<span data-ttu-id="57859-112">将一个或多个项目添加到解决方案文件中。</span><span class="sxs-lookup"><span data-stu-id="57859-112">Adds a project or multiple projects to the solution file.</span></span> <span data-ttu-id="57859-113">基于 Unix/Linux 的终端支持[通配模式](https://en.wikipedia.org/wiki/Glob_(programming))。</span><span class="sxs-lookup"><span data-stu-id="57859-113">[Globbing patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are supported on Unix/Linux based terminals.</span></span>
+## <a name="options"></a><span data-ttu-id="b2080-116">选项</span><span class="sxs-lookup"><span data-stu-id="b2080-116">Options</span></span>
 
-`remove <PROJECT> ...`
+- **`-h|--help`**
 
-`remove <GLOBBING_PATTERN>`
+  <span data-ttu-id="b2080-117">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="b2080-117">Prints out a short help for the command.</span></span>
 
-<span data-ttu-id="57859-114">从解决方案文件中删除一个或多个项目。</span><span class="sxs-lookup"><span data-stu-id="57859-114">Removes a project or multiple projects from the solution file.</span></span> <span data-ttu-id="57859-115">基于 Unix/Linux 的终端支持[通配模式](https://en.wikipedia.org/wiki/Glob_(programming))。</span><span class="sxs-lookup"><span data-stu-id="57859-115">[Globbing patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are supported on Unix/Linux based terminals.</span></span>
+## <a name="commands"></a><span data-ttu-id="b2080-118">命令</span><span class="sxs-lookup"><span data-stu-id="b2080-118">Commands</span></span>
 
-`list`
+### `add`
 
-<span data-ttu-id="57859-116">列出解决方案文件中的所有项目。</span><span class="sxs-lookup"><span data-stu-id="57859-116">Lists all projects in a solution file.</span></span>
+<span data-ttu-id="b2080-119">将一个或多个项目添加到解决方案文件中。</span><span class="sxs-lookup"><span data-stu-id="b2080-119">Adds a project or multiple projects to the solution file.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="57859-117">自变量</span><span class="sxs-lookup"><span data-stu-id="57859-117">Arguments</span></span>
+#### <a name="synopsis"></a><span data-ttu-id="b2080-120">摘要</span><span class="sxs-lookup"><span data-stu-id="b2080-120">Synopsis</span></span>
 
-`SOLUTION_NAME`
+```dotnetcli
+dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PATH>
+dotnet sln add [-h|--help]
+```
 
-<span data-ttu-id="57859-118">要使用的解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="57859-118">Solution file to use.</span></span> <span data-ttu-id="57859-119">如果未指定，此命令会搜索当前目录来获取一个项目文件。</span><span class="sxs-lookup"><span data-stu-id="57859-119">If not specified, the command searches the current directory for one.</span></span> <span data-ttu-id="57859-120">如果目录中有多个解决方案文件，必须指定一个。</span><span class="sxs-lookup"><span data-stu-id="57859-120">If there are multiple solution files in the directory, one must be specified.</span></span>
+#### <a name="arguments"></a><span data-ttu-id="b2080-121">自变量</span><span class="sxs-lookup"><span data-stu-id="b2080-121">Arguments</span></span>
 
-## <a name="options"></a><span data-ttu-id="57859-121">选项</span><span class="sxs-lookup"><span data-stu-id="57859-121">Options</span></span>
+- **`SOLUTION_FILE`**
 
-`-h|--help`
+  <span data-ttu-id="b2080-122">要使用的解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="b2080-122">The solution file to use.</span></span> <span data-ttu-id="b2080-123">如果未指定，此命令会搜索当前目录来获取一个项目文件。</span><span class="sxs-lookup"><span data-stu-id="b2080-123">If not specified, the command searches the current directory for one.</span></span> <span data-ttu-id="b2080-124">如果目录中有多个解决方案文件，必须指定一个。</span><span class="sxs-lookup"><span data-stu-id="b2080-124">If there are multiple solution files in the directory, one must be specified.</span></span>
 
-<span data-ttu-id="57859-122">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="57859-122">Prints out a short help for the command.</span></span>
+- **`PROJECT_PATH`**
 
-## <a name="examples"></a><span data-ttu-id="57859-123">示例</span><span class="sxs-lookup"><span data-stu-id="57859-123">Examples</span></span>
+  <span data-ttu-id="b2080-125">要添加到解决方案的项目的路径。</span><span class="sxs-lookup"><span data-stu-id="b2080-125">The path to the project to add to the solution.</span></span> <span data-ttu-id="b2080-126">通过用空格将项目彼此隔开，可以添加多个项目。</span><span class="sxs-lookup"><span data-stu-id="b2080-126">Add multiple projects by adding one after the other separated by spaces.</span></span> <span data-ttu-id="b2080-127">Unix/Linux shell [glob 模式](https://en.wikipedia.org/wiki/Glob_(programming))扩展由 `dotnet sln` 命令正确处理。</span><span class="sxs-lookup"><span data-stu-id="b2080-127">Unix/Linux shell [globbing pattern](https://en.wikipedia.org/wiki/Glob_(programming)) expansions are processed correctly by the `dotnet sln` command.</span></span>
 
-<span data-ttu-id="57859-124">将一个 C# 项目添加到解决方案中：</span><span class="sxs-lookup"><span data-stu-id="57859-124">Add a C# project to a solution:</span></span>
+#### <a name="options"></a><span data-ttu-id="b2080-128">选项</span><span class="sxs-lookup"><span data-stu-id="b2080-128">Options</span></span>
 
-`dotnet sln todo.sln add todo-app/todo-app.csproj`
+- **`-h|--help`**
 
-<span data-ttu-id="57859-125">从解决方案中删除一个 C# 项目：</span><span class="sxs-lookup"><span data-stu-id="57859-125">Remove a C# project from a solution:</span></span>
+  <span data-ttu-id="b2080-129">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="b2080-129">Prints out a short help for the command.</span></span>
 
-`dotnet sln todo.sln remove todo-app/todo-app.csproj`
+- **`--in-root`**
 
-<span data-ttu-id="57859-126">将多个 C# 项目添加到解决方案中：</span><span class="sxs-lookup"><span data-stu-id="57859-126">Add multiple C# projects to a solution:</span></span>
+  <span data-ttu-id="b2080-130">将项目放在解决方案的根目录下，而不是创建解决方案文件夹。</span><span class="sxs-lookup"><span data-stu-id="b2080-130">Places the projects in the root of the solution, rather than creating a solution folder.</span></span> <span data-ttu-id="b2080-131">自 .NET Core 3.0 SDK 起可用。</span><span class="sxs-lookup"><span data-stu-id="b2080-131">Available since .NET Core 3.0 SDK.</span></span>
 
-`dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj`
+- **`-s|--solution-folder`**
 
-<span data-ttu-id="57859-127">从解决方案中删除多个 C# 项目：</span><span class="sxs-lookup"><span data-stu-id="57859-127">Remove multiple C# projects from a solution:</span></span>
+  <span data-ttu-id="b2080-132">要将项目添加到的目标解决方案文件夹路径。</span><span class="sxs-lookup"><span data-stu-id="b2080-132">The destination solution folder path to add the projects to.</span></span> <span data-ttu-id="b2080-133">自 .NET Core 3.0 SDK 起可用。</span><span class="sxs-lookup"><span data-stu-id="b2080-133">Available since .NET Core 3.0 SDK.</span></span>
 
-`dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj`
+### `remove`
 
-<span data-ttu-id="57859-128">使用通配模式将多个 C# 项目添加到解决方案中：</span><span class="sxs-lookup"><span data-stu-id="57859-128">Add multiple C# projects to a solution using a globbing pattern:</span></span>
+<span data-ttu-id="b2080-134">从解决方案文件中删除一个或多个项目。</span><span class="sxs-lookup"><span data-stu-id="b2080-134">Removes a project or multiple projects from the solution file.</span></span>
 
-`dotnet sln todo.sln add **/*.csproj`
+#### <a name="synopsis"></a><span data-ttu-id="b2080-135">摘要</span><span class="sxs-lookup"><span data-stu-id="b2080-135">Synopsis</span></span>
 
-<span data-ttu-id="57859-129">使用通配模式从解决方案中删除多个 C# 项目：</span><span class="sxs-lookup"><span data-stu-id="57859-129">Remove multiple C# projects from a solution using a globbing pattern:</span></span>
+```dotnetcli
+dotnet sln [<SOLUTION_FILE>] remove <PROJECT_PATH>
+dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
+```
 
-`dotnet sln todo.sln remove **/*.csproj`
+#### <a name="arguments"></a><span data-ttu-id="b2080-136">自变量</span><span class="sxs-lookup"><span data-stu-id="b2080-136">Arguments</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="57859-130">通配不是 CLI 功能，而是命令行界面的一个功能。</span><span class="sxs-lookup"><span data-stu-id="57859-130">Globbing is not a CLI feature but rather a feature of the command shell.</span></span> <span data-ttu-id="57859-131">必须使用支持通配的 shell 才可成功地展开文件。</span><span class="sxs-lookup"><span data-stu-id="57859-131">To successfully expand the files, you must use a shell that supports globbing.</span></span> <span data-ttu-id="57859-132">有关通配的详细信息，请参阅[维基百科](https://en.wikipedia.org/wiki/Glob_(programming))。</span><span class="sxs-lookup"><span data-stu-id="57859-132">For more information about globbing, see [Wikipedia](https://en.wikipedia.org/wiki/Glob_(programming)).</span></span>
+- **`SOLUTION_FILE`**
+
+  <span data-ttu-id="b2080-137">要使用的解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="b2080-137">The solution file to use.</span></span> <span data-ttu-id="b2080-138">如果未指定，此命令会搜索当前目录来获取一个项目文件。</span><span class="sxs-lookup"><span data-stu-id="b2080-138">If not specified, the command searches the current directory for one.</span></span> <span data-ttu-id="b2080-139">如果目录中有多个解决方案文件，必须指定一个。</span><span class="sxs-lookup"><span data-stu-id="b2080-139">If there are multiple solution files in the directory, one must be specified.</span></span>
+
+- **`PROJECT_PATH`**
+
+  <span data-ttu-id="b2080-140">要从解决方案中删除的项目路径。</span><span class="sxs-lookup"><span data-stu-id="b2080-140">The path to the project to remove from the solution.</span></span> <span data-ttu-id="b2080-141">通过用空格将项目彼此隔开，可以删除多个项目。</span><span class="sxs-lookup"><span data-stu-id="b2080-141">Remove multiple projects by adding one after the other separated by spaces.</span></span> <span data-ttu-id="b2080-142">Unix/Linux shell [glob 模式](https://en.wikipedia.org/wiki/Glob_(programming))扩展由 `dotnet sln` 命令正确处理。</span><span class="sxs-lookup"><span data-stu-id="b2080-142">Unix/Linux shell [globbing pattern](https://en.wikipedia.org/wiki/Glob_(programming)) expansions are processed correctly by the `dotnet sln` command.</span></span>
+
+#### <a name="options"></a><span data-ttu-id="b2080-143">选项</span><span class="sxs-lookup"><span data-stu-id="b2080-143">Options</span></span>
+
+- **`-h|--help`**
+
+  <span data-ttu-id="b2080-144">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="b2080-144">Prints out a short help for the command.</span></span>
+
+### `list`
+
+<span data-ttu-id="b2080-145">列出解决方案文件中的所有项目。</span><span class="sxs-lookup"><span data-stu-id="b2080-145">Lists all projects in a solution file.</span></span>
+
+#### <a name="synopsis"></a><span data-ttu-id="b2080-146">摘要</span><span class="sxs-lookup"><span data-stu-id="b2080-146">Synopsis</span></span>
+
+```dotnetcli
+dotnet sln list [-h|--help]
+```
+  
+#### <a name="arguments"></a><span data-ttu-id="b2080-147">自变量</span><span class="sxs-lookup"><span data-stu-id="b2080-147">Arguments</span></span>
+
+- **`SOLUTION_FILE`**
+
+  <span data-ttu-id="b2080-148">要使用的解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="b2080-148">The solution file to use.</span></span> <span data-ttu-id="b2080-149">如果未指定，此命令会搜索当前目录来获取一个项目文件。</span><span class="sxs-lookup"><span data-stu-id="b2080-149">If not specified, the command searches the current directory for one.</span></span> <span data-ttu-id="b2080-150">如果目录中有多个解决方案文件，必须指定一个。</span><span class="sxs-lookup"><span data-stu-id="b2080-150">If there are multiple solution files in the directory, one must be specified.</span></span>
+
+#### <a name="options"></a><span data-ttu-id="b2080-151">选项</span><span class="sxs-lookup"><span data-stu-id="b2080-151">Options</span></span>
+
+- **`-h|--help`**
+
+  <span data-ttu-id="b2080-152">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="b2080-152">Prints out a short help for the command.</span></span>
+
+## <a name="examples"></a><span data-ttu-id="b2080-153">示例</span><span class="sxs-lookup"><span data-stu-id="b2080-153">Examples</span></span>
+
+<span data-ttu-id="b2080-154">将一个 C# 项目添加到解决方案中：</span><span class="sxs-lookup"><span data-stu-id="b2080-154">Add a C# project to a solution:</span></span>
+
+```dotnetcli
+dotnet sln todo.sln add todo-app/todo-app.csproj
+```
+
+<span data-ttu-id="b2080-155">从解决方案中删除一个 C# 项目：</span><span class="sxs-lookup"><span data-stu-id="b2080-155">Remove a C# project from a solution:</span></span>
+
+```dotnetcli
+dotnet sln todo.sln remove todo-app/todo-app.csproj
+```
+
+<span data-ttu-id="b2080-156">将多个 C# 项目添加到解决方案中：</span><span class="sxs-lookup"><span data-stu-id="b2080-156">Add multiple C# projects to a solution:</span></span>
+
+```dotnetcli
+dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj
+```
+
+<span data-ttu-id="b2080-157">从解决方案中删除多个 C# 项目：</span><span class="sxs-lookup"><span data-stu-id="b2080-157">Remove multiple C# projects from a solution:</span></span>
+
+```dotnetcli
+dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
+```
+
+<span data-ttu-id="b2080-158">使用 glob 模式（仅限 Unix/Linux）将多个 C# 项目添加到解决方案中：</span><span class="sxs-lookup"><span data-stu-id="b2080-158">Add multiple C# projects to a solution using a globbing pattern (Unix/Linux only):</span></span>
+
+```dotnetcli
+dotnet sln todo.sln add **/*.csproj
+```
+
+<span data-ttu-id="b2080-159">使用 glob 模式（仅限 Unix/Linux）将多个 C# 项目从解决方案中删除：</span><span class="sxs-lookup"><span data-stu-id="b2080-159">Remove multiple C# projects from a solution using a globbing pattern (Unix/Linux only):</span></span>
+
+```dotnetcli
+dotnet sln todo.sln remove **/*.csproj
+```

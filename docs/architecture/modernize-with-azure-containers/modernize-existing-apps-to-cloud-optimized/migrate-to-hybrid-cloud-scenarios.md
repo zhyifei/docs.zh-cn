@@ -1,71 +1,71 @@
 ---
 title: 迁移到混合云方案
-description: 通过 Azure 云和 Windows 容器实现现有 .NET 应用程序的现代化 |迁移到混合云方案
+description: 通过 Azure 云和 Windows 容器现代化现有 .NET 应用程序 | 迁移到混合云方案
 ms.date: 04/30/2018
 ms.openlocfilehash: 4348a9b538042fee7ebd9c08f480491f17425937
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
-ms.translationtype: MT
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "72394535"
 ---
-# <a name="migrate-to-hybrid-cloud-scenarios"></a><span data-ttu-id="37b42-103">迁移到混合云方案</span><span class="sxs-lookup"><span data-stu-id="37b42-103">Migrate to hybrid cloud scenarios</span></span>
+# <a name="migrate-to-hybrid-cloud-scenarios"></a><span data-ttu-id="9d5ba-103">迁移到混合云方案</span><span class="sxs-lookup"><span data-stu-id="9d5ba-103">Migrate to hybrid cloud scenarios</span></span>
 
-<span data-ttu-id="37b42-104">某些组织和企业不能将其某些应用程序迁移到 Microsoft Azure 或任何其他公有云（如法规或其自己的策略）的公有云。</span><span class="sxs-lookup"><span data-stu-id="37b42-104">Some organizations and enterprises can't migrate some of their applications to public clouds like Microsoft Azure or any other public cloud due to regulations or their own policies.</span></span> <span data-ttu-id="37b42-105">但是，可能任何组织都可以受益于在公有云中和其他本地应用程序中应用某些应用程序。</span><span class="sxs-lookup"><span data-stu-id="37b42-105">However, it's likely that any organization might benefit from having some of their applications in the public cloud and other applications on-premises.</span></span> <span data-ttu-id="37b42-106">但混合环境可能会导致在环境中出现过多的复杂性，因为公有云和本地环境中使用不同的平台和技术。</span><span class="sxs-lookup"><span data-stu-id="37b42-106">But a mixed environment can lead to excessive complexity in environments due to different platforms and technologies used in public clouds versus on-premises environments.</span></span>
+<span data-ttu-id="9d5ba-104">由于法规或其自身的策略，某些组织和企业无法将部分应用程序迁移到公有云，如 Microsoft Azure 或任何其他公有云。</span><span class="sxs-lookup"><span data-stu-id="9d5ba-104">Some organizations and enterprises can't migrate some of their applications to public clouds like Microsoft Azure or any other public cloud due to regulations or their own policies.</span></span> <span data-ttu-id="9d5ba-105">但是，任何组织都可能从公有云中的部分应用程序和本地的其他应用程序中获益。</span><span class="sxs-lookup"><span data-stu-id="9d5ba-105">However, it's likely that any organization might benefit from having some of their applications in the public cloud and other applications on-premises.</span></span> <span data-ttu-id="9d5ba-106">但混合环境可能会导致环境变得过度复杂，因为公有云和本地环境使用的平台和技术不同。</span><span class="sxs-lookup"><span data-stu-id="9d5ba-106">But a mixed environment can lead to excessive complexity in environments due to different platforms and technologies used in public clouds versus on-premises environments.</span></span>
 
-<span data-ttu-id="37b42-107">Microsoft 提供了最佳的混合云解决方案，在此解决方案中，你可以在本地和公有云中优化现有资产，同时确保 Azure 混合云中的一致性。</span><span class="sxs-lookup"><span data-stu-id="37b42-107">Microsoft provides the best hybrid cloud solution, one in which you can optimize your existing assets on-premises and in the public cloud, while you ensure consistency in an Azure hybrid cloud.</span></span> <span data-ttu-id="37b42-108">你可以最大限度地利用现有技能，并获得一种灵活的统一方法来生成可在云中或本地运行的应用，这归功于 Azure Stack （本地）和 Azure （公有云）。</span><span class="sxs-lookup"><span data-stu-id="37b42-108">You can maximize existing skills, and get a flexible, unified approach to building apps that can run in the cloud or on-premises, thanks to Azure Stack (on-premises) and Azure (public cloud).</span></span>
+<span data-ttu-id="9d5ba-107">Microsoft 提供了最佳的混合云解决方案，在此解决方案中，你可以在本地和公有云中优化现有资产，同时确保 Azure 混合云中的一致性。</span><span class="sxs-lookup"><span data-stu-id="9d5ba-107">Microsoft provides the best hybrid cloud solution, one in which you can optimize your existing assets on-premises and in the public cloud, while you ensure consistency in an Azure hybrid cloud.</span></span> <span data-ttu-id="9d5ba-108">你可以最大限度地利用现有技能，并获得一种灵活的统一方法来生成可在云中或本地运行的应用，这归功于 Azure Stack（本地）和 Azure（公有云）。</span><span class="sxs-lookup"><span data-stu-id="9d5ba-108">You can maximize existing skills, and get a flexible, unified approach to building apps that can run in the cloud or on-premises, thanks to Azure Stack (on-premises) and Azure (public cloud).</span></span>
 
-<span data-ttu-id="37b42-109">在安全方面，你可以在混合云中集中管理和安全。</span><span class="sxs-lookup"><span data-stu-id="37b42-109">When it comes to security, you can centralize management and security across your hybrid cloud.</span></span> <span data-ttu-id="37b42-110">可以通过提供对本地和云应用程序的单一登录，来控制从数据中心到云的所有资产。</span><span class="sxs-lookup"><span data-stu-id="37b42-110">You can get control over all assets, from your datacenter to the cloud, by providing single sign-on to on-premises and cloud apps.</span></span> <span data-ttu-id="37b42-111">为此，可将 Active Directory 扩展到混合云，并使用标识管理。</span><span class="sxs-lookup"><span data-stu-id="37b42-111">You accomplish this by extending Active Directory to a hybrid cloud, and by using identity management.</span></span>
+<span data-ttu-id="9d5ba-109">在安全方面，你可以在混合云中集中管理和安全性。</span><span class="sxs-lookup"><span data-stu-id="9d5ba-109">When it comes to security, you can centralize management and security across your hybrid cloud.</span></span> <span data-ttu-id="9d5ba-110">可以通过提供对本地和云应用程序的单一登录，来控制从数据中心到云的所有资产。</span><span class="sxs-lookup"><span data-stu-id="9d5ba-110">You can get control over all assets, from your datacenter to the cloud, by providing single sign-on to on-premises and cloud apps.</span></span> <span data-ttu-id="9d5ba-111">为此，可将 Active Directory 扩展到混合云，并使用标识管理。</span><span class="sxs-lookup"><span data-stu-id="9d5ba-111">You accomplish this by extending Active Directory to a hybrid cloud, and by using identity management.</span></span>
 
-<span data-ttu-id="37b42-112">最后，你可以无缝分发和分析数据，对云和本地资产使用相同的查询语言，并在 Azure 中应用分析和深度学习来丰富数据，而不考虑数据源。</span><span class="sxs-lookup"><span data-stu-id="37b42-112">Finally, you can distribute and analyze data seamlessly, use the same query languages for cloud and on-premises assets, and apply analytics and deep learning in Azure to enrich your data, regardless of its source.</span></span>
+<span data-ttu-id="9d5ba-112">最后，你可以无缝分发和分析数据，对云和本地资产使用相同的查询语言，并在 Azure 中应用分析和深度学习来丰富数据，而不考虑数据源。</span><span class="sxs-lookup"><span data-stu-id="9d5ba-112">Finally, you can distribute and analyze data seamlessly, use the same query languages for cloud and on-premises assets, and apply analytics and deep learning in Azure to enrich your data, regardless of its source.</span></span>
 
-## <a name="azure-stack"></a><span data-ttu-id="37b42-113">Azure Stack</span><span class="sxs-lookup"><span data-stu-id="37b42-113">Azure Stack</span></span>
+## <a name="azure-stack"></a><span data-ttu-id="9d5ba-113">Azure Stack</span><span class="sxs-lookup"><span data-stu-id="9d5ba-113">Azure Stack</span></span>
 
-<span data-ttu-id="37b42-114">Azure Stack 是一种混合云平台，可让你从组织的数据中心提供 Azure 服务。</span><span class="sxs-lookup"><span data-stu-id="37b42-114">Azure Stack is a hybrid cloud platform that lets you deliver Azure services from your organization's datacenter.</span></span> <span data-ttu-id="37b42-115">Azure Stack 旨在支持关键方案（如边缘和未连接环境）的新选项，或者满足特定的安全性和符合性要求。</span><span class="sxs-lookup"><span data-stu-id="37b42-115">Azure Stack is designed to support new options for your modern applications in key scenarios, like edge and unconnected environments, or meeting specific security and compliance requirements.</span></span>
+<span data-ttu-id="9d5ba-114">Azure Stack，一种混合云平台，可从组织数据中心提供 Azure 服务。</span><span class="sxs-lookup"><span data-stu-id="9d5ba-114">Azure Stack is a hybrid cloud platform that lets you deliver Azure services from your organization's datacenter.</span></span> <span data-ttu-id="9d5ba-115">Azure Stack 旨在支持关键方案（如边缘和未连接环境）中现代应用程序的新选项，或者满足特定的安全性和符合性要求。</span><span class="sxs-lookup"><span data-stu-id="9d5ba-115">Azure Stack is designed to support new options for your modern applications in key scenarios, like edge and unconnected environments, or meeting specific security and compliance requirements.</span></span>
 
-<span data-ttu-id="37b42-116">图4-13 显示了 Microsoft 提供的真正混合云平台的概述。</span><span class="sxs-lookup"><span data-stu-id="37b42-116">Figure 4-13 shows an overview of the true hybrid cloud platform that Microsoft offers.</span></span>
+<span data-ttu-id="9d5ba-116">图 4-13 显示了 Microsoft 提供的真正混合云平台的概述。</span><span class="sxs-lookup"><span data-stu-id="9d5ba-116">Figure 4-13 shows an overview of the true hybrid cloud platform that Microsoft offers.</span></span>
 
-![与 Azure Stack 和 Azure 的 Microsoft 混合云平台关系图。](./media/migrate-to-hybrid-cloud-scenarios/microsoft-hybrid-cloud-platform.png)
+![提供 Azure Stack 和 Azure 的 Microsoft 混合云平台关系图。](./media/migrate-to-hybrid-cloud-scenarios/microsoft-hybrid-cloud-platform.png)
 
-<span data-ttu-id="37b42-118">**图4-13。**</span><span class="sxs-lookup"><span data-stu-id="37b42-118">**Figure 4-13.**</span></span> <span data-ttu-id="37b42-119">具有 Azure Stack 和 Azure 的 Microsoft 混合云平台</span><span class="sxs-lookup"><span data-stu-id="37b42-119">Microsoft hybrid cloud platform with Azure Stack and Azure</span></span>
+<span data-ttu-id="9d5ba-118">**图 4-13.**</span><span class="sxs-lookup"><span data-stu-id="9d5ba-118">**Figure 4-13.**</span></span> <span data-ttu-id="9d5ba-119">提供 Azure Stack 和 Azure 的 Microsoft 混合云平台</span><span class="sxs-lookup"><span data-stu-id="9d5ba-119">Microsoft hybrid cloud platform with Azure Stack and Azure</span></span>
 
-<span data-ttu-id="37b42-120">Azure Stack 提供了两个部署选项，以满足你的需求：</span><span class="sxs-lookup"><span data-stu-id="37b42-120">Azure Stack is offered in two deployment options, to meet your needs:</span></span>
+<span data-ttu-id="9d5ba-120">通过两个部署选项提供 Azure Stack 来满足你的需求：</span><span class="sxs-lookup"><span data-stu-id="9d5ba-120">Azure Stack is offered in two deployment options, to meet your needs:</span></span>
 
-- <span data-ttu-id="37b42-121">Azure Stack 集成系统</span><span class="sxs-lookup"><span data-stu-id="37b42-121">Azure Stack integrated systems</span></span>
+- <span data-ttu-id="9d5ba-121">Azure Stack 集成系统</span><span class="sxs-lookup"><span data-stu-id="9d5ba-121">Azure Stack integrated systems</span></span>
 
-- <span data-ttu-id="37b42-122">Azure Stack 开发工具包</span><span class="sxs-lookup"><span data-stu-id="37b42-122">Azure Stack Development Kit</span></span>
+- <span data-ttu-id="9d5ba-122">Azure Stack 开发工具包</span><span class="sxs-lookup"><span data-stu-id="9d5ba-122">Azure Stack Development Kit</span></span>
 
-### <a name="azure-stack-integrated-systems"></a><span data-ttu-id="37b42-123">Azure Stack 集成系统</span><span class="sxs-lookup"><span data-stu-id="37b42-123">Azure Stack integrated systems</span></span>
+### <a name="azure-stack-integrated-systems"></a><span data-ttu-id="9d5ba-123">Azure Stack 集成系统</span><span class="sxs-lookup"><span data-stu-id="9d5ba-123">Azure Stack integrated systems</span></span>
 
-<span data-ttu-id="37b42-124">Azure Stack 集成系统通过 Microsoft 和硬件合作伙伴的合作关系提供。</span><span class="sxs-lookup"><span data-stu-id="37b42-124">Azure Stack integrated systems are offered through a partnership of Microsoft and hardware partners.</span></span> <span data-ttu-id="37b42-125">合作关系创建了一个解决方案，它提供了云进度的创新，与管理中的简单性进行平衡。</span><span class="sxs-lookup"><span data-stu-id="37b42-125">The partnership creates a solution that offers cloud-paced innovation that is balanced with simplicity in management.</span></span> <span data-ttu-id="37b42-126">由于 Azure Stack 是作为硬件和软件的集成系统提供的，因此你可以获得正确的灵活性和控制能力，同时还会采用云中的创新。</span><span class="sxs-lookup"><span data-stu-id="37b42-126">Because Azure Stack is offered as an integrated system of hardware and software, you get the right amount of flexibility and control, while still adopting innovation from the cloud.</span></span> <span data-ttu-id="37b42-127">Azure Stack 集成系统范围为4到12个节点，由硬件合作伙伴和 Microsoft 共同支持。</span><span class="sxs-lookup"><span data-stu-id="37b42-127">Azure Stack integrated systems range in size from 4 to 12 nodes, and are jointly supported by the hardware partner and Microsoft.</span></span> <span data-ttu-id="37b42-128">使用 Azure Stack 集成系统来实现生产工作负荷的新方案。</span><span class="sxs-lookup"><span data-stu-id="37b42-128">Use Azure Stack integrated systems to implement new scenarios for your production workloads.</span></span>
+<span data-ttu-id="9d5ba-124">Azure Stack 集成系统通过 Microsoft 和硬件合作伙伴的合作关系提供。</span><span class="sxs-lookup"><span data-stu-id="9d5ba-124">Azure Stack integrated systems are offered through a partnership of Microsoft and hardware partners.</span></span> <span data-ttu-id="9d5ba-125">合作关系创建了一个解决方案，它提供了云进度的创新，与管理中的简单性进行平衡。</span><span class="sxs-lookup"><span data-stu-id="9d5ba-125">The partnership creates a solution that offers cloud-paced innovation that is balanced with simplicity in management.</span></span> <span data-ttu-id="9d5ba-126">由于 Azure Stack 作为集成的硬件和软件系统提供，不仅可获得适当的灵活性和控制，还能继续采用云中的创新。</span><span class="sxs-lookup"><span data-stu-id="9d5ba-126">Because Azure Stack is offered as an integrated system of hardware and software, you get the right amount of flexibility and control, while still adopting innovation from the cloud.</span></span> <span data-ttu-id="9d5ba-127">Azure Stack 集成系统的大小从 4 个节点到 12 个节点不等，由硬件合作伙伴和 Microsoft 共同提供支持。</span><span class="sxs-lookup"><span data-stu-id="9d5ba-127">Azure Stack integrated systems range in size from 4 to 12 nodes, and are jointly supported by the hardware partner and Microsoft.</span></span> <span data-ttu-id="9d5ba-128">使用 Azure Stack 集成系统可实施针对生产工作负载的新方案。</span><span class="sxs-lookup"><span data-stu-id="9d5ba-128">Use Azure Stack integrated systems to implement new scenarios for your production workloads.</span></span>
 
-### <a name="azure-stack-development-kit"></a><span data-ttu-id="37b42-129">Azure Stack 开发工具包</span><span class="sxs-lookup"><span data-stu-id="37b42-129">Azure Stack Development Kit</span></span>
+### <a name="azure-stack-development-kit"></a><span data-ttu-id="9d5ba-129">Azure Stack 开发工具包</span><span class="sxs-lookup"><span data-stu-id="9d5ba-129">Azure Stack Development Kit</span></span>
 
-<span data-ttu-id="37b42-130">Microsoft Azure Stack 开发工具包是 Azure Stack 的单节点部署，可用于评估和了解 Azure Stack。</span><span class="sxs-lookup"><span data-stu-id="37b42-130">Microsoft Azure Stack Development Kit is a single-node deployment of Azure Stack, which you can use to evaluate and learn about Azure Stack.</span></span> <span data-ttu-id="37b42-131">你还可以将 Azure Stack 开发工具包用作开发人员环境，可在其中使用与 Azure 一致的 Api 和工具进行开发。</span><span class="sxs-lookup"><span data-stu-id="37b42-131">You can also use Azure Stack Development Kit as a developer environment, where you can develop using APIs and tooling that are consistent with Azure.</span></span> <span data-ttu-id="37b42-132">Azure Stack 开发工具包不应作为生产环境使用。</span><span class="sxs-lookup"><span data-stu-id="37b42-132">Azure Stack Development Kit is not intended to be used as a production environment.</span></span>
+<span data-ttu-id="9d5ba-130">Microsoft Azure Stack 开发工具包是 Azure Stack 的单节点部署，可以使用它来评估和了解 Azure Stack。</span><span class="sxs-lookup"><span data-stu-id="9d5ba-130">Microsoft Azure Stack Development Kit is a single-node deployment of Azure Stack, which you can use to evaluate and learn about Azure Stack.</span></span> <span data-ttu-id="9d5ba-131">还可以将 Azure Stack 开发工具包用作开发人员环境，在其中使用与 Azure 一致的 API 和工具进行开发。</span><span class="sxs-lookup"><span data-stu-id="9d5ba-131">You can also use Azure Stack Development Kit as a developer environment, where you can develop using APIs and tooling that are consistent with Azure.</span></span> <span data-ttu-id="9d5ba-132">Azure Stack 开发工具包不适合用作生产环境。</span><span class="sxs-lookup"><span data-stu-id="9d5ba-132">Azure Stack Development Kit is not intended to be used as a production environment.</span></span>
 
-### <a name="additional-resources"></a><span data-ttu-id="37b42-133">其他资源</span><span class="sxs-lookup"><span data-stu-id="37b42-133">Additional resources</span></span>
+### <a name="additional-resources"></a><span data-ttu-id="9d5ba-133">其他资源</span><span class="sxs-lookup"><span data-stu-id="9d5ba-133">Additional resources</span></span>
 
-- <span data-ttu-id="37b42-134">**Azure 混合云**</span><span class="sxs-lookup"><span data-stu-id="37b42-134">**Azure hybrid cloud**</span></span>
+- <span data-ttu-id="9d5ba-134">**Azure 混合云**</span><span class="sxs-lookup"><span data-stu-id="9d5ba-134">**Azure hybrid cloud**</span></span>
 
     <https://azure.microsoft.com/overview/hybrid-cloud/>
 
-- <span data-ttu-id="37b42-135">**Azure Stack**</span><span class="sxs-lookup"><span data-stu-id="37b42-135">**Azure Stack**</span></span>
+- <span data-ttu-id="9d5ba-135">**Azure Stack**</span><span class="sxs-lookup"><span data-stu-id="9d5ba-135">**Azure Stack**</span></span>
 
     <https://azure.microsoft.com/overview/azure-stack/>
 
-- <span data-ttu-id="37b42-136">**Active Directory Windows 容器的服务帐户**</span><span class="sxs-lookup"><span data-stu-id="37b42-136">**Active Directory Service Accounts for Windows Containers**</span></span>
+- <span data-ttu-id="9d5ba-136">**Windows 容器的 Active Directory 服务帐户**</span><span class="sxs-lookup"><span data-stu-id="9d5ba-136">**Active Directory Service Accounts for Windows Containers**</span></span>
 
     <https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts>
 
-- <span data-ttu-id="37b42-137">**创建支持 Active Directory 的容器**</span><span class="sxs-lookup"><span data-stu-id="37b42-137">**Create a container with Active Directory support**</span></span>
+- <span data-ttu-id="9d5ba-137">**借助 Active Directory 支持创建容器**</span><span class="sxs-lookup"><span data-stu-id="9d5ba-137">**Create a container with Active Directory support**</span></span>
 
     <https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/>
 
-- <span data-ttu-id="37b42-138">**Azure 混合权益许可**</span><span class="sxs-lookup"><span data-stu-id="37b42-138">**Azure Hybrid Benefit licensing**</span></span>
+- <span data-ttu-id="9d5ba-138">**Azure 混合权益许可**</span><span class="sxs-lookup"><span data-stu-id="9d5ba-138">**Azure Hybrid Benefit licensing**</span></span>
 
     <https://azure.microsoft.com/pricing/hybrid-benefit/>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="37b42-139">[上一页](life-cycle-ci-cd-pipelines-devops-tools.md)
->[下一页](../walkthroughs-technical-get-started-overview.md)</span><span class="sxs-lookup"><span data-stu-id="37b42-139">[Previous](life-cycle-ci-cd-pipelines-devops-tools.md)
+><span data-ttu-id="9d5ba-139">[上一页](life-cycle-ci-cd-pipelines-devops-tools.md)
+>[下一页](../walkthroughs-technical-get-started-overview.md)</span><span class="sxs-lookup"><span data-stu-id="9d5ba-139">[Previous](life-cycle-ci-cd-pipelines-devops-tools.md)
 [Next](../walkthroughs-technical-get-started-overview.md)</span></span>

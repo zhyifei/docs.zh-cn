@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: c3c4927a4afbf69f2101aa2596389e6f94cea243
-  ms.sourcegitcommit: 4aeac5d588ded58246f58030919e56b70a7674e4
+  ms.openlocfilehash: bc2d600afabbac9783e8fb12e3bd47e83a3495b7
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 10/27/2019
-  ms.locfileid: "72966968"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969433"
 items:
 - durationInMinutes: 2
   content: >
@@ -22,7 +22,7 @@ items:
 - title: 创建内插字符串
   durationInMinutes: 2
   content: >
-    在交互式窗口中，运行以下代码。 为此，请在交互式窗口中键入代码（将“`<name>`”替换为自己的姓名），然后选择“运行”：
+    在交互式窗口中，运行以下代码。 选择“进入焦点模式”按钮。 然后，在交互式窗口中键入以下代码块（将 `<name>` 替换为自己的名称），再选择“运行”：
 
 
     ```csharp

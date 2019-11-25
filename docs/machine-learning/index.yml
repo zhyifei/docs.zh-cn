@@ -9,13 +9,13 @@ metadata:
   ms.collection: collection
   author: natke
   ms.author: nakersha
-  ms.date: 10/02/2019
-  ms.openlocfilehash: 4d9e3f78b02e7e95567dc9f025a1123966038770
-  ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+  ms.date: 10/30/2019
+  ms.openlocfilehash: 05d357af2088321524841bfc05f94f816f1bc306
+  ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 10/15/2019
-  ms.locfileid: "72320524"
+  ms.lasthandoff: 11/01/2019
+  ms.locfileid: "73423942"
 landingContent:
 - title: ML.NET 基础知识
   linkLists:
@@ -51,14 +51,20 @@ landingContent:
       url: tutorials/sentiment-analysis-model-builder.md
     - text: 预测价格（模型生成器）
       url: tutorials/predict-prices-with-model-builder.md
+    - text: 对卫生违规行为分类（模型生成器和 SQL Server）
+      url: tutorials/health-violation-classification-model-builder.md
     - text: 对支持问题进行分类 (API)
       url: tutorials/github-issue-classification.md
-    - text: 用 TensorFlow 对图像进行分类(API)
+    - text: 使用图像分类 API (API) 分类图像
+      url: tutorials/image-classification-api-transfer-learning.md
+    - text: 使用模型组合 (API) 分类图像
       url: tutorials/image-classification.md
     - text: 检测图像中的对象 (API)
       url: tutorials/object-detection-onnx.md
     - text: 检测产品销售中的异常 (API)
       url: tutorials/sales-anomaly-detection.md
+    - text: 预测自行车租赁需求（API 和 SQL Server）
+      url: tutorials/time-series-demand-forecasting.md
     - text: 生成电影推荐系统 (API)
       url: tutorials/movie-recommendation.md
 - title: 操作指南

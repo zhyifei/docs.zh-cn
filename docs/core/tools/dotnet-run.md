@@ -1,27 +1,39 @@
 ---
 title: dotnet run 命令
 description: dotnet run 命令可便于使用源代码运行应用程序。
-ms.date: 05/29/2018
-ms.openlocfilehash: ec2a24b78f435dd1905ec67b6f3f4a4ec3f7e7fa
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 10/31/2019
+ms.openlocfilehash: 87e9a57e874116533951a9c5eb676be76be2c98d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117481"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454774"
 ---
-# <a name="dotnet-run"></a><span data-ttu-id="acf23-103">dotnet run</span><span class="sxs-lookup"><span data-stu-id="acf23-103">dotnet run</span></span>
+# <a name="dotnet-run"></a><span data-ttu-id="6bc9d-103">dotnet run</span><span class="sxs-lookup"><span data-stu-id="6bc9d-103">dotnet run</span></span>
 
+<span data-ttu-id="6bc9d-104">**本文适用于：✓** .NET Core 1.x SDK 及更高版本</span><span class="sxs-lookup"><span data-stu-id="6bc9d-104">**This article applies to: ✓** .NET Core 1.x SDK and later versions</span></span>
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
-## <a name="name"></a><span data-ttu-id="acf23-104">name</span><span class="sxs-lookup"><span data-stu-id="acf23-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="6bc9d-105">name</span><span class="sxs-lookup"><span data-stu-id="6bc9d-105">Name</span></span>
 
-<span data-ttu-id="acf23-105">`dotnet run` - 无需任何显式编译或启动命令即可运行源代码。</span><span class="sxs-lookup"><span data-stu-id="acf23-105">`dotnet run` - Runs source code without any explicit compile or launch commands.</span></span>
+<span data-ttu-id="6bc9d-106">`dotnet run` - 无需任何显式编译或启动命令即可运行源代码。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-106">`dotnet run` - Runs source code without any explicit compile or launch commands.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="acf23-106">摘要</span><span class="sxs-lookup"><span data-stu-id="acf23-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="6bc9d-107">摘要</span><span class="sxs-lookup"><span data-stu-id="6bc9d-107">Synopsis</span></span>
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="acf23-107">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="acf23-107">.NET Core 2.1</span></span>](#tab/netcore21)
+# <a name="net-core-30tabnetcore30"></a>[<span data-ttu-id="6bc9d-108">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="6bc9d-108">.NET Core 3.0</span></span>](#tab/netcore30)
+
+```dotnetcli
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile] [--no-build] [--no-dependencies]
+    [--no-launch-profile] [--no-restore] [-p|--project] [-r|--runtime] [-v|--verbosity] [[--] [application arguments]]
+dotnet run [-h|--help]
+```
+
+# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="6bc9d-109">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="6bc9d-109">.NET Core 2.1</span></span>](#tab/netcore21)
 
 ```dotnetcli
 dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
@@ -29,7 +41,7 @@ dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [-
 dotnet run [-h|--help]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="acf23-108">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="acf23-108">.NET Core 2.0</span></span>](#tab/netcore20)
+# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="6bc9d-110">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="6bc9d-110">.NET Core 2.0</span></span>](#tab/netcore20)
 
 ```dotnetcli
 dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
@@ -37,7 +49,7 @@ dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [-
 dotnet run [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="acf23-109">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="acf23-109">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="6bc9d-111">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="6bc9d-111">.NET Core 1.x</span></span>](#tab/netcore1x)
 
 ```dotnetcli
 dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
@@ -46,173 +58,231 @@ dotnet run [-h|--help]
 
 ---
 
-## <a name="description"></a><span data-ttu-id="acf23-110">说明</span><span class="sxs-lookup"><span data-stu-id="acf23-110">Description</span></span>
+## <a name="description"></a><span data-ttu-id="6bc9d-112">说明</span><span class="sxs-lookup"><span data-stu-id="6bc9d-112">Description</span></span>
 
-<span data-ttu-id="acf23-111">`dotnet run` 命令为从源代码使用一个命令运行应用程序提供了一个方便的选项。</span><span class="sxs-lookup"><span data-stu-id="acf23-111">The `dotnet run` command provides a convenient option to run your application from the source code with one command.</span></span> <span data-ttu-id="acf23-112">这对从命令行中进行快速迭代开发很有帮助。</span><span class="sxs-lookup"><span data-stu-id="acf23-112">It's useful for fast iterative development from the command line.</span></span> <span data-ttu-id="acf23-113">命令取决于生成代码的 [`dotnet build`](dotnet-build.md) 命令。</span><span class="sxs-lookup"><span data-stu-id="acf23-113">The command depends on the [`dotnet build`](dotnet-build.md) command to build the code.</span></span> <span data-ttu-id="acf23-114">对于此生成的任何要求，例如项目必须首先还原，同样适用于 `dotnet run`。</span><span class="sxs-lookup"><span data-stu-id="acf23-114">Any requirements for the build, such as that the project must be restored first, apply to `dotnet run` as well.</span></span>
+<span data-ttu-id="6bc9d-113">`dotnet run` 命令为从源代码使用一个命令运行应用程序提供了一个方便的选项。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-113">The `dotnet run` command provides a convenient option to run your application from the source code with one command.</span></span> <span data-ttu-id="6bc9d-114">这对从命令行中进行快速迭代开发很有帮助。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-114">It's useful for fast iterative development from the command line.</span></span> <span data-ttu-id="6bc9d-115">命令取决于生成代码的 [`dotnet build`](dotnet-build.md) 命令。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-115">The command depends on the [`dotnet build`](dotnet-build.md) command to build the code.</span></span> <span data-ttu-id="6bc9d-116">对于此生成的任何要求，例如项目必须首先还原，同样适用于 `dotnet run`。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-116">Any requirements for the build, such as that the project must be restored first, apply to `dotnet run` as well.</span></span>
 
-<span data-ttu-id="acf23-115">输出文件会写入到默认位置，即 `bin/<configuration>/<target>`。</span><span class="sxs-lookup"><span data-stu-id="acf23-115">Output files are written into the default location, which is `bin/<configuration>/<target>`.</span></span> <span data-ttu-id="acf23-116">例如，如果具有 `netcoreapp2.1` 应用程序并且运行 `dotnet run`，则输出置于 `bin/Debug/netcoreapp2.1`。</span><span class="sxs-lookup"><span data-stu-id="acf23-116">For example if you have a `netcoreapp2.1` application and you run `dotnet run`, the output is placed in `bin/Debug/netcoreapp2.1`.</span></span> <span data-ttu-id="acf23-117">将根据需要覆盖文件。</span><span class="sxs-lookup"><span data-stu-id="acf23-117">Files are overwritten as needed.</span></span> <span data-ttu-id="acf23-118">临时文件将置于 `obj` 目录。</span><span class="sxs-lookup"><span data-stu-id="acf23-118">Temporary files are placed in the `obj` directory.</span></span>
+<span data-ttu-id="6bc9d-117">输出文件会写入到默认位置，即 `bin/<configuration>/<target>`。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-117">Output files are written into the default location, which is `bin/<configuration>/<target>`.</span></span> <span data-ttu-id="6bc9d-118">例如，如果具有 `netcoreapp2.1` 应用程序并且运行 `dotnet run`，则输出置于 `bin/Debug/netcoreapp2.1`。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-118">For example if you have a `netcoreapp2.1` application and you run `dotnet run`, the output is placed in `bin/Debug/netcoreapp2.1`.</span></span> <span data-ttu-id="6bc9d-119">将根据需要覆盖文件。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-119">Files are overwritten as needed.</span></span> <span data-ttu-id="6bc9d-120">临时文件将置于 `obj` 目录。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-120">Temporary files are placed in the `obj` directory.</span></span>
 
-<span data-ttu-id="acf23-119">如果该项目指定多个框架，在不使用 `-f|--framework <FRAMEWORK>` 选项指定框架时，执行 `dotnet run` 将导致错误。</span><span class="sxs-lookup"><span data-stu-id="acf23-119">If the project specifies multiple frameworks, executing `dotnet run` results in an error unless the `-f|--framework <FRAMEWORK>` option is used to specify the framework.</span></span>
+<span data-ttu-id="6bc9d-121">如果该项目指定多个框架，在不使用 `-f|--framework <FRAMEWORK>` 选项指定框架时，执行 `dotnet run` 将导致错误。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-121">If the project specifies multiple frameworks, executing `dotnet run` results in an error unless the `-f|--framework <FRAMEWORK>` option is used to specify the framework.</span></span>
 
-<span data-ttu-id="acf23-120">在项目上下文，而不是生成程序集中使用 `dotnet run` 命令。</span><span class="sxs-lookup"><span data-stu-id="acf23-120">The `dotnet run` command is used in the context of projects, not built assemblies.</span></span> <span data-ttu-id="acf23-121">如果尝试改为运行依赖于框架的应用程序 DLL，则必须在不使用命令的情况下使用 [dotnet](dotnet.md)。</span><span class="sxs-lookup"><span data-stu-id="acf23-121">If you're trying to run a framework-dependent application DLL instead, you must use [dotnet](dotnet.md) without a command.</span></span> <span data-ttu-id="acf23-122">例如，若要运行 `myapp.dll`，请使用：</span><span class="sxs-lookup"><span data-stu-id="acf23-122">For example, to run `myapp.dll`, use:</span></span>
+<span data-ttu-id="6bc9d-122">在项目上下文，而不是生成程序集中使用 `dotnet run` 命令。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-122">The `dotnet run` command is used in the context of projects, not built assemblies.</span></span> <span data-ttu-id="6bc9d-123">如果尝试改为运行依赖于框架的应用程序 DLL，则必须在不使用命令的情况下使用 [dotnet](dotnet.md)。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-123">If you're trying to run a framework-dependent application DLL instead, you must use [dotnet](dotnet.md) without a command.</span></span> <span data-ttu-id="6bc9d-124">例如，若要运行 `myapp.dll`，请使用：</span><span class="sxs-lookup"><span data-stu-id="6bc9d-124">For example, to run `myapp.dll`, use:</span></span>
 
 ```dotnetcli
 dotnet myapp.dll
 ```
 
-<span data-ttu-id="acf23-123">有关 `dotnet` 驱动程序的详细信息，请参阅 [.NET Core 命令行工具 (CLI)](index.md) 主题。</span><span class="sxs-lookup"><span data-stu-id="acf23-123">For more information on the `dotnet` driver, see the [.NET Core Command Line Tools (CLI)](index.md) topic.</span></span>
+<span data-ttu-id="6bc9d-125">有关 `dotnet` 驱动程序的详细信息，请参阅 [.NET Core 命令行工具 (CLI)](index.md) 主题。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-125">For more information on the `dotnet` driver, see the [.NET Core Command Line Tools (CLI)](index.md) topic.</span></span>
 
-<span data-ttu-id="acf23-124">若要运行应用程序，`dotnet run` 命令需从 NuGet 缓存解析共享运行时之外的应用程序依赖项。</span><span class="sxs-lookup"><span data-stu-id="acf23-124">To run the application, the `dotnet run` command resolves the dependencies of the application that are outside of the shared runtime from the NuGet cache.</span></span> <span data-ttu-id="acf23-125">因为它使用缓存的依赖项，因此，不推荐在生产中使用 `dotnet run` 来运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="acf23-125">Because it uses cached dependencies, it's not recommended to use `dotnet run` to run applications in production.</span></span> <span data-ttu-id="acf23-126">相反，使用 [`dotnet publish`](dotnet-publish.md)[ 命令创建部署](../deploying/index.md)，并部署已发布的输出。</span><span class="sxs-lookup"><span data-stu-id="acf23-126">Instead, [create a deployment](../deploying/index.md) using the [`dotnet publish`](dotnet-publish.md) command and deploy the published output.</span></span>
+<span data-ttu-id="6bc9d-126">若要运行应用程序，`dotnet run` 命令需从 NuGet 缓存解析共享运行时之外的应用程序依赖项。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-126">To run the application, the `dotnet run` command resolves the dependencies of the application that are outside of the shared runtime from the NuGet cache.</span></span> <span data-ttu-id="6bc9d-127">因为它使用缓存的依赖项，因此，不推荐在生产中使用 `dotnet run` 来运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-127">Because it uses cached dependencies, it's not recommended to use `dotnet run` to run applications in production.</span></span> <span data-ttu-id="6bc9d-128">相反，使用 [`dotnet publish`](dotnet-publish.md)[ 命令创建部署](../deploying/index.md)，并部署已发布的输出。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-128">Instead, [create a deployment](../deploying/index.md) using the [`dotnet publish`](dotnet-publish.md) command and deploy the published output.</span></span>
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-## <a name="options"></a><span data-ttu-id="acf23-127">选项</span><span class="sxs-lookup"><span data-stu-id="acf23-127">Options</span></span>
+## <a name="options"></a><span data-ttu-id="6bc9d-129">选项</span><span class="sxs-lookup"><span data-stu-id="6bc9d-129">Options</span></span>
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="acf23-128">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="acf23-128">.NET Core 2.1</span></span>](#tab/netcore21)
+# <a name="net-core-30tabnetcore30"></a>[<span data-ttu-id="6bc9d-130">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="6bc9d-130">.NET Core 3.0</span></span>](#tab/netcore30)
 
 `--`
 
-<span data-ttu-id="acf23-129">将参数分隔到正在运行的应用程序的参数的 `dotnet run`。</span><span class="sxs-lookup"><span data-stu-id="acf23-129">Delimits arguments to `dotnet run` from arguments for the application being run.</span></span> <span data-ttu-id="acf23-130">在此分隔符后的所有参数均传递给已运行的应用程序。</span><span class="sxs-lookup"><span data-stu-id="acf23-130">All arguments after this delimiter are passed to the application run.</span></span>
+<span data-ttu-id="6bc9d-131">将参数分隔到正在运行的应用程序的参数的 `dotnet run`。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-131">Delimits arguments to `dotnet run` from arguments for the application being run.</span></span> <span data-ttu-id="6bc9d-132">在此分隔符后的所有参数均传递给已运行的应用程序。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-132">All arguments after this delimiter are passed to the application run.</span></span>
 
 `-c|--configuration {Debug|Release}`
 
-<span data-ttu-id="acf23-131">定义生成配置。</span><span class="sxs-lookup"><span data-stu-id="acf23-131">Defines the build configuration.</span></span> <span data-ttu-id="acf23-132">默认值为 `Debug`。</span><span class="sxs-lookup"><span data-stu-id="acf23-132">The default value is `Debug`.</span></span>
+<span data-ttu-id="6bc9d-133">定义生成配置。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-133">Defines the build configuration.</span></span> <span data-ttu-id="6bc9d-134">大多数项目的默认值为 `Debug`。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-134">The default value for most projects is `Debug`.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-<span data-ttu-id="acf23-133">使用指定[框架](../../standard/frameworks.md)生成并运行应用。</span><span class="sxs-lookup"><span data-stu-id="acf23-133">Builds and runs the app using the specified [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="acf23-134">框架必须在项目文件中进行指定。</span><span class="sxs-lookup"><span data-stu-id="acf23-134">The framework must be specified in the project file.</span></span>
+<span data-ttu-id="6bc9d-135">使用指定[框架](../../standard/frameworks.md)生成并运行应用。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-135">Builds and runs the app using the specified [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="6bc9d-136">框架必须在项目文件中进行指定。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-136">The framework must be specified in the project file.</span></span>
 
 `--force`
 
-<span data-ttu-id="acf23-135">强制解析所有依赖项，即使上次还原已成功，也不例外。</span><span class="sxs-lookup"><span data-stu-id="acf23-135">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="acf23-136">指定此标记等同于删除 project.assets.json 文件  。</span><span class="sxs-lookup"><span data-stu-id="acf23-136">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
+<span data-ttu-id="6bc9d-137">强制解析所有依赖项，即使上次还原已成功，也不例外。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-137">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="6bc9d-138">指定此标记等同于删除 project.assets.json 文件  。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-138">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="acf23-137">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="acf23-137">Prints out a short help for the command.</span></span>
+<span data-ttu-id="6bc9d-139">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-139">Prints out a short help for the command.</span></span>
+
+`--interactive`
+
+<span data-ttu-id="6bc9d-140">允许命令停止并等待用户输入或操作（例如，完成身份验证）。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-140">Allows the command to stop and wait for user input or action (for example, to complete authentication).</span></span>
 
 `--launch-profile <NAME>`
 
-<span data-ttu-id="acf23-138">启动应用程序时要使用的启动配置文件（若有）的名称。</span><span class="sxs-lookup"><span data-stu-id="acf23-138">The name of the launch profile (if any) to use when launching the application.</span></span> <span data-ttu-id="acf23-139">启动配置文件在 launchSettings.json 文件中进行定义，通常称为 `Development`、`Staging` 和 `Production`  。</span><span class="sxs-lookup"><span data-stu-id="acf23-139">Launch profiles are defined in the *launchSettings.json* file and are typically called `Development`, `Staging`, and `Production`.</span></span> <span data-ttu-id="acf23-140">有关详细信息，请参阅[使用多个环境](/aspnet/core/fundamentals/environments)。</span><span class="sxs-lookup"><span data-stu-id="acf23-140">For more information, see [Working with multiple environments](/aspnet/core/fundamentals/environments).</span></span>
+<span data-ttu-id="6bc9d-141">启动应用程序时要使用的启动配置文件（若有）的名称。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-141">The name of the launch profile (if any) to use when launching the application.</span></span> <span data-ttu-id="6bc9d-142">启动配置文件在 launchSettings.json 文件中进行定义，通常称为 `Development`、`Staging` 和 `Production`  。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-142">Launch profiles are defined in the *launchSettings.json* file and are typically called `Development`, `Staging`, and `Production`.</span></span> <span data-ttu-id="6bc9d-143">有关详细信息，请参阅[使用多个环境](/aspnet/core/fundamentals/environments)。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-143">For more information, see [Working with multiple environments](/aspnet/core/fundamentals/environments).</span></span>
 
 `--no-build`
 
-<span data-ttu-id="acf23-141">运行前不生成项目。</span><span class="sxs-lookup"><span data-stu-id="acf23-141">Doesn't build the project before running.</span></span> <span data-ttu-id="acf23-142">还隐式设置 `--no-restore` 标记。</span><span class="sxs-lookup"><span data-stu-id="acf23-142">It also implicit sets the `--no-restore` flag.</span></span>
+<span data-ttu-id="6bc9d-144">运行前不生成项目。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-144">Doesn't build the project before running.</span></span> <span data-ttu-id="6bc9d-145">还隐式设置 `--no-restore` 标记。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-145">It also implicit sets the `--no-restore` flag.</span></span>
 
 `--no-dependencies`
 
-<span data-ttu-id="acf23-143">当使用项目到项目 (P2P) 引用还原项目时，还原根项目，不还原引用。</span><span class="sxs-lookup"><span data-stu-id="acf23-143">When restoring a project with project-to-project (P2P) references, restores the root project and not the references.</span></span>
+<span data-ttu-id="6bc9d-146">当使用项目到项目 (P2P) 引用还原项目时，还原根项目，不还原引用。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-146">When restoring a project with project-to-project (P2P) references, restores the root project and not the references.</span></span>
 
 `--no-launch-profile`
 
-<span data-ttu-id="acf23-144">不尝试使用 launchSettings.json 配置应用程序  。</span><span class="sxs-lookup"><span data-stu-id="acf23-144">Doesn't try to use *launchSettings.json* to configure the application.</span></span>
+<span data-ttu-id="6bc9d-147">不尝试使用 launchSettings.json 配置应用程序  。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-147">Doesn't try to use *launchSettings.json* to configure the application.</span></span>
 
 `--no-restore`
 
-<span data-ttu-id="acf23-145">运行此命令时不执行隐式还原。</span><span class="sxs-lookup"><span data-stu-id="acf23-145">Doesn't execute an implicit restore when running the command.</span></span>
+<span data-ttu-id="6bc9d-148">运行此命令时不执行隐式还原。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-148">Doesn't execute an implicit restore when running the command.</span></span>
 
 `-p|--project <PATH>`
 
-<span data-ttu-id="acf23-146">指定要运行的项目文件的路径（文件夹名称或完整路径）。</span><span class="sxs-lookup"><span data-stu-id="acf23-146">Specifies the path of the project file to run (folder name or full path).</span></span> <span data-ttu-id="acf23-147">如果未指定，则默认为当前目录。</span><span class="sxs-lookup"><span data-stu-id="acf23-147">If not specified, it defaults to the current directory.</span></span>
+<span data-ttu-id="6bc9d-149">指定要运行的项目文件的路径（文件夹名称或完整路径）。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-149">Specifies the path of the project file to run (folder name or full path).</span></span> <span data-ttu-id="6bc9d-150">如果未指定，则默认为当前目录。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-150">If not specified, it defaults to the current directory.</span></span>
 
 `--runtime <RUNTIME_IDENTIFIER>`
 
-<span data-ttu-id="acf23-148">指定要为其还原包的目标运行时。</span><span class="sxs-lookup"><span data-stu-id="acf23-148">Specifies the target runtime to restore packages for.</span></span> <span data-ttu-id="acf23-149">有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。</span><span class="sxs-lookup"><span data-stu-id="acf23-149">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
+<span data-ttu-id="6bc9d-151">指定要为其还原包的目标运行时。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-151">Specifies the target runtime to restore packages for.</span></span> <span data-ttu-id="6bc9d-152">有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-152">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="acf23-150">设置命令的详细级别。</span><span class="sxs-lookup"><span data-stu-id="acf23-150">Sets the verbosity level of the command.</span></span> <span data-ttu-id="acf23-151">允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。</span><span class="sxs-lookup"><span data-stu-id="acf23-151">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+<span data-ttu-id="6bc9d-153">设置命令的详细级别。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-153">Sets the verbosity level of the command.</span></span> <span data-ttu-id="6bc9d-154">允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-154">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="acf23-152">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="acf23-152">.NET Core 2.0</span></span>](#tab/netcore20)
+# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="6bc9d-155">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="6bc9d-155">.NET Core 2.1</span></span>](#tab/netcore21)
 
 `--`
 
-<span data-ttu-id="acf23-153">将参数分隔到正在运行的应用程序的参数的 `dotnet run`。</span><span class="sxs-lookup"><span data-stu-id="acf23-153">Delimits arguments to `dotnet run` from arguments for the application being run.</span></span> <span data-ttu-id="acf23-154">在此分隔符后的所有参数均传递给已运行的应用程序。</span><span class="sxs-lookup"><span data-stu-id="acf23-154">All arguments after this delimiter are passed to the application run.</span></span>
+<span data-ttu-id="6bc9d-156">将参数分隔到正在运行的应用程序的参数的 `dotnet run`。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-156">Delimits arguments to `dotnet run` from arguments for the application being run.</span></span> <span data-ttu-id="6bc9d-157">在此分隔符后的所有参数均传递给已运行的应用程序。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-157">All arguments after this delimiter are passed to the application run.</span></span>
 
 `-c|--configuration {Debug|Release}`
 
-<span data-ttu-id="acf23-155">定义生成配置。</span><span class="sxs-lookup"><span data-stu-id="acf23-155">Defines the build configuration.</span></span> <span data-ttu-id="acf23-156">默认值为 `Debug`。</span><span class="sxs-lookup"><span data-stu-id="acf23-156">The default value is `Debug`.</span></span>
+<span data-ttu-id="6bc9d-158">定义生成配置。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-158">Defines the build configuration.</span></span> <span data-ttu-id="6bc9d-159">大多数项目的默认值为 `Debug`。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-159">The default value for most projects is `Debug`.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-<span data-ttu-id="acf23-157">使用指定[框架](../../standard/frameworks.md)生成并运行应用。</span><span class="sxs-lookup"><span data-stu-id="acf23-157">Builds and runs the app using the specified [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="acf23-158">框架必须在项目文件中进行指定。</span><span class="sxs-lookup"><span data-stu-id="acf23-158">The framework must be specified in the project file.</span></span>
+<span data-ttu-id="6bc9d-160">使用指定[框架](../../standard/frameworks.md)生成并运行应用。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-160">Builds and runs the app using the specified [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="6bc9d-161">框架必须在项目文件中进行指定。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-161">The framework must be specified in the project file.</span></span>
 
 `--force`
 
-<span data-ttu-id="acf23-159">强制解析所有依赖项，即使上次还原已成功，也不例外。</span><span class="sxs-lookup"><span data-stu-id="acf23-159">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="acf23-160">指定此标记等同于删除 project.assets.json 文件  。</span><span class="sxs-lookup"><span data-stu-id="acf23-160">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
+<span data-ttu-id="6bc9d-162">强制解析所有依赖项，即使上次还原已成功，也不例外。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-162">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="6bc9d-163">指定此标记等同于删除 project.assets.json 文件  。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-163">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="acf23-161">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="acf23-161">Prints out a short help for the command.</span></span>
+<span data-ttu-id="6bc9d-164">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-164">Prints out a short help for the command.</span></span>
 
 `--launch-profile <NAME>`
 
-<span data-ttu-id="acf23-162">启动应用程序时要使用的启动配置文件（若有）的名称。</span><span class="sxs-lookup"><span data-stu-id="acf23-162">The name of the launch profile (if any) to use when launching the application.</span></span> <span data-ttu-id="acf23-163">启动配置文件在 launchSettings.json 文件中进行定义，通常称为 `Development`、`Staging` 和 `Production`  。</span><span class="sxs-lookup"><span data-stu-id="acf23-163">Launch profiles are defined in the *launchSettings.json* file and are typically called `Development`, `Staging`, and `Production`.</span></span> <span data-ttu-id="acf23-164">有关详细信息，请参阅[使用多个环境](/aspnet/core/fundamentals/environments)。</span><span class="sxs-lookup"><span data-stu-id="acf23-164">For more information, see [Working with multiple environments](/aspnet/core/fundamentals/environments).</span></span>
+<span data-ttu-id="6bc9d-165">启动应用程序时要使用的启动配置文件（若有）的名称。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-165">The name of the launch profile (if any) to use when launching the application.</span></span> <span data-ttu-id="6bc9d-166">启动配置文件在 launchSettings.json 文件中进行定义，通常称为 `Development`、`Staging` 和 `Production`  。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-166">Launch profiles are defined in the *launchSettings.json* file and are typically called `Development`, `Staging`, and `Production`.</span></span> <span data-ttu-id="6bc9d-167">有关详细信息，请参阅[使用多个环境](/aspnet/core/fundamentals/environments)。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-167">For more information, see [Working with multiple environments](/aspnet/core/fundamentals/environments).</span></span>
 
 `--no-build`
 
-<span data-ttu-id="acf23-165">运行前不生成项目。</span><span class="sxs-lookup"><span data-stu-id="acf23-165">Doesn't build the project before running.</span></span> <span data-ttu-id="acf23-166">还隐式设置 `--no-restore` 标记。</span><span class="sxs-lookup"><span data-stu-id="acf23-166">It also implicit sets the `--no-restore` flag.</span></span>
+<span data-ttu-id="6bc9d-168">运行前不生成项目。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-168">Doesn't build the project before running.</span></span> <span data-ttu-id="6bc9d-169">还隐式设置 `--no-restore` 标记。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-169">It also implicit sets the `--no-restore` flag.</span></span>
 
 `--no-dependencies`
 
-<span data-ttu-id="acf23-167">当使用项目到项目 (P2P) 引用还原项目时，还原根项目，不还原引用。</span><span class="sxs-lookup"><span data-stu-id="acf23-167">When restoring a project with project-to-project (P2P) references, restores the root project and not the references.</span></span>
+<span data-ttu-id="6bc9d-170">当使用项目到项目 (P2P) 引用还原项目时，还原根项目，不还原引用。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-170">When restoring a project with project-to-project (P2P) references, restores the root project and not the references.</span></span>
 
 `--no-launch-profile`
 
-<span data-ttu-id="acf23-168">不尝试使用 launchSettings.json 配置应用程序  。</span><span class="sxs-lookup"><span data-stu-id="acf23-168">Doesn't try to use *launchSettings.json* to configure the application.</span></span>
+<span data-ttu-id="6bc9d-171">不尝试使用 launchSettings.json 配置应用程序  。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-171">Doesn't try to use *launchSettings.json* to configure the application.</span></span>
 
 `--no-restore`
 
-<span data-ttu-id="acf23-169">运行此命令时不执行隐式还原。</span><span class="sxs-lookup"><span data-stu-id="acf23-169">Doesn't execute an implicit restore when running the command.</span></span>
+<span data-ttu-id="6bc9d-172">运行此命令时不执行隐式还原。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-172">Doesn't execute an implicit restore when running the command.</span></span>
 
 `-p|--project <PATH>`
 
-<span data-ttu-id="acf23-170">指定要运行的项目文件的路径（文件夹名称或完整路径）。</span><span class="sxs-lookup"><span data-stu-id="acf23-170">Specifies the path of the project file to run (folder name or full path).</span></span> <span data-ttu-id="acf23-171">如果未指定，则默认为当前目录。</span><span class="sxs-lookup"><span data-stu-id="acf23-171">If not specified, it defaults to the current directory.</span></span>
+<span data-ttu-id="6bc9d-173">指定要运行的项目文件的路径（文件夹名称或完整路径）。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-173">Specifies the path of the project file to run (folder name or full path).</span></span> <span data-ttu-id="6bc9d-174">如果未指定，则默认为当前目录。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-174">If not specified, it defaults to the current directory.</span></span>
 
 `--runtime <RUNTIME_IDENTIFIER>`
 
-<span data-ttu-id="acf23-172">指定要为其还原包的目标运行时。</span><span class="sxs-lookup"><span data-stu-id="acf23-172">Specifies the target runtime to restore packages for.</span></span> <span data-ttu-id="acf23-173">有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。</span><span class="sxs-lookup"><span data-stu-id="acf23-173">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
+<span data-ttu-id="6bc9d-175">指定要为其还原包的目标运行时。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-175">Specifies the target runtime to restore packages for.</span></span> <span data-ttu-id="6bc9d-176">有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-176">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="acf23-174">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="acf23-174">.NET Core 1.x</span></span>](#tab/netcore1x)
+`-v|--verbosity <LEVEL>`
+
+<span data-ttu-id="6bc9d-177">设置命令的详细级别。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-177">Sets the verbosity level of the command.</span></span> <span data-ttu-id="6bc9d-178">允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-178">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+
+# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="6bc9d-179">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="6bc9d-179">.NET Core 2.0</span></span>](#tab/netcore20)
 
 `--`
 
-<span data-ttu-id="acf23-175">将参数分隔到正在运行的应用程序的参数的 `dotnet run`。</span><span class="sxs-lookup"><span data-stu-id="acf23-175">Delimits arguments to `dotnet run` from arguments for the application being run.</span></span> <span data-ttu-id="acf23-176">在此分隔符后的所有参数均传递给已运行的应用程序。</span><span class="sxs-lookup"><span data-stu-id="acf23-176">All arguments after this delimiter are passed to the application run.</span></span>
+<span data-ttu-id="6bc9d-180">将参数分隔到正在运行的应用程序的参数的 `dotnet run`。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-180">Delimits arguments to `dotnet run` from arguments for the application being run.</span></span> <span data-ttu-id="6bc9d-181">在此分隔符后的所有参数均传递给已运行的应用程序。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-181">All arguments after this delimiter are passed to the application run.</span></span>
 
 `-c|--configuration {Debug|Release}`
 
-<span data-ttu-id="acf23-177">定义生成配置。</span><span class="sxs-lookup"><span data-stu-id="acf23-177">Defines the build configuration.</span></span> <span data-ttu-id="acf23-178">默认值为 `Debug`。</span><span class="sxs-lookup"><span data-stu-id="acf23-178">The default value is `Debug`.</span></span>
+<span data-ttu-id="6bc9d-182">定义生成配置。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-182">Defines the build configuration.</span></span> <span data-ttu-id="6bc9d-183">大多数项目的默认值为 `Debug`。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-183">The default for most projects value is `Debug`.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-<span data-ttu-id="acf23-179">使用指定[框架](../../standard/frameworks.md)生成并运行应用。</span><span class="sxs-lookup"><span data-stu-id="acf23-179">Builds and runs the app using the specified [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="acf23-180">框架必须在项目文件中进行指定。</span><span class="sxs-lookup"><span data-stu-id="acf23-180">The framework must be specified in the project file.</span></span>
+<span data-ttu-id="6bc9d-184">使用指定[框架](../../standard/frameworks.md)生成并运行应用。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-184">Builds and runs the app using the specified [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="6bc9d-185">框架必须在项目文件中进行指定。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-185">The framework must be specified in the project file.</span></span>
+
+`--force`
+
+<span data-ttu-id="6bc9d-186">强制解析所有依赖项，即使上次还原已成功，也不例外。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-186">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="6bc9d-187">指定此标记等同于删除 project.assets.json 文件  。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-187">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="acf23-181">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="acf23-181">Prints out a short help for the command.</span></span>
+<span data-ttu-id="6bc9d-188">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-188">Prints out a short help for the command.</span></span>
+
+`--launch-profile <NAME>`
+
+<span data-ttu-id="6bc9d-189">启动应用程序时要使用的启动配置文件（若有）的名称。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-189">The name of the launch profile (if any) to use when launching the application.</span></span> <span data-ttu-id="6bc9d-190">启动配置文件在 launchSettings.json 文件中进行定义，通常称为 `Development`、`Staging` 和 `Production`  。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-190">Launch profiles are defined in the *launchSettings.json* file and are typically called `Development`, `Staging`, and `Production`.</span></span> <span data-ttu-id="6bc9d-191">有关详细信息，请参阅[使用多个环境](/aspnet/core/fundamentals/environments)。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-191">For more information, see [Working with multiple environments](/aspnet/core/fundamentals/environments).</span></span>
+
+`--no-build`
+
+<span data-ttu-id="6bc9d-192">运行前不生成项目。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-192">Doesn't build the project before running.</span></span> <span data-ttu-id="6bc9d-193">还隐式设置 `--no-restore` 标记。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-193">It also implicit sets the `--no-restore` flag.</span></span>
+
+`--no-dependencies`
+
+<span data-ttu-id="6bc9d-194">当使用项目到项目 (P2P) 引用还原项目时，还原根项目，不还原引用。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-194">When restoring a project with project-to-project (P2P) references, restores the root project and not the references.</span></span>
+
+`--no-launch-profile`
+
+<span data-ttu-id="6bc9d-195">不尝试使用 launchSettings.json 配置应用程序  。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-195">Doesn't try to use *launchSettings.json* to configure the application.</span></span>
+
+`--no-restore`
+
+<span data-ttu-id="6bc9d-196">运行此命令时不执行隐式还原。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-196">Doesn't execute an implicit restore when running the command.</span></span>
+
+`-p|--project <PATH>`
+
+<span data-ttu-id="6bc9d-197">指定要运行的项目文件的路径（文件夹名称或完整路径）。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-197">Specifies the path of the project file to run (folder name or full path).</span></span> <span data-ttu-id="6bc9d-198">如果未指定，则默认为当前目录。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-198">If not specified, it defaults to the current directory.</span></span>
+
+`--runtime <RUNTIME_IDENTIFIER>`
+
+<span data-ttu-id="6bc9d-199">指定要为其还原包的目标运行时。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-199">Specifies the target runtime to restore packages for.</span></span> <span data-ttu-id="6bc9d-200">有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-200">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
+
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="6bc9d-201">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="6bc9d-201">.NET Core 1.x</span></span>](#tab/netcore1x)
+
+`--`
+
+<span data-ttu-id="6bc9d-202">将参数分隔到正在运行的应用程序的参数的 `dotnet run`。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-202">Delimits arguments to `dotnet run` from arguments for the application being run.</span></span> <span data-ttu-id="6bc9d-203">在此分隔符后的所有参数均传递给已运行的应用程序。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-203">All arguments after this delimiter are passed to the application run.</span></span>
+
+`-c|--configuration {Debug|Release}`
+
+<span data-ttu-id="6bc9d-204">定义生成配置。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-204">Defines the build configuration.</span></span> <span data-ttu-id="6bc9d-205">大多数项目的默认值为 `Debug`。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-205">The default value for most projects is `Debug`.</span></span>
+
+`-f|--framework <FRAMEWORK>`
+
+<span data-ttu-id="6bc9d-206">使用指定[框架](../../standard/frameworks.md)生成并运行应用。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-206">Builds and runs the app using the specified [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="6bc9d-207">框架必须在项目文件中进行指定。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-207">The framework must be specified in the project file.</span></span>
+
+`-h|--help`
+
+<span data-ttu-id="6bc9d-208">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-208">Prints out a short help for the command.</span></span>
 
 `-p|--project <PATH/PROJECT.csproj>`
 
-<span data-ttu-id="acf23-182">指定项目文件的路径和名称。</span><span class="sxs-lookup"><span data-stu-id="acf23-182">Specifies the path and name of the project file.</span></span> <span data-ttu-id="acf23-183">（请参阅备注。）如果未指定，则默认为当前目录。</span><span class="sxs-lookup"><span data-stu-id="acf23-183">(See the NOTE.) If not specified, it defaults to the current directory.</span></span>
+<span data-ttu-id="6bc9d-209">指定项目文件的路径和名称。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-209">Specifies the path and name of the project file.</span></span> <span data-ttu-id="6bc9d-210">（请参阅备注。）如果未指定，则默认为当前目录。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-210">(See the NOTE.) If not specified, it defaults to the current directory.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="acf23-184">通过 `-p|--project` 选项使用项目文件的路径和名称。</span><span class="sxs-lookup"><span data-stu-id="acf23-184">Use the path and name of the project file with the `-p|--project` option.</span></span> <span data-ttu-id="acf23-185">CLI 中的回归可阻止使用 .NET Core SDK 1.x 提供文件夹路径。</span><span class="sxs-lookup"><span data-stu-id="acf23-185">A regression in the CLI prevents providing a folder path with .NET Core SDK 1.x.</span></span> <span data-ttu-id="acf23-186">若要详细了解此问题，请参阅 [dotnet run -p - 无法启动项目 (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992)。</span><span class="sxs-lookup"><span data-stu-id="acf23-186">For more information about this issue, see [dotnet run -p, can not start a project (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992).</span></span>
+> <span data-ttu-id="6bc9d-211">通过 `-p|--project` 选项使用项目文件的路径和名称。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-211">Use the path and name of the project file with the `-p|--project` option.</span></span> <span data-ttu-id="6bc9d-212">CLI 中的回归可阻止使用 .NET Core SDK 1.x 提供文件夹路径。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-212">A regression in the CLI prevents providing a folder path with .NET Core SDK 1.x.</span></span> <span data-ttu-id="6bc9d-213">若要详细了解此问题，请参阅 [dotnet run -p - 无法启动项目 (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992)。</span><span class="sxs-lookup"><span data-stu-id="6bc9d-213">For more information about this issue, see [dotnet run -p, can not start a project (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992).</span></span>
 
 ---
 
-## <a name="examples"></a><span data-ttu-id="acf23-187">示例</span><span class="sxs-lookup"><span data-stu-id="acf23-187">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="6bc9d-214">示例</span><span class="sxs-lookup"><span data-stu-id="6bc9d-214">Examples</span></span>
 
-<span data-ttu-id="acf23-188">运行当前目录中的项目：</span><span class="sxs-lookup"><span data-stu-id="acf23-188">Run the project in the current directory:</span></span>
+<span data-ttu-id="6bc9d-215">运行当前目录中的项目：</span><span class="sxs-lookup"><span data-stu-id="6bc9d-215">Run the project in the current directory:</span></span>
 
 `dotnet run`
 
-<span data-ttu-id="acf23-189">运行指定的项目：</span><span class="sxs-lookup"><span data-stu-id="acf23-189">Run the specified project:</span></span>
+<span data-ttu-id="6bc9d-216">运行指定的项目：</span><span class="sxs-lookup"><span data-stu-id="6bc9d-216">Run the specified project:</span></span>
 
 `dotnet run --project ./projects/proj1/proj1.csproj`
 
-<span data-ttu-id="acf23-190">运行当前目录中的项目（在本例中，`--help` 参数被传递到应用程序，因为使用了空白的 `--` 选项）：</span><span class="sxs-lookup"><span data-stu-id="acf23-190">Run the project in the current directory (the `--help` argument in this example is passed to the application, since the blank `--` option is used):</span></span>
+<span data-ttu-id="6bc9d-217">运行当前目录中的项目（在本例中，`--help` 参数被传递到应用程序，因为使用了空白的 `--` 选项）：</span><span class="sxs-lookup"><span data-stu-id="6bc9d-217">Run the project in the current directory (the `--help` argument in this example is passed to the application, since the blank `--` option is used):</span></span>
 
 `dotnet run --configuration Release -- --help`
 
-<span data-ttu-id="acf23-191">在当前仅显示最小输出的目录中还原项目的依赖项和工具，然后运行项目（.NET Core SDK 2.0 及更高版本）：</span><span class="sxs-lookup"><span data-stu-id="acf23-191">Restore dependencies and tools for the project in the current directory only showing minimal output and then run the project: (.NET Core SDK 2.0 and later versions):</span></span>
+<span data-ttu-id="6bc9d-218">在当前仅显示最小输出的目录中还原项目的依赖项和工具，然后运行项目（.NET Core SDK 2.0 及更高版本）：</span><span class="sxs-lookup"><span data-stu-id="6bc9d-218">Restore dependencies and tools for the project in the current directory only showing minimal output and then run the project: (.NET Core SDK 2.0 and later versions):</span></span>
 
 `dotnet run --verbosity m`

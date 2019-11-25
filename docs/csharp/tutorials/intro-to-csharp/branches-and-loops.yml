@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: 列表集合
-  ms.openlocfilehash: 445017337663aea428af2f8dcd4027d716d05751
-  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+  ms.openlocfilehash: ab709b6b30b5a173e2faf08b577e4d7a3d9a9034
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 10/09/2019
-  ms.locfileid: "72179875"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969428"
 items:
 - durationInMinutes: 1
   content: >
@@ -24,7 +24,7 @@ items:
 - title: 使用 if 语句做出决定
   durationInMinutes: 4
   content: >
-    在交互式窗口中，运行以下代码。 为此，请在交互式窗口中键入以下代码块，再单击“运行”按钮：
+    在交互式窗口中，运行以下代码。 选择“进入焦点模式”按钮。 然后，在交互式窗口中键入以下代码块，并选择“运行”：
 
 
     ```csharp
@@ -51,7 +51,7 @@ items:
     ```
 
 
-    再次单击“运行”按钮。 由于答案小于 10，因此什么也没有打印出来。 要测试的条件为 false。 没有任何可供执行的代码，因为仅为 `if` 语句编写了一个可能分支，即 true 分支。
+    再次选择“运行”按钮。 由于答案小于 10，因此什么也没有打印出来。 要测试的条件为 false。 没有任何可供执行的代码，因为仅为 `if` 语句编写了一个可能分支，即 true 分支。
 
 
     > [!TIP]
@@ -221,7 +221,7 @@ items:
     > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - title: 祝贺你！
   content: >-
-    已完成“分支和循环”交互式教程。 可以单击下方的**列表集合**链接开始下一个交互式教程，也可以访问 [.NET 站点](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)下载 .NET Core SDK，在计算机上创建项目，并继续编码。 请通过“后续步骤”部分返回到这些教程。
+    已完成“分支和循环”交互式教程。 可以选择下方的“列表集合”链接开始下一个交互式教程，也可以访问 [.NET 站点](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)下载 .NET Core SDK，在计算机上创建项目，并继续编码。 请通过“后续步骤”部分返回到这些教程。
 
 
     若要详细了解这些概念，请参阅下列主题：
