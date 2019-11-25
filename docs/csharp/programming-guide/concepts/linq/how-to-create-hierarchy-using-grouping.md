@@ -1,21 +1,21 @@
 ---
-title: 如何：使用分组创建层次结构 (C#)
+title: 如何使用分组创建层次结构 (C#)
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
-ms.openlocfilehash: 7d9a58e5b36d6096c156f458c8ba700e04fd8eca
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: c5a96b02595446b2efa01868cc88377c3a5151c9
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593848"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141300"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-c"></a><span data-ttu-id="83dbc-102">如何：使用分组创建层次结构 (C#)</span><span class="sxs-lookup"><span data-stu-id="83dbc-102">How to: Create Hierarchy Using Grouping (C#)</span></span>
-<span data-ttu-id="83dbc-103">本示例演示如何将数据分组，再基于分组生成 XML。</span><span class="sxs-lookup"><span data-stu-id="83dbc-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
+# <a name="how-to-create-hierarchy-using-grouping-c"></a><span data-ttu-id="6847e-102">如何使用分组创建层次结构 (C#)</span><span class="sxs-lookup"><span data-stu-id="6847e-102">How to create hierarchy using grouping (C#)</span></span>
+<span data-ttu-id="6847e-103">本示例演示如何将数据分组，再基于分组生成 XML。</span><span class="sxs-lookup"><span data-stu-id="6847e-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="83dbc-104">示例</span><span class="sxs-lookup"><span data-stu-id="83dbc-104">Example</span></span>  
- <span data-ttu-id="83dbc-105">本示例首先按类别对数据分组，再生成新的 XML 文件，其中的 XML 层次结构反映了分组。</span><span class="sxs-lookup"><span data-stu-id="83dbc-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
+## <a name="example"></a><span data-ttu-id="6847e-104">示例</span><span class="sxs-lookup"><span data-stu-id="6847e-104">Example</span></span>  
+ <span data-ttu-id="6847e-105">本示例首先按类别对数据分组，再生成新的 XML 文件，其中的 XML 层次结构反映了分组。</span><span class="sxs-lookup"><span data-stu-id="6847e-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
   
- <span data-ttu-id="83dbc-106">此示例使用下面的 XML 文档：[示例 XML 文件：数值数据 (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="83dbc-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="6847e-106">本示例使用下面的 XML 文档：[示例 XML 文件：数值数据 (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="6847e-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement doc = XElement.Load("Data.xml");  
@@ -35,7 +35,7 @@ var newData =
 Console.WriteLine(newData);  
 ```  
   
- <span data-ttu-id="83dbc-107">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="83dbc-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="6847e-107">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="6847e-107">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  

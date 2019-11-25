@@ -1,21 +1,21 @@
 ---
-title: 延迟执行示例（Visual Basic）
+title: 延迟执行示例
 ms.date: 07/20/2015
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
-ms.openlocfilehash: e0bb7f3d125cc48607a534e2c24cbf7083353945
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 6ab8f6434bb24b7a66ca4afd1d082911481671f6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583320"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354231"
 ---
-# <a name="deferred-execution-example-visual-basic"></a><span data-ttu-id="3dada-102">延迟执行示例（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="3dada-102">Deferred Execution Example (Visual Basic)</span></span>
+# <a name="deferred-execution-example-visual-basic"></a><span data-ttu-id="3c89d-102">Deferred Execution Example (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3c89d-102">Deferred Execution Example (Visual Basic)</span></span>
 
-<span data-ttu-id="3dada-103">本主题演示延迟执行和迟缓计算如何影响 LINQ to XML 查询的执行。</span><span class="sxs-lookup"><span data-stu-id="3dada-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>
+<span data-ttu-id="3c89d-103">本主题演示延迟执行和迟缓计算如何影响 LINQ to XML 查询的执行。</span><span class="sxs-lookup"><span data-stu-id="3c89d-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>
 
-## <a name="example"></a><span data-ttu-id="3dada-104">示例</span><span class="sxs-lookup"><span data-stu-id="3dada-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="3c89d-104">示例</span><span class="sxs-lookup"><span data-stu-id="3c89d-104">Example</span></span>
 
-<span data-ttu-id="3dada-105">下面的示例演示使用采用延迟执行的扩展方法时的执行顺序。</span><span class="sxs-lookup"><span data-stu-id="3dada-105">The following example shows the order of execution when using an extension method that uses deferred execution.</span></span> <span data-ttu-id="3dada-106">此示例声明一个由三个字符串组成的数组。</span><span class="sxs-lookup"><span data-stu-id="3dada-106">The example declares an array of three strings.</span></span> <span data-ttu-id="3dada-107">然后，循环访问 `ConvertCollectionToUpperCase` 所返回的集合。</span><span class="sxs-lookup"><span data-stu-id="3dada-107">It then iterates through the collection returned by `ConvertCollectionToUpperCase`.</span></span>
+<span data-ttu-id="3c89d-105">下面的示例演示使用采用延迟执行的扩展方法时的执行顺序。</span><span class="sxs-lookup"><span data-stu-id="3c89d-105">The following example shows the order of execution when using an extension method that uses deferred execution.</span></span> <span data-ttu-id="3c89d-106">此示例声明一个由三个字符串组成的数组。</span><span class="sxs-lookup"><span data-stu-id="3c89d-106">The example declares an array of three strings.</span></span> <span data-ttu-id="3c89d-107">然后，循环访问 `ConvertCollectionToUpperCase` 所返回的集合。</span><span class="sxs-lookup"><span data-stu-id="3c89d-107">It then iterates through the collection returned by `ConvertCollectionToUpperCase`.</span></span>
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -46,7 +46,7 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="3dada-108">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="3dada-108">This example produces the following output:</span></span>
+<span data-ttu-id="3c89d-108">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="3c89d-108">This example produces the following output:</span></span>
 
 ```console
 ToUpper: source abc
@@ -57,10 +57,10 @@ ToUpper: source ghi
 Main: str GHI
 ```
 
-<span data-ttu-id="3dada-109">请注意，在循环访问 `ConvertCollectionToUpperCase` 所返回的集合时，每一项都从源字符串数组检索，并且在源字符串数组中检索下一项之前，被转换为大写形式。</span><span class="sxs-lookup"><span data-stu-id="3dada-109">Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.</span></span>
+<span data-ttu-id="3c89d-109">请注意，在循环访问 `ConvertCollectionToUpperCase` 所返回的集合时，每一项都从源字符串数组检索，并且在源字符串数组中检索下一项之前，被转换为大写形式。</span><span class="sxs-lookup"><span data-stu-id="3c89d-109">Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.</span></span>
 
-<span data-ttu-id="3dada-110">可以看到，在 `foreach` 的 `Main` 循环中处理所返回集合的每一项之后，字符串数组才会完全转换为大写形式。</span><span class="sxs-lookup"><span data-stu-id="3dada-110">You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.</span></span>
+<span data-ttu-id="3c89d-110">可以看到，在 `foreach` 的 `Main` 循环中处理所返回集合的每一项之后，字符串数组才会完全转换为大写形式。</span><span class="sxs-lookup"><span data-stu-id="3c89d-110">You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="3dada-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="3dada-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3c89d-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="3c89d-111">See also</span></span>
 
-- [<span data-ttu-id="3dada-112">教程：延迟执行（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="3dada-112">Tutorial: Deferred Execution (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [<span data-ttu-id="3c89d-112">Tutorial: Deferred Execution (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3c89d-112">Tutorial: Deferred Execution (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：测试两个对象是否相同 (Visual Basic)
+title: 如何：测试两个对象是否相同
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], reference
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - objects [Visual Basic], variables referring to same
 - Visual Basic code, operators
 ms.assetid: f760e828-8704-4256-bc2d-c22a4c93b524
-ms.openlocfilehash: 6301228d786fe55e8851b6207dd84819671656f4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 22e8e1e688d9e3bc3804899103ee78814aac235b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649683"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343619"
 ---
-# <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a><span data-ttu-id="6058f-102">如何：测试两个对象是否相同 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6058f-102">How to: Test Whether Two Objects Are the Same (Visual Basic)</span></span>
-<span data-ttu-id="6058f-103">如果您有两个引用的对象的变量，可以使用`Is`或`IsNot`运算符，或两者，以确定它们是否引用同一个实例。</span><span class="sxs-lookup"><span data-stu-id="6058f-103">If you have two variables that refer to objects, you can use either the `Is` or `IsNot` operator, or both, to determine whether they refer to the same instance.</span></span>  
+# <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a><span data-ttu-id="d23b5-102">如何：测试两个对象是否相同 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d23b5-102">How to: Test Whether Two Objects Are the Same (Visual Basic)</span></span>
+<span data-ttu-id="d23b5-103">If you have two variables that refer to objects, you can use either the `Is` or `IsNot` operator, or both, to determine whether they refer to the same instance.</span><span class="sxs-lookup"><span data-stu-id="d23b5-103">If you have two variables that refer to objects, you can use either the `Is` or `IsNot` operator, or both, to determine whether they refer to the same instance.</span></span>  
   
-### <a name="to-test-whether-two-objects-are-the-same"></a><span data-ttu-id="6058f-104">若要测试两个对象是否相同</span><span class="sxs-lookup"><span data-stu-id="6058f-104">To test whether two objects are the same</span></span>  
+### <a name="to-test-whether-two-objects-are-the-same"></a><span data-ttu-id="d23b5-104">To test whether two objects are the same</span><span class="sxs-lookup"><span data-stu-id="d23b5-104">To test whether two objects are the same</span></span>  
   
-- <span data-ttu-id="6058f-105">使用[Is 运算符](../../../../visual-basic/language-reference/operators/is-operator.md)或[IsNot 运算符](../../../../visual-basic/language-reference/operators/isnot-operator.md)与两个变量作为操作数。</span><span class="sxs-lookup"><span data-stu-id="6058f-105">Use the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) or the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) with the two variables as operands.</span></span>  
+- <span data-ttu-id="d23b5-105">Use the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) or the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) with the two variables as operands.</span><span class="sxs-lookup"><span data-stu-id="d23b5-105">Use the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) or the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) with the two variables as operands.</span></span>  
   
      [!code-vb[VbVbalrOperators#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#69)]  
   
- <span data-ttu-id="6058f-106">您可能想要执行的具体操作取决于两个对象是否引用相同的实例。</span><span class="sxs-lookup"><span data-stu-id="6058f-106">You might want to take a certain action depending on whether two objects refer to the same instance.</span></span> <span data-ttu-id="6058f-107">前面的示例进行比较的控件`c`窗体上的活动控件针对`f`。</span><span class="sxs-lookup"><span data-stu-id="6058f-107">The preceding example compares control `c` against the active control on form `f`.</span></span> <span data-ttu-id="6058f-108">如果没有活动的控件，或者如果没有一个但这不是相同的控件实例作为`c`，则`If`语句将失败，该过程将返回而不会进一步处理。</span><span class="sxs-lookup"><span data-stu-id="6058f-108">If there is no active control, or if there is one but it is not the same control instance as `c`, then the `If` statement fails and the procedure returns without further processing.</span></span>  
+ <span data-ttu-id="d23b5-106">You might want to take a certain action depending on whether two objects refer to the same instance.</span><span class="sxs-lookup"><span data-stu-id="d23b5-106">You might want to take a certain action depending on whether two objects refer to the same instance.</span></span> <span data-ttu-id="d23b5-107">The preceding example compares control `c` against the active control on form `f`.</span><span class="sxs-lookup"><span data-stu-id="d23b5-107">The preceding example compares control `c` against the active control on form `f`.</span></span> <span data-ttu-id="d23b5-108">If there is no active control, or if there is one but it is not the same control instance as `c`, then the `If` statement fails and the procedure returns without further processing.</span><span class="sxs-lookup"><span data-stu-id="d23b5-108">If there is no active control, or if there is one but it is not the same control instance as `c`, then the `If` statement fails and the procedure returns without further processing.</span></span>  
   
- <span data-ttu-id="6058f-109">无论是使用`Is`或`IsNot`是对您的个人方便起见。</span><span class="sxs-lookup"><span data-stu-id="6058f-109">Whether you use `Is` or `IsNot` is a matter of personal convenience to you.</span></span> <span data-ttu-id="6058f-110">一个可能更易读比另一个给定表达式中。</span><span class="sxs-lookup"><span data-stu-id="6058f-110">One might be easier to read than the other in a given expression.</span></span>  
+ <span data-ttu-id="d23b5-109">Whether you use `Is` or `IsNot` is a matter of personal convenience to you.</span><span class="sxs-lookup"><span data-stu-id="d23b5-109">Whether you use `Is` or `IsNot` is a matter of personal convenience to you.</span></span> <span data-ttu-id="d23b5-110">One might be easier to read than the other in a given expression.</span><span class="sxs-lookup"><span data-stu-id="d23b5-110">One might be easier to read than the other in a given expression.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6058f-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="6058f-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d23b5-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="d23b5-111">See also</span></span>
 
-- [<span data-ttu-id="6058f-112">在 Visual Basic 中的比较运算符</span><span class="sxs-lookup"><span data-stu-id="6058f-112">Comparison Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [<span data-ttu-id="d23b5-112">Comparison Operators in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d23b5-112">Comparison Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

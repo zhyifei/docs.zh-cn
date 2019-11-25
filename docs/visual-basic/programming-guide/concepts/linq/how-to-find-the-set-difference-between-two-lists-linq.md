@@ -1,22 +1,22 @@
 ---
-title: 如何：查找两个列表 (LINQ) (Visual Basic 中) 之间的差集
+title: 如何：查找两个列表之间的差集 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-ms.openlocfilehash: a5c08e270059cd4ab127051d091deff221091fbc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cd33c08416cce5afb6cf7507335f753160b8c6ff
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593463"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344586"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a><span data-ttu-id="ed87a-102">如何：查找两个列表 (LINQ) (Visual Basic 中) 之间的差集</span><span class="sxs-lookup"><span data-stu-id="ed87a-102">How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="ed87a-103">此示例演示如何使用 LINQ 对两个字符串列表进行比较，并输出那些位于 names1.txt 中但不在 names2.txt 中的行。</span><span class="sxs-lookup"><span data-stu-id="ed87a-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a><span data-ttu-id="46c43-102">How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="46c43-102">How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="46c43-103">此示例演示如何使用 LINQ 对两个字符串列表进行比较，并输出那些位于 names1.txt 中但不在 names2.txt 中的行。</span><span class="sxs-lookup"><span data-stu-id="46c43-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="ed87a-104">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="ed87a-104">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="46c43-104">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="46c43-104">To create the data files</span></span>  
   
-1. <span data-ttu-id="ed87a-105">按照[如何：合并和比较字符串集合 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)。</span><span class="sxs-lookup"><span data-stu-id="ed87a-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span></span>  
+1. <span data-ttu-id="46c43-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span><span class="sxs-lookup"><span data-stu-id="46c43-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ed87a-106">示例</span><span class="sxs-lookup"><span data-stu-id="ed87a-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="46c43-106">示例</span><span class="sxs-lookup"><span data-stu-id="46c43-106">Example</span></span>  
   
 ```vb  
 Class CompareLists  
@@ -51,11 +51,11 @@ End Class
 ' Garcia, Debra  
 ```  
   
- <span data-ttu-id="ed87a-107">某些类型的查询在 Visual Basic 中的操作，例如<xref:System.Linq.Enumerable.Except%2A>， <xref:System.Linq.Enumerable.Distinct%2A>， <xref:System.Linq.Enumerable.Union%2A>，和<xref:System.Linq.Enumerable.Concat%2A>，仅采用基于方法的语法进行表示。</span><span class="sxs-lookup"><span data-stu-id="ed87a-107">Some types of query operations in Visual Basic, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
+ <span data-ttu-id="46c43-107">Some types of query operations in Visual Basic, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span><span class="sxs-lookup"><span data-stu-id="46c43-107">Some types of query operations in Visual Basic, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="ed87a-108">编译代码</span><span class="sxs-lookup"><span data-stu-id="ed87a-108">Compiling the Code</span></span>  
-<span data-ttu-id="ed87a-109">创建一个 VB.NET 控制台应用程序项目，与`Imports`System.Linq 命名空间的语句。</span><span class="sxs-lookup"><span data-stu-id="ed87a-109">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="46c43-108">编译代码</span><span class="sxs-lookup"><span data-stu-id="46c43-108">Compiling the Code</span></span>  
+<span data-ttu-id="46c43-109">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span><span class="sxs-lookup"><span data-stu-id="46c43-109">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="ed87a-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="ed87a-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="46c43-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="46c43-110">See also</span></span>
 
-- [<span data-ttu-id="ed87a-111">LINQ 和字符串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ed87a-111">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="46c43-111">LINQ and Strings (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="46c43-111">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

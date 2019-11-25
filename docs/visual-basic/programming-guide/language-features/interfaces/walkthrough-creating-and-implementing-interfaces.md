@@ -1,5 +1,5 @@
 ---
-title: 创建和实现接口 (Visual Basic)
+title: 创建和实现接口
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [Visual Basic], walkthroughs
@@ -7,109 +7,109 @@ helpviewer_keywords:
 - interface implementation [Visual Basic], walkthrough
 - interfaces [Visual Basic], creating
 ms.assetid: ded82af2-9f52-4232-98ef-fe458180f112
-ms.openlocfilehash: 62e301e9eb366d14b58088d3e2cda3b567d17f5b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 47176d2e7a512d8e8c27a90ac04d2a2a2af274b5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923307"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345043"
 ---
-# <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a><span data-ttu-id="62ba4-102">演练：创建和实现接口 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="62ba4-102">Walkthrough: Creating and Implementing Interfaces (Visual Basic)</span></span>
+# <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a><span data-ttu-id="1d54c-102">演练：创建和实现接口 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1d54c-102">Walkthrough: Creating and Implementing Interfaces (Visual Basic)</span></span>
 
-<span data-ttu-id="62ba4-103">接口描述属性、方法和事件的特征, 但使实现详细信息保留在结构或类中。</span><span class="sxs-lookup"><span data-stu-id="62ba4-103">Interfaces describe the characteristics of properties, methods, and events, but leave the implementation details up to structures or classes.</span></span>  
+<span data-ttu-id="1d54c-103">Interfaces describe the characteristics of properties, methods, and events, but leave the implementation details up to structures or classes.</span><span class="sxs-lookup"><span data-stu-id="1d54c-103">Interfaces describe the characteristics of properties, methods, and events, but leave the implementation details up to structures or classes.</span></span>  
   
- <span data-ttu-id="62ba4-104">本演练演示如何声明和实现接口。</span><span class="sxs-lookup"><span data-stu-id="62ba4-104">This walkthrough demonstrates how to declare and implement an interface.</span></span>  
+ <span data-ttu-id="1d54c-104">This walkthrough demonstrates how to declare and implement an interface.</span><span class="sxs-lookup"><span data-stu-id="1d54c-104">This walkthrough demonstrates how to declare and implement an interface.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="62ba4-105">本演练不提供有关如何创建用户界面的信息。</span><span class="sxs-lookup"><span data-stu-id="62ba4-105">This walkthrough doesn't provide information about how to create a user interface.</span></span>  
+> <span data-ttu-id="1d54c-105">This walkthrough doesn't provide information about how to create a user interface.</span><span class="sxs-lookup"><span data-stu-id="1d54c-105">This walkthrough doesn't provide information about how to create a user interface.</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="to-define-an-interface"></a><span data-ttu-id="62ba4-106">定义接口</span><span class="sxs-lookup"><span data-stu-id="62ba4-106">To define an interface</span></span>
+## <a name="to-define-an-interface"></a><span data-ttu-id="1d54c-106">To define an interface</span><span class="sxs-lookup"><span data-stu-id="1d54c-106">To define an interface</span></span>
   
-1. <span data-ttu-id="62ba4-107">打开一个新的 Visual Basic Windows 应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="62ba4-107">Open a new Visual Basic Windows Application project.</span></span>  
+1. <span data-ttu-id="1d54c-107">打开一个新的 Visual Basic Windows 应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="1d54c-107">Open a new Visual Basic Windows Application project.</span></span>  
   
-2. <span data-ttu-id="62ba4-108">通过单击 "**项目**" 菜单上的 "**添加模块**", 将新模块添加到项目。</span><span class="sxs-lookup"><span data-stu-id="62ba4-108">Add a new module to the project by clicking **Add Module** on the **Project** menu.</span></span>  
+2. <span data-ttu-id="1d54c-108">Add a new module to the project by clicking **Add Module** on the **Project** menu.</span><span class="sxs-lookup"><span data-stu-id="1d54c-108">Add a new module to the project by clicking **Add Module** on the **Project** menu.</span></span>  
   
-3. <span data-ttu-id="62ba4-109">将新模块`Module1.vb`命名为, 然后单击 "**添加**"。</span><span class="sxs-lookup"><span data-stu-id="62ba4-109">Name the new module `Module1.vb` and click **Add**.</span></span> <span data-ttu-id="62ba4-110">新模块的代码随即显示。</span><span class="sxs-lookup"><span data-stu-id="62ba4-110">The code for the new module is displayed.</span></span>  
+3. <span data-ttu-id="1d54c-109">Name the new module `Module1.vb` and click **Add**.</span><span class="sxs-lookup"><span data-stu-id="1d54c-109">Name the new module `Module1.vb` and click **Add**.</span></span> <span data-ttu-id="1d54c-110">The code for the new module is displayed.</span><span class="sxs-lookup"><span data-stu-id="1d54c-110">The code for the new module is displayed.</span></span>  
   
-4. <span data-ttu-id="62ba4-111">`TestInterface`通过在和`Module` `Module1` 语句之间`Interface TestInterface`键入, 然后按 enter, 在中定义名为的接口。 `End Module`</span><span class="sxs-lookup"><span data-stu-id="62ba4-111">Define an interface named `TestInterface` within `Module1` by typing `Interface TestInterface` between the `Module` and `End Module` statements, and then pressing ENTER.</span></span> <span data-ttu-id="62ba4-112">**代码编辑器**会缩进`Interface` `End Interface`关键字并添加语句来形成代码块。</span><span class="sxs-lookup"><span data-stu-id="62ba4-112">The **Code Editor** indents the `Interface` keyword and adds an `End Interface` statement to form a code block.</span></span>  
+4. <span data-ttu-id="1d54c-111">Define an interface named `TestInterface` within `Module1` by typing `Interface TestInterface` between the `Module` and `End Module` statements, and then pressing ENTER.</span><span class="sxs-lookup"><span data-stu-id="1d54c-111">Define an interface named `TestInterface` within `Module1` by typing `Interface TestInterface` between the `Module` and `End Module` statements, and then pressing ENTER.</span></span> <span data-ttu-id="1d54c-112">The **Code Editor** indents the `Interface` keyword and adds an `End Interface` statement to form a code block.</span><span class="sxs-lookup"><span data-stu-id="1d54c-112">The **Code Editor** indents the `Interface` keyword and adds an `End Interface` statement to form a code block.</span></span>  
   
-5. <span data-ttu-id="62ba4-113">通过在`Interface`和`End Interface`语句之间放置以下代码, 为接口定义属性、方法和事件:</span><span class="sxs-lookup"><span data-stu-id="62ba4-113">Define a property, method, and event for the interface by placing the following code between the `Interface` and `End Interface` statements:</span></span>  
+5. <span data-ttu-id="1d54c-113">Define a property, method, and event for the interface by placing the following code between the `Interface` and `End Interface` statements:</span><span class="sxs-lookup"><span data-stu-id="1d54c-113">Define a property, method, and event for the interface by placing the following code between the `Interface` and `End Interface` statements:</span></span>  
   
      [!code-vb[VbVbalrOOP#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#98)]
   
-## <a name="implementation"></a><span data-ttu-id="62ba4-114">实现</span><span class="sxs-lookup"><span data-stu-id="62ba4-114">Implementation</span></span>
+## <a name="implementation"></a><span data-ttu-id="1d54c-114">实现</span><span class="sxs-lookup"><span data-stu-id="1d54c-114">Implementation</span></span>
 
- <span data-ttu-id="62ba4-115">你可能会注意到, 用于声明接口成员的语法不同于用于声明类成员的语法。</span><span class="sxs-lookup"><span data-stu-id="62ba4-115">You may notice that the syntax used to declare interface members is different from the syntax used to declare class members.</span></span> <span data-ttu-id="62ba4-116">这种差异反映了接口不能包含实现代码这一事实。</span><span class="sxs-lookup"><span data-stu-id="62ba4-116">This difference reflects the fact that interfaces cannot contain implementation code.</span></span>  
+ <span data-ttu-id="1d54c-115">You may notice that the syntax used to declare interface members is different from the syntax used to declare class members.</span><span class="sxs-lookup"><span data-stu-id="1d54c-115">You may notice that the syntax used to declare interface members is different from the syntax used to declare class members.</span></span> <span data-ttu-id="1d54c-116">This difference reflects the fact that interfaces cannot contain implementation code.</span><span class="sxs-lookup"><span data-stu-id="1d54c-116">This difference reflects the fact that interfaces cannot contain implementation code.</span></span>  
   
-### <a name="to-implement-the-interface"></a><span data-ttu-id="62ba4-117">实现接口</span><span class="sxs-lookup"><span data-stu-id="62ba4-117">To implement the interface</span></span>
+### <a name="to-implement-the-interface"></a><span data-ttu-id="1d54c-117">To implement the interface</span><span class="sxs-lookup"><span data-stu-id="1d54c-117">To implement the interface</span></span>
   
-1. <span data-ttu-id="62ba4-118">添加一个名为`ImplementationClass`的类, 方法是将`Module1`以下语句添加`End Interface`到, 在语句`End Module`后面但在语句之前, 然后按 enter:</span><span class="sxs-lookup"><span data-stu-id="62ba4-118">Add a class named `ImplementationClass` by adding the following statement to `Module1`, after the `End Interface` statement but before the `End Module` statement, and then pressing ENTER:</span></span>  
+1. <span data-ttu-id="1d54c-118">Add a class named `ImplementationClass` by adding the following statement to `Module1`, after the `End Interface` statement but before the `End Module` statement, and then pressing ENTER:</span><span class="sxs-lookup"><span data-stu-id="1d54c-118">Add a class named `ImplementationClass` by adding the following statement to `Module1`, after the `End Interface` statement but before the `End Module` statement, and then pressing ENTER:</span></span>  
   
      [!code-vb[VbVbalrOOP#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#99)]
   
-     <span data-ttu-id="62ba4-119">如果在集成开发环境中工作, 则按 enter 时,**代码编辑器**将`End Class`提供一个匹配的语句。</span><span class="sxs-lookup"><span data-stu-id="62ba4-119">If you are working within the integrated development environment, the **Code Editor** supplies a matching `End Class` statement when you press ENTER.</span></span>  
+     <span data-ttu-id="1d54c-119">If you are working within the integrated development environment, the **Code Editor** supplies a matching `End Class` statement when you press ENTER.</span><span class="sxs-lookup"><span data-stu-id="1d54c-119">If you are working within the integrated development environment, the **Code Editor** supplies a matching `End Class` statement when you press ENTER.</span></span>  
   
-2. <span data-ttu-id="62ba4-120">将以下`Implements`语句添加到`ImplementationClass`, 命名类实现的接口:</span><span class="sxs-lookup"><span data-stu-id="62ba4-120">Add the following `Implements` statement to `ImplementationClass`, which names the interface the class implements:</span></span>  
+2. <span data-ttu-id="1d54c-120">Add the following `Implements` statement to `ImplementationClass`, which names the interface the class implements:</span><span class="sxs-lookup"><span data-stu-id="1d54c-120">Add the following `Implements` statement to `ImplementationClass`, which names the interface the class implements:</span></span>  
   
      [!code-vb[VbVbalrOOP#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#100)]
   
-     <span data-ttu-id="62ba4-121">当与类或结构顶部的其他项分开列出时, `Implements`语句指示类或结构实现接口。</span><span class="sxs-lookup"><span data-stu-id="62ba4-121">When listed separately from other items at the top of a class or structure, the `Implements` statement indicates that the class or structure implements an interface.</span></span>  
+     <span data-ttu-id="1d54c-121">When listed separately from other items at the top of a class or structure, the `Implements` statement indicates that the class or structure implements an interface.</span><span class="sxs-lookup"><span data-stu-id="1d54c-121">When listed separately from other items at the top of a class or structure, the `Implements` statement indicates that the class or structure implements an interface.</span></span>  
   
-     <span data-ttu-id="62ba4-122">如果你在集成开发环境中工作, 则在按下 enter 键`TestInterface`时,**代码编辑器**将实现所需的类成员, 并且你可以跳过下一步。</span><span class="sxs-lookup"><span data-stu-id="62ba4-122">If you are working within the integrated development environment, the **Code Editor** implements the class members required by `TestInterface` when you press ENTER, and you can skip the next step.</span></span>  
+     <span data-ttu-id="1d54c-122">If you are working within the integrated development environment, the **Code Editor** implements the class members required by `TestInterface` when you press ENTER, and you can skip the next step.</span><span class="sxs-lookup"><span data-stu-id="1d54c-122">If you are working within the integrated development environment, the **Code Editor** implements the class members required by `TestInterface` when you press ENTER, and you can skip the next step.</span></span>  
   
-3. <span data-ttu-id="62ba4-123">如果未在集成开发环境中工作, 则必须实现该接口`MyInterface`的所有成员。</span><span class="sxs-lookup"><span data-stu-id="62ba4-123">If you are not working within the integrated development environment, you must implement all the members of the interface `MyInterface`.</span></span> <span data-ttu-id="62ba4-124">将以下代码添加到`ImplementationClass`以实现`Event1`、 `Method1`和`Prop1`:</span><span class="sxs-lookup"><span data-stu-id="62ba4-124">Add the following code to `ImplementationClass` to implement `Event1`, `Method1`, and `Prop1`:</span></span>  
+3. <span data-ttu-id="1d54c-123">If you are not working within the integrated development environment, you must implement all the members of the interface `MyInterface`.</span><span class="sxs-lookup"><span data-stu-id="1d54c-123">If you are not working within the integrated development environment, you must implement all the members of the interface `MyInterface`.</span></span> <span data-ttu-id="1d54c-124">Add the following code to `ImplementationClass` to implement `Event1`, `Method1`, and `Prop1`:</span><span class="sxs-lookup"><span data-stu-id="1d54c-124">Add the following code to `ImplementationClass` to implement `Event1`, `Method1`, and `Prop1`:</span></span>  
   
      [!code-vb[VbVbalrOOP#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#101)]
   
-     <span data-ttu-id="62ba4-125">`Implements`语句命名要实现的接口和接口成员。</span><span class="sxs-lookup"><span data-stu-id="62ba4-125">The `Implements` statement names the interface and interface member being implemented.</span></span>  
+     <span data-ttu-id="1d54c-125">The `Implements` statement names the interface and interface member being implemented.</span><span class="sxs-lookup"><span data-stu-id="1d54c-125">The `Implements` statement names the interface and interface member being implemented.</span></span>  
   
-4. <span data-ttu-id="62ba4-126">完成的定义`Prop1` , 方法是将私有字段添加到存储属性值的类:</span><span class="sxs-lookup"><span data-stu-id="62ba4-126">Complete the definition of `Prop1` by adding a private field to the class that stored the property value:</span></span>  
+4. <span data-ttu-id="1d54c-126">Complete the definition of `Prop1` by adding a private field to the class that stored the property value:</span><span class="sxs-lookup"><span data-stu-id="1d54c-126">Complete the definition of `Prop1` by adding a private field to the class that stored the property value:</span></span>  
   
      [!code-vb[VbVbalrOOP#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#102)]
   
-     <span data-ttu-id="62ba4-127">从属性 get 访问器`pval`返回的值。</span><span class="sxs-lookup"><span data-stu-id="62ba4-127">Return the value of the `pval` from the property get accessor.</span></span>  
+     <span data-ttu-id="1d54c-127">Return the value of the `pval` from the property get accessor.</span><span class="sxs-lookup"><span data-stu-id="1d54c-127">Return the value of the `pval` from the property get accessor.</span></span>  
   
      [!code-vb[VbVbalrOOP#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#103)]
   
-     <span data-ttu-id="62ba4-128">在属性集访问`pval`器中设置的值。</span><span class="sxs-lookup"><span data-stu-id="62ba4-128">Set the value of `pval` in the property set accessor.</span></span>  
+     <span data-ttu-id="1d54c-128">Set the value of `pval` in the property set accessor.</span><span class="sxs-lookup"><span data-stu-id="1d54c-128">Set the value of `pval` in the property set accessor.</span></span>  
   
      [!code-vb[VbVbalrOOP#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#104)]
   
-5. <span data-ttu-id="62ba4-129">`Method1`通过添加以下代码完成的定义。</span><span class="sxs-lookup"><span data-stu-id="62ba4-129">Complete the definition of `Method1` by adding the following code.</span></span>  
+5. <span data-ttu-id="1d54c-129">Complete the definition of `Method1` by adding the following code.</span><span class="sxs-lookup"><span data-stu-id="1d54c-129">Complete the definition of `Method1` by adding the following code.</span></span>  
   
      [!code-vb[VbVbalrOOP#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#105)]
   
-### <a name="to-test-the-implementation-of-the-interface"></a><span data-ttu-id="62ba4-130">测试接口的实现</span><span class="sxs-lookup"><span data-stu-id="62ba4-130">To test the implementation of the interface</span></span>
+### <a name="to-test-the-implementation-of-the-interface"></a><span data-ttu-id="1d54c-130">To test the implementation of the interface</span><span class="sxs-lookup"><span data-stu-id="1d54c-130">To test the implementation of the interface</span></span>
   
-1. <span data-ttu-id="62ba4-131">右键单击 "**解决方案资源管理器**中项目的启动窗体, 然后单击"**查看代码**"。</span><span class="sxs-lookup"><span data-stu-id="62ba4-131">Right-click the startup form for your project in the **Solution Explorer**, and click **View Code**.</span></span> <span data-ttu-id="62ba4-132">编辑器显示您的启动窗体的类。</span><span class="sxs-lookup"><span data-stu-id="62ba4-132">The editor displays the class for your startup form.</span></span> <span data-ttu-id="62ba4-133">默认情况下, 将调用`Form1`启动窗体。</span><span class="sxs-lookup"><span data-stu-id="62ba4-133">By default, the startup form is called `Form1`.</span></span>  
+1. <span data-ttu-id="1d54c-131">Right-click the startup form for your project in the **Solution Explorer**, and click **View Code**.</span><span class="sxs-lookup"><span data-stu-id="1d54c-131">Right-click the startup form for your project in the **Solution Explorer**, and click **View Code**.</span></span> <span data-ttu-id="1d54c-132">The editor displays the class for your startup form.</span><span class="sxs-lookup"><span data-stu-id="1d54c-132">The editor displays the class for your startup form.</span></span> <span data-ttu-id="1d54c-133">By default, the startup form is called `Form1`.</span><span class="sxs-lookup"><span data-stu-id="1d54c-133">By default, the startup form is called `Form1`.</span></span>  
   
-2. <span data-ttu-id="62ba4-134">将以下`testInstance`字段添加`Form1`到类:</span><span class="sxs-lookup"><span data-stu-id="62ba4-134">Add the following `testInstance` field to the `Form1` class:</span></span>  
+2. <span data-ttu-id="1d54c-134">Add the following `testInstance` field to the `Form1` class:</span><span class="sxs-lookup"><span data-stu-id="1d54c-134">Add the following `testInstance` field to the `Form1` class:</span></span>  
   
      [!code-vb[VbVbalrOOP#120](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#120)]
   
-     <span data-ttu-id="62ba4-135">通过将`testInstance`声明`WithEvents`为, `Form1`类可处理其事件。</span><span class="sxs-lookup"><span data-stu-id="62ba4-135">By declaring `testInstance` as `WithEvents`, the `Form1` class can handle its events.</span></span>  
+     <span data-ttu-id="1d54c-135">By declaring `testInstance` as `WithEvents`, the `Form1` class can handle its events.</span><span class="sxs-lookup"><span data-stu-id="1d54c-135">By declaring `testInstance` as `WithEvents`, the `Form1` class can handle its events.</span></span>  
   
-3. <span data-ttu-id="62ba4-136">向`Form1`类添加以下事件处理程序, 以处理引发的`testInstance`事件:</span><span class="sxs-lookup"><span data-stu-id="62ba4-136">Add the following event handler to the `Form1` class to handle events raised by `testInstance`:</span></span>  
+3. <span data-ttu-id="1d54c-136">Add the following event handler to the `Form1` class to handle events raised by `testInstance`:</span><span class="sxs-lookup"><span data-stu-id="1d54c-136">Add the following event handler to the `Form1` class to handle events raised by `testInstance`:</span></span>  
   
      [!code-vb[VbVbalrOOP#106](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#106)]
   
-4. <span data-ttu-id="62ba4-137">将名`Test`为的`Form1`子程序添加到类, 以测试实现类:</span><span class="sxs-lookup"><span data-stu-id="62ba4-137">Add a subroutine named `Test` to the `Form1` class to test the implementation class:</span></span>  
+4. <span data-ttu-id="1d54c-137">Add a subroutine named `Test` to the `Form1` class to test the implementation class:</span><span class="sxs-lookup"><span data-stu-id="1d54c-137">Add a subroutine named `Test` to the `Form1` class to test the implementation class:</span></span>  
   
      [!code-vb[VbVbalrOOP#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#107)]
   
-     <span data-ttu-id="62ba4-138">此`Test`过程创建实现`MyInterface`的类的一个实例, 将该实例`testInstance`分配给该字段, 设置一个属性, 然后通过接口运行方法。</span><span class="sxs-lookup"><span data-stu-id="62ba4-138">The `Test` procedure creates an instance of the class that implements `MyInterface`, assigns that instance to the `testInstance` field, sets a property, and runs a method through the interface.</span></span>  
+     <span data-ttu-id="1d54c-138">The `Test` procedure creates an instance of the class that implements `MyInterface`, assigns that instance to the `testInstance` field, sets a property, and runs a method through the interface.</span><span class="sxs-lookup"><span data-stu-id="1d54c-138">The `Test` procedure creates an instance of the class that implements `MyInterface`, assigns that instance to the `testInstance` field, sets a property, and runs a method through the interface.</span></span>  
   
-5. <span data-ttu-id="62ba4-139">添加代码以`Form1 Load`从启动`Test`窗体的过程调用过程:</span><span class="sxs-lookup"><span data-stu-id="62ba4-139">Add code to call the `Test` procedure from the `Form1 Load` procedure of your startup form:</span></span>  
+5. <span data-ttu-id="1d54c-139">Add code to call the `Test` procedure from the `Form1 Load` procedure of your startup form:</span><span class="sxs-lookup"><span data-stu-id="1d54c-139">Add code to call the `Test` procedure from the `Form1 Load` procedure of your startup form:</span></span>  
   
      [!code-vb[VbVbalrOOP#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#108)]
   
-6. <span data-ttu-id="62ba4-140">按 F5 `Test`运行该过程。</span><span class="sxs-lookup"><span data-stu-id="62ba4-140">Run the `Test` procedure by pressing F5.</span></span> <span data-ttu-id="62ba4-141">将显示消息 "Prop1 已设置为 9"。</span><span class="sxs-lookup"><span data-stu-id="62ba4-141">The message "Prop1 was set to 9" is displayed.</span></span> <span data-ttu-id="62ba4-142">单击 "确定" 后, 将显示消息 "Method1 的 X 参数是 5"。</span><span class="sxs-lookup"><span data-stu-id="62ba4-142">After you click OK, the message "The X parameter for Method1 is 5" is displayed.</span></span> <span data-ttu-id="62ba4-143">单击 "确定", 将显示消息 "事件处理程序捕获到事件"。</span><span class="sxs-lookup"><span data-stu-id="62ba4-143">Click OK, and the message "The event handler caught the event" is displayed.</span></span>  
+6. <span data-ttu-id="1d54c-140">Run the `Test` procedure by pressing F5.</span><span class="sxs-lookup"><span data-stu-id="1d54c-140">Run the `Test` procedure by pressing F5.</span></span> <span data-ttu-id="1d54c-141">The message "Prop1 was set to 9" is displayed.</span><span class="sxs-lookup"><span data-stu-id="1d54c-141">The message "Prop1 was set to 9" is displayed.</span></span> <span data-ttu-id="1d54c-142">After you click OK, the message "The X parameter for Method1 is 5" is displayed.</span><span class="sxs-lookup"><span data-stu-id="1d54c-142">After you click OK, the message "The X parameter for Method1 is 5" is displayed.</span></span> <span data-ttu-id="1d54c-143">Click OK, and the message "The event handler caught the event" is displayed.</span><span class="sxs-lookup"><span data-stu-id="1d54c-143">Click OK, and the message "The event handler caught the event" is displayed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="62ba4-144">请参阅</span><span class="sxs-lookup"><span data-stu-id="62ba4-144">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1d54c-144">请参阅</span><span class="sxs-lookup"><span data-stu-id="1d54c-144">See also</span></span>
 
-- [<span data-ttu-id="62ba4-145">Implements 语句</span><span class="sxs-lookup"><span data-stu-id="62ba4-145">Implements Statement</span></span>](../../../../visual-basic/language-reference/statements/implements-statement.md)
-- [<span data-ttu-id="62ba4-146">接口</span><span class="sxs-lookup"><span data-stu-id="62ba4-146">Interfaces</span></span>](../../../../visual-basic/programming-guide/language-features/interfaces/index.md)
-- [<span data-ttu-id="62ba4-147">Interface 语句</span><span class="sxs-lookup"><span data-stu-id="62ba4-147">Interface Statement</span></span>](../../../../visual-basic/language-reference/statements/interface-statement.md)
-- [<span data-ttu-id="62ba4-148">Event 语句</span><span class="sxs-lookup"><span data-stu-id="62ba4-148">Event Statement</span></span>](../../../../visual-basic/language-reference/statements/event-statement.md)
+- [<span data-ttu-id="1d54c-145">Implements 语句</span><span class="sxs-lookup"><span data-stu-id="1d54c-145">Implements Statement</span></span>](../../../../visual-basic/language-reference/statements/implements-statement.md)
+- [<span data-ttu-id="1d54c-146">接口</span><span class="sxs-lookup"><span data-stu-id="1d54c-146">Interfaces</span></span>](../../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [<span data-ttu-id="1d54c-147">Interface 语句</span><span class="sxs-lookup"><span data-stu-id="1d54c-147">Interface Statement</span></span>](../../../../visual-basic/language-reference/statements/interface-statement.md)
+- [<span data-ttu-id="1d54c-148">Event 语句</span><span class="sxs-lookup"><span data-stu-id="1d54c-148">Event Statement</span></span>](../../../../visual-basic/language-reference/statements/event-statement.md)
