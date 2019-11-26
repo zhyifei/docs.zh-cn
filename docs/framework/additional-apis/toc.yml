@@ -27,7 +27,7 @@
               href: system.data.sqltypes.sqlstreamchars.canseek.md
             - name: IsNull 属性
               href: system.data.sqltypes.sqlstreamchars.isnull.md
-            - name: Length 属性
+            - name: length 属性
               href: system.data.sqltypes.sqlstreamchars.length.md
             - name: Close 方法
               href: system.data.sqltypes.sqlstreamchars.close.md
@@ -43,9 +43,15 @@
               href: system.data.sqltypes.sqlstreamchars.setlength.md
             - name: Write 方法
               href: system.data.sqltypes.sqlstreamchars.write.md
+    - name: System.IO
+      items:
+        - name: MemoryStream 类
+          items:
+            - name: InternalGetOriginAndLength 方法
+              href: system.io.memorystream.internalgetoriginandlength.md
     - name: System.Net
       items:
-        - name: 连接类
+        - name: Connection 类
           href: connection.md
           items:
             - name: m_WriteList 字段
@@ -78,6 +84,8 @@
           items:
             - name: NetworkStream 属性
               href: system.net.pooledstream.networkstream.md
+        - name: RtcState 类
+          href: system.net.rtcstate.md
         - name: ServicePoint 类
           items:
             - name: m_ConnectionGroupList 字段
@@ -94,6 +102,14 @@
           items:
             - name: SslProtocol 属性
               href: system.net.security.sslstate.sslprotocol.md
+    - name: System.ServiceModel.Channels
+      items:
+        - name: Message 类
+          items:
+            - name: BodyToString 方法
+              href: system.servicemodel.channels.message.bodytostring.md
+            - name: WriteStartHeaders 方法
+              href: system.servicemodel.channels.message.writestartheaders.md
     - name: System.Windows.Diagnostics
       items:
         - name: VisualDiagnostics 类
@@ -132,7 +148,7 @@
               href: system.xml.xmlreader.createsqlreader.md
     - name: adodb 命名空间
       items:
-        - name: 连接接口
+        - name: Connection 接口
           href: adodb.connection.md
         - name: EventReason 枚举
           href: adodb.eventreasonenum.md
