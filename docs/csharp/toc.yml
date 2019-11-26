@@ -1,8 +1,8 @@
-- name: 'C# 指南'
-  href: index.md
+- name: 'C# 文档'
+  href: index.yml
 - name: 开始操作
   items:
-    - name: 如何使用本指南
+    - name: 概述
       href: getting-started/index.md
     - name: 'C# 语言和 .NET Framework 介绍'
       href: getting-started/introduction-to-the-csharp-language-and-the-net-framework.md
@@ -158,7 +158,7 @@
           href: delegates-strongly-typed.md
         - name: 委托的常见模式
           href: delegates-patterns.md
-        - name: 事件介绍
+        - name: 事件简介
           href: events-overview.md
         - name: 标准 .NET 事件模式
           href: event-pattern.md
@@ -320,9 +320,9 @@
               href: programming-guide/concepts/async/task-asynchronous-programming-model.md
             - name: 演练：使用 Async 和 Await 访问 Web
               href: programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md
-            - name: 如何：使用 Task.WhenAll 扩展异步演练
+            - name: 如何使用 Task.WhenAll 扩展异步演练
               href: programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md
-            - name: 如何：使用 Async 和 Await 并行发出多个 Web 请求
+            - name: 如何使用 Async 和 Await 并行发起多个 Web 请求
               href: programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
             - name: 异步返回类型
               href: programming-guide/concepts/async/async-return-types.md
@@ -352,9 +352,9 @@
               href: programming-guide/concepts/attributes/creating-custom-attributes.md
             - name: AttributeUsage
               href: programming-guide/concepts/attributes/attributeusage.md
-            - name: 使用反射访问属性
+            - name: 使用反射访问特性
               href: programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md
-            - name: 如何：使用属性创建 C-C++ 联合
+            - name: 如何使用特性创建 C/C++ 联合
               href: programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md
             - name: 通用属性
               href: programming-guide/concepts/attributes/common-attributes.md
@@ -384,11 +384,11 @@
           items:
             - name: 概述
               href: programming-guide/concepts/expression-trees/index.md
-            - name: 如何：执行表达式树
+            - name: 如何执行表达式树
               href: programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md
-            - name: 如何：修改表达式树
+            - name: 如何修改表达式树
               href: programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md
-            - name: 如何：使用表达式树生成动态查询
+            - name: 如何使用表达式树来生成动态查询
               href: programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md
             - name: 在 Visual Studio 中调试表达式树
               href: programming-guide/concepts/expression-trees/debugging-expression-trees-in-visual-studio.md
@@ -462,13 +462,13 @@
                   href: programming-guide/concepts/linq/linq-and-strings.md
                 - name: 操作指南
                   items:
-                    - name: 如何：对某个词在某一字符串中出现的次数进行计数 (LINQ)
+                    - name: 如何对某个词在字符串中出现的次数进行计数 (LINQ)
                       href: programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md
                     - name: 如何：查询包含一组指定词语的句子 (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md
                     - name: 如何：查询字符串中的字符 (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-for-characters-in-a-string-linq.md
-                    - name: 如何：将 LINQ 查询与正则表达式合并
+                    - name: 如何将 LINQ 查询与正则表达式合并在一起
                       href: programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md
                     - name: 如何：查找两个列表之间的差集 (LINQ)
                       href: programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md
@@ -476,7 +476,7 @@
                       href: programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md
                     - name: 如何：重新排列带分隔符的文件的字段 (LINQ)
                       href: programming-guide/concepts/linq/how-to-reorder-the-fields-of-a-delimited-file-linq.md
-                    - name: 如何：组合和比较字符串集合 (LINQ)
+                    - name: 如何合并和比较字符串集合 (LINQ)
                       href: programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md
                     - name: 如何：从多个源填充对象集合 (LINQ)
                       href: programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md
@@ -484,7 +484,7 @@
                       href: programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md
                     - name: 如何：联接不同文件中的内容 (LINQ)
                       href: programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md
-                    - name: 如何：在 CSV 文本文件中计算列值 (LINQ)
+                    - name: 如何在 CSV 文本文件中计算列值 (LINQ)
                       href: programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md
                 - name: LINQ 和反射
                   href: programming-guide/concepts/linq/linq-and-reflection.md
@@ -500,7 +500,7 @@
                       href: programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md
                     - name: 如何：查询一组文件夹中的总字节数 (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md
-                    - name: 如何：比较两个文件夹的内容 (LINQ)
+                    - name: 如何比较两个文件夹的内容 (LINQ)
                       href: programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md
                     - name: 如何：查询最大的文件或目录树中的文件 (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md
@@ -510,7 +510,7 @@
                       href: programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-lin.md
                 - name: 如何：使用 LINQ 查询 ArrayList
                   href: programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md
-                - name: 如何：为 LINQ 查询添加自定义方法
+                - name: 如何为 LINQ 查询添加自定义方法
                   href: programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md
             - name: LINQ to XML
               items:
@@ -536,7 +536,7 @@
                           href: programming-guide/concepts/linq/xattribute-class-overview.md
                         - name: XDocument 类概述
                           href: programming-guide/concepts/linq/xdocument-class-overview.md
-                        - name: 如何：生成 LINQ to XML 示例
+                        - name: 如何生成 LINQ to XML 示例
                           href: programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md
                     - name: XML 树
                       items:
@@ -552,9 +552,9 @@
                               href: programming-guide/concepts/linq/how-to-load-xml-from-a-file.md
                             - name: 在加载或分析 XML 时保留空白
                               href: programming-guide/concepts/linq/preserving-white-space-while-loading-or-parsing-xml1.md
-                            - name: 如何：捕捉分析错误
+                            - name: 如何捕捉分析错误
                               href: programming-guide/concepts/linq/how-to-catch-parsing-errors.md
-                            - name: 如何：从 XmlReader 创建树
+                            - name: 如何从 XmlReader 创建树
                               href: programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md
                             - name: 如何：从 XmlReader 流式处理 XML 片段
                               href: programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md
@@ -568,9 +568,9 @@
                       items:
                         - name: 命名空间概述 (LINQ to XML)
                           href: programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md
-                        - name: 如何：创建包含命名空间的文档 (LINQ to XML)
+                        - name: 如何创建包含命名空间的文档 (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-create-a-document-with-namespaces-linq-to-xml.md
-                        - name: 如何：控制命名空间前缀 (LINQ to XML)
+                        - name: 如何控制命名空间前缀 (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-control-namespace-prefixes-linq-to-xml.md
                         - name: 'C# 中默认命名空间的范围'
                           href: programming-guide/concepts/linq/scope-of-default-namespaces.md
@@ -594,9 +594,9 @@
                           href: programming-guide/concepts/linq/how-to-retrieve-a-collection-of-elements-linq-to-xml.md
                         - name: 如何：检索元素的值 (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md
-                        - name: 如何：根据元素名称进行筛选 (LINQ to XML)
+                        - name: 如何筛选元素名称 (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-filter-on-element-names-linq-to-xml.md
-                        - name: 如何：链接轴方法调用 (LINQ to XML)
+                        - name: 如何链接轴方法调用 (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-chain-axis-method-calls-linq-to-xml.md
                         - name: 如何：检索单个子元素 (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md
@@ -612,31 +612,31 @@
                       items:
                         - name: 基本查询 (LINQ to XML)
                           items:
-                            - name: 如何：查找具有特定属性的元素
+                            - name: 如何查找具有特定特性的元素
                               href: programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md
-                            - name: 如何：查找具有特定子元素的元素
+                            - name: 如何查找具有特定子元素的元素
                               href: programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md
                             - name: 查询 XDocument 与查询 XElement
                               href: programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md
-                            - name: 如何：查找具有特定元素名称的后代
+                            - name: 如何查找具有特定元素名称的子代
                               href: programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md
-                            - name: 如何：使用后代方法查找单个后代
+                            - name: 如何使用 Descendants 方法查找单个子代
                               href: programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md
                             - name: 如何：编写使用复杂筛选的查询
                               href: programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md
-                            - name: 如何：根据可选元素进行筛选
+                            - name: 如何筛选可选元素
                               href: programming-guide/concepts/linq/how-to-filter-on-an-optional-element.md
-                            - name: 如何：查找命名空间中的所有节点
+                            - name: 如何查找命名空间中的所有节点
                               href: programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md
                             - name: 如何：对元素进行排序
                               href: programming-guide/concepts/linq/how-to-sort-elements.md
                             - name: 如何：对多个键上的元素排序
                               href: programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md
-                            - name: 如何：计算中间值
+                            - name: 如何计算中间值
                               href: programming-guide/concepts/linq/how-to-calculate-intermediate-values.md
                             - name: 如何：编写基于上下文查找元素的查询
                               href: programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md
-                            - name: 如何：调试空查询结果集
+                            - name: 如何调试空查询结果集
                               href: programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md
                         - name: 投影和转换 (LINQ to XML)
                           items:
@@ -644,7 +644,7 @@
                               href: programming-guide/concepts/linq/how-to-work-with-dictionaries-using-linq-to-xml.md
                             - name: 如何：转换 XML 树的形状
                               href: programming-guide/concepts/linq/how-to-transform-the-shape-of-an-xml-tree.md
-                            - name: 如何：控制投影的类型
+                            - name: 如何控制投影的类型
                               href: programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md
                             - name: 如何：投影新类型 (LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-project-a-new-type-linq-to-xml.md
@@ -660,7 +660,7 @@
                           items:
                             - name: 如何：联接两个集合 (LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md
-                            - name: 如何：使用分组创建层次结构
+                            - name: 如何使用分组创建层次结构
                               href: programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md
                             - name: 如何：使用 XPath 查询 LINQ to XML
                               href: programming-guide/concepts/linq/how-to-query-linq-to-xml-using-xpath.md
@@ -680,37 +680,37 @@
                           items:
                             - name: XPath 和 LINQ to XML 的比较
                               href: programming-guide/concepts/linq/comparison-of-xpath-and-linq-to-xml.md
-                            - name: 如何：查找子元素 (XPath-LINQ to XML)
+                            - name: 如何查找子元素 (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-a-child-element-xpath-linq-to-xml.md
-                            - name: 如何：查找子元素列表 (XPath-LINQ to XML)
+                            - name: 如何查找子元素的列表 (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md
                             - name: 如何：查找根元素 (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-the-root-element-xpath-linq-to-xml.md
-                            - name: 如何：查找后代元素 (XPath-LINQ to XML)
+                            - name: 如何查找子代元素 (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-descendant-elements-xpath-linq-to-xml.md
-                            - name: 如何：根据属性进行筛选 (XPath-LINQ to XML)
+                            - name: 如何筛选特性 (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-filter-on-an-attribute-xpath-linq-to-xml.md
-                            - name: 如何：查找相关元素 (XPath-LINQ to XML)
+                            - name: 如何查找相关元素 (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-related-elements-xpath-linq-to-xml.md
-                            - name: 如何：查找命名空间中的元素 (XPath-LINQ to XML)
+                            - name: 如何查找命名空间中的元素 (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-elements-in-a-namespace-xpath-linq-to-xml.md
-                            - name: 如何：查找前面的同级 (XPath-LINQ to XML)
+                            - name: 如何查找前面的同级 (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-preceding-siblings-xpath-linq-to-xml.md
-                            - name: 如何：查找子元素的后代 (XPath-LINQ to XML)
+                            - name: 如何查找子元素的子代 (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-descendants-of-a-child-element-xpath-linq-to-xml.md
-                            - name: 如何：查找两个位置路径的联合 (XPath-LINQ to XML)
+                            - name: 如何查找两个位置路径的并集 (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml.md
-                            - name: 如何：查找同级节点 (XPath-LINQ to XML)
+                            - name: 如何查找同级节点 (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-sibling-nodes-xpath-linq-to-xml.md
-                            - name: 如何：查找父元素的属性 (XPath-LINQ to XML)
+                            - name: 如何查找父级的特性 (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md
-                            - name: 如何：查找具有特定名称的同级的属性 (XPath-LINQ to XML)
+                            - name: 如何查找具有特定名称的同级的特性 (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml.md
-                            - name: 如何：查找具有特定属性的元素 (XPath-LINQ to XML)
+                            - name: 如何查找具有特定特性的元素 (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml.md
-                            - name: 如何：根据位置查找子元素 (XPath-LINQ to XML)
+                            - name: 如何基于位置查找子元素 (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-child-elements-based-on-position-xpath-linq-to-xml.md
-                            - name: 如何：查找前面紧邻的同级 (XPath-LINQ to XML)
+                            - name: 如何查找前面紧邻的同级 (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md
                         - name: XML 的纯功能转换
                           items:
@@ -790,7 +790,7 @@
                           href: programming-guide/concepts/linq/removing-elements-attributes-and-nodes-from-an-xml-tree.md
                         - name: 维护名称/值对
                           href: programming-guide/concepts/linq/maintaining-name-value-pairs.md
-                        - name: 如何：更改整个 XML 树的命名空间
+                        - name: 如何更改整个 XML 树的命名空间
                           href: programming-guide/concepts/linq/how-to-change-the-namespace-for-an-entire-xml-tree.md
                     - name: 性能 (LINQ to XML)
                       items:
@@ -868,7 +868,7 @@
               href: programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md
         - name: 面向对象的编程
           href: programming-guide/concepts/object-oriented-programming.md
-        - name: 映像
+        - name: 反射
           href: programming-guide/concepts/reflection.md
         - name: '序列化 (C#)'
           items:
@@ -948,7 +948,7 @@
               href: programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md
             - name: 了解何时使用 Override 和 New 关键字
               href: programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md
-            - name: 如何：替代 ToString 方法
+            - name: 如何重写 ToString 方法
               href: programming-guide/classes-and-structs/how-to-override-the-tostring-method.md
         - name: 成员
           items:
@@ -964,9 +964,9 @@
               href: programming-guide/classes-and-structs/fields.md
             - name: 常量
               href: programming-guide/classes-and-structs/constants.md
-            - name: 如何：定义抽象属性
+            - name: 如何定义抽象属性
               href: programming-guide/classes-and-structs/how-to-define-abstract-properties.md
-            - name: '如何：在 C# 中定义常量'
+            - name: '如何在 C# 中定义常量'
               href: programming-guide/classes-and-structs/how-to-define-constants.md
         - name: 属性
           items:
@@ -978,7 +978,7 @@
               href: programming-guide/classes-and-structs/interface-properties.md
             - name: 限制访问器可访问性
               href: programming-guide/classes-and-structs/restricting-accessor-accessibility.md
-            - name: 如何：声明和使用读/写属性
+            - name: 如何声明和使用读/写属性
               href: programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties.md
             - name: 自动实现的属性
               href: programming-guide/classes-and-structs/auto-implemented-properties.md
@@ -1000,21 +1000,21 @@
                   href: programming-guide/classes-and-structs/passing-value-type-parameters.md
                 - name: 传递引用类型参数
                   href: programming-guide/classes-and-structs/passing-reference-type-parameters.md
-                - name: 如何：了解向方法传递结构与类引用的区别
+                - name: 如何了解向方法传递结构和向方法传递类引用之间的区别
                   href: programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md
             - name: 隐式类型的局部变量
               href: programming-guide/classes-and-structs/implicitly-typed-local-variables.md
-            - name: 如何：在查询表达式中使用隐式类型本地变量和数组
+            - name: 如何在查询表达式中使用隐式类型的局部变量和数组
               href: programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
             - name: 扩展方法
               href: programming-guide/classes-and-structs/extension-methods.md
-            - name: 如何：实现和调用自定义扩展方法
+            - name: 如何实现和调用自定义扩展方法
               href: programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md
-            - name: 如何：为枚举创建新方法
+            - name: 如何为枚举创建新方法
               href: programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md
-            - name: 命名参数和可选参数
+            - name: 命名自变量和可选自变量
               href: programming-guide/classes-and-structs/named-and-optional-arguments.md
-            - name: 如何：在 Office 编程中使用命名参数和可选参数
+            - name: 如何在 Office 编程中使用命名自变量和可选自变量
               href: programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md
         - name: 构造函数
           items:
@@ -1028,13 +1028,13 @@
               href: programming-guide/classes-and-structs/private-constructors.md
             - name: 静态构造函数
               href: programming-guide/classes-and-structs/static-constructors.md
-            - name: 如何：编写复制构造函数
+            - name: 如何编写复制构造函数
               href: programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md
         - name: 终结器
           href: programming-guide/classes-and-structs/destructors.md
         - name: 对象和集合初始值设定项
           href: programming-guide/classes-and-structs/object-and-collection-initializers.md
-        - name: 如何：使用对象初始值设定项初始化对象
+        - name: 如何使用对象初始值设定项初始化对象
           href: programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md
         - name: 如何：使用集合初始值设定项初始化字典
           href: programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md
@@ -1044,7 +1044,7 @@
           href: programming-guide/classes-and-structs/partial-classes-and-methods.md
         - name: 匿名类型
           href: programming-guide/classes-and-structs/anonymous-types.md
-        - name: 如何：在查询中返回元素属性的子集
+        - name: 如何在查询中返回元素属性的子集
           href: programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md
     - name: 接口
       items:
@@ -1301,7 +1301,7 @@
                 - name: bool
                   href: language-reference/keywords/bool.md
                 - name: char
-                  href: language-reference/keywords/char.md
+                  href: language-reference/builtin-types/char.md
                 - name: enum
                   href: language-reference/keywords/enum.md
                 - name: struct
@@ -1675,7 +1675,7 @@
           href: language-reference/compiler-options/index.md
         - name: 在命令行上使用 csc.exe 生成
           href: language-reference/compiler-options/command-line-building-with-csc-exe.md
-        - name: 如何：设置 Visual Studio 命令行的环境变量
+        - name: 如何为 Visual Studio 命令行设置环境变量
           href: language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md
         - name: '按类别列出的 C# 编译器选项'
           href: language-reference/compiler-options/listed-by-category.md

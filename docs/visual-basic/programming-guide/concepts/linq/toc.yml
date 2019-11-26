@@ -65,7 +65,7 @@
           href: how-to-query-for-sentences-that-contain-a-specified-set-of-words.md
         - name: 如何：查询字符串中的字符 (LINQ)
           href: how-to-query-for-characters-in-a-string-linq.md
-        - name: 如何：将 LINQ 查询与正则表达式合并
+        - name: 如何将 LINQ 查询与正则表达式合并在一起
           href: how-to-combine-linq-queries-with-regular-expressions.md
         - name: 如何：查找两个列表之间的差集 (LINQ)
           href: how-to-find-the-set-difference-between-two-lists-linq.md
@@ -103,7 +103,7 @@
           href: how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md
         - name: 如何：在目录树中查询重复文件 (LINQ)
           href: how-to-query-for-duplicate-files-in-a-directory-tree-linq.md
-        - name: 如何：查询文件夹中文件的内容 (LINQ)
+        - name: 如何：查询文件夹中的文件的内容 (LINQ)
           href: how-to-query-the-contents-of-files-in-a-folder-linq.md
         - name: 如何：使用 LINQ 查询 ArrayList
           href: how-to-query-an-arraylist-with-linq.md
