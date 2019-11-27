@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428056"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument 方法
-定义源文档。 GUIDs are provided for known languages, vendors, and document types.  
+定义源文档。 为已知语言、供应商和文档类型提供了 Guid。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,26 +38,26 @@ HRESULT DefineDocument(
   
 ## <a name="parameters"></a>参数  
  `url`  
- [in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.  
+ 中指向 `WCHAR` 的指针，该指针定义标识文档的统一资源定位器（URL）。  
   
  `language`  
- [in] A pointer to a GUID that defines the document language.  
+ 中指向定义文档语言的 GUID 的指针。  
   
  `languageVendor`  
- [in] A pointer to a GUID that defines the identity of the vendor for the document language.  
+ 中一个指针，指向用于定义文档语言的供应商标识的 GUID。  
   
  `documentType`  
- [in] A pointer to a GUID that defines the type of the document.  
+ 中指向定义文档类型的 GUID 的指针。  
   
  `pRetVal`  
- [out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.  
+ 弄指向返回的[ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)接口的指针。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

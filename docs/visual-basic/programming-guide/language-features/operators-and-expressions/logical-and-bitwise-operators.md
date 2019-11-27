@@ -29,33 +29,33 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343593"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic 中的逻辑运算符和位运算符
-Logical operators compare `Boolean` expressions and return a `Boolean` result. The `And`, `Or`, `AndAlso`, `OrElse`, and `Xor` operators are *binary* because they take two operands, while the `Not` operator is *unary* because it takes a single operand. Some of these operators can also perform bitwise logical operations on integral values.  
+逻辑运算符比较 `Boolean` 表达式并返回 `Boolean` 结果。 `And`、`Or`、`AndAlso`、`OrElse`和 `Xor` 运算符是*二进制*的，因为它们采用两个操作数，而 `Not` 运算符是*一元*运算符，因为它采用单个操作数。 其中一些运算符还可以对整数值执行按位逻辑运算。  
   
-## <a name="unary-logical-operator"></a>Unary Logical Operator  
- The [Not Operator](../../../../visual-basic/language-reference/operators/not-operator.md) performs logical *negation* on a `Boolean` expression. It yields the logical opposite of its operand. If the expression evaluates to `True`, then `Not` returns `False`; if the expression evaluates to `False`, then `Not` returns `True`. 下面的示例阐释了这一点。  
+## <a name="unary-logical-operator"></a>一元逻辑运算符  
+ [Not 运算符](../../../../visual-basic/language-reference/operators/not-operator.md)对 `Boolean` 表达式执行逻辑非*运算*。 它生成其操作数的逻辑相反。 如果表达式的计算结果为 `True`，则 `Not` 返回 `False`;如果表达式的计算结果为 `False`，则 `Not` 返回 `True`。 下面的示例对此进行了演示。  
   
  [!code-vb[VbVbalrOperators#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#77)]  
   
-## <a name="binary-logical-operators"></a>Binary Logical Operators  
- The [And Operator](../../../../visual-basic/language-reference/operators/and-operator.md) performs logical *conjunction* on two `Boolean` expressions. If both expressions evaluate to `True`, then `And` returns `True`. If at least one of the expressions evaluates to `False`, then `And` returns `False`.  
+## <a name="binary-logical-operators"></a>二元逻辑运算符  
+ [And 运算符](../../../../visual-basic/language-reference/operators/and-operator.md)对两个 `Boolean` 表达式执行逻辑与*运算*。 如果两个表达式的计算结果都为 `True`，则 `And` 返回 `True`。 如果至少有一个表达式的计算结果为 `False`，则 `And` 返回 `False`。  
   
- The [Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md) performs logical *disjunction* or *inclusion* on two `Boolean` expressions. If either expression evaluates to `True`, or both evaluate to `True`, then `Or` returns `True`. If neither expression evaluates to `True`, `Or` returns `False`.  
+ [Or 运算符](../../../../visual-basic/language-reference/operators/or-operator.md)对两个 `Boolean` 表达式执行*逻辑或* *运算*。 如果两个表达式的计算结果都为 `True`，或都计算为 `True`，则 `Or` 返回 `True`。 如果两个表达式的计算结果都不为 `True`，`Or` 返回 `False`。  
   
- The [Xor Operator](../../../../visual-basic/language-reference/operators/xor-operator.md) performs logical *exclusion* on two `Boolean` expressions. If exactly one expression evaluates to `True`, but not both, `Xor` returns `True`. If both expressions evaluate to `True` or both evaluate to `False`, `Xor` returns `False`.  
+ [Xor 运算符](../../../../visual-basic/language-reference/operators/xor-operator.md)对两个 `Boolean` 表达式执行逻辑*异*运算。 如果恰好一个表达式的计算结果为 `True`，而不是同时计算，则 `Xor` 返回 `True`。 如果两个表达式的计算结果都为 `True` 或都计算为 `False`，则 `Xor` 返回 `False`。  
   
- The following example illustrates the `And`, `Or`, and `Xor` operators.  
+ 下面的示例演示了 `And`、`Or`和 `Xor` 运算符。  
   
  [!code-vb[VbVbalrOperators#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#78)]  
   
-## <a name="short-circuiting-logical-operations"></a>Short-Circuiting Logical Operations  
- The [AndAlso Operator](../../../../visual-basic/language-reference/operators/andalso-operator.md) is very similar to the `And` operator, in that it also performs logical conjunction on two `Boolean` expressions. The key difference between the two is that `AndAlso` exhibits *short-circuiting* behavior. If the first expression in an `AndAlso` expression evaluates to `False`, then the second expression is not evaluated because it cannot alter the final result, and `AndAlso` returns `False`.  
+## <a name="short-circuiting-logical-operations"></a>短路逻辑运算  
+ [AndAlso 运算符](../../../../visual-basic/language-reference/operators/andalso-operator.md)与 `And` 运算符非常类似，因为它还对两个 `Boolean` 表达式执行逻辑与运算。 二者之间的主要区别在于 `AndAlso` 展示*短路*行为。 如果 `AndAlso` 表达式中的第一个表达式的计算结果为 `False`，则不会计算第二个表达式，因为它不能更改最终结果，`AndAlso` 返回 `False`。  
   
- Similarly, the [OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md) performs short-circuiting logical disjunction on two `Boolean` expressions. If the first expression in an `OrElse` expression evaluates to `True`, then the second expression is not evaluated because it cannot alter the final result, and `OrElse` returns `True`.  
+ 同样， [OrElse 运算符](../../../../visual-basic/language-reference/operators/orelse-operator.md)对两个 `Boolean` 表达式执行短路逻辑析取。 如果 `OrElse` 表达式中的第一个表达式的计算结果为 `True`，则不会计算第二个表达式，因为它不能更改最终结果，`OrElse` 返回 `True`。  
   
-### <a name="short-circuiting-trade-offs"></a>Short-Circuiting Trade-Offs  
- Short-circuiting can improve performance by not evaluating an expression that cannot alter the result of the logical operation. However, if that expression performs additional actions, short-circuiting skips those actions. For example, if the expression includes a call to a `Function` procedure, that procedure is not called if the expression is short-circuited, and any additional code contained in the `Function` does not run. Therefore, the function might run only occasionally, and might not be tested correctly. Or the program logic might depend on the code in the `Function`.  
+### <a name="short-circuiting-trade-offs"></a>短路权衡  
+ 短路可以通过不计算无法更改逻辑操作结果的表达式来提高性能。 但是，如果该表达式执行其他操作，则短路将跳过这些操作。 例如，如果表达式包含对 `Function` 过程的调用，则在表达式为短路，则不会调用该过程，并且 `Function` 中包含的任何其他代码都不会运行。 因此，该函数可能会偶尔运行，并且可能无法正确测试。 或程序逻辑可能依赖于 `Function`中的代码。  
   
- The following example illustrates the difference between `And`, `Or`, and their short-circuiting counterparts.  
+ 下面的示例说明 `And`、`Or`和其短路对应项之间的差异。  
   
  [!code-vb[VbVbalrOperators#81](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#81)]  
   
@@ -63,43 +63,43 @@ Logical operators compare `Boolean` expressions and return a `Boolean` result. T
   
  [!code-vb[VbVbalrOperators#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#79)]  
   
- In the preceding example, note that some important code inside `checkIfValid()` does not run when the call is short-circuited. The first `If` statement calls `checkIfValid()` even though `12 > 45` returns `False`, because `And` does not short-circuit. The second `If` statement does not call `checkIfValid()`, because when `12 > 45` returns `False`, `AndAlso` short-circuits the second expression. The third `If` statement calls `checkIfValid()` even though `12 < 45` returns `True`, because `Or` does not short-circuit. The fourth `If` statement does not call `checkIfValid()`, because when `12 < 45` returns `True`, `OrElse` short-circuits the second expression.  
+ 在前面的示例中，请注意，当调用短路时，不会运行 `checkIfValid()` 中的一些重要代码。 即使 `12 > 45` 返回 `False`，第一个 `If` 语句也会调用 `checkIfValid()`，因为 `And` 不会短路。 第二个 `If` 语句不调用 `checkIfValid()`，因为 `12 > 45` 返回 `False`时，`AndAlso` 第二个表达式。 即使 `12 < 45` 返回 `True`，第三个 `If` 语句也会调用 `checkIfValid()`，因为 `Or` 不会短路。 第四个 `If` 语句不调用 `checkIfValid()`，因为 `12 < 45` 返回 `True`时，`OrElse` 第二个表达式。  
   
-## <a name="bitwise-operations"></a>Bitwise Operations  
- Bitwise operations evaluate two integral values in binary (base 2) form. They compare the bits at corresponding positions and then assign values based on the comparison. The following example illustrates the `And` operator.  
+## <a name="bitwise-operations"></a>按位运算  
+ 按位运算以二进制（以2为底）形式计算两个整数值。 它们比较相应位置上的位，然后基于比较分配值。 下面的示例演示 `And` 运算符。  
   
  [!code-vb[VbVbalrConcepts#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#2)]  
   
- The preceding example sets the value of `x` to 1. This happens for the following reasons:  
+ 前面的示例将 `x` 的值设置为1。 出现这种情况的原因如下：  
   
-- The values are treated as binary:  
+- 值被视为 binary：  
   
-     3 in binary form = 011  
+     二进制格式的 3 = 011  
   
-     5 in binary form = 101  
+     二进制格式的 5 = 101  
   
-- The `And` operator compares the binary representations, one binary position (bit) at a time. If both bits at a given position are 1, then a 1 is placed in that position in the result. If either bit is 0, then a 0 is placed in that position in the result. In the preceding example this works out as follows:  
+- `And` 运算符比较二进制表示形式，一次比较一个二进制位置（位）。 如果给定位置处的两个位均为1，则将1置于结果中的该位置。 如果任一位为0，则将0放入结果中的该位置。 在前面的示例中，此过程如下所示：  
   
-     011 (3 in binary form)  
+     011（二进制格式的3）  
   
-     101 (5 in binary form)  
+     101（二进制格式的5）  
   
-     001 (The result, in binary form)  
+     001（二进制格式的结果）  
   
-- The result is treated as decimal. The value 001 is the binary representation of 1, so `x` = 1.  
+- 结果被视为 decimal。 值001是1的二进制表示形式，因此 `x` = 1。  
   
- The bitwise `Or` operation is similar, except that a 1 is assigned to the result bit if either or both of the compared bits is 1. `Xor` assigns a 1 to the result bit if exactly one of the compared bits (not both) is 1. `Not` takes a single operand and inverts all the bits, including the sign bit, and assigns that value to the result. This means that for signed positive numbers, `Not` always returns a negative value, and for negative numbers, `Not` always returns a positive or zero value.  
+ 按位 `Or` 运算类似，不同之处在于如果两个比较位中有一个或两个均为1，则将1分配给结果位。 如果某个比较位（不是两者）为1，则 `Xor` 将1赋给结果位。 `Not` 采用单个操作数并反转所有位（包括符号位），并将该值分配给结果。 这意味着，对于有符号的正数，`Not` 始终返回负值，对于负数，`Not` 始终返回正值或零值。  
   
- The `AndAlso` and `OrElse` operators do not support bitwise operations.  
+ `AndAlso` 和 `OrElse` 运算符不支持按位运算。  
   
 > [!NOTE]
-> Bitwise operations can be performed on integral types only. Floating-point values must be converted to integral types before bitwise operation can proceed.  
+> 只能对整数类型执行按位运算。 必须先将浮点值转换为整数类型，然后才能继续执行位运算。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Logical/Bitwise Operators (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [逻辑/按位运算符（Visual Basic）](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [布尔表达式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
-- [Arithmetic Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Visual Basic 中的算术运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic 中的串联运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
 - [运算符的有效组合](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436747"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>IMetaDataImport::GetTypeDefProps 方法
-Returns metadata information for the <xref:System.Type> represented by the specified TypeDef token.  
+返回指定的 TypeDef 标记所表示的 <xref:System.Type> 的元数据信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,33 +40,33 @@ HRESULT GetTypeDefProps (
   
 ## <a name="parameters"></a>参数  
  `td`  
- [in] The TypeDef token that represents the type to return metadata for.  
+ 中TypeDef 标记，它表示要为其返回元数据的类型。  
   
  `szTypeDef`  
- [out] A buffer containing the type name.  
+ 弄包含类型名称的缓冲区。  
   
  `cchTypeDef`  
- [in] The size in wide characters of `szTypeDef`.  
+ 中`szTypeDef`的大小（以宽字符为大小）。  
   
  `pchTypeDef`  
- [out] The number of wide characters returned in `szTypeDef`.  
+ 弄`szTypeDef`中返回的宽字符数。  
   
  `pdwTypeDefFlags`  
- [out] A pointer to any flags that modify the type definition. This value is a bitmask from the [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration.  
+ 弄指向修改类型定义的任何标志的指针。 此值是[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)枚举中的位掩码。  
   
  `ptkExtends`  
- [out] A TypeDef or TypeRef metadata token that represents the base type of the requested type.  
+ 弄一个 TypeDef 或 TypeRef 元数据标记，它表示所请求类型的基类型。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

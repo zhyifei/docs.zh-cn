@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447883"
 ---
 # <a name="imetadataemit2savedeltatostream-method"></a>IMetaDataEmit2::SaveDeltaToStream 方法
-Saves changes from the current edit-and-continue session to the specified stream.  
+将当前的 "编辑并继续" 会话中的更改保存到指定的流。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,21 +36,21 @@ HRESULT SaveDeltaToStream (
   
 ## <a name="parameters"></a>参数  
  `pIStream`  
- [in] An interface pointer to the writable stream to which to save changes.  
+ 中一个接口指针，指向要将更改保存到的可写流。  
   
  `dwSaveFlags`  
- [in] 保留。 This value must be zero.  
+ [in] 保留。 此值必须为零。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
 - [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

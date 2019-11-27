@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450400"
 ---
 # <a name="cor_prf_rejit_flags-enumeration"></a>COR_PRF_REJIT_FLAGS 枚举
-Contains values that indicate how the [ICorProfilerInfo10::RequestReJITWithInliners](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-requestrejitwithinliners-method.md) API should behave.  
+包含指示[ICorProfilerInfo10：： RequestReJITWithInliners](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-requestrejitwithinliners-method.md) API 应如何运行的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,13 +37,13 @@ typedef enum
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`COR_PRF_REJIT_BLOCK_INLINING`| ReJITted methods will be blocked from being inlined in other methods. |  
-|`COR_PRF_REJIT_INLINING_CALLBACKS`| Receive `GetFunctionParameters` callbacks for any methods that inline the methods requested to be ReJITted. |  
+|`COR_PRF_REJIT_BLOCK_INLINING`| 将阻止在其他方法中内联 ReJITted 方法。 |  
+|`COR_PRF_REJIT_INLINING_CALLBACKS`| 为内联 ReJITted 请求的方法的任何方法接收 `GetFunctionParameters` 回调。 |  
 
 ## <a name="requirements"></a>要求  
- **Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).  
+ **平台：** 请参阅[支持 .Net Core 的操作系统](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   
@@ -51,6 +51,6 @@ typedef enum
   
  **.NET Framework 版本：** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)] 
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

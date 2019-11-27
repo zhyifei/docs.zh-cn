@@ -20,10 +20,10 @@ ms.locfileid: "74344084"
 ## <a name="requirements"></a>要求  
  **命名空间：** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Clock>  
+ **类：** <xref:Microsoft.VisualBasic.Devices.Clock>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **程序集：** Visual Basic 运行时库（在 Microsoft. .dll 中）  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [My.Computer 对象](../../../visual-basic/language-reference/objects/my-computer-object.md)

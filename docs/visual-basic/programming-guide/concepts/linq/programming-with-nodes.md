@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346644"
 ---
-# <a name="programming-with-nodes-visual-basic"></a>Programming with Nodes (Visual Basic)
+# <a name="programming-with-nodes-visual-basic"></a>通过节点进行编程（Visual Basic）
 需要编写 XML 编辑器、转换系统或报告编写器这类程序的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 开发人员通常需要编写在比元素和属性更细的粒度下运行的程序。 开发人员通常需要在节点级别上工作，操作文本节点、处理指令和添加注释。 本主题提供有关在节点级别进行编程的一些详细信息。  
   
 ## <a name="node-details"></a>节点详细信息  
@@ -171,6 +171,6 @@ Console.WriteLine(doc.Nodes().Count())
 1  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [高级 LINQ to XML 编程（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

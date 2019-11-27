@@ -37,25 +37,25 @@ typedef struct COR_PRF_GC_GENERATION_RANGE {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`generation`|A value of the [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeration that specifies the generation to which the block of memory belongs.|  
-|`rangeStart`|The ID of an object that specifies the starting location of the block of memory.|  
-|`rangeLength`|A pointer to an integer that specifies the size of the used portion of the memory block (that is, the amount of memory used within the block).|  
-|`rangeLengthReserved`|A pointer to an integer that specifies the size of the memory block (that is, the amount of memory reserved for the block).|  
+|`generation`|一个[COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md)枚举的值，该值指定内存块所属的代。|  
+|`rangeStart`|对象的 ID，该对象指定内存块的起始位置。|  
+|`rangeLength`|指向一个整数的指针，该整数指定内存块的已使用部分的大小（即在块中使用的内存量）。|  
+|`rangeLengthReserved`|指向一个整数的指针，该整数指定内存块的大小（即，为块预留的内存量）。|  
   
 ## <a name="remarks"></a>备注  
- The `rangeLength` value is guaranteed to be accurate only if [ICorProfilerInfo2::GetGenerationBounds](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md) or [ICorProfilerInfo2::GetObjectGeneration](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md), both of which use the `COR_PRF_GC_GENERATION_RANGE` structure, is called from the [ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) or the [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) method.  
+ 仅当[ICorProfilerInfo2：： GetGenerationBounds](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md)或[ICorProfilerInfo2：： GetObjectGeneration](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md)（都使用 `COR_PRF_GC_GENERATION_RANGE` 结构）从[ICorProfilerCallback2：： GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)或[ICorProfilerCallback2：： GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)方法调用时，才保证 `rangeLength` 值是准确的。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorProf.idl  
+ **标头：** Corprof.idl .idl  
   
  **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析结构](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

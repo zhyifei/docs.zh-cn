@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433873"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash 方法
-Retrieves a hash blob for a given assembly.  
+检索给定程序集的哈希 blob。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,21 +36,21 @@ HRESULT GetAssemblyRefHash(
   
 ## <a name="parameters"></a>参数  
  `FileToken`  
- ID of assembly to which the hash will refer.  
+ 哈希将引用的程序集的 ID。  
   
  `ppvHash`  
- Receives the resulting hash blob.  
+ 接收生成的哈希 blob。  
   
  `pcbHash`  
- Receives size, in bytes, of hash blob.  
+ 接收哈希 blob 的大小（以字节为单位）。  
   
 ## <a name="return-value"></a>返回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- Requires alink.h  
+ 需要 alink  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IALink 接口](ialink-interface.md)
 - [IALink2 接口](ialink2-interface.md)

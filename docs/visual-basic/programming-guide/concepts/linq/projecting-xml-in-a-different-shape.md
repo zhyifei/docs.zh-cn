@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347149"
 ---
-# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Projecting XML in a Different Shape (Visual Basic)
+# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>在不同形状中投影 XML （Visual Basic）
 本主题演示对形状不同于源 XML 的 XML 进行投影的示例。  
   
  许多典型的 XML 转换由链接的查询组成，如本示例中所示。 一种很常见的做法是从某种格式的 XML 开始，将中间结果投影为匿名类型或命名类型的集合，最后将结果投影回与源 XML 形状完全不同的 XML。  
@@ -17,7 +17,7 @@ ms.locfileid: "74347149"
 ## <a name="example"></a>示例  
  本示例处理一个 WordprocessingML 文档，它从 WordprocessingML 文档中检索段落节点。 本示例还标识每个段落的样式和文本。 最后，本示例将以不同的形状投影 XML。 本示例以本教程中前面的一些示例为基础构建。 下面代码中的注释标识出了执行投影操作的新语句。  
   
- For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ 有关创建此示例的源文档的说明，请参阅[创建源 Office OPEN XML 文档（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
   
  本示例使用 WindowsBase 程序集中的类。 它使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空间中的类型。  
   
@@ -230,8 +230,8 @@ End Module
 ## <a name="next-steps"></a>后续步骤  
  下面的示例通过查询查找 Word 文档中的所有文本：  
   
-- [Finding Text in Word Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [查找 Word 文档中的文本（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [教程：在 WordprocessingML 文档中操作内容（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

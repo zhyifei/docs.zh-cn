@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437565"
 ---
 # <a name="imetadataimportgetfieldmarshal-method"></a>IMetaDataImport::GetFieldMarshal 方法
-Gets a pointer to the native, unmanaged type of the field represented by the specified field metadata token.  
+获取一个指针，该指针指向由指定的字段元数据标记表示的字段的本机非托管类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,24 +37,24 @@ HRESULT GetFieldMarshal (
   
 ## <a name="parameters"></a>参数  
  `tk`  
- [in] The metadata token that represents the field to get interop marshaling information for.  
+ 中表示要为其获取互操作封送处理信息的字段的元数据标记。  
   
  `ppvNativeType`  
- [out] A pointer to the metadata signature of the field's native type.  
+ 弄指向字段本地类型的元数据签名的指针。  
   
  `pcbNativeType`  
- [out] The size in bytes of `ppvNativeType`.  
+ 弄`ppvNativeType`的大小（以字节为单位）。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

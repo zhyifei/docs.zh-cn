@@ -21,7 +21,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350257"
 ---
 # <a name="and-operator-visual-basic"></a>And 运算符 (Visual Basic)
-Performs a logical conjunction on two `Boolean` expressions, or a bitwise conjunction on two numeric expressions.  
+对两个 `Boolean` 表达式执行逻辑与运算，或对两个数值表达式执行位与运算。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,18 +31,18 @@ result = expression1 And expression2
   
 ## <a name="parts"></a>部件  
  `result`  
- 必须的。 Any `Boolean` or numeric expression. For Boolean comparison, `result` is the logical conjunction of two `Boolean` values. For bitwise operations, `result` is a numeric value representing the bitwise conjunction of two numeric bit patterns.  
+ 必需。 任何 `Boolean` 或数值表达式。 对于布尔值比较，`result` 是两个 `Boolean` 值的逻辑与。 对于按位运算，`result` 是表示两个数值位模式的按位 "与" 的数值。  
   
  `expression1`  
- 必须的。 Any `Boolean` or numeric expression.  
+ 必需。 任何 `Boolean` 或数值表达式。  
   
  `expression2`  
- 必须的。 Any `Boolean` or numeric expression.  
+ 必需。 任何 `Boolean` 或数值表达式。  
   
 ## <a name="remarks"></a>备注  
- For Boolean comparison, `result` is `True` if and only if both `expression1` and `expression2` evaluate to `True`. The following table illustrates how `result` is determined.  
+ 对于布尔值比较，当且仅当 `expression1` 和 `expression2` 的计算结果都为 `True`时，`result` `True`。 下表说明了如何确定 `result`。  
   
-|If `expression1` is|And `expression2` is|The value of `result` is|  
+|如果 `expression1` 为|并且 `expression2` 为|`result` 的值是|  
 |-------------------------|--------------------------|------------------------------|  
 |`True`|`True`|`True`|  
 |`True`|`False`|`False`|  
@@ -50,11 +50,11 @@ result = expression1 And expression2
 |`False`|`False`|`False`|  
   
 > [!NOTE]
-> In a Boolean comparison, the `And` operator always evaluates both expressions, which could include making procedure calls. The [AndAlso Operator](../../../visual-basic/language-reference/operators/andalso-operator.md) performs *short-circuiting*, which means that if `expression1` is `False`, then `expression2` is not evaluated.  
+> 在布尔比较中，`And` 运算符始终计算两个表达式，这可能包括进行过程调用。 [AndAlso 运算符](../../../visual-basic/language-reference/operators/andalso-operator.md)执行*短路*，这意味着如果 `False``expression1`，则不会计算 `expression2`。  
   
- When applied to numeric values, the `And` operator performs a bitwise comparison of identically positioned bits in two numeric expressions and sets the corresponding bit in `result` according to the following table.  
+ 当应用于数值时，`And` 运算符将对两个数值表达式中的相同位置执行按位比较，并根据下表设置 `result` 中的相应位。  
   
-|If bit in `expression1` is|And bit in `expression2` is|The bit in `result` is|  
+|如果 `expression1` 中有位|`expression2` 中的位是|`result` 中的位是|  
 |--------------------------------|---------------------------------|----------------------------|  
 |1|1|1|  
 |1|0|0|  
@@ -62,34 +62,34 @@ result = expression1 And expression2
 |0|0|0|  
   
 > [!NOTE]
-> Since the logical and bitwise operators have a lower precedence than other arithmetic and relational operators, any bitwise operations should be enclosed in parentheses to ensure accurate results.  
+> 由于逻辑运算符和位运算符的优先级低于其他算术运算符和关系运算符，因此应将任何按位运算括在括号中，以确保准确的结果。  
   
 ## <a name="data-types"></a>数据类型  
- If the operands consist of one `Boolean` expression and one numeric expression, Visual Basic converts the `Boolean` expression to a numeric value (–1 for `True` and 0 for `False`) and performs a bitwise operation.  
+ 如果操作数由一个 `Boolean` 表达式和一个数值表达式组成，则 Visual Basic 会将 `Boolean` 表达式转换为数值（对于 `True` 为–1，对于 `False`为0）并执行按位运算。  
   
- For a Boolean comparison, the data type of the result is `Boolean`. For a bitwise comparison, the result data type is a numeric type appropriate for the data types of `expression1` and `expression2`. See the "Relational and Bitwise Comparisons" table in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
+ 对于布尔值比较，结果的数据类型为 `Boolean`。 对于按位比较，结果数据类型是一种适合 `expression1` 和 `expression2`的数据类型的数值类型。 请参阅[运算符结果的数据类型](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)中的 "关系和按位比较" 表。  
   
 > [!NOTE]
-> The `And` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. 有关更多信息，请参见 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+> 可以*重载*`And` 运算符，这意味着当操作数具有该类或结构的类型时，该类或结构可以重新定义其行为。 如果你的代码在该类或结构上使用此运算符，请确保了解其重新定义的行为。 有关更多信息，请参见 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>示例  
- The following example uses the `And` operator to perform a logical conjunction on two expressions. The result is a `Boolean` value that represents whether both of the expressions are `True`.  
+ 下面的示例使用 `And` 运算符对两个表达式执行逻辑与运算。 结果是 `Boolean` 值，该值表示两个表达式是否 `True`。  
   
  [!code-vb[VbVbalrOperators#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#22)]  
   
- The preceding example produces results of `True` and `False`, respectively.  
+ 前面的示例分别产生 `True` 和 `False`的结果。  
   
 ## <a name="example"></a>示例  
- The following example uses the `And` operator to perform logical conjunction on the individual bits of two numeric expressions. The bit in the result pattern is set if the corresponding bits in the operands are both set to 1.  
+ 下面的示例使用 `And` 运算符对两个数值表达式的单个位执行逻辑与运算。 如果操作数中的相应位均设置为1，则结果模式中的位将设置为1。  
   
  [!code-vb[VbVbalrOperators#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#23)]  
   
- The preceding example produces results of 8, 2, and 0, respectively.  
+ 前面的示例分别生成8、2和0的结果。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Logical/Bitwise Operators (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [逻辑/按位运算符（Visual Basic）](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [AndAlso 运算符](../../../visual-basic/language-reference/operators/andalso-operator.md)
-- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic 中的逻辑运算符和位运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

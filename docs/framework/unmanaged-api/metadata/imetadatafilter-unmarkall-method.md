@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440126"
 ---
 # <a name="imetadatafilterunmarkall-method"></a>IMetaDataFilter::UnmarkAll 方法
-Removes the processing marks from all the tokens in the current metadata scope.  
+从当前元数据范围内的所有标记中删除处理标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,17 +32,17 @@ HRESULT UnmarkAll ();
 ```  
   
 ## <a name="parameters"></a>参数  
- `UnmarkAll` takes no parameters.  
+ `UnmarkAll` 不采用任何参数。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataFilter 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)

@@ -25,11 +25,11 @@ ms.locfileid: "74283512"
 ## <a name="expander-states"></a>扩展器状态  
  下表列出了 <xref:System.Windows.Controls.Expander> 控件的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
-|一般|CommonStates|默认状态。|  
+|正常|CommonStates|默认状态。|  
 |MouseOver|CommonStates|鼠标指针悬停在控件上。|  
-|Disabled|CommonStates|已禁用控件。|  
+|已禁用|CommonStates|已禁用控件。|  
 |已设定焦点|FocusStates|控件有焦点。|  
 |失去焦点|FocusStates|控件没有焦点。|  
 |展开|ExpansionStates|控件已展开。|  

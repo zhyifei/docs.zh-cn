@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353033"
 ---
-# <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>How to: Find a Child Element (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>如何：查找子元素（LINQ to XML）（Visual Basic）
 本主题将 XPath 子元素轴与 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> 方法进行比较。  
   
  XPath 表达式为 `DeliveryNotes`。  
@@ -46,6 +46,6 @@ Results are identical
 <DeliveryNotes>Please leave packages in shed by driveway.</DeliveryNotes>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 用户的 LINQ to XML （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

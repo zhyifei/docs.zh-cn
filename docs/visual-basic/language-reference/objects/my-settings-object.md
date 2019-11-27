@@ -15,51 +15,51 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350358"
 ---
 # <a name="mysettings-object"></a>My.Settings 对象
-Provides properties and methods for accessing the application's settings.  
+提供用于访问应用程序设置的属性和方法。  
   
 ## <a name="remarks"></a>备注  
- The `My.Settings` object provides access to the application's settings and allows you to dynamically store and retrieve property settings and other information for your application. 有关详细信息，请参阅[管理应用程序设置 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)。  
+ `My.Settings` 对象提供对应用程序设置的访问权限，并允许您动态存储和检索应用程序的属性设置和其他信息。 有关详细信息，请参阅[管理应用程序设置 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)。  
   
 ## <a name="properties"></a>属性  
- `My.Settings` 对象的属性提供对应用程序设置的访问。 To add or remove settings, use the **Settings Designer**.  
+ `My.Settings` 对象的属性提供对应用程序设置的访问。 若要添加或删除设置，请使用 "**设置设计器**"。  
   
- Each setting has a **Name**, **Type**, **Scope**, and **Value**, and these settings determine how the property to access each setting appears in the `My.Settings` object:  
+ 每个设置都具有**名称**、**类型**、**作用域**和**值**，并且这些设置确定如何在 `My.Settings` 对象中显示每个设置的属性：  
   
-- **Name** determines the name of the property.  
+- **名称**确定属性的名称。  
   
-- **Type** determines the type of the property.  
+- **类型**确定属性的类型。  
   
-- **Scope** indicates if the property is read-only. If the value is **Application**, the property is read-only; if the value is **User**, the property is read-write.  
+- **Scope**指示属性是否为只读。 如果值为 "**应用程序**"，则属性是只读的;如果值是**User**，则属性是可读写的。  
   
-- **Value** is the default value of the property.  
+- **值**是属性的默认值。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |---|---|  
-|`Reload`|Reloads the user settings from the last saved values.|  
-|`Save`|Saves the current user settings.|  
+|`Reload`|重新加载上次保存的值中的用户设置。|  
+|`Save`|保存当前用户设置。|  
   
- The `My.Settings` object also provides advanced properties and methods, inherited from the <xref:System.Configuration.ApplicationSettingsBase> class.  
+ `My.Settings` 对象还提供从 <xref:System.Configuration.ApplicationSettingsBase> 类继承的高级属性和方法。  
   
 ## <a name="tasks"></a>任务  
- The following table lists examples of tasks involving the `My.Settings` object.  
+ 下表列出了涉及 `My.Settings` 对象的任务示例。  
   
-|功能|查看|  
+|至|请参阅|  
 |---|---|  
-|Read an application setting|[如何：在 Visual Basic 中读取应用程序设置](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
-|Change a user setting|[如何：在 Visual Basic 中更改用户设置](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|Persist user settings|[如何：在 Visual Basic 中保存用户设置](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|Create a property grid for user settings|[如何：在 Visual Basic 中创建用户设置的属性网格](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|读取应用程序设置|[如何：在 Visual Basic 中读取应用程序设置](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
+|更改用户设置|[如何：在 Visual Basic 中更改用户设置](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
+|持久保存用户设置|[如何：在 Visual Basic 中保存用户设置](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
+|创建用户设置的属性网格|[如何：在 Visual Basic 中创建用户设置的属性网格](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
   
 ## <a name="example"></a>示例  
  此示例显示 `Nickname` 设置的值。  
   
  [!code-vb[VbVbalrMyResources#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#14)]  
   
- 若要使此示例正常工作，应用程序必须具有类型为 `String` 的 `Nickname` 设置。  
+ 若要使此示例正常工作，应用程序必须具有类型为 `Nickname` 的 `String` 设置。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Configuration.ApplicationSettingsBase>
 - [如何：在 Visual Basic 中读取应用程序设置](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428317"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams 方法
-Gets an enumerator for an array of generic parameter tokens associated with the specified TypeDef or MethodDef token.  
+获取与指定的 TypeDef 或 MethodDef 标记相关联的泛型参数标记数组的枚举器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,37 +39,37 @@ HRESULT EnumGenericParams (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in，out]指向枚举器的指针。  
   
  `tk`  
- [in] The TypeDef or MethodDef token whose generic parameters are to be enumerated.  
+ 中要枚举其泛型参数的 TypeDef 或 MethodDef 标记。  
   
  `rGenericParams`  
- [out] The array of generic parameters to enumerate.  
+ 弄要枚举的泛型参数的数组。  
   
  `cMax`  
- [in] The requested maximum number of tokens to place in `rGenericParams`.  
+ 中请求的最大标记数 `rGenericParams`。  
   
  `pcGenericParams`  
- [out] The returned number of tokens placed in `rGenericParams`.  
+ 弄`rGenericParams`中放置的标记数。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams` returned successfully.|  
-|`S_FALSE`|`phEnum` has no member elements. In this case, `pcGenericParams` is set to 0 (zero).|  
+|`S_OK`|`EnumGenericParams` 成功返回。|  
+|`S_FALSE`|`phEnum` 没有成员元素。 在这种情况下，`pcGenericParams` 设置为0（零）。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

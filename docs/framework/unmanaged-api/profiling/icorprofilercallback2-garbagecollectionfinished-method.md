@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439838"
 ---
 # <a name="icorprofilercallback2garbagecollectionfinished-method"></a>ICorProfilerCallback2::GarbageCollectionFinished 方法
-Notifies the profiler that garbage collection has completed and all garbage collection callbacks have been issued for it.  
+通知探查器垃圾回收已完成，并为其发出了所有垃圾回收回调。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,7 +32,7 @@ HRESULT GarbageCollectionFinished();
 ```  
   
 ## <a name="remarks"></a>备注  
- It is safe for the profiler to inspect objects in their final locations when the `GarbageCollectionFinished` method is called.  
+ 调用 `GarbageCollectionFinished` 方法时，探查器可以安全检查其最终位置中的对象。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -43,7 +43,7 @@ HRESULT GarbageCollectionFinished();
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerCallback2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

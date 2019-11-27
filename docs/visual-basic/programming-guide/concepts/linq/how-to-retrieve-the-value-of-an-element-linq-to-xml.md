@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352425"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>How to: Retrieve the Value of an Element (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>如何：检索元素的值（LINQ to XML）（Visual Basic）
 本主题演示如何获取元素的值。 有两种主要方法可以完成此操作。 一种方法是将 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 强制转换为所需的类型。 然后，显式转换运算符将元素或属性的内容转换为指定的类型，并将其分配给变量。 此外，还可以使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 属性或 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> 属性。  
   
  对于 Visual Basic，最好的方法是使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 属性。  
@@ -149,6 +149,6 @@ v4:element does not exist
   
  通常情况下，当使用强制转换来检索元素和属性的内容时，可以编写更简易的代码。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [LINQ to XML 轴 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

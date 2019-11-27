@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450317"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps 方法
-Sets or updates the specified feature of an event defined by a prior call to [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
+设置或更新通过之前对 IMetaDataEmit 的调用定义的事件的指定功能[：:D efineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,36 +41,36 @@ HRESULT SetEventProps (
   
 ## <a name="parameters"></a>参数  
  `ev`  
- [in] The event token.  
+ 中事件标记。  
   
  `dwEventFlags`  
- [in] Event flags. This is a bitmask of `CorEventAttr` values.  
+ 中事件标志。 这是 `CorEventAttr` 值的位掩码。  
   
  `tkEventType`  
- [in] The token for the event class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
+ 中事件类的标记。 这是 `mdTypeDef` 或 `mdTypeRef` 令牌。  
   
  `mdAddOn`  
- [in] The method used to subscribe to the event, or null.  
+ 中用于订阅事件的方法，或为 null。  
   
  `mdRemoveOn`  
- [in] The method used to unsubscribe to the event, or null.  
+ 中用于取消订阅事件的方法，或为 null。  
   
  `mdFire`  
- [in] The method used (by a derived class) to raise the event.  
+ 中使用的方法（由派生类）引发事件。  
   
  `rmdOtherMethods[]`  
- [in] An array of tokens for other methods associated with the event. The last element of the array must be `mdMethodDefNil`.  
+ 中与事件关联的其他方法的标记数组。 数组的最后一个元素必须是 `mdMethodDefNil`。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

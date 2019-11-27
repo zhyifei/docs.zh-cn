@@ -23,11 +23,11 @@ ms.locfileid: "74350682"
  `My.Request` 对象仅适用于 ASP.NET 应用程序。  
   
 ## <a name="example"></a>示例  
- The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.  
+ 下面的示例从 `My.Request` 对象获取标头集合，并使用 `My.Response` 对象将其写入到 ASP.NET 页。  
   
  [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Web.HttpRequest>
 - [My.Response 对象](../../../visual-basic/language-reference/objects/my-response-object.md)

@@ -14,10 +14,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353574"
 ---
 # <a name="in-clause-visual-basic"></a>In 子句 (Visual Basic)
-Specifies the group that the loop variable is to traverse in a `For Each` loop, or specifies the collection to query in a `From`, `Join`, or `Group Join` clause.  
+指定在 `For Each` 循环中循环变量要遍历的组，或指定要在 `From`、`Join`或 `Group Join` 子句中查询的集合。  
   
 ## <a name="remarks"></a>备注  
- The `In` keyword can be used in the following contexts:  
+ 在以下上下文中，可以使用 `In` 关键字：  
   
  [For Each...Next 语句](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
@@ -27,6 +27,6 @@ Specifies the group that the loop variable is to traverse in a `For Each` loop, 
   
  [Group Join 子句](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [关键字](../../../visual-basic/language-reference/keywords/index.md)

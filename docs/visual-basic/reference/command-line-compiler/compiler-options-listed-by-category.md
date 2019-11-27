@@ -11,12 +11,12 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344808"
 ---
-# <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic compiler options listed by category
-The Visual Basic command-line compiler is provided as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE). The following is a list of the Visual Basic command-line compiler options sorted by functional category.  
+# <a name="visual-basic-compiler-options-listed-by-category"></a>按类别列出的 Visual Basic 编译器选项
+作为从 Visual Studio 集成开发环境（IDE）中编译程序的替代方法，可以使用 Visual Basic 命令行编译器。 下面是按功能类别排序 Visual Basic 命令行编译器选项的列表。  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
-## <a name="compiler-output"></a>Compiler output  
+## <a name="compiler-output"></a>编译器输出  
   
 |选项|目标|  
 |---|---|  
@@ -39,13 +39,13 @@ The Visual Basic command-line compiler is provided as an alternative to compilin
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|处理 XML 文件的文档注释。|  
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|如果输入相同，则会导致编译器输出的程序集其二进制内容在整个编译中相同。|
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Sets the compiler to target the .NET Compact Framework.|  
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|设置编译器以面向 .NET Compact Framework。|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|指定输出目录。|  
-|[/refonly](refonly-compiler-option.md)|Outputs only a reference assembly.|
-|[/refout](refout-compiler-option.md)|Specifies the output path of a reference assembly.|
+|[/refonly](refonly-compiler-option.md)|仅输出引用程序集。|
+|[/refout](refout-compiler-option.md)|指定引用程序集的输出路径。|
 |[-target](../../../visual-basic/reference/command-line-compiler/target.md)|指定输出的格式。|  
   
-## <a name="net-assemblies"></a>.NET assemblies  
+## <a name="net-assemblies"></a>.NET 程序集  
   
 |选项|目标|  
 |---|---|  
@@ -54,13 +54,13 @@ The Visual Basic command-line compiler is provided as an alternative to compilin
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|从指定的程序集导入命名空间。|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|指定密钥对的密钥容器名称从而为程序集赋予强名称。|  
 |[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|指定包含密钥或密钥对的文件从而为程序集赋予强名称。|  
-|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|Specifies the location of assemblies referenced by the [-reference](../../../visual-basic/reference/command-line-compiler/reference.md) option.|  
+|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|指定由[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)选项引用的程序集的位置。|  
 |[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|从程序集导入元数据。|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|指定模块所属程序集的名称。|  
 |`-analyzer`|从此程序集（缩写形式：-a）运行分析器|  
 |`-additionalfile`|命名其他文件，这些文件不会直接影响代码生成，但可能由分析器用于生成错误或警告。|  
   
-## <a name="debuggingerror-checking"></a>Debugging/error checking  
+## <a name="debuggingerror-checking"></a>调试/错误检查  
   
 |选项|目标|  
 |---|---|  
@@ -79,11 +79,11 @@ The Visual Basic command-line compiler is provided as an alternative to compilin
 |[-?](../../../visual-basic/reference/command-line-compiler/help.md)|显示编译器选项。 此命令等同于指定 `-help` 选项。 未进行编译。|  
 |[-help](../../../visual-basic/reference/command-line-compiler/help.md)|显示编译器选项。 此命令等同于指定 `-?` 选项。 未进行编译。|  
   
-## <a name="language"></a>语言  
+## <a name="language"></a>Language  
   
 |选项|目标|  
 |---|---|  
-|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Specify language version: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
+|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|指定语言版本： 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0。|  
 |[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|强制执行显式声明变量。|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|执行严格的类语义。|  
 |[-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|指定字符串比较是否应为二进制，或是否应使用特定于区域设置的文本语义。|  
@@ -104,16 +104,16 @@ The Visual Basic command-line compiler is provided as an alternative to compilin
 |[-win32icon](../../../visual-basic/reference/command-line-compiler/win32icon.md)|将 .ico 文件插入到输出文件。|  
 |[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|将 Win32 资源插入到输出文件。|  
   
-## <a name="miscellaneous"></a>杂项  
+## <a name="miscellaneous"></a>其他  
   
 |选项|目标|  
 |---|---|  
 |[@（指定响应文件）](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|指定响应文件。|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|指定的 DLL 的基址。|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|指定要用于编译中所有源代码文件的代码页。|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Specifies how the Visual Basic compiler should report internal compiler errors.|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|指定 Visual Basic 编译器如何报告内部编译器错误。|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|向 Windows 内核提供下列信息：特定的可执行文件是否支持高熵地址空间布局随机化 (ASLR)。|  
-|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Specifies the class that contains the `Sub Main` procedure to use at startup.|  
+|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|指定包含要在启动时使用的 `Sub Main` 过程的类。|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|不要使用 Vbc.rsp 进行编译|  
 |[-nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|导致编译器不引用标准库。|  
 |[-nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|指示编译器不在可执行文件中嵌入任何应用程序清单。|  
@@ -124,9 +124,9 @@ The Visual Basic command-line compiler is provided as an alternative to compilin
 |[-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)|指定编译器应在不引用 Visual Basic 运行库的情况下进行编译，或在引用特定运行库的情况下进行编译。|  
 |[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|标识用户定义的 Win32 应用程序清单文件要嵌入到项目的可移植可执行 (PE) 文件。|  
 |`-parallel[+&#124;-]`|指定是否使用并发生成 (+)。|  
-|`-checksumalgorithm:<alg>`|指定用于计算 PDB 中存储的源文件校验和的算法。  支持的值为：SHA1（默认值）或 SHA256。 <br>Due to collision problems with SHA1, Microsoft recommends SHA256 or better.|  
+|`-checksumalgorithm:<alg>`|指定用于计算 PDB 中存储的源文件校验和的算法。  支持的值为：SHA1（默认值）或 SHA256。 <br>由于 SHA1 出现冲突，Microsoft 建议 SHA256 或更好。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [按字母顺序列出的 Visual Basic 编译器选项](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
+- [Visual Basic Compiler Options Listed Alphabetically](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

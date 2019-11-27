@@ -1,5 +1,5 @@
 ---
-title: 'How to: Validate File Names and Paths'
+title: 如何：验证文件名和路径
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file names [Visual Basic], validating
@@ -15,14 +15,14 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344366"
 ---
 # <a name="how-to-validate-file-names-and-paths-in-visual-basic"></a>如何：在 Visual Basic 中验证文件名和路径
-This example returns a `Boolean` value that indicates whether a string represents a file name or path. The validation checks if the name contains characters that are not allowed by the file system.  
+此示例返回一个 `Boolean` 值，该值指示字符串是否表示文件名或路径。 验证检查名称是否包含文件系统不允许使用的字符。  
   
 ## <a name="example"></a>示例  
  [!code-vb[VbVbcnRegEx#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#4)]  
   
- This example does not check if the name has incorrectly placed colons, or directories with no name, or if the length of the name exceeds the system-defined maximum length. It also does not check if the application has permission to access the file-system resource with the specified name.  
+ 此示例不检查名称是否错误地放置了冒号或没有名称的目录，或者名称长度是否超过了系统定义的最大长度。 它也不会检查应用程序是否有权访问具有指定名称的文件系统资源。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.IO.Path.GetInvalidPathChars%2A>
 - [在 Visual Basic 中验证字符串](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)

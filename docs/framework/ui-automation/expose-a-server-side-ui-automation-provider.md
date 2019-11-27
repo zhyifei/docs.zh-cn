@@ -28,7 +28,7 @@ ms.locfileid: "74433615"
  [!code-csharp[UIAFragmentProvider_snip#116](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#116)]
  [!code-vb[UIAFragmentProvider_snip#116](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#116)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UI 自动化提供程序概述](ui-automation-providers-overview.md)
 - [服务器端 UI 自动化提供程序实现](server-side-ui-automation-provider-implementation.md)

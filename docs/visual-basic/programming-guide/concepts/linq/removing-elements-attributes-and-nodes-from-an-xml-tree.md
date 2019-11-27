@@ -9,16 +9,16 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348956"
 ---
-# <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-visual-basic"></a>Removing Elements, Attributes, and Nodes from an XML Tree (Visual Basic)
+# <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-visual-basic"></a>从 XML 树中移除元素、特性和节点（Visual Basic）
 可以修改 XML 树，移除元素、属性和其他类型的节点。  
   
  从 XML 文档中移除单个元素或单个属性的操作非常简单。 但是，若要移除多个元素或属性的集合，则应首先将一个集合具体化为一个列表，然后从该列表中删除相应元素或属性。 最好的方法是使用 <xref:System.Xml.Linq.Extensions.Remove%2A> 扩展方法，该方法可以实现此操作。  
   
- 这么做的主要原因在于，从 XML 树检索的大多数集合都是用延迟执行生成的。 如果不首先将集合具体化为列表，或者不使用扩展方法，则可能会遇到某类 Bug。 For more information, see [Mixed Declarative Code/Imperative Code Bugs (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).  
+ 这么做的主要原因在于，从 XML 树检索的大多数集合都是用延迟执行生成的。 如果不首先将集合具体化为列表，或者不使用扩展方法，则可能会遇到某类 Bug。 有关详细信息，请参阅[混合声明性代码/命令性代码 bug （LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md)。  
   
  下列方法可以从 XML 树中移除节点和属性。  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=nameWithType>|从父节点中移除 <xref:System.Xml.Linq.XAttribute>。|  
 |<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=nameWithType>|从 <xref:System.Xml.Linq.XContainer> 中移除子节点。|  
@@ -31,10 +31,10 @@ ms.locfileid: "74348956"
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
  此示例演示三种移除元素的方法。 第一种，移除单个元素。 第二种，检索元素的集合，使用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 运算符将它们具体化，然后移除集合。 最后一种，检索元素的集合，使用 <xref:System.Xml.Linq.Extensions.Remove%2A> 扩展方法移除元素。  
   
- For more information on the <xref:System.Linq.Enumerable.ToList%2A> operator, see [Converting Data Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md).  
+ 有关 <xref:System.Linq.Enumerable.ToList%2A> 运算符的详细信息，请参阅[转换数据类型（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)。  
   
 ### <a name="code"></a>代码  
   
@@ -63,7 +63,7 @@ root.<Child3>.Elements().Remove()
 Console.WriteLine(root)  
 ```  
   
-### <a name="comments"></a>注释  
+### <a name="comments"></a>Comments  
  此代码生成以下输出：  
   
 ```xml  
@@ -79,6 +79,6 @@ Console.WriteLine(root)
   
  请注意，第一个孙元素已从 `Child1` 中移除。 所有孙元素都已从 `Child2` 和 `Child3` 中移除。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [修改 XML 树（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

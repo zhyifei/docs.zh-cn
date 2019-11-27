@@ -18,36 +18,36 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346291"
 ---
 # <a name="value-comparisons-visual-basic"></a>值的比较 (Visual Basic)
-Comparison operators can be used to construct expressions that compare the values of numeric variables. These expressions return a `Boolean` value based on whether the comparison is true or false. Examples of such an expression are as follows.  
+比较运算符可用于构造比较数值变量的值的表达式。 这些表达式根据比较结果是 true 还是 false 返回 `Boolean` 值。 此类表达式的示例如下所示。  
   
  `45 > 26`  
   
  `26 > 45`  
   
- The first expression evaluates to `True`, because 45 is greater than 26. The second example evaluates to `False`, because 26 is not greater than 45.  
+ 第一个表达式的计算结果为 `True`，因为45大于26。 第二个示例的计算结果为 `False`，因为26不大于45。  
   
- You can also compare numeric expressions in this fashion. The expressions you compare can themselves be complex expressions, as in the following example.  
+ 您还可以采用这种方式比较数值表达式。 比较的表达式本身就是复杂表达式，如下面的示例中所示。  
   
  `x / 45 * (y +17) >= System.Math.Sqrt(z) / (p - (x * 16))`  
   
- The preceding complex expression includes literals, variables, and function calls. The expressions on both sides of the comparison operator are evaluated, and the resulting values are then compared using the `>=` comparison operator. If the value of the expression on the left side is greater than or equal to the value of the expression on the right, the entire expression evaluates to `True`; otherwise, it evaluates to `False`.  
+ 前面的复杂表达式包括文本、变量和函数调用。 将计算比较运算符两侧的表达式，然后使用 `>=` 比较运算符比较结果值。 如果左侧表达式的值大于或等于右侧表达式的值，则整个表达式的计算结果为 `True`;否则，它的计算结果为 `False`。  
   
- Expressions that compare values are most commonly used in `If...Then` constructions, as in the following example.  
+ 比较值的表达式最常用于 `If...Then` 构造中，如下面的示例中所示。  
   
  [!code-vb[VbVbalrOperators#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#84)]  
   
- The `=` sign is a comparison operator as well as an assignment operator. When used as a comparison operator, it evaluates whether the value on the left is equal to the value on the right, as shown in the following example.  
+ `=` 符号是比较运算符以及赋值运算符。 用作比较运算符时，它计算左侧的值是否等于右侧的值，如下面的示例中所示。  
   
  [!code-vb[VbVbalrOperators#85](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#85)]  
   
- You can also use a comparison expression anywhere a `Boolean` value is needed, such as in an `If`, `While`, `Loop`, or `ElseIf` statement, or when assigning to or passing a value to a `Boolean` variable. In the following example, the value returned by the comparison expression is assigned to a `Boolean` variable.  
+ 你还可以在需要 `Boolean` 值的任何位置使用比较表达式，如在 `If`、`While`、`Loop`或 `ElseIf` 语句中，或者在赋值或将值传递到 `Boolean` 变量时使用。 在下面的示例中，比较表达式返回的值被分配给一个 `Boolean` 变量。  
   
  [!code-vb[VbVbalrOperators#86](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#86)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [布尔表达式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
 - [运算符和表达式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [如何：计算数值](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)
 - [Visual Basic 中的运算符优先级](../../../../visual-basic/language-reference/operators/operator-precedence.md)

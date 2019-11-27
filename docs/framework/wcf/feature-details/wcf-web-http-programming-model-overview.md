@@ -14,13 +14,13 @@ Windows Communication Foundation （WCF） WEB HTTP 编程模型提供了用 WCF
   
 - **Uri 和 Uri 处理**Uri 在 WEB HTTP 服务的设计中扮演着一个中心角色。 WCF WEB HTTP 编程模型使用 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 类来提供 URI 处理功能。  
   
-- **支持 GET 和 POST 操作** 除了使用各种调用谓词来进行数据修改和远程调用之外，WEB HTTP 服务还使用 GET 谓词进行数据检索。 WCF WEB HTTP 编程模型使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 将服务操作与 GET 和其他 HTTP 谓词（如 PUT、POST 和 DELETE）相关联。  
+- **支持 GET 和 POST 操作**WEB HTTP 服务除了使用各种调用谓词来进行数据修改和远程调用以外，还使用 GET 谓词进行数据检索。 WCF WEB HTTP 编程模型使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 将服务操作与 GET 和其他 HTTP 谓词（如 PUT、POST 和 DELETE）相关联。  
   
-- **多种数据格式** Web 样式服务除了处理 SOAP 消息之外，还可处理很多种数据。 WCF WEB HTTP 编程模型使用 <xref:System.ServiceModel.WebHttpBinding> 和 <xref:System.ServiceModel.Description.WebHttpBehavior> 来支持多种不同的数据格式，包括 XML 文档、JSON 数据对象和二进制内容（如图像、视频文件或纯文本）的流。  
+- **多种数据格式**除了 SOAP 消息以外，Web 样式服务还处理多种类型的数据。 WCF WEB HTTP 编程模型使用 <xref:System.ServiceModel.WebHttpBinding> 和 <xref:System.ServiceModel.Description.WebHttpBehavior> 来支持多种不同的数据格式，包括 XML 文档、JSON 数据对象和二进制内容（如图像、视频文件或纯文本）的流。  
   
  WCF WEB HTTP 编程模型扩展了 WCF 的覆盖范围，以涵盖包括 WEB HTTP 服务、AJAX 和 JSON 服务以及联合（ATOM/RSS）源的 Web 样式方案。 有关 AJAX 和 JSON 服务的详细信息，请参阅[Ajax 集成和 Json 支持](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。 有关联合的详细信息，请参阅[WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)。  
   
- 对于可从 WEB HTTP 服务返回的数据的类型没有额外的限制。 任何可序列化类型都可以从 WEB HTTP 服务操作返回。 因为 WEB HTTP 服务操作可以通过 Web 浏览器调用，所以对可在 URL 中指定的数据类型有一个限制。 有关默认情况下支持的类型的更多信息，请参见下面的 **UriTemplate 查询字符串参数和 URL** 一节。 通过提供您自己的 T:System.ServiceModel.Dispatcher.QueryStringConverter 实现来指定如何将 URL 中指定的参数转换为实际参数类型，可以更改默认行为。 有关详细信息，请参阅<xref:System.ServiceModel.Dispatcher.QueryStringConverter>。  
+ 对于可从 WEB HTTP 服务返回的数据的类型没有额外的限制。 任何可序列化类型都可以从 WEB HTTP 服务操作返回。 因为 WEB HTTP 服务操作可以通过 Web 浏览器调用，所以对可在 URL 中指定的数据类型有一个限制。 有关默认情况下支持的类型的详细信息，请参阅下面的**UriTemplate 查询字符串参数和 url**部分。 通过提供您自己的 T:System.ServiceModel.Dispatcher.QueryStringConverter 实现来指定如何将 URL 中指定的参数转换为实际参数类型，可以更改默认行为。 有关详细信息，请参阅<xref:System.ServiceModel.Dispatcher.QueryStringConverter>。  
   
 > [!CAUTION]
 > 使用 WCF WEB HTTP 编程模型编写的服务不使用 SOAP 消息。 由于不使用 SOAP，因此不能使用 WCF 提供的安全功能。 然而，您可以通过使用 HTTPS 承载服务来使用基于传输的安全性。 有关 WCF 安全的详细信息，请参阅[安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
@@ -45,7 +45,7 @@ Windows Communication Foundation （WCF） WEB HTTP 编程模型提供了用 WCF
   
  .NET Framework 提供了一个 API 来处理名为 <xref:System.UriTemplate> 的 URI 模板。 `UriTemplates` 允许你执行以下操作：  
   
-- 可以使用一组参数来调用 `Bind` 方法之一，以生成一个与模板匹配的完全封闭的 URI。 这意味着，URI 模板中的所有变量均由实际值替换。  
+- 您可以使用一组参数调用 `Bind` 方法之一来生成与模板匹配的*完全关闭的 URI* 。 这意味着，URI 模板中的所有变量均由实际值替换。  
   
 - 可以使用候选 URI 调用 `Match`()，此时会使用模板将候选 URI 的各个组成部分分解开来，并会返回一个字典，其中包含根据模板中的变量标记的 URI 的不同部分。  
   
@@ -101,7 +101,7 @@ interface ICustomer
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>UriTemplate 查询字符串参数和 URL  
  可以通过键入与服务操作相关联的 URL 来从 Web 浏览器调用 Web 样式服务。 这些服务操作可以采用查询字符串参数，必须在 URL 内使用字符串格式指定这些参数。 下表演示可以在 URL 内传递的类型和使用的格式。  
   
-|Type|格式|  
+|类型|格式|  
 |----------|------------|  
 |<xref:System.Byte>|0 - 255|  
 |<xref:System.SByte>|-128 - 127|  
@@ -113,7 +113,7 @@ interface ICustomer
 |<xref:System.UInt64>|0 - 18,446,744,073,709,551,615|  
 |<xref:System.Single>|-3.402823e38 - 3.402823e38（不需要指数表示法）|  
 |<xref:System.Double>|-1.79769313486232e308 - 1.79769313486232e308（不需要指数表示法）|  
-|<xref:System.Char>|任何单个字符|  
+|<xref:System.Char>|任一字符|  
 |<xref:System.Decimal>|使用标准表示法的任何小数（无指数）|  
 |<xref:System.Boolean>|True 或 False（不区分大小写）|  
 |<xref:System.String>|任何字符串（不支持空字符串，且不进行转义）|  

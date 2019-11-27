@@ -18,9 +18,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449800"
 ---
-# <a name="icorprofilerinfo10resumeruntime-method"></a>ICorProfilerInfo10::ResumeRuntime Method
+# <a name="icorprofilerinfo10resumeruntime-method"></a>ICorProfilerInfo10：： ResumeRuntime 方法
 
-Resumes the runtime without performing a GC.
+恢复运行时，而不执行 GC。
 
 ## <a name="syntax"></a>语法
 
@@ -30,14 +30,14 @@ HRESULT ResumeRuntime();
 
 ## <a name="requirements"></a>要求
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**平台：** 请参阅[支持 .Net Core 的操作系统](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)。
 
 **头文件：** CorProf.idl、CorProf.h
 
 **库：** CorGuids.lib
 
-**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.Net 版本：** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

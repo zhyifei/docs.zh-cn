@@ -22,10 +22,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427344"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall 函数
-Notifies the profiler that the currently executing function is about to perform a tail call to another function.  
+通知探查器，当前正在执行的函数即将对另一个函数执行尾调用。  
   
 > [!NOTE]
-> The `FunctionTailcall` function is deprecated in the .NET Framework version 2.0. It will continue to work, but will incur a performance penalty. Use the [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) function instead.  
+> `FunctionTailcall` 函数在 .NET Framework 版本2.0 中已弃用。 它将继续运行，但会导致性能下降。 改为使用[FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,33 +37,33 @@ void __stdcall FunctionTailcall (
   
 ## <a name="parameters"></a>参数  
  `funcID`  
- [in] The identifier of the currently executing function that is about to make a tail call.  
+ 中要进行尾调用的当前正在执行的函数的标识符。  
   
 ## <a name="remarks"></a>备注  
- The target function of the tail call will use the current stack frame, and will return directly to the caller of the function that made the tail call. This means that a [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) callback will not be issued for a function that is the target of a tail call.  
+ 尾调用的目标函数将使用当前堆栈帧，并将直接返回到进行尾调用的函数的调用方。 这意味着将不会为作为尾调用目标的函数发出[FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)回调。  
   
- The `FunctionTailcall` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
+ `FunctionTailcall` 函数是回调;必须实现此方法。 实现必须使用 `__declspec`（`naked`）存储类特性。  
   
- The execution engine does not save any registers before calling this function.  
+ 在调用此函数之前，执行引擎不会保存任何注册。  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- 进入时，必须保存使用的所有寄存器，包括浮点单元（FPU）中的所有寄存器。  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- 退出时，必须通过弹出由其调用方推送的所有参数来还原堆栈。  
   
- The implementation of `FunctionTailcall` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionTailcall` returns.  
+ `FunctionTailcall` 的实现不应被阻止，因为它将延迟垃圾回收。 实现不应尝试垃圾回收，因为堆栈可能不处于垃圾回收友好状态。 如果尝试垃圾回收，则运行时将被阻止，直到 `FunctionTailcall` 返回。  
   
- Also, the `FunctionTailcall` function must not call into managed code or in any way cause a managed memory allocation.  
+ 此外，`FunctionTailcall` 函数不得调入托管代码或以任何方式导致托管的内存分配。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorProf.idl  
+ **标头：** Corprof.idl .idl  
   
  **库：** CorGuids.lib  
   
- **.NET Framework Versions:** 1.1, 1.0  
+ **.NET Framework 版本：** 1.1、1。0  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [FunctionEnter2 函数](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
 - [FunctionLeave2 函数](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)

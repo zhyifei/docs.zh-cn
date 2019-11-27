@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440489"
 ---
 # <a name="imetadataemit2getdeltasavesize-method"></a>IMetaDataEmit2::GetDeltaSaveSize 方法
-Gets a value indicating any change in metadata size that results from the current edit-and-continue session.  
+获取一个值，该值指示当前的 "编辑并继续" 会话导致的元数据大小的任何更改。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,21 +36,21 @@ HRESULT GetDeltaSaveSize (
   
 ## <a name="parameters"></a>参数  
  `fSave`  
- [in] One of the [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) values, indicating the level of precision desired. For the .NET Framework version 2.0, this parameter is ignored.  
+ 中[CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md)值之一，指示所需的精度级别。 对于 .NET Framework 版本2.0，将忽略此参数。  
   
  `pdwSaveSize`  
- [out] The change in the size of the metadata.  
+ 弄元数据的大小更改。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
 - [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

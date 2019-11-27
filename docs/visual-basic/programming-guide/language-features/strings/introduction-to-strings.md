@@ -12,18 +12,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344311"
 ---
 # <a name="introduction-to-strings-in-visual-basic"></a>字符串介绍 (Visual Basic)
-This section describes the basic concepts behind using strings in Visual Basic.  
+本部分介绍使用 Visual Basic 中的字符串的基本概念。  
   
 ## <a name="in-this-section"></a>本节内容  
  [字符串基础](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
- Introduces the basic concepts behind using strings and string variables.  
+ 介绍使用字符串和字符串变量的基本概念。  
   
- [Types of String Manipulation Methods in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
- Introduces several different ways to analyze and manipulate strings.  
+ [Visual Basic 中的字符串操作方法的类型](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
+ 介绍用于分析和操作字符串的多种不同方法。  
   
- [How Culture Affects Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
- Discusses how Visual Basic uses culture information to perform string conversions and comparisons.  
+ [区域性如何影响中的字符串 Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
+ 讨论 Visual Basic 如何使用区域性信息来执行字符串转换和比较。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [字符串](../../../../visual-basic/programming-guide/language-features/strings/index.md)

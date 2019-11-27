@@ -12,8 +12,8 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352287"
 ---
-# <a name="param-visual-basic"></a>\<param> (Visual Basic)
-Defines a parameter name and description.  
+# <a name="param-visual-basic"></a>\<参数 > （Visual Basic）
+定义参数名称和说明。  
   
 ## <a name="syntax"></a>语法  
   
@@ -29,21 +29,21 @@ Defines a parameter name and description.
  参数的说明。  
   
 ## <a name="remarks"></a>备注  
- The `<param>` tag should be used in the comment for a method declaration to describe one of the parameters for the method.  
+ 应在方法声明的注释中使用 `<param>` 标记来描述方法的参数之一。  
   
- The text for the `<param>` tag will appear in the following locations:  
+ `<param>` 标记的文本将出现在以下位置：  
   
-- Parameter Info of IntelliSense. 有关详细信息，请参阅[使用 IntelliSense](/visualstudio/ide/using-intellisense)。  
+- IntelliSense 的参数信息。 有关详细信息，请参阅 [Using IntelliSense](/visualstudio/ide/using-intellisense)。  
   
-- Object Browser. 有关详细信息，请参阅[查看代码的结构](/visualstudio/ide/viewing-the-structure-of-code)。  
+- 对象浏览器。 有关详细信息，请参阅[查看代码的结构](/visualstudio/ide/viewing-the-structure-of-code)。  
   
  使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译以便将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
- This example uses the `<param>` tag to describe the `id` parameter.  
+ 此示例使用 `<param>` 标记来描述 `id` 参数。  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)

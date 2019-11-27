@@ -12,8 +12,8 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352266"
 ---
-# <a name="permission-visual-basic"></a>\<permission> (Visual Basic)
-Specifies a required permission for the member.  
+# <a name="permission-visual-basic"></a>\<权限 > （Visual Basic）
+指定成员所需的权限。  
   
 ## <a name="syntax"></a>语法  
   
@@ -23,21 +23,21 @@ Specifies a required permission for the member.
   
 ## <a name="parameters"></a>参数  
  `member`  
- 对可从当前编译环境调用的成员或字段的引用。 编译器检查是否存在给定的代码元素，并将 `member` 转换为输出 XML 中规范的元素名称。 Enclose `member` in quotation marks (" ").  
+ 对可从当前编译环境调用的成员或字段的引用。 编译器检查是否存在给定的代码元素，并将 `member` 转换为输出 XML 中规范的元素名称。 将 `member` 括在引号（""）中。  
   
  `description`  
  对成员访问权限的说明。  
   
 ## <a name="remarks"></a>备注  
- Use the `<permission>` tag to document the access of a member. Use the <xref:System.Security.PermissionSet> class to specify access to a member.  
+ 使用 `<permission>` 标记来记录成员的访问。 使用 <xref:System.Security.PermissionSet> 类指定对成员的访问权限。  
   
  使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译以便将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
- This example uses the `<permission>` tag to describe that the <xref:System.Security.Permissions.FileIOPermission> is required by the `ReadFile` method.  
+ 此示例使用 `<permission>` 标记来描述 `ReadFile` 方法所需的 <xref:System.Security.Permissions.FileIOPermission>。  
   
  [!code-vb[VbVbcnXmlDocComments#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#7)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)

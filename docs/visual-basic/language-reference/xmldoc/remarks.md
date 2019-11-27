@@ -12,8 +12,8 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352251"
 ---
-# <a name="remarks-visual-basic"></a>\<remarks> (Visual Basic)
-Specifies a remarks section for the member.  
+# <a name="remarks-visual-basic"></a>\<备注 > （Visual Basic）
+为成员指定备注部分。  
   
 ## <a name="syntax"></a>语法  
   
@@ -26,17 +26,17 @@ Specifies a remarks section for the member.
  对成员的说明。  
   
 ## <a name="remarks"></a>备注  
- Use the `<remarks>` tag to add information about a type, supplementing the information specified with [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md).  
+ 使用 `<remarks>` 标记添加有关类型的信息，从而补充[\<summary >](../../../visual-basic/language-reference/xmldoc/summary.md)指定的信息。  
   
- This information appears in the Object Browser. For information about the Object Browser, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).  
+ 此信息显示在对象浏览器中。 有关对象浏览器的信息，请参阅[查看代码的结构](/visualstudio/ide/viewing-the-structure-of-code)。  
   
  使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译以便将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
- This example uses the `<remarks>` tag to explain what the `UpdateRecord` method does.  
+ 此示例使用 `<remarks>` 标记解释 `UpdateRecord` 方法的作用。  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)

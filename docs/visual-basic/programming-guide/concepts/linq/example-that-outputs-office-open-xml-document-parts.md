@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353501"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Example that Outputs Office Open XML Document Parts (Visual Basic)
+# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>输出 Office Open XML 文档部件的示例（Visual Basic）
 本主题演示如何打开 Office Open XML 文档并访问其中的部分。  
   
 ## <a name="example"></a>示例  
@@ -64,6 +64,6 @@ Using wdPackage As Package = Package.Open(fileName, FileMode.Open, FileAccess.Re
 End Using  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Details of Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [Office Open XML WordprocessingML 文档的详细信息（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

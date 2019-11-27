@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450358"
 ---
 # <a name="icorprofilerinfogetilfunctionbody-method"></a>ICorProfilerInfo::GetILFunctionBody 方法
-Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.  
+获取一个指针，该指针指向 Microsoft 中间语言（MSIL）代码中的方法的正文（从其标头开始）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,21 +37,21 @@ HRESULT GetILFunctionBody(
   
 ## <a name="parameters"></a>参数  
  `moduleId`  
- [in] The ID of the module in which the function resides.  
+ 中函数所在模块的 ID。  
   
  `methodId`  
- [in] The metadata token for the method.  
+ 中方法的元数据标记。  
   
  `ppMethodHeader`  
- [out] A pointer to the method's header.  
+ 弄指向方法的标头的指针。  
   
  `pcbMethodSize`  
- [out] An integer that specifies the size of the method.  
+ 弄一个整数，指定方法的大小。  
   
 ## <a name="remarks"></a>备注  
- A method is scoped by the module in which it lives. Because the `GetILFunctionBody` method is designed to give a tool access to the MSIL code before it has been loaded by the common language runtime (CLR), it uses the metadata token of the method to find the desired instance.  
+ 方法的作用域由其所在的模块确定。 由于 `GetILFunctionBody` 方法旨在在公共语言运行时（CLR）加载 MSIL 代码之前为其提供访问权限，因此它使用方法的元数据标记来查找所需的实例。  
   
- `GetILFunctionBody` can return a CORPROF_E_FUNCTION_NOT_IL HRESULT if the `methodId` points to a method without any MSIL code (such as an abstract method, or a platform invoke (PInvoke) method).  
+ 如果 `methodId` 指向不包含任何 MSIL 代码的方法（如抽象方法或平台调用（PInvoke）方法），`GetILFunctionBody` 可以返回 CORPROF_E_FUNCTION_NOT_IL HRESULT。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -62,6 +62,6 @@ HRESULT GetILFunctionBody(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

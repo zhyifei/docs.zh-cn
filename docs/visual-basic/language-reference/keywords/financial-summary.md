@@ -13,19 +13,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349814"
 ---
 # <a name="financial-summary-visual-basic"></a>财务摘要 (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Visual Basic 语言关键字和运行时库成员按用途和使用进行组织。  
   
-|操作|语言元素|  
+|操作|Language 元素|  
 |------------|----------------------|  
-|Calculate depreciation.|<xref:Microsoft.VisualBasic.Financial.DDB%2A>中， <xref:Microsoft.VisualBasic.Financial.SLN%2A>中， <xref:Microsoft.VisualBasic.Financial.SYD%2A>|  
-|Calculate future value.|<xref:Microsoft.VisualBasic.Financial.FV%2A>|  
-|Calculate interest rate.|<xref:Microsoft.VisualBasic.Financial.Rate%2A>|  
-|Calculate internal rate of return.|<xref:Microsoft.VisualBasic.Financial.IRR%2A>，<xref:Microsoft.VisualBasic.Financial.MIRR%2A>|  
-|Calculate number of periods.|<xref:Microsoft.VisualBasic.Financial.NPer%2A>|  
-|Calculate payments.|<xref:Microsoft.VisualBasic.Financial.IPmt%2A>中， <xref:Microsoft.VisualBasic.Financial.Pmt%2A>中， <xref:Microsoft.VisualBasic.Financial.PPmt%2A>|  
-|Calculate present value.|<xref:Microsoft.VisualBasic.Financial.NPV%2A>，<xref:Microsoft.VisualBasic.Financial.PV%2A>|  
+|计算折旧。|<xref:Microsoft.VisualBasic.Financial.DDB%2A>, <xref:Microsoft.VisualBasic.Financial.SLN%2A>, <xref:Microsoft.VisualBasic.Financial.SYD%2A>|  
+|计算未来值。|<xref:Microsoft.VisualBasic.Financial.FV%2A>|  
+|计算利率。|<xref:Microsoft.VisualBasic.Financial.Rate%2A>|  
+|计算返回的内部收益率。|<xref:Microsoft.VisualBasic.Financial.IRR%2A>, <xref:Microsoft.VisualBasic.Financial.MIRR%2A>|  
+|计算周期数。|<xref:Microsoft.VisualBasic.Financial.NPer%2A>|  
+|计算付款。|<xref:Microsoft.VisualBasic.Financial.IPmt%2A>, <xref:Microsoft.VisualBasic.Financial.Pmt%2A>, <xref:Microsoft.VisualBasic.Financial.PPmt%2A>|  
+|计算现有值。|<xref:Microsoft.VisualBasic.Financial.NPV%2A>, <xref:Microsoft.VisualBasic.Financial.PV%2A>|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [关键字](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 运行库成员](../../../visual-basic/language-reference/runtime-library-members.md)

@@ -44,24 +44,24 @@ typedef enum CorSetENC {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`MDSetENCOn`|已过时。|  
 |`MDSetENCOff`|已过时。|  
-|`MDUpdateENC`|Indicates that whereas metadata can be updated, tokens cannot be moved.|  
-|`MDUpdateFull`|Indicates that tokens can be moved during updates.|  
-|`MDUpdateExtension`|Indicates that updates can consist only of additions. Tokens cannot be moved.|  
-|`MDUpdateIncremental`|Indicates that compilation is incremental.|  
-|`MDUpdateDelta`|Indicates that only changed metadata should be saved.|  
-|`MDUpdateMask`|Includes `MDUpdateENC`, `MDUpdateFull` and `MDUpdateIncremental`.|  
+|`MDUpdateENC`|指示可以更新元数据，而不能移动标记。|  
+|`MDUpdateFull`|指示在更新过程中可以移动令牌。|  
+|`MDUpdateExtension`|指示更新只能包含添加内容。 无法移动令牌。|  
+|`MDUpdateIncremental`|指示编译是递增的。|  
+|`MDUpdateDelta`|指示仅保存更改的元数据。|  
+|`MDUpdateMask`|包括 `MDUpdateENC`、`MDUpdateFull` 和 `MDUpdateIncremental`。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **标头：** Corhdr。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

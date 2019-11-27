@@ -31,54 +31,54 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346313"
 ---
 # <a name="numeric-data-types-visual-basic"></a>数值型数据类型 (Visual Basic)
-Visual Basic supplies several *numeric data types* for handling numbers in various representations. *Integral* types represent only whole numbers (positive, negative, and zero), and *nonintegral* types represent numbers with both integer and fractional parts.  
+Visual Basic 提供了几种*数值数据类型*来处理各种表示形式的数字。 *整数*类型仅表示整数（正值、负值和零） *，而非整数类型*表示同时包含整数部分和小数部分的数字。  
   
- For a table showing a side-by-side comparison of the Visual Basic data types, see [Data Types](../../../../visual-basic/language-reference/data-types/index.md).  
+ 有关显示 Visual Basic 数据类型的并行比较的表，请参阅[数据类型](../../../../visual-basic/language-reference/data-types/index.md)。  
   
-## <a name="integral-numeric-types"></a>Integral Numeric Types  
- *Integral data types* are those that represent only numbers without fractional parts.  
+## <a name="integral-numeric-types"></a>整数数值类型  
+ *整数数据类型*是指仅表示没有小数部分的数字的数据类型。  
   
- The *signed* integral data types are [SByte Data Type](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md) (8-bit), [Short Data Type](../../../../visual-basic/language-reference/data-types/short-data-type.md) (16-bit), [Integer Data Type](../../../../visual-basic/language-reference/data-types/integer-data-type.md) (32-bit), and [Long Data Type](../../../../visual-basic/language-reference/data-types/long-data-type.md) (64-bit). If a variable always stores integers rather than fractional numbers, declare it as one of these types.  
+ *带符号*的整型数据类型为[SByte 数据类型](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)（8位）、 [Short 数据类型](../../../../visual-basic/language-reference/data-types/short-data-type.md)（16位）、[整数数据类型](../../../../visual-basic/language-reference/data-types/integer-data-type.md)（32位）和[Long 数据类型](../../../../visual-basic/language-reference/data-types/long-data-type.md)（64位）。 如果变量始终存储整数而不是小数，则将其声明为这些类型之一。  
   
- The *unsigned* integral types are [Byte Data Type](../../../../visual-basic/language-reference/data-types/byte-data-type.md) (8-bit), [UShort Data Type](../../../../visual-basic/language-reference/data-types/ushort-data-type.md) (16-bit), [UInteger Data Type](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md) (32-bit), and [ULong Data Type](../../../../visual-basic/language-reference/data-types/ulong-data-type.md) (64-bit). If a variable contains binary data, or data of unknown nature, declare it as one of these types.  
-  
-### <a name="performance"></a>性能  
- Arithmetic operations are faster with integral types than with other data types. They are fastest with the `Integer` and `UInteger` types in Visual Basic.  
-  
-### <a name="large-integers"></a>Large Integers  
- If you need to hold an integer larger than the `Integer` data type can hold, you can use the `Long` data type instead. `Long` variables can hold numbers from -9,223,372,036,854,775,808 through 9,223,372,036,854,775,807. Operations with `Long` are slightly slower than with `Integer`.  
-  
- If you need even larger values, you can use the [Decimal Data Type](../../../../visual-basic/language-reference/data-types/decimal-data-type.md). You can hold numbers from -79,228,162,514,264,337,593,543,950,335 through 79,228,162,514,264,337,593,543,950,335 in a `Decimal` variable if you do not use any decimal places. However, operations with `Decimal` numbers are considerably slower than with any other numeric data type.  
-  
-### <a name="small-integers"></a>Small Integers  
- If you do not need the full range of the `Integer` data type, you can use the `Short` data type, which can hold integers from -32,768 through 32,767. For the smallest integer range, the `SByte` data type holds integers from -128 through 127. If you have a very large number of variables that hold small integers, the common language runtime can sometimes store your `Short` and `SByte` variables more efficiently and save memory consumption. However, operations with `Short` and `SByte` are somewhat slower than with `Integer`.  
-  
-### <a name="unsigned-integers"></a>Unsigned Integers  
- If you know that your variable never needs to hold a negative number, you can use the *unsigned types*`Byte`, `UShort`, `UInteger`, and `ULong`. Each of these data types can hold a positive integer twice as large as its corresponding signed type (`SByte`, `Short`, `Integer`, and `Long`). In terms of performance, each unsigned type is exactly as efficient as its corresponding signed type. In particular, `UInteger` shares with `Integer` the distinction of being the most efficient of all the elementary numeric data types.  
-  
-## <a name="nonintegral-numeric-types"></a>Nonintegral Numeric Types  
- *Nonintegral data types* are those that represent numbers with both integer and fractional parts.  
-  
- The nonintegral numeric data types are `Decimal` (128-bit fixed point), [Single Data Type](../../../../visual-basic/language-reference/data-types/single-data-type.md) (32-bit floating point), and [Double Data Type](../../../../visual-basic/language-reference/data-types/double-data-type.md) (64-bit floating point). They are all signed types. If a variable can contain a fraction, declare it as one of these types.  
-  
- `Decimal` is not a floating-point data type. `Decimal` numbers have a binary integer value and an integer scaling factor that specifies what portion of the value is a decimal fraction.  
-  
- You can use `Decimal` variables for money values. The advantage is the precision of the values. The `Double` data type is faster and requires less memory, but it is subject to rounding errors. The `Decimal` data type retains complete accuracy to 28 decimal places.  
-  
- Floating-point (`Single` and `Double`) numbers have larger ranges than `Decimal` numbers but can be subject to rounding errors. Floating-point types support fewer significant digits than `Decimal` but can represent values of greater magnitude.  
-  
- Nonintegral number values can be expressed as mmmEeee, in which mmm is the *mantissa* (the significant digits) and eee is the *exponent* (a power of 10). The highest positive values of the nonintegral types are 7.9228162514264337593543950335E+28 for `Decimal`, 3.4028235E+38 for `Single`, and 1.79769313486231570E+308 for `Double`.  
+ *无符号*整型类型为[Byte 数据类型](../../../../visual-basic/language-reference/data-types/byte-data-type.md)（8位）、 [UShort 数据类型](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)（16位）、 [UInteger 数据类型](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)（32位）和[ULong 数据类型](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)（64位）。 如果变量包含二进制数据或未知性质的数据，则将其声明为这些类型之一。  
   
 ### <a name="performance"></a>性能  
- `Double` is the most efficient of the fractional data types, because the processors on current platforms perform floating-point operations in double precision. However, operations with `Double` are not as fast as with the integral types such as `Integer`.  
+ 与其他数据类型相比，算术运算比整型类型更快。 与 Visual Basic 中的 `Integer` 和 `UInteger` 类型相比，它们的速度最快。  
   
-### <a name="small-magnitudes"></a>Small Magnitudes  
- For numbers with the smallest possible magnitude (closest to 0), `Double` variables can hold numbers as small as -4.94065645841246544E-324 for negative values and 4.94065645841246544E-324 for positive values.  
+### <a name="large-integers"></a>大整数  
+ 如果需要保留大于 `Integer` 数据类型可以保存的整数，则可以改用 `Long` 数据类型。 `Long` 变量可以包含从-9223372036854775808 到9223372036854775807的数字。 与 `Integer`相比，`Long` 的操作稍慢一些。  
   
-### <a name="small-fractional-numbers"></a>Small Fractional Numbers  
- If you do not need the full range of the `Double` data type, you can use the `Single` data type, which can hold floating-point numbers from -3.4028235E+38 through 3.4028235E+38. The smallest magnitudes for `Single` variables are -1.401298E-45 for negative values and 1.401298E-45 for positive values. If you have a very large number of variables that hold small floating-point numbers, the common language runtime can sometimes store your `Single` variables more efficiently and save memory consumption.  
+ 如果需要更大的值，则可以使用[Decimal 数据类型](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)。 如果不使用任何小数位数，则可以将介于-79228162514264337593543950335 到79228162514264337593543950335中的数字保存在 `Decimal` 变量中。 但是，与任何其他数值数据类型相比，具有 `Decimal` 号的操作的速度要慢得多。  
   
-## <a name="see-also"></a>请参阅
+### <a name="small-integers"></a>小整数  
+ 如果不需要 `Integer` 数据类型的完整范围，可以使用 `Short` 数据类型，该数据类型可以包含从-32768 到32767的整数。 对于最小整数范围，`SByte` 数据类型包含从-128 到127的整数。 如果有大量包含小整数的变量，则公共语言运行时有时可以更有效地存储 `Short` 和 `SByte` 变量，并节省内存消耗。 但是，`Short` 和 `SByte` 的操作在一定程度上比 `Integer`更慢。  
+  
+### <a name="unsigned-integers"></a>无符号整数  
+ 如果你知道变量永不需要保存负数，则可以使用*未签名的类型*`Byte`、`UShort`、`UInteger`和 `ULong`。 这些数据类型中的每个数据类型都可以保存两倍于其对应有符号类型（`SByte`、`Short`、`Integer`和 `Long`）的正整数。 就性能而言，每个未签名的类型与其对应的已签名类型的有效性完全相同。 具体而言，`UInteger` 共享与 `Integer` 的区别是所有基本数值数据类型都是最有效的。  
+  
+## <a name="nonintegral-numeric-types"></a>非整型数值类型  
+ 非*整型数据类型*是指具有整数部分和小数部分的数字。  
+  
+ 非整型数值数据类型 `Decimal` （128位固定点）、[单数据类型](../../../../visual-basic/language-reference/data-types/single-data-type.md)（32位浮点）和[双精度数据类型](../../../../visual-basic/language-reference/data-types/double-data-type.md)（64位浮点）。 它们都是已签名的类型。 如果变量可以包含一个分数，则将其声明为这些类型之一。  
+  
+ `Decimal` 不是浮点数据类型。 `Decimal` 数字具有二进制整数值和整数比例因子，用于指定值的哪一部分是小数部分。  
+  
+ 可以将 `Decimal` 变量用于 money 值。 优点是值的精度。 `Double` 数据类型的速度更快，需要的内存更少，但可能会产生舍入错误。 `Decimal` 数据类型会将完整的精度保留为28个小数位数。  
+  
+ 浮点数（`Single` 和 `Double`）的范围比 `Decimal` 数字更大，但可能会受到舍入误差的限制。 与 `Decimal` 相比，浮点类型支持的有效位数更少，但可表示更大的值。  
+  
+ 非整数数字值可以表示为 mmmEeee，其中 mmm 为*尾数*（有效位），eee 为*指数*（10的幂）。 非整数类型的最大正值是 7.9228162514264337593543950335 E + 28 for `Decimal`，3.4028235 E + 38 用于 `Single`，1.79769313486231570 E + 308 用于 `Double`。  
+  
+### <a name="performance"></a>性能  
+ `Double` 是最有效的小数数据类型，因为当前平台上的处理器以双精度执行浮点运算。 但是，`Double` 的操作的速度与整数类型（如 `Integer`）的速度不同。  
+  
+### <a name="small-magnitudes"></a>小型度  
+ 对于具有最小可能数量（最接近0）的数字，`Double` 变量可以将数字保存为小的 4.94065645841246544 E-324 for 负值，并将 4.94065645841246544 E-324 用于正值。  
+  
+### <a name="small-fractional-numbers"></a>小小数值  
+ 如果不需要 `Double` 数据类型的完整范围，可以使用 `Single` 数据类型，该数据类型可以通过从-3.4028235 E + 38 到 3.4028235 E + 38 来保存浮点数。 对于负值，`Single` 变量的最小值为-1.401298 E-45，对于正值，则为 1.401298 E-45。 如果有大量的变量用于保存较小的浮点数，则公共语言运行时有时可以更有效地存储 `Single` 变量，并节省内存消耗。  
+  
+## <a name="see-also"></a>另请参阅
 
 - [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [字符数据类型](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)

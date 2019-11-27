@@ -12,8 +12,8 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352246"
 ---
-# <a name="returns-visual-basic"></a>\<returns> (Visual Basic)
-Specifies the return value of the property or function.  
+# <a name="returns-visual-basic"></a>\<返回 > （Visual Basic）
+指定属性或函数的返回值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -26,15 +26,15 @@ Specifies the return value of the property or function.
  返回值的说明。  
   
 ## <a name="remarks"></a>备注  
- Use the `<returns>` tag in the comment for a method declaration to describe the return value.  
+ 在方法声明的注释中使用 `<returns>` 标记来描述返回值。  
   
  使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译以便将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
- This example uses the `<returns>` tag to explain what the `DoesRecordExist` function returns.  
+ 此示例使用 `<returns>` 标记解释 `DoesRecordExist` 函数返回的内容。  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)

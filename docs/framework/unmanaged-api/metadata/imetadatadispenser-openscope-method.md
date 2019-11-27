@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442327"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope 方法
-Opens an existing, on-disk file and maps its metadata into memory.  
+打开现有的磁盘上的文件，并将其元数据映射到内存。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,38 +38,38 @@ HRESULT OpenScope (
   
 ## <a name="parameters"></a>参数  
  `szScope`  
- [in] The name of the file to be opened. The file must contain common language runtime (CLR) metadata.  
+ 中要打开的文件的名称。 文件必须包含公共语言运行时（CLR）元数据。  
   
  `dwOpenFlags`  
- [in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration to specify the mode (read, write, and so on) for opening.  
+ 中[CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)枚举的值，该值指定用于打开的模式（读取、写入等）。  
   
  `riid`  
- [in] The IID of the desired metadata interface to be returned; the caller will use the interface to import (read) or emit (write) metadata.  
+ 中要返回的所需元数据接口的 IID;调用方将使用接口导入（读取）或发出（写入）元数据。  
   
- The value of `riid` must specify one of the "import" or "emit" interfaces. Valid values are IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2, or IID_IMetaDataImport2.  
+ `riid` 的值必须指定一个 "导入" 或 "发出" 接口。 有效值为 IID_IMetaDataEmit、IID_IMetaDataImport、IID_IMetaDataAssemblyEmit、IID_IMetaDataAssemblyImport、IID_IMetaDataEmit2 或 IID_IMetaDataImport2。  
   
  `ppIUnk`  
- [out] The pointer to the returned interface.  
+ 弄指向返回的接口的指针。  
   
 ## <a name="remarks"></a>备注  
- The in-memory copy of the metadata can be queried using methods from one of the "import" interfaces, or added to using methods from the one of the "emit" interfaces.  
+ 可以使用 "导入" 接口中的方法查询元数据的内存中副本，或使用 "发出" 接口之一中的方法将其添加到中。  
   
- If the target file does not contain CLR metadata, the `OpenScope` method will fail.  
+ 如果目标文件不包含 CLR 元数据，`OpenScope` 方法将失败。  
   
- In the .NET Framework version 1.0 and version 1.1, if a scope is opened with `dwOpenFlags` set to ofRead, it is eligible for sharing. That is, if subsequent calls to `OpenScope` pass in the name of a file that was previously opened, the existing scope is reused and a new set of data structures is not created. However, problems can arise due to this sharing.  
+ 在 .NET Framework 版本1.0 和1.1 版中，如果在 `dwOpenFlags` 设置为 ofRead 的情况下打开范围，则它有资格进行共享。 也就是说，如果对的后续调用 `OpenScope` 传入之前打开的文件的名称，则将重用现有范围并不创建新的数据结构集。 但是，这种共享可能导致问题。  
   
- In the .NET Framework version 2.0, scopes opened with `dwOpenFlags` set to ofRead are no longer shared. Use the ofReadOnly value to allow the scope to be shared. When a scope is shared, queries that use "read/write" metadata interfaces will fail.  
+ 在 .NET Framework 版本2.0 中，通过将 `dwOpenFlags` 设置为 ofRead 打开的作用域将不再共享。 使用 ofReadOnly 值允许共享作用域。 共享作用域时，使用 "读/写" 元数据接口的查询会失败。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataDispenser 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
 - [IMetaDataDispenserEx 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)

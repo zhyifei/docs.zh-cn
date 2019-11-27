@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442153"
 ---
 # <a name="imetadataemitsethandler-method"></a>IMetaDataEmit::SetHandler 方法
-Sets the method referenced by the specified `IUnknown` pointer as a notification callback for token remaps.  
+将指定 `IUnknown` 指针引用的方法设置为标记重新映射的通知回调。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,23 +35,23 @@ HRESULT SetHandler (
   
 ## <a name="parameters"></a>参数  
  `pUnk`  
- [in] The handler to register.  
+ 中要注册的处理程序。  
   
 ## <a name="remarks"></a>备注  
- The metadata engine sends notification by using the method that is provided by `SetHandler`, to compilers that do not generate records in an optimized way and that would like to optimize saved records.  
+ 元数据引擎通过使用 `SetHandler`提供的方法将通知发送到不是以优化方式生成记录并且希望优化已保存记录的编译器。  
   
- If the callback method is not provided through `SetHandler`, no optimization will be performed on save except where several import scopes have been merged using `IMapToken` on merge for each scope.  
+ 如果未通过 `SetHandler`提供回调方法，则不会对保存执行任何优化，但会对每个作用域使用 merge `IMapToken` 合并若干导入范围。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

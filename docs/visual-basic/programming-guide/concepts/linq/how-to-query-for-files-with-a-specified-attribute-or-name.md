@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347692"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>How to: Query for Files with a Specified Attribute or Name (Visual Basic)
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>如何：查询具有指定特性或名称的文件（Visual Basic）
 此示例演示了如何在指定目录树中查找具有指定文件扩展名（如“.txt”）的所有文件。 它还演示了如何基于时间在树中返回最新或最旧的文件。  
   
 ## <a name="example"></a>示例  
@@ -61,9 +61,9 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>编译代码  
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+使用 VB.NET 命名空间的 `Imports` 语句创建一个控制台应用程序项目。
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

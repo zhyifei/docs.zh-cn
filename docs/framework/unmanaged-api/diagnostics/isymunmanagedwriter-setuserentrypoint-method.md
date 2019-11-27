@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427812"
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a>ISymUnmanagedWriter::SetUserEntryPoint 方法
-Specifies the user-defined method that is the entry point for this module. For example, this entry point could be the user's main method instead of compiler-generated stubs before main.  
+指定用户定义的方法，该方法是此模块的入口点。 例如，在 main 之前，此入口点可能是用户的 main 方法，而不是编译器生成的存根。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,14 +34,14 @@ HRESULT SetUserEntryPoint(
   
 ## <a name="parameters"></a>参数  
  `entryMethod`  
- [in] The metadata token for the method that is the user entry point.  
+ 中方法的元数据标记，它是用户入口点。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

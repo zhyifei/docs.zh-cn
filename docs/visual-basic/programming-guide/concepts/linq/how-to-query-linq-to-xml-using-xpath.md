@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347648"
 ---
-# <a name="how-to-query-linq-to-xml-using-xpath-visual-basic"></a>How to: Query LINQ to XML Using XPath (Visual Basic)
+# <a name="how-to-query-linq-to-xml-using-xpath-visual-basic"></a>如何：使用 XPath 查询 LINQ to XML （Visual Basic）
 本主题介绍一些扩展方法，通过这些扩展方法可以使用 XPath 查询 XML 树。 有关使用这些扩展方法的详细信息，请参见 <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>。  
   
  除非有很特别的理由（例如大量使用旧代码）需要使用 XPath 进行查询，否则不建议将 XPath 用于 LINQ to XML。 XPath 查询的执行性能比 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询低。  
@@ -42,6 +42,6 @@ Next
 <Child2>6</Child2>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [高级查询技术（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

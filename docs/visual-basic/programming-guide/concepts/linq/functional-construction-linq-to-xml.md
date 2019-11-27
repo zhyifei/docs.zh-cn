@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353465"
 ---
-# <a name="functional-construction-linq-to-xml-visual-basic"></a>Functional Construction (LINQ to XML) (Visual Basic)
+# <a name="functional-construction-linq-to-xml-visual-basic"></a>函数构造（LINQ to XML）（Visual Basic）
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 为创建 XML 元素提供了一种称为“函数构造”的有效方式。 函数构造是指在单个语句中创建 XML 树的能力。  
   
  启用函数构造的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 编程接口有几个重要功能：  
@@ -20,9 +20,9 @@ ms.locfileid: "74353465"
   
 - 如果对象实现 <xref:System.Collections.Generic.IEnumerable%601>，则枚举对象中的集合，并添加集合中的所有项。 如果集合包含 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 对象，则单独添加集合中的每一项。 这一功能很重要，因为它允许您将 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询的结果传递给构造函数。  
   
- 下面是一个示例：  
+ 以下是一个实例：  
   
- These features enable you to write code using XML literals to create an XML tree, and also to write code that uses the results of [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries when you create an XML tree:  
+ 这些功能使您可以使用 XML 文本编写代码来创建 XML 树，还可以编写在创建 XML 树时使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询结果的代码：  
   
 ```vb  
 Dim srcTree As XElement = _  
@@ -56,6 +56,6 @@ Console.WriteLine(xmlTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [创建 XML 树（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

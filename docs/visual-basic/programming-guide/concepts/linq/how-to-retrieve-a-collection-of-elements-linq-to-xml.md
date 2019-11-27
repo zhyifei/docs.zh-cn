@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347586"
 ---
-# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a>How to: Retrieve a Collection of Elements (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a>如何：检索元素集合（LINQ to XML）（Visual Basic）
 本主题演示 <xref:System.Xml.Linq.XContainer.Elements%2A> 方法。 此方法检索元素的子元素集合。  
   
 ## <a name="example"></a>示例  
@@ -37,6 +37,6 @@ Name: DeliveryNotes
 Name: Items  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [LINQ to XML 轴 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

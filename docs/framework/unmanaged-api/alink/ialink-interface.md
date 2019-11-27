@@ -14,12 +14,12 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441814"
 ---
 # <a name="ialink-interface"></a>IALink 接口
-Helps in constructing .NET Framework assemblies. Among other things, the interface contains methods that assist in writing assembly manifests for multi-module assemblies, signing assemblies with strong names, and creating netmodules.  
+有助于构造 .NET Framework 程序集。 除此之外，接口还包含一些方法，这些方法可帮助编写多模块程序集的程序集清单、用强名称对程序集进行签名，并创建 netmodule。  
   
 ## <a name="in-this-section"></a>本节内容  
- [AddFile Method](addfile-method.md)  
+ [AddFile 方法](addfile-method.md)  
   
- [AddImport Method](addimport-method.md)  
+ [AddImport 方法](addimport-method.md)  
   
  [CloseAssembly 方法](closeassembly-method.md)  
   
@@ -51,7 +51,7 @@ Helps in constructing .NET Framework assemblies. Among other things, the interfa
   
  [GetResolutionScope 方法](getresolutionscope-method.md)  
   
- [GetScope Method](getscope-method.md)  
+ [GetScope 方法](getscope-method.md)  
   
  [GetWin32ResBlob 方法](getwin32resblob-method.md)  
   
@@ -61,7 +61,7 @@ Helps in constructing .NET Framework assemblies. Among other things, the interfa
   
  [ImportTypes 方法](importtypes-method.md)  
   
- "Init Method"  
+ "Init 方法"  
   
  [LinkResource 方法](linkresource-method.md)  
   
@@ -73,7 +73,7 @@ Helps in constructing .NET Framework assemblies. Among other things, the interfa
   
  [SetNonAssemblyFlags 方法](setnonassemblyflags-method.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ALink API](index.md)
 - [IALink2 接口](ialink2-interface.md)

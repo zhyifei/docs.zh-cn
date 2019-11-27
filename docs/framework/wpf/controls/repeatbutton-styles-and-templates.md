@@ -28,12 +28,12 @@ ms.locfileid: "74283431"
 
 下表列出了 <xref:System.Windows.Controls.Primitives.RepeatButton> 控件的可视状态。
 
-|VisualState 名称|VisualStateGroup 名称|描述|
+|VisualState 名称|VisualStateGroup 名称|说明|
 |-|-|-|
-|一般|CommonStates|默认状态。|
+|正常|CommonStates|默认状态。|
 |MouseOver|CommonStates|鼠标指针悬停在控件上。|
 |已按下|CommonStates|已按下控件。|
-|Disabled|CommonStates|已禁用控件。|
+|已禁用|CommonStates|已禁用控件。|
 |已设定焦点|FocusStates|控件有焦点。|
 |失去焦点|FocusStates|控件没有焦点。|
 |有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433208"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs 方法
-Gets the `FunctionID` of a function by using the specified metadata token, containing class, and `ClassID` values of any type arguments.  
+使用指定的元数据标记（包含类）和任何类型参数 `ClassID` 值获取函数的 `FunctionID`。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,29 +39,29 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
   
 ## <a name="parameters"></a>参数  
  `moduleID`  
- [in] The ID of the module in which the function resides.  
+ 中函数所在模块的 ID。  
   
  `funcDef`  
- [in] An `mdMethodDef` metadata token that references the function.  
+ 中引用函数的 `mdMethodDef` 元数据标记。  
   
  `classId`  
- [in] The ID of the function's containing class.  
+ 中函数的包含类的 ID。  
   
  `cTypeArgs`  
- [in] The number of type parameters for the given function. This value must be zero for non-generic functions.  
+ 中给定函数的类型参数的数目。 对于非泛型函数，此值必须为零。  
   
  `typeArgs`  
- [in] An array of `ClassID` values, each of which is an argument of the function. The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.  
+ 中`ClassID` 值的数组，其中每个值都是函数的参数。 如果 `cTypeArgs` 设置为零，则 `typeArgs` 的值可以为 NULL。  
   
  `pFunctionID`  
- [out] A pointer to the `FunctionID` of the specified function.  
+ 弄指向指定函数的 `FunctionID` 的指针。  
   
 ## <a name="remarks"></a>备注  
- Calling the `GetFunctionFromTokenAndTypeArgs` method with an `mdMethodRef` metadata instead of an `mdMethodDef` metadata token can have unpredictable results. Callers should resolve the `mdMethodRef` to an `mdMethodDef` when passing it.  
+ 使用 `mdMethodRef` 元数据而不是 `mdMethodDef` 元数据令牌调用 `GetFunctionFromTokenAndTypeArgs` 方法可能会产生不可预知的结果。 调用方应在传递时将 `mdMethodRef` 解析为 `mdMethodDef`。  
   
- If the function is not already loaded, calling `GetFunctionFromTokenAndTypeArgs` will cause loading to occur, which is a dangerous operation in many contexts. For example, calling this method during loading of modules or types could lead to an infinite loop as the runtime attempts to circularly load things.  
+ 如果尚未加载该函数，则调用 `GetFunctionFromTokenAndTypeArgs` 将导致加载，这在许多上下文中是一个危险操作。 例如，在模块或类型加载过程中调用此方法可能会导致无限循环，因为运行时尝试循环加载某些功能。  
   
- In general, use of `GetFunctionFromTokenAndTypeArgs` is discouraged. If profilers are interested in events for a particular function, they should store the `ModuleID` and `mdMethodDef` of that function, and use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) to check whether a given `FunctionID` is that of the desired function.  
+ 通常，不建议使用 `GetFunctionFromTokenAndTypeArgs`。 如果探查器对特定函数的事件感兴趣，则它们应存储该函数的 `ModuleID` 和 `mdMethodDef`，并使用[ICorProfilerInfo2：： GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)来检查给定的 `FunctionID` 是否为所需函数的。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -72,7 +72,7 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

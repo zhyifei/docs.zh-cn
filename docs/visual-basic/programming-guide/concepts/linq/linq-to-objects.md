@@ -27,19 +27,19 @@ ms.locfileid: "74354307"
  本节的目的是使用一些精选示例来演示 LINQ 方法。 并不打算详尽说明。  
   
 ## <a name="in-this-section"></a>本节内容  
- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [LINQ 和字符串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
  阐释如何使用 LINQ 来查询和转换字符串和字符串集合。 还包括指向演示这些原则的主题的链接。  
   
- [LINQ and Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-reflection.md)  
+ [LINQ 和反射（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-reflection.md)  
  指向演示 LINQ 如何使用反射的示例的链接。  
   
  [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
  阐释如何使用 LINQ 来与文件系统进行交互。 还包括指向演示这些概念的主题的链接。  
   
- [How to: Query an ArrayList with LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
+ [如何：使用 LINQ 查询 ArrayList （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
  演示如何使用 C# 查询 ArrayList。  
   
- [How to: Add Custom Methods for LINQ Queries (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
+ [如何：为 LINQ 查询添加自定义方法（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
  阐释如何通过向 <xref:System.Collections.Generic.IEnumerable%601> 接口中添加扩展方法来扩展可用于 LINQ 查询的方法集。  
   
  [语言集成查询 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  

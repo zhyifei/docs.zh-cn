@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428361"
 ---
 # <a name="cor_prf_codegen_flags-enumeration"></a>COR_PRF_CODEGEN_FLAGS 枚举
-Defines the code generation flags that can be set with the [ICorProfilerFunctionControl::SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) method.  
+定义可以用[ICorProfilerFunctionControl：： SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md)方法设置的代码生成标志。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,13 +35,13 @@ typedef enum {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`COR_PRF_CODEGEN_DISABLE_INLINING`|No functions will be inlined into this function’s body. However, the function itself may be inlined into its callers.|  
-|`COR_PRF_CODEGEN_DISABLE_ALL_OPTIMIZATIONS`|All optimizations will be disabled for this function’s body. However, the function itself may still be inlined into its callers.|  
+|`COR_PRF_CODEGEN_DISABLE_INLINING`|不会将任何函数内联到此函数的主体中。 但是，函数本身可能会内联到其调用方。|  
+|`COR_PRF_CODEGEN_DISABLE_ALL_OPTIMIZATIONS`|对于此函数的主体，将禁用所有优化。 但是，该函数本身可能仍会内联到其调用方。|  
   
 ## <a name="remarks"></a>备注  
- The `COR_PRF_CODEGEN_FLAGS` enumeration is used by the [ICorProfilerFunctionControl::SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) method to enable the profiler to control the code generation for the JIT-recompiled function.  
+ [ICorProfilerFunctionControl：： SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md)方法使用 `COR_PRF_CODEGEN_FLAGS` 枚举，以使探查器能够控制 JIT 重新编译函数的代码生成。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -52,6 +52,6 @@ typedef enum {
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

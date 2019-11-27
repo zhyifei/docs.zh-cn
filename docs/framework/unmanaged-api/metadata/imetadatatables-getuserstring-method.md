@@ -24,7 +24,7 @@ ms.locfileid: "74431433"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>IMetaDataTables::GetUserString 方法
 
-Gets the hard-coded string at the specified index in the string column in the current scope.
+获取当前范围内字符串列中指定索引处的硬编码字符串。
 
 ## <a name="syntax"></a>语法
 
@@ -39,25 +39,25 @@ HRESULT GetUserString (
 ## <a name="parameters"></a>参数
 
 `ixUserString`\
-[in] The index value from which the hard-coded string will be retrieved.
+中要从中检索硬编码字符串的索引值。
 
 `pcbData`\
-[out] A pointer to the size of `ppData`.
+弄指向 `ppData`的大小的指针。
 
 `ppData`\
-[out] A pointer to a pointer to the returned string.
+弄指向返回的字符串的指针的指针。
 
 ## <a name="requirements"></a>要求
 
 **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
 
-**Header:** Cor.h
+**标头：** Cor
 
-**Library:** Used as a resource in MsCorEE.dll
+**库：** 用作 Mscoree.dll 中的资源
 
 **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataTables 接口](imetadatatables-interface.md)
 - [IMetaDataTables2 接口](imetadatatables2-interface.md)

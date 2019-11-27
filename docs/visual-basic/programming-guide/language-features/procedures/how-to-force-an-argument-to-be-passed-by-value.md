@@ -22,37 +22,37 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344519"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>如何：强制通过值传递参数 (Visual Basic)
-The procedure declaration determines the passing mechanism. If a parameter is declared [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic expects to pass the corresponding argument by reference. This allows the procedure to change the value of the programming element underlying the argument in the calling code. If you wish to protect the underlying element against such change, you can override the `ByRef` passing mechanism in the procedure call by enclosing the argument name in parentheses. These parentheses are in addition to the parentheses enclosing the argument list in the call.  
+过程声明确定传递机制。 如果参数声明为[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，则 Visual Basic 要求按引用传递相应的参数。 这使过程可以更改调用代码中参数的基础编程元素的值。 如果要针对此类更改保护基础元素，则可以通过将参数名称括在括号中来覆盖过程调用中的 `ByRef` 传递机制。 除了在调用中包含参数列表的括号外，还需要用到这些括号。  
   
- The calling code cannot override a [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) mechanism.  
+ 调用代码无法重写[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)机制。  
   
-### <a name="to-force-an-argument-to-be-passed-by-value"></a>To force an argument to be passed by value  
+### <a name="to-force-an-argument-to-be-passed-by-value"></a>强制按值传递参数  
   
-- If the corresponding parameter is declared `ByVal` in the procedure, you do not need to take any additional steps. Visual Basic already expects to pass the argument by value.  
+- 如果在过程中 `ByVal` 声明相应的参数，则无需执行任何其他步骤。 Visual Basic 已经要求按值传递参数。  
   
-- If the corresponding parameter is declared `ByRef` in the procedure, enclose the argument in parentheses in the procedure call.  
+- 如果在过程中 `ByRef` 声明相应的参数，请在过程调用中将参数括在括号中。  
   
 ## <a name="example"></a>示例  
- The following example overrides a `ByRef` parameter declaration. In the call that forces `ByVal`, note the two levels of parentheses.  
+ 下面的示例重写 `ByRef` 参数声明。 在强制 `ByVal`的调用中，请注意括号的两个级别。  
   
  [!code-vb[VbVbcnProcedures#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#39)]  
   
  [!code-vb[VbVbcnProcedures#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#40)]  
   
- When `str` is enclosed in extra parentheses within the argument list, the `setNewString` procedure cannot change its value in the calling code, and `MsgBox` displays "Cannot be replaced if passed ByVal". When `str` is not enclosed in extra parentheses, the procedure can change it, and `MsgBox` displays "This is a new value for the inString argument."  
+ 当 `str` 用参数列表中的额外括号括起来时，`setNewString` 过程无法在调用代码中更改其值，`MsgBox` 将显示 "如果传递了 ByVal，则无法替换"。 如果 `str` 未括在额外的括号中，则过程可以更改它，并且 `MsgBox` 显示 "这是 inString 自变量的新值"。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- When you pass a variable by reference, you must use the `ByRef` keyword to specify this mechanism.  
+ 通过引用传递变量时，必须使用 `ByRef` 关键字来指定此机制。  
   
- The default in Visual Basic is to pass arguments by value. However, it is good programming practice to include either the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword with every declared parameter. This makes your code easier to read.  
+ Visual Basic 中的默认值是按值传递参数。 但是，将[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)关键字用于每个声明的参数是一种好的编程做法。 这使代码更易于阅读。  
   
-## <a name="robust-programming"></a>可靠编程  
- If a procedure declares a parameter [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), the correct execution of the code might depend on being able to change the underlying element in the calling code. If the calling code overrides this calling mechanism by enclosing the argument in parentheses, or if it passes a nonmodifiable argument, the procedure cannot change the underlying element. This might produce unexpected results in the calling code.  
+## <a name="robust-programming"></a>可靠的编程  
+ 如果过程声明了参数[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，代码的正确执行可能取决于是否能够更改调用代码中的基础元素。 如果调用代码通过将参数括在括号中来重写此调用机制，或者如果传递了不可修改参数，则该过程不能更改基础元素。 这可能会在调用代码中产生意外结果。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- There is always a potential risk in allowing a procedure to change the value underlying an argument in the calling code. Make sure you expect this value to be changed, and be prepared to check it for validity before using it.  
+ 允许过程更改调用代码中参数的基础值始终存在潜在风险。 请确保此值已更改，并在使用之前对其进行检查以确保其有效性。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [过程](./index.md)
 - [过程参数和自变量](./procedure-parameters-and-arguments.md)

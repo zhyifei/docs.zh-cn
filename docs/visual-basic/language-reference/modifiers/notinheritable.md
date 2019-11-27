@@ -23,16 +23,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351463"
 ---
 # <a name="notinheritable-visual-basic"></a>NotInheritable (Visual Basic)
-Specifies that a class cannot be used as a base class.  
+指定类不能用作基类。  
   
 ## <a name="remarks"></a>备注  
- **Alternate Terms**. A class that cannot be inherited is sometimes called a *sealed* class.  
+ **替代条款**。 不能继承的类有时称为*密封*类。  
   
- The `NotInheritable` modifier can be used in this context:  
+ `NotInheritable` 修饰符可用于以下上下文：  
   
  [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)

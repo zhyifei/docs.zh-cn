@@ -20,8 +20,8 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352320"
 ---
-# <a name="list-visual-basic"></a>\<list> (Visual Basic)
-Defines a list or table.  
+# <a name="list-visual-basic"></a>\<列表 > （Visual Basic）
+定义列表或表。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,28 +40,28 @@ Defines a list or table.
   
 ## <a name="parameters"></a>参数  
  `type`  
- The type of the list. Must be a "bullet" for a bulleted list, "number" for a numbered list, or "table" for a two-column table.  
+ 列表的类型。 必须是项目符号列表的 "项目符号"、编号列表的 "数字" 或两列表的 "表"。  
   
  `term`  
- Only used when `type` is "table." A term to define, which is defined in the description tag.  
+ 仅在 `type` 为 "table" 时使用。 要定义的术语，在 description 标记中定义。  
   
  `description`  
- When `type` is "bullet" or "number," `description` is an item in the list When `type` is "table," `description` is the definition of `term`.  
+ 当 `type` 为 "项目符号" 或 "数字" 时，当 `type` 为 "table" 时，`description` 是列表中的项，`description` 是 `term`的定义。  
   
 ## <a name="remarks"></a>备注  
- The `<listheader>` block defines the heading of either a table or definition list. When defining a table, you only have to supply an entry for `term` in the heading.  
+ `<listheader>` 块定义表或定义列表的标题。 定义表时，只需为标题中的 `term` 提供条目。  
   
- Each item in the list is specified with an `<item>` block. When creating a definition list, you must specify both `term` and `description`. However, for a table, bulleted list, or numbered list, you only have to supply an entry for `description`.  
+ 列表中的每一项都指定了一个 `<item>` 块。 创建定义列表时，必须同时指定 `term` 和 `description`。 但是，对于表、项目符号列表或编号列表，只需为 `description`提供条目。  
   
- A list or table can have as many `<item>` blocks as needed.  
+ 列表或表可以具有任意数量的 `<item>` 块（根据需要）。  
   
  使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译以便将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
- This example uses the `<list>` tag to define a bulleted list in the remarks section.  
+ 此示例使用 `<list>` 标记在 "备注" 部分中定义项目符号列表。  
   
  [!code-vb[VbVbcnXmlDocComments#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#5)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441559"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap 枚举
-Specifies options for a PInvoke call.  
+指定 PInvoke 调用的选项。  
   
 ## <a name="syntax"></a>语法  
   
@@ -63,38 +63,38 @@ typedef enum  CorPinvokeMap {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`pmNoMangle`|Use each member name as specified.|  
+|`pmNoMangle`|按指定使用每个成员名称。|  
 |`pmCharSetMask`|保留。|  
 |`pmCharSetNotSpec`|保留。|  
 |`pmCharSetAnsi`|以多字节字符串的形式封送字符串。|  
 |`pmCharSetUnicode`|以 Unicode 2 字节字符的形式封送字符串。|  
-|`pmCharSetAuto`|针对目标操作系统适当地自动封送字符串。 The default is Unicode on Windows NT, Windows 2000, Windows XP, and the Windows Server 2003 family; the default is ANSI on Windows 98 and Windows Me.|  
+|`pmCharSetAuto`|针对目标操作系统适当地自动封送字符串。 在 Windows NT、Windows 2000、Windows XP 和 Windows Server 2003 系列上，默认值为 Unicode;在 Windows 98 和 Windows Me 上，默认值为 ANSI。|  
 |`pmBestFitUseAssem`|保留。|  
-|`pmBestFitEnabled`|Perform best-fit mapping of Unicode characters that lack an exact match in the ANSI character set.|  
-|`pmBestFitDisabled`|Do not perform best-fit mapping of Unicode characters. In this case, all unmappable characters will be replaced by a ‘?’.|  
+|`pmBestFitEnabled`|在 ANSI 字符集中执行与缺少完全匹配的 Unicode 字符的最佳映射。|  
+|`pmBestFitDisabled`|不要执行 Unicode 字符的最佳映射。 在这种情况下，所有无法映射的字符都将替换为 "？"。|  
 |`pmBestFitMask`|保留。|  
 |`pmThrowOnUnmappableCharUseAssem`|保留。|  
-|`pmThrowOnUnmappableCharEnabled`|Throw an exception when the interop marshaler encounters an unmappable character.|  
-|`pmThrowOnUnmappableCharDisabled`|Do not throw an exception when the interop marshaler encounters an unmappable character.|  
+|`pmThrowOnUnmappableCharEnabled`|当互操作封送拆收器遇到无法映射的字符时引发异常。|  
+|`pmThrowOnUnmappableCharDisabled`|在互操作封送拆收器遇到无法映射的字符时不引发异常。|  
 |`pmThrowOnUnmappableCharMask`|保留|  
-|`pmSupportsLastError`|Allow the callee to call the Win32 `SetLastError` function before returning from the attributed method.|  
+|`pmSupportsLastError`|允许被调用方在从属性化方法返回之前调用 Win32 `SetLastError` 函数。|  
 |`pmCallConvMask`|保留|  
-|`pmCallConvWinapi`|Use the default platform calling convention. For example, on Windows the default is `StdCall` and on Windows CE .NET it is `Cdecl`.|  
-|`pmCallConvCdecl`|Use the `Cdecl` calling convention. In this case, the caller cleans the stack. This enables calling functions with `varargs` (that is, functions that accept a variable number of parameters).|  
-|`pmCallConvStdcall`|Use the `StdCall` calling convention. In this case, the callee cleans the stack. 这是使用平台 invoke 调用非托管函数的默认约定。|  
-|`pmCallConvThiscall`|Use the `ThisCall` calling convention. In this case, the first parameter is the `this` pointer and is stored in register ECX. 其他参数被推送到堆栈上。 The `ThisCall` calling convention is used to call methods on classes exported from an unmanaged DLL.|  
+|`pmCallConvWinapi`|使用默认平台调用约定。 例如，在 Windows 上，默认值为 "`StdCall`"，Windows CE .NET 上的 "`Cdecl`"。|  
+|`pmCallConvCdecl`|使用 `Cdecl` 调用约定。 在这种情况下，调用方会清理堆栈。 这样就可以使用 `varargs` 调用函数（即，接受可变数量的参数的函数）。|  
+|`pmCallConvStdcall`|使用 `StdCall` 调用约定。 在这种情况下，被调用方清理堆栈。 这是使用平台 invoke 调用非托管函数的默认约定。|  
+|`pmCallConvThiscall`|使用 `ThisCall` 调用约定。 在这种情况下，第一个参数是 `this` 指针，它存储在寄存器 ECX 中。 其他参数被推送到堆栈上。 `ThisCall` 调用约定用于对从非托管 DLL 导出的类调用方法。|  
 |`pmCallConvFastcall`|保留。|  
 |`pmMaxValue`|保留。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **标头：** Corhdr。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

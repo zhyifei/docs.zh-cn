@@ -26,7 +26,7 @@ ms.locfileid: "74434733"
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |[CloseEnum 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-closeenum-method.md)|关闭具有指定句柄的枚举器。|  
 |[CountEnum 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-countenum-method.md)|获取具有指定句柄的枚举器中的元素数。|  
@@ -105,13 +105,13 @@ ms.locfileid: "74434733"
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [元数据接口](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

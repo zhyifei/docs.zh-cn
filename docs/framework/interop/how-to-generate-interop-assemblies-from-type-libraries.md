@@ -20,7 +20,7 @@ ms.locfileid: "74281803"
   
 ### <a name="to-generate-an-interop-assembly-from-a-type-library"></a>从类型库生成的互操作程序集  
   
-1. 使用以下命令：  
+1. 请使用以下命令：  
   
      tlbimp **type-library-file**\<>  
   

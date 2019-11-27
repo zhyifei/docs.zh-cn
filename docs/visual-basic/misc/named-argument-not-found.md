@@ -1,5 +1,5 @@
 ---
-title: Named argument not found
+title: 找不到命名参数
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID448
@@ -18,6 +18,6 @@ ms.locfileid: "74348474"
   
 - 检查参数名称的拼写。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [错误类型](../../visual-basic/programming-guide/language-features/error-types.md)

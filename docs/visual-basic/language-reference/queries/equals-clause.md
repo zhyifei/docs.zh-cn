@@ -14,15 +14,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335383"
 ---
 # <a name="equals-clause-visual-basic"></a>Equals 子句 (Visual Basic)
-Compares keys from collections being joined.  
+比较要联接的集合中的键。  
   
 ## <a name="remarks"></a>备注  
- The `Equals` keyword is used in the following contexts:  
+ `Equals` 关键字用于以下上下文：  
   
  [Group Join 子句](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
  [Join 子句](../../../visual-basic/language-reference/queries/join-clause.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [关键字](../../../visual-basic/language-reference/keywords/index.md)

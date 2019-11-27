@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444910"
 ---
 # <a name="icorprofilercallbackexceptionoshandlerenter-method"></a>ICorProfilerCallback::ExceptionOSHandlerEnter 方法
-未实现。 A profiler that needs unmanaged exception information must obtain this information through other means.  
+未实现。 需要非托管异常信息的探查器必须通过其他方式获取此信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,6 +41,6 @@ HRESULT ExceptionOSHandlerEnter(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
