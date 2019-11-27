@@ -1,5 +1,5 @@
 ---
-title: AssemblyAttributesGoHereSM Class (System.Runtime.CompilerServices)
+title: AssemblyAttributesGoHereSM 类（System.runtime.compilerservices）
 ms.date: 03/30/2017
 api_name:
 - System.Runtime.CompilerServices.AssemblyAttributesGoHereSM
@@ -22,7 +22,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446609"
 ---
-# <a name="assemblyattributesgoheresm-class"></a>AssemblyAttributesGoHereSM Class
+# <a name="assemblyattributesgoheresm-class"></a>AssemblyAttributesGoHereSM 类
 
 由 ALink 用作占位符以存储有关自定义特性的信息。
 
@@ -38,13 +38,13 @@ internal sealed class AssemblyAttributesGoHereSM
 
 对此类型的引用指示了安全性相关的多用途自定义属性。
 
-These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
+这些类型在 .NET Framework 中标记为 "internal"，位于 <xref:System.Runtime.CompilerServices> 命名空间中。
 
 ## <a name="requirements"></a>要求
 
 mscorlib.dll
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [AssemblyAttributesGoHere](assemblyattributesgohere.md)
 - [AssemblyAttributesGoHereM](assemblyattributesgoherem.md)

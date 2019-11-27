@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448108"
 ---
 # <a name="icorprofilerinfogetclassfromtoken-method"></a>ICorProfilerInfo::GetClassFromToken 方法
-Gets the ID of the class, given the metadata token. This method is obsolete in the .NET Framework version 2.0. Use [ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) instead.  
+给定元数据标记，获取类的 ID。 此方法在 .NET Framework 版本2.0 中已过时。 改[为使用 ICorProfilerInfo2：： GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,16 +36,16 @@ HRESULT GetClassFromToken(
   
 ## <a name="parameters"></a>参数  
  `moduleID`  
- [in] The ID of the module that contains the class.  
+ 中包含类的模块的 ID。  
   
  `typeDef`  
- [in] An `mdTypeDef` metadata token that references the class.  
+ 中引用类的 `mdTypeDef` 元数据标记。  
   
  `cTypeArgs`  
- [out] A pointer to the class ID.  
+ 弄指向类 ID 的指针。  
   
 ## <a name="remarks"></a>备注  
- This method is obsolete; instead, use `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` for all types.  
+ 此方法已过时;相反，请对所有类型使用 `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs`。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -54,8 +54,8 @@ HRESULT GetClassFromToken(
   
  **库：** CorGuids.lib  
   
- **.NET Framework Versions:** 1.0, 1.1  
+ **.NET Framework 版本：** 1.0、1。1  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

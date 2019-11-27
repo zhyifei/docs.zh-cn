@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448341"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument 方法
-Finds a document. The document language, vendor, and type are optional.  
+查找文档。 文档语言、供应商和类型是可选的。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,26 +38,26 @@ HRESULT GetDocument (
   
 ## <a name="parameters"></a>参数  
  `url`  
- [in] The URL that identifies the document.  
+ 中标识文档的 URL。  
   
  `language`  
- [in] The document language. 此参数可选。  
+ 中文档语言。 此参数可选。  
   
  `languageVendor`  
- [in] The identity of the vendor for the document language. 此参数可选。  
+ 中文档语言的供应商标识。 此参数可选。  
   
  `documentType`  
- [in] The type of the document. 此参数可选。  
+ 中文档的类型。 此参数可选。  
   
  `pRetVal`  
- [out] A pointer to the returned interface.  
+ 弄指向返回的接口的指针。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedReader 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

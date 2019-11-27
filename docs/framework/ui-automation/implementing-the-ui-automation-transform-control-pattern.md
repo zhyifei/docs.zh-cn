@@ -39,12 +39,12 @@ ms.locfileid: "74447054"
   
 |必需的成员|成员类型|注意|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Property|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Property|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|Property|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|方法|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|方法|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|属性|无|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|属性|无|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|属性|无|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|方法|无|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|方法|无|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|方法|无|  
   
  没有与此控件模式关联的事件。  
   
@@ -54,14 +54,14 @@ ms.locfileid: "74447054"
   
 |异常类型|条件|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> is false.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> is false.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> is false.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> -如果 <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> 为 false。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> -如果 <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> 为 false。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> -如果 <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> 为 false。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UI 自动化控件模式概述](ui-automation-control-patterns-overview.md)
 - [在 UI 自动化提供程序中支持控件模式](support-control-patterns-in-a-ui-automation-provider.md)
-- [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [UI 自动化树概述](ui-automation-tree-overview.md)
 - [在 UI 自动化中使用缓存](use-caching-in-ui-automation.md)

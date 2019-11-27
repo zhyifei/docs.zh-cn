@@ -58,35 +58,35 @@ typedef enum CorFieldAttr {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`fdFieldAccessMask`|Specifies accessibility information.|  
-|`fdPrivateScope`|Specifies that the field cannot be referenced.|  
-|`fdPrivate`|Specifies that the field is accessible only by its parent type.|  
-|`fdFamANDAssem`|Specifies that the field is accessible by derived classes in its assembly.|  
-|`fdAssembly`|Specifies that the field is accessible by all types in its assembly.|  
-|`fdFamily`|Specifies that the field is accessible only by its type and derived classes.|  
-|`fdFamORAssem`|Specifies that the field is accessible by derived classes and by all types in its assembly.|  
-|`fdPublic`|Specifies that the field is accessible by all types with visibility of this scope.|  
-|`fdStatic`|Specifies that the field is a member of its type rather than an instance member.|  
-|`fdInitOnly`|Specifies that the field cannot be changed after it is initialized.|  
-|`fdLiteral`|Specifies that the field value is a compile-time constant.|  
-|`fdNotSerialized`|Specifies that the field is not serialized when its type is remoted.|  
-|`fdSpecialName`|Specifies that the field is special, and that its name describes how.|  
-|`fdPinvokeImpl`|Specifies that the field implementation is forwarded through PInvoke.|  
-|`fdReservedMask`|Reserved for internal use by the common language runtime.|  
-|`fdRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the name.|  
-|`fdHasFieldMarshal`|Specifies that the field contains marshaling information.|  
-|`fdHasDefault`|Specifies that the field has a default value.|  
-|`fdHasFieldRVA`|Specifies that the field has a relative virtual address.|  
+|`fdFieldAccessMask`|指定辅助功能信息。|  
+|`fdPrivateScope`|指定不能引用字段。|  
+|`fdPrivate`|指定该字段只能由其父类型访问。|  
+|`fdFamANDAssem`|指定该字段可由其程序集中的派生类访问。|  
+|`fdAssembly`|指定该字段可由其程序集中的所有类型进行访问。|  
+|`fdFamily`|指定该字段只能由其类型和派生类访问。|  
+|`fdFamORAssem`|指定该字段可由派生类和其程序集中的所有类型进行访问。|  
+|`fdPublic`|指定该字段可由具有此范围可见性的所有类型进行访问。|  
+|`fdStatic`|指定该字段是其类型的成员而不是实例成员。|  
+|`fdInitOnly`|指定字段在初始化之后不能更改。|  
+|`fdLiteral`|指定字段值是编译时常量。|  
+|`fdNotSerialized`|指定当字段的类型为 "远程" 时不对其进行序列化。|  
+|`fdSpecialName`|指定该字段为特殊字段，并且其名称描述了操作方法。|  
+|`fdPinvokeImpl`|指定通过 PInvoke 转发字段实现。|  
+|`fdReservedMask`|保留供公共语言运行时内部使用。|  
+|`fdRTSpecialName`|指定公共语言运行时元数据内部 Api 应检查名称的编码。|  
+|`fdHasFieldMarshal`|指定该字段包含封送处理信息。|  
+|`fdHasDefault`|指定该字段具有默认值。|  
+|`fdHasFieldRVA`|指定该字段具有相对虚拟地址。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **标头：** Corhdr。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

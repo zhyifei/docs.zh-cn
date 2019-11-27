@@ -28,7 +28,7 @@ ms.locfileid: "74441491"
 ## <a name="types-of-events"></a>事件类型  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件分为以下几类：  
   
-|Event — 事件|描述|  
+|事件|说明|  
 |-----------|-----------------|  
 |属性更改|当 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 元素上的某个属性或控件模式更改时引发。 例如，如果客户端需要监视应用程序的复选框控件，它可以注册来侦听 <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> 属性上的属性更改事件。 选中或取消选中该复选框控件时，提供程序会引发事件且客户端会采取必要的操作。|  
 |元素操作|当来自最终用户或编程活动的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 结果出现更改时引发；例如，单击或通过 <xref:System.Windows.Automation.InvokePattern>调用一个按钮。|  
@@ -66,7 +66,7 @@ ms.locfileid: "74441491"
 ## <a name="ui-automation-event-arguments"></a>UI 自动化事件参数  
  下列类能封装事件参数。  
   
-|实例|描述|  
+|实例|说明|  
 |-----------|-----------------|  
 |<xref:System.Windows.Automation.AsyncContentLoadedEventArgs>|包含有关内容异步加载的信息，包括加载已完成的百分比的信息。|  
 |<xref:System.Windows.Automation.AutomationEventArgs>|包含有关无需额外数据的简单事件的信息。|  
@@ -81,8 +81,8 @@ ms.locfileid: "74441491"
   
  有关事件标识符的列表，请参阅 [UI Automation Events for Clients](ui-automation-events-for-clients.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [客户端的 UI 自动化事件](ui-automation-events-for-clients.md)
+- [UI Automation Events for Clients](ui-automation-events-for-clients.md)
 - [服务器端 UI 自动化提供程序实现](server-side-ui-automation-provider-implementation.md)
 - [订阅 UI 自动化事件](subscribe-to-ui-automation-events.md)

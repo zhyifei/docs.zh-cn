@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445664"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2 方法
-Initiates the import of types. Call this method to begin importing types from each scope imported via [ImportFile Method](importfile-method.md).  
+启动类型的导入。 调用此方法以开始从通过[ImportFile 方法](importfile-method.md)导入的每个范围导入类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,30 +39,30 @@ HRESULT ImportTypes2(
   
 ## <a name="parameters"></a>参数  
  `AssemblyID`  
- ID of assembly into which to import.  
+ 要导入的程序集的 ID。  
   
  `FileToken`  
- ID of file to from which to import.  
+ 要从其导入的文件的 ID。  
   
  `dwScope`  
- Zero-based scope from which to import.  
+ 要从中导入的从零开始的作用域。  
   
  `phEnum`  
- Receives enumerator handle for the types in the given scope.  
+ 接收给定范围内的类型的枚举器句柄。  
   
  `ppImportScope`  
- Optionally receives [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface.  
+ 可以选择接收[IMetaDataImport2 接口](../metadata/imetadataimport2-interface.md)接口。  
   
  `pdwCountOfTypes`  
- Optionally receives count of types in the specified scope.  
+ 可以选择接收指定范围内的类型的计数。  
   
 ## <a name="return-value"></a>返回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- Requires alink.h  
+ 需要 alink  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IALink2 接口](ialink2-interface.md)
 - [IALink 接口](ialink-interface.md)

@@ -41,38 +41,38 @@ HRESULT SetAssemblyProps (
   
 ## <a name="parameters"></a>参数  
  `pma`  
- [in] The metadata token that specifies the `Assembly` metadata structure to be modified.  
+ 中用于指定要修改的 `Assembly` 元数据结构的元数据标记。  
   
  `pbPublicKey`  
- [in] A pointer to the public key of the publisher of the assembly.  
+ 中指向程序集发布者的公钥的指针。  
   
  `cbPublicKey`  
- [in] The size in bytes of `pbPublicKey`.  
+ 中`pbPublicKey`的大小（以字节为单位）。  
   
  `ulHashAlgId`  
- [in] The identifier for the hash algorithm used to hash the assembly files.  
+ 中用于对程序集文件进行哈希处理的哈希算法的标识符。  
   
  `szName`  
- [in] The human-readable text name of the assembly.  
+ 中程序集的用户可读文本名称。  
   
  `pMetaData`  
- [in] A pointer to the ASSEMBLYMETADATA that contains version, platform, and locale information for the assembly.  
+ 中指向包含程序集的版本、平台和区域设置信息的 ASSEMBLYMETADATA 的指针。  
   
  `dwAssemblyFlags`  
- [in] A bitwise combination of [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) values that specify various attributes of the assembly.  
+ 中[AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md)值的按位组合，用于指定程序集的各种属性。  
   
 ## <a name="remarks"></a>备注  
- To create an `Assembly` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) method.  
+ 若要创建 `Assembly` 元数据结构，请使用[IMetaDataAssemblyEmit：:D efineassembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md)方法。  
   
 ## <a name="requirements"></a>要求  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

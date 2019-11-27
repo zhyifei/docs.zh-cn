@@ -40,10 +40,10 @@ HRESULT RequestRevert (
  [in] 要还原的函数数目。  
   
  `moduleIds`  
- [in] 指定（`module`、`methodDef`）对的 `moduleId` 部分，它标识要还原的函数。  
+ [in] 指定（`moduleId`、`module`）对的 `methodDef` 部分，它标识要还原的函数。  
   
  `methodIds`  
- [in] 指定（`module`、`methodDef`）对的 `methodId` 部分，它标识要还原的函数。  
+ [in] 指定（`methodId`、`module`）对的 `methodDef` 部分，它标识要还原的函数。  
   
  `status`  
  [out] 在本主题后面的“状态 HRESULT”章节中列出的 HRESULT 数组。 每个 HRESULT 表示尝试还原并行数组 `moduleIds` 和 `methodIds` 中指定的每个函数是成功还是失败。  
@@ -51,17 +51,17 @@ HRESULT RequestRevert (
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
 |S_OK|尝试还原所有请求；但是，必须检查返回的状态数组，确定成功还原了哪些函数。|  
-|CORPROF_E_CALLBACK4_REQUIRED|The profiler must implement the [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interface for this call to be supported.|  
-|CORPROF_E_REJIT_NOT_ENABLED|尚未启用 JIT 重新编译。 You must enable JIT recompilation during initialization by using the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the `COR_PRF_ENABLE_REJIT` flag.|  
-|E_INVALIDARG|`cFunctions` 为 0，或者 `moduleIds` 或 `methodIds` 为 `NULL`。|  
+|CORPROF_E_CALLBACK4_REQUIRED|探查器必须实现[ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)接口，以便支持此调用。|  
+|CORPROF_E_REJIT_NOT_ENABLED|尚未启用 JIT 重新编译。 必须通过使用[ICorProfilerInfo：： SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法设置 `COR_PRF_ENABLE_REJIT` 标志来在初始化期间启用 JIT 重新编译。|  
+|E_INVALIDARG|`cFunctions` 为0，或者 `moduleIds` 或 `methodIds` `NULL`。|  
 |E_OUTOFMEMORY|CLR 无法完成请求，因为它已耗尽内存。|  
   
 ## <a name="status-hresults"></a>状态 HRESULTS  
   
-|状态数组 HRESULT|描述|  
+|状态数组 HRESULT|说明|  
 |--------------------------|-----------------|  
 |S_OK|已成功还原相应函数。|  
 |E_INVALIDARG|`moduleID` 或 `methodDef` 参数为 `NULL`。|  
@@ -82,7 +82,7 @@ HRESULT RequestRevert (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo4 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
 - [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

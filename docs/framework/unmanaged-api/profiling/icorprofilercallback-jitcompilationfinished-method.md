@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449915"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a>ICorProfilerCallback::JITCompilationFinished 方法
-Notifies the profiler that the just-in-time (JIT) compiler has finished compiling a function.  
+通知探查器，实时（JIT）编译器已完成编译函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,15 +36,15 @@ HRESULT JITCompilationFinished(
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in] The ID of the function that was compiled.  
+ 中已编译的函数的 ID。  
   
  `hrStatus`  
- [in] A value indicating whether compilation was successful.  
+ 中指示编译是否成功的值。  
   
  `fIsSafeToBlock`  
- [in] A value indicating to the profiler whether blocking will affect the operation of the runtime. The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.  
+ 中指示探查器是否会影响运行时的操作的值。 如果阻止可能导致运行时等待调用线程从此回调返回，则值为 `true`;否则，`false`。  
   
- Although a value of `true` will not harm the runtime, it can skew the profiling results.  
+ 尽管 `true` 的值不会损坏运行时，但它可能会使分析结果变形。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -55,7 +55,7 @@ HRESULT JITCompilationFinished(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [JITCompilationStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)

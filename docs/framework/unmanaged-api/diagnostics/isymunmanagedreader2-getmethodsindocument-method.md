@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446434"
 ---
 # <a name="isymunmanagedreader2getmethodsindocument-method"></a>ISymUnmanagedReader2::GetMethodsInDocument 方法
-Gets every method that has line information in the provided document.  
+获取所提供文档中包含行信息的每个方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,23 +38,23 @@ HRESULT GetMethodsInDocument(
   
 ## <a name="parameters"></a>参数  
  `document`  
- [in] A pointer to the document.  
+ 中指向文档的指针。  
   
  `cMethod`  
- [in] A `ULONG32` that indicates the size of the  `pRetVal` array.  
+ 中一个 `ULONG32`，指示 `pRetVal` 数组的大小。  
   
  `pcMethod`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the methods.  
+ 弄指向 `ULONG32` 的指针，该指针接收包含方法所需的缓冲区大小。  
   
  `pRetVal`  
- [out] A pointer to the buffer that receives the methods.  
+ 弄指向接收方法的缓冲区的指针。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedReader2 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

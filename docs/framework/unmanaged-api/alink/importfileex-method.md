@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446949"
 ---
 # <a name="importfileex-method"></a>ImportFileEx 方法
-Imports indicated assembly or unbound module.  
+导入指定的程序集或未绑定模块。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,33 +40,33 @@ HRESULT ImportFileEx(
   
 ## <a name="parameters"></a>参数  
  `pszFilename`  
- Fully qualified name of file from which to import.  
+ 要导入的文件的完全限定名称。  
   
  `pszTargetName`  
- Optional name of target file.  
+ 目标文件的可选名称。  
   
  `fSmartImport`  
- If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
+ 如果为 TRUE，则使用 ImportTypes，否则必须手动执行导入。  
   
  `dwOpenFlags`  
- Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
+ 要传递给[OpenScope 方法](../metadata/imetadatadispenser-openscope-method.md)的标志。  
   
  `pImportToken`  
- Receives ID of the file being imported.  
+ 接收正在导入的文件的 ID。  
   
  `ppAssemblyScope`  
- Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Is set to NULL if file is not an assembly.  
+ 接收程序集导入范围[IMetaDataAssemblyImport 接口](../metadata/imetadataassemblyimport-interface.md)接口。 如果文件不是程序集，则设置为 NULL。  
   
  `pdwCountOfScopes`  
- Receives count of imported files and/or scopes.  
+ 接收导入文件和/或范围的计数。  
   
 ## <a name="return-value"></a>返回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- Requires alink.h.  
+ 需要 alink。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IALink2 接口](ialink2-interface.md)
 - [IALink 接口](ialink-interface.md)

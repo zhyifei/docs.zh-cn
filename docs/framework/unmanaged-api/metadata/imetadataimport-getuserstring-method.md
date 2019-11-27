@@ -38,27 +38,27 @@ HRESULT GetUserString (
   
 ## <a name="parameters"></a>参数  
  `stk`  
- [in] The String token to return the associated string for.  
+ 中要为其返回关联字符串的字符串标记。  
   
  `szString`  
- [out] A copy of the requested string.  
+ 弄请求的字符串的副本。  
   
  `cchString`  
- [in] The maximum size in wide characters of the requested `szString`.  
+ 中请求的 `szString`的最大大小（以宽字符为大小）。  
   
  `pchString`  
- [out] The size in wide characters of the returned `szString`.  
+ 弄返回 `szString`的大小（以宽字符为大小）。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

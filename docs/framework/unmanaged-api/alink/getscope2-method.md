@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447183"
 ---
 # <a name="getscope2-method"></a>GetScope2 方法
-Gets an import scope.  
+获取导入范围。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,24 +37,24 @@ HRESULT GetScope2(
   
 ## <a name="parameters"></a>参数  
  `AssemblyID`  
- ID of target assembly.  
+ 目标程序集的 ID。  
   
  `FileToken`  
- ID of file from which to import.  
+ 要从中导入的文件的 ID。  
   
  `dwScope`  
- Zero-based scope to import.  
+ 要导入的从零开始的范围。  
   
  `ppImportScope`  
- Receives pointer to [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface for indicated scope.  
+ 接收指向指定范围的[IMetaDataImport2 接口](../metadata/imetadataimport2-interface.md)接口的指针。  
   
 ## <a name="return-value"></a>返回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- Requires alink.h.  
+ 需要 alink。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IALink2 接口](ialink2-interface.md)
 - [IALink 接口](ialink-interface.md)

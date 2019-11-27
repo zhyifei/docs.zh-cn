@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445576"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 方法
-Sets the name of and options for a new assembly. Do not call this method when you produce unbound modules.  
+为新的程序集设置和选项的名称。 生成未绑定的模块时，请勿调用此方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,24 +37,24 @@ HRESULT SetAssemblyFile2(
   
 ## <a name="parameters"></a>参数  
  `pszFilename`  
- Name of manifest file.  
+ 清单文件的名称。  
   
  `pEmitter`  
- [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md) interface for this file.  
+ 此文件的[IMetaDataEmit2 接口](../metadata/imetadataemit2-interface.md)接口。  
   
  `afFlags`  
- Options represented by [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).  
+ [AssemblyFlags 枚举](../metadata/assemblyflags-enumeration.md)表示的选项。  
   
  `pAssemblyID`  
- Receives unique ID for the assembly being constructed.  
+ 接收正在构造的程序集的唯一 ID。  
   
 ## <a name="return-value"></a>返回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- Requires alink.h.  
+ 需要 alink。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IALink2 接口](ialink2-interface.md)
 - [IALink 接口](ialink-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445805"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply 方法
-Notifies the profiler that the server-side portion of a remoting call has completed and the client is now receiving and about to process the reply.  
+通知探查器远程处理调用的服务器端部分已完成，并且客户端现在正在接收，并即将处理答复。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,18 +35,18 @@ HRESULT RemotingClientReceivingReply(
   
 ## <a name="parameters"></a>参数  
  `pCookie`  
- [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) under these conditions:  
+ 中与以下条件下的[ICorProfilerCallback：： RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)中提供的值对应的值：  
   
-- Remoting GUID cookies are active.  
+- 远程处理 GUID cookie 处于活动状态。  
   
-- The channel succeeds in transmitting the message.  
+- 通道成功传输消息。  
   
-- GUID cookies are active on the server-side process.  
+- GUID cookie 在服务器端进程中处于活动状态。  
   
- This allows easy pairing of remoting calls.  
+ 这样就可以轻松地配对远程调用。  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ 中如果调用是异步的，则为 `true` 的值;否则，`false`。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -57,6 +57,6 @@ HRESULT RemotingClientReceivingReply(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

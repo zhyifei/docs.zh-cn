@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437055"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps 方法
-Gets the metadata for the property represented by the specified token.  
+获取由指定标记表示的属性的元数据。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,63 +50,63 @@ HRESULT GetPropertyProps (
   
 ## <a name="parameters"></a>参数  
  `prop`  
- [in] A token that represents the property to return metadata for.  
+ 中一个标记，它表示要为其返回元数据的属性。  
   
  `pClass`  
- [out] A pointer to the TypeDef token that represents the type that implements the property.  
+ 弄一个指针，指向表示实现属性的类型的 TypeDef 标记。  
   
  `szProperty`  
- [out] A buffer to hold the property name.  
+ 弄用于保存属性名称的缓冲区。  
   
  `cchProperty`  
- [in] The size in wide characters of `szProperty`.  
+ 中`szProperty`的大小（以宽字符为大小）。  
   
  `pchProperty`  
- [out] The number of wide characters returned in `szProperty`.  
+ 弄`szProperty`中返回的宽字符数。  
   
  `pdwPropFlags`  
- [out] A pointer to any attribute flags applied to the property. This value is a bitmask from the [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) enumeration.  
+ 弄指向应用于属性的任何属性标志的指针。 此值是[CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md)枚举中的位掩码。  
   
  `ppvSig`  
- [out] A pointer to the metadata signature of the property.  
+ 弄指向属性的元数据签名的指针。  
   
  `pbSig`  
- [out] The number of bytes returned in `ppvSig`.  
+ 弄`ppvSig`中返回的字节数。  
   
  `pdwCPlusTypeFlag`  
- [out] A flag specifying the type of the constant that is the default value of the property. This value is from the CorElementType enumeration.  
+ 弄一个标志，该标志指定作为属性的默认值的常量的类型。 此值来自 CorElementType 枚举。  
   
  `ppDefaultValue`  
- [out] A pointer to the bytes that store the default value for this property.  
+ 弄指向存储此属性的默认值的字节的指针。  
   
  `pcchDefaultValue`  
- [out] The size in wide characters of `ppDefaultValue`, if `pdwCPlusTypeFlag` is ELEMENT_TYPE_STRING; otherwise, this value is not relevant. In that case, the length of `ppDefaultValue` is inferred from the type that is specified by `pdwCPlusTypeFlag`.  
+ 弄如果 ELEMENT_TYPE_STRING `pdwCPlusTypeFlag`，则为 `ppDefaultValue`的宽字符大小;否则，此值是不相关的。 在这种情况下，将从 `pdwCPlusTypeFlag`指定的类型推断 `ppDefaultValue` 的长度。  
   
  `pmdSetter`  
- [out] A pointer to the MethodDef token that represents the set accessor method for the property.  
+ 弄一个指针，它指向表示属性的 set 访问器方法的 MethodDef 标记。  
   
  `pmdGetter`  
- [out] A pointer to the MethodDef token that represents the get accessor method for the property.  
+ 弄一个指针，它指向表示属性的 get 访问器方法的 MethodDef 标记。  
   
  `rmdOtherMethod`  
- [out] An array of MethodDef tokens that represent other methods associated with the property.  
+ 弄MethodDef 标记的数组，表示与属性关联的其他方法。  
   
  `cMax`  
- [in] `rmdOtherMethod` 数组的最大大小。 If you do not provide an array large enough to hold all the methods, they are skipped without warning.  
+ [in] `rmdOtherMethod` 数组的最大大小。 如果未提供足够大的数组来容纳所有方法，则会跳过这些方法，而不发出警告。  
   
  `pcOtherMethod`  
- [out] The number of MethodDef tokens returned in `rmdOtherMethod`.  
+ 弄`rmdOtherMethod`中返回的 MethodDef 标记的数目。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

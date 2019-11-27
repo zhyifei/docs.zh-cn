@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445473"
 ---
 # <a name="inotifyconnection2registernotifysource-method"></a>INotifyConnection2::RegisterNotifySource 方法
-Installs a specified notification source.  
+安装指定的通知源。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,18 +37,18 @@ HRESULT RegisterNotifySource
   
 ## <a name="parameters"></a>参数  
  `in_pNotifySource`  
- [in] Specifies the object to be used as the notification source.  
+ 中指定要用作通知源的对象。  
   
  `out_ppNotifySink`  
- [out] Receives the object to be used as the notification sink.  
+ 弄接收要用作通知接收器的对象。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds.  
+ 如果方法成功，则 S_OK。  
   
 ## <a name="requirements"></a>要求  
- **Header:** ProtocolNotify2.idl  
+ **标头：** ProtocolNotify2 .idl  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [INotifyConnection2 接口](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
 - [INotifySource2 接口](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)

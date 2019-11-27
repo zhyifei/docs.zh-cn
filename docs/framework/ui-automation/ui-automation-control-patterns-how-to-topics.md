@@ -21,8 +21,8 @@ ms.locfileid: "74445709"
  本部分包含有关实现控件模式的详细信息。  
   
 ## <a name="in-this-section"></a>本节内容  
- [使用 UI 自动化公开表的内容](expose-the-content-of-a-table-using-ui-automation.md)  
- [获取受支持的 UI 自动化控件模式](get-supported-ui-automation-control-patterns.md)  
- [使用 UI 自动化获取复选框的切换状态](get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
- [使用 UI 自动化调用控件](invoke-a-control-using-ui-automation.md)  
- [移动 UI 自动化元素](move-a-ui-automation-element.md)
+ [Expose the Content of a Table Using UI Automation](expose-the-content-of-a-table-using-ui-automation.md)  
+ [Get Supported UI Automation Control Patterns](get-supported-ui-automation-control-patterns.md)  
+ [Get the Toggle State of a Check Box Using UI Automation](get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [Invoke a Control Using UI Automation](invoke-a-control-using-ui-automation.md)  
+ [Move a UI Automation Element](move-a-ui-automation-element.md)
