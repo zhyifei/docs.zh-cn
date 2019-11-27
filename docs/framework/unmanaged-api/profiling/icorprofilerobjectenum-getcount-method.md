@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428255"
 ---
 # <a name="icorprofilerobjectenumgetcount-method"></a>ICorProfilerObjectEnum::GetCount 方法
-Gets the total number of frozen objects in the collection.  
+获取集合中冻结对象的总数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,9 +35,9 @@ HRESULT GetCount (
   
 ## <a name="parameters"></a>参数  
  `pcelt`  
- [out] A pointer to the number of frozen objects in the collection.  
+ 弄一个指针，它指向集合中的冻结对象的数目。  
   
- This method will always return zero in the .NET Framework version 3.5 Service Pack 1 (SP1) and later versions.  
+ 此方法在 .NET Framework 版本 3.5 Service Pack 1 （SP1）和更高版本中将始终返回零。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -48,6 +48,6 @@ HRESULT GetCount (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerObjectEnum 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

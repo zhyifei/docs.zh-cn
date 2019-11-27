@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426127"
 ---
 # <a name="iceegentruncatesection-method"></a>ICeeGen::TruncateSection 方法
-Truncates the specified code section by the specified length.  
+按指定长度截断指定的代码段。  
   
- This method is obsolete and should not be used.  
+ 此方法已过时，不应使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,23 +38,23 @@ HRESULT TruncateSection (
   
 ## <a name="parameters"></a>参数  
  `section`  
- [in] The section to truncate.  
+ 中要截断的部分。  
   
  `len`  
- [in] The length, in bytes, by which to truncate the section.  
+ 中用于截断部分的长度（以字节为单位）。  
   
 ## <a name="remarks"></a>备注  
- Call `TruncateSection` only if you have special section requirements that are not handled by other methods.  
+ 仅当你有其他方法未处理的特殊部分要求时，才调用 `TruncateSection`。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICeeGen 接口](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

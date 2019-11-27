@@ -25,9 +25,9 @@ ms.locfileid: "74348082"
   
  [字符串函数](../../../visual-basic/language-reference/functions/string-functions.md)  
   
- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
   
- [CType 函数](../../../visual-basic/language-reference/functions/ctype-function.md)  
+ [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)  
   
 ## <a name="related-sections"></a>相关章节  
  [Visual Basic 语言参考](../../../visual-basic/language-reference/index.md)  

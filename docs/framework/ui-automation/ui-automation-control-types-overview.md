@@ -112,6 +112,6 @@ ms.locfileid: "74442628"
   
 - [UI 自动化对 Window 控件类型的支持](ui-automation-support-for-the-window-control-type.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Automation.ControlType>

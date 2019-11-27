@@ -25,11 +25,11 @@ Public Class TextFieldParser
 ## <a name="remarks"></a>备注  
  有关 `TextFieldParser` 对象所使用方法和属性的信息，请参阅 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>。  
   
- For more information, see [Reading from Files](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).  
+ 有关详细信息，请参阅[从文件读取](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)。  
   
 ## <a name="requirements"></a>要求  
  **命名空间：** <xref:Microsoft.VisualBasic.FileIO>  
   
- **Class:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>  
+ **类：** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)
+ **程序集：** Visual Basic 运行时库（在 Microsoft. .dll 中）

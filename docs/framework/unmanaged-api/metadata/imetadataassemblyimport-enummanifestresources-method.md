@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449553"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources 方法
-Gets a pointer to an enumerator for the resources referenced in the current assembly manifest.  
+获取一个指针，该指针指向当前程序集清单中引用的资源的枚举器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,33 +38,33 @@ HRESULT EnumManifestResources (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be a null value when the `EnumManifestResources` method is called for the first time.  
+ [in，out]指向枚举器的指针。 当首次调用 `EnumManifestResources` 方法时，此值必须为 null 值。  
   
  `rManifestResources`  
- [out] The array used to store the `mdManifestResource` metadata tokens.  
+ 弄用于存储 `mdManifestResource` 元数据标记的数组。  
   
  `cMax`  
- [in] The maximum number of `mdManifestResource` tokens that can be placed in `rManifestResources`.  
+ 中可放置在 `rManifestResources`中的 `mdManifestResource` 标记的最大数目。  
   
  `pcTokens`  
- [out] The number of `mdManifestResource` tokens actually placed in `rManifestResources`.  
+ 弄实际置于 `rManifestResources`中 `mdManifestResource` 标记的数目。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumManifestResources` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
+|`S_OK`|`EnumManifestResources` 成功返回。|  
+|`S_FALSE`|没有要枚举的令牌。 在这种情况下，`pcTokens` 设置为零。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

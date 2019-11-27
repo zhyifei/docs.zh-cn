@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444106"
 ---
 # <a name="coinitiee-enumeration"></a>COINITIEE 枚举
-Specifies constants used by [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) when initializing the common language runtime.  
+指定初始化公共语言运行时[CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)使用的常量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,21 +36,21 @@ typedef enum tagCOINITEE {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`COINITEE_DEFAULT`|Default initialization mode. This initializes the runtime and creates the default <xref:System.AppDomain>.|  
-|`COINITEE_DLL`|Initializes to run a managed DLL.|  
-|`COINITEE_MAIN`|Initializes to run a managed EXE. This initializes the runtime but does not create the default <xref:System.AppDomain>, which is created after entering the main routine of the EXE.|  
+|`COINITEE_DEFAULT`|默认初始化模式。 这将初始化运行时并创建默认 <xref:System.AppDomain>。|  
+|`COINITEE_DLL`|初始化以运行托管 DLL。|  
+|`COINITEE_MAIN`|初始化以运行托管 EXE。 这将初始化运行时，但不会创建默认 <xref:System.AppDomain>，这是在输入 EXE 的主例程之后创建的。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

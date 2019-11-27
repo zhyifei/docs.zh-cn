@@ -12,16 +12,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350669"
 ---
 # <a name="mylog-object"></a>My.Log 对象
-Provides a property and methods for writing event and exception information to the application's log listeners.  
+提供用于将事件和异常信息写入应用程序的日志侦听器的属性和方法。  
   
 ## <a name="remarks"></a>备注  
  有关 `My.Log` 对象所使用方法和属性的信息，请参阅 <xref:Microsoft.VisualBasic.Logging.AspLog>。  
   
- The `My.Log` object is available for ASP.NET applications only. For client applications, use [My.Application.Log Object](../../../visual-basic/language-reference/objects/my-application-log-object.md).  
+ 仅适用于 ASP.NET 应用程序的 `My.Log` 对象。 对于客户端应用程序，请使用[My. .Log 对象](../../../visual-basic/language-reference/objects/my-application-log-object.md)。  
   
 ## <a name="requirements"></a>要求  
  **命名空间：** <xref:Microsoft.VisualBasic.Logging>  
   
- **Class:** <xref:Microsoft.VisualBasic.Logging.AspLog>  
+ **类：** <xref:Microsoft.VisualBasic.Logging.AspLog>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)
+ **程序集：** Visual Basic 运行时库（在 Microsoft. .dll 中）

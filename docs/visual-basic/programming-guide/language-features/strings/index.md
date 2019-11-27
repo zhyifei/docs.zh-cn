@@ -13,11 +13,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344335"
 ---
 # <a name="strings-in-visual-basic"></a>字符串 (Visual Basic)
-This section describes the basic concepts behind using strings in Visual Basic.  
+本部分介绍使用 Visual Basic 中的字符串的基本概念。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Visual Basic 中的字符串简介](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- Lists topics that describe the basic concepts behind using strings in Visual Basic.  
+ 列出了一些主题，这些主题描述了在 Visual Basic 中使用字符串的基本概念。  
   
  [如何：在 Visual Basic 中使用 StringBuilder 创建字符串](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
  展示了如何通过多个短字符串有效创建一个长字符串。  
@@ -34,6 +34,6 @@ This section describes the basic concepts behind using strings in Visual Basic.
  [演练：在 Visual Basic 中加密和解密字符串](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
  展示了如何使用加密服务提供程序版本的三重数据加密标准算法来加密和解密字符串。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 语言功能](../../../../visual-basic/programming-guide/language-features/index.md)

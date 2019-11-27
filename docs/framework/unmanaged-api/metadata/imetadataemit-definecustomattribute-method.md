@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432635"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>IMetaDataEmit::DefineCustomAttribute 方法
-Creates a definition for a custom attribute with the specified metadata signature, to be attached to the specified object, and gets a token to that custom attribute definition.  
+使用指定的元数据签名创建要附加到指定对象的自定义属性的定义，并获取该自定义属性定义的标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,30 +39,30 @@ HRESULT DefineCustomAttribute (
   
 ## <a name="parameters"></a>参数  
  `tkObj`  
- [in] The token for the owner item.  
+ 中所有者项的标记。  
   
  `tkType`  
- [in] The token that identifies the custom attribute.  
+ 中标识自定义属性的标记。  
   
  `pCustomAttribute`  
- [in] A pointer to the custom attribute.  
+ 中指向自定义属性的指针。  
   
  `cbCustomAttribute`  
- [in] The count of bytes in `pCustomAttribute`.  
+ 中`pCustomAttribute`中的字节计数。  
   
  `pcv`  
- [out] The `mdCustomAttribute` token assigned.  
+ 弄分配 `mdCustomAttribute` 标记。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

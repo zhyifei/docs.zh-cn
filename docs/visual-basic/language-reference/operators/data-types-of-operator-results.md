@@ -17,105 +17,105 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331472"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>运算符结果的数据类型 (Visual Basic)
-Visual Basic determines the result data type of an operation based on the data types of the operands. In some cases this might be a data type with a greater range than that of either operand.  
+Visual Basic 根据操作数的数据类型确定操作的结果数据类型。 在某些情况下，这可能是一种数据类型，其范围比任一操作数大。  
   
 ## <a name="data-type-ranges"></a>数据类型范围  
- The ranges of the relevant data types, in order from smallest to largest, are as follows:  
+ 相关数据类型的范围从最小到最大的顺序如下所示：  
   
-- [Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md) — two possible values  
+- [布尔](../../../visual-basic/language-reference/data-types/boolean-data-type.md)值-两个可能的值  
   
-- [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md) — 256 possible integral values  
+- [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)， [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md) -256 可能的整数值  
   
-- [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) — 65,536 (6.5...E+4) possible integral values  
+- [Short](../../../visual-basic/language-reference/data-types/short-data-type.md)、 [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) （65536（6.5））可能的整数值  
   
-- [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) — 4,294,967,296 (4.2...E+9) possible integral values  
+- [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)、 [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) -4294967296 （4.2 ... E + 9）可能的整数值  
   
-- [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) — 18,446,744,073,709,551,615 (1.8...E+19) possible integral values  
+- [Long](../../../visual-basic/language-reference/data-types/long-data-type.md)、 [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) -18446744073709551615 （1.8 ... E + 19）可能的整数值  
   
-- [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) — 1.5...E+29 possible integral values, maximum range 7.9...E+28 (absolute value)  
+- [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) -1.5 ... e + 29 个可能的整数值，最大范围 7.9 ... E + 28 （绝对值）  
   
-- [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) — maximum range 3.4...E+38 (absolute value)  
+- [单](../../../visual-basic/language-reference/data-types/single-data-type.md)-最大范围 3.4 ... E + 38 （绝对值）  
   
-- [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) — maximum range 1.7...E+308 (absolute value)  
+- [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) –最大范围 1.7 ... E + 308 （绝对值）  
   
- For more information on Visual Basic data types, see [Data Types](../../../visual-basic/language-reference/data-types/index.md).  
+ 有关 Visual Basic 数据类型的详细信息，请参阅[数据类型](../../../visual-basic/language-reference/data-types/index.md)。  
   
- If an operand evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the Visual Basic arithmetic operators treat it as zero.  
+ 如果操作数的计算结果为[Nothing](../../../visual-basic/language-reference/nothing.md)，则 Visual Basic 算术运算符将其视为零。  
   
-## <a name="decimal-arithmetic"></a>Decimal Arithmetic  
- Note that the [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) data type is neither floating-point nor integer.  
+## <a name="decimal-arithmetic"></a>Decimal 算法  
+ 请注意， [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)数据类型既不是浮点数据类型，也不是整数。  
   
- If either operand of a `+`, `–`, `*`, `/`, or `Mod` operation is `Decimal` and the other is not `Single` or `Double`, Visual Basic widens the other operand to `Decimal`. It performs the operation in `Decimal`, and the result data type is `Decimal`.  
+ 如果 `+`、`–`、`*`、`/`或 `Mod` 运算的任一操作数为 `Decimal`，而另一个不是 `Single` 或 `Double`，则 Visual Basic 将另一个操作数扩大为 `Decimal`。 它在 `Decimal`中执行操作，并且结果数据类型为 `Decimal`。  
   
-## <a name="floating-point-arithmetic"></a>Floating-Point Arithmetic  
- Visual Basic performs most floating-point arithmetic in [Double](../../../visual-basic/language-reference/data-types/double-data-type.md), which is the most efficient data type for such operations. However, if one operand is [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) and the other is not `Double`, Visual Basic performs the operation in `Single`. It widens each operand as necessary to the appropriate data type before the operation, and the result has that data type.  
+## <a name="floating-point-arithmetic"></a>浮点运算  
+ Visual Basic 在[Double](../../../visual-basic/language-reference/data-types/double-data-type.md)中执行大多数浮点运算，这是此类操作的最有效的数据类型。 但是，如果一个操作数为[Single](../../../visual-basic/language-reference/data-types/single-data-type.md) ，而另一个操作数不 `Double`，则 Visual Basic 在 `Single`中执行该操作。 它在操作之前将每个操作数扩展为适当的数据类型，并且结果具有该数据类型。  
   
-### <a name="-and--operators"></a>/ and ^ Operators  
- The `/` operator is defined only for the [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md), [Single](../../../visual-basic/language-reference/data-types/single-data-type.md), and [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) data types. Visual Basic widens each operand as necessary to the appropriate data type before the operation, and the result has that data type.  
+### <a name="-and--operators"></a>/和 ^ 运算符  
+ 仅为[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)、 [Single](../../../visual-basic/language-reference/data-types/single-data-type.md)和[Double](../../../visual-basic/language-reference/data-types/double-data-type.md)数据类型定义 `/` 运算符。 Visual Basic 在操作之前将每个操作数扩大为适当的数据类型，并且结果具有该数据类型。  
   
- The following table shows the result data types for the `/` operator. Note that this table is symmetric; for a given combination of operand data types, the result data type is the same regardless of the order of the operands.  
+ 下表显示 `/` 运算符的结果数据类型。 请注意，此表为对称表;对于给定的操作数数据类型组合，无论操作数的顺序如何，结果数据类型都是相同的。  
   
 ||||||  
 |---|---|---|---|---|  
-||`Decimal`|`Single`|`Double`|Any integer type|  
-|`Decimal`|十进制|Single|Double|十进制|  
+||`Decimal`|`Single`|`Double`|任何整数类型|  
+|`Decimal`|Decimal|Single|Double|Decimal|  
 |`Single`|Single|Single|Double|Single|  
 |`Double`|Double|Double|Double|Double|  
-|Any integer type|十进制|Single|Double|Double|  
+|任何整数类型|Decimal|Single|Double|Double|  
   
- The `^` operator is defined only for the `Double` data type. Visual Basic widens each operand as necessary to `Double` before the operation, and the result data type is always `Double`.  
+ 仅为 `Double` 数据类型定义 `^` 运算符。 Visual Basic 在操作之前将每个操作数扩大到 `Double`，并且始终 `Double`结果数据类型。  
   
-## <a name="integer-arithmetic"></a>Integer Arithmetic  
- The result data type of an integer operation depends on the data types of the operands. In general, Visual Basic uses the following policies for determining the result data type:  
+## <a name="integer-arithmetic"></a>整数算法  
+ 整数运算的结果数据类型取决于操作数的数据类型。 一般情况下，Visual Basic 使用以下策略来确定结果数据类型：  
   
-- If both operands of a binary operator have the same data type, the result has that data type. An exception is `Boolean`, which is forced to `Short`.  
+- 如果二元运算符的两个操作数具有相同的数据类型，则结果将具有该数据类型。 异常是 `Boolean`强制 `Short`的。  
   
-- If an unsigned operand participates with a signed operand, the result has a signed type with at least as large a range as either operand.  
+- 如果无符号操作数参与有符号操作数，则结果将具有一个有符号的类型，其中至少有一个操作数为同一范围。  
   
-- Otherwise, the result usually has the larger of the two operand data types.  
+- 否则，结果通常具有两个操作数数据类型中较大的一个。  
   
- Note that the result data type might not be the same as either operand data type.  
+ 请注意，结果数据类型可能不与任一操作数数据类型相同。  
   
 > [!NOTE]
-> The result data type is not always large enough to hold all possible values resulting from the operation. An <xref:System.OverflowException> exception can occur if the value is too large for the result data type.  
+> 结果数据类型并不总是足够大，无法保存操作生成的所有可能值。 如果结果数据类型的值太大，则可能出现 <xref:System.OverflowException> 异常。  
   
-### <a name="unary--and--operators"></a>Unary + and – Operators  
- The following table shows the result data types for the two unary operators, `+` and `–`.  
-  
-|||||||||||  
-|---|---|---|---|---|---|---|---|---|---|  
-||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|Unary `+`|Short|SByte|字节|Short|UShort|整数|UInteger|Long|ULong|  
-|Unary `–`|Short|SByte|Short|Short|整数|整数|Long|Long|十进制|  
-  
-### <a name="-and--operators"></a><\< and >> Operators  
- The following table shows the result data types for the two bit-shift operators, `<<` and `>>`. Visual Basic treats each bit-shift operator as a unary operator on its left operand (the bit pattern to be shifted).  
+### <a name="unary--and--operators"></a>一元 + and –运算符  
+ 下表显示了两个一元运算符的结果数据类型，`+` 和 `–`。  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`<<`，`>>`|Short|SByte|字节|Short|UShort|整数|UInteger|Long|ULong|  
+|一元 `+`|Short|SByte|字节|Short|UShort|整数|UInteger|Long|ULong|  
+|一元 `–`|Short|SByte|Short|Short|整数|整数|Long|Long|Decimal|  
   
- If the left operand is `Decimal`, `Single`, `Double`, or `String`, Visual Basic attempts to convert it to `Long` before the operation, and the result data type is `Long`. The right operand (the number of bit positions to shift) must be `Integer` or a type that widens to `Integer`.  
-  
-### <a name="binary----and-mod-operators"></a>Binary +, –, \*, and Mod Operators  
- The following table shows the result data types for the binary `+` and `–` operators and the `*` and `Mod` operators. Note that this table is symmetric; for a given combination of operand data types, the result data type is the same regardless of the order of the operands.  
+### <a name="-and--operators"></a><\< 和 > > 运算符  
+ 下表显示了两个移位运算符的结果数据类型，`<<` 和 `>>`。 Visual Basic 将每个位移位运算符视为其左操作数的一元运算符（要移位的位模式）。  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Short|SByte|Short|Short|整数|整数|Long|Long|十进制|  
-|`SByte`|SByte|SByte|Short|Short|整数|整数|Long|Long|十进制|  
+|`<<`, `>>`|Short|SByte|字节|Short|UShort|整数|UInteger|Long|ULong|  
+  
+ 如果左操作数为 `Decimal`，`Single`、`Double`或 `String`，Visual Basic 尝试在操作之前将其转换为 `Long`，结果数据类型为 `Long`。 右操作数（要移位的位数）必须 `Integer` 或扩展到 `Integer`的类型。  
+  
+### <a name="binary----and-mod-operators"></a>Binary +、–、\*和 Mod 运算符  
+ 下表显示了二元 `+` 和 `–` 运算符以及 `*` 和 `Mod` 运算符的结果数据类型。 请注意，此表为对称表;对于给定的操作数数据类型组合，无论操作数的顺序如何，结果数据类型都是相同的。  
+  
+|||||||||||  
+|---|---|---|---|---|---|---|---|---|---|  
+||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
+|`Boolean`|Short|SByte|Short|Short|整数|整数|Long|Long|Decimal|  
+|`SByte`|SByte|SByte|Short|Short|整数|整数|Long|Long|Decimal|  
 |`Byte`|Short|Short|字节|Short|UShort|整数|UInteger|Long|ULong|  
-|`Short`|Short|Short|Short|Short|整数|整数|Long|Long|十进制|  
+|`Short`|Short|Short|Short|Short|整数|整数|Long|Long|Decimal|  
 |`UShort`|整数|整数|UShort|整数|UShort|整数|UInteger|Long|ULong|  
-|`Integer`|整数|整数|整数|整数|整数|整数|Long|Long|十进制|  
+|`Integer`|整数|整数|整数|整数|整数|整数|Long|Long|Decimal|  
 |`UInteger`|Long|Long|UInteger|Long|UInteger|Long|UInteger|Long|ULong|  
-|`Long`|Long|Long|Long|Long|Long|Long|Long|Long|十进制|  
-|`ULong`|十进制|十进制|ULong|十进制|ULong|十进制|ULong|十进制|ULong|  
+|`Long`|Long|Long|Long|Long|Long|Long|Long|Long|Decimal|  
+|`ULong`|Decimal|Decimal|ULong|Decimal|ULong|Decimal|ULong|Decimal|ULong|  
   
 ### <a name="-operator"></a>\\ 运算符  
- The following table shows the result data types for the `\` operator. Note that this table is symmetric; for a given combination of operand data types, the result data type is the same regardless of the order of the operands.  
+ 下表显示 `\` 运算符的结果数据类型。 请注意，此表为对称表;对于给定的操作数数据类型组合，无论操作数的顺序如何，结果数据类型都是相同的。  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
@@ -130,28 +130,28 @@ Visual Basic determines the result data type of an operation based on the data t
 |`Long`|Long|Long|Long|Long|Long|Long|Long|Long|Long|  
 |`ULong`|Long|Long|ULong|Long|ULong|Long|ULong|Long|ULong|  
   
- If either operand of the `\` operator is [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md), [Single](../../../visual-basic/language-reference/data-types/single-data-type.md), or [Double](../../../visual-basic/language-reference/data-types/double-data-type.md), Visual Basic attempts to convert it to [Long](../../../visual-basic/language-reference/data-types/long-data-type.md) before the operation, and the result data type is `Long`.  
+ 如果 `\` 运算符的任一操作数为[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)、 [Single](../../../visual-basic/language-reference/data-types/single-data-type.md)或[Double](../../../visual-basic/language-reference/data-types/double-data-type.md)，则 Visual Basic 尝试在运算前将其转换为[Long](../../../visual-basic/language-reference/data-types/long-data-type.md) ，并 `Long`结果数据类型。  
   
-## <a name="relational-and-bitwise-comparisons"></a>Relational and Bitwise Comparisons  
- The result data type of a relational operation (`=`, `<>`, `<`, `>`, `<=`, `>=`) is always `Boolean`[Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md). The same is true for logical operations (`And`, `AndAlso`, `Not`, `Or`, `OrElse`, `Xor`) on `Boolean` operands.  
+## <a name="relational-and-bitwise-comparisons"></a>关系和按位比较  
+ 关系操作的结果数据类型（`=`、`<>`、`<`、`>`、`<=`、`>=`）始终 `Boolean`[布尔数据类型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)。 对于 `OrElse`操作数上的逻辑操作（`And`、`AndAlso`、`Not`、`Or`、`Xor`、`Boolean`），情况也是如此。  
   
- The result data type of a bitwise logical operation depends on the data types of the operands. Note that `AndAlso` and `OrElse` are defined only for `Boolean`, and Visual Basic converts each operand as necessary to `Boolean` before performing the operation.  
+ 按位逻辑运算的结果数据类型取决于操作数的数据类型。 请注意，仅为 `Boolean`定义 `AndAlso` 和 `OrElse`，并且 Visual Basic 在执行操作前将每个操作数转换为 `Boolean`。  
   
-### <a name="-----and--operators"></a>=, <>, \<, >, \<=, and >= Operators  
- If both operands are `Boolean`, Visual Basic considers `True` to be less than `False`. If a numeric type is compared with a `String`, Visual Basic attempts to convert the `String` to `Double` before the operation. A `Char` or `Date` operand can be compared only with another operand of the same data type. The result data type is always `Boolean`.  
+### <a name="-----and--operators"></a>=，< >，\<，>，\<=，and > = 运算符  
+ 如果两个操作数都是 `Boolean`的，Visual Basic 会认为 `True` 小于 `False`。 如果将数值类型与 `String`进行比较，Visual Basic 尝试将 `String` 转换为操作前面的 `Double`。 `Char` 或 `Date` 操作数只能与相同数据类型的另一个操作数进行比较。 结果数据类型始终 `Boolean`。  
   
-### <a name="bitwise-not-operator"></a>Bitwise Not Operator  
- The following table shows the result data types for the bitwise `Not` operator.  
+### <a name="bitwise-not-operator"></a>按位 Not 运算符  
+ 下表显示了按位 `Not` 运算符的结果数据类型。  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
 |`Not`|布尔值|SByte|字节|Short|UShort|整数|UInteger|Long|ULong|  
   
- If the operand is `Decimal`, `Single`, `Double`, or `String`, Visual Basic attempts to convert it to `Long` before the operation, and the result data type is `Long`.  
+ 如果操作数为 `Decimal`、`Single`、`Double`或 `String`，Visual Basic 尝试在操作之前将其转换为 `Long`，结果数据类型为 `Long`。  
   
-### <a name="bitwise-and-or-and-xor-operators"></a>Bitwise And, Or, and Xor Operators  
- The following table shows the result data types for the bitwise `And`, `Or`, and `Xor` operators. Note that this table is symmetric; for a given combination of operand data types, the result data type is the same regardless of the order of the operands.  
+### <a name="bitwise-and-or-and-xor-operators"></a>按位 And、Or 和 Xor 运算符  
+ 下表显示了按位 `And`、`Or`和 `Xor` 运算符的结果数据类型。 请注意，此表为对称表;对于给定的操作数数据类型组合，无论操作数的顺序如何，结果数据类型都是相同的。  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
@@ -166,21 +166,21 @@ Visual Basic determines the result data type of an operation based on the data t
 |`Long`|Long|Long|Long|Long|Long|Long|Long|Long|Long|  
 |`ULong`|Long|Long|ULong|Long|ULong|Long|ULong|Long|ULong|  
   
- If an operand is `Decimal`, `Single`, `Double`, or `String`, Visual Basic attempts to convert it to `Long` before the operation, and the result data type is the same as if that operand had already been `Long`.  
+ 如果操作数为 `Decimal`、`Single`、`Double`或 `String`，Visual Basic 尝试在操作之前将其转换为 `Long`，结果数据类型与该操作数已 `Long`的情况相同。  
   
 ## <a name="miscellaneous-operators"></a>其他运算符  
- The `&` operator is defined only for concatenation of `String` operands. Visual Basic converts each operand as necessary to `String` before the operation, and the result data type is always `String`. For the purposes of the `&` operator, all conversions to `String` are considered to be widening, even if `Option Strict` is `On`.  
+ 仅为 `String` 操作数的串联定义 `&` 运算符。 Visual Basic 在操作之前将每个操作数转换为 `String`，并始终 `String`结果数据类型。 出于 `&` 运算符的目的，对 `String` 的所有转换都被视为扩大，即使 `On``Option Strict` 也是如此。  
   
- The `Is` and `IsNot` operators require both operands to be of a reference type. The `TypeOf`...`Is` expression requires the first operand to be of a reference type and the second operand to be the name of a data type. In all these cases the result data type is `Boolean`.  
+ `Is` 和 `IsNot` 运算符要求两个操作数均为引用类型。 `TypeOf`...`Is` 表达式要求第一个操作数为引用类型，第二个操作数为数据类型的名称。 在所有这些情况下，结果数据类型为 `Boolean`。  
   
- The `Like` operator is defined only for pattern matching of `String` operands. Visual Basic attempts to convert each operand as necessary to `String` before the operation. The result data type is always `Boolean`.  
+ 仅为 `String` 操作数的模式匹配定义 `Like` 运算符。 Visual Basic 尝试在操作之前将每个操作数转换为 `String`。 结果数据类型始终 `Boolean`。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据类型](../../../visual-basic/language-reference/data-types/index.md)
 - [运算符和表达式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic 中的算术运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic 中的比较运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [运算符](../../../visual-basic/language-reference/operators/index.md)
 - [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

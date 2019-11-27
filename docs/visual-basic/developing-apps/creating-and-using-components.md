@@ -13,9 +13,9 @@ ms.locfileid: "74330301"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>创建和使用组件 (Visual Basic)
 
-组件是一个类，该类实现 <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> 接口或直接/间接派生自实现 <xref:System.ComponentModel.IComponent> 的类。 A .NET Framework component is an object that is reusable, can interact with other objects, and provides control over external resources and design-time support.  
+组件是一个类，该类实现 <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> 接口或直接/间接派生自实现 <xref:System.ComponentModel.IComponent> 的类。 .NET Framework 组件是可重复使用的对象，可以与其他对象进行交互，并提供对外部资源和设计时支持的控制。  
   
- 组件的一个重要特性在于它们是可设计的，这意味着可在 Visual Studio 集成开发环境中使用作为组件的类。 可以将组件添加到“工具箱”、拖放到窗体以及在设计图面上操作。 Notice that base design-time support for components is built into the .NET Framework; a component developer does not have to do any additional work to take advantage of the base design-time functionality.  
+ 组件的一个重要特性在于它们是可设计的，这意味着可在 Visual Studio 集成开发环境中使用作为组件的类。 可以将组件添加到“工具箱”、拖放到窗体以及在设计图面上操作。 请注意，在 .NET Framework 中内置了组件的基本设计时支持;组件开发人员无需执行任何其他工作即可利用基本设计时功能。  
   
  控件与组件类似，二者都是可设计的。 不过，控件提供用户界面，而组件不提供。 控件必须派生自基控件类之一：<xref:System.Windows.Forms.Control> 或 <xref:System.Web.UI.Control>。  
   
@@ -37,35 +37,35 @@ ms.locfileid: "74330301"
   
  核心组件类包括：  
   
-- <xref:System.ComponentModel.Component> <xref:System.ComponentModel.IComponent> 接口的基实现。 此类可以实现在应用程序之间共享对象。  
+- <xref:System.ComponentModel.Component>。 <xref:System.ComponentModel.IComponent> 接口的基实现。 此类可以实现在应用程序之间共享对象。  
   
-- <xref:System.ComponentModel.MarshalByValueComponent> <xref:System.ComponentModel.IComponent> 接口的基实现。  
+- <xref:System.ComponentModel.MarshalByValueComponent>。 <xref:System.ComponentModel.IComponent> 接口的基实现。  
   
-- <xref:System.ComponentModel.Container> <xref:System.ComponentModel.IContainer> 接口的基实现。 此类封装零个或多个组件。  
+- <xref:System.ComponentModel.Container>。 <xref:System.ComponentModel.IContainer> 接口的基实现。 此类封装零个或多个组件。  
   
  部分用于组件授权的类包括：  
   
-- <xref:System.ComponentModel.License> 所有许可证的抽象基类。 对组件的特定实例授予许可证。  
+- <xref:System.ComponentModel.License>。 所有许可证的抽象基类。 对组件的特定实例授予许可证。  
   
-- <xref:System.ComponentModel.LicenseManager> 提供属性和方法，用以将许可证添加到组件和管理 <xref:System.ComponentModel.LicenseProvider>。  
+- <xref:System.ComponentModel.LicenseManager>。 提供属性和方法，用以将许可证添加到组件和管理 <xref:System.ComponentModel.LicenseProvider>。  
   
-- <xref:System.ComponentModel.LicenseProvider> 实现许可证提供程序的抽象基类。  
+- <xref:System.ComponentModel.LicenseProvider>。 实现许可证提供程序的抽象基类。  
   
-- <xref:System.ComponentModel.LicenseProviderAttribute> 指定要与某个类一起使用的 <xref:System.ComponentModel.LicenseProvider> 类。  
+- <xref:System.ComponentModel.LicenseProviderAttribute>。 指定要与某个类一起使用的 <xref:System.ComponentModel.LicenseProvider> 类。  
   
  常用于描述和保存组件的类。  
   
-- <xref:System.ComponentModel.TypeDescriptor> 提供有关组件特征的信息，如组件的特性、属性和事件。  
+- <xref:System.ComponentModel.TypeDescriptor>。 提供有关组件特征的信息，如组件的特性、属性和事件。  
   
-- <xref:System.ComponentModel.EventDescriptor> 提供有关事件的信息。  
+- <xref:System.ComponentModel.EventDescriptor>。 提供有关事件的信息。  
   
-- <xref:System.ComponentModel.PropertyDescriptor> 提供有关属性的信息。  
+- <xref:System.ComponentModel.PropertyDescriptor>。 提供有关属性的信息。  
   
 ## <a name="related-sections"></a>相关章节  
 
  [控件和组件创作疑难解答](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  解释如何解决常见问题。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：在 Windows 窗体中访问设计时支持](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)

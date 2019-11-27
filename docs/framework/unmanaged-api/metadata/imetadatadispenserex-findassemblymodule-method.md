@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442179"
 ---
 # <a name="imetadatadispenserexfindassemblymodule-method"></a>IMetaDataDispenserEx::FindAssemblyModule 方法
-未实现此方法。 If called, it returns E_NOTIMPL.  
+未实现此方法。 如果调用，它将返回 E_NOTIMPL。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,39 +42,39 @@ HRESULT FindAssemblyModule(
   
 ## <a name="parameters"></a>参数  
  `szAppBase`  
- [in] Not used.  
+ 中不使用。  
   
  `szPrivateBin`  
- [in] Not used.  
+ 中不使用。  
   
  `szGlobalBin`  
- [in] Not used.  
+ 中不使用。  
   
  `szAssemblyName`  
- [in] The name of the module.  
+ 中模块的名称。  
   
  `szModuleName`  
- [in] The assembly to be found.  
+ 中要查找的程序集。  
   
  `szName`  
- [out] The simple name of the assembly.  
+ 弄程序集的简单名称。  
   
  `cchName`  
- [in] The size, in bytes, of `szName`.  
+ 中`szName`的大小（以字节为单位）。  
   
  `pcName`  
- [out] The number of characters actually returned in `szName`.  
+ 弄`szName`中实际返回的字符数。  
   
 ## <a name="requirements"></a>要求  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataDispenserEx 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
 - [IMetaDataDispenser 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

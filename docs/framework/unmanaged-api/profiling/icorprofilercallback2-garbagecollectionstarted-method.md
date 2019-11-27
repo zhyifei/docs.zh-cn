@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439811"
 ---
 # <a name="icorprofilercallback2garbagecollectionstarted-method"></a>ICorProfilerCallback2::GarbageCollectionStarted 方法
-Notifies the code profiler that garbage collection has started.  
+通知代码探查器垃圾回收已启动。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,20 +36,20 @@ HRESULT GarbageCollectionStarted(
   
 ## <a name="parameters"></a>参数  
  `cGenerations`  
- [in] The total number of entries in the `generationCollected` array.  
+ 中`generationCollected` 数组中的总项数。  
   
  `generationCollected`  
- [in] An array of Boolean values, which are `true` if the generation that corresponds to the array index is being collected by this garbage collection; otherwise, `false`.  
+ 中布尔值的数组，如果此垃圾回收正在收集与数组索引对应的代，则 `true` 此数组;否则，`false`。  
   
- The array is indexed by a value of the [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeration, which indicates the generation.  
+ 数组由[COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md)枚举的一个值进行索引，该枚举指示代。  
   
  `reason`  
- [in] A value of the [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md) enumeration that indicates the reason the garbage collection was induced.  
+ 中一个[COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md)枚举的值，该值指示导致垃圾回收的原因。  
   
 ## <a name="remarks"></a>备注  
- All callbacks that pertain to this garbage collection will occur between the `GarbageCollectionStarted` callback and the corresponding [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) callback. These callbacks need not occur on the same thread.  
+ 与此垃圾回收相关的所有回调都将在 `GarbageCollectionStarted` 回调和相应的[ICorProfilerCallback2：： GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)回调之间发生。 这些回调不需要在同一线程上发生。  
   
- It is safe for the profiler to inspect objects in their original locations during the `GarbageCollectionStarted` callback. The garbage collector will begin moving objects after the return from `GarbageCollectionStarted`. After the profiler has returned from this callback, the profiler should consider all object IDs to be invalid until it receives a `ICorProfilerCallback2::GarbageCollectionFinished` callback.  
+ 探查器在 `GarbageCollectionStarted` 回调过程中检查其原始位置中的对象是安全的。 垃圾回收器将在从 `GarbageCollectionStarted`返回后开始移动对象。 在探查器从此回调返回后，探查器应在收到 `ICorProfilerCallback2::GarbageCollectionFinished` 回调之前，将所有对象 Id 视为无效。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -60,7 +60,7 @@ HRESULT GarbageCollectionStarted(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerCallback2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

@@ -12,12 +12,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346985"
 ---
 # <a name="procedure-call-or-argument-is-not-valid-visual-basic"></a>过程调用或参数无效 (Visual Basic)
-Some part of the call cannot be completed.  
+无法完成调用的某些部分。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-- Check the permitted ranges for arguments to make sure no arrangement exceeds the permitted values.  
+- 检查允许的参数范围以确保没有任何排列超出允许的值。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [错误类型](../../../visual-basic/programming-guide/language-features/error-types.md)

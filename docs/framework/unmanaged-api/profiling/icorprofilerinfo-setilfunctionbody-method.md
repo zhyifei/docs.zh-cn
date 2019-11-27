@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449880"
 ---
 # <a name="icorprofilerinfosetilfunctionbody-method"></a>ICorProfilerInfo::SetILFunctionBody 方法
-Replaces the body of the specified function in the specified module.  
+替换指定模块中指定函数的主体。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,20 +36,20 @@ HRESULT SetILFunctionBody(
   
 ## <a name="parameters"></a>参数  
  `moduleId`  
- [in] The ID of the module in which the function resides.  
+ 中函数所在模块的 ID。  
   
  `methodid`  
- [in] The token of the function for which to replace the body.  
+ 中要替换其正文的函数的标记。  
   
  `pbNewILMethodHeader`  
- [in] The new header for the function.  
+ 中函数的新标头。  
   
 ## <a name="remarks"></a>备注  
- The `SetILFunctionBody` method replaces the relative virtual address of the function in the metadata so that it points to the new function body, and adjusts any internal data structures as required.  
+ `SetILFunctionBody` 方法将替换元数据中函数的相对虚拟地址，以使其指向新的函数体，并根据需要调整所有内部数据结构。  
   
- The `SetILFunctionBody` method can be called on only those functions that have never been compiled by a just-in-time (JIT) compiler.  
+ 仅可对从未由实时（JIT）编译器编译的函数调用 `SetILFunctionBody` 方法即可。  
   
- Use the [ICorProfilerInfo::GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) method to allocate space for the new method to ensure that the buffer is compatible.  
+ 使用[ICorProfilerInfo：： GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md)方法为新方法分配空间，以确保缓冲区兼容。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -60,6 +60,6 @@ HRESULT SetILFunctionBody(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

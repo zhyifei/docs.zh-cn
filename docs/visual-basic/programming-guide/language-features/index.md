@@ -13,11 +13,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345071"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 语言功能
-The following topics introduce and discuss the essential components of Visual Basic, an object-oriented programming language. 使用窗体和控件创建应用程序的用户界面后，需要编写代码来定义应用程序的行为。 As with any modern programming language, Visual Basic supports a number of common programming constructs and language elements.  
+以下主题介绍和讨论了 Visual Basic （一种面向对象的编程语言）的基本组件。 使用窗体和控件创建应用程序的用户界面后，需要编写代码来定义应用程序的行为。 与任何现代编程语言一样，Visual Basic 支持许多通用编程构造和语言元素。  
   
- 如果你已使用其他语言进行过编程，可能会对此部分中介绍的大部分资料感到熟悉。 While most of the constructs are similar to those in other languages, the event-driven nature of Visual Basic introduces some subtle differences.  
+ 如果你已使用其他语言进行过编程，可能会对此部分中介绍的大部分资料感到熟悉。 虽然大多数构造与其他语言中的构造相似，但 Visual Basic 的事件驱动性质会带来一些细微的差异。  
   
- 如果是刚开始接触编程，可通过此部分中的资料，了解用于编写代码的基本构建基块的入门知识。 Once you understand the basics, you can create powerful applications using Visual Basic.  
+ 如果是刚开始接触编程，可通过此部分中的资料，了解用于编写代码的基本构建基块的入门知识。 了解基础知识后，可以使用 Visual Basic 创建功能强大的应用程序。  
   
 ## <a name="in-this-section"></a>本节内容  
  [数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
@@ -83,4 +83,4 @@ The following topics introduce and discuss the essential components of Visual Ba
  介绍了 .NET Framework 提供的一些类型集合。 展示了如何使用简单的集合和键/值对集合。  
   
  [Visual Basic 语言参考](../../../visual-basic/language-reference/index.md)  
- Provides reference information on various aspects of Visual Basic programming.
+ 提供有关 Visual Basic 编程的各个方面的参考信息。

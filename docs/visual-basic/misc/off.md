@@ -1,5 +1,5 @@
 ---
-title: Off
+title: 关闭
 ms.date: 07/20/2015
 f1_keywords:
 - Off
@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331940"
 ---
 # <a name="off-visual-basic"></a>Off (Visual Basic)
-Turns a compiler option off.  
+关闭编译器选项。  
   
 ## <a name="remarks"></a>备注  
  `Off` 关键字可用于以下上下文中：  
@@ -26,6 +26,6 @@ Turns a compiler option off.
   
  [Option Infer 语句](../../visual-basic/language-reference/statements/option-infer-statement.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [关键字](../../visual-basic/language-reference/keywords/index.md)
