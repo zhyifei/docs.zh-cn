@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436289"
 ---
-# <a name="imetadataconvertergetmetadatafromtypeinfo-method"></a><span data-ttu-id="67980-102">IMetaDataConverter::GetMetaDataFromTypeInfo 方法</span><span class="sxs-lookup"><span data-stu-id="67980-102">IMetaDataConverter::GetMetaDataFromTypeInfo Method</span></span>
-<span data-ttu-id="67980-103">Gets a pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instance that represents the metadata signature of the type library referenced by the specified `ITypeInfo` instance.</span><span class="sxs-lookup"><span data-stu-id="67980-103">Gets a pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instance that represents the metadata signature of the type library referenced by the specified `ITypeInfo` instance.</span></span>  
+# <a name="imetadataconvertergetmetadatafromtypeinfo-method"></a><span data-ttu-id="2501b-102">IMetaDataConverter::GetMetaDataFromTypeInfo 方法</span><span class="sxs-lookup"><span data-stu-id="2501b-102">IMetaDataConverter::GetMetaDataFromTypeInfo Method</span></span>
+<span data-ttu-id="2501b-103">获取一个指针，该指针指向表示由指定 `ITypeInfo` 实例引用的类型库的元数据签名的[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)实例。</span><span class="sxs-lookup"><span data-stu-id="2501b-103">Gets a pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instance that represents the metadata signature of the type library referenced by the specified `ITypeInfo` instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="67980-104">语法</span><span class="sxs-lookup"><span data-stu-id="67980-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2501b-104">语法</span><span class="sxs-lookup"><span data-stu-id="2501b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMetaDataFromTypeInfo (  
@@ -34,23 +34,23 @@ HRESULT GetMetaDataFromTypeInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="67980-105">参数</span><span class="sxs-lookup"><span data-stu-id="67980-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2501b-105">参数</span><span class="sxs-lookup"><span data-stu-id="2501b-105">Parameters</span></span>  
  `pITI`  
- <span data-ttu-id="67980-106">[in] A pointer to an `ITypeInfo` object that refers to the type library.</span><span class="sxs-lookup"><span data-stu-id="67980-106">[in] A pointer to an `ITypeInfo` object that refers to the type library.</span></span>  
+ <span data-ttu-id="2501b-106">中指向引用类型库的 `ITypeInfo` 对象的指针。</span><span class="sxs-lookup"><span data-stu-id="2501b-106">[in] A pointer to an `ITypeInfo` object that refers to the type library.</span></span>  
   
  `ppMDI`  
- <span data-ttu-id="67980-107">[out] A pointer to a location that receives the address of the `IMetaDataImport` instance that represents the metadata signature.</span><span class="sxs-lookup"><span data-stu-id="67980-107">[out] A pointer to a location that receives the address of the `IMetaDataImport` instance that represents the metadata signature.</span></span>  
+ <span data-ttu-id="2501b-107">弄指向一个位置的指针，该位置接收表示元数据签名的 `IMetaDataImport` 实例的地址。</span><span class="sxs-lookup"><span data-stu-id="2501b-107">[out] A pointer to a location that receives the address of the `IMetaDataImport` instance that represents the metadata signature.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="67980-108">要求</span><span class="sxs-lookup"><span data-stu-id="67980-108">Requirements</span></span>  
- <span data-ttu-id="67980-109">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="67980-109">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2501b-108">要求</span><span class="sxs-lookup"><span data-stu-id="2501b-108">Requirements</span></span>  
+ <span data-ttu-id="2501b-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2501b-109">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="67980-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="67980-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="2501b-110">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="2501b-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="67980-111">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="67980-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="2501b-111">**库：** 用作 Mscoree.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="2501b-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="67980-112">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="67980-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2501b-112">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2501b-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="67980-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="67980-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2501b-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2501b-113">See also</span></span>
 
-- [<span data-ttu-id="67980-114">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="67980-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="67980-115">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="67980-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="2501b-114">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="2501b-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="2501b-115">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="2501b-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

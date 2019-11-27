@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431948"
 ---
-# <a name="imetadataassemblyemitsetassemblyprops-method"></a><span data-ttu-id="1067e-102">IMetaDataAssemblyEmit::SetAssemblyProps 方法</span><span class="sxs-lookup"><span data-stu-id="1067e-102">IMetaDataAssemblyEmit::SetAssemblyProps Method</span></span>
-<span data-ttu-id="1067e-103">修改指定的 `Assembly` 元数据结构。</span><span class="sxs-lookup"><span data-stu-id="1067e-103">Modifies the specified `Assembly` metadata structure.</span></span>  
+# <a name="imetadataassemblyemitsetassemblyprops-method"></a><span data-ttu-id="71156-102">IMetaDataAssemblyEmit::SetAssemblyProps 方法</span><span class="sxs-lookup"><span data-stu-id="71156-102">IMetaDataAssemblyEmit::SetAssemblyProps Method</span></span>
+<span data-ttu-id="71156-103">修改指定的 `Assembly` 元数据结构。</span><span class="sxs-lookup"><span data-stu-id="71156-103">Modifies the specified `Assembly` metadata structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1067e-104">语法</span><span class="sxs-lookup"><span data-stu-id="1067e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="71156-104">语法</span><span class="sxs-lookup"><span data-stu-id="71156-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetAssemblyProps (  
@@ -39,40 +39,40 @@ HRESULT SetAssemblyProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1067e-105">参数</span><span class="sxs-lookup"><span data-stu-id="1067e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="71156-105">参数</span><span class="sxs-lookup"><span data-stu-id="71156-105">Parameters</span></span>  
  `pma`  
- <span data-ttu-id="1067e-106">[in] The metadata token that specifies the `Assembly` metadata structure to be modified.</span><span class="sxs-lookup"><span data-stu-id="1067e-106">[in] The metadata token that specifies the `Assembly` metadata structure to be modified.</span></span>  
+ <span data-ttu-id="71156-106">中用于指定要修改的 `Assembly` 元数据结构的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="71156-106">[in] The metadata token that specifies the `Assembly` metadata structure to be modified.</span></span>  
   
  `pbPublicKey`  
- <span data-ttu-id="1067e-107">[in] A pointer to the public key of the publisher of the assembly.</span><span class="sxs-lookup"><span data-stu-id="1067e-107">[in] A pointer to the public key of the publisher of the assembly.</span></span>  
+ <span data-ttu-id="71156-107">中指向程序集发布者的公钥的指针。</span><span class="sxs-lookup"><span data-stu-id="71156-107">[in] A pointer to the public key of the publisher of the assembly.</span></span>  
   
  `cbPublicKey`  
- <span data-ttu-id="1067e-108">[in] The size in bytes of `pbPublicKey`.</span><span class="sxs-lookup"><span data-stu-id="1067e-108">[in] The size in bytes of `pbPublicKey`.</span></span>  
+ <span data-ttu-id="71156-108">中`pbPublicKey`的大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="71156-108">[in] The size in bytes of `pbPublicKey`.</span></span>  
   
  `ulHashAlgId`  
- <span data-ttu-id="1067e-109">[in] The identifier for the hash algorithm used to hash the assembly files.</span><span class="sxs-lookup"><span data-stu-id="1067e-109">[in] The identifier for the hash algorithm used to hash the assembly files.</span></span>  
+ <span data-ttu-id="71156-109">中用于对程序集文件进行哈希处理的哈希算法的标识符。</span><span class="sxs-lookup"><span data-stu-id="71156-109">[in] The identifier for the hash algorithm used to hash the assembly files.</span></span>  
   
  `szName`  
- <span data-ttu-id="1067e-110">[in] The human-readable text name of the assembly.</span><span class="sxs-lookup"><span data-stu-id="1067e-110">[in] The human-readable text name of the assembly.</span></span>  
+ <span data-ttu-id="71156-110">中程序集的用户可读文本名称。</span><span class="sxs-lookup"><span data-stu-id="71156-110">[in] The human-readable text name of the assembly.</span></span>  
   
  `pMetaData`  
- <span data-ttu-id="1067e-111">[in] A pointer to the ASSEMBLYMETADATA that contains version, platform, and locale information for the assembly.</span><span class="sxs-lookup"><span data-stu-id="1067e-111">[in] A pointer to the ASSEMBLYMETADATA that contains version, platform, and locale information for the assembly.</span></span>  
+ <span data-ttu-id="71156-111">中指向包含程序集的版本、平台和区域设置信息的 ASSEMBLYMETADATA 的指针。</span><span class="sxs-lookup"><span data-stu-id="71156-111">[in] A pointer to the ASSEMBLYMETADATA that contains version, platform, and locale information for the assembly.</span></span>  
   
  `dwAssemblyFlags`  
- <span data-ttu-id="1067e-112">[in] A bitwise combination of [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) values that specify various attributes of the assembly.</span><span class="sxs-lookup"><span data-stu-id="1067e-112">[in] A bitwise combination of [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) values that specify various attributes of the assembly.</span></span>  
+ <span data-ttu-id="71156-112">中[AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md)值的按位组合，用于指定程序集的各种属性。</span><span class="sxs-lookup"><span data-stu-id="71156-112">[in] A bitwise combination of [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) values that specify various attributes of the assembly.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1067e-113">备注</span><span class="sxs-lookup"><span data-stu-id="1067e-113">Remarks</span></span>  
- <span data-ttu-id="1067e-114">To create an `Assembly` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="1067e-114">To create an `Assembly` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="71156-113">备注</span><span class="sxs-lookup"><span data-stu-id="71156-113">Remarks</span></span>  
+ <span data-ttu-id="71156-114">若要创建 `Assembly` 元数据结构，请使用[IMetaDataAssemblyEmit：:D efineassembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="71156-114">To create an `Assembly` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1067e-115">要求</span><span class="sxs-lookup"><span data-stu-id="1067e-115">Requirements</span></span>  
- <span data-ttu-id="1067e-116">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1067e-116">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="71156-115">要求</span><span class="sxs-lookup"><span data-stu-id="71156-115">Requirements</span></span>  
+ <span data-ttu-id="71156-116">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="71156-116">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1067e-117">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="1067e-117">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="71156-117">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="71156-117">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="1067e-118">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1067e-118">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="71156-118">**库：** 用作 Mscoree.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="71156-118">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="1067e-119">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1067e-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="71156-119">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="71156-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1067e-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="1067e-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="71156-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="71156-120">See also</span></span>
 
-- [<span data-ttu-id="1067e-121">IMetaDataAssemblyEmit 接口</span><span class="sxs-lookup"><span data-stu-id="1067e-121">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="71156-121">IMetaDataAssemblyEmit 接口</span><span class="sxs-lookup"><span data-stu-id="71156-121">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

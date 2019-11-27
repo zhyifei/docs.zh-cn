@@ -21,13 +21,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448562"
 ---
-# <a name="corsymsearchpolicyattributes-enumeration"></a><span data-ttu-id="f8259-102">CorSymSearchPolicyAttributes 枚举</span><span class="sxs-lookup"><span data-stu-id="f8259-102">CorSymSearchPolicyAttributes Enumeration</span></span>
-<span data-ttu-id="f8259-103">Specifies the policy to be used when doing a search for a symbol reader.</span><span class="sxs-lookup"><span data-stu-id="f8259-103">Specifies the policy to be used when doing a search for a symbol reader.</span></span> <span data-ttu-id="f8259-104">These constants are used by the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) and [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) methods.</span><span class="sxs-lookup"><span data-stu-id="f8259-104">These constants are used by the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) and [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) methods.</span></span>  
+# <a name="corsymsearchpolicyattributes-enumeration"></a><span data-ttu-id="2b48e-102">CorSymSearchPolicyAttributes 枚举</span><span class="sxs-lookup"><span data-stu-id="2b48e-102">CorSymSearchPolicyAttributes Enumeration</span></span>
+<span data-ttu-id="2b48e-103">指定在搜索符号读取器时要使用的策略。</span><span class="sxs-lookup"><span data-stu-id="2b48e-103">Specifies the policy to be used when doing a search for a symbol reader.</span></span> <span data-ttu-id="2b48e-104">[ISymUnmanagedBinder2：： GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)和[ISymUnmanagedBinder3：： GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)方法使用这些常量。</span><span class="sxs-lookup"><span data-stu-id="2b48e-104">These constants are used by the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) and [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) methods.</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="f8259-105">It is a security risk to open a program database (PDB) file from an untrusted source.</span><span class="sxs-lookup"><span data-stu-id="f8259-105">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
+> <span data-ttu-id="2b48e-105">打开不受信任的源中的程序数据库（PDB）文件会带来安全风险。</span><span class="sxs-lookup"><span data-stu-id="2b48e-105">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f8259-106">语法</span><span class="sxs-lookup"><span data-stu-id="f8259-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2b48e-106">语法</span><span class="sxs-lookup"><span data-stu-id="2b48e-106">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorSymSearchPolicyAttributes  
@@ -39,18 +39,18 @@ typedef enum CorSymSearchPolicyAttributes
 } CorSymSearchPolicyAttributes;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="f8259-107">Members</span><span class="sxs-lookup"><span data-stu-id="f8259-107">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="2b48e-107">Members</span><span class="sxs-lookup"><span data-stu-id="2b48e-107">Members</span></span>  
   
-|<span data-ttu-id="f8259-108">成员</span><span class="sxs-lookup"><span data-stu-id="f8259-108">Member</span></span>|<span data-ttu-id="f8259-109">描述</span><span class="sxs-lookup"><span data-stu-id="f8259-109">Description</span></span>|  
+|<span data-ttu-id="2b48e-108">成员</span><span class="sxs-lookup"><span data-stu-id="2b48e-108">Member</span></span>|<span data-ttu-id="2b48e-109">说明</span><span class="sxs-lookup"><span data-stu-id="2b48e-109">Description</span></span>|  
 |------------|-----------------|  
-|`AllowRegistryAccess`|<span data-ttu-id="f8259-110">Queries the registry for symbol search paths.</span><span class="sxs-lookup"><span data-stu-id="f8259-110">Queries the registry for symbol search paths.</span></span>|  
-|`AllowSymbolServerAccess`|<span data-ttu-id="f8259-111">Accesses a symbol server.</span><span class="sxs-lookup"><span data-stu-id="f8259-111">Accesses a symbol server.</span></span>|  
-|`AllowOriginalPathAccess`|<span data-ttu-id="f8259-112">Searches the path specified in the Debug directory.</span><span class="sxs-lookup"><span data-stu-id="f8259-112">Searches the path specified in the Debug directory.</span></span>|  
-|`AllowReferencePathAccess`|<span data-ttu-id="f8259-113">Searches for the PDB in the place where the .exe file is.</span><span class="sxs-lookup"><span data-stu-id="f8259-113">Searches for the PDB in the place where the .exe file is.</span></span>|  
+|`AllowRegistryAccess`|<span data-ttu-id="2b48e-110">在注册表中查询符号搜索路径。</span><span class="sxs-lookup"><span data-stu-id="2b48e-110">Queries the registry for symbol search paths.</span></span>|  
+|`AllowSymbolServerAccess`|<span data-ttu-id="2b48e-111">访问符号服务器。</span><span class="sxs-lookup"><span data-stu-id="2b48e-111">Accesses a symbol server.</span></span>|  
+|`AllowOriginalPathAccess`|<span data-ttu-id="2b48e-112">搜索在调试目录中指定的路径。</span><span class="sxs-lookup"><span data-stu-id="2b48e-112">Searches the path specified in the Debug directory.</span></span>|  
+|`AllowReferencePathAccess`|<span data-ttu-id="2b48e-113">搜索 .exe 文件所在位置的 PDB。</span><span class="sxs-lookup"><span data-stu-id="2b48e-113">Searches for the PDB in the place where the .exe file is.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="f8259-114">要求</span><span class="sxs-lookup"><span data-stu-id="f8259-114">Requirements</span></span>  
- <span data-ttu-id="f8259-115">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f8259-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2b48e-114">要求</span><span class="sxs-lookup"><span data-stu-id="2b48e-114">Requirements</span></span>  
+ <span data-ttu-id="2b48e-115">**标头：** CorSym，CorSym</span><span class="sxs-lookup"><span data-stu-id="2b48e-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f8259-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="f8259-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2b48e-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2b48e-116">See also</span></span>
 
-- [<span data-ttu-id="f8259-117">诊断符号存储区枚举</span><span class="sxs-lookup"><span data-stu-id="f8259-117">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+- [<span data-ttu-id="2b48e-117">诊断符号存储区枚举</span><span class="sxs-lookup"><span data-stu-id="2b48e-117">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

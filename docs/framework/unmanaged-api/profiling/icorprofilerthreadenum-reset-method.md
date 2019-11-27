@@ -22,25 +22,25 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447596"
 ---
-# <a name="icorprofilerthreadenumreset-method"></a><span data-ttu-id="a0a59-102">ICorProfilerThreadEnum::Reset 方法</span><span class="sxs-lookup"><span data-stu-id="a0a59-102">ICorProfilerThreadEnum::Reset Method</span></span>
-<span data-ttu-id="a0a59-103">将枚举器的光标移动到序列的起始位置。</span><span class="sxs-lookup"><span data-stu-id="a0a59-103">Moves the enumerator's cursor to the starting position of the sequence.</span></span>  
+# <a name="icorprofilerthreadenumreset-method"></a><span data-ttu-id="1e45b-102">ICorProfilerThreadEnum::Reset 方法</span><span class="sxs-lookup"><span data-stu-id="1e45b-102">ICorProfilerThreadEnum::Reset Method</span></span>
+<span data-ttu-id="1e45b-103">将枚举器的光标移动到序列的起始位置。</span><span class="sxs-lookup"><span data-stu-id="1e45b-103">Moves the enumerator's cursor to the starting position of the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a0a59-104">语法</span><span class="sxs-lookup"><span data-stu-id="a0a59-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1e45b-104">语法</span><span class="sxs-lookup"><span data-stu-id="1e45b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Reset();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="a0a59-105">要求</span><span class="sxs-lookup"><span data-stu-id="a0a59-105">Requirements</span></span>  
- <span data-ttu-id="a0a59-106">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a0a59-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1e45b-105">要求</span><span class="sxs-lookup"><span data-stu-id="1e45b-105">Requirements</span></span>  
+ <span data-ttu-id="1e45b-106">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1e45b-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a0a59-107">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a0a59-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="1e45b-107">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1e45b-107">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="a0a59-108">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a0a59-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1e45b-108">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1e45b-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a0a59-109">**.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a0a59-109">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="1e45b-109">**.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1e45b-109">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a0a59-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="a0a59-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e45b-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1e45b-110">See also</span></span>
 
-- [<span data-ttu-id="a0a59-111">ICorProfilerThreadEnum 接口</span><span class="sxs-lookup"><span data-stu-id="a0a59-111">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
-- [<span data-ttu-id="a0a59-112">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="a0a59-112">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="1e45b-111">ICorProfilerThreadEnum 接口</span><span class="sxs-lookup"><span data-stu-id="1e45b-111">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
+- [<span data-ttu-id="1e45b-112">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="1e45b-112">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

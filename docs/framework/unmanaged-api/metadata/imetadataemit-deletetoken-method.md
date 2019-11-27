@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434346"
 ---
-# <a name="imetadataemitdeletetoken-method"></a><span data-ttu-id="41c88-102">IMetaDataEmit::DeleteToken 方法</span><span class="sxs-lookup"><span data-stu-id="41c88-102">IMetaDataEmit::DeleteToken Method</span></span>
-<span data-ttu-id="41c88-103">Deletes the specified token from the current metadata scope.</span><span class="sxs-lookup"><span data-stu-id="41c88-103">Deletes the specified token from the current metadata scope.</span></span>  
+# <a name="imetadataemitdeletetoken-method"></a><span data-ttu-id="a30fb-102">IMetaDataEmit::DeleteToken 方法</span><span class="sxs-lookup"><span data-stu-id="a30fb-102">IMetaDataEmit::DeleteToken Method</span></span>
+<span data-ttu-id="a30fb-103">从当前的元数据范围中删除指定的标记。</span><span class="sxs-lookup"><span data-stu-id="a30fb-103">Deletes the specified token from the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="41c88-104">语法</span><span class="sxs-lookup"><span data-stu-id="41c88-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a30fb-104">语法</span><span class="sxs-lookup"><span data-stu-id="a30fb-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DeleteToken (   
@@ -33,20 +33,20 @@ HRESULT DeleteToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="41c88-105">参数</span><span class="sxs-lookup"><span data-stu-id="41c88-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a30fb-105">参数</span><span class="sxs-lookup"><span data-stu-id="a30fb-105">Parameters</span></span>  
  `tkObj`  
- <span data-ttu-id="41c88-106">[in] The token to be deleted.</span><span class="sxs-lookup"><span data-stu-id="41c88-106">[in] The token to be deleted.</span></span>  
+ <span data-ttu-id="a30fb-106">中要删除的标记。</span><span class="sxs-lookup"><span data-stu-id="a30fb-106">[in] The token to be deleted.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="41c88-107">要求</span><span class="sxs-lookup"><span data-stu-id="41c88-107">Requirements</span></span>  
- <span data-ttu-id="41c88-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="41c88-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a30fb-107">要求</span><span class="sxs-lookup"><span data-stu-id="a30fb-107">Requirements</span></span>  
+ <span data-ttu-id="a30fb-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a30fb-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="41c88-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="41c88-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a30fb-109">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="a30fb-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="41c88-110">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="41c88-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a30fb-110">**库：** 用作 Mscoree.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="a30fb-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="41c88-111">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="41c88-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a30fb-111">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a30fb-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="41c88-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="41c88-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a30fb-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a30fb-112">See also</span></span>
 
-- [<span data-ttu-id="41c88-113">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="41c88-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="41c88-114">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="41c88-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="a30fb-113">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="a30fb-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="a30fb-114">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="a30fb-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
