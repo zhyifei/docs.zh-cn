@@ -21,20 +21,20 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448359"
 ---
-# <a name="isymunmanagednamespace-interface"></a><span data-ttu-id="1cbc1-102">ISymUnmanagedNamespace 接口</span><span class="sxs-lookup"><span data-stu-id="1cbc1-102">ISymUnmanagedNamespace Interface</span></span>
-<span data-ttu-id="1cbc1-103">Represents a namespace.</span><span class="sxs-lookup"><span data-stu-id="1cbc1-103">Represents a namespace.</span></span>  
+# <a name="isymunmanagednamespace-interface"></a><span data-ttu-id="2015b-102">ISymUnmanagedNamespace 接口</span><span class="sxs-lookup"><span data-stu-id="2015b-102">ISymUnmanagedNamespace Interface</span></span>
+<span data-ttu-id="2015b-103">表示命名空间。</span><span class="sxs-lookup"><span data-stu-id="2015b-103">Represents a namespace.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="1cbc1-104">方法</span><span class="sxs-lookup"><span data-stu-id="1cbc1-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="2015b-104">方法</span><span class="sxs-lookup"><span data-stu-id="2015b-104">Methods</span></span>  
   
-|<span data-ttu-id="1cbc1-105">方法</span><span class="sxs-lookup"><span data-stu-id="1cbc1-105">Method</span></span>|<span data-ttu-id="1cbc1-106">描述</span><span class="sxs-lookup"><span data-stu-id="1cbc1-106">Description</span></span>|  
+|<span data-ttu-id="2015b-105">方法</span><span class="sxs-lookup"><span data-stu-id="2015b-105">Method</span></span>|<span data-ttu-id="2015b-106">说明</span><span class="sxs-lookup"><span data-stu-id="2015b-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="1cbc1-107">GetName 方法</span><span class="sxs-lookup"><span data-stu-id="1cbc1-107">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getname-method.md)|<span data-ttu-id="1cbc1-108">Gets the name of this namespace.</span><span class="sxs-lookup"><span data-stu-id="1cbc1-108">Gets the name of this namespace.</span></span>|  
-|[<span data-ttu-id="1cbc1-109">GetNamespaces 方法</span><span class="sxs-lookup"><span data-stu-id="1cbc1-109">GetNamespaces Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getnamespaces-method.md)|<span data-ttu-id="1cbc1-110">Gets the children of this namespace.</span><span class="sxs-lookup"><span data-stu-id="1cbc1-110">Gets the children of this namespace.</span></span>|  
-|[<span data-ttu-id="1cbc1-111">GetVariables 方法</span><span class="sxs-lookup"><span data-stu-id="1cbc1-111">GetVariables Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|<span data-ttu-id="1cbc1-112">Returns all variables defined at global scope within this namespace.</span><span class="sxs-lookup"><span data-stu-id="1cbc1-112">Returns all variables defined at global scope within this namespace.</span></span>|  
+|[<span data-ttu-id="2015b-107">GetName 方法</span><span class="sxs-lookup"><span data-stu-id="2015b-107">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getname-method.md)|<span data-ttu-id="2015b-108">获取此命名空间的名称。</span><span class="sxs-lookup"><span data-stu-id="2015b-108">Gets the name of this namespace.</span></span>|  
+|[<span data-ttu-id="2015b-109">GetNamespaces 方法</span><span class="sxs-lookup"><span data-stu-id="2015b-109">GetNamespaces Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getnamespaces-method.md)|<span data-ttu-id="2015b-110">获取此命名空间的子级。</span><span class="sxs-lookup"><span data-stu-id="2015b-110">Gets the children of this namespace.</span></span>|  
+|[<span data-ttu-id="2015b-111">GetVariables 方法</span><span class="sxs-lookup"><span data-stu-id="2015b-111">GetVariables Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|<span data-ttu-id="2015b-112">返回在此命名空间中的全局范围内定义的所有变量。</span><span class="sxs-lookup"><span data-stu-id="2015b-112">Returns all variables defined at global scope within this namespace.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1cbc1-113">要求</span><span class="sxs-lookup"><span data-stu-id="1cbc1-113">Requirements</span></span>  
- <span data-ttu-id="1cbc1-114">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="1cbc1-114">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2015b-113">要求</span><span class="sxs-lookup"><span data-stu-id="2015b-113">Requirements</span></span>  
+ <span data-ttu-id="2015b-114">**标头：** CorSym，CorSym</span><span class="sxs-lookup"><span data-stu-id="2015b-114">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1cbc1-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="1cbc1-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2015b-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2015b-115">See also</span></span>
 
-- [<span data-ttu-id="1cbc1-116">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="1cbc1-116">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="2015b-116">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="2015b-116">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
