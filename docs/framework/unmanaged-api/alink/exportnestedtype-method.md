@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438431"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType 方法
-Specifies nested types as exportable. The [ExportType Method](exporttype-method.md) can also export nested types, but this method is faster.  
+指定嵌套类型为可导出。 [ExportType 方法](exporttype-method.md)还可以导出嵌套类型，但此方法的速度更快。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,33 +41,33 @@ HRESULT ExportNestedType(
   
 ## <a name="parameters"></a>参数  
  `AssemblyID`  
- ID of assembly to export from.  
+ 要从中导出的程序集的 ID。  
   
  `FileToken`  
- File token or Assembly of file that defines the type to be made exportable.  
+ 定义要导出的类型的文件标记或文件的程序集。  
   
  `TypeToken`  
- Type token of type to be made exportable.  
+ 要使其可导出的类型的类型标记。  
   
  `ParentType`  
- Token of parent type.  
+ 父类型的标记。  
   
  `pszTypename`  
- Fully qualified type name to export.  
+ 要导出的完全限定的类型名称。  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`. This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType` 标志，如 `tdPublic` 或 `tdNested`。 此值可传递给[DefineExportedType 方法](../metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
   
  `pType`  
- Receives token for exported type.  
+ 接收导出类型的令牌。  
   
 ## <a name="return-value"></a>返回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- Requires alink.h  
+ 需要 alink  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IALink 接口](ialink-interface.md)
 - [IALink2 接口](ialink2-interface.md)

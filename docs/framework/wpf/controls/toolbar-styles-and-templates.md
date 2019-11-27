@@ -22,7 +22,7 @@ ms.locfileid: "74283660"
 ## <a name="toolbar-parts"></a>工具栏部件  
  下表列出了 <xref:System.Windows.Controls.ToolBar> 控件的已命名部分。  
   
-|部件|Type|描述|  
+|部件|类型|说明|  
 |-|-|-|  
 |PART_ToolBarPanel|<xref:System.Windows.Controls.Primitives.ToolBarPanel>|包含 <xref:System.Windows.Controls.ToolBar>上的控件的对象。|  
 |PART_ToolBarOverflowPanel|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|对象，包含位于 <xref:System.Windows.Controls.ToolBar>溢出区中的控件。|  
@@ -32,7 +32,7 @@ ms.locfileid: "74283660"
 ## <a name="toolbar-states"></a>工具栏状态  
  下表列出了 <xref:System.Windows.Controls.ToolBar> 控件的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
 |有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  

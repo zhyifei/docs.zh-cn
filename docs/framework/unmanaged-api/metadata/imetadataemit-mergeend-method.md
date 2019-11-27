@@ -24,7 +24,7 @@ ms.locfileid: "74448036"
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd 方法
 
-Merges into the current scope all the metadata scopes specified by one or more prior calls to [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).
+合并到当前作用域中由一个或多个之前调用[IMetaDataEmit：： Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)指定的元数据作用域。
 
 ## <a name="syntax"></a>语法
 
@@ -34,45 +34,45 @@ HRESULT MergeEnd ();
 
 ## <a name="parameters"></a>参数
 
-This method takes no parameters.
+此方法不采用任何参数。
 
 ## <a name="remarks"></a>备注
 
-This routine triggers the actual merge of metadata, of all import scopes specified by preceding calls to `IMetaDataEmit::Merge`, into the current output scope.
+此例程触发元数据的实际合并，这些元数据由前面对 `IMetaDataEmit::Merge`的调用指定的所有导入范围合并到当前输出范围内。
 
-The following special conditions apply to the merge:
+以下特殊条件适用于合并：
 
-- A module version identifier (MVID) is never imported, because it is unique to the metadata in the import scope.
+- 永远不会导入模块版本标识符（MVID），因为它对于导入范围内的元数据是唯一的。
 
-- No existing module-wide properties are overwritten.
+- 不会覆盖现有的模块范围的属性。
 
-  If module properties were already set for the current scope, no module properties are imported. However, if module properties have not been set in the current scope, they are imported only once, when they are first encountered. If those module properties are encountered again, they are duplicates. If the values of all module properties (except MVID) are compared and no duplicates are found, an error is raised.
+  如果已为当前作用域设置了模块属性，则不会导入任何模块属性。 但是，如果未在当前范围中设置模块属性，则在第一次遇到时，它们只会导入一次。 如果再次遇到这些模块属性，则它们是重复的。 如果比较所有模块属性（MVID 除外）的值，并且找不到重复项，则会引发错误。
 
-- For type definitions (`TypeDef`), no duplicates are merged into the current scope. `TypeDef` objects are checked for duplicates against each *fully-qualified object name* + *GUID* + *version number*. If there is a match on either name or GUID, and any of the other two elements is different, an error is raised. Otherwise, if all three items match, `MergeEnd` does a cursory check to ensure the entries are indeed duplicates; if not, an error is raised. This cursory check looks for:
+- 对于类型定义（`TypeDef`），无重复项合并到当前作用域中。 针对每个*完全限定的对象名称* + *GUID* + *版本号*检查 `TypeDef` 对象是否存在重复项。 如果名称或 GUID 上存在匹配项，并且其他两个元素不同，则会引发错误。 否则，如果所有三个项均匹配，`MergeEnd` 将粗略检查以确保条目确实重复;如果不是，则会引发错误。 此粗略检查查找：
 
-  - The same member declarations, occurring in the same order. Members that are flagged as `mdPrivateScope` (see the [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumeration) are not included in this check; they are merged specially.
+  - 相同的成员声明，按相同顺序发生。 标记为 `mdPrivateScope` 的成员（请参阅[CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md)枚举）未包含在此检查中;它们是专门合并的。
 
-  - The same class layout.
+  - 相同的类布局。
 
-  This means that a `TypeDef` object must always be fully and consistently defined in every metadata scope in which it is declared; if its member implementations (for a class) are spread across multiple compilation units, the full definition is assumed to be present in every scope and not incremental to each scope. For example, if parameter names are relevant to the contract, they must be emitted the same way into every scope; if they are not relevant, they should not be emitted into metadata.
+  这意味着 `TypeDef` 对象必须始终在声明它的每个元数据范围内完全一致地定义;如果其成员实现（对于某个类）分布在多个编译单元中，则假定该完整定义存在于每个作用域中，而不是增量分配给每个作用域。 例如，如果参数名称与协定相关，则必须在每个范围中以相同方式发出它们;如果不相关，则不应将其发送到元数据中。
 
-  The exception is that a `TypeDef` object can have incremental members flagged as `mdPrivateScope`. On encountering these, `MergeEnd` incrementally adds them to the current scope without regard for duplicates. Because the compiler understands the private scope, the compiler must be responsible for enforcing rules.
+  例外情况是 `TypeDef` 对象可以具有标记为 `mdPrivateScope`的增量成员。 如果遇到这些问题，`MergeEnd` 将以增量方式将它们添加到当前作用域，而不考虑重复项。 由于编译器理解专用范围，因此编译器必须负责强制执行规则。
 
-- Relative virtual addresses (RVAs) are not imported or merged; the compiler is expected to re-emit this information.
+- 相对虚拟地址（Rva）不会导入或合并;编译器应重新发出此信息。
 
-- Custom attributes are merged only when the item to which they are attached is merged. For example, custom attributes associated with a class are merged when the class is first encountered. If custom attributes are associated with a `TypeDef` or `MemberDef` that is specific to the compilation unit (such as the time stamp of a member compile), they are not merged and it is up to the compiler to remove or update such metadata.
+- 自定义特性仅在其附加到的项合并时进行合并。 例如，当第一次遇到类时，将合并与类关联的自定义属性。 如果自定义属性与特定于编译单元的 `TypeDef` 或 `MemberDef` （如成员编译的时间戳）关联，则不会合并这些属性，而是由编译器删除或更新此类元数据。
 
 ## <a name="requirements"></a>要求
 
 **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
 
-**Header:** Cor.h
+**标头：** Cor
 
-**Library:** Used as a resource in MSCorEE.dll
+**库：** 用作 Mscoree.dll 中的资源
 
 **.NET Framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -42,7 +42,7 @@ ms.locfileid: "74283257"
 
     使用消息安全时，添加一个系统提供的绑定（例如[\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)）或支持消息安全和 `UserName` 凭据类型的[\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) 。
 
-    通过 HTTP 使用传输级安全时，请添加[\<wsHttpBinding >](../../configure-apps/file-schema/wcf/wshttpbinding.md)或[\<basicHttpBinding >](../../configure-apps/file-schema/wcf/basichttpbinding.md)， [\<netTcpBinding >](../../configure-apps/file-schema/wcf/nettcpbinding.md)或使用 HTTP （S）的 [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md)和 `Basic` 身份验证方案。
+    在 HTTP （S）上使用传输级安全时，请添加[\<wsHttpBinding >](../../configure-apps/file-schema/wcf/wshttpbinding.md)或[\<basicHttpBinding >](../../configure-apps/file-schema/wcf/basichttpbinding.md)，\<的[netTcpBinding >](../../configure-apps/file-schema/wcf/nettcpbinding.md)或使用 HTTP （S）和\<authentication 方案 > [customBinding `Basic`](../../configure-apps/file-schema/wcf/custombinding.md) 。
 
     > [!NOTE]
     > 使用 .NET Framework 3.5 或更高版本时，可以将自定义用户名和密码验证程序用于消息和传输安全。 使用 WinFX，自定义用户名和密码验证程序只能与消息安全一起使用。

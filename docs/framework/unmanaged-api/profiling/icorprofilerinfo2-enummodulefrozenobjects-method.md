@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436052"
 ---
 # <a name="icorprofilerinfo2enummodulefrozenobjects-method"></a>ICorProfilerInfo2::EnumModuleFrozenObjects 方法
-Gets an enumerator that allows iteration over the frozen objects in the specified module.This method is obsolete.  
+获取一个枚举器，该枚举数允许对指定模块中的冻结对象进行迭代。此方法已过时。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,10 +35,10 @@ HRESULT EnumModuleFrozenObjects(
   
 ## <a name="parameters"></a>参数  
  `moduleID`  
- [in] The ID of the module that contains the frozen objects to be enumerated.  
+ 中包含要枚举的冻结对象的模块的 ID。  
   
  `ppEnum`  
- [out] A pointer to the address of an [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) interface, which enumerates the frozen objects.  
+ 弄一个指针，指向用于枚举冻结对象的[ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)接口的地址。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -47,9 +47,9 @@ HRESULT EnumModuleFrozenObjects(
   
  **库：** CorGuids.lib  
   
- **.NET Framework Versions:** 3.5, 3.0 SP1, 3.0, 2.0 SP1, 2.0  
+ **.NET Framework 版本：** 3.5、3.0 SP1、3.0、2.0 SP1、2。0  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

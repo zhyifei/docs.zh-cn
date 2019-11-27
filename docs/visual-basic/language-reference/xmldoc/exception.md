@@ -12,8 +12,8 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346964"
 ---
-# <a name="exception-visual-basic"></a>\<exception> (Visual Basic)
-Specifies which exceptions can be thrown.  
+# <a name="exception-visual-basic"></a>\<异常 > （Visual Basic）
+指定可以引发的异常。  
   
 ## <a name="syntax"></a>语法  
   
@@ -29,15 +29,15 @@ Specifies which exceptions can be thrown.
  描述。  
   
 ## <a name="remarks"></a>备注  
- Use the `<exception>` tag to specify which exceptions can be thrown. 这是适用于方法定义的标记。  
+ 使用 `<exception>` 标记指定可以引发的异常。 这是适用于方法定义的标记。  
   
  使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译以便将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
- This example uses the `<exception>` tag to describe an exception that the `IntDivide` function can throw.  
+ 此示例使用 `<exception>` 标记来描述 `IntDivide` 函数可能引发的异常。  
   
  [!code-vb[VbVbcnXmlDocComments#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#3)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)

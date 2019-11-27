@@ -13,15 +13,15 @@ ms.locfileid: "74344916"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>匿名类型定义 (Visual Basic)
 
-In response to the declaration of an instance of an anonymous type, the compiler creates a new class definition that contains the specified properties for the type.
+为了响应匿名类型的实例的声明，编译器会创建一个新的类定义，其中包含类型的指定属性。
 
-## <a name="compiler-generated-code"></a>Compiler-Generated Code
+## <a name="compiler-generated-code"></a>编译器生成的代码
 
-For the following definition of `product`, the compiler creates a new class definition that contains properties `Name`, `Price`, and `OnHand`.
+对于 `product`的以下定义，编译器会创建一个新的类定义，其中包含 `Name`、`Price`和 `OnHand`属性。
 
 [!code-vb[VbVbalrAnonymousTypes#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#25)]
 
-The class definition contains property definitions similar to the following. Notice that there is no `Set` method for the key properties. The values of key properties are read-only.
+类定义包含如下所示的属性定义。 请注意，没有用于键属性的 `Set` 方法。 键属性的值是只读的。
 
 ```vb
 Public Class $Anonymous1
@@ -52,38 +52,38 @@ Public Class $Anonymous1
 End Class
 ```
 
-In addition, anonymous type definitions contain a parameterless constructor. Constructors that require parameters are not permitted.
+此外，匿名类型定义包含一个无参数的构造函数。 不允许使用需要参数的构造函数。
 
-If an anonymous type declaration contains at least one key property, the type definition overrides three members inherited from <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, and <xref:System.Object.ToString%2A>. If no key properties are declared, only <xref:System.Object.ToString%2A> is overridden. The overrides provide the following functionality:
+如果匿名类型声明至少包含一个键属性，则类型定义将重写从 <xref:System.Object>继承的三个成员： <xref:System.Object.Equals%2A>、<xref:System.Object.GetHashCode%2A>和 <xref:System.Object.ToString%2A>。 如果未声明键属性，则只会重写 <xref:System.Object.ToString%2A>。 替代提供以下功能：
 
-- `Equals` returns `True` if two anonymous type instances are the same instance, or if they meet the following conditions:
+- 如果两个匿名类型实例为同一实例，则 `Equals` 返回 `True`; 如果满足以下条件，则返回：
 
-  - They have the same number of properties.
+  - 它们具有相同数量的属性。
 
-  - The properties are declared in the same order, with the same names and the same inferred types. Name comparisons are not case-sensitive.
+  - 属性以相同顺序声明，具有相同的名称和相同的推断类型。 名称比较不区分大小写。
 
-  - At least one of the properties is a key property, and the `Key` keyword is applied to the same properties.
+  - 至少一个属性是键属性，`Key` 关键字应用于相同属性。
 
-  - Comparison of each corresponding pair of key properties returns `True`.
+  - 每个对应的键属性对的比较将返回 `True`。
 
-    For example, in the following examples, `Equals` returns `True` only for `employee01` and `employee08`. The comment before each line specifies the reason why the new instance does not match `employee01`.
+    例如，在下面的示例中，`Equals` 仅返回 `employee01` 和 `employee08`的 `True`。 每行前的注释指定新实例不匹配 `employee01`原因。
 
     [!code-vb[VbVbalrAnonymousTypes#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#24)]
 
-- `GetHashcode` provides an appropriately unique GetHashCode algorithm. The algorithm uses only the key properties to compute the hash code.
+- `GetHashcode` 提供了一个适当唯一的 GetHashCode 算法。 算法只使用键属性来计算哈希代码。
 
-- `ToString` returns a string of concatenated property values, as shown in the following example. Both key and non-key properties are included.
+- `ToString` 返回连接的属性值的字符串，如下面的示例中所示。 同时包含键属性和非键属性。
 
   [!code-vb[VbVbalrAnonymousTypes#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#29)]
 
-Explicitly named properties of an anonymous type cannot conflict with these generated methods. That is, you cannot use `.Equals`, `.GetHashCode`, or `.ToString` to name a property.
+匿名类型的显式命名属性不能与这些生成的方法冲突。 也就是说，不能使用 `.Equals`、`.GetHashCode`或 `.ToString` 来命名属性。
 
-Anonymous type definitions that include at least one key property also implement the <xref:System.IEquatable%601?displayProperty=nameWithType> interface, where `T` is the type of the anonymous type.
+包含至少一个键属性的匿名类型定义也实现 <xref:System.IEquatable%601?displayProperty=nameWithType> 接口，其中 `T` 是匿名类型的类型。
 
 > [!NOTE]
-> Anonymous type declarations create the same anonymous type only if they occur in the same assembly, their properties have the same names and the same inferred types, the properties are declared in the same order, and the same properties are marked as key properties.
+> 仅当匿名类型声明出现在同一程序集中时，才创建相同的匿名类型，其属性具有相同的名称和相同的推断类型，属性以相同顺序声明，相同的属性被标记为键属性。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [如何：推断匿名类型声明中的属性名和类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)

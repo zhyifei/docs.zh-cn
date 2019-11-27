@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354268"
 ---
-# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Handling Reentrancy in Async Apps (Visual Basic)
+# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>处理异步应用中的重新进入（Visual Basic）
 
 在应用中包含异步代码时，应考虑并且可以阻止重新进入（指在异步操作完成之前重新进入它）。 如果不识别并处理重新进入的可能性，则它可能会导致意外结果。
 
@@ -95,7 +95,7 @@ TOTAL bytes returned:  890591
 
 ### <a name="BKMK_DisableTheStartButton"></a>禁用“开始”按钮
 
-可以通过在 `StartButton_Click` 事件处理程序顶部禁用“开始”按钮，在操作运行期间阻止该按钮。 随后可以在操作完成时从 `Finally` 块中重新启用中该按钮，以便用户可以再次运行应用。
+可以通过在  **事件处理程序顶部禁用“开始”** `StartButton_Click`按钮，在操作运行期间阻止该按钮。 随后可以在操作完成时从 `Finally` 块中重新启用中该按钮，以便用户可以再次运行应用。
 
 下面的代码演示了这些更改（使用星号标记）。 可以将更改添加到本主题末尾的代码中，或从[异步示例：.NET 桌面应用中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下载已完成的应用。 项目名是 DisableStartButton。
 
@@ -126,7 +126,7 @@ End Sub
 
 可以使“开始”按钮保持活动状态而不是禁用该按钮，但是如果用户再次选择该按钮，则取消已在运行的操作，让最近开始的操作继续运行。
 
-For more information about cancellation, see [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).
+有关取消的详细信息，请参阅[微调异步应用程序（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)。
 
 若要设置此方案，请对[检查并运行示例应用](#BKMD_SettingUpTheExample)中提供的基本代码进行以下更改。 还可以从[异步示例：.NET 桌面应用中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下载已完成的应用。 此项目的名称是 CancelAndRestart。
 
@@ -139,7 +139,7 @@ For more information about cancellation, see [Fine-Tuning Your Async Application
         Dim cts As CancellationTokenSource
     ```
 
-2. 在 `StartButton_Click` 中，确定操作是否已在进行。 If the value of `cts` is `Nothing`, no operation is already active. If the value isn't `Nothing`, the operation that is already running is canceled.
+2. 在 `StartButton_Click` 中，确定操作是否已在进行。 如果 `cts` 的值 `Nothing`，则没有任何操作处于活动状态。 如果值不 `Nothing`，则取消已在运行的操作。
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -156,7 +156,7 @@ For more information about cancellation, see [Fine-Tuning Your Async Application
     cts = newCTS
     ```
 
-4. At the end of `StartButton_Click`, the current process is complete, so set the value of `cts` back to `Nothing`.
+4. 在 `StartButton_Click`结束时，当前进程完成，因此将 `cts` 的值设置为 "`Nothing`"。
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -248,7 +248,7 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
 End Function
 ```
 
-If you choose the **Start** button several times while this app is running, it should produce results that resemble the following output:
+如果在此应用运行期间多次选择 "**开始**" 按钮，则它应生成类似于以下输出的结果：
 
 ```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
@@ -412,7 +412,7 @@ End Sub
 
 `AccessTheWebAsync` 随后调用 `FinishOneGroupAsync` 以等待每个下载完成并显示其长度。
 
-`FinishOneGroupAsync` 会返回在 `AccessTheWebAsync` 中分配给 `pendingWork` 的任务。 该值会在任务完成之前阻止另一个操作进行中断。
+`FinishOneGroupAsync` 会返回在 `pendingWork` 中分配给 `AccessTheWebAsync` 的任务。 该值会在任务完成之前阻止另一个操作进行中断。
 
 ```vb
 Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)
@@ -516,7 +516,7 @@ End Function
   TOTAL bytes returned:  915908
   ```
 
-- The `pendingWork` task is `Nothing` at the start of `FinishOneGroupAsync` only for group A, which started first. 组 A 在它到达 `FinishOneGroupAsync` 时尚未尚未完成 await 表达式。 因此，控制权未返回给 `AccessTheWebAsync`，对 `pendingWork` 的第一个分配尚未发生。
+- `pendingWork` 任务仅在 `FinishOneGroupAsync` 的开头 `Nothing`，后者首先启动。 组 A 在它到达 `FinishOneGroupAsync` 时尚未尚未完成 await 表达式。 因此，控制权未返回给 `AccessTheWebAsync`，对 `pendingWork` 的第一个分配尚未发生。
 
 - 下面两行始终在输出中一起显示。 该代码从不会在于 `StartButton_Click` 中启动组操作与将组的任务分配给 `pendingWork` 之间中断。
 
@@ -556,11 +556,11 @@ End Function
 
 1. 启动 Visual Studio。
 
-2. 在菜单栏上，依次选择 **“文件”** 、 **“新建”** 、 **“项目”** 。
+2. 在菜单栏上，依次选择 **“文件”** -&gt; **“新建”** -&gt; **“项目”** 。
 
      **“新建项目”** 对话框随即打开。
 
-3. In the **Installed Templates** pane, expand **Visual Basic**, and then expand **Windows**.
+3. 在 "**已安装的模板**" 窗格中，展开 " **Visual Basic**"，然后展开 " **Windows**"。
 
 4. 在项目类型列表中，选择“WPF 应用程序”。
 
@@ -596,9 +596,9 @@ End Function
 
      如果尚未选择，请为 <xref:System.Net.Http> 添加引用。
 
-9. In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.
+9. 在**解决方案资源管理器**中，打开 mainwindow.xaml 的快捷菜单，然后选择 "**查看代码**"。
 
-10. In MainWindow.xaml.vb , replace the code with the following code.
+10. 在 Mainwindow.xaml 中，将代码替换为以下代码。
 
     ```vb
     ' Add the following Imports statements, and add a reference for System.Net.Http.
@@ -682,7 +682,7 @@ End Function
 
 12. 从[禁用“开始”按钮](#BKMK_DisableTheStartButton)、[取消并重启操作](#BKMK_CancelAndRestart)或[运行多个操作并将输出排入队列](#BKMK_RunMultipleOperations)中进行更改以处理重新进入。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [演练：使用 Async 和 Await 访问 Web (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348024"
 ---
 # <a name="mid-statement"></a>Mid 语句
-Replaces a specified number of characters in a `String` variable with characters from another string.  
+使用另一个字符串中的字符替换 `String` 变量中指定数量的字符。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,44 +32,44 @@ Mid( _
   
 ## <a name="parts"></a>部件  
  `Target`  
- 必须的。 Name of the `String` variable to modify.  
+ 必需。 要修改的 `String` 变量的名称。  
   
  `Start`  
- 必须的。 `Integer` expression. Character position in `Target` where the replacement of text begins. `Start` uses a one-based index.  
+ 必需。 `Integer` 表达式。 `Target` 中开始替换文本的字符位置。 `Start` 使用从1开始的索引。  
   
  `Length`  
- 可选。 `Integer` expression. Number of characters to replace. If omitted, all of `String` is used.  
+ 可选。 `Integer` 表达式。 要替换的字符数。 如果省略，则使用所有 `String`。  
   
  `StringExpression`  
- 必须的。 `String` expression that replaces part of `Target`.  
+ 必需。 替换 `Target`的一部分的 `String` 表达式。  
   
 ## <a name="exceptions"></a>异常  
   
-|异常类型|条件|  
+|例外狀況類型|条件|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|`Start` <= 0 or `Length` < 0.|  
+|<xref:System.ArgumentException>|`Start` < = 0 或 `Length` < 0。|  
   
 ## <a name="remarks"></a>备注  
- The number of characters replaced is always less than or equal to the number of characters in `Target`.  
+ 替换的字符数始终小于或等于 `Target`中的字符数。  
   
- Visual Basic has a <xref:Microsoft.VisualBasic.Strings.Mid%2A> function and a `Mid` statement. These elements both operate on a specified number of characters in a string, but the `Mid` function returns the characters while the `Mid` statement replaces the characters. 有关更多信息，请参见<xref:Microsoft.VisualBasic.Strings.Mid%2A>。  
+ Visual Basic 具有 <xref:Microsoft.VisualBasic.Strings.Mid%2A> 函数和 `Mid` 语句。 这些元素对字符串中的指定数量的字符进行操作，但 `Mid` 函数返回字符，而 `Mid` 语句替换这些字符。 有关详细信息，请参阅 <xref:Microsoft.VisualBasic.Strings.Mid%2A>。  
   
 > [!NOTE]
-> The `MidB` statement of earlier versions of Visual Basic replaces a substring in bytes, rather than characters. It is used primarily for converting strings in double-byte character set (DBCS) applications. All Visual Basic strings are in Unicode, and `MidB` is no longer supported.  
+> Visual Basic 早期版本的 `MidB` 语句将以字节而不是字符来替换子字符串。 它主要用于在双字节字符集（DBCS）应用程序中转换字符串。 所有 Visual Basic 字符串均采用 Unicode 格式，`MidB` 不再受支持。  
   
 ## <a name="example"></a>示例  
- This example uses the `Mid` statement to replace a specified number of characters in a string variable with characters from another string.  
+ 此示例使用 `Mid` 语句将字符串变量中指定数量的字符替换为另一个字符串中的字符。  
   
  [!code-vb[VbVbalrStrings#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#5)]  
   
 ## <a name="requirements"></a>要求  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **命名空间：** [Microsoft](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Module:** `Strings`  
+ **模块：** `Strings`  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **程序集：** Visual Basic 运行时库（在 Microsoft. .dll 中）  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualBasic.Strings.Mid%2A>
 - [字符串](../../../visual-basic/programming-guide/language-features/strings/index.md)

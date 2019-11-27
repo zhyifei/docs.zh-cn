@@ -18,23 +18,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351954"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>如何：使用后台线程搜索文件
-The <xref:System.ComponentModel.BackgroundWorker> component replaces and adds functionality to the <xref:System.Threading> namespace; however, the <xref:System.Threading> namespace is retained for both backward compatibility and future use, if you choose. For more information, see [BackgroundWorker Component Overview](backgroundworker-component-overview.md).
+<xref:System.ComponentModel.BackgroundWorker> 组件替换 <xref:System.Threading> 命名空间，并向其添加功能;但是，如果您选择，则会保留 <xref:System.Threading> 命名空间，以实现向后兼容性和将来使用。 有关详细信息，请参阅[BackgroundWorker 组件概述](backgroundworker-component-overview.md)。
 
- Windows Forms uses the single-threaded apartment (STA) model because Windows Forms is based on native Win32 windows that are inherently apartment-threaded. The STA model implies that a window can be created on any thread, but it cannot switch threads once created, and all function calls to it must occur on its creation thread. Outside Windows Forms, classes in the .NET Framework use the free threading model. For information about threading in the .NET Framework, see [Threading](../../../standard/threading/index.md).
+ Windows 窗体使用单线程单元（STA）模型，因为 Windows 窗体是基于本质上是单元线程的本机 Win32 窗口的。 STA 模型意味着可以在任何线程上创建一个窗口，但它在创建后无法切换线程，并且它必须在创建线程上出现。 在 Windows 窗体之外，.NET Framework 中的类使用自由线程处理模型。 有关 .NET Framework 中的线程处理的信息，请参阅[线程处理](../../../standard/threading/index.md)。
 
- The STA model requires that any methods on a control that need to be called from outside the control's creation thread must be marshaled to (executed on) the control's creation thread. The base class <xref:System.Windows.Forms.Control> provides several methods (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, and <xref:System.Windows.Forms.Control.EndInvoke%2A>) for this purpose. <xref:System.Windows.Forms.Control.Invoke%2A> makes synchronous method calls; <xref:System.Windows.Forms.Control.BeginInvoke%2A> makes asynchronous method calls.
+ STA 模型要求要从控件的创建线程外部调用的控件上的任何方法都必须封送到控件的创建线程（在上执行）。 基类 <xref:System.Windows.Forms.Control> 提供多种方法（<xref:System.Windows.Forms.Control.Invoke%2A>、<xref:System.Windows.Forms.Control.BeginInvoke%2A>和 <xref:System.Windows.Forms.Control.EndInvoke%2A>）来实现此目的。 <xref:System.Windows.Forms.Control.Invoke%2A> 进行同步方法调用;<xref:System.Windows.Forms.Control.BeginInvoke%2A> 进行异步方法调用。
 
- If you use multithreading in your control for resource-intensive tasks, the user interface can remain responsive while a resource-intensive computation executes on a background thread.
+ 如果对资源密集型任务使用控件中的多线程处理，则在后台线程上执行资源密集型计算时，用户界面可以保持响应。
 
- The following sample (`DirectorySearcher`) shows a multithreaded Windows Forms control that uses a background thread to recursively search a directory for files matching a specified search string and then populates a list box with the search result. The key concepts illustrated by the sample are as follows:
+ 下面的示例（`DirectorySearcher`）显示了一个多线程 Windows 窗体控件，该控件使用后台线程以递归方式搜索目录中与指定的搜索字符串匹配的文件，然后使用搜索结果填充列表框。 该示例演示的主要概念如下：
 
-- `DirectorySearcher` starts a new thread to perform the search. The thread executes the `ThreadProcedure` method that in turn calls the helper `RecurseDirectory` method to do the actual search and to populate the list box. However, populating the list box requires a cross-thread call, as explained in the next two bulleted items.
+- `DirectorySearcher` 启动一个新线程来执行搜索。 线程会执行 `ThreadProcedure` 方法，该方法又调用 helper `RecurseDirectory` 方法来执行实际搜索，并填充列表框。 但是，填充列表框需要一个跨线程调用，如接下来的两个项目符号项中所述。
 
-- `DirectorySearcher` defines the `AddFiles` method to add files to a list box; however, `RecurseDirectory` cannot directly invoke `AddFiles` because `AddFiles` can execute only in the STA thread that created `DirectorySearcher`.
+- `DirectorySearcher` 定义 `AddFiles` 方法以便向列表框添加文件;但 `RecurseDirectory` 无法直接调用 `AddFiles`，因为 `AddFiles` 只能在创建了 `DirectorySearcher`的 STA 线程中执行。
 
-- The only way `RecurseDirectory` can call `AddFiles` is through a cross-thread call — that is, by calling <xref:System.Windows.Forms.Control.Invoke%2A> or <xref:System.Windows.Forms.Control.BeginInvoke%2A> to marshal `AddFiles` to the creation thread of `DirectorySearcher`. `RecurseDirectory` uses <xref:System.Windows.Forms.Control.BeginInvoke%2A> so that the call can be made asynchronously.
+- `RecurseDirectory` 可以调用 `AddFiles` 的唯一方法是通过跨线程调用，也就是说，调用 <xref:System.Windows.Forms.Control.Invoke%2A> 或 <xref:System.Windows.Forms.Control.BeginInvoke%2A> 将 `AddFiles` 封送到 `DirectorySearcher`的创建线程。 `RecurseDirectory` 使用 <xref:System.Windows.Forms.Control.BeginInvoke%2A> 以便能够以异步方式进行调用。
 
-- Marshaling a method requires the equivalent of a function pointer or callback. This is accomplished using delegates in the .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> takes a delegate as an argument. `DirectorySearcher` therefore defines a delegate (`FileListDelegate`), binds `AddFiles` to an instance of `FileListDelegate` in its constructor, and passes this delegate instance to <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` also defines an event delegate that is marshaled when the search is completed.
+- 封送方法要求等效于函数指针或回调。 这是使用 .NET Framework 中的委托实现的。 <xref:System.Windows.Forms.Control.BeginInvoke%2A> 采用委托作为参数。 因此 `DirectorySearcher` 会定义一个委托（`FileListDelegate`），将 `AddFiles` 绑定到其构造函数中的 `FileListDelegate` 实例，并将此委托实例传递到 <xref:System.Windows.Forms.Control.BeginInvoke%2A>。 `DirectorySearcher` 还定义在搜索完成时封送的事件委托。
 
 ```vb
 Option Strict
@@ -568,8 +568,8 @@ namespace Microsoft.Samples.DirectorySearcher
 }
 ```
 
-## <a name="using-the-multithreaded-control-on-a-form"></a>Using the Multithreaded Control on a Form
- The following example shows how the multithreaded `DirectorySearcher` control can be used on a form.
+## <a name="using-the-multithreaded-control-on-a-form"></a>在窗体上使用多线程控件
+ 下面的示例演示如何在窗体上使用多线程 `DirectorySearcher` 控件。
 
 ```vb
 Option Explicit
@@ -760,7 +760,7 @@ namespace SampleUsage
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ComponentModel.BackgroundWorker>
 - [使用 .NET Framework 开发自定义 Windows 窗体控件](developing-custom-windows-forms-controls.md)

@@ -16,23 +16,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347368"
 ---
 # <a name="visual-basic-limitations"></a>Visual Basic 限制
-Earlier versions of Visual Basic enforced boundaries in code, such as the length of variable names, the number of variables allowed in modules, and module size. In Visual Basic .NET, these restrictions have been relaxed, giving you greater freedom in writing and arranging your code.  
+的早期版本 Visual Basic 在代码中强制实施边界，如变量名称长度、模块中允许的变量数和模块大小。 在 Visual Basic .NET 中，这些限制已被宽松，使你可以更自由地编写和排列代码。  
   
- Physical limits are dependent more on run-time memory than on compile-time considerations. If you use prudent programming practices, and divide large applications into multiple classes and modules, then there is very little chance of encountering an internal Visual Basic limitation.  
+ 物理限制在运行时内存上依赖于编译时注意事项。 如果使用明智的编程做法，并将大型应用程序划分为多个类和模块，则可能会遇到内部 Visual Basic 限制。  
   
- The following are some limitations that you might encounter in extreme cases:  
+ 下面是在极端情况下可能遇到的一些限制：  
   
-- **Name Length.** There is a maximum number of characters for the name of every declared programming element. This maximum applies to an entire qualification string if the element name is qualified. 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+- **名称长度。** 每个声明的编程元素的名称中的字符数最多为个。 如果元素名称是限定的，则此最大值适用于整个限定字符串。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
-- **Line Length.** There is a maximum of 65535 characters in a physical line of source code. The logical source code line can be longer if you use line continuation characters. See [How to: Break and Combine Statements in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
+- **行长度。** 源代码的物理行中最多包含65535个字符。 如果使用行继续符，则逻辑源代码行可能会更长。 请参阅[如何：在代码中中断和组合语句](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)。  
   
-- **Array Dimensions.** There is a maximum number of dimensions you can declare for an array. This limits how many indexes you can use to specify an array element. See [Array Dimensions in Visual Basic](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
+- **数组维度。** 可以为数组声明的维数有最大值。 这限制了可用于指定数组元素的索引数。 请参阅[Visual Basic 中的数组维度](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)。  
   
-- **String Length.** There is a maximum number of Unicode characters you can store in a single string. See [String Data Type](../../../visual-basic/language-reference/data-types/string-data-type.md).  
+- **字符串长度。** 在单个字符串中，可以存储的 Unicode 字符数最多为个。 请参阅[String 数据类型](../../../visual-basic/language-reference/data-types/string-data-type.md)。  
   
-- **Environment String Length.** There is a maximum of 32768 characters for any environment string used as a command-line argument. This is a limitation on all platforms.  
+- **环境字符串长度。** 对于用作命令行参数的任何环境字符串，最多可包含32768个字符。 这是对所有平台的限制。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [程序结构和代码约定](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Visual Basic 命名约定](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

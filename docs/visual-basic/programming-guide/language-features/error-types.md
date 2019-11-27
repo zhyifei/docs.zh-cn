@@ -18,21 +18,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345158"
 ---
 # <a name="error-types-visual-basic"></a>错误类型 (Visual Basic)
-In Visual Basic, errors fall into one of three categories: syntax errors, run-time errors, and logic errors.
+在 Visual Basic 中，错误分为三个类别之一：语法错误、运行时错误和逻辑错误。
 
 ## <a name="syntax-errors"></a>语法错误
- *Syntax errors* are those that appear while you write code. If you're using Visual Studio, Visual Basic checks your code as you type it in the **Code Editor** window and alerts you if you make a mistake, such as misspelling a word or using a language element improperly. If you compile from the command line, Visual Basic displays a compiler error with information about the syntax error. Syntax errors are the most common type of errors. You can fix them easily in the coding environment as soon as they occur.
+ *语法错误*是在编写代码时显示的错误。 如果使用的是 Visual Studio，则 Visual Basic 在**代码编辑器**窗口中键入代码时检查代码，并在出现错误时发出警报，如错误拼写错误或错误地使用语言元素。 如果从命令行进行编译，Visual Basic 将显示编译器错误，其中包含有关语法错误的信息。 语法错误是最常见的错误类型。 一旦出现，就可以在编码环境中轻松地对其进行修复。
 
 > [!NOTE]
-> The `Option Explicit` statement is one means of avoiding syntax errors. It forces you to declare, in advance, all the variables to be used in the application. Therefore, when those variables are used in the code, any typographic errors are caught immediately and can be fixed.
+> `Option Explicit` 语句是避免语法错误的一种方法。 它强制您事先声明要在应用程序中使用的所有变量。 因此，当在代码中使用这些变量时，会立即捕获任何排字错误，并可修复这些错误。
 
-## <a name="run-time-errors"></a>Run-Time Errors
- *Run-time errors* are those that appear only after you compile and run your code. These involve code that may appear to be correct in that it has no syntax errors, but that will not execute. For example, you might correctly write a line of code to open a file. But if the file does not exist, the application cannot open the file, and it throws an exception. You can fix most run-time errors by rewriting the faulty code or by using [exception handling](../../language-reference/statements/try-catch-finally-statement.md), and then recompiling and rerunning it.
+## <a name="run-time-errors"></a>运行时错误
+ *运行时错误*是指仅在编译和运行代码后显示的错误。 它们涉及的代码可能看起来是正确的，因为它没有语法错误，但不会执行。 例如，你可能会正确编写一行代码来打开文件。 但是，如果该文件不存在，应用程序将无法打开该文件，并将引发异常。 您可以通过重写错误的代码或使用[异常处理](../../language-reference/statements/try-catch-finally-statement.md)来修复大多数运行时错误，然后重新编译并重新运行它。
   
-## <a name="logic-errors"></a>Logic Errors
- *Logic errors* are those that appear once the application is in use. They are most often faulty assumptions made by the developer, or unwanted or unexpected results in response to user actions. For example, a mistyped key might provide incorrect information to a method, or you may assume that a valid value is always supplied to a method when that is not the case. Although logic errors can be handled by using [exception handling](../../language-reference/statements/try-catch-finally-statement.md) (for example, by testing whether an argument is `Nothing` and throwing an <xref:System.ArgumentNullException>), most commonly they should be addressed by correcting the error in logic and recompiling the application.
+## <a name="logic-errors"></a>逻辑错误
+ *逻辑错误*是指在应用程序使用后出现的错误。 它们最常见的是开发人员作出的假设，或者是不需要或意外的结果来响应用户操作。 例如，键入错误的键可能会为方法提供错误的信息，或者，如果不是这样，则您可能会假设始终向方法提供有效的值。 尽管可以使用[异常处理](../../language-reference/statements/try-catch-finally-statement.md)来处理逻辑错误（例如，通过测试参数是否 `Nothing` 和引发 <xref:System.ArgumentNullException>），但最常见的是应通过更正逻辑中的错误并重新编译应用程序来解决。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [调试器基础知识](/visualstudio/debugger/debugger-feature-tour)

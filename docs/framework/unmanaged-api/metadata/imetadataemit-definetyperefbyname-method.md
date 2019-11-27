@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434380"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName 方法
-Gets a metadata token for a type that is defined in the specified scope, which is outside the current scope.  
+获取在指定范围内定义的类型（位于当前范围之外）的元数据标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,34 +37,34 @@ HRESULT DefineTypeRefByName (
   
 ## <a name="parameters"></a>参数  
  `tkResolutionScope`  
- [in] The token specifying the resolution scope. The following token types are valid:  
+ 中指定解析范围的标记。 以下令牌类型有效：  
   
-- `mdModuleRef`, if the type is defined in the same assembly in which the caller is defined.  
+- 如果在定义调用方的同一程序集中定义了该类型，则 `mdModuleRef`。  
   
-- `mdAssemblyRef`, if the type is defined in an assembly other than the one in which the caller is defined.  
+- 如果该类型是在定义调用方的程序集中定义的，则 `mdAssemblyRef`。  
   
-- `mdTypeRef`, if the type is a nested type.  
+- 如果类型是嵌套类型，则 `mdTypeRef`。  
   
-- `mdModule`, if the type is defined in the same module in which the caller is defined.  
+- 如果在定义调用方的同一模块中定义了该类型，则 `mdModule`。  
   
-- Null, if the type is defined globally.  
+- 如果类型是全局定义的，则为 Null。  
   
  `szName`  
- [in] The name of the target type in Unicode.  
+ 中Unicode 中目标类型的名称。  
   
  `ptr`  
- [out] A pointer to the `mdTypeRef` token that is assigned to the type.  
+ 弄指向分配给类型的 `mdTypeRef` 标记的指针。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

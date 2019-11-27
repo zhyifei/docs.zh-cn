@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447173"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetClassFromTokenAndTypeArgs 方法
-Gets the `ClassID` of a type by using the specified metadata token and the `ClassID` values of any type arguments.  
+使用指定的元数据标记和任何类型参数的 `ClassID` 值获取类型的 `ClassID`。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,26 +38,26 @@ HRESULT GetClassFromTokenAndTypeArgs(
   
 ## <a name="parameters"></a>参数  
  `moduleID`  
- [in] The ID of the module in which the type resides.  
+ 中类型所在的模块的 ID。  
   
  `typeDef`  
- [in] An `mdTypeDef` metadata token that references the type.  
+ 中引用类型的 `mdTypeDef` 元数据标记。  
   
  `cTypeArgs`  
- [in] The number of type parameters for the given type. This value must be zero for non-generic types.  
+ 中给定类型的类型参数的数目。 对于非泛型类型，此值必须为零。  
   
  `typeArgs`  
- [in] An array of `ClassID` values, each of which is an argument of the type. The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.  
+ 中`ClassID` 值的数组，其中每个值都是类型的参数。 如果 `cTypeArgs` 设置为零，则 `typeArgs` 的值可以为 NULL。  
   
  `pClassID`  
- [out] A pointer to the `ClassID` of the specified type.  
+ 弄指向指定类型的 `ClassID` 的指针。  
   
 ## <a name="remarks"></a>备注  
- Calling the `GetClassFromTokenAndTypeArgs` method with an `mdTypeRef` instead of an `mdTypeDef` metadata token can have unpredictable results; callers should resolve the `mdTypeRef` to an `mdTypeDef` when passing it.  
+ 使用 `mdTypeRef` 而不是 `mdTypeDef` 元数据令牌调用 `GetClassFromTokenAndTypeArgs` 方法可能会产生不可预知的结果;调用方应在传递时将 `mdTypeRef` 解析为 `mdTypeDef`。  
   
- If the type is not already loaded, calling `GetClassFromTokenAndTypeArgs` will trigger loading, which is a dangerous operation in many contexts. For example, calling this method during loading of modules or other types could lead to an infinite loop as the runtime attempts to circularly load things.  
+ 如果尚未加载该类型，则调用 `GetClassFromTokenAndTypeArgs` 将触发加载，这在许多上下文中是一个危险操作。 例如，在加载模块或其他类型期间调用此方法可能会导致无限循环，因为运行时尝试循环加载某些功能。  
   
- In general, use of `GetClassFromTokenAndTypeArgs` is discouraged. If profilers are interested in events for a particular type, they should store the `ModuleID` and `mdTypeDef` of that type, and use [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) to check whether a given `ClassID` is that of the desired type.  
+ 通常，不建议使用 `GetClassFromTokenAndTypeArgs`。 如果探查器对特定类型的事件感兴趣，则它们应存储该类型的 `ModuleID` 和 `mdTypeDef`，并使用[ICorProfilerInfo2：： GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)来检查给定的 `ClassID` 是否为所需的类型。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -68,7 +68,7 @@ HRESULT GetClassFromTokenAndTypeArgs(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

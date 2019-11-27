@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427942"
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a>ISymUnmanagedWriter::Initialize2 方法
-Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written. This method also lets you set the final location of the program database (PDB) file.  
+设置此编写器将与之关联的元数据发射器接口，并设置调试符号将写入的输出文件名。 此方法还允许您设置程序数据库（PDB）文件的最终位置。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,27 +38,27 @@ HRESULT Initialize2(
   
 ## <a name="parameters"></a>参数  
  `emitter`  
- [in] A pointer to the metadata emitter interface.  
+ 中指向元数据发射器接口的指针。  
   
  `tempfilename`  
- [in] A pointer to a `WCHAR` that contains the file name to which the debugging symbols are written. 如果为不使用文件名的编写器指定文件名，则忽略此参数。  
+ 中指向 `WCHAR` 的指针，该指针包含将调试符号写入到的文件名。 如果为不使用文件名的编写器指定文件名，则忽略此参数。  
   
  `pIStream`  
- [in] If specified, the symbol writer emits the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter. `pIStream` 参数是可选的。  
+ 中如果已指定，则符号编写器会将符号发送到给定的 <xref:System.Runtime.InteropServices.ComTypes.IStream>，而不是发送到 `filename` 参数中指定的文件。 `pIStream` 参数是可选的。  
   
  `fFullBuild`  
- [in] `true` if this is a full rebuild; `false` if this is an incremental compilation.  
+ [in] 如果这是完全重新生成，则 `true`;如果这是增量编译，则 `false`。  
   
  `finalfilename`  
- [in] A pointer to a `WCHAR` that is the path string to the final location of the PDB file.  
+ 中指向作为 PDB 文件最终位置路径字符串的 `WCHAR` 的指针。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
 - [Initialize 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize-method.md)

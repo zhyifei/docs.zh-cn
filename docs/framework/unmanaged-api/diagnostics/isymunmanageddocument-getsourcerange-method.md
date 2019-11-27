@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449133"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange 方法
-Returns the specified range of the embedded source into the given buffer. The buffer must be large enough to hold the source.  
+将嵌入源的指定范围返回到给定缓冲区中。 缓冲区必须足够大才能容纳源。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,29 +41,29 @@ HRESULT GetSourceRange(
   
 ## <a name="parameters"></a>参数  
  `startLine`  
- [in] The starting line in the current document.  
+ 中当前文档中的起始行。  
   
  `startColumn`  
- [in] The starting column in the current document.  
+ 中当前文档中的起始列。  
   
  `endLine`  
- [in] The final line in the current document.  
+ 中当前文档中的最后一行。  
   
  `endColumn`  
- [in] The final column in the current document.  
+ 中当前文档中的最后一列。  
   
  `cSourceBytes`  
- [in] The size of the source, in bytes.  
+ 中源的大小（以字节为单位）。  
   
  `pcSourceBytes`  
- [out] A pointer to a variable that receives the source size.  
+ 弄指向接收源大小的变量的指针。  
   
  `source`  
- [out] The size and length of the specified range of the source document, in bytes.  
+ 弄源文档的指定范围的大小和长度（以字节为单位）。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds.  
+ 如果方法成功，则 S_OK。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedDocument 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

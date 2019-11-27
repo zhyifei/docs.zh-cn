@@ -23,19 +23,19 @@ ms.locfileid: "74348735"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>如何：调用采用无符号类型的 Windows 函数 (Visual Basic)
 
-If you are consuming a class, module, or structure that has members of unsigned integer types, you can access these members with Visual Basic.
+如果你使用的类、模块或结构具有无符号整数类型的成员，则可以使用 Visual Basic 访问这些成员。
 
-## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>To call a Windows function that takes an unsigned type
+## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>调用采用无符号类型的 Windows 函数
 
-1. Use a [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) to tell Visual Basic which library holds the function, what its name is in that library, what its calling sequence is, and how to convert strings when calling it.
+1. 使用[Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)来告知 Visual Basic 哪个库包含函数、其在库中的名称、调用顺序，以及如何在调用字符串时转换字符串。
 
-2. In the `Declare` statement, use `UInteger`, `ULong`, `UShort`, or `Byte` as appropriate for each parameter with an unsigned type.
+2. 在 `Declare` 语句中，针对每个具有无符号类型的参数使用 `UInteger`、`ULong`、`UShort`或 `Byte`。
 
-3. Consult the documentation for the Windows function you are calling to find the names and values of the constants it uses. Many of these are defined in the WinUser.h file.
+3. 请参阅你要调用的 Windows 函数的文档，以查找它所使用的常量的名称和值。 其中许多是在 Winuser.h 文件中定义的。
 
-4. Declare the necessary constants in your code. Many Windows constants are 32-bit unsigned values, and you should declare these `As UInteger`.
+4. 在代码中声明必要的常量。 许多 Windows 常量为32位无符号值，应将这些 `As UInteger`声明。
 
-5. Call the function in the normal way. The following example calls the Windows function `MessageBox`, which takes an unsigned integer argument.
+5. 以正常方式调用函数。 下面的示例调用 Windows 函数 `MessageBox`，该函数采用无符号整数参数。
 
     ```vb
     Public Class windowsMessage
@@ -60,7 +60,7 @@ If you are consuming a class, module, or structure that has members of unsigned 
     End Class
     ```
 
-     You can test the function `messageThroughWindows` with the following code.
+     可以通过以下代码测试函数 `messageThroughWindows`。
 
     ```vb
     Public Sub consumeWindowsMessage()
@@ -70,18 +70,18 @@ If you are consuming a class, module, or structure that has members of unsigned 
     ```
 
     > [!CAUTION]
-    > The `UInteger`, `ULong`, `UShort`, and `SByte` data types are not part of the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS), so CLS-compliant code cannot consume a component that uses them.
+    > `UInteger`、`ULong`、`UShort`和 `SByte` 数据类型不是[语言独立性和与语言无关的组件](../../../standard/language-independence-and-language-independent-components.md)（cls）的一部分，因此符合 CLS 的代码无法使用使用它们的组件。
 
     > [!IMPORTANT]
-    > Making a call to unmanaged code, such as the Windows application programming interface (API), exposes your code to potential security risks.
+    > 调用非托管代码（如 Windows 应用程序编程接口（API））会向你的代码带来潜在的安全风险。
 
     > [!IMPORTANT]
-    > Calling the Windows API requires unmanaged code permission, which might affect its execution in partial-trust situations. For more information, see <xref:System.Security.Permissions.SecurityPermission> and [Code Access Permissions](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
+    > 调用 Windows API 需要非托管代码权限，这可能会影响在部分信任情况下的执行。 有关详细信息，请参阅 <xref:System.Security.Permissions.SecurityPermission> 和[代码访问权限](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100))。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据类型](../../../visual-basic/language-reference/data-types/index.md)
 - [Integer 数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)
 - [UInteger 数据类型](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)
-- [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
 - [演练：调用 Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

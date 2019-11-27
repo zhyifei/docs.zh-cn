@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445887"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>ICorProfilerCallback::ObjectReferences 方法
-Notifies the profiler about objects in memory that are being referenced by the specified object.  
+通知探查器有关指定的对象正在引用的内存中的对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,25 +37,25 @@ HRESULT ObjectReferences(
   
 ## <a name="parameters"></a>参数  
  `objectId`  
- [in] The ID of the object that is referencing objects.  
+ 中引用对象的对象的 ID。  
   
  `classId`  
- [in] The ID of the class that the specified object is an instance of.  
+ 中指定对象是其实例的类的 ID。  
   
  `cObjectRefs`  
- [in] The number of objects referenced by the specified object (that is, the number of elements in the `objectRefIds` array).  
+ 中指定的对象引用的对象数（即，`objectRefIds` 数组中元素的数目）。  
   
  `objectRefIds`  
- [in] An array of IDs of objects that are being referenced by `objectId`.  
+ 中`objectId`引用的对象的 Id 数组。  
   
 ## <a name="remarks"></a>备注  
- The `ObjectReferences` method is called for each object remaining in the heap after a garbage collection has completed. If the profiler returns an error from this callback, the profiling services will discontinue invoking this callback until the next garbage collection.  
+ 完成垃圾回收后，将为堆中剩余的每个对象调用 `ObjectReferences` 方法。 如果探查器从此回调返回错误，则分析服务将停止调用此回调，直到下一次垃圾回收。  
   
- The `ObjectReferences` callback can be used in conjunction with the [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) callback to create a complete object reference graph for the runtime. The common language runtime (CLR) ensures that each object reference is reported only once by the `ObjectReferences` method.  
+ `ObjectReferences` 回调可与[ICorProfilerCallback：： RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)回调结合使用，以便为运行时创建完整的对象引用关系图。 公共语言运行时（CLR）确保每个对象引用只能由 `ObjectReferences` 方法报告一次。  
   
- The object IDs returned by `ObjectReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects. Therefore, profilers must not attempt to inspect objects during an `ObjectReferences` call. When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, the garbage collection is complete and inspection can be safely done.  
+ `ObjectReferences` 返回的对象 Id 在回调过程中无效，因为垃圾回收可能是在移动对象的中间。 因此，探查器不能尝试在 `ObjectReferences` 调用过程中检查对象。 调用[ICorProfilerCallback2：： GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)时，垃圾回收已完成，可安全完成检查。  
   
- A null `ClassId` indicates that `objectId` has a type that is unloading.  
+ Null `ClassId` 指示 `objectId` 具有正在卸载的类型。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -66,6 +66,6 @@ HRESULT ObjectReferences(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

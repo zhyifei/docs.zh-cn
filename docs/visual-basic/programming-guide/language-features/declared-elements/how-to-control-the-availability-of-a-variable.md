@@ -19,61 +19,61 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345394"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>如何：控制变量的可用性 (Visual Basic)
-You control the availability of a variable by specifying its *access level*. The access level determines what code has permission to read or write to the variable.  
+可以通过指定变量的*访问级别*来控制变量的可用性。 访问级别确定哪些代码有权读取或写入变量。  
   
-- *Member variables* (defined at module level and outside any procedure) default to public access, which means any code that can see them can access them. You can change this by specifying an access modifier.  
+- *成员变量*（在模块级别和在任何过程外部定义）默认为公共访问，这意味着可以看到它们的任何代码都可以访问这些变量。 可以通过指定访问修饰符来更改此。  
   
-- *Local variables* (defined inside a procedure) nominally have public access, although only code within their procedure can access them. You cannot change the access level of a local variable, but you can change the access level of the procedure that contains it.  
+- 尽管*本地变量*（在过程中定义）通常具有公共访问权限，但只有其过程中的代码可以访问这些变量。 不能更改本地变量的访问级别，但可以更改包含它的过程的访问级别。  
   
- For more information, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ 有关详细信息，请参阅[Visual Basic 中的访问级别](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
-## <a name="private-and-public-access"></a>Private and Public Access  
+## <a name="private-and-public-access"></a>私有和公共访问  
   
-#### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>To make a variable accessible only from within its module, class, or structure  
+#### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>仅允许从其模块、类或结构内部访问变量  
   
-1. Place the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) for the variable inside the module, class, or structure, but outside any procedure.  
+1. 将变量的[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)放入模块、类或结构中，但放在任何过程之外。  
   
-2. Include the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword in the `Dim` statement.  
+2. 在 `Dim` 语句中包含[Private](../../../../visual-basic/language-reference/modifiers/private.md)关键字。  
   
-     You can read or write to the variable from anywhere within the module, class, or structure, but not from outside it.  
+     可以从模块、类或结构中的任何位置读取或写入变量，但不能从外部读取或写入。  
   
-#### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>To make a variable accessible from any code that can see it  
+#### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>使变量可从可查看它的任何代码进行访问  
   
-1. For a member variable, place the `Dim` statement for the variable inside a module, class, or structure, but outside any procedure.  
+1. 对于成员变量，请将变量的 `Dim` 语句放入模块、类或结构中，但放在任何过程之外。  
   
-2. Include the [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword in the `Dim` statement.  
+2. 在 `Dim` 语句中包含[Public](../../../../visual-basic/language-reference/modifiers/public.md)关键字。  
   
-     You can read or write to the variable from any code that interoperates with your assembly.  
+     可以从与程序集互操作的任何代码读取或写入变量。  
   
- 或  
+ \- 或 -  
   
-1. For a local variable, place the `Dim` statement for the variable inside a procedure.  
+1. 对于局部变量，请将变量的 `Dim` 语句放置到过程内。  
   
-2. Do not include the `Public` keyword in the `Dim` statement.  
+2. 不要在 `Dim` 语句中包含 `Public` 关键字。  
   
-     You can read or write to the variable from anywhere within the procedure, but not from outside it.  
+     可以从过程中的任何位置读取或写入变量，但不能从外部读取或写入。  
   
-## <a name="protected-and-friend-access"></a>Protected and Friend Access  
- You can limit the access level of a variable to its class and any derived classes, or to its assembly. You can also specify the union of these limitations, which allows access from code in any derived class or in any other place in the same assembly. You specify this union by combining the `Protected` and `Friend` keywords in the same declaration.  
+## <a name="protected-and-friend-access"></a>受保护和友元访问  
+ 可以将变量的访问级别限制为其类和派生类，或限制为其程序集。 您还可以指定这些限制的联合，这允许从任何派生类中的代码或同一程序集中的任何其他位置进行访问。 通过组合同一声明中的 `Protected` 和 `Friend` 关键字来指定此联合。  
   
-#### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>To make a variable accessible only from within its class and any derived classes  
+#### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>使变量只能从其类和任何派生类中访问  
   
-1. Place the `Dim` statement for the variable inside a class, but outside any procedure.  
+1. 将变量的 `Dim` 语句放置在类中，但在任何过程之外。  
   
-2. Include the [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) keyword in the `Dim` statement.  
+2. 在 `Dim` 语句中包含[Protected](../../../../visual-basic/language-reference/modifiers/protected.md)关键字。  
   
-     You can read or write to the variable from anywhere within the class, as well as from within any class derived from it, but not from outside any class in the derivation chain.  
+     可以从类中的任何位置以及从派生的任何类（而不是从派生链中的任何类）读取或写入变量。  
   
-#### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>To make a variable accessible only from within the same assembly  
+#### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>使变量只能从同一程序集内访问  
   
-1. Place the `Dim` statement for the variable inside a module, class, or structure, but outside any procedure.  
+1. 将变量的 `Dim` 语句放入模块、类或结构中，但在任何过程之外。  
   
-2. Include the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) keyword in the `Dim` statement.  
+2. 在 `Dim` 语句中包含[Friend](../../../../visual-basic/language-reference/modifiers/friend.md)关键字。  
   
-     You can read or write to the variable from anywhere within the module, class, or structure, as well as from any code in the same assembly, but not from outside the assembly.  
+     你可以从模块、类或结构中的任何位置读取或写入变量，也可以从同一程序集中的任何代码读取或写入到程序集之外的任何代码。  
   
 ## <a name="example"></a>示例  
- The following example shows declarations of variables with `Public`, `Protected`, `Friend`, `Protected Friend`, and `Private` access levels. Note that when the `Dim` statement specifies an access level, you do not need to include the `Dim` keyword.  
+ 下面的示例演示具有 `Public`、`Protected`、`Friend`、`Protected Friend`和 `Private` 访问级别的变量的声明。 请注意，如果 `Dim` 语句指定了访问级别，则不需要包括 `Dim` 关键字。  
   
 ```vb  
 Public Class classForEverybody  
@@ -84,13 +84,13 @@ Private numberForMeOnly As Integer
 ```  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- The more restrictive the access level of a variable, the smaller the chances that malicious code can make improper use of it.  
+ 变量访问级别的限制性越多，恶意代码使用它的可能性就越小。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic 中的访问级别](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)
-- [COMClassAttribute](../../../../visual-basic/language-reference/modifiers/public.md)
+- [Public](../../../../visual-basic/language-reference/modifiers/public.md)
 - [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private](../../../../visual-basic/language-reference/modifiers/private.md)

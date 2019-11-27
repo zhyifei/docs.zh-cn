@@ -141,11 +141,11 @@ Console.WriteLine(expr.Compile()(4))
   
  有关详细信息，请参阅[如何：执行表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Linq.Expressions>
-- [How to: Execute Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
-- [How to: Modify Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [如何：执行表达式树（Visual Basic）](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [如何：修改表达式树（Visual Basic）](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
 - [Lambda 表达式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [动态语言运行时概述](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
 - [编程概念 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/index.md)

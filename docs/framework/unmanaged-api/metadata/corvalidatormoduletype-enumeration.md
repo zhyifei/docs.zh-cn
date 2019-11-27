@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448760"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType 枚举
-Specifies the type of a module.  
+指定模块的类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,25 +41,25 @@ typedef enum
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`ValidatorModuleTypeInvalid`|The module is an invalid type.|  
-|`ValidatorModuleTypeMin`|The minimum value of the `CorValidatorModuleType` enum.|  
-|`ValidatorModuleTypePE`|The module is a portable executable (PE) file.|  
-|`ValidatorModuleTypeObj`|The module is a .obj file.|  
-|`ValidatorModuleTypeEnc`|The module is an edit-and-continue debugger session.|  
-|`ValidatorModuleTypeIncr`|The module is one that has been incrementally built.|  
-|`ValidatorModuleTypeMax`|The maximum value of the `CorValidatorModuleType` enum.|  
+|`ValidatorModuleTypeInvalid`|模块是无效类型。|  
+|`ValidatorModuleTypeMin`|`CorValidatorModuleType` 枚举的最小值。|  
+|`ValidatorModuleTypePE`|模块是可移植可执行（PE）文件。|  
+|`ValidatorModuleTypeObj`|模块是 .obj 文件。|  
+|`ValidatorModuleTypeEnc`|模块是 "编辑并继续" 调试器会话。|  
+|`ValidatorModuleTypeIncr`|模块是增量生成的模块。|  
+|`ValidatorModuleTypeMax`|`CorValidatorModuleType` 枚举的最大值。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

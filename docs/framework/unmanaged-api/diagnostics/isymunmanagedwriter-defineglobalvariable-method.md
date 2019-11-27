@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428020"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable 方法
-Defines a single global variable.  
+定义一个全局变量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,36 +41,36 @@ HRESULT DefineGlobalVariable(
   
 ## <a name="parameters"></a>参数  
  `name`  
- [in] A pointer to a `WCHAR` that defines the global variable name.  
+ 中指向定义全局变量名称的 `WCHAR` 的指针。  
   
  `attributes`  
- [in] The global variable attributes.  
+ 中全局变量特性。  
   
  `cSig`  
- [in] A `ULONG32` that indicates the size, in characters, of the `signature` buffer.  
+ 中一个 `ULONG32`，指示 `signature` 缓冲区的大小（以字符为字符）。  
   
  `signature`  
- [in] The global variable signature.  
+ 中全局变量签名。  
   
  `addrKind`  
- [in] The address type.  
+ 中地址类型。  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ 中参数规范的第一个地址。  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ 中参数规范的第二个地址。  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ 中参数规范的第三个地址。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
 - [DefineLocalVariable 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)

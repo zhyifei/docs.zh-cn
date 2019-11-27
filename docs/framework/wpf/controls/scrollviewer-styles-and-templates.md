@@ -22,7 +22,7 @@ ms.locfileid: "74283396"
 ## <a name="scrollviewer-parts"></a>ScrollViewer 部件  
  下表列出了 <xref:System.Windows.Controls.ScrollViewer> 控件的已命名部分。  
   
-|部件|Type|描述|  
+|部件|类型|说明|  
 |-|-|-|  
 |PART_ScrollContentPresenter|<xref:System.Windows.Controls.ScrollContentPresenter>|<xref:System.Windows.Controls.ScrollViewer>中的内容的占位符。|  
 |PART_HorizontalScrollBar|<xref:System.Windows.Controls.Primitives.ScrollBar>|用于水平滚动内容的 <xref:System.Windows.Controls.Primitives.ScrollBar>。|  
@@ -31,7 +31,7 @@ ms.locfileid: "74283396"
 ## <a name="scrollviewer-states"></a>ScrollViewer 状态  
  下表列出了 <xref:System.Windows.Controls.ScrollViewer> 控件的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
 |有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  

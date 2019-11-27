@@ -1,5 +1,5 @@
 ---
-title: GCLOHThreshold element
+title: GCLOHThreshold 元素
 ms.date: 11/20/2019
 helpviewer_keywords:
 - GCLOHThreshold element
@@ -11,13 +11,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451322"
 ---
-# <a name="gclohthreshold-element"></a>GCLOHThreshold element
+# <a name="gclohthreshold-element"></a>GCLOHThreshold 元素
 
-Specifies the threshold size, in bytes, that causes the garbage collector to put objects on the large object heap (LOH).
+指定导致垃圾回收器将对象置于大对象堆（LOH）上的阈值大小（以字节为单位）。
 
 [\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;[\<runtime>](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold>
+&nbsp;&nbsp;[\<运行时 >](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold >
 
 ## <a name="syntax"></a>语法
 
@@ -26,17 +26,17 @@ Specifies the threshold size, in bytes, that causes the garbage collector to put
    enabled="nnnn"/>
 ```
 
-## <a name="attributes"></a>特性
+## <a name="attributes"></a>Attributes
 
-|特性|描述|
+|属性|说明|
 |---------------|-----------------|
-|`enabled`|必需的特性。<br /><br />Specifies the threshold size that causes objects to go on the large object heap.|
+|`enabled`|必需的特性。<br /><br />指定导致对象在大型对象堆上的阈值大小。|
 
-### <a name="enabled-attribute"></a>enabled attribute
+### <a name="enabled-attribute"></a>enabled 属性
 
-|“值”|描述|
+|值|说明|
 |-----------|-----------------|
-|`nnnn`|The threshold size, in bytes, that causes objects to go on the large object heap.|
+|`nnnn`|导致对象在大型对象堆上的阈值大小（以字节为单位）。|
 
 ## <a name="child-elements"></a>子元素
 
@@ -44,18 +44,18 @@ Specifies the threshold size, in bytes, that causes the garbage collector to put
 
 ## <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|
 
 ## <a name="remarks"></a>备注
 
-This setting was introduced in .NET Framework 4.8.
+.NET Framework 4.8 中引入了此设置。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Run-time settings schema](index.md)
+- [运行时设置架构](index.md)
 - [配置文件架构](../index.md)
 - [垃圾回收的基本知识](../../../../standard/garbage-collection/fundamentals.md)
-- [NET Core run-time config options for GC](../../../../core/run-time-config/garbage-collector.md)
+- [用于 GC 的 NET Core 运行时配置选项](../../../../core/run-time-config/garbage-collector.md)

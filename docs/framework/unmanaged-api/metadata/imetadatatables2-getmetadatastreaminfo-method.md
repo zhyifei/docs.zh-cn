@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426218"
 ---
 # <a name="imetadatatables2getmetadatastreaminfo-method"></a>IMetaDataTables2::GetMetaDataStreamInfo 方法
-Gets the name, size, and contents of the metadata stream at the specified index.  
+获取指定索引处的元数据流的名称、大小和内容。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,27 +38,27 @@ HRESULT GetMetaDataStreamInfo (
   
 ## <a name="parameters"></a>参数  
  `ix`  
- [in] The index of the requested metadata stream.  
+ 中请求的元数据流的索引。  
   
  `ppchName`  
- [out] A pointer to the name of the stream.  
+ 弄指向流名称的指针。  
   
  `ppv`  
- [out] A pointer to the metadata stream.  
+ 弄指向元数据流的指针。  
   
  `pcb`  
- [out] The size, in bytes, of `ppv`.  
+ 弄`ppv`的大小（以字节为单位）。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataTables2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
 - [IMetaDataTables 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)

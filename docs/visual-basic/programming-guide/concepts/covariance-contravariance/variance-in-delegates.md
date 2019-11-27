@@ -9,9 +9,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349005"
 ---
-# <a name="variance-in-delegates-visual-basic"></a>Variance in Delegates (Visual Basic)
+# <a name="variance-in-delegates-visual-basic"></a>委托中的变体（Visual Basic）
 
-.NET Framework 3.5 introduced variance support for matching method signatures with delegate types in all delegates in C# and Visual Basic. 这表明不仅可以将具有匹配签名的方法分配给委托，还可以将返回派生程度较大的派生类型的方法分配给委托（协变），或者如果方法所接受参数的派生类型所具有的派生程度小于委托类型指定的程度（逆变），也可将其分配给委托。 这包括泛型委托和非泛型委托。
+.NET Framework 3.5 介绍了在C#和 Visual Basic 的所有委托中匹配方法签名与委托类型的差异支持。 这表明不仅可以将具有匹配签名的方法分配给委托，还可以将返回派生程度较大的派生类型的方法分配给委托（协变），或者如果方法所接受参数的派生类型所具有的派生程度小于委托类型指定的程度（逆变），也可将其分配给委托。 这包括泛型委托和非泛型委托。
 
 例如，思考以下代码，该代码具有两个类和两个委托：泛型和非泛型。
 
@@ -76,11 +76,11 @@ Dim dGeneric As SampleGenericDelegate(Of Second, First) = AddressOf ASecondRFirs
 Dim dGenericConversion As SampleGenericDelegate(Of Second, First) = AddressOf AFirstRSecond
 ```
 
-For more examples, see [Using Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) and [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
+有关更多示例，请参阅[在委托中使用变体（Visual Basic）](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)和[对 Func 和 Action 泛型委托使用变体（Visual Basic）](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。
 
 ## <a name="variance-in-generic-type-parameters"></a>泛型类型参数中的变体
 
-In .NET Framework 4 and later you can enable implicit conversion between delegates, so that generic delegates that have different types specified by generic type parameters can be assigned to each other, if the types are inherited from each other as required by variance.
+在 .NET Framework 4 和更高版本中，你可以启用委托之间的隐式转换，以便可以将具有不同类型的泛型委托分配给不同的类型，前提是这些类型从彼此继承时是必需的变动.
 
 若要启用隐式转换，必须使用 `in` 或 `out` 关键字将委托中的泛型参数显式声明为协变或逆变。
 
@@ -99,7 +99,7 @@ End Sub
 
 如果仅使用变体支持来匹配方法签名和委托类型，且不使用 `in` 和 `out` 关键字，则可能会发现有时可以使用相同的 lambda 表达式或方法实例化委托，但不能将一个委托分配给另一个委托。
 
-In the following code example, `SampleGenericDelegate(Of String)` can't be explicitly converted to `SampleGenericDelegate(Of Object)`, although `String` inherits `Object`. 可以使用 `out` 关键字标记 泛型参数 `T` 解决此问题。
+在下面的代码示例中，虽然 `String` 继承 `Object`，`SampleGenericDelegate(Of String)` 无法显式转换为 `SampleGenericDelegate(Of Object)`。 可以使用 `T` 关键字标记 泛型参数 `out` 解决此问题。
 
 ```vb
 Public Delegate Function SampleGenericDelegate(Of T)() As T
@@ -123,9 +123,9 @@ End Sub
 
 .NET Framework 4 在几个现有泛型委托中引入了泛型类型参数的变体支持：
 
-- <xref:System> 命名空间的 `Action` 委托，例如 <xref:System.Action%601> 和 <xref:System.Action%602>
+- `Action` 命名空间的 <xref:System> 委托，例如 <xref:System.Action%601> 和 <xref:System.Action%602>
 
-- <xref:System> 命名空间的 `Func` 委托，例如 <xref:System.Func%601> 和 <xref:System.Func%602>
+- `Func` 命名空间的 <xref:System> 委托，例如 <xref:System.Func%601> 和 <xref:System.Func%602>
 
 - <xref:System.Predicate%601> 委托
 
@@ -133,7 +133,7 @@ End Sub
 
 - <xref:System.Converter%602> 委托
 
-For more information and examples, see [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
+有关详细信息和示例，请参阅对[Func 和 Action 泛型委托使用变体（Visual Basic）](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。
 
 ### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>声明泛型委托中的变体类型参数
 
@@ -152,7 +152,7 @@ Public Delegate Sub DContravariant(Of In A)(ByVal a As A)
 ```
 
 > [!IMPORTANT]
-> `ByRef` parameters in Visual Basic can't be marked as variant.
+> Visual Basic 中的 `ByRef` 参数不能标记为变体。
 
 可以在同一个委托中支持变体和协变，但这只适用于不同类型的参数。 这在下面的示例中显示。
 
@@ -171,7 +171,7 @@ dvariant("test")
 
 ### <a name="combining-variant-generic-delegates"></a>合并变体泛型委托
 
-不应合并变体委托。 <xref:System.Delegate.Combine%2A> 方法不支持变体委托转换，并且要求委托的类型完全相同。 This can lead to a run-time exception when you combine delegates either by using the <xref:System.Delegate.Combine%2A> method (in C# and Visual Basic) or by using the `+` operator (in C#), as shown in the following code example.
+不应合并变体委托。 <xref:System.Delegate.Combine%2A> 方法不支持变体委托转换，并且要求委托的类型完全相同。 当你使用 <xref:System.Delegate.Combine%2A> 方法（在和 Visual Basic 中C# ）或使用 `+` 运算符（在中C#）组合委托时，这可能会导致运行时异常，如下面的代码示例中所示。
 
 ```vb
 Dim actObj As Action(Of Object) = Sub(x) Console.WriteLine("object: {0}", x)
@@ -183,7 +183,7 @@ Dim actStr As Action(Of String) = Sub(x) Console.WriteLine("string: {0}", x)
 
 ## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a>泛型类型参数中用于值和引用类型的变体
 
-泛型类型参数的变体仅支持引用类型。 For example, `DVariant(Of Int)`can't be implicitly converted to `DVariant(Of Object)` or `DVariant(Of Long)`, because integer is a value type.
+泛型类型参数的变体仅支持引用类型。 例如，`DVariant(Of Int)`无法隐式转换为 `DVariant(Of Object)` 或 `DVariant(Of Long)`，因为 integer 是值类型。
 
 以下示例演示了泛型类型参数中的变体不支持值类型。
 
@@ -207,11 +207,11 @@ Sub Test()
 End Sub
 ```
 
-## <a name="relaxed-delegate-conversion-in-visual-basic"></a>Relaxed Delegate Conversion in Visual Basic
+## <a name="relaxed-delegate-conversion-in-visual-basic"></a>Visual Basic 中的宽松委托转换
 
-Relaxed delegate conversion enables more flexibility in matching method signatures with delegate types. For example, it lets you omit parameter specifications and omit function return values when you assign a method to a delegate. For more information, see [Relaxed Delegate Conversion](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).
+通过宽松委托转换，可以更灵活地将方法签名与委托类型相匹配。 例如，可以在将方法分配给委托时省略参数规范并省略函数返回值。 有关详细信息，请参阅[宽松委托转换](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [泛型](../../../../standard/generics/index.md)
 - [对 Func 和 Action 泛型委托使用变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

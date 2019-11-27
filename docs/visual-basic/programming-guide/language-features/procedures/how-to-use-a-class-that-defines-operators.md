@@ -19,27 +19,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346035"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>如何：使用定义运算符的类 (Visual Basic)
-If you are using a class or structure that defines its own operators, you can access those operators from Visual Basic.  
+如果你使用的是定义其自己的运算符的类或结构，则可以从 Visual Basic 访问这些运算符。  
   
- Defining an operator on a class or structure is also called *overloading* the operator.  
+ 在类或结构上定义运算符也称为*重载*运算符。  
   
 ## <a name="example"></a>示例  
- The following example accesses the SQL structure <xref:System.Data.SqlTypes.SqlString>, which defines the conversion operators ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) in both directions between a SQL string and a Visual Basic string. Use `CType(`*SQL string expression*, `String)` to convert a SQL string to a Visual Basic string, and `CType(`*Visual Basic string expression*, <xref:System.Data.SqlTypes.SqlString>`)` to convert in the other direction.  
+ 下面的示例访问 SQL 结构 <xref:System.Data.SqlTypes.SqlString>，它在 SQL 字符串和 Visual Basic 字符串之间的两个方向定义转换运算符（[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)）。 使用 `CType(`*sql 字符串表达式*`String)`，将 sql 字符串转换为 Visual Basic 字符串，并 `CType(`Visual Basic*字符串表达式*，<xref:System.Data.SqlTypes.SqlString>`)` 以进行双向转换。  
   
  [!code-vb[VbVbcnProcedures#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#30)]  
   
  [!code-vb[VbVbcnProcedures#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#31)]  
   
- The <xref:System.Data.SqlTypes.SqlString> structure defines a conversion operator ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) from `String` to <xref:System.Data.SqlTypes.SqlString> and another from <xref:System.Data.SqlTypes.SqlString> to `String`. The statement that assigns `title` to `jobTitle` makes use of the first operator, and the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function call uses the second.  
+ <xref:System.Data.SqlTypes.SqlString> 结构定义了从 `String` 到 <xref:System.Data.SqlTypes.SqlString>，另一个从 <xref:System.Data.SqlTypes.SqlString> 到 `String`的转换运算符（[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)）。 将 `title` 分配给 `jobTitle` 的语句使用第一个运算符，而 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 函数调用使用第二个运算符。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- Be sure the class or structure you are using defines the operator you want to use. Do not assume that the class or structure has defined every operator available for overloading. For a list of available operators, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).  
+ 请确保所用的类或结构定义要使用的运算符。 不要假设类或结构已定义每个可用于重载的运算符。 有关可用运算符的列表，请参阅[Operator 语句](../../../../visual-basic/language-reference/statements/operator-statement.md)。  
   
- Include the appropriate `Imports` statement for the SQL string at the beginning of your source file (in this case <xref:System.Data.SqlTypes>).  
+ 在源文件开头包含 SQL 字符串的相应 `Imports` 语句（在本例中为 <xref:System.Data.SqlTypes>）。  
   
- Your project must have references to System.Data and System.XML.  
+ 你的项目必须引用了 System.web 和 System.object。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [运算符过程](./operator-procedures.md)
 - [如何：定义运算符](./how-to-define-an-operator.md)

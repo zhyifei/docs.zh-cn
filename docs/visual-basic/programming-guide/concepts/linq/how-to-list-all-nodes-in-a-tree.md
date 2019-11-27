@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336138"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>How to: List All Nodes in a Tree (Visual Basic)
+# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>如何：列出树中的所有节点（Visual Basic）
 有时，列出树中的所有节点会有帮助。 它可帮助准确了解方法或属性是如何影响树的。 以文本形式列出所有节点的一种方法是生成准确逐一地标识树中所有节点的 XPath 表达式。  
   
  使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 执行 XPath 表达式不特别有用。 XPath 表达式的性能不如 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询，并且 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询的功能更强大。 但作为标识 XML 树中节点的一种方式，XPath 可以有效地工作。  
@@ -263,6 +263,6 @@ End Module
 /Root/aw:ElementInNamespace/aw:ChildInNamespace  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [高级查询技术（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

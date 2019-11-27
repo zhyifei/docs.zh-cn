@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436711"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>IMetaDataImport::GetTypeRefProps 方法
-Gets the metadata associated with the <xref:System.Type> referenced by the specified TypeRef token.  
+获取与指定的 TypeRef 标记所引用的 <xref:System.Type> 关联的元数据。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,30 +39,30 @@ HRESULT GetTypeRefProps (
   
 ## <a name="parameters"></a>参数  
  `tr`  
- [in] The TypeRef token that represents the type to return metadata for.  
+ 中TypeRef 标记，它表示要为其返回元数据的类型。  
   
  `ptkResolutionScope`  
- [out] A pointer to the scope in which the reference is made. This value is an AssemblyRef or ModuleRef token.  
+ 弄指向在其中进行引用的范围的指针。 此值为 AssemblyRef 或 ModuleRef 标记。  
   
  `szName`  
- [out] A buffer containing the type name.  
+ 弄包含类型名称的缓冲区。  
   
  `cchName`  
- [in] The requested size in wide characters of `szName`.  
+ 中`szName`中的请求大小（以宽字符为大小）。  
   
  `pchName`  
- [out] The returned size in wide characters of `szName`.  
+ 弄`szName`的宽字符返回的大小。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

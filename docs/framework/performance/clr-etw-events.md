@@ -61,10 +61,10 @@ ms.locfileid: "74428165"
  [堆栈事件](stack-etw-event.md)  
  捕获可用于其他事件以在引发事件后生成堆栈跟踪的信息。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Improve Debugging And Performance Tuning With ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
-- [Windows Performance Blog](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
+- [利用 ETW 改善调试和性能优化](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
+- [Windows 性能博客](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
 - [控制 .NET Framework 日志记录](controlling-logging.md)
 - [CLR ETW 提供程序](clr-etw-providers.md)
 - [CLR ETW 关键字和级别](clr-etw-keywords-and-levels.md)

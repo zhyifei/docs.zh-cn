@@ -18,15 +18,15 @@ ms.locfileid: "74344121"
 ## <a name="remarks"></a>备注  
  有关 `My.Computer.Audio` 对象所使用方法和属性的信息，请参阅 <xref:Microsoft.VisualBasic.Devices.Audio>。  
   
- For more information, see [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).  
+ 有关详细信息，请参阅[播放声音](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md)。  
   
 ## <a name="requirements"></a>要求  
  **命名空间：** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Audio>  
+ **类：** <xref:Microsoft.VisualBasic.Devices.Audio>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **程序集：** Visual Basic 运行时库（在 Microsoft. .dll 中）  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [My.Computer 对象](../../../visual-basic/language-reference/objects/my-computer-object.md)

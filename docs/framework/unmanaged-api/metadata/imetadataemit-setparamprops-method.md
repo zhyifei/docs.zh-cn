@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432494"
 ---
 # <a name="imetadataemitsetparamprops-method"></a>IMetaDataEmit::SetParamProps 方法
-Sets or changes features of a method parameter that was defined by a prior call to [IMetaDataEmit::DefineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).  
+设置或更改之前调用[IMetaDataEmit：:D efineparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md)时定义的方法参数的功能。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,33 +40,33 @@ HRESULT SetParamProps (
   
 ## <a name="parameters"></a>参数  
  `pd`  
- [in] The token for the target parameter.  
+ 中目标参数的标记。  
   
  `szName`  
- [in] The name of the parameter in Unicode.  
+ 中Unicode 中参数的名称。  
   
  `dwParamFlags`  
- [in] The flags for the parameter.  
+ 中参数的标志。  
   
  `dwCPlusTypeFlag`  
- [in] The ELEMENT_TYPE_* for the constant value.  
+ 中常量值的 ELEMENT_TYPE_ *。  
   
  `pValue`  
- [in] The constant value for the parameter.  
+ 中参数的常数值。  
   
  `cchValue`  
- [in] The size in (Unicode) characters of `pValue`.  
+ 中`pValue`的大小（Unicode）字符。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

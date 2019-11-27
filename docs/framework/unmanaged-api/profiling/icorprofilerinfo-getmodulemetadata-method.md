@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439828"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a>ICorProfilerInfo::GetModuleMetaData 方法
-Gets a metadata interface instance that maps to the specified module.  
+获取映射到指定模块的元数据接口实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,21 +37,21 @@ HRESULT GetModuleMetaData(
   
 ## <a name="parameters"></a>参数  
  `moduleId`  
- [in] The ID of the module to which the interface instance will be mapped.  
+ 中接口实例将映射到的模块的 ID。  
   
  `dwOpenFlags`  
- [in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration that specifies the mode for opening manifest files. Only the `ofRead`, `ofWrite` and `ofNoTransform` bits are valid.  
+ 中[CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)枚举的一个值，该值指定用于打开清单文件的模式。 只有 `ofRead`、`ofWrite` 和 `ofNoTransform` 位是有效的。  
   
  `riid`  
- [in] The reference ID (GUID) of the metadata interface whose instance will be retrieved. See [Metadata Interfaces](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) for a list of the interfaces.  
+ 中将检索其实例的元数据接口的引用 ID （GUID）。 有关接口列表，请参阅[元数据接口](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)。  
   
  `ppOut`  
- [out] A pointer to the address of the metadata interface instance.  
+ 弄指向元数据接口实例的地址的指针。  
   
 ## <a name="remarks"></a>备注  
- You may ask for the metadata to be opened in read/write mode, but this will result in slower metadata execution of the program, because changes made to the metadata cannot be optimized as they were from the compiler.  
+ 你可能要求在读/写模式下打开元数据，但这会导致程序的元数据执行速度变慢，因为对元数据所做的更改不会因为它们来自编译器而进行优化。  
   
- Some modules (such as resource modules) have no metadata. In those cases, `GetModuleMetaData` will return an HRESULT value of S_FALSE, and a null in *`ppOut`.  
+ 某些模块（例如资源模块）没有元数据。 在这些情况下，`GetModuleMetaData` 将返回 S_FALSE 的 HRESULT 值，并在 *`ppOut`中返回 null。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -62,6 +62,6 @@ HRESULT GetModuleMetaData(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -16,19 +16,19 @@ ms.locfileid: "74330205"
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>My.Forms 和 My.WebServices 提供的默认对象实例 (Visual Basic)
 
-The [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) and [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) objects provide access to forms, data sources, and XML Web services used by your application. They do this by providing collections of *default instances* of each of these objects.  
+[My. forms](../../../visual-basic/language-reference/objects/my-forms-object.md)和[WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)对象提供对应用程序使用的窗体、数据源和 XML Web services 的访问权限。 它们通过提供每个对象的*默认实例*集合来实现此目的。  
   
-## <a name="default-instances"></a>Default Instances  
+## <a name="default-instances"></a>默认实例  
 
- A default instance is an instance of the class that is provided by the runtime and does not need to be declared and instantiated using the `Dim` and `New` statements. The following example demonstrates how you might have declared and instantiated an instance of a <xref:System.Windows.Forms.Form> class called `Form1`, and how you are now able to get a default instance of this <xref:System.Windows.Forms.Form> class through `My.Forms`.  
+ 默认实例是由运行时提供的类的实例，无需使用 `Dim` 和 `New` 语句进行声明和实例化。 下面的示例演示如何声明和实例化名为 `Form1`<xref:System.Windows.Forms.Form> 类的实例，以及你现在如何通过 `My.Forms`获取此 <xref:System.Windows.Forms.Form> 类的默认实例。  
   
  [!code-vb[VbVbcnMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#5)]  
   
  [!code-vb[VbVbcnMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#6)]  
   
- The `My.Forms` object returns a collection of default instances for every `Form` class that exists in your project. Similarly, `My.WebServices` provides a default instance of the proxy class for every Web service that you have created a reference to in your application.  
+ `My.Forms` 对象将为项目中存在的每个 `Form` 类返回默认实例的集合。 同样，`My.WebServices` 为已在应用程序中创建引用的每个 Web 服务提供代理类的默认实例。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [My.Forms 对象](../../../visual-basic/language-reference/objects/my-forms-object.md)
 - [My.WebServices 对象](../../../visual-basic/language-reference/objects/my-webservices-object.md)

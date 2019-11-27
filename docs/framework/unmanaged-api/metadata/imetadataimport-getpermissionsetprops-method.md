@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437109"
 ---
 # <a name="imetadataimportgetpermissionsetprops-method"></a>IMetaDataImport::GetPermissionSetProps 方法
-Gets the metadata associated with the <xref:System.Security.PermissionSet?displayProperty=nameWithType> represented by the specified Permission token.  
+获取与指定的权限令牌表示的 <xref:System.Security.PermissionSet?displayProperty=nameWithType> 关联的元数据。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,27 +38,27 @@ HRESULT GetPermissionSetProps (
   
 ## <a name="parameters"></a>参数  
  `pm`  
- [in] The Permission metadata token that represents the permission set to get the metadata properties for.  
+ 中权限元数据标记，它表示要获取其元数据属性的权限集。  
   
  `pdwAction`  
- [out] A pointer to the permission set.  
+ 弄指向权限集的指针。  
   
  `ppvPermission`  
- [out] A pointer to the binary metadata signature of the permission set.  
+ 弄指向权限集的二进制元数据签名的指针。  
   
  `pcbPermission`  
- [out] The size in bytes of `ppvPermission`.  
+ 弄`ppvPermission`的大小（以字节为单位）。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Security.PermissionSet>
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

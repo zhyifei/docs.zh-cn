@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343649"
 ---
-# <a name="scope-of-default-namespaces-in-visual-basic"></a>Scope of Default Namespaces in Visual Basic
+# <a name="scope-of-default-namespaces-in-visual-basic"></a>Visual Basic 中的默认命名空间的范围
 XML 树中表示的默认命名空间不在查询范围内。 如果您的 XML 在默认命名空间内，仍须声明一个 <xref:System.Xml.Linq.XNamespace> 变量，并将该变量与本地名称组合在一起，生成一个限定名，在查询中使用。  
   
  查询 XML 树时遇到的一个最常见问题是，如果 XML 树具有默认命名空间，开发人员在编写查询时，有时会将 XML 视为不在命名空间内。  
@@ -58,7 +58,7 @@ End of result set
 ## <a name="example"></a>示例  
  本示例演示如何在命名空间中创建 XML 和一个正确编码的查询。  
   
- In contrast to the incorrectly coded example above, the correct approach when using Visual Basic is to declare and initialize a global default namespace. 这样会将所有 XML 属性放入该默认命名空间。 无需对该示例做任何其他修改，即可使它正常运行。  
+ 与上述错误编码的示例相比，使用 Visual Basic 时的正确方法是声明和初始化一个全局默认命名空间。 这样会将所有 XML 属性放入该默认命名空间。 无需对该示例做任何其他修改，即可使它正常运行。  
   
 ### <a name="code"></a>代码  
   
@@ -99,6 +99,6 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [命名空间概述（LINQ to XML）（Visual Basic）](namespaces-overview-linq-to-xml.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435827"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherfound-method"></a>ICorProfilerCallback::ExceptionCLRCatcherFound 方法
-Called when a `catch` block for an exception is found inside the common language runtime (CLR) itself. This method is obsolete in the .NET Framework version 2.0.  
+当在公共语言运行时（CLR）本身内找到异常的 `catch` 块时调用。 此方法在 .NET Framework 版本2.0 中已过时。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,9 +38,9 @@ HRESULT ExceptionCLRCatcherFound();
   
  **库：** CorGuids.lib  
   
- **.NET Framework Version:** 1.0  
+ **.NET Framework 版本：** 1。0  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ExceptionCLRCatcherExecute 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherexecute-method.md)

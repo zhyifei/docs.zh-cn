@@ -22,14 +22,14 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439507"
 ---
 # <a name="icorprofilercallback3-interface"></a>ICorProfilerCallback3 接口
-Provides callback methods that the common language runtime (CLR) uses to communicate attach and detach state information to the profiler.  
+提供公共语言运行时（CLR）用来向探查器传达附加和分离状态信息的回调方法。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[InitializeForAttach 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)|Called by the CLR to give the profiler an opportunity to initialize its state after an attach operation.|  
-|[ProfilerAttachComplete 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-profilerattachcomplete-method.md)|Called by the CLR to indicate that the profiler can now call the catch-up methods.|  
+|[InitializeForAttach 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)|由 CLR 调用，以使探查器能够在附加操作后初始化其状态。|  
+|[ProfilerAttachComplete 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-profilerattachcomplete-method.md)|由 CLR 调用以指示探查器现在可以调用追赶方法。|  
 |[ProfilerDetachSucceeded 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-profilerdetachsucceeded-method.md)|通知探查器公共语言运行时 (CLR) 将要卸载探查器 DLL。|  
   
 ## <a name="remarks"></a>备注  
@@ -43,7 +43,7 @@ Provides callback methods that the common language runtime (CLR) uses to communi
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

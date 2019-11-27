@@ -19,7 +19,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351169"
 ---
 # <a name="get-statement"></a>Get 语句
-Declares a `Get` property procedure used to retrieve the value of a property.  
+声明用于检索属性值的 `Get` 属性过程。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,45 +31,45 @@ End Get
   
 ## <a name="parts"></a>部件  
   
-|术语|定义|  
+|术语|Definition|  
 |---|---|  
-|`attributelist`|可选。 See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Optional on at most one of the `Get` and `Set` statements in this property. 可以是以下各项之一：<br /><br /> -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 请参阅 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
-|`statements`|可选。 One or more statements that run when the `Get` property procedure is called.|  
-|`End Get`|必须的。 Terminates the definition of the `Get` property procedure.|  
+|`attributelist`|可选。 请参阅[特性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
+|`accessmodifier`|在此属性中的最多一个 `Get` 和 `Set` 语句上是可选的。 可以是以下各项之一：<br /><br /> -   [保护](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [朋友](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私有](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 请参阅 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`statements`|可选。 调用 `Get` 属性过程时运行的一个或多个语句。|  
+|`End Get`|必需。 终止 `Get` 属性过程的定义。|  
   
 ## <a name="remarks"></a>备注  
- Every property must have a `Get` property procedure unless the property is marked `WriteOnly`. The `Get` procedure is used to return the current value of the property.  
+ 每个属性都必须具有 `Get` 属性过程，除非该属性被标记为 `WriteOnly`。 `Get` 过程用于返回属性的当前值。  
   
- Visual Basic automatically calls a property's `Get` procedure when an expression requests the property's value.  
+ 当表达式请求属性值时，Visual Basic 会自动调用属性的 `Get` 过程。  
   
- The body of the property declaration can contain only the property's `Get` and `Set` procedures between the [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement. It cannot store anything other than those procedures. In particular, it cannot store the property's current value. You must store this value outside the property, because if you store it inside either of the property procedures, the other property procedure cannot access it. The usual approach is to store the value in a [Private](../../../visual-basic/language-reference/modifiers/private.md) variable declared at the same level as the property. You must define a `Get` procedure inside the property to which it applies.  
+ 属性声明的主体只能包含属性的 `Get`，并在[Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)和 `End Property` 语句之间包含 `Set` 过程。 它无法存储这些过程以外的任何内容。 特别是，它无法存储属性的当前值。 您必须将此值存储在属性的外部，因为如果将其存储在任一属性过程中，则其他属性过程将无法访问它。 常见的方法是将值存储在与属性在同一级别上声明的[私有](../../../visual-basic/language-reference/modifiers/private.md)变量中。 必须在应用的属性中定义 `Get` 过程。  
   
- The `Get` procedure defaults to the access level of its containing property unless you use `accessmodifier` in the `Get` statement.  
+ 除非在 `Get` 语句中使用 `accessmodifier`，否则 `Get` 过程默认为其包含属性的访问级别。  
   
 ## <a name="rules"></a>规则  
   
-- **Mixed Access Levels.** If you are defining a read-write property, you can optionally specify a different access level for either the `Get` or the `Set` procedure, but not both. If you do this, the procedure access level must be more restrictive than the property's access level. For example, if the property is declared `Friend`, you can declare the `Get` procedure `Private`, but not `Public`.  
+- **混合访问级别。** 如果要定义读写属性，则可以选择为 `Get` 或 `Set` 过程指定不同的访问级别，但不能同时指定两者。 如果执行此操作，则过程访问级别必须比属性的访问级别更严格。 例如，如果属性已 `Friend`声明，则可以将 `Get` 过程声明 `Private`但不 `Public`。  
   
-     If you are defining a `ReadOnly` property, the `Get` procedure represents the entire property. You cannot declare a different access level for `Get`, because that would set two access levels for the property.  
+     如果正在定义 `ReadOnly` 属性，则 `Get` 过程表示整个属性。 不能为 `Get`声明不同的访问级别，因为这会为属性设置两个访问级别。  
   
-- **Return Type.** The [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) can declare the data type of the value it returns. The `Get` procedure automatically returns that data type. You can specify any data type or the name of an enumeration, structure, class, or interface.  
+- **返回类型。** [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)可以声明其返回的值的数据类型。 `Get` 过程会自动返回该数据类型。 您可以指定任何数据类型或枚举、结构、类或接口的名称。  
   
-     If the `Property` statement does not specify `returntype`, the procedure returns `Object`.  
+     如果 `Property` 语句未指定 `returntype`，则过程返回 `Object`。  
   
 ## <a name="behavior"></a>行为  
   
-- **Returning from a Procedure.** When the `Get` procedure returns to the calling code, execution continues within the statement that requested the property value.  
+- **从过程返回。** 当 `Get` 过程返回到调用代码时，执行将在请求属性值的语句中继续执行。  
   
-     `Get` property procedures can return a value using either the [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) or by assigning the return value to the property name. For more information, see "Return Value" in [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md).  
+     `Get` 属性过程可以使用[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)或通过将返回值分配给属性名称来返回值。 有关详细信息，请参阅[Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)中的 "返回值"。  
   
-     The `Exit Property` and `Return` statements cause an immediate exit from a property procedure. Any number of `Exit Property` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Property` and `Return` statements.  
+     `Exit Property` 和 `Return` 语句导致直接从属性过程退出。 任意数量的 `Exit Property` 和 `Return` 语句可以出现在过程中的任何位置，并且可以混合 `Exit Property` 和 `Return` 语句。  
   
-- **Return Value.** To return a value from a `Get` procedure, you can either assign the value to the property name or include it in a [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md). The `Return` statement simultaneously assigns the `Get` procedure return value and exits the procedure.  
+- **返回值。** 若要从 `Get` 过程返回值，可将值分配给属性名称或将其包含在[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)中。 `Return` 语句同时分配 `Get` 过程返回值并退出该过程。  
   
-     If you use `Exit Property` without assigning a value to the property name, the `Get` procedure returns the default value for the property's data type. For more information, see "Return Value" in [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md).  
+     如果在不向属性名称赋予值的情况下使用 `Exit Property`，则 `Get` 过程将返回属性数据类型的默认值。 有关详细信息，请参阅[Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)中的 "返回值"。  
   
-     The following example illustrates two ways the read-only property `quoteForTheDay` can return the value held in the private variable `quoteValue`.  
+     下面的示例演示了只读属性 `quoteForTheDay` 可以返回 `quoteValue`中包含的值的两种方法。  
   
      [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]  
   
@@ -78,11 +78,11 @@ End Get
      [!code-vb[VbVbalrStatements#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#29)]  
   
 ## <a name="example"></a>示例  
- The following example uses the `Get` statement to return the value of a property.  
+ 下面的示例使用 `Get` 语句返回属性的值。  
   
  [!code-vb[VbVbalrStatements#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#30)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Set 语句](../../../visual-basic/language-reference/statements/set-statement.md)
 - [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)

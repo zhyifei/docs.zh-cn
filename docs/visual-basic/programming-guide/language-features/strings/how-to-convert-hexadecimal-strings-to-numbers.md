@@ -17,24 +17,24 @@ ms.locfileid: "74347177"
 ---
 # <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>如何：将十六进制字符串转换为数字 (Visual Basic)
 
-This example converts a hexadecimal string to an integer using the <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> method.
+此示例使用 <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> 方法将十六进制字符串转换为整数。
 
-## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>To convert a hexadecimal string to a number
+## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>将十六进制字符串转换为数字
 
-- Use the <xref:System.Convert.ToInt32(System.String,System.Int32)> method to convert the number expressed in base-16 to an integer.
+- 使用 <xref:System.Convert.ToInt32(System.String,System.Int32)> 方法将以16为基数的数字转换为整数。
 
-  The first argument of the <xref:System.Convert.ToInt32(System.String,System.Int32)> method is the string to convert. The second argument describes what base the number is expressed in; hexadecimal is base 16.
+  <xref:System.Convert.ToInt32(System.String,System.Int32)> 方法的第一个参数是要转换的字符串。 第二个参数描述数字的表示形式;十六进制以16为基数。
 
   [!code-vb[VbVbalrStrings#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#62)]
 
-- Note that the hexadecimal string has the following restrictions:
+- 请注意，十六进制字符串具有以下限制：
 
-  - It cannot include the `&h` prefix.
-  - It cannot include the `_` digit separator.
+  - 它不能包含 `&h` 前缀。
+  - 它不能包含 `_` 数字分隔符。
 
-  If the prefix or a digit separator is present, the call to the <xref:System.Convert.ToInt32(System.String,System.Int32)> method throws a <xref:System.FormatException>.
+  如果前缀或数字分隔符存在，则对 <xref:System.Convert.ToInt32(System.String,System.Int32)> 方法的调用将引发 <xref:System.FormatException>。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualBasic.Conversion.Hex%2A>
 - <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>

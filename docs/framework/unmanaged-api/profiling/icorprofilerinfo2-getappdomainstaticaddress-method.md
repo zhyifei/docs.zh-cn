@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435872"
 ---
 # <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a>ICorProfilerInfo2::GetAppDomainStaticAddress 方法
-Gets the address of the specified application domain-static field that is in the scope of the specified application domain.  
+获取指定应用程序域静态字段在指定应用程序域范围内的地址。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,25 +37,25 @@ RESULT GetAppDomainStaticAddress(
   
 ## <a name="parameters"></a>参数  
  `classId`  
- [in] The class ID of the class that contains the requested application domain-static field.  
+ 中包含请求的应用程序域静态字段的类的类 ID。  
   
  `fieldToken`  
- [in] The metadata token for the requested application domain-static field.  
+ 中请求的应用程序域静态字段的元数据标记。  
   
  `appDomainId`  
- [in] The ID of the application domain that is the scope for the requested static field.  
+ 中作为所请求的静态字段的作用域的应用程序域的 ID。  
   
  `ppAddress`  
- [out] A pointer to the address of the static field that is within the specified application domain.  
+ 弄指向指定应用程序域中的静态字段的地址的指针。  
   
 ## <a name="remarks"></a>备注  
- The `GetAppDomainStaticAddress` method may return one of the following:  
+ `GetAppDomainStaticAddress` 方法可能会返回以下内容之一：  
   
-- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
+- 如果未在指定的上下文中为给定的静态字段分配地址，则 CORPROF_E_DATAINCOMPLETE HRESULT。  
   
-- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
+- 可能位于垃圾回收堆中的对象的地址。 这些地址可能会在垃圾回收后失效，因此，在垃圾回收后，探查器不应假定它们是有效的。  
   
- Before a class’s class constructor is completed, `GetAppDomainStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.  
+ 在类的类构造函数完成之前，尽管某些静态字段可能已经初始化并为垃圾回收对象提供了根，`GetAppDomainStaticAddress` 仍将返回其所有静态字段的 CORPROF_E_DATAINCOMPLETE。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -66,7 +66,7 @@ RESULT GetAppDomainStaticAddress(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

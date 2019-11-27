@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444269"
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA 结构
-Contains information about the referenced assembly, including its version and its level of support for locales, processors, and operating systems.  
+包含有关被引用程序集的信息，包括其版本及其对区域设置、处理器和操作系统的支持级别。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,29 +43,29 @@ typedef struct {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`usMajorVersion`|The major version number of the referenced assembly. This value cannot be zero. If all the bits of `usMajorVersion` are set, the major version is not specified.|  
-|`usMinorVersion`|The minor version number of the referenced assembly. This value cannot be zero. If all the bits of `usMinorVersion` are set, the minor version is not specified.|  
-|`usBuildNumber`|The build number of the referenced assembly. This value cannot be zero. If all the bits of `usBuildNumber` are set, the build number is not specified.|  
-|`usRevisionNumber`|The revision number of the referenced assembly. This value cannot be zero. If all the bits of `usRevisionNumber` are set, the revision number is not specified.|  
-|`szLocale`|A list of locale names conforming to the RFC1766 specification, separated by semicolons, specifying the locales supported by the referenced assembly. A null value indicates locale independence. **Note:**  In the .NET Framework version 1.0 you cannot specify more than one locale.|  
-|`cbLocale`|The size in wide characters of `szLocale`.|  
-|`rdwProcessor`|An array of identifiers, as defined in Winnt.h, for the processor types that are supported by the referenced assembly. A NULL value indicates processor independence.|  
-|`ulProcessor`|The length of the `rdwProcessor` array.|  
-|`rOS`|An array of [OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md) instances specifying the operating systems that are supported by the referenced assembly. A NULL value indicates operating-system independence.|  
-|`ulOS`|The length of the `rOS` array.|  
+|`usMajorVersion`|引用的程序集的主版本号。 此值不能为零。 如果设置了 `usMajorVersion` 的所有位，则不指定主版本。|  
+|`usMinorVersion`|所引用程序集的次版本号。 此值不能为零。 如果设置了 `usMinorVersion` 的所有位，则不指定次版本。|  
+|`usBuildNumber`|引用的程序集的生成号。 此值不能为零。 如果设置了 `usBuildNumber` 的所有位，则不指定内部版本号。|  
+|`usRevisionNumber`|引用的程序集的修订号。 此值不能为零。 如果设置了 `usRevisionNumber` 的所有位，则不指定修订号。|  
+|`szLocale`|符合 RFC1766 规范（由分号分隔）的区域设置名称的列表，指定被引用程序集支持的区域设置。 空值表示区域设置独立性。 **注意：** 在 .NET Framework 版本1.0 中，不能指定多个区域设置。|  
+|`cbLocale`|`szLocale`的大小（以宽字符为大小）。|  
+|`rdwProcessor`|Winnt 中定义的标识符的数组，适用于所引用的程序集所支持的处理器类型。 空值表示处理器独立性。|  
+|`ulProcessor`|`rdwProcessor` 数组的长度。|  
+|`rOS`|指定被引用的程序集支持的操作系统的[OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)实例的数组。 NULL 值指示与操作系统无关。|  
+|`ulOS`|`rOS` 数组的长度。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [元数据结构](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
 - [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

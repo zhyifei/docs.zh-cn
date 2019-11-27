@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449344"
 ---
 # <a name="getalinkmessagedll-function"></a>GetALinkMessageDll 函数
-Finds and loads the message DLL. Returns 0 if the message DLL could not be located or loaded. The message DLL should be either in a subdirectory whose name is a language ID, or in the current directory.  
+查找并加载消息 DLL。 如果找不到或无法加载消息 DLL，则返回0。 消息 DLL 应位于其名称为语言 ID 的子目录中，或位于当前目录中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,10 +32,10 @@ HINSTANCE WINAPI GetALinkMessageDll();
 ```  
   
 ## <a name="requirements"></a>要求  
- **Header:** alink.h  
+ **标头：** alink。h  
   
- **Library**: alink.dll  
+ **库**： alink  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Al.exe（程序集链接器）](../../tools/al-exe-assembly-linker.md)

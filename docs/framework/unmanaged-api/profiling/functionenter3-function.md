@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440778"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 函数
-Notifies the profiler that control is being passed to a function.  
+通知探查器控制正在传递到函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,29 +32,29 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
   
 ## <a name="parameters"></a>参数  
  `functionOrRemappedID`  
- [in] The identifier of the function to which control is passed.  
+ 中要传递控制的函数的标识符。  
   
 ## <a name="remarks"></a>备注  
- The `FunctionEnter3` callback function notifies the profiler as functions are being called, but does not support argument inspection. Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.  
+ `FunctionEnter3` 回调函数将在调用函数时通知探查器，但不支持参数检查。 使用[ICorProfilerInfo3：： SetEnterLeaveFunctionHooks3 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)注册此函数的实现。  
   
- The `FunctionEnter3` function is a callback; you must implement it. The implementation must use the `__declspec(naked)` storage-class attribute.  
+ `FunctionEnter3` 函数是回调;必须实现此方法。 实现必须使用 `__declspec(naked)` 存储类特性。  
   
- The execution engine does not save any registers before calling this function.  
+ 在调用此函数之前，执行引擎不会保存任何注册。  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- 进入时，必须保存使用的所有寄存器，包括浮点单元（FPU）中的所有寄存器。  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- 退出时，必须通过弹出由其调用方推送的所有参数来还原堆栈。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorProf.idl  
+ **标头：** Corprof.idl .idl  
   
  **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
 - [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)

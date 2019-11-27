@@ -55,10 +55,10 @@ ms.locfileid: "74447148"
 
 |必需的成员|成员类型|注意|
 |----------------------|-----------------|-----------|
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Property|None|
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|方法|None|
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|方法|None|
-|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|Event — 事件|此控件没有关联的事件；请使用此泛型委托。|
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|属性|无|
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|方法|无|
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|方法|无|
+|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|事件|此控件没有关联的事件；请使用此泛型委托。|
 
 <a name="Exceptions"></a>
 
@@ -66,15 +66,15 @@ ms.locfileid: "74447148"
 
 提供程序必须引发以下异常。
 
-|异常类型|条件|
+|例外狀況類型|条件|
 |--------------------|---------------|
 |<xref:System.InvalidOperationException>|当 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 或 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 时，将调用 <xref:System.Windows.Automation.ExpandCollapseState> = <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UI 自动化控件模式概述](ui-automation-control-patterns-overview.md)
 - [在 UI 自动化提供程序中支持控件模式](support-control-patterns-in-a-ui-automation-provider.md)
-- [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [使用 TreeWalker 在 UI 自动化元素之间导航](navigate-among-ui-automation-elements-with-treewalker.md)
 - [UI 自动化树概述](ui-automation-tree-overview.md)
 - [在 UI 自动化中使用缓存](use-caching-in-ui-automation.md)

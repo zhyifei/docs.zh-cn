@@ -14,29 +14,29 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349718"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>如何：创建返回值的过程 (Visual Basic)
-You use a `Function` procedure to return a value to the calling code.  
+使用 `Function` 过程将值返回到调用代码。  
   
-### <a name="to-create-a-procedure-that-returns-a-value"></a>To create a procedure that returns a value  
+### <a name="to-create-a-procedure-that-returns-a-value"></a>创建返回值的过程  
   
-1. Outside any other procedure, use a `Function` statement, followed by an `End Function` statement.  
+1. 在任何其他过程之外，使用 `Function` 语句，后跟 `End Function` 语句。  
   
-2. In the `Function` statement, follow the `Function` keyword with the name of the procedure, and then the parameter list in parentheses.  
+2. 在 `Function` 语句中，将 `Function` 关键字跟过程的名称一起，然后将参数列表放在括号中。  
   
-3. Follow the parentheses with an `As` clause to specify the data type of the returned value.  
+3. 在括号后跟一个 `As` 子句以指定返回值的数据类型。  
   
-4. Place the procedure's code statements between the `Function` and `End Function` statements.  
+4. 将过程的代码语句置于 `Function` 和 `End Function` 语句之间。  
   
-5. Use a `Return` statement to return the value to the calling code.  
+5. 使用 `Return` 语句将值返回到调用代码。  
   
-     The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, given the values for the other two sides.  
+     以下 `Function` 过程将计算直角三角形的最长边（或斜边），并给出另一方的值。  
   
      [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
-     The following example shows a typical call to `hypotenuse`.  
+     下面的示例演示对 `hypotenuse`的典型调用。  
   
      [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [过程](./index.md)
 - [Sub 过程](./sub-procedures.md)

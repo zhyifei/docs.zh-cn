@@ -22,7 +22,7 @@ ms.locfileid: "74283808"
 ## <a name="datagrid-parts"></a>DataGrid 部分  
  下表列出了 <xref:System.Windows.Controls.DataGrid> 控件的已命名部分。  
   
-|部件|Type|描述|  
+|部件|类型|说明|  
 |-|-|-|  
 |PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|包含列标题的行。|  
   
@@ -33,10 +33,10 @@ ms.locfileid: "74283808"
 ## <a name="datagrid-states"></a>DataGrid 状态  
  下表列出了 <xref:System.Windows.Controls.DataGrid> 控件的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
-|一般|CommonStates|默认状态。|  
-|Disabled|CommonStates|已禁用控件。|  
+|正常|CommonStates|默认状态。|  
+|已禁用|CommonStates|已禁用控件。|  
 |InvalidFocused|ValidationStates|控件无效，但具有焦点。|  
 |InvalidUnfocused|ValidationStates|控件无效，并且没有焦点。|  
 |有效|ValidationStates|控件有效。|  
@@ -47,11 +47,11 @@ ms.locfileid: "74283808"
 ## <a name="datagridcell-states"></a>DataGridCell 状态  
  下表列出了 <xref:System.Windows.Controls.DataGridCell> 元素的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
-|一般|CommonStates|默认状态。|  
+|正常|CommonStates|默认状态。|  
 |MouseOver|CommonStates|鼠标指针位于单元格上。|  
-|已设定焦点|FocusStates|单元格有焦点。|  
+|Focused|FocusStates|单元格有焦点。|  
 |失去焦点|FocusStates|单元格没有焦点|  
 |当前|CurrentStates|单元格为当前单元格。|  
 |规则|CurrentStates|单元格不是当前单元格。|  
@@ -69,9 +69,9 @@ ms.locfileid: "74283808"
 ## <a name="datagridrow-states"></a>DataGridRow 状态  
  下表列出了 <xref:System.Windows.Controls.DataGridRow> 元素的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
-|一般|CommonStates|默认状态。|  
+|正常|CommonStates|默认状态。|  
 |MouseOver|CommonStates|鼠标指针置于行的上方。|  
 |MouseOver_Editing|CommonStates|鼠标指针置于行的上方，行处于编辑模式。|  
 |MouseOver_Selected|CommonStates|鼠标指针置于行上方，并选中行。|  
@@ -89,7 +89,7 @@ ms.locfileid: "74283808"
 ## <a name="datagridrowheader-parts"></a>DataGridRowHeader 部件  
  下表列出了 <xref:System.Windows.Controls.Primitives.DataGridRowHeader> 元素的已命名部分。  
   
-|部件|Type|描述|  
+|部件|类型|说明|  
 |-|-|-|  
 |PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|用于从顶部调整行标题大小的元素。|  
 |PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|用于从底部调整行标题大小的元素。|  
@@ -97,9 +97,9 @@ ms.locfileid: "74283808"
 ## <a name="datagridrowheader-states"></a>DataGridRowHeader 状态  
  下表列出了 <xref:System.Windows.Controls.Primitives.DataGridRowHeader> 元素的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
-|一般|CommonStates|默认状态。|  
+|正常|CommonStates|默认状态。|  
 |MouseOver|CommonStates|鼠标指针置于行的上方。|  
 |MouseOver_CurrentRow|CommonStates|鼠标指针置于行的上方，行是当前行。|  
 |MouseOver_CurrentRow_Selected|CommonStates|鼠标指针置于行的上方，行是当前行并处于选定状态。|  
@@ -122,14 +122,14 @@ ms.locfileid: "74283808"
 ## <a name="datagridcolumnheaderspresenter-parts"></a>DataGridColumnHeadersPresenter 部件  
  下表列出了 <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> 元素的已命名部分。  
   
-|部件|Type|描述|  
+|部件|类型|说明|  
 |-|-|-|  
 |PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|列标题的占位符。|  
   
 ## <a name="datagridcolumnheaderspresenter-states"></a>DataGridColumnHeadersPresenter 状态  
  下表列出了 <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> 元素的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
 |InvalidFocused|ValidationStates|单元格无效，具有焦点。|  
 |InvalidUnfocused|ValidationStates|单元格无效且没有焦点。|  
@@ -138,7 +138,7 @@ ms.locfileid: "74283808"
 ## <a name="datagridcolumnheader-parts"></a>DataGridColumnHeader 部件  
  下表列出了 <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> 元素的已命名部分。  
   
-|部件|Type|描述|  
+|部件|类型|说明|  
 |-|-|-|  
 |PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|用于从左侧调整列标题大小的元素。|  
 |PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|用于从右侧调整列标题大小的元素。|  
@@ -146,11 +146,11 @@ ms.locfileid: "74283808"
 ## <a name="datagridcolumnheader-states"></a>DataGridColumnHeader 状态  
  下表列出了 <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> 元素的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
-|一般|CommonStates|默认状态。|  
+|正常|CommonStates|默认状态。|  
 |MouseOver|CommonStates|鼠标指针悬停在控件上。|  
-|已按下|CommonStates|已按下控件。|  
+|Pressed|CommonStates|已按下控件。|  
 |SortAscending|SortStates|列按升序排序。|  
 |SortDescending|SortStates|列按降序排序。|  
 |未排序|SortStates|列未排序。|  

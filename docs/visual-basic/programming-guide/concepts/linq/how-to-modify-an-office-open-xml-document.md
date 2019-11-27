@@ -9,10 +9,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336018"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>How to: Modify an Office Open XML Document (Visual Basic)
+# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>如何：修改 Office Open XML 文档（Visual Basic）
 本主题显演示一个打开、修改和保存 Office Open XML 文档的示例。  
   
- For more information on Office Open XML, see [Eric White's Blog](http://www.ericwhite.com).  
+ 有关 Office Open XML 的详细信息，请参阅[Eric 白的博客](http://www.ericwhite.com)。  
   
 ## <a name="example"></a>示例  
  本示例查找文档中的第一个段落元素。 示例从段落中检索文本，然后删除段落中的所有文本域。 它创建一个由第一个段落已转换为大写的文本构成的新文本域。 然后将已更改的 XML 序列化为 Open XML 包并关闭该包。  
@@ -137,12 +137,12 @@ End Module
   
  如果在运行此程序之后打开 `SampleDoc.docx`，则可以看到此程序已将文档中的第一个段落转换为大写。  
   
- When run with the sample Open XML document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:  
+ 当与[创建源 Office OPEN Xml 文档（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)中所述的示例 Open xml 文档运行时，此示例将生成以下输出：  
   
 ```console  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [高级查询技术（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

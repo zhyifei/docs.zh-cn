@@ -15,21 +15,21 @@ ms.locfileid: "74330992"
 
 ## <a name="in-this-section"></a>本节内容
 
-- [Operator precedence in Visual Basic](operator-precedence.md)
-- [Operators listed by functionality](operators-listed-by-functionality.md)
-- [Data types of operator results](data-types-of-operator-results.md)
-- [DirectCast operator](directcast-operator.md)
-- [TryCast operator](trycast-operator.md)
-- [NameOf operator](nameof.md)
-- [New operator](new-operator.md)
-- [Null-conditional operators](null-conditional-operators.md)
+- [运算符优先级 Visual Basic](operator-precedence.md)
+- [按功能列出的运算符](operators-listed-by-functionality.md)
+- [运算符结果的数据类型](data-types-of-operator-results.md)
+- [DirectCast 运算符](directcast-operator.md)
+- [TryCast 运算符](trycast-operator.md)
+- [NameOf 运算符](nameof.md)
+- [New 运算符](new-operator.md)
+- [Null 条件运算符](null-conditional-operators.md)
 - [算术运算符](arithmetic-operators.md)
 - [赋值运算符](assignment-operators.md)
-- [Bit Shift operators](bit-shift-operators.md)
+- [移位运算符](bit-shift-operators.md)
 - [比较运算符](comparison-operators.md)
-- [Concatenation operators](concatenation-operators.md)
-- [Logical/Bitwise operators](logical-bitwise-operators.md)
-- [Miscellaneous operators](miscellaneous-operators.md)
+- [串联运算符](concatenation-operators.md)
+- [逻辑/按位运算符](logical-bitwise-operators.md)
+- [其他运算符](miscellaneous-operators.md)
 
 ## <a name="related-sections"></a>相关章节
 

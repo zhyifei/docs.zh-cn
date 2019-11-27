@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438723"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass 方法
-Determines whether the specified class is an array class.  
+确定指定的类是否为数组类。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,19 +37,19 @@ HRESULT IsArrayClass(
   
 ## <a name="parameters"></a>参数  
  `classId`  
- [in] The ID of the class to be examined.  
+ 中要检查的类的 ID。  
   
  `pBaseElemType`  
- [out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.  
+ 弄指向 CorElementType 枚举的值的指针，该枚举指示数组元素的类型。  
   
  `pBaseClassId`  
- [out] A pointer to the class ID of the array elements, when available.  
+ 弄指向数组元素的类 ID 的指针（如果可用）。  
   
  `pcRank`  
- [out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.  
+ 弄指向一个整数的指针，该整数指示数组的秩（即维度的数目）。  
   
 ## <a name="remarks"></a>备注  
- If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters. Otherwise, it returns S_FALSE.  
+ 如果指定的类是一个数组类，则 `IsArrayClass` 方法为任何非 null output 参数返回 S_OK HRESULT 和值。 否则，它将返回 S_FALSE。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -60,6 +60,6 @@ HRESULT IsArrayClass(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -22,14 +22,14 @@ ms.locfileid: "74283734"
 ## <a name="frame-parts"></a>帧部分  
  下表列出了 <xref:System.Windows.Controls.Frame> 控件的已命名部分。  
   
-|部件|Type|描述|  
+|部件|类型|说明|  
 |-|-|-|  
 |PART_FrameCP|<xref:System.Windows.Controls.ContentPresenter>|内容区域。|  
   
 ## <a name="frame-states"></a>帧状态  
  下表列出了 <xref:System.Windows.Controls.Frame> 控件的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
 |有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  

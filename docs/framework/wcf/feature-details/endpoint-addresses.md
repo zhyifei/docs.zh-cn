@@ -17,7 +17,7 @@ ms.locfileid: "74283222"
 每个终结点都具有与其关联的地址，该地址用于查找和标识终结点。 此地址主要包括指定终结点位置的统一资源标识符 (URI)。 终结点地址由 <xref:System.ServiceModel.EndpointAddress> 类在 Windows Communication Foundation （WCF）编程模型中表示，该类包含一个可选的 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 属性，该属性允许终结点的其他终结点与之交换消息的其他终结点进行身份验证，以及一组可选的 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 属性，这些属性用于定义访问服务所需的任何其他 SOAP 标头。 可选头提供其他的更详细寻址信息以标识服务终结点或与之交互。 终结点的地址在网络上表示为 WS-Addressing 终结点引用 (EPR)。  
   
 ## <a name="uri-structure-of-an-address"></a>地址的 URI 结构  
- 大多数传输的地址 URI 包含四个部分。 例如，URI 的四个部分 `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` 可以详细列举了，如下所示：  
+ 大多数传输的地址 URI 包含四个部分。 例如，URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` 的四个部分可以按如下方式进行细化：  
   
 - 方案： `http:`
   

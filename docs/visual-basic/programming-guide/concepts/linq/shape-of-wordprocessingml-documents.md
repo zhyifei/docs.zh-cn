@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350608"
 ---
-# <a name="shape-of-wordprocessingml-documents-visual-basic"></a>Shape of WordprocessingML Documents (Visual Basic)
+# <a name="shape-of-wordprocessingml-documents-visual-basic"></a>WordprocessingML 文档的形状（Visual Basic）
 本主题介绍 WordprocessingML 文档的 XML 形状。  
   
 ## <a name="microsoft-office-formats"></a>Microsoft Office 格式  
@@ -87,13 +87,13 @@ Module Module1
 End Module  
 ```  
   
-## <a name="external-resources"></a>外部资源  
+## <a name="external-resources"></a>外部資源  
  [介绍 Office (2007) Open XML 文件格式](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205(v=office.12))  
   
  [Overview of WordprocessingML](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812(v=office.11))（WordprocessingML 概述）  
   
  [Office 2003: XML Reference Schemas Download page](https://go.microsoft.com/fwlink/?LinkId=98095)（Office 2003：XML 参考架构下载页）  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [教程：在 WordprocessingML 文档中操作内容（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

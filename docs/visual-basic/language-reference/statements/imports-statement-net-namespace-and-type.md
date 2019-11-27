@@ -1,5 +1,5 @@
 ---
-title: Imports Statement - .NET Namespace and Type
+title: Imports 语句-.NET 命名空间和类型
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Imports
@@ -25,7 +25,7 @@ ms.locfileid: "74351068"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports 语句（.NET 命名空间和类型）
 
-Enables type names to be referenced without namespace qualification.
+允许引用类型名称，而无需命名空间限定。
 
 ## <a name="syntax"></a>语法
 
@@ -37,56 +37,56 @@ Imports [ aliasname = ] namespace.element
 
 ## <a name="parts"></a>部件
 
-|术语|定义|
+|术语|Definition|
 |---|---|
-|`aliasname`|可选。 An *import alias* or name by which code can refer to `namespace` instead of the full qualification string. 请参阅 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)。|
-|`namespace`|必须的。 The fully qualified name of the namespace being imported. Can be a string of namespaces nested to any level.|
-|`element`|可选。 The name of a programming element declared in the namespace. Can be any container element.|
+|`aliasname`|可选。 *导入别名*或名称，代码可通过其引用 `namespace` 而不是完全限定字符串。 请参阅 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)。|
+|`namespace`|必需。 要导入的命名空间的完全限定名称。 可以是嵌套到任何级别的命名空间的字符串。|
+|`element`|可选。 命名空间中声明的编程元素的名称。 可以是任何容器元素。|
 
 ## <a name="remarks"></a>备注
 
-The `Imports` statement enables types that are contained in a given namespace to be referenced directly.
+`Imports` 语句使给定命名空间中包含的类型可以直接引用。
 
-You can supply a single namespace name or a string of nested namespaces. Each nested namespace is separated from the next higher level namespace by a period (`.`), as the following example illustrates:
+您可以提供单个命名空间名称或嵌套命名空间的字符串。 每个嵌套命名空间都按句点（`.`）与下一个较高的级别命名空间分离，如以下示例所示：
 
 ```vb
 Imports System.Collections.Generic
 ```
 
-Each source file can contain any number of `Imports` statements. These must follow any option declarations, such as the `Option Strict` statement, and they must precede any programming element declarations, such as `Module` or `Class` statements.
+每个源文件可以包含任意数量的 `Imports` 语句。 它们必须遵循任何选项声明（如 `Option Strict` 语句），并且它们必须位于任何编程元素声明之前，如 `Module` 或 `Class` 语句。
 
-You can use `Imports` only at file level. This means the declaration context for importation must be a source file, and cannot be a namespace, class, structure, module, interface, procedure, or block.
+只能在文件级别使用 `Imports`。 这意味着，用于导入的声明上下文必须是一个源文件，而不能是命名空间、类、结构、模块、接口、过程或块。
 
-Note that the `Imports` statement does not make elements from other projects and assemblies available to your project. Importing does not take the place of setting a reference. It only removes the need to qualify names that are already available to your project. For more information, see "Importing Containing Elements" in [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
+请注意，`Imports` 语句不会将其他项目和程序集中的元素用于项目。 导入不会替代设置引用。 它只是不再需要限定已可用于你的项目的名称。 有关详细信息，请参阅对已[声明元素的引用](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)中的 "导入包含元素"。
 
 > [!NOTE]
-> You can define implicit `Imports` statements by using the [References Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic). For more information, see [How to: Add or Remove Imported Namespaces (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).
+> 您可以通过使用 "引用" 页的 "[项目设计器" （Visual Basic）](/visualstudio/ide/reference/references-page-project-designer-visual-basic)来定义隐式 `Imports` 语句。 有关详细信息，请参阅[如何：添加或移除导入的命名空间（Visual Basic）](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)。
 
 ## <a name="import-aliases"></a>导入别名
 
-An *import alias* defines the alias for a namespace or type. Import aliases are useful when you need to use items with the same name that are declared in one or more namespaces. For more information and an example, see "Qualifying an Element Name" in [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
+*导入别名*定义命名空间或类型的别名。 如果需要使用一个或多个命名空间中声明的同名项，则导入别名非常有用。 有关详细信息和示例，请参阅对已[声明元素的引用](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)中的 "限定元素名称"。
 
-You should not declare a member at module level with the same name as `aliasname`. If you do, the Visual Basic compiler uses `aliasname` only for the declared member and no longer recognizes it as an import alias.
+不应在模块级别使用与 `aliasname`相同的名称声明成员。 如果这样做，Visual Basic 编译器将仅对已声明成员使用 `aliasname`，而不再将其识别为导入别名。
 
-Although the syntax used for declaring an import alias is like that used for importing an XML namespace prefix, the results are different. An import alias can be used as an expression in your code, whereas an XML namespace prefix can be used only in XML literals or XML axis properties as the prefix for a qualified element or attribute name.
+尽管用于声明导入别名的语法与用于导入 XML 命名空间前缀的语法类似，但结果不同。 导入别名可用作代码中的表达式，而 XML 命名空间前缀只能在 XML 文本或 XML 轴属性中用作限定元素或属性名的前缀。
 
 ### <a name="element-names"></a>元素名称
 
-If you supply `element`, it must represent a *container element*, that is, a programming element that can contain other elements. Container elements include classes, structures, modules, interfaces, and enumerations.
+如果提供 `element`，它必须表示一个*容器元素*，即一个可以包含其他元素的编程元素。 容器元素包括类、结构、模块、接口和枚举。
 
-The scope of the elements made available by an `Imports` statement depends on whether you specify `element`. If you specify only `namespace`, all uniquely named members of that namespace, and members of container elements within that namespace, are available without qualification. If you specify both `namespace` and `element`, only the members of that element are available without qualification.
+`Imports` 语句提供的元素的作用域取决于是否指定 `element`。 如果仅指定 `namespace`，则该命名空间的所有唯一命名的成员和该命名空间中的容器元素的成员均可使用而无需限定。 如果同时指定 `namespace` 和 `element`，则仅可使用该元素的成员而无需进行限定。
 
 ## <a name="example"></a>示例
 
-The following example returns all the folders in the *C:\\* directory by using the <xref:System.IO.DirectoryInfo> class:
+下面的示例通过使用 <xref:System.IO.DirectoryInfo> 类返回*C：\\* 目录中的所有文件夹：
 
-The code has no `Imports` statements at the top of the file. Therefore, the <xref:System.IO.DirectoryInfo>, <xref:System.Text.StringBuilder>, and <xref:Microsoft.VisualBasic.ControlChars.CrLf> references are all fully qualified with the namespaces.
+该代码的顶部没有 `Imports` 语句。 因此，<xref:System.IO.DirectoryInfo>、<xref:System.Text.StringBuilder>和 <xref:Microsoft.VisualBasic.ControlChars.CrLf> 引用均由命名空间完全限定。
 
 [!code-vb[VbVbalrStatements#152](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#152)]
 
 ## <a name="example"></a>示例
 
-The following example includes `Imports` statements for the referenced namespaces. Therefore, the types do not have to be fully qualified with the namespaces.
+下面的示例包含所引用命名空间的 `Imports` 语句。 因此，无需使用命名空间完全限定类型。
 
 [!code-vb[VbVbalrStatements#153](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#153)]
 
@@ -94,7 +94,7 @@ The following example includes `Imports` statements for the referenced namespace
   
 ## <a name="example"></a>示例
 
-The following example includes `Imports` statements that create aliases for the referenced namespaces. The types are qualified with the aliases.
+下面的示例包含为所引用命名空间创建别名 `Imports` 语句。 类型是用别名限定的。
 
 [!code-vb[VbVbalrStatements#155](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#155)]
 
@@ -102,16 +102,16 @@ The following example includes `Imports` statements that create aliases for the 
 
 ## <a name="example"></a>示例
 
-The following example includes `Imports` statements that create aliases for the referenced types. Aliases are used to specify the types.
+下面的示例包含为引用的类型创建别名 `Imports` 语句。 别名用于指定类型。
 
 [!code-vb[VbVbalrStatements#157](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#157)]
 
 [!code-vb[VbVbalrStatements#158](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#158)]
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Namespace 语句](namespace-statement.md)
-- [Namespaces in Visual Basic](../../programming-guide/program-structure/namespaces.md)
+- [Visual Basic 中的命名空间](../../programming-guide/program-structure/namespaces.md)
 - [引用和 Imports 语句](../../programming-guide/program-structure/references-and-the-imports-statement.md)
 - [Imports 语句（XML 命名空间）](imports-statement-xml-namespace.md)
 - [对已声明元素的引用](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)

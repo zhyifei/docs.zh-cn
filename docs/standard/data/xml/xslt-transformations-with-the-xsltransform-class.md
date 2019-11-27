@@ -20,7 +20,7 @@ ms.locfileid: "74347896"
 > [!NOTE]
 > <xref:System.Xml.Xsl.XslTransform> 类在 .NET Framework 2.0 中已过时。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](migrating-from-the-xsltransform-class.md)，以获取详细信息。
 
-XSLT 的目标是将源 XML 文档的内容转换为格式或结构不同的另一个文档（例如，将 XML 转换为在网站上使用的 HTML，或将其转换为只包含应用程序所需字段的文档）。 此转换过程由万维网联合会 (W3C) [XSLT 版本 1.0 建议](https://www.w3.org/TR/1999/REC-xslt-19991116)规定。 在 .NET Framework 中，在 <xref:System.Xml.Xsl> 命名空间中找到的 <xref:System.Xml.Xsl.XslTransform> 类是实现此规范功能的 XSLT 处理器。 有几个 W3C XSLT 1.0 建议尚未实现的功能，[XslTransform 输出](outputs-from-an-xsltransform.md)中列出了这些功能。 下图显示 .NET Framework 的转换体系结构。
+XSLT 的目标是将源 XML 文档的内容转换为格式或结构不同的另一个文档（例如，将 XML 转换为在网站上使用的 HTML，或将其转换为只包含应用程序所需字段的文档）。 此转换过程由万维网联合会 (W3C) [XSLT 版本 1.0 建议](https://www.w3.org/TR/1999/REC-xslt-19991116)规定。 在 .NET Framework 中，在 <xref:System.Xml.Xsl.XslTransform> 命名空间中找到的 <xref:System.Xml.Xsl> 类是实现此规范功能的 XSLT 处理器。 有几个 W3C XSLT 1.0 建议尚未实现的功能，[XslTransform 输出](outputs-from-an-xsltransform.md)中列出了这些功能。 下图显示 .NET Framework 的转换体系结构。
 
 ## <a name="overview"></a>概述
 
@@ -94,7 +94,7 @@ public class Sample
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.Xsl.XslTransform>
 - [XslTransform 类实现 XSLT 处理器](xsltransform-class-implements-the-xslt-processor.md)

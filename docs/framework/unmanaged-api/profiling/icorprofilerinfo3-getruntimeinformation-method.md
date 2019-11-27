@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449683"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation 方法
-Provides version information about the common language runtime (CLR) that is being profiled.  
+提供有关正在分析的公共语言运行时（CLR）的版本信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,34 +43,34 @@ HRESULT GetRuntimeInformation(
   
 ## <a name="parameters"></a>参数  
  `pClrInstanceId`  
- [out] The representative ID of a running CLR instance in a process. This is the same as the `ClrInstanceID` that the event tracing for Windows (ETW) startup event reports.  
+ 弄进程中正在运行的 CLR 实例的代表 ID。 这与 Windows 事件跟踪（ETW）启动事件报告的 `ClrInstanceID` 相同。  
   
  `pRuntimeType`  
- [out] The runtime type. This parameter returns `COR_PRF_DESKTOP_CLR` for the desktop version of the CLR, or `COR_PRF_CORE_CLR` for the core version of the CLR used in Silverlight.  
+ 弄运行时类型。 此参数为 CLR 的桌面版本或在 Silverlight 中使用的 CLR 核心版本 `COR_PRF_CORE_CLR` 返回 `COR_PRF_DESKTOP_CLR`。  
   
  `pMajorVersion`  
- [out] The major version number of the CLR.  
+ 弄CLR 的主版本号。  
   
  `pMinorVersion`  
- [out] The minor version number of the CLR.  
+ 弄CLR 的次版本号。  
   
  `pBuildVersion`  
- [out] The build version number of the CLR.  
+ 弄CLR 的内部版本号。  
   
  `pQFEVersion`  
- [out] The version number of the CLR that is associated with a software update.  
+ 弄与软件更新关联的 CLR 的版本号。  
   
  `cchVersionString`  
- [in] The length, in characters, of the buffer that `szVersionString` points to.  
+ 中`szVersionString` 指向的缓冲区的长度（以字符为单位）。  
   
  `pcchVersionString`  
- [out] The length, in characters, of `szVersionString`.  
+ 弄`szVersionString`的长度（以字符为字符）。  
   
  `szVersionString`  
- [out] The CLR version string.  
+ 弄CLR 版本字符串。  
   
 ## <a name="remarks"></a>备注  
- You may pass null for any parameter. However, `pcchVersionString` cannot be null unless `szVersionString` is also null.  
+ 可以为任何参数传递 null。 但 `pcchVersionString` 不能为 null，除非 `szVersionString` 也为 null。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -81,7 +81,7 @@ HRESULT GetRuntimeInformation(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo3 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
 - [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

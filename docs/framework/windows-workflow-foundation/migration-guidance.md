@@ -1,5 +1,5 @@
 ---
-title: 迁移指南
+title: 迁移指导
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
 ms.openlocfilehash: 8abc241331b3d322763ffd67b41ff676ebc680fb
@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74283201"
 ---
-# <a name="migration-guidance"></a>迁移指南
+# <a name="migration-guidance"></a>迁移指导
 
 在 .NET Framework 4 中，Microsoft 发布 Windows Workflow Foundation （WF）的第二个主要版本。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 在 WinFX 中发布（这包括\* 命名空间中的类型，现在称为 WF3），并且在 .NET Framework 3.5 中得到了增强。 WF3 也是 .NET Framework 4 的一部分，但它存在于新的工作流技术（WF4 命名空间\* 中的类型，称为）。 考虑何时采用 WF4 时，重要的是首先要认识到您来控制时间安排。  
   

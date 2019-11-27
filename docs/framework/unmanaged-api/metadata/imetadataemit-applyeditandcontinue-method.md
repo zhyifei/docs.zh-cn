@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432697"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>IMetaDataEmit::ApplyEditAndContinue 方法
-Updates the current assembly scope with the changes made in the specified metadata.  
+用在指定的元数据中进行的更改更新当前程序集范围。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,20 +35,20 @@ HRESULT ApplyEditAndContinue (
   
 ## <a name="parameters"></a>参数  
  `pImport`  
- \[in\] Pointer to an [IUnknown](/cpp/atl/iunknown) object that represents the delta metadata from the portable executable (PE) file.
+ \[\] 指向[IUnknown](/cpp/atl/iunknown)对象的指针，该对象表示来自可移植可执行（PE）文件的增量元数据。
   
- The delta metadata is the block of metadata that includes the changes that were made to the copy of the module's actual metadata.  
+ 增量元数据是元数据的块，其中包括对模块的实际元数据副本所做的更改。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

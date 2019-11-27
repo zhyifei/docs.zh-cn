@@ -32,7 +32,7 @@ ms.locfileid: "74345335"
   
 - [Sub 语句](../../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-- [Declare 语句](../../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare Statement](../../../../visual-basic/language-reference/statements/declare-statement.md)  
   
 - [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)  
   

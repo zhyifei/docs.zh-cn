@@ -44,25 +44,25 @@ typedef enum CorImportOptions {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`MDImportOptionDefault`|Indicates the default behavior, which is to skip deleted records.|  
-|`MDImportOptionAll`|Indicates that all metadata should be enumerated.|  
-|`MDImportOptionAllTypeDefs`|Indicates that all TypeDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllMethodDefs`|Indicates that all MethodDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllFieldDefs`|Indicates that all FieldDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllProperties`|Indicates that all PropertyDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllEvents`|Indicates that all EventDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllCustomAttributes`|Indicates that all custom attributes, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllExportedTypes`|Indicates that all exported types, including deleted ones, should be enumerated.|  
+|`MDImportOptionDefault`|指示用于跳过已删除记录的默认行为。|  
+|`MDImportOptionAll`|指示应枚举所有元数据。|  
+|`MDImportOptionAllTypeDefs`|指示应枚举所有的 Typedef （包括删除的）。|  
+|`MDImportOptionAllMethodDefs`|指示应枚举所有 MethodDefs （包括删除的）。|  
+|`MDImportOptionAllFieldDefs`|指示应枚举所有 FieldDefs （包括删除的）。|  
+|`MDImportOptionAllProperties`|指示应枚举所有 PropertyDefs （包括删除的）。|  
+|`MDImportOptionAllEvents`|指示应枚举所有 EventDefs （包括删除的）。|  
+|`MDImportOptionAllCustomAttributes`|指示应对所有自定义属性（包括删除的）进行枚举。|  
+|`MDImportOptionAllExportedTypes`|指示应对所有导出的类型（包括已删除的）进行枚举。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **标头：** Corhdr。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

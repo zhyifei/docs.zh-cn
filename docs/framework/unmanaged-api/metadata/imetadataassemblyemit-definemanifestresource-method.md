@@ -39,32 +39,32 @@ HRESULT DefineManifestResource (
   
 ## <a name="parameters"></a>参数  
  `szName`  
- [in] The name of the resource.  
+ 中资源的名称。  
   
  `tkImplementation`  
- [in] A metadata token of type `mdtFile` or `mdtAssemblyRef` that maps to the resource provider. A NULL value indicates that the file in which the metadata is embedded is the resource provider.  
+ 中映射到资源提供程序 `mdtFile` 或 `mdtAssemblyRef` 类型的元数据标记。 NULL 值指示嵌入元数据的文件是资源提供程序。  
   
  `dwOffset`  
- [in] The offset to the beginning of the resource within the file. For resources in standalone files, this will always be zero. If the resource is embedded in a PE (portable executable) file, this is an offset of the resource BLOB, which starts at the location specified in the cor.h header file.  
+ 中文件中资源的起始位置的偏移量。 对于独立文件中的资源，此值将始终为零。 如果资源嵌入在 PE （可移植可执行文件）文件中，则这是资源 BLOB 的偏移量，它从 cor 头文件中指定的位置开始。  
   
  `dwResourceFlags`  
- [in] A bitwise combination of flag values that specify property settings for the resource definition.  
+ 中指定资源定义的属性设置的标志值的按位组合。  
   
  `pmdmr`  
- [out] A pointer to the returned metadata token.  
+ 弄指向返回的元数据标记的指针。  
   
 ## <a name="remarks"></a>备注  
- One `ManifestResource` metadata structure must be defined for each resource that is implemented in each of the assembly's files.  
+ 必须为每个在程序集的文件中实现的每个资源定义一个 `ManifestResource` 的元数据结构。  
   
 ## <a name="requirements"></a>要求  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

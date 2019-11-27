@@ -14,21 +14,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74340963"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>如何：调用不返回值的过程 (Visual Basic)
-A `Sub` procedure does not return a value to the calling code. You call it explicitly with a stand-alone calling statement. You cannot call it by simply using its name within an expression.  
+`Sub` 过程不会将值返回到调用代码。 您可以使用独立的调用语句显式调用它。 不能只是在表达式中使用其名称来调用它。  
   
-### <a name="to-call-a-sub-procedure"></a>To call a Sub procedure  
+### <a name="to-call-a-sub-procedure"></a>调用 Sub 过程  
   
-1. Specify the name of the `Sub` procedure.  
+1. 指定 `Sub` 过程的名称。  
   
-2. Follow the procedure name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses. However, using the parentheses makes your code easier to read.  
+2. 在过程名称后面加上括号，以将参数列表括起来。 如果没有参数，则可以选择省略括号。 不过，使用括号可使代码更易于阅读。  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the `Sub` procedure defines the corresponding parameters.  
+3. 将参数置于括号中的参数列表内，用逗号分隔。 请确保以 `Sub` 过程定义相应参数的相同顺序提供参数。  
   
-     The following example calls the Visual Basic <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> function to activate an application window. <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> takes the window title as its sole argument. It does not return a value to the calling code. If a Notepad process is not running, the example throws an <xref:System.ArgumentException>. The `Shell` procedure assumes the applications are in the paths specified.  
+     下面的示例调用 Visual Basic <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> 函数来激活应用程序窗口。 <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> 使用窗口标题作为其唯一参数。 它不会将值返回到调用代码。 如果记事本进程未运行，则该示例会引发 <xref:System.ArgumentException>。 `Shell` 过程假定应用程序位于指定的路径中。  
   
      [!code-vb[VbVbalrCatRef#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#11)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualBasic.Interaction.Shell%2A>
 - <xref:System.ArgumentException>
@@ -38,4 +38,4 @@ A `Sub` procedure does not return a value to the calling code. You call it expli
 - [Sub 语句](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [如何：创建过程](./how-to-create-a-procedure.md)
 - [如何：调用返回值的过程](./how-to-call-a-procedure-that-returns-a-value.md)
-- [How to: Call an Event Handler in Visual Basic](./how-to-call-an-event-handler.md)
+- [如何：在 Visual Basic 中调用事件处理程序](./how-to-call-an-event-handler.md)

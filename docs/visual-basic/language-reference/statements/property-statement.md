@@ -20,7 +20,7 @@ ms.locfileid: "74346761"
 ---
 # <a name="property-statement"></a>Property Statement
 
-Declares the name of a property, and the property procedures used to store and retrieve the value of the property.
+声明属性的名称，以及用于存储和检索属性值的属性过程。
 
 ## <a name="syntax"></a>语法
 
@@ -45,17 +45,17 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `attributelist`
 
-  可选。 List of attributes that apply to this property or `Get` or `Set` procedure. See [Attribute List](attribute-list.md).
+  可选。 应用于此属性或 `Get` 或 `Set` 过程的特性的列表。 请参阅[特性列表](attribute-list.md)。
 
 - `Default`
 
-  可选。 Specifies that this property is the default property for the class or structure on which it is defined. Default properties must accept parameters and can be set and retrieved without specifying the property name. If you declare the property as `Default`, you cannot use `Private` on the property or on either of its property procedures.
+  可选。 指定此属性是在其上定义该属性的类或结构的默认属性。 默认属性必须接受参数，并且可以在不指定属性名称的情况下进行设置和检索。 如果将属性声明为 `Default`，则不能对属性或它的任何一个属性过程使用 `Private`。
 
 - `accessmodifier`
 
-  Optional on the `Property` statement and on at most one of the `Get` and `Set` statements. 可以是以下各项之一：
+  在 `Property` 语句上以及最多一个 `Get` 和 `Set` 语句上是可选的。 可以是以下各项之一：
 
-  - [COMClassAttribute](../modifiers/public.md)
+  - [Public](../modifiers/public.md)
 
   - [Protected](../modifiers/protected.md)
 
@@ -73,15 +73,15 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
   可选。 可以是以下各项之一：
 
-  - [重载](../modifiers/overloads.md)
+  - [Overloads](../modifiers/overloads.md)
 
   - [Overrides](../modifiers/overrides.md)
 
-  - [Overridable](../modifiers/overridable.md)
+  - [Overrides](../modifiers/overridable.md)
 
   - [NotOverridable](../modifiers/notoverridable.md)
 
-  - [New](../modifiers/mustoverride.md)
+  - [MyBase](../modifiers/mustoverride.md)
 
   - `MustOverride Overrides`
 
@@ -89,43 +89,43 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `Shared`
 
-  可选。 See [Shared](../modifiers/shared.md).
+  可选。 请参阅[共享](../modifiers/shared.md)。
 
 - `Shadows`
 
-  可选。 See [Shadows](../modifiers/shadows.md).
+  可选。 请参阅[阴影](../modifiers/shadows.md)。
 
 - `ReadOnly`
 
-  可选。 See [ReadOnly](../modifiers/readonly.md).
+  可选。 请参阅[ReadOnly](../modifiers/readonly.md)。
 
 - `WriteOnly`
 
-  可选。 See [WriteOnly](../modifiers/writeonly.md).
+  可选。 请参阅[WriteOnly](../modifiers/writeonly.md)。
 
 - `Iterator`
 
-  可选。 See [Iterator](../modifiers/iterator.md).
+  可选。 请参阅[迭代器](../modifiers/iterator.md)。
 
 - `name`
 
-  必须的。 属性的名称。 请参阅 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)。
+  必需。 属性的名称。 请参阅 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)。
 
 - `parameterlist`
 
-  可选。 List of local variable names representing the parameters of this property, and possible additional parameters of the `Set` procedure. See [Parameter List](parameter-list.md).
+  可选。 表示此属性的参数以及 `Set` 过程可能的其他参数的局部变量名称列表。 请参阅[参数列表](parameter-list.md)。
 
 - `returntype`
 
-  Required if `Option Strict` is `On`. Data type of the value returned by this property.
+  如果 `Option Strict` `On`，则为必需。 此属性返回的值的数据类型。
 
 - `Implements`
 
-  可选。 Indicates that this property implements one or more properties, each one defined in an interface implemented by this property's containing class or structure. See [Implements Statement](implements-statement.md).
+  可选。 指示此属性实现一个或多个属性，每个属性都是由该属性的包含类或结构实现的接口中定义的。 请参阅[Implements 语句](implements-statement.md)。
 
 - `implementslist`
 
-  如果提供 `Implements`，则是必需的。 List of properties being implemented.
+  如果提供 `Implements`，则是必需的。 要实现的属性列表。
 
   `implementedproperty [ , implementedproperty ... ]`
 
@@ -133,72 +133,72 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
   `interface.definedname`
 
-  |部件|描述|
+  |部件|说明|
   |---|---|
-  |`interface`|必须的。 Name of an interface implemented by this property's containing class or structure.|
-  |`definedname`|必须的。 Name by which the property is defined in `interface`.|
+  |`interface`|必需。 此属性的包含类或结构实现的接口的名称。|
+  |`definedname`|必需。 用于在 `interface`中定义属性的名称。|
 
 - `Get`
 
-  可选。 Required if the property is marked `ReadOnly`. Starts a `Get` property procedure that is used to return the value of the property.  The `Get` statement is not used with [auto-implemented properties](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
+  可选。 如果将属性标记 `ReadOnly`，则为必需。 启动 `Get` 属性过程，该过程用于返回属性的值。  `Get` 语句不与[自动实现的属性](../../programming-guide/language-features/procedures/auto-implemented-properties.md)一起使用。
 
 - `statements`
 
-  可选。 Block of statements to run within the `Get` or `Set` procedure.
+  可选。 要在 `Get` 或 `Set` 过程中运行的语句块。
 
 - `End Get`
 
-  Terminates the `Get` property procedure.
+  终止 `Get` 属性过程。
 
 - `Set`
 
-  可选。 Required if the property is marked `WriteOnly`. Starts a `Set` property procedure that is used to store the value of the property.  The `Set` statement is not used with [auto-implemented properties](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
+  可选。 如果将属性标记 `WriteOnly`，则为必需。 启动 `Set` 属性过程，该过程用于存储属性的值。  `Set` 语句不与[自动实现的属性](../../programming-guide/language-features/procedures/auto-implemented-properties.md)一起使用。
 
 - `End Set`
 
-  Terminates the `Set` property procedure.
+  终止 `Set` 属性过程。
 
 - `End Property`
 
-  Terminates the definition of this property.
+  终止此属性的定义。
 
 ## <a name="remarks"></a>备注
 
-The `Property` statement introduces the declaration of a property. A property can have a `Get` procedure (read only), a `Set` procedure (write only), or both (read-write). You can omit the `Get` and `Set` procedure when using an auto-implemented property. 有关详细信息，请参阅[自动实现的属性](../../programming-guide/language-features/procedures/auto-implemented-properties.md)。
+`Property` 语句引入属性的声明。 属性可以有 `Get` 过程（只读）、`Set` 过程（只写）或两者（读写）。 使用自动实现的属性时，可以省略 `Get` 和 `Set` 过程。 有关详细信息，请参阅[自动实现的属性](../../programming-guide/language-features/procedures/auto-implemented-properties.md)。
 
-You can use `Property` only at class level. This means the *declaration context* for a property must be a class, structure, module, or interface, and cannot be a source file, namespace, procedure, or block. 有关详细信息，请参阅[声明上下文和默认访问级别](declaration-contexts-and-default-access-levels.md)。
+只能在类级别使用 `Property`。 这意味着属性的*声明上下文*必须是类、结构、模块或接口，不能是源文件、命名空间、过程或块。 有关详细信息，请参阅[声明上下文和默认访问级别](declaration-contexts-and-default-access-levels.md)。
 
-By default, properties use public access. You can adjust a property's access level with an access modifier on the `Property` statement, and you can optionally adjust one of its property procedures to a more restrictive access level.
+默认情况下，属性使用公共访问。 您可以使用 `Property` 语句的访问修饰符调整属性的访问级别，还可以根据需要将其属性过程之一调整到限制性更强的访问级别。
 
-Visual Basic passes a parameter to the `Set` procedure during property assignments. If you do not supply a parameter for `Set`, the integrated development environment (IDE) uses an implicit parameter named `value`. This parameter holds the value to be assigned to the property. You typically store this value in a private local variable and return it whenever the `Get` procedure is called.
+Visual Basic 在属性赋值期间将参数传递给 `Set` 过程。 如果没有为 `Set`提供参数，集成开发环境（IDE）将使用名为 `value`的隐式参数。 此参数保存要赋给属性的值。 通常将此值存储在私有本地变量中，并在调用 `Get` 过程时返回此值。
 
 ## <a name="rules"></a>规则
 
-- **Mixed Access Levels.** If you are defining a read-write property, you can optionally specify a different access level for either the `Get` or the `Set` procedure, but not both. If you do this, the procedure access level must be more restrictive than the property's access level. For example, if the property is declared `Friend`, you can declare the `Set` procedure `Private`, but not `Public`.
+- **混合访问级别。** 如果要定义读写属性，则可以选择为 `Get` 或 `Set` 过程指定不同的访问级别，但不能同时指定两者。 如果执行此操作，则过程访问级别必须比属性的访问级别更严格。 例如，如果属性已 `Friend`声明，则可以将 `Set` 过程声明 `Private`但不 `Public`。
 
-  If you are defining a `ReadOnly` or `WriteOnly` property, the single property procedure (`Get` or `Set`, respectively) represents all of the property. You cannot declare a different access level for such a procedure, because that would set two access levels for the property.
+  如果要定义 `ReadOnly` 或 `WriteOnly` 属性，则单个属性过程（分别为`Get` 或 `Set`）表示所有属性。 不能为此类过程声明不同的访问级别，因为这会为属性设置两个访问级别。
 
-- **Return Type.** The `Property` statement can declare the data type of the value it returns. You can specify any data type or the name of an enumeration, structure, class, or interface.
+- **返回类型。** `Property` 语句可以声明其返回的值的数据类型。 您可以指定任何数据类型或枚举、结构、类或接口的名称。
 
-  If you do not specify `returntype`, the property returns `Object`.
+  如果不指定 `returntype`，属性将返回 `Object`。
 
-- **Implementation.** If this property uses the `Implements` keyword, the containing class or structure must have an `Implements` statement immediately following its `Class` or `Structure` statement. The `Implements` statement must include each interface specified in `implementslist`. However, the name by which an interface defines the `Property` (in `definedname`) does not have to be the same as the name of this property (in `name`).
+- **部署.** 如果此属性使用 `Implements` 关键字，则包含类或结构必须紧跟在其 `Class` 或 `Structure` 语句后面的 `Implements` 语句。 `Implements` 语句必须包括 `implementslist`中指定的每个接口。 但是，接口定义 `Property` （在 `definedname`中）的名称不必与此属性的名称相同（在 `name`中）。
 
 ## <a name="behavior"></a>行为
 
-- **Returning from a Property Procedure.** When the `Get` or `Set` procedure returns to the calling code, execution continues with the statement following the statement that invoked it.
+- **从属性过程返回。** 当 `Get` 或 `Set` 过程返回到调用代码时，执行将继续执行调用它的语句后面的语句。
 
-  The `Exit Property` and `Return` statements cause an immediate exit from a property procedure. Any number of `Exit Property` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Property` and `Return` statements.
+  `Exit Property` 和 `Return` 语句导致直接从属性过程退出。 任意数量的 `Exit Property` 和 `Return` 语句可以出现在过程中的任何位置，并且可以混合 `Exit Property` 和 `Return` 语句。
 
-- **Return Value.** To return a value from a `Get` procedure, you can either assign the value to the property name or include it in a `Return` statement. The following example assigns the return value to the property name `quoteForTheDay` and then uses the `Exit Property` statement to return.
+- **返回值。** 若要从 `Get` 过程返回值，可将值分配给属性名称或将其包含在 `Return` 语句中。 下面的示例将返回值分配给属性名称 `quoteForTheDay`，然后使用 `Exit Property` 语句返回。
 
   [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]
 
   [!code-vb[VbVbalrStatements#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#28)]
 
-  If you use `Exit Property` without assigning a value to `name`, the `Get` procedure returns the default value for the property's data type.
+  如果使用 `Exit Property` 但未向 `name`赋值，`Get` 过程将返回属性数据类型的默认值。
 
-  The `Return` statement at the same time assigns the `Get` procedure return value and exits the procedure. The following example shows this.
+  `Return` 语句同时分配 `Get` 过程返回值并退出该过程。 下面的示例演示了这一点。
 
   [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]
 
@@ -206,11 +206,11 @@ Visual Basic passes a parameter to the `Set` procedure during property assignmen
 
 ## <a name="example"></a>示例
 
-The following example declares a property in a class.
+下面的示例声明类中的一个属性。
 
 [!code-vb[VbVbalrStatements#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#51)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [自动实现的属性](../../programming-guide/language-features/procedures/auto-implemented-properties.md)
 - [对象和类](../../programming-guide/language-features/objects-and-classes/index.md)

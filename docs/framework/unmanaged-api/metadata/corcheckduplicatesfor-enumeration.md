@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443788"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor 枚举
-Specifies the metadata tokens that will be checked for duplicates.  
+指定将检查重复项的元数据标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -66,43 +66,43 @@ typedef enum CorCheckDuplicatesFor {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`MDDupAll`|Check all metadata tokens for duplicates.|  
+|`MDDupAll`|检查所有元数据标记的重复项。|  
 |`MDDupENC`|未使用。|  
-|`MDNoDupChecks`|Do not check metadata tokens for duplicates.|  
-|`MDDupTypeDef`|Check for duplicates of `mdTypeDef` tokens.|  
-|`MDDupInterfaceImpl`|Check for duplicates of `mdInterfaceImpl` tokens.|  
-|`MDDupMethodDef`|Check for duplicates of `mdMethodDef` tokens.|  
-|`MDDupTypeRef`|Check for duplicates of `mdTypeRef` tokens.|  
-|`MDDupMemberRef`|Check for duplicates of `mdMemberRef` tokens.|  
-|`MDDupCustomAttribute`|Check for duplicates of `mdCustomAttribute` tokens.|  
-|`MDDupParamDef`|Check for duplicates of `mdParamDef` tokens.|  
-|`MDDupPermission`|Check for duplicates of `mdPermission` tokens.|  
-|`MDDupProperty`|Check for duplicates of `mdProperty` tokens.|  
-|`MDDupEvent`|Check for duplicates of `mdEvent` tokens.|  
-|`MDDupFieldDef`|Check for duplicates of `mdFieldDef` tokens.|  
-|`MDDupSignature`|Check for duplicates of `mdSignature` tokens.|  
-|`MDDupModuleRef`|Check for duplicates of `mdModuleRef` tokens.|  
-|`MDDupTypeSpec`|Check for duplicates of `mdTypeSpec` tokens.|  
-|`MDDupImplMap`|Check for duplicates of `mdImplMap` tokens.|  
-|`MDDupAssemblyRef`|Check for duplicates of `mdAssemblyRef` tokens.|  
-|`MDDupFile`|Check for duplicates of `mdFile` tokens.|  
-|`MDDupExportedType`|Check for duplicates of `mdExportedType` tokens.|  
-|`MDDupManifestResource`|Check for duplicates of `mdManifestResource` tokens.|  
-|`MDDupGenericParam`|Check for duplicates of `mdGenericParam` tokens.|  
-|`MDDupMethodSpec`|Check for duplicates of `mdMethodSpec` tokens.|  
-|`MDDupGenericParamConstraint`|Check for duplicates of `mdGenericParamConstraint` tokens.|  
-|`MDDupAssembly`|Check for duplicates of `mdAssembly` tokens.|  
-|`MDDupDefault`|Check for duplicates of `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, and `mdMethodSpec` tokens.|  
+|`MDNoDupChecks`|请勿检查重复项的元数据标记。|  
+|`MDDupTypeDef`|检查 `mdTypeDef` 标记的重复项。|  
+|`MDDupInterfaceImpl`|检查 `mdInterfaceImpl` 标记的重复项。|  
+|`MDDupMethodDef`|检查 `mdMethodDef` 标记的重复项。|  
+|`MDDupTypeRef`|检查 `mdTypeRef` 标记的重复项。|  
+|`MDDupMemberRef`|检查 `mdMemberRef` 标记的重复项。|  
+|`MDDupCustomAttribute`|检查 `mdCustomAttribute` 标记的重复项。|  
+|`MDDupParamDef`|检查 `mdParamDef` 标记的重复项。|  
+|`MDDupPermission`|检查 `mdPermission` 标记的重复项。|  
+|`MDDupProperty`|检查 `mdProperty` 标记的重复项。|  
+|`MDDupEvent`|检查 `mdEvent` 标记的重复项。|  
+|`MDDupFieldDef`|检查 `mdFieldDef` 标记的重复项。|  
+|`MDDupSignature`|检查 `mdSignature` 标记的重复项。|  
+|`MDDupModuleRef`|检查 `mdModuleRef` 标记的重复项。|  
+|`MDDupTypeSpec`|检查 `mdTypeSpec` 标记的重复项。|  
+|`MDDupImplMap`|检查 `mdImplMap` 标记的重复项。|  
+|`MDDupAssemblyRef`|检查 `mdAssemblyRef` 标记的重复项。|  
+|`MDDupFile`|检查 `mdFile` 标记的重复项。|  
+|`MDDupExportedType`|检查 `mdExportedType` 标记的重复项。|  
+|`MDDupManifestResource`|检查 `mdManifestResource` 标记的重复项。|  
+|`MDDupGenericParam`|检查 `mdGenericParam` 标记的重复项。|  
+|`MDDupMethodSpec`|检查 `mdMethodSpec` 标记的重复项。|  
+|`MDDupGenericParamConstraint`|检查 `mdGenericParamConstraint` 标记的重复项。|  
+|`MDDupAssembly`|检查 `mdAssembly` 标记的重复项。|  
+|`MDDupDefault`|检查 `mdMemberRef`、`mdTypeRef`、`mdSignature`、`mdTypeSpec`和 `mdMethodSpec` 标记的重复项。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **标头：** Corhdr。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

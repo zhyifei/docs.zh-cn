@@ -39,40 +39,40 @@ HRESULT DefineExportedType (
   
 ## <a name="parameters"></a>参数  
  `szName`  
- [in] The name of type to be exported. For version 1.1 of the common language runtime, the name of the exported type must exactly match the name given in the `TypeDef` for the type.  
+ 中要导出的类型的名称。 对于公共语言运行时版本1.1，导出类型的名称必须与在该类型的 `TypeDef` 中指定的名称完全匹配。  
   
  `tkImplementation`  
- [in] A token specifying where the exported type is implemented. The valid values and their associated meanings are:  
+ 中指定在何处实现导出类型的标记。 有效值及其关联的含义如下：  
   
-- `mdFile` The type is implemented in a different file within this assembly.  
+- `mdFile` 类型在此程序集内的其他文件中实现。  
   
-- `mdAssemblyRef` The type is implemented in a different assembly.  
+- `mdAssemblyRef` 类型是在不同的程序集中实现的。  
   
-- `mdExportedTYpe` The type is nested within some other type.  
+- `mdExportedTYpe` 类型嵌套在某个其他类型中。  
   
-- `mdFileNil` The type is in the same file as the manifest and is not a nested type.  
+- `mdFileNil` 类型与清单位于同一文件中，并且不是嵌套类型。  
   
  `tkTypeDef`  
- [in] A token to the metadata that specifies the type to be exported. This value is entered in the `TypeDef` table in the file that implements the type and is relevant only if that file is in this assembly.  
+ 中用于指定要导出的类型的元数据的令牌。 此值输入在实现类型的文件中的 `TypeDef` 表中，并且仅当该文件在此程序集中时才适用。  
   
  `dwExportedTypeFlags`  
- [in] A bitwise combination of [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration values that define the property settings for the exported type.  
+ 中[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)枚举值的按位组合，用于定义导出的类型的属性设置。  
   
  `pmdct`  
- [out] A pointer to the returned metadata token that indicates the exported type.  
+ 弄指向返回的元数据标记的指针，该标记指示导出的类型。  
   
 ## <a name="remarks"></a>备注  
- An `ExportedType` metadata structure must be defined for each type that is exposed by this assembly and that is implemented in a module other than the one containing the manifest.  
+ 必须为此程序集公开的每个类型定义 `ExportedType` 的元数据结构，该结构在包含清单的模块中实现。  
   
 ## <a name="requirements"></a>要求  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

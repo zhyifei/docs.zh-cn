@@ -18,12 +18,12 @@ ms.locfileid: "74336269"
 
 在异步方法或 Lambda 表达式中对操作数应用 `Await` 运算符可暂停执行方法，直到所等待的任务完成。 任务表示正在进行的工作。
 
-The method in which `Await` is used must have an [Async](../../../visual-basic/language-reference/modifiers/async.md) modifier. 使用 `Async` 修饰符定义并且通常包含一个或多个 `Await` 表达式的这类方法称为异步方法。
+使用 `Await` 的方法必须具有[Async](../../../visual-basic/language-reference/modifiers/async.md)修饰符。 使用 `Async` 修饰符定义并且通常包含一个或多个 `Await` 表达式的这类方法称为异步方法。
 
 > [!NOTE]
-> `Async` 和 `Await` 关键字是在 Visual Studio 2012 中引入的。 For an introduction to async programming, see [Asynchronous Programming with Async and Await](../../../visual-basic/programming-guide/concepts/async/index.md).
+> `Async` 和 `Await` 关键字是在 Visual Studio 2012 中引入的。 有关异步编程的介绍，请参阅[使用 async 和 Await 进行异步编程](../../../visual-basic/programming-guide/concepts/async/index.md)。
 
-Typically, the task to which you apply the `Await` operator is the return value from a call to a method that implements the [Task-Based Asynchronous Pattern](https://go.microsoft.com/fwlink/?LinkId=204847), that is, a <xref:System.Threading.Tasks.Task> or a <xref:System.Threading.Tasks.Task%601>.
+通常，应用 `Await` 运算符的任务是对实现[基于任务的异步模式](https://go.microsoft.com/fwlink/?LinkId=204847)的方法（即 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>）的调用的返回值。
 
 在以下代码中，<xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 返回 `getContentsTask`，一个 `Task(Of Byte())`。 当操作完成时，任务约定生成一个实际字节数组。 `Await` 运算符应用于 `getContentsTask` 以在 `SumPageSizesAsync` 中挂起执行，直到 `getContentsTask` 完成。 同时，控制权会返回给 `SumPageSizesAsync` 的调用方。 当 `getContentsTask` 完成之后，`Await` 表达式计算为字节数组。
 
@@ -58,7 +58,7 @@ Await AsyncMethodThatReturnsTask()
 
 `Await` 表达式或声明不阻止正在执行它的线程。 而是导致编译器在 `Await` 表达式之后，将剩下的异步方法注册为等待任务的后续部分。 控制权随后会返回给异步方法的调用方。 任务完成时，它会调用其延续任务，异步方法的执行会在暂停的位置处恢复。
 
-`Await` 表达式只出现在由 `Async` 修饰符标记的一个立即封闭方法体或 lambda 表达式中。 The term *Await* serves as a keyword only in that context. 在其他位置，它会解释为标识符。 Within the async method or lambda expression, an `Await` expression cannot occur in a query expression, in the `catch` or `finally` block of a [Try…Catch…Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) statement, in the loop control variable expression of a `For` or `For Each` loop, or in the body of a [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) statement.
+`Await` 表达式只出现在由 `Async` 修饰符标记的一个立即封闭方法体或 lambda 表达式中。 术语 " *Await* " 在该上下文中仅用作关键字。 在其他位置，它会解释为标识符。 在异步方法或 lambda 表达式中，不能在查询表达式中出现 `Await` 表达式，`catch` 或 `finally` [Try 。Catch 。Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)语句，在 `For` 或 `For Each` 循环的循环控制变量表达式中，或在[SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md)语句的正文中。
 
 ## <a name="exceptions"></a>异常
 
@@ -70,11 +70,11 @@ Await AsyncMethodThatReturnsTask()
 
 处于故障状态的单个任务可以反映多个异常。  例如，任务可能是对 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 调用的结果。 等待此类任务时，等待操作仅重新引发异常之一。 但是，无法预测重新引发的异常。
 
-For examples of error handling in async methods, see [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
+有关异步方法中的错误处理的示例，请参阅[Try 。Catch 。Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。
 
 ## <a name="example"></a>示例
 
-下面的 Windows 窗体示例阐释如何在异步方法 `WaitAsynchronouslyAsync` 中使用 `Await`。 将该方法的行为与 `WaitSynchronously` 的行为进行对比。 如果没有应用 `Await` 运算符，`WaitSynchronously` 就会同步运行，而不管其定义中是否使用了 `Async` 修饰符和在主体中是否调用了 <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>。
+下面的 Windows 窗体示例阐释如何在异步方法 `Await` 中使用 `WaitAsynchronouslyAsync`。 将该方法的行为与 `WaitSynchronously` 的行为进行对比。 如果没有应用 `Await` 运算符，`WaitSynchronously` 就会同步运行，而不管其定义中是否使用了 `Async` 修饰符和在主体中是否调用了 <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>。
 
 ```vb
 Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -106,7 +106,7 @@ Public Async Function WaitSynchronously() As Task(Of String)
 End Function
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 Async 和 Await 的异步编程](../../../visual-basic/programming-guide/concepts/async/index.md)
 - [演练：使用 Async 和 Await 访问 Web](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

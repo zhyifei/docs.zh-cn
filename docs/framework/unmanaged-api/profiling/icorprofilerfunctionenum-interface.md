@@ -26,7 +26,7 @@ ms.locfileid: "74447794"
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |[Clone 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-clone-method.md)|获取指向此 `ICorProfilerFunctionEnum` 接口副本的接口指针。|  
 |[GetCount 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-getcount-method.md)|获取应用程序加载的函数数量或探查器强制加载的函数数量。|  
@@ -37,7 +37,7 @@ ms.locfileid: "74447794"
 ## <a name="remarks"></a>备注  
  `ICorProfilerFunctionEnum` 接口是一个枚举器。 它可以让数组接收器以其合适的速率从发送器拉取元素。 换而言之，接收器可以显式控制数组元素流，从而避免将大型数组作为方法形参传递方面的相关问题。  
   
- `ICorProfilerFunctionEnum` 枚举已经过 JIT 编译的函数，但不包括从使用 Ngen.exe 生成的本机映像加载的函数。  
+ `ICorProfilerFunctionEnum` 枚举已进行 JIT 编译的函数，但不包括从使用 Ngen.exe 生成的本机映像加载的函数。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "74447794"
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

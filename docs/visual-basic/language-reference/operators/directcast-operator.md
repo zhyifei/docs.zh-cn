@@ -15,33 +15,33 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331308"
 ---
 # <a name="directcast-operator-visual-basic"></a>DirectCast 运算符 (Visual Basic)
-Introduces a type conversion operation based on inheritance or implementation.  
+引入基于继承或实现的类型转换操作。  
   
 ## <a name="remarks"></a>备注  
- `DirectCast` does not use the Visual Basic run-time helper routines for conversion, so it can provide somewhat better performance than `CType` when converting to and from data type `Object`.  
+ `DirectCast` 不使用 Visual Basic 运行时帮助器例程进行转换，因此，它在与数据类型 `Object`之间来回转换时，它可以提供比 `CType` 更好的性能。  
   
- You use the `DirectCast` keyword similar to the way you use the [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md) and the [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md) keyword. You supply an expression as the first argument and a type to convert it to as the second argument. `DirectCast` requires an inheritance or implementation relationship between the data types of the two arguments. This means that one type must inherit from or implement the other.  
+ 将 `DirectCast` 关键字与使用[CType 函数](../../../visual-basic/language-reference/functions/ctype-function.md)和[TryCast 运算符](../../../visual-basic/language-reference/operators/trycast-operator.md)关键字类似。 提供表达式作为第一个参数，并提供一个类型以将其转换为第二个参数。 `DirectCast` 需要这两个参数的数据类型之间的继承关系或实现关系。 这意味着一个类型必须从继承或实现另一个类型。  
   
-## <a name="errors-and-failures"></a>Errors and Failures  
- `DirectCast` generates a compiler error if it detects that no inheritance or implementation relationship exists. But the lack of a compiler error does not guarantee a successful conversion. If the desired conversion is narrowing, it could fail at run time. If this happens, the runtime throws an <xref:System.InvalidCastException> error.  
+## <a name="errors-and-failures"></a>错误和失败  
+ 如果 `DirectCast` 检测到不存在继承或实现关系，则会生成编译器错误。 但缺少编译器错误并不能保证成功转换。 如果所需的转换是收缩转换，则可能会在运行时失败。 如果发生这种情况，运行时会引发 <xref:System.InvalidCastException> 错误。  
   
 ## <a name="conversion-keywords"></a>转换关键字  
- A comparison of the type conversion keywords is as follows.  
+ 下面是类型转换关键字的比较。  
   
-|关键字|数据类型|Argument relationship|Run-time failure|  
+|关键字|数据类型|参数关系|运行时失败|  
 |---|---|---|---|  
-|[CType 函数](../../../visual-basic/language-reference/functions/ctype-function.md)|Any data types|Widening or narrowing conversion must be defined between the two data types|Throws <xref:System.InvalidCastException>|  
-|`DirectCast`|Any data types|One type must inherit from or implement the other type|Throws <xref:System.InvalidCastException>|  
-|[TryCast 运算符](../../../visual-basic/language-reference/operators/trycast-operator.md)|Reference types only|One type must inherit from or implement the other type|Returns [Nothing](../../../visual-basic/language-reference/nothing.md)|  
+|[CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)|任何数据类型|必须在这两种数据类型之间定义扩大转换或收缩转换|引发 <xref:System.InvalidCastException>|  
+|`DirectCast`|任何数据类型|一个类型必须继承自或实现另一个类型|引发 <xref:System.InvalidCastException>|  
+|[TryCast 运算符](../../../visual-basic/language-reference/operators/trycast-operator.md)|仅引用类型|一个类型必须继承自或实现另一个类型|不返回[任何内容](../../../visual-basic/language-reference/nothing.md)|  
   
 ## <a name="example"></a>示例  
- The following example demonstrates two uses of `DirectCast`, one that fails at run time and one that succeeds.  
+ 下面的示例演示了 `DirectCast`的两个用法，一个在运行时失败，另一个则是成功的。  
   
  [!code-vb[VbVbalrKeywords#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#1)]  
   
- In the preceding example, the run-time type of `q` is `Double`. `CType` succeeds because `Double` can be converted to `Integer`. However, the first `DirectCast` fails at run time because the run-time type of `Double` has no inheritance relationship with `Integer`, even though a conversion exists. The second `DirectCast` succeeds because it converts from type <xref:System.Windows.Forms.Form> to type <xref:System.Windows.Forms.Control>, from which <xref:System.Windows.Forms.Form> inherits.  
+ 在前面的示例中，`Double``q` 的运行时类型。 `CType` 成功，因为 `Double` 可转换为 `Integer`。 但是，第一个 `DirectCast` 在运行时失败，因为 `Double` 的运行时类型与 `Integer`没有继承关系，即使存在转换也是如此。 第二个 `DirectCast` 成功，因为它从类型 <xref:System.Windows.Forms.Form> 转换为类型 <xref:System.Windows.Forms.Control>，<xref:System.Windows.Forms.Form> 将从该类型继承。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Convert.ChangeType%2A?displayProperty=nameWithType>
 - [扩大转换和收缩转换](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

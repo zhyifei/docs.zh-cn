@@ -24,7 +24,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331052"
 ---
 # <a name="-operator-visual-basic"></a>/ 运算符 (Visual Basic)
-Divides two numbers and returns a floating-point result.  
+使两个数字相除，返回浮点结果。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,58 +34,58 @@ expression1 / expression2
   
 ## <a name="parts"></a>部件  
  `expression1`  
- 必须的。 任何数值表达式。  
+ 必需。 任何数值表达式。  
   
  `expression2`  
- 必须的。 任何数值表达式。  
+ 必需。 任何数值表达式。  
   
 ## <a name="supported-types"></a>支持的类型  
- All numeric types, including the unsigned and floating-point types and `Decimal`.  
+ 所有数值类型，包括无符号和浮点类型以及 `Decimal`。  
   
 ## <a name="result"></a>结果  
- The result is the full quotient of `expression1` divided by `expression2`, including any remainder.  
+ 结果是 `expression1` 除以 `expression2`的全部商，包括余数。  
   
- The [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) returns the integer quotient, which drops the remainder.  
+ [\ 运算符（Visual Basic）](../../../visual-basic/language-reference/operators/integer-division-operator.md)返回整数商，这会删除余数。  
   
 ## <a name="remarks"></a>备注  
- The data type of the result depends on the types of the operands. The following table shows how the data type of the result is determined.  
+ 结果的数据类型取决于操作数的类型。 下表显示了如何确定结果的数据类型。  
   
-|Operand data types|Result data type|  
+|操作数数据类型|Result 数据类型|  
 |------------------------|----------------------|  
-|Both expressions are integral data types ([SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md), [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md), [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md))|`Double`|  
-|One expression is a [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) data type and the other is not a [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|`Single`|  
-|One expression is a [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) data type and the other is not a [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) or a [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|`Decimal`|  
-|Either expression is a [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) data type|`Double`|  
+|这两个表达式均为整型数据类型（[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)、 [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)、 [Short](../../../visual-basic/language-reference/data-types/short-data-type.md)、 [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)、 [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)、 [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)、 [Long](../../../visual-basic/language-reference/data-types/long-data-type.md)、 [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)）|`Double`|  
+|一个表达式是[单一](../../../visual-basic/language-reference/data-types/single-data-type.md)数据类型，另一个表达式不是[双精度](../../../visual-basic/language-reference/data-types/double-data-type.md)型|`Single`|  
+|一个表达式是[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)数据类型，另一个表达式不是[单个](../../../visual-basic/language-reference/data-types/single-data-type.md)或[双精度](../../../visual-basic/language-reference/data-types/double-data-type.md)|`Decimal`|  
+|其中一个表达式为[Double](../../../visual-basic/language-reference/data-types/double-data-type.md)数据类型|`Double`|  
   
- Before division is performed, any integral numeric expressions are widened to `Double`. If you assign the result to an integral data type, Visual Basic attempts to convert the result from `Double` to that type. This can throw an exception if the result does not fit in that type. In particular, see "Attempted Division by Zero" on this Help page.  
+ 在执行除法运算之前，所有整数数值表达式都将扩大到 `Double`。 如果将结果赋给整数数据类型，Visual Basic 会尝试将 `Double` 的结果转换为该类型。 如果结果不适合该类型，这可能会引发异常。 具体而言，请参阅此帮助页上的 "尝试被零除"。  
   
- If `expression1` or `expression2` evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.  
+ 如果 `expression1` 或 `expression2` 的计算结果不为[空，则](../../../visual-basic/language-reference/nothing.md)将其视为零。  
   
-## <a name="attempted-division-by-zero"></a>Attempted Division by Zero  
- If `expression2` evaluates to zero, the `/` operator behaves differently for different operand data types. The following table shows the possible behaviors.  
+## <a name="attempted-division-by-zero"></a>尝试被零除  
+ 如果 `expression2` 的计算结果为零，则 `/` 运算符对于不同的操作数数据类型的行为不同。 下表显示了可能的行为。  
   
-|Operand data types|Behavior if `expression2` is zero|  
+|操作数数据类型|`expression2` 为零时的行为|  
 |------------------------|---------------------------------------|  
-|Floating-point (`Single` or `Double`)|Returns infinity (<xref:System.Double.PositiveInfinity> or <xref:System.Double.NegativeInfinity>), or <xref:System.Double.NaN> (not a number) if `expression1` is also zero|  
-|`Decimal`|Throws <xref:System.DivideByZeroException>|  
-|Integral (signed or unsigned)|Attempted conversion back to integral type throws <xref:System.OverflowException> because integral types cannot accept <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>, or <xref:System.Double.NaN>|  
+|浮点（`Single` 或 `Double`）|如果 `expression1` 也为零，则返回无穷（<xref:System.Double.PositiveInfinity> 或 <xref:System.Double.NegativeInfinity>）或 <xref:System.Double.NaN> （非数字）|  
+|`Decimal`|引发 <xref:System.DivideByZeroException>|  
+|整数（有符号或无符号）|尝试转换回整型类型会引发 <xref:System.OverflowException> 因为整型类型不能接受 <xref:System.Double.PositiveInfinity>、<xref:System.Double.NegativeInfinity>或 <xref:System.Double.NaN>|  
   
 > [!NOTE]
-> The `/` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. 有关更多信息，请参见 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+> 可以*重载*`/` 运算符，这意味着当操作数具有该类或结构的类型时，该类或结构可以重新定义其行为。 如果你的代码在该类或结构上使用此运算符，请确保了解其重新定义的行为。 有关更多信息，请参见 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>示例  
- This example uses the `/` operator to perform floating-point division. The result is the quotient of the two operands.  
+ 此示例使用 `/` 运算符来执行浮点除法。 结果是两个操作数的商。  
   
  [!code-vb[VbVbalrOperators#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#16)]  
   
- The expressions in the preceding example return values of 2.5 and 3.333333. Note that the result is always floating-point (`Double`), even though both operands are integer constants.  
+ 前面的示例中的表达式返回值2.5 和3.333333。 请注意，即使两个操作数都是整数常量，结果也始终是浮点型（`Double`）。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [/= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
-- [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+- [/= 运算符（Visual Basic）](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [\ 运算符（Visual Basic）](../../../visual-basic/language-reference/operators/integer-division-operator.md)
 - [运算符结果的数据类型](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)
 - [算术运算符](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic 中的算术运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

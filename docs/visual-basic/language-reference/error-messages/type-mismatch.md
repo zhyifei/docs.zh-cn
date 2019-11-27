@@ -12,16 +12,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346658"
 ---
 # <a name="type-mismatch-visual-basic"></a>类型不匹配 (Visual Basic)
-You attempted to convert a value to another type in a way that is not valid.  
+试图以无效的方式将值转换为另一种类型。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1. Check the assignment to make sure it is valid.  
+1. 检查分配，确保它是有效的。  
   
-2. Make sure you did not pass an object to a procedure that expects a single property or value.  
+2. 请确保未将对象传递到需要单个属性或值的过程。  
   
-3. Make sure you did not use a module or project name where an expression was expected.  
+3. 请确保未使用表达式所需的模块或项目名称。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [错误类型](../../../visual-basic/programming-guide/language-features/error-types.md)

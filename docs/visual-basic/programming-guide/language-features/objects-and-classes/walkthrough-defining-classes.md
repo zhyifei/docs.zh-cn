@@ -24,62 +24,62 @@ ms.locfileid: "74346075"
 ---
 # <a name="walkthrough-defining-classes-visual-basic"></a>演练：定义类 (Visual Basic)
 
-This walkthrough demonstrates how to define classes, which you can then use to create objects. It also shows you how to add properties and methods to the new class, and demonstrates how to initialize an object.  
+本演练演示如何定义类，然后可以使用这些类来创建对象。 它还演示了如何将属性和方法添加到新类，并演示了如何初始化对象。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="to-define-a-class"></a>To define a class
+## <a name="to-define-a-class"></a>定义类
   
-1. Create a project by clicking **New Project** on the **File** menu. 此时将出现“新建项目”对话框。  
+1. 通过单击 "**文件**" 菜单上的 "**新建项目**" 来创建项目。 此时会显示 **“新建项目”** 对话框。  
   
-2. Select Windows Application from the list of Visual Basic project templates to display the new project.  
+2. 从 Visual Basic 项目模板列表中选择 "Windows 应用程序" 以显示新项目。  
   
-3. Add a new class to the project by clicking **Add Class** on the **Project** menu. “添加新项”对话框随即出现。  
+3. 通过单击 "**项目**" 菜单上的 "**添加类**"，将新类添加到项目。 “添加新项”对话框随即出现。  
   
-4. Select the **Class** template.  
+4. 选择 "**类**" 模板。  
   
-5. Name the new class `UserNameInfo.vb`, and then click **Add** to display the code for the new class.  
+5. 将新类命名为 "`UserNameInfo.vb`"，然后单击 "**添加**" 以显示新类的代码。  
   
      [!code-vb[VbVbalrOOP#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#5)]
   
     > [!NOTE]
-    > You can use the Visual Basic **Code Editor** to add a class to your startup form by typing the `Class` keyword followed by the name of the new class. The **Code Editor** provides a corresponding `End Class` statement for you.  
+    > 通过键入 `Class` 关键字，然后键入新类的名称，可以使用 Visual Basic**代码编辑器**将类添加到启动窗体。 **代码编辑器**为您提供了相应的 `End Class` 语句。  
   
-6. Define a private field for the class by adding the following code between the `Class` and `End Class` statements:  
+6. 通过在 `Class` 和 `End Class` 语句之间添加以下代码，为类定义私有字段：  
   
      [!code-vb[VbVbalrOOP#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#7)]
   
-     Declaring the field as `Private` means it can be used only within the class. You can make fields available from outside a class by using access modifiers such as `Public` that provide more access. For more information, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+     将字段声明为 `Private` 意味着它只能在类中使用。 可以通过使用访问修饰符（如提供更多访问权限的 `Public`），使字段从类的外部可用。 有关详细信息，请参阅[Visual Basic 中的访问级别](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
-7. Define a property for the class by adding the following code:  
+7. 通过添加以下代码来定义类的属性：  
   
      [!code-vb[VbVbalrOOP#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#8)]
   
-8. Define a method for the class by adding the following code:  
+8. 通过添加以下代码为类定义方法：  
   
      [!code-vb[VbVbalrOOP#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#9)]
   
-9. Define a parameterized constructor for the new class by adding a procedure named `Sub New`:  
+9. 通过添加名为 `Sub New`的过程为新类定义参数化构造函数：  
   
      [!code-vb[VbVbalrOOP#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#10)]
   
-     The `Sub New` constructor is called automatically when an object based on this class is created. This constructor sets the value of the field that holds the user name.  
+     当创建基于此类的对象时，将自动调用 `Sub New` 构造函数。 此构造函数设置包含用户名的字段的值。  
   
-## <a name="to-create-a-button-to-test-the-class"></a>To create a button to test the class
+## <a name="to-create-a-button-to-test-the-class"></a>创建用于测试类的按钮
   
-1. Change the startup form to design mode by right-clicking its name in **Solution Explorer** and then clicking **View Designer**. By default, the startup form for Windows Application projects is named Form1.vb. The main form will then appear.  
+1. 将启动窗体更改为设计模式，方法是在**解决方案资源管理器**中右键单击其名称，然后单击 "**视图设计器**"。 默认情况下，Windows 应用程序项目的启动窗体命名为 "Form1"。 然后，将显示主窗体。  
   
-2. Add a button to the main form and double-click it to display the code for the `Button1_Click` event handler. Add the following code to call the test procedure:  
+2. 向主窗体添加一个按钮，然后双击它以显示 `Button1_Click` 事件处理程序的代码。 添加以下代码来调用测试过程：  
   
      [!code-vb[VbVbalrOOP#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#12)]
   
 ## <a name="to-run-your-application"></a>运行应用程序
   
-1. Run your application by pressing F5. Click the button on the form to call the test procedure. It displays a message stating that the original `UserName` is "MOORE, BOBBY", because the procedure called the `Capitalize` method of the object.  
+1. 按 F5 运行应用程序。 单击窗体上的按钮以调用测试过程。 它将显示一条消息，指出原始 `UserName` 为 "尧，胡继"，因为过程调用了对象的 `Capitalize` 方法。  
   
-2. 单击“确定”，关闭该消息框。 The `Button1 Click` procedure changes the value of the `UserName` property and displays a message stating that the new value of `UserName` is "Worden, Joe".  
+2. 单击“确定”，关闭该消息框。 `Button1 Click` 过程将更改 `UserName` 属性的值，并显示一条消息，指出 `UserName` 的新值为 "Worden，Joe"。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [面向对象的编程 (Visual Basic)](../../concepts/object-oriented-programming.md)
 - [对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

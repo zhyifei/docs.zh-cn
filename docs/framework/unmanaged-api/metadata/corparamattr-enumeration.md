@@ -44,23 +44,23 @@ typedef enum CorParamAttr {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`pdIn`|Specifies that the parameter is passed into the method call.|  
-|`pdOut`|Specifies that the parameter is passed from the method return.|  
+|`pdIn`|指定将参数传递给方法调用。|  
+|`pdOut`|指定从方法返回传递参数。|  
 |`pdOptional`|指定参数为可选。|  
-|`pdReservedMask`|Reserved for internal use by the common language runtime.|  
+|`pdReservedMask`|保留供公共语言运行时内部使用。|  
 |`pdHasDefault`|指定参数具有默认值。|  
-|`pdHasFieldMarshal`|Specifies that the parameter has marshaling information.|  
+|`pdHasFieldMarshal`|指定参数具有封送处理信息。|  
 |`pdUnused`|未使用。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **标头：** Corhdr。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349559"
 ---
 # <a name="set-statement-visual-basic"></a>Set 语句 (Visual Basic)
-Declares a `Set` property procedure used to assign a value to a property.  
+声明一个 `Set` 属性过程，该过程用于为属性赋值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,10 +30,10 @@ End Set
   
 ## <a name="parts"></a>部件  
  `attributelist`  
- 可选。 See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ 可选。 请参阅[特性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。  
   
  `accessmodifier`  
- Optional on at most one of the `Get` and `Set` statements in this property. 可以是以下各项之一：  
+ 在此属性中的最多一个 `Get` 和 `Set` 语句上是可选的。 可以是以下各项之一：  
   
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
@@ -46,48 +46,48 @@ End Set
  请参阅 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
  `value`  
- 必须的。 Parameter containing the new value for the property.  
+ 必需。 包含属性新值的参数。  
   
  `datatype`  
- Required if `Option Strict` is `On`. Data type of the `value` parameter. The data type specified must be the same as the data type of the property where this `Set` statement is declared.  
+ 如果 `Option Strict` `On`，则为必需。 `value` 参数的数据类型。 指定的数据类型必须与声明此 `Set` 语句的属性的数据类型相同。  
   
  `statements`  
- 可选。 One or more statements that run when the `Set` property procedure is called.  
+ 可选。 调用 `Set` 属性过程时运行的一个或多个语句。  
   
  `End Set`  
- 必须的。 Terminates the definition of the `Set` property procedure.  
+ 必需。 终止 `Set` 属性过程的定义。  
   
 ## <a name="remarks"></a>备注  
- Every property must have a `Set` property procedure unless the property is marked `ReadOnly`. The `Set` procedure is used to set the value of the property.  
+ 每个属性都必须具有 `Set` 属性过程，除非该属性被标记为 `ReadOnly`。 `Set` 过程用于设置属性的值。  
   
- Visual Basic automatically calls a property's `Set` procedure when an assignment statement provides a value to be stored in the property.  
+ 当赋值语句提供要存储在属性中的值时，Visual Basic 会自动调用属性的 `Set` 过程。  
   
- Visual Basic passes a parameter to the `Set` procedure during property assignments. If you do not supply a parameter for `Set`, the integrated development environment (IDE) uses an implicit parameter named `value`. The parameter holds the value to be assigned to the property. You typically store this value in a private local variable and return it whenever the `Get` procedure is called.  
+ Visual Basic 在属性赋值期间将参数传递给 `Set` 过程。 如果没有为 `Set`提供参数，集成开发环境（IDE）将使用名为 `value`的隐式参数。 参数保留要赋给属性的值。 通常将此值存储在私有本地变量中，并在调用 `Get` 过程时返回此值。  
   
- The body of the property declaration can contain only the property's `Get` and `Set` procedures between the [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement. It cannot store anything other than those procedures. In particular, it cannot store the property's current value. You must store this value outside the property, because if you store it inside either of the property procedures, the other property procedure cannot access it. The usual approach is to store the value in a [Private](../../../visual-basic/language-reference/modifiers/private.md) variable declared at the same level as the property. You must define a `Set` procedure inside the property to which it applies.  
+ 属性声明的主体只能包含属性的 `Get`，并在[Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)和 `End Property` 语句之间包含 `Set` 过程。 它无法存储这些过程以外的任何内容。 特别是，它无法存储属性的当前值。 您必须将此值存储在属性的外部，因为如果将其存储在任一属性过程中，则其他属性过程将无法访问它。 常见的方法是将值存储在与属性在同一级别上声明的[私有](../../../visual-basic/language-reference/modifiers/private.md)变量中。 必须在应用的属性中定义 `Set` 过程。  
   
- The `Set` procedure defaults to the access level of its containing property unless you use `accessmodifier` in the `Set` statement.  
+ 除非在 `Set` 语句中使用 `accessmodifier`，否则 `Set` 过程默认为其包含属性的访问级别。  
   
 ## <a name="rules"></a>规则  
   
-- **Mixed Access Levels.** If you are defining a read-write property, you can optionally specify a different access level for either the `Get` or the `Set` procedure, but not both. If you do this, the procedure access level must be more restrictive than the property's access level. For example, if the property is declared `Friend`, you can declare the `Set` procedure `Private`, but not `Public`.  
+- **混合访问级别。** 如果要定义读写属性，则可以选择为 `Get` 或 `Set` 过程指定不同的访问级别，但不能同时指定两者。 如果执行此操作，则过程访问级别必须比属性的访问级别更严格。 例如，如果属性已 `Friend`声明，则可以将 `Set` 过程声明 `Private`但不 `Public`。  
   
-     If you are defining a `WriteOnly` property, the `Set` procedure represents the entire property. You cannot declare a different access level for `Set`, because that would set two access levels for the property.  
+     如果正在定义 `WriteOnly` 属性，则 `Set` 过程表示整个属性。 不能为 `Set`声明不同的访问级别，因为这会为属性设置两个访问级别。  
   
 ## <a name="behavior"></a>行为  
   
-- **Returning from a Property Procedure.** When the `Set` procedure returns to the calling code, execution continues following the statement that provided the value to be stored.  
+- **从属性过程返回。** 当 `Set` 过程返回到调用代码时，执行将继续执行提供要存储的值的语句之后。  
   
-     `Set` property procedures can return using either the [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) or the [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md).  
+     `Set` 属性过程可以使用[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)或[Exit 语句](../../../visual-basic/language-reference/statements/exit-statement.md)返回。  
   
-     The `Exit Property` and `Return` statements cause an immediate exit from a property procedure. Any number of `Exit Property` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Property` and `Return` statements.  
+     `Exit Property` 和 `Return` 语句导致直接从属性过程退出。 任意数量的 `Exit Property` 和 `Return` 语句可以出现在过程中的任何位置，并且可以混合 `Exit Property` 和 `Return` 语句。  
   
 ## <a name="example"></a>示例  
- The following example uses the `Set` statement to set the value of a property.  
+ 下面的示例使用 `Set` 语句设置属性的值。  
   
  [!code-vb[VbVbalrStatements#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#55)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Get 语句](../../../visual-basic/language-reference/statements/get-statement.md)
 - [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)

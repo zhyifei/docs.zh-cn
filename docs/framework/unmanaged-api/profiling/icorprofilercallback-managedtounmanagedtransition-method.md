@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426184"
 ---
 # <a name="icorprofilercallbackmanagedtounmanagedtransition-method"></a>ICorProfilerCallback::ManagedToUnmanagedTransition 方法
-Notifies the profiler that a transition from managed code to unmanaged code has occurred.  
+通知探查器已发生从托管代码到非托管代码的转换。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,13 +35,13 @@ HRESULT ManagedToUnmanagedTransition(
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in] The ID of the function that is being called.  
+ 中正在调用的函数的 ID。  
   
  `reason`  
- [in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into unmanaged code from managed code, or because of a return from a managed function called by an unmanaged one.  
+ 中一个[COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md)枚举的值，该值指示是否由于从托管代码调用非托管代码而发生转换，或者是否是由非托管函数调用的托管函数返回。  
   
 ## <a name="remarks"></a>备注  
- If the value of `reason` is COR_PRF_TRANSITION_CALL, the function ID is that of the unmanaged function, which will never have been compiled using the just-in-time compiler. Unmanaged functions have basic information associated with them, such as a name and some metadata. If the unmanaged function was called by using implicit platform invoke (PInvoke), the runtime cannot determine the destination of the call and the value of `functionId` will be null. For more information on implicit PInvoke, see [Using C++ Interop (Implicit PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke).  
+ 如果 `reason` 的值 COR_PRF_TRANSITION_CALL，则函数 ID 就是非托管函数的 ID，该函数永远不会使用实时编译器进行编译。 非托管函数具有与之关联的基本信息，如名称和某些元数据。 如果使用隐式平台调用（PInvoke）调用了非托管函数，则运行时无法确定调用的目标，并且 `functionId` 的值将为 null。 有关隐式 PInvoke 的详细信息，请参阅[ C++ Using 互操作（隐式 pinvoke）](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -52,7 +52,7 @@ HRESULT ManagedToUnmanagedTransition(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [UnmanagedToManagedTransition 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md)

@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427975"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>ISymUnmanagedWriter::Initialize 方法
-Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.  
+设置此编写器将与之关联的元数据发射器接口，并设置调试符号将写入的输出文件名。  
   
- This method can be called only once, and it must be called before any other writer methods. Some writers may require a file name. However, you can always pass a file name to this method without any negative effect on writers that do not use the file name.  
+ 此方法只能调用一次，并且必须在任何其他编写器方法之前调用此方法。 某些编写器可能需要文件名。 但是，您始终可以将文件名传递给此方法，而不会对不使用文件名的编写器产生任何负面影响。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,24 +39,24 @@ HRESULT Initialize(
   
 ## <a name="parameters"></a>参数  
  `emitter`  
- [in] A pointer to the metadata emitter interface.  
+ 中指向元数据发射器接口的指针。  
   
  `filename`  
- [in] The file name to which the debugging symbols are written. 如果为不使用文件名的编写器指定文件名，则忽略此参数。  
+ 中向其中写入调试符号的文件名。 如果为不使用文件名的编写器指定文件名，则忽略此参数。  
   
  `pIStream`  
- [in] If specified, the symbol writer will emit the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter. `pIStream` 参数是可选的。  
+ 中如果已指定，则符号编写器会将符号发出到给定的 <xref:System.Runtime.InteropServices.ComTypes.IStream>，而不是发送到 `filename` 参数中指定的文件。 `pIStream` 参数是可选的。  
   
  `fFullBuild`  
- [in] `true` if this is a full rebuild; `false` if this is an incremental compilation.  
+ [in] 如果这是完全重新生成，则 `true`;如果这是增量编译，则 `false`。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
 - [Initialize2 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize2-method.md)

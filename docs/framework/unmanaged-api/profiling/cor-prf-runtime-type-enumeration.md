@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450371"
 ---
 # <a name="cor_prf_runtime_type-enumeration"></a>COR_PRF_RUNTIME_TYPE 枚举
-Contains values that indicate the version of the common language runtime (CLR): desktop or CoreCLR, which is used in Silverlight.  
+包含一些值，这些值指示公共语言运行时（CLR）的版本：在 Silverlight 中使用的 desktop 或 CoreCLR。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,10 +36,10 @@ typedef enum
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`COR_PRF_DESKTOP_CLR`|The desktop version of the CLR.|  
-|`COR_PRF_CORE_CLR`|The core version of the CLR, used in Silverlight.|  
+|`COR_PRF_DESKTOP_CLR`|CLR 的桌面版本。|  
+|`COR_PRF_CORE_CLR`|Silverlight 中使用的 CLR 核心版本。|  
   
 ## <a name="remarks"></a>备注  
   
@@ -52,6 +52,6 @@ typedef enum
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449468"
 ---
 # <a name="cor_prf_gc_root_flags-enumeration"></a>COR_PRF_GC_ROOT_FLAGS 枚举
-Indicates a property of a garbage collection root.  
+指示垃圾回收根的属性。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,15 +37,15 @@ typedef enum {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_PINNING`|The root prevents a garbage collection from moving the object.|  
-|`COR_PRF_GC_ROOT_WEAKREF`|The root does not prevent garbage collection.|  
-|`COR_PRF_GC_ROOT_INTERIOR`|The root refers to a field of the object rather than the object itself.|  
-|`COR_PRF_GC_ROOT_REFCOUNTED`|The root prevents garbage collection if the reference count of the object is a certain value.|  
+|`COR_PRF_GC_ROOT_PINNING`|根禁止垃圾回收移动对象。|  
+|`COR_PRF_GC_ROOT_WEAKREF`|根不会阻止垃圾回收。|  
+|`COR_PRF_GC_ROOT_INTERIOR`|根引用的是对象的字段，而不是对象本身。|  
+|`COR_PRF_GC_ROOT_REFCOUNTED`|如果对象的引用计数为特定值，则根禁止垃圾回收。|  
   
 ## <a name="remarks"></a>备注  
- `COR_PRF_GC_ROOT_FLAGS` is a bitmask that provides additional information about special roots. However, not all roots are special. For example, some roots are not weak references, interior pointers, pinned, or reference-counted. For such roots, there are no flags to convey. Therefore, methods that use this enumeration, such as the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) method, send 0 for the flags bitmask, indicating that all flags are turned off.  
+ `COR_PRF_GC_ROOT_FLAGS` 是一个位掩码，提供有关特殊根的附加信息。 但是，并非所有的根都是特殊的。 例如，某些根不是弱引用、内部指针、固定或引用计数的。 对于这类根，没有要传达的标志。 因此，使用此枚举的方法（如[ICorProfilerCallback2：： RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)方法）为标志位掩码发送0，指示所有标志都处于关闭状态。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -56,6 +56,6 @@ typedef enum {
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

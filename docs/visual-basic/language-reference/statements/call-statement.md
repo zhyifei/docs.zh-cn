@@ -17,7 +17,7 @@ ms.locfileid: "74350165"
 ---
 # <a name="call-statement-visual-basic"></a>Call 语句 (Visual Basic)
 
-Transfers control to a `Function`, `Sub`, or dynamic-link library (DLL) procedure.  
+将控制转移到 `Function`、`Sub`或动态链接库（DLL）过程。  
   
 ## <a name="syntax"></a>语法  
   
@@ -29,27 +29,27 @@ Transfers control to a `Function`, `Sub`, or dynamic-link library (DLL) procedur
 
 |||
 |---|---|
-|`procedureName`|必须的。 Name of the procedure to call.|
-|`argumentList`|可选。 List of variables or expressions representing arguments that are passed to the procedure when it is called. Multiple arguments are separated by commas. If you include `argumentList`, you must enclose it in parentheses.|
+|`procedureName`|必需。 要调用的过程的名称。|
+|`argumentList`|可选。 表示在调用过程时传递给过程的参数的变量或表达式列表。 多个参数之间用逗号分隔。 如果包括 `argumentList`，则必须将其括在括号中。|
 |||
   
 ## <a name="remarks"></a>备注
 
- You can use the `Call` keyword when you call a procedure. For most procedure calls, you aren’t required to use this  keyword.
+ 在调用过程时，可以使用 `Call` 关键字。 对于大多数过程调用，不需要使用此关键字。
 
- You typically use the `Call` keyword when the called expression doesn’t start with an identifier. Use of the `Call` keyword for other uses isn't recommended.
+ 当被调用的表达式不是以标识符开头时，通常使用 `Call` 关键字。 不建议将 `Call` 关键字用于其他用途。
 
- If the procedure returns a value, the `Call` statement discards it.
+ 如果过程返回值，则 `Call` 语句将其丢弃。
 
 ## <a name="example"></a>示例
 
- The following code shows two examples where the `Call` keyword is necessary to call a procedure. In both examples, the called expression doesn't start with an identifier.
+ 下面的代码演示了两个示例，其中 `Call` 关键字是调用过程所必需的。 在这两个示例中，调用的表达式不以标识符开头。
 
  [!code-vb[VbVbalrStatements#97](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#97)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Function 语句](function-statement.md)
 - [Sub 语句](sub-statement.md)
-- [Declare 语句](declare-statement.md)
+- [Declare Statement](declare-statement.md)
 - [Lambda 表达式](../../programming-guide/language-features/procedures/lambda-expressions.md)

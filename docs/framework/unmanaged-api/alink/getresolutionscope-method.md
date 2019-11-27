@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447221"
 ---
 # <a name="getresolutionscope-method"></a>GetResolutionScope 方法
-Retrieves the scope of a given type.  
+检索给定类型的作用域。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,24 +37,24 @@ HRESULT GetResolutionScope(
   
 ## <a name="parameters"></a>参数  
  `AssemblyID`  
- ID of the assembly.  
+ 程序集的 ID。  
   
  `FileToken`  
- File that is in need of a reference.  
+ 需要引用的文件。  
   
  `TargetFile`  
- Token of file that type is defined in, usually retrieved with [ImportFile Method](importfile-method.md).  
+ 在中定义类型的文件的标记，通常用[ImportFile 方法](importfile-method.md)进行检索。  
   
  `pScope`  
- Receives the assembly or module reference.  
+ 接收程序集或模块引用。  
   
 ## <a name="return-value"></a>返回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- Requires alink.h.  
+ 需要 alink。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IALink 接口](ialink-interface.md)
 - [IALink2 接口](ialink2-interface.md)

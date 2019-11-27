@@ -1,5 +1,5 @@
 ---
-title: 可选参数
+title: 可选的参数
 ms.date: 07/20/2015
 helpviewer_keywords:
 - parameters [Visual Basic], optional
@@ -20,7 +20,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345967"
 ---
 # <a name="optional-parameters-visual-basic"></a>可选参数 (Visual Basic)
-可以指定过程参数是可选的，并且在调用过程时不必为其提供自变量。 *Optional parameters* are indicated by the `Optional` keyword in the procedure definition. 适用以下规则：  
+可以指定过程参数是可选的，并且在调用过程时不必为其提供自变量。 *可选参数*由过程定义中的 `Optional` 关键字指示。 适用以下规则：  
   
 - 过程定义中的每个可选参数都必须指定默认值。  
   
@@ -43,14 +43,14 @@ Sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatype2 =
 Sub name(argument 1, , , argument 4)  
 ```  
   
- 下面的示例对 `MsgBox` 函数进行多次调用。 `MsgBox` 有一个必需参数和两个可选参数。  
+ 下面的示例对 `MsgBox` 函数进行多次调用。 `MsgBox` 具有一个必需参数和两个可选参数。  
   
  对 `MsgBox` 的第一个调用将按照 `MsgBox` 定义参数的顺序提供所有三个参数。 第二个调用仅提供必选自变量。 第三个和第四个调用分别提供第一个和第三个自变量。 第三个调用按位置提供参数，第四个调用按名称提供参数。  
   
  [!code-vb[VbVbcnProcedures#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#47)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>确定可选自变量是否存在  
- 过程在运行时无法检测到给定的自变量是否已被省略，或者调用代码是否已显式提供默认值。 如果需要弄清楚这一点，可以设置一个不可能的值作为默认值。 The following procedure defines the optional parameter `office`, and tests for its default value, `QJZ`, to see if it has been omitted in the call:  
+ 过程在运行时无法检测到给定的自变量是否已被省略，或者调用代码是否已显式提供默认值。 如果需要弄清楚这一点，可以设置一个不可能的值作为默认值。 下面的过程定义可选参数 `office`，并测试其默认值 `QJZ`，以查看是否在调用中省略了该参数：  
   
  [!code-vb[VbVbcnProcedures#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#46)]  
   
@@ -59,7 +59,7 @@ Sub name(argument 1, , , argument 4)
 ## <a name="optional-parameters-and-overloading"></a>可选参数和重载  
  定义带可选参数的过程的另一种方法是使用重载。 如果有一个可选参数，可以定义过程的两个重载版本，一个接受此参数，另一个则不带参数。 此方法随可选参数数目的增加而变得更复杂。 然而，这样做的优点是可以完全确定调用程序是否提供了每个可选自变量。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [过程](./index.md)
 - [过程参数和自变量](./procedure-parameters-and-arguments.md)

@@ -1,5 +1,5 @@
 ---
-title: 可修改和不可修改自变量之间的差异
+title: 可修改和不可修改参数之间的差异
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -16,28 +16,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341391"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>可修改和不可修改自变量之间的差异 (Visual Basic)
-When you call a procedure, you typically pass one or more arguments to it. Each argument corresponds to an underlying programming element. Both the underlying elements and the arguments themselves can be either modifiable or nonmodifiable.  
+调用过程时，通常会向其传递一个或多个参数。 每个参数都对应于一个基础编程元素。 基础元素和参数本身可以是可修改的，也可以是不可更改的。  
   
-## <a name="modifiable-and-nonmodifiable-elements"></a>Modifiable and Nonmodifiable Elements  
- A programming element can be either a *modifiable element*, which can have its value changed, or a *nonmodifiable element*, which has a fixed value once it has been created.  
+## <a name="modifiable-and-nonmodifiable-elements"></a>可修改和不可更改元素  
+ 编程元素可以是可修改的*元素*（其值已更改）或*不可更改元素*（在创建后具有固定值）。  
   
- The following table lists modifiable and nonmodifiable programming elements.  
+ 下表列出了可修改和不可更改的编程元素。  
   
-|Modifiable elements|Nonmodifiable elements|  
+|可修改元素|不可更改元素|  
 |-------------------------|----------------------------|  
-|Local variables (declared inside procedures), including object variables, except for read-only|Read-only variables, fields, and properties|  
-|Fields (member variables of modules, classes, and structures), except for read-only|Constants and literals|  
-|Properties, except for read-only|Enumeration members|  
-|Array elements|Expressions (even if their elements are modifiable)|  
+|局部变量（在过程中声明），包括对象变量（只读除外）|只读变量、字段和属性|  
+|字段（模块、类和结构的成员变量），只读除外|常量和文本|  
+|属性（只读除外）|枚举成员|  
+|数组元素|表达式（即使它们的元素是可修改的）|  
   
-## <a name="modifiable-and-nonmodifiable-arguments"></a>Modifiable and Nonmodifiable Arguments  
- A *modifiable argument* is one with a modifiable underlying element. The calling code can store a new value at any time, and if you pass the argument [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), the code in the procedure can also modify the underlying element in the calling code.  
+## <a name="modifiable-and-nonmodifiable-arguments"></a>可修改和不可修改参数  
+ 可*修改的自变量*是具有可修改基础元素的自变量。 调用代码随时可以存储新值，并且如果传递参数[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，则过程中的代码还可以修改调用代码中的基础元素。  
   
- A *nonmodifiable argument* either has a nonmodifiable underlying element or is passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). The procedure cannot modify the underlying element in the calling code, even if it is a modifiable element. If it is a nonmodifiable element, the calling code itself cannot modify it.  
+ *不可更改的参数*具有不可更改的基础元素，或被传递了[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)。 过程不能修改调用代码中的基础元素，即使它是可修改的元素。 如果它是不可更改的元素，则调用代码本身无法修改它。  
   
- The called procedure might modify its local copy of a nonmodifiable argument, but that modification does not affect the underlying element in the calling code.  
+ 被调用的过程可能会修改其不可更改参数的本地副本，但该修改不会影响调用代码中的基础元素。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [过程](./index.md)
 - [过程参数和自变量](./procedure-parameters-and-arguments.md)

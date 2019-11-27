@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447753"
 ---
 # <a name="icorprofilerinfobegininprocdebugging-method"></a>ICorProfilerInfo::BeginInprocDebugging 方法
-Initializes in-process debugging support. This method is obsolete in the .NET Framework version 2.0.  
+初始化进程内调试支持。 此方法在 .NET Framework 版本2.0 中已过时。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,13 +35,13 @@ HRESULT BeginInprocDebugging(
   
 ## <a name="parameters"></a>参数  
  `fThisThreadOnly`  
- [in] Set this value to `true` to initialize debugging support for only the current thread; set it to `false` to initialize debugging support for all threads.  
+ 中将此值设置为 `true` 以仅初始化当前线程的调试支持;将它设置为 "`false`"，以初始化所有线程的调试支持。  
   
  `pdwProfilerContext`  
- [out] The pointer to a returned value that identifies the debugging session.  
+ 弄指向用于标识调试会话的返回值的指针。  
   
 ## <a name="remarks"></a>备注  
- The CLR debugging services supported limited in-process debugging in the .NET Framework versions 1.0 and 1.1. In-process debugging enabled a profiler to use the inspection portions of the debugging API. However, due to customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.  
+ CLR 调试服务支持 .NET Framework 版本1.0 和1.1 中的有限进程内调试。 进程内调试使探查器能够使用调试 API 的检查部分。 不过，由于客户反馈，已从版本2.0 中的 .NET Framework 中删除进程内调试，并将其替换为一组功能，这些功能与分析 API 行更详细。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -50,8 +50,8 @@ HRESULT BeginInprocDebugging(
   
  **库：** CorGuids.lib  
   
- **.NET Framework Version:** 1.0  
+ **.NET Framework 版本：** 1。0  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

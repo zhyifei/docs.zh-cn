@@ -23,7 +23,7 @@ Ws-reliablemessaging 2007 年2月版协议是在 WCF 中由 <xref:System.Service
 
  本文档使用下表中的前缀和命名空间。
 
-|前缀|Namespace|
+|前缀|命名空间|
 |-|-|
 |wsrm|http://docs.oasis-open.org/ws-rx/wsrm/200702|
 |netrm|http://schemas.microsoft.com/ws/2006/05/rm|
@@ -352,11 +352,11 @@ WCF 通过使用安全传输（HTTPS）、使用 WS-MANAGEMENT 组合和结合 W
 
 - R2301：若要保护 WS-RELIABLEMESSAGING 序列的完整性，以及单个消息的完整性和保密性，WCF 需要使用 WS 安全对话。
 
-- R2302： AWS-必须在建立 WS-RELIABLEMESSAGING 序列之前建立安全会话会话。
+- R2302：必须在建立 WS-ReliableMessaging 序列之前建立 WS-Secure Conversation 会话。
 
 - R2303：如果 WS-ReliableMessaging 序列生存期超过了 WS-Secure Conversation 会话的生存期，则必须通过使用对应的 WS-Secure Conversation 续订绑定来续订通过使用 WS-Secure Conversation 建立的 `SecurityContextToken`。
 
-- B2304： WS-RELIABLEMESSAGING 序列或一对相关的反向序列始终绑定到一个 Ws-secureconversation 会话。
+- B2304：WS-ReliableMessaging 序列或一对相关的相反序列始终绑定到单个 WS-SecureConversation 会话。
 
 - R2305：在用 WS 安全会话撰写时，WCF 响应程序要求 `CreateSequence` 消息包含 `wsse:SecurityTokenReference` 元素和 `wsrm:UsesSequenceSTR` 标头。
 

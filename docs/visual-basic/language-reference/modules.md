@@ -13,24 +13,24 @@ ms.locfileid: "74344183"
 ---
 # <a name="modules-visual-basic"></a>模块 (Visual Basic)
 
-Visual Basic provides several modules that enable you to simplify common tasks in your code, including manipulating strings, performing mathematical calculations, getting system information, performing file and directory operations, and so on. The following table lists the modules provided by Visual Basic.  
+Visual Basic 提供了多个模块，使你能够在代码中简化常见任务，包括操作字符串、执行数学计算、获取系统信息、执行文件和目录操作等。 下表列出了 Visual Basic 提供的模块。  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.Constants>|Contains miscellaneous constants. These constants can be used anywhere in your code.|  
-|<xref:Microsoft.VisualBasic.ControlChars>|Contains constant control characters for printing and displaying text.|  
-|<xref:Microsoft.VisualBasic.Conversion>|Contains members that convert decimal numbers to other bases, numbers to strings, strings to numbers, and one data type to another.|  
-|<xref:Microsoft.VisualBasic.DateAndTime>|Contains members that get the current date or time, perform date calculations, return a date or time, set the date or time, or time the duration of a process.|  
-|<xref:Microsoft.VisualBasic.ErrObject>|Contains information about run-time errors and methods to raise or clear an error.|  
-|<xref:Microsoft.VisualBasic.FileSystem>|Contains members that perform file, directory or folder, and system operations.|  
-|<xref:Microsoft.VisualBasic.Financial>|Contains procedures that are used to perform financial calculations.|  
-|<xref:Microsoft.VisualBasic.Globals>|Contains information about the current scripting engine version.|  
-|<xref:Microsoft.VisualBasic.Information>|Contains the members that return, test for, or verify information such as array size, type names, and so on.|  
-|<xref:Microsoft.VisualBasic.Interaction>|Contains members interact with objects, applications, and systems.|  
-|<xref:Microsoft.VisualBasic.Strings>|Contains members that perform string operations such as reformatting strings, searching a string, getting the length of a string, and so on.|  
-|<xref:Microsoft.VisualBasic.VBMath>|Contains members perform mathematical operations.|  
+|<xref:Microsoft.VisualBasic.Constants>|包含其他常量。 可以在代码中的任何位置使用这些常量。|  
+|<xref:Microsoft.VisualBasic.ControlChars>|包含用于打印和显示文本的常量控制字符。|  
+|<xref:Microsoft.VisualBasic.Conversion>|包含一些成员，这些成员将十进制数字转换为其他基项、将数字转换为字符串，将字符串转换为数字，并将一种数据类型转换为|  
+|<xref:Microsoft.VisualBasic.DateAndTime>|包含一些成员，这些成员可获取当前日期或时间、执行日期计算、返回日期或时间、设置日期或时间，或设置进程的持续时间。|  
+|<xref:Microsoft.VisualBasic.ErrObject>|包含有关运行时错误的信息，以及用于引发或清除错误的方法。|  
+|<xref:Microsoft.VisualBasic.FileSystem>|包含执行文件、目录或文件夹以及系统操作的成员。|  
+|<xref:Microsoft.VisualBasic.Financial>|包含用于执行财务计算的过程。|  
+|<xref:Microsoft.VisualBasic.Globals>|包含有关当前脚本引擎版本的信息。|  
+|<xref:Microsoft.VisualBasic.Information>|包含返回、测试或验证信息（如数组大小、类型名称等）的成员。|  
+|<xref:Microsoft.VisualBasic.Interaction>|包含与对象、应用程序和系统交互的成员。|  
+|<xref:Microsoft.VisualBasic.Strings>|包含一些成员，这些成员执行字符串操作，如重新格式化字符串、搜索字符串、获取字符串的长度等。|  
+|<xref:Microsoft.VisualBasic.VBMath>|包含成员执行数学运算。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 语言参考](../../visual-basic/language-reference/index.md)
 - [Visual Basic](../../visual-basic/index.md)

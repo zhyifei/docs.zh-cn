@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448650"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset 方法
-Gets the line information associated with an offset. If the offset parameter (`dwOffset`) is not a sequence point, this method gets the line information associated with the previous offset.  
+获取与偏移量关联的行信息。 如果 offset 参数（`dwOffset`）不是序列点，则此方法将获取与上一个偏移量关联的行信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,29 +39,29 @@ HRESULT GetLineFromOffset(
   
 ## <a name="parameters"></a>参数  
  `dwOffset`  
- [in] A `ULONG32` that contains the offset.  
+ 中一个包含偏移量的 `ULONG32`。  
   
  `pline`  
- [out] A pointer to a `ULONG32` that receives the line.  
+ 弄指向接收行的 `ULONG32` 的指针。  
   
  `pcolumn`  
- [out] A pointer to a `ULONG32` that receives the column.  
+ 弄指向接收列的 `ULONG32` 的指针。  
   
  `pendLine`  
- [out] A pointer to a `ULONG32` that receives the end line.  
+ 弄指向接收结束行的 `ULONG32` 的指针。  
   
  `pendColumn`  
- [out] A pointer to a `ULONG32` that receives the end column.  
+ 弄指向接收结束列的 `ULONG32` 的指针。  
   
  `pdwStartOffset`  
- [out] A pointer to a `ULONG32` that receives the associated sequence point.  
+ 弄指向接收关联序列点的 `ULONG32` 的指针。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymENCUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

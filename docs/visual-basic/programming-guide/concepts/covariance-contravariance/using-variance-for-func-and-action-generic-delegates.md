@@ -9,11 +9,11 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349047"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Using Variance for Func and Action Generic Delegates (Visual Basic)
+# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>对 Func 和 Action 泛型委托使用变体（Visual Basic）
 
 这些示例演示如何使用 `Func` 和 `Action` 泛型委托中的协变和逆变来启用重用方法并为代码中提供更多的灵活性。
 
-For more information about covariance and contravariance, see [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).
+有关协变和逆变的详细信息，请参阅[委托中的变体（Visual Basic）](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)。
 
 ## <a name="using-delegates-with-covariant-type-parameters"></a>使用具有协变类型参数的委托
 
@@ -92,7 +92,7 @@ Class AddressBook
 End Class
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [协变和逆变 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
 - [泛型](../../../../standard/generics/index.md)

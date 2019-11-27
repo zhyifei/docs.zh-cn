@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432984"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>ICorProfilerInfo2::GetStaticFieldInfo 方法
-Gets a value that indicates the kind of static that applies to the specified field.  
+获取一个值，该值指示应用于指定字段的静态类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,18 +36,18 @@ HRESULT GetStaticFieldInfo (
   
 ## <a name="parameters"></a>参数  
  `classId`  
- [in] The ID of the class in which the static field is defined.  
+ 中在其中定义静态字段的类的 ID。  
   
  `fieldToken`  
- [in] The metadata token for the static field.  
+ 中静态字段的元数据标记。  
   
  `pFieldInfo`  
- [out] A pointer to a value of the [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) enumeration that indicates whether the specified field is static, and if so, the kind of static that applies to the field.  
+ 弄一个指针，指向[COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md)枚举的值，该值指示指定字段是否为静态的，如果为，则为应用于该字段的静态类型。  
   
 ## <a name="remarks"></a>备注  
- This information can be used to determine which function to call to get the address of the static field.  
+ 此信息可用于确定要调用哪个函数以获取静态字段的地址。  
   
- The profiler code should still check the metadata for a static field to ensure that it actually has an address. Static literals (that is, constants) exist only in the metadata and do not have an address.  
+ 探查器代码仍应检查静态字段的元数据，以确保它实际具有地址。 静态文本（即常量）仅存在于元数据中，并且没有地址。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -58,7 +58,7 @@ HRESULT GetStaticFieldInfo (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

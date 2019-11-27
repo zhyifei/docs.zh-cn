@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429748"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize 方法
-Initializes the symbol reader with the metadata importer interface that this reader will be associated with, along with the file name of the module.  
+用此读取器将与之关联的元数据导入程序接口以及模块的文件名初始化符号读取器。  
   
 > [!NOTE]
-> This method can be called only once, and must be called before any other reader methods.  
+> 此方法只能调用一次，并且必须在任何其他读取器方法之前调用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,26 +40,26 @@ HRESULT Initialize (
   
 ## <a name="parameters"></a>参数  
  `importer`  
- [in] The metadata importer interface with which this reader will be associated.  
+ 中此读取器将与之关联的元数据导入程序接口。  
   
  `filename`  
- [in] The file name of the module. You can use the `pIStream` parameter instead.  
+ 中模块的文件名。 可以改为使用 `pIStream` 参数。  
   
  `searchPath`  
- [in] The path to search. 此参数可选。  
+ 中要搜索的路径。 此参数可选。  
   
  `pIStream`  
- [in] The file stream, used as an alternative to the filename parameter.  
+ 中文件流，用作 filename 参数的替代项。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="remarks"></a>备注  
- You need to specify only one of the `filename` or the `pIStream` parameters, not both. `searchPath` 参数是可选的。  
+ 只需指定 `filename` 或 `pIStream` 参数之一，而不能同时指定两者。 `searchPath` 参数是可选的。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedReader 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

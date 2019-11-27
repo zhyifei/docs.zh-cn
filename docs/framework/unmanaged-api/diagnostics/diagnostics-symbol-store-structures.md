@@ -15,17 +15,17 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448520"
 ---
 # <a name="diagnostics-symbol-store-structures"></a>诊断符号存储区结构
-This topic describes the unmanaged structures that the diagnostics symbol store API uses.  
+本主题介绍诊断符号存储区 API 使用的非托管结构。  
   
 ## <a name="in-this-section"></a>本节内容  
  [CALL_ID 结构](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)  
- Provides information to a debugger about a function that is being called.  
+ 向调试器提供有关正在调用的函数的信息。  
   
  [SYMLINEDELTA 结构](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)  
- Provides information to the symbol handler about methods that were moved as a result of edits.  
+ 向符号处理程序提供有关因编辑而移动的方法的信息。  
   
  [USER_THREAD 结构](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)  
- Provides information to a debugger about a thread.  
+ 向调试器提供有关线程的信息。  
   
 ## <a name="related-sections"></a>相关章节  
  [诊断符号存储区接口](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  

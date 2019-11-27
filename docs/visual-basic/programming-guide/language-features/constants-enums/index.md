@@ -25,14 +25,14 @@ ms.locfileid: "74353989"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|术语|定义|  
+|术语|Definition|  
 |---|---|  
 |[常量概述](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)|本节中的主题介绍常量及其用法。|  
 |[枚举概述](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)|本节中的主题介绍枚举及其用法。|  
   
 ## <a name="related-sections"></a>相关章节  
   
-|术语|定义|  
+|术语|Definition|  
 |---|---|  
 |[Const 语句](../../../../visual-basic/language-reference/statements/const-statement.md)|介绍用于声明常量的 `Const` 语句。|  
 |[Enum 语句](../../../../visual-basic/language-reference/statements/enum-statement.md)|介绍用于创建枚举的 `Enum` 语句。|  

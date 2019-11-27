@@ -22,18 +22,18 @@ ms.locfileid: "74283417"
 ## <a name="scrollbar-parts"></a>滚动条部件  
  下表列出了 <xref:System.Windows.Controls.Primitives.ScrollBar> 控件的已命名部分。  
   
-|部件|Type|描述|  
+|部件|类型|说明|  
 |-|-|-|  
 |PART_Track|<xref:System.Windows.Controls.Primitives.Track>|指示 <xref:System.Windows.Controls.Primitives.ScrollBar>位置的元素的容器。|  
   
 ## <a name="scrollbar-states"></a>滚动条状态  
  下表列出了 <xref:System.Windows.Controls.Primitives.ScrollBar> 控件的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |----------------------|---------------------------|-----------------|  
-|一般|CommonStates|默认状态。|  
+|正常|CommonStates|默认状态。|  
 |MouseOver|CommonStates|鼠标指针悬停在控件上。|  
-|Disabled|CommonStates|已禁用控件。|  
+|已禁用|CommonStates|已禁用控件。|  
 |有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `true` 并且控件具有焦点。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `true` 的，该控件没有焦点。|  

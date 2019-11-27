@@ -74,7 +74,7 @@ private void SerializeDataSet(string filename){
 
 ## <a name="serializing-an-xmlelement-and-xmlnode"></a>序列化 XmlElement 和 XmlNode
 
-You can also serialize instances of an <xref:System.Xml.XmlElement> or <xref:System.Xml.XmlNode> class, as shown in the following code example.
+还可以序列化 <xref:System.Xml.XmlElement> 或 <xref:System.Xml.XmlNode> 类的实例，如下面的代码示例中所示。
 
 ```vb
 private Sub SerializeElement(filename As String)
@@ -369,7 +369,7 @@ public class Employee {
 
 `CreatePO` 方法创建 `PurchaseOrder`、`Address` 和 `OrderedItem` 类对象，并设置公共字段值。 该方法还构造 <xref:System.Xml.Serialization.XmlSerializer> 类的实例，该类用于序列化和反序列化 `PurchaseOrder`。 请注意，代码传递的是将序列化为构造函数的类的类型。 代码还创建可用于将 XML 流写入 XML 文档的 `FileStream`。
 
-`ReadPo` 方法稍简单一些。 它只创建要反序列化的对象并读出它们的值。 As with the `CreatePo` method, you must first construct an <xref:System.Xml.Serialization.XmlSerializer>, passing the type of the class to be deserialized to the constructor. 此外，还需要使用 <xref:System.IO.FileStream> 读取 XML 文档。 要反序列化对象，请调用带有 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 参数的 <xref:System.IO.FileStream> 方法。 已反序列化的对象必须强制转换为 `PurchaseOrder` 类型的对象变量。 然后代码读取已反序列化的 `PurchaseOrder` 的值。 请注意，您还可以读取 PO.xml 文件，创建该文件是为了查看实际的 XML 输出。
+`ReadPo` 方法稍简单一些。 它只创建要反序列化的对象并读出它们的值。 与 `CreatePo` 方法一样，必须先构造 <xref:System.Xml.Serialization.XmlSerializer>，将要反序列化的类的类型传递到构造函数。 此外，还需要使用 <xref:System.IO.FileStream> 读取 XML 文档。 要反序列化对象，请调用带有 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 参数的 <xref:System.IO.FileStream> 方法。 已反序列化的对象必须强制转换为 `PurchaseOrder` 类型的对象变量。 然后代码读取已反序列化的 `PurchaseOrder` 的值。 请注意，您还可以读取 PO.xml 文件，创建该文件是为了查看实际的 XML 输出。
 
 ```vb
 Imports System.IO
@@ -767,11 +767,11 @@ XML 输出可能如下所示。
 </PurchaseOrder>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 序列化简介](introducing-xml-serialization.md)
 - [使用属性控制 XML 序列化](controlling-xml-serialization-using-attributes.md)
 - [用来控制 XML 序列化的属性](attributes-that-control-xml-serialization.md)
-- [XmlSerializer Class](xref:System.Xml.Serialization.XmlSerializer)
+- [XmlSerializer 类](xref:System.Xml.Serialization.XmlSerializer)
 - [如何：序列化对象](how-to-serialize-an-object.md)
 - [如何：反序列化对象](how-to-deserialize-an-object.md)

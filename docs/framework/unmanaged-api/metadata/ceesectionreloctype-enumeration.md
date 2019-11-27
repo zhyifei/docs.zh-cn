@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444153"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType 枚举
-Provides values to influence the type of `reloc` instruction emitted in a call to [ICeeGen::AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).  
+提供一些值，以影响在对[ICeeGen：： AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)的调用中发出的 `reloc` 指令的类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,34 +50,34 @@ typedef enum  {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`srRelocAbsolute`|Generates only a section-relative `reloc`, sending nothing into a .reloc section.|  
-|`srRelocHighLow`|Generates a `reloc` for a pointer-sized location. This is transformed into BASED_HIGHLOW or BASED_DIR64 depending on the platform.|  
-|`srRelocHighAdj`|Generates a `reloc` for the top 16 bits of a 32-bit number, where the bottom 16 bits are included in the next word in the .reloc table.|  
-|`srRelocMapToken`|Generates a token map relocation, sending nothing into a .reloc section.|  
-|`srRelocRelative`|Indicates that the value is a relative address fixup.|  
-|`srRelocFilePos`|Generates only a section-relative `reloc`, sending nothing into a .reloc section. This `reloc` is relative to the file position of the section, not the section's virtual address.|  
-|`srRelocCodeRelative`|Specifies a code-relative address fixup.|  
-|`srRelocIA64Imm64`|Generates a `reloc` for a 64 bit address in an ia64 `movl` instruction.|  
-|`srRelocDir64`|Generates a `reloc` for a 64-bit address.|  
-|`srRelocIA64PcRel25`|Generate a `reloc` for a 25-bit PC-relative address in an ia64 `br.call` instruction.|  
-|`srRelocIA64PcRel64`|Generates a `reloc` for a 64-bit PC-relative address in an ia64 `brl.call` instruction.|  
-|`srRelocAbsoluteTagged`|Generates a 30-bit section-relative `reloc`, used for tagged pointer values.|  
-|`srRelocSentinel`|A sentinel value to help ensure any additions to this enum are reflected to the internal `reloc` name array.|  
-|`srNoBaseReloc`|Specifies not to emit a base `reloc`.|  
-|`srRelocPtr`|A value indicating that the pre-fixup contents of memory are a pointer rather than a section offset.|  
+|`srRelocAbsolute`|仅生成与节相关的 `reloc`，不向 .reloc 节发送任何内容。|  
+|`srRelocHighLow`|为指针大小的位置生成 `reloc`。 这会根据平台转换为 BASED_HIGHLOW 或 BASED_DIR64。|  
+|`srRelocHighAdj`|为32位数字的前16位生成 `reloc`，其中，后16位包含在 .reloc 表的下一个单词中。|  
+|`srRelocMapToken`|生成一个标记映射重定位，无需将其发送到 .reloc 部分。|  
+|`srRelocRelative`|指示值是相对地址链接地址。|  
+|`srRelocFilePos`|仅生成与节相关的 `reloc`，不向 .reloc 节发送任何内容。 此 `reloc` 相对于该节的文件位置，而不是该部分的虚拟地址。|  
+|`srRelocCodeRelative`|指定代码相对地址链接地址。|  
+|`srRelocIA64Imm64`|为 ia64 `movl` 指令中的64位地址生成 `reloc`。|  
+|`srRelocDir64`|为64位地址生成 `reloc`。|  
+|`srRelocIA64PcRel25`|为 ia64 `br.call` 指令中的25位 PC 相对地址生成 `reloc`。|  
+|`srRelocIA64PcRel64`|为 ia64 `brl.call` 指令中的64位 PC 相对地址生成 `reloc`。|  
+|`srRelocAbsoluteTagged`|生成一个与标记指针值相对应的30位相对 `reloc`。|  
+|`srRelocSentinel`|一个 sentinel 值，用于帮助确保对此枚举的任何添加都反映到内部 `reloc` 名称数组中。|  
+|`srNoBaseReloc`|指定不发出基 `reloc`。|  
+|`srRelocPtr`|一个值，该值指示内存的修正内容是指针而不是节偏移量。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
 - [ICeeGen 接口](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

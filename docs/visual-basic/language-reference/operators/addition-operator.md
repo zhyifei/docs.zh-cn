@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350295"
 ---
 # <a name="-operator-visual-basic"></a>+ 运算符 (Visual Basic)
-Adds two numbers or returns the positive value of a numeric expression. Can also be used to concatenate two string expressions.  
+将两个数相加或返回数值表达式的正值。 还可用于连接两个字符串表达式。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,90 +34,90 @@ expression1 + expression2
   
 ## <a name="parts"></a>部件  
   
-|术语|定义|  
+|术语|Definition|  
 |---|---|  
-|`expression1`|必须的。 Any numeric or string expression.|  
-|`expression2`|Required unless the `+` operator is calculating a negative value. Any numeric or string expression.|  
+|`expression1`|必需。 任何数值或字符串表达式。|  
+|`expression2`|必需，除非 `+` 运算符计算负值。 任何数值或字符串表达式。|  
   
 ## <a name="result"></a>结果  
- If `expression1` and `expression2` are both numeric, the result is their arithmetic sum.  
+ 如果 `expression1` 和 `expression2` 均为数值，则结果是其算术和。  
   
- If `expression2` is absent, the `+` operator is the *unary* identity operator for the unchanged value of an expression. In this sense, the operation consists of retaining the sign of `expression1`, so the result is negative if `expression1` is negative.  
+ 如果 `expression2` 不存在，则 `+` 运算符为表达式的未更改值的*一元*标识运算符。 从这种意义上讲，操作包括保留 `expression1`的符号，因此如果 `expression1` 为负，则结果为负。  
   
- If `expression1` and `expression2` are both strings, the result is the concatenation of their values.  
+ 如果 `expression1` 和 `expression2` 都是字符串，则结果是其值的串联。  
   
- If `expression1` and `expression2` are of mixed types, the action taken depends on their types, their contents, and the setting of the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md). For more information, see the tables in "Remarks."  
+ 如果 `expression1` 和 `expression2` 属于混合类型，则执行的操作取决于它们的类型、内容和[Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)的设置。 有关详细信息，请参阅 "备注" 中的表。  
   
 ## <a name="supported-types"></a>支持的类型  
- All numeric types, including the unsigned and floating-point types and `Decimal`, and `String`.  
+ 所有数值类型，包括未签名和浮点类型以及 `Decimal`和 `String`。  
   
 ## <a name="remarks"></a>备注  
- In general, `+` performs arithmetic addition when possible, and concatenates only when both expressions are strings.  
+ 通常，如果可能，`+` 会执行算术加法运算，并且仅当两个表达式都是字符串时才会进行连接。  
   
- If neither expression is an `Object`, Visual Basic takes the following actions.  
+ 如果两个表达式都不是 `Object`，则 Visual Basic 执行以下操作。  
   
-|Data types of expressions|Action by compiler|  
+|表达式的数据类型|编译器操作|  
 |---|---|  
-|Both expressions are numeric data types (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, or `Double`)|Add. The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`. See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
-|Both expressions are of type `String`|Concatenate.|  
-|One expression is a numeric data type and the other is a string|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then implicitly convert the `String` to `Double` and add.<br /><br /> If the `String` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.|  
-|One expression is a numeric data type, and the other is [Nothing](../../../visual-basic/language-reference/nothing.md)|Add, with `Nothing` valued as zero.|  
-|One expression is a string, and the other is `Nothing`|Concatenate, with `Nothing` valued as "".|  
+|这两个表达式均为数值数据类型（`SByte`、`Byte`、`Short`、`UShort`、`Integer`、`UInteger`、`Long`、`ULong`、`Decimal`、`Single`或 `Double`）|“添加”。 Result 数据类型是一种适合 `expression1` 和 `expression2`的数据类型的数值类型。 请参阅[运算符结果的数据类型](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)中的 "整数算法" 表。|  
+|这两个表达式的类型都是 `String`|起来.|  
+|一个表达式为数值数据类型，另一个表达式为字符串|如果 `On``Option Strict`，则会生成编译器错误。<br /><br /> 如果 `Off``Option Strict`，则将 `String` 隐式转换为 `Double` 并添加。<br /><br /> 如果 `String` 无法转换为 `Double`，则引发 <xref:System.InvalidCastException> 异常。|  
+|一个表达式为数值数据类型，另一个表达式为[Nothing](../../../visual-basic/language-reference/nothing.md)|添加，`Nothing` 值为零。|  
+|一个表达式是字符串，另一个表达式是 `Nothing`|串联，`Nothing` 值为 ""。|  
   
- If one expression is an `Object` expression, Visual Basic takes the following actions.  
+ 如果一个表达式是 `Object` 表达式，Visual Basic 会执行以下操作。  
   
-|Data types of expressions|Action by compiler|  
+|表达式的数据类型|编译器操作|  
 |---|---|  
-|`Object` expression holds a numeric value and the other is a numeric data type|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then add.|  
-|`Object` expression holds a numeric value and the other is of type `String`|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then implicitly convert the `String` to `Double` and add.<br /><br /> If the `String` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.|  
-|`Object` expression holds a string and the other is a numeric data type|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then implicitly convert the string `Object` to `Double` and add.<br /><br /> If the string `Object` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.|  
-|`Object` expression holds a string and the other is of type `String`|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then implicitly convert `Object` to `String` and concatenate.|  
+|`Object` 表达式保存数字值，另一种是数值数据类型|如果 `On``Option Strict`，则会生成编译器错误。<br /><br /> 如果 `Off``Option Strict`，则添加。|  
+|`Object` 表达式保存一个数字值，另一个的类型为 `String`|如果 `On``Option Strict`，则会生成编译器错误。<br /><br /> 如果 `Off``Option Strict`，则将 `String` 隐式转换为 `Double` 并添加。<br /><br /> 如果 `String` 无法转换为 `Double`，则引发 <xref:System.InvalidCastException> 异常。|  
+|`Object` 表达式包含一个字符串，另一个是数值数据类型|如果 `On``Option Strict`，则会生成编译器错误。<br /><br /> 如果 `Off``Option Strict`，则将字符串 `Object` 隐式转换为 `Double` 并添加。<br /><br /> 如果字符串 `Object` 无法转换为 `Double`，则引发 <xref:System.InvalidCastException> 异常。|  
+|`Object` 表达式保存了一个字符串，另一个的类型为 `String`|如果 `On``Option Strict`，则会生成编译器错误。<br /><br /> 如果 `Off``Option Strict`，则将 `Object` 隐式转换为 `String` 并连接。|  
   
- If both expressions are `Object` expressions, Visual Basic takes the following actions (`Option Strict Off` only).  
+ 如果两个表达式都 `Object` 表达式，则 Visual Basic 执行以下操作（仅`Option Strict Off`）。  
   
-|Data types of expressions|Action by compiler|  
+|表达式的数据类型|编译器操作|  
 |---|---|  
-|Both `Object` expressions hold numeric values|Add.|  
-|Both `Object` expressions are of type `String`|Concatenate.|  
-|One `Object` expression holds a numeric value and the other holds a string|Implicitly convert the string `Object` to `Double` and add.<br /><br /> If the string `Object` cannot be converted to a numeric value, then throw an <xref:System.InvalidCastException> exception.|  
+|这两个表达式 `Object` 都包含数值|“添加”。|  
+|这两个表达式 `Object` 类型 `String`|起来.|  
+|一个 `Object` 表达式保存一个数值，另一个表达式保存一个字符串|将字符串 `Object` 隐式转换为 `Double` 并添加。<br /><br /> 如果字符串 `Object` 无法转换为数值，则引发 <xref:System.InvalidCastException> 异常。|  
   
- If either `Object` expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md) or <xref:System.DBNull>, the `+` operator treats it as a `String` with a value of "".  
+ 如果 `Object` 表达式的计算结果均为[Nothing](../../../visual-basic/language-reference/nothing.md)或 <xref:System.DBNull>，则 `+` 运算符将其视为值为 "" 的 `String`。  
   
 > [!NOTE]
-> When you use the `+` operator, you might not be able to determine whether addition or string concatenation will occur. Use the `&` operator for concatenation to eliminate ambiguity and to provide self-documenting code.  
+> 当使用 `+` 运算符时，可能无法确定是进行加法还是字符串串联。 使用 `&` 运算符进行串联以消除多义性，并提供自文档代码。  
   
 ## <a name="overloading"></a>重载  
- The `+` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. 有关更多信息，请参见 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ 可以*重载*`+` 运算符，这意味着当操作数具有该类或结构的类型时，该类或结构可以重新定义其行为。 如果你的代码在该类或结构上使用此运算符，请确保了解其重新定义的行为。 有关更多信息，请参见 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>示例  
- The following example uses the `+` operator to add numbers. If the operands are both numeric, Visual Basic computes the arithmetic result. The arithmetic result represents the sum of the two operands.  
+ 下面的示例使用 `+` 运算符来添加数字。 如果操作数均为数值，则 Visual Basic 计算算术结果。 算术结果表示两个操作数之和。  
   
  [!code-vb[VbVbalrOperators#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#6)]  
   
- You can also use the `+` operator to concatenate strings. If the operands are both strings, Visual Basic concatenates them. The concatenation result represents a single string consisting of the contents of the two operands one after the other.  
+ 你还可以使用 `+` 运算符来串联字符串。 如果两个操作数都是字符串，Visual Basic 将它们连接起来。 连接结果表示一个字符串，该字符串包含两个操作数的内容。  
   
- If the operands are of mixed types, the result depends on the setting of the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md). The following example illustrates the result when `Option Strict` is `On`.  
+ 如果操作数属于混合类型，则结果取决于[Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)的设置。 下面的示例演示了 `On``Option Strict` 时的结果。  
   
  [!code-vb[VbVbalrOperators#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class3.vb#53)]  
   
  [!code-vb[VbVbalrOperators#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#50)]  
 [!code-vb[VbVbalrOperators#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#51)]  
   
- The following example illustrates the result when `Option Strict` is `Off`.  
+ 下面的示例演示了 `Off``Option Strict` 时的结果。  
   
  [!code-vb[VbVbalrOperators#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#54)]  
   
  [!code-vb[VbVbalrOperators#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#50)]  
 [!code-vb[VbVbalrOperators#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#52)]  
   
- To eliminate ambiguity, you should use the `&` operator instead of `+` for concatenation.  
+ 为了消除多义性，应使用 `&` 运算符而不是 `+` 进行串联。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [& 运算符](../../../visual-basic/language-reference/operators/concatenation-operator.md)
 - [串联运算符](../../../visual-basic/language-reference/operators/concatenation-operators.md)
 - [算术运算符](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic 中的算术运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
 - [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)

@@ -24,7 +24,7 @@ ms.locfileid: "74343847"
 ---
 # <a name="const-directive"></a>#Const 指令
 
-Defines conditional compiler constants for Visual Basic.  
+为 Visual Basic 定义条件编译器常量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,16 +35,16 @@ Defines conditional compiler constants for Visual Basic.
 ## <a name="parts"></a>部件  
 
  `constname`  
- 必须的。 Name of the constant being defined.  
+ 必需。 要定义的常数的名称。  
   
  `expression`  
- 必须的。 Literal, other conditional compiler constant, or any combination that includes any or all arithmetic or logical operators except `Is`.  
+ 必需。 文本、其他条件编译器常量或包含除 `Is`以外的任何或所有算术或逻辑运算符的任意组合。  
   
 ## <a name="remarks"></a>备注  
 
- Conditional compiler constants are always private to the file in which they appear. You cannot create public compiler constants using the `#Const` directive; you can create them only in the user interface or with the `/define` compiler option.  
+ 条件编译器常量总是专用于它们所在的文件。 不能使用 `#Const` 指令创建公共编译器常量;只能在用户界面中创建它们，也可以通过 `/define` 编译器选项来创建它们。  
   
- You can use only conditional compiler constants and literals in `expression`. Using a standard constant defined with `Const` causes an error. Conversely, you can use constants defined with the `#Const` keyword only for conditional compilation. Constants can also be undefined, in which case they have a value of `Nothing`.  
+ 只能在 `expression`中使用条件编译器常量和文本。 使用使用定义的标准常数 `Const` 会导致错误。 相反，您可以将使用 `#Const` 关键字定义的常量仅用于条件编译。 常数也可以是未定义的，在这种情况下，它们的值为 `Nothing`。  
   
 ## <a name="example"></a>示例  
 
@@ -52,9 +52,9 @@ Defines conditional compiler constants for Visual Basic.
   
  [!code-vb[VbVbalrConditionalComp#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#3)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [-define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
+- [-define （Visual Basic）](../../../visual-basic/reference/command-line-compiler/define.md)
 - [#If...Then...#Else 指令](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
 - [Const 语句](../../../visual-basic/language-reference/statements/const-statement.md)
 - [条件编译](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449397"
 ---
 # <a name="freewin32resblob-method"></a>FreeWin32ResBlob 方法
-Releases the Win32 resource blob and associated resources.  
+释放 Win32 资源 blob 和关联的资源。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,15 +34,15 @@ HRESULT FreeWin32ResBlob(
   
 ## <a name="parameters"></a>参数  
  `ppResBlob`  
- The resource blob to be released. This method assigns the blob pointer to NULL.  
+ 要释放的资源 blob。 此方法将 blob 指针赋给 NULL。  
   
 ## <a name="return-value"></a>返回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- Requires alink.h  
+ 需要 alink  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IALink 接口](ialink-interface.md)
 - [IALink2 接口](ialink2-interface.md)

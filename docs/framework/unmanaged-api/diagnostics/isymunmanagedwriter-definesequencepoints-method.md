@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427982"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints 方法
-在当前方法内定义一组序列点。 Each starting line and starting column define the start of a statement within a method. Each ending line and ending column define the end of a statement within a method. The arrays should be sorted in increasing order of offsets. The offset is always measured from the start of the method, in bytes.  
+在当前方法内定义一组序列点。 每个起始行和起始列定义方法中语句的开头。 每个结束行和结束列定义方法中语句的末尾。 应按偏移量的递增顺序对数组进行排序。 始终从方法的开头开始度量偏移量（以字节为单位）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,32 +40,32 @@ HRESULT DefineSequencePoints(
   
 ## <a name="parameters"></a>参数  
  `document`  
- [in] The document object for which the sequence points are being defined.  
+ 中正在为其定义序列点的文档对象。  
   
  `spCount`  
- [in] A `ULONG32` that indicates the size of each of the `offsets`, `lines`, `columns`, `endLines`, and `endColumns` buffers.  
+ 中一个 `ULONG32`，指示 `offsets`、`lines`、`columns`、`endLines`和 `endColumns` 缓冲区的大小。  
   
  `offsets`  
- [in] The offset of the sequence points measured from the beginning of the method.  
+ 中从方法的开头测量的序列点的偏移量。  
   
  `lines`  
- [in] The starting line numbers of the sequence points.  
+ 中序列点的起始行号。  
   
  `columns`  
- [in] The starting column numbers of the sequence points.  
+ 中序列点的起始列号。  
   
  `endLines`  
- [in] The ending line numbers of the sequence points. 此参数可选。  
+ 中序列点的结束行号。 此参数可选。  
   
  `endColumns`  
- [in] The ending column numbers of the sequence points. 此参数可选。  
+ 中序列点的结束列号。 此参数可选。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

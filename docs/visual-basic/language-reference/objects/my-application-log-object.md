@@ -17,7 +17,7 @@ ms.locfileid: "74344125"
 ## <a name="remarks"></a>备注  
  有关 `My.Application.Log` 对象所使用方法和属性的信息，请参阅 <xref:Microsoft.VisualBasic.Logging.Log>。  
   
- For more information, see [Logging Information from the Application](../../../visual-basic/developing-apps/programming/log-info/index.md).  
+ 有关详细信息，请参阅[应用程序的日志记录信息](../../../visual-basic/developing-apps/programming/log-info/index.md)。  
   
 > [!NOTE]
 > 还可以使用.NET Framework 中的类来记录应用程序中的信息。 有关详细信息，请参阅 [Tracing and Instrumenting Applications](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md)。  
@@ -25,10 +25,10 @@ ms.locfileid: "74344125"
 ## <a name="requirements"></a>要求  
  **命名空间：** <xref:Microsoft.VisualBasic.Logging>  
   
- **Class:** <xref:Microsoft.VisualBasic.Logging.Log>  
+ **类：** <xref:Microsoft.VisualBasic.Logging.Log>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **程序集：** Visual Basic 运行时库（在 Microsoft. .dll 中）  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [My.Application 对象](../../../visual-basic/language-reference/objects/my-application-object.md)

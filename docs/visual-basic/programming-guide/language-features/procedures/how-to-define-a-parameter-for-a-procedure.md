@@ -16,43 +16,43 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344889"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>如何：为过程定义参数 (Visual Basic)
-A *parameter* allows the calling code to pass a value to the procedure when it calls it. You declare each parameter for a procedure the same way you declare a variable, specifying its name and data type. You also specify the passing mechanism, and whether the parameter is optional.  
+*参数*允许调用代码在调用时将值传递给过程。 声明过程的每个参数的方式与声明变量的方式相同，即指定其名称和数据类型。 还可指定传递机制，以及参数是否为可选。  
   
- For more information, see [Procedure Parameters and Arguments](./procedure-parameters-and-arguments.md).  
+ 有关详细信息，请参阅[过程参数和参数](./procedure-parameters-and-arguments.md)。  
   
-### <a name="to-define-a-procedure-parameter"></a>To define a procedure parameter  
+### <a name="to-define-a-procedure-parameter"></a>定义过程参数  
   
-1. In the procedure declaration, add the parameter name to the procedure's parameter list, separating it from other parameters by commas.  
+1. 在过程声明中，将参数名称添加到过程的参数列表，并将其与其他参数之间用逗号分隔开。  
   
-2. Decide the data type of the parameter.  
+2. 确定参数的数据类型。  
   
-3. Follow the parameter name with an `As` clause to specify the data type.  
+3. 请在参数名称后面加上一个 `As` 子句来指定数据类型。  
   
-4. Decide the passing mechanism you want for the parameter. Normally you pass a parameter by value, unless you want the procedure to be able to change its value in the calling code.  
+4. 确定要用于参数的传递机制。 通常，按值传递参数，除非您希望该过程能够在调用代码中更改其值。  
   
-5. Precede the parameter name with [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) to specify the passing mechanism. For more information, see [Differences Between Passing an Argument By Value and By Reference](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
+5. 在参数名称前面加上[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)来指定传递机制。 有关详细信息，请参阅[按值传递参数和通过引用传递参数之间的差异](./differences-between-passing-an-argument-by-value-and-by-reference.md)。  
   
-6. If the parameter is optional, precede the passing mechanism with [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) and follow the parameter data type with an equal sign (`=`) and a default value.  
+6. 如果该参数是可选的，请在传递机制之前加上[optional](../../../../visual-basic/language-reference/modifiers/optional.md) ，并使用等号（`=`）和默认值作为参数数据类型。  
   
-     The following example defines the outline of a `Sub` procedure with three parameters. The first two are required and the third is optional. The parameter declarations are separated in the parameter list by commas.  
+     下面的示例使用三个参数定义 `Sub` 过程的轮廓。 前两个参数是必需的，第三个参数是可选的。 参数声明在参数列表中用逗号分隔。  
   
      [!code-vb[VbVbcnProcedures#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#33)]  
   
-     The first parameter accepts a `customer` object, and `updateCustomer` can directly update the variable passed to `c` because the argument is passed [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). The procedure cannot change the values of the last two arguments because they are passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
+     第一个参数接受 `customer` 对象，`updateCustomer` 可以直接[更新传递给](../../../../visual-basic/language-reference/modifiers/byref.md)`c` 的变量，因为参数是传递的。 此过程无法更改最后两个参数的值，因为它们是通过[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)传递的。  
   
-     If the calling code does not supply a value for the `level` parameter, Visual Basic sets it to the default value of 0.  
+     如果调用代码未提供 `level` 参数的值，则 Visual Basic 将其设置为默认值0。  
   
-     If the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `Off`, the `As` clause is optional when you define a parameter. However, if any one parameter uses an `As` clause, all of them must use it. If the type checking switch is `On`, the `As` clause is required for every parameter definition.  
+     如果 `Off`类型检查开关（[Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)），则在定义参数时，`As` 子句是可选的。 但是，如果任何一个参数使用 `As` 子句，则所有参数都必须使用它。 如果类型检查开关 `On`，则每个参数定义都需要 `As` 子句。  
   
-     Specifying data types for all your programming elements is known as *strong typing*. When you set `Option Strict On`, Visual Basic enforces strong typing. This is strongly recommended, for the following reasons:  
+     为所有编程元素指定数据类型称为*强*类型。 设置 `Option Strict On`时，Visual Basic 强制执行强类型化。 出于以下原因，强烈建议执行此操作：  
   
-    - It enables IntelliSense support for your variables and parameters. This allows you to see their properties and other members as you type in your code.  
+    - 它为你的变量和参数启用 IntelliSense 支持。 这使您可以在代码中键入时查看它们的属性和其他成员。  
   
-    - It allows the compiler to perform type checking. This helps catch statements that can fail at run time due to errors such as overflow. It also catches calls to methods on objects that do not support them.  
+    - 它允许编译器执行类型检查。 这有助于捕获由于溢出等错误而在运行时可能会失败的语句。 它还会捕获对不支持这些对象的方法的调用。  
   
-    - It results in faster execution of your code. One reason for this is that if you do not specify a data type for a programming element, the Visual Basic compiler assigns it the `Object` type. Your compiled code might have to convert back and forth between `Object` and other data types, which reduces performance.  
+    - 这会使代码的执行速度更快。 导致这种情况的原因之一是，如果未指定编程元素的数据类型，则 Visual Basic 编译器会为其分配 `Object` 类型。 已编译的代码可能必须在 `Object` 和其他数据类型之间来回转换，这会降低性能。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [过程](./index.md)
 - [Sub 过程](./sub-procedures.md)

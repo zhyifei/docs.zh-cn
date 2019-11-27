@@ -21,36 +21,36 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348972"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>运算符的有效组合 (Visual Basic)
-Complex expressions can contain many different operators. 下面的示例阐释了这一点。  
+复杂表达式可以包含多个不同的运算符。 下面的示例对此进行了演示。  
   
  `x = (45 * (y + z)) ^ (2 / 85) * 5 + z`  
   
- Creating complex expressions such as the one in the preceding example requires a thorough understanding of the rules of operator precedence. For more information, see [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
+ 如前面的示例所示，创建复杂表达式需要透彻地理解运算符优先级的规则。 有关详细信息，请参阅[Visual Basic 中的运算符优先级](../../../../visual-basic/language-reference/operators/operator-precedence.md)。  
   
-## <a name="parenthetical-expressions"></a>Parenthetical Expressions  
- Often you want operations to proceed in a different order from that determined by operator precedence. 请看下面的示例。  
+## <a name="parenthetical-expressions"></a>括号中的表达式  
+ 通常，你希望以不同于运算符优先级确定的顺序执行操作。 请看下面的示例。  
   
  `x = z * y + 4`  
   
- The preceding example multiplies `z` by `y`, then adds the result to `4`. But if you want to add `y` and `4` before multiplying the result by `z`, you can override normal operator precedence by using parentheses. By enclosing an expression in parentheses, you force that expression to be evaluated first, regardless of operator precedence. To force the preceding example to do the addition first, you could rewrite it as in the following example.  
+ 前面的示例将 `z` 与 `y`相乘，然后将结果添加到 `4`。 但是，如果想要在将结果与 `z`相乘之前添加 `y` 和 `4`，则可以通过使用括号覆盖普通运算符优先级。 通过将表达式括在括号中，可以强制首先计算表达式，而不考虑运算符优先级。 若要强制前面的示例先执行加法操作，可以重写它，如以下示例中所示。  
   
  `x = z * (y + 4)`  
   
- The preceding example adds `y` and `4`, then multiplies that sum by `z`.  
+ 前面的示例将添加 `y` 和 `4`，然后将该总和与 `z`相乘。  
   
-### <a name="nested-parenthetical-expressions"></a>Nested Parenthetical Expressions  
- You can nest expressions in multiple levels of parentheses to override precedence even further. The expressions most deeply nested in parentheses are evaluated first, followed by the next most deeply nested, and so on to the least deeply nested, and finally the expressions outside parentheses. 下面的示例阐释了这一点。  
+### <a name="nested-parenthetical-expressions"></a>嵌套的括号表达式  
+ 可以将表达式嵌套在多个级别的括号中，以便进一步覆盖优先级。 首先计算最深层嵌套在括号中的表达式，然后计算下一个最深层嵌套的表达式，依此类推到最深层嵌套的表达式，最后将表达式括在括号内。 下面的示例对此进行了演示。  
   
  `x = (z * 4) ^ (y * (z + 2))`  
   
- In the preceding example, `z + 2` is evaluated first, then the other parenthetical expressions. Exponentiation, which normally has higher precedence than addition or multiplication, is evaluated last in this example because the other expressions are enclosed in parentheses.  
+ 在前面的示例中，首先计算 `z + 2`，然后计算其他括号表达式。 在此示例中，求幂的优先级通常高于加法或乘法，因为其他表达式括在括号中。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Arithmetic Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
-- [Logical/Bitwise Operators (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Visual Basic 中的算术运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic 中的逻辑运算符和位运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [逻辑/按位运算符（Visual Basic）](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [布尔表达式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
 - [值的比较](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [如何：计算数值](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)

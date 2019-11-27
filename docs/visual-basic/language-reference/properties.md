@@ -13,24 +13,24 @@ ms.locfileid: "74335396"
 ---
 # <a name="properties-visual-basic"></a>属性 (Visual Basic)
 
-This page lists the properties that are members of Visual Basic modules. Other properties that are members of specific Visual Basic objects are listed in [Objects](../../visual-basic/language-reference/objects/index.md).  
+此页列出作为 Visual Basic 模块成员的属性。 [对象](../../visual-basic/language-reference/objects/index.md)中列出了属于特定 Visual Basic 对象的成员的其他属性。  
   
-## <a name="visual-basic-properties"></a>Visual Basic Properties  
+## <a name="visual-basic-properties"></a>Visual Basic 属性  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.DateAndTime.DateString%2A>|Returns or sets a `String` value representing the current date according to your system.|  
-|<xref:Microsoft.VisualBasic.DateAndTime.Now%2A>|Returns a `Date` value containing the current date and time according to your system.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngine%2A>|Returns a `String` representing the runtime currently in use.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngineBuildVersion%2A>|Returns an `Integer` containing the build version number of the runtime currently in use.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMajorVersion%2A>|Returns an `Integer` containing the major version number of the runtime currently in use.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMinorVersion%2A>|Returns an `Integer` containing the minor version number of the runtime currently in use.|  
-|<xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>|Returns or sets a `Date` value containing the current time of day according to your system.|  
-|<xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>|Returns a `Double` value representing the number of seconds elapsed since midnight.|  
-|<xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>|Returns or sets a `String` value representing the current time of day according to your system.|  
-|<xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|Returns or sets a `Date` value containing the current date according to your system.|  
+|<xref:Microsoft.VisualBasic.DateAndTime.DateString%2A>|根据您的系统返回或设置表示当前日期的 `String` 值。|  
+|<xref:Microsoft.VisualBasic.DateAndTime.Now%2A>|返回一个 `Date` 值，该值包含与系统对应的当前日期和时间。|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngine%2A>|返回表示当前使用的运行时的 `String`。|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngineBuildVersion%2A>|返回一个 `Integer`，其中包含当前使用的运行时的内部版本号。|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMajorVersion%2A>|返回一个 `Integer`，其中包含当前使用的运行时的主版本号。|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMinorVersion%2A>|返回一个 `Integer`，其中包含当前使用的运行时的次版本号。|  
+|<xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>|根据您的系统返回或设置包含当前时间的 `Date` 值。|  
+|<xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>|返回表示从午夜开始所经过的秒数的 `Double` 值。|  
+|<xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>|根据您的系统返回或设置表示当前时间的 `String` 值。|  
+|<xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|根据您的系统返回或设置包含当前日期的 `Date` 值。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 语言参考](../../visual-basic/language-reference/index.md)
 - [Visual Basic](../../visual-basic/index.md)

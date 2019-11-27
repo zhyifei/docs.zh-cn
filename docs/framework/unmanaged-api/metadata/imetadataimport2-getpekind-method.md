@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445232"
 ---
 # <a name="imetadataimport2getpekind-method"></a>IMetaDataImport2::GetPEKind 方法
-Gets a value identifying the nature of the code in the portable executable (PE) file, typically a DLL or EXE file, that is defined in the current metadata scope.  
+获取一个值，该值标识可移植可执行（PE）文件中代码的性质（通常为 DLL 或 EXE 文件），该文件在当前的元数据范围内定义。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,30 +36,30 @@ HRESULT GetPEKind (
   
 ## <a name="parameters"></a>参数  
  `pdwPEKind`  
- [out] A pointer to a value of the [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) enumeration that describes the PE file.  
+ 弄一个指针，指向描述 PE 文件的[CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)枚举的值。  
   
  `pdwMachine`  
- [out] A pointer to a value that identifies the architecture of the machine. See the next section for possible values.  
+ 弄一个指针，指向用于标识计算机体系结构的值。 有关可能的值，请参阅下一节。  
   
 ## <a name="remarks"></a>备注  
- The value referenced by the `pdwMachine` parameter can be one of the following.  
+ `pdwMachine` 参数引用的值可以是下列值之一。  
   
-|“值”|Machine architecture|  
+|值|计算机体系结构|  
 |-----------|--------------------------|  
 |IMAGE_FILE_MACHINE_I386<br /><br /> 0x014C|x86|  
 |IMAGE_FILE_MACHINE_IA64<br /><br /> 0x0200|Intel IPF|  
-|IMAGE_FILE_MACHINE_AMD64<br /><br /> 0x8664|X64|  
+|IMAGE_FILE_MACHINE_AMD64<br /><br /> 0x8664|x64|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

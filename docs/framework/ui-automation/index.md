@@ -17,9 +17,9 @@ ms.locfileid: "74447014"
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] is the new accessibility framework for Microsoft Windows. 它通过提供对有关 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 的信息的按计划访问，满足辅助技术产品和自动化测试框架的需求。 此外，借助 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，控件和应用程序开发人员可实现其产品的可访问性。  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 是 Microsoft Windows 的新辅助功能框架。 它通过提供对有关 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 的信息的按计划访问，满足辅助技术产品和自动化测试框架的需求。 此外，借助 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，控件和应用程序开发人员可实现其产品的可访问性。  
   
- This documentation describes the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API for managed code. 有关如何在 C++ 中为 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 编程的信息，请参阅 [Win32 应用程序的 UI 自动化](/windows/desktop/winauto/windows-automation-api-portal)。  
+ 本文档介绍了托管代码的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API。 有关如何在 C++ 中为 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 编程的信息，请参阅 [Win32 应用程序的 UI 自动化](/windows/desktop/winauto/windows-automation-api-portal)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [辅助功能最佳方案](accessibility-best-practices.md)  
@@ -28,7 +28,7 @@ ms.locfileid: "74447014"
  [托管代码的 UI 自动化客户端](ui-automation-clients-for-managed-code.md)  
  [UI 自动化控件模式](ui-automation-control-patterns.md)  
  [UI 自动化文本模式](ui-automation-text-pattern.md)  
- [UI 自动化控件类型](ui-automation-control-types.md)  
+ [UI Automation Control Types](ui-automation-control-types.md)  
  [UI 自动化规范和社区承诺](ui-automation-specification-and-community-promise.md)  
   
 ## <a name="related-sections"></a>相关章节  

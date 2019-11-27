@@ -17,45 +17,45 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354009"
 ---
 # <a name="user-defined-constants-visual-basic"></a>用户定义的常量 (Visual Basic)
-A constant is a meaningful name that takes the place of a number or string that does not change. 顾名思义，常量存储在应用程序的执行过程中保持不变的值。 You can use constants that are defined by the controls or components you work with, or you can create your own. Constants you create yourself are described as *user-defined*.  
+常量是有意义的名称，用来代替不会更改的数字或字符串。 顾名思义，常量存储在应用程序的执行过程中保持不变的值。 您可以使用您使用的控件或组件定义的常量，也可以创建自己的常量。 您自己创建的常量被描述为*用户定义*的常量。  
   
- You declare a constant with the `Const` statement, using the same guidelines you would for creating a variable name. If `Option Strict` is `On`, you must explicitly declare the constant type.  
+ 使用 `Const` 语句声明一个常量，使用与创建变量名称相同的准则。 如果 `On``Option Strict`，则必须显式声明常量类型。  
   
-## <a name="const-statement-usage"></a>Const Statement Usage  
- A `Const` statement can represent a mathematical or date/time quantity:  
+## <a name="const-statement-usage"></a>Const 语句用法  
+ `Const` 语句可以表示数学或日期/时间数量：  
   
  [!code-vb[VbEnumsTask#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#10)]  
   
- It also can define `String` constants:  
+ 它还可以定义 `String` 常量：  
   
  [!code-vb[VbEnumsTask#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#13)]  
   
- The expression on the right side of the equal sign ( `=` ) is often a number or literal string, but it also can be an expression that results in a number or string (although that expression cannot contain calls to functions). You can even define constants in terms of previously defined constants:  
+ 等号（`=`）右侧的表达式通常是数字或文本字符串，但也可以是生成数字或字符串的表达式（尽管该表达式不能包含对函数的调用）。 甚至可以根据以前定义的常量来定义常量：  
   
  [!code-vb[VbEnumsTask#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#15)]  
   
-## <a name="scope-of-user-defined-constants"></a>Scope of User-Defined Constants  
- A `Const` statement's scope is the same as that of a variable declared in the same location. You can specify scope in any of the following ways:  
+## <a name="scope-of-user-defined-constants"></a>用户定义的常量的作用域  
+ `Const` 语句的作用域与在同一位置声明的变量的作用域相同。 可以通过以下任一方式指定作用域：  
   
-- To create a constant that exists only within a procedure, declare it within that procedure.  
+- 若要创建仅存在于一个过程中的常量，请在该过程中对其进行声明。  
   
-- To create a constant available to all procedures within a class, but not to any code outside that module, declare it in the declarations section of the class.  
+- 若要创建一个可用于类中的所有过程的常量，而不是该模块外的任何代码，请在类的声明部分中将其声明为。  
   
-- To create a constant that is available to all members of an assembly, but not to outside clients of the assembly, declare it using the `Friend` keyword in the declarations section of the class.  
+- 若要创建可用于程序集的所有成员而不是程序集外部的常量，请在类的声明部分中使用 `Friend` 关键字进行声明。  
   
-- To create a constant available throughout the application, declare it using the `Public` keyword in the declarations section the class.  
+- 若要创建可在整个应用程序中使用的常量，请在类的声明部分中使用 `Public` 关键字进行声明。  
   
- For more information, see [How to: Declare A Constant](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md).  
+ 有关详细信息，请参阅[如何：声明常量](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)。  
   
-### <a name="avoiding-circular-references"></a>Avoiding Circular References  
- Because constants can be defined in terms of other constants, it is possible to inadvertently create a *cycle*, or circular reference, between two or more constants. A cycle occurs when you have two or more public constants, each of which is defined in terms of the other, as in the following example:  
+### <a name="avoiding-circular-references"></a>避免循环引用  
+ 由于可以使用其他常量来定义常量，因此可能会在两个或多个常量之间意外创建*循环*或循环引用。 如果有两个或多个公共常量，则会发生循环，其中每个常量都是以其他方式定义的，如以下示例中所示：  
   
  [!code-vb[VbEnumsTask#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#16)]  
 [!code-vb[VbEnumsTask#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#17)]  
   
- If a cycle occurs, Visual Basic generates a compiler error.  
+ 如果发生循环，Visual Basic 会生成编译器错误。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Const 语句](../../../../visual-basic/language-reference/statements/const-statement.md)
 - [常量和文本数据类型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)
@@ -63,6 +63,6 @@ A constant is a meaningful name that takes the place of a number or string that 
 - [常量和枚举](../../../../visual-basic/language-reference/constants-and-enumerations.md)
 - [枚举概述](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
 - [常量概述](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
-- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [如何：声明枚举](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [枚举和名称限定](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

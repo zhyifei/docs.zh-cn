@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446561"
 ---
 # <a name="closeenum-method"></a>CloseEnum 方法
-Closes the indicated enumeration and frees associated resources.  
+关闭所指示的枚举并释放关联的资源。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,15 +35,15 @@ HRESULT CloseEnum(
   
 ## <a name="parameters"></a>参数  
  `hEnum`  
- Handle of enumeration to be closed.  
+ 要关闭的枚举的句柄。  
   
 ## <a name="return-value"></a>返回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- Requires alink.h  
+ 需要 alink  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IALink 接口](ialink-interface.md)
 - [IALink2 接口](ialink2-interface.md)

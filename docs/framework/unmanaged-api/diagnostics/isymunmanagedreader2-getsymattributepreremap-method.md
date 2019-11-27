@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446416"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap 方法
-Gets a custom attribute based upon its name. Unlike metadata custom attributes, these attributes are held in the symbol store.  
+根据名称获取自定义属性。 与元数据自定义特性不同，这些特性保存在符号存储区中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,26 +39,26 @@ HRESULT GetSymAttributePreRemap(
   
 ## <a name="parameters"></a>参数  
  `parent`  
- [in] The metadata token of the parent.  
+ 中父的元数据标记。  
   
  `name`  
- [in] A pointer to a `WCHAR` that contains the name.  
+ 中指向包含名称的 `WCHAR` 的指针。  
   
  `cBuffer`  
- [in] A `ULONG32` that indicates the size of the `buffer` array.  
+ 中一个 `ULONG32`，指示 `buffer` 数组的大小。  
   
  `pcBuffer`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the attribute bytes.  
+ 弄指向 `ULONG32` 的指针，该指针接收包含特性字节所需的缓冲区大小。  
   
  `buffer`  
- [out] A pointer to the buffer that receives the attribute bytes.  
+ 弄指向接收属性字节的缓冲区的指针。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedReader2 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

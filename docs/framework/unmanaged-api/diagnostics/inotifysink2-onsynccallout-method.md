@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442503"
 ---
 # <a name="inotifysink2onsynccallout-method"></a>INotifySink2::OnSyncCallOut 方法
-Gets invoked when a call is out.  
+在调用时调用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,21 +38,21 @@ HRESULT OnSyncCallOut
   
 ## <a name="parameters"></a>参数  
  `in_CallID`  
- [in] ID of the call that is out. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ 中传出的调用的 ID。请参阅[CALL_ID 结构](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)。  
   
  `out_ppBuffer`  
- [out] Call buffer.  
+ 弄调用缓冲区。  
   
  `out_pBufferSize`  
- [out] Size of the call buffer, in bytes.  
+ 弄调用缓冲区的大小（以字节为单位）。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds.  
+ 如果方法成功，则 S_OK。  
   
 ## <a name="requirements"></a>要求  
- **Header:** ProtocolNotify2.idl  
+ **标头：** ProtocolNotify2 .idl  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [INotifySink2 接口](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
 - [INotifySource2 接口](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)

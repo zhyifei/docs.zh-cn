@@ -15,7 +15,7 @@ ms.locfileid: "74336065"
 ---
 # <a name="isnot-operator-visual-basic"></a>IsNot 运算符 (Visual Basic)
 
-Compares two object reference variables.
+比较两个对象引用变量。
 
 ## <a name="syntax"></a>语法
 
@@ -26,23 +26,23 @@ result = object1 IsNot object2
 ## <a name="parts"></a>部件
  `result`（必需）。 一个 `Boolean` 值。
 
- `object1`（必需）。 Any `Object` variable or expression.
+ `object1`（必需）。 任何 `Object` 变量或表达式。
 
- `object2`（必需）。 Any `Object` variable or expression.
+ `object2`（必需）。 任何 `Object` 变量或表达式。
 
 ## <a name="remarks"></a>备注
- The `IsNot` operator determines if two object references refer to different objects. However, it does not perform value comparisons. If `object1` and `object2` both refer to the exact same object instance, `result` is `False`; if they do not, `result` is `True`.
+ `IsNot` 运算符确定两个对象引用是否引用不同的对象。 但是，它不会执行值比较。 如果 `object1` 和 `object2` 都引用完全相同的对象实例，则 `result` `False`;否则，将 `True``result`。
 
- `IsNot` is the opposite of the `Is` operator. The advantage of `IsNot` is that you can avoid awkward syntax with `Not` and `Is`, which can be difficult to read.
+ `IsNot` 与 `Is` 运算符相反。 `IsNot` 的优势在于，您可以避免使用 `Not` 和 `Is`的语法，这可能很难阅读。
 
- You can use the `Is` and `IsNot` operators to test both early-bound and late-bound objects.
+ 您可以使用 `Is` 和 `IsNot` 运算符来测试早期绑定对象和后期绑定对象。
 
 ## <a name="example"></a>示例
- The following code example uses both the `Is` operator and the `IsNot` operator to accomplish the same comparison.
+ 下面的代码示例使用 `Is` 运算符和 `IsNot` 运算符来完成相同的比较。
 
  [!code-vb[VbVbalrOperators#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#29)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Is 运算符](is-operator.md)
 - [TypeOf 运算符](typeof-operator.md)

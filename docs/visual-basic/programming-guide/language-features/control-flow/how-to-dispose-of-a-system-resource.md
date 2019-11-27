@@ -18,15 +18,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353947"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>如何：释放系统资源 (Visual Basic)
-You can use a `Using` block to guarantee that the system disposes of a resource when your code exits the block. This is useful if you are using a system resource that consumes a large amount of memory, or that other components also want to use.  
+您可以使用 `Using` 块确保系统在代码退出块时释放资源。 如果你使用的系统资源占用大量内存，或者其他组件也想要使用，则此方法很有用。  
   
-### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>To dispose of a database connection when your code is finished with it  
+### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>使用数据库连接完成代码时释放数据库连接  
   
-1. Make sure you include the appropriate [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) for the database connection at the beginning of your source file (in this case, <xref:System.Data.SqlClient>).  
+1. 请确保在源文件开头包含数据库连接的相应[Imports 语句（.Net 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) （在本例中为 <xref:System.Data.SqlClient>）。  
   
-2. Create a `Using` block with the `Using` and `End Using` statements. Inside the block, put the code that deals with the database connection.  
+2. 使用 `Using` 和 `End Using` 语句创建 `Using` 块。 在块中，放置用于处理数据库连接的代码。  
   
-3. Declare the connection and create an instance of it as part of the `Using` statement.  
+3. 声明连接并在 `Using` 语句中创建它的实例。  
   
     ```vb  
     ' Insert the following line at the beginning of your source file.  
@@ -38,13 +38,13 @@ You can use a `Using` block to guarantee that the system disposes of a resource 
     End Sub  
     ```  
   
-     The system disposes of the resource no matter how you exit the block, including the case of an unhandled exception.  
+     无论退出块的方式如何（包括未经处理的异常的情况），系统都将释放资源。  
   
-     Note that you cannot access `sqc` from outside the `Using` block, because its scope is limited to the block.  
+     请注意，不能从 `Using` 块外访问 `sqc`，因为它的作用域限制为块。  
   
-     You can use this same technique on a system resource such as a file handle or a COM wrapper. You use a `Using` block when you want to be sure to leave the resource available for other components after you have exited the `Using` block.  
+     您可以对系统资源（如文件句柄或 COM 包装）使用这种方法。 当你希望在退出 `Using` 块后，请使用 `Using` 块，以确保保留其他组件的资源。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Data.SqlClient.SqlConnection>
 - [控制流](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)

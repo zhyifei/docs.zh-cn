@@ -22,7 +22,7 @@ ms.locfileid: "74283535"
 ## <a name="documentviewer-parts"></a>DocumentViewer 部件  
  下表列出了 <xref:System.Windows.Controls.DocumentViewer> 控件的已命名部分。  
   
-|部件|Type|描述|  
+|部件|类型|说明|  
 |-|-|-|  
 |PART_ContentHost|<xref:System.Windows.Controls.ScrollViewer>|内容和滚动区域。|  
 |PART_FindToolBarHost|<xref:System.Windows.Controls.ContentControl>|默认情况下的搜索框。|  
@@ -30,7 +30,7 @@ ms.locfileid: "74283535"
 ## <a name="documentviewer-states"></a>DocumentViewer 状态  
  下表列出了 <xref:System.Windows.Controls.DocumentViewer> 控件的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
 |有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  

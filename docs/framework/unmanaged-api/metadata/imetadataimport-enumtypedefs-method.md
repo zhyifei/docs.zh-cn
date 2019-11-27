@@ -38,37 +38,37 @@ HRESULT EnumTypeDefs (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [out] A pointer to the new enumerator. This must be NULL for the first call of this method.  
+ 弄指向新枚举器的指针。 第一次调用此方法时，此值必须为 NULL。  
   
  `rTypeDefs`  
- [in] The array used to store the TypeDef tokens.  
+ 中用于存储 TypeDef 标记的数组。  
   
  `cMax`  
  [in] `rTypeDefs` 数组的最大大小。  
   
  `pcTypeDefs`  
- [out] The number of TypeDef tokens returned in `rTypeDefs`.  
+ 弄`rTypeDefs`中返回的 TypeDef 标记的数目。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeDefs` is zero.|  
+|`S_OK`|`EnumTypeDefs` 成功返回。|  
+|`S_FALSE`|没有要枚举的令牌。 在这种情况下，`pcTypeDefs` 为零。|  
   
 ## <a name="remarks"></a>备注  
- The TypeDef token represents a type such as a class or an interface, as well as any type added via an extensibility mechanism.  
+ TypeDef 标记表示一种类型，如类或接口，以及通过扩展性机制添加的任何类型。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -21,15 +21,15 @@ ms.locfileid: "74448803"
  本部分包含概述和帮助主题以帮助你开发 UI 自动化客户端。  
   
 ## <a name="in-this-section"></a>本节内容  
- [UI 自动化和屏幕缩放](ui-automation-and-screen-scaling.md)  
- [UI 自动化对标准控件的支持](ui-automation-support-for-standard-controls.md)  
- [客户端的 UI 自动化事件](ui-automation-events-for-clients.md)  
- [在 UI 自动化客户端中缓存](caching-in-ui-automation-clients.md)  
- [客户端的 UI 自动化属性](ui-automation-properties-for-clients.md)  
- [UI 自动化客户端的控件模式映射](control-pattern-mapping-for-ui-automation-clients.md)  
- [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)  
- [获取 UI 自动化元素](obtaining-ui-automation-elements.md)  
- [UI 自动化线程处理问题](ui-automation-threading-issues.md)  
+ [UI Automation and Screen Scaling](ui-automation-and-screen-scaling.md)  
+ [UI Automation Support for Standard Controls](ui-automation-support-for-standard-controls.md)  
+ [UI Automation Events for Clients](ui-automation-events-for-clients.md)  
+ [Caching in UI Automation Clients](caching-in-ui-automation-clients.md)  
+ [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)  
+ [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)  
+ [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)  
+ [Obtaining UI Automation Elements](obtaining-ui-automation-elements.md)  
+ [UI Automation Threading Issues](ui-automation-threading-issues.md)  
  [帮助主题](ui-automation-clients-for-managed-code-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  

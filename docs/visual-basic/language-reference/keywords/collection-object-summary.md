@@ -12,17 +12,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349928"
 ---
 # <a name="collection-object-summary-visual-basic"></a>集合对象摘要 (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Visual Basic 语言关键字和运行时库成员按用途和使用进行组织。  
   
-|操作|语言元素|  
+|操作|Language 元素|  
 |------------|----------------------|  
 |创建 `Collection` 对象。|<xref:Microsoft.VisualBasic.Collection>|  
-|Add an item to a collection.|<xref:Microsoft.VisualBasic.Collection.Add*>|  
-|Remove an object from a collection.|<xref:Microsoft.VisualBasic.Collection.Remove*>|  
-|Reference an item in a collection.|<xref:Microsoft.VisualBasic.Collection.Item*>|  
-|Return a reference to an <xref:System.Collections.IEnumerator> interface.|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
+|向集合中添加项。|<xref:Microsoft.VisualBasic.Collection.Add*>|  
+|从集合中删除对象。|<xref:Microsoft.VisualBasic.Collection.Remove*>|  
+|引用集合中的项。|<xref:Microsoft.VisualBasic.Collection.Item*>|  
+|返回对 <xref:System.Collections.IEnumerator> 接口的引用。|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [关键字](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 运行库成员](../../../visual-basic/language-reference/runtime-library-members.md)

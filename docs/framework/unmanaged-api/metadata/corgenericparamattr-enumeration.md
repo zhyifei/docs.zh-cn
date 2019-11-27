@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450277"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr 枚举
-Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
+包含描述泛型类型 <xref:System.Type> 参数的值，这是在对[IMetaDataEmit2：:D efinegenericparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)的调用中使用的。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,25 +45,25 @@ typedef enum CorGenericParamAttr {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`gpVarianceMask`|Parameter variance applies only to generic parameters for interfaces and delegates.|  
-|`gpNonVariant`|Indicates the absence of variance.|  
-|`gpCovariant`|Indicates covariance.|  
-|`gpContravariant`|Indicates contravariance.|  
-|`gpSpecialConstraintMask`|Special constraints can apply to any <xref:System.Type> parameter.|  
-|`gpNoSpecialConstraint`|Indicates that no constraint applies to the <xref:System.Type> parameter.|  
-|`gpReferenceTypeConstraint`|Indicates that the <xref:System.Type> parameter must be a reference type.|  
-|`gpNotNullableValueTypeConstraint`|Indicates that the <xref:System.Type> parameter must be a value type that cannot be a null value.|  
-|`gpDefaultConstructorConstraint`|Indicates that the <xref:System.Type> parameter must have a default public constructor that takes no parameters.|  
+|`gpVarianceMask`|参数变体仅适用于接口和委托的泛型参数。|  
+|`gpNonVariant`|指示缺少方差。|  
+|`gpCovariant`|指示协方差。|  
+|`gpContravariant`|指示逆变。|  
+|`gpSpecialConstraintMask`|特殊约束可应用于任何 <xref:System.Type> 参数。|  
+|`gpNoSpecialConstraint`|指示没有约束应用于 <xref:System.Type> 的参数。|  
+|`gpReferenceTypeConstraint`|指示 <xref:System.Type> 参数必须是引用类型。|  
+|`gpNotNullableValueTypeConstraint`|指示 <xref:System.Type> 参数必须是不能为 null 值的值类型。|  
+|`gpDefaultConstructorConstraint`|指示 <xref:System.Type> 参数必须包含不带任何参数的默认公共构造函数。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **标头：** Corhdr。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436031"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo 方法
-Gets detailed information about an array object.  
+获取有关数组对象的详细信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,22 +38,22 @@ HRESULT GetArrayObjectInfo(
   
 ## <a name="parameters"></a>参数  
  `objectId`  
- [in] The ID of a valid array object.  
+ 中有效数组对象的 ID。  
   
  `cDimensions`  
- [in] The rank (number of dimensions) of the array.  
+ 中数组的秩（维数）。  
   
  `pDimensionSizes`  
- [out] An array that contains integers, each representing the size of a dimension of the array.  
+ 弄一个包含整数的数组，每个整数表示数组维度的大小。  
   
  `pDimensionLowerBounds`  
- [out] An array that contains integers, each representing the lower bound of a dimension of the array.  
+ 弄一个包含整数的数组，其中每个整数表示数组维度的下限。  
   
  `ppData`  
- [out] A pointer to the address of the raw buffer for the array, which is laid out according to the C++ convention.  
+ 弄一个指针，它指向数组的原始缓冲区的地址，该地址根据C++约定进行布局。  
   
 ## <a name="remarks"></a>备注  
- The `pDimensionSizes` and `pDimensionLowerBounds` are parallel arrays, so the elements located at the same index in each array are characteristics of the same entity.  
+ `pDimensionSizes` 和 `pDimensionLowerBounds` 是并行数组，因此位于每个数组中同一索引处的元素是同一实体的特征。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -64,7 +64,7 @@ HRESULT GetArrayObjectInfo(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

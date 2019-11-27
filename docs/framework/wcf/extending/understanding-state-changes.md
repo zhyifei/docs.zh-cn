@@ -28,16 +28,16 @@ ms.locfileid: "74447522"
   
  每个 <xref:System.ServiceModel.ICommunicationObject> 的初始状态都是“已创建”。 在此状态下，应用程序可以通过设置对象的属性来配置对象。 一旦对象所处的状态不是“已创建”，它将被视为不可变。  
   
- ![Dataflow diagram of the channel state transition.](./media/understanding-state-changes/channel-state-transitions.gif)  
-Figure 1. ICommunicationObject 状态机。  
+ ![通道状态转换的数据流关系图。](./media/understanding-state-changes/channel-state-transitions.gif)  
+图 1. ICommunicationObject 状态机。  
   
- Windows Communication Foundation (WCF) provides an abstract base class named <xref:System.ServiceModel.Channels.CommunicationObject> that implements <xref:System.ServiceModel.ICommunicationObject> and the channel state machine. 下图是特定于 <xref:System.ServiceModel.Channels.CommunicationObject> 的已修改状态关系图。 除了 <xref:System.ServiceModel.ICommunicationObject> 状态机，它还显示调用附加 <xref:System.ServiceModel.Channels.CommunicationObject> 方法时的计时。  
+ Windows Communication Foundation （WCF）提供一个名为 <xref:System.ServiceModel.Channels.CommunicationObject> 的抽象基类，该基类实现 <xref:System.ServiceModel.ICommunicationObject> 和通道状态机。 下图是特定于 <xref:System.ServiceModel.Channels.CommunicationObject> 的已修改状态关系图。 除了 <xref:System.ServiceModel.ICommunicationObject> 状态机，它还显示调用附加 <xref:System.ServiceModel.Channels.CommunicationObject> 方法时的计时。  
   
- ![Dataflow diagram of CommunicationObject implementation state changes.](./media/understanding-state-changes/communicationobject-implementation-state-machine.gif)
+ CommunicationObject 实现状态更改 ![数据流关系图。](./media/understanding-state-changes/communicationobject-implementation-state-machine.gif)
 图 2. ICommunicationObject 状态机的 CommunicationObject 实现，包括对事件和受保护方法的调用。  
   
 ### <a name="icommunicationobject-events"></a>ICommunicationObject 事件  
- <xref:System.ServiceModel.Channels.CommunicationObject> 公开由 <xref:System.ServiceModel.ICommunicationObject> 定义的五个事件。 这些事件是为使用通信对象接收状态转换通知的代码而设计的。 如上面的图 2 所示，每个事件都在对象的状态转换到按事件命名的状态后激发一次。 五个事件全部属于 `EventHandler` 类型，该类型定义如下：  
+ <xref:System.ServiceModel.Channels.CommunicationObject> 公开 <xref:System.ServiceModel.ICommunicationObject>定义的五个事件。 这些事件是为使用通信对象接收状态转换通知的代码而设计的。 如上面的图 2 所示，每个事件都在对象的状态转换到按事件命名的状态后激发一次。 五个事件全部属于 `EventHandler` 类型，该类型定义如下：  
   
  `public delegate void EventHandler(object sender, EventArgs e);`  
   
@@ -52,7 +52,7 @@ Figure 1. ICommunicationObject 状态机。
   
  <xref:System.ServiceModel.Channels.CommunicationObject.OnOpen%2A?displayProperty=nameWithType>、<xref:System.ServiceModel.Channels.CommunicationObject.OnClose%2A?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.CommunicationObject.OnAbort%2A?displayProperty=nameWithType> 没有默认实现，而其他回调却具有确保状态机正确性所必需的默认实现。 如果重写这些方法，请确保调用基实现或正确替换它。  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType>、<xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.CommunicationObject.OnFaulted%2A?displayProperty=nameWithType> 激发相应的 <xref:System.ServiceModel.Channels.CommunicationObject.Opening?displayProperty=nameWithType>、<xref:System.ServiceModel.Channels.CommunicationObject.Closing?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.CommunicationObject.Faulted?displayProperty=nameWithType> 事件。 <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType> 分别将对象状态设置为“已打开”和“已关闭”，然后激发相应的 <xref:System.ServiceModel.Channels.CommunicationObject.Opened?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.CommunicationObject.Closed?displayProperty=nameWithType> 事件。  
+ <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType>，<xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.CommunicationObject.OnFaulted%2A?displayProperty=nameWithType> 触发相应的 <xref:System.ServiceModel.Channels.CommunicationObject.Opening?displayProperty=nameWithType>、<xref:System.ServiceModel.Channels.CommunicationObject.Closing?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.CommunicationObject.Faulted?displayProperty=nameWithType> 事件。 <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType> 将对象状态分别设置为 "已打开" 和 "已关闭"，然后激发相应的 <xref:System.ServiceModel.Channels.CommunicationObject.Opened?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.CommunicationObject.Closed?displayProperty=nameWithType> 事件。  
   
 ### <a name="state-transition-methods"></a>状态转换方法  
  <xref:System.ServiceModel.Channels.CommunicationObject> 提供 Abort、Close 和 Open 的实现。 它还提供 Fault 方法，该方法可以将状态转换至“出错”状态。 图 2 显示的是 <xref:System.ServiceModel.ICommunicationObject> 状态机，其每个转换都是由导致该转换的方法标记的（未标记转换发生在导致上一个标记转换的方法的实现内部）。  
@@ -62,9 +62,9 @@ Figure 1. ICommunicationObject 状态机。
   
  构造函数  
   
- <xref:System.ServiceModel.Channels.CommunicationObject> 提供三个构造函数，它们都使对象保持“已创建”状态。 构造函数定义如下：  
+ <xref:System.ServiceModel.Channels.CommunicationObject> 提供三个构造函数，它们都使对象处于已创建状态。 构造函数定义如下：  
   
- The first constructor is a parameterless constructor that delegates to the constructor overload that takes an object:  
+ 第一个构造函数是委托给采用对象的构造函数重载的无参数构造函数：  
   
  `protected CommunicationObject() : this(new object()) { … }`  
   
@@ -90,7 +90,7 @@ Figure 1. ICommunicationObject 状态机。
   
  然后，它将状态设置为“正在打开”并依次调用 OnOpening()（将引发 Opening 事件）、OnOpen() 和 OnOpened()。 OnOpened() 将状态设置为“已打开”并引发 Opened 事件。 如果这其中有任何一项引发异常，Open() 将调用 Fault() 并使异常向上冒泡。 下面的关系图更详细地演示了“打开”过程。  
   
- ![Dataflow diagram of ICommunicationObject.Open state changes.](./media/understanding-state-changes/ico-open-process-override-onopen.gif)  
+ ![ICommunicationObject 状态更改的数据流关系图。](./media/understanding-state-changes/ico-open-process-override-onopen.gif)  
 重写 OnOpen 方法以实现自定义打开逻辑，例如，打开内部通信对象。  
   
  Close 方法  
@@ -101,7 +101,7 @@ Figure 1. ICommunicationObject 状态机。
   
  Close() 方法可以在任何状态下调用。 它将尝试正常关闭对象。 如果遇到错误，它将终止对象。 如果当前状态为“正在关闭”或“已关闭”，则该方法将不执行任何操作。 否则，它将状态设置为“正在关闭”。 如果初始状态为“已创建”、“正在打开”或“出错”，它将调用 Abort()（请参见下面的关系图）。 如果初始状态为“已打开”，它将依次调用 OnClosing()（将引发 Closing 事件）、OnClose() 和 OnClosed()。 如果这其中有任何一项引发异常，Close() 将调用 Abort() 并使异常向上冒泡。 OnClosed() 将状态设置为“已关闭”并引发 Closed 事件。 下面的关系图更详细地演示了“关闭”过程。  
   
- ![Dataflow diagram of ICommunicationObject.Close state changes.](./media/understanding-state-changes/ico-close-process-override-onclose.gif)  
+ ![ICommunicationObject 状态更改的数据流关系图。](./media/understanding-state-changes/ico-close-process-override-onclose.gif)  
 重写 OnClose 方法以实现自定义关闭逻辑，例如，关闭内部通信对象。 可能长时间阻塞的所有正常关闭逻辑（例如，等待他方响应）应在 OnClose() 中实现，原因有两个，一是它采用超时参数，二是它不是作为 Abort() 的一部分调用的。  
   
  中止  
@@ -111,7 +111,7 @@ Figure 1. ICommunicationObject 状态机。
   
  如果当前状态是“已关闭”或之前已终止对象（例如，可能通过在其他线程上执行 Abort()），则 Abort() 方法将不执行任何操作。 否则，它将状态设置为“正在关闭”并依次调用 OnClosing()（将引发 Closing 事件）、OnAbort() 和 OnClosed()（因为是正在终止对象而非关闭，所以不调用 OnClose）。 OnClosed() 将状态设置为“已关闭”并引发 Closed 事件。 如果这其中的任何一项引发异常，它都将被重新引发至 Abort 的调用方。 OnClosing()、OnClosed() 和 OnAbort() 的实现不应阻塞（例如，在输入/输出上）。 下面的关系图更详细地演示了“中止”过程。  
   
- ![Dataflow diagram of ICommunicationObject.Abort state changes.](./media/understanding-state-changes/ico-abort-process-override-onabort.gif)  
+ ![ICommunicationObject 状态更改的数据流关系图。](./media/understanding-state-changes/ico-abort-process-override-onabort.gif)  
 重写 OnAbort 方法以实现自定义终止逻辑，例如，终止内部通信对象。  
   
  Fault  
@@ -127,29 +127,29 @@ Figure 1. ICommunicationObject 状态机。
 ### <a name="throwifxxx-methods"></a>ThrowIfXxx 方法  
  CommunicationObject 具有三个受保护的方法，可以用于在对象处于特定状态时引发异常。  
   
- 如果状态为“正在关闭”、“已关闭”或“出错”，则 <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposed%2A> 将引发异常。  
+ 如果状态为 "正在关闭"、"已关闭" 或 "出错"，则 <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposed%2A> 引发异常。  
   
- 如果状态不是“已创建”，则 <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrImmutable%2A> 将引发异常。  
+ 如果未创建状态，<xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrImmutable%2A> 会引发异常。  
   
- 如果状态不是“已打开”，则 <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrNotOpen%2A> 将引发异常。  
+ 如果状态为 "未打开"，<xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrNotOpen%2A> 会引发异常。  
   
  根据状态引发异常。 下表显示不同的状态以及通过调用在该状态引发的 ThrowIfXxx 所引发的相应异常类型。  
   
-|状态|已调用 Abort？|例外|  
+|State|已调用 Abort？|异常|  
 |-----------|----------------------------|---------------|  
 |创建时间|不可用|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |正在打开|不可用|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |已打开|不可用|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Closing|是|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
-|Closing|No|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
-|Closed|是|如果通过前一个对 Abort 的显式调用来关闭对象，将引发 <xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>。 如果对对象调用 Close，将引发 <xref:System.ObjectDisposedException?displayProperty=nameWithType>。|  
-|Closed|No|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
+|Closing|是|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
+|已关闭|是|如果对象由前一个和显式调用 Abort 关闭，则 <xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>。 如果对对象调用 Close，将引发 <xref:System.ObjectDisposedException?displayProperty=nameWithType>。|  
+|已关闭|是|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
 |已出错|不可用|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
   
 ### <a name="timeouts"></a>超时  
  在我们讨论的方法中，有一些方法采用超时参数。 它们是 Close、Open（某些重载和异步版本）、OnClose 和 OnOpen。 这些方法旨在允许长时间的操作（例如，在正常断开连接时阻塞输入/输出），以使超时参数指示此类操作在被中断前要耗费多长时间。 任何此类方法的实现都应使用提供的超时值，以此确保它在超时之前返回至调用方。 其他不采用超时的方法的实现不适用于长时间的操作，不应阻塞输入/输出。  
   
- 但是不采用超时的 Open() 和 Close() 重载除外。 它们使用由派生类提供的默认超时值。 <xref:System.ServiceModel.Channels.CommunicationObject>公开两个名为 <xref:System.ServiceModel.Channels.CommunicationObject.DefaultCloseTimeout%2A> 和 <xref:System.ServiceModel.Channels.CommunicationObject.DefaultOpenTimeout%2A> 的受保护抽象属性，定义如下：  
+ 但是不采用超时的 Open() 和 Close() 重载除外。 它们使用由派生类提供的默认超时值。 <xref:System.ServiceModel.Channels.CommunicationObject> 公开名为 <xref:System.ServiceModel.Channels.CommunicationObject.DefaultCloseTimeout%2A> 的两个受保护的抽象属性，<xref:System.ServiceModel.Channels.CommunicationObject.DefaultOpenTimeout%2A> 定义为：  
   
  `protected abstract TimeSpan DefaultCloseTimeout { get; }`  
   

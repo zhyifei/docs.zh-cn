@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428034"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField 方法
-Defines a single variable that is not within a method. This method is used for certain fields in classes, bit fields, and so on.  
+定义不在方法中的单个变量。 此方法用于类中的某些字段、位域等。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,38 +42,38 @@ HRESULT DefineField(
   
 ## <a name="parameters"></a>参数  
  `parent`  
- [in] The metadata type or method token.  
+ 中元数据类型或方法标记。  
   
  `name`  
- [in] The field name.  
+ 中字段名称。  
   
  `attributes`  
- [in] The field attributes.  
+ 中字段特性。  
   
  `cSig`  
- [in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.  
+ 中一个 `ULONG32`，它是包含字段签名所需的缓冲区大小（以字符数表示）。  
   
  `signature`  
- [in] The array of field signatures.  
+ 中字段签名的数组。  
   
  `addrKind`  
- [in] The address type.  
+ 中地址类型。  
   
  `addr1`  
- [in] The first address for the field specification.  
+ 中字段规范的第一个地址。  
   
  `addr2`  
- [in] The second address for the field specification.  
+ 中字段规格的第二个地址。  
   
  `addr3`  
- [in] The third address for the field specification.  
+ 中字段规格的第三个地址。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

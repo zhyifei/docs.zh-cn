@@ -13,27 +13,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352877"
 ---
 # <a name="reference-visual-basic"></a>参考 (Visual Basic)
-This section provides links to reference information about various aspects of Visual Basic programming.  
+本部分提供了有关 Visual Basic 编程各个方面的参考信息的链接。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Visual Basic 语言参考](../../visual-basic/language-reference/index.md)  
- Provides reference information for various aspects of the Visual Basic language.  
+ 提供 Visual Basic 语言的各个方面的参考信息。  
   
  [Visual Basic 命令行编译器](../../visual-basic/reference/command-line-compiler/index.md)  
  提供了命令行编译器相关信息的链接，该编译器提供了一种编译来自 Visual Studio IDE 的程序的替代方法。  
   
- [.NET Framework 参考信息](../../visual-basic/reference/net-framework-reference-information.md)  
- Provides links to information on working with the .NET Framework class library.  
+ .[NET Framework 参考信息](../../visual-basic/reference/net-framework-reference-information.md)  
+ 提供一些链接，这些链接指向有关使用 .NET Framework 类库的信息。  
   
  [Visual Basic 语言规范](../../visual-basic/reference/language-specification/index.md)  
- Provides links to the complete Visual Basic language specification, which contains detailed information on all aspects of the language.  
+ 提供指向完整 Visual Basic 语言规范的链接，该规范包含有关语言所有方面的详细信息。  
   
 ## <a name="related-sections"></a>相关章节  
  [常规用户界面元素 (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
- Contains topics for dialog boxes and windows used in Visual Studio.  
+ 包含 Visual Studio 中使用的对话框和窗口的主题。  
   
  [Visual Studio 中的 XML 工具](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
- Provides links to topics on various XML tools available in Visual Studio.  
+ 提供有关 Visual Studio 中可用的各种 XML 工具的主题的链接。  
   
  [自动化与扩展性参考](/visualstudio/extensibility/extensibility-in-visual-studio?view=vs-2015)  
- Provides links to topics covering automation and extensibility in Visual Studio, for both shared and language-specific components.
+ 提供一些主题链接，这些主题介绍了 Visual Studio 中的自动化和扩展性，同时用于共享和语言特定的组件。

@@ -27,12 +27,12 @@ ms.locfileid: "74447986"
  UI 自动化提供程序分为两类：客户端提供程序和服务器端提供程序。  
   
 ### <a name="client-side-providers"></a>客户端提供程序  
- 客户端提供程序由 UI 自动化客户端实现，以便与不支持（或不完全支持） [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的应用程序进行通信。 Client-side providers usually communicate with the server across the process boundary by sending and receiving Windows messages.  
+ 客户端提供程序由 UI 自动化客户端实现，以便与不支持（或不完全支持） [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的应用程序进行通信。 通常，客户端提供程序通过发送和接收 Windows 消息来跨进程边界与服务器通信。  
   
- Because UI Automation providers for controls in [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms, or [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] applications are supplied as part of the operating system, client applications seldom have to implement their own providers, and this overview does not cover them further.  
+ 因为 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]、Windows 窗体或 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 应用程序中控件的 UI 自动化提供程序是作为操作系统的一部分提供的，所以客户端应用程序很少需要实现自己的提供程序，并且此概述不会进一步涵盖它们。  
   
 ### <a name="server-side-providers"></a>服务器端提供程序  
- Server-side providers are implemented by custom controls or by applications that are based on a UI framework other than [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms, or [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+ 服务器端提供程序由自定义控件或基于非 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]、Windows 窗体或 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]的 UI 框架的应用程序实现。  
   
  服务器端提供程序向 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心系统公开接口，核心系统依次处理来自客户端的请求，使服务器端提供程序与跨进程边界的客户端应用程序进行通信。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "74447986"
 |-|-|  
 |原始视图|包含所有元素。|  
 |控件视图|包含控件元素。|  
-|内容视图|包含具有内容的元素。|  
+|“内容”视图|包含具有内容的元素。|  
   
  有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树客户端视图的详细信息，请参阅 [UI Automation Tree Overview](ui-automation-tree-overview.md)。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "74447986"
   
  [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 容器控件（例如列表框和树视图）均视为框架，因为它们包含用于呈现子项和对其执行命中测试的代码。 与此相反， [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 列表框不是一个框架，因为包含 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 窗口处理呈现和命中测试。  
   
- 应用程序中的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 可由不同框架构成。 For example, an HWND application window might contain Dynamic HTML (DHTML) which in turn contains a component such as a combo box in an HWND.  
+ 应用程序中的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 可由不同框架构成。 例如，HWND 应用程序窗口可能包含动态 HTML （DHTML），后者又包含 HWND 中的组合框等组件。  
   
 ### <a name="fragments"></a>片段  
  片段是特定框架中元素的完整子树。 子树根节点处的元素称为片段根。 片段根不具有父级，而是承载在其他框架，通常是 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 窗口 (HWND) 中。  
@@ -76,6 +76,6 @@ ms.locfileid: "74447986"
   
  片段的宿主对于提供 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 服务中而言非常重要。 它允许导航到片段根，并提供一些默认属性，使自定义提供程序无需实现这些属性。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [服务器端 UI 自动化提供程序实现](server-side-ui-automation-provider-implementation.md)

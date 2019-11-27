@@ -13,7 +13,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332947"
 ---
 # <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>如何：声明和使用 XML 命名空间前缀 (Visual Basic)
-This example shows how to import the XML namespace prefix `ns` and use it in an XML literal and XML axis properties.  
+此示例演示如何导入 XML 命名空间前缀 `ns` 并在 XML 文本和 XML 轴属性中使用它。  
   
 ## <a name="example"></a>示例  
  [!code-vb[VbXMLSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
@@ -23,7 +23,7 @@ This example shows how to import the XML namespace prefix `ns` and use it in an 
   
 - 对 <xref:System.Xml.Linq> 命名空间的引用。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>
 - [Imports 语句（XML 命名空间）](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)

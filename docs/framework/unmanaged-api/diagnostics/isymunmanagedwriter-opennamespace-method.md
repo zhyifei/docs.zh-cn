@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427902"
 ---
 # <a name="isymunmanagedwriteropennamespace-method"></a>ISymUnmanagedWriter::OpenNamespace 方法
-打开一个新的命名空间。 Call this method before defining methods or variables that occupy a namespace. Namespaces can be nested.  
+打开一个新的命名空间。 在定义占用命名空间的方法或变量之前调用此方法。 命名空间可以嵌套。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,15 +34,15 @@ HRESULT OpenNamespace(
   
 ## <a name="parameters"></a>参数  
  `name`  
- [in] A pointer to the name of the new namespace.  
+ 中指向新命名空间的名称的指针。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
 - [CloseNamespace 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closenamespace-method.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447702"
 ---
 # <a name="cor_prf_suspend_reason-enumeration"></a>COR_PRF_SUSPEND_REASON 枚举
-Indicates the reason that the runtime is suspended.  
+指示运行时挂起的原因。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,19 +40,19 @@ typedef enum {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_SUSPEND_OTHER`|The runtime is suspended for an unspecified reason.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC`|The runtime is suspended to service a garbage collection request.<br /><br /> The garbage collection-related callbacks occur between the [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) and [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) callbacks.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|The runtime is suspended so that an `AppDomain` can be shut down.<br /><br /> While the runtime is suspended, the runtime will determine which threads are in the `AppDomain` that is being shut down and set them to abort when they resume. There are no `AppDomain`-specific callbacks during this suspension.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|The runtime is suspended so that code pitching can occur.<br /><br /> Code pitching ensues only when the just-in-time (JIT) compiler is active with code pitching enabled. Code pitching callbacks occur between the `ICorProfilerCallback::RuntimeSuspendFinished` and `ICorProfilerCallback::RuntimeResumeStarted` callbacks. **Note:**  The CLR JIT does not pitch functions in the .NET Framework version 2.0, so this value is not used in 2.0.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|The runtime is suspended so that it can shut down. It must suspend all threads to complete the operation.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|The runtime is suspended for in-process debugging.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|The runtime is suspended to prepare for a garbage collection.|  
-|`COR_PRF_SUSPEND_FOR_REJIT`|The runtime is suspended for JIT recompilation.|  
+|`COR_PRF_FIELD_SUSPEND_OTHER`|由于未指定的原因，运行时处于挂起状态。|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC`|运行时挂起，可为垃圾回收请求服务。<br /><br /> 与垃圾回收相关的回调发生在[ICorProfilerCallback：： RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md)和[ICorProfilerCallback：： RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md)回调之间。|  
+|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|运行时处于挂起状态，以便可以关闭 `AppDomain`。<br /><br /> 当运行时挂起时，运行时将确定正在关闭的 `AppDomain` 中的线程，并将其设置为在恢复时中止。 此挂起期间没有特定于 `AppDomain`的回调。|  
+|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|运行时将挂起，以便代码间距调整可以出现。<br /><br /> 仅当实时（JIT）编译器处于活动状态且启用了代码间距调整时，才间距调整可以代码。 在 `ICorProfilerCallback::RuntimeSuspendFinished` 和 `ICorProfilerCallback::RuntimeResumeStarted` 回调之间发生代码间距调整回调。 **注意：** CLR JIT 不会对 .NET Framework 版本2.0 中的函数进行螺距，因此不会在2.0 中使用此值。|  
+|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|运行时处于挂起状态，以使其可以关闭。 它必须挂起所有线程才能完成此操作。|  
+|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|运行时正在进行进程内调试。|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|运行时挂起，以便准备垃圾回收。|  
+|`COR_PRF_SUSPEND_FOR_REJIT`|运行时将被挂起，以便进行 JIT 重新编译。|  
   
 ## <a name="remarks"></a>备注  
- All runtime threads that are in unmanaged code are permitted to continue running until they try to re-enter the runtime, at which point they will also be suspended until the runtime resumes. This also applies to new threads that enter the runtime. All threads within the runtime are either suspended immediately if they are in interruptible code, or asked to suspend when they do reach interruptible code.  
+ 在非托管代码中的所有运行时线程都允许继续运行，直到它们尝试重新进入运行时为止，此时它们也将挂起，直到运行时恢复。 这也适用于输入运行时的新线程。 如果运行时中的所有线程都处于中断的代码中，或者在它们确实到达中断的代码时要求挂起，则该线程会立即挂起。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -63,6 +63,6 @@ typedef enum {
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

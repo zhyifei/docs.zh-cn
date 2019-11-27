@@ -39,8 +39,8 @@ HRESULT SetFunctionReJIT(
   
  **库：** CorGuids.lib  
   
- **.NET Framework Version:** 1.0  
+ **.NET Framework 版本：** 1。0  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -38,21 +38,21 @@ typedef enum CorRefToDefCheck {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|Specifies that type references and member references should be converted to definitions. This is the default value (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
-|`MDRefToDefAll`|Specifies that all referenced items should be converted to definitions.|  
-|`MDRefToDefNone`|Specifies that no referenced items should be converted to definitions.|  
-|`MDTypeRefToDef`|Specifies that only type references should be converted to type definitions.|  
-|`MDMemberRefToDef`|Specifies that only member references should be converted to definitions. That is, member references should be converted to either method definitions or field definitions.|  
+|`MDRefToDefDefault`|指定应将类型引用和成员引用转换为定义。 这是默认值（`MDTypeRefToDef` &#124; `MDMemberRefToDef`）。|  
+|`MDRefToDefAll`|指定所有引用项都应转换为定义。|  
+|`MDRefToDefNone`|指定不应将引用项转换为定义。|  
+|`MDTypeRefToDef`|指定仅类型引用应转换为类型定义。|  
+|`MDMemberRefToDef`|指定只应将成员引用转换为定义。 也就是说，应将成员引用转换为方法定义或字段定义。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **标头：** Corhdr。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

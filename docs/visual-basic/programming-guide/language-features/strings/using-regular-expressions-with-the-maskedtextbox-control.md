@@ -13,49 +13,49 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346267"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>在 MaskedTextBox 控件中使用正则表达式 (Visual Basic)
-This example demonstrates how to convert simple regular expressions to work with the <xref:System.Windows.Forms.MaskedTextBox> control.  
+此示例演示如何转换简单正则表达式以使用 <xref:System.Windows.Forms.MaskedTextBox> 控件。  
   
-## <a name="description-of-the-masking-language"></a>Description of the Masking Language  
- The standard <xref:System.Windows.Forms.MaskedTextBox> masking language is based on the one used by the `Masked Edit` control in Visual Basic 6.0 and should be familiar to users migrating from that platform.  
+## <a name="description-of-the-masking-language"></a>掩码语言说明  
+ 标准 <xref:System.Windows.Forms.MaskedTextBox> 掩码语言基于 `Masked Edit` 控件在 Visual Basic 6.0 中使用的语言，应熟悉从该平台迁移的用户。  
   
- The <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property of the <xref:System.Windows.Forms.MaskedTextBox> control specifies what input mask to use. The mask must be a string composed of one or more of the masking elements from the following table.  
+ <xref:System.Windows.Forms.MaskedTextBox> 控件的 <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> 属性指定要使用的输入掩码。 掩码必须是由下表中的一个或多个屏蔽元素组成的字符串。  
   
-|Masking element|描述|Regular expression element|  
+|屏蔽元素|说明|正则表达式元素|  
 |---------------------|-----------------|--------------------------------|  
-|0|Any single digit between 0 and 9. Entry required.|\d|  
-|9|Digit or space. Entry optional.|[ \d]?|  
-|#|Digit or space. Entry optional. If this position is left blank in the mask, it will be rendered as a space. Plus (+) and minus (-) signs are allowed.|[ \d+-]?|  
-|L|ASCII letter. Entry required.|[a-zA-Z]|  
-|?|ASCII letter. Entry optional.|[a-zA-Z]?|  
-|&|字符。 Entry required.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
-|C|字符。 Entry optional.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
-|包含当前请求的 URL 的|Alphanumeric. Entry optional.|\W|  
-|方法。|Culture-appropriate decimal placeholder.|不可用。|  
-|,|Culture-appropriate thousands placeholder.|不可用。|  
-|:|Culture-appropriate time separator.|不可用。|  
-|/|Culture-appropriate date separator.|不可用。|  
-|$|Culture-appropriate currency symbol.|不可用。|  
-|\<|Converts all characters that follow to lowercase.|不可用。|  
-|>|Converts all characters that follow to uppercase.|不可用。|  
-|&#124;|Undoes a previous shift up or shift down.|不可用。|  
-|&#92;|Escapes a mask character, turning it into a literal. "\\\\" is the escape sequence for a backslash.|&#92;|  
-|All other characters.|Literals. All non-mask elements will appear as themselves within <xref:System.Windows.Forms.MaskedTextBox>.|All other characters.|  
+|0|0和9之间的任何一个数字。 需要输入。|\d|  
+|9|数字或空格。 输入可选。|[ \d]?|  
+|#|数字或空格。 输入可选。 如果此位置在掩码中保留为空白，则将呈现为空格。 允许使用加号（+）和减号（-）。|[ \d+-]?|  
+|L|ASCII 字符。 需要输入。|[a-zA-Z]|  
+|?|ASCII 字符。 输入可选。|[a-zA-Z]?|  
+|&|字符。 需要输入。|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
+|C|字符。 输入可选。|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
+|包含当前请求的 URL 的|字符. 输入可选。|\W|  
+|.|区域性适当的小数点占位符。|不可用。|  
+|,|区域性适当的千位占位符。|不可用。|  
+|：|区域性适当的时间分隔符。|不可用。|  
+|/|区域性相应的日期分隔符。|不可用。|  
+|$|区域性相应的货币符号。|不可用。|  
+|\<|将后面的所有字符转换为小写。|不可用。|  
+|>|将后面的所有字符转换为大写。|不可用。|  
+|&#124;|撤消上一个 shift 或向下移动。|不可用。|  
+|&#92;|转义掩码字符，并将其转换为文本。 "\\\\" 是反斜杠的转义序列。|&#92;|  
+|所有其他字符。|文本. 所有非掩码元素都将在 <xref:System.Windows.Forms.MaskedTextBox>中显示为自身。|所有其他字符。|  
   
- The decimal (.), thousandths (,), time (:), date (/), and currency ($) symbols default to displaying those symbols as defined by the application's culture. You can force them to display symbols for another culture by using the <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> property.  
+ 小数点（.）、千位（，）、time （:)、date （/）和 currency （$）符号默认为显示由应用程序的区域性定义的符号。 您可以通过使用 <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> 属性强制它们显示另一区域性的符号。  
   
-## <a name="regular-expressions-and-masks"></a>Regular Expressions and Masks  
- Although you can use regular expressions and masks to validate user input, they are not completely equivalent. Regular expressions can express more complex patterns than masks, but masks can express the same information more succinctly and in a culturally relevant format.  
+## <a name="regular-expressions-and-masks"></a>正则表达式和掩码  
+ 尽管可以使用正则表达式和掩码来验证用户输入，但它们并不完全等效。 正则表达式可以表达比掩码更复杂的模式，但是掩码可以更简洁地以与区域性相关的格式表达相同的信息。  
   
- The following table compares four regular expressions and the equivalent mask for each.  
+ 下表比较了四个正则表达式和每个正则表达式的等效掩码。  
   
 |正则表达式|掩码|注意|  
 |------------------------|----------|-----------|  
-|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|The `/` character in the mask is a logical date separator, and it will appear to the user as the date separator appropriate to the application's current culture.|  
-|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|A date (day, month abbreviation, and year) in United States format in which the three-letter month abbreviation is displayed with an initial uppercase letter followed by two lowercase letters.|  
-|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|United States phone number, area code optional. If the user does not wish to enter the optional characters, she can either enter spaces or place the mouse pointer directly at the position in the mask represented by the first 0.|  
-|`$\d{6}.00`|`$999,999.00`|A currency value in the range of 0 to 999999. The currency, thousandth, and decimal characters will be replaced at run-time with their culture-specific equivalents.|  
+|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|掩码中的 `/` 字符是一个逻辑日期分隔符，并向用户显示与应用程序的当前区域性相对应的日期分隔符。|  
+|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|采用美国格式的日期（日、月份缩写和年份），其中显示了三个字母的月份缩写，其中首字母后跟两个小写字母。|  
+|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|美国的电话号码，可选择的区域代码。 如果用户不希望输入可选字符，则可以输入空格，或者将鼠标指针直接置于掩码中由前0表示的位置。|  
+|`$\d{6}.00`|`$999,999.00`|介于0到999999之间的货币值。 在运行时，将用其特定于区域性的等效项替换货币、千位和十进制字符。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
 - <xref:System.Windows.Forms.MaskedTextBox>

@@ -1,5 +1,5 @@
 ---
-title: Overloaded properties and methods
+title: 重载属性和方法
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [Visual Basic], overloading
@@ -19,74 +19,74 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346091"
 ---
-# <a name="overloaded-properties-and-methods-visual-basic"></a>Overloaded properties and methods (Visual Basic)
+# <a name="overloaded-properties-and-methods-visual-basic"></a>重载属性和方法（Visual Basic）
 
-Overloading is the creation of more than one procedure, instance constructor, or property in a class with the same name but different argument types.
+重载是在具有相同名称但参数类型不同的类中创建多个过程、实例构造函数或属性。
 
-## <a name="overloading-usage"></a>Overloading usage
+## <a name="overloading-usage"></a>重载用法
 
-Overloading is especially useful when your object model dictates that you employ identical names for procedures that operate on different data types. For example, a class that can display several different data types could have `Display` procedures that look like this:
+当对象模型要求对不同数据类型进行操作的过程使用相同的名称时，重载特别有用。 例如，可以显示几种不同数据类型的类可能具有如下所示的 `Display` 过程：
 
 [!code-vb[VbVbalrOOP#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#64)]
 
-Without overloading, you would need to create distinct names for each procedure, even though they do the same thing, as shown next:
+如果没有重载，则需要为每个过程创建不同的名称，即使它们执行相同的操作，如下所示：
 
 [!code-vb[VbVbalrOOP#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#65)]
 
-Overloading makes it easier to use properties or methods because it provides a choice of data types that can be used. For example, the overloaded `Display` method discussed previously can be called with any of the following lines of code:
+重载使您可以更轻松地使用属性或方法，因为它提供了可使用的数据类型选择。 例如，先前讨论的重载 `Display` 方法可通过以下代码行调用：
 
 [!code-vb[VbVbalrOOP#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#66)]
 
-At run time, Visual Basic calls the correct procedure based on the data types of the parameters you specify.
+在运行时，Visual Basic 会根据你指定的参数的数据类型调用正确过程。
 
-## <a name="overloading-rules"></a>Overloading rules
+## <a name="overloading-rules"></a>重载规则
 
- You create an overloaded member for a class by adding two or more properties or methods with the same name. Except for overloaded derived members, each overloaded member must have different parameter lists, and the following items cannot be used as a differentiating feature when overloading a property or procedure:
+ 通过添加两个或多个具有相同名称的属性或方法，可以为类创建重载成员。 除重载的派生成员以外，每个重载成员都必须具有不同的参数列表，并且在重载属性或过程时，不能将以下各项用作区分功能：
 
-- Modifiers, such as `ByVal` or `ByRef`, that apply to a member, or parameters of the member.
+- 应用于成员或成员的参数的修饰符，如 `ByVal` 或 `ByRef`。
 
-- Names of parameters
+- 参数的名称
 
-- Return types of procedures
+- 过程的返回类型
 
-The `Overloads` keyword is optional when overloading, but if any overloaded member uses the `Overloads` keyword, then all other overloaded members with the same name must also specify this keyword.
+当重载时，`Overloads` 关键字是可选的，但是如果任何重载成员使用 `Overloads` 关键字，则所有其他具有相同名称的重载成员也必须指定此关键字。
 
-Derived classes can overload inherited members with members that have identical parameters and parameter types, a process known as *shadowing by name and signature*. If the `Overloads` keyword is used when shadowing by name and signature, the derived class's implementation of the member will be used instead of the implementation in the base class, and all other overloads for that member will be available to instances of the derived class.
+派生类可以重载具有相同参数和参数类型的成员的继承成员，这一过程称为*按名称和签名进行隐藏*。 如果在按名称和签名进行隐藏时使用 `Overloads` 关键字，则将使用该成员的派生类的实现，而不是基类中的实现，并且该成员的所有其他重载将可用于派生类的实例。
 
-If the `Overloads` keyword is omitted when overloading an inherited member with a member that has identical parameters and parameter types, then the overloading is called *shadowing by name*. Shadowing by name replaces the inherited implementation of a member, and it makes all other overloads unavailable to instances of the derived class and its decedents.
+如果在使用具有相同参数和参数类型的成员重载某个继承成员时省略了 `Overloads` 关键字，则会被*名称隐藏*。 按名称隐藏将替换成员的继承实现，并使所有其他重载不可用于派生类及其 decedents 的实例。
 
-The `Overloads` and `Shadows` modifiers cannot both be used with the same property or method.
+`Overloads` 和 `Shadows` 修饰符不能同时用于相同的属性或方法。
 
 ### <a name="example"></a>示例
 
-The following example creates overloaded methods that accept either a `String` or `Decimal` representation of a dollar amount and return a string containing the sales tax.
+下面的示例创建了重载方法，这些方法接受美元的 `String` 或 `Decimal` 表示形式，并返回包含销售税的字符串。
 
-#### <a name="to-use-this-example-to-create-an-overloaded-method"></a>To use this example to create an overloaded method
+#### <a name="to-use-this-example-to-create-an-overloaded-method"></a>使用此示例创建重载方法
 
-1. Open a new project and add a class named `TaxClass`.
+1. 打开一个新的项目并添加一个名为 `TaxClass`的类。
 
 2. 向 `TaxClass` 类添加下面的代码。
 
     [!code-vb[VbVbalrOOP#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#67)]
 
-3. Add the following procedure to your form.
+3. 将以下过程添加到窗体。
 
     [!code-vb[VbVbalrOOP#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#68)]
 
-4. Add a button to your form and call the `ShowTax` procedure from the `Button1_Click` event of the button.
+4. 向窗体添加一个按钮，并从按钮的 `Button1_Click` 事件调用 `ShowTax` 过程。
 
-5. Run the project and click the button on the form to test the overloaded `ShowTax` procedure.
+5. 运行项目，然后单击窗体上的按钮以测试重载的 `ShowTax` 过程。
 
-At run time, the compiler chooses the appropriate overloaded function that matches the parameters being used. When you click the button, the overloaded method is called first with a `Price` parameter that is a string and the message, "Price is a String. Tax is $5.12" is displayed. `TaxAmount` is called with a `Decimal` value the second time and the message, "Price is a Decimal. Tax is $5.12" is displayed.
+在运行时，编译器选择与所使用的参数匹配的适当重载函数。 单击该按钮时，将首先调用重载的方法，该方法是一个字符串和消息 "Price 为字符串" 的 `Price` 参数。 税率为 $5.12 "。 第二次使用 `Decimal` 的值调用 `TaxAmount`，"Price" 为 Decimal。 税率为 $5.12 "。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic 中的阴影](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Sub 语句](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [继承的基础知识](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
 - [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)
-- [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)
+- [ParamArray](../../../../visual-basic/language-reference/modifiers/byval.md)
 - [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)
-- [重载](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
 - [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)

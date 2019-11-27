@@ -29,7 +29,7 @@ ms.locfileid: "74435251"
   
 - 合并的单元格将根据 UI 自动化提供程序定义的其基本定位单元格来报告其 <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> 和 <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> 属性。 通常，它将是最左上方的行或列。  
   
-- <xref:System.Windows.Automation.Provider.IGridItemProvider> 不对网格进行实时操作，如合并或拆分单元格。  
+- <xref:System.Windows.Automation.Provider.IGridItemProvider> 不提供网格的活动操作（如合并或拆分单元）。  
   
 - 通常，可以使用键盘遍历实现 <xref:System.Windows.Automation.Provider.IGridItemProvider> 的控件（即 UI 自动化客户端可以移动到相邻的控件）。  
   
@@ -39,11 +39,11 @@ ms.locfileid: "74435251"
   
 |必需的成员|成员类型|注意|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|Property|None|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|Property|None|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|Property|None|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|Property|None|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|Property|None|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|属性|无|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|属性|无|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|属性|无|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|属性|无|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|属性|无|  
   
  没有与此控件模式关联的方法或事件。  
   
@@ -51,11 +51,11 @@ ms.locfileid: "74435251"
 ## <a name="exceptions"></a>异常  
  没有与此控件模式关联的异常。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UI 自动化控件模式概述](ui-automation-control-patterns-overview.md)
 - [在 UI 自动化提供程序中支持控件模式](support-control-patterns-in-a-ui-automation-provider.md)
-- [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [实现 UI 自动化 Grid 控件模式](implementing-the-ui-automation-grid-control-pattern.md)
 - [UI 自动化树概述](ui-automation-tree-overview.md)
 - [在 UI 自动化中使用缓存](use-caching-in-ui-automation.md)

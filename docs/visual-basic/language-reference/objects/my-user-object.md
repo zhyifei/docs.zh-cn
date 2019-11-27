@@ -18,12 +18,12 @@ ms.locfileid: "74350636"
 ## <a name="remarks"></a>备注  
  有关 `My.User` 对象所使用方法和属性的信息，请参阅 <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>。  
   
- For more information, see [Accessing User Data](../../../visual-basic/developing-apps/programming/accessing-user-data.md).  
+ 有关详细信息，请参阅[访问用户数据](../../../visual-basic/developing-apps/programming/accessing-user-data.md)。  
   
 ## <a name="requirements"></a>要求  
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **程序集：** Visual Basic 运行时库（在 Microsoft. .dll 中）  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Security.Principal.IPrincipal>
 - <xref:System.Threading.Thread.CurrentPrincipal%2A>

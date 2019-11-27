@@ -20,14 +20,14 @@ ms.locfileid: "74447259"
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
- This topic contains example code that demonstrates how to use [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] to insert text into a single-line text box. An alternate method is provided for multi-line and rich text controls where [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] is not applicable. For comparison purposes, the example also demonstrates how to use Win32 methods to accomplish the same results.  
+ 本主题包含示例代码，该代码演示如何使用 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 将文本插入单行文本框中。 为多行和多格式文本控件提供了一个替代方法，其中 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 不适用。 出于比较目的，此示例还演示了如何使用 Win32 方法来实现相同的结果。  
   
 ## <a name="example"></a>示例  
- The following example steps through a sequence of text controls in a target application. Each text control is tested to see if a <xref:System.Windows.Automation.ValuePattern> object can be obtained from it using the <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> method. If the text control does support <xref:System.Windows.Automation.ValuePattern>, the <xref:System.Windows.Automation.ValuePattern.SetValue%2A> method is used to insert a user-defined string into the text control. Otherwise, the <xref:System.Windows.Forms.SendKeys.SendWait%2A?displayProperty=nameWithType> method is used.  
+ 下面的示例逐步介绍目标应用程序中的一系列文本控件。 将对每个文本控件进行测试，以查看是否可以使用 <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> 方法从 <xref:System.Windows.Automation.ValuePattern> 对象获取该对象。 如果文本控件确实支持 <xref:System.Windows.Automation.ValuePattern>，则 <xref:System.Windows.Automation.ValuePattern.SetValue%2A> 方法用于将用户定义的字符串插入到文本控件中。 否则，使用 <xref:System.Windows.Forms.SendKeys.SendWait%2A?displayProperty=nameWithType> 方法。  
   
  [!code-csharp[InsertText#InsertText](../../../samples/snippets/csharp/VS_Snippets_Wpf/InsertText/CSharp/Window1.xaml.cs#inserttext)]
  [!code-vb[InsertText#InsertText](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InsertText/VisualBasic/Window1.xaml.vb#inserttext)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [TextPattern Insert Text Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771478(v=vs.90))
+- [TextPattern 插入文本示例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771478(v=vs.90))

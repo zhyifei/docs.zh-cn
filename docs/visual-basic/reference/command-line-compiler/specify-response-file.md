@@ -13,7 +13,7 @@ ms.locfileid: "74348553"
 ---
 # <a name="-specify-response-file-visual-basic"></a>@（指定响应文件）(Visual Basic)
 
-Specifies a file that contains compiler options and source-code files to compile.
+指定包含要编译的编译器选项和源代码文件的文件。
 
 ## <a name="syntax"></a>语法
 
@@ -21,33 +21,33 @@ Specifies a file that contains compiler options and source-code files to compile
 @response_file
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 `response_file`  
-必须的。 A file that lists compiler options or source-code files to compile. Enclose the file name in quotation marks (" ") if it contains a space.
+必需。 列出编译器选项或要编译的源代码文件的文件。 如果文件名包含空格，请将文件名用引号（""）引起来。
 
 ## <a name="remarks"></a>备注
 
-The compiler processes the compiler options and source-code files specified in a response file as if they had been specified on the command line.
+编译器将处理在响应文件中指定的编译器选项和源代码文件，就好像已在命令行中指定了这些选项。
 
-To specify more than one response file in a compilation, specify multiple response-file options, such as the following.
+若要在编译中指定多个响应文件，请指定多个响应文件选项，如下所示。
 
 ```console
 @file1.rsp @file2.rsp
 ```
 
-In a response file, multiple compiler options and source-code files can appear on one line. A single compiler-option specification must appear on one line (cannot span multiple lines). Response files can have comments that begin with the `#` symbol.
+在响应文件中，多个编译器选项和源代码文件可以出现在一行中。 单个编译器选项规范必须出现在一行中（不能跨多行）。 响应文件可以包含以 `#` 符号开头的注释。
 
-You can combine options specified on the command line with options specified in one or more response files. The compiler processes the command options as it encounters them. Therefore, command-line arguments can override previously listed options in response files. Conversely, options in a response file override options listed previously on the command line or in other response files.
+可以将命令行上指定的选项与一个或多个响应文件中指定的选项组合在一起。 编译器在遇到命令选项时进行处理。 因此，命令行参数可以重写以前在响应文件中列出的选项。 相反，响应文件中的选项会替代前面的命令行或其他响应文件中列出的选项。
 
-Visual Basic provides the Vbc.rsp file, which is located in the same directory as the Vbc.exe file. The Vbc.rsp file is included by default unless the `-noconfig` option is used. For more information, see [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).
+Visual Basic 提供了 Vbc 文件，该文件与 Vbc 文件位于同一目录中。 默认情况下，将包含 Vbc 文件，除非使用 `-noconfig` 选项。 有关详细信息，请参阅[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)。
 
 > [!NOTE]
-> The `@` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.
+> `@` 选项在 Visual Studio 开发环境中不可用;仅当从命令行进行编译时，它才可用。
 
 ## <a name="example"></a>示例
 
-The following lines are from a sample response file.
+以下行来自示例响应文件。
 
 ```console
 # build the first output file
@@ -59,13 +59,13 @@ source2.vb
 
 ## <a name="example"></a>示例
 
-The following example demonstrates how to use the `@` option with the response file named `File1.rsp`.
+下面的示例演示如何将 `@` 选项与名为 `File1.rsp`的响应文件一起使用。
 
 ```console
 vbc @file1.rsp
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)

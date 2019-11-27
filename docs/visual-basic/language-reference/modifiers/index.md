@@ -15,7 +15,7 @@ ms.locfileid: "74351544"
 ## <a name="in-this-section"></a>本节内容  
  [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
   
- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
+ [程序集](../../../visual-basic/language-reference/modifiers/assembly.md)  
   
  [Async](../../../visual-basic/language-reference/modifiers/async.md)  
   
@@ -23,7 +23,7 @@ ms.locfileid: "74351544"
   
  [ByRef](../../../visual-basic/language-reference/modifiers/byref.md)  
   
- [ByVal](../../../visual-basic/language-reference/modifiers/byval.md)  
+ [ParamArray](../../../visual-basic/language-reference/modifiers/byval.md)  
   
  [Default](../../../visual-basic/language-reference/modifiers/default.md)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "74351544"
   
  [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
   
- [New](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
+ [MyBase](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
   
  [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
   
@@ -51,9 +51,9 @@ ms.locfileid: "74351544"
   
  [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)  
   
- [重载](../../../visual-basic/language-reference/modifiers/overloads.md)  
+ [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
+ [Overrides](../../../visual-basic/language-reference/modifiers/overridable.md)  
   
  [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "74351544"
 
  [Protected Friend](../../../visual-basic/language-reference/modifiers/protected-friend.md)  
   
- [COMClassAttribute](../../../visual-basic/language-reference/modifiers/public.md)  
+ [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
  [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)  
   

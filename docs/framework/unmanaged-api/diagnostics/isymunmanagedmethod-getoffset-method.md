@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448944"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>ISymUnmanagedMethod::GetOffset 方法
-Returns the offset within this method that corresponds to a given position within a document.  
+返回此方法内的偏移量，该偏移量对应于文档中的给定位置。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,23 +37,23 @@ HRESULT GetOffset(
   
 ## <a name="parameters"></a>参数  
  `document`  
- [in] A pointer to the document for which the offset is requested.  
+ 中指向为其请求偏移量的文档的指针。  
   
  `line`  
- [in] The document line for which the offset is requested.  
+ 中为其请求偏移量的文档行。  
   
  `column`  
- [in] The document column for which the offset is requested.  
+ 中为其请求偏移量的文档列。  
   
  `pRetVal`  
- [out] A pointer to a `ULONG32` that receives the offsets.  
+ 弄指向接收偏移量的 `ULONG32` 的指针。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

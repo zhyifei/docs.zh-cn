@@ -12,18 +12,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349827"
 ---
 # <a name="errors-summary-visual-basic"></a>错误摘要 (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Visual Basic 语言关键字和运行时库成员按用途和使用进行组织。  
   
-|操作|语言元素|  
+|操作|Language 元素|  
 |------------|----------------------|  
-|Generate run-time errors.|<xref:Microsoft.VisualBasic.Collection.Clear%2A>, [Error](../../../visual-basic/language-reference/statements/error-statement.md), <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|  
-|Get exceptions.|<xref:Microsoft.VisualBasic.ErrObject.GetException%2A>|  
-|Provide error information.|<xref:Microsoft.VisualBasic.Information.Err%2A>|  
-|Trap errors during run time.|[On Error](../../../visual-basic/language-reference/statements/on-error-statement.md), [Resume](../../../visual-basic/language-reference/statements/resume-statement.md), [Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|  
-|Provide line number of error.|<xref:Microsoft.VisualBasic.ErrObject.Erl%2A>|  
-|Provide system error code.|<xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>|  
+|生成运行时错误。|<xref:Microsoft.VisualBasic.Collection.Clear%2A>、[错误](../../../visual-basic/language-reference/statements/error-statement.md)、<xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|  
+|获取异常。|<xref:Microsoft.VisualBasic.ErrObject.GetException%2A>|  
+|提供错误信息。|<xref:Microsoft.VisualBasic.Information.Err%2A>|  
+|在运行时捕获错误。|[出现错误时](../../../visual-basic/language-reference/statements/on-error-statement.md)，[恢复](../../../visual-basic/language-reference/statements/resume-statement.md)，请[尝试 .。。Catch .。。最后](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|  
+|提供错误的行号。|<xref:Microsoft.VisualBasic.ErrObject.Erl%2A>|  
+|提供系统错误代码。|<xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [关键字](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 运行库成员](../../../visual-basic/language-reference/runtime-library-members.md)

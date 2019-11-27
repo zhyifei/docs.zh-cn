@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445520"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach 方法
-Performs server-invoked debugger auto attach.  
+执行服务器调用的调试器自动附加。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,26 +40,26 @@ HRESULT AutoAttach
   
 ## <a name="parameters"></a>参数  
  `guidPort`  
- [in] Always set to `GUID_NULL`.  
+ 中始终设置为 `GUID_NULL`。  
   
  `dwPid`  
- [in] Process ID, normally retrieved with the `GetCurrentProcessId` function.  
+ 中通常用 `GetCurrentProcessId` 函数检索的进程 ID。  
   
  `dwProgramType`  
- [in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.  
+ 中程序类型： `AUTOATTACH_PROGRAM_WIN32`、`AUTOATTACH_PROGRAM_COMPLUS`或 `AUTOATTACH_PROGRAM_UNKNOWN`。  
   
  `dwProgramId`  
- [in] Program ID.  
+ 中程序 ID。  
   
  `pszSessionId`  
- [in] String passed by the debug verb.  
+ 中调试谓词传递的字符串。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds.  
+ 如果方法成功，则 S_OK。  
   
 ## <a name="requirements"></a>要求  
- **Header:** DbgAutoAttach.h  
+ **标头：** DbgAutoAttach  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IDebugAutoAttach 接口](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)

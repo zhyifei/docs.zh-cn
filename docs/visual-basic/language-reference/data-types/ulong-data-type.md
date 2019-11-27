@@ -1,5 +1,5 @@
 ---
-title: Ulong 数据类型
+title: ULong 数据类型
 ms.date: 01/31/2018
 f1_keywords:
 - vb.ulong
@@ -23,32 +23,32 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343884"
 ---
-# <a name="ulong-data-type-visual-basic"></a>ULong data type (Visual Basic)
+# <a name="ulong-data-type-visual-basic"></a>ULong 数据类型（Visual Basic）
 
-Holds unsigned 64-bit (8-byte) integers ranging in value from 0 through 18,446,744,073,709,551,615 (more than 1.84 times 10 ^ 19).
+保留未签名的64位（8字节）整数，范围为0到18446744073709551615（超过1.84 倍 10 ^ 19）。
 
 ## <a name="remarks"></a>备注
 
-Use the `ULong` data type to contain binary data too large for `UInteger`, or the largest possible unsigned integer values.
+使用 `ULong` 数据类型包含对于 `UInteger`来说太大的二进制数据或可能的最大无符号整数值。
 
 `ULong` 的默认值为 0。
 
-## <a name="literal-assignments"></a>Literal assignments
+## <a name="literal-assignments"></a>文本赋值
 
-You can declare and initialize a `ULong` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal. 如果整数文本在 `ULong` 范围之外（即，如果它小于 <xref:System.UInt64.MinValue?displayProperty=nameWithType> 或大于 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>），会发生编译错误。
+可以通过为 `ULong` 变量指定十进制文本、十六进制文本、八进制文本或（从 Visual Basic 2017）作为二进制文本来声明和初始化。 如果整数文本在 `ULong` 范围之外（即，如果它小于 <xref:System.UInt64.MinValue?displayProperty=nameWithType> 或大于 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>），会发生编译错误。
 
 在以下示例中，表示为十进制、十六进制和二进制文本且等于 7,934,076,125 的整数被分配给 `ULong` 值。
 
 [!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ULong)]
 
 > [!NOTE]
-> You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal. 十进制文本没有前缀。
+> 使用前缀 `&h` 或 `&H` 来表示十六进制文本，使用前缀 `&b` 或 `&B` 来表示二进制文本，并使用前缀 `&o` 或 `&O` 来表示八进制文本。 十进制文本没有前缀。
 
-Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.
+从 Visual Basic 2017 开始，还可以使用下划线字符（`_`）作为数字分隔符，以增强可读性，如以下示例中所示。
 
 [!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. 例如:
+从 Visual Basic 15.5 开始，还可以使用下划线字符（`_`）作为前缀和十六进制、二进制或八进制数字之间的前导分隔符。 例如：
 
 ```vb
 Dim number As ULong = &H_F9AC_0326_1489_D68C
@@ -56,7 +56,7 @@ Dim number As ULong = &H_F9AC_0326_1489_D68C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Numeric literals can also include the `UL` or `ul` [type character](../../programming-guide/language-features/data-types/type-characters.md) to denote the `ULong` data type, as the following example shows.
+数字文本还可以包括 `UL` 或 `ul`[类型字符](../../programming-guide/language-features/data-types/type-characters.md)来表示 `ULong` 数据类型，如下面的示例所示。
 
 ```vb
 Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
@@ -64,25 +64,25 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 
 ## <a name="programming-tips"></a>编程提示
 
-- **Negative Numbers.** Because `ULong` is an unsigned type, it cannot represent a negative number. If you use the unary minus (`-`) operator on an expression that evaluates to type `ULong`, Visual Basic converts the expression to `Decimal` first.
+- **负数。** 由于 `ULong` 是无符号类型，因此它不能表示负数。 如果对计算结果为类型 `ULong`的表达式使用一元减号（`-`）运算符，Visual Basic 会先将该表达式转换为 `Decimal`。
 
-- **CLS Compliance.** The `ULong` data type is not part of the [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), so CLS-compliant code cannot consume a component that uses it.
+- **CLS 遵从性。** `ULong` 的数据类型不是[公共语言规范](https://www.ecma-international.org/publications/standards/Ecma-335.htm)（cls）的一部分，因此符合 CLS 的代码无法使用使用它的组件。
 
-- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that types such as `ulong` can have a different data width (32 bits) in other environments. If you are passing a 32-bit argument to such a component, declare it as `UInteger` instead of `ULong` in your managed Visual Basic code.
+- **互操作注意事项。** 如果与不是为 .NET Framework 编写的组件（如自动化或 COM 对象）进行交互，请记住，在其他环境中，类型（如 `ulong`）可能具有不同的数据宽度（32位）。 如果要将32位参数传递给此类组件，请在托管 Visual Basic 代码中将其声明为 `UInteger` 而不是 `ULong`。
 
-  Furthermore, Automation does not support 64-bit integers on Windows 95, Windows 98, Windows ME, or Windows 2000. You cannot pass a Visual Basic `ULong` argument to an Automation component on these platforms.
+  此外，在 Windows 95、Windows 98、Windows ME 或 Windows 2000 上，自动化不支持64位整数。 不能将 Visual Basic `ULong` 参数传递到这些平台上的自动化组件。
 
-- **Widening.** The `ULong` data type widens to `Decimal`, `Single`, and `Double`. This means you can convert `ULong` to any of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
+- **扩大.** `ULong` 数据类型扩大到 `Decimal`、`Single`和 `Double`。 这意味着，可以将 `ULong` 转换为这些类型中的任何一种，而不会遇到 <xref:System.OverflowException?displayProperty=nameWithType> 错误。
 
-- **Type Characters.** Appending the literal type characters `UL` to a literal forces it to the `ULong` data type. `ULong` has no identifier type character.
+- **键入字符。** 将文本类型字符追加 `UL` 文本会将其强制转换为 `ULong` 的数据类型。 `ULong` 没有标识符类型字符。
 
-- **Framework Type.** .NET Framework 中的对应类型是 <xref:System.UInt64?displayProperty=nameWithType> 结构。
+- **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.UInt64?displayProperty=nameWithType> 结构。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.UInt64>
 - [数据类型](../../../visual-basic/language-reference/data-types/index.md)
-- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [如何：调用采用无符号类型的 Windows 函数](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
 - [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

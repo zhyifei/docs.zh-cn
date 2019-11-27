@@ -19,7 +19,7 @@ ms.locfileid: "74447685"
 
 - Windows 操作系统附带的 [Logman](/windows-server/administration/windows-commands/logman) 和 [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) 命令行工具。
 
-- [Windows 性能工具包](/windows-hardware/test/wpt/)中的 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 工具。 有关 Xperf 的详细信息，请参阅 [Windows 性能博客](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)。
+- [Windows 性能工具包](/windows-hardware/test/wpt/xperf-command-line-reference)中的 [Xperf](/windows-hardware/test/wpt/) 工具。 有关 Xperf 的详细信息，请参阅 [Windows 性能博客](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)。
 
 若要捕获 CLR 事件信息，必须在计算机上安装 CLR 提供程序。 若要确认该提供程序已安装，请在命令提示符处键入 `logman query providers`。 将显示提供程序的列表。 此列表应包含与 CLR 提供程序对应的项，如下所示。
 
@@ -29,7 +29,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-如果未列出 CLR 提供程序，则可以通过使用 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 命令行工具在 Windows Vista 和更高版本的操作系统上安装该提供程序。 以管理员身份打开命令提示符窗口。 Change the prompt directory to the .NET Framework 4 folder (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET version>\ ). 此文件夹包含 CLR-ETW.man 文件。 在命令提示符处，键入以下命令来安装 CLR 提供程序：
+如果未列出 CLR 提供程序，则可以通过使用 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 命令行工具在 Windows Vista 和更高版本的操作系统上安装该提供程序。 以管理员身份打开命令提示符窗口。 将提示目录更改为 .NET Framework 4 文件夹（%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET 版本 > \）。 此文件夹包含 CLR-ETW.man 文件。 在命令提示符处，键入以下命令来安装 CLR 提供程序：
 
 `wevtutil im CLR-ETW.man`
 
@@ -57,7 +57,7 @@ Provider                                 GUID
 
     - `0x1CCBD` 指定将引发的事件的类别。
 
-    - `0x5` 设置记录的级别（在本例中为详细级别 (5)）。
+    - `0x5` 设置日志记录级别（在本例中为 verbose （5））。
 
     - `-ets` 参数指示 Logman 将命令发送给事件跟踪会话。
 
@@ -111,7 +111,7 @@ Provider                                 GUID
 
      此命令可使 XPerf 将事件转储为可以查看的逗号分隔值 (CSV) 文件。 由于各个事件具有不同的字段，因此该 CSV 文件中的数据之前有多个标题行。 每行的第一个字段为事件类型，它指示应使用哪一个标题来确定字段的其余部分。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Windows Performance Toolkit](/windows-hardware/test/wpt/)
+- [Windows 性能工具包](/windows-hardware/test/wpt/)
 - [公共语言运行时中的 ETW 事件](etw-events-in-the-common-language-runtime.md)

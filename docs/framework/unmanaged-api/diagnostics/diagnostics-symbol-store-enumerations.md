@@ -15,20 +15,20 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448536"
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a>诊断符号存储区枚举
-This topic describes the unmanaged enumerations that the diagnostics symbol store API uses.  
+本主题介绍诊断符号存储区 API 使用的非托管枚举。  
   
 ## <a name="in-this-section"></a>本节内容  
  [CorSymAddrKind 枚举](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)  
- Indicates the type of memory address.  
+ 指示内存地址的类型。  
   
  [CorSymSearchPolicyAttributes 枚举](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
- Specifies the policy to be used when doing a search for a symbol reader.  
+ 指定在搜索符号读取器时要使用的策略。  
   
  [CorSymVarFlag 枚举](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
- Indicates whether a variable is compiler-generated.  
+ 指示变量是否是编译器生成的。  
   
  [NOTIFY_FILTER 枚举](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)  
- Identifies callbacks for debugger functions.  
+ 标识调试器函数的回调。  
   
 ## <a name="related-sections"></a>相关章节  
  [诊断符号存储区接口](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  

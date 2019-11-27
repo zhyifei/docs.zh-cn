@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431385"
 ---
 # <a name="imetadataimport2getgenericparamconstraintprops-method"></a>IMetaDataImport2::GetGenericParamConstraintProps 方法
-Gets the metadata associated with the generic parameter constraint represented by the specified constraint token.  
+获取与指定约束标记所表示的泛型参数约束关联的元数据。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,24 +37,24 @@ HRESULT GetGenericParamConstraintProps (
   
 ## <a name="parameters"></a>参数  
  `gpc`  
- [in] The token to the generic parameter constraint for which to return the metadata.  
+ 中要为其返回元数据的泛型参数约束的标记。  
   
  `ptGenericParam`  
- [out] A pointer to the token that represents the generic parameter that is constrained.  
+ 弄指向表示受约束的泛型参数的标记的指针。  
   
  `ptkConstraintType`  
- [out] A pointer to a TypeDef, TypeRef, or TypeSpec token that represents a constraint on `ptGenericParam`.  
+ 弄一个指针，指向表示 `ptGenericParam`上的约束的 TypeDef、TypeRef 或 TypeSpec 标记。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

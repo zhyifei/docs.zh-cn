@@ -25,7 +25,7 @@ ms.locfileid: "74351920"
 ### <a name="making-an-object-serializable"></a>让对象可序列化  
  若要序列化对象，需要具有要序列化的对象、包含已序列化对象的一个流，以及一个 <xref:System.Runtime.Serialization.Formatter>。 <xref:System.Runtime.Serialization> 包含序列化和反序列化对象所必需的类。  
   
- 将 <xref:System.SerializableAttribute> 特性应用于某个类型，以指示此类型的实例可以被序列化。 如果尝试对没有 <xref:System.SerializableAttribute> 特性的类型进行序列化，则会引发 <xref:System.Runtime.Serialization.SerializationException> 异常。  
+ 将 <xref:System.SerializableAttribute> 特性应用于某个类型，以指示此类型的实例可以被序列化。 如果尝试对没有 <xref:System.Runtime.Serialization.SerializationException> 特性的类型进行序列化，则会引发 <xref:System.SerializableAttribute> 异常。  
   
  如果想让类中的某个字段不可序列化，请应用 <xref:System.NonSerializedAttribute> 特性。 如果可序列化的类型中的一个字段包含指针、句柄或特定环境专用的其他一些数据结构，且不能在其他环境中有意义地重构，不妨让其不可序列化。  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436317"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>IMetaDataAssemblyImport::GetManifestResourceProps 方法
-Gets the set of properties of the manifest resource with the specified metadata signature.  
+获取具有指定元数据签名的清单资源的属性集。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,35 +41,35 @@ HRESULT GetManifestResourceProps (
   
 ## <a name="parameters"></a>参数  
  `mdmr`  
- [in] An `mdManifestResource` token that represents the resource for which to get the properties.  
+ 中一个 `mdManifestResource` 标记，它表示要获取其属性的资源。  
   
  `szName`  
- [out] The name of the resource.  
+ 弄资源的名称。  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ 中`szName`的大小（宽字符）。  
   
  `pchName`  
- [out] A pointer to the number of wide chars actually returned in `szName`.  
+ 弄一个指针，指向 `szName`中实际返回的宽字符数。  
   
  `ptkImplementation`  
- [out] A pointer to an `mdFile` token or an `mdAssemblyRef` token that represents the file or assembly, respectively, that contains the resource.  
+ 弄一个指针，指向 `mdFile` 标记，或者分别表示包含该资源的文件或程序集的 `mdAssemblyRef` 标记。  
   
  `pdwOffset`  
- [out] A pointer to a value that specifies the offset to the beginning of the resource within the file.  
+ 弄一个指向值的指针，该值指定文件中资源开始处的偏移量。  
   
  `pdwResourceFlags`  
- [out] A pointer to flags that describe the metadata applied to a resource. The flags value is a combination of one or more [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) values.  
+ 弄一个指针，指向用于描述应用于资源的元数据的标志。 Flags 值是一个或多个[CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md)值的组合。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439111"
 ---
 # <a name="icorprofilerinfogetfunctioninfo-method"></a>ICorProfilerInfo::GetFunctionInfo 方法
-Gets the parent class and metadata token for the specified function.  
+获取指定函数的父类和元数据标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT GetFunctionInfo(
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in] The ID of the function for which to get the parent class and metadata token.  
+ 中要获取其父类和元数据标记的函数的 ID。  
   
  `pClassId`  
  [out] 一个指向函数的父类的指针。  
@@ -49,9 +49,9 @@ HRESULT GetFunctionInfo(
  [out] 指向函数的元数据标记的指针。  
   
 ## <a name="remarks"></a>备注  
- The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a metadata interface for a given module. 然后，返回到 `pToken` 所引用位置的元数据标记便可用于访问该函数的元数据。  
+ 探查器代码可调用[ICorProfilerInfo：： GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md)以获取给定模块的元数据接口。 然后，返回到 `pToken` 所引用位置的元数据标记便可用于访问该函数的元数据。  
   
- The `ClassID` of a function on a generic class might not be obtainable without more contextual information about the use of the function. In this case, `pClassId` will be 0. Profiler code should use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) with a COR_PRF_FRAME_INFO value to provide more context.  
+ 在泛型类上执行函数的 `ClassID` 可能无法获得有关函数使用的更多上下文信息。 在这种情况下，`pClassId` 将为0。 探查器代码应将[ICorProfilerInfo2：： GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)与 COR_PRF_FRAME_INFO 值一起使用，以提供更多上下文。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -62,6 +62,6 @@ HRESULT GetFunctionInfo(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

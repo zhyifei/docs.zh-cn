@@ -45,7 +45,7 @@ ms.locfileid: "74354178"
  [如何：以特定类型返回 LINQ 查询结果](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)  
  通过示例展示了如何将 LINQ 查询结果作为特定类型（而不是匿名类型）返回。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [LINQ（语言集成查询）](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Visual Basic 中的 LINQ to XML 概述](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)

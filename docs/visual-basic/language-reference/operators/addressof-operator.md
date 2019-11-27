@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350272"
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf 运算符 (Visual Basic)
-Creates a delegate instance that references the specific procedure.  
+创建引用特定过程的委托实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -26,26 +26,26 @@ AddressOf procedurename
   
 ## <a name="parts"></a>部件  
  `procedurename`  
- 必须的。 Specifies the procedure to be referenced by the newly created delegate.  
+ 必需。 指定新创建的委托所引用的过程。  
   
 ## <a name="remarks"></a>备注  
- The `AddressOf` operator creates a delegate that points to the sub or function specified by `procedurename`. When the specified procedure is an instance method then the delegate refers to both the instance and the method. Then, when the  delegate is invoked the specified method of the specified instance is called.  
+ `AddressOf` 运算符创建指向 `procedurename`指定的 sub 或函数的委托。 如果指定的过程是实例方法，则委托同时引用实例和方法。 然后，在调用委托时，将调用指定实例的指定方法。  
   
- The `AddressOf` operator can be used as the operand of a delegate constructor or it can be used in a context in which the type of the delegate can be determined by the compiler.  
+ `AddressOf` 运算符可用作委托构造函数的操作数，或可用于可由编译器确定委托类型的上下文中使用。  
   
 ## <a name="example"></a>示例  
- This example uses the `AddressOf` operator to designate a delegate to handle the `Click` event of a button.  
+ 此示例使用 `AddressOf` 运算符来指定用于处理按钮的 `Click` 事件的委托。  
   
  [!code-vb[VbVbalrDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#8)]  
   
 ## <a name="example"></a>示例  
- The following example uses the `AddressOf` operator to designate the startup function for a thread.  
+ 下面的示例使用 `AddressOf` 运算符来指定线程的启动函数。  
   
  [!code-vb[VbVbalrDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#9)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
 - [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)
 - [委托](../../../visual-basic/programming-guide/language-features/delegates/index.md)

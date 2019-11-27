@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427996"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter 方法
-Defines a single parameter in the current method. The parameter type is taken from the parameter's position (sequence) within the method's signature.  
+在当前方法中定义一个参数。 参数类型从参数在方法签名中的位置（序列）中获取。  
   
- If parameters are defined in the metadata for a given method, you do not have to define them again by using this method. The symbol readers must check the normal metadata for the parameters before checking the symbol store.  
+ 如果在给定方法的元数据中定义了参数，则无需使用此方法再次定义这些参数。 符号读取器必须在检查符号存储区之前检查参数的正常元数据。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,32 +42,32 @@ HRESULT DefineParameter(
   
 ## <a name="parameters"></a>参数  
  `name`  
- [in] The parameter name.  
+ 中参数名称。  
   
  `attributes`  
- [in] The parameter attributes.  
+ 中参数特性。  
   
  `sequence`  
- [in] The parameter signature.  
+ 中参数签名。  
   
  `addrKind`  
- [in] The address type.  
+ 中地址类型。  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ 中参数规范的第一个地址。  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ 中参数规范的第二个地址。  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ 中参数规范的第三个地址。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

@@ -28,12 +28,12 @@ ms.locfileid: "74283677"
 
 下表列出了 <xref:System.Windows.Controls.Primitives.ToggleButton> 控件的可视状态。
 
-|VisualState 名称|VisualStateGroup 名称|描述|
+|VisualState 名称|VisualStateGroup 名称|说明|
 |-|-|-|
-|一般|CommonStates|默认状态。|
+|正常|CommonStates|默认状态。|
 |MouseOver|CommonStates|鼠标指针悬停在控件上。|
 |已按下|CommonStates|已按下控件。|
-|Disabled|CommonStates|已禁用控件。|
+|已禁用|CommonStates|已禁用控件。|
 |已设定焦点|FocusStates|控件有焦点。|
 |失去焦点|FocusStates|控件没有焦点。|
 |已选中|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 为 `true`。|

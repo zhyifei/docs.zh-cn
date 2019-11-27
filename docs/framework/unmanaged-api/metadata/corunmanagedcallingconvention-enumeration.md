@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442447"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>CorUnmanagedCallingConvention 枚举
-Specifies the calling conventions for unmanaged code.  
+指定非托管代码的调用约定。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,27 +44,27 @@ typedef enum CorUnmanagedCallingConvention {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|The C language calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|The standard calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|The "this" calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|The "fast" calling convention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|C 语言调用约定。|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|标准调用约定。|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|"This" 调用约定。|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|"Fast" 调用约定。|  
 |`IMAGE_CEE_CS_CALLCONV_C`|未使用。|  
 |`IMAGE_CEE_CS_CALLCONV_STDCALL`|未使用。|  
 |`IMAGE_CEE_CS_CALLCONV_THISCALL`|未使用。|  
 |`IMAGE_CEE_CS_CALLCONV_FASTCALL`|未使用。|  
   
 ## <a name="remarks"></a>备注  
- The CLR does not support the "fast" calling convention in the .NET Framework version 1.0.  
+ CLR 不支持 .NET Framework 版本1.0 中的 "fast" 调用约定。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **标头：** Corhdr。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

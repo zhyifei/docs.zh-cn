@@ -12,25 +12,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350728"
 ---
 # <a name="myapplication-object"></a>My.Application 对象
-Provides properties, methods, and events related to the current application.  
+提供与当前应用程序相关的属性、方法和事件。  
   
 ## <a name="remarks"></a>备注  
- For information about the methods and properties of the `My.Application` object, see the following resources:  
+ 有关 `My.Application` 对象的方法和属性的信息，请参阅以下资源：  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> for members that are available in all projects.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> 适用于所有项目中可用的成员。  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> for members that are available in Windows Forms applications.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> Windows 窗体应用程序中可用的成员。  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> for members that are available in console applications.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> 适用于控制台应用程序中的成员。  
   
 ## <a name="requirements"></a>要求  
  **命名空间：** <xref:Microsoft.VisualBasic.ApplicationServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (the base class <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> provides members available in console applications, and its base class <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> provides the members that are available in all projects)  
+ **类：** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> （基类 <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> 提供控制台应用程序中可用的成员，其基类 <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> 提供所有项目中可用的成员）  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **程序集：** Visual Basic 运行时库（在 Microsoft. .dll 中）  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [My.Application.Info 对象](../../../visual-basic/language-reference/objects/my-application-info-object.md)
 - [My.Application.Log 对象](../../../visual-basic/language-reference/objects/my-application-log-object.md)

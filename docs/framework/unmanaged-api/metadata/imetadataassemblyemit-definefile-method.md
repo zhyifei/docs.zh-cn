@@ -39,32 +39,32 @@ HRESULT DefineFile (
   
 ## <a name="parameters"></a>参数  
  `szName`  
- [in] The name of the file to be consumed.  
+ 中要使用的文件的名称。  
   
  `pbHashValue`  
- [in] A pointer to the hash data associated with the assembly.  
+ 中指向与程序集关联的哈希数据的指针。  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ 中`pbHashValue`的大小（以字节为单位）。  
   
  `dwFileFlags`  
- [in] A bitwise combination of `FileFlags` values that specify property settings.  
+ 中指定属性设置 `FileFlags` 值的按位组合。  
   
  `pmdf`  
- [out] A pointer to the returned `File` token.  
+ 弄指向返回的 `File` 标记的指针。  
   
 ## <a name="remarks"></a>备注  
- One `File` metadata structure must be defined for each file that was part of this assembly at the time that this assembly was built, excluding the file that contains the metadata.  
+ 必须在生成此程序集时为作为此程序集的一部分的每个文件定义一个 `File` 元数据结构，其中不包括包含元数据的文件。  
   
 ## <a name="requirements"></a>要求  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

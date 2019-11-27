@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443261"
 ---
 # <a name="iceegengetstringsection-method"></a>ICeeGen::GetStringSection 方法
-Gets a string representation of the code section referenced by the specified handle.  
+获取由指定句柄引用的代码段的字符串表示形式。  
   
- This method is obsolete and should not be used.  
+ 此方法已过时，不应使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,17 +37,17 @@ HRESULT GetStringSection (
   
 ## <a name="parameters"></a>参数  
  `section`  
- [in, out] The handle to the code section.  
+ [in，out]代码部分的句柄。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICeeGen 接口](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

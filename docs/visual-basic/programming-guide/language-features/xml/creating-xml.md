@@ -14,20 +14,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351740"
 ---
 # <a name="creating-xml-in-visual-basic"></a>在 Visual Basic 中创建 XML
-Visual Basic enables you to use *XML literals* directly in your code. The XML literal syntax represents [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects, and it is similar to the XML 1.0 syntax. This makes it easier to create XML elements, documents, and fragments programmatically because your code has the same structure as the final XML.  
+Visual Basic 使你能够直接在代码中使用*XML 文本*。 XML 文本语法表示 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 对象，它类似于 XML 1.0 语法。 这样可以更轻松地以编程方式创建 XML 元素、文档和片段，因为你的代码具有与最终 XML 相同的结构。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|术语|定义|  
+|术语|Definition|  
 |---|---|  
-|[XML 文本概述](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)|Introduction to XML literals and how they relate to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[XML 中的嵌入式表达式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)|Describes how to use embedded expressions in XML literals.|  
-|[如何：创建 XML 文本](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)|Describes how to create an XML element in code by using an XML literal.|  
-|[XML 文本中的空白](../../../../visual-basic/programming-guide/language-features/xml/white-space-in-xml-literals.md)|Describes how Visual Basic treats white space in XML literals.|  
-|[XML 文本和 XML 1.0 规范](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)|Describes how the XML literal syntax in Visual Basic relates to the XML 1.0 specification.|  
-|[如何：在 XML 文本中嵌入表达式](../../../../visual-basic/programming-guide/language-features/xml/how-to-embed-expressions-in-xml-literals.md)|Describes how to use embedded expressions in XML literals to create content at run time.|  
-|[已声明的 XML 元素和特性的名称](../../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)|Describes guidelines for naming XML elements and attributes.|  
+|[XML 文本概述](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)|XML 文本简介，以及它们如何与 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]相关。|  
+|[XML 中的嵌入式表达式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)|介绍如何在 XML 文本中使用嵌入表达式。|  
+|[如何：创建 XML 文本](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)|介绍如何在代码中使用 XML 文本创建 XML 元素。|  
+|[XML 文本中的空白](../../../../visual-basic/programming-guide/language-features/xml/white-space-in-xml-literals.md)|介绍 Visual Basic 如何处理 XML 文本中的空格。|  
+|[XML 文本和 XML 1.0 规范](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)|介绍 Visual Basic 中的 XML 文本语法如何与 XML 1.0 规范相关。|  
+|[如何：在 XML 文本中嵌入表达式](../../../../visual-basic/programming-guide/language-features/xml/how-to-embed-expressions-in-xml-literals.md)|介绍如何使用 XML 文本中的嵌入表达式在运行时创建内容。|  
+|[已声明的 XML 元素和特性的名称](../../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)|介绍命名 XML 元素和属性的准则。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

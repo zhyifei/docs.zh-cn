@@ -17,16 +17,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341092"
 ---
 # <a name="function-procedures-visual-basic"></a>Function 过程 (Visual Basic)
-A `Function` procedure is a series of Visual Basic statements enclosed by the `Function` and `End Function` statements. The `Function` procedure performs a task and then returns control to the calling code. When it returns control, it also returns a value to the calling code.  
+`Function` 过程是一系列由 `Function` 和 `End Function` 语句括起来的 Visual Basic 语句。 `Function` 过程执行任务，然后将控制返回给调用代码。 当它返回 control 时，它还会将值返回到调用代码。  
   
- Each time the procedure is called, its statements run, starting with the first executable statement after the `Function` statement and ending with the first `End Function`, `Exit Function`, or `Return` statement encountered.  
+ 每次调用该过程时，其语句都会运行，从 `Function` 语句后面的第一个可执行语句开始，到遇到的第一个 `End Function`、`Exit Function`或 `Return` 语句结束。  
   
- You can define a `Function` procedure in a module, class, or structure. It is `Public` by default, which means you can call it from anywhere in your application that has access to the module, class, or structure in which you defined it.  
+ 您可以在模块、类或结构中定义 `Function` 过程。 默认情况下，它是 `Public` 的，这意味着你可以从应用程序中可访问定义它的模块、类或结构的任何位置调用它。  
   
- A `Function` procedure can take arguments, such as constants, variables, or expressions, which are passed to it by the calling code.  
+ `Function` 过程可以采用由调用代码传递给它的参数，如常量、变量或表达式。  
   
 ## <a name="declaration-syntax"></a>声明语法  
- The syntax for declaring a `Function` procedure is as follows:  
+ 声明 `Function` 过程的语法如下所示：  
   
 ```vb  
 [Modifiers] Function FunctionName [(ParameterList)] As ReturnType  
@@ -34,12 +34,12 @@ A `Function` procedure is a series of Visual Basic statements enclosed by the `F
 End Function  
 ```  
   
- The *modifiers* can specify access level and information regarding overloading, overriding, sharing, and shadowing. For more information, see [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).  
+ *修饰符*可以指定有关重载、重写、共享和隐藏的访问级别和信息。 有关详细信息，请参阅[函数语句](../../../../visual-basic/language-reference/statements/function-statement.md)。  
   
- You declare each parameter the same way you do for [Sub Procedures](./sub-procedures.md).  
+ 声明每个参数的方式与处理[Sub 过程](./sub-procedures.md)的方式相同。  
   
 ### <a name="data-type"></a>数据类型  
- Every `Function` procedure has a data type, just as every variable does. This data type is specified by the `As` clause in the `Function` statement, and it determines the data type of the value the function returns to the calling code. The following sample declarations illustrate this.  
+ 每个 `Function` 过程都有一种数据类型，就像每个变量一样。 此数据类型由 `Function` 语句中的 `As` 子句指定，它确定函数返回到调用代码的值的数据类型。 下面的示例声明阐释了这一点。  
   
 ```vb  
 Function yesterday() As Date  
@@ -49,12 +49,12 @@ Function findSqrt(ByVal radicand As Single) As Single
 End Function  
 ```  
   
- For more information, see "Parts" in [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).  
+ 有关详细信息，请参阅[Function 语句](../../../../visual-basic/language-reference/statements/function-statement.md)中的 "part"。  
   
-## <a name="returning-values"></a>Returning Values  
- The value a `Function` procedure sends back to the calling code is called its return value. The procedure returns this value in one of two ways:  
+## <a name="returning-values"></a>返回值  
+ `Function` 过程发送回调用代码的值称为其返回值。 此过程通过以下两种方式之一返回此值：  
   
-- It uses the `Return` statement to specify the return value, and returns control immediately to the calling program. 下面的示例阐释了这一点。  
+- 它使用 `Return` 语句来指定返回值，并立即将控制权返回给调用程序。 下面的示例阐释了这一点。  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -64,7 +64,7 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
-- It assigns a value to its own function name in one or more statements of the procedure. Control does not return to the calling program until an `Exit Function` or `End Function` statement is executed. 下面的示例阐释了这一点。  
+- 它在过程的一个或多个语句中为其自己的函数名称赋值。 直到执行 `Exit Function` 或 `End Function` 语句后，控件才会返回到调用程序。 下面的示例阐释了这一点。  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -74,31 +74,31 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
- The advantage of assigning the return value to the function name is that control does not return from the procedure until it encounters an `Exit Function` or `End Function` statement. This allows you to assign a preliminary value and adjust it later if necessary.  
+ 将返回值分配给函数名称的优点是，在遇到 `Exit Function` 或 `End Function` 语句之前，控件不会从过程返回。 这使您可以分配一个初步的值并在以后必要时进行调整。  
   
- For more information about returning values, see [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md). For information about returning arrays, see [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ 有关返回值的详细信息，请参阅[函数语句](../../../../visual-basic/language-reference/statements/function-statement.md)。 有关返回数组的信息，请参阅[数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
   
-## <a name="calling-syntax"></a>Calling Syntax  
- You invoke a `Function` procedure by including its name and arguments either on the right side of an assignment statement or in an expression. You must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses. If no arguments are supplied, you can optionally omit the parentheses.  
+## <a name="calling-syntax"></a>调用语法  
+ 通过在赋值语句或表达式的右侧包含其名称和参数，可以调用 `Function` 过程。 必须为所有非可选参数提供值，并且必须将参数列表括在括号中。 如果未提供任何参数，则可以选择省略括号。  
   
- The syntax for a call to a `Function` procedure is as follows:  
+ 调用 `Function` 过程的语法如下所示：  
   
- *lvalue*  `=`  *functionname* `[(` *argumentlist* `)]`  
+ *lvalue*`=`*functionname* `[(` *argumentlist* `)]`  
   
- `If ((` *functionname* `[(` *argumentlist* `)] / 3) <=`  *expression* `) Then`  
+ `If ((` *functionname* `[(` *argumentlist* `)] / 3) <=`*表达式*`) Then`  
   
- When you call a `Function` procedure, you do not have to use its return value. If you do not, all the actions of the function are performed, but the return value is ignored. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> is often called in this manner.  
+ 调用 `Function` 过程时，无需使用其返回值。 否则，将执行该函数的所有操作，但将忽略返回值。 通常以这种方式调用 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>。  
   
-### <a name="illustration-of-declaration-and-call"></a>Illustration of Declaration and Call  
- The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, given the values for the other two sides.  
+### <a name="illustration-of-declaration-and-call"></a>声明和调用的插图  
+ 以下 `Function` 过程将计算直角三角形的最长边（或斜边），并给出另一方的值。  
   
  [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
- The following example shows a typical call to `hypotenuse`.  
+ 下面的示例演示对 `hypotenuse`的典型调用。  
   
  [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [过程](./index.md)
 - [Sub 过程](./sub-procedures.md)

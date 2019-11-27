@@ -56,20 +56,20 @@ typedef enum CorDeclSecurity {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`dclActionMask`|保留。|  
 |`dclActionNil`|保留。|  
 |`dclRequest`|保留。|  
 |`dclDemand`|要求调用堆栈中的所有高级调用方已被授予当前权限对象所指定的权限。|  
-|`dclAssert`|The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource|  
-|`dclDeny`|The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.|  
+|`dclAssert`|调用代码可以访问当前权限对象所标识的资源，即使堆栈中的高级调用方未被授予访问该资源的权限|  
+|`dclDeny`|即使调用方已被授予访问当前权限对象所指定的资源的权限，也会拒绝这些调用方访问该资源。|  
 |`dclPermitOnly`|仅可以访问此权限对象所指定的资源，即使代码已被授予访问其他资源的权限。|  
-|`dclLinktimeCheck`|The immediate caller is required to have been granted the specified permission for a given period of time.|  
-|`dclInheritanceCheck`|The derived class inheriting another class or overriding a method is required to have been granted the specified permission.|  
-|`dclRequestMinimum`|The caller can request for the minimum permissions required for code to run. 此操作仅可以在程序集的作用域内使用。|  
-|`dclRequestOptional`|The caller can request for additional permissions that are optional (not required to run). 此请求隐式拒绝所有未明确请求的其他权限。 此操作仅可以在程序集的作用域内使用。|  
-|`dclRequestRefuse`|The caller's request for permissions that might be misused will not be granted. 此操作仅可以在程序集的作用域内使用。|  
+|`dclLinktimeCheck`|需要在给定的时间段内向直接调用方授予指定的权限。|  
+|`dclInheritanceCheck`|需要继承另一个类或重写方法的派生类已被授予指定的权限。|  
+|`dclRequestMinimum`|调用方可以请求运行代码所需的最小权限。 此操作仅可以在程序集的作用域内使用。|  
+|`dclRequestOptional`|调用方可以请求可选的附加权限（不需要运行）。 此请求隐式拒绝所有未明确请求的其他权限。 此操作仅可以在程序集的作用域内使用。|  
+|`dclRequestRefuse`|调用方对可能被误用的权限的请求将不会被授予。 此操作仅可以在程序集的作用域内使用。|  
 |`dclPrejitGrant`|保留。|  
 |`dclPrejitDenied`|保留。|  
 |`dclNonCasDemand`|保留。|  
@@ -83,10 +83,10 @@ typedef enum CorDeclSecurity {
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **标头：** Corhdr。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

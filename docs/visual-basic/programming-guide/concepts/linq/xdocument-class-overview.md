@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349293"
 ---
-# <a name="xdocument-class-overview-visual-basic"></a>XDocument Class Overview (Visual Basic)
+# <a name="xdocument-class-overview-visual-basic"></a>XDocument 类概述（Visual Basic）
 本主题介绍 <xref:System.Xml.Linq.XDocument> 类。  
   
 ## <a name="overview-of-the-xdocument-class"></a>XDocument 类概述  
@@ -81,6 +81,6 @@ doc.Save("test.xml")
 <!--This is another comment.-->  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [LINQ to XML Programming Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML 编程概述（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

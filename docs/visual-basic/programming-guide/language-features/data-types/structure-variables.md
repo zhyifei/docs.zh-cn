@@ -16,7 +16,7 @@ ms.locfileid: "74346296"
 ---
 # <a name="structure-variables-visual-basic"></a>结构变量 (Visual Basic)
 
-Once you have created a structure, you can declare procedure-level and module-level variables as that type. For example, you can create a structure that records information about a computer system. 下面的示例演示这一操作。
+创建结构后，可以声明该类型的过程级和模块级变量。 例如，可以创建一个结构来记录有关计算机系统的信息。 下面的示例演示这一操作。
 
 ```vb
 Public Structure systemInfo
@@ -26,18 +26,18 @@ Public Structure systemInfo
 End Structure
 ```
 
-You can now declare variables of that type. The following declaration illustrates this.
+现在可以声明该类型的变量。 下面的声明阐释了这一点。
 
 ```vb
 Dim mySystem, yourSystem As systemInfo
 ```
 
 > [!NOTE]
-> In classes and modules, structures declared using the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) default to public access. If you intend a structure to be private, make sure you declare it using the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword.
+> 在类和模块中，使用[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)声明的结构默认为公共访问。 如果要将结构设置为私有，请确保使用[private](../../../../visual-basic/language-reference/modifiers/private.md)关键字对其进行声明。
 
-## <a name="access-to-structure-values"></a>Access to Structure Values
+## <a name="access-to-structure-values"></a>对结构值的访问
 
-To assign and retrieve values from the elements of a structure variable, you use the same syntax as you use to set and get properties on an object. You place the member access operator (`.`) between the structure variable name and the element name. The following example accesses elements of the variables previously declared as type `systemInfo`.
+若要分配和检索结构变量的元素中的值，请使用与用于设置和获取对象属性相同的语法。 将成员访问运算符（`.`）放置在结构变量名和元素名之间。 下面的示例访问之前声明为类型 `systemInfo`的变量元素。
 
 ```vb
 mySystem.cPU = "486"
@@ -45,17 +45,17 @@ Dim tooOld As Boolean
 If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True
 ```
 
-## <a name="assigning-structure-variables"></a>Assigning Structure Variables
+## <a name="assigning-structure-variables"></a>分配结构变量
 
-You can also assign one variable to another if both are of the same structure type. This copies all the elements of one structure to the corresponding elements in the other. The following declaration illustrates this.
+如果两个变量具有相同的结构类型，则也可以将其分配给另一个变量。 这会将一个结构的所有元素复制到另一个结构中的相应元素。 下面的声明阐释了这一点。
 
 ```vb
 yourSystem = mySystem
 ```
 
-If a structure element is a reference type, such as a `String`, `Object`, or array, the pointer to the data is copied. In the previous example, if `systemInfo` had included an object variable, then the preceding example would have copied the pointer from `mySystem` to `yourSystem`, and a change to the object's data through one structure would be in effect when accessed through the other structure.
+如果结构元素是引用类型（如 `String`、`Object`或数组），则会复制指向数据的指针。 在前面的示例中，如果 `systemInfo` 包含一个对象变量，则前面的示例会将指针从 `mySystem` 复制到 `yourSystem`，并且通过一个结构对该对象的数据的更改将在通过其他结构访问时生效。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)

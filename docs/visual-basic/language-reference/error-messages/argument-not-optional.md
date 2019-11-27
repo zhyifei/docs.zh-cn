@@ -13,14 +13,14 @@ ms.locfileid: "74353902"
 ---
 # <a name="argument-not-optional-visual-basic"></a>非可选自变量 (Visual Basic)
 
-The number and types of arguments must match those expected. Either there is an incorrect number of arguments, or an omitted argument is not optional. An argument can only be omitted from a call to a user-defined procedure if it was declared `Optional` in the procedure definition.  
+参数的数量和类型必须与需要的参数匹配。 参数的数目不正确，或者省略的参数不是可选的。 如果参数是在过程定义中 `Optional` 声明的，则只能通过对用户定义的过程的调用来省略。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1. Supply all necessary arguments.  
+1. 提供所有必需的参数。  
   
-2. Make sure omitted arguments are optional. If they are not, either supply the argument in the call, or declare the parameter `Optional` in the definition.  
+2. 请确保省略的参数是可选的。 如果不是，则在调用中提供参数，或在定义中声明参数 `Optional`。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [错误类型](../../../visual-basic/programming-guide/language-features/error-types.md)

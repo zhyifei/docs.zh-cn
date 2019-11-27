@@ -22,7 +22,7 @@ ms.locfileid: "74283775"
 ## <a name="datepicker-parts"></a>DatePicker 部件  
  下表列出了 <xref:System.Windows.Controls.DatePicker> 控件的已命名部分。  
   
-|部件|Type|描述|  
+|部件|类型|说明|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.Controls.Grid>|控件的根。|  
 |PART_Button|<xref:System.Windows.Controls.Button>|用于打开和关闭 <xref:System.Windows.Controls.Calendar>的按钮。|  
@@ -32,10 +32,10 @@ ms.locfileid: "74283775"
 ## <a name="datepicker-states"></a>DatePicker 状态  
  下表列出了 <xref:System.Windows.Controls.DatePicker> 控件的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
-|一般|CommonStates|默认状态。|  
-|Disabled|CommonStates|<xref:System.Windows.Controls.DatePicker> 处于禁用状态。|  
+|正常|CommonStates|默认状态。|  
+|已禁用|CommonStates|<xref:System.Windows.Controls.DatePicker> 处于禁用状态。|  
 |有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `true` 控件没有焦点。|  
@@ -43,7 +43,7 @@ ms.locfileid: "74283775"
 ## <a name="datepickertextbox-parts"></a>DatePickerTextBox 部件  
  下表列出了 <xref:System.Windows.Controls.Primitives.DatePickerTextBox> 控件的已命名部分。  
   
-|部件|Type|描述|  
+|部件|类型|说明|  
 |-|-|-|  
 |PART_Watermark|<xref:System.Windows.Controls.ContentControl>|包含 <xref:System.Windows.Controls.DatePicker>中的初始文本的元素。|  
 |PART_ContentElement|<xref:System.Windows.FrameworkElement>|可包含 <xref:System.Windows.FrameworkElement>的可视元素。 <xref:System.Windows.Controls.TextBox> 的文本显示在此元素中。|  
@@ -51,10 +51,10 @@ ms.locfileid: "74283775"
 ## <a name="datepickertextbox-states"></a>DatePickerTextBox 状态  
  下表列出了 <xref:System.Windows.Controls.Primitives.DatePickerTextBox> 控件的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
-|一般|CommonStates|默认状态。|  
-|Disabled|CommonStates|<xref:System.Windows.Controls.Primitives.DatePickerTextBox> 处于禁用状态。|  
+|正常|CommonStates|默认状态。|  
+|已禁用|CommonStates|<xref:System.Windows.Controls.Primitives.DatePickerTextBox> 处于禁用状态。|  
 |MouseOver|CommonStates|鼠标指针置于 <xref:System.Windows.Controls.Primitives.DatePickerTextBox>上。|  
 |ReadOnly|CommonStates|用户无法更改 <xref:System.Windows.Controls.Primitives.DatePickerTextBox>中的文本。|  
 |已设定焦点|FocusStates|控件有焦点。|  

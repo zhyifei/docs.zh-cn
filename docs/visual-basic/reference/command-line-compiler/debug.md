@@ -14,9 +14,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344779"
 ---
-# <a name="-debug-visual-basic"></a>-debug (Visual Basic)
+# <a name="-debug-visual-basic"></a>-debug （Visual Basic）
 
-Causes the compiler to generate debugging information and place it in the output file(s).
+使编译器生成调试信息并将其放在输出文件中。
 
 ## <a name="syntax"></a>语法
 
@@ -30,34 +30,34 @@ Causes the compiler to generate debugging information and place it in the output
 -debug:[full | pdbonly]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
-|术语|定义|
+|术语|Definition|
 |---|---|
-|`+` &#124; `-`|可选。 Specifying `+` or `/debug` causes the compiler to generate debugging information and place it in a .pdb file. Specifying `-` has the same effect as not specifying `/debug`.|
-|`full` &#124; `pdbonly`|可选。 指定编译器生成的调试信息的类型。 If you do not specify `/debug:pdbonly`, the default is `full`, which enables you to attach a debugger to the running program. The `pdbonly` argument allows source-code debugging when the program is started in the debugger, but it displays assembly-language code only when the running program is attached to the debugger.|
+|`+` &#124; `-`|可选。 指定 `+` 或 `/debug` 会导致编译器生成调试信息并将其放置在 .pdb 文件中。 指定 `-` 与不指定 `/debug`具有相同的效果。|
+|`full` &#124; `pdbonly`|可选。 指定编译器生成的调试信息的类型。 如果不指定 `/debug:pdbonly`，则默认值为 `full`，这使你能够将调试器附加到正在运行的程序。 `pdbonly` 参数允许在调试器中启动程序时进行源代码调试，但仅在将正在运行的程序附加到调试器时才显示程序集语言代码。|
 
 ## <a name="remarks"></a>备注
 
-使用此选项创建调试版本。 If you do not specify `/debug`, `/debug+`, or `/debug:full`, you will be unable to debug the output file of your program.
+使用此选项创建调试版本。 如果未指定 `/debug`、`/debug+`或 `/debug:full`，则将无法调试程序的输出文件。
 
-By default, debugging information is not emitted (`/debug-`). To emit debugging information, specify `/debug` or `/debug+`.
+默认情况下，不会发出调试信息（`/debug-`）。 若要发出调试信息，请指定 `/debug` 或 `/debug+`。
 
 有关如何配置应用程序的调试性能的信息，请参阅[令映像更易于调试](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md)。
 
-|To set -debug in the Visual Studio integrated development environment|
+|在 Visual Studio 集成开发环境中设置-调试|
 |---|
-|1.  With a project selected in **Solution Explorer**, on the **Project** menu, click **Properties**. <br />2.  Click the **Compile** tab.<br />3.  Click **Advanced Compile Options**.<br />4.  Modify the value in the **Generate Debug Info** box.|
+|1. 在**解决方案资源管理器**中选择一个项目后，在 "**项目**" 菜单上单击 "**属性**"。 <br />2. 单击 "**编译**" 选项卡。<br />3. 单击 "**高级编译选项**"。<br />4. 修改 "**生成调试信息**" 框中的值。|
 
 ## <a name="example"></a>示例
 
-The following example puts debugging information in output file `App.exe`.
+下面的示例将调试信息放在 `App.exe`输出文件中。
 
 ```console
 vbc -debug -out:app.exe test.vb
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)

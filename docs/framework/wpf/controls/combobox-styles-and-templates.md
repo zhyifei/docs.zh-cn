@@ -22,7 +22,7 @@ ms.locfileid: "74283792"
 ## <a name="combobox-parts"></a>ComboBox 部分  
  下表列出了 <xref:System.Windows.Controls.ComboBox> 控件的已命名部分。  
   
-|部件|Type|描述|  
+|部件|类型|说明|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|包含 <xref:System.Windows.Controls.ComboBox>的文本。|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|包含组合框中的项的下拉。|  
@@ -32,18 +32,18 @@ ms.locfileid: "74283792"
 ## <a name="combobox-states"></a>ComboBox 状态  
  下表列出了 <xref:System.Windows.Controls.ComboBox> 控件的状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
-|一般|CommonStates|默认状态。|  
-|Disabled|CommonStates|已禁用控件。|  
+|正常|CommonStates|默认状态。|  
+|已禁用|CommonStates|已禁用控件。|  
 |MouseOver|CommonStates|鼠标指针位于 <xref:System.Windows.Controls.ComboBox> 控件上。|  
-|已设定焦点|FocusStates|控件有焦点。|  
+|Focused|FocusStates|控件有焦点。|  
 |失去焦点|FocusStates|控件没有焦点。|  
 |FocusedDropDown|FocusStates|<xref:System.Windows.Controls.ComboBox> 的下拉箭头具有焦点。|  
 |有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `true` 控件没有焦点。|  
-|不可|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> 属性为 `true`。|  
+|Editable|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> 属性为 `true`。|  
 |不可编辑|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> 属性为 `false`。|  
   
 ## <a name="comboboxitem-parts"></a>ComboBoxItem 部件  
@@ -52,12 +52,12 @@ ms.locfileid: "74283792"
 ## <a name="comboboxitem-states"></a>ComboBoxItem 状态  
  下表列出了 <xref:System.Windows.Controls.ComboBoxItem> 控件的状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
-|一般|CommonStates|默认状态。|  
-|Disabled|CommonStates|已禁用控件。|  
+|正常|CommonStates|默认状态。|  
+|已禁用|CommonStates|已禁用控件。|  
 |MouseOver|CommonStates|鼠标指针位于 <xref:System.Windows.Controls.ComboBox> 控件上。|  
-|已设定焦点|FocusStates|控件有焦点。|  
+|Focused|FocusStates|控件有焦点。|  
 |失去焦点|FocusStates|控件没有焦点。|  
 |已选定|SelectionStates|当前已选定该项。|  
 |未选定|SelectionStates|未选定该项。|  

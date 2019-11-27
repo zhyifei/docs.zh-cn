@@ -18,31 +18,31 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349694"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>如何：声明具有混合访问级别的属性 (Visual Basic)
-If you want the `Get` and `Set` procedures on a property to have different access levels, you can use the more permissive level in the `Property` statement and the more restrictive level in either the `Get` or `Set` statement. You use mixed access levels on a property when you want certain parts of the code to be able to get the property's value, and certain other parts of the code to be able to change the value.  
+如果希望属性上的 `Get` 和 `Set` 过程具有不同的访问级别，则可以在 `Property` 语句中使用更高的权限级别，在 `Get` 或 `Set` 语句中使用更严格的级别。 如果希望代码的某些部分能够获取属性的值，并且代码的某些其他部分可以更改值，则可以对属性使用混合访问级别。  
   
- For more information on access levels, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ 有关访问级别的详细信息，请参阅[Visual Basic 中的访问级别](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
-### <a name="to-declare-a-property-with-mixed-access-levels"></a>To declare a property with mixed access levels  
+### <a name="to-declare-a-property-with-mixed-access-levels"></a>声明具有混合访问级别的属性  
   
-1. Declare the property in the normal way, and specify the less restrictive access level (such as `Public`) in the `Property` statement.  
+1. 以正常方式声明属性，并在 `Property` 语句中指定限制性较低的访问级别（如 `Public`）。  
   
-2. Declare either the `Get` or the `Set` procedure specifying the more restrictive access level (such as `Friend`).  
+2. 声明 `Get` 或指定限制性更强的访问级别的 `Set` 过程（如 `Friend`）。  
   
-3. Do not specify an access level on the other property procedure. It assumes the access level declared in the `Property` statement. You can restrict access on only one of the property procedures.  
+3. 不要指定其他属性过程的访问级别。 它假定在 `Property` 语句中声明了访问级别。 你可以仅对其中一个属性过程进行访问限制。  
   
      [!code-vb[VbVbcnProcedures#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#10)]  
   
-     In the preceding example, the `Get` procedure has the same `Protected` access as the property itself, while the `Set` procedure has `Private` access. A class derived from `employee` can read the `salary` value, but only the `employee` class can set it.  
+     在前面的示例中，`Get` 过程与属性本身具有相同的 `Protected` 访问权限，而 `Set` 过程具有 `Private` 访问权限。 派生自 `employee` 的类可以读取 `salary` 值，但只有 `employee` 类才能进行设置。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [过程](./index.md)
 - [属性过程](./property-procedures.md)
 - [过程参数和自变量](./procedure-parameters-and-arguments.md)
 - [Property 语句](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
+- [Visual Basic 中的属性和变量之间的差异](./differences-between-properties-and-variables.md)
 - [如何：创建属性](./how-to-create-a-property.md)
 - [如何：调用 Property 过程](./how-to-call-a-property-procedure.md)
-- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [如何：在 Visual Basic 中声明和调用默认属性](./how-to-declare-and-call-a-default-property.md)
 - [如何：在属性中放置值](./how-to-put-a-value-in-a-property.md)
 - [如何：从属性获取值](./how-to-get-a-value-from-a-property.md)

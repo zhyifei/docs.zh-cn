@@ -14,60 +14,60 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346156"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic 编码约定
-Microsoft develops samples and documentation that follow the guidelines in this topic. If you follow the same coding conventions, you may gain the following benefits:  
+Microsoft 将按照本主题中的准则开发示例和文档。 如果遵循相同的编码约定，可能会获得以下好处：  
   
-- Your code will have a consistent look, so that readers can better focus on content, not layout.  
+- 你的代码将具有一致的外观，以便读者可以更好地专注于内容而非布局。  
   
-- Readers understand your code more quickly because they can make assumptions based on previous experience.  
+- 读者可以更快地了解你的代码，因为它们可以根据以前的经验做出假设。  
   
-- You can copy, change, and maintain the code more easily.  
+- 您可以更轻松地复制、更改和维护代码。  
   
-- You help ensure that your code demonstrates "best practices" for Visual Basic.  
+- 您可以帮助确保您的代码演示 Visual Basic 的 "最佳实践"。  
   
 ## <a name="naming-conventions"></a>命名约定  
   
-- For information about naming guidelines, see [Naming Guidelines](../../../standard/design-guidelines/naming-guidelines.md) topic.  
+- 有关命名准则的信息，请参阅[命名准则](../../../standard/design-guidelines/naming-guidelines.md)主题。  
   
-- Do not use "My" or "my" as part of a variable name. This practice creates confusion with the `My` objects.  
+- 不要使用 "我的" 或 "我的" 作为变量名称的一部分。 这种做法与 `My` 对象混淆。  
   
-- You do not have to change the names of objects in auto-generated code to make them fit the guidelines.  
+- 不需要在自动生成的代码中更改对象的名称，使其符合指导原则。  
   
 ## <a name="layout-conventions"></a>布局约定  
   
-- Insert tabs as spaces, and use smart indenting with four-space indents.  
+- 将制表符插入为空格，并使用具有四个空格缩进的智能缩进。  
   
-- Use **Pretty listing (reformatting) of code** to reformat your code in the code editor. For more information, see [Options, Text Editor, Basic (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
+- 使用**非常列表（重新格式化）代码**在代码编辑器中重新设置代码的格式。 有关详细信息，请参阅[选项，文本编辑器，基本（Visual Basic）](/visualstudio/ide/reference/options-text-editor-basic-visual-basic)。  
   
-- Use only one statement per line. Don't use the Visual Basic line separator character (:).  
+- 每行仅使用一条语句。 不要使用 Visual Basic 行分隔符（:)。  
   
-- Avoid using the explicit line continuation character "_" in favor of implicit line continuation wherever the language allows it.  
+- 在语言允许的任何位置，避免使用显式行继续符 "_" 来取代隐式行继续符。  
   
-- Use only one declaration per line.  
+- 每行仅使用一个声明。  
   
-- If **Pretty listing (reformatting) of code** doesn't format continuation lines automatically, manually indent continuation lines one tab stop. However, always left-align items in a list.  
+- 如果在很多**情况下（重新格式化）代码**不会自动设置延续行的格式，则手动将连续行缩进一个制表位。 但是，始终左对齐列表中的项。  
   
     ```vb  
     a As Integer,  
     b As Integer  
     ```  
   
-- Add at least one blank line between method and property definitions.  
+- 在方法和属性定义之间添加至少一个空白行。  
   
 ## <a name="commenting-conventions"></a>注释约定  
   
-- Put comments on a separate line instead of at the end of a line of code.  
+- 将注释放在单独的行上，而不是放在代码行的末尾。  
   
-- Start comment text with an uppercase letter, and end comment text with a period.  
+- 以大写字母开始注释文本，并以句点结束注释文本。  
   
-- Insert one space between the comment delimiter (') and the comment text.  
+- 在注释分隔符（'）与注释文本之间插入一个空格。  
   
      [!code-vb[VbVbalrGuidelines#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#2)]  
   
-- Do not surround comments with formatted blocks of asterisks.  
+- 不要在带格式的星号块中环绕注释。  
   
 ## <a name="program-structure"></a>程序结构  
   
-- When you use the `Main` method, use the default construct for new console applications, and use `My` for command-line arguments.  
+- 使用 `Main` 方法时，为新的控制台应用程序使用默认构造，并将 `My` 用于命令行参数。  
   
      [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
@@ -81,132 +81,132 @@ Microsoft develops samples and documentation that follow the guidelines in this 
      MsgBox($"hello{vbCrLf}goodbye")
      ```
   
-- To append strings in loops, use the <xref:System.Text.StringBuilder> object.  
+- 若要在循环中追加字符串，请使用 <xref:System.Text.StringBuilder> 对象。  
   
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
-### <a name="relaxed-delegates-in-event-handlers"></a>Relaxed Delegates in Event Handlers  
- Do not explicitly qualify the arguments (Object and EventArgs) to event handlers. If you are not using the event arguments that are passed to an event (for example, sender as Object, e as EventArgs), use relaxed delegates, and leave out the event arguments in your code:  
+### <a name="relaxed-delegates-in-event-handlers"></a>事件处理程序中的宽松委托  
+ 不要将参数（对象和 EventArgs）显式限定到事件处理程序。 如果未使用传递给事件的事件参数（例如，作为对象的发送方、e 作为 EventArgs），请使用宽松委托，并在代码中留下事件参数：  
   
  [!code-vb[VbVbalrGuidelines#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#7)]  
   
 ### <a name="unsigned-data-type"></a>无符号数据类型  
   
-- Use `Integer` rather than unsigned types, except where they are necessary.  
+- 除非有必要，否则请使用 `Integer` 而不是无符号类型。  
   
 ### <a name="arrays"></a>阵列  
   
-- Use the short syntax when you initialize arrays on the declaration line. For example, use the following syntax.  
+- 在声明行上初始化数组时，请使用短语法。 例如，使用以下语法。  
   
      [!code-vb[VbVbalrGuidelines#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#8)]  
   
-     Do not use the following syntax.  
+     不要使用以下语法。  
   
      [!code-vb[VbVbalrGuidelines#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#9)]  
   
-- Put the array designator on the type, not on the variable. For example, use the following syntax:  
+- 将数组指示符置于类型上，而不是变量上。 例如，使用以下语法：  
   
      [!code-vb[VbVbalrGuidelines#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#11)]  
   
-     Do not use the following syntax:  
+     不要使用以下语法：  
   
      [!code-vb[VbVbalrGuidelines#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#10)]  
   
-- Use the { } syntax when you declare and initialize arrays of basic data types. For example, use the following syntax:  
+- 声明和初始化基本数据类型的数组时，请使用 {} 语法。 例如，使用以下语法：  
   
      [!code-vb[VbVbalrGuidelines#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#12)]  
   
-     Do not use the following syntax:  
+     不要使用以下语法：  
   
      [!code-vb[VbVbalrGuidelines#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#13)]  
   
-### <a name="use-the-with-keyword"></a>Use the With Keyword  
- When you make a series of calls to one object, consider using the `With` keyword:  
+### <a name="use-the-with-keyword"></a>使用 With 关键字  
+ 对一个对象进行一系列调用时，请考虑使用 `With` 关键字：  
   
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
-### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>Use the Try...Catch and Using Statements when you use Exception Handling  
+### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>使用 Try... 使用异常处理时捕获和使用语句  
  请勿使用 `On Error Goto`。  
   
-### <a name="use-the-isnot-keyword"></a>Use the IsNot Keyword  
- Use the `IsNot` keyword instead of `Not...Is Nothing`.  
+### <a name="use-the-isnot-keyword"></a>使用 IsNot 关键字  
+ 使用 `IsNot` 关键字而不是 `Not...Is Nothing`。  
   
-### <a name="new-keyword"></a>New Keyword  
+### <a name="new-keyword"></a>New 关键字  
   
-- Use short instantiation. For example, use the following syntax:  
+- 使用短实例化。 例如，使用以下语法：  
   
      [!code-vb[VbVbalrGuidelines#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#21)]  
   
-     The preceding line is equivalent to this:  
+     前面的行等效于：  
   
      [!code-vb[VbVbalrGuidelines#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#22)]  
   
-- Use object initializers for new objects instead of the parameterless constructor:  
+- 为新对象使用对象初始值设定项，而不使用无参数构造函数：  
   
      [!code-vb[VbVbalrGuidelines#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#23)]  
   
 ### <a name="event-handling"></a>事件处理  
   
-- Use `Handles` rather than `AddHandler`:  
+- 使用 `Handles` 而不是 `AddHandler`：  
   
      [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
-- Use `AddressOf`, and do not instantiate the delegate explicitly:  
+- 使用 `AddressOf`，而不显式实例化委托：  
   
      [!code-vb[VbVbalrGuidelines#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#25)]  
   
-- When you define an event, use the short syntax, and let the compiler define the delegate:  
+- 定义事件时，请使用 short 语法，并让编译器定义委托：  
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
-- Do not verify whether an event is `Nothing` (null) before you call the `RaiseEvent` method. `RaiseEvent` checks for `Nothing` before it raises the event.  
+- 在调用 `RaiseEvent` 方法之前，不要验证事件是否 `Nothing` （null）。 `RaiseEvent` 在引发事件之前检查 `Nothing`。  
   
-### <a name="using-shared-members"></a>Using Shared Members  
- Call `Shared` members by using the class name, not from an instance variable.  
+### <a name="using-shared-members"></a>使用共享成员  
+ 使用类名称（而不是从实例变量）调用 `Shared` 成员。  
   
-### <a name="use-xml-literals"></a>Use XML Literals  
- XML literals simplify the most common tasks that you encounter when you work with XML (for example, load, query, and transform). When you develop with XML, follow these guidelines:  
+### <a name="use-xml-literals"></a>使用 XML 文本  
+ XML 文本简化了使用 XML 时所遇到的最常见任务（例如，加载、查询和转换）。 当你用 XML 开发时，请遵循以下准则：  
   
-- Use XML literals to create XML documents and fragments instead of calling XML APIs directly.  
+- 使用 XML 文本来创建 XML 文档和片段，而不是直接调用 XML Api。  
   
-- Import XML namespaces at the file or project level to take advantage of the performance optimizations for XML literals.  
+- 在文件或项目级别导入 XML 命名空间，以利用 XML 文本的性能优化。  
   
-- Use the XML axis properties to access elements and attributes in an XML document.  
+- 使用 XML 轴属性可以访问 XML 文档中的元素和属性。  
   
-- Use embedded expressions to include values and to create XML from existing values instead of using API calls such as the `Add` method:  
+- 使用嵌入的表达式包含值和从现有值创建 XML，而不是使用 API 调用（如 `Add` 方法）：  
   
      [!code-vb[VbVbalrGuidelines#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#27)]  
   
 ### <a name="linq-queries"></a>LINQ 查询  
   
-- Use meaningful names for query variables:  
+- 对查询变量使用有意义的名称：  
   
      [!code-vb[VbVbalrGuidelines#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#28)]  
   
-- Provide names for elements in a query to make sure that property names of anonymous types are correctly capitalized using Pascal casing:  
+- 为查询中的元素提供名称，以确保匿名类型的属性名称使用 Pascal 大小写正确地大写：  
   
      [!code-vb[VbVbalrGuidelines#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#29)]  
   
-- 如果结果中的属性名称模棱两可，请对属性重命名。 For example, if your query returns a customer name and an order ID, rename them instead of leaving them as `Name` and `ID` in the result:  
+- 如果结果中的属性名称模棱两可，请对属性重命名。 例如，如果你的查询返回客户名称和订单 ID，请将其重命名，而不是将其保留为 `Name` 并在结果中 `ID`：  
   
      [!code-vb[VbVbalrGuidelines#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#30)]  
   
-- Use type inference in the declaration of query variables and range variables:  
+- 在查询变量和范围变量的声明中使用类型推理：  
   
      [!code-vb[VbVbalrGuidelines#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#31)]  
   
-- Align query clauses under the `From` statement:  
+- 对齐 `From` 语句下的查询子句：  
   
      [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
-- Use `Where` clauses before other query clauses so that later query clauses operate on the filtered set of data:  
+- 在其他查询子句之前使用 `Where` 子句，以便后面的查询子句对筛选的数据集执行操作：  
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
-- Use the `Join` clause to explicitly define a join operation instead of using the `Where` clause to implicitly define a join operation:  
+- 使用 `Join` 子句显式定义联接运算，而不是使用 `Where` 子句隐式定义联接运算：  
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安全编码准则](../../../standard/security/secure-coding-guidelines.md)

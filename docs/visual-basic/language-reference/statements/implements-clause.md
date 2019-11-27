@@ -25,27 +25,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345877"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements 子句 (Visual Basic)
-Indicates that a class or structure member is providing the implementation for a member defined in an interface.  
+指示类或结构成员正在为接口中定义的成员提供实现。  
   
 ## <a name="remarks"></a>备注  
-The `Implements` keyword is not the same as the [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md). You use the `Implements` statement to specify that a class or structure implements one or more interfaces, and then for each member you use the `Implements` keyword to specify which interface and which member it implements.
+`Implements` 关键字与[Implements 语句](../../../visual-basic/language-reference/statements/implements-statement.md)不同。 使用 `Implements` 语句来指定一个类或结构实现一个或多个接口，然后，对于每个成员，都使用 `Implements` 关键字指定哪个接口和它所实现的成员。
 
-If a class or structure implements an interface, it must include the `Implements` statement immediately after the [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) or [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md), and it must implement all the members defined by the interface.
+如果类或结构实现了接口，则它必须紧跟在[类语句](../../../visual-basic/language-reference/statements/class-statement.md)或[结构语句](../../../visual-basic/language-reference/statements/structure-statement.md)之后的 `Implements` 语句，并且必须实现该接口定义的所有成员。
 
-## <a name="reimplementation"></a>Reimplementation  
-In a derived class, you can reimplement an interface member that the base class has already implemented. This is different from overriding the base class member in the following respects:
+## <a name="reimplementation"></a>重新实现  
+在派生类中，您可以重新实现基类已经实现的接口成员。 这不同于在以下方面重写基类成员：
 
-- The base class member does not need to be [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) to be reimplemented.
-- You can reimplement the member with a different name.
+- 基类成员不需要是可[重写](../../../visual-basic/language-reference/modifiers/overridable.md)的，而重新实现。
+- 您可以使用其他名称重新实现该成员。
 
-The `Implements` keyword can be used in the following contexts:
+在以下上下文中，可以使用 `Implements` 关键字：
 
 - [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)
 - [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Implements 语句](../../../visual-basic/language-reference/statements/implements-statement.md)
 - [Interface 语句](../../../visual-basic/language-reference/statements/interface-statement.md)

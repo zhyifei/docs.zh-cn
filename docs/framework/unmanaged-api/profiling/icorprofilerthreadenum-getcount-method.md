@@ -34,7 +34,7 @@ HRESULT GetCount (    [out] ULONG * pcelt
   
 ## <a name="parameters"></a>参数  
  `celt`  
- [out] The number of threads used by the application.  
+ 弄应用程序使用的线程数。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -45,7 +45,7 @@ HRESULT GetCount (    [out] ULONG * pcelt
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerThreadEnum 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
 - [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

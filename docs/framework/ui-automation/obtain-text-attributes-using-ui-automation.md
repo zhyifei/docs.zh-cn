@@ -34,11 +34,11 @@ ms.locfileid: "74446911"
   
  与 <xref:System.Windows.Automation.TextPattern> 类结合使用时， <xref:System.Windows.Automation.Text.TextPatternRange> 控件模式支持基本的文本特性、属性和方法。 对于 <xref:System.Windows.Automation.TextPattern> 或 <xref:System.Windows.Automation.Text.TextPatternRange> 不支持的特定于控件的功能， <xref:System.Windows.Automation.AutomationElement>类将为 UI 自动化客户端提供访问相应本机对象模型的方法。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UI 自动化 TextPattern 概述](ui-automation-textpattern-overview.md)
 - [使用 UI 自动化向文本框添加内容](add-content-to-a-text-box-using-ui-automation.md)
 - [使用 UI 自动化查找和突出显示文本](find-and-highlight-text-using-ui-automation.md)
 - [UI 自动化控件模式概述](ui-automation-control-patterns-overview.md)
-- [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [使用 UI 自动化获取混合文本特性的详细信息](obtain-mixed-text-attribute-details-using-ui-automation.md)

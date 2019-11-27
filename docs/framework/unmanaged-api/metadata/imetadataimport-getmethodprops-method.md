@@ -44,45 +44,45 @@ HRESULT GetMethodProps (
   
 ## <a name="parameters"></a>参数  
  `mb`  
- [in] The MethodDef token that represents the method to return metadata for.  
+ 中MethodDef 标记，它表示要为其返回元数据的方法。  
   
  `pClass`  
- [out] A Pointer to a TypeDef token that represents the type that implements the method.  
+ 弄一个指针，指向表示实现方法的类型的 TypeDef 标记。  
   
  `szMethod`  
- [out] A Pointer to a buffer that has the method's name.  
+ 弄指向包含方法名称的缓冲区的指针。  
   
  `cchMethod`  
- [in] The requested size of `szMethod`.  
+ 中请求的 `szMethod`大小。  
   
  `pchMethod`  
- [out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.  
+ 弄一个指针，它指向 `szMethod`的宽字符大小，或者在截断的情况下，为方法名称中的实际宽字符数。  
   
  `pdwAttr`  
- [out] A pointer to any flags associated with the method.  
+ 弄一个指针，指向与方法关联的任何标志。  
   
  `ppvSigBlob`  
- [out] A pointer to the binary metadata signature of the method.  
+ 弄指向方法的二进制元数据签名的指针。  
   
  `pcbSigBlob`  
- [out] A Pointer to the size in bytes of `ppvSigBlob`.  
+ 弄一个指针，指向 `ppvSigBlob`的大小（以字节为单位）。  
   
  `pulCodeRVA`  
- [out] A pointer to the relative virtual address of the method.  
+ 弄指向方法的相对虚拟地址的指针。  
   
  `pdwImplFlags`  
- [out] A pointer to any implementation flags for the method.  
+ 弄一个指针，指向方法的任何实现标志。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

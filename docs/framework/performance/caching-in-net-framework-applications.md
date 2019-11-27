@@ -1,5 +1,5 @@
 ---
-title: .NET Framework 应用程序中的缓存
+title: 在.NET Framework 应用程序中缓存
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ASP.NET caching
@@ -13,13 +13,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428198"
 ---
-# <a name="caching-in-net-framework-applications"></a>.NET Framework 应用程序中的缓存
+# <a name="caching-in-net-framework-applications"></a>在.NET Framework 应用程序中缓存
 缓存可以将数据存储在内存中以便快速访问。 再次访问数据时，应用程序可以从缓存获取数据，而不是从原始源检索数据。 这可改善性能和可伸缩性。 此外，数据源暂时不可用时，缓存可提供数据。  
   
  .NET Framework 提供了缓存功能，可提高 Windows 客户端和服务器应用程序（包括 ASP.NET）的性能和可伸缩性。  
   
 > [!NOTE]
-> In the .NET Framework 3.5 and earlier versions, ASP.NET provided an in-memory cache implementation in the <xref:System.Web.Caching> namespace. In previous versions of the .NET Framework, caching was available only in the <xref:System.Web> namespace and therefore required a dependency on ASP.NET classes. 在 .NET Framework 4 中，<xref:System.Runtime.Caching> 命名空间包含为 Web 和非 Web 应用程序设计的 API。  
+> 在 .NET Framework 3.5 及更早版本中，ASP.NET 提供了 <xref:System.Web.Caching> 命名空间中的内存中缓存实现。 在以前版本的 .NET Framework 中，只能在 <xref:System.Web> 命名空间中使用缓存，因此需要依赖 ASP.NET 类。 在 .NET Framework 4 中，<xref:System.Runtime.Caching> 命名空间包含为 Web 和非 Web 应用程序设计的 API。  
   
 ## <a name="caching-data"></a>缓存数据  
  可使用 <xref:System.Runtime.Caching> 命名空间中的类来缓存信息。 此命名空间中的缓存类提供下列功能：  
@@ -47,7 +47,7 @@ ms.locfileid: "74428198"
  <xref:System.Runtime.Caching> 命名空间中的缓存类提供在 ASP.NET 中缓存数据的功能。  
   
 > [!NOTE]
-> If your application targets the .NET Framework 3.5 or earlier, you must use the caching classes that are defined in the <xref:System.Web.Caching> namespace. 有关详细信息，请参阅 [ASP.NET 缓存概述](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100))。  
+> 如果你的应用程序以 .NET Framework 3.5 或更早版本为目标，则必须使用 <xref:System.Web.Caching> 命名空间中定义的缓存类。 有关详细信息，请参阅 [ASP.NET 缓存概述](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100))。  
   
 > [!NOTE]
 > 开发新应用程序时，建议使用 <xref:System.Runtime.Caching.MemoryCache> 类。 <xref:System.Runtime.Caching> 命名空间中提供的 API 与 <xref:System.Web.Caching.Cache> 命名空间中提供的 API 类似。 因此，如果你已在 ASP.NET 早期版本中使用过缓存，那么将会对 API 感到熟悉。 有关如何在 ASP.NET 应用程序中使用缓存的示例，请参阅[演练：在 ASP.NET 中缓存应用程序数据](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))。  
@@ -75,7 +75,7 @@ ms.locfileid: "74428198"
   
  有关详细信息，请参阅 Scott Guthrie 博客上的 [ASP.NET 4 的可扩展输出缓存（VS 2010 和 .NET 4.0 系列）](https://weblogs.asp.net/scottgu/extensible-output-caching-with-asp-net-4-vs-2010-and-net-4-0-series)文章。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>

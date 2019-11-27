@@ -22,17 +22,17 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445509"
 ---
 # <a name="idebugautoattach-interface"></a>IDebugAutoAttach 接口
-Defines the interface for server-invoked debugger auto attach.  
+定义服务器调用的调试器自动附加接口。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[AutoAttach 方法](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|Performs server-invoked debugger auto attach.|  
+|[AutoAttach 方法](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|执行服务器调用的调试器自动附加。|  
   
 ## <a name="requirements"></a>要求  
- **Header:** DbgAutoAttach.idl  
+ **标头：** DbgAutoAttach .idl  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [诊断符号存储区接口](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

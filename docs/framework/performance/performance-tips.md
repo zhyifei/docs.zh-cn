@@ -23,9 +23,9 @@ ms.locfileid: "74444532"
  如果值类型必须被频繁装箱，那么在这些情况下最好避免使用值类型（例如在诸如 <xref:System.Collections.ArrayList?displayProperty=nameWithType> 的非泛型集合类中）。 可通过使用泛型集合（例如 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>）来避免装箱值类型。 装箱和取消装箱过程需要进行大量的计算。 对值类型进行装箱时，必须创建一个全新的对象。 这可能比简单的引用赋值用时最多长 20 倍。 取消装箱的过程所需时间可达赋值操作的四倍。 有关详细信息，请参阅[装箱和取消装箱](../../csharp/programming-guide/types/boxing-and-unboxing.md)。  
   
 ## <a name="strings"></a>字符串  
- 在连接大量字符串变量时，例如在紧凑循环中，请使用 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 而不是 C# [+ 运算符](../../csharp/language-reference/operators/addition-operator.md)或 Visual Basic [串联运算符](../../visual-basic/language-reference/operators/concatenation-operators.md)。 For more information, see [How to concatenate multiple strings](../../csharp/how-to/concatenate-multiple-strings.md) and [Concatenation Operators in Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
+ 在连接大量字符串变量时，例如在紧凑循环中，请使用 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 而不是 C# [+ 运算符](../../csharp/language-reference/operators/addition-operator.md)或 Visual Basic [串联运算符](../../visual-basic/language-reference/operators/concatenation-operators.md)。 有关详细信息，请参阅如何[在 Visual Basic 中](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)[串联多个字符串](../../csharp/how-to/concatenate-multiple-strings.md)和串联运算符。  
   
-## <a name="destructors"></a>析构函数  
+## <a name="destructors"></a>析构函数。  
  不应使用空的析构函数。 如果类包含析构函数，则 Finalize 队列中会创建一个条目。 调用析构函数时，将调用垃圾回收器来处理此队列。 如果析构函数为空，只会导致性能损失。 有关详细信息，请参阅[析构函数](../../csharp/programming-guide/classes-and-structs/destructors.md)和[对象生存期：如何创建和销毁对象](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。  
   
 ## <a name="other-resources"></a>其他资源  
@@ -40,9 +40,9 @@ ms.locfileid: "74444532"
 
 - [Rico Mariani 关于性能问题的见解](https://blogs.msdn.microsoft.com/ricom/)  
 
-- [Vance Morrison's Blog](https://blogs.msdn.microsoft.com/vancem/)
+- [Vance Morrison 的博客](https://blogs.msdn.microsoft.com/vancem/)
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [性能](index.md)
 - [Visual Basic 编程指南](../../visual-basic/programming-guide/index.md)

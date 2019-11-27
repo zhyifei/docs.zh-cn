@@ -174,7 +174,7 @@ class Class1
 
 ## <a name="asymmetric-decryption"></a>不对称解密
 
-通常，一方（A 方）同时生成公钥和私钥，并将其存储在内存或加密密钥容器中。 然后 A 方将公钥发送到另一方（B 方）。 Using the public key, party B encrypts data and sends the data back to party A. After receiving the data, party A decrypts it using the private key that corresponds. A 方只有使用与 B 方用于加密数据的公钥相对应的私钥，解密才能成功。
+通常，一方（A 方）同时生成公钥和私钥，并将其存储在内存或加密密钥容器中。 然后 A 方将公钥发送到另一方（B 方）。 使用公钥时，参与方 B 会对数据进行加密，然后将数据发送回 A 方。接收到数据后，A 方使用对应的私钥将其解密。 A 方只有使用与 B 方用于加密数据的公钥相对应的私钥，解密才能成功。
 
 有关如何将非对称密钥存储在安全加密密钥容器中以及随后如何获取非对称密钥的信息，请参阅 [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)。
 
@@ -204,7 +204,7 @@ symmetricKey = rsa.Decrypt(encryptedSymmetricKey, false);
 symmetricIV = rsa.Decrypt(encryptedSymmetricIV , false);
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [生成加密和解密密钥](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
 - [加密数据](../../../docs/standard/security/encrypting-data.md)

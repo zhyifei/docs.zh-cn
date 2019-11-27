@@ -1,5 +1,5 @@
 ---
-title: Can't perform requested operation
+title: 无法执行请求的操作
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID17
@@ -18,6 +18,6 @@ ms.locfileid: "74353323"
   
 - 停止执行代码，必要时进行修改，然后重试该操作。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [错误类型](../../visual-basic/programming-guide/language-features/error-types.md)

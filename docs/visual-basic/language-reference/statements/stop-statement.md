@@ -20,7 +20,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346468"
 ---
 # <a name="stop-statement-visual-basic"></a>Stop 语句 (Visual Basic)
-Suspends execution.  
+挂起执行。  
   
 ## <a name="syntax"></a>语法  
   
@@ -29,18 +29,18 @@ Stop
 ```  
   
 ## <a name="remarks"></a>备注  
- You can place `Stop` statements anywhere in procedures to suspend execution. Using the `Stop` statement is similar to setting a breakpoint in the code.  
+ 可以将 `Stop` 语句放置在过程中的任意位置，以挂起执行。 使用 `Stop` 语句与在代码中设置断点类似。  
   
- The `Stop` statement suspends execution, but unlike `End`, it does not close any files or clear any variables, unless it is encountered in a compiled executable (.exe) file.  
+ `Stop` 语句会挂起执行，但与 `End`不同，它不会关闭任何文件或清除任何变量，除非在已编译的可执行（.exe）文件中遇到该错误。  
   
 > [!NOTE]
-> If the `Stop` statement is encountered in code that is running outside of the integrated development environment (IDE), the debugger is invoked. This is true regardless of whether the code was compiled in debug or retail mode.  
+> 如果在集成开发环境（IDE）外部运行的代码中遇到 `Stop` 语句，则将调用调试器。 无论代码是在调试模式下编译还是在发布模式下编译，都是如此。  
   
 ## <a name="example"></a>示例  
- This example uses the `Stop` statement to suspend execution for each iteration through the `For...Next` loop.  
+ 此示例使用 `Stop` 语句通过 `For...Next` 循环挂起每个迭代的执行。  
   
  [!code-vb[VbVbalrStatements#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#56)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [End 语句](../../../visual-basic/language-reference/statements/end-statement.md)

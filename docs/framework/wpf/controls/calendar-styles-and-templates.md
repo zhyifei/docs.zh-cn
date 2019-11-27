@@ -22,7 +22,7 @@ ms.locfileid: "74283558"
 ## <a name="calendar-parts"></a>日历部件  
  下表列出了 <xref:System.Windows.Controls.Calendar> 控件的已命名部分。  
   
-|部件|Type|描述|  
+|部件|类型|说明|  
 |-|-|-|  
 |PART_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|<xref:System.Windows.Controls.Calendar>上当前显示的月份或年份。|  
 |PART_Root|<xref:System.Windows.Controls.Panel>|包含 <xref:System.Windows.Controls.Primitives.CalendarItem>的面板。|  
@@ -30,7 +30,7 @@ ms.locfileid: "74283558"
 ## <a name="calendar-states"></a>日历状态  
  下表列出了 <xref:System.Windows.Controls.Calendar> 控件的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |----------------------|---------------------------|-----------------|  
 |有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  
@@ -39,7 +39,7 @@ ms.locfileid: "74283558"
 ## <a name="calendaritem-parts"></a>CalendarItem 部件  
  下表列出了 <xref:System.Windows.Controls.Primitives.CalendarItem> 控件的已命名部分。  
   
-|部件|Type|描述|  
+|部件|类型|说明|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.FrameworkElement>|控件的根。|  
 |PART_PreviousButton|<xref:System.Windows.Controls.Button>|单击此按钮将显示日历的上一页。|  
@@ -53,7 +53,7 @@ ms.locfileid: "74283558"
 ## <a name="calendaritem-states"></a>CalendarItem 状态  
  下表列出了 <xref:System.Windows.Controls.Primitives.CalendarItem> 控件的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
 |正常状态|CommonStates|默认状态。|  
 |禁用状态|CommonStates|`false`<xref:System.Windows.UIElement.IsEnabled%2A> 属性时日历的状态。|  
@@ -70,19 +70,19 @@ ms.locfileid: "74283558"
 ## <a name="calendardaybutton-states"></a>CalendarDayButton 状态  
  下表列出了 <xref:System.Windows.Controls.Primitives.CalendarDayButton> 控件的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
-|一般|CommonStates|默认状态。|  
-|Disabled|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarDayButton> 处于禁用状态。|  
+|正常|CommonStates|默认状态。|  
+|已禁用|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarDayButton> 处于禁用状态。|  
 |MouseOver|CommonStates|鼠标指针置于 <xref:System.Windows.Controls.Primitives.CalendarDayButton>上。|  
-|已按下|CommonStates|已按下 <xref:System.Windows.Controls.Primitives.CalendarDayButton>。|  
+|Pressed|CommonStates|已按下 <xref:System.Windows.Controls.Primitives.CalendarDayButton>。|  
 |已选定|SelectionStates|该按钮处于选中状态。|  
 |未选定|SelectionStates|未选择该按钮。|  
 |CalendarButtonFocused|CalendarButtonFocusStates|按钮有焦点。|  
 |CalendarButtonUnfocused|CalendarButtonFocusStates|按钮没有焦点。|  
-|已设定焦点|FocusStates|按钮有焦点。|  
+|Focused|FocusStates|按钮有焦点。|  
 |失去焦点|FocusStates|按钮没有焦点。|  
-|活动的|ActiveStates|该按钮处于活动状态。|  
+|活动|ActiveStates|该按钮处于活动状态。|  
 |非活动|ActiveStates|该按钮处于非活动状态。|  
 |RegularDay|DayStates|此按钮不表示 <xref:System.DateTime.Today%2A?displayProperty=nameWithType>。|  
 |今天|DayStates|按钮表示 <xref:System.DateTime.Today%2A?displayProperty=nameWithType>。|  
@@ -98,19 +98,19 @@ ms.locfileid: "74283558"
 ## <a name="calendarbutton-states"></a>CalendarButton 状态  
  下表列出了 <xref:System.Windows.Controls.Primitives.CalendarButton> 控件的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
-|一般|CommonStates|默认状态。|  
-|Disabled|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarButton> 处于禁用状态。|  
+|正常|CommonStates|默认状态。|  
+|已禁用|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarButton> 处于禁用状态。|  
 |MouseOver|CommonStates|鼠标指针置于 <xref:System.Windows.Controls.Primitives.CalendarButton>上。|  
-|已按下|CommonStates|已按下 <xref:System.Windows.Controls.Primitives.CalendarButton>。|  
+|Pressed|CommonStates|已按下 <xref:System.Windows.Controls.Primitives.CalendarButton>。|  
 |已选定|SelectionStates|该按钮处于选中状态。|  
 |未选定|SelectionStates|未选择该按钮。|  
 |CalendarButtonFocused|CalendarButtonFocusStates|按钮有焦点。|  
 |CalendarButtonUnfocused|CalendarButtonFocusStates|按钮没有焦点。|  
-|已设定焦点|FocusStates|按钮有焦点。|  
+|Focused|FocusStates|按钮有焦点。|  
 |失去焦点|FocusStates|按钮没有焦点。|  
-|活动的|ActiveStates|该按钮处于活动状态。|  
+|活动|ActiveStates|该按钮处于活动状态。|  
 |非活动|ActiveStates|该按钮处于非活动状态。|  
 |有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  

@@ -27,7 +27,7 @@ ms.locfileid: "74283720"
 ## <a name="listview-states"></a>ListView 状态  
  下表列出了 <xref:System.Windows.Controls.ListView> 控件的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
 |有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  
@@ -39,12 +39,12 @@ ms.locfileid: "74283720"
 ## <a name="listviewitem-states"></a>ListViewItem 状态  
  下表列出了 <xref:System.Windows.Controls.ListViewItem> 控件的状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
-|一般|CommonStates|默认状态。|  
-|Disabled|CommonStates|已禁用控件。|  
+|正常|CommonStates|默认状态。|  
+|已禁用|CommonStates|已禁用控件。|  
 |MouseOver|CommonStates|鼠标指针位于 <xref:System.Windows.Controls.ComboBox> 控件上。|  
-|已设定焦点|FocusStates|控件有焦点。|  
+|Focused|FocusStates|控件有焦点。|  
 |失去焦点|FocusStates|控件没有焦点。|  
 |已选定|SelectionStates|当前已选定该项。|  
 |未选定|SelectionStates|未选定该项。|  

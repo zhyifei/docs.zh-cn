@@ -39,37 +39,37 @@ HRESULT EnumFields (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in，out]指向枚举器的指针。  
   
  `cl`  
- [in] The TypeDef token of the class whose fields are to be enumerated.  
+ 中要枚举其字段的类的 TypeDef 标记。  
   
  `rFields`  
- [out] The list of FieldDef tokens.  
+ 弄FieldDef 标记的列表。  
   
  `cMax`  
  [in] `rFields` 数组的最大大小。  
   
  `pcTokens`  
- [out] The actual number of FieldDef tokens returned in `rFields`.  
+ 弄`rFields`中返回的 FieldDef 令牌的实际数量。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFields` returned successfully.|  
-|`S_FALSE`|There are no fields to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumFields` 成功返回。|  
+|`S_FALSE`|没有要枚举的字段。 在这种情况下，`pcTokens` 为零。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

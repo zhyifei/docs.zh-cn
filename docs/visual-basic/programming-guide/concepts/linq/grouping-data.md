@@ -1,5 +1,5 @@
 ---
-title: 数据分组
+title: 对数据分组
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
 ms.openlocfilehash: 6e84ccfbd6a2193ac5ab368d7526da2de29a3c47
@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353390"
 ---
-# <a name="grouping-data-visual-basic"></a>Grouping Data (Visual Basic)
+# <a name="grouping-data-visual-basic"></a>数据分组（Visual Basic）
 分组是指将数据分到不同的组，使每组中的元素拥有公共的属性。  
   
  下图演示了对字符序列进行分组的结果。 每个组的键是字符。  
@@ -20,7 +20,7 @@ ms.locfileid: "74353390"
   
 ## <a name="methods"></a>方法  
   
-|方法名|描述|Visual Basic Query Expression Syntax|详细信息|  
+|方法名|说明|Visual Basic 查询表达式语法|更多信息|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |GroupBy|对共享通用属性的元素进行分组。 每组由一个 <xref:System.Linq.IGrouping%602> 对象表示。|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
 |ToLookup|将元素插入基于键选择器函数的 <xref:System.Linq.Lookup%602>（一种一对多字典）。|不适用。|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
@@ -63,10 +63,10 @@ MsgBox(sb.ToString())
 ' 208  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Linq>
 - [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Group By 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)
-- [How to: Group Files by Extension (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
-- [How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [如何：按扩展名对文件分组（LINQ）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
+- [如何：使用组将一个文件拆分成多个文件（LINQ）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

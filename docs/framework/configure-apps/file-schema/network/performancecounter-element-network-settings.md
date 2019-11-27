@@ -31,12 +31,12 @@ ms.locfileid: "74283082"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a>特性和元素  
+## <a name="attributes-and-elements"></a>属性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a>Attributes  
   
-|属性|描述|  
+|属性|说明|  
 |---------------|-----------------|  
 |`enabled`|指定是否启用网络性能计数器。 默认值为 `false`。|  
   
@@ -45,7 +45,7 @@ ms.locfileid: "74283082"
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |[设置](settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
   

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 46de1b5de8ef7585919d331e6bf4b1537739ae1d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0ae4694e2efb6f6c51b279adf2851baf38785c8b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042887"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446883"
 ---
 # <a name="obtaining-ui-automation-elements"></a>获取 UI 自动化元素
 > [!NOTE]
-> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本主题描述获取 <xref:System.Windows.Automation.AutomationElement> 元素的 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 对象的各种方法。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "71042887"
   
  最简单的条件是 <xref:System.Windows.Automation.Condition.TrueCondition>，这是一个指定要返回搜索范围内的所有元素的预定义对象。 <xref:System.Windows.Automation.Condition.FalseCondition>是 <xref:System.Windows.Automation.Condition.TrueCondition>的对立条件，其作用不大，因为它将阻止找到任何元素。  
   
- 下面是三个其他的预定义条件，这些条件既可以单独使用，也可以与其他条件一起使用： <xref:System.Windows.Automation.Automation.ContentViewCondition>、 <xref:System.Windows.Automation.Automation.ControlViewCondition>和 <xref:System.Windows.Automation.Automation.RawViewCondition>。 单独使用的<xref:System.Windows.Automation.Automation.RawViewCondition>等效于 <xref:System.Windows.Automation.Condition.TrueCondition>，因为它不根据元素的  或  属性来筛选元素。  
+ 下面是三个其他的预定义条件，这些条件既可以单独使用，也可以与其他条件一起使用： <xref:System.Windows.Automation.Automation.ContentViewCondition>、 <xref:System.Windows.Automation.Automation.ControlViewCondition>和 <xref:System.Windows.Automation.Automation.RawViewCondition>。 单独使用的<xref:System.Windows.Automation.Automation.RawViewCondition>等效于 <xref:System.Windows.Automation.Condition.TrueCondition>，因为它不根据元素的 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> 或 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> 属性来筛选元素。  
   
  其他条件是根据一个或多个 <xref:System.Windows.Automation.PropertyCondition> 对象（每个对象都指定一个属性值）建立的。 例如，个 <xref:System.Windows.Automation.PropertyCondition> 可以指定元素处于启用状态或元素支持某种控件模式。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "71042887"
 ### <a name="from-the-focused-control"></a>从具有焦点的控件中  
  可以从静态 <xref:System.Windows.Automation.AutomationElement> 属性中检索表示焦点控件的 <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> 。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [基于属性条件查找 UI 自动化元素](find-a-ui-automation-element-based-on-a-property-condition.md)
 - [使用 TreeWalker 在 UI 自动化元素之间导航](navigate-among-ui-automation-elements-with-treewalker.md)

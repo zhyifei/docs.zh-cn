@@ -1,5 +1,5 @@
 ---
-title: 接口
+title: 界面
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, interfaces
@@ -40,13 +40,13 @@ ms.locfileid: "74345052"
  [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
 ## <a name="implementing-interfaces"></a>实现接口  
- The Visual Basic reserved word `Implements` is used in two ways. `Implements` 语句表示类或结构实现接口。 `Implements` 关键字表示类成员或结构成员实现特定的接口成员。  
+ Visual Basic 保留字 `Implements` 以两种方式使用。 `Implements` 语句表示类或结构实现接口。 `Implements` 关键字表示类成员或结构成员实现特定的接口成员。  
   
 ### <a name="implements-statement"></a>Implements 语句  
- 如果一个类或结构实现一个或多个接口，则它必须紧随在 `Class` 或 `Structure` 语句之后包括 `Implements` 语句。 `Implements` 语句需要一个由类实现的接口的逗号分隔列表。 类或结构必须使用 `Implements` 关键字来实现所有的接口成员。  
+ 如果一个类或结构实现一个或多个接口，则它必须紧随在 `Implements` 或 `Class` 语句之后包括 `Structure` 语句。 `Implements` 语句需要一个由类实现的接口的逗号分隔列表。 类或结构必须使用 `Implements` 关键字来实现所有的接口成员。  
   
 ### <a name="implements-keyword"></a>Implements 关键字  
- `Implements` 关键字需要一个要实现的接口成员的逗号分隔列表。 通常只指定单个接口成员，但也可以指定多个成员。 接口成员的规范由接口名称（必须在类中的 implements 语句中指定）、句点和要实现的成员函数、属性或事件的名称组成。 The name of a member that implements an interface member can use any legal identifier, and it is not limited to the `InterfaceName_MethodName` convention used in earlier versions of Visual Basic.  
+ `Implements` 关键字需要一个要实现的接口成员的逗号分隔列表。 通常只指定单个接口成员，但也可以指定多个成员。 接口成员的规范由接口名称（必须在类中的 implements 语句中指定）、句点和要实现的成员函数、属性或事件的名称组成。 实现接口成员的成员的名称可以使用任何合法标识符，但并不局限于 Visual Basic 早期版本中使用的 `InterfaceName_MethodName` 约定。  
   
  例如，以下代码显示了如何声明一个名为 `Sub1` 的用于实现接口方法的子例程：  
   
@@ -81,7 +81,7 @@ ms.locfileid: "74345052"
   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|描述|  
+|职务|说明|  
 |-----------|-----------------|  
 |[演练：创建和实现接口](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|提供引导你定义和实现自己的接口的详细过程。|  
 |[泛型接口中的变体](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|讨论泛型接口中的协变和逆变，提供 .NET Framework 中的变体泛型接口列表。|

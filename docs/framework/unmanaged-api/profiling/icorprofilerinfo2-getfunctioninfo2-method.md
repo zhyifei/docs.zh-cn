@@ -65,19 +65,19 @@ HRESULT GetFunctionInfo2(
  [out] 一个由 `ClassID` 值构成的数组，其中的每个值都是函数的类型参数的 ID。 方法返回时，`typeArgs` 将包含部分或全部 `ClassID` 值。  
   
 ## <a name="remarks"></a>备注  
- The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a [metadata](../../../../docs/framework/unmanaged-api/metadata/index.md) interface for a given module. 然后，返回到 `pToken` 所引用位置的元数据标记便可用于访问该函数的元数据。  
+ 探查器代码可调用[ICorProfilerInfo：： GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md)以获取给定模块的[元数据](../../../../docs/framework/unmanaged-api/metadata/index.md)接口。 然后，返回到 `pToken` 所引用位置的元数据标记便可用于访问该函数的元数据。  
   
  通过 `pClassId` 和 `typeArgs` 参数返回的类 ID 和类型参数取决于传入 `frameInfo` 参数的值，如下表中所示。  
   
 |`frameInfo` 参数的值|结果|  
 |----------------------------------------|------------|  
-|从 `FunctionEnter2` 回调中获得的 `COR_PRF_FRAME_INFO` 值|在 `pClassId` 所引用位置中返回的 `ClassID` 以及在 `typeArgs` 数组中返回的所有类型参数都将是准确的。|  
-|从 `FunctionEnter2` 回调以外的源中获得的 `COR_PRF_FRAME_INFO`|无法确定准确的 `ClassID` 和类型参数。 也就是说，`ClassID` 可能为 NULL，并且某些类型参数可能作为 <xref:System.Object> 返回。|  
+|从 `COR_PRF_FRAME_INFO` 回调中获得的 `FunctionEnter2` 值|在 `ClassID` 所引用位置中返回的 `pClassId` 以及在 `typeArgs` 数组中返回的所有类型参数都将是准确的。|  
+|从 `COR_PRF_FRAME_INFO` 回调以外的源中获得的 `FunctionEnter2`|无法确定准确的 `ClassID` 和类型参数。 也就是说，`ClassID` 可能为 NULL，并且某些类型参数可能作为 <xref:System.Object> 返回。|  
 |零|无法确定准确的 `ClassID` 和类型参数。 也就是说，`ClassID` 可能为 NULL，并且某些类型参数可能作为 <xref:System.Object> 返回。|  
   
  `GetFunctionInfo2` 返回后，必须验证 `typeArgs` 缓冲区是否足够大，可包含所有 `ClassID` 值。 为此，请比较 `pcTypeArgs` 指向的值和 `cTypeArgs` 参数的值。 如果 `pcTypeArgs` 指向大于`cTypeArgs` 除以 `ClassID` 值大小的值，请分配更大的 `pcTypeArgs` 缓冲区，使用新的、更大的大小更新 `cTypeArgs`，然后再次调用 `GetFunctionInfo2`。  
   
- 或者，可以先用长度为零的 `pcTypeArgs` 缓冲区调用 `GetFunctionInfo2` 以获取正确的缓冲区大小。 然后，可将缓冲区大小设置为 `pcTypeArgs` 中返回的值除以 `ClassID` 值的大小，然后再次调用 `GetFunctionInfo2`。  
+ 或者，可以先用长度为零的 `GetFunctionInfo2` 缓冲区调用 `pcTypeArgs` 以获取正确的缓冲区大小。 然后，可将缓冲区大小设置为 `pcTypeArgs` 中返回的值除以 `ClassID` 值的大小，然后再次调用 `GetFunctionInfo2`。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -88,7 +88,7 @@ HRESULT GetFunctionInfo2(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

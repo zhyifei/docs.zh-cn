@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437539"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps 方法
-Gets a pointer to the metadata tokens for the <xref:System.Type> that implements the specified method, and for the interface that declares that method.
+获取一个指针，该指针指向实现指定方法的 <xref:System.Type> 的元数据标记和声明该方法的接口。
   
 ## <a name="syntax"></a>语法  
   
@@ -37,27 +37,27 @@ HRESULT GetInterfaceImplProps (
   
 ## <a name="parameters"></a>参数  
  `iiImpl`  
- [in] The metadata token representing the method to return the class and interface tokens for.  
+ 中表示要为其返回类和接口标记的方法的元数据标记。  
   
  `pClass`  
- [out] The metadata token representing the class that implements the method.  
+ 弄表示实现方法的类的元数据标记。  
   
  `ptkIface`  
- [out] The metadata token representing the interface that defines the implemented method.  
+ 弄表示用于定义实现的方法的接口的元数据标记。  
 
 ## <a name="remarks"></a>备注
 
- You obtain the value for `iImpl` by calling the [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) method.
+ 可以通过调用[EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md)方法获取 `iImpl` 的值。
  
- For example, suppose that a class has an `mdTypeDef` token value of 0x02000007 and that it implements three interfaces whose types have tokens: 
+ 例如，假设某个类的 `mdTypeDef` 标记值为0x02000007，并且它实现了三个类型具有标记的接口： 
 
-- 0x02000003 (TypeDef)
-- 0x0100000A (TypeRef)
-- 0x0200001C (TypeDef)
+- 0x02000003 （TypeDef）
+- 0x0100000A （TypeRef）
+- 0x0200001C （TypeDef）
 
-Conceptually, this information is stored into an interface implementation table as:
+从概念上讲，此信息存储到接口实现表中，如下所示：
 
-| Row number | Class token | Interface token |
+| 行号 | 类标记 | 接口令牌 |
 |------------|-------------|-----------------|
 | 4          |             |                 |
 | 5          | 02000007    | 02000003        |
@@ -65,23 +65,23 @@ Conceptually, this information is stored into an interface implementation table 
 | 7          |             |                 |
 | 8          | 02000007    | 0200001C        |
 
-Recall, the token is a 4-byte value:
+请记住，该令牌是一个4字节的值：
 
-- The lower 3 bytes hold the row number, or RID.
-- The upper byte holds the token type – 0x09 for `mdtInterfaceImpl`.
+- 下3个字节保存行号或 RID。
+- 上部字节保存用于 `mdtInterfaceImpl`的标记类型-0x09。
 
-`GetInterfaceImplProps` returns the information held in the row whose token you provide in the `iImpl` argument. 
+`GetInterfaceImplProps` 返回在 `iImpl` 参数中提供其标记的行中保存的信息。 
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

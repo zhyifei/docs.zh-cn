@@ -1,5 +1,5 @@
 ---
-title: Message.BodyToString Method (System.ServiceModel.Channels)
+title: BodyToString 方法（System.servicemodel. 通道）
 author: mairaw
 ms.author: mairaw
 ms.date: 11/01/2019
@@ -18,9 +18,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451310"
 ---
-# <a name="messagebodytostring-method"></a>Message.BodyToString Method
+# <a name="messagebodytostring-method"></a>BodyToString 方法
 
-Converts the message body into a string by calling the <xref:System.ServiceModel.Channels.Message.OnBodyToString%2A?displayProperty=nameWithType> method.
+通过调用 <xref:System.ServiceModel.Channels.Message.OnBodyToString%2A?displayProperty=nameWithType> 方法，将消息正文转换为字符串。
 
 ```csharp
 internal void BodyToString(XmlDictionaryWriter writer);
@@ -29,19 +29,19 @@ internal void BodyToString(XmlDictionaryWriter writer);
 ## <a name="parameters"></a>参数
 
 - `writer` <xref:System.Xml.XmlDictionaryWriter>\
-  The writer that is used to convert the message body to a string.
+  用于将消息正文转换为字符串的编写器。
 
 ## <a name="remarks"></a>备注
 
 > [!WARNING]
-> The `Message.BodyToString` method is internal and is not meant to be used directly in your code.
+> `Message.BodyToString` 方法是内部的，不应在代码中直接使用。
 >
-> Microsoft does not support the use of this method in a production application under any circumstance.
+> 在任何情况下，Microsoft 不支持在生产应用程序中使用此方法。
 
 ## <a name="requirements"></a>要求
 
 **命名空间：** <xref:System.ServiceModel.Channels>
 
-**Assembly:** System.ServiceModel.dll
+**程序集：** System.servicemodel .dll
 
-**.NET Framework versions:** Available since 3.0.
+**.NET Framework 版本：** 自3.0 起可用。

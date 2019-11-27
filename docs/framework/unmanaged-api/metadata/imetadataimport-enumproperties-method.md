@@ -39,37 +39,37 @@ HRESULT EnumProperties (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in，out]指向枚举器的指针。 第一次调用此方法时，此值必须为 NULL。  
   
  `td`  
- [in] A TypeDef token representing the type with properties to enumerate.  
+ 中一个 TypeDef 标记，它表示具有要枚举的属性的类型。  
   
  `rProperties`  
- [out] The array used to store the PropertyDef tokens.  
+ 弄用于存储 PropertyDef 标记的数组。  
   
  `cMax`  
  [in] `rProperties` 数组的最大大小。  
   
  `pcProperties`  
- [out] The number of PropertyDef tokens returned in `rProperties`.  
+ 弄`rProperties`中返回的 PropertyDef 令牌数。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumProperties` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcProperties` is zero.|  
+|`S_OK`|`EnumProperties` 成功返回。|  
+|`S_FALSE`|没有要枚举的令牌。 在这种情况下，`pcProperties` 为零。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

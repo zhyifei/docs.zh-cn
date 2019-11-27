@@ -15,27 +15,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351805"
 ---
 # <a name="object-variable-values-visual-basic"></a>对象变量值 (Visual Basic)
-A variable of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) can refer to data of any type. The value you store in an `Object` variable is kept elsewhere in memory, while the variable itself holds a pointer to the data.  
+[对象数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)的变量可以引用任何类型的数据。 在 `Object` 变量中存储的值将保留在内存中的其他位置，而变量本身保存指向数据的指针。  
   
-## <a name="object-classifier-functions"></a>Object Classifier Functions  
- Visual Basic supplies functions that return information about what an `Object` variable refers to, as shown in the following table.  
+## <a name="object-classifier-functions"></a>对象分类器函数  
+ Visual Basic 提供函数，这些函数返回有关 `Object` 变量引用的信息，如下表所示。  
   
-|函数|Returns True if the Object variable refers to|  
+|函数|如果对象变量引用，则返回 True|  
 |--------------|---------------------------------------------------|  
-|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|An array of values, rather than a single value|  
-|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|A [Date Data Type](../../../../visual-basic/language-reference/data-types/date-data-type.md) value, or a string that can be interpreted as a date and time value|  
-|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|An object of type <xref:System.DBNull>, which represents missing or nonexistent data|  
-|<xref:Microsoft.VisualBasic.Information.IsError%2A>|An exception object, which derives from <xref:System.Exception>|  
-|<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[Nothing](../../../../visual-basic/language-reference/nothing.md), that is, no object is currently assigned to the variable|  
-|<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|A number, or a string that can be interpreted as a number|  
-|<xref:Microsoft.VisualBasic.Information.IsReference%2A>|A reference type (such as a string, array, delegate, or class type)|  
+|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|值的数组，而不是单个值|  
+|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|[日期数据类型](../../../../visual-basic/language-reference/data-types/date-data-type.md)值，或可解释为日期和时间值的字符串|  
+|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|<xref:System.DBNull>类型的对象，该对象表示缺少或不存在的数据|  
+|<xref:Microsoft.VisualBasic.Information.IsError%2A>|异常对象，派生自 <xref:System.Exception>|  
+|<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[没有，也就是说](../../../../visual-basic/language-reference/nothing.md)，当前没有对象赋给变量|  
+|<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|一个数字，或者一个可解释为数字的字符串。|  
+|<xref:Microsoft.VisualBasic.Information.IsReference%2A>|引用类型（如字符串、数组、委托或类类型）|  
   
- You can use these functions to avoid submitting an invalid value to an operation or a procedure.  
+ 您可以使用这些函数来避免将无效值提交给操作或过程。  
   
 ## <a name="typeof-operator"></a>TypeOf 运算符  
- You can also use the [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) to determine whether an object variable currently refers to a specific data type. The `TypeOf`...`Is` expression evaluates to `True` if the run-time type of the operand is derived from or implements the specified type.  
+ 你还可以使用[TypeOf 运算符](../../../../visual-basic/language-reference/operators/typeof-operator.md)来确定对象变量当前是否引用了特定数据类型。 如果操作数的运行时类型派生自或实现指定的类型，则 `TypeOf`...`Is` 表达式的计算结果为 `True`。  
   
- The following example uses `TypeOf` on object variables referring to value and reference types.  
+ 下面的示例对引用值和引用类型的对象变量使用 `TypeOf`。  
   
 ```vb  
 ' The following statement puts a value type (Integer) in an Object variable.  
@@ -51,7 +51,7 @@ If TypeOf frm Is Label Then Debug.WriteLine("frm is Label")
 If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")  
 ```  
   
- The preceding example writes the following lines to the **Debug** window:  
+ 前面的示例将以下行写入 "**调试**" 窗口：  
   
  `num is Integer`  
   
@@ -61,12 +61,12 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
   
  `frm is Object`  
   
- The object variable `num` refers to data of type `Integer`, and `frm` refers to an object of class <xref:System.Windows.Forms.Form>.  
+ 对象变量 `num` 引用 `Integer`类型的数据，而 `frm` 引用 <xref:System.Windows.Forms.Form>类的对象。  
   
-## <a name="object-arrays"></a>Object Arrays  
- You can declare and use an array of `Object` variables. This is useful when you need to handle a variety of data types and object classes. All the elements in an array must have the same declared data type. Declaring this data type as `Object` allows you to store objects and class instances alongside other data types in the array.  
+## <a name="object-arrays"></a>对象数组  
+ 可以声明和使用 `Object` 变量的数组。 如果需要处理各种数据类型和对象类，这会很有用。 数组中的所有元素必须具有相同的声明数据类型。 将此数据类型声明为 `Object` 允许您在数组中将对象和类实例与其他数据类型一起存储。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [对象变量](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [对象变量声明](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)

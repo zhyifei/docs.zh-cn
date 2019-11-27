@@ -20,16 +20,16 @@ ms.locfileid: "74433550"
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
- This topic shows how to retrieve an <xref:System.Windows.Automation.AutomationElement> for an item within a list when the index of the item is known.  
+ 本主题演示如何在已知项的索引时检索列表中项的 <xref:System.Windows.Automation.AutomationElement>。  
   
 ## <a name="example"></a>示例  
- The following example shows two ways of retrieving a specified item from a list, one using <xref:System.Windows.Automation.TreeWalker> and the other using <xref:System.Windows.Automation.AutomationElement.FindAll%2A>.  
+ 下面的示例演示了两种从列表中检索指定项的方式，一个使用 <xref:System.Windows.Automation.TreeWalker>，另一个使用 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>。  
   
- The first technique tends to be faster for [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controls, but the second is faster for Windows Presentation Foundation (WPF) controls.  
+ 第一种方法往往更快 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控件，但第二种方法更快 Windows Presentation Foundation （WPF）控件。  
   
  [!code-csharp[UIAClient_snip#184](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#184)]
  [!code-vb[UIAClient_snip#184](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#184)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [获取 UI 自动化元素](obtaining-ui-automation-elements.md)
+- [Obtaining UI Automation Elements](obtaining-ui-automation-elements.md)

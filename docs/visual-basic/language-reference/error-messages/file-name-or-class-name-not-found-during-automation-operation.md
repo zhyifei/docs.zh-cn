@@ -12,12 +12,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353725"
 ---
 # <a name="file-name-or-class-name-not-found-during-automation-operation-visual-basic"></a>自动化操作期间未找到文件名或类名 (Visual Basic)
-The name specified for file name or class in a call to the `GetObject` function could not be found.  
+未能找到为调用 `GetObject` 函数指定的文件名或类的名称。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-- Check the names and try again. Make sure the name used for the `class` parameter matches that registered with the system.  
+- 请检查名称，然后重试。 请确保用于 `class` 参数的名称与向系统注册的参数的名称匹配。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [错误类型](../../../visual-basic/programming-guide/language-features/error-types.md)

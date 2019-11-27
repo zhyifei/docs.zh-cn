@@ -16,19 +16,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352449"
 ---
 # <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>如何：在 Visual Basic 中将字符串转换为字符数组
-Sometimes it is useful to have data about the characters in your string and the positions of those characters within your string, such as when you are parsing a string. This example shows how you can get an array of the characters in a string by calling the string's <xref:System.String.ToCharArray%2A> method.  
+有时，对字符串中的字符和这些字符在字符串中的位置（例如在分析字符串时）使用数据是非常有用的。 此示例演示如何通过调用字符串的 <xref:System.String.ToCharArray%2A> 方法来获取字符串中的字符数组。  
   
 ## <a name="example"></a>示例  
- This example demonstrates how to split a string into a `Char` array, and how to split a string into a `String` array of its Unicode text characters. The reason for this distinction is that Unicode text characters can be composed of two or more `Char` characters (such as a surrogate pair or a combining character sequence). For more information, see <xref:System.Globalization.TextElementEnumerator> and [The Unicode Standard](https://www.unicode.org/standard/standard.html).  
+ 此示例演示如何将字符串拆分为 `Char` 数组，以及如何将字符串拆分为其 Unicode 文本字符的 `String` 数组。 此区别的原因是 Unicode 文本字符可以由两个或多个 `Char` 字符组成（如代理项对或组合字符序列）。 有关详细信息，请参阅 <xref:System.Globalization.TextElementEnumerator> 和[Unicode 标准](https://www.unicode.org/standard/standard.html)。  
   
  [!code-vb[VbVbalrStrings#75](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class4.vb#75)]  
   
 ## <a name="example"></a>示例  
- It is more difficult to split a string into its Unicode text characters, but this is necessary if you need information about the visual representation of a string. This example uses the <xref:System.Globalization.StringInfo.SubstringByTextElements%2A> method to get information about the Unicode text characters that make up a string.  
+ 更难将字符串拆分为其 Unicode 文本字符，但如果需要有关字符串的可视化表示形式的信息，则这是必需的。 此示例使用 <xref:System.Globalization.StringInfo.SubstringByTextElements%2A> 方法获取有关构成字符串的 Unicode 文本字符的信息。  
   
  [!code-vb[VbVbalrStrings#76](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class4.vb#76)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.String.Chars%2A>
 - <xref:System.Globalization.StringInfo?displayProperty=nameWithType>

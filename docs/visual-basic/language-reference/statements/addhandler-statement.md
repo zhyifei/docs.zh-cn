@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350193"
 ---
 # <a name="addhandler-statement"></a>AddHandler 语句
-Associates an event with an event handler at run time.  
+在运行时将事件与事件处理程序相关联。  
   
 ## <a name="syntax"></a>语法  
   
@@ -27,26 +27,26 @@ AddHandler event, AddressOf eventhandler
 ## <a name="parts"></a>部件  
 |||
 |---|---|
-|Event — 事件|The name of the event to handle.|  
-|`eventhandler`|The name of a procedure that handles the event.|
+|事件|要处理的事件的名称。|  
+|`eventhandler`|处理事件的过程的名称。|
 |||
   
 ## <a name="remarks"></a>备注  
- The `AddHandler` and `RemoveHandler` statements allow you to start and stop event handling at any time during program execution.  
+ `AddHandler` 和 `RemoveHandler` 语句允许您在程序执行过程中随时启动和停止事件处理。  
   
- The signature of the `eventhandler` procedure must match the signature of the event `event`.  
+ `eventhandler` 过程的签名必须与事件 `event`的签名相匹配。  
   
- `Handles` 关键字和 `AddHandler` 语句都允许你指定特定过程处理特定事件，但存在差异。 `AddHandler` 语句在运行时将过程连接到事件。 定义过程时使用 `Handles` 关键字，以指定它处理特定事件。 For more information, see [Handles](../../../visual-basic/language-reference/statements/handles-clause.md).  
+ `Handles` 关键字和 `AddHandler` 语句都允许你指定特定过程处理特定事件，但存在差异。 `AddHandler` 语句在运行时将过程连接到事件。 定义过程时使用 `Handles` 关键字，以指定它处理特定事件。 有关详细信息，请参阅[句柄](../../../visual-basic/language-reference/statements/handles-clause.md)。  
   
 > [!NOTE]
-> For custom events, the `AddHandler` statement invokes the event's `AddHandler` accessor. For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
+> 对于自定义事件，`AddHandler` 语句调用事件的 `AddHandler` 访问器。 有关自定义事件的详细信息，请参阅[Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)。  
   
 ## <a name="example"></a>示例  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [RemoveHandler 语句](../../../visual-basic/language-reference/statements/removehandler-statement.md)
-- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [!](../../../visual-basic/language-reference/statements/handles-clause.md)
 - [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)
 - [事件](../../../visual-basic/programming-guide/language-features/events/index.md)

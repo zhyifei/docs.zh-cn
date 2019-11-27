@@ -19,7 +19,7 @@ ms.locfileid: "74441482"
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
- This section contains overviews and how-to topics that describe how to write [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] providers for custom [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.  
+ 本部分包含概述和帮助主题，这些主题介绍如何编写自定义 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 元素的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 提供程序。  
   
 ## <a name="in-this-section"></a>本节内容  
  [服务器端 UI 自动化提供程序实现](server-side-ui-automation-provider-implementation.md)  

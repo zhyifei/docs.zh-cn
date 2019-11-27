@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428154"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next 方法
-Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.  
+从对象的顺序集合中获取指定数目的连续对象，从该序列中的枚举器的当前位置开始。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +41,7 @@ HRESULT Next (
  [in] 要检索的对象数。  
   
  `objects`  
- [out] An array of `ObjectID` values, each of which represents a retrieved object.  
+ 弄`ObjectID` 值的数组，其中每个值都表示检索到的对象。  
   
  `pceltFetched`  
  [out] 指向 `objects` 数组中实际返回的元素数目的指针。  
@@ -55,6 +55,6 @@ HRESULT Next (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerObjectEnum 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445627"
 ---
 # <a name="linkresource-method"></a>LinkResource 方法
-Links in a resource.  
+资源中的链接。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,27 +38,27 @@ HRESULT LinkResource(
   
 ## <a name="parameters"></a>参数  
  `AssemblyID`  
- ID of the assembly.  
+ 程序集的 ID。  
   
  `pszFileName`  
  文件的名称。  
   
  `pszNewLocation`  
- Optional new file name. If non-NULL, `pszFileName` will be copied to pszNewLocation.  
+ 可选的新文件名。 如果非 NULL，`pszFileName` 将复制到 pszNewLocation。  
   
  `pszResourceName`  
  资源的名称。  
   
  `dwFlags`  
- Accessibility flags such as `mrPublic` and `mrPrivate`. This parameter may be passed to [DefineManifestResource Method](../metadata/imetadataassemblyemit-definemanifestresource-method.md).  
+ 辅助功能标志，如 `mrPublic` 和 `mrPrivate`。 此参数可传递给[DefineManifestResource 方法](../metadata/imetadataassemblyemit-definemanifestresource-method.md)。  
   
 ## <a name="return-value"></a>返回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- Requires alink.h.  
+ 需要 alink。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IALink 接口](ialink-interface.md)
 - [IALink2 接口](ialink2-interface.md)

@@ -12,25 +12,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349581"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>未定义 Sub 或 Function (Visual Basic)
-A `Sub` or `Function` must be defined in order to be called. 此错误的可能原因包括：  
+必须定义 `Sub` 或 `Function` 才能调用。 此错误的可能原因包括：  
   
-- Misspelling the procedure name.  
+- 错误的过程名称。  
   
-- Trying to call a procedure from another project without explicitly adding a reference to that project in the **References** dialog box.  
+- 尝试从另一个项目调用过程，而无需在 "**引用**" 对话框中显式添加对该项目的引用。  
   
-- Specifying a procedure that is not visible to the calling procedure.  
+- 指定对调用过程不可见的过程。  
   
-- Declaring a Windows dynamic-link library (DLL) routine or Macintosh code-resource routine that is not in the specified library or code resource.  
+- 声明不在指定的库或代码资源中的 Windows 动态链接库（DLL）例程或 Macintosh 代码资源例程。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1. Make sure that the procedure name is spelled correctly.  
+1. 请确保过程名称拼写正确。  
   
-2. Find the name of the project containing the procedure you want to call in the **References** dialog box. If it does not appear, click the **Browse** button to search for it. Select the check box to the left of the project name, and then click **OK**.  
+2. 在 "**引用**" 对话框中找到包含要调用的过程的项目的名称。 如果未显示，请单击 "**浏览**" 按钮进行搜索。 选中项目名称左侧的复选框，然后单击 **"确定"** 。  
   
-3. Check the name of the routine.  
+3. 检查例程的名称。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [错误类型](../../../visual-basic/programming-guide/language-features/error-types.md)
 - [管理项目中的引用](/visualstudio/ide/managing-references-in-a-project)

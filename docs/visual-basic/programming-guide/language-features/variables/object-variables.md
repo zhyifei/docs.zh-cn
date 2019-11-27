@@ -16,17 +16,17 @@ ms.locfileid: "74351782"
 ---
 # <a name="object-variables-in-visual-basic"></a>Visual Basic 中的对象变量
 
-In addition to storing values directly, a variable can refer to an object. You assign an object to a variable for the same reasons you assign any value to a variable:
+除了直接存储值以外，变量还可以引用对象。 将对象分配给变量的原因与将任何值分配给变量的原因相同：
 
-- A variable name is often shorter and easier to remember than the full path of methods and properties necessary to access the object itself.
+- 变量名通常比访问对象本身所需的方法和属性的完整路径更短且更易于记忆。
 
-- Using a variable that refers to an object is more efficient than repeatedly accessing the object itself through the necessary methods or properties.
+- 使用引用对象的变量比通过所需的方法或属性重复访问对象本身更为有效。
 
-- You can change a variable to refer to other objects while your code is running.
+- 在代码运行时，可以更改变量以引用其他对象。
 
-## <a name="making-code-shorter"></a>Making Code Shorter
+## <a name="making-code-shorter"></a>使代码更短
 
-You can use object variables to shorten the code you have to type. The following example uses the full path of methods and properties to access a <xref:System.Windows.Forms.Control> object.
+可以使用对象变量缩短需要键入的代码。 下面的示例使用方法和属性的完整路径来访问 <xref:System.Windows.Forms.Control> 对象。
 
 ```vb
 ' Assume Me is a valid Form, or replace Me with a valid Form.
@@ -35,7 +35,7 @@ Me.ActiveForm.ActiveControl.Location = New Point(100, 100)
 Me.ActiveForm.ActiveControl.Show()
 ```
 
-You can shorten this code, and speed up execution, if you use an object variable for the control. You should declare the object variable with the specific class that you intend to assign to it (`Control` in this case). Once you assign an object to the variable, you can treat it exactly the same as you treat the object to which it refers. You can set or retrieve the properties of the object or use any of its methods. The following example uses an object variable to simplify the code in the preceding example.
+如果对控件使用对象变量，则可缩短此代码并加快执行速度。 应将对象变量声明为要分配给它的特定类（在此示例中为`Control`）。 将对象分配给变量后，可以将其视为与处理它所引用的对象完全相同。 可以设置或检索对象的属性或使用其任何方法。 下面的示例使用对象变量来简化前面的示例中的代码。
 
 ```vb
 Dim ctrlActv As System.Windows.Forms.Control = Me.ActiveForm.ActiveControl
@@ -44,7 +44,7 @@ ctrlActv.Location = New Point(100, 100)
 ctrlActv.Show()
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [变量声明](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [如何：加速访问具有长限定路径的对象](../../../../visual-basic/programming-guide/language-features/variables/how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md)

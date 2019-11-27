@@ -43,12 +43,12 @@ HRESULT SetILFunctionBody(
 ## <a name="return-value"></a>返回值  
  此方法会返回以下特定的 HRESULT。  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
 |S_OK|替换成功。|  
   
 ## <a name="remarks"></a>备注  
- Unlike the [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method, the `SetILFunctionBody` method manages the memory required for the new CIL body. This means that the CIL body provided by the profiler does not have to be allocated by using the [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interface or allocated within a particular range. 它可在任何堆上进行分配。 The profiler can free the memory used for its CIL body after `SetILFunctionBody` returns.  
+ 与[ICorProfilerInfo：： SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md)方法不同，`SetILFunctionBody` 方法管理新 CIL 主体所需的内存。 这意味着，无需通过使用[IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)接口来分配探查器提供的 CIL 主体，也不必在特定范围内进行分配。 它可在任何堆上进行分配。 探查器可以在 `SetILFunctionBody` 返回后释放用于其 CIL 体的内存。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -59,6 +59,6 @@ HRESULT SetILFunctionBody(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerFunctionControl 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)

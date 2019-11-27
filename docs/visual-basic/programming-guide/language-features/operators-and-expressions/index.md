@@ -22,8 +22,8 @@ ms.locfileid: "74343615"
   
  表达式是一系列与运算符结合使用的值元素，将生成新值。 运算符通过执行计算、比较或其他运算来处理值元素。  
   
-## <a name="types-of-operators"></a>运算符类型  
- Visual Basic provides the following types of operators:  
+## <a name="types-of-operators"></a>运算符的类型  
+ Visual Basic 提供以下类型的运算符：  
   
 - [算术运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)：对数字值执行常见计算，包括更改位模式。  
   
@@ -60,9 +60,9 @@ ms.locfileid: "74343615"
   
  [!code-vb[VbVbalrOperators#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#56)]  
   
- In the preceding example, Visual Basic performs the operations in the expression on the right side of the assignment operator (`=`), then assigns the resulting value to the variable `x` on the left. 对于可以合并到表达式中的运算符数量没有实际限制，但需要了解 [Visual Basic 中的运算符优先级](../../../../visual-basic/language-reference/operators/operator-precedence.md)，以确保结果符合预期。  
+ 在前面的示例中，Visual Basic 在赋值运算符（`=`）右侧的表达式中执行运算，然后将结果值分配给左侧 `x` 变量。 对于可以合并到表达式中的运算符数量没有实际限制，但需要了解 [Visual Basic 中的运算符优先级](../../../../visual-basic/language-reference/operators/operator-precedence.md)，以确保结果符合预期。  
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [运算符](../../../../visual-basic/language-reference/operators/index.md)
 - [运算符的有效组合](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

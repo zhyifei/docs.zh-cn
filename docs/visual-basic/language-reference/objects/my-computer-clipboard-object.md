@@ -18,19 +18,19 @@ ms.locfileid: "74344105"
 ## <a name="remarks"></a>备注  
  有关 `My.Computer.Clipboard` 对象所使用方法和属性的信息，请参阅 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>。  
   
- For more information, see [Storing Data to and Reading from the Clipboard](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).  
+ 有关详细信息，请参阅[将数据存储到剪贴板以及从剪贴板读取数据](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)。  
   
 > [!NOTE]
-> You can also use methods of the <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> class to manipulate the Clipboard.  
+> 你还可以使用 <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> 类的方法来操作剪贴板。  
   
 ## <a name="requirements"></a>要求  
  **命名空间：** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (provides access to <xref:System.Windows.Forms.Clipboard>)  
+ **类：** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> （提供对 <xref:System.Windows.Forms.Clipboard>的访问权限）  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **程序集：** Visual Basic 运行时库（在 Microsoft. .dll 中）  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualBasic.Devices.Computer.Clipboard%2A>
 - [My.Computer 对象](../../../visual-basic/language-reference/objects/my-computer-object.md)

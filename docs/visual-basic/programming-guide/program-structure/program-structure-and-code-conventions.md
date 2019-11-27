@@ -21,65 +21,65 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347288"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>程序结构和代码约定 (Visual Basic)
-This section introduces the typical Visual Basic program structure, provides a simple Visual Basic program, "Hello, World", and discusses Visual Basic code conventions. Code conventions are suggestions that focus not on a program's logic but on its physical structure and appearance. Following them makes your code easier to read, understand, and maintain. Code conventions can include, among others:  
+本部分介绍了典型的 Visual Basic 计划结构，提供了一个简单的 Visual Basic 程序： "Hello，World"，并讨论 Visual Basic 代码约定。 代码约定是重点介绍不在程序逻辑上，而是在其物理结构和外观上的建议。 下面的代码可使代码更易于阅读、理解和维护。 代码约定可以包含其他内容：  
   
-- Standardized formats for labeling and commenting code.  
+- 用于标记和注释代码的标准化格式。  
   
-- Guidelines for spacing, formatting, and indenting code.  
+- 间距、格式设置和缩进代码的准则。  
   
-- Naming conventions for objects, variables, and procedures.  
+- 对象、变量和过程的命名约定。  
   
- The following topics present a set of programming guidelines for Visual Basic programs, along with examples of good usage.  
+ 以下主题提供了一组用于 Visual Basic 程序的编程准则，以及良好使用的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
- [Structure of a Visual Basic Program](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
- Provides an overview of the elements that make up a Visual Basic program.  
+ [Visual Basic 程序的结构](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
+ 提供组成 Visual Basic 程序的元素的概述。  
   
- [Main Procedure in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)  
- Discusses the procedure that serves as the starting point and overall control for your application.  
+ [Visual Basic 中的 Main 过程](../../../visual-basic/programming-guide/program-structure/main-procedure.md)  
+ 讨论作为开始点和应用程序的总体控制的过程。  
   
  [引用和 Imports 语句](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
- Discusses how to reference objects in other assemblies.  
+ 讨论如何引用其他程序集中的对象。  
   
- [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
- Describes how namespaces organize objects within assemblies.  
+ [Visual Basic 中的命名空间](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
+ 描述命名空间如何组织程序集内的对象。  
   
- [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
- Includes general guidelines for naming procedures, constants, variables, arguments, and objects.  
+ [Visual Basic 命名约定](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
+ 包括命名过程、常量、变量、参数和对象的一般准则。  
   
  [Visual Basic 编码约定](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)  
- Reviews the guidelines used in developing the samples in this documentation.  
+ 查看在本文档中开发示例时使用的准则。  
   
  [条件编译](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
- Describes how to compile particular blocks of code selectively while directing the compiler to ignore others.  
+ 介绍如何有选择性地编译特定代码块，同时指示编译器忽略其他代码块。  
   
  [如何：在代码中拆分和合并语句](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
- Shows how to divide long statements into multiple lines and combine short statements on one line.  
+ 说明如何将长语句分割为多行，并将短语句合并到一行。  
   
  [如何：折叠和隐藏代码节](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)  
- Shows how to collapse and hide sections of code in the Visual Basic code editor.  
+ 演示如何折叠和隐藏 Visual Basic 代码编辑器中的代码段。  
   
  [如何：标记语句](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)  
- Shows how to mark a line of code to identify it for use with statements such as `On Error Goto`.  
+ 演示如何将代码行标记为将其标识为与 `On Error Goto`等语句一起使用。  
   
  [代码中的特殊字符](../../../visual-basic/programming-guide/program-structure/special-characters-in-code.md)  
- Shows how and where to use non-numeric and non-alphabetic characters.  
+ 显示如何以及在何处使用非数字字符和非字母字符。  
   
  [代码中的注释](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)  
- Discusses how to add descriptive comments to your code.  
+ 讨论如何向代码添加描述性注释。  
   
  [代码中用作元素名称的关键字](../../../visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)  
- Describes how to use brackets (`[]`) to delimit variable names that are also Visual Basic keywords.  
+ 介绍如何使用方括号（`[]`）来分隔同时 Visual Basic 关键字的变量名称。  
   
  [Me、My、MyBase 和 MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
- Describes various ways to refer to elements of a Visual Basic program.  
+ 描述引用 Visual Basic 程序的元素的各种方法。  
   
- [Visual Basic Limitations](../../../visual-basic/programming-guide/program-structure/limitations.md)  
- Discusses the removal of known coding limits within Visual Basic.  
+ [Visual Basic 限制](../../../visual-basic/programming-guide/program-structure/limitations.md)  
+ 讨论 Visual Basic 中删除已知编码限制。  
   
 ## <a name="related-sections"></a>相关章节  
  [版式和代码约定](../../../visual-basic/language-reference/typographic-and-code-conventions.md)  
- Provides standard coding conventions for Visual Basic.  
+ 为 Visual Basic 提供标准编码约定。  
   
  [编写代码](/visualstudio/ide/writing-code-in-the-code-and-text-editor)  
- Describes features that make it easier for you to write and manage your code.
+ 介绍一些功能，使您可以更轻松地编写和管理代码。

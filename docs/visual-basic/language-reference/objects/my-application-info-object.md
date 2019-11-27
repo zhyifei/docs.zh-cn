@@ -13,21 +13,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344143"
 ---
 # <a name="myapplicationinfo-object"></a>My.Application.Info 对象
-Provides properties for getting the information about the application, such as the version number, description, loaded assemblies, and so on.  
+提供用于获取有关应用程序的信息（如版本号、说明、已加载程序集等）的属性。  
   
 ## <a name="remarks"></a>备注  
  有关 `My.Application.Info` 对象所使用方法和属性的信息，请参阅 <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>。  
   
 > [!NOTE]
-> You can use properties of the <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> class to obtain information about a file on disk.  
+> 您可以使用 <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> 类的属性来获取有关磁盘上的文件的信息。  
   
 ## <a name="requirements"></a>要求  
  **命名空间：** <xref:Microsoft.VisualBasic.ApplicationServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>  
+ **类：** <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **程序集：** Visual Basic 运行时库（在 Microsoft. .dll 中）  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [My.Application 对象](../../../visual-basic/language-reference/objects/my-application-object.md)

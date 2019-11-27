@@ -1,5 +1,5 @@
 ---
-title: Object doesn't support current locale setting
+title: 对象不支持当前的区域设置
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID447
@@ -18,6 +18,6 @@ ms.locfileid: "74353898"
   
 - 检查该对象支持哪些区域设置。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [错误类型](../../visual-basic/programming-guide/language-features/error-types.md)

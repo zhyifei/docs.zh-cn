@@ -13,7 +13,7 @@ ms.locfileid: "74283194"
 <xref:System.Activities.Statements.Interop> 活动是一个 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] （WF 4.5）活动，它在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流中包装 .NET Framework 3.5 （WF 3.5）活动。 WF 3 活动可以是单叶活动，也可以是整个活动树。 执行（包括取消和异常处理）和 .NET Framework 3.5 活动的持久性发生在正在执行的 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流实例的上下文中。  
   
 > [!NOTE]
-> 除非工作流项目的<xref:System.Activities.Statements.Interop>“目标框架”**设置设为**“.NET Framework 4.5” **，否则**  活动不会显示在工作流设计器工具箱中。  
+> <xref:System.Activities.Statements.Interop> 活动不会显示在工作流设计器工具箱中，除非工作流的项目的 "**目标框架**" 设置设为 **.NET Framework 4.5**。  
   
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>将 WF 3 活动与 Interop 活动一起使用的条件  
  若要使 WF 3 活动在 <xref:System.Activities.Statements.Interop> 活动中成功执行，必须满足以下条件：  

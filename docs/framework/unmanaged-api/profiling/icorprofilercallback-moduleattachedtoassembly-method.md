@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448070"
 ---
 # <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a>ICorProfilerCallback::ModuleAttachedToAssembly 方法
-Notifies the profiler that a module is being attached to its parent assembly.  
+通知探查器模块正在附加到其父程序集。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,13 +35,13 @@ HRESULT ModuleAttachedToAssembly(
   
 ## <a name="parameters"></a>参数  
  `moduleId`  
- [in] The ID of the module that is being attached.  
+ 中要附加的模块的 ID。  
   
  `AssemblyId`  
- [in] The ID of the parent assembly to which the module is attached.  
+ 中模块附加到的父程序集的 ID。  
   
 ## <a name="remarks"></a>备注  
- A module can be loaded through an import address table (IAT), through a call to `LoadLibrary`, or through a metadata reference. As a result, the common language runtime (CLR) loader has multiple code paths for determining the assembly in which a module lives. Therefore, it is possible that after [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) is called, the module does not know what assembly it is in and getting the parent assembly ID is not possible. The `ModuleAttachedToAssembly` method is called when the module is attached to its parent assembly and its parent assembly ID can be obtained.  
+ 可以通过导入地址表（IAT）通过调用 `LoadLibrary`或元数据引用来加载模块。 因此，公共语言运行时（CLR）加载程序具有多个用于确定模块所在程序集的代码路径。 因此，在调用[ICorProfilerCallback：： ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)后，模块并不知道它所在的程序集，因此无法获取父程序集 ID。 当模块附加到其父程序集并且可以获得其父程序集 ID 时，将调用 `ModuleAttachedToAssembly` 方法。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -52,6 +52,6 @@ HRESULT ModuleAttachedToAssembly(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

@@ -26,21 +26,21 @@ Take While expression
   
 ## <a name="parts"></a>部件  
   
-|术语|定义|  
+|术语|Definition|  
 |---|---|  
-|`expression`|必须的。 An expression that represents a condition to test elements for. The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.|  
+|`expression`|必需。 表示要为其测试元素的条件的表达式。 表达式必须返回 `Boolean` 值或函数等效项，例如要作为 `Boolean`计算的 `Integer`。|  
   
 ## <a name="remarks"></a>备注  
- The `Take While` clause includes elements from the start of a query result until the supplied `expression` returns `false`. After the `expression` returns `false`, the query will bypass all remaining elements. The `expression` is ignored for the remaining results.  
+ 在提供的 `expression` 返回 `false`之前，`Take While` 子句包括从查询结果开始的元素。 `expression` 返回 `false`后，查询将跳过所有剩余的元素。 对于剩余的结果，将忽略 `expression`。  
   
- The `Take While` clause differs from the `Where` clause in that the `Where` clause can be used to include all elements from a query that meet a particular condition. The `Take While` clause includes elements only until the first time that the condition is not satisfied. The `Take While` clause is most useful when you are working with an ordered query result.  
+ `Take While` 子句与 `Where` 子句不同，因为 `Where` 子句可用于包括查询中满足特定条件的所有元素。 仅在第一次未满足条件之前，`Take While` 子句包括元素。 当使用排序的查询结果时，`Take While` 子句最有用。  
   
 ## <a name="example"></a>示例  
- The following code example uses the `Take While` clause to retrieve results until the first customer without any orders is found.  
+ 下面的代码示例使用 `Take While` 子句来检索结果，直到找到第一个不含任何订单的客户。  
   
  [!code-vb[VbSimpleQuerySamples#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#2)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [查询](../../../visual-basic/language-reference/queries/index.md)

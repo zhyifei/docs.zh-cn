@@ -23,76 +23,76 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346069"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Comparison Operators in Visual Basic
-Comparison operators compare two expressions and return a `Boolean` value that represents the relationship of their values. There are operators for comparing numeric values, operators for comparing strings, and operators for comparing objects. All three types of operators are discussed herein.  
+比较运算符比较两个表达式，并返回一个表示其值的关系的 `Boolean` 值。 有一些运算符用于比较数值、用于比较字符串的运算符以及用于比较对象的运算符。 这里讨论了所有这三种类型的运算符。  
   
-## <a name="comparing-numeric-values"></a>Comparing Numeric Values  
- Visual Basic compares numeric values using six numeric comparison operators. Each operator takes as operands two expressions that evaluate to numeric values. The following table lists the operators and shows examples of each.  
+## <a name="comparing-numeric-values"></a>比较数值  
+ Visual Basic 使用六个数值比较运算符比较数值。 每个运算符都采用两个计算为数值的表达式作为操作数。 下表列出了运算符，并显示了每个运算符的示例。  
   
-|运算符|Condition tested|示例|  
+|运算符|测试的条件|示例|  
 |--------------|----------------------|--------------|  
-|`=` (Equality)|Is the value of the first expression equal to the value of the second?|`23`   `=`   `33    ' False`<br /><br /> `23`   `=`   `23    ' True`<br /><br /> `23`   `=`   `12    ' False`|  
-|`<>` (Inequality)|Is the value of the first expression unequal to the value of the second?|`23`   `<>`   `33    ' True`<br /><br /> `23`   `<>`   `23    ' False`<br /><br /> `23`   `<>`   `12    ' True`|  
-|`<` (Less than)|Is the value of the first expression less than the value of the second?|`23`   `<`   `33    ' True`<br /><br /> `23`   `<`   `23    ' False`<br /><br /> `23`   `<`   `12    ' False`|  
-|`>` (Greater than)|Is the value of the first expression greater than the value of the second?|`23`   `>`   `33    ' False`<br /><br /> `23`   `>`   `23    ' False`<br /><br /> `23`   `>`   `12    ' True`|  
-|`<=` (Less than or equal to)|Is the value of the first expression less than or equal to the value of the second?|`23`   `<=`   `33    ' True`<br /><br /> `23`   `<=`   `23    ' True`<br /><br /> `23`   `<=`   `12    ' False`|  
-|`>=` (Greater than or equal to)|Is the value of the first expression greater than or equal to the value of the second?|`23`   `>=`   `33    ' False`<br /><br /> `23`   `>=`   `23    ' True`<br /><br /> `23`   `>=`   `12    ' True`|  
+|`=` （等于）|第一个表达式的值是否等于第二个表达式的值？|`23`   `=`   `33    ' False`<br /><br /> `23`   `=`   `23    ' True`<br /><br /> `23`   `=`   `12    ' False`|  
+|`<>` （不等于）|第一个表达式的值是否与第二个表达式的值不相等？|`23`   `<>`   `33    ' True`<br /><br /> `23`   `<>`   `23    ' False`<br /><br /> `23`   `<>`   `12    ' True`|  
+|`<` （小于）|第一个表达式的值是否小于第二个表达式的值？|`23`   `<`   `33    ' True`<br /><br /> `23`   `<`   `23    ' False`<br /><br /> `23`   `<`   `12    ' False`|  
+|`>` （大于）|第一个表达式的值是否大于第二个表达式的值？|`23`   `>`   `33    ' False`<br /><br /> `23`   `>`   `23    ' False`<br /><br /> `23`   `>`   `12    ' True`|  
+|`<=` （小于或等于）|第一个表达式的值是否小于或等于第二个表达式的值？|`23`   `<=`   `33    ' True`<br /><br /> `23`   `<=`   `23    ' True`<br /><br /> `23`   `<=`   `12    ' False`|  
+|`>=` （大于或等于）|第一个表达式的值是否大于或等于第二个表达式的值？|`23`   `>=`   `33    ' False`<br /><br /> `23`   `>=`   `23    ' True`<br /><br /> `23`   `>=`   `12    ' True`|  
   
 ## <a name="comparing-strings"></a>比较字符串  
- Visual Basic compares strings using the [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md) as well as the numeric comparison operators. The `Like` operator allows you to specify a pattern. The string is then compared against the pattern, and if it matches, the result is `True`. 否则，结果为 `False`。 The numeric operators allow you to compare `String` values based on their sort order, as the following example shows.  
+ Visual Basic 使用[Like 运算符](../../../../visual-basic/language-reference/operators/like-operator.md)以及数字比较运算符来比较字符串。 使用 `Like` 运算符可以指定模式。 然后，将该字符串与模式进行比较，如果匹配，则 `True`结果。 否则，结果为 `False`。 数字运算符使你可以基于它们的排序顺序比较 `String` 值，如下面的示例所示。  
   
  `"73" < "9"`  
   
  `' The result of the preceding comparison is True.`  
   
- The result in the preceding example is `True` because the first character in the first string sorts before the first character in the second string. If the first characters were equal, the comparison would continue to the next character in both strings, and so on. You can also test equality of strings using the equality operator, as the following example shows.  
+ 由于第一个字符串中的第一个字符排在第二个字符串中的第一个字符之前，因此 `True` 前面的示例中的结果。 如果第一个字符相等，则比较将继续执行两个字符串中的下一个字符，依此类推。 你还可以使用相等运算符测试字符串的相等性，如下面的示例所示。  
   
  `"734" = "734"`  
   
  `' The result of the preceding comparison is True.`  
   
- If one string is a prefix of another, such as "aa" and "aaa", the longer string is considered to be greater than the shorter string. 下面的示例阐释了这一点。  
+ 如果一个字符串是另一个字符串的前缀（如 "aa" 和 "aaa"），则较长的字符串将被视为大于较短的字符串。 下面的示例对此进行了演示。  
   
  `"aaa" > "aa"`  
   
  `' The result of the preceding comparison is True.`  
   
- The sort order is based on either a binary comparison or a textual comparison depending on the setting of `Option Compare`. For more information see [Option Compare Statement](../../../../visual-basic/language-reference/statements/option-compare-statement.md).  
+ 根据 `Option Compare`的设置，排序顺序基于二进制比较或文本比较。 有关详细信息，请参阅[Option Compare 语句](../../../../visual-basic/language-reference/statements/option-compare-statement.md)。  
   
-## <a name="comparing-objects"></a>Comparing Objects  
- Visual Basic compares two object reference variables with the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) and the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md). You can use either of these operators to determine if two reference variables refer to the same object instance. 下面的示例阐释了这一点。  
+## <a name="comparing-objects"></a>比较对象  
+ Visual Basic 将两个对象引用变量与[Is 运算符](../../../../visual-basic/language-reference/operators/is-operator.md)和[IsNot 运算符](../../../../visual-basic/language-reference/operators/isnot-operator.md)进行比较。 您可以使用其中任一运算符来确定两个引用变量是否引用同一对象实例。 下面的示例对此进行了演示。  
   
  [!code-vb[VbVbalrOperators#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#65)]  
   
- In the preceding example, `x Is y` evaluates to `True`, because both variables refer to the same instance. Contrast this result with the following example.  
+ 在前面的示例中，`x Is y` 的计算结果为 `True`，因为这两个变量引用相同的实例。 将此结果与下面的示例进行比较。  
   
  [!code-vb[VbVbalrOperators#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#66)]  
   
- In the preceding example, `x Is y` evaluates to `False`, because although the variables refer to objects of the same type, they refer to different instances of that type.  
+ 在前面的示例中，`x Is y` 的计算结果为 `False`，因为尽管变量引用相同类型的对象，但它们引用该类型的不同实例。  
   
- When you want to test for two objects not pointing to the same instance, the `IsNot` operator lets you avoid a grammatically clumsy combination of `Not` and `Is`. 下面的示例阐释了这一点。  
+ 如果要测试两个不指向同一实例的对象，则 `IsNot` 运算符使你可以避免使用 `Not` 和 `Is`的语法笨拙组合。 下面的示例对此进行了演示。  
   
  [!code-vb[VbVbalrOperators#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#67)]  
   
- In the preceding example, `If a IsNot b` is equivalent to `If Not a Is b`.  
+ 在前面的示例中，`If a IsNot b` 等效于 `If Not a Is b`。  
   
-### <a name="comparing-object-type"></a>Comparing Object Type  
- You can test whether an object is of a particular type with the `TypeOf`...`Is` expression. 语法如下所示：  
+### <a name="comparing-object-type"></a>比较对象类型  
+ 您可以使用 `TypeOf`...`Is` 表达式测试对象是否为特定类型。 语法如下所示：  
   
  `TypeOf <objectexpression> Is <typename>`  
   
- When `typename` specifies an interface type, then the `TypeOf`...`Is` expression returns `True` if the object implements the interface type. When `typename` is a class type, then the expression returns `True` if the object is an instance of the specified class or of a class that derives from the specified class. 下面的示例阐释了这一点。  
+ 当 `typename` 指定接口类型时，如果对象实现接口类型，则 `TypeOf``Is` 表达式将返回 `True`。 当 `typename` 为类类型时，如果该对象是指定类的实例或从指定类派生的类的实例，则表达式返回 `True`。 下面的示例对此进行了演示。  
   
  [!code-vb[VbVbalrOperators#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#68)]  
   
- In the preceding example, the `TypeOf x Is Control` expression evaluates to `True` because the type of `x` is `Button`, which inherits from `Control`.  
+ 在前面的示例中，`TypeOf x Is Control` 表达式的计算结果为 `True`，因为 `x` 的类型是 `Button`，后者从 `Control`继承。  
   
- For more information, see [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md).  
+ 有关详细信息，请参阅[TypeOf 运算符](../../../../visual-basic/language-reference/operators/typeof-operator.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [值的比较](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [比较运算符](../../../../visual-basic/language-reference/operators/comparison-operators.md)
 - [运算符](../../../../visual-basic/language-reference/operators/index.md)
-- [Arithmetic Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
-- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic 中的算术运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic 中的串联运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Visual Basic 中的逻辑运算符和位运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

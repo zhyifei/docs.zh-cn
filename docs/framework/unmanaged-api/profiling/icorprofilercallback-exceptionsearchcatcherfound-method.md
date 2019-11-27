@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445389"
 ---
 # <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a>ICorProfilerCallback::ExceptionSearchCatcherFound 方法
-Notifies the profiler that the search phase of exception handling has located a handler for the exception that was thrown.  
+通知探查器，异常处理的搜索阶段已找到引发的异常的处理程序。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +34,7 @@ RESULT ExceptionSearchCatcherFound(
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in] The ID of the function that contains the exception handler.  
+ 中包含异常处理程序的函数的 ID。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -45,6 +45,6 @@ RESULT ExceptionSearchCatcherFound(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

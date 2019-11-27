@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438415"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder 方法
-Adds a type forwarder for a nested type to the type table of the given assembly.  
+将嵌套类型的类型转发器添加到给定程序集的类型表。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,33 +40,33 @@ HRESULT ExportNestedTypeForwarder(
   
 ## <a name="parameters"></a>参数  
  `AssemblyID`  
- ID of the assembly to export from.  
+ 要从中导出的程序集的 ID。  
   
  `FileToken`  
- File token or assembly ID of file that defines the type.  
+ 定义类型的文件的文件标记或程序集 ID。  
   
  `TypeToken`  
- Token for the type.  
+ 类型的标记。  
   
  `ParentType`  
- Token of parent type.  
+ 父类型的标记。  
   
  `pszTypename`  
- Fully qualified type name to export.  
+ 要导出的完全限定的类型名称。  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`.  
+ `ComType` 标志，如 `tdPublic` 或 `tdNested`。  
   
  `pType`  
- Receives token of export type. This is necessary only for emitting nested types.  
+ 接收导出类型的令牌。 这仅适用于发出嵌套类型。  
   
 ## <a name="return-value"></a>返回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- Requires alink.h  
+ 需要 alink  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IALink 接口](ialink-interface.md)
 - [IALink2 接口](ialink2-interface.md)

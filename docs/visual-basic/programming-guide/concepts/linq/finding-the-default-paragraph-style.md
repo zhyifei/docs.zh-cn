@@ -9,13 +9,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353456"
 ---
-# <a name="finding-the-default-paragraph-style-visual-basic"></a>Finding the Default Paragraph Style (Visual Basic)
+# <a name="finding-the-default-paragraph-style-visual-basic"></a>查找默认段落样式（Visual Basic）
 在 WordprocessingML 文档中操作信息教程中的第一项任务是在文档中查找默认段落样式。  
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>描述  
- 下面的示例打开一个 Office Open XML WordprocessingML 文档，查找文档和包的样式部分，然后执行查找默认样式名称的查询。 For information about Office Open XML document packages, and the parts they consist of, see [Details of Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).  
+### <a name="description"></a>说明  
+ 下面的示例打开一个 Office Open XML WordprocessingML 文档，查找文档和包的样式部分，然后执行查找默认样式名称的查询。 有关 Office Open XML 文档包及其包含的部分的信息，请参阅[Office OPEN Xml WordprocessingML 文档的详细信息（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)。  
   
  查询将查找名为 `w:style` 的节点，该节点具有值为“paragraph”的名为 `w:type` 的属性和值为“1”的名为 `w:default` 的属性。 由于将只有一个 XML 节点具有这些属性，因此查询使用 <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> 运算符将集合转换为单一实例。 然后，它获取名为 `w:styleId` 的属性的值。  
   
@@ -79,7 +79,7 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a>注释  
+### <a name="comments"></a>Comments  
  该示例产生下面的输出：  
   
 ```console  
@@ -89,8 +89,8 @@ The default style is: Normal
 ## <a name="next-steps"></a>后续步骤  
  下一个示例中将创建一个类似的查询，查找文档中的所有段落及其样式：  
   
-- [Retrieving the Paragraphs and Their Styles (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
+- [检索段落及其样式（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [教程：在 WordprocessingML 文档中操作内容（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

@@ -19,18 +19,18 @@ ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204978"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>将可移植类库与模型-视图-视图模型配合使用
-You can use the .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) to implement the Model-View-View Model (MVVM) pattern and share assemblies across multiple platforms.
+您可以使用 .NET Framework[可移植类库](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)来实现模型-视图-视图模型（MVVM）模式并跨多个平台共享程序集。
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
- MVVM 是将用户界面与基础业务逻辑相隔离的应用程序模式。 You can implement the model and view model classes in a Portable Class Library project in Visual Studio 2012, and then create views that are customized for different platforms. This approach enables you to write the data model and business logic only once, and use that code from .NET Framework, Silverlight, Windows Phone, and Windows 8.x Store apps, as shown in the following illustration.
+ MVVM 是将用户界面与基础业务逻辑相隔离的应用程序模式。 你可以在 Visual Studio 2012 中的可移植类库项目内实现模型和视图模型类，然后创建针对不同平台自定义的视图。 此方法使你能够仅编写数据模型和业务逻辑一次，并使用 .NET Framework、Silverlight、Windows Phone 和 Windows 8.x 应用商店应用中的代码，如下图所示。
 
- ![Shows the Portable Class Library with MVVM sharing assemblies across platforms.](./media/using-portable-class-library-with-model-view-view-model/mvvm-share-assemblies-across-platforms.png)
+ ![显示跨平台跨 MVVM 共享程序集的可移植类库。](./media/using-portable-class-library-with-model-view-view-model/mvvm-share-assemblies-across-platforms.png)
 
- This topic does not provide general information about the MVVM pattern. It only provides information about how to use Portable Class Library to implement MVVM. For more information about MVVM, see the [MVVM Quickstart Using the Prism Library 5.0 for WPF](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40)).
+ 本主题不提供有关 MVVM 模式的一般信息。 它仅提供有关如何使用可移植类库实现 MVVM 的信息。 有关 MVVM 的详细信息，请参阅[使用适用于 WPF 的 Prism 库5.0 的 Mvvm 快速入门](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40))。
 
-## <a name="classes-that-support-mvvm"></a>Classes That Support MVVM
- When you target the .NET Framework 4.5, [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight, or Windows Phone 7.5 for your Portable Class Library project, the following classes are available for implementing the MVVM pattern:
+## <a name="classes-that-support-mvvm"></a>支持 MVVM 的类
+ 如果面向可移植类库项目的 .NET Framework 4.5、[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]、Silverlight 或 Windows Phone 7.5，可实现 MVVM 模式：
 
 - <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> 类
 
@@ -52,45 +52,45 @@ You can use the .NET Framework [Portable Class Library](../../../docs/standard/c
 
 - <xref:System.Windows.Input.ICommand?displayProperty=nameWithType> 类
 
-- All classes in the <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> namespace
+- <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> 命名空间中的所有类
 
-## <a name="implementing-mvvm"></a>Implementing MVVM
- To implement MVVM, you typically create both the model and the view model in a Portable Class Library project, because a Portable Class Library project cannot reference a non-portable project. The model and view model can be in the same project or in separate projects. If you use separate projects, add a reference from the view model project to the model project.
+## <a name="implementing-mvvm"></a>实现 MVVM
+ 若要实现 MVVM，通常会在可移植类库项目中同时创建模型和视图模型，因为可移植类库项目无法引用不可移植的项目。 模型和视图模型可以位于同一个项目中，也可以位于单独的项目中。 如果使用单独的项目，请从视图模型项目向模型项目添加引用。
 
- After you compile the model and view model projects, you reference those assemblies in the app that contains the view. If the view interacts only with the view model, you only have to reference the assembly that contains the view model.
+ 编译模型和视图模型项目后，在包含该视图的应用程序中引用这些程序集。 如果视图仅与视图模型交互，则只需引用包含该视图模型的程序集。
 
-### <a name="model"></a>型号
- The following example shows a simplified model class that could reside in a Portable Class Library project.
+### <a name="model"></a>模型
+ 下面的示例演示可在可移植类库项目中驻留的简化模型类。
 
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
  [!code-vb[PortableClassLibraryMVVM#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customer.vb#1)]
 
- The following example shows a simple way to populate, retrieve, and update the data in a Portable Class Library project. In a real app, you would retrieve the data from a source such as a Windows Communication Foundation (WCF) service.
+ 下面的示例演示了一种简单的方法，用于填充、检索和更新可移植类库项目中的数据。 在实际应用中，你将从 Windows Communication Foundation （WCF）服务等源中检索数据。
 
  [!code-csharp[PortableClassLibraryMVVM#2](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customerrepository.cs#2)]
  [!code-vb[PortableClassLibraryMVVM#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerrepository.vb#2)]
 
-### <a name="view-model"></a>View Model
- A base class for view models is frequently added when implementing the MVVM pattern. The following example shows a base class.
+### <a name="view-model"></a>查看模型
+ 在实现 MVVM 模式时，经常会添加视图模型的基类。 下面的示例演示了一个基类。
 
  [!code-csharp[PortableClassLibraryMVVM#3](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/viewmodelbase.cs#3)]
  [!code-vb[PortableClassLibraryMVVM#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/viewmodelbase.vb#3)]
 
- An implementation of the <xref:System.Windows.Input.ICommand> interface is frequently used with the MVVM pattern. 下面的示例演示 <xref:System.Windows.Input.ICommand> 接口的实现。
+ <xref:System.Windows.Input.ICommand> 接口的实现经常与 MVVM 模式一起使用。 下面的示例演示 <xref:System.Windows.Input.ICommand> 接口的实现。
 
  [!code-csharp[PortableClassLibraryMVVM#4](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/relaycommand.cs#4)]
  [!code-vb[PortableClassLibraryMVVM#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/relaycommand.vb#4)]
 
- The following example shows a simplified view model.
+ 下面的示例显示一个简化的视图模型。
 
  [!code-csharp[PortableClassLibraryMVVM#5](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainpageviewmodel.cs#5)]
  [!code-vb[PortableClassLibraryMVVM#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerviewmodel.vb#5)]  
   
 ### <a name="view"></a>视图  
- From a .NET Framework 4.5 app, Windows 8.x Store app, Silverlight-based app, or Windows Phone 7.5 app, you can reference the assembly that contains the model and view model projects.  You then create a view that interacts with the view model. The following example shows a simplified Windows Presentation Foundation (WPF) app that retrieves and updates data from the view model. You could create similar views in Silverlight, Windows Phone, or Windows 8.x Store apps.  
+ 通过 .NET Framework 4.5 应用、Windows 8.x 应用商店应用、基于 Silverlight 的应用或 Windows Phone 7.5 应用，你可以引用包含模型和视图模型项目的程序集。  然后创建与视图模型交互的视图。 下面的示例演示了一个简化的 Windows Presentation Foundation （WPF）应用，该应用从视图模型检索和更新数据。 可以在 Silverlight、Windows Phone 或 Windows 8.x 应用商店应用中创建类似视图。  
   
  [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [可移植类库](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

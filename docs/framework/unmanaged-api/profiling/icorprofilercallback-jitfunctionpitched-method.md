@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448426"
 ---
 # <a name="icorprofilercallbackjitfunctionpitched-method"></a>ICorProfilerCallback::JITFunctionPitched 方法
-Notifies the profiler that a function that has been just-in-time (JIT)-compiled has been removed from memory.  
+通知探查器已从内存中删除了实时（JIT）编译的函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,12 +34,12 @@ HRESULT JITFunctionPitched(
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in] The ID of the function that was removed.  
+ 中已移除的函数的 ID。  
   
 ## <a name="remarks"></a>备注  
- If the removed function is called, the profiler will receive new JIT-compilation events when the function is recompiled. Currently, the common language runtime (CLR) JIT compiler does not remove functions from memory, so this callback is currently not used and will not be received by the profiler.  
+ 如果调用删除的函数，则在重新编译该函数时，探查器将接收新的 JIT 编译事件。 当前，公共语言运行时（CLR） JIT 编译器不会从内存中删除函数，因此，当前未使用此回调，探查器将不会接收该回调。  
   
- The value of `functionId` is not valid until the function is recompiled. When the function is recompiled, the same `functionId` value will be used.  
+ 重新编译该函数之前，`functionId` 的值无效。 重新编译函数时，将使用相同的 `functionId` 值。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -50,6 +50,6 @@ HRESULT JITFunctionPitched(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

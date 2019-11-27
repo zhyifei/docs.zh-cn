@@ -21,7 +21,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351090"
 ---
 # <a name="goto-statement"></a>GoTo 语句
-Branches unconditionally to a specified line in a procedure.  
+无条件地分支到过程中的指定行。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,37 +31,37 @@ GoTo line
   
 ## <a name="part"></a>部件  
  `line`  
- 必须的。 Any line label.  
+ 必需。 任何行标签。  
   
 ## <a name="remarks"></a>备注  
- The `GoTo` statement can branch only to lines in the procedure in which it appears. The line must have a line label that `GoTo` can refer to. For more information, see [How to: Label Statements](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
+ `GoTo` 语句只能分支到它所显示的过程中的行。 该行必须有 `GoTo` 可以引用的行标签。 有关详细信息，请参阅[如何：标签语句](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)。  
   
 > [!NOTE]
-> `GoTo` statements can make code difficult to read and maintain. Whenever possible, use a control structure instead. For more information, see [Control Flow](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
+> `GoTo` 语句可以使代码难以阅读和维护。 请尽可能使用控制结构。 有关详细信息，请参阅[控制流](../../../visual-basic/programming-guide/language-features/control-flow/index.md)。  
   
- You cannot use a `GoTo` statement to branch from outside a `For`...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`, or `Using`...`End Using` construction to a label inside.  
+ 不能使用 `GoTo` 语句从 `For`...`Next`、`For Each`...`Next`、`SyncLock`...`End SyncLock``Try`、`Catch`...`Finally`或 `With`构造添加到内部的标签，从而将其从 ...、...`End With`、`Using`。`End Using`  
   
-## <a name="branching-and-try-constructions"></a>Branching and Try Constructions  
- Within a `Try`...`Catch`...`Finally` construction, the following rules apply to branching with the `GoTo` statement.  
+## <a name="branching-and-try-constructions"></a>分支和尝试构造  
+ 在 `Try``Catch`...`Finally` 构造中，以下规则适用于使用 `GoTo` 语句进行分支。  
   
-|Block or region|Branching in from outside|Branching out from inside|  
+|块或区域|从外部分支|从内部分支出|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try` block|Only from a `Catch` block of the same construction <sup>1</sup>|Only to outside the whole construction|  
-|`Catch` block|Never allowed|Only to outside the whole construction, or to the `Try` block of the same construction <sup>1</sup>|  
-|`Finally` block|Never allowed|Never allowed|  
+|`Try` 块|仅从同一构造<sup>1</sup>的 `Catch` 块|仅限于整个构造之外|  
+|`Catch` 块|不允许|仅对整个构造以外的或同一构造<sup>1</sup>的 `Try` 块|  
+|`Finally` 块|不允许|不允许|  
   
- <sup>1</sup> If one `Try`...`Catch`...`Finally` construction is nested within another, a `Catch` block can branch into the `Try` block at its own nesting level, but not into any other `Try` block. A nested `Try`...`Catch`...`Finally` construction must be contained completely in a `Try` or `Catch` block of the construction within which it is nested.  
+ <sup>1</sup>如果将一个 `Try``Catch`...`Finally` 构造嵌套在另一个中，则 `Catch` 块可以在其自身的嵌套级别（而不是任何其他 `Try` 块）分支到 `Try` 块。 嵌套的 `Try``Catch`...`Finally` 构造必须完全包含在它所嵌套到的构造的 `Try` 或 `Catch` 块中。  
   
- The following illustration shows one `Try` construction nested within another. Various branches among the blocks of the two constructions are indicated as valid or invalid.  
+ 下图显示了嵌套在另一个 `Try` 构造。 这两个构造的块中的各种分支都指示为有效或无效。  
   
  ![Try 结构分支示意图](./media/goto-statement/try-construction-branching.gif)  
   
 ## <a name="example"></a>示例  
- The following example uses the `GoTo` statement to branch to line labels in a procedure.  
+ 下面的示例使用 `GoTo` 语句分支到过程中的行标签。  
   
  [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Do...Loop 语句](../../../visual-basic/language-reference/statements/do-loop-statement.md)
 - [For...Next 语句](../../../visual-basic/language-reference/statements/for-next-statement.md)

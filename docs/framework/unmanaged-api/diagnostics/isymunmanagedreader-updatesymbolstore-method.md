@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446457"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>ISymUnmanagedReader::UpdateSymbolStore 方法
-使用增量符号存储区更新现有的符号存储区。 This method is used in edit-and-continue scenarios to update the symbol store to match deltas to the original portable executable (PE) file.  
+使用增量符号存储区更新现有的符号存储区。 此方法在 "编辑并继续" 方案中用于更新符号存储区，以匹配原始可移植可执行（PE）文件的增量。  
   
 > [!NOTE]
-> You need specify only one of the `filename` or `pIStream` parameters, not both. If `filename` is specified, the symbol store will be updated with the symbols in that file. If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
+> 只需指定 `filename` 或 `pIStream` 参数之一，而不能同时指定两者。 如果指定 `filename`，则将用该文件中的符号更新符号存储区。 如果指定 `pIStream`，则将用 <xref:System.Runtime.InteropServices.ComTypes.IStream>中的数据更新存储。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,17 +38,17 @@ HRESULT UpdateSymbolStore (
   
 ## <a name="parameters"></a>参数  
  `filename`  
- [in] The name of the file that contains the symbol store.  
+ 中包含符号存储区的文件的名称。  
   
  `pIStream`  
- [in] The file stream, used as an alternative to the `filename` parameter.  
+ 中用于作为 `filename` 参数的替代项的文件流。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedReader 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

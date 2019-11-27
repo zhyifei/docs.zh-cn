@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446051"
 ---
 # <a name="isymunmanagedvariablegetname-method"></a>ISymUnmanagedVariable::GetName 方法
-Gets the name of this variable.  
+获取此变量的名称。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,20 +37,20 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>参数  
  `cchName`  
- [in] The length of the buffer that the `pcchName` parameter points to.  
+ 中`pcchName` 参数指向的缓冲区的长度。  
   
  `pcchName`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the name, including the null termination.  
+ 弄指向 `ULONG32` 的指针，该指针接收包含名称所需的缓冲区的大小（以字符数表示，包括 null 终止）。  
   
  `szName`  
- [out] The buffer that stores the name.  
+ 弄存储名称的缓冲区。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedVariable 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

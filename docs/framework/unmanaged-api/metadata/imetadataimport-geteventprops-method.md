@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437584"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps 方法
-Gets metadata information for the event represented by the specified event token, including the declaring type, the add and remove methods for delegates, and any flags and other associated data.  
+获取指定事件标记所表示的事件的元数据信息，包括声明类型、委托的添加和移除方法以及任何标志和其他关联的数据。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,51 +47,51 @@ HRESULT GetEventProps (
   
 ## <a name="parameters"></a>参数  
  `ev`  
- [in] The event metadata token representing the event to get metadata for.  
+ 中表示要获取其元数据的事件的事件元数据标记。  
   
  `pClass`  
- [out] A pointer to the TypeDef token representing the class that declares the event.  
+ 弄一个指针，指向表示声明事件的类的 TypeDef 标记。  
   
  `szEvent`  
- [out] The name of the event referenced by `ev`.  
+ 弄`ev`引用的事件的名称。  
   
  `pchEvent`  
- [in] The requested length in wide characters of `szEvent`.  
+ 中请求的长度（以宽字符为 `szEvent`）。  
   
  `pdwEventFlags`  
- [out] The returned length in wide characters of `szEvent`.  
+ 弄`szEvent`的宽字符中返回的长度。  
   
  `ptkEventType`  
- [out] A pointer to a TypeRef or TypeDef metadata token representing the <xref:System.Delegate> type of the event.  
+ 弄指向表示事件的 <xref:System.Delegate> 类型的 TypeRef 或 TypeDef 元数据标记的指针。  
   
  `pmdAddOn`  
- [out] A pointer to the metadata token representing the method that adds handlers for the event.  
+ 弄指向表示添加事件处理程序的方法的元数据标记的指针。  
   
  `pmdRemoveOn`  
- [out] A pointer to the metadata token representing the method that removes handlers for the event.  
+ 弄指向表示删除事件处理程序的方法的元数据标记的指针。  
   
  `pmdFire`  
- [out] A pointer to the metadata token representing the method that raises the event.  
+ 弄指向表示引发事件的方法的元数据标记的指针。  
   
  `rmdOtherMethod`  
- [out] An array of token pointers to other methods associated with the event.  
+ 弄指向与事件关联的其他方法的标记指针的数组。  
   
  `cMax`  
  [in] `rmdOtherMethod` 数组的最大大小。  
   
  `pcOtherMethod`  
- [out] The number of tokens returned in `rmdOtherMethod`.  
+ 弄`rmdOtherMethod`中返回的令牌数。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

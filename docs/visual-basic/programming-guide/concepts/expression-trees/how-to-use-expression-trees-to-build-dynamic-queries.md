@@ -9,9 +9,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344720"
 ---
-# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>How to: Use Expression Trees to Build Dynamic Queries (Visual Basic)
+# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>如何：使用表达式树生成动态查询（Visual Basic）
 
-在 LINQ 中，表达式树用于表示针对数据源的结构化查询，这些数据源可实现 <xref:System.Linq.IQueryable%601>。 例如，LINQ 提供程序可实现 <xref:System.Linq.IQueryable%601> 接口，用于查询关系数据存储。 The Visual Basic compiler compiles queries that target such data sources into code that builds an expression tree at runtime. 然后，查询提供程序可以遍历表达式树数据结构，并将其转换为适合于数据源的查询语言。
+在 LINQ 中，表达式树用于表示针对数据源的结构化查询，这些数据源可实现 <xref:System.Linq.IQueryable%601>。 例如，LINQ 提供程序可实现 <xref:System.Linq.IQueryable%601> 接口，用于查询关系数据存储。 Visual Basic 编译器将针对此类数据源的查询编译为在运行时生成表达式树的代码。 然后，查询提供程序可以遍历表达式树数据结构，并将其转换为适合于数据源的查询语言。
 
 表达式树还可以用在 LINQ 中，用于表示分配给类型为 <xref:System.Linq.Expressions.Expression%601> 的变量的 lambda 表达式。
 
@@ -23,7 +23,7 @@ ms.locfileid: "74344720"
 
 `companies.Where(Function(company) company.ToLower() = "coho winery" OrElse company.Length > 16).OrderBy(Function(company) company)`
 
-<xref:System.Linq.Expressions> 命名空间中的工厂方法用于创建表达式树，这些表达式树表示构成总体查询的表达式。 表示标准查询运算符方法调用的表达式将引用这些方法的 <xref:System.Linq.Queryable> 实现。 最终的表达式树将传递给 `IQueryable` 数据源的提供程序的 <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> 实现，以创建 `IQueryable` 类型的可执行查询。 通过枚举该查询变量获得结果。
+<xref:System.Linq.Expressions> 命名空间中的工厂方法用于创建表达式树，这些表达式树表示构成总体查询的表达式。 表示标准查询运算符方法调用的表达式将引用这些方法的 <xref:System.Linq.Queryable> 实现。 最终的表达式树将传递给 <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> 数据源的提供程序的 `IQueryable` 实现，以创建 `IQueryable` 类型的可执行查询。 通过枚举该查询变量获得结果。
 
 ```vb
 ' Add an Imports statement for System.Linq.Expressions.
@@ -107,9 +107,9 @@ Next
 
 - 包括 System.Linq.Expressions 命名空间。
 
-- Copy the code from the example and paste it into the `Main` `Sub` procedure.
+- 复制该示例中的代码，并将其粘贴到 `Main` `Sub` 过程中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [How to: Execute Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [如何：执行表达式树（Visual Basic）](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)

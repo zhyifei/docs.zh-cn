@@ -17,23 +17,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351622"
 ---
 # <a name="auto-visual-basic"></a>Auto (Visual Basic)
-Specifies that Visual Basic should marshal strings according to .NET Framework rules based on the external name of the external procedure being declared.  
+指定 Visual Basic 应根据正在声明的外部过程的外部名称按 .NET Framework 规则封送字符串。  
   
- When you call a procedure defined outside your project, the Visual Basic compiler does not have access to the information it must have to call the procedure correctly. This information includes where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses. The [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) creates a reference to an external procedure and supplies this necessary information.  
+ 调用在项目外部定义的过程时，Visual Basic 编译器不能访问正确调用过程所必须具有的信息。 此信息包括过程的位置、标识方法、调用序列和返回类型，以及它使用的字符串字符集。 [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)创建对外部过程的引用并提供此必要信息。  
   
- The `charsetmodifier` part in the `Declare` statement supplies the character set information for marshaling strings during a call to the external procedure. It also affects how Visual Basic searches the external file for the external procedure name. The `Auto` modifier specifies that Visual Basic should marshal strings according to .NET Framework rules, and that it should determine the base character set of the run-time platform and possibly modify the external procedure name if the initial search fails. For more information, see "Character Sets" in [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md).  
+ `Declare` 语句中 `charsetmodifier` 部分提供了在调用外部过程期间封送处理字符串的字符集信息。 它还会影响 Visual Basic 搜索外部文件的外部过程名称的方式。 `Auto` 修饰符指定 Visual Basic 应根据 .NET Framework 规则封送字符串，并且应确定运行时平台的基本字符集，并可能在初始搜索失败时修改外部过程名称。 有关详细信息，请参阅[Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)中的 "字符集"。  
   
- If no character set modifier is specified, `Ansi` is the default.  
+ 如果未指定字符集修饰符，则默认值为 `Ansi`。  
   
 ## <a name="remarks"></a>备注  
- The `Auto` modifier can be used in this context:  
+ `Auto` 修饰符可用于以下上下文：  
   
- [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## <a name="smart-device-developer-notes"></a>Smart Device Developer Notes  
- This keyword is not supported.  
+## <a name="smart-device-developer-notes"></a>智能设备开发人员说明  
+ 不支持此关键字。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)
 - [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)

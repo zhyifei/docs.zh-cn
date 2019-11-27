@@ -34,18 +34,18 @@ HRESULT Skip (    [in] ULONG celt
   
 ## <a name="parameters"></a>参数  
  `celt`  
- [in] The number of elements to be skipped.  
+ 中要跳过的元素数。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`celt` elements were skipped.|  
-|S_FALSE|Fewer than `celt` elements were skipped, which indicates that there are no more elements.|  
+|S_OK|已跳过 `celt` 元素。|  
+|S_FALSE|跳过的元素数少于 `celt`，这表示没有更多的元素。|  
   
 ## <a name="remarks"></a>备注  
- The new position of this enumerator's cursor is (current position) + `celt`.  
+ 此枚举器的游标的新位置为（当前位置） + `celt`。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -56,7 +56,7 @@ HRESULT Skip (    [in] ULONG celt
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerThreadEnum 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
 - [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448576"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind 枚举
-Indicates the type of memory address.  
+指示内存地址的类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,22 +44,22 @@ typedef enum CorSymAddrKind
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`ADDR_IL_OFFSET`|Indicates a Microsoft intermediate language (MSIL) local variable or parameter index.|  
-|`ADDR_NATIVE_RVA`|Indicates a relative virtual address into a module.|  
-|`ADDR_NATIVE_REGISTER`|Indicates a CPU register.|  
-|`ADDR_NATIVE_REGREL`|Indicates that the first address is a register and the second address is an offset.|  
-|`ADDR_NATIVE_OFFSET`|Indicates an offset from a base address.|  
-|`ADDR_NATIVE_REGREG`|Indicates that the first address is the low portion of a register, and the second address is the high portion.|  
-|`ADDR_NATIVE_REGSTK`|Indicates that the first address is the low portion of a register, the second is the high portion, and the third is an offset.|  
-|`ADDR_NATIVE_STKREG`|Indicates that the first address is a register, the second is an offset, and the third is the high portion of the register.|  
-|`ADDR_BITFIELD`|Indicates that the first address is the start of a field and the second address is the field length.|  
-|`ADDR_NATIVE_ISECTOFFSET`|Indicates that the first address is the section and the second address is an offset.|  
+|`ADDR_IL_OFFSET`|指示 Microsoft 中间语言（MSIL）本地变量或参数索引。|  
+|`ADDR_NATIVE_RVA`|指示模块中的相对虚拟地址。|  
+|`ADDR_NATIVE_REGISTER`|指示 CPU 寄存器。|  
+|`ADDR_NATIVE_REGREL`|指示第一个地址是寄存器，第二个地址是偏移量。|  
+|`ADDR_NATIVE_OFFSET`|指示与基址的偏移量。|  
+|`ADDR_NATIVE_REGREG`|指示第一个地址为寄存器的低部分，第二个地址为高部分。|  
+|`ADDR_NATIVE_REGSTK`|指示第一个地址是寄存器的低部分，第二个是高部分，第三个是偏移量。|  
+|`ADDR_NATIVE_STKREG`|指示第一个地址为寄存器，第二个为偏移量，第三个是寄存器的高位部分。|  
+|`ADDR_BITFIELD`|指示第一个地址是字段的开头，第二个地址是字段长度。|  
+|`ADDR_NATIVE_ISECTOFFSET`|指示第一个地址为节，第二个地址为偏移量。|  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [诊断符号存储区枚举](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

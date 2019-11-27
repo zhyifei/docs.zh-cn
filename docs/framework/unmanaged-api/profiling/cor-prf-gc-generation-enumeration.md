@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448628"
 ---
 # <a name="cor_prf_gc_generation-enumeration"></a>COR_PRF_GC_GENERATION 枚举
-Identifies a garbage-collection generation.  
+标识垃圾回收生成。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,19 +37,19 @@ typedef enum {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`COR_PRF_GC_GEN_0`|The object is stored as generation 0.|  
-|`COR_PRF_GC_GEN_1`|The object is stored as generation 1.|  
-|`COR_PRF_GC_GEN_2`|The object is stored as generation 2.|  
-|`COR_PRF_GC_LARGE_OBJECT_HEAP`|The object is stored in the large-object heap.|  
+|`COR_PRF_GC_GEN_0`|对象存储为第0代。|  
+|`COR_PRF_GC_GEN_1`|对象存储为第1代。|  
+|`COR_PRF_GC_GEN_2`|对象存储为第2代。|  
+|`COR_PRF_GC_LARGE_OBJECT_HEAP`|对象存储在大型对象堆中。|  
   
 ## <a name="remarks"></a>备注  
- The garbage collector improves memory management performance by dividing objects into generations based on age. The garbage collector currently uses three generations, numbered 0, 1, and 2, plus a special heap segment that is used for large objects. Objects whose size is larger than a particular value are stored in the large-object heap. Other allocated objects start out belonging to generation 0. All objects that exist after garbage collection occurs in generation 0 are promoted to generation 1. Objects that exist after garbage collection occurs in generation 1 move into generation 2.  
+ 垃圾回收器通过将对象划分为基于年龄的代来改善内存管理性能。 垃圾回收器当前使用三代，编号为0、1和2，以及用于大型对象的特殊堆段。 大小大于特定值的对象存储在大型对象堆中。 其他已分配对象开始属于0代。 发生垃圾回收后存在的所有对象都将升级到第1代。 在第1代中发生垃圾回收后存在的对象将移入第2代。  
   
- The use of generations means that the garbage collector has to work with only a subset of the allocated objects at any one time.  
+ 代的使用意味着垃圾回收器在任一时间只需要处理已分配对象的子集。  
   
- The `COR_PRF_GC_GENERATION` enumeration is used by the [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structure.  
+ `COR_PRF_GC_GENERATION` 枚举由[COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md)结构使用。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -60,6 +60,6 @@ typedef enum {
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

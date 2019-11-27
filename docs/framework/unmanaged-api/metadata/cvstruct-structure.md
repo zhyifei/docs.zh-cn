@@ -37,22 +37,22 @@ typedef struct {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|主要|Major version build number.|  
-|次要|Minor version build number.|  
-|Sub|Sub-build number.|  
-|生成|Build number.|  
+|重要變更|主版本的内部版本号。|  
+|次要變更|次版本号。|  
+|子项|子生成号。|  
+|构建|内部版本号。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [元数据结构](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)

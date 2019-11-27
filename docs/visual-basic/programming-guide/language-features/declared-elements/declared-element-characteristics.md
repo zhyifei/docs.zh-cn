@@ -21,45 +21,45 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331629"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>已声明元素的特性 (Visual Basic)
-A *characteristic* of a declared element is an aspect of that element that affects how code can interact with it. Every declared element has one or more of the following characteristics associated with it:  
+已声明元素的*特性*是该元素的一个方面，它会影响代码与之进行交互的方式。 每个已声明的元素都具有与之关联的一个或多个以下特性：  
   
-- *Data type* — the values the element can hold, and how it stores those values. 有关详细信息，请参阅[数据类型](../../../../visual-basic/language-reference/data-types/index.md)。  
+- *数据类型*-元素可以保存的值，以及存储这些值的方式。 有关详细信息，请参阅[数据类型](../../../../visual-basic/language-reference/data-types/index.md)。  
   
-- *Lifetime* — the period of execution time during which the element is available for use. For more information, see [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+- *生存期*—元素可供使用的执行时间段。 有关详细信息，请参阅[Visual Basic 中的生存期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)。  
   
-- *Scope* — the set of all code that can refer to the element without qualifying its name. For more information, see [How to: Control the Scope of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
+- *作用域*—可以引用元素但不限定其名称的所有代码集。 有关详细信息，请参阅[如何：控制变量的范围](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)。  
   
-- *Access level* — the permission for code to make use of the element. For more information, see [How to: Control the Availability of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
+- *访问级别*-代码使用元素的权限。 有关详细信息，请参阅[如何：控制变量的可用性](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)。  
   
-## <a name="characteristics-of-the-elements"></a>Characteristics of the Elements  
- The following table shows the declared elements and the characteristics that apply to each one.  
+## <a name="characteristics-of-the-elements"></a>元素的特征  
+ 下表显示了已声明的元素和应用于每个元素的特性。  
   
-|元素|数据类型|生存期|Scope <sup>1</sup>|Access Level|  
+|元素|数据类型|生存期|作用域<sup>1</sup>|访问级别|  
 |-------------|---------------|--------------|------------------------|------------------|  
 |变量|是|是|是|是|  
-|返回的常量|是|No|是|是|  
-|枚举|是|No|是|是|  
-|结构|No|No|是|是|  
-|Property|是|是|是|是|  
-|方法|No|是|是|是|  
-|Procedure (`Sub` or `Function`)|No|是|是|是|  
-|过程参数|是|是|是|No|  
-|Function return|是|是|是|No|  
-|运算符|是|No|是|是|  
-|接口|No|No|是|是|  
-|实例|No|No|是|是|  
-|Event — 事件|No|No|是|是|  
-|委托|No|No|是|是|  
+|常量|是|是|是|是|  
+|枚举|是|是|是|是|  
+|结构|是|是|是|是|  
+|属性|是|是|是|是|  
+|方法|是|是|是|是|  
+|过程（`Sub` 或 `Function`）|是|是|是|是|  
+|过程参数|是|是|是|是|  
+|函数返回|是|是|是|是|  
+|运算符|是|是|是|是|  
+|接口|是|是|是|是|  
+|实例|是|是|是|是|  
+|事件|是|是|是|是|  
+|委托|是|是|是|是|  
   
- <sup>1</sup> Scope is sometimes referred to as *visibility*.  
+ <sup>1</sup>范围有时称为*可见性*。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [已声明的元素](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
 - [已声明的元素名称](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [生存期（Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [范围 Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic 中的访问级别](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [变量声明](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

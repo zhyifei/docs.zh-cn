@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332316"
 ---
 # <a name="how-to-access-xml-descendant-elements-visual-basic"></a>如何：访问 XML 后代元素 (Visual Basic)
-This example shows how to use a descendant axis property to access all XML elements that have a specified name and that are contained under an XML element. In particular, it uses the `Value` property to get the value of the first element in the collection that the `name` descendant axis property returns. The `name` descendant axis property gets all elements named `name` that are contained in the `contacts` object. This example also uses the `phone` descendant axis property to access all descendants named `phone` that are contained in the `contacts` object.  
+此示例演示如何使用子代轴属性访问具有指定名称并包含在 XML 元素下的所有 XML 元素。 具体而言，它使用 `Value` 属性获取集合中 `name` 子代轴属性返回的第一个元素的值。 `name` 子代轴属性可获取 `contacts` 对象中包含的所有名为 `name` 的元素。 此示例还使用 `phone` 子代轴属性来访问 `contacts` 对象中包含的所有名为 `phone` 的后代。  
   
 ## <a name="example"></a>示例  
  [!code-vb[VbXMLSamples#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#31)]  
@@ -25,7 +25,7 @@ This example shows how to use a descendant axis property to access all XML eleme
   
 - 对 <xref:System.Xml.Linq> 命名空间的引用。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>
 - [XML 子代轴属性](../../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)

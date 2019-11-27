@@ -30,10 +30,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350935"
 ---
 # <a name="like-operator-visual-basic"></a>Like 运算符 (Visual Basic)
-Compares a string against a pattern.  
+将字符串与模式进行比较。  
 
 > [!IMPORTANT]
-> The `Like` operator is currently not supported in .NET Core and .NET Standard projects.
+> .NET Core 和 .NET Standard 项目目前不支持 `Like` 运算符。
 
 ## <a name="syntax"></a>语法  
   
@@ -43,69 +43,69 @@ result = string Like pattern
   
 ## <a name="parts"></a>部件  
  `result`  
- 必须的。 Any `Boolean` variable. The result is a `Boolean` value indicating whether or not the `string` satisfies the `pattern`.  
+ 必需。 任何 `Boolean` 变量。 结果是一个 `Boolean` 值，该值指示 `string` 是否满足 `pattern`。  
   
  `string`  
- 必须的。 任何 `String` 表达式。  
+ 必需。 任何 `String` 表达式。  
   
  `pattern`  
- 必须的。 Any `String` expression conforming to the pattern-matching conventions described in "Remarks."  
+ 必需。 符合 "备注" 中所述的模式匹配约定的任何 `String` 表达式。  
   
 ## <a name="remarks"></a>备注  
- If the value in `string` satisfies the pattern contained in `pattern`, `result` is `True`. If the string does not satisfy the pattern, `result` is `False`. If both `string` and `pattern` are empty strings, the result is `True`.  
+ 如果 `string` 中的值满足 `pattern`中包含的模式，`result` 为 `True`。 如果字符串不满足模式，则 `False``result`。 如果 `string` 和 `pattern` 均为空字符串，则结果为 `True`。  
   
-## <a name="comparison-method"></a>Comparison Method  
- The behavior of the `Like` operator depends on the [Option Compare Statement](../../../visual-basic/language-reference/statements/option-compare-statement.md). The default string comparison method for each source file is `Option Compare Binary`.  
+## <a name="comparison-method"></a>比较方法  
+ `Like` 运算符的行为取决于[Option Compare 语句](../../../visual-basic/language-reference/statements/option-compare-statement.md)。 为每个源文件 `Option Compare Binary`默认字符串比较方法。  
   
-## <a name="pattern-options"></a>Pattern Options  
- Built-in pattern matching provides a versatile tool for string comparisons. The pattern-matching features allow you to match each character in `string` against a specific character, a wildcard character, a character list, or a character range. The following table shows the characters allowed in `pattern` and what they match.  
+## <a name="pattern-options"></a>模式选项  
+ 内置模式匹配为字符串比较提供了多种工具。 使用模式匹配功能，可以将 `string` 中的每个字符与特定字符、通配符、字符列表或字符范围匹配。 下表显示 `pattern` 中允许使用的字符以及它们匹配的内容。  
   
-|Characters in `pattern`|Matches in `string`|  
+|`pattern` 中的字符|匹配 `string`|  
 |-----------------------------|-------------------------|  
-|`?`|任何单个字符|  
-|`*`|Zero or more characters|  
-|`#`|Any single digit (0–9)|  
-|`[charlist]`|Any single character in `charlist`|  
-|`[!charlist]`|Any single character not in `charlist`|  
+|`?`|任一字符|  
+|`*`|零个或多个字符|  
+|`#`|任何单个数字（0–9）|  
+|`[charlist]`|`charlist` 中的任何单个字符|  
+|`[!charlist]`|不在 `charlist` 中的任何单个字符|  
   
-## <a name="character-lists"></a>Character Lists  
- A group of one or more characters (`charlist`) enclosed in brackets (`[ ]`) can be used to match any single character in `string` and can include almost any character code, including digits.  
+## <a name="character-lists"></a>字符列表  
+ 括在方括号（`[ ]`）中的一个或多个字符（`charlist`）的组可用于匹配 `string` 中的任何单个字符，并可包括几乎所有字符代码（包括数字）。  
   
- An exclamation point (`!`) at the beginning of `charlist` means that a match is made if any character except the characters in `charlist` is found in `string`. When used outside brackets, the exclamation point matches itself.  
+ `charlist` 开头的感叹号（`!`）表示在 `string`中找到除 `charlist` 中的字符以外的任何字符时进行匹配。 当在方括号外使用时，感叹号与自身匹配。  
   
 ## <a name="special-characters"></a>特殊字符  
- To match the special characters left bracket (`[`), question mark (`?`), number sign (`#`), and asterisk (`*`), enclose them in brackets. The right bracket (`]`) cannot be used within a group to match itself, but it can be used outside a group as an individual character.  
+ 若要匹配特殊字符左方括号（`[`）、问号（`?`）、数字符号（`#`）和星号（`*`），请将它们括在括号中。 不能在组内使用右大括号（`]`）来匹配自身，但它可以作为单个字符在组外使用。  
   
- The character sequence `[]` is considered a zero-length string (`""`). However, it cannot be part of a character list enclosed in brackets. If you want to check whether a position in `string` contains one of a group of characters or no character at all, you can use `Like` twice. For an example, see [How to: Match a String against a Pattern](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
+ 字符序列 `[]` 被视为长度为零的字符串（`""`）。 但是，它不能是括在括号中的字符列表的一部分。 如果要检查 `string` 中的某个位置是否包含一组字符或不包含任何字符，可以使用两次 `Like`。 有关示例，请参阅[如何：将字符串与模式匹配](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)。  
   
-## <a name="character-ranges"></a>Character Ranges  
- By using a hyphen (`–`) to separate the lower and upper bounds of the range, `charlist` can specify a range of characters. For example, `[A–Z]` results in a match if the corresponding character position in `string` contains any character within the range `A`–`Z`, and `[!H–L]` results in a match if the corresponding character position contains any character outside the range `H`–`L`.  
+## <a name="character-ranges"></a>字符范围  
+ 通过使用连字符（`–`）来分隔范围的下限和上限，`charlist` 可以指定一系列字符。 例如，如果在 `string` 中的相应字符位置包含 `A`–`Z`范围内的任何字符，则 `[A–Z]` 结果为匹配; 如果相应的字符位置包含范围 `[!H–L]` – `H`范围之外的任何字符，则会导致匹配结果。`L`  
   
- When you specify a range of characters, they must appear in ascending sort order, that is, from lowest to highest. Thus, `[A–Z]` is a valid pattern, but `[Z–A]` is not.  
+ 指定字符范围时，它们必须按升序排序，即从最低到最高。 因此，`[A–Z]` 是有效的模式，但 `[Z–A]` 不是。  
   
-### <a name="multiple-character-ranges"></a>Multiple Character Ranges  
- To specify multiple ranges for the same character position, put them within the same brackets without delimiters. For example, `[A–CX–Z]` results in a match if the corresponding character position in `string` contains any character within either the range `A`–`C` or the range `X`–`Z`.  
+### <a name="multiple-character-ranges"></a>多字符范围  
+ 若要为同一字符位置指定多个范围，请将它们放在不带分隔符的相同括号中。 例如，如果 `string` 中的相应字符位置包含 `A`–`C` 范围内的任何字符或范围 `X`–`Z`，则 `[A–CX–Z]` 会导致匹配。  
   
-### <a name="usage-of-the-hyphen"></a>Usage of the Hyphen  
- A hyphen (`–`) can appear either at the beginning (after an exclamation point, if any) or at the end of `charlist` to match itself. In any other location, the hyphen identifies a range of characters delimited by the characters on either side of the hyphen.  
+### <a name="usage-of-the-hyphen"></a>连字符的用法  
+ 连字符（`–`）可以出现在开头（在感叹号后，如果有的话），或出现在 `charlist` 的末尾，以匹配自身。 在其他任何位置，连字符标识由连字符两侧的字符分隔的一系列字符。  
   
-## <a name="collating-sequence"></a>Collating Sequence  
- The meaning of a specified range depends on the character ordering at run time, as determined by `Option Compare` and the locale setting of the system the code is running on. With `Option Compare Binary`, the range `[A–E]` matches `A`, `B`, `C`, `D`, and `E`. With `Option Compare Text`, `[A–E]` matches `A`, `a`, `À`, `à`, `B`, `b`, `C`, `c`, `D`, `d`, `E`, and `e`. The range does not match `Ê` or `ê` because accented characters collate after unaccented characters in the sort order.  
+## <a name="collating-sequence"></a>排序顺序  
+ 指定范围的含义取决于运行时的字符排序，由 `Option Compare` 和运行代码的系统的区域设置确定。 对于 `Option Compare Binary`，范围 `[A–E]` 匹配 `A`、`B`、`C`、`D`和 `E`。 在 `Option Compare Text`中，`[A–E]` 匹配 `A`、`a`、`À`、`à`、`B`、`b`、`C`、`c`、`D`、`d`、`E`和 `e`。 范围与 `Ê` 或 `ê` 不匹配，因为重音字符在排序顺序中逐字符进行排序。  
   
-## <a name="digraph-characters"></a>Digraph Characters  
- In some languages, there are alphabetic characters that represent two separate characters. For example, several languages use the character `æ` to represent the characters `a` and `e` when they appear together. The `Like` operator recognizes that the single digraph character and the two individual characters are equivalent.  
+## <a name="digraph-characters"></a>连字符  
+ 在某些语言中，有表示两个不同字符的字母字符。 例如，几种语言使用字符 `æ` 来表示它们一起出现时 `a` 和 `e`。 `Like` 运算符识别单个连字符和两个单个字符是否等效。  
   
- When a language that uses a digraph character is specified in the system locale settings, an occurrence of the single digraph character in either `pattern` or `string` matches the equivalent two-character sequence in the other string. Similarly, a digraph character in `pattern` enclosed in brackets (by itself, in a list, or in a range) matches the equivalent two-character sequence in `string`.  
+ 如果在系统区域设置中指定了使用连字符字符的语言，则在 `pattern` 或 `string` 中出现的单个连字符将与另一个字符串中的等效双字符序列匹配。 同样，括在括号中的 `pattern` 中的连字符（单独、列表中或范围）与 `string`中等效的双字符序列匹配。  
   
 ## <a name="overloading"></a>重载  
- The `Like` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. 有关更多信息，请参见 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ 可以*重载*`Like` 运算符，这意味着当操作数具有该类或结构的类型时，该类或结构可以重新定义其行为。 如果你的代码在该类或结构上使用此运算符，请确保了解其重新定义的行为。 有关更多信息，请参见 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>示例  
- This example uses the `Like` operator to compare strings to various patterns. The results go into a `Boolean` variable indicating whether each string satisfies the pattern.  
+ 此示例使用 `Like` 运算符将字符串与各种模式进行比较。 结果将进入一个 `Boolean` 变量，该变量指示每个字符串是否满足此模式。  
   
  [!code-vb[VbVbalrOperators#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#30)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualBasic.Strings.InStr%2A>
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>

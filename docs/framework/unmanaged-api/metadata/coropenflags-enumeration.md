@@ -48,7 +48,7 @@ typedef enum CorOpenFlags
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`ofRead`|指示该文件应在只读状态下打开。|  
 |`ofWrite`|指示该文件应在可写入状态下打开。<br /><br /> 如果在打开 .winmd 文件时使用 `ofWrite` 标志，则你还应该传递 `ofNoTransform` 标志。|  
@@ -56,21 +56,21 @@ typedef enum CorOpenFlags
 |`ofCopyMemory`|指示应将该文件读入内存。 元数据应保持自己的副本。|  
 |`ofCacheImage`|已过时。 将忽略此标志。|  
 |`ofManifestMetadata`|已过时。 将忽略此标志。|  
-|`ofReadOnly`|Indicates that the file should be opened for reading, and that a call to `QueryInterface` for an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) cannot be made.|  
-|`ofTakeOwnership`|Indicates that the memory was allocated using a call to [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) and will be freed by the metadata.|  
+|`ofReadOnly`|指示应打开文件进行读取，并且无法对[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)调用 `QueryInterface`。|  
+|`ofTakeOwnership`|指示内存是使用对[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)的调用分配的，并将由元数据释放。|  
 |`ofNoTypeLib`|已过时。 将忽略此标志。|  
-|`ofNoTransform`|指示应该禁用 .winmd 文件的自动转换。 也就是说，应该禁用从 Windows 运行时类型到 .NET Framework 类型的投影。 For more information, see [Windows Runtime and the CLR - Underneath the Hood with .NET and the Windows Runtime](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime).|  
-|`ofReserved1`|保留以供内部使用。|  
-|`ofReserved2`|保留以供内部使用。|  
-|`ofReserved`|保留以供内部使用。|  
+|`ofNoTransform`|指示应该禁用 .winmd 文件的自动转换。 也就是说，应该禁用从 Windows 运行时类型到 .NET Framework 类型的投影。 有关详细信息，请参阅[.net 和 Windows 运行时中的 Windows 运行时和 CLR](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime)。|  
+|`ofReserved1`|保留供内部使用。|  
+|`ofReserved2`|保留供内部使用。|  
+|`ofReserved`|保留供内部使用。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **标头：** Corhdr。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

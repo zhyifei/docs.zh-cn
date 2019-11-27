@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336555"
 ---
 # <a name="assignment-operators-visual-basic"></a>赋值运算符 (Visual Basic)
-The following are the assignment operators defined in Visual Basic.  
+下面是 Visual Basic 中定义的赋值运算符。  
   
  [= 运算符](../../../visual-basic/language-reference/operators/assignment-operator.md)  
   
@@ -25,19 +25,19 @@ The following are the assignment operators defined in Visual Basic.
   
  [/= 运算符](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
- [\\= Operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
+ [\\= 运算符](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
   
  [+= 运算符](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
  [-= 运算符](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)  
   
- [<\<= Operator](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)  
+ [<\<= 运算符](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)  
   
  [>>= 运算符](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)  
   
  [&= 运算符](../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

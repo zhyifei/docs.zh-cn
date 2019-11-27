@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436372"
 ---
 # <a name="iceegengenerateceefile-method"></a>ICeeGen::GenerateCeeFile 方法
-Generates a code-base file that contains the code base currently loaded into this [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.  
+生成一个代码基文件，其中包含当前加载到此[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)接口中的代码库。  
   
- This method is obsolete and should not be used.  
+ 此方法已过时，不应使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,17 +34,17 @@ HRESULT GenerateCeeFile ();
 ```  
   
 ## <a name="parameters"></a>参数  
- `GenerateCeeFile` takes no parameters.  
+ `GenerateCeeFile` 不采用任何参数。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICeeGen 接口](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

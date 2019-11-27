@@ -22,7 +22,7 @@ ms.locfileid: "74283388"
 ## <a name="slider-parts"></a>滑块部分  
  下表列出了 <xref:System.Windows.Controls.Slider> 控件的已命名部分。  
   
-|部件|Type|描述|  
+|部件|类型|说明|  
 |-|-|-|  
 |PART_Track|<xref:System.Windows.Controls.Primitives.Track>|指示 <xref:System.Windows.Controls.Slider>位置的元素的容器。|  
 |PART_SelectionRange|<xref:System.Windows.FrameworkElement>|沿 <xref:System.Windows.Controls.Slider>显示选择范围的元素。  仅当 `true`<xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> 属性时，选择范围才可见。|  
@@ -30,11 +30,11 @@ ms.locfileid: "74283388"
 ## <a name="slider-states"></a>滑块状态  
  下表列出了 <xref:System.Windows.Controls.Slider> 控件的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |----------------------|---------------------------|-----------------|  
-|一般|CommonStates|默认状态。|  
+|正常|CommonStates|默认状态。|  
 |MouseOver|CommonStates|鼠标指针悬停在控件上。|  
-|Disabled|CommonStates|已禁用控件。|  
+|已禁用|CommonStates|已禁用控件。|  
 |已设定焦点|FocusStates|控件有焦点。|  
 |失去焦点|FocusStates|控件没有焦点。|  
 |有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  

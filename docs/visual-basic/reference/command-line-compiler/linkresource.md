@@ -16,7 +16,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335485"
 ---
-# <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
+# <a name="-linkresource-visual-basic"></a>-linkresource （Visual Basic）
 创建指向托管资源的链接。  
   
 ## <a name="syntax"></a>语法  
@@ -31,37 +31,37 @@ ms.locfileid: "74335485"
 -linkres:filename[,identifier[,public|private]]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `filename`  
- 必须的。 The resource file to link to the assembly. If the file name contains a space, enclose the name in quotation marks (" ").  
+ 必需。 要链接到程序集的资源文件。 如果文件名包含空格，则将该名称括在引号（""）中。  
   
  `identifier`  
- 可选。 The logical name for the resource. The name that is used to load the resource. 默认值是文件的名称。 Optionally, you can specify whether the file is public or private in the assembly manifest, for example: `-linkres:filename.res,myname.res,public`. By default, `filename` is public in the assembly.  
+ 可选。 资源的逻辑名称。 用于加载资源的名称。 默认值是文件的名称。 您也可以在程序集清单中指定文件是公共的还是私有的，例如： `-linkres:filename.res,myname.res,public`。 默认情况下，`filename` 在程序集中是公共的。  
   
 ## <a name="remarks"></a>备注  
- The `-linkresource` option does not embed the resource file in the output file; use the `-resource` option to do this.  
+ `-linkresource` 选项不会将资源文件嵌入到输出文件中;使用 `-resource` 选项来执行此操作。  
   
- The `-linkresource` option requires one of the `-target` options other than `-target:module`.  
+ `-linkresource` 选项需要 `-target:module`之外的 `-target` 选项之一。  
   
- If `filename` is a .NET Framework resource file created, for example, by the [Resgen.exe (Resource File Generator)](../../../framework/tools/resgen-exe-resource-file-generator.md) or in the development environment, it can be accessed with members in the <xref:System.Resources> namespace. (For more information, see <xref:System.Resources.ResourceManager>.) To access all other resources at run time, use the methods that begin with `GetManifestResource` in the <xref:System.Reflection.Assembly> class.  
+ 如果 `filename` 是通过[resgen.exe （资源文件生成器）](../../../framework/tools/resgen-exe-resource-file-generator.md)或在开发环境中创建 .NET Framework 资源文件，则可以使用 <xref:System.Resources> 命名空间中的成员来访问它。 （有关详细信息，请参阅 <xref:System.Resources.ResourceManager>。）若要在运行时访问所有其他资源，请使用 <xref:System.Reflection.Assembly> 类中以 `GetManifestResource` 开头的方法。  
   
- The file name can be any file format. 例如，你可能希望生成程序集的本机 DLL 部分，从而可将它安装到全局程序集缓存中，并且可从该程序集中的托管代码访问它。  
+ 文件名可以是任何文件格式。 例如，你可能希望生成程序集的本机 DLL 部分，从而可将它安装到全局程序集缓存中，并且可从该程序集中的托管代码访问它。  
   
  `-linkresource` 的缩写形式是 `-linkres`。  
   
 > [!NOTE]
-> The `-linkresource` option is not available from the Visual Studio development environment; it is available only when you compile from the command line.  
+> `-linkresource` 选项在 Visual Studio 开发环境中不可用;仅当从命令行进行编译时，它才可用。  
   
 ## <a name="example"></a>示例  
- The following code compiles `in.vb` and links to resource file `rf.resource`.  
+ 下面的代码编译 `in.vb` 并链接到资源文件 `rf.resource`。  
   
 ```console  
 vbc -linkresource:rf.resource in.vb  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)
+- [-target （Visual Basic）](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-resource （Visual Basic）](../../../visual-basic/reference/command-line-compiler/resource.md)
 - [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -37,12 +37,12 @@ Open Data Protocol （OData）允许您创建数据服务，以便客户端可�
 |实体集|-删除实体集|-添加派生类型<br />-更改基类型<br />-添加实体集|
 |源自定义|-更改实体-属性映射||
 
- <sup>1</sup> 这可能取决于客户端应用程序如何严格依赖特定错误代码的接收。
+ <sup>1</sup>这可能取决于客户端应用程序在接收特定错误代码时的严格程度。
 
- <sup>2</sup> 可以设置 <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> 属性为  `true`，让客户端忽略数据服务（未在客户端上定义）发送的任何新属性。 但是，当插入时，客户端在 POST 请求中不包括的属性都设置为其默认值。 对于更新，对客户端未知的属性中任何现有数据可能用默认值改写。 在此情况下，应将更新作为 MERGE 要求发送，这是默认值。 有关详细信息，请参阅[管理数据服务上下文](managing-the-data-service-context-wcf-data-services.md)。
+ <sup>2</sup>可以将 <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> 属性设置为 `true`，以使客户端忽略数据服务发送的、未在客户端上定义的任何新属性。 但是，当插入时，客户端在 POST 请求中不包括的属性都设置为其默认值。 对于更新，对客户端未知的属性中任何现有数据可能用默认值改写。 在此情况下，应将更新作为 MERGE 要求发送，这是默认值。 有关详细信息，请参阅[管理数据服务上下文](managing-the-data-service-context-wcf-data-services.md)。
 
 ### <a name="how-to-version-a-data-service"></a>如何对数据服务进行版本管理
- 在需要时，通过创建新服务实例（使用更新的服务协定或数据模型）定义新的数据服务版本。 通过使用新的 URI 终结点（使其与以前的版本不同）公开该新服务。 例如:
+ 在需要时，通过创建新服务实例（使用更新的服务协定或数据模型）定义新的数据服务版本。 通过使用新的 URI 终结点（使其与以前的版本不同）公开该新服务。 例如：
 
 - 旧版本：`http://services.odata.org/Northwind/v1/Northwind.svc/`
 
@@ -64,8 +64,8 @@ Open Data Protocol （OData）允许您创建数据服务，以便客户端可�
 
 |OData 协议版本|支持引入方式|
 |-----------------------------------------------------------------------------------|----------------------------|
-|1 版|-.NET Framework 3.5 Service Pack 1 （SP1）<br />-Silverlight 版本3|
-|2 版|-.NET Framework 4<br />-.NET Framework 3.5 SP1 的更新。 你可以从[Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=158125)下载并安装该更新。<br />-Silverlight 版本4|
+|版本 1|-.NET Framework 3.5 Service Pack 1 （SP1）<br />-Silverlight 版本3|
+|版本 2|-.NET Framework 4<br />-.NET Framework 3.5 SP1 的更新。 可以从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=158125)下载并安装该更新。<br />-Silverlight 版本4|
 |3 版|-你可以从[Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=203885)下载和安装支持 OData 版本3的预发行版本。|
 
 ### <a name="metadata-versions"></a>元数据版本

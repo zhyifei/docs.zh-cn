@@ -29,7 +29,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352831"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case 语句 (Visual Basic)
-Runs one of several groups of statements, depending on the value of an expression.  
+根据表达式的值运行若干组语句中的一个。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,45 +44,45 @@ End Select
   
 ## <a name="parts"></a>部件  
   
-|术语|定义|  
+|术语|Definition|  
 |---|---|  
-|`testexpression`|必须的。 Expression. Must evaluate to one of the elementary data types (`Boolean`, `Byte`, `Char`, `Date`, `Double`, `Decimal`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, and `UShort`).|  
-|`expressionlist`|Required in a `Case` statement. List of expression clauses representing match values for `testexpression`. Multiple expression clauses are separated by commas. Each clause can take one of the following forms:<br /><br /> -   *expression1* `To` *expression2*<br />-   [ `Is` ] *comparisonoperator* *expression*<br />-   *expression*<br /><br /> Use the `To` keyword to specify the boundaries of a range of match values for `testexpression`. The value of `expression1` must be less than or equal to the value of `expression2`.<br /><br /> Use the `Is` keyword with a comparison operator (`=`, `<>`, `<`, `<=`, `>`, or `>=`) to specify a restriction on the match values for `testexpression`. If the `Is` keyword is not supplied, it is automatically inserted before *comparisonoperator*.<br /><br /> The form specifying only `expression` is treated as a special case of the `Is` form where *comparisonoperator* is the equal sign (`=`). This form is evaluated as `testexpression` = `expression`.<br /><br /> The expressions in `expressionlist` can be of any data type, provided they are implicitly convertible to the type of `testexpression` and the appropriate `comparisonoperator` is valid for the two types it is being used with.|  
-|`statements`|可选。 One or more statements following `Case` that run if `testexpression` matches any clause in `expressionlist`.|  
-|`elsestatements`|可选。 One or more statements following `Case Else` that run if `testexpression` does not match any clause in the `expressionlist` of any of the `Case` statements.|  
-|`End Select`|Terminates the definition of the `Select`...`Case` construction.|  
+|`testexpression`|必需。 表达式. 的计算结果必须为基本数据类型之一（`Boolean`、`Byte`、`Char`、`Date`、`Double`、`Decimal`、`Integer`、`Long`、`Object`、`SByte`、`Short`、`Single`、`String`、`UInteger`、`ULong`和 `UShort`）。|  
+|`expressionlist`|在 `Case` 语句中是必需的。 表示 `testexpression`的匹配值的表达式子句的列表。 多个表达式子句之间用逗号分隔。 每个子句可以采用以下形式之一：<br /><br /> -   *表达式*2 *`To` 2*<br />-[`Is`] *.comparisonoperator* *表达式*<br />-   *表达式*<br /><br /> 使用 `To` 关键字指定 `testexpression`的匹配值范围的边界。 `expression1` 的值必须小于或等于 `expression2`的值。<br /><br /> 将 `Is` 关键字与比较运算符（`=`、`<>`、`<`、`<=`、`>`或 `>=`）结合使用，以指定 `testexpression`匹配值的限制。 如果未提供 `Is` 关键字，则自动将其插入 *.comparisonoperator*之前。<br /><br /> 仅指定 `expression` 的窗体被视为 `Is` 窗体的特殊情况，其中 *.comparisonoperator*是等号（`=`）。 此形式的计算结果为 `testexpression` = `expression`。<br /><br /> `expressionlist` 中的表达式可以是任何数据类型，前提是它们可隐式转换为 `testexpression` 的类型，并且相应的 `comparisonoperator` 对于它与之一起使用的两个类型都有效。|  
+|`statements`|可选。 如果 `testexpression` 与 `expressionlist`中的任何子句匹配，则 `Case` 运行的一个或多个语句。|  
+|`elsestatements`|可选。 如果 `testexpression` 与任何 `Case` 语句的 `expressionlist` 中的任何子句都不匹配，则在运行 `Case Else` 后面的一个或多个语句。|  
+|`End Select`|终止`Case` 构造 `Select`的定义。|  
   
 ## <a name="remarks"></a>备注  
- If `testexpression` matches any `Case` `expressionlist` clause, the statements following that `Case` statement run up to the next `Case`, `Case Else`, or `End Select` statement. Control then passes to the statement following `End Select`. If `testexpression` matches an `expressionlist` clause in more than one `Case` clause, only the statements following the first match run.  
+ 如果 `testexpression` 与任何 `Case` `expressionlist` 子句匹配，则遵循该 `Case` 语句的语句将运行到下一个 `Case`、`Case Else`或 `End Select` 语句之后。 然后，控件传递到 `End Select`后面的语句。 如果 `testexpression` 在多个 `Case` 子句中匹配 `expressionlist` 子句，则仅运行第一个匹配后的语句。  
   
- The `Case Else` statement is used to introduce the `elsestatements` to run if no match is found between the `testexpression` and an `expressionlist` clause in any of the other `Case` statements. Although not required, it is a good idea to have a `Case Else` statement in your `Select Case` construction to handle unforeseen `testexpression` values. If no `Case` `expressionlist` clause matches `testexpression` and there is no `Case Else` statement, control passes to the statement following `End Select`.  
+ 如果在任何其他 `Case` 语句的 `testexpression` 和 `expressionlist` 子句之间找不到匹配项，则使用 `Case Else` 语句引入要运行的 `elsestatements`。 虽然不是必需的，但最好在 `Select Case` 构造中使用 `Case Else` 语句来处理不可预见的 `testexpression` 值。 如果没有 `Case` `expressionlist` 子句匹配 `testexpression`，并且没有 `Case Else` 语句，控制将传递到 `End Select`后面的语句。  
   
- You can use multiple expressions or ranges in each `Case` clause. For example, the following line is valid.  
+ 可以在每个 `Case` 子句中使用多个表达式或范围。 例如，下面的行是有效的。  
   
  `Case 1 To 4, 7 To 9, 11, 13, Is > maxNumber`  
   
 > [!NOTE]
-> The `Is` keyword used in the `Case` and `Case Else` statements is not the same as the [Is Operator](../../../visual-basic/language-reference/operators/is-operator.md), which is used for object reference comparison.  
+> `Case` 和 `Case Else` 语句中使用的 `Is` 关键字与[Is 运算符](../../../visual-basic/language-reference/operators/is-operator.md)不同，后者用于对象引用比较。  
   
- You can specify ranges and multiple expressions for character strings. In the following example, `Case` matches any string that is exactly equal to "apples", has a value between "nuts" and "soup" in alphabetical order, or contains the exact same value as the current value of `testItem`.  
+ 您可以为字符串指定范围和多个表达式。 在下面的示例中，`Case` 匹配任何完全等于 "苹果" 的字符串，其值介于 "螺母" 和 "soup" 之间按字母顺序排序，或者包含与 `testItem`的当前值完全相同的值。  
   
  `Case "apples", "nuts" To "soup", testItem`  
   
- The setting of `Option Compare` can affect string comparisons. Under `Option Compare Text`, the strings "Apples" and "apples" compare as equal, but under `Option Compare Binary`, they do not.  
+ `Option Compare` 的设置可能会影响字符串比较。 在 `Option Compare Text`下，字符串 "苹果" 和 "苹果" 的比较结果相等，但在 `Option Compare Binary`下，它们不会。  
   
 > [!NOTE]
-> A `Case` statement with multiple clauses can exhibit behavior known as *short-circuiting*. Visual Basic evaluates the clauses from left to right, and if one produces a match with `testexpression`, the remaining clauses are not evaluated. Short-circuiting can improve performance, but it can produce unexpected results if you are expecting every expression in `expressionlist` to be evaluated. For more information on short-circuiting, see [Boolean Expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md).  
+> 具有多个子句的 `Case` 语句可以表现称为 "*短路*" 的行为。 Visual Basic 从左到右计算子句，并且如果一个生成与 `testexpression`的匹配项，则不会计算剩余的子句。 短路可以提高性能，但如果希望计算 `expressionlist` 中的每个表达式，则可能产生意外的结果。 有关短路的详细信息，请参阅[布尔表达式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)。  
   
- If the code within a `Case` or `Case Else` statement block does not need to run any more of the statements in the block, it can exit the block by using the `Exit Select` statement. This transfers control immediately to the statement following `End Select`.  
+ 如果 `Case` 或 `Case Else` 语句块内的代码不需要在块中运行任何更多语句，则它可以使用 `Exit Select` 语句退出块。 这会将控制立即传输到 `End Select`后面的语句中。  
   
- `Select Case` constructions can be nested. Each nested `Select Case` construction must have a matching `End Select` statement and must be completely contained within a single `Case` or `Case Else` statement block of the outer `Select Case` construction within which it is nested.  
+ `Select Case` 构造可以嵌套。 每个嵌套 `Select Case` 构造必须具有匹配的 `End Select` 语句，并且必须完全包含在其嵌套的外部 `Select Case` 构造的单个 `Case` 或 `Case Else` 语句块内。  
   
 ## <a name="example"></a>示例  
- The following example uses a `Select Case` construction to write a line corresponding to the value of the variable `number`. The second `Case` statement contains the value that matches the current value of `number`, so the statement that writes "Between 6 and 8, inclusive" runs.  
+ 下面的示例使用 `Select Case` 构造来编写与 `number`变量的值相对应的行。 第二个 `Case` 语句包含与 `number`的当前值相匹配的值，因此，将运行写入 "6 到8个（含）" 的语句。  
   
  [!code-vb[VbVbalrStatements#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#54)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualBasic.Interaction.Choose%2A>
 - [End 语句](../../../visual-basic/language-reference/statements/end-statement.md)

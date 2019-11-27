@@ -29,7 +29,7 @@ ms.locfileid: "74435105"
   
 - 具有不明确范围值的控件（如进度栏或滑块）应对这些值进行规范化。  
   
- ![Progress bar.](./media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
+ ![进度栏。](./media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
 进度栏的示例，其中值为整数类型，最小和最大属性值分别被规范化为 0 和 100  
   
 <a name="Required_Members_for_the_IRangeValueProvider"></a>   
@@ -37,13 +37,13 @@ ms.locfileid: "74435105"
   
 |必需的成员|成员类型|注意|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Property|None|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Property|None|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Property|None|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Property|None|  
-|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Property|None|  
-|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Property|None|  
-|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|方法|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|属性|无|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|属性|无|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|属性|无|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|属性|无|  
+|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|属性|无|  
+|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|属性|无|  
+|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|方法|无|  
   
  没有与此控件模式关联的事件。  
   
@@ -51,14 +51,14 @@ ms.locfileid: "74435105"
 ## <a name="exceptions"></a>异常  
  提供程序必须引发以下异常。  
   
-|异常类型|条件|  
+|例外狀況類型|条件|  
 |--------------------|---------------|  
 |<xref:System.ArgumentOutOfRangeException>|使用一个大于<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A> 或小于 <xref:System.Windows.Automation.RangeValuePattern.MaximumProperty> 的值调用 <xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UI 自动化控件模式概述](ui-automation-control-patterns-overview.md)
 - [在 UI 自动化提供程序中支持控件模式](support-control-patterns-in-a-ui-automation-provider.md)
-- [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [UI 自动化树概述](ui-automation-tree-overview.md)
 - [在 UI 自动化中使用缓存](use-caching-in-ui-automation.md)

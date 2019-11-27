@@ -17,28 +17,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350777"
 ---
 # <a name="structures-visual-basic"></a>结构 (Visual Basic)
-A *structure* is a generalization of the user-defined type (UDT) supported by previous versions of Visual Basic. In addition to fields, structures can expose properties, methods, and events. A structure can implement one or more interfaces, and you can declare individual access levels for each field.  
+*结构*是 Visual Basic 早期版本支持的用户定义类型（UDT）的泛化。 除了字段外，结构还可以公开属性、方法和事件。 结构可以实现一个或多个接口，并且可以为每个字段声明单独的访问级别。  
   
- You can combine data items of different types to create a structure. A structure associates one or more *elements* with each other and with the structure itself. When you declare a structure, it becomes a *composite data type*, and you can declare variables of that type.  
+ 您可以组合不同类型的数据项来创建结构。 结构将一个或多个*元素*与另一个或多个元素彼此关联。 在声明结构时，它将成为*复合数据类型*，并且可以声明该类型的变量。  
   
- Structures are useful when you want a single variable to hold several related pieces of information. For example, you might want to keep an employee's name, telephone extension, and salary together. You could use several variables for this information, or you could define a structure and use it for a single employee variable. The advantage of the structure becomes apparent when you have many employees and therefore many instances of the variable.  
+ 如果希望单个变量保存多个相关的信息片段，则结构非常有用。 例如，你可能想要将雇员姓名、电话分机号码和薪金一起保留在一起。 您可以为此信息使用几个变量，或者可以定义一个结构并将其用于单个员工变量。 当你有许多员工，而此变量的多个实例时，结构的优势就变得很明显。  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：声明结构](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- Shows how to declare a structure and its elements.  
+ 演示如何声明结构及其元素。  
   
  [结构变量](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
- Covers assigning a structure to a variable and accessing its elements.  
+ 介绍如何将结构分配给变量并访问其元素。  
   
  [结构和其他编程元素](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
- Summarizes how structures interact with arrays, objects, procedures, and each other.  
+ 概述结构如何与数组、对象、过程相互交互。  
   
  [结构和类](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- Describes the similarities and differences between structures and classes.  
+ 描述结构和类之间的相似性和差异。  
   
 ## <a name="related-sections"></a>相关章节  
  [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Introduces the Visual Basic data types and describes how to use them.  
+ 介绍 Visual Basic 数据类型，并说明如何使用它们。  
   
  [数据类型](../../../../visual-basic/language-reference/data-types/index.md)  
- Lists the elementary data types supplied by Visual Basic.
+ 列出 Visual Basic 提供的基本数据类型。

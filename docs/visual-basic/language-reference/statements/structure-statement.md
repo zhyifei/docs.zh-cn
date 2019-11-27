@@ -21,7 +21,7 @@ ms.locfileid: "74346460"
 ---
 # <a name="structure-statement"></a>Structure 语句
 
-Declares the name of a structure and introduces the definition of the variables, properties, events, and procedures that the structure comprises.
+声明结构名称，并引入结构所包含的变量、属性、事件和过程的定义。
 
 ## <a name="syntax"></a>语法
 
@@ -36,80 +36,80 @@ End Structure
 
 ## <a name="parts"></a>部件
 
-|术语|定义|
+|术语|Definition|
 |---|---|
-|`attributelist`|可选。 See [Attribute List](attribute-list.md).|
-|`accessmodifier`|可选。 可以是以下各项之一：<br /><br /> -   [Public](../modifiers/public.md)<br />-   [Protected](../modifiers/protected.md)<br />-   [Friend](../modifiers/friend.md)<br />-   [Private](../modifiers/private.md)<br />- [Protected Friend](../modifiers/protected-friend.md)<br/>- [Private Protected](../modifiers/private-protected.md) <br /><br /> 请参阅 [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)。|
-|`Shadows`|可选。 See [Shadows](../modifiers/shadows.md).|
-|`Partial`|可选。 Indicates a partial definition of the structure. See [Partial](../modifiers/partial.md).|
-|`name`|必须的。 Name of this structure. 请参阅 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)。|
-|`Of`|可选。 Specifies that this is a generic structure.|
-|`typelist`|Required if you use the [Of](of-clause.md) keyword. List of type parameters for this structure. See [Type List](type-list.md).|
-|`Implements`|可选。 Indicates that this structure implements the members of one or more interfaces. See [Implements Statement](implements-statement.md).|
-|`interfacenames`|Required if you use the `Implements` statement. The names of the interfaces this structure implements.|
-|`datamemberdeclarations`|必须的。 Zero or more `Const`, `Dim`, `Enum`, or `Event` statements declaring *data members* of the structure.|
-|`methodmemberdeclarations`|可选。 Zero or more declarations of `Function`, `Operator`, `Property`, or `Sub` procedures, which serve as *method members* of the structure.|
-|`End Structure`|必须的。 Terminates the `Structure` definition.|
+|`attributelist`|可选。 请参阅[特性列表](attribute-list.md)。|
+|`accessmodifier`|可选。 可以是以下各项之一：<br /><br /> -   [公有](../modifiers/public.md)<br />-   [保护](../modifiers/protected.md)<br />-   [朋友](../modifiers/friend.md)<br />-   [私有](../modifiers/private.md)<br />- [受保护的朋友](../modifiers/protected-friend.md)<br/>- [私有保护](../modifiers/private-protected.md) <br /><br /> 请参阅 [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)。|
+|`Shadows`|可选。 请参阅[阴影](../modifiers/shadows.md)。|
+|`Partial`|可选。 指示结构的分部定义。 请参阅[部分](../modifiers/partial.md)。|
+|`name`|必需。 此结构的名称。 请参阅 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)。|
+|`Of`|可选。 指定这是一个泛型结构。|
+|`typelist`|如果使用 of 关键字，则[为](of-clause.md)必需。 此结构的类型参数列表。 请参阅[类型列表](type-list.md)。|
+|`Implements`|可选。 指示此结构实现一个或多个接口的成员。 请参阅[Implements 语句](implements-statement.md)。|
+|`interfacenames`|如果使用 `Implements` 语句，则是必需的。 此结构实现的接口的名称。|
+|`datamemberdeclarations`|必需。 零个或多个 `Const`、`Dim`、`Enum`或 `Event` 语句声明结构的*数据成员*。|
+|`methodmemberdeclarations`|可选。 `Function`、`Operator`、`Property`或 `Sub` 过程的零个或多个声明，它们充当结构的*方法成员*。|
+|`End Structure`|必需。 终止 `Structure` 定义。|
 
 ## <a name="remarks"></a>备注
 
-The `Structure` statement defines a composite value type that you can customize. A *structure* is a generalization of the user-defined type (UDT) of previous versions of Visual Basic. For more information, see [Structures](../../programming-guide/language-features/data-types/structures.md).
+`Structure` 语句定义可自定义的复合值类型。 *结构*是早期版本的 Visual Basic 的用户定义类型（UDT）的泛化。 有关详细信息，请参阅[结构](../../programming-guide/language-features/data-types/structures.md)。
 
-Structures support many of the same features as classes. For example, structures can have properties and procedures, they can implement interfaces, and they can have parameterized constructors. However, there are significant differences between structures and classes in areas such as inheritance, declarations, and usage. Also, classes are reference types and structures are value types. For more information, see [Structures and Classes](../../programming-guide/language-features/data-types/structures-and-classes.md).
+结构支持许多与类相同的功能。 例如，结构可以具有属性和过程，它们可以实现接口，并且它们可以具有参数化的构造函数。 但是，在继承、声明和使用等区域中，结构与类之间存在重大差异。 同样，类是引用类型，而结构是值类型。 有关详细信息，请参阅[结构和类](../../programming-guide/language-features/data-types/structures-and-classes.md)。
 
-You can use `Structure` only at namespace or module level. This means the *declaration context* for a structure must be a source file, namespace, class, structure, module, or interface, and cannot be a procedure or block. 有关详细信息，请参阅[声明上下文和默认访问级别](declaration-contexts-and-default-access-levels.md)。
+只能在命名空间或模块级别使用 `Structure`。 这意味着结构的*声明上下文*必须是源文件、命名空间、类、结构、模块或接口，不能是过程或块。 有关详细信息，请参阅[声明上下文和默认访问级别](declaration-contexts-and-default-access-levels.md)。
 
-Structures default to [Friend](../modifiers/friend.md) access. You can adjust their access levels with the access modifiers. For more information, see [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
+结构默认为[Friend](../modifiers/friend.md)访问。 您可以使用访问修饰符调整其访问级别。 有关详细信息，请参阅[Visual Basic 中的访问级别](../../programming-guide/language-features/declared-elements/access-levels.md)。
 
 ## <a name="rules"></a>规则
 
-- **Nesting.** You can define one structure within another. The outer structure is called the *containing structure*, and the inner structure is called a *nested structure*. However, you cannot access a nested structure's members through the containing structure. Instead, you must declare a variable of the nested structure's data type.
+- **层.** 可以在另一个结构中定义一个结构。 外部结构称为*包含结构*，而内部结构称为*嵌套结构*。 但是，不能通过包含结构访问嵌套结构的成员。 相反，您必须声明嵌套结构的数据类型的变量。
 
-- **Member Declaration.** You must declare every member of a structure. A structure member cannot be [Protected](../modifiers/protected.md) or `Protected Friend` because nothing can inherit from a structure. The structure itself, however, can be `Protected` or `Protected Friend`.
+- **成员声明。** 必须声明结构的每个成员。 由于不能从结构继承结构成员，因此不能对其进行[保护](../modifiers/protected.md)或 `Protected Friend`。 不过，结构本身可以是 `Protected` 或 `Protected Friend`。
   
-     您可以在结构中声明零个以上的非共享变量或非共享、非自定义的事件。 You cannot have only constants, properties, and procedures, even if some of them are nonshared.
+     您可以在结构中声明零个以上的非共享变量或非共享、非自定义的事件。 不能仅包含常量、属性和过程，即使其中一些是非共享的。
 
-- **Initialization.** You cannot initialize the value of any nonshared data member of a structure as part of its declaration. You must either initialize such a data member by means of a parameterized constructor on the structure, or assign a value to the member after you have created an instance of the structure.
+- **起始.** 不能将结构的任何非共享数据成员的值初始化为其声明的一部分。 您必须通过结构上的参数化构造函数来初始化此类数据成员，或者在创建了该结构的实例之后为成员指定一个值。
 
-- **继承。** A structure cannot inherit from any type other than <xref:System.ValueType>, from which all structures inherit. In particular, one structure cannot inherit from another.
+- **继承。** 结构不能从所有结构继承的 <xref:System.ValueType>以外的任何类型继承。 特别是，一个结构不能从另一个结构继承。
 
-     You cannot use the [Inherits Statement](inherits-statement.md) in a structure definition, even to specify <xref:System.ValueType>.
+     不能在结构定义中使用[Inherits 语句](inherits-statement.md)，甚至可以指定 <xref:System.ValueType>。
 
-- **Implementation.** If the structure uses the [Implements Statement](implements-statement.md), you must implement every member defined by every interface you specify in `interfacenames`.
+- **部署.** 如果结构使用[Implements 语句](implements-statement.md)，则必须实现 `interfacenames`中指定的每个接口所定义的每个成员。
 
-- **Default Property.** A structure can specify at most one property as its *default property*, using the [Default](../modifiers/default.md) modifier. For more information, see [Default](../modifiers/default.md).
+- **默认属性。** 结构最多可使用[默认](../modifiers/default.md)修饰符指定一个属性作为其*默认属性*。 有关详细信息，请参阅[默认值](../modifiers/default.md)。
 
 ## <a name="behavior"></a>行为
 
-- **Access Level.** Within a structure, you can declare each member with its own access level. All structure members default to [Public](../modifiers/public.md) access. Note that if the structure itself has a more restricted access level, this automatically restricts access to its members, even if you adjust their access levels with the access modifiers.
+- **访问级别。** 在结构中，你可以使用其自己的访问级别声明每个成员。 所有结构成员默认为[公共](../modifiers/public.md)访问。 请注意，如果结构本身具有限制性更高的访问级别，则这将自动限制对其成员的访问，即使你使用访问修饰符调整其访问级别也是如此。
 
-- **Scope.** A structure is in scope throughout its containing namespace, class, structure, or module.
+- **内.** 结构在其包含的命名空间、类、结构或模块的范围内。
 
-     The scope of every structure member is the entire structure.
+     每个结构成员的作用域都是整个结构。
 
-- **Lifetime.** A structure does not itself have a lifetime. Rather, each instance of that structure has a lifetime independent of all other instances.
+- **生存期.** 结构本身不具有生存期。 相反，该结构的每个实例都具有独立于所有其他实例的生存期。
 
-     The lifetime of an instance begins when it is created by a [New Operator](../operators/new-operator.md) clause. It ends when the lifetime of the variable that holds it ends.
+     实例的生存期在由[新的 Operator](../operators/new-operator.md)子句创建时开始。 它在保存它的变量的生存期结束时结束。
 
-     You cannot extend the lifetime of a structure instance. An approximation to static structure functionality is provided by a module. For more information, see [Module Statement](module-statement.md).
+     不能扩展结构实例的生存期。 模块提供了对静态结构功能的近似值。 有关详细信息，请参阅[Module 语句](module-statement.md)。
 
-     Structure members have lifetimes depending on how and where they are declared. For more information, see "Lifetime" in [Class Statement](class-statement.md).
+     结构成员的生存期取决于其声明的方式和位置。 有关详细信息，请参阅[类语句](class-statement.md)中的 "生存期"。
 
-- **Qualification.** Code outside a structure must qualify a member's name with the name of that structure.
+- **限定.** 结构外的代码必须使用该结构的名称来限定成员的名称。
 
-     If code inside a nested structure makes an unqualified reference to a programming element, Visual Basic searches for the element first in the nested structure, then in its containing structure, and so on out to the outermost containing element. 有关详细信息，请参阅 [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)。
+     如果嵌套结构内的代码对编程元素进行非限定引用，则 Visual Basic 首先在嵌套结构中搜索元素，然后在其包含的结构中搜索元素，并将其放入外部的包含元素。 有关详细信息，请参阅 [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)。
 
-- **Memory Consumption.** As with all composite data types, you cannot safely calculate the total memory consumption of a structure by adding together the nominal storage allocations of its members. Furthermore, you cannot safely assume that the order of storage in memory is the same as your order of declaration. If you need to control the storage layout of a structure, you can apply the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute to the `Structure` statement.
+- **内存消耗。** 与所有复合数据类型一样，不能通过将其成员的标称存储分配相加来安全地计算结构的总内存消耗量。 而且，不能安全地假设内存中的存储顺序与声明顺序相同。 如果需要控制结构的存储布局，则可以将 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 特性应用于 `Structure` 语句。
 
 ## <a name="example"></a>示例
 
-The following example uses the `Structure` statement to define a set of related data for an employee. It shows the use of `Public`, `Friend`, and `Private` members to reflect the sensitivity of the data items. It also shows procedure, property, and event members.
+下面的示例使用 `Structure` 语句为员工定义一组相关数据。 它显示了如何使用 `Public`、`Friend`和 `Private` 成员来反映数据项的敏感性。 它还显示过程、属性和事件成员。
 
 [!code-vb[VbVbalrStatements#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#57)]
 
-For more information on how to use `Structure`s, see [Structure Variable](../../programming-guide/language-features/data-types/structure-variables.md).
+有关如何使用 `Structure`的详细信息，请参阅[结构变量](../../programming-guide/language-features/data-types/structure-variables.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Class 语句](class-statement.md)
 - [Interface 语句](interface-statement.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426809"
 ---
 # <a name="imetadatatablesgetstring-method"></a>IMetaDataTables::GetString 方法
-Gets the string at the specified index from the table column in the current reference scope.  
+从当前引用范围内的表列中获取指定索引处的字符串。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,21 +36,21 @@ HRESULT GetString (
   
 ## <a name="parameters"></a>参数  
  `ixString`  
- [in] The index at which to start to search for the next value.  
+ 中开始搜索下一个值的索引位置。  
   
  `ppString`  
- [out] A pointer to a pointer to the returned string value.  
+ 弄指向返回的字符串值的指针的指针。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataTables 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

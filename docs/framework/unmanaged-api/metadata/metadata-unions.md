@@ -18,7 +18,7 @@ ms.locfileid: "74430676"
   
 ## <a name="in-this-section"></a>本节内容  
  [CeeSectionRelocExtra 联合](../../../../docs/framework/unmanaged-api/metadata/ceesectionrelocextra-union.md)  
- Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section  
+ 表示[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)接口用于重定位节的地址偏移量  
   
 ## <a name="related-sections"></a>相关章节  
  [元数据接口](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

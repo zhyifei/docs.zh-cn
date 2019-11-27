@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348977"
 ---
-# <a name="variance-in-generic-interfaces-visual-basic"></a>Variance in Generic Interfaces (Visual Basic)
+# <a name="variance-in-generic-interfaces-visual-basic"></a>泛型接口中的变体（Visual Basic）
 
 .NET Framework 4 引入了对多个现有泛型接口的变体支持。 变体支持允许实现这些接口的类进行隐式转换。 下面的接口现在是变体：
 
@@ -34,7 +34,7 @@ Dim strings As IEnumerable(Of String) = New List(Of String)
 Dim objects As IEnumerable(Of Object) = strings
 ```
 
-In earlier versions of the .NET Framework, this code causes a compilation error in Visual Basic with `Option Strict On`. 但现在可使用 `strings` 代替 `objects`，如上例所示，因为 <xref:System.Collections.Generic.IEnumerable%601> 接口是协变接口。
+在 .NET Framework 的早期版本中，此代码会在 Visual Basic 中导致 `Option Strict On`编译错误。 但现在可使用 `strings` 代替 `objects`，如上例所示，因为 <xref:System.Collections.Generic.IEnumerable%601> 接口是协变接口。
 
 逆变允许方法具有的实参类型比接口的泛型形参定义的类型的派生程度更小。 若要演示逆变，假设已创建了 `BaseComparer` 类来比较 `BaseClass` 类的实例。 `BaseComparer` 类实现 `IEqualityComparer(Of BaseClass)` 接口。 因为 <xref:System.Collections.Generic.IEqualityComparer%601> 接口现在是逆变接口，因此可使用 `BaseComparer` 比较继承 `BaseClass` 类的类的实例。 下面的代码示例对此进行了演示。
 
@@ -70,7 +70,7 @@ Sub Test()
 End Sub
 ```
 
-For more examples, see [Using Variance in Interfaces for Generic Collections (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md).
+有关更多示例，请参阅[在泛型集合的接口中使用变体（Visual Basic）](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)。
 
 只有引用类型才支持使用泛型接口中的变体。 值类型不支持变体。 例如，无法将 `IEnumerable(Of Integer)` 隐式转换为 `IEnumerable(Of Object)`，因为整数由值类型表示。
 
@@ -81,7 +81,7 @@ Dim integers As IEnumerable(Of Integer) = New List(Of Integer)
 ' Dim objects As IEnumerable(Of Object) = integers
 ```
 
-还需记住，实现变体接口的类仍是固定类。 例如，虽然 <xref:System.Collections.Generic.List%601> 实现协变接口 <xref:System.Collections.Generic.IEnumerable%601>，但不能将 `List(Of Object)` 隐式转换为 `List(Of String)`。 以下代码示例阐释了这一点。
+还需记住，实现变体接口的类仍是固定类。 例如，虽然 <xref:System.Collections.Generic.List%601> 实现协变接口 <xref:System.Collections.Generic.IEnumerable%601>，但不能将 `List(Of Object)` 隐式转换为 `List(Of String)`。 此内容将在以下代码示例中说明。
 
 ```vb
 ' The following statement generates a compiler error
@@ -92,7 +92,7 @@ Dim integers As IEnumerable(Of Integer) = New List(Of Integer)
 Dim listObjects As IEnumerable(Of Object) = New List(Of String)
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在泛型集合的接口中使用变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
 - [创建变体泛型接口 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)

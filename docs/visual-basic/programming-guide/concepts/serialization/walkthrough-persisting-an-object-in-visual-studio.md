@@ -85,11 +85,11 @@ ms.locfileid: "74350399"
   
 4. 在“项目”菜单上，选择“设为启动项目”。  
   
-5. 在“项目”菜单上，选择“添加引用”。  
+5. 在“项目” 菜单上，选择“添加引用”。  
   
 6. 在“添加引用”对话框中，选择“项目”选项卡，然后选择 LoanClass 项目。  
   
-7. 单击“确定”关闭对话框。  
+7. 单击 **“确定”** 关闭对话框。  
   
 8. 在设计器中，向窗体添加四个 <xref:System.Windows.Forms.TextBox> 控件。  
   
@@ -215,7 +215,7 @@ ms.locfileid: "74350399"
   
  此时可再次生成并运行应用程序。 最初，默认值在文本框中显示。 尝试更改这些值并在第四个文本框中输入名称。 关闭该应用程序，然后重新运行。 请注意，现在文本框中将显示新值。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [序列化 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
 - [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)

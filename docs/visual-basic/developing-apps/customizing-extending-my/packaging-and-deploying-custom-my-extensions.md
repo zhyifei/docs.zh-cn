@@ -1,5 +1,5 @@
 ---
-title: Packaging and deploying custom My extensions
+title: 打包和部署自定义 My 扩展
 ms.date: 08/14/2018
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
@@ -13,40 +13,40 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74330264"
 ---
-# <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>Package and deploy custom My extensions (Visual Basic)
+# <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>打包和部署自定义 My extensions （Visual Basic）
 
-Visual Basic provides an easy way for you to deploy your custom `My` namespace extensions by using Visual Studio templates. If you are creating a project template for which your `My` extensions are an integral part of the new project type, you can just include your custom `My` extension code with the project when you export the template. For more information about exporting project templates, see [How to: Create Project Templates](/visualstudio/ide/how-to-create-project-templates).
+Visual Basic 提供了一种简单的方法，让你使用 Visual Studio 模板部署自定义 `My` 命名空间扩展。 如果创建的项目模板的 `My` 扩展是新项目类型的组成部分，则可以在导出模板时将自定义 `My` 扩展代码包含在项目中。 有关导出项目模板的详细信息，请参阅[如何：创建项目模板](/visualstudio/ide/how-to-create-project-templates)。
 
-If your custom `My` extension is in a single code file, you can export the file as an item template that users can add to any type of Visual Basic project. You can then customize the item template to enable additional capabilities and behavior for your custom `My` extension in a Visual Basic project. Those capabilities include the following:
+如果自定义 `My` 扩展位于单个代码文件中，则可以将该文件作为项模板导出，用户可以将该文件添加到任何类型的 Visual Basic 项目。 然后，你可以自定义项模板以在 Visual Basic 项目中为你的自定义 `My` 扩展启用附加功能和行为。 这些功能包括：
 
-- Allowing users to manage your custom `My` extension from the **My Extensions** page of the Visual Basic Project Designer.
+- 允许用户通过 "Visual Basic 项目设计器" 的 "**我的扩展**" 页管理您的自定义 `My` 扩展。
 
-- Automatically adding your custom `My` extension when a reference to a specified assembly is added to a project.
+- 当向项目添加对指定程序集的引用时，自动添加您的自定义 `My` 扩展。
 
-- Hiding the `My` extension item template in the **Add Item** dialog box so that it is not included in the list of project items.
+- 隐藏 "**添加项**" 对话框中的 `My` 扩展项模板，使其不包含在项目项列表中。
 
-This topic discusses how to package a custom `My` extension as a hidden item template that can be managed from the **My Extensions** page of the Visual Basic Project Designer. The custom `My` extension can also be added automatically when a reference to a specified assembly is added to a project.
+本主题讨论如何将自定义 `My` 扩展打包为隐藏项模板，该模板可从 "Visual Basic 项目设计器" 的 "**我的扩展**" 页进行管理。 当向项目添加对指定程序集的引用时，还可以自动添加自定义 `My` 扩展。
 
-## <a name="create-a-my-namespace-extension"></a>Create a My namespace extension
+## <a name="create-a-my-namespace-extension"></a>创建 My 命名空间扩展
 
-The first step in creating a deployment package for a custom `My` extension is to create the extension as a single code file. For details and guidance about how to create a custom `My` extension, see [Extending the My Namespace in Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md).
+为自定义 `My` 扩展创建部署包的第一步是将扩展创建为单个代码文件。 有关如何创建自定义 `My` 扩展的详细信息和指南，请参阅[Visual Basic 中的扩展 My 命名空间](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)。
 
-## <a name="export-a-my-namespace-extension-as-an-item-template"></a>Export a My namespace extension as an item template
+## <a name="export-a-my-namespace-extension-as-an-item-template"></a>将 My 命名空间扩展导出为项模板
 
-After you have a code file that includes your `My` namespace extension, you can export the code file as a Visual Studio item template. For instructions on how to export a file as a Visual Studio item template, see [How to: Create Item Templates](/visualstudio/ide/how-to-create-item-templates).
+具有包含 `My` 命名空间扩展的代码文件后，可以将代码文件作为 Visual Studio 项模板导出。 有关如何将文件导出为 Visual Studio 项模板的说明，请参阅[如何：创建项模板](/visualstudio/ide/how-to-create-item-templates)。
 
 > [!NOTE]
-> If your `My` namespace extension has a dependency on a particular assembly, you can customize your item template to automatically install your `My` namespace extension when a reference to that assembly is added. As a result, you will want to exclude that assembly reference when you export the code file as a Visual Studio item template.
+> 如果 `My` 命名空间扩展依赖于特定程序集，则可以自定义项模板，以便在添加对该程序集的引用时自动安装 `My` 命名空间扩展。 因此，在将代码文件导出为 Visual Studio 项模板时，你将需要排除该程序集引用。
 
-## <a name="customize-the-item-template"></a>Customize the item template
+## <a name="customize-the-item-template"></a>自定义项模板
 
-You can enable your item template to be managed from the **My Extensions** page of the Visual Basic Project Designer. You can also enable the item template to be added automatically when a reference to a specified assembly is added to a project. To enable these customizations, you will add a new file, called the CustomData file, to your template, and then add a new element to the XML in your .vstemplate file.
+你可以从 "Visual Basic 项目设计器" 的 "**我的扩展**" 页中启用要管理的项模板。 当向项目添加对指定程序集的引用时，还可以启用自动添加的项模板。 若要启用这些自定义项，请将名为 CustomData 文件的新文件添加到模板，然后将新元素添加到 .vstemplate 文件中的 XML。
 
-### <a name="add-the-customdata-file"></a>Add the CustomData file
+### <a name="add-the-customdata-file"></a>添加 CustomData 文件
 
-The CustomData file is a text file that has a file name extension of .CustomData (the file name can be set to any value meaningful to your template) and that contains XML. The XML in the CustomData file instructs Visual Basic to include your `My` extension when users use the **My Extensions** page of the Visual Basic Project Designer. You can optionally add the <`AssemblyFullName>` attribute to your CustomData file XML. This instructs Visual Basic to automatically install your custom `My` extension when a reference to a particular assembly is added to the project. You can use any text editor or XML editor to create the CustomData file, and then add it to your item template's compressed folder (.zip file).
+CustomData 文件是文件扩展名为的文本文件。CustomData （可将文件名设置为任何有意义的模板值）并包含 XML。 CustomData 文件中的 XML 指示在用户使用 Visual Basic "项目设计器" 的 "**我的扩展**" 页面时，Visual Basic 包括 `My` 扩展。 可以选择将 <`AssemblyFullName>` 特性添加到 CustomData 文件 XML。 这会指示 Visual Basic 在将特定程序集的引用添加到项目中时，自动安装自定义 `My` 扩展。 可以使用任何文本编辑器或 XML 编辑器创建 CustomData 文件，然后将其添加到项模板的压缩文件夹（.zip 文件）。
 
-For example, the following XML shows the contents of a CustomData file that will add the template item to the My Extensions folder of a Visual Basic project when a reference to the Microsoft.VisualBasic.PowerPacks.Vs.dll assembly is added to the project.
+例如，下面的 XML 显示 CustomData 文件的内容，当向项目添加对 PowerPacks 程序集的引用时，该文件会将模板项添加到 Visual Basic 项目的 "我的扩展" 文件夹。
 
 ```xml
 <VBMyExtensionTemplate
@@ -56,25 +56,25 @@ For example, the following XML shows the contents of a CustomData file that will
 />
 ```
 
-The CustomData file contains a <`VBMyExtensionTemplate>` element that has attributes as listed in the following table.
+CustomData 文件包含一个 <`VBMyExtensionTemplate>` 元素，该元素具有下表中列出的属性。
 
-|特性|描述|
+|属性|说明|
 |---|---|
-|`ID`|必须的。 A unique identifier for the extension. If the extension that has this ID has already been added to the project, the user will not be prompted to add it again.|
-|`Version`|必须的。 A version number for the item template.|
-|`AssemblyFullName`|可选。 程序集名称。 When a reference to this assembly is added to the project, the user will be prompted to add the `My` extension from this item template.|
+|`ID`|必需。 扩展的唯一标识符。 如果已将具有此 ID 的扩展添加到项目中，则不会提示用户再次添加该扩展。|
+|`Version`|必需。 项模板的版本号。|
+|`AssemblyFullName`|可选。 程序集名称。 将对此程序集的引用添加到项目时，系统将提示用户从此项模板添加 `My` 扩展。|
 
-### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>Add the \<CustomDataSignature> element to the .vstemplate file
+### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>将 \<CustomDataSignature > 元素添加到 .vstemplate 文件
 
-To identify your Visual Studio item template as a `My` namespace extension, you must also modify the .vstemplate file for your item template. You must add a `<CustomDataSignature>` element to the `<TemplateData>` element. The `<CustomDataSignature>` element must contain the text `Microsoft.VisualBasic.MyExtension`, as shown in the following example.
+若要将 Visual Studio 项模板标识为 `My` 命名空间扩展，还必须为项模板修改 .vstemplate 文件。 必须将 `<CustomDataSignature>` 元素添加到 `<TemplateData>` 元素。 `<CustomDataSignature>` 元素必须包含文本 `Microsoft.VisualBasic.MyExtension`，如下面的示例中所示。
 
 ```xml
 <CustomDataSignature>Microsoft.VisualBasic.MyExtension</CustomDataSignature>
 ```
 
-You cannot modify files in a compressed folder (.zip file) directly. You must copy the .vstemplate file from the compressed folder, modify it, and then replace the .vstemplate file in the compressed folder with your updated copy.
+不能直接修改压缩文件夹（.zip 文件）中的文件。 您必须从压缩文件夹中复制 .vstemplate 文件，对其进行修改，然后将压缩文件夹中的 .vstemplate 文件替换为更新后的副本。
 
-The following example shows the contents of a .vstemplate file that has the `<CustomDataSignature>` element added.
+下面的示例演示添加了 `<CustomDataSignature>` 元素的 .vstemplate 文件的内容。
 
 ```xml
 <VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
@@ -97,11 +97,11 @@ The following example shows the contents of a .vstemplate file that has the `<Cu
 </VSTemplate>
 ```
 
-## <a name="install-the-template"></a>Install the template
+## <a name="install-the-template"></a>安装模板
 
-To install the template, you can copy the compressed folder ( *.zip* file) to the Visual Basic item templates folder. By default, user item templates are located in *%USERPROFILE%\Documents\Visual Studio \<Version\>\Templates\ItemTemplates\Visual Basic*. Alternatively, you can publish the template as a Visual Studio Installer ( *.vsi*) file.
+若要安装模板，可以将压缩文件夹（ *.zip*文件）复制到 Visual Basic 项模板 "文件夹。 默认情况下，用户项模板位于 *%USERPROFILE%\Documents\Visual Studio \<版本\>\Templates\ItemTemplates\Visual Basic*中。 或者，可以将模板作为 Visual Studio 安装程序（ *.vsi*）文件发布。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [扩展 Visual Basic 中的 My 命名空间](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)
 - [扩展 Visual Basic 应用程序模型](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)

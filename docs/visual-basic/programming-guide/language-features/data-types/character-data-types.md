@@ -16,35 +16,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346392"
 ---
 # <a name="character-data-types-visual-basic"></a>字符数据类型 (Visual Basic)
-Visual Basic provides *character data types* to deal with printable and displayable characters. While they both deal with Unicode characters, `Char` holds a single character whereas `String` contains an indefinite number of characters.  
+Visual Basic 提供了用于处理可打印和可显示字符的*字符数据类型*。 虽然这两种方法都处理 Unicode 字符，但 `Char` 会保留一个字符，而 `String` 包含无数个字符。  
   
- For a table that displays a side-by-side comparison of the Visual Basic data types, see [Data Types](../../../../visual-basic/language-reference/data-types/index.md).  
+ 有关显示 Visual Basic 数据类型的并行比较的表，请参阅[数据类型](../../../../visual-basic/language-reference/data-types/index.md)。  
   
-## <a name="char-type"></a>Char Type  
- The `Char` data type is a single two-byte (16-bit) Unicode character. If a variable always stores exactly one character, declare it as `Char`. 例如:  
+## <a name="char-type"></a>Char 类型  
+ `Char` 的数据类型是单个双字节（16位） Unicode 字符。 如果变量始终只存储一个字符，则将其声明为 `Char`。 例如：  
   
  [!code-vb[VbVbalrCharTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#1)]
   
- Each possible value in a `Char` or `String` variable is a *code point*, or character code, in the Unicode character set. Unicode characters include the basic ASCII character set, various other alphabet letters, accents, currency symbols, fractions, diacritics, and mathematical and technical symbols.  
+ `Char` 或 `String` 变量中的每个可能值都是 Unicode 字符集中的一个*码位*或字符代码。 Unicode 字符包含基本 ASCII 字符集、各种其他字母数字、重音、货币符号、分数、音调符号和数学符号以及技术符号。  
   
 > [!NOTE]
-> The Unicode character set reserves the code points D800 through DFFF (55296 through 55551 decimal) for *surrogate pairs*, which require two 16-bit values to represent a single code point. A `Char` variable cannot hold a surrogate pair, and a `String` uses two positions to hold such a pair.  
+> Unicode 字符集为*代理项对*保留了 D800 到 DFFF （55296到 55551 decimal）的代码点，这需要 2 16 位值来表示单个码位。 `Char` 变量不能包含代理项对，`String` 使用两个位置来保存这两个位置对。  
   
- For more information, see [Char Data Type](../../../../visual-basic/language-reference/data-types/char-data-type.md).  
+ 有关详细信息，请参阅[Char Data Type](../../../../visual-basic/language-reference/data-types/char-data-type.md)。  
   
-## <a name="string-type"></a>String Type  
- The `String` data type is a sequence of zero or more two-byte (16-bit) Unicode characters. If a variable can contain an indefinite number of characters, declare it as `String`. 例如:  
+## <a name="string-type"></a>字符串类型  
+ `String` 的数据类型是由零个或多个双字节（16位） Unicode 字符组成的序列。 如果变量可以包含无限数量的字符，则将其声明为 `String`。 例如：  
   
  [!code-vb[VbVbalrCharTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#2)]
   
- For more information, see [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md).  
+ 有关详细信息，请参阅[String 数据类型](../../../../visual-basic/language-reference/data-types/string-data-type.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [复合数据类型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic 中的泛型类型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [类型字符](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

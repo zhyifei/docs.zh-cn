@@ -37,27 +37,27 @@ HRESULT GetTypeSpecFromToken (
   
 ## <a name="parameters"></a>参数  
  `typespec`  
- [in] The TypeSpec token associated with the requested metadata signature.  
+ 中与请求的元数据签名关联的 TypeSpec 标记。  
   
  `ppvSig`  
- [out] A pointer to the binary metadata signature.  
+ 弄指向二进制元数据签名的指针。  
   
  `pcbSig`  
- [out] The size, in bytes, of the metadata signature.  
+ 弄元数据签名的大小（以字节为单位）。  
   
 ## <a name="return-value"></a>返回值  
- An HRESULT that indicates success or failure. Failures can be tested with the FAILED macro.  
+ 一个指示成功或失败的 HRESULT。 可以通过失败的宏测试失败。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

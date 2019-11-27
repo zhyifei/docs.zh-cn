@@ -18,26 +18,26 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351280"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
-Specifies that a variable or property can be read but not written.
+指定可以读取但不能写入变量或属性。
 
 ## <a name="remarks"></a>备注
 
 ## <a name="rules"></a>规则
 
-- **Declaration Context.** 只能在模块级别使用 `ReadOnly`。 This means the declaration context for a `ReadOnly` element must be a class, structure, or module, and cannot be a source file, namespace, or procedure.
+- **声明上下文。** 只能在模块级别使用 `ReadOnly`。 这意味着 `ReadOnly` 元素的声明上下文必须是类、结构或模块，不能是源文件、命名空间或过程。
 
-- **Combined Modifiers.** You cannot specify `ReadOnly` together with `Static` in the same declaration.
+- **组合修饰符。** 不能在同一声明中同时指定 `ReadOnly` 和 `Static`。
 
-- **Assigning a Value.** Code consuming a `ReadOnly` property cannot set its value. But code that has access to the underlying storage can assign or change the value at any time.
+- **赋值。** 使用 `ReadOnly` 属性的代码不能设置其值。 但有权访问基础存储的代码可以随时分配或更改值。
 
-     You can assign a value to a `ReadOnly` variable only in its declaration or in the constructor of a class or structure in which it is defined.
+     只能在其声明中或在定义它的类或结构的构造函数中为 `ReadOnly` 变量赋值。
 
-## <a name="when-to-use-a-readonly-variable"></a>When to Use a ReadOnly Variable
+## <a name="when-to-use-a-readonly-variable"></a>何时使用 ReadOnly 变量
 
-There are situations in which you cannot use a [Const Statement](../../../visual-basic/language-reference/statements/const-statement.md) to declare and assign a constant value. For example, the `Const` statement might not accept the data type you want to assign, or you might not be able to compute the value at compile time with a constant expression. You might not even know the value at compile time. In these cases, you can use a `ReadOnly` variable to hold a constant value.
+在某些情况下，不能使用[Const 语句](../../../visual-basic/language-reference/statements/const-statement.md)来声明和分配常量值。 例如，`Const` 语句可能不接受您要分配的数据类型，或者您可能无法在编译时使用常量表达式来计算值。 在编译时，您甚至不知道值。 在这些情况下，可以使用 `ReadOnly` 变量来保存常量值。
 
 > [!IMPORTANT]
-> If the data type of the variable is a reference type, such as an array or a class instance, its members can be changed even if the variable itself is `ReadOnly`. 下面的示例阐释了这一点。
+> 如果该变量的数据类型是引用类型（如数组或类实例），则即使该变量本身是 `ReadOnly`的，也可以更改其成员。 下面的示例阐释了这一点。
 
 ```vb
 ReadOnly characterArray() As Char = {"x"c, "y"c, "z"c}
@@ -46,13 +46,13 @@ Sub ChangeArrayElement()
 End Sub
 ```
 
-When initialized, the array pointed to by `characterArray()` holds "x", "y", and "z". Because the variable `characterArray` is `ReadOnly`, you cannot change its value once it is initialized; that is, you cannot assign a new array to it. However, you can change the values of one or more of the array members. Following a call to the procedure `ChangeArrayElement`, the array pointed to by `characterArray()` holds "x", "M", and "z".
+初始化后，由 `characterArray()` 的数组包含 "x"、"y" 和 "z"。 由于变量 `characterArray` `ReadOnly`，因此在初始化后无法更改其值;也就是说，不能向其分配新数组。 但是，您可以更改一个或多个数组成员的值。 调用过程 `ChangeArrayElement`后，`characterArray()` 指向的数组包含 "x"、"M" 和 "z"。
 
-Note that this is similar to declaring a procedure parameter to be [ByVal](byval.md), which prevents the procedure from changing the calling argument itself but allows it to change its members.
+请注意，这类似于将过程参数声明为[ByVal](byval.md)，这会阻止过程更改调用自变量本身，但允许该过程更改其成员。
 
 ## <a name="example"></a>示例
 
-The following example defines a `ReadOnly` property for the date on which an employee was hired. The class stores the property value internally as a `Private` variable, and only code inside the class can change that value. However, the property is `Public`, and any code that can access the class can read the property.
+下面的示例定义了员工雇用日期的 `ReadOnly` 属性。 类将属性值作为 `Private` 变量在内部存储，并且只有类中的代码可以更改该值。 但是，属性是 `Public`的，任何可访问类的代码都可以读取属性。
 
 [!code-vb[VbVbalrKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#4)]
 
@@ -61,7 +61,7 @@ The following example defines a `ReadOnly` property for the date on which an emp
 - [Dim 语句](../statements/dim-statement.md)
 - [Property 语句](../statements/property-statement.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WriteOnly](writeonly.md)
 - [关键字](../keywords/index.md)

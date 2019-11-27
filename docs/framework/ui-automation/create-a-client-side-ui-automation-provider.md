@@ -22,12 +22,12 @@ ms.locfileid: "74433651"
  本主题所包含的代码示例演示如何实现客户端 UI 自动化提供程序。  
   
 ## <a name="example"></a>示例  
- The following example code can be built into a dynamic-link library (DLL) that implements a very simple client-side provider for a console window. 此代码不具有任何有用的功能，只是用于演示设置提供程序程序集的基本步骤，该程序集可由 UI 自动化客户端应用程序进行注册。  
+ 下面的示例代码可内置于一个动态链接库（DLL）中，该库为控制台窗口实现非常简单的客户端提供程序。 此代码不具有任何有用的功能，只是用于演示设置提供程序程序集的基本步骤，该程序集可由 UI 自动化客户端应用程序进行注册。  
   
  [!code-csharp[UIAClientSideProvider_snip#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClientSideProvider_snip/CSharp/CSProviderProgram.cs#101)]
  [!code-vb[UIAClientSideProvider_snip#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClientSideProvider_snip/visualbasic/csproviderprogram.vb#101)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UI 自动化提供程序概述](ui-automation-providers-overview.md)
 - [注册客户端提供程序程序集](register-a-client-side-provider-assembly.md)

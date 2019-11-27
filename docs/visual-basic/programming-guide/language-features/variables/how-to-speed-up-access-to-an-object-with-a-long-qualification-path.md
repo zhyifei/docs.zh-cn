@@ -17,19 +17,19 @@ ms.locfileid: "74346821"
 ---
 # <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>如何：加速访问具有长限定路径的对象 (Visual Basic)
 
-If you frequently access an object that requires a qualification path of several methods and properties, you can speed up your code by not repeating the qualification path.
+如果经常访问的对象需要多个方法和属性的限定路径，则可以通过不重复限定路径来加快代码的速度。
 
-There are two ways you can avoid repeating the qualification path. You can assign the object to a variable, or you can use it in a `With`...`End With` block.
+可以通过两种方法来避免重复限定路径。 可以将对象分配给一个变量，也可以在 `With`...`End With` 块中使用它。
 
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>To speed up access to a heavily qualified object by assigning it to a variable
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>通过将严重限定对象赋给变量来加快对该对象的访问速度
 
-1. Declare a variable of the type of the object that you are accessing frequently. Specify the qualification path in the initialization part of the declaration.
+1. 声明经常访问的对象类型的变量。 指定声明的初始化部分中的限定路径。
 
     ```vb
     Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl
     ```
 
-2. Use the variable to access the object's members.
+2. 使用变量访问对象的成员。
 
     ```vb
     ctrlActv.Text = "Test"
@@ -37,15 +37,15 @@ There are two ways you can avoid repeating the qualification path. You can assig
     ctrlActv.Show()
     ```
 
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>To speed up access to a heavily qualified object by using a With...End With block
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>若要通过使用 With，加速对严重限定对象的访问结尾为块
 
-1. Put the qualification path in a `With` statement.
+1. 将限定路径放在 `With` 语句中。
 
     ```vb
     With someForm.ActiveForm.ActiveControl
     ```
 
-2. Access the object's members inside the `With` block, before the `End With` statement.
+2. 在 `End With` 语句之前访问 `With` 块内的对象成员。
 
     ```vb
         .Text = "Test"
@@ -54,7 +54,7 @@ There are two ways you can avoid repeating the qualification path. You can assig
     End With
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [对象变量](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [With...End With 语句](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)

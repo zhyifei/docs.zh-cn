@@ -16,30 +16,30 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341231"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>通过值传递参数和通过引用传递参数之间的差异 (Visual Basic)
-When you pass one or more arguments to a procedure, each argument corresponds to an underlying programming element in the calling code. You can pass either the value of this underlying element, or a reference to it. This is known as the *passing mechanism*.  
+将一个或多个自变量传递给过程时，每个参数都对应于调用代码中的基础编程元素。 可以传递此基础元素的值或对其的引用。 这称为*传递机制*。  
   
 ## <a name="passing-by-value"></a>按值传递  
- You pass an argument *by value* by specifying the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) keyword for the corresponding parameter in the procedure definition. When you use this passing mechanism, Visual Basic copies the value of the underlying programming element into a local variable in the procedure. The procedure code does not have any access to the underlying element in the calling code.  
+ 通过*值*传递自变量，方法是在过程定义中为相应的参数指定[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)关键字。 使用此传递机制时，Visual Basic 会将基础编程元素的值复制到过程中的局部变量中。 过程代码对调用代码中的基础元素没有任何访问权限。  
   
-## <a name="passing-by-reference"></a>Passing by Reference  
- You pass an argument *by reference* by specifying the [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword for the corresponding parameter in the procedure definition. When you use this passing mechanism, Visual Basic gives the procedure a direct reference to the underlying programming element in the calling code.  
+## <a name="passing-by-reference"></a>按引用传递  
+ 通过在过程定义中为相应的参数指定[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)关键字，可以通过*引用*传递自变量。 使用此传递机制时，Visual Basic 为过程提供对调用代码中的基础编程元素的直接引用。  
   
-## <a name="passing-mechanism-and-element-type"></a>Passing Mechanism and Element Type  
- The choice of passing mechanism is not the same as the classification of the underlying element type. Passing by value or by reference refers to what Visual Basic supplies to the procedure code. A value type or reference type refers to how a programming element is stored in memory.  
+## <a name="passing-mechanism-and-element-type"></a>传递机制和元素类型  
+ 选择的传递机制与基础元素类型的分类不同。 按值或按引用传递是指 Visual Basic 向过程代码提供的内容。 值类型或引用类型是指编程元素在内存中的存储方式。  
   
- However, the passing mechanism and element type are interrelated. The value of a reference type is a pointer to the data elsewhere in memory. This means that when you pass a reference type by value, the procedure code has a pointer to the underlying element's data, even though it cannot access the underlying element itself. For example, if the element is an array variable, the procedure code does not have access to the variable itself, but it can access the array members.  
+ 不过，传递机制和元素类型是相互关联的。 引用类型的值是指向内存中其他位置的数据的指针。 这意味着，当你按值传递引用类型时，过程代码将具有指向基础元素数据的指针，即使它无法访问基础元素本身。 例如，如果元素是一个数组变量，则过程代码不能访问变量本身，但它可以访问数组成员。  
   
-## <a name="ability-to-modify"></a>Ability to Modify  
- When you pass a nonmodifiable element as an argument, the procedure can never modify it in the calling code, whether it is passed `ByVal` or `ByRef`.  
+## <a name="ability-to-modify"></a>修改能力  
+ 将不可更改元素作为参数传递时，此过程将永远不能在调用代码中修改它，无论是传递 `ByVal` 还是 `ByRef`。  
   
- For a modifiable element, the following table summarizes the interaction between the element type and the passing mechanism.  
+ 对于可修改元素，下表总结了元素类型和传递机制之间的交互。  
   
-|元素类型|Passed `ByVal`|Passed `ByRef`|  
+|元素类型|传递的 `ByVal`|传递的 `ByRef`|  
 |------------------|--------------------|--------------------|  
-|Value type (contains only a value)|The procedure cannot change the variable or any of its members.|The procedure can change the variable and its members.|  
-|Reference type (contains a pointer to a class or structure instance)|The procedure cannot change the variable but can change members of the instance to which it points.|The procedure can change the variable and members of the instance to which it points.|  
+|值类型（只包含值）|此过程无法更改变量或其任何成员。|该过程可以更改变量及其成员。|  
+|引用类型（包含指向类或结构实例的指针）|此过程无法更改变量，但可以更改它所指向的实例的成员。|该过程可以更改变量以及它所指向的实例的成员。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [过程](./index.md)
 - [过程参数和自变量](./procedure-parameters-and-arguments.md)

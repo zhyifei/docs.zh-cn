@@ -24,7 +24,7 @@ ms.locfileid: "74447564"
 ---
 # <a name="imethodmallocalloc-method"></a>IMethodMalloc::Alloc 方法
 
-Attempts to allocate a specified amount of memory for a new Microsoft intermediate language (MSIL) function body.
+尝试为新的 Microsoft 中间语言（MSIL）函数体分配指定的内存量。
 
 ## <a name="syntax"></a>语法
 
@@ -37,13 +37,13 @@ PVOID Alloc (
 ## <a name="parameters"></a>参数
 
 `cb`\
-[in] The number of bytes to allocate for the method body.
+中要为方法主体分配的字节数。
 
 ## <a name="remarks"></a>备注
 
- The allocated memory will begin at an address greater than the base address of the module that is associated with this allocator. In other words, each allocator is created for a particular module, and will attempt to allocate memory at a positive offset from its base address. If `Alloc` fails to allocate the requested number of bytes at an address greater than the base address of the module, it returns E_OUTOFMEMORY, regardless of the actual amount of memory space available.
+ 分配的内存将以大于与此分配器关联的模块的基址的地址开始。 换言之，每个分配器都是为特定模块创建的，并将尝试从其基址的正偏移量处分配内存。 如果 `Alloc` 无法在大于模块基址的地址分配请求的字节数，则将返回 E_OUTOFMEMORY，而不考虑实际可用的内存空间量。
 
- The `Alloc` method should be used in conjunction with the [ICorProfilerInfo::SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) method.
+ 应将 `Alloc` 方法与[ICorProfilerInfo：： SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md)方法结合使用。
 
 ## <a name="requirements"></a>要求
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
@@ -54,6 +54,6 @@ PVOID Alloc (
 
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMethodMalloc 接口](imethodmalloc-interface.md)

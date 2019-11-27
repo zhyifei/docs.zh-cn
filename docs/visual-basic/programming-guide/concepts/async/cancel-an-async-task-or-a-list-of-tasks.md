@@ -9,11 +9,11 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347967"
 ---
-# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Cancel an Async Task or a List of Tasks (Visual Basic)
+# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>取消异步任务或任务列表（Visual Basic）
 
 如果不想等待异步应用程序完成，可以设置一个按钮用来取消它。 通过遵循本主题中的示例，可以为下载一个或一组网站内容的应用程序添加一个取消按钮。
 
-The examples use the UI that [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) describes.
+这些示例使用[微调异步应用程序（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)的 UI。
 
 > [!NOTE]
 > 若要运行该示例，计算机上必须安装有 Visual Studio 2012 或更高版本和 .NET Framework 4.5 或更高版本。
@@ -38,7 +38,7 @@ The examples use the UI that [Fine-Tuning Your Async Application (Visual Basic)]
 
      选择 Ctrl+F5 键运行该项目，而不进行调试。
 
- If you don't want to download the project, you can review the MainWindow.xaml.vb files at the end of this topic.
+ 如果不想下载项目，可在本主题末尾处查看 Mainwindow.xaml 文件的内容。
 
 ### <a name="building-the-example"></a>生成示例
 
@@ -46,7 +46,7 @@ The examples use the UI that [Fine-Tuning Your Async Application (Visual Basic)]
 
 要自行生成示例，请按“下载示例”部分的说明逐步操作，选择“StarterCode”而不是“CancelATask”作为“启动项目”。
 
-Then add the following changes to the MainWindow.xaml.vb file of that project.
+然后，将以下更改添加到该项目的 Mainwindow.xaml 文件中。
 
 1. 声明一个 `CancellationTokenSource` 变量 `cts`，它作用于所有访问它的方法。
 
@@ -78,7 +78,7 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
       cts = New CancellationTokenSource()
       ```
 
-    - 在 `AccessTheWebAsync` 调用中（该操作下载指定网站的内容），将 `cts` 的 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> 属性作为参数发送。 如果请求取消，则 `Token` 属性传播消息。 如果用户选择取消下载操作，请添加显示消息的 catch 块。 下列代码显示这些更改。
+    - 在 `AccessTheWebAsync` 调用中（该操作下载指定网站的内容），将 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> 的 `cts` 属性作为参数发送。 如果请求取消，则 `Token` 属性传播消息。 如果用户选择取消下载操作，请添加显示消息的 catch 块。 下列代码显示这些更改。
 
       ```vb
       Try
@@ -97,7 +97,7 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
       End Try
       ```
 
-4. 在 `AccessTheWebAsync` 中，使用 <xref:System.Net.Http.HttpClient> 类型中 `GetAsync` 方法的 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 重载来下载网站内容。 将 `ct`（`AccessTheWebAsync` 的 <xref:System.Threading.CancellationToken> 参数）作为第二个参数传递。 如果用户选择“取消”按钮，则令牌携带消息。
+4. 在 `AccessTheWebAsync` 中，使用 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 类型中 `GetAsync` 方法的 <xref:System.Net.Http.HttpClient> 重载来下载网站内容。 将 `ct`（<xref:System.Threading.CancellationToken> 的 `AccessTheWebAsync` 参数）作为第二个参数传递。 如果用户选择“取消”按钮，则令牌携带消息。
 
     下列代码显示 `AccessTheWebAsync` 中的更改。
 
@@ -124,14 +124,14 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
     End Function
     ```
 
-5. If you don’t cancel the program, it produces the following output:
+5. 如果不取消该程序，它将生成以下输出：
 
     ```console
     Ready to download.
     Length of the downloaded string: 158125.
     ```
 
-    If you choose the **Cancel** button before the program finishes downloading the content, the program produces the following output:
+    如果在程序完成下载内容之前选择 "**取消**" 按钮，则程序会生成以下输出：
 
     ```console
     Ready to download.
@@ -158,7 +158,7 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
 
      选择 Ctrl+F5 键运行该项目，而不进行调试。
 
- If you don't want to download the project, you can review the MainWindow.xaml.vb files at the end of this topic.
+ 如果不想下载项目，可在本主题末尾处查看 Mainwindow.xaml 文件的内容。
 
 ### <a name="building-the-example"></a>生成示例
 
@@ -221,7 +221,7 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
     Await AccessTheWebAsync(cts.Token)
     ```
 
-5. If you don’t cancel the program, it produces the following output:
+5. 如果不取消该程序，它将生成以下输出：
 
     ```console
     Length of the downloaded string: 35939.
@@ -261,7 +261,7 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
 
 ### <a name="cancel-a-task-example"></a>取消任务示例
 
-The following code is the complete MainWindow.xaml.vb file for the example that cancels a single task.
+下面的代码是取消单个任务的示例的完整 Mainwindow.xaml 文件。
 
 ```vb
 ' Add an Imports directive and a reference for System.Net.Http.
@@ -346,7 +346,7 @@ End Class
 
 ### <a name="cancel-a-list-of-tasks-example"></a>取消任务列表示例
 
-The following code is the complete MainWindow.xaml.vb file for the example that cancels a list of tasks.
+下面的代码是取消任务列表的示例的完整 Mainwindow.xaml 文件。
 
 ```vb
 ' Add an Imports directive and a reference for System.Net.Http.
@@ -463,10 +463,10 @@ End Class
 ' Downloads canceled.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
 - [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [微调异步应用程序 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [异步示例：微调应用程序](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）

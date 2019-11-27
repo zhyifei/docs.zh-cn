@@ -25,7 +25,7 @@ ms.locfileid: "74439236"
 # <a name="icorprofilerinfogetcodeinfo-method"></a>ICorProfilerInfo::GetCodeInfo 方法
 获取与指定函数 ID 关联的本机代码的范围。  
   
- 此方法已过时。 Use the [ICorProfilerInfo2::GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) method instead.  
+ 此方法已过时。 改为使用[ICorProfilerInfo2：： GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,9 +58,9 @@ HRESULT GetCodeInfo(
   
  **库：** CorGuids.lib  
   
- **.NET Framework Versions:** 1.0  
+ **.NET Framework 版本：** 1。0  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

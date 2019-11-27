@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431402"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout 方法
-获取有关字符串对象布局的信息。 This method is deprecated in the .NET Framework 4, and is superseded by the [ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) method.  
+获取有关字符串对象布局的信息。 此方法在 .NET Framework 4 中已弃用，并且被[ICorProfilerInfo3：： GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md)方法取代。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,27 +36,27 @@ HRESULT GetStringLayout(
   
 ## <a name="parameters"></a>参数  
  `pBufferLengthOffset`  
- [out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string. The length is stored as a `DWORD`.  
+ 弄一个指针，它指向存储字符串长度的位置相对于 `ObjectID` 指针的位置偏移量。 长度作为 `DWORD`存储。  
   
 > [!NOTE]
-> This parameter returns the length of the string itself, not the length of the buffer. The length of the buffer is no longer available.  
+> 此参数返回字符串本身的长度，而不是缓冲区的长度。 缓冲区的长度不再可用。  
   
  `PStringLengthOffset`  
- [out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself. The length is stored as a `DWORD`.  
+ 弄一个指针，它指向存储字符串本身的长度的位置相对于 `ObjectID` 指针的偏移量。 长度作为 `DWORD`存储。  
   
  `pBufferOffset`  
- [out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, that stores the string of wide characters.  
+ 弄一个指针，它指向存储宽字符字符串的缓冲区相对于 `ObjectID` 指针的偏移量。  
   
 ## <a name="remarks"></a>备注  
- The `GetStringLayout` method gets the offsets, relative to the `ObjectID` pointer, of the locations in which the following are stored:  
+ `GetStringLayout` 方法获取以下位置的相对于 `ObjectID` 指针的偏移量：  
   
-- The length of the string's buffer.  
+- 字符串缓冲区的长度。  
   
-- The length of the string itself.  
+- 字符串本身的长度。  
   
-- The buffer that contains the actual string of wide characters.  
+- 包含宽字符实际字符串的缓冲区。  
   
- Strings may be null-terminated.  
+ 字符串可以以 null 结尾。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -67,7 +67,7 @@ HRESULT GetStringLayout(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

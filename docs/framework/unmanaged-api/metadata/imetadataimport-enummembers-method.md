@@ -39,42 +39,42 @@ HRESULT EnumMembers (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in，out]指向枚举器的指针。  
   
  `cl`  
- [in] A TypeDef token representing the type whose members are to be enumerated.  
+ 中一个 TypeDef 标记，表示要枚举其成员的类型。  
   
  `rMembers`  
- [out] The array used to hold the MemberDef tokens.  
+ 弄用于保存 MemberDef 标记的数组。  
   
  `cMax`  
  [in] `rMembers` 数组的最大大小。  
   
  `pcTokens`  
- [out] The actual number of MemberDef tokens returned in `rMembers`.  
+ 弄`rMembers`中返回的 MemberDef 令牌的实际数量。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMembers` returned successfully.|  
-|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumMembers` 成功返回。|  
+|`S_FALSE`|没有要枚举的 MemberDef 令牌。 在这种情况下，`pcTokens` 为零。|  
   
 ## <a name="remarks"></a>备注  
- When enumerating collections of members for a class, `EnumMembers` returns only members (fields and methods, but **not** properties or events) defined directly on the class. It does not return any members that the class inherits, even if the class provides an implementation for those inherited members. To enumerate inherited members, the caller must explicitly walk the inheritance chain. Note that the rules for the inheritance chain may vary depending on the language or compiler that emitted the original metadata.
+ 枚举类的成员集合时，`EnumMembers` 仅返回直接在类上定义的成员（字段和方法，但**不**是属性或事件）。 即使该类为这些继承成员提供了实现，它也不会返回类继承的任何成员。 若要枚举继承成员，调用方必须显式遍历继承链。 请注意，根据发出原始元数据的语言或编译器，继承链的规则可能会有所不同。
  
- Properties and events are not enumerated by `EnumMembers`. To enumerate those, use [EnumProperties](imetadataimport-enumproperties-method.md) or [EnumEvents](imetadataimport-enumevents-method.md).
+ `EnumMembers`不会枚举属性和事件。 若要枚举这些枚举，请使用[EnumProperties](imetadataimport-enumproperties-method.md)或[EnumEvents](imetadataimport-enumevents-method.md)。
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

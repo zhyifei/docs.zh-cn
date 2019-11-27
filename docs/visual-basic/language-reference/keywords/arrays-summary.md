@@ -12,16 +12,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349936"
 ---
 # <a name="arrays-summary-visual-basic"></a>数组摘要 (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Visual Basic 语言关键字和运行时库成员按用途和使用进行组织。  
   
-|操作|语言元素|  
+|操作|Language 元素|  
 |------------|----------------------|  
-|Verify an array.|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|  
-|Declare and initialize an array.|[Dim](../../../visual-basic/language-reference/statements/dim-statement.md), [Private](../../../visual-basic/language-reference/modifiers/private.md), [Public](../../../visual-basic/language-reference/modifiers/public.md), [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
-|Find the limits of an array.|<xref:Microsoft.VisualBasic.Information.LBound%2A>，<xref:Microsoft.VisualBasic.Information.UBound%2A>|  
-|Reinitialize an array|[Erase](../../../visual-basic/language-reference/statements/erase-statement.md), [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
+|验证数组。|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|  
+|声明并初始化数组。|[Dim](../../../visual-basic/language-reference/statements/dim-statement.md)、 [Private](../../../visual-basic/language-reference/modifiers/private.md)、 [Public](../../../visual-basic/language-reference/modifiers/public.md)、 [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
+|查找数组的限制。|<xref:Microsoft.VisualBasic.Information.LBound%2A>, <xref:Microsoft.VisualBasic.Information.UBound%2A>|  
+|重新初始化数组|[Erase](../../../visual-basic/language-reference/statements/erase-statement.md)， [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [关键字](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 运行库成员](../../../visual-basic/language-reference/runtime-library-members.md)

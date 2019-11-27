@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435951"
 ---
 # <a name="inotifysource2setnotifyfilter-method"></a>INotifySource2::SetNotifyFilter 方法
-Assigns a notification filter for use with this source.  
+分配用于此源的通知筛选器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,18 +37,18 @@ HRESULT SetNotifyFilter
   
 ## <a name="parameters"></a>参数  
  `in_NotifyFilter`  
- [in] A bitwise combination of the [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) enumeration values that identify callbacks for the debugger API.  
+ 中[NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)枚举值的按位组合，这些值用于标识调试器 API 的回调。  
   
  `in_pUserThreadFilter`  
- [in] A pointer to a [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) structure that identifies threads for the debugger API.  
+ 中一个指针，指向用于标识调试器 API 的线程的[USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)结构。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds.  
+ 如果方法成功，则 S_OK。  
   
 ## <a name="requirements"></a>要求  
- **Header:** ProtocolNotify2.idl  
+ **标头：** ProtocolNotify2 .idl  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [INotifySource2 接口](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
 - [INotifyConnection2 接口](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)

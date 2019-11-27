@@ -16,7 +16,7 @@ ms.locfileid: "74351423"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out（泛型修饰符）(Visual Basic)
 
-For generic type parameters, the `Out` keyword specifies that the type is covariant.
+对于泛型类型参数，`Out` 关键字指定该类型是协变的。
 
 ## <a name="remarks"></a>备注
 
@@ -37,11 +37,11 @@ For generic type parameters, the `Out` keyword specifies that the type is covari
 
 - 类型参数不用作接口方法的泛型约束。
 
-In a generic delegate, a type parameter can be declared covariant if it is used only as a method return type and not used for method arguments.
+在泛型委托中，如果类型参数仅用作方法返回类型并且不用于方法参数，则可以声明为协变。
 
 引用类型支持协变和逆变，但值类型不支持它们。
 
-In Visual Basic, you cannot declare events in covariant interfaces without specifying the delegate type. Also, covariant interfaces cannot have nested classes, enums, or structures, but they can have nested interfaces.
+在 Visual Basic 中，如果不指定委托类型，则不能在协变接口中声明事件。 此外，协变接口不能具有嵌套的类、枚举或结构，但它们可以具有嵌套接口。
 
 ## <a name="behavior"></a>行为
 
@@ -57,11 +57,11 @@ In Visual Basic, you cannot declare events in covariant interfaces without speci
 
 ## <a name="example"></a>示例
 
-以下示例演示如何声明、实例化和调用协变泛型委托。 It also shows how you can use implicit conversion for delegate types.
+以下示例演示如何声明、实例化和调用协变泛型委托。 它还演示了如何对委托类型使用隐式转换。
 
 [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [泛型接口中的变体](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
 - [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)

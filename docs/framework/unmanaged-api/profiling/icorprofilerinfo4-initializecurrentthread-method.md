@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445724"
 ---
 # <a name="icorprofilerinfo4initializecurrentthread-method"></a>ICorProfilerInfo4::InitializeCurrentThread 方法
-Initializes the current thread in advance of subsequent profiler API calls on the same thread, so that deadlock can be avoided.  
+在同一线程上的后续探查器 API 调用之前初始化当前线程，以便避免死锁。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,10 +32,10 @@ HRESULT InitializeCurrentThread ();
 ```  
   
 ## <a name="remarks"></a>备注  
- We recommend that you call `InitializeCurrentThread` on any thread that will call a profiler API while there are suspended threads. This method is typically used by sampling profilers that create their own thread to call the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method to perform stack walks while the target thread is suspended. By calling `InitializeCurrentThread` once when the profiler first creates the sampling thread, profilers can ensure that lazy per-thread initialization that the CLR would otherwise perform during the first call to `DoStackSnapshot` can now occur safely when no other threads are suspended.  
+ 建议在存在挂起的线程时，对将调用探查器 API 的任何线程调用 `InitializeCurrentThread`。 此方法通常由创建自己的线程的探查器使用，用来调用[ICorProfilerInfo2：:D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)方法，在目标线程挂起时执行堆栈遍历。 通过在探查器首次创建采样线程时调用 `InitializeCurrentThread` 一次，探查器可以确保在第一次调用 `DoStackSnapshot` 时，CLR 将以其他方式执行的延迟的每个线程初始化，而不会挂起其他线程。  
   
 > [!NOTE]
-> `InitializeCurrentThread` does the initialization in advance to finish tasks that take locks, and may deadlock. Call `InitializeCurrentThread` only when there are no suspended threads.  
+> `InitializeCurrentThread` 会提前执行初始化来完成接受锁定的任务，并可能导致死锁。 仅当没有挂起的线程时才调用 `InitializeCurrentThread`。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -46,7 +46,7 @@ HRESULT InitializeCurrentThread ();
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo4 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
 - [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

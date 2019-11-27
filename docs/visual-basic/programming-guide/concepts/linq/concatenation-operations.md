@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345674"
 ---
-# <a name="concatenation-operations-visual-basic"></a>Concatenation Operations (Visual Basic)
+# <a name="concatenation-operations-visual-basic"></a>串联运算（Visual Basic）
 串联是指将一个序列附加到另一个序列的操作。  
   
  下图描绘了两个字符序列的串联操作。  
@@ -20,12 +20,12 @@ ms.locfileid: "74345674"
   
 ## <a name="methods"></a>方法  
   
-|方法名|描述|Visual Basic Query Expression Syntax|详细信息|  
+|方法名|说明|Visual Basic 查询表达式语法|更多信息|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |Concat|连接两个序列以组成一个序列。|不适用。|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Linq>
 - [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [如何：合并和比较字符串集合（LINQ）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)

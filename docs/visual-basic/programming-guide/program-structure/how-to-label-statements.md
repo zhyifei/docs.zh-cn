@@ -16,26 +16,26 @@ ms.locfileid: "74347385"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>如何：标记语句 (Visual Basic)
 
-Statement blocks are made up of lines of code delimited by colons. Lines of code preceded by an identifying string or integer are said to be *labeled*. Statement labels are used to mark a line of code to identify it for use with statements such as `On Error Goto`.
+语句块由用冒号分隔的代码行组成。 以标识字符串或整数开头的代码行称为 "*标记*"。 语句标签用于标记代码行，以将其标识为与 `On Error Goto`等语句一起使用。
 
-Labels may be either valid Visual Basic identifiers—such as those that identify programming elements—or integer literals. A label must appear at the beginning of a line of source code and must be followed by a colon, regardless of whether it is followed by a statement on the same line.
+标签可以是有效 Visual Basic 标识符（如标识编程元素的标识符），也可以是整数文本。 标签必须出现在源代码行的开头，并且必须后跟一个冒号，而不考虑它是否后跟同一行中的语句。
 
-The compiler identifies labels by checking whether the beginning of the line matches any already-defined identifier. If it does not, the compiler assumes it is a label.
+编译器通过检查行首是否与任何已定义的标识符匹配来标识标签。 如果不是，编译器将假定它是一个标签。
 
-Labels have their own declaration space and do not interfere with other identifiers. A label's scope is the body of the method. Label declaration takes precedence in any ambiguous situation.
+标签具有自己的声明空间，不会干扰其他标识符。 标签的范围是方法的主体。 标签声明优先于任何不明确的情况。
 
 > [!NOTE]
-> Labels can be used only on executable statements inside methods.
+> 标签只能用于方法中的可执行语句。
 
-## <a name="to-label-a-line-of-code"></a>To label a line of code
+## <a name="to-label-a-line-of-code"></a>为代码行添加标签
 
-Place an identifier, followed by a colon, at the beginning of the line of source code.
+在源代码行的开头放置一个标识符，后跟一个冒号。
 
-For example, the following lines of code are labeled with `Jump` and `120`, respectively:
+例如，以下代码行将分别标记为 `Jump` 和 `120`：
 
 [!code-vb[VbVbalrStatements#708](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#708)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [语句](../../../visual-basic/programming-guide/language-features/statements.md)
 - [已声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

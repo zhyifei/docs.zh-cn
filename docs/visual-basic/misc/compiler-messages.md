@@ -13,4 +13,4 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353303"
 ---
 # <a name="visual-basic-compiler-messages"></a>Visual Basic 编译器消息
-This section contains the Visual Basic error messages that occur at compile time.
+本部分包含编译时出现的 Visual Basic 错误消息。

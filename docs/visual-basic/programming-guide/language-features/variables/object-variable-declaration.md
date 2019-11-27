@@ -20,20 +20,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351815"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>对象变量声明 (Visual Basic)
-You use a normal declaration statement to declare an object variable. For the data type, you specify either `Object` (that is, the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)) or a more specific class from which the object is to be created.  
+使用 normal 声明语句声明对象变量。 对于数据类型，可以指定 `Object` （即[对象数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)），也可以指定要从中创建对象的更具体的类。  
   
- Declaring a variable as `Object` is the same as declaring it as <xref:System.Object?displayProperty=nameWithType>.  
+ 将变量声明为 `Object` 与将其声明为 <xref:System.Object?displayProperty=nameWithType>相同。  
   
- When you declare a variable with a specific object class, it can access all the methods and properties exposed by that class and the classes from which it inherits. If you declare the variable with <xref:System.Object>, it can access only the members of the <xref:System.Object> class, unless you turn `Option Strict Off` to allow late binding.  
+ 当使用特定的对象类声明变量时，它可以访问由此类及其继承的类公开的所有方法和属性。 如果使用 <xref:System.Object>声明变量，则它只能访问 <xref:System.Object> 类的成员，除非您将 `Option Strict Off` 启用为允许后期绑定。  
   
 ## <a name="declaration-syntax"></a>声明语法  
- Use the following syntax to declare an object variable:  
+ 使用以下语法声明对象变量：  
   
 ```vb  
 Dim variablename As [New] { objectclass | Object }  
 ```  
   
- You can also specify [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, [Private](../../../../visual-basic/language-reference/modifiers/private.md), [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), or [Static](../../../../visual-basic/language-reference/modifiers/static.md) in the declaration. The following example declarations are valid:  
+ 你还可以在声明中指定[Public](../../../../visual-basic/language-reference/modifiers/public.md)、 [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)、 [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)、`Protected Friend`、 [Private](../../../../visual-basic/language-reference/modifiers/private.md)、 [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)或[Static](../../../../visual-basic/language-reference/modifiers/static.md) 。 下面的示例声明是有效的：  
   
 ```vb  
 Private objA As Object  
@@ -41,30 +41,30 @@ Static objB As System.Windows.Forms.Label
 Dim objC As System.OperatingSystem  
 ```  
   
-## <a name="late-binding-and-early-binding"></a>Late Binding and Early Binding  
- Sometimes the specific class is unknown until your code runs. In this case, you must declare the object variable with the `Object` data type. This creates a general reference to any type of object, and the specific class is assigned at run time. This is called *late binding*. Late binding requires additional execution time. It also limits your code to the methods and properties of the class you have most recently assigned to it. This can cause run-time errors if your code attempts to access members of a different class.  
+## <a name="late-binding-and-early-binding"></a>后期绑定和早期绑定  
+ 有时，在代码运行之前，特定类是未知的。 在这种情况下，必须用 `Object` 数据类型声明对象变量。 这会创建对任何类型的对象的常规引用，并在运行时分配特定类。 这称为*后期绑定*。 后期绑定需要额外的执行时间。 它还将代码限制为最近分配给它的类的方法和属性。 如果你的代码尝试访问不同类的成员，这可能会导致运行时错误。  
   
- When you know the specific class at compile time, you should declare the object variable to be of that class. 这称为*早期绑定*。 Early binding improves performance and guarantees your code access to all the methods and properties of the specific class. In the preceding example declarations, if variable `objA` uses only objects of class <xref:System.Windows.Forms.Label?displayProperty=nameWithType>, you should specify `As System.Windows.Forms.Label` in its declaration.  
+ 如果在编译时知道特定类，则应将对象变量声明为该类的。 这称为*早期绑定*。 早期绑定可提高性能，并保证代码访问特定类的所有方法和属性。 在前面的示例声明中，如果变量 `objA` 仅使用 <xref:System.Windows.Forms.Label?displayProperty=nameWithType>类的对象，则应在其声明中指定 `As System.Windows.Forms.Label`。  
   
 ### <a name="advantages-of-early-binding"></a>早期绑定的优点  
- Declaring an object variable as a specific class gives you several advantages:  
+ 将对象变量声明为特定类具有以下优势：  
   
-- Automatic type checking  
+- 自动类型检查  
   
-- Guaranteed access to all members of the specific class  
+- 保证能够访问特定类的所有成员  
   
-- Microsoft IntelliSense support in the Code Editor  
+- 代码编辑器中的 Microsoft IntelliSense 支持  
   
-- Improved readability of your code  
+- 提高代码的可读性  
   
-- Fewer errors in your code  
+- 代码中的错误越少  
   
-- Errors caught at compile time rather than run time  
+- 在编译时（而非运行时）捕获的错误  
   
-- Faster code execution  
+- 更快的代码执行  
   
-## <a name="access-to-object-variable-members"></a>Access to Object Variable Members  
- When `Option Strict` is turned `On`, an object variable can access only the methods and properties of the class with which you declare it. 下面的示例阐释了这一点。  
+## <a name="access-to-object-variable-members"></a>对对象变量成员的访问  
+ 当 `On``Option Strict` 时，对象变量仅可访问声明它的类的方法和属性。 下面的示例阐释了这一点。  
   
 ```vb  
 ' Option statements must precede all other source file lines.  
@@ -86,8 +86,8 @@ End Sub
   
  在此示例中， `p` 仅可使用 <xref:System.Object> 类的成员，这不包括 `Left` 属性。 另一方面， `q` 已声明为 <xref:System.Windows.Forms.Label>类型，因此它可以使用 <xref:System.Windows.Forms.Label> 命名空间中 <xref:System.Windows.Forms> 类的所有方法和属性。  
   
-## <a name="flexibility-of-object-variables"></a>Flexibility of Object Variables  
- When working with objects in an inheritance hierarchy, you have a choice of which class to use for declaring your object variables. In making this choice, you must balance flexibility of object assignment against access to members of a class. For example, consider the inheritance hierarchy that leads to the <xref:System.Windows.Forms.Form?displayProperty=nameWithType> class:  
+## <a name="flexibility-of-object-variables"></a>对象变量的灵活性  
+ 使用继承层次结构中的对象时，可以选择使用哪个类来声明对象变量。 在做出此选择的过程中，必须在对象赋值的灵活性与对类成员的访问之间取得平衡。 例如，考虑导致 <xref:System.Windows.Forms.Form?displayProperty=nameWithType> 类的继承层次结构：  
   
  <xref:System.Object>  
   
@@ -103,7 +103,7 @@ End Sub
   
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<xref:System.Windows.Forms.Form>  
   
- Suppose your application defines a form class called `specialForm`, which inherits from class <xref:System.Windows.Forms.Form>. You can declare an object variable that refers specifically to `specialForm`, as the following example shows.  
+ 假设你的应用程序定义了一个名为 `specialForm`的窗体类，该类继承自类 <xref:System.Windows.Forms.Form>。 您可以声明一个专门引用 `specialForm`的对象变量，如下面的示例所示。  
   
 ```vb  
 Public Class specialForm  
@@ -113,24 +113,24 @@ End Class
 Dim nextForm As New specialForm  
 ```  
   
- The declaration in the preceding example limits the variable `nextForm` to objects of class `specialForm`, but it also makes all the methods and properties of `specialForm` available to `nextForm`, as well as all the members of all the classes from which `specialForm` inherits.  
+ 前面的示例中的声明将变量 `nextForm` 限制为类 `specialForm`的对象，但它还使 `specialForm` 的所有方法和属性可用于 `nextForm`，同时还使 `specialForm` 继承的所有类的所有成员都可使用。  
   
- You can make an object variable more general by declaring it to be of type <xref:System.Windows.Forms.Form>, as the following example shows.  
+ 可以通过将对象变量声明为类型 <xref:System.Windows.Forms.Form>来使对象变量更通用，如下面的示例所示。  
   
 ```vb  
 Dim anyForm As System.Windows.Forms.Form  
 ```  
   
- The declaration in the preceding example lets you assign any form in your application to `anyForm`. However, although `anyForm` can access all the members of class <xref:System.Windows.Forms.Form>, it cannot use any of the additional methods or properties defined for specific forms such as `specialForm`.  
+ 前面的示例中的声明允许你在应用程序中分配任何窗体，以便 `anyForm`。 但是，尽管 `anyForm` 可以访问 <xref:System.Windows.Forms.Form>类的所有成员，但它不能使用为特定窗体（如 `specialForm`）定义的任何其他方法或属性。  
   
- All the members of a base class are available to derived classes, but the additional members of a derived class are unavailable to the base class.  
+ 基类的所有成员均可用于派生类，但派生类的其他成员对基类不可用。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [对象变量](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [对象变量赋值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
 - [对象变量值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [How to: Declare an Object Variable and Assign an Object to It in Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
+- [如何：在 Visual Basic 中声明对象变量并为其分配对象](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
 - [如何：访问对象的成员](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
 - [New 运算符](../../../../visual-basic/language-reference/operators/new-operator.md)
 - [Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440148"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute 方法
-Gets a custom attribute based upon its name. Unlike metadata custom attributes, these custom attributes are held in the symbol store.  
+根据名称获取自定义属性。 与元数据自定义属性不同，这些自定义属性保存在符号存储区中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,26 +39,26 @@ HRESULT GetSymAttribute (
   
 ## <a name="parameters"></a>参数  
  `parent`  
- [in] The metadata token for the object for which the attribute is requested.  
+ 中请求其属性的对象的元数据标记。  
   
  `name`  
- [in] A pointer to the variable that indicates the attribute to retrieve.  
+ 中指向变量的指针，该变量指示要检索的属性。  
   
  `cBuffer`  
  [in] `buffer` 数组的大小。  
   
  `pcBuffer`  
- [out] A pointer to the variable that receives the length of the attribute data.  
+ 弄指向接收属性数据长度的变量的指针。  
   
  `buffer`  
- [out] A pointer to the variable that receives the attribute data.  
+ 弄指向接收特性数据的变量的指针。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedReader 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

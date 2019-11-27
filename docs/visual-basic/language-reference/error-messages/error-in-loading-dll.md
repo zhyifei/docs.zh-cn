@@ -12,26 +12,26 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74329560"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>加载 DLL 时出错 (Visual Basic)
-A dynamic-link library (DLL) is a library specified in the `Lib` clause of a `Declare` statement. Possible causes for this error include:  
+动态链接库（DLL）是在 `Declare` 语句的 `Lib` 子句中指定的库。 此错误的可能原因包括：  
   
-- The file is not DLL executable.  
+- 该文件不是 DLL 可执行文件。  
   
-- The file is not a Microsoft Windows DLL.  
+- 该文件不是 Microsoft Windows DLL。  
   
-- The DLL references another DLL that is not present.  
+- DLL 引用了不存在的另一个 DLL。  
   
-- The DLL or referenced DLL is not in a directory specified in the path.  
+- DLL 或被引用的 DLL 不在路径中指定的目录中。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-- If the file is a source-text file and therefore not DLL executable, it must be compiled and linked to a DLL-executable form.  
+- 如果该文件是源文本文件而不是 DLL 可执行文件，则必须对其进行编译并将其链接到 DLL 可执行文件形式。  
   
-- If the file is not a Microsoft Windows DLL, obtain the Microsoft Windows equivalent.  
+- 如果文件不是 Microsoft Windows DLL，请获取 Microsoft Windows 等效项。  
   
-- If the DLL references another DLL that is not present, obtain the referenced DLL and make it available.  
+- 如果 DLL 引用了不存在的另一个 DLL，则获取被引用的 DLL 并使其可用。  
   
-- If the DLL or referenced DLL is not in a directory specified by the path, move the DLL to a referenced directory.  
+- 如果 DLL 或被引用的 DLL 不在路径所指定的目录中，则将 DLL 移到引用的目录。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)

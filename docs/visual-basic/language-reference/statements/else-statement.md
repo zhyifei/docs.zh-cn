@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343757"
 ---
 # <a name="else-statement-visual-basic"></a>Else 语句 (Visual Basic)
-Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.  
+如果没有运行或编译任何其他条件语句组，将引入一组要运行或编译的语句。  
   
 ## <a name="remarks"></a>备注  
  `Else` 关键字可用于以下上下文中：  
@@ -23,8 +23,8 @@ Introduces a group of statements to be run or compiled if no other conditional g
   
  [Select...Case 语句](../../../visual-basic/language-reference/statements/select-case-statement.md)  
   
- [#If...Then...#Else Directive](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#If .。。Then ... #Else 指令](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [关键字](../../../visual-basic/language-reference/keywords/index.md)

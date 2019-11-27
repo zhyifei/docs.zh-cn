@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448093"
 ---
 # <a name="iceegengetsectioncreate-method"></a>ICeeGen::GetSectionCreate 方法
-Generates and gets a code section using the specified name and flag values.  
+使用指定的名称和标志值生成并获取代码部分。  
   
- This method is obsolete and should not be used.  
+ 此方法已过时，不应使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,26 +39,26 @@ HRESULT GetSectionCreate (
   
 ## <a name="parameters"></a>参数  
  `name`  
- [in] A pointer to a string that specifies the name of the section to be created.  
+ 中指向字符串的指针，该字符串指定要创建的节的名称。  
   
  `flags`  
- [in] Flags that specify options.  
+ 中指定选项的标志。  
   
  `section`  
- [out] A pointer to the newly created code section.  
+ 弄指向新创建的代码部分的指针。  
   
 ## <a name="remarks"></a>备注  
- Call `GetSectionCreate` only if you have special section requirements that are not handled by other methods.  
+ 仅当你有其他方法未处理的特殊部分要求时，才调用 `GetSectionCreate`。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICeeGen 接口](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

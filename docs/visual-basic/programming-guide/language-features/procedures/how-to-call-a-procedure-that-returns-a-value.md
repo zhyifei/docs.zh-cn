@@ -15,36 +15,36 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74340732"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>如何：调用返回值的过程 (Visual Basic)
-A `Function` procedure returns a value to the calling code. You call it by including its name and arguments either on the right side of an assignment statement or in an expression.  
+`Function` 过程将值返回到调用代码。 通过在赋值语句或表达式的右侧包含其名称和参数来调用它。  
   
-### <a name="to-call-a-function-procedure-within-an-expression"></a>To call a Function procedure within an expression  
+### <a name="to-call-a-function-procedure-within-an-expression"></a>在表达式中调用函数过程  
   
-1. Use the `Function` procedure name the same way you would use a variable. You can use a `Function` procedure call anywhere you can use a variable or constant in an expression.  
+1. 按照使用变量的相同方式使用 `Function` 过程名称。 可以在表达式中使用变量或常量的任何位置使用 `Function` 过程调用。  
   
-2. Follow the procedure name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses. However, using the parentheses makes your code easier to read.  
+2. 在过程名称后面加上括号，以将参数列表括起来。 如果没有参数，则可以选择省略括号。 不过，使用括号可使代码更易于阅读。  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the `Function` procedure defines the corresponding parameters.  
+3. 将参数置于括号中的参数列表内，用逗号分隔。 请确保以 `Function` 过程定义相应参数的相同顺序提供参数。  
   
-     Alternatively, you can pass one or more arguments by name. For more information, see [Passing Arguments by Position and by Name](./passing-arguments-by-position-and-by-name.md).  
+     或者，您可以按名称传递一个或多个参数。 有关详细信息，请参阅[按位置和按名称传递参数](./passing-arguments-by-position-and-by-name.md)。  
   
-4. The value returned from the procedure participates in the expression just as the value of a variable or constant would.  
+4. 从过程返回的值将参与表达式，就像变量或常量的值一样。  
   
-### <a name="to-call-a-function-procedure-in-an-assignment-statement"></a>To call a Function procedure in an assignment statement  
+### <a name="to-call-a-function-procedure-in-an-assignment-statement"></a>在赋值语句中调用函数过程  
   
-1. Use the `Function` procedure name following the equal (`=`) sign in the assignment statement.  
+1. 在赋值语句中使用等号（`=`）后，使用 `Function` 过程名称。  
   
-2. Follow the procedure name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses. However, using the parentheses makes your code easier to read.  
+2. 在过程名称后面加上括号，以将参数列表括起来。 如果没有参数，则可以选择省略括号。 不过，使用括号可使代码更易于阅读。  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the `Function` procedure defines the corresponding parameters, unless you are passing them by name.  
+3. 将参数置于括号中的参数列表内，用逗号分隔。 请确保以 `Function` 过程定义相应参数的相同顺序提供参数，除非你按名称传递它们。  
   
-4. The value returned from the procedure is stored in the variable or property on the left side of the assignment statement.  
+4. 从过程返回的值存储在赋值语句左侧的变量或属性中。  
   
 ## <a name="example"></a>示例  
- The following example calls the Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> to retrieve the value of an operating system environment variable. The first line calls `Environ` within an expression, and the second line calls it in an assignment statement. `Environ` takes the variable name as its sole argument. It returns the variable's value to the calling code.  
+ 下面的示例调用 Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> 来检索操作系统环境变量的值。 第一行在表达式中调用 `Environ`，第二行在赋值语句中调用它。 `Environ` 采用变量名称作为其唯一参数。 它将变量的值返回给调用代码。  
   
  [!code-vb[VbVbcnProcedures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#7)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Function 过程](./function-procedures.md)
 - [过程参数和自变量](./procedure-parameters-and-arguments.md)

@@ -32,14 +32,14 @@ ms.locfileid: "74447091"
 - 列和行标头可能包含主标头以及任何支持的标头。  
   
 > [!NOTE]
-> This concept becomes evident in a Microsoft Excel spreadsheet where a user has defined a "First name" column. 此列现在有两个标头 — 用户定义的“名字”标头和应用程序分配的该列的字母数字名称。  
+> 在 Microsoft Excel 电子表格中，此概念在用户定义了 "First name" 列的情况下变得明显。 此列现在有两个标头 — 用户定义的“名字”标头和应用程序分配的该列的字母数字名称。  
   
-- See [Implementing the UI Automation Grid Control Pattern](implementing-the-ui-automation-grid-control-pattern.md) for related grid functionality.  
+- 有关相关网格功能，请参阅[实现 UI 自动化网格控件模式](implementing-the-ui-automation-grid-control-pattern.md)。  
   
- ![Table with complex header items.](./media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
+ ![具有复杂标头项的表。](./media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
 具有复杂列标头的表示例  
   
- ![Table with ambiguous RowOrColumnMajor property.](./media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
+ ![具有不明确的 RowOrColumnMajor 属性的表。](./media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
 具有不明确的 RowOrColumnMajor 属性的表示例。  
   
 <a name="Required_Members_for_ITableProvider"></a>   
@@ -48,9 +48,9 @@ ms.locfileid: "74447091"
   
 |必需的成员|成员类型|注意|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|Property|None|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|方法|None|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|属性|无|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|方法|无|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|方法|无|  
   
  没有与此控件模式关联的事件。  
   
@@ -58,11 +58,11 @@ ms.locfileid: "74447091"
 ## <a name="exceptions"></a>异常  
  没有与此控件模式关联的异常。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UI 自动化控件模式概述](ui-automation-control-patterns-overview.md)
 - [在 UI 自动化提供程序中支持控件模式](support-control-patterns-in-a-ui-automation-provider.md)
-- [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [实现 UI 自动化 TableItem 控件模式](implementing-the-ui-automation-tableitem-control-pattern.md)
 - [实现 UI 自动化 Grid 控件模式](implementing-the-ui-automation-grid-control-pattern.md)
 - [UI 自动化树概述](ui-automation-tree-overview.md)

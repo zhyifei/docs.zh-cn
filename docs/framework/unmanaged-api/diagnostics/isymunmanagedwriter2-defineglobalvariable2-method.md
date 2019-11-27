@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438285"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 方法
-Defines a single global variable.  
+定义一个全局变量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,33 +40,33 @@ HRESULT DefineGlobalVariable2(
   
 ## <a name="parameters"></a>参数  
  `name`  
- [in] The global variable name.  
+ 中全局变量名称。  
   
  `attributes`  
- [in] The global variable attributes.  
+ 中全局变量特性。  
   
  `sigToken`  
- [in] The metadata token of the signature.  
+ 中签名的元数据标记。  
   
  `addrKind`  
- [in] The address type.  
+ 中地址类型。  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ 中参数规范的第一个地址。  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ 中参数规范的第二个地址。  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ 中参数规范的第三个地址。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl  
+ **标头：** CorSym .idl  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedWriter2 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
 - [DefineGlobalVariable 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)

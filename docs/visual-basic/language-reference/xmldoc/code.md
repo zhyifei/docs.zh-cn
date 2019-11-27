@@ -12,8 +12,8 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354325"
 ---
-# <a name="code-visual-basic"></a>\<code> (Visual Basic)
-Indicates that the text is multiple lines of code.  
+# <a name="code-visual-basic"></a>\<代码 > （Visual Basic）
+指示文本为多行代码。  
   
 ## <a name="syntax"></a>语法  
   
@@ -23,18 +23,18 @@ Indicates that the text is multiple lines of code.
   
 ## <a name="parameters"></a>参数  
  `content`  
- The text to mark as code.  
+ 要标记为代码的文本。  
   
 ## <a name="remarks"></a>备注  
- Use the `<code>` tag to indicate multiple lines as code. 使用 [\<c>](../../../visual-basic/language-reference/xmldoc/c.md) 指示应将说明内的文本标记为代码。  
+ 使用 `<code>` 标记将多行指示为代码。 使用 [\<c>](../../../visual-basic/language-reference/xmldoc/c.md) 指示应将说明内的文本标记为代码。  
   
  使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译以便将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
- This example uses the \<code> tag to include example code for using the `ID` field.  
+ 此示例使用 \<代码 > 标记，包括使用 `ID` 字段的示例代码。  
   
  [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)

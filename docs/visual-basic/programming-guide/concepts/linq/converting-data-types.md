@@ -9,11 +9,11 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354257"
 ---
-# <a name="converting-data-types-visual-basic"></a>Converting Data Types (Visual Basic)
+# <a name="converting-data-types-visual-basic"></a>转换数据类型（Visual Basic）
 
 转换方法可更改输入对象的类型。
 
- LINQ 查询中的转换运算可用于各种应用程序。 The following are some examples:
+ LINQ 查询中的转换运算可用于各种应用程序。 下面是一些示例：
 
 - <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> 方法可用于隐藏类型的标准查询运算符自定义实现。
 
@@ -27,7 +27,7 @@ ms.locfileid: "74354257"
 
 本表中名称以“As”开头的转换方法可更改源集合的静态类型，但不对其进行枚举。 名称以“To”开头的方法可枚举源集合，并将项放入相应的集合类型。
 
-|方法名|描述|Visual Basic Query Expression Syntax|详细信息|
+|方法名|说明|Visual Basic 查询表达式语法|更多信息|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |AsEnumerable|返回类型化为 <xref:System.Collections.Generic.IEnumerable%601> 的输入。|不适用。|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|
 |AsQueryable|将（泛型）<xref:System.Collections.IEnumerable> 转换为（泛型）<xref:System.Linq.IQueryable>。|不适用。|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|
@@ -40,7 +40,7 @@ ms.locfileid: "74354257"
 
 ## <a name="query-expression-syntax-example"></a>查询表达式语法示例
 
-The following code example uses the `From As` clause to cast a type to a subtype before accessing a member that is available only on the subtype.
+下面的代码示例使用 `From As` 子句将类型转换为子类型，然后访问仅在子类型上可用的成员。
 
 ```vb
 Class Plant
@@ -80,9 +80,9 @@ Sub Cast()
 End Sub
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Linq>
 - [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)
-- [How to: Query an ArrayList with LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+- [如何：使用 LINQ 查询 ArrayList （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

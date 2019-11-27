@@ -17,12 +17,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349070"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>数组疑难解答 (Visual Basic)
-This page lists some common problems that can occur when working with arrays.  
+此页列出了在使用数组时可能出现的一些常见问题。  
   
-## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Compilation Errors Declaring and Initializing an Array  
- Compilation errors can arise from misunderstanding of the rules for declaring, creating, and initializing arrays. The most common causes of errors are the following:  
+## <a name="compilation-errors-declaring-and-initializing-an-array"></a>声明和初始化数组的编译错误  
+ 声明、创建和初始化数组的规则误解可能会引发编译错误。 错误的最常见原因如下：  
   
-- Supplying a [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) clause after specifying dimension lengths in the array variable declaration. The following code lines show invalid declarations of this type.  
+- 在数组变量声明中指定维度长度后，提供一个[新的运算符](../../../../visual-basic/language-reference/operators/new-operator.md)子句。 下面的代码行显示了此类型的无效声明。  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ This page lists some common problems that can occur when working with arrays.
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
-- Specifying dimension lengths for more than the top-level array of a jagged array. The following code line shows an invalid declaration of this type.  
+- 指定超出交错数组顶级数组的维度长度。 下面的代码行显示了此类型的无效声明。  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
-- Omitting the `New` keyword when specifying the element values. The following code line shows an invalid declaration of this type.  
+- 指定元素值时省略 `New` 关键字。 下面的代码行显示了此类型的无效声明。  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
-- Supplying a `New` clause without braces (`{}`). The following code lines show invalid declarations of this type.  
+- 提供不带大括号（`{}`）的 `New` 子句。 下面的代码行显示了此类型的无效声明。  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   
@@ -48,16 +48,16 @@ This page lists some common problems that can occur when working with arrays.
   
      `Dim INVALIDtwoDimShortArray(,) As Short = New Short(1, 1)`  
   
-## <a name="accessing-an-array-out-of-bounds"></a>Accessing an Array Out of Bounds  
- The process of initializing an array assigns an upper bound and a lower bound to each dimension. Every access to an element of the array must specify a valid index, or subscript, for every dimension. If any index is below its lower bound or above its upper bound, an <xref:System.IndexOutOfRangeException> exception results. The compiler cannot detect such an error, so an error occurs at run time.  
+## <a name="accessing-an-array-out-of-bounds"></a>访问超出界限的数组  
+ 初始化数组的过程为每个维度分配上限和下限。 每次访问数组的元素时，必须为每个维度指定有效的索引或下标。 如果有任何索引低于其下限或高于其上限，则 <xref:System.IndexOutOfRangeException> 异常结果。 编译器无法检测到此类错误，因此在运行时出现错误。  
   
-### <a name="determining-bounds"></a>Determining Bounds  
- If another component passes an array to your code, for example as a procedure argument, you do not know the size of that array or the lengths of its dimensions. You should always determine the upper bound for every dimension of an array before you attempt to access any elements. If the array has been created by some means other than a Visual Basic `New` clause, the lower bound might be something other than 0, and it is safest to determine that lower bound as well.  
+### <a name="determining-bounds"></a>确定边界  
+ 如果另一个组件将数组传递给您的代码（例如，作为过程参数），则您不知道该数组的大小或其维度的长度。 在尝试访问任何元素之前，应始终确定数组的每个维度的上限。 如果数组是通过 Visual Basic `New` 子句之外的其他方法创建的，则下限可能不是0，并且最安全的方法是确定下限。  
   
-### <a name="specifying-the-dimension"></a>Specifying the Dimension  
- When determining the bounds of a multidimensional array, take care how you specify the dimension. The `dimension` parameters of the <xref:System.Array.GetLowerBound%2A> and <xref:System.Array.GetUpperBound%2A> methods are 0-based, while the `Rank` parameters of the Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> and <xref:Microsoft.VisualBasic.Information.UBound%2A> functions are 1-based.  
+### <a name="specifying-the-dimension"></a>指定维度  
+ 确定多维数组的边界时，请注意如何指定维度。 <xref:System.Array.GetLowerBound%2A> 和 <xref:System.Array.GetUpperBound%2A> 方法的 `dimension` 参数是从0开始的，而 Visual Basic 函数 <xref:Microsoft.VisualBasic.Information.LBound%2A> 和 <xref:Microsoft.VisualBasic.Information.UBound%2A> 函数的 `Rank` 参数是从1开始的。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [如何：在 Visual Basic 中初始化数组变量](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

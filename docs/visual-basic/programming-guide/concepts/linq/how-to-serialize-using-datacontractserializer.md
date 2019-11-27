@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352374"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>How to: Serialize Using DataContractSerializer (Visual Basic)
+# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>如何：使用 DataContractSerializer 进行序列化（Visual Basic）
 本主题显示一个使用 <xref:System.Runtime.Serialization.DataContractSerializer> 进行序列化和反序列化的示例。  
   
 ## <a name="example"></a>示例  
@@ -83,6 +83,6 @@ Testing for type: XElementNullContainer
   Deserialized type: XElementNullContainer  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Serializing Object Graphs that Contain XElement Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [序列化包含 System.xml.linq.xelement> 对象的对象图（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

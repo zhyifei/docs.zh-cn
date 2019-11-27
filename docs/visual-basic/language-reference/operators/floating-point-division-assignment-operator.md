@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331039"
 ---
 # <a name="-operator-visual-basic"></a>/= 运算符 (Visual Basic)
-Divides the value of a variable or property by the value of an expression and assigns the floating-point result to the variable or property.  
+将变量或属性的值除以表达式的值，并将浮点结果赋给变量或属性。  
   
 ## <a name="syntax"></a>语法  
   
@@ -28,30 +28,30 @@ variableorproperty /= expression
   
 ## <a name="parts"></a>部件  
  `variableorproperty`  
- 必须的。 Any numeric variable or property.  
+ 必需。 任何数值变量或属性。  
   
  `expression`  
- 必须的。 任何数值表达式。  
+ 必需。 任何数值表达式。  
   
 ## <a name="remarks"></a>备注  
- The element on the left side of the `/=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ `/=` 运算符左侧的元素可以是简单的标量变量、属性或数组的元素。 变量或属性不能是[只读](../../../visual-basic/language-reference/modifiers/readonly.md)的。  
   
- The `/=` operator first divides the value of the variable or property (on the left-hand side of the operator) by the value of the expression (on the right-hand side of the operator). The operator then assigns the floating-point result of that operation to the variable or property.  
+ `/=` 运算符首先将变量或属性（位于运算符左侧）的值除以表达式的值（在运算符的右侧），而不是。 然后，运算符将该操作的浮点结果分配给变量或属性。  
   
- This statement assigns a `Double` value to the variable or property on the left. If `Option Strict` is `On`, `variableorproperty` must be a `Double`. If `Option Strict` is `Off`, Visual Basic performs an implicit conversion and assigns the resulting value to `variableorproperty`, with a possible error at run time. For more information, see [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) and [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
+ 此语句将 `Double` 值分配给左侧的变量或属性。 如果 `On``Option Strict`，则 `variableorproperty` 必须是 `Double`。 如果 `Off``Option Strict`，Visual Basic 将执行隐式转换，并将生成的值分配给 `variableorproperty`，并在运行时使用可能的错误。 有关详细信息，请参阅[扩大和收缩转换](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)和[Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)。  
   
 ## <a name="overloading"></a>重载  
- The [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `/` operator affects the behavior of the `/=` operator. If your code uses `/=` on a class or structure that overloads `/`, be sure you understand its redefined behavior. 有关更多信息，请参见 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ [/运算符（Visual Basic）](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)可以*重载*，这意味着当操作数具有该类或结构的类型时，该类或结构可以重新定义其行为。 重载 `/` 运算符会影响 `/=` 运算符的行为。 如果你的代码在重载 `/`的类或结构上使用 `/=`，请确保了解其重新定义的行为。 有关更多信息，请参见 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>示例  
- The following example uses the `/=` operator to divide one `Integer` variable by a second and assign the quotient to the first variable.  
+ 下面的示例使用 `/=` 运算符将一个 `Integer` 变量除以第二个变量，并将商分配给第一个变量。  
   
  [!code-vb[VbVbalrOperators#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#17)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)
-- [\\= Operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
+- [/运算符（Visual Basic）](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)
+- [\\= 运算符](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
 - [赋值运算符](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [算术运算符](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450224"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr 枚举
-Contains values that describe the features of a method.  
+包含描述方法功能的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,40 +64,40 @@ typedef enum CorMethodAttr {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`mdMemberAccessMask`|Specifies member access.|  
-|`mdPrivateScope`|Specifies that the member cannot be referenced.|  
-|`mdPrivate`|Specifies that the member is accessible only by the parent type.|  
-|`mdFamANDAssem`|Specifies that the member is accessible by subtypes only in this assembly.|  
-|`mdAssem`|Specifies that the member is accessibly by anyone in the assembly.|  
-|`mdFamily`|Specifies that the member is accessible only by type and subtypes.|  
-|`mdFamORAssem`|Specifies that the member is accessible by derived classes and by other types in its assembly.|  
-|`mdPublic`|Specifies that the member is accessible by all types with access to the scope.|  
-|`mdStatic`|Specifies that the member is defined as part of the type rather than as a member of an instance.|  
-|`mdFinal`|Specifies that the method cannot be overridden.|  
-|`mdVirtual`|Specifies that the method can be overridden.|  
-|`mdHideBySig`|Specifies that the method hides by name and signature, rather than just by name.|  
-|`mdVtableLayoutMask`|Specifies virtual table layout.|  
-|`mdReuseSlot`|Specifies that the slot used for this method in the virtual table be reused. 这是默认设置。|  
-|`mdNewSlot`|Specifies that the method always gets a new slot in the virtual table.|  
-|`mdCheckAccessOnOverride`|Specifies that the method can be overridden by the same types to which it is visible.|  
-|`mdAbstract`|Specifies that the method is not implemented.|  
-|`mdSpecialName`|Specifies that the method is special, and that its name describes how.|  
-|`mdPinvokeImpl`|Specifies that the method implementation is forwarded using PInvoke.|  
-|`mdUnmanagedExport`|Specifies that the method is a managed method exported to unmanaged code.|  
-|`mdReservedMask`|Reserved for internal use by the common language runtime.|  
-|`mdRTSpecialName`|Specifies that the common language runtime should check the encoding of the method name.|  
-|`mdHasSecurity`|Specifies that the method has security associated with it.|  
-|`mdRequireSecObject`|Specifies that the method calls another method containing security code.|  
+|`mdMemberAccessMask`|指定成员访问。|  
+|`mdPrivateScope`|指定不能引用成员。|  
+|`mdPrivate`|指定只能由父类型访问成员。|  
+|`mdFamANDAssem`|指定该成员只能由此程序集中的子类型访问。|  
+|`mdAssem`|指定该成员由程序集中的任何人 accessibly。|  
+|`mdFamily`|指定成员只能由类型和子类型访问。|  
+|`mdFamORAssem`|指定成员可由派生类和其程序集中的其他类型访问。|  
+|`mdPublic`|指定成员可由对范围具有访问权限的所有类型进行访问。|  
+|`mdStatic`|指定将成员定义为类型的一部分而不是实例的成员。|  
+|`mdFinal`|指定该方法不能被重写。|  
+|`mdVirtual`|指定可以重写方法。|  
+|`mdHideBySig`|指定该方法按名称和签名隐藏，而不是按名称隐藏。|  
+|`mdVtableLayoutMask`|指定虚拟表布局。|  
+|`mdReuseSlot`|指定重复使用用于虚拟表中此方法的槽。 这是默认设置。|  
+|`mdNewSlot`|指定方法始终获取虚拟表中的新槽。|  
+|`mdCheckAccessOnOverride`|指定方法可以由其可见的相同类型重写。|  
+|`mdAbstract`|指定未实现该方法。|  
+|`mdSpecialName`|指定该方法是特殊方法，其名称描述了操作方法。|  
+|`mdPinvokeImpl`|指定使用 PInvoke 转发方法实现。|  
+|`mdUnmanagedExport`|指定方法是导出到非托管代码的托管方法。|  
+|`mdReservedMask`|保留供公共语言运行时内部使用。|  
+|`mdRTSpecialName`|指定公共语言运行时应检查方法名称的编码。|  
+|`mdHasSecurity`|指定该方法具有与之关联的安全性。|  
+|`mdRequireSecObject`|指定该方法调用另一个包含安全代码的方法。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **标头：** Corhdr。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

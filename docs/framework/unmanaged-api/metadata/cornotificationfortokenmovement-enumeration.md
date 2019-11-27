@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450157"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>CorNotificationForTokenMovement 枚举
-Specifies the notifications that will be sent to the metadata API client when a token remap occurs.  
+指定在进行标记重新映射时将发送到元数据 API 客户端的通知。  
   
 ## <a name="syntax"></a>语法  
   
@@ -61,42 +61,42 @@ typedef enum CorNotificationForTokenMovement {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`MDNotifyDefault`|Notify when `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, or `mdFieldDef` tokens move.|  
-|`MDNotifyAll`|Notify when any token moves.|  
-|`MDNotifyNone`|Do not notify when tokens move.|  
-|`MDNotifyMethodDef`|Notify when an `mdMethodDef` token moves.|  
-|`MDNotifyMemberRef`|Notify when an `mdMemberRef` token moves.|  
-|`MDNotifyFieldDef`|Notify when an `mdFieldDef` token moves.|  
-|`MDNotifyTypeRef`|Notify when an `mdTypeRef` token moves.|  
-|`MDNotifyTypeDef`|Notify when an `mdTypeDef` token moves.|  
-|`MDNotifyParamDef`|Notify when an `mdParamDef` token moves.|  
-|`MDNotifyInterfaceImpl`|Notify when an `mdInterfaceImpl` token moves.|  
-|`MDNotifyProperty`|Notify when an `mdProperty` token moves.|  
-|`MDNotifyEvent`|Notify when an `mdEvent` token moves.|  
-|`MDNotifySignature`|Notify when an `mdSignature` token moves.|  
-|`MDNotifyTypeSpec`|Notify when an `mdTypeSpec` token moves.|  
-|`MDNotifyCustomAttribute`|Notify when an `mdCustomAttribute` token moves.|  
-|`MDNotifySecurityValue`|Notify when an `mdSecurityValue` token moves.|  
-|`MDNotifyPermission`|Notify when an `mdPermission` token moves.|  
-|`MDNotifyModuleRef`|Notify when an `mdModuleRef` token moves.|  
-|`MDNotifyNameSpace`|Notify when an `mdNameSpace` token moves.|  
-|`MDNotifyAssemblyRef`|Notify when an `mdAssemblyRef` token moves.|  
-|`MDNotifyFile`|Notify when an `mdFile` token moves.|  
-|`MDNotifyExportedType`|Notify when an `mdExportedType` token moves.|  
-|`MDNotifyResource`|Notify when an `mdManifestResource` token moves.|  
+|`MDNotifyDefault`|`mdTypeRef`、`mdMethodDef`、`mdMemberRef`或 `mdFieldDef` 标记移动时发出通知。|  
+|`MDNotifyAll`|任何标记移动时发出通知。|  
+|`MDNotifyNone`|标记移动时不发出通知。|  
+|`MDNotifyMethodDef`|`mdMethodDef` 标记移动时发出通知。|  
+|`MDNotifyMemberRef`|`mdMemberRef` 标记移动时发出通知。|  
+|`MDNotifyFieldDef`|`mdFieldDef` 标记移动时发出通知。|  
+|`MDNotifyTypeRef`|`mdTypeRef` 标记移动时发出通知。|  
+|`MDNotifyTypeDef`|`mdTypeDef` 标记移动时发出通知。|  
+|`MDNotifyParamDef`|`mdParamDef` 标记移动时发出通知。|  
+|`MDNotifyInterfaceImpl`|`mdInterfaceImpl` 标记移动时发出通知。|  
+|`MDNotifyProperty`|`mdProperty` 标记移动时发出通知。|  
+|`MDNotifyEvent`|`mdEvent` 标记移动时发出通知。|  
+|`MDNotifySignature`|`mdSignature` 标记移动时发出通知。|  
+|`MDNotifyTypeSpec`|`mdTypeSpec` 标记移动时发出通知。|  
+|`MDNotifyCustomAttribute`|`mdCustomAttribute` 标记移动时发出通知。|  
+|`MDNotifySecurityValue`|`mdSecurityValue` 标记移动时发出通知。|  
+|`MDNotifyPermission`|`mdPermission` 标记移动时发出通知。|  
+|`MDNotifyModuleRef`|`mdModuleRef` 标记移动时发出通知。|  
+|`MDNotifyNameSpace`|`mdNameSpace` 标记移动时发出通知。|  
+|`MDNotifyAssemblyRef`|`mdAssemblyRef` 标记移动时发出通知。|  
+|`MDNotifyFile`|`mdFile` 标记移动时发出通知。|  
+|`MDNotifyExportedType`|`mdExportedType` 标记移动时发出通知。|  
+|`MDNotifyResource`|`mdManifestResource` 标记移动时发出通知。|  
   
 ## <a name="remarks"></a>备注  
- A token may be re-mapped (that is, moved) during a metadata merge.  
+ 可在元数据合并期间重新映射（即，移动）标记。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **标头：** Corhdr。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

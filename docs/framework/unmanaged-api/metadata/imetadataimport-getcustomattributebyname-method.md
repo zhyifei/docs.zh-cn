@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437682"
 ---
 # <a name="imetadataimportgetcustomattributebyname-method"></a>IMetaDataImport::GetCustomAttributeByName 方法
-Gets the custom attribute, given its name and owner.  
+获取自定义特性（给定其名称和所有者）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,30 +38,30 @@ HRESULT GetCustomAttributeByName (
   
 ## <a name="parameters"></a>参数  
  `tkObj`  
- [in] A metadata token representing the object that owns the custom attribute.  
+ 中一个元数据标记，它表示拥有自定义特性的对象。  
   
  `szName`  
- [in] The name of the custom attribute.  
+ 中自定义属性的名称。  
   
  `ppData`  
- [out] A pointer to an array of data that is the value of the custom attribute.  
+ 弄一个指针，它指向作为自定义属性的值的数据数组。  
   
  `pcbData`  
- [out] The size in bytes of the data returned in *`ppData`.  
+ 弄在 *`ppData`中返回的数据的大小（以字节为单位）。  
   
 ## <a name="remarks"></a>备注  
- It is legal to define multiple custom attributes for the same owner; they may even have the same name. However, `GetCustomAttributeByName` returns only one instance. (`GetCustomAttributeByName` returns the first instance that it encounters.) To find all instances of a custom attribute, call the [IMetaDataImport::EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) method.  
+ 为同一个所有者定义多个自定义属性是合法的;它们甚至可能具有相同的名称。 但 `GetCustomAttributeByName` 仅返回一个实例。 （`GetCustomAttributeByName` 返回它遇到的第一个实例。）若要查找自定义属性的所有实例，请调用[IMetaDataImport：： EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md)方法。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

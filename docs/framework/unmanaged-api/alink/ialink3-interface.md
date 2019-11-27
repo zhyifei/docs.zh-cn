@@ -14,18 +14,18 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441793"
 ---
 # <a name="ialink3-interface"></a>IALink3 接口
-Provides a single method, `SetManifestFile`, which enables you to specify or reset the manifest file the linker will use when it creates an assembly.  
+提供单个方法 `SetManifestFile`，该方法使您能够指定或重置链接器在创建程序集时将使用的清单文件。  
   
 ## <a name="in-this-section"></a>本节内容  
  [SetManifestFile 方法](setmanifestfile-method.md)  
- Enables you to specify or reset the manifest file that the linker will use when it creates the assembly.  
+ 使您能够指定或重置链接器在创建该程序集时将使用的清单文件。  
   
 ## <a name="related-sections"></a>相关章节  
  [ALink API](index.md)  
  支持创建 .NET Framework 程序集和未绑定模块。  
   
  [IALink 接口](ialink-interface.md)  
- Helps in constructing .NET Framework assemblies.  
+ 有助于构造 .NET Framework 程序集。  
   
  [Al.exe（程序集链接器）](../../tools/al-exe-assembly-linker.md)  
- Generates a file that has an assembly manifest from one or more files that are either modules or resource files.
+ 生成一个文件，该文件包含一个或多个文件（模块或资源文件）中的程序集清单。

@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335380"
 ---
 # <a name="distinct-clause-visual-basic"></a>Distinct 子句 (Visual Basic)
-Restricts the values of the current range variable to eliminate duplicate values in subsequent query clauses.  
+限制当前范围变量的值，以消除后面的查询子句中的重复值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -25,14 +25,14 @@ Distinct
 ```  
   
 ## <a name="remarks"></a>备注  
- You can use the `Distinct` clause to return a list of unique items. The `Distinct` clause causes the query to ignore duplicate query results. The `Distinct` clause applies to duplicate values for all return fields specified by the `Select` clause. If no `Select` clause is specified, the `Distinct` clause is applied to the range variable for the query identified in the `From` clause. If the range variable is not an immutable type, the query will only ignore a query result if all members of the type match an existing query result.  
+ 您可以使用 `Distinct` 子句返回唯一项的列表。 `Distinct` 子句使查询忽略重复的查询结果。 `Distinct` 子句适用于 `Select` 子句指定的所有返回字段的重复值。 如果未指定 `Select` 子句，则 `Distinct` 子句将应用到 `From` 子句中标识的查询的范围变量。 如果范围变量不是不可变类型，则当该类型的所有成员均与现有查询结果匹配时，该查询将忽略查询结果。  
   
 ## <a name="example"></a>示例  
- The following query expression joins a list of customers and a list of customer orders. The `Distinct` clause is included to return a list of unique customer names and order dates.  
+ 下面的查询表达式将联接列表和客户订单列表。 包含 `Distinct` 子句以返回唯一客户名称和订单日期的列表。  
   
  [!code-vb[VbSimpleQuerySamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#20)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [查询](../../../visual-basic/language-reference/queries/index.md)

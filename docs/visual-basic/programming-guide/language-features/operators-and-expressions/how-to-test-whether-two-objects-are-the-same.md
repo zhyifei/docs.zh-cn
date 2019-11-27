@@ -17,18 +17,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343619"
 ---
 # <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>如何：测试两个对象是否相同 (Visual Basic)
-If you have two variables that refer to objects, you can use either the `Is` or `IsNot` operator, or both, to determine whether they refer to the same instance.  
+如果有两个引用对象的变量，则可以使用 `Is` 或 `IsNot` 运算符，或同时使用这两个变量来确定它们是否引用相同的实例。  
   
-### <a name="to-test-whether-two-objects-are-the-same"></a>To test whether two objects are the same  
+### <a name="to-test-whether-two-objects-are-the-same"></a>测试两个对象是否相同  
   
-- Use the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) or the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) with the two variables as operands.  
+- 使用[Is 运算符](../../../../visual-basic/language-reference/operators/is-operator.md)或将两个变量作为操作数的[IsNot 运算符](../../../../visual-basic/language-reference/operators/isnot-operator.md)。  
   
      [!code-vb[VbVbalrOperators#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#69)]  
   
- You might want to take a certain action depending on whether two objects refer to the same instance. The preceding example compares control `c` against the active control on form `f`. If there is no active control, or if there is one but it is not the same control instance as `c`, then the `If` statement fails and the procedure returns without further processing.  
+ 您可能想要执行特定的操作，具体取决于两个对象是否引用相同的实例。 前面的示例将控件 `c` 与窗体 `f`上的活动控件进行比较。 如果没有活动的控件，或如果存在，但它不是与 `c`相同的控件实例，则 `If` 语句将失败，并且过程将返回，而不进行进一步的处理。  
   
- Whether you use `Is` or `IsNot` is a matter of personal convenience to you. One might be easier to read than the other in a given expression.  
+ 你使用 `Is` 还是 `IsNot` 对于你而言是一种个人便利。 比给定表达式中的另一个更易于读取。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

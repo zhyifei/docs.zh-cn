@@ -19,15 +19,15 @@ ms.locfileid: "74343804"
   
 ## <a name="in-this-section"></a>本节内容  
 
- [#Const Directive](../../../visual-basic/language-reference/directives/const-directive.md) -- Define a compiler constant  
+ [#Const 指令](../../../visual-basic/language-reference/directives/const-directive.md)--定义编译器常量  
   
- [#ExternalSource Directive](../../../visual-basic/language-reference/directives/externalsource-directive.md) -- Indicate a mapping between source lines and text external to the source  
+ [#ExternalSource 指令](../../../visual-basic/language-reference/directives/externalsource-directive.md)--指示源行与源外部的文本之间的映射  
   
- [#If...Then...#Else Directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md) -- Compile selected blocks of code  
+ [#If .。。Then ... #Else 指令](../../../visual-basic/language-reference/directives/if-then-else-directives.md)-编译选定的代码块  
   
- [#Region Directive](../../../visual-basic/language-reference/directives/region-directive.md) -- Collapse and hide sections of code in the Visual Studio editor  
+ [#Region 指令](../../../visual-basic/language-reference/directives/region-directive.md)--折叠和隐藏 Visual Studio 编辑器中的代码段  
   
- **#Disable, #Enable** -- Disable and enable specific warnings for regions of code.  
+ **#Disable，#Enable** --针对代码区域禁用和启用特定警告。  
   
 ```vb  
 #Disable Warning BC42356 ' suppress warning about no awaits in this method  

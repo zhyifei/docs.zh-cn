@@ -24,7 +24,7 @@ Visual Basic 提供了支持快速应用程序开发的新功能，不仅功能�
   
  下表展示了顶级 `My` 对象及其相互之间的关系。  
   
- ![Diagram shows the object model for My.](./media/index/my-object-model-relationships.gif)  
+ ![关系图显示 My 的对象模型。](./media/index/my-object-model-relationships.gif)  
   
 ## <a name="in-this-section"></a>本节内容  
 
@@ -38,12 +38,12 @@ Visual Basic 提供了支持快速应用程序开发的新功能，不仅功能�
  介绍了 `My.Resources` 和 `My.Settings` 对象，这些对象提供对应用程序资源和设置的访问权限。  
   
  [Visual Basic 应用程序模型概述](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Describes the Visual Basic Application Startup/Shutdown model.  
+ 介绍 Visual Basic 应用程序启动/关闭模型。  
   
  [My 对项目类型的依赖方式](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  详细介绍了不同项目类型中可用的 `My` 功能。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>

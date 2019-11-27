@@ -1,5 +1,5 @@
 ---
-title: Miscellaneous operators
+title: 其他运算符
 ms.date: 10/18/2018
 helpviewer_keywords:
 - operators [Visual Basic]
@@ -12,25 +12,25 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344069"
 ---
-# <a name="miscellaneous-operators-visual-basic"></a>Miscellaneous operators (Visual Basic)
-The following are miscellaneous operators defined in Visual Basic.  
+# <a name="miscellaneous-operators-visual-basic"></a>其他运算符（Visual Basic）
+下面是 Visual Basic 中定义的其他运算符。  
   
-[?. null-conditional operator](null-conditional-operators.md)
+[?.null 条件运算符](null-conditional-operators.md)
 
-[?() null-conditional operator](null-conditional-operators.md)
+[?（） null-条件运算符](null-conditional-operators.md)
 
- [AddressOf operator](../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [AddressOf 运算符](../../../visual-basic/language-reference/operators/addressof-operator.md)  
   
- [Await operator](../../../visual-basic/language-reference/operators/await-operator.md)  
+ [Await 运算符](../../../visual-basic/language-reference/operators/await-operator.md)  
   
- [GetType operator](../../../visual-basic/language-reference/operators/gettype-operator.md)  
+ [GetType 运算符](../../../visual-basic/language-reference/operators/gettype-operator.md)  
   
- [Function expression](../../../visual-basic/language-reference/operators/function-expression.md)  
+ [函数表达式](../../../visual-basic/language-reference/operators/function-expression.md)  
 
- [If operator](../../../visual-basic/language-reference/operators/if-operator.md)  
+ [If 运算符](../../../visual-basic/language-reference/operators/if-operator.md)  
   
- [TypeOf operator](../../../visual-basic/language-reference/operators/typeof-operator.md)  
+ [TypeOf 运算符](../../../visual-basic/language-reference/operators/typeof-operator.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Operators listed by functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

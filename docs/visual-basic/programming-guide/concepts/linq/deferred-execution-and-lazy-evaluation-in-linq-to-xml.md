@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346410"
 ---
-# <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-visual-basic"></a>Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)
+# <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-visual-basic"></a>LINQ to XML （Visual Basic）中的延迟执行和迟缓计算
 实现查询和轴操作通常是为了使用延迟执行。 本主题解释延迟执行的要求和优点，以及某些实现注意事项。  
   
 ## <a name="deferred-execution"></a>延迟执行  
@@ -29,10 +29,10 @@ ms.locfileid: "74346410"
 ## <a name="next-steps"></a>后续步骤  
  本教程的下一个主题将解释延迟执行：  
   
-- [Deferred Execution Example (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)  
+- [延迟执行示例（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Tutorial: Deferred Execution (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
-- [Concepts and Terminology (Functional Transformation) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
-- [Aggregation Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)
+- [教程：延迟执行（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [概念和术语（功能转换）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
+- [聚合运算（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)

@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349329"
 ---
-# <a name="xattribute-class-overview-visual-basic"></a>XAttribute Class Overview (Visual Basic)
+# <a name="xattribute-class-overview-visual-basic"></a>System.xml.linq.xattribute> 类概述（Visual Basic）
 属性是与元素关联的名称/值对。 <xref:System.Xml.Linq.XAttribute> 类表示 XML 属性。  
   
 ## <a name="overview"></a>概述  
@@ -20,12 +20,12 @@ ms.locfileid: "74349329"
 ## <a name="the-xattribute-constructor"></a>XAttribute 构造函数  
  下面的 <xref:System.Xml.Linq.XAttribute> 类构造函数是您将最常使用的构造函数之一：  
   
-|构造函数|描述|  
+|构造函数|说明|  
 |-----------------|-----------------|  
 |`XAttribute(XName name, object content)`|创建一个 <xref:System.Xml.Linq.XAttribute> 对象。 `name` 参数指定属性的名称；`content` 指定属性的内容。|  
   
 ### <a name="creating-an-element-with-an-attribute"></a>创建具有属性的元素  
- The following code shows an element that contains an attribute using XML literals in Visual Basic:  
+ 下面的代码演示一个元素，该元素包含在 Visual Basic 中使用 XML 文本的属性：  
   
 ```vb  
 Dim phone As XElement = <Phone Type="Home">555-555-5555</Phone>  
@@ -74,6 +74,6 @@ Console.WriteLine(c)
   
  这一区别仅对编写在节点级使用 XML 树的代码的开发人员特别重要。 许多开发人员不会关心这种区别。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [LINQ to XML Programming Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML 编程概述（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448653"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>ISymENCUnmanagedMethod::GetFileNameFromOffset 方法
-Gets the file name for the line associated with an offset.  
+获取与偏移量关联的行的文件名。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,23 +38,23 @@ HRESULT GetFileNameFromOffset(
   
 ## <a name="parameters"></a>参数  
  `dwOffset`  
- [in] A `ULONG32` that contains the offset.  
+ 中一个包含偏移量的 `ULONG32`。  
   
  `cchName`  
- [in] A `ULONG32` that indicates the size of the `szName` buffer.  
+ 中一个 `ULONG32`，指示 `szName` 缓冲区的大小。  
   
  `pcchName`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the file names.  
+ 弄指向 `ULONG32` 的指针，该指针接收包含文件名所需的缓冲区大小（以字符数表示）。  
   
  `szName`  
- [out] The buffer that contains the file names.  
+ 弄包含文件名的缓冲区。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymENCUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

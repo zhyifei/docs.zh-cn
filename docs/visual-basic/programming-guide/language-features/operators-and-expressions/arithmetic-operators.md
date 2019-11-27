@@ -21,84 +21,84 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352661"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>算术运算符 (Visual Basic)
-Arithmetic operators are used to perform many of the familiar arithmetic operations that involve the calculation of numeric values represented by literals, variables, other expressions, function and property calls, and constants. Also classified with arithmetic operators are the bit-shift operators, which act at the level of the individual bits of the operands and shift their bit patterns to the left or right.  
+算术运算符用于执行许多常见的算术运算，这些运算涉及到用文本、变量、其他表达式、函数和属性调用和常量表示的数值的计算。 同时，采用算术运算符进行分类的是位移位运算符，它在操作数的各个位级别上起作用，并将其位模式向左或向右移动。  
   
-## <a name="arithmetic-operations"></a>Arithmetic Operations  
- You can add two values in an expression together with the [+ Operator](../../../../visual-basic/language-reference/operators/addition-operator.md), or subtract one from another with the [- Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), as the following example demonstrates.  
+## <a name="arithmetic-operations"></a>算术运算  
+ 您可以使用[+ 运算符](../../../../visual-basic/language-reference/operators/addition-operator.md)将两个值一起添加到表达式中，或使用[-operator （Visual Basic）](../../../../visual-basic/language-reference/operators/subtraction-operator.md)从另一个值中减去另一个值，如下例所示。  
   
  [!code-vb[VbVbalrOperators#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#57)]  
   
- Negation also uses the [- Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), but with only one operand, as the following example demonstrates.  
+ 求反还使用[-Operator （Visual Basic）](../../../../visual-basic/language-reference/operators/subtraction-operator.md)，但只有一个操作数，如下面的示例所示。  
   
  [!code-vb[VbVbalrOperators#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#58)]  
   
- Multiplication and division use the [* Operator](../../../../visual-basic/language-reference/operators/multiplication-operator.md) and [/ Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md), respectively, as the following example demonstrates.  
+ 乘法和除法分别使用[* 运算符](../../../../visual-basic/language-reference/operators/multiplication-operator.md)和[/运算符（Visual Basic）](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)，如下例所示。  
   
  [!code-vb[VbVbalrOperators#59](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#59)]  
   
- Exponentiation uses the [^ Operator](../../../../visual-basic/language-reference/operators/exponentiation-operator.md), as the following example demonstrates.  
+ 幂运算使用[^ 运算符](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)，如下面的示例所示。  
   
  [!code-vb[VbVbalrOperators#60](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#60)]  
   
- Integer division is carried out using the [\ Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md). Integer division returns the quotient, that is, the integer that represents the number of times the divisor can divide into the dividend without consideration of any remainder. Both the divisor and the dividend must be integral types (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, and `ULong`) for this operator. All other types must be converted to an integral type first. The following example demonstrates integer division.  
+ 使用[\ 运算符（Visual Basic）](../../../../visual-basic/language-reference/operators/integer-division-operator.md)执行整数除法。 整数除法返回商，即表示除数可以分为被除数的次数的整数，而不考虑任何余数。 除数和被除数都必须是此运算符的整型类型（`SByte`、`Byte`、`Short`、`UShort`、`Integer`、`UInteger`、`Long`和 `ULong`）。 所有其他类型必须首先转换为整型类型。 下面的示例演示了整数除法。  
   
  [!code-vb[VbVbalrOperators#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#61)]  
   
- Modulus arithmetic is performed using the [Mod Operator](../../../../visual-basic/language-reference/operators/mod-operator.md). This operator returns the remainder after dividing the divisor into the dividend an integral number of times. If both divisor and dividend are integral types, the returned value is integral. If divisor and dividend are floating-point types, the returned value is also floating-point. The following example demonstrates this behavior.  
+ 使用[Mod 运算符](../../../../visual-basic/language-reference/operators/mod-operator.md)执行取模运算。 此运算符返回将除数除以整数次后所得的余数。 如果除数和被除数均为整型类型，则返回的值是整型。 如果除数和被除数为浮点类型，则返回的值也是浮点型。 下例演示此行为。  
   
  [!code-vb[VbVbalrOperators#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#62)]  
   
  [!code-vb[VbVbalrOperators#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#63)]  
   
-### <a name="attempted-division-by-zero"></a>Attempted Division by Zero  
- Division by zero has different results depending on the data types involved. In integral divisions (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), the .NET Framework throws a <xref:System.DivideByZeroException> exception. In division operations on the `Decimal` or `Single` data type, the .NET Framework also throws a <xref:System.DivideByZeroException> exception.  
+### <a name="attempted-division-by-zero"></a>尝试被零除  
+ 被零除具有不同的结果，具体取决于所涉及的数据类型。 在整数除法（`SByte`、`Byte`、`Short`、`UShort`、`Integer`、`UInteger`、`Long`、`ULong`）中，.NET Framework 引发 <xref:System.DivideByZeroException> 异常。 在对 `Decimal` 或 `Single` 数据类型的除法运算中，.NET Framework 还会引发 <xref:System.DivideByZeroException> 异常。  
   
- In floating-point divisions involving the `Double` data type, no exception is thrown, and the result is the class member representing <xref:System.Double.NaN>, <xref:System.Double.PositiveInfinity>, or <xref:System.Double.NegativeInfinity>, depending on the dividend. The following table summarizes the various results of attempting to divide a `Double` value by zero.  
+ 在涉及 `Double` 数据类型的浮点除法中，不会引发异常，并且结果是表示 <xref:System.Double.NaN>、<xref:System.Double.PositiveInfinity>或 <xref:System.Double.NegativeInfinity>的类成员，具体取决于被除数。 下表总结了尝试将 `Double` 值除以零的各种结果。  
   
-|Dividend data type|Divisor data type|Dividend value|结果|  
+|被除数数据类型|除数数据类型|股利值|结果|  
 |---|---|---|---|  
-|`Double`|`Double`|0|<xref:System.Double.NaN> (not a mathematically defined number)|  
+|`Double`|`Double`|0|<xref:System.Double.NaN> （不是数学定义的数字）|  
 |`Double`|`Double`|> 0|<xref:System.Double.PositiveInfinity>|  
 |`Double`|`Double`|\< 0|<xref:System.Double.NegativeInfinity>|  
   
- When you catch a <xref:System.DivideByZeroException> exception, you can use its members to help you handle it. For example, the <xref:System.Exception.Message%2A> property holds the message text for the exception. 有关详细信息，请参阅 [Try...Catch...Finally 语句](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
+ 捕获 <xref:System.DivideByZeroException> 异常时，可以使用其成员帮助处理该异常。 例如，<xref:System.Exception.Message%2A> 属性包含异常的消息文本。 有关详细信息，请参阅 [Try...Catch...Finally 语句](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
   
-## <a name="bit-shift-operations"></a>Bit-Shift Operations  
- A bit-shift operation performs an arithmetic shift on a bit pattern. The pattern is contained in the operand on the left, while the operand on the right specifies the number of positions to shift the pattern. You can shift the pattern to the right with the [>> Operator](../../../../visual-basic/language-reference/operators/right-shift-operator.md) or to the left with the [<< Operator](../../../../visual-basic/language-reference/operators/left-shift-operator.md).  
+## <a name="bit-shift-operations"></a>移位运算  
+ 移位运算对位模式执行算术移位运算。 模式包含在左侧的操作数中，而右侧的操作数指定了要将模式移位到的位置数。 您可以将模式向右移动[> > 运算符](../../../../visual-basic/language-reference/operators/right-shift-operator.md)或向左移动[< < 运算符](../../../../visual-basic/language-reference/operators/left-shift-operator.md)。  
   
- The data type of the pattern operand must be `SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`. The data type of the shift amount operand must be `Integer` or must widen to `Integer`.  
+ 模式操作数的数据类型必须为 `SByte`、`Byte`、`Short`、`UShort`、`Integer`、`UInteger`、`Long`或 `ULong`。 移位量操作数的数据类型必须为 `Integer` 或必须扩大到 `Integer`。  
   
- Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end. The bit positions vacated by a shift are set as follows:  
+ 算术移位不是循环的，这意味着，不会在另一端重新引入结果的末尾以外的位。 移位后空出的位位置设置如下：  
   
-- 0 for an arithmetic left shift  
+- 对于算术左移，为0  
   
-- 0 for an arithmetic right shift of a positive number  
+- 如果为负数，则为0  
   
-- 0 for an arithmetic right shift of an unsigned data type (`Byte`, `UShort`, `UInteger`, `ULong`)  
+- 0表示无符号数据类型的算术右移位（`Byte`、`UShort`、`UInteger``ULong`）  
   
-- 1 for an arithmetic right shift of a negative number (`SByte`, `Short`, `Integer`, or `Long`)  
+- 1表示负数的算术右移位（`SByte`、`Short`、`Integer`或 `Long`）  
   
- The following example shifts an `Integer` value both left and right.  
+ 下面的示例将 `Integer` 值向左和向右移动。  
   
  [!code-vb[VbVbalrOperators#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#64)]  
   
- Arithmetic shifts never generate overflow exceptions.  
+ 算术移位从不产生溢出异常。  
   
-## <a name="bitwise-operations"></a>Bitwise Operations  
- In addition to being logical operators, `Not`, `Or`, `And`, and `Xor` also perform bitwise arithmetic when used on numeric values. For more information, see "Bitwise Operations" in [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md).  
+## <a name="bitwise-operations"></a>按位运算  
+ 除了作为逻辑运算符外，`Not`、`Or`、`And`和 `Xor` 在对数值使用时也执行按位运算。 有关详细信息，请参阅[Visual Basic 中逻辑与按位运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)中的 "位运算"。  
   
-## <a name="type-safety"></a>Type Safety  
- Operands should normally be of the same type. For example, if you are doing addition with an `Integer` variable, you should add it to another `Integer` variable, and you should assign the result to a variable of type `Integer` as well.  
+## <a name="type-safety"></a>类型安全  
+ 操作数通常应为同一类型。 例如，如果您要添加一个 `Integer` 变量，则应将其添加到另一个 `Integer` 变量，并且应将该结果分配给 `Integer` 类型的变量。  
   
- One way to ensure good type-safe coding practice is to use the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md). If you set `Option Strict On`, Visual Basic automatically performs *type-safe* conversions. For example, if you try to add an `Integer` variable to a `Double` variable and assign the value to a `Double` variable, the operation proceeds normally, because an `Integer` value can be converted to `Double` without loss of data. Type-unsafe conversions, on the other hand, cause a compiler error with `Option Strict On`. For example, if you try to add an `Integer` variable to a `Double` variable and assign the value to an `Integer` variable, a compiler error results, because a `Double` variable cannot be implicitly converted to type `Integer`.  
+ 确保良好的类型安全编码做法的一种方法是使用[Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)。 如果设置 `Option Strict On`，Visual Basic 会自动执行*类型安全*转换。 例如，如果尝试将 `Integer` 变量添加到 `Double` 变量，并将值分配给 `Double` 变量，则操作会正常进行，因为 `Integer` 值可以转换为 `Double`，而不会丢失数据。 另一方面，类型不安全的转换会导致编译器错误，`Option Strict On`。 例如，如果尝试将 `Integer` 变量添加到 `Double` 变量，并将该值分配给一个 `Integer` 变量，则编译器错误将导致编译器错误，因为 `Double` 变量不能隐式转换为类型 `Integer`。  
   
- If you set `Option Strict Off`, however, Visual Basic allows implicit narrowing conversions to take place, although they can result in the unexpected loss of data or precision. For this reason, we recommend that you use `Option Strict On` when writing production code. 有关详细信息，请参阅 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
+ 不过，如果设置 `Option Strict Off`，则 Visual Basic 允许进行隐式收缩转换，但它们可能会导致数据或精度意外丢失。 出于此原因，我们建议你在编写生产代码时使用 `Option Strict On`。 有关详细信息，请参阅 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [算术运算符](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [移位运算符](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)
-- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
-- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic 中的串联运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Visual Basic 中的逻辑运算符和位运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
 - [运算符的有效组合](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

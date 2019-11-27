@@ -1,5 +1,5 @@
 ---
-title: For loop not initialized
+title: For 循环未初始化
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID92
@@ -18,7 +18,7 @@ ms.locfileid: "74348446"
   
 1. 删除向循环的跳转。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [For Each...Next 语句](../../visual-basic/language-reference/statements/for-each-next-statement.md)
 - [如何：标记语句](../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)

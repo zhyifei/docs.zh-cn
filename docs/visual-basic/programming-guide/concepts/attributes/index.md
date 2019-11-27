@@ -1,5 +1,5 @@
 ---
-title: Attributes overview
+title: 属性概述
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
 ms.openlocfilehash: 97a2a13102718b6ee8829fca678b2b49df21e5d1
@@ -95,7 +95,7 @@ End Sub
 
 下表列出了可能的 `target` 值。
 
-|目标值|适用对象|
+|目标值|适用于|
 |------------------|----------------|
 |`assembly`|整个程序集|
 |`module`|当前的程序集模块（不同于 Visual Basic 模块）|
@@ -112,9 +112,9 @@ Module: CLSCompliant(True)>
 
 下面列出了代码中特性的一些常见用途：
 
-- 在 Web 服务中使用 `WebMethod` 特性标记方法，以指明方法应可通过 SOAP 协议进行调用。 有关更多信息，请参见<xref:System.Web.Services.WebMethodAttribute>。
+- 在 Web 服务中使用 `WebMethod` 特性标记方法，以指明方法应可通过 SOAP 协议进行调用。 有关详细信息，请参阅 <xref:System.Web.Services.WebMethodAttribute>。
 
-- 描述在与本机代码互操作时如何封送方法参数。 有关更多信息，请参见<xref:System.Runtime.InteropServices.MarshalAsAttribute>。
+- 描述在与本机代码互操作时如何封送方法参数。 有关详细信息，请参阅 <xref:System.Runtime.InteropServices.MarshalAsAttribute>。
 
 - 描述类、方法和接口的 COM 属性。
 
@@ -148,7 +148,7 @@ Module: CLSCompliant(True)>
 
 - [调用方信息 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)
 - [反射 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)

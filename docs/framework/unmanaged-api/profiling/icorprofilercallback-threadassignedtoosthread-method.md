@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440022"
 ---
 # <a name="icorprofilercallbackthreadassignedtoosthread-method"></a>ICorProfilerCallback::ThreadAssignedToOSThread 方法
-Notifies the profiler that a managed thread is being implemented using a particular operating system thread.  
+通知探查器使用特定操作系统线程实现了托管线程。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,13 +35,13 @@ HRESULT ThreadAssignedToOSThread(
   
 ## <a name="parameters"></a>参数  
  `managedThreadId`  
- [in] The identifier of the managed thread.  
+ 中托管线程的标识符。  
   
  `osThreadId`  
- [in] The identifier of the operating system thread.  
+ 中操作系统线程的标识符。  
   
 ## <a name="remarks"></a>备注  
- The `ThreadAssignedToOSThread` callback exists so that the profiler can maintain an accurate mapping across fibers of operating system threads to managed threads.  
+ 存在 `ThreadAssignedToOSThread` 回调，以便探查器能够在操作系统线程的纤程之间保持准确的映射到托管线程。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -52,6 +52,6 @@ HRESULT ThreadAssignedToOSThread(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

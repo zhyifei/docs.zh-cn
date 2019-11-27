@@ -47,4 +47,4 @@ internal void InternalGetOriginAndLength(out int origin, out int length)
 
 **Assembly：** mscorlib （在 mscorlib.dll 中）
 
-**.NET framework 版本**：自 2.0 之后可用。
+**.NET Framework 版本：** 自2.0 起可用。

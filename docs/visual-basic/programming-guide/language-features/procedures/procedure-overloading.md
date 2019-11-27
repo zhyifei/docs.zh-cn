@@ -26,71 +26,71 @@ ms.locfileid: "74352588"
 ---
 # <a name="procedure-overloading-visual-basic"></a>过程重载 (Visual Basic)
 
-*Overloading* a procedure means defining it in multiple versions, using the same name but different parameter lists. The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name. You do this by varying the parameter list.
+*重载*过程意味着使用相同的名称但不同的参数列表在多个版本中定义它。 重载的目的是定义过程中的多个紧密相关的版本，而不必按名称对其进行区分。 可以通过改变参数列表来实现此目的。
 
-## <a name="overloading-rules"></a>Overloading Rules
+## <a name="overloading-rules"></a>重载规则
 
-When you overload a procedure, the following rules apply:
+重载过程时，以下规则适用：
 
-- **Same Name**. Each overloaded version must use the same procedure name.
+- **相同的名称**。 每个重载版本必须使用相同的过程名称。
 
-- **Different Signature**. Each overloaded version must differ from all other overloaded versions in at least one of the following respects:
+- **不同的签名**。 每个重载版本必须与所有其他重载版本都有以下两个方面中的至少一个：
 
-  - Number of parameters
+  - 参数的数目
 
-  - Order of the parameters
+  - 参数的顺序
 
-  - Data types of the parameters
+  - 参数的数据类型
 
-  - Number of type parameters (for a generic procedure)
+  - 类型参数的数目（针对泛型过程）
 
-  - Return type (only for a conversion operator)
+  - 返回类型（仅适用于转换运算符）
 
-  Together with the procedure name, the preceding items are collectively called the *signature* of the procedure. When you call an overloaded procedure, the compiler uses the signature to check that the call correctly matches the definition.
+  与过程名称一起，以上各项统称为过程的*签名*。 调用重载过程时，编译器将使用签名来检查调用是否与定义正确匹配。
 
-- **Items Not Part of Signature**. You cannot overload a procedure without varying the signature. In particular, you cannot overload a procedure by varying only one or more of the following items:
+- **项不是签名的一部分**。 不能重载过程而不会改变签名。 具体而言，你不能通过仅改变一个或多个以下项来重载过程：
 
-  - Procedure modifier keywords, such as `Public`, `Shared`, and `Static`
+  - 过程修饰符关键字，如 `Public`、`Shared`和 `Static`
 
-  - Parameter or type parameter names
+  - 参数或类型参数名称
 
-  - Type parameter constraints (for a generic procedure)
+  - 类型参数约束（针对泛型过程）
 
-  - Parameter modifier keywords, such as `ByRef` and `Optional`
+  - 参数修饰符关键字，如 `ByRef` 和 `Optional`
 
-  - Whether it returns a value
+  - 是否返回值
 
-  - The data type of the return value (except for a conversion operator)
+  - 返回值的数据类型（转换运算符除外）
 
-  The items in the preceding list are not part of the signature. Although you cannot use them to differentiate between overloaded versions, you can vary them among overloaded versions that are properly differentiated by their signatures.
+  前面列表中的项不是签名的一部分。 尽管不能使用它们来区分重载版本，但你可以根据其签名正确区分的重载版本来区分它们。
 
-- **Late-Bound Arguments**. If you intend to pass a late bound object variable to an overloaded version, you must declare the appropriate parameter as <xref:System.Object>.
+- **后期绑定参数**。 如果打算将后期绑定对象变量传递到重载版本，则必须将相应的参数声明为 <xref:System.Object>。
 
-## <a name="multiple-versions-of-a-procedure"></a>Multiple Versions of a Procedure
+## <a name="multiple-versions-of-a-procedure"></a>一个过程的多个版本
 
-Suppose you are writing a `Sub` procedure to post a transaction against a customer's balance, and you want to be able to refer to the customer either by name or by account number. To accommodate this, you can define two different `Sub` procedures, as in the following example:
+假设您正在编写一个 `Sub` 过程，以便针对客户的余额发布事务，并且您希望能够按名称或帐号来引用客户。 为此，可以定义两个不同的 `Sub` 过程，如以下示例中所示：
 
 [!code-vb[VbVbcnProcedures#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#73)]
 
-### <a name="overloaded-versions"></a>Overloaded Versions
+### <a name="overloaded-versions"></a>重载版本
 
-An alternative is to overload a single procedure name. You can use the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword to define a version of the procedure for each parameter list, as follows:
+一种替代方法是重载单个过程名称。 您可以使用[Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)关键字为每个参数列表定义过程的版本，如下所示：
 
 [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]
 
-#### <a name="additional-overloads"></a>Additional Overloads
+#### <a name="additional-overloads"></a>其他重载
 
-If you also wanted to accept a transaction amount in either `Decimal` or `Single`, you could further overload `post` to allow for this variation. If you did this to each of the overloads in the preceding example, you would have four `Sub` procedures, all with the same name but with four different signatures.
+如果还希望接受 `Decimal` 或 `Single`中的事务量，则可以进一步重载 `post`，以允许此变体。 如果对上述示例中的每个重载执行了此操作，则会有四个 `Sub` 过程，它们都具有相同的名称，但具有四个不同的签名。
 
-## <a name="advantages-of-overloading"></a>Advantages of Overloading
+## <a name="advantages-of-overloading"></a>重载的优点
 
-The advantage of overloading a procedure is in the flexibility of the call. To use the `post` procedure declared in the preceding example, the calling code can obtain the customer identification as either a `String` or an `Integer`, and then call the same procedure in either case. 下面的示例阐释了这一点：
+重载过程的优点是调用的灵活性。 若要使用在前面的示例中声明的 `post` 过程，调用代码可以将客户标识作为 `String` 或 `Integer`获取，然后在任一情况下调用相同的过程。 以下示例对此进行了说明：
 
 [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]
 
 [!code-vb[VbVbcnProcedures#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#57)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [过程](./index.md)
 - [如何：定义一个过程的多个版本](./how-to-define-multiple-versions-of-a-procedure.md)
@@ -99,5 +99,5 @@ The advantage of overloading a procedure is in the flexibility of the call. To u
 - [如何：重载参数数量不确定的过程](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [重载过程注意事项](./considerations-in-overloading-procedures.md)
 - [重载决策](./overload-resolution.md)
-- [重载](../../../../visual-basic/language-reference/modifiers/overloads.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Visual Basic 中的泛型类型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

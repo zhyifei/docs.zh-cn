@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449177"
 ---
 # <a name="isymunmanageddocumentgetlanguage-method"></a>ISymUnmanagedDocument::GetLanguage 方法
-Gets the language identifier of this document  
+获取此文档的语言标识符  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,11 +34,11 @@ HRESULT GetLanguage(
   
 ## <a name="parameters"></a>参数  
  `pRetVal`  
- [out] A pointer to a variable that receives the language identifier.  
+ 弄指向接收语言标识符的变量的指针。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds.  
+ 如果方法成功，则 S_OK。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedDocument 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

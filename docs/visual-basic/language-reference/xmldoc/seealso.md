@@ -12,8 +12,8 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352216"
 ---
-# <a name="seealso-visual-basic"></a>\<seealso> (Visual Basic)
-Specifies a link that appears in the See Also section.  
+# <a name="seealso-visual-basic"></a>\<seealso > （Visual Basic）
+指定显示在 "另请参见" 部分中的链接。  
   
 ## <a name="syntax"></a>语法  
   
@@ -26,15 +26,15 @@ Specifies a link that appears in the See Also section.
  对可从当前编译环境调用的成员或字段的引用。 编译器检查是否存在给定的码位元素，并将 `member` 传递到输出 XML 中的元素名称。 `member` 必须出现在双引号 (" ") 内。  
   
 ## <a name="remarks"></a>备注  
- Use the `<seealso>` tag to specify the text that you want to appear in a See Also section. 使用 [\<see>](../../../visual-basic/language-reference/xmldoc/see.md) 从文本内指定链接。  
+ 使用 `<seealso>` 标记来指定要在 "另请参见" 部分中显示的文本。 使用 [\<see>](../../../visual-basic/language-reference/xmldoc/see.md) 从文本内指定链接。  
   
  使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译以便将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
- This example uses the `<seealso>` tag in the `DoesRecordExist` remarks section to refer to the `UpdateRecord` method.  
+ 此示例使用 `DoesRecordExist` 备注 "部分中的 `<seealso>` 标记来引用 `UpdateRecord` 方法。  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)

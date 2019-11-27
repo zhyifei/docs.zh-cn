@@ -21,32 +21,32 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343947"
 ---
-# <a name="sbyte-data-type-visual-basic"></a>SByte data type (Visual Basic)
+# <a name="sbyte-data-type-visual-basic"></a>SByte 数据类型（Visual Basic）
 
-Holds signed 8-bit (1-byte) integers that range in value from -128 through 127.
+保存8位有符号整数，其值范围从-128 到127。
 
 ## <a name="remarks"></a>备注
 
-Use the `SByte` data type to contain integer values that do not require the full data width of `Integer` or even the half data width of `Short`. In some cases, the common language runtime might be able to pack your `SByte` variables closely together and save memory consumption.
+使用 `SByte` 数据类型包含整数值，不需要 `Integer` 的完整数据宽度，甚至 `Short`的半数据宽度。 在某些情况下，公共语言运行时可以将 `SByte` 变量紧密地打包在一起，从而节省内存消耗。
 
 `SByte` 的默认值为 0。
 
-## <a name="literal-assignments"></a>Literal assignments
+## <a name="literal-assignments"></a>文本赋值
 
-You can declare and initialize an `SByte` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal.
+可以通过为 `SByte` 变量指定十进制文本、十六进制文本、八进制文本或（从 Visual Basic 2017）作为二进制文本来声明和初始化。
 
-In the following example, integers equal to -102 that are represented as decimal, hexadecimal, and binary literals are assigned to `SByte` values. This example requires that you compile with the `/removeintchecks` compiler switch.
+在下面的示例中，表示为十进制、十六进制和二进制文本的整数等于-102，分配给 `SByte` 值。 此示例要求你编译 `/removeintchecks` 编译器开关。
 
 [!code-vb[SByte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByte)]
 
 > [!NOTE]
-> You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal. 十进制文本没有前缀。
+> 使用前缀 `&h` 或 `&H` 来表示十六进制文本，使用前缀 `&b` 或 `&B` 来表示二进制文本，并使用前缀 `&o` 或 `&O` 来表示八进制文本。 十进制文本没有前缀。
 
-Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.
+从 Visual Basic 2017 开始，还可以使用下划线字符（`_`）作为数字分隔符，以增强可读性，如以下示例中所示。
 
 [!code-vb[SByteSeparator](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByteS)]
 
-Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. 例如:
+从 Visual Basic 15.5 开始，还可以使用下划线字符（`_`）作为前缀和十六进制、二进制或八进制数字之间的前导分隔符。 例如：
 
 ```vb
 Dim number As SByte = &H_F9
@@ -54,29 +54,29 @@ Dim number As SByte = &H_F9
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-如果整数文本在 `SByte` 范围之外（即，如果它小于 <xref:System.SByte.MinValue?displayProperty=nameWithType> 或大于 <xref:System.SByte.MaxValue?displayProperty=nameWithType>），会发生编译错误。 When an integer literal has no suffix, an [Integer](integer-data-type.md) is inferred. If the integer literal is outside the range of the `Integer` type, a [Long](long-data-type.md) is inferred. This means that, in the previous examples, the numeric literals `0x9A` and `0b10011010` are interpreted as 32-bit signed integers with a value of 156, which exceeds <xref:System.SByte.MaxValue?displayProperty=nameWithType>. To successfully compile code like this that assigns a non-decimal integer to an `SByte`, you can do either of the following:
+如果整数文本在 `SByte` 范围之外（即，如果它小于 <xref:System.SByte.MinValue?displayProperty=nameWithType> 或大于 <xref:System.SByte.MaxValue?displayProperty=nameWithType>），会发生编译错误。 如果整数文本没有后缀，则会推理[整数](integer-data-type.md)。 如果整数文本超出 `Integer` 类型的范围，则将推断一个[长](long-data-type.md)整型值。 这意味着，在前面的示例中，数值 `0x9A` 和 `0b10011010` 被解释为32位有符号整数，其156值超过了 <xref:System.SByte.MaxValue?displayProperty=nameWithType>。 若要成功编译此类代码，以便将非十进制整数分配到 `SByte`，你可以执行以下任一操作：
 
-- Disable integer bounds checks by compiling with the `/removeintchecks` compiler switch.
+- 通过使用 `/removeintchecks` 编译器开关进行编译来禁用整数边界检查。
 
-- Use a [type character](../../programming-guide/language-features/data-types/type-characters.md) to explicitly define the literal value that you want to assign to the `SByte`. The following example assigns a negative literal `Short` value to an `SByte`. Note that, for negative numbers, the high-order bit of the high-order word of the numeric literal must be set. In the case of our example, this is bit 15 of the literal `Short` value.
+- 使用[类型字符](../../programming-guide/language-features/data-types/type-characters.md)显式定义要分配给 `SByte`的文本值。 下面的示例将 `Short` 值分配给 `SByte`。 请注意，对于负数，必须设置数值文本的高序位字的高阶位。 对于我们的示例，这是文本 `Short` 值的位15。
 
    [!code-vb[SByteTypeChars](../../../../samples/snippets/visualbasic/language-reference/data-types/sbyte-assignment.vb#1)]
 
 ## <a name="programming-tips"></a>编程提示
 
-- **CLS Compliance.** The `SByte` data type is not part of the [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), so CLS-compliant code cannot consume a component that uses it.
+- **CLS 遵从性。** `SByte` 的数据类型不是[公共语言规范](https://www.ecma-international.org/publications/standards/Ecma-335.htm)（cls）的一部分，因此符合 CLS 的代码无法使用使用它的组件。
 
-- **Widening.** The `SByte` data type widens to `Short`, `Integer`, `Long`, `Decimal`, `Single`, and `Double`. This means you can convert `SByte` to any of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
+- **扩大.** `SByte` 数据类型扩大到 `Short`、`Integer`、`Long`、`Decimal`、`Single`和 `Double`。 这意味着，可以将 `SByte` 转换为这些类型中的任何一种，而不会遇到 <xref:System.OverflowException?displayProperty=nameWithType> 错误。
 
-- **Type Characters.** `SByte` has no literal type character or identifier type character.
+- **键入字符。** `SByte` 没有文本类型字符或标识符类型字符。
 
-- **Framework Type.** .NET Framework 中的对应类型是 <xref:System.SByte?displayProperty=nameWithType> 结构。
+- **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.SByte?displayProperty=nameWithType> 结构。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.SByte?displayProperty=nameWithType>
 - [数据类型](../../../visual-basic/language-reference/data-types/index.md)
-- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [Short 数据类型](../../../visual-basic/language-reference/data-types/short-data-type.md)
 - [Integer 数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)
