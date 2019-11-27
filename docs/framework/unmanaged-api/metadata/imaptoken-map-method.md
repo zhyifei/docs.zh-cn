@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432146"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map 方法
-Maps a relationship between the assemblies using metadata signatures.  
+使用元数据签名映射程序集之间的关系。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,23 +36,23 @@ HRESULT Map (
   
 ## <a name="parameters"></a>参数  
  `tkImp`  
- [in] The metadata token that represents the imported code object.  
+ 中表示导入的代码对象的元数据标记。  
   
  `tkEmit`  
- [in] The metadata token that represents the emitted code object.  
+ 中表示发出的代码对象的元数据标记。  
   
 ## <a name="remarks"></a>备注  
- When the token re-map occurs during a merge, the original token is scoped in the imported (source) metadata scope and the new token is scoped in the emitted (target) metadata scope.  
+ 如果在合并过程中发生令牌重新映射，则原始令牌的作用域为导入（源）元数据范围内，并且新令牌的范围限定为发出（目标）元数据范围。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMapToken 接口](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)

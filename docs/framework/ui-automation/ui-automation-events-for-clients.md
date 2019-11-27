@@ -18,14 +18,14 @@ ms.locfileid: "74441505"
   
  本主题介绍 UI 自动化客户端如何使用 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 事件。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 允许客户端订阅关注的事件。 有了此功能，将不再需要频繁地轮询系统中的所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 元素来确定是否更改了任何信息、结构或状态，从而提高了性能。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 允许客户端订阅感兴趣的事件。 有了此功能，将不再需要频繁地轮询系统中的所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 元素来确定是否更改了任何信息、结构或状态，从而提高了性能。  
   
  由于能够只侦听定义范围内的事件，因此效率也得到了提高。 例如，客户端可以在树中的所有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 元素上侦听焦点更改事件，也可以只在一个元素及其后代上侦听。  
   
 > [!NOTE]
 > 不要假定所有可能的事件都是由 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 提供程序引发的。 例如，并非所有属性更改都会导致 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控件的标准代理提供程序引发事件。  
   
- For a broader view of [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events, see [UI Automation Events Overview](ui-automation-events-overview.md).  
+ 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件的更广泛视图，请参阅[UI 自动化事件概述](ui-automation-events-overview.md)。  
   
 <a name="Subscribing_to_Events"></a>   
 ## <a name="subscribing-to-events"></a>订阅事件  
@@ -48,18 +48,18 @@ ms.locfileid: "74441505"
   
  关闭时，或者当应用程序不再对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件时，UI 自动化客户端应调用以下方法之一。  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>|通过使用 <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A> 取消注册已注册的事件处理程序。|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationFocusChangedEventHandler%2A>|通过使用 <xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A> 取消注册已注册的事件处理程序。|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|通过使用 <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> 取消注册已注册的事件处理程序。|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|取消注册所有已注册的事件处理程序。|  
   
- For example code, see [Subscribe to UI Automation Events](subscribe-to-ui-automation-events.md).  
+ 有关代码示例，请参阅[订阅 UI 自动化事件](subscribe-to-ui-automation-events.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [订阅 UI 自动化事件](subscribe-to-ui-automation-events.md)
 - [UI 自动化事件概述](ui-automation-events-overview.md)
 - [UI 自动化属性概述](ui-automation-properties-overview.md)
-- [TrackFocus Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)
+- [TrackFocus 示例](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)

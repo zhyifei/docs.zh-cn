@@ -25,7 +25,7 @@ ms.locfileid: "74281607"
   
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC Bridge 3.0.0.0  
   
- 则在使用从 **“控制面板”** 中的 **“添加/删除程序”** 小程序中启动的 .NET Framework 3.0 安装程序运行修复时，不会重新创建这些项。 若要重新正确创建这些项，用户必须卸载并重新安装 .NET Framework 3.0。  
+ 如果使用从**控制面板**中的 "**添加/删除程序**" 小程序启动的 .NET Framework 3.0 安装程序运行修复，则不会重新创建这些密钥。 若要重新正确创建这些项，用户必须卸载并重新安装 .NET Framework 3.0。  
   
 ## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>在安装 .NET Framework 3.0 软件包过程中 WMI Service Corruption 阻止 Windows Communication Foundation WMI 提供程序的安装  
  WMI Service Corruption 可能阻止 Windows Communication Foundation WMI 提供程序的安装。 在安装过程中，Windows Communication Foundation 安装程序无法使用 mofcomp.exe 组件注册 WCF .mof 文件。 下面列出了几个症状：  
@@ -54,7 +54,7 @@ ms.locfileid: "74281607"
   
 1. 运行[WMI Diagnosis Utility 版本 2.0](https://go.microsoft.com/fwlink/?LinkId=94685)以修复 WMI 服务。 有关使用此工具的详细信息，请参阅[WMI Diagnosis Utility](https://go.microsoft.com/fwlink/?LinkId=94686)主题。  
   
- 使用 **“控制面板”** 中的 **“添加/删除程序”** 小程序修复 .NET Framework 3.0 安装，或卸载/重新安装 .NET Framework 3.0。  
+ 使用**控制面板**中的 "**添加/删除程序**" 小程序修复 .NET Framework 3.0 安装，或卸载/重新安装 .NET Framework 3.0。  
   
 ## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>在安装 .NET Framework 3.5 后修复 .NET Framework 3.0 会移除 .NET Framework 3.5 在 machine.config 中引入的配置元素  
  如果在安装 .NET Framework 3.5 后修复 .NET Framework 3.0，则会删除在 machine.config 中 .NET Framework 3.5 引入的配置元素。 但是，web.config 保持不变。 解决方法是在此之后通过 ARP 修复 .NET Framework 3.5，或将[工作流服务注册工具（wfservicesreg.exe）](workflow-service-registration-tool-wfservicesreg-exe.md)与 `/c` 开关一起使用。  

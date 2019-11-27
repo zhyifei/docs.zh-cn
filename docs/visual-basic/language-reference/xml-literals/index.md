@@ -17,11 +17,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349403"
 ---
 # <a name="xml-literals-visual-basic"></a>XML 文本 (Visual Basic)
-The topics in this section document the syntax of XML literals in Visual Basic. 使用 XML 文本语法，可以将 XML 直接合并到代码中。  
+本节中的主题介绍 Visual Basic 中 XML 文本的语法。 使用 XML 文本语法，可以将 XML 直接合并到代码中。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[XML 元素文本](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)|介绍了表示 <xref:System.Xml.Linq.XElement> 对象的文本语法。|  
 |[XML 文档文本](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)|介绍了表示 <xref:System.Xml.Linq.XDocument> 对象的文本语法。|  
@@ -29,6 +29,6 @@ The topics in this section document the syntax of XML literals in Visual Basic. 
 |[XML 注释文本](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|介绍了表示 <xref:System.Xml.Linq.XComment> 对象的文本语法。|  
 |[XML 处理指令文本](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|介绍了表示 <xref:System.Xml.Linq.XProcessingInstruction> 对象的文本语法。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

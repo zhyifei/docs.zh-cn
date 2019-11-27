@@ -20,17 +20,17 @@ ms.locfileid: "74447951"
   
  本节概括了 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 属性。 下面各主题中提供了更具体的信息：  
   
-- [客户端的 UI 自动化属性](ui-automation-properties-for-clients.md)  
+- [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)  
   
 - [服务器端 UI 自动化提供程序实现](server-side-ui-automation-provider-implementation.md)  
   
 <a name="Property_Identifiers"></a>   
 ## <a name="property-identifiers"></a>属性标识符  
- 每个属性都由一个数字和名称标识。 属性的名称仅用于调试和诊断。 Providers use the numeric IDs to identify incoming property requests. 但是，客户端应用程序只使用封装了数字和名称的 <xref:System.Windows.Automation.AutomationProperty>来标识它们希望检索的属性。  
+ 每个属性都由一个数字和名称标识。 属性的名称仅用于调试和诊断。 提供程序使用数字 Id 来标识传入的属性请求。 但是，客户端应用程序只使用封装了数字和名称的 <xref:System.Windows.Automation.AutomationProperty>来标识它们希望检索的属性。  
   
  表示特定属性的<xref:System.Windows.Automation.AutomationProperty> 对象在各个类中以字段的形式提供。 出于安全原因，UI 自动化提供程序将从 Uiautomationtypes.dll 中包含的一组单独的类中获取这些对象。  
   
- The following table categorizes properties by the classes that contain the <xref:System.Windows.Automation.AutomationProperty>IDs.  
+ 下表按包含 <xref:System.Windows.Automation.AutomationProperty>Id 的类对属性进行分类。  
   
 |属性的种类|客户端从中获取 ID|提供程序从中获取 ID|  
 |-------------------------|--------------------------|----------------------------|  
@@ -53,7 +53,7 @@ ms.locfileid: "74447951"
   
 <a name="Properties_by_Category"></a>   
 ## <a name="properties-by-category"></a>按类别列出的属性  
- The following tables categorize the properties whose IDs are found in <xref:System.Windows.Automation.AutomationElement> and <xref:System.Windows.Automation.AutomationElementIdentifiers>. 这些属性是所有控件共有的。 很少一些属性在提供程序应用程序的生存期内可能是静态的；大多数动态属性都与控件模式关联。  
+ 下表对其 Id 在 <xref:System.Windows.Automation.AutomationElement> 和 <xref:System.Windows.Automation.AutomationElementIdentifiers>中找到的属性进行分类。 这些属性是所有控件共有的。 很少一些属性在提供程序应用程序的生存期内可能是静态的；大多数动态属性都与控件模式关联。  
   
  除 **和** 之外， <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A><xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>“属性访问”列还列出了每个属性的任何其他访问器。 有关在客户端应用程序中获取属性的详细信息，请参阅 [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)。  
   
@@ -65,12 +65,12 @@ ms.locfileid: "74447951"
 |属性标识符|和|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>|  
-|<xref:System.Windows.Automation.AutomationElement.CultureProperty>|不可用|  
+|<xref:System.Windows.Automation.AutomationElement.CultureProperty>|n/a|  
 |<xref:System.Windows.Automation.AutomationElement.HelpTextProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsOffscreen%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.OrientationProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Orientation%2A>|  
   
-### <a name="element-type"></a>元素类型  
+### <a name="element-type"></a>Type 元素  
   
 |属性标识符|和|  
 |-------------------------|---------------------|  
@@ -127,7 +127,7 @@ ms.locfileid: "74447951"
 |<xref:System.Windows.Automation.AutomationElement.IsValuePatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsWindowPatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
   
-### <a name="miscellaneous"></a>杂项  
+### <a name="miscellaneous"></a>其他  
   
 |属性标识符|和|  
 |-------------------------|---------------------|  
@@ -159,10 +159,10 @@ ms.locfileid: "74447951"
   
  客户端通过订阅事件来侦听事件。 订阅事件是指创建可处理事件的委托方法，然后将方法随将在这些方法中处理的特定事件一起传递给 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 。 特别是对于属性更改事件，客户端必须实现 <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [在 UI 自动化客户端中缓存](caching-in-ui-automation-clients.md)
-- [客户端的 UI 自动化属性](ui-automation-properties-for-clients.md)
+- [Caching in UI Automation Clients](caching-in-ui-automation-clients.md)
+- [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)
 - [服务器端 UI 自动化提供程序实现](server-side-ui-automation-provider-implementation.md)
 - [基于属性条件查找 UI 自动化元素](find-a-ui-automation-element-based-on-a-property-condition.md)
 - [从 UI 自动化提供程序返回属性](return-properties-from-a-ui-automation-provider.md)

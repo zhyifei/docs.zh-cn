@@ -20,7 +20,7 @@ ms.locfileid: "74446847"
 
 本部分将介绍如何实现自定义控件的服务器端 UI 自动化提供程序。
 
-The implementation for Windows Presentation Foundation (WPF) elements and non-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elements (such as those designed for [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) is fundamentally different. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素通过从 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 派生的类提供对 <xref:System.Windows.Automation.Peers.AutomationPeer>的支持。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素通过提供程序接口的实现提供支持。
+Windows Presentation Foundation （WPF）元素和非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素（例如为 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]而设计的元素）的实现在本质上是不同的。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素通过从 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 派生的类提供对 <xref:System.Windows.Automation.Peers.AutomationPeer>的支持。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素通过提供程序接口的实现提供支持。
 
 <a name="Security_Considerations"></a>
 
@@ -56,15 +56,15 @@ The implementation for Windows Presentation Foundation (WPF) elements and non-[!
 
 每个 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供程序必须实现以下的一个接口。
 
-|接口|描述|
+|接口|说明|
 |---------------|-----------------|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>|为承载在窗口中的简单控件提供功能，包括支持控件模式和属性。|
-|<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|继承自 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>。 为复杂控件中的元素添加功能，包括在片段中导航、设置焦点并返回该元素的边框。|
+|<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|继承自 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>。 为复杂控件中的元素添加功能，包括在片段中导航，设置焦点并返回该元素的边框。|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>|继承自 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment>。 为复杂控件中的根元素添加功能，包括找到指定坐标处的子元素和设置整个控件的焦点状态。|
 
 以下接口可提供额外的功能，但并不需要实现。
 
-|接口|描述|
+|接口|说明|
 |---------------|-----------------|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|启用提供程序跟踪事件请求。|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride>|启用对片段的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树内的基于窗口的元素的重定位。|
@@ -115,7 +115,7 @@ The implementation for Windows Presentation Foundation (WPF) elements and non-[!
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>
 
 > [!NOTE]
-> 承载在窗口的简单元素或片段根的 <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> 是从窗口中获取的；但是，根下的片段元素（如列表框中的列表项）必须提供自己的标识符。 有关更多信息，请参见<xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>。
+> 承载在窗口的简单元素或片段根的 <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> 是从窗口中获取的；但是，根下的片段元素（如列表框中的列表项）必须提供自己的标识符。 有关详细信息，请参阅 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>。
 >
 > 应为承载在 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> 控件中的提供程序返回 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 。 在这种情况下，默认的窗口提供程序可能无法检索正确值。
 >
@@ -129,7 +129,7 @@ The implementation for Windows Presentation Foundation (WPF) elements and non-[!
 
 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供程序应引发事件以通知客户端应用程序有关 UI 状态的变化。 以下方法用于引发事件。
 
-|方法|描述|
+|方法|说明|
 |------------|-----------------|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationEvent%2A>|引发各种事件，包括由控件模式触发的事件。|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性更改时引发事件。|
@@ -139,7 +139,7 @@ The implementation for Windows Presentation Foundation (WPF) elements and non-[!
 
 若要优化性能，提供程序可以有选择地引发事件，或者，如果没有注册任何接收事件的客户端应用程序，则不引发任何事件。 以下方法用于进行优化。
 
-|方法|描述|
+|方法|说明|
 |------------|-----------------|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A>|此静态属性指定是否存在已订阅 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件的客户端应用程序。|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|提供程序在片段根上对此接口的实现使其能够在当客户端在片段上注册和注销事件处理程序时接收到通知。|
@@ -189,7 +189,7 @@ The implementation for Windows Presentation Foundation (WPF) elements and non-[!
 
 为此，rebar 的片段根提供程序公开表示带区的子级集。 每个带区包含可能会公开属性和模式的单个提供程序。 在其实现 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>的过程中，带区提供程序将返回控件 HWND的默认窗口提供程序，它通过调用 <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>获取此提供程序，并传入控件的窗口句柄。 最后，rebar 的片段根提供程序将实现 <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> 接口，并在其实现 <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> 的过程中返回包含在指定 HWND 中的控件的相应带区提供程序。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UI 自动化提供程序概述](ui-automation-providers-overview.md)
 - [公开服务器端 UI 自动化提供程序](expose-a-server-side-ui-automation-provider.md)

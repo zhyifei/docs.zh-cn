@@ -1,5 +1,5 @@
 ---
-title: 'How to: Build a multifile assembly'
+title: 如何：生成多文件程序集
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -24,7 +24,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429567"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>How to: Build a multifile assembly
+# <a name="how-to-build-a-multifile-assembly"></a>如何：生成多文件程序集
 
 本文章介绍如何创建多文件程序集，并提供用于说明过程中每个步骤的代码。
 
@@ -95,11 +95,11 @@ ms.locfileid: "74429567"
    vbc /t:module Stringer.vb
    ```
 
-   使用 **/t:** 编译器选项指定 *module* 参数，表明文件应作为模块（而不是作为程序集）编译。 编译器生成一个名为 Stringer.netmodule 的模块，可将其添加到程序集中。
+   使用 */t:* 编译器选项指定 **module** 参数，表明文件应作为模块（而不是作为程序集）编译。 编译器生成一个名为 Stringer.netmodule 的模块，可将其添加到程序集中。
 
 3. 编译所有其他模块，使用必要的编译器选项来表明代码中引用的其他模块。 此步骤使用 /addmodule 编译器选项。
 
-   在下面的示例中，名为 Client 的代码模块具有一个入口点 `Main` 方法，此方法引用创建于步骤 1 的 Stringer.dll 模块中的方法。
+   在下面的示例中，名为 Client 的代码模块具有一个入口点  *方法，此方法引用创建于步骤 1 的 Stringer.dll 模块中的方法*`Main`。
 
    ```cpp
    #using "Stringer.netmodule"
@@ -213,7 +213,7 @@ ms.locfileid: "74429567"
 
     在此命令中，“module name”参数指定程序集要包含的各模块的名称。 /main: 选项指定作为程序集入口点的方法名称。 /out: 选项指定输出文件的名称，它包含程序集元数据。 /target: 选项指定程序集是控制台应用程序可执行文件 (.exe)、Windows 可执行文件 (.win) 或库文件 (.lib)。
 
-    在下面的示例中，Al.exe 创建一个程序集，该程序集是一个名为 myAssembly.exe 的控制台应用程序可执行文件。 该应用程序由名为 Client.netmodule 和 Stringer.netmodule 的两个模块以及名为 myAssembly.exe（其中只包含程序集元数据）的可执行文件组成。 程序集的入口点是位于 Client.dll 的 `MainClientApp` 类中的 `Main` 方法。
+    在下面的示例中，Al.exe 创建一个程序集，该程序集是一个名为 myAssembly.exe 的控制台应用程序可执行文件。 该应用程序由名为 Client.netmodule 和 Stringer.netmodule 的两个模块以及名为 myAssembly.exe（其中只包含程序集元数据）的可执行文件组成。 程序集的入口点是位于 Client.dll 的 `Main` 类中的 `MainClientApp` 方法。
 
     ```cmd
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe
@@ -221,9 +221,9 @@ ms.locfileid: "74429567"
 
     可以使用 [MSIL 反汇编程序 (Ildasm.exe)](../tools/ildasm-exe-il-disassembler.md) 来检查程序集的内容，或者确定文件是程序集还是模块。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [创建程序集](../../standard/assembly/create.md)
-- [How to: View assembly contents](../../standard/assembly/view-contents.md)
+- [如何：查看程序集内容](../../standard/assembly/view-contents.md)
 - [运行时如何定位程序集](../deployment/how-the-runtime-locates-assemblies.md)
 - [多文件程序集](multifile-assemblies.md)

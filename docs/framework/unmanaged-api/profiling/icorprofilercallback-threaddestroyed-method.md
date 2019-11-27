@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439939"
 ---
 # <a name="icorprofilercallbackthreaddestroyed-method"></a>ICorProfilerCallback::ThreadDestroyed 方法
-Notifies the profiler that a thread has been destroyed.  
+通知探查器线程已销毁。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,10 +34,10 @@ HRESULT ThreadDestroyed(
   
 ## <a name="parameters"></a>参数  
  `threadId`  
- [in] The ID of the thread that has been destroyed.  
+ 中已销毁的线程的 ID。  
   
 ## <a name="remarks"></a>备注  
- The `threadId` value is no longer valid at the time of this call.  
+ 此调用时，`threadId` 值不再有效。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -48,7 +48,7 @@ HRESULT ThreadDestroyed(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ThreadCreated 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)

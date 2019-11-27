@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445461"
 ---
 # <a name="imetadataemitsetfieldprops-method"></a>IMetaDataEmit::SetFieldProps 方法
-Sets or updates the default value for the field referenced by the specified field token.  
+设置或更新指定字段标记所引用的字段的默认值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,30 +39,30 @@ HRESULT SetFieldProps (
   
 ## <a name="parameters"></a>参数  
  `fd`  
- [in] The token for the target field.  
+ 中目标字段的标记。  
   
  `dwFieldFlags`  
- [in] Field attributes. This is a bitmask of `CorFieldAttr` values.  
+ 中字段特性。 这是 `CorFieldAttr` 值的位掩码。  
   
  `dwCPlusTypeFlag`  
- [in] The `ELEMENT_TYPE_` *\** for the constant value. This is a `CorElementType` value. If a constant is not being defined, set this value to `ELEMENT_TYPE_END`.  
+ 中常量值的 `ELEMENT_TYPE_` *\** 。 这是 `CorElementType` 值。 如果未定义常数，请将此值设置为 `ELEMENT_TYPE_END`。  
   
  `pValue`  
- [in] The constant value for the field.  
+ 中字段的常数值。  
   
  `cchValue`  
- [in] The size, in Unicode characters, of `pValue`.  
+ 中`pValue`的大小（以 Unicode 字符为格式）。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

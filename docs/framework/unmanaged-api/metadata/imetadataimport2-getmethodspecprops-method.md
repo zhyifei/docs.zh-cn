@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445252"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps 方法
-Gets the metadata signature of the method referenced by the specified MethodSpec token.  
+获取指定的 MethodSpec 标记所引用的方法的元数据签名。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,27 +38,27 @@ HRESULT GetMethodSpecProps (
   
 ## <a name="parameters"></a>参数  
  `mi`  
- [in] A MethodSpec token that represents the instantiation of the method.  
+ 中一个 MethodSpec 标记，表示方法的实例化。  
   
  `tkParent`  
- [out] A pointer to the MethodDef or MethodRef token that represents the method definition.  
+ 弄一个指针，指向表示方法定义的 MethodDef 或 MethodRef 标记。  
   
  `ppvSigBlob`  
- [out] A pointer to the binary metadata signature of the method.  
+ 弄指向方法的二进制元数据签名的指针。  
   
  `pcbSigBlob`  
- [out] The size, in bytes, of `ppvSigBlob`.  
+ 弄`ppvSigBlob`的大小（以字节为单位）。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

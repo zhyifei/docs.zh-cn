@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442272"
 ---
 # <a name="imetadataemitsetfieldmarshal-method"></a>IMetaDataEmit::SetFieldMarshal 方法
-Sets the PInvoke marshaling information for the field, method return, or method parameter referenced by the specified token.  
+为指定的标记引用的字段、方法返回或方法参数设置 PInvoke 封送处理信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,24 +37,24 @@ HRESULT SetFieldMarshal (
   
 ## <a name="parameters"></a>参数  
  `tk`  
- [in] The token for target data item. This is either a `mdFieldDef` or a `mdParamDef` token.  
+ 中目标数据项的标记。 这是 `mdFieldDef` 或 `mdParamDef` 令牌。  
   
  `pvNativeType`  
- [in] The signature for unmanaged type.  
+ 中非托管类型的签名。  
   
  `cbNativeType`  
- [in] The count of bytes in `pvNativeType`.  
+ 中`pvNativeType`中的字节计数。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

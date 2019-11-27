@@ -1,5 +1,5 @@
 ---
-title: Syntax used by DebugView property
+title: DebugView 属性使用的语法
 description: 描述 DebugView 属性使用的特殊语法以生成表达式数的字符串表示形式
 author: zspitz
 ms.author: wiwagn
@@ -19,7 +19,7 @@ ms.locfileid: "74346870"
 
 `DebugView` 属性（仅在调试时可用）提供表达式树的字符串呈现。 大部分语法都相当容易理解；特殊情况将在以下部分中介绍。
 
-Each example is followed by a comment block containing the `DebugView`.
+每个示例后跟包含 `DebugView`的注释块。
 
 ## <a name="parameterexpression"></a>ParameterExpression
 
@@ -43,11 +43,11 @@ Dim numParam As ParameterExpression = Expression.Parameter(GetType(Integer))
 
 ## <a name="constantexpressions"></a>ConstantExpressions
 
-对于表示整数值、字符串和 `null` 的 <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> 对象，将显示常数的值。
+对于表示整数值、字符串和 <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> 的 `null` 对象，将显示常数的值。
 
-For some numeric types, a suffix is added to the value:
+对于某些数值类型，会将一个后缀添加到值：
 
-| 键入 | 关键字 | 后缀 |
+| 类型 | 关键字 | Suffix |
 |--|--|--|
 | <xref:System.UInt32> | [UInteger](../../../language-reference/data-types/uinteger-data-type.md) | U |
 | <xref:System.Int64> | [Long](../../../language-reference/data-types/long-data-type.md) | L |

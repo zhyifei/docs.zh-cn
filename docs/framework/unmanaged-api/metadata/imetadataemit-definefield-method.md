@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432555"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField 方法
-Creates a definition for a field with the specified metadata signature, and gets a token to that field definition.  
+使用指定的元数据签名创建字段的定义，并获取该字段定义的标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,42 +43,42 @@ HRESULT DefineField (
   
 ## <a name="parameters"></a>参数  
  `td`  
- [in] The `mdTypeDef` token for the enclosing class or interface.  
+ 中封闭类或接口的 `mdTypeDef` 标记。  
   
  `szName`  
- [in] The field name in Unicode.  
+ 中Unicode 中的字段名称。  
   
  `dwFieldFlags`  
- [in] The field attributes. This is a bitmask of `CorFieldAttr` values.  
+ 中字段特性。 这是 `CorFieldAttr` 值的位掩码。  
   
  `pvSigBlob`  
- [in] The field signature as a BLOB.  
+ 中作为 BLOB 的字段签名。  
   
  `cbSigBlob`  
- [in] The count of bytes in `pvSigBlob`.  
+ 中`pvSigBlob`中的字节计数。  
   
  `dwCPlusTypeFlag`  
- [in] The `ELEMENT_TYPE_` *\** for the constant value. This is a `CorElementType` value. If not defining a constant value for the field, use `ELEMENT_TYPE_END`.  
+ 中常量值的 `ELEMENT_TYPE_` *\** 。 这是 `CorElementType` 值。 如果没有为字段定义常数值，请使用 `ELEMENT_TYPE_END`。  
   
  `pValue`  
- [in] The constant value for the field.  
+ 中字段的常数值。  
   
  `cchValue`  
- [in] The size in (Unicode) characters of `pValue`.  
+ 中`pValue`的大小（Unicode）字符。  
   
  `pmd`  
- [out] The `mdFieldDef` token assigned.  
+ 弄分配 `mdFieldDef` 标记。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

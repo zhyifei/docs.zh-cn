@@ -15,32 +15,32 @@ ms.locfileid: "74330339"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>利用 Visual Basic 自定义项目并扩展 My 对象
 
-You can customize project templates to provide additional `My` objects. This makes it easy for other developers to find and use your objects.
+你可以自定义项目模板以提供额外的 `My` 对象。 这样，其他开发人员便可以轻松查找和使用您的对象。
 
 ## <a name="in-this-section"></a>本节内容
 
 - [扩展 Visual Basic 中的 My 命名空间](extending-the-my-namespace.md)  
- Describes how to add custom members and values to the `My` namespace in Visual Basic.
+ 描述如何将自定义成员和值添加到 Visual Basic 中的 `My` 命名空间。
 - [打包和部署自定义 My 扩展](packaging-and-deploying-custom-my-extensions.md)  
- Describes how to publish custom `My` namespace extensions by using Visual Studio templates.
+ 介绍如何使用 Visual Studio 模板发布自定义 `My` 命名空间扩展。
 - [扩展 Visual Basic 应用程序模型](extending-the-visual-basic-application-model.md)  
- Describes how to specify your own extensions to the application model by overriding members of the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> class.
+ 介绍如何通过重写 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 类的成员，为应用程序模型指定您自己的扩展。
 - [自定义 My 中可用的对象](customizing-which-objects-are-available-in-my.md)  
- Describes how to control which `My` objects are enabled by setting your project's \_MYTYPE conditional-compilation constant.
+ 介绍如何通过设置项目的 \_MYTYPE 条件编译常量来控制要启用的 `My` 对象。
 
 ## <a name="related-sections"></a>相关章节
 
 - [使用 My 开发](../development-with-my/index.md)  
- Describes which `My` objects are available in different project types by default.
+ 说明默认情况下，不同项目类型中可用的 `My` 对象。
 - [Visual Basic 应用程序模型概述](../development-with-my/overview-of-the-visual-basic-application-model.md)  
- Describes Visual Basic's model for controlling the behavior of Windows Forms applications.
+ 介绍 Visual Basic 用于控制 Windows 窗体应用程序行为的模型。
 - [My 对项目类型的依赖方式](../development-with-my/how-my-depends-on-project-type.md)  
- Describes which `My` objects are available in different project types by default.
+ 说明默认情况下，不同项目类型中可用的 `My` 对象。
 - [条件编译](../../programming-guide/program-structure/conditional-compilation.md)  
- Discusses how the compiler uses conditional-compilation to select particular sections of code to compile and exclude other sections.
+ 讨论编译器如何使用条件编译来选择代码的特定部分，以便编译和排除其他部分。
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- Describes the `My` object that provides properties, methods, and events related to the current application.
+ 介绍提供与当前应用程序相关的属性、方法和事件的 `My` 对象。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 Visual Basic 开发应用程序](../index.md)

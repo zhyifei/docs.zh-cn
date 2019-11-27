@@ -22,11 +22,11 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448722"
 ---
 # <a name="iclrprofiling-interface"></a>ICLRProfiling 接口
-Provides the [ICLRProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method, which enables a profiler to attach to a running process.  
+提供[ICLRProfiling：： AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)方法，该方法可使探查器附加到正在运行的进程。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |[AttachProfiler 方法](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|将指定的探查器附加到指定的进程中。|  
   
@@ -41,7 +41,7 @@ Provides the [ICLRProfiling::AttachProfiler](../../../../docs/framework/unmanage
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

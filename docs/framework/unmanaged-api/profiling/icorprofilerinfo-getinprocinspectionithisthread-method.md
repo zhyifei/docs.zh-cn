@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438910"
 ---
 # <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a>ICorProfilerInfo::GetInprocInspectionIThisThread 方法
-Gets an object that can be queried for the ICorDebugThread interface. This method is obsolete in the .NET Framework version 2.0.  
+获取一个对象，该对象可查询 ICorDebugThread 接口。 此方法在 .NET Framework 版本2.0 中已过时。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,10 +34,10 @@ HRESULT GetInprocInspectionIThisThread(
   
 ## <a name="parameters"></a>参数  
  `ppicd`  
- [out](/cpp/atl/iunknown) object that can be queried for the `ICorDebugThread` interface.  
+ [out](/cpp/atl/iunknown)对象，可查询 `ICorDebugThread` 接口。  
   
 ## <a name="remarks"></a>备注  
- The common language runtime (CLR) debugging services supported limited in-process debugging in the .NET Framework version 1.0. In-process debugging enabled a profiler to use the inspection portions of the debugging API. As a result of customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.  
+ 在 .NET Framework 版本1.0 中，公共语言运行时（CLR）调试服务支持有限的进程内调试。 进程内调试使探查器能够使用调试 API 的检查部分。 由于客户反馈，已从版本2.0 中的 .NET Framework 中删除进程内调试，并将其替换为一组功能，这些功能与分析 API 是一种更多的功能。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -46,8 +46,8 @@ HRESULT GetInprocInspectionIThisThread(
   
  **库：** CorGuids.lib  
   
- **.NET Framework Version:** 1.0  
+ **.NET Framework 版本：** 1。0  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

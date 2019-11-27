@@ -12,39 +12,39 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74338341"
 ---
 # <a name="constants-overview-visual-basic"></a>常量概述 (Visual Basic)
-A constant is a meaningful name that takes the place of a number or string that does not change. Constants store values that, as the name implies, remain the same throughout the execution of an application. You can greatly improve the readability of your code and make it easier to maintain by using constants. Use them in code that contains values that reappear or that depends on certain numbers that are difficult to remember or have no obvious meaning.  
+常量是有意义的名称，用来代替不会更改的数字或字符串。 顾名思义，常数存储值在应用程序的整个执行过程中保持不变。 您可以通过使用常量极大地提高代码的可读性并使其更易于维护。 在包含重新出现的值的代码中使用它们，或依赖于某些难以记住或没有明显含义的数字的值。  
   
-## <a name="how-to-create-and-use-constants"></a>How to Create and Use Constants  
- Visual Basic contains a number of predefined constants, mainly using for printing and displaying. You can also create your own constants with the `Const` statement, using the same guidelines you would for creating a variable name. If `Option Strict` is `On`, you must explicitly declare the constant type.  
+## <a name="how-to-create-and-use-constants"></a>如何创建和使用常量  
+ Visual Basic 包含许多预定义的常量，主要用于打印和显示。 你还可以使用 `Const` 语句创建自己的常量，使用与创建变量名称相同的准则。 如果 `On``Option Strict`，则必须显式声明常量类型。  
   
- A constant's scope, which is the set of all code that can refer to it without qualifying its name, is the same as that of a variable declared in the same location. To create a constant that exists within the scope of a particular procedure, declare it inside that procedure. To create a constant that is available throughout an application, declare it using the `Public` keyword in the declarations section of the class.  
+ 常量的作用域，它是在不限定其名称的情况下可引用它的所有代码的集合，与在同一位置声明的变量的作用域相同。 若要创建一个存在于特定过程范围内的常量，请在该过程中将其声明为。 若要创建可在整个应用程序中使用的常量，请在类的声明部分中使用 `Public` 关键字进行声明。  
   
 > [!NOTE]
-> Although constants somewhat resemble variables, you cannot modify them or assign new values to them as you can to variables.  
+> 尽管常量有点类似于变量，但您不能对其进行修改，也不能为变量赋值。  
   
- The constants you use in your code can be defined by the object model for controls or components you work with, or they can be user-defined (that is, those you create yourself).  
+ 您在代码中使用的常量可以由您所使用的控件或组件的对象模型定义，也可以是用户定义的（也就是说，您自己创建的）。  
   
-## <a name="compile-time-and-run-time-constants"></a>Compile-time and Run-time Constants  
- A compile-time constant is computed at the time the code is compiled, while a run-time constant can only be computed while the application is running. A compile-time constant will have the same value each time an application runs, while a run-time constant may change each time. Compile-time constants are required for cases such as array bounds, case expressions, or enumerator initializers.  
+## <a name="compile-time-and-run-time-constants"></a>编译时和运行时常量  
+ 编译时常量是在编译代码时计算的，而运行时常量只能在应用程序运行时进行计算。 每次应用程序运行时，编译时常量都将具有相同的值，而每次运行时常量可能会更改。 对于数组界限、case 表达式或枚举器初始值设定项等事例，编译时常量是必需的。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|定义|术语|  
+|Definition|术语|  
 |---|---|  
-|[如何：声明常量](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|Explains how to use the `Const` statement to declare a constant and set its value; by declaring a constant, you assign a meaningful name to the value.|  
-|[用户定义的常量](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|Describes how to create your own constants, including information on scoping and how to avoid circular references.|  
-|[常量和文本数据类型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|Provides information on how the Visual Basic compiler initializes constants when `Option Explicit` is turned off.|  
-|[如何：将相关的常量值组合在一起](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|Demonstrates how to group constant values that are related.|  
+|[如何：声明常量](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|说明如何使用 `Const` 语句来声明常量并设置其值;通过声明常量，可为该值指定有意义的名称。|  
+|[用户定义的常量](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|介绍如何创建自己的常量，包括有关范围的信息以及如何避免循环引用。|  
+|[常量和文本数据类型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|提供有关 Visual Basic 编译器如何在 `Option Explicit` 关闭时初始化常量的信息。|  
+|[如何：将相关的常量值组合在一起](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|演示如何对相关的常量值进行分组。|  
   
 ## <a name="reference"></a>参考  
   
-|定义|术语|  
+|Definition|术语|  
 |---|---|  
-|[常量和枚举](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Lists the constants predefined by Visual Basic.|  
-|[Const 语句](../../../../visual-basic/language-reference/statements/const-statement.md)|Describes the `Const` statement and its use.|  
-|[Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Describes the `Option Strict` statement and its use.|  
+|[常量和枚举](../../../../visual-basic/language-reference/constants-and-enumerations.md)|列出由 Visual Basic 预定义的常量。|  
+|[Const 语句](../../../../visual-basic/language-reference/statements/const-statement.md)|描述 `Const` 语句及其用法。|  
+|[Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|描述 `Option Strict` 语句及其用法。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [枚举概述](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
 - [如何：在 Visual Basic 中初始化数组变量](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
