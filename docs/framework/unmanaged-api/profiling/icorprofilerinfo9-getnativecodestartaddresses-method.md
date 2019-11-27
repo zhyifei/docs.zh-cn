@@ -18,9 +18,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444713"
 ---
-# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9::GetNativeCodeStartAddresses Method
+# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9：： GetNativeCodeStartAddresses 方法
 
-Given a functionId and rejitId, enumerates the native code start address of all jitted versions of this code that currently exist.
+给定一个 functionId 和 rejitId，枚举此代码当前存在的所有实时编译版本的本机代码起始地址。
 
 ## <a name="syntax"></a>语法
 
@@ -35,7 +35,7 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 #### <a name="parameters"></a>参数
 
 `functionId` \
-[in] The ID of the function whose native code start addresses should be returned.
+中应返回其本机代码起始地址的函数的 ID。
 
 `reJitId` \
 [in] JIT 重新编译的函数的标识。
@@ -44,25 +44,25 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 [in] `codeStartAddresses` 数组的最大大小。
 
 `pcCodeStartAddresses` \
-[out] The number of available addresses.
+弄可用地址的数目。
 
 `codeStartAddresses` \
-[out] An array of `UINT_PTR`, each one of which is the start address for a native body for the specified function.
+弄`UINT_PTR`的数组，其中每个都是指定函数的本机正文的开始地址。
 
 ## <a name="remarks"></a>备注
 
-When tiered compilation is enabled, a function may have more than one native code body.
+启用分层编译后，函数可能有多个本机代码体。
 
 ## <a name="requirements"></a>要求
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**平台：** 请参阅[支持 .Net Core 的操作系统](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)。
 
 **头文件：** CorProf.idl、CorProf.h
 
 **库：** CorGuids.lib
 
-**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.Net 版本：** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerInfo9 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)

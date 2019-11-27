@@ -34,7 +34,7 @@ ms.locfileid: "74446780"
   
 除了 <xref:System.Reflection.Emit> 命名空间中的托管类型，还有非托管元数据接口，非托管元数据接口在[元数据接口](../unmanaged-api/metadata/metadata-interfaces.md)参考文档中介绍。 托管的反射发出提供比非托管元数据接口更强的语义错误检查和更高级别的元数据抽象。  
   
-元数据和 MSIL 的另一个有用资源是《公共语言基础结构 (CLI)》文档，尤其是“第二部分：元数据定义和语义”和“第三部分: CIL 指令集”。 The documentation is available online at the [Ecma Web site](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+元数据和 MSIL 的另一个有用资源是《公共语言基础结构 (CLI)》文档，尤其是“第二部分：元数据定义和语义”和“第三部分: CIL 指令集”。 文档可在[Ecma](https://www.ecma-international.org/publications/standards/Ecma-335.htm)网站上联机获取。  
   
 ## <a name="in-this-section"></a>本节内容
   

@@ -22,19 +22,19 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448359"
 ---
 # <a name="isymunmanagednamespace-interface"></a>ISymUnmanagedNamespace 接口
-Represents a namespace.  
+表示命名空间。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[GetName 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getname-method.md)|Gets the name of this namespace.|  
-|[GetNamespaces 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getnamespaces-method.md)|Gets the children of this namespace.|  
-|[GetVariables 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|Returns all variables defined at global scope within this namespace.|  
+|[GetName 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getname-method.md)|获取此命名空间的名称。|  
+|[GetNamespaces 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getnamespaces-method.md)|获取此命名空间的子级。|  
+|[GetVariables 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|返回在此命名空间中的全局范围内定义的所有变量。|  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [诊断符号存储区接口](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
