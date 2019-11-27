@@ -13,7 +13,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348009"
 ---
 # <a name="com-interop-visual-basic"></a>COM 互操作 (Visual Basic)
-组件对象模型 (COM) 允许对象向其他组件和主机应用公开自己的功能。 如今的大部分软件都包含 COM 对象。 尽管 .NET 程序集是新应用的最佳选择，有时也建议使用 COM 对象。 This section covers some of the issues associated with creating and using COM objects with Visual Basic.  
+组件对象模型 (COM) 允许对象向其他组件和主机应用公开自己的功能。 如今的大部分软件都包含 COM 对象。 尽管 .NET 程序集是新应用的最佳选择，有时也建议使用 COM 对象。 本部分介绍与 Visual Basic 创建和使用 COM 对象相关的一些问题。  
   
 ## <a name="in-this-section"></a>本节内容  
  [COM 互操作介绍](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
@@ -23,7 +23,7 @@ ms.locfileid: "74348009"
  介绍了如何添加对包含类型库的 COM 对象的引用。  
   
  [如何：使用 ActiveX 控件](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Demonstrates how to use existing ActiveX controls to add features to the Visual Studio Toolbox.  
+ 演示如何使用现有 ActiveX 控件将功能添加到 Visual Studio "工具箱"。  
   
  [演练：调用 Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  逐步介绍了如何调用属于 Windows 操作系统的 API。  

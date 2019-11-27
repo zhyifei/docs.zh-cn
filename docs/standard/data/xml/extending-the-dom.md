@@ -252,6 +252,6 @@ DOM 的 .NET Framework 实现还包括一个事件系统，使您能够在 XML �
 
 如果要重写派生类中的 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法，则在编辑文档期间创建新元素时不添加默认属性。 这只有在编辑时才是问题。 由于 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法负责向 <xref:System.Xml.XmlDocument> 添加默认属性，因此必须在 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法中编写此功能的代码。 如果要加载包含默认属性的 <xref:System.Xml.XmlDocument>，则这些属性将被正确处理。 若要详细了解默认属性，请参阅[新建 DOM 中元素的属性](creating-new-attributes-for-elements-in-the-dom.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 文档对象模型 (DOM)](xml-document-object-model-dom.md)
