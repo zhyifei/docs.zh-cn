@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443546"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>IMetaDataAssemblyImport::EnumFiles 方法
-Enumerates the files referenced in the current assembly manifest.  
+枚举当前程序集清单中引用的文件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,33 +38,33 @@ HRESULT EnumFiles (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be a null value for the first call of this method.  
+ [in，out]指向枚举器的指针。 第一次调用此方法时，此值必须为 null 值。  
   
  `rFiles`  
- [out] The array used to store the `mdFile` metadata tokens.  
+ 弄用于存储 `mdFile` 元数据标记的数组。  
   
  `cMax`  
- [in] The maximum number of `mdFile` tokens that can be placed in `rFiles`.  
+ 中可放置在 `rFiles`中的 `mdFile` 标记的最大数目。  
   
  `pcTokens`  
- [out] The number of `mdFile` tokens actually placed in `rFiles`.  
+ 弄实际置于 `rFiles`中 `mdFile` 标记的数目。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFiles` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
+|`S_OK`|`EnumFiles` 成功返回。|  
+|`S_FALSE`|没有要枚举的令牌。 在这种情况下，`pcTokens` 设置为零。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

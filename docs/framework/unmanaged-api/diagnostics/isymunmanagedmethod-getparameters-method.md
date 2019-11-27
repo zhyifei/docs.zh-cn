@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448953"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>ISymUnmanagedMethod::GetParameters 方法
-Gets the parameters for this method. The parameters are returned in the order in which they are defined within the method's signature.  
+获取此方法的参数。 按参数在方法签名中的定义顺序返回参数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,17 +40,17 @@ HRESULT GetParameters(
  [in] `params` 数组的大小。  
   
  `pcParams`  
- [in] A pointer to a `ULONG32` that receives the size of the buffer that is required to contain the parameters.  
+ 中指向 `ULONG32` 的指针，该指针接收包含参数所需的缓冲区大小。  
   
  `params`  
- [out] A pointer to the buffer that receives the parameters.  
+ 弄指向接收参数的缓冲区的指针。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

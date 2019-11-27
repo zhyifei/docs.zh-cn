@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438758"
 ---
 # <a name="icorprofilerinfogetthreadcontext-method"></a>ICorProfilerInfo::GetThreadContext 方法
-Gets the context identity currently associated with the specified thread.  
+获取当前与指定线程关联的上下文标识。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,10 +35,10 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>参数  
  `threadId`  
- [in] The ID of the thread.  
+ 中线程的 ID。  
   
  `pContextId`  
- [out] A pointer to the context ID currently associated with the specified thread. If the thread has no context currently associated with it, this function will return CORPROF_E_DATAINCOMPLETE.  
+ 弄指向当前与指定线程关联的上下文 ID 的指针。 如果该线程当前没有关联的上下文，则此函数将返回 CORPROF_E_DATAINCOMPLETE。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -49,6 +49,6 @@ HRESULT GetThreadContext(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

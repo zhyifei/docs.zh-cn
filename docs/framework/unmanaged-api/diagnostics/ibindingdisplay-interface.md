@@ -22,24 +22,24 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448472"
 ---
 # <a name="ibindingdisplay-interface"></a>IBindingDisplay 接口
-Provides methods that display current binding information about the running application.  
+提供显示有关正在运行的应用程序的当前绑定信息的方法。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[GetCurrentDisplay 方法](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|Returns the current binding display information.|  
+|[GetCurrentDisplay 方法](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|返回当前绑定显示信息。|  
 |[InitializeForProcess 方法](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|初始化 `IBindingDisplay` 对象。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** BindingDisplay.h  
+ **标头：** BindingDisplay  
   
- **Library:** BindingDisplay.idl  
+ **库：** BindingDisplay .idl  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [诊断符号存储区接口](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

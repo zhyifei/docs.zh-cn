@@ -21,7 +21,7 @@ ms.locfileid: "74435435"
   
  <xref:System.Windows.Automation.DockPattern> 控件模式用于公开停靠容器内控件的停靠属性。 停靠容器是一个可让你水平或垂直地在彼此之间相对排列子元素的控件。 有关实现此控件模式的控件示例，请参阅 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)。  
   
- ![Docking container with two docked children.](./media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
+ ![具有两个停靠子级的停靠容器。](./media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
 Visual Studio 中的停靠示例，其中“类视图”窗口为 DockPosition.Right，“错误列表”窗口为 DockPosition.Bottom  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
@@ -42,8 +42,8 @@ Visual Studio 中的停靠示例，其中“类视图”窗口为 DockPosition.R
   
 |必需的成员|成员类型|注意|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|Property|None|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|属性|无|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|方法|无|  
   
  没有与此控件模式关联的事件。  
   
@@ -51,14 +51,14 @@ Visual Studio 中的停靠示例，其中“类视图”窗口为 DockPosition.R
 ## <a name="exceptions"></a>异常  
  提供程序必须引发以下异常。  
   
-|异常类型|条件|  
+|例外狀況類型|条件|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -   When a control is not able to execute the requested dock style.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -当控件无法执行请求的停靠样式时。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UI 自动化控件模式概述](ui-automation-control-patterns-overview.md)
 - [在 UI 自动化提供程序中支持控件模式](support-control-patterns-in-a-ui-automation-provider.md)
-- [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [UI 自动化树概述](ui-automation-tree-overview.md)
 - [在 UI 自动化中使用缓存](use-caching-in-ui-automation.md)

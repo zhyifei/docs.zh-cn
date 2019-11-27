@@ -13,30 +13,30 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335999"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>XML 文本中的空白 (Visual Basic)
-The Visual Basic compiler incorporates only the significant white space characters from an XML literal when it creates a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object. The insignificant white space characters are not incorporated.  
+在创建 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 对象时，Visual Basic 编译器仅合并 XML 文本中的有效空白字符。 不包含无意义的空白字符。  
   
-## <a name="significant-and-insignificant-white-space"></a>Significant and Insignificant White Space  
- White space characters in XML literals are significant in only three areas:  
+## <a name="significant-and-insignificant-white-space"></a>重要且无意义的空白  
+ XML 文本中的空格字符仅在三个区域中很重要：  
   
-- When they are in an attribute value.  
+- 在属性值中。  
   
-- When they are part of an element's text content and the text also contains other characters.  
+- 当它们是元素的文本内容的一部分并且文本还包含其他字符时。  
   
-- When they are in an embedded expression for an element's text content.  
+- 当它们位于元素的文本内容的嵌入式表达式中时。  
   
- Otherwise, the compiler treats white space characters as insignificant and does not include then in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object for the literal.  
+ 否则，编译器会将空白字符视为不重要的，并且不会在文本的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 对象中包含。  
   
- To include insignificant white space in an XML literal, use an embedded expression that contains a string literal with the white space.  
+ 若要在 XML 文本中包含无意义的空白，请使用包含带有空格的字符串文字的嵌入式表达式。  
   
 > [!NOTE]
-> If the `xml:space` attribute appears in an XML element literal, the Visual Basic compiler includes the attribute in the <xref:System.Xml.Linq.XElement> object, but adding this attribute does not change how the compiler treats white space.  
+> 如果 `xml:space` 特性显示在 XML 元素文本中，则 Visual Basic 编译器在 <xref:System.Xml.Linq.XElement> 对象中包含特性，但添加此特性不会更改编译器处理空白的方式。  
   
 ## <a name="examples"></a>示例  
- The following example contains two XML elements, outer and inner. Both elements contain white space in their text content. The white space in the outer element is insignificant because it contains only white space and an XML element. The white space in the inner element is significant because it contains white space and text.  
+ 下面的示例包含两个 XML 元素：外部和内部。 这两个元素在其文本内容中都包含空格。 外部元素中的空白是无意义的，因为它仅包含空格和 XML 元素。 内部元素中的空格非常重要，因为它包含空格和文本。  
   
  [!code-vb[VbXMLSamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#29)]  
   
- When run, this code displays the following text.  
+ 运行时，此代码显示以下文本。  
   
 ```xml  
 <outer>  
@@ -46,6 +46,6 @@ The Visual Basic compiler incorporates only the significant white space characte
 </outer>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Basic 中创建 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

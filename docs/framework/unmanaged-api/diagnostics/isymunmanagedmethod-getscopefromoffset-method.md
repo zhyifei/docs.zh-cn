@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448898"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a>ISymUnmanagedMethod::GetScopeFromOffset 方法
-Gets the most enclosing lexical scope within this method that encloses the given offset. This can be used to start local variable searches.  
+获取此方法内包含给定偏移量的最封闭的词法范围。 这可用于启动本地变量搜索。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,17 +35,17 @@ HRESULT GetScopeFromOffset(
   
 ## <a name="parameters"></a>参数  
  `offset`  
- [in] A `ULONG` that contains the offset.  
+ 中一个包含偏移量的 `ULONG`。  
   
  `pRetVal`  
- [out] A pointer that is set to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.  
+ 弄设置为返回的[ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)接口的指针。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

@@ -25,7 +25,7 @@ ms.locfileid: "74447339"
 指示缓存的函数搜索的结果。  
   
 > [!NOTE]
-> `COR_PRF_CACHED_FUNCTION_FOUND` has a value of zero, so `COR_PRF_JIT_CACHE` cannot be used as a Boolean surrogate.  
+> `COR_PRF_CACHED_FUNCTION_FOUND` 的值为零，因此 `COR_PRF_JIT_CACHE` 不能用作布尔代理项。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,10 +38,10 @@ typedef enum {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`COR_PRF_FUNCTION_FOUND`|The search found the function.|  
-|`COR_PRF_FUNCTION_NOT_FOUND`|The search did not find the function.|  
+|`COR_PRF_FUNCTION_FOUND`|搜索找到函数。|  
+|`COR_PRF_FUNCTION_NOT_FOUND`|搜索找不到函数。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -52,6 +52,6 @@ typedef enum {
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

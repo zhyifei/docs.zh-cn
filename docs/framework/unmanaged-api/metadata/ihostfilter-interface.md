@@ -22,26 +22,26 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426136"
 ---
 # <a name="ihostfilter-interface"></a>IHostFilter 接口
-Provides a method to indicate that a specified token will be processed.  
+提供一个方法，用于指示将处理指定的标记。  
   
 > [!NOTE]
-> The `IHostFilter` interface must be implemented by the client.  
+> `IHostFilter` 接口必须由客户端实现。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[MarkToken 方法](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Indicates that the specified metadata token will be processed.|  
+|[MarkToken 方法](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|指示将处理指定的元数据标记。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [元数据接口](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

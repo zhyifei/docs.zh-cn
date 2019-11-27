@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352971"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>How to: Find All Nodes in a Namespace (Visual Basic)
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>如何：查找命名空间中的所有节点（Visual Basic）
 您可以对每个元素或属性的命名空间进行筛选，以便查找该特定命名空间中的所有节点。  
   
 ## <a name="example"></a>示例  
@@ -109,6 +109,6 @@ End Module
 </Root>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [基本查询（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

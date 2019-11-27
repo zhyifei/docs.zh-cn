@@ -45,7 +45,7 @@ ms.locfileid: "74344154"
 |[My.WebServices 对象](../../../visual-basic/language-reference/objects/my-webservices-object.md)|提供了用于创建和访问当前项目引用的每个 Web 服务实例的属性。|  
 |<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|提供分析结构化文本文件的方法和属性。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 语言参考](../../../visual-basic/language-reference/index.md)
 - [Visual Basic](../../../visual-basic/index.md)

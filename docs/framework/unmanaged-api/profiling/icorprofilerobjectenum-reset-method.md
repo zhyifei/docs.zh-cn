@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428137"
 ---
 # <a name="icorprofilerobjectenumreset-method"></a>ICorProfilerObjectEnum::Reset 方法
-Moves this enumerator's cursor to the starting position of the sequence.  
+将此枚举器的光标移动到序列的起始位置。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,6 +40,6 @@ HRESULT Reset ();
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerObjectEnum 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

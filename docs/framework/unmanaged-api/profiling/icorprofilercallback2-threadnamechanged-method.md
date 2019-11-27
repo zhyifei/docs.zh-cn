@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439569"
 ---
 # <a name="icorprofilercallback2threadnamechanged-method"></a>ICorProfilerCallback2::ThreadNameChanged 方法
-Notifies the code profiler that the name of a thread has changed.  
+通知代码探查器线程的名称已更改。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,13 +36,13 @@ HRESULT ThreadNameChanged(
   
 ## <a name="parameters"></a>参数  
  `threadId`  
- [in] The ID of the thread.  
+ 中线程的 ID。  
   
  `cchName`  
- [in] The length of the new name of the thread.  
+ 中线程的新名称的长度。  
   
  `name`  
- [in] The new name of the thread. The name is not null-terminated.  
+ 中线程的新名称。 名称不以 null 结尾。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -53,7 +53,7 @@ HRESULT ThreadNameChanged(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerCallback2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

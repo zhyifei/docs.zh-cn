@@ -12,7 +12,7 @@ ms.locfileid: "74204583"
 # <a name="service-security-validation-and-authentication-failures"></a>服务：Security Validation and Authentication Failures（安全验证和身份验证失败次数）
 计数器名称：Security Validation and Authentication Failures（安全验证和身份验证失败次数）  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>说明  
  每当消息由于“Security Calls Not Authorized”（未授权的安全调用次数）计数器中未包括的安全问题而遭到拒绝时，此计数器即会递增。 此类问题包括：  
   
 - 无法从消息中读取客户端令牌。  

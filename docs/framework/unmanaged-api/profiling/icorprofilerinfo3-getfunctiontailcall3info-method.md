@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449699"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>ICorProfilerInfo3::GetFunctionTailcall3Info 方法
-Provides the stack frame of the function that is being reported to the profiler by the [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) function. 仅在 `FunctionTailcall3WithInfo` 回调时可调用此方法。  
+提供由[FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)函数向探查器报告的函数的堆栈帧。 仅在 `FunctionTailcall3WithInfo` 回调时可调用此方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,13 +36,13 @@ HRESULT GetFunctionTailcall3Info(
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in] The `FunctionID` of the function that is returning.  
+ 中返回的函数的 `FunctionID`。  
   
  `eltInfo`  
- [in] 表示有关给定堆栈帧的信息的不透明的句柄。 The profiler should provide the same `eltInfo` that was given to the profiler by the `FunctionTailcall3WithInfo` function.  
+ [in] 表示有关给定堆栈帧的信息的不透明的句柄。 探查器应提供 `FunctionTailcall3WithInfo` 函数为探查器提供的相同 `eltInfo`。  
   
  `pFrameInfo`  
- [out] 表示有关给定堆栈帧的泛型信息的不透明的句柄。 此句柄仅在探查器调用 `GetFunctionTailcall3Info` 方法的 `FunctionTailcall3WithInfo` 回调时有效。  
+ [out] 表示有关给定堆栈帧的泛型信息的不透明的句柄。 此句柄仅在探查器调用 `FunctionTailcall3WithInfo` 方法的 `GetFunctionTailcall3Info` 回调时有效。  
   
 ## <a name="remarks"></a>备注  
   
@@ -55,7 +55,7 @@ HRESULT GetFunctionTailcall3Info(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
 - [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430715"
 ---
 # <a name="icorprofilercallbackremotingserversendingreply-method"></a>ICorProfilerCallback::RemotingServerSendingReply 方法
-Notifies the profiler that the process has finished processing a remote method invocation request and is about to transmit the reply through a channel.  
+通知探查器进程已处理完远程方法调用请求，即将通过通道传输答复。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,18 +35,18 @@ HRESULT RemotingServerSendingReply(
   
 ## <a name="parameters"></a>参数  
  `pCookie`  
- [in] A pointer to a GUID that will correspond with the value provided in [ICorProfilerCallback::RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) under these conditions:  
+ 中指向 GUID 的指针，该 GUID 将与以下条件下的[ICorProfilerCallback：： RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md)中提供的值相对应：  
   
-- Remoting GUID cookies are active.  
+- 远程处理 GUID cookie 处于活动状态。  
   
-- The channel succeeds in transmitting the message.  
+- 通道成功传输消息。  
   
-- GUID cookies are active on the client-side process.  
+- GUID cookie 在客户端进程中处于活动状态。  
   
- This allows easy pairing of remoting calls and the creation of a logical call stack.  
+ 这样就可以轻松地配对远程调用和逻辑调用堆栈的创建。  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ 中如果调用是异步的，则为 `true` 的值;否则，`false`。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -57,6 +57,6 @@ HRESULT RemotingServerSendingReply(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

@@ -21,7 +21,7 @@ ms.locfileid: "74283224"
 
  Windows Communication Foundation （WCF）是 Microsoft 用于构建面向服务的应用程序的统一编程模型。 它最初是作为 .NET 3.0 的一部分引入的，它是 WF3 的一部分，现在是 .NET Framework 的关键组件之一。
 
- Windows Server AppFabric 是一组集成技术。你可以利用这些技术更轻松地生成、缩放和管理在 IIS 上运行的 Web 应用程序和复合应用程序。 它提供用于监视和管理服务与工作流的工具。 有关详细信息，请参阅[Windows Server AppFabric 1.0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10))。
+ Windows Server AppFabric 是一组集成技术，可使构建、扩展和管理运行在 IIS 上的 Web 和复合应用程序更容易。 它提供用于监视和管理服务与工作流的工具。 有关详细信息，请参阅[Windows Server AppFabric 1.0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10))。
 
 ## <a name="goals"></a>目标
  本主题的目标是使用为不同方案测得的数据显示 WF4 的性能特征。 本文还提供 WF4 与 WF3 之间的详细比较，从而展示在新修订版中所做的重大改进。 本文所展示的方案和数据量化了 WF4 和 WF3 在不同方面的基础成本。 这些数据有助于了解 WF4 的性能特征，并有助于规划从 WF3 到 WF4 的迁移或在应用程序开发中使用 WF4。 但是，应当关注根据本文展示的数据所得出的结论。 复合工作流应用程序的性能高度依赖于工作流的实现方式和不同组件的集成方式。 必须测量每个应用程序，才能确定该应用程序的性能特征。
@@ -218,7 +218,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  ![显示 WCF 工作流服务的冷和预热延迟的柱形图，使用 WF3 和 WF4](./media/performance/latency-results-graph.gif)
 
- 在上图中，"冷" 指的是给定工作流没有现有 <xref:System.ServiceModel.WorkflowServiceHost> 的情况。  换言之，冷延迟是第一次使用工作流和需要编译 XOML 或 XAML 的时间。  热延迟是当工作流类型已经编译时创建新工作流实例的时间。  在 WF4 中，工作流的复杂程度只有细微的变化，但在 WF3 中，则呈现线性发展态势。
+ 在上图中，"冷" 指的是给定工作流没有现有 <xref:System.ServiceModel.WorkflowServiceHost> 的情况。  换言之，冷延迟表示首次使用工作流并且 XOML 或 XAML 需要编译的一段时间。  热延迟是指在工作流类型已编译时用于创建新的工作流实例的时间。  在 WF4 中，工作流的复杂程度只有细微的变化，但在 WF3 中，则呈现线性发展态势。
 
 #### <a name="correlation-throughput"></a>相关吞吐量
  WF4 采用一种新的基于内容的相关功能。  WF3 只提供基于上下文的相关。  基于上下文的关联只能通过特定的 WCF 通道绑定完成。  使用这些绑定时，工作流 ID 会插入消息标头。  WF3 运行时只能按其 Id 识别工作流。 使用基于内容的相关，工作流作者可以从相关数据片段（如帐号或客户 Id）创建相关键。
@@ -255,7 +255,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  给定的测试中的活动数由深度和每个序列的活动数决定。  以下公式会计算 WF4 测试中的活动数：
 
- ![计算活动数的等式](./media/performance/number-activities-equation.gif)
+ ![公式计算活动数](./media/performance/number-activities-equation.gif)
 
  由于有一个额外的序列，所以计算 WF3 测试活动计数的等式可能会稍有不同：
 
@@ -353,7 +353,7 @@ public class Workflow1 : Activity
 
 ## <a name="workflow-runtime-services"></a>工作流运行时服务
 
-### <a name="persistence"></a>持久性
+### <a name="persistence"></a>持久化
  WF3 和 WF4 都附带 SQL 暂留提供程序。  WF3 SQL 暂留提供程序是序列化工作流实例并将它存储在 blob 中的简单实现。  因此，此提供程序的性能主要取决于工作流实例的大小。  在 WF3 中，如本文前面所述，实例大小可能因为多种原因而增加。  许多用户选择不使用默认的 SQL 暂留提供程序，因为在数据库中存储序列化实例会导致无法看见工作流的状态。  为了在不知道工作流 ID 的情况下找到特定工作流，必须反序列化每个暂留的实例，并检查内容。  许多开发人员喜欢编写自己的暂留提供程序以克服这些障碍。
 
  WF4 SQL 暂留提供程序已尝试解决这些困挠。  暂留表公开特定的信息，如活动的书签和可提升的属性。  WF4 中的新的基于内容的相关功能在使用 WF3 SQL 暂留方法时可能无法正常执行，因为它为使暂留的工作流实例的组织产生变化。  这使暂留提供程序的作业更为复杂，并为数据库施加了额外的压力。

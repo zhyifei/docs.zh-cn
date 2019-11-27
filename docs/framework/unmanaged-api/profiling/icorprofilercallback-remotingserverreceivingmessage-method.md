@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445759"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>ICorProfilerCallback::RemotingServerReceivingMessage 方法
-Notifies the profiler that the process has received a remote method invocation or activation request.  
+通知探查器进程已收到远程方法调用或激活请求。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,21 +35,21 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>参数  
  `pCookie`  
- [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) under these conditions:  
+ 中与以下条件下的[ICorProfilerCallback：： RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)中提供的值对应的值：  
   
-- Remoting GUID cookies are active.  
+- 远程处理 GUID cookie 处于活动状态。  
   
-- The channel succeeds in transmitting the message.  
+- 通道成功传输消息。  
   
-- GUID cookies are active on the client-side process.  
+- GUID cookie 在客户端进程中处于活动状态。  
   
- This allows easy pairing of remoting calls and the creation of a logical call stack.  
+ 这样就可以轻松地配对远程调用和逻辑调用堆栈的创建。  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ 中如果调用是异步的，则为 `true` 的值;否则，`false`。  
   
 ## <a name="remarks"></a>备注  
- If the message request is asynchronous, the request can be serviced by any arbitrary thread.  
+ 如果消息请求是异步的，则该请求可由任意线程提供服务。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -60,6 +60,6 @@ HRESULT RemotingClientSendingMessage(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

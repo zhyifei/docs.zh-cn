@@ -42,41 +42,41 @@ HRESULT SetAssemblyRefProps (
   
 ## <a name="parameters"></a>参数  
  `ar`  
- [in] The metadata token that specifies the `AssemblyRef` metadata structure to be modified.  
+ 中用于指定要修改的 `AssemblyRef` 元数据结构的元数据标记。  
   
  `pbPublicKeyOrToken`  
- [in] The public key of the publisher of the referenced assembly.  
+ 中所引用程序集的发行者的公钥。  
   
  `cbPublicKeyOrToken`  
- [in] The size in bytes of `pbPublicKeyOrToken`.  
+ 中`pbPublicKeyOrToken`的大小（以字节为单位）。  
   
  `szName`  
- [in] The human-readable text name of the assembly.  
+ 中程序集的用户可读文本名称。  
   
  `pMetaData`  
- [in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.  
+ 中指向 ASSEMBLYMETADATA 实例的指针，其中包含程序集的版本、平台和区域设置信息。  
   
  `pbHashValue`  
- [in] A pointer to the hash data associated with the assembly.  
+ 中指向与程序集关联的哈希数据的指针。  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ 中`pbHashValue`的大小（以字节为单位）。  
   
  `dwAssemblyRefFlags`  
- [in] A bitwise combination of [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) values that specify attributes of the referenced assembly.  
+ 中[AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md)值的按位组合，用于指定所引用程序集的特性。  
   
 ## <a name="remarks"></a>备注  
- To create an `AssemblyRef` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) method.  
+ 若要创建 `AssemblyRef` 元数据结构，请使用[IMetaDataAssemblyEmit：:D efineassemblyref](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)方法。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

@@ -32,22 +32,22 @@ typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJit
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`functionId`|The ID of the function.|  
-|`reJitId`|The ID of the recompiled function. A value of 0 (zero) represents the original version of the function.|  
+|`functionId`|函数的 ID。|  
+|`reJitId`|重新编译的函数的 ID。 值0（零）表示函数的原始版本。|  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorProf.idl  
+ **标头：** Corprof.idl .idl  
   
  **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析结构](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

@@ -40,43 +40,43 @@ HRESULT EnumMethodsWithName (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in，out]指向枚举器的指针。 第一次调用此方法时，此值必须为 NULL。  
   
  `cl`  
- [in] A TypeDef token representing the type whose methods to enumerate.  
+ 中一个 TypeDef 标记，表示其方法要枚举的类型。  
   
  `szName`  
- [in] The name that limits the scope of the enumeration.  
+ 中限制枚举的作用域的名称。  
   
  `rMethods`  
- [out] The array used to store the MethodDef tokens.  
+ 弄用于存储 MethodDef 标记的数组。  
   
  `cMax`  
  [in] `rMethods` 数组的最大大小。  
   
  `pcTokens`  
- [out] The number of MethodDef tokens returned in `rMethods`.  
+ 弄`rMethods`中返回的 MethodDef 标记的数目。  
   
 ## <a name="remarks"></a>备注  
- This method enumerates fields and methods, but not properties or events. Unlike [IMetaDataImport::EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` discards all method tokens that do not have the specified name.  
+ 此方法枚举字段和方法，而不是属性或事件。 与[IMetaDataImport：： EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md)不同，`EnumMethodsWithName` 会丢弃所有不具有指定名称的方法标记。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodsWithName` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumMethodsWithName` 成功返回。|  
+|`S_FALSE`|没有要枚举的令牌。 在这种情况下，`pcTokens` 为零。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

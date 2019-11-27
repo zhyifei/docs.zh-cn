@@ -25,7 +25,7 @@ ms.locfileid: "74283601"
 ## <a name="window-states"></a>窗口状态  
  下表列出了 <xref:System.Windows.Window> 控件的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
 |有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  

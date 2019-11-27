@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446656"
 ---
 # <a name="addimport-method"></a>AddImport 方法
-Adds imports to the assembly.  
+将导入添加到程序集。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,24 +38,24 @@ HRESULT AddImport(
   
 ## <a name="parameters"></a>参数  
  `AssemblyID`  
- Unique ID of assembly to be augmented.  
+ 要扩充的程序集的唯一 ID。  
   
  `ImportToken`  
- Unique ID, retrieved from [ImportFile Method](importfile-method.md), of file to be imported.  
+ 要导入的文件从[ImportFile 方法](importfile-method.md)检索的唯一 ID。  
   
  `dwFlags`  
- COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
+ COM + FileDef 标志，如 `ffContainsNoMetaData` 和 `ffWriteable`。 `dwFlags` 传递给[DefineFile 方法](../metadata/imetadataassemblyemit-definefile-method.md)。  
   
  `pFileToken`  
- Pointer to token that receives the ID for the resulting file.  
+ 指向接收结果文件的 ID 的标记的指针。  
   
 ## <a name="return-value"></a>返回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- Requires alink.h  
+ 需要 alink  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IALink 接口](ialink-interface.md)
 - [IALink2 接口](ialink2-interface.md)

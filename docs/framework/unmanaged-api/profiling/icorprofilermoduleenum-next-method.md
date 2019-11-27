@@ -47,9 +47,9 @@ HRESULT Next([in]  ULONG      celt,
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|已返回 `celt` 元素。|  
+|S_OK|返回 `celt` 元素。|  
 |S_FALSE|返回的元素少于 `celt` 个，表示枚举已完成。|  
   
 ## <a name="requirements"></a>要求  
@@ -61,7 +61,7 @@ HRESULT Next([in]  ULONG      celt,
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerModuleEnum 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
 - [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

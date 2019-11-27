@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450166"
 ---
 # <a name="imetadataemitdeleteclasslayout-method"></a>IMetaDataEmit::DeleteClassLayout 方法
-Destroys the class layout metadata signature for the type represented by the specified token.  
+销毁由指定标记表示的类型的类布局元数据签名。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,18 +35,18 @@ HRESULT DeleteClassLayout (
   
 ## <a name="parameters"></a>参数  
  `td`  
- [in] An `mdTypeDef` metadata token that represents the type for which the class layout will be deleted.  
+ 中一个 `mdTypeDef` 的元数据标记，它表示将删除类布局的类型。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

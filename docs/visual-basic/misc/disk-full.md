@@ -1,5 +1,5 @@
 ---
-title: Disk full
+title: 磁盘已满
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID61
@@ -18,6 +18,6 @@ ms.locfileid: "74351113"
   
 - 通过将一些文件移到另一个磁盘或删除一些文件，可在磁盘上创建更多空间。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [错误类型](../../visual-basic/programming-guide/language-features/error-types.md)

@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445324"
 ---
 # <a name="icorprofilercallbackexceptionthrown-method"></a>ICorProfilerCallback::ExceptionThrown 方法
-Notifies the profiler that an exception has been thrown.  
+通知探查器引发了异常。  
   
 > [!NOTE]
-> This function is called only if the exception reaches managed code.  
+> 仅当异常到达托管代码时，才调用此函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,12 +37,12 @@ HRESULT ExceptionThrown(
   
 ## <a name="parameters"></a>参数  
  `thrownObjectId`  
- [in] The ID of the object that caused the exception to be thrown.  
+ 中导致引发异常的对象的 ID。  
   
 ## <a name="remarks"></a>备注  
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+ 探查器不应在此方法的实现中被阻止，因为堆栈可能不处于允许垃圾回收的状态，因此无法启用抢先垃圾回收。 如果探查器在此处阻止并且试图进行垃圾回收，则运行时将被阻止，直到此回调返回。  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ 探查器的此方法的实现不应调入托管代码或以任何方式导致托管内存分配。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -53,6 +53,6 @@ HRESULT ExceptionThrown(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

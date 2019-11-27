@@ -1,5 +1,5 @@
 ---
-title: RemoveHandler
+title: 可选
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Optional
@@ -17,17 +17,17 @@ ms.locfileid: "74351441"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 
-Specifies that a procedure argument can be omitted when the procedure is called.
+指定在调用过程时可以省略过程参数。
 
 ## <a name="remarks"></a>备注
 
-For each optional parameter, you must specify a constant expression as the default value of that parameter. If the expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the default value of the value data type is used as the default value of the parameter.
+对于每个可选参数，必须将常数表达式指定为该参数的默认值。 如果表达式的计算结果为[Nothing](../../../visual-basic/language-reference/nothing.md)，则将值数据类型的默认值用作参数的默认值。
 
-If the parameter list contains an optional parameter, every parameter that follows it must also be optional.
+如果参数列表包含一个可选参数，则其后的每个参数都必须是可选的。
 
 `Optional` 修饰符可用于下面的上下文中：
 
-- [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
 
 - [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)
 
@@ -36,14 +36,14 @@ If the parameter list contains an optional parameter, every parameter that follo
 - [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)
 
 > [!NOTE]
-> When calling a procedure with or without optional parameters, you can pass arguments by position or by name. For more information, see [Passing Arguments by Position and by Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).
+> 调用带有或不带可选参数的过程时，可以按位置或按名称传递参数。 有关详细信息，请参阅[按位置和按名称传递参数](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)。
 
 > [!NOTE]
-> You can also define a procedure with optional parameters by using overloading. If you have one optional parameter, you can define two overloaded versions of the procedure, one that accepts the parameter and one that doesn’t. 有关更多信息，请参见 [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)。
+> 还可以通过使用重载来定义带有可选参数的过程。 如果有一个可选参数，则可以定义过程的两个重载版本，一个接受参数，另一个不包含参数。 有关更多信息，请参见 [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)。
 
 ## <a name="example"></a>示例
 
-The following example defines a procedure that has an optional parameter.
+下面的示例定义了一个具有可选参数的过程。
 
 ```vb
 Public Function FindMatches(ByRef values As List(Of String),
@@ -66,11 +66,11 @@ End Function
 
 ## <a name="example"></a>示例
 
-The following example demonstrates how to call a procedure with arguments passed by position and with arguments passed by name. The procedure has two optional parameters.
+下面的示例演示如何调用带有按位置传递的参数和通过名称传递的参数的过程。 此过程具有两个可选参数。
 
 [!code-vb[VbVbalrKeywords#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class8.vb#21)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)
 - [可选参数](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)

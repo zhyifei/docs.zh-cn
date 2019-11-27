@@ -15,16 +15,16 @@ ms.locfileid: "74332118"
 提供了用于操控计算机组件（如音频、时钟、键盘、文件系统等）的属性。  
   
 ## <a name="remarks"></a>备注  
- 有关 `My.Computer` 对象所使用方法和属性的信息，请参阅 <xref:Microsoft.VisualBasic.Devices.Computer>。 The base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects.  
+ 有关 `My.Computer` 对象所使用方法和属性的信息，请参阅 <xref:Microsoft.VisualBasic.Devices.Computer>。 基类 <xref:Microsoft.VisualBasic.Devices.ServerComputer> 提供所有项目中可用的成员。  
   
 ## <a name="requirements"></a>要求  
  **命名空间：** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Computer> (the base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects).  
+ **类：** <xref:Microsoft.VisualBasic.Devices.Computer> （基类 <xref:Microsoft.VisualBasic.Devices.ServerComputer> 提供所有项目中可用的成员）。  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **程序集：** Visual Basic 运行时库（在 Microsoft. .dll 中）  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [My.Computer.Audio 对象](../../../visual-basic/language-reference/objects/my-computer-audio-object.md)
 - [My.Computer.Clipboard 对象](../../../visual-basic/language-reference/objects/my-computer-clipboard-object.md)

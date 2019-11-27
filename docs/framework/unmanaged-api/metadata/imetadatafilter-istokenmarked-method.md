@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440427"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a>IMetaDataFilter::IsTokenMarked 方法
-Gets a value indicating whether the specified metadata token has been marked as processed.  
+获取一个值，该值指示指定的元数据标记是否已标记为已处理。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,20 +36,20 @@ HRESULT IsTokenMarked (
   
 ## <a name="parameters"></a>参数  
  `tk`  
- [in] The token to examine for a processing mark.  
+ 中要检查处理标记的标记。  
   
  `pIsMarked`  
- [out] A value that is `true` if `tk` has been processed; otherwise `false`.  
+ 弄如果已处理 `tk`，则为 `true` 的值;否则 `false`。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataFilter 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)

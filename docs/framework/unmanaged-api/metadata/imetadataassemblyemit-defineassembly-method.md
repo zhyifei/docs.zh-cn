@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432119"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>IMetaDataAssemblyEmit::DefineAssembly 方法
-Creates an `Assembly` structure containing metadata for the specified assembly and returns the associated metadata token.  
+创建包含指定程序集的元数据的 `Assembly` 结构，并返回关联的元数据标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,38 +41,38 @@ HRESULT DefineAssembly (
   
 ## <a name="parameters"></a>参数  
  `pbPublicKey`  
- [in] The public key that identifies the publisher of the assembly, or NULL if the assembly is not strongly named.  
+ 中标识程序集发行者的公钥; 如果程序集没有强名称，则为 NULL。  
   
  `cbPublicKey`  
- [in] The size in bytes of `pbPublicKey`.  
+ 中`pbPublicKey`的大小（以字节为单位）。  
   
  `uHashAlgId`  
- [in] The identifier of the hashing algorithm to use to encrypt the files in the assembly, or NULL to specify the SHA-1 algorithm.  
+ 中用于对程序集中的文件进行加密的哈希算法的标识符; 如果为 NULL，则指定 SHA-1 算法。  
   
  `szName`  
- [in] The human-readable text name of the assembly. This value must not exceed 1024 characters.  
+ 中程序集的用户可读文本名称。 此值不能超过1024个字符。  
   
  `pMetaData`  
- [in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.  
+ 中指向 ASSEMBLYMETADATA 实例的指针，其中包含程序集的版本、平台和区域设置信息。  
   
  `dwAssemblyFlags`  
- [in] A combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that describe features of the assembly.  
+ 中[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)值的组合，用于描述程序集的功能。  
   
  `pmda`  
- [out] A pointer to the metadata token.  
+ 弄指向元数据标记的指针。  
   
 ## <a name="remarks"></a>备注  
- Only one `Assembly` metadata structure can be defined within a manifest.  
+ 清单中只能定义一个 `Assembly` 的元数据结构。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

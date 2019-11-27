@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450339"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>IMetaDataAssemblyImport::EnumExportedTypes 方法
-Enumerates the exported types referenced in the assembly manifest in the current metadata scope.  
+枚举当前元数据范围内的程序集清单中引用的导出类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,33 +38,33 @@ HRESULT EnumExportedTypes (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be a null value when the `EnumExportedTypes` method is called for the first time.  
+ [in，out]指向枚举器的指针。 当首次调用 `EnumExportedTypes` 方法时，此值必须为 null 值。  
   
  `rExportedTypes`  
- [out] The enumeration of `mdExportedType` metadata tokens.  
+ 弄`mdExportedType` 元数据标记的枚举。  
   
  `cMax`  
- [in] The maximum number of `mdExportedType` tokens that can be placed in the `rExportedTypes` array.  
+ 中可放置在 `rExportedTypes` 数组中的 `mdExportedType` 标记的最大数目。  
   
  `pcTokens`  
- [out] The number of `mdExportedType` tokens actually placed in `rExportedTypes`.  
+ 弄实际置于 `rExportedTypes`中 `mdExportedType` 标记的数目。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumExportedTypes` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
+|`S_OK`|`EnumExportedTypes` 成功返回。|  
+|`S_FALSE`|没有要枚举的令牌。 在这种情况下，`pcTokens` 设置为零。|  
   
 ## <a name="requirements"></a>要求  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446553"
 ---
 # <a name="createalink-function"></a>CreateALink 函数
-Creates an instance of the Assembly Linker and sets a pointer to the specified interface.  
+创建程序集链接器的实例，并设置指向指定接口的指针。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,14 +36,14 @@ HRESULT CreateALink (
   
 ## <a name="parameters"></a>参数  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
-|`riid`|The physical name of one of the Assembly Linker interfaces.|  
-|`ppInterface`|The location that on successful completion contains a pointer to the `riid` interface.|  
+|`riid`|某个程序集链接器接口的物理名称。|  
+|`ppInterface`|成功完成后的位置包含指向 `riid` 接口的指针。|  
   
 ## <a name="requirements"></a>要求  
- **Library**: alink.dll  
+ **库**： alink  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Al.exe（程序集链接器）](../../tools/al-exe-assembly-linker.md)

@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435014"
 ---
 # <a name="iceegengetimaptokeniface-method"></a>ICeeGen::GetIMapTokenIface 方法
-Gets the interface referenced by the specified token.  
+获取指定的标记所引用的接口。  
   
- This method is obsolete and should not be used.  
+ 此方法已过时，不应使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,17 +37,17 @@ HRESULT GetIMapTokenIface (
   
 ## <a name="parameters"></a>参数  
  `pIMapToken`  
- [in, out] The metadata token for the interface to be returned.  
+ [in，out]要返回的接口的元数据标记。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICeeGen 接口](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

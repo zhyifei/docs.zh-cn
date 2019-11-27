@@ -9,27 +9,27 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345745"
 ---
-# <a name="basic-queries-linq-to-xml-visual-basic"></a>Basic Queries (LINQ to XML) (Visual Basic)
+# <a name="basic-queries-linq-to-xml-visual-basic"></a>基本查询（LINQ to XML）（Visual Basic）
 本节提供基本 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
-|[How to: Find an Element with a Specific Attribute (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md)|演示如何查找特定的元素，该元素包含具有特定值的属性。|  
-|[How to: Find an Element with a Specific Child Element (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md)|演示如何查找特定的元素，该元素包含具有特定值的子元素。|  
-|[Querying an XDocument vs. Querying an XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md)|解释针对根部位于 <xref:System.Xml.Linq.XElement> 中的 XML 树编写查询与针对根部位于 <xref:System.Xml.Linq.XDocument> 中的 XML 树编写查询有何差异。|  
-|[How to: Find Descendants with a Specific Element Name (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md)|演示如何查找元素的具有特定名称的所有子代。 该示例使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴。|  
-|[How to: Find a Single Descendant Using the Descendants Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md)|演示如何使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴方法来查找单个具有唯一名称的元素。|  
-|[How to: Write Queries with Complex Filtering (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md)|演示如何编写具有更复杂的筛选器的查询。|  
-|[How to: Filter on an Optional Element (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-filter-on-an-optional-element.md)|演示如何在形状不规则的树中查找节点。|  
-|[How to: Find All Nodes in a Namespace (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md)|演示如何查找特定命名空间中的所有节点。|  
-|[How to: Sort Elements (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-elements.md)|演示如何编写对查询结果进行排序的查询。|  
-|[How to: Sort Elements on Multiple Keys (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md)|演示如何对多个键进行排序。|  
-|[How to: Calculate Intermediate Values (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)|演示如何使用 `Let` 子句在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询中计算中间值。|  
-|[How to: Write a Query that Finds Elements Based on Context (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md)|演示如何根据树中的其他元素来选择元素。|  
-|[How to: Debug Empty Query Results Sets (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|显示在对针对默认命名空间中 XML 的查询进行调试时相应的修补程序。|  
+|[如何：查找具有特定特性的元素（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md)|演示如何查找特定的元素，该元素包含具有特定值的属性。|  
+|[如何：查找具有特定子元素的元素（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md)|演示如何查找特定的元素，该元素包含具有特定值的子元素。|  
+|[查询 XDocument 与查询 System.xml.linq.xelement> （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md)|解释针对根部位于 <xref:System.Xml.Linq.XElement> 中的 XML 树编写查询与针对根部位于 <xref:System.Xml.Linq.XDocument> 中的 XML 树编写查询有何差异。|  
+|[如何：查找具有特定元素名称的子代（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md)|演示如何查找元素的具有特定名称的所有子代。 该示例使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴。|  
+|[如何：使用子代方法查找单个子代（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md)|演示如何使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴方法来查找单个具有唯一名称的元素。|  
+|[如何：编写具有复杂筛选的查询（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md)|演示如何编写具有更复杂的筛选器的查询。|  
+|[如何：筛选可选元素（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-filter-on-an-optional-element.md)|演示如何在形状不规则的树中查找节点。|  
+|[如何：查找命名空间中的所有节点（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md)|演示如何查找特定命名空间中的所有节点。|  
+|[如何：对元素进行排序（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-elements.md)|演示如何编写对查询结果进行排序的查询。|  
+|[如何：对多个键上的元素进行排序（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md)|演示如何对多个键进行排序。|  
+|[如何：计算中间值（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)|演示如何使用 `Let` 子句在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询中计算中间值。|  
+|[如何：编写基于上下文查找元素的查询（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md)|演示如何根据树中的其他元素来选择元素。|  
+|[如何：调试空查询结果集（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|显示在对针对默认命名空间中 XML 的查询进行调试时相应的修补程序。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Querying XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)
+- [查询 XML 树（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

@@ -75,49 +75,49 @@ typedef enum CorTypeAttr {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`tdVisibilityMask`|Used for type visibility information.|  
-|`tdNotPublic`|Specifies that the type is not in public scope.|  
-|`tdPublic`|Specifies that the type is in public scope.|  
-|`tdNestedPublic`|Specifies that the type is nested with public visibility.|  
-|`tdNestedPrivate`|Specifies that the type is nested with private visibility.|  
-|`tdNestedFamily`|Specifies that the type is nested with family visibility.|  
-|`tdNestedAssembly`|Specifies that the type is nested with assembly visibility.|  
-|`tdNestedFamANDAssem`|Specifies that the type is nested with family and assembly visibility.|  
-|`tdNestedFamORAssem`|Specifies that the type is nested with family or assembly visibility.|  
-|`tdLayoutMask`|Gets layout information for the type.|  
-|`tdAutoLayout`|Specifies that the fields of this type are laid out automatically.|  
-|`tdSequentialLayout`|Specifies that the fields of this type are laid out sequentially.|  
-|`tdExplicitLayout`|Specifies that field layout is supplied explicitly.|  
-|`tdClassSemanticsMask`|Gets semantic information about the type.|  
+|`tdVisibilityMask`|用于类型可见性信息。|  
+|`tdNotPublic`|指定该类型不在公共范围内。|  
+|`tdPublic`|指定该类型在公共范围内。|  
+|`tdNestedPublic`|指定该类型是用公共可见性嵌套的。|  
+|`tdNestedPrivate`|指定该类型是用私有可见性嵌套的。|  
+|`tdNestedFamily`|指定该类型嵌套了族可见性。|  
+|`tdNestedAssembly`|指定该类型是用程序集可见性嵌套的。|  
+|`tdNestedFamANDAssem`|指定该类型嵌套了族和程序集可见性。|  
+|`tdNestedFamORAssem`|指定该类型是用族或程序集可见性嵌套的。|  
+|`tdLayoutMask`|获取类型的布局信息。|  
+|`tdAutoLayout`|指定此类型的字段自动布局。|  
+|`tdSequentialLayout`|指定此类型的字段按顺序排列。|  
+|`tdExplicitLayout`|指定显式提供字段布局。|  
+|`tdClassSemanticsMask`|获取有关类型的语义信息。|  
 |`tdClass`|指定该类型为一个类。|  
 |`tdInterface`|指定该类型为一个接口。|  
 |`tdAbstract`|指定该类型为抽象类型。|  
-|`tdSealed`|Specifies that the type cannot be extended.|  
-|`tdSpecialName`|Specifies that the class name is special. Its name describes how.|  
-|`tdImport`|Specifies that the type is imported.|  
-|`tdSerializable`|Specifies that the type is serializable.|  
-|`tdWindowsRuntime`|Specifies that this type is a Windows Runtime type.|  
-|`tdStringFormatMask`|Gets information about how strings are encoded and formatted.|  
-|`tdAnsiClass`|Specifies that this type interprets an LPTSTR as ANSI.|  
-|`tdUnicodeClass`|Specifies that this type interprets an LPTSTR as Unicode.|  
-|`tdAutoClass`|Specifies that this type interprets an LPTSTR automatically.|  
-|`tdCustomFormatClass`|Specifies that the type has a non-standard encoding, as specified by `CustomFormatMask`.|  
-|`tdCustomFormatMask`|Use this mask to get non-standard encoding information for native interop. The meaning of the values of these two bits is unspecified.|  
-|`tdBeforeFieldInit`|Specifies that the type must be initialized before the first attempt to access a static field.|  
-|`tdForwarder`|Specifies that the type is exported, and a type forwarder.|  
-|`tdReservedMask`|This flag and the flags below are used internally by the common language runtime.|  
-|`tdRTSpecialName`|Specifies that the common language runtime should check the name encoding.|  
-|`tdHasSecurity`|Specifies that the type has security associated with it.|  
+|`tdSealed`|指定无法扩展类型。|  
+|`tdSpecialName`|指定类名称是特殊名称。 其名称描述了如何操作。|  
+|`tdImport`|指定导入该类型。|  
+|`tdSerializable`|指定该类型是可序列化的。|  
+|`tdWindowsRuntime`|将此类型指定为 Windows 运行时类型。|  
+|`tdStringFormatMask`|获取有关如何对字符串进行编码和格式化的信息。|  
+|`tdAnsiClass`|指定此类型将 LPTSTR 解释为 ANSI。|  
+|`tdUnicodeClass`|指定此类型将 LPTSTR 解释为 Unicode。|  
+|`tdAutoClass`|指定此类型自动解释 LPTSTR。|  
+|`tdCustomFormatClass`|指定该类型具有非标准编码，由 `CustomFormatMask`指定。|  
+|`tdCustomFormatMask`|使用此掩码获取本机互操作的非标准编码信息。 不指定这两个位的值的含义。|  
+|`tdBeforeFieldInit`|指定在第一次尝试访问静态字段之前必须先初始化类型。|  
+|`tdForwarder`|指定导出类型和类型转发器。|  
+|`tdReservedMask`|此标志和下面的标志由公共语言运行时在内部使用。|  
+|`tdRTSpecialName`|指定公共语言运行时应检查名称编码。|  
+|`tdHasSecurity`|指定该类型具有与之关联的安全性。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **标头：** Corhdr。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

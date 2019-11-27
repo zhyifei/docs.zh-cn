@@ -36,17 +36,17 @@ HRESULT GetCheckSum(
   
 ## <a name="parameters"></a>参数  
  `cData`  
- [in] The length of the buffer provided by the `data` parameter  
+ 中`data` 参数提供的缓冲区长度  
   
  `pcData`  
- [out] The size and length of the checksum, in bytes.  
+ 弄校验和的大小和长度（以字节为单位）。  
   
  `data`  
- [out] The buffer that receives the checksum.  
+ 弄接收校验和的缓冲区。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, an error code.  
+ 如果该方法成功，则 S_OK;否则为错误代码。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedDocument 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

@@ -36,28 +36,28 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`numRanges`|The number of blocks of arguments. That is, this value is the number of [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structures in the `ranges` array.|  
-|`totalArgumentSize`|The total size of all arguments. In other words, this value is the sum of the argument lengths.|  
-|`ranges`|An array of `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which represents one block of function arguments.|  
+|`numRanges`|参数块的数目。 也就是说，此值是 `ranges` 数组中[COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)结构的数目。|  
+|`totalArgumentSize`|所有参数的总大小。 换言之，此值是自变量长度之和。|  
+|`ranges`|`COR_PRF_FUNCTION_ARGUMENT_RANGE` 结构的数组，其中每个结构都表示一个函数参数块。|  
   
 ## <a name="remarks"></a>备注  
- A function may have many arguments. Those arguments might not be stored contiguously in memory. You might have a block of three arguments in one place, a block of two arguments in another place, and a final block of one argument in a different place. These arguments are all for the same function; they're just stored in different places.  
+ 函数可以包含多个参数。 这些参数可能不会连续存储在内存中。 在一个位置，您可能有一个包含三个自变量的块、另一个位置中的两个参数块，以及在不同位置中的一个自变量的最后一个块。 这些参数全部用于相同的函数;它们只是存储在不同的位置。  
   
- The `COR_PRF_FUNCTION_ARGUMENT_INFO` structure represents all the arguments of a single function. It uses an array to reference all the blocks of function arguments. So, for a single function, you have a single `COR_PRF_FUNCTION_ARGUMENT_INFO` structure, which references multiple `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which points to one or more function arguments.  
+ `COR_PRF_FUNCTION_ARGUMENT_INFO` 结构表示一个函数的所有自变量。 它使用数组引用函数参数的所有块。 因此，对于单个函数，有一个 `COR_PRF_FUNCTION_ARGUMENT_INFO` 结构，该结构引用多个 `COR_PRF_FUNCTION_ARGUMENT_RANGE` 结构，其中每个结构都指向一个或多个函数参数。  
   
- Arguments that are stored in registers are spilled into memory to build the structures.  
+ 存储在寄存器中的参数会溢出到内存中以生成结构。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorProf.idl  
+ **标头：** Corprof.idl .idl  
   
  **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析结构](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

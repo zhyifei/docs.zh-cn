@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446585"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions 枚举
-Enumerates the assembly options.  
+枚举程序集选项。  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,34 +54,34 @@ typedef enum _AssemblyOptions {
   
 ## <a name="fields"></a>字段  
   
-|字段|描述|  
+|字段|说明|  
 |-----------|-----------------|  
-|optAssemTitle|String - Represents the assembly title.|  
-|optAssemDescription|String - Contains the assembly description.|  
-|optAssemConfig|String - Contains the assembly configuration.|  
-|optAssemOS|String - Encoded as: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
+|optAssemTitle|String-表示程序集标题。|  
+|optAssemDescription|String-包含程序集说明。|  
+|optAssemConfig|String-包含程序集配置。|  
+|optAssemOS|字符串编码为： "dwOSPlatformId. dwOSMajorVersion. dwOSMinorVersion"。|  
 |optAssemProcessor|ULONG|  
-|optAssemLocale|String - Contains the assembly locale.|  
-|optAssemVersion|String - Encoded as: "Major.Minor.Build.Revision".|  
-|optAssemCompany|String - Contains the company.|  
-|optAssemProduct|String - Contains the product name.|  
-|optAssemProductVersion|String (also known as InformationalVersion).|  
-|optAssemCopyright|String - Contains the copyright information.|  
-|optAssemTrademark|String - Contains the trademark information.|  
-|optAssemKeyFile|String (file name).|  
-|optAssemKeyName|String (The key name).|  
+|optAssemLocale|String-包含程序集的区域设置。|  
+|optAssemVersion|字符串编码为： "主要版本. 次要版本. 内部版本. 修订版本"。|  
+|optAssemCompany|String-包含公司。|  
+|optAssemProduct|String-包含产品名称。|  
+|optAssemProductVersion|String （也称为 InformationalVersion）。|  
+|optAssemCopyright|String-包含版权信息。|  
+|optAssemTrademark|String-包含商标信息。|  
+|optAssemKeyFile|字符串（文件名）。|  
+|optAssemKeyName|String （项名称）。|  
 |optAssemAlgID|ULONG|  
 |optAssemFlags|ULONG|  
-|optAssemHalfSign|Bool (Also known as DelaySign).|  
-|optAssemFileVersion|String - Encoded as "Major.Minor.Build.Revision"--same as ProductVersion.|  
-|optAssemSatelliteVer|String - Encoded as "Major.Minor.Build.Revision".|  
-|optLastAssemOption|A counter of the number of elements.|  
+|optAssemHalfSign|Bool （也称为 DelaySign）。|  
+|optAssemFileVersion|编码为 "ProductVersion" 的字符串，与 "" 相同。|  
+|optAssemSatelliteVer|字符串编码为 "主要版本. 次要版本. 内部版本. 内部版本. 修订版本"。|  
+|optLastAssemOption|元素数的计数器。|  
   
 ## <a name="requirements"></a>要求  
- **Header:** alink.h  
+ **标头：** alink。h  
   
- **Library**: alink.dll  
+ **库**： alink  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Al.exe（程序集链接器）](../../tools/al-exe-assembly-linker.md)

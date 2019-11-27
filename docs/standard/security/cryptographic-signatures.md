@@ -39,7 +39,7 @@ ms.locfileid: "74350461"
 
 数字签名通常应用于表示较大数据的哈希值。 下面的示例将数字签名应用于哈希值。 首先，创建 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 类的新实例以生成公钥/私钥对。 然后，将 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 传递到 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> 类的新实例。 这将私钥传输给了实际执行数字签名的 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>。 必须先指定要使用的哈希算法。然后才可以对哈希代码进行签名。 本示例使用 SHA1 算法。 最后，调用 <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> 方法以执行签名。
 
-Due to collision problems with SHA1, Microsoft recommends SHA256 or better.
+由于 SHA1 出现冲突，Microsoft 建议 SHA256 或更好。
 
 ```vb
 Imports System.Security.Cryptography
@@ -118,7 +118,7 @@ class Class1
 
 - 签名方使用的哈希算法。
 
-若要验证由 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> 类签署的签名，请使用 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 类。 必须向 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 类提供签名者的公钥。 将需要模数和指数的值以指定公钥。 (The party that generated the public/private key pair should provide these values.) First create an <xref:System.Security.Cryptography.RSACryptoServiceProvider> object to hold the public key that will verify the signature, and then initialize an <xref:System.Security.Cryptography.RSAParameters> structure to the modulus and exponent values that specify the public key.
+若要验证由 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> 类签署的签名，请使用 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 类。 必须向 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 类提供签名者的公钥。 将需要模数和指数的值以指定公钥。 （生成公钥/私钥对的参与方应提供这些值。）首先创建一个 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 对象用于保存将验证签名的公钥，然后将 <xref:System.Security.Cryptography.RSAParameters> 结构初始化为指定公钥的模数和指数值。
 
 下面的代码显示 <xref:System.Security.Cryptography.RSAParameters> 结构的创建。 `Modulus` 属性设置为名为 `modulusData` 的字节数组的值， `Exponent` 属性设置为名为 `exponentData`的字节数组的值。
 
@@ -136,7 +136,7 @@ rsaKeyInfo.Exponent = exponentData;
 
 创建 <xref:System.Security.Cryptography.RSAParameters> 对象后，可将 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 类的新实例初始化为 <xref:System.Security.Cryptography.RSAParameters>中指定的值。 然后将 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 传递到 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 的构造函数以传输密钥。
 
-下面的示例阐释此过程。 在本示例中， `hashValue` 和 `signedHashValue` 是由远程方提供的字节数组。 远程方已使用 SHA1 算法对 `hashValue` 进行了签名，从而生成了数字签名 `signedHashValue`。 The <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> method verifies that the digital signature is valid and was used to sign the `hashValue`.
+下面的示例阐释此过程。 在本示例中， `hashValue` 和 `signedHashValue` 是由远程方提供的字节数组。 远程方已使用 SHA1 算法对 `hashValue` 进行了签名，从而生成了数字签名 `signedHashValue`。 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> 方法验证数字签名是否有效，以及是否已使用对 `hashValue`进行签名。
 
 ```vb
 Dim rsa As New RSACryptoServiceProvider()
@@ -167,6 +167,6 @@ else
 
 如果签名有效，则此代码段将显示“`The signature is valid`”，如果无效，则显示“`The signature is not valid`”。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [加密服务](../../../docs/standard/security/cryptographic-services.md)

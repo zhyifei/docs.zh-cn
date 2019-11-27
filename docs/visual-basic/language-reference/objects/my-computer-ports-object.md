@@ -18,18 +18,18 @@ ms.locfileid: "74332009"
 ## <a name="remarks"></a>备注  
  有关 `My.Computer.Ports` 对象所使用方法和属性的信息，请参阅 <xref:Microsoft.VisualBasic.Devices.Ports>。  
   
- For more information, see [Accessing the Computer's Ports](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).  
+ 有关详细信息，请参阅[访问计算机的端口](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)。  
   
 > [!NOTE]
-> You can also use properties and methods of the <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> class to access the computer's serial ports.  
+> 你还可以使用 <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> 类的属性和方法来访问计算机的串行端口。  
   
 ## <a name="requirements"></a>要求  
  **命名空间：** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Ports>  
+ **类：** <xref:Microsoft.VisualBasic.Devices.Ports>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **程序集：** Visual Basic 运行时库（在 Microsoft. .dll 中）  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [My.Computer 对象](../../../visual-basic/language-reference/objects/my-computer-object.md)

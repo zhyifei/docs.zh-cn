@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446219"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>ISymUnmanagedSourceServerModule::GetSourceServerData 方法
-Returns the source server data for the module. The caller must free resources by using `CoTaskMemFree`.  
+返回模块的源服务器数据。 调用方必须使用 `CoTaskMemFree`释放资源。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,17 +35,17 @@ HRESULT GetSourceServerData(
   
 ## <a name="parameters"></a>参数  
  `pDataByteCount`  
- [out] A pointer to a `ULONG32` that receives the size, in bytes, of the source server data.  
+ 弄指向接收源服务器数据的大小（以字节为单位）的 `ULONG32` 的指针。  
   
  `ppData`  
- [out] A pointer to the returned `pDataByteCount` value.  
+ 弄指向返回的 `pDataByteCount` 值的指针。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedSourceServerModule 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)

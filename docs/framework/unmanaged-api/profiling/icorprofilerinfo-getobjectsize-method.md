@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438823"
 ---
 # <a name="icorprofilerinfogetobjectsize-method"></a>ICorProfilerInfo::GetObjectSize 方法
-Gets the size of a specified object.  
+获取指定对象的大小。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,23 +35,23 @@ HRESULT GetObjectSize(
   
 ## <a name="parameters"></a>参数  
  `objectId`  
- [in] The ID of the object.  
+ 中对象的 ID。  
   
  `pcSize`  
- [out] A pointer to the object's size, in bytes.  
+ 弄一个指针，指向对象的大小（以字节为单位）。  
   
 ## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]
-> 此方法已过时。 It returns COR_E_OVERFLOW for objects greater than 4GB on 64-bit platforms. Use the  [ICorProfilerInfo4::GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) method instead.  
+> 此方法已过时。 它在64位平台上为大于4GB 的对象返回 COR_E_OVERFLOW。 改为使用[ICorProfilerInfo4：： GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md)方法。  
   
- Different objects of the same types often have the same size. However, some types, such as arrays or strings, may have a different size for each object.  
+ 相同类型的不同对象通常具有相同的大小。 但是，某些类型（例如数组或字符串）对于每个对象可能有不同的大小。  
   
- The size returned by the `GetObjectSize` method does not include any alignment padding that may appear after the object is on the garbage collection heap. If you use the `GetObjectSize` method to advance from object to object on the garbage collection heap, add alignment padding manually, as necessary.  
+ `GetObjectSize` 方法返回的大小不包括对象在垃圾回收堆上时可能出现的任何对齐填充。 如果使用 `GetObjectSize` 方法从对象到垃圾回收堆上的对象前进，请根据需要手动添加对齐填充。  
   
-- On 32-bit Windows, COR_PRF_GC_GEN_0, COR_PRF_GC_GEN_1, and COR_PRF_GC_GEN_2 use 4-byte alignment, and COR_PRF_GC_LARGE_OBJECT_HEAP uses 8-byte alignment.  
+- 在32位 Windows 上，COR_PRF_GC_GEN_0、COR_PRF_GC_GEN_1 和 COR_PRF_GC_GEN_2 使用4字节对齐，COR_PRF_GC_LARGE_OBJECT_HEAP 使用8字节对齐。  
   
-- On 64-bit Windows, the alignment is always 8 bytes.  
+- 在64位 Windows 上，对齐始终为8个字节。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -62,6 +62,6 @@ HRESULT GetObjectSize(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: The remote server machine does not exist or is unavailable
+title: 远程服务器计算机不存在或不可用
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID462
@@ -16,8 +16,8 @@ ms.locfileid: "74348185"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-- 重新连接网络，然后重试。  
+- 重新连接到网络，然后重试。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [错误类型](../../visual-basic/programming-guide/language-features/error-types.md)

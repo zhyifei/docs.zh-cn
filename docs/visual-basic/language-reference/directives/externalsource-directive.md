@@ -21,7 +21,7 @@ ms.locfileid: "74343831"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource 指令
 
-Indicates a mapping between specific lines of source code and text external to the source.  
+指示源代码的特定行与源外部的文本之间的映射。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,25 +34,25 @@ Indicates a mapping between specific lines of source code and text external to t
 ## <a name="parts"></a>部件  
 
  `StringLiteral`  
- The path to the external source.  
+ 外部源的路径。  
   
  `IntLiteral`  
- The line number of the first line of the external source.  
+ 外部源的第一行的行号。  
   
  `LogicalLine`  
- The line where the error occurs in the external source.  
+ 外部源中发生错误的行。  
   
  `#End ExternalSource`  
  终止 `#ExternalSource` 块。  
   
 ## <a name="remarks"></a>备注  
 
- This directive is used only by the compiler and the debugger.  
+ 此指令仅由编译器和调试器使用。  
   
- A source file may include external source directives, which indicate a mapping between specific lines of code in the source file and text external to the source, such as an .aspx file. If errors are encountered in the designated source code during compilation, they are identified as coming from the external source.  
+ 源文件可能包含外部源指令，这表示源文件中特定代码行与源外部的文本之间的映射，如 .aspx 文件。 如果编译过程中在指定的源代码中遇到错误，则会将它们标识为来自外部源。  
   
- External source directives have no effect on compilation and cannot be nested. They are intended for internal use by the application only.  
+ 外部源指令对编译不起作用，因此不能嵌套。 它们仅供应用程序内部使用。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [条件编译](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

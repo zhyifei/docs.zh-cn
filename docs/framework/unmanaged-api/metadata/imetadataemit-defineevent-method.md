@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432564"
 ---
 # <a name="imetadataemitdefineevent-method"></a>IMetaDataEmit::DefineEvent 方法
-Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.  
+使用指定的元数据签名创建事件的定义，并获取该事件定义的标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,42 +43,42 @@ HRESULT DefineEvent (
   
 ## <a name="parameters"></a>参数  
  `td`  
- [in] The token for the target class or interface. This is either a `mdTypeDef` or `mdTypeDefNil` token.  
+ 中目标类或接口的标记。 这是 `mdTypeDef` 或 `mdTypeDefNil` 令牌。  
   
  `szEvent`  
- [in] The name of the event.  
+ 中事件的名称。  
   
  `dwEventFlags`  
- [in] Event flags.  
+ 中事件标志。  
   
  `tkEventType`  
- [in] The token for the event class. This is a `mdTypeDef`, a `mdTypeRef`, or a `mdTokenNil` token.  
+ 中事件类的标记。 这是 `mdTypeDef`、`mdTypeRef`或 `mdTokenNil` 标记。  
   
  `mdAddOn`  
- [in] The method used to subscribe to the event, or null.  
+ 中用于订阅事件的方法，或为 null。  
   
  `mdRemoveOn`  
- [in] The method used to unsubscribe to the event, or null.  
+ 中用于取消订阅事件的方法，或为 null。  
   
  `mdFire`  
- [in] The method used (by a derived class) to raise the event.  
+ 中使用的方法（由派生类）引发事件。  
   
  `rmdOtherMethods[]`  
- [in] An array of tokens for other methods associated with the event. The array is terminated with a `mdMethodDefNil` token.  
+ 中与事件关联的其他方法的标记数组。 使用 `mdMethodDefNil` 标记终止数组。  
   
  `pmdEvent`  
- [out] The metadata token assigned to the event.  
+ 弄分配给事件的元数据标记。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

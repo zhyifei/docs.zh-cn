@@ -17,23 +17,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344223"
 ---
 # <a name="unicode-visual-basic"></a>Unicode (Visual Basic)
-Specifies that Visual Basic should marshal all strings to Unicode values regardless of the name of the external procedure being declared.  
+指定 Visual Basic 应将所有字符串封送到 Unicode 值，而不考虑所声明的外部过程的名称。  
   
- When you call a procedure defined outside your project, the Visual Basic compiler does not have access to the information it must have in order to call the procedure correctly. This information includes where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses. The [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) creates a reference to an external procedure and supplies this necessary information.  
+ 调用在项目外部定义的过程时，Visual Basic 编译器无权访问它必须具有的信息，以便正确调用过程。 此信息包括过程的位置、标识方法、调用序列和返回类型，以及它使用的字符串字符集。 [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)创建对外部过程的引用并提供此必要信息。  
   
- The `charsetmodifier` part in the `Declare` statement supplies the character set information to marshal strings during a call to the external procedure. It also affects how Visual Basic searches the external file for the external procedure name. The `Unicode` modifier specifies that Visual Basic should marshal all strings to Unicode values and should look up the procedure without modifying its name during the search.  
+ `Declare` 语句中 `charsetmodifier` 部分提供了字符集信息以在调用外部过程的过程中封送字符串。 它还会影响 Visual Basic 搜索外部文件的外部过程名称的方式。 `Unicode` 修饰符指定 Visual Basic 应将所有字符串封送为 Unicode 值，并且应在搜索过程中查找该过程而不修改其名称。  
   
- If no character set modifier is specified, `Ansi` is the default.  
+ 如果未指定字符集修饰符，则默认值为 `Ansi`。  
   
 ## <a name="remarks"></a>备注  
- The `Unicode` modifier can be used in this context:  
+ `Unicode` 修饰符可用于以下上下文：  
   
- [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## <a name="smart-device-developer-notes"></a>Smart Device Developer Notes  
- This keyword is not supported.  
+## <a name="smart-device-developer-notes"></a>智能设备开发人员说明  
+ 不支持此关键字。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)
 - [Auto](../../../visual-basic/language-reference/modifiers/auto.md)

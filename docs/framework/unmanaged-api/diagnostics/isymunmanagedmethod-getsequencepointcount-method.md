@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448890"
 ---
 # <a name="isymunmanagedmethodgetsequencepointcount-method"></a>ISymUnmanagedMethod::GetSequencePointCount 方法
-Gets the count of sequence points within this method.  
+获取此方法中序列点的计数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,14 +34,14 @@ HRESULT GetSequencePointCount(
   
 ## <a name="parameters"></a>参数  
  `pRetVal`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the sequence points.  
+ 弄指向 `ULONG32` 的指针，该指针接收包含序列点所需的缓冲区大小。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

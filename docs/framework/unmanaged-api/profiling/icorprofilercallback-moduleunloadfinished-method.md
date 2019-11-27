@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445919"
 ---
 # <a name="icorprofilercallbackmoduleunloadfinished-method"></a>ICorProfilerCallback::ModuleUnloadFinished 方法
-Notifies the profiler that a module has finished unloading.  
+通知探查器模块已完成卸载。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,15 +35,15 @@ HRESULT ModuleUnloadFinished(
   
 ## <a name="parameters"></a>参数  
  `moduleId`  
- [in] The ID of the module that was unloaded.  
+ 中已卸载的模块的 ID。  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the module was unloaded successfully.  
+ 中一个 HRESULT，指示该模块是否已成功卸载。  
   
 ## <a name="remarks"></a>备注  
- The value of `moduleId` is not valid for an information request after the [ICorProfilerCallback::ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md) method returns.  
+ [ICorProfilerCallback：： ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md)方法返回后，`moduleId` 的值对信息请求无效。  
   
- Some parts of unloading the class might continue after the `ModuleUnloadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the module has succeeded.  
+ 在 `ModuleUnloadFinished` 回调后，卸载类的某些部分可能会继续。 如果 `hrStatus` 失败，则指示失败。 不过，`hrStatus` 中的 HRESULT 成功只指示卸载模块的第一部分已成功。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -54,6 +54,6 @@ HRESULT ModuleUnloadFinished(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

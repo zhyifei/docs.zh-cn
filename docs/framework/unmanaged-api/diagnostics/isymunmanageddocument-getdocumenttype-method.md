@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449189"
 ---
 # <a name="isymunmanageddocumentgetdocumenttype-method"></a>ISymUnmanagedDocument::GetDocumentType 方法
-Gets the document type of this document.  
+获取此文档的文档类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,11 +34,11 @@ HRESULT GetDocumentType(
   
 ## <a name="parameters"></a>参数  
  `pRetVal`  
- [out] Pointer to a variable that receives the document type.  
+ 弄指向接收文档类型的变量的指针。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds.  
+ 如果方法成功，则 S_OK。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedDocument 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

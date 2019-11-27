@@ -1,6 +1,6 @@
 ---
 title: XML
-description: Learn how to use XML and LINQ to XML features in your Visual Basic code.
+description: 了解如何在 Visual Basic 代码中使用 XML 和 LINQ to XML 功能。
 ms.date: 10/20/2017
 helpviewer_keywords:
 - LINQ to XML [Visual Basic]
@@ -14,20 +14,20 @@ ms.locfileid: "74330806"
 ---
 # <a name="xml-in-visual-basic"></a>Visual Basic 中的 XML
 
-Visual Basic provides integrated language support that enables it to interact with [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+Visual Basic 提供集成的语言支持，使其能够与 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]交互。  
   
 ## <a name="in-this-section"></a>本节内容  
 
  此部分中的主题介绍了如何将 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 与 Visual Basic 结合使用。  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
-|[Visual Basic 中的 LINQ to XML 概述](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)|Describes how Visual Basic supports [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Visual Basic 中的 LINQ to XML 概述](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)|介绍 Visual Basic 如何支持 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。|  
 |[在 Visual Basic 中创建 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)|介绍了如何使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 创建 XML 文本对象。|  
 |[在 Visual Basic 中操控 XML](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)|介绍了如何使用 Visual Basic 加载和分析 XML。|  
 |[在 Visual Basic 中访问 XML](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)|介绍了 XML 轴属性，以及用于访问 XML 元素和属性的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 方法。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.Linq>
 - [XML 文本](../../../../visual-basic/language-reference/xml-literals/index.md)

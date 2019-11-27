@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353061"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>How to: Filter on an Attribute (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>如何：根据属性进行筛选（XPath LINQ to XML）（Visual Basic）
 本主题演示如何获取具有指定名称、并具有一个带指定值的属性的子代元素。  
   
  XPath 表达式为：  
@@ -75,6 +75,6 @@ Results are identical
 </Address>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 用户的 LINQ to XML （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

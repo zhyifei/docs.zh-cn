@@ -28,7 +28,7 @@ ms.locfileid: "74346785"
 
 ## <a name="syntax"></a>语法
 
-集合初始值设定项先是包含 `From` 关键字，后跟用大括号 (`{}`) 括住的逗号分隔值列表，如以下代码所示。
+集合初始值设定项先是包含 `{}` 关键字，后跟用大括号 (`From`) 括住的逗号分隔值列表，如以下代码所示。
 
 [!code-vb[VbVbalrCollectionInitializers#2](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#2)]
 
@@ -39,7 +39,7 @@ ms.locfileid: "74346785"
 > [!NOTE]
 > 不能合并集合初始值设定项和对象初始值设定项来初始化同一集合对象。 可以使用对象初始值设定项来初始化集合初始值设定项中的对象。
 
-## <a name="creating-a-collection-by-using-a-collection-initializer"></a>Creating a Collection by Using a Collection Initializer
+## <a name="creating-a-collection-by-using-a-collection-initializer"></a>使用集合初始值设定项创建集合
 
 使用集合初始值设定项创建集合时，集合初始值设定项中提供的每个值都会传递到集合的相应 `Add` 方法中。 例如，如果使用集合初始值设定项创建 <xref:System.Collections.Generic.List%601>，那么集合初始值设定项中的每个字符串值都会传递到 <xref:System.Collections.Generic.List%601.Add%2A> 方法中。 若要使用集合初始值设定项创建集合，指定的类型必须是有效的集合类型。 有效的集合类型示例包括实现 <xref:System.Collections.Generic.IEnumerable%601> 接口或继承 <xref:System.Collections.CollectionBase> 类的类。 指定的类型还必须公开满足以下条件的 `Add` 方法。
 
@@ -63,7 +63,7 @@ ms.locfileid: "74346785"
 
 可以在集合初始值设定项中嵌套值，从而标识要创建的集合的 `Add` 方法重载。 传递给 `Add` 方法的值必须用逗号隔开，并用大括号 (`{}`) 括住，就像在数组文本或集合初始值设定项中一样。
 
-使用嵌套值创建集合时，嵌套值的每个元素都会作为参数传递到与元素类型匹配的 `Add` 方法中。 例如，下面的代码示例创建 <xref:System.Collections.Generic.Dictionary%602>，其中键类型为 `Integer`，值类型为 `String`。 每个嵌套值列表与 `Dictionary` 的 <xref:System.Collections.Generic.Dictionary%602.Add%2A> 方法匹配。
+使用嵌套值创建集合时，嵌套值的每个元素都会作为参数传递到与元素类型匹配的 `Add` 方法中。 例如，下面的代码示例创建 <xref:System.Collections.Generic.Dictionary%602>，其中键类型为 `Integer`，值类型为 `String`。 每个嵌套值列表与 <xref:System.Collections.Generic.Dictionary%602.Add%2A> 的 `Dictionary` 方法匹配。
 
 [!code-vb[VbVbalrCollectionInitializers#5](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#5)]
 
@@ -75,12 +75,12 @@ ms.locfileid: "74346785"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|描述|
+|职务|说明|
 |---|---|
 |[如何：创建集合初始值设定项所使用的 Add 扩展方法](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|展示了如何创建 `Add` 扩展方法，以便在集合中填充集合初始值设定项中的值。|
-|[如何：创建集合初始值设定项所使用的集合](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|展示了如何在实现 `IEnumerable` 的集合类中添加 `Add` 方法，从而启用集合初始值设定项。|
+|[如何：创建集合初始值设定项所使用的集合](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|展示了如何在实现 `Add` 的集合类中添加 `IEnumerable` 方法，从而启用集合初始值设定项。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [集合](../../../../visual-basic/programming-guide/concepts/collections.md)
 - [数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

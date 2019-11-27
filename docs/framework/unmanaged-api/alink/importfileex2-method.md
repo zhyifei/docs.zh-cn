@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445690"
 ---
 # <a name="importfileex2-method"></a>ImportFileEx2 方法
-Imports assemblies and unbound modules. This method is like [ImportFile Method](importfile-method.md), but works even if the file being imported does not exist on disk.  
+导入程序集和未绑定模块。 此方法类似于[ImportFile 方法](importfile-method.md)，但即使磁盘上没有要导入的文件也能正常工作。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,36 +41,36 @@ HRESULT ImportFileEx2(
   
 ## <a name="parameters"></a>参数  
  `pszFilename`  
- Name of file to be imported.  
+ 要导入的文件的名称。  
   
  `pszTargetName`  
- Optional name of target file.  
+ 目标文件的可选名称。  
   
  `pAssemblyScopeIn`  
- Optional import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface.  
+ 可选的导入范围[IMetaDataAssemblyImport 接口](../metadata/imetadataassemblyimport-interface.md)接口。  
   
  `fSmartImport`  
- If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
+ 如果为 TRUE，则使用 ImportTypes，否则必须手动执行导入。  
   
  `dwOpenFlags`  
- Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
+ 要传递给[OpenScope 方法](../metadata/imetadatadispenser-openscope-method.md)的标志。  
   
  `pImportToken`  
- Receives unique ID for the assembly or file.  
+ 接收程序集或文件的唯一 ID。  
   
  `ppAssemblyScope`  
- Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Can be NULL if the file is not an assembly.  
+ 接收程序集导入范围[IMetaDataAssemblyImport 接口](../metadata/imetadataassemblyimport-interface.md)接口。 如果文件不是程序集，则可以为 NULL。  
   
  `pdwCountOfScopes`  
- Receives the number of files and/or scopes imported.  
+ 接收导入的文件和/或范围的数量。  
   
 ## <a name="return-value"></a>返回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- Requires alink.h.  
+ 需要 alink。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IALink2 接口](ialink2-interface.md)
 - [IALink 接口](ialink-interface.md)

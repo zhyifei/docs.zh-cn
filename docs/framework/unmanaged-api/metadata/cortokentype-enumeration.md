@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436463"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType 枚举
-Indicates the type of a metadata token.  
+指示元数据标记的类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -61,45 +61,45 @@ typedef enum CorTokenType {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`mdtModule`|An `mdModule` token.|  
-|`mdtTypeRef`|An `mdTypeRef` token.|  
-|`mdtTypeDef`|An `mdTypeDef` token.|  
-|`mdtFieldDef`|An `mdFieldDef` token.|  
-|`mdtMethodDef`|An `mdMethodDef` token.|  
-|`mdtParamDef`|An `mdParamDef` token.|  
-|`mdtInterfaceImpl`|An `mdInterfaceImpl` token.|  
-|`mdtMemberRef`|An `mdMemberRef` token.|  
-|`mdtCustomAttribute`|An `mdCustomAttribute` token.|  
-|`mdtPermission`|An `mdPermission` token.|  
-|`mdtSignature`|An `mdSignature` token.|  
-|`mdtEvent`|An `mdEvent` token.|  
-|`mdtProperty`|An `mdProperty` token.|  
-|`mdtModuleRef`|An `mdModuleRef` token.|  
-|`mdtTypeSpec`|An `mdTypeSpec` token.|  
-|`mdtAssembly`|An `mdAssembly` token.|  
-|`mdtAssemblyRef`|An `mdAssemblyRef` token.|  
-|`mdtFile`|An `mdFile` token.|  
-|`mdtExportedType`|An `mdExportedType` token.|  
-|`mdtManifestResource`|An `mdManifestResource` token.|  
-|`mdtGenericParam`|An `mdGenericParam` token.|  
-|`mdtMethodSpec`|An `mdMethodSpec` token.|  
-|`mdtGenericParamConstraint`|An `mdGenericParamConstraint` token.|  
-|`mdtString`|An `mdString` token.|  
-|`mdtName`|An `mdName` token.|  
+|`mdtModule`|`mdModule` 标记。|  
+|`mdtTypeRef`|`mdTypeRef` 标记。|  
+|`mdtTypeDef`|`mdTypeDef` 标记。|  
+|`mdtFieldDef`|`mdFieldDef` 标记。|  
+|`mdtMethodDef`|`mdMethodDef` 标记。|  
+|`mdtParamDef`|`mdParamDef` 标记。|  
+|`mdtInterfaceImpl`|`mdInterfaceImpl` 标记。|  
+|`mdtMemberRef`|`mdMemberRef` 标记。|  
+|`mdtCustomAttribute`|`mdCustomAttribute` 标记。|  
+|`mdtPermission`|`mdPermission` 标记。|  
+|`mdtSignature`|`mdSignature` 标记。|  
+|`mdtEvent`|`mdEvent` 标记。|  
+|`mdtProperty`|`mdProperty` 标记。|  
+|`mdtModuleRef`|`mdModuleRef` 标记。|  
+|`mdtTypeSpec`|`mdTypeSpec` 标记。|  
+|`mdtAssembly`|`mdAssembly` 标记。|  
+|`mdtAssemblyRef`|`mdAssemblyRef` 标记。|  
+|`mdtFile`|`mdFile` 标记。|  
+|`mdtExportedType`|`mdExportedType` 标记。|  
+|`mdtManifestResource`|`mdManifestResource` 标记。|  
+|`mdtGenericParam`|`mdGenericParam` 标记。|  
+|`mdtMethodSpec`|`mdMethodSpec` 标记。|  
+|`mdtGenericParamConstraint`|`mdGenericParamConstraint` 标记。|  
+|`mdtString`|`mdString` 标记。|  
+|`mdtName`|`mdName` 标记。|  
 |`mdtBaseType`|未使用。|  
   
 ## <a name="remarks"></a>备注  
- Each value is equal to the value of the top byte in the corresponding metadata token.  
+ 每个值都等于对应的元数据标记中的顶部字节的值。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **标头：** Corhdr。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

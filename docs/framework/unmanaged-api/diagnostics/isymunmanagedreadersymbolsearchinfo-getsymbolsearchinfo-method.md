@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446408"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfo-method"></a>ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfo 方法
-Gets symbol search information.  
+获取符号搜索信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,20 +37,20 @@ HRESULT GetSymbolSearchInfo(
   
 ## <a name="parameters"></a>参数  
  `cSearchInfo`  
- [in] A `ULONG32` that indicates the size of `rgpSearchInfo`.  
+ 中一个 `ULONG32`，指示 `rgpSearchInfo`的大小。  
   
  `pcSearchInfo`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.  
+ 弄指向 `ULONG32` 的指针，该指针接收包含搜索信息所需的缓冲区大小。  
   
  `rgpSearchInfo`  
- [out] A pointer that is set to the returned [ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md) interface.  
+ 弄设置为返回的[ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)接口的指针。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedReaderSymbolSearchInfo 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)

@@ -18,18 +18,18 @@ ms.locfileid: "74350696"
 ## <a name="remarks"></a>备注  
  有关 `My.Computer.Registry` 对象所使用方法和属性的信息，请参阅 <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>。  
   
- For more information, see [Reading from and Writing to the Registry](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md).  
+ 有关详细信息，请参阅[读取和写入注册表](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)。  
   
 > [!NOTE]
-> You can also manipulate the registry by using methods of the <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> class.  
+> 还可以通过使用 <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> 类的方法来操作注册表。  
   
 ## <a name="requirements"></a>要求  
  **命名空间：** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (provides access to <xref:Microsoft.Win32.Registry>)  
+ **类：** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> （提供对 <xref:Microsoft.Win32.Registry>的访问权限）  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **程序集：** Visual Basic 运行时库（在 Microsoft. .dll 中）  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [My.Computer 对象](../../../visual-basic/language-reference/objects/my-computer-object.md)

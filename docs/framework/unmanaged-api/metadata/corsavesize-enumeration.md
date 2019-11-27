@@ -36,21 +36,21 @@ typedef enum CorSaveSize {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`cssAccurate`|Specifies that the return value should be exact.|  
-|`cssQuick`|Specifies that the return value should be estimated.|  
-|`cssDiscardTransientCAs`|Specifies that discardable types should be removed.|  
+|`cssAccurate`|指定返回值应是精确的。|  
+|`cssQuick`|指定应估算返回值。|  
+|`cssDiscardTransientCAs`|指定应删除可放弃类型。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **标头：** Corhdr。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

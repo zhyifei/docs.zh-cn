@@ -15,23 +15,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350744"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
-Specifies that one or more declared member variables refer to an instance of a class that can raise events.
+指定一个或多个已声明的成员变量引用可引发事件的类的实例。
 
 ## <a name="remarks"></a>备注
 
-When a variable is defined using `WithEvents`, you can declaratively specify that a method handles the variable's events using the `Handles` keyword.
+使用 `WithEvents`定义变量时，可以通过声明方式指定方法使用 `Handles` 关键字来处理变量的事件。
 
-You can use `WithEvents` only at class or module level. This means the declaration context for a `WithEvents` variable must be a class or module and cannot be a source file, namespace, structure, or procedure.
+只能在类或模块级别使用 `WithEvents`。 这意味着 `WithEvents` 变量的声明上下文必须是类或模块，不能是源文件、命名空间、结构或过程。
 
-You cannot use `WithEvents` on a structure member.
+不能对结构成员使用 `WithEvents`。
 
-You can declare only individual variables—not arrays—with `WithEvents`.
+您只能用 `WithEvents`声明单个变量（而非数组）。
 
 ## <a name="rules"></a>规则
 
-**Element Types.** You must declare `WithEvents` variables to be object variables so that they can accept class instances. However, you cannot declare them as `Object`. You must declare them as the specific class that can raise the events.
+**元素类型。** 必须将 `WithEvents` 变量声明为对象变量，以便它们可以接受类实例。 但是，不能将它们声明为 `Object`。 您必须将它们声明为可引发事件的特定类。
 
-The `WithEvents` modifier can be used in this context: [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)
+`WithEvents` 修饰符可以在此上下文中使用： [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)
 
 ## <a name="example"></a>示例
 
@@ -39,8 +39,8 @@ The `WithEvents` modifier can be used in this context: [Dim Statement](../../../
 Dim WithEvents app As Application
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [!](../../../visual-basic/language-reference/statements/handles-clause.md)
 - [关键字](../../../visual-basic/language-reference/keywords/index.md)
 - [事件](../../../visual-basic/programming-guide/language-features/events/index.md)

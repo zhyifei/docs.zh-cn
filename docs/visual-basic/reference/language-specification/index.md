@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352871"
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic 语言规范
-The Visual Basic Language Specification is the authoritative source for answers to all questions about Visual Basic grammar and syntax. It contains detailed information about the language, including many points not covered in the Visual Basic reference documentation.  
+Visual Basic 语言规范是有关 Visual Basic 语法和语法的所有问题的答案的权威来源。 它包含有关该语言的详细信息，包括 Visual Basic 参考文档中未涵盖的许多要点。  
   
  此规范可在 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=188623)下载使用。  
   
@@ -22,9 +22,9 @@ The Visual Basic Language Specification is the authoritative source for answers 
 
 应在 [dotnet/vblang](https://github.com/dotnet/vblang/issues) 存储库中创建规范的相关问题。 或者，如果有兴趣修复自己所发现的任何错误，则可向同一存储库提交[拉取请求](https://github.com/dotnet/vblang/pulls)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 语言参考](../../../visual-basic/language-reference/index.md)
 
 >[!div class="step-by-step"]
->[下一页](../../../../_vblang/spec/introduction.md)
+>[下一部分](../../../../_vblang/spec/introduction.md)
