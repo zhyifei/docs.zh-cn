@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445443"
 ---
-# <a name="imetadataemitsetmoduleprops-method"></a><span data-ttu-id="57064-102">IMetaDataEmit::SetModuleProps 方法</span><span class="sxs-lookup"><span data-stu-id="57064-102">IMetaDataEmit::SetModuleProps Method</span></span>
-<span data-ttu-id="57064-103">Updates references to a module defined by a prior call to [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md).</span><span class="sxs-lookup"><span data-stu-id="57064-103">Updates references to a module defined by a prior call to [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md).</span></span>  
+# <a name="imetadataemitsetmoduleprops-method"></a><span data-ttu-id="09cd4-102">IMetaDataEmit::SetModuleProps 方法</span><span class="sxs-lookup"><span data-stu-id="09cd4-102">IMetaDataEmit::SetModuleProps Method</span></span>
+<span data-ttu-id="09cd4-103">更新对[IMetaDataEmit：:D efinemoduleref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md)之前调用定义的模块的引用。</span><span class="sxs-lookup"><span data-stu-id="09cd4-103">Updates references to a module defined by a prior call to [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="57064-104">语法</span><span class="sxs-lookup"><span data-stu-id="57064-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="09cd4-104">语法</span><span class="sxs-lookup"><span data-stu-id="09cd4-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetModuleProps (   
@@ -33,20 +33,20 @@ HRESULT SetModuleProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="57064-105">参数</span><span class="sxs-lookup"><span data-stu-id="57064-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="09cd4-105">参数</span><span class="sxs-lookup"><span data-stu-id="09cd4-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="57064-106">[in] The module name in Unicode.</span><span class="sxs-lookup"><span data-stu-id="57064-106">[in] The module name in Unicode.</span></span> <span data-ttu-id="57064-107">This is the file name only and not the full path name.</span><span class="sxs-lookup"><span data-stu-id="57064-107">This is the file name only and not the full path name.</span></span>  
+ <span data-ttu-id="09cd4-106">中Unicode 中的模块名称。</span><span class="sxs-lookup"><span data-stu-id="09cd4-106">[in] The module name in Unicode.</span></span> <span data-ttu-id="09cd4-107">这只是文件名，而不是完整路径名称。</span><span class="sxs-lookup"><span data-stu-id="09cd4-107">This is the file name only and not the full path name.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="57064-108">要求</span><span class="sxs-lookup"><span data-stu-id="57064-108">Requirements</span></span>  
- <span data-ttu-id="57064-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="57064-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="09cd4-108">要求</span><span class="sxs-lookup"><span data-stu-id="09cd4-108">Requirements</span></span>  
+ <span data-ttu-id="09cd4-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="09cd4-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="57064-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="57064-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="09cd4-110">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="09cd4-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="57064-111">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="57064-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="09cd4-111">**库：** 用作 Mscoree.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="09cd4-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="57064-112">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="57064-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="09cd4-112">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="09cd4-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="57064-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="57064-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="09cd4-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="09cd4-113">See also</span></span>
 
-- [<span data-ttu-id="57064-114">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="57064-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="57064-115">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="57064-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="09cd4-114">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="09cd4-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="09cd4-115">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="09cd4-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -21,23 +21,23 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440969"
 ---
-# <a name="inotifysink2-interface"></a><span data-ttu-id="58d6e-102">INotifySink2 接口</span><span class="sxs-lookup"><span data-stu-id="58d6e-102">INotifySink2 Interface</span></span>
-<span data-ttu-id="58d6e-103">Declares methods for sink notification.</span><span class="sxs-lookup"><span data-stu-id="58d6e-103">Declares methods for sink notification.</span></span>  
+# <a name="inotifysink2-interface"></a><span data-ttu-id="35c47-102">INotifySink2 接口</span><span class="sxs-lookup"><span data-stu-id="35c47-102">INotifySink2 Interface</span></span>
+<span data-ttu-id="35c47-103">声明接收器通知的方法。</span><span class="sxs-lookup"><span data-stu-id="35c47-103">Declares methods for sink notification.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="58d6e-104">方法</span><span class="sxs-lookup"><span data-stu-id="58d6e-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="35c47-104">方法</span><span class="sxs-lookup"><span data-stu-id="35c47-104">Methods</span></span>  
   
-|<span data-ttu-id="58d6e-105">方法</span><span class="sxs-lookup"><span data-stu-id="58d6e-105">Method</span></span>|<span data-ttu-id="58d6e-106">描述</span><span class="sxs-lookup"><span data-stu-id="58d6e-106">Description</span></span>|  
+|<span data-ttu-id="35c47-105">方法</span><span class="sxs-lookup"><span data-stu-id="35c47-105">Method</span></span>|<span data-ttu-id="35c47-106">说明</span><span class="sxs-lookup"><span data-stu-id="35c47-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="58d6e-107">OnSyncCallEnter 方法</span><span class="sxs-lookup"><span data-stu-id="58d6e-107">OnSyncCallEnter Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|<span data-ttu-id="58d6e-108">Gets invoked when entering a call.</span><span class="sxs-lookup"><span data-stu-id="58d6e-108">Gets invoked when entering a call.</span></span>|  
-|[<span data-ttu-id="58d6e-109">OnSyncCallExit 方法</span><span class="sxs-lookup"><span data-stu-id="58d6e-109">OnSyncCallExit Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|<span data-ttu-id="58d6e-110">Gets invoked when exiting a call.</span><span class="sxs-lookup"><span data-stu-id="58d6e-110">Gets invoked when exiting a call.</span></span>|  
-|[<span data-ttu-id="58d6e-111">OnSyncCallOut 方法</span><span class="sxs-lookup"><span data-stu-id="58d6e-111">OnSyncCallOut Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|<span data-ttu-id="58d6e-112">Gets invoked when a call is out.</span><span class="sxs-lookup"><span data-stu-id="58d6e-112">Gets invoked when a call is out.</span></span>|  
-|[<span data-ttu-id="58d6e-113">OnSyncCallReturn 方法</span><span class="sxs-lookup"><span data-stu-id="58d6e-113">OnSyncCallReturn Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|<span data-ttu-id="58d6e-114">Gets invoked when a call returns.</span><span class="sxs-lookup"><span data-stu-id="58d6e-114">Gets invoked when a call returns.</span></span>|  
+|[<span data-ttu-id="35c47-107">OnSyncCallEnter 方法</span><span class="sxs-lookup"><span data-stu-id="35c47-107">OnSyncCallEnter Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|<span data-ttu-id="35c47-108">在输入调用时调用。</span><span class="sxs-lookup"><span data-stu-id="35c47-108">Gets invoked when entering a call.</span></span>|  
+|[<span data-ttu-id="35c47-109">OnSyncCallExit 方法</span><span class="sxs-lookup"><span data-stu-id="35c47-109">OnSyncCallExit Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|<span data-ttu-id="35c47-110">在退出调用时调用。</span><span class="sxs-lookup"><span data-stu-id="35c47-110">Gets invoked when exiting a call.</span></span>|  
+|[<span data-ttu-id="35c47-111">OnSyncCallOut 方法</span><span class="sxs-lookup"><span data-stu-id="35c47-111">OnSyncCallOut Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|<span data-ttu-id="35c47-112">在调用时调用。</span><span class="sxs-lookup"><span data-stu-id="35c47-112">Gets invoked when a call is out.</span></span>|  
+|[<span data-ttu-id="35c47-113">OnSyncCallReturn 方法</span><span class="sxs-lookup"><span data-stu-id="35c47-113">OnSyncCallReturn Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|<span data-ttu-id="35c47-114">当调用返回时调用。</span><span class="sxs-lookup"><span data-stu-id="35c47-114">Gets invoked when a call returns.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="58d6e-115">要求</span><span class="sxs-lookup"><span data-stu-id="58d6e-115">Requirements</span></span>  
- <span data-ttu-id="58d6e-116">**Header:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="58d6e-116">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="35c47-115">要求</span><span class="sxs-lookup"><span data-stu-id="35c47-115">Requirements</span></span>  
+ <span data-ttu-id="35c47-116">**标头：** ProtocolNotify2 .idl</span><span class="sxs-lookup"><span data-stu-id="35c47-116">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="58d6e-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="58d6e-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="35c47-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="35c47-117">See also</span></span>
 
-- [<span data-ttu-id="58d6e-118">INotifyConnection2 接口</span><span class="sxs-lookup"><span data-stu-id="58d6e-118">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [<span data-ttu-id="58d6e-119">INotifySource2 接口</span><span class="sxs-lookup"><span data-stu-id="58d6e-119">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="58d6e-120">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="58d6e-120">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="35c47-118">INotifyConnection2 接口</span><span class="sxs-lookup"><span data-stu-id="35c47-118">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="35c47-119">INotifySource2 接口</span><span class="sxs-lookup"><span data-stu-id="35c47-119">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="35c47-120">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="35c47-120">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

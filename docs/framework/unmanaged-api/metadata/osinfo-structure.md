@@ -21,10 +21,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430729"
 ---
-# <a name="osinfo-structure"></a><span data-ttu-id="56349-102">OSINFO 结构</span><span class="sxs-lookup"><span data-stu-id="56349-102">OSINFO Structure</span></span>
-<span data-ttu-id="56349-103">Contains details about the operating system for an assembly or module.</span><span class="sxs-lookup"><span data-stu-id="56349-103">Contains details about the operating system for an assembly or module.</span></span>  
+# <a name="osinfo-structure"></a><span data-ttu-id="f109a-102">OSINFO 结构</span><span class="sxs-lookup"><span data-stu-id="f109a-102">OSINFO Structure</span></span>
+<span data-ttu-id="f109a-103">包含有关程序集或模块的操作系统的详细信息。</span><span class="sxs-lookup"><span data-stu-id="f109a-103">Contains details about the operating system for an assembly or module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="56349-104">语法</span><span class="sxs-lookup"><span data-stu-id="56349-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f109a-104">语法</span><span class="sxs-lookup"><span data-stu-id="f109a-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct {  
@@ -34,27 +34,27 @@ typedef struct {
 } OSINFO;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="56349-105">Members</span><span class="sxs-lookup"><span data-stu-id="56349-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f109a-105">Members</span><span class="sxs-lookup"><span data-stu-id="f109a-105">Members</span></span>  
   
-|<span data-ttu-id="56349-106">成员</span><span class="sxs-lookup"><span data-stu-id="56349-106">Member</span></span>|<span data-ttu-id="56349-107">描述</span><span class="sxs-lookup"><span data-stu-id="56349-107">Description</span></span>|  
+|<span data-ttu-id="f109a-106">成员</span><span class="sxs-lookup"><span data-stu-id="f109a-106">Member</span></span>|<span data-ttu-id="f109a-107">说明</span><span class="sxs-lookup"><span data-stu-id="f109a-107">Description</span></span>|  
 |------------|-----------------|  
-|`dwOSPlatformId`|<span data-ttu-id="56349-108">One of the identifier values defined by the Microsoft Windows platform function `GetVersionEx`.</span><span class="sxs-lookup"><span data-stu-id="56349-108">One of the identifier values defined by the Microsoft Windows platform function `GetVersionEx`.</span></span> <span data-ttu-id="56349-109">The following values are supported:</span><span class="sxs-lookup"><span data-stu-id="56349-109">The following values are supported:</span></span><br /><br /> <span data-ttu-id="56349-110">-   VER_PLATFORM_WIN32s, or 0x0000, to specify Microsoft Windows 3.1.</span><span class="sxs-lookup"><span data-stu-id="56349-110">-   VER_PLATFORM_WIN32s, or 0x0000, to specify Microsoft Windows 3.1.</span></span><br /><span data-ttu-id="56349-111">-   VER_PLATFORM_WIN32_WINDOWS, or 0x0001, to specify Windows 95, Windows 98, or operating systems descended from them.</span><span class="sxs-lookup"><span data-stu-id="56349-111">-   VER_PLATFORM_WIN32_WINDOWS, or 0x0001, to specify Windows 95, Windows 98, or operating systems descended from them.</span></span><br /><span data-ttu-id="56349-112">-   VER_PLATFORM_WIN32_NT, or 0x0010, to specify Windows NT or operating systems descended from it.</span><span class="sxs-lookup"><span data-stu-id="56349-112">-   VER_PLATFORM_WIN32_NT, or 0x0010, to specify Windows NT or operating systems descended from it.</span></span>|  
-|`dwOSMajorVersion`|<span data-ttu-id="56349-113">The operating system major version, or a NULL value to indicate any version.</span><span class="sxs-lookup"><span data-stu-id="56349-113">The operating system major version, or a NULL value to indicate any version.</span></span>|  
-|`dwOSMinorVersion`|<span data-ttu-id="56349-114">The operating system minor version, or a NULL value to indicate any version.</span><span class="sxs-lookup"><span data-stu-id="56349-114">The operating system minor version, or a NULL value to indicate any version.</span></span>|  
+|`dwOSPlatformId`|<span data-ttu-id="f109a-108">`GetVersionEx`Microsoft Windows 平台函数定义的标识符值之一。</span><span class="sxs-lookup"><span data-stu-id="f109a-108">One of the identifier values defined by the Microsoft Windows platform function `GetVersionEx`.</span></span> <span data-ttu-id="f109a-109">支持以下值：</span><span class="sxs-lookup"><span data-stu-id="f109a-109">The following values are supported:</span></span><br /><br /> <span data-ttu-id="f109a-110">-VER_PLATFORM_WIN32s 或0x0000，用于指定 Microsoft Windows 3.1。</span><span class="sxs-lookup"><span data-stu-id="f109a-110">-   VER_PLATFORM_WIN32s, or 0x0000, to specify Microsoft Windows 3.1.</span></span><br /><span data-ttu-id="f109a-111">-VER_PLATFORM_WIN32_WINDOWS 或0x0001，用于指定 Windows 95、Windows 98 或其上的操作系统。</span><span class="sxs-lookup"><span data-stu-id="f109a-111">-   VER_PLATFORM_WIN32_WINDOWS, or 0x0001, to specify Windows 95, Windows 98, or operating systems descended from them.</span></span><br /><span data-ttu-id="f109a-112">-VER_PLATFORM_WIN32_NT 或0x0010，用于指定其上的 Windows NT 或操作系统。</span><span class="sxs-lookup"><span data-stu-id="f109a-112">-   VER_PLATFORM_WIN32_NT, or 0x0010, to specify Windows NT or operating systems descended from it.</span></span>|  
+|`dwOSMajorVersion`|<span data-ttu-id="f109a-113">操作系统主版本，或指示任何版本的 NULL 值。</span><span class="sxs-lookup"><span data-stu-id="f109a-113">The operating system major version, or a NULL value to indicate any version.</span></span>|  
+|`dwOSMinorVersion`|<span data-ttu-id="f109a-114">操作系统次要版本，或指示任何版本的 NULL 值。</span><span class="sxs-lookup"><span data-stu-id="f109a-114">The operating system minor version, or a NULL value to indicate any version.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="56349-115">备注</span><span class="sxs-lookup"><span data-stu-id="56349-115">Remarks</span></span>  
- <span data-ttu-id="56349-116">`OSINFO` is based on the `OSVERSIONINFOEX` structure that is used in calls to the Microsoft Windows platform function `GetVersionEx`.</span><span class="sxs-lookup"><span data-stu-id="56349-116">`OSINFO` is based on the `OSVERSIONINFOEX` structure that is used in calls to the Microsoft Windows platform function `GetVersionEx`.</span></span> <span data-ttu-id="56349-117">This structure is used by the ASSEMBLYMETADATA structure to indicate its operating system support.</span><span class="sxs-lookup"><span data-stu-id="56349-117">This structure is used by the ASSEMBLYMETADATA structure to indicate its operating system support.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f109a-115">备注</span><span class="sxs-lookup"><span data-stu-id="f109a-115">Remarks</span></span>  
+ <span data-ttu-id="f109a-116">`OSINFO` 基于对 Microsoft Windows 平台功能 `GetVersionEx`的调用中使用的 `OSVERSIONINFOEX` 结构。</span><span class="sxs-lookup"><span data-stu-id="f109a-116">`OSINFO` is based on the `OSVERSIONINFOEX` structure that is used in calls to the Microsoft Windows platform function `GetVersionEx`.</span></span> <span data-ttu-id="f109a-117">ASSEMBLYMETADATA 结构使用此结构来指示其操作系统支持。</span><span class="sxs-lookup"><span data-stu-id="f109a-117">This structure is used by the ASSEMBLYMETADATA structure to indicate its operating system support.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="56349-118">要求</span><span class="sxs-lookup"><span data-stu-id="56349-118">Requirements</span></span>  
- <span data-ttu-id="56349-119">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="56349-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f109a-118">要求</span><span class="sxs-lookup"><span data-stu-id="f109a-118">Requirements</span></span>  
+ <span data-ttu-id="f109a-119">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f109a-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="56349-120">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="56349-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f109a-120">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="f109a-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="56349-121">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="56349-121">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f109a-121">**库：** 用作 Mscoree.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="f109a-121">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="56349-122">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="56349-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f109a-122">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f109a-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="56349-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="56349-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f109a-123">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f109a-123">See also</span></span>
 
-- [<span data-ttu-id="56349-124">元数据结构</span><span class="sxs-lookup"><span data-stu-id="56349-124">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
-- [<span data-ttu-id="56349-125">IMetaDataAssemblyEmit 接口</span><span class="sxs-lookup"><span data-stu-id="56349-125">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="f109a-124">元数据结构</span><span class="sxs-lookup"><span data-stu-id="f109a-124">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [<span data-ttu-id="f109a-125">IMetaDataAssemblyEmit 接口</span><span class="sxs-lookup"><span data-stu-id="f109a-125">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

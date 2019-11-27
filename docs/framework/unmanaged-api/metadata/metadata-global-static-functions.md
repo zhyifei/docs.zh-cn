@@ -13,14 +13,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447820"
 ---
-# <a name="metadata-global-static-functions"></a><span data-ttu-id="365b5-102">元数据全局静态函数</span><span class="sxs-lookup"><span data-stu-id="365b5-102">Metadata Global Static Functions</span></span>
-<span data-ttu-id="365b5-103">Beginning with the .NET Framework 4, the documentation for the `_Cor*`, `CoInitialize*`, `CoUninitialize*`, and `CoEEShutDownCOM` functions, which pertain to hosting, is located in [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md).</span><span class="sxs-lookup"><span data-stu-id="365b5-103">Beginning with the .NET Framework 4, the documentation for the `_Cor*`, `CoInitialize*`, `CoUninitialize*`, and `CoEEShutDownCOM` functions, which pertain to hosting, is located in [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md).</span></span> <span data-ttu-id="365b5-104">没有与元数据相关的全局静态函数。</span><span class="sxs-lookup"><span data-stu-id="365b5-104">There are no global static functions that pertain to metadata.</span></span>  
+# <a name="metadata-global-static-functions"></a><span data-ttu-id="1ef45-102">元数据全局静态函数</span><span class="sxs-lookup"><span data-stu-id="1ef45-102">Metadata Global Static Functions</span></span>
+<span data-ttu-id="1ef45-103">从 .NET Framework 4 开始，与承载相关的 `_Cor*`、`CoInitialize*`、`CoUninitialize*`和 `CoEEShutDownCOM` 函数的文档位于[弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)中。</span><span class="sxs-lookup"><span data-stu-id="1ef45-103">Beginning with the .NET Framework 4, the documentation for the `_Cor*`, `CoInitialize*`, `CoUninitialize*`, and `CoEEShutDownCOM` functions, which pertain to hosting, is located in [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md).</span></span> <span data-ttu-id="1ef45-104">没有与元数据相关的全局静态函数。</span><span class="sxs-lookup"><span data-stu-id="1ef45-104">There are no global static functions that pertain to metadata.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="365b5-105">相关章节</span><span class="sxs-lookup"><span data-stu-id="365b5-105">Related Sections</span></span>  
- [<span data-ttu-id="365b5-106">元数据接口</span><span class="sxs-lookup"><span data-stu-id="365b5-106">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
+## <a name="related-sections"></a><span data-ttu-id="1ef45-105">相关章节</span><span class="sxs-lookup"><span data-stu-id="1ef45-105">Related Sections</span></span>  
+ [<span data-ttu-id="1ef45-106">元数据接口</span><span class="sxs-lookup"><span data-stu-id="1ef45-106">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
   
- [<span data-ttu-id="365b5-107">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="365b5-107">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
+ [<span data-ttu-id="1ef45-107">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="1ef45-107">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
   
- [<span data-ttu-id="365b5-108">元数据结构</span><span class="sxs-lookup"><span data-stu-id="365b5-108">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
+ [<span data-ttu-id="1ef45-108">元数据结构</span><span class="sxs-lookup"><span data-stu-id="1ef45-108">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
   
- [<span data-ttu-id="365b5-109">元数据联合</span><span class="sxs-lookup"><span data-stu-id="365b5-109">Metadata Unions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)
+ [<span data-ttu-id="1ef45-109">元数据联合</span><span class="sxs-lookup"><span data-stu-id="1ef45-109">Metadata Unions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)

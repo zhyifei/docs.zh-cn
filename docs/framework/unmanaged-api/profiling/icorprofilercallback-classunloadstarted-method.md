@@ -22,33 +22,33 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445064"
 ---
-# <a name="icorprofilercallbackclassunloadstarted-method"></a><span data-ttu-id="ddcfa-102">ICorProfilerCallback::ClassUnloadStarted 方法</span><span class="sxs-lookup"><span data-stu-id="ddcfa-102">ICorProfilerCallback::ClassUnloadStarted Method</span></span>
-<span data-ttu-id="ddcfa-103">Notifies the profiler that a class is being unloaded.</span><span class="sxs-lookup"><span data-stu-id="ddcfa-103">Notifies the profiler that a class is being unloaded.</span></span>  
+# <a name="icorprofilercallbackclassunloadstarted-method"></a><span data-ttu-id="473a5-102">ICorProfilerCallback::ClassUnloadStarted 方法</span><span class="sxs-lookup"><span data-stu-id="473a5-102">ICorProfilerCallback::ClassUnloadStarted Method</span></span>
+<span data-ttu-id="473a5-103">通知探查器正在卸载某个类。</span><span class="sxs-lookup"><span data-stu-id="473a5-103">Notifies the profiler that a class is being unloaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ddcfa-104">语法</span><span class="sxs-lookup"><span data-stu-id="ddcfa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="473a5-104">语法</span><span class="sxs-lookup"><span data-stu-id="473a5-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ClassUnloadStarted(  
     [in] ClassID classId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ddcfa-105">参数</span><span class="sxs-lookup"><span data-stu-id="ddcfa-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="473a5-105">参数</span><span class="sxs-lookup"><span data-stu-id="473a5-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="ddcfa-106">[in] Identifies the class that is being unloaded.</span><span class="sxs-lookup"><span data-stu-id="ddcfa-106">[in] Identifies the class that is being unloaded.</span></span>  
+ <span data-ttu-id="473a5-106">中标识正在卸载的类。</span><span class="sxs-lookup"><span data-stu-id="473a5-106">[in] Identifies the class that is being unloaded.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ddcfa-107">备注</span><span class="sxs-lookup"><span data-stu-id="ddcfa-107">Remarks</span></span>  
- <span data-ttu-id="ddcfa-108">The value of `classId` is not valid for an information request after the `ClassUnloadStarted` method returns — this is the profiler's last chance to obtain information about this class.</span><span class="sxs-lookup"><span data-stu-id="ddcfa-108">The value of `classId` is not valid for an information request after the `ClassUnloadStarted` method returns — this is the profiler's last chance to obtain information about this class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="473a5-107">备注</span><span class="sxs-lookup"><span data-stu-id="473a5-107">Remarks</span></span>  
+ <span data-ttu-id="473a5-108">`ClassUnloadStarted` 方法返回后，`classId` 的值对信息请求无效-这是探查器获取有关此类的信息的最后机会。</span><span class="sxs-lookup"><span data-stu-id="473a5-108">The value of `classId` is not valid for an information request after the `ClassUnloadStarted` method returns — this is the profiler's last chance to obtain information about this class.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ddcfa-109">要求</span><span class="sxs-lookup"><span data-stu-id="ddcfa-109">Requirements</span></span>  
- <span data-ttu-id="ddcfa-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ddcfa-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="473a5-109">要求</span><span class="sxs-lookup"><span data-stu-id="473a5-109">Requirements</span></span>  
+ <span data-ttu-id="473a5-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="473a5-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ddcfa-111">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ddcfa-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="473a5-111">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="473a5-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ddcfa-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ddcfa-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="473a5-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="473a5-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ddcfa-113">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ddcfa-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="473a5-113">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="473a5-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ddcfa-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="ddcfa-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="473a5-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="473a5-114">See also</span></span>
 
-- [<span data-ttu-id="ddcfa-115">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="ddcfa-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="ddcfa-116">ClassUnloadFinished 方法</span><span class="sxs-lookup"><span data-stu-id="ddcfa-116">ClassUnloadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadfinished-method.md)
+- [<span data-ttu-id="473a5-115">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="473a5-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="473a5-116">ClassUnloadFinished 方法</span><span class="sxs-lookup"><span data-stu-id="473a5-116">ClassUnloadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadfinished-method.md)

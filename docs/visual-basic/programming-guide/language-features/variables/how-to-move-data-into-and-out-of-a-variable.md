@@ -12,47 +12,47 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346894"
 ---
-# <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a><span data-ttu-id="963c0-102">如何：将数据移入和移出变量 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="963c0-102">How to: Move Data Into and Out of a Variable (Visual Basic)</span></span>
+# <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a><span data-ttu-id="8b949-102">如何：将数据移入和移出变量 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8b949-102">How to: Move Data Into and Out of a Variable (Visual Basic)</span></span>
 
-<span data-ttu-id="963c0-103">You store a value in a variable by putting the variable name on the left side of an assignment statement.</span><span class="sxs-lookup"><span data-stu-id="963c0-103">You store a value in a variable by putting the variable name on the left side of an assignment statement.</span></span>
+<span data-ttu-id="8b949-103">您可以通过将变量名称放在赋值语句的左侧来将值存储在变量中。</span><span class="sxs-lookup"><span data-stu-id="8b949-103">You store a value in a variable by putting the variable name on the left side of an assignment statement.</span></span>
 
-## <a name="putting-data-in-a-variable"></a><span data-ttu-id="963c0-104">Putting Data in a Variable</span><span class="sxs-lookup"><span data-stu-id="963c0-104">Putting Data in a Variable</span></span>
+## <a name="putting-data-in-a-variable"></a><span data-ttu-id="8b949-104">将数据放入变量</span><span class="sxs-lookup"><span data-stu-id="8b949-104">Putting Data in a Variable</span></span>
 
-#### <a name="to-store-a-value-in-a-variable"></a><span data-ttu-id="963c0-105">To store a value in a variable</span><span class="sxs-lookup"><span data-stu-id="963c0-105">To store a value in a variable</span></span>
+#### <a name="to-store-a-value-in-a-variable"></a><span data-ttu-id="8b949-105">将值存储在变量中</span><span class="sxs-lookup"><span data-stu-id="8b949-105">To store a value in a variable</span></span>
 
-- <span data-ttu-id="963c0-106">Use the variable name on the left side of an assignment statement.</span><span class="sxs-lookup"><span data-stu-id="963c0-106">Use the variable name on the left side of an assignment statement.</span></span>
+- <span data-ttu-id="8b949-106">使用赋值语句左侧的变量名称。</span><span class="sxs-lookup"><span data-stu-id="8b949-106">Use the variable name on the left side of an assignment statement.</span></span>
 
-    <span data-ttu-id="963c0-107">The following example sets the value of the variable `alpha`.</span><span class="sxs-lookup"><span data-stu-id="963c0-107">The following example sets the value of the variable `alpha`.</span></span>
+    <span data-ttu-id="8b949-107">下面的示例设置 `alpha`变量的值。</span><span class="sxs-lookup"><span data-stu-id="8b949-107">The following example sets the value of the variable `alpha`.</span></span>
 
     ```vb
     alpha = (beta * 6.27) / (gamma + 2.1)
     ```
 
-    <span data-ttu-id="963c0-108">The value generated on the right side of the assignment statement is stored in the variable.</span><span class="sxs-lookup"><span data-stu-id="963c0-108">The value generated on the right side of the assignment statement is stored in the variable.</span></span>
+    <span data-ttu-id="8b949-108">赋值语句右侧生成的值存储在变量中。</span><span class="sxs-lookup"><span data-stu-id="8b949-108">The value generated on the right side of the assignment statement is stored in the variable.</span></span>
 
-## <a name="getting-data-from-a-variable"></a><span data-ttu-id="963c0-109">Getting Data from a Variable</span><span class="sxs-lookup"><span data-stu-id="963c0-109">Getting Data from a Variable</span></span>
+## <a name="getting-data-from-a-variable"></a><span data-ttu-id="8b949-109">从变量中获取数据</span><span class="sxs-lookup"><span data-stu-id="8b949-109">Getting Data from a Variable</span></span>
 
-<span data-ttu-id="963c0-110">You retrieve a variable's value by including the variable name in an expression.</span><span class="sxs-lookup"><span data-stu-id="963c0-110">You retrieve a variable's value by including the variable name in an expression.</span></span>
+<span data-ttu-id="8b949-110">通过在表达式中包含变量名称来检索变量的值。</span><span class="sxs-lookup"><span data-stu-id="8b949-110">You retrieve a variable's value by including the variable name in an expression.</span></span>
 
-#### <a name="to-retrieve-a-value-from-a-variable"></a><span data-ttu-id="963c0-111">To retrieve a value from a variable</span><span class="sxs-lookup"><span data-stu-id="963c0-111">To retrieve a value from a variable</span></span>
+#### <a name="to-retrieve-a-value-from-a-variable"></a><span data-ttu-id="8b949-111">从变量中检索值</span><span class="sxs-lookup"><span data-stu-id="8b949-111">To retrieve a value from a variable</span></span>
 
-- <span data-ttu-id="963c0-112">Use the variable name in an expression.</span><span class="sxs-lookup"><span data-stu-id="963c0-112">Use the variable name in an expression.</span></span> <span data-ttu-id="963c0-113">You can use a variable anywhere you can use a constant or a literal, except in an expression that defines the value of a constant.</span><span class="sxs-lookup"><span data-stu-id="963c0-113">You can use a variable anywhere you can use a constant or a literal, except in an expression that defines the value of a constant.</span></span>
+- <span data-ttu-id="8b949-112">在表达式中使用变量名。</span><span class="sxs-lookup"><span data-stu-id="8b949-112">Use the variable name in an expression.</span></span> <span data-ttu-id="8b949-113">可以在可以使用常量或文本的任何位置使用变量，但定义常量值的表达式除外。</span><span class="sxs-lookup"><span data-stu-id="8b949-113">You can use a variable anywhere you can use a constant or a literal, except in an expression that defines the value of a constant.</span></span>
 
-  <span data-ttu-id="963c0-114">\- 或 -</span><span class="sxs-lookup"><span data-stu-id="963c0-114">\-or-</span></span>
+  <span data-ttu-id="8b949-114">\- 或 -</span><span class="sxs-lookup"><span data-stu-id="8b949-114">\-or-</span></span>
 
-- <span data-ttu-id="963c0-115">Use the variable name following the equal (`=`) sign in an assignment statement.</span><span class="sxs-lookup"><span data-stu-id="963c0-115">Use the variable name following the equal (`=`) sign in an assignment statement.</span></span>
+- <span data-ttu-id="8b949-115">在赋值语句中使用等号（`=`）后的变量名称。</span><span class="sxs-lookup"><span data-stu-id="8b949-115">Use the variable name following the equal (`=`) sign in an assignment statement.</span></span>
 
-  <span data-ttu-id="963c0-116">The following example reads the value of the variable `startValue` and then uses the value of the variable `counter` in an expression.</span><span class="sxs-lookup"><span data-stu-id="963c0-116">The following example reads the value of the variable `startValue` and then uses the value of the variable `counter` in an expression.</span></span>
+  <span data-ttu-id="8b949-116">下面的示例读取变量 `startValue` 的值，然后在表达式中使用变量 `counter` 的值。</span><span class="sxs-lookup"><span data-stu-id="8b949-116">The following example reads the value of the variable `startValue` and then uses the value of the variable `counter` in an expression.</span></span>
 
   ```vb
   counter = startValue
   cellValue = (counter + 5) ^ 2
   ```
 
-  <span data-ttu-id="963c0-117">The value of the variable participates in the expression just as a constant would, and then it is stored in the variable or property on the left side of the assignment statement.</span><span class="sxs-lookup"><span data-stu-id="963c0-117">The value of the variable participates in the expression just as a constant would, and then it is stored in the variable or property on the left side of the assignment statement.</span></span>
+  <span data-ttu-id="8b949-117">变量的值将作为常数加入表达式，然后将其存储在赋值语句左侧的变量或属性中。</span><span class="sxs-lookup"><span data-stu-id="8b949-117">The value of the variable participates in the expression just as a constant would, and then it is stored in the variable or property on the left side of the assignment statement.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="963c0-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="963c0-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8b949-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8b949-118">See also</span></span>
 
-- [<span data-ttu-id="963c0-119">变量</span><span class="sxs-lookup"><span data-stu-id="963c0-119">Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [<span data-ttu-id="963c0-120">变量声明</span><span class="sxs-lookup"><span data-stu-id="963c0-120">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [<span data-ttu-id="963c0-121">对象变量</span><span class="sxs-lookup"><span data-stu-id="963c0-121">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [<span data-ttu-id="8b949-119">变量</span><span class="sxs-lookup"><span data-stu-id="8b949-119">Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [<span data-ttu-id="8b949-120">变量声明</span><span class="sxs-lookup"><span data-stu-id="8b949-120">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [<span data-ttu-id="8b949-121">对象变量</span><span class="sxs-lookup"><span data-stu-id="8b949-121">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)

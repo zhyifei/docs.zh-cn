@@ -13,22 +13,22 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353780"
 ---
-# <a name="option-keyword-statement"></a><span data-ttu-id="949bf-102">Option \<keyword> Statement</span><span class="sxs-lookup"><span data-stu-id="949bf-102">Option \<keyword> Statement</span></span>
-<span data-ttu-id="949bf-103">Introduces a statement that specifies a compiler option that applies to the entire source file.</span><span class="sxs-lookup"><span data-stu-id="949bf-103">Introduces a statement that specifies a compiler option that applies to the entire source file.</span></span>  
+# <a name="option-keyword-statement"></a><span data-ttu-id="96886-102">Option \<关键字 > 语句</span><span class="sxs-lookup"><span data-stu-id="96886-102">Option \<keyword> Statement</span></span>
+<span data-ttu-id="96886-103">引入一个语句，该语句指定适用于整个源文件的编译器选项。</span><span class="sxs-lookup"><span data-stu-id="96886-103">Introduces a statement that specifies a compiler option that applies to the entire source file.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="949bf-104">备注</span><span class="sxs-lookup"><span data-stu-id="949bf-104">Remarks</span></span>  
- <span data-ttu-id="949bf-105">The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.</span><span class="sxs-lookup"><span data-stu-id="949bf-105">The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="96886-104">备注</span><span class="sxs-lookup"><span data-stu-id="96886-104">Remarks</span></span>  
+ <span data-ttu-id="96886-105">编译器选项可以控制是否所有变量都必须是显式声明的，无论收缩类型转换必须是显式的，还是应将字符串作为文本或二进制数量进行比较。</span><span class="sxs-lookup"><span data-stu-id="96886-105">The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.</span></span>  
   
- <span data-ttu-id="949bf-106">`Option` 关键字可用于以下上下文中：</span><span class="sxs-lookup"><span data-stu-id="949bf-106">The `Option` keyword can be used in these contexts:</span></span>  
+ <span data-ttu-id="96886-106">`Option` 关键字可用于以下上下文中：</span><span class="sxs-lookup"><span data-stu-id="96886-106">The `Option` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="949bf-107">Option Compare 语句</span><span class="sxs-lookup"><span data-stu-id="949bf-107">Option Compare Statement</span></span>](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
+ [<span data-ttu-id="96886-107">Option Compare 语句</span><span class="sxs-lookup"><span data-stu-id="96886-107">Option Compare Statement</span></span>](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
   
- [<span data-ttu-id="949bf-108">Option Explicit 语句</span><span class="sxs-lookup"><span data-stu-id="949bf-108">Option Explicit Statement</span></span>](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [<span data-ttu-id="96886-108">Option Explicit 语句</span><span class="sxs-lookup"><span data-stu-id="96886-108">Option Explicit Statement</span></span>](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
   
- [<span data-ttu-id="949bf-109">Option Infer 语句</span><span class="sxs-lookup"><span data-stu-id="949bf-109">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [<span data-ttu-id="96886-109">Option Infer 语句</span><span class="sxs-lookup"><span data-stu-id="96886-109">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
   
- [<span data-ttu-id="949bf-110">Option Strict 语句</span><span class="sxs-lookup"><span data-stu-id="949bf-110">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [<span data-ttu-id="96886-110">Option Strict 语句</span><span class="sxs-lookup"><span data-stu-id="96886-110">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="949bf-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="949bf-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="96886-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="96886-111">See also</span></span>
 
-- [<span data-ttu-id="949bf-112">关键字</span><span class="sxs-lookup"><span data-stu-id="949bf-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="96886-112">关键字</span><span class="sxs-lookup"><span data-stu-id="96886-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

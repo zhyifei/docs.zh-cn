@@ -21,20 +21,20 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448701"
 ---
-# <a name="inotifysource2-interface"></a><span data-ttu-id="dfdda-102">INotifySource2 接口</span><span class="sxs-lookup"><span data-stu-id="dfdda-102">INotifySource2 Interface</span></span>
-<span data-ttu-id="dfdda-103">Declares a method for setting notification filters.</span><span class="sxs-lookup"><span data-stu-id="dfdda-103">Declares a method for setting notification filters.</span></span>  
+# <a name="inotifysource2-interface"></a><span data-ttu-id="5d273-102">INotifySource2 接口</span><span class="sxs-lookup"><span data-stu-id="5d273-102">INotifySource2 Interface</span></span>
+<span data-ttu-id="5d273-103">声明用于设置通知筛选器的方法。</span><span class="sxs-lookup"><span data-stu-id="5d273-103">Declares a method for setting notification filters.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="dfdda-104">方法</span><span class="sxs-lookup"><span data-stu-id="dfdda-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="5d273-104">方法</span><span class="sxs-lookup"><span data-stu-id="5d273-104">Methods</span></span>  
   
-|<span data-ttu-id="dfdda-105">方法</span><span class="sxs-lookup"><span data-stu-id="dfdda-105">Method</span></span>|<span data-ttu-id="dfdda-106">描述</span><span class="sxs-lookup"><span data-stu-id="dfdda-106">Description</span></span>|  
+|<span data-ttu-id="5d273-105">方法</span><span class="sxs-lookup"><span data-stu-id="5d273-105">Method</span></span>|<span data-ttu-id="5d273-106">说明</span><span class="sxs-lookup"><span data-stu-id="5d273-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="dfdda-107">SetNotifyFilter 方法</span><span class="sxs-lookup"><span data-stu-id="dfdda-107">SetNotifyFilter Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)|<span data-ttu-id="dfdda-108">Assigns a notification filter for use with this source.</span><span class="sxs-lookup"><span data-stu-id="dfdda-108">Assigns a notification filter for use with this source.</span></span>|  
+|[<span data-ttu-id="5d273-107">SetNotifyFilter 方法</span><span class="sxs-lookup"><span data-stu-id="5d273-107">SetNotifyFilter Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)|<span data-ttu-id="5d273-108">分配用于此源的通知筛选器。</span><span class="sxs-lookup"><span data-stu-id="5d273-108">Assigns a notification filter for use with this source.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="dfdda-109">要求</span><span class="sxs-lookup"><span data-stu-id="dfdda-109">Requirements</span></span>  
- <span data-ttu-id="dfdda-110">**Header:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="dfdda-110">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5d273-109">要求</span><span class="sxs-lookup"><span data-stu-id="5d273-109">Requirements</span></span>  
+ <span data-ttu-id="5d273-110">**标头：** ProtocolNotify2 .idl</span><span class="sxs-lookup"><span data-stu-id="5d273-110">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dfdda-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="dfdda-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d273-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5d273-111">See also</span></span>
 
-- [<span data-ttu-id="dfdda-112">INotifyConnection2 接口</span><span class="sxs-lookup"><span data-stu-id="dfdda-112">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [<span data-ttu-id="dfdda-113">INotifySink2 接口</span><span class="sxs-lookup"><span data-stu-id="dfdda-113">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="dfdda-114">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="dfdda-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="5d273-112">INotifyConnection2 接口</span><span class="sxs-lookup"><span data-stu-id="5d273-112">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="5d273-113">INotifySink2 接口</span><span class="sxs-lookup"><span data-stu-id="5d273-113">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="5d273-114">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="5d273-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443102"
 ---
-# <a name="icorprofilerinfo2getthreadappdomain-method"></a><span data-ttu-id="79f7d-102">ICorProfilerInfo2::GetThreadAppDomain 方法</span><span class="sxs-lookup"><span data-stu-id="79f7d-102">ICorProfilerInfo2::GetThreadAppDomain Method</span></span>
-<span data-ttu-id="79f7d-103">Gets the ID of the application domain in which the specified thread is currently executing code.</span><span class="sxs-lookup"><span data-stu-id="79f7d-103">Gets the ID of the application domain in which the specified thread is currently executing code.</span></span>  
+# <a name="icorprofilerinfo2getthreadappdomain-method"></a><span data-ttu-id="9a823-102">ICorProfilerInfo2::GetThreadAppDomain 方法</span><span class="sxs-lookup"><span data-stu-id="9a823-102">ICorProfilerInfo2::GetThreadAppDomain Method</span></span>
+<span data-ttu-id="9a823-103">获取指定线程当前正在执行代码的应用程序域的 ID。</span><span class="sxs-lookup"><span data-stu-id="9a823-103">Gets the ID of the application domain in which the specified thread is currently executing code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="79f7d-104">语法</span><span class="sxs-lookup"><span data-stu-id="79f7d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9a823-104">语法</span><span class="sxs-lookup"><span data-stu-id="9a823-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetThreadAppDomain(  
@@ -33,23 +33,23 @@ HRESULT GetThreadAppDomain(
     [out] AppDomainID *pAppDomainId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="79f7d-105">参数</span><span class="sxs-lookup"><span data-stu-id="79f7d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9a823-105">参数</span><span class="sxs-lookup"><span data-stu-id="9a823-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="79f7d-106">[in] The ID specifying the thread.</span><span class="sxs-lookup"><span data-stu-id="79f7d-106">[in] The ID specifying the thread.</span></span>  
+ <span data-ttu-id="9a823-106">中指定线程的 ID。</span><span class="sxs-lookup"><span data-stu-id="9a823-106">[in] The ID specifying the thread.</span></span>  
   
  `pAppDomainId`  
- <span data-ttu-id="79f7d-107">[out] A pointer to the ID of the application domain.</span><span class="sxs-lookup"><span data-stu-id="79f7d-107">[out] A pointer to the ID of the application domain.</span></span>  
+ <span data-ttu-id="9a823-107">弄指向应用程序域的 ID 的指针。</span><span class="sxs-lookup"><span data-stu-id="9a823-107">[out] A pointer to the ID of the application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="79f7d-108">要求</span><span class="sxs-lookup"><span data-stu-id="79f7d-108">Requirements</span></span>  
- <span data-ttu-id="79f7d-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="79f7d-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9a823-108">要求</span><span class="sxs-lookup"><span data-stu-id="9a823-108">Requirements</span></span>  
+ <span data-ttu-id="9a823-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9a823-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="79f7d-110">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="79f7d-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="9a823-110">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9a823-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="79f7d-111">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="79f7d-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9a823-111">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9a823-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="79f7d-112">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="79f7d-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9a823-112">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a823-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="79f7d-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="79f7d-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9a823-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9a823-113">See also</span></span>
 
-- [<span data-ttu-id="79f7d-114">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="79f7d-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="79f7d-115">ICorProfilerInfo2 接口</span><span class="sxs-lookup"><span data-stu-id="79f7d-115">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="9a823-114">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="9a823-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="9a823-115">ICorProfilerInfo2 接口</span><span class="sxs-lookup"><span data-stu-id="9a823-115">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

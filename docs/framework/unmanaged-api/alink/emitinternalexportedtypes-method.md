@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446496"
 ---
-# <a name="emitinternalexportedtypes-method"></a><span data-ttu-id="a35ab-102">EmitInternalExportedTypes 方法</span><span class="sxs-lookup"><span data-stu-id="a35ab-102">EmitInternalExportedTypes Method</span></span>
-<span data-ttu-id="a35ab-103">Emits types added to the assembly.</span><span class="sxs-lookup"><span data-stu-id="a35ab-103">Emits types added to the assembly.</span></span> <span data-ttu-id="a35ab-104">Call this method after known internal types have been added.</span><span class="sxs-lookup"><span data-stu-id="a35ab-104">Call this method after known internal types have been added.</span></span>  
+# <a name="emitinternalexportedtypes-method"></a><span data-ttu-id="1bbdf-102">EmitInternalExportedTypes 方法</span><span class="sxs-lookup"><span data-stu-id="1bbdf-102">EmitInternalExportedTypes Method</span></span>
+<span data-ttu-id="1bbdf-103">发出添加到程序集的类型。</span><span class="sxs-lookup"><span data-stu-id="1bbdf-103">Emits types added to the assembly.</span></span> <span data-ttu-id="1bbdf-104">添加已知的内部类型后，调用此方法。</span><span class="sxs-lookup"><span data-stu-id="1bbdf-104">Call this method after known internal types have been added.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a35ab-105">语法</span><span class="sxs-lookup"><span data-stu-id="a35ab-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1bbdf-105">语法</span><span class="sxs-lookup"><span data-stu-id="1bbdf-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT EmitInternalExportedTypes(  
@@ -33,18 +33,18 @@ HRESULT EmitInternalExportedTypes(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a35ab-106">参数</span><span class="sxs-lookup"><span data-stu-id="a35ab-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1bbdf-106">参数</span><span class="sxs-lookup"><span data-stu-id="1bbdf-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="a35ab-107">ID of assembly.</span><span class="sxs-lookup"><span data-stu-id="a35ab-107">ID of assembly.</span></span>  
+ <span data-ttu-id="1bbdf-107">程序集的 ID。</span><span class="sxs-lookup"><span data-stu-id="1bbdf-107">ID of assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a35ab-108">返回值</span><span class="sxs-lookup"><span data-stu-id="a35ab-108">Return Value</span></span>  
- <span data-ttu-id="a35ab-109">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="a35ab-109">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1bbdf-108">返回值</span><span class="sxs-lookup"><span data-stu-id="1bbdf-108">Return Value</span></span>  
+ <span data-ttu-id="1bbdf-109">如果方法成功，则返回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="1bbdf-109">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a35ab-110">要求</span><span class="sxs-lookup"><span data-stu-id="a35ab-110">Requirements</span></span>  
- <span data-ttu-id="a35ab-111">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="a35ab-111">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1bbdf-110">要求</span><span class="sxs-lookup"><span data-stu-id="1bbdf-110">Requirements</span></span>  
+ <span data-ttu-id="1bbdf-111">需要 alink</span><span class="sxs-lookup"><span data-stu-id="1bbdf-111">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a35ab-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="a35ab-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1bbdf-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1bbdf-112">See also</span></span>
 
-- [<span data-ttu-id="a35ab-113">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="a35ab-113">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="a35ab-114">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="a35ab-114">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="a35ab-115">ALink API</span><span class="sxs-lookup"><span data-stu-id="a35ab-115">ALink API</span></span>](index.md)
+- [<span data-ttu-id="1bbdf-113">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="1bbdf-113">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="1bbdf-114">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="1bbdf-114">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="1bbdf-115">ALink API</span><span class="sxs-lookup"><span data-stu-id="1bbdf-115">ALink API</span></span>](index.md)

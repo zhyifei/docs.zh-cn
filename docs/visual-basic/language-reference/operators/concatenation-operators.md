@@ -12,16 +12,16 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331498"
 ---
-# <a name="concatenation-operators-visual-basic"></a><span data-ttu-id="e9eed-102">串联运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e9eed-102">Concatenation Operators (Visual Basic)</span></span>
-<span data-ttu-id="e9eed-103">The following are the concatenation operators defined in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="e9eed-103">The following are the concatenation operators defined in Visual Basic.</span></span>  
+# <a name="concatenation-operators-visual-basic"></a><span data-ttu-id="d6897-102">串联运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d6897-102">Concatenation Operators (Visual Basic)</span></span>
+<span data-ttu-id="d6897-103">下面是 Visual Basic 中定义的串联运算符。</span><span class="sxs-lookup"><span data-stu-id="d6897-103">The following are the concatenation operators defined in Visual Basic.</span></span>  
   
- [<span data-ttu-id="e9eed-104">& 运算符</span><span class="sxs-lookup"><span data-stu-id="e9eed-104">& Operator</span></span>](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
+ [<span data-ttu-id="d6897-104">& 运算符</span><span class="sxs-lookup"><span data-stu-id="d6897-104">& Operator</span></span>](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
   
- [<span data-ttu-id="e9eed-105">+ 运算符</span><span class="sxs-lookup"><span data-stu-id="e9eed-105">+ Operator</span></span>](../../../visual-basic/language-reference/operators/addition-operator.md)  
+ [<span data-ttu-id="d6897-105">+ 运算符</span><span class="sxs-lookup"><span data-stu-id="d6897-105">+ Operator</span></span>](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
-## <a name="see-also"></a><span data-ttu-id="e9eed-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="e9eed-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d6897-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d6897-106">See also</span></span>
 
 - <xref:System.Text>
 - <xref:System.Text.StringBuilder>
-- [<span data-ttu-id="e9eed-107">Visual Basic 中的运算符优先级</span><span class="sxs-lookup"><span data-stu-id="e9eed-107">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="e9eed-108">Concatenation Operators in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e9eed-108">Concatenation Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [<span data-ttu-id="d6897-107">Visual Basic 中的运算符优先级</span><span class="sxs-lookup"><span data-stu-id="d6897-107">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="d6897-108">Visual Basic 中的串联运算符</span><span class="sxs-lookup"><span data-stu-id="d6897-108">Concatenation Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

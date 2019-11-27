@@ -22,30 +22,30 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445381"
 ---
-# <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a><span data-ttu-id="bbf95-102">ICorProfilerCallback::ExceptionSearchFilterEnter 方法</span><span class="sxs-lookup"><span data-stu-id="bbf95-102">ICorProfilerCallback::ExceptionSearchFilterEnter Method</span></span>
-<span data-ttu-id="bbf95-103">Notifies the profiler that the search phase of exception handling has begun executing a user-defined exception filter.</span><span class="sxs-lookup"><span data-stu-id="bbf95-103">Notifies the profiler that the search phase of exception handling has begun executing a user-defined exception filter.</span></span>  
+# <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a><span data-ttu-id="d12d4-102">ICorProfilerCallback::ExceptionSearchFilterEnter 方法</span><span class="sxs-lookup"><span data-stu-id="d12d4-102">ICorProfilerCallback::ExceptionSearchFilterEnter Method</span></span>
+<span data-ttu-id="d12d4-103">通知探查器异常处理的搜索阶段已开始执行用户定义的异常筛选器。</span><span class="sxs-lookup"><span data-stu-id="d12d4-103">Notifies the profiler that the search phase of exception handling has begun executing a user-defined exception filter.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bbf95-104">语法</span><span class="sxs-lookup"><span data-stu-id="bbf95-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d12d4-104">语法</span><span class="sxs-lookup"><span data-stu-id="d12d4-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExceptionSearchFilterEnter(  
     [in] FunctionID functionId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bbf95-105">参数</span><span class="sxs-lookup"><span data-stu-id="bbf95-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d12d4-105">参数</span><span class="sxs-lookup"><span data-stu-id="d12d4-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="bbf95-106">[in] The ID of the function that contains the filter.</span><span class="sxs-lookup"><span data-stu-id="bbf95-106">[in] The ID of the function that contains the filter.</span></span>  
+ <span data-ttu-id="d12d4-106">中包含筛选器的函数的 ID。</span><span class="sxs-lookup"><span data-stu-id="d12d4-106">[in] The ID of the function that contains the filter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bbf95-107">要求</span><span class="sxs-lookup"><span data-stu-id="bbf95-107">Requirements</span></span>  
- <span data-ttu-id="bbf95-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bbf95-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d12d4-107">要求</span><span class="sxs-lookup"><span data-stu-id="d12d4-107">Requirements</span></span>  
+ <span data-ttu-id="d12d4-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d12d4-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bbf95-109">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="bbf95-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d12d4-109">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d12d4-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="bbf95-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bbf95-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d12d4-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d12d4-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bbf95-111">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bbf95-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d12d4-111">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d12d4-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bbf95-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="bbf95-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d12d4-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d12d4-112">See also</span></span>
 
-- [<span data-ttu-id="bbf95-113">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="bbf95-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="bbf95-114">ExceptionSearchFilterLeave 方法</span><span class="sxs-lookup"><span data-stu-id="bbf95-114">ExceptionSearchFilterLeave Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)
+- [<span data-ttu-id="d12d4-113">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="d12d4-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="d12d4-114">ExceptionSearchFilterLeave 方法</span><span class="sxs-lookup"><span data-stu-id="d12d4-114">ExceptionSearchFilterLeave Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)

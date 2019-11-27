@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436711"
 ---
-# <a name="imetadataimportgettyperefprops-method"></a><span data-ttu-id="b56d7-102">IMetaDataImport::GetTypeRefProps 方法</span><span class="sxs-lookup"><span data-stu-id="b56d7-102">IMetaDataImport::GetTypeRefProps Method</span></span>
-<span data-ttu-id="b56d7-103">Gets the metadata associated with the <xref:System.Type> referenced by the specified TypeRef token.</span><span class="sxs-lookup"><span data-stu-id="b56d7-103">Gets the metadata associated with the <xref:System.Type> referenced by the specified TypeRef token.</span></span>  
+# <a name="imetadataimportgettyperefprops-method"></a><span data-ttu-id="1991c-102">IMetaDataImport::GetTypeRefProps 方法</span><span class="sxs-lookup"><span data-stu-id="1991c-102">IMetaDataImport::GetTypeRefProps Method</span></span>
+<span data-ttu-id="1991c-103">获取与指定的 TypeRef 标记所引用的 <xref:System.Type> 关联的元数据。</span><span class="sxs-lookup"><span data-stu-id="1991c-103">Gets the metadata associated with the <xref:System.Type> referenced by the specified TypeRef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b56d7-104">语法</span><span class="sxs-lookup"><span data-stu-id="b56d7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1991c-104">语法</span><span class="sxs-lookup"><span data-stu-id="1991c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetTypeRefProps (  
@@ -37,32 +37,32 @@ HRESULT GetTypeRefProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b56d7-105">参数</span><span class="sxs-lookup"><span data-stu-id="b56d7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1991c-105">参数</span><span class="sxs-lookup"><span data-stu-id="1991c-105">Parameters</span></span>  
  `tr`  
- <span data-ttu-id="b56d7-106">[in] The TypeRef token that represents the type to return metadata for.</span><span class="sxs-lookup"><span data-stu-id="b56d7-106">[in] The TypeRef token that represents the type to return metadata for.</span></span>  
+ <span data-ttu-id="1991c-106">中TypeRef 标记，它表示要为其返回元数据的类型。</span><span class="sxs-lookup"><span data-stu-id="1991c-106">[in] The TypeRef token that represents the type to return metadata for.</span></span>  
   
  `ptkResolutionScope`  
- <span data-ttu-id="b56d7-107">[out] A pointer to the scope in which the reference is made.</span><span class="sxs-lookup"><span data-stu-id="b56d7-107">[out] A pointer to the scope in which the reference is made.</span></span> <span data-ttu-id="b56d7-108">This value is an AssemblyRef or ModuleRef token.</span><span class="sxs-lookup"><span data-stu-id="b56d7-108">This value is an AssemblyRef or ModuleRef token.</span></span>  
+ <span data-ttu-id="1991c-107">弄指向在其中进行引用的范围的指针。</span><span class="sxs-lookup"><span data-stu-id="1991c-107">[out] A pointer to the scope in which the reference is made.</span></span> <span data-ttu-id="1991c-108">此值为 AssemblyRef 或 ModuleRef 标记。</span><span class="sxs-lookup"><span data-stu-id="1991c-108">This value is an AssemblyRef or ModuleRef token.</span></span>  
   
  `szName`  
- <span data-ttu-id="b56d7-109">[out] A buffer containing the type name.</span><span class="sxs-lookup"><span data-stu-id="b56d7-109">[out] A buffer containing the type name.</span></span>  
+ <span data-ttu-id="1991c-109">弄包含类型名称的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="1991c-109">[out] A buffer containing the type name.</span></span>  
   
  `cchName`  
- <span data-ttu-id="b56d7-110">[in] The requested size in wide characters of `szName`.</span><span class="sxs-lookup"><span data-stu-id="b56d7-110">[in] The requested size in wide characters of `szName`.</span></span>  
+ <span data-ttu-id="1991c-110">中`szName`中的请求大小（以宽字符为大小）。</span><span class="sxs-lookup"><span data-stu-id="1991c-110">[in] The requested size in wide characters of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="b56d7-111">[out] The returned size in wide characters of `szName`.</span><span class="sxs-lookup"><span data-stu-id="b56d7-111">[out] The returned size in wide characters of `szName`.</span></span>  
+ <span data-ttu-id="1991c-111">弄`szName`的宽字符返回的大小。</span><span class="sxs-lookup"><span data-stu-id="1991c-111">[out] The returned size in wide characters of `szName`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b56d7-112">要求</span><span class="sxs-lookup"><span data-stu-id="b56d7-112">Requirements</span></span>  
- <span data-ttu-id="b56d7-113">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b56d7-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1991c-112">要求</span><span class="sxs-lookup"><span data-stu-id="1991c-112">Requirements</span></span>  
+ <span data-ttu-id="1991c-113">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1991c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b56d7-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b56d7-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="1991c-114">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="1991c-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b56d7-115">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b56d7-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="1991c-115">**库：** 作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="1991c-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b56d7-116">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b56d7-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="1991c-116">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1991c-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b56d7-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="b56d7-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1991c-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1991c-117">See also</span></span>
 
-- [<span data-ttu-id="b56d7-118">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="b56d7-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="b56d7-119">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="b56d7-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="1991c-118">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="1991c-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="1991c-119">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="1991c-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

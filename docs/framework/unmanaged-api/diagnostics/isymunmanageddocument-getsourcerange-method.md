@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449133"
 ---
-# <a name="isymunmanageddocumentgetsourcerange-method"></a><span data-ttu-id="4c197-102">ISymUnmanagedDocument::GetSourceRange 方法</span><span class="sxs-lookup"><span data-stu-id="4c197-102">ISymUnmanagedDocument::GetSourceRange Method</span></span>
-<span data-ttu-id="4c197-103">Returns the specified range of the embedded source into the given buffer.</span><span class="sxs-lookup"><span data-stu-id="4c197-103">Returns the specified range of the embedded source into the given buffer.</span></span> <span data-ttu-id="4c197-104">The buffer must be large enough to hold the source.</span><span class="sxs-lookup"><span data-stu-id="4c197-104">The buffer must be large enough to hold the source.</span></span>  
+# <a name="isymunmanageddocumentgetsourcerange-method"></a><span data-ttu-id="b47c2-102">ISymUnmanagedDocument::GetSourceRange 方法</span><span class="sxs-lookup"><span data-stu-id="b47c2-102">ISymUnmanagedDocument::GetSourceRange Method</span></span>
+<span data-ttu-id="b47c2-103">将嵌入源的指定范围返回到给定缓冲区中。</span><span class="sxs-lookup"><span data-stu-id="b47c2-103">Returns the specified range of the embedded source into the given buffer.</span></span> <span data-ttu-id="b47c2-104">缓冲区必须足够大才能容纳源。</span><span class="sxs-lookup"><span data-stu-id="b47c2-104">The buffer must be large enough to hold the source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4c197-105">语法</span><span class="sxs-lookup"><span data-stu-id="4c197-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b47c2-105">语法</span><span class="sxs-lookup"><span data-stu-id="b47c2-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSourceRange(  
@@ -39,31 +39,31 @@ HRESULT GetSourceRange(
         length_is(*pcSourceBytes)] BYTE source[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4c197-106">参数</span><span class="sxs-lookup"><span data-stu-id="4c197-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b47c2-106">参数</span><span class="sxs-lookup"><span data-stu-id="b47c2-106">Parameters</span></span>  
  `startLine`  
- <span data-ttu-id="4c197-107">[in] The starting line in the current document.</span><span class="sxs-lookup"><span data-stu-id="4c197-107">[in] The starting line in the current document.</span></span>  
+ <span data-ttu-id="b47c2-107">中当前文档中的起始行。</span><span class="sxs-lookup"><span data-stu-id="b47c2-107">[in] The starting line in the current document.</span></span>  
   
  `startColumn`  
- <span data-ttu-id="4c197-108">[in] The starting column in the current document.</span><span class="sxs-lookup"><span data-stu-id="4c197-108">[in] The starting column in the current document.</span></span>  
+ <span data-ttu-id="b47c2-108">中当前文档中的起始列。</span><span class="sxs-lookup"><span data-stu-id="b47c2-108">[in] The starting column in the current document.</span></span>  
   
  `endLine`  
- <span data-ttu-id="4c197-109">[in] The final line in the current document.</span><span class="sxs-lookup"><span data-stu-id="4c197-109">[in] The final line in the current document.</span></span>  
+ <span data-ttu-id="b47c2-109">中当前文档中的最后一行。</span><span class="sxs-lookup"><span data-stu-id="b47c2-109">[in] The final line in the current document.</span></span>  
   
  `endColumn`  
- <span data-ttu-id="4c197-110">[in] The final column in the current document.</span><span class="sxs-lookup"><span data-stu-id="4c197-110">[in] The final column in the current document.</span></span>  
+ <span data-ttu-id="b47c2-110">中当前文档中的最后一列。</span><span class="sxs-lookup"><span data-stu-id="b47c2-110">[in] The final column in the current document.</span></span>  
   
  `cSourceBytes`  
- <span data-ttu-id="4c197-111">[in] The size of the source, in bytes.</span><span class="sxs-lookup"><span data-stu-id="4c197-111">[in] The size of the source, in bytes.</span></span>  
+ <span data-ttu-id="b47c2-111">中源的大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="b47c2-111">[in] The size of the source, in bytes.</span></span>  
   
  `pcSourceBytes`  
- <span data-ttu-id="4c197-112">[out] A pointer to a variable that receives the source size.</span><span class="sxs-lookup"><span data-stu-id="4c197-112">[out] A pointer to a variable that receives the source size.</span></span>  
+ <span data-ttu-id="b47c2-112">弄指向接收源大小的变量的指针。</span><span class="sxs-lookup"><span data-stu-id="b47c2-112">[out] A pointer to a variable that receives the source size.</span></span>  
   
  `source`  
- <span data-ttu-id="4c197-113">[out] The size and length of the specified range of the source document, in bytes.</span><span class="sxs-lookup"><span data-stu-id="4c197-113">[out] The size and length of the specified range of the source document, in bytes.</span></span>  
+ <span data-ttu-id="b47c2-113">弄源文档的指定范围的大小和长度（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="b47c2-113">[out] The size and length of the specified range of the source document, in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4c197-114">返回值</span><span class="sxs-lookup"><span data-stu-id="4c197-114">Return Value</span></span>  
- <span data-ttu-id="4c197-115">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="4c197-115">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b47c2-114">返回值</span><span class="sxs-lookup"><span data-stu-id="b47c2-114">Return Value</span></span>  
+ <span data-ttu-id="b47c2-115">如果方法成功，则 S_OK。</span><span class="sxs-lookup"><span data-stu-id="b47c2-115">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4c197-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="4c197-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b47c2-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b47c2-116">See also</span></span>
 
-- [<span data-ttu-id="4c197-117">ISymUnmanagedDocument 接口</span><span class="sxs-lookup"><span data-stu-id="4c197-117">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="b47c2-117">ISymUnmanagedDocument 接口</span><span class="sxs-lookup"><span data-stu-id="b47c2-117">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

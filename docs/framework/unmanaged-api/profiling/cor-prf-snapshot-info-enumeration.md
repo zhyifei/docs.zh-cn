@@ -21,10 +21,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427268"
 ---
-# <a name="cor_prf_snapshot_info-enumeration"></a><span data-ttu-id="47621-102">COR_PRF_SNAPSHOT_INFO 枚举</span><span class="sxs-lookup"><span data-stu-id="47621-102">COR_PRF_SNAPSHOT_INFO Enumeration</span></span>
-<span data-ttu-id="47621-103">Specifies how much data to pass back with a stack snapshot in each call to the profiler's [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) function.</span><span class="sxs-lookup"><span data-stu-id="47621-103">Specifies how much data to pass back with a stack snapshot in each call to the profiler's [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) function.</span></span>  
+# <a name="cor_prf_snapshot_info-enumeration"></a><span data-ttu-id="adb8d-102">COR_PRF_SNAPSHOT_INFO 枚举</span><span class="sxs-lookup"><span data-stu-id="adb8d-102">COR_PRF_SNAPSHOT_INFO Enumeration</span></span>
+<span data-ttu-id="adb8d-103">指定在每次调用探查器的[StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md)函数时要通过堆栈快照传递回多少数据。</span><span class="sxs-lookup"><span data-stu-id="adb8d-103">Specifies how much data to pass back with a stack snapshot in each call to the profiler's [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="47621-104">语法</span><span class="sxs-lookup"><span data-stu-id="47621-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="adb8d-104">语法</span><span class="sxs-lookup"><span data-stu-id="adb8d-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum _COR_PRF_SNAPSHOT_INFO {  
@@ -34,27 +34,27 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
 } COR_PRF_SNAPSHOT_INFO;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="47621-105">Members</span><span class="sxs-lookup"><span data-stu-id="47621-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="adb8d-105">Members</span><span class="sxs-lookup"><span data-stu-id="adb8d-105">Members</span></span>  
   
-|<span data-ttu-id="47621-106">Members</span><span class="sxs-lookup"><span data-stu-id="47621-106">Members</span></span>|<span data-ttu-id="47621-107">描述</span><span class="sxs-lookup"><span data-stu-id="47621-107">Description</span></span>|  
+|<span data-ttu-id="adb8d-106">Members</span><span class="sxs-lookup"><span data-stu-id="adb8d-106">Members</span></span>|<span data-ttu-id="adb8d-107">说明</span><span class="sxs-lookup"><span data-stu-id="adb8d-107">Description</span></span>|  
 |-------------|-----------------|  
-|`COR_PRF_SNAPSHOT_DEFAULT`|<span data-ttu-id="47621-108">Indicates that values must be passed for all `StackSnapshotCallback` parameters, except the `context` parameter.</span><span class="sxs-lookup"><span data-stu-id="47621-108">Indicates that values must be passed for all `StackSnapshotCallback` parameters, except the `context` parameter.</span></span>|  
-|`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|<span data-ttu-id="47621-109">Indicates that values must be passed for all `StackSnapshotCallback` parameters, including the `context` parameter.</span><span class="sxs-lookup"><span data-stu-id="47621-109">Indicates that values must be passed for all `StackSnapshotCallback` parameters, including the `context` parameter.</span></span>|  
-|`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|<span data-ttu-id="47621-110">Indicates that a simpler, alternative stack-walking algorithm will be used.</span><span class="sxs-lookup"><span data-stu-id="47621-110">Indicates that a simpler, alternative stack-walking algorithm will be used.</span></span>|  
+|`COR_PRF_SNAPSHOT_DEFAULT`|<span data-ttu-id="adb8d-108">指示必须为除 `context` 参数之外的所有 `StackSnapshotCallback` 参数传递值。</span><span class="sxs-lookup"><span data-stu-id="adb8d-108">Indicates that values must be passed for all `StackSnapshotCallback` parameters, except the `context` parameter.</span></span>|  
+|`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|<span data-ttu-id="adb8d-109">指示必须为所有 `StackSnapshotCallback` 参数（包括 `context` 参数）传递值。</span><span class="sxs-lookup"><span data-stu-id="adb8d-109">Indicates that values must be passed for all `StackSnapshotCallback` parameters, including the `context` parameter.</span></span>|  
+|`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|<span data-ttu-id="adb8d-110">指示将使用更简单的替代堆栈遍历算法。</span><span class="sxs-lookup"><span data-stu-id="adb8d-110">Indicates that a simpler, alternative stack-walking algorithm will be used.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="47621-111">备注</span><span class="sxs-lookup"><span data-stu-id="47621-111">Remarks</span></span>  
- <span data-ttu-id="47621-112">Values that are provided by the `COR_PRF_SNAPSHOT_INFO` enumeration are passed as parameters to the [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="47621-112">Values that are provided by the `COR_PRF_SNAPSHOT_INFO` enumeration are passed as parameters to the [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="adb8d-111">备注</span><span class="sxs-lookup"><span data-stu-id="adb8d-111">Remarks</span></span>  
+ <span data-ttu-id="adb8d-112">`COR_PRF_SNAPSHOT_INFO` 枚举提供的值将作为参数传递给[DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="adb8d-112">Values that are provided by the `COR_PRF_SNAPSHOT_INFO` enumeration are passed as parameters to the [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="47621-113">要求</span><span class="sxs-lookup"><span data-stu-id="47621-113">Requirements</span></span>  
- <span data-ttu-id="47621-114">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="47621-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="adb8d-113">要求</span><span class="sxs-lookup"><span data-stu-id="adb8d-113">Requirements</span></span>  
+ <span data-ttu-id="adb8d-114">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="adb8d-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="47621-115">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="47621-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="adb8d-115">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="adb8d-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="47621-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="47621-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="adb8d-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="adb8d-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="47621-117">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="47621-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="adb8d-117">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="adb8d-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="47621-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="47621-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="adb8d-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="adb8d-118">See also</span></span>
 
-- [<span data-ttu-id="47621-119">DoStackSnapshot 方法</span><span class="sxs-lookup"><span data-stu-id="47621-119">DoStackSnapshot Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)
-- [<span data-ttu-id="47621-120">分析枚举</span><span class="sxs-lookup"><span data-stu-id="47621-120">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="adb8d-119">DoStackSnapshot 方法</span><span class="sxs-lookup"><span data-stu-id="adb8d-119">DoStackSnapshot Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)
+- [<span data-ttu-id="adb8d-120">分析枚举</span><span class="sxs-lookup"><span data-stu-id="adb8d-120">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

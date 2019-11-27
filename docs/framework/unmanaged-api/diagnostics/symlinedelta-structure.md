@@ -21,10 +21,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438011"
 ---
-# <a name="symlinedelta-structure"></a><span data-ttu-id="01c94-102">SYMLINEDELTA 结构</span><span class="sxs-lookup"><span data-stu-id="01c94-102">SYMLINEDELTA Structure</span></span>
-<span data-ttu-id="01c94-103">Provides information to the symbol handler about methods that were moved as a result of edits.</span><span class="sxs-lookup"><span data-stu-id="01c94-103">Provides information to the symbol handler about methods that were moved as a result of edits.</span></span>  
+# <a name="symlinedelta-structure"></a><span data-ttu-id="bd3b8-102">SYMLINEDELTA 结构</span><span class="sxs-lookup"><span data-stu-id="bd3b8-102">SYMLINEDELTA Structure</span></span>
+<span data-ttu-id="bd3b8-103">向符号处理程序提供有关因编辑而移动的方法的信息。</span><span class="sxs-lookup"><span data-stu-id="bd3b8-103">Provides information to the symbol handler about methods that were moved as a result of edits.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="01c94-104">语法</span><span class="sxs-lookup"><span data-stu-id="01c94-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bd3b8-104">语法</span><span class="sxs-lookup"><span data-stu-id="bd3b8-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _SYMLINEDELTA  
@@ -34,16 +34,16 @@ typedef struct _SYMLINEDELTA
     } SYMLINEDELTA;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="01c94-105">Members</span><span class="sxs-lookup"><span data-stu-id="01c94-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="bd3b8-105">Members</span><span class="sxs-lookup"><span data-stu-id="bd3b8-105">Members</span></span>  
   
-|<span data-ttu-id="01c94-106">成员</span><span class="sxs-lookup"><span data-stu-id="01c94-106">Member</span></span>|<span data-ttu-id="01c94-107">描述</span><span class="sxs-lookup"><span data-stu-id="01c94-107">Description</span></span>|  
+|<span data-ttu-id="bd3b8-106">成员</span><span class="sxs-lookup"><span data-stu-id="bd3b8-106">Member</span></span>|<span data-ttu-id="bd3b8-107">说明</span><span class="sxs-lookup"><span data-stu-id="bd3b8-107">Description</span></span>|  
 |------------|-----------------|  
-|`mdMethod`|<span data-ttu-id="01c94-108">The method's metadata token.</span><span class="sxs-lookup"><span data-stu-id="01c94-108">The method's metadata token.</span></span>|  
-|`delta`|<span data-ttu-id="01c94-109">The number of lines the method was moved.</span><span class="sxs-lookup"><span data-stu-id="01c94-109">The number of lines the method was moved.</span></span>|  
+|`mdMethod`|<span data-ttu-id="bd3b8-108">方法的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="bd3b8-108">The method's metadata token.</span></span>|  
+|`delta`|<span data-ttu-id="bd3b8-109">此方法已移动的行数。</span><span class="sxs-lookup"><span data-stu-id="bd3b8-109">The number of lines the method was moved.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="01c94-110">要求</span><span class="sxs-lookup"><span data-stu-id="01c94-110">Requirements</span></span>  
- <span data-ttu-id="01c94-111">**Header:** CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="01c94-111">**Header:** CorSym.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bd3b8-110">要求</span><span class="sxs-lookup"><span data-stu-id="bd3b8-110">Requirements</span></span>  
+ <span data-ttu-id="bd3b8-111">**标头：** CorSym .idl</span><span class="sxs-lookup"><span data-stu-id="bd3b8-111">**Header:** CorSym.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="01c94-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="01c94-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bd3b8-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bd3b8-112">See also</span></span>
 
-- [<span data-ttu-id="01c94-113">诊断符号存储区结构</span><span class="sxs-lookup"><span data-stu-id="01c94-113">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+- [<span data-ttu-id="bd3b8-113">诊断符号存储区结构</span><span class="sxs-lookup"><span data-stu-id="bd3b8-113">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
