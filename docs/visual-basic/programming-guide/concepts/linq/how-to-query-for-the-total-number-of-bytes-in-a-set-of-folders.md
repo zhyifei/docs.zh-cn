@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347637"
 ---
-# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>How to: Query for the Total Number of Bytes in a Set of Folders (LINQ) (Visual Basic)
+# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>如何：查询一组文件夹中的总字节数（LINQ）（Visual Basic）
 此示例演示如何检索由指定文件夹及其所有子文件夹中的所有文件使用的字节总数。  
   
 ## <a name="example"></a>示例  
@@ -69,12 +69,12 @@ End Module
   
  如果只需对指定目录树中的字节数进行计数，则可以更高效地执行此操作而无需创建 LINQ 查询（这会产生创建列表集合作为数据源的开销）。 随着查询变得更加复杂，或者在必须对相同数据源运行多个查询时，LINQ 方法会更加有用。  
   
- 查询调用单独的方法来获取文件长度。 这是为了使用在以下情况下会引发的可能异常：在 `GetFiles` 调用中创建了 <xref:System.IO.FileInfo> 对象之后，在其他线程中删除了文件。 即使已创建 <xref:System.IO.FileInfo> 对象，该异常也可能出现，因为 <xref:System.IO.FileInfo> 对象会在首次访问其 <xref:System.IO.FileInfo.Length%2A> 属性时，尝试使用最近长度刷新该属性。 通过将此操作置于查询外部的 try-catch 块中，代码可遵循在查询中避免可能导致副作用的操作这一规则。 一般情况下，在使用异常时必须格外谨慎，以确保应用程序不会处于未知状态。  
+ 查询调用单独的方法来获取文件长度。 这是为了使用在以下情况下会引发的可能异常：在 <xref:System.IO.FileInfo> 调用中创建了 `GetFiles` 对象之后，在其他线程中删除了文件。 即使已创建 <xref:System.IO.FileInfo> 对象，该异常也可能出现，因为 <xref:System.IO.FileInfo> 对象会在首次访问其 <xref:System.IO.FileInfo.Length%2A> 属性时，尝试使用最近长度刷新该属性。 通过将此操作置于查询外部的 try-catch 块中，代码可遵循在查询中避免可能导致副作用的操作这一规则。 一般情况下，在使用异常时必须格外谨慎，以确保应用程序不会处于未知状态。  
   
 ## <a name="compiling-the-code"></a>编译代码  
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+使用 VB.NET 命名空间的 `Imports` 语句创建一个控制台应用程序项目。
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

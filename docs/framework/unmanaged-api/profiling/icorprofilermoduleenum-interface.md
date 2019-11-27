@@ -26,7 +26,7 @@ ms.locfileid: "74442709"
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |[Clone 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-clone-method.md)|获取指向此 `ICorProfilerModuleEnum` 接口副本的接口指针。|  
 |[GetCount 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-getcount-method.md)|获取已加载到应用程序的托管模块数。|  
@@ -46,7 +46,7 @@ ms.locfileid: "74442709"
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

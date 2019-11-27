@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444651"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>IMetaDataEmit2::DefineGenericParam 方法
-Creates a definition for a generic type parameter, and gets a token to that generic type parameter.  
+创建泛型类型参数的定义，并获取该泛型类型参数的令牌。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,36 +41,36 @@ HRESULT DefineGenericParam (
   
 ## <a name="parameters"></a>参数  
  `tk`  
- [in] An `mdTypeDef` or `mdMethodDef` token that represents the method or constructor for which to define a generic parameter.  
+ 中一个 `mdTypeDef` 或 `mdMethodDef` 标记，它表示要为其定义泛型参数的方法或构造函数。  
   
  `ulParamSeq`  
- [in] The index of the generic parameter.  
+ 中泛型参数的索引。  
   
  `dwParamFlags`  
- [in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.  
+ 中描述泛型参数类型的[CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)枚举的值。  
   
  `szname`  
- [in] The name of the parameter.  
+ 中参数的名称。  
   
  `reserved`  
- [in] This parameter is reserved for future extensibility.  
+ 中此参数保留供将来进行扩展。  
   
  `rtkConstraints`  
- [in] A zero-terminated array of type constraints. Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.  
+ 中类型约束的零终止数组。 数组成员必须是 `mdTypeDef`、`mdTypeRef`或 `mdTypeSpec` 元数据标记。  
   
  `pgp`  
- [out] A token that represents the generic parameter.  
+ 弄表示泛型参数的标记。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
 - [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

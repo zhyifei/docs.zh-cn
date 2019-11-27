@@ -27,7 +27,7 @@ ms.locfileid: "74283476"
 ## <a name="menu-states"></a>菜单状态  
  下表列出了 <xref:System.Windows.Controls.Menu> 控件的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
 |有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  
@@ -36,7 +36,7 @@ ms.locfileid: "74283476"
 ## <a name="menuitem-parts"></a>MenuItem 部分  
  下表列出了 <xref:System.Windows.Controls.Menu> 控件的已命名部分。  
   
-|部件|Type|描述|  
+|部件|类型|说明|  
 |-|-|-|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|子菜单的区域。|  
   
@@ -45,7 +45,7 @@ ms.locfileid: "74283476"
 ## <a name="menuitem-states"></a>MenuItem 状态  
  下表列出了 <xref:System.Windows.Controls.MenuItem> 控件的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
 |有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  

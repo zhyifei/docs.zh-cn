@@ -23,136 +23,136 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345750"
 ---
 # <a name="basic-query-operations-visual-basic"></a>基本查询操作 (Visual Basic)
-This topic provides a brief introduction to [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in Visual Basic, and to some of the typical kinds of operations that you perform in a query. 有关更多信息，请参见下列主题：  
+本主题简要介绍了 Visual Basic 中的 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 表达式，以及在查询中执行的一些典型操作。 有关更多信息，请参见下列主题：  
   
  [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
   
  [查询](../../../../visual-basic/language-reference/queries/index.md)  
   
- [Walkthrough: Writing Queries in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
+ [演练：在 Visual Basic 中编写查询](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
   
-## <a name="specifying-the-data-source-from"></a>Specifying the Data Source (From)  
- In a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query, the first step is to specify the data source that you want to query. Therefore, the `From` clause in a query always comes first. Query operators select and shape the result based on the type of the source.  
+## <a name="specifying-the-data-source-from"></a>指定数据源（从）  
+ 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询中，第一步是指定要查询的数据源。 因此，查询中的 `From` 子句始终是第一个。 查询运算符根据源的类型选择并生成结果。  
   
  [!code-vb[VbLINQBasicOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#1)]  
   
- The `From` clause specifies the data source, `customers`, and a *range variable*, `cust`. The range variable is like a loop iteration variable, except that in a query expression, no actual iteration occurs. When the query is executed, often by using a `For Each` loop, the range variable serves as a reference to each successive element in `customers`. 由于编译器可以推断 `cust` 的类型，因此无需显式指定它。 For examples of queries written with and without explicit typing, see [Type Relationships in Query Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).  
+ `From` 子句指定数据源、`customers`和*范围变量*（`cust`）。 范围变量类似于循环迭代变量，但在查询表达式中，不会发生实际迭代。 当执行查询时，通常使用 `For Each` 循环，范围变量充当对 `customers`中每个后续元素的引用。 由于编译器可以推断 `cust` 的类型，因此无需显式指定它。 有关用和编写的查询的示例，但没有显式类型化，请参阅[查询操作中的类型关系（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)。  
   
- For more information about how to use the `From` clause in Visual Basic, see [From Clause](../../../../visual-basic/language-reference/queries/from-clause.md).  
+ 有关如何在 Visual Basic 中使用 `From` 子句的详细信息，请参阅[From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)。  
   
-## <a name="filtering-data-where"></a>Filtering Data (Where)  
- Probably the most common query operation is applying a filter in the form of a Boolean expression. The query then returns only those elements for which the expression is true. A `Where` clause is used to perform the filtering. The filter specifies which elements in the data source to include in the resulting sequence. In the following example, only those customers who have an address in London are included.  
+## <a name="filtering-data-where"></a>筛选数据（位置）  
+ 可能最常见的查询操作是以布尔表达式的形式应用筛选器。 然后，查询仅返回表达式为 true 的元素。 `Where` 子句用于执行筛选。 筛选器指定数据源中要包括在结果序列中的元素。 在下面的示例中，只包括具有伦敦地址的客户。  
   
  [!code-vb[VbLINQBasicOps#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#2)]  
   
- You can use logical operators such as `And` and `Or` to combine filter expressions in a `Where` clause. For example, to return only those customers who are from London and whose name is Devon, use the following code:  
+ 可以使用逻辑运算符（如 `And` 和 `Or`）在 `Where` 子句中合并筛选表达式。 例如，若要仅返回来自伦敦并且其名称为 Devon 的客户，请使用以下代码：  
   
 ```vb  
 Where cust.City = "London" And cust.Name = "Devon"   
 ```  
   
- To return customers from London or Paris, use the following code:  
+ 若要返回伦敦或巴黎的客户，请使用以下代码：  
   
 ```vb  
 Where cust.City = "London" Or cust.City = "Paris"   
 ```  
   
- For more information about how to use the `Where` clause in Visual Basic, see [Where Clause](../../../../visual-basic/language-reference/queries/where-clause.md).  
+ 有关如何在 Visual Basic 中使用 `Where` 子句的详细信息，请参阅[Where 子句](../../../../visual-basic/language-reference/queries/where-clause.md)。  
   
-## <a name="ordering-data-order-by"></a>Ordering Data (Order By)  
- It often is convenient to sort returned data into a particular order. The `Order By` clause will cause the elements in the returned sequence to be sorted on a specified field or fields. For example, the following query sorts the results based on the `Name` property. Because `Name` is a string, the returned data will be sorted alphabetically, from A to Z.  
+## <a name="ordering-data-order-by"></a>数据排序（排序方式）  
+ 将返回的数据按特定顺序排序通常是非常方便的。 `Order By` 子句将导致返回序列中的元素按指定的一个或多个字段进行排序。 例如，下面的查询根据 `Name` 属性对结果进行排序。 由于 `Name` 是一个字符串，因此返回的数据将按字母顺序从 A 到 Z 排序。  
   
  [!code-vb[VbLINQBasicOps#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#3)]  
   
- 要对结果进行从 Z 到 A 的逆序排序，请使用 `Order By...Descending` 子句。 The default is `Ascending` when neither `Ascending` nor `Descending` is specified.  
+ 要对结果进行从 Z 到 A 的逆序排序，请使用 `Order By...Descending` 子句。 如果 `Ascending` 和 `Descending` 均未指定，则默认值为 `Ascending`。  
   
- For more information about how to use the `Order By` clause in Visual Basic, see [Order By Clause](../../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ 有关如何在 Visual Basic 中使用 `Order By` 子句的详细信息，请参阅[Order By 子句](../../../../visual-basic/language-reference/queries/order-by-clause.md)。  
   
-## <a name="selecting-data-select"></a>Selecting Data (Select)  
- The `Select` clause specifies the form and content of returned elements. For example, you can specify whether your results will consist of complete `Customer` objects, just one `Customer` property, a subset of properties, a combination of properties from various data sources, or some new result type based on a computation. 当 `Select` 子句生成除源元素副本以外的内容时，该操作称为投影。  
+## <a name="selecting-data-select"></a>选择数据（选择）  
+ `Select` 子句指定返回元素的形式和内容。 例如，您可以指定您的结果是由完整的 `Customer` 对象组成，只包括一个 `Customer` 属性、属性的子集、来自各种数据源的属性的组合，还是基于计算的某些新的结果类型。 当 `Select` 子句生成除源元素副本以外的内容时，该操作称为投影。  
   
- To retrieve a collection that consists of complete `Customer` objects, select the range variable itself:  
+ 若要检索由完整的 `Customer` 对象组成的集合，请选择范围变量本身：  
   
  [!code-vb[VbLINQBasicOps#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#4)]  
   
- If a `Customer` instance is a large object that has many fields, and all that you want to retrieve is the name, you can select `cust.Name`, as shown in the following example. Local type inference recognizes that this changes the result type from a collection of `Customer` objects to a collection of strings.  
+ 如果 `Customer` 实例是具有多个字段的大型对象，并且要检索的所有字段都是名称，则可以选择 "`cust.Name`"，如下面的示例中所示。 局部类型推理可识别这会将结果类型从 `Customer` 的对象集合更改为字符串的集合。  
   
  [!code-vb[VbLINQBasicOps#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#5)]  
   
- To select multiple fields from the data source, you have two choices:  
+ 若要从数据源中选择多个字段，您有两种选择：  
   
-- In the `Select` clause, specify the fields you want to include in the result. The compiler will define an anonymous type that has those fields as its properties. 有关详细信息，请参阅[匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
+- 在 `Select` 子句中，指定要包含在结果中的字段。 编译器将定义一个匿名类型，该类型将这些字段作为其属性。 有关详细信息，请参阅[匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
   
-     Because the returned elements in the following example are instances of an anonymous type, you cannot refer to the type by name elsewhere in your code. The compiler-designated name for the type contains characters that are not valid in normal Visual Basic code. In the following example, the elements in the collection that is returned by the query in `londonCusts4` are instances of an anonymous type  
+     由于以下示例中返回的元素是匿名类型的实例，因此不能在代码中的其他位置以名称引用该类型。 该类型的编译器指定名称包含在正常 Visual Basic 代码中无效的字符。 在下面的示例中，`londonCusts4` 中的查询所返回的集合中的元素是匿名类型的实例  
   
      [!code-vb[VbLINQBasicOps#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#6)]  
   
-     或  
+     \- 或 -  
   
-- Define a named type that contains the particular fields that you want to include in the result, and create and initialize instances of the type in the `Select` clause. Use this option only if you have to use individual results outside the collection in which they are returned, or if you have to pass them as parameters in method calls. The type of `londonCusts5` in the following example is IEnumerable(Of NamePhone).  
+- 定义包含要包含在结果中的特定字段的命名类型，并在 `Select` 子句中创建和初始化该类型的实例。 仅在以下情况下使用此选项：必须在返回的集合之外使用各个结果，或者必须在方法调用中将它们作为参数传递。 以下示例中 `londonCusts5` 的类型为 IEnumerable （of NamePhone）。  
   
      [!code-vb[VbLINQBasicOps#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#7)]  
   
      [!code-vb[VbLINQBasicOps#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#8)]  
   
- For more information about how to use the `Select` clause in Visual Basic, see [Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md).  
+ 有关如何在 Visual Basic 中使用 `Select` 子句的详细信息，请参阅[Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)。  
   
-## <a name="joining-data-join-and-group-join"></a>Joining Data (Join and Group Join)  
- You can combine more than one data source in the `From` clause in several ways. For example, the following code uses two data sources and implicitly combines properties from both of them in the result. The query selects students whose last names start with a vowel.  
+## <a name="joining-data-join-and-group-join"></a>联接数据（联接和分组联接）  
+ 可以通过多种方式在 `From` 子句中组合多个数据源。 例如，以下代码使用两个数据源，并在结果中隐式组合这两个数据源的属性。 查询选择姓氏以元音开头的学生。  
   
  [!code-vb[VbLINQBasicOps#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#9)]  
   
 > [!NOTE]
-> You can run this code with the list of students created in [How to: Create a List of Items](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md).  
+> 您可以使用在[如何：创建项列表](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)中创建的学生列表运行此代码。  
   
- The `Join` keyword is equivalent to an `INNER JOIN` in SQL. It combines two collections based on matching key values between elements in the two collections. The query returns all or part of the collection elements that have matching key values. For example, the following code duplicates the action of the previous implicit join.  
+ `Join` 关键字等效于 SQL 中的 `INNER JOIN`。 它基于两个集合中的元素之间的匹配键值合并两个集合。 查询返回所有或部分具有匹配键值的集合元素。 例如，以下代码将复制上一个隐式联接的操作。  
   
  [!code-vb[VbLINQBasicOps#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#10)]  
   
- `Group Join` combines collections into a single hierarchical collection, just like a `LEFT JOIN` in SQL. For more information, see [Join Clause](../../../../visual-basic/language-reference/queries/join-clause.md) and [Group Join Clause](../../../../visual-basic/language-reference/queries/group-join-clause.md).  
+ `Group Join` 将集合组合为单个层次结构集合，就像 SQL 中的 `LEFT JOIN` 一样。 有关详细信息，请参阅[Join 子句](../../../../visual-basic/language-reference/queries/join-clause.md)和[Group Join 子句](../../../../visual-basic/language-reference/queries/group-join-clause.md)。  
   
-## <a name="grouping-data-group-by"></a>Grouping Data (Group By)  
- You can add a `Group By` clause to group the elements in a query result according to one or more fields of the elements. For example, the following code groups students by class year.  
+## <a name="grouping-data-group-by"></a>数据分组（Group By）  
+ 您可以添加一个 `Group By` 子句，以便根据元素的一个或多个字段对查询结果中的元素进行分组。 例如，下面的代码按课程年份对学生进行分组。  
   
  [!code-vb[VbLINQBasicOps#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#11)]  
   
- If you run this code using the list of students created in [How to: Create a List of Items](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md), the output from the `For Each` statement is:  
+ 如果使用在[如何：创建项列表](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)中创建的学生列表运行此代码，`For Each` 语句的输出为：  
   
- Year: Junior  
+ Year：初级  
   
- Tucker, Michael  
+ Tucker、Michael  
   
- Garcia, Hugo  
+ Garcia、Hugo  
   
- Garcia, Debra  
+ Garcia、Debra  
   
- Tucker, Lance  
+ Tucker、Lance  
   
- Year: Senior  
+ Year：高级  
   
  Omelchenko, Svetlana  
   
- Osada, Michiko  
+ Osada、Michiko  
   
  Fakhouri, Fadi  
   
- Feng, Hanying  
+ Feng、冯汉英 (  
   
- Adams, Terry  
+ Adams，Terry  
   
- Year: Freshman  
+ Year： Freshman  
   
  Mortensen, Sven  
   
- Garcia, Cesar  
+ Garcia、Cesar  
   
- The variation shown in the following code orders the class years, and then orders the students within each year by last name.  
+ 以下代码中显示的变体对类年进行排序，然后按姓氏对每年内的学生进行排序。  
   
  [!code-vb[VbLINQBasicOps#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#12)]  
   
- For more information about `Group By`, see [Group By Clause](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
+ 有关 `Group By`的详细信息，请参阅[Group By 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [Visual Basic 中的 LINQ 入门](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

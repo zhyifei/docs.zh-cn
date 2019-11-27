@@ -57,12 +57,12 @@ ms.locfileid: "74281614"
 
 下表显示了此工具的一些常用选项：
 
-|选项|描述|
+|选项|说明|
 |------------|-----------------|
 |/目录：\<directory >|要在其中创建文件的目录。<br /><br /> 默认设置：当前目录。<br /><br /> 缩写形式：`/d`|
 |/help|显示此工具的命令语法和选项。<br /><br /> 缩写形式：`/?`|
 |/noLogo|取消版权和标题消息。|
-|/svcutilConfig:\<configFile>|指定要取代 App.config 文件使用的自定义配置文件。 可以使用该自定义配置文件来注册 system.serviceModel 扩展，而无需更改工具的配置文件。|
+|/svcutilConfig：\<Read-configfile >|指定要取代 App.config 文件使用的自定义配置文件。 可以使用该自定义配置文件来注册 system.serviceModel 扩展，而无需更改工具的配置文件。|
 |/target：\<输出类型 >|指定要由工具生成的输出。<br /><br /> 有效的值为代码、元数据或 xmlSerializer。<br /><br /> 缩写形式：`/t`|
 
 ### <a name="code-generation"></a>代码生成
@@ -78,20 +78,20 @@ Svcutil.exe 可以依据元数据文档为服务协定、客户端和数据类�
 
 `svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>`
 
-|参数|描述|
+|Argument|说明|
 |--------------|-----------------|
 |`epr`|XML 文件的路径，该文件包含支持 WS-Metadata Exchange 的服务终结点的 WS-Addressing EndpointReference。 有关更多信息，请参见“元数据下载”一节。|
 |`metadataDocumentPath`|包含要导入到代码中的协定的元数据文档（*wsdl*或*xsd*）的路径（.wsdl、.xsd、. wspolicy 或 wsmex）。<br /><br /> 当您为元数据指定远程 URL 时，Svcutil 采用导入和包含的内容。 但是，如果要在本地文件系统上处理元数据文件，则必须在此自变量中指定所有文件。 这样，您可以在不能有网络依赖项的生成环境中使用 Svcutil。 对于此参数，可以使用通配符（* .xsd，\*.wsdl）。|
 |`url`|可提供元数据的服务终结点的 URL，或是联机承载的元数据文档的 URL。 有关如何检索这些文档的更多信息，请参见“元数据下载”一节。|
 
-|选项|描述|
+|选项|说明|
 |------------|-----------------|
 |/async|同时生成同步和异步方法签名。<br /><br /> 默认设置：只生成同步方法签名。<br /><br /> 缩写形式：`/a`|
-|/collectionType:\<type>|为 WCF 客户端指定列表集合类型。<br/><br /> 默认：集合类型为 System.object。 <br /><br /> 缩写形式：`/ct`|
+|/collectionType：\<类型 >|为 WCF 客户端指定列表集合类型。<br/><br /> 默认：集合类型为 System.object。 <br /><br /> 缩写形式：`/ct`|
 |/config：\<Read-configfile >|为生成的配置文件指定文件名。<br /><br /> 默认设置：output.config|
 |/dataContractOnly|只为数据协定类型生成代码。 不生成服务协定类型。<br /><br /> 只应为此选项指定本地元数据文件。<br /><br /> 缩写形式：`/dconly`|
 |/enableDataBinding|在所有数据协定类型上实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口以启用数据绑定。<br /><br /> 缩写形式：`/edb`|
-|/excludeType:\<type>|指定要从引用的协定类型中排除的完全限定或程序集限定类型名称。<br /><br /> 从单独的 DLL 中将此开关与 `/r` 一起使用时，将引用 XSD 类的全名。<br /><br /> 缩写形式：`/et`|
+|/excludeType：\<类型 >|指定要从引用的协定类型中排除的完全限定或程序集限定类型名称。<br /><br /> 从单独的 DLL 中将此开关与 `/r` 一起使用时，将引用 XSD 类的全名。<br /><br /> 缩写形式：`/et`|
 |/importXmlTypes|配置数据协定序列化程序，以便将非数据协定类型作为 IXmlSerializable 类型导入。|
 |/internal|生成标记为内部的类。 默认设置：只生成公共类。<br /><br /> 缩写形式：`/i`|
 |/language：\<语言 >|指定要用于代码生成的编程语言。 应提供在 Machine.config 文件中注册的语言名称，或从 <xref:System.CodeDom.Compiler.CodeDomProvider>继承的类的完全限定名称。<br /><br /> 值：c#、cs、csharp、vb、visualbasic、c++、cpp<br /><br /> 默认设置：csharp<br /><br /> 缩写形式：`/l`|
@@ -119,16 +119,16 @@ Svcutil.exe 可以导出已编译程序集中服务、协定和数据类型的�
 
 `svcutil.exe [/t:metadata] [/serviceName:<serviceConfigName>] [/dataContractOnly] <assemblyPath>*`
 
-|参数|描述|
+|Argument|说明|
 |--------------|-----------------|
 |`assemblyPath`|指定程序集的路径，该程序集包含要导出的服务、协定或数据协定类型。 可以使用标准命令行通配符提供多个文件作为输入。|
 
-|选项|描述|
+|选项|说明|
 |------------|-----------------|
-|/serviceName:\<serviceConfigName>|指定要导出的服务的配置名称。 如果使用此选项，则必须传递包含关联配置文件的可执行程序集作为输入。 Svcutil.exe 将为服务配置搜索所有关联的配置文件。 如果配置文件包含任何扩展类型，则包含这些类型的程序集必须位于 GAC 中，或者必须使用 `/reference` 选项显式提供。|
+|/serviceName：\<serviceConfigName >|指定要导出的服务的配置名称。 如果使用此选项，则必须传递包含关联配置文件的可执行程序集作为输入。 Svcutil.exe 将为服务配置搜索所有关联的配置文件。 如果配置文件包含任何扩展类型，则包含这些类型的程序集必须位于 GAC 中，或者必须使用 `/reference` 选项显式提供。|
 |/reference：\<文件路径 >|将指定程序集添加到用于解析类型引用的一组程序集中。 如果要导出或验证使用在配置中注册的第三方扩展（行为、绑定和绑定元素）的服务，请使用此选项找到不在 GAC 中的扩展程序集。<br /><br /> 缩写形式：`/r`|
 |/dataContractOnly|只对数据协定类型进行操作。 不会处理服务协定。<br /><br /> 只应为此选项指定本地元数据文件。<br /><br /> 缩写形式：`/dconly`|
-|/excludeType:\<type>|指定要从导出中排除的类型的完全限定或程序集限定名称。 在为服务或一组服务协定导出元数据时，可以使用此选项来防止导出某些类型。 此选项不能与 `/dconly` 选项一起使用。<br /><br /> 如果有包含多个服务的单一程序集，并且每个服务都使用具有相同 XSD 名称的单独的类，则您应为此开关指定服务名称，而不是 XSD 类名称。<br /><br /> 不支持 XSD 或数据协定类型。<br /><br /> 缩写形式：`/et`|
+|/excludeType：\<类型 >|指定要从导出中排除的类型的完全限定或程序集限定名称。 在为服务或一组服务协定导出元数据时，可以使用此选项来防止导出某些类型。 此选项不能与 `/dconly` 选项一起使用。<br /><br /> 如果有包含多个服务的单一程序集，并且每个服务都使用具有相同 XSD 名称的单独的类，则您应为此开关指定服务名称，而不是 XSD 类名称。<br /><br /> 不支持 XSD 或数据协定类型。<br /><br /> 缩写形式：`/et`|
 
 ### <a name="service-validation"></a>服务验证
 
@@ -136,17 +136,17 @@ Svcutil.exe 可以导出已编译程序集中服务、协定和数据类型的�
 
 `svcutil.exe /validate /serviceName:<serviceConfigName>  <assemblyPath>*`
 
-|参数|描述|
+|Argument|说明|
 |--------------|-----------------|
 |`assemblyPath`|指定程序集的路径，该程序集包含要验证的服务类型。 程序集必须具有相关联的配置文件才能提供服务配置。 可以使用标准命令行通配符来提供多个程序集。|
 
-|选项|描述|
+|选项|说明|
 |------------|-----------------|
 |/validate|验证 `/serviceName` 选项指定的服务实现。 如果使用此选项，则必须传递包含关联配置文件的可执行程序集作为输入。<br /><br /> 缩写形式：`/v`|
-|/serviceName:\<serviceConfigName>|指定要验证的服务的配置名称。 Svcutil.exe 将为服务配置搜索所有输入程序集的所有关联配置文件。 如果配置文件包含任何扩展类型，则包含这些类型的程序集必须位于 GAC 中，或者必须使用 `/reference` 选项显式提供。|
+|/serviceName：\<serviceConfigName >|指定要验证的服务的配置名称。 Svcutil.exe 将为服务配置搜索所有输入程序集的所有关联配置文件。 如果配置文件包含任何扩展类型，则包含这些类型的程序集必须位于 GAC 中，或者必须使用 `/reference` 选项显式提供。|
 |/reference：\<文件路径 >|将指定程序集添加到用于解析类型引用的一组程序集中。 如果要导出或验证使用在配置中注册的第三方扩展（行为、绑定和绑定元素）的服务，请使用此选项找到不在 GAC 中的扩展程序集。<br /><br /> 缩写形式：`/r`|
 |/dataContractOnly|只对数据协定类型进行操作。 不会处理服务协定。<br /><br /> 只应为此选项指定本地元数据文件。<br /><br /> 缩写形式：`/dconly`|
-|/excludeType:\<type>|指定要从验证中排除的类型的完全限定或程序集限定名称。<br /><br /> 缩写形式：`/et`|
+|/excludeType：\<类型 >|指定要从验证中排除的类型的完全限定或程序集限定名称。<br /><br /> 缩写形式：`/et`|
 
 ### <a name="metadata-download"></a>元数据下载
 
@@ -164,7 +164,7 @@ Svcutil 会同时发出以下元数据请求以检索元数据。
 
 `svcutil.exe /t:metadata  <url>* | <epr>`
 
-|参数|描述|
+|Argument|说明|
 |--------------|-----------------|
 |`url`|可提供元数据的服务终结点的 URL，或是联机承载的元数据文档的 URL。|
 |`epr`|XML 文件的路径，该文件包含支持 WS-Metadata Exchange 的服务终结点的 WS-Addressing EndpointReference。|
@@ -183,14 +183,14 @@ Svcutil.exe 可依据应用程序的已编译程序集生成必要的 C# 序列�
 
 `svcutil.exe /t:xmlSerializer  <assemblyPath>*`
 
-|参数|描述|
+|Argument|说明|
 |--------------|-----------------|
 |`assemblyPath`|指定包含服务协定类型的程序集的路径。 为每个协定中的所有 Xml 可序列化类型生成序列化类型。|
 
-|选项|描述|
+|选项|说明|
 |------------|-----------------|
 |/reference：\<文件路径 >|将指定程序集添加到用于解析类型引用的一组程序集中。<br /><br /> 缩写形式：`/r`|
-|/excludeType:\<type>|指定要从导出或验证中排除的类型的完全限定或程序集限定名称。<br /><br /> 缩写形式：`/et`|
+|/excludeType：\<类型 >|指定要从导出或验证中排除的类型的完全限定或程序集限定名称。<br /><br /> 缩写形式：`/et`|
 |/out：\<文件 >|为生成的代码指定文件名。 如果将多个程序集作为输入传递到工具，则会忽略此选项。<br /><br /> 默认设置：派生自程序集名称。<br /><br /> 缩写形式：`/o`|
 |/UseSerializerForFaults|指定应该使用 <xref:System.Xml.Serialization.XmlSerializer>（而不是默认的 <xref:System.Runtime.Serialization.DataContractSerializer>）来读取和写入错误。|
 

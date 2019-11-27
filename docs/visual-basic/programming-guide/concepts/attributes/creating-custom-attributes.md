@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350147"
 ---
-# <a name="creating-custom-attributes-visual-basic"></a>Creating Custom Attributes (Visual Basic)
+# <a name="creating-custom-attributes-visual-basic"></a>创建自定义特性（Visual Basic）
 
 可通过定义特性类创建自己的自定义特性，特性类是直接或间接派生自 <xref:System.Attribute> 的类，可快速轻松地识别元数据中的特性定义。 假设希望使用编写类型的程序员的姓名来标记该类型。 可能需要定义一个自定义 `Author` 特性类：
 
@@ -63,7 +63,7 @@ End Class
 > [!NOTE]
 > 如果特性类包含属性，则该属性必须为读写属性。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Reflection>
 - [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)
@@ -71,4 +71,4 @@ End Class
 - [反射 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
 - [属性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
 - [使用反射访问特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-- [AttributeUsage (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+- [AttributeUsage （Visual Basic）](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)

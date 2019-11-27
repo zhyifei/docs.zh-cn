@@ -19,60 +19,60 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352521"
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub 过程 (Visual Basic)
-A `Sub` procedure is a series of Visual Basic statements enclosed by the `Sub` and `End Sub` statements. The `Sub` procedure performs a task and then returns control to the calling code, but it does not return a value to the calling code.  
+`Sub` 过程是一系列由 `Sub` 和 `End Sub` 语句括起来的 Visual Basic 语句。 `Sub` 过程执行任务，然后将控制权返回给调用代码，但它不会将值返回给调用代码。  
   
- Each time the procedure is called, its statements are executed, starting with the first executable statement after the `Sub` statement and ending with the first `End Sub`, `Exit Sub`, or `Return` statement encountered.  
+ 每次调用该过程时，都会执行其语句，从 `Sub` 语句后面的第一个可执行语句开始，到遇到的第一个 `End Sub`、`Exit Sub`或 `Return` 语句结束。  
   
- You can define a `Sub` procedure in modules, classes, and structures. By default, it is `Public`, which means you can call it from anywhere in your application that has access to the module, class, or structure in which you defined it. The term, *method*, describes a `Sub` or `Function` procedure that is accessed from outside its defining module, class, or structure. 有关详细信息，请参阅[过程](./index.md)。  
+ 您可以在模块、类和结构中定义 `Sub` 过程。 默认情况下，它是 `Public`的，这意味着您可以从应用程序中可以访问您定义它的模块、类或结构的任何位置调用它。 术语 "*方法*" 描述了从其定义模块、类或结构外部访问的 `Sub` 或 `Function` 过程。 有关详细信息，请参阅[过程](./index.md)。  
   
- A `Sub` procedure can take arguments, such as constants, variables, or expressions, which are passed to it by the calling code.  
+ `Sub` 过程可以采用由调用代码传递给它的参数，如常量、变量或表达式。  
   
 ## <a name="declaration-syntax"></a>声明语法  
- The syntax for declaring a `Sub` procedure is as follows:  
+ 声明 `Sub` 过程的语法如下所示：  
   
- `[` *modifiers* `] Sub`  *subname* `[(` *parameterlist* `)]`  
+ *`] Sub``[`* *修饰符*`[(` *parameterlist* `)]`  
   
  `' Statements of the Sub procedure.`  
   
  `End Sub`  
   
- The `modifiers` can specify access level and information about overloading, overriding, sharing, and shadowing. For more information, see [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md).  
+ `modifiers` 可以指定有关重载、重写、共享和隐藏的访问级别和信息。 有关详细信息，请参阅[Sub 语句](../../../../visual-basic/language-reference/statements/sub-statement.md)。  
   
-## <a name="parameter-declaration"></a>Parameter Declaration  
- You declare each procedure parameter similarly to how you declare a variable, specifying the parameter name and data type. You can also specify the passing mechanism, and whether the parameter is optional or a parameter array.  
+## <a name="parameter-declaration"></a>参数声明  
+ 声明每个过程参数的方式与声明变量的方式类似，即指定参数名称和数据类型。 还可以指定传递机制，并指定参数是可选的还是参数数组。  
   
- The syntax for each parameter in the parameter list is as follows:  
+ 参数列表中每个参数的语法如下所示：  
   
- `[Optional] [ByVal | ByRef] [ParamArray]`  *parametername*  `As`  *datatype*  
+ `[Optional] [ByVal | ByRef] [ParamArray]`*parametername*`As`*数据类型*  
   
- If the parameter is optional, you must also supply a default value as part of its declaration. The syntax for specifying a default value is as follows:  
+ 如果该参数是可选的，则还必须提供默认值作为其声明的一部分。 指定默认值的语法如下所示：  
   
- `Optional [ByVal | ByRef]`  *parametername*  `As`  *datatype*  `=`  *defaultvalue*  
+ `Optional [ByVal | ByRef]`*parametername*`As`*数据类型*`=`*defaultvalue*  
   
-### <a name="parameters-as-local-variables"></a>Parameters as Local Variables  
- When control passes to the procedure, each parameter is treated as a local variable. This means that its lifetime is the same as that of the procedure, and its scope is the whole procedure.  
+### <a name="parameters-as-local-variables"></a>参数作为局部变量  
+ 当控件传递给过程时，每个参数都被视为局部变量。 这意味着其生存期与过程的生存期相同，其作用域为整个过程。  
   
-## <a name="calling-syntax"></a>Calling Syntax  
- You invoke a `Sub` procedure explicitly with a stand-alone calling statement. You cannot call it by using its name in an expression. You must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses. If no arguments are supplied, you can optionally omit the parentheses. The use of the `Call` keyword is optional but not recommended.  
+## <a name="calling-syntax"></a>调用语法  
+ 使用独立调用语句显式调用 `Sub` 过程。 不能通过在表达式中使用其名称来调用它。 必须为所有非可选参数提供值，并且必须将参数列表括在括号中。 如果未提供任何参数，则可以选择省略括号。 `Call` 关键字是可选的，但不建议使用。  
   
- The syntax for a call to a `Sub` procedure is as follows:  
+ 调用 `Sub` 过程的语法如下所示：  
   
- `[Call]`  *subname* `[(` *argumentlist* `)]`  
+ `[Call]` `[(` *argumentlist* `)]`  
   
- You can call a `Sub` method from outside the class that defines it. First, you have to use the `New` keyword to create an instance of the class, or call a method that returns an instance of the class. For more information, see [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md). Then, you can use the following syntax to call the `Sub` method on the instance object:  
+ 可以从定义它的类的外部调用 `Sub` 方法。 首先，必须使用 `New` 关键字创建类的实例，或调用返回类的实例的方法。 有关详细信息，请参阅[New 运算符](../../../../visual-basic/language-reference/operators/new-operator.md)。 然后，可以使用以下语法对实例对象调用 `Sub` 方法：  
   
- *Object*.*methodname*`[(`*argumentlist*`)]`  
+ *对象*。*方法名称*`[(`*argumentlist*`)]`  
   
-### <a name="illustration-of-declaration-and-call"></a>Illustration of Declaration and Call  
- The following `Sub` procedure tells the computer operator which task the application is about to perform, and also displays a time stamp. Instead of duplicating this code at the start of every task, the application just calls `tellOperator` from various locations. Each call passes a string in the `task` argument that identifies the task being started.  
+### <a name="illustration-of-declaration-and-call"></a>声明和调用的插图  
+ 以下 `Sub` 过程告知计算机操作员应用程序将要执行的任务，还会显示时间戳。 应用程序只会从不同位置调用 `tellOperator`，而不是在每个任务开始时重复此代码。 每个调用都在 `task` 参数中传递一个字符串，该字符串标识要启动的任务。  
   
  [!code-vb[VbVbcnProcedures#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#2)]  
   
- The following example shows a typical call to `tellOperator`.  
+ 下面的示例演示对 `tellOperator`的典型调用。  
   
  [!code-vb[VbVbcnProcedures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#3)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [过程](./index.md)
 - [Function 过程](./function-procedures.md)
@@ -81,4 +81,4 @@ A `Sub` procedure is a series of Visual Basic statements enclosed by the `Sub` a
 - [过程参数和自变量](./procedure-parameters-and-arguments.md)
 - [Sub 语句](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [如何：调用不返回值的过程](./how-to-call-a-procedure-that-does-not-return-a-value.md)
-- [How to: Call an Event Handler in Visual Basic](./how-to-call-an-event-handler.md)
+- [如何：在 Visual Basic 中调用事件处理程序](./how-to-call-an-event-handler.md)

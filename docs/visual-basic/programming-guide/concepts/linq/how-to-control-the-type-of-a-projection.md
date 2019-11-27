@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351092"
 ---
-# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>How to: Control the Type of a Projection (Visual Basic)
+# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>如何：控制投影的类型（Visual Basic）
 投影是一个过程，这一过程包括：获取一组数据，筛选这些数据，更改数据形状，甚至更改数据的类型。 大多数查询表达式都可执行投影。 本节中介绍的大多数查询表达式的计算结果都是 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，不过，可以控制投影的类型从而创建其他类型的集合。 本主题演示如何执行此操作。  
   
 ## <a name="example"></a>示例  
@@ -86,7 +86,7 @@ LAZYK:Lazy K Kountry Store:John Steel
 LETSS:Let's Stop N Shop:Jaime Yorres  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Linq.Enumerable.Select%2A>
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [投影和转换（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

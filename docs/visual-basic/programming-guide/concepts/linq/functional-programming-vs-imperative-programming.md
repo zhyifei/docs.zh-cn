@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353433"
 ---
-# <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Functional Programming vs. Imperative Programming (Visual Basic)
+# <a name="functional-programming-vs-imperative-programming-visual-basic"></a>函数编程与命令式编程（Visual Basic）
 本主题对函数编程和更传统的命令性（过程性）编程进行比较。  
   
 ## <a name="functional-programming-vs-imperative-programming"></a>函数编程与强制性编程  
@@ -25,12 +25,12 @@ ms.locfileid: "74353433"
 |主要流控制|循环、条件和函数（方法）调用。|函数调用，包括递归。|  
 |主要操作单元|结构或类的实例。|作为第一类对象和数据集合的函。|  
   
- 虽然多数语言旨在支持特定编程范例，但许多通用语言具有很高的灵活性，能够支持多个范例。 例如，包含函数指针的多数语言都可用于可靠地支持函数编程。 Furthermore, Visual Basic includes explicit language extensions to support functional programming, including lambda expressions and type inference. LINQ 技术是一种声明性函数编程形式。  
+ 虽然多数语言旨在支持特定编程范例，但许多通用语言具有很高的灵活性，能够支持多个范例。 例如，包含函数指针的多数语言都可用于可靠地支持函数编程。 此外，Visual Basic 包括用于支持函数编程的显式语言扩展，其中包括 lambda 表达式和类型推理。 LINQ 技术是一种声明性函数编程形式。  
   
 ## <a name="functional-programming-using-xslt"></a>使用 XSLT 的函数编程  
  很多 XSLT 开发人员熟悉纯函数方法。 开发 XSLT 样式表的最有效方式是将每个模板视为一个独立的、可组合的转换。 执行顺序完全不重要。 XSLT 不允许副作用（但用于执行过程代码的转义机制除外，它可能引入可导致功能不纯的副作用）。 不过，虽然 XSLT 是一个有效的工具，但其某些特性并不是最佳的。 例如，在 XML 中表示编程构造会使代码相对繁琐，因此难于维护。 而且，流控制对递归的依赖性很强，因此会使代码的可读性较差。 有关 XSLT 的详细信息，请参阅 [XSLT 转换](../../../../standard/data/xml/xslt-transformations.md)。  
   
- 但 XSLT 在使用纯函数方法将 XML 从一种形状转换为另一种形状方面确有其自身的价值。 使用 LINQ to XML 的纯函数编程在许多方面与 XSLT 类似。 However, the programming constructs introduced by LINQ to XML and Visual Basic allow you to write pure functional transformations that are more readable and maintainable than XSLT.  
+ 但 XSLT 在使用纯函数方法将 XML 从一种形状转换为另一种形状方面确有其自身的价值。 使用 LINQ to XML 的纯函数编程在许多方面与 XSLT 类似。 不过，LINQ to XML 和 Visual Basic 引入的编程构造允许编写比 XSLT 更具可读性且更易维护的纯函数转换。  
   
 ## <a name="advantages-of-pure-functions"></a>纯函数的优点  
  以纯函数形式实现函数转换的主要原因是纯函数是可以组合的：即独立并且无状态。 这些特性可带来很多好处，包括以下各项：  
@@ -48,10 +48,10 @@ ms.locfileid: "74353433"
   
  相比之下，函数编程将计算机的操作问题处理为数据集合的纯函数转换计算。 函数编程可以避免使用状态和可变数据，并改为强调函数的应用。  
   
- Fortunately, Visual Basic doesn't require the full leap to functional programming, because it supports both imperative and functional programming approaches. 开发人员可以选择哪种方法最适合特定方案。 实际上，程序通常组合使用这两种方法。  
+ 幸运的是，Visual Basic 不需要完全 leap 功能编程，因为它同时支持命令性编程和函数编程方法。 开发人员可以选择哪种方法最适合特定方案。 实际上，程序通常组合使用这两种方法。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Introduction to Pure Functional Transformations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [纯功能转换简介（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [XSLT 转换](../../../../standard/data/xml/xslt-transformations.md)
-- [Refactoring Into Pure Functions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [重构为纯函数（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

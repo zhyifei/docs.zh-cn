@@ -24,21 +24,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351446"
 ---
 # <a name="notoverridable-visual-basic"></a>NotOverridable (Visual Basic)
-Specifies that a property or procedure cannot be overridden in a derived class.  
+指定不能在派生类中重写属性或过程。  
   
 ## <a name="remarks"></a>备注  
- The `NotOverridable` modifier prevents a property or method from being overridden in a derived class.  The [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) modifier allows a property or method in a class to be overridden in a derived class. 有关详细信息，请参阅[继承基础知识](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)。  
+ `NotOverridable` 修饰符可防止在派生类中重写属性或方法。  可[重写](../../../visual-basic/language-reference/modifiers/overridable.md)的修饰符允许在派生类中重写类中的属性或方法。 有关详细信息，请参阅[继承基础知识](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)。  
   
- If the `Overridable` or `NotOverridable` modifier is not specified, the default setting depends on whether the property or method overrides a base class property or method. If the property or method overrides a base class property or method, the default setting is `Overridable`; otherwise, it is `NotOverridable`.  
+ 如果未指定 `Overridable` 或 `NotOverridable` 修饰符，则默认设置取决于属性或方法是重写基类属性还是重写方法。 如果属性或方法重写基类属性或方法，则默认设置为 `Overridable`;否则，`NotOverridable`。  
   
- An element that cannot be overridden is sometimes called a *sealed* element.  
+ 不能重写的元素有时称为*密封*元素。  
   
- You can use `NotOverridable` only in a property or procedure declaration statement. You can specify `NotOverridable` only on a property or procedure that overrides another property or procedure, that is, only in combination with `Overrides`.  
+ 只能在属性或过程声明语句中使用 `NotOverridable`。 只能在替代另一个属性或过程的属性或过程上指定 `NotOverridable`，也就是说，只能与 `Overrides`结合使用。  
   
-## <a name="combined-modifiers"></a>Combined Modifiers  
- You cannot specify `Overridable` or `NotOverridable` for a `Private` method.  
+## <a name="combined-modifiers"></a>组合修饰符  
+ 不能为 `Private` 方法指定 `Overridable` 或 `NotOverridable`。  
   
- You cannot specify `NotOverridable` together with `MustOverride`, `Overridable`, or `Shared` in the same declaration.  
+ 不能在同一声明中同时指定 `NotOverridable` 与 `MustOverride`、`Overridable`或 `Shared`。  
   
 ## <a name="usage"></a>用法  
  `NotOverridable` 修饰符可用于下面的上下文中：  
@@ -49,12 +49,12 @@ Specifies that a property or procedure cannot be overridden in a derived class.
   
  [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [修饰符](../../../visual-basic/language-reference/modifiers/index.md)
 - [继承的基础知识](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
-- [New](../../../visual-basic/language-reference/modifiers/mustoverride.md)
-- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [MyBase](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [Overrides](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
 - [关键字](../../../visual-basic/language-reference/keywords/index.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic 中的阴影](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

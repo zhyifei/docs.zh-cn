@@ -17,42 +17,42 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354105"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>声明上下文和默认访问级别 (Visual Basic)
-This topic describes which Visual Basic types can be declared within which other types, and what their access levels default to if not specified.  
+本主题介绍了哪些 Visual Basic 类型可以在哪些其他类型中进行声明，如果未指定，它们的访问级别将默认为。  
   
-## <a name="declaration-context-levels"></a>Declaration Context Levels  
- The *declaration context* of a programming element is the region of code in which it is declared. This is often another programming element, which is then called the *containing element*.  
+## <a name="declaration-context-levels"></a>声明上下文级别  
+ 编程元素的*声明上下文*是声明它的代码区域。 这通常是另一个编程元素，该元素称为 "*包含元素*"。  
   
- The levels for declaration contexts are the following:  
+ 声明上下文的级别如下：  
   
-- *Namespace level* — within a source file or namespace but not within a class, structure, module, or interface  
+- *命名空间级别*-在源文件或命名空间中，但不在类、结构、模块或接口中  
   
-- *Module level* — within a class, structure, module, or interface but not within a procedure or block  
+- *模块级别*-在类、结构、模块或接口中，但不在过程或块中  
   
-- *Procedure level* — within a procedure or block (such as `If` or `For`)  
+- *过程级别*-在过程或块（如 `If` 或 `For`）内  
   
- The following table shows the default access levels for various declared programming elements, depending on their declaration contexts.  
+ 下表显示了各种已声明的编程元素的默认访问级别，具体取决于它们的声明上下文。  
   
-|已声明的元素|Namespace level|Module level|Procedure level|  
+|已声明的元素|命名空间级别|模块级别|过程级别|  
 |----------------------|---------------------|------------------|---------------------|  
-|Variable ([Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md))|不允许|`Private` (`Public` in `Structure`, not allowed in `Interface`)|`Public`|  
-|Constant ([Const Statement](../../../visual-basic/language-reference/statements/const-statement.md))|不允许|`Private` (`Public` in `Structure`, not allowed in `Interface`)|`Public`|  
-|Enumeration ([Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md))|`Friend`|`Public`|不允许|  
-|Class ([Class Statement](../../../visual-basic/language-reference/statements/class-statement.md))|`Friend`|`Public`|不允许|  
-|Structure ([Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md))|`Friend`|`Public`|不允许|  
-|Module ([Module Statement](../../../visual-basic/language-reference/statements/module-statement.md))|`Friend`|不允许|不允许|  
-|Interface ([Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md))|`Friend`|`Public`|不允许|  
-|Procedure ([Function Statement](../../../visual-basic/language-reference/statements/function-statement.md), [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md))|不允许|`Public`|不允许|  
-|External reference ([Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md))|不允许|`Public` (not allowed in `Interface`)|不允许|  
-|Operator ([Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md))|不允许|`Public` (not allowed in `Interface` or `Module`)|不允许|  
-|Property ([Property Statement](../../../visual-basic/language-reference/statements/property-statement.md))|不允许|`Public`|不允许|  
-|Default property ([Default](../../../visual-basic/language-reference/modifiers/default.md))|不允许|`Public` (not allowed in `Module`)|不允许|  
-|Event ([Event Statement](../../../visual-basic/language-reference/statements/event-statement.md))|不允许|`Public`|不允许|  
-|Delegate ([Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md))|`Friend`|`Public`|不允许|  
+|Variable （[Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)）|不允许|`Private` （`Public` `Structure`，但 `Interface`中不允许）|`Public`|  
+|常量（[Const 语句](../../../visual-basic/language-reference/statements/const-statement.md)）|不允许|`Private` （`Public` `Structure`，但 `Interface`中不允许）|`Public`|  
+|枚举（[Enum 语句](../../../visual-basic/language-reference/statements/enum-statement.md)）|`Friend`|`Public`|不允许|  
+|Class （[Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)）|`Friend`|`Public`|不允许|  
+|Structure （[结构语句](../../../visual-basic/language-reference/statements/structure-statement.md)）|`Friend`|`Public`|不允许|  
+|Module （[Module 语句](../../../visual-basic/language-reference/statements/module-statement.md)）|`Friend`|不允许|不允许|  
+|Interface （[Interface 语句](../../../visual-basic/language-reference/statements/interface-statement.md)）|`Friend`|`Public`|不允许|  
+|Procedure （[Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)， [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)）|不允许|`Public`|不允许|  
+|外部引用（[Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)）|不允许|`Public` （`Interface`不允许）|不允许|  
+|运算符（[Operator 语句](../../../visual-basic/language-reference/statements/operator-statement.md)）|不允许|`Public` （不允许 `Interface` 或 `Module`）|不允许|  
+|属性（[Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)）|不允许|`Public`|不允许|  
+|Default 属性（[默认值](../../../visual-basic/language-reference/modifiers/default.md)）|不允许|`Public` （`Module`不允许）|不允许|  
+|事件（[事件语句](../../../visual-basic/language-reference/statements/event-statement.md)）|不允许|`Public`|不允许|  
+|委托（[委托语句](../../../visual-basic/language-reference/statements/delegate-statement.md)）|`Friend`|`Public`|不允许|  
   
- For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ 有关详细信息，请参阅[Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
-- [COMClassAttribute](../../../visual-basic/language-reference/modifiers/public.md)
+- [Public](../../../visual-basic/language-reference/modifiers/public.md)

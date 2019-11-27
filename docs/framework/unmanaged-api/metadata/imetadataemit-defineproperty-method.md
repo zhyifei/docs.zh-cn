@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431518"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty 方法
-Creates a property definition for the specified type, with the specified `get` and `set` method accessors, and gets a token to that property definition.  
+使用指定的 `get` 和 `set` 方法访问器创建指定类型的属性定义，并获取该属性定义的标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,51 +46,51 @@ HRESULT DefineProperty (
   
 ## <a name="parameters"></a>参数  
  `td`  
- [in] The token for class or interface on which the property is being defined.  
+ 中正在为其定义属性的类或接口的标记。  
   
  `szProperty`  
- [in] The name of the property.  
+ 中属性的名称。  
   
  `dwPropFlags`  
- [in] The property flags.  
+ 中属性标志。  
   
  `pvSig`  
- [in] The property signature.  
+ 中属性签名。  
   
  `cbSig`  
- [in] The count of bytes in `pvSig`.  
+ 中`pvSig`中的字节计数。  
   
  `dwCPlusTypeFlag`  
- [in] The type of the property's default value.  
+ 中属性的默认值的类型。  
   
  `pValue`  
- [in] The default value for the property.  
+ 中属性的默认值。  
   
  `cchValue`  
- [in] The count of (Unicode) characters in `pValue`.  
+ 中`pValue`中的（Unicode）字符的计数。  
   
  `mdSetter`  
- [in] The method that sets the property value.  
+ 中用于设置属性值的方法。  
   
  `mdGetter`  
- [in] The method that gets the property value.  
+ 中获取属性值的方法。  
   
  `rmdOtherMethods[]`  
- [in] An array of other methods associated with the property. Terminate the array with an `mdTokenNil`.  
+ 中与属性关联的其他方法的数组。 使用 `mdTokenNil`终止数组。  
   
  `pmdProp`  
- [out] The `mdProperty` token assigned.  
+ 弄分配 `mdProperty` 标记。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

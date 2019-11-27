@@ -12,8 +12,8 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348461"
 ---
-# <a name="include-visual-basic"></a>\<include> (Visual Basic)
-Refers to another file that describes the types and members in your source code.  
+# <a name="include-visual-basic"></a>\<包括 > （Visual Basic）
+引用另一个文件，该文件描述源代码中的类型和成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -23,28 +23,28 @@ Refers to another file that describes the types and members in your source code.
   
 ## <a name="parameters"></a>参数  
  `filename`  
- 必须的。 包含文档的文件的名称。 可使用路径来限定文件名。 Enclose `filename` in double quotation marks (" ").  
+ 必需。 包含文档的文件的名称。 可使用路径来限定文件名。 将 `filename` 括在双引号（""）中。  
   
  `tagpath`  
- 必须的。 `filename` 中标记的路径，它指向标记 `name`。 Enclose the path in double quotation marks (" ").  
+ 必需。 `filename` 中标记的路径，它指向标记 `name`。 将路径用双引号（""）引起来。  
   
  `name`  
- 必须的。 The name specifier in the tag that precedes the comments. `Name` will have an `id`.  
+ 必需。 注释前面的标记中的名称说明符。 `Name` 将有一个 `id`。  
   
  `id`  
- 必须的。 标记的 ID（位于注释之前）。 Enclose the ID in single quotation marks (' ').  
+ 必需。 标记的 ID（位于注释之前）。 将 ID 括在单引号（' '）内。  
   
 ## <a name="remarks"></a>备注  
- Use the `<include>` tag to refer to comments in another file that describe the types and members in your source code. 这是对直接在源代码文件中放入文档注释的替代方法。  
+ 使用 `<include>` 标记来引用另一个文件中描述源代码中的类型和成员的注释。 这是对直接在源代码文件中放入文档注释的替代方法。  
   
- The `<include>` tag uses the W3C XML Path Language (XPath) Version 1.0 Recommendation. For more information about ways to customize your `<include>` use, see <https://www.w3.org/TR/xpath>.  
+ `<include>` 标记使用 W3C XML 路径语言（XPath）版本1.0 建议。 有关自定义 `<include>` 使用方式的详细信息，请参阅 <https://www.w3.org/TR/xpath>。  
   
 ## <a name="example"></a>示例  
- This example uses the `<include>` tag to import member documentation comments from a file called `commentFile.xml`.  
+ 此示例使用 `<include>` 标记从名为 `commentFile.xml`的文件中导入成员文档注释。  
   
  [!code-vb[VbVbcnXmlDocComments#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#4)]  
   
- The format of the `commentFile.xml` is as follows.  
+ `commentFile.xml` 的格式如下所示。  
   
 ```xml  
 <Docs>  
@@ -59,6 +59,6 @@ Refers to another file that describes the types and members in your source code.
 </Docs>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)

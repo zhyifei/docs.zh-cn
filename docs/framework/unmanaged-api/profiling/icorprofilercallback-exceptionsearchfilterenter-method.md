@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445381"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a>ICorProfilerCallback::ExceptionSearchFilterEnter 方法
-Notifies the profiler that the search phase of exception handling has begun executing a user-defined exception filter.  
+通知探查器异常处理的搜索阶段已开始执行用户定义的异常筛选器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +34,7 @@ HRESULT ExceptionSearchFilterEnter(
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in] The ID of the function that contains the filter.  
+ 中包含筛选器的函数的 ID。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -45,7 +45,7 @@ HRESULT ExceptionSearchFilterEnter(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ExceptionSearchFilterLeave 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)

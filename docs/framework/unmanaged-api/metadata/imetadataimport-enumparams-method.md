@@ -39,37 +39,37 @@ HRESULT EnumParams (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in，out]指向枚举器的指针。 第一次调用此方法时，此值必须为 NULL。  
   
  `mb`  
- [in] A MethodDef token representing the method with the parameters to enumerate.  
+ 中一个 MethodDef 标记，它表示具有要枚举的参数的方法。  
   
  `rParams`  
- [out] The array used to store the ParamDef tokens.  
+ 弄用于存储 ParamDef 标记的数组。  
   
  `cMax`  
  [in] `rParams` 数组的最大大小。  
   
  `pcTokens`  
- [out] The number of ParamDef tokens returned in `rParams`.  
+ 弄`rParams`中返回的 ParamDef 令牌数。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumParams` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumParams` 成功返回。|  
+|`S_FALSE`|没有要枚举的令牌。 在这种情况下，`pcTokens` 为零。|  
   
 ## <a name="requirements"></a>要求  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

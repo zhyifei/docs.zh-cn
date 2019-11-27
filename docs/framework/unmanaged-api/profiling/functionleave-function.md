@@ -22,10 +22,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440585"
 ---
 # <a name="functionleave-function"></a>FunctionLeave 函数
-Notifies the profiler that a function is about to return to the caller.  
+通知探查器某个函数将要返回到调用方。  
   
 > [!NOTE]
-> The `FunctionLeave` function is deprecated in the .NET Framework 2.0. It will continue to work, but will incur a performance penalty. Use the [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) function instead.  
+> `FunctionLeave` 函数在 .NET Framework 2.0 中已弃用。 它将继续运行，但会导致性能下降。 改为使用[FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,31 +37,31 @@ void __stdcall FunctionLeave (
   
 ## <a name="parameters"></a>参数  
  `funcID`  
- [in] The identifier of the function that is returning.  
+ 中返回的函数的标识符。  
   
 ## <a name="remarks"></a>备注  
- The `FunctionLeave` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
+ `FunctionLeave` 函数是回调;必须实现此方法。 实现必须使用 `__declspec`（`naked`）存储类特性。  
   
- The execution engine does not save any registers before calling this function.  
+ 在调用此函数之前，执行引擎不会保存任何注册。  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- 进入时，必须保存使用的所有寄存器，包括浮点单元（FPU）中的所有寄存器。  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- 退出时，必须通过弹出由其调用方推送的所有参数来还原堆栈。  
   
- The implementation of `FunctionLeave` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionLeave` returns.  
+ `FunctionLeave` 的实现不应被阻止，因为它将延迟垃圾回收。 实现不应尝试垃圾回收，因为堆栈可能不处于垃圾回收友好状态。 如果尝试垃圾回收，则运行时将被阻止，直到 `FunctionLeave` 返回。  
   
- Also, the `FunctionLeave` function must not call into managed code or in any way cause a managed memory allocation.  
+ 此外，`FunctionLeave` 函数不得调入托管代码或以任何方式导致托管的内存分配。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorProf.idl  
+ **标头：** Corprof.idl .idl  
   
  **库：** CorGuids.lib  
   
- **.NET Framework Versions:** 1.1, 1.0  
+ **.NET Framework 版本：** 1.1、1。0  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [FunctionEnter2 函数](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
 - [FunctionLeave2 函数](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)

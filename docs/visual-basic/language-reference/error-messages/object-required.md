@@ -12,18 +12,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349667"
 ---
 # <a name="object-required-visual-basic"></a>需要对象 (Visual Basic)
-References to properties and methods often require an explicit object qualifier. This is such a case.  
+对属性和方法的引用通常需要显式对象限定符。 这就是这种情况。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1. Check that references to an object property or method have valid object qualifier. Specify an object qualifier if you didn't provide one.  
+1. 检查对对象属性或方法的引用是否具有有效的对象限定符。 如果未提供对象限定符，请指定它。  
   
-2. Check the spelling of the object qualifier and make sure the object is visible in the part of the program in which you are referencing it.  
+2. 检查对象限定符的拼写，并确保对象在您引用它的程序部分中可见。  
   
-3. If a path is supplied to a host application's **File Open** command, check that the arguments in it are correct.  
+3. 如果向宿主应用程序的 "**文件打开**" 命令提供路径，请检查其中的参数是否正确。  
   
-4. Check the object's documentation and make sure the action is valid.  
+4. 检查对象的文档，并确保操作有效。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [错误类型](../../../visual-basic/programming-guide/language-features/error-types.md)

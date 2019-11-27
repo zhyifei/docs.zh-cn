@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426735"
 ---
 # <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodFromDocumentPosition 方法
-Returns the method that contains the breakpoint at the given position in a document.  
+返回包含文档中给定位置处的断点的方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,23 +37,23 @@ HRESULT GetMethodFromDocumentPosition (
   
 ## <a name="parameters"></a>参数  
  `document`  
- [in] The specified document.  
+ 中指定的文档。  
   
  `line`  
- [in] The line of the specified document.  
+ 中指定文档的行。  
   
  `column`  
- [in] The column of the specified document.  
+ 中指定文档的列。  
   
  `pRetVal`  
- [out] A pointer to the address of a [ISymUnmanagedMethod Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents the method containing the breakpoint.  
+ 弄指向表示包含断点的方法的[ISymUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)对象地址的指针。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedReader 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

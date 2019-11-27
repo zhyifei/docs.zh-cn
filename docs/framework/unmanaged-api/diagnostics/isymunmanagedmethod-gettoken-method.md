@@ -34,14 +34,14 @@ HRESULT GetToken(
   
 ## <a name="parameters"></a>参数  
  `pToken`  
- [out] A pointer to a `mdMethodDef` that receives the size, in characters, of the buffer required to contain the metadata.  
+ 弄指向 `mdMethodDef` 的指针，该指针接收包含元数据所需的缓冲区大小（以字符数表示）。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

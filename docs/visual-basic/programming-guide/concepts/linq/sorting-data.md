@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350589"
 ---
-# <a name="sorting-data-visual-basic"></a>Sorting Data (Visual Basic)
+# <a name="sorting-data-visual-basic"></a>对数据进行排序（Visual Basic）
 
 排序操作基于一个或多个属性对序列的元素进行排序。 第一个排序条件对元素执行主要排序。 通过指定第二个排序条件，您可以对每个主要排序组内的元素进行排序。
 
@@ -21,7 +21,7 @@ ms.locfileid: "74350589"
 
 ## <a name="methods"></a>方法
 
-|方法名|描述|Visual Basic Query Expression Syntax|详细信息|
+|方法名|说明|Visual Basic 查询表达式语法|更多信息|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |OrderBy|按升序对值排序。|`Order By`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|
 |OrderByDescending|按降序对值排序。|`Order By … Descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|
@@ -147,10 +147,10 @@ MsgBox(sb.ToString())
 ' brown
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Linq>
 - [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Order By 子句](../../../../visual-basic/language-reference/queries/order-by-clause.md)
 - [如何：对查询结果进行排序](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)
-- [How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [如何：按任意词或字段对文本数据进行排序或筛选（LINQ）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

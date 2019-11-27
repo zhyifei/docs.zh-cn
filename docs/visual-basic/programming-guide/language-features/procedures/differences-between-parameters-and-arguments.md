@@ -1,5 +1,5 @@
 ---
-title: 参数和变量之间的差异
+title: 形参和实参之间的差异
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -19,25 +19,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341377"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>参数和变量之间的差异 (Visual Basic)
-In most cases, a procedure must have some information about the circumstances in which it has been called. A procedure that performs repeated or shared tasks uses different information for each call. This information consists of variables, constants, and expressions that you pass to the procedure when you call it.  
+在大多数情况下，过程必须具有有关在其中调用该过程的环境的一些信息。 执行重复或共享任务的过程对每个调用使用不同的信息。 此信息包含变量、常量和在您调用过程时传递给该过程的表达式。  
   
- To communicate this information to the procedure, the procedure defines a *parameter*, and the calling code passes an *argument* to that parameter. You can think of the parameter as a parking space and the argument as an automobile. Just as different automobiles can park in a parking space at different times, the calling code can pass a different argument to the same parameter every time that it calls the procedure.  
+ 若要将此信息传递给过程，过程定义了一个*参数*，并且调用代码将*参数*传递给该参数。 可以将参数视为停车空间，将参数视为汽车。 正如不同的汽车可以在不同时间的停车空间中停放一样，每次调用该过程时，调用代码都可以将不同的参数传递给相同的参数。  
   
 ## <a name="parameters"></a>参数  
- A *parameter* represents a value that the procedure expects you to pass when you call it. The procedure's declaration defines its parameters.  
+ *参数*表示一个值，在调用该过程时，该过程要求您传递该值。 过程声明定义了其参数。  
   
- When you define a `Function` or `Sub` procedure, you specify a *parameter list* in parentheses immediately following the procedure name. For each parameter, you specify a name, a data type, and a passing mechanism ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)). You can also indicate that a parameter is optional. This means that the calling code does not have to pass a value for it.  
+ 在定义 `Function` 或 `Sub` 过程时，请在紧跟在过程名称后面的括号中指定*参数列表*。 对于每个参数，可以指定名称、数据类型和传递机制（[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)）。 还可以指示参数是可选的。 这意味着，调用代码不必为其传递值。  
   
- The name of each parameter serves as a *local variable* in the procedure. You use the parameter name the same way you use any other variable.  
+ 每个参数的名称作为过程中的*局部变量*。 使用参数名称的方式与使用任何其他变量的方式相同。  
   
-## <a name="arguments"></a>自变量  
- An *argument* represents the value that you pass to a procedure parameter when you call the procedure. The calling code supplies the arguments when it calls the procedure.  
+## <a name="arguments"></a>参数  
+ *参数*表示在调用过程时传递给过程参数的值。 调用代码在调用过程时提供自变量。  
   
- When you call a `Function` or `Sub` procedure, you include an *argument list* in parentheses immediately following the procedure name. Each argument corresponds to the parameter in the same position in the list.  
+ 调用 `Function` 或 `Sub` 过程时，将在紧跟过程名称的括号中包含*参数列表*。 每个参数都对应于列表中同一位置的参数。  
   
- In contrast to parameter definition, arguments do not have names. Each argument is an expression, which can contain zero or more variables, constants, and literals. The data type of the evaluated expression should typically match the data type defined for the corresponding parameter, and in any case it must be convertible to the parameter type.  
+ 与参数定义不同，参数没有名称。 每个自变量都是一个表达式，它可以包含零个或多个变量、常量和文本。 计算表达式的数据类型通常应与为相应参数定义的数据类型匹配，在任何情况下，它都必须可以转换为参数类型。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [过程](./index.md)
 - [Sub 过程](./sub-procedures.md)

@@ -22,25 +22,25 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432341"
 ---
 # <a name="imetadatatables2-interface"></a>IMetaDataTables2 接口
-Extends [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) to include methods for working with metadata streams.  
+扩展[IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)以包含用于处理元数据流的方法。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[GetMetaDataStorage 方法](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastorage-method.md)|Gets the size and contents of the metadata stored in the specified section.|  
-|[GetMetaDataStreamInfo 方法](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastreaminfo-method.md)|Gets the name, size, and contents of the metadata stream at the specified index.|  
+|[GetMetaDataStorage 方法](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastorage-method.md)|获取指定节中存储的元数据的大小和内容。|  
+|[GetMetaDataStreamInfo 方法](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastreaminfo-method.md)|获取指定索引处的元数据流的名称、大小和内容。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataTables 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [元数据接口](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

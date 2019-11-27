@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343781"
 ---
 # <a name="from-clause-visual-basic"></a>From 子句 (Visual Basic)
-Specifies one or more range variables and a collection to query.  
+指定一个或多个范围变量以及要查询的集合。  
   
 ## <a name="syntax"></a>语法  
   
@@ -29,47 +29,47 @@ From element [ As type ] In collection [ _ ]
   
 ## <a name="parts"></a>部件  
   
-|术语|定义|  
+|术语|Definition|  
 |---|---|  
-|`element`|必须的。 A *range variable* used to iterate through the elements of the collection. A range variable is used to refer to each member of the `collection` as the query iterates through the `collection`. Must be an enumerable type.|  
-|`type`|可选。 `element` 的类型。 If no `type` is specified, the type of `element` is inferred from `collection`.|  
-|`collection`|必须的。 Refers to the collection to be queried. Must be an enumerable type.|  
+|`element`|必需。 用于循环访问集合中的元素的*范围变量*。 当查询循环访问 `collection`时，范围变量用于引用 `collection` 的每个成员。 必须为可枚举类型。|  
+|`type`|可选。 `element` 的类型。 如果未指定 `type`，则 `element` 的类型将从 `collection`推断。|  
+|`collection`|必需。 引用要查询的集合。 必须为可枚举类型。|  
   
 ## <a name="remarks"></a>备注  
- The `From` clause is used to identify the source data for a query and the variables that are used to refer to an element from the source collection. These variables are called *range variables*. The `From` clause is required for a query, except when the `Aggregate` clause is used to identify a query that returns only aggregated results. For more information, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ `From` 子句用于标识查询的源数据和用于引用源集合中的元素的变量。 这些变量称为*范围变量*。 查询需要 `From` 子句，除非使用 `Aggregate` 子句标识仅返回聚合结果的查询。 有关详细信息，请参阅[Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)。  
   
- You can specify multiple `From` clauses in a query to identify multiple collections to be joined. When multiple collections are specified, they are iterated over independently, or you can join them if they are related. You can join collections implicitly by using the `Select` clause, or explicitly by using the `Join` or `Group Join` clauses. As an alternative, you can specify multiple range variables and collections in a single `From` clause, with each related range variable and collection separated from the others by a comma. The following code example shows both syntax options for the `From` clause.  
+ 您可以在查询中指定多个 `From` 子句来识别要联接的多个集合。 指定多个集合时，它们将被单独循环访问，如果相关，可以联接它们。 您可以使用 `Select` 子句隐式联接集合，或者使用 `Join` 或 `Group Join` 子句显式联接集合。 作为替代方法，您可以在单个 `From` 子句中指定多个范围变量和集合，其中每个相关范围变量和集合用逗号分隔开。 下面的代码示例演示了 `From` 子句的两种语法选项。  
   
  [!code-vb[VbSimpleQuerySamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#21)]  
   
- The `From` clause defines the scope of a query, which is similar to the scope of a `For` loop. Therefore, each `element` range variable in the scope of a query must have a unique name. Because you can specify multiple `From` clauses for a query, subsequent `From` clauses can refer to range variables in the `From` clause, or they can refer to range variables in a previous `From` clause. For example, the following example shows a nested `From` clause where the collection in the second clause is based on a property of the range variable in the first clause.  
+ `From` 子句定义查询的作用域，该作用域类似于 `For` 循环的作用域。 因此，查询范围内的每个 `element` 范围变量都必须具有唯一的名称。 由于您可以为查询指定多个 `From` 子句，因此后续 `From` 子句可以引用 `From` 子句中的范围变量，或者它们可以引用上一个 `From` 子句中的范围变量。 例如，下面的示例显示一个嵌套的 `From` 子句，其中第二个子句中的集合基于第一个子句中范围变量的属性。  
   
  [!code-vb[VbSimpleQuerySamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#22)]  
   
- Each `From` clause can be followed by any combination of additional query clauses to refine the query. You can refine the query in the following ways:  
+ 每个 `From` 子句可以后跟其他查询子句的任意组合，以优化查询。 可以通过以下方式优化查询：  
   
-- Combine multiple collections implicitly by using the `From` and `Select` clauses, or explicitly by using the `Join` or `Group Join` clauses.  
+- 使用 `From` 和 `Select` 子句隐式组合多个集合，或使用 `Join` 或 `Group Join` 子句显式组合多个集合。  
   
-- Use the `Where` clause to filter the query result.  
+- 使用 `Where` 子句来筛选查询结果。  
   
-- Sort the result by using the `Order By` clause.  
+- 使用 `Order By` 子句对结果进行排序。  
   
-- Group similar results together by using the `Group By` clause.  
+- 使用 `Group By` 子句将相似结果组合在一起。  
   
-- Use the `Aggregate` clause to identify aggregate functions to evaluate for the whole query result.  
+- 使用 `Aggregate` 子句标识要为整个查询结果计算的聚合函数。  
   
-- Use the `Let` clause to introduce an iteration variable whose value is determined by an expression instead of a collection.  
+- 使用 `Let` 子句引入一个迭代变量，该变量的值由表达式而不是集合确定。  
   
-- Use the `Distinct` clause to ignore duplicate query results.  
+- 使用 `Distinct` 子句忽略重复的查询结果。  
   
-- Identify parts of the result to return by using the `Skip`, `Take`, `Skip While`, and `Take While` clauses.  
+- 使用 `Skip`、`Take`、`Skip While`和 `Take While` 子句标识要返回的结果的各部分。  
   
 ## <a name="example"></a>示例  
- The following query expression uses a `From` clause to declare a range variable `cust` for each `Customer` object in the `customers` collection. The `Where` clause uses the range variable to restrict the output to customers from the specified region. The `For Each` loop displays the company name for each customer in the query result.  
+ 下面的查询表达式使用 `From` 子句为 `customers` 集合中的每个 `Customer` 对象声明一个范围变量 `cust`。 `Where` 子句使用范围变量将输出限制为指定区域的客户。 `For Each` 循环将在查询结果中显示每个客户的公司名称。  
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [查询](../../../visual-basic/language-reference/queries/index.md)
 - [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

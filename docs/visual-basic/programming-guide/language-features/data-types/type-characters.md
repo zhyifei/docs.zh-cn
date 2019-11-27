@@ -43,17 +43,17 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352925"
 ---
-# <a name="type-characters-visual-basic"></a>Type characters (Visual Basic)
+# <a name="type-characters-visual-basic"></a>类型字符 (Visual Basic)
 
-In addition to specifying a data type in a declaration statement, you can force the data type of some programming elements with a *type character*. The type character must immediately follow the element, with no intervening characters of any kind.
+除了在声明语句中指定数据类型之外，还可以使用*类型字符*强制某些编程元素的数据类型。 类型字符必须紧跟在元素之后，无任何类型的插入字符。
 
-The type character is not part of the name of the element. An element defined with a type character can be referenced without the type character.
+类型字符不是元素名称的一部分。 在不使用类型字符的情况下，可以引用使用类型字符定义的元素。
 
-## <a name="identifier-type-characters"></a>Identifier type characters
+## <a name="identifier-type-characters"></a>标识符类型字符
 
-Visual Basic supplies a set of *identifier type characters* that you can use in a declaration to specify the data type of a variable or constant. The following table shows the available identifier type characters with examples of usage.
+Visual Basic 提供一组*标识符类型字符*，可以在声明中使用这些字符来指定变量或常量的数据类型。 下表显示了可用的标识符类型字符和用法示例。
   
-|Identifier type character|数据类型|示例|  
+|标识符类型字符|数据类型|示例|  
 |-------------------------------|---------------|-------------|  
 |`%`|`Integer`|`Dim L%`|  
 |`&`|`Long`|`Dim M&`|  
@@ -62,33 +62,33 @@ Visual Basic supplies a set of *identifier type characters* that you can use in 
 |`#`|`Double`|`Dim X#`|  
 |`$`|`String`|`Dim V$ = "Secret"`|  
   
- No identifier type characters exist for the `Boolean`, `Byte`, `Char`, `Date`, `Object`, `SByte`, `Short`, `UInteger`, `ULong`, or `UShort` data types, or for any composite data types such as arrays or structures.
+ `Boolean`、`Byte`、`Char`、`Date`、`Object`、`SByte`、`Short`、`UInteger`、`ULong`或 `UShort` 数据类型或任何复合数据类型（例如数组或结构）都不存在标识符类型字符。
 
-In some cases, you can append the `$` character to a Visual Basic function, for example `Left$` instead of `Left`, to obtain a returned value of type `String`.
+在某些情况下，可以将 `$` 字符追加到 Visual Basic 函数，例如 `Left$` 而不是 `Left`，以获取 `String`类型的返回值。
 
-In all cases, the identifier type character must immediately follow the identifier name.
+在所有情况下，标识符类型字符都必须紧跟在标识符名称后面。
 
-## <a name="literal-type-characters"></a>Literal type characters
+## <a name="literal-type-characters"></a>文本类型字符
 
-A *literal* is a textual representation of a particular value of a data type.  
+*文本*是数据类型的特定值的文本表示形式。  
 
-### <a name="default-literal-types"></a>Default literal types
+### <a name="default-literal-types"></a>默认文本类型
 
-The form of a literal as it appears in your code ordinarily determines its data type. The following table shows these default types.  
+在代码中显示的文本形式通常会确定其数据类型。 下表显示了这些默认类型。  
   
-|Textual form of literal|Default data type|示例|  
+|文本格式的文本|默认数据类型|示例|  
 |-----------------------------|-----------------------|-------------|  
-|Numeric, no fractional part|`Integer`|`2147483647`|  
-|Numeric, no fractional part, too large for `Integer`|`Long`|`2147483648`|  
-|Numeric, fractional part|`Double`|`1.2`|  
-|Enclosed in double quotation marks|`String`|`"A"`|  
-|Enclosed within number signs|`Date`|`#5/17/1993 9:32 AM#`|  
+|数值，无小数部分|`Integer`|`2147483647`|  
+|数值，没有小数部分，太大，无法用于 `Integer`|`Long`|`2147483648`|  
+|数值，有小数部分|`Double`|`1.2`|  
+|包含在双引号内|`String`|`"A"`|  
+|括在数字符号内|`Date`|`#5/17/1993 9:32 AM#`|  
 
-### <a name="forced-literal-types"></a>Forced literal types
+### <a name="forced-literal-types"></a>强制文本类型
 
-Visual Basic supplies a set of *literal type characters*, which you can use to force a literal to assume a data type other than the one its form indicates. You do this by appending the character to the end of the literal. The following table shows the available literal type characters with examples of usage.
+Visual Basic 提供一组*文本类型字符*，您可以使用这些字符强制文本采用其形式所指示的数据类型之外的数据类型。 为此，可将字符追加到文本末尾。 下表显示了可用的文本类型字符，其中包含用法的示例。
   
-|Literal type character|数据类型|示例|  
+|文本类型字符|数据类型|示例|  
 |----------------------------|---------------|-------------|  
 |`S`|`Short`|`I = 347S`|
 |`I`|`Integer`|`J = 347I`|
@@ -101,38 +101,38 @@ Visual Basic supplies a set of *literal type characters*, which you can use to f
 |`UL`|`ULong`|`N = 347UL`|
 |`C`|`Char`|`Q = "."C`|
 
-No literal type characters exist for the `Boolean`, `Byte`, `Date`, `Object`, `SByte`, or `String` data types, or for any composite data types such as arrays or structures.
+`Boolean`、`Byte`、`Date`、`Object`、`SByte`或 `String` 数据类型或任何复合数据类型（例如数组或结构）都不存在文本类型字符。
 
-Literals can also use the identifier type characters (`%`, `&`, `@`, `!`, `#`, `$`), as can variables, constants, and expressions. However, the literal type characters (`S`, `I`, `L`, `D`, `F`, `R`, `C`) can be used only with literals.
+文本还可以使用标识符类型字符（`%`、`&`、`@`、`!`、`#`、`$`），就像变量、常量和表达式一样。 但是，文本类型字符（`S`、`I`、`L`、`D`、`F`、`R`、`C`）只能与文本一起使用。
 
-In all cases, the literal type character must immediately follow the literal value.
+在所有情况下，文本类型字符都必须紧跟在文本值之后。
 
-## <a name="hexadecimal-binary-and-octal-literals"></a>Hexadecimal, binary, and octal literals
+## <a name="hexadecimal-binary-and-octal-literals"></a>十六进制、二进制和八进制文本
 
-The compiler normally interprets an integer literal to be in the decimal (base 10) number system. You can also define an integer literal as a hexadecimal (base 16) number with the `&H` prefix, as a binary (base 2) number with the `&B` prefix, and as an octal (base 8) number with the `&O` prefix. The digits that follow the prefix must be appropriate for the number system. The following table illustrates this.  
+编译器通常将整数文本解释为十进制（基数为10）的数字系统。 你还可以将整数文本定义为带有 `&H` 前缀的十六进制（以16为基数）数字，作为带有 `&B` 前缀的二进制（base 2）号，并将指定为带有 `&O` 前缀的八进制（基数为8）数字。 前缀后面的数字必须适用于数字系统。 下表对此进行了说明。  
   
-|Number base|前缀|Valid digit values|示例|
+|数字基数|前缀|有效的数字值|示例|
 |-----------------|------------|------------------------|-------------|
-|十六进制（以 16 为基数）|`&H`|0-9 and A-F|`&HFFFF`|
-|Binary (base 2)|`&B`|0-1|`&B01111100`|
+|十六进制（以 16 为基数）|`&H`|0-9 和 A-f|`&HFFFF`|
+|二进制 （以 2 为基数）|`&B`|0-1|`&B01111100`|
 |八进制（以 8 为基数）|`&O`|0-7|`&O77`|
 
-Starting in Visual Basic 2017, you can use the underscore character (`_`) as a group separator to enhance the readability of an integral literal. The following example uses the `_` character to group a binary literal into 8-bit groups:
+从 Visual Basic 2017 开始，可以使用下划线字符（`_`）作为分组分隔符，以增强整数文本的可读性。 下面的示例使用 `_` 字符将二进制文本分组到8位组中：
 
 ```vb
 Dim number As Integer = &B00100010_11000101_11001111_11001101
 ```
 
-You can follow a prefixed literal with a literal type character. The following example shows this.
+您可以在文本类型为字符的后面跟有前缀的文本。 下面的示例演示了这一点。
 
 ```vb
 Dim counter As Short = &H8000S
 Dim flags As UShort = &H8000US
 ```
 
-In the previous example, `counter` has the decimal value of -32768, and `flags` has the decimal value of +32768.
+在上面的示例中，`counter` 的十进制值为-32768，`flags` 的十进制值为 + 32768。
 
-Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. 例如:
+从 Visual Basic 15.5 开始，还可以使用下划线字符（`_`）作为前缀和十六进制、二进制或八进制数字之间的前导分隔符。 例如：
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -140,12 +140,12 @@ Dim number As Integer = &H_C305_F860
 
 [!INCLUDE [supporting-underscores](../../../../../includes/vb-separator-langversion.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [变量声明](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [数据类型](../../../../visual-basic/language-reference/data-types/index.md)

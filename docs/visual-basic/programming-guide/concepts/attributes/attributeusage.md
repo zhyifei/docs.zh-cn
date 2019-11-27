@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353546"
 ---
-# <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
+# <a name="attributeusage-visual-basic"></a>AttributeUsage （Visual Basic）
 
 确定如何使用自定义特性类。 `AttributeUsage` 是一个特性，可应用于自定义特性定义，以控制如何应用新特性。 在显式应用时的默认设置如下：
 
@@ -57,7 +57,7 @@ End Class
 
 在本例中，`MultiUseAttr` 可重复应用，因为 `AllowMultiple` 设置为 `true`。 所显示的两种用于应用多个特性的格式均有效。
 
-如果 `Inherited` 设置为 `false`，那么特性不会由派生自已特性化的类的类继承。 例如:
+如果 `Inherited` 设置为 `false`，那么特性不会由派生自已特性化的类的类继承。 例如：
 
 ```vb
 <AttributeUsage(AttributeTargets.Class, Inherited:=False)>
@@ -148,7 +148,7 @@ A3
 A2
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Attribute>
 - <xref:System.Reflection>

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445014"
 ---
 # <a name="icorprofilercallbackexceptioncatcherenter-method"></a>ICorProfilerCallback::ExceptionCatcherEnter 方法
-Notifies the profiler that control is being passed to the appropriate `catch` block.  
+通知探查器控制正在传递到适当的 `catch` 块。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,17 +35,17 @@ HRESULT ExceptionCatcherEnter(
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in] The identifier of the function containing the `catch` block.  
+ 中包含 `catch` 块的函数的标识符。  
   
  `objectId`  
- [in] The identifier of the exception being handled.  
+ 中正在处理的异常的标识符。  
   
 ## <a name="remarks"></a>备注  
- The `ExceptionCatcherEnter` method is called only if the catch point is in code compiled with the just-in-time (JIT) compiler. An exception that is caught in unmanaged code or in the internal code of the runtime will not call this notification. The `objectId` value is passed again since a garbage collection could have moved the object since the `ExceptionThrown` notification.  
+ 仅当 catch 点位于用实时（JIT）编译器编译的代码中时，才会调用 `ExceptionCatcherEnter` 方法。 在非托管代码中或在运行时的内部代码中捕获的异常将不会调用此通知。 该 `objectId` 值将再次传递，因为垃圾回收可能会因为 `ExceptionThrown` 通知而移动了对象。  
   
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+ 探查器不应在此方法的实现中被阻止，因为堆栈可能不处于允许垃圾回收的状态，因此无法启用抢先垃圾回收。 如果探查器在此处阻止并且试图进行垃圾回收，则运行时将被阻止，直到此回调返回。  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ 探查器的此方法的实现不应调入托管代码或以任何方式导致托管内存分配。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -56,7 +56,7 @@ HRESULT ExceptionCatcherEnter(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ExceptionCatcherLeave 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)

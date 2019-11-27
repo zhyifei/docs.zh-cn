@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349383"
 ---
 # <a name="xml-document-literal-visual-basic"></a>XML 文档文本 (Visual Basic)
-A literal representing an <xref:System.Xml.Linq.XDocument> object.  
+表示 <xref:System.Xml.Linq.XDocument> 对象的文本。  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,32 +30,32 @@ rootElement
   
 ## <a name="parts"></a>部件  
   
-|术语|定义|  
+|术语|Definition|  
 |---|---|  
-|`encoding`|可选。 Literal text declaring which encoding the document uses.|  
-|`standalone`|可选。 Literal text. Must be "yes" or "no".|  
-|`piCommentList`|可选。 List of XML processing instructions and XML comments. Takes the following format:<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> Each `piComment` can be one of the following:<br /><br /> -   [XML Processing Instruction Literal](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).<br />-   [XML Comment Literal](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).|  
-|`rootElement`|必须的。 Root element of the document. The format is one of the following:<br /><br /> <ul><li>[XML Element Literal](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).</li><li>Embedded expression of the form `<%=` `elementExp` `%>`. The `elementExp` returns one of the following:<br /><br /> <ul><li>一个 <xref:System.Xml.Linq.XElement> 对象。</li><li>A collection that contains one <xref:System.Xml.Linq.XElement> object and any number of <xref:System.Xml.Linq.XProcessingInstruction> and <xref:System.Xml.Linq.XComment> objects.</li></ul></li></ul><br /> For more information, see [Embedded Expressions in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).|  
+|`encoding`|可选。 声明文档使用的编码的文本文本。|  
+|`standalone`|可选。 文本。 必须是 "是" 或 "否"。|  
+|`piCommentList`|可选。 XML 处理指令和 XML 注释的列表。 采用以下格式：<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> 每个 `piComment` 可以是以下各项之一：<br /><br /> -   [XML 处理指令文本](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)。<br />-   [XML 注释文本](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)。|  
+|`rootElement`|必需。 文档的根元素。 格式为以下格式之一：<br /><br /> <ul><li>[XML 元素文本](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)。</li><li>格式 `<%=` `elementExp` `%>`的嵌入式表达式。 `elementExp` 返回下列项之一：<br /><br /> <ul><li>一个 <xref:System.Xml.Linq.XElement> 对象。</li><li>一个集合，其中包含一个 <xref:System.Xml.Linq.XElement> 对象和任意数量的 <xref:System.Xml.Linq.XProcessingInstruction> 和 <xref:System.Xml.Linq.XComment> 对象。</li></ul></li></ul><br /> 有关详细信息，请参阅[XML 中的嵌入式表达式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。|  
   
 ## <a name="return-value"></a>返回值  
  一个 <xref:System.Xml.Linq.XDocument> 对象。  
   
 ## <a name="remarks"></a>备注  
- An XML document literal is identified by the XML declaration at the start of the literal. Although each XML document literal must have exactly one root XML element, it can have any number of XML processing instructions and XML comments.  
+ XML 文档文本由文本开头的 XML 声明标识。 虽然每个 XML 文档文本必须只有一个根 XML 元素，但是它可以有任意数量的 XML 处理指令和 XML 注释。  
   
- An XML document literal cannot appear in an XML element.  
+ Xml 文档文字不能出现在 XML 元素中。  
   
 > [!NOTE]
-> An XML literal can span multiple lines without using line continuation characters. This enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
+> XML 文本可以跨多行，而无需使用行继续符。 这使你可以从 XML 文档复制内容并将其直接粘贴到 Visual Basic 程序。  
   
- The Visual Basic compiler converts the XML document literal into calls to the <xref:System.Xml.Linq.XDocument.%23ctor%2A> and <xref:System.Xml.Linq.XDeclaration.%23ctor%2A> constructors.  
+ Visual Basic 编译器将 XML 文档文本转换为对 <xref:System.Xml.Linq.XDocument.%23ctor%2A> 和 <xref:System.Xml.Linq.XDeclaration.%23ctor%2A> 构造函数的调用。  
   
 ## <a name="example"></a>示例  
- The following example creates an XML document that has an XML declaration, a processing instruction, a comment, and an element that contains another element.  
+ 下面的示例创建一个 XML 文档，该文档具有 XML 声明、处理指令、注释以及包含其他元素的元素。  
   
  [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.Linq.XElement>
 - <xref:System.Xml.Linq.XProcessingInstruction>

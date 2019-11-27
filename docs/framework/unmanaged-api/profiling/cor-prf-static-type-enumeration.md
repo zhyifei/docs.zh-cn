@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448449"
 ---
 # <a name="cor_prf_static_type-enumeration"></a>COR_PRF_STATIC_TYPE 枚举
-指示字段是否为静态的，并在字段为静态字段时指示应用于该字段的静态质量。 These values can be combined using the bitwise OR operation to indicate that the field has multiple, different static qualities.  
+指示字段是否为静态的，并在字段为静态字段时指示应用于该字段的静态质量。 可以使用按位 "或" 运算组合这些值，以指示该字段具有多个不同的静态质量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,13 +38,13 @@ typedef enum {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_NOT_A_STATIC`|The field is not static.|  
-|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|The field is application domain-static.|  
-|`COR_PRF_FIELD_THREAD_STATIC`|The field is thread-static.|  
-|`COR_PRF_FIELD_CONTEXT_STATIC`|The field is context-static.|  
-|`COR_PRF_FIELD_RVA_STATIC`|The field is relative virtual address (RVA)-static.|  
+|`COR_PRF_FIELD_NOT_A_STATIC`|此字段不是静态的。|  
+|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|此字段为应用程序域静态。|  
+|`COR_PRF_FIELD_THREAD_STATIC`|此字段是线程静态的。|  
+|`COR_PRF_FIELD_CONTEXT_STATIC`|此字段是上下文静态的。|  
+|`COR_PRF_FIELD_RVA_STATIC`|该字段是相对虚拟地址（RVA）静态的。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -55,6 +55,6 @@ typedef enum {
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

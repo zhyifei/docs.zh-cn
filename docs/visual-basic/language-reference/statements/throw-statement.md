@@ -23,7 +23,7 @@ ms.locfileid: "74352784"
 ---
 # <a name="throw-statement-visual-basic"></a>Throw 语句 (Visual Basic)
 
-Throws an exception within a procedure.
+在过程中引发异常。
 
 ## <a name="syntax"></a>语法
 
@@ -34,23 +34,23 @@ Throw [ expression ]
 ## <a name="part"></a>部件
 
 `expression`\
-Provides information about the exception to be thrown. Optional when residing in a `Catch` statement, otherwise required.
+提供有关要引发的异常的信息。 如果位于 `Catch` 语句中，则为可选; 否则为必需。
 
 ## <a name="remarks"></a>备注
 
-The `Throw` statement throws an exception that you can handle with structured exception-handling code (`Try`...`Catch`...`Finally`) or unstructured exception-handling code (`On Error GoTo`). You can use the `Throw` statement to trap errors within your code because Visual Basic moves up the call stack until it finds the appropriate exception-handling code.
+`Throw` 语句引发异常，你可以使用结构化异常处理代码（`Try`...`Catch`...`Finally`）或非结构化异常处理代码（`On Error GoTo`）处理该异常。 您可以使用 `Throw` 语句来捕获代码中的错误，因为 Visual Basic 会在调用堆栈中向上移动，直到找到相应的异常处理代码。
 
-A `Throw` statement with no expression can only be used in a `Catch` statement, in which case the statement rethrows the exception currently being handled by the `Catch` statement.
+不带 expression 的 `Throw` 语句只能在 `Catch` 语句中使用，在这种情况下，该语句再次引发 `Catch` 语句正在处理的异常。
 
-The `Throw` statement resets the call stack for the `expression` exception. If `expression` is not provided, the call stack is left unchanged. You can access the call stack for the exception through the <xref:System.Exception.StackTrace%2A> property.
+`Throw` 语句重置 `expression` 异常的调用堆栈。 如果未提供 `expression`，则调用堆栈保持不变。 可以通过 <xref:System.Exception.StackTrace%2A> 属性访问异常的调用堆栈。
 
 ## <a name="example"></a>示例
 
-The following code uses the `Throw` statement to throw an exception:
+下面的代码使用 `Throw` 语句来引发异常：
 
 [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [On Error 语句](../../../visual-basic/language-reference/statements/on-error-statement.md)

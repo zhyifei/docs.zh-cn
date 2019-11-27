@@ -13,11 +13,11 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353780"
 ---
-# <a name="option-keyword-statement"></a>Option \<keyword> Statement
-Introduces a statement that specifies a compiler option that applies to the entire source file.  
+# <a name="option-keyword-statement"></a>Option \<关键字 > 语句
+引入一个语句，该语句指定适用于整个源文件的编译器选项。  
   
 ## <a name="remarks"></a>备注  
- The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.  
+ 编译器选项可以控制是否所有变量都必须是显式声明的，无论收缩类型转换必须是显式的，还是应将字符串作为文本或二进制数量进行比较。  
   
  `Option` 关键字可用于以下上下文中：  
   
@@ -29,6 +29,6 @@ Introduces a statement that specifies a compiler option that applies to the enti
   
  [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [关键字](../../../visual-basic/language-reference/keywords/index.md)

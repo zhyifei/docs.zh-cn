@@ -29,7 +29,7 @@ ms.locfileid: "74435372"
   
 - 如果某个单元格为空，必须仍返回 UI 自动化元素以便支持该单元格的 <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> 属性。 当网格中的子元素的布局类似于未对齐的数组时，这是可能的（请参阅下面的示例）。  
   
- ![Windows Explorer view showing ragged layout.](./media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
+ ![显示不规则布局的 Windows 资源管理器视图。](./media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
 坐标为空的 Grid 控件的示例  
   
 - 只有一项的网格仍需要实现 <xref:System.Windows.Automation.Provider.IGridProvider> （如果它逻辑上被视为网格）。 网格中的子项数并不重要。  
@@ -46,11 +46,11 @@ ms.locfileid: "74435372"
 ## <a name="required-members-for-igridprovider"></a>IGridProvider 必需的成员  
  实现 IGridProvider 接口需要以下属性和方法。  
   
-|必需的成员|键入|注意|  
+|必需的成员|类型|注意|  
 |----------------------|----------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Property|None|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Property|None|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|属性|无|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|属性|无|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|方法|无|  
   
  没有与此控件模式关联的事件。  
   
@@ -60,14 +60,14 @@ ms.locfileid: "74435372"
   
 |异常类型|条件|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -   If the requested row coordinate is larger than the <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> or the column coordinate is larger than the <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -   If either of the requested row or column coordinates is less than zero.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -如果请求的行坐标大于 <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> 或列坐标大于 <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>。|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -如果请求的行坐标或列坐标都小于零。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UI 自动化控件模式概述](ui-automation-control-patterns-overview.md)
 - [在 UI 自动化提供程序中支持控件模式](support-control-patterns-in-a-ui-automation-provider.md)
-- [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [实现 UI 自动化 GridItem 控件模式](implementing-the-ui-automation-griditem-control-pattern.md)
 - [UI 自动化树概述](ui-automation-tree-overview.md)
 - [在 UI 自动化中使用缓存](use-caching-in-ui-automation.md)

@@ -15,11 +15,11 @@ ms.locfileid: "74283163"
 
 ## <a name="projects-in-this-sample"></a>此示例中的项目
 
-|项目名称|描述|主要文件|
+|项目名称|说明|主要文件|
 |-|-|-|
-|ExternalizedPolicy4|包含 ExternalizedPolicy4 活动及其 WF 4.5 设计器。|**ExternalizedPolicy4.cs**：活动定义。<br /><br /> **ExternalizedPolicy4Designer.xaml**：ExternalizedPolicy4 活动的自定义设计器。 它使用来自 WF 3.5 规则引擎的规则编辑器 (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>)。|
-|ImperativeCodeClientSample|一个示例客户端应用程序，它使用命令性 C# 代码（未使用设计器）配置和运行使用 ExternalizedPolicy4 应用程序的工作流。|**ApplyDiscount.rules**：带有 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 规则定义的文件。<br /><br /> **Order.cs**：表示客户订单的类型。 规则适用于此类型的对象。<br /><br /> **Program.cs**：配置和运行具有 Policy4 活动的工作流以将 ApplyDiscount.rules 中定义的规则应用于 Order 对象的实例。<br /><br /> App.config：带有规则文件的路径的配置文件。|
-|DesignerClientSample|一个示例客户端应用程序，它在 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 设计器中配置和运行使用 ExternalPolicy4 应用程序的工作流。|**Sequence1.xaml**：使用 Policy4 活动执行规则计算的顺序工作流。<br /><br /> **Program.cs**：运行 Sequence1.xaml 中定义的工作流的实例。|
+|ExternalizedPolicy4|包含 ExternalizedPolicy4 活动及其 WF 4.5 设计器。|**ExternalizedPolicy4.cs**：活动定义。<br /><br /> **ExternalizedPolicy4Designer**： ExternalizedPolicy4 活动的自定义设计器。 它使用来自 WF 3.5 规则引擎的规则编辑器 (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>)。|
+|ImperativeCodeClientSample|一个示例客户端应用程序，它使用命令性 C# 代码（未使用设计器）配置和运行使用 ExternalizedPolicy4 应用程序的工作流。|**Applydiscount.rules**：包含 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 规则定义的文件。<br /><br /> **Order.cs**：表示客户订单的类型。 规则适用于此类型的对象。<br /><br /> **Program.cs**：配置和运行具有 Policy4 活动的工作流，以将 applydiscount.rules 中定义的规则应用到 Order 对象的实例。<br /><br /> App.config：带有规则文件的路径的配置文件。|
+|DesignerClientSample|一个示例客户端应用程序，它在 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 设计器中配置和运行使用 ExternalPolicy4 应用程序的工作流。|**Sequence1.xaml**：使用 Policy4 活动执行规则评估的顺序工作流。<br /><br /> **Program.cs**：运行在 sequence1.xaml 中定义的工作流的实例。|
 
 ## <a name="the-externalizedpolicy4-activity"></a>ExternalizedPolicy4 活动
 
@@ -42,7 +42,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 }
 ```
 
-|属性|描述|
+|属性|说明|
 |-|-|
 |RuleSetFilePath|执行活动时要计算的 .NET Framework 3.5 <xref:System.Workflow.Activities.Rules.RuleSet> 文件的路径。|
 |RuleSetName|要在 .rules 文件中使用的 <xref:System.Workflow.Activities.Rules.RuleSet> 的名称。|
@@ -52,7 +52,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 
 ## <a name="externalizedpolicy4-activity-designer"></a>ExternalizedPolicy4 活动设计器
 
-利用 ExternalizedPolicy4 设计器，可以将活动配置为使用现有 RuleSet 而不编写代码。 仅设置 .rules 文件所在的路径并指定要使用的 <xref:System.Workflow.Activities.Rules.RuleSet> 名称。 还可以使用此设计器修改 <xref:System.Workflow.Activities.Rules.RuleSet>。 生成解决方案之后，可以在工具箱中的“Microsoft.Samples.Activities.Rules”部分找到此功能。 可以利用此设计器选择 .rules 文件和 <xref:System.Workflow.Activities.Rules.RuleSet>。 单击 **“编辑 RuleSet”** 按钮时，将显示 WF 3.5 <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>。 此对话框是重新承载的 WF 3.5 规则编辑器，它可用于查看和编辑 ExternalizedPolicy4 活动执行的规则。
+利用 ExternalizedPolicy4 设计器，可以将活动配置为使用现有 RuleSet 而不编写代码。 仅设置 .rules 文件所在的路径并指定要使用的 <xref:System.Workflow.Activities.Rules.RuleSet> 名称。 还可以使用此设计器修改 <xref:System.Workflow.Activities.Rules.RuleSet>。 生成解决方案之后，可以在工具箱中的“Microsoft.Samples.Activities.Rules”部分找到此功能。 可以利用此设计器选择 .rules 文件和 <xref:System.Workflow.Activities.Rules.RuleSet>。 单击 "**编辑规则集**" 按钮时，将显示 WF 3.5 <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>。 此对话框是重新承载的 WF 3.5 规则编辑器，它可用于查看和编辑 ExternalizedPolicy4 活动执行的规则。
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 和 ExternalPolicy4
 
@@ -68,7 +68,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 
 1. 使用 Visual Studio 打开*policy4sample.sln*解决方案文件。
 
-2. 在 **“解决方案资源管理器”** 中，右击 **“ImperativeCodeClientSample”** 项目，然后选择 **“设为启动项目”** 。
+2. 在**解决方案资源管理器**中，右键单击**ImperativeCodeClientSample**项目，然后选择 "**设为启动项目**"。
 
 3. 若要运行项目，请按**Ctrl**+**F5**。
 
@@ -76,7 +76,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 
 1. 使用 Visual Studio 打开*policy4sample.sln*解决方案文件。
 
-2. 在 **“解决方案资源管理器”** 中，右击 **“DesignerClientSample”** 项目，然后选择 **“设为启动项目”** 。
+2. 在**解决方案资源管理器**中，右键单击**DesignerClientSample**项目，然后选择 "**设为启动项目**"。
 
 3. 按**Ctrl**+**Shift**+**B**来编译项目。
 

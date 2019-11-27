@@ -15,36 +15,36 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349516"
 ---
 # <a name="istrue-operator-visual-basic"></a>IsTrue 运算符 (Visual Basic)
-Determines whether an expression is `True`.  
+确定表达式是否 `True`。  
   
- You cannot call `IsTrue` explicitly in your code, but the Visual Basic compiler can use it to generate code from `OrElse` clauses. If you define a class or structure and then use a variable of that type in an `OrElse` clause, you must define `IsTrue` on that class or structure.  
+ 你不能在代码中显式调用 `IsTrue`，但 Visual Basic 编译器可以使用它从 `OrElse` 子句生成代码。 如果定义类或结构，然后在 `OrElse` 子句中使用该类型的变量，则必须在该类或结构上定义 `IsTrue`。  
   
- The compiler considers the `IsTrue` and `IsFalse` operators as a *matched pair*. This means that if you define one of them, you must also define the other one.  
+ 编译器将 `IsTrue` 和 `IsFalse` 运算符视为*匹配对*。 这意味着，如果定义其中一个类型，则还必须定义另一个。  
   
-## <a name="compiler-use-of-istrue"></a>Compiler Use of IsTrue  
- When you have defined a class or structure, you can use a variable of that type in a `For`, `If`, `Else If`, or `While` statement, or in a `When` clause. If you do this, the compiler requires an operator that converts your type into a `Boolean` value so it can test a condition. It searches for a suitable operator in the following order:  
+## <a name="compiler-use-of-istrue"></a>IsTrue 的编译器使用  
+ 定义了类或结构后，可以在 `For`、`If`、`Else If`或 `While` 语句中或 `When` 子句中使用该类型的变量。 如果执行此操作，则编译器需要一个运算符，该运算符将您的类型转换为 `Boolean` 值，以便它可以测试条件。 它按以下顺序搜索合适的运算符：  
   
-1. A widening conversion operator from your class or structure to `Boolean`.  
+1. 从你的类或结构到 `Boolean`的扩大转换运算符。  
   
-2. A widening conversion operator from your class or structure to `Boolean?`.  
+2. 从你的类或结构到 `Boolean?`的扩大转换运算符。  
   
-3. The `IsTrue` operator on your class or structure.  
+3. 类或结构上的 `IsTrue` 运算符。  
   
-4. A narrowing conversion to `Boolean?` that does not involve a conversion from `Boolean` to `Boolean?`.  
+4. 到不涉及从 `Boolean` 到 `Boolean?`的转换的 `Boolean?` 的收缩转换。  
   
-5. A narrowing conversion operator from your class or structure to `Boolean`.  
+5. 要 `Boolean`的类或结构中的收缩转换运算符。  
   
- If you have not defined any conversion to `Boolean` or an `IsTrue` operator, the compiler signals an error.  
+ 如果未定义任何到 `Boolean` 或 `IsTrue` 运算符的转换，则编译器会发出错误消息。  
   
 > [!NOTE]
-> The `IsTrue` operator can be *overloaded*, which means that a class or structure can redefine its behavior when its operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. 有关更多信息，请参见 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+> 可以*重载*`IsTrue` 运算符，这意味着当类或结构的操作数具有该类或结构的类型时，它可以重新定义其行为。 如果你的代码在该类或结构上使用此运算符，请确保了解其重新定义的行为。 有关更多信息，请参见 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>示例  
- The following code example defines the outline of a structure that includes definitions for the `IsFalse` and `IsTrue` operators.  
+ 下面的代码示例定义了结构的轮廓，该结构包含 `IsFalse` 和 `IsTrue` 运算符的定义。  
   
  [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IsFalse 运算符](../../../visual-basic/language-reference/operators/isfalse-operator.md)
 - [如何：定义运算符](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449501"
 ---
 # <a name="imetadatatablesgetnumtables-method"></a>IMetaDataTables::GetNumTables 方法
-Gets the number of tables in the scope of the current `IMetaDataTables` instance.  
+获取当前 `IMetaDataTables` 实例的范围中的表数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,18 +35,18 @@ HRESULT GetNumTables (
   
 ## <a name="parameters"></a>参数  
  `pcTables`  
- [out] A pointer to the number of tables in the current instance scope.  
+ 弄一个指针，指向当前实例范围中的表数。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataTables 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

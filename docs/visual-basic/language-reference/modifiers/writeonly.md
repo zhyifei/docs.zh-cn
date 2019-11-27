@@ -19,36 +19,36 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344195"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
-Specifies that a property can be written but not read.  
+指定可以写入但不能读取属性。  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="rules"></a>规则  
- **Declaration Context.** 只能在模块级别使用 `WriteOnly`。 This means the declaration context for a `WriteOnly` property must be a class, structure, or module, and cannot be a source file, namespace, or procedure.  
+ **声明上下文。** 只能在模块级别使用 `WriteOnly`。 这意味着 `WriteOnly` 属性的声明上下文必须是类、结构或模块，不能是源文件、命名空间或过程。  
   
- You can declare a property as `WriteOnly`, but not a variable.  
+ 可以将属性声明为 `WriteOnly`，但不能将变量声明为。  
   
-## <a name="when-to-use-writeonly"></a>When to Use WriteOnly  
- Sometimes you want the consuming code to be able to set a value but not discover what it is. For example, sensitive data, such as a social registration number or a password, needs to be protected from access by any component that did not set it. In these cases, you can use a `WriteOnly` property to set the value.  
+## <a name="when-to-use-writeonly"></a>何时使用 WriteOnly  
+ 有时，您希望使用的代码能够设置一个值，但不会发现它是什么。 例如，需要保护敏感数据（例如社交注册号或密码）不会被任何未设置的组件访问。 在这些情况下，可以使用 `WriteOnly` 属性来设置值。  
   
 > [!IMPORTANT]
-> When you define and use a `WriteOnly` property, consider the following additional protective measures:  
+> 定义和使用 `WriteOnly` 属性时，请考虑以下其他保护措施：  
   
-- **Overriding.** If the property is a member of a class, allow it to default to [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), and do not declare it `Overridable` or `MustOverride`. This prevents a derived class from making undesired access through an override.  
+- **取代.** 如果该属性是类的成员，则允许它默认为[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)，而不会将其声明 `Overridable` 或 `MustOverride`。 这会阻止派生类通过重写进行不需要的访问。  
   
-- **Access Level.** If you hold the property's sensitive data in one or more variables, declare them [Private](../../../visual-basic/language-reference/modifiers/private.md) so that no other code can access them.  
+- **访问级别。** 如果将属性的敏感数据保存在一个或多个变量中，请将它们声明为[私有](../../../visual-basic/language-reference/modifiers/private.md)，使其他代码都不能访问它们。  
   
-- **Encryption.** Store all sensitive data in encrypted form rather than in plain text. If malicious code somehow gains access to that area of memory, it is more difficult to make use of the data. Encryption is also useful if it is necessary to serialize the sensitive data.  
+- **密匙.** 以加密形式而不是纯文本格式存储所有敏感数据。 如果恶意代码通过某种方式获得了对该内存区域的访问权限，则更难使用数据。 如果需要序列化敏感数据，则加密也很有用。  
   
-- **Resetting.** When the class, structure, or module defining the property is being terminated, reset the sensitive data to default values or to other meaningless values. This gives extra protection when that area of memory is freed for general access.  
+- **重置.** 如果正在终止定义属性的类、结构或模块，请将敏感数据重置为默认值或其他无意义的值。 这会在为常规访问释放内存区域时提供额外的保护。  
   
-- **Persistence.** Do not persist any sensitive data, for example on disk, if you can avoid it. Also, do not write any sensitive data to the Clipboard.  
+- **保持.** 如果可以避免任何敏感数据，请不要将其保存在磁盘上。 此外，不要将任何敏感数据写入剪贴板。  
   
- The `WriteOnly` modifier can be used in this context:  
+ `WriteOnly` 修饰符可用于以下上下文：  
   
  [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)

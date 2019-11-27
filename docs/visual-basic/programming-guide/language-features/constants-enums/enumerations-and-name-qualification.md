@@ -25,35 +25,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347500"
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>枚举和名称限定 (Visual Basic)
-Normally, when referring to a member of an enumeration, you must qualify the member name with the enumeration name. For example, to refer to the `Sunday` member of your `Days` enumeration, you would use the following syntax:  
+通常，在引用枚举成员时，必须使用枚举名称限定成员名称。 例如，若要引用 `Days` 枚举的 `Sunday` 成员，请使用以下语法：  
   
  [!code-vb[VbEnumsTask#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#18)]  
   
-## <a name="using-the-imports-statement"></a>Using the Imports Statement  
- You can avoid using fully qualified names by adding an `Imports` statement to the namespace declarations section of your code, as in the following example:  
+## <a name="using-the-imports-statement"></a>使用 Imports 语句  
+ 可以通过将 `Imports` 语句添加到代码的命名空间声明部分来避免使用完全限定的名称，如以下示例中所示：  
   
  [!code-vb[VbEnumsTask#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#22)]  
   
- An `Imports` statement imports namespace names from referenced projects and assemblies and from within the same project as the module in which the statement appears. Once this statement is added, you can refer to your enumeration members without qualification, as in the following example:  
+ `Imports` 语句从引用的项目和程序集中导入命名空间名称，并从与该语句所在模块相同的项目中导入命名空间名称。 添加此语句后，无需限定即可引用枚举成员，如以下示例中所示：  
   
  [!code-vb[VbEnumsTask#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#24)]  
   
- By organizing sets of related constants in enumerations, you can use the same constant names in different contexts. For example, you can use the same names for the weekday constants in the `Days` and `WorkDays` enumerations. If you use the `Imports` statement with your enumerations, you must be careful to avoid ambiguous references. 请看下面的示例：  
+ 通过组织枚举中的相关常量集，可以在不同的上下文中使用相同的常量名称。 例如，您可以对 `Days` 中的 weekday 常量和 `WorkDays` 枚举使用相同的名称。 如果对枚举使用 `Imports` 语句，则必须小心，以避免不明确的引用。 请看下面的示例：  
   
  [!code-vb[VbEnumsTask#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#22)]  
   
  [!code-vb[VbEnumsTask#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#25)]  
   
- Assuming that `Monday` is a member of both the `Days` enumeration and the `Workdays` enumeration, this code generates a compiler error. To avoid ambiguous references when referring to an individual constant, qualify the constant name with its enumeration. The following code refers to the `Saturday` constants in the `Days` and `WorkDays` enumerations.  
+ 假定 `Monday` 是 `Days` 枚举和 `Workdays` 枚举的成员，则此代码将生成编译器错误。 若要避免引用单个常量时出现不明确的引用，请使用其枚举来限定常量名称。 以下代码引用 `Days` 和 `WorkDays` 枚举中的 `Saturday` 常量。  
   
  [!code-vb[VbEnumsTask#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#32)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [常量和枚举](../../../../visual-basic/language-reference/constants-and-enumerations.md)
-- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [如何：声明枚举](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [如何：引用枚举成员](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
-- [How to: Iterate Through An Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
+- [如何：在 Visual Basic 中循环访问枚举](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
 - [如何：确定与枚举值关联的字符串](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [何时使用枚举](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
 - [常量和文本数据类型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)

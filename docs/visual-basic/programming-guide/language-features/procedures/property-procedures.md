@@ -22,26 +22,26 @@ ms.locfileid: "74352567"
 ---
 # <a name="property-procedures-visual-basic"></a>Property 过程 (Visual Basic)
 
-A property procedure is a series of Visual Basic statements that manipulate a custom property on a module, class, or structure. Property procedures are also known as *property accessors*.
+属性过程是一系列 Visual Basic 语句，这些语句操作模块、类或结构上的自定义属性。 属性过程也称为*属性访问器*。
 
-Visual Basic provides for the following property procedures:
+Visual Basic 为以下属性过程提供：
 
-- A `Get` procedure returns the value of a property. It is called when you access the property in an expression.
-- A `Set` procedure sets a property to a value, including an object reference. It is called when you assign a value to the property.
+- `Get` 过程将返回属性的值。 当您访问表达式中的属性时，将调用它。
+- `Set` 过程将属性设置为一个值，包括对象引用。 向属性赋值时，将调用此方法。
 
-You usually define property procedures in pairs, using the `Get` and `Set` statements, but you can define either procedure alone if the property is read-only ([Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md)) or write-only ([Set Statement](../../../../visual-basic/language-reference/statements/set-statement.md)).
+通常使用 `Get` 和 `Set` 语句来成对定义属性过程，但是，如果属性为只读（[Get 语句](../../../../visual-basic/language-reference/statements/get-statement.md)）或只写（[Set 语句](../../../../visual-basic/language-reference/statements/set-statement.md)），则可以单独定义任何一个过程。
 
-You can omit the `Get` and `Set` procedure when using an auto-implemented property. 有关详细信息，请参阅[自动实现的属性](./auto-implemented-properties.md)。
+使用自动实现的属性时，可以省略 `Get` 和 `Set` 过程。 有关详细信息，请参阅[自动实现的属性](./auto-implemented-properties.md)。
 
-You can define properties in classes, structures, and modules. Properties are `Public` by default, which means you can call them from anywhere in your application that can access the property's container.
+可以在类、结构和模块中定义属性。 默认情况下 `Public` 属性，这意味着可以从应用程序中可访问该属性的容器的任何位置调用这些属性。
 
-For a comparison of properties and variables, see [Differences Between Properties and Variables in Visual Basic](differences-between-properties-and-variables.md).
+有关属性和变量的比较，请参阅[Visual Basic 中属性和变量之间的差异](differences-between-properties-and-variables.md)。
 
-## <a name="declaration-syntax"></a>Declaration syntax
+## <a name="declaration-syntax"></a>声明语法
 
-A property itself is defined by a block of code enclosed within the [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement. Inside this block, each property procedure appears as an internal block enclosed within a declaration statement (`Get` or `Set`) and the matching `End` declaration.
+属性本身由[属性语句](../../../../visual-basic/language-reference/statements/property-statement.md)和 `End Property` 语句中包含的代码块定义。 在此块中，每个属性过程显示为包含在声明语句（`Get` 或 `Set`）和匹配 `End` 声明中的内部块。
 
-The syntax for declaring a property and its procedures is as follows:
+声明属性及其过程的语法如下所示：
 
 ```vb
 [Default] [Modifiers] Property PropertyName[(ParameterList)] [As DataType]
@@ -60,74 +60,74 @@ End Property
 [Default] [Modifiers] Property PropertyName [(ParameterList)] [As DataType]
 ```
 
-The `Modifiers` can specify access level and information regarding overloading, overriding, sharing, and shadowing, as well as whether the property is read-only or write-only. The `AccessLevel` on the `Get` or `Set` procedure can be any level that is more restrictive than the access level specified for the property itself. For more information, see [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md).
+`Modifiers` 可以指定有关重载、重写、共享和隐藏以及属性是只读还是只写的信息。 `Get` 或 `Set` 过程中的 `AccessLevel` 可以是比为属性本身指定的访问级别更严格的任何级别。 有关详细信息，请参阅[Property 语句](../../../../visual-basic/language-reference/statements/property-statement.md)。
 
 ### <a name="data-type"></a>数据类型
 
-A property's data type and principal access level are defined in the `Property` statement, not in the property procedures. A property can have only one data type. For example, you cannot define a property to store a `Decimal` value but retrieve a `Double` value.
+属性的数据类型和主体访问级别在 `Property` 语句中定义，而不是在属性过程中定义。 属性只能有一种数据类型。 例如，不能将属性定义为存储 `Decimal` 值，而是检索 `Double` 值。
 
-### <a name="access-level"></a>Access Level
+### <a name="access-level"></a>访问级别
 
-However, you can define a principal access level for a property and further restrict the access level in one of its property procedures. For example, you can define a `Public` property and then define a `Private Set` procedure. The `Get` procedure remains `Public`. You can change the access level in only one of a property's procedures, and you can only make it more restrictive than the principal access level. For more information, see [How to: Declare a Property with Mixed Access Levels](how-to-declare-a-property-with-mixed-access-levels.md).
+但是，您可以为属性定义主体访问级别，并在它的某个属性过程中进一步限制访问级别。 例如，您可以定义一个 `Public` 属性，然后定义 `Private Set` 的过程。 `Get` 过程保持 `Public`。 只能更改某个属性过程的访问级别，并且只能使其比主体访问级别更严格。 有关详细信息，请参阅[如何：声明具有混合访问级别的属性](how-to-declare-a-property-with-mixed-access-levels.md)。
 
-## <a name="parameter-declaration"></a>Parameter declaration
+## <a name="parameter-declaration"></a>参数声明
 
-You declare each parameter the same way you do for [Sub Procedures](sub-procedures.md), except that the passing mechanism must be `ByVal`.
+声明每个参数的方式与处理[Sub 过程](sub-procedures.md)的方法相同，不同之处在于传递机制必须 `ByVal`。
 
-The syntax for each parameter in the parameter list is as follows:
+参数列表中每个参数的语法如下所示：
 
 ```vb
 [Optional] ByVal [ParamArray] parametername As datatype
 ```
 
-If the parameter is optional, you must also supply a default value as part of its declaration. The syntax for specifying a default value is as follows:
+如果该参数是可选的，则还必须提供默认值作为其声明的一部分。 指定默认值的语法如下所示：
 
 ```vb
 Optional ByVal parametername As datatype = defaultvalue
 ```
 
-## <a name="property-value"></a>Property value
+## <a name="property-value"></a>属性值
 
-In a `Get` procedure, the return value is supplied to the calling expression as the value of the property.
+在 `Get` 过程中，返回值作为属性的值提供给调用表达式。
 
-In a `Set` procedure, the new property value is passed to the parameter of the `Set` statement. If you explicitly declare a parameter, you must declare it with the same data type as the property. If you do not declare a parameter, the compiler uses the implicit parameter `Value` to represent the new value to be assigned to the property.
+在 `Set` 过程中，新属性值将传递给 `Set` 语句的参数。 如果显式声明了某个参数，则必须使用与属性相同的数据类型声明该参数。 如果不声明参数，编译器将使用隐式参数 `Value` 来表示要分配给属性的新值。
 
-## <a name="calling-syntax"></a>Calling syntax
+## <a name="calling-syntax"></a>调用语法
 
-You invoke a property procedure implicitly by making reference to the property. You use the name of the property the same way you would use the name of a variable, except that you must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses. If no arguments are supplied, you can optionally omit the parentheses.
+通过引用属性，可以隐式调用属性过程。 使用属性的名称的方式与使用变量名称相同，只是必须为所有非可选参数提供值，并且必须将参数列表括在括号中。 如果未提供任何参数，则可以选择省略括号。
 
-The syntax for an implicit call to a `Set` procedure is as follows:
+隐式调用 `Set` 过程的语法如下所示：
 
 ```vb
 propertyname[(argumentlist)] = expression
 ```
 
-The syntax for an implicit call to a `Get` procedure is as follows:
+隐式调用 `Get` 过程的语法如下所示：
 
 ```vb
 lvalue = propertyname[(argumentlist)]
 Do While (propertyname[(argumentlist)] > expression)
 ```
 
-### <a name="illustration-of-declaration-and-call"></a>Illustration of declaration and call
+### <a name="illustration-of-declaration-and-call"></a>声明和调用的插图
 
-The following property stores a full name as two constituent names, the first name and the last name. When the calling code reads `fullName`, the `Get` procedure combines the two constituent names and returns the full name. When the calling code assigns a new full name, the `Set` procedure attempts to break it into two constituent names. If it does not find a space, it stores it all as the first name.
+以下属性将全名存储为两个构成名称：名字和姓氏。 当调用代码读取 `fullName`时，`Get` 过程合并两个构成名称并返回全名。 当调用代码分配新的全名时，`Set` 过程会尝试将其分成两个构成名称。 如果找不到空间，则会将其存储为名字。
 
 [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]
 
-The following example shows typical calls to the property procedures of `fullName`:
+下面的示例演示对 `fullName`的属性过程的典型调用：
 
 [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [过程](index.md)
 - [Function 过程](function-procedures.md)
 - [运算符过程](operator-procedures.md)
 - [过程参数和自变量](procedure-parameters-and-arguments.md)
-- [Differences Between Properties and Variables in Visual Basic](differences-between-properties-and-variables.md)
+- [Visual Basic 中的属性和变量之间的差异](differences-between-properties-and-variables.md)
 - [如何：创建属性](how-to-create-a-property.md)
 - [如何：调用 Property 过程](how-to-call-a-property-procedure.md)
-- [How to: Declare and Call a Default Property in Visual Basic](how-to-declare-and-call-a-default-property.md)
+- [如何：在 Visual Basic 中声明和调用默认属性](how-to-declare-and-call-a-default-property.md)
 - [如何：在属性中放置值](how-to-put-a-value-in-a-property.md)
 - [如何：从属性获取值](how-to-get-a-value-from-a-property.md)

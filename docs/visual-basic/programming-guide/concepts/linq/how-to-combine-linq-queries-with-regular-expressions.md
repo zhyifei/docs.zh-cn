@@ -1,5 +1,5 @@
 ---
-title: How to combine LINQ queries with regular expressions
+title: 如何将 LINQ 查询与正则表达式合并在一起
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
 ms.openlocfilehash: 27fc46056ad78567339ca0c5818aef38d0fbb9a6
@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348423"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>How to combine LINQ queries with regular expressions (Visual Basic)
+# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>如何结合 LINQ 查询与正则表达式（Visual Basic）
 
 此示例演示如何使用 <xref:System.Text.RegularExpressions.Regex> 类在文本字符串中为更复杂的匹配创建正则表达式。 通过 LINQ 查询可以轻松地准确筛选要用正则表达式搜索的文件，并对结果进行改良。
 
@@ -82,13 +82,13 @@ Class LinqRegExVB
 End Class
 ```
 
-请注意，还可以查询 `RegEx` 搜索返回的 <xref:System.Text.RegularExpressions.MatchCollection> 对象。 在本例中，只在结果中生成每个匹配项的值。 但是，也可以使用 LINQ 对集合执行筛选、排序和分组等各种操作。 由于 <xref:System.Text.RegularExpressions.MatchCollection> 为非泛型 <xref:System.Collections.IEnumerable> 集合，所以必须显式声明查询中范围变量的类型。
+请注意，还可以查询 <xref:System.Text.RegularExpressions.MatchCollection> 搜索返回的 `RegEx` 对象。 在本例中，只在结果中生成每个匹配项的值。 但是，也可以使用 LINQ 对集合执行筛选、排序和分组等各种操作。 由于 <xref:System.Text.RegularExpressions.MatchCollection> 为非泛型 <xref:System.Collections.IEnumerable> 集合，所以必须显式声明查询中范围变量的类型。
 
 ## <a name="compiling-the-code"></a>编译代码
 
-Create a VB.NET console application project, copy and paste the code sample, and adjust the Startup object value in the project properties.
+创建 VB.NET 控制台应用程序项目，复制并粘贴代码示例，并调整项目属性中的启动对象值。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [LINQ and Strings (Visual Basic)](linq-and-strings.md)
+- [LINQ 和字符串（Visual Basic）](linq-and-strings.md)
 - [LINQ 和文件目录 (Visual Basic)](linq-and-file-directories.md)

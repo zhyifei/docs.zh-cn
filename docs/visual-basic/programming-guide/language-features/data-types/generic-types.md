@@ -48,7 +48,7 @@ ms.locfileid: "74350125"
   
  就好比是带有可拆卸刀头的螺丝刀。 你检查需要拧动的螺丝，然后选择适合该螺丝的刀头（一字、十字、星形）。 将正确的刀头插入到螺丝刀柄上后，你就可以使用螺丝刀执行完全相同的功能，即拧螺丝。  
   
- ![Diagram of a screwdriver set with different heads.](./media/generic-types/generic-screwdriver-set.gif)  
+ ![具有不同磁头的平头集的图示。](./media/generic-types/generic-screwdriver-set.gif)  
   
  定义泛型类型时，即使用一个或多个数据类型将其参数化。 这样可允许使用代码定制数据类型以满足其要求。 代码可以通过泛型元素声明若干个不同的编程元素，每个元素可使用一组不同的数据类型。 但是，无论声明的元素使用哪些数据类型，它们均执行相同的逻辑。  
   
@@ -73,10 +73,10 @@ ms.locfileid: "74350125"
   
  [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
- For a more complete example, see [How to: Define a Class That Can Provide Identical Functionality on Different Data Types](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
+ 有关更完整的示例，请参阅[如何：定义可在不同数据类型上提供相同功能的类](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)。  
   
 ## <a name="eligible-programming-elements"></a>合格的编程元素  
- 你可以定义并使用泛型类、结构、接口、过程和委托。 Note that the .NET Framework defines several generic classes, structures, and interfaces that represent commonly used generic elements. <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间提供字典、列表、队列和堆栈。 在定义自己的泛型元素之前，请查看 <xref:System.Collections.Generic?displayProperty=nameWithType>中是否已提供了此元素。  
+ 你可以定义并使用泛型类、结构、接口、过程和委托。 请注意，.NET Framework 定义了几个泛型类、结构和表示常用泛型元素的接口。 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间提供字典、列表、队列和堆栈。 在定义自己的泛型元素之前，请查看 <xref:System.Collections.Generic?displayProperty=nameWithType>中是否已提供了此元素。  
   
  过程不是类型，但可以定义并使用泛型过程。 请参阅 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "74350125"
   
 - **类型安全。** 泛型类型强制实施编译时类型检查。 而基于 `Object` 的类型可接受任何数据类型，因此，你必须编写代码以检查是否可接受某种输入数据类型。 通过泛型类型，编译器可以在运行时之前捕获类型的不匹配。  
   
-- **性能。** 泛型类型无需对数据进行 *装箱* 和 *取消装箱* 操作，原因是每种泛型类型均专用于一种数据类型。 而基于 `Object` 的操作必须将输入数据类型进行装箱，以将它们转换为 `Object` ，而且还将对预定输出的数据进行取消装箱操作。 装箱和取消装箱操作会降低性能。  
+- **性能。** 泛型类型无需对数据进行 *装箱* 和 *un装箱* 操作，原因是每种泛型类型均专用于一种数据类型。 而基于 `Object` 的操作必须将输入数据类型进行装箱，以将它们转换为 `Object` ，而且还将对预定输出的数据进行取消装箱操作。 装箱和取消装箱操作会降低性能。  
   
      此外，还要对基于 `Object` 的类型进行晚期绑定，这意味着需要编写额外的代码才能在运行时访问它们的成员。 这同样会降低性能。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "74350125"
   
 - 类型实参必须是 *引用类型*或 *值类型*  
   
- 如果需要强制实施多个要求，则可以使用以逗号分隔的 *约束列表* （括在大括号 (`{ }`) 内）。 To require an accessible constructor, you include the [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) keyword in the list. 若需要引用类型，请加入 `Class` 关键字；若需要值类型，请加入 `Structure` 关键字。  
+ 如果需要强制实施多个要求，则可以使用以逗号分隔的 *约束列表* （括在大括号 (`{ }`) 内）。 若要需要可访问的构造函数，请在列表中包含[New 运算符](../../../../visual-basic/language-reference/operators/new-operator.md)关键字。 若需要引用类型，请加入 `Class` 关键字；若需要值类型，请加入 `Structure` 关键字。  
   
  有关约束的详细信息，请参阅 [Type List](../../../../visual-basic/language-reference/statements/type-list.md)。  
   
@@ -146,12 +146,12 @@ ms.locfileid: "74350125"
   
 - *构造类型*。 通过为泛型类型的类型形参提供类型实参，从泛型类型声明的类、结构、接口、过程或委托。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [类型字符](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [数据类型](../../../../visual-basic/language-reference/data-types/index.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)

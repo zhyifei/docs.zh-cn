@@ -12,13 +12,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350798"
 ---
 # <a name="subscript-out-of-range-visual-basic"></a>下标超出范围 (Visual Basic)
-An array subscript is not valid because it falls outside the allowable range. The lowest subscript value for a dimension is always 0, and the highest subscript value is returned by the `GetUpperBound` method for that dimension.  
+数组下标无效，因为它超出了允许的范围。 维度的最低下标值始终为0，最大下标值由该维度的 `GetUpperBound` 方法返回。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-- Change the subscript so it falls within the valid range.  
+- 更改下标，使其位于有效范围内。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType>
 - [数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)

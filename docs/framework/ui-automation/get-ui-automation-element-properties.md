@@ -19,28 +19,28 @@ ms.locfileid: "74435496"
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
- This topic shows how to retrieve properties of a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] element.  
+ 本主题演示如何检索 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 元素的属性。  
   
-### <a name="get-a-current-property-value"></a>Get a Current Property Value  
+### <a name="get-a-current-property-value"></a>获取当前属性值  
   
-1. Obtain the <xref:System.Windows.Automation.AutomationElement> whose property you wish to get.  
+1. 获取要获取其属性的 <xref:System.Windows.Automation.AutomationElement>。  
   
-2. Call <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>, or retrieve the <xref:System.Windows.Automation.AutomationElement.Current%2A> property structure and get the value from one of its members.  
+2. 调用 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>，或检索 <xref:System.Windows.Automation.AutomationElement.Current%2A> 属性结构并从其成员之一获取值。  
   
-### <a name="get-a-cached-property-value"></a>Get a Cached Property Value  
+### <a name="get-a-cached-property-value"></a>获取缓存的属性值  
   
-1. Obtain the <xref:System.Windows.Automation.AutomationElement> whose property you wish to get. The property must have been specified in the <xref:System.Windows.Automation.CacheRequest>.  
+1. 获取要获取其属性的 <xref:System.Windows.Automation.AutomationElement>。 必须已在 <xref:System.Windows.Automation.CacheRequest>中指定了属性。  
   
-2. Call <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>, or retrieve the <xref:System.Windows.Automation.AutomationElement.Cached%2A> property structure and get the value from one of its members.  
+2. 调用 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>，或检索 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 属性结构并从其成员之一获取值。  
   
 ## <a name="example"></a>示例  
- The following example shows various ways to retrieve current properties of an <xref:System.Windows.Automation.AutomationElement>.  
+ 下面的示例演示了检索 <xref:System.Windows.Automation.AutomationElement>的当前属性的各种方法。  
   
  [!code-csharp[UIAClient_snip#170](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#170)]
  [!code-vb[UIAClient_snip#170](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#170)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [客户端的 UI 自动化属性](ui-automation-properties-for-clients.md)
+- [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)
 - [在 UI 自动化中使用缓存](use-caching-in-ui-automation.md)
-- [在 UI 自动化客户端中缓存](caching-in-ui-automation-clients.md)
+- [Caching in UI Automation Clients](caching-in-ui-automation-clients.md)

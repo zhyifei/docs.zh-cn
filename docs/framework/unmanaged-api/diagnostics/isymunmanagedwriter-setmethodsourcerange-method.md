@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427863"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>ISymUnmanagedWriter::SetMethodSourceRange 方法
-Specifies the true start and end of a method within a source file. Use this method to specify the extent of a method independently of the sequence points that exist within the method.  
+指定源文件内方法的真正开始和结尾。 使用此方法可以独立于方法中存在的序列点来指定方法的范围。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,29 +39,29 @@ HRESULT SetMethodSourceRange(
   
 ## <a name="parameters"></a>参数  
  `startDoc`  
- [in] A pointer to the document containing the starting position.  
+ 中指向包含起始位置的文档的指针。  
   
  `startLine`  
- [in] The starting line number.  
+ 中起始行号。  
   
  `startColumn`  
- [in] The starting column.  
+ 中起始列。  
   
  `endDoc`  
- [in] A pointer to the document containing the ending position.  
+ 中指向包含结束位置的文档的指针。  
   
  `endLine`  
- [in] The ending line number.  
+ 中结束行号。  
   
  `endColumn`  
- [in] The ending column number.  
+ 中结束列号。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

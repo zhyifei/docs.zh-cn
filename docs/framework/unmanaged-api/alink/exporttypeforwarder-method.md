@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448707"
 ---
 # <a name="exporttypeforwarder-method"></a>ExportTypeForwarder 方法
-Adds a type forwarder to the type table of the given assembly.  
+将类型转发器添加到给定程序集的类型表。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,24 +37,24 @@ HRESULT ExportTypeForwarder(
   
 ## <a name="parameters"></a>参数  
  `tkAssemblyRef`  
- Reference to the assembly to which the type forwarder refers.  
+ 对类型转发器所引用的程序集的引用。  
   
  `pszTypename`  
- Fully qualified type name to export.  
+ 要导出的完全限定的类型名称。  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`. This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType` 标志，如 `tdPublic` 或 `tdNested`。 此值可传递给[DefineExportedType 方法](../metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
   
  `pType`  
- Receives the token of the exported type. This is necessary only for emitting nested types.  
+ 接收导出类型的标记。 这仅适用于发出嵌套类型。  
   
 ## <a name="return-value"></a>返回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- Requires alink.h  
+ 需要 alink  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IALink 接口](ialink-interface.md)
 - [IALink2 接口](ialink2-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435922"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>ICorProfilerCallback::ClassUnloadFinished 方法
-Notifies the profiler that a class has finished unloading.  
+通知探查器类已经完成卸载。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,13 +35,13 @@ HRESULT ClassUnloadFinished(
   
 ## <a name="parameters"></a>参数  
  `classId`  
- [in] Identifies the class that was unloaded.  
+ 中标识已卸载的类。  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the class was unloaded successfully.  
+ 中指示是否已成功卸载类的 HRESULT。  
   
 ## <a name="remarks"></a>备注  
- Some parts of unloading the class might continue after the `ClassUnloadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the class has succeeded.  
+ 在 `ClassUnloadFinished` 回调后，卸载类的某些部分可能会继续。 如果 `hrStatus` 失败，则指示失败。 不过，`hrStatus` 中的 HRESULT 成功仅指示卸载类的第一部分已成功。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -52,7 +52,7 @@ HRESULT ClassUnloadFinished(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ClassUnloadStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadstarted-method.md)

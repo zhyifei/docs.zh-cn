@@ -18,6 +18,6 @@ ms.locfileid: "74353861"
   
 - 阅读有关对象详细信息的文档并检查属性和方法的拼写。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [错误类型](../../visual-basic/programming-guide/language-features/error-types.md)

@@ -26,23 +26,23 @@ Skip count
   
 ## <a name="parts"></a>部件  
  `count`  
- 必须的。 A value or an expression that evaluates to the number of elements of the sequence to skip.  
+ 必需。 值或计算结果为要跳过的序列的元素数的表达式。  
   
 ## <a name="remarks"></a>备注  
- The `Skip` clause causes a query to bypass elements at the beginning of a results list and return the remaining elements. The number of elements to skip is identified by the `count` parameter.  
+ `Skip` 子句使查询绕过结果列表开头的元素，并返回剩余的元素。 要跳过的元素数由 `count` 参数标识。  
   
- You can use the `Skip` clause with the `Take` clause to return a range of data from any segment of a query. To do this, pass the index of the first element of the range to the `Skip` clause and the size of the range to the `Take` clause.  
+ 可以将 `Skip` 子句与 `Take` 子句一起使用，以从查询的任何段返回数据范围。 为此，请将范围中第一个元素的索引传递到 `Skip` 子句，并将范围的大小传递到 `Take` 子句。  
   
- When you use the `Skip` clause in a query, you may also need to ensure that the results are returned in an order that will enable the `Skip` clause to bypass the intended results. For more information about ordering query results, see [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ 在查询中使用 `Skip` 子句时，您可能还需要确保按使 `Skip` 子句跳过预期结果的顺序返回结果。 有关对查询结果进行排序的详细信息，请参阅[Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)。  
   
- You can use the `SkipWhile` clause to specify that only certain elements are ignored, depending on a supplied condition.  
+ 您可以使用 `SkipWhile` 子句来指定仅忽略某些元素，具体取决于所提供的条件。  
   
 ## <a name="example"></a>示例  
- The following code example uses the `Skip` clause together with the `Take` clause to return data from a query in pages. The `GetCustomers` function uses the `Skip` clause to bypass the customers in the list until the supplied starting index value, and uses the `Take` clause to return a page of customers starting from that index value.  
+ 下面的代码示例将 `Skip` 子句与 `Take` 子句一起使用，以便在页中从查询返回数据。 `GetCustomers` 函数使用 `Skip` 子句跳过列表中的客户，直至提供的起始索引值，并使用 `Take` 子句返回从该索引值开始的客户页面。  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [查询](../../../visual-basic/language-reference/queries/index.md)

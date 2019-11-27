@@ -51,7 +51,7 @@ HRESULT AttachProfiler(
  [in] 要加载的探查器 DLL 文件的完整路径。 此字符串应包含不超过 260 个字符，包括 null 终止符。 如果 `wszProfilerPath` 为 null 或为空字符串，公共语言运行时 (CLR) 将通过在 `pClsidProfiler` 指向的 CLSID 的注册表中查找探查器的 DLL 文件的位置。  
   
  `pvClientData`  
- [in] A pointer to data to be passed to the profiler by the [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method. `AttachProfiler` 返回后，触发器进程可重用此内存。 如果 `pvClientData` 为 null，`cbClientData` 必须为 0（零）。  
+ 中指向由[ICorProfilerCallback3：： InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)方法传递到探查器的数据的指针。 `AttachProfiler` 返回后，触发器进程可重用此内存。 如果 `pvClientData` 为 null，`cbClientData` 必须为 0（零）。  
   
  `cbClientData`  
  [in] `pvClientData` 指向的数据的大小（以字节为单位）。  
@@ -59,7 +59,7 @@ HRESULT AttachProfiler(
 ## <a name="return-value"></a>返回值  
  此方法将返回以下 HRESULT。  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
 |S_OK|指定的探查器已成功附加到目标进程中。|  
 |CORPROF_E_PROFILER_ALREADY_ACTIVE|已有活动的或附加到目标进程的探查器。|  
@@ -72,7 +72,7 @@ HRESULT AttachProfiler(
 |HRESULT_FROM_WIN32(ERROR_TIMEOUT)|尚未开始加载探查器，超时就已过期。 可重试附加操作。 当目标进程中的终结器运行时间长于超时值时，就会出现超时。|  
 |E_INVALIDARG|一个或多个参数具有无效值。|  
 |E_FAIL|出现其他未指定错误。|  
-|其他错误代码|If the profiler’s [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method returns an HRESULT that indicates failure, `AttachProfiler` returns that same HRESULT. 在这种情况下，E_NOTIMPL 将转换为 CORPROF_E_PROFILER_NOT_ATTACHABLE。|  
+|其他错误代码|如果探查器的[ICorProfilerCallback3：： InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)方法返回一个指示失败的 hresult，则 `AttachProfiler` 返回相同的 hresult。 在这种情况下，E_NOTIMPL 将转换为 CORPROF_E_PROFILER_NOT_ATTACHABLE。|  
   
 ## <a name="remarks"></a>备注  
   
@@ -88,7 +88,7 @@ HRESULT AttachProfiler(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerInfo3 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)

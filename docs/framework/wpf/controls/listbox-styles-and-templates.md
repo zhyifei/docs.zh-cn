@@ -27,7 +27,7 @@ ms.locfileid: "74283745"
 ## <a name="listbox-states"></a>ListBox 状态  
  下表列出了 <xref:System.Windows.Controls.ListBox> 控件的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
 |有效|ValidationStates|控件有效。|  
 |InvalidFocused|ValidationStates|控件无效，但具有焦点。|  
@@ -39,12 +39,12 @@ ms.locfileid: "74283745"
 ## <a name="listboxitem-states"></a>ListBoxItem 状态  
  下表列出了 <xref:System.Windows.Controls.ListBox> 控件的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
-|一般|CommonStates|默认状态。|  
+|正常|CommonStates|默认状态。|  
 |MouseOver|CommonStates|鼠标指针悬停在控件上。|  
-|Disabled|CommonStates|该项已禁用。|  
-|已设定焦点|FocusStates|该项有焦点。|  
+|已禁用|CommonStates|该项已禁用。|  
+|Focused|FocusStates|该项有焦点。|  
 |失去焦点|FocusStates|该项没有焦点。|  
 |未选定|SelectionStates|未选定该项。|  
 |已选定|SelectionStates|该项当前已选定。|  

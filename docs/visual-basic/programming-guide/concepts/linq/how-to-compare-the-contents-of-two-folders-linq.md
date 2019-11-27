@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348401"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>如何：比较两个文件夹的内容（LINQ）（Visual Basic）
 
 此示例演示了比较两个文件列表的 3 种方法：
 
@@ -116,9 +116,9 @@ End Module
 
 ## <a name="compiling-the-code"></a>编译代码
 
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+使用 VB.NET 命名空间的 `Imports` 语句创建一个控制台应用程序项目。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

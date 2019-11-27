@@ -74,7 +74,7 @@ Private Async Sub startButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub
 ```
 
-多次运行程序以验证输出是否显示所有网站的输出、不显示网站的输出或显示某些网站的输出。 The following output is a sample:
+多次运行程序以验证输出是否显示所有网站的输出、不显示网站的输出或显示某些网站的输出。 下面的输出是一个示例：
 
 ```console
 Length of the downloaded string: 35990.
@@ -193,10 +193,10 @@ End Class
 ' Downloads canceled.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [演练：使用 Async 和 Await 访问 Web (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [取消异步任务或任务列表 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
 - [微调异步应用程序 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [异步示例：微调应用程序](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）

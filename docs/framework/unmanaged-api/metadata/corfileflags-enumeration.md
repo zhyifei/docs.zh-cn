@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445417"
 ---
 # <a name="corfileflags-enumeration"></a>CorFileFlags 枚举
-Contains values that describe the type of file defined in a call to [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+包含一些值，这些值描述在对[IMetaDataAssemblyEmit：:D efinefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)的调用中定义的文件类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,18 +37,18 @@ typedef enum CorFileFlags {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`ffContainsMetaData`|Indicates that the file is not a resource file.|  
-|`ffContainsNoMetaData`|Indicates that the file, possibly a resource file, does not contain metadata.|  
+|`ffContainsMetaData`|指示该文件不是资源文件。|  
+|`ffContainsNoMetaData`|指示文件可能不包含元数据，可能是资源文件。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **标头：** Corhdr。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

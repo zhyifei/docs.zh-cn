@@ -20,29 +20,29 @@ ms.locfileid: "74350023"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>如何：在一个变量中保存多个值 (Visual Basic)
 
-A variable holds more than one value if you declare it to be of a *composite data type*.
+如果将变量声明为*复合数据类型*，则该变量包含多个值。
 
-[Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) include structures, arrays, and classes. A variable of a composite data type can hold a combination of elementary data types and other composite types. Structures and classes can hold code as well as data.
+[复合数据类型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)包括结构、数组和类。 复合数据类型的变量可以包含基本数据类型和其他复合类型的组合。 结构和类可以保存代码以及数据。
 
-## <a name="to-hold-more-than-one-value-in-a-variable"></a>To hold more than one value in a variable
+## <a name="to-hold-more-than-one-value-in-a-variable"></a>在一个变量中保存多个值
 
-1. Determine what composite data type you want to use for your variable.
+1. 确定要为变量使用哪种复合数据类型。
 
-2. If the composite data type is not already defined, define it so that your variable can use it.
+2. 如果尚未定义复合数据类型，请对其进行定义，使变量可以使用它。
 
-    - Define a structure with a [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md).
+    - 使用[结构语句](../../../../visual-basic/language-reference/statements/structure-statement.md)定义结构。
 
-    - Define an array with a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).
+    - 定义带有[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)的数组。
 
-    - Define a class with a [Class Statement](../../../../visual-basic/language-reference/statements/class-statement.md).
+    - 使用[类语句](../../../../visual-basic/language-reference/statements/class-statement.md)定义类。
 
-3. Declare your variable with a `Dim` statement.
+3. 使用 `Dim` 语句声明变量。
 
-4. Follow the variable name with an `As` clause.
+4. 使用 `As` 子句的变量名称。
 
-5. Follow the `As` keyword with the name of the appropriate composite data type.
+5. 在 `As` 关键字后跟适当的复合数据类型的名称。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据类型](../../../../visual-basic/language-reference/data-types/index.md)
 - [类型字符](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

@@ -16,19 +16,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351375"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
-Specifies that a procedure parameter takes an optional array of elements of the specified type. `ParamArray` can be used only on the last parameter of a parameter list.  
+指定过程参数采用指定类型的可选元素数组。 `ParamArray` 只能在参数列表的最后一个参数上使用。  
   
 ## <a name="remarks"></a>备注  
- `ParamArray` allows you to pass an arbitrary number of arguments to the procedure. A `ParamArray` parameter is always declared using [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).  
+ `ParamArray` 允许将任意数量的参数传递给过程。 始终使用[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)声明 `ParamArray` 参数。  
   
- You can supply one or more arguments to a `ParamArray` parameter by passing an array of the appropriate data type, a comma-separated list of values, or nothing at all. For details, see "Calling a ParamArray" in [Parameter Arrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
+ 可以通过传递适当的数据类型的数组、以逗号分隔的值列表，或根本不提供任何内容，为 `ParamArray` 参数提供一个或多个参数。 有关详细信息，请参阅[参数数组](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)中的 "调用 ParamArray"。  
   
 > [!IMPORTANT]
-> Whenever you deal with an array which can be indefinitely large, there is a risk of overrunning some internal capacity of your application. If you accept a parameter array from the calling code, you should test its length and take appropriate steps if it is too large for your application.  
+> 无论何时处理可能会无限大的阵列，都有 overrunning 应用程序的一些内部容量的风险。 如果接受来自调用代码的参数数组，则应测试其长度，如果应用程序太大，则应采取适当的措施。  
   
  `ParamArray` 修饰符可用于下面的上下文中：  
   
- [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
  [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)  
   
@@ -36,7 +36,7 @@ Specifies that a procedure parameter takes an optional array of elements of the 
   
  [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [关键字](../../../visual-basic/language-reference/keywords/index.md)
 - [参数数组](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)

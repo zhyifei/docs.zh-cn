@@ -36,11 +36,11 @@ typedef enum {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`PROFILER_PARENT_UNKNOWN`|The default identifier used by [ICorProfilerInfo::GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) for a module that has not yet been attached to an assembly.|  
-|`PROFILER_GLOBAL_CLASS`|The default class identifier for global constants that do not belong to a class.|  
-|`PROFILER_GLOBAL_MODULE`|The default module identifier for global objects that do not belong to a module.|  
+|`PROFILER_PARENT_UNKNOWN`|[ICorProfilerInfo：： GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md)用于尚未附加到程序集的模块的默认标识符。|  
+|`PROFILER_GLOBAL_CLASS`|不属于类的全局常数的默认类标识符。|  
+|`PROFILER_GLOBAL_MODULE`|不属于模块的全局对象的默认模块标识符。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -51,6 +51,6 @@ typedef enum {
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

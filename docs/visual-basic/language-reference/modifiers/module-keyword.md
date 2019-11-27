@@ -1,5 +1,5 @@
 ---
-title: Module <keyword>
+title: 模块 <keyword>
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ModuleAttribute
@@ -15,18 +15,18 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351549"
 ---
-# <a name="module-keyword-visual-basic"></a>Module \<keyword> (Visual Basic)
-Specifies that an attribute at the beginning of a source file applies to the current assembly module.  
+# <a name="module-keyword-visual-basic"></a>模块 \<关键字 > （Visual Basic）
+指定源文件开头的属性应用于当前程序集模块。  
   
 ## <a name="remarks"></a>备注  
- Many attributes pertain to an individual programming element, such as a class or property. You apply such an attribute by attaching the attribute block, within angle brackets (`< >`), directly to the declaration statement.  
+ 许多属性都属于单个编程元素，如类或属性。 您可以通过将特性块附加到尖括号（`< >`）中的属性块来应用此类属性，以便将其直接附加到声明语句。  
   
- If an attribute pertains not only to the following element but to the current assembly module, you place the attribute block at the beginning of the source file and identify the attribute with the `Module` keyword. If it applies to the entire assembly, you use the [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) keyword.  
+ 如果特性不仅与以下元素有关，而与当前程序集模块有关，请将特性块放在源文件的开头，并使用 `Module` 关键字标识特性。 如果它适用于整个程序集，则可以使用[assembly](../../../visual-basic/language-reference/modifiers/assembly.md)关键字。  
   
- The `Module` modifier is not the same as the [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).  
+ `Module` 修饰符与[Module 语句](../../../visual-basic/language-reference/statements/module-statement.md)不同。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
+- [程序集](../../../visual-basic/language-reference/modifiers/assembly.md)
 - [Module 语句](../../../visual-basic/language-reference/statements/module-statement.md)
 - [属性概述](../../../visual-basic/programming-guide/concepts/attributes/index.md)

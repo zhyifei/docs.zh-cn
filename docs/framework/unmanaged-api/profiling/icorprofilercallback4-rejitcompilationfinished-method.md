@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439309"
 ---
 # <a name="icorprofilercallback4rejitcompilationfinished-method"></a>ICorProfilerCallback4::ReJITCompilationFinished 方法
-Notifies the profiler that the just-in-time (JIT) compiler has finished recompiling a function.  
+通知探查器实时（JIT）编译器已完成对某个函数的重新编译。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,18 +36,18 @@ HRESULT ReJITCompilationFinished(
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in] The ID of the function that was recompiled.  
+ 中已重新编译的函数的 ID。  
   
  `rejitId`  
  [in] JIT 重新编译的函数的标识。  
   
  `hrStatus`  
- [in] A value that indicates whether the JIT recompilation was successful.  
+ 中一个值，该值指示 JIT 重新编译是否成功。  
   
  `fIsSafeToBlock`  
- [in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime.  
+ [in] `true` 指示阻止可能导致运行时等待调用线程从此回调返回;`false`，指示阻止操作不会影响运行时的操作。  
   
- A value of `true` does not harm the runtime, but can affect the profiling results.  
+ 值 `true` 不会损害运行时，但会影响分析结果。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -58,7 +58,7 @@ HRESULT ReJITCompilationFinished(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerCallback4 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

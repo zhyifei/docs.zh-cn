@@ -13,15 +13,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331498"
 ---
 # <a name="concatenation-operators-visual-basic"></a>串联运算符 (Visual Basic)
-The following are the concatenation operators defined in Visual Basic.  
+下面是 Visual Basic 中定义的串联运算符。  
   
  [& 运算符](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
   
  [+ 运算符](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Text>
 - <xref:System.Text.StringBuilder>
 - [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Concatenation Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Visual Basic 中的串联运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

@@ -27,7 +27,7 @@ ms.locfileid: "74347882"
   
  有关清单创建的详细信息，请参阅 [-win32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/win32manifest.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [“项目设计器”->“应用程序”页 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

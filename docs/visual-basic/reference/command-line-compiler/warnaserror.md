@@ -22,9 +22,9 @@ ms.locfileid: "74351711"
 -warnaserror[+ | -][:numberList]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
   
-|术语|定义|  
+|术语|Definition|  
 |---|---|  
 |+ &#124; -|可选。 默认情况下，`-warnaserror-` 生效；警告不会阻止编译器生成输出文件。 `-warnaserror` 选项与 `-warnaserror+` 相同，会导致将警告视为错误。|  
 |`numberList`|可选。 `-warnaserror` 选项适用的警告 ID 编号列表，以逗号分隔。 如果未指定警告 ID，则 `-warnaserror` 选项适用于所有警告。|  
@@ -41,11 +41,11 @@ ms.locfileid: "74351711"
   
 |设置 -warnaserror 以将所有警告视为 Visual Studio IDE 中的错误|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. 在“项目”菜单上，单击“属性”。 <br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Check the **Treat all warnings as errors** check box.|  
+|1. 在**解决方案资源管理器**中选择了一个项目。 在“项目”菜单上，单击“属性”。 <br />2. 单击 "**编译**" 选项卡。<br />3. 确保未选中 "**禁用所有警告**" 复选框。<br />4. 选中 "将**所有警告视为错误**" 复选框。|  
   
 |设置 -warnaserror 以将特定警告视为 Visual Studio IDE 中的错误|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. 在“项目”菜单上，单击“属性”。<br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Make sure the **Treat all warnings as errors** check box is unchecked.<br />5.  Select **Error** from the **Notification** column adjacent to the warning that should be treated as an error.|  
+|1. 在**解决方案资源管理器**中选择了一个项目。 在“项目”菜单上，单击“属性”。<br />2. 单击 "**编译**" 选项卡。<br />3. 确保未选中 "**禁用所有警告**" 复选框。<br />4. 确保未选中 "将**所有警告视为错误**" 复选框。<br />5. 从应视为错误的警告旁边的 "**通知**" 列中选择 "**错误**"。|  
   
 ## <a name="example"></a>示例  
  以下代码编译 `In.vb` 并指示编译器在第一次发现每个警告时显示错误。  
@@ -61,8 +61,8 @@ vbc -warnaserror in.vb
 vbc -warnaserror:42024 t2.vb  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)
+- [在 Visual Basic 中配置警告](/visualstudio/ide/configuring-warnings-in-visual-basic)

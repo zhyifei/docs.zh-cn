@@ -19,7 +19,7 @@ ms.locfileid: "74349449"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>XML 后代轴属性 (Visual Basic)
 
-Provides access to the descendants of the following: an <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.
+提供对以下各项的后代的访问：一个 <xref:System.Xml.Linq.XElement> 对象、一个 <xref:System.Xml.Linq.XDocument> 对象、一个 <xref:System.Xml.Linq.XElement> 对象的集合或 <xref:System.Xml.Linq.XDocument> 对象的集合。
 
 ## <a name="syntax"></a>语法
 
@@ -31,16 +31,16 @@ object...<descendant>
 
 `object`（必需）。 <xref:System.Xml.Linq.XElement> 对象、<xref:System.Xml.Linq.XDocument> 对象、<xref:System.Xml.Linq.XElement> 对象的集合或 <xref:System.Xml.Linq.XDocument> 对象的集合。
 
-`...<`（必需）。 Denotes the start of a descendant axis property.
+`...<`（必需）。 表示子代轴属性的开头。
 
-`descendant`（必需）。 Name of the descendant nodes to access, of the form [`prefix:]name`.
+`descendant`（必需）。 要访问的子代节点的名称，格式为 [`prefix:]name`。
 
-|部件|描述|
+|部件|说明|
 |----------|-----------------|
-|`prefix`|可选。 XML namespace prefix for the descendant node. Must be a global XML namespace that is defined by using an `Imports` statement.|
-|`name`|必须的。 Local name of the descendant node. See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|
+|`prefix`|可选。 子代节点的 XML 命名空间前缀。 必须是使用 `Imports` 语句定义的全局 XML 命名空间。|
+|`name`|必需。 子代节点的本地名称。 请参阅已[声明的 XML 元素和属性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|
 
-`>`（必需）。 Denotes the end of a descendant axis property.
+`>`（必需）。 表示子代轴属性的结尾。
 
 ## <a name="return-value"></a>返回值
 
@@ -48,17 +48,17 @@ object...<descendant>
 
 ## <a name="remarks"></a>备注
 
-You can use an XML descendant axis property to access descendant nodes by name from an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object, or from a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> objects. Use the XML `Value` property to access the value of the first descendant node in the returned collection. For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).
+您可以使用 XML 子代轴属性，按名称从 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument> 对象或 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument> 对象的集合访问子代节点。 使用 XML `Value` 属性访问返回的集合中第一个子代节点的值。 有关详细信息，请参阅[XML Value 属性](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。
 
-The Visual Basic compiler converts descendant axis properties into calls to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method.
+Visual Basic 编译器将子代轴属性转换为对 <xref:System.Xml.Linq.XContainer.Descendants%2A> 方法的调用。
 
 ## <a name="xml-namespaces"></a>XML 命名空间
 
-The name in a descendant axis property can use only XML namespaces declared globally with the `Imports` statement. It cannot use XML namespaces declared locally within XML element literals. For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
+子代轴属性中的名称只能使用 `Imports` 语句全局声明的 XML 命名空间。 它不能使用在 XML 元素文本中本地声明的 XML 命名空间。 有关详细信息，请参阅[Imports 语句（XML 命名空间）](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)。
 
 ## <a name="example"></a>示例
 
-The following example shows how to access the value of the first descendant node named `name` and the values of all descendant nodes named `phone` from the `contacts` object.
+下面的示例演示如何从 `contacts` 对象访问名为 `name` 的第一个子代节点的值以及名为 `phone` 的所有子代节点的值。
 
 [!code-vb[VbXMLSamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#25)]
 
@@ -70,7 +70,7 @@ The following example shows how to access the value of the first descendant node
 
 ## <a name="example"></a>示例
 
-下面的示例声明 `ns` 作为 XML 命名空间前缀。 It then uses the prefix of the namespace to create an XML literal and access the value of the first child node with the qualified name `ns:name`.
+下面的示例声明 `ns` 作为 XML 命名空间前缀。 然后，它使用命名空间的前缀创建 XML 文本，并访问具有限定名 `ns:name`的第一个子节点的值。
 
 [!code-vb[VbXMLSamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples12.vb#26)]
 
@@ -78,7 +78,7 @@ The following example shows how to access the value of the first descendant node
 
 `Name: Patrick Hines`
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.Linq.XElement>
 - [XML 轴属性](../../../visual-basic/language-reference/xml-axis/index.md)

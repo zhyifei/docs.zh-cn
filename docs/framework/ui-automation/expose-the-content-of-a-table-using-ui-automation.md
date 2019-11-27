@@ -20,13 +20,13 @@ ms.locfileid: "74433634"
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
- This topic shows how [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] can be used to expose the content and intrinsic properties of each cell within a tabular control.  
+ 本主题说明如何使用 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 公开表格控件内每个单元格的内容和内部属性。  
   
 ## <a name="example"></a>示例  
- The following code example demonstrates how to obtain a <xref:System.Windows.Automation.AutomationElement> that represents the content of a table cell; cell properties such as row and column indices, row and column spans, and row and column header information are also obtained. This example uses a focus change event handler to simulate keyboard traversal of a tabular control that implements [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Information for each table item is exposed on a focus change event.  
+ 下面的代码示例演示如何获取表示表格单元内容的 <xref:System.Windows.Automation.AutomationElement>;还获得行和列索引、行和列范围以及行和列标题信息等单元属性。 此示例使用焦点更改事件处理程序来模拟实现 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的表格控件的键盘遍历。 针对每个表项的信息将在焦点更改事件上公开。  
   
 > [!NOTE]
-> Since focus changes are global desktop events, focus change events outside the table should be filtered. See the [TrackFocus Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771428(v=vs.90)) for a related implementation.  
+> 由于焦点更改是全局桌面事件，因此应筛选表之外的焦点更改事件。 有关相关的实现，请参阅[TrackFocus 示例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771428(v=vs.90))。  
   
  [!code-csharp[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#starttarget)]
  [!code-vb[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#starttarget)]  
@@ -41,10 +41,10 @@ ms.locfileid: "74433634"
 [!code-csharp[UIATableItemPattern_snip#103](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#103)]
 [!code-vb[UIATableItemPattern_snip#103](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#103)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UI 自动化控件模式概述](ui-automation-control-patterns-overview.md)
-- [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [实现 UI 自动化 Table 控件模式](implementing-the-ui-automation-table-control-pattern.md)
 - [实现 UI 自动化 TableItem 控件模式](implementing-the-ui-automation-tableitem-control-pattern.md)
 - [实现 UI 自动化 Grid 控件模式](implementing-the-ui-automation-grid-control-pattern.md)

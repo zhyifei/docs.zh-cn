@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348398"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>如何：在 CSV 文本文件中计算列值（LINQ）（Visual Basic）
 
 此示例演示如何对 .csv 文件的列执行 Sum、Average、Min 和 Max 等聚合计算。 此处所示的示例原则可以应用于其他类型的结构化文本。
 
@@ -145,9 +145,9 @@ End Class
 
 ## <a name="compiling-the-code"></a>编译代码
 
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+使用 VB.NET 命名空间的 `Imports` 语句创建一个控制台应用程序项目。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ 和字符串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

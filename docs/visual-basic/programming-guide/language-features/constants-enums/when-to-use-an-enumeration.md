@@ -12,35 +12,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353957"
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>何时使用枚举 (Visual Basic)
-Enumerations offer an easy way to work with sets of related constants. An enumeration, or `Enum`, is a symbolic name for a set of values. Enumerations are treated as data types, and you can use them to create sets of constants for use with variables and properties.  
+枚举提供了一种简单的方法来处理相关的常量集。 枚举或 `Enum`是一组值的符号名称。 枚举被视为数据类型，可以使用它们来创建用于变量和属性的常量集。  
   
 ## <a name="when-to-use-an-enumeration"></a>何时使用枚举  
- Whenever a procedure accepts a limited set of variables, consider using an enumeration. Enumerations make for clearer and more readable code, particularly when meaningful names are used.  
+ 只要过程接受有限的一组变量，就应考虑使用枚举。 枚举可用于更清晰且更易读的代码，特别是在使用有意义的名称时。  
   
- The benefits of using enumerations include:  
+ 使用枚举的优点包括：  
   
-- Reduces errors caused by transposing or mistyping numbers.  
+- 减少由转置或错误错误导致的错误。  
   
-- Makes it easy to change values in the future.  
+- 以后可以轻松地更改值。  
   
-- Makes code easier to read, which means it is less likely that errors will creep into it.  
+- 使代码更易于阅读，这意味着错误会在其中蔓延。  
   
-- Ensures forward compatibility. With enumerations, your code is less likely to fail if in the future someone changes the values corresponding to the member names.  
+- 确保向前兼容性。 对于枚举，如果将来有人更改了与成员名称相对应的值，你的代码将不太可能失败。  
   
-## <a name="naming-enumerations"></a>Naming Enumerations  
- Use a naming convention for enumeration members. When Visual Basic encounters an enumeration member name, an exception may be thrown if other referenced type libraries contain the same name. Use a unique prefix that identifies the values from your application or component.  
+## <a name="naming-enumerations"></a>命名枚举  
+ 为枚举成员使用命名约定。 当 Visual Basic 遇到枚举成员名称时，如果其他引用的类型库包含相同的名称，可能会引发异常。 使用唯一的前缀来标识应用程序或组件中的值。  
   
- When referring to a member of an enumeration, you must qualify the member name with the enumeration name or else use the `Imports` statement. For more information, see [Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).  
+ 当引用枚举的成员时，必须使用枚举名称限定成员名称，否则请使用 `Imports` 语句。 有关详细信息，请参阅[枚举和名称限定](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)。  
   
-## <a name="predefined-enumerations"></a>Predefined Enumerations  
- Visual Basic provides a number of predefined enumerations, such as `FirstDayOfWeek` and `MsgBoxResult`, to facilitate your code. For a list of these see [Constants and Enumerations](../../../../visual-basic/language-reference/constants-and-enumerations.md).  
+## <a name="predefined-enumerations"></a>预定义枚举  
+ Visual Basic 提供了许多预定义的枚举，如 `FirstDayOfWeek` 和 `MsgBoxResult`，以便于代码。 有关这些变量的列表，请参阅[常量和枚举](../../../../visual-basic/language-reference/constants-and-enumerations.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [如何：声明枚举](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [如何：引用枚举成员](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
 - [枚举和名称限定](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
-- [How to: Iterate Through An Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
+- [如何：在 Visual Basic 中循环访问枚举](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
 - [如何：确定与枚举值关联的字符串](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [Enum 语句](../../../../visual-basic/language-reference/statements/enum-statement.md)
 - [常量和枚举](../../../../visual-basic/language-reference/constants-and-enumerations.md)

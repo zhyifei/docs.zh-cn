@@ -23,7 +23,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  下表说明了可用于工作流服务注册工具 (WFServicesReg.exe) 的选项。  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |`/c`|配置 Windows Workflow Services。 在安装和修复方案中使用。|  
 |`/r`|移除 Windows Workflow Services 配置。|  

@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426172"
 ---
 # <a name="iceegengetstring-method"></a>ICeeGen::GetString 方法
-Gets the string stored at the specified relative virtual address.  
+获取存储在指定的相对虚拟地址的字符串。  
   
- This method is obsolete and should not be used.  
+ 此方法已过时，不应使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,20 +38,20 @@ HRESULT GetString (
   
 ## <a name="parameters"></a>参数  
  `RVA`  
- [in] The relative virtual address of the string to return.  
+ 中要返回的字符串的相对虚拟地址。  
   
  `lpString`  
- [out] The returned string.  
+ 弄返回的字符串。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICeeGen 接口](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

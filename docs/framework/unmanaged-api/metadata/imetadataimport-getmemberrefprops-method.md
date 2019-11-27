@@ -41,36 +41,36 @@ HRESULT GetMemberRefProps (
   
 ## <a name="parameters"></a>参数  
  `mr`  
- [in] The MemberRef token to return associated metadata for.  
+ 中要为其返回关联的元数据的 MemberRef 标记。  
   
  `ptk`  
- [out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.  
+ 弄TypeDef 或 TypeRef 或 TypeSpec 标记，它表示声明成员的类，或表示声明成员的 module 类的 ModuleRef 标记或表示成员的 MethodDef。  
   
  `szMember`  
- [out] A string buffer for the member's name.  
+ 弄成员名称的字符串缓冲区。  
   
  `cchMember`  
- [in] The requested size in wide characters of `szMember`.  
+ 中`szMember`中的请求大小（以宽字符为大小）。  
   
  `pchMember`  
- [out] The returned size in wide characters of `szMember`.  
+ 弄`szMember`的宽字符返回的大小。  
   
  `ppvSibBlob`  
- [out] A pointer to the binary metadata signature for the member.  
+ 弄指向成员的二进制元数据签名的指针。  
   
  `pbSig`  
- [out] The size in bytes of `ppvSigBlob`.  
+ 弄`ppvSigBlob`的大小（以字节为单位）。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

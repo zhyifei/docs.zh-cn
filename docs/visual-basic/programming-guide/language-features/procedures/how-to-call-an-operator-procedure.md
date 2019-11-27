@@ -19,41 +19,41 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74340247"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>如何：调用运算符过程 (Visual Basic)
-You call an operator procedure by using the operator symbol in an expression. In the case of a conversion operator, you call the [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) to convert a value from one data type to another.  
+在表达式中使用运算符符号调用运算符过程。 在转换运算符的情况下，调用[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)将值从一种数据类型转换为另一种数据类型。  
   
- You do not call operator procedures explicitly. You just use the operator, or the `CType` function, in an assignment statement or an expression, the same way you ordinarily use an operator. Visual Basic makes the call to the operator procedure.  
+ 不要显式调用运算符过程。 你只需在赋值语句或表达式中使用运算符或 `CType` 函数，这与通常使用运算符的方式相同。 Visual Basic 调用运算符过程。  
   
- Defining an operator on a class or structure is also called *overloading* the operator.  
+ 在类或结构上定义运算符也称为*重载*运算符。  
   
-### <a name="to-call-an-operator-procedure"></a>To call an operator procedure  
+### <a name="to-call-an-operator-procedure"></a>调用运算符过程  
   
-1. Use the operator symbol in an expression in the ordinary way.  
+1. 用普通方法在表达式中使用运算符符号。  
   
-2. Be sure the data types of the operands are appropriate for the operator, and in the correct order.  
+2. 确保操作数的数据类型适用于运算符，并按正确的顺序排列。  
   
-3. The operator contributes to the value of the expression as expected.  
+3. 运算符会按预期方式分配表达式的值。  
   
-### <a name="to-call-a-conversion-operator-procedure"></a>To call a conversion operator procedure  
+### <a name="to-call-a-conversion-operator-procedure"></a>调用转换运算符过程  
   
-1. Use `CType` inside an expression.  
+1. 在表达式中使用 `CType`。  
   
-2. Be sure the data types of the operands are appropriate for the conversion, and in the correct order.  
+2. 确保操作数的数据类型适用于转换，并按正确的顺序排列。  
   
-3. `CType` calls the conversion operator procedure and returns the converted value.  
+3. `CType` 调用转换运算符过程，并返回转换后的值。  
   
 ## <a name="example"></a>示例  
- The following example creates two <xref:System.TimeSpan> structures, adds them together, and stores the result in a third <xref:System.TimeSpan> structure. The <xref:System.TimeSpan> structure defines operator procedures to overload several standard operators.  
+ 下面的示例创建两个 <xref:System.TimeSpan> 结构，将它们相加，然后将结果存储在第三个 <xref:System.TimeSpan> 结构中。 <xref:System.TimeSpan> 结构定义运算符过程以重载多个标准运算符。  
   
  [!code-vb[VbVbcnProcedures#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#29)]  
   
- Because <xref:System.TimeSpan> overloads the standard `+` operator, the previous example calls an operator procedure when it calculates the value of `combinedSpan`.  
+ 由于 <xref:System.TimeSpan> 会重载标准 `+` 运算符，因此在计算 `combinedSpan`的值时，上面的示例将调用一个运算符过程。  
   
- For an example of calling a conversation operator procedure, see [How to: Use a Class that Defines Operators](./how-to-use-a-class-that-defines-operators.md).  
+ 有关调用会话运算符过程的示例，请参阅[如何：使用定义运算符的类](./how-to-use-a-class-that-defines-operators.md)。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- Be sure the class or structure you are using defines the operator you want to use.  
+ 请确保所用的类或结构定义要使用的运算符。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [运算符过程](./operator-procedures.md)
 - [如何：定义运算符](./how-to-define-an-operator.md)

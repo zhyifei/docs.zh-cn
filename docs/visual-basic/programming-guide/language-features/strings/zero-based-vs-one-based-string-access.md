@@ -1,5 +1,5 @@
 ---
-title: Zero-based vs. One-based String Access
+title: 从零开始与基于1的字符串访问
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], indexing
@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354289"
 ---
 # <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>从 0 开始与从 1 开始的字符串访问 (Visual Basic)
-This topic compares how Visual Basic and the .NET Framework provide access to the characters in a string. The .NET Framework always provides zero-based access to the characters in a string, whereas Visual Basic provides zero-based and one-based access, depending on the function.  
+本主题比较 Visual Basic 和 .NET Framework 如何提供对字符串中的字符的访问。 .NET Framework 始终提供对字符串中的字符的从零开始的访问，而 Visual Basic 提供从零开始的和基于的访问（具体取决于函数）。  
   
-## <a name="one-based"></a>One-Based  
- For an example of a one-based Visual Basic function, consider the `Mid` function. It takes an argument that indicates the character position at which the substring will start, starting with position 1. The .NET Framework <xref:System.String.Substring%2A?displayProperty=nameWithType> method takes an index of the character in the string at which the substring is to start, starting with position 0. Thus, if you have a string "ABCDE", the individual characters are numbered 1,2,3,4,5 for use with the `Mid` function, but 0,1,2,3,4 for use with the <xref:System.String.Substring%2A?displayProperty=nameWithType> method.  
+## <a name="one-based"></a>从1开始  
+ 有关基于一个 Visual Basic 函数的示例，请考虑 `Mid` 函数。 它采用一个参数，该参数指示子字符串的起始字符位置（从位置1开始）。 .NET Framework <xref:System.String.Substring%2A?displayProperty=nameWithType> 方法使用字符串中的字符的索引，子字符串将从位置0开始。 因此，如果您有字符串 "ABCDE...Z"，则每个字符的编号为1、2、3、4、5、用于 `Mid` 函数，但0、1、2、3、4用于 <xref:System.String.Substring%2A?displayProperty=nameWithType> 方法。  
   
-## <a name="zero-based"></a>Zero-Based  
- For an example of a zero-based Visual Basic function, consider the `Split` function. It splits a string and returns an array containing the substrings. The .NET Framework <xref:System.String.Split%2A?displayProperty=nameWithType> method also splits a string and returns an array containing the substrings. Because the `Split` function and <xref:System.String.Split%2A> method return .NET Framework arrays, they must be zero-based.  
+## <a name="zero-based"></a>从零开始  
+ 有关从零开始的 Visual Basic 函数的示例，请考虑 `Split` 函数。 它拆分字符串并返回包含子字符串的数组。 .NET Framework <xref:System.String.Split%2A?displayProperty=nameWithType> 方法还拆分字符串并返回包含子字符串的数组。 由于 `Split` 函数和 <xref:System.String.Split%2A> 方法返回 .NET Framework 数组，因此它们必须从零开始。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualBasic.Strings.Mid%2A>
 - <xref:Microsoft.VisualBasic.Strings.Split%2A>

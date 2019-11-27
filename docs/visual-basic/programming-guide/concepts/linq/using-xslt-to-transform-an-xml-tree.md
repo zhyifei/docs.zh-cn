@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350520"
 ---
-# <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a>Using XSLT to Transform an XML Tree (Visual Basic)
+# <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a>使用 XSLT 转换 XML 树（Visual Basic）
 
 可以创建 XML 树，从 XML 树创建 <xref:System.Xml.XmlReader>，创建新文档，然后创建 <xref:System.Xml.XmlWriter>，以写入新文档。 然后，您可以调用 XSLT 转换，并可以将 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 传递到转换中。 在转换成功完成后，使用转换的结果，填充新的 XML 树。
 
@@ -61,8 +61,8 @@ Console.WriteLine(newTree)
 </Root>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>
-- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [高级 LINQ to XML 编程（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

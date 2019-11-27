@@ -1,5 +1,5 @@
 ---
-title: Implementing IEnumerable
+title: 实现 IEnumerable
 ms.date: 07/31/2018
 helpviewer_keywords:
 - control flow [Visual Basic]
@@ -15,85 +15,85 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333691"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>演练：在 Visual Basic 中实现 IEnumerable(Of T)
-The <xref:System.Collections.Generic.IEnumerable%601> interface is implemented by classes that can return a sequence of values one item at a time. The advantage of returning data one item at a time is that you do not have to load the complete set of data into memory to work with it. You only have to use sufficient memory to load a single item from the data. Classes that implement the `IEnumerable(T)` interface can be used with `For Each` loops or LINQ queries.  
+<xref:System.Collections.Generic.IEnumerable%601> 接口由可以每次返回一项的值序列的类实现。 一次返回一项数据的优点是，无需将完整的数据集加载到内存中即可使用它。 只需使用足够的内存来加载数据中的单个项。 实现 `IEnumerable(T)` 接口的类可用于 `For Each` 循环或 LINQ 查询。  
   
- For example, consider an application that must read a large text file and return each line from the file that matches particular search criteria. The application uses a LINQ query to return lines from the file that match the specified criteria. To query the contents of the file by using a LINQ query, the application could load the contents of the file into an array or a collection. However, loading the whole file into an array or collection would consume far more memory than is required. The LINQ query could instead query the file contents by using an enumerable class, returning only values that match the search criteria. Queries that return only a few matching values would consume far less memory.  
+ 例如，假设某个应用程序必须读取一个大型文本文件，并从该文件中返回与特定搜索条件相匹配的每一行。 应用程序使用 LINQ 查询从文件返回与指定条件相匹配的行。 若要通过使用 LINQ 查询来查询文件的内容，应用程序可以将文件的内容加载到数组或集合中。 但是，将整个文件加载到数组或集合会占用比所需的更多的内存。 LINQ 查询可以使用可枚举的类（仅返回与搜索条件匹配的值）来查询文件内容。 仅返回几个匹配值的查询将消耗更少的内存。  
   
- You can create a class that implements the <xref:System.Collections.Generic.IEnumerable%601> interface to expose source data as enumerable data. Your class that implements the `IEnumerable(T)` interface will require another class that implements the <xref:System.Collections.Generic.IEnumerator%601> interface to iterate through the source data. These two classes enable you to return items of data sequentially as a specific type.  
+ 你可以创建一个类来实现 <xref:System.Collections.Generic.IEnumerable%601> 接口，以将源数据作为可枚举数据公开。 实现 `IEnumerable(T)` 接口的类将需要另一个类，该类实现 <xref:System.Collections.Generic.IEnumerator%601> 接口以便循环访问源数据。 这两个类使你能够按特定类型按顺序返回数据项。  
   
- In this walkthrough, you will create a class that implements the `IEnumerable(Of String)` interface and a class that implements the `IEnumerator(Of String)` interface to read a text file one line at a time.  
+ 在本演练中，您将创建一个实现 `IEnumerable(Of String)` 接口的类和一个实现 `IEnumerator(Of String)` 接口的类，以便一次一行地读取一个文本文件。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="creating-the-enumerable-class"></a>Creating the Enumerable Class  
+## <a name="creating-the-enumerable-class"></a>创建可枚举类  
   
-**Create the enumerable class project**
+**创建可枚举类项目**
 
-1. In Visual Basic, on the **File** menu, point to **New** and then click **Project**.
+1. 在 Visual Basic 的 "**文件**" 菜单上，指向 "**新建**"，然后单击 "**项目**"。
 
-1. 在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“类库”。 在“名称”框中，键入 `StreamReaderEnumerable`，然后单击“确定”。 The new project is displayed.
+1. 在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“类库”。 在“名称”框中，键入 `StreamReaderEnumerable`，然后单击“确定”。 将显示新项目。
 
-1. In **Solution Explorer**, right-click the Class1.vb file and click **Rename**. 将文件重命名为 `StreamReaderEnumerable.vb`，然后按 Enter。 重命名文件也会将类重命名为 `StreamReaderEnumerable`。 此类将实现 `IEnumerable(Of String)` 接口。
+1. 在**解决方案资源管理器**中，右键单击 Class1 文件，然后单击 "**重命名**"。 将文件重命名为 `StreamReaderEnumerable.vb`，然后按 Enter。 重命名文件也会将类重命名为 `StreamReaderEnumerable`。 此类将实现 `IEnumerable(Of String)` 接口。
 
-1. Right-click the StreamReaderEnumerable project, point to **Add**, and then click **New Item**. Select the **Class** template. In the **Name** box, type `StreamReaderEnumerator.vb` and click **OK**.
+1. 右键单击 "StreamReaderEnumerable" 项目，指向 "**添加**"，然后单击 "**新建项**"。 选择 "**类**" 模板。 在 "**名称**" 框中，键入 `StreamReaderEnumerator.vb` 然后单击 **"确定"** 。
 
- The first class in this project is the enumerable class and will implement the `IEnumerable(Of String)` interface. This generic interface implements the <xref:System.Collections.IEnumerable> interface and guarantees that consumers of this class can access values typed as `String`.  
+ 此项目中的第一个类是可枚举类并实现 `IEnumerable(Of String)` 接口。 此泛型接口实现 <xref:System.Collections.IEnumerable> 接口，并保证此类的使用者可以访问类型化为 `String`的值。  
   
-**Add the code to implement IEnumerable**
+**添加代码以实现 IEnumerable**
 
-1. Open the StreamReaderEnumerable.vb file.
+1. 打开 StreamReaderEnumerable 文件。
 
-2. On the line after `Public Class StreamReaderEnumerable`, type the following and press ENTER.
+2. 在 `Public Class StreamReaderEnumerable`后面的行中，键入以下各项，然后按 ENTER。
 
      [!code-vb[VbVbalrIteratorWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#1)]
 
-   Visual Basic automatically populates the class with the members that are required by the `IEnumerable(Of String)` interface.
+   Visual Basic 使用 `IEnumerable(Of String)` 接口所需的成员自动填充类。
   
-3. This enumerable class will read lines from a text file one line at a time. Add the following code to the class to expose a public constructor that takes a file path as an input parameter.
+3. 此可枚举类将一次一行地读取文本文件中的行。 将下面的代码添加到类以公开公共构造函数，该构造函数采用文件路径作为输入参数。
 
      [!code-vb[VbVbalrIteratorWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#2)]
 
-4. Your implementation of the <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method of the `IEnumerable(Of String)` interface will return a new instance of the `StreamReaderEnumerator` class. The implementation of the `GetEnumerator` method of the `IEnumerable` interface can be made `Private`, because you have to expose only members of the `IEnumerable(Of String)` interface. Replace the code that Visual Basic generated for the `GetEnumerator` methods with the following code.
+4. 实现 `IEnumerable(Of String)` 接口的 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法将返回 `StreamReaderEnumerator` 类的新实例。 可以 `Private`生成 `IEnumerable` 接口的 `GetEnumerator` 方法，因为必须仅公开 `IEnumerable(Of String)` 接口的成员。 将 Visual Basic 为 `GetEnumerator` 方法生成的代码替换为以下代码。
 
      [!code-vb[VbVbalrIteratorWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#3)]  
   
-**Add the code to implement IEnumerator**
+**添加代码以实现 IEnumerator**
 
-1. Open the StreamReaderEnumerator.vb file.
+1. 打开 StreamReaderEnumerator 文件。
 
-2. On the line after `Public Class StreamReaderEnumerator`, type the following and press ENTER.
+2. 在 `Public Class StreamReaderEnumerator`后面的行中，键入以下各项，然后按 ENTER。
 
      [!code-vb[VbVbalrIteratorWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#4)]
 
-   Visual Basic automatically populates the class with the members that are required by the `IEnumerator(Of String)` interface.
+   Visual Basic 使用 `IEnumerator(Of String)` 接口所需的成员自动填充类。
 
-3. The enumerator class opens the text file and performs the file I/O to read the lines from the file. Add the following code to the class to expose a public constructor that takes a file path as an input parameter and open the text file for reading.
+3. 枚举器类打开文本文件，并执行文件 i/o 以读取文件中的行。 将下面的代码添加到类，以公开公共构造函数，该构造函数采用文件路径作为输入参数并打开文本文件进行读取。
 
      [!code-vb[VbVbalrIteratorWalkthrough#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#5)]
 
-4. The `Current` properties for both the `IEnumerator(Of String)` and `IEnumerator` interfaces return the current item from the text file as a `String`. The implementation of the `Current` property of the `IEnumerator` interface can be made `Private`, because you have to expose only members of the `IEnumerator(Of String)` interface. Replace the code that Visual Basic generated for the `Current` properties with the following code.
+4. `IEnumerator(Of String)` 和 `IEnumerator` 接口的 `Current` 属性作为 `String`返回文本文件中的当前项。 可以 `Private`生成 `IEnumerator` 接口的 `Current` 属性，因为必须仅公开 `IEnumerator(Of String)` 接口的成员。 将 Visual Basic 为 `Current` 属性生成的代码替换为以下代码。
 
      [!code-vb[VbVbalrIteratorWalkthrough#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#6)]
 
-5. The `MoveNext` method of the `IEnumerator` interface navigates to the next item in the text file and updates the value that is returned by the `Current` property. If there are no more items to read, the `MoveNext` method returns `False`; otherwise the `MoveNext` method returns `True`. 将以下代码添加到 `MoveNext` 方法中。
+5. `IEnumerator` 接口的 `MoveNext` 方法导航到文本文件中的下一项，并更新 `Current` 属性返回的值。 如果没有更多要读取的项，`MoveNext` 方法返回 `False`;否则，`MoveNext` 方法返回 `True`。 将以下代码添加到 `MoveNext` 方法中。
 
      [!code-vb[VbVbalrIteratorWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#7)]
 
-6. The `Reset` method of the `IEnumerator` interface directs the iterator to point to the start of the text file and clears the current item value. 将以下代码添加到 `Reset` 方法中。
+6. `IEnumerator` 接口的 `Reset` 方法指示迭代器指向文本文件的开头，并清除当前项值。 将以下代码添加到 `Reset` 方法中。
 
      [!code-vb[VbVbalrIteratorWalkthrough#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#8)]
 
-7. The `Dispose` method of the `IEnumerator` interface guarantees that all unmanaged resources are released before the iterator is destroyed. The file handle that is used by the `StreamReader` object is an unmanaged resource and must be closed before the iterator instance is destroyed. Replace the code that Visual Basic generated for the `Dispose` method with the following code.
+7. `IEnumerator` 接口的 `Dispose` 方法保证在迭代器销毁之前释放所有非托管资源。 `StreamReader` 对象所使用的文件句柄是非托管资源，必须在销毁迭代器实例之前关闭。 将 Visual Basic 为 `Dispose` 方法生成的代码替换为以下代码。
 
      [!code-vb[VbVbalrIteratorWalkthrough#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#9)] 
   
-## <a name="using-the-sample-iterator"></a>Using the Sample Iterator
+## <a name="using-the-sample-iterator"></a>使用示例迭代器
 
- You can use an enumerable class in your code together with control structures that require an object that implements `IEnumerable`, such as a `For Next` loop or a LINQ query. The following example shows the `StreamReaderEnumerable` in a LINQ query.  
+ 您可以在代码中使用可枚举的类以及需要实现 `IEnumerable`的对象的控制结构，如 `For Next` 循环或 LINQ 查询。 下面的示例演示 LINQ 查询中的 `StreamReaderEnumerable`。  
   
  [!code-vb[VbVbalrIteratorWalkthrough#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/Module1.vb#10)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [控制流](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)

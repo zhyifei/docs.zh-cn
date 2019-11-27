@@ -46,7 +46,7 @@ HRESULT ConditionalWeakTableElementReferences(
 [in] 一个包含对象 ID 的数组，其中每个对象 ID 都包含相关句柄对中主要元素的 `ObjectID`。
 
 `valueRefIds`\
-[in] 一个包含对象 ID 的数组，其中每个对象 ID 都包含相关句柄对中次要元素的 `ObjectID`。 (`keyRefIds[i]` keeps `valueRefIds[i]` alive.)
+[in] 一个包含对象 ID 的数组，其中每个对象 ID 都包含相关句柄对中次要元素的 `ObjectID`。 （`keyRefIds[i]` 保持 `valueRefIds[i]` 活动状态。）
 
 `rootIds`\
 [in] 一个包含 `GCHandleID` 值的数组，这些值指向包含有关垃圾回收根的附加信息的整数。
@@ -55,7 +55,7 @@ HRESULT ConditionalWeakTableElementReferences(
 
 ## <a name="example"></a>示例
 
-The following code example demonstrates how to implement [ICorProfilerCallback5](icorprofilercallback5-interface.md) and use this method.
+下面的代码示例演示如何实现[ICorProfilerCallback5](icorprofilercallback5-interface.md)并使用此方法。
 
 ```cpp
 HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
@@ -80,7 +80,7 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 
 ## <a name="remarks"></a>备注
 
-A profiler for the .NET Framework 4.5 or later versions implements the [ICorProfilerCallback5](icorprofilercallback5-interface.md) interface and records the dependencies specified by the `ConditionalWeakTableElementReferences` method. `ICorProfilerCallback5` provides the complete set of dependencies among live objects represented by `ConditionalWeakTable` entries. These dependencies and the member field references specified by the [ICorProfilerCallback::ObjectReferences](icorprofilercallback-objectreferences-method.md) method enable a managed profiler to generate the full object graph of live objects.
+.NET Framework 4.5 或更高版本的探查器将实现[ICorProfilerCallback5](icorprofilercallback5-interface.md)接口并记录由 `ConditionalWeakTableElementReferences` 方法指定的依赖项。 `ICorProfilerCallback5` 提供了 `ConditionalWeakTable` 条目表示的活动对象之间的完整依赖关系集。 使用[ICorProfilerCallback：： ObjectReferences](icorprofilercallback-objectreferences-method.md)方法指定的这些依赖项和成员字段引用，托管探查器可以生成活动对象的完整对象图。
 
 ## <a name="requirements"></a>要求
 
@@ -90,6 +90,6 @@ A profiler for the .NET Framework 4.5 or later versions implements the [ICorProf
 
 **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback5 接口](icorprofilercallback5-interface.md)

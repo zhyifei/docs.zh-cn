@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438296"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>ISymUnmanagedWriter2::DefineLocalVariable2 方法
-在当前词法范围内定义单个变量。 This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope. In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.  
+在当前词法范围内定义单个变量。 对于在整个范围内具有多个住宅的同名变量，可以多次调用此方法。 但在这种情况下，`startOffset` 和 `endOffset` 参数的值不得重叠。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,39 +42,39 @@ HRESULT DefineLocalVariable2(
   
 ## <a name="parameters"></a>参数  
  `name`  
- [in] The local variable name.  
+ 中局部变量名称。  
   
  `attributes`  
- [in] The local variable attributes.  
+ 中局部变量特性。  
   
  `sigToken`  
- [in] The metadata token of the signature.  
+ 中签名的元数据标记。  
   
  `addrKind`  
- [in] The address type.  
+ 中地址类型。  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ 中参数规范的第一个地址。  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ 中参数规范的第二个地址。  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ 中参数规范的第三个地址。  
   
  `startOffset`  
- [in] The start offset for the variable. 此参数可选。 If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
+ 中变量的起始偏移量。 此参数可选。 如果为0，则忽略此参数，并在整个范围内定义变量。 如果它是非零值，则该变量将处于当前范围的偏移量内。  
   
  `endOffset`  
- [in] The end offset for the variable. 此参数可选。 If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
+ 中变量的结束偏移量。 此参数可选。 如果为0，则忽略此参数，并在整个范围内定义变量。 如果它是非零值，则该变量将处于当前范围的偏移量内。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl  
+ **标头：** CorSym .idl  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedWriter2 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
 - [DefineLocalVariable 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)

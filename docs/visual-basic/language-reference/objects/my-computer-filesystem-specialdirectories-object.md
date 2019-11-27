@@ -18,16 +18,16 @@ ms.locfileid: "74347227"
 ## <a name="remarks"></a>备注  
  有关 `My.Computer.FileSystem.SpecialDirectories` 对象所使用方法和属性的信息，请参阅 <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>。  
   
- For more information, see [How to: Retrieve the Contents of the My Documents Directory](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md).  
+ 有关详细信息，请参阅[如何：检索 "我的文档" 目录](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)中的内容。  
   
 ## <a name="requirements"></a>要求  
  **命名空间：** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>)  
+ **类：** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> （提供对 <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>的访问权限）  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **程序集：** Visual Basic 运行时库（在 Microsoft. .dll 中）  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [My.Computer.FileSystem 对象](../../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)
 - [My.Computer 对象](../../../visual-basic/language-reference/objects/my-computer-object.md)

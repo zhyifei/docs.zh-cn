@@ -19,7 +19,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353789"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit 语句 (Visual Basic)
-Forces explicit declaration of all variables in a file, or allows implicit declarations of variables.  
+强制显式声明文件中的所有变量，或允许隐式声明变量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -29,44 +29,44 @@ Option Explicit { On | Off }
   
 ## <a name="parts"></a>部件  
  `On`  
- 可选。 Enables `Option Explicit` checking. If `On` or `Off` is not specified, the default is `On`.  
+ 可选。 启用 `Option Explicit` 检查。 如果未指定 `On` 或 `Off`，则默认值为 `On`。  
   
  `Off`  
- 可选。 Disables `Option Explicit` checking.  
+ 可选。 禁用 `Option Explicit` 检查。  
   
 ## <a name="remarks"></a>备注  
- When `Option Explicit On` or `Option Explicit` appears in a file, you must explicitly declare all variables by using the `Dim` or `ReDim` statements. If you try to use an undeclared variable name, an error occurs at compile time. The `Option Explicit Off` statement allows implicit declaration of variables.  
+ 在文件中出现 `Option Explicit On` 或 `Option Explicit` 时，必须使用 `Dim` 或 `ReDim` 语句显式声明所有变量。 如果尝试使用未声明的变量名称，则会在编译时出现错误。 `Option Explicit Off` 语句允许隐式声明变量。  
   
  使用时，`Option Explicit` 语句必须在文件中任何其他源代码语句之前。  
   
 > [!NOTE]
-> Setting `Option Explicit` to `Off` is generally not a good practice. 在一个或多个位置拼错变量名称，将会在程序运行时导致意想不到的结果。  
+> 将 `Option Explicit` 设置为 `Off` 通常不是好的做法。 在一个或多个位置拼错变量名称，将会在程序运行时导致意想不到的结果。  
   
-## <a name="when-an-option-explicit-statement-is-not-present"></a>When an Option Explicit Statement Is Not Present  
- If the source code does not contain an `Option Explicit` statement, the **Option Explicit** setting on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) is used. If the command-line compiler is used, the [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) compiler option is used.  
+## <a name="when-an-option-explicit-statement-is-not-present"></a>当选项显式语句不存在时  
+ 如果源代码不包含 `Option Explicit` 语句，则使用 "编译" 页上的 " **Option Explicit** " 设置[，"项目设计器" （Visual Basic）](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 。 如果使用命令行编译器，则使用[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)编译器选项。  
   
-#### <a name="to-set-option-explicit-in-the-ide"></a>To set Option Explicit in the IDE  
+#### <a name="to-set-option-explicit-in-the-ide"></a>在 IDE 中设置 Option Explicit  
   
 1. 在“解决方案资源管理器”中，选择一个项目。 在“项目”菜单上，单击“属性”。  
   
 2. 单击“编译”选项卡。  
   
-3. Set the value in the **Option Explicit** box.  
+3. 在 "**选项**" 框中设置值。  
   
- When you create a new project, the **Option Explicit** setting on the **Compile** tab is set to the **Option Explicit** setting in the **VB Defaults** dialog box. To access the **VB Defaults** dialog box, on the **Tools** menu, click **Options**. 在“选项”对话框中，展开“项目和解决方案”，然后单击“VB 默认值”。 The initial default setting in **VB Defaults** is `On`.  
+ 创建新项目时，"**编译**" 选项卡上的 " **option explicit** " 设置设置为 " **VB 默认值**" 对话框中的 "选项" "**显式**设置"。 若要访问 " **VB 默认值**" 对话框，请在 "**工具**" 菜单上单击 "**选项**"。 在“选项”对话框中，展开“项目和解决方案”，然后单击“VB 默认值”。 默认情况下， **VB**默认设置中的初始默认设置为 `On`。  
   
-#### <a name="to-set-option-explicit-on-the-command-line"></a>To set Option Explicit on the command line  
+#### <a name="to-set-option-explicit-on-the-command-line"></a>在命令行上设置 Option Explicit  
   
-- Include the [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) compiler option in the **vbc** command.  
+- 在**vbc**命令中包含[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)编译器选项。  
   
 ## <a name="example"></a>示例  
- The following example uses the `Option Explicit` statement to force explicit declaration of all variables. Attempting to use an undeclared variable causes an error at compile time.  
+ 下面的示例使用 `Option Explicit` 语句强制所有变量的显式声明。 尝试使用未声明的变量会导致编译时错误。  
   
  [!code-vb[VbVbalrStatements#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#47)]  
   
  [!code-vb[VbVbalrStatements#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#48)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)
 - [ReDim 语句](../../../visual-basic/language-reference/statements/redim-statement.md)

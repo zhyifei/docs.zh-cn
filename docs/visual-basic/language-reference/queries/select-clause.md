@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350408"
 ---
 # <a name="select-clause-visual-basic"></a>Select 子句 (Visual Basic)
-Defines the result of a query.  
+定义查询的结果。  
   
 ## <a name="syntax"></a>语法  
   
@@ -26,32 +26,32 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
 ## <a name="parts"></a>部件  
  `var1`  
- 可选。 An alias that can be used to reference the results of the column expression.  
+ 可选。 可用于引用列表达式的结果的别名。  
   
  `fieldName1`  
- 必须的。 The name of the field to return in the query result.  
+ 必需。 要在查询结果中返回的字段的名称。  
   
 ## <a name="remarks"></a>备注  
- You can use the `Select` clause to define the results to return from a query. This enables you to either define the members of a new anonymous type that is created by a query, or to target the members of a named type that is returned by a query. The `Select` clause is not required for a query. If no `Select` clause is specified, the query will return a type based on all members of the range variables identified for the current scope. 有关详细信息，请参阅[匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。 When a query creates a named type, it will return a result of type <xref:System.Collections.Generic.IEnumerable%601> where `T` is the created type.  
+ 您可以使用 `Select` 子句来定义从查询返回的结果。 这使您可以定义由查询创建的新匿名类型的成员，或指定查询所返回的命名类型的成员。 查询不需要 `Select` 子句。 如果未指定 `Select` 子句，则查询将基于为当前作用域标识的范围变量的所有成员返回一个类型。 有关详细信息，请参阅[匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。 当查询创建命名类型时，它将返回 <xref:System.Collections.Generic.IEnumerable%601> 类型的结果，其中 `T` 为创建的类型。  
   
- The `Select` clause can reference any variables in the current scope. This includes range variables identified in the `From` clause (or `From` clauses). It also includes any new variables created with an alias by the `Aggregate`, `Let`, `Group By`, or `Group Join` clauses, or variables from a previous `Select` clause in the query expression. The `Select` clause can also include static values. For example, the following code example shows a query expression in which the `Select` clause defines the query result as a new anonymous type with four members: `ProductName`, `Price`, `Discount`, and `DiscountedPrice`. The `ProductName` and `Price` member values are taken from the product range variable that is defined in the `From` clause. The `DiscountedPrice` member value is calculated in the `Let` clause. The `Discount` member is a static value.  
+ `Select` 子句可以引用当前范围内的任何变量。 这包括 `From` 子句中标识的范围变量（或 `From` 子句）。 它还包括由 `Aggregate`、`Let`、`Group By`或 `Group Join` 子句创建的具有别名的任何新变量，或者查询表达式中先前 `Select` 子句中的变量。 `Select` 子句还可以包括静态值。 例如，下面的代码示例演示一个查询表达式，其中 `Select` 子句将查询结果定义为具有四个成员的新匿名类型： `ProductName`、`Price`、`Discount`和 `DiscountedPrice`。 `ProductName` 和 `Price` 成员值取自 `From` 子句中定义的产品范围变量。 `DiscountedPrice` 成员值在 `Let` 子句中进行计算。 `Discount` 成员是一个静态值。  
   
  [!code-vb[VbSimpleQuerySamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#27)]  
   
- The `Select` clause introduces a new set of range variables for subsequent query clauses, and previous range variables are no longer in scope. The last `Select` clause in a query expression determines the return value of the query. For example, the following query returns the company name and order ID for every customer order for which the total exceeds 500. The first `Select` clause identifies the range variables for the `Where` clause and the second `Select` clause. The second `Select` clause identifies the values returned by the query as a new anonymous type.  
+ `Select` 子句为后面的查询子句引入了一组新的范围变量，并且以前的范围变量不再位于范围中。 查询表达式中的最后一个 `Select` 子句确定查询的返回值。 例如，以下查询将返回总计超过500的每个客户订单的公司名称和订单 ID。 第一个 `Select` 子句标识 `Where` 子句和第二个 `Select` 子句的范围变量。 第二个 `Select` 子句将查询返回的值标识为新的匿名类型。  
   
  [!code-vb[VbSimpleQuerySamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#28)]  
   
- If the `Select` clause identifies a single item to return, the query expression returns a collection of the type of that single item. If the `Select` clause identifies multiple items to return, the query expression returns a collection of a new anonymous type, based on the selected items. For example, the following two queries return collections of two different types based on the `Select` clause. The first query returns a collection of company names as strings. The second query returns a collection of `Customer` objects populated with the company names and address information.  
+ 如果 `Select` 子句标识要返回的单个项，则查询表达式返回该项的类型的集合。 如果 `Select` 子句标识要返回的多个项，则查询表达式将返回基于选定项的新匿名类型的集合。 例如，以下两个查询根据 `Select` 子句返回两个不同类型的集合。 第一个查询以字符串的形式返回公司名称的集合。 第二个查询返回使用公司名称和地址信息填充的 `Customer` 对象的集合。  
   
  [!code-vb[VbSimpleQuerySamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#29)]  
   
 ## <a name="example"></a>示例  
- The following query expression uses a `From` clause to declare a range variable `cust` for the `customers` collection. The `Select` clause selects the customer name and ID value and populates the `CompanyName` and `CustomerID` columns of the new range variable. The `For Each` statement loops over each returned object and displays the `CompanyName` and `CustomerID` columns for each record.  
+ 下面的查询表达式使用 `From` 子句为 `customers` 集合声明范围变量 `cust`。 `Select` 子句选择客户名称和 ID 值，并填充新范围变量的 `CompanyName` 和 `CustomerID` 列。 `For Each` 语句将遍历返回的每个对象，并显示每个记录的 `CompanyName` 和 `CustomerID` 列。  
   
  [!code-vb[VbSimpleQuerySamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#30)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [查询](../../../visual-basic/language-reference/queries/index.md)

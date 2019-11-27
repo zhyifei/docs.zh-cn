@@ -15,28 +15,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350000"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>如何：声明结构 (Visual Basic)
-You begin a structure declaration with the [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md), and you end it with the `End Structure` statement. Between these two statements you must declare at least one *element*. The elements can be of any data type, but at least one must be either a nonshared variable or a nonshared, noncustom event.  
+使用[Structure 语句](../../../../visual-basic/language-reference/statements/structure-statement.md)开始结构声明，并使用 `End Structure` 语句结束。 在这两个语句之间必须至少声明一个*元素*。 元素可以是任何数据类型，但必须至少有一个是非共享变量或非共享、非自定义事件。  
   
- You cannot initialize any of the structure elements in the structure declaration. When you declare a variable to be of a structure type, you assign values to the elements by accessing them through the variable.  
+ 不能在结构声明中初始化任何结构元素。 将变量声明为结构类型时，可以通过变量访问元素，为这些元素赋值。  
   
- For a discussion of the differences between structures and classes, see [Structures and Classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
+ 有关结构和类之间的差异的讨论，请参阅[结构和类](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)。  
   
- For demonstration purposes, consider a situation where you want to keep track of an employee's name, telephone extension, and salary. A structure allows you to do this in a single variable.  
+ 出于演示目的，请考虑要跟踪员工姓名、电话分机和薪金的情况。 结构允许在单个变量中执行此操作。  
   
-### <a name="to-declare-a-structure"></a>To declare a structure  
+### <a name="to-declare-a-structure"></a>声明结构  
   
-1. Create the beginning and ending statements for the structure.  
+1. 为结构创建开始语句和结束语句。  
   
-     You can specify the access level of a structure using the [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), or [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword, or you can let it default to `Public`.  
+     您可以使用[Public](../../../../visual-basic/language-reference/modifiers/public.md)、 [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)、 [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)或[Private](../../../../visual-basic/language-reference/modifiers/private.md)关键字指定结构的访问级别，也可以让其默认 `Public`。  
   
     ```vb  
     Private Structure employee  
     End Structure  
     ```  
   
-2. Add elements to the body of the structure.  
+2. 向结构的主体中添加元素。  
   
-     A structure must have at least one element. You must declare every element and specify an access level for it. If you use the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) without any keywords, the accessibility defaults to `Public`.  
+     结构中必须至少有一个元素。 必须声明每个元素并为其指定访问级别。 如果使用不带任何关键字的[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)，则可访问性默认为 `Public`。  
   
     ```vb  
     Private Structure employee  
@@ -51,11 +51,11 @@ You begin a structure declaration with the [Structure Statement](../../../../vis
     End Structure  
     ```  
   
-     The `salary` field in the preceding example is `Private`, which means it is inaccessible outside the structure, even from the containing class. However, the `giveRaise` procedure is `Public`, so it can be called from outside the structure. Similarly, you can raise the `salaryReviewTime` event from outside the structure.  
+     前面的示例中的 "`salary`" 字段是 `Private`的，这意味着它在结构外部不可访问，即使是包含类也是如此。 但 `Public``giveRaise` 过程，因此可以从结构外部调用它。 同样，您可以从结构的外部引发 `salaryReviewTime` 事件。  
   
-     In addition to variables, `Sub` procedures, and events, you can also define constants, `Function` procedures, and properties in a structure. You can designate at most one property as the *default property*, provided it takes at least one argument. You can handle an event with a [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)`Sub` procedure. For more information, see [How to: Declare and Call a Default Property in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md).  
+     除了变量、`Sub` 过程和事件外，还可以在结构中定义常量、`Function` 过程和属性。 最多可以将一个属性指定为*默认属性*，前提是它至少采用一个参数。 您可以使用[共享](../../../../visual-basic/language-reference/modifiers/shared.md)`Sub` 过程处理事件。 有关详细信息，请参阅[如何：在 Visual Basic 中声明和调用默认属性](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)

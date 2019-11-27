@@ -42,14 +42,14 @@ HRESULT GetGenerationBounds(
  [out] 指向指定范围总数的整数的指针，部分或所有范围都将在 `ranges` 数组中返回。  
   
  `ranges`  
- [out] An array of [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structures, each of which describes a range (that is, block) of memory within the generation that is undergoing garbage collection.  
+ 弄[COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md)结构的数组，其中每个结构都描述了要进行垃圾回收的代内内存的范围（即块）。  
   
 ## <a name="remarks"></a>备注  
  可以从任何探查器回调调用 `GetGenerationBounds` 方法，前提是当前未进行垃圾回收。
 
  大多数代切换都发生在垃圾回收期间。 在回收之间，代可能会增长，但通常不会反复切换。 因此，调用 `GetGenerationBounds` 最具特色的地方在于 `ICorProfilerCallback2::GarbageCollectionStarted` 和 `ICorProfilerCallback2::GarbageCollectionFinished` 中。  
   
- 在程序启动期间，某些对象是由公共语言运行时 (CLR) 自身分配的，通常发生在第 3 代和第 0 代中。 因此，当托管代码开始执行时，这些代将已经包含对象。 第 1 代和第 2 代通常将为空，但由垃圾回收器生成的虚拟对象除外。 (The size of dummy objects is 12 bytes in 32-bit implementations of the CLR; the size is larger in 64-bit implementations.) You might also see generation 2 ranges that are inside modules produced by the Native Image Generator (NGen.exe). In this case, the objects in generation 2 are *frozen objects*, which are allocated when NGen.exe runs rather than by the garbage collector.  
+ 在程序启动期间，某些对象是由公共语言运行时 (CLR) 自身分配的，通常发生在第 3 代和第 0 代中。 因此，当托管代码开始执行时，这些代将已经包含对象。 第 1 代和第 2 代通常将为空，但由垃圾回收器生成的虚拟对象除外。 （在 CLR 的32位实现中，虚拟对象的大小为12个字节; 64 位实现中的大小较大。）你还可能看到在本机映像生成器（Ngen.exe）生成的模块内的第2代范围。 在这种情况下，第2代中的对象是*冻结对象*，这些对象在 ngen.exe 运行时分配，而不是由垃圾回收器分配。  
   
  此函数使用调用方分配的缓冲区。  
   
@@ -62,7 +62,7 @@ HRESULT GetGenerationBounds(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

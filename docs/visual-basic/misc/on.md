@@ -15,12 +15,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331840"
 ---
 # <a name="on-visual-basic"></a>On (Visual Basic)
-Introduces a response to a run-time error or turns a compiler option on.  
+引入对运行时错误的响应，或打开编译器选项。  
   
- In queries, identifies keys for the collections being joined.  
+ 在 "查询" 中，标识要联接的集合的键。  
   
 ## <a name="remarks"></a>备注  
- The `On` keyword is used in these contexts:  
+ `On` 关键字用于以下上下文：  
   
  [Group Join 子句](../../visual-basic/language-reference/queries/group-join-clause.md)  
   
@@ -34,6 +34,6 @@ Introduces a response to a run-time error or turns a compiler option on.
   
  [Option Strict 语句](../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [关键字](../../visual-basic/language-reference/keywords/index.md)

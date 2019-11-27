@@ -19,23 +19,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349990"
 ---
 # <a name="return-values-for-the-cstr-function-visual-basic"></a>返回 CStr 函数的值 (Visual Basic)
-The following table describes the return values for `CStr` for different data types of `expression`.  
+下表描述了 `expression`的不同数据类型 `CStr` 的返回值。  
   
-|If `expression` type is|`CStr` 返回|  
+|如果 `expression` 类型为|`CStr` 返回|  
 |-----------------------------|--------------------|  
-|[Boolean 数据类型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|A string containing "True" or "False".|  
-|[Date 数据类型](../../../visual-basic/language-reference/data-types/date-data-type.md)|A string containing a `Date` value (date and time) in the short date format of your system.|  
-|[数值数据类型](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|A string representing the number.|  
+|[Boolean 数据类型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|包含 "True" 或 "False" 的字符串。|  
+|[Date 数据类型](../../../visual-basic/language-reference/data-types/date-data-type.md)|一个字符串，包含系统的短日期格式的 `Date` 值（日期和时间）。|  
+|[数值数据类型](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|表示数字的字符串。|  
   
-## <a name="cstr-and-date"></a>CStr and Date  
- The `Date` type always contains both date and time information. For purposes of type conversion, Visual Basic considers 1/1/0001 (January 1 of the year 1) to be a *neutral value* for the date, and 00:00:00 (midnight) to be a neutral value for the time. `CStr` does not include neutral values in the resulting string. For example, if you convert `#January 1, 0001 9:30:00#` to a string, the result is "9:30:00 AM"; the date information is suppressed. However, the date information is still present in the original `Date` value and can be recovered with functions such as <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>.  
+## <a name="cstr-and-date"></a>CStr 和日期  
+ `Date` 类型始终包含日期和时间信息。 出于类型转换的目的，Visual Basic 将1/1/0001 （第1年1月1日）视为日期的*非特定值*，00:00:00 （午夜）为时间的非特定值。 `CStr` 不会在生成的字符串中包含非特定值。 例如，如果将 `#January 1, 0001 9:30:00#` 转换为字符串，则结果为 "9:30:00 AM";禁止显示日期信息。 但是，日期信息仍以原始 `Date` 值形式存在，可以通过 <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>等功能进行恢复。  
   
 > [!NOTE]
-> The `CStr` function performs its conversion based on the current culture settings for the application. To get the string representation of a number in a particular culture, use the number's `ToString(IFormatProvider)` method. For example, use <xref:System.Double.ToString%2A?displayProperty=nameWithType> when converting a value of type `Double` to a `String`.  
+> `CStr` 函数根据应用程序的当前区域性设置来执行转换。 若要获取特定区域性中的数字的字符串表示形式，请使用该数字的 `ToString(IFormatProvider)` 方法。 例如，在将 `Double` 类型的值转换为 `String`时，使用 <xref:System.Double.ToString%2A?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>
-- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Boolean 数据类型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)
 - [Date 数据类型](../../../visual-basic/language-reference/data-types/date-data-type.md)

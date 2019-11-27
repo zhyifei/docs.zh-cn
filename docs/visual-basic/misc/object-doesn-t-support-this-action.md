@@ -1,5 +1,5 @@
 ---
-title: Object doesn't support this action
+title: 对象不支持此操作
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID445
@@ -20,6 +20,6 @@ ms.locfileid: "74353882"
   
 2. 确保属性和方法的名称拼写正确。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [错误类型](../../visual-basic/programming-guide/language-features/error-types.md)

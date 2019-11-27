@@ -21,7 +21,7 @@ ms.locfileid: "74435052"
   
  <xref:System.Windows.Automation.MultipleViewPattern> 控件模式用于支持那些提供并能够在同组信息或子控件的多个表示形式间进行切换的控件。  
   
- Examples of controls that can present multiple views include the list view (which can show its contents as thumbnails, tiles, icons, or details), Microsoft Excel charts (pie, line, bar, cell value with a formula), Microsoft Word documents (normal, Web layout, print layout, reading layout, outline), Microsoft Outlook calendar (year, month, week, day), and Microsoft Windows Media Player skins. 支持的视图由控件开发人员确定，并特定于每个控件。  
+ 可显示多个视图的控件示例包括列表视图（可将其内容显示为缩略图、磁贴、图标或详细信息）、Microsoft Excel 图表（饼图、折线图、条形图、带有公式的单元格值）、Microsoft Word 文档（正常、Web 版式、打印布局、阅读版式、大纲）、Microsoft Outlook 日历（年、月、周、天）和 Microsoft Windows Media Player 的外观。 支持的视图由控件开发人员确定，并特定于每个控件。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
@@ -41,10 +41,10 @@ ms.locfileid: "74435052"
   
 |必需的成员|成员类型|注意|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.CurrentView%2A>|Property|None|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetSupportedViews%2A>|方法|None|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A>|方法|None|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.CurrentView%2A>|属性|无|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetSupportedViews%2A>|方法|无|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A>|方法|无|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A>|方法|无|  
   
  没有与此控件模式相关联的事件。  
   
@@ -56,10 +56,10 @@ ms.locfileid: "74435052"
 |--------------------|---------------|  
 |<xref:System.ArgumentException>|当 <xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A> 或 <xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A> 与不是受支持视图集合成员的参数一同被调用时。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UI 自动化控件模式概述](ui-automation-control-patterns-overview.md)
 - [在 UI 自动化提供程序中支持控件模式](support-control-patterns-in-a-ui-automation-provider.md)
-- [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [UI 自动化树概述](ui-automation-tree-overview.md)
 - [在 UI 自动化中使用缓存](use-caching-in-ui-automation.md)

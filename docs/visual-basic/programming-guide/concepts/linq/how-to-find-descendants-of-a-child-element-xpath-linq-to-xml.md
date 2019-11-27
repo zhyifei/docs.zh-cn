@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344675"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>How to: Find Descendants of a Child Element (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>如何：查找子元素的后代（LINQ to XML）（Visual Basic）
 本主题演示如何获取具有特定名称的子元素的后代元素。  
   
  XPath 表达式为：  
@@ -69,6 +69,6 @@ Results are identical
 This is the start of a sentence.  This is a second sentence.  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 用户的 LINQ to XML （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

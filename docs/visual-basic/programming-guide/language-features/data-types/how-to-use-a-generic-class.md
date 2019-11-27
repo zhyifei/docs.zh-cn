@@ -33,22 +33,22 @@ ms.locfileid: "74350062"
   
  除了类之外，你还可以定义和使用泛型结构、接口、过程和委托。  
   
- The following procedure takes a generic class defined in the .NET Framework and creates an instance from it.  
+ 下面的过程使用在 .NET Framework 中定义的泛型类，并从它创建一个实例。  
   
 ### <a name="to-use-a-class-that-takes-a-type-parameter"></a>使用采用类型参数的类  
   
-1. At the beginning of your source file, include an [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to import the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace. 这使你可以引用 <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> 类，而不必完全限定它即可将它与其他队列类（如 <xref:System.Collections.Queue?displayProperty=nameWithType>）区分开来。  
+1. 在源文件的开头，包括[Imports 语句（.Net 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)以导入 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间。 这使你可以引用 <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> 类，而不必完全限定它即可将它与其他队列类（如 <xref:System.Collections.Queue?displayProperty=nameWithType>）区分开来。  
   
-2. Create the object in the normal way, but add `(Of type)` immediately after the class name.  
+2. 以正常方式创建对象，但将 `(Of type)` 立即添加到类名称后面。  
   
      下面的示例使用相同类 (<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>) 创建保存不同数据类型的项的两个队列对象。 它将项添加到每个队列末尾，然后从每个队列的前面删除并显示项。  
   
      [!code-vb[VbVbalrDataTypes#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#9)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic 中的泛型类型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [语言独立性和与语言无关的组件](../../../../standard/language-independence-and-language-independent-components.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

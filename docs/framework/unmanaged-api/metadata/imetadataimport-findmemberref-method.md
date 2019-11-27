@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437954"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef 方法
-Gets a pointer to the MemberRef token for the member reference that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
+获取一个指针，该指针指向成员引用的 MemberRef 标记，该成员引用由指定 <xref:System.Type> 包含并且具有指定的名称和元数据签名。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,37 +39,37 @@ HRESULT FindMemberRef (
   
 ## <a name="parameters"></a>参数  
  `td`  
- [in] The TypeRef token for the class or interface that encloses the member reference to search for. If this value is `mdTokenNil`, the lookup is done for a global variable or a global-function reference.  
+ 中类或接口的 TypeRef 标记，其中包含要搜索的成员引用。 如果 `mdTokenNil`此值，则将针对全局变量或全局函数引用来执行查找。  
   
  `szName`  
- [in] The name of the member reference to search for.  
+ 中要搜索的成员引用的名称。  
   
  `pvSigBlob`  
- [in] A pointer to the binary metadata signature of the member reference.  
+ 中指向成员引用的二进制元数据签名的指针。  
   
  `cbSigBlob`  
- [in] The size in bytes of `pvSigBlob`.  
+ 中`pvSigBlob`的大小（以字节为单位）。  
   
  `pmr`  
- [out] A pointer to the matching MemberRef token.  
+ 弄指向匹配的 MemberRef 标记的指针。  
   
 ## <a name="remarks"></a>备注  
- You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).  
+ 使用成员的封闭类或接口（`td`）、其名称（`szName`）以及可选的签名（`pvSigBlob`）来指定成员。  
   
- The signature passed to `FindMemberRef` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindMemberRef`.  
+ 传递给 `FindMemberRef` 的签名必须已在当前范围内生成，因为签名将绑定到特定范围。 签名可以嵌入标识封闭类或值类型的标记。 该令牌是本地 TypeDef 表中的索引。 不能在当前范围的上下文之外生成运行时签名，并使用该签名作为 `FindMemberRef`的输入。  
   
- `FindMemberRef` finds only member references that were defined directly in the class or interface; it does not find inherited member references.  
+ `FindMemberRef` 仅查找直接在类或接口中定义的成员引用;它不会查找继承成员引用。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

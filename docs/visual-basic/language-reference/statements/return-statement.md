@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333017"
 ---
 # <a name="return-statement-visual-basic"></a>Return 语句 (Visual Basic)
-Returns control to the code that called a `Function`, `Sub`, `Get`, `Set`, or `Operator` procedure.  
+将控件返回到调用 `Function`、`Sub`、`Get`、`Set`或 `Operator` 过程的代码。  
   
 ## <a name="syntax"></a>语法  
   
@@ -29,24 +29,24 @@ Return expression
   
 ## <a name="part"></a>部件  
  `expression`  
- Required in a `Function`, `Get`, or `Operator` procedure. Expression that represents the value to be returned to the calling code.  
+ 在 `Function`、`Get`或 `Operator` 过程中是必需的。 表示要返回到调用代码的值的表达式。  
   
 ## <a name="remarks"></a>备注  
- In a `Sub` or `Set` procedure, the `Return` statement is equivalent to an `Exit Sub` or `Exit Property` statement, and `expression` must not be supplied.  
+ 在 `Sub` 或 `Set` 过程中，`Return` 语句等效于 `Exit Sub` 或 `Exit Property` 语句，不能提供 `expression`。  
   
- In a `Function`, `Get`, or `Operator` procedure, the `Return` statement must include `expression`, and `expression` must evaluate to a data type that is convertible to the return type of the procedure. In a `Function` or `Get` procedure, you also have the alternative of assigning an expression to the procedure name to serve as the return value, and then executing an `Exit Function` or `Exit Property` statement. In an `Operator` procedure, you must use `Return expression`.  
+ 在 `Function`、`Get`或 `Operator` 过程中，`Return` 语句必须包含 `expression`，并且 `expression` 的计算结果必须为可转换为过程返回类型的数据类型。 在 `Function` 或 `Get` 过程中，您还可以选择将表达式分配给过程名称以用作返回值，然后执行 `Exit Function` 或 `Exit Property` 语句。 在 `Operator` 过程中，必须使用 `Return expression`。  
   
- You can include as many `Return` statements as appropriate in the same procedure.  
+ 可以在同一过程中包含任意数量的 `Return` 语句。  
   
 > [!NOTE]
-> The code in a `Finally` block runs after a `Return` statement in a `Try` or `Catch` block is encountered, but before that `Return` statement executes. A `Return` statement cannot be included in a `Finally` block.  
+> `Finally` 块中的代码将在遇到 `Try` 或 `Catch` 块中的 `Return` 语句之后、但在执行该 `Return` 语句之前运行。 `Finally` 块中不能包含 `Return` 语句。  
   
 ## <a name="example"></a>示例  
- The following example uses the `Return` statement several times to return to the calling code when the procedure does not have to do anything else.  
+ 下面的示例多次使用 `Return` 语句，以便在过程无需执行任何其他操作时返回到调用代码。  
   
  [!code-vb[VbVbalrStatements#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#53)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)

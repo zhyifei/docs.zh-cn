@@ -16,13 +16,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346122"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>结构和其他编程元素 (Visual Basic)
-You can use structures in conjunction with arrays, objects, and procedures, as well as with each other. The interactions use the same syntax as these elements use individually.  
+您可以将结构与数组、对象和过程以及彼此一起使用。 交互使用的语法与这些元素分别使用的语法相同。  
   
 > [!NOTE]
-> You cannot initialize any of the structure elements in the structure declaration. You can assign values only to elements of a variable that has been declared to be of a structure type.  
+> 不能在结构声明中初始化任何结构元素。 只能为已声明为结构类型的变量的元素赋值。  
   
-## <a name="structures-and-arrays"></a>Structures and Arrays  
- A structure can contain an array as one or more of its elements. 下面的示例阐释了这一点。  
+## <a name="structures-and-arrays"></a>结构和数组  
+ 结构可以包含数组作为其一个或多个元素。 下面的示例阐释了这一点。  
   
 ```vb  
 Public Structure systemInfo  
@@ -33,7 +33,7 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- You access the values of an array within a structure the same way you access a property on an object. 下面的示例阐释了这一点。  
+ 访问结构中数组的值的方式与访问对象上的属性的方式相同。 下面的示例阐释了这一点。  
   
 ```vb  
 Dim mySystem As systemInfo  
@@ -41,13 +41,13 @@ ReDim mySystem.diskDrives(3)
 mySystem.diskDrives(0) = "1.44 MB"  
 ```  
   
- You can also declare an array of structures. 下面的示例阐释了这一点。  
+ 还可以声明结构的数组。 下面的示例阐释了这一点。  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
 ```  
   
- You follow the same rules to access the components of this data architecture. 下面的示例阐释了这一点。  
+ 遵循相同的规则来访问此数据体系结构的组件。 下面的示例阐释了这一点。  
   
 ```vb  
 ReDim allSystems(5).diskDrives(3)  
@@ -55,8 +55,8 @@ allSystems(5).CPU = "386SX"
 allSystems(5).diskDrives(2) = "100M SCSI"  
 ```  
   
-## <a name="structures-and-objects"></a>Structures and Objects  
- A structure can contain an object as one or more of its elements. 下面的示例阐释了这一点。  
+## <a name="structures-and-objects"></a>结构和对象  
+ 结构可以包含对象作为其一个或多个元素。 下面的示例阐释了这一点。  
   
 ```vb  
 Protected Structure userInput  
@@ -66,10 +66,10 @@ Protected Structure userInput
 End Structure  
 ```  
   
- You should use a specific object class in such a declaration, rather than `Object`.  
+ 应在此类声明中使用特定对象类，而不是 `Object`。  
   
-## <a name="structures-and-procedures"></a>Structures and Procedures  
- You can pass a structure as a procedure argument. 下面的示例阐释了这一点。  
+## <a name="structures-and-procedures"></a>结构和过程  
+ 可以将结构作为过程自变量传递。 下面的示例阐释了这一点。  
   
 ```vb  
 Public currentCPUName As String = "700MHz Pentium compatible"  
@@ -81,9 +81,9 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- The preceding example passes the structure *by reference*, which allows the procedure to modify its elements so that the changes take effect in the calling code. If you want to protect a structure against such modification, pass it by value.  
+ 前面的示例*通过引用*传递结构，这允许过程修改其元素，以使所做的更改在调用代码中生效。 如果要针对此类修改保护结构，请按值传递它。  
   
- You can also return a structure from a `Function` procedure. 下面的示例阐释了这一点。  
+ 还可以从 `Function` 过程返回结构。 下面的示例阐释了这一点。  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -96,8 +96,8 @@ Function findByDate(ByVal searchDate As Date) As systemInfo
 End Function  
 ```  
   
-## <a name="structures-within-structures"></a>Structures Within Structures  
- Structures can contain other structures. 下面的示例阐释了这一点。  
+## <a name="structures-within-structures"></a>结构内的结构  
+ 结构可以包含其他结构。 下面的示例阐释了这一点。  
   
 ```vb  
 Public Structure driveInfo  
@@ -118,11 +118,11 @@ ReDim allSystems(1).diskDrives(3)
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- You can also use this technique to encapsulate a structure defined in one module within a structure defined in a different module.  
+ 你还可以使用此方法将一个模块中定义的结构封装在另一个模块中定义的结构内。  
   
- Structures can contain other structures to an arbitrary depth.  
+ 结构可以包含任意深度的其他结构。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436956"
 ---
 # <a name="imetadataimportgetrva-method"></a>IMetaDataImport::GetRVA 方法
-Gets the relative virtual address (RVA) and the implementation flags of the method or field represented by the specified token.  
+获取指定标记所表示的方法或字段的相对虚拟地址（RVA）和实现标志。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,24 +37,24 @@ HRESULT GetRVA (
   
 ## <a name="parameters"></a>参数  
  `tk`  
- [in] A MethodDef or FieldDef metadata token that represents the code object to return the RVA for. If the token is a FieldDef, the field must be a global variable.  
+ 中一个 MethodDef 或 FieldDef 元数据标记，它表示要为其返回 RVA 的代码对象。 如果标记为 FieldDef，则字段必须是全局变量。  
   
  `pulCodeRVA`  
- [out] A pointer to the relative virtual address of the code object represented by the token.  
+ 弄指向由标记表示的代码对象的相对虚拟地址的指针。  
   
  `pdwImplFlags`  
- [out] A pointer to the implementation flags for the method. This value is a bitmask from the [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeration. The value of `pdwImplFlags` is valid only if `tk` is a MethodDef token.  
+ 弄一个指针，指向方法的实现标志。 此值是[CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md)枚举中的位掩码。 仅当 `tk` 是 MethodDef 标记时，`pdwImplFlags` 的值才有效。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

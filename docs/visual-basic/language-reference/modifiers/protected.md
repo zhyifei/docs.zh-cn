@@ -19,29 +19,29 @@ ms.locfileid: "74351303"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
 
-A member access modifier that specifies that one or more declared programming elements are accessible only from within their own class or from a derived class.
+一个成员访问修饰符，它指定一个或多个已声明的编程元素只能从自己的类或派生类中访问。
 
 ## <a name="remarks"></a>备注
 
-Sometimes a programming element declared in a class contains sensitive data or restricted code, and you want to limit access to the element. However, if the class is inheritable and you expect a hierarchy of derived classes, it might be necessary for these derived classes to access the data or code. In such a case, you want the element to be accessible both from the base class and from all derived classes. To limit access to an element in this manner, you can declare it with `Protected`.
+有时，在类中声明的编程元素包含敏感数据或受限制的代码，并希望限制对元素的访问。 但是，如果类可继承并且你需要派生类的层次结构，则这些派生类可能需要访问数据或代码。 在这种情况下，你希望可以从基类和所有派生类中访问元素。 若要以这种方式限制对某个元素的访问，可使用 `Protected`声明该元素。
 
 > [!NOTE]
-> The `Protected` access modifier can be combined with two other modifiers:
+> `Protected` 访问修饰符可以与其他两个修饰符结合使用：
 >
-> - The [Protected Friend](protected-friend.md) modifier makes a class member accessible from within that class, from derived classes, and from the same assembly in which the class is defined.
-> - The [Private Protected](private-protected.md) modifier makes a class member accessible by derived types, but only within its containing assembly.
+> - [受保护的 Friend](protected-friend.md)修饰符使类成员可从该类、派生类以及在其中定义该类的同一程序集中访问。
+> - [私有受保护](private-protected.md)的修饰符使类成员可由派生类型访问，但仅包含在其包含的程序集中。
 
 ## <a name="rules"></a>规则
 
-**Declaration Context.** You can use `Protected` only at the class level. This means the declaration context for a `Protected` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
+**声明上下文。** 只能在类级别使用 `Protected`。 这意味着 `Protected` 元素的声明上下文必须是类，且不能是源文件、命名空间、接口、模块、结构或过程。
 
 ## <a name="behavior"></a>行为
 
-- **Access Level.** All code in a class can access its elements. Code in any class that derives from a base class can access all the `Protected` elements of the base class. This is true for all generations of derivation. This means that a class can access `Protected` elements of the base class of the base class, and so on.
+- **访问级别。** 类中的所有代码都可以访问其元素。 从基类派生的任何类中的代码都可以访问基类的所有 `Protected` 元素。 这适用于派生的所有代。 这意味着，类可以访问基类的基类的 `Protected` 元素，等等。
 
-     Protected access is not a superset or subset of friend access.
+     受保护的访问不是友元访问的超集或子集。
 
-- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+- **访问修饰符。** 指定访问级别的关键字称为*访问修饰符*。 有关访问修饰符的比较，请参阅[Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。
 
 `Protected` 修饰符可用于下面的上下文中：
 
@@ -49,7 +49,7 @@ Sometimes a programming element declared in a class contains sensitive data or r
 
 - [Const 语句](../../../visual-basic/language-reference/statements/const-statement.md)
 
-- [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
 
 - [Delegate 语句](../../../visual-basic/language-reference/statements/delegate-statement.md)
 
@@ -69,14 +69,14 @@ Sometimes a programming element declared in a class contains sensitive data or r
 
 - [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [COMClassAttribute](../../../visual-basic/language-reference/modifiers/public.md)
+- [Public](../../../visual-basic/language-reference/modifiers/public.md)
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](private-protected.md)
 - [Protected Friend](protected-friend.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [过程](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

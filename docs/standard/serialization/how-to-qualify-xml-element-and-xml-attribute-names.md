@@ -18,7 +18,7 @@ ms.locfileid: "74353101"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>如何：限定 XML 元素和 XML 属性名
 
-XML namespaces contained by instances of the <xref:System.Xml.Serialization.XmlSerializerNamespaces> class must conform to the World Wide Web Consortium (W3C) specification called [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).
+<xref:System.Xml.Serialization.XmlSerializerNamespaces> 类的实例所包含的 XML 命名空间必须符合[xml 中称为命名空间](https://www.w3.org/TR/REC-xml-names/)的万维网联合会（W3C）规范。
 
 XML 命名空间提供了一种方法，用来限定 XML 文档中 XML 元素和 XML 特性的名称。 限定名由前缀和本地名称组成，两者之间用冒号分隔。 前缀仅用作占位符；它将映射到用于指定命名空间的 URI。 统一管理的 URI 命名空间和本地名称的组合能够产生保证为全局唯一的名称。
 
@@ -170,12 +170,12 @@ public class Book
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [XML 架构定义工具和 XML 序列化](the-xml-schema-definition-tool-and-xml-serialization.md)
 - [XML 序列化简介](introducing-xml-serialization.md)
-- [XmlSerializer Class](xref:System.Xml.Serialization.XmlSerializer)
+- [XmlSerializer 类](xref:System.Xml.Serialization.XmlSerializer)
 - [用来控制 XML 序列化的属性](attributes-that-control-xml-serialization.md)
 - [如何：指定 XML 流的替代元素名称](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [如何：序列化对象](how-to-serialize-an-object.md)

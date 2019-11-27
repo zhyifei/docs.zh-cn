@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439889"
 ---
 # <a name="icorprofilercallbackunmanagedtomanagedtransition-method"></a>ICorProfilerCallback::UnmanagedToManagedTransition 方法
-Notifies the profiler that a transition from unmanaged code to managed code has occurred.  
+通知探查器已发生从非托管代码到托管代码的转换。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,15 +35,15 @@ HRESULT UnmanagedToManagedTransition(
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in] The ID of the function that is being called.  
+ 中正在调用的函数的 ID。  
   
  `reason`  
- [in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into managed code from unmanaged code, or because of a return from an unmanaged function called by a managed one.  
+ 中一个[COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md)枚举的值，该值指示是否由于从非托管代码调用托管代码而发生了转换，或是否是由托管函数调用的非托管函数返回。  
   
 ## <a name="remarks"></a>备注  
- If the value of `reason` is COR_PRF_TRANSITION_RETURN and `functionId` is not null, the function ID is that of the unmanaged function, and will never have been compiled using the just-in-time (JIT) compiler. Unmanaged functions have some basic information associated with them, such as a name and some metadata.  
+ 如果 `reason` 的值 COR_PRF_TRANSITION_RETURN 并且 `functionId` 不为 null，则函数 ID 为非托管函数的 ID，并且永远不会使用实时（JIT）编译器编译。 非托管函数有一些与之关联的基本信息，如名称和某些元数据。  
   
- If the value of `reason` is COR_PRF_TRANSITION_CALL, it may be possible that the called function (that is, the managed function) has not yet been JIT-compiled.  
+ 如果 COR_PRF_TRANSITION_CALL `reason` 的值，则可能是被调用的函数（即托管函数）尚未进行 JIT 编译。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -54,7 +54,7 @@ HRESULT UnmanagedToManagedTransition(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ManagedToUnmanagedTransition 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md)

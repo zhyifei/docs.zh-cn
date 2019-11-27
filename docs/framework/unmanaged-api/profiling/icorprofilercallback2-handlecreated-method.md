@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439771"
 ---
 # <a name="icorprofilercallback2handlecreated-method"></a>ICorProfilerCallback2::HandleCreated 方法
-Notifies the code profiler that a garbage collection handle has been created.  
+通知代码探查器已创建垃圾回收句柄。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,10 +35,10 @@ HRESULT HandleCreated(
   
 ## <a name="parameters"></a>参数  
  `handleId`  
- [in] The ID of the handle for the garbage collection.  
+ 中垃圾回收的句柄的 ID。  
   
  `initialObjectId`  
- [in] The ID of the object for which the garbage collection handle was created.  
+ 中为其创建垃圾回收句柄的对象的 ID。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -49,7 +49,7 @@ HRESULT HandleCreated(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerCallback2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

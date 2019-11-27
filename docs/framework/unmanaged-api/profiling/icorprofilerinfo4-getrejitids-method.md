@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442863"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs 方法
-Returns an array of IDs that identify all JIT-recompiled versions of the specified function that are still allocated. This includes JIT-recompiled versions of functions that have been subsequently reverted but not yet freed (for example, when the application domain that contains the reverted function is still in use).  
+返回 Id 的数组，这些 Id 标识仍分配的指定函数的所有 JIT 重新编译版本。 这包括 JIT 重新编译的函数版本，这些版本已进行了还原但尚未释放（例如，当包含还原函数的应用程序域仍在使用时）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,19 +37,19 @@ HRESULT GetReJITIDs (
   
 ## <a name="parameters"></a>参数  
  `functionId`  
- [in] The `FunctionID` of the function instance for which to enumerate versions.  
+ 中要枚举其版本的函数实例的 `FunctionID`。  
   
  `cReJitIds`  
- [in] The number of JIT-recompiled IDs allocated in the `reJitIds` array.  
+ 中`reJitIds` 数组中分配的 JIT 重新编译 Id 的数目。  
   
  `pcReJitIds`  
- [out] The actual number of JIT-recompiled IDs.  
+ 弄JIT 重新编译的 Id 的实际数目。  
   
  `reJitIds`  
- [out] A caller-allocated array that will contain the JIT-recompiled IDs for the specified function.  
+ 弄调用方分配的数组，其中包含指定函数的 JIT 重新编译的 Id。  
   
 ## <a name="remarks"></a>备注  
- `GetReJITIDs` enumerates the active JIT-recompiled IDs for a given function instance. It follows the same usage pattern as other `ICorProfilerInfo` functions that accept caller-allocated buffers.  
+ `GetReJITIDs` 枚举给定函数实例的活动 JIT 重新编译的 Id。 它遵循的使用模式与接受调用方分配的缓冲区的其他 `ICorProfilerInfo` 函数相同。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -60,7 +60,7 @@ HRESULT GetReJITIDs (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo4 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
 - [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

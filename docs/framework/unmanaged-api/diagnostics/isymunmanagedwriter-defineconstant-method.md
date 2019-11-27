@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428062"
 ---
 # <a name="isymunmanagedwriterdefineconstant-method"></a>ISymUnmanagedWriter::DefineConstant 方法
-Defines a name for a constant value.  
+定义常数值的名称。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,24 +37,24 @@ HRESULT DefineConstant(
   
 ## <a name="parameters"></a>参数  
  `name`  
- [in] A pointer to a `WCHAR` that defines the constant name.  
+ 中指向定义常量名称的 `WCHAR` 的指针。  
   
  `value`  
- [in] The value of the constant.  
+ 中常量的值。  
   
  `cSig`  
  [in] `signature` 数组的大小。  
   
  `signature`  
- [in] The type signature for the constant.  
+ 中常数的类型签名。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl, CorSym.h  
+ **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
 - [DefineConstant2 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineconstant2-method.md)

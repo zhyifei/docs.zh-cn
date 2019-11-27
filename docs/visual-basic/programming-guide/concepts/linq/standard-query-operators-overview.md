@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349302"
 ---
-# <a name="standard-query-operators-overview-visual-basic"></a>Standard Query Operators Overview (Visual Basic)
+# <a name="standard-query-operators-overview-visual-basic"></a>标准查询运算符概述（Visual Basic）
 
 *标准查询运算符*是组成 LINQ 模式的方法。 这些方法中的大多数都作用于序列；其中序列指其类型实现 <xref:System.Collections.Generic.IEnumerable%601> 接口或 <xref:System.Linq.IQueryable%601> 接口的对象。 标准查询运算符提供包括筛选、投影、聚合、排序等在内的查询功能。
 
@@ -66,11 +66,11 @@ MsgBox(output.ToString())
 
 ## <a name="query-expression-syntax"></a>查询表达式语法
 
-某些使用更频繁的标准查询运算符具有专用的 C# 和 Visual Basic 语言关键字语法，使用这些语法可以在*查询* *表达式*中调用这些运算符。 For more information about standard query operators that have dedicated keywords and their corresponding syntaxes, see [Query Expression Syntax for Standard Query Operators (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).
+某些使用更频繁的标准查询运算符具有专用的 C# 和 Visual Basic 语言关键字语法，使用这些语法可以在*查询* *表达式*中调用这些运算符。 有关具有专用关键字及其相应语法的标准查询运算符的详细信息，请参阅[标准查询运算符的查询表达式语法（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)。
 
 ## <a name="extending-the-standard-query-operators"></a>扩展标准查询运算符
 
-通过创建适合于目标域或技术的特定于域的方法，可以增大标准查询运算符的集合。 也可以用自己的实现来替换标准查询运算符，这些实现提供诸如远程计算、查询转换和优化之类的附加服务。 有关示例，请参见 <xref:System.Linq.Enumerable.AsEnumerable%2A>。
+通过创建适合于目标域或技术的特定于域的方法，可以增大标准查询运算符的集合。 也可以用自己的实现来替换标准查询运算符，这些实现提供诸如远程计算、查询转换和优化之类的附加服务。 有关示例，请参阅<xref:System.Linq.Enumerable.AsEnumerable%2A>。
 
 ## <a name="related-sections"></a>相关章节
 
@@ -78,37 +78,37 @@ MsgBox(output.ToString())
 
 - [对数据进行排序](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
 
-- [Set Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/set-operations.md)
+- [设置操作（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/set-operations.md)
 
-- [Filtering Data (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)
+- [筛选数据（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)
 
-- [Quantifier Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)
+- [限定符运算（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)
 
-- [Projection Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [投影操作（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
 
-- [Partitioning Data (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)
+- [数据分区（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)
 
-- [Join Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)
+- [联接操作（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)
 
-- [Grouping Data (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)
+- [数据分组（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)
 
-- [Generation Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/generation-operations.md)
+- [生成操作（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/generation-operations.md)
 
-- [Equality Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/equality-operations.md)
+- [相等运算（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/equality-operations.md)
 
-- [Element Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md)
+- [元素操作（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md)
 
-- [Converting Data Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)
+- [转换数据类型（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)
 
-- [Concatenation Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concatenation-operations.md)
+- [串联运算（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/concatenation-operations.md)
 
-- [Aggregation Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)
+- [聚合运算（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
 - [LINQ 简介 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
-- [Query Expression Syntax for Standard Query Operators (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [Classification of Standard Query Operators by Manner of Execution (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
+- [标准查询运算符的查询表达式语法（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [标准查询运算符按执行方式的分类（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
 - [扩展方法](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

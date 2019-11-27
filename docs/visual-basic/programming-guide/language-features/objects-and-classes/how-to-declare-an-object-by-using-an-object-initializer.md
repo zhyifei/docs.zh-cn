@@ -15,51 +15,51 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347128"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>如何：使用对象初始值设定项声明对象 (Visual Basic)
-Object initializers enable you to declare and instantiate an instance of a class in a single statement. In addition, you can initialize one or more members of the instance at the same time, without invoking a parameterized constructor.  
+使用对象初始值设定项可在单个语句中声明和实例化类的实例。 此外，您可以同时初始化实例的一个或多个成员，而无需调用参数化的构造函数。  
   
- When you use an object initializer to create an instance of a named type, the parameterless constructor for the class is called, followed by initialization of designated members in the order you specify.  
+ 使用对象初始值设定项创建命名类型的实例时，将调用类的无参数构造函数，然后按照指定的顺序初始化指定成员。  
   
- The following procedure shows how to create an instance of a `Student` class in three different ways. The class has first name, last name, and class year properties, among others. Each of the three declarations creates a new instance of `Student`, with property `First` set to "Michael", property `Last` set to "Tucker", and all other members set to their default values. The result of each declaration in the procedure is equivalent to the following example, which does not use an object initializer.  
+ 下面的过程演示了如何通过三种不同的方式创建 `Student` 类的实例。 类具有名字、姓氏和类年属性以及其他属性。 这三个声明都创建 `Student`的新实例，并将属性 `First` 设置为 "Michael"，将 `Last` 属性设置为 "Tucker"，将所有其他成员设置为其默认值。 此过程中每个声明的结果等效于下面的示例，该示例不使用对象初始值设定项。  
   
  [!code-vb[VbVbalrObjectInit#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#20)]  
   
- For an implementation of the `Student` class, see [How to: Create a List of Items](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). You can copy the code from that topic to set up the class and create a list of `Student` objects to work with.  
+ 有关 `Student` 类的实现，请参阅[如何：创建项列表](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)。 你可以从该主题复制代码以设置类，并创建要使用的 `Student` 对象的列表。  
   
-### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>To create an object of a named class by using an object initializer  
+### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>使用对象初始值设定项创建命名类的对象  
   
-1. Begin the declaration as if you planned to use a constructor.  
+1. 开始声明，就像计划使用构造函数一样。  
   
      `Dim student1 As New Student`  
   
-2. Type the keyword `With`, followed by an initialization list in braces.  
+2. 键入关键字 `With`，后跟一个用大括号括起来的初始化列表。  
   
      `Dim student1 As New Student With { <initialization list> }`  
   
-3. In the initialization list, include each property that you want to initialize and assign an initial value to it. The name of the property is preceded by a period.  
+3. 在初始化列表中，包含要初始化的每个属性，并为其分配初始值。 属性的名称前面有一个句点。  
   
      [!code-vb[VbVbalrObjectInit#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#21)]  
   
-     You can initialize one or more members of the class.  
+     可以初始化类的一个或多个成员。  
   
-4. Alternatively, you can declare a new instance of the class and then assign a value to it. First, declare an instance of `Student`:  
+4. 或者，可以声明类的新实例，然后为其赋值。 首先，将 `Student`的实例声明为：  
   
      `Dim student2 As Student`  
   
-5. Begin the creation of an instance of `Student` in the normal way.  
+5. 以正常方式开始创建 `Student` 实例。  
   
      `Dim student2 As Student = New Student`  
   
-6. Type `With` and then an object initializer to initialize one or more members of the new instance.  
+6. 键入 `With` 然后使用对象初始值设定项来初始化新实例的一个或多个成员。  
   
      [!code-vb[VbVbalrObjectInit#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#22)]  
   
-7. You can simplify the definition in the previous step by omitting `As Student`. If you do this, the compiler determines that `student3` is an instance of `Student` by using local type inference.  
+7. 您可以通过省略 `As Student`来简化前一步骤中的定义。 如果执行此操作，编译器将通过使用局部类型推理来确定 `student3` 是 `Student` 的实例。  
   
      [!code-vb[VbVbalrObjectInit#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#23)]  
   
-     For more information, see [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+     有关详细信息，请参阅[局部类型推理](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [局部类型推理](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [如何：创建项列表](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)

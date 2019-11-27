@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436105"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo 方法
-Gets data about the specified column in the specified table.  
+获取有关指定表中指定列的数据。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,59 +42,59 @@ HRESULT GetColumnInfo (
 =======
 
  `ixTbl`  
- [in] The index of the desired table.  
+ 中所需表的索引。  
   
  `ixCol`  
- [in] The index of the desired column.  
+ 中所需列的索引。  
   
  `poCol`  
- [out] A pointer to the offset of the column in the row.  
+ 弄指向行中列的偏移量的指针。  
   
  `pcbCol`  
- [out] A pointer to the size, in bytes, of the column.  
+ 弄一个指针，指向列的大小（以字节为单位）。  
   
  `pType`  
- [out] A pointer to the type of the values in the column.  
+ 弄一个指针，指向列中值的类型。  
   
  `ppName`  
- [out] A pointer to a pointer to the column name.  
+ 弄指向列名的指针的指针。  
  
 ## <a name="remarks"></a>备注
 
-The returned column type falls within a range of values:
+返回的列类型位于值的范围内：
 
-| pType                    | 描述   | Helper function                   |
+| pType                    | 说明   | Helper 函数                   |
 |--------------------------|---------------|-----------------------------------|
-| `0`..`iRidMax`<br>(0..63)   | Rid           | **IsRidType**<br>**IsRidOrToken** |
-| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | Coded token | **IsCodedTokenType** <br>**IsRidOrToken** |
-| `iSHORT` (96)            | Int16         | **IsFixedType**                   |
-| `iUSHORT` (97)           | UInt16        | **IsFixedType**                   |
-| `iLONG` (98)             | Int32         | **IsFixedType**                   |
-| `iULONG` (99)            | UInt32        | **IsFixedType**                   |
-| `iBYTE` (100)            | 字节          | **IsFixedType**                   |
-| `iSTRING` (101)          | 字符串        | **IsHeapType**                    |
-| `iGUID` (102)            | GUID          | **IsHeapType**                    |
-| `iBLOB` (103)            | Blob          | **IsHeapType**                    |
+| `0`.。`iRidMax`<br>（0-63）   | 去掉           | **IsRidType**<br>**IsRidOrToken** |
+| `iCodedToken`.。`iCodedTokenMax`<br>（64.. 95） | 编码标记 | **IsCodedTokenType** <br>**IsRidOrToken** |
+| `iSHORT` （96）            | Int16         | **IsFixedType**                   |
+| `iUSHORT` （97）           | UInt16        | **IsFixedType**                   |
+| `iLONG` （98）             | Int32         | **IsFixedType**                   |
+| `iULONG` （99）            | UInt32        | **IsFixedType**                   |
+| `iBYTE` （100）            | 字节          | **IsFixedType**                   |
+| `iSTRING` （101）          | String        | **IsHeapType**                    |
+| `iGUID` （102）            | Guid          | **IsHeapType**                    |
+| `iBLOB` （103）            | Blob          | **IsHeapType**                    |
 
-Values that are stored in the *heap* (that is, `IsHeapType == true`) can be read using:
+可以使用读取存储在*堆*中的值（即 `IsHeapType == true`）：
 
-- `iSTRING`: **IMetadataTables.GetString**
-- `iGUID`: **IMetadataTables.GetGUID**
-- `iBLOB`: **IMetadataTables.GetBlob**
+- `iSTRING`： **IMetadataTables. GetString**
+- `iGUID`： **IMetadataTables. GetGUID**
+- `iBLOB`： **IMetadataTables. GetBlob**
 
 > [!IMPORTANT]
-> To use the constants defined in the table above, include the directive `#define _DEFINE_META_DATA_META_CONSTANTS` provided by the *cor.h* header file.
+> 若要使用上表中定义的常量，请包含*cor*头文件提供的指令 `#define _DEFINE_META_DATA_META_CONSTANTS`。
 
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataTables 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
