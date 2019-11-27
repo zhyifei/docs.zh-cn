@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450178"
 ---
-# <a name="imetadataemitdefineuserstring-method"></a><span data-ttu-id="37461-102">IMetaDataEmit::DefineUserString 方法</span><span class="sxs-lookup"><span data-stu-id="37461-102">IMetaDataEmit::DefineUserString Method</span></span>
-<span data-ttu-id="37461-103">Gets a metadata token for the specified literal string.</span><span class="sxs-lookup"><span data-stu-id="37461-103">Gets a metadata token for the specified literal string.</span></span>  
+# <a name="imetadataemitdefineuserstring-method"></a><span data-ttu-id="5adb8-102">IMetaDataEmit::DefineUserString 方法</span><span class="sxs-lookup"><span data-stu-id="5adb8-102">IMetaDataEmit::DefineUserString Method</span></span>
+<span data-ttu-id="5adb8-103">获取指定文本字符串的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="5adb8-103">Gets a metadata token for the specified literal string.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="37461-104">语法</span><span class="sxs-lookup"><span data-stu-id="37461-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5adb8-104">语法</span><span class="sxs-lookup"><span data-stu-id="5adb8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineUserString (   
@@ -35,26 +35,26 @@ HRESULT DefineUserString (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="37461-105">参数</span><span class="sxs-lookup"><span data-stu-id="37461-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5adb8-105">参数</span><span class="sxs-lookup"><span data-stu-id="5adb8-105">Parameters</span></span>  
  `szString`  
- <span data-ttu-id="37461-106">[in] The user string to store.</span><span class="sxs-lookup"><span data-stu-id="37461-106">[in] The user string to store.</span></span>  
+ <span data-ttu-id="5adb8-106">中要存储的用户字符串。</span><span class="sxs-lookup"><span data-stu-id="5adb8-106">[in] The user string to store.</span></span>  
   
  `cchString`  
- <span data-ttu-id="37461-107">[in] The count of wide characters in `szString`.</span><span class="sxs-lookup"><span data-stu-id="37461-107">[in] The count of wide characters in `szString`.</span></span>  
+ <span data-ttu-id="5adb8-107">中`szString`中的宽字符数。</span><span class="sxs-lookup"><span data-stu-id="5adb8-107">[in] The count of wide characters in `szString`.</span></span>  
   
  `pstk`  
- <span data-ttu-id="37461-108">[out] The string token assigned.</span><span class="sxs-lookup"><span data-stu-id="37461-108">[out] The string token assigned.</span></span>  
+ <span data-ttu-id="5adb8-108">弄分配的字符串标记。</span><span class="sxs-lookup"><span data-stu-id="5adb8-108">[out] The string token assigned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="37461-109">要求</span><span class="sxs-lookup"><span data-stu-id="37461-109">Requirements</span></span>  
- <span data-ttu-id="37461-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="37461-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5adb8-109">要求</span><span class="sxs-lookup"><span data-stu-id="5adb8-109">Requirements</span></span>  
+ <span data-ttu-id="5adb8-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5adb8-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="37461-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="37461-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="5adb8-111">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="5adb8-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="37461-112">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="37461-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5adb8-112">**库：** 用作 Mscoree.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="5adb8-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="37461-113">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="37461-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5adb8-113">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5adb8-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="37461-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="37461-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5adb8-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5adb8-114">See also</span></span>
 
-- [<span data-ttu-id="37461-115">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="37461-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="37461-116">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="37461-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="5adb8-115">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="5adb8-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="5adb8-116">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="5adb8-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

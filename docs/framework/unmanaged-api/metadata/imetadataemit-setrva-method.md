@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426822"
 ---
-# <a name="imetadataemitsetrva-method"></a><span data-ttu-id="2fc3e-102">IMetaDataEmit::SetRVA 方法</span><span class="sxs-lookup"><span data-stu-id="2fc3e-102">IMetaDataEmit::SetRVA Method</span></span>
-<span data-ttu-id="2fc3e-103">Sets the relative virtual address of the specified method.</span><span class="sxs-lookup"><span data-stu-id="2fc3e-103">Sets the relative virtual address of the specified method.</span></span>  
+# <a name="imetadataemitsetrva-method"></a><span data-ttu-id="e2ce4-102">IMetaDataEmit::SetRVA 方法</span><span class="sxs-lookup"><span data-stu-id="e2ce4-102">IMetaDataEmit::SetRVA Method</span></span>
+<span data-ttu-id="e2ce4-103">设置指定方法的相对虚拟地址。</span><span class="sxs-lookup"><span data-stu-id="e2ce4-103">Sets the relative virtual address of the specified method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2fc3e-104">语法</span><span class="sxs-lookup"><span data-stu-id="2fc3e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e2ce4-104">语法</span><span class="sxs-lookup"><span data-stu-id="e2ce4-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetRVA (  
@@ -34,23 +34,23 @@ HRESULT SetRVA (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2fc3e-105">参数</span><span class="sxs-lookup"><span data-stu-id="2fc3e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e2ce4-105">参数</span><span class="sxs-lookup"><span data-stu-id="e2ce4-105">Parameters</span></span>  
  `md`  
- <span data-ttu-id="2fc3e-106">[in] The token for the target method or method implementation.</span><span class="sxs-lookup"><span data-stu-id="2fc3e-106">[in] The token for the target method or method implementation.</span></span>  
+ <span data-ttu-id="e2ce4-106">中目标方法或方法实现的标记。</span><span class="sxs-lookup"><span data-stu-id="e2ce4-106">[in] The token for the target method or method implementation.</span></span>  
   
  `ulRVA`  
- <span data-ttu-id="2fc3e-107">[in] The address of the code or data area.</span><span class="sxs-lookup"><span data-stu-id="2fc3e-107">[in] The address of the code or data area.</span></span>  
+ <span data-ttu-id="e2ce4-107">中代码或数据区域的地址。</span><span class="sxs-lookup"><span data-stu-id="e2ce4-107">[in] The address of the code or data area.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2fc3e-108">要求</span><span class="sxs-lookup"><span data-stu-id="2fc3e-108">Requirements</span></span>  
- <span data-ttu-id="2fc3e-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2fc3e-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e2ce4-108">要求</span><span class="sxs-lookup"><span data-stu-id="e2ce4-108">Requirements</span></span>  
+ <span data-ttu-id="e2ce4-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e2ce4-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2fc3e-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="2fc3e-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e2ce4-110">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="e2ce4-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="2fc3e-111">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2fc3e-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="e2ce4-111">**库：** 用作 Mscoree.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="e2ce4-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="2fc3e-112">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2fc3e-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e2ce4-112">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e2ce4-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2fc3e-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="2fc3e-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e2ce4-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e2ce4-113">See also</span></span>
 
-- [<span data-ttu-id="2fc3e-114">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="2fc3e-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="2fc3e-115">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="2fc3e-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="e2ce4-114">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="e2ce4-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="e2ce4-115">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="e2ce4-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -21,48 +21,48 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440778"
 ---
-# <a name="functionenter3-function"></a><span data-ttu-id="14740-102">FunctionEnter3 函数</span><span class="sxs-lookup"><span data-stu-id="14740-102">FunctionEnter3 Function</span></span>
-<span data-ttu-id="14740-103">Notifies the profiler that control is being passed to a function.</span><span class="sxs-lookup"><span data-stu-id="14740-103">Notifies the profiler that control is being passed to a function.</span></span>  
+# <a name="functionenter3-function"></a><span data-ttu-id="7ec91-102">FunctionEnter3 函数</span><span class="sxs-lookup"><span data-stu-id="7ec91-102">FunctionEnter3 Function</span></span>
+<span data-ttu-id="7ec91-103">通知探查器控制正在传递到函数。</span><span class="sxs-lookup"><span data-stu-id="7ec91-103">Notifies the profiler that control is being passed to a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="14740-104">语法</span><span class="sxs-lookup"><span data-stu-id="14740-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7ec91-104">语法</span><span class="sxs-lookup"><span data-stu-id="7ec91-104">Syntax</span></span>  
   
 ```cpp  
 void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="14740-105">参数</span><span class="sxs-lookup"><span data-stu-id="14740-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7ec91-105">参数</span><span class="sxs-lookup"><span data-stu-id="7ec91-105">Parameters</span></span>  
  `functionOrRemappedID`  
- <span data-ttu-id="14740-106">[in] The identifier of the function to which control is passed.</span><span class="sxs-lookup"><span data-stu-id="14740-106">[in] The identifier of the function to which control is passed.</span></span>  
+ <span data-ttu-id="7ec91-106">中要传递控制的函数的标识符。</span><span class="sxs-lookup"><span data-stu-id="7ec91-106">[in] The identifier of the function to which control is passed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="14740-107">备注</span><span class="sxs-lookup"><span data-stu-id="14740-107">Remarks</span></span>  
- <span data-ttu-id="14740-108">The `FunctionEnter3` callback function notifies the profiler as functions are being called, but does not support argument inspection.</span><span class="sxs-lookup"><span data-stu-id="14740-108">The `FunctionEnter3` callback function notifies the profiler as functions are being called, but does not support argument inspection.</span></span> <span data-ttu-id="14740-109">Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.</span><span class="sxs-lookup"><span data-stu-id="14740-109">Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7ec91-107">备注</span><span class="sxs-lookup"><span data-stu-id="7ec91-107">Remarks</span></span>  
+ <span data-ttu-id="7ec91-108">`FunctionEnter3` 回调函数将在调用函数时通知探查器，但不支持参数检查。</span><span class="sxs-lookup"><span data-stu-id="7ec91-108">The `FunctionEnter3` callback function notifies the profiler as functions are being called, but does not support argument inspection.</span></span> <span data-ttu-id="7ec91-109">使用[ICorProfilerInfo3：： SetEnterLeaveFunctionHooks3 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)注册此函数的实现。</span><span class="sxs-lookup"><span data-stu-id="7ec91-109">Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.</span></span>  
   
- <span data-ttu-id="14740-110">The `FunctionEnter3` function is a callback; you must implement it.</span><span class="sxs-lookup"><span data-stu-id="14740-110">The `FunctionEnter3` function is a callback; you must implement it.</span></span> <span data-ttu-id="14740-111">The implementation must use the `__declspec(naked)` storage-class attribute.</span><span class="sxs-lookup"><span data-stu-id="14740-111">The implementation must use the `__declspec(naked)` storage-class attribute.</span></span>  
+ <span data-ttu-id="7ec91-110">`FunctionEnter3` 函数是回调;必须实现此方法。</span><span class="sxs-lookup"><span data-stu-id="7ec91-110">The `FunctionEnter3` function is a callback; you must implement it.</span></span> <span data-ttu-id="7ec91-111">实现必须使用 `__declspec(naked)` 存储类特性。</span><span class="sxs-lookup"><span data-stu-id="7ec91-111">The implementation must use the `__declspec(naked)` storage-class attribute.</span></span>  
   
- <span data-ttu-id="14740-112">The execution engine does not save any registers before calling this function.</span><span class="sxs-lookup"><span data-stu-id="14740-112">The execution engine does not save any registers before calling this function.</span></span>  
+ <span data-ttu-id="7ec91-112">在调用此函数之前，执行引擎不会保存任何注册。</span><span class="sxs-lookup"><span data-stu-id="7ec91-112">The execution engine does not save any registers before calling this function.</span></span>  
   
-- <span data-ttu-id="14740-113">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span><span class="sxs-lookup"><span data-stu-id="14740-113">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+- <span data-ttu-id="7ec91-113">进入时，必须保存使用的所有寄存器，包括浮点单元（FPU）中的所有寄存器。</span><span class="sxs-lookup"><span data-stu-id="7ec91-113">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
   
-- <span data-ttu-id="14740-114">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span><span class="sxs-lookup"><span data-stu-id="14740-114">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+- <span data-ttu-id="7ec91-114">退出时，必须通过弹出由其调用方推送的所有参数来还原堆栈。</span><span class="sxs-lookup"><span data-stu-id="7ec91-114">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="14740-115">要求</span><span class="sxs-lookup"><span data-stu-id="14740-115">Requirements</span></span>  
- <span data-ttu-id="14740-116">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="14740-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7ec91-115">要求</span><span class="sxs-lookup"><span data-stu-id="7ec91-115">Requirements</span></span>  
+ <span data-ttu-id="7ec91-116">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7ec91-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="14740-117">**Header:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="14740-117">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="7ec91-117">**标头：** Corprof.idl .idl</span><span class="sxs-lookup"><span data-stu-id="7ec91-117">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="14740-118">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="14740-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7ec91-118">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7ec91-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="14740-119">**.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="14740-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="7ec91-119">**.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7ec91-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="14740-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="14740-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7ec91-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7ec91-120">See also</span></span>
 
-- [<span data-ttu-id="14740-121">FunctionLeave3</span><span class="sxs-lookup"><span data-stu-id="14740-121">FunctionLeave3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
-- [<span data-ttu-id="14740-122">FunctionTailcall3</span><span class="sxs-lookup"><span data-stu-id="14740-122">FunctionTailcall3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)
-- [<span data-ttu-id="14740-123">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="14740-123">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
-- [<span data-ttu-id="14740-124">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="14740-124">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
-- [<span data-ttu-id="14740-125">FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="14740-125">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
-- [<span data-ttu-id="14740-126">SetEnterLeaveFunctionHooks3</span><span class="sxs-lookup"><span data-stu-id="14740-126">SetEnterLeaveFunctionHooks3</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
-- [<span data-ttu-id="14740-127">SetEnterLeaveFunctionHooks3WithInfo</span><span class="sxs-lookup"><span data-stu-id="14740-127">SetEnterLeaveFunctionHooks3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)
-- [<span data-ttu-id="14740-128">SetFunctionIDMapper</span><span class="sxs-lookup"><span data-stu-id="14740-128">SetFunctionIDMapper</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)
-- [<span data-ttu-id="14740-129">SetFunctionIDMapper2</span><span class="sxs-lookup"><span data-stu-id="14740-129">SetFunctionIDMapper2</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setfunctionidmapper2-method.md)
-- [<span data-ttu-id="14740-130">分析全局静态函数</span><span class="sxs-lookup"><span data-stu-id="14740-130">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [<span data-ttu-id="7ec91-121">FunctionLeave3</span><span class="sxs-lookup"><span data-stu-id="7ec91-121">FunctionLeave3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
+- [<span data-ttu-id="7ec91-122">FunctionTailcall3</span><span class="sxs-lookup"><span data-stu-id="7ec91-122">FunctionTailcall3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)
+- [<span data-ttu-id="7ec91-123">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="7ec91-123">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
+- [<span data-ttu-id="7ec91-124">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="7ec91-124">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
+- [<span data-ttu-id="7ec91-125">FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="7ec91-125">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
+- [<span data-ttu-id="7ec91-126">SetEnterLeaveFunctionHooks3</span><span class="sxs-lookup"><span data-stu-id="7ec91-126">SetEnterLeaveFunctionHooks3</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
+- [<span data-ttu-id="7ec91-127">SetEnterLeaveFunctionHooks3WithInfo</span><span class="sxs-lookup"><span data-stu-id="7ec91-127">SetEnterLeaveFunctionHooks3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)
+- [<span data-ttu-id="7ec91-128">SetFunctionIDMapper</span><span class="sxs-lookup"><span data-stu-id="7ec91-128">SetFunctionIDMapper</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)
+- [<span data-ttu-id="7ec91-129">SetFunctionIDMapper2</span><span class="sxs-lookup"><span data-stu-id="7ec91-129">SetFunctionIDMapper2</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setfunctionidmapper2-method.md)
+- [<span data-ttu-id="7ec91-130">分析全局静态函数</span><span class="sxs-lookup"><span data-stu-id="7ec91-130">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

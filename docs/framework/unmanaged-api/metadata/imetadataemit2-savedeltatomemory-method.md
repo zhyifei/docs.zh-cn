@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447885"
 ---
-# <a name="imetadataemit2savedeltatomemory-method"></a><span data-ttu-id="bdc84-102">IMetaDataEmit2::SaveDeltaToMemory 方法</span><span class="sxs-lookup"><span data-stu-id="bdc84-102">IMetaDataEmit2::SaveDeltaToMemory Method</span></span>
-<span data-ttu-id="bdc84-103">Saves changes from the current edit-and-continue session to memory.</span><span class="sxs-lookup"><span data-stu-id="bdc84-103">Saves changes from the current edit-and-continue session to memory.</span></span>  
+# <a name="imetadataemit2savedeltatomemory-method"></a><span data-ttu-id="3e12c-102">IMetaDataEmit2::SaveDeltaToMemory 方法</span><span class="sxs-lookup"><span data-stu-id="3e12c-102">IMetaDataEmit2::SaveDeltaToMemory Method</span></span>
+<span data-ttu-id="3e12c-103">将当前的 "编辑并继续" 会话中的更改保存到内存。</span><span class="sxs-lookup"><span data-stu-id="3e12c-103">Saves changes from the current edit-and-continue session to memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bdc84-104">语法</span><span class="sxs-lookup"><span data-stu-id="bdc84-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3e12c-104">语法</span><span class="sxs-lookup"><span data-stu-id="3e12c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SaveDeltaToMemory (  
@@ -34,23 +34,23 @@ HRESULT SaveDeltaToMemory (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bdc84-105">参数</span><span class="sxs-lookup"><span data-stu-id="bdc84-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3e12c-105">参数</span><span class="sxs-lookup"><span data-stu-id="3e12c-105">Parameters</span></span>  
  `pbData`  
- <span data-ttu-id="bdc84-106">[out] The address at which to begin writing the metadata delta.</span><span class="sxs-lookup"><span data-stu-id="bdc84-106">[out] The address at which to begin writing the metadata delta.</span></span>  
+ <span data-ttu-id="3e12c-106">弄开始写入元数据增量的地址。</span><span class="sxs-lookup"><span data-stu-id="3e12c-106">[out] The address at which to begin writing the metadata delta.</span></span>  
   
  `cbData`  
- <span data-ttu-id="bdc84-107">[in] The size of the changes.</span><span class="sxs-lookup"><span data-stu-id="bdc84-107">[in] The size of the changes.</span></span> <span data-ttu-id="bdc84-108">Use [IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) to determine the size.</span><span class="sxs-lookup"><span data-stu-id="bdc84-108">Use [IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) to determine the size.</span></span>  
+ <span data-ttu-id="3e12c-107">中更改的大小。</span><span class="sxs-lookup"><span data-stu-id="3e12c-107">[in] The size of the changes.</span></span> <span data-ttu-id="3e12c-108">使用[IMetaDataEmit2：： GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md)确定大小。</span><span class="sxs-lookup"><span data-stu-id="3e12c-108">Use [IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) to determine the size.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bdc84-109">要求</span><span class="sxs-lookup"><span data-stu-id="bdc84-109">Requirements</span></span>  
- <span data-ttu-id="bdc84-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bdc84-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3e12c-109">要求</span><span class="sxs-lookup"><span data-stu-id="3e12c-109">Requirements</span></span>  
+ <span data-ttu-id="3e12c-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3e12c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bdc84-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="bdc84-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="3e12c-111">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="3e12c-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="bdc84-112">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="bdc84-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="3e12c-112">**库：** 用作 Mscoree.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="3e12c-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="bdc84-113">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bdc84-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="3e12c-113">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3e12c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bdc84-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="bdc84-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3e12c-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3e12c-114">See also</span></span>
 
-- [<span data-ttu-id="bdc84-115">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="bdc84-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="bdc84-116">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="bdc84-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="3e12c-115">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="3e12c-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="3e12c-116">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="3e12c-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

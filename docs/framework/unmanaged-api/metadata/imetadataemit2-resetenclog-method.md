@@ -22,28 +22,28 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428426"
 ---
-# <a name="imetadataemit2resetenclog-method"></a><span data-ttu-id="2b1f7-102">IMetaDataEmit2::ResetENCLog 方法</span><span class="sxs-lookup"><span data-stu-id="2b1f7-102">IMetaDataEmit2::ResetENCLog Method</span></span>
-<span data-ttu-id="2b1f7-103">Resets the edit-and-continue log and starts a new session.</span><span class="sxs-lookup"><span data-stu-id="2b1f7-103">Resets the edit-and-continue log and starts a new session.</span></span>  
+# <a name="imetadataemit2resetenclog-method"></a><span data-ttu-id="1c421-102">IMetaDataEmit2::ResetENCLog 方法</span><span class="sxs-lookup"><span data-stu-id="1c421-102">IMetaDataEmit2::ResetENCLog Method</span></span>
+<span data-ttu-id="1c421-103">重置编辑并继续日志并启动新的会话。</span><span class="sxs-lookup"><span data-stu-id="1c421-103">Resets the edit-and-continue log and starts a new session.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2b1f7-104">语法</span><span class="sxs-lookup"><span data-stu-id="2b1f7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1c421-104">语法</span><span class="sxs-lookup"><span data-stu-id="1c421-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ResetENCLog ();  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2b1f7-105">参数</span><span class="sxs-lookup"><span data-stu-id="2b1f7-105">Parameters</span></span>  
- <span data-ttu-id="2b1f7-106">`ResetENCLog` takes no parameters.</span><span class="sxs-lookup"><span data-stu-id="2b1f7-106">`ResetENCLog` takes no parameters.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1c421-105">参数</span><span class="sxs-lookup"><span data-stu-id="1c421-105">Parameters</span></span>  
+ <span data-ttu-id="1c421-106">`ResetENCLog` 不采用任何参数。</span><span class="sxs-lookup"><span data-stu-id="1c421-106">`ResetENCLog` takes no parameters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2b1f7-107">要求</span><span class="sxs-lookup"><span data-stu-id="2b1f7-107">Requirements</span></span>  
- <span data-ttu-id="2b1f7-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2b1f7-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1c421-107">要求</span><span class="sxs-lookup"><span data-stu-id="1c421-107">Requirements</span></span>  
+ <span data-ttu-id="1c421-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1c421-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2b1f7-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="2b1f7-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="1c421-109">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="1c421-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="2b1f7-110">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2b1f7-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="1c421-110">**库：** 用作 Mscoree.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="1c421-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="2b1f7-111">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b1f7-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1c421-111">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1c421-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2b1f7-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="2b1f7-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1c421-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1c421-112">See also</span></span>
 
-- [<span data-ttu-id="2b1f7-113">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="2b1f7-113">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="2b1f7-114">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="2b1f7-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="1c421-113">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="1c421-113">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="1c421-114">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="1c421-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
