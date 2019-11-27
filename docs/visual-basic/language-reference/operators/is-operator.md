@@ -16,45 +16,45 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349532"
 ---
-# <a name="is-operator-visual-basic"></a><span data-ttu-id="871ca-102">Is 运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="871ca-102">Is Operator (Visual Basic)</span></span>
-<span data-ttu-id="871ca-103">Compares two object reference variables.</span><span class="sxs-lookup"><span data-stu-id="871ca-103">Compares two object reference variables.</span></span>  
+# <a name="is-operator-visual-basic"></a><span data-ttu-id="7b2e5-102">Is 运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7b2e5-102">Is Operator (Visual Basic)</span></span>
+<span data-ttu-id="7b2e5-103">比较两个对象引用变量。</span><span class="sxs-lookup"><span data-stu-id="7b2e5-103">Compares two object reference variables.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="871ca-104">语法</span><span class="sxs-lookup"><span data-stu-id="871ca-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7b2e5-104">语法</span><span class="sxs-lookup"><span data-stu-id="7b2e5-104">Syntax</span></span>  
   
 ```vb  
 result = object1 Is object2  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="871ca-105">部件</span><span class="sxs-lookup"><span data-stu-id="871ca-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="7b2e5-105">部件</span><span class="sxs-lookup"><span data-stu-id="7b2e5-105">Parts</span></span>  
  `result`  
- <span data-ttu-id="871ca-106">必须的。</span><span class="sxs-lookup"><span data-stu-id="871ca-106">Required.</span></span> <span data-ttu-id="871ca-107">Any `Boolean` value.</span><span class="sxs-lookup"><span data-stu-id="871ca-107">Any `Boolean` value.</span></span>  
+ <span data-ttu-id="7b2e5-106">必需。</span><span class="sxs-lookup"><span data-stu-id="7b2e5-106">Required.</span></span> <span data-ttu-id="7b2e5-107">任何 `Boolean` 值。</span><span class="sxs-lookup"><span data-stu-id="7b2e5-107">Any `Boolean` value.</span></span>  
   
  `object1`  
- <span data-ttu-id="871ca-108">必须的。</span><span class="sxs-lookup"><span data-stu-id="871ca-108">Required.</span></span> <span data-ttu-id="871ca-109">Any `Object` name.</span><span class="sxs-lookup"><span data-stu-id="871ca-109">Any `Object` name.</span></span>  
+ <span data-ttu-id="7b2e5-108">必需。</span><span class="sxs-lookup"><span data-stu-id="7b2e5-108">Required.</span></span> <span data-ttu-id="7b2e5-109">任何 `Object` 名称。</span><span class="sxs-lookup"><span data-stu-id="7b2e5-109">Any `Object` name.</span></span>  
   
  `object2`  
- <span data-ttu-id="871ca-110">必须的。</span><span class="sxs-lookup"><span data-stu-id="871ca-110">Required.</span></span> <span data-ttu-id="871ca-111">Any `Object` name.</span><span class="sxs-lookup"><span data-stu-id="871ca-111">Any `Object` name.</span></span>  
+ <span data-ttu-id="7b2e5-110">必需。</span><span class="sxs-lookup"><span data-stu-id="7b2e5-110">Required.</span></span> <span data-ttu-id="7b2e5-111">任何 `Object` 名称。</span><span class="sxs-lookup"><span data-stu-id="7b2e5-111">Any `Object` name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="871ca-112">备注</span><span class="sxs-lookup"><span data-stu-id="871ca-112">Remarks</span></span>  
- <span data-ttu-id="871ca-113">The `Is` operator determines if two object references refer to the same object.</span><span class="sxs-lookup"><span data-stu-id="871ca-113">The `Is` operator determines if two object references refer to the same object.</span></span> <span data-ttu-id="871ca-114">However, it does not perform value comparisons.</span><span class="sxs-lookup"><span data-stu-id="871ca-114">However, it does not perform value comparisons.</span></span> <span data-ttu-id="871ca-115">If `object1` and `object2` both refer to the exact same object instance, `result` is `True`; if they do not, `result` is `False`.</span><span class="sxs-lookup"><span data-stu-id="871ca-115">If `object1` and `object2` both refer to the exact same object instance, `result` is `True`; if they do not, `result` is `False`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7b2e5-112">备注</span><span class="sxs-lookup"><span data-stu-id="7b2e5-112">Remarks</span></span>  
+ <span data-ttu-id="7b2e5-113">`Is` 运算符确定两个对象引用是否引用同一对象。</span><span class="sxs-lookup"><span data-stu-id="7b2e5-113">The `Is` operator determines if two object references refer to the same object.</span></span> <span data-ttu-id="7b2e5-114">但是，它不会执行值比较。</span><span class="sxs-lookup"><span data-stu-id="7b2e5-114">However, it does not perform value comparisons.</span></span> <span data-ttu-id="7b2e5-115">如果 `object1` 和 `object2` 都引用完全相同的对象实例，则 `result` `True`;否则，将 `False``result`。</span><span class="sxs-lookup"><span data-stu-id="7b2e5-115">If `object1` and `object2` both refer to the exact same object instance, `result` is `True`; if they do not, `result` is `False`.</span></span>  
   
- <span data-ttu-id="871ca-116">`Is` can also be used with the `TypeOf` keyword to make a `TypeOf`...`Is` expression, which tests whether an object variable is compatible with a data type.</span><span class="sxs-lookup"><span data-stu-id="871ca-116">`Is` can also be used with the `TypeOf` keyword to make a `TypeOf`...`Is` expression, which tests whether an object variable is compatible with a data type.</span></span>  
+ <span data-ttu-id="7b2e5-116">`Is` 还可以与 `TypeOf` 关键字一起使用，以生成 `TypeOf`...`Is` 表达式，该表达式测试对象变量是否与数据类型兼容。</span><span class="sxs-lookup"><span data-stu-id="7b2e5-116">`Is` can also be used with the `TypeOf` keyword to make a `TypeOf`...`Is` expression, which tests whether an object variable is compatible with a data type.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="871ca-117">The `Is` keyword is also used in the [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md).</span><span class="sxs-lookup"><span data-stu-id="871ca-117">The `Is` keyword is also used in the [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md).</span></span>  
+> <span data-ttu-id="7b2e5-117">`Is` 关键字还用于[Select .。。Case 语句](../../../visual-basic/language-reference/statements/select-case-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="7b2e5-117">The `Is` keyword is also used in the [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="871ca-118">示例</span><span class="sxs-lookup"><span data-stu-id="871ca-118">Example</span></span>  
- <span data-ttu-id="871ca-119">The following example uses the `Is` operator to compare pairs of object references.</span><span class="sxs-lookup"><span data-stu-id="871ca-119">The following example uses the `Is` operator to compare pairs of object references.</span></span> <span data-ttu-id="871ca-120">The results are assigned to a `Boolean` value representing whether the two objects are identical.</span><span class="sxs-lookup"><span data-stu-id="871ca-120">The results are assigned to a `Boolean` value representing whether the two objects are identical.</span></span>  
+## <a name="example"></a><span data-ttu-id="7b2e5-118">示例</span><span class="sxs-lookup"><span data-stu-id="7b2e5-118">Example</span></span>  
+ <span data-ttu-id="7b2e5-119">下面的示例使用 `Is` 运算符比较对象引用对。</span><span class="sxs-lookup"><span data-stu-id="7b2e5-119">The following example uses the `Is` operator to compare pairs of object references.</span></span> <span data-ttu-id="7b2e5-120">将结果分配给一个 `Boolean` 值，该值表示两个对象是否相同。</span><span class="sxs-lookup"><span data-stu-id="7b2e5-120">The results are assigned to a `Boolean` value representing whether the two objects are identical.</span></span>  
   
  [!code-vb[VbVbalrOperators#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#27)]  
   
- <span data-ttu-id="871ca-121">As the preceding example demonstrates, you can use the `Is` operator to test both early bound and late bound objects.</span><span class="sxs-lookup"><span data-stu-id="871ca-121">As the preceding example demonstrates, you can use the `Is` operator to test both early bound and late bound objects.</span></span>  
+ <span data-ttu-id="7b2e5-121">如前面的示例所示，可以使用 `Is` 运算符来测试早期绑定对象和后期绑定对象。</span><span class="sxs-lookup"><span data-stu-id="7b2e5-121">As the preceding example demonstrates, you can use the `Is` operator to test both early bound and late bound objects.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="871ca-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="871ca-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7b2e5-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7b2e5-122">See also</span></span>
 
-- [<span data-ttu-id="871ca-123">TypeOf 运算符</span><span class="sxs-lookup"><span data-stu-id="871ca-123">TypeOf Operator</span></span>](../../../visual-basic/language-reference/operators/typeof-operator.md)
-- [<span data-ttu-id="871ca-124">IsNot 运算符</span><span class="sxs-lookup"><span data-stu-id="871ca-124">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [<span data-ttu-id="871ca-125">Comparison Operators in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="871ca-125">Comparison Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [<span data-ttu-id="871ca-126">Visual Basic 中的运算符优先级</span><span class="sxs-lookup"><span data-stu-id="871ca-126">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="871ca-127">按功能列出的运算符</span><span class="sxs-lookup"><span data-stu-id="871ca-127">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="871ca-128">运算符和表达式</span><span class="sxs-lookup"><span data-stu-id="871ca-128">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [<span data-ttu-id="7b2e5-123">TypeOf 运算符</span><span class="sxs-lookup"><span data-stu-id="7b2e5-123">TypeOf Operator</span></span>](../../../visual-basic/language-reference/operators/typeof-operator.md)
+- [<span data-ttu-id="7b2e5-124">IsNot 运算符</span><span class="sxs-lookup"><span data-stu-id="7b2e5-124">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [<span data-ttu-id="7b2e5-125">Visual Basic 中的比较运算符</span><span class="sxs-lookup"><span data-stu-id="7b2e5-125">Comparison Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [<span data-ttu-id="7b2e5-126">Visual Basic 中的运算符优先级</span><span class="sxs-lookup"><span data-stu-id="7b2e5-126">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="7b2e5-127">按功能列出的运算符</span><span class="sxs-lookup"><span data-stu-id="7b2e5-127">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="7b2e5-128">运算符和表达式</span><span class="sxs-lookup"><span data-stu-id="7b2e5-128">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

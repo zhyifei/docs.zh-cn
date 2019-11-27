@@ -9,13 +9,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348429"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="31212-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="31212-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="490b4-102">如何：合并和比较字符串集合（LINQ）（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="490b4-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="31212-103">此示例演示如何合并包含文本行的文件，并对结果排序。</span><span class="sxs-lookup"><span data-stu-id="31212-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="31212-104">具体而言，此示例演示如何对两组文本行执行简单的串联、联合和交集。</span><span class="sxs-lookup"><span data-stu-id="31212-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>
+<span data-ttu-id="490b4-103">此示例演示如何合并包含文本行的文件，并对结果排序。</span><span class="sxs-lookup"><span data-stu-id="490b4-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="490b4-104">具体而言，此示例演示如何对两组文本行执行简单的串联、联合和交集。</span><span class="sxs-lookup"><span data-stu-id="490b4-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>
 
-### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="31212-105">设置项目和文本文件</span><span class="sxs-lookup"><span data-stu-id="31212-105">To set up the project and the text files</span></span>
+### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="490b4-105">设置项目和文本文件</span><span class="sxs-lookup"><span data-stu-id="490b4-105">To set up the project and the text files</span></span>
 
-1. <span data-ttu-id="31212-106">将下面的姓名复制到名为 names1.txt 的文本文件，然后将此文件保存到项目文件夹：</span><span class="sxs-lookup"><span data-stu-id="31212-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>
+1. <span data-ttu-id="490b4-106">将下面的姓名复制到名为 names1.txt 的文本文件，然后将此文件保存到项目文件夹：</span><span class="sxs-lookup"><span data-stu-id="490b4-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>
 
     ```text
     Bankov, Peter
@@ -30,7 +30,7 @@ ms.locfileid: "74348429"
     Garcia, Debra
     ```
 
-2. <span data-ttu-id="31212-107">将下面的姓名复制到名为 names2.txt 的文本文件，然后将此文件保存到项目文件夹。</span><span class="sxs-lookup"><span data-stu-id="31212-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="31212-108">请注意，这两个文件拥有一些共同的名称。</span><span class="sxs-lookup"><span data-stu-id="31212-108">Note that the two files have some names in common.</span></span>
+2. <span data-ttu-id="490b4-107">将下面的姓名复制到名为 names2.txt 的文本文件，然后将此文件保存到项目文件夹。</span><span class="sxs-lookup"><span data-stu-id="490b4-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="490b4-108">请注意，这两个文件拥有一些共同的名称。</span><span class="sxs-lookup"><span data-stu-id="490b4-108">Note that the two files have some names in common.</span></span>
 
     ```text
     Liu, Jinghao
@@ -45,7 +45,7 @@ ms.locfileid: "74348429"
     El Yassir, Mehdi
     ```
 
-## <a name="example"></a><span data-ttu-id="31212-109">示例</span><span class="sxs-lookup"><span data-stu-id="31212-109">Example</span></span>
+## <a name="example"></a><span data-ttu-id="490b4-109">示例</span><span class="sxs-lookup"><span data-stu-id="490b4-109">Example</span></span>
 
 ```vb
 Class ConcatenateStrings
@@ -163,11 +163,11 @@ End Class
 ' 2 total names in list
 ```
 
-## <a name="compiling-the-code"></a><span data-ttu-id="31212-110">编译代码</span><span class="sxs-lookup"><span data-stu-id="31212-110">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="490b4-110">编译代码</span><span class="sxs-lookup"><span data-stu-id="490b4-110">Compiling the Code</span></span>
 
-<span data-ttu-id="31212-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span><span class="sxs-lookup"><span data-stu-id="31212-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="490b4-111">使用 VB.NET 命名空间的 `Imports` 语句创建一个控制台应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="490b4-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="31212-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="31212-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="490b4-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="490b4-112">See also</span></span>
 
-- [<span data-ttu-id="31212-113">LINQ and Strings (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="31212-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="31212-114">LINQ 和文件目录 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="31212-114">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="490b4-113">LINQ 和字符串（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="490b4-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="490b4-114">LINQ 和文件目录 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="490b4-114">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
