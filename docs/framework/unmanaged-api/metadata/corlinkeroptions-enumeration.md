@@ -21,10 +21,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450272"
 ---
-# <a name="corlinkeroptions-enumeration"></a><span data-ttu-id="e0a65-102">CorLinkerOptions 枚举</span><span class="sxs-lookup"><span data-stu-id="e0a65-102">CorLinkerOptions Enumeration</span></span>
-<span data-ttu-id="e0a65-103">指定用于选择元数据链接器的选项的标志。</span><span class="sxs-lookup"><span data-stu-id="e0a65-103">Specifies flags to select options for the metadata linker.</span></span>  
+# <a name="corlinkeroptions-enumeration"></a><span data-ttu-id="dc5c0-102">CorLinkerOptions 枚举</span><span class="sxs-lookup"><span data-stu-id="dc5c0-102">CorLinkerOptions Enumeration</span></span>
+<span data-ttu-id="dc5c0-103">指定用于选择元数据链接器的选项的标志。</span><span class="sxs-lookup"><span data-stu-id="dc5c0-103">Specifies flags to select options for the metadata linker.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e0a65-104">语法</span><span class="sxs-lookup"><span data-stu-id="e0a65-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dc5c0-104">语法</span><span class="sxs-lookup"><span data-stu-id="dc5c0-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorLinkerOptions {  
@@ -33,20 +33,20 @@ typedef enum CorLinkerOptions {
 } CorLinkerOptions;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e0a65-105">Members</span><span class="sxs-lookup"><span data-stu-id="e0a65-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="dc5c0-105">Members</span><span class="sxs-lookup"><span data-stu-id="dc5c0-105">Members</span></span>  
   
-|<span data-ttu-id="e0a65-106">成员</span><span class="sxs-lookup"><span data-stu-id="e0a65-106">Member</span></span>|<span data-ttu-id="e0a65-107">描述</span><span class="sxs-lookup"><span data-stu-id="e0a65-107">Description</span></span>|  
+|<span data-ttu-id="dc5c0-106">成员</span><span class="sxs-lookup"><span data-stu-id="dc5c0-106">Member</span></span>|<span data-ttu-id="dc5c0-107">说明</span><span class="sxs-lookup"><span data-stu-id="dc5c0-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDAssembly`|<span data-ttu-id="e0a65-108">The private types and global functions are not preserved.</span><span class="sxs-lookup"><span data-stu-id="e0a65-108">The private types and global functions are not preserved.</span></span>|  
-|`MDNetModule`|<span data-ttu-id="e0a65-109">The private types and global functions are preserved.</span><span class="sxs-lookup"><span data-stu-id="e0a65-109">The private types and global functions are preserved.</span></span>|  
+|`MDAssembly`|<span data-ttu-id="dc5c0-108">不保留私有类型和全局函数。</span><span class="sxs-lookup"><span data-stu-id="dc5c0-108">The private types and global functions are not preserved.</span></span>|  
+|`MDNetModule`|<span data-ttu-id="dc5c0-109">私有类型和全局函数会被保留。</span><span class="sxs-lookup"><span data-stu-id="dc5c0-109">The private types and global functions are preserved.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="e0a65-110">要求</span><span class="sxs-lookup"><span data-stu-id="e0a65-110">Requirements</span></span>  
- <span data-ttu-id="e0a65-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e0a65-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dc5c0-110">要求</span><span class="sxs-lookup"><span data-stu-id="dc5c0-110">Requirements</span></span>  
+ <span data-ttu-id="dc5c0-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dc5c0-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e0a65-112">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="e0a65-112">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="dc5c0-112">**标头：** Corhdr。h</span><span class="sxs-lookup"><span data-stu-id="dc5c0-112">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="e0a65-113">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e0a65-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="dc5c0-113">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dc5c0-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e0a65-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="e0a65-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dc5c0-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="dc5c0-114">See also</span></span>
 
-- [<span data-ttu-id="e0a65-115">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="e0a65-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="dc5c0-115">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="dc5c0-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

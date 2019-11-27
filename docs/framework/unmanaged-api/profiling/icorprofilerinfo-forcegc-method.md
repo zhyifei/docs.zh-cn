@@ -22,27 +22,27 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448185"
 ---
-# <a name="icorprofilerinfoforcegc-method"></a><span data-ttu-id="5bdf7-102">ICorProfilerInfo::ForceGC 方法</span><span class="sxs-lookup"><span data-stu-id="5bdf7-102">ICorProfilerInfo::ForceGC Method</span></span>
-<span data-ttu-id="5bdf7-103">Forces garbage collection to occur within the common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="5bdf7-103">Forces garbage collection to occur within the common language runtime (CLR).</span></span>  
+# <a name="icorprofilerinfoforcegc-method"></a><span data-ttu-id="d3703-102">ICorProfilerInfo::ForceGC 方法</span><span class="sxs-lookup"><span data-stu-id="d3703-102">ICorProfilerInfo::ForceGC Method</span></span>
+<span data-ttu-id="d3703-103">强制在公共语言运行时（CLR）内发生垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="d3703-103">Forces garbage collection to occur within the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5bdf7-104">语法</span><span class="sxs-lookup"><span data-stu-id="5bdf7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d3703-104">语法</span><span class="sxs-lookup"><span data-stu-id="d3703-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ForceGC();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="5bdf7-105">备注</span><span class="sxs-lookup"><span data-stu-id="5bdf7-105">Remarks</span></span>  
- <span data-ttu-id="5bdf7-106">The `ForceGC` method must be called only from a thread that has never run managed code and does not have any profiler callbacks on its stack.</span><span class="sxs-lookup"><span data-stu-id="5bdf7-106">The `ForceGC` method must be called only from a thread that has never run managed code and does not have any profiler callbacks on its stack.</span></span> <span data-ttu-id="5bdf7-107">The most convenient implementation is to create a separate thread within the profiler that calls `ForceGC` when signaled.</span><span class="sxs-lookup"><span data-stu-id="5bdf7-107">The most convenient implementation is to create a separate thread within the profiler that calls `ForceGC` when signaled.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d3703-105">备注</span><span class="sxs-lookup"><span data-stu-id="d3703-105">Remarks</span></span>  
+ <span data-ttu-id="d3703-106">只能从从未运行托管代码且在其堆栈上没有任何探查器回调的线程调用 `ForceGC` 方法。</span><span class="sxs-lookup"><span data-stu-id="d3703-106">The `ForceGC` method must be called only from a thread that has never run managed code and does not have any profiler callbacks on its stack.</span></span> <span data-ttu-id="d3703-107">最方便的实现是在探查器中创建一个单独的线程，该线程在发出信号时调用 `ForceGC`。</span><span class="sxs-lookup"><span data-stu-id="d3703-107">The most convenient implementation is to create a separate thread within the profiler that calls `ForceGC` when signaled.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5bdf7-108">要求</span><span class="sxs-lookup"><span data-stu-id="5bdf7-108">Requirements</span></span>  
- <span data-ttu-id="5bdf7-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5bdf7-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d3703-108">要求</span><span class="sxs-lookup"><span data-stu-id="d3703-108">Requirements</span></span>  
+ <span data-ttu-id="d3703-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d3703-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5bdf7-110">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5bdf7-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d3703-110">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d3703-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="5bdf7-111">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5bdf7-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d3703-111">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d3703-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5bdf7-112">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5bdf7-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d3703-112">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d3703-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5bdf7-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="5bdf7-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d3703-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d3703-113">See also</span></span>
 
-- [<span data-ttu-id="5bdf7-114">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="5bdf7-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="d3703-114">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="d3703-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

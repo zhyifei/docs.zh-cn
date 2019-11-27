@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440346"
 ---
-# <a name="imetadatafiltermarktoken-method"></a><span data-ttu-id="e78a0-102">IMetaDataFilter::MarkToken 方法</span><span class="sxs-lookup"><span data-stu-id="e78a0-102">IMetaDataFilter::MarkToken Method</span></span>
-<span data-ttu-id="e78a0-103">Sets a value indicating that the specified metadata token has been processed.</span><span class="sxs-lookup"><span data-stu-id="e78a0-103">Sets a value indicating that the specified metadata token has been processed.</span></span>  
+# <a name="imetadatafiltermarktoken-method"></a><span data-ttu-id="5e5ed-102">IMetaDataFilter::MarkToken 方法</span><span class="sxs-lookup"><span data-stu-id="5e5ed-102">IMetaDataFilter::MarkToken Method</span></span>
+<span data-ttu-id="5e5ed-103">设置一个值，该值指示已处理指定的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="5e5ed-103">Sets a value indicating that the specified metadata token has been processed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e78a0-104">语法</span><span class="sxs-lookup"><span data-stu-id="e78a0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5e5ed-104">语法</span><span class="sxs-lookup"><span data-stu-id="5e5ed-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT MarkToken (  
@@ -33,19 +33,19 @@ HRESULT MarkToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e78a0-105">参数</span><span class="sxs-lookup"><span data-stu-id="e78a0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5e5ed-105">参数</span><span class="sxs-lookup"><span data-stu-id="5e5ed-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="e78a0-106">[in] The token to mark as processed.</span><span class="sxs-lookup"><span data-stu-id="e78a0-106">[in] The token to mark as processed.</span></span>  
+ <span data-ttu-id="5e5ed-106">中标记为已处理的标记。</span><span class="sxs-lookup"><span data-stu-id="5e5ed-106">[in] The token to mark as processed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e78a0-107">要求</span><span class="sxs-lookup"><span data-stu-id="e78a0-107">Requirements</span></span>  
- <span data-ttu-id="e78a0-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e78a0-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5e5ed-107">要求</span><span class="sxs-lookup"><span data-stu-id="5e5ed-107">Requirements</span></span>  
+ <span data-ttu-id="5e5ed-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5e5ed-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e78a0-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e78a0-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="5e5ed-109">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="5e5ed-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e78a0-110">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e78a0-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="5e5ed-110">**库：** 用作 Mscoree.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="5e5ed-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e78a0-111">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e78a0-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5e5ed-111">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5e5ed-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e78a0-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="e78a0-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5e5ed-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5e5ed-112">See also</span></span>
 
-- [<span data-ttu-id="e78a0-113">IMetaDataFilter 接口</span><span class="sxs-lookup"><span data-stu-id="e78a0-113">IMetaDataFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+- [<span data-ttu-id="5e5ed-113">IMetaDataFilter 接口</span><span class="sxs-lookup"><span data-stu-id="5e5ed-113">IMetaDataFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)

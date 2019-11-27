@@ -21,10 +21,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445674"
 ---
-# <a name="importtypes-method"></a><span data-ttu-id="6a188-102">ImportTypes 方法</span><span class="sxs-lookup"><span data-stu-id="6a188-102">ImportTypes Method</span></span>
-<span data-ttu-id="6a188-103">Initiates the importing of types from each scope imported via [ImportFile Method](importfile-method.md).</span><span class="sxs-lookup"><span data-stu-id="6a188-103">Initiates the importing of types from each scope imported via [ImportFile Method](importfile-method.md).</span></span>  
+# <a name="importtypes-method"></a><span data-ttu-id="15a68-102">ImportTypes 方法</span><span class="sxs-lookup"><span data-stu-id="15a68-102">ImportTypes Method</span></span>
+<span data-ttu-id="15a68-103">开始从通过[ImportFile 方法](importfile-method.md)导入的每个范围导入类型。</span><span class="sxs-lookup"><span data-stu-id="15a68-103">Initiates the importing of types from each scope imported via [ImportFile Method](importfile-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6a188-104">语法</span><span class="sxs-lookup"><span data-stu-id="6a188-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="15a68-104">语法</span><span class="sxs-lookup"><span data-stu-id="15a68-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ImportTypes(  
@@ -37,33 +37,33 @@ HRESULT ImportTypes(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6a188-105">参数</span><span class="sxs-lookup"><span data-stu-id="6a188-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="15a68-105">参数</span><span class="sxs-lookup"><span data-stu-id="15a68-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="6a188-106">ID of the assembly to import to.</span><span class="sxs-lookup"><span data-stu-id="6a188-106">ID of the assembly to import to.</span></span>  
+ <span data-ttu-id="15a68-106">要导入到的程序集的 ID。</span><span class="sxs-lookup"><span data-stu-id="15a68-106">ID of the assembly to import to.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="6a188-107">ID of the file to import from.</span><span class="sxs-lookup"><span data-stu-id="6a188-107">ID of the file to import from.</span></span>  
+ <span data-ttu-id="15a68-107">要从中导入的文件的 ID。</span><span class="sxs-lookup"><span data-stu-id="15a68-107">ID of the file to import from.</span></span>  
   
  `dwScope`  
- <span data-ttu-id="6a188-108">Zero-based scope to import.</span><span class="sxs-lookup"><span data-stu-id="6a188-108">Zero-based scope to import.</span></span>  
+ <span data-ttu-id="15a68-108">要导入的从零开始的范围。</span><span class="sxs-lookup"><span data-stu-id="15a68-108">Zero-based scope to import.</span></span>  
   
  `phEnum`  
- <span data-ttu-id="6a188-109">Receives enumerator handle for the types in this scope.</span><span class="sxs-lookup"><span data-stu-id="6a188-109">Receives enumerator handle for the types in this scope.</span></span>  
+ <span data-ttu-id="15a68-109">接收此范围内的类型的枚举器句柄。</span><span class="sxs-lookup"><span data-stu-id="15a68-109">Receives enumerator handle for the types in this scope.</span></span>  
   
  `ppImportScope`  
- <span data-ttu-id="6a188-110">Optionally receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="6a188-110">Optionally receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface.</span></span>  
+ <span data-ttu-id="15a68-110">可以选择接收[IMetaDataImport 接口](../metadata/imetadataimport-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="15a68-110">Optionally receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface.</span></span>  
   
  `pdwCountOfTypes`  
- <span data-ttu-id="6a188-111">Optionally receives count of types in the indicated scope.</span><span class="sxs-lookup"><span data-stu-id="6a188-111">Optionally receives count of types in the indicated scope.</span></span>  
+ <span data-ttu-id="15a68-111">可以选择接收指定范围内的类型的计数。</span><span class="sxs-lookup"><span data-stu-id="15a68-111">Optionally receives count of types in the indicated scope.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="6a188-112">返回值</span><span class="sxs-lookup"><span data-stu-id="6a188-112">Return Value</span></span>  
- <span data-ttu-id="6a188-113">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="6a188-113">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="15a68-112">返回值</span><span class="sxs-lookup"><span data-stu-id="15a68-112">Return Value</span></span>  
+ <span data-ttu-id="15a68-113">如果方法成功，则返回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="15a68-113">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6a188-114">要求</span><span class="sxs-lookup"><span data-stu-id="6a188-114">Requirements</span></span>  
- <span data-ttu-id="6a188-115">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="6a188-115">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="15a68-114">要求</span><span class="sxs-lookup"><span data-stu-id="15a68-114">Requirements</span></span>  
+ <span data-ttu-id="15a68-115">需要 alink</span><span class="sxs-lookup"><span data-stu-id="15a68-115">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6a188-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="6a188-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="15a68-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="15a68-116">See also</span></span>
 
-- [<span data-ttu-id="6a188-117">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="6a188-117">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="6a188-118">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="6a188-118">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="6a188-119">ALink API</span><span class="sxs-lookup"><span data-stu-id="6a188-119">ALink API</span></span>](index.md)
+- [<span data-ttu-id="15a68-117">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="15a68-117">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="15a68-118">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="15a68-118">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="15a68-119">ALink API</span><span class="sxs-lookup"><span data-stu-id="15a68-119">ALink API</span></span>](index.md)

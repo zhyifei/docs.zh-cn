@@ -11,16 +11,16 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352803"
 ---
-# <a name="then-statement"></a><span data-ttu-id="b964b-102">Then 语句</span><span class="sxs-lookup"><span data-stu-id="b964b-102">Then Statement</span></span>
-<span data-ttu-id="b964b-103">Introduces a statement block to be compiled or executed if a tested condition is true.</span><span class="sxs-lookup"><span data-stu-id="b964b-103">Introduces a statement block to be compiled or executed if a tested condition is true.</span></span>  
+# <a name="then-statement"></a><span data-ttu-id="c935c-102">Then 语句</span><span class="sxs-lookup"><span data-stu-id="c935c-102">Then Statement</span></span>
+<span data-ttu-id="c935c-103">如果测试的条件为 true，则引入要编译或执行的语句块。</span><span class="sxs-lookup"><span data-stu-id="c935c-103">Introduces a statement block to be compiled or executed if a tested condition is true.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b964b-104">备注</span><span class="sxs-lookup"><span data-stu-id="b964b-104">Remarks</span></span>  
- <span data-ttu-id="b964b-105">`Then` 关键字可用于以下上下文中：</span><span class="sxs-lookup"><span data-stu-id="b964b-105">The `Then` keyword can be used in these contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c935c-104">备注</span><span class="sxs-lookup"><span data-stu-id="c935c-104">Remarks</span></span>  
+ <span data-ttu-id="c935c-105">`Then` 关键字可用于以下上下文中：</span><span class="sxs-lookup"><span data-stu-id="c935c-105">The `Then` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="b964b-106">#If...Then...#Else Directive</span><span class="sxs-lookup"><span data-stu-id="b964b-106">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [<span data-ttu-id="c935c-106">#If .。。Then ... #Else 指令</span><span class="sxs-lookup"><span data-stu-id="c935c-106">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
- [<span data-ttu-id="b964b-107">If...Then...Else 语句</span><span class="sxs-lookup"><span data-stu-id="b964b-107">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [<span data-ttu-id="c935c-107">If...Then...Else 语句</span><span class="sxs-lookup"><span data-stu-id="c935c-107">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="b964b-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="b964b-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c935c-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c935c-108">See also</span></span>
 
-- [<span data-ttu-id="b964b-109">关键字</span><span class="sxs-lookup"><span data-stu-id="b964b-109">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="c935c-109">关键字</span><span class="sxs-lookup"><span data-stu-id="c935c-109">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

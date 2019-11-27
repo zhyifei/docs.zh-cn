@@ -21,10 +21,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444281"
 ---
-# <a name="coiniticor-enumeration"></a><span data-ttu-id="bf9a6-102">COINITICOR 枚举</span><span class="sxs-lookup"><span data-stu-id="bf9a6-102">COINITICOR Enumeration</span></span>
-<span data-ttu-id="bf9a6-103">Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when it initializes the common language runtime.</span><span class="sxs-lookup"><span data-stu-id="bf9a6-103">Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when it initializes the common language runtime.</span></span>  
+# <a name="coiniticor-enumeration"></a><span data-ttu-id="9f4a4-102">COINITICOR 枚举</span><span class="sxs-lookup"><span data-stu-id="9f4a4-102">COINITICOR Enumeration</span></span>
+<span data-ttu-id="9f4a4-103">指定[CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md)在初始化公共语言运行时时使用的常量。</span><span class="sxs-lookup"><span data-stu-id="9f4a4-103">Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when it initializes the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bf9a6-104">语法</span><span class="sxs-lookup"><span data-stu-id="bf9a6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9f4a4-104">语法</span><span class="sxs-lookup"><span data-stu-id="9f4a4-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum tagCOINITCOR  
@@ -33,21 +33,21 @@ typedef enum tagCOINITCOR
 } COINITICOR;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="bf9a6-105">Members</span><span class="sxs-lookup"><span data-stu-id="bf9a6-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="9f4a4-105">Members</span><span class="sxs-lookup"><span data-stu-id="9f4a4-105">Members</span></span>  
   
-|<span data-ttu-id="bf9a6-106">成员</span><span class="sxs-lookup"><span data-stu-id="bf9a6-106">Member</span></span>|<span data-ttu-id="bf9a6-107">描述</span><span class="sxs-lookup"><span data-stu-id="bf9a6-107">Description</span></span>|  
+|<span data-ttu-id="9f4a4-106">成员</span><span class="sxs-lookup"><span data-stu-id="9f4a4-106">Member</span></span>|<span data-ttu-id="9f4a4-107">说明</span><span class="sxs-lookup"><span data-stu-id="9f4a4-107">Description</span></span>|  
 |------------|-----------------|  
-|`COINITCOR`|<span data-ttu-id="bf9a6-108">Indicates the default initialization mode.</span><span class="sxs-lookup"><span data-stu-id="bf9a6-108">Indicates the default initialization mode.</span></span>|  
+|`COINITCOR`|<span data-ttu-id="9f4a4-108">指示默认初始化模式。</span><span class="sxs-lookup"><span data-stu-id="9f4a4-108">Indicates the default initialization mode.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="bf9a6-109">要求</span><span class="sxs-lookup"><span data-stu-id="bf9a6-109">Requirements</span></span>  
- <span data-ttu-id="bf9a6-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bf9a6-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9f4a4-109">要求</span><span class="sxs-lookup"><span data-stu-id="9f4a4-109">Requirements</span></span>  
+ <span data-ttu-id="9f4a4-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9f4a4-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bf9a6-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="bf9a6-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9f4a4-111">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="9f4a4-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="bf9a6-112">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="bf9a6-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9f4a4-112">**库：** 作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="9f4a4-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="bf9a6-113">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bf9a6-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9f4a4-113">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9f4a4-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bf9a6-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="bf9a6-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9f4a4-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9f4a4-114">See also</span></span>
 
-- [<span data-ttu-id="bf9a6-115">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="bf9a6-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="9f4a4-115">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="9f4a4-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

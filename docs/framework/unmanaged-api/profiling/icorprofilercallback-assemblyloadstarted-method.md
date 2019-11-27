@@ -22,32 +22,32 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445162"
 ---
-# <a name="icorprofilercallbackassemblyloadstarted-method"></a><span data-ttu-id="2b281-102">ICorProfilerCallback::AssemblyLoadStarted 方法</span><span class="sxs-lookup"><span data-stu-id="2b281-102">ICorProfilerCallback::AssemblyLoadStarted Method</span></span>
-<span data-ttu-id="2b281-103">Notifies the profiler that an assembly is being loaded.</span><span class="sxs-lookup"><span data-stu-id="2b281-103">Notifies the profiler that an assembly is being loaded.</span></span>  
+# <a name="icorprofilercallbackassemblyloadstarted-method"></a><span data-ttu-id="4da79-102">ICorProfilerCallback::AssemblyLoadStarted 方法</span><span class="sxs-lookup"><span data-stu-id="4da79-102">ICorProfilerCallback::AssemblyLoadStarted Method</span></span>
+<span data-ttu-id="4da79-103">通知探查器正在加载程序集。</span><span class="sxs-lookup"><span data-stu-id="4da79-103">Notifies the profiler that an assembly is being loaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2b281-104">语法</span><span class="sxs-lookup"><span data-stu-id="2b281-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4da79-104">语法</span><span class="sxs-lookup"><span data-stu-id="4da79-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT AssemblyLoadStarted(  
     [in] AssemblyID assemblyId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2b281-105">参数</span><span class="sxs-lookup"><span data-stu-id="2b281-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4da79-105">参数</span><span class="sxs-lookup"><span data-stu-id="4da79-105">Parameters</span></span>  
  `assemblyId`  
- <span data-ttu-id="2b281-106">[in] Identifies the assembly that is being loaded.</span><span class="sxs-lookup"><span data-stu-id="2b281-106">[in] Identifies the assembly that is being loaded.</span></span>  
+ <span data-ttu-id="4da79-106">中标识要加载的程序集。</span><span class="sxs-lookup"><span data-stu-id="4da79-106">[in] Identifies the assembly that is being loaded.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2b281-107">备注</span><span class="sxs-lookup"><span data-stu-id="2b281-107">Remarks</span></span>  
- <span data-ttu-id="2b281-108">The value of `assemblyId` is not valid for an information request until the [ICorProfilerCallback::AssemblyLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadfinished-method.md) method is called.</span><span class="sxs-lookup"><span data-stu-id="2b281-108">The value of `assemblyId` is not valid for an information request until the [ICorProfilerCallback::AssemblyLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadfinished-method.md) method is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4da79-107">备注</span><span class="sxs-lookup"><span data-stu-id="4da79-107">Remarks</span></span>  
+ <span data-ttu-id="4da79-108">在调用[ICorProfilerCallback：： AssemblyLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadfinished-method.md)方法之前，`assemblyId` 的值对信息请求无效。</span><span class="sxs-lookup"><span data-stu-id="4da79-108">The value of `assemblyId` is not valid for an information request until the [ICorProfilerCallback::AssemblyLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadfinished-method.md) method is called.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2b281-109">要求</span><span class="sxs-lookup"><span data-stu-id="2b281-109">Requirements</span></span>  
- <span data-ttu-id="2b281-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2b281-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4da79-109">要求</span><span class="sxs-lookup"><span data-stu-id="4da79-109">Requirements</span></span>  
+ <span data-ttu-id="4da79-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4da79-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2b281-111">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2b281-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="4da79-111">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4da79-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="2b281-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2b281-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4da79-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4da79-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2b281-113">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b281-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4da79-113">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4da79-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2b281-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="2b281-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4da79-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4da79-114">See also</span></span>
 
-- [<span data-ttu-id="2b281-115">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="2b281-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="4da79-115">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="4da79-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

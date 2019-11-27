@@ -11,17 +11,17 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350669"
 ---
-# <a name="mylog-object"></a><span data-ttu-id="a0636-102">My.Log 对象</span><span class="sxs-lookup"><span data-stu-id="a0636-102">My.Log Object</span></span>
-<span data-ttu-id="a0636-103">Provides a property and methods for writing event and exception information to the application's log listeners.</span><span class="sxs-lookup"><span data-stu-id="a0636-103">Provides a property and methods for writing event and exception information to the application's log listeners.</span></span>  
+# <a name="mylog-object"></a><span data-ttu-id="9d33a-102">My.Log 对象</span><span class="sxs-lookup"><span data-stu-id="9d33a-102">My.Log Object</span></span>
+<span data-ttu-id="9d33a-103">提供用于将事件和异常信息写入应用程序的日志侦听器的属性和方法。</span><span class="sxs-lookup"><span data-stu-id="9d33a-103">Provides a property and methods for writing event and exception information to the application's log listeners.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a0636-104">备注</span><span class="sxs-lookup"><span data-stu-id="a0636-104">Remarks</span></span>  
- <span data-ttu-id="a0636-105">有关 `My.Log` 对象所使用方法和属性的信息，请参阅 <xref:Microsoft.VisualBasic.Logging.AspLog>。</span><span class="sxs-lookup"><span data-stu-id="a0636-105">For information about the methods and properties of the `My.Log` object, see <xref:Microsoft.VisualBasic.Logging.AspLog>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9d33a-104">备注</span><span class="sxs-lookup"><span data-stu-id="9d33a-104">Remarks</span></span>  
+ <span data-ttu-id="9d33a-105">有关 `My.Log` 对象所使用方法和属性的信息，请参阅 <xref:Microsoft.VisualBasic.Logging.AspLog>。</span><span class="sxs-lookup"><span data-stu-id="9d33a-105">For information about the methods and properties of the `My.Log` object, see <xref:Microsoft.VisualBasic.Logging.AspLog>.</span></span>  
   
- <span data-ttu-id="a0636-106">The `My.Log` object is available for ASP.NET applications only.</span><span class="sxs-lookup"><span data-stu-id="a0636-106">The `My.Log` object is available for ASP.NET applications only.</span></span> <span data-ttu-id="a0636-107">For client applications, use [My.Application.Log Object](../../../visual-basic/language-reference/objects/my-application-log-object.md).</span><span class="sxs-lookup"><span data-stu-id="a0636-107">For client applications, use [My.Application.Log Object](../../../visual-basic/language-reference/objects/my-application-log-object.md).</span></span>  
+ <span data-ttu-id="9d33a-106">仅适用于 ASP.NET 应用程序的 `My.Log` 对象。</span><span class="sxs-lookup"><span data-stu-id="9d33a-106">The `My.Log` object is available for ASP.NET applications only.</span></span> <span data-ttu-id="9d33a-107">对于客户端应用程序，请使用[My. .Log 对象](../../../visual-basic/language-reference/objects/my-application-log-object.md)。</span><span class="sxs-lookup"><span data-stu-id="9d33a-107">For client applications, use [My.Application.Log Object](../../../visual-basic/language-reference/objects/my-application-log-object.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a0636-108">要求</span><span class="sxs-lookup"><span data-stu-id="a0636-108">Requirements</span></span>  
- <span data-ttu-id="a0636-109">**命名空间：** <xref:Microsoft.VisualBasic.Logging></span><span class="sxs-lookup"><span data-stu-id="a0636-109">**Namespace:** <xref:Microsoft.VisualBasic.Logging></span></span>  
+## <a name="requirements"></a><span data-ttu-id="9d33a-108">要求</span><span class="sxs-lookup"><span data-stu-id="9d33a-108">Requirements</span></span>  
+ <span data-ttu-id="9d33a-109">**命名空间：** <xref:Microsoft.VisualBasic.Logging></span><span class="sxs-lookup"><span data-stu-id="9d33a-109">**Namespace:** <xref:Microsoft.VisualBasic.Logging></span></span>  
   
- <span data-ttu-id="a0636-110">**Class:** <xref:Microsoft.VisualBasic.Logging.AspLog></span><span class="sxs-lookup"><span data-stu-id="a0636-110">**Class:** <xref:Microsoft.VisualBasic.Logging.AspLog></span></span>  
+ <span data-ttu-id="9d33a-110">**类：** <xref:Microsoft.VisualBasic.Logging.AspLog></span><span class="sxs-lookup"><span data-stu-id="9d33a-110">**Class:** <xref:Microsoft.VisualBasic.Logging.AspLog></span></span>  
   
- <span data-ttu-id="a0636-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="a0636-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>
+ <span data-ttu-id="9d33a-111">**程序集：** Visual Basic 运行时库（在 Microsoft. .dll 中）</span><span class="sxs-lookup"><span data-stu-id="9d33a-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>

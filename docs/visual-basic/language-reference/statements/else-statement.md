@@ -13,18 +13,18 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343757"
 ---
-# <a name="else-statement-visual-basic"></a><span data-ttu-id="ed44d-102">Else 语句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ed44d-102">Else Statement (Visual Basic)</span></span>
-<span data-ttu-id="ed44d-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span><span class="sxs-lookup"><span data-stu-id="ed44d-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span></span>  
+# <a name="else-statement-visual-basic"></a><span data-ttu-id="918bf-102">Else 语句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="918bf-102">Else Statement (Visual Basic)</span></span>
+<span data-ttu-id="918bf-103">如果没有运行或编译任何其他条件语句组，将引入一组要运行或编译的语句。</span><span class="sxs-lookup"><span data-stu-id="918bf-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ed44d-104">备注</span><span class="sxs-lookup"><span data-stu-id="ed44d-104">Remarks</span></span>  
- <span data-ttu-id="ed44d-105">`Else` 关键字可用于以下上下文中：</span><span class="sxs-lookup"><span data-stu-id="ed44d-105">The `Else` keyword can be used in these contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="918bf-104">备注</span><span class="sxs-lookup"><span data-stu-id="918bf-104">Remarks</span></span>  
+ <span data-ttu-id="918bf-105">`Else` 关键字可用于以下上下文中：</span><span class="sxs-lookup"><span data-stu-id="918bf-105">The `Else` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="ed44d-106">If...Then...Else 语句</span><span class="sxs-lookup"><span data-stu-id="ed44d-106">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [<span data-ttu-id="918bf-106">If...Then...Else 语句</span><span class="sxs-lookup"><span data-stu-id="918bf-106">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
- [<span data-ttu-id="ed44d-107">Select...Case 语句</span><span class="sxs-lookup"><span data-stu-id="ed44d-107">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)  
+ [<span data-ttu-id="918bf-107">Select...Case 语句</span><span class="sxs-lookup"><span data-stu-id="918bf-107">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)  
   
- [<span data-ttu-id="ed44d-108">#If...Then...#Else Directive</span><span class="sxs-lookup"><span data-stu-id="ed44d-108">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [<span data-ttu-id="918bf-108">#If .。。Then ... #Else 指令</span><span class="sxs-lookup"><span data-stu-id="918bf-108">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
-## <a name="see-also"></a><span data-ttu-id="ed44d-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="ed44d-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="918bf-109">另请参阅</span><span class="sxs-lookup"><span data-stu-id="918bf-109">See also</span></span>
 
-- [<span data-ttu-id="ed44d-110">关键字</span><span class="sxs-lookup"><span data-stu-id="ed44d-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="918bf-110">关键字</span><span class="sxs-lookup"><span data-stu-id="918bf-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Off
+title: 关闭
 ms.date: 07/20/2015
 f1_keywords:
 - Off
@@ -14,18 +14,18 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331940"
 ---
-# <a name="off-visual-basic"></a><span data-ttu-id="0d00e-102">Off (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0d00e-102">Off (Visual Basic)</span></span>
-<span data-ttu-id="0d00e-103">Turns a compiler option off.</span><span class="sxs-lookup"><span data-stu-id="0d00e-103">Turns a compiler option off.</span></span>  
+# <a name="off-visual-basic"></a><span data-ttu-id="63086-102">Off (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="63086-102">Off (Visual Basic)</span></span>
+<span data-ttu-id="63086-103">关闭编译器选项。</span><span class="sxs-lookup"><span data-stu-id="63086-103">Turns a compiler option off.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0d00e-104">备注</span><span class="sxs-lookup"><span data-stu-id="0d00e-104">Remarks</span></span>  
- <span data-ttu-id="0d00e-105">`Off` 关键字可用于以下上下文中：</span><span class="sxs-lookup"><span data-stu-id="0d00e-105">The `Off` keyword can be used in these contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="63086-104">备注</span><span class="sxs-lookup"><span data-stu-id="63086-104">Remarks</span></span>  
+ <span data-ttu-id="63086-105">`Off` 关键字可用于以下上下文中：</span><span class="sxs-lookup"><span data-stu-id="63086-105">The `Off` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="0d00e-106">Option Explicit 语句</span><span class="sxs-lookup"><span data-stu-id="0d00e-106">Option Explicit Statement</span></span>](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [<span data-ttu-id="63086-106">Option Explicit 语句</span><span class="sxs-lookup"><span data-stu-id="63086-106">Option Explicit Statement</span></span>](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
   
- [<span data-ttu-id="0d00e-107">Option Strict 语句</span><span class="sxs-lookup"><span data-stu-id="0d00e-107">Option Strict Statement</span></span>](../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [<span data-ttu-id="63086-107">Option Strict 语句</span><span class="sxs-lookup"><span data-stu-id="63086-107">Option Strict Statement</span></span>](../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
- [<span data-ttu-id="0d00e-108">Option Infer 语句</span><span class="sxs-lookup"><span data-stu-id="0d00e-108">Option Infer Statement</span></span>](../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [<span data-ttu-id="63086-108">Option Infer 语句</span><span class="sxs-lookup"><span data-stu-id="63086-108">Option Infer Statement</span></span>](../../visual-basic/language-reference/statements/option-infer-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="0d00e-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="0d00e-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="63086-109">另请参阅</span><span class="sxs-lookup"><span data-stu-id="63086-109">See also</span></span>
 
-- [<span data-ttu-id="0d00e-110">关键字</span><span class="sxs-lookup"><span data-stu-id="0d00e-110">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="63086-110">关键字</span><span class="sxs-lookup"><span data-stu-id="63086-110">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)
