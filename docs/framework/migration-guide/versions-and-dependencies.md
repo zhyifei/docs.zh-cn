@@ -21,7 +21,9 @@ ms.locfileid: "73975541"
   
 下表总结了 .NET Framework 版本历史，并将每个版本与 Visual Studio、Windows 和 Windows Server 相关联。 Visual Studio 提供了多目标功能，因此你将不会限于仅使用列出的 .NET Framework 版本。  
   
-每个新版本的 .NET Framework 都会保留早期版本中的功能并会添加新功能。 CLR 由其自己的版本号标识。 虽然 CLR 版本号并不总会递增，但 .NET Framework 版本号在每次发布时都会递增。 例如，.NET Framework 4、4.5 和更高版本包含 CLR 4，而 .NET Framework 2.0、3.0 和 3.5 包含 CLR 2.0。 （没有版本 3 的 CLR。）  
+
+每个新版本的 .NET Framework 都会保留早期版本中的功能并会添加新功能。 CLR 由其自己的版本号标识。 虽然 CLR 版本号并不总会递增，但 .NET Framework 版本号在每次发布时都会递增。 例如，.NET Framework 4、4.5 和更高版本包含 CLR 4，而 .NET Framework 2.0、3.0 和 3.5 包含 CLR 2.0。 （没有版本号为 3 的 CLR。）
+
   
 有关受支持操作系统的完整列表，请参阅[系统要求](../get-started/system-requirements.md)。 有关下载，请参阅[安装面向开发人员的 .NET Framework](../install/guide-for-developers.md)。 若要确定计算机上安装的是哪个版本的 .NET Framework，请参阅[如何：确定已安装的 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)。  
   
