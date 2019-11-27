@@ -12,22 +12,22 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344143"
 ---
-# <a name="myapplicationinfo-object"></a><span data-ttu-id="b22cb-102">My.Application.Info 对象</span><span class="sxs-lookup"><span data-stu-id="b22cb-102">My.Application.Info Object</span></span>
-<span data-ttu-id="b22cb-103">Provides properties for getting the information about the application, such as the version number, description, loaded assemblies, and so on.</span><span class="sxs-lookup"><span data-stu-id="b22cb-103">Provides properties for getting the information about the application, such as the version number, description, loaded assemblies, and so on.</span></span>  
+# <a name="myapplicationinfo-object"></a><span data-ttu-id="950b3-102">My.Application.Info 对象</span><span class="sxs-lookup"><span data-stu-id="950b3-102">My.Application.Info Object</span></span>
+<span data-ttu-id="950b3-103">提供用于获取有关应用程序的信息（如版本号、说明、已加载程序集等）的属性。</span><span class="sxs-lookup"><span data-stu-id="950b3-103">Provides properties for getting the information about the application, such as the version number, description, loaded assemblies, and so on.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b22cb-104">备注</span><span class="sxs-lookup"><span data-stu-id="b22cb-104">Remarks</span></span>  
- <span data-ttu-id="b22cb-105">有关 `My.Application.Info` 对象所使用方法和属性的信息，请参阅 <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>。</span><span class="sxs-lookup"><span data-stu-id="b22cb-105">For information about the methods and properties of the `My.Application.Info` object, see <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="950b3-104">备注</span><span class="sxs-lookup"><span data-stu-id="950b3-104">Remarks</span></span>  
+ <span data-ttu-id="950b3-105">有关 `My.Application.Info` 对象所使用方法和属性的信息，请参阅 <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>。</span><span class="sxs-lookup"><span data-stu-id="950b3-105">For information about the methods and properties of the `My.Application.Info` object, see <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="b22cb-106">You can use properties of the <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> class to obtain information about a file on disk.</span><span class="sxs-lookup"><span data-stu-id="b22cb-106">You can use properties of the <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> class to obtain information about a file on disk.</span></span>  
+> <span data-ttu-id="950b3-106">您可以使用 <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> 类的属性来获取有关磁盘上的文件的信息。</span><span class="sxs-lookup"><span data-stu-id="950b3-106">You can use properties of the <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> class to obtain information about a file on disk.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b22cb-107">要求</span><span class="sxs-lookup"><span data-stu-id="b22cb-107">Requirements</span></span>  
- <span data-ttu-id="b22cb-108">**命名空间：** <xref:Microsoft.VisualBasic.ApplicationServices></span><span class="sxs-lookup"><span data-stu-id="b22cb-108">**Namespace:** <xref:Microsoft.VisualBasic.ApplicationServices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="950b3-107">要求</span><span class="sxs-lookup"><span data-stu-id="950b3-107">Requirements</span></span>  
+ <span data-ttu-id="950b3-108">**命名空间：** <xref:Microsoft.VisualBasic.ApplicationServices></span><span class="sxs-lookup"><span data-stu-id="950b3-108">**Namespace:** <xref:Microsoft.VisualBasic.ApplicationServices></span></span>  
   
- <span data-ttu-id="b22cb-109">**Class:** <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo></span><span class="sxs-lookup"><span data-stu-id="b22cb-109">**Class:** <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo></span></span>  
+ <span data-ttu-id="950b3-109">**类：** <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo></span><span class="sxs-lookup"><span data-stu-id="950b3-109">**Class:** <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo></span></span>  
   
- <span data-ttu-id="b22cb-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="b22cb-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="950b3-110">**程序集：** Visual Basic 运行时库（在 Microsoft. .dll 中）</span><span class="sxs-lookup"><span data-stu-id="950b3-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b22cb-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="b22cb-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="950b3-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="950b3-111">See also</span></span>
 
-- [<span data-ttu-id="b22cb-112">My.Application 对象</span><span class="sxs-lookup"><span data-stu-id="b22cb-112">My.Application Object</span></span>](../../../visual-basic/language-reference/objects/my-application-object.md)
+- [<span data-ttu-id="950b3-112">My.Application 对象</span><span class="sxs-lookup"><span data-stu-id="950b3-112">My.Application Object</span></span>](../../../visual-basic/language-reference/objects/my-application-object.md)

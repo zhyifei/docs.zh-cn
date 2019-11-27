@@ -13,13 +13,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336127"
 ---
-# <a name="bit-shift-operators-visual-basic"></a><span data-ttu-id="d2bb4-102">移位运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d2bb4-102">Bit Shift Operators (Visual Basic)</span></span>
-<span data-ttu-id="d2bb4-103">The following are the bit shift operators defined in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="d2bb4-103">The following are the bit shift operators defined in Visual Basic.</span></span>  
+# <a name="bit-shift-operators-visual-basic"></a><span data-ttu-id="304f9-102">移位运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="304f9-102">Bit Shift Operators (Visual Basic)</span></span>
+<span data-ttu-id="304f9-103">下面是在 Visual Basic 中定义的移位运算符。</span><span class="sxs-lookup"><span data-stu-id="304f9-103">The following are the bit shift operators defined in Visual Basic.</span></span>  
   
- [<span data-ttu-id="d2bb4-104"><\< Operator</span><span class="sxs-lookup"><span data-stu-id="d2bb4-104"><\< Operator</span></span>](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
+ [<span data-ttu-id="304f9-104"><\< 运算符</span><span class="sxs-lookup"><span data-stu-id="304f9-104"><\< Operator</span></span>](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
   
- [<span data-ttu-id="d2bb4-105">>> 运算符</span><span class="sxs-lookup"><span data-stu-id="d2bb4-105">>> Operator</span></span>](../../../visual-basic/language-reference/operators/right-shift-operator.md)  
+ [<span data-ttu-id="304f9-105">>> 运算符</span><span class="sxs-lookup"><span data-stu-id="304f9-105">>> Operator</span></span>](../../../visual-basic/language-reference/operators/right-shift-operator.md)  
   
-## <a name="see-also"></a><span data-ttu-id="d2bb4-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="d2bb4-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="304f9-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="304f9-106">See also</span></span>
 
-- [<span data-ttu-id="d2bb4-107">按功能列出的运算符</span><span class="sxs-lookup"><span data-stu-id="d2bb4-107">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="304f9-107">按功能列出的运算符</span><span class="sxs-lookup"><span data-stu-id="304f9-107">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

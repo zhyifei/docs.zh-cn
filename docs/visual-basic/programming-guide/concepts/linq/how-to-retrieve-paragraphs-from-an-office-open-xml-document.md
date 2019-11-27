@@ -9,19 +9,19 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347529"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a><span data-ttu-id="efe84-102">How to: Retrieve Paragraphs from an Office Open XML Document (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="efe84-102">How to: Retrieve Paragraphs from an Office Open XML Document (Visual Basic)</span></span>
-<span data-ttu-id="efe84-103">本主题提供一个示例，该示例打开一个 Office Open XML 文档，然后检索文档中所有段落所构成的集合。</span><span class="sxs-lookup"><span data-stu-id="efe84-103">This topic presents an example that opens an Office Open XML document, and retrieves a collection of all of the paragraphs in the document.</span></span>  
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a><span data-ttu-id="75b0f-102">如何：从 Office Open XML 文档中检索段落（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="75b0f-102">How to: Retrieve Paragraphs from an Office Open XML Document (Visual Basic)</span></span>
+<span data-ttu-id="75b0f-103">本主题提供一个示例，该示例打开一个 Office Open XML 文档，然后检索文档中所有段落所构成的集合。</span><span class="sxs-lookup"><span data-stu-id="75b0f-103">This topic presents an example that opens an Office Open XML document, and retrieves a collection of all of the paragraphs in the document.</span></span>  
   
- <span data-ttu-id="efe84-104">For more information on Office Open XML, see [Eric White's Blog](http://www.ericwhite.com).</span><span class="sxs-lookup"><span data-stu-id="efe84-104">For more information on Office Open XML, see [Eric White's Blog](http://www.ericwhite.com).</span></span>  
+ <span data-ttu-id="75b0f-104">有关 Office Open XML 的详细信息，请参阅[Eric 白的博客](http://www.ericwhite.com)。</span><span class="sxs-lookup"><span data-stu-id="75b0f-104">For more information on Office Open XML, see [Eric White's Blog](http://www.ericwhite.com).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="efe84-105">示例</span><span class="sxs-lookup"><span data-stu-id="efe84-105">Example</span></span>  
- <span data-ttu-id="efe84-106">此示例打开一个 Office Open XML 包，使用 Open XML 包中的关系查找文档和样式部件。</span><span class="sxs-lookup"><span data-stu-id="efe84-106">This example opens an Office Open XML package, uses the relationships within the Open XML package to find the document and the style parts.</span></span> <span data-ttu-id="efe84-107">然后，它查询文档，投影一个匿名类型的集合，该集合包含段落 <xref:System.Xml.Linq.XElement> 节点、每个段落的样式名称和每个段落的文本。</span><span class="sxs-lookup"><span data-stu-id="efe84-107">It then queries the document, projecting a collection of an anonymous type that contains the paragraph <xref:System.Xml.Linq.XElement> node, the style name of each paragraph, and the text of each paragraph.</span></span>  
+## <a name="example"></a><span data-ttu-id="75b0f-105">示例</span><span class="sxs-lookup"><span data-stu-id="75b0f-105">Example</span></span>  
+ <span data-ttu-id="75b0f-106">此示例打开一个 Office Open XML 包，使用 Open XML 包中的关系查找文档和样式部件。</span><span class="sxs-lookup"><span data-stu-id="75b0f-106">This example opens an Office Open XML package, uses the relationships within the Open XML package to find the document and the style parts.</span></span> <span data-ttu-id="75b0f-107">然后，它查询文档，投影一个匿名类型的集合，该集合包含段落 <xref:System.Xml.Linq.XElement> 节点、每个段落的样式名称和每个段落的文本。</span><span class="sxs-lookup"><span data-stu-id="75b0f-107">It then queries the document, projecting a collection of an anonymous type that contains the paragraph <xref:System.Xml.Linq.XElement> node, the style name of each paragraph, and the text of each paragraph.</span></span>  
   
- <span data-ttu-id="efe84-108">此示例使用一个名为 `StringConcatenate` 的扩展方法，示例中也提供了该方法。</span><span class="sxs-lookup"><span data-stu-id="efe84-108">The example uses an extension method named `StringConcatenate`, which is also supplied in the example.</span></span>  
+ <span data-ttu-id="75b0f-108">此示例使用一个名为 `StringConcatenate` 的扩展方法，示例中也提供了该方法。</span><span class="sxs-lookup"><span data-stu-id="75b0f-108">The example uses an extension method named `StringConcatenate`, which is also supplied in the example.</span></span>  
   
- <span data-ttu-id="efe84-109">For a detailed tutorial that explains how this example works, see [Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).</span><span class="sxs-lookup"><span data-stu-id="efe84-109">For a detailed tutorial that explains how this example works, see [Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).</span></span>  
+ <span data-ttu-id="75b0f-109">有关此示例的工作原理的详细教程，请参阅[XML 的纯功能转换（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="75b0f-109">For a detailed tutorial that explains how this example works, see [Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).</span></span>  
   
- <span data-ttu-id="efe84-110">本示例使用 WindowsBase 程序集中的类。</span><span class="sxs-lookup"><span data-stu-id="efe84-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="efe84-111">它使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空间中的类型。</span><span class="sxs-lookup"><span data-stu-id="efe84-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="75b0f-110">本示例使用 WindowsBase 程序集中的类。</span><span class="sxs-lookup"><span data-stu-id="75b0f-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="75b0f-111">它使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空间中的类型。</span><span class="sxs-lookup"><span data-stu-id="75b0f-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -152,7 +152,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="efe84-112">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:</span><span class="sxs-lookup"><span data-stu-id="efe84-112">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
+ <span data-ttu-id="75b0f-112">当与[创建源 Office OPEN Xml 文档（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)中所述的示例 Open xml 文档运行时，此示例将生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="75b0f-112">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
   
 ```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -172,6 +172,6 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="efe84-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="efe84-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="75b0f-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="75b0f-113">See also</span></span>
 
-- [<span data-ttu-id="efe84-114">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="efe84-114">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [<span data-ttu-id="75b0f-114">高级查询技术（LINQ to XML）（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="75b0f-114">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
