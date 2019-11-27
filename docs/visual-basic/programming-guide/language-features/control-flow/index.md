@@ -19,7 +19,7 @@ ms.locfileid: "74353934"
 
 程序可以按从头到尾的顺序执行所有语句，而不受管制。 只需使用这种单向控制流，即可编写一些非常简单的程序。 然而，任何一种编程语言的大部分功能性和实用性都是源自能否更改控制语句和循环的执行顺序。
 
- 借助控制结构，可以对程序执行流进行管制。 Using control structures, you can write Visual Basic code that makes decisions or that repeats actions. 使用其他控制结构，可以保证处置资源或对同一对象引用运行一系列语句。
+ 借助控制结构，可以对程序执行流进行管制。 使用控制结构，可以编写进行决策或重复操作的 Visual Basic 代码。 使用其他控制结构，可以保证处置资源或对同一对象引用运行一系列语句。
   
 ## <a name="in-this-section"></a>本节内容
 

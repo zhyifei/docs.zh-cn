@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446578"
 ---
 # <a name="closeassembly-method"></a>CloseAssembly 方法
-Finalizes assembly operations. Call this method before beginning a new assembly or unbound module.  
+终结程序集操作。 在开始新的程序集或未绑定的模块之前，请调用此方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,15 +35,15 @@ HRESULT CloseAssembly(
   
 ## <a name="parameters"></a>参数  
  `AssemblyID`  
- ID of the assembly.  
+ 程序集的 ID。  
   
 ## <a name="return-value"></a>返回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- Requires alink.h.  
+ 需要 alink。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IALink 接口](ialink-interface.md)
 - [IALink2 接口](ialink2-interface.md)

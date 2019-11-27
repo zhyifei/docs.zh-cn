@@ -27,8 +27,8 @@ ms.locfileid: "74447268"
   
  嵌入对象可视为 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 文本提供程序的子项。 将能够通过与所有其他 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 元素相同的 UI 自动化树结构来公开嵌入对象。 而功能是通过嵌入对象控件类型通常需要的控件模式公开的（例如，由于超链接基于文本，因此超链接将支持 <xref:System.Windows.Automation.TextPattern>）。  
   
- ![Embedded objects in a text container.](./media/uia-textpattern-embeddedobjects.PNG "UIA_TextPattern_EmbeddedObjects")  
-A sample document with textual content, ("Did You Know?"…) and two embedded objects (a picture of a whale and a text hyperlink), used as a target for the code examples.  
+ ![文本容器中的嵌入对象。](./media/uia-textpattern-embeddedobjects.PNG "UIA_TextPattern_EmbeddedObjects")  
+带有文本内容的示例文档（"你知道吗？"...)和两个嵌入对象（鲸鱼和文本超链接的图片），用作代码示例的目标。  
   
 ## <a name="example"></a>示例  
  下面的代码示例演示如何从 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 文本提供程序内检索嵌入对象的集合。 对于简介中提供的示例文档，将返回两个对象（一个图像元素和一个文本元素）。  
@@ -52,10 +52,10 @@ A sample document with textual content, ("Did You Know?"…) and two embedded ob
  [!code-csharp[UIATextPattern_snip#GetRangeFromChild](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATextPattern_snip/CSharp/SearchWindow.cs#getrangefromchild)]
  [!code-vb[UIATextPattern_snip#GetRangeFromChild](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATextPattern_snip/VisualBasic/SearchWindow.vb#getrangefromchild)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UI 自动化 TextPattern 概述](ui-automation-textpattern-overview.md)
 - [UI 自动化控件模式概述](ui-automation-control-patterns-overview.md)
-- [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [使用 UI 自动化向文本框添加内容](add-content-to-a-text-box-using-ui-automation.md)
 - [使用 UI 自动化查找和突出显示文本](find-and-highlight-text-using-ui-automation.md)

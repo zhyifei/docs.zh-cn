@@ -38,30 +38,30 @@ HRESULT GetScopeProps (
   
 ## <a name="parameters"></a>参数  
  `szName`  
- [out] A buffer for the assembly or module name.  
+ 弄程序集或模块名称的缓冲区。  
   
  `cchName`  
- [in] The size in wide characters of `szName`.  
+ 中`szName`的大小（以宽字符为大小）。  
   
  `pchName`  
- [out] The number of wide characters returned in `szName`.  
+ 弄`szName`中返回的宽字符数。  
   
  `pmvid`  
- [out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.  
+ [out，optional]一个指向 GUID 的指针，该 GUID 用于唯一标识程序集或模块的版本。  
   
 ## <a name="remarks"></a>备注  
- The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.  
+ 使用[IMetaDataEmit：： SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md)方法设置这些属性。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

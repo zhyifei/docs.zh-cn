@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450213"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>IMetaDataEmit::DefineTypeDef 方法
-Creates a type definition for a common language runtime type, and gets a metadata token for that type definition.  
+创建公共语言运行时类型的类型定义，并获取该类型定义的元数据标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,37 +39,37 @@ HRESULT DefineTypeDef (
   
 ## <a name="parameters"></a>参数  
  `szTypeDef`  
- [in] The name of the type in Unicode.  
+ 中Unicode 中类型的名称。  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` attributes. This is a bitmask of `CoreTypeAttr` values.  
+ [in] `TypeDef` 特性。 这是 `CoreTypeAttr` 值的位掩码。  
   
  `tkExtends`  
- [in] The token of the base class. It must be either an `mdTypeDef` or an `mdTypeRef` token.  
+ 中基类的标记。 它必须是 `mdTypeDef` 或 `mdTypeRef` 令牌。  
   
  `rtkImplements`  
- [in] An array of tokens specifying the interfaces that this class or interface implements.  
+ 中标记的数组，该数组指定此类或接口实现的接口。  
   
  `ptd`  
- [out] The `mdTypeDef` token assigned.  
+ 弄分配 `mdTypeDef` 标记。  
   
 ## <a name="remarks"></a>备注  
- A flag in `dwTypeDefFlags` specifies whether the type being created is a common type system reference type (class or interface) or a common type system value type.  
+ `dwTypeDefFlags` 中的标志指定正在创建的类型是通用类型系统引用类型（类或接口）还是通用类型系统值类型。  
   
- Depending on the parameters supplied, this method, as a side effect, may also create an `mdInterfaceImpl` record for each interface that is inherited or implemented by this type. However, this method does not return any of these `mdInterfaceImpl` tokens. If a client wants to later add or modify an `mdInterfaceImpl` token, it must use the `IMetaDataImport` interface to enumerate them. If you want to use COM semantics of the `[default]` interface, you should supply the default interface as the first element in `rtkImplements`; a custom attribute set on the class will indicate that the class has a default interface (which is always assumed to be the first `mdInterfaceImpl` token declared for the class).  
+ 根据提供的参数，此方法也可以为此类型继承或实现的每个接口创建 `mdInterfaceImpl` 记录。 但是，此方法不会返回这些 `mdInterfaceImpl` 标记中的任何一个。 如果客户端想要稍后添加或修改 `mdInterfaceImpl` 令牌，则必须使用 `IMetaDataImport` 接口对其进行枚举。 如果要使用 `[default]` 接口的 COM 语义，应提供默认接口作为 `rtkImplements`中的第一个元素;在类上设置的自定义属性将指示类具有默认接口（始终假定为为类声明的第一个 `mdInterfaceImpl` 标记）。  
   
- Each element of the `rtkImplements` array holds an `mdTypeDef` or `mdTypeRef` token. The last element in the array must be `mdTokenNil`.  
+ `rtkImplements` 数组的每个元素都包含一个 `mdTypeDef` 或 `mdTypeRef` 标记。 数组中的最后一个元素必须是 `mdTokenNil`。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

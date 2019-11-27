@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440369"
 ---
 # <a name="imetadataimportcountenum-method"></a>IMetaDataImport::CountEnum 方法
-Gets the number of elements in the enumeration that was retrieved by the specified enumerator.  
+获取由指定枚举器检索的枚举中的元素数目。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,24 +36,24 @@ HRESULT CountEnum (
   
 ## <a name="parameters"></a>参数  
  `hEnum`  
- [in] The handle for the enumerator.  
+ 中枚举器的句柄。  
   
  `pulCount`  
- [out] The number of elements enumerated.  
+ 弄枚举的元素的数目。  
   
 ## <a name="remarks"></a>备注  
- The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
+ `hEnum` 指定的句柄是从以前的 `Enum`*名称*调用（例如[IMetaDataImport：： EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)）获取的。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

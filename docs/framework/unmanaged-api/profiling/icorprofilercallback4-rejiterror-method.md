@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430106"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError 方法
-Notifies the profiler that the just-in-time (JIT) compiler encountered an error in the recompilation process.  
+通知探查器，实时（JIT）编译器在重新编译过程中遇到错误。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,30 +37,30 @@ HRESULT ReJITError(
   
 ## <a name="parameters"></a>参数  
  `moduleID`  
- [in] The `ModuleID` in which the failed recompilation attempt was made.  
+ 中尝试重新编译失败的 `ModuleID`。  
   
  `methodId`  
- [in] The `MethodDef` of the method on which the failed recompilation attempt was made.  
+ 中尝试重新编译失败的方法的 `MethodDef`。  
   
  `functionId`  
- [in] The function instance that is being recompiled or marked for recompilation. This value may be `NULL` if the failure occurred on a per-method basis instead of a per-instantiation basis (for example, if the profiler specified an invalid metadata token for the method to be recompiled).  
+ 中正在重新编译或标记为要重新编译的函数实例。 如果失败发生在每个方法的基础上，而不是基于每个实例化，则此值可能 `NULL` （例如，如果探查器为要重新编译的方法指定了无效的元数据标记）。  
   
  `hrStatus`  
- [in] An HRESULT that indicates the nature of the failure. See the Status HRESULTS section for a list of values.  
+ 中指示失败性质的 HRESULT。 有关值的列表，请参阅状态 HRESULT 部分。  
   
 ## <a name="return-value"></a>返回值  
  将忽略此回调的返回值。  
   
 ## <a name="status-hresults"></a>状态 HRESULTS  
   
-|状态数组 HRESULT|描述|  
+|状态数组 HRESULT|说明|  
 |--------------------------|-----------------|  
-|E_INVALIDARG|The `moduleID` or `methodDef` token is `NULL`.|  
+|E_INVALIDARG|`moduleID` 或 `methodDef` 令牌 `NULL`。|  
 |CORPROF_E_DATAINCOMPLETE|该模块尚未完全加载，或正在被卸载。|  
-|CORPROF_E_MODULE_IS_DYNAMIC|The specified module was dynamically generated (for example, by `Reflection.Emit`), and is thus not supported by this method.|  
-|CORPROF_E_FUNCTION_IS_COLLECTIBLE|The method is instantiated into a collectible assembly, and is therefore not able to be recompiled. Note that types and functions defined in a non-reflection context (for example, `List<MyCollectibleStruct>`) can be instantiated into a collectible assembly.|  
-|E_OUTOFMEMORY|The CLR ran out of memory while trying to mark the specified method for JIT recompilation.|  
-|其他|操作系统返回了 CLR 控件范围之外的失败。 For example, if a system call to change the access protection of a page of memory fails, the operating system error is displayed.|  
+|CORPROF_E_MODULE_IS_DYNAMIC|指定的模块是动态生成的（例如，通过 `Reflection.Emit`），因此不受此方法支持。|  
+|CORPROF_E_FUNCTION_IS_COLLECTIBLE|方法被实例化为可回收的程序集，因此无法重新编译。 请注意，在非反射上下文中定义的类型和函数（例如 `List<MyCollectibleStruct>`）可以实例化为可回收的程序集。|  
+|E_OUTOFMEMORY|尝试将指定的方法标记为 JIT 重新编译时，CLR 用尽了内存。|  
+|其他|操作系统返回了 CLR 控件范围之外的失败。 例如，如果系统调用更改内存页的访问保护失败，则会显示操作系统错误。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -71,7 +71,7 @@ HRESULT ReJITError(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerCallback4 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

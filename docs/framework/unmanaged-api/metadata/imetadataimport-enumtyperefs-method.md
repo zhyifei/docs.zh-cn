@@ -38,37 +38,37 @@ HRESULT EnumTypeRefs (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in，out]指向枚举器的指针。 第一次调用此方法时，此值必须为 NULL。  
   
  `rTypeRefs`  
- [out] The array used to store the TypeRef tokens.  
+ 弄用于存储 TypeRef 标记的数组。  
   
  `cMax`  
  [in] `rTypeRefs` 数组的最大大小。  
   
  `pcTypeRefs`  
- [out] A pointer to the number of TypeRef tokens returned in `rTypeRefs`.  
+ 弄一个指针，指向 `rTypeRefs`中返回的 TypeRef 标记的数目。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeRefs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeRefs` is zero.|  
+|`S_OK`|`EnumTypeRefs` 成功返回。|  
+|`S_FALSE`|没有要枚举的令牌。 在这种情况下，`pcTypeRefs` 为零。|  
   
 ## <a name="remarks"></a>备注  
- A TypeRef token represents a reference to a type.  
+ TypeRef 标记表示对类型的引用。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

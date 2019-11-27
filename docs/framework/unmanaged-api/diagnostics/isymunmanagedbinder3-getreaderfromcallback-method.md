@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449309"
 ---
 # <a name="isymunmanagedbinder3getreaderfromcallback-method"></a>ISymUnmanagedBinder3::GetReaderFromCallback 方法
-Allows the user to implement or supply via callback either an `IID_IDiaReadExeAtRVACallback` or `IID_IDiaReadExeAtOffsetCallback` to obtain the debug directory information from memory.  
+允许用户通过回调来实现或提供，以从内存中获取调试目录信息 `IID_IDiaReadExeAtRVACallback` 或 `IID_IDiaReadExeAtOffsetCallback`。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,29 +39,29 @@ HRESULT GetReaderFromCallback(
   
 ## <a name="parameters"></a>参数  
  `importer`  
- [in] A pointer to the metadata import interface.  
+ 中指向元数据导入接口的指针。  
   
  `fileName`  
- [in] A pointer to the file name.  
+ 中指向文件名的指针。  
   
  `searchPath`  
- [in] A pointer to the search path.  
+ 中指向搜索路径的指针。  
   
  `searchPolicy`  
- [in] A value of the [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeration that specifies the policy to be used when doing a search for a symbol reader.  
+ 中[CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)枚举的一个值，该值指定在搜索符号读取器时要使用的策略。  
   
  `callback`  
- [in] A pointer to the callback function.  
+ 中指向回调函数的指针。  
   
  `pRetVal`  
- [out] A pointer that is set to the returned [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.  
+ 弄设置为返回的[ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)接口的指针。  
   
 ## <a name="return-value"></a>返回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **Header:** CorSym.idl  
+ **标头：** CorSym .idl  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ISymUnmanagedBinder3 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)

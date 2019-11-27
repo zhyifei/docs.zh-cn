@@ -16,68 +16,68 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350331"
 ---
 # <a name="myresources-object"></a>My.Resources 对象
-Provides properties and classes for accessing the application's resources.  
+提供用于访问应用程序资源的属性和类。  
   
 ## <a name="remarks"></a>备注  
- The `My.Resources` object provides access to the application's resources and lets you dynamically retrieve resources for your application. For more information, see [Managing Application Resources (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
+ `My.Resources` 对象提供对应用程序资源的访问权限，并允许你为应用程序动态检索资源。 有关详细信息，请参阅[管理应用程序资源（.net）](/visualstudio/ide/managing-application-resources-dotnet)。  
   
- The `My.Resources` object exposes only global resources. It does not provide access to resource files associated with forms. You must access the form resources from the form.  
+ `My.Resources` 对象只公开全局资源。 它不提供对与表单关联的资源文件的访问权限。 您必须从窗体访问窗体资源。  
   
- You can access the application's culture-specific resource files from the `My.Resources` object. By default, the `My.Resources` object looks up resources from the resource file that matches the culture in the <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> property. However, you can override this behavior and specify a particular culture to use for the resources. 有关详细信息，请参阅[桌面应用中的资源](../../../framework/resources/index.md)。  
+ 可以从 `My.Resources` 对象访问应用程序的区域性特定资源文件。 默认情况下，`My.Resources` 对象从与 <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> 属性中的区域性匹配的资源文件中查找资源。 不过，您可以重写此行为，并指定要用于资源的特定区域性。 有关详细信息，请参阅[桌面应用中的资源](../../../framework/resources/index.md)。  
   
 ## <a name="properties"></a>属性  
- The properties of the `My.Resources` object provide read-only access to your application's resources. To add or remove resources, use the **Project Designer**. You can access resources added through the **Project Designer** by using `My.Resources.`*resourceName*.  
+ `My.Resources` 对象的属性提供对应用程序资源的只读访问。 若要添加或删除资源，请使用 "**项目设计器**"。 您可以使用 `My.Resources.`资源中心访问通过**项目设计器**添加*的资源*。  
   
- You can also add or remove resource files by selecting your project in **Solution Explorer** and clicking **Add New Item** or **Add Existing Item** from the **Project** menu. You can access resources added in this manner by using `My.Resources.`*resourceFileName*`.`*resourceName*.  
+ 还可以通过在**解决方案资源管理器**中选择项目，然后在 "**项目**" 菜单中单击 "**添加新项**" 或 "**添加现有项**"，来添加或删除资源文件。 你可以通过使用 `My.Resources.`*resourceFileName* *`.`资源*中心来访问以这种方式添加的资源。  
   
- Each resource has a name, category, and value, and these resource settings determine how the property to access the resource appears in the `My.Resources` object. For resources added in the **Project Designer**:  
+ 每个资源都有一个名称、类别和值，这些资源设置决定了访问资源的属性在 `My.Resources` 对象中的显示方式。 对于在**项目设计器**中添加的资源：  
   
-- The name determines the name of the property,  
+- 名称确定属性的名称。  
   
-- The resource data is the value of the property,  
+- 资源数据是属性的值。  
   
-- The category determines the type of the property:  
+- 类别确定属性的类型：  
   
-|类别|Property data type|  
+|类别|属性数据类型|  
 |---|---|  
 |**字符串**|[字符串](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
 |**图像**|<xref:System.Drawing.Bitmap>|  
 |**图标**|<xref:System.Drawing.Icon>|  
-|**音频**|<xref:System.IO.UnmanagedMemoryStream><br /><br /> The <xref:System.IO.UnmanagedMemoryStream> class derives from the <xref:System.IO.Stream> class, so it can be used with methods that take streams, such as the <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> method.|  
-|**文件**|-   [String](../../../visual-basic/language-reference/data-types/string-data-type.md) for text files.<br />-   <xref:System.Drawing.Bitmap> for image files.<br />-   <xref:System.Drawing.Icon> for icon files.<br />-   <xref:System.IO.UnmanagedMemoryStream> for sound files.|  
-|**其他**|Determined by the information in the designer's **Type** column.|  
+|**音频**|<xref:System.IO.UnmanagedMemoryStream><br /><br /> <xref:System.IO.UnmanagedMemoryStream> 类派生自 <xref:System.IO.Stream> 类，因此它可用于采用流的方法，如 <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> 方法。|  
+|**文件**|文本文件的 -   [字符串](../../../visual-basic/language-reference/data-types/string-data-type.md)。<br />图像文件 -   <xref:System.Drawing.Bitmap>。<br />图标文件 -   <xref:System.Drawing.Icon>。<br />-   声音文件的 <xref:System.IO.UnmanagedMemoryStream>。|  
+|**其他**|由设计器的**类型**列中的信息确定。|  
   
 ## <a name="classes"></a>类  
- The `My.Resources` object exposes each resource file as a class with shared properties. The class name is the same as the name of the resource file. As described in the previous section, the resources in a resource file are exposed as properties in the class.  
+ `My.Resources` 对象将每个资源文件作为具有共享属性的类公开。 类名称与资源文件的名称相同。 如上一节所述，资源文件中的资源作为类中的属性公开。  
   
 ## <a name="example"></a>示例  
- This example sets the title of a form to the string resource named `Form1Title` in the application resource file. For the example to work, the application must have a string named `Form1Title` in its resource file.  
+ 此示例将窗体的标题设置为应用程序资源文件中名为 `Form1Title` 的字符串资源。 要使此示例正常运行，应用程序的资源文件中必须具有一个名为 `Form1Title` 的字符串。  
   
  [!code-vb[VbVbalrMyResources#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#1)]  
   
 ## <a name="example"></a>示例  
- This example sets the icon of the form to the icon named `Form1Icon` that is stored in the application's resource file. For the example to work, the application must have an icon named `Form1Icon` in its resource file.  
+ 此示例将窗体的图标设置为存储在应用程序的资源文件中名为 `Form1Icon` 的图标。 要使此示例正常运行，应用程序的资源文件中必须具有一个名为 `Form1Icon` 的图标。  
   
  [!code-vb[VbVbalrMyResources#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#2)]  
   
 ## <a name="example"></a>示例  
- This example sets the background image of a form to the image resource named `Form1Background`, which is in the application resource file. For this example to work, the application must have an image resource named `Form1Background` in its resource file.  
+ 此示例将窗体的背景图像设置为在应用程序资源文件中名为 `Form1Background`的图像资源。 要使此示例正常运行，应用程序的资源文件中必须具有名为 `Form1Background` 的映像资源。  
   
  [!code-vb[VbVbalrMyResources#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#3)]  
   
 ## <a name="example"></a>示例  
- This example plays the sound that is stored as an audio resource named `Form1Greeting` in the application's resource file. For the example to work, the application must have an audio resource named `Form1Greeting` in its resource file. The `My.Computer.Audio.Play` method is available only for Windows Forms applications.  
+ 此示例在应用程序的资源文件中播放存储为名为 `Form1Greeting` 的音频资源的声音。 要使此示例正常运行，应用程序的资源文件中必须具有名为 `Form1Greeting` 的音频资源。 `My.Computer.Audio.Play` 方法仅适用于 Windows 窗体应用程序。  
   
  [!code-vb[VbVbalrMyResources#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#4)]  
   
 ## <a name="example"></a>示例  
- This example retrieves the French-culture version of a  string resource of the application. The resource is named `Message`. To change the culture that the `My.Resources` object uses, the example uses <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.  
+ 此示例检索应用程序的字符串资源的法语区域性版本。 资源名为 `Message`。 若要更改 `My.Resources` 对象使用的区域性，该示例使用 <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>。  
   
- For this example to work, the application must have a string named `Message` in its resource file, and the application should have the French-culture version of that resource file, Resources.fr-FR.resx. If the application does not have the French-culture version of the resource file, the `My.Resource` object retrieves the resource from the default-culture resource file.  
+ 要使此示例正常运行，应用程序的资源文件中必须具有一个名为 `Message` 的字符串，应用程序应具有该资源文件的法语区域性版本 Resources.fr。 如果应用程序没有资源文件的法语区域性版本，则 `My.Resource` 对象将从默认区域性资源文件中检索资源。  
   
  [!code-vb[VbVbalrMyResources#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#10)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [管理应用程序资源 (.NET)](/visualstudio/ide/managing-application-resources-dotnet)
 - [桌面应用中的资源](../../../framework/resources/index.md)

@@ -38,29 +38,29 @@ HRESULT SetFileProps (
   
 ## <a name="parameters"></a>参数  
  `file`  
- [in] The metadata token that specifies the `File` metadata structure to be modified.  
+ 中用于指定要修改的 `File` 元数据结构的元数据标记。  
   
  `pbHashValue`  
- [in] A pointer to the hash data associated with the file.  
+ 中指向与该文件关联的哈希数据的指针。  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ 中`pbHashValue`的大小（以字节为单位）。  
   
  `dwFileFlags`  
- [in] A bitwise combination of [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values that specify various attributes of the file.  
+ 中[CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)值的按位组合，用于指定文件的各种属性。  
   
 ## <a name="remarks"></a>备注  
- To create a `File` metadata structure, use the [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) method.  
+ 若要创建 `File` 元数据结构，请使用[IMetaDataAssemblyEmit：:D efinefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)方法。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

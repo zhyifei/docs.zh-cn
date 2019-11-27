@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445258"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl 方法
-Creates a definition for implementation of a method inherited from an interface, and returns a token to that method-implementation definition.  
+创建一个定义，用于实现从接口继承的方法，并返回该方法实现定义的标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,24 +37,24 @@ HRESULT DefineMethodImpl (
   
 ## <a name="parameters"></a>参数  
  `td`  
- [in] The `mdTypedef` token of the implementing class.  
+ 中实现类的 `mdTypedef` 标记。  
   
  `tkBody`  
- [in] The `mdMethodDef` or `mdMemberRef` token of the code body.  
+ 中代码体的 `mdMethodDef` 或 `mdMemberRef` 标记。  
   
  `tkDecl`  
- [in] The `mdMethodDef` or `mdMemberRef` token of the interface method being implemented.  
+ 中正在实现的接口方法的 `mdMethodDef` 或 `mdMemberRef` 标记。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

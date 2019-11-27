@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442311"
 ---
 # <a name="imetadatadispenseropenscopeonmemory-method"></a>IMetaDataDispenser::OpenScopeOnMemory 方法
-Opens an area of memory that contains existing metadata. That is, this method opens a specified area of memory in which the existing data is treated as metadata.  
+打开包含现有元数据的内存区域。 也就是说，此方法将打开一个指定的内存区域，其中的现有数据将被视为元数据。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,39 +39,39 @@ HRESULT OpenScopeOnMemory (
   
 ## <a name="parameters"></a>参数  
  `pData`  
- [in] A pointer that specifies the starting address of the memory area.  
+ 中指定内存区域起始地址的指针。  
   
  `cbData`  
- [in] The size of the memory area, in bytes.  
+ 中内存区域的大小（以字节为单位）。  
   
  `dwOpenFlags`  
- [in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration to specify the mode (read, write, and so on) for opening.  
+ 中[CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)枚举的值，该值指定用于打开的模式（读取、写入等）。  
   
  `riid`  
- [in] The IID of the desired metadata interface to be returned; the caller will use the interface to import (read) or emit (write) metadata.  
+ 中要返回的所需元数据接口的 IID;调用方将使用接口导入（读取）或发出（写入）元数据。  
   
- The value of `riid` must specify one of the "import" or "emit" interfaces. Valid values are IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2, or IID_IMetaDataImport2.  
+ `riid` 的值必须指定一个 "导入" 或 "发出" 接口。 有效值为 IID_IMetaDataEmit、IID_IMetaDataImport、IID_IMetaDataAssemblyEmit、IID_IMetaDataAssemblyImport、IID_IMetaDataEmit2 或 IID_IMetaDataImport2。  
   
  `ppIUnk`  
- [out] The pointer to the returned interface.  
+ 弄指向返回的接口的指针。  
   
 ## <a name="remarks"></a>备注  
- The in-memory copy of the metadata can be queried using methods from one of the "import" interfaces, or added to using methods from the one of the "emit" interfaces.  
+ 可以使用 "导入" 接口中的方法查询元数据的内存中副本，或使用 "发出" 接口之一中的方法将其添加到中。  
   
- The `OpenScopeOnMemory` method is similar to the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method, except that the metadata of interest already exists in memory, rather than in a file on disk.  
+ `OpenScopeOnMemory` 方法类似于[IMetaDataDispenser：： OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)方法，不同之处在于相关元数据已存在于内存中，而不是磁盘上的文件中。  
   
- If the target area of memory does not contain common language runtime (CLR) metadata, the `OpenScopeOnMemory` method will fail.  
+ 如果内存的目标区域不包含公共语言运行时（CLR）元数据，则 `OpenScopeOnMemory` 方法将失败。  
   
 ## <a name="requirements"></a>要求  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataDispenser 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
 - [IMetaDataDispenserEx 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)

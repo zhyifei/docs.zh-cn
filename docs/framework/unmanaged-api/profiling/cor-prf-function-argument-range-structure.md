@@ -35,20 +35,20 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
   
 ## <a name="members"></a>Members  
   
-|Members|描述|  
+|Members|说明|  
 |-------------|-----------------|  
-|`startAddress`|The starting address of the block.|  
-|`length`|The length of the contiguous block.|  
+|`startAddress`|块的起始地址。|  
+|`length`|连续块的长度。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorProf.idl  
+ **标头：** Corprof.idl .idl  
   
  **库：** CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析结构](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

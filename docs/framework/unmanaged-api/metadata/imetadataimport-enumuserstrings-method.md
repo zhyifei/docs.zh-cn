@@ -38,37 +38,37 @@ HRESULT EnumUserStrings (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in，out]指向枚举器的指针。 第一次调用此方法时，此值必须为 NULL。  
   
  `rStrings`  
- [out] The array used to store the String tokens.  
+ 弄用于存储字符串标记的数组。  
   
  `cMax`  
  [in] `rStrings` 数组的最大大小。  
   
  `pcStrings`  
- [out] The number of String tokens returned in `rStrings`.  
+ 弄`rStrings`中返回的字符串标记的数目。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUserStrings` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcStrings` is zero.|  
+|`S_OK`|`EnumUserStrings` 成功返回。|  
+|`S_FALSE`|没有要枚举的令牌。 在这种情况下，`pcStrings` 为零。|  
   
 ## <a name="remarks"></a>备注  
- The String tokens are created by the [IMetaDataEmit::DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) method. This method is designed to be used by a metadata browser rather than by a compiler.  
+ 字符串标记由[IMetaDataEmit：:D efineuserstring](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md)方法创建。 此方法旨在由元数据浏览器而不是编译器使用。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

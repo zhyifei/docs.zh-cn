@@ -25,6 +25,6 @@ ms.locfileid: "74446872"
   
  [!code-csharp[UIAProvider_snip#150](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAProvider_snip/CSharp/FragmentRoot.cs#150)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UI 自动化提供程序概述](ui-automation-providers-overview.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431688"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam 方法
-Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.  
+创建具有指定标记所引用的方法的指定签名的参数定义，并获取该参数定义的标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,42 +42,42 @@ HRESULT DefineParam (
   
 ## <a name="parameters"></a>参数  
  `md`  
- [in] The token for the method whose parameter is being defined.  
+ 中正在定义其参数的方法的标记。  
   
  `ulParamSeq`  
- [in] The parameter sequence number.  
+ 中参数序列号。  
   
  `szName`  
- [in] The name of the parameter in Unicode.  
+ 中Unicode 中参数的名称。  
   
  `dwParamFlags`  
- [in] Flags for the parameter. This is a bitmask of `CorParamAttr` values.  
+ 中参数的标志。 这是 `CorParamAttr` 值的位掩码。  
   
  `dwCPlusTypeFlag`  
- [in] `ELEMENT_TYPE_` *\** for the constant value.  
+ [in] `ELEMENT_TYPE_`常量值的 *\** 。  
   
  `pValue`  
- [in] The constant value for the parameter.  
+ 中参数的常数值。  
   
  `cchValue`  
- [in] The size, in Unicode characters, of `pValue`.  
+ 中`pValue`的大小（以 Unicode 字符为格式）。  
   
  `ppd`  
- [out] The `mdParamDef` token assigned.  
+ 弄分配 `mdParamDef` 标记。  
   
 ## <a name="remarks"></a>备注  
- The sequence values in `ulParamSeq` begin with 1 for parameters. A return value has a sequence number of 0.  
+ 对于参数，`ulParamSeq` 中的序列值从1开始。 返回值的序列号为0。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

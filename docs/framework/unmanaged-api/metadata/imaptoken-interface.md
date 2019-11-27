@@ -22,26 +22,26 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432221"
 ---
 # <a name="imaptoken-interface"></a>IMapToken 接口
-Provides mapping capabilities between assemblies.  
+提供程序集之间的映射功能。  
   
 > [!NOTE]
-> The `IMapToken` interface must be implemented by the client.  
+> `IMapToken` 接口必须由客户端实现。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[Map 方法](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|Maps a relationship between two assemblies using metadata signatures.|  
+|[Map 方法](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|使用元数据签名映射两个程序集之间的关系。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [元数据接口](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

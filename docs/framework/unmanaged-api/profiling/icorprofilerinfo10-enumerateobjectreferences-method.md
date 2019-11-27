@@ -18,9 +18,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449851"
 ---
-# <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10::EnumerateObjectReferences Method
+# <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10：： EnumerateObjectReferences 方法
 
-Given an ObjectID, callback and clientData, enumerates each object reference (if any).
+给定 ObjectID、callback 和 clientData，枚举每个对象引用（如果有）。
 
 ## <a name="syntax"></a>语法
 
@@ -33,28 +33,28 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 #### <a name="parameters"></a>参数
 
 `objectId` \
-[in] The object to enumerate references on.
+中要在其上枚举引用的对象。
 
 `callback` \
-[in] The function that will be called with the references for the object.
+中将用对象的引用调用的函数。
 
 `clientData` \
-[in] Profiler-provided data to pass to the `callback` function.
+中探查器提供的要传递到 `callback` 函数的数据。
 
 ## <a name="remarks"></a>备注
 
-The `EnumerateObjectReferences` method is similar to [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), except that it walks the references on demand for the profiler instead of pre-allocating an array to store the references.
+`EnumerateObjectReferences` 方法类似于[ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)，只不过它会按需对探查器进行引用，而不是预先分配用于存储引用的数组。
 
 ## <a name="requirements"></a>要求
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**平台：** 请参阅[支持 .Net Core 的操作系统](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)。
 
 **头文件：** CorProf.idl、CorProf.h
 
 **库：** CorGuids.lib
 
-**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.Net 版本：** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
