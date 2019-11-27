@@ -17,7 +17,7 @@ ms.locfileid: "74347032"
 ---
 # <a name="xml-element-literal-visual-basic"></a>XML 元素文本 (Visual Basic)
 
-A literal that represents an <xref:System.Xml.Linq.XElement> object.
+表示 <xref:System.Xml.Linq.XElement> 对象的文本。
 
 ## <a name="syntax"></a>语法
 
@@ -31,70 +31,70 @@ A literal that represents an <xref:System.Xml.Linq.XElement> object.
 
 - `<`
 
-  必须的。 Opens the starting element tag.
+  必需。 打开开始元素标记。
 
 - `name`
 
-  必须的。 元素名称。 The format is one of the following:
+  必需。 元素名称。 格式为以下格式之一：
 
-  - Literal text for the element name, of the form `[ePrefix:]eName`, where:
+  - 元素名称的文本文本，格式为 `[ePrefix:]eName`，其中：
 
-    |部件|描述|
+    |部件|说明|
     |---|---|
-    |`ePrefix`|可选。 XML namespace prefix for the element. Must be a global XML namespace that is defined with an `Imports` statement in the file or at the project level, or a local XML namespace that is defined in this element or a parent element.|
-    |`eName`|必须的。 元素名称。 The format is one of the following:<br /><br /> - Literal text. See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).<br />- Embedded expression of the form `<%= eNameExp %>`. The type of `eNameExp` must be `String` or a type that is implicitly convertible to <xref:System.Xml.Linq.XName>.|
+    |`ePrefix`|可选。 元素的 XML 命名空间前缀。 必须是一个全局 XML 命名空间，该命名空间是使用文件中的 `Imports` 语句或项目级别定义的，或者是在此元素或父元素中定义的本地 XML 命名空间。|
+    |`eName`|必需。 元素名称。 格式为以下格式之一：<br /><br /> 文本。 请参阅已[声明的 XML 元素和属性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。<br />-形式 `<%= eNameExp %>`的嵌入式表达式。 `eNameExp` 的类型必须 `String` 或可隐式转换为 <xref:System.Xml.Linq.XName>的类型。|
 
-  - Embedded expression of the form `<%= nameExp %>`. The type of `nameExp` must be `String` or a type implicitly convertible to <xref:System.Xml.Linq.XName>. An embedded expression is not allowed in a closing tag of an element.
+  - 格式 `<%= nameExp %>`的嵌入式表达式。 `nameExp` 的类型必须 `String` 或可隐式转换为 <xref:System.Xml.Linq.XName>的类型。 元素的结束标记中不允许使用嵌入式表达式。
 
 - `attributeList`
 
-  可选。 List of attributes declared in the literal.
+  可选。 在文本中声明的属性的列表。
 
   `attribute [ attribute ... ]`
 
-  Each `attribute` has one of the following syntaxes:
+  每个 `attribute` 都具有以下语法之一：
 
-  - Attribute assignment, of the form `[aPrefix:]aName=aValue`, where:
+  - 属性分配，格式为 `[aPrefix:]aName=aValue`，其中：
 
-    |部件|描述|
+    |部件|说明|
     |---|---|
-    |`aPrefix`|可选。 XML namespace prefix for the attribute. Must be a global XML namespace that is defined with an `Imports` statement, or a local XML namespace that is defined in this element or a parent element.|
-    |`aName`|必须的。 属性的名称。 The format is one of the following:<br /><br /> - Literal text. See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).<br />- Embedded expression of the form `<%= aNameExp %>`. The type of `aNameExp` must be `String` or a type that is implicitly convertible to <xref:System.Xml.Linq.XName>.|
-    |`aValue`|可选。 Value of the attribute. The format is one of the following:<br /><br /> - Literal text, enclosed in quotation marks.<br />- Embedded expression of the form `<%= aValueExp %>`. Any type is allowed.|
+    |`aPrefix`|可选。 特性的 XML 命名空间前缀。 必须是使用 `Imports` 语句定义的全局 XML 命名空间，或此元素或父元素中定义的本地 XML 命名空间。|
+    |`aName`|必需。 属性的名称。 格式为以下格式之一：<br /><br /> 文本。 请参阅已[声明的 XML 元素和属性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。<br />-形式 `<%= aNameExp %>`的嵌入式表达式。 `aNameExp` 的类型必须 `String` 或可隐式转换为 <xref:System.Xml.Linq.XName>的类型。|
+    |`aValue`|可选。 特性的值。 格式为以下格式之一：<br /><br /> 文本文本，用引号引起来。<br />-形式 `<%= aValueExp %>`的嵌入式表达式。 允许任何类型。|
 
-  - Embedded expression of the form `<%= aExp %>`.
+  - 格式 `<%= aExp %>`的嵌入式表达式。
 
 - `/>`
 
-  可选。 Indicates that the element is an empty element, without content.
+  可选。 指示元素是一个空元素，不包含内容。
 
 - `>`
 
-  必须的。 Ends the beginning or empty element tag.
+  必需。 结束开始或空元素标记。
 
 - `elementContents`
 
-  可选。 Content of the element.
+  可选。 元素的内容。
 
   `content [ content ... ]`
 
-  Each `content` can be one of the following:
+  每个 `content` 可以是以下各项之一：
 
-  - Literal text. All the white space in `elementContents` becomes significant if there is any literal text.
+  - 文本。 如果有任何文本文本，`elementContents` 中的所有空格都非常重要。
 
-  - Embedded expression of the form `<%= contentExp %>`.
+  - 格式 `<%= contentExp %>`的嵌入式表达式。
 
-  - XML element literal.
+  - XML 元素文本。
 
-  - XML comment literal. See [XML Comment Literal](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).
+  - XML 注释文本。 请参阅[XML 注释文本](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)。
 
-  - XML processing instruction literal. See [XML Processing Instruction Literal](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).
+  - XML 处理指令文本。 请参阅[XML 处理指令文本](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)。
 
-  - XML CDATA literal. See [XML CDATA Literal](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md).
+  - XML CDATA 文本。 请参阅[XML CDATA 文本](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)。
 
 - `</[name]>`
 
-  可选。 Represents the closing tag for the element. The optional `name` parameter is not allowed when it is the result of an embedded expression.
+  可选。 表示元素的结束标记。 当可选 `name` 参数是嵌入式表达式的结果时，不允许使用该参数。
 
 ## <a name="return-value"></a>返回值
 
@@ -102,30 +102,30 @@ A literal that represents an <xref:System.Xml.Linq.XElement> object.
 
 ## <a name="remarks"></a>备注
 
-You can use the XML element literal syntax to create <xref:System.Xml.Linq.XElement> objects in your code.
+可以使用 XML 元素文本语法在代码中创建 <xref:System.Xml.Linq.XElement> 对象。
 
 > [!NOTE]
-> An XML literal can span multiple lines without using line continuation characters. This feature enables you to copy content from an XML document and paste it directly into a Visual Basic program.
+> XML 文本可以跨多行，而无需使用行继续符。 此功能使你能够从 XML 文档复制内容并将其直接粘贴到 Visual Basic 程序。
 
-Embedded expressions of the form `<%= exp %>` enable you to add dynamic information to an XML element literal. For more information, see [Embedded Expressions in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).
+利用形式 `<%= exp %>` 的嵌入式表达式，你可以向 XML 元素文本添加动态信息。 有关详细信息，请参阅[XML 中的嵌入式表达式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。
 
-The Visual Basic compiler converts the XML element literal into calls to the <xref:System.Xml.Linq.XElement.%23ctor%2A> constructor and, if it is required, the <xref:System.Xml.Linq.XAttribute.%23ctor%2A> constructor.
+Visual Basic 编译器将 XML 元素文本转换为对 <xref:System.Xml.Linq.XElement.%23ctor%2A> 构造函数的调用，如果需要，则转换为 <xref:System.Xml.Linq.XAttribute.%23ctor%2A> 构造函数。
 
 ## <a name="xml-namespaces"></a>XML 命名空间
 
-XML namespace prefixes are useful when you have to create XML literals with elements from the same namespace many times in code. You can use global XML namespace prefixes, which you define by using the `Imports` statement, or local prefixes, which you define by using the `xmlns:xmlPrefix="xmlNamespace"` attribute syntax. For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
+当你必须在代码中多次使用同一命名空间中的元素创建 XML 文本时，XML 命名空间前缀非常有用。 你可以使用全局 XML 命名空间前缀，该前缀是使用 `Imports` 语句定义的，或者是通过使用 `xmlns:xmlPrefix="xmlNamespace"` 特性语法定义的本地前缀。 有关详细信息，请参阅[Imports 语句（XML 命名空间）](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)。
 
-In accordance with the scoping rules for XML namespaces, local prefixes take precedence over global prefixes. However, if an XML literal defines an XML namespace, that namespace is not available to expressions that appear in an embedded expression. The embedded expression can access only the global XML namespace.
+根据 XML 命名空间的作用域规则，本地前缀优先于全局前缀。 但是，如果 XML 文本定义了 XML 命名空间，则该命名空间不能用于出现在嵌入表达式中的表达式。 嵌入的表达式只能访问全局 XML 命名空间。
 
-The Visual Basic compiler converts each global XML namespace that is used by an XML literal into a one local namespace definition in the generated code. Global XML namespaces that are not used do not appear in the generated code.
+Visual Basic 编译器将 XML 文本使用的每个全局 XML 命名空间转换为生成的代码中的一个本地命名空间定义。 不使用的全局 XML 命名空间不会出现在生成的代码中。
 
 ## <a name="example"></a>示例
 
-The following example shows how to create a simple XML element that has two nested empty elements.
+下面的示例演示如何创建一个具有两个嵌套空元素的简单 XML 元素。
 
 [!code-vb[VbXMLSamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples9.vb#20)]
 
-The example displays the following text. Notice that the literal preserves the structure of the empty elements.
+该示例显示以下文本。 请注意，文本将保留空元素的结构。
 
 ```xml
 <outer>
@@ -136,7 +136,7 @@ The example displays the following text. Notice that the literal preserves the s
 
 ## <a name="example"></a>示例
 
-The following example shows how to use embedded expressions to name an element and create attributes.
+下面的示例演示如何使用嵌入的表达式来命名元素并创建属性。
 
 [!code-vb[VbXMLSamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples9.vb#21)]
 
@@ -148,7 +148,7 @@ The following example shows how to use embedded expressions to name an element a
 
 ## <a name="example"></a>示例
 
-下面的示例声明 `ns` 作为 XML 命名空间前缀。 It then uses the prefix of the namespace to create an XML literal and displays the element's final form.
+下面的示例声明 `ns` 作为 XML 命名空间前缀。 然后，它使用命名空间的前缀创建 XML 文本，并显示该元素的最终形式。
 
 [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]
 
@@ -163,9 +163,9 @@ The following example shows how to use embedded expressions to name an element a
 </ns:outer>
 ```
 
-Notice that the compiler converted the prefix of the global XML namespace into a prefix definition for the XML namespace. The \<ns:middle> element redefines the XML namespace prefix for the \<ns:inner1> element. However, the \<ns:inner2> element uses the namespace defined by the `Imports` statement.
+请注意，编译器将全局 XML 命名空间的前缀转换为 XML 命名空间的前缀定义。 \<ns：中间 > 元素将重定义 \<ns： inner1 > 元素的 XML 命名空间前缀。 但 \<ns： inner2 > 元素使用由 `Imports` 语句定义的命名空间。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.Linq.XElement>
 - [已声明的 XML 元素和特性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

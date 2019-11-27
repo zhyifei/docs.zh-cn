@@ -62,7 +62,7 @@ ms.locfileid: "74350044"
   
 6. 确保代码只使用它可提供给 `itemType`的任何数据类型所支持的运算和方法。  
   
-     下面的示例定义了一个类，用于管理一个非常简单的列表。 它将列表保存在内部数组 `items`中，并且使用代码可声明列表元素的数据类型。 A parameterized constructor allows the using code to set the upper bound of `items`, and the parameterless constructor sets this to 9 (for a total of 10 items).  
+     下面的示例定义了一个类，用于管理一个非常简单的列表。 它将列表保存在内部数组 `items`中，并且使用代码可声明列表元素的数据类型。 参数化构造函数允许使用代码设置 `items`的上限，而无参数构造函数将此上限设置为9（总共10项）。  
   
      [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   
@@ -74,10 +74,10 @@ ms.locfileid: "74350044"
   
      [!code-vb[VbVbalrDataTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#8)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic 中的泛型类型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [语言独立性和与语言无关的组件](../../../../standard/language-independence-and-language-independent-components.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [类型列表](../../../../visual-basic/language-reference/statements/type-list.md)

@@ -1,5 +1,5 @@
 ---
-title: How to query the contents of files in a folder (LINQ)
+title: 如何查询文件夹中文件的内容（LINQ）
 ms.date: 07/20/2015
 ms.assetid: edacbcd3-f3e4-4429-a8be-28a58dc0dd70
 ms.openlocfilehash: 02ffa398c495ca5af77685d62299c59cfc3b9d9c
@@ -9,9 +9,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347616"
 ---
-# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a>How to query the contents of files in a folder (LINQ) (Visual Basic)
+# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a>如何查询文件夹中文件的内容（LINQ）（Visual Basic）
 
-此示例演示如何查询指定目录树中的所有文件、打开每个文件并检查其内容。 此类技术可用于对目录树的内容创建索引或反向索引。 此示例中执行的是简单的字符串搜索。 但是，可使用正则表达式执行类型更复杂的模式匹配。 For more information, see [How to: Combine LINQ Queries with Regular Expressions (Visual Basic)](how-to-combine-linq-queries-with-regular-expressions.md).  
+此示例演示如何查询指定目录树中的所有文件、打开每个文件并检查其内容。 此类技术可用于对目录树的内容创建索引或反向索引。 此示例中执行的是简单的字符串搜索。 但是，可使用正则表达式执行类型更复杂的模式匹配。 有关详细信息，请参阅[如何：将 LINQ 查询与正则表达式合并（Visual Basic）](how-to-combine-linq-queries-with-regular-expressions.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -75,9 +75,9 @@ End Module
 
 ## <a name="compiling-the-code"></a>编译代码
 
-Create a VB.NET console application project, copy and paste the code sample, and adjust the Startup object value in the project properties.
+创建 VB.NET 控制台应用程序项目，复制并粘贴代码示例，并调整项目属性中的启动对象值。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [LINQ to Objects (Visual Basic)](linq-to-objects.md)
 - [LINQ 和文件目录 (Visual Basic)](linq-and-file-directories.md)

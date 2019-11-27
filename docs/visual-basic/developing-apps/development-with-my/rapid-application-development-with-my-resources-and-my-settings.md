@@ -16,20 +16,20 @@ ms.locfileid: "74349267"
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>使用 My.Resources 和 My.Settings 快速开发应用程序 (Visual Basic)
 
-The `My.Resources` object provides access to the application's resources and allows you to dynamically retrieve resources for your application.  
+`My.Resources` 对象提供对应用程序资源的访问权限，并允许你为应用程序动态检索资源。  
   
 ## <a name="retrieving-resources"></a>检索资源  
 
- A number of resources such as audio files, icons, images, and strings can be retrieved through the `My.Resources` object. For example, you can access the application's culture-specific resource files. The following example sets the icon of the form to the icon named `Form1Icon` stored in the application's resource file.  
+ 某些资源（如音频文件、图标、图像和字符串）可通过 `My.Resources` 对象进行检索。 例如，你可以访问应用程序的特定于区域性的资源文件。 下面的示例将窗体的图标设置为存储在应用程序的资源文件中的名为 `Form1Icon` 图标。  
   
  [!code-vb[VbVbcnMy#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#7)]  
   
- The `My.Resources` object exposes only global resources. It does not provide access to resource files associated with forms. You must access the form resources from the form.  
+ `My.Resources` 对象只公开全局资源。 它不提供对与表单关联的资源文件的访问权限。 您必须从窗体访问窗体资源。  
   
- Similarly, the `My.Settings` object provides access to the application's settings and allows you to dynamically store and retrieve property settings and other information for your application. For more information, see [My.Resources Object](../../../visual-basic/language-reference/objects/my-resources-object.md) and [My.Settings Object](../../../visual-basic/language-reference/objects/my-settings-object.md).  
+ 同样，`My.Settings` 对象提供对应用程序设置的访问，并允许您动态存储和检索应用程序的属性设置和其他信息。 有关详细信息，请参阅[Resources 对象](../../../visual-basic/language-reference/objects/my-resources-object.md)和[My. Settings 对象](../../../visual-basic/language-reference/objects/my-settings-object.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [My.Resources 对象](../../../visual-basic/language-reference/objects/my-resources-object.md)
 - [My.Settings 对象](../../../visual-basic/language-reference/objects/my-settings-object.md)
-- [访问应用程序设置](../../../visual-basic/developing-apps/programming/app-settings/index.md)
+- [Accessing Application Settings](../../../visual-basic/developing-apps/programming/app-settings/index.md)

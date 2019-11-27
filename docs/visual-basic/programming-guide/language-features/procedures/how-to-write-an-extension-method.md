@@ -15,27 +15,27 @@ ms.locfileid: "74346020"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>如何：编写扩展方法 (Visual Basic)
 
-Extension methods enable you to add methods to an existing class. The extension method can be called as if it were an instance of that class.
+扩展方法使你能够向现有类添加方法。 可以调用扩展方法，就像它是该类的实例一样。
 
-### <a name="to-define-an-extension-method"></a>To define an extension method
+### <a name="to-define-an-extension-method"></a>定义扩展方法
 
-1. Open a new or existing Visual Basic application in Visual Studio.
+1. 在 Visual Studio 中打开新的或现有的 Visual Basic 应用程序。
 
-2. At the top of the file in which you want to define an extension method, include the following import statement:
+2. 在要在其中定义扩展方法的文件的顶部，请包含以下 import 语句：
 
     ```vb
     Imports System.Runtime.CompilerServices
     ```
 
-3. Within a module in your new or existing application, begin the method definition with the [`<Extension>`](xref:System.Runtime.CompilerServices.ExtensionAttribute) attribute:
+3. 在新应用程序或现有应用程序的模块中，使用[`<Extension>`](xref:System.Runtime.CompilerServices.ExtensionAttribute)特性开始方法定义：
 
     ```vb
     <Extension()>
     ```
 
-    Note that the `Extension` attribute can only be applied to a method (a `Sub` or `Function` procedure) in a Visual Basic [Module](../../../language-reference/statements/module-statement.md). If you apply it to a method in a `Class` or a `Structure`, the Visual Basic compiler generates error [BC36551](../../../misc/bc36551.md), "Extension methods can be defined only in modules."
+    请注意，`Extension` 属性只能应用于 Visual Basic[模块](../../../language-reference/statements/module-statement.md)中的方法（`Sub` 或 `Function` 过程）。 如果将它应用于 `Class` 或 `Structure`中的方法，则 Visual Basic 编译器将生成错误[BC36551](../../../misc/bc36551.md)，"只能在模块中定义扩展方法。"
 
-4. Declare your method in the ordinary way, except that the type of the first parameter must be the data type you want to extend.
+4. 用普通方法声明方法，但第一个参数的类型必须是要扩展的数据类型。
 
     ```vb
     <Extension()>
@@ -46,7 +46,7 @@ Extension methods enable you to add methods to an existing class. The extension 
 
 ## <a name="example"></a>示例
 
-The following example declares an extension method in module `StringExtensions`. A second module, `Module1`, imports `StringExtensions` and calls the method. The extension method must be in scope when it is called. Extension method `PrintAndPunctuate` extends the <xref:System.String> class with a method that displays the string instance followed by a string of punctuation symbols sent in as a parameter.
+下面的示例在模块 `StringExtensions`中声明了扩展方法。 第二个模块 `Module1`，`StringExtensions` 导入并调用方法。 在调用扩展方法时，该方法必须在范围内。 扩展方法 `PrintAndPunctuate` 使用一个方法来扩展 <xref:System.String> 类，该方法将后跟以参数形式发送的标点符号字符串作为参数。
 
 ```vb
 ' Declarations will typically be in a separate module.
@@ -78,17 +78,17 @@ Module Module1
 End Module
 ```
 
-Notice that the method is defined with two parameters and called with only one. The first parameter, `aString`, in the method definition is bound to `example`, the instance of `String` that calls the method. 示例输出如下所示：
+请注意，方法是用两个参数定义的，并且只能用一个参数调用。 方法定义中的第一个参数 `aString`绑定到 `example`，后者调用方法的 `String` 的实例。 示例的输出如下所示：
 
 ```console
 Hello?
 Hello!!!!
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
 - [扩展方法](extension-methods.md)
 - [Module 语句](../../../language-reference/statements/module-statement.md)
 - [过程参数和自变量](procedure-parameters-and-arguments.md)
-- [Scope in Visual Basic](../declared-elements/scope.md)
+- [范围 Visual Basic](../declared-elements/scope.md)

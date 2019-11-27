@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346427"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>How to: Read Object Data from an XML File (Visual Basic)
+# <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>如何：从 XML 文件读取对象数据（Visual Basic）
 本示例使用 <xref:System.Xml.Serialization.XmlSerializer> 类读取之前写入 XML 文件的对象数据。  
   
 ## <a name="example"></a>示例  
@@ -30,13 +30,13 @@ End Sub
 ```  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 将文件名称“c:\temp\SerializationOverview.xml”替换为包含序列化数据的文件的名称。 For more information about serializing data, see [How to: Write Object Data to an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
+ 将文件名称“c:\temp\SerializationOverview.xml”替换为包含序列化数据的文件的名称。 有关序列化数据的详细信息，请参阅[如何：将对象数据写入 XML 文件（Visual Basic）](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)。  
   
  类必须有一个公共的无参数构造函数。  
   
  只有公共属性和字段才会进行反序列化。  
   
-## <a name="robust-programming"></a>可靠编程  
+## <a name="robust-programming"></a>可靠的编程  
  以下情况可能会导致异常：  
   
 - 进行序列化的类没有公共的无参数构造函数。  
@@ -48,7 +48,7 @@ End Sub
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  始终验证输入，并且绝不会反序列化来自不受信任源的数据。 重新创建的对象会在具有对它进行反序列化的代码的权限的本地计算机上运行。 在应用程序中使用输入的数据之前，需验证所有的输入内容。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.IO.StreamWriter>
 - [如何：将对象数据写入 XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)

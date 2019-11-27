@@ -15,15 +15,15 @@ ms.locfileid: "74347213"
 提供了用于获取计算机内存、已加载程序集、名称和操作系统相关信息的属性。  
   
 ## <a name="remarks"></a>备注  
- For information about the properties of the `My.Computer.Info` object, see <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.  
+ 有关 `My.Computer.Info` 对象属性的信息，请参阅 <xref:Microsoft.VisualBasic.Devices.ComputerInfo>。  
   
 ## <a name="requirements"></a>要求  
  **命名空间：** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo>  
+ **类：** <xref:Microsoft.VisualBasic.Devices.ComputerInfo>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **程序集：** Visual Basic 运行时库（在 Microsoft. .dll 中）  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [My.Computer 对象](../../../visual-basic/language-reference/objects/my-computer-object.md)

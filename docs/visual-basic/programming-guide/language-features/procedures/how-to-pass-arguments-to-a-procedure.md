@@ -1,5 +1,5 @@
 ---
-title: 如何：将参数传递给过程
+title: 如何：将自变量传递给过程
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arguments [Visual Basic], passing to procedures
@@ -19,33 +19,33 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344847"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>如何：将参数传递给过程 (Visual Basic)
-When you call a procedure, you follow the procedure name with an argument list in parentheses. You supply an argument corresponding to every required parameter the procedure defines, and you can optionally supply arguments to the `Optional` parameters. If you do not supply an `Optional` parameter in the call, you must include a comma to mark its place in the argument list if you are supplying any subsequent arguments.  
+调用过程时，请在括号中使用参数列表的过程名称。 提供与过程定义的每个必需参数相对应的参数，可选择为 `Optional` 参数提供参数。 如果未在调用中提供 `Optional` 参数，则在提供任何后续参数时，必须包含一个逗号来标记其在参数列表中的位置。  
   
- If you intend to pass an argument of a data type different from that of its corresponding parameter, such as `Byte` to `String`, you can set the type-checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) to `Off`. If `Option Strict` is `On`, you must use either widening conversions or explicit conversion keywords. For more information, see [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) and [Type Conversion Functions](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
+ 如果要传递的参数的数据类型不同于其对应参数的参数（例如 `Byte` `String`，则可以将类型检查开关（[Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)）设置为 `Off`。 如果 `On``Option Strict`，则必须使用扩大转换或显式转换关键字。 有关详细信息，请参阅[扩大和收缩转换](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)和[类型转换函数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)。  
   
- For more information, see [Procedure Parameters and Arguments](./procedure-parameters-and-arguments.md).  
+ 有关详细信息，请参阅[过程参数和参数](./procedure-parameters-and-arguments.md)。  
   
-### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>To pass one or more arguments to a procedure  
+### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>将一个或多个自变量传递给过程  
   
-1. In the calling statement, follow the procedure name with parentheses.  
+1. 在调用语句中，在过程名称后面加上括号。  
   
-2. Inside the parentheses, put an argument list. Include an argument for each required parameter the procedure defines, and separate the arguments with commas.  
+2. 在括号内，放入参数列表。 为过程定义的每个必需参数包含一个参数，并使用逗号分隔参数。  
   
-3. Make sure each argument is a valid expression that evaluates to a data type convertible to the type the procedure defines for the corresponding parameter.  
+3. 请确保每个参数都是一个有效的表达式，该表达式的计算结果为可转换为相应参数的过程定义的类型的数据类型。  
   
-4. If a parameter is defined as [Optional](../../../../visual-basic/language-reference/modifiers/optional.md), you can either include it in the argument list or omit it. If you omit it, the procedure uses the default value defined for that parameter.  
+4. 如果将某个参数定义为[可选](../../../../visual-basic/language-reference/modifiers/optional.md)参数，则可以将其包含在自变量列表中，或将其省略。 如果省略该参数，则该过程将使用为该参数定义的默认值。  
   
-5. If you omit an argument for an `Optional` parameter and there is another parameter after it in the parameter list, you can mark the place of the omitted argument by an extra comma in the argument list.  
+5. 如果为 `Optional` 参数省略了一个参数，并且参数列表中后面有另一个参数，则可以在参数列表中用一个额外的逗号标记省略的参数的位置。  
   
-     The following example calls the Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function.  
+     下面的示例调用 Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 函数。  
   
      [!code-vb[VbVbcnProcedures#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#34)]  
   
-     The preceding example supplies the required first argument, which is the message string to be displayed. It omits an argument for the optional second parameter, which specifies the buttons to be displayed on the message box. Because the call does not supply a value, `MsgBox` uses the default value, `MsgBoxStyle.OKOnly`, which displays only an **OK** button.  
+     前面的示例提供了必需的第一个参数，即要显示的消息字符串。 它省略了可选的第二个参数的参数，该参数指定要在消息框中显示的按钮。 由于调用不提供值，因此 `MsgBox` 使用默认值 `MsgBoxStyle.OKOnly`，该默认值仅显示 **"确定"** 按钮。  
   
-     The second comma in the argument list marks the place of the omitted second argument, and the last string is passed to the optional third parameter of `MsgBox`, which is the text to be displayed in the title bar.  
+     自变量列表中的第二个逗号标记省略的第二个参数的位置，最后一个字符串传递给 `MsgBox`的可选第三个参数，即要在标题栏中显示的文本。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Sub 过程](./sub-procedures.md)
 - [Function 过程](./function-procedures.md)

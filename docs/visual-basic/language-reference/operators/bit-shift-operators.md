@@ -14,12 +14,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336127"
 ---
 # <a name="bit-shift-operators-visual-basic"></a>移位运算符 (Visual Basic)
-The following are the bit shift operators defined in Visual Basic.  
+下面是在 Visual Basic 中定义的移位运算符。  
   
- [<\< Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
+ [<\< 运算符](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
   
  [>> 运算符](../../../visual-basic/language-reference/operators/right-shift-operator.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

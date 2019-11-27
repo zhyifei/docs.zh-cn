@@ -25,7 +25,7 @@ ms.locfileid: "74283649"
 ## <a name="tooltip-states"></a>工具提示状态  
  下表列出了 <xref:System.Windows.Controls.ToolTip> 控件的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
 |已关闭|OpenStates|默认状态。|  
 |打开|OpenStates|<xref:System.Windows.Controls.ToolTip> 可见。|  

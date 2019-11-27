@@ -8,12 +8,12 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349606"
 ---
-# <a name="special-characters-visual-basic-reference"></a>Special Characters (Visual Basic Reference)
+# <a name="special-characters-visual-basic-reference"></a>特殊字符（Visual Basic 引用）
 
-Special characters are predefined, contextual characters that modifies the program element to which they are prepended. Visual Basic supports the following special character:
+特殊字符是预定义的上下文字符，用于修改它们所预置的程序元素。 Visual Basic 支持以下特殊字符：
 
 - [$](interpolated.md)：内插的字符串字符。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 参考](../../../visual-basic/language-reference/index.md)

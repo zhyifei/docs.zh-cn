@@ -20,7 +20,7 @@ ms.locfileid: "74283859"
 # <a name="xkey-directive"></a>x:Key 指令
 唯一标识在 XAML 定义的字典中创建和引用的元素。 将 `x:Key` 值添加到 XAML 对象元素是在资源字典中标识资源的最常见方法，例如在 WPF <xref:System.Windows.ResourceDictionary>中。  
   
-## <a name="xaml-attribute-usage"></a>XAML 属性用法  
+## <a name="xaml-attribute-usage"></a>XAML 特性用法  
   
 ```xaml  
 <object x:Key="stringKeyValue".../>  

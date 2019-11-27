@@ -19,7 +19,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346842"
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join 子句 (Visual Basic)
-将两个集合合并为单个分层集合。 The join operation is based on matching keys.  
+将两个集合合并为单个分层集合。 联接运算基于匹配键。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,31 +31,31 @@ Group Join element [As type] In collection _
   
 ## <a name="parts"></a>部件  
   
-|术语|定义|  
+|术语|Definition|  
 |---|---|  
-|`element`|必须的。 The control variable for the collection being joined.|  
-|`type`|可选。 `element` 的类型。 If no `type` is specified, the type of `element` is inferred from `collection`.|  
-|`collection`|必须的。 The collection to combine with the collection that is on the left side of the `Group Join` operator. A `Group Join` clause can be nested in a `Join` clause or in another `Group Join` clause.|  
-|`key1` `Equals` `key2`|必须的。 Identifies keys for the collections being joined. You must use the `Equals` operator to compare keys from the collections being joined. You can combine join conditions by using the `And` operator to identify multiple keys. The `key1` parameter must be from the collection on the left side of the `Join` operator. The `key2` parameter must be from the collection on the right side of the `Join` operator.<br /><br /> The keys used in the join condition can be expressions that include more than one item from the collection. However, each key expression can contain only items from its respective collection.|  
-|`expressionList`|必须的。 One or more expressions that identify how the groups of elements from the collection are aggregated. To identify a member name for the grouped results, use the `Group` keyword (`<alias> = Group`). 还可以包含聚合函数以将其应用于该组。|  
+|`element`|必需。 要联接的集合的控件变量。|  
+|`type`|可选。 `element` 的类型。 如果未指定 `type`，则 `element` 的类型将从 `collection`推断。|  
+|`collection`|必需。 要与位于 `Group Join` 运算符左侧的集合组合的集合。 `Group Join` 子句可以嵌套在 `Join` 子句中，也可以嵌套在另一个 `Group Join` 子句中。|  
+|`key1` `Equals` `key2`|必需。 标识要联接的集合的键。 必须使用 `Equals` 运算符来比较要联接的集合中的键。 可以通过使用 `And` 运算符来标识多个键，从而组合联接条件。 `key1` 参数必须来自 `Join` 运算符左侧的集合。 `key2` 参数必须来自 `Join` 运算符右侧的集合。<br /><br /> 联接条件中使用的键可以是包含集合中多个项的表达式。 但是，每个键表达式只能包含其各自集合中的项。|  
+|`expressionList`|必需。 一个或多个表达式，用于标识集合中的元素组的聚合方式。 若要标识分组结果的成员名称，请使用 `Group` 关键字（`<alias> = Group`）。 还可以包含聚合函数以将其应用于该组。|  
   
 ## <a name="remarks"></a>备注  
- The `Group Join` clause combines two collections based on matching key values from the collections being joined. The resulting collection can contain a member that references a collection of elements from the second collection that match the key value from the first collection. You can also specify aggregate functions to apply to the grouped elements from the second collection. For information about aggregate functions, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ `Group Join` 子句基于要联接的集合中的匹配键值合并两个集合。 生成的集合可以包含一个成员，该成员引用第二个集合中与第一个集合中的键值相匹配的元素的集合。 还可以指定要应用于第二个集合中的分组元素的聚合函数。 有关聚合函数的信息，请参阅[Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)。  
   
- Consider, for example, a collection of managers and a collection of employees. Elements from both collections have a ManagerID property that identifies the employees that report to a particular manager. The results from a join operation would contain a result for each manager and employee with a matching ManagerID value. The results from a `Group Join` operation would contain the complete list of managers. Each manager result would have a member that referenced the list of employees that were a match for the specific manager.  
+ 例如，考虑一个经理集合和一组雇员。 这两个集合中的元素都具有 ManagerID 属性，该属性标识向特定经理报告的员工。 联接操作的结果将包含具有匹配的 ManagerID 值的每个经理和员工的结果。 `Group Join` 操作的结果将包含管理器的完整列表。 每个管理器结果都有一个成员，该成员引用了与特定经理匹配的员工列表。  
   
- The collection resulting from a `Group Join` operation can contain any combination of values from the collection identified in the `From` clause and the expressions identified in the `Into` clause of the `Group Join` clause. For more information about valid expressions for the `Into` clause, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ 由 `Group Join` 操作产生的集合可以包含 `From` 子句中标识的集合中的任何值组合和 `Group Join` 子句的 `Into` 子句中标识的表达式。 有关 `Into` 子句的有效表达式的详细信息，请参阅[Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)。  
   
- A `Group Join` operation will return all results from the collection identified on the left side of the `Group Join` operator. This is true even if there are no matches in the collection being joined. This is like a `LEFT OUTER JOIN` in SQL.  
+ `Group Join` 操作将从 `Group Join` 运算符左侧标识的集合中返回所有结果。 即使要联接的集合中没有匹配项，也是如此。 这类似于 SQL 中的 `LEFT OUTER JOIN`。  
   
- You can use the `Join` clause to combine collections into a single collection. This is equivalent to an `INNER JOIN` in SQL.  
+ 您可以使用 `Join` 子句将集合合并为单个集合。 这等效于 SQL 中的 `INNER JOIN`。  
   
 ## <a name="example"></a>示例  
- The following code example joins two collections by using the `Group Join` clause.  
+ 下面的代码示例使用 `Group Join` 子句联接两个集合。  
   
  [!code-vb[VbSimpleQuerySamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#14)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [查询](../../../visual-basic/language-reference/queries/index.md)

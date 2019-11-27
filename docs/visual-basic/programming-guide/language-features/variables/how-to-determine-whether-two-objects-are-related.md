@@ -15,20 +15,20 @@ ms.locfileid: "74348632"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>如何：确定两个对象是否相关 (Visual Basic)
 
-You can compare two objects to determine the relationship, if any, between the classes from which they are created. The <xref:System.Type.IsInstanceOfType%2A> method of the <xref:System.Type?displayProperty=nameWithType> class returns `True` if the specified class inherits from the current class, or if the current type is an interface supported by the specified class.
+您可以比较两个对象，以确定从中创建它们的类之间的关系（如果有）。 如果指定的类从当前类继承，或者当前类型是指定类支持的接口，则 <xref:System.Type?displayProperty=nameWithType> 类的 <xref:System.Type.IsInstanceOfType%2A> 方法返回 `True`。
 
-### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>To determine if one object inherits from another object's class or interface
+### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>确定一个对象是否继承自另一个对象的类或接口
 
-1. On the object you think might be of the base type, invoke the <xref:System.Object.GetType%2A> method.
+1. 在您认为可能是基类型的对象上，调用 <xref:System.Object.GetType%2A> 方法。
 
-2. On the <xref:System.Type?displayProperty=nameWithType> object returned by <xref:System.Object.GetType%2A>, invoke the <xref:System.Type.IsInstanceOfType%2A> method.
+2. 在 <xref:System.Object.GetType%2A>返回的 <xref:System.Type?displayProperty=nameWithType> 对象上，调用 <xref:System.Type.IsInstanceOfType%2A> 方法。
 
-3. In the argument list for <xref:System.Type.IsInstanceOfType%2A>, specify the object you think might be of the derived type.
+3. 在 <xref:System.Type.IsInstanceOfType%2A>的参数列表中，指定你认为可能是派生类型的对象。
 
-    <xref:System.Type.IsInstanceOfType%2A> returns `True` if its argument type inherits from the <xref:System.Type?displayProperty=nameWithType> object type.
+    如果 `True` 参数类型从 <xref:System.Type?displayProperty=nameWithType> 对象类型继承，则 <xref:System.Type.IsInstanceOfType%2A> 返回。
 
 ## <a name="example"></a>示例
- The following example determines whether one object represents a class derived from another object's class.
+ 下面的示例确定一个对象是否表示一个派生自另一个对象的类的类。
 
 ```vb
 Public Class baseClass
@@ -46,9 +46,9 @@ Public Class testTheseClasses
 End Class
 ```
 
-Note the unexpected placement of the two object variables in the call to <xref:System.Type.IsInstanceOfType%2A>. The supposed base type is used to generate the <xref:System.Type?displayProperty=nameWithType> class, and the supposed derived type is passed as an argument to the <xref:System.Type.IsInstanceOfType%2A> method.
+请注意，在调用 <xref:System.Type.IsInstanceOfType%2A>时，两个对象变量的意外位置。 假定的基类型用于生成 <xref:System.Type?displayProperty=nameWithType> 类，假设的派生类型作为参数传递给 <xref:System.Type.IsInstanceOfType%2A> 方法。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>

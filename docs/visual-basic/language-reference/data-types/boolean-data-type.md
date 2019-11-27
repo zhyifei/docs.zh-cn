@@ -1,5 +1,5 @@
 ---
-title: boolean 数据类型
+title: 布尔数据类型
 ms.date: 07/20/2015
 f1_keywords:
 - vb.FALSE
@@ -21,33 +21,33 @@ ms.locfileid: "74347845"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean 数据类型 (Visual Basic)
 
-Holds values that can be only `True` or `False`. The keywords `True` and `False` correspond to the two states of `Boolean` variables.  
+保存的值只能是 `True` 或 `False`。 关键字 `True` 和 `False` 对应于 `Boolean` 变量的两个状态。  
   
 ## <a name="remarks"></a>备注  
 
- Use the [Boolean Data Type (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) to contain two-state values such as true/false, yes/no, or on/off.  
+ 使用[布尔数据类型（Visual Basic）](../../../visual-basic/language-reference/data-types/boolean-data-type.md)来包含双状态值，如 true/false、yes/no 或 on/off。  
   
  `Boolean` 的默认值为 `False`。  
   
- `Boolean` values are not stored as numbers, and the stored values are not intended to be equivalent to numbers. You should never write code that relies on equivalent numeric values for `True` and `False`. Whenever possible, you should restrict usage of `Boolean` variables to the logical values for which they are designed.  
+ `Boolean` 值不会存储为数字，并且存储的值不应与数字等效。 永远不应编写依赖于 `True` 和 `False`等效数值的代码。 应尽可能将 `Boolean` 变量的使用限制为它们的设计逻辑值。  
   
 ## <a name="type-conversions"></a>类型转换  
 
- When Visual Basic converts numeric data type values to `Boolean`, 0 becomes `False` and all other values become `True`. When Visual Basic converts `Boolean` values to numeric types, `False` becomes 0 and `True` becomes -1.  
+ 当 Visual Basic 将数值数据类型值转换为 `Boolean`时，0将变为 `False`，其他所有值将变为 `True`。 当 Visual Basic 将 `Boolean` 值转换为数值类型时，`False` 将变为0，`True` 将为-1。  
   
- When you convert between `Boolean` values and numeric data types, keep in mind that the .NET Framework conversion methods do not always produce the same results as the Visual Basic conversion keywords. This is because the Visual Basic conversion retains behavior compatible with previous versions. For more information, see "Boolean Type Does Not Convert to Numeric Type Accurately" in [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+ 在 `Boolean` 值和数值数据类型之间进行转换时，请记住，.NET Framework 转换方法并不总是产生与 Visual Basic 转换关键字相同的结果。 这是因为 Visual Basic 转换会保持与以前版本兼容的行为。 有关详细信息，请参阅[故障排除数据类型](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)中的 "布尔类型不会精确转换为数值类型"。  
   
 ## <a name="programming-tips"></a>编程提示  
   
-- **Negative Numbers.** `Boolean` is not a numeric type and cannot represent a negative value. In any case, you should not use `Boolean` to hold numeric values.  
+- **负数。** `Boolean` 不是数值类型，且不能表示负值。 在任何情况下，不应使用 `Boolean` 来保存数值。  
   
-- **Type Characters.** `Boolean` has no literal type character or identifier type character.  
+- **键入字符。** `Boolean` 没有文本类型字符或标识符类型字符。  
   
-- **Framework Type.** .NET Framework 中的对应类型是 <xref:System.Boolean?displayProperty=nameWithType> 结构。  
+- **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.Boolean?displayProperty=nameWithType> 结构。  
   
 ## <a name="example"></a>示例  
 
- In the following example, `runningVB` is a `Boolean` variable, which stores a simple yes/no setting.  
+ 在下面的示例中，`runningVB` 是一个 `Boolean` 变量，它存储了一个简单的 "是/否" 设置。  
   
 ```vb  
 Dim runningVB As Boolean  
@@ -57,12 +57,12 @@ If scriptEngine = "VB" Then
 End If  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Boolean?displayProperty=nameWithType>
 - [数据类型](../../../visual-basic/language-reference/data-types/index.md)
-- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
 - [数据类型疑难解答](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [CType 函数](../../../visual-basic/language-reference/functions/ctype-function.md)
+- [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)

@@ -1,5 +1,5 @@
 ---
-title: Static
+title: 静态
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Static
@@ -15,42 +15,42 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350762"
 ---
 # <a name="static-visual-basic"></a>Static (Visual Basic)
-Specifies that one or more declared local variables are to continue to exist and retain their latest values after termination of the procedure in which they are declared.  
+指定一个或多个已声明的局部变量将继续存在，并在其声明过程终止后保留其最新值。  
   
 ## <a name="remarks"></a>备注  
- Normally, a local variable in a procedure ceases to exist as soon as the procedure stops. A static variable continues to exist and retains its most recent value. The next time your code calls the procedure, the variable is not reinitialized, and it still holds the latest value that you assigned to it. A static variable continues to exist for the lifetime of the class or module that it is defined in.  
+ 通常，过程停止后，过程中的局部变量将立即停止存在。 静态变量将继续存在并保留其最新值。 当你的代码下一次调用该过程时，不会重新初始化该变量，并且它仍保留你分配给它的最新值。 静态变量在定义它的类或模块的生存期内继续存在。  
   
 ## <a name="rules"></a>规则  
   
-- **Declaration Context.** You can use `Static` only on local variables. This means the declaration context for a `Static` variable must be a procedure or a block in a procedure, and it cannot be a source file, namespace, class, structure, or module.  
+- **声明上下文。** 只能对本地变量使用 `Static`。 这意味着，`Static` 变量的声明上下文必须是过程中的过程或块，而不能是源文件、命名空间、类、结构或模块。  
   
-     You cannot use `Static` inside a structure procedure.  
+     不能在结构过程中使用 `Static`。  
   
-- The data types of `Static` local variables cannot be inferred. For more information, see [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+- 不能推断 `Static` 局部变量的数据类型。 有关详细信息，请参阅[局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
   
-- **Combined Modifiers.** You cannot specify `Static` together with `ReadOnly`, `Shadows`, or `Shared` in the same declaration.  
+- **组合修饰符。** 不能在同一声明中同时指定 `Static` 与 `ReadOnly`、`Shadows`或 `Shared`。  
   
 ## <a name="behavior"></a>行为  
- When you declare a static variable in a `Shared` procedure, only one copy of the static variable is available for the whole application. You call a `Shared` procedure by using the class name, not a variable that points to an instance of the class.  
+ 如果在 `Shared` 过程中声明静态变量，则整个应用程序只有一个静态变量副本可供使用。 使用类名称调用 `Shared` 过程，而不是指向类的实例的变量。  
   
- When you declare a static variable in a procedure that isn't `Shared`, only one copy of the variable is available for each instance of the class. You call a non-shared procedure by using a variable that points to a specific instance of the class.  
+ 如果在不 `Shared`的过程中声明静态变量，则该类的每个实例只能有一个变量副本。 使用指向类的特定实例的变量调用非共享过程。  
   
 ## <a name="example"></a>示例  
  以下示例演示了 `Static` 的用法。  
   
  [!code-vb[VbVbalrKeywords#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#5)]  
   
- The `Static` variable `totalSales` is initialized to 0 only one time. Each time that you enter `updateSales`, `totalSales` still has the most recent value that you calculated for it.  
+ `Static` 变量 `totalSales` 初始化为0次。 每次输入 `updateSales`时，`totalSales` 仍然具有为其计算的最新值。  
   
- The `Static` modifier can be used in this context:  
+ `Static` 修饰符可用于以下上下文：  
   
  [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
-- [Lifetime in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [生存期（Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [变量声明](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

@@ -14,20 +14,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345139"
 ---
 # <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>如何：声明自定义事件以避免阻止 (Visual Basic)
-There are several circumstances when it is important that one event handler not block subsequent event handlers. Custom events allow the event to call its event handlers asynchronously.  
+在某些情况下，很重要的一点是，一个事件处理程序不会阻止后续事件处理程序。 自定义事件允许事件异步调用其事件处理程序。  
   
- By default, the backing-store field for an event declaration is a multicast delegate that serially combines all the event handlers. This means that if one handler takes a long time to complete, it blocks the other handlers until it completes. (Well-behaved event handlers should never perform lengthy or potentially blocking operations.)  
+ 默认情况下，事件声明的 "备份存储" 字段为一个多播委托，该委托按顺序合并所有事件处理程序。 这意味着，如果某个处理程序需要很长时间才能完成，则会阻止其他处理程序完成。 （正常运行的事件处理程序永远不会执行冗长或可能阻塞的操作。）  
   
- Instead of using the default implementation of events that Visual Basic provides, you can use a custom event to execute the event handlers asynchronously.  
+ 您可以使用自定义事件异步执行事件处理程序，而不是使用 Visual Basic 提供的事件的默认实现。  
   
 ## <a name="example"></a>示例  
- In this example, the `AddHandler` accessor adds the delegate for each handler of the `Click` event to an <xref:System.Collections.ArrayList> stored in the `EventHandlerList` field.  
+ 在此示例中，`AddHandler` 访问器将 `Click` 事件的每个处理程序的委托添加到 `EventHandlerList` 字段中存储的 <xref:System.Collections.ArrayList>。  
   
- When code raises the `Click` event, the `RaiseEvent` accessor invokes all the event handler delegates asynchronously using the <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A> method. That method invokes each handler on a worker thread and returns immediately, so handlers cannot block one another.  
+ 当代码引发 `Click` 事件时，`RaiseEvent` 访问器使用 <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A> 方法以异步方式调用所有事件处理程序委托。 该方法调用工作线程上的每个处理程序并立即返回，因此处理程序不能彼此阻止。  
   
  [!code-vb[VbVbalrEvents#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#27)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Collections.ArrayList>
 - <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A>

@@ -17,51 +17,51 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333728"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>常量和 Literal 数据类型 (Visual Basic)
-A literal is a value that is expressed as itself rather than as a variable's value or the result of an expression, such as the number 3 or the string "Hello". A constant is a meaningful name that takes the place of a literal and retains this same value throughout the program, as opposed to a variable, whose value may change.  
+文本是一个值，它表示为自身，而不是作为变量的值或表达式的结果，如数字3或字符串 "Hello"。 常量是有意义的名称，用于代替文本，并在整个程序中保留此相同的值，而不是变量（其值可能会更改）。  
   
- When [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) is `Off` and [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) is `On`, you must declare all constants explicitly with a data type. In the following example, the data type of `MyByte` is explicitly declared as data type `Byte`:  
+ 当[选项推断](../../../../visual-basic/language-reference/statements/option-infer-statement.md)为 `Off` 并且[option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) `On`时，必须使用数据类型显式声明所有常量。 在下面的示例中，`MyByte` 的数据类型显式声明为数据类型 `Byte`：  
   
  [!code-vb[VbVbalrConstants#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#1)]  
   
- When `Option Infer` is `On` or `Option Strict` is `Off`, you can declare a constant without specifying a data type with an `As` clause. The compiler determines the type of the constant from the type of the expression. A numeric integer literal is cast by default to the `Integer` data type. The default data type for floating-point numbers is `Double`, and the keywords `True` and `False` specify a `Boolean` constant.  
+ 如果 `Option Infer` `On` 或 `Option Strict` `Off`，则可以声明常量，而无需使用 `As` 子句指定数据类型。 编译器将确定表达式的类型的常量类型。 默认情况下，将数值转换为 `Integer` 数据类型。 浮点数的默认数据类型为 `Double`，关键字 `True` 和 `False` 指定 `Boolean` 常量。  
   
-## <a name="literals-and-type-coercion"></a>Literals and Type Coercion  
- In some cases, you might want to force a literal to a particular data type; for example, when assigning a particularly large integral literal value to a variable of type `Decimal`. The following example produces an error:  
+## <a name="literals-and-type-coercion"></a>文本和类型强制  
+ 在某些情况下，可能需要将文本强制用于特定的数据类型;例如，将一个特别大的整数文本值分配到 `Decimal`类型的变量时。 下面的示例生成错误：  
   
 ```vb  
 Dim myDecimal as Decimal  
 myDecimal = 100000000000000000000   ' This causes a compiler error.  
 ```  
   
- The error results from the representation of the literal. The `Decimal` data type can hold a value this large, but the literal is implicitly represented as a `Long`, which cannot.  
+ 此错误是由文本的表示形式导致的。 `Decimal` 数据类型可以保存此大值，但文本隐式表示为 `Long`，这是不可能的。  
   
- You can coerce a literal to a particular data type in two ways: by appending a type character to it, or by placing it within enclosing characters. A type character or enclosing characters must immediately precede and/or follow the literal, with no intervening space or characters of any kind.  
+ 可以通过两种方式将文本强制转换为特定数据类型：向其追加类型字符，或将其放在封闭字符内。 类型字符或封闭字符必须紧跟在文本之前和/或之后，无需任何插入空格或任何类型的字符。  
   
- To make the previous example work, you can append the `D` type character to the literal, which causes it to be represented as a `Decimal`:  
+ 若要使上面的示例正常运行，可以将 `D` 类型字符追加到文本中，这会使其表示为 `Decimal`：  
   
  [!code-vb[VbVbalrConstants#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#2)]  
   
- The following example demonstrates correct usage of type characters and enclosing characters:  
+ 下面的示例演示类型字符和封闭字符的正确用法：  
   
  [!code-vb[VbVbalrConstants#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#3)]  
   
- The following table shows the enclosing characters and type characters available in Visual Basic.  
+ 下表显示 Visual Basic 中可用的封闭字符和类型字符。  
   
-|数据类型|Enclosing character|Appended type character|  
+|数据类型|封闭字符|追加的类型字符|  
 |---|---|---|  
 |`Boolean`|(无)|(无)|  
 |`Byte`|(无)|(无)|  
 |`Char`|"|C|  
 |`Date`|#|(无)|  
-|`Decimal`|(无)|D or @|  
-|`Double`|(无)|R or #|  
-|`Integer`|(无)|I or %|  
-|`Long`|(无)|L or &|  
+|`Decimal`|(无)|D 或@|  
+|`Double`|(无)|R 或#|  
+|`Integer`|(无)|I 或%|  
+|`Long`|(无)|L 或 &|  
 |`Short`|(无)|S|  
-|`Single`|(无)|F or !|  
+|`Single`|(无)|F 或！|  
 |`String`|"|(无)|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [用户定义的常量](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)
 - [如何：声明常量](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)
@@ -69,7 +69,7 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 - [Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Option Explicit 语句](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [枚举概述](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
-- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [如何：声明枚举](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [枚举和名称限定](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [数据类型](../../../../visual-basic/language-reference/data-types/index.md)
 - [常量和枚举](../../../../visual-basic/language-reference/constants-and-enumerations.md)

@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345459"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>How to: Write Object Data to an XML File (Visual Basic)
+# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>如何：将对象数据写入 XML 文件（Visual Basic）
 本示例使用 <xref:System.Xml.Serialization.XmlSerializer> 类从某个类将对象写入 XML 文件。  
   
 ## <a name="example"></a>示例  
@@ -40,7 +40,7 @@ End Module
 ## <a name="compiling-the-code"></a>编译代码  
  类必须有一个公共的无参数构造函数。  
   
-## <a name="robust-programming"></a>可靠编程  
+## <a name="robust-programming"></a>可靠的编程  
  以下情况可能会导致异常：  
   
 - 进行序列化的类没有公共的无参数构造函数。  
@@ -54,7 +54,7 @@ End Module
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  此示例在文件尚未存在时创建新文件。 如果某个应用程序需要创建文件，则该应用程序需要针对文件夹的 `Create` 访问权限。 如果文件已存在，则该应用程序只需要 `Write` 访问权限（这是较弱的特权）。 如有可能，在部署过程中创建文件，并且仅授予针对单个文件的 `Read` 访问权限（而不是针对 `Create` 文件夹的访问权限）会更加安全。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.IO.StreamWriter>
 - [如何：读取 XML 文件中的对象数据 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)

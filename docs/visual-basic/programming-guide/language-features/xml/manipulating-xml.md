@@ -14,35 +14,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74330441"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>在 Visual Basic 中操作 XML
-You can use *XML literals* to load XML from an external source such as a string, file, or stream. You can then use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to manipulate the XML and use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] to query the XML.  
+您可以使用*xml 文本*从外部源（如字符串、文件或流）加载 XML。 然后，可以使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 来操作 XML，并使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 查询 XML。  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：从文件、字符串或流加载 XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
- Demonstrates how to load XML into an <xref:System.Xml.Linq.XDocument> or <xref:System.Xml.Linq.XElement> object from a text file, string, or stream.  
+ 演示如何将 XML 加载到 <xref:System.Xml.Linq.XDocument> 或从文本文件、string 或 stream <xref:System.Xml.Linq.XElement> 对象。  
   
  [如何：使用 LINQ 转换 XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-transform-xml-by-using-linq.md)  
- Demonstrates how to transform the contents of an <xref:System.Xml.Linq.XDocument> object into a new XML document.  
+ 演示如何将 <xref:System.Xml.Linq.XDocument> 对象的内容转换为新的 XML 文档。  
   
  [如何：修改 XML 文本](../../../../visual-basic/programming-guide/language-features/xml/how-to-modify-xml-literals.md)  
- Demonstrates how to modify the elements, attributes, and values in an XML literal.  
+ 演示如何修改 XML 文本中的元素、特性和值。  
   
 ## <a name="related-sections"></a>相关章节  
  [XML 轴属性](../../../../visual-basic/language-reference/xml-axis/index.md)  
- Provides links to sections that describe the various XML access properties.  
+ 提供一些链接，这些链接指向描述各种 XML 访问属性的部分。  
   
  [Visual Basic 中的 LINQ to XML 概述](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- Provides an introduction to using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
+ 介绍如何在 Visual Basic 中使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。  
   
  [在 Visual Basic 中创建 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- Provides an introduction to using XML literals in Visual Basic.  
+ 介绍如何使用 Visual Basic 中的 XML 文本。  
   
  [在 Visual Basic 中访问 XML](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)  
- Demonstrates how to access parts of an XML element or document in Visual Basic.  
+ 演示如何在 Visual Basic 中访问 XML 元素或文档的各个部分。  
   
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- Provides links to sections that describe how to use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
+ 提供一些链接，这些链接指向介绍如何使用 Visual Basic 中 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的部分。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)

@@ -14,11 +14,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345300"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>对已声明元素的引用 (Visual Basic)
-When your code refers to a declared element, the Visual Basic compiler matches the name in your reference to the appropriate declaration of that name. If more than one element is declared with the same name, you can control which of those elements is to be referenced by *qualifying* its name.  
+当代码引用已声明的元素时，Visual Basic 编译器会将引用中的名称与该名称的相应声明进行匹配。 如果用相同的名称声明了多个元素，则可以通过*限定*其名称来控制要引用的元素。  
   
- The compiler attempts to match a name reference to a name declaration with the *narrowest scope*. This means it starts with the code making the reference and works outward through successive levels of containing elements.  
+ 编译器尝试将名称引用与最*窄的范围*进行匹配。 这意味着，它从发出引用的代码开始，并通过连续的包含元素级别进行处理。  
   
- The following example shows references to two variables with the same name. The example declares two variables, each named `totalCount`, at different levels of scope in module `container`. When the procedure `showCount` displays `totalCount` without qualification, the Visual Basic compiler resolves the reference to the declaration with the narrowest scope, namely the local declaration inside `showCount`. When it qualifies `totalCount` with the containing module `container`, the compiler resolves the reference to the declaration with the broader scope.  
+ 下面的示例显示对两个名称相同的变量的引用。 该示例在模块 `container`中的不同范围内声明两个变量，其中每个变量都为 `totalCount`。 当过程 `showCount` 显示 `totalCount` 而不进行限定时，Visual Basic 编译器会将引用解析为范围最窄的声明，即 `showCount`中的局部声明。 如果它符合包含模块 `container``totalCount`，则编译器会将引用解析为范围更广的声明。  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -41,16 +41,16 @@ Module callingModule
 End Module  
 ```  
   
-## <a name="qualifying-an-element-name"></a>Qualifying an Element Name  
- If you want to override this search process and specify a name declared in a broader scope, you must *qualify* the name with the containing element of the broader scope. In some cases, you might also have to qualify the containing element.  
+## <a name="qualifying-an-element-name"></a>限定元素名称  
+ 如果要重写此搜索过程并指定在更大范围内声明的名称，则必须使用范围更广的包含元素*限定*该名称。 在某些情况下，你可能还必须限定包含元素。  
   
- Qualifying a name means preceding it in your source statement with information that identifies where the target element is defined. This information is called a *qualification string*. It can include one or more namespaces and a module, class, or structure.  
+ 限定名称表示在源语句中使用标识目标元素定义位置的信息。 此信息称为*限定字符串*。 它可以包含一个或多个命名空间以及模块、类或结构。  
   
- The qualification string should unambiguously specify the module, class, or structure containing the target element. The container might in turn be located in another containing element, usually a namespace. You might need to include several containing elements in the qualification string.  
+ 限定字符串应明确指定包含目标元素的模块、类或结构。 容器可能又位于另一个包含元素中，通常是一个命名空间。 你可能需要在限定字符串中包含多个包含元素。  
   
-#### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>To access a declared element by qualifying its name  
+#### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>通过限定其名称访问声明的元素  
   
-1. Determine the location in which the element has been defined. This might include a namespace, or even a hierarchy of namespaces. Within the lowest-level namespace, the element must be contained in a module, class, or structure.  
+1. 确定定义元素的位置。 这可能包括命名空间，甚至命名空间的层次结构。 在最低级别的命名空间中，元素必须包含在模块、类或结构中。  
   
     ```vb  
     ' Assume the following hierarchy exists outside your code.  
@@ -66,23 +66,23 @@ End Module
     End Namespace  
     ```  
   
-2. Determine a qualification path based on the target element's location. Start with the highest-level namespace, proceed to the lowest-level namespace, and end with the module, class, or structure containing the target element. Each element in the path must contain the element that follows it.  
+2. 根据目标元素的位置确定限定路径。 从最高层命名空间开始，转到最低级别命名空间，并以包含目标元素的模块、类或结构结尾。 路径中的每个元素都必须包含其后的元素。  
   
      `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
-3. Prepare the qualification string for the target element. Place a period (`.`) after every element in the path. Your application must have access to every element in your qualification string.  
+3. 准备目标元素的限定字符串。 在路径中的每个元素之后放置一个句点（`.`）。 应用程序必须有权访问限定字符串中的每个元素。  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
     ```  
   
-4. Write the expression or assignment statement referring to the target element in the normal way.  
+4. 以正常方式编写引用目标元素的表达式或赋值语句。  
   
     ```vb  
     grandTotal = 9000  
     ```  
   
-5. Precede the target element name with the qualification string. The name should immediately follow the period (`.`) that follows the module, class, or structure that contains the element.  
+5. 在目标元素名称之前加上限定字符串。 名称应紧跟在包含元素的模块、类或结构之后的时间段（`.`）。  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -93,9 +93,9 @@ End Module
     End Module  
     ```  
   
-6. The compiler uses the qualification string to find a clear, unambiguous declaration to which it can match the target element reference.  
+6. 编译器使用限定字符串来查找可与目标元素引用匹配的明确、明确的声明。  
   
- You might also have to qualify a name reference if your application has access to more than one programming element that has the same name. For example, the <xref:System.Windows.Forms> and <xref:System.Web.UI.WebControls> namespaces both contain a `Label` class (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> and <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>). If your application uses both, or if it defines its own `Label` class, you must distinguish the different `Label` objects. Include the namespace or import alias in the variable declaration. The following example uses the import alias.  
+ 如果你的应用程序有权访问多个具有相同名称的编程元素，则可能还必须限定名称引用。 例如，<xref:System.Windows.Forms> 和 <xref:System.Web.UI.WebControls> 命名空间都包含一个 `Label` 类（<xref:System.Windows.Forms.Label?displayProperty=nameWithType> 和 <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>）。 如果你的应用程序同时使用这两种方法，或者如果它定义了其自己的 `Label` 类，则必须区分不同的 `Label` 对象。 在变量声明中包含命名空间或导入别名。 下面的示例使用了导入别名。  
   
 ```vb  
 ' The following statement must precede all your declarations.  
@@ -104,21 +104,21 @@ Imports win = System.Windows.Forms, web = System.Web.UI.WebControls
 Dim winLabel As New win.Label()  
 ```  
   
-## <a name="members-of-other-containing-elements"></a>Members of Other Containing Elements  
- When you use a nonshared member of another class or structure, you must first qualify the member name with a variable or expression that points to an instance of the class or structure. In the following example, `demoClass` is an instance of a class named `class1`.  
+## <a name="members-of-other-containing-elements"></a>其他包含元素的成员  
+ 如果使用其他类或结构的非共享成员，则必须先使用指向类或结构的实例的变量或表达式来限定成员名称。 在下面的示例中，`demoClass` 是名为 `class1`的类的实例。  
   
 ```vb  
 Dim demoClass As class1 = New class1()  
 demoClass.someSub[(argumentlist)]  
 ```  
   
- You cannot use the class name itself to qualify a member that is not [Shared](../../../../visual-basic/language-reference/modifiers/shared.md). You must first create an instance in an object variable (in this case `demoClass`) and then reference it by the variable name.  
+ 不能使用类名本身来限定未[共享](../../../../visual-basic/language-reference/modifiers/shared.md)的成员。 必须先在对象变量中创建实例（在本例中为 `demoClass`），然后通过变量名称引用它。  
   
- If a class or structure has a `Shared` member, you can qualify that member either with the class or structure name or with a variable or expression that points to an instance.  
+ 如果某个类或结构具有 `Shared` 成员，则可以使用类或结构名称或指向实例的变量或表达式来限定该成员。  
   
- A module does not have any separate instances, and all its members are `Shared` by default. Therefore, you qualify a module member with the module name.  
+ 模块没有任何单独的实例，默认情况下，它的所有成员都 `Shared`。 因此，您可以使用模块名称限定模块成员。  
   
- The following example shows qualified references to module member procedures. The example declares two `Sub` procedures, both named `perform`, in different modules in a project. Each one can be specified without qualification within its own module but must be qualified if referenced from anywhere else. Because the final reference in `module3` does not qualify `perform`, the compiler cannot resolve that reference.  
+ 下面的示例演示对模块成员过程的限定引用。 该示例在项目中的不同模块中声明两个 `Sub` 过程，两个均命名为 `perform`。 可以在其自身的模块中无需限定地指定每个项，但在其他任何地方引用时必须进行限定。 由于 `module3` 中的最后一个引用不限定 `perform`，因此编译器无法解析该引用。  
   
 ```vb  
 ' Assume these three modules are all in the same assembly.  
@@ -149,10 +149,10 @@ Module module3
 End Module  
 ```  
   
-## <a name="references-to-projects"></a>References to Projects  
- To use [Public](../../../../visual-basic/language-reference/modifiers/public.md) elements defined in another project, you must first set a *reference* to that project's assembly or type library. To set a reference, click **Add Reference** on the **Project** menu, or use the [-reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) command-line compiler option.  
+## <a name="references-to-projects"></a>对项目的引用  
+ 若要使用另一个项目中定义的[公共](../../../../visual-basic/language-reference/modifiers/public.md)元素，必须首先设置对该项目的程序集或类型库的*引用*。 若要设置引用，请在 "**项目**" 菜单上单击 "**添加引用**"，或使用[-reference （Visual Basic）](../../../../visual-basic/reference/command-line-compiler/reference.md)命令行编译器选项。  
   
- For example, you can use the XML object model of the .NET Framework. If you set a reference to the <xref:System.Xml> namespace, you can declare and use any of its classes, such as <xref:System.Xml.XmlDocument>. The following example uses <xref:System.Xml.XmlDocument>.  
+ 例如，可以使用 .NET Framework 的 XML 对象模型。 如果设置了对 <xref:System.Xml> 命名空间的引用，则可以声明并使用它的任何类，如 <xref:System.Xml.XmlDocument>。 下面的示例使用 <xref:System.Xml.XmlDocument>。  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -160,8 +160,8 @@ End Module
 Dim xDoc As System.Xml.XmlDocument  
 ```  
   
-## <a name="importing-containing-elements"></a>Importing Containing Elements  
- You can use the [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to *import* the namespaces that contain the modules or classes that you want to use. This enables you to refer to the elements defined in an imported namespace without fully qualifying their names. The following example rewrites the previous example to import the <xref:System.Xml> namespace.  
+## <a name="importing-containing-elements"></a>导入包含元素  
+ 您可以使用[Imports 语句（.Net 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)来*导入*包含您要使用的模块或类的命名空间。 这使您可以引用在导入的命名空间中定义的元素，而无需完全限定其名称。 下面的示例重写上一示例以导入 <xref:System.Xml> 命名空间。  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -171,7 +171,7 @@ Imports System.Xml
 Dim xDoc As XmlDocument  
 ```  
   
- In addition, the `Imports` statement can define an *import alias* for each imported namespace. This can make the source code shorter and easier to read. The following example rewrites the previous example to use `xD` as an alias for the <xref:System.Xml> namespace.  
+ 此外，`Imports` 语句可以为每个导入的命名空间定义*导入别名*。 这会使源代码更短且更易于阅读。 下面的示例重写上一个示例，以使用 `xD` 作为 <xref:System.Xml> 命名空间的别名。  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -181,19 +181,19 @@ Imports xD = System.Xml
 Dim xDoc As xD.XmlDocument  
 ```  
   
- The `Imports` statement does not make elements from other projects available to your application. That is, it does not take the place of setting a reference. Importing a namespace just removes the requirement to qualify the names defined in that namespace.  
+ `Imports` 语句不会将其他项目中的元素提供给你的应用程序使用。 也就是说，它不会取代设置引用。 导入命名空间只是不再要求限定命名空间中定义的名称。  
   
- You can also use the `Imports` statement to import modules, classes, structures, and enumerations. You can then use the members of such imported elements without qualification. However, you must always qualify nonshared members of classes and structures with a variable or expression that evaluates to an instance of the class or structure.  
+ 你还可以使用 `Imports` 语句来导入模块、类、结构和枚举。 然后，可以使用此类导入元素的成员而无需进行限定。 但是，必须始终使用计算结果为类或结构的实例的变量或表达式来限定类和结构的非共享成员。  
   
-## <a name="naming-guidelines"></a>命名准则  
- When you define two or more programming elements that have the same name, a *name ambiguity* can result when the compiler attempts to resolve a reference to that name. If more than one definition is in scope, or if no definition is in scope, the reference is irresolvable. For an example, see "Qualified Reference Example" on this Help page.  
+## <a name="naming-guidelines"></a>命名规则  
+ 在定义两个或多个具有相同名称的编程元素时，当编译器尝试解析对该名称的引用时，可能会导致*名称不明确*。 如果范围内有多个定义，或者如果没有定义在范围内，则引用为不能纠正。 有关示例，请参阅此帮助页上的 "限定引用示例"。  
   
- You can avoid name ambiguity by giving all your elements unique names. Then you can make reference to any element without having to qualify its name with a namespace, module, or class. You also reduce the chances of accidentally referring to the wrong element.  
+ 可以通过提供所有元素的唯一名称来避免名称不明确。 然后，可以引用任何元素，而无需使用命名空间、模块或类限定其名称。 您还可以减少意外引用错误元素的几率。  
   
 ## <a name="shadowing"></a>阴影操作  
- When two programming elements share the same name, one of them can hide, or *shadow*, the other one. A shadowed element is not available for reference; instead, when your code uses the shadowed element name, the Visual Basic compiler resolves it to the shadowing element. For a more detailed explanation with examples, see [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ 当两个编程元素共享同一名称时，其中一个元素可以*隐藏或隐藏*另一个。 隐藏的元素不可用于引用;相反，当代码使用隐藏的元素名称时，Visual Basic 编译器会将其解析为隐藏元素。 有关示例的更详细说明，请参阅[Visual Basic 中的隐藏](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [已声明的元素名称](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [已声明元素的特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
@@ -201,4 +201,4 @@ Dim xDoc As xD.XmlDocument
 - [变量](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [New 运算符](../../../../visual-basic/language-reference/operators/new-operator.md)
-- [COMClassAttribute](../../../../visual-basic/language-reference/modifiers/public.md)
+- [Public](../../../../visual-basic/language-reference/modifiers/public.md)

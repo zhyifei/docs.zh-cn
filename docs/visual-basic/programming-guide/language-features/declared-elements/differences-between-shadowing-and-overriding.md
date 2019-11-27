@@ -13,48 +13,48 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345419"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>隐藏和重写之间的差异 (Visual Basic)
-When you define a class that inherits from a base class, you sometimes want to redefine one or more of the base class elements in the derived class. Shadowing and overriding are both available for this purpose.  
+在定义继承自基类的类时，有时需要重新定义派生类中的一个或多个基类元素。 隐藏和重写都可用于此目的。  
   
 ## <a name="comparison"></a>比较  
- Shadowing and overriding are both used when a derived class inherits from a base class, and both redefine one declared element with another. But there are significant differences between the two.  
+ 当派生类从基类继承时使用隐藏和重写，并且这两种方法都将一个已声明的元素重定义为另一个。 但两者之间存在重大差异。  
   
- The following table compares shadowing with overriding.  
+ 下表将隐藏与重写进行比较。  
   
 ||||  
 |---|---|---|  
-|Point of comparison|阴影操作|Overriding|  
-|目标|Protects against a subsequent base-class modification that introduces a member you have already defined in your derived class|Achieves polymorphism by defining a different implementation of a procedure or property with the same calling sequence<sup>1</sup>|  
-|Redefined element|Any declared element type|Only a procedure (`Function`, `Sub`, or `Operator`) or property|  
-|Redefining element|Any declared element type|Only a procedure or property with the identical calling sequence<sup>1</sup>|  
-|Access level of redefining element|Any access level|Cannot change access level of overridden element|  
-|Readability and writability of redefining element|Any combination|Cannot change readability or writability of overridden property|  
-|Control over redefining|Base class element cannot enforce or prohibit shadowing|Base class element can specify `MustOverride`, `NotOverridable`, or `Overridable`|  
-|Keyword usage|`Shadows` recommended in derived class; `Shadows` assumed if neither `Shadows` nor `Overrides` specified<sup>2</sup>|`Overridable` or `MustOverride` required in base class; `Overrides` required in derived class|  
-|Inheritance of redefining element by classes deriving from your derived class|Shadowing element inherited by further derived classes; shadowed element still hidden<sup>3</sup>|Overriding element inherited by further derived classes; overridden element still overridden|  
+|比较点|阴影操作|取代|  
+|目的|针对引入已在派生类中定义的成员的后续基类修改进行保护|通过定义具有相同调用序列的过程或属性的不同实现来实现多态性<sup>1</sup>|  
+|重新定义的元素|任何声明的元素类型|仅过程（`Function`、`Sub`或 `Operator`）或属性|  
+|重定义元素|任何声明的元素类型|仅具有相同调用序列的过程或属性<sup>1</sup>|  
+|重定义元素的访问级别|任何访问级别|无法更改重写元素的访问级别|  
+|重定义元素的可读性和可写性|任何组合|无法更改重写属性的可读性或可写性|  
+|控制重定义|基类元素无法强制或禁止隐藏|基类元素可以指定 `MustOverride`、`NotOverridable`或 `Overridable`|  
+|关键字用法|在派生类中建议 `Shadows`;如果 `Shadows` 和 `Overrides` 均<sup>未指定，</sup>则假定 `Shadows`|基类中需要 `Overridable` 或 `MustOverride`;派生类中需要 `Overrides`|  
+|从派生类派生的类的重定义元素的继承|由进一步的派生类继承的隐藏元素;隐藏的元素仍隐藏<sup>3</sup>|重写由进一步派生的类继承的元素;重写的元素仍将被重写|  
   
- <sup>1</sup> The *calling sequence* consists of the element type (`Function`, `Sub`, `Operator`, or `Property`), name, parameter list, and return type. You cannot override a procedure with a property, or the other way around. You cannot override one kind of procedure (`Function`, `Sub`, or `Operator`) with another kind.  
+ <sup>1</sup> *调用序列*包含元素类型（`Function`、`Sub`、`Operator`或 `Property`）、名称、参数列表和返回类型。 不能使用属性或其他方法来重写过程。 不能重写另一种类型的过程（`Function`、`Sub`或 `Operator`）。  
   
- <sup>2</sup> If you do not specify either `Shadows` or `Overrides`, the compiler issues a warning message to help you be sure which kind of redefinition you want to use. If you ignore the warning, the shadowing mechanism is used.  
+ <sup>2</sup>如果未指定 `Shadows` 或 `Overrides`，则编译器会发出警告消息，帮助您确定要使用的重新定义类型。 如果忽略该警告，则使用隐藏机制。  
   
- <sup>3</sup> If the shadowing element is inaccessible in a further derived class, shadowing is not inherited. For example, if you declare the shadowing element as `Private`, a class deriving from your derived class inherits the original element instead of the shadowing element.  
+ <sup>3</sup>如果无法在进一步的派生类中访问隐藏元素，则不会继承隐藏。 例如，如果将隐藏元素声明为 `Private`，派生自派生类的类将继承原始元素，而不是隐藏元素。  
   
-## <a name="guidelines"></a>准则  
- You normally use overriding in the following cases:  
+## <a name="guidelines"></a>指南  
+ 在以下情况下，通常使用重写：  
   
-- You are defining polymorphic derived classes.  
+- 你要定义多态派生类。  
   
-- You want the safety of having the compiler enforce the identical element type and calling sequence.  
+- 您希望安全地让编译器强制执行相同的元素类型和调用序列。  
   
- You normally use shadowing in the following cases:  
+ 通常会在以下情况下使用隐藏：  
   
-- You anticipate that your base class might be modified and define an element using the same name as yours.  
+- 你预计可能会修改基类，并使用与你的名称相同的名称来定义元素。  
   
-- You want the freedom of changing the element type or calling sequence.  
+- 您希望自由更改元素类型或调用序列。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic 中的阴影](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [如何：隐藏与你的变量同名的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
 - [如何：隐藏继承的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
 - [如何：访问被派生类隐藏的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)

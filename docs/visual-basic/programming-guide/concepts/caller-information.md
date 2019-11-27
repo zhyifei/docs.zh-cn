@@ -9,12 +9,12 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349471"
 ---
-# <a name="caller-information-visual-basic"></a>Caller Information (Visual Basic)
+# <a name="caller-information-visual-basic"></a>调用方信息（Visual Basic）
 通过使用调用方信息特性，可获取有关方法的调用方的信息。 可以获取源代码的文件路径、源代码中的行号和调用方的成员名称。 此信息有助于跟踪、调试和创建诊断工具。  
   
  若要获取此信息，可以使用应用于可选参数的特性，每个特性都具有默认值。 下表列出在 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空间中定义的调用方信息特性：  
   
-|特性|描述|键入|  
+|属性|说明|类型|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|包含调用方的源文件的完整路径。 这是编译时的文件路径。|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|源文件中调用方法的行号。|`Integer`|  
@@ -74,7 +74,7 @@ End Sub
 |特性构造函数|要应用特性的成员的名称。 如果该特性是成员中的任何元素（如参数、返回值或泛型参数），则此结果是与该元素关联的成员的名称。|  
 |无包含的成员（例如，程序集级别或应用于类型的特性）|可选参数的默认值。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [属性 (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
 - [常见特性 (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)

@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344406"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>How to: Find Descendants with a Specific Element Name (Visual Basic)
+# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>如何：查找具有特定元素名称的子代（Visual Basic）
 有时，您想要查找所有具有特定名称的子代。 可以编写代码用于循环访问所有子代，但使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴更简单。  
   
 ## <a name="example"></a>示例  
@@ -54,7 +54,7 @@ Some text that is broken up into multiple segments.
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息，请参阅[命名空间概述（LINQ to XML）（Visual Basic）](namespaces-overview-linq-to-xml.md)。  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -100,7 +100,7 @@ End Module
 Some text that is broken up into multiple segments.  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
-- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [基本查询（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

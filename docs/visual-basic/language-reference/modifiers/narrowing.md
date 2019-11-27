@@ -18,24 +18,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351478"
 ---
 # <a name="narrowing-visual-basic"></a>Narrowing (Visual Basic)
-Indicates that a conversion operator (`CType`) converts a class or structure to a type that might not be able to hold some of the possible values of the original class or structure.  
+指示转换运算符（`CType`）将类或结构转换为可能无法保存原始类或结构的某些可能值的类型。  
   
-## <a name="converting-with-the-narrowing-keyword"></a>Converting with the Narrowing Keyword  
- The conversion procedure must specify `Public Shared` in addition to `Narrowing`.  
+## <a name="converting-with-the-narrowing-keyword"></a>用收缩关键字转换  
+ 除 `Narrowing`之外，转换过程必须指定 `Public Shared`。  
   
- Narrowing conversions do not always succeed at run time, and can fail or incur data loss. Examples are `Long` to `Integer`, `String` to `Date`, and a base type to a derived type. This last conversion is narrowing because the base type might not contain all the members of the derived type and thus is not an instance of the derived type.  
+ 收缩转换在运行时并不总是成功，可能会失败或导致数据丢失。 示例 `Long` `Integer`，`String` `Date`，并将基类型为派生类型。 此上一转换是收缩的，因为基类型可能不包含派生类型的所有成员，因此不是派生类型的实例。  
   
- If `Option Strict` is `On`, the consuming code must use `CType` for all narrowing conversions.  
+ 如果 `On``Option Strict`，则使用代码必须使用 `CType` 进行所有收缩转换。  
   
- The `Narrowing` keyword can be used in this context:  
+ 可以在此上下文中使用 `Narrowing` 关键字：  
   
  [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Widening](../../../visual-basic/language-reference/modifiers/widening.md)
 - [扩大转换和收缩转换](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [如何：定义运算符](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [CType 函数](../../../visual-basic/language-reference/functions/ctype-function.md)
+- [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)
 - [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)

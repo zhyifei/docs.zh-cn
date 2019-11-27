@@ -1,5 +1,5 @@
 ---
-title: 已声明的 XML 元素和特性的名称
+title: 已声明的 XML 元素和属性的名称
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declarations [XML in Visual Basic]
@@ -16,35 +16,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335986"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>已声明的 XML 元素和特性的名称 (Visual Basic)
-This topic provides Visual Basic guidelines for naming XML elements and attributes in XML literals.  In an XML literal, you can specify a local name or a qualified name. A qualified name consists of an XML namespace prefix, a colon, and a local name. For more information about XML namespace prefixes, see [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+本主题提供了在 XML 文本中命名 XML 元素和属性的 Visual Basic 准则。  在 XML 文本中，可以指定本地名称或限定名称。 限定名由 XML 命名空间前缀、冒号和本地名称组成。 有关 XML 命名空间前缀的详细信息，请参阅[Xml 元素文本](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)。  
   
 ## <a name="rules"></a>规则  
- A local name of an element or attribute in Visual Basic must adhere to the following rules.  
+ Visual Basic 中的元素或属性的本地名称必须遵循以下规则。  
   
-- It can begin with a namespace. It must begin with an alphabetical character or an underscore (`_`).  
+- 它可以从命名空间开始。 它必须以字母字符或下划线（`_`）开头。  
   
-- It must contain only alphabetical characters, decimal digits, underscores, periods (.), and hyphens (-).  
+- 它必须仅包含字母字符、十进制数字、下划线、句点（.）和连字符（-）。  
   
-- It must not be more than 1,024 characters long.  
+- 长度不得超过1024个字符。  
   
-- Colons that appear in names indicate namespace demarcation. Therefore, you can use colons only to specify an XML namespace for a particular name.  
+- 名称中出现的冒号指示命名空间分界。 因此，您可以使用冒号来指定特定名称的 XML 命名空间。  
   
- In addition, you should adhere to the following guideline.  
+ 此外，还应遵循以下准则。  
   
-- The XML 1.0 specification reserves all names starting with the string "xml", of any capitalization variation. Therefore, do not use those names for your element and attribute names.  
+- XML 1.0 规范保留以字符串 "XML" 开头、大小写不同的所有名称。 因此，请不要将这些名称用于元素和属性名称。  
   
-### <a name="name-length-guidelines"></a>Name Length Guidelines  
- As a practical matter, a name should be as short as possible while still clearly identifying the nature of the element. This improves the readability of your code and reduces line length and source-file size.  
+### <a name="name-length-guidelines"></a>名称长度准则  
+ 在实际情况下，名称应尽可能简短，同时仍能清楚地确定元素的性质。 这可以提高代码的可读性，并减少行长度和源文件大小。  
   
- However, your name should not be so short that it does not adequately describe the element or how your code uses it. This is important for the readability of your code. If somebody else is trying to understand it, or if you yourself are looking at it a long time after you wrote it, appropriate element names can save time.  
+ 但是，名称不应太短，因为它不能充分描述元素或代码如何使用它。 这对于代码的可读性非常重要。 如果其他人正在尝试理解它，或者你在写入它后你需要很长的时间，则适当的元素名称可节省时间。  
   
-## <a name="case-sensitivity-in-names"></a>Case Sensitivity in Names  
- XML element names are case sensitive. This means that when the Visual Basic compiler compares two names that differ in alphabetical case only, it interprets them as different names. For example, it interprets `ABC` and `abc` as referring to separate elements.  
+## <a name="case-sensitivity-in-names"></a>名称区分大小写  
+ XML 元素名称区分大小写。 这意味着，当 Visual Basic 编译器仅对字母大小写不同的两个名称进行比较时，它会将它们解释为不同的名称。 例如，它会将 `ABC` 和 `abc` 解释为单独的元素。  
   
 ## <a name="xml-namespaces"></a>XML 命名空间  
- When creating an XML element literal, you can specify the XML namespace prefix for the element name. For more information, see [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+ 创建 XML 元素文本时，可以指定元素名称的 XML 命名空间前缀。 有关详细信息，请参阅[XML 元素文本](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Basic 中创建 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [XML 元素文本](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

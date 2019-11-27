@@ -1,5 +1,5 @@
 ---
-title: Validating Passwords Complexity
+title: 验证密码复杂性
 ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
@@ -12,11 +12,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348330"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>演练：验证密码是否复杂 (Visual Basic)
-This method checks for some strong-password characteristics and updates a string parameter with information about which checks the password fails.  
+此方法检查某些强密码特性，并使用有关检查密码失败的信息更新字符串参数。  
   
- Passwords can be used in a secure system to authorize a user. However, the passwords must be difficult for unauthorized users to guess. Attackers can use a *dictionary attack* program, which iterates through all of the words in a dictionary (or multiple dictionaries in different languages) and tests whether any of the words work as a user's password. Weak passwords such as "Yankees" or "Mustang" can be guessed quickly. Stronger passwords, such as "?You'L1N3vaFiNdMeyeP@sSWerd!", are much less likely to be guessed. A password-protected system should ensure that users choose strong passwords.  
+ 密码可在安全系统中用于向用户授权。 但是，密码必须难以被未经授权的用户猜出。 攻击者可以使用*字典攻击*程序，该程序可循环访问字典中的所有单词（或不同语言的多个字典），并测试是否有任何字词作为用户的密码。 弱密码（如 "Yankees" 或 "Mustang"）很快就会被猜出。 更强的密码，例如 "？您的 "L1N3vaFiNdMeyeP@sSWerd！" 不太可能被猜出。 受密码保护的系统应确保用户选择强密码。  
   
- A strong password is complex (containing a mixture of uppercase, lowercase, numeric, and special characters) and is not a word. This example demonstrates how to verify complexity.  
+ 强密码非常复杂（包含大写字母、小写字母、数字和特殊字符的组合），并且不是单词。 此示例演示如何验证复杂性。  
   
 ## <a name="example"></a>示例  
   
@@ -24,26 +24,26 @@ This method checks for some strong-password characteristics and updates a string
  [!code-vb[VbVbcnRegEx#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- Call this method by passing the string that contains that password.  
+ 通过传递包含该密码的字符串来调用此方法。  
   
  此示例需要：  
   
 - 对 <xref:System.Text.RegularExpressions> 命名空间成员的访问权限。 如果未在代码中完全限定成员名称，则添加 `Imports` 语句。 有关详细信息，请参阅 [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
   
 ## <a name="security"></a>安全  
- If you're moving the password across a network, you need to use a secure method for transferring data. For more information, see [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
+ 如果要在网络中移动密码，则需要使用安全方法来传输数据。 有关详细信息，请参阅[ASP.NET Web 应用程序安全性](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))。
   
- You can improve the accuracy of the `ValidatePassword` function by adding additional complexity checks:  
+ 可以通过添加更多的复杂性检查来提高 `ValidatePassword` 函数的准确性：  
   
-- Compare the password and its substrings against the user's name, user identifier, and an application-defined dictionary. In addition, treat visually similar characters as equivalent when performing the comparisons. For example, treat the letters "l" and "e" as equivalent to the numerals "1" and "3".  
+- 对照用户的名称、用户标识符和应用程序定义的字典比较密码及其子字符串。 此外，在执行比较时，将视觉上相似的字符视为等效字符。 例如，将字母 "l" 和 "e" 视为等效于数字 "1" 和 "3"。  
   
-- If there is only one uppercase character, make sure it is not the password's first character.  
+- 如果只有一个大写字符，请确保它不是密码的第一个字符。  
   
-- Make sure that the last two characters of the password are letter characters.  
+- 请确保密码的最后两个字符是字母字符。  
   
-- Do not allow passwords in which all the symbols are entered from the keyboard's top row.  
+- 不允许从键盘最上面的行输入所有符号的密码。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Text.RegularExpressions.Regex>
 - [ASP.NET Web 应用程序安全性](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))

@@ -21,41 +21,41 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74339961"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>如何：更改过程参数的值 (Visual Basic)
-When you call a procedure, each argument you supply corresponds to one of the parameters defined in the procedure. In some cases, the procedure code can change the value underlying an argument in the calling code. In other cases, the procedure can change only its local copy of an argument.  
+调用过程时，提供的每个参数都对应于在过程中定义的参数之一。 在某些情况下，过程代码可以更改调用代码中的参数的基础值。 在其他情况下，该过程只能更改其参数的本地副本。  
   
- When you call the procedure, Visual Basic makes a local copy of every argument that is passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). For each argument passed [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic gives the procedure code a direct reference to the programming element underlying the argument in the calling code.  
+ 调用过程时，Visual Basic 将为每个传递了[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)的参数创建一个本地副本。 对于传递了[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)的每个参数，Visual Basic 为过程代码提供对调用代码中参数的基础编程元素的直接引用。  
   
- If the underlying element in the calling code is a modifiable element and the argument is passed `ByRef`, the procedure code can use the direct reference to change the element's value in the calling code.  
+ 如果调用代码中的基础元素是可修改的元素，并且参数 `ByRef`传递，则过程代码可以使用直接引用更改调用代码中的元素值。  
   
-## <a name="changing-the-underlying-value"></a>Changing the Underlying Value  
+## <a name="changing-the-underlying-value"></a>更改基础值  
   
-#### <a name="to-change-the-underlying-value-of-a-procedure-argument-in-the-calling-code"></a>To change the underlying value of a procedure argument in the calling code  
+#### <a name="to-change-the-underlying-value-of-a-procedure-argument-in-the-calling-code"></a>更改调用代码中过程参数的基础值  
   
-1. In the procedure declaration, specify [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) for the parameter corresponding to the argument.  
+1. 在过程声明中，为对应于参数的参数指定[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) 。  
   
-2. In the calling code, pass a modifiable programming element as the argument.  
+2. 在调用代码中，将可修改的编程元素作为参数传递。  
   
-3. In the calling code, do not enclose the argument in parentheses in the argument list.  
+3. 在调用代码中，不要将参数括在参数列表的括号中。  
   
-4. In the procedure code, use the parameter name to assign a value to the underlying element in the calling code.  
+4. 在过程代码中，使用参数名称将值分配给调用代码中的基础元素。  
   
- See the example further down for a demonstration.  
+ 有关演示，请参阅进一步的示例。  
   
-## <a name="changing-local-copies"></a>Changing Local Copies  
- If the underlying element in the calling code is a nonmodifiable element, or if the argument is passed `ByVal`, the procedure cannot change its value in the calling code. However, the procedure can change its local copy of such an argument.  
+## <a name="changing-local-copies"></a>更改本地副本  
+ 如果调用代码中的基础元素是不可更改的元素，或者如果参数是 `ByVal`传递的，则该过程无法在调用代码中更改其值。 但是，该过程可以更改此类参数的本地副本。  
   
-#### <a name="to-change-the-copy-of-a-procedure-argument-in-the-procedure-code"></a>To change the copy of a procedure argument in the procedure code  
+#### <a name="to-change-the-copy-of-a-procedure-argument-in-the-procedure-code"></a>更改过程代码中过程参数的副本  
   
-1. In the procedure declaration, specify [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) for the parameter corresponding to the argument.  
+1. 在过程声明中，为对应于参数的参数指定[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 。  
   
-     或  
+     \- 或 -  
   
-     In the calling code, enclose the argument in parentheses in the argument list. This forces Visual Basic to pass the argument by value, even if the corresponding parameter specifies `ByRef`.  
+     在调用代码中，将参数括在参数列表的括号中。 这会强制 Visual Basic 按值传递参数，即使相应的参数指定 `ByRef`也是如此。  
   
-2. In the procedure code, use the parameter name to assign a value to the local copy of the argument. The underlying value in the calling code is not changed.  
+2. 在过程代码中，使用参数名称将值分配给参数的本地副本。 不会更改调用代码中的基础值。  
   
 ## <a name="example"></a>示例  
- The following example shows two procedures that take an array variable and operate on its elements. The `increase` procedure simply adds one to each element. The `replace` procedure assigns a new array to the parameter `a()` and then adds one to each element.  
+ 下面的示例演示了两个过程，这些过程使用数组变量并对其元素进行操作。 `increase` 过程只是向每个元素添加一个。 `replace` 过程将新数组分配给参数 `a()` 然后向每个元素添加一个数组。  
   
  [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
@@ -63,21 +63,21 @@ When you call a procedure, each argument you supply corresponds to one of the pa
   
  [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
- The first `MsgBox` call displays "After increase(n): 11, 21, 31, 41". Because the array `n` is a reference type, `replace` can change its members, even though the passing mechanism is `ByVal`.  
+ 第一个 `MsgBox` 调用显示 "增加（n）：11，21，31，41" 之后的 "。 由于数组 `n` 是引用类型，因此 `replace` 可以更改其成员，即使传递机制是 `ByVal`的。  
   
- The second `MsgBox` call displays "After replace(n): 101, 201, 301". Because `n` is passed `ByRef`, `replace` can modify the variable `n` in the calling code and assign a new array to it. Because `n` is a reference type, `replace` can also change its members.  
+ 第二个 `MsgBox` 调用显示 "replace （n）：101，201，301" 后的 "。 由于 `n` 传递 `ByRef`，`replace` 可以修改调用代码中的变量 `n` 并向其分配新数组。 由于 `n` 是引用类型，`replace` 也可以更改其成员。  
   
- You can prevent the procedure from modifying the variable itself in the calling code. See [How to: Protect a Procedure Argument Against Value Changes](./how-to-protect-a-procedure-argument-against-value-changes.md).  
+ 您可以防止过程在调用代码中修改变量本身。 请参阅[如何：针对值更改保护过程参数](./how-to-protect-a-procedure-argument-against-value-changes.md)。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- When you pass a variable by reference, you must use the `ByRef` keyword to specify this mechanism.  
+ 通过引用传递变量时，必须使用 `ByRef` 关键字来指定此机制。  
   
- The default in Visual Basic is to pass arguments by value. However, it is good programming practice to include either the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword with every declared parameter. This makes your code easier to read.  
+ Visual Basic 中的默认值是按值传递参数。 但是，将[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)关键字用于每个声明的参数是一种好的编程做法。 这使代码更易于阅读。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- There is always a potential risk in allowing a procedure to change the value underlying an argument in the calling code. Make sure you expect this value to be changed, and be prepared to check it for validity before using it.  
+ 允许过程更改调用代码中参数的基础值始终存在潜在风险。 请确保此值已更改，并在使用之前对其进行检查以确保其有效性。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [过程](./index.md)
 - [过程参数和自变量](./procedure-parameters-and-arguments.md)

@@ -30,7 +30,7 @@ Option Infer { On | Off }
 
 ## <a name="parts"></a>部件
 
-|术语|定义|
+|术语|Definition|
 |---|---|
 |`On`|可选。 启用局部类型推理。|
 |`Off`|可选。 禁用局部类型推理。|
@@ -43,26 +43,26 @@ Option Infer { On | Off }
 
 在下图中，`Option Infer` 处于打开状态。 声明 `Dim someVar = 2` 中的变量由类型推理声明为整数。
 
-The following screenshot shows IntelliSense when Option Infer is on:
+以下屏幕截图显示了选项推断为启用时的 IntelliSense：
 
-![Screenshot showing IntelliSense view when Option Infer is on.](./media/option-infer-statement/option-infer-as-integer-on.png)
+![当选项推断为 on 时显示 IntelliSense 视图的屏幕截图。](./media/option-infer-statement/option-infer-as-integer-on.png)
 
-在下图中，`Option Infer` 处于关闭状态。 声明 `Dim someVar = 2` 中的变量由类型推理声明为 `Object`。 In this example, the **Option Strict** setting is set to **Off** on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).
+在下图中，`Option Infer` 处于关闭状态。 声明 `Dim someVar = 2` 中的变量由类型推理声明为 `Object`。 在此示例中，在 "编译" 页的 "[项目设计器" （Visual Basic）](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)上，" **Option Strict** " 设置设置为 "**关闭**"。
 
-The following screenshot shows IntelliSense when Option Infer is off:
+以下屏幕截图显示了选项推断为 off 时的 IntelliSense：
 
-![Screenshot showing IntelliSense view when Option Infer is off.](./media/option-infer-statement/option-infer-as-object-off.png)
+![当选项推理为 off 时显示 IntelliSense 视图的屏幕截图。](./media/option-infer-statement/option-infer-as-object-off.png)
 
 > [!NOTE]
-> 变量声明为 `Object` 时，可在程序运行时更改运行时类型。 Visual Basic performs operations called *boxing* and *unboxing* to convert between an `Object` and a value type, which makes execution slower. For information about boxing and unboxing, see the [Visual Basic Language Specification](~/_vblang/spec/conversions.md#value-type-conversions).
+> 变量声明为 `Object` 时，可在程序运行时更改运行时类型。 Visual Basic 执行称为*装箱*和*取消装箱*的操作，以便在 `Object` 和值类型之间进行转换，这会使执行速度变慢。 有关装箱和取消装箱的信息，请参阅[Visual Basic 语言规范](~/_vblang/spec/conversions.md#value-type-conversions)。
 
 类型推理适用于过程级，且在类、结构、模块或接口中的过程之外不适用。
 
-For additional information, see [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
+有关其他信息，请参阅[局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。
 
 ## <a name="when-an-option-infer-statement-is-not-present"></a>当 Option Infer 语句不存在时
 
-If the source code does not contain an `Option Infer` statement, the **Option Infer** setting on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) is used. If the command-line compiler is used, the [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) compiler option is used.
+如果源代码不包含 `Option Infer` 语句，则使用 "编译" 页上的 "推断设置"**选项**，将使用 "[项目设计器" （Visual Basic）](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 。 如果使用命令行编译器，则使用[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)编译器选项。
 
 #### <a name="to-set-option-infer-in-the-ide"></a>若要在 IDE 中设置 Option Infer
 
@@ -70,13 +70,13 @@ If the source code does not contain an `Option Infer` statement, the **Option In
 
 2. 单击“编译”选项卡。
 
-3. Set the value in the **Option infer** box.
+3. 设置 "**选项推断**框" 中的值。
 
-When you create a new project, the **Option Infer** setting on the **Compile** tab is set to the **Option Infer** setting in the **VB Defaults** dialog box. To access the **VB Defaults** dialog box, on the **Tools** menu, click **Options**. 在“选项”对话框中，展开“项目和解决方案”，然后单击“VB 默认值”。 The initial default setting in **VB Defaults** is `On`.
+创建新项目时，"**编译**" 选项卡上的 "**选择推断**设置" 设置为 " **VB 默认值**" 对话框中的 "推断设置"**选项**。 若要访问 " **VB 默认值**" 对话框，请在 "**工具**" 菜单上单击 "**选项**"。 在“选项”对话框中，展开“项目和解决方案”，然后单击“VB 默认值”。 默认情况下， **VB**默认设置中的初始默认设置为 `On`。
 
 #### <a name="to-set-option-infer-on-the-command-line"></a>若要设置命令行上的 Option Infer
 
-Include the [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) compiler option in the **vbc** command.
+在**vbc**命令中包含[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)编译器选项。
 
 ## <a name="default-data-types-and-values"></a>默认数据类型和值
 
@@ -84,9 +84,9 @@ Include the [-optioninfer](../../../visual-basic/reference/command-line-compiler
 
 |是否指定数据类型？|是否指定初始值设定项？|示例|结果|
 |---|---|---|---|
-|No|No|`Dim qty`|如果 `Option Strict` 处于关闭状态（默认），则将变量设置为 `Nothing`。<br /><br /> 如果 `Option Strict` 处于打开状态，则发生编译时错误。|
-|No|是|`Dim qty = 5`|如果 `Option Infer` 处于打开状态（默认），则变量采用初始值设定项的数据类型。 See [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> 如果 `Option Infer` 和 `Option Strict` 均处于关闭状态，则变量采用 `Object` 的数据类型。<br /><br /> 如果 `Option Infer` 处于关闭状态但 `Option Strict` 处于打开状态，则发生编译时错误。|
-|是|No|`Dim qty As Integer`|将变量初始化为数据类型的默认值。 For more information, see [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md).|
+|是|是|`Dim qty`|如果 `Option Strict` 处于关闭状态（默认），则将变量设置为 `Nothing`。<br /><br /> 如果 `Option Strict` 处于打开状态，则发生编译时错误。|
+|是|是|`Dim qty = 5`|如果 `Option Infer` 处于打开状态（默认），则变量采用初始值设定项的数据类型。 请参阅[局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。<br /><br /> 如果 `Option Infer` 和 `Option Strict` 均处于关闭状态，则变量采用 `Object` 的数据类型。<br /><br /> 如果 `Option Infer` 处于关闭状态但 `Option Strict` 处于打开状态，则发生编译时错误。|
+|是|是|`Dim qty As Integer`|将变量初始化为数据类型的默认值。 有关详细信息，请参阅[Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)。|
 |是|是|`Dim qty  As Integer = 5`|如果初始值设定项的数据类型不可转换为指定数据类型，则会发生编译时错误。|
 
 ## <a name="example"></a>示例
@@ -101,7 +101,7 @@ Include the [-optioninfer](../../../visual-basic/reference/command-line-compiler
 
 [!code-vb[VbVbalrTypeInference#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#11)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)
 - [局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

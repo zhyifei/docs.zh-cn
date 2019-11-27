@@ -18,45 +18,45 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351129"
 ---
 # <a name="parameter-arrays-visual-basic"></a>参数数组 (Visual Basic)
-Usually, you cannot call a procedure with more arguments than the procedure declaration specifies. When you need an indefinite number of arguments, you can declare a *parameter array*, which allows a procedure to accept an array of values for a parameter. You do not have to know the number of elements in the parameter array when you define the procedure. The array size is determined individually by each call to the procedure.  
+通常，使用的参数不能比过程声明指定的过程要多。 如果需要无数个参数，可以声明一个*参数数组*，该数组允许过程接受参数的值数组。 定义过程时，无需知道参数数组中的元素数目。 每次调用该过程时，都会单独确定数组大小。  
   
-## <a name="declaring-a-paramarray"></a>Declaring a ParamArray  
- You use the [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) keyword to denote a parameter array in the parameter list. 适用以下规则：  
+## <a name="declaring-a-paramarray"></a>声明 ParamArray  
+ 使用[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)关键字在参数列表中表示参数数组。 适用以下规则：  
   
-- A procedure can define only one parameter array, and it must be the last parameter in the procedure definition.  
+- 一个过程只能定义一个参数数组，并且它必须是过程定义中的最后一个参数。  
   
-- The parameter array must be passed by value. It is good programming practice to explicitly include the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) keyword in the procedure definition.  
+- 必须通过值传递参数数组。 在过程定义中显式包含[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)关键字是一种很好的编程做法。  
   
-- The parameter array is automatically optional. Its default value is an empty one-dimensional array of the parameter array's element type.  
+- 参数数组是自动可选的。 它的默认值是一个空的一维数组，它是参数数组的元素类型。  
   
-- All parameters preceding the parameter array must be required. The parameter array must be the only optional parameter.  
+- 参数数组前面的所有参数都必须是必需的。 参数数组必须是唯一的可选参数。  
   
-## <a name="calling-a-paramarray"></a>Calling a ParamArray  
- When you call a procedure that defines a parameter array, you can supply the argument in any one of the following ways:  
+## <a name="calling-a-paramarray"></a>调用 ParamArray  
+ 调用定义参数数组的过程时，可以通过以下方式之一提供参数：  
   
-- Nothing — that is, you can omit the [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) argument. In this case, an empty array is passed to the procedure. If you explicitly pass the [Nothing](../../../../visual-basic/language-reference/nothing.md) keyword, a null array is passed to the procedure and may result in a NullReferenceException if the called procedure does not check for this condition.
+- 无-也就是说，可以省略[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)参数。 在这种情况下，空数组将传递给该过程。 如果显式传递[Nothing](../../../../visual-basic/language-reference/nothing.md)关键字，则空数组将传递给该过程，并且如果被调用的过程不检查此条件，则可能导致 NullReferenceException。
   
-- A list of an arbitrary number of arguments, separated by commas. The data type of each argument must be implicitly convertible to the `ParamArray` element type.  
+- 任意数量的参数的列表（用逗号分隔）。 每个参数的数据类型必须可隐式转换为 `ParamArray` 元素类型。  
   
-- An array with the same element type as the parameter array's element type.  
+- 元素类型与参数数组的元素类型相同的数组。  
   
- In all cases, the code within the procedure treats the parameter array as a one-dimensional array with elements of the same data type as the `ParamArray` data type.  
+ 在所有情况下，该过程中的代码将参数数组视为一维数组，其元素的数据类型与 `ParamArray` 数据类型相同。  
   
 > [!IMPORTANT]
-> Whenever you deal with an array which can be indefinitely large, there is a risk of overrunning some internal capacity of your application. If you accept a parameter array, you should test for the size of the array that the calling code passed to it. Take appropriate steps if it is too large for your application. 有关详细信息，请参阅 [array](../../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
+> 无论何时处理可能会无限大的阵列，都有 overrunning 应用程序的一些内部容量的风险。 如果接受参数数组，则应测试调用代码传递给它的数组大小。 如果对应用程序来说太大，请采取适当的措施。 有关详细信息，请参阅 [array](../../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
   
 ## <a name="example"></a>示例  
- The following example defines and calls the function `calcSum`. The `ParamArray` modifier for the parameter `args` enables the function to accept a variable number of arguments.  
+ 下面的示例定义并调用函数 `calcSum`。 参数 `args` 的 `ParamArray` 修饰符使函数接受数量可变的参数。  
   
  [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  
   
- The following example defines a procedure with a parameter array, and outputs the values of all the array elements passed to the parameter array.  
+ 下面的示例使用参数数组定义过程，并输出传递给参数数组的所有数组元素的值。  
   
  [!code-vb[VbVbcnProcedures#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#48)]  
   
  [!code-vb[VbVbcnProcedures#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#49)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>
 - [过程](./index.md)

@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347925"
 ---
-# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Cancel Remaining Async Tasks after One Is Complete (Visual Basic)
+# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>在完成一个异步任务后取消剩余任务（Visual Basic）
 
 通过结合使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 方法和 <xref:System.Threading.CancellationToken>，可在一个任务完成时取消所有剩余任务。 `WhenAny` 方法采用任务集合中的一个参数。 该方法启动所有任务，并返回单个任务。 当集合中任意任务完成时，完成单个任务。
 
@@ -40,11 +40,11 @@ ms.locfileid: "74347925"
 
 ## <a name="building-the-example"></a>生成示例
 
-The example in this topic adds to the project that's developed in [Cancel an Async Task or a List of Tasks](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) to cancel a list of tasks. 该示例使用相同的 UI，但未显示使用“取消”按钮。
+本主题中的示例将添加到[取消异步任务或任务列表](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)中开发的项目，以取消任务列表。 该示例使用相同的 UI，但未显示使用“取消”按钮。
 
 若要自行生成示例，请按“下载示例”部分的说明逐步操作，选择“CancelAListOfTasks”作为“启动项目”。 将此主题中的更改添加到该项目。
 
-In the MainWindow.xaml.vb file of the **CancelAListOfTasks** project, start the transition by moving the processing steps for each website from the loop in `AccessTheWebAsync` to the following async method.
+在**CancelAListOfTasks**项目的 mainwindow.xaml 文件中，通过将每个网站的处理步骤从 `AccessTheWebAsync` 中的循环移至以下异步方法来启动转换。
 
 ```vb
 ' ***Bundle the processing steps for a website into one async method.
@@ -66,7 +66,7 @@ End Function
 
 1. 注释禁止或删除循环。
 
-2. 创建一个查询，它在执行时将生成常规任务的集合。 每次调用 `ProcessURLAsync` 均在 `TResult` 为整数时返回 <xref:System.Threading.Tasks.Task%601>。
+2. 创建一个查询，它在执行时将生成常规任务的集合。 每次调用 `ProcessURLAsync` 均在 <xref:System.Threading.Tasks.Task%601> 为整数时返回 `TResult`。
 
     ```vb
     ' ***Create a query that, when executed, returns a collection of tasks.
@@ -107,7 +107,7 @@ End Function
 
 ## <a name="complete-example"></a>完整的示例
 
-The following code is the complete MainWindow.xaml.vb or MainWindow.xaml.cs file for the example. 对添加到此示例的元素进行了星号标记。
+下面的代码是该示例的完整 Mainwindow.xaml 或 MainWindow.xaml.cs 文件。 对添加到此示例的元素进行了星号标记。
 
 请注意，必须为 <xref:System.Net.Http> 添加引用。
 
@@ -236,9 +236,9 @@ End Class
 ' Download complete.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [微调异步应用程序 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
 - [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [异步示例：微调应用程序](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）

@@ -47,11 +47,11 @@ ms.locfileid: "74435159"
 > [!NOTE]
 > 如果该控件仅可作为与鼠标相关的副作用的结果被调用，则此实现被视为可访问性问题。
 
-- 调用一个控件不同于选择一个项。 但是，具体取决于控件，调用控件可能导致项被选为副作用。 For example, invoking a Microsoft Word document list item in the My Documents folder both selects the item and opens the document.
+- 调用一个控件不同于选择一个项。 但是，具体取决于控件，调用控件可能导致项被选为副作用。 例如，调用 "我的文档" 文件夹中的 Microsoft Word 文档列表项将选择该项并打开该文档。
 
 - 元素被调用时将立即从 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树中消失。 从由事件回调提供的元素请求信息可能失败。 建议的解决方法是预取缓存的信息。
 
-- 控件可实现多个控件模式。 For example, the Fill Color control on the Microsoft Excel toolbar implements both the <xref:System.Windows.Automation.InvokePattern> and the <xref:System.Windows.Automation.ExpandCollapsePattern> control patterns. <xref:System.Windows.Automation.ExpandCollapsePattern> 公开菜单，而 <xref:System.Windows.Automation.InvokePattern> 用所选颜色填充活动选择项。
+- 控件可实现多个控件模式。 例如，Microsoft Excel 工具栏上的 "填充颜色" 控件同时实现了 "<xref:System.Windows.Automation.InvokePattern>" 和 "<xref:System.Windows.Automation.ExpandCollapsePattern>" 控件模式。 <xref:System.Windows.Automation.ExpandCollapsePattern> 公开菜单，而 <xref:System.Windows.Automation.InvokePattern> 用所选颜色填充活动选择项。
 
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
 
@@ -73,11 +73,11 @@ ms.locfileid: "74435159"
 |--------------------|---------------|
 |<xref:System.Windows.Automation.ElementNotEnabledException>|如果未启用该控件。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UI 自动化控件模式概述](ui-automation-control-patterns-overview.md)
 - [在 UI 自动化提供程序中支持控件模式](support-control-patterns-in-a-ui-automation-provider.md)
-- [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)
-- [使用 UI 自动化调用控件](invoke-a-control-using-ui-automation.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
+- [Invoke a Control Using UI Automation](invoke-a-control-using-ui-automation.md)
 - [UI 自动化树概述](ui-automation-tree-overview.md)
 - [在 UI 自动化中使用缓存](use-caching-in-ui-automation.md)

@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344631"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>How to: Find Sibling Nodes (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>如何查找同级节点（XPath LINQ to XML）（Visual Basic）
 
 您可能需要查找某一节点的具有特定名称的所有同级。 如果上下文节点也具有该特定名称，则生成的集合可能会包括上下文节点。
 
@@ -69,6 +69,6 @@ Results are identical
 </Book>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 用户的 LINQ to XML （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

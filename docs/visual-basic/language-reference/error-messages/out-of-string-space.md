@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349175"
 ---
 # <a name="out-of-string-space-visual-basic"></a>字符串空间不足 (Visual Basic)
-With Visual Basic, you can use very large strings. However, the requirements of other programs and the way you work with your strings can still cause this error.  
+使用 Visual Basic，可以使用非常大的字符串。 但是，其他程序的要求以及处理字符串的方式仍可能导致此错误。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1. Make sure that an expression requiring temporary string creation during evaluation is not causing the error.  
+1. 请确保在计算过程中需要临时字符串创建的表达式不会导致错误。  
   
-2. Remove any unnecessary applications from memory to create more space.  
+2. 从内存中删除所有不必要的应用程序以创建更多空间。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [错误类型](../../../visual-basic/programming-guide/language-features/error-types.md)
 - [字符串操作摘要](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
