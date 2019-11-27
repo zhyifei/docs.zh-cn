@@ -9,13 +9,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353355"
 ---
-# <a name="how-to-calculate-intermediate-values-visual-basic"></a><span data-ttu-id="dd3af-102">How to: Calculate Intermediate Values (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dd3af-102">How to: Calculate Intermediate Values (Visual Basic)</span></span>
-<span data-ttu-id="dd3af-103">本示例演示如何计算可用于进行排序、筛选和选择的中间值。</span><span class="sxs-lookup"><span data-stu-id="dd3af-103">This example shows how to calculate intermediate values that can be used in sorting, filtering, and selecting.</span></span>  
+# <a name="how-to-calculate-intermediate-values-visual-basic"></a><span data-ttu-id="74c04-102">如何：计算中间值（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="74c04-102">How to: Calculate Intermediate Values (Visual Basic)</span></span>
+<span data-ttu-id="74c04-103">本示例演示如何计算可用于进行排序、筛选和选择的中间值。</span><span class="sxs-lookup"><span data-stu-id="74c04-103">This example shows how to calculate intermediate values that can be used in sorting, filtering, and selecting.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="dd3af-104">示例</span><span class="sxs-lookup"><span data-stu-id="dd3af-104">Example</span></span>  
- <span data-ttu-id="dd3af-105">下面的示例使用 `Let` 子句。</span><span class="sxs-lookup"><span data-stu-id="dd3af-105">The following example uses the `Let` clause.</span></span>  
+## <a name="example"></a><span data-ttu-id="74c04-104">示例</span><span class="sxs-lookup"><span data-stu-id="74c04-104">Example</span></span>  
+ <span data-ttu-id="74c04-105">下面的示例使用 `Let` 子句。</span><span class="sxs-lookup"><span data-stu-id="74c04-105">The following example uses the `Let` clause.</span></span>  
   
- <span data-ttu-id="dd3af-106">本示例使用下面的 XML 文档：[示例 XML 文件：数值数据 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="dd3af-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="74c04-106">本示例使用下面的 XML 文档：[示例 XML 文件：数值数据 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="74c04-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim root As XElement = XElement.Load("Data.xml")  
@@ -30,7 +30,7 @@ For Each ex As Decimal In extensions
 Next  
 ```  
   
- <span data-ttu-id="dd3af-107">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="dd3af-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="74c04-107">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="74c04-107">This code produces the following output:</span></span>  
   
 ```console  
 55.92  
@@ -40,10 +40,10 @@ Next
 435.00  
 ```  
   
-## <a name="example"></a><span data-ttu-id="dd3af-108">示例</span><span class="sxs-lookup"><span data-stu-id="dd3af-108">Example</span></span>  
- <span data-ttu-id="dd3af-109">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="dd3af-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="dd3af-110">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="dd3af-110">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="74c04-108">示例</span><span class="sxs-lookup"><span data-stu-id="74c04-108">Example</span></span>  
+ <span data-ttu-id="74c04-109">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="74c04-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="74c04-110">有关详细信息，请参阅[命名空间概述（LINQ to XML）（Visual Basic）](namespaces-overview-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="74c04-110">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="dd3af-111">本示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的数值数据](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="dd3af-111">This example uses the following XML document: [Sample XML File: Numerical Data in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="74c04-111">本示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的数值数据](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="74c04-111">This example uses the following XML document: [Sample XML File: Numerical Data in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).</span></span>  
   
 ```vb  
 Imports <xmlns="http://www.adatum.com">  
@@ -64,7 +64,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="dd3af-112">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="dd3af-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="74c04-112">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="74c04-112">This code produces the following output:</span></span>  
   
 ```console  
 55.92  
@@ -74,6 +74,6 @@ End Module
 435.00  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="dd3af-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="dd3af-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="74c04-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="74c04-113">See also</span></span>
 
-- [<span data-ttu-id="dd3af-114">Basic Queries (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dd3af-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="74c04-114">基本查询（LINQ to XML）（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="74c04-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

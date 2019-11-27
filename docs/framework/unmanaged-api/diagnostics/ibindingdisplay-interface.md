@@ -21,25 +21,25 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448472"
 ---
-# <a name="ibindingdisplay-interface"></a><span data-ttu-id="16c49-102">IBindingDisplay 接口</span><span class="sxs-lookup"><span data-stu-id="16c49-102">IBindingDisplay Interface</span></span>
-<span data-ttu-id="16c49-103">Provides methods that display current binding information about the running application.</span><span class="sxs-lookup"><span data-stu-id="16c49-103">Provides methods that display current binding information about the running application.</span></span>  
+# <a name="ibindingdisplay-interface"></a><span data-ttu-id="c8a75-102">IBindingDisplay 接口</span><span class="sxs-lookup"><span data-stu-id="c8a75-102">IBindingDisplay Interface</span></span>
+<span data-ttu-id="c8a75-103">提供显示有关正在运行的应用程序的当前绑定信息的方法。</span><span class="sxs-lookup"><span data-stu-id="c8a75-103">Provides methods that display current binding information about the running application.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="16c49-104">方法</span><span class="sxs-lookup"><span data-stu-id="16c49-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="c8a75-104">方法</span><span class="sxs-lookup"><span data-stu-id="c8a75-104">Methods</span></span>  
   
-|<span data-ttu-id="16c49-105">方法</span><span class="sxs-lookup"><span data-stu-id="16c49-105">Method</span></span>|<span data-ttu-id="16c49-106">描述</span><span class="sxs-lookup"><span data-stu-id="16c49-106">Description</span></span>|  
+|<span data-ttu-id="c8a75-105">方法</span><span class="sxs-lookup"><span data-stu-id="c8a75-105">Method</span></span>|<span data-ttu-id="c8a75-106">说明</span><span class="sxs-lookup"><span data-stu-id="c8a75-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="16c49-107">GetCurrentDisplay 方法</span><span class="sxs-lookup"><span data-stu-id="16c49-107">GetCurrentDisplay Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|<span data-ttu-id="16c49-108">Returns the current binding display information.</span><span class="sxs-lookup"><span data-stu-id="16c49-108">Returns the current binding display information.</span></span>|  
-|[<span data-ttu-id="16c49-109">InitializeForProcess 方法</span><span class="sxs-lookup"><span data-stu-id="16c49-109">InitializeForProcess Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|<span data-ttu-id="16c49-110">初始化 `IBindingDisplay` 对象。</span><span class="sxs-lookup"><span data-stu-id="16c49-110">Initializes the `IBindingDisplay` object.</span></span>|  
+|[<span data-ttu-id="c8a75-107">GetCurrentDisplay 方法</span><span class="sxs-lookup"><span data-stu-id="c8a75-107">GetCurrentDisplay Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|<span data-ttu-id="c8a75-108">返回当前绑定显示信息。</span><span class="sxs-lookup"><span data-stu-id="c8a75-108">Returns the current binding display information.</span></span>|  
+|[<span data-ttu-id="c8a75-109">InitializeForProcess 方法</span><span class="sxs-lookup"><span data-stu-id="c8a75-109">InitializeForProcess Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|<span data-ttu-id="c8a75-110">初始化 `IBindingDisplay` 对象。</span><span class="sxs-lookup"><span data-stu-id="c8a75-110">Initializes the `IBindingDisplay` object.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="16c49-111">要求</span><span class="sxs-lookup"><span data-stu-id="16c49-111">Requirements</span></span>  
- <span data-ttu-id="16c49-112">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="16c49-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c8a75-111">要求</span><span class="sxs-lookup"><span data-stu-id="c8a75-111">Requirements</span></span>  
+ <span data-ttu-id="c8a75-112">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c8a75-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="16c49-113">**Header:** BindingDisplay.h</span><span class="sxs-lookup"><span data-stu-id="16c49-113">**Header:** BindingDisplay.h</span></span>  
+ <span data-ttu-id="c8a75-113">**标头：** BindingDisplay</span><span class="sxs-lookup"><span data-stu-id="c8a75-113">**Header:** BindingDisplay.h</span></span>  
   
- <span data-ttu-id="16c49-114">**Library:** BindingDisplay.idl</span><span class="sxs-lookup"><span data-stu-id="16c49-114">**Library:** BindingDisplay.idl</span></span>  
+ <span data-ttu-id="c8a75-114">**库：** BindingDisplay .idl</span><span class="sxs-lookup"><span data-stu-id="c8a75-114">**Library:** BindingDisplay.idl</span></span>  
   
- <span data-ttu-id="16c49-115">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="16c49-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c8a75-115">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c8a75-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="16c49-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="16c49-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c8a75-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c8a75-116">See also</span></span>
 
-- [<span data-ttu-id="16c49-117">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="16c49-117">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="c8a75-117">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="c8a75-117">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

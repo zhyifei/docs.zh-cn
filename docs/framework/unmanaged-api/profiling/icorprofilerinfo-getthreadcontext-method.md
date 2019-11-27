@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438758"
 ---
-# <a name="icorprofilerinfogetthreadcontext-method"></a><span data-ttu-id="f0f7d-102">ICorProfilerInfo::GetThreadContext 方法</span><span class="sxs-lookup"><span data-stu-id="f0f7d-102">ICorProfilerInfo::GetThreadContext Method</span></span>
-<span data-ttu-id="f0f7d-103">Gets the context identity currently associated with the specified thread.</span><span class="sxs-lookup"><span data-stu-id="f0f7d-103">Gets the context identity currently associated with the specified thread.</span></span>  
+# <a name="icorprofilerinfogetthreadcontext-method"></a><span data-ttu-id="49ba1-102">ICorProfilerInfo::GetThreadContext 方法</span><span class="sxs-lookup"><span data-stu-id="49ba1-102">ICorProfilerInfo::GetThreadContext Method</span></span>
+<span data-ttu-id="49ba1-103">获取当前与指定线程关联的上下文标识。</span><span class="sxs-lookup"><span data-stu-id="49ba1-103">Gets the context identity currently associated with the specified thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f0f7d-104">语法</span><span class="sxs-lookup"><span data-stu-id="f0f7d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="49ba1-104">语法</span><span class="sxs-lookup"><span data-stu-id="49ba1-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetThreadContext(  
@@ -33,22 +33,22 @@ HRESULT GetThreadContext(
     [out] ContextID *pContextId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f0f7d-105">参数</span><span class="sxs-lookup"><span data-stu-id="f0f7d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="49ba1-105">参数</span><span class="sxs-lookup"><span data-stu-id="49ba1-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="f0f7d-106">[in] The ID of the thread.</span><span class="sxs-lookup"><span data-stu-id="f0f7d-106">[in] The ID of the thread.</span></span>  
+ <span data-ttu-id="49ba1-106">中线程的 ID。</span><span class="sxs-lookup"><span data-stu-id="49ba1-106">[in] The ID of the thread.</span></span>  
   
  `pContextId`  
- <span data-ttu-id="f0f7d-107">[out] A pointer to the context ID currently associated with the specified thread.</span><span class="sxs-lookup"><span data-stu-id="f0f7d-107">[out] A pointer to the context ID currently associated with the specified thread.</span></span> <span data-ttu-id="f0f7d-108">If the thread has no context currently associated with it, this function will return CORPROF_E_DATAINCOMPLETE.</span><span class="sxs-lookup"><span data-stu-id="f0f7d-108">If the thread has no context currently associated with it, this function will return CORPROF_E_DATAINCOMPLETE.</span></span>  
+ <span data-ttu-id="49ba1-107">弄指向当前与指定线程关联的上下文 ID 的指针。</span><span class="sxs-lookup"><span data-stu-id="49ba1-107">[out] A pointer to the context ID currently associated with the specified thread.</span></span> <span data-ttu-id="49ba1-108">如果该线程当前没有关联的上下文，则此函数将返回 CORPROF_E_DATAINCOMPLETE。</span><span class="sxs-lookup"><span data-stu-id="49ba1-108">If the thread has no context currently associated with it, this function will return CORPROF_E_DATAINCOMPLETE.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f0f7d-109">要求</span><span class="sxs-lookup"><span data-stu-id="f0f7d-109">Requirements</span></span>  
- <span data-ttu-id="f0f7d-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f0f7d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="49ba1-109">要求</span><span class="sxs-lookup"><span data-stu-id="49ba1-109">Requirements</span></span>  
+ <span data-ttu-id="49ba1-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="49ba1-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f0f7d-111">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f0f7d-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="49ba1-111">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="49ba1-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="f0f7d-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f0f7d-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="49ba1-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="49ba1-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f0f7d-113">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f0f7d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="49ba1-113">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="49ba1-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f0f7d-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="f0f7d-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="49ba1-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="49ba1-114">See also</span></span>
 
-- [<span data-ttu-id="f0f7d-115">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="f0f7d-115">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="49ba1-115">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="49ba1-115">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

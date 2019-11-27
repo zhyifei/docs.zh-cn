@@ -22,21 +22,21 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438266"
 ---
-# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="98fd8-102">ISymUnmanagedWriter3::Commit 方法</span><span class="sxs-lookup"><span data-stu-id="98fd8-102">ISymUnmanagedWriter3::Commit Method</span></span>
-<span data-ttu-id="98fd8-103">Commits the changes written so far to the stream.</span><span class="sxs-lookup"><span data-stu-id="98fd8-103">Commits the changes written so far to the stream.</span></span>  
+# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="634d8-102">ISymUnmanagedWriter3::Commit 方法</span><span class="sxs-lookup"><span data-stu-id="634d8-102">ISymUnmanagedWriter3::Commit Method</span></span>
+<span data-ttu-id="634d8-103">将迄今为止写入的更改提交到流。</span><span class="sxs-lookup"><span data-stu-id="634d8-103">Commits the changes written so far to the stream.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="98fd8-104">语法</span><span class="sxs-lookup"><span data-stu-id="98fd8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="634d8-104">语法</span><span class="sxs-lookup"><span data-stu-id="634d8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Commit();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="98fd8-105">返回值</span><span class="sxs-lookup"><span data-stu-id="98fd8-105">Return Value</span></span>  
- <span data-ttu-id="98fd8-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="98fd8-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="634d8-105">返回值</span><span class="sxs-lookup"><span data-stu-id="634d8-105">Return Value</span></span>  
+ <span data-ttu-id="634d8-106">如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。</span><span class="sxs-lookup"><span data-stu-id="634d8-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="98fd8-107">要求</span><span class="sxs-lookup"><span data-stu-id="98fd8-107">Requirements</span></span>  
- <span data-ttu-id="98fd8-108">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="98fd8-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="634d8-107">要求</span><span class="sxs-lookup"><span data-stu-id="634d8-107">Requirements</span></span>  
+ <span data-ttu-id="634d8-108">**标头：** CorSym，CorSym</span><span class="sxs-lookup"><span data-stu-id="634d8-108">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="98fd8-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="98fd8-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="634d8-109">另请参阅</span><span class="sxs-lookup"><span data-stu-id="634d8-109">See also</span></span>
 
-- [<span data-ttu-id="98fd8-110">ISymUnmanagedWriter3 接口</span><span class="sxs-lookup"><span data-stu-id="98fd8-110">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+- [<span data-ttu-id="634d8-110">ISymUnmanagedWriter3 接口</span><span class="sxs-lookup"><span data-stu-id="634d8-110">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)

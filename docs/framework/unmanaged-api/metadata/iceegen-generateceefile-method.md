@@ -22,29 +22,29 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436372"
 ---
-# <a name="iceegengenerateceefile-method"></a><span data-ttu-id="f2225-102">ICeeGen::GenerateCeeFile 方法</span><span class="sxs-lookup"><span data-stu-id="f2225-102">ICeeGen::GenerateCeeFile Method</span></span>
-<span data-ttu-id="f2225-103">Generates a code-base file that contains the code base currently loaded into this [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="f2225-103">Generates a code-base file that contains the code base currently loaded into this [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.</span></span>  
+# <a name="iceegengenerateceefile-method"></a><span data-ttu-id="dc330-102">ICeeGen::GenerateCeeFile 方法</span><span class="sxs-lookup"><span data-stu-id="dc330-102">ICeeGen::GenerateCeeFile Method</span></span>
+<span data-ttu-id="dc330-103">生成一个代码基文件，其中包含当前加载到此[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)接口中的代码库。</span><span class="sxs-lookup"><span data-stu-id="dc330-103">Generates a code-base file that contains the code base currently loaded into this [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.</span></span>  
   
- <span data-ttu-id="f2225-104">This method is obsolete and should not be used.</span><span class="sxs-lookup"><span data-stu-id="f2225-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="dc330-104">此方法已过时，不应使用。</span><span class="sxs-lookup"><span data-stu-id="dc330-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f2225-105">语法</span><span class="sxs-lookup"><span data-stu-id="f2225-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dc330-105">语法</span><span class="sxs-lookup"><span data-stu-id="dc330-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GenerateCeeFile ();  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f2225-106">参数</span><span class="sxs-lookup"><span data-stu-id="f2225-106">Parameters</span></span>  
- <span data-ttu-id="f2225-107">`GenerateCeeFile` takes no parameters.</span><span class="sxs-lookup"><span data-stu-id="f2225-107">`GenerateCeeFile` takes no parameters.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dc330-106">参数</span><span class="sxs-lookup"><span data-stu-id="dc330-106">Parameters</span></span>  
+ <span data-ttu-id="dc330-107">`GenerateCeeFile` 不采用任何参数。</span><span class="sxs-lookup"><span data-stu-id="dc330-107">`GenerateCeeFile` takes no parameters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f2225-108">要求</span><span class="sxs-lookup"><span data-stu-id="f2225-108">Requirements</span></span>  
- <span data-ttu-id="f2225-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f2225-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dc330-108">要求</span><span class="sxs-lookup"><span data-stu-id="dc330-108">Requirements</span></span>  
+ <span data-ttu-id="dc330-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dc330-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f2225-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f2225-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="dc330-110">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="dc330-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f2225-111">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f2225-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="dc330-111">**库：** 用作 Mscoree.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="dc330-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f2225-112">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f2225-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="dc330-112">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dc330-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f2225-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="f2225-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dc330-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="dc330-113">See also</span></span>
 
-- [<span data-ttu-id="f2225-114">ICeeGen 接口</span><span class="sxs-lookup"><span data-stu-id="f2225-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="dc330-114">ICeeGen 接口</span><span class="sxs-lookup"><span data-stu-id="dc330-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

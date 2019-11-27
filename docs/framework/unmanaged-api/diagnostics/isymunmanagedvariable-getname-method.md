@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446051"
 ---
-# <a name="isymunmanagedvariablegetname-method"></a><span data-ttu-id="4c196-102">ISymUnmanagedVariable::GetName 方法</span><span class="sxs-lookup"><span data-stu-id="4c196-102">ISymUnmanagedVariable::GetName Method</span></span>
-<span data-ttu-id="4c196-103">Gets the name of this variable.</span><span class="sxs-lookup"><span data-stu-id="4c196-103">Gets the name of this variable.</span></span>  
+# <a name="isymunmanagedvariablegetname-method"></a><span data-ttu-id="c8179-102">ISymUnmanagedVariable::GetName 方法</span><span class="sxs-lookup"><span data-stu-id="c8179-102">ISymUnmanagedVariable::GetName Method</span></span>
+<span data-ttu-id="c8179-103">获取此变量的名称。</span><span class="sxs-lookup"><span data-stu-id="c8179-103">Gets the name of this variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4c196-104">语法</span><span class="sxs-lookup"><span data-stu-id="4c196-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c8179-104">语法</span><span class="sxs-lookup"><span data-stu-id="c8179-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetName(  
@@ -35,22 +35,22 @@ HRESULT GetName(
         length_is(*pcchName)] WCHAR szName[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4c196-105">参数</span><span class="sxs-lookup"><span data-stu-id="4c196-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c8179-105">参数</span><span class="sxs-lookup"><span data-stu-id="c8179-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="4c196-106">[in] The length of the buffer that the `pcchName` parameter points to.</span><span class="sxs-lookup"><span data-stu-id="4c196-106">[in] The length of the buffer that the `pcchName` parameter points to.</span></span>  
+ <span data-ttu-id="c8179-106">中`pcchName` 参数指向的缓冲区的长度。</span><span class="sxs-lookup"><span data-stu-id="c8179-106">[in] The length of the buffer that the `pcchName` parameter points to.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="4c196-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the name, including the null termination.</span><span class="sxs-lookup"><span data-stu-id="4c196-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the name, including the null termination.</span></span>  
+ <span data-ttu-id="c8179-107">弄指向 `ULONG32` 的指针，该指针接收包含名称所需的缓冲区的大小（以字符数表示，包括 null 终止）。</span><span class="sxs-lookup"><span data-stu-id="c8179-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the name, including the null termination.</span></span>  
   
  `szName`  
- <span data-ttu-id="4c196-108">[out] The buffer that stores the name.</span><span class="sxs-lookup"><span data-stu-id="4c196-108">[out] The buffer that stores the name.</span></span>  
+ <span data-ttu-id="c8179-108">弄存储名称的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="c8179-108">[out] The buffer that stores the name.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4c196-109">返回值</span><span class="sxs-lookup"><span data-stu-id="4c196-109">Return Value</span></span>  
- <span data-ttu-id="4c196-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="4c196-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c8179-109">返回值</span><span class="sxs-lookup"><span data-stu-id="c8179-109">Return Value</span></span>  
+ <span data-ttu-id="c8179-110">如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。</span><span class="sxs-lookup"><span data-stu-id="c8179-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4c196-111">要求</span><span class="sxs-lookup"><span data-stu-id="4c196-111">Requirements</span></span>  
- <span data-ttu-id="4c196-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4c196-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c8179-111">要求</span><span class="sxs-lookup"><span data-stu-id="c8179-111">Requirements</span></span>  
+ <span data-ttu-id="c8179-112">**标头：** CorSym，CorSym</span><span class="sxs-lookup"><span data-stu-id="c8179-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4c196-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="4c196-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c8179-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c8179-113">See also</span></span>
 
-- [<span data-ttu-id="4c196-114">ISymUnmanagedVariable 接口</span><span class="sxs-lookup"><span data-stu-id="4c196-114">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [<span data-ttu-id="c8179-114">ISymUnmanagedVariable 接口</span><span class="sxs-lookup"><span data-stu-id="c8179-114">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

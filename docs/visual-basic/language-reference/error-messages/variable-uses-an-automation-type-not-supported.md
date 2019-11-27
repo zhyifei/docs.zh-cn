@@ -1,5 +1,5 @@
 ---
-title: Variable uses an Automation type not supported
+title: 变量使用了不支持的自动化类型
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID458
@@ -11,18 +11,18 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344830"
 ---
-# <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a><span data-ttu-id="bb4d4-102">变量使用了 Visual Basic 不支持的自动化类型</span><span class="sxs-lookup"><span data-stu-id="bb4d4-102">Variable uses an Automation type not supported in Visual Basic</span></span>
+# <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a><span data-ttu-id="12339-102">变量使用了 Visual Basic 不支持的自动化类型</span><span class="sxs-lookup"><span data-stu-id="12339-102">Variable uses an Automation type not supported in Visual Basic</span></span>
 
-<span data-ttu-id="bb4d4-103">You tried to use a variable defined in a type library or object library that has a data type not supported by Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="bb4d4-103">You tried to use a variable defined in a type library or object library that has a data type not supported by Visual Basic.</span></span>
+<span data-ttu-id="12339-103">尝试使用类型库或对象库中定义的变量，该变量的数据类型不受 Visual Basic 支持。</span><span class="sxs-lookup"><span data-stu-id="12339-103">You tried to use a variable defined in a type library or object library that has a data type not supported by Visual Basic.</span></span>
 
-## <a name="to-correct-this-error"></a><span data-ttu-id="bb4d4-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="bb4d4-104">To correct this error</span></span>
+## <a name="to-correct-this-error"></a><span data-ttu-id="12339-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="12339-104">To correct this error</span></span>
 
-- <span data-ttu-id="bb4d4-105">Use a variable of a type recognized by Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="bb4d4-105">Use a variable of a type recognized by Visual Basic.</span></span>
+- <span data-ttu-id="12339-105">使用 Visual Basic 可识别的类型的变量。</span><span class="sxs-lookup"><span data-stu-id="12339-105">Use a variable of a type recognized by Visual Basic.</span></span>
 
-     <span data-ttu-id="bb4d4-106">或</span><span class="sxs-lookup"><span data-stu-id="bb4d4-106">-or-</span></span>
+     <span data-ttu-id="12339-106">\- 或 -</span><span class="sxs-lookup"><span data-stu-id="12339-106">-or-</span></span>
 
-- <span data-ttu-id="bb4d4-107">If you encounter this error while using `FileGet` or `FileGetObject`, make sure the file you are trying to use was written to with `FilePut` or `FilePutObject`.</span><span class="sxs-lookup"><span data-stu-id="bb4d4-107">If you encounter this error while using `FileGet` or `FileGetObject`, make sure the file you are trying to use was written to with `FilePut` or `FilePutObject`.</span></span>
+- <span data-ttu-id="12339-107">如果使用 `FileGet` 或 `FileGetObject`时遇到此错误，请确保使用 `FilePut` 或 `FilePutObject`写入尝试使用的文件。</span><span class="sxs-lookup"><span data-stu-id="12339-107">If you encounter this error while using `FileGet` or `FileGetObject`, make sure the file you are trying to use was written to with `FilePut` or `FilePutObject`.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="bb4d4-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="bb4d4-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="12339-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="12339-108">See also</span></span>
 
-- [<span data-ttu-id="bb4d4-109">数据类型</span><span class="sxs-lookup"><span data-stu-id="bb4d4-109">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)
+- [<span data-ttu-id="12339-109">数据类型</span><span class="sxs-lookup"><span data-stu-id="12339-109">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)

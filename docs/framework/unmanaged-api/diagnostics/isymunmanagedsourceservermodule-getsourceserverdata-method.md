@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446219"
 ---
-# <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a><span data-ttu-id="1b5da-102">ISymUnmanagedSourceServerModule::GetSourceServerData 方法</span><span class="sxs-lookup"><span data-stu-id="1b5da-102">ISymUnmanagedSourceServerModule::GetSourceServerData Method</span></span>
-<span data-ttu-id="1b5da-103">Returns the source server data for the module.</span><span class="sxs-lookup"><span data-stu-id="1b5da-103">Returns the source server data for the module.</span></span> <span data-ttu-id="1b5da-104">The caller must free resources by using `CoTaskMemFree`.</span><span class="sxs-lookup"><span data-stu-id="1b5da-104">The caller must free resources by using `CoTaskMemFree`.</span></span>  
+# <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a><span data-ttu-id="a3b89-102">ISymUnmanagedSourceServerModule::GetSourceServerData 方法</span><span class="sxs-lookup"><span data-stu-id="a3b89-102">ISymUnmanagedSourceServerModule::GetSourceServerData Method</span></span>
+<span data-ttu-id="a3b89-103">返回模块的源服务器数据。</span><span class="sxs-lookup"><span data-stu-id="a3b89-103">Returns the source server data for the module.</span></span> <span data-ttu-id="a3b89-104">调用方必须使用 `CoTaskMemFree`释放资源。</span><span class="sxs-lookup"><span data-stu-id="a3b89-104">The caller must free resources by using `CoTaskMemFree`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1b5da-105">语法</span><span class="sxs-lookup"><span data-stu-id="1b5da-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a3b89-105">语法</span><span class="sxs-lookup"><span data-stu-id="a3b89-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSourceServerData(  
@@ -33,19 +33,19 @@ HRESULT GetSourceServerData(
     [out, size_is (, *pDataByteCount)] BYTE** ppData);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1b5da-106">参数</span><span class="sxs-lookup"><span data-stu-id="1b5da-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a3b89-106">参数</span><span class="sxs-lookup"><span data-stu-id="a3b89-106">Parameters</span></span>  
  `pDataByteCount`  
- <span data-ttu-id="1b5da-107">[out] A pointer to a `ULONG32` that receives the size, in bytes, of the source server data.</span><span class="sxs-lookup"><span data-stu-id="1b5da-107">[out] A pointer to a `ULONG32` that receives the size, in bytes, of the source server data.</span></span>  
+ <span data-ttu-id="a3b89-107">弄指向接收源服务器数据的大小（以字节为单位）的 `ULONG32` 的指针。</span><span class="sxs-lookup"><span data-stu-id="a3b89-107">[out] A pointer to a `ULONG32` that receives the size, in bytes, of the source server data.</span></span>  
   
  `ppData`  
- <span data-ttu-id="1b5da-108">[out] A pointer to the returned `pDataByteCount` value.</span><span class="sxs-lookup"><span data-stu-id="1b5da-108">[out] A pointer to the returned `pDataByteCount` value.</span></span>  
+ <span data-ttu-id="a3b89-108">弄指向返回的 `pDataByteCount` 值的指针。</span><span class="sxs-lookup"><span data-stu-id="a3b89-108">[out] A pointer to the returned `pDataByteCount` value.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1b5da-109">返回值</span><span class="sxs-lookup"><span data-stu-id="1b5da-109">Return Value</span></span>  
- <span data-ttu-id="1b5da-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="1b5da-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a3b89-109">返回值</span><span class="sxs-lookup"><span data-stu-id="a3b89-109">Return Value</span></span>  
+ <span data-ttu-id="a3b89-110">如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。</span><span class="sxs-lookup"><span data-stu-id="a3b89-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1b5da-111">要求</span><span class="sxs-lookup"><span data-stu-id="1b5da-111">Requirements</span></span>  
- <span data-ttu-id="1b5da-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="1b5da-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a3b89-111">要求</span><span class="sxs-lookup"><span data-stu-id="a3b89-111">Requirements</span></span>  
+ <span data-ttu-id="a3b89-112">**标头：** CorSym，CorSym</span><span class="sxs-lookup"><span data-stu-id="a3b89-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1b5da-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="1b5da-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a3b89-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a3b89-113">See also</span></span>
 
-- [<span data-ttu-id="1b5da-114">ISymUnmanagedSourceServerModule 接口</span><span class="sxs-lookup"><span data-stu-id="1b5da-114">ISymUnmanagedSourceServerModule Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)
+- [<span data-ttu-id="a3b89-114">ISymUnmanagedSourceServerModule 接口</span><span class="sxs-lookup"><span data-stu-id="a3b89-114">ISymUnmanagedSourceServerModule Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)

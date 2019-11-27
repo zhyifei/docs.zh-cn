@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448278"
 ---
-# <a name="isymunmanagedreadergetmethod-method"></a><span data-ttu-id="6bfab-102">ISymUnmanagedReader::GetMethod 方法</span><span class="sxs-lookup"><span data-stu-id="6bfab-102">ISymUnmanagedReader::GetMethod Method</span></span>
-<span data-ttu-id="6bfab-103">Gets a symbol reader method, given a method token.</span><span class="sxs-lookup"><span data-stu-id="6bfab-103">Gets a symbol reader method, given a method token.</span></span>  
+# <a name="isymunmanagedreadergetmethod-method"></a><span data-ttu-id="643e8-102">ISymUnmanagedReader::GetMethod 方法</span><span class="sxs-lookup"><span data-stu-id="643e8-102">ISymUnmanagedReader::GetMethod Method</span></span>
+<span data-ttu-id="643e8-103">在给定方法标记的情况下，获取符号读取器方法。</span><span class="sxs-lookup"><span data-stu-id="643e8-103">Gets a symbol reader method, given a method token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6bfab-104">语法</span><span class="sxs-lookup"><span data-stu-id="6bfab-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="643e8-104">语法</span><span class="sxs-lookup"><span data-stu-id="643e8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMethod (  
@@ -33,19 +33,19 @@ HRESULT GetMethod (
     [out, retval] ISymUnmanagedMethod**  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6bfab-105">参数</span><span class="sxs-lookup"><span data-stu-id="6bfab-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="643e8-105">参数</span><span class="sxs-lookup"><span data-stu-id="643e8-105">Parameters</span></span>  
  `token`  
- <span data-ttu-id="6bfab-106">[in] The method token.</span><span class="sxs-lookup"><span data-stu-id="6bfab-106">[in] The method token.</span></span>  
+ <span data-ttu-id="643e8-106">中方法标记。</span><span class="sxs-lookup"><span data-stu-id="643e8-106">[in] The method token.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="6bfab-107">[out] A pointer to the returned interface.</span><span class="sxs-lookup"><span data-stu-id="6bfab-107">[out] A pointer to the returned interface.</span></span>  
+ <span data-ttu-id="643e8-107">弄指向返回的接口的指针。</span><span class="sxs-lookup"><span data-stu-id="643e8-107">[out] A pointer to the returned interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="6bfab-108">返回值</span><span class="sxs-lookup"><span data-stu-id="6bfab-108">Return Value</span></span>  
- <span data-ttu-id="6bfab-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="6bfab-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="643e8-108">返回值</span><span class="sxs-lookup"><span data-stu-id="643e8-108">Return Value</span></span>  
+ <span data-ttu-id="643e8-109">如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。</span><span class="sxs-lookup"><span data-stu-id="643e8-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6bfab-110">要求</span><span class="sxs-lookup"><span data-stu-id="6bfab-110">Requirements</span></span>  
- <span data-ttu-id="6bfab-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="6bfab-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="643e8-110">要求</span><span class="sxs-lookup"><span data-stu-id="643e8-110">Requirements</span></span>  
+ <span data-ttu-id="643e8-111">**标头：** CorSym，CorSym</span><span class="sxs-lookup"><span data-stu-id="643e8-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6bfab-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="6bfab-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="643e8-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="643e8-112">See also</span></span>
 
-- [<span data-ttu-id="6bfab-113">ISymUnmanagedReader 接口</span><span class="sxs-lookup"><span data-stu-id="6bfab-113">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="643e8-113">ISymUnmanagedReader 接口</span><span class="sxs-lookup"><span data-stu-id="643e8-113">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

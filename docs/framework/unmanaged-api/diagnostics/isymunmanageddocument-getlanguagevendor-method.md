@@ -22,23 +22,23 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449170"
 ---
-# <a name="isymunmanageddocumentgetlanguagevendor-method"></a><span data-ttu-id="164c9-102">ISymUnmanagedDocument::GetLanguageVendor 方法</span><span class="sxs-lookup"><span data-stu-id="164c9-102">ISymUnmanagedDocument::GetLanguageVendor Method</span></span>
-<span data-ttu-id="164c9-103">Gets the language vendor of this document.</span><span class="sxs-lookup"><span data-stu-id="164c9-103">Gets the language vendor of this document.</span></span>  
+# <a name="isymunmanageddocumentgetlanguagevendor-method"></a><span data-ttu-id="2a431-102">ISymUnmanagedDocument::GetLanguageVendor 方法</span><span class="sxs-lookup"><span data-stu-id="2a431-102">ISymUnmanagedDocument::GetLanguageVendor Method</span></span>
+<span data-ttu-id="2a431-103">获取此文档的语言供应商。</span><span class="sxs-lookup"><span data-stu-id="2a431-103">Gets the language vendor of this document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="164c9-104">语法</span><span class="sxs-lookup"><span data-stu-id="164c9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2a431-104">语法</span><span class="sxs-lookup"><span data-stu-id="2a431-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetLanguageVendor(  
     [out, retval]  GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="164c9-105">参数</span><span class="sxs-lookup"><span data-stu-id="164c9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2a431-105">参数</span><span class="sxs-lookup"><span data-stu-id="2a431-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="164c9-106">[out] A pointer to a variable that receives the language vendor.</span><span class="sxs-lookup"><span data-stu-id="164c9-106">[out] A pointer to a variable that receives the language vendor.</span></span>  
+ <span data-ttu-id="2a431-106">弄指向接收语言供应商的变量的指针。</span><span class="sxs-lookup"><span data-stu-id="2a431-106">[out] A pointer to a variable that receives the language vendor.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="164c9-107">返回值</span><span class="sxs-lookup"><span data-stu-id="164c9-107">Return Value</span></span>  
- <span data-ttu-id="164c9-108">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="164c9-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2a431-107">返回值</span><span class="sxs-lookup"><span data-stu-id="2a431-107">Return Value</span></span>  
+ <span data-ttu-id="2a431-108">如果方法成功，则 S_OK。</span><span class="sxs-lookup"><span data-stu-id="2a431-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="164c9-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="164c9-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2a431-109">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2a431-109">See also</span></span>
 
-- [<span data-ttu-id="164c9-110">ISymUnmanagedDocument 接口</span><span class="sxs-lookup"><span data-stu-id="164c9-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="2a431-110">ISymUnmanagedDocument 接口</span><span class="sxs-lookup"><span data-stu-id="2a431-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

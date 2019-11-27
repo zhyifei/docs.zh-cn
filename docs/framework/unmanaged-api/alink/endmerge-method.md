@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434405"
 ---
-# <a name="endmerge-method"></a><span data-ttu-id="96ada-102">EndMerge 方法</span><span class="sxs-lookup"><span data-stu-id="96ada-102">EndMerge Method</span></span>
-<span data-ttu-id="96ada-103">Indicates that all custom attributes have been merged into the emit scope.</span><span class="sxs-lookup"><span data-stu-id="96ada-103">Indicates that all custom attributes have been merged into the emit scope.</span></span>  
+# <a name="endmerge-method"></a><span data-ttu-id="2d437-102">EndMerge 方法</span><span class="sxs-lookup"><span data-stu-id="2d437-102">EndMerge Method</span></span>
+<span data-ttu-id="2d437-103">指示所有自定义特性都已合并到发出范围中。</span><span class="sxs-lookup"><span data-stu-id="2d437-103">Indicates that all custom attributes have been merged into the emit scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="96ada-104">语法</span><span class="sxs-lookup"><span data-stu-id="96ada-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2d437-104">语法</span><span class="sxs-lookup"><span data-stu-id="2d437-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EndMerge(  
@@ -33,18 +33,18 @@ HRESULT EndMerge(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="96ada-105">参数</span><span class="sxs-lookup"><span data-stu-id="96ada-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2d437-105">参数</span><span class="sxs-lookup"><span data-stu-id="2d437-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="96ada-106">ID of the assembly.</span><span class="sxs-lookup"><span data-stu-id="96ada-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="2d437-106">程序集的 ID。</span><span class="sxs-lookup"><span data-stu-id="2d437-106">ID of the assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="96ada-107">返回值</span><span class="sxs-lookup"><span data-stu-id="96ada-107">Return Value</span></span>  
- <span data-ttu-id="96ada-108">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="96ada-108">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2d437-107">返回值</span><span class="sxs-lookup"><span data-stu-id="2d437-107">Return Value</span></span>  
+ <span data-ttu-id="2d437-108">如果方法成功，则返回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="2d437-108">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="96ada-109">要求</span><span class="sxs-lookup"><span data-stu-id="96ada-109">Requirements</span></span>  
- <span data-ttu-id="96ada-110">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="96ada-110">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2d437-109">要求</span><span class="sxs-lookup"><span data-stu-id="2d437-109">Requirements</span></span>  
+ <span data-ttu-id="2d437-110">需要 alink</span><span class="sxs-lookup"><span data-stu-id="2d437-110">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="96ada-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="96ada-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2d437-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2d437-111">See also</span></span>
 
-- [<span data-ttu-id="96ada-112">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="96ada-112">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="96ada-113">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="96ada-113">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="96ada-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="96ada-114">ALink API</span></span>](index.md)
+- [<span data-ttu-id="2d437-112">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="2d437-112">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="2d437-113">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="2d437-113">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="2d437-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="2d437-114">ALink API</span></span>](index.md)

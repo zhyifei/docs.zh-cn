@@ -12,5 +12,5 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353303"
 ---
-# <a name="visual-basic-compiler-messages"></a><span data-ttu-id="d3e92-102">Visual Basic 编译器消息</span><span class="sxs-lookup"><span data-stu-id="d3e92-102">Visual Basic Compiler Messages</span></span>
-<span data-ttu-id="d3e92-103">This section contains the Visual Basic error messages that occur at compile time.</span><span class="sxs-lookup"><span data-stu-id="d3e92-103">This section contains the Visual Basic error messages that occur at compile time.</span></span>
+# <a name="visual-basic-compiler-messages"></a><span data-ttu-id="bd011-102">Visual Basic 编译器消息</span><span class="sxs-lookup"><span data-stu-id="bd011-102">Visual Basic Compiler Messages</span></span>
+<span data-ttu-id="bd011-103">本部分包含编译时出现的 Visual Basic 错误消息。</span><span class="sxs-lookup"><span data-stu-id="bd011-103">This section contains the Visual Basic error messages that occur at compile time.</span></span>

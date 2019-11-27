@@ -21,10 +21,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445605"
 ---
-# <a name="setassemblyfile-method"></a><span data-ttu-id="3b251-102">SetAssemblyFile 方法</span><span class="sxs-lookup"><span data-stu-id="3b251-102">SetAssemblyFile Method</span></span>
-<span data-ttu-id="3b251-103">Assigns the name of the assembly to be built.</span><span class="sxs-lookup"><span data-stu-id="3b251-103">Assigns the name of the assembly to be built.</span></span> <span data-ttu-id="3b251-104">Not for use when producing unbound modules.</span><span class="sxs-lookup"><span data-stu-id="3b251-104">Not for use when producing unbound modules.</span></span>  
+# <a name="setassemblyfile-method"></a><span data-ttu-id="93f95-102">SetAssemblyFile 方法</span><span class="sxs-lookup"><span data-stu-id="93f95-102">SetAssemblyFile Method</span></span>
+<span data-ttu-id="93f95-103">指定要生成的程序集的名称。</span><span class="sxs-lookup"><span data-stu-id="93f95-103">Assigns the name of the assembly to be built.</span></span> <span data-ttu-id="93f95-104">不在生成未绑定的模块时使用。</span><span class="sxs-lookup"><span data-stu-id="93f95-104">Not for use when producing unbound modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3b251-105">语法</span><span class="sxs-lookup"><span data-stu-id="3b251-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="93f95-105">语法</span><span class="sxs-lookup"><span data-stu-id="93f95-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetAssemblyFile(  
@@ -35,27 +35,27 @@ HRESULT SetAssemblyFile(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3b251-106">参数</span><span class="sxs-lookup"><span data-stu-id="3b251-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="93f95-106">参数</span><span class="sxs-lookup"><span data-stu-id="93f95-106">Parameters</span></span>  
  `pszFilename`  
- <span data-ttu-id="3b251-107">Fully qualified name of the manifest file.</span><span class="sxs-lookup"><span data-stu-id="3b251-107">Fully qualified name of the manifest file.</span></span>  
+ <span data-ttu-id="93f95-107">清单文件的完全限定名称。</span><span class="sxs-lookup"><span data-stu-id="93f95-107">Fully qualified name of the manifest file.</span></span>  
   
  `pEmitter`  
- <span data-ttu-id="3b251-108">Pointer to [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="3b251-108">Pointer to [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface.</span></span>  
+ <span data-ttu-id="93f95-108">指向[IMetaDataEmit 接口](../metadata/imetadataemit-interface.md)接口的指针。</span><span class="sxs-lookup"><span data-stu-id="93f95-108">Pointer to [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface.</span></span>  
   
  `afFlags`  
- <span data-ttu-id="3b251-109">Flags as defined in [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).</span><span class="sxs-lookup"><span data-stu-id="3b251-109">Flags as defined in [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).</span></span>  
+ <span data-ttu-id="93f95-109">[AssemblyFlags 枚举](../metadata/assemblyflags-enumeration.md)中定义的标志。</span><span class="sxs-lookup"><span data-stu-id="93f95-109">Flags as defined in [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).</span></span>  
   
  `pAssemblyID`  
- <span data-ttu-id="3b251-110">Pointer to ID of resulting assembly.</span><span class="sxs-lookup"><span data-stu-id="3b251-110">Pointer to ID of resulting assembly.</span></span>  
+ <span data-ttu-id="93f95-110">指向生成的程序集的 ID 的指针。</span><span class="sxs-lookup"><span data-stu-id="93f95-110">Pointer to ID of resulting assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3b251-111">返回值</span><span class="sxs-lookup"><span data-stu-id="3b251-111">Return Value</span></span>  
- <span data-ttu-id="3b251-112">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="3b251-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="93f95-111">返回值</span><span class="sxs-lookup"><span data-stu-id="93f95-111">Return Value</span></span>  
+ <span data-ttu-id="93f95-112">如果方法成功，则返回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="93f95-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3b251-113">要求</span><span class="sxs-lookup"><span data-stu-id="3b251-113">Requirements</span></span>  
- <span data-ttu-id="3b251-114">Requires alink.h.</span><span class="sxs-lookup"><span data-stu-id="3b251-114">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="93f95-113">要求</span><span class="sxs-lookup"><span data-stu-id="93f95-113">Requirements</span></span>  
+ <span data-ttu-id="93f95-114">需要 alink。</span><span class="sxs-lookup"><span data-stu-id="93f95-114">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3b251-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="3b251-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="93f95-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="93f95-115">See also</span></span>
 
-- [<span data-ttu-id="3b251-116">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="3b251-116">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="3b251-117">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="3b251-117">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="3b251-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="3b251-118">ALink API</span></span>](index.md)
+- [<span data-ttu-id="93f95-116">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="93f95-116">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="93f95-117">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="93f95-117">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="93f95-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="93f95-118">ALink API</span></span>](index.md)

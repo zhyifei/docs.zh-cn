@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448613"
 ---
-# <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a><span data-ttu-id="e8dd2-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument 方法</span><span class="sxs-lookup"><span data-stu-id="e8dd2-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument Method</span></span>
-<span data-ttu-id="e8dd2-103">Gets the smallest start line and largest end line for the method in a specific document.</span><span class="sxs-lookup"><span data-stu-id="e8dd2-103">Gets the smallest start line and largest end line for the method in a specific document.</span></span>  
+# <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a><span data-ttu-id="84b27-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument 方法</span><span class="sxs-lookup"><span data-stu-id="84b27-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument Method</span></span>
+<span data-ttu-id="84b27-103">获取特定文档中该方法的最小起始行和最大结束行。</span><span class="sxs-lookup"><span data-stu-id="84b27-103">Gets the smallest start line and largest end line for the method in a specific document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e8dd2-104">语法</span><span class="sxs-lookup"><span data-stu-id="e8dd2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="84b27-104">语法</span><span class="sxs-lookup"><span data-stu-id="84b27-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSourceExtentInDocument(  
@@ -34,22 +34,22 @@ HRESULT GetSourceExtentInDocument(
     [out] ULONG32* pendLine);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e8dd2-105">参数</span><span class="sxs-lookup"><span data-stu-id="e8dd2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="84b27-105">参数</span><span class="sxs-lookup"><span data-stu-id="84b27-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="e8dd2-106">[in] A pointer to the document.</span><span class="sxs-lookup"><span data-stu-id="e8dd2-106">[in] A pointer to the document.</span></span>  
+ <span data-ttu-id="84b27-106">中指向文档的指针。</span><span class="sxs-lookup"><span data-stu-id="84b27-106">[in] A pointer to the document.</span></span>  
   
  `pstartLine`  
- <span data-ttu-id="e8dd2-107">[out] A pointer to a `ULONG32` that receives the start line.</span><span class="sxs-lookup"><span data-stu-id="e8dd2-107">[out] A pointer to a `ULONG32` that receives the start line.</span></span>  
+ <span data-ttu-id="84b27-107">弄指向接收起始行的 `ULONG32` 的指针。</span><span class="sxs-lookup"><span data-stu-id="84b27-107">[out] A pointer to a `ULONG32` that receives the start line.</span></span>  
   
  `pendLine`  
- <span data-ttu-id="e8dd2-108">[out] A pointer to a `ULONG32` that receives the end line.</span><span class="sxs-lookup"><span data-stu-id="e8dd2-108">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
+ <span data-ttu-id="84b27-108">弄指向接收结束行的 `ULONG32` 的指针。</span><span class="sxs-lookup"><span data-stu-id="84b27-108">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e8dd2-109">返回值</span><span class="sxs-lookup"><span data-stu-id="e8dd2-109">Return Value</span></span>  
- <span data-ttu-id="e8dd2-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="e8dd2-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="84b27-109">返回值</span><span class="sxs-lookup"><span data-stu-id="84b27-109">Return Value</span></span>  
+ <span data-ttu-id="84b27-110">如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。</span><span class="sxs-lookup"><span data-stu-id="84b27-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e8dd2-111">要求</span><span class="sxs-lookup"><span data-stu-id="e8dd2-111">Requirements</span></span>  
- <span data-ttu-id="e8dd2-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e8dd2-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="84b27-111">要求</span><span class="sxs-lookup"><span data-stu-id="84b27-111">Requirements</span></span>  
+ <span data-ttu-id="84b27-112">**标头：** CorSym，CorSym</span><span class="sxs-lookup"><span data-stu-id="84b27-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e8dd2-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="e8dd2-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="84b27-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="84b27-113">See also</span></span>
 
-- [<span data-ttu-id="e8dd2-114">ISymENCUnmanagedMethod 接口</span><span class="sxs-lookup"><span data-stu-id="e8dd2-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [<span data-ttu-id="84b27-114">ISymENCUnmanagedMethod 接口</span><span class="sxs-lookup"><span data-stu-id="84b27-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

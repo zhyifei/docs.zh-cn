@@ -22,24 +22,24 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428112"
 ---
-# <a name="isymunmanagedwriterclose-method"></a><span data-ttu-id="c4874-102">ISymUnmanagedWriter::Close 方法</span><span class="sxs-lookup"><span data-stu-id="c4874-102">ISymUnmanagedWriter::Close Method</span></span>
-<span data-ttu-id="c4874-103">Closes the symbol writer after committing the symbols to the symbol store.</span><span class="sxs-lookup"><span data-stu-id="c4874-103">Closes the symbol writer after committing the symbols to the symbol store.</span></span>  
+# <a name="isymunmanagedwriterclose-method"></a><span data-ttu-id="c7612-102">ISymUnmanagedWriter::Close 方法</span><span class="sxs-lookup"><span data-stu-id="c7612-102">ISymUnmanagedWriter::Close Method</span></span>
+<span data-ttu-id="c7612-103">将符号提交到符号存储区后关闭符号编写器。</span><span class="sxs-lookup"><span data-stu-id="c7612-103">Closes the symbol writer after committing the symbols to the symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c4874-104">语法</span><span class="sxs-lookup"><span data-stu-id="c4874-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c7612-104">语法</span><span class="sxs-lookup"><span data-stu-id="c7612-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Close();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="c4874-105">返回值</span><span class="sxs-lookup"><span data-stu-id="c4874-105">Return Value</span></span>  
- <span data-ttu-id="c4874-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="c4874-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c7612-105">返回值</span><span class="sxs-lookup"><span data-stu-id="c7612-105">Return Value</span></span>  
+ <span data-ttu-id="c7612-106">如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。</span><span class="sxs-lookup"><span data-stu-id="c7612-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c4874-107">备注</span><span class="sxs-lookup"><span data-stu-id="c4874-107">Remarks</span></span>  
- <span data-ttu-id="c4874-108">After this call, the symbol writer becomes invalid for further updates.</span><span class="sxs-lookup"><span data-stu-id="c4874-108">After this call, the symbol writer becomes invalid for further updates.</span></span> <span data-ttu-id="c4874-109">To close the symbol writer without committing the symbols, use the [ISymUnmanagedWriter::Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) method instead.</span><span class="sxs-lookup"><span data-stu-id="c4874-109">To close the symbol writer without committing the symbols, use the [ISymUnmanagedWriter::Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) method instead.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c7612-107">备注</span><span class="sxs-lookup"><span data-stu-id="c7612-107">Remarks</span></span>  
+ <span data-ttu-id="c7612-108">在此调用之后，符号编写器将变为无效以便进一步更新。</span><span class="sxs-lookup"><span data-stu-id="c7612-108">After this call, the symbol writer becomes invalid for further updates.</span></span> <span data-ttu-id="c7612-109">若要在不提交符号的情况下关闭符号编写器，请改用[ISymUnmanagedWriter：： Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="c7612-109">To close the symbol writer without committing the symbols, use the [ISymUnmanagedWriter::Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) method instead.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c4874-110">要求</span><span class="sxs-lookup"><span data-stu-id="c4874-110">Requirements</span></span>  
- <span data-ttu-id="c4874-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c4874-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c7612-110">要求</span><span class="sxs-lookup"><span data-stu-id="c7612-110">Requirements</span></span>  
+ <span data-ttu-id="c7612-111">**标头：** CorSym，CorSym</span><span class="sxs-lookup"><span data-stu-id="c7612-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c4874-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="c4874-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c7612-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c7612-112">See also</span></span>
 
-- [<span data-ttu-id="c4874-113">ISymUnmanagedWriter 接口</span><span class="sxs-lookup"><span data-stu-id="c4874-113">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="c7612-113">ISymUnmanagedWriter 接口</span><span class="sxs-lookup"><span data-stu-id="c7612-113">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

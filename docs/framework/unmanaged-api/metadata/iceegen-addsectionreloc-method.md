@@ -22,12 +22,12 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436405"
 ---
-# <a name="iceegenaddsectionreloc-method"></a><span data-ttu-id="a18c5-102">ICeeGen::AddSectionReloc 方法</span><span class="sxs-lookup"><span data-stu-id="a18c5-102">ICeeGen::AddSectionReloc Method</span></span>
-<span data-ttu-id="a18c5-103">Adds a .reloc instruction to the code base.</span><span class="sxs-lookup"><span data-stu-id="a18c5-103">Adds a .reloc instruction to the code base.</span></span>  
+# <a name="iceegenaddsectionreloc-method"></a><span data-ttu-id="a6f54-102">ICeeGen::AddSectionReloc 方法</span><span class="sxs-lookup"><span data-stu-id="a6f54-102">ICeeGen::AddSectionReloc Method</span></span>
+<span data-ttu-id="a6f54-103">将 .reloc 指令添加到基本代码。</span><span class="sxs-lookup"><span data-stu-id="a6f54-103">Adds a .reloc instruction to the code base.</span></span>  
   
- <span data-ttu-id="a18c5-104">This method is obsolete and should not be used.</span><span class="sxs-lookup"><span data-stu-id="a18c5-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="a6f54-104">此方法已过时，不应使用。</span><span class="sxs-lookup"><span data-stu-id="a6f54-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a18c5-105">语法</span><span class="sxs-lookup"><span data-stu-id="a18c5-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a6f54-105">语法</span><span class="sxs-lookup"><span data-stu-id="a6f54-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT AddSectionReloc (  
@@ -38,28 +38,28 @@ HRESULT AddSectionReloc (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a18c5-106">参数</span><span class="sxs-lookup"><span data-stu-id="a18c5-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a6f54-106">参数</span><span class="sxs-lookup"><span data-stu-id="a6f54-106">Parameters</span></span>  
  `section`  
- <span data-ttu-id="a18c5-107">[in] The section of in-memory code to which to add a .reloc instruction.</span><span class="sxs-lookup"><span data-stu-id="a18c5-107">[in] The section of in-memory code to which to add a .reloc instruction.</span></span>  
+ <span data-ttu-id="a6f54-107">中要将 .reloc 指令添加到的内存中代码部分。</span><span class="sxs-lookup"><span data-stu-id="a6f54-107">[in] The section of in-memory code to which to add a .reloc instruction.</span></span>  
   
  `offset`  
- <span data-ttu-id="a18c5-108">[in] The offset of the section.</span><span class="sxs-lookup"><span data-stu-id="a18c5-108">[in] The offset of the section.</span></span>  
+ <span data-ttu-id="a6f54-108">中部分的偏移量。</span><span class="sxs-lookup"><span data-stu-id="a6f54-108">[in] The offset of the section.</span></span>  
   
  `relativeTo`  
- <span data-ttu-id="a18c5-109">[in] The section to which `offset` refers.</span><span class="sxs-lookup"><span data-stu-id="a18c5-109">[in] The section to which `offset` refers.</span></span>  
+ <span data-ttu-id="a6f54-109">中`offset` 引用的部分。</span><span class="sxs-lookup"><span data-stu-id="a6f54-109">[in] The section to which `offset` refers.</span></span>  
   
  `relocType`  
- <span data-ttu-id="a18c5-110">[in] One of the [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) values, indicating the kind of .reloc instruction to add.</span><span class="sxs-lookup"><span data-stu-id="a18c5-110">[in] One of the [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) values, indicating the kind of .reloc instruction to add.</span></span>  
+ <span data-ttu-id="a6f54-110">中[CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md)值之一，指示要添加的 .reloc 指令的类型。</span><span class="sxs-lookup"><span data-stu-id="a6f54-110">[in] One of the [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) values, indicating the kind of .reloc instruction to add.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a18c5-111">要求</span><span class="sxs-lookup"><span data-stu-id="a18c5-111">Requirements</span></span>  
- <span data-ttu-id="a18c5-112">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a18c5-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a6f54-111">要求</span><span class="sxs-lookup"><span data-stu-id="a6f54-111">Requirements</span></span>  
+ <span data-ttu-id="a6f54-112">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a6f54-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a18c5-113">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a18c5-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a6f54-113">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="a6f54-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a18c5-114">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a18c5-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="a6f54-114">**库：** 用作 Mscoree.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="a6f54-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="a18c5-115">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a18c5-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a6f54-115">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a6f54-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a18c5-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="a18c5-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a6f54-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a6f54-116">See also</span></span>
 
-- [<span data-ttu-id="a18c5-117">ICeeGen 接口</span><span class="sxs-lookup"><span data-stu-id="a18c5-117">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="a6f54-117">ICeeGen 接口</span><span class="sxs-lookup"><span data-stu-id="a6f54-117">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

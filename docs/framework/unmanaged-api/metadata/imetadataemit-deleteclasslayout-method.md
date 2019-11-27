@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450166"
 ---
-# <a name="imetadataemitdeleteclasslayout-method"></a><span data-ttu-id="28ab4-102">IMetaDataEmit::DeleteClassLayout 方法</span><span class="sxs-lookup"><span data-stu-id="28ab4-102">IMetaDataEmit::DeleteClassLayout Method</span></span>
-<span data-ttu-id="28ab4-103">Destroys the class layout metadata signature for the type represented by the specified token.</span><span class="sxs-lookup"><span data-stu-id="28ab4-103">Destroys the class layout metadata signature for the type represented by the specified token.</span></span>  
+# <a name="imetadataemitdeleteclasslayout-method"></a><span data-ttu-id="87674-102">IMetaDataEmit::DeleteClassLayout 方法</span><span class="sxs-lookup"><span data-stu-id="87674-102">IMetaDataEmit::DeleteClassLayout Method</span></span>
+<span data-ttu-id="87674-103">销毁由指定标记表示的类型的类布局元数据签名。</span><span class="sxs-lookup"><span data-stu-id="87674-103">Destroys the class layout metadata signature for the type represented by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="28ab4-104">语法</span><span class="sxs-lookup"><span data-stu-id="28ab4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="87674-104">语法</span><span class="sxs-lookup"><span data-stu-id="87674-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DeleteClassLayout (  
@@ -33,20 +33,20 @@ HRESULT DeleteClassLayout (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="28ab4-105">参数</span><span class="sxs-lookup"><span data-stu-id="28ab4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="87674-105">参数</span><span class="sxs-lookup"><span data-stu-id="87674-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="28ab4-106">[in] An `mdTypeDef` metadata token that represents the type for which the class layout will be deleted.</span><span class="sxs-lookup"><span data-stu-id="28ab4-106">[in] An `mdTypeDef` metadata token that represents the type for which the class layout will be deleted.</span></span>  
+ <span data-ttu-id="87674-106">中一个 `mdTypeDef` 的元数据标记，它表示将删除类布局的类型。</span><span class="sxs-lookup"><span data-stu-id="87674-106">[in] An `mdTypeDef` metadata token that represents the type for which the class layout will be deleted.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="28ab4-107">要求</span><span class="sxs-lookup"><span data-stu-id="28ab4-107">Requirements</span></span>  
- <span data-ttu-id="28ab4-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="28ab4-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="87674-107">要求</span><span class="sxs-lookup"><span data-stu-id="87674-107">Requirements</span></span>  
+ <span data-ttu-id="87674-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="87674-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="28ab4-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="28ab4-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="87674-109">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="87674-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="28ab4-110">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="28ab4-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="87674-110">**库：** 用作 Mscoree.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="87674-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="28ab4-111">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="28ab4-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="87674-111">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="87674-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="28ab4-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="28ab4-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="87674-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="87674-112">See also</span></span>
 
-- [<span data-ttu-id="28ab4-113">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="28ab4-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="28ab4-114">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="28ab4-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="87674-113">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="87674-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="87674-114">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="87674-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

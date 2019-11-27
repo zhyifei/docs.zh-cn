@@ -22,12 +22,12 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435014"
 ---
-# <a name="iceegengetimaptokeniface-method"></a><span data-ttu-id="6c684-102">ICeeGen::GetIMapTokenIface 方法</span><span class="sxs-lookup"><span data-stu-id="6c684-102">ICeeGen::GetIMapTokenIface Method</span></span>
-<span data-ttu-id="6c684-103">Gets the interface referenced by the specified token.</span><span class="sxs-lookup"><span data-stu-id="6c684-103">Gets the interface referenced by the specified token.</span></span>  
+# <a name="iceegengetimaptokeniface-method"></a><span data-ttu-id="70c24-102">ICeeGen::GetIMapTokenIface 方法</span><span class="sxs-lookup"><span data-stu-id="70c24-102">ICeeGen::GetIMapTokenIface Method</span></span>
+<span data-ttu-id="70c24-103">获取指定的标记所引用的接口。</span><span class="sxs-lookup"><span data-stu-id="70c24-103">Gets the interface referenced by the specified token.</span></span>  
   
- <span data-ttu-id="6c684-104">This method is obsolete and should not be used.</span><span class="sxs-lookup"><span data-stu-id="6c684-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="70c24-104">此方法已过时，不应使用。</span><span class="sxs-lookup"><span data-stu-id="70c24-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6c684-105">语法</span><span class="sxs-lookup"><span data-stu-id="6c684-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="70c24-105">语法</span><span class="sxs-lookup"><span data-stu-id="70c24-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetIMapTokenIface (  
@@ -35,19 +35,19 @@ HRESULT GetIMapTokenIface (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6c684-106">参数</span><span class="sxs-lookup"><span data-stu-id="6c684-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="70c24-106">参数</span><span class="sxs-lookup"><span data-stu-id="70c24-106">Parameters</span></span>  
  `pIMapToken`  
- <span data-ttu-id="6c684-107">[in, out] The metadata token for the interface to be returned.</span><span class="sxs-lookup"><span data-stu-id="6c684-107">[in, out] The metadata token for the interface to be returned.</span></span>  
+ <span data-ttu-id="70c24-107">[in，out]要返回的接口的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="70c24-107">[in, out] The metadata token for the interface to be returned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6c684-108">要求</span><span class="sxs-lookup"><span data-stu-id="6c684-108">Requirements</span></span>  
- <span data-ttu-id="6c684-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6c684-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="70c24-108">要求</span><span class="sxs-lookup"><span data-stu-id="70c24-108">Requirements</span></span>  
+ <span data-ttu-id="70c24-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="70c24-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6c684-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6c684-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="70c24-110">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="70c24-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="6c684-111">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6c684-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="70c24-111">**库：** 用作 Mscoree.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="70c24-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="6c684-112">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6c684-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="70c24-112">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="70c24-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6c684-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="6c684-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="70c24-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="70c24-113">See also</span></span>
 
-- [<span data-ttu-id="6c684-114">ICeeGen 接口</span><span class="sxs-lookup"><span data-stu-id="6c684-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="70c24-114">ICeeGen 接口</span><span class="sxs-lookup"><span data-stu-id="70c24-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

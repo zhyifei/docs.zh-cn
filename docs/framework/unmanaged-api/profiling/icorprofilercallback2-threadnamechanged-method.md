@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439569"
 ---
-# <a name="icorprofilercallback2threadnamechanged-method"></a><span data-ttu-id="4369a-102">ICorProfilerCallback2::ThreadNameChanged 方法</span><span class="sxs-lookup"><span data-stu-id="4369a-102">ICorProfilerCallback2::ThreadNameChanged Method</span></span>
-<span data-ttu-id="4369a-103">Notifies the code profiler that the name of a thread has changed.</span><span class="sxs-lookup"><span data-stu-id="4369a-103">Notifies the code profiler that the name of a thread has changed.</span></span>  
+# <a name="icorprofilercallback2threadnamechanged-method"></a><span data-ttu-id="be90e-102">ICorProfilerCallback2::ThreadNameChanged 方法</span><span class="sxs-lookup"><span data-stu-id="be90e-102">ICorProfilerCallback2::ThreadNameChanged Method</span></span>
+<span data-ttu-id="be90e-103">通知代码探查器线程的名称已更改。</span><span class="sxs-lookup"><span data-stu-id="be90e-103">Notifies the code profiler that the name of a thread has changed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4369a-104">语法</span><span class="sxs-lookup"><span data-stu-id="4369a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="be90e-104">语法</span><span class="sxs-lookup"><span data-stu-id="be90e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ThreadNameChanged(  
@@ -34,26 +34,26 @@ HRESULT ThreadNameChanged(
     [in] WCHAR name[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4369a-105">参数</span><span class="sxs-lookup"><span data-stu-id="4369a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="be90e-105">参数</span><span class="sxs-lookup"><span data-stu-id="be90e-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="4369a-106">[in] The ID of the thread.</span><span class="sxs-lookup"><span data-stu-id="4369a-106">[in] The ID of the thread.</span></span>  
+ <span data-ttu-id="be90e-106">中线程的 ID。</span><span class="sxs-lookup"><span data-stu-id="be90e-106">[in] The ID of the thread.</span></span>  
   
  `cchName`  
- <span data-ttu-id="4369a-107">[in] The length of the new name of the thread.</span><span class="sxs-lookup"><span data-stu-id="4369a-107">[in] The length of the new name of the thread.</span></span>  
+ <span data-ttu-id="be90e-107">中线程的新名称的长度。</span><span class="sxs-lookup"><span data-stu-id="be90e-107">[in] The length of the new name of the thread.</span></span>  
   
  `name`  
- <span data-ttu-id="4369a-108">[in] The new name of the thread.</span><span class="sxs-lookup"><span data-stu-id="4369a-108">[in] The new name of the thread.</span></span> <span data-ttu-id="4369a-109">The name is not null-terminated.</span><span class="sxs-lookup"><span data-stu-id="4369a-109">The name is not null-terminated.</span></span>  
+ <span data-ttu-id="be90e-108">中线程的新名称。</span><span class="sxs-lookup"><span data-stu-id="be90e-108">[in] The new name of the thread.</span></span> <span data-ttu-id="be90e-109">名称不以 null 结尾。</span><span class="sxs-lookup"><span data-stu-id="be90e-109">The name is not null-terminated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4369a-110">要求</span><span class="sxs-lookup"><span data-stu-id="4369a-110">Requirements</span></span>  
- <span data-ttu-id="4369a-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4369a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="be90e-110">要求</span><span class="sxs-lookup"><span data-stu-id="be90e-110">Requirements</span></span>  
+ <span data-ttu-id="be90e-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="be90e-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4369a-112">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4369a-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="be90e-112">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="be90e-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="4369a-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4369a-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="be90e-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="be90e-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4369a-114">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4369a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="be90e-114">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="be90e-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4369a-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="4369a-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="be90e-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="be90e-115">See also</span></span>
 
-- [<span data-ttu-id="4369a-116">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="4369a-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="4369a-117">ICorProfilerCallback2 接口</span><span class="sxs-lookup"><span data-stu-id="4369a-117">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [<span data-ttu-id="be90e-116">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="be90e-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="be90e-117">ICorProfilerCallback2 接口</span><span class="sxs-lookup"><span data-stu-id="be90e-117">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
