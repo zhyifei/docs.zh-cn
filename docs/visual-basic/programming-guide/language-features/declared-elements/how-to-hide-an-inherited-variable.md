@@ -20,21 +20,21 @@ ms.locfileid: "74345355"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>如何：隐藏继承的变量 (Visual Basic)
 
-A derived class inherits all the definitions of its base class. If you want to define a variable using the same name as an element of the base class, you can hide, or *shadow*, that base class element when you define your variable in the derived class. If you do this, code in the derived class accesses your variable unless it explicitly bypasses the shadowing mechanism.
+派生类继承其基类的所有定义。 如果要使用与基类元素相同的名称来定义变量，则可以在派生类中定义变量时*隐藏或隐藏*该基类元素。 如果执行此操作，派生类中的代码将访问你的变量，除非它显式跳过隐藏机制。
 
-Another reason you might want to hide an inherited variable is to protect against base class revision. The base class might undergo a change that alters the element you are inheriting. If this happens, the `Shadows` modifier forces references from the derived class to be resolved to your variable, instead of to the base class element.
+您可能想要隐藏继承的变量的另一个原因是为了防止基类修订。 基类可能会改变要继承的元素。 如果发生这种情况，则 `Shadows` 修饰符强制将派生类中的引用解析为你的变量，而不是基类元素。
 
-## <a name="to-hide-an-inherited-variable"></a>To hide an inherited variable
+## <a name="to-hide-an-inherited-variable"></a>隐藏继承的变量
 
-1. Be sure the variable you want to hide is declared at class level (outside any procedure). Otherwise, you do not need to hide it.
+1. 确保要隐藏的变量是在类级别（在任何过程外部）声明的。 否则，你无需隐藏它。
   
-2. Inside your derived class, write a [Dim Statement](../../../language-reference/statements/dim-statement.md) declaring your variable. Use the same name as that of the inherited variable.
+2. 在派生类中，编写声明变量的[Dim 语句](../../../language-reference/statements/dim-statement.md)。 使用与继承变量相同的名称。
 
-3. Include the [Shadows](../../../language-reference/modifiers/shadows.md) keyword in the declaration.
+3. 在声明中包含[Shadows](../../../language-reference/modifiers/shadows.md)关键字。
 
-     When code in the derived class refers to the variable name, the compiler resolves the reference to your variable.
+     当派生类中的代码引用变量名时，编译器会将对变量的引用解析为。
 
-     The following example illustrates shadowing of an inherited variable:
+     下面的示例说明了继承变量的隐藏：
   
     ```vb  
     Public Class ShadowBaseClass  
@@ -50,16 +50,16 @@ Another reason you might want to hide an inherited variable is to protect agains
     End Class  
     ```  
   
-     The preceding example declares the variable `shadowString` in the base class and shadows it in the derived class. The procedure `ShowStrings` in the derived class displays the shadowing version of the string when the name `shadowString` is not qualified. It then displays the shadowed version when `shadowString` is qualified with the `MyBase` keyword.  
+     前面的示例声明了基类中 `shadowString` 的变量，并在派生类中隐藏了该变量。 派生类中的过程 `ShowStrings` 在名称 `shadowString` 不限定时显示字符串的隐藏版本。 然后，在用 `MyBase` 关键字限定 `shadowString` 时，它会显示隐藏的版本。  
   
 ## <a name="robust-programming"></a>可靠编程
 
-Shadowing introduces more than one version of a variable with the same name. When a code statement refers to the variable name, the version to which the compiler resolves the reference depends on factors such as the location of the code statement and the presence of a qualifying string. This can increase the risk of referring to an unintended version of a shadowed variable. You can lower that risk by fully qualifying all references to a shadowed variable.
+隐藏引入了一个具有相同名称的变量的多个版本。 当代码语句引用变量名时，编译器解析引用的版本取决于一些因素，如代码语句的位置和符合条件的字符串的状态。 这可能会增加引用隐藏变量的意外版本的风险。 您可以通过完全限定对隐藏变量的所有引用来降低风险。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [对已声明元素的引用](references-to-declared-elements.md)
-- [Shadowing in Visual Basic](shadowing.md)
+- [Visual Basic 中的阴影](shadowing.md)
 - [隐藏和重写之间的差异](differences-between-shadowing-and-overriding.md)
 - [如何：隐藏与你的变量同名的变量](how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
 - [如何：访问被派生类隐藏的变量](how-to-access-a-variable-hidden-by-a-derived-class.md)

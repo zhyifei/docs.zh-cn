@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426720"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>IMetaDataImport2::EnumGenericParamConstraints 方法
-Gets an enumerator for an array of generic parameter constraints associated with the generic parameter represented by the specified token.  
+获取与指定标记表示的泛型参数关联的泛型参数约束数组的枚举器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,37 +39,37 @@ HRESULT EnumGenericParamConstraints (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in，out]指向枚举器的指针。  
   
  `tk`  
- [in]   A token that represents the generic parameter whose constraints are to be enumerated.  
+ 中  一个标记，表示要枚举其约束的泛型参数。  
   
  `rGenericParamConstraints`  
- [out] The array of generic parameter constraints to enumerate.  
+ 弄要枚举的泛型参数约束的数组。  
   
  `cMax`  
- [in]   The requested maximum number of tokens to place in `rGenericParamConstraints`.  
+ 中  请求的最大标记数 `rGenericParamConstraints`。  
   
  `pcGenericParamConstraints`  
- [out] A pointer to the number of tokens placed in `rGenericParamConstraints`.  
+ 弄一个指针，指向 `rGenericParamConstraints`中放置的标记数。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParameterConstraints` returned successfully.|  
-|`S_FALSE`|`phEnum` has no member elements. In this case, `pcGenericParameterConstraints` is set to 0 (zero).|  
+|`S_OK`|`EnumGenericParameterConstraints` 成功返回。|  
+|`S_FALSE`|`phEnum` 没有成员元素。 在这种情况下，`pcGenericParameterConstraints` 设置为0（零）。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **标头：** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **库：** 用作 Mscoree.dll 中的资源  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

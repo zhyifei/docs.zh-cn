@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354113"
 ---
 # <a name="continue-statement-visual-basic"></a>Continue 语句 (Visual Basic)
-Transfers control immediately to the next iteration of a loop.  
+将控制立即传输到循环的下一次迭代。  
   
 ## <a name="syntax"></a>语法  
   
@@ -24,22 +24,22 @@ Continue { Do | For | While }
 ```  
   
 ## <a name="remarks"></a>备注  
- You can transfer from inside a `Do`, `For`, or `While` loop to the next iteration of that loop. Control passes immediately to the loop condition test, which is equivalent to transferring to the `For` or `While` statement, or to the `Do` or `Loop` statement that contains the `Until` or `While` clause.  
+ 可以从 `Do`、`For`或 `While` 循环内传输到该循环的下一次迭代。 控制权会立即传递到循环条件测试，这等效于传输到 `For` 或 `While` 语句，或传递到包含 `Until` 或 `While` 子句的 `Do` 或 `Loop` 语句。  
   
- You can use `Continue` at any location in the loop that allows transfers. The rules allowing transfer of control are the same as with the [GoTo Statement](../../../visual-basic/language-reference/statements/goto-statement.md).  
+ 可以在允许传输的循环中的任意位置使用 `Continue`。 允许传输控件的规则与[GoTo 语句](../../../visual-basic/language-reference/statements/goto-statement.md)相同。  
   
- For example, if a loop is totally contained within a `Try` block, a `Catch` block, or a `Finally` block, you can use `Continue` to transfer out of the loop. If, on the other hand, the `Try`...`End Try` structure is contained within the loop, you cannot use `Continue` to transfer control out of the `Finally` block, and you can use it to transfer out of a `Try` or `Catch` block only if you transfer completely out of the `Try`...`End Try` structure.  
+ 例如，如果循环完全包含在 `Try` 块、`Catch` 块或 `Finally` 块中，则可以使用 `Continue` 来传出循环。 另一方面，如果 `Try`...`End Try` 结构包含在循环中，则不能使用 `Continue` 将控制转移出 `Finally` 块，并且仅当完全从 `Try` ... `Catch` 结构中传输时，才能使用它来传出 `Try`或`End Try` 块。  
   
- If you have nested loops of the same type, for example a `Do` loop within another `Do` loop, a `Continue Do` statement skips to the next iteration of the innermost `Do` loop that contains it. You cannot use `Continue` to skip to the next iteration of a containing loop of the same type.  
+ 如果有相同类型的嵌套循环（例如，另一个 `Do` 循环内的 `Do` 循环），`Continue Do` 语句将跳到包含它的最内层 `Do` 循环的下一次迭代。 不能使用 `Continue` 跳到相同类型的包含循环的下一次迭代。  
   
- If you have nested loops of different types, for example a `Do` loop within a `For` loop, you can skip to the next iteration of either loop by using either `Continue Do` or `Continue For`.  
+ 如果具有不同类型的嵌套循环（例如，在 `For` 循环内的 `Do` 循环），则可以使用 `Continue Do` 或 `Continue For`跳到任一循环的下一次迭代。  
   
 ## <a name="example"></a>示例  
- The following code example uses the `Continue While` statement to skip to the next column of an array if a divisor is zero. The `Continue While` is inside a `For` loop. It transfers to the `While col < lastcol` statement, which is the next iteration of the innermost `While` loop that contains the `For` loop.  
+ 下面的代码示例使用 `Continue While` 语句跳转到数组的下一列（如果除数为零）。 `Continue While` 在 `For` 循环中。 它传输到 `While col < lastcol` 语句，该语句是包含 `For` 循环的最内层 `While` 循环的下一次迭代。  
   
  [!code-vb[VbVbalrStatements#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#14)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Do...Loop 语句](../../../visual-basic/language-reference/statements/do-loop-statement.md)
 - [For...Next 语句](../../../visual-basic/language-reference/statements/for-next-statement.md)

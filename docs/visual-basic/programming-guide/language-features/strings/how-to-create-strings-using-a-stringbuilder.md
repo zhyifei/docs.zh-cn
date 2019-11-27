@@ -1,5 +1,5 @@
 ---
-title: 'How to: create strings using a StringBuilder'
+title: 如何：使用 StringBuilder 创建字符串
 ms.date: 07/20/2015
 helpviewer_keywords:
 - StringBuilder class
@@ -12,17 +12,17 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344370"
 ---
-# <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>How to: create strings using a StringBuilder in Visual Basic
+# <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>如何：在 Visual Basic 中使用 StringBuilder 创建字符串
 
-This example constructs a long string from many smaller strings using the <xref:System.Text.StringBuilder> class. The <xref:System.Text.StringBuilder> class is more efficient than the `&=` operator for concatenating many strings.
+此示例使用 <xref:System.Text.StringBuilder> 类从多个较小的字符串构造一个长字符串。 <xref:System.Text.StringBuilder> 类比用于连接多个字符串的 `&=` 运算符更有效。
 
 ## <a name="example"></a>示例
 
-The following example creates an instance of the <xref:System.Text.StringBuilder> class, appends 1,000 strings to that instance, and then returns its string representation:
+下面的示例创建 <xref:System.Text.StringBuilder> 类的实例，将1000字符串追加到该实例，然后返回该实例的字符串表示形式：
 
  [!code-vb[VbVbalrStrings#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#70)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 StringBuilder 类](../../../../standard/base-types/stringbuilder.md)
 - [&= 运算符](../../../language-reference/operators/and-assignment-operator.md)

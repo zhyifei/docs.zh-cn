@@ -1,5 +1,5 @@
 ---
-title: 'How to: Sort An Array'
+title: 如何：对数组进行排序
 ms.date: 07/20/2015
 f1_keywords:
 - Array.Sort
@@ -14,13 +14,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351856"
 ---
-# <a name="how-to-sort-an-array-in-visual-basic"></a>How to: sort an array in Visual Basic
+# <a name="how-to-sort-an-array-in-visual-basic"></a>如何：在 Visual Basic 中对数组进行排序
 
-This article shows an example of how to sort an array of strings in Visual Basic.
+本文演示如何对 Visual Basic 中的字符串数组进行排序。
 
 ## <a name="example"></a>示例
 
-This example declares an array of `String` objects named `zooAnimals`, populates it, and then sorts it alphabetically:
+此示例声明一个名为 `zooAnimals``String` 对象的数组，填充该数组，然后按字母顺序对其进行排序：
   
 ```vb
 Private Sub SortAnimals()
@@ -36,11 +36,11 @@ End Sub
 
 以下情况可能会导致异常：
 
-- Array is empty (<xref:System.ArgumentNullException> class).
-- Array is multidimensional (<xref:System.RankException> class).
-- One or more elements of the array don't implement the <xref:System.IComparable> interface (<xref:System.InvalidOperationException> class).
+- 数组为空（<xref:System.ArgumentNullException> 类）。
+- Array 为多维（<xref:System.RankException> 类）。
+- 数组中的一个或多个元素未实现 <xref:System.IComparable> 接口（<xref:System.InvalidOperationException> 类）。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Array.Sort%2A?displayProperty=nameWithType>
 - [数组](index.md)

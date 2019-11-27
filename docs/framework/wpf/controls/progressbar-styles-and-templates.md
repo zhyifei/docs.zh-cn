@@ -22,7 +22,7 @@ ms.locfileid: "74283456"
 ## <a name="progressbar-parts"></a>ProgressBar 部件  
  下表列出了 <xref:System.Windows.Controls.ProgressBar> 控件的已命名部分。  
   
-|部件|Type|描述|  
+|部件|类型|说明|  
 |-|-|-|  
 |PART_Indicator|<xref:System.Windows.FrameworkElement>|指示进度的对象。|  
 |PART_Track|<xref:System.Windows.FrameworkElement>|定义进度指示器的路径的对象。|  
@@ -31,7 +31,7 @@ ms.locfileid: "74283456"
 ## <a name="progressbar-states"></a>ProgressBar 状态  
  下表列出了 <xref:System.Windows.Controls.ProgressBar> 控件的可视状态。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|说明|  
 |----------------------|---------------------------|-----------------|  
 |确定性|CommonStates|<xref:System.Windows.Controls.ProgressBar> 基于 <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> 属性报告进度。|  
 |尚|CommonStates|<xref:System.Windows.Controls.ProgressBar> 使用重复模式报告一般进度。|  
