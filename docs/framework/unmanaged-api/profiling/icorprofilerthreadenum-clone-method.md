@@ -22,30 +22,30 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441531"
 ---
-# <a name="icorprofilerthreadenumclone-method"></a><span data-ttu-id="0e2b8-102">ICorProfilerThreadEnum::Clone 方法</span><span class="sxs-lookup"><span data-stu-id="0e2b8-102">ICorProfilerThreadEnum::Clone Method</span></span>
-<span data-ttu-id="0e2b8-103">Gets an interface pointer to a copy of this [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="0e2b8-103">Gets an interface pointer to a copy of this [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interface.</span></span>  
+# <a name="icorprofilerthreadenumclone-method"></a><span data-ttu-id="63a60-102">ICorProfilerThreadEnum::Clone 方法</span><span class="sxs-lookup"><span data-stu-id="63a60-102">ICorProfilerThreadEnum::Clone Method</span></span>
+<span data-ttu-id="63a60-103">获取一个接口指针，该指针指向此[ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)接口的副本。</span><span class="sxs-lookup"><span data-stu-id="63a60-103">Gets an interface pointer to a copy of this [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0e2b8-104">语法</span><span class="sxs-lookup"><span data-stu-id="0e2b8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="63a60-104">语法</span><span class="sxs-lookup"><span data-stu-id="63a60-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Clone (    [out] ICorProfilerThreadEnum **ppEnum  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0e2b8-105">参数</span><span class="sxs-lookup"><span data-stu-id="0e2b8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="63a60-105">参数</span><span class="sxs-lookup"><span data-stu-id="63a60-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="0e2b8-106">[out] A pointer to the interface pointer, which, in turn, points to the copy of this [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="0e2b8-106">[out] A pointer to the interface pointer, which, in turn, points to the copy of this [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interface.</span></span> <span data-ttu-id="0e2b8-107">The copy of the enumerator maintains its own enumeration state separately from this enumerator.</span><span class="sxs-lookup"><span data-stu-id="0e2b8-107">The copy of the enumerator maintains its own enumeration state separately from this enumerator.</span></span> <span data-ttu-id="0e2b8-108">However, the initial cursor position of the copy is the same as this current cursor position of the enumerator.</span><span class="sxs-lookup"><span data-stu-id="0e2b8-108">However, the initial cursor position of the copy is the same as this current cursor position of the enumerator.</span></span>  
+ <span data-ttu-id="63a60-106">弄指向接口指针的指针，该指针反过来指向此[ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)接口的副本。</span><span class="sxs-lookup"><span data-stu-id="63a60-106">[out] A pointer to the interface pointer, which, in turn, points to the copy of this [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interface.</span></span> <span data-ttu-id="63a60-107">枚举器的副本与此枚举器分别维护自己的枚举状态。</span><span class="sxs-lookup"><span data-stu-id="63a60-107">The copy of the enumerator maintains its own enumeration state separately from this enumerator.</span></span> <span data-ttu-id="63a60-108">但是，副本的初始光标位置与枚举器的当前游标位置相同。</span><span class="sxs-lookup"><span data-stu-id="63a60-108">However, the initial cursor position of the copy is the same as this current cursor position of the enumerator.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0e2b8-109">要求</span><span class="sxs-lookup"><span data-stu-id="0e2b8-109">Requirements</span></span>  
- <span data-ttu-id="0e2b8-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0e2b8-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="63a60-109">要求</span><span class="sxs-lookup"><span data-stu-id="63a60-109">Requirements</span></span>  
+ <span data-ttu-id="63a60-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="63a60-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0e2b8-111">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0e2b8-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="63a60-111">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="63a60-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="0e2b8-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0e2b8-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="63a60-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="63a60-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0e2b8-113">**.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0e2b8-113">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="63a60-113">**.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="63a60-113">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0e2b8-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="0e2b8-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="63a60-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="63a60-114">See also</span></span>
 
-- [<span data-ttu-id="0e2b8-115">ICorProfilerThreadEnum</span><span class="sxs-lookup"><span data-stu-id="0e2b8-115">ICorProfilerThreadEnum</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
-- [<span data-ttu-id="0e2b8-116">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="0e2b8-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="63a60-115">ICorProfilerThreadEnum</span><span class="sxs-lookup"><span data-stu-id="63a60-115">ICorProfilerThreadEnum</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
+- [<span data-ttu-id="63a60-116">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="63a60-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

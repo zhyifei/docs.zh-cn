@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437139"
 ---
-# <a name="imetadataimportgetnestedclassprops-method"></a><span data-ttu-id="f5d35-102">IMetaDataImport::GetNestedClassProps 方法</span><span class="sxs-lookup"><span data-stu-id="f5d35-102">IMetaDataImport::GetNestedClassProps Method</span></span>
-<span data-ttu-id="f5d35-103">Gets the TypeDef token for the parent <xref:System.Type> of the specified nested type.</span><span class="sxs-lookup"><span data-stu-id="f5d35-103">Gets the TypeDef token for the parent <xref:System.Type> of the specified nested type.</span></span>  
+# <a name="imetadataimportgetnestedclassprops-method"></a><span data-ttu-id="0394b-102">IMetaDataImport::GetNestedClassProps 方法</span><span class="sxs-lookup"><span data-stu-id="0394b-102">IMetaDataImport::GetNestedClassProps Method</span></span>
+<span data-ttu-id="0394b-103">获取指定嵌套类型的父 <xref:System.Type> 的 TypeDef 标记。</span><span class="sxs-lookup"><span data-stu-id="0394b-103">Gets the TypeDef token for the parent <xref:System.Type> of the specified nested type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f5d35-104">语法</span><span class="sxs-lookup"><span data-stu-id="f5d35-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0394b-104">语法</span><span class="sxs-lookup"><span data-stu-id="0394b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetNestedClassProps (  
@@ -34,23 +34,23 @@ HRESULT GetNestedClassProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f5d35-105">参数</span><span class="sxs-lookup"><span data-stu-id="f5d35-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0394b-105">参数</span><span class="sxs-lookup"><span data-stu-id="0394b-105">Parameters</span></span>  
  `tdNestedClass`  
- <span data-ttu-id="f5d35-106">[in] A TypeDef token representing the <xref:System.Type> to return the parent class token for.</span><span class="sxs-lookup"><span data-stu-id="f5d35-106">[in] A TypeDef token representing the <xref:System.Type> to return the parent class token for.</span></span>  
+ <span data-ttu-id="0394b-106">中一个 TypeDef 标记，它表示要为其返回父类标记的 <xref:System.Type>。</span><span class="sxs-lookup"><span data-stu-id="0394b-106">[in] A TypeDef token representing the <xref:System.Type> to return the parent class token for.</span></span>  
   
  `ptdEnclosingClass`  
- <span data-ttu-id="f5d35-107">[out] A pointer to the TypeDef token for the <xref:System.Type> that `tdNestedClass` is nested in.</span><span class="sxs-lookup"><span data-stu-id="f5d35-107">[out] A pointer to the TypeDef token for the <xref:System.Type> that `tdNestedClass` is nested in.</span></span>  
+ <span data-ttu-id="0394b-107">弄一个指针，指向 `tdNestedClass` 所嵌套的 <xref:System.Type> 的 TypeDef 标记。</span><span class="sxs-lookup"><span data-stu-id="0394b-107">[out] A pointer to the TypeDef token for the <xref:System.Type> that `tdNestedClass` is nested in.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f5d35-108">要求</span><span class="sxs-lookup"><span data-stu-id="f5d35-108">Requirements</span></span>  
- <span data-ttu-id="f5d35-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f5d35-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0394b-108">要求</span><span class="sxs-lookup"><span data-stu-id="0394b-108">Requirements</span></span>  
+ <span data-ttu-id="0394b-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0394b-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f5d35-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f5d35-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0394b-110">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="0394b-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f5d35-111">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f5d35-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="0394b-111">**库：** 作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="0394b-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f5d35-112">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f5d35-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0394b-112">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0394b-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f5d35-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="f5d35-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0394b-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0394b-113">See also</span></span>
 
-- [<span data-ttu-id="f5d35-114">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="f5d35-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="f5d35-115">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="f5d35-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="0394b-114">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="0394b-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="0394b-115">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="0394b-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

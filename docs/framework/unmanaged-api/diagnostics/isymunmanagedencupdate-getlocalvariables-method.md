@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449029"
 ---
-# <a name="isymunmanagedencupdategetlocalvariables-method"></a><span data-ttu-id="f6d82-102">ISymUnmanagedENCUpdate::GetLocalVariables 方法</span><span class="sxs-lookup"><span data-stu-id="f6d82-102">ISymUnmanagedENCUpdate::GetLocalVariables Method</span></span>
-<span data-ttu-id="f6d82-103">Gets the local variables.</span><span class="sxs-lookup"><span data-stu-id="f6d82-103">Gets the local variables.</span></span>  
+# <a name="isymunmanagedencupdategetlocalvariables-method"></a><span data-ttu-id="b38e2-102">ISymUnmanagedENCUpdate::GetLocalVariables 方法</span><span class="sxs-lookup"><span data-stu-id="b38e2-102">ISymUnmanagedENCUpdate::GetLocalVariables Method</span></span>
+<span data-ttu-id="b38e2-103">获取局部变量。</span><span class="sxs-lookup"><span data-stu-id="b38e2-103">Gets the local variables.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f6d82-104">语法</span><span class="sxs-lookup"><span data-stu-id="f6d82-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b38e2-104">语法</span><span class="sxs-lookup"><span data-stu-id="b38e2-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetLocalVariables(  
@@ -36,25 +36,25 @@ HRESULT GetLocalVariables(
     [out] ULONG        *pceltFetched);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f6d82-105">参数</span><span class="sxs-lookup"><span data-stu-id="f6d82-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b38e2-105">参数</span><span class="sxs-lookup"><span data-stu-id="b38e2-105">Parameters</span></span>  
  `mdMethodToken`  
- <span data-ttu-id="f6d82-106">[in] The metadata token of the method.</span><span class="sxs-lookup"><span data-stu-id="f6d82-106">[in] The metadata token of the method.</span></span>  
+ <span data-ttu-id="b38e2-106">中方法的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="b38e2-106">[in] The metadata token of the method.</span></span>  
   
  `cLocals`  
- <span data-ttu-id="f6d82-107">[in] A `ULONG` that indicates the size of the `rgLocals` parameter.</span><span class="sxs-lookup"><span data-stu-id="f6d82-107">[in] A `ULONG` that indicates the size of the `rgLocals` parameter.</span></span>  
+ <span data-ttu-id="b38e2-107">中一个 `ULONG`，指示 `rgLocals` 参数的大小。</span><span class="sxs-lookup"><span data-stu-id="b38e2-107">[in] A `ULONG` that indicates the size of the `rgLocals` parameter.</span></span>  
   
  `rgLocals`  
- <span data-ttu-id="f6d82-108">[out] The returned array of [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) instances.</span><span class="sxs-lookup"><span data-stu-id="f6d82-108">[out] The returned array of [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) instances.</span></span>  
+ <span data-ttu-id="b38e2-108">弄返回的[ISymUnmanagedVariable](isymunmanagedvariable-interface.md)实例的数组。</span><span class="sxs-lookup"><span data-stu-id="b38e2-108">[out] The returned array of [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) instances.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="f6d82-109">[out] A pointer to a `ULONG` that receives the size of the `rgLocals` buffer required to contain the locals.</span><span class="sxs-lookup"><span data-stu-id="f6d82-109">[out] A pointer to a `ULONG` that receives the size of the `rgLocals` buffer required to contain the locals.</span></span>  
+ <span data-ttu-id="b38e2-109">弄指向 `ULONG` 的指针，该指针接收包含局部变量所需的 `rgLocals` 缓冲区的大小。</span><span class="sxs-lookup"><span data-stu-id="b38e2-109">[out] A pointer to a `ULONG` that receives the size of the `rgLocals` buffer required to contain the locals.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f6d82-110">返回值</span><span class="sxs-lookup"><span data-stu-id="f6d82-110">Return Value</span></span>  
- <span data-ttu-id="f6d82-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="f6d82-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b38e2-110">返回值</span><span class="sxs-lookup"><span data-stu-id="b38e2-110">Return Value</span></span>  
+ <span data-ttu-id="b38e2-111">如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。</span><span class="sxs-lookup"><span data-stu-id="b38e2-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f6d82-112">要求</span><span class="sxs-lookup"><span data-stu-id="f6d82-112">Requirements</span></span>  
- <span data-ttu-id="f6d82-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f6d82-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b38e2-112">要求</span><span class="sxs-lookup"><span data-stu-id="b38e2-112">Requirements</span></span>  
+ <span data-ttu-id="b38e2-113">**标头：** CorSym，CorSym</span><span class="sxs-lookup"><span data-stu-id="b38e2-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f6d82-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="f6d82-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b38e2-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b38e2-114">See also</span></span>
 
-- [<span data-ttu-id="f6d82-115">ISymUnmanagedENCUpdate 接口</span><span class="sxs-lookup"><span data-stu-id="f6d82-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [<span data-ttu-id="b38e2-115">ISymUnmanagedENCUpdate 接口</span><span class="sxs-lookup"><span data-stu-id="b38e2-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

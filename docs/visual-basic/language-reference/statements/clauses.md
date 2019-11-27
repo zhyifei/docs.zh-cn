@@ -11,25 +11,25 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354143"
 ---
-# <a name="clauses-visual-basic"></a><span data-ttu-id="0357b-102">子句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0357b-102">Clauses (Visual Basic)</span></span>
-<span data-ttu-id="0357b-103">The topics in this section document Visual Basic run-time clauses.</span><span class="sxs-lookup"><span data-stu-id="0357b-103">The topics in this section document Visual Basic run-time clauses.</span></span>  
+# <a name="clauses-visual-basic"></a><span data-ttu-id="e5a5e-102">子句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5a5e-102">Clauses (Visual Basic)</span></span>
+<span data-ttu-id="e5a5e-103">本节中的主题介绍 Visual Basic 运行时子句。</span><span class="sxs-lookup"><span data-stu-id="e5a5e-103">The topics in this section document Visual Basic run-time clauses.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="0357b-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="0357b-104">In This Section</span></span>  
- [<span data-ttu-id="0357b-105">Alias</span><span class="sxs-lookup"><span data-stu-id="0357b-105">Alias</span></span>](../../../visual-basic/language-reference/statements/alias-clause.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e5a5e-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="e5a5e-104">In This Section</span></span>  
+ [<span data-ttu-id="e5a5e-105">Alias</span><span class="sxs-lookup"><span data-stu-id="e5a5e-105">Alias</span></span>](../../../visual-basic/language-reference/statements/alias-clause.md)  
   
- [<span data-ttu-id="0357b-106">As</span><span class="sxs-lookup"><span data-stu-id="0357b-106">As</span></span>](../../../visual-basic/language-reference/statements/as-clause.md)  
+ [<span data-ttu-id="e5a5e-106">As</span><span class="sxs-lookup"><span data-stu-id="e5a5e-106">As</span></span>](../../../visual-basic/language-reference/statements/as-clause.md)  
   
- [<span data-ttu-id="0357b-107">Handles</span><span class="sxs-lookup"><span data-stu-id="0357b-107">Handles</span></span>](../../../visual-basic/language-reference/statements/handles-clause.md)  
+ <span data-ttu-id="e5a5e-107">[!](../../../visual-basic/language-reference/statements/handles-clause.md)</span><span class="sxs-lookup"><span data-stu-id="e5a5e-107">[Handles](../../../visual-basic/language-reference/statements/handles-clause.md)</span></span>  
   
- [<span data-ttu-id="0357b-108">Sub New</span><span class="sxs-lookup"><span data-stu-id="0357b-108">Implements</span></span>](../../../visual-basic/language-reference/statements/implements-clause.md)  
+ [<span data-ttu-id="e5a5e-108">Implements</span><span class="sxs-lookup"><span data-stu-id="e5a5e-108">Implements</span></span>](../../../visual-basic/language-reference/statements/implements-clause.md)  
   
- [<span data-ttu-id="0357b-109">In</span><span class="sxs-lookup"><span data-stu-id="0357b-109">In</span></span>](../../../visual-basic/language-reference/statements/in-clause.md)  
+ [<span data-ttu-id="e5a5e-109">In</span><span class="sxs-lookup"><span data-stu-id="e5a5e-109">In</span></span>](../../../visual-basic/language-reference/statements/in-clause.md)  
   
- [<span data-ttu-id="0357b-110">Into</span><span class="sxs-lookup"><span data-stu-id="0357b-110">Into</span></span>](../../../visual-basic/language-reference/statements/into-clause.md)  
+ [<span data-ttu-id="e5a5e-110">Into</span><span class="sxs-lookup"><span data-stu-id="e5a5e-110">Into</span></span>](../../../visual-basic/language-reference/statements/into-clause.md)  
   
- [<span data-ttu-id="0357b-111">Of</span><span class="sxs-lookup"><span data-stu-id="0357b-111">Of</span></span>](../../../visual-basic/language-reference/statements/of-clause.md)  
+ [<span data-ttu-id="e5a5e-111">Of</span><span class="sxs-lookup"><span data-stu-id="e5a5e-111">Of</span></span>](../../../visual-basic/language-reference/statements/of-clause.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="0357b-112">相关章节</span><span class="sxs-lookup"><span data-stu-id="0357b-112">Related Sections</span></span>  
- [<span data-ttu-id="0357b-113">Visual Basic 语言参考</span><span class="sxs-lookup"><span data-stu-id="0357b-113">Visual Basic Language Reference</span></span>](../../../visual-basic/language-reference/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="e5a5e-112">相关章节</span><span class="sxs-lookup"><span data-stu-id="e5a5e-112">Related Sections</span></span>  
+ [<span data-ttu-id="e5a5e-113">Visual Basic 语言参考</span><span class="sxs-lookup"><span data-stu-id="e5a5e-113">Visual Basic Language Reference</span></span>](../../../visual-basic/language-reference/index.md)  
   
- [<span data-ttu-id="0357b-114">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="0357b-114">Visual Basic</span></span>](../../../visual-basic/index.md)
+ [<span data-ttu-id="e5a5e-114">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e5a5e-114">Visual Basic</span></span>](../../../visual-basic/index.md)
