@@ -21,10 +21,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436425"
 ---
-# <a name="cvstruct-structure"></a><span data-ttu-id="e23e9-102">CVStruct 结构</span><span class="sxs-lookup"><span data-stu-id="e23e9-102">CVStruct Structure</span></span>
-<span data-ttu-id="e23e9-103">包含在安装模块或复合图像时所使用的信息。</span><span class="sxs-lookup"><span data-stu-id="e23e9-103">Contains information that is used when installing a module or a composite image.</span></span>  
+# <a name="cvstruct-structure"></a><span data-ttu-id="2d077-102">CVStruct 结构</span><span class="sxs-lookup"><span data-stu-id="2d077-102">CVStruct Structure</span></span>
+<span data-ttu-id="2d077-103">包含在安装模块或复合图像时所使用的信息。</span><span class="sxs-lookup"><span data-stu-id="2d077-103">Contains information that is used when installing a module or a composite image.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e23e9-104">语法</span><span class="sxs-lookup"><span data-stu-id="e23e9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2d077-104">语法</span><span class="sxs-lookup"><span data-stu-id="2d077-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct {  
@@ -35,24 +35,24 @@ typedef struct {
 } CVStruct;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e23e9-105">Members</span><span class="sxs-lookup"><span data-stu-id="e23e9-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="2d077-105">Members</span><span class="sxs-lookup"><span data-stu-id="2d077-105">Members</span></span>  
   
-|<span data-ttu-id="e23e9-106">成员</span><span class="sxs-lookup"><span data-stu-id="e23e9-106">Member</span></span>|<span data-ttu-id="e23e9-107">描述</span><span class="sxs-lookup"><span data-stu-id="e23e9-107">Description</span></span>|  
+|<span data-ttu-id="2d077-106">成员</span><span class="sxs-lookup"><span data-stu-id="2d077-106">Member</span></span>|<span data-ttu-id="2d077-107">说明</span><span class="sxs-lookup"><span data-stu-id="2d077-107">Description</span></span>|  
 |------------|-----------------|  
-|<span data-ttu-id="e23e9-108">主要</span><span class="sxs-lookup"><span data-stu-id="e23e9-108">Major</span></span>|<span data-ttu-id="e23e9-109">Major version build number.</span><span class="sxs-lookup"><span data-stu-id="e23e9-109">Major version build number.</span></span>|  
-|<span data-ttu-id="e23e9-110">次要</span><span class="sxs-lookup"><span data-stu-id="e23e9-110">Minor</span></span>|<span data-ttu-id="e23e9-111">Minor version build number.</span><span class="sxs-lookup"><span data-stu-id="e23e9-111">Minor version build number.</span></span>|  
-|<span data-ttu-id="e23e9-112">Sub</span><span class="sxs-lookup"><span data-stu-id="e23e9-112">Sub</span></span>|<span data-ttu-id="e23e9-113">Sub-build number.</span><span class="sxs-lookup"><span data-stu-id="e23e9-113">Sub-build number.</span></span>|  
-|<span data-ttu-id="e23e9-114">生成</span><span class="sxs-lookup"><span data-stu-id="e23e9-114">Build</span></span>|<span data-ttu-id="e23e9-115">Build number.</span><span class="sxs-lookup"><span data-stu-id="e23e9-115">Build number.</span></span>|  
+|<span data-ttu-id="2d077-108">重要變更</span><span class="sxs-lookup"><span data-stu-id="2d077-108">Major</span></span>|<span data-ttu-id="2d077-109">主版本的内部版本号。</span><span class="sxs-lookup"><span data-stu-id="2d077-109">Major version build number.</span></span>|  
+|<span data-ttu-id="2d077-110">次要變更</span><span class="sxs-lookup"><span data-stu-id="2d077-110">Minor</span></span>|<span data-ttu-id="2d077-111">次版本号。</span><span class="sxs-lookup"><span data-stu-id="2d077-111">Minor version build number.</span></span>|  
+|<span data-ttu-id="2d077-112">子项</span><span class="sxs-lookup"><span data-stu-id="2d077-112">Sub</span></span>|<span data-ttu-id="2d077-113">子生成号。</span><span class="sxs-lookup"><span data-stu-id="2d077-113">Sub-build number.</span></span>|  
+|<span data-ttu-id="2d077-114">构建</span><span class="sxs-lookup"><span data-stu-id="2d077-114">Build</span></span>|<span data-ttu-id="2d077-115">内部版本号。</span><span class="sxs-lookup"><span data-stu-id="2d077-115">Build number.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="e23e9-116">要求</span><span class="sxs-lookup"><span data-stu-id="e23e9-116">Requirements</span></span>  
- <span data-ttu-id="e23e9-117">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e23e9-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2d077-116">要求</span><span class="sxs-lookup"><span data-stu-id="2d077-116">Requirements</span></span>  
+ <span data-ttu-id="2d077-117">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2d077-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e23e9-118">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e23e9-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="2d077-118">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="2d077-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e23e9-119">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e23e9-119">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="2d077-119">**库：** 用作 Mscoree.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="2d077-119">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e23e9-120">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e23e9-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2d077-120">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2d077-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e23e9-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="e23e9-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2d077-121">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2d077-121">See also</span></span>
 
-- [<span data-ttu-id="e23e9-122">元数据结构</span><span class="sxs-lookup"><span data-stu-id="e23e9-122">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [<span data-ttu-id="2d077-122">元数据结构</span><span class="sxs-lookup"><span data-stu-id="2d077-122">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)

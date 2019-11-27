@@ -1,5 +1,5 @@
 ---
-title: 特性
+title: Attributes
 ms.date: 07/20/2015
 helpviewer_keywords:
 - attributes [Visual Basic]
@@ -11,17 +11,17 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347861"
 ---
-# <a name="attributes-visual-basic"></a><span data-ttu-id="db792-102">特性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="db792-102">Attributes (Visual Basic)</span></span>
+# <a name="attributes-visual-basic"></a><span data-ttu-id="e0ff0-102">特性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e0ff0-102">Attributes (Visual Basic)</span></span>
 
-<span data-ttu-id="db792-103">Visual Basic provides several attributes that allow objects to interoperate with unmanaged code and one attribute that enables module members to be accessed without the module name.</span><span class="sxs-lookup"><span data-stu-id="db792-103">Visual Basic provides several attributes that allow objects to interoperate with unmanaged code and one attribute that enables module members to be accessed without the module name.</span></span> <span data-ttu-id="db792-104">The following table lists the attributes used by Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="db792-104">The following table lists the attributes used by Visual Basic.</span></span>  
+<span data-ttu-id="e0ff0-103">Visual Basic 提供了多个特性，这些特性允许对象与非托管代码进行互操作，并提供了一个属性，用于在不具有模块名称的情况下访问模块成员。</span><span class="sxs-lookup"><span data-stu-id="e0ff0-103">Visual Basic provides several attributes that allow objects to interoperate with unmanaged code and one attribute that enables module members to be accessed without the module name.</span></span> <span data-ttu-id="e0ff0-104">下表列出了 Visual Basic 使用的属性。</span><span class="sxs-lookup"><span data-stu-id="e0ff0-104">The following table lists the attributes used by Visual Basic.</span></span>  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|<span data-ttu-id="db792-105">Instructs the compiler to add metadata that allows a class to be exposed as a COM object.</span><span class="sxs-lookup"><span data-stu-id="db792-105">Instructs the compiler to add metadata that allows a class to be exposed as a COM object.</span></span>|
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|<span data-ttu-id="db792-106">Allows the module members to be accessed using only the qualification needed for the module.</span><span class="sxs-lookup"><span data-stu-id="db792-106">Allows the module members to be accessed using only the qualification needed for the module.</span></span>|
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|<span data-ttu-id="db792-107">Indicates that an array in a structure or non-local variable should be treated as a fixed-length array.</span><span class="sxs-lookup"><span data-stu-id="db792-107">Indicates that an array in a structure or non-local variable should be treated as a fixed-length array.</span></span>|
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|<span data-ttu-id="db792-108">Indicates that a string should be treated as if it were fixed length.</span><span class="sxs-lookup"><span data-stu-id="db792-108">Indicates that a string should be treated as if it were fixed length.</span></span>|
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|<span data-ttu-id="e0ff0-105">指示编译器添加允许将类公开为 COM 对象的元数据。</span><span class="sxs-lookup"><span data-stu-id="e0ff0-105">Instructs the compiler to add metadata that allows a class to be exposed as a COM object.</span></span>|
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|<span data-ttu-id="e0ff0-106">允许只使用模块所需的限定来访问模块成员。</span><span class="sxs-lookup"><span data-stu-id="e0ff0-106">Allows the module members to be accessed using only the qualification needed for the module.</span></span>|
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|<span data-ttu-id="e0ff0-107">指示应将结构或非本地变量中的数组视为固定长度的数组。</span><span class="sxs-lookup"><span data-stu-id="e0ff0-107">Indicates that an array in a structure or non-local variable should be treated as a fixed-length array.</span></span>|
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|<span data-ttu-id="e0ff0-108">指示应将字符串视为固定长度的字符串。</span><span class="sxs-lookup"><span data-stu-id="e0ff0-108">Indicates that a string should be treated as if it were fixed length.</span></span>|
   
-## <a name="see-also"></a><span data-ttu-id="db792-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="db792-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e0ff0-109">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e0ff0-109">See also</span></span>
 
-- [<span data-ttu-id="db792-110">属性概述</span><span class="sxs-lookup"><span data-stu-id="db792-110">Attributes overview</span></span>](../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [<span data-ttu-id="e0ff0-110">属性概述</span><span class="sxs-lookup"><span data-stu-id="e0ff0-110">Attributes overview</span></span>](../../visual-basic/programming-guide/concepts/attributes/index.md)

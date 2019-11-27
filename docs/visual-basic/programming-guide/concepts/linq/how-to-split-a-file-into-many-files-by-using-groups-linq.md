@@ -9,13 +9,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341359"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a><span data-ttu-id="85638-102">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="85638-102">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a><span data-ttu-id="e679e-102">如何：使用组将一个文件拆分成多个文件（LINQ）（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="e679e-102">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="85638-103">此示例演示一种进行以下操作的方法：合并两个文件的内容，然后创建一组以新方式整理数据的新文件。</span><span class="sxs-lookup"><span data-stu-id="85638-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>
+<span data-ttu-id="e679e-103">此示例演示一种进行以下操作的方法：合并两个文件的内容，然后创建一组以新方式整理数据的新文件。</span><span class="sxs-lookup"><span data-stu-id="e679e-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>
 
-### <a name="to-create-the-data-files"></a><span data-ttu-id="85638-104">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="85638-104">To create the data files</span></span>
+### <a name="to-create-the-data-files"></a><span data-ttu-id="e679e-104">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="e679e-104">To create the data files</span></span>
 
-1. <span data-ttu-id="85638-105">将下面的姓名复制到名为 names1.txt 的文本文件，然后将此文件保存到项目文件夹：</span><span class="sxs-lookup"><span data-stu-id="85638-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>
+1. <span data-ttu-id="e679e-105">将下面的姓名复制到名为 names1.txt 的文本文件，然后将此文件保存到项目文件夹：</span><span class="sxs-lookup"><span data-stu-id="e679e-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>
 
     ```text
     Bankov, Peter
@@ -30,7 +30,7 @@ ms.locfileid: "74341359"
     Garcia, Debra
     ```
 
-2. <span data-ttu-id="85638-106">将下面的姓名复制到名为 names2.txt 的文本文件，然后将此文件保存到项目文件夹：注意这两个文件有一些共同的姓名。</span><span class="sxs-lookup"><span data-stu-id="85638-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>
+2. <span data-ttu-id="e679e-106">将下面的姓名复制到名为 names2.txt 的文本文件，然后将此文件保存到项目文件夹：注意这两个文件有一些共同的姓名。</span><span class="sxs-lookup"><span data-stu-id="e679e-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>
 
     ```text
     Liu, Jinghao
@@ -45,7 +45,7 @@ ms.locfileid: "74341359"
     El Yassir, Mehdi
     ```
 
-## <a name="example"></a><span data-ttu-id="85638-107">示例</span><span class="sxs-lookup"><span data-stu-id="85638-107">Example</span></span>
+## <a name="example"></a><span data-ttu-id="e679e-107">示例</span><span class="sxs-lookup"><span data-stu-id="e679e-107">Example</span></span>
 
 ```vb
 Class SplitWithGroups
@@ -114,13 +114,13 @@ End Class
 '    Toyoshima, Tim
 ```
 
-<span data-ttu-id="85638-108">对于与数据文件位于同一文件夹中的每个组，程序将为这些组编写单独的文件。</span><span class="sxs-lookup"><span data-stu-id="85638-108">The program writes a separate file for each group in the same folder as the data files.</span></span>
+<span data-ttu-id="e679e-108">对于与数据文件位于同一文件夹中的每个组，程序将为这些组编写单独的文件。</span><span class="sxs-lookup"><span data-stu-id="e679e-108">The program writes a separate file for each group in the same folder as the data files.</span></span>
 
-## <a name="compiling-the-code"></a><span data-ttu-id="85638-109">编译代码</span><span class="sxs-lookup"><span data-stu-id="85638-109">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="e679e-109">编译代码</span><span class="sxs-lookup"><span data-stu-id="e679e-109">Compiling the Code</span></span>
 
-<span data-ttu-id="85638-110">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span><span class="sxs-lookup"><span data-stu-id="85638-110">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="e679e-110">使用 VB.NET 命名空间的 `Imports` 语句创建一个控制台应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="e679e-110">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="85638-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="85638-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e679e-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e679e-111">See also</span></span>
 
-- [<span data-ttu-id="85638-112">LINQ and Strings (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="85638-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="85638-113">LINQ 和文件目录 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="85638-113">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="e679e-112">LINQ 和字符串（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="e679e-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="e679e-113">LINQ 和文件目录 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e679e-113">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

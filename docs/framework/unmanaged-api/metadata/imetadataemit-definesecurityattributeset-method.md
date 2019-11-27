@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428242"
 ---
-# <a name="imetadataemitdefinesecurityattributeset-method"></a><span data-ttu-id="8b15c-102">IMetaDataEmit::DefineSecurityAttributeSet 方法</span><span class="sxs-lookup"><span data-stu-id="8b15c-102">IMetaDataEmit::DefineSecurityAttributeSet Method</span></span>
-<span data-ttu-id="8b15c-103">Creates a set of security permissions to attach to the object referenced by the specified token.</span><span class="sxs-lookup"><span data-stu-id="8b15c-103">Creates a set of security permissions to attach to the object referenced by the specified token.</span></span>  
+# <a name="imetadataemitdefinesecurityattributeset-method"></a><span data-ttu-id="f8d0d-102">IMetaDataEmit::DefineSecurityAttributeSet 方法</span><span class="sxs-lookup"><span data-stu-id="f8d0d-102">IMetaDataEmit::DefineSecurityAttributeSet Method</span></span>
+<span data-ttu-id="f8d0d-103">创建一组安全权限，以附加到指定标记所引用的对象。</span><span class="sxs-lookup"><span data-stu-id="f8d0d-103">Creates a set of security permissions to attach to the object referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8b15c-104">语法</span><span class="sxs-lookup"><span data-stu-id="8b15c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f8d0d-104">语法</span><span class="sxs-lookup"><span data-stu-id="f8d0d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineSecurityAttributeSet (   
@@ -36,29 +36,29 @@ HRESULT DefineSecurityAttributeSet (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8b15c-105">参数</span><span class="sxs-lookup"><span data-stu-id="8b15c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f8d0d-105">参数</span><span class="sxs-lookup"><span data-stu-id="f8d0d-105">Parameters</span></span>  
  `tkObj`  
- <span data-ttu-id="8b15c-106">[in] The token to which the security information is attached.</span><span class="sxs-lookup"><span data-stu-id="8b15c-106">[in] The token to which the security information is attached.</span></span>  
+ <span data-ttu-id="f8d0d-106">中安全信息附加到的令牌。</span><span class="sxs-lookup"><span data-stu-id="f8d0d-106">[in] The token to which the security information is attached.</span></span>  
   
  `rSecAttrs`  
- <span data-ttu-id="8b15c-107">[in] An array of `COR_SECATTR` structures.</span><span class="sxs-lookup"><span data-stu-id="8b15c-107">[in] An array of `COR_SECATTR` structures.</span></span>  
+ <span data-ttu-id="f8d0d-107">中`COR_SECATTR` 结构的数组。</span><span class="sxs-lookup"><span data-stu-id="f8d0d-107">[in] An array of `COR_SECATTR` structures.</span></span>  
   
  `cSecAttrs`  
- <span data-ttu-id="8b15c-108">[in] The number of elements in `rSecAttrs`.</span><span class="sxs-lookup"><span data-stu-id="8b15c-108">[in] The number of elements in `rSecAttrs`.</span></span>  
+ <span data-ttu-id="f8d0d-108">中`rSecAttrs`中的元素数。</span><span class="sxs-lookup"><span data-stu-id="f8d0d-108">[in] The number of elements in `rSecAttrs`.</span></span>  
   
  `pulErrorAttr`  
- <span data-ttu-id="8b15c-109">[out] If the method fails, specifies the index in `rSecAttrs` of the element that caused the problem.</span><span class="sxs-lookup"><span data-stu-id="8b15c-109">[out] If the method fails, specifies the index in `rSecAttrs` of the element that caused the problem.</span></span>  
+ <span data-ttu-id="f8d0d-109">弄如果该方法失败，则在导致问题的元素 `rSecAttrs` 中指定索引。</span><span class="sxs-lookup"><span data-stu-id="f8d0d-109">[out] If the method fails, specifies the index in `rSecAttrs` of the element that caused the problem.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8b15c-110">要求</span><span class="sxs-lookup"><span data-stu-id="8b15c-110">Requirements</span></span>  
- <span data-ttu-id="8b15c-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8b15c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f8d0d-110">要求</span><span class="sxs-lookup"><span data-stu-id="f8d0d-110">Requirements</span></span>  
+ <span data-ttu-id="f8d0d-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f8d0d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8b15c-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="8b15c-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f8d0d-112">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="f8d0d-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="8b15c-113">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8b15c-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f8d0d-113">**库：** 用作 Mscoree.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="f8d0d-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="8b15c-114">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8b15c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f8d0d-114">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f8d0d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8b15c-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="8b15c-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f8d0d-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f8d0d-115">See also</span></span>
 
-- [<span data-ttu-id="8b15c-116">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="8b15c-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="8b15c-117">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="8b15c-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="f8d0d-116">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="f8d0d-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="f8d0d-117">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="f8d0d-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

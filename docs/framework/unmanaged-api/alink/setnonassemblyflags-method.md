@@ -21,10 +21,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445549"
 ---
-# <a name="setnonassemblyflags-method"></a><span data-ttu-id="c14a2-102">SetNonAssemblyFlags 方法</span><span class="sxs-lookup"><span data-stu-id="c14a2-102">SetNonAssemblyFlags Method</span></span>
-<span data-ttu-id="c14a2-103">Sets flags that are not assembly-specific.</span><span class="sxs-lookup"><span data-stu-id="c14a2-103">Sets flags that are not assembly-specific.</span></span>  
+# <a name="setnonassemblyflags-method"></a><span data-ttu-id="80395-102">SetNonAssemblyFlags 方法</span><span class="sxs-lookup"><span data-stu-id="80395-102">SetNonAssemblyFlags Method</span></span>
+<span data-ttu-id="80395-103">设置不是程序集特定的标志。</span><span class="sxs-lookup"><span data-stu-id="80395-103">Sets flags that are not assembly-specific.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c14a2-104">语法</span><span class="sxs-lookup"><span data-stu-id="c14a2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="80395-104">语法</span><span class="sxs-lookup"><span data-stu-id="80395-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetNonAssemblyFlags(  
@@ -32,18 +32,18 @@ HRESULT SetNonAssemblyFlags(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c14a2-105">参数</span><span class="sxs-lookup"><span data-stu-id="c14a2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="80395-105">参数</span><span class="sxs-lookup"><span data-stu-id="80395-105">Parameters</span></span>  
  `afFlags`  
- <span data-ttu-id="c14a2-106">ALink flags.</span><span class="sxs-lookup"><span data-stu-id="c14a2-106">ALink flags.</span></span>  
+ <span data-ttu-id="80395-106">ALink 标志。</span><span class="sxs-lookup"><span data-stu-id="80395-106">ALink flags.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c14a2-107">返回值</span><span class="sxs-lookup"><span data-stu-id="c14a2-107">Return Value</span></span>  
- <span data-ttu-id="c14a2-108">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="c14a2-108">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="80395-107">返回值</span><span class="sxs-lookup"><span data-stu-id="80395-107">Return Value</span></span>  
+ <span data-ttu-id="80395-108">如果方法成功，则返回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="80395-108">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c14a2-109">要求</span><span class="sxs-lookup"><span data-stu-id="c14a2-109">Requirements</span></span>  
- <span data-ttu-id="c14a2-110">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="c14a2-110">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="80395-109">要求</span><span class="sxs-lookup"><span data-stu-id="80395-109">Requirements</span></span>  
+ <span data-ttu-id="80395-110">需要 alink</span><span class="sxs-lookup"><span data-stu-id="80395-110">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c14a2-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="c14a2-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="80395-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="80395-111">See also</span></span>
 
-- [<span data-ttu-id="c14a2-112">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="c14a2-112">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="c14a2-113">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="c14a2-113">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="c14a2-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="c14a2-114">ALink API</span></span>](index.md)
+- [<span data-ttu-id="80395-112">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="80395-112">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="80395-113">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="80395-113">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="80395-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="80395-114">ALink API</span></span>](index.md)

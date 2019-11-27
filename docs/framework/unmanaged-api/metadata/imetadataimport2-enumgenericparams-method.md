@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428317"
 ---
-# <a name="imetadataimport2enumgenericparams-method"></a><span data-ttu-id="3182e-102">IMetaDataImport2::EnumGenericParams 方法</span><span class="sxs-lookup"><span data-stu-id="3182e-102">IMetaDataImport2::EnumGenericParams Method</span></span>
-<span data-ttu-id="3182e-103">Gets an enumerator for an array of generic parameter tokens associated with the specified TypeDef or MethodDef token.</span><span class="sxs-lookup"><span data-stu-id="3182e-103">Gets an enumerator for an array of generic parameter tokens associated with the specified TypeDef or MethodDef token.</span></span>  
+# <a name="imetadataimport2enumgenericparams-method"></a><span data-ttu-id="f921f-102">IMetaDataImport2::EnumGenericParams 方法</span><span class="sxs-lookup"><span data-stu-id="f921f-102">IMetaDataImport2::EnumGenericParams Method</span></span>
+<span data-ttu-id="f921f-103">获取与指定的 TypeDef 或 MethodDef 标记相关联的泛型参数标记数组的枚举器。</span><span class="sxs-lookup"><span data-stu-id="f921f-103">Gets an enumerator for an array of generic parameter tokens associated with the specified TypeDef or MethodDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3182e-104">语法</span><span class="sxs-lookup"><span data-stu-id="3182e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f921f-104">语法</span><span class="sxs-lookup"><span data-stu-id="f921f-104">Syntax</span></span>  
   
 ```cpp
 HRESULT EnumGenericParams (  
@@ -37,39 +37,39 @@ HRESULT EnumGenericParams (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3182e-105">参数</span><span class="sxs-lookup"><span data-stu-id="3182e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f921f-105">参数</span><span class="sxs-lookup"><span data-stu-id="f921f-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="3182e-106">[in, out] A pointer to the enumerator.</span><span class="sxs-lookup"><span data-stu-id="3182e-106">[in, out] A pointer to the enumerator.</span></span>  
+ <span data-ttu-id="f921f-106">[in，out]指向枚举器的指针。</span><span class="sxs-lookup"><span data-stu-id="f921f-106">[in, out] A pointer to the enumerator.</span></span>  
   
  `tk`  
- <span data-ttu-id="3182e-107">[in] The TypeDef or MethodDef token whose generic parameters are to be enumerated.</span><span class="sxs-lookup"><span data-stu-id="3182e-107">[in] The TypeDef or MethodDef token whose generic parameters are to be enumerated.</span></span>  
+ <span data-ttu-id="f921f-107">中要枚举其泛型参数的 TypeDef 或 MethodDef 标记。</span><span class="sxs-lookup"><span data-stu-id="f921f-107">[in] The TypeDef or MethodDef token whose generic parameters are to be enumerated.</span></span>  
   
  `rGenericParams`  
- <span data-ttu-id="3182e-108">[out] The array of generic parameters to enumerate.</span><span class="sxs-lookup"><span data-stu-id="3182e-108">[out] The array of generic parameters to enumerate.</span></span>  
+ <span data-ttu-id="f921f-108">弄要枚举的泛型参数的数组。</span><span class="sxs-lookup"><span data-stu-id="f921f-108">[out] The array of generic parameters to enumerate.</span></span>  
   
  `cMax`  
- <span data-ttu-id="3182e-109">[in] The requested maximum number of tokens to place in `rGenericParams`.</span><span class="sxs-lookup"><span data-stu-id="3182e-109">[in] The requested maximum number of tokens to place in `rGenericParams`.</span></span>  
+ <span data-ttu-id="f921f-109">中请求的最大标记数 `rGenericParams`。</span><span class="sxs-lookup"><span data-stu-id="f921f-109">[in] The requested maximum number of tokens to place in `rGenericParams`.</span></span>  
   
  `pcGenericParams`  
- <span data-ttu-id="3182e-110">[out] The returned number of tokens placed in `rGenericParams`.</span><span class="sxs-lookup"><span data-stu-id="3182e-110">[out] The returned number of tokens placed in `rGenericParams`.</span></span>  
+ <span data-ttu-id="f921f-110">弄`rGenericParams`中放置的标记数。</span><span class="sxs-lookup"><span data-stu-id="f921f-110">[out] The returned number of tokens placed in `rGenericParams`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3182e-111">返回值</span><span class="sxs-lookup"><span data-stu-id="3182e-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f921f-111">返回值</span><span class="sxs-lookup"><span data-stu-id="f921f-111">Return Value</span></span>  
   
-|<span data-ttu-id="3182e-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3182e-112">HRESULT</span></span>|<span data-ttu-id="3182e-113">描述</span><span class="sxs-lookup"><span data-stu-id="3182e-113">Description</span></span>|  
+|<span data-ttu-id="f921f-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f921f-112">HRESULT</span></span>|<span data-ttu-id="f921f-113">说明</span><span class="sxs-lookup"><span data-stu-id="f921f-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="3182e-114">`EnumGenericParams` returned successfully.</span><span class="sxs-lookup"><span data-stu-id="3182e-114">`EnumGenericParams` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="3182e-115">`phEnum` has no member elements.</span><span class="sxs-lookup"><span data-stu-id="3182e-115">`phEnum` has no member elements.</span></span> <span data-ttu-id="3182e-116">In this case, `pcGenericParams` is set to 0 (zero).</span><span class="sxs-lookup"><span data-stu-id="3182e-116">In this case, `pcGenericParams` is set to 0 (zero).</span></span>|  
+|`S_OK`|<span data-ttu-id="f921f-114">`EnumGenericParams` 成功返回。</span><span class="sxs-lookup"><span data-stu-id="f921f-114">`EnumGenericParams` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="f921f-115">`phEnum` 没有成员元素。</span><span class="sxs-lookup"><span data-stu-id="f921f-115">`phEnum` has no member elements.</span></span> <span data-ttu-id="f921f-116">在这种情况下，`pcGenericParams` 设置为0（零）。</span><span class="sxs-lookup"><span data-stu-id="f921f-116">In this case, `pcGenericParams` is set to 0 (zero).</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="3182e-117">要求</span><span class="sxs-lookup"><span data-stu-id="3182e-117">Requirements</span></span>  
- <span data-ttu-id="3182e-118">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3182e-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f921f-117">要求</span><span class="sxs-lookup"><span data-stu-id="f921f-117">Requirements</span></span>  
+ <span data-ttu-id="f921f-118">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f921f-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3182e-119">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3182e-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f921f-119">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="f921f-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3182e-120">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3182e-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f921f-120">**库：** 用作 Mscoree.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="f921f-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="3182e-121">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3182e-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f921f-121">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f921f-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3182e-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="3182e-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f921f-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f921f-122">See also</span></span>
 
-- [<span data-ttu-id="3182e-123">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="3182e-123">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [<span data-ttu-id="3182e-124">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="3182e-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="f921f-123">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="f921f-123">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="f921f-124">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="f921f-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

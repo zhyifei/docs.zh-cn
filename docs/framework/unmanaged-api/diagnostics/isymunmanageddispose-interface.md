@@ -21,18 +21,18 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449226"
 ---
-# <a name="isymunmanageddispose-interface"></a><span data-ttu-id="bd8d1-102">ISymUnmanagedDispose 接口</span><span class="sxs-lookup"><span data-stu-id="bd8d1-102">ISymUnmanagedDispose Interface</span></span>
-<span data-ttu-id="bd8d1-103">Disposes of unmanaged resources.</span><span class="sxs-lookup"><span data-stu-id="bd8d1-103">Disposes of unmanaged resources.</span></span>  
+# <a name="isymunmanageddispose-interface"></a><span data-ttu-id="bf3d7-102">ISymUnmanagedDispose 接口</span><span class="sxs-lookup"><span data-stu-id="bf3d7-102">ISymUnmanagedDispose Interface</span></span>
+<span data-ttu-id="bf3d7-103">释放非托管资源。</span><span class="sxs-lookup"><span data-stu-id="bf3d7-103">Disposes of unmanaged resources.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="bd8d1-104">方法</span><span class="sxs-lookup"><span data-stu-id="bd8d1-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="bf3d7-104">方法</span><span class="sxs-lookup"><span data-stu-id="bf3d7-104">Methods</span></span>  
   
-|<span data-ttu-id="bd8d1-105">方法</span><span class="sxs-lookup"><span data-stu-id="bd8d1-105">Method</span></span>|<span data-ttu-id="bd8d1-106">描述</span><span class="sxs-lookup"><span data-stu-id="bd8d1-106">Description</span></span>|  
+|<span data-ttu-id="bf3d7-105">方法</span><span class="sxs-lookup"><span data-stu-id="bf3d7-105">Method</span></span>|<span data-ttu-id="bf3d7-106">说明</span><span class="sxs-lookup"><span data-stu-id="bf3d7-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="bd8d1-107">Destroy 方法</span><span class="sxs-lookup"><span data-stu-id="bd8d1-107">Destroy Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|<span data-ttu-id="bd8d1-108">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span><span class="sxs-lookup"><span data-stu-id="bd8d1-108">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>|  
+|[<span data-ttu-id="bf3d7-107">Destroy 方法</span><span class="sxs-lookup"><span data-stu-id="bf3d7-107">Destroy Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|<span data-ttu-id="bf3d7-108">使基础对象释放所有内部引用，并在所有后续方法调用中返回失败。</span><span class="sxs-lookup"><span data-stu-id="bf3d7-108">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="bd8d1-109">要求</span><span class="sxs-lookup"><span data-stu-id="bd8d1-109">Requirements</span></span>  
- <span data-ttu-id="bd8d1-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="bd8d1-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bf3d7-109">要求</span><span class="sxs-lookup"><span data-stu-id="bf3d7-109">Requirements</span></span>  
+ <span data-ttu-id="bf3d7-110">**标头：** CorSym，CorSym</span><span class="sxs-lookup"><span data-stu-id="bf3d7-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bd8d1-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="bd8d1-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bf3d7-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bf3d7-111">See also</span></span>
 
-- [<span data-ttu-id="bd8d1-112">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="bd8d1-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="bf3d7-112">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="bf3d7-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

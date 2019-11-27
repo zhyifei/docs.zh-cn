@@ -21,21 +21,21 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445489"
 ---
-# <a name="inotifyconnection2-interface"></a><span data-ttu-id="9ffb9-102">INotifyConnection2 接口</span><span class="sxs-lookup"><span data-stu-id="9ffb9-102">INotifyConnection2 Interface</span></span>
-<span data-ttu-id="9ffb9-103">Declares methods for registering and unregistering a connection notification source.</span><span class="sxs-lookup"><span data-stu-id="9ffb9-103">Declares methods for registering and unregistering a connection notification source.</span></span>  
+# <a name="inotifyconnection2-interface"></a><span data-ttu-id="b09b3-102">INotifyConnection2 接口</span><span class="sxs-lookup"><span data-stu-id="b09b3-102">INotifyConnection2 Interface</span></span>
+<span data-ttu-id="b09b3-103">声明用于注册和注销连接通知源的方法。</span><span class="sxs-lookup"><span data-stu-id="b09b3-103">Declares methods for registering and unregistering a connection notification source.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="9ffb9-104">方法</span><span class="sxs-lookup"><span data-stu-id="9ffb9-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="b09b3-104">方法</span><span class="sxs-lookup"><span data-stu-id="b09b3-104">Methods</span></span>  
   
-|<span data-ttu-id="9ffb9-105">方法</span><span class="sxs-lookup"><span data-stu-id="9ffb9-105">Method</span></span>|<span data-ttu-id="9ffb9-106">描述</span><span class="sxs-lookup"><span data-stu-id="9ffb9-106">Description</span></span>|  
+|<span data-ttu-id="b09b3-105">方法</span><span class="sxs-lookup"><span data-stu-id="b09b3-105">Method</span></span>|<span data-ttu-id="b09b3-106">说明</span><span class="sxs-lookup"><span data-stu-id="b09b3-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="9ffb9-107">RegisterNotifySource 方法</span><span class="sxs-lookup"><span data-stu-id="9ffb9-107">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|<span data-ttu-id="9ffb9-108">Installs a specified notification source object.</span><span class="sxs-lookup"><span data-stu-id="9ffb9-108">Installs a specified notification source object.</span></span>|  
-|[<span data-ttu-id="9ffb9-109">UnregisterNotifySource 方法</span><span class="sxs-lookup"><span data-stu-id="9ffb9-109">UnregisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|<span data-ttu-id="9ffb9-110">Removes a specified notification source object from the connection.</span><span class="sxs-lookup"><span data-stu-id="9ffb9-110">Removes a specified notification source object from the connection.</span></span>|  
+|[<span data-ttu-id="b09b3-107">RegisterNotifySource 方法</span><span class="sxs-lookup"><span data-stu-id="b09b3-107">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|<span data-ttu-id="b09b3-108">安装指定的通知源对象。</span><span class="sxs-lookup"><span data-stu-id="b09b3-108">Installs a specified notification source object.</span></span>|  
+|[<span data-ttu-id="b09b3-109">UnregisterNotifySource 方法</span><span class="sxs-lookup"><span data-stu-id="b09b3-109">UnregisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|<span data-ttu-id="b09b3-110">从连接中删除指定的通知源对象。</span><span class="sxs-lookup"><span data-stu-id="b09b3-110">Removes a specified notification source object from the connection.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9ffb9-111">要求</span><span class="sxs-lookup"><span data-stu-id="9ffb9-111">Requirements</span></span>  
- <span data-ttu-id="9ffb9-112">**Header:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="9ffb9-112">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b09b3-111">要求</span><span class="sxs-lookup"><span data-stu-id="b09b3-111">Requirements</span></span>  
+ <span data-ttu-id="b09b3-112">**标头：** ProtocolNotify2 .idl</span><span class="sxs-lookup"><span data-stu-id="b09b3-112">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9ffb9-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="9ffb9-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b09b3-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b09b3-113">See also</span></span>
 
-- [<span data-ttu-id="9ffb9-114">INotifySink2 接口</span><span class="sxs-lookup"><span data-stu-id="9ffb9-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="9ffb9-115">INotifySource2 接口</span><span class="sxs-lookup"><span data-stu-id="9ffb9-115">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="9ffb9-116">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="9ffb9-116">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="b09b3-114">INotifySink2 接口</span><span class="sxs-lookup"><span data-stu-id="b09b3-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="b09b3-115">INotifySource2 接口</span><span class="sxs-lookup"><span data-stu-id="b09b3-115">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="b09b3-116">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="b09b3-116">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

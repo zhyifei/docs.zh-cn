@@ -1,5 +1,5 @@
 ---
-title: Named argument not found
+title: 找不到命名参数
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID448
@@ -11,13 +11,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348474"
 ---
-# <a name="named-argument-not-found-visual-basic"></a><span data-ttu-id="9598b-102">未找到命名参数 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9598b-102">Named argument not found (Visual Basic)</span></span>
-<span data-ttu-id="9598b-103">除非命名参数出现在过程定义中，否则不能在过程调用中使用命名参数。</span><span class="sxs-lookup"><span data-stu-id="9598b-103">A named argument can not be used in a procedure invocation unless it appears in the procedure definition.</span></span> <span data-ttu-id="9598b-104">你指定了一个命名参数，但未将过程未定义为接受该名称的参数。</span><span class="sxs-lookup"><span data-stu-id="9598b-104">You specified a named argument, but the procedure was not defined to accept an argument by that name.</span></span>  
+# <a name="named-argument-not-found-visual-basic"></a><span data-ttu-id="aa1d3-102">未找到命名参数 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="aa1d3-102">Named argument not found (Visual Basic)</span></span>
+<span data-ttu-id="aa1d3-103">除非命名参数出现在过程定义中，否则不能在过程调用中使用命名参数。</span><span class="sxs-lookup"><span data-stu-id="aa1d3-103">A named argument can not be used in a procedure invocation unless it appears in the procedure definition.</span></span> <span data-ttu-id="aa1d3-104">你指定了一个命名参数，但未将过程未定义为接受该名称的参数。</span><span class="sxs-lookup"><span data-stu-id="aa1d3-104">You specified a named argument, but the procedure was not defined to accept an argument by that name.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="9598b-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="9598b-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="aa1d3-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="aa1d3-105">To correct this error</span></span>  
   
-- <span data-ttu-id="9598b-106">检查参数名称的拼写。</span><span class="sxs-lookup"><span data-stu-id="9598b-106">Check the spelling of the argument name.</span></span>  
+- <span data-ttu-id="aa1d3-106">检查参数名称的拼写。</span><span class="sxs-lookup"><span data-stu-id="aa1d3-106">Check the spelling of the argument name.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9598b-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="9598b-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aa1d3-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="aa1d3-107">See also</span></span>
 
-- [<span data-ttu-id="9598b-108">错误类型</span><span class="sxs-lookup"><span data-stu-id="9598b-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="aa1d3-108">错误类型</span><span class="sxs-lookup"><span data-stu-id="aa1d3-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
