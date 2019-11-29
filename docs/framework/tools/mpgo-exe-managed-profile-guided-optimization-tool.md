@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e8c9093faa80249a2c5898c1f250e97208764be6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a5ab3040a246a135771c45b2639567db9ab510e3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044412"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447974"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe（按托管配置文件优化工具）
 
-托管配置文件引导式优化工具 (Mpgo.exe) 是一种命令行工具，使用常见的最终用户方案优化由[本机映像生成器 (Ngen.exe)](ngen-exe-native-image-generator.md) 创建的本机映像程序集。 利用此工具，你可运行生成配置文件数据的培训方案。 [本机映像生成器 (Ngen.exe)](ngen-exe-native-image-generator.md) 使用此数据优化其生成的本机映像应用程序程序集。 培训方案是应用程序预期用法的一种试运行。 Mpgo.exe 适用于 Visual Studio Ultimate 2012 及更高版本。 从 Visual Studio 2013 开始，还可以使用 Mpgo.exe 优化 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用。  
+托管配置文件引导式优化工具 (Mpgo.exe) 是一种命令行工具，使用常见的最终用户方案优化由[本机映像生成器 (Ngen.exe)](ngen-exe-native-image-generator.md) 创建的本机映像程序集。 利用此工具，你可运行生成配置文件数据的培训方案。 [本机映像生成器 (Ngen.exe)](ngen-exe-native-image-generator.md) 使用此数据优化其生成的本机映像应用程序程序集。 培训方案是应用程序预期用法的一种试运行。 Mpgo.exe 适用于 Visual Studio Ultimate 2012 及更高版本。 从 Visual Studio 2013 开始，还可以使用 Mpgo.exe 优化 Windows 8.x 应用商店应用。  
   
 通过收集培训方案的数据并使用它来优化本机映像布局，按配置优化改进了应用程序启动时间、内存利用率（工作集大小）和吞吐量。  
   
-当你遇到与中间语言 (IL) 程序集的启动时间和工作集大小相关的性能问题时，建议你先使用 Ngen.exe 消除实时 (JIT) 编译成本和推动代码共享。 如果你需要更多改进，则可使用 Mpgo.exe 进一步优化应用程序。 你可以使用未优化的本机映像程序集的性能数据作为计算性能提升的基准。 使用 Mpgo.exe 可以获得更短的冷启动时间和更小的工作集大小。 Mpgo.exe 将信息到添加 Ngen.exe 用于创建优化的本机映像程序集的 IL 程序集中。 有关详细信息，请参阅 .NET 博客中的 [Improving Launch Performance for your Desktop Applications](https://go.microsoft.com/fwlink/p/?LinkId=248943)（提高桌面应用程序的启动性能）。  
+当你遇到与中间语言 (IL) 程序集的启动时间和工作集大小相关的性能问题时，建议你先使用 Ngen.exe 消除实时 (JIT) 编译成本和推动代码共享。 如果你需要更多改进，则可使用 Mpgo.exe 进一步优化应用程序。 你可以使用未优化的本机映像程序集的性能数据作为计算性能提升的基准。 使用 Mpgo.exe 可以获得更短的冷启动时间和更小的工作集大小。 Mpgo.exe 将信息到添加 Ngen.exe 用于创建优化的本机映像程序集的 IL 程序集中。 有关详细信息，请参阅 .NET 博客中的 [Improving Launch Performance for your Desktop Applications](https://devblogs.microsoft.com/dotnet/improving-launch-performance-for-your-desktop-applications/)（提高桌面应用程序的启动性能）。  
   
 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请通过管理员凭据使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示），并在命令提示符处键入以下命令。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "71044412"
 mpgo –Scenario <command> [-Import <directory>] –AssemblyList <assembly1>  <assembly2> ... -OutDir <directory> [options]  
 ```  
   
-对于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用：  
+对于 Windows 8.x 应用商店应用：  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,11 +49,11 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 
 |必选参数|说明|
 |------------------------|-----------------|
-|`-Scenario` \<command> <br /><br /> \- 或 -<br /><br /> `-Scenario` \<packageName> <br /><br /> -或-<br /><br /> `-Import` \<directory> |对于桌面应用，使用 `–Scenario` 指定命令来运行你要优化的应用程序，包括任何命令行参数。 如果 command 指定的路径包含空格，则应使用三组双引号将其引起来。例如：`mpgo.exe -scenario """C:\My App\myapp.exe""" -assemblylist """C:\My App\myapp.exe""" -outdir "C:\optimized files"`  。 请勿使用双引号；如果 command 包含空格，使用双引号将不能正确发挥作用  。<br /><br /> -或-<br /><br /> 对于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用，使用 `–Scenario` 指定你要为其生成配置文件信息的包。 如果指定包显示名称或包系列名称而不是完整的包名称，则 Mpgo.exe 将选择与你提供的名称匹配的包（如果只有一个匹配项）。 如果多个包与指定的名称匹配，则 Mpgo.exe 将提示你选择一个包。<br /><br /> \- 或 -<br /><br /> 使用 `-Import` 指定应使用之前优化的程序集中的优化数据来优化 `-AssemblyList` 中的程序集。 directory 指定包含之前优化的文件的目录。  在 `–AssemblyList` 或 `–AssemblyListFile` 中指定的程序集是要使用导入文件中的数据进行优化的程序集的新版本。 通过使用早期版本的程序集中的优化数据，你可以优化较新版本的程序集，而无需重新运行该方案。  但是，如果导入的程序集和目标程序集包含明显不同的代码，则优化数据将无效。 在 `–AssemblyList` 或 `–AssemblyListFile` 中指定的程序集名称必须存在于 `–Import` directory 指定的目录中。  如果 directory 指定的路径包含空格，则应使用三组双引号将其引起来。 <br /><br /> 你必须指定 `–Scenario` 或 `–Import`，但是不能同时指定这两个参数。|
+|`-Scenario` \<command> <br /><br /> \- 或 -<br /><br /> `-Scenario` \<packageName> <br /><br /> -或-<br /><br /> `-Import` \<directory> |对于桌面应用，使用 `–Scenario` 指定命令来运行你要优化的应用程序，包括任何命令行参数。 如果 command 指定的路径包含空格，则应使用三组双引号将其引起来。例如：`mpgo.exe -scenario """C:\My App\myapp.exe""" -assemblylist """C:\My App\myapp.exe""" -outdir "C:\optimized files"`  。 请勿使用双引号；如果 command 包含空格，使用双引号将不能正确发挥作用  。<br /><br /> -或-<br /><br /> 对于 Windows 8.x 应用商店 应用，使用 `–Scenario` 指定你要为其生成配置文件信息的包。 如果指定包显示名称或包系列名称而不是完整的包名称，则 Mpgo.exe 将选择与你提供的名称匹配的包（如果只有一个匹配项）。 如果多个包与指定的名称匹配，则 Mpgo.exe 将提示你选择一个包。<br /><br /> \- 或 -<br /><br /> 使用 `-Import` 指定应使用之前优化的程序集中的优化数据来优化 `-AssemblyList` 中的程序集。 directory 指定包含之前优化的文件的目录。  在 `–AssemblyList` 或 `–AssemblyListFile` 中指定的程序集是要使用导入文件中的数据进行优化的程序集的新版本。 通过使用早期版本的程序集中的优化数据，你可以优化较新版本的程序集，而无需重新运行该方案。  但是，如果导入的程序集和目标程序集包含明显不同的代码，则优化数据将无效。 在 `–AssemblyList` 或 `–AssemblyListFile` 中指定的程序集名称必须存在于 `–Import` directory 指定的目录中。  如果 directory 指定的路径包含空格，则应使用三组双引号将其引起来。 <br /><br /> 你必须指定 `–Scenario` 或 `–Import`，但是不能同时指定这两个参数。|
 |`-OutDir` \<directory> |用于放置优化过的程序集的目录。 如果某个程序集已经位于输出目录文件夹中，则将创建新副本并且向其名称追加索引号；例如：assemblyname-1.exe。  如果 directory 指定的路径包含空格，则使用双引号将其引起来。 |
 |`-AssemblyList` \<assembly1 assembly2 ...> <br /><br /> \- 或 -<br /><br /> `-AssemblyListFile` \<file> |你希望收集与其有关的配置文件信息的程序集（包括 .exe 和 .dll 文件）的列表，各程序集之用空格隔开。 你可以指定 `C:\Dir\*.dll` 或 `*.dll` 来选择指定工作目录或当前工作目录中的所有程序集。 有关详细信息，请参阅备注部分。<br /><br /> \- 或 -<br /><br /> 一个文本文件，其中包含你希望收集与其有关的配置文件信息的程序集的列表，每个程序集在单独的行上列出。 如果程序集名称以连字符 (-) 开始，则使用程序集文件列表或重命名程序集。|
 |`-AppID`\<appId> |指定包中的应用程序的 ID。 如果使用通配符 (\*)，则 Mpgo.exe 将尝试枚举包中的 AppID，如果失败，则将回退到 \<package_family_name>!App。  如果指定前缀为感叹号 (!) 的字符串，则 Mpgo.exe 会将包系列名称与提供的自变量连接。|
-|`-Timeout` \<seconds> |允许 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用在此应用退出前运行的时间。|
+|`-Timeout` \<seconds> |允许 Windows 8.x 应用商店应用在此应用退出前运行的时间。|
 
 |可选参数|说明|
 |------------------------|-----------------|
@@ -130,5 +130,5 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 
 - [Ngen.exe（本机映像生成器）](ngen-exe-native-image-generator.md)
 - [命令提示](developer-command-prompt-for-vs.md)
-- [Improving Launch Performance for your Desktop Applications](https://go.microsoft.com/fwlink/p/?LinkId=248943)（提高桌面应用程序的启动性能）
-- [.NET 4.5 中的性能改进概述](https://go.microsoft.com/fwlink/p/?LinkId=249131)
+- [Improving Launch Performance for your Desktop Applications](https://devblogs.microsoft.com/dotnet/improving-launch-performance-for-your-desktop-applications/)（提高桌面应用程序的启动性能）
+- [.NET 4.5 中的性能改进概述](https://docs.microsoft.com/archive/msdn-magazine/2012/april/clr-an-overview-of-performance-improvements-in-net-4-5)

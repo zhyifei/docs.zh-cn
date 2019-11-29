@@ -2,12 +2,12 @@
 title: Visual Studio 中F#的入门
 description: 了解如何与 Visual F# Studio 配合使用。
 ms.date: 07/03/2018
-ms.openlocfilehash: e573af67a1fc00b0a340f8c73ab1ee0ed2b97810
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 80b4fc5b7631eace719832fe32003cad578ead27
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71082701"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552823"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Visual Studio 中F#的入门
 
@@ -29,21 +29,21 @@ F#visual Studio IDE F#支持可视化工具。
 
 ## <a name="writing-your-code"></a>编写代码
 
-让我们首先编写一些代码。  确保该`Program.fs`文件已打开，然后将其内容替换为以下内容：
+让我们首先编写一些代码。  确保 `Program.fs` 文件处于打开状态，然后将其内容替换为以下内容：
 
 [!code-fsharp[HelloSquare](~/samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-在上面的代码示例中，已`square`定义了一个函数，该函数采用`x`一个名为的输入，并将其与自身相乘。  由于F#使用[类型推理](../language-reference/type-inference.md)，因此不需要`x`指定的类型。  编译器了解乘法的有效类型，并根据调用方式`square`将类型分配给`x`。 F#  如果将鼠标悬停`square`在上方，应会看到以下内容：
+在上面的代码示例中，定义了一个函数 `square`，该函数采用名为 `x` 的输入，并将其与自身相乘。  由于F#使用[类型推理](../language-reference/type-inference.md)，因此不需要指定 `x` 的类型。  F#编译器了解乘法的有效类型，并根据调用 `square` 的方式将类型分配给 `x`。  如果将鼠标悬停在 `square`上，应会看到以下内容：
 
 ```fsharp
 val square: x:int -> int
 ```
 
-这就是所谓函数的类型签名。  如下所示："方形是一个函数，它采用名为 x 的整数并生成一个整数"。  请注意，编译器`square` `int`现在提供类型，这是因为乘法在*所有*类型中都不是泛型的，而是在一组封闭类型中是通用的。  此时F#会选取`int`编译器，但如果您使用`float`其他输入类型（如）调用`square` ，则会调整类型签名。
+这就是所谓函数的类型签名。  可以按如下所示读取： "方形是一个函数，它采用名为 x 的整数并生成一个整数"。  请注意，编译器现在为 `square` 提供 `int` 类型-这是因为乘法在*所有*类型中都不是泛型的，而是在一组封闭类型中是通用的。  此时F#编译器选取了 `int`，但如果您使用不同的输入类型（例如 `float`）调用 `square`，则会调整类型签名。
 
-定义了另`main`一个函数，该函数`EntryPoint`用特性修饰，以告知编译器程序F#执行应在此开始。  它遵循与其他[C 样式编程语言](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B)相同的约定，可以将命令行参数传递给此函数，并且返回整数代码（通常`0`为）。
+定义了另一个函数 `main`，该函数通过 `EntryPoint` 属性修饰，告诉F#编译器程序执行应从此处开始。  它遵循与其他[C 样式编程语言](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B)相同的约定，可以将命令行参数传递给此函数，并且返回整数代码（通常 `0`）。
 
-在此函数中，我们使用的`square` `12`参数调用了函数。  然后F# `square` ，编译器将`int -> int`的类型分配为（即，采用`int`并生成的`int`函数）。  对`printfn`的调用是一个格式化的打印函数，它使用格式字符串（类似于 C 样式编程语言）、与在格式字符串中指定的参数相对应的参数，然后输出结果和新行。
+在此函数中，我们使用 `12`的参数调用 `square` 函数。  然后F# ，编译器分配要 `int -> int` 的 `square` 的类型（即，采用 `int` 并生成 `int`的函数）。  对 `printfn` 的调用是一个格式化的打印函数，该函数使用格式字符串（类似于 C 样式编程语言）、与格式字符串中指定的参数相对应的参数，然后输出结果和新行。
 
 ## <a name="running-your-code"></a>运行代码
 
@@ -59,9 +59,9 @@ val square: x:int -> int
 
 ## <a name="next-steps"></a>后续步骤
 
-如果你尚未这样做，请查看[的F#教程](../tour.md)，其中介绍了该F#语言的一些核心功能。  它将为你概述的某些功能F#，并提供可复制到 Visual Studio 并运行的丰富代码示例。  本指南中还提供了一些可以使用的展示外部资源。 [ F# ](../index.md)
+如果你尚未这样做，请查看[的F#教程](../tour.md)，其中介绍了该F#语言的一些核心功能。  它将为你概述的某些功能F#，并提供可复制到 Visual Studio 并运行的丰富代码示例。  你还可以在文档[ F#主页](../index.yml)中F#了解有关文档的详细信息。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [F# 教程](../tour.md)
 - [F#语言参考](../language-reference/index.md)

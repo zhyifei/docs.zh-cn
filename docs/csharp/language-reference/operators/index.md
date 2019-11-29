@@ -9,16 +9,16 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 78233b9a18f4369ebb086f2016af3f945b6a654a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 11c544e7fc923b0820141fb2e096ef7707f0a95f
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039017"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552474"
 ---
 # <a name="c-operators-c-reference"></a>C# 运算符（C# 参考）
 
-C# 提供了许多由内置类型支持的运算符。 例如，[算术运算符](arithmetic-operators.md)使用数值操作数执行算术运算，[布尔逻辑运算符](boolean-logical-operators.md)使用 [bool](../keywords/bool.md) 操作数执行逻辑运算。 特定的运算符可[重载](operator-overloading.md)。 使用运算符重载，可以为用户定义类型的操作数指定运算符行为。
+C# 提供了许多由内置类型支持的运算符。 例如，[算术运算符](arithmetic-operators.md)使用数值操作数执行算术运算，[布尔逻辑运算符](boolean-logical-operators.md)使用 [bool](../builtin-types/bool.md) 操作数执行逻辑运算。 特定的运算符可[重载](operator-overloading.md)。 使用运算符重载，可以为用户定义类型的操作数指定运算符行为。
 
 在[表达式](../../programming-guide/statements-expressions-operators/expressions.md)中，运算符优先级和结合性决定了操作的执行顺序。 可以使用括号更改由运算符优先级和结合性决定的计算顺序。
 

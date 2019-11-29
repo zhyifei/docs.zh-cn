@@ -5,12 +5,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 1200afb30c6bdebf66b2a1e080c62a776a7e9826
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 63f5b422f1d5c4843d6fadb5973eaf16e50ee961
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100879"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428570"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core SDK 生成 Visual Basic Hello World 应用程序
 
@@ -20,7 +20,7 @@ ms.locfileid: "73100879"
 
 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)。 可以使用 .NET Core 2.1 或更高版本开发应用程序。
 
-有关详细信息，请参阅 [Windows 上 .NET Core 的先决条件](../windows-prerequisites.md)。
+有关详细信息，请参阅 [.NET Core 依赖项和要求](../install/dependencies.md?tabs=netcore30&pivots=os-windows)。
 
 ## <a name="a-simple-hello-world-application"></a>简单的“Hello World”应用程序
 

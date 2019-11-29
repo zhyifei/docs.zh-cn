@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: 36ff76db984a864a201313ddb7478cc1e93888fd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 51292d977f2be87cec7c3481f5004fe5fe756224
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139981"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204542"
 ---
 # <a name="task-based-asynchronous-programming"></a>基于任务的异步编程
 
@@ -268,7 +268,7 @@ TPL 有几种在并行和顺序方案中都有用的新公共类型。 它们包
 
 建议不要从 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 继承。 相反，我们建议你使用 <xref:System.Threading.Tasks.Task.AsyncState%2A> 属性将其他数据或状态与 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 对象相关联。 还可以使用扩展方法扩展 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 类的功能。 有关扩展方法的详细信息，请参阅[扩展方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md)和[扩展方法](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)。
 
-如果必须从 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 继承，则不能使用 <xref:System.Threading.Tasks.Task.Run%2A>、<xref:System.Threading.Tasks.Task.Run%2A> 或 <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>、<xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> 类创建自定义任务类型的实例，因为这些类仅创建 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 对象。 此外，不能使用 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.TaskFactory> 和 <xref:System.Threading.Tasks.TaskFactory%601> 提供的任务延续机制创建自定义任务类型的实例，因为这些机制也只创建 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 对象。
+如果必须从 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 继承，则不能使用 <xref:System.Threading.Tasks.Task.Run%2A> 或 <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>，<xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> 类创建自定义任务类型的实例，因为这些类仅创建 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 对象。 此外，不能使用 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.TaskFactory> 和 <xref:System.Threading.Tasks.TaskFactory%601> 提供的任务延续机制创建自定义任务类型的实例，因为这些机制也只创建 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 对象。
 
 ## <a name="related-topics"></a>相关主题
 

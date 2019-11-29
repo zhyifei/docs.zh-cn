@@ -2,12 +2,12 @@
 title: C# 中的异步编程
 description: 对使用 async、await、Task 和 Task<T> 的异步编程的 C# 语言支持的概述
 ms.date: 03/18/2019
-ms.openlocfilehash: 4ed48a2e74dde5ae0f24ebd680ace133e05e15d4
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 633da9485c5f74efb6e57234a31f0404e39605ec
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167890"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552429"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>使用 Async 和 Await 的异步编程
 
@@ -22,7 +22,7 @@ ms.locfileid: "70167890"
 1. 在烤面包上加黄油和果酱。
 1. 倒一杯橙汁。
 
-如果你有烹饪经验，便可通过异步方式执行这些指令。 你会先开始加热平底锅以备煎蛋，接着再从培根着手。 你可将面包放进烤面包机，然后再煎鸡蛋。 在此过程的每一步，你都可以先开始一项任务，然后将注意力转移到准备进行的其他任务上。
+如果你有烹饪经验，便可通过异步方式执行这些指令  。 你会先开始加热平底锅以备煎蛋，接着再从培根着手。 你可将面包放进烤面包机，然后再煎鸡蛋。 在此过程的每一步，你都可以先开始一项任务，然后将注意力转移到准备进行的其他任务上。
 
 做早餐是非并行异步工作的一个好示例。 单人（或单线程）即可处理所有这些任务。 继续讲解早餐的类比，一个人可以以异步方式做早餐，即在第一个任务完成之前开始进行下一个任务。 不管是否有人在看着，做早餐的过程都在进行。 在开始加热平底锅准备煎蛋的同时就可以开始煎了培根。 在开始煎培根后，你可以将面包放进烤面包机。
 
@@ -65,8 +65,8 @@ ms.locfileid: "70167890"
 ```csharp
 Coffee cup = PourCoffee();
 Console.WriteLine("coffee is ready");
-Task<Egg> eggTask = FryEggs(2);
-Egg eggs = await eggTask;
+Task<Egg> eggsTask = FryEggs(2);
+Egg eggs = await eggsTask;
 Console.WriteLine("eggs are ready");
 Task<Bacon> baconTask = FryBacon(3);
 Bacon bacon = await baconTask;
@@ -87,7 +87,7 @@ Console.WriteLine("Breakfast is ready!");
 ```csharp
 Coffee cup = PourCoffee();
 Console.WriteLine("coffee is ready");
-Task<Egg> eggTask = FryEggs(2);
+Task<Egg> eggsTask = FryEggs(2);
 Task<Bacon> baconTask = FryBacon(3);
 Task<Toast> toastTask = ToastBread(2);
 Toast toast = await toastTask;
@@ -97,7 +97,7 @@ Console.WriteLine("toast is ready");
 Juice oj = PourOJ();
 Console.WriteLine("oj is ready");
 
-Egg eggs = await eggTask;
+Egg eggs = await eggsTask;
 Console.WriteLine("eggs are ready");
 Bacon bacon = await baconTask;
 Console.WriteLine("bacon is ready");
@@ -129,7 +129,7 @@ Console.WriteLine("Breakfast is ready!");
 可以通过使用 `Task` 类的方法改进上述代码末尾的一系列 `await` 语句。 其中一个 API 是 <xref:System.Threading.Tasks.Task.WhenAll%2A>，它将返回一个其参数列表中的所有任务都已完成时才完成的 <xref:System.Threading.Tasks.Task>，如以下代码中所示：
 
 ```csharp
-await Task.WhenAll(eggTask, baconTask, toastTask);
+await Task.WhenAll(eggsTask, baconTask, toastTask);
 Console.WriteLine("eggs are ready");
 Console.WriteLine("bacon is ready");
 Console.WriteLine("toast is ready");

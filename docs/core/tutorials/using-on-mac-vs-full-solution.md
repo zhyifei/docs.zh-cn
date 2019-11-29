@@ -4,12 +4,12 @@ description: 本主题演示了构建包含可重用的库和单元测试的 .NE
 author: mairaw
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 46d118cc4dc54e34db0f964aa3f8d76f0ad67249
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0081463c0a99acc5cb4e02bb96e2218bbcf61131
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925996"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428622"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案
 
@@ -25,11 +25,11 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
 ## <a name="prerequisites"></a>系统必备
 
-- OpenSSL（如果运行 .NET Core 1.1）：请参阅 [Mac 上 .NET Core 的先决条件](../macos-prerequisites.md)主题。
+- OpenSSL（如果运行 .NET Core 1.1）：请参阅 [.NET Core 依赖项和要求](../install/dependencies.md?tabs=netcore30&pivots=os-macos)主题。
 - [.NET Core SDK 1.1 或更高版本](https://dotnet.microsoft.com/download)
 - [Visual Studio 2017 for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
-有关先决条件的详细信息，请参阅 [Mac 上的 .NET Core 的先决条件](../macos-prerequisites.md)。 有关 Visual Studio 2017 for Mac 完整系统要求的信息，请参阅 [Visual Studio 2017 for Mac 产品系列系统要求](/visualstudio/productinfo/vs2017-system-requirements-mac)。
+若要了解有关先决条件的详细信息，请参阅 [.NET Core 依赖项和要求](../install/dependencies.md?tabs=netcore30&pivots=os-macos)。 有关 Visual Studio 2017 for Mac 完整系统要求的信息，请参阅 [Visual Studio 2017 for Mac 产品系列系统要求](/visualstudio/productinfo/vs2017-system-requirements-mac)。
 
 ## <a name="building-a-library"></a>生成库
 

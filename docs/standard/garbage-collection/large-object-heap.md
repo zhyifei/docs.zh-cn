@@ -1,17 +1,17 @@
 ---
-title: Windows 系统上的大型对象堆
+title: Windows 上的 LOH - .NET
 ms.date: 05/02/2018
 helpviewer_keywords:
 - large object heap (LOH)"
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-ms.openlocfilehash: 618db9faff137e6ff0f878c928e3a889cff37838
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5125b76dd26ffa4fb363ecf8449f65b490f57b93
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120939"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283625"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows 系统上的大型对象堆
 
@@ -22,7 +22,7 @@ ms.locfileid: "73120939"
 
 ## <a name="how-an-object-ends-up-on-the-large-object-heap-and-how-gc-handles-them"></a>对象如何在大型对象堆上结束以及 GC 如何处理它们
 
-如果对象大于或等于 85,000 字节，将被视为大型对象。 此数字根据性能优化确定。 对象分配请求为 85,000 字节或更大时，运行时会将其分配到大型对象堆。
+如果对象的大小大于或等于 85,000 字节，将被视为大型对象。 此数字根据性能优化确定。 对象分配请求为 85,000 字节或更大时，运行时会将其分配到大型对象堆。
 
 若要了解其意义，可查看 .NET GC 的部分相关基础知识。
 

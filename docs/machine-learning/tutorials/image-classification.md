@@ -1,17 +1,17 @@
 ---
 title: 教程：从预先训练的 TensorFlow 模型生成 ML.NET 图像分类模型
 description: 了解如何将现有 TensorFlow 模型中的知识传输到新的 ML.NET 图像分类模型中。 TensorFlow 模型经过训练，可以将图像分为一千个类别。 ML.NET 模型使用迁移学习将图像分为更多类别。
-ms.date: 10/30/2019
+ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
 author: natke
 ms.author: nakersha
-ms.openlocfilehash: bd25a24e467148c46958b6e7ce7b18e181dab5fd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 952ce5c52bcd09b8c4e4e40d5ddf85835a26478d
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129606"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204990"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>教程：从预先训练的 TensorFlow 模型生成 ML.NET 图像分类模型
 
@@ -40,13 +40,7 @@ TensorFlow 模型经过训练，可以将图像分为一千个类别。 ML.NET �
 ## <a name="prerequisites"></a>系统必备
 
 * 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
-
-* Microsoft.ML 1.3.1 Nuget 包
-* Microsoft.ML.ImageAnalytics 1.3.1 Nuget 包
-* Microsoft.ML.TensorFlow 1.3.1 Nuget 包
-
 * [教程资产目录 .ZIP 文件](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
-
 * [InceptionV1 机器学习模型](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
 ## <a name="select-the-right-machine-learning-task"></a>选择正确的机器学习任务
@@ -130,10 +124,10 @@ toaster2.png    appliance
 
     * 在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。
     * 选择“nuget.org”作为“包源”，选择“浏览”选项卡，再搜索“Microsoft.ML”  。
-    * 单击“版本”下拉列表，选择列表中的“1.3.1”包，然后选择“安装”按钮    。
+    * 单击“版本”下拉列表，选择列表中的“1.4.0”包，然后选择“安装”按钮    。
     * 选择“预览更改”对话框中的“确定”按钮   。
     * 如果同意所列包的许可条款，请选择“接受许可”  对话框中的“我接受”  按钮。
-    * 对 **Microsoft.ML.ImageAnalytics v1.3.1** 和 **Microsoft.ML.TensorFlow v1.3.1** 重复这些步骤。
+    * 对“Microsoft.ML.ImageAnalytics v1.4.0”和“SciSharp.TensorFlow.Redist v1.15.0”、和“Microsoft.ML.TensorFlow v1.4.0”重复这些步骤    。
 
 ### <a name="download-assets"></a>下载资产
 

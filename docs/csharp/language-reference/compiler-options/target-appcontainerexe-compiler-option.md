@@ -2,15 +2,15 @@
 title: -target:appcontainerexe（C# 编译器选项）
 ms.date: 07/20/2015
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
-ms.openlocfilehash: 09ae01d95138b72a0012f294189d288fc71c74b2
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 64661e72f9efe190606cadd93558678cb849e8cc
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606522"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204522"
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe（C# 编译器选项）
-如果使用 -target:appcontainerexe 编译器选项，则编译器会创建一个 Windows 可执行 (.exe) 文件，该文件必须在应用容器中运行  。 此选项与 [-target:winexe](./target-winexe-compiler-option.md) 等效，但专门用于 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 应用。  
+如果使用 -target:appcontainerexe 编译器选项，则编译器会创建一个 Windows 可执行 (.exe) 文件，该文件必须在应用容器中运行  。 此选项与 [-target:winexe](./target-winexe-compiler-option.md) 等效，但专门用于 Windows 8.x 应用商店应用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,7 +31,7 @@ ms.locfileid: "69606522"
   
 2. 在“应用程序”  选项卡上，在“输出类型”  列表中选择“Windows 应用商店应用”  。  
   
-     此选项仅可用于 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 应用模板。  
+     此选项仅可用于 Windows 8.x 应用商店应用模板。  
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   

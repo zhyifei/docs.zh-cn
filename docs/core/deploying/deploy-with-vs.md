@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: fd6861a71bdaac2d3500be52ae29c9fdb383a574
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f80b483fedc600a1e1a48d36ce9b7b95c6de9f27
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092716"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428896"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 应用
 
@@ -24,7 +24,7 @@ ms.locfileid: "73092716"
 - 独立部署
 - 包含第三方依赖项的独立部署
 
-有关使用 Visual Studio 开发 .NET Core 应用程序的信息，请参阅 [Windows 上 .NET Core 的先决条件](../windows-prerequisites.md#prerequisites-to-develop-net-core-apps-with-visual-studio)。
+有关使用 Visual Studio 开发 .NET Core 应用程序的信息，请参阅 [.NET Core 依赖项和要求](../install/dependencies.md?tabs=netcore30&pivots=os-windows)。
 
 ## <a name="framework-dependent-deployment"></a>依赖框架的部署
 
@@ -71,7 +71,7 @@ ms.locfileid: "73092716"
 
 1. 使用 NuGet 包管理器  向项目添加对 NuGet 包的引用；如果系统上还没有此包，请先安装它。 要打开包管理器，请选择“工具”   > “NuGet 包管理器”   > “管理解决方案的 NuGet 包”  。
 
-1. 确认已在系统中安装 `Newtonsoft.Json`，如果尚未安装，请先安装它。 “已安装”  选项卡列出了系统中已安装的 NuGet 包。 如果此处未列出 `Newtonsoft.Json`，请选择“浏览”  选项卡，然后在搜索框中输入“Newtonsoft.Json”。 选择 `Newtonsoft.Json`，在右侧窗格中选择项目，然后选择“安装”  。
+1. 确认系统上安装了第三方依赖项（例如，`Newtonsoft.Json`）；如果没有，请安装它们。 “已安装”  选项卡列出了系统中已安装的 NuGet 包。 如果此处未列出 `Newtonsoft.Json`，请选择“浏览”  选项卡，然后在搜索框中输入“Newtonsoft.Json”。 选择 `Newtonsoft.Json`，在右侧窗格中选择项目，然后选择“安装”  。
 
 1. 如果系统中已安装 `Newtonsoft.Json`，请在“管理解决方案包”  选项卡的右侧窗格中选择项目，将其添加到项目。
 
@@ -98,7 +98,7 @@ ms.locfileid: "73092716"
 
    要启用固定模式，右键单击“解决方案资源管理器”中的项目（不是解决方案），然后选择“编辑 SCD.csproj”或“编辑 SCD.vbproj”    。 然后将以下突出显示的行添加到文件中：
 
- [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
+   [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj?highlight=6-8)]
 
 1. 创建应用程序的调试版本。
 
@@ -268,7 +268,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 
 1. 使用 NuGet 包管理器  向项目添加对 NuGet 包的引用；如果系统上还没有此包，请先安装它。 要打开包管理器，请选择“工具”   > “NuGet 包管理器”   > “管理解决方案的 NuGet 包”  。
 
-1. 确认已在系统中安装 `Newtonsoft.Json`，如果尚未安装，请先安装它。 “已安装”  选项卡列出了系统中已安装的 NuGet 包。 如果此处未列出 `Newtonsoft.Json`，请选择“浏览”  选项卡，然后在搜索框中输入“Newtonsoft.Json”。 选择 `Newtonsoft.Json`，在右侧窗格中选择项目，然后选择“安装”  。
+1. 确认系统上安装了第三方依赖项（例如，`Newtonsoft.Json`）；如果没有，请安装它们。 “已安装”  选项卡列出了系统中已安装的 NuGet 包。 如果此处未列出 `Newtonsoft.Json`，请选择“浏览”  选项卡，然后在搜索框中输入“Newtonsoft.Json”。 选择 `Newtonsoft.Json`，在右侧窗格中选择项目，然后选择“安装”  。
 
 1. 如果系统中已安装 `Newtonsoft.Json`，请在“管理解决方案包”  选项卡的右侧窗格中选择项目，将其添加到项目。
 

@@ -1,15 +1,15 @@
 ---
 title: 教程：检测产品销售中的异常
 description: 了解如何构建针对产品销售数据的异常检测应用程序。 本教程将使用 Visual Studio 2019 和 C# 创建 .NET Core 控制台应用程序。
-ms.date: 07/17/2019
+ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: ed4c24fac2348c021982ad593417b33d50347dd1
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: fe2904dee349f32feb115ea533adbb4b1d8b7140
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774437"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204943"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>教程：使用 ML.NET 检测产品销售中的异常
 
@@ -44,7 +44,7 @@ ms.locfileid: "72774437"
 
 3. 安装“Microsoft.ML NuGet 包”  ：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，选择列表中的“v1.0.0”包，再选择“安装”按钮    。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。 对 **Microsoft.ML.TimeSeries v0.12.0** 重复这些步骤。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，再选择“安装”按钮   。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。 对“Microsoft.ML.TimeSeries”重复这些步骤  。
 
 4. 在 Program.cs 文件的顶部添加以下 `using` 语句  ：
 
@@ -127,7 +127,7 @@ ML.NET 中的数据表示为 [IDataView 类](xref:Microsoft.ML.IDataView)。 `ID
 
 异常情况检测标记意外或异常事件/行为。 它提供寻找问题所在位置的线索，并帮助回答“这是否奇怪？”的问题。
 
-![这是否奇怪](./media/sales-anomaly-detection/anomalydetection.png)
+![“这是否奇怪”异常情况检测的示例。](./media/sales-anomaly-detection/time-series-anomaly-detection.png)
 
 异常情况检测是检测时序数据离群值的过程；在给定的输入时序上指向“怪异”或不是预期行为的行为。
 
@@ -152,7 +152,7 @@ ML.NET 中的数据表示为 [IDataView 类](xref:Microsoft.ML.IDataView)。 `ID
 
 峰值检测旨在识别与大部分时序数据值明显不同的突然但临时的突发。 及时检测到这些可疑的罕见项、事件或观察值很重要，这样才能尽量减少其产生。 以下方法可用于检测各种异常情况，例如：中断、网络攻击或病毒式 Web 内容。 下图是时序数据集中峰值的示例：
 
-![SpikeDetection](./media/sales-anomaly-detection/SpikeDetection.png)
+![显示两个峰值检测的屏幕截图。](./media/sales-anomaly-detection/two-spike-detections.png)
 
 ### <a name="add-the-createemptydataview-method"></a>添加 CreateEmptyDataView () 方法
 
@@ -266,7 +266,7 @@ Alert   Score   P-Value
 
 `Change points` 是时序事件流值分布的持续更改，例如级别更改和趋势。 这些持续更改的持续时间比 `spikes` 的持续时间长得多，可能指示灾难性事件。 `Change points` 通常对肉眼不可见，但可以使用诸如以下方法的方法在数据中检测到。  下图是更改点检测的示例：
 
-![ChangePointDetection](./media/sales-anomaly-detection/ChangePointDetection.png)
+![显示更改点检测的屏幕截图。](./media/sales-anomaly-detection/change-point-detection.png)
 
 ### <a name="create-the-detectchangepoint-method"></a>创建 DetectChangepoint() 方法
 

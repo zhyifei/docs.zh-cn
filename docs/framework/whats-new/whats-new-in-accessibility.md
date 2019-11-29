@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 22d70d0ee976d9c1a6aabd57e5d13dc70cd2d081
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 681328af3f3624a8398d5125b952593f2c0510c7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454255"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427593"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework 中辅助功能的新增功能
 
@@ -167,7 +167,7 @@ if (raiseMethod != null) {
 
 下图显示用户使用键盘选中按钮时的工具提示。
 
-![用户使用键盘导航到按钮时的工具提示](./media/tooltip.png)
+![用户使用键盘导航到按钮时工具提示的屏幕截图。](./media/whats-new-in-accessibility/select-tooltip-with-keyboard.png)
 
 <a name="wpf48" />
 
@@ -187,7 +187,7 @@ if (raiseMethod != null) {
 
 要使用此属性，只需将其添加到 XAML 代码，并使用适当的画笔或绑定。 生成的文本选择如下所示：
 
-![用户使用键盘导航到按钮时的工具提示](./media/selectiontextbrush-property.png)
+![运行中应用的屏幕截图，其中选中了“Hello World”文字。](./media/whats-new-in-accessibility/selectiontextbrush-property.png)
 
 可以结合使用 `SelectionBrush` 和 `SelectionTextBrush` 属性来生成你认为合适的任何背景色和前景色组合。
 
@@ -480,11 +480,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   在此之前: 
 
-  ![辅助功能改进前具有焦点的 Expander 控件](./media/expander-before.png)
+  ![此屏幕截图中显示了一个有焦点的组合框控件，其中没有焦点视觉对象。](./media/whats-new-in-accessibility/expander-control-before.png)
 
   之后： 
 
-  ![辅助功能改进后具有焦点的 Expander 控件](./media/expander-after.png)
+  ![此屏幕截图中显示了一个有焦点的组合框控件，其中控件文本周围显示了虚线。](./media/whats-new-in-accessibility/expander-control-after.png)
 
 - <xref:System.Windows.Controls.CheckBox> 和 <xref:System.Windows.Controls.RadioButton> 控件
 
@@ -492,11 +492,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   在此之前: 
 
-  ![辅助功能改进前具有焦点的高对比度单选按钮](./media/radio-button-before.png)
+  ![此屏幕截图中显示了单选按钮和复选按钮，在高对比度主题下文本可见性差。](./media/whats-new-in-accessibility/high-contrast-radio-button-before.png)
 
   之后： 
 
-  ![辅助功能改进后具有焦点的高对比度单选按钮](./media/radio-button-after.png)
+  ![高对比度主题上文本可见性高的单选和复选按钮的屏幕截图。](./media/whats-new-in-accessibility/high-contrast-radio-button-after.png)
 
 - <xref:System.Windows.Controls.ComboBox> 控件
 
@@ -504,31 +504,31 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   在此之前: 
 
-  ![辅助功能改进前禁用的 ComboBox 边框和文本](./media/combo-disabled-before.png)
+  ![此屏幕截图中显示了一个已禁用的组合框，其边框和空间文本具有不同的颜色。](./media/whats-new-in-accessibility/combo-disabled-before.png)
 
   之后：   
 
-  ![辅助功能改进后禁用的 ComboBox 边框和文本](./media/combo-disabled-after.png)
+  ![此屏幕截图中显示了一个已禁用的组合框，其边框和空间文本具有相同的颜色。](./media/whats-new-in-accessibility/combo-disabled-after.png)
 
   此外，已禁用的按钮和具有焦点的按钮使用正确的主题颜色。
 
   在此之前:
 
-  ![辅助功能改进前的按钮主题颜色](./media/button-themes-before.png) 
+  ![此屏幕截图中显示了一个黑色按钮，按钮上有灰色文字“将焦点放到此处”。](./media/whats-new-in-accessibility/button-theme-colors-before.png) 
 
   之后： 
 
-  ![辅助功能改进后的按钮主题颜色](./media/button-themes-after.png) 
+  ![带有黑色文本的蓝色按钮屏幕截图，文本显示“Focus Me”。](./media/whats-new-in-accessibility/button-theme-colors-after.png) 
 
   最后，在 .NET Framework 4.7 及更低版本中，将 <xref:System.Windows.Controls.ComboBox> 控件的样式设置为 `Toolbar.ComboBoxStyleKey` 会导致下拉箭头不可见。 此问题已在 .NET Framework 4.7.1 及更高版本中解决。 例如:
 
   在此之前: 
 
-  ![辅助功能改进前的 Toolbar.ComboBoxStyleKey](./media/comboboxstylekey-before.png) 
+  ![此屏幕截图中显示了一个组合框控件，其中有一个不可见下拉箭头。](./media/whats-new-in-accessibility/combo-box-style-key-before.png) 
 
   之后： 
 
-  ![辅助功能改进后的 Toolbar.ComboBoxStyleKey](./media/comboboxstylekey-after.png) 
+  ![显示下拉箭头的组合框控件的屏幕截图。](./media/whats-new-in-accessibility/combo-box-style-key-after.png) 
 
 - <xref:System.Windows.Controls.DataGrid> 控件
 
@@ -536,21 +536,21 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   在此之前: 
 
-  ![辅助功能改进前的排序指示符箭头](./media/sort-indicator-before.png) 
+  ![改进前的排序指示符箭头的屏幕截图。](./media/whats-new-in-accessibility/sort-indicator-before.png) 
 
   之后：   
 
-  ![辅助功能改进后的排序指示符箭头](./media/sort-indicator-after.png) 
+  ![改进后的排序指示符箭头的屏幕截图。](./media/whats-new-in-accessibility/sort-indicator-after.png) 
 
   此外，在 .NET Framework 4.7 及更低版本中，在高对比度模式下，默认链接样式在鼠标悬停在其上时更改为不正确的颜色。 此问题已在 .NET Framework 4.7.1 及更高版本中解决。 同样，从 .NET Framework 4.7.1 开始，<xref:System.Windows.Controls.DataGrid> 复选框列对键盘焦点反馈使用预期的颜色。
 
   在此之前: 
 
-  ![辅助功能改进前的 DataGrid 默认链接样式](./media/default-link-style-before.png) 
+  ![显示“点击此处！”的链接屏幕截图 文本是红色的。](./media/whats-new-in-accessibility/default-link-style-before.png) 
 
   之后：    
 
-  ![辅助功能改进后的 DataGrid 默认链接样式](./media/default-link-style-after.png) 
+  ![显示“点击此处！”的链接屏幕截图 文本是黄色的。](./media/whats-new-in-accessibility/default-link-style-after.png) 
 
 有关 .NET Framework 4.7.1 中 WPF 辅助功能改进的详细信息，请参阅 [WPF 辅助功能改进](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf)。
 
@@ -581,11 +581,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   在此之前:
 
-  ![辅助功能改进前禁用的文本](./media/wf-disabled-before.png) 
+  ![一个应用的屏幕截图，该应用在高对比度模式下运行着不同的控件，而尚未改进可访问性。](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-before.png) 
 
   之后：
 
-  ![辅助功能改进后禁用的文本](./media/wf-disabled-after.png) 
+  ![应用程序的屏幕截图，在辅助功能改进之后，该应用程序使用在高对比度模式下运行的不同控件。](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-after.png) 
 
 - “线程异常”对话框中的高对比度改进。
 

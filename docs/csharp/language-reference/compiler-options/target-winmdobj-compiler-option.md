@@ -2,12 +2,12 @@
 title: -target:winmdobj（C# 编译器选项）
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: fe1332f9ed6de9c50c2509e29f22ed7c0e57ade9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 85ae9a3f5e9b038c0c56935ec5af2b9b09d19f20
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606354"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204494"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj（C# 编译器选项）
 如果使用 -target:winmdobj 编译器选项，则编译器会创建一个中间 .winmdobj 文件，你可以将这个文件转换为 Windows 运行时二进制 (.winmd) 文件  。 之后，除了托管语言程序外，JavaScript 和 C++ 程序也可以使用该 .winmd 文件。  
@@ -35,7 +35,7 @@ ms.locfileid: "69606354"
   
 3. 在“输出类型”  列表中，选择“WinMD 文件”  。  
   
-     “WinMD 文件”  选项只能用于 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 应用模板。  
+     此“WinMD 文件”选项仅可用于 Windows 8.x 应用商店应用模板  。  
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   

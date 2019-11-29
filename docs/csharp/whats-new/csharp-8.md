@@ -2,12 +2,12 @@
 title: C# 8.0 中的新增功能 - C# 指南
 description: 简要介绍 C# 8.0 中提供的新功能。
 ms.date: 09/20/2019
-ms.openlocfilehash: e6a2357f4405b4eb31b12a1e3faa6896a31c21a1
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 540b95beaf00c17812a3b602602504278be69b0e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960820"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429388"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 中的新增功能
 
@@ -30,6 +30,8 @@ C# 8.0 向 C# 语言添加了以下功能和增强功能：
 - [非托管构造类型](#unmanaged-constructed-types)
 - [嵌套表达式中的 Stackalloc](#stackalloc-in-nested-expressions)
 - [内插逐字字符串的增强功能](#enhancement-of-interpolated-verbatim-strings)
+
+“.NET Core 3.x”和“.NET Standard 2.1”支持 C# 8.0   。 有关详细信息，请参阅 [C# 语言版本控制](../language-reference/configure-language-version.md)。
 
 本文的剩余部分将简要介绍这些功能。 如果有详细讲解的文章，则将提供指向这些教程和概述的链接。 可以使用 `dotnet try` 全局工具在环境中浏览这些功能：
 

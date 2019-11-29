@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Visual Basic 中读取定宽文本文件
+title: 如何：读取固定宽度的文本文件
 ms.date: 07/20/2015
 helpviewer_keywords:
 - fixed-width text file
@@ -8,14 +8,15 @@ helpviewer_keywords:
 - text files [Visual Basic], tasks
 - text files [Visual Basic], reading
 ms.assetid: 99be5692-967a-4e85-993e-cd18139a5a69
-ms.openlocfilehash: 1df1c84e6eaf90b737b51e5512638e4a15de6866
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3cea9bfe2388f0ca510b15cb020f899b81c4603c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623440"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74334625"
 ---
 # <a name="how-to-read-from-fixed-width-text-files-in-visual-basic"></a>如何：在 Visual Basic 中读取定宽文本文件
+
 `TextFieldParser` 对象提供一种可以轻松而高效地分析结构化文本文件（如日志）的方法。  
   
  `TextFieldType` 属性定义分析的文件是带分隔符的文件还是具有定宽文本字段的文件。 在定宽文本文件中，结尾处的字段可以具有可变宽度。 若要指定结尾处的字段具有可变宽度，请将它定义为宽度小于或等于零。  
@@ -39,11 +40,13 @@ ms.locfileid: "64623440"
      [!code-vb[VbFileIORead#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#12)]  
   
 ## <a name="example"></a>示例  
+
  此示例读取文件 `test.log`。  
   
  [!code-vb[VbFileIORead#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#13)]  
   
 ## <a name="robust-programming"></a>可靠编程  
+
  以下情况可能会导致异常：  
   
 - 无法使用指定的格式分析行 (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>)。 此异常消息指定导致发生异常的行，同时将 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> 属性分配给该行中包含的文本。  

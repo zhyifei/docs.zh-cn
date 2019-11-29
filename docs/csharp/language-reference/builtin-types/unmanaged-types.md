@@ -3,12 +3,12 @@ title: 非托管类型 - C# 参考
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 25aa42ba8c8f0023b4f818feb2edbb325f805fb6
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 81eef59ceb20bcae6c749dd59578ce35da253826
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374115"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204477"
 ---
 # <a name="unmanaged-types-c-reference"></a>非托管类型（C# 参考）
 
@@ -19,7 +19,7 @@ ms.locfileid: "70374115"
 - 任何[指针](../../programming-guide/unsafe-code-pointers/pointer-types.md)类型
 - 任何用户定义的 [struct](../keywords/struct.md) 类型，只包含非托管类型的字段，并且在 C# 7.3 及更早版本中，不是构造类型（包含至少一个类型参数的类型）
 
-从 C# 7.3 开始，可使用 [`unmanaged` 约束](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint)指定：类型参数为“非指针非托管类型”。
+从 C# 7.3 开始，可使用 [`unmanaged` 约束](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint)指定：类型参数为“非指针、不可为 null 的非托管类型”。
 
 从 C# 8.0 开始，仅包含非托管类型的字段的*构造*结构类型也是非托管类型，如以下示例所示：
 

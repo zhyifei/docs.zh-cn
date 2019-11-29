@@ -5,16 +5,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 8b2810af81a57cf21b9a2e2438f7f6aa2cb7a669
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 491ee0224ffa39262992f7f42d20e5f97560b73f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772073"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429494"
 ---
 # <a name="using-structs-c-programming-guide"></a>使用结构（C# 编程指南）
 
-`struct` 类型适用于表示轻量级对象，如 `Point`、 `Rectangle`和 `Color`。 尽管用它来表示一个点就如同具有 [Auto-Implemented Properties（自动实现的属性）](../../language-reference/keywords/class.md) 的 [类](./auto-implemented-properties.md)那样方便，但在某些情况下，使用 [结构](../../language-reference/keywords/struct.md) 可能更高效。 例如，如果你声明具有 1000 个 `Point` 对象的数组，那么你将分配额外的内存用于引用每个对象；在这种情况下，使用结构将更为便宜。 因为 .NET Framework 包含一个名为 <xref:System.Drawing.Point> 的对象，所以本示例中的结构名称为 `Coords`。
+`struct` 类型适用于表示轻量级对象，如 `Point`、 `Rectangle`和 `Color`。 尽管用它来表示一个点就如同具有 [Auto-Implemented Properties（自动实现的属性）](../../language-reference/keywords/class.md) 的 [类](./auto-implemented-properties.md)那样方便，但在某些情况下，使用 [结构](../../language-reference/keywords/struct.md) 可能更高效。 例如，如果你声明具有 1000 个 `Point` 对象的数组，那么你将分配额外的内存用于引用每个对象；在这种情况下，使用结构将更为便宜。 因为 .NET 已经包含一个名为 <xref:System.Drawing.Point> 的对象，所以本示例中的结构名称为 `Coords`。
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 

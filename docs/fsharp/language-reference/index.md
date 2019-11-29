@@ -2,12 +2,12 @@
 title: F# 语言参考
 description: 从此F#引用中查找语言标记、概念、类型、表达式和编译器支持的构造主题的语言功能信息。
 ms.date: 05/16/2016
-ms.openlocfilehash: ac7e268b28d6bb654e4443d04695cb15fe756e9f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bd9894176fa736b9eed939d72972e676e2bd2671
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424991"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552897"
 ---
 # <a name="f-language-reference"></a>F# 语言参考
 
@@ -17,7 +17,7 @@ ms.locfileid: "73424991"
 
 下表显示参考主题，这些主题提供在 F# 中用作标记的关键字、符号和文本表。
 
-|Title|描述|
+|职务|描述|
 |-----|-----------|
 |[关键字参考](keyword-reference.md)|包含指向所有 F# 语言关键字的相关信息的链接。|
 |[符号和运算符参考](./symbol-and-operator-reference/index.md)|包括 F# 语言中使用的符号和运算符表。|
@@ -27,7 +27,7 @@ ms.locfileid: "73424991"
 
 下表显示介绍语言概念的可用参考主题。
 
-|Title|描述|
+|职务|描述|
 |-----|-----------|
 |[函数](./functions/index.md)|函数是任何编程语言中程序执行的基本单元。 和其他语言一样，F# 函数有一个名称，可以有形参并采用实参，且具有一个主体。 F# 还支持函数编程构造，例如将函数视为值、在表达式中使用未命名的函数、组合函数以形成新的函数、扩充函数以及通过部分应用函数参数来隐式定义函数。|
 |[F# 类型](fsharp-types.md)|介绍 F# 中使用的类型以及如何命名和描述 F# 类型。|
@@ -56,7 +56,7 @@ ms.locfileid: "73424991"
 
 下表提供的参考主题介绍 F# 语言支持的类型。
 
-|Title|描述|
+|职务|描述|
 |-----|-----------|
 |[值](./values/index.md)|介绍值，它是具有特定类型的不可变数量；值可以是整数或浮点数、字符或文本、列表、序列、数组、元组、可区分联合、记录、类类型或函数值。|
 |[基本类型](basic-types.md)|描述F#语言中使用的基本基本类型。 它还提供每种类型的相应 .NET 类型和最小和最大值。|
@@ -87,7 +87,7 @@ ms.locfileid: "73424991"
 
 下表列出了介绍 F# 表达式的主题。
 
-|Title|描述|
+|职务|描述|
 |-----|-----------|
 |[条件表达式：`if...then...else`](conditional-expressions-if-then-else.md)|介绍 `if...then...else` 表达式，该表达式不仅可运行代码的不同分支，还可计算为不同的值，具体取决于给定的布尔表达式。|
 |[match 表达式](match-expressions.md)|介绍 `match` 表达式，该表达式提供基于表达式与一组模式的比较结果的分支控制。|
@@ -110,7 +110,3 @@ ms.locfileid: "73424991"
 |[编译器选项](compiler-options.md)|介绍 F# 编译器的命令行选项。|
 |[编译器指令](compiler-directives.md)|介绍处理器指令和编译器指令。|
 |[源代码行标识符、文件标识符和路径标识符](source-line-file-path-identifiers.md)|介绍标识符 `__LINE__`、`__SOURCE_DIRECTORY__` 和 `__SOURCE_FILE__`，这些标识符是内置值，可在代码中使用这些值来访问源行号、目录和文件名。|
-
-## <a name="see-also"></a>请参阅
-
-- [Visual F#](../index.md)

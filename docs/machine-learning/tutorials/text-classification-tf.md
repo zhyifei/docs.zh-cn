@@ -1,17 +1,17 @@
 ---
 title: 教程：使用预先训练的 TensorFlow 模型分析电影评论的情绪
 description: 本教程演示如何使用预先训练的 TensorFlow 模型对网站评论中的情绪进行分类。 二元情绪分类器是使用 Visual Studio 开发的 C# 控制台应用程序。
-ms.date: 09/30/2019
+ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 417abb5052df95c8496d97894d3e11d2956d7a1a
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8c3544b60b1fba1d419ca091b0a1d85fbbdbe2d6
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774402"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204919"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>教程：在 ML.NET 中使用预先训练的 TensorFlow 模型分析电影评论的情绪
 
@@ -42,7 +42,7 @@ ms.locfileid: "72774402"
 
 3. 安装“Microsoft.ML NuGet 包”  ：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 选择“nuget.org”作为包源，然后选择“浏览”选项卡  。搜索“Microsoft.ML”，选择所需的包，然后选择“安装”按钮   。 同意所选包的许可条款，继续执行安装。 对“Microsoft.ML.TensorFlow”重复这些步骤  。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 选择“nuget.org”作为包源，然后选择“浏览”选项卡  。搜索“Microsoft.ML”，选择所需的包，然后选择“安装”按钮   。 同意所选包的许可条款，继续执行安装。 对“Microsoft.ML.TensorFlow”和“SciSharp.TensorFlow.Redist”重复这些步骤   。
 
 ### <a name="add-the-tensorflow-model-to-the-project"></a>将 TensorFlow 模型添加到项目
 

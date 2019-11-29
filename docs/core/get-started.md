@@ -4,12 +4,12 @@ description: 查找相关资源，了解如何在 Windows、Linux 和 macOS 上�
 author: thraka
 ms.author: adegeo
 ms.date: 09/19/2019
-ms.openlocfilehash: 9dbc3ebc8d43fe2570a90f4e10fd155a5b114351
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 78066f2904f6a874b71165e4fe1769b6b778ae41
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521637"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428867"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 入门
 
@@ -52,7 +52,7 @@ Hello World!
 - 观看视频，了解[如何安装和使用 Visual Studio 2017 和 .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/)。
 - [使用命令行实现 .NET Core 入门。](tutorials/using-with-xplat-cli.md)
 
-有关受支持的 Windows 版本列表，请参阅 [Windows 开发的先决条件](windows-prerequisites.md)一文。
+请参阅 [.NET Core 依赖项和要求](install/dependencies.md?tabs=netcore30&pivots=os-windows)一文，以获取支持的 Windows 版本列表。
 
 # <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
@@ -61,7 +61,7 @@ Hello World!
 - [使用命令行实现 .NET Core 入门。](tutorials/using-with-xplat-cli.md)
 - 观看视频：[在 Ubuntu 上使用 C# 和 .NET Core 实现 Visual Studio Code 入门](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)。
 
-有关受支持的 Linux 发行版和版本列表，请参阅 [Linux 开发的先决条件](linux-prerequisites.md)一文。
+请参阅 [ 依赖项和要求](install/dependencies.md?tabs=netcore30&pivots=os-linux)一文，以获取支持的 Linux 发行版和版本列表。
 
 # <a name="macostabmacos"></a>[macOS](#tab/macos)
 
@@ -73,6 +73,6 @@ Hello World!
 - [借助 Visual Studio for Mac 在 macOS 上实现 .NET Core 入门。](tutorials/using-on-mac-vs.md)
 - [使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案。](tutorials/using-on-mac-vs-full-solution.md)
 
-有关受支持的 OS X/macOS 版本列表，请参阅 [macOS 开发的先决条件](macos-prerequisites.md)一文。
+请参阅 [ 依赖项和要求](install/dependencies.md?tabs=netcore30&pivots=os-macos)一文，以获取支持的 OS X / macOS 版本列表。
 
 ---

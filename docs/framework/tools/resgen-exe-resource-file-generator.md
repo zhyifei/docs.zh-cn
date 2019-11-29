@@ -15,12 +15,12 @@ helpviewer_keywords:
 - binary resources files
 - embedding files in runtime binary executable
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
-ms.openlocfilehash: 4605c7361705ba37091eb2e34d8425810854973e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5fc2bcb03ae6814d69e229ba083c1d5c44ae8ff3
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104897"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204617"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe（资源文件生成器）
 资源文件生成器 (Resgen.exe) 将文本（.txt 或 .restext）文件和基于 XML 的资源格式 (.resx) 文件转换为公共语言运行时二进制 (.resources) 文件，后者可嵌入到运行时二进制可执行文件或附属程序集中。 （请参阅[创建资源文件](../resources/creating-resource-files-for-desktop-apps.md)。）  
@@ -33,7 +33,7 @@ ms.locfileid: "73104897"
   
 - 将 .resx 文件转换为文本文件或 .resources 文件。  
   
-- 将程序集中的字符串资源提取到 .resw 文件中，该文件适合在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中使用。  
+- 将程序集中的字符串资源提取到 .resw 文件中，该文件适合在 Windows 8.x 应用商店应用中使用。  
   
 - 创建一个强类型类，该类提供对单个名为资源的文件和 <xref:System.Resources.ResourceManager> 实例的访问。  
   
@@ -75,9 +75,9 @@ resgen filename.extension [outputDirectory]
 |`useSourcePath`|指定输入文件的当前目录将用于解析相对文件路径。|  
 |`/compile`|使你能够在单个批量操作中指定要转换为多个 .resources 文件的多个 .resx 文件或文本文件。 如果不指定此选项，则只能指定一个输入文件自变量。 输出文件将命名为 filename.resources  。<br /><br /> 此选项不能与 `/str:` 选项一起使用。<br /><br /> 有关此选项的更多信息，请参阅本主题后面的[编译或转换多个文件](#Multiple)。|  
 |`/r:` `assembly`|从指定的程序集引用元数据。 当转换 .resx 文件并允许 Resgen.exe 序列化或反序列化对象资源时使用此选项。 这类似于 C# 和 Visual Basic 编译器的 `/reference:` 或 `/r:` 选项。|  
-|`filename.extension`|指定要转换的输入文件的名称。 如果你使用此表之前呈现的第一个更长的命令行语法，则 `extension` 必须为下列项之一：<br /><br /> .txt 或 .restext<br /> 要转换为 .resources 或 .resx 文件的文本文件。 文本文件只能包含字符串资源。 有关文件格式的信息，请参阅[创建资源文件](../resources/creating-resource-files-for-desktop-apps.md)中的“文本文件中的资源”部分。<br /><br /> .resx<br /> 要转换为 .resources 或文本（.txt 或 .restext）文件的基于 XML 的资源文件。<br /><br /> .resources<br /> 要转换为 .resx 或文本（.txt 或 .restext）文件的二进制资源文件。<br /><br /> 如果你使用此表之前呈现的第二个更短的命令行语法，则 `extension` 必须是以下项：<br /><br /> .exe 或 .dll<br /> .NET Framework 程序集（可执行文件或库），其字符串资源将提取到用于开发 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用的 .resw 文件中。|  
+|`filename.extension`|指定要转换的输入文件的名称。 如果你使用此表之前呈现的第一个更长的命令行语法，则 `extension` 必须为下列项之一：<br /><br /> .txt 或 .restext<br /> 要转换为 .resources 或 .resx 文件的文本文件。 文本文件只能包含字符串资源。 有关文件格式的信息，请参阅[创建资源文件](../resources/creating-resource-files-for-desktop-apps.md)中的“文本文件中的资源”部分。<br /><br /> .resx<br /> 要转换为 .resources 或文本（.txt 或 .restext）文件的基于 XML 的资源文件。<br /><br /> .resources<br /> 要转换为 .resx 或文本（.txt 或 .restext）文件的二进制资源文件。<br /><br /> 如果你使用此表之前呈现的第二个更短的命令行语法，则 `extension` 必须是以下项：<br /><br /> .exe 或 .dll<br /> .NET Framework 程序集（可执行文件或库），其字符串资源将提取到用于开发 Windows 8.x 应用商店应用的 .resw 文件中。|  
 |`outputFilename.extension`|指定要创建的资源文件的名称和类型。<br /><br /> 在从 .txt、.restext 或 .resx 文件转换到 .resources 文件时，此参数是可选的。 如果未指定 `outputFilename`，则 Resgen.exe 会为输入 `filename` 追加 .resources 扩展名，并将此文件写入包含 `filename,extension` 的目录中。<br /><br /> 从 .resources 文件转换时，`outputFilename.extension` 参数是强制的。 在将 .resources 文件转换为基于 XML 的资源文件时，指定带 .resx 扩展名的文件名。 将 .resources 文件转换为文本文件时，指定带 .txt 或 .restext 扩展名的文件名。 应仅在 .resources 文件仅包含字符串值时将 .resources 文件转换为 .txt 文件。|  
-|`outputDirectory`|对于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用，指定 .resw 文件所在的目录，该文件包含将写入的 `filename.extension` 中的字符串资源。 `outputDirectory` 必须已存在。|  
+|`outputDirectory`|对于 Windows 8.x 应用商店应用，指定 .resw 文件所在的目录，该文件包含将写入的 `filename.extension` 中的字符串资源。 `outputDirectory` 必须已存在。|  
 |`/str:` `language[,namespace[,classname[,filename]]]`|使用 `language` 选项中指定的编程语言创建强类型的资源类文件。 `language` 可包含下列文本之一：<br /><br /> -   对于 C#：`c#`、`cs` 或 `csharp`。<br />-   对于 Visual Basic：`vb` 或 `visualbasic`。<br />-   对于 VBScript：`vbs` 或 `vbscript`。<br />-   对于 C++：`c++`、`mc` 或 `cpp`。<br />-   对于 JavaScript：`js`、`jscript` 或 `javascript`。<br /><br /> `namespace` 选项指定项目的默认命名空间，`classname` 选项指定已生成的类的名称，`filename` 选项指定类文件的名称。<br /><br /> `/str:` 选项只允许一个输入文件，因此该选项不能与 `/compile` 选项一起使用。<br /><br /> 如果指定 `namespace`，但未指定 `classname`，则类名称会从输出文件名派生（例如，下划线将替换句点）。 强类型资源可能无法正常工作。 若要避免此情况，可同时指定类名和输出文件名。<br /><br /> 有关此选项的更多信息，请参阅本主题后面的[生成强类型的资源类](#Strong)。|  
 |`/publicClass`|将强类型的资源类作为公共类创建。 默认情况下，资源类是 C# 中的 `internal` 和 Visual Basic 中的`Friend`。<br /><br /> 如果未使用 `/str:` 选项，则忽略此选项。|  
   
@@ -178,7 +178,7 @@ resgen Resources.resx Resources.resources
   
  该语法与上一节中所示的语法相同。  
   
- 此外，可以使用 Resgen.exe 将 .NET Framework 程序集中的嵌入资源转换为 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用的 .resw 文件。  
+ 此外，可以使用 Resgen.exe 将 .NET Framework 程序集中的嵌入资源转换为 Windows 8.x 应用商店应用的 .resw 文件。  
   
  下面的命令读取二进制资源文件 Resources.resources，并编写一个名为 Resources.resx 的基于 XML 的输出文件。  
   
@@ -215,10 +215,10 @@ resgen /compile StringResources.txt TableResources.resx ImageResources.resx
   
 <a name="Exporting"></a>   
 ### <a name="exporting-resources-to-a-resw-file"></a>将资源导入 .resw 文件  
- 如果正在开发 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用，你可能需要使用现有桌面应用中的资源。 但是，这两种应用程序支持不同的文件格式。 在桌面应用中，文本（.txt 或 .restext）文件或 .resx 文件中的资源将编译为二进制 .resources 文件。 在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中，.resw 文件将编译为二进制包资源索引 (PRI) 文件。 可以使用 Resgen.exe 从可执行程序集或附属程序集中提取资源，并将资源写入一个或多个 .resw 文件（在开发 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用时可使用这些文件）中来填补此间隙。  
+ 如果正在开发 Windows 8.x 应用商店应用，你可能需要使用现有桌面应用中的资源。 但是，这两种应用程序支持不同的文件格式。 在桌面应用中，文本（.txt 或 .restext）文件或 .resx 文件中的资源将编译为二进制 .resources 文件。 在 Windows 8.x 应用商店应用中，.resw 文件将编译为二进制包资源索引 (PRI) 文件。 可以使用 Resgen.exe 从可执行程序集或附属程序集中提取资源，并将资源写入一个或多个 .resw 文件（在开发 Windows 8.x 应用商店应用时可使用这些文件）中来填补此间隙。  
   
 > [!IMPORTANT]
-> Visual Studio 自动处理将可移植库中的资源并入 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中所需的所有转换。 仅需要在 Visual Studio 外部开发 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用的开发人员对直接使用 Resgen.exe 将程序集中的资源转换为 .resw 文件格式感兴趣。  
+> Visual Studio 自动处理将可移植库中的资源并入 Windows 8.x 应用商店应用中所需的所有转换。 仅需要在 Visual Studio 外部开发 Windows 8.x 应用商店应用的开发人员对直接使用 Resgen.exe 将程序集中的资源转换为 .resw 文件格式感兴趣。  
   
  用于从程序集生成 .resw 文件的语法是：  
   

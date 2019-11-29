@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF]
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
-ms.openlocfilehash: 34c6cb8cbe815e33658f38ee0e6aff581ea0ff74
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 836913dd35d127d181c753341a7c39c453242a8f
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72961166"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552688"
 ---
 # <a name="develop-service-oriented-applications-with-wcf"></a>利用 WCF 开发面向服务的应用程序
 
@@ -71,9 +71,6 @@ ms.locfileid: "72961166"
 
  [常规参考](general-reference.md)\
  本节描述用于配置 Windows Communication Foundation 客户端和服务的元素。
-
- [反馈和社区](feedback-and-community.md)\
- 有关如何提供有关 Windows Communication Foundation 的反馈信息的信息
 
  [隐私信息](privacy-information.md)\
  有关 WCF 和隐私的信息

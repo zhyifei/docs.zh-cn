@@ -2,12 +2,12 @@
 title: C# 7.3 中的新增功能
 description: C# 7.3 中的新增功能概述
 ms.date: 05/16/2018
-ms.openlocfilehash: ca53073db1b61300186a483001f79bf0caa79169
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: ba4cea302d91b395e88940d087fcaed306920840
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433513"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204555"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 中的新增功能
 
@@ -129,7 +129,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 现在，可以将类型 <xref:System.Enum?displayProperty=nameWithType> 或 <xref:System.Delegate?displayProperty=nameWithType> 指定为类型参数的基类约束。
 
-现在也可以使用新的 `unmanaged` 约束来指定类型参数必须为[“非托管类型”](../language-reference/builtin-types/unmanaged-types.md)。
+现在也可以使用新的 `unmanaged` 约束来指定类型参数必须是不可为 null 的[“非托管类型”](../language-reference/builtin-types/unmanaged-types.md)。
 
 有关详细信息，请参阅有关 [`where` 泛型约束](../language-reference/keywords/where-generic-type-constraint.md)和[类型参数的约束](../programming-guide/generics/constraints-on-type-parameters.md)的文章。
 

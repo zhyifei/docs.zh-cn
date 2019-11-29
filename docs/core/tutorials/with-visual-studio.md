@@ -5,28 +5,28 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b42a71993cb120c88b90e867b7af23873b99d280
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cc7d78006998b79fe9d522e71883ce1af817c051
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039600"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428559"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core SDK 生成 C# Hello World 应用程序
 
-本主题分步介绍了如何使用 Visual Studio 2017 生成、调试和发布简单的 C# .NET Core 控制台应用程序。 Visual Studio 2017 提供了功能全面的开发环境，可用于生成 .NET Core 应用程序。 只要应用程序没有平台专属依赖项，应用程序就可以在 .NET Core 的任何目标平台上和安装了 .NET Core 的任何系统上运行。
+本文将逐步介绍如何在 Visual Studio 2017 中使用 C# 生成、调试和发布一个简单的 .NET Core 控制台应用程序。 Visual Studio 2017 提供了功能全面的开发环境，可用于生成 .NET Core 应用程序。 只要应用程序没有平台专属依赖项，应用程序就可以在 .NET Core 的任何目标平台上和安装了 .NET Core 的任何系统上运行。
 
 ## <a name="prerequisites"></a>系统必备
 
-安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)。 可以使用 .NET Core 2.1 或更高版本开发应用程序。
+已安装“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 可以使用 .NET Core 2.1 或更高版本开发应用程序。
 
-有关详细信息，请参阅 [Windows 上 .NET Core 的先决条件](../windows-prerequisites.md)主题。
+有关详细信息，请参阅 [.NET Core 依赖项和要求](../install/sdk.md?tabs=netcore30&pivots=os-windows#install-with-visual-studio)一文。
 
 ## <a name="a-simple-hello-world-application"></a>简单的“Hello World”应用程序
 
 首先创建简单的“Hello World”控制台应用程序。 请执行这些步骤：
 
-1. 启动 Visual Studio 2017。 从菜单栏中选择“文件”   > “新建”   > “项目”  。 在“新项目”  *对话框中，依次选择“Visual C#”  和“.NET Core”  节点。 然后，选择“控制台应用程序(.NET Core)”  项目模板。 在“名称”  文本框中，键入“HelloWorld”。 选择“确定”  按钮。
+1. 启动 Visual Studio。 从菜单栏中选择“文件”   > “新建”   > “项目”  。 在“新项目”  对话框中，依次选择“Visual C#”  和“.NET Core”  节点。 然后，选择“控制台应用程序(.NET Core)”  项目模板。 在“名称”  文本框中，键入“HelloWorld”。 选择“确定”  按钮。
 
    ![选择了“控制台应用”的“新建项目”对话框](./media/with-visual-studio/visual-studio-new-project.png)
 
@@ -57,9 +57,9 @@ ms.locfileid: "71039600"
 
 改进应用程序，提示用户输入名字，并将其与日期和时间一同显示。 若要修改和测试程序，请执行以下操作：
 
-1. 在代码窗口中，在 `static void Main(string[] args)` 代码行后面的左括号和第一个右括号之间，输入以下 C# 代码：
+1. 在代码窗口中，在紧跟 `static void Main(string[] args)` 代码行的左括号之后和第一个右花括号之前，输入以下 C# 代码：
 
-   [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
+   [!code-csharp[GettingStarted#1](~/samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
    此代码将替换 `Main` 方法的内容。
 
@@ -81,7 +81,7 @@ ms.locfileid: "71039600"
 
 - 若要了解如何开发和发布可发行版应用程序，请参阅[使用 Visual Studio 2017 发布 NET Core Hello World 应用程序](publishing-with-visual-studio.md)。
 
-## <a name="related-topics"></a>相关主题
+## <a name="related-articles"></a>相关文章
 
 还可以使用 Visual Studio 2017 生成 .NET Core 类库，而不是控制台应用程序。 有关分步说明，请参阅[使用 Visual Studio 2017 生成 C# .NET Core 类库](library-with-visual-studio.md)。
 

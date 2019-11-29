@@ -1,20 +1,22 @@
 ---
 title: 从文件和其他源加载数据
-description: 本操作说明演示如何将数据加载到 ML.NET 中进行处理和训练。 最初存储在文件或其他数据源（例如数据库、JSON、XML 或内存中集合）中的数据。
-ms.date: 09/11/2019
+description: 了解如何使用 API 将数据加载到 ML.NET 中进行处理和训练。 数据存储在文件、数据库、JSON、XML 或内存集合中。
+ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: 4008f38bf4a20113a3f5c865e38222e5b82f2acc
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 83aaae2d2e75b3076841750bf5d505390a538bc0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991365"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344757"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>从文件和其他源加载数据
 
-本操作说明演示如何将数据加载到 ML.NET 中进行处理和训练。 最初存储在文件或其他数据源（例如数据库、JSON、XML 或内存中集合）中的数据。
+了解如何使用 API 将数据加载到 ML.NET 中进行处理和训练。 最初存储在文件或其他数据源（例如数据库、JSON、XML 或内存中集合）中的数据。
+
+如果使用模型生成器，请参阅[将训练数据加载到模型生成器](load-data-model-builder.md)。
 
 ## <a name="create-the-data-model"></a>创建数据模型
 
@@ -107,18 +109,19 @@ IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubF
 
 ## <a name="load-data-from-a-relational-database"></a>从关系数据库加载数据
 
-> [!NOTE]
-> DatabaseLoader 当前为预览版。 引用 [Microsoft.ML.Experimental](https://www.nuget.org/packages/Microsoft.ML.Experimental/0.16.0-preview) 和 [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.6.1) NuGet 包，即可使用该预览版。
-
 ML.NET 支持从各种关系数据库中加载数据（包括 SQL Server、Azure SQL 数据库、Oracle、SQLite、PostgreSQL、Progress、IBM DB2 等），这些关系数据库由 [`System.Data`](xref:System.Data) 提供支持。
+
+> [!NOTE]
+> 若要使用 `DatabaseLoader`，请参考 [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient) NuGet 包。
 
 指定具有名为 `House` 的表和以下架构的数据库：
 
 ```SQL
 CREATE TABLE [House] (
-    [HouseId] int NOT NULL IDENTITY,
-    [Size] real NOT NULL,
-    [Price] real NOT NULL
+    [HouseId] INT NOT NULL IDENTITY,
+    [Size] INT NOT NULL,
+    [NumBed] INT NOT NULL,
+    [Price] REAL NOT NULL
     CONSTRAINT [PK_House] PRIMARY KEY ([HouseId])
 );
 ```
@@ -129,6 +132,8 @@ CREATE TABLE [House] (
 public class HouseData
 {
     public float Size { get; set; }
+
+    public float NumBed { get; set; }
 
     public float Price { get; set; }
 }
@@ -147,12 +152,14 @@ DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<HouseData>();
 ```csharp
 string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=<YOUR-DB-FILEPATH>;Database=<YOUR-DB-NAME>;Integrated Security=True;Connect Timeout=30";
 
-string sqlCommand = "SELECT Size,Price FROM House";
+string sqlCommand = "SELECT Size, CAST(NumBed as REAL) as NumBed, Price FROM House";
 
-DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance,connectionString,sqlCommand);
+DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance, connectionString, sqlCommand);
 ```
 
-最后，使用 `Load` 方法将数据加载到 [`IDataView`](xref:Microsoft.ML.IDataView)。
+类型不是 [`Real`](xref:System.Data.SqlDbType) 的数值数据必须转换为 [`Real`](xref:System.Data.SqlDbType)。 [`Real`](xref:System.Data.SqlDbType) 类型表示为单精度浮动点值或 [`Single`](xref:System.Single)，这是 ML.NET 算法应采用的输入类型。 在此示例中，`NumBed` 列是数据库中的一个整数。 使用 `CAST` 内置函数，将其转换为 [`Real`](xref:System.Data.SqlDbType)。 由于 `Price` 属性的类型已经是 [`Real`](xref:System.Data.SqlDbType)，则按原样加载。
+
+使用 `Load` 方法将数据加载到 [`IDataView`](xref:Microsoft.ML.IDataView)。
 
 ```csharp
 IDataView data = loader.Load(dbSource);
@@ -205,3 +212,8 @@ MLContext mlContext = new MLContext();
 //Load Data
 IDataView data = mlContext.Data.LoadFromEnumerable<HousingData>(inMemoryCollection);
 ```
+
+## <a name="next-steps"></a>后续步骤
+
+- 若要清除或以其他方式处理数据，请参阅[准备建模的数据](prepare-data-ml-net.md)。
+- 准备好建模后，请参阅[训练和评估模型](train-machine-learning-model-ml-net.md)。
