@@ -115,7 +115,7 @@
           tocHref: /dotnet/core/
           topicHref: /dotnet/core/index
           items:
-            - name: 兼容性
+            - name: 重大更改
               tocHref: /dotnet/core/compatibility/
               topicHref: /dotnet/core/compatibility/index
             - name: 运行时配置
@@ -127,10 +127,6 @@
             - name: 安装指南
               tocHref: /dotnet/core/install/
               topicHref: /dotnet/core/install/index
-              items:
-                - name: Linux 包管理器
-                  tocHref: /dotnet/core/install/
-                  topicHref: /dotnet/core/install/index
         - name: .NET Framework
           tocHref: /dotnet/framework/
           topicHref: /dotnet/framework/index

@@ -1,0 +1,69 @@
+### YamlMime:Landing
+title: F#关于
+summary: 了解如何使用 .NET F#编程语言编写任何应用程序。
+metadata:
+  title: F#文档-入门、教程、参考。
+  description: 了解F#编程-面向和经验丰富F# F#的开发人员和 .net 开发人员
+  ms.topic: landing-page
+  author: cartermp
+  ms.author: phcart
+  ms.date: 11/25/2019
+  ms.openlocfilehash: 7aef8012a5ef58c1c0a142dce8baf7ccb73f50fa
+  ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 11/27/2019
+  ms.locfileid: "74553061"
+landingContent:
+- title: 了解程序F#
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: 什么是F#？
+      url: what-is-fsharp.md
+    - text: 安装 F#
+      url: get-started/install-fsharp.md
+    - text: Visual Studio 中F#的入门
+      url: get-started/get-started-visual-studio.md
+    - text: Visual Studio Code 中的F#入门
+      url: get-started/get-started-vscode.md
+  - linkListType: download
+    links:
+    - text: 下载 .NET Core SDK
+      url: https://dotnet.microsoft.com/download
+- title: F#基础知识
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: F# 教程
+      url: tour.md
+    - text: F# 中的函数编程简介
+      url: introduction-to-functional-programming/index.md
+    - text: 第一类函数
+      url: introduction-to-functional-programming/first-class-functions.md
+  - linkListType: concept
+    links:
+    - text: F# 样式指南
+      url: style-guide/index.md
+    - text: F# 代码格式设置准则
+      url: style-guide/formatting.md
+    - text: F# 编码约定
+      url: style-guide/conventions.md
+  - linkListType: tutorial
+    links:
+    - text: 中的异步编程F#
+      url: tutorials/asynchronous-and-concurrent-programming/async.md
+- title: F#语言参考
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: 语言参考
+      url: language-reference/index.md
+    - text: 关键字参考
+      url: language-reference/keyword-reference.md
+    - text: 符号和运算符引用
+      url: language-reference/symbol-and-operator-reference/index.md
+    - text: 函数
+      url: language-reference/functions/index.md
+    - text: F#各种
+      url: language-reference/fsharp-types.md
