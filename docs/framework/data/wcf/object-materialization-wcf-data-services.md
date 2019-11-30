@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: 68b04ac59d1b73d6e66a5a7836ce1bfe30d9c681
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7a2b201e5690c4304e663e9429c54f377e05f556
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975190"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568910"
 ---
 # <a name="object-materialization-wcf-data-services"></a>对象具体化（WCF 数据服务）
 
 使用**添加服务引用**对话框在基于 .NET Framework 的客户端应用程序中使用 Open Data Protocol （OData）源时，将为源公开的数据模型中的每个实体类型生成等效的数据类。 有关详细信息，请参阅[生成数据服务客户端库](generating-the-data-service-client-library-wcf-data-services.md)。 查询返回的实体数据将具体化为所生成的客户端数据服务类之一的实例。 有关跟踪对象的合并选项和标识解析的信息，请参阅[管理数据服务上下文](managing-the-data-service-context-wcf-data-services.md)。
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 还允许您定义自己的客户端数据服务类，而不是使用工具生成的数据类。 这样您便可以使用自己的数据类，也称为“纯旧式 CLR 对象”(POCO) 数据类。 使用这些类型的自定义数据类时，应使用 <xref:System.Data.Services.Common.DataServiceKeyAttribute> 或 <xref:System.Data.Services.Common.DataServiceEntityAttribute> 来特性数据类，并确保客户端上的类型名称与数据服务的数据模型中的类型名称匹配。
+WCF 数据服务还允许您定义自己的客户端数据服务类，而不是使用工具生成的数据类。 这样您便可以使用自己的数据类，也称为“纯旧式 CLR 对象”(POCO) 数据类。 使用这些类型的自定义数据类时，应使用 <xref:System.Data.Services.Common.DataServiceKeyAttribute> 或 <xref:System.Data.Services.Common.DataServiceEntityAttribute> 来特性数据类，并确保客户端上的类型名称与数据服务的数据模型中的类型名称匹配。
 
 在库收到查询响应消息后，它将返回的数据从 OData 源具体化为查询类型的客户端数据服务类的实例。 以下是具体化这些对象的一般过程：
 
@@ -47,7 +47,7 @@ ms.locfileid: "73975190"
 
 5. 客户端库将该对象附加到 <xref:System.Data.Services.Client.DataServiceContext>。 当 <xref:System.Data.Services.Client.MergeOption> 为 <xref:System.Data.Services.Client.MergeOption.NoTracking> 时不附加该对象。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [查询数据服务](querying-the-data-service-wcf-data-services.md)
 - [查询投影](query-projections-wcf-data-services.md)

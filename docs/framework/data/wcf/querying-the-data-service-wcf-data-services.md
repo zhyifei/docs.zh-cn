@@ -9,16 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: e37a1654bdc62937bbb27c293a110293c9928645
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 99fe377e8fff193c4f8bb566946b95c61c1b3693
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975165"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568883"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>查询数据服务（WCF 数据服务）
 
-利用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端库，在针对数据服务执行查询时可以使用熟悉的 .NET Framework 编程模式，包括使用语言集成查询 (LINQ)。 客户端库将在客户端上定义为 <xref:System.Data.Services.Client.DataServiceQuery%601> 类实例的查询转换为 HTTP GET 请求消息。 库接收响应消息，并将其转换为客户端数据服务类的实例。 <xref:System.Data.Services.Client.DataServiceContext> 所属的 <xref:System.Data.Services.Client.DataServiceQuery%601> 跟踪这些类。
+WCF 数据服务客户端库允许使用熟悉的 .NET Framework 编程模式（包括使用语言集成查询（LINQ））对数据服务执行查询。 客户端库将在客户端上定义为 <xref:System.Data.Services.Client.DataServiceQuery%601> 类实例的查询转换为 HTTP GET 请求消息。 库接收响应消息，并将其转换为客户端数据服务类的实例。 <xref:System.Data.Services.Client.DataServiceContext> 所属的 <xref:System.Data.Services.Client.DataServiceQuery%601> 跟踪这些类。
 
 ## <a name="data-service-queries"></a>数据服务查询
 
@@ -45,11 +45,11 @@ ms.locfileid: "73975165"
 
 有关详细信息，请参阅[如何：执行数据服务查询](how-to-execute-data-service-queries-wcf-data-services.md)。
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端支持对后期绑定对象的查询，例如在中C#使用*动态*类型。 但是，出于性能原因，应始终编写针对数据服务的强类型查询。 客户端不支持 <xref:System.Tuple> 类型和动态对象。
+WCF 数据服务客户端支持对后期绑定对象的查询，例如在中C#使用*动态*类型。 但是，出于性能原因，应始终编写针对数据服务的强类型查询。 客户端不支持 <xref:System.Tuple> 类型和动态对象。
 
 ## <a name="linq-queries"></a>LINQ 查询
 
-由于 <xref:System.Data.Services.Client.DataServiceQuery%601> 类实现 LINQ 定义的 <xref:System.Linq.IQueryable%601> 接口，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端库可以将针对实体集数据的 LINQ 查询转换为一个 URI，该 URI 表示针对数据服务资源计算的查询表达式。 下面的示例是一个等效于之前 <xref:System.Data.Services.Client.DataServiceQuery%601> 的 LINQ 查询，它返回运费成本超过 30 美元的 `Orders` 并按运费成本对结果进行排序：
+由于 <xref:System.Data.Services.Client.DataServiceQuery%601> 类实现 LINQ 定义的 <xref:System.Linq.IQueryable%601> 接口，WCF 数据服务客户端库可以将针对实体集数据的 LINQ 查询转换为一个 URI，该 URI 表示针对数据服务资源计算的查询表达式。 下面的示例是一个等效于之前 <xref:System.Data.Services.Client.DataServiceQuery%601> 的 LINQ 查询，它返回运费成本超过 30 美元的 `Orders` 并按运费成本对结果进行排序：
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]
@@ -67,7 +67,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 ## <a name="adding-query-options"></a>添加查询选项
 
-数据服务查询支持 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]提供的所有查询选项。 调用 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法可向 <xref:System.Data.Services.Client.DataServiceQuery%601> 实例追加查询选项。 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 返回一个新的 <xref:System.Data.Services.Client.DataServiceQuery%601> 实例，该实例等效于原始查询，但带有新的查询选项集。 下面的查询在执行时会返回按 `Orders` 值进行筛选并按 `Freight` 降序排序的 `OrderID`：
+数据服务查询支持 WCF 数据 Servicess 提供的所有查询选项。 调用 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法可向 <xref:System.Data.Services.Client.DataServiceQuery%601> 实例追加查询选项。 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 返回一个新的 <xref:System.Data.Services.Client.DataServiceQuery%601> 实例，该实例等效于原始查询，但带有新的查询选项集。 下面的查询在执行时会返回按 `Orders` 值进行筛选并按 `Freight` 降序排序的 `OrderID`：
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionsspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionsspecific)]
@@ -118,7 +118,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 - <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A> - 返回一个 <xref:System.Data.Services.Client.DataServiceQueryContinuation> 对象，该对象包含下一页结果的 URI。
 
-默认情况下，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 仅返回查询 URI 显式选择的数据。 这样即提供了在需要时从数据服务显式加载其他数据的选项。 每次从数据服务显式加载数据时都会向数据服务发送一个请求。 可以显式加载的数据包括相关实体、分页响应数据以及二进制数据流。
+默认情况下，WCF 数据服务仅返回查询 URI 显式选择的数据。 这样即提供了在需要时从数据服务显式加载其他数据的选项。 每次从数据服务显式加载数据时都会向数据服务发送一个请求。 可以显式加载的数据包括相关实体、分页响应数据以及二进制数据流。
 
 > [!NOTE]
 > 由于数据服务可能返回分页响应，因此建议您的应用程序使用编程模式来处理分页的数据服务响应。 有关详细信息，请参阅[加载延迟的内容](loading-deferred-content-wcf-data-services.md)。
@@ -151,6 +151,6 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 - [如何：投影查询结果](how-to-project-query-results-wcf-data-services.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WCF Data Services 客户端库](wcf-data-services-client-library.md)

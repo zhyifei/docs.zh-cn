@@ -2,12 +2,12 @@
 title: 计算表达式
 description: 了解如何创建方便的语法，以便在中F#写入可使用控制流结构和绑定进行排序和组合的计算。
 ms.date: 11/04/2019
-ms.openlocfilehash: c9ac0454221782a7ccb3d41850ca6aba4e20a72a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4ff7def0ed3a46acd1b0b83b111f26f5d556071f
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976790"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569460"
 ---
 # <a name="computation-expressions"></a>计算表达式
 
@@ -209,7 +209,7 @@ let result = Async.RunSynchronously req
 
 ### `match!`
 
-从 4.5 F#开始，使用`match!`关键字可以在其结果中内联调用另一个计算表达式和模式匹配：
+使用 `match!` 关键字，可以在其结果中内联调用另一个计算表达式和模式匹配：
 
 ```fsharp
 let doThingsAsync url =
@@ -250,7 +250,7 @@ let doThingsAsync url =
 |`Zero`|`unit -> M<'T>`|为计算表达式中 `if...then` 表达式的空 `else` 分支调用。|
 |`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|指示将计算表达式作为一个引号传递到 `Run` 成员。 它将计算的所有实例都转换为引号。|
 
-生成器类中的许多方法都使用并返回 `M<'T>` 构造，这通常是一个单独定义的类型，用于确定要合并的计算种类，例如，异步工作流的 `Async<'T>` 和用于序列的 `Seq<'T>`工作. 这些方法的签名使它们相互组合起来并彼此嵌套，以便可以将从一个构造返回的工作流对象传递到下一个构造。 编译器在分析计算表达式时，通过使用上表中的方法和计算表达式中的代码，将表达式转换为一系列嵌套函数调用。
+生成器类中的许多方法都使用并返回 `M<'T>` 构造，这通常是一个单独定义的类型，该类型表示要合并的计算种类，例如，异步工作流的 `Async<'T>` 和用于序列工作流的 `Seq<'T>`。 这些方法的签名使它们相互组合起来并彼此嵌套，以便可以将从一个构造返回的工作流对象传递到下一个构造。 编译器在分析计算表达式时，通过使用上表中的方法和计算表达式中的代码，将表达式转换为一系列嵌套函数调用。
 
 嵌套表达式的格式如下：
 
@@ -258,9 +258,9 @@ let doThingsAsync url =
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-在上面的代码中，如果未在计算表达式生成器类中定义 `Run` 和 `Delay`，则将忽略这些调用。 计算表达式的主体（此处表示为 `{| cexpr |}`）将按下表中所述的翻译转换为涉及生成器类方法的调用。 根据这些转换以递归方式定义计算表达式 `{| cexpr |}`，其中 `expr` 为F#表达式，`cexpr`为计算表达式。
+在上面的代码中，如果未在计算表达式生成器类中定义 `Run` 和 `Delay`，则将忽略这些调用。 计算表达式的主体（此处表示为 `{| cexpr |}`）将按下表中所述的翻译转换为涉及生成器类方法的调用。 根据这些转换以递归方式定义计算表达式 `{| cexpr |}`，其中 `expr` 为F#表达式，`cexpr` 为计算表达式。
 
-|Expression|转换|
+|表达式|转换|
 |----------|-----------|
 |<code>{ let binding in cexpr }</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
 |<code>{ let! pattern = expr in cexpr }</code>|<code>builder.Bind(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|
@@ -428,7 +428,7 @@ type Microsoft.FSharp.Linq.QueryBuilder with
         Enumerable.Any (source.Source, Func<_,_>(predicate)) |> not
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [F# 语言参考](index.md)
 - [异步工作流](asynchronous-workflows.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：项目查询结果（WCF 数据服务）
+title: 如何：投影查询结果（WCF 数据服务）
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: 474ac625-8770-43ba-8320-d3315ea9530f
-ms.openlocfilehash: 758bb01764fcfe195d4f940705316e7579be95ff
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1e94b5f65229887b2d310f15499a2b14ef7c0536
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780006"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569004"
 ---
-# <a name="how-to-project-query-results-wcf-data-services"></a>如何：项目查询结果（WCF 数据服务）
-投影提供减少查询返回的数据量的机制，方法是指定在响应中仅返回某个实体的某些属性。 您可以通过`$select`使用查询选项或在 LINQ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]查询中使用[select](../../../csharp/language-reference/keywords/select-clause.md)子句（在 Visual Basic 中[选择](../../../visual-basic/language-reference/queries/select-clause.md)）对查询结果执行投影。 有关详细信息，请参阅[查询数据服务](querying-the-data-service-wcf-data-services.md)。  
+# <a name="how-to-project-query-results-wcf-data-services"></a>如何：投影查询结果（WCF 数据服务）
+投影提供减少查询返回的数据量的机制，方法是指定在响应中仅返回某个实体的某些属性。 您可以通过使用 `$select` 查询选项或在 LINQ 查询中使用[select](../../../csharp/language-reference/keywords/select-clause.md)子句（在 Visual Basic 中[选择](../../../visual-basic/language-reference/queries/select-clause.md)）对 WCF 数据服务查询的结果执行投影。 有关详细信息，请参阅[查询数据服务](querying-the-data-service-wcf-data-services.md)。  
   
  本主题中的示例使用罗斯文示例数据服务和自动生成的客户端数据服务类。 此服务和客户端数据类是在完成[WCF 数据服务快速入门](quickstart-wcf-data-services.md)时创建的。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "70780006"
  [!code-vb[Astoria Northwind Client#SelectCustomerAddressNonEntity](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#selectcustomeraddressnonentity)]  
   
 ## <a name="example"></a>示例  
- 下面的示例演示前面的示例中`CustomerAddress`使用`CustomerAddressNonEntity`的和类型的定义。  
+ 下面的示例演示了在前面的示例中使用的 `CustomerAddress` 和 `CustomerAddressNonEntity` 类型的定义。  
   
  [!code-csharp[Astoria Northwind Client#CustomerAddressDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customeraddress.cs#customeraddressdefinition)]
  [!code-vb[Astoria Northwind Client#CustomerAddressDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customeraddress.vb#customeraddressdefinition)]

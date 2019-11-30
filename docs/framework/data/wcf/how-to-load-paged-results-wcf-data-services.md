@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: bb786ea4-f3ef-4ad3-9a41-3a0b7feb6a1f
-ms.openlocfilehash: e718aad904a43d118a243afafc17834cba31f028
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d651a66ac619e46d3ec6b46b194436f51300ff25
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790458"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569025"
 ---
 # <a name="how-to-load-paged-results-wcf-data-services"></a>如何：加载分页结果（WCF 数据服务）
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 允许数据服务限制单个响应源中返回的实体数。 在此情况下，源中的最后一项包含指向下一页数据的链接。 通过调用执行 <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> 时返回的 <xref:System.Data.Services.Client.QueryOperationResponse%601> 的 <xref:System.Data.Services.Client.DataServiceQuery%601> 方法可以获取下一页数据的 URI。 然后，可以使用此对象所表示的 URI 加载下一页结果。 有关详细信息，请参阅[加载延迟的内容](loading-deferred-content-wcf-data-services.md)。  
+WCF 数据服务允许数据服务限制单个响应源中返回的实体数。 在此情况下，源中的最后一项包含指向下一页数据的链接。 通过调用执行 <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> 时返回的 <xref:System.Data.Services.Client.QueryOperationResponse%601> 的 <xref:System.Data.Services.Client.DataServiceQuery%601> 方法可以获取下一页数据的 URI。 然后，可以使用此对象所表示的 URI 加载下一页结果。 有关详细信息，请参阅[加载延迟的内容](loading-deferred-content-wcf-data-services.md)。  
   
  本主题中的示例使用罗斯文示例数据服务和自动生成的客户端数据服务类。 此服务和客户端数据类是在完成[WCF 数据服务快速入门](quickstart-wcf-data-services.md)时创建的。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "70790458"
  [!code-csharp[Astoria Northwind Client#GetCustomersPagedNested](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getcustomerspagednested)]
  [!code-vb[Astoria Northwind Client#GetCustomersPagedNested](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getcustomerspagednested)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [加载延迟的内容](loading-deferred-content-wcf-data-services.md)
 - [如何：加载相关实体](how-to-load-related-entities-wcf-data-services.md)

@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: a00f8933-b232-4445-95ba-adc634f055d8
-ms.openlocfilehash: 13c59bee9fc58dbe8c5b8c768fe9ff8b31d72e76
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 501bec59a61b51ec4bece4b0ce2f941189b35ed0
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780257"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569198"
 ---
 # <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>如何：添加、修改和删除实体（WCF 数据服务）
-使用客户端库，您可以通过对中的<xref:System.Data.Services.Client.DataServiceContext>对象执行等效操作，来创建、更新和删除数据服务中的实体数据。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 有关详细信息，请参阅[更新数据服务](updating-the-data-service-wcf-data-services.md)。  
+使用 WCF 数据服务的客户端库，您可以通过对 <xref:System.Data.Services.Client.DataServiceContext>中的对象执行等效操作，在数据服务中创建、更新和删除实体数据。 有关详细信息，请参阅[更新数据服务](updating-the-data-service-wcf-data-services.md)。  
   
  本主题中的示例使用罗斯文示例数据服务和自动生成的客户端数据服务类。 此服务和客户端数据类是在完成[WCF 数据服务快速入门](quickstart-wcf-data-services.md)时创建的。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "70780257"
  [!code-csharp[Astoria Northwind Client#AddOrderDetailToOrderAuto](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addorderdetailtoorderauto)]
  [!code-vb[Astoria Northwind Client#AddOrderDetailToOrderAuto](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addorderdetailtoorderauto)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WCF Data Services 客户端库](wcf-data-services-client-library.md)
 - [如何：将现有实体附加到 DataServiceContext](attach-an-existing-entity-to-dc-wcf-data.md)

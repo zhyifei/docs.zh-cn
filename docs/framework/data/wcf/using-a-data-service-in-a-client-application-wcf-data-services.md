@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: ccf003b915876a30eeb27b39066168fb22950292
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 26fd25a268204ad2644a07b6a56967cc5d2df95e
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975092"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568836"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>在客户端应用程序中使用数据服务（WCF 数据服务）
 通过向 Web 浏览器提供 URI，可以访问公开 Open Data Protocol （OData）源的服务。 URI 提供某个资源的地址，系统将向这些地址发送请求消息以访问或更改该资源表示的基础数据。 浏览器发出 HTTP GET 命令，并以 OData 源的形式返回请求的资源。 有关详细信息，请参阅[从 Web 浏览器访问服务](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)。  
@@ -45,13 +45,13 @@ ms.locfileid: "73975092"
  将在 HTTP 请求消息的标头中请求负载的消息格式。 有关详细信息，请参阅[OData：操作](https://go.microsoft.com/fwlink/?LinkID=185792)。  
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>使用客户端库访问和更改数据  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 包括客户端库，使你能够更轻松地从基于 .NET Framework 和 Silverlight 的客户端应用程序中使用 OData 源。 这些库简化了 HTTP 消息的发送和接收。 它们还可将消息负载转换为代表实体数据的 CLR 对象。 客户端库具有两个核心类 <xref:System.Data.Services.Client.DataServiceContext> 和 <xref:System.Data.Services.Client.DataServiceQuery%601>。 通过使用这些类，可以查询数据服务，然后作为 CLR 对象使用返回的实体数据。 有关详细信息，请参阅[WCF 数据服务客户端库](wcf-data-services-client-library.md)和[WCF 数据服务（Silverlight）](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))。  
+ WCF 数据服务包括客户端库，使你能够更轻松地从基于 .NET Framework 和 Silverlight 的客户端应用程序中使用 OData 源。 这些库简化了 HTTP 消息的发送和接收。 它们还可将消息负载转换为代表实体数据的 CLR 对象。 客户端库具有两个核心类 <xref:System.Data.Services.Client.DataServiceContext> 和 <xref:System.Data.Services.Client.DataServiceQuery%601>。 通过使用这些类，可以查询数据服务，然后作为 CLR 对象使用返回的实体数据。 有关详细信息，请参阅[WCF 数据服务客户端库](wcf-data-services-client-library.md)和[WCF 数据服务（Silverlight）](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))。  
   
  您可以使用 Visual Studio 中的**添加服务引用**对话框添加对数据服务的引用。 此工具将向所引用的数据服务请求服务元数据，然后生成代表数据服务的 <xref:System.Data.Services.Client.DataServiceContext>，并生成代表实体的客户端数据服务类。 有关详细信息，请参阅[生成数据服务客户端库](generating-the-data-service-client-library-wcf-data-services.md)。  
   
  有可用的编程库，可用于在其他类型的客户端应用程序中使用 OData 源。 有关详细信息，请参阅[ODATA SDK](https://go.microsoft.com/fwlink/?LinkId=185796)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [访问数据服务资源](accessing-data-service-resources-wcf-data-services.md)
 - [快速入门](quickstart-wcf-data-services.md)

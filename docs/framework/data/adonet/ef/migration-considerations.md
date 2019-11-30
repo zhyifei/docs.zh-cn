@@ -2,12 +2,12 @@
 title: 迁移注意事项（实体框架）
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: e3e4caf79c1e75708e266e625a4271bc0c90747b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 168aec6ef369f446cfac22ee5c4361fa06aaf16d
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854418"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569443"
 ---
 # <a name="migration-considerations-entity-framework"></a>迁移注意事项（实体框架）
 ADO.NET 实体框架为现有应用程序提供了几个优点。 其中最重要的益处之一在于能够使用概念模型将应用程序使用的数据结构与数据源中的架构分离。 这样，日后便可轻松地对存储模型或数据源本身进行更改，而无需对应用程序进行补偿更改。 有关使用实体框架的好处的详细信息，请参阅[实体框架概述](overview.md)和[实体数据模型](../entity-data-model.md)。  
@@ -39,7 +39,7 @@ ADO.NET 实体框架为现有应用程序提供了几个优点。 其中最重�
   
      模型和映射文件定义概念模型中的实体、数据源中的结构（如表、存储过程和视图）以及实体与数据源结构之间的映射。 有关详细信息，请参阅[如何：手动定义模型和映射文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100))。  
   
-     在存储模型中定义的类型必须与数据源中对象的名称相匹配。 如果现有应用程序将数据作为对象公开，则必须确保在概念模型中定义的实体和属性与这些现有数据类和属性的名称相匹配。 有关详细信息，请参阅[如何：自定义建模和映射文件以使用自定义](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738625(v=vs.100))对象。  
+     在存储模型中定义的类型必须与数据源中对象的名称相匹配。 如果现有应用程序将数据作为对象公开，则必须确保在概念模型中定义的实体和属性与这些现有数据类和属性的名称相匹配。 有关详细信息，请参阅[如何：自定义建模和映射文件以使用自定义对象](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738625(v=vs.100))。  
   
     > [!NOTE]
     > 可以使用实体数据模型设计器重命名概念模型中的实体以匹配现有对象。 有关详细信息，请参阅[实体数据模型设计器](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100))。  
@@ -60,7 +60,7 @@ ADO.NET 实体框架为现有应用程序提供了几个优点。 其中最重�
   
 - 使用数据读取器显示表格格式数据。  
 
-  可以考虑使用 EntityClient 提供[!INCLUDE[esql](../../../../../includes/esql-md.md)]程序执行查询并枚举返回<xref:System.Data.EntityClient.EntityDataReader>的对象。 仅当应用程序使用数据读取器显示表格格式数据，且不需要实体框架提供的工具将数据具体化为对象、跟踪更改和进行更新时，才执行此操作。 可以继续使用对数据源进行更新的现有数据访问代码，但可以使用从 <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A> 的 <xref:System.Data.EntityClient.EntityConnection> 属性访问的现有连接。 有关详细信息，请参阅[实体框架的 EntityClient Provider](entityclient-provider-for-the-entity-framework.md)。  
+  可以考虑使用 EntityClient 提供程序执行 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查询，并枚举返回的 <xref:System.Data.EntityClient.EntityDataReader> 对象。 仅当应用程序使用数据读取器显示表格格式数据，且不需要实体框架提供的工具将数据具体化为对象、跟踪更改和进行更新时，才执行此操作。 可以继续使用对数据源进行更新的现有数据访问代码，但可以使用从 <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A> 的 <xref:System.Data.EntityClient.EntityConnection> 属性访问的现有连接。 有关详细信息，请参阅[实体框架的 EntityClient Provider](entityclient-provider-for-the-entity-framework.md)。  
   
 - 使用数据集。  
 
@@ -73,7 +73,7 @@ ADO.NET 实体框架为现有应用程序提供了几个优点。 其中最重�
   
 - 将数据绑定到控件。  
 
-  在查询概念模型时，实体框架以实体类型实例的对象的形式返回数据。 这些对象可以直接绑定到控件，此绑定支持更新。 这意味着对控件中的数据（如中<xref:System.Windows.Forms.DataGridView>的行）所做的更改会<xref:System.Data.Objects.ObjectContext.SaveChanges%2A>在调用方法时自动保存到数据库。  
+  在查询概念模型时，实体框架以实体类型实例的对象的形式返回数据。 这些对象可以直接绑定到控件，此绑定支持更新。 这意味着对控件中的数据（如 <xref:System.Windows.Forms.DataGridView>中的行）的更改会在调用 <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> 方法时自动保存到数据库中。  
   
   如果应用程序对查询结果进行枚举，以在 <xref:System.Windows.Forms.DataGridView> 或支持数据绑定的其他类型的控件中显示数据，则可以修改应用程序以将该控件绑定到 <xref:System.Data.Objects.ObjectQuery%601> 的结果。  
   
@@ -92,7 +92,7 @@ ADO.NET 实体框架为现有应用程序提供了几个优点。 其中最重�
   
 - 使用 XML 数据的应用程序。  
 
-  对象序列化允许您创建实体框架数据服务。 这些服务为使用 XML 数据的应用程序（如基于 AJAX 的 Internet 应用程序）提供数据。 在这类情况下，请考虑使用 [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]。 这些数据服务基于实体数据模型，并通过使用标准具象状态传输（REST） HTTP 操作（如 GET、PUT 和 POST）提供对实体数据的动态访问。 有关详细信息，请参阅 [WCF Data Services 4.5](../../wcf/index.md)。  
+  对象序列化允许您创建实体框架数据服务。 这些服务为使用 XML 数据的应用程序（如基于 AJAX 的 Internet 应用程序）提供数据。 在这些情况下，请考虑使用 WCF 数据服务。 这些数据服务基于实体数据模型，并通过使用标准具象状态传输（REST） HTTP 操作（如 GET、PUT 和 POST）提供对实体数据的动态访问。 有关详细信息，请参阅 [WCF Data Services 4.5](../../wcf/index.md)。  
   
   实体框架不支持本机 XML 数据类型。 这意味着在将实体映射到包含 XML 列的表时，该 XML 列的等效实体属性是一个字符串。 对象可以断开连接，并序列化为 XML。 有关详细信息，请参阅[序列化对象](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100))。  
   
@@ -100,9 +100,9 @@ ADO.NET 实体框架为现有应用程序提供了几个优点。 其中最重�
   
 - 维护状态的应用程序。  
 
-  ASP.NET Web 应用程序必须经常维护网页或用户会话的状态。 <xref:System.Data.Objects.ObjectContext>实例中的对象可以存储在客户端视图状态或服务器上的会话状态中，之后检索和重新附加到新的对象上下文。 有关详细信息，请参阅[附加和分离对象](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100))。  
+  ASP.NET Web 应用程序必须经常维护网页或用户会话的状态。 <xref:System.Data.Objects.ObjectContext> 实例中的对象可以存储在客户端视图状态中，或存储在服务器上的会话状态中，以后会检索并重新附加到新的对象上下文。 有关详细信息，请参阅[附加和分离对象](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100))。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [部署注意事项](deployment-considerations.md)
 - [实体框架术语](terminology.md)

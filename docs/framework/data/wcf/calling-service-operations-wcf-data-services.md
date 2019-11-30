@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: a64a09195101cd4b1ec3c6f990dd09d54466aea0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: bc2338191bbf6922f56c833ebf115c5b21d92b00
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975412"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569316"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>调用服务操作（WCF 数据服务）
-Open Data Protocol （OData）定义数据服务的服务操作。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]允许您将这类操作定义为数据服务的方法。 与其他数据服务资源一样，这些服务操作也通过 URI 进行寻址。 服务操作可以返回实体类型的集合、单个实体类型实例的集合和基元类型（如整数和字符串）的集合。 服务操作还可以返回 `null`（在 Visual Basic 中为 `Nothing`）。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库可以用于访问支持 HTTP GET 请求的服务操作。 这些种类的服务操作定义为应用了 <xref:System.ServiceModel.Web.WebGetAttribute> 的方法。 有关详细信息，请参阅[服务操作](service-operations-wcf-data-services.md)。  
+Open Data Protocol （OData）定义数据服务的服务操作。 WCF 数据服务使你能够将此类操作定义为数据服务中的方法。 与其他数据服务资源一样，这些服务操作也通过 URI 进行寻址。 服务操作可以返回实体类型的集合、单个实体类型实例的集合和基元类型（如整数和字符串）的集合。 服务操作还可以返回 `null`（在 Visual Basic 中为 `Nothing`）。 WCF 数据服务客户端库可用于访问支持 HTTP GET 请求的服务操作。 这些种类的服务操作定义为应用了 <xref:System.ServiceModel.Web.WebGetAttribute> 的方法。 有关详细信息，请参阅[服务操作](service-operations-wcf-data-services.md)。  
   
- 服务操作在实现 OData 的数据服务所返回的元数据中公开。 在元数据中，服务操作表示为 `FunctionImport` 元素。 在生成强类型 <xref:System.Data.Services.Client.DataServiceContext> 时，“添加服务引用”和 DataSvcUtil.exe 工具将忽略此元素。 因此，无法在上下文中找到一种方法用来直接调用服务操作。 不过，您仍可使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端并通过以下两种方式之一来调用服务操作：  
+ 服务操作在实现 OData 的数据服务所返回的元数据中公开。 在元数据中，服务操作表示为 `FunctionImport` 元素。 在生成强类型 <xref:System.Data.Services.Client.DataServiceContext> 时，“添加服务引用”和 DataSvcUtil.exe 工具将忽略此元素。 因此，无法在上下文中找到一种方法用来直接调用服务操作。 不过，仍可使用 WCF 数据服务客户端通过以下两种方式之一来调用服务操作：  
   
 - 通过调用 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 的 <xref:System.Data.Services.Client.DataServiceContext> 方法，同时提供服务操作的 URI 以及任何参数。 此方法用于调用任意 GET 服务操作。  
   
 - 通过对 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 使用 <xref:System.Data.Services.Client.DataServiceContext> 方法来创建 <xref:System.Data.Services.Client.DataServiceQuery%601> 对象。 在调用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 时，该服务操作的名称将提供给 `entitySetName` 参数。 此方法返回一个 <xref:System.Data.Services.Client.DataServiceQuery%601> 对象，该对象在枚举时或在调用 <xref:System.Data.Services.Client.DataServiceQuery%601.Execute%2A> 方法时调用该服务操作。 此方法用于调用返回集合的 GET 服务操作。 可通过使用 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法来提供单个参数。 可以进一步编辑此方法返回的 <xref:System.Data.Services.Client.DataServiceQuery%601> 对象，就像对待任何查询对象一样。 有关详细信息，请参阅[查询数据服务](querying-the-data-service-wcf-data-services.md)。  
   
 ## <a name="considerations-for-calling-service-operations"></a>调用服务操作的注意事项  
- 使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端调用服务操作时的注意事项如下。  
+ 使用 WCF 数据服务客户端调用服务操作时，请注意以下事项。  
   
 - 异步访问数据服务时，必须对 <xref:System.Data.Services.Client.DataServiceContext> 或 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A>上的 /<xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> 方法使用等效的异步 <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A>/<xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> 方法。  
   
-- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库不能具体化返回基元类型集合的服务操作的结果。  
+- WCF 数据服务客户端库无法具体化返回基元类型集合的服务操作的结果。  
   
-- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库不支持调用 POST 服务操作。 服务操作由 HTTP POST 调用，后者通过使用 <xref:System.ServiceModel.Web.WebInvokeAttribute> 配合 `Method="POST"` 参数定义。 要通过使用 HTTP POST 请求调用服务操作，必须使用 <xref:System.Net.HttpWebRequest>。  
+- WCF 数据服务客户端库不支持调用后服务操作。 服务操作由 HTTP POST 调用，后者通过使用 <xref:System.ServiceModel.Web.WebInvokeAttribute> 配合 `Method="POST"` 参数定义。 要通过使用 HTTP POST 请求调用服务操作，必须使用 <xref:System.Net.HttpWebRequest>。  
   
 - 您不能使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 调用这样的 GET 服务操作：它返回实体或基元类型的单个结果，或需要多个输入参数。 必须调用 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 方法。  
   
@@ -37,7 +37,7 @@ Open Data Protocol （OData）定义数据服务的服务操作。 [!INCLUDE[ssA
 - 使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 调用服务操作时，客户端库会通过对保留字符执行百分号编码（如与号（&））并在字符串中转义单引号，来自动转义提供给 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 的字符。 但是，当您调用某一*Execute*方法来调用服务操作时，您必须记得对任何用户提供的字符串值执行这种转义。 URI 中的单引号转义为单引号对。  
   
 ## <a name="examples-of-calling-service-operations"></a>调用服务操作示例  
- 本节通过以下示例演示如何使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端库来调用服务操作：  
+ 本部分包含以下示例，说明如何使用 WCF 数据服务客户端库调用服务操作：  
   
 - [调用 Execute&lt;T&gt; 以返回实体集合](calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
   
@@ -124,6 +124,6 @@ Open Data Protocol （OData）定义数据服务的服务操作。 [!INCLUDE[ssA
  [!code-csharp[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#onasyncqueryexecutioncomplete)]
  [!code-vb[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#onasyncqueryexecutioncomplete)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WCF Data Services 客户端库](wcf-data-services-client-library.md)

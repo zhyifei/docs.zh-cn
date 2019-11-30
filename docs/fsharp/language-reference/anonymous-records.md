@@ -1,21 +1,21 @@
 ---
-title: 匿名的记录
-description: 了解如何使用构造和使用一种语言功能，可帮助与操作数据的匿名记录。
+title: 匿名记录
+description: 了解如何使用构造和使用匿名记录，这种语言功能有助于处理数据。
 ms.date: 06/12/2019
-ms.openlocfilehash: e576210d4fb76ccfd09f8feb157ef4542aa94ccf
-ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
+ms.openlocfilehash: 0a7a819cc471c6579feacd621ed15aa89a6423ba
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041801"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569474"
 ---
-# <a name="anonymous-records"></a>匿名的记录
+# <a name="anonymous-records"></a>匿名记录
 
-匿名记录是无需使用之前声明的命名值的简单聚合。 可以将它们声明为结构或引用类型。 它们是默认情况下引用类型。
+匿名记录是命名值的简单聚合，在使用之前无需声明。 可以将它们声明为结构或引用类型。 默认情况下，它们是引用类型。
 
 ## <a name="syntax"></a>语法
 
-下面的示例演示的匿名记录语法。 项分隔为`[item]`都是可选的。
+下面的示例演示了匿名记录语法。 以 `[item]` 分隔的项是可选的。
 
 ```fsharp
 // Construct an anonymous record
@@ -30,12 +30,11 @@ let function-name (arg-name: [struct] {| Label1: Type1; Label2: Type2; ...|}) ..
 
 ## <a name="basic-usage"></a>基本用法
 
-匿名记录最佳的想法作为F#记录不需要在实例化之前声明的类型。
+匿名记录最适用于不需要F#在实例化之前声明的记录类型。
 
-例如，此处您可以使用函数进行交互的方式，生成的匿名记录：
+例如，在这里，你可以如何与生成匿名记录的函数进行交互：
 
 ```fsharp
-
 open System
 
 let getCircleStats radius =
@@ -51,7 +50,7 @@ printfn "Circle with radius: %f has diameter %f, area %f, and circumference %f"
     r stats.Diameter stats.Area stats.Circumference
 ```
 
-下面的示例与前一个扩展`printCircleStats`采用作为输入的匿名记录函数：
+下面的示例使用采用匿名记录作为输入的 `printCircleStats` 函数对上一个进行扩展：
 
 ```fsharp
 open System
@@ -72,7 +71,7 @@ let stats = getCircleStats r
 printCircleStats r stats
 ```
 
-调用`printCircleStats`与任何不具有相同的"形状"，如输入的类型将无法进行编译的匿名记录类型：
+使用不具有与输入类型相同的 "shape" 的任何匿名记录类型调用 `printCircleStats` 将无法编译：
 
 ```fsharp
 printCircleStats r {| Diameter = 2.0; Area = 4.0; MyCircumference = 12.566371 |}
@@ -80,9 +79,9 @@ printCircleStats r {| Diameter = 2.0; Area = 4.0; MyCircumference = 12.566371 |}
 // '["Area"; "Circumference"; "Diameter"]' and '["Area"; "Diameter"; "MyCircumference"]'
 ```
 
-## <a name="struct-anonymous-records"></a>结构的匿名记录
+## <a name="struct-anonymous-records"></a>结构匿名记录
 
-此外可以定义作为结构，它有可选的匿名记录`struct`关键字。 下面的示例生成和使用结构的匿名记录与前一增加的内容：
+匿名记录还可以定义为具有可选 `struct` 关键字的结构。 下面的示例通过生成和使用结构匿名记录来补充前一个示例：
 
 ```fsharp
 open System
@@ -107,7 +106,7 @@ printCircleStats r stats
 
 ### <a name="structness-inference"></a>Structness 推理
 
-结构匿名记录还允许为"structness 推理"不需要指定`struct`调用站点上的关键字。 在此示例中，您 elide`struct`关键字调用时`printCircleStats`:
+结构匿名记录还允许 "structness 推理"，在这种情况下，你无需在调用站点指定 `struct` 关键字。 在此示例中，当调用 `printCircleStats`时，将 elide `struct` 关键字：
 
 ```fsharp
 
@@ -118,11 +117,11 @@ let printCircleStats r (stats: struct {| Area: float; Circumference: float; Diam
 printCircleStats r {| Area = 4.0; Circumference = 12.6; Diameter = 12.6 |}
 ```
 
-反向模式-指定`struct`时输入的类型不是结构的匿名记录-将无法进行编译。
+如果输入类型不是结构匿名记录，则指定 `struct` 的反向模式-将无法进行编译。
 
-## <a name="embedding-anonymous-records-within-other-types"></a>嵌入内其他类型的匿名记录
+## <a name="embedding-anonymous-records-within-other-types"></a>在其他类型中嵌入匿名记录
 
-可用于声明[可区分联合](discriminated-unions.md)的记录。 但是，在记录中的数据是否可区分联合类型相同，必须将所有类型都定义为相互递归的。 使用匿名记录可避免此限制。 下面是一个示例通过其类型和函数匹配该模式：
+声明事例为记录的可[区分联合](discriminated-unions.md)很有用。 但是，如果记录中的数据与可区分联合的类型相同，则必须将所有类型定义为互相递归。 使用匿名记录可避免此限制。 下面是与模式匹配的示例类型和函数：
 
 ```fsharp
 type FullName = { FirstName: string; LastName: string }
@@ -142,21 +141,21 @@ let getFirstName e =
 
 ## <a name="copy-and-update-expressions"></a>复制和更新表达式
 
-匿名记录支持与构造[复制和更新表达式](copy-and-update-record-expressions.md)。 例如，下面是如何构造的新实例将复制的一个现有的匿名记录数据：
+匿名记录支持带有[复制和更新表达式](copy-and-update-record-expressions.md)的构造。 例如，下面介绍了如何构造用于复制现有数据的匿名记录的新实例：
 
 ```fsharp
 let data = {| X = 1; Y = 2 |}
 let data' = {| data with Y = 3 |}
 ```
 
-但是，命名记录与匿名记录，可构造副本完全不同的窗体和更新表达式。 下面的示例采用相同的匿名记录上一示例中，并将其扩展到新的匿名记录：
+但是，与命名记录不同，匿名记录允许您用复制和更新表达式构造完全不同的窗体。 下面的示例使用上一示例中的相同匿名记录，并将其扩展为新的匿名记录：
 
 ```fsharp
 let data = {| X = 1; Y = 2 |}
 let expandedData = {| data with Z = 3 |} // Gives {| X=1; Y=2; Z=3 |}
 ```
 
-还有可能构造命名记录的实例中的匿名记录：
+还可以通过命名记录的实例构造匿名记录：
 
 ```fsharp
 type R = { X: int }
@@ -164,7 +163,7 @@ let data = { X = 1 }
 let data' = {| data with Y = 2 |} // Gives {| X=1; Y=2 |}
 ```
 
-此外可以将数据复制到和从引用和结构的匿名记录：
+您还可以将数据复制到引用和结构匿名记录：
 
 ```fsharp
 // Copy data from a reference record into a struct anonymous record
@@ -186,20 +185,20 @@ let data3 = struct {| data2 with Z = r2.X |}
 
 ## <a name="properties-of-anonymous-records"></a>匿名记录的属性
 
-匿名记录具有大量特征对完全了解如何使用它们至关重要的。
+匿名记录有很多特性，这些特性对于完全理解它们的使用方式至关重要。
 
-### <a name="anonymous-records-are-nominal"></a>匿名记录是名义上
+### <a name="anonymous-records-are-nominal"></a>匿名记录为名义
 
-记录匿名[名义类型](https://en.wikipedia.org/wiki/Nominal_type_system)。 它们是最佳的思想，如名为[记录](records.md)类型 （这也是名义上的） 不需要预先声明的。
+匿名记录是[名义类型](https://en.wikipedia.org/wiki/Nominal_type_system)。 它们最适用于不需要前期声明的命名[记录](records.md)类型（也称名义）。
 
-请考虑下面的示例使用两个匿名记录声明：
+请考虑以下示例，其中包含两个匿名记录声明：
 
 ```fsharp
 let x = {| X = 1 |}
 let y = {| Y = 1 |}
 ```
 
-`x`和`y`值具有不同的类型和与另一个不兼容。 它们不是可以相等和不可比较。 为了说明这一点，请考虑命名的记录等效:
+`x` 和 `y` 值具有不同的类型，并且彼此不兼容。 它们不是可相等的，也不是可比较的。 为了说明这一点，请考虑等效的命名记录：
 
 ```fsharp
 type X = { X: int }
@@ -209,11 +208,11 @@ let x = { X = 1 }
 let y = { Y = 1 }
 ```
 
-没有任何与它们命名的记录的等效项时，就类型等效性或比较的匿名记录有关本质上是不同的内容。
+如果匿名记录与与类型等效性或比较相关的已命名记录等效项进行比较，则没有什么差异。
 
-### <a name="anonymous-records-use-structural-equality-and-comparison"></a>匿名的记录，请使用结构相等和比较
+### <a name="anonymous-records-use-structural-equality-and-comparison"></a>匿名记录使用结构相等性和比较
 
-记录类型，如匿名记录是结构是可以相等和比较。 这只是如果所有构成类型都支持相等性和比较，如与记录类型，则返回 true。 若要支持相等或比较，两个匿名记录必须具有相同的"形状"。
+与记录类型类似，匿名记录是结构可相等和可比较的。 如果所有构成类型都支持相等和比较（如记录类型），则此值为 true。 若要支持相等或比较，两个匿名记录必须具有相同的 "形状"。
 
 ```fsharp
 {| a = 1+1 |} = {| a = 2 |} // true
@@ -223,9 +222,9 @@ let y = { Y = 1 }
 {| a = 1 + 1 |} = {| a = 2;  b = 1|}
 ```
 
-### <a name="anonymous-records-are-serializable"></a>匿名记录是可序列化
+### <a name="anonymous-records-are-serializable"></a>匿名记录可序列化
 
-就像可以使用命名的记录一样，可以序列化匿名记录。 下面是一个示例使用[Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/):
+可以像处理命名记录一样序列化匿名记录。 下面是使用[newtonsoft.json](https://www.nuget.org/packages/Newtonsoft.Json/)的示例：
 
 ```fsharp
 open Newtonsoft.Json
@@ -237,11 +236,11 @@ let phillip = JsonConvert.DeserializeObject<{|name: string; age: int|}>(str)
 printfn "Name: %s Age: %d" phillip.name phillip.age
 ```
 
-匿名记录可用于通过网络而无需定义用于序列化/反序列化类型预先域发送轻型的数据。
+匿名记录适用于通过网络发送轻型数据，无需为前面的序列化/反序列化类型定义域。
 
-### <a name="anonymous-records-interoperate-with-c-anonymous-types"></a>与的匿名记录进行互操作C#匿名类型
+### <a name="anonymous-records-interoperate-with-c-anonymous-types"></a>匿名记录与C#匿名类型互操作
 
-可以使用需要使用.NET API [ C#匿名类型](../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。 C#匿名类型是普通与进行互操作使用的匿名记录。 下面的示例演示如何使用匿名记录，以调用[LINQ](../../csharp/programming-guide/concepts/linq/index.md)需要匿名类型的重载：
+可以使用需要使用[ C#匿名类型](../../csharp/programming-guide/classes-and-structs/anonymous-types.md)的 .net API。 C#匿名类型与使用匿名记录互操作非常简单。 下面的示例演示如何使用匿名记录调用需要匿名类型的[LINQ](../../csharp/programming-guide/concepts/linq/index.md)重载：
 
 ```fsharp
 open System.Linq
@@ -252,26 +251,26 @@ for ng in nameGrouping do
     printfn "%s has first letter %c" ng.Name ng.FirstLetter
 ```
 
-有多种其他需要传递一个匿名类型中使用的 Api 在.NET 中使用。 匿名记录是用于使用这些工具。
+在整个 .NET 中使用的其他许多 Api 需要使用传入匿名类型。 匿名记录是用于处理它们的工具。
 
 ## <a name="limitations"></a>限制
 
-匿名记录其使用情况中具有一些限制。 某些可归结于它们的设计，但有些则是易于更改。
+匿名记录在使用时有一些限制。 有些是其设计固有的，但其他一些则适合更改。
 
 ### <a name="limitations-with-pattern-matching"></a>模式匹配的限制
 
-模式匹配，命名记录与不支持匿名记录。 有三个原因：
+匿名记录不支持模式匹配，这与命名记录不同。 有以下三个原因：
 
-1. 一种模式必须为每个字段的匿名记录，与名为的记录类型不同的帐户。 这是因为匿名记录不支持结构子类型化的 – 名义类型。
-2. (1)，因此没有在模式匹配表达式中，有其他模式能为每个非重复模式的含义不同的匿名记录类型。
-3. 由于 (3)，任何匿名记录模式是使用"dot"表示法相比更详细。
+1. 与命名的记录类型不同，模式必须为匿名记录的每个字段提供帐户。 这是因为匿名记录不支持结构子类型化–它们是名义类型。
+2. 由于为（1），因此无法在模式匹配表达式中添加其他模式，因为每个 distinct 模式将意味着不同的匿名记录类型。
+3. 由于（3），任何匿名记录模式比使用 "点" 表示法更详细。
 
-没有到打开语言建议[允许在模式匹配有限上下文](https://github.com/fsharp/fslang-suggestions/issues/713)。
+有一个开放语言建议，[允许在有限的上下文中匹配模式](https://github.com/fsharp/fslang-suggestions/issues/713)。
 
-### <a name="limitations-with-mutability"></a>可变性的限制
+### <a name="limitations-with-mutability"></a>可变性限制
 
-它不是当前无法定义使用的匿名记录`mutable`数据。 没有[打开语言建议](https://github.com/fsharp/fslang-suggestions/issues/732)允许可变的数据。
+目前不能使用 `mutable` 数据定义匿名记录。 有一种[开放语言建议](https://github.com/fsharp/fslang-suggestions/issues/732)，允许使用可变数据。
 
-### <a name="limitations-with-struct-anonymous-records"></a>结构的匿名记录的限制
+### <a name="limitations-with-struct-anonymous-records"></a>结构匿名记录的限制
 
-不能声明为匿名记录的结构`IsByRefLike`或`IsReadOnly`。 没有[打开语言建议](https://github.com/fsharp/fslang-suggestions/issues/712)到有关`IsByRefLike`和`IsReadOnly`匿名记录。
+不能将结构匿名记录声明为 `IsByRefLike` 或 `IsReadOnly`。 对于 `IsByRefLike` 和 `IsReadOnly` 匿名记录，有一种[开放语言建议](https://github.com/fsharp/fslang-suggestions/issues/712)。

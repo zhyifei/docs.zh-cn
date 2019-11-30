@@ -2,12 +2,12 @@
 title: 在代码中配置 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: c6bcf08511470d28e1087108d95e477683b0338b
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 5d05fe5f70f4e2b1490c728cc019430cd94ff925
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320635"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569506"
 ---
 # <a name="configuring-wcf-services-in-code"></a>在代码中配置 WCF 服务
 Windows Communication Foundation （WCF）允许开发人员使用配置文件或代码来配置服务。  当部署之后需要对服务进行配置时，配置文件十分有用。 在使用配置文件时，IT 专业人员只需要更新配置文件，无需重新编译。 不过，配置文件可能十分复杂，难以维护。 不支持对配置文件进行调试，并且将按名称来引用配置元素，这使得配置文件的创作易于出错且较为困难。 WCF 还允许您在代码中配置服务。 在早期版本的 WCF （4.0 及更早版本）中，可以轻松地在自承载方案中配置代码中的服务，<xref:System.ServiceModel.ServiceHost> 类允许你在调用 ServiceHost 之前配置终结点和行为。 但是，在 Web 承载方案中，你不具备针对 <xref:System.ServiceModel.ServiceHost> 类的直接访问权限。 若要配置 Web 承载的服务，你需要创建 `System.ServiceModel.ServiceHostFactory`，后者会创建 <xref:System.ServiceModel.Activation.ServiceHostFactory> 并执行任何所需的配置。 从 .NET 4.5 开始，WCF 提供了一种更简单的方法来在代码中配置自承载服务和 web 托管服务。  
@@ -68,7 +68,7 @@ public class Service1 : IService1
        config.Description.Behaviors.Add( new ServiceMetadataBehavior { HttpGetEnabled = true });   
        // set up support for http, https, net.tcp, net.pipe   
        config.EnableProtocol(new BasicHttpBinding());   
-       config.EnableProtocol(new BasicHttpBinding());   
+       config.EnableProtocol(new BasicHttpsBinding());   
        config.EnableProtocol(new NetTcpBinding());   
        config.EnableProtocol(new NetNamedPipeBinding());   
        // add an extra BasicHttpBinding endpoint at http:///basic   
@@ -77,7 +77,7 @@ public class Service1 : IService1
 }   
 ```  
   
- 仅当不以编程方式向 <xref:System.ServiceModel.ServiceConfiguration> 中添加应用程序终结点时，才使用 < `protocolMappings` > "部分中的设置。您可以选择从默认应用程序配置文件加载服务配置，方法是调用 <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> 然后更改设置。 <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> 类还允许您从集中式配置加载配置。 下面的代码演示如何实现这一点：  
+ 仅当不以编程方式向 <xref:System.ServiceModel.ServiceConfiguration> 中添加应用程序终结点时，才使用 <`protocolMappings`> "部分中的设置。您可以选择从默认应用程序配置文件加载服务配置，方法是调用 <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> 然后更改设置。 <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> 类还允许您从集中式配置加载配置。 下面的代码演示如何实现这一点：  
   
 ```csharp
 public class Service1 : IService1   
@@ -91,9 +91,9 @@ public class Service1 : IService1
 ```  
   
 > [!IMPORTANT]
-> 请注意，<xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> 忽略 < `service` > < 标记 < `host` > 设置 `system.serviceModel`。 从概念上讲，< `host` > 是指主机配置，而不是服务配置，并在配置方法执行之前加载。  
+> 请注意，<xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> 忽略 <`service`> < 标记 <`host`> 设置`system.serviceModel`。 从概念上讲，<`host`> 是指主机配置，而不是服务配置，并在配置方法执行之前加载。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用配置文件配置服务](configuring-services-using-configuration-files.md)
 - [配置客户端行为](configuring-client-behaviors.md)

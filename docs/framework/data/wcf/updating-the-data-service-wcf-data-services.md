@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 02bcb8f12cd7f230d60c3b3c58174a54405ff955
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 060cdab4f486782e6ad60511fadad95a41255dec
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975115"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568821"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>更新数据服务（WCF 数据服务）
-当使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 的客户端库使用 Open Data Protocol （OData）源时，库会将源中的条目转换为客户端数据服务类的实例。 通过使用 <xref:System.Data.Services.Client.DataServiceContext> 所属的 <xref:System.Data.Services.Client.DataServiceQuery%601> 跟踪这些数据服务类。 客户端通过使用 <xref:System.Data.Services.Client.DataServiceContext> 上的方法跟踪您报告的实体更改。 客户端利用这些方法可跟踪已添加和删除的实体以及您对属性值或对实体实例之间关系的更改。 调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法时，将以基于 REST 的操作的形式将这些跟踪的更改发送回数据服务。  
+当使用 WCF 数据服务的客户端库使用 Open Data Protocol （OData）源时，库会将源中的条目转换为客户端数据服务类的实例。 通过使用 <xref:System.Data.Services.Client.DataServiceContext> 所属的 <xref:System.Data.Services.Client.DataServiceQuery%601> 跟踪这些数据服务类。 客户端通过使用 <xref:System.Data.Services.Client.DataServiceContext> 上的方法跟踪您报告的实体更改。 客户端利用这些方法可跟踪已添加和删除的实体以及您对属性值或对实体实例之间关系的更改。 调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法时，将以基于 REST 的操作的形式将这些跟踪的更改发送回数据服务。  
   
 > [!NOTE]
 > 当使用 <xref:System.Data.Services.Client.DataServiceCollection%601> 实例将数据绑定到控件时，对绑定控件中数据所做的更改自动报告给 <xref:System.Data.Services.Client.DataServiceContext>。 有关详细信息，请参阅[将数据绑定到控件](binding-data-to-controls-wcf-data-services.md)。  
@@ -67,7 +67,7 @@ ms.locfileid: "73975115"
 ## <a name="creating-and-modifying-relationship-links"></a>创建并修改关系链接  
  使用 "**添加服务引用**" 对话框生成的 <xref:System.Data.Services.Client.DataServiceContext> 类的 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> 方法或适当的*AddTo*方法添加新实体时，不会自动定义新实体和相关实体之间的任何关系。  
   
- 可创建和更改实体实例之间的关系，以及让客户端库在数据服务中反映这些更改。 实体之间的关系在模型中定义为关联，<xref:System.Data.Services.Client.DataServiceContext> 在上下文中以链接对象的形式跟踪每个关系。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 在 <xref:System.Data.Services.Client.DataServiceContext> 类上提供以下方法来创建、修改和删除这些链接：  
+ 可创建和更改实体实例之间的关系，以及让客户端库在数据服务中反映这些更改。 实体之间的关系在模型中定义为关联，<xref:System.Data.Services.Client.DataServiceContext> 在上下文中以链接对象的形式跟踪每个关系。 WCF 数据服务在 <xref:System.Data.Services.Client.DataServiceContext> 类上提供以下方法来创建、修改和删除这些链接：  
   
 |方法|描述|  
 |------------|-----------------|  
@@ -93,7 +93,7 @@ ms.locfileid: "73975115"
 ## <a name="saving-changes"></a>保存更改  
  在 <xref:System.Data.Services.Client.DataServiceContext> 实例中对更改进行跟踪，但不会将更改立即发送到服务器。 在完成对指定活动的所需更改后，调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 以将所有更改提交给数据服务。 有关详细信息，请参阅[管理数据服务上下文](managing-the-data-service-context-wcf-data-services.md)。 还可以使用 <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> 和 <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> 方法异步保存更改。 有关详细信息，请参阅[异步操作](asynchronous-operations-wcf-data-services.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WCF Data Services 客户端库](wcf-data-services-client-library.md)
 - [查询数据服务](querying-the-data-service-wcf-data-services.md)

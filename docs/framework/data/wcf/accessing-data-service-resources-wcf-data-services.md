@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: cf6877dd67ad9e17a43be5eafb84a2ecf21d7190
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7eea23ba3dc5e9cc327d9cdfba10c72af7525c30
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975436"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569406"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>访问数据服务资源（WCF 数据服务）
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支持 Open Data Protocol （OData）将数据公开为包含可通过 Uri 寻址的资源的源。 这些资源根据[实体数据模型](../adonet/entity-data-model.md)的实体关系约定来表示。 在此模型中，实体表示作为应用程序域中数据类型的数据操作单元，如客户、订单、项目和产品。 可以通过使用具象状态传输 (REST) 的语义（尤其是标准 HTTP 谓词 GET、PUT、POST 和 DELETE）访问和更改实体数据。  
+WCF 数据服务支持 Open Data Protocol （OData）将数据公开为包含可通过 Uri 寻址的资源的源。 这些资源根据[实体数据模型](../adonet/entity-data-model.md)的实体关系约定来表示。 在此模型中，实体表示作为应用程序域中数据类型的数据操作单元，如客户、订单、项目和产品。 可以通过使用具象状态传输 (REST) 的语义（尤其是标准 HTTP 谓词 GET、PUT、POST 和 DELETE）访问和更改实体数据。  
   
 ## <a name="addressing-resources"></a>处理资源  
  在 OData 中，通过使用 URI 来处理数据模型公开的任何数据。 例如，下面的 URI 返回一个作为 Customers 实体集的源，其中包含 Customer 实体类型的所有实例的条目：  
@@ -56,7 +56,7 @@ ms.locfileid: "73975436"
   
  返回源中的各项还按订单的 ShipCity 属性值进行排序。  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支持以下 OData 系统查询选项：  
+ WCF 数据服务支持以下 OData 系统查询选项：  
   
 |查询选项|描述|  
 |------------------|-----------------|  
@@ -78,6 +78,6 @@ ms.locfileid: "73975436"
 ## <a name="consuming-the-returned-feed"></a>使用返回的源  
  OData 资源的 URI 使你可以对服务公开的实体数据进行寻址。 在 Web 浏览器的 "地址" 字段中输入 URI 时，将返回所请求资源的 OData 源表示形式。 有关详细信息，请参阅[WCF 数据服务快速入门](quickstart-wcf-data-services.md)。 尽管可以使用 Web 浏览器来测试数据服务资源是否返回了预期的数据，但通常可以通过应用程序代码或网页中的脚本语言访问生产数据服务，这些服务还可以创建、更新和删除数据。 有关详细信息，请参阅[在客户端应用程序中使用数据服务](using-a-data-service-in-a-client-application-wcf-data-services.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Open Data Protocol 网站](https://www.odata.org/)

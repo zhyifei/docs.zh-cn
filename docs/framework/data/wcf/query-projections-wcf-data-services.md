@@ -10,12 +10,12 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 17475cccf461371a909660bfe3f8db29bf1fa2fe
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 03fa40a895d322a8b5ad543f75424ef5b379672b
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975177"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568902"
 ---
 # <a name="query-projections-wcf-data-services"></a>查询投影（WCF 数据服务）
 
@@ -65,7 +65,7 @@ ms.locfileid: "73975177"
 
 **使用初始值设定项创建新的投影实例**
 
-- 示例:
+- 示例：
 
    [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithinitializer)]
    [!code-vb[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithinitializer)]
@@ -76,7 +76,7 @@ ms.locfileid: "73975177"
 
 **使用构造函数创建新的投影实例**
 
-- 示例:
+- 示例：
 
    [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithconstructor)]
    [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithconstructor)]
@@ -87,7 +87,7 @@ ms.locfileid: "73975177"
 
 **使用投影转换属性值**
 
-- 示例:
+- 示例：
 
    [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithtransform)]
    [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithtransform)]
@@ -112,10 +112,10 @@ ms.locfileid: "73975177"
 
 - 当投影包括导航属性时，会隐式加载相关对象，而无需调用 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 方法。 不支持在投影的查询中使用 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 方法。
 
-- 在客户端上进行查询的查询投影在请求 URI 中转换为使用 `$select` 查询选项。 基于不支持 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 查询选项的早期 `$select` 版本执行具有投影的查询时，将会返回错误。 当数据服务的 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> 的 <xref:System.Data.Services.DataServiceBehavior> 设置为值 <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1> 时也会发生这种情况。 有关详细信息，请参阅[数据服务版本控制](data-service-versioning-wcf-data-services.md)。
+- 在客户端上进行查询的查询投影在请求 URI 中转换为使用 `$select` 查询选项。 针对不支持 `$select` 查询选项的 WCF 数据服务以前版本执行具有投影的查询时，将返回错误。 当数据服务的 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> 的 <xref:System.Data.Services.DataServiceBehavior> 设置为值 <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1> 时也会发生这种情况。 有关详细信息，请参阅[数据服务版本控制](data-service-versioning-wcf-data-services.md)。
 
 有关详细信息，请参阅[如何：投影查询结果](how-to-project-query-results-wcf-data-services.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [查询数据服务](querying-the-data-service-wcf-data-services.md)

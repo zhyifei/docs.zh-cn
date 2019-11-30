@@ -1,5 +1,5 @@
 ---
-title: 如何：创建发行者策略
+title: 如何：创建发布者策略
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 346671d4febd5f3999f1f4fbf2fe4b7e475ae5fa
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 313af6046fda8dd8905e8bda4e8c4aec187ef8bf
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040191"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568405"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>如何：创建发行者策略
+# <a name="how-to-create-a-publisher-policy"></a>如何：创建发布者策略
 
 程序集的供应商可以通过包括发布服务器策略文件和已升级的程序集，指出应用程序应使用较新版本的程序集。 发行者策略文件指定程序集重定向和基本代码设置，并使用与应用程序配置文件相同的格式。 发行者策略文件编译到一个程序集中并置于全局程序集缓存中。
 
@@ -74,7 +74,7 @@ al /link:publisherPolicyFile /out:publisherPolicyAssemblyFile /keyfile:keyPairFi
   > [!NOTE]
   > 从 .NET Framework 2.0 开始，可以获得特定处理器体系结构的目标功能。
 
-从 .NET Framework 2.0 开始，可以获得特定处理器体系结构的目标功能。 下面的命令从名为 `pub.config`的发行者策略文件中创建名为 `policy.1.0.myAssembly` 的发行者策略程序集，并使用 `sgKey.snk` 文件中的密钥对将强名称分配给程序集，并指定该程序集面向 x86 处理器种.
+从 .NET Framework 2.0 开始，可以获得特定处理器体系结构的目标功能。 下面的命令从名为 `pub.config`的发行者策略文件中创建名为 `policy.1.0.myAssembly` 的发行者策略程序集，并使用 `sgKey.snk` 文件中的密钥对将强名称分配给程序集，并指定该程序集面向 x86 处理器体系结构。
 
 ```console
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
@@ -105,9 +105,9 @@ gacutil /i policy.1.0.myAssembly.dll
 ```
 
 > [!IMPORTANT]
-> 发行者策略程序集不能添加到全局程序集缓存，除非原始发布服务器策略文件与程序集位于同一目录中。
+> 发行者策略程序集不能添加到全局程序集缓存中，除非在 `/link` 参数中指定的原始发布服务器策略文件与程序集位于同一目录中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用程序集编程](../../standard/assembly/program.md)
 - [运行时如何定位程序集](../deployment/how-the-runtime-locates-assemblies.md)

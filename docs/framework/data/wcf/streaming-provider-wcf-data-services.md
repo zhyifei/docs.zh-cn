@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: da575c65902ec8751c12482d0c8d0abd523623e4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a5793eae92ffdfa65872c93273bd7cfefdc6f674
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975124"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568809"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>流提供程序（WCF 数据服务）
 
@@ -25,7 +25,7 @@ ms.locfileid: "73975124"
 
 - 媒体链接入口 - 引用相关媒体资源流的实体。
 
-利用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，可通过实现流数据提供程序定义二进制资源流。 流提供程序实现以 <xref:System.IO.Stream> 对象的形式向数据服务提供与特定实体关联的媒体资源流。 有了此实现，数据服务能够以指定 MIME 类型的二进制数据流的形式通过 HTTP 接受和返回媒体资源。
+使用 WCF 数据服务，可以通过实现流式数据提供程序来定义二进制资源流。 流提供程序实现以 <xref:System.IO.Stream> 对象的形式向数据服务提供与特定实体关联的媒体资源流。 有了此实现，数据服务能够以指定 MIME 类型的二进制数据流的形式通过 HTTP 接受和返回媒体资源。
 
 将数据服务配置为支持二进制数据流需要以下步骤：
 
@@ -79,7 +79,7 @@ ms.locfileid: "73975124"
 
 ## <a name="creating-the-streaming-data-service"></a>创建流数据服务
 
-若要向 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 运行时提供访问 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 实现的权限，所创建的数据服务还必须实现 <xref:System.IServiceProvider> 接口。 下面的示例演示如何实现 <xref:System.IServiceProvider.GetService%2A> 方法，以返回实现 `PhotoServiceStreamProvider` 的 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 类的实例。
+若要为 WCF 数据服务运行时提供对 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 实现的访问权限，你创建的数据服务还必须实现 <xref:System.IServiceProvider> 接口。 下面的示例演示如何实现 <xref:System.IServiceProvider.GetService%2A> 方法，以返回实现 `PhotoServiceStreamProvider` 的 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 类的实例。
 
 [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_service/cs/photodata.svc.cs#photoservicestreamingprovider)]
 [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_service/vb/photodata.svc.vb#photoservicestreamingprovider)]
@@ -99,7 +99,7 @@ ms.locfileid: "73975124"
 
 ## <a name="using-data-streams-in-a-client-application"></a>在客户端应用程序中使用数据流
 
-通过 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端库，您可以在客户端上以二进制数据流的形式检索和更新这些公开的资源。 有关详细信息，请参阅使用[二进制数据](working-with-binary-data-wcf-data-services.md)。
+利用 WCF 数据服务客户端库，您可以在客户端上以二进制流的形式检索和更新这些公开的资源。 有关详细信息，请参阅使用[二进制数据](working-with-binary-data-wcf-data-services.md)。
 
 ## <a name="considerations-for-working-with-a-streaming-provider"></a>使用流提供程序时的注意事项
 
@@ -137,7 +137,7 @@ ms.locfileid: "73975124"
 
 有关详细信息，请参阅[数据服务版本控制](data-service-versioning-wcf-data-services.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据服务提供程序](data-services-providers-wcf-data-services.md)
 - [自定义数据服务提供程序](custom-data-service-providers-wcf-data-services.md)
