@@ -21,6 +21,8 @@
   items:
     - name: 调试应用程序
       href: how-to-guides/debug.md
+    - name: 将作业提交到 HDInsight
+      href: how-to-guides/hdinsight-deploy-methods.md
 - name: 参考
   items:
     - name: API 参考
