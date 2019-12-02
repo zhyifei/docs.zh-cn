@@ -1,15 +1,15 @@
 ---
-title: 评估 NET Core 中的中断性变更
-description: 了解 .NET Core 为开发人员保持各 .NET 版本兼容性所使用的方法。
+title: 中断性变更类型 - .NET Core
+description: 了解 .NET Core 如何试着保证开发人员在不同的 .NET 版本中享有兼容性，以及哪种类型的变更被视为中断性变更。
 ms.date: 06/10/2019
-ms.openlocfilehash: 3ad3cbe36ee09d371e26dc7da36a31207a6c1b25
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 5624a35a0d71224faf9adc5df2b02a529e650314
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973649"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567716"
 ---
-# <a name="evaluate-breaking-changes-in-net-core"></a>评估 .NET Core 中的中断性变更
+# <a name="changes-that-affect-compatibility"></a>会影响兼容性的变更
 
 在 .NET 的整个历史记录中，它都尝试在版本之间以及 .NET 各个风格之间保持高级别的兼容性。 .NET Core 将继续坚守这个准则。 尽管可以将 .NET Core 视为独立于 .NET Framework 的新技术，但下面的两个因素使 .NET Core 无法脱离 .NET Framework：
 
@@ -19,19 +19,19 @@ ms.locfileid: "73973649"
 
 在希望保持各个 .NET 实现之间的兼容性的同时，开发人员还希望在各个 .NET Core 版本之间保持高级别的兼容性。 具体而言，为 .NET Core 早期版本编写的代码应在较高版本的 .NET Core 上无缝运行。 实际上，许多开发人员都希望新发布的 .NET Core 版本中的新 API 也应该与引入这些 API 的预发布版本兼容。
 
-本文概述了兼容性变更（或中断性变更）的类别，以及 .NET 团队如何评估各个类别中的变更。 开发人员在 [dotnet/corefx](https://github.com/dotnet/corefx) GitHub 存储库中发布拉取请求来修改现有 API 的行为时，如果了解 .NET 团队如何处理可能的中断性变更，这将非常有用。
+本文概述了兼容性变更（或中断性变更）的类别，以及 .NET 团队如何评估各个类别中的变更。 如果开发人员需打开 [dotnet/corefx](https://github.com/dotnet/corefx) GitHub 存储库中要求修改现有 API 的行为的拉取请求，则了解 .NET 团队如何处理可能的中断性变更对他们来说尤其有用。
 
 > [!NOTE]
 > 若要查看兼容性类别的定义，如二进制兼容性和向后兼容性，请参阅[中断性变更类别](categories.md)。
 
-以下各个部分说明了 .NET Core API 的变更类别，以及它们对应用程序兼容性的影响。 ✔️ 图标表示允许某个特定的变更类别，❌ 表示禁止某个类别，❓ 表示可能允许也可能不允许某个变更。 最后一个类别中的变更需要评判之前的行为的可预测性、显著性和一致性。
+以下各个部分说明了 .NET Core API 的变更类别，以及它们对应用程序兼容性的影响。 ✔️ 图标表示允许某个特定的变更类别，❌ 表示禁止某个类别，❓ 表示可能允许也可能不允许某个变更。 最后这个类别中的变更要求判断和评估之前的行为在可预测性、明显性和一致性方面的情况如何。
 
 > [!NOTE]
 > 除了将这些准则用作 .NET Core 库变更评估指南以外，库开发人员还可以使用它们评估他们自己的面向多个 .NET 实现和版本的库更改。
 
 ## <a name="modifications-to-the-public-contract"></a>公共协定修改
 
-此类别中的变更将修改类型的公共外围应用。  禁止此类别中的多数变更，因为它们违反了向后兼容性（使用早期 API 版本生成的应用程序的功能：无需在较高版本上重新编译即可运行）。 
+此类别的变更会修改类型的公共外围应用。 禁止此类别中的多数变更，因为它们违反了向后兼容性（使用早期 API 版本生成的应用程序的功能：无需在较高版本上重新编译即可运行）。 
 
 ### <a name="types"></a>类型
 

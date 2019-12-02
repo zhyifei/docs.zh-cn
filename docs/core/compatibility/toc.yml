@@ -1,42 +1,32 @@
-- name: 应用程序兼容性
+- name: 什么是中断性变更？
+  href: index.md
+- name: 中断性变更类别
+  href: categories.md
+- name: 页面选择器
+  href: breaking-changes.md
+- name: 按版本
   items:
-    - name: 评估重大更改
-      href: index.md
-    - name: 重大更改类别
-      href: categories.md
-    - name: 重大更改选择器
-      href: breaking-changes.md
-    - name: 按版本
-      items:
-        - name: 3.0 到 3.1
-          href: 3.0-3.1.md
-        - name: 3.0 预览版 9 到 3.0
-          href: 3.0.9-3.0rc1.md
-        - name: 3.0 预览版 8 至 3.0 预览版 9
-          href: 3.0.8-3.0.9.md
-        - name: 3.0 预览版 7 至 3.0 预览版 8
-          href: 3.0.7-3.0.8.md
-        - name: 3.0 预览版 6 至 3.0 预览版 7
-          href: 3.0.6-3.0.7.md
-        - name: 2.2 到 3.0
-          href: 2.2-3.0.md
-        - name: 从 .NET Framework 到 .NET Core
-          href: framework-core.md
-    - name: 按类别
-      items:
-        - name: ASP.NET Core
-          href: aspnetcore.md
-        - name: CoreFx
-          href: corefx.md
-        - name: 密码
-          href: cryptography.md
-        - name: Entity Framework Core
-          href: /ef/core/what-is-new/ef-core-3.0/breaking-changes
-        - name: 全球化
-          href: globalization.md
-        - name: 网络
-          href: networking.md
-        - name: Visual Basic
-          href: visualbasic.md
-        - name: Windows 窗体
-          href: winforms.md
+    - name: 3.0 到 3.1
+      href: 3.0-3.1.md
+    - name: 2.2 到 3.1
+      href: 2.2-3.1.md
+    - name: 2.2 到 3.0
+      href: 2.2-3.0.md
+- name: 按区域
+  items:
+    - name: ASP.NET Core
+      href: aspnetcore.md
+    - name: CoreFx
+      href: corefx.md
+    - name: 密码
+      href: cryptography.md
+    - name: Entity Framework Core
+      href: /ef/core/what-is-new/ef-core-3.0/breaking-changes
+    - name: 全球化
+      href: globalization.md
+    - name: 网络
+      href: networking.md
+    - name: Visual Basic
+      href: visualbasic.md
+    - name: Windows 窗体
+      href: winforms.md

@@ -1,5 +1,7 @@
-- name: 'F# 指南'
-  href: index.md
+- name: 'F# 文档'
+  href: index.yml
+- name: '什么是 F#'
+  href: what-is-fsharp.md
 - name: 开始操作
   href: get-started/index.md
   items:
@@ -13,8 +15,6 @@
       href: get-started/get-started-command-line.md
     - name: 'Visual Studio for Mac 中的 F# 入门'
       href: get-started/get-started-with-visual-studio-for-mac.md
-- name: '什么是 F#'
-  href: what-is-fsharp.md
 - name: 'F# 教程'
   href: tour.md
 - name: 教程
@@ -39,6 +39,14 @@
           href: tutorials/type-providers/troubleshooting-type-providers.md
     - name: 'F# Interactive'
       href: tutorials/fsharp-interactive/index.md
+- name: 'F# 中的新增内容'
+  items:
+    - name: 'F# 4.7'
+      href: whats-new/fsharp-47.md
+    - name: 'F# 4.6'
+      href: whats-new/fsharp-46.md
+    - name: 'F# 4.5'
+      href: whats-new/fsharp-45.md
 - name: 'F# 语言参考'
   href: language-reference/index.md
   items:

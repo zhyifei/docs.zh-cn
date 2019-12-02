@@ -2,12 +2,12 @@
 title: 运行时配置
 description: 了解如何使用运行时配置设置来配置 .NET Core 应用程序。
 ms.date: 11/13/2019
-ms.openlocfilehash: f7074b07bdd5aca23b6caae78952d630d905c489
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e3922f6df81198b5e122f16d5cfc4b6d15cbb4ae
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283962"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567388"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>.NET Core 运行时配置设置
 
@@ -64,7 +64,7 @@ runtimeconfig.json  文件在生成目录中由 [dotnet build](../tools/dotnet-b
 
 ## <a name="environment-variables"></a>环境变量
 
-环境变量可用于提供某些运行时配置信息。 指定为环境变量的配置旋钮通常有 COMPlus_ 前缀  。
+环境变量可用于提供一些运行时配置信息。 指定为环境变量的配置旋钮通常有 COMPlus_ 前缀  。
 
 可以使用 Windows 控制面板、命令行或通过在 Windows 和 Unix 系统上调用 <xref:System.Environment.SetEnvironmentVariable(System.String,System.String)?displayProperty=nameWithType> 方法以编程方式定义环境变量。
 
