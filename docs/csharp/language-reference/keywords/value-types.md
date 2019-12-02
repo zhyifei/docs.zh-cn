@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: b264be5d2589455562a19ef55b5ddf1a4e74ce15
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c797b1e9a80030ce6a97fccb14da2c51d753a1dc
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428452"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552332"
 ---
 # <a name="value-types-c-reference"></a>值类型（C# 参考）
 
@@ -42,7 +42,7 @@ ms.locfileid: "74428452"
 
 - [整型类型](../builtin-types/integral-numeric-types.md)：整数类型和 [字符型](../builtin-types/char.md)类型
 - [浮点类型](../builtin-types/floating-point-numeric-types.md)
-- [bool](bool.md)
+- [bool](../builtin-types/bool.md)
 
 简单类型通过关键字标识，但这些关键字只是 <xref:System> 命名空间中的预定义结构类型的别名。 例如， [int](../builtin-types/integral-numeric-types.md) 是 <xref:System.Int32?displayProperty=nameWithType> 的别名。 有关别名的完整列表，请参阅[内置类型表](built-in-types-table.md)。
 

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: bc3ce4b94bfc72e058d4660d01eb16ef0e0f11db
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a6876cb98a8c1b1e58e61eb650416d412467ae3d
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588714"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552426"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>相等性比较（C# 编程指南）
 
@@ -28,7 +28,7 @@ ms.locfileid: "69588714"
 
 ## <a name="value-equality"></a>值相等性
 
- 值相等性指两个对象包含相同的一个或多个值。 对于基元值类型（例如 [int](../../language-reference/builtin-types/integral-numeric-types.md) 或 [bool](../../language-reference/keywords/bool.md)），针对值相等性的测试简单明了。 可以使用 [==](../../language-reference/operators/equality-operators.md#equality-operator-) 运算符，如下面的示例所示。  
+ 值相等性指两个对象包含相同的一个或多个值。 对于基元值类型（例如 [int](../../language-reference/builtin-types/integral-numeric-types.md) 或 [bool](../../language-reference/builtin-types/bool.md)），针对值相等性的测试简单明了。 可以使用 [==](../../language-reference/operators/equality-operators.md#equality-operator-) 运算符，如下面的示例所示。  
   
 ```csharp  
 int a = GetOriginalValue();  

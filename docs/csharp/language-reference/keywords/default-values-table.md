@@ -6,12 +6,12 @@ ms.date: 07/29/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 2f1ad5cc029b93261153e46d854cd8bf3e31ce92
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 48aa294fa9e37e2e138444e493faa5474011097e
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428535"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74551825"
 ---
 # <a name="default-values-table-c-reference"></a>默认值表（C# 引用）
 
@@ -22,7 +22,7 @@ ms.locfileid: "74428535"
 |任何引用类型|`null`|
 |任何[内置整数数值类型](../builtin-types/integral-numeric-types.md)|0（零）|
 |任何[内置浮点型数值类型](../builtin-types/floating-point-numeric-types.md)|0（零）|
-|[bool](bool.md)|`false`|
+|[bool](../builtin-types/bool.md)|`false`|
 |[char](../builtin-types/char.md)|`'\0'` (U + 0000)|
 |[enum](enum.md)|表达式 `(E)0` 生成的值，其中 `E` 是枚举标识符。|
 |[struct](struct.md)|通过如下设置生成的值：将所有值类型的字段设置为其默认值，将所有引用类型的字段设置为 `null`。|
