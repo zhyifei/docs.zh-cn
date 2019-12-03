@@ -2,12 +2,12 @@
 title: 死信队列
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: c8fea29fc420ea6bb922c93ea08e0e23d5bb941d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 70007289e457588e94128a573ced4b28e238acf4
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928668"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710879"
 ---
 # <a name="dead-letter-queues"></a>死信队列
 本示例演示如何处理传递失败的消息。 它基于[事务性 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例。 本示例使用 `netMsmqBinding` 绑定。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。
@@ -30,7 +30,7 @@ ms.locfileid: "70928668"
 
 - `System`：系统死信队列用于存储死消息。 系统死信队列由计算机上运行的所有应用程序共享。
 
-- `Custom`：使用<xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>属性指定的自定义死信队列用于存储死消息。 此功能仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上可用。 当应用程序必须使用自己的死信队列而不与同一计算机上运行的其他应用程序共享该死信队列时使用此功能。
+- `Custom`：使用 <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 属性指定的自定义死信队列用于存储死消息。 此功能仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上可用。 当应用程序必须使用自己的死信队列而不与同一计算机上运行的其他应用程序共享该死信队列时使用此功能。
 
 - <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 属性表示要用作死信队列的特定队列。 此属性仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中可用。
 
@@ -171,7 +171,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 
  死信队列中的消息是被发送到处理消息的服务的消息。 因此，当死信消息服务从队列中读取消息时，Windows Communication Foundation （WCF）通道层将查找终结点中不匹配项，并且不会调度消息。 在这种情况下，会将消息发送到订单处理服务，但由死信消息服务接收。 若要接收发送到不同终结点的消息，请在 `ServiceBehavior` 中指定一个可匹配任何地址的地址筛选器。 这是成功处理从死信队列中读取的消息所必需的。
 
- 在本示例中，如果失败的原因是消息超时，则死信消息服务会重新发送该消息。对于所有其他原因，则显示传送失败，如下面的示例代码所示：
+ 在此示例中，如果失败的原因是消息超时，则死信消息服务将重新发送消息。出于所有其他原因，它会显示传递失败，如下面的示例代码所示：
 
 ```csharp
 // Service class that implements the service contract.
@@ -322,7 +322,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
     4. 选中 "**事务性**" 框。
 
-    5. 输入`ServiceModelSamplesTransacted`作为新队列的名称。
+    5. 输入 `ServiceModelSamplesTransacted` 作为新队列的名称。
 
 3. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
@@ -349,14 +349,14 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     > [!NOTE]
     > 将 `security mode` 设置为 `None` 等效于将 `MsmqAuthenticationMode`、`MsmqProtectionLevel` 和 `Message` 安全设置为 `None`。
 
-## <a name="comments"></a>注释
- 默认情况下对 `netMsmqBinding` 绑定传输启用了安全性。 `MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 这两个属性共同确定了传输安全性的类型。 默认情况下，身份验证模式设置为 `Windows`，保护级别设置为 `Sign`。 MSMQ 必须是域的成员才可以提供身份验证和签名功能。 如果在不属于域的计算机上运行此示例，则会收到以下错误："用户的内部消息队列证书不存在"。
+## <a name="comments"></a>Comments
+ 默认情况下对 `netMsmqBinding` 绑定传输启用了安全性。 `MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 这两个属性共同确定了传输安全性的类型。 默认情况下，身份验证模式设置为 `Windows`，保护级别设置为 `Sign`。 MSMQ 必须是域的成员才可以提供身份验证和签名功能。 如果在不是域成员的计算机上运行此示例，则会接收以下错误：“用户的内部消息队列证书不存在”。
 
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  

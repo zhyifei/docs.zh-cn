@@ -2,18 +2,18 @@
 title: 基本 AJAX 服务
 ms.date: 03/30/2017
 ms.assetid: d66d0c91-0109-45a0-a901-f3e4667c2465
-ms.openlocfilehash: 4705070c7f7f72db835073b30c5bda115a45f179
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 334cc9e53d7d9746c204abe37e7c30d00baa824b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70892702"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716127"
 ---
 # <a name="basic-ajax-service"></a>基本 AJAX 服务
 
 此示例演示如何使用 Windows Communication Foundation （WCF）来创建基本 ASP.NET 异步 JavaScript 和 XML （AJAX）服务（可使用 Web 浏览器客户端中的 JavaScript 代码访问的服务）。 该服务使用 <xref:System.ServiceModel.Web.WebGetAttribute> 属性以确保服务响应 HTTP GET 请求并被配置为对响应使用 JavaScript 对象表示法 (JSON) 数据格式。
 
-WCF 中的 ajax 支持经过优化，可在`ScriptManager`控件中与 ASP.NET ajax 一起使用。 有关将 WCF 与 ASP.NET AJAX 一起使用的示例，请参阅[Ajax 示例](ajax.md)。
+WCF 中的 AJAX 支持经过优化，可通过 `ScriptManager` 控件与 ASP.NET AJAX 一起使用。 有关将 WCF 与 ASP.NET AJAX 一起使用的示例，请参阅[Ajax 示例](ajax.md)。
 
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。
@@ -30,7 +30,7 @@ public interface ICalculator
 }
 ```
 
-示例 .svc 文件使用的是 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>，后者会将 <xref:System.ServiceModel.Description.WebScriptEndpoint> 标准终结点添加到服务。 可在相对于 .svc 文件的空地址处配置该终结点。 这意味着服务的地址是`http://localhost/ServiceModelSamples/service.svc`，除操作名称外没有其他后缀。
+示例 .svc 文件使用的是 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>，后者会将 <xref:System.ServiceModel.Description.WebScriptEndpoint> 标准终结点添加到服务。 可在相对于 .svc 文件的空地址处配置该终结点。 这意味着服务的地址是 `http://localhost/ServiceModelSamples/service.svc`的，除了操作名称外没有其他后缀。
 
 `<%@ServiceHost language="C#" Debug="true" Service="Microsoft.Samples.SimpleAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>`
 
@@ -47,7 +47,7 @@ public interface ICalculator
 </system.serviceModel>
 ```
 
-<xref:System.ServiceModel.Description.WebScriptEndpoint> 将服务的默认数据格式设置为 JSON 而不是 XML。 若要调用服务，请在`http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200`完成本主题后面的设置和生成步骤后导航到。 这个测试功能是通过使用 HTTP GET 请求实现的。
+<xref:System.ServiceModel.Description.WebScriptEndpoint> 将服务的默认数据格式设置为 JSON 而不是 XML。 若要调用服务，请在完成本主题后面的设置和生成步骤后导航到 `http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200`。 这个测试功能是通过使用 HTTP GET 请求实现的。
 
 客户端 Web 页 SimpleAjaxClientPage.aspx 包含 ASP.NET 代码，无论何时用户单击该页面上的操作按钮之一，就能调用服务。 `ScriptManager` 控件用于使服务的代理可以通过 JavaScript 访问。
 
@@ -82,6 +82,6 @@ function onSuccess(mathResult){
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\SimpleAjaxService`

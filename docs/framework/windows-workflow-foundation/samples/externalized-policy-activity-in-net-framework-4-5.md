@@ -2,12 +2,12 @@
 title: .NET Framework 4.5 中的外部化策略活动
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: efc8b8169a6b984e003444c4669122ce6fa7f9d0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9184386751bb44e89dfdcedd34ab0ab84a27323e
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283163"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710917"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 中的外部化策略活动
 
@@ -15,7 +15,7 @@ ms.locfileid: "74283163"
 
 ## <a name="projects-in-this-sample"></a>此示例中的项目
 
-|项目名称|说明|主要文件|
+|项目名称|描述|主要文件|
 |-|-|-|
 |ExternalizedPolicy4|包含 ExternalizedPolicy4 活动及其 WF 4.5 设计器。|**ExternalizedPolicy4.cs**：活动定义。<br /><br /> **ExternalizedPolicy4Designer**： ExternalizedPolicy4 活动的自定义设计器。 它使用来自 WF 3.5 规则引擎的规则编辑器 (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>)。|
 |ImperativeCodeClientSample|一个示例客户端应用程序，它使用命令性 C# 代码（未使用设计器）配置和运行使用 ExternalizedPolicy4 应用程序的工作流。|**Applydiscount.rules**：包含 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 规则定义的文件。<br /><br /> **Order.cs**：表示客户订单的类型。 规则适用于此类型的对象。<br /><br /> **Program.cs**：配置和运行具有 Policy4 活动的工作流，以将 applydiscount.rules 中定义的规则应用到 Order 对象的实例。<br /><br /> App.config：带有规则文件的路径的配置文件。|
@@ -42,7 +42,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 }
 ```
 
-|属性|说明|
+|Property|描述|
 |-|-|
 |RuleSetFilePath|执行活动时要计算的 .NET Framework 3.5 <xref:System.Workflow.Activities.Rules.RuleSet> 文件的路径。|
 |RuleSetName|要在 .rules 文件中使用的 <xref:System.Workflow.Activities.Rules.RuleSet> 的名称。|
@@ -87,7 +87,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。
 >
 > 此示例位于以下目录：
 >

@@ -2,12 +2,12 @@
 title: 传输：UDP
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: fab15b1d4dab61de37f4b609a6e43c5f4a32fb75
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f7dea8a95490377226acd09a3463b102d42834d6
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138690"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711926"
 ---
 # <a name="transport-udp"></a>传输：UDP
 UDP 传输示例演示如何将 UDP 单播和多播作为自定义 Windows Communication Foundation （WCF）传输实现。 该示例介绍了使用通道框架和以下 WCF 最佳做法在 WCF 中创建自定义传输的建议过程。 创建自定义传输的步骤如下：  
@@ -44,7 +44,7 @@ UDP 传输示例演示如何将 UDP 单播和多播作为自定义 Windows Commu
   
      通过双工 MEP，客户端可以发送任意数目的消息，并以任意顺序接收消息。 双工 MEP 就像电话通话，所说的每一个字都是一条消息。 由于在这种 MEP 中两端都可发送和接收，因此，由客户端和服务通道实现的接口为 <xref:System.ServiceModel.Channels.IDuplexChannel>。  
   
- 每个 MEP 还可以支持会话。 具有会话功能的通道所提供的额外功能是它能够关联在一个通道上发送和接收的所有消息。 请求-响应模式是一种由两个消息组成的独立会话，因为请求和响应是相关的。 与此形成对照的是，支持会话的请求-响应模式意味着该通道上的所有请求-响应对都是相关的。 这样总共提供了六个 MEP 供您选择：数据报、请求-响应、双工、具有会话的数据报、具有会话的请求-响应以及具有会话的双工。  
+ 这些 MEP 还都能支持会话。 具有会话功能的通道所提供的额外功能是它能够关联在一个通道上发送和接收的所有消息。 请求-响应模式是一种由两个消息组成的独立会话，因为请求和响应是相关的。 与此形成对照的是，支持会话的请求-响应模式意味着该通道上的所有请求-响应对都是相关的。 这样总共提供了六个 MEP 供您选择：数据报、请求-响应、双工、具有会话的数据报、具有会话的请求-响应以及具有会话的双工。  
   
 > [!NOTE]
 > 对于 UDP 传输，所支持的唯一 MEP 是数据报，因为 UDP 的性质是一个“启动后不管”协议。  
@@ -477,6 +477,6 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTranspor
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\Udp`

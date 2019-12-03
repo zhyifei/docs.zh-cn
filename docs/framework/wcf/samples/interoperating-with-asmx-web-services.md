@@ -2,12 +2,12 @@
 title: 与 ASMX Web 服务互操作
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-ms.openlocfilehash: 2ef4e34de76c046ba21dd7a3c50ea6ba782d459e
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 6d8be3fe6daa19a842dcaa92d05ec89ebef9fa5f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989802"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715752"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>与 ASMX Web 服务互操作
 此示例演示如何将 Windows Communication Foundation （WCF）客户端应用程序与现有的 .ASMX Web 服务集成。  
@@ -46,7 +46,7 @@ public class CalculatorService : System.Web.Services.WebService
     }  
 ```  
   
- 在配置后，同一台计算机上的`http://localhost/servicemodelsamples/service.asmx`客户端可以访问该服务。 若要使远程计算机上的客户端能够访问该服务，必须指定限定域名，而不是本地主机。  
+ 配置后，可以在同一台计算机上的客户端 `http://localhost/servicemodelsamples/service.asmx` 访问该服务。 若要使远程计算机上的客户端能够访问该服务，必须指定限定域名，而不是本地主机。  
   
  通信是通过标准[元数据实用工具（svcutil.exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成的客户端来完成的。 该客户端包含在 generatedClient.cs 文件中。 若要生成代理代码，ASMX 服务必须可用，因为需要使用该服务来检索更新的元数据。 在客户端目录中通过命令提示符运行以下命令可以生成该类型化代理。  
   
@@ -120,13 +120,13 @@ Press <ENTER> to terminate client.
   
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+3. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\ASMX`  

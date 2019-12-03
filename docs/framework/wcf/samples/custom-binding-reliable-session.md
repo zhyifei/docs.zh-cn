@@ -2,12 +2,12 @@
 title: 自定义绑定可靠会话
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
-ms.openlocfilehash: b2679ad4c6e8595a7b6d6bc9818880da56781e38
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: c39dc9c57332800628012e88e1b274296556e756
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989998"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710950"
 ---
 # <a name="custom-binding-reliable-session"></a>自定义绑定可靠会话
 
@@ -18,7 +18,7 @@ ms.locfileid: "70989998"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSession`
 
@@ -113,10 +113,10 @@ Press <ENTER> to terminate client.
 
 3. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
-4. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
+4. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
 
     > [!IMPORTANT]
-    > 在跨计算机配置中运行客户端时，请确保`address`在[ \<终结点](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)的属性 > 元素和`clientBaseAddress`属性[ \<compositeDuplex>](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)替换为适当计算机的名称，如以下示例中所示。
+    > 在跨计算机配置中运行客户端时，请确保将[\<终结点 >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)元素的 `address` 属性中的 "localhost" 替换为相应计算机的名称，将[\<compositeDuplex >](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)的 `clientBaseAddress` 属性替换为相应计算机的名称，如以下示例中所示。
 
     ```xml
     <endpoint name = ""

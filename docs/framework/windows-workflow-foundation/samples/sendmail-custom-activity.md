@@ -2,44 +2,44 @@
 title: SendMail 自定义活动
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 5797620c4938d7dcffb1f506b682141336b21eab
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: b1e2d58a09362569d4d408f6e1c9e589aa6bda76
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988984"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715579"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail 自定义活动
-本示例演示如何创建派生自 <xref:System.Activities.AsyncCodeActivity> 的自定义活动，以使用 SMTP 发送邮件供在工作流应用程序内使用。 自定义活动使用的<xref:System.Net.Mail.SmtpClient>功能以异步方式发送电子邮件，并通过身份验证发送邮件。 它还提供一些最终用户功能，例如测试模式、标记替换、文件模板和测试放置路径。  
+本示例演示如何创建派生自 <xref:System.Activities.AsyncCodeActivity> 的自定义活动，以使用 SMTP 发送邮件供在工作流应用程序内使用。 自定义活动使用 <xref:System.Net.Mail.SmtpClient> 的功能以异步方式发送电子邮件，并通过身份验证发送邮件。 它还提供一些最终用户功能，例如测试模式、标记替换、文件模板和测试放置路径。  
   
  下表详细描述了 `SendMail` 活动的自变量。  
   
-|name|类型|描述|  
+|Name|类型|描述|  
 |-|-|-|  
-|主机|String|SMTP 服务器主机的地址。|  
-|端口|String|主机中 SMTP 服务的端口。|  
-|EnableSsl|bool|指定 <xref:System.Net.Mail.SmtpClient> 是否使用安全套接字层 (SSL) 来对连接进行加密。|  
-|UserName|String|设置用于验证发件人 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 属性的凭据的用户名。|  
-|Password|String|设置用于验证发件人 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 属性的凭据的密码。|  
-|使用者|<xref:System.Activities.InArgument%601>\<string>|邮件主题。|  
-|正文|<xref:System.Activities.InArgument%601>\<string>|邮件正文。|  
-|附件|<xref:System.Activities.InArgument%601>\<string>|用于存储附加到此电子邮件的数据的附件集合。|  
-|From|<xref:System.Net.Mail.MailAddress>|此电子邮件的发件人地址。|  
-|功能|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此电子邮件的收件人的地址集合。|  
+|Host|字符串|SMTP 服务器主机的地址。|  
+|Port|字符串|主机中 SMTP 服务的端口。|  
+|EnableSsl|布尔|指定 <xref:System.Net.Mail.SmtpClient> 是否使用安全套接字层 (SSL) 来对连接进行加密。|  
+|用户名|字符串|设置用于验证发件人 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 属性的凭据的用户名。|  
+|密码|字符串|设置用于验证发件人 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 属性的凭据的密码。|  
+|Subject|<xref:System.Activities.InArgument%601>\<字符串 >|邮件主题。|  
+|正文|<xref:System.Activities.InArgument%601>\<字符串 >|邮件正文。|  
+|附件|<xref:System.Activities.InArgument%601>\<字符串 >|用于存储附加到此电子邮件的数据的附件集合。|  
+|通过|<xref:System.Net.Mail.MailAddress>|此电子邮件的发件人地址。|  
+|要执行的操作|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此电子邮件的收件人的地址集合。|  
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此电子邮件的抄送（CC）收件人的地址集合。|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此电子邮件的密件抄送（BCC）收件人的地址集合。|  
-|标记|<xref:System.Activities.InArgument%601>< IDictionary\<string，string > >|会在正文中进行替换的标记。 此功能允许用户在正文中指定一些值，这些值稍后可由使用此属性提供的标记进行替换。|  
-|BodyTemplateFilePath|String|正文模板的路径。 `SendMail` 活动将此文件的内容复制到其 body 属性中。<br /><br /> 此模板可包含由 tokens 属性的内容替换的标记。|  
+|标记|<xref:System.Activities.InArgument%601>< IDictionary\<string、string > >|会在正文中进行替换的标记。 此功能允许用户在正文中指定一些值，这些值稍后可由使用此属性提供的标记进行替换。|  
+|BodyTemplateFilePath|字符串|正文模板的路径。 `SendMail` 活动将此文件的内容复制到其 body 属性中。<br /><br /> 此模板可包含由 tokens 属性的内容替换的标记。|  
 |TestMailTo|<xref:System.Net.Mail.MailAddress>|如果设置此属性，则会将所有电子邮件发送到其中指定的地址。<br /><br /> 此属性应在测试工作流时使用。 例如，当你想要确保发送所有电子邮件，而不将其发送到实际的收件人。|  
-|TestDropPath|String|设置此属性后，还会将所有电子邮件保存在指定的文件中。<br /><br /> 此属性应在测试或调试工作流时使用，以确保传出电子邮件的格式和内容正确。|  
+|TestDropPath|字符串|设置此属性后，还会将所有电子邮件保存在指定的文件中。<br /><br /> 此属性应在测试或调试工作流时使用，以确保传出电子邮件的格式和内容正确。|  
   
 ## <a name="solution-contents"></a>解决方案内容  
  解决方案包含两个项目。  
   
 |项目|描述|重要文件|  
 |-------------|-----------------|---------------------|  
-|SendMail|SendMail 活动|1.SendMail.cs：主要活动的实现<br />2.SendMailDesigner.xaml 和 SendMailDesigner.xaml.cs：SendMail 活动的设计器<br />3.MailTemplateBody.htm：要发出的电子邮件的模板。|  
-|SendMailTestClient|测试 SendMail 活动的客户端。  此项目演示两种调用 SendMail 活动的方式：声明方式和编程方式。|1.Sequence1.xaml：调用 SendMail 活动的工作流。<br />2.Program.cs：调用 Sequence1，并以编程方式创建使用 SendMail 的工作流。|  
+|SendMail|SendMail 活动|1. SendMail.cs：主活动的实现<br />SendMailDesigner 和 SendMailDesigner.xaml.cs： SendMail 活动的设计器<br />3. MailTemplateBody：要发送的电子邮件的模板。|  
+|SendMailTestClient|测试 SendMail 活动的客户端。  此项目演示两种调用 SendMail 活动的方式：声明方式和编程方式。|1. sequence1.xaml：调用 SendMail 活动的工作流。<br />Program.cs：调用 Sequence1.xaml，并使用 SendMail 以编程方式创建工作流。|  
   
 ## <a name="further-configuration-of-the-sendmail-activity"></a>SendMail 活动的进一步配置  
  虽然在此示例中未显示，但用户可以执行 SendMail 活动的其他配置。 以下三部分演示如何完成此操作。  
@@ -84,7 +84,7 @@ new SendMail
 ```  
   
 ### <a name="sending-mails-in-testing-mode"></a>在测试模式下发送电子邮件  
- 此代码段演示如何设置两个测试属性：将设置`TestMailTo`为将发送到的所有消息都将发送到`john.doe@contoso.con` （而不考虑 "收件人"、"抄送"、"密件抄送" 的值）。 通过设置 TestDropPath，所有传出电子邮件还将记录在提供的路径中。 可单独设置这些属性（它们不相关）。  
+ 此代码段演示如何设置这两个测试属性：通过将 `TestMailTo` 设置为所有消息都将发送到 `john.doe@contoso.con` （而不考虑 "收件人"、"抄送"、"密件抄送" 的值）。 通过设置 TestDropPath，所有传出电子邮件还将记录在提供的路径中。 可单独设置这些属性（它们不相关）。  
   
 ```csharp  
 new SendMail  
@@ -117,7 +117,7 @@ new SendMail
   
  可下载第三方提供的 SMTP 模拟器。  
   
-##### <a name="to-run-this-sample"></a>运行本示例的步骤  
+##### <a name="to-run-this-sample"></a>运行此示例  
   
 1. 使用 Visual Studio 2010，打开 SendMail 解决方案文件。  
   
@@ -136,6 +136,6 @@ new SendMail
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\SendMail`

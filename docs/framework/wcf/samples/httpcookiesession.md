@@ -2,12 +2,12 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: af624305e4ab4678938b7f63c4e4056404de0bc9
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 9e47959314ba161ff07a37f3d45088d038557c9e
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393140"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711594"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 此示例演示如何生成自定义协议通道，以便使用 HTTP Cookie 进行会话管理。 此通道启用 Windows Communication Foundation （WCF）服务和客户端之间或 WCF 客户端与 .ASMX 服务之间的通信。  
@@ -29,7 +29,7 @@ ms.locfileid: "71393140"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   
@@ -130,7 +130,7 @@ InputQueue<RequestContext> requestQueue;
 ```  
   
 ## <a name="test-code"></a>测试代码  
- 使用此示例传输的测试代码位于 Client 和 Service 目录中。 它包含两个测试-一个测试在客户端上`allowCookies`使用设置`true`为的绑定。 第二个测试在该绑定上实现显式关闭（使用终止消息交换）。  
+ 使用此示例传输的测试代码位于 Client 和 Service 目录中。 它包含两个测试-一个测试使用一个绑定，将 `allowCookies` 设置为在客户端上 `true`。 第二个测试在该绑定上实现显式关闭（使用终止消息交换）。  
   
  运行示例时，您会看到以下输出：  
   
@@ -165,4 +165,4 @@ Press <ENTER> to terminate client.
   
 3. 若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-4. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+4. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  

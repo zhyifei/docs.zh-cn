@@ -2,31 +2,31 @@
 title: 文档审批过程
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: 20167cd1c06c2ae57dfe48fd07ab3a0e2adf9927
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: cee43aff991f9482de7b3172174eb0e786ec1fe6
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038229"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710848"
 ---
 # <a name="document-approval-process"></a>文档审批过程
 
-此示例演示如何将多个 Windows Workflow Foundation (WF) 和 Windows Communication Foundation (WCF) 功能一起使用。 这些功能一起使用实现一个文档审批过程方案。 客户端应用程序既可提交等待审批的文档，也可批准文档。 有一个审批管理器应用程序，可用于促进客户端之间的通信和强制执行审批过程的规则。 审批过程是一个可执行多种类型的审批的工作流。 存在多个活动来获取个人审批过程、团体审批过程（一定百分比的审批者）和复合审批过程（由团体审批和个人审批按顺序组成）。
+此示例演示如何将多个 Windows Workflow Foundation （WF）和 Windows Communication Foundation （WCF）功能一起使用。 这些功能一起使用实现一个文档审批过程方案。 客户端应用程序既可提交等待审批的文档，也可批准文档。 有一个审批管理器应用程序，可用于促进客户端之间的通信和强制执行审批过程的规则。 审批过程是一个可执行多种类型的审批的工作流。 存在多个活动来获取个人审批过程、团体审批过程（一定百分比的审批者）和复合审批过程（由团体审批和个人审批按顺序组成）。
 
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`
 
 ## <a name="sample-details"></a>示例详细信息
 
-下图演示了文档审批过程工作流:
+下图演示了文档审批过程工作流：
 
-![文档审批进程工作流](./media/document-approval-process/document-approval-process.jpg)
+![文档审批过程工作流](./media/document-approval-process/document-approval-process.jpg)
 
 从客户端的角度来看，审批过程的工作方式如下：
 
@@ -82,7 +82,7 @@ ms.locfileid: "70038229"
 
 ##### <a name="to-set-up-the-database"></a>安装数据库
 
-1. 从使用管理员特权打开的 Visual Studio 2010 命令提示符下, 导航到此 DocumentApprovalProcess 文件夹并运行 Setup .cmd。
+1. 从使用管理员特权打开的 Visual Studio 2010 命令提示符下，导航到此 DocumentApprovalProcess 文件夹并运行 Setup .cmd。
 
 ##### <a name="to-set-up-the-application"></a>设置应用程序
 
@@ -90,7 +90,7 @@ ms.locfileid: "70038229"
 
 2. 要生成解决方案，按 Ctrl+Shift+B。
 
-3. 若要运行解决方案, 请在**解决方案资源管理器**中右键单击 "ApprovalManager" 项目, 然后单击右键菜单中的 "**调试**->" "**启动**新实例", 以启动审批管理器应用程序。
+3. 若要运行解决方案，请在**解决方案资源管理器**中右键单击 "ApprovalManager" 项目，然后单击 "**调试**"->从右键菜单中选择 "**启动**新实例"，以启动审批管理器应用程序。
 
     等待管理器的输出指示已做好准备工作。
 
@@ -102,13 +102,13 @@ ms.locfileid: "70038229"
 
 3. 导航到 ApprovalClient\Bin\Debug 文件夹并执行两个 ApprovalClient.exe 实例。
 
-4. 单击 "**发现**", 等待 "**订阅**" 按钮启用。
+4. 单击 "**发现**"，等待 "**订阅**" 按钮启用。
 
 5. 键入任何用户名并单击 "**订阅**"。 对于一个客户端，使用 `UserType1` 和其他类型 `UserType2`。
 
 6. 在 `UserType1` 客户端中，从下拉菜单中选择个人审批类型，然后键入文档名称和内容。 单击 "**请求批准**"。
 
-7. 在 `UserType2` 客户端中，将显示等待审批的文档。 选择它, 然后按 "**批准**" 或 "**拒绝**"。 结果将显示在 `UserType1` 客户端中。
+7. 在 `UserType2` 客户端中，将显示等待审批的文档。 选择它，然后按 "**批准**" 或 "**拒绝**"。 结果将显示在 `UserType1` 客户端中。
 
 ##### <a name="to-run-the-quorum-approval-scenario"></a>运行团体审批方案
 
@@ -118,13 +118,13 @@ ms.locfileid: "70038229"
 
 3. 导航到 ApprovalClient\Bin\Debug 文件夹并执行三个 ApprovalClient.exe 实例。
 
-4. 单击 "**发现**", 等待 "**订阅**" 按钮启用。
+4. 单击 "**发现**"，等待 "**订阅**" 按钮启用。
 
 5. 键入任何用户名并单击 "**订阅**"。 对于一个客户端，使用 `UserType1` 和其他两个类型 `UserType2`。
 
 6. 在 `UserType1` 客户端中，从下拉菜单中选择团体审批类型，然后键入文档名称和内容。 单击 "**请求批准**"。 这将请求两个 `UserType2` 客户端批准或拒绝该文档。 虽然两个 `UserType2` 客户端都必须做出响应，但只需一个客户端批准文档即可使文档获得审批。
 
-7. 在 `UserType2` 客户端中，将显示等待审批的文档。 选择它, 然后按 "**批准**" 或 "**拒绝**"。 结果将显示在 `UserType1` 客户端中。
+7. 在 `UserType2` 客户端中，将显示等待审批的文档。 选择它，然后按 "**批准**" 或 "**拒绝**"。 结果将显示在 `UserType1` 客户端中。
 
 ##### <a name="to-run-the-complex-approval-scenario"></a>运行复合审批方案
 
@@ -134,13 +134,13 @@ ms.locfileid: "70038229"
 
 3. 导航到 ApprovalClient\Bin\Debug 文件夹并执行四个 ApprovalClient.exe 实例。
 
-4. 单击 "**发现**", 等待 "**订阅**" 按钮启用。
+4. 单击 "**发现**"，等待 "**订阅**" 按钮启用。
 
 5. 键入任何用户名并单击 "**订阅**"。 为第一个客户端使用 `UserType1`，为第二个客户端使用 `UserType2`，为最后一个客户端使用 `UserType3`。
 
 6. 在 `UserType1` 客户端中，从下拉菜单中选择个人审批类型，然后键入文档名称和内容。 单击 "**请求批准**"。
 
-7. 在 `UserType2` 客户端中，将显示等待审批的文档。 选择它并按 "**批准**", 文档将传递`UserType3`给客户端。
+7. 在 `UserType2` 客户端中，将显示等待审批的文档。 选择它并按 "**批准**"，文档将传递到 `UserType3` 客户端。
 
     如果第一个 `UserType2` 团体批准该文档，则该文档将传递到 `UserType3` 客户端。
 
@@ -148,4 +148,4 @@ ms.locfileid: "70038229"
 
 ##### <a name="to-clean-up"></a>清理
 
-1. 在 Visual Studio 2010 命令提示符下, 导航到 DocumentApprovalProcess 文件夹并运行 "清理"。
+1. 在 Visual Studio 2010 命令提示符下，导航到 DocumentApprovalProcess 文件夹并运行 "清理"。

@@ -2,12 +2,12 @@
 title: WS 双向 Http
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: 44fdf6f0b27e15c486afa32f67668e9fd6eeac10
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 1f1592598c0ed148f06c0a99ccdb8a8347175d8f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138685"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716790"
 ---
 # <a name="ws-dual-http"></a>WS 双向 Http
 
@@ -21,7 +21,7 @@ ms.locfileid: "74138685"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\DualHttp`
 
@@ -88,7 +88,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 4. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
 
     > [!IMPORTANT]
-    > 在跨计算机配置中运行客户端时，请确保在[\<客户端 > 元素的\<终结点 >](../../configure-apps/file-schema/wcf/endpoint-of-client.md)的 `address` 属性和[`clientBaseAddress` 绑定](../../configure-apps/file-schema/wcf/bindings.md)的\<属性中替换 localhost >[\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)元素的元素，该元素具有相应计算机的名称，如下所示：
+    > 在跨计算机配置中运行客户端时，请确保用相应计算机的名称替换[> wsDualHttpBinding `clientBaseAddress`](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)元素的[\<终结点 \<](../../configure-apps/file-schema/wcf/endpoint-of-client.md)的 `address` 属性中的 localhost，同时替换为[相应计算机的](../../configure-apps/file-schema/wcf/bindings.md)名称，如下所示：
 
     ```xml
     <client>

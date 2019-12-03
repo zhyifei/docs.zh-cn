@@ -2,16 +2,16 @@
 title: TCP 激活
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: e3bfbe9d7e7a6efafc8bf1e281e1f7a99c9c5fbe
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: c1a2c0de5fbb666ec3b68ec3da31cc27f8234cbd
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487517"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716598"
 ---
 # <a name="tcp-activation"></a>TCP 激活
 
-本示例演示承载一个服务，该服务使用 Windows 进程激活服务 (WAS) 的服务来激活通过 net.tcp 协议通信的服务。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。
+本示例演示承载一个服务，该服务使用 Windows 进程激活服务 (WAS) 的服务来激活通过 net.tcp 协议通信的服务。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。
 
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。
@@ -21,7 +21,7 @@ ms.locfileid: "67487517"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\TCPActivation`
 
@@ -141,19 +141,19 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1. 确保安装了 IIS 7.0。 为使 WAS 激活需要 IIS 7.0。
+1. 确保已安装 IIS 7.0。 激活 WAS 需要 IIS 7.0。
 
-2. 确保您已执行了[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+2. 请确保已[为 Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-    此外，必须安装 WCF 非 HTTP 激活组件：
+    此外，还必须安装 WCF 非 HTTP 激活组件：
 
-    1. 从“开始”菜单中，选择“控制面板”   。
+    1. 从“开始”菜单中，选择“控制面板”。
 
-    2. 选择**程序和功能**。
+    2. 选择 "**程序和功能**"。
 
-    3. 单击**打开或关闭 Windows 组件**。
+    3. 单击 **"打开或关闭 Windows 组件"** 。
 
-    4. 展开**Microsoft.NET Framework 3.0**节点并检查**Windows Communication Foundation 非 HTTP 激活**功能。
+    4. 展开**Microsoft .NET Framework 3.0**节点并检查**Windows Communication Foundation 非 HTTP 激活**功能。
 
 3. 配置 WAS 以支持 TCP 激活。
 
@@ -176,11 +176,11 @@ Press <ENTER> to terminate client.
         ```
 
         > [!NOTE]
-        > 此命令是单行文本。 此命令将启用 /servicemodelsamples 应用程序使用同时访问`http://localhost/servicemodelsamples`和`net.tcp://localhost/servicemodelsamples`。
+        > 此命令是单行文本。 此命令允许使用 `http://localhost/servicemodelsamples` 和 `net.tcp://localhost/servicemodelsamples`访问/servicemodelsamples 应用程序。
 
 4. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
-5. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。
+5. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
 
     移除为此示例添加的 net.tcp 网站绑定。
 
@@ -206,6 +206,6 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         > 必须以单行文本的形式键入此命令。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [AppFabric 承载和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric 宿主和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)

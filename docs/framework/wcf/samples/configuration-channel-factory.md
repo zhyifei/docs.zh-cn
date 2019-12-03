@@ -2,17 +2,17 @@
 title: 配置通道工厂
 ms.date: 03/30/2017
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
-ms.openlocfilehash: 1b74c15599ebc932a2a0ed46d646b54bec986794
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1a236f1812d3124e83702a97e1877b7fec10be64
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045647"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715493"
 ---
 # <a name="configuration-channel-factory"></a>配置通道工厂
-此示例介绍 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> 的用法。 允许<xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>对 WCF 客户端配置进行集中管理。 这可能在应用程序域加载时间之后选择或更改配置的方案中也非常有用。
+此示例介绍 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> 的用法。 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> 允许对 WCF 客户端配置进行集中管理。 这可能在应用程序域加载时间之后选择或更改配置的方案中也非常有用。
 
-## <a name="demonstrates"></a>演示
+## <a name="demonstrates"></a>演示文本
  <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>
 
 ## <a name="discussion"></a>讨论
@@ -35,19 +35,19 @@ ICalculatorChannel client1 = factory1.CreateChannel();
 
 1. 以管理员权限打开 Visual Studio 2012。
 
-2. 右键单击 "ConfigurationChannelFactory 解决方案 (2 个项目)", 然后选择 "**属性**"。
+2. 右键单击 "ConfigurationChannelFactory 解决方案（2个项目）"，然后选择 "**属性**"。
 
-3. 在 "**通用属性**" 中, 选择 "**启动项目**", 然后单击 "**多个启动项目**"。
+3. 在 "**通用属性**" 中，选择 "**启动项目**"，然后单击 "**多个启动项目**"。
 
-4. 将**服务**项目移动到列表的开头,**操作为 "start"** , 然后将该**客户端**项目与 "**启动" 操作**一起移动到**服务**项目之后, 以便执行**客户端**项目在**服务**项目之后。
+4. 将**服务**项目移动到列表的开头，**操作为 "start"** ，然后将该**客户端**项目与 "**启动" 操作**一起移动到**服务**项目之后，以便在**服务**项目后执行**客户端**项目。
 
-5. 单击 **"确定"** , 然后按 F5 (或 CTRL + F5) 运行该示例。
+5. 单击 **"确定"** ，然后按 F5 （或 CTRL + F5）运行该示例。
 
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigurationChannelFactory`

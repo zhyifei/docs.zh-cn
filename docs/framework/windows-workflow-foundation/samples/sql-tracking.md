@@ -2,12 +2,12 @@
 title: SQL 跟踪
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: a72ac326108a1d202231a684f21d5b70017dc6cc
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: c1bb4492695df3ff803dff893de24453d7c03dfb
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774273"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715570"
 ---
 # <a name="sql-tracking"></a>SQL 跟踪
 此示例演示如何编写一个自定义 SQL 跟踪参与者，该参与者将跟踪记录写入 SQL 数据库。 Windows Workflow Foundation （WF）提供工作流跟踪，以查看工作流实例的执行情况。 跟踪运行时在工作流执行过程中会发出工作流跟踪记录。 有关工作流跟踪的详细信息，请参阅[工作流跟踪和跟踪](../workflow-tracking-and-tracing.md)。
@@ -25,7 +25,7 @@ ms.locfileid: "72774273"
 
 4. 按 Ctrl+Shift+B 生成解决方案。
 
-5. 按 F5 运行该应用程序。
+5. 按“F5”运行应用程序。
 
      浏览器窗口打开和显示侦听应用程序的目录。
 
@@ -33,7 +33,7 @@ ms.locfileid: "72774273"
 
 7. 浏览器显示 StockPriceService 页，其中包含本地服务 WSDL 地址。 复制此地址。
 
-     @No__t_0 本地服务 WSDL 地址的示例。
+     `http://localhost:65193/StockPriceService.xamlx?wsdl`本地服务 WSDL 地址的示例。
 
 8. 使用文件资源管理器运行 WCF 测试客户端（Wcftestclient.exe）。 它位于 Microsoft Visual Studio 10.0\Common7\IDE 目录下。
 
@@ -55,10 +55,10 @@ ms.locfileid: "72774273"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)

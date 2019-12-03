@@ -2,16 +2,16 @@
 title: MSMQ 激活
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 038f4d7e3d713cfe4134ea98f7858ef71f29bab4
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: be33e3d9377c30058c7a2ee06543c11f10251ebd
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895254"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714776"
 ---
 # <a name="msmq-activation"></a>MSMQ 激活
 
-本示例演示如何在 Windows 进程激活服务 (WAS) 中承载从消息队列读取的应用程序。 此示例使用`netMsmqBinding`和基于[双向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)示例。 本示例中的服务是一个 Web 承载的应用程序，而客户端是自承载的，并输出到控制台以观察提交的采购订单的状态。
+本示例演示如何在 Windows 进程激活服务 (WAS) 中承载从消息队列读取的应用程序。 此示例使用 `netMsmqBinding`，并基于[双向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)示例。 本示例中的服务是一个 Web 承载的应用程序，而客户端是自承载的，并输出到控制台以观察提交的采购订单的状态。
 
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。
@@ -19,11 +19,11 @@ ms.locfileid: "70895254"
 > [!NOTE]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：
 >
-> \<InstallDrive>:\WF_WCF_Samples
+> \<安装驱动器 >： \ WF_WCF_Samples
 >
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （WCF）和 Windows Workflow Foundation （WF）示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 WCF 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （WCF）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WCF 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
 >
-> \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
+> \<安装驱动器 >： \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation。
 
 Windows 进程激活服务 (WAS) 是 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 新增的进程激活机制，它向使用非 HTTP 协议的应用程序提供了类似 IIS 的功能，这些功能以前只对基于 HTTP 的应用程序可用。 Windows Communication Foundation （WCF）使用侦听器适配器接口传递通过 WCF 支持的非 HTTP 协议（如 TCP、命名管道和 MSMQ）接收的激活请求。 用于通过非 HTTP 协议接收请求的功能由 SMSvcHost.exe 中运行的托管 Windows 服务承载。
 
@@ -232,7 +232,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
 5. 在默认情况下 MSMQ 激活服务将作为网络服务运行。 因此，用于激活应用程序的队列必须具有对网络服务的接收和查看权限。 可以通过使用消息队列 MMC 来添加这些权限：
 
-    1. 从 "**开始**" 菜单中，单击 "运行`Compmgmt.msc` "，然后键入并按 enter。
+    1. 从 "**开始**" 菜单中，单击 "**运行**"，然后键入 `Compmgmt.msc` 然后按 enter。
 
     2. 在 "**服务和应用程序**" 下，展开 "**消息队列**"。
 
@@ -267,9 +267,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         > 此命令是单行文本。
 
-        此命令允许使用`http://localhost/servicemodelsamples`和`net.msmq://localhost/servicemodelsamples`访问/servicemodelsamples 应用程序。
+        此命令允许使用 `http://localhost/servicemodelsamples` 和 `net.msmq://localhost/servicemodelsamples`访问/servicemodelsamples 应用程序。
 
-7. 如果您以前没有进行此操作，应确保启用 MSMQ 激活服务。 从 "**开始**" 菜单中，单击 "运行`Services.msc`"，然后键入。 在服务列表中搜索**Net.tcp 侦听器适配器**。 右键单击并选择 "**属性**"。 将 "**启动类型**" 设置为 "**自动**"，单击 "**应用**"，然后单击 "**开始**" 按钮。 此步骤只能在第一次使用 Net.Msmq Listener Adapter 服务之前操作一次。
+7. 如果您以前没有进行此操作，应确保启用 MSMQ 激活服务。 从 "**开始**" 菜单中，单击 "**运行**"，然后键入 `Services.msc`。 在服务列表中搜索**Net.tcp 侦听器适配器**。 右键单击并选择 "**属性**"。 将 "**启动类型**" 设置为 "**自动**"，单击 "**应用**"，然后单击 "**开始**" 按钮。 此步骤只能在第一次使用 Net.Msmq Listener Adapter 服务之前操作一次。
 
 8. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。 此外，在客户端上更改用于提交采购订单的代码，使其在提交采购订单时在队列的 URI 中反映计算机名。 使用以下代码：
 
@@ -302,7 +302,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     > [!WARNING]
     > 运行该批处理文件会将 DefaultAppPool 重置为使用 .NET Framework 2.0 版运行。
 
-默认情况下对 `netMsmqBinding` 绑定传输启用了安全性。 `MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 这两个属性共同确定了传输安全性的类型。 默认情况下，身份验证模式设置为 `Windows`，保护级别设置为 `Sign`。 MSMQ 必须是域的成员才可以提供身份验证和签名功能。 如果在不属于域的计算机上运行此示例，则会收到以下错误："用户的内部消息队列证书不存在"。
+默认情况下对 `netMsmqBinding` 绑定传输启用了安全性。 `MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 这两个属性共同确定了传输安全性的类型。 默认情况下，身份验证模式设置为 `Windows`，保护级别设置为 `Sign`。 MSMQ 必须是域的成员才可以提供身份验证和签名功能。 如果在不是域成员的计算机上运行此示例，则会接收以下错误：“用户的内部消息队列证书不存在”。
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>在加入到工作组的计算机上运行此示例
 
@@ -347,6 +347,6 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     sc sidtype netmsmqactivator unrestricted
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [AppFabric 宿主和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)

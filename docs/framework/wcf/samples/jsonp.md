@@ -2,17 +2,17 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 1fc85838d7491f94b8da1e0ab458d6d021cd2b32
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 82fa0bb09ebdf3ca2325872c2b884f4940de17ed
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989782"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715726"
 ---
 # <a name="jsonp"></a>JSONP
-本示例演示在 WCF REST 服务中如何支持 JSON with Padding (JSONP)。 JSONP 是通过在当前文档中生成脚本标记来调用跨域脚本时使用的约定。 结果在指定的回调函数中返回。 JSONP 基于这一构想， `<script src="http://..." >`如可以从任何域评估脚本，而这些标记检索的脚本在可能已经定义了其他函数的范围内进行评估。
+本示例演示在 WCF REST 服务中如何支持 JSON with Padding (JSONP)。 JSONP 是通过在当前文档中生成脚本标记来调用跨域脚本时使用的约定。 结果在指定的回调函数中返回。 JSONP 基于这样一种想法：标记（如 `<script src="http://..." >` 可以从任何域评估脚本，而这些标记检索的脚本在可能已定义了其他函数的范围内进行计算）。
 
-## <a name="demonstrates"></a>演示
+## <a name="demonstrates"></a>演示文本
  使用 JSONP 进行跨域脚本编写。
 
 ## <a name="discussion"></a>讨论
@@ -24,7 +24,7 @@ proxy.set_enableJsonp(true);
 proxy.GetCustomer(onSuccess, onFail, null);
 ```
 
- 网页可以调用 WCF REST 服务，因为该服务使用 <xref:System.ServiceModel.Description.WebScriptEndpoint> 且 `crossDomainScriptAccessEnabled` 设置为 `true`。 这两个配置都在 web.config 文件中的 system.servicemodel > 元素下\<完成。
+ 网页可以调用 WCF REST 服务，因为该服务使用 <xref:System.ServiceModel.Description.WebScriptEndpoint> 且 `crossDomainScriptAccessEnabled` 设置为 `true`。 这两个配置都在 web.config 文件中的 \<System.servicemodel > 元素下完成。
 
 ```xml
 <system.serviceModel>
@@ -37,7 +37,7 @@ proxy.GetCustomer(onSuccess, onFail, null);
 </system.serviceModel>
 ```
 
- ScriptManager 管理与服务的交互并隐藏手动实现 JSONP 访问的复杂性。 当`crossDomainScriptAccessEnabled`设置为`true`并且操作的响应格式为 JSON 时，WCF 基础结构将检查回调查询字符串参数的 URI，并使用回调查询字符串的值包装 JSON 响应参数. 在本示例中，网页使用以下 URI 调用 WCF REST 服务。
+ ScriptManager 管理与服务的交互并隐藏手动实现 JSONP 访问的复杂性。 当 `crossDomainScriptAccessEnabled` 设置为 `true` 并且操作的响应格式为 JSON 时，WCF 基础结构将检查回调查询字符串参数的 URI，并使用回调查询字符串参数的值包装 JSON 响应。 在本示例中，网页使用以下 URI 调用 WCF REST 服务。
 
 ```http
 http://localhost:33695/CustomerService/GetCustomer?callback=Sys._json0
@@ -58,7 +58,7 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\AJAX\JSONP`  
   
@@ -66,6 +66,6 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 1. 打开 JSONP 示例的解决方案。  
   
-2. 按 F5 在浏览`http://localhost:26648/JSONPClientPage.aspx`器中启动。  
+2. 按 F5 在浏览器中启动 `http://localhost:26648/JSONPClientPage.aspx`。  
   
 3. 请注意，加载页面后，"Name" 和 "Address" 的文本输入由值填充。  在浏览器完成页面的呈现后，从对 WCF 服务的调用中提供这些值。

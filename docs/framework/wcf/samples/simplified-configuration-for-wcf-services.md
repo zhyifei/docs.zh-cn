@@ -2,12 +2,12 @@
 title: WCF 服务的简化配置
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: c78f5ca281c784a8f554ad1f4e3a1f245eee4914
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: a1188ad9ed56ebb24754785546b6a5b54cd2b840
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141861"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715435"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF 服务的简化配置
 此示例演示如何使用 Windows Communication Foundation （WCF）实现和配置典型的服务和客户端。 此示例是所有其他基本技术示例的基础。  
@@ -74,11 +74,11 @@ ms.locfileid: "74141861"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigSimplificationIn40`  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [AppFabric 管理示例](https://go.microsoft.com/fwlink/?LinkId=193960)
 - [简化配置](../../../../docs/framework/wcf/simplified-configuration.md)

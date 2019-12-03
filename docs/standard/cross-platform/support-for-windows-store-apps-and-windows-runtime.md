@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15d6262fb5e7dfb99759f0f85c9a197157713300
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 4629139a7c89c0808e97bbe64b7d02441aec1dea
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204946"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714491"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>.NET Framework 对 Windows 应用商店应用程序和 Windows 运行时的支持情况
 
@@ -30,9 +30,9 @@ ms.locfileid: "74204946"
 
 本主题概述 .NET Framework 为所有三个类别提供的支持，并介绍 Windows 运行时组件的方案。 第一部分包含有关 .NET Framework 与 Windows 运行时之间的关系的基本信息，并说明了在帮助系统和 IDE 中可能会遇到的一些问题。 [第二部分](#WindowsRuntimeComponents)讨论用于开发 Windows 运行时组件的方案。
 
-## <a name="the-basics"></a>基础知识
+## <a name="the-basics"></a>基本知识
 
-.NET Framework 通过提供 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]并支持 Windows 运行时本身来支持前面列出的三个开发方案。
+.NET Framework 通过提供适用于 Windows 8.x 应用商店应用的 .NET，并支持 Windows 运行时本身，来支持前面列出的三种开发方案。
 
 - [.NET Framework 和 Windows 运行时命名空间](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces)提供了 .NET Framework 类库的简化视图，并只包含可用于创建 Windows 8.X 应用商店应用和 Windows 运行时组件的类型和成员。
 
@@ -42,7 +42,7 @@ ms.locfileid: "74204946"
 
   - 还会删除简单包装操作系统 API 的功能，因为 Windows 运行时可以从托管代码调用。
 
-  若要阅读有关 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]的详细信息，请参阅[适用于 Windows 应用商店应用的 .net 概述](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))。 若要阅读有关 API 选择过程的信息，请参阅 .NET 博客中的[用于 Metro 风格的应用程序](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/)条目。
+  若要了解有关适用于 Windows 8.x 应用商店应用的 .NET 的详细信息，请参阅[适用于 Windows 应用商店应用的 .net 概述](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))。 若要阅读有关 API 选择过程的信息，请参阅 .NET 博客中的[用于 Metro 风格的应用程序](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/)条目。
 
 - [Windows 运行时](/uwp/api/)提供用于生成 Windows 8.X 应用商店应用的用户界面元素，并提供对操作系统功能的访问权限。 与 .NET Framework 一样，Windows 运行时具有元数据，使C#和 Visual Basic 编译器可以使用 Windows 运行时使用 .NET Framework 类库的方式。 通过隐藏一些差异，.NET Framework 可以更轻松地使用 Windows 运行时：
 
@@ -88,7 +88,7 @@ Windows 运行时和 .NET Framework 文档集是独立的。 如果按 F1 显示
 
 在 Windows 运行时中，使用 `IKeyValuePair`来循环访问 `IMap<K, V>` 和 `IMapView<K, V>`。 在将它们传递给托管代码时，它们显示为 `IDictionary<TKey, TValue>` 和 `IReadOnlyDictionary<TKey, TValue>`，因此自然要使用 `System.Collections.Generic.KeyValuePair<TKey, TValue>` 来枚举它们。
 
-接口在托管代码中的显示方式会影响实现这些接口的类型的显示方式。 例如， `PropertySet` 类实现 `IMap<K, V>`，后者在托管代码中显示为 `IDictionary<TKey, TValue>`。 `PropertySet` 看起来就像是实现了 `IDictionary<TKey, TValue>` 而不是 `IMap<K, V>`，因此在托管代码中，`Add` 它的行为类似于 `Add` 字典上的 .NET Framework 方法。 它不会显示为具有 `Insert` 方法。
+接口在托管代码中的显示方式会影响实现这些接口的类型的显示方式。 例如， `PropertySet` 类实现 `IMap<K, V>`，后者在托管代码中显示为 `IDictionary<TKey, TValue>`。 `PropertySet` 显示为已实现 `IDictionary<TKey, TValue>` 而不是 `IMap<K, V>`，因此在托管代码中，它显示为具有 `Add` 方法，其行为类似于 .NET Framework 字典中的 `Add` 方法。 它不会显示为具有 `Insert` 方法。
 
 有关使用 .NET Framework 创建 Windows 运行时组件的详细信息，以及演示如何将此类组件与 JavaScript 一起使用的演练，请参阅[在和 Visual Basic 中C#创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)。
 
@@ -157,7 +157,7 @@ Windows 运行时和 .NET Framework 文档集是独立的。 如果按 F1 显示
 
 ## <a name="related-topics"></a>相关主题
 
-|职务|说明|
+|职务|描述|
 |-----------|-----------------|
 |[适用于 Microsoft Store 应用的 .NET 概述](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|描述可用于创建 Windows 8.x 应用商店应用和 Windows RuntimeComponents 的 .NET Framework 类型和成员。 （位于 Windows 开发中心。）|
 |[使用C#或 Visual Basic 的 Windows 应用商店应用的路线图](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|提供了一些关键资源来帮助您开始使用C#或 Visual Basic 开发 Windows 8.X 应用商店应用程序，其中包括许多快速入门主题、指导原则和最佳实践。 （位于 Windows 开发中心。）|

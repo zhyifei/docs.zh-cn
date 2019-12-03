@@ -2,12 +2,12 @@
 title: 标准终结点的用法
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: a2af1ae793166d1ed3742782b911ded30d0b9d35
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2b210bfe683669aeebf54a1701f07d492e6abdb4
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662397"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715348"
 ---
 # <a name="usage-of-standard-endpoints"></a>标准终结点的用法
 
@@ -105,7 +105,7 @@ public class CustomEndpointElement : StandardEndpointElement
 }
 ```
 
-在 `CreateServiceEndpoint` 函数中，创建了一个 `CustomEndpoint` 对象。 其定义如以下示例所示：
+在 `CreateServiceEndpoint` 函数中，创建了一个 `CustomEndpoint` 对象。 下面的示例演示了其定义：
 
 ```csharp
 public class CustomEndpoint : ServiceEndpoint
@@ -139,34 +139,34 @@ public class CustomEndpoint : ServiceEndpoint
 
 #### <a name="to-use-this-sample"></a>使用此示例
 
-1. 使用 Visual Studio 2012 打开 StandardEndpoints.sln 文件。
+1. 使用 Visual Studio 2012 打开 StandardEndpoints 文件。
 
 2. 使多个项目可以启动。
 
-    1. 在中**解决方案资源管理器**，右键单击该标准终结点解决方案，然后选择**属性**。
+    1. 在**解决方案资源管理器**中，右键单击 "标准终结点" 解决方案，然后选择 "**属性**"。
 
-    2. 在中**常见属性**，选择**启动项目**，然后单击**多个启动项目**。
+    2. 在 "**通用属性**" 中，选择 "**启动项目**"，然后单击 "**多个启动项目**"。
 
-    3. 利用将服务项目移到列表的开头**操作**设置为**启动**。
+    3. 将服务项目移动到列表的开头，将 "**操作**" 设置为 "**启动**"。
 
-    4. 客户端将项目移动服务项目之后，还具有**操作**设置为**启动**。
+    4. 将客户端项目移动到服务项目之后，同时将**操作**设置为 "**启动**"。
 
          这指定客户端项目在服务项目之后执行。
 
 3. 若要运行解决方案，请按 F5。
 
 > [!NOTE]
-> 如果这些步骤不起作用，请确保，你的环境已正确设置，使用以下步骤：
+> 如果这些步骤不起作用，请使用以下步骤确保已正确设置你的环境：
 >
-> 1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。
-> 2. 若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](building-the-samples.md)。
-> 3. 若要在一个或多个计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](running-the-samples.md)。
+> 1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。
+> 2. 若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](building-the-samples.md)中的说明进行操作。
+> 3. 若要在一台或多台计算机配置中运行示例，请按照[运行 Windows Communication Foundation 示例](running-the-samples.md)中的说明进行操作。
 
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\StandardEndpoints`

@@ -2,12 +2,12 @@
 title: 限制并行 ForEach
 ms.date: 03/30/2017
 ms.assetid: f2855b5f-e9a7-433d-96a4-40fc31025215
-ms.openlocfilehash: 2694173e203fae9b620e9594d6d4a494bdedafef
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 340e4ff154b63221ec911c872a1154bdb672cf8c
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637761"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715910"
 ---
 # <a name="throttled-parallel-foreach"></a>限制并行 ForEach
 
@@ -15,14 +15,14 @@ ms.locfileid: "65637761"
 
 ## <a name="projects"></a>项目
 
-|**ProjectName**|**说明**|**主要文件**|
+|**ProjectName**|**描述**|**主文件**|
 |-|-|-|
 |ThrottledParallelForEach|包含 `ThrottledParallelForEach` 活动及其设计器。|ThrottledParallelForEach.cs<br /><br /> `ThrottledParallelForEach` 活动定义。|
 |CodeTestClient|示例客户端应用程序，通过使用命令性代码的 `ThrottledParallelForEach` 来配置和运行工作流。|Program.cs<br /><br /> 定义和运行示例工作流的实例。|
 
 ## <a name="to-use-this-sample"></a>使用此示例
 
-1. 使用 Visual Studio 2010 打开 ThrottledParallelForEach.sln 文件。
+1. 使用 Visual Studio 2010 打开 ThrottledParallelForEach 文件。
 
 2. 要生成解决方案，按 Ctrl+Shift+B。
 
@@ -33,6 +33,6 @@ ms.locfileid: "65637761"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\ThrottledParallelForEach`

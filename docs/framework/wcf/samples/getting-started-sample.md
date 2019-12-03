@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: 5f5418da63b2bc5fc9b20f5c262890b7a06ce5dd
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 3282daff166a8fe56841a41bfe8bd9dd69f9d4c8
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989924"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716942"
 ---
 # <a name="getting-started-sample"></a>入门示例
 
@@ -26,7 +26,7 @@ ms.locfileid: "70989924"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted`
 
@@ -142,9 +142,9 @@ public class CalculatorService : ICalculator
 
 服务在 IIS 或 WAS 主机所提供的基址处公开该终结点。 绑定是用标准 <xref:System.ServiceModel.WSHttpBinding> 进行配置的，该标准配置提供 HTTP 通信以及用来进行寻址和实现安全性的标准 Web 服务协议。 协定是由服务实现的 `ICalculator`。
 
-在配置后，同一台计算机上的`http://localhost/servicemodelsamples/service.svc`客户端可以访问该服务。 若要使远程计算机上的客户端能够访问该服务，必须指定完全限定域名，而不是本地主机。
+配置后，可以在同一台计算机上的客户端 `http://localhost/servicemodelsamples/service.svc` 访问该服务。 若要使远程计算机上的客户端能够访问该服务，必须指定完全限定域名，而不是本地主机。
 
-默认情况下，框架不公开任何元数据。 因此，该服务将打开<xref:System.ServiceModel.Description.ServiceMetadataBehavior> ，并在处`http://localhost/servicemodelsamples/service.svc/mex`公开元数据交换（MEX）终结点。 下面的配置对此进行了演示。
+默认情况下，框架不公开任何元数据。 因此，该服务会打开 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 并在 `http://localhost/servicemodelsamples/service.svc/mex`公开元数据交换（MEX）终结点。 下面的配置对此进行了演示。
 
 ```xaml
 <system.serviceModel>
@@ -283,7 +283,7 @@ Press <ENTER> to terminate client.
 
 3. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：在托管应用程序中托管 WCF 服务](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
 - [如何：在 IIS 中承载 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)

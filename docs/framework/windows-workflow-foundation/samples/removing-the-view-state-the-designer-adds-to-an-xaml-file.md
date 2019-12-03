@@ -1,23 +1,23 @@
 ---
-title: 删除视图状态在设计器添加到 XAML 文件的 WF
+title: 删除设计器添加到 XAML 文件的视图状态-WF
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
-ms.openlocfilehash: af57f838ea12d7199268988bf01baa0b61447650
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f431275140e821aa5ec4d2235322f06be87d5ee2
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637862"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715613"
 ---
-# <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>删除视图状态在设计器添加到 XAML 文件
+# <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>删除设计器添加到 XAML 文件的视图状态
 
-此示例演示如何创建派生自 <xref:System.Xaml.XamlWriter> 的类以及如何从 XAML 文件中移除视图状态。 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 会将信息写入称作视图状态的 XAML 文档中。 视图状态是指设计时所需的信息（如布局定位），运行时不需要此信息。 [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] 将此信息插入正在编辑的 XAML 文档中。 [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] 使用 `mc:Ignorable` 特性将视图状态写入 XAML 文件中，因此在运行时加载 XAML 文件时不会加载此信息。 此示例演示如何创建一个类，此类将在处理 XAML 节点时移除视图状态信息。
+此示例演示如何创建派生自 <xref:System.Xaml.XamlWriter> 的类以及如何从 XAML 文件中移除视图状态。 Windows 工作流设计器将信息写入 XAML 文档，该文档称为视图状态。 视图状态是指设计时所需的信息（如布局定位），运行时不需要此信息。 工作流设计器在编辑时将此信息插入到 XAML 文档中。 工作流设计器以 `mc:Ignorable` 特性将视图状态写入 XAML 文件中，因此在运行时加载 XAML 文件时不会加载此信息。 此示例演示如何创建一个类，此类将在处理 XAML 节点时移除视图状态信息。
 
 ## <a name="discussion"></a>讨论
 
 此示例演示如何创建自定义编写器。
 
-若要生成自定义 XAML 编写器，请创建一个从 <xref:System.Xaml.XamlWriter> 继承的类。 XAML 编写器经常嵌套的它是典型来跟踪的"内部"XAML 编写器。 这些"内部编写器可以看作对 XAML 编写器，您可以有多个入口点执行工作，然后将处理委托给堆栈的其余部分的剩余堆栈的引用。
+若要生成自定义 XAML 编写器，请创建一个从 <xref:System.Xaml.XamlWriter> 继承的类。 由于 XAML 编写器经常嵌套，因此通常需要跟踪 "内部" XAML 编写器。 这些 "内部" 编写器可以被视为引用 XAML 编写器的剩余堆栈，使您可以有多个入口点来完成工作，然后将处理委托给堆栈的其余部分。
 
 在此示例中，有几个需要注意的地方。 其中一个需要注意的是，检查要编写的项是否来自某个设计器命名空间。 请注意，此操作还将消除工作流中对该设计器命名空间的其他类型的使用。
 
@@ -87,7 +87,7 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 
 ## <a name="to-use-this-sample"></a>使用此示例
 
-1. 使用 Visual Studio 2010 打开 ViewStateCleaningWriter.sln 解决方案文件。
+1. 使用 Visual Studio 2010 打开 Viewstatecleaningwriter.exe 解决方案文件。
 
 2. 打开命令提示符，导航到生成 ViewStageCleaningWriter.exe 的目录。
 
@@ -99,7 +99,7 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
    ViewStateCleaningWriter.exe [input file] [output file]
    ```
 
-   这将输出到一个 XAML 文件\[outfile]，其中包含所有删除其视图状态信息。
+   这会将 XAML 文件输出到 \[outfile]，并删除其所有的视图状态信息。
 
 > [!NOTE]
 > 已为 <xref:System.Activities.Statements.Sequence> 工作流移除大量虚拟化提示。 这将导致设计器在下次加载时重新计算布局。 在对 <xref:System.Activities.Statements.Flowchart> 使用此示例时，将移除所有定位和行路由信息，并且在后续加载到设计器中时，所有活动将在屏幕左侧堆叠。
@@ -121,6 +121,6 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ViewStateCleaningWriter`

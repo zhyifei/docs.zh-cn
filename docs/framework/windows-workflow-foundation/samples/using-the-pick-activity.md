@@ -2,12 +2,12 @@
 title: 使用 Pick 活动
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: 03b9ff7f552ad0cdcfbe9c46121a2f46f35de52a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b0997254615ca962fd386dea70c67a8edb36c90a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037878"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715530"
 ---
 # <a name="using-the-pick-activity"></a>使用 Pick 活动
 此示例演示如何使用 <xref:System.Activities.Statements.Pick> 活动。
@@ -16,7 +16,7 @@ ms.locfileid: "70037878"
 
  此示例提示用户在给定的时间期限内在控制台中键入自己的用户名。 此示例中的 <xref:System.Activities.Statements.Pick> 活动有两个分支，这两个分支的执行将取决于用户是否在五秒钟之内键入了其用户名。 如果用户在五秒钟之内键入了其用户名，则将执行第一个包含一个自定义 `ReadLine` 活动的分支；否则将执行另外一个包含一个 <xref:System.Activities.Statements.Delay> 活动的分支。 当用户在控制台中键入其用户名之后，此用户名将会在控制台中输出。 如果在五秒之内未完成输入，则操作超时。
 
-## <a name="demonstrates"></a>演示
+## <a name="demonstrates"></a>演示文本
  <xref:System.Activities.Statements.Pick> 活动。
 
 ## <a name="discussion"></a>讨论
@@ -24,21 +24,21 @@ ms.locfileid: "70037878"
 
  设计器工作流示例的设计器版本演示如何在设计器中创建工作流。 包含以下文件：
 
-- Program.cs:包括执行`Main`示例工作流的函数。
+- Program.cs：包含执行示例工作流的 `Main` 函数。
 
-- ReadString.cs:从控制台读取某些输入的自定义活动。
+- ReadString.cs：一个从控制台读取一些输入的自定义活动。
 
-- Sequence1.xaml:使用选取器的设计器创建的工作流。
+- Sequence1.xaml：一个通过使用 Pick 的设计器创建的工作流。
 
  编码的工作流示例的编码版本演示如何在设计器中创建工作流。 包含以下文件：
 
-- Program.cs:包括执行`Main`示例工作流的函数。
+- Program.cs：包含执行示例工作流的 `Main` 函数。
 
-- ReadString.cs:从控制台读取某些输入的自定义活动。
+- ReadString.cs：一个从控制台读取一些输入的自定义活动。
 
 #### <a name="to-use-this-sample"></a>使用此示例
 
-1. 使用 Visual Studio 2010, 打开 "选择 .sln" 解决方案文件。
+1. 使用 Visual Studio 2010，打开 "选择 .sln" 解决方案文件。
 
 2. 要生成解决方案，按 Ctrl+Shift+B。
 
@@ -49,6 +49,6 @@ ms.locfileid: "70037878"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`

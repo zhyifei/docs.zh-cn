@@ -2,12 +2,12 @@
 title: 非泛型 ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: cb040d8bd5fbb34cc00b246f2e51789866fd8e78
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: a4bbc594ec0bf2d387e700508c7d92685216accc
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989038"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715656"
 ---
 # <a name="non-generic-foreach"></a>非泛型 ForEach
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 的工具箱中附带了一组控制流活动，其中包括可用来循环访问 <xref:System.Activities.Statements.ForEach%601> 集合的 <xref:System.Collections.Generic.IEnumerable%601>。  
@@ -67,12 +67,12 @@ Activity sampleUsage =
    };  
 ```  
   
-|条件|消息|Severity|异常类型|  
+|条件|Message|Severity|异常类型|  
 |---------------|-------------|--------------|--------------------|  
-|Values 为 `null`|未提供必需活动自变量“Values”的值。|Error|<xref:System.InvalidOperationException>|  
+|Values 为 `null`|未提供必需活动自变量“Values”的值。|错误|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>ForEachT 设计器  
- 此示例的活动设计器的外观与为内置 <xref:System.Activities.Statements.ForEach%601> 活动提供的设计器的外观相似。 设计器将显示在工具箱中的 "**示例**"、"**非泛型" 活动**类别。 设计器在 "工具箱" 中名为 " **ForEachWithBodyFactory** "，因为<xref:System.Activities.Presentation.IActivityTemplateFactory>活动在工具箱中公开，这将使用正确配置<xref:System.Activities.ActivityAction>的来创建活动。  
+ 此示例的活动设计器的外观与为内置 <xref:System.Activities.Statements.ForEach%601> 活动提供的设计器的外观相似。 设计器将显示在工具箱中的 "**示例**"、"**非泛型" 活动**类别。 设计器在 "工具箱" 中名为 " **ForEachWithBodyFactory** "，因为活动在 "工具箱" 中公开 <xref:System.Activities.Presentation.IActivityTemplateFactory>，这将使用正确配置的 <xref:System.Activities.ActivityAction>创建活动。  
   
 ```csharp  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
@@ -93,7 +93,7 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
 }  
 ```  
   
-#### <a name="to-run-this-sample"></a>运行本示例的步骤  
+#### <a name="to-run-this-sample"></a>运行此示例  
   
 1. 将您选择的项目设置为解决方案的启动项目：  
   
@@ -108,6 +108,6 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`

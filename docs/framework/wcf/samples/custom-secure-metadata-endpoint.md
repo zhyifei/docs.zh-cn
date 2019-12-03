@@ -2,15 +2,15 @@
 title: 自定义安全元数据终结点
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: 32e6e0238637f9c2ef6814ace35ccb0b78110b60
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 92fa468caf331fadcd6cab0ab57b34858053c1b5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928683"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715453"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>自定义安全元数据终结点
-此示例演示如何实现一个具有安全元数据终结点（该终结点使用其中一种非元数据交换绑定）的服务，以及如何配置此类元数据[实用工具（svcutil.exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)或客户端，以便从这类元数据终结点。 有两个系统提供的绑定可供公开元数据终结点：mexHttpBinding 和 mexHttpsBinding。 mexHttpBinding 用于以非安全的方式，通过 HTTP 公开元数据终结点。 mexHttpsBinding 用于以安全的方式，通过 HTTP 公开元数据终结点。 本示例演示如何使用 <xref:System.ServiceModel.WSHttpBinding> 公开安全元数据终结点。 要更改绑定的安全设置但不想使用 HTTPS 时需要这样做。 如果使用 mexHttpsBinding，则元数据终结点是安全的，但无法修改绑定设置。  
+此示例演示如何实现一个具有安全元数据终结点（该终结点使用其中一种非元数据交换绑定）的服务，以及如何配置此类元数据[实用工具（svcutil.exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)或客户端以从此类元数据终结点获取元数据。 有两个系统提供的绑定可供公开元数据终结点：mexHttpBinding 和 mexHttpsBinding。 mexHttpBinding 用于以非安全的方式，通过 HTTP 公开元数据终结点。 mexHttpsBinding 用于以安全的方式，通过 HTTP 公开元数据终结点。 本示例演示如何使用 <xref:System.ServiceModel.WSHttpBinding> 公开安全元数据终结点。 要更改绑定的安全设置但不想使用 HTTPS 时需要这样做。 如果使用 mexHttpsBinding，则元数据终结点是安全的，但无法修改绑定设置。  
   
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -89,7 +89,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
 .\svcutil.exe http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- 前导 "。\\"确保运行该目录中 svcutil.exe 的副本（其中包含对应的 svcutil.exe）的副本。  
+ 前导 "。\\"可确保运行此目录（具有对应的 Svcutil.exe）中的 Svcutil.exe 的副本。  
   
 ## <a name="metadataresolver-client"></a>MetadataResolver 客户端  
  如果客户端在设计时知道协定和如何与元数据交谈，客户端就可以使用 `MetadataResolver` 动态找到应用程序终结点的绑定和地址。 本示例客户端对此进行了演示，显示如何通过创建和配置 `MetadataResolver` 来配置 `MetadataExchangeClient` 使用的绑定和凭据。  
@@ -148,13 +148,13 @@ ChannelFactory<ICalculator> cf = new ChannelFactory<ICalculator>(endpoint.Bindin
   
 #### <a name="to-run-the-sample-across-machines"></a>跨计算机运行示例  
   
-1. 在服务器上运行 `setup.bat service`。 使用`setup.bat`参数运行将使用计算机的完全限定的域名创建一个服务证书，并将服务证书导出到名为 .cer 的文件中。 `service`  
+1. 在服务器上运行 `setup.bat service`。 使用 `service` 参数运行 `setup.bat` 将使用计算机的完全限定的域名创建一个服务证书，并将服务证书导出到名为的文件。  
   
-2. 在服务器上，编辑 Web.config 以反映新证书名称。 也就是说，将`findValue` [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)元素中的属性更改为计算机的完全限定域名。  
+2. 在服务器上，编辑 Web.config 以反映新证书名称。 也就是说，将[\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)元素中的 `findValue` 属性更改为计算机的完全限定域名。  
   
 3. 将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
   
-4. 在客户端上，运行 `setup.bat client`。 使用`setup.bat`参数运行将创建一个名为 Client.com 的客户端证书，并将客户端证书导出到名为的文件。 `client`  
+4. 在客户端上，运行 `setup.bat client`。 使用 `client` 参数运行 `setup.bat` 将创建名为 Client.com 的客户端证书，并将客户端证书导出到名为的文件。  
   
 5. 在客户端计算机上的 `MetadataResolverClient` 的 App.config 文件中，更改 Mex 终结点的地址值以与服务的新地址相匹配。 通过使用服务器的完全限定域名替换 localhost 来执行此操作。 还要将 metadataResolverClient.cs 文件中出现的“localhost”更改为新的服务证书名称（服务器的完全限定域名）。 对 SvcutilClient 项目的 App.config 执行相同的操作。  
   
@@ -182,6 +182,6 @@ ChannelFactory<ICalculator> cf = new ChannelFactory<ICalculator>(endpoint.Bindin
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\CustomMexEndpoint`  

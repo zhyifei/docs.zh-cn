@@ -2,17 +2,17 @@
 title: 使用编辑范围
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
-ms.openlocfilehash: 386c94e5c6761bb704efc9e48723d0e91a4aaf6b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3e99610fda78e50f6d6eb72c38ecc82bdc96b5a2
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037802"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715550"
 ---
 # <a name="using-editing-scope"></a>使用编辑范围
 此示例演示如何对一组更改进行批处理，以便可以在一个原子单元中撤消它们。 默认情况下，活动设计器作者采取的操作会自动集成到撤消/重复系统中。  
   
-## <a name="demonstrates"></a>演示  
+## <a name="demonstrates"></a>演示文本  
  编辑范围域和撤消/重做。  
   
 ## <a name="discussion"></a>讨论  
@@ -39,6 +39,6 @@ ms.locfileid: "70037802"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\UsingEditingScope`

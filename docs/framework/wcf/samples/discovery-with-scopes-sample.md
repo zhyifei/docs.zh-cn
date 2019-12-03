@@ -2,12 +2,12 @@
 title: 通过范围进行发现的示例
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-ms.openlocfilehash: 9b65a348c943b07e813e3fe690f1364b77a94890
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 23991002a5236c491a9f74c7efe71ceb2bf51a37
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972006"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74712068"
 ---
 # <a name="discovery-with-scopes-sample"></a>通过范围进行发现的示例
 
@@ -23,7 +23,7 @@ ms.locfileid: "68972006"
 
 ### <a name="to-use-this-sample"></a>使用此示例
 
-1. 此示例使用 HTTP 终结点，若要运行此示例，必须添加正确的 URL ACL。 有关详细信息, 请参阅[配置 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) 。 使用提升的特权执行下面的命令应添加相应的 ACL。 如果该命令无效，则可能需要使用您的域和用户名替换以下参数：`netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`
+1. 此示例使用 HTTP 终结点，若要运行此示例，必须添加正确的 URL ACL。 有关详细信息，请参阅[配置 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) 。 使用提升的特权执行下面的命令应添加相应的 ACL。 如果该命令无效，则可能需要使用您的域和用户名替换以下参数：`netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`
 
 2. 生成解决方案。
 
@@ -36,6 +36,6 @@ ms.locfileid: "68972006"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryWithScopes`

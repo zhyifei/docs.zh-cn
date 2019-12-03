@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 445cf4178b90719f923b66a7778f60c1bc846766
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 87e756445255f1bd2417a06dfa611eba23208575
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204978"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716742"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>将可移植类库与模型-视图-视图模型配合使用
 您可以使用 .NET Framework[可移植类库](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)来实现模型-视图-视图模型（MVVM）模式并跨多个平台共享程序集。
@@ -30,7 +30,7 @@ ms.locfileid: "74204978"
  本主题不提供有关 MVVM 模式的一般信息。 它仅提供有关如何使用可移植类库实现 MVVM 的信息。 有关 MVVM 的详细信息，请参阅[使用适用于 WPF 的 Prism 库5.0 的 Mvvm 快速入门](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40))。
 
 ## <a name="classes-that-support-mvvm"></a>支持 MVVM 的类
- 如果面向可移植类库项目的 .NET Framework 4.5、[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]、Silverlight 或 Windows Phone 7.5，可实现 MVVM 模式：
+ 如果面向可移植类库项目的 .NET Framework 4.5、适用于 Windows 8.x 应用商店应用的 .NET 或 Windows Phone 7.5，则可使用以下类实现 MVVM 模式：
 
 - <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> 类
 
