@@ -3,15 +3,15 @@ title: 教程：将回归与模型生成器配合使用以预测价格
 description: 本教程演示如何使用 ML.NET 模型生成器生成回归模型以预测价格，特别是纽约市的出租车费。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 10/08/2019
+ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: bd6acd83df4d2d5f19d30da847212d60b1576199
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ed2afe307492b6d38e7e2f9d8ae02dafbb5ae1f4
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977360"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552931"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>教程：将回归与模型生成器配合使用以预测价格
 
@@ -38,7 +38,7 @@ ms.locfileid: "73977360"
 
 ## <a name="create-a-console-application"></a>创建控制台应用程序
 
-1. 创建名为“TaxiFarePrediction”的“.NET Core 控制台应用程序”  。
+1. 创建名为“TaxiFarePrediction”的 C# .NET Core 控制台应用程序  。 请确保未选中“将解决方案和项目放置在同一目录中”(VS 2019) 或已选中“创建解决方案的目录”(VS 2017)     。
 
 ## <a name="prepare-and-understand-the-data"></a>准备和了解数据
 

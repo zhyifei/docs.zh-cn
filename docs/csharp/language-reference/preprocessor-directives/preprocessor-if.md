@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 561a628c60888a8d4f3c50c8413784e1ed210599
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e467a890e971e6c6f2c681ee503d7c7ead19a1e4
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035996"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552448"
 ---
 # <a name="if-c-reference"></a>#if（C# 参考）
 
@@ -24,7 +24,7 @@ ms.locfileid: "73035996"
 #endif
 ```
 
-仅可以使用运算符 [==](../operators/equality-operators.md#equality-operator-)（相等）和 [!=](../operators/equality-operators.md#inequality-operator-)（不相等）测试 [true](../keywords/true-literal.md) 或 [false](../keywords/false-literal.md)。 True 表示定义该符号。 语句 `#if DEBUG` 具有与 `#if (DEBUG == true)` 相同的含义。 可以使用运算符 [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (and)、[&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (or) 和 [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (not) 评估是否已经定义了多个符号。 还可以用括号对符号和运算符进行分组。
+仅可使用运算符 [==](../operators/equality-operators.md#equality-operator-)（相等）和 [!=](../operators/equality-operators.md#inequality-operator-)（不相等）测试[布尔](../builtin-types/bool.md)值 `true` 或 `false`。 True 表示定义该符号。 语句 `#if DEBUG` 具有与 `#if (DEBUG == true)` 相同的含义。 可以使用运算符 [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (and)、[&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (or) 和 [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (not) 评估是否已经定义了多个符号。 还可以用括号对符号和运算符进行分组。
 
 ## <a name="remarks"></a>备注
 

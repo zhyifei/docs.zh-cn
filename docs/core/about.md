@@ -2,12 +2,12 @@
 title: 关于 .NET Core
 description: 了解 .NET Core。
 ms.date: 09/17/2019
-ms.openlocfilehash: a1127a39d67b6c24994a2957298c62d87703950d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4fe16475e18eb88e88fb33d30508f9ef5c9f2cd5
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416749"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552244"
 ---
 # <a name="about-net-core"></a>关于 .NET Core
 
@@ -29,14 +29,14 @@ ms.locfileid: "73416749"
 - [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
 - Sublime Text
 - Vim
- 
+
 这种集成部分由 [OmniSharp](https://www.omnisharp.net/) 和 [Ionide](http://ionide.io) 项目的参与者提供。
 
 ## <a name="apis"></a>API
 
 .NET Core 公开了多种方案的 API，以下介绍了几种：
 
-- 基元类型，例如 [bool](../csharp/language-reference/keywords/bool.md) 和 [int](../csharp/language-reference/builtin-types/integral-numeric-types.md)。
+- 基元类型，如 <xref:System.Boolean?displayProperty=nameWithType> 和 <xref:System.Int32?displayProperty=nameWithType>。
 - 集合，例如 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>。
 - 实用程序类型，例如 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 和 <xref:System.IO.FileStream?displayProperty=nameWithType>。
 - 数据类型，例如 <xref:System.Data.DataSet?displayProperty=nameWithType> 和 [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/)。

@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: ba3d5209571019f8ac38702939332fd953307202
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bfa9c24ef4cd2c418c91e00318aa47b889078d40
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447994"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552655"
 ---
 # <a name="framework-libraries"></a>框架库
 
@@ -32,7 +32,7 @@ BCL 提供最基本的类型和实用工具功能，是其他所有 .NET 类库�
 * <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) - 32 位浮点类型。
 * <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) -128 位十进制类型。
 * <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - 表示内存字节的无符号 8 位整数。
-* <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)) - 表示 `true` 或 `false` 的布尔类型。
+* <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/builtin-types/bool.md)) - 表示 `true` 或 `false` 的布尔类型。
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/builtin-types/char.md)) - 表示 Unicode 字符的 16 位数字类型。
 * <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) -表示一系列字符。 与 `char[]` 不同，但会针对 `string` 中的每个 `char` 启用索引。
 

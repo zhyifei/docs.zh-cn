@@ -2,16 +2,24 @@
 title: 中断性变更类别 - .NET Core
 description: 了解在 .NET Core 中对中断性变更分类的方式。
 ms.date: 06/10/2019
-ms.openlocfilehash: 68bc51b6662de070ef901b73fb75ff3aced95726
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 4569c1ab19cb9bfa3e16aa8d5f941705eb926fa7
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739366"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567928"
 ---
 # <a name="breaking-change-categories"></a>重大更改类别
 
-兼容性是指在 .NET 实现版本（而不是最初开发代码的版本）上编译或执行代码的能力  。 特殊的变更可能会以六种不同的方式影响兼容性。 [评估兼容性时考虑的各种变更](index.md)属于前五个类别。
+兼容性是指在 .NET 实现版本（而不是最初开发代码的版本）上编译或执行代码的能力  。 特殊的变更可能会以六种不同的方式影响兼容性。 评估兼容性时考虑的[各种变更](index.md)分为以下几类：
+
+- [行为变更](#behavioral-change)
+- [二进制兼容性](#binary-compatibility)
+- [源兼容性](#source-compatibility)
+- [设计时兼容性](#design-time-compatibility)
+- [向后兼容性](#backwards-compatibility)
+
+[向前兼容性](#forward-compatibility)不是 .NET Core 的目标。
 
 ## <a name="behavioral-change"></a>行为变更
 

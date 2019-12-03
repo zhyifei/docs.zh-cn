@@ -1,20 +1,19 @@
 ---
-title: 将 Windows 窗体应用程序移植到 .NET Core 3.0
-description: 了解如何将 .NET Framework Windows 窗体应用程序移植到适用于 Windows 的 .NET Core 3.0。
+title: 将 Windows 窗体应用移植到 .NET Core
+description: 了解如何将 .NET Framework Windows 窗体应用程序移植到 .NET Core for Windows。
 author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
-ms.custom: ''
-ms.openlocfilehash: 64920f1d226fcc8265d0be252d4751f2ba278cc1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 959b506fe23691e160d7e88e0ae61cc71c1f3421
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973279"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567277"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>如何将 Windows 窗体桌面应用程序移植到 .NET Core
 
-本文介绍如何将基于 Windows 窗体的桌面应用程序从 .NET Framework 移植到 .NET Core 3.0。 .NET Core 3.0 SDK 支持 Windows 窗体应用程序。 Windows 窗体仍是仅适用于 Windows 的框架，并且只能在 Windows 上运行。 示例使用 .NET Core SDK CLI 创建和管理项目。
+本文介绍如何将基于 Windows 窗体的桌面应用从 .NET Framework 移植到 .NET Core 3.0 或更高版本。 .NET Core 3.0 SDK 支持 Windows 窗体应用程序。 Windows 窗体仍是仅适用于 Windows 的框架，并且只能在 Windows 上运行。 示例使用 .NET Core SDK CLI 创建和管理项目。
 
 本文中的各种名称用于标识迁移所用的文件类型。 迁移项目时，你的文件将以不同的名称命名，因此，请自行在心里将它们与下面列出的文件进行匹配：
 
@@ -31,14 +30,14 @@ ms.locfileid: "73973279"
 
   安装以下 Visual Studio 工作负载：
   - .NET 桌面开发
-  - .NET 跨平台开发
+  - .NET Core 跨平台开发
 
 - 在解决方案中顺利生成和运行的有效 Windows 窗体项目。
-- 项目必须使用 C# 进行编码。 
-- 安装最新 [.NET Core 3.0](https://aka.ms/netcore3download) 预览版。
+- 用 C# 编码的项目。
+- [.NET Core](https://dotnet.microsoft.com/download/dotnet-core) 3.0 或更高版本。
 
->[!NOTE]
-> Visual Studio 2017 不支持 .NET Core 3.0 项目。 Visual Studio 2019  支持 .NET Core 3.0 项目，但尚不支持适用于 .NET Core 3.0 Windows 窗体项目的可视化设计器。 要使用可视化设计器，解决方案中必须包含可与 .NET Core 项目共享窗体文件的 .NET Windows 窗体项目。
+> [!NOTE]
+>  Visual Studio 2017 不支持 .NET Core 3.0 项目。 Visual Studio 2019  支持 .NET Core 3.0 项目，但尚不支持适用于 .NET Core 3.0 Windows 窗体项目的可视化设计器。 要使用可视化设计器，解决方案中必须包含可与 .NET Core 项目共享窗体文件的 .NET Windows 窗体项目。
 
 ### <a name="consider"></a>考虑
 
@@ -117,7 +116,7 @@ dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 
 使用 .NET Framework 创建的 Windows 窗体项目包含一个 `AssemblyInfo.cs` 文件，该文件包含诸如要生成的程序集的版本等程序集特性。 SDK 样式的项目会根据 SDK 项目文件自动生成此信息。 同时具有两种类型的“程序集信息”时，会产生冲突。 通过禁用自动生成可以解决此问题，这会强制项目使用现有的 `AssemblyInfo.cs` 文件。
 
-若要添加到主 `<PropertyGroup>` 节点，有三个设置项。 
+若要添加到主 `<PropertyGroup>` 节点，有三个设置项。
 
 - **GenerateAssemblyInfo**\
 将此属性设置为 `false` 时，它不会生成程序集特性。 这可以避免与 .NET Framework 项目中的现有 `AssemblyInfo.cs` 文件冲突。
@@ -148,7 +147,7 @@ dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 
 ## <a name="add-source-code"></a>添加源代码
 
-现在，MyFormsCore.csproj 项目不编译任何代码  。 默认情况下，.NET Core 项目会自动包含当前目录和所有子目录中的所有源代码。 必须使用相对路径配置项目以包含 .NET Framework 项目中的代码。 如果 .NET Framework 项目使用了 .resx 文件作为窗体的图标和资源，则还需要包含这些文件  。 
+现在，MyFormsCore.csproj 项目不编译任何代码  。 默认情况下，.NET Core 项目会自动包含当前目录和所有子目录中的所有源代码。 必须使用相对路径配置项目以包含 .NET Framework 项目中的代码。 如果 .NET Framework 项目使用了 .resx 文件作为窗体的图标和资源，则还需要包含这些文件  。
 
 将以下 `<ItemGroup>` 节点添加到项目中。 每个语句都包含一个文件 glob 模式，其中包含子目录。
 
@@ -163,7 +162,7 @@ dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 
 ## <a name="add-nuget-packages"></a>添加 NuGet 包
 
-将 .NET Framework 项目引用的每个 NuGet 包添加到 .NET Core 项目。 
+将 .NET Framework 项目引用的每个 NuGet 包添加到 .NET Core 项目。
 
 很可能你的 .NET Framework Windows 窗体应用程序有一个 packages.config 文件，其中包含项目引用的所有 NuGet 包的列表  。 可以查看此列表以确定要添加到 .NET Core 项目的 NuGet 包。 例如，如果 .NET Framework 项目引用了 `MetroFramework`、`MetroFramework.Design` 和 `MetroFramework.Fonts` NuGet 包，则使用 Visual Studio 或 SolutionFolder 目录中的 .NET Core CLI 将每个包添加到项目中  ：
 
@@ -243,7 +242,7 @@ SolutionFolder
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    
+
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
 
@@ -251,12 +250,12 @@ SolutionFolder
     <AssemblyName>MyCoreControls</AssemblyName>
     <RootNamespace>WindowsFormsControlLibrary1</RootNamespace>
   </PropertyGroup>
-  
+
   <ItemGroup>
     <Compile Include="..\MyFormsControls\**\*.cs" />
     <EmbeddedResource Include="..\MyFormsControls\**\*.resx" />
   </ItemGroup>
-  
+
 </Project>
 ```
 
@@ -276,7 +275,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\M
   </ItemGroup>
 ```
 
-## <a name="problems-compiling"></a>编译问题
+## <a name="compilation-problems"></a>编译问题
 
 如果在编译项目时遇到问题，可能是由于正在使用的一些仅适用于 Windows 的 API 在 .NET Framework 中可用，但在 .NET Core 中不可用。 可以尝试将 [Windows 兼容包][compat-pack] NuGet 包添加到项目中。 此包仅在 Windows 上运行，为 .NET Core 和 .NET Standard 项目添加了大约 20,000 个 Windows API。
 
@@ -297,7 +296,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
 如本文所述，Visual Studio 2019 仅支持 .NET Framework 项目中的窗体设计器。 通过创建并行 .NET Core 项目，可以在使用 .NET Framework 项目设计窗体时通过 .NET Core 测试项目。 解决方案文件包括 .NET Framework 和 .NET Core 项目。 在 .NET Framework 项目中添加和设计窗体和控件，并且根据添加到 .NET Core 项目的文件 glob 模式，任何新的或更改的文件将自动包含在 .NET Core 项目中。
 
 一旦 Visual Studio 2019 支持 Windows 窗体设计器，就可以将 .NET Core 项目文件的内容复制/粘贴到 .NET Framework 项目文件中。 然后删除使用 `<Source>` 和 `<EmbeddedResource>` 项添加的文件 glob 模式。 修复由应用程序使用的任何项目引用的路径。 这可以有效地将 .NET Framework 项目升级到 .NET Core 项目。
- 
+
 ## <a name="next-steps"></a>后续步骤
 
 - 详细了解 [Windows 兼容包][compat-pack]。

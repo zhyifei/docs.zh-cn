@@ -1,17 +1,17 @@
 ---
 title: 教程：分析情绪 - 二元分类
 description: 本教程演示如何创建 Razor Pages 应用程序，该应用程序对网站评论情绪进行分类并采取适当的措施。 二元情绪分类器使用 Visual Studio 中的模型生成器。
-ms.date: 10/08/2019
+ms.date: 11/21/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 5e5b60a53db70b33ed798bcf33497b74911ba727
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e919341130c6778207f324dd9eb3b3f54c8a9c68
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974800"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74551849"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>教程：使用 ML.NET 模型生成器在 Web 应用程序中分析网站评论的情绪
 
@@ -48,7 +48,7 @@ ms.locfileid: "73974800"
     1. 在“新项目”对话框中，依次选择“Visual C#”  节点和“Web”  节点。
     1. 然后，选择“ASP.NET Core Web 应用程序”  项目模板。
     1. 在“名称”  文本框中，键入“SentimentRazor”。
-    1. 默认情况下，应选中“创建解决方案的目录”  复选框。 如果未选中，请将其选中。
+    1. 请确保未选中“将解决方案和项目放置在同一目录中”(VS 2019) 或已选中“创建解决方案的目录”(VS 2017)     。
     1. 选择“确定”  按钮。
     1. 在显示不同类型 ASP.NET Core 项目的窗口中，选择“Web 应用程序”  ，然后选择“确定”  按钮。
 

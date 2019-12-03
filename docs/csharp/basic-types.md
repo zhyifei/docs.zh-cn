@@ -4,12 +4,12 @@ description: 了解所有 C# 程序中的核心类型（数字、字符串和对
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 7a75ad5080cd2646070447cbc3dcc46b8c73dd65
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e1cb5b103459ff691bf6ed8f8ebc1fa3fd8487c3
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420711"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552321"
 ---
 # <a name="types-variables-and-values"></a>类型、变量和值
 
@@ -29,12 +29,12 @@ C# 是一种强类型语言。 每个变量和常量都有一个类型，每个�
   
 - 允许执行的运算种类。  
   
-编译器使用类型信息来确保在代码中执行的所有操作都是*类型安全*。 例如，如果声明 [int](language-reference/builtin-types/integral-numeric-types.md) 类型的变量，那么编译器允许在加法和减法运算中使用此变量。 如果尝试对 [bool](language-reference/keywords/bool.md) 类型的变量执行这些相同操作，则编译器将生成错误，如以下示例所示：  
+编译器使用类型信息来确保在代码中执行的所有操作都是*类型安全*。 例如，如果声明 [int](language-reference/builtin-types/integral-numeric-types.md) 类型的变量，那么编译器允许在加法和减法运算中使用此变量。 如果尝试对 [bool](language-reference/builtin-types/bool.md) 类型的变量执行这些相同操作，则编译器将生成错误，如以下示例所示：  
   
 [!code-csharp[Type Safety](../../samples/snippets/csharp/concepts/basic-types/type-safety.cs)]  
   
 > [!NOTE]  
-> C 和 C++ 开发人员请注意，在 C# 中，[bool](language-reference/keywords/bool.md) 不能转换为 [int](language-reference/builtin-types/integral-numeric-types.md)。  
+> C 和 C++ 开发人员请注意，在 C# 中，[bool](language-reference/builtin-types/bool.md) 不能转换为 [int](language-reference/builtin-types/integral-numeric-types.md)。  
   
 编译器将类型信息作为元数据嵌入可执行文件中。 公共语言运行时 (CLR) 在运行时使用元数据，以在分配和回收内存时进一步保证类型安全性。  
 
@@ -48,7 +48,7 @@ C# 是一种强类型语言。 每个变量和常量都有一个类型，每个�
   
 [!code-csharp[Method Signature](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-在声明变量后，不能使用新类型重新声明该变量，并且不能为其分配与其声明的类型不兼容的值。 例如，不能在声明 [int](language-reference/builtin-types/integral-numeric-types.md) 后向其赋值 [true](language-reference/keywords/true-literal.md) 布尔值。 不过，可以将值转换成其他类型。例如，在将值赋给新变量或作为方法自变量传递时。 编译器会自动执行不会导致数据丢失的*类型转换*。 可能导致数据丢失的转换需要在源代码进行强制转换。 
+在声明变量后，不能使用新类型重新声明该变量，并且不能为其分配与其声明的类型不兼容的值。 例如，不能在声明 [int](language-reference/builtin-types/integral-numeric-types.md) 后向其分配 `true` 布尔值。 不过，可以将值转换成其他类型。例如，在将值赋给新变量或作为方法自变量传递时。 编译器会自动执行不会导致数据丢失的*类型转换*。 可能导致数据丢失的转换需要在源代码进行强制转换。 
 
 有关详细信息，请参阅[强制转换和类型转换](programming-guide/types/casting-and-type-conversions.md)。
 
