@@ -2,26 +2,26 @@
 title: 服务网格-适用于 WCF 开发人员的 gRPC
 description: 使用服务网格将请求路由并平衡到 Kubernetes 群集中的 gRPC 服务。
 ms.date: 09/02/2019
-ms.openlocfilehash: d20275082973f30bddbb342da90454401d4f019b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: cc4855b1ed27e29076e4f13f5c5d3dffa63a6554
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966972"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711278"
 ---
 # <a name="service-meshes"></a>服务网格
 
 服务网格是一种基础结构组件，控制网络中的路由服务请求。 服务网格可以处理 Kubernetes 群集中的各种网络级别问题，其中包括：
 
 - 服务发现
-- 负载均衡
+- 负载平衡
 - 容错
 - 加密
 - 监视
 
 Kubernetes 服务网格通过向网格中包含的每个 pod 添加一个名为*挎斗 proxy*的额外容器来工作。 代理接管了所有入站和出站网络请求的处理，使网络的配置和管理与应用程序容器保持分离，在许多情况下，无需对应用程序代码进行任何更改。
 
-获取[上一章节的示例](kubernetes.md#testing-the-application)，其中，来自 web 应用程序的 gRPC 请求全部路由到 gRPC 服务的单个实例。 出现这种情况的原因是，服务的主机名解析为 IP 地址，并且该 IP 地址缓存在 `HttpClientHandler` 实例的生存期内。 可以通过手动处理 DNS 查找或创建多个客户端来解决这种情况，但这会大大提高应用程序代码的复杂程度，而无需添加任何业务或客户价值。
+获取[上一章节的示例](kubernetes.md#test-the-application)，其中，来自 web 应用程序的 gRPC 请求全部路由到 gRPC 服务的单个实例。 出现这种情况的原因是，服务的主机名解析为 IP 地址，并且该 IP 地址缓存在 `HttpClientHandler` 实例的生存期内。 可以通过手动处理 DNS 查找或创建多个客户端来解决这种情况，但这会大大提高应用程序代码的复杂程度，而无需添加任何业务或客户价值。
 
 使用服务网格，来自应用程序容器的请求将发送到挎斗代理，该代理可以在其他服务的所有实例中智能地分发这些请求。 网格还可以：
 

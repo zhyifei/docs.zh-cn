@@ -2,16 +2,16 @@
 title: 针对 WCF 开发人员的负载均衡 gRPC-gRPC
 description: 选择要使用 gRPC services 的负载均衡器。
 ms.date: 09/02/2019
-ms.openlocfilehash: 070fc7fda73988302d15c8cec12b1ac359641317
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 215c0983146bbf9168f01956d64733f80cea6faf
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967445"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711164"
 ---
 # <a name="load-balancing-grpc"></a>负载均衡 gRPC
 
-GRPC 应用程序的典型部署包含多个相同的服务实例，提供复原能力和水平可扩展性。 跨这些实例对分布式传入请求进行负载均衡，以完全利用所有可用资源。 若要使此负载平衡对客户端不可见，通常使用代理负载均衡器服务器来处理来自客户端的请求，并将这些请求路由到后端实例。
+GRPC 应用程序的典型部署包含多个相同的服务实例，提供复原能力和水平可扩展性。 负载均衡将传入请求分布到这些实例上，以充分利用所有可用资源。 若要使此负载平衡对客户端不可见，通常使用代理负载均衡器服务器来处理来自客户端的请求，并将这些请求路由到后端实例。
 
 负载均衡器根据其运行的*层*进行分类。 第4层负载均衡器适用于*传输*级别，例如，使用 TCP 套接字、连接和数据包。 第7层负载均衡器在*应用程序*级别工作，专用于处理 gRPC 应用程序的 HTTP/2 请求。
 
@@ -19,26 +19,26 @@ GRPC 应用程序的典型部署包含多个相同的服务实例，提供复原
 
 L4 负载均衡器接受来自客户端的 TCP 连接请求，打开与某个后端实例的另一个连接，并在两个连接之间复制数据，无实际处理。 L4 提供出色的性能和低延迟，但控制或智能非常少。 只要客户端使连接保持打开状态，所有请求都将定向到相同的后端实例。
 
-下面是一个 L4 负载均衡器的示例： [Azure 负载均衡器](https://azure.microsoft.com/services/load-balancer/)。
+ [Azure 负载均衡器](https://azure.microsoft.com/services/load-balancer/)是 L4 负载均衡器的一个示例。
 
 ## <a name="l7-load-balancers"></a>L7 负载均衡器
 
 L7 负载均衡器分析传入的 HTTP/2 请求，并按请求将这些请求按请求传递到后端实例，无论客户端保持连接的时间长短。
 
-L7 负载均衡器的示例包括：
+L7 负载均衡器的示例：
 
-- [Nginx](https://www.nginx.com/)
-- [HAproxy](https://www.haproxy.com/)
+- [NGINX](https://www.nginx.com/)
+- [HAProxy](https://www.haproxy.com/)
 - [Traefik](https://traefik.io/)
 
-作为经验法则，L7 负载均衡器是 gRPC 和其他 HTTP/2 应用程序（事实上，对于 HTTP 应用程序）的最佳选择。 L4 负载均衡器*适用*于 gRPC 应用程序，但在低延迟和低开销的重要性最高时，它们主要非常有用。
+作为经验法则，L7 负载均衡器是 gRPC 和其他 HTTP/2 应用程序（事实上，对于 HTTP 应用程序）的最佳选择。 L4 负载均衡器*适用*于 gRPC 应用程序，但在低延迟和低开销很重要时，它们主要非常有用。
 
 > [!IMPORTANT]
-> 撰写本文时，并非所有 L7 负载均衡器都支持 gRPC 服务所需的 HTTP/2 规范的所有部分，例如尾随标头。
+> 撰写本文时，某些 L7 负载均衡器不支持 gRPC 服务所需的 HTTP/2 规范的所有部分，例如尾随标头。
 
-使用 TLS 加密时，负载均衡器可以终止 TLS 连接并将未加密的请求传递到后端应用程序，或传递加密的请求。 无论采用哪种方式，都需要将负载均衡器配置为具有服务器的公钥和私钥，以便它可以解密处理请求。
+如果使用的是 TLS 加密，负载均衡器可以终止 TLS 连接并将未加密的请求传递到后端应用程序，也可以传递加密的请求。 无论采用哪种方式，都需要将负载均衡器配置为具有服务器的公钥和私钥，使其可以解密处理请求。
 
-请参阅首选负载均衡器的文档，了解如何将其配置为通过后端服务处理 HTTP/2 请求。
+请参阅你喜欢的负载均衡器的文档，了解如何将其配置为通过后端服务处理 HTTP/2 请求。
 
 ## <a name="load-balancing-within-kubernetes"></a>Kubernetes 中的负载均衡
 
