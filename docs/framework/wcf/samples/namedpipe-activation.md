@@ -2,34 +2,34 @@
 title: NamedPipe 激活
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 9d1f7c599f16b0974fb327888c080957c5cd9cee
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 78073ca222cab07bbc9cee5c1976cf7a6ee46295
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417087"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714693"
 ---
-# <a name="namedpipe-activation"></a><span data-ttu-id="2ba16-102">NamedPipe 激活</span><span class="sxs-lookup"><span data-stu-id="2ba16-102">NamedPipe Activation</span></span>
+# <a name="namedpipe-activation"></a><span data-ttu-id="91d03-102">NamedPipe 激活</span><span class="sxs-lookup"><span data-stu-id="91d03-102">NamedPipe Activation</span></span>
 
-<span data-ttu-id="2ba16-103">本示例演示如何承载使用 Windows 进程激活服务 (WAS) 的服务以激活通过命名管道进行通信的服务。</span><span class="sxs-lookup"><span data-stu-id="2ba16-103">This sample demonstrates hosting a service that uses Windows Process Activation Service (WAS) to activate a service that communicates over names pipes.</span></span> <span data-ttu-id="2ba16-104">此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，需要运行 [!INCLUDE[wv](../../../../includes/wv-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="2ba16-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) and requires [!INCLUDE[wv](../../../../includes/wv-md.md)] to run.</span></span>
+<span data-ttu-id="91d03-103">本示例演示如何承载使用 Windows 进程激活服务 (WAS) 的服务以激活通过命名管道进行通信的服务。</span><span class="sxs-lookup"><span data-stu-id="91d03-103">This sample demonstrates hosting a service that uses Windows Process Activation Service (WAS) to activate a service that communicates over names pipes.</span></span> <span data-ttu-id="91d03-104">此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，需要运行 [!INCLUDE[wv](../../../../includes/wv-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="91d03-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) and requires [!INCLUDE[wv](../../../../includes/wv-md.md)] to run.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="2ba16-105">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="2ba16-105">The set-up procedure and build instructions for this sample are located at the end of this topic.</span></span>
+> <span data-ttu-id="91d03-105">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="91d03-105">The set-up procedure and build instructions for this sample are located at the end of this topic.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="2ba16-106">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="2ba16-106">The samples may already be installed on your computer.</span></span> <span data-ttu-id="2ba16-107">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="2ba16-107">Check for the following (default) directory before continuing.</span></span>
+> <span data-ttu-id="91d03-106">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="91d03-106">The samples may already be installed on your computer.</span></span> <span data-ttu-id="91d03-107">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="91d03-107">Check for the following (default) directory before continuing.</span></span>
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> <span data-ttu-id="2ba16-108">如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="2ba16-108">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="2ba16-109">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="2ba16-109">This sample is located in the following directory.</span></span>
+> <span data-ttu-id="91d03-108">如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="91d03-108">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="91d03-109">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="91d03-109">This sample is located in the following directory.</span></span>
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\NamedPipeActivation`
 
-## <a name="sample-details"></a><span data-ttu-id="2ba16-110">示例详细信息</span><span class="sxs-lookup"><span data-stu-id="2ba16-110">Sample Details</span></span>
+## <a name="sample-details"></a><span data-ttu-id="91d03-110">示例详细信息</span><span class="sxs-lookup"><span data-stu-id="91d03-110">Sample Details</span></span>
 
-<span data-ttu-id="2ba16-111">本示例由客户端控制台程序 (.exe) 和由 Windows 进程激活服务 (WAS) 激活的辅助进程中承载的服务库 (.dll) 组成。</span><span class="sxs-lookup"><span data-stu-id="2ba16-111">The sample consists of a client console program (.exe) and a service library (.dll) hosted in a worker process activated by the Windows Process Activation Services (WAS).</span></span> <span data-ttu-id="2ba16-112">客户端活动显示在控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="2ba16-112">Client activity is visible in the console window.</span></span>
+<span data-ttu-id="91d03-111">本示例由客户端控制台程序 (.exe) 和由 Windows 进程激活服务 (WAS) 激活的辅助进程中承载的服务库 (.dll) 组成。</span><span class="sxs-lookup"><span data-stu-id="91d03-111">The sample consists of a client console program (.exe) and a service library (.dll) hosted in a worker process activated by the Windows Process Activation Services (WAS).</span></span> <span data-ttu-id="91d03-112">客户端活动显示在控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="91d03-112">Client activity is visible in the console window.</span></span>
 
-<span data-ttu-id="2ba16-113">该服务实现定义“请求-答复”通信模式的协定。</span><span class="sxs-lookup"><span data-stu-id="2ba16-113">The service implements a contract that defines a request-reply communication pattern.</span></span> <span data-ttu-id="2ba16-114">该协定由 `ICalculator` 接口定义，该接口公开数学运算（加、减、乘和除），如下面的示例代码所示：</span><span class="sxs-lookup"><span data-stu-id="2ba16-114">The contract is defined by the `ICalculator` interface, which exposes math operations (Add, Subtract, Multiply, and Divide), as shown in the following sample code.</span></span>
+<span data-ttu-id="91d03-113">该服务实现定义“请求-答复”通信模式的协定。</span><span class="sxs-lookup"><span data-stu-id="91d03-113">The service implements a contract that defines a request-reply communication pattern.</span></span> <span data-ttu-id="91d03-114">该协定由 `ICalculator` 接口定义，该接口公开数学运算（加、减、乘和除），如下面的示例代码所示：</span><span class="sxs-lookup"><span data-stu-id="91d03-114">The contract is defined by the `ICalculator` interface, which exposes math operations (Add, Subtract, Multiply, and Divide), as shown in the following sample code.</span></span>
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -46,7 +46,7 @@ public interface ICalculator
 }
 ```
 
-<span data-ttu-id="2ba16-115">客户端向给定的数学运算发出同步请求，服务实现进行计算并返回相应的结果。</span><span class="sxs-lookup"><span data-stu-id="2ba16-115">The client makes synchronous requests to a given math operation and the service implementation calculates and returns the appropriate result.</span></span>
+<span data-ttu-id="91d03-115">客户端向给定的数学运算发出同步请求，服务实现进行计算并返回相应的结果。</span><span class="sxs-lookup"><span data-stu-id="91d03-115">The client makes synchronous requests to a given math operation and the service implementation calculates and returns the appropriate result.</span></span>
 
 ```csharp
 // Service class that implements the service contract.
@@ -71,9 +71,9 @@ public class CalculatorService : ICalculator
 }
 ```
 
-<span data-ttu-id="2ba16-116">示例使用经过修改的无安全性的 `netNamedPipeBinding` 绑定。</span><span class="sxs-lookup"><span data-stu-id="2ba16-116">The sample uses a modified `netNamedPipeBinding` binding with no security.</span></span> <span data-ttu-id="2ba16-117">绑定是在客户端和服务的配置文件中指定的。</span><span class="sxs-lookup"><span data-stu-id="2ba16-117">The binding is specified in the configuration files for the client and service.</span></span> <span data-ttu-id="2ba16-118">服务的绑定类型是在终结点元素的 `binding` 属性中指定的，如下面的示例配置所示。</span><span class="sxs-lookup"><span data-stu-id="2ba16-118">The binding type for the service is specified in the endpoint element’s `binding` attribute as shown in the following sample configuration.</span></span>
+<span data-ttu-id="91d03-116">示例使用经过修改的无安全性的 `netNamedPipeBinding` 绑定。</span><span class="sxs-lookup"><span data-stu-id="91d03-116">The sample uses a modified `netNamedPipeBinding` binding with no security.</span></span> <span data-ttu-id="91d03-117">绑定是在客户端和服务的配置文件中指定的。</span><span class="sxs-lookup"><span data-stu-id="91d03-117">The binding is specified in the configuration files for the client and service.</span></span> <span data-ttu-id="91d03-118">服务的绑定类型是在终结点元素的 `binding` 属性中指定的，如下面的示例配置所示。</span><span class="sxs-lookup"><span data-stu-id="91d03-118">The binding type for the service is specified in the endpoint element’s `binding` attribute as shown in the following sample configuration.</span></span>
 
-<span data-ttu-id="2ba16-119">如果你想使用安全的命名管道绑定，请将服务器的安全模式更改为所需的安全设置，并在客户端上重新运行 svcutil.exe 以获取更新的客户端配置文件。</span><span class="sxs-lookup"><span data-stu-id="2ba16-119">If you want use a secured named pipe binding, change the server's security mode to the desired security setting and run svcutil.exe again on the client to obtain an updated client configuration file.</span></span>
+<span data-ttu-id="91d03-119">如果你想使用安全的命名管道绑定，请将服务器的安全模式更改为所需的安全设置，并在客户端上重新运行 svcutil.exe 以获取更新的客户端配置文件。</span><span class="sxs-lookup"><span data-stu-id="91d03-119">If you want use a secured named pipe binding, change the server's security mode to the desired security setting and run svcutil.exe again on the client to obtain an updated client configuration file.</span></span>
 
 ```xml
 <system.serviceModel>
@@ -114,7 +114,7 @@ public class CalculatorService : ICalculator
   </system.serviceModel>
 ```
 
-<span data-ttu-id="2ba16-120">客户端的终结点信息按下面的示例代码所示进行配置。</span><span class="sxs-lookup"><span data-stu-id="2ba16-120">The client’s endpoint information is configured as shown in the following sample code.</span></span>
+<span data-ttu-id="91d03-120">客户端的终结点信息按下面的示例代码所示进行配置。</span><span class="sxs-lookup"><span data-stu-id="91d03-120">The client’s endpoint information is configured as shown in the following sample code.</span></span>
 
 ```xml
 <system.serviceModel>
@@ -146,7 +146,7 @@ public class CalculatorService : ICalculator
   </system.serviceModel>
 ```
 
-<span data-ttu-id="2ba16-121">运行示例时，操作请求和响应将显示在客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="2ba16-121">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="2ba16-122">在客户端窗口中按 Enter 可以关闭客户端。</span><span class="sxs-lookup"><span data-stu-id="2ba16-122">Press ENTER in the client window to shut down the client.</span></span>
+<span data-ttu-id="91d03-121">运行示例时，操作请求和响应将显示在客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="91d03-121">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="91d03-122">在客户端窗口中按 Enter 可以关闭客户端。</span><span class="sxs-lookup"><span data-stu-id="91d03-122">Press ENTER in the client window to shut down the client.</span></span>
 
 ```console
 Add(100,15.99) = 115.99
@@ -157,27 +157,27 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.
 ```
 
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="2ba16-123">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="2ba16-123">To set up, build, and run the sample</span></span>
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="91d03-123">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="91d03-123">To set up, build, and run the sample</span></span>
 
-1. <span data-ttu-id="2ba16-124">确保已安装 IIS 7.0。</span><span class="sxs-lookup"><span data-stu-id="2ba16-124">Ensure that IIS 7.0 is installed.</span></span> <span data-ttu-id="2ba16-125">激活 WAS 需要 IIS 7.0。</span><span class="sxs-lookup"><span data-stu-id="2ba16-125">IIS 7.0 is required for WAS activation.</span></span>
+1. <span data-ttu-id="91d03-124">确保已安装 IIS 7.0。</span><span class="sxs-lookup"><span data-stu-id="91d03-124">Ensure that IIS 7.0 is installed.</span></span> <span data-ttu-id="91d03-125">激活 WAS 需要 IIS 7.0。</span><span class="sxs-lookup"><span data-stu-id="91d03-125">IIS 7.0 is required for WAS activation.</span></span>
 
-2. <span data-ttu-id="2ba16-126">确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="2ba16-126">Ensure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>
+2. <span data-ttu-id="91d03-126">确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="91d03-126">Ensure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>
 
-    <span data-ttu-id="2ba16-127">此外，还必须安装 WCF 非 HTTP 激活组件：</span><span class="sxs-lookup"><span data-stu-id="2ba16-127">In addition, you must install the WCF non-HTTP activation components:</span></span>
+    <span data-ttu-id="91d03-127">此外，还必须安装 WCF 非 HTTP 激活组件：</span><span class="sxs-lookup"><span data-stu-id="91d03-127">In addition, you must install the WCF non-HTTP activation components:</span></span>
 
-    1. <span data-ttu-id="2ba16-128">从“开始”菜单中，选择“控制面板”。</span><span class="sxs-lookup"><span data-stu-id="2ba16-128">From the **Start** menu, choose **Control Panel**.</span></span>
+    1. <span data-ttu-id="91d03-128">从“开始”菜单中，选择“控制面板”。</span><span class="sxs-lookup"><span data-stu-id="91d03-128">From the **Start** menu, choose **Control Panel**.</span></span>
 
-    2. <span data-ttu-id="2ba16-129">选择 "**程序和功能**"。</span><span class="sxs-lookup"><span data-stu-id="2ba16-129">Select **Programs and Features**.</span></span>
+    2. <span data-ttu-id="91d03-129">选择 "**程序和功能**"。</span><span class="sxs-lookup"><span data-stu-id="91d03-129">Select **Programs and Features**.</span></span>
 
-    3. <span data-ttu-id="2ba16-130">单击 **"打开或关闭 Windows 组件"** 。</span><span class="sxs-lookup"><span data-stu-id="2ba16-130">Click **Turn Windows Components on or Off**.</span></span>
+    3. <span data-ttu-id="91d03-130">单击 **"打开或关闭 Windows 组件"** 。</span><span class="sxs-lookup"><span data-stu-id="91d03-130">Click **Turn Windows Components on or Off**.</span></span>
 
-    4. <span data-ttu-id="2ba16-131">展开**Microsoft .NET Framework 3.0**节点并检查**Windows Communication Foundation 非 HTTP 激活**功能。</span><span class="sxs-lookup"><span data-stu-id="2ba16-131">Expand the **Microsoft .NET Framework 3.0** node and check the **Windows Communication Foundation Non-HTTP Activation** feature.</span></span>
+    4. <span data-ttu-id="91d03-131">展开**Microsoft .NET Framework 3.0**节点并检查**Windows Communication Foundation 非 HTTP 激活**功能。</span><span class="sxs-lookup"><span data-stu-id="91d03-131">Expand the **Microsoft .NET Framework 3.0** node and check the **Windows Communication Foundation Non-HTTP Activation** feature.</span></span>
 
-3. <span data-ttu-id="2ba16-132">将 Windows 进程激活服务 (WAS) 配置为支持命名管道激活。</span><span class="sxs-lookup"><span data-stu-id="2ba16-132">Configure the Windows Process Activation Service (WAS) to support named pipe activation.</span></span>
+3. <span data-ttu-id="91d03-132">将 Windows 进程激活服务 (WAS) 配置为支持命名管道激活。</span><span class="sxs-lookup"><span data-stu-id="91d03-132">Configure the Windows Process Activation Service (WAS) to support named pipe activation.</span></span>
 
-    <span data-ttu-id="2ba16-133">为方便起见，在位于示例目录中名为 AddNetPipeSiteBinding.cmd 的批处理文件中实现以下两个步骤。</span><span class="sxs-lookup"><span data-stu-id="2ba16-133">As a convenience, the following two steps are implemented in a batch file called AddNetPipeSiteBinding.cmd located in the sample directory.</span></span>
+    <span data-ttu-id="91d03-133">为方便起见，在位于示例目录中名为 AddNetPipeSiteBinding.cmd 的批处理文件中实现以下两个步骤。</span><span class="sxs-lookup"><span data-stu-id="91d03-133">As a convenience, the following two steps are implemented in a batch file called AddNetPipeSiteBinding.cmd located in the sample directory.</span></span>
 
-    1. <span data-ttu-id="2ba16-134">若要支持 net.pipe 激活，必须首先将默认的网站绑定到 net.pipe 协议。</span><span class="sxs-lookup"><span data-stu-id="2ba16-134">To support net.pipe activation, the default Web site must first be bound to the net.pipe protocol.</span></span> <span data-ttu-id="2ba16-135">可以通过使用随 IIS 7.0 管理工具集安装的 appcmd.exe 来执行此操作。</span><span class="sxs-lookup"><span data-stu-id="2ba16-135">This can be done using appcmd.exe, which is installed with the IIS 7.0 management toolset.</span></span> <span data-ttu-id="2ba16-136">在具有提升权限的（管理员）命令提示符处，运行下列命令。</span><span class="sxs-lookup"><span data-stu-id="2ba16-136">From an elevated (administrator) command prompt, run the following command.</span></span>
+    1. <span data-ttu-id="91d03-134">若要支持 net.pipe 激活，必须首先将默认的网站绑定到 net.pipe 协议。</span><span class="sxs-lookup"><span data-stu-id="91d03-134">To support net.pipe activation, the default Web site must first be bound to the net.pipe protocol.</span></span> <span data-ttu-id="91d03-135">可以通过使用随 IIS 7.0 管理工具集安装的 appcmd.exe 来执行此操作。</span><span class="sxs-lookup"><span data-stu-id="91d03-135">This can be done using appcmd.exe, which is installed with the IIS 7.0 management toolset.</span></span> <span data-ttu-id="91d03-136">在具有提升权限的（管理员）命令提示符处，运行下列命令。</span><span class="sxs-lookup"><span data-stu-id="91d03-136">From an elevated (administrator) command prompt, run the following command.</span></span>
 
         ```console
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"
@@ -185,45 +185,45 @@ Press <ENTER> to terminate client.
         ```
 
         > [!NOTE]
-        > <span data-ttu-id="2ba16-137">此命令是单行文本。</span><span class="sxs-lookup"><span data-stu-id="2ba16-137">This command is a single line of text.</span></span>
+        > <span data-ttu-id="91d03-137">此命令是单行文本。</span><span class="sxs-lookup"><span data-stu-id="91d03-137">This command is a single line of text.</span></span>
 
-        <span data-ttu-id="2ba16-138">此命令可将 net.pipe 网站绑定添加到默认网站。</span><span class="sxs-lookup"><span data-stu-id="2ba16-138">This command adds a net.pipe site binding to the default Web site.</span></span>
+        <span data-ttu-id="91d03-138">此命令可将 net.pipe 网站绑定添加到默认网站。</span><span class="sxs-lookup"><span data-stu-id="91d03-138">This command adds a net.pipe site binding to the default Web site.</span></span>
 
-    2. <span data-ttu-id="2ba16-139">尽管网站内的所有应用程序共享一个公共 net.pipe 绑定，但是每个应用程序可以单独启用 net.pipe 支持。</span><span class="sxs-lookup"><span data-stu-id="2ba16-139">Although all applications within a site share a common net.pipe binding, each application can enable net.pipe support individually.</span></span> <span data-ttu-id="2ba16-140">若要启用 /servicemodelsamples 应用程序的 net.pipe，请在具有提升权限的命令提示符处运行以下命令。</span><span class="sxs-lookup"><span data-stu-id="2ba16-140">To enable net.pipe for the /servicemodelsamples application, run the following command from an elevated command prompt.</span></span>
+    2. <span data-ttu-id="91d03-139">尽管网站内的所有应用程序共享一个公共 net.pipe 绑定，但是每个应用程序可以单独启用 net.pipe 支持。</span><span class="sxs-lookup"><span data-stu-id="91d03-139">Although all applications within a site share a common net.pipe binding, each application can enable net.pipe support individually.</span></span> <span data-ttu-id="91d03-140">若要启用 /servicemodelsamples 应用程序的 net.pipe，请在具有提升权限的命令提示符处运行以下命令。</span><span class="sxs-lookup"><span data-stu-id="91d03-140">To enable net.pipe for the /servicemodelsamples application, run the following command from an elevated command prompt.</span></span>
 
         ```console
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.pipe
         ```
 
         > [!NOTE]
-        > <span data-ttu-id="2ba16-141">此命令是单行文本。</span><span class="sxs-lookup"><span data-stu-id="2ba16-141">This command is a single line of text.</span></span>
+        > <span data-ttu-id="91d03-141">此命令是单行文本。</span><span class="sxs-lookup"><span data-stu-id="91d03-141">This command is a single line of text.</span></span>
 
-        <span data-ttu-id="2ba16-142">此命令允许使用 `http://localhost/servicemodelsamples` 和 `net.tcp://localhost/servicemodelsamples`访问/servicemodelsamples 应用程序。</span><span class="sxs-lookup"><span data-stu-id="2ba16-142">This command enables the /servicemodelsamples application to be accessed using both `http://localhost/servicemodelsamples` and `net.tcp://localhost/servicemodelsamples`.</span></span>
+        <span data-ttu-id="91d03-142">此命令允许使用 `http://localhost/servicemodelsamples` 和 `net.tcp://localhost/servicemodelsamples`访问/servicemodelsamples 应用程序。</span><span class="sxs-lookup"><span data-stu-id="91d03-142">This command enables the /servicemodelsamples application to be accessed using both `http://localhost/servicemodelsamples` and `net.tcp://localhost/servicemodelsamples`.</span></span>
 
-4. <span data-ttu-id="2ba16-143">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="2ba16-143">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>
+4. <span data-ttu-id="91d03-143">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="91d03-143">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>
 
-5. <span data-ttu-id="2ba16-144">移除为此示例添加的 net.pipe 网站绑定。</span><span class="sxs-lookup"><span data-stu-id="2ba16-144">Remove the net.pipe site binding you added for this sample.</span></span>
+5. <span data-ttu-id="91d03-144">移除为此示例添加的 net.pipe 网站绑定。</span><span class="sxs-lookup"><span data-stu-id="91d03-144">Remove the net.pipe site binding you added for this sample.</span></span>
 
-    <span data-ttu-id="2ba16-145">为方便起见，在位于示例目录中名为 RemoveNetPipeSiteBinding.cmd 的批处理文件中实现以下两个步骤：</span><span class="sxs-lookup"><span data-stu-id="2ba16-145">As a convenience, the following two steps are implemented in a batch file called RemoveNetPipeSiteBinding.cmd located in the sample directory:</span></span>
+    <span data-ttu-id="91d03-145">为方便起见，在位于示例目录中名为 RemoveNetPipeSiteBinding.cmd 的批处理文件中实现以下两个步骤：</span><span class="sxs-lookup"><span data-stu-id="91d03-145">As a convenience, the following two steps are implemented in a batch file called RemoveNetPipeSiteBinding.cmd located in the sample directory:</span></span>
 
-    1. <span data-ttu-id="2ba16-146">通过在具有提升权限的命令提示符处运行以下命令，从启用的协议列表中移除 net.tcp。</span><span class="sxs-lookup"><span data-stu-id="2ba16-146">Remove net.tcp from the list of enabled protocols by running the following command from an elevated command prompt.</span></span>
+    1. <span data-ttu-id="91d03-146">通过在具有提升权限的命令提示符处运行以下命令，从启用的协议列表中移除 net.tcp。</span><span class="sxs-lookup"><span data-stu-id="91d03-146">Remove net.tcp from the list of enabled protocols by running the following command from an elevated command prompt.</span></span>
 
         ```console
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http
         ```
 
         > [!NOTE]
-        > <span data-ttu-id="2ba16-147">必须以单行文本的形式输入此命令。</span><span class="sxs-lookup"><span data-stu-id="2ba16-147">This command must be entered as a single line of text.</span></span>
+        > <span data-ttu-id="91d03-147">必须以单行文本的形式输入此命令。</span><span class="sxs-lookup"><span data-stu-id="91d03-147">This command must be entered as a single line of text.</span></span>
 
-    2. <span data-ttu-id="2ba16-148">通过在具有提升权限的命令提示符处运行以下命令移除 net.tcp 站点绑定。</span><span class="sxs-lookup"><span data-stu-id="2ba16-148">Remove the net.tcp site binding by running the following command from an elevated command prompt.</span></span>
+    2. <span data-ttu-id="91d03-148">通过在具有提升权限的命令提示符处运行以下命令移除 net.tcp 站点绑定。</span><span class="sxs-lookup"><span data-stu-id="91d03-148">Remove the net.tcp site binding by running the following command from an elevated command prompt.</span></span>
 
         ```console
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" --bindings.[protocol='net.pipe',bindingInformation='*']
         ```
 
         > [!NOTE]
-        > <span data-ttu-id="2ba16-149">必须以单行文本的形式键入此命令。</span><span class="sxs-lookup"><span data-stu-id="2ba16-149">This command must be typed in as a single line of text.</span></span>
+        > <span data-ttu-id="91d03-149">必须以单行文本的形式键入此命令。</span><span class="sxs-lookup"><span data-stu-id="91d03-149">This command must be typed in as a single line of text.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="2ba16-150">请参阅</span><span class="sxs-lookup"><span data-stu-id="2ba16-150">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="91d03-150">另请参阅</span><span class="sxs-lookup"><span data-stu-id="91d03-150">See also</span></span>
 
-- <span data-ttu-id="2ba16-151">[AppFabric 宿主和持久性示例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))</span><span class="sxs-lookup"><span data-stu-id="2ba16-151">[AppFabric Hosting and Persistence Samples](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))</span></span>
+- <span data-ttu-id="91d03-151">[AppFabric 宿主和持久性示例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))</span><span class="sxs-lookup"><span data-stu-id="91d03-151">[AppFabric Hosting and Persistence Samples](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))</span></span>
