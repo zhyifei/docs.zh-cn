@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: c2389ff0c94afc2156e594f5d93535d1ed0107a8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e0c617ce32f80bdde1bcfda31da40ae610e07452
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74336269"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74712354"
 ---
 # <a name="await-operator-visual-basic"></a>Await 运算符 (Visual Basic)
 
@@ -23,7 +23,7 @@ ms.locfileid: "74336269"
 > [!NOTE]
 > `Async` 和 `Await` 关键字是在 Visual Studio 2012 中引入的。 有关异步编程的介绍，请参阅[使用 async 和 Await 进行异步编程](../../../visual-basic/programming-guide/concepts/async/index.md)。
 
-通常，应用 `Await` 运算符的任务是对实现[基于任务的异步模式](https://go.microsoft.com/fwlink/?LinkId=204847)的方法（即 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>）的调用的返回值。
+通常，应用 `Await` 运算符的任务是对实现[基于任务的异步模式](https://www.microsoft.com/download/details.aspx?id=19957)的方法（即 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>）的调用的返回值。
 
 在以下代码中，<xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 返回 `getContentsTask`，一个 `Task(Of Byte())`。 当操作完成时，任务约定生成一个实际字节数组。 `Await` 运算符应用于 `getContentsTask` 以在 `SumPageSizesAsync` 中挂起执行，直到 `getContentsTask` 完成。 同时，控制权会返回给 `SumPageSizesAsync` 的调用方。 当 `getContentsTask` 完成之后，`Await` 表达式计算为字节数组。
 
@@ -74,7 +74,7 @@ Await AsyncMethodThatReturnsTask()
 
 ## <a name="example"></a>示例
 
-下面的 Windows 窗体示例阐释如何在异步方法 `Await` 中使用 `WaitAsynchronouslyAsync`。 将该方法的行为与 `WaitSynchronously` 的行为进行对比。 如果没有应用 `Await` 运算符，`WaitSynchronously` 就会同步运行，而不管其定义中是否使用了 `Async` 修饰符和在主体中是否调用了 <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>。
+下面的 Windows 窗体示例阐释如何在异步方法 `WaitAsynchronouslyAsync` 中使用 `Await`。 将该方法的行为与 `WaitSynchronously` 的行为进行对比。 如果没有应用 `Await` 运算符，`WaitSynchronously` 就会同步运行，而不管其定义中是否使用了 `Async` 修饰符和在主体中是否调用了 <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>。
 
 ```vb
 Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
