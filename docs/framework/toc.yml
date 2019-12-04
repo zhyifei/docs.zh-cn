@@ -42,8 +42,6 @@
       href: configure-apps/
     - name: 使用 .NET Native 编译引用
       href: net-native/
-    - name: Windows Identity Foundation
-      href: security/
     - name: 调试、跟踪和分析
       href: debug-trace-profile/
     - name: 部署

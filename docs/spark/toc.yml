@@ -17,6 +17,8 @@
       href: tutorials/amazon-emr-spark-deployment.md
     - name: 部署到 Databricks
       href: tutorials/databricks-deployment.md
+    - name: 结构化流式处理
+      href: tutorials/streaming.md
 - name: 操作指南
   items:
     - name: 调试应用程序
