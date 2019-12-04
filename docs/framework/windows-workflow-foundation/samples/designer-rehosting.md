@@ -2,28 +2,28 @@
 title: 重新承载设计器
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: ecbea5822825cca5f3f5cf40e20d5d249b17b07c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f98b1823c74471c96f6d4b67ec47637bb0785d8f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038197"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715240"
 ---
-# <a name="designer-rehosting"></a><span data-ttu-id="8a93b-102">重新承载设计器</span><span class="sxs-lookup"><span data-stu-id="8a93b-102">Designer Rehosting</span></span>
-<span data-ttu-id="8a93b-103">设计器重新承载是一个常用方案，它是指在自定义应用程序内部承载工作流设计画布。</span><span class="sxs-lookup"><span data-stu-id="8a93b-103">Designer rehosting is a common scenario that refers to hosting the workflow design canvas inside of a custom application.</span></span> <span data-ttu-id="8a93b-104">Visual Studio 是大多数人所熟知的承载应用程序，然而在很多方案中，应用程序中的工作流设计器可能会很有用：</span><span class="sxs-lookup"><span data-stu-id="8a93b-104">The hosting application most people are familiar with is Visual Studio, however there are a number of scenarios where showing the workflow designer in an application may be useful:</span></span>  
+# <a name="designer-rehosting"></a><span data-ttu-id="cac88-102">重新承载设计器</span><span class="sxs-lookup"><span data-stu-id="cac88-102">Designer Rehosting</span></span>
+<span data-ttu-id="cac88-103">设计器重新承载是一个常用方案，它是指在自定义应用程序内部承载工作流设计画布。</span><span class="sxs-lookup"><span data-stu-id="cac88-103">Designer rehosting is a common scenario that refers to hosting the workflow design canvas inside of a custom application.</span></span> <span data-ttu-id="cac88-104">Visual Studio 是大多数人所熟知的承载应用程序，然而在很多方案中，应用程序中的工作流设计器可能会很有用：</span><span class="sxs-lookup"><span data-stu-id="cac88-104">The hosting application most people are familiar with is Visual Studio, however there are a number of scenarios where showing the workflow designer in an application may be useful:</span></span>  
   
-- <span data-ttu-id="8a93b-105">监视应用程序（允许最终用户直观地查看进程以及有关进程的运行时数据，例如，当前活动状态、聚合执行时间数据或其他关于工作流实例的信息）。</span><span class="sxs-lookup"><span data-stu-id="8a93b-105">Monitoring applications (allowing an end user to visualize the process, as well as runtime data about the process such as the currently active state, aggregate execution time data, or other information about an instance of the workflow).</span></span>  
+- <span data-ttu-id="cac88-105">监视应用程序（允许最终用户直观地查看进程以及有关进程的运行时数据，例如，当前活动状态、聚合执行时间数据或其他关于工作流实例的信息）。</span><span class="sxs-lookup"><span data-stu-id="cac88-105">Monitoring applications (allowing an end user to visualize the process, as well as runtime data about the process such as the currently active state, aggregate execution time data, or other information about an instance of the workflow).</span></span>  
   
-- <span data-ttu-id="8a93b-106">允许用户使用有限的活动集合自定义进程的应用程序。</span><span class="sxs-lookup"><span data-stu-id="8a93b-106">Applications that allow a user to customize the process with a limited set of activities.</span></span>  
+- <span data-ttu-id="cac88-106">允许用户使用有限的活动集合自定义进程的应用程序。</span><span class="sxs-lookup"><span data-stu-id="cac88-106">Applications that allow a user to customize the process with a limited set of activities.</span></span>  
   
- <span data-ttu-id="8a93b-107">为了支持这些类型的应用程序，.NET Framework 内附带了工作流设计器，它可以在 WPF 应用程序内或在具有适当的 WPF 承载编码的 WinForms 应用程序内承载。</span><span class="sxs-lookup"><span data-stu-id="8a93b-107">To support these types of applications, the workflow designer ships inside the .NET Framework, and can be hosted inside a WPF application, or in a WinForms application with the appropriate WPF hosting code.</span></span> <span data-ttu-id="8a93b-108">此示例演示：</span><span class="sxs-lookup"><span data-stu-id="8a93b-108">This sample demonstrates:</span></span>  
+ <span data-ttu-id="cac88-107">为了支持这些类型的应用程序，.NET Framework 内附带了工作流设计器，它可以在 WPF 应用程序内或在具有适当的 WPF 承载编码的 WinForms 应用程序内承载。</span><span class="sxs-lookup"><span data-stu-id="cac88-107">To support these types of applications, the workflow designer ships inside the .NET Framework, and can be hosted inside a WPF application, or in a WinForms application with the appropriate WPF hosting code.</span></span> <span data-ttu-id="cac88-108">此示例演示：</span><span class="sxs-lookup"><span data-stu-id="cac88-108">This sample demonstrates:</span></span>  
   
-- <span data-ttu-id="8a93b-109">重新承载 WF 设计器。</span><span class="sxs-lookup"><span data-stu-id="8a93b-109">Rehosting the WF designer.</span></span>  
+- <span data-ttu-id="cac88-109">重新承载 WF 设计器。</span><span class="sxs-lookup"><span data-stu-id="cac88-109">Rehosting the WF designer.</span></span>  
   
-- <span data-ttu-id="8a93b-110">使用重新承载的工具箱和属性网格。</span><span class="sxs-lookup"><span data-stu-id="8a93b-110">Using the rehosted toolbox and property grid as well.</span></span>  
+- <span data-ttu-id="cac88-110">使用重新承载的工具箱和属性网格。</span><span class="sxs-lookup"><span data-stu-id="cac88-110">Using the rehosted toolbox and property grid as well.</span></span>  
   
-## <a name="rehosting-the-designer"></a><span data-ttu-id="8a93b-111">重新承载设计器</span><span class="sxs-lookup"><span data-stu-id="8a93b-111">Rehosting the designer</span></span>  
- <span data-ttu-id="8a93b-112">此示例演示如何创建 WPF 布局以包含在以下网格布局中可见的设计器（因空间有限，省略工具箱编码）。</span><span class="sxs-lookup"><span data-stu-id="8a93b-112">This sample shows how to create the WPF layout to contain the designer, seen in the following grid layout (Toolbox code omitted for space concerns).</span></span> <span data-ttu-id="8a93b-113">需注意包含设计器和属性网格的边框的命名。</span><span class="sxs-lookup"><span data-stu-id="8a93b-113">Note the naming of the borders which contain the designer and property grid.</span></span>  
+## <a name="rehosting-the-designer"></a><span data-ttu-id="cac88-111">重新承载设计器</span><span class="sxs-lookup"><span data-stu-id="cac88-111">Rehosting the designer</span></span>  
+ <span data-ttu-id="cac88-112">此示例演示如何创建 WPF 布局以包含在以下网格布局中可见的设计器（因空间有限，省略工具箱编码）。</span><span class="sxs-lookup"><span data-stu-id="cac88-112">This sample shows how to create the WPF layout to contain the designer, seen in the following grid layout (Toolbox code omitted for space concerns).</span></span> <span data-ttu-id="cac88-113">需注意包含设计器和属性网格的边框的命名。</span><span class="sxs-lookup"><span data-stu-id="cac88-113">Note the naming of the borders which contain the designer and property grid.</span></span>  
   
 ```xaml  
 <Grid>  
@@ -40,7 +40,7 @@ ms.locfileid: "70038197"
 </Grid>  
 ```  
   
- <span data-ttu-id="8a93b-114">接下来，此示例创建设计器，并将其主 <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> 和 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> 与用户界面中适当的容器相关联。</span><span class="sxs-lookup"><span data-stu-id="8a93b-114">Next the sample creates the designer, and associates its primary <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> and <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> with the appropriate container in the user interface.</span></span> <span data-ttu-id="8a93b-115">以下示例中有几行额外的代码需要解释一下。</span><span class="sxs-lookup"><span data-stu-id="8a93b-115">There are a few additional lines of code in the following example that merit some explanation.</span></span> <span data-ttu-id="8a93b-116">需要<xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A>调用来为 .NET Framework 附带的活动关联默认的活动设计器。</span><span class="sxs-lookup"><span data-stu-id="8a93b-116">The <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> call is required to associate the default activity designers for the activities shipped with .NET Framework.</span></span> <span data-ttu-id="8a93b-117">调用 <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> 传入要编辑的 WF 项。</span><span class="sxs-lookup"><span data-stu-id="8a93b-117"><xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> is called to pass in the WF item to be edited.</span></span> <span data-ttu-id="8a93b-118">最后，将 <xref:System.Activities.Presentation.WorkflowDesigner.View%2A>（主画布）和 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A>（属性网格）放置在用户界面的图面上。</span><span class="sxs-lookup"><span data-stu-id="8a93b-118">Finally, the <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (primary canvas) and <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (property grid) are placed onto the user interface surface.</span></span>  
+ <span data-ttu-id="cac88-114">接下来，此示例创建设计器，并将其主 <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> 和 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> 与用户界面中适当的容器相关联。</span><span class="sxs-lookup"><span data-stu-id="cac88-114">Next the sample creates the designer, and associates its primary <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> and <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> with the appropriate container in the user interface.</span></span> <span data-ttu-id="cac88-115">以下示例中有几行额外的代码需要解释一下。</span><span class="sxs-lookup"><span data-stu-id="cac88-115">There are a few additional lines of code in the following example that merit some explanation.</span></span> <span data-ttu-id="cac88-116">需要 <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> 调用才能将 .NET Framework 附带的活动的默认活动设计器关联起来。</span><span class="sxs-lookup"><span data-stu-id="cac88-116">The <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> call is required to associate the default activity designers for the activities shipped with .NET Framework.</span></span> <span data-ttu-id="cac88-117">调用 <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> 传入要编辑的 WF 项。</span><span class="sxs-lookup"><span data-stu-id="cac88-117"><xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> is called to pass in the WF item to be edited.</span></span> <span data-ttu-id="cac88-118">最后，将 <xref:System.Activities.Presentation.WorkflowDesigner.View%2A>（主画布）和 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A>（属性网格）放置在用户界面的图面上。</span><span class="sxs-lookup"><span data-stu-id="cac88-118">Finally, the <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (primary canvas) and <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (property grid) are placed onto the user interface surface.</span></span>  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  
@@ -57,8 +57,8 @@ protected override void OnInitialized(EventArgs e)
 }  
 ```  
   
-## <a name="using-the-rehosted-toolbox"></a><span data-ttu-id="8a93b-119">使用重新承载的工具栏</span><span class="sxs-lookup"><span data-stu-id="8a93b-119">Using the rehosted toolbox</span></span>  
- <span data-ttu-id="8a93b-120">此示例在 XAML 中以声明方式使用重新承载的工具箱控件。</span><span class="sxs-lookup"><span data-stu-id="8a93b-120">This sample uses the rehosted toolbox control declaratively in XAML.</span></span> <span data-ttu-id="8a93b-121">请注意，在代码中可以将一个类型传递给 <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper> 构造函数。</span><span class="sxs-lookup"><span data-stu-id="8a93b-121">Note that in code, one can pass a type to the <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper> constructor.</span></span>  
+## <a name="using-the-rehosted-toolbox"></a><span data-ttu-id="cac88-119">使用重新承载的工具栏</span><span class="sxs-lookup"><span data-stu-id="cac88-119">Using the rehosted toolbox</span></span>  
+ <span data-ttu-id="cac88-120">此示例在 XAML 中以声明方式使用重新承载的工具箱控件。</span><span class="sxs-lookup"><span data-stu-id="cac88-120">This sample uses the rehosted toolbox control declaratively in XAML.</span></span> <span data-ttu-id="cac88-121">请注意，在代码中可以将一个类型传递给 <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper> 构造函数。</span><span class="sxs-lookup"><span data-stu-id="cac88-121">Note that in code, one can pass a type to the <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper> constructor.</span></span>  
   
 ```xaml  
 <!-- Copyright (c) Microsoft Corporation. All rights reserved-->  
@@ -112,19 +112,19 @@ protected override void OnInitialized(EventArgs e)
 </Window>  
 ```  
   
-#### <a name="using-the-sample"></a><span data-ttu-id="8a93b-122">使用示例</span><span class="sxs-lookup"><span data-stu-id="8a93b-122">Using the sample</span></span>  
+#### <a name="using-the-sample"></a><span data-ttu-id="cac88-122">使用示例</span><span class="sxs-lookup"><span data-stu-id="cac88-122">Using the sample</span></span>  
   
-1. <span data-ttu-id="8a93b-123">在 Visual Studio 2010 中打开 DesignerRehosting 解决方案。</span><span class="sxs-lookup"><span data-stu-id="8a93b-123">Open the DesignerRehosting.sln solution in Visual Studio 2010.</span></span>  
+1. <span data-ttu-id="cac88-123">在 Visual Studio 2010 中打开 DesignerRehosting 解决方案。</span><span class="sxs-lookup"><span data-stu-id="cac88-123">Open the DesignerRehosting.sln solution in Visual Studio 2010.</span></span>  
   
-2. <span data-ttu-id="8a93b-124">按 F5 编译并运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="8a93b-124">Press F5 to compile and run the application.</span></span>  
+2. <span data-ttu-id="cac88-124">按 F5 编译并运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="cac88-124">Press F5 to compile and run the application.</span></span>  
   
-3. <span data-ttu-id="8a93b-125">一个 WPF 应用程序启动并显示一个重新承载的设计器。</span><span class="sxs-lookup"><span data-stu-id="8a93b-125">A WPF application starts with a rehosted designer.</span></span>  
+3. <span data-ttu-id="cac88-125">一个 WPF 应用程序启动并显示一个重新承载的设计器。</span><span class="sxs-lookup"><span data-stu-id="cac88-125">A WPF application starts with a rehosted designer.</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="8a93b-126">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="8a93b-126">The samples may already be installed on your machine.</span></span> <span data-ttu-id="8a93b-127">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="8a93b-127">Check for the following (default) directory before continuing.</span></span>  
+> <span data-ttu-id="cac88-126">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="cac88-126">The samples may already be installed on your machine.</span></span> <span data-ttu-id="cac88-127">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="cac88-127">Check for the following (default) directory before continuing.</span></span>  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> <span data-ttu-id="8a93b-128">如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="8a93b-128">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="8a93b-129">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="8a93b-129">This sample is located in the following directory.</span></span>  
+> <span data-ttu-id="cac88-128">如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="cac88-128">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="cac88-129">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="cac88-129">This sample is located in the following directory.</span></span>  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\DesignerRehosting\Basic`
