@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: f0082bd99b154f87ab90bee7a89afdb8405f6623
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 922d91466731b331cc409cc362c4ada2c287916a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920320"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715892"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>演练：在 WPF 应用程序中缓存应用程序数据
 缓存可以将数据存储在内存中以便快速访问。 再次访问数据时，应用程序可以从缓存获取数据，而不是从原始源检索数据。 这可改善性能和可伸缩性。 此外，数据源暂时不可用时，缓存可提供数据。
@@ -40,7 +40,7 @@ ms.locfileid: "72920320"
 
 - 监视缓存文件的路径，并通知缓存实例对被监视项的更改。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
  若要完成本演练，你将需要：
 
 - Visual Studio 2010。
@@ -78,7 +78,7 @@ ms.locfileid: "72920320"
      WPF 设计器将在 "**设计**" 视图中打开并显示 mainwindow.xaml 文件。 Visual Studio 将创建 "**我的项目**" 文件夹、应用程序 .xaml 文件和 mainwindow.xaml 文件。
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>针对 .NET Framework 并添加对缓存程序集的引用
- 默认情况下，WPF 应用程序以 [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]为目标。 若要在 WPF 应用程序中使用 <xref:System.Runtime.Caching> 命名空间，应用程序必须以 .NET Framework 4 （而不是 [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]）为目标，并且必须包括对命名空间的引用。
+ 默认情况下，WPF 应用程序以 .NET Framework 4 客户端配置文件为目标。 若要在 WPF 应用程序中使用 <xref:System.Runtime.Caching> 命名空间，应用程序必须以 .NET Framework 4 （而不是 .NET Framework 4 客户端配置文件）为目标，并且必须包括对命名空间的引用。
 
  因此，下一步是更改 .NET Framework 目标并添加对 <xref:System.Runtime.Caching> 命名空间的引用。
 
@@ -97,7 +97,7 @@ ms.locfileid: "72920320"
 
      将显示 "**高级编译器设置**" 对话框。
 
-4. 在 "**目标框架（所有配置）** " 列表中，选择 ".NET Framework 4"。 （请勿选择 [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。）
+4. 在 "**目标框架（所有配置）** " 列表中，选择 ".NET Framework 4"。 （请勿选择 .NET Framework 4 客户端配置文件。）
 
 5. 单击“确定”。
 
@@ -284,11 +284,11 @@ ms.locfileid: "72920320"
 12. 在 "**生成**" 菜单中，单击 "**生成 WPFCaching** " 以生成项目。
 
 ## <a name="testing-caching-in-the-wpf-application"></a>在 WPF 应用程序中测试缓存
- 现在可以对应用程序进行测试。
+ 现在可以测试此应用程序。
 
 #### <a name="to-test-caching-in-the-wpf-application"></a>在 WPF 应用程序中测试缓存
 
-1. 按 Ctrl+F5 运行应用程序。
+1. 按 Ctrl+F5 以运行应用程序。
 
      将显示 "`MainWindow`" 窗口。
 
@@ -325,7 +325,7 @@ ms.locfileid: "72920320"
  [!code-csharp[CachingWPFApplications#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[CachingWPFApplications#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Runtime.Caching.MemoryCache>
 - <xref:System.Runtime.Caching.ObjectCache>

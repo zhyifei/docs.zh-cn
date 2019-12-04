@@ -2,16 +2,16 @@
 title: 任务 3：创建工具箱窗格和属性网格窗格
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 402a25c1cb82c245afa94f58cefc180515622ea9
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 29e50b24135cd3d6a02052d846e1781b0d9fa325
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275858"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716222"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>任务 3：创建工具箱窗格和属性网格窗格
 
-在此任务中，将创建 "**工具箱**" 和 " **PropertyGrid** " 窗格，并将其添加到 "重新承载 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]。
+在此任务中，将创建 "**工具箱**" 和 " **PropertyGrid** " 窗格，并将其添加到重新承载 Windows 工作流设计器。
 
 若要参考，MainWindow.xaml.cs 文件中的三个任务完成后，应在重新承载文件中的代码在本主题末尾提供了[工作流设计器](rehosting-the-workflow-designer.md)系列主题。
 

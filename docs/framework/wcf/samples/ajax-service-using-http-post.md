@@ -2,25 +2,25 @@
 title: 使用 HTTP POST 的 AJAX 服务
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-ms.openlocfilehash: c5e5de34573fbfc8a5c6e9607d10881941a9bed5
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 560739c576965d597010a6885b53c7905aaeb8e7
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972022"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716182"
 ---
 # <a name="ajax-service-using-http-post"></a>使用 HTTP POST 的 AJAX 服务
 
-此示例演示如何使用 Windows Communication Foundation (WCF) 来创建使用 HTTP POST 的 ASP.NET 异步 JavaScript 和 XML (AJAX) 服务。 AJAX 服务是指可以从 Web 浏览器客户端使用基本 JavaScript 代码访问的服务。 此示例以[基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)示例为基础。这两个示例的唯一区别在于使用 HTTP POST, 而不是 HTTP GET。
+此示例演示如何使用 Windows Communication Foundation （WCF）来创建使用 HTTP POST 的 ASP.NET 异步 JavaScript 和 XML （AJAX）服务。 AJAX 服务是指可以从 Web 浏览器客户端使用基本 JavaScript 代码访问的服务。 此示例以[基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)示例为基础。这两个示例的唯一区别在于使用 HTTP POST，而不是 HTTP GET。
 
-Windows Communication Foundation (WCF) 中的 AJAX 支持经过优化, 可通过`ScriptManager`控件与 ASP.NET ajax 一起使用。 有关将 WCF 与 ASP.NET AJAX 一起使用的示例, 请参阅[Ajax 示例](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)。
+Windows Communication Foundation （WCF）中的 AJAX 支持经过优化，可通过 `ScriptManager` 控件与 ASP.NET AJAX 一起使用。 有关将 WCF 与 ASP.NET AJAX 一起使用的示例，请参阅[Ajax 示例](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)。
 
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。
 
 以下示例中的服务是不包含 AJAX 特定代码的 WCF 服务。
 
-如果对<xref:System.ServiceModel.Web.WebInvokeAttribute>操作应用了属性, 或未应用该<xref:System.ServiceModel.Web.WebGetAttribute>属性, 则使用默认的 HTTP 谓词 ("POST")。 POST 请求虽然比 GET 请求更难构造，但它们不会被缓存；当不适宜缓存时，应对所有操作使用 POST 请求。
+如果对操作应用 <xref:System.ServiceModel.Web.WebInvokeAttribute> 属性，或未应用 <xref:System.ServiceModel.Web.WebGetAttribute> 属性，则使用默认的 HTTP 谓词（"POST"）。 POST 请求虽然比 GET 请求更难构造，但它们不会被缓存；当不适宜缓存时，应对所有操作使用 POST 请求。
 
 ```csharp
 [ServiceContract(Namespace = "PostAjaxService")]
@@ -34,16 +34,16 @@ public interface ICalculator
 
 通过使用 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 在服务上创建 AJAX 终结点，就像在基本 AJAX 服务示例中一样。
 
-与 GET 请求不同的是，不能从浏览器中调用 POST 服务。 例如, 导航到`http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200`会导致错误, 因为 POST 服务`n1`要求在消息正文中以`n2` JSON 格式发送和参数, 而不是在 URL 中发送和参数。
+与 GET 请求不同的是，不能从浏览器中调用 POST 服务。 例如，导航到 `http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200` 会导致错误，因为 POST 服务要求在消息正文中以 JSON 格式而不是在 URL 中发送 `n1` 和 `n2` 参数。
 
-客户端网页 PostAjaxClientPage.aspx 包含 ASP.NET 代码以便在用户单击页面上的操作按钮之一时调用服务。 服务的响应方式与在[基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)示例中一样, 通过 GET 请求来实现。
+客户端网页 PostAjaxClientPage.aspx 包含 ASP.NET 代码以便在用户单击页面上的操作按钮之一时调用服务。 服务的响应方式与在[基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)示例中一样，通过 GET 请求来实现。
 
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\PostAjaxService`
 
@@ -53,4 +53,4 @@ public interface ICalculator
 
 2. 按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中所述生成解决方案 postajaxservice.sln。
 
-3. 导航到 `http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx` （不要打开 PostAjaxClientPage.aspx 浏览器中从项目目录中）。
+3. 导航到 `http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx` （不要在浏览器中从项目目录打开 Postajaxclientpage.aspx）。

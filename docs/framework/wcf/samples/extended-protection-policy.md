@@ -2,17 +2,17 @@
 title: 扩展保护策略
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: c7c2e85872c158facb2de91a7413ac5a04491d7f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1cb6d44e8f6ee8f54f776453e5a1783ab0cfa4f0
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044989"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716426"
 ---
 # <a name="extended-protection-policy"></a>扩展保护策略
 扩展保护是一种针对中间人 (MITM) 攻击提供保护的安全计划。 MITM 攻击是一种安全威胁，MITM 在该攻击中获取客户端凭据并将其转发给服务器。  
   
-## <a name="demonstrates"></a>演示  
+## <a name="demonstrates"></a>演示文本  
  扩展保护  
   
 ## <a name="discussion"></a>讨论  
@@ -28,13 +28,13 @@ ms.locfileid: "70044989"
   
 1. 从 **"控制面板**"、"**添加/删除程序**"、" **Windows 功能**" 中安装 Internet Information Services。  
   
-2. 在**Windows 功能**中安装**windows 身份验证**, **Internet Information Services**, **World Wide Web 服务**,**安全性**和**Windows 身份验证**。  
+2. 在**Windows 功能**中安装**windows 身份验证**， **Internet Information Services**， **World Wide Web 服务**，**安全性**和**Windows 身份验证**。  
   
-3. 在**Windows 功能**中安装**Windows Communication Foundation http 激活**, **Microsoft .NET 框架 3.5.1**, 并**Windows Communication Foundation HTTP 激活**。  
+3. 在**Windows 功能**中安装**Windows Communication Foundation http 激活**， **Microsoft .NET 框架 3.5.1**，并**Windows Communication Foundation HTTP 激活**。  
   
 4. 本示例要求客户端与服务器建立一个安全通道，因此它要求存在服务器证书，此证书可从 Internet 信息服务 (IIS) 管理器进行安装。  
   
-    1. 打开 IIS 管理器。 打开 "**服务器证书**", 当选择根节点 (计算机名称) 时, 它将出现在 "**功能视图**" 选项卡中。  
+    1. 打开 IIS 管理器。 打开 "**服务器证书**"，当选择根节点（计算机名称）时，它将出现在 "**功能视图**" 选项卡中。  
   
     2. 为了测试此示例，可以创建一个自签名证书。 如果不希望 Internet Explorer 提示证书不安全，可将证书安装到受信任的证书根颁发机构存储区中。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "70044989"
   
 6. 生成服务。 这会在 IIS 中创建一个虚拟目录，并根据需要为要进行 Web 承载的服务复制 .dll、.svc 和 .config 文件。  
   
-7. 打开 IIS 管理器。 右键单击在上一步中创建的虚拟目录 (**ExtendedProtection**)。 选择 "**转换为应用程序**"。  
+7. 打开 IIS 管理器。 右键单击在上一步中创建的虚拟目录（**ExtendedProtection**）。 选择 "**转换为应用程序**"。  
   
-8. 在 IIS 管理器中为此虚拟目录打开 "**身份验证**" 模块, 并启用 " **Windows 身份验证**"。  
+8. 在 IIS 管理器中为此虚拟目录打开 "**身份验证**" 模块，并启用 " **Windows 身份验证**"。  
   
-9. 为此虚拟目录打开 " **Windows 身份验证**" 下的**高级设置**, 并将其设置为 "**必需**"。  
+9. 为此虚拟目录打开 " **Windows 身份验证**" 下的**高级设置**，并将其设置为 "**必需**"。  
   
 10. 通过从浏览器窗口（提供完全限定的域名）访问 HTTPS URL 可测试服务。 如果想要从远程计算机访问此 URL，请确保为所有传入 HTTP 和 HTTPS 连接打开了防火墙。  
   
@@ -59,6 +59,6 @@ ms.locfileid: "70044989"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Security\ExtendedProtection`

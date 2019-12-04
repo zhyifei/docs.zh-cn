@@ -2,17 +2,17 @@
 title: 访问 OperationContext
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-ms.openlocfilehash: dea990e275125dc1cd2255b88e506d363c3ac78e
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: b8a09aff7b5a30b5267fbdbd7bd6391996f359c7
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989381"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715090"
 ---
 # <a name="accessing-operationcontext"></a>访问 OperationContext
-此示例演示如何将消息传递活动<xref:System.ServiceModel.Activities.Receive> （ <xref:System.ServiceModel.Activities.Send>和）与自定义作用域活动一起使用， <xref:System.ServiceModel.OperationContext.Current%2A>以便在传出消息或传入消息中访问和附加或检索自定义消息标头。  
+此示例演示如何将消息传递活动（<xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.Send>）与自定义作用域活动一起使用，以访问 <xref:System.ServiceModel.OperationContext.Current%2A> 并附加或检索传出消息或传入消息中的自定义消息标头。  
   
-## <a name="demonstrates"></a>演示  
+## <a name="demonstrates"></a>演示文本  
  消息传递活动、<xref:System.ServiceModel.Activities.ISendMessageCallback>、<xref:System.ServiceModel.Activities.IReceiveMessageCallback>。  
   
 ## <a name="discussion"></a>讨论  
@@ -41,6 +41,6 @@ ms.locfileid: "70989381"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\Accessing Operation Context`

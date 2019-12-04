@@ -2,22 +2,22 @@
 title: 可靠安全配置文件
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: d7cfc028c5cf1ba5cfba009cd29c89f07c64fd9c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ee94dc5be2c50f9e383a42d435996b2fd35df4a4
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044807"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716501"
 ---
 # <a name="reliable-secure-profile"></a>可靠安全配置文件
-此示例演示如何撰写 WCF 和[可靠安全配置文件](https://go.microsoft.com/fwlink/?LinkId=178140)(RSP)。 此示例演示如何实现[建立连接](https://go.microsoft.com/fwlink/?LinkId=178141)通道, 该通道可以与可靠的消息传送组合在一起, 还可以选择使用安全通道来创建基于 RSP 规范的可靠安全绑定。  
+此示例演示如何撰写 WCF 和[可靠安全配置文件](https://go.microsoft.com/fwlink/?LinkId=178140)（RSP）。 此示例演示如何实现[建立连接](https://go.microsoft.com/fwlink/?LinkId=178141)通道，该通道可以与可靠的消息传送组合在一起，还可以选择使用安全通道来创建基于 RSP 规范的可靠安全绑定。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   
@@ -28,9 +28,9 @@ ms.locfileid: "70044807"
   
 1. 打开**ReliableSecureProfile**解决方案。  
   
-2. 在**解决方案资源管理器**中右键单击**服务**项目, 从上下文菜单中选择 "**调试**"、"**启动新实例**"。 这会启动服务主机。  
+2. 在**解决方案资源管理器**中右键单击**服务**项目，从上下文菜单中选择 "**调试**"、"**启动新实例**"。 这会启动服务主机。  
   
-3. 右键单击**解决方案资源管理器**中的**客户端**项目, 从上下文菜单中选择 "**调试**" 和 "**启动新实例**"。 这会启动客户端。  
+3. 右键单击**解决方案资源管理器**中的**客户端**项目，从上下文菜单中选择 "**调试**" 和 "**启动新实例**"。 这会启动客户端。  
   
 4. 在客户端控制台窗口中出现提示时键入任意字符串，然后单击 ENTER。这会将输入字符串发送到计算此字符串的哈希的服务。  
   

@@ -2,12 +2,12 @@
 title: 演练：使用 Async 和 Await 访问 Web
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: c13e592eb155d14c2e7cb2388a96925a7f1fa413
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7f649f1f16da545c4587f0ed76b8f1a443ee8744
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349097"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715853"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>演练：使用 Async 和 Await 访问 Web (Visual Basic)
 
@@ -45,13 +45,13 @@ ms.locfileid: "74349097"
 
 1. 启动 Visual Studio。
 
-2. 在菜单栏上，依次选择 **“文件”** -&gt; **“新建”** -&gt; **“项目”** 。
+2. 在菜单栏上，依次选择 **“文件”** 、 **“新建”** 、 **“项目”** 。
 
     **“新建项目”** 对话框随即打开。
 
 3. 在 "**已安装的模板**" 窗格中选择 "Visual Basic"，然后从项目类型列表中选择 " **WPF 应用程序**"。
 
-4. 在 **“名称”** 文本框中，输入“`AsyncExampleWPF`”，然后选择 **“确定”** 按钮。
+4. 在“名称”文本框中，输入 `AsyncExampleWPF`，然后选择“确定”按钮。
 
     新项目将出现在“解决方案资源管理器”中。
 
@@ -272,7 +272,7 @@ ms.locfileid: "74349097"
 
     如果你的异步方法需要完成不依赖于任务的完成的工作，则在调用异步方法之后及应用 await 运算符之前的这段时间，该方法可以在这两个语句之间继续完成该工作。 有关示例，请参阅[如何：使用 Async 和 Await 并行发出多个 Web 请求（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)和[如何：使用 System.threading.tasks.task.whenall 扩展 Async 演练（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。
 
-3. 因为在上一步中添加了 `Await` 运算符，所以会发生编译器错误。 运算符只能在使用[Async](../../../../visual-basic/language-reference/modifiers/async.md)修饰符标记的方法中使用。 当你重复转换步骤以使用对 `CopyTo` 的调用替换对 `CopyToAsync` 的调用时，请忽略该错误。
+3. 因为在上一步中添加了 `Await` 运算符，所以会发生编译器错误。 运算符只能在使用[Async](../../../../visual-basic/language-reference/modifiers/async.md)修饰符标记的方法中使用。 当你重复转换步骤以使用对 `CopyToAsync` 的调用替换对 `CopyTo` 的调用时，请忽略该错误。
 
     - 更改被调用到 <xref:System.IO.Stream.CopyToAsync%2A> 的方法的名称。
 
@@ -299,7 +299,7 @@ ms.locfileid: "74349097"
     Private Async Function GetURLContents(url As String) As Byte()
     ```
 
-5. 异步方法的返回类型只能 <xref:System.Threading.Tasks.Task>，<xref:System.Threading.Tasks.Task%601>。 在 Visual Basic 中，方法必须为返回 `Function` 或 `Task` 的 `Task(Of T)`，或方法必须为 `Sub`。 通常，仅在异步事件处理程序中使用 `Sub` 方法，其中 `Sub` 是必需的。 在其他情况下，如果完成的方法具有返回 T 类型的值的[Return](../../../../visual-basic/language-reference/statements/return-statement.md)语句，则使用 `Task(T)`; 如果完成的方法不返回有意义的值，则使用 `Task`。
+5. 异步方法的返回类型只能 <xref:System.Threading.Tasks.Task>，<xref:System.Threading.Tasks.Task%601>。 在 Visual Basic 中，方法必须为返回 `Task` 或 `Task(Of T)` 的 `Function`，或方法必须为 `Sub`。 通常，仅在异步事件处理程序中使用 `Sub` 方法，其中 `Sub` 是必需的。 在其他情况下，如果完成的方法具有返回 T 类型的值的[Return](../../../../visual-basic/language-reference/statements/return-statement.md)语句，则使用 `Task(T)`; 如果完成的方法不返回有意义的值，则使用 `Task`。
 
     有关详细信息，请参阅[异步返回类型（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)。
 
@@ -362,7 +362,7 @@ ms.locfileid: "74349097"
 
 2. 由于 `SumPageSizesAsync` 是异步方法，请更改事件处理程序中的代码以等待结果。
 
-    对 `SumPageSizesAsync` 的调用反射对 `CopyToAsync` 中的 `GetURLContentsAsync` 的调用。 调用返回的是 `Task`，而不是 `Task(T)`。
+    对 `SumPageSizesAsync` 的调用反射对 `GetURLContentsAsync` 中的 `CopyToAsync` 的调用。 调用返回的是 `Task`，而不是 `Task(T)`。
 
     与之前的过程一样，你可以使用一条语句或两条语句转换调用。 下列代码显示这些更改。
 
@@ -424,7 +424,7 @@ ms.locfileid: "74349097"
         New HttpClient() With {.MaxResponseContentBufferSize = 1000000}
     ```
 
-2. 在 `SumPageSizesAsync,` 中，使用对 `GetURLContentsAsync` 方法的调用替换对 `HttpClient` 方法的调用。
+2. 在 `SumPageSizesAsync,` 中，使用对 `HttpClient` 方法的调用替换对 `GetURLContentsAsync` 方法的调用。
 
     ```vb
     Dim urlContents As Byte() = Await client.GetByteArrayAsync(url)
@@ -660,11 +660,11 @@ End Class
 
 ## <a name="see-also"></a>另请参阅
 
-- [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)（异步示例：访问 Web 演练（C# 和 Visual Basic））
-- [Await 运算符](../../../../visual-basic/language-reference/operators/await-operator.md)
-- [Async](../../../../visual-basic/language-reference/modifiers/async.md)
-- [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [异步返回类型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
-- [基于任务的异步编程 (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847)
-- [如何：使用 Task.WhenAll 扩展异步演练 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [如何：使用 Async 和 Await 并行发出多个 Web 请求 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [异步示例：访问 Web 演练（C# 和 Visual Basic）](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Await 运算符](../../../language-reference/operators/await-operator.md)
+- [Async](../../../language-reference/modifiers/async.md)
+- [使用 Async 和 Await 的异步编程 (Visual Basic)](index.md)
+- [异步返回类型 (Visual Basic)](async-return-types.md)
+- [基于任务的异步编程 (TAP)](https://www.microsoft.com/download/details.aspx?id=19957)
+- [如何：使用 Task.WhenAll 扩展异步演练 (Visual Basic)](how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [如何：使用 Async 和 Await 并行发出多个 Web 请求 (Visual Basic)](how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

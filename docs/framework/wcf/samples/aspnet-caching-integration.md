@@ -2,18 +2,18 @@
 title: ASP.NET 缓存集成
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 56f686b83deb576f1245a9d4b9df2df433ea1e2f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 23c10e56dba7daec2d1027de92e8252c8fe69055
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045777"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716176"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET 缓存集成
 
 此示例演示如何通过 WCF WEB HTTP 编程模型使用 ASP.NET 输出缓存。 本主题重点介绍 ASP.NET 输出缓存集成功能。
 
-## <a name="demonstrates"></a>演示
+## <a name="demonstrates"></a>演示文本
 
 与 ASP.NET 输出缓存的集成
 
@@ -22,27 +22,27 @@ ms.locfileid: "70045777"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetCachingIntegration`
 
 ## <a name="discussion"></a>讨论
 
-该示例使用<xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>将 ASP.NET output 缓存与 Windows Communication Foundation (WCF) 服务结合使用。 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 应用于服务操作，并在应该应用于给定操作的响应的配置文件中提供缓存配置文件的名称。
+该示例使用 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 来利用 Windows Communication Foundation （WCF）服务的 ASP.NET 输出缓存。 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 应用于服务操作，并在应该应用于给定操作的响应的配置文件中提供缓存配置文件的名称。
 
-在示例服务项目的 Service.cs 文件中, `GetCustomer`和`GetCustomers` <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>操作都用来标记, 后者提供缓存配置文件名称 "CacheFor60Seconds"。 在服务项目的 web.config 文件中, 缓存配置文件 "CacheFor60Seconds" 在 <`caching``system.web`> 的 < > 元素下提供。 对于此缓存配置文件, `duration`属性的值为 "60", 因此与此配置文件关联的响应将在 ASP.NET 输出缓存中缓存60秒。 此外, 对于此缓存配置文件, `varmByParam`该属性设置为 "format", 因此具有不同`format`查询字符串参数值的请求会分别缓存其响应。 最后, 缓存配置文件的`varyByHeader`属性设置为 "接受", 因此具有不同 Accept 标头值的请求会分别缓存其响应。
+在示例服务项目的 Service.cs 文件中，`GetCustomer` 和 `GetCustomers` 操作都用 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>进行标记，这将提供缓存配置文件名称 "CacheFor60Seconds"。 在服务项目的 web.config 文件中，缓存配置文件 "CacheFor60Seconds" 以 <`system.web`> 的 <`caching`> 元素提供。 对于此缓存配置文件，`duration` 属性的值是 "60"，因此与此配置文件关联的响应将在 ASP.NET 输出缓存中缓存60秒。 此外，对于此缓存配置文件，`varmByParam` 特性设置为 "format"，因此 `format` 查询字符串参数具有不同值的请求会分别缓存其响应。 最后，缓存配置文件的 `varyByHeader` 属性设置为 "接受"，因此具有不同 Accept 标头值的请求会分别缓存其响应。
 
-客户端项目中的 Program.cs 演示如何使用 <xref:System.Net.HttpWebRequest> 编写此类客户端。 请注意，这只是访问 WCF 服务的一种方式。 还可以使用其他 .NET Framework 类 (例如 WCF 通道工厂和<xref:System.Net.WebClient>) 来访问该服务。 SDK 中的其他示例 (如[基本 HTTP 服务](../../../../docs/framework/wcf/samples/basic-http-service.md)示例) 演示如何使用这些类与 WCF 服务进行通信。
+客户端项目中的 Program.cs 演示如何使用 <xref:System.Net.HttpWebRequest> 编写此类客户端。 请注意，这只是访问 WCF 服务的一种方式。 还可以使用其他 .NET Framework 类（例如 WCF 通道工厂和 <xref:System.Net.WebClient>）来访问服务。 SDK 中的其他示例（如[基本 HTTP 服务](../../../../docs/framework/wcf/samples/basic-http-service.md)示例）演示如何使用这些类与 WCF 服务进行通信。
 
 ## <a name="to-run-the-sample"></a>运行示例
 
 该示例由三个项目组成：
 
-- **服务**：一个 Web 应用程序项目, 该项目包含 ASP.NET 中承载的 WCF HTTP 服务。
+- **服务**：一个 Web 应用程序项目，该项目包含 ASP.NET 中承载的 WCF HTTP 服务。
 
-- **客户端**:一个对服务进行调用的控制台应用程序项目。
+- **客户端**：使调用服务的控制台应用程序项目。
 
-- **常见**:一个共享库, 其中包含客户端和服务使用的客户类型。
+- **常见**：一个共享库，其中包含客户端和服务使用的客户类型。
 
 在客户端控制台应用程序运行时，客户端会对服务进行请求，并将响应中的相关信息写入控制台窗口。
 
@@ -52,11 +52,11 @@ ms.locfileid: "70045777"
 
 2. 按 Ctrl+Shift+B 生成解决方案。
 
-3. 如果 "**解决方案资源管理器**" 窗口尚未打开, 请按 CTRL + W + S。
+3. 如果 "**解决方案资源管理器**" 窗口尚未打开，请按 CTRL + W + S。
 
-4. 从 "**解决方案资源管理器**" 窗口中, 右键单击**服务**项目, 然后选择 "**启动新实例**"。 这将启动承载服务的 ASP.NET 开发服务器。
+4. 从 "**解决方案资源管理器**" 窗口中，右键单击**服务**项目，然后选择 "**启动新实例**"。 这将启动承载服务的 ASP.NET 开发服务器。
 
-5. 从 "**解决方案资源管理器**" 窗口中, 右键单击**客户端**项目, 然后选择 "**启动新实例**"。
+5. 从 "**解决方案资源管理器**" 窗口中，右键单击**客户端**项目，然后选择 "**启动新实例**"。
 
 6. 出现客户端控制台窗口，该窗口提供了正在运行的服务的 URI，以及该服务的 HTML 帮助页的 URI。 可随时通过在浏览器中键入 HTML 帮助页的 URI 来查看该帮助页。
 
@@ -66,4 +66,4 @@ ms.locfileid: "70045777"
 
 9. 按 Shift+F5 可停止调试服务。
 
-10. 在 Windows 通知区域中, 右键单击 "ASP.NET 开发服务器" 图标, 然后选择 "**停止**"。
+10. 在 Windows 通知区域中，右键单击 "ASP.NET 开发服务器" 图标，然后选择 "**停止**"。

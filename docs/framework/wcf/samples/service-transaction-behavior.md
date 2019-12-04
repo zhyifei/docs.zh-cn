@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: fc71d077e219481281be8f8bf22352bd19baebac
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 38ad03d64d95e0653fba8018c59c62db9a698096
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425473"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715113"
 ---
 # <a name="service-transaction-behavior"></a>服务事务行为
 
-此示例演示客户端协调事务的用法，以及为了控制服务事务行为而对 ServiceBehaviorAttribute 和 OperationBehaviorAttribute 进行的设置。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) ，实现计算器服务，但扩展来维护数据库表和有状态运行总数计算器操作中所执行操作的服务器日志。 持久写入服务器日志表依赖于客户端协调事务的结果 - 如果客户端事务未完成，Web 服务事务可以确保不会提交对数据库的更新。
+此示例演示客户端协调事务的用法，以及为了控制服务事务行为而对 ServiceBehaviorAttribute 和 OperationBehaviorAttribute 进行的设置。 此示例基于实现计算器服务的[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，但扩展为维护数据库表中所执行操作的服务器日志和计算器操作的有状态运行总计。 持久写入服务器日志表依赖于客户端协调事务的结果 - 如果客户端事务未完成，Web 服务事务可以确保不会提交对数据库的更新。
 
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。
@@ -101,7 +101,7 @@ client.Close();
 
   - `ReleaseServiceInstanceOnTransactionComplete` 属性指定当事务完成后是否回收服务实例。 如果将此属性设置为 `false`，服务将在所有操作请求中维护相同的服务实例。 这是维护运行总数所必需的。 如果设置为 `true`，每完成一个操作就会生成一个新实例。
 
-  - `TransactionAutoCompleteOnSessionClose` 属性指定会话关闭时是否完成未处理的事务。 通过将其设置为`false`，对单个操作所需设置<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete?displayProperty=nameWithType>属性设置为`true`或者显式要求调用<xref:System.ServiceModel.OperationContext.SetTransactionComplete?displayProperty=nameWithType>方法以完成事务。 此示例对这两种方法进行了演示。
+  - `TransactionAutoCompleteOnSessionClose` 属性指定会话关闭时是否完成未处理的事务。 通过将其设置为 `false`，每个操作都需要将 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete?displayProperty=nameWithType> 属性设置为 `true` 或显式要求调用 <xref:System.ServiceModel.OperationContext.SetTransactionComplete?displayProperty=nameWithType> 方法才能完成事务。 此示例对这两种方法进行了演示。
 
 - 在 `ServiceContractAttribute` 上：
 
@@ -211,57 +211,57 @@ Creating new service instance...
 
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
-3. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。
+3. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
 
-如果跨计算机运行示例，必须配置 Microsoft 分布式事务处理协调器 (MSDTC) 以启用网络事务流并使用 WsatConfig.exe 工具启用 Windows Communication Foundation (WCF) 事务网络支持。
+如果跨计算机运行此示例，则必须配置 Microsoft 分布式事务处理协调器（MSDTC）以启用网络事务流，并使用 Wsatconfig.exe 工具启用 Windows Communication Foundation （WCF）事务网络支持.
 
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>配置 Microsoft 分布式事务处理协调器 (MSDTC) 以支持跨计算机运行示例
 
 1. 在服务计算机上，配置 MSDTC 以允许传入网络事务。
 
-    1. 从**启动**菜单中，导航到**控制面板**，然后**管理工具**，然后**组件服务**。
+    1. 从 "**开始**" 菜单，导航到 **"控制面板**"，然后依次导航到 "**管理工具**" 和 "**组件服务**"。
 
-    2. 右键单击**我的电脑**，然后选择**属性**。
+    2. 右键单击**我的电脑**，然后选择 "**属性**"。
 
-    3. 上**MSDTC**选项卡上，单击**的安全配置**。
+    3. 在 " **MSDTC** " 选项卡上，单击 "**安全配置**"。
 
-    4. 检查**网络 DTC 访问**并**允许入站**。
+    4. 检查 "**网络 DTC 访问**" 和 "**允许入站**"。
 
-    5. 单击**是**若要重新启动 MS DTC 服务，然后单击**确定**。
+    5. 单击 **"是"** 以重新启动 MS DTC 服务，然后单击 **"确定"** 。
 
-    6. 单击“确定”  关闭对话框。
+    6. 单击“确定”关闭对话框。
 
 2. 在服务计算机和客户端计算机上，配置 Windows 防火墙以便在例外应用程序列表中包括 Microsoft 分布式事务处理协调器 (MSDTC)：
 
     1. 从“控制面板”上运行 Windows 防火墙应用程序。
 
-    2. 从**异常**选项卡上，单击**添加程序**。
+    2. 在 "**例外**" 选项卡中，单击 "**添加程序**"。
 
     3. 浏览到文件夹 C:\WINDOWS\System32。
 
-    4. 选择 Msdtc.exe 并单击**打开**。
+    4. 选择 "Msdtc"，并单击 "**打开**"。
 
-    5. 单击**确定**以关闭**添加程序**对话框中，然后单击**确定**以关闭 Windows 防火墙小程序。
+    5. 单击 **"确定"** 关闭 "**添加程序**" 对话框，然后再次单击 **"确定"** 关闭 Windows 防火墙小程序。
 
 3. 在客户端计算机上，配置 MSDTC 以允许传出网络事务：
 
-    1. 从**启动**菜单中，导航到**控制面板**，然后**管理工具**，然后**组件服务**。
+    1. 从 "**开始**" 菜单，导航到 **"控制面板**"，然后依次导航到 "**管理工具**" 和 "**组件服务**"。
 
-    2. 右键单击**我的电脑**，然后选择**属性**。
+    2. 右键单击**我的电脑**，然后选择 "**属性**"。
 
-    3. 上**MSDTC**选项卡上，单击**的安全配置**。
+    3. 在 " **MSDTC** " 选项卡上，单击 "**安全配置**"。
 
-    4. 检查**网络 DTC 访问**并**允许出站**。
+    4. 检查 "**网络 DTC 访问**" 和 "**允许出站**"。
 
-    5. 单击**是**若要重新启动 MS DTC 服务，然后单击**确定**。
+    5. 单击 **"是"** 以重新启动 MS DTC 服务，然后单击 **"确定"** 。
 
-    6. 单击“确定”  关闭对话框。
+    6. 单击“确定”关闭对话框。
 
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`

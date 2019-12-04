@@ -2,19 +2,19 @@
 title: 自定义复合设计器 — 工作流项演示器
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: 239f7ccd81d5bb60eed32298220df215b09e3e47
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 31dfae70a8b95bdfd457efe7a20ce44c2ba9c61f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038377"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715182"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>自定义复合设计器 — 工作流项演示器
-<xref:System.Activities.Presentation.WorkflowItemPresenter>是 WF 设计器编程模型中的一种密钥类型, 它允许创建可放置任意活动的 "放置区"。 此示例演示如何生成一个表示 "放置区域" 的活动设计器。
+<xref:System.Activities.Presentation.WorkflowItemPresenter> 是 WF 设计器编程模型中的一种密钥类型，它允许创建可放置任意活动的 "放置区"。 此示例演示如何生成一个表示 "放置区域" 的活动设计器。
 
  此示例演示：
 
-## <a name="demonstrates"></a>演示
+## <a name="demonstrates"></a>演示文本
 
 - 使用 <xref:System.Activities.Presentation.WorkflowItemPresenter> 创建自定义活动设计器。
 
@@ -63,7 +63,7 @@ ms.locfileid: "70038377"
 </sap:ActivityDesigner>
 ```
 
- 请注意，应使用 WPF 数据绑定来绑定到 `ModelItem.Body`。 `ModelItem`是<xref:System.Activities.Presentation.ActivityDesigner>的属性, 它引用设计器所用于的基础对象, 在本例中为**命名为 simplenativeactivity**。
+ 请注意，应使用 WPF 数据绑定来绑定到 `ModelItem.Body`。 `ModelItem` 是 <xref:System.Activities.Presentation.ActivityDesigner> 上的属性，该属性引用设计器所用于的基础对象，在本例中为**命名为 simplenativeactivity**。
 
 #### <a name="to-setup-build-and-run-the-sample"></a>设置、生成和运行示例
 
@@ -76,11 +76,11 @@ ms.locfileid: "70038377"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Activities.Presentation.WorkflowItemPresenter>
 - [使用工作流设计器开发应用程序](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

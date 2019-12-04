@@ -2,34 +2,34 @@
 title: 任务 2：承载工作流设计器
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: 15657ad79632812d3802e4da22b9ef297d08f932
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 8e4c17ed182cec7748b9a1f11f76ff90aa60c39e
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180252"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715781"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>任务 2：承载工作流设计器
 
-本主题介绍在 Windows Presentation Foundation （WPF）应用程序中承载 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 的实例的过程。
+本主题介绍在 Windows Presentation Foundation （WPF）应用程序中承载 Windows 工作流设计器的实例的过程。
 
-此过程配置包含设计器的**网格**控件，以编程方式创建 <xref:System.Activities.Presentation.WorkflowDesigner> 的实例，该实例包含默认的 <xref:System.Activities.Statements.Sequence> 活动，注册设计器元数据以为所有内置活动提供设计器支持，并在 WPF 应用程序中承载 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]。
+此过程配置包含设计器的**网格**控件，以编程方式创建 <xref:System.Activities.Presentation.WorkflowDesigner> 的实例，该实例包含默认的 <xref:System.Activities.Statements.Sequence> 活动，注册设计器元数据以为所有内置活动提供设计器支持，并在 WPF 应用程序中承载工作流设计器。
 
 ## <a name="to-host-the-workflow-designer"></a>承载工作流设计器
 
 1. 打开你在[任务1：创建新的 Windows Presentation Foundation 应用程序](task-1-create-a-new-wpf-app.md)中创建的 HostingApplication 项目。
 
-2. 调整窗口的大小，以便更轻松地使用 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]。 为此，请在设计器中选择 " **mainwindow.xaml** "，按 F4 以显示 "**属性**" 窗口，并在 "**布局**" 部分中，将 "**宽度**" 设置为600，将 "**高度**" 设置为值350。
+2. 调整窗口的大小，使其更易于使用工作流设计器。 为此，请在设计器中选择 " **mainwindow.xaml** "，按 F4 以显示 "**属性**" 窗口，并在 "**布局**" 部分中，将 "**宽度**" 设置为600，将 "**高度**" 设置为值350。
 
 3. 设置网格名称，方法是在设计器中选择 "**网格**" 面板（单击**mainwindow.xaml**中的框），然后将 "**属性**" 窗口顶部的 "**名称**" 属性设置为 "grid1"。
 
 4. 在 "**属性**" 窗口中，单击 "`ColumnDefinitions`" 属性旁边的省略号（ **...** ）以打开 "**集合编辑器**" 对话框。
 
-5. 在 "**集合编辑器**" 对话框中，单击 "**添加**" 按钮三次，以便在布局中插入三列。 第一列将包含 "**工具箱**"，第二列将承载 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]，第三列将用于属性检查器。
+5. 在 "**集合编辑器**" 对话框中，单击 "**添加**" 按钮三次，以便在布局中插入三列。 第一列将包含 "**工具箱**"，第二列将承载工作流设计器，第三列将用于属性检查器。
 
 6. 将中间列的 `Width` 属性设置为值 "4 *"。
 
-7. 单击 **“确定”** ，保存这些更改。 以下 XAML 将添加到*mainwindow.xaml*文件中：
+7. 单击“确定” 以保存更改。 以下 XAML 将添加到*mainwindow.xaml*文件中：
 
     ```xaml
     <Grid Name="grid1">
@@ -88,7 +88,7 @@ ms.locfileid: "72180252"
         }
         ```
 
-    4. 注册设计器元数据，为所有内置活动添加设计器支持。 通过此方法可以将活动从工具箱拖放到 <xref:System.Activities.Statements.Sequence> 中的原始 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 活动上。 为此，请将 `RegisterMetadata` 方法添加到 `MainWindow` 类：
+    4. 注册设计器元数据，为所有内置活动添加设计器支持。 这使您可以将活动从 "工具箱" 拖放到工作流设计器中的原始 <xref:System.Activities.Statements.Sequence> 活动。 为此，请将 `RegisterMetadata` 方法添加到 `MainWindow` 类：
 
         ```csharp
         private void RegisterMetadata()
