@@ -2,30 +2,30 @@
 title: 为工作流配置跟踪
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 25edef2edc23a3823a892c64809df21f333478db
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 97b25873e9f20d5d390b7a59531b3a5af32296df
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458899"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802669"
 ---
-# <a name="configuring-tracking-for-a-workflow"></a><span data-ttu-id="266b1-102">为工作流配置跟踪</span><span class="sxs-lookup"><span data-stu-id="266b1-102">Configuring Tracking for a Workflow</span></span>
+# <a name="configuring-tracking-for-a-workflow"></a><span data-ttu-id="6040b-102">为工作流配置跟踪</span><span class="sxs-lookup"><span data-stu-id="6040b-102">Configuring Tracking for a Workflow</span></span>
 
-<span data-ttu-id="266b1-103">工作流可以按以下三种方法执行：</span><span class="sxs-lookup"><span data-stu-id="266b1-103">A workflow can execute in three ways:</span></span>
+<span data-ttu-id="6040b-103">工作流可以按以下三种方法执行：</span><span class="sxs-lookup"><span data-stu-id="6040b-103">A workflow can execute in three ways:</span></span>
 
-- <span data-ttu-id="266b1-104">在 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中承载</span><span class="sxs-lookup"><span data-stu-id="266b1-104">Hosted in <xref:System.ServiceModel.Activities.WorkflowServiceHost></span></span>
+- <span data-ttu-id="6040b-104">在 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中承载</span><span class="sxs-lookup"><span data-stu-id="6040b-104">Hosted in <xref:System.ServiceModel.Activities.WorkflowServiceHost></span></span>
 
-- <span data-ttu-id="266b1-105">作为 <xref:System.Activities.WorkflowApplication> 执行</span><span class="sxs-lookup"><span data-stu-id="266b1-105">Executed as a <xref:System.Activities.WorkflowApplication></span></span>
+- <span data-ttu-id="6040b-105">作为 <xref:System.Activities.WorkflowApplication> 执行</span><span class="sxs-lookup"><span data-stu-id="6040b-105">Executed as a <xref:System.Activities.WorkflowApplication></span></span>
 
-- <span data-ttu-id="266b1-106">使用 <xref:System.Activities.WorkflowInvoker> 直接执行</span><span class="sxs-lookup"><span data-stu-id="266b1-106">Executed directly using <xref:System.Activities.WorkflowInvoker></span></span>
+- <span data-ttu-id="6040b-106">使用 <xref:System.Activities.WorkflowInvoker> 直接执行</span><span class="sxs-lookup"><span data-stu-id="6040b-106">Executed directly using <xref:System.Activities.WorkflowInvoker></span></span>
 
-<span data-ttu-id="266b1-107">根据工作流承载选项的不同，可以通过代码或配置文件添加跟踪参与者。</span><span class="sxs-lookup"><span data-stu-id="266b1-107">Depending on the workflow hosting option, a tracking participant can be added either through code or through a configuration file.</span></span> <span data-ttu-id="266b1-108">本主题介绍如何通过向 <xref:System.Activities.WorkflowApplication> 和 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 添加跟踪参与者来配置跟踪，并介绍在使用 <xref:System.Activities.WorkflowInvoker> 时如何启用跟踪。</span><span class="sxs-lookup"><span data-stu-id="266b1-108">This topic describes how tracking is configured by adding a tracking participant to a <xref:System.Activities.WorkflowApplication> and to a <xref:System.ServiceModel.Activities.WorkflowServiceHost>, and how to enable tracking when using <xref:System.Activities.WorkflowInvoker>.</span></span>
+<span data-ttu-id="6040b-107">根据工作流承载选项的不同，可以通过代码或配置文件添加跟踪参与者。</span><span class="sxs-lookup"><span data-stu-id="6040b-107">Depending on the workflow hosting option, a tracking participant can be added either through code or through a configuration file.</span></span> <span data-ttu-id="6040b-108">本主题介绍如何通过向 <xref:System.Activities.WorkflowApplication> 和 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 添加跟踪参与者来配置跟踪，并介绍在使用 <xref:System.Activities.WorkflowInvoker> 时如何启用跟踪。</span><span class="sxs-lookup"><span data-stu-id="6040b-108">This topic describes how tracking is configured by adding a tracking participant to a <xref:System.Activities.WorkflowApplication> and to a <xref:System.ServiceModel.Activities.WorkflowServiceHost>, and how to enable tracking when using <xref:System.Activities.WorkflowInvoker>.</span></span>
 
-## <a name="configuring-workflow-application-tracking"></a><span data-ttu-id="266b1-109">配置工作流应用程序跟踪</span><span class="sxs-lookup"><span data-stu-id="266b1-109">Configuring Workflow Application Tracking</span></span>
+## <a name="configuring-workflow-application-tracking"></a><span data-ttu-id="6040b-109">配置工作流应用程序跟踪</span><span class="sxs-lookup"><span data-stu-id="6040b-109">Configuring Workflow Application Tracking</span></span>
 
-<span data-ttu-id="266b1-110">工作流可以使用 <xref:System.Activities.WorkflowApplication> 类运行。</span><span class="sxs-lookup"><span data-stu-id="266b1-110">A workflow can run using the <xref:System.Activities.WorkflowApplication> class.</span></span> <span data-ttu-id="266b1-111">本主题演示如何通过向 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 工作流宿主添加跟踪参与者为 <xref:System.Activities.WorkflowApplication>工作流应用程序配置跟踪。</span><span class="sxs-lookup"><span data-stu-id="266b1-111">This topic demonstrates how tracking is configured for a [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] workflow application by adding a tracking participant to the <xref:System.Activities.WorkflowApplication> workflow host.</span></span> <span data-ttu-id="266b1-112">在这种情况下，工作流作为工作流应用程序运行。</span><span class="sxs-lookup"><span data-stu-id="266b1-112">In this case, the workflow runs as a workflow application.</span></span> <span data-ttu-id="266b1-113">通过代码（而不是通过配置文件）配置一个工作流应用程序，该工作流应用程序是一个使用 <xref:System.Activities.WorkflowApplication> 类的自承载的 .exe 文件。</span><span class="sxs-lookup"><span data-stu-id="266b1-113">You configure a workflow application through code (rather than by using a configuration file), which is a self-hosted .exe file using the <xref:System.Activities.WorkflowApplication> class.</span></span> <span data-ttu-id="266b1-114">跟踪参与者将作为 <xref:System.Activities.WorkflowApplication> 实例的扩展添加。</span><span class="sxs-lookup"><span data-stu-id="266b1-114">The tracking participant is added as an extension to the <xref:System.Activities.WorkflowApplication> instance.</span></span> <span data-ttu-id="266b1-115">这是通过向 WorkflowApplication 实例的扩展集合添加 <xref:System.Activities.Tracking.TrackingParticipant> 来完成的。</span><span class="sxs-lookup"><span data-stu-id="266b1-115">This is done by adding the <xref:System.Activities.Tracking.TrackingParticipant> to the extensions collection for the WorkflowApplication instance.</span></span>
+<span data-ttu-id="6040b-110">工作流可以使用 <xref:System.Activities.WorkflowApplication> 类运行。</span><span class="sxs-lookup"><span data-stu-id="6040b-110">A workflow can run using the <xref:System.Activities.WorkflowApplication> class.</span></span> <span data-ttu-id="6040b-111">本主题演示如何通过向 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 工作流宿主添加跟踪参与者为 <xref:System.Activities.WorkflowApplication>工作流应用程序配置跟踪。</span><span class="sxs-lookup"><span data-stu-id="6040b-111">This topic demonstrates how tracking is configured for a [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] workflow application by adding a tracking participant to the <xref:System.Activities.WorkflowApplication> workflow host.</span></span> <span data-ttu-id="6040b-112">在这种情况下，工作流作为工作流应用程序运行。</span><span class="sxs-lookup"><span data-stu-id="6040b-112">In this case, the workflow runs as a workflow application.</span></span> <span data-ttu-id="6040b-113">通过代码（而不是通过配置文件）配置一个工作流应用程序，该工作流应用程序是一个使用 <xref:System.Activities.WorkflowApplication> 类的自承载的 .exe 文件。</span><span class="sxs-lookup"><span data-stu-id="6040b-113">You configure a workflow application through code (rather than by using a configuration file), which is a self-hosted .exe file using the <xref:System.Activities.WorkflowApplication> class.</span></span> <span data-ttu-id="6040b-114">跟踪参与者将作为 <xref:System.Activities.WorkflowApplication> 实例的扩展添加。</span><span class="sxs-lookup"><span data-stu-id="6040b-114">The tracking participant is added as an extension to the <xref:System.Activities.WorkflowApplication> instance.</span></span> <span data-ttu-id="6040b-115">这是通过向 WorkflowApplication 实例的扩展集合添加 <xref:System.Activities.Tracking.TrackingParticipant> 来完成的。</span><span class="sxs-lookup"><span data-stu-id="6040b-115">This is done by adding the <xref:System.Activities.Tracking.TrackingParticipant> to the extensions collection for the WorkflowApplication instance.</span></span>
 
-<span data-ttu-id="266b1-116">对于工作流应用程序，您可以添加 <xref:System.Activities.Tracking.EtwTrackingParticipant> 行为扩展，如以下代码所示。</span><span class="sxs-lookup"><span data-stu-id="266b1-116">For a workflow application, you can add the <xref:System.Activities.Tracking.EtwTrackingParticipant> behavior extension as shown in the following code.</span></span>
+<span data-ttu-id="6040b-116">对于工作流应用程序，您可以添加 <xref:System.Activities.Tracking.EtwTrackingParticipant> 行为扩展，如以下代码所示。</span><span class="sxs-lookup"><span data-stu-id="6040b-116">For a workflow application, you can add the <xref:System.Activities.Tracking.EtwTrackingParticipant> behavior extension as shown in the following code.</span></span>
 
 ```csharp
 LogActivity activity = new LogActivity();
@@ -48,11 +48,11 @@ EtwTrackingParticipant trackingParticipant =
 instance.Extensions.Add(trackingParticipant);
 ```
 
-### <a name="configuring-workflow-service-tracking"></a><span data-ttu-id="266b1-117">配置工作流服务跟踪</span><span class="sxs-lookup"><span data-stu-id="266b1-117">Configuring Workflow Service Tracking</span></span>
+### <a name="configuring-workflow-service-tracking"></a><span data-ttu-id="6040b-117">配置工作流服务跟踪</span><span class="sxs-lookup"><span data-stu-id="6040b-117">Configuring Workflow Service Tracking</span></span>
 
-<span data-ttu-id="266b1-118">在 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 服务主机中承载工作流时，该工作流可以作为 WCF 服务公开。</span><span class="sxs-lookup"><span data-stu-id="266b1-118">A workflow can be exposed as a WCF service when hosted in the <xref:System.ServiceModel.Activities.WorkflowServiceHost> service host.</span></span> <span data-ttu-id="266b1-119"><xref:System.ServiceModel.Activities.WorkflowServiceHost> 是基于工作流的服务的指定 .NET ServiceHost 实现。</span><span class="sxs-lookup"><span data-stu-id="266b1-119"><xref:System.ServiceModel.Activities.WorkflowServiceHost> is a specialized .NET ServiceHost implementation for a workflow-based service.</span></span> <span data-ttu-id="266b1-120">本节介绍如何为在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中运行的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 工作流服务配置跟踪。</span><span class="sxs-lookup"><span data-stu-id="266b1-120">This section explains how to configure tracking for a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow service running in <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span></span> <span data-ttu-id="266b1-121">通过在 Web.config 文件（对于 Web 承载的服务）或 App.config 文件（对于在独立的应用程序中承载的服务，例如在控制台应用程序中承载的服务）中指定服务行为，或通过使用代码向服务宿主的 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合中添加与跟踪相关的行为，可以完成上述配置。</span><span class="sxs-lookup"><span data-stu-id="266b1-121">It is configured through a Web.config file (for a Web-hosted service) or an App.config file (for a service hosted in a stand-alone application, such as a console application) by specifying a service behavior or through code by adding a tracking-specific behavior to the <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> collection for the service host.</span></span>
+<span data-ttu-id="6040b-118">在 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 服务主机中承载工作流时，该工作流可以作为 WCF 服务公开。</span><span class="sxs-lookup"><span data-stu-id="6040b-118">A workflow can be exposed as a WCF service when hosted in the <xref:System.ServiceModel.Activities.WorkflowServiceHost> service host.</span></span> <span data-ttu-id="6040b-119"><xref:System.ServiceModel.Activities.WorkflowServiceHost> 是基于工作流的服务的指定 .NET ServiceHost 实现。</span><span class="sxs-lookup"><span data-stu-id="6040b-119"><xref:System.ServiceModel.Activities.WorkflowServiceHost> is a specialized .NET ServiceHost implementation for a workflow-based service.</span></span> <span data-ttu-id="6040b-120">本节介绍如何为在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中运行的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 工作流服务配置跟踪。</span><span class="sxs-lookup"><span data-stu-id="6040b-120">This section explains how to configure tracking for a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow service running in <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span></span> <span data-ttu-id="6040b-121">通过在 Web.config 文件（对于 Web 承载的服务）或 App.config 文件（对于在独立的应用程序中承载的服务，例如在控制台应用程序中承载的服务）中指定服务行为，或通过使用代码向服务宿主的 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合中添加与跟踪相关的行为，可以完成上述配置。</span><span class="sxs-lookup"><span data-stu-id="6040b-121">It is configured through a Web.config file (for a Web-hosted service) or an App.config file (for a service hosted in a stand-alone application, such as a console application) by specifying a service behavior or through code by adding a tracking-specific behavior to the <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> collection for the service host.</span></span>
 
-<span data-ttu-id="266b1-122">对于在 <xref:System.ServiceModel.WorkflowServiceHost>中承载的工作流服务，可以使用配置文件中的 <`behavior`> 元素添加 <xref:System.Activities.Tracking.EtwTrackingParticipant>，如下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="266b1-122">For a workflow service hosted in <xref:System.ServiceModel.WorkflowServiceHost>, you can add the <xref:System.Activities.Tracking.EtwTrackingParticipant> using the <`behavior`> element in a configuration file, as shown in the following example.</span></span>
+<span data-ttu-id="6040b-122">对于在 <xref:System.ServiceModel.WorkflowServiceHost>中承载的工作流服务，可以使用配置文件中的 <`behavior`> 元素添加 <xref:System.Activities.Tracking.EtwTrackingParticipant>，如下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="6040b-122">For a workflow service hosted in <xref:System.ServiceModel.WorkflowServiceHost>, you can add the <xref:System.Activities.Tracking.EtwTrackingParticipant> using the <`behavior`> element in a configuration file, as shown in the following example.</span></span>
 
 ```xml
 <behaviors>
@@ -64,10 +64,10 @@ instance.Extensions.Add(trackingParticipant);
 </behaviors>
 ```
 
-<span data-ttu-id="266b1-123">此外，对于 <xref:System.ServiceModel.WorkflowServiceHost> 中承载的工作流服务，你可以通过代码添加 <xref:System.Activities.Tracking.EtwTrackingParticipant> 行为扩展。</span><span class="sxs-lookup"><span data-stu-id="266b1-123">Alternatively, for a workflow service hosted in <xref:System.ServiceModel.WorkflowServiceHost>, you can add the <xref:System.Activities.Tracking.EtwTrackingParticipant> behavior extension through code.</span></span> <span data-ttu-id="266b1-124">若要添加自定义跟踪参与者，请创建一个新的行为扩展并将其添加到 <xref:System.ServiceModel.ServiceHost> 中，如以下代码示例中所示。</span><span class="sxs-lookup"><span data-stu-id="266b1-124">To add a custom tracking participant, create a new behavior extension and add it to the <xref:System.ServiceModel.ServiceHost> as shown in the following example code.</span></span>
+<span data-ttu-id="6040b-123">此外，对于 <xref:System.ServiceModel.WorkflowServiceHost> 中承载的工作流服务，你可以通过代码添加 <xref:System.Activities.Tracking.EtwTrackingParticipant> 行为扩展。</span><span class="sxs-lookup"><span data-stu-id="6040b-123">Alternatively, for a workflow service hosted in <xref:System.ServiceModel.WorkflowServiceHost>, you can add the <xref:System.Activities.Tracking.EtwTrackingParticipant> behavior extension through code.</span></span> <span data-ttu-id="6040b-124">若要添加自定义跟踪参与者，请创建一个新的行为扩展并将其添加到 <xref:System.ServiceModel.ServiceHost> 中，如以下代码示例中所示。</span><span class="sxs-lookup"><span data-stu-id="6040b-124">To add a custom tracking participant, create a new behavior extension and add it to the <xref:System.ServiceModel.ServiceHost> as shown in the following example code.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="266b1-125">若要查看演示如何创建添加自定义跟踪参与者的自定义行为元素的示例代码，请参阅[跟踪](./samples/tracking.md)示例。</span><span class="sxs-lookup"><span data-stu-id="266b1-125">If you want to view sample code that shows how to create a custom behavior element that adds a custom tracking participant, refer to the [Tracking](./samples/tracking.md) samples.</span></span>
+> <span data-ttu-id="6040b-125">若要查看演示如何创建添加自定义跟踪参与者的自定义行为元素的示例代码，请参阅[跟踪](./samples/tracking.md)示例。</span><span class="sxs-lookup"><span data-stu-id="6040b-125">If you want to view sample code that shows how to create a custom behavior element that adds a custom tracking participant, refer to the [Tracking](./samples/tracking.md) samples.</span></span>
 
 ```csharp
 ServiceHost svcHost = new ServiceHost(typeof(WorkflowService), new
@@ -81,9 +81,9 @@ svcHost.Description.Behaviors.Add(trackingBehavior);
 svcHost.Open();
 ```
 
-<span data-ttu-id="266b1-126">跟踪参与者将作为行为的扩展添加到工作流服务主机中。</span><span class="sxs-lookup"><span data-stu-id="266b1-126">The tracking participant is added to the workflow service host as an extension to the behavior.</span></span>
+<span data-ttu-id="6040b-126">跟踪参与者将作为行为的扩展添加到工作流服务主机中。</span><span class="sxs-lookup"><span data-stu-id="6040b-126">The tracking participant is added to the workflow service host as an extension to the behavior.</span></span>
 
-<span data-ttu-id="266b1-127">下面的这个代码示例演示如何从配置文件读取跟踪配置文件。</span><span class="sxs-lookup"><span data-stu-id="266b1-127">This sample code below shows how to read a tracking profile from configuration file.</span></span>
+<span data-ttu-id="6040b-127">下面的这个代码示例演示如何从配置文件读取跟踪配置文件。</span><span class="sxs-lookup"><span data-stu-id="6040b-127">This sample code below shows how to read a tracking profile from configuration file.</span></span>
 
 ```csharp
 TrackingProfile GetProfile(string profileName, string displayName)
@@ -119,7 +119,7 @@ TrackingProfile GetProfile(string profileName, string displayName)
             return trackingProfile;
 ```
 
-<span data-ttu-id="266b1-128">此代码示例演示如何向工作流主机添加跟踪配置文件。</span><span class="sxs-lookup"><span data-stu-id="266b1-128">This sample code shows how to add a tracking profile to a workflow host.</span></span>
+<span data-ttu-id="6040b-128">此代码示例演示如何向工作流主机添加跟踪配置文件。</span><span class="sxs-lookup"><span data-stu-id="6040b-128">This sample code shows how to add a tracking profile to a workflow host.</span></span>
 
 ```csharp
 WorkflowServiceHost workflowServiceHost = serviceHostBase as WorkflowServiceHost;
@@ -134,11 +134,11 @@ if (null != workflowServiceHost)
 ```
 
 > [!NOTE]
-> <span data-ttu-id="266b1-129">有关跟踪配置文件的详细信息，请参阅[跟踪配置文件](https://go.microsoft.com/fwlink/?LinkId=201310)。</span><span class="sxs-lookup"><span data-stu-id="266b1-129">For more information on tracking profiles, refer to [Tracking Profiles](https://go.microsoft.com/fwlink/?LinkId=201310).</span></span>
+> <span data-ttu-id="6040b-129">有关跟踪配置文件的详细信息，请参阅[跟踪配置文件](tracking-profiles.md)。</span><span class="sxs-lookup"><span data-stu-id="6040b-129">For more information on tracking profiles, refer to [Tracking Profiles](tracking-profiles.md).</span></span>
 
-### <a name="configuring-tracking-using-workflowinvoker"></a><span data-ttu-id="266b1-130">配置使用 WorkflowInvoker 的跟踪</span><span class="sxs-lookup"><span data-stu-id="266b1-130">Configuring tracking using WorkflowInvoker</span></span>
+### <a name="configuring-tracking-using-workflowinvoker"></a><span data-ttu-id="6040b-130">配置使用 WorkflowInvoker 的跟踪</span><span class="sxs-lookup"><span data-stu-id="6040b-130">Configuring tracking using WorkflowInvoker</span></span>
 
-<span data-ttu-id="266b1-131">若要对使用 <xref:System.Activities.WorkflowInvoker> 执行的工作流配置跟踪，请添加跟踪提供程序作为 <xref:System.Activities.WorkflowInvoker> 实例的扩展。</span><span class="sxs-lookup"><span data-stu-id="266b1-131">To configure tracking for a workflow executed using <xref:System.Activities.WorkflowInvoker>, add the tracking provider as an extension to a <xref:System.Activities.WorkflowInvoker> instance.</span></span> <span data-ttu-id="266b1-132">下面的代码示例来自[自定义跟踪](./samples/custom-tracking.md)示例。</span><span class="sxs-lookup"><span data-stu-id="266b1-132">The following code example is from the [Custom Tracking](./samples/custom-tracking.md) sample.</span></span>
+<span data-ttu-id="6040b-131">若要对使用 <xref:System.Activities.WorkflowInvoker> 执行的工作流配置跟踪，请添加跟踪提供程序作为 <xref:System.Activities.WorkflowInvoker> 实例的扩展。</span><span class="sxs-lookup"><span data-stu-id="6040b-131">To configure tracking for a workflow executed using <xref:System.Activities.WorkflowInvoker>, add the tracking provider as an extension to a <xref:System.Activities.WorkflowInvoker> instance.</span></span> <span data-ttu-id="6040b-132">下面的代码示例来自[自定义跟踪](./samples/custom-tracking.md)示例。</span><span class="sxs-lookup"><span data-stu-id="6040b-132">The following code example is from the [Custom Tracking](./samples/custom-tracking.md) sample.</span></span>
 
 ```csharp
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
@@ -146,49 +146,49 @@ invoker.Extensions.Add(customTrackingParticipant);
 invoker.Invoke();
 ```
 
-### <a name="viewing-tracking-records-in-event-viewer"></a><span data-ttu-id="266b1-133">在事件查看器中查看跟踪记录</span><span class="sxs-lookup"><span data-stu-id="266b1-133">Viewing tracking records in Event Viewer</span></span>
+### <a name="viewing-tracking-records-in-event-viewer"></a><span data-ttu-id="6040b-133">在事件查看器中查看跟踪记录</span><span class="sxs-lookup"><span data-stu-id="6040b-133">Viewing tracking records in Event Viewer</span></span>
 
-<span data-ttu-id="266b1-134">在跟踪 WF 执行时有两种特殊的事件查看器日志可供查看 - 分析日志和调试日志。</span><span class="sxs-lookup"><span data-stu-id="266b1-134">There are two Event Viewer logs of particular interest to view when tracking WF execution - the Analytic log and the Debug log.</span></span> <span data-ttu-id="266b1-135">两者都位于 "Microsoft&#124;Windows&#124;应用程序服务器-应用程序" 节点下。</span><span class="sxs-lookup"><span data-stu-id="266b1-135">Both reside under the Microsoft&#124;Windows&#124;Application Server-Applications node.</span></span> <span data-ttu-id="266b1-136">此部分内的日志包含来自单一应用程序的事件，而不包含对整个系统范围产生影响的事件。</span><span class="sxs-lookup"><span data-stu-id="266b1-136">Logs within this section contain events from a single application rather than events that have an impact on the entire system.</span></span>
+<span data-ttu-id="6040b-134">在跟踪 WF 执行时有两种特殊的事件查看器日志可供查看 - 分析日志和调试日志。</span><span class="sxs-lookup"><span data-stu-id="6040b-134">There are two Event Viewer logs of particular interest to view when tracking WF execution - the Analytic log and the Debug log.</span></span> <span data-ttu-id="6040b-135">两者都位于 "Microsoft&#124;Windows&#124;应用程序服务器-应用程序" 节点下。</span><span class="sxs-lookup"><span data-stu-id="6040b-135">Both reside under the Microsoft&#124;Windows&#124;Application Server-Applications node.</span></span> <span data-ttu-id="6040b-136">此部分内的日志包含来自单一应用程序的事件，而不包含对整个系统范围产生影响的事件。</span><span class="sxs-lookup"><span data-stu-id="6040b-136">Logs within this section contain events from a single application rather than events that have an impact on the entire system.</span></span>
 
-<span data-ttu-id="266b1-137">调试跟踪事件将写入调试日志。</span><span class="sxs-lookup"><span data-stu-id="266b1-137">Debug trace events are written to the Debug Log.</span></span> <span data-ttu-id="266b1-138">若要收集事件查看器中的 WF 调试跟踪事件，请启用调试日志。</span><span class="sxs-lookup"><span data-stu-id="266b1-138">To collect WF debug trace events in the Event Viewer, enable the Debug Log.</span></span>
+<span data-ttu-id="6040b-137">调试跟踪事件将写入调试日志。</span><span class="sxs-lookup"><span data-stu-id="6040b-137">Debug trace events are written to the Debug Log.</span></span> <span data-ttu-id="6040b-138">若要收集事件查看器中的 WF 调试跟踪事件，请启用调试日志。</span><span class="sxs-lookup"><span data-stu-id="6040b-138">To collect WF debug trace events in the Event Viewer, enable the Debug Log.</span></span>
 
-1. <span data-ttu-id="266b1-139">若要打开事件查看器，请单击 "**开始**"，然后单击 "**运行"。**</span><span class="sxs-lookup"><span data-stu-id="266b1-139">To open Event Viewer, click **Start**, and then click **Run.**</span></span> <span data-ttu-id="266b1-140">在 "运行" 对话框中，键入 `eventvwr`。</span><span class="sxs-lookup"><span data-stu-id="266b1-140">In the Run dialog, type `eventvwr`.</span></span>
+1. <span data-ttu-id="6040b-139">若要打开事件查看器，请单击 "**开始**"，然后单击 "**运行"。**</span><span class="sxs-lookup"><span data-stu-id="6040b-139">To open Event Viewer, click **Start**, and then click **Run.**</span></span> <span data-ttu-id="6040b-140">在 "运行" 对话框中，键入 `eventvwr`。</span><span class="sxs-lookup"><span data-stu-id="6040b-140">In the Run dialog, type `eventvwr`.</span></span>
 
-2. <span data-ttu-id="266b1-141">在 "事件查看器" 对话框中，展开 "**应用程序和服务日志**" 节点。</span><span class="sxs-lookup"><span data-stu-id="266b1-141">In the Event Viewer dialog, expand the **Applications and Services Logs** node.</span></span>
+2. <span data-ttu-id="6040b-141">在 "事件查看器" 对话框中，展开 "**应用程序和服务日志**" 节点。</span><span class="sxs-lookup"><span data-stu-id="6040b-141">In the Event Viewer dialog, expand the **Applications and Services Logs** node.</span></span>
 
-3. <span data-ttu-id="266b1-142">展开 " **Microsoft**"、" **Windows**" 和 "**应用程序服务器**" 节点。</span><span class="sxs-lookup"><span data-stu-id="266b1-142">Expand the **Microsoft**, **Windows**, and **Application Server-Applications** nodes.</span></span>
+3. <span data-ttu-id="6040b-142">展开 " **Microsoft**"、" **Windows**" 和 "**应用程序服务器**" 节点。</span><span class="sxs-lookup"><span data-stu-id="6040b-142">Expand the **Microsoft**, **Windows**, and **Application Server-Applications** nodes.</span></span>
 
-4. <span data-ttu-id="266b1-143">右键单击 "**应用程序服务器-应用程序**" 节点下的 "**调试**" 节点，然后选择 "**启用日志**"。</span><span class="sxs-lookup"><span data-stu-id="266b1-143">Right-click the **Debug** node under the **Application Server-Applications** node, and select **Enable Log**.</span></span>
+4. <span data-ttu-id="6040b-143">右键单击 "**应用程序服务器-应用程序**" 节点下的 "**调试**" 节点，然后选择 "**启用日志**"。</span><span class="sxs-lookup"><span data-stu-id="6040b-143">Right-click the **Debug** node under the **Application Server-Applications** node, and select **Enable Log**.</span></span>
 
-5. <span data-ttu-id="266b1-144">执行启用跟踪的应用程序以生成跟踪事件。</span><span class="sxs-lookup"><span data-stu-id="266b1-144">Execute your tracing-enabled application to generate tracing events.</span></span>
+5. <span data-ttu-id="6040b-144">执行启用跟踪的应用程序以生成跟踪事件。</span><span class="sxs-lookup"><span data-stu-id="6040b-144">Execute your tracing-enabled application to generate tracing events.</span></span>
 
-6. <span data-ttu-id="266b1-145">右键单击 "**调试**" 节点，然后选择 "**刷新"。**</span><span class="sxs-lookup"><span data-stu-id="266b1-145">Right-click the **Debug** node and select **Refresh.**</span></span> <span data-ttu-id="266b1-146">跟踪事件应显示在中心窗格中。</span><span class="sxs-lookup"><span data-stu-id="266b1-146">Tracing events should be visible in the center pane.</span></span>
+6. <span data-ttu-id="6040b-145">右键单击 "**调试**" 节点，然后选择 "**刷新"。**</span><span class="sxs-lookup"><span data-stu-id="6040b-145">Right-click the **Debug** node and select **Refresh.**</span></span> <span data-ttu-id="6040b-146">跟踪事件应显示在中心窗格中。</span><span class="sxs-lookup"><span data-stu-id="6040b-146">Tracing events should be visible in the center pane.</span></span>
 
-<span data-ttu-id="266b1-147">WF 4 提供跟踪参与者，可将跟踪记录写入 ETW（Windows 事件跟踪）会话。</span><span class="sxs-lookup"><span data-stu-id="266b1-147">WF 4 provides a tracking participant that writes tracking records to an ETW (Event Tracing for Windows) session.</span></span> <span data-ttu-id="266b1-148">ETW 跟踪参与者通过跟踪配置文件配置为订阅跟踪记录。</span><span class="sxs-lookup"><span data-stu-id="266b1-148">The ETW tracking participant is configured with a tracking profile to subscribe to tracking records.</span></span> <span data-ttu-id="266b1-149">当启用跟踪时，向 ETW 发出错误跟踪记录。</span><span class="sxs-lookup"><span data-stu-id="266b1-149">When tracking is enabled, errors tracking records are emitted to ETW.</span></span> <span data-ttu-id="266b1-150">与 ETW 跟踪参与者发出的跟踪事件相对应的 ETW 跟踪事件（范围介于 100 到 113 之间）将写入分析日志。</span><span class="sxs-lookup"><span data-stu-id="266b1-150">ETW tracking events (between the range of 100-113) corresponding to the tracking events emitted by the ETW tracking participant are written to the Analytic Log.</span></span>
+<span data-ttu-id="6040b-147">WF 4 提供跟踪参与者，可将跟踪记录写入 ETW（Windows 事件跟踪）会话。</span><span class="sxs-lookup"><span data-stu-id="6040b-147">WF 4 provides a tracking participant that writes tracking records to an ETW (Event Tracing for Windows) session.</span></span> <span data-ttu-id="6040b-148">ETW 跟踪参与者通过跟踪配置文件配置为订阅跟踪记录。</span><span class="sxs-lookup"><span data-stu-id="6040b-148">The ETW tracking participant is configured with a tracking profile to subscribe to tracking records.</span></span> <span data-ttu-id="6040b-149">当启用跟踪时，向 ETW 发出错误跟踪记录。</span><span class="sxs-lookup"><span data-stu-id="6040b-149">When tracking is enabled, errors tracking records are emitted to ETW.</span></span> <span data-ttu-id="6040b-150">与 ETW 跟踪参与者发出的跟踪事件相对应的 ETW 跟踪事件（范围介于 100 到 113 之间）将写入分析日志。</span><span class="sxs-lookup"><span data-stu-id="6040b-150">ETW tracking events (between the range of 100-113) corresponding to the tracking events emitted by the ETW tracking participant are written to the Analytic Log.</span></span>
 
-<span data-ttu-id="266b1-151">若要查看跟踪记录，请按照以下步骤操作。</span><span class="sxs-lookup"><span data-stu-id="266b1-151">To view tracking records, follow these steps.</span></span>
+<span data-ttu-id="6040b-151">若要查看跟踪记录，请按照以下步骤操作。</span><span class="sxs-lookup"><span data-stu-id="6040b-151">To view tracking records, follow these steps.</span></span>
 
-1. <span data-ttu-id="266b1-152">若要打开事件查看器，请单击 "**开始**"，然后单击 "**运行"。**</span><span class="sxs-lookup"><span data-stu-id="266b1-152">To open Event Viewer, click **Start**, and then click **Run.**</span></span> <span data-ttu-id="266b1-153">在 "运行" 对话框中，键入 `eventvwr`。</span><span class="sxs-lookup"><span data-stu-id="266b1-153">In the Run dialog, type `eventvwr`.</span></span>
+1. <span data-ttu-id="6040b-152">若要打开事件查看器，请单击 "**开始**"，然后单击 "**运行"。**</span><span class="sxs-lookup"><span data-stu-id="6040b-152">To open Event Viewer, click **Start**, and then click **Run.**</span></span> <span data-ttu-id="6040b-153">在 "运行" 对话框中，键入 `eventvwr`。</span><span class="sxs-lookup"><span data-stu-id="6040b-153">In the Run dialog, type `eventvwr`.</span></span>
 
-2. <span data-ttu-id="266b1-154">在 "事件查看器" 对话框中，展开 "**应用程序和服务日志**" 节点。</span><span class="sxs-lookup"><span data-stu-id="266b1-154">In the Event Viewer dialog, expand the **Applications and Services Logs** node.</span></span>
+2. <span data-ttu-id="6040b-154">在 "事件查看器" 对话框中，展开 "**应用程序和服务日志**" 节点。</span><span class="sxs-lookup"><span data-stu-id="6040b-154">In the Event Viewer dialog, expand the **Applications and Services Logs** node.</span></span>
 
-3. <span data-ttu-id="266b1-155">展开 " **Microsoft**"、" **Windows**" 和 "**应用程序服务器**" 节点。</span><span class="sxs-lookup"><span data-stu-id="266b1-155">Expand the **Microsoft**, **Windows**, and **Application Server-Applications** nodes.</span></span>
+3. <span data-ttu-id="6040b-155">展开 " **Microsoft**"、" **Windows**" 和 "**应用程序服务器**" 节点。</span><span class="sxs-lookup"><span data-stu-id="6040b-155">Expand the **Microsoft**, **Windows**, and **Application Server-Applications** nodes.</span></span>
 
-4. <span data-ttu-id="266b1-156">右键单击 "**应用程序服务器-应用程序**" 节点下的 "**分析**" 节点，然后选择 "**启用日志**"。</span><span class="sxs-lookup"><span data-stu-id="266b1-156">Right-click the **Analytic** node under the **Application Server-Applications** node, and select **Enable Log**.</span></span>
+4. <span data-ttu-id="6040b-156">右键单击 "**应用程序服务器-应用程序**" 节点下的 "**分析**" 节点，然后选择 "**启用日志**"。</span><span class="sxs-lookup"><span data-stu-id="6040b-156">Right-click the **Analytic** node under the **Application Server-Applications** node, and select **Enable Log**.</span></span>
 
-5. <span data-ttu-id="266b1-157">执行启用跟踪的应用程序以生成跟踪记录。</span><span class="sxs-lookup"><span data-stu-id="266b1-157">Execute your tracking-enabled application to generate tracking records.</span></span>
+5. <span data-ttu-id="6040b-157">执行启用跟踪的应用程序以生成跟踪记录。</span><span class="sxs-lookup"><span data-stu-id="6040b-157">Execute your tracking-enabled application to generate tracking records.</span></span>
 
-6. <span data-ttu-id="266b1-158">右键单击 "**分析**" 节点，然后选择 "**刷新"。**</span><span class="sxs-lookup"><span data-stu-id="266b1-158">Right-click the **Analytic** node and select **Refresh.**</span></span> <span data-ttu-id="266b1-159">跟踪记录应会显示在中心窗格中。</span><span class="sxs-lookup"><span data-stu-id="266b1-159">Tracking records should be visible in the center pane.</span></span>
+6. <span data-ttu-id="6040b-158">右键单击 "**分析**" 节点，然后选择 "**刷新"。**</span><span class="sxs-lookup"><span data-stu-id="6040b-158">Right-click the **Analytic** node and select **Refresh.**</span></span> <span data-ttu-id="6040b-159">跟踪记录应会显示在中心窗格中。</span><span class="sxs-lookup"><span data-stu-id="6040b-159">Tracking records should be visible in the center pane.</span></span>
 
-<span data-ttu-id="266b1-160">下图显示了事件查看器中的跟踪事件：</span><span class="sxs-lookup"><span data-stu-id="266b1-160">The following image shows tracking events in the event viewer:</span></span>
+<span data-ttu-id="6040b-160">下图显示了事件查看器中的跟踪事件：</span><span class="sxs-lookup"><span data-stu-id="6040b-160">The following image shows tracking events in the event viewer:</span></span>
 
 ![显示跟踪记录的事件查看器屏幕截图。](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
 
-### <a name="registering-an-application-specific-provider-id"></a><span data-ttu-id="266b1-162">注册应用程序特定的提供程序 ID</span><span class="sxs-lookup"><span data-stu-id="266b1-162">Registering an application-specific provider ID</span></span>
+### <a name="registering-an-application-specific-provider-id"></a><span data-ttu-id="6040b-162">注册应用程序特定的提供程序 ID</span><span class="sxs-lookup"><span data-stu-id="6040b-162">Registering an application-specific provider ID</span></span>
 
-<span data-ttu-id="266b1-163">如果需要将事件写入到特定的应用程序日志中，请按照以下步骤注册新的提供程序清单。</span><span class="sxs-lookup"><span data-stu-id="266b1-163">If events need to be written to a specific application log, follow these steps to register the new provider manifest.</span></span>
+<span data-ttu-id="6040b-163">如果需要将事件写入到特定的应用程序日志中，请按照以下步骤注册新的提供程序清单。</span><span class="sxs-lookup"><span data-stu-id="6040b-163">If events need to be written to a specific application log, follow these steps to register the new provider manifest.</span></span>
 
-1. <span data-ttu-id="266b1-164">在应用程序配置文件中声明提供程序 ID。</span><span class="sxs-lookup"><span data-stu-id="266b1-164">Declare the provider ID in the application configuration file.</span></span>
+1. <span data-ttu-id="6040b-164">在应用程序配置文件中声明提供程序 ID。</span><span class="sxs-lookup"><span data-stu-id="6040b-164">Declare the provider ID in the application configuration file.</span></span>
 
     ```xml
     <system.serviceModel>
@@ -196,21 +196,21 @@ invoker.Invoke();
     </system.serviceModel>
     ```
 
-2. <span data-ttu-id="266b1-165">将清单文件从%windir%\Microsoft.NET\Framework\\\<[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.windows.applicationserver.applications.man 复制的最新版本复制到临时位置，并将其重命名为ApplicationServer. Applications_Provider1。</span><span class="sxs-lookup"><span data-stu-id="266b1-165">Copy the manifest file from %windir%\Microsoft.NET\Framework\\\<latest version of [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]>\Microsoft.Windows.ApplicationServer.Applications.man to a temporary location, and rename it to Microsoft.Windows.ApplicationServer.Applications_Provider1.man</span></span>
+2. <span data-ttu-id="6040b-165">将清单文件从%windir%\Microsoft.NET\Framework\\\<[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.windows.applicationserver.applications.man 复制的最新版本复制到临时位置，并将其重命名为 ApplicationServer。 Applications_Provider1</span><span class="sxs-lookup"><span data-stu-id="6040b-165">Copy the manifest file from %windir%\Microsoft.NET\Framework\\\<latest version of [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]>\Microsoft.Windows.ApplicationServer.Applications.man to a temporary location, and rename it to Microsoft.Windows.ApplicationServer.Applications_Provider1.man</span></span>
 
-3. <span data-ttu-id="266b1-166">将清单文件中的 GUID 更改为新的 GUID。</span><span class="sxs-lookup"><span data-stu-id="266b1-166">Change the GUID in the manifest file to the new GUID.</span></span>
-
-    ```xml
-    <provider name="Microsoft-Windows-Application Server-Applications" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}"
-    ```
-
-4. <span data-ttu-id="266b1-167">如果您不想卸载默认提供程序，请更改提供程序名称。</span><span class="sxs-lookup"><span data-stu-id="266b1-167">Change the provider name if you do not want to uninstall the default provider.</span></span>
+3. <span data-ttu-id="6040b-166">将清单文件中的 GUID 更改为新的 GUID。</span><span class="sxs-lookup"><span data-stu-id="6040b-166">Change the GUID in the manifest file to the new GUID.</span></span>
 
     ```xml
     <provider name="Microsoft-Windows-Application Server-Applications" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}"
     ```
 
-5. <span data-ttu-id="266b1-168">如果您在第一步中更改了提供程序名称，请将清单文件中的通道名称更改为新的提供程序名称。</span><span class="sxs-lookup"><span data-stu-id="266b1-168">If you changed the provider name in the previous step, change the channel names in the manifest file to the new provider name.</span></span>
+4. <span data-ttu-id="6040b-167">如果您不想卸载默认提供程序，请更改提供程序名称。</span><span class="sxs-lookup"><span data-stu-id="6040b-167">Change the provider name if you do not want to uninstall the default provider.</span></span>
+
+    ```xml
+    <provider name="Microsoft-Windows-Application Server-Applications" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}"
+    ```
+
+5. <span data-ttu-id="6040b-168">如果您在第一步中更改了提供程序名称，请将清单文件中的通道名称更改为新的提供程序名称。</span><span class="sxs-lookup"><span data-stu-id="6040b-168">If you changed the provider name in the previous step, change the channel names in the manifest file to the new provider name.</span></span>
 
     ```xml
     <channel name="Microsoft-Windows-Application Server-Applications_Provider1/Admin" chid="ADMIN_CHANNEL" symbol="ADMIN_CHANNEL" type="Admin" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.ADMIN_CHANNEL.message)" />
@@ -220,43 +220,43 @@ invoker.Invoke();
     <channel name="Microsoft-Windows-Application Server-Applications_Provider1/Perf" chid="PERF_CHANNEL" symbol="PERF_CHANNEL" type="Analytic" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.PERF_CHANNEL.message)" />
     ```
 
-6. <span data-ttu-id="266b1-169">按照以下这些步骤生成资源 DLL。</span><span class="sxs-lookup"><span data-stu-id="266b1-169">Generate the resource DLL by following these steps.</span></span>
+6. <span data-ttu-id="6040b-169">按照以下这些步骤生成资源 DLL。</span><span class="sxs-lookup"><span data-stu-id="6040b-169">Generate the resource DLL by following these steps.</span></span>
 
-    1. <span data-ttu-id="266b1-170">安装 Windows SDK。</span><span class="sxs-lookup"><span data-stu-id="266b1-170">Install the Windows SDK.</span></span> <span data-ttu-id="266b1-171">Windows SDK 包括消息编译器（[mc](https://go.microsoft.com/fwlink/?LinkId=184606)）和资源编译器（[xsd.exe](https://go.microsoft.com/fwlink/?LinkId=184605)）。</span><span class="sxs-lookup"><span data-stu-id="266b1-171">The Windows SDK includes the message compiler ([mc.exe](https://go.microsoft.com/fwlink/?LinkId=184606)) and resource compiler ([rc.exe](https://go.microsoft.com/fwlink/?LinkId=184605)).</span></span>
+    1. <span data-ttu-id="6040b-170">安装 Windows SDK。</span><span class="sxs-lookup"><span data-stu-id="6040b-170">Install the Windows SDK.</span></span> <span data-ttu-id="6040b-171">Windows SDK 包括消息编译器（[mc](/windows/win32/wes/message-compiler--mc-exe-)）和资源编译器（[xsd.exe](/windows/win32/menurc/using-rc-the-rc-command-line-)）。</span><span class="sxs-lookup"><span data-stu-id="6040b-171">The Windows SDK includes the message compiler ([mc.exe](/windows/win32/wes/message-compiler--mc-exe-)) and resource compiler ([rc.exe](/windows/win32/menurc/using-rc-the-rc-command-line-)).</span></span>
 
-    2. <span data-ttu-id="266b1-172">在 Windows SDK 命令提示中，对新清单文件运行 mc.exe。</span><span class="sxs-lookup"><span data-stu-id="266b1-172">In a Windows SDK command prompt, run mc.exe on the new manifest file.</span></span>
+    2. <span data-ttu-id="6040b-172">在 Windows SDK 命令提示中，对新清单文件运行 mc.exe。</span><span class="sxs-lookup"><span data-stu-id="6040b-172">In a Windows SDK command prompt, run mc.exe on the new manifest file.</span></span>
 
         ```console
         mc.exe Microsoft.Windows.ApplicationServer.Applications_Provider1.man
         ```
 
-    3. <span data-ttu-id="266b1-173">对在上一步中生成的资源文件运行 rc.exe。</span><span class="sxs-lookup"><span data-stu-id="266b1-173">Run rc.exe on the resource file generated in the previous step.</span></span>
+    3. <span data-ttu-id="6040b-173">对在上一步中生成的资源文件运行 rc.exe。</span><span class="sxs-lookup"><span data-stu-id="6040b-173">Run rc.exe on the resource file generated in the previous step.</span></span>
 
         ```console
         rc.exe  Microsoft.Windows.ApplicationServer.Applications_Provider1.rc
         ```
 
-    4. <span data-ttu-id="266b1-174">创建一个名为 NewProviderReg.cs 的空 cs 文件。</span><span class="sxs-lookup"><span data-stu-id="266b1-174">Create an empty cs file called NewProviderReg.cs.</span></span>
+    4. <span data-ttu-id="6040b-174">创建一个名为 NewProviderReg.cs 的空 cs 文件。</span><span class="sxs-lookup"><span data-stu-id="6040b-174">Create an empty cs file called NewProviderReg.cs.</span></span>
 
-    5. <span data-ttu-id="266b1-175">使用 C# 编译器创建一个资源 DLL。</span><span class="sxs-lookup"><span data-stu-id="266b1-175">Create a resource DLL using the C# compiler.</span></span>
+    5. <span data-ttu-id="6040b-175">使用 C# 编译器创建一个资源 DLL。</span><span class="sxs-lookup"><span data-stu-id="6040b-175">Create a resource DLL using the C# compiler.</span></span>
 
         ```console
         csc /target:library /win32res:Microsoft.Windows.ApplicationServer.Applications_Provider1.res NewProviderReg.cs /out:Microsoft.Windows.ApplicationServer.Applications_Provider1.dll
         ```
 
-    6. <span data-ttu-id="266b1-176">将清单文件中的资源和消息 dll 名称从 `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` 更改为新的 dll 名称。</span><span class="sxs-lookup"><span data-stu-id="266b1-176">Change the resource and message dll name in the manifest file from `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` to the new dll name.</span></span>
+    6. <span data-ttu-id="6040b-176">将清单文件中的资源和消息 dll 名称从 `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` 更改为新的 dll 名称。</span><span class="sxs-lookup"><span data-stu-id="6040b-176">Change the resource and message dll name in the manifest file from `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` to the new dll name.</span></span>
 
         ```xml
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">
         ```
 
-    7. <span data-ttu-id="266b1-177">使用[wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608)注册清单。</span><span class="sxs-lookup"><span data-stu-id="266b1-177">Use [wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608) to register the manifest.</span></span>
+    7. <span data-ttu-id="6040b-177">使用[wevtutil](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732848(v=ws.10))注册清单。</span><span class="sxs-lookup"><span data-stu-id="6040b-177">Use [wevtutil](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732848(v=ws.10)) to register the manifest.</span></span>
 
         ```console
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man
         ```
 
-## <a name="see-also"></a><span data-ttu-id="266b1-178">请参阅</span><span class="sxs-lookup"><span data-stu-id="266b1-178">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6040b-178">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6040b-178">See also</span></span>
 
-- [<span data-ttu-id="266b1-179">Windows Server App Fabric 监视</span><span class="sxs-lookup"><span data-stu-id="266b1-179">Windows Server App Fabric Monitoring</span></span>](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [<span data-ttu-id="266b1-180">用 App Fabric 监视应用程序</span><span class="sxs-lookup"><span data-stu-id="266b1-180">Monitoring Applications with App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkId=201275)
+- <span data-ttu-id="6040b-179">[Windows Server App Fabric 监视](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))</span><span class="sxs-lookup"><span data-stu-id="6040b-179">[Windows Server App Fabric Monitoring](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))</span></span>
+- <span data-ttu-id="6040b-180">[用 App Fabric 监视应用程序](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))</span><span class="sxs-lookup"><span data-stu-id="6040b-180">[Monitoring Applications with App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))</span></span>
