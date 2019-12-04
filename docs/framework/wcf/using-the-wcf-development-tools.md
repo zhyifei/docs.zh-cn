@@ -2,12 +2,12 @@
 title: 使用 WCF 开发工具
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: afa62a63aa955dc868791da635418331f93e9e87
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 59913f4c00c32699d788e2a0244798fc652361be
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420684"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802400"
 ---
 # <a name="using-the-wcf-development-tools"></a>使用 WCF 开发工具
 本部分介绍可帮助你开发 WCFservice 的 Visual Studio 开发工具。  
@@ -43,9 +43,9 @@ ms.locfileid: "73420684"
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>  
 ```  
   
- 有关 dism.exe 的详细信息，请参阅[如何使用 Dism.exe 工具和命令行开关](https://go.microsoft.com/fwlink/?LinkId=97877)。  
+ 有关 dism.exe 的详细信息，请参阅[如何使用 Dism.exe 工具和命令行开关](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10))。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WCF Visual Studio 模板](wcf-vs-templates.md)
 - [WCF 服务主机 (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)

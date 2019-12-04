@@ -2,12 +2,12 @@
 title: 为工作流配置跟踪
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 25edef2edc23a3823a892c64809df21f333478db
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 97b25873e9f20d5d390b7a59531b3a5af32296df
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458899"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802669"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>为工作流配置跟踪
 
@@ -134,7 +134,7 @@ if (null != workflowServiceHost)
 ```
 
 > [!NOTE]
-> 有关跟踪配置文件的详细信息，请参阅[跟踪配置文件](https://go.microsoft.com/fwlink/?LinkId=201310)。
+> 有关跟踪配置文件的详细信息，请参阅[跟踪配置文件](tracking-profiles.md)。
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>配置使用 WorkflowInvoker 的跟踪
 
@@ -196,7 +196,7 @@ WF 4 提供跟踪参与者，可将跟踪记录写入 ETW（Windows 事件跟踪
     </system.serviceModel>
     ```
 
-2. 将清单文件从%windir%\Microsoft.NET\Framework\\\<[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.windows.applicationserver.applications.man 复制的最新版本复制到临时位置，并将其重命名为ApplicationServer. Applications_Provider1。
+2. 将清单文件从%windir%\Microsoft.NET\Framework\\\<[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.windows.applicationserver.applications.man 复制的最新版本复制到临时位置，并将其重命名为 ApplicationServer。 Applications_Provider1
 
 3. 将清单文件中的 GUID 更改为新的 GUID。
 
@@ -222,7 +222,7 @@ WF 4 提供跟踪参与者，可将跟踪记录写入 ETW（Windows 事件跟踪
 
 6. 按照以下这些步骤生成资源 DLL。
 
-    1. 安装 Windows SDK。 Windows SDK 包括消息编译器（[mc](https://go.microsoft.com/fwlink/?LinkId=184606)）和资源编译器（[xsd.exe](https://go.microsoft.com/fwlink/?LinkId=184605)）。
+    1. 安装 Windows SDK。 Windows SDK 包括消息编译器（[mc](/windows/win32/wes/message-compiler--mc-exe-)）和资源编译器（[xsd.exe](/windows/win32/menurc/using-rc-the-rc-command-line-)）。
 
     2. 在 Windows SDK 命令提示中，对新清单文件运行 mc.exe。
 
@@ -250,13 +250,13 @@ WF 4 提供跟踪参与者，可将跟踪记录写入 ETW（Windows 事件跟踪
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">
         ```
 
-    7. 使用[wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608)注册清单。
+    7. 使用[wevtutil](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732848(v=ws.10))注册清单。
 
         ```console
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man
         ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Windows Server App Fabric 监视](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [用 App Fabric 监视应用程序](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Windows Server App Fabric 监视](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [用 App Fabric 监视应用程序](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

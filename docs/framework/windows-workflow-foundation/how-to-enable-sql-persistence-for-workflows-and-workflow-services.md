@@ -2,18 +2,18 @@
 title: 如何：对工作流和工作流服务启用 SQL 持久性
 ms.date: 03/30/2017
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: 4dc5648d748372828c5b9a36441bfb02eef045e1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: bef95dbeaaa96678a66ba94494a0207c7314c326
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460874"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802578"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>如何：对工作流和工作流服务启用 SQL 持久性
 
 本主题介绍如何通过编程方式以及使用配置文件来配置 SQL 工作流实例存储功能，以便为工作流和工作流服务启用持久性。
 
-Windows Server App Fabric 大大简化了配置持久性的过程。 有关详细信息，请参阅[应用构造持久性配置](https://go.microsoft.com/fwlink/?LinkId=201204)。
+Windows Server App Fabric 大大简化了配置持久性的过程。 有关详细信息，请参阅[应用构造持久性配置](https://docs.microsoft.com/previous-versions/appfabric/ee790848(v=azure.10))。
 
 使用 SQL 工作流实例存储功能之前，创建一个数据库以供该功能用来持久保存工作流实例。 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 安装程序将与 SQL 工作流实例存储功能相关联的 SQL 脚本文件复制到 %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN 文件夹。 针对您希望 SQL 工作流实例存储用于持久保存工作流实例的 SQL Server 2005 或 SQL Server 2008 数据库，运行这些脚本文件。 首先运行 SqlWorkflowInstanceStoreSchema.sql 文件，之后运行 SqlWorkflowInstanceStoreLogic.sql 文件。
 
@@ -152,7 +152,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 ```
 
 > [!IMPORTANT]
-> 建议不要在 Web.config 文件中存储敏感信息，如用户名和密码。 如果在 Web.config 文件中存储了敏感信息，应使用文件系统访问控制列表 (ACL) 来确保安全访问 Web.config 文件。 此外，还可以在[使用受保护配置加密配置信息](https://go.microsoft.com/fwlink/?LinkId=178419)中所述，保护配置文件中的配置值。
+> 建议不要在 Web.config 文件中存储敏感信息，如用户名和密码。 如果在 Web.config 文件中存储了敏感信息，应使用文件系统访问控制列表 (ACL) 来确保安全访问 Web.config 文件。 此外，还可以在[使用受保护配置加密配置信息](https://docs.microsoft.com/en-us/previous-versions/aspnet/53tyfkaw(v=vs.100))中所述，保护配置文件中的配置值。
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>与 SQL 工作流实例存储功能相关的 Machine.config 元素
 

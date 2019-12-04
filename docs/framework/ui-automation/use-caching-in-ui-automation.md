@@ -8,22 +8,22 @@ helpviewer_keywords:
 - caching, UI Automation
 - UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
-ms.openlocfilehash: dd7506d388ba215f671ee3c7c4bae09baf4cc2b3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 679192b611a423e095ee9acc956d247364940edf
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040310"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800804"
 ---
 # <a name="use-caching-in-ui-automation"></a>在 UI 自动化中使用缓存
 > [!NOTE]
-> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本部分演示如何实现 <xref:System.Windows.Automation.AutomationElement> 属性和控件模式的缓存。  
   
 ### <a name="activate-a-cache-request"></a>激活缓存请求  
   
-1. 创建 <xref:System.Windows.Automation.CacheRequest>。  
+1. 创建<xref:System.Windows.Automation.CacheRequest>。  
   
 2. 使用 <xref:System.Windows.Automation.CacheRequest.Add%2A>指定要缓存的属性和模式。  
   
@@ -33,9 +33,9 @@ ms.locfileid: "71040310"
   
 5. 如果想通过不检索对对象的完全引用来提高效率，请将 <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> 属性设置为 <xref:System.Windows.Automation.AutomationElementMode.None> 。 （这将导致无法从那些对象中检索当前值。）  
   
-6. 使用<xref:System.Windows.Automation.CacheRequest.Activate%2A> 块`using`中的（`Using`在 Microsoft Visual Basic .net 中）激活请求。  
+6. 使用 `using` 块（Microsoft Visual Basic .NET 中的`Using`）中的 <xref:System.Windows.Automation.CacheRequest.Activate%2A> 来激活请求。  
   
- 在获得 <xref:System.Windows.Automation.AutomationElement> 对象或订阅事件后，通过使用 <xref:System.Windows.Automation.CacheRequest.Pop%2A> （如果使用了 <xref:System.Windows.Automation.CacheRequest.Push%2A> ）或处理 <xref:System.Windows.Automation.CacheRequest.Activate%2A>创建的对象来禁用请求。 （在<xref:System.Windows.Automation.CacheRequest.Activate%2A> Microsoft Visual Basic `using` .net`Using`中的块中使用。  
+ 在获得 <xref:System.Windows.Automation.AutomationElement> 对象或订阅事件后，通过使用 <xref:System.Windows.Automation.CacheRequest.Pop%2A> （如果使用了 <xref:System.Windows.Automation.CacheRequest.Push%2A> ）或处理 <xref:System.Windows.Automation.CacheRequest.Activate%2A>创建的对象来禁用请求。 （在 `using` 块中使用 <xref:System.Windows.Automation.CacheRequest.Activate%2A> （`Using` Microsoft Visual Basic .NET 中）。  
   
 ### <a name="cache-automationelement-properties"></a>缓存 AutomationElement 属性  
   
@@ -63,6 +63,6 @@ ms.locfileid: "71040310"
  [!code-csharp[UIAClient_snip#108](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#108)]
  [!code-vb[UIAClient_snip#108](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#108)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 UI 自动化客户端中缓存](caching-in-ui-automation-clients.md)

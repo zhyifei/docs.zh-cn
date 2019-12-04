@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 89be7aa8339a4edf6d6ab9c0c243e4320d2fdfa8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 684361dbb97e70296a3061f71102662023f88d9a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052975"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800514"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>如何：开发在 IIS 上运行的 WCF 数据服务
 
@@ -25,19 +25,19 @@ ms.locfileid: "71052975"
 
 本主题说明如何使用实体框架提供程序创建数据服务。 还有其他一些数据服务提供程序可以使用。 有关详细信息，请参阅[数据服务提供程序](data-services-providers-wcf-data-services.md)。
 
-在创建服务之后，您必须显式提供对数据服务资源的访问权限。 有关详细信息，请参阅[如何：启用对数据服务](how-to-enable-access-to-the-data-service-wcf-data-services.md)的访问。
+在创建服务之后，您必须显式提供对数据服务资源的访问权限。 有关详细信息，请参阅[如何：启用对数据服务的访问](how-to-enable-access-to-the-data-service-wcf-data-services.md)。
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>创建在 IIS 上运行的 ASP.NET web 应用程序
 
-1. 在 Visual Studio 的 "**文件**" 菜单上，选择 "**新建** > **项目**"。
+1. 在 Visual Studio 的“文件”菜单中，依次选择“新建” > “项目”。
 
 2. 在 "**新建项目**" 对话框中，选择 "**已安装**的 > [**视觉对象C#** 或**Visual Basic**]" > **Web** "类别。
 
 3. 选择 " **ASP.NET Web 应用程序**" 模板。
 
-4. 输入`NorthwindService`作为项目的名称。
+4. 输入 `NorthwindService` 作为项目的名称。
 
-5. 单击 **“确定”** 。
+5. 单击“确定”。
 
 6. 在 "**项目**" 菜单上，选择 " **NorthwindService 属性**"。
 
@@ -81,9 +81,9 @@ ms.locfileid: "71052975"
 
     1. 打开 IIS 管理器并导航到 "**默认**网站" 下的 PhotoService 应用程序。
 
-    2. 在 "**功能视图**" 中，双击 "**身份验证**"。
+    2. 在 **“功能视图”** 中，双击 **“身份验证”** 。
 
-    3. 在 "**身份验证**" 页上，选择 "**匿名身份验证**"。
+    3. 在“身份验证”页面上，选择“匿名身份验证”。
 
     4. 在 "**操作**" 窗格中，单击 "**编辑**" 以设置匿名用户将连接到站点的安全主体。
 
@@ -126,13 +126,13 @@ ms.locfileid: "71052975"
 
 2. 在 "**添加新项**" 对话框中，选择 " **ADO.NET 实体数据模型**"。
 
-3. 对于数据模型的名称，请键入`Northwind.edmx`。
+3. 对于数据模型的名称，请键入 `Northwind.edmx`。
 
 4. 在实体数据模型向导中，选择 "**从数据库生成**"，然后单击 "**下一步**"。
 
 5. 执行以下步骤之一，将数据模型连接到数据库，然后单击 "**下一步**"：
 
-    - 如果尚未配置数据库连接，请单击 "**新建连接**" 并创建一个新连接。 有关详细信息，请参阅[如何：创建与 SQL Server 数据库](https://go.microsoft.com/fwlink/?LinkId=123631)的连接。 此 SQL Server 实例必须附加了 Northwind 示例数据库。
+    - 如果尚未配置数据库连接，请单击 "**新建连接**" 并创建一个新连接。 有关详细信息，请参阅 [How to: Create Connections to SQL Server Databases](https://go.microsoft.com/fwlink/?LinkId=123631)。 此 SQL Server 实例必须附加了 Northwind 示例数据库。
 
          \- 或 -
 
@@ -151,17 +151,17 @@ ms.locfileid: "71052975"
    ![Visual Studio 2015 中的 WCF 数据服务项模板](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > **WCF 数据服务**模板在 visual studio 2015 中提供，但在 visual studio 2017 中不可用。
+   > **WCF 数据服务**模板在 visual studio 2015 中提供，但在 visual studio 2017 或更高版本中不可用。
 
-3. 对于服务的名称，请输入`Northwind`。
+3. 对于服务的名称，请输入 `Northwind`。
 
-     Visual Studio 将为新服务创建 XML 标记和代码文件。 默认情况下，代码编辑器窗口将打开。 在**解决方案资源管理器**中，该服务的名称为 Northwind，svc.cs 或 .svc。
+     将为新服务创建 XML 标记和代码文件。 默认情况下，代码编辑器窗口将打开。 在**解决方案资源管理器**中，该服务的名称为 Northwind，svc.cs 或 .svc。
 
 4. 在数据服务的代码中，用数据模型的实体容器的类型（在此示例中为 `/* TODO: put your data source class name here */`）替换定义数据服务的类定义中的注释 `NorthwindEntities`。 该类定义应如下所示：
 
      [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
      [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [将数据公开为服务](exposing-your-data-as-a-service-wcf-data-services.md)

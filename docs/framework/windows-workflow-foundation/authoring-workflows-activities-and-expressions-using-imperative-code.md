@@ -2,15 +2,15 @@
 title: 使用命令性代码创作工作流、活动和表达式
 ms.date: 03/30/2017
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
-ms.openlocfilehash: 22f5928dda55d77fde2ee518510eb2890e55b446
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 97f57067e72be2ed2fb6b3846e2ab876c13e049f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940891"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802695"
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>使用命令性代码创作工作流、活动和表达式
-工作流定义是已配置活动对象的树。 这种活动树有多种定义方法，包括手动编辑 XAML 或使用工作流设计器来生成 XAML。 但是，并非必须使用 XAML。 工作流定义也可以通过编程方式来创建。 本主题概述如何通过使用代码创建工作流定义、活动和表达式。 有关使用代码处理 XAML 工作流的示例, 请参阅在[xaml 中序列化工作流和活动](serializing-workflows-and-activities-to-and-from-xaml.md)。  
+工作流定义是已配置活动对象的树。 这种活动树有多种定义方法，包括手动编辑 XAML 或使用工作流设计器来生成 XAML。 但是，并非必须使用 XAML。 工作流定义也可以通过编程方式来创建。 本主题概述如何通过使用代码创建工作流定义、活动和表达式。 有关使用代码处理 XAML 工作流的示例，请参阅在[xaml 中序列化工作流和活动](serializing-workflows-and-activities-to-and-from-xaml.md)。  
   
 ## <a name="creating-workflow-definitions"></a>创建工作流定义  
  通过实例化活动类型的实例以及配置活动对象的属性可创建工作流定义。 对于不包含子活动的活动而言，可使用若干代码行来完成。  
@@ -18,7 +18,7 @@ ms.locfileid: "69940891"
  [!code-csharp[CFX_WorkflowApplicationExample#47](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#47)]  
   
 > [!NOTE]
-> 本主题中的示例使用 <xref:System.Activities.WorkflowInvoker> 来运行示例工作流。 有关调用工作流、传递参数以及可用的不同宿主选项的详细信息, 请参阅[使用 WorkflowInvoker 和 WorkflowApplication](using-workflowinvoker-and-workflowapplication.md)。  
+> 本主题中的示例使用 <xref:System.Activities.WorkflowInvoker> 来运行示例工作流。 有关调用工作流、传递参数以及可用的不同宿主选项的详细信息，请参阅[使用 WorkflowInvoker 和 WorkflowApplication](using-workflowinvoker-and-workflowapplication.md)。  
   
  在本示例中，将要创建由单个 <xref:System.Activities.Statements.WriteLine> 活动组成的工作流。 还要设置 <xref:System.Activities.Statements.WriteLine> 活动的 <xref:System.Activities.Statements.WriteLine.Text%2A> 参数，并调用该工作流。 如果活动包含子活动，构造方法类似。 以下示例使用一个包含两个 <xref:System.Activities.Statements.Sequence> 活动的 <xref:System.Activities.Statements.WriteLine> 活动。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "69940891"
   
  [!code-csharp[CFX_WorkflowApplicationExample#49](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#49)]  
   
- 有关对象初始值设定项的详细信息[, 请参阅如何:在不调用构造函数的情况C#下初始化对象](https://go.microsoft.com/fwlink/?LinkId=161015) ( [编程指南) 和如何:使用对象初始值设定项](https://go.microsoft.com/fwlink/?LinkId=161016)声明对象。  
+ 有关对象初始值设定项的详细信息，请参阅[如何：在不调用构造函数C#的情况下初始化对象（编程指南）](../../csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md)和[如何：使用对象初始值设定项声明对象](../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)。  
   
 ### <a name="working-with-variables-literal-values-and-expressions"></a>使用变量、文本值和表达式  
  使用代码创建工作流定义时，请注意哪些代码是作为创建工作流定义的一部分来执行，哪些代码是作为该工作流实例执行的一部分来执行。 例如，以下工作流将生成一个随机数，并将其写入控制台。  
@@ -50,7 +50,7 @@ new Assign<int>
 }  
 ```  
   
- 在调用包含 C# 表达式的工作流之前，必须先编译这些表达式。 如果C#表达式未编译, 则在调用<xref:System.NotSupportedException>工作流时将引发, 其中包含类似于以下内容的消息:`Expression Activity type 'CSharpValue`1需要编译才能运行。  请确保已编译工作流。在大多数情况下, 涉及在 Visual Studio 中创建的工作C#流, 这些表达式会自动编译, 但在某些情况下 (例如代码C#工作流), 表达式必须手动编译. 有关如何编译C#表达式的示例, 请参阅[ C#表达式](csharp-expressions.md)主题的在[代码工作流C#中使用表达式](csharp-expressions.md#CodeWorkflows)部分。  
+ 在调用包含 C# 表达式的工作流之前，必须先编译这些表达式。 如果 C# 表达式尚未编译，则在调用工作流时会引发 <xref:System.NotSupportedException> 异常，并带有类似下面的消息：``Expression Activity type 'CSharpValue`1' requires compilation in order to run.  Please ensure that the workflow has been compiled.``。在大多数涉及 Visual Studio 所创建工作流的情况中，C# 表达式会自动编译，但在某些情况中（例如代码工作流），C# 表达式必须手动编译。 有关如何编译C#表达式的示例，请参阅[ C#表达式](csharp-expressions.md)主题的在[代码工作流C#中使用表达式](csharp-expressions.md#CodeWorkflows)部分。  
   
  <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 在 Visual Basic 语法中表示可用作表达式右值的表达式，<xref:Microsoft.CSharp.Activities.CSharpValue%601> 在 C# 语法中表示可用作表达式右值的表达式。 每次执行包含活动时，都会计算这些表达式。 将表达式的结果赋给工作流变量 `n`，工作流中的下一个活动将使用这些结果。 若要在运行时访问工作流变量 `n` 的值，需要 <xref:System.Activities.ActivityContext>。 可使用以下 lambda 表达式进行访问。  
   
@@ -61,9 +61,9 @@ new Assign<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#52](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#52)]  
   
- 有关 lambda 表达式的详细信息, 请参阅[Lambda 表达式C# (编程指南)](https://go.microsoft.com/fwlink/?LinkID=152436)或[lambda 表达式 (Visual Basic)](https://go.microsoft.com/fwlink/?LinkID=152437)。  
+ 有关 lambda 表达式的详细信息，请参阅[Lambda 表达式C# （编程指南）](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)或[lambda 表达式（Visual Basic）](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
   
- Lambda 表达式不可序列化为 XAML 格式。 如果尝试用 lambda 表达式序列化工作流, <xref:System.Activities.Expressions.LambdaSerializationException>则会引发并出现以下消息:"此工作流包含在代码中指定的 lambda 表达式。 这些表达式不可序列化为 XAML。 若要使工作流可序列化为 XAML，请使用 VisualBasicValue/VisualBasicReference 或 ExpressionServices.Convert(lambda)。 这会将 lambda 表达式转换为表达式活动。” 若要使此表达式与 XAML 相兼容，请使用 <xref:System.Activities.Expressions.ExpressionServices> 和 <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>，如下例所示。  
+ Lambda 表达式不可序列化为 XAML 格式。 如果尝试用 lambda 表达式序列化工作流，会引发 <xref:System.Activities.Expressions.LambdaSerializationException>，并带有消息：“此工作流包含以代码形式指定的 lambda 表达式。 这些表达式不可序列化为 XAML。 若要使工作流可序列化为 XAML，请使用 VisualBasicValue/VisualBasicReference 或 ExpressionServices.Convert(lambda)。 这会将 lambda 表达式转换为表达式活动。” 若要使此表达式与 XAML 相兼容，请使用 <xref:System.Activities.Expressions.ExpressionServices> 和 <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>，如下例所示。  
   
  [!code-csharp[CFX_WorkflowApplicationExample#53](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#53)]  
   
@@ -71,7 +71,7 @@ new Assign<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#54](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#54)]  
   
- Visual Basic 表达式在运行时编译为 LINQ 表达式。 前面两个示例都可序列化为 XAML，但是，如果序列化后的 XAML 用于在工作流设计器中查看和编辑，则对表达式使用 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>。 使用 `ExpressionServices.Convert` 的序列化工作流可在设计器中打开，但是表达式的值将为空。 有关将工作流序列化为 XAML 的详细信息, 请参阅[在 xaml 中序列化工作流和活动](serializing-workflows-and-activities-to-and-from-xaml.md)。  
+ Visual Basic 表达式在运行时编译为 LINQ 表达式。 前面两个示例都可序列化为 XAML，但是，如果序列化后的 XAML 用于在工作流设计器中查看和编辑，则对表达式使用 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>。 使用 `ExpressionServices.Convert` 的序列化工作流可在设计器中打开，但是表达式的值将为空。 有关将工作流序列化为 XAML 的详细信息，请参阅[在 xaml 中序列化工作流和活动](serializing-workflows-and-activities-to-and-from-xaml.md)。  
   
 #### <a name="literal-expressions-and-reference-types"></a>文本表达式和引用类型  
  在工作流中，通过 <xref:System.Activities.Expressions.Literal%601> 活动表示文本表达式。 下面的 <xref:System.Activities.Statements.WriteLine> 活动在功能上是等效的。  
@@ -97,7 +97,7 @@ new Assign
 },  
 ```  
   
- 验证包含此活动的工作流时, 将返回以下验证错误:"Literal 仅支持值类型和不可变类型 System.string。 类型 System.Collections.Generic.List`1[System.String] 不能用作文本。” 如果调用工作流，会引发包含验证错误文本的 <xref:System.Activities.InvalidWorkflowException>。 这是验证错误，因为使用引用类型创建文本表达式不会创建每个工作流实例的引用类型的新实例。 要解决此问题，请将文本表达式替换为创建和返回引用类型新实例的表达式。  
+ 在验证包含此活动的工作流时，返回以下验证错误：“文本仅支持值类型和不可变类型 System.String。 类型 System.Collections.Generic.List`1[System.String] 不能用作文本。” 如果调用工作流，会引发包含验证错误文本的 <xref:System.Activities.InvalidWorkflowException>。 这是验证错误，因为使用引用类型创建文本表达式不会创建每个工作流实例的引用类型的新实例。 要解决此问题，请将文本表达式替换为创建和返回引用类型新实例的表达式。  
   
 ```csharp  
 new Assign  
@@ -107,7 +107,7 @@ new Assign
 },  
 ```  
   
- 有关表达式的详细信息, 请参阅[表达式](expressions.md)。  
+ 有关表达式的详细信息，请参阅[表达式](expressions.md)。  
   
 #### <a name="invoking-methods-on-objects-using-expressions-and-the-invokemethod-activity"></a>使用表达式和 InvokeMethod 活动调用对象上的方法  
  <xref:System.Activities.Expressions.InvokeMethod%601> 活动可用于调用 .NET Framework 中的类的静态和实例方法。 在此主题中的上一个示例中，使用 <xref:System.Random> 类生成随机数。  
@@ -137,12 +137,12 @@ new InvokeMethod<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#55](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#55)]  
   
- 有关动态活动的详细信息, 请参阅[在运行时创建活动](creating-an-activity-at-runtime-with-dynamicactivity.md)。  
+ 有关动态活动的详细信息，请参阅[在运行时创建活动](creating-an-activity-at-runtime-with-dynamicactivity.md)。  
   
 ## <a name="compiled-activities"></a>编译活动  
- 动态活动是使用代码定义包含参数的活动的一种方法，但是活动还可以通过代码创建和编译为类型。 可以创建派生自 <xref:System.Activities.CodeActivity> 的简单活动和派生自 <xref:System.Activities.AsyncCodeActivity> 的异步活动。 这些活动可以有自变量、返回值，可以使用命令性代码对其逻辑进行定义。 有关创建这些类型的活动的示例, 请参阅[CodeActivity 基类](workflow-activity-authoring-using-the-codeactivity-class.md)和[创建异步活动](creating-asynchronous-activities-in-wf.md)。  
+ 动态活动是使用代码定义包含参数的活动的一种方法，但是活动还可以通过代码创建和编译为类型。 可以创建派生自 <xref:System.Activities.CodeActivity> 的简单活动和派生自 <xref:System.Activities.AsyncCodeActivity> 的异步活动。 这些活动可以有自变量、返回值，可以使用命令性代码对其逻辑进行定义。 有关创建这些类型的活动的示例，请参阅[CodeActivity 基类](workflow-activity-authoring-using-the-codeactivity-class.md)和[创建异步活动](creating-asynchronous-activities-in-wf.md)。  
   
- 派生自 <xref:System.Activities.NativeActivity> 的活动可以使用命令性代码对其逻辑进行定义，其中可以包含定义逻辑的子活动。 它们还具有对运行时的功能（如创建书签）的完全访问权限。 有关创建<xref:System.Activities.NativeActivity>基于的活动的示例, 请参阅[NativeActivity 基类](nativeactivity-base-class.md), [如何:使用本机活动](how-to-create-an-activity.md)示例创建活动和[自定义复合](./samples/custom-composite-using-native-activity.md)。  
+ 派生自 <xref:System.Activities.NativeActivity> 的活动可以使用命令性代码对其逻辑进行定义，其中可以包含定义逻辑的子活动。 它们还具有对运行时的功能（如创建书签）的完全访问权限。 有关创建基于 <xref:System.Activities.NativeActivity>的活动的示例，请参阅[NativeActivity 基类](nativeactivity-base-class.md)、[如何：创建活动](how-to-create-an-activity.md)和[使用本机活动的自定义复合](./samples/custom-composite-using-native-activity.md)示例。  
   
  派生自 <xref:System.Activities.Activity> 的活动仅通过使用子活动定义其逻辑。 这些活动通常使用工作流设计器进行创建，但是也可以使用代码进行定义。 在下面的示例中，定义了一个派生自 `Square` 的 `Activity<int>` 活动。 `Square` 活动具有名为 <xref:System.Activities.InArgument%601> 的单一 `Value`，并且通过使用 <xref:System.Activities.Statements.Sequence> 属性指定 <xref:System.Activities.Activity.Implementation%2A> 活动来定义其逻辑。 <xref:System.Activities.Statements.Sequence> 活动包含 <xref:System.Activities.Statements.WriteLine> 活动和 <xref:System.Activities.Statements.Assign%601> 活动。 这三个活动一起实现 `Square` 活动的逻辑。  
   
@@ -183,5 +183,5 @@ Console.WriteLine("Result: {0}", result);
   
  在调用工作流时，下面的输出显示到控制台：  
   
- **求值的值:5**  
-**输出25**
+ **求值的值：5**  
+**结果：25**

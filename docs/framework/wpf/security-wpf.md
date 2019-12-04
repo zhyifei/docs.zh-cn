@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: a88159085e48d69550320ffabe3035f549c78653
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 939c9c6b8a8a8822174f08d5c0b50ef051264ee1
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975610"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802092"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a>开发 Windows Presentation Foundation （WPF）独立应用程序和浏览器托管应用程序时，必须考虑安全模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 独立的应用程序使用无限制权限（CA**FullTrust**权限集）执行，不管是使用 Windows Installer （.msi）、XCopy 还是 ClickOnce 部署的。 不支持使用 ClickOnce 部署部分信任的独立 WPF 应用程序。 不过，完全信任的主机应用程序可以使用 .NET Framework 外接程序模型创建部分信任 <xref:System.AppDomain>。 有关详细信息，请参阅[WPF 外接程序概述](./app-development/wpf-add-ins-overview.md)。  
@@ -60,7 +60,7 @@ ms.locfileid: "73975610"
 |内容类型|描述|URI 示例|  
 |------------------|-----------------|-----------------|  
 |资源|添加到具有**资源**生成类型的项目中的文件。|`pack://application:,,,/MyResourceFile.xaml`|  
-|内容|使用 "**内容**" 生成类型添加到项目中的文件。|`pack://application:,,,/MyContentFile.xaml`|  
+|Content|使用 "**内容**" 生成类型添加到项目中的文件。|`pack://application:,,,/MyContentFile.xaml`|  
 |源站点|添加到生成类型为**None**的项目中的文件。|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
 |应用程序代码|具有已编译代码隐藏的 XAML 资源。<br /><br /> 或<br /><br /> 添加到具有**页**的生成类型的项目中的 XAML 文件。|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
@@ -77,7 +77,7 @@ ms.locfileid: "73975610"
 ### <a name="browser-navigation-security"></a>浏览器导航安全性  
  浏览器导航仅在以下条件下被视为安全：  
   
-- **用户导航**。 用户通过单击主 <xref:System.Windows.Navigation.NavigationWindow> 内的 <xref:System.Windows.Documents.Hyperlink> 元素导航，而不是在嵌套 <xref:System.Windows.Controls.Frame> 中导航。  
+- **用户导航**。 用户通过单击主 <xref:System.Windows.Navigation.NavigationWindow>内的 <xref:System.Windows.Documents.Hyperlink> 元素导航，而不是在嵌套 <xref:System.Windows.Controls.Frame>中导航。  
   
 - **区域**。 要导航到的内容位于 Internet 或本地 Intranet 上。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "73975610"
   
 - 下载  
   
-- “脚本”  
+- 脚本功能  
   
 - 用户身份验证  
   
@@ -209,7 +209,7 @@ ms.locfileid: "73975610"
   
  如果在 Windows Internet Explorer 中运行包含 WPF <xref:System.Windows.Controls.WebBrowser> 控件的部分信任 XAML 浏览器应用程序（XBAP），则 WPF 会在 Internet Explorer 进程的地址空间中承载 WebBrowser ActiveX 控件。 由于 WebBrowser ActiveX 控件承载于 Internet Explorer 进程中，因此还为 WebBrowser ActiveX 控件启用了 Internet Explorer 的所有功能控件。  
   
- 与普通的独立应用程序相比，运行于 Internet Explorer 中的 XBAP 还将另外获得一层安全保护。 这种附加安全性是因为 Internet Explorer 和 WebBrowser ActiveX 控件在默认情况下在 Windows Vista 和 [!INCLUDE[win7](../../../includes/win7-md.md)]上以受保护模式运行。 有关保护模式的详细信息，请参阅[了解和使用受保护模式的 Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393)。  
+ 与普通的独立应用程序相比，运行于 Internet Explorer 中的 XBAP 还将另外获得一层安全保护。 这种附加安全性是因为 Internet Explorer 和 WebBrowser ActiveX 控件默认在 Windows Vista 和 Windows 7 上以受保护模式运行。 有关保护模式的详细信息，请参阅[了解和使用受保护模式的 Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393)。  
   
 > [!NOTE]
 > 如果尝试在 Firefox 中运行包含 WPF <xref:System.Windows.Controls.WebBrowser> 控件的 XBAP，则在 Internet 区域中，将会引发 <xref:System.Security.SecurityException>。 这是由于 WPF 安全策略造成的。  
@@ -249,7 +249,7 @@ ms.locfileid: "73975610"
   
  但是，当从独立应用程序中的 <xref:System.Windows.Navigation.NavigationWindow> 或 <xref:System.Windows.Controls.Frame> 导航到松散 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 文件时，安全行为会有所不同。  
   
- 在这两种情况下，导航到的松散 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 文件继承其主机应用程序的权限。 但是，这种行为可能会从安全角度来看，特别是当不受信任或未知的实体生成了松散 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 文件时。 这种类型的内容称为*外部内容*，<xref:System.Windows.Controls.Frame> 和 <xref:System.Windows.Navigation.NavigationWindow> 均可配置为在导航到时将其隔离。 可以通过将**SandboxExternalContent**属性设置为 true 来实现隔离，如下面 <xref:System.Windows.Controls.Frame> 和 <xref:System.Windows.Navigation.NavigationWindow> 的示例所示：  
+ 在这两种情况下，导航到的松散 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 文件继承其主机应用程序的权限。 但是，这种行为可能会从安全角度来看，特别是当不受信任或未知的实体生成了松散 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 文件时。 这种类型的内容称为*外部内容*，<xref:System.Windows.Controls.Frame> 和 <xref:System.Windows.Navigation.NavigationWindow> 均可配置为在导航到时将其隔离。 可以通过将**SandboxExternalContent**属性设置为 true 来实现隔离，如下面 <xref:System.Windows.Controls.Frame> 和 <xref:System.Windows.Navigation.NavigationWindow>的示例所示：  
   
  [!code-xaml[SecurityOverviewSnippets#FrameMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window2.xaml#framemarkup)]  
   
@@ -258,7 +258,7 @@ ms.locfileid: "73975610"
  使用此设置，外部内容将加载到不同于承载应用程序的进程的进程中。 此进程被限制在默认 Internet 区域权限集中，从而有效地将其与承载应用程序和客户端计算机隔离。  
   
 > [!NOTE]
-> 尽管从独立应用程序中的 <xref:System.Windows.Navigation.NavigationWindow> 或 <xref:System.Windows.Controls.Frame> 导航到松散 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 文件是基于 WPF 浏览器宿主基础结构（涉及 Presentationhost.exe 过程）实现的，但安全级别略小于直接在 Windows Vista 上的 Internet Explorer 中加载内容的时间，并 [!INCLUDE[win7](../../../includes/win7-md.md)] （这仍是通过 Presentationhost.exe）。 这是因为使用 Web 浏览器的独立 WPF 应用程序不提供 Internet Explorer 的额外“保护模式”安全功能。  
+> 尽管从独立应用程序中的 <xref:System.Windows.Navigation.NavigationWindow> 或 <xref:System.Windows.Controls.Frame> 导航到松散 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 文件的操作是基于 WPF 浏览器宿主基础结构（涉及 Presentationhost.exe 进程）实现的，但在 Windows Vista 和 Windows 7 上的 Internet Explorer 中直接加载内容时，安全级别会略微小于 Presentationhost.exe。 这是因为使用 Web 浏览器的独立 WPF 应用程序不提供 Internet Explorer 的额外“保护模式”安全功能。  
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>用于开发可提高安全性的 WPF 应用程序的资源  
@@ -271,7 +271,7 @@ ms.locfileid: "73975610"
 |ClickOnce|[ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 部分信任安全](wpf-partial-trust-security.md)|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WPF 部分信任安全](wpf-partial-trust-security.md)
 - [WPF 安全策略 - 平台安全性](wpf-security-strategy-platform-security.md)

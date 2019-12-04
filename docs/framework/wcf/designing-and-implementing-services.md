@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: 0d569d12b5bc555a07e94fa89c5a19f52f4a6b6c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 9ddb3fe637cd0402f0ce850bc523ae8cb0c5dc37
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318398"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801971"
 ---
 # <a name="designing-and-implementing-services"></a>设计和实现服务
 本部分演示如何定义和实现 WCF 协定。 服务协定指定终结点与外界通信的内容。 更具体地说，它是有关一组特定消息的声明，这些消息被组织成基本消息交换模式 (MEP)，如请求/答复、单向和双工。 如果说服务协定是一组在逻辑上相关的消息交换，那么服务操作就是单个消息交换。 例如，`Hello` 操作显然必须接受一条消息（以便调用方能够发出问候），并可能返回也可能不返回一条消息（具体取决于操作的礼节性）。  
@@ -23,7 +23,7 @@ ms.locfileid: "72318398"
   
 - 了解运行时配置或宿主环境可能不支持的协定状态最低要求。  
   
-## <a name="service-contracts"></a>服务协定  
+## <a name="service-contracts"></a>服务约定  
  服务协定指定以下内容：  
   
 - 协定公开的操作。  
@@ -46,7 +46,7 @@ ms.locfileid: "72318398"
   
 4. 有关成功处理消息所必需的通信基础结构的分类声明。 例如，这些详细信息包括建立成功通信是否需要安全以及需要哪些形式的安全。  
   
- 若要将此类信息传递给许多平台（包括非 Microsoft 平台）上的其他应用程序，XML 服务协定以标准 XML 格式公开表示，如[Web 服务描述语言](https://go.microsoft.com/fwlink/?LinkId=94952)（WSDL）和[XML 架构](https://go.microsoft.com/fwlink/?LinkId=94953)（XSD）等。 许多平台的开发人员都可以使用此公共协定信息创建可与该服务通信的应用程序，既因为开发人员理解规范的语言，又因为这些语言通过描述服务支持的公共形式、格式和协议，支持互操作。 有关 WCF 如何处理此类信息的详细信息，请参阅[元数据](./feature-details/metadata.md)。  
+ 若要将此类信息传递给许多平台（包括非 Microsoft 平台）上的其他应用程序，XML 服务协定以标准 XML 格式公开表示，如[Web 服务描述语言](https://www.w3.org/TR/2001/NOTE-wsdl-20010315)（WSDL）和[XML 架构](https://www.w3.org/XML/Schema)（XSD），等等。 许多平台的开发人员都可以使用此公共协定信息创建可与该服务通信的应用程序，既因为开发人员理解规范的语言，又因为这些语言通过描述服务支持的公共形式、格式和协议，支持互操作。 有关 WCF 如何处理此类信息的详细信息，请参阅[元数据](./feature-details/metadata.md)。  
   
  协定可以用多种方式进行表示，虽然 WSDL 和 XSD 语言非常适合以易于理解的方式描述服务，但这些语言很难直接使用，它们仅用于描述服务，而不能描述服务协定实现。 因此，WCF 应用程序使用托管属性、接口和类来定义服务的结构并实现它。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "72318398"
  有关设计协定的详细信息，请参阅[设计服务协定](designing-service-contracts.md)。 有关实现协定的详细信息，请参阅[实现服务协定](implementing-service-contracts.md)。  
   
 ### <a name="messages-up-front-and-center"></a>面向消息  
- 如果你习惯于远程过程调用 (RPC) 样式的方法签名（其请求功能的标准形式为向某一方法传递参数，然后从对象或其他类型的代码接收返回值），则使用托管接口、类和方法模拟服务操作简单而直观。 例如，使用托管语言（例如 Visual Basic 和C++ COM）的程序员可以将其 RPC 样式的方法（无论使用对象或接口）的知识应用于创建 WCF 服务协定，而不会遇到固有的问题在 RPC 样式的分布式对象系统中。 面向服务的优势是可以实现松耦合、面向消息的编程，同时保持轻松熟悉的 RPC 编程体验。  
+ 如果你习惯于远程过程调用 (RPC) 样式的方法签名（其请求功能的标准形式为向某一方法传递参数，然后从对象或其他类型的代码接收返回值），则使用托管接口、类和方法模拟服务操作简单而直观。 例如，使用托管语言（例如 Visual Basic 和C++ COM）的程序员可以将其 RPC 样式的方法（无论使用对象或接口）的知识应用于创建 WCF 服务协定，而不会遇到 RPC 样式分布式对象系统中固有的问题。 面向服务的优势是可以实现松耦合、面向消息的编程，同时保持轻松熟悉的 RPC 编程体验。  
   
  许多程序员感觉使用面向消息的应用程序编程接口更舒服，例如，像 Microsoft MSMQ 这样的消息队列、.NET Framework 中的 <xref:System.Messaging> 命名空间或在 HTTP 请求中发送非结构化 XML。 有关在消息级别编程的详细信息，请参阅[使用消息协定](./feature-details/using-message-contracts.md)、[服务通道级编程](./extending/service-channel-level-programming.md)和[与 POX 应用程序的互操作性](./feature-details/interoperability-with-pox-applications.md)。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "72318398"
   
  在设计、实现、配置和承载 Windows Communication Foundation （WCF）服务应用程序时，必须记住这一附加要求过程。 例如，协定可能会指定需要支持某一会话。 如果是这样，您必须配置绑定以支持该协定性需求，否则服务实现将无法正常工作。 或者，如果您的服务要求 Windows 集成身份验证并寄宿在 Internet 信息服务 (IIS) 中，则服务所在的 Web 应用程序必须打开 Windows 集成身份验证并关闭匿名支持。 有关不同服务主机应用程序类型的功能和影响的详细信息，请参阅[托管服务](hosting-services.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [设计服务协定](designing-service-contracts.md)
 - [实现服务协定](implementing-service-contracts.md)

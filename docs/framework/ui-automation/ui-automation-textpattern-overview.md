@@ -6,17 +6,17 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: 2f417aaba5361bea3bf2493001bca938d9dd08cb
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b7e378d79109d33859a38ea398cffd2193044abd
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975483"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800197"
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI 自动化 TextPattern 概述
 
 > [!NOTE]
-> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。
 
 本概述介绍如何使用 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 公开文本内容，其中包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支持的平台中的文本控件的格式和样式特性。 这些控件包括但不限于 Microsoft .NET 框架 <xref:System.Windows.Controls.TextBox> 和 <xref:System.Windows.Controls.RichTextBox> 以及其 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 等效项。
 
@@ -41,7 +41,7 @@ ms.locfileid: "73975483"
 
 ## <a name="control-types"></a>控件类型
 
-### <a name="text"></a>Text
+### <a name="text"></a>文本
 
 Text 控件是表示屏幕上一段文本的基本元素。
 
@@ -94,7 +94,7 @@ Text 控件是表示屏幕上一段文本的基本元素。
 
 <a name="Security"></a>
 
-## <a name="security"></a>安全
+## <a name="security"></a>安全性
 
 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 体系结构的设计考虑到了安全性（请参阅[UI 自动化安全性概述](ui-automation-security-overview.md)）。 但是，此概述中所述的 TextPattern 类需要一些特定的安全注意事项。
 
@@ -143,7 +143,7 @@ Text 控件是表示屏幕上一段文本的基本元素。
 <xref:System.Windows.Automation.Text.TextUnit>\
 用于导航文本范围的逻辑分段的预定义文本单元（字符、单词、行或段落）。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)
 - [UI 自动化控件模式概述](ui-automation-control-patterns-overview.md)

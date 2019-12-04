@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 功能详细信息
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 0c312eed1a5ba064771e7cc4c260b43d97b16315
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 869d6108edaa7f32101b6fe8d077e4eba7eef6b5
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141879"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802591"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 功能详细信息
 
@@ -95,15 +95,15 @@ WCF 配置架构很复杂，并为用户提供很多难以查找功能的用户�
 
 ### <a name="getting-started"></a>入门
 
-- [WCF 4.0 开发人员指南](https://go.microsoft.com/fwlink/?LinkId=204940)
+- [WCF 4.0 开发人员指南](https://docs.microsoft.com/previous-versions/dotnet/articles/ee354381(v=msdn.10))
 
-- [配置通道工厂](https://go.microsoft.com/fwlink/?LinkId=204941)
+- [配置通道工厂](xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601)
 
-- [标准终结点元素](https://go.microsoft.com/fwlink/?LinkId=204942)
+- [标准终结点元素](xref:System.ServiceModel.Configuration.StandardEndpointElement)
 
-- [.NET Framework 4 中的服务配置改进](https://go.microsoft.com/fwlink/?LinkId=204943)
+- [.NET Framework 4 中的服务配置改进](https://blogs.msdn.microsoft.com/endpoint/2009/06/30/service-configuration-improvements-in-net-4/)
 
-- [.NET 4 中的常见用户错误：错误键入 WF/WCF 服务配置名称](https://go.microsoft.com/fwlink/?LinkId=204944)
+- [.NET 4 中的常见用户错误：错误键入 WF/WCF 服务配置名称](https://blogs.msdn.microsoft.com/endpoint/2009/11/09/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name/)
 
 ### <a name="simplified-configuration-scenarios"></a>简化配置方案
 
@@ -125,9 +125,9 @@ WCF 配置架构很复杂，并为用户提供很多难以查找功能的用户�
 
 ### <a name="getting-started"></a>入门
 
-- [数据协定解析程序 API 文档](https://go.microsoft.com/fwlink/?LinkId=204946)
+- [数据协定解析程序 API 文档](xref:System.Runtime.Serialization.DataContractResolver)
 
-- [数据协定解析程序简介](https://go.microsoft.com/fwlink/?LinkId=204947)
+- [数据协定解析程序简介](https://blogs.msdn.microsoft.com/youssefm/2009/06/05/configuring-known-types-dynamically-introducing-the-datacontractresolver/)
 
 - 示例：
 
@@ -287,7 +287,7 @@ WCF 配置架构很复杂，并为用户提供很多难以查找功能的用户�
 
 2. 示例：[路由服务&#91;WCF 示例&#93; ](../wcf/samples/routing-services.md)
 
-3. 博客：[路由规则！](https://go.microsoft.com/fwlink/?LinkId=204956)
+3. 博客：[路由规则！](https://blogs.msdn.microsoft.com/RoutingRules/)
 
 ### <a name="routing-scenarios"></a>路由方案
 

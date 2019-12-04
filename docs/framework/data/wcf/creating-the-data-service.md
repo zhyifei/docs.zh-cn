@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: d30b2e30639837730ecb185a2c0f659a63955004
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72e3b35465968674a20aa48262d3425a2190ff74
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975401"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802275"
 ---
 # <a name="create-the-data-service"></a>创建数据服务
 
@@ -26,7 +26,7 @@ ms.locfileid: "73975401"
 
 ## <a name="create-the-aspnet-web-app"></a>创建 ASP.NET web 应用
 
-1. 在 Visual Studio 的 "**文件**" 菜单上，选择 "**新建** > **项目**"。
+1. 在 Visual Studio 的“文件”菜单中，依次选择“新建” > “项目”。
 
 1. 在 "**新建项目**" 对话框中的 "Visual Basic" 或C# "Visual" 下选择 " **web** " 类别，然后选择 " **ASP.NET web 应用程序**"。
 
@@ -71,11 +71,11 @@ ms.locfileid: "73975401"
    ![Visual Studio 2015 中的 WCF 数据服务项模板](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > **WCF 数据服务**模板在 visual studio 2015 中提供，但在 visual studio 2017 中不可用。
+   > **WCF 数据服务**模板在 visual studio 2015 中提供，但在 visual studio 2017 或更高版本中不可用。
 
 3. 对于服务的名称，请键入 `Northwind`。
 
-     Visual Studio 将为新服务创建 XML 标记和代码文件。 默认情况下，代码编辑器窗口将打开。 在**解决方案资源管理器**中，该服务的名称为 Northwind，扩展名为*svc.cs*或 *.svc*。
+     将为新服务创建 XML 标记和代码文件。 默认情况下，代码编辑器窗口将打开。 在**解决方案资源管理器**中，该服务的名称为 Northwind，扩展名为*svc.cs*或 *.svc*。
 
 4. 在数据服务的代码中，用数据模型的实体容器的类型（在此示例中为 `/* TODO: put your data source class name here */`）替换定义数据服务的类定义中的注释 `NorthwindEntities`。 该类定义应如下所示：
 
@@ -101,6 +101,6 @@ ms.locfileid: "73975401"
 > [!div class="nextstepaction"]
 > [从 web 浏览器访问服务](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ADO.NET 实体数据模型工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

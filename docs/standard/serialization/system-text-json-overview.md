@@ -9,16 +9,16 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: 5ce98a7908470a402779436db43333d46f5101fc
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: b43c3f6fd8ca56aaa99fffd40317920ee7600a2c
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180155"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802708"
 ---
 # <a name="json-serialization-in-net---overview"></a>.NET 中的 JSON 序列化-概述
 
-@No__t 的命名空间提供了用于序列化和反序列化 JavaScript 对象表示法（JSON）的功能。
+`System.Text.Json` 命名空间提供用于序列化和反序列化 JavaScript 对象表示法（JSON）的功能。
 
 库设计通过广泛的功能集强调高性能和低内存分配。 内置 UTF-8 支持优化了编码为 UTF-8 的 JSON 文本的处理过程，这是针对 web 上的数据和磁盘上的文件的最流行的编码。
 
@@ -35,10 +35,10 @@ ms.locfileid: "72180155"
 ## <a name="additional-resources"></a>其他资源
 
 * [如何使用库](system-text-json-how-to.md)
-* [源代码](https://github.com/dotnet/corefx/tree/master/src/System.Text.Json)
+* [源代码](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Text.Json)
 * [API 参考](xref:System.Text.Json)
-* [路线图](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/roadmap/README.md)
+* [路线图](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Text.Json/roadmap/README.md)
 * Dotnet/corefx 存储库中的 GitHub 问题
-  * [有关系统开发的讨论](https://github.com/dotnet/corefx/issues/33115)
-  * [所有系统问题](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)
-  * [标记为 json 功能的 system.web 问题-doc](https://github.com/dotnet/corefx/labels/json-functionality-doc)
+  * [有关系统开发的讨论](https://github.com/dotnet/corefx/issues/33115) <!-- TODO: Issues are still not moved to the new repo-->
+  * [所有系统问题](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)
+  * [标记为 json 功能的 system.web 问题-doc](https://github.com/dotnet/runtime/labels/json-functionality-doc)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: 0a065676d81b36f32729bb08c23025825e94d3bc
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: e01b3a39a004e963e5bb66c5fa71433cb4e7204a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320456"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802370"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5 中的新增功能
 
@@ -40,7 +40,7 @@ WCF 现在支持协定优先开发。 Svcutil.exe 具有/serviceContract 开关�
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET 兼容模式默认值已更改
 
-WCF 提供了 ASP.NET 兼容模式，以向开发人员授予编写 WCF 服务时对 ASP.NET HTTP 管道中的功能的完全访问权限。 若要使用此模式，你必须在 web.config 的 " [\<serviceHostingEnvironment >](../configure-apps/file-schema/wcf/servicehostingenvironment.md) " 部分中将 `aspNetCompatibilityEnabled` 特性设置为 true。此外，此 appDomain 中的任何服务都需要将其 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 上的 `RequirementsMode` 属性设置为 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 或 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>。 默认情况下，<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 现在设置为 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>。 有关详细信息，请参阅[WCF 服务和 ASP.NET](./feature-details/wcf-services-and-aspnet.md)。
+WCF 提供了 ASP.NET 兼容模式，以向开发人员授予编写 WCF 服务时对 ASP.NET HTTP 管道中的功能的完全访问权限。 若要使用此模式，必须在 web.config 的[\<serviceHostingEnvironment >](../configure-apps/file-schema/wcf/servicehostingenvironment.md)节中将 `aspNetCompatibilityEnabled` 特性设置为 true。此外，此 appDomain 中的任何服务都需要将其 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 上的 `RequirementsMode` 属性设置为 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 或 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>。 默认情况下，<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 现在设置为 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>。 有关详细信息，请参阅[WCF 服务和 ASP.NET](./feature-details/wcf-services-and-aspnet.md)。
 
 ### <a name="new-transport-default-values"></a>新传输默认值
 
@@ -78,7 +78,7 @@ WebSocket 是一种通过端口 80 和 443 提供真正双向通信的技术，�
 
 下表描述了已更改的设置以及可在何处找到其他信息。
 
-|Property|On|新默认值|有关更多信息，请参见|
+|Property|On|新默认值|有关详细信息，请参阅。|
 |--------------|--------|-----------------|------------------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * 处理器数目|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
@@ -126,7 +126,7 @@ WCF 客户端应用程序使用 <xref:System.ServiceModel.ChannelFactory%601> �
 
 ## <a name="httpclient"></a>HttpClient
 
-添加了一个名为 <xref:System.Net.Http.HttpClient> 的新类，以便更加方便地与 HTTP 请求结合使用。 有关详细信息，请参阅[使应用社交并连接到 http 服务](https://go.microsoft.com/fwlink/?LinkId=231886)和[Http 客户端示例](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)。
+添加了一个名为 <xref:System.Net.Http.HttpClient> 的新类，以便更加方便地与 HTTP 请求结合使用。 有关详细信息，请参阅[使应用社交并连接到 http 服务](https://channel9.msdn.com/Events/BUILD/BUILD2011/PLAT-581T)和[Http 客户端示例](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)。
 
 ## <a name="configuration-intellisense"></a>配置 Intellisense
 

@@ -2,12 +2,12 @@
 title: WCF 服务主机 (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: a4efa0d5a46eb0d8e6eef08fd17c38f7db3e7e9e
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c855fe7cc804fac14348990b7a6f5f84a0956b0c
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423841"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802396"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF 服务主机 (WcfSvcHost.exe)
 
@@ -33,7 +33,7 @@ WCF 服务主机可以承载以下 WCF 服务库项目类型： WCF 服务库、
 
 ## <a name="scenarios-for-using-wcf-service-host-inside-visual-studio"></a>在 Visual Studio 中使用 WCF 服务主机的方案
 
-下表列出了 "**命令行参数**" 对话框中的所有参数，可以通过在 Visual Studio 的**解决方案资源管理器**中右键单击项目，选择 "**属性**"，然后选择 "**调试"** 选项卡，然后单击 "**启动项目**"。 这些参数在配置 WCF 服务主机时非常有用。
+下表列出了 "**命令行参数**" 对话框中的所有参数，在 Visual Studio 的 "**解决方案资源管理器**" 中右键单击项目，选择 "**属性**"，然后选择 "**调试**" 选项卡，然后单击 "**启动项目**"，可以找到该对话框。 这些参数在配置 WCF 服务主机时非常有用。
 
 |参数|含义|
 |---------------|-------------|
@@ -45,13 +45,13 @@ WCF 服务主机可以承载以下 WCF 服务库项目类型： WCF 服务库、
 
 创建新的 WCF 服务项目并按 F5 启动调试器后，WCF 服务主机将开始承载它在项目中找到的所有服务。 WCF 测试客户端将自动打开并显示在配置文件中定义的服务终结点的列表。 可以从主窗口中测试参数并调用服务。
 
-若要确保使用 WCF 测试客户端，请在 Visual Studio 的**解决方案资源管理器**中右键单击项目，选择 "**属性**"，然后选择 "**调试**" 选项卡。单击 " **启动项目"，并确保以下各项显示在"命令行参数**" 对话框。
+若要确保使用 WCF 测试客户端，请在 Visual Studio 的**解决方案资源管理器**中右键单击项目，选择 "**属性**"，然后选择 "**调试**" 选项卡。单击 "**启动项目**"，并确保下面出现在 "**命令行参数**" 对话框中。
 
 `/client:WcfTestClient.exe`
 
 #### <a name="using-a-custom-client"></a>使用自定义客户端
 
-若要使用自定义客户端，请在 Visual Studio 的**解决方案资源管理器**中右键单击项目，选择 "**属性**"，然后选择 "**调试**" 选项卡。单击 "**启动项目**"，然后在**命令行参数中编辑 `/client` 参数**指向自定义客户端的对话框，如以下示例中所示。
+若要使用自定义客户端，请在 Visual Studio 的**解决方案资源管理器**中右键单击您的项目，选择 "**属性**"，然后选择 "**调试**" 选项卡。单击 "**启动项目**"，然后在 "**命令行参数**" 对话框中编辑 `/client` 参数以指向您的自定义客户端，如下面的示例中所示。
 
 `/client:"path/CustomClient.exe"`
 
@@ -67,7 +67,7 @@ WCF 服务主机可以承载以下 WCF 服务库项目类型： WCF 服务库、
 
 #### <a name="specifying-no-client"></a>指定无客户端
 
-若要指定在 WCF 服务托管后不使用任何客户端，请在 Visual Studio 的**解决方案资源管理器**中右键单击你的项目，选择 "**属性**"，然后选择 "**调试**" 选项卡。单击 "**启动项目**"，并退出该**命令**空的 "行参数" 对话框。
+若要指定在 WCF 服务承载后不使用任何客户端，请在 Visual Studio 的**解决方案资源管理器**中右键单击项目，选择 "**属性**"，然后选择 "**调试**" 选项卡。单击 "**启动项目**"，并将 "**命令行参数**" 对话框留空。
 
 #### <a name="using-a-custom-host"></a>使用自定义主机
 
@@ -119,8 +119,8 @@ WCF 服务主机可以承载以下 WCF 服务库项目类型： WCF 服务库、
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
 ```
 
-有关 dism.exe 的详细信息，请参阅 "[如何使用 Dism.exe 工具和命令行开关](https://go.microsoft.com/fwlink/?LinkId=97877)"。
+有关 dism.exe 的详细信息，请参阅 "[如何使用 Dism.exe 工具和命令行开关](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10))"。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WCF 测试客户端 (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)

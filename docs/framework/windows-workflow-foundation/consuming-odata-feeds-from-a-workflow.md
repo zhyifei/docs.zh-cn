@@ -2,12 +2,12 @@
 title: 使用工作流中的 OData 源-WF
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: e7cfa138a01719988586f9dce0a9009bea643076
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: c9780200d9b7c7bc89797b3c16b22bc38440fccc
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989759"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802656"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>使用工作流中的 OData 源
 
@@ -15,7 +15,7 @@ WCF 数据服务是 .NET Framework 的一个组件，它使你能够使用具象
 
 ## <a name="using-the-sample-northwind-odata-service"></a>使用示例 Northwind OData 服务
 
-本主题中的示例使用位于<https://services.odata.org/Northwind/Northwind.svc/>的示例 Northwind 数据服务。 此服务作为 [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248) 的一部分提供，它提供了对示例 Northwind 数据库的只读访问。 如果需要写权限或需要本地 WCF 数据服务，可按照 [WCF 数据服务快速入门](https://go.microsoft.com/fwlink/?LinkID=131076) 中的步骤执行操作，以创建可提供对 Northwind 数据库的访问的本地 OData 服务。 如果按照该快速入门中的步骤执行操作，则会用本地 URI 代替本主题中的代码示例中提供的 URI。
+本主题中的示例使用位于 <https://services.odata.org/Northwind/Northwind.svc/>的 Northwind 数据服务示例。 此服务作为 [OData SDK](https://www.odata.org/wp-content/uploads/sites/21/odatasdkcodesamples.zip) 的一部分提供，它提供了对示例 Northwind 数据库的只读访问。 如果需要写权限或需要本地 WCF 数据服务，可按照 [WCF 数据服务快速入门](../data/wcf/quickstart-wcf-data-services.md) 中的步骤执行操作，以创建可提供对 Northwind 数据库的访问的本地 OData 服务。 如果按照该快速入门中的步骤执行操作，则会用本地 URI 代替本主题中的代码示例中提供的 URI。
 
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>使用客户端库使用 OData 源
 
@@ -34,7 +34,7 @@ WCF 数据服务包括客户端库，使你能够更轻松地从 .NET Framework 
 
 ### <a name="using-asynchronous-methods"></a>使用异步方法
 
-若要解决在通过 Web 访问资源时可能发生的延迟问题，建议您异步访问 WCF 数据服务。 WCF 数据服务客户端库包括用于调用查询的异步方法，而 Windows Workflow Foundation （WF）提供<xref:System.Activities.AsyncCodeActivity>了用于创作异步活动的类。 <xref:System.Activities.AsyncCodeActivity>可以写入派生的活动以利用具有异步方法的 .NET Framework 类，或将要异步执行的代码放入方法并使用委托进行调用。 本节提供了 <xref:System.Activities.AsyncCodeActivity> 派生的活动的两个示例；一个示例使用 WCF 数据服务客户端库的异步方法，另一个示例使用委托。
+若要解决在通过 Web 访问资源时可能发生的延迟问题，建议您异步访问 WCF 数据服务。 WCF 数据服务客户端库包括用于调用查询的异步方法，而 Windows Workflow Foundation （WF）提供了用于创作异步活动的 <xref:System.Activities.AsyncCodeActivity> 类。 可以编写 <xref:System.Activities.AsyncCodeActivity> 派生的活动以利用具有异步方法的 .NET Framework 类，也可以将要异步执行的代码放入方法并使用委托进行调用。 本节提供了 <xref:System.Activities.AsyncCodeActivity> 派生的活动的两个示例；一个示例使用 WCF 数据服务客户端库的异步方法，另一个示例使用委托。
 
 > [!NOTE]
 > 有关详细信息，请参阅[异步操作（WCF 数据服务）](../data/wcf/asynchronous-operations-wcf-data-services.md)和[创建异步活动](creating-asynchronous-activities-in-wf.md)。
@@ -66,18 +66,18 @@ Calling WCF Data Service...
 > [!NOTE]
 > 如果无法建立与 OData 服务器的连接，则您将收到与以下异常类似的异常：
 >
-> 未经处理的异常：System.InvalidOperationException：处理此请求时出错。 ---> WebException：无法连接到远程服务器---> SocketException：连接尝试失败，因为连接的参与方在一段时间后未正确响应，或已建立连接失败，因为连接的主机未能响应。
+> 未经处理的异常: System.InvalidOperationException: 处理此请求时出错。 ---> System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 连接方在一段时间后未正确响应而导致连接尝试失败，或者连接的主机未能响应而导致已建立的连接失败。
 
 如果需要对查询返回的数据进行任何其他处理，则可在活动的 <xref:System.Activities.AsyncCodeActivity%601.EndExecute%2A> 重写中执行此操作。 <xref:System.Activities.AsyncCodeActivity%601.BeginExecute%2A> 和 <xref:System.Activities.AsyncCodeActivity%601.EndExecute%2A> 都是通过使用工作流线程调用的，并且这些重写中的任何代码都不会异步运行。 如果其他处理的量很大或运行时间较长，或者查询结果已分页，则应考虑下一节中讨论的方法，该方法使用委托来执行查询并异步执行其他处理。
 
 ### <a name="using-a-delegate"></a>使用委托
 
-除了调用 .NET Framework 类的异步方法之外，基于的<xref:System.Activities.AsyncCodeActivity>活动还可以在其一个方法中定义异步逻辑。 此方法是通过使用活动的 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 重写中的委托来指定的。 当此方法返回时，运行时将调用活动的 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 重写。 当从工作流调用 OData 服务时，此方法可用于查询服务和提供任何其他处理。
+除了调用 .NET Framework 类的异步方法之外，基于 <xref:System.Activities.AsyncCodeActivity>的活动还可以在其一个方法中定义异步逻辑。 此方法是通过使用活动的 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 重写中的委托来指定的。 当此方法返回时，运行时将调用活动的 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 重写。 当从工作流调用 OData 服务时，此方法可用于查询服务和提供任何其他处理。
 
 下面的示例定义了一个 `ListCustomers` 活动。 此活动将查询示例 Northwind 数据服务并返回一个包含 Northwind 数据库中的所有客户的 `List<Customer>` 。 异步工作由 `GetCustomers` 方法执行。 此方法将查询所有客户的服务，然后将这些客户复制到 `List<Customer>`。 然后，此方法会检查结果是否已分页。 如果结果已分页，则此方法会查询下一页结果的服务，再将这些结果添加到列表，然后继续操作直到检索到所有客户数据。
 
 > [!NOTE]
-> 有关 WCF 数据服务中的分页的详细信息， [请参阅如何：加载分页结果（WCF 数据服务）](../data/wcf/how-to-load-paged-results-wcf-data-services.md)。
+> 有关 WCF 数据服务中的分页的详细信息，请参阅[如何：加载分页结果（WCF 数据服务）](../data/wcf/how-to-load-paged-results-wcf-data-services.md)。
 
 在添加所有客户后，将返回该列表。 活动的 `GetCustomers` 重写中指定了 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 方法。 由于该方法具有一个返回值，因此将创建一个 `Func<string, List<Customer>>` 来指定该方法。
 
@@ -154,4 +154,4 @@ xmlns="http://www.w3.org/2005/Atom">
 ...
 ```
 
-本示例提供了一个方法，工作流应用程序作者可通过该方法使用从 OData 服务返回的原始数据。 有关使用 uri 访问 WCF 数据服务的详细信息，请参阅[访问数据服务资源（WCF 数据服务）](../data/wcf/accessing-data-service-resources-wcf-data-services.md)和[OData：URI 约定](https://go.microsoft.com/fwlink/?LinkId=185564)。
+本示例提供了一个方法，工作流应用程序作者可通过该方法使用从 OData 服务返回的原始数据。 有关使用 Uri 访问 WCF 数据服务的详细信息，请参阅[访问数据服务资源（WCF 数据服务）](../data/wcf/accessing-data-service-resources-wcf-data-services.md)和[OData： URI 约定](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)。

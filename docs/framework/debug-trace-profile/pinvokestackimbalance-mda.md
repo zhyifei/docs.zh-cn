@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc4a48c79fc39b12f8231bd913b4ca8970c0f46f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 117e0838f78d43bf9ffa555947bf8749830c9840
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052358"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801995"
 ---
 # <a name="pinvokestackimbalance-mda"></a>PInvokeStackImbalance MDA
 
-当 CLR 检测到平台调用之后的堆栈深度与预期的堆栈深度不匹配时，将激活<xref:System.Runtime.InteropServices.DllImportAttribute> 托管调试助手（MDA），前提是在特性和`PInvokeStackImbalance`托管签名中的参数声明。
+当 CLR 检测到平台调用之后的堆栈深度与预期的堆栈深度不匹配时，将激活 `PInvokeStackImbalance` 托管调试助手（MDA），前提是 <xref:System.Runtime.InteropServices.DllImportAttribute> 属性中指定的调用约定和托管签名中的参数声明。
 
 仅为 32 位 x86 平台实现 `PInvokeStackImbalance` MDA。
 
 > [!NOTE]
-> 默认`PInvokeStackImbalance`情况下，禁用 MDA。 在 Visual Studio 2017 中， `PInvokeStackImbalance` MDA 出现在 "**异常设置**" 对话框中的 "**托管调试助手**" 列表中（当您选择 "**调试** > **窗口** >   **" 时显示该对话框）异常设置**）。 但是，如果选中或清除 "**引发时中断**" 复选框，则不会启用或禁用 MDA;它仅控制在激活 MDA 时 Visual Studio 是否引发异常。
+> 默认情况下，禁用 `PInvokeStackImbalance` MDA。 在 Visual Studio 2017 及更高版本中，`PInvokeStackImbalance` MDA 显示在 "**异常设置**" 对话框中的 "**托管调试助手**" 列表中（当您选择 "**调试**" > **Windows** > **异常设置**时，将显示此对话框）。 但是，如果选中或清除 "**引发时中断**" 复选框，则不会启用或禁用 MDA;它仅控制在激活 MDA 时 Visual Studio 是否引发异常。
 
 ## <a name="symptoms"></a>症状
 
@@ -60,7 +60,7 @@ MDA 消息会提供正导致堆栈不平衡的平台 invoke 方法调用的名�
 </mdaConfig>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [使用托管调试助手诊断错误](diagnosing-errors-with-managed-debugging-assistants.md)

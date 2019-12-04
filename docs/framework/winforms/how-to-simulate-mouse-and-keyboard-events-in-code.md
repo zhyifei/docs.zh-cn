@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 1a7a0fa6295cd8332313a983ca78345bfbac393e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9fac74aacf6b902a25438151db247a1a4aee1f4c
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046397"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802474"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>如何：在代码中模拟鼠标和键盘事件
 
@@ -72,7 +72,7 @@ Windows 窗体提供多个选项，用于以编程方式模拟鼠标和键盘输
 1. 激活将接收击键的应用程序窗口，然后调用 <xref:System.Windows.Forms.SendKeys.Send%2A> 或 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 方法。 由于托管的方法均不会激活其他应用程序，所以必须使用本机 Windows 方法将焦点强制设置到其他应用程序上。 下面的代码示例使用平台调用来调用 `FindWindow` 和 `SetForegroundWindow` 方法以激活计算器应用程序窗口，然后调用 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 向计算器应用程序发出一系列计算。
 
     > [!NOTE]
-    > 可查找计算器应用程序的 `FindWindow` 调用的正确参数因 Windows 版本而异。  下面的代码查找 [!INCLUDE[win7](../../../includes/win7-md.md)]上的计算器应用程序。 在 [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]上，将第一个参数更改为“SciCalc”。 可使用 Spy++ 工具（Visual Studio 附带）确定正确的参数。
+    > 可查找计算器应用程序的 `FindWindow` 调用的正确参数因 Windows 版本而异。  下面的代码查找 Windows 7 上的计算器应用程序。 在 [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]上，将第一个参数更改为“SciCalc”。 可使用 Spy++ 工具（Visual Studio 附带）确定正确的参数。
 
     [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
     [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]
@@ -92,6 +92,6 @@ Windows 窗体提供多个选项，用于以编程方式模拟鼠标和键盘输
 
 - 对 System、System.Drawing 和 System.Windows.Forms 程序集的引用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Windows 窗体中的用户输入](user-input-in-windows-forms.md)

@@ -2,12 +2,12 @@
 title: 安装问题疑难解答
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 586defea0f761f8b6dea691b778d221cff62c7cf
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: becf2576528dc0011a77597b3665d77f6907a3cc
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281607"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802422"
 ---
 # <a name="troubleshooting-setup-issues"></a>安装问题疑难解答
 本主题介绍如何对 Windows Communication Foundation （WCF）设置问题进行故障排除。  
@@ -52,7 +52,7 @@ ms.locfileid: "74281607"
   
  若要解决前面说明的问题，必须按照以下步骤操作。  
   
-1. 运行[WMI Diagnosis Utility 版本 2.0](https://go.microsoft.com/fwlink/?LinkId=94685)以修复 WMI 服务。 有关使用此工具的详细信息，请参阅[WMI Diagnosis Utility](https://go.microsoft.com/fwlink/?LinkId=94686)主题。  
+1. 运行[WMI Diagnosis Utility 版本 2.0](https://go.microsoft.com/fwlink/?LinkId=94685)以修复 WMI 服务。 有关使用此工具的详细信息，请参阅[WMI Diagnosis Utility](https://docs.microsoft.com/previous-versions/tn-archive/ff404265(v%3dmsdn.10))文章。  
   
  使用**控制面板**中的 "**添加/删除程序**" 小程序修复 .NET Framework 3.0 安装，或卸载/重新安装 .NET Framework 3.0。  
   

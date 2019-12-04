@@ -2,12 +2,12 @@
 title: 控制资源使用并提高性能
 ms.date: 03/30/2017
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-ms.openlocfilehash: 976eb1e4a507d3c09bbc6e030985cbc3143b5946
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 16d6f29235455ff30e115b7aff3425412bc7ba6a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320607"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802255"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>控制资源使用并提高性能
 本主题介绍 Windows Communication Foundation （WCF）体系结构的不同区域中的各种属性，这些属性可用于控制资源消耗并影响性能指标。
@@ -44,9 +44,10 @@ ms.locfileid: "72320607"
  使用配置的[元数据实用工具（svcutil.exe）](servicemodel-metadata-utility-tool-svcutil-exe.md)可以通过从应用程序的编译程序集生成必要的序列化代码，从而提高这些应用程序的启动性能。 有关详细信息，请参阅[如何：使用 XmlSerializer 改善 WCF 客户端应用程序的启动时间](./feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)。
 
 ## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>在 ASP.NET 下承载 WCF 服务时的性能问题
- 当在 IIS 和 ASP.NET 下承载 WCF 服务时，IIS 和 ASP.NET 的配置设置可能会影响 WCF 服务的吞吐量和内存需求量。  有关 ASP.NET 性能的详细信息，请参阅[改善 ASP.NET 性能](https://go.microsoft.com/fwlink/?LinkId=186462)。  可能具有意外结果的一种设置为 <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>，该设置为 <xref:System.Web.Configuration.ProcessModelSection> 的属性。 如果应用程序具有固定量或少量的客户端，则将 <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 设置为 2 可能会显著提高 CPU 利用率接近 100% 的多处理器计算机上的吞吐量。 这种性能上的提高是以增加内存使用为代价的，这可能会降低可伸缩性。
 
-## <a name="see-also"></a>请参阅
+当在 IIS 和 ASP.NET 下承载 WCF 服务时，IIS 和 ASP.NET 的配置设置可能会影响 WCF 服务的吞吐量和内存需求量。  有关 ASP.NET 性能的详细信息，请参阅[改善 ASP.NET 性能](https://docs.microsoft.com/previous-versions/msp-n-p/ff647787(v=pandp.10))。 可能具有意外结果的一种设置为 <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>，该设置为 <xref:System.Web.Configuration.ProcessModelSection> 的属性。 如果应用程序具有固定量或少量的客户端，则将 <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 设置为 2 可能会显著提高 CPU 利用率接近 100% 的多处理器计算机上的吞吐量。 这种性能上的提高是以增加内存使用为代价的，这可能会降低可伸缩性。
+
+## <a name="see-also"></a>另请参阅
 
 - [管理和诊断](./diagnostics/index.md)
 - [大数据和流式处理](./feature-details/large-data-and-streaming.md)

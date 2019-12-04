@@ -2,12 +2,12 @@
 title: WCF 简化功能
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: 85c50e5939a5e63202d57bca08393b9b79308f57
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: dd944ad2963e29fd3aa9254f3a37f2c2b98ce70d
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321220"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802383"
 ---
 # <a name="wcf-simplification-features"></a>WCF 简化功能
 
@@ -82,13 +82,13 @@ WCF 现在支持协定优先开发。 Svcutil.exe 工具具有/serviceContract �
 
 ## <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET 兼容模式默认值已更改
 
-WCF 提供了 ASP.NET 兼容模式，以向开发人员授予编写 WCF 服务时对 ASP.NET HTTP 管道中的功能的完全访问权限。 若要使用此模式，你必须在 web.config 的 " [\<serviceHostingEnvironment >](../configure-apps/file-schema/wcf/servicehostingenvironment.md) " 部分中将 `aspNetCompatibilityEnabled` 特性设置为 true。此外，此 appDomain 中的任何服务都需要将其 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 上的 `RequirementsMode` 属性设置为 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 或 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>。 默认情况下，<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 现在设置为 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>，默认的 WCF 服务应用程序模板将 `aspNetCompatibilityEnabled` 特性设置为 `true`。 有关详细信息，请参阅 Windows Communication Foundation 4.5 和[WCF 服务和 ASP.NET](./feature-details/wcf-services-and-aspnet.md)[的新增功能](whats-new.md)。
+WCF 提供了 ASP.NET 兼容模式，以向开发人员授予编写 WCF 服务时对 ASP.NET HTTP 管道中的功能的完全访问权限。 若要使用此模式，必须在 web.config 的[\<serviceHostingEnvironment >](../configure-apps/file-schema/wcf/servicehostingenvironment.md)节中将 `aspNetCompatibilityEnabled` 特性设置为 true。此外，此 appDomain 中的任何服务都需要将其 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 上的 `RequirementsMode` 属性设置为 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 或 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>。 默认情况下，<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 现在设置为 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>，默认的 WCF 服务应用程序模板将 `aspNetCompatibilityEnabled` 特性设置为 `true`。 有关详细信息，请参阅 Windows Communication Foundation 4.5 和[WCF 服务和 ASP.NET](./feature-details/wcf-services-and-aspnet.md)[的新增功能](whats-new.md)。
 
 ## <a name="streaming-improvements"></a>流改进
 
 - 向 WCF 添加了对异步流的新支持。 若要启用异步流，请将 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> 终结点行为添加到服务主机，并将其 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> 属性设置为 `true`。 在服务将经过流处理的消息发送到多个正在缓慢读取的客户端时，这样做有益于可伸缩性。 WCF 不再阻止每个客户端的一个线程，并将释放该线程以便为另一个客户端提供服务。
 
-- 消除了服务由 IIS 承载时缓冲消息方面的限制。 在以前版本的 WCF 中，在收到关于使用流消息传输的 IIS 承载服务的消息时，ASP.NET 会在将该消息发送到 WCF 之前缓冲整个消息。 这将导致消耗大量内存。 在 .NET 4.5 中已取消这种缓冲，现在，IIS 承载的 WCF 服务可以在收到整个消息之前开始处理传入流，从而实现真正的流处理。 这样，WCF 就可立即对消息作出响应，并可以提高性能。 此外，您不必再指定 `maxRequestLength` 的值，即 ASP.NET 对传入请求的大小限制。 如果设置了此属性，则会将其忽略。 有关 `maxRequestLength` 参阅[\<httpRuntime > 配置元素](https://go.microsoft.com/fwlink/?LinkId=223344)的详细信息。 你仍需要配置 maxAllowedContentLength，有关详细信息，请参阅[IIS 请求限制](https://go.microsoft.com/fwlink/?LinkId=225908)。
+- 消除了服务由 IIS 承载时缓冲消息方面的限制。 在以前版本的 WCF 中，在收到关于使用流消息传输的 IIS 承载服务的消息时，ASP.NET 会在将该消息发送到 WCF 之前缓冲整个消息。 这将导致消耗大量内存。 在 .NET 4.5 中已取消这种缓冲，现在，IIS 承载的 WCF 服务可以在收到整个消息之前开始处理传入流，从而实现真正的流处理。 这样，WCF 就可立即对消息作出响应，并可以提高性能。 此外，您不必再指定 `maxRequestLength` 的值，即 ASP.NET 对传入请求的大小限制。 如果设置了此属性，则会将其忽略。 有关 `maxRequestLength` 参阅[\<httpRuntime > 配置元素](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/e1f13641(v=vs.71))的详细信息。 你仍需要配置 maxAllowedContentLength，有关详细信息，请参阅[IIS 请求限制](https://docs.microsoft.com/previous-versions/iis/settings-schema/ms689462(v=vs.90))。
 
 ## <a name="new-transport-default-values"></a>新传输默认值
 

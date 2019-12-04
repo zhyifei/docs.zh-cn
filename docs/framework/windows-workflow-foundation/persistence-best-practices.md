@@ -2,12 +2,12 @@
 title: 持久性最佳做法
 ms.date: 03/30/2017
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-ms.openlocfilehash: 399d2f5dbb5f3114a58cc7fdaede249b253089c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8ffbb3ebfa8f85e2b0052a9df9ada30766accd8e
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592123"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802513"
 ---
 # <a name="persistence-best-practices"></a>持久性最佳做法
 本文档介绍了针对与工作流持久性相关的工作流设计和配置的最佳实践。  
@@ -21,7 +21,7 @@ ms.locfileid: "64592123"
   
  如果工作流长时间处于忙碌状态，则建议您在工作流实例的忙碌时段中定期保留工作流实例。 可以通过在一系列使工作流实例处于忙碌状态的活动中添加 <xref:System.Activities.Statements.Persist> 活动来执行此操作。 通过这种方式，应用程序域回收、主机故障或计算机故障便不会导致系统回滚到忙碌时段的开头。 请注意，将 <xref:System.Activities.Statements.Persist> 活动添加到工作流可能会导致性能降低。  
   
- Windows Server App Fabric 大大简化了持久性的配置和使用。 有关详细信息，请参阅[Windows Server App Fabric 持久性](https://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
+ Windows Server App Fabric 大大简化了持久性的配置和使用。 有关详细信息，请参阅[Windows Server App Fabric 持久性](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10))  
   
 ## <a name="configuration-of-scalability-parameters"></a>可伸缩性参数的配置  
  可伸缩性和性能要求将决定以下参数的设置：  
@@ -34,7 +34,7 @@ ms.locfileid: "64592123"
   
  应根据当前方案设置这些参数，如下所示。  
   
-### <a name="scenario-a-small-number-of-workflow-instances-that-require-optimal-response-time"></a>方案：少量的工作流实例需要最佳响应时间  
+### <a name="scenario-a-small-number-of-workflow-instances-that-require-optimal-response-time"></a>方案：少量工作流实例需要最佳响应时间  
  在此方案中，所有工作流实例应在其状态变成空闲时保持被加载。 将 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> 设置为较大的值。 使用此设置可阻止工作流实例在计算机间移动。 仅在满足以下一个或多个条件时使用此设置：  
   
 - 工作流实例在其整个生存期内收到一条消息。  
@@ -45,7 +45,7 @@ ms.locfileid: "64592123"
   
  使用 <xref:System.Activities.Statements.Persist> 活动或将 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> 设置为 0，可在服务主机或计算机出现故障后恢复工作流实例。  
   
-### <a name="scenario-workflow-instances-are-idle-for-long-periods-of-time"></a>方案：工作流实例处于空闲状态的时间很长时间  
+### <a name="scenario-workflow-instances-are-idle-for-long-periods-of-time"></a>方案：工作流实例长时间处于空闲状态  
  在此方案中，将 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> 设置为 0 可尽快释放资源。  
   
 ### <a name="scenario-workflow-instances-receive-multiple-messages-in-a-short-period-of-time"></a>方案：工作流实例在短时间内收到多条消息  
@@ -53,7 +53,7 @@ ms.locfileid: "64592123"
   
  如果这些消息可通过不同的计算机接收，则将 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> 设置为 0，并将 <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A> 设置为 BasicRetry 或 AggressiveRetry。 这样做将允许工作流实例由其他计算机加载。  
   
-### <a name="scenario-workflow-uses-delay-activities-with-short-durations"></a>方案：工作流较短时间内使用延迟活动  
+### <a name="scenario-workflow-uses-delay-activities-with-short-durations"></a>方案：工作流在较短时间内使用延迟活动  
  在此方案中，<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 将定期轮询因过期的 <xref:System.Activities.Statements.Delay> 活动而应加载的实例的持久性数据库。 如果 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 找到一个将在下一个轮询时间间隔中过期的计时器，则 SQL 工作流实例存储将缩短轮询时间间隔。 之后，下一次轮询将在计时器过期后发生。 这样一来，SQL 工作流实例存储将实现运行时间长于轮询时间间隔（由 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.RunnableInstancesDetectionPeriod%2A> 设置）的计时器的高精度。 若要启用较短延迟的及时处理，工作流实例必须至少在内存中保留一个轮询时间间隔。  
   
  将 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> 设置为 0 可将过期时间写入持久性数据库。  

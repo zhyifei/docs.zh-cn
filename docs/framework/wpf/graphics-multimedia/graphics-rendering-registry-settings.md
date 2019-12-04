@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 0d6eda0aea9ad97063cc5362d83163443de034a6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a7a11029c4e896b0486311bc3caf42fab53d1ea6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976946"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802100"
 ---
 # <a name="graphics-rendering-registry-settings"></a>图形呈现注册表设置
 本主题概述了影响 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 图形呈现注册表设置。  
@@ -24,7 +24,7 @@ ms.locfileid: "73976946"
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>什么是 XPDM 和 WDDM？  
- 某些图形呈现注册表设置具有不同的默认值，具体取决于视频卡使用的是 XPDM 还是 WDDM 驱动程序。 XPDM 是 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 显示驱动程序模式，WDDM 是 Windows 显示驱动程序模型。 WDDM 在运行 Windows Vista 和 [!INCLUDE[win7](../../../../includes/win7-md.md)]的计算机上可用。 XPDM 在运行 Windows Vista、[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]和 [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]的计算机上可用。 有关 WDDM 的详细信息，请参阅 [Windows Vista 显示驱动程序模式设计指南](https://go.microsoft.com/fwlink/?LinkId=178394)。  
+ 某些图形呈现注册表设置具有不同的默认值，具体取决于视频卡使用的是 XPDM 还是 WDDM 驱动程序。 XPDM 是 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 显示驱动程序模式，WDDM 是 Windows 显示驱动程序模型。 WDDM 在运行 Windows Vista 和 Windows 7 的计算机上可用。 XPDM 在运行 Windows Vista、[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]和 [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]的计算机上可用。 有关 WDDM 的详细信息，请参阅 [Windows Vista 显示驱动程序模式设计指南](https://go.microsoft.com/fwlink/?LinkId=178394)。  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>注册表设置  
@@ -95,7 +95,7 @@ ms.locfileid: "73976946"
   
  “使用参考光栅器选项”采用 DWORD 值。 值为 0 指示不使用参考光栅器。 任何其他非零值都强制 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用参考光栅器。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [图形呈现层](../advanced/graphics-rendering-tiers.md)
 - [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: b51206f2-1281-4ad0-9820-ea39d88ae577
-ms.openlocfilehash: b7985e6cf3eaa810a893b0b5183a1c141a041768
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bd19d02ade7c7826f6c0b26d894bcd48827e7ccb
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040501"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800859"
 ---
 # <a name="ui-automation-text-pattern"></a>UI 自动化文本模式
 > [!NOTE]
-> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
- 本主题包含概述和帮助主题，帮助你开始在中[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]对文本元素进行编程。  
+ 本主题包含概述和帮助主题，帮助你开始在 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]中对文本元素进行编程。  
   
 ## <a name="in-this-section"></a>本节内容  
  [UI 自动化 TextPattern 概述](ui-automation-textpattern-overview.md)  
@@ -29,7 +29,7 @@ ms.locfileid: "71040501"
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Automation.Text>  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UI 自动化控件模式](ui-automation-control-patterns.md)
 - [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)

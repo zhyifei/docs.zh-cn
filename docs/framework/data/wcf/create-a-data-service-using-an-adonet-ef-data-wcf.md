@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 8c597738d656b32e7b4c75246027b726f425c6ef
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0aea4c21b5ea34cb0e8d944d37c879e918d6b27e
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053009"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800588"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>如何：使用 ADO.NET 实体框架数据源创建数据服务（WCF 数据服务）
 
@@ -28,7 +28,7 @@ WCF 数据服务将实体数据作为数据服务公开。 当数据源为关系
 
      将显示“实体数据模型向导”的第一页。
 
-4. 在 "**选择模型内容**" 对话框中，选择 "**从数据库生成**"。 然后，单击 **“下一步”** 。
+4. 在 "**选择模型内容**" 对话框中，选择 "**从数据库生成**"。 然后单击 **“下一步”** 。
 
 5. 单击 "**新建连接**" 按钮。
 
@@ -36,14 +36,14 @@ WCF 数据服务将实体数据作为数据服务公开。 当数据源为关系
 
      "**选择您的数据连接**" 对话框将通过数据库连接设置进行更新。
 
-7. 确保选中 "将 app.config**中的实体连接设置另存为：** " 复选框。 然后，单击 **“下一步”** 。
+7. 确保选中 "将 app.config**中的实体连接设置另存为：** " 复选框。 然后单击 **“下一步”** 。
 
 8. 在 "**选择数据库对象**" 对话框中，选择计划在数据服务中公开的所有数据库对象。
 
     > [!NOTE]
     > 数据服务不自动公开数据模型中包含的对象。 它们必须由服务本身显式公开。 有关详细信息，请参阅[配置数据服务](configuring-the-data-service-wcf-data-services.md)。
 
-9. 单击 "**完成**" 以完成向导。
+9. 单击 **“完成”** 以完成向导。
 
      这将基于特定数据库创建默认数据模型。 实体框架允许对数据模型进行自定义。 有关详细信息，请参阅[实体数据模型工具任务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100))。
 
@@ -60,11 +60,11 @@ WCF 数据服务将实体数据作为数据服务公开。 当数据源为关系
    ![Visual Studio 2015 中的 WCF 数据服务项模板](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > **WCF 数据服务**模板在 visual studio 2015 中提供，但在 visual studio 2017 中不可用。
+   > **WCF 数据服务**模板在 visual studio 2015 中提供，但在 visual studio 2017 或更高版本中不可用。
 
 5. 提供服务的名称，然后单击 **"确定"** 。
 
-     Visual Studio 将为新服务创建 XML 标记和代码文件。 默认情况下，代码编辑器窗口将打开。
+     将为新服务创建 XML 标记和代码文件。 默认情况下，代码编辑器窗口将打开。
 
 6. 在数据服务代码中，将用于定义数据服务的类定义中的注释 `/* TODO: put your data source class name here */` 替换为从 <xref:System.Data.Objects.ObjectContext> 类继承且作为数据模型的实体容器的类型，如步骤 2 中所述。
 
@@ -72,7 +72,7 @@ WCF 数据服务将实体数据作为数据服务公开。 当数据源为关系
 
 8. 若要使用 Web 浏览器测试 Northwind 数据服务，请按照主题[从 Web 浏览器访问该服务](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)中的说明进行操作。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [定义 WCF Data Services](defining-wcf-data-services.md)
 - [数据服务提供程序](data-services-providers-wcf-data-services.md)

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: a22474d943212e35310a0e8bcf6643c4a99c0389
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2da0f994e809ff0ea9cd3165cd788ac467a87aef
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039417"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800783"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>使用 UI 自动化进行自动化测试
 > [!NOTE]
-> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本概述介绍可如何将 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 用作一个用于在自动测试方案中进行编程访问的框架。  
   
@@ -37,11 +37,11 @@ ms.locfileid: "73039417"
 > 对于其他辅助功能模型，开发人员必须直接从各个按钮、菜单或其他控件收集信息。 不便之处在于，每个控件类型都具有数十个次要变体。 也就是说，尽管某个按钮的十种变体全都以相同的方式工作且执行相同的功能，也必须将它们全部视为唯一控件。 无法知道这些控件在功能上是否相同。 所开发的控件模式可以表示这些常见的控件行为。 有关详细信息，请参阅 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)。  
   
 ### <a name="implementing-ui-automation"></a>实现 UI 自动化  
- 如前所述，如果没有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]提供的统一模型，则测试工具和开发人员必须了解特定于框架的信息才能公开该框架中控件的属性和行为。 由于在 Windows 操作系统中，在任何时候都可以有多个不同的 UI 框架，包括 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]、[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]和 Windows Presentation Foundation （WPF），因此，使用控制看起来类似。 例如，下表概述了检索与按钮控件相关联的名称（或文本）所需的框架特定属性名，并显示了单个等效的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性。  
+ 如前所述，如果没有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]提供的统一模型，则测试工具和开发人员必须了解特定于框架的信息才能公开该框架中控件的属性和行为。 由于在 Windows 操作系统中，在任何时候都可以有多个不同的 UI 框架，包括 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]、[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]和 Windows Presentation Foundation （WPF），因此，使用看似相似的控件测试多个应用程序可能是一项艰巨的任务。 例如，下表概述了检索与按钮控件相关联的名称（或文本）所需的框架特定属性名，并显示了单个等效的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性。  
   
 |UI 自动化控件类型|UI 框架|特定于框架的属性|UI 自动化属性|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  
-|Button|Windows Presentation Foundation|内容|NameProperty|  
+|Button|Windows Presentation Foundation|Content|NameProperty|  
 |Button|Win32|标题|NameProperty|  
 |Image|HTML|Alt|NameProperty|  
   
@@ -100,9 +100,9 @@ ms.locfileid: "73039417"
   
 - Msaabridge 向向 Active Accessibility 的客户端公开 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 信息。 将 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 桥接到 Active Accessibility 的主要目的是允许现有 Active Accessibility 客户端能够与已实现 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的任何框架进行交互。  
   
-## <a name="security"></a>安全  
+## <a name="security"></a>安全性  
  有关安全信息，请参阅 [UI Automation Security Overview](ui-automation-security-overview.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UI 自动化基础知识](index.md)

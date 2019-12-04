@@ -2,12 +2,12 @@
 title: WCF Visual Studio 模板
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 1b4a600e4ed19b967bcaeb6d880ea181b7c2d61f
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: ec73036921632bc855e79239f1fc578587de7ca3
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197189"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802350"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio 模板
 Windows Communication Foundation （WCF） Visual Studio 模板是预定义的项目和项模板，你可以在 Visual Studio 中使用这些模板快速生成 WCF 服务和应用程序。  
@@ -72,7 +72,7 @@ Windows Communication Foundation （WCF） Visual Studio 模板是预定义的�
  如果更改源的地址，则还必须更改 "**调试**" 选项卡中的地址。如果不这样做，Internet Explorer 将尝试在默认地址打开源，并失败。  
   
 ### <a name="ajax-enabled-wcf-service-item-template"></a>支持 AJAX 的 WCF 服务项模板  
- 此模板将 AJAX 控件作为 WCF 服务公开。 有关 AJAX 控件的详细信息，请参阅[ajax 控件文档](https://go.microsoft.com/fwlink/?LinkId=96717)。  
+ 此模板将 AJAX 控件作为 WCF 服务公开。 有关 AJAX 控件的详细信息，请参阅[ajax 控件文档](https://docs.microsoft.com/aspnet/ajax/)。  
   
 ### <a name="silverlight-enabled-wcf-service-item-template"></a>启用了 Silverlight 的 WCF 服务项模板  
  该模板创建提供数据给 Silverlight 客户端或前端的 Web 服务。 可以将模板添加到网站或 Web 应用程序项目中，以创建 WCF 服务，其中包括支持与 Silverlight 客户端进行通信的服务代码和配置。 然后，你可以使用**添加服务引用**向客户端添加服务的客户端代理，以及在 silverlight 客户端与启用了 SILVERLIGHT 的 WCF 服务之间交换数据。  
@@ -82,7 +82,7 @@ Windows Communication Foundation （WCF） Visual Studio 模板是预定义的�
 > [!NOTE]
 > 启用了 Silverlight 的 WCF 服务公开 `basicHttpBinding` 终结点，不启用任何安全设置。 因此，连接到此服务的任何客户端都可以获取有关此服务的信息。 此外，在该服务与客户端之间交换的消息也未经过签名和加密处理。 若要正确保护该终结点，应使用 ASP.NET 身份验证、HTTPS 或其他机制。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WCF 服务主机 (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)
 - [WCF 测试客户端 (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)

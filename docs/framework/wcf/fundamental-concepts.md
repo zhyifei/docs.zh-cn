@@ -7,16 +7,16 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 9dcaa5f73dd8a4ec1943cb7fc840feee889563b8
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 360479a2ba17c4542d61a737856d23992296e276
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319851"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802314"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation 基础概念
 
-本文档提供 Windows Communication Foundation （WCF）体系结构的概要视图。 本文档旨在解释关键概念以及这些概念之间的关系。 有关创建 WCF 服务和客户端的最简单版本的教程，请参阅[入门教程](getting-started-tutorial.md)。 若要了解 WCF 编程，请参阅[基本 Wcf 编程](basic-wcf-programming.md)。
+本文档提供了对 Windows Communication Foundation (WCF) 结构的深入剖析。 本文档旨在解释关键概念以及这些概念之间的关系。 有关创建 WCF 服务和客户端的最简单版本的教程，请参阅[入门教程](getting-started-tutorial.md)。 若要了解 WCF 编程，请参阅[基本 Wcf 编程](basic-wcf-programming.md)。
 
 ## <a name="wcf-fundamentals"></a>WCF 基础知识
 
@@ -90,7 +90,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  行为是控制服务、终结点、特定操作或客户端的各个运行时方面的要素。 行为按照范围进行分组：常见行为在全局范围内影响所有终结点，服务行为仅影响与服务相关的方面，终结点行为仅影响与终结点相关的属性，操作级行为影响特定操作。 例如，有一种服务行为是遏制，它指定当过多的消息可能超出服务的处理能力时，服务应该如何反应。 另一方面，终结点行为仅控制与终结点相关的方面，如查找安全凭据的方式和位置。
 
 **系统提供的绑定**  
- WCF 包含许多系统提供的绑定。 这些绑定是针对特定方案进行优化的绑定元素的集合。 例如，<xref:System.ServiceModel.WSHttpBinding> 旨在实现与实现各种 WS \* 规范的服务的互操作性。 通过仅提供那些可以正确应用于特定方案的选项，这些预定义的绑定可以节省时间。 如果预定义的绑定不能满足你的需求，则可以创建你自己的自定义绑定。
+ WCF 包含许多系统提供的绑定。 这些绑定是针对特定方案进行优化的绑定元素的集合。 例如，<xref:System.ServiceModel.WSHttpBinding> 旨在实现与实现各种 WS\* 规范的服务的互操作性。 通过仅提供那些可以正确应用于特定方案的选项，这些预定义的绑定可以节省时间。 如果预定义的绑定不能满足你的需求，则可以创建你自己的自定义绑定。
 
 **配置与编码**  
  可以通过代码编写、配置或将两者结合在一起对应用程序进行控制。 配置的优点在于，它使非开发人员（如网络管理员）可以在代码编写完成后直接对客户端和服务参数进行设置，而不必重新进行编译。 使用配置不仅可以设置值（如终结点地址），还可以通过添加终结点、绑定和行为来实施进一步的控制。 通过代码编写，开发人员可以保持对服务或客户端的所有组件的严格控制，而且可以对通过配置完成的所有设置进行检查，并根据需要通过代码进行重写。
@@ -144,21 +144,21 @@ WCF 客户端可以使用 " [svcutil.exe" 元数据实用工具（）](servicemo
 启用元数据后，WCF 可通过检查服务及其终结点来自动生成服务的元数据。 若要发布服务的元数据，必须显式启用元数据行为。
 
 **Security**  
- 在 WCF 中，包括保密性（为防止窃听而进行的消息加密）、完整性（用于检测消息篡改的方法）、身份验证（用于验证服务器和客户端的方法）以及授权（对的访问控制资源）。 这些函数通过利用现有的安全机制（例如 HTTP 上的 TLS （也称为 HTTPS））或实现一个或多个不同的 WS \* 安全规范来提供。
+ 在 WCF 中，包括保密性（为防止窃听而进行的消息加密）、完整性（用于检测消息篡改的方法）、身份验证（用于验证服务器和客户端的方法）以及授权（对的访问控制资源）。 这些函数通过利用现有的安全机制（例如 HTTP 上的 TLS （也称为 HTTPS））或实现一个或多个不同的 WS\* 安全规范来提供。
 
 **传输安全模式**  
  传输安全模式指定由传输层机制（如 HTTPS）提供保密性、完整性和身份验证。 在使用像 HTTPS 这样的传输协议时，此模式的优点在于性能出色，而且由于它在 Internet 上非常流行，因此很容易理解。 其缺点在于，这种安全分别应用于通信路径中的每个跃点，这使得通信容易遭受“中间人”攻击。
 
 **消息安全模式**  
- 指定通过实现一个或多个安全规范（如名为[Web Services 安全性： SOAP Message security](https://go.microsoft.com/fwlink/?LinkId=94684)的规范）来提供安全性。 每个消息都包含必要的安全机制，用于在消息传输过程中保证安全，并使接收方能够检测到篡改和对消息进行解密。 从这种意义上说，安全信息包装在每个消息中，从而提供了跨多个跃点的端到端安全。 由于安全信息成为消息的一部分，因此还可以在消息中包含多种凭据（这些凭据称为_声明_）。 这种方法还具有这样一个优点，即消息可以通过任意传输协议（包括在其起点和目标之间的多个传输协议）安全地传送。 这种方法的缺点在于所使用的加密机制较为复杂，使性能受到影响。
+ 指定通过实现一个或多个安全规范（如名为[Web Services 安全性： SOAP Message security](http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf)的规范）来提供安全性。 每个消息都包含必要的安全机制，用于在消息传输过程中保证安全，并使接收方能够检测到篡改和对消息进行解密。 从这种意义上说，安全信息包装在每个消息中，从而提供了跨多个跃点的端到端安全。 由于安全信息成为消息的一部分，因此还可以在消息中包含多种凭据（这些凭据称为_声明_）。 这种方法还具有这样一个优点，即消息可以通过任意传输协议（包括在其起点和目标之间的多个传输协议）安全地传送。 这种方法的缺点在于所使用的加密机制较为复杂，使性能受到影响。
 
 **带有消息凭据的传输安全模式**  
  此模式指定使用传输层来提供消息的保密性、身份验证和完整性，并且每个消息都可以包含消息接收方所要求的多个凭据（声明）。
 
-**WS \***  
+**WS-\***  
  一组不断增加的、在 WCF 中实现的 Web 服务 (WS) 规范（如 WS-Security、WS-ReliableMessaging 等）的简写。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [什么是 Windows Communication Foundation](whats-wcf.md)
 - [Windows Communication Foundation 体系结构](architecture.md)
