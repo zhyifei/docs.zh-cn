@@ -2,12 +2,12 @@
 title: 重新承载的工作流设计器中新 Workflow Foundation 4.5 功能的支持
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 2b893fede30606789c82a64a19fa368e3fd74c4d
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: bf5c12fe7892bf81fda9714ba02870a9c8ab8b4e
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142065"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837592"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>重新承载的工作流设计器中新 Workflow Foundation 4.5 功能的支持
 .NET Framework 4.5 中的 Windows Workflow Foundation （WF）引入了许多新功能，包括工作流设计器体验的多项增强功能。 本主题详细介绍重新承载的设计器中支持哪些功能以及当前不支持哪些功能。
@@ -122,7 +122,7 @@ ms.locfileid: "74142065"
  除流程图和顺序工作流开发模型外，此版本还包括状态机工作流和协定优先工作流服务。  
   
 ### <a name="state-machine-workflows"></a>状态机工作流  
- 状态机工作流作为[Microsoft .NET Framework 4 平台更新 1](https://go.microsoft.com/fwlink/?LinkID=215092)中 .NET Framework 4.0.1 的一部分引入。 此更新包括多个新类和活动，允许开发人员创建状态机工作流。 这些类和活动已针对 .NET Framework 4.5 进行了更新。 更新包括：  
+ 状态机工作流作为[Microsoft .NET Framework 4 平台更新 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/)中 .NET Framework 4.0.1 的一部分引入。 此更新包括多个新类和活动，允许开发人员创建状态机工作流。 这些类和活动已针对 .NET Framework 4.5 进行了更新。 更新包括以下几种：  
   
 1. 能够对状态设置断点  
   

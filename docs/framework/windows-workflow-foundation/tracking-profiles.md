@@ -2,12 +2,12 @@
 title: 跟踪配置文件
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: a643cf37bbb3e72baefb434249aa54b386060627
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 9217f25ba4499e7ff75020642be387aa79ba27bf
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660928"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837618"
 ---
 # <a name="tracking-profiles"></a>跟踪配置文件
 
@@ -17,7 +17,7 @@ ms.locfileid: "67660928"
 
 跟踪配置文件用来指定为工作流实例发出的跟踪信息。 如果未指定配置文件，则发出所有跟踪事件。 如果指定了配置文件，将发出在配置文件中指定的跟踪事件。 根据您的监视需求，可以编写一个非常一般的配置文件，用来订阅对工作流进行的一小组高级状态更改。 相反，也可以创建一个非常详细的配置文件，其生成的事件足够丰富，可在以后重新构造详细的执行流。
 
-跟踪配置文件自身列为标准的.NET Framework 配置文件中的 XML 元素，或在代码中指定。 下面的示例摘自配置文件中的 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]跟踪配置文件，跟踪参与者可利用它订阅 `Started` 和 `Completed` 工作流事件。
+在标准 .NET Framework 配置文件中或在代码中指定，将配置文件清单本身作为 XML 元素进行跟踪。 下面的示例摘自配置文件中的 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]跟踪配置文件，跟踪参与者可利用它订阅 `Started` 和 `Completed` 工作流事件。
 
 ```xml
 <system.serviceModel>
@@ -59,13 +59,13 @@ TrackingProfile profile = new TrackingProfile()
 };
 ```
 
-利用 <xref:System.Activities.Tracking.ImplementationVisibility> 特性，可以通过跟踪配置文件中的可见性模式筛选跟踪记录。 复合活动是顶级活动，包含构成其实现的其他活动。 可见性模式指定工作流活动中的复合活动发出的跟踪记录，这些跟踪记录用于指定是否跟踪构成实现的活动。 可见性模式在跟踪配置文件级别应用。 对工作流中单个活动的跟踪记录的筛选由跟踪配置文件中的查询控制。 有关详细信息，请参阅**跟踪配置文件查询类型**本文档中的部分。
+利用 <xref:System.Activities.Tracking.ImplementationVisibility> 特性，可以通过跟踪配置文件中的可见性模式筛选跟踪记录。 复合活动是顶级活动，包含构成其实现的其他活动。 可见性模式指定工作流活动中的复合活动发出的跟踪记录，这些跟踪记录用于指定是否跟踪构成实现的活动。 可见性模式在跟踪配置文件级别应用。 对工作流中单个活动的跟踪记录的筛选由跟踪配置文件中的查询控制。 有关详细信息，请参阅本文档中的**跟踪配置文件查询类型**部分。
 
 跟踪配置文件中的 `implementationVisibility` 特性指定的两种可见性模式包括 `RootScope` 和 `All`。 如果复合活动不是工作流的根，则使用 `RootScope` 模式会禁止构成活动实现的活动的跟踪记录。 这意味着，如果将使用其他活动实现的某一活动添加到工作流中，并将 `implementationVisibility` 设置为 RootScope，则仅跟踪该复合活动中的顶级活动。 如果活动是工作流的根，该活动的实现即为工作流自身，因此将发出构成实现的活动的跟踪记录。 使用 All 模式允许发出根活动及其所有复合活动的所有跟踪记录。
 
-例如，假设*MyActivity*是其实现包含两个活动，一个复合活动*Activity1*并*Activity2*。 当此活动添加到工作流和使用的跟踪配置文件启用跟踪`implementationVisibility`设置为`RootScope`，仅对发出跟踪记录*MyActivity*。 但是，没有记录发出的活动*Activity1*并*Activity2*。
+例如，假设*MyActivity*是一个复合活动，其实现包含两个活动： *Activity1*和*Activity2*。 如果将此活动添加到工作流，并启用跟踪配置文件（`implementationVisibility` 设置为 `RootScope`），则只会为*MyActivity*发出跟踪记录。 但是，对于 activity *Activity1*和*Activity2*，不会发出任何记录。
 
-但是，如果`implementationVisibility`特性的跟踪配置文件设置为`All`，则不仅会给发出跟踪记录*MyActivity*，但也为活动*Activity1*和*Activity2*。
+但是，如果将跟踪配置文件的 `implementationVisibility` 属性设置为 `All`，则不仅会针对*MyActivity*， *Activity1*和*Activity2*发布跟踪记录。
 
 `implementationVisibility` 标志适用于以下跟踪记录类型：
 
@@ -150,7 +150,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
   };
   ```
 
-- <xref:System.Activities.Tracking.ActivityStateQuery> - 用于跟踪组成工作流实例的活动的生命周期更改。 例如，你可能想要跟踪的每次在"发送电子邮件"活动完成工作流实例内。 <xref:System.Activities.Tracking.TrackingParticipant> 需要用该查询来订阅 <xref:System.Activities.Tracking.ActivityStateRecord> 对象。 在 <xref:System.Activities.Tracking.ActivityStates> 中指定了要订阅的可用状态。
+- <xref:System.Activities.Tracking.ActivityStateQuery> - 用于跟踪组成工作流实例的活动的生命周期更改。 例如，你可能想要跟踪每次在工作流实例中完成 "发送电子邮件" 活动的时间。 <xref:System.Activities.Tracking.TrackingParticipant> 需要用该查询来订阅 <xref:System.Activities.Tracking.ActivityStateRecord> 对象。 在 <xref:System.Activities.Tracking.ActivityStates> 中指定了要订阅的可用状态。
 
   下面的示例演示使用 <xref:System.Activities.Tracking.ActivityStateQuery> 订阅 `SendEmailActivity` 活动的活动状态跟踪记录所使用的配置和代码。
 
@@ -234,7 +234,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 
 - <xref:System.Activities.Tracking.CancelRequestedQuery> - 用于跟踪父活动取消子活动的请求。 <xref:System.Activities.Tracking.TrackingParticipant> 需要用该查询来订阅 <xref:System.Activities.Tracking.CancelRequestedRecord> 对象。
 
-  与活动取消使用相关的配置和代码用于订阅记录<xref:System.Activities.Tracking.CancelRequestedQuery>在下面的示例所示。
+  下面的示例演示了使用 <xref:System.Activities.Tracking.CancelRequestedQuery> 订阅与活动取消相关的记录所使用的配置和代码。
 
   ```xml
   <cancelRequestedQueries>
@@ -306,9 +306,9 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
   };
   ```
 
-### <a name="annotations"></a>批注
+### <a name="annotations"></a>Annotations
 
-通过批注，可以使用可在生成时后配置的某个值任意标记跟踪记录。 例如，可能会在多个工作流使用"邮件服务器"来标记希望多个跟踪记录 = ="Mail Server1"。 这样便于在以后查询跟踪记录时查找带有此标记的所有记录。
+通过批注，可以使用可在生成时后配置的某个值任意标记跟踪记录。 例如，您可能希望多个工作流的多个跟踪记录都用 "Mail Server" = = "Mail Server1" 标记。 这样便于在以后查询跟踪记录时查找带有此标记的所有记录。
 
 为此，可以在跟踪查询中添加一个批注，如下面的示例所示。
 
@@ -344,9 +344,9 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 > [!WARNING]
 > 对于使用工作流服务主机的 WF，跟踪配置文件通常是使用配置文件创建的。 也可以通过代码使用跟踪配置文件和跟踪查询 API 来创建跟踪配置文件。
 
-配置为 XML 配置文件的配置文件适用于使用行为扩展的跟踪参与者。 这添加到 WorkflowServiceHost 中的更高版本部分中所述[工作流配置跟踪](configuring-tracking-for-a-workflow.md)。
+配置为 XML 配置文件的配置文件适用于使用行为扩展的跟踪参与者。 这将添加到 WorkflowServiceHost，如后面的为[工作流配置跟踪](configuring-tracking-for-a-workflow.md)中所述。
 
-主机发出的跟踪记录的详细信息由跟踪配置文件中的配置设置确定。 跟踪参与者通过向跟踪配置文件添加查询来订阅跟踪记录。 若要订阅所有跟踪记录，跟踪配置文件需要指定使用的所有跟踪查询"\*"中的每个查询的名称字段中。
+主机发出的跟踪记录的详细信息由跟踪配置文件中的配置设置确定。 跟踪参与者通过向跟踪配置文件添加查询来订阅跟踪记录。 若要订阅所有跟踪记录，跟踪配置文件需要在每个查询的 "名称" 字段中使用 "\*" 指定所有跟踪查询。
 
 下面是跟踪配置文件的一些常见示例。
 
@@ -385,8 +385,8 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
   </trackingProfile>
   ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [SQL 跟踪](./samples/sql-tracking.md)
-- [Windows Server App Fabric 监视](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [使用 App Fabric 监视应用程序](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Windows Server App Fabric 监视](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [用 App Fabric 监视应用程序](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-ms.openlocfilehash: c8f0580c987b87193b5b6a38559043e50fc7cb89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32cfd9ab0cf6037c731b619e81a7504ac92d5fb9
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938835"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837176"
 ---
 # <a name="xuid-directive"></a>x:Uid 指令
-提供的标记元素的唯一标识符。 在许多情况下，此唯一标识符将使用 XAML 本地化流程和工具。  
+为标记元素提供一个唯一标识符。 在许多情况下，XAML 本地化流程和工具使用此唯一标识符。  
   
-## <a name="xaml-attribute-usage"></a>XAML 属性用法  
+## <a name="xaml-attribute-usage"></a>XAML 特性用法  
   
 ```xaml  
 <object x:Uid="identifier"... />  
@@ -27,21 +27,21 @@ ms.locfileid: "61938835"
   
 |||  
 |-|-|  
-|`identifier`|手动创建或自动生成的字符串应该是唯一的文件中来进行解释时`x:Uid`使用者。|  
+|`identifier`|手动创建或自动生成的字符串，当 `x:Uid` 使用者对其进行解释时，它应在文件中是唯一的。|  
   
 ## <a name="remarks"></a>备注  
- 在 [MS-XAML]`x:Uid`定义为一个指令。 有关详细信息，请参阅[ \[MS XAML\]部分 5.3.6](https://go.microsoft.com/fwlink/?LinkId=114525)。  
+ 在 [MS-CHAP] 中，`x:Uid` 定义为指令。 有关详细信息，请参阅[\[MS-XAML\] 部分 5.3.6](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))。  
   
- `x:Uid` 是从离散`x:Name`同时由于规定的 XAML 本地化方案以便用于本地化的标识符没有任何依赖关系的编程模型含义`x:Name`。 此外，`x:Name`受 XAML 名称范围; 但是，`x:Uid`不受任何 XAML 语言定义的概念的强制唯一性。 在广义上讲 （不是本地化流程的一部分的处理器） 中的 XAML 处理器不会强制实施唯一性的`x:Uid`值。 该职责的发起方的值是从概念上讲。 唯一性的假定条件下`x:Uid`单一 XAML 源中的值是合理的值，例如专门的全球化进程或工具的使用者。 典型的唯一性模型是`x:Uid`值内是唯一的表示 XAML 的 XML 编码的文件。  
+ 由于所述的 XAML 本地化方案，`x:Uid` 与 `x:Name` 是离散的，因此用于本地化的标识符不依赖于 `x:Name`的编程模型含义。 此外，`x:Name` 由 XAML 名称范围控制;但 `x:Uid` 不受任何 XAML 语言定义的唯一性强制概念的约束。 一般意义上的 XAML 处理器（不是本地化过程的一部分的处理器）不应强制实施 `x:Uid` 值的唯一性。 从概念上讲，这种责任在值的发起方。 单个 XAML 源中 `x:Uid` 值的唯一性假定对于值的使用者（如专用的全球化过程或工具）是合理的。 典型的唯一性模型是，`x:Uid` 值在表示 XAML 的 XML 编码文件中是唯一的。  
   
- 具有特定的 XAML 架构的重要知识的工具可以选择将应用`x:Uid`仅为 true 可本地化的字符串，而不是所有情况下，在标记中遇到一个文本字符串值。  
+ 对于特定 XAML 架构具有重要了解的工具，可以选择仅将 `x:Uid` 应用于真正可本地化的字符串，而不是用于标记中出现文本字符串值的所有情况。  
   
- 框架可以指定特定的属性在其对象模型中为别名`x:Uid`通过将特性应用<xref:System.Windows.Markup.UidPropertyAttribute>到定义的类型。 如果框架指定特定属性，它不是同时指定`x:Uid`和别名成员在同一个对象。 如果这两个`x:Uid`并指定别名成员，.NET Framework XAML 服务 API 通常会引发<xref:System.Xaml.XamlDuplicateMemberException>这种情况下。  
+ 框架可以通过将特性 <xref:System.Windows.Markup.UidPropertyAttribute> 应用于定义类型，将其对象模型中的特定属性指定为 `x:Uid` 的别名。 如果框架指定了特定属性，则在同一对象上同时指定 `x:Uid` 和化名成员是无效的。 如果同时指定 `x:Uid` 和化名成员，则 .NET Framework XAML 服务 API 通常会在这种情况下引发 <xref:System.Xaml.XamlDuplicateMemberException>。  
   
-## <a name="wpf-usage-notes"></a>WPF 用法说明  
- 有关角色的详细信息`x:Uid`WPF 在本地化过程中以及 XAML 的 BAML 形式中，请参阅[WPF 的全球化](../wpf/advanced/globalization-for-wpf.md)或 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
+## <a name="wpf-usage-notes"></a>WPF 使用说明  
+ 有关 WPF 本地化过程中的 `x:Uid` 角色以及 XAML 的 BAML 形式的详细信息，请参阅[wpf 的全球化](../wpf/advanced/globalization-for-wpf.md)或 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
 - <xref:Microsoft.Build.Tasks.Windows.UidManager>

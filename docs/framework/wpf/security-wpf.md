@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 939c9c6b8a8a8822174f08d5c0b50ef051264ee1
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 75e6c7b4886bd490c462e9128eca7ec13f233824
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802092"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837293"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a>开发 Windows Presentation Foundation （WPF）独立应用程序和浏览器托管应用程序时，必须考虑安全模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 独立的应用程序使用无限制权限（CA**FullTrust**权限集）执行，不管是使用 Windows Installer （.msi）、XCopy 还是 ClickOnce 部署的。 不支持使用 ClickOnce 部署部分信任的独立 WPF 应用程序。 不过，完全信任的主机应用程序可以使用 .NET Framework 外接程序模型创建部分信任 <xref:System.AppDomain>。 有关详细信息，请参阅[WPF 外接程序概述](./app-development/wpf-add-ins-overview.md)。  
@@ -87,7 +87,7 @@ ms.locfileid: "74802092"
   
 <a name="InternetExplorerSecuritySettings"></a>   
 ## <a name="web-browsing-software-security-settings"></a>Web 浏览软件安全设置  
- 计算机上的安全设置决定了任何 Web 浏览软件被授予的访问权限。 Web 浏览软件包含任何应用程序或组件，这些应用程序或组件使用[WinINet](https://go.microsoft.com/fwlink/?LinkId=179379)或[urlmon.dll](https://go.microsoft.com/fwlink/?LinkId=179383) Api，包括 Internet Explorer 和 presentationhost.exe。  
+ 计算机上的安全设置决定了任何 Web 浏览软件被授予的访问权限。 Web 浏览软件包含任何应用程序或组件，这些应用程序或组件使用[WinINet](/windows/win32/wininet/portal)或[urlmon.dll](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767916(v=vs.85)) Api，包括 Internet Explorer 和 presentationhost.exe。  
   
  Internet Explorer 提供一种机制，通过该机制可以配置允许通过 Internet Explorer 执行的功能，包括以下内容：  
   
@@ -148,14 +148,14 @@ ms.locfileid: "74802092"
   
 <a name="webbrowser_control_and_feature_controls"></a>   
 ## <a name="webbrowser-control-and-feature-controls"></a>WebBrowser 控件和功能控件  
- WPF <xref:System.Windows.Controls.WebBrowser> 控件可用于承载 Web 内容。 WPF <xref:System.Windows.Controls.WebBrowser> 控件包装基础 WebBrowser ActiveX 控件。 当你使用 WPF <xref:System.Windows.Controls.WebBrowser> 控件来承载不受信任的 Web 内容时，WPF 提供了一些对保护应用程序的支持。 但是，某些安全功能必须使用 <xref:System.Windows.Controls.WebBrowser> 控件直接应用于应用程序。 有关 WebBrowser ActiveX 控件的详细信息，请参阅[Webbrowser 控件概述和教程](https://go.microsoft.com/fwlink/?LinkId=179388)。  
+ WPF <xref:System.Windows.Controls.WebBrowser> 控件可用于承载 Web 内容。 WPF <xref:System.Windows.Controls.WebBrowser> 控件包装基础 WebBrowser ActiveX 控件。 当你使用 WPF <xref:System.Windows.Controls.WebBrowser> 控件来承载不受信任的 Web 内容时，WPF 提供了一些对保护应用程序的支持。 但是，某些安全功能必须使用 <xref:System.Windows.Controls.WebBrowser> 控件直接应用于应用程序。 有关 WebBrowser ActiveX 控件的详细信息，请参阅[Webbrowser 控件概述和教程](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752041(v=vs.85))。  
   
 > [!NOTE]
 > 本节还适用于 <xref:System.Windows.Controls.Frame> 控件，因为它使用 <xref:System.Windows.Controls.WebBrowser> 导航到 HTML 内容。  
   
  如果 WPF <xref:System.Windows.Controls.WebBrowser> 控件用于承载不受信任的 Web 内容，你的应用程序应使用部分信任的 <xref:System.AppDomain> 来帮助防止应用程序代码与可能的恶意 HTML 脚本代码隔离。 如果你的应用程序通过使用 <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> 方法和 <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A> 属性与托管脚本进行交互，则更是如此。 有关详细信息，请参阅[WPF 外接程序概述](./app-development/wpf-add-ins-overview.md)。  
   
- 如果你的应用程序使用 WPF <xref:System.Windows.Controls.WebBrowser> 控件，提高安全性并缓解攻击的另一种方法是启用 Internet Explorer 功能控件。 功能控件是 Internet Explorer 的新增功能，允许管理员和开发人员配置 Internet Explorer 的功能，以及 WPF <xref:System.Windows.Controls.WebBrowser> 控件包装的 web 浏览器 ActiveX 控件的应用程序。 功能控件可以通过使用[CoInternetSetFeatureEnabled](https://go.microsoft.com/fwlink/?LinkId=179394)函数来配置，也可以通过更改注册表中的值来配置。 有关功能控件的详细信息，请参阅[功能控件简介](https://go.microsoft.com/fwlink/?LinkId=179390)和[Internet 功能控件](https://go.microsoft.com/fwlink/?LinkId=179392)。  
+ 如果你的应用程序使用 WPF <xref:System.Windows.Controls.WebBrowser> 控件，提高安全性并缓解攻击的另一种方法是启用 Internet Explorer 功能控件。 功能控件是 Internet Explorer 的新增功能，允许管理员和开发人员配置 Internet Explorer 的功能，以及 WPF <xref:System.Windows.Controls.WebBrowser> 控件包装的 web 浏览器 ActiveX 控件的应用程序。 功能控件可以通过使用[CoInternetSetFeatureEnabled](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537168(v=vs.85))函数来配置，也可以通过更改注册表中的值来配置。 有关功能控件的详细信息，请参阅[功能控件简介](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537184(v=vs.85))和[Internet 功能控件](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/general-info/ee330720(v=vs.85))。  
   
  如果要开发使用 WPF <xref:System.Windows.Controls.WebBrowser> 控件的独立 WPF 应用程序，WPF 会自动为应用程序启用以下功能控件。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "74802092"
  功能控件由实例化 WebBrowser ActiveX 对象的过程应用。 因此，如果要创建可导航到不受信任的内容的独立应用程序，则应该认真考虑启用附加功能控件。  
   
 > [!NOTE]
-> 此建议是根据 MSHTML 和 SHDOCVW 主机安全性的一般性建议提出的。 有关详细信息，请参阅[MSHTML 主机安全性常见问题：第 I 部分](https://go.microsoft.com/fwlink/?LinkId=179396)和[MSHTML 主机安全性常见问题：第 ii 部分（共 ii 部分](https://go.microsoft.com/fwlink/?LinkId=179415)）。  
+> 此建议是根据 MSHTML 和 SHDOCVW 主机安全性的一般性建议提出的。 有关详细信息，请参阅[MSHTML 主机安全性常见问题：第 I 部分](https://msrc-blog.microsoft.com/archive/2009/04/02/the-mshtml-host-security-faq.aspx)和[MSHTML 主机安全性常见问题：第 ii 部分（共 ii 部分](https://msrc-blog.microsoft.com/archive/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii.aspx)）。  
   
  对于可执行文件，请考虑通过将注册表值设置为 1 来启用以下功能控件。  
   
@@ -209,7 +209,7 @@ ms.locfileid: "74802092"
   
  如果在 Windows Internet Explorer 中运行包含 WPF <xref:System.Windows.Controls.WebBrowser> 控件的部分信任 XAML 浏览器应用程序（XBAP），则 WPF 会在 Internet Explorer 进程的地址空间中承载 WebBrowser ActiveX 控件。 由于 WebBrowser ActiveX 控件承载于 Internet Explorer 进程中，因此还为 WebBrowser ActiveX 控件启用了 Internet Explorer 的所有功能控件。  
   
- 与普通的独立应用程序相比，运行于 Internet Explorer 中的 XBAP 还将另外获得一层安全保护。 这种附加安全性是因为 Internet Explorer 和 WebBrowser ActiveX 控件默认在 Windows Vista 和 Windows 7 上以受保护模式运行。 有关保护模式的详细信息，请参阅[了解和使用受保护模式的 Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393)。  
+ 与普通的独立应用程序相比，运行于 Internet Explorer 中的 XBAP 还将另外获得一层安全保护。 这种附加安全性是因为 Internet Explorer 和 WebBrowser ActiveX 控件默认在 Windows Vista 和 Windows 7 上以受保护模式运行。 有关保护模式的详细信息，请参阅[了解和使用受保护模式的 Internet Explorer](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/)。  
   
 > [!NOTE]
 > 如果尝试在 Firefox 中运行包含 WPF <xref:System.Windows.Controls.WebBrowser> 控件的 XBAP，则在 Internet 区域中，将会引发 <xref:System.Security.SecurityException>。 这是由于 WPF 安全策略造成的。  
@@ -266,7 +266,7 @@ ms.locfileid: "74802092"
   
 |区域|资源|  
 |----------|--------------|  
-|托管代码|[应用程序的模式和实践安全指南](https://go.microsoft.com/fwlink/?LinkId=117426)|  
+|托管代码|[应用程序的模式和实践安全指南](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))|  
 |CAS|[代码访问安全性](../misc/code-access-security.md)|  
 |ClickOnce|[ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 部分信任安全](wpf-partial-trust-security.md)|  
@@ -276,7 +276,7 @@ ms.locfileid: "74802092"
 - [WPF 部分信任安全](wpf-partial-trust-security.md)
 - [WPF 安全策略 - 平台安全性](wpf-security-strategy-platform-security.md)
 - [WPF 安全策略 - 安全工程](wpf-security-strategy-security-engineering.md)
-- [应用程序的模式和实践安全指南](https://go.microsoft.com/fwlink/?LinkId=117426)
+- [应用程序的模式和实践安全指南](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))
 - [代码访问安全性](../misc/code-access-security.md)
 - [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)
 - [XAML 概述 (WPF)](../../desktop-wpf/fundamentals/xaml.md)

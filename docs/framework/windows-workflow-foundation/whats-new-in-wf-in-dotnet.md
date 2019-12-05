@@ -2,12 +2,12 @@
 title: .NET 4.5 中的 Windows Workflow Foundation 中的新增功能
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: 0244457a051740f37c11c48f41d98bdb2d741aec
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 80919dd7a726cbac5fa13680e0c79292745a7bca
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142033"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837579"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5 中的 Windows Workflow Foundation 中的新增功能
 
@@ -76,7 +76,7 @@ ms.locfileid: "74142033"
 
 5. 这些类型不会使用 <xref:System.Runtime.Serialization.ISerializable> 或 <xref:System.SerializableAttribute> 来进行序列化；要进行序列化的类型必须支持 <xref:System.Runtime.Serialization.DataContractSerializer>。
 
-6. 使用 <xref:System.Activities.Expressions.LambdaValue%601> 的表达式需要 <xref:System.Security.Permissions.ReflectionPermissionAttribute.RestrictedMemberAccess%2A>，因此不能在部分信任下使用。 使用 <xref:System.Activities.Expressions.LambdaValue%601> 的工作流应将这些表达式替换为派生自 <xref:System.Activities.CodeActivity%601> 的活动。 方法。
+6. 使用 <xref:System.Activities.Expressions.LambdaValue%601> 的表达式需要 <xref:System.Security.Permissions.ReflectionPermissionAttribute.RestrictedMemberAccess%2A>，因此不能在部分信任下使用。 使用 <xref:System.Activities.Expressions.LambdaValue%601> 的工作流应将这些表达式替换为派生自 <xref:System.Activities.CodeActivity%601> 的活动。 。
 
 7. 在部分信任下，不能使用 <xref:System.Activities.XamlIntegration.TextExpressionCompiler> 或 Visual Basic 承载的编译器来编译表达式，但是可以运行以前编译的表达式。
 
@@ -102,7 +102,7 @@ ms.locfileid: "74142033"
 
 - 变量
 
-- 自变量
+- 参数
 
 - 表达式
 
@@ -220,7 +220,7 @@ ms.locfileid: "74142033"
 
 ### <a name="BKMK_StateMachine"></a>状态机工作流
 
-状态机工作流是在[Microsoft .NET Framework 4 平台更新 1](https://go.microsoft.com/fwlink/?LinkID=215092)中作为 .NET Framework 4 版本4.0.1 的一部分引入的。 此更新包括多个新类和活动，允许开发人员创建状态机工作流。 这些类和活动已针对 .NET Framework 4.5 进行了更新。 更新包括：
+状态机工作流是在[Microsoft .NET Framework 4 平台更新 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/)中作为 .NET Framework 4 版本4.0.1 的一部分引入的。 此更新包括多个新类和活动，允许开发人员创建状态机工作流。 这些类和活动已针对 .NET Framework 4.5 进行了更新。 更新包括以下几种：
 
 1. 能够对状态设置断点
 

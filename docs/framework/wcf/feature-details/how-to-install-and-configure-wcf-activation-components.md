@@ -4,28 +4,28 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 70eab39e4bb24dfd1cdd6abc5216e50126ef1f4c
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 0a7be97ec157638db3eb2d656fe263b37b8d676c
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972185"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837410"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>如何：安装和配置 WCF 激活组件
 
-本主题介绍在中[!INCLUDE[wv](../../../../includes/wv-md.md)]设置 Windows 进程激活服务（也称为 WAS）所需的步骤，该服务不是通过 HTTP 网络协议进行通信的主机 Windows Communication Foundation （WCF）服务。 下面的部分略述此配置的步骤：
+本主题介绍在 Windows Vista 上设置 Windows 进程激活服务（也称为 WAS）以承载不通过 HTTP 网络协议进行通信的 Windows Communication Foundation （WCF）服务所需的步骤。 下面的部分略述此配置的步骤：
 
 - 安装（或确认安装） WCF 激活组件。
 
-- 配置 WAS 以支持非 HTTP 协议。 下面的过程对 [!INCLUDE[wv](../../../../includes/wv-md.md)] 进行 TCP 激活配置。
+- 配置 WAS 以支持非 HTTP 协议。 以下过程将 Windows Vista 配置为进行 TCP 激活。
 
-安装和配置 WAS 之后，请[参阅如何：在 WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)中承载 wcf 服务的过程用于创建 wcf 服务，该服务公开采用 WAS 的非 HTTP 终结点。
+安装和配置 WAS 之后，请参阅[中的如何：在 WAS 中承载 Wcf 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)，了解如何创建 wcf 服务，该服务公开了采用 WAS 的非 HTTP 终结点。
 
 ## <a name="to-install-the-wcf-non-http-activation-components"></a>安装 WCF 非 HTTP 激活组件
 
 1. 单击 "**开始**" 按钮，然后单击 "**控制面板**"。
 
-2. 单击 "**程序**"，然后单击 "**程序和功能**"。
+2. 单击“程序”，然后单击“程序和功能”。
 
 3. 在 "**任务**" 菜单上，单击 "**打开或关闭 Windows 功能**"。
 
@@ -52,7 +52,7 @@ ms.locfileid: "70972185"
     ```
 
     > [!NOTE]
-    > 此命令是单行文本。 此命令\<启用/*WCF 应用*程序 > 使用`http://localhost/<WCF Application>`和`net.tcp://localhost/<WCF Application>`访问应用程序。
+    > 此命令是单行文本。 此命令启用/\<*WCF 应用*程序 > 使用 `http://localhost/<WCF Application>` 和 `net.tcp://localhost/<WCF Application>`访问该应用程序。
 
      移除为此示例添加的 net.tcp 网站绑定。
 
@@ -101,7 +101,7 @@ ms.locfileid: "70972185"
     > [!NOTE]
     > 此命令是单行文本。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [TCP 激活](../../../../docs/framework/wcf/samples/tcp-activation.md)
 - [MSMQ 激活](../../../../docs/framework/wcf/samples/msmq-activation.md)

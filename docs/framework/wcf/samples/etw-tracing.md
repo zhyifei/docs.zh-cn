@@ -2,12 +2,12 @@
 title: ETW 跟踪
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: c9f2b3019ee30ded59a7549a4d3be834c9ab9811
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 25a4281cbf5a9ad81a63eee13d768715eebedfb6
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716435"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837891"
 ---
 # <a name="etw-tracing"></a>ETW 跟踪
 本示例演示如何通过使用 Windows 事件跟踪 (ETW) 和本示例提供的 `ETWTraceListener` 来实现端对端 (E2E) 跟踪。 该示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，并包括 ETW 跟踪。  
@@ -85,7 +85,7 @@ logman stop Wcf
 2. 若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
     > [!NOTE]
-    > 若要使用 RegisterProvider.bat、SetupETW.bat 和 CleanupETW.bat 命令，必须在本地管理员帐户下运行。 如果使用的是 [!INCLUDE[wv](../../../../includes/wv-md.md)] 或更高版本，则还必须用提升的特权运行命令提示。 为此，请右键单击 "命令提示符" 图标，然后单击 "以**管理员身份运行**"。  
+    > 若要使用 RegisterProvider.bat、SetupETW.bat 和 CleanupETW.bat 命令，必须在本地管理员帐户下运行。 如果你使用的是 Windows Vista 或更高版本，则还必须使用提升的权限运行命令提示符。 为此，请右键单击 "命令提示符" 图标，然后单击 "以**管理员身份运行**"。  
   
 3. 运行示例之前，在客户端和服务器上运行 RegisterProvider.bat。 这会设置生成的 ETWTracingSampleLog.etl 文件以生成可由服务跟踪查看器读取的跟踪。 此文件可以在 C:\logs 文件夹中找到。 如果此文件夹不存在，则必须创建此文件夹；否则将不会生成跟踪。 然后，在客户端和服务器计算机上运行 SetupETW.bat 以开始 ETW 跟踪会话。 SetupETW.bat 文件可以在 CS\Client 文件夹下找到。  
   

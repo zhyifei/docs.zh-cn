@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: de03ce61535d4695a00d0c4b8998ef4b81583425
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e47fd1c606f7d4cd0cf2fa6398beaa183ed95076
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347867"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838151"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>常量和枚举 (Visual Basic)
 
@@ -53,7 +53,7 @@ Visual Basic 为开发人员提供了许多预定义的常量和枚举。 常量
 
  下表列出并描述了 Visual Basic 提供的枚举。  
   
-|枚举|说明|  
+|枚举|描述|  
 |---|---|  
 |<xref:Microsoft.VisualBasic.AppWinStyle>|指示在调用 <xref:Microsoft.VisualBasic.Interaction.Shell%2A> 函数时用于所调用程序的窗口样式。|  
 |<xref:Microsoft.VisualBasic.AudioPlayMode>|指示如何在调用音频方法时播放声音。|  
@@ -84,6 +84,5 @@ Visual Basic 为开发人员提供了许多预定义的常量和枚举。 常量
 ## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 语言参考](../../visual-basic/language-reference/index.md)
-- [Visual Basic](../../visual-basic/index.md)
 - [常量概述](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
 - [枚举概述](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)

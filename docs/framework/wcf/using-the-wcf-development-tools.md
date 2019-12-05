@@ -2,12 +2,12 @@
 title: 使用 WCF 开发工具
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: 59913f4c00c32699d788e2a0244798fc652361be
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 8253a9136b2310deeb7c6d162a9f190c13ba02da
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802400"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837722"
 ---
 # <a name="using-the-wcf-development-tools"></a>使用 WCF 开发工具
 本部分介绍可帮助你开发 WCFservice 的 Visual Studio 开发工具。  
@@ -37,7 +37,7 @@ ms.locfileid: "74802400"
 ## <a name="using-the-tools-without-administrator-privilege"></a>在无管理员权限的情况下使用工具  
  若要使没有管理员权限的用户能够开发 WCF 服务，请在安装 Visual Studio 的过程中为命名空间 "http://+:8731/Design_Time_Addresses" 创建 ACL （访问控制列表）。 该 ACL 被设置为“(UI)”，这将包括登录到此计算机的所有交互用户。 管理员可以在此 ACL 中添加或移除用户，或者打开其他端口。此 ACL 支持 WCF 或 WF 模板以其各自的默认配置发送和接收数据。 它还使用户可以使用 WCF 服务自动主机（Wcfsvchost.exe），而无需授予其管理员权限。  
   
- 可以使用提升的管理员帐户在 [!INCLUDE[wv](../../../includes/wv-md.md)] 中通过 Netsh.exe 工具来修改访问权限。 下面是使用 Netsh.exe 的示例。  
+ 你可以使用提升的管理员帐户，使用 Windows Vista 中的 Netsh 工具来修改访问权限。 下面是使用 Netsh.exe 的示例。  
   
 ```console  
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>  

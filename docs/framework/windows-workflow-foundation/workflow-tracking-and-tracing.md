@@ -1,22 +1,22 @@
 ---
-title: 工作流跟踪
+title: '{2&gt;工作流跟踪&lt;2}'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
-ms.openlocfilehash: eaf38bad246b1f02449c1a3b99c7fb844c09a4bd
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 9f887babec5c070eed2fb3c7e4d8d35cdfb3f488
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959712"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837475"
 ---
-# <a name="workflow-tracking-and-tracing"></a>工作流跟踪
+# <a name="workflow-tracking-and-tracing"></a>{2&gt;工作流跟踪&lt;2}
 Windows 工作流跟踪是专为查看工作流执行情况而设计的一个 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 功能。 它提供一个跟踪基础结构，用于跟踪工作流实例的执行。 WF 跟踪基础结构透明地检测工作流以发出反应执行期间关键事件的记录。 默认情况下，任何 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流都可以使用此功能。 不需要对 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]工作流进行任何更改即可进行跟踪。 只需确定要接收的跟踪数据量。 工作流实例开始或完成之后，会发出其处理跟踪记录。 跟踪还可以提取与工作流变量关联的相关业务数据。 例如，如果工作流表示一个订单处理系统，则可以提取 <xref:System.Activities.Tracking.TrackingRecord> 对象以及订单 ID。 一般来讲，启用 WF 跟踪便于访问工作流执行的诊断数据或业务分析数据。  
   
- 这些跟踪组件是等效于在 WinFX 的跟踪服务。 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中，WF 跟踪功能的性能已改进，其编程模型也已简化。 跟踪运行时会检测工作流实例以发出与工作流生命周期和工作流活动有关的事件以及自定义事件。  
+ 这些跟踪组件等效于 WinFX 中的跟踪服务。 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中，WF 跟踪功能的性能已改进，其编程模型也已简化。 跟踪运行时会检测工作流实例以发出与工作流生命周期和工作流活动有关的事件以及自定义事件。  
   
- Windows Server App Fabric 还提供了监视 WCF 和工作流服务的执行的功能。 有关详细信息，请参阅[Windows Server App Fabric 监视](https://go.microsoft.com/fwlink/?LinkId=201273)和[使用 Windows Server AppFabric 监视应用程序](https://go.microsoft.com/fwlink/?LinkId=201287)  
+ Windows Server App Fabric 还提供了监视 WCF 和工作流服务的执行的功能。 有关详细信息，请参阅[Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10)) [With windows Server AppFabric 的监视和监视应用程序](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))  
   
  若要对工作流运行时进行故障排除，则可以启用诊断工作流跟踪。 有关详细信息，请参阅[工作流跟踪](workflow-tracing.md)。  
   
@@ -28,12 +28,12 @@ Windows 工作流跟踪是专为查看工作流执行情况而设计的一个 [!
   
 - <xref:System.Activities.Tracking.TrackingProfile> 对象筛选从工作流实例发出的跟踪记录。 有关详细信息，请参阅[跟踪配置文件](tracking-profiles.md)。  
   
-## <a name="workflow-tracking-infrastructure"></a>工作流跟踪基础结构  
+## <a name="workflow-tracking-infrastructure"></a>运行时跟踪基础结构  
  工作流跟踪基础结构遵循一个范例，即发布和订阅范例。 工作流实例是跟踪记录的发布者，而跟踪记录的订阅者注册为工作流的扩展。 订阅 <xref:System.Activities.Tracking.TrackingRecord> 对象的这些扩展称为跟踪参与者。 跟踪参与者是一些扩展点，这些扩展点按照编写的目的来访问 <xref:System.Activities.Tracking.TrackingRecord> 对象和处理对象。 跟踪基础结构允许对传出跟踪记录应用筛选器，以便参与者可订阅该记录的子集。 此筛选机制是通过跟踪配置文件来实现的。  
   
- 跟踪基础结构的高级别视图如下图所示：  
+ 下图显示了跟踪基础结构的高级视图：  
   
- ![显示工作流跟踪基础结构的屏幕截图。](./media/workflow-tracking-and-tracing/workflow-tracking-infrastructure.gif "西弗吉尼亚州")  
+ ![显示工作流跟踪基础结构的屏幕截图。](./media/workflow-tracking-and-tracing/workflow-tracking-infrastructure.gif "WV")  
   
 ## <a name="in-this-section"></a>本节内容  
  [跟踪记录](tracking-records.md)  
@@ -51,6 +51,6 @@ Windows 工作流跟踪是专为查看工作流执行情况而设计的一个 [!
  [工作流跟踪](workflow-tracing.md)  
  介绍为工作流启用调试跟踪的两种方法。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [SQL 跟踪](./samples/sql-tracking.md)

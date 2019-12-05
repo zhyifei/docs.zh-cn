@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [Visual Basic]
 ms.assetid: 1cbd7703-8d3b-48fd-831e-14c9cc85675a
-ms.openlocfilehash: a5c755b1ee67fcb6121fe128d90b235fd53ad663
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 78a1bac0eea8aa3f9596077b311ccc1b4e58da79
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353561"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838268"
 ---
 # <a name="statements-visual-basic"></a>语句 (Visual Basic)
 本节中的主题包含 Visual Basic 声明表和可执行语句表，以及应用于许多语句的重要列表。  
@@ -34,4 +34,3 @@ ms.locfileid: "74353561"
 ## <a name="related-sections"></a>相关章节  
  [Visual Basic 语言参考](../../../visual-basic/language-reference/index.md)  
   
- [Visual Basic](../../../visual-basic/index.md)

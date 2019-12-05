@@ -2,12 +2,12 @@
 title: 如何：对工作流和工作流服务启用 SQL 持久性
 ms.date: 03/30/2017
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: bef95dbeaaa96678a66ba94494a0207c7314c326
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: bbbd2e6a5eb3babeb1a4d06976fdefd621581766
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802578"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837683"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>如何：对工作流和工作流服务启用 SQL 持久性
 
@@ -152,7 +152,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 ```
 
 > [!IMPORTANT]
-> 建议不要在 Web.config 文件中存储敏感信息，如用户名和密码。 如果在 Web.config 文件中存储了敏感信息，应使用文件系统访问控制列表 (ACL) 来确保安全访问 Web.config 文件。 此外，还可以在[使用受保护配置加密配置信息](https://docs.microsoft.com/en-us/previous-versions/aspnet/53tyfkaw(v=vs.100))中所述，保护配置文件中的配置值。
+> 建议不要在 Web.config 文件中存储敏感信息，如用户名和密码。 如果在 Web.config 文件中存储了敏感信息，应使用文件系统访问控制列表 (ACL) 来确保安全访问 Web.config 文件。 此外，还可以在[使用受保护配置加密配置信息](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))中所述，保护配置文件中的配置值。
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>与 SQL 工作流实例存储功能相关的 Machine.config 元素
 

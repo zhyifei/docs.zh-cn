@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: 3282daff166a8fe56841a41bfe8bd9dd69f9d4c8
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 59f9edf67c03fb7d8670058eca8ea672a6f64c02
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716942"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837865"
 ---
 # <a name="getting-started-sample"></a>入门示例
 
@@ -34,7 +34,7 @@ ms.locfileid: "74716942"
 
 客户端中包含服务协定的定义，以及一个用来访问服务的代理类。 代理代码是使用[Svcutil.exe 元数据实用工具（）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)从服务元数据生成的。
 
-在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，服务承载于 Windows 激活服务 (WAS) 中。 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 上，服务由 Internet 信息服务 (IIS) 和 ASP.NET 承载。 如果将服务承载于 IIS 或 WAS 中，那么，在首次访问服务时，系统将自动激活服务。
+在 Windows Vista 上，该服务承载于 Windows 激活服务（WAS）中。 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 上，服务由 Internet 信息服务 (IIS) 和 ASP.NET 承载。 如果将服务承载于 IIS 或 WAS 中，那么，在首次访问服务时，系统将自动激活服务。
 
 > [!NOTE]
 > 如果希望开始使用在控制台应用程序（而非 IIS）中承载服务的示例，请参阅[自承载](../../../../docs/framework/wcf/samples/self-host.md)示例。

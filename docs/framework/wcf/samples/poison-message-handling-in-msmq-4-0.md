@@ -2,12 +2,12 @@
 title: MSMQ 4.0 中的病毒消息处理
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: eb0801a3df0f6f384dd646598e43fe1c20b6eda0
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: d1d23ffd600e7f770b942899ecc3b493b84c605a
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716527"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837813"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 中的病毒消息处理
 本示例演示如何在服务中执行病毒消息处理。 此示例基于已进行[事务处理的 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例。 其中使用到了 `netMsmqBinding`。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。
@@ -18,12 +18,12 @@ ms.locfileid: "74716527"
 
  根据 MSMQ 版本，NetMsmqBinding 支持对病毒消息进行有限检测和完全检测。 在已经将消息检测为病毒后，可以通过多种方式对消息进行处理。 同样，根据 MSMQ 版本，NetMsmqBinding 支持对病毒消息进行有限处理和完全处理。
 
- 本示例演示 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 平台上提供的有限病毒功能和 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上提供的完全病毒功能。 在这两个示例中，目的是将病毒消息从一个队列移出到另一个队列，然后由病毒消息服务对其进行处理。
+ 此示例说明了 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 平台上提供的有限病毒功能，以及 Windows Vista 上提供的完整病毒功能。 在这两个示例中，目的是将病毒消息从一个队列移出到另一个队列，然后由病毒消息服务对其进行处理。
 
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 病毒处理示例
- 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中，MSMQ 提供一个病毒子队列功能，可以用来存储病毒消息。 本示例演示使用 [!INCLUDE[wv](../../../../includes/wv-md.md)] 处理病毒消息的最佳做法。
+ 在 Windows Vista 中，MSMQ 提供了可用于存储病毒消息的病毒子队列设备。 此示例演示使用 Windows Vista 处理病毒消息的最佳实践。
 
- [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的病毒消息检测非常完善。 有 3 属性可帮助检测。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 是重新从队列中读取给定消息并将其调度到应用程序中以进行处理的次数。 当由于某一消息无法调度到应用程序或应用程序在服务操作中回滚事务，该消息返回到队列中时，即会从队列中重新读取该消息。 <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> 是将消息移动到重试队列的次数。 当达到 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 时，即会将该消息移动到重试队列。 属性 <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> 是将消息从重试队列移回到主队列之前的时间延迟。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 重置为 0。 再次尝试消息。 如果读取消息的所有尝试都失败，则会将该消息标记为已中毒。
+ Windows Vista 中的病毒消息检测功能非常复杂。 有 3 属性可帮助检测。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 是重新从队列中读取给定消息并将其调度到应用程序中以进行处理的次数。 当由于某一消息无法调度到应用程序或应用程序在服务操作中回滚事务，该消息返回到队列中时，即会从队列中重新读取该消息。 <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> 是将消息移动到重试队列的次数。 当达到 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 时，即会将该消息移动到重试队列。 属性 <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> 是将消息从重试队列移回到主队列之前的时间延迟。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 重置为 0。 再次尝试消息。 如果读取消息的所有尝试都失败，则会将该消息标记为已中毒。
 
  一旦将消息标记为已中毒，则将按照 <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> 枚举中的设置来处理该消息。 迭代可能的值：
 
@@ -31,9 +31,9 @@ ms.locfileid: "74716527"
 
 - 放置：将放置消息。
 
-- Move：将消息移到病毒消息子队列中。 此值仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中可用。
+- Move：将消息移到病毒消息子队列中。 此值仅适用于 Windows Vista。
 
-- Reject：要通过将消息发送回发送方死信队列来拒绝消息。 此值仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中可用。
+- Reject：要通过将消息发送回发送方死信队列来拒绝消息。 此值仅适用于 Windows Vista。
 
  示例演示了如何使用 `Move` 处理病毒消息。 `Move` 可使消息移动到病毒子队列中。
 

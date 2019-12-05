@@ -1,13 +1,13 @@
 ---
 title: 值选项
 description: 了解F#值选项类型，它是选项类型的结构版本。
-ms.date: 02/06/2019
-ms.openlocfilehash: 4dc3f7217943345b7aaf1165fd648ab2e01bd727
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 12/04/2019
+ms.openlocfilehash: 0e9882ab4acdf2757705ef6022516d3572d87ef2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424018"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837111"
 ---
 # <a name="value-options"></a>值选项
 
@@ -18,7 +18,7 @@ ms.locfileid: "73424018"
 
 并非所有性能相关的方案都是使用结构 "解决" 的。 使用时，必须考虑复制的额外成本，而不是引用类型。 但是，大型F#程序通常会实例化许多通过热路径的可选类型，在这种情况下，结构通常可以在程序的整个生存期内提供更好的整体性能。
 
-## <a name="definition"></a>定义
+## <a name="definition"></a>Definition
 
 值选项定义为类似于引用选项类型的[结构可区分联合](discriminated-unions.md#struct-discriminated-unions)。 它的定义可以通过以下方式来考虑：
 
@@ -63,16 +63,14 @@ match (result1, result2) with
 
 ## <a name="value-option-functions"></a>值选项函数
 
-目前有一个适用于值选项的模块绑定函数，`defaultValueArg`：
+Fsharp.core 中的 `ValueOption` 模块包含 `Option` 模块的等效功能。 名称有一些不同之处，例如 `defaultValueArg`：
 
 ```fsharp
 val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T
 ```
 
-与 `defaultArg` 函数一样，`defaultValueArg` 返回给定值选项的基础值（如果存在）;否则，它将返回指定的默认值。
+这就像 `Option` 模块中 `defaultArg`，而是对值选项进行操作。
 
-目前没有其他用于值选项的模块绑定函数。
-
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [选项](options.md)

@@ -2,12 +2,12 @@
 title: 中的异步编程F#
 description: 了解如何F#基于从核心函数编程概念派生的语言级编程模型，为异步提供干净支持。
 ms.date: 12/17/2018
-ms.openlocfilehash: 1ede4a5c1e26df271ac94f9b2c216ac84fb38f59
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 583b0f5154e6ad8875b21503cfb78f70a069ff7b
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395791"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837098"
 ---
 # <a name="async-programming-in-f"></a>F 中的异步编程\#
 
@@ -33,7 +33,7 @@ ms.locfileid: "72395791"
 - "a"，表示 "not"。
 - "同步"，表示 "同时"。
 
-将这两个术语组合在一起后，会看到 "异步" 表示 "不同时"。 就这么简单！ 此定义中不存在并发或并行性的含义。 实际上也是如此。
+将这两个术语组合在一起后，会看到 "异步" 表示 "不同时"。 就是这样简单！ 此定义中不存在并发或并行性的含义。 实际上也是如此。
 
 在实际情况下，中F#的异步计算计划为独立于主程序流执行。 这并不意味着并发性或并行性，也不意味着计算始终在后台发生。 事实上，异步计算甚至可以同步执行，具体取决于计算的性质和正在执行计算的环境。
 
@@ -127,6 +127,7 @@ let main argv =
     argv
     |> Array.map printTotalFileBytes
     |> Async.Sequential
+    |> Async.Ignore
     |> Async.RunSynchronously
     |> ignore
 ```
@@ -143,7 +144,7 @@ let main argv =
 
 在异步计算中启动子计算。 这允许并发执行多个异步计算。 子计算与父计算共享取消标记。 如果取消了父计算，则子计算也将被取消。
 
-信号
+签名：
 
 ```fsharp
 computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
@@ -161,9 +162,9 @@ computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
 
 ### <a name="asyncstartimmediate"></a>StartImmediate
 
-运行异步计算，在当前操作系统线程上立即启动。 如果需要在计算过程中在调用线程上更新某些内容，这会很有帮助。 例如，如果异步计算必须更新 UI （如更新进度栏），则应使用 `Async.StartImmediate`。
+从当前操作系统线程开始立即运行异步计算。 如果需要在计算过程中在调用线程上更新某些内容，这会很有帮助。 例如，如果异步计算必须更新 UI （如更新进度栏），则应使用 `Async.StartImmediate`。
 
-信号
+签名：
 
 ```fsharp
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
@@ -181,7 +182,7 @@ computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 
 在线程池中执行计算。 返回一个 <xref:System.Threading.Tasks.Task%601>，它将在计算终止后（生成结果、引发异常或取消）在相应的状态下完成。 如果未提供取消标记，则使用默认取消标记。
 
-信号
+签名：
 
 ```fsharp
 computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
@@ -199,7 +200,7 @@ computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellatio
 
 计划要并行执行的异步计算序列。 通过指定 `maxDegreesOfParallelism` 参数，可以选择性地优化/限制并行度。
 
-信号
+签名：
 
 ```fsharp
 computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
@@ -219,7 +220,7 @@ computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
 
 计划一系列要按其传递顺序执行的异步计算。 将执行第一个计算，然后执行下一次计算，依次类推。 不会并行执行任何计算。
 
-信号
+签名：
 
 ```fsharp
 computations: seq<Async<'T>> -> Async<'T[]>
@@ -238,7 +239,7 @@ computations: seq<Async<'T>> -> Async<'T[]>
 
 返回一个异步计算，该异步计算等待给定的 <xref:System.Threading.Tasks.Task%601> 完成，并将其结果作为 `Async<'T>` 返回
 
-信号
+签名：
 
 ```fsharp
 task: Task<'T>  -> Async<'T>
@@ -256,7 +257,7 @@ task: Task<'T>  -> Async<'T>
 
 创建一个异步计算，该计算执行给定的 `Async<'T>`，并返回一个 `Async<Choice<'T, exn>>`。 如果给定 `Async<'T>` 成功完成，则返回具有结果值的 `Choice1Of2`。 如果在异常完成之前引发了异常，则会返回 `Choice2of2`，并引发异常。 如果它用于由多个计算组成的异步计算，并且其中一个计算引发异常，则会完全停止包含计算。
 
-信号
+签名：
 
 ```fsharp
 computation: Async<'T> -> Async<Choice<'T, exn>>
@@ -272,9 +273,9 @@ computation: Async<'T> -> Async<Choice<'T, exn>>
 
 ### <a name="asyncignore"></a>Async。 Ignore
 
-创建一个异步计算，该异步计算将运行给定的计算并忽略其结果。
+创建一个运行给定计算并忽略其结果的异步计算。
 
-信号
+签名：
 
 ```fsharp
 computation: Async<'T> -> Async<unit>
@@ -292,7 +293,7 @@ computation: Async<'T> -> Async<unit>
 
 运行异步计算，并在调用线程上等待其结果。 此调用正在阻止。
 
-信号
+签名：
 
 ```fsharp
 computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -> 'T
@@ -311,7 +312,7 @@ computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -
 
 在线程池中启动异步计算，该计算返回 `unit`。 不会等待其结果。 `Async.Start` 启动的嵌套计算完全独立于调用它们的父计算。 它们的生存期未绑定到任何父计算。 如果取消了父计算，则不会取消任何子计算。
 
-信号
+签名：
 
 ```fsharp
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit

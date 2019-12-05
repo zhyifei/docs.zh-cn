@@ -2,12 +2,12 @@
 title: 工作流服务注册工具 (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: 6b1a0b990b1657e724f527b5beccce0e8a6391a6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: cf5ea345c900dec0e4859d81fcb272c1ba3d3df6
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281669"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837748"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>工作流服务注册工具 (WFServicesReg.exe)
 工作流服务注册工具 (WFServicesReg.exe) 是一个独立的工具，可用于添加、移除或修复 Windows Workflow Foundation (WF) 服务的配置元素。  
@@ -23,7 +23,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  下表说明了可用于工作流服务注册工具 (WFServicesReg.exe) 的选项。  
   
-|选项|说明|  
+|选项|描述|  
 |------------|-----------------|  
 |`/c`|配置 Windows Workflow Services。 在安装和修复方案中使用。|  
 |`/r`|移除 Windows Workflow Services 配置。|  
@@ -60,7 +60,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  在 64 位计算机上，如果启用 `Enable32BitAppOnWin64` 开关，则该工具注册 WOW 模式脚本映射；如果禁用 `Enable32BitAppOnWin64` 开关，则该工具注册本机 64 位模式脚本映射。  
   
- 在 [!INCLUDE[wv](../../../includes/wv-md.md)] 和 Windows Server 2008 （IIS 7.0 及更高版本）计算机上，注册了两组 xoml 和. 规则处理程序：一个用于集成模式，另一个用于经典模式。  
+ 在 Windows Vista 和 Windows Server 2008 （IIS 7.0 及更高版本）计算机上，注册了两组 xoml 和. 规则处理程序：一个用于集成模式，另一个用于经典模式。  
   
  在 64 位计算机上，注册三组处理程序（无论 `Enable32BitAppOnWin64` 开关处于什么状态）：一组用于集成模式，一组用于 WOW 经典模式，一组用于本机 64 位经典模式。  
   

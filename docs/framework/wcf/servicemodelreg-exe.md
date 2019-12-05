@@ -2,12 +2,12 @@
 title: ServiceModel 注册工具 (ServiceModelReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 396ec5ae-e34f-4c64-a164-fcf50e86b6ac
-ms.openlocfilehash: aa9fc1b2338007db240fb10a9af35754107b07d0
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 2b2580a43270cc221de9cfdf0894a59a040ba307
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424879"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837761"
 ---
 # <a name="servicemodel-registration-tool-servicemodelregexe"></a>ServiceModel 注册工具 (ServiceModelReg.exe)
 利用此命令行工具可以管理 WCF 和 WF 组件在单一计算机上的注册。 在正常情况下，不应使用此工具，因为 WCF 和WF 组件在安装时配置。 但如果您遇到服务激活方面的问题，可以尝试使用此工具注册组件。  
@@ -24,7 +24,7 @@ ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\  
   
 > [!NOTE]
-> 当在 [!INCLUDE[wv](../../../includes/wv-md.md)]上运行 "电源" 注册工具时，" **Windows 功能**" 对话框可能不会反映**Microsoft .NET Framework 3.0**下的 " **Windows Communication Foundation HTTP 激活**" 选项。 可以通过单击 "**开始**"，然后单击 "**运行**"，然后键入 " **OptionalFeatures**" 来访问 " **Windows 功能**" 对话框。  
+> 当在 Windows Vista 上运行 "带中注册" 工具时，" **Windows 功能**" 对话框可能不会反映 Windows Communication Foundation 启用**Microsoft .NET FRAMEWORK 3.0**的**HTTP 激活**选项。 可以通过单击 "**开始**"，然后单击 "**运行**"，然后键入 " **OptionalFeatures**" 来访问 " **Windows 功能**" 对话框。  
   
  下表介绍可用于 ServiceModelReg.exe 的选项。  
   

@@ -2,12 +2,12 @@
 title: 排队消息处理疑难解答
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: dcff128a7718245fa765c57d3af80665699f4891
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2999d1ab4129c72c231b6dc80480d8bfef5186fa
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976041"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837306"
 ---
 # <a name="troubleshooting-queued-messaging"></a>排队消息处理疑难解答
 
@@ -25,7 +25,7 @@ ms.locfileid: "73976041"
 
 **问：** 是否必须升级 MSMQ 才能使用 <xref:System.ServiceModel.NetMsmqBinding> 和 `MsmqIntegration` 绑定？
 
-**答：** 否。 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 中，这两种绑定都可以与 MSMQ 3.0 一起使用。 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中，只有升级到 MSMQ 4.0，绑定的某些功能才可用。
+**答：** 否。 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 中，这两种绑定都可以与 MSMQ 3.0 一起使用。 升级到 Windows Vista 中的 MSMQ 4.0 时，绑定的某些功能将变为可用。
 
 **问：** <xref:System.ServiceModel.NetMsmqBinding> 和 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 绑定的哪些功能在 MSMQ 4.0 中可用，但在 MSMQ 3.0 中不可用？
 
@@ -47,7 +47,7 @@ ms.locfileid: "73976041"
 
 **答：** 否。 您不必将任何一端升级到 MSMQ 4.0。
 
-## <a name="troubleshooting"></a>疑难解答
+## <a name="troubleshooting"></a>故障排除
 
 此部分包含大多数常见疑难问题的答案。 某些已知限制问题还将在发行说明中进行介绍。
 
@@ -55,11 +55,11 @@ ms.locfileid: "73976041"
 
 **答：** 请在配置和代码中检查队列统一资源标识符（URI）。 不要在 URI 中使用“$”字符。 例如，若要为名为 OrdersQueue 的专有队列指定地址，可以将 URI 指定为 net.msmq://localhost/private/ordersQueue。
 
-**问：** 对排队的应用程序调用 `ServiceHost.Open()` 将引发以下异常： `System.ArgumentException`：基址中不能包含 URI 查询字符串。 为什么？
+**问：** 对排队的应用程序调用 `ServiceHost.Open()` 将引发以下异常： `System.ArgumentException`：基址中不能包含 URI 查询字符串。 为什么?
 
 **答：** 检查配置文件和代码中的队列 URI。 虽然 MSMQ 队列支持使用“?”字符，但 URI 将此字符解释为字符串查询的开头。 若要避免此问题，请使用不包含“?”字符的队列名称。
 
-**问：** 已成功发送，但没有在接收方调用任何服务操作。 为什么？
+**问：** 已成功发送，但没有在接收方调用任何服务操作。 为什么?
 
 **答：** 若要确定答案，请通过以下检查列表进行操作：
 
@@ -87,15 +87,15 @@ ms.locfileid: "73976041"
 
 如果保证为 "无" （<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`），则默认值为 "无死信队列" 功能。
 
-**问：** 我的服务在 SvcHost 上抛出。打开并出现消息 "调用 svchost.open 时无法满足 EndpointListener 要求"。 为什么？
+**问：** 我的服务在 SvcHost 上抛出。打开并出现消息 "调用 svchost.open 时无法满足 EndpointListener 要求"。 为什么?
 
-答： 请检查您的服务协定。 您可能忘记了在所有服务操作上放置 "IsOneWay =`true`"。 队列仅支持单向服务操作。
+A. 请检查您的服务协定。 您可能忘记了在所有服务操作上放置 "IsOneWay =`true`"。 队列仅支持单向服务操作。
 
 **问：** 队列中有消息，但未调用任何服务操作。 有什么问题？
 
 **答：** 确定服务主机是否出错。 可以通过查看跟踪情况或实现 `IErrorHandler` 进行检查。 默认情况下，如果检测到病毒消息，则服务主机将出现故障。
 
-**问：** 队列中有消息，但 Web 托管的排队服务未激活。 为什么？
+**问：** 队列中有消息，但 Web 托管的排队服务未激活。 为什么?
 
 **答：** 最常见的原因是权限。
 
@@ -130,15 +130,15 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 ### <a name="msmq-integration-specific-troubleshooting"></a>MSMQ 集成：特定的疑难解答
 
-**问：** 发送消息时，或打开服务主机时，出现错误，指出方案错误。 为什么？
+**问：** 发送消息时，或打开服务主机时，出现错误，指出方案错误。 为什么?
 
 **答：** 如果使用 MSMQ 集成绑定，则必须使用 msmq.formatname 方案。 例如，msmq.formatname:DIRECT=OS:.\private$\OrdersQueue。 但是，如果您指定自定义死信队列，则必须使用 net.msmq 方案。
 
-**问：** 使用公用或专用格式名称并打开 [!INCLUDE[wv](../../../../includes/wv-md.md)]上的服务主机时，出现错误。 为什么？
+**问：** 使用公用或专用格式名称并在 Windows Vista 上打开服务主机时，出现错误。 为什么?
 
-**答：** [!INCLUDE[wv](../../../../includes/wv-md.md)] 上的 WCF 集成通道检查是否可以为主应用程序队列打开子队列，以便处理病毒消息。 子队列名称派生自传递到侦听器的 msmq.formatname URI。 MSMQ 中的子队列名只能是直接格式名。 因此，您会发现以上错误。 将队列 URI 改为直接格式名。
+**答：** Windows Vista 上的 WCF 集成通道检查是否可以打开主应用程序队列的子队列来处理病毒消息。 子队列名称派生自传递到侦听器的 msmq.formatname URI。 MSMQ 中的子队列名只能是直接格式名。 因此，您会发现以上错误。 将队列 URI 改为直接格式名。
 
-**问：** 从 MSMQ 应用程序接收消息时，消息位于队列中，并且不由接收 WCF 应用程序读取。 为什么？
+**问：** 从 MSMQ 应用程序接收消息时，消息位于队列中，并且不由接收 WCF 应用程序读取。 为什么?
 
 **答：** 检查消息是否具有正文。 如果消息没有正文，则 MSMQ 集成通道会忽略此消息。 实现向其通知异常的 `IErrorHandler` 并检查跟踪情况。
 
@@ -174,7 +174,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 6. 接下来，使用前面的步骤添加另一个证书管理单元，但这次请选择 "**计算机帐户**"，然后单击 "**下一步**"。
 
-7. 选择 "**本地计算机**"，然后单击 "**完成**"。 现在，可以将证书从计算机证书存储区拖放到当前用户存储区。
+7. 选择“本地计算机”，然后单击“完成”。 现在，可以将证书从计算机证书存储区拖放到当前用户存储区。
 
 **问：** 当我的服务在工作组模式下从另一台计算机上的队列中读取时，出现 "拒绝访问" 异常。
 
@@ -186,7 +186,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 ### <a name="remote-transacted-receives"></a>远程事务处理接收
 
-**问：** 当我在计算机 A 上有一个队列，而在计算机 B 上读取消息的 WCF 服务（远程事务处理接收方案）时，不会从队列中读取消息。 跟踪信息指示接收失败，并显示消息 "无法导入事务"。 可以执行哪些操作来解决此问题？
+**问：** 当我在计算机 A 上有一个队列，而在计算机 B 上读取消息的 WCF 服务（远程事务处理接收方案）时，不会从队列中读取消息。 跟踪信息指示接收失败，并显示消息 "无法导入事务"。 如何进行修复？
 
 **答：** 有三个可能的原因：
 
@@ -200,7 +200,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 - 请确保 MSDTC 位于**Internet 连接防火墙**设置中的例外列表中。
 
-- 确保您使用的是 [!INCLUDE[wv](../../../../includes/wv-md.md)]。 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上的 MSMQ 支持远程事务处理读取。 早期的 Windows 版本上的 MSMQ 不支持远程事务处理读取。
+- 确保你使用的是 Windows Vista。 Windows Vista 上的 MSMQ 支持远程事务处理读取。 早期的 Windows 版本上的 MSMQ 不支持远程事务处理读取。
 
 **问：** 如果从队列中读取的服务是一个网络服务，例如，在 Web 主机上，从队列中读取时，为什么会出现 "拒绝访问" 异常？
 

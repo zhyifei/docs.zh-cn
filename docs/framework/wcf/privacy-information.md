@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 0b277728d2f2c224d5e45e3990ab2fd588bc81d3
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c5500b8fd8b35081e83e2e9279dc4f236ef3c7b0
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318699"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837930"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隐私信息
 Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foundation （WCF）版本3.0 生成应用程序时，应用程序可能会影响最终用户的隐私。 例如，应用程序可能显式收集用户联系信息，或者通过 Internet 向您的网站请求或发送信息。 如果您在应用程序中嵌入了 Microsoft 技术，则该技术可能具有可能会影响隐私的自己的行为。 WCF 不会从你的应用程序向 Microsoft 发送任何信息，除非你或最终用户选择将其发送给我们。  
@@ -21,14 +21,14 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  标头可能包含消息路由、安全信息、事务和其他信息，具体取决于应用程序所使用的服务。 默认情况下，消息通常要进行加密。 一个例外的情况是使用 `BasicHttpBinding`（它适用于不受保护的旧式 Web 服务）。 作为应用程序设计人员，您负责进行最终设计。 SOAP 正文中的消息包含特定于应用程序的数据;不过，这些数据（如应用程序定义的个人信息）可以通过使用 WCF 加密或机密性功能来保护。 以下几节将描述可能对隐私造成影响的功能。  
   
-## <a name="messaging"></a>消息  
+## <a name="messaging"></a>消息传递  
  每个 WCF 消息都有一个地址标头，该标头指定消息目标和答复的目标位置。  
   
  终结点地址的地址部分是一个标识该终结点的统一资源标识符 (URI)。 该地址可以是网络地址，也可以是逻辑地址。 该地址可能包含计算机名称（主机名、完全限定域名）和一个 IP 地址。 终结点地址还可能包含一个用于进行临时寻址的全局唯一标识符 (GUID) 或 GUID 集合，以便辨别每个地址。 每个消息都包含一个消息 ID，该消息 ID 是 GUID。 此功能遵循 WS-Addressing 引用标准。  
   
  WCF 消息传递层不会向本地计算机写入任何个人信息。 但是，如果服务开发人员创建了公开此类信息的服务（例如，通过在终结点名称中使用个人姓名，或者将个人信息包含在终结点的 Web 服务描述语言中，但不要求客户端使用 https 来访问 WSDL），则消息传递层可能会在网络级传播个人信息。 此外，如果开发人员针对公开个人信息的终结点运行 " [Svcutil.exe 元数据实用工具（）](servicemodel-metadata-utility-tool-svcutil-exe.md) " 工具，则该工具的输出可能包含该信息，并且输出文件将写入本地硬盘。  
   
-## <a name="hosting"></a>宿主  
+## <a name="hosting"></a>托管  
  WCF 中的托管功能使应用程序可以按需启动，或者允许在多个应用程序之间共享端口。 WCF 应用程序可以在 Internet Information Services （IIS）中承载，类似于 ASP.NET。  
   
  承载功能不会在网路上公开任何特定信息，也不会在计算机上保留数据。  
@@ -44,7 +44,7 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  身份验证可以导致在相互通信的终结点之间建立安全会话。 会话由 GUID 标识，而 GUID 能够在安全会话的整个生存期保持有效。 下表显示保留的内容和保留位置。  
   
-|数据|存储|  
+|数据|存储区|  
 |----------|-------------|  
 |表示凭据，例如用户名、X.509 证书、Kerberos 令牌和对凭据的引用。|标准 Windows 凭据管理机制，例如 Windows 证书存储区。|  
 |用户成员资格信息，例如用户名和密码。|ASP.NET 成员资格提供程序。|  
@@ -54,7 +54,7 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
 ## <a name="auditing"></a>审核  
  审核功能用于记录身份验证和授权事件的成功和失败。 审核记录包含以下数据：服务 URI、操作 URI 和调用方的标识。  
   
- 审核功能还记录管理员修改消息日志记录的配置（启用或禁用）的时间，因为消息日志记录可能记录标头或正文中特定于应用程序的数据。 对于 [!INCLUDE[wxp](../../../includes/wxp-md.md)]，记录将写入应用程序事件日志。 对于 [!INCLUDE[wv](../../../includes/wv-md.md)] 和 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]，记录将写入安全事件日志。  
+ 审核功能还记录管理员修改消息日志记录的配置（启用或禁用）的时间，因为消息日志记录可能记录标头或正文中特定于应用程序的数据。 对于 [!INCLUDE[wxp](../../../includes/wxp-md.md)]，记录将写入应用程序事件日志。 对于 Windows Vista 和 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]，会在安全事件日志中记录一条记录。  
   
 ## <a name="transactions"></a>事务  
  事务功能为 WCF 应用程序提供事务性服务。  
@@ -149,7 +149,7 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  xmlns： saml = "urn： oasis： names： tc： SAML：1.0： assertion" 的 \- 会删除粗体项（如下所示）：  
   
- \<Assertion  
+ \<断言  
   
  MajorVersion="1"  
   
@@ -163,41 +163,41 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  >  
   
- \<Conditions NotBefore = "[dateTime]" NotOnOrAfter = "[dateTime]" >  
+ \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
- \<AudienceRestrictionCondition >  
+ \<AudienceRestrictionCondition>  
   
- \<Audience > [uri] \</Audience > +  
+ \<受众 > [uri]\</Audience > +  
   
- \</AudienceRestrictionCondition > *  
+ \</AudienceRestrictionCondition>*  
   
  \<DoNotCacheCondition/> *  
   
- < \!--抽象基类型  
+ <\!--抽象基类型  
   
- \<Condition/> *  
+ \<条件/> *  
   
  -->  
   
  \</Conditions >？  
   
- \<Advice >  
+ \<建议 >  
   
- \<AssertionIDReference > [ID] \</AssertionIDReference > *  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>*  
   
- \<Assertion > [assertion] \</Assertion > *  
+ \<断言 > [Assertion]\</Assertion > *  
   
  [any]*  
   
  \</Advice >？  
   
- < \!-抽象基类型  
+ <\!-抽象基类型  
   
- \<Statement/> *  
+ \<语句/> *  
   
- \<SubjectStatement >  
+ \<SubjectStatement>  
   
- \<Subject >  
+ \<主题 >  
   
  `<NameIdentifier`  
   
@@ -211,19 +211,19 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation >  
+ \<SubjectConfirmation>  
   
- \<ConfirmationMethod > [anyUri] \</ConfirmationMethod > +  
+ \<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+  
   
- \<SubjectConfirmationData > [任何] \</SubjectConfirmationData >？  
+ \<SubjectConfirmationData>[any]\</SubjectConfirmationData>?  
   
- \<ds： KeyInfo > ... \</ds： KeyInfo >？  
+ \<ds： KeyInfo > ...\</ds： KeyInfo >？  
   
- \</SubjectConfirmation >？  
+ \</SubjectConfirmation>?  
   
- \</Subject >  
+ \</Subject>  
   
- \</SubjectStatement > *  
+ \</SubjectStatement>*  
   
  -->  
   
@@ -245,7 +245,7 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  `/>?`  
   
- < AuthorityBinding  
+ <AuthorityBinding  
   
  AuthorityKind="[QName]"  
   
@@ -255,13 +255,13 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  />*  
   
- \</AuthenticationStatement > *  
+ \</AuthenticationStatement>*  
   
- \<AttributeStatement >  
+ \<AttributeStatement>  
   
  [Subject]  
   
- \<Attribute  
+ \<特性  
   
  AttributeName="[string]"  
   
@@ -273,31 +273,31 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  \</Attribute > +  
   
- \</AttributeStatement > *  
+ \</AttributeStatement>*  
   
  \<AuthorizationDecisionStatement  
   
  Resource="[uri]"  
   
- 决策 = "[允许&#124;拒绝&#124;不确定]"  
+ Decision="[Permit&#124;Deny&#124;Indeterminate]"  
   
  >  
   
  [Subject]  
   
- \<Action Namespace = "[uri]" > [string] \</Action > +  
+ \<操作命名空间 = "[uri]" > [string]\</Action > +  
   
- \<Evidence >  
+ \<证据 >  
   
- \<AssertionIDReference > [ID] \</AssertionIDReference > +  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>+  
   
- \<Assertion > [assertion] \</Assertion > +  
+ \<断言 > [Assertion]\</Assertion > +  
   
  \</Evidence >？  
   
- \</AuthorizationDecisionStatement > *  
+ \</AuthorizationDecisionStatement>*  
   
- \</Assertion >  
+ \</Assertion>  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>在记录解密/未加密消息时从消息正文中删除的信息  
  如前所述，WCF 从消息头中删除已记录的解密/未加密消息的密钥和已知的潜在个人信息。 另外，WCF 将从以下列表中的正文元素和操作的消息正文中删除密钥和已知的潜在个人信息，其中描述了密钥交换中涉及的安全消息。  
@@ -401,7 +401,7 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  Web 服务描述语言 (WSDL) 包含端口的定义。 每个端口都具有一个终结点地址和一个表示应用程序所使用的服务的绑定。 可以使用配置禁用公开 WSDL。 计算机上不会保留任何信息。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Windows Communication Foundation](index.md)
 - [Security](./feature-details/security.md)

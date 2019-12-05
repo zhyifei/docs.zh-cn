@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - modules, Visual Basic
 ms.assetid: 370bfc90-e8f2-4942-bdec-9897ce605d31
-ms.openlocfilehash: 48092fd39128f0068a27029541216c9dd9ba9d97
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6869d981cdca20b915a588969134fc50e8d1ff47
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344183"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838242"
 ---
 # <a name="modules-visual-basic"></a>模块 (Visual Basic)
 
@@ -33,4 +33,3 @@ Visual Basic 提供了多个模块，使你能够在代码中简化常见任务�
 ## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 语言参考](../../visual-basic/language-reference/index.md)
-- [Visual Basic](../../visual-basic/index.md)

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: a99b9f3cb8c008f72eaac7ee1b8790d63c547a8d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8e1e8dc9a1410d05c19e4dd1bccb30c65d7c5e66
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453966"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837280"
 ---
 # <a name="xaml-services"></a>XAML 服务
 本主题介绍称为 .NET Framework XAML 服务的技术集的功能。 所述的大部分服务和 Api 都位于程序集 system.exception 中，该程序集是随 .NET Framework 4 组 .NET core 程序集引入的程序集。 服务包括读取器和编写器、架构类和架构支持、工厂、类的特性化、XAML 语言内部支持以及其他 XAML 语言功能。  
   
 ## <a name="about-this-documentation"></a>关于本文档  
- .NET Framework XAML 服务的概念文档假设你已掌握了 XAML 语言的经验，并且它可能适用于特定框架（例如 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 或 Windows Workflow Foundation）或特定技术功能区域，例如，<xref:Microsoft.Build.Framework.XamlTypes>中的生成自定义功能。 本文档不会尝试将 XAML 基础知识解释为标记语言、XAML 语法术语或其他介绍性材料。 相反，本文档重点介绍如何专门使用在 system.exception 程序集库中启用 .NET Framework XAML 服务。 其中的大多数 Api 适用于 XAML 语言集成和扩展性。 这可能包括以下任何内容：  
+ .NET Framework XAML 服务的概念文档假设你已掌握了 XAML 语言的经验，并且它可能适用于特定框架（例如 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 或 Windows Workflow Foundation）或特定技术功能区域（例如 <xref:Microsoft.Build.Framework.XamlTypes>中的生成自定义功能）。 本文档不会尝试将 XAML 基础知识解释为标记语言、XAML 语法术语或其他介绍性材料。 相反，本文档重点介绍如何专门使用在 system.exception 程序集库中启用 .NET Framework XAML 服务。 其中的大多数 Api 适用于 XAML 语言集成和扩展性。 这可能包括以下任何内容：  
   
 - 扩展基 XAML 读取器或 XAML 编写器的功能（直接处理 XAML 节点流; 派生自己的 XAML 读取器或 XAML 编写器）。  
   
@@ -27,16 +27,16 @@ ms.locfileid: "73453966"
   
 - 编写 XAML 值转换器（标记扩展; 自定义类型的类型转换器）。  
   
-- 定义自定义 XAML 架构上下文（对后备类型源使用替代的程序集加载方法; 使用已知类型的查找技术而不是始终反射程序集; 使用已加载的程序集概念，这些概念不使用 CLR `AppDomain` 及其关联的安全模式）。  
+- 定义自定义 XAML 架构上下文（使用备用的程序集加载技术实现类型源）; 使用已知类型的查找技术而不是始终反射程序集; 使用已加载的程序集概念，不使用 CLR `AppDomain` 及其关联的安全模型）。  
   
 - 扩展基 XAML 类型系统。  
   
 - 使用 `Lookup` 或 `Invoker` 技术来影响 XAML 类型系统和如何计算类型 backings。  
   
- 如果要在 XAML 上查找作为一种语言的介绍性资料，可以尝试[XAML 概述（WPF）](../../desktop-wpf/fundamentals/xaml.md)。 本主题讨论了 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 的新用户的 XAML，同时还讨论了如何使用 XAML 标记和 XAML 语言功能。 另一个有用文档是[XAML 语言规范](https://go.microsoft.com/fwlink/?LinkId=114525)中的介绍性材料。  
+ 如果要在 XAML 上查找作为一种语言的介绍性资料，可以尝试[XAML 概述（WPF）](../../desktop-wpf/fundamentals/xaml.md)。 本主题讨论了 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 的新用户的 XAML，同时还讨论了如何使用 XAML 标记和 XAML 语言功能。 另一个有用文档是[XAML 语言规范](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))中的介绍性材料。  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET 体系结构中 .NET Framework XAML 服务和 system.exception  
- 在早期版本的 Microsoft .NET Framework 中，对 XAML 语言功能的支持是由基于 Microsoft .NET Framework （[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Windows Workflow Foundation 和 Windows Communication Foundation （WCF））构建的框架实现的，因此根据所使用的特定框架，其行为和使用的 API 不同。 这包括 XAML 分析器及其对象关系图创建机制、XAML 语言内部函数、序列化支持等。  
+ 在早期版本的 Microsoft .NET Framework 中，对 XAML 语言功能的支持是由基于 Microsoft .NET Framework （[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Windows Workflow Foundation 和 Windows Communication Foundation （WCF））构建的框架实现的，因此，它的行为和使用的 API 取决于所使用的特定框架。 这包括 XAML 分析器及其对象关系图创建机制、XAML 语言内部函数、序列化支持等。  
   
  在 .NET Framework 4 中，.NET Framework XAML 服务和 System.object 程序集定义支持 XAML 语言功能所需的大部分内容。 这包括 XAML 读取器和 XAML 编写器的基类。 添加到任何特定于框架的 XAML 实现中的 .NET Framework XAML 服务的最重要功能是适用于 XAML 的类型系统表示形式。 类型系统表示形式以面向对象的方式，以面向对象的方式来表示 XAML 功能，而无需依赖于框架的特定功能。  
   

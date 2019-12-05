@@ -2,12 +2,12 @@
 title: WCF 服务主机 (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: c855fe7cc804fac14348990b7a6f5f84a0956b0c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: b8fb32111a80178f5eb92411eb4990decb645bb6
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802396"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837735"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF 服务主机 (WcfSvcHost.exe)
 
@@ -113,7 +113,7 @@ WCF 服务主机可以承载以下 WCF 服务库项目类型： WCF 服务库、
 
 若要使没有管理员权限的用户能够开发 WCF 服务，请在安装 Visual Studio 的过程中为命名空间 "http://+:8731/Design_Time_Addresses" 创建 ACL （访问控制列表）。 该 ACL 被设置为“(UI)”，这将包括登录到此计算机的所有交互用户。 管理员可以在此 ACL 中添加或删除用户，或者打开其他端口。此 ACL 使用户可以使用 WCF 服务自动主机（Wcfsvchost.exe），而无需授予其管理员权限。
 
-可以使用提升的管理员帐户在 [!INCLUDE[wv](../../../includes/wv-md.md)] 中通过 netsh.exe 工具来修改访问权限。 下面是使用 netsh.exe 的示例。
+你可以使用提升的管理员帐户，使用 Windows Vista 中的 netsh 工具来修改访问权限。 下面是使用 netsh.exe 的示例。
 
 ```console
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>

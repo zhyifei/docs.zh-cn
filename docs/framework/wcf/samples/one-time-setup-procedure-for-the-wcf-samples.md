@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 示例的一次性安装过程
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 7dbc4a1b5235c0cb6aa154379358c7761bc4ab1d
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: cfe50cb2bb017292b69f578bfff2bf84bf6ba8f0
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141852"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837826"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 示例的一次性安装过程
 
@@ -16,7 +16,7 @@ ms.locfileid: "74141852"
 **ServiceModelSamples**虚拟目录用于生成和运行使用 IIS 承载的服务的所有示例。 这是运行示例所需的唯一虚拟目录。 绑定示例将替换以前在此虚拟目录部署的所有服务；只有最近生成的示例将在此虚拟目录中部署并可用。
 
 > [!NOTE]
-> 必须在本地管理员帐户下运行所有命令。 如果使用的是 Windows 7、[!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] 或 Windows Server 2008 R2，则还必须用提升的特权运行命令提示。 为此，请右键单击 "命令提示符" 图标，然后单击 "以**管理员身份运行**"。 本主题中的所有命令都必须在具有合适路径设置的命令提示中运行。  确保这一点的最简单方法是使用 Visual Studio 命令提示。 若要打开此提示，请单击 "**开始**"，选择 "**所有程序**"，向下滚动到 " **visual studio 2010**"，选择**Visual Studio Tools**，右键单击 " **visual studio 命令提示符（2010）** "，然后单击 "以**管理员身份运行"。** . 如果安装了 Visual Studio 学习版，但此命令提示不可用，则必须向系统路径添加“C:\Windows\Microsoft.Net\Framework\v4.0”。
+> 必须在本地管理员帐户下运行所有命令。 如果使用的是 Windows 7、[!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] 或 Windows Server 2008 R2，则还必须用提升的特权运行命令提示。 为此，请右键单击 "命令提示符" 图标，然后单击 "以**管理员身份运行**"。 本主题中的所有命令都必须在具有合适路径设置的命令提示中运行。  确保这一点的最简单方法是使用 Visual Studio 命令提示。 若要打开此提示，请单击 "**开始**"，选择 "**所有程序**"，向下滚动到 " **visual studio 2010**"，选择**Visual Studio Tools**，右键单击 " **visual studio 命令提示符（2010）** "，然后单击 "以**管理员身份运行**"。 如果安装了 Visual Studio 学习版，但此命令提示不可用，则必须向系统路径添加“C:\Windows\Microsoft.Net\Framework\v4.0”。
 
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>WCF 示例的一次性安装过程
 
@@ -63,7 +63,7 @@ ms.locfileid: "74141852"
     > [!NOTE]
     > 如果未完成此步骤，IIS 承载的所有示例都将在生成时失败。 确保正确设置权限，或者同时以管理员身份运行 SDK 命令提示和 Visual Studio 命令提示 (2012)。
 
-11. 在计算机上创建一个 C:\logs 目录；某些示例可能需要此目录。 确保向合适的帐户授予了对此文件夹的写访问权限。 对于 Windows 7、[!INCLUDE[wv](../../../../includes/wv-md.md)]和 Windows Server 2008 R2，此帐户为**Network Service**。 对于 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]，该帐户为 NT Authority\Network Service。 对于 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，该帐户为 ASPNET。
+11. 在计算机上创建一个 C:\logs 目录；某些示例可能需要此目录。 确保向合适的帐户授予了对此文件夹的写访问权限。 对于 Windows 7、Windows Vista 和 Windows Server 2008 R2，此帐户为**Network Service**。 对于 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]，该帐户为 NT Authority\Network Service。 对于 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，该帐户为 ASPNET。
 
 12. 运行 Setupcerttool.bat 文件。 此文件位于 \<InstallPath > \ WF_WCF_Samples \WCF\Setup\ 文件夹中。  此脚本将执行以下任务：
 
@@ -85,4 +85,4 @@ ms.locfileid: "74141852"
     > [!NOTE]
     > 确保在运行需要消息队列的任何示例之前启动 MSMQ 服务。
 
-15. 有些示例需要使用证书。 请参阅[Internet Information Services （IIS）服务器证书安装说明](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)。
+15. 有些示例需要使用证书。 请参阅 [Internet Information Services (IIS) 服务器证书安装说明](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)。
