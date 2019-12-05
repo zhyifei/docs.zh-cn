@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: ffcb288995975433bdd915362fccca03f345b5f5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c651f5c02bd49acc593c585395bc52e9ee64f870
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281654"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714499"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新增功能
 
@@ -2116,13 +2116,13 @@ ASP.NET 4.5 和 4.5.1 为 Web 窗体、WebSocket 支持、异步处理程序、�
 
 <a name="tailored" />
 
-### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
+### <a name="net-for-windows-8x-store-apps"></a>适用于 Windows 8.x 应用商店应用的 .NET
 
-Windows 8.x 应用商店应用专为特定外形规格而设计，并利用 Windows 操作系统的强大技术支持。 可以使用一部分 .NET Framework 4.5 或 4.5.1 生成用 C# 或 Visual Basic 编写的 Windows 相关 Windows 8.x 应用商店应用。 该子集称为 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，在 Windows 开发人员中心的[概述](https://go.microsoft.com/fwlink/?LinkId=228491)中进行讨论。
+Windows 8.x 应用商店应用专为特定外形规格而设计，并利用 Windows 操作系统的强大技术支持。 可以使用一部分 .NET Framework 4.5 或 4.5.1 生成用 C# 或 Visual Basic 编写的 Windows 相关 Windows 8.x 应用商店应用。 这部分称为适用于 Windows 8.x 应用商店应用的 .NET。有关[概述](https://go.microsoft.com/fwlink/?LinkId=228491)，请访问 Windows 开发人员中心。
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>可移植类库<a name="portable" />
 
-利用 Visual Studio 2012（及更高版本）中的可移植类库项目，可以编写和生成在多个 .NET Framework 平台上运行的托管程序集。 使用可移植类库项目，你可以选择要作为目标的平台（如 Windows Phone 和[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]）。 项目中的可用类型和成员自动限制为这些平台中的公共类型和成员。 有关详细信息，请参阅[可移植类库](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)。
+利用 Visual Studio 2012（及更高版本）中的可移植类库项目，可以编写和生成在多个 .NET Framework 平台上运行的托管程序集。 使用可移植类库项目，可以选择目标平台（如 Windows Phone 和适用于 Windows 8.x 应用商店应用的 .NET）。 项目中的可用类型和成员自动限制为这些平台中的公共类型和成员。 有关详细信息，请参阅[可移植类库](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)。
 
 ## <a name="see-also"></a>请参阅
 

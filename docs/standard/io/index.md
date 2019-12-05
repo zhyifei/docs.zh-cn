@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 889271ca41fb84b44757adfffc61ffbfbc0a03a8
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: d59ff7f66076fc56ebb27841105fad07a7c7fee1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204796"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716266"
 ---
 # <a name="file-and-stream-io"></a>文件和流 I/O
 
@@ -143,11 +143,11 @@ ms.locfileid: "74204796"
 
 ## <a name="io-operations-in-windows-store-apps"></a>Windows 应用商店应用程序中的 I/O 操作
 
-[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 包含许多用于对流进行读取和写入操作的类型；但是，该集不包含所有的 .NET Framework I/O 类型。
+适用于 Windows 8.x 应用商店应用的 .NET 包含许多用于对流进行读取和写入操作的类型；但是，该集不包含所有的 .NET Framework I/O 类型。
 
 在 Windows 8.x 应用商店应用中使用 I/O 操作时，要注意一些重要差异：
 
-- 专门与文件操作相关的类型（如 <xref:System.IO.File>、<xref:System.IO.FileInfo>、<xref:System.IO.Directory> 和 <xref:System.IO.DirectoryInfo>）未包含在[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 中。 请改用 Windows 运行时的 <xref:Windows.Storage?displayProperty=nameWithType> 命名空间中的类型（如 <xref:Windows.Storage.StorageFile> 和 <xref:Windows.Storage.StorageFolder>）。
+- 专门与文件操作相关的类型（如 <xref:System.IO.File>、<xref:System.IO.FileInfo>、<xref:System.IO.Directory> 和 <xref:System.IO.DirectoryInfo>）未包含在适用于 Windows 8.x 应用商店应用的 .NET 中。 请改用 Windows 运行时的 <xref:Windows.Storage?displayProperty=nameWithType> 命名空间中的类型（如 <xref:Windows.Storage.StorageFile> 和 <xref:Windows.Storage.StorageFolder>）。
 
 - 独立存储不可用；请改用[应用程序数据](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。
 

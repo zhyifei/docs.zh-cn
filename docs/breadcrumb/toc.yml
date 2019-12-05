@@ -108,30 +108,69 @@
             - name: .NET 中的序列化
               tocHref: /dotnet/standard/serialization/
               topicHref: /dotnet/standard/serialization/index
-            - name: 托管线程处理
+            - name: 托管线程
               tocHref: /dotnet/standard/threading/
               topicHref: /dotnet/standard/threading/index
         - name: .NET Core 指南
           tocHref: /dotnet/core/
           topicHref: /dotnet/core/index
           items:
-            - name: 重大更改
-              tocHref: /dotnet/core/compatibility/
-              topicHref: /dotnet/core/compatibility/index
-            - name: 运行时配置
-              tocHref: /dotnet/core/run-time-config/
-              topicHref: /dotnet/core/run-time-config/index
-            - name: 工具
-              tocHref: /dotnet/core/tools/
-              topicHref: /dotnet/core/tools/index
             - name: 安装指南
               tocHref: /dotnet/core/install/
               topicHref: /dotnet/core/install/index
+            - name: 新增功能
+              tocHref: /dotnet/core/whats-new/
+              topicHref: /dotnet/core/whats-new/dotnet-core-3-0
+            - name: 重大更改
+              tocHref: /dotnet/core/compatibility/
+              topicHref: /dotnet/core/compatibility/index
+            - name: 教程
+              tocHref: /dotnet/core/tutorials/
+              topicHref: /dotnet/core/tutorials/index
+            - name: 运行时配置
+              tocHref: /dotnet/core/run-time-config/
+              topicHref: /dotnet/core/run-time-config/index
+            - name: 本机互操作性
+              tocHref: /dotnet/core/native-interop/
+              topicHref: /dotnet/core/native-interop/expose-components-to-com
+            - name: 迁移
+              tocHref: /dotnet/core/migration/
+              topicHref: /dotnet/core/migration/index
+            - name: 部署
+              tocHref: /dotnet/core/deploying/
+              topicHref: /dotnet/core/deploying/index
+            - name: Docker
+              tocHref: /dotnet/core/docker/
+              topicHref: /dotnet/core/docker/introduction
+            - name: 诊断工具
+              tocHref: /dotnet/core/diagnostics/
+              topicHref: /dotnet/core/diagnostics/index
+            - name: 单元测试
+              tocHref: /dotnet/core/testing/
+              topicHref: /dotnet/core/testing/index
+            - name: 版本管理
+              tocHref: /dotnet/core/versions/
+              topicHref: /dotnet/core/versions/index
+            - name: 工具
+              tocHref: /dotnet/core/tools/
+              topicHref: /dotnet/core/tools/index
+            - name: 其他工具
+              tocHref: /dotnet/core/additional-tools/
+              topicHref: /dotnet/core/additional-tools/index
+            - name: 移植
+              tocHref: /dotnet/core/porting/
+              topicHref: /dotnet/core/porting/index
+            - name: 依赖项加载
+              tocHref: /dotnet/core/dependency-loading/
+              topicHref: /dotnet/core/dependency-loading/overview
+            - name: 构建 .NET Core
+              tocHref: /dotnet/core/build/
+              topicHref: /dotnet/core/build/index
         - name: .NET Framework
           tocHref: /dotnet/framework/
           topicHref: /dotnet/framework/index
           items:
-            - name: 外接程序和扩展性
+            - name: 加载项和扩展性
               tocHref: /dotnet/framework/add-ins/
               topicHref: /dotnet/framework/add-ins/index
             - name: 其他 API
@@ -199,7 +238,7 @@
                       tocHref: /dotnet/framework/data/adonet/ef/
                       topicHref: /dotnet/framework/data/adonet/ef/index
                       items:
-                        - name: Entity SQL 语言参考
+                        - name: 实体 SQL 语言参考
                           tocHref: /dotnet/framework/data/adonet/ef/language-reference/
                           topicHref: /dotnet/framework/data/adonet/ef/language-reference/index
                     - name: SQL Server 和 ADO.NET
@@ -221,10 +260,10 @@
             - name: 部署 .NET Framework
               tocHref: /dotnet/framework/deployment/
               topicHref: /dotnet/framework/deployment/index
-            - name: 使用 Docker 部署 .NET Framework 应用程序
+            - name: 通过 Docker 部署 .NET Framework 应用
               tocHref: /dotnet/framework/docker/
               topicHref: /dotnet/framework/docker/index
-            - name: 开始操作
+            - name: 入门
               tocHref: /dotnet/framework/get-started/
               topicHref: /dotnet/framework/get-started/index
             - name: 安装指南
@@ -239,7 +278,7 @@
             - name: 迁移指南
               tocHref: /dotnet/framework/migration-guide/
               topicHref: /dotnet/framework/migration-guide/index
-            - name: 使用 .NET Native 编译引用
+            - name: 使用 .NET Native 编译应用
               tocHref: /dotnet/framework/net-native/
               topicHref: /dotnet/framework/net-native/index
             - name: .NET Framework 中的网络编程
@@ -251,7 +290,7 @@
             - name: .NET Framework 中的动态编程
               tocHref: /dotnet/framework/reflection-and-codedom/
               topicHref: /dotnet/framework/reflection-and-codedom/index
-            - name: 桌面应用程序中的资源
+            - name: 桌面应用中的资源
               tocHref: /dotnet/framework/resources/
               topicHref: /dotnet/framework/resources/index
             - name: .NET Framework 中的安全性
@@ -270,7 +309,7 @@
                 - name: ALink API（非托管 API 参考）
                   tocHref: /dotnet/framework/unmanaged-api/alink/
                   topicHref: /dotnet/framework/unmanaged-api/alink/index
-                - name: Authenticode（非托管 API 参考）
+                - name: 验证码（非托管 API 参考）
                   tocHref: /dotnet/framework/unmanaged-api/authenticode/
                   topicHref: /dotnet/framework/unmanaged-api/authenticode/index
                 - name: 调试（非托管 API 参考）
@@ -359,7 +398,7 @@
               tocHref: /dotnet/framework/wpf/
               topicHref: /dotnet/framework/wpf/index
               items:
-                - name: 高级 (Windows Presentation Foundation)
+                - name: 高级
                   tocHref: /dotnet/framework/wpf/advanced/
                   topicHref: /dotnet/framework/wpf/advanced/index
                 - name: 应用程序开发
@@ -560,7 +599,7 @@
             - name: 入门
               tocHref: /dotnet/visual-basic/getting-started/
               topicHref: /dotnet/visual-basic/getting-started/index
-            - name: 开发应用
+            - name: 开发应用程序
               tocHref: /dotnet/visual-basic/developing-apps/
               topicHref: /dotnet/visual-basic/developing-apps/index
             - name: 编程概念
@@ -598,7 +637,7 @@
                 - name: 集合初始值设定项
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/collection-initializers/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/collection-initializers/index
-                - name: 常量和枚举
+                - name: 常数和枚举
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/constants-enums/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/constants-enums/index
                 - name: 控制流

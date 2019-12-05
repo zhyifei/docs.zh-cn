@@ -47,21 +47,21 @@
   items:
     - name: 'C# 和 Visual Studio Code 入门'
       href: tutorials/with-visual-studio-code.md
-    - name: '使用 Visual Studio 2017 生成 C# .NET Core Hello World 应用'
+    - name: '在 Visual Studio 中生成 C# Hello World 应用'
       href: tutorials/with-visual-studio.md
-    - name: 使用 Visual Studio 2017 生成 Visual Basic .NET Core Hello World 应用
+    - name: 在 Visual Studio 中生成 Visual Basic Hello World 应用
       href: tutorials/vb-with-visual-studio.md
-    - name: '使用 Visual Studio 2017 调试 C# 或Visual Basic .NET Core Hello World 应用程序'
+    - name: 使用 Visual Studio 调试应用程序
       href: tutorials/debugging-with-visual-studio.md
-    - name: 使用 Visual Studio 2017 发布 Hello World 应用程序
+    - name: 使用 Visual Studio 发布应用程序
       href: tutorials/publishing-with-visual-studio.md
-    - name: '在 Visual Studio 2017 中使用 C# 和 .NET Core 生成 .NET Standard 库'
+    - name: '在 Visual Studio 中使用 C# 构建 .NET Standard 库'
       href: tutorials/library-with-visual-studio.md
-    - name: 在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 生成 .NET Standard 库
+    - name: 在 Visual Studio 中使用 Visual Basic 构建 .NET Standard 库
       href: tutorials/vb-library-with-visual-studio.md
-    - name: 在 Visual Studio 2017 中使用 .NET Core 测试 .NET Standard 库
+    - name: 在 Visual Studio 中测试 .NET Standard 库
       href: tutorials/testing-library-with-visual-studio.md
-    - name: 在 Visual Studio 2017 中使用 .NET Standard 库
+    - name: 在 Visual Studio 中使用 .NET Standard 库
       href: tutorials/consuming-library-with-visual-studio.md
 - name: .NET Core 的新增功能
   items:
@@ -198,7 +198,7 @@
       href: testing/selective-unit-tests.md
     - name: 对已发布的输出进行单元测试
       href: testing/unit-testing-published-output.md
-    - name: 使用 Visual Studio 对 .NET Core 项目进行 Live Unit Testing
+    - name: 使用 Visual Studio 对 .NET Core 项目进行实时单元测试
       href: /visualstudio/test/live-unit-testing-start
 - name: 持续集成
   href: tools/using-ci-with-cli.md
@@ -235,7 +235,7 @@
       href: tools/extensibility.md
     - name: 自定义模板
       href: tools/custom-templates.md
-    - name: 启用 tab 自动补全
+    - name: 启用 Tab 自动补全
       href: tools/enable-tab-autocomplete.md
     - name: 遥测
       href: tools/telemetry.md
