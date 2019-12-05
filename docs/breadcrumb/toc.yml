@@ -293,9 +293,6 @@
             - name: 桌面应用中的资源
               tocHref: /dotnet/framework/resources/
               topicHref: /dotnet/framework/resources/index
-            - name: .NET Framework 中的安全性
-              tocHref: /dotnet/framework/security/
-              topicHref: /dotnet/framework/security/index
             - name: .NET Framework 工具
               tocHref: /dotnet/framework/tools/
               topicHref: /dotnet/framework/tools/index
