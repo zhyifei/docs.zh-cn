@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4629139a7c89c0808e97bbe64b7d02441aec1dea
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: dd7e045bf54b09fe2a229efefc0218eb3f2f731a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714491"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802747"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>.NET Framework 对 Windows 应用商店应用程序和 Windows 运行时的支持情况
 
@@ -112,7 +112,7 @@ Windows 运行时和 .NET Framework 文档集是独立的。 如果按 F1 显示
 
 ### <a name="other-differences"></a>其他差异
 
-在少数情况下，.NET Framework 类型会显示在代码中，而不是 Windows 运行时类型需要对你的操作。 例如，<xref:Windows.Foundation.Uri?displayProperty=nameWithType> 类在 .NET Framework 代码中显示为 <xref:System.Uri?displayProperty=nameWithType>。 <xref:System.Uri?displayProperty=nameWithType> 允许使用相对 URI，但 <xref:Windows.Foundation.Uri?displayProperty=nameWithType> 需要绝对 URI。 因此，当您将 URI 传递到 Windows 运行时方法时，必须确保它是绝对的。 请参阅[将 URI 传递到 Windows 运行时](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)。
+在少数情况下，.NET Framework 类型会显示在代码中，而不是 Windows 运行时类型需要对你的操作。 例如，<xref:Windows.Foundation.Uri?displayProperty=nameWithType> 类在 .NET Framework 代码中显示为 <xref:System.Uri?displayProperty=nameWithType>。 <xref:System.Uri?displayProperty=nameWithType> 允许使用相对 URI，但 <xref:Windows.Foundation.Uri?displayProperty=nameWithType> 需要绝对 URI。 因此，当您将 URI 传递到 Windows 运行时方法时，必须确保它是绝对的。 请参阅 [将 URI 传递给 Windows 运行时](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)。
 
 <a name="WindowsRuntimeComponents"></a>
 
@@ -137,7 +137,7 @@ Windows 运行时和 .NET Framework 文档集是独立的。 如果按 F1 显示
 - 组件中的类型可以派生自 Windows 运行时类型。 控件可以从 <xref:Windows.UI.Xaml.Controls.Primitives> 命名空间中的基元控件类型或更多已完成的控件（如 <xref:Windows.UI.Xaml.Controls.Button>）派生。
 
   > [!IMPORTANT]
-  > 从 [!INCLUDE[win8](../../../includes/win8-md.md)] 和 .NET Framework 4.5 开始，托管 Windows 运行时组件中的所有公共类型都必须是密封的。 其他 Windows 运行时组件中的类型不能从它们派生。 如果要在组件中提供多态行为，可以创建一个接口并在多态类型中实现它。
+  > 从 Windows 8 和 .NET Framework 4.5 开始，托管 Windows 运行时组件中的所有公共类型都必须是密封的。 其他 Windows 运行时组件中的类型不能从它们派生。 如果要在组件中提供多态行为，可以创建一个接口并在多态类型中实现它。
 
 - 组件中所有公共类型的参数和返回类型都必须是 Windows 运行时类型（包括组件所定义的 Windows 运行时类型）。
 
