@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: c651f5c02bd49acc593c585395bc52e9ee64f870
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 82a2c1780c6e0e1d94a206b9b959d8e1944fd0a9
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714499"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802325"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新增功能
 
@@ -800,7 +800,7 @@ WCF 包含大量代码更改，消除了争用条件，从而提升了序列化�
 
 - [调试改进](#Debug462)
 
-有关 .NET Framework 4.6.2 中新增 API 的列表，请参阅 GitHub 上的 [.NET Framework 4.6.2 API 更改](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md)。 有关 .NET Framework 4.6.2 中功能改进和 bug 修复的列表，请参阅 GitHub 上的 [.NET Framework 4.6.2 更改列表](https://go.microsoft.com/fwlink/?LinkId=708778)。  有关其他信息，请参阅 .NET 博客中的 [Announcing .NET Framework 4.6.2](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/)（宣布 .NET Framework 4.6.2）。
+有关 .NET Framework 4.6.2 中新增 API 的列表，请参阅 GitHub 上的 [.NET Framework 4.6.2 API 更改](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md)。 有关 .NET Framework 4.6.2 中功能改进和 bug 修复的列表，请参阅 GitHub 上的 [.NET Framework 4.6.2 更改列表](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-changes.md)。 有关其他信息，请参阅 .NET 博客中的 [Announcing .NET Framework 4.6.2](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/)（宣布 .NET Framework 4.6.2）。
 
 <a name="ASPNET462" />
 
@@ -1196,7 +1196,7 @@ WCF 包含可以在客户端应用程序上设置以确保它们始终连接到�
 
 **在重新托管的 WF 设计器中支持 C# 表达式和 IntelliSense**
 
-自 .NET Framework 4.5 起，WF 支持在 Visual Studio 设计器和代码工作流中使用 C# 表达式。 重新托管的工作流设计器是 WF 的一项重要功能，允许工作流设计器位于 Visual Studio 外部的应用程序中（如 WPF 中）。  Windows Workflow Foundation 提供在重新托管的工作流设计器中支持 C# 表达式和 IntelliSense 的功能。 有关详细信息，请参阅 [Windows Workflow Foundation 博客](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409)。
+自 .NET Framework 4.5 起，WF 支持在 Visual Studio 设计器和代码工作流中使用 C# 表达式。 重新托管的工作流设计器是 WF 的一项重要功能，允许工作流设计器位于 Visual Studio 外部的应用程序中（如 WPF 中）。  Windows Workflow Foundation 提供在重新托管的工作流设计器中支持 C# 表达式和 IntelliSense 的功能。 有关详细信息，请参阅 [Windows Workflow Foundation 博客](https://blogs.msdn.microsoft.com/workflowteam/2016/07/20/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer/)。
 
 `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` 在低于 .NET Framework 4.6.2 的 .NET Framework 版本中，当客户通过 Visual Studio 重新生成工作流项目时，WF 设计器 IntelliSense 会中断。 虽然项目生成成功，但在设计器中找不到该工作流类型，并且来自 IntelliSense 的缺少工作流类型的警告会出现在**错误列表**窗口中。 .NET Framework 4.6.2 解决了这个问题，并让 IntelliSense 可供使用。
 
@@ -1262,11 +1262,11 @@ Windows 现在提供将现有 Windows 桌面应用（包括 WPF 和 Windows 窗�
 
 若要详细了解 .NET Framework 4.6.1，请参阅以下主题：
 
-- [.NET Framework 4.6.1 更改列表](https://go.microsoft.com/fwlink/?LinkId=622964)
+- [.NET Framework 4.6.1 更改列表](https://github.com/Microsoft/dotnet/blob/master/releases/net461/dotnet461-changes.md)
 
 - [4.6.1 中的应用程序兼容性](../migration-guide/application-compatibility.md)
 
-- [.NET Framework API 差异](https://go.microsoft.com/fwlink/?LinkId=622989)（在 GitHub 上）
+- [.NET Framework API 差异](https://github.com/Microsoft/dotnet/blob/master/releases/net461/dotnet461-api-changes.md)（在 GitHub 上）
 
 <a name="Crypto" />
 
@@ -1324,7 +1324,7 @@ WPF 中的拼写检查器在 Windows 8.1 和更高版本上进行了更新，可
 
 - 当前线程区域性。
 
-有关 WPF 中的语言支持的其他信息，请参阅[有关 .NET Framework 4.6.1 功能的 WPF 博客文章](https://go.microsoft.com/fwlink/?LinkID=691819)。
+有关 WPF 中的语言支持的其他信息，请参阅[有关 .NET Framework 4.6.1 功能的 WPF 博客文章](https://devblogs.microsoft.com/wpf/wpf-in-net-4-6-1/)。
 
 **针对每用户自定义词典的附加支持**
 
@@ -1349,7 +1349,7 @@ WPF 中的拼写检查器在 Windows 8.1 和更高版本上进行了更新，可
 
 **DirectX 扩展**
 
-WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，它提供 <xref:System.Windows.Interop.D3DImage> 的新实现，从而使你可以轻松地与 DX10 和 Dx11 内容进行互操作。 此包的代码已开放源代码，在 [GitHub 上](https://github.com/Microsoft/WPFDXInterop)提供。
+WPF 包括一个 [NuGet 包](https://www.nuget.org/packages/Microsoft.Wpf.Interop.DirectX-x86/)，它提供 <xref:System.Windows.Interop.D3DImage> 的新实现，从而使你可以轻松地与 DX10 和 Dx11 内容进行互操作。 此包的代码已开放源代码，在 [GitHub 上](https://github.com/Microsoft/WPFDXInterop)提供。
 
 <a name="WWF461" />
 
@@ -1755,7 +1755,7 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
 - **开放源代码 .NET Framework 包**
 
-  .NET Core 包（如不可变集合）、[SIMD API](https://go.microsoft.com/fwlink/?LinkID=518639) 以及网络 API（如在 <xref:System.Net.Http> 命名空间中找到的网络 API）现在都可在 [GitHub](https://github.com/) 上用作开放源代码程序包。 若要访问代码，请参阅 [GitHub 上的 CoreFx](https://github.com/dotnet/corefx)。 有关详细信息以及如何参与这些包，请参阅 [.NET Core 和开放源代码](../get-started/net-core-and-open-source.md)、[GitHub 上的 .NET 主页](https://github.com/dotnet/home)。
+  .NET Core 包（如不可变集合）、[SIMD API](https://www.nuget.org/packages/Microsoft.Bcl.Simd) 以及网络 API（如在 <xref:System.Net.Http> 命名空间中找到的网络 API）现在都可在 [GitHub](https://github.com/) 上用作开放源代码程序包。 若要访问代码，请参阅 [GitHub 上的 CoreFx](https://github.com/dotnet/corefx)。 有关详细信息以及如何参与这些包，请参阅 [.NET Core 和开放源代码](../get-started/net-core-and-open-source.md)、[GitHub 上的 .NET 主页](https://github.com/dotnet/home)。
 
 <a name="v452" />
 
@@ -1892,7 +1892,7 @@ Windows 窗体的改进包括：
 
 - 异步识别调试。 为了简化在 Visual Studio 2013 中调试异步应用程序，调用堆栈隐藏了编译器提供的基础结构代码以支持异步编程，并链入了逻辑父框架，以便你可以更加明确逻辑程序的执行情况。 “任务”窗口将替换“并行任务”窗口，并显示与特定断点相关的任务，还会显示应用程序中当前处于活动状态或计划状态的任何其他任务。 可以在 [.NET Framework 4.5.1 公告](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/)的“异步识别调试”一节中了解此功能。
 
-- 改进对 Windows 运行时组件的异常支持。 在 [!INCLUDE[win81](../../../includes/win81-md.md)] 中，Windows 应用商店应用产生的异常保留了有关导致异常的错误的信息（甚至可跨语言使用）。 可以在 [.NET Framework 4.5.1 公告](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/)的“Windows 应用商店应用开发”一节中了解此功能。
+- 改进对 Windows 运行时组件的异常支持。 在 Windows 8.1 中，Windows 应用商店应用抛出的异常保留了导致异常抛出的错误的相关信息（甚至可跨语言）。 可以在 [.NET Framework 4.5.1 公告](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/)的“Windows 应用商店应用开发”一节中了解此功能。
 
 自 Visual Studio 2013 起，可以使用[托管配置文件引导式优化工具 (Mpgo.exe)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) 来优化 Windows 8.x 应用商店应用和桌面应用程序。
 
@@ -1926,9 +1926,9 @@ Windows 窗体的改进包括：
 
 - 可以通过 <xref:System.Reflection.Context.CustomReflectionContext> 类自定义用于重写默认反射行为的反射上下文。
 
-- 支持应用程序的国际域名 (IDNA) 标准的 2008 版（在 <xref:System.Globalization.IdnMapping?displayProperty=nameWithType> 上使用 [!INCLUDE[win8](../../../includes/win8-md.md)] 类时）。
+- 在 Windows 8 上使用 <xref:System.Globalization.IdnMapping?displayProperty=nameWithType> 类时支持应用程序国际化域名 (IDNA) 标准的 2008 版。
 
-- 可以在 [!INCLUDE[win8](../../../includes/win8-md.md)] 使用 .NET Framework 时，将字符串比较委托给操作系统（这将实现 Unicode 6.0）。 在其他平台上运行时，.NET Framework 包括其自己的字符串比较数据，这将实现 Unicode 5.x。 请参阅 <xref:System.String> 类和 <xref:System.Globalization.SortVersion> 类的“备注”部分。
+- 在 Windows 8 上使用 .NET Framework 时，可以将字符串比较委托给操作系统（这将实现 Unicode 6.0）。 在其他平台上运行时，.NET Framework 包括其自己的字符串比较数据，这将实现 Unicode 5.x。 请参阅 <xref:System.String> 类和 <xref:System.Globalization.SortVersion> 类的“备注”部分。
 
 - 能够为每个应用程序域计算字符串的哈希代码。 请参阅 [\<UseRandomizedStringHashAlgorithm> 元素](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)。
 
@@ -1944,7 +1944,7 @@ Windows 窗体的改进包括：
 
 - 多个范围。
 
-- 创建 Windows 8.x 应用商店应用时可以使用一部分 MEF。 此子集可作为 NuGet 库中的[可下载程序包](https://go.microsoft.com/fwlink/?LinkId=256238)提供。 若要安装此程序包，请在 Visual Studio 中打开项目，从“项目”  菜单中选择“管理 NuGet 包”  ，然后联机搜索 `Microsoft.Composition` 程序包。
+- 创建 Windows 8.x 应用商店应用时可以使用一部分 MEF。 此子集可作为 NuGet 库中的[可下载程序包](https://www.nuget.org/packages/Microsoft.Composition)提供。 若要安装此程序包，请在 Visual Studio 中打开项目，从“项目”  菜单中选择“管理 NuGet 包”  ，然后联机搜索 `Microsoft.Composition` 程序包。
 
 有关详细信息，请参阅 [Managed Extensibility Framework (MEF)](../mef/index.md)。
 
@@ -1964,7 +1964,7 @@ Windows 窗体的改进包括：
 
 ### <a name="parallel-computing"></a>并行计算
 
-.NET Framework 4.5 新增了多项有关并行计算的功能和改进。 其中包括改进的性能、增强的控件、对异步编程的增强支持、新的数据流库以及对并行调试和性能分析的增强支持。 请参阅“使用 .NET 进行并行编程”博客中的 [.NET 4.5 中有关并行的新增功能](https://go.microsoft.com/fwlink/?LinkId=235061)条目。
+.NET Framework 4.5 新增了多项有关并行计算的功能和改进。 其中包括改进的性能、增强的控件、对异步编程的增强支持、新的数据流库以及对并行调试和性能分析的增强支持。 请参阅“使用 .NET 进行并行编程”博客中的 [.NET 4.5 中有关并行的新增功能](https://devblogs.microsoft.com/pfxteam/whats-new-for-parallelism-in-net-4-5/)条目。
 
 <a name="web" />
 
@@ -2058,7 +2058,7 @@ ASP.NET 4.5 和 4.5.1 为 Web 窗体、WebSocket 支持、异步处理程序、�
 
 - 对使用国际域名 (IDN) 的 WCF 服务的支持。
 
-有关详细信息，请参阅 [Windows Communication Foundation 中的新增功能](https://go.microsoft.com/fwlink/?LinkId=228173)。
+有关详细信息，请参阅 [Windows Communication Foundation 中的新增功能](../wcf/whats-new.md)。
 
 <a name="windows_workflow_foundation" />
 
@@ -2066,7 +2066,7 @@ ASP.NET 4.5 和 4.5.1 为 Web 窗体、WebSocket 支持、异步处理程序、�
 
 在 .NET Framework 4.5 中，已向 Windows Workflow Foundation (WF) 添加多项新功能，包括：
 
-- 首次作为 .NET Framework 4.0.1（[.NET Framework 4 平台更新 1](https://go.microsoft.com/fwlink/?LinkID=215092)）的一部分引入的状态机工作流。 此更新包括可使开发人员创建状态机工作流的多个新类和活动。 这些类和活动已针对 .NET Framework 4.5 更新为包含：
+- 首次作为 .NET Framework 4.0.1（[.NET Framework 4 平台更新 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/)）的一部分引入的状态机工作流。 此更新包括可使开发人员创建状态机工作流的多个新类和活动。 这些类和活动已针对 .NET Framework 4.5 更新为包含：
 
   - 对状态设置断点的能力。
 
@@ -2112,13 +2112,13 @@ ASP.NET 4.5 和 4.5.1 为 Web 窗体、WebSocket 支持、异步处理程序、�
 
 - 协定优先工作流服务开发，它为自动生成活动以匹配现有服务协定提供支持。
 
-有关详细信息，请参阅 [Windows Workflow Foundation 中的新增功能](https://go.microsoft.com/fwlink/?LinkId=228176)。
+有关详细信息，请参阅 [Windows Workflow Foundation 中的新增功能](../windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)。
 
 <a name="tailored" />
 
 ### <a name="net-for-windows-8x-store-apps"></a>适用于 Windows 8.x 应用商店应用的 .NET
 
-Windows 8.x 应用商店应用专为特定外形规格而设计，并利用 Windows 操作系统的强大技术支持。 可以使用一部分 .NET Framework 4.5 或 4.5.1 生成用 C# 或 Visual Basic 编写的 Windows 相关 Windows 8.x 应用商店应用。 这部分称为适用于 Windows 8.x 应用商店应用的 .NET。有关[概述](https://go.microsoft.com/fwlink/?LinkId=228491)，请访问 Windows 开发人员中心。
+Windows 8.x 应用商店应用专为特定外形规格而设计，并利用 Windows 操作系统的强大技术支持。 可以使用一部分 .NET Framework 4.5 或 4.5.1 生成用 C# 或 Visual Basic 编写的 Windows 相关 Windows 8.x 应用商店应用。 该部分被称作适用于 Windows 8.x 应用商店应用的 .NET，详见[概述](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>可移植类库<a name="portable" />
 
@@ -2129,5 +2129,6 @@ Windows 8.x 应用商店应用专为特定外形规格而设计，并利用 Wind
 - [.NET Framework 和带外版本](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [.NET Framework 中辅助功能的新增功能](whats-new-in-accessibility.md)
 - [Visual Studio 2017 中的新增功能](/visualstudio/ide/whats-new-visual-studio-2017)
+- [Visual Studio 2019 中的新增功能](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Visual Studio 中的 C++ 新变化](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

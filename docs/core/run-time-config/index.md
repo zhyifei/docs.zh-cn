@@ -2,12 +2,12 @@
 title: 运行时配置
 description: 了解如何使用运行时配置设置来配置 .NET Core 应用程序。
 ms.date: 11/13/2019
-ms.openlocfilehash: e3922f6df81198b5e122f16d5cfc4b6d15cbb4ae
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 2665026347e94d26026821beb2bfcf8441f755f6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567388"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801917"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>.NET Core 运行时配置设置
 
@@ -26,11 +26,11 @@ ms.locfileid: "74567388"
 
 - [环境变量](#environment-variables)
 
-文档此部分的文章根据类别组织，例如调试和垃圾回收。 可用的配置选项针对 runtimeconfig.json（仅限 .NET Core）、app.config（仅限 .NET Framework）和环境变量显示   。
+文档此部分的文章根据类别组织，例如调试和垃圾回收。 适用时，配置选项针对 runtimeconfig.json（仅限 .NET Core）、app.config（仅限 .NET Framework）和环境变量显示   。
 
 ## <a name="runtimeconfigjson"></a>runtimeconfig.json
 
-在 runtimeconfig.json 文件的 configProperties 部分指定运行时配置选项   。 此部分包含窗体：
+在应用的 runtimeconfig.json 文件的 configProperties 部分指定运行时配置选项   。 此部分包含窗体：
 
 ```json
 {

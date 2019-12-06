@@ -3,14 +3,14 @@ title: 欢迎使用 .NET
 description: .NET 系列技术入门。
 author: mairaw
 ms.author: mairaw
-ms.date: 09/23/2019
+ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: ccff6256b56daccdf8105fd5ad31e81bb892c2a8
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 15daaafed02ab1132a3c82c12efa6fad0e0a6db2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552948"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838125"
 ---
 # <a name="welcome-to-net"></a>欢迎使用 .NET
 
@@ -29,9 +29,9 @@ ms.locfileid: "74552948"
 
 另请关注最新的 .NET 活动：
 
+- [Microsoft Ignite](https://www.microsoft.com/ignite)
 - [Microsoft Build](https://www.microsoft.com/build)
 - [.NET Conf](https://www.dotnetconf.net/)
-- [Microsoft Connect()](https://www.microsoft.com/connectevent)
 
 要了解添加到 .NET 实现及受支持的语言的最新功能，请参阅以下文章：
 
@@ -49,7 +49,7 @@ ms.locfileid: "74552948"
 - [.NET Framework 指南](framework/index.md)
 - [C# 指南](csharp/index.yml)
 - [F# 指南](fsharp/index.yml)
-- [Visual Basic 指南](visual-basic/index.md)
+- [Visual Basic 指南](visual-basic/index.yml)
 - [ML.NET 指南](machine-learning/index.yml)
 - [.NET for Apache Spark](spark/index.yml)
 - [.NET 应用程序体系结构](architecture/index.yml)
@@ -67,11 +67,10 @@ ms.locfileid: "74552948"
 此文档是完全[开源](https://github.com/dotnet/docs)的。 可通过任何方式参与此文档，如创建问题、编写文档等。 此外，许多 .NET 本身也是开源的。 下表显示了主要的 .NET GitHub 存储库：
 
 - [.NET Core 主页](https://github.com/dotnet/core)
-- [.NET 库](https://github.com/dotnet/corefx)
-- [.NET Core 运行时](https://github.com/dotnet/coreclr)
-- [.NET Core CLI](https://github.com/dotnet/cli)
+- [.NET Core 运行时](https://github.com/dotnet/runtime)
+- [.NET Core SDK](https://github.com/dotnet/sdk)
 - [Roslyn（C# 和 Visual Basic）编译器平台和 IDE 工具](https://github.com/dotnet/roslyn)
-- [F# 编译器和 IDE 工具](https://github.com/microsoft/visualfsharp)
+- [F# 编译器和 IDE 工具](https://github.com/dotnet/fsharp)
 - [Windows 窗体](https://github.com/dotnet/winforms)
 - [WPF](https://github.com/dotnet/wpf)
 
