@@ -4,12 +4,12 @@ description: 有关可帮助了解 .NET 的 .NET Core、ASP.NET Core 和 C# 语�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 7953d178e9a24fc42f11b6bc5c866805ec381137
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5132415a6be03787111aaed8d027d436bb6820fe
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423574"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884431"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 示例和教程
 
@@ -25,7 +25,7 @@ ms.locfileid: "73423574"
 
 ### <a name="tutorials"></a>教程
 
-**[使用 CLI 工具编写 .NET Core 控制台应用：分步指南](../core/tutorials/using-with-xplat-cli.md)**
+**[使用 CLI 工具编写 .NET Core 控制台应用：分步指南](../core/tutorials/cli-create-console-app.md)**
 
 本指南介绍如何使用 .NET Core CLI 工具生成跨平台控制台应用。 将从基本的控制台应用开始介绍，最终涵盖包括测试在内的多个项目。 逐步添加功能，不断地增长知识。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/core/console-apps)。
 

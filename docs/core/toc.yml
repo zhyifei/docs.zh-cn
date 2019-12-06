@@ -96,7 +96,7 @@
     - name: 在 macOS 上构建完整的 .NET Core 解决方案
       href: tutorials/using-on-mac-vs-full-solution.md
     - name: 使用 CLI 工具实现 .NET Core 入门
-      href: tutorials/using-with-xplat-cli.md
+      href: tutorials/cli-create-console-app.md
     - name: 使用 .NET Core CLI 组织和测试项目
       href: tutorials/testing-with-cli.md
     - name: 使用跨平台工具开发库
