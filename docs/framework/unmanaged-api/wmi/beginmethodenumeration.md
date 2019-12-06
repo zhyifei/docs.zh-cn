@@ -14,14 +14,14 @@ helpviewer_keywords:
 - BeginMethodEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: a27787052757098d4edb2d8516e22d8a03b7009a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: be1e86e0b760ab403cf42ac19da03f84769a85cf
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138793"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884418"
 ---
-# <a name="beginenumeration-function"></a>BeginEnumeration 函数
+# <a name="beginmethodenumeration-function"></a>BeginMethodEnumeration 函数
 开始枚举可用于对象的方法。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -47,7 +47,7 @@ HRESULT BeginMethodEnumeration (
 `lEnumFlags`  
 中对于所有方法为零（0）或指定枚举范围的标志。 以下标志是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
-返回的常量  |“值”  |描述  |
+返回的常量  |{2&gt;值&lt;2}  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 将枚举限制为类本身中定义的方法。 |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 将枚举限制为从基类继承的属性。 |
@@ -56,7 +56,7 @@ HRESULT BeginMethodEnumeration (
 
 此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |{2&gt;值&lt;2}  |描述  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags` 为非零值，并且不是指定标志之一。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
@@ -67,13 +67,13 @@ HRESULT BeginMethodEnumeration (
 
 仅当当前对象为类定义时，才支持此方法调用。 指向实例的[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指针不提供方法操作。 对于给定的[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例，可保证方法的枚举顺序是固定的。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils .idl  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WMI 和性能计数器（非托管 API 参考）](index.md)
