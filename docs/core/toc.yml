@@ -65,6 +65,8 @@
       href: tutorials/consuming-library-with-visual-studio.md
 - name: .NET Core 的新增功能
   items:
+    - name: .NET Core 3.1 的新增功能
+      href: whats-new/dotnet-core-3-1.md
     - name: .NET Core 3.0 的新增功能
       href: whats-new/dotnet-core-3-0.md
     - name: .NET Core 2.2 的新增功能
@@ -109,8 +111,18 @@
   items:
     - name: 设置
       href: run-time-config/index.md
+    - name: 编译设置
+      href: run-time-config/compilation.md
+    - name: 调试和分析设置
+      href: run-time-config/debugging-profiling.md
     - name: 垃圾回收器设置
       href: run-time-config/garbage-collector.md
+    - name: 全球化设置
+      href: run-time-config/globalization.md
+    - name: 网络设置
+      href: run-time-config/networking.md
+    - name: 线程设置
+      href: run-time-config/threading.md
 - name: 本机互操作性
   items:
     - name: 向 COM 公开 .NET Core 组件
