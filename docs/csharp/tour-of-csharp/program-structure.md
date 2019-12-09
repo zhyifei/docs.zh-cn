@@ -3,12 +3,12 @@ title: C# 程序结构 - C# 语言介绍
 description: 了解 C# 程序的基本构建基块
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: 5102c72d68108f698a0456b9c14e6713778f4325
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 5e095e71549ed3eec6c73e6a134fdb5a64fb63c0
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834157"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884379"
 ---
 # <a name="program-structure"></a>程序结构
 
@@ -27,7 +27,7 @@ csc /t:library acme.cs
 将示例编译成库（不含 `Main` 入口点的代码），并生成 `acme.dll` 程序集。
 
 > [!IMPORTANT]
-> 上述示例使用 `csc` 作为命令行 C# 编译器。 此编译器是 Windows 可执行文件。 若要在其他平台上使用 C#，应使用 .NET Core 工具。 .NET Core 生态系统使用 `dotnet` CLI 来管理命令行生成。 这包括管理依赖项和调用 C# 编译器。 有关在 .NET Core 支持的平台上使用这些工具的完整说明，请参阅[这篇教程](../../core/tutorials/using-with-xplat-cli.md)。
+> 上述示例使用 `csc` 作为命令行 C# 编译器。 此编译器是 Windows 可执行文件。 若要在其他平台上使用 C#，应使用 .NET Core 工具。 .NET Core 生态系统使用 `dotnet` CLI 来管理命令行生成。 这包括管理依赖项和调用 C# 编译器。 有关在 .NET Core 支持的平台上使用这些工具的完整说明，请参阅[这篇教程](../../core/tutorials/cli-create-console-app.md)。
 
 程序集包含中间语言 (IL) 指令形式的可执行代码和元数据形式的符号信息。 执行前，程序集中的 IL 代码会被 .NET 公共语言运行时的实时 (JIT) 编译器自动转换成处理器专属代码。
 

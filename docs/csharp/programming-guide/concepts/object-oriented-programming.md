@@ -2,12 +2,12 @@
 title: 面向对象的编程 (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 121d2e43f6896179756067e661be6d7960a1ee64
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1de150f6eb4be893ca1afce6bd16afde5752c986
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418050"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711818"
 ---
 # <a name="object-oriented-programming-c"></a>面向对象的编程 (C#)
 
@@ -158,7 +158,7 @@ class SampleClass
 重载方法：
 
 ```csharp
-public int sampleMethod(string sampleParam) {};
+public int sampleMethod(string sampleParam) {}
 public int sampleMethod(int sampleParam) {}
 ```
 
@@ -186,9 +186,7 @@ public class SampleClass
 }
 ```
 
-有关详细信息，请参见:
-
-[构造函数](../classes-and-structs/constructors.md)。
+有关详细信息，请参阅[构造函数](../classes-and-structs/constructors.md)。
 
 #### <a name="Finalizers"></a>终结器
 
