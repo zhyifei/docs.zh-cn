@@ -2,12 +2,12 @@
 title: 传输：UDP 示例上的自定义事务
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: 09ce715da4cf4d4fb4c959f63af3bb2c8c68b841
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 00e6d593e185cd09ea66e88f38cf1d8e71785704
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712007"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960412"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>传输：UDP 示例上的自定义事务
 此示例基于 Windows Communication Foundation （WCF）[传输扩展性](../../../../docs/framework/wcf/samples/transport-extensibility.md)中的[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。 它扩展 UDP 传输示例，以支持自定义事务流并演示 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 属性的用法。  
@@ -178,7 +178,7 @@ if (transaction != null)
   
 1. 若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-2. 当前示例的运行方式与[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例类似。 若要运行该示例，请使用 UdpTestService.exe 启动服务。 如果运行的是 [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]，必须使用提升的特权启动服务。 为此，请在文件资源管理器中右键单击 Udptestservice.exe，然后单击 "以**管理员身份运行**"。  
+2. 当前示例的运行方式与[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例类似。 若要运行该示例，请使用 UdpTestService.exe 启动服务。 如果运行的是 Windows Vista，则必须以提升的权限启动该服务。 为此，请在文件资源管理器中右键单击 Udptestservice.exe，然后单击 "以**管理员身份运行**"。  
   
 3. 将生成以下输出。  
   

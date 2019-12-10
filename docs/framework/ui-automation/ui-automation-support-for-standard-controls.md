@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: c59352f908c5f4a1fd2ca6dd631d26bb5d69f09a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 314526c1164f70e6b261df1a6f11ddce2b5fa240
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441222"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960077"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>UI 自动化对标准控件的支持
 > [!NOTE]
@@ -26,27 +26,27 @@ ms.locfileid: "74441222"
 ## <a name="win32-controls"></a>Win32 控件  
  大多数 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控件都通过 UIAutomationClientsideProviders.dll 中的客户端提供程序向 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 公开。 此程序集将自动注册，以用于 UI 自动化客户端应用程序。  
   
- 仅对 ComCtrl32.dll 版本 6（随 [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)] 和更高版本提供）中的控件提供完全支持。  
+ 仅为*对 comctrl32.dll*版本6中的控件提供完全支持。  
   
  支持以下控件。  
   
-|类名称|控件类型|  
+|类名|控件类型|  
 |----------------|------------------|  
-|按钮|按钮|  
-|按钮|RadioButton|  
-|按钮|组|  
-|按钮|CheckBox|  
-|按钮|超链接|  
-|按钮|SplitButton|  
-|按钮|CheckBox|  
+|Button|Button|  
+|Button|RadioButton|  
+|Button|组|  
+|Button|CheckBox|  
+|Button|超链接|  
+|Button|SplitButton|  
+|Button|CheckBox|  
 |ComboBoxEx32|组合框|  
 |组合框|组合框|  
-|编辑|文档|  
-|编辑|编辑|  
+|Edit|Document|  
+|Edit|Edit|  
 |SysLink|超链接|  
-|静态|文本|  
-|静态|映像|  
-|SysIPAddress32|自定义|  
+|Static|文本|  
+|Static|Image|  
+|SysIPAddress32|“自定义”|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
 |SysListView32|列表|  
@@ -56,24 +56,24 @@ ms.locfileid: "74441222"
 |#32768|MenuItem|  
 |msctls_progress32|进度条|  
 |RichEdit|Document。 请参阅注释。|  
-|RichEdit20A|文档|  
-|RichEdit20W|文档|  
-|RichEdit50W|文档|  
-|ScrollBar|滑块|  
-|msctls_trackbar32|滑块|  
+|RichEdit20A|Document|  
+|RichEdit20W|Document|  
+|RichEdit50W|Document|  
+|ScrollBar|Slider|  
+|msctls_trackbar32|Slider|  
 |msctls_updown32|Spinner|  
 |msctls_statusbar32|StatusBar|  
-|SysTabControl32|Tab|  
+|SysTabControl32|选项卡|  
 |SysTabControl32|TabItem|  
 |ToolbarWindow32|ToolBar|  
 |ToolbarWindow32|MenuItem|  
-|ToolbarWindow32|按钮|  
+|ToolbarWindow32|Button|  
 |ToolbarWindow32|CheckBox|  
 |ToolbarWindow32|RadioButton|  
-|ToolbarWindow32|分隔符|  
-|tooltips_class32|ToolTip|  
-|#32774|ToolTip|  
-|ReBarWindow32|工具栏|  
+|ToolbarWindow32|Separator|  
+|tooltips_class32|工具提示|  
+|#32774|工具提示|  
+|ReBarWindow32|Toolbar|  
 |SysTreeView32|树|  
 |SysTreeView32|TreeItem|  
   
@@ -81,16 +81,16 @@ ms.locfileid: "74441222"
   
  不支持以下控件。  
   
-|类名称|控件类型|  
+|类名|控件类型|  
 |----------------|------------------|  
-|SysAnimate32|映像|  
+|SysAnimate32|Image|  
 |SysPager|Spinner|  
-|SysDateTimePick32|自定义|  
+|SysDateTimePick32|“自定义”|  
 |SysMonthCal32|Calendar|  
-|MS_WINNOTE|工具提示|  
-|VBBubble|工具提示|  
-|ScrollBar（在用作独立控件时）|滑块|  
-|SuperGrid|自定义|  
+|MS_WINNOTE|ToolTip|  
+|VBBubble|ToolTip|  
+|ScrollBar（在用作独立控件时）|Slider|  
+|SuperGrid|“自定义”|  
   
 <a name="Windows_Forms_Controls"></a>   
 ## <a name="windows-forms-controls"></a>Windows 窗体控件  
@@ -100,7 +100,7 @@ ms.locfileid: "74441222"
   
 |类名称|  
 |----------------|  
-|按钮|  
+|Button|  
 |CheckBox|  
 |CheckedListBox|  
 |ColorDialog|  
@@ -129,8 +129,8 @@ ms.locfileid: "74441222"
 |TabControl/TabPage|  
 |文本框|  
 |计时器|  
-|工具栏|  
-|ToolTip|  
+|Toolbar|  
+|工具提示|  
 |TrackBar|  
 |TreeView|  
 |VscrollBar|  
@@ -169,4 +169,4 @@ ms.locfileid: "74441222"
   
 ## <a name="see-also"></a>另请参阅
 
-- [UI Automation Control Types](ui-automation-control-types.md)
+- [UI 自动化控件类型](ui-automation-control-types.md)

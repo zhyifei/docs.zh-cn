@@ -2,12 +2,12 @@
 title: WS 2007 联合 HTTP 绑定
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: 2f924bdcbf9082d9d43e02d82c9d00c32ebcaacf
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 74f21494c08f33a61eb1e1b0a102638cff59a970
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714976"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960192"
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 联合 HTTP 绑定
 
@@ -119,7 +119,7 @@ Press <ENTER> to terminate client.
 
 1. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的说明进行操作。
 
-2. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](running-the-samples.md)中的说明进行操作。 如果使用 [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]，则必须使用*提升的权限*运行*setup.exe*、setup.exe 和 appcmd.exe （右键单击*文件，然后*单击 "以**管理员身份运行**"）。
+2. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](running-the-samples.md)中的说明进行操作。 如果使用的是 Windows Vista，则必须使用*提升的权限*运行*setup.exe*、setup.exe 和 appcmd.exe （右键单击*文件，然后*单击 "以**管理员身份运行**"）。
 
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：

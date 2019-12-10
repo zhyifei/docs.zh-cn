@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 示例的一次性安装过程
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: cfe50cb2bb017292b69f578bfff2bf84bf6ba8f0
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 95bba89546e6667cc36fa06a0090aa8e9570fc7e
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837826"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960135"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 示例的一次性安装过程
 
@@ -16,7 +16,7 @@ ms.locfileid: "74837826"
 **ServiceModelSamples**虚拟目录用于生成和运行使用 IIS 承载的服务的所有示例。 这是运行示例所需的唯一虚拟目录。 绑定示例将替换以前在此虚拟目录部署的所有服务；只有最近生成的示例将在此虚拟目录中部署并可用。
 
 > [!NOTE]
-> 必须在本地管理员帐户下运行所有命令。 如果使用的是 Windows 7、[!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] 或 Windows Server 2008 R2，则还必须用提升的特权运行命令提示。 为此，请右键单击 "命令提示符" 图标，然后单击 "以**管理员身份运行**"。 本主题中的所有命令都必须在具有合适路径设置的命令提示中运行。  确保这一点的最简单方法是使用 Visual Studio 命令提示。 若要打开此提示，请单击 "**开始**"，选择 "**所有程序**"，向下滚动到 " **visual studio 2010**"，选择**Visual Studio Tools**，右键单击 " **visual studio 命令提示符（2010）** "，然后单击 "以**管理员身份运行**"。 如果安装了 Visual Studio 学习版，但此命令提示不可用，则必须向系统路径添加“C:\Windows\Microsoft.Net\Framework\v4.0”。
+> 必须在本地管理员帐户下运行所有命令。 如果你使用的是 Windows 7、Windows Vista 或 Windows Server 2008 R2，则还必须使用提升的权限运行命令提示符。 为此，请右键单击 "命令提示符" 图标，然后单击 "以**管理员身份运行**"。 本主题中的所有命令都必须在具有合适路径设置的命令提示中运行。  确保这一点的最简单方法是使用 Visual Studio 命令提示。 若要打开此提示，请单击 "**开始**"，选择 "**所有程序**"，向下滚动到 " **visual studio 2010**"，选择**Visual Studio Tools**，右键单击 " **visual studio 命令提示符（2010）** "，然后单击 "以**管理员身份运行**"。 如果安装了 Visual Studio 学习版，但此命令提示不可用，则必须向系统路径添加“C:\Windows\Microsoft.Net\Framework\v4.0”。
 
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>WCF 示例的一次性安装过程
 

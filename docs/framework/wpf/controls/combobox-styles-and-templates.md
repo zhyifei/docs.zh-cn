@@ -9,12 +9,12 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: 92671001733f525188ba3c7bcf3ed3c55615e301
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 887698bdaebf7bc5ddac8997167589d9fbd3dd4d
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283792"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960374"
 ---
 # <a name="combobox-styles-and-templates"></a>ComboBox 样式和模板
 本主题介绍 <xref:System.Windows.Controls.ComboBox> 控件的样式和模板。 您可以修改默认 <xref:System.Windows.Controls.ControlTemplate> 以使控件具有独特的外观。 有关详细信息，请参阅为[控件创建模板](../../../desktop-wpf/themes/how-to-create-apply-template.md)。  
@@ -22,7 +22,7 @@ ms.locfileid: "74283792"
 ## <a name="combobox-parts"></a>ComboBox 部分  
  下表列出了 <xref:System.Windows.Controls.ComboBox> 控件的已命名部分。  
   
-|部件|类型|说明|  
+|部件|类型|描述|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|包含 <xref:System.Windows.Controls.ComboBox>的文本。|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|包含组合框中的项的下拉。|  
@@ -32,12 +32,12 @@ ms.locfileid: "74283792"
 ## <a name="combobox-states"></a>ComboBox 状态  
  下表列出了 <xref:System.Windows.Controls.ComboBox> 控件的状态。  
   
-|VisualState 名称|VisualStateGroup 名称|说明|  
+|VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
-|正常|CommonStates|默认状态。|  
-|已禁用|CommonStates|已禁用控件。|  
+|普通|CommonStates|默认状态。|  
+|Disabled|CommonStates|已禁用控件。|  
 |MouseOver|CommonStates|鼠标指针位于 <xref:System.Windows.Controls.ComboBox> 控件上。|  
-|Focused|FocusStates|控件有焦点。|  
+|已设定焦点|FocusStates|控件有焦点。|  
 |失去焦点|FocusStates|控件没有焦点。|  
 |FocusedDropDown|FocusStates|<xref:System.Windows.Controls.ComboBox> 的下拉箭头具有焦点。|  
 |有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
@@ -52,14 +52,14 @@ ms.locfileid: "74283792"
 ## <a name="comboboxitem-states"></a>ComboBoxItem 状态  
  下表列出了 <xref:System.Windows.Controls.ComboBoxItem> 控件的状态。  
   
-|VisualState 名称|VisualStateGroup 名称|说明|  
+|VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
-|正常|CommonStates|默认状态。|  
-|已禁用|CommonStates|已禁用控件。|  
-|MouseOver|CommonStates|鼠标指针位于 <xref:System.Windows.Controls.ComboBox> 控件上。|  
-|Focused|FocusStates|控件有焦点。|  
+|普通|CommonStates|默认状态。|  
+|Disabled|CommonStates|已禁用控件。|  
+|MouseOver|CommonStates|鼠标指针位于 <xref:System.Windows.Controls.ComboBoxItem> 控件上。|  
+|已设定焦点|FocusStates|控件有焦点。|  
 |失去焦点|FocusStates|控件没有焦点。|  
-|已选定|SelectionStates|当前已选定该项。|  
+|所选|SelectionStates|当前已选定该项。|  
 |未选定|SelectionStates|未选定该项。|  
 |SelectedUnfocused|SelectionStates|该项已选定，但没有焦点。|  
 |有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
