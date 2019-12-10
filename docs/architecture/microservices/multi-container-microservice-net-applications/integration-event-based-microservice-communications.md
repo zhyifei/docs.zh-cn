@@ -2,12 +2,12 @@
 title: 在微服务（集成事件）之间实现基于事件的通信
 description: 适用于容器化 .NET 应用程序的 .NET 微服务基础结构 | 了解集成事件以在微服务之间实现基于事件的通信。
 ms.date: 10/02/2018
-ms.openlocfilehash: 70566745dc084ba9016a850ad749fefb958e89ec
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a355ba9ede4e3390edd858d173dd88548e876202
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737150"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711228"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>在微服务（集成事件）之间实现基于事件的通信
 
@@ -126,6 +126,19 @@ public interface IEventBus
 `Publish` 方法很简单。 事件总线会向订阅该事件的任何微服务或外部应用程序，广播经过它的集成事件。 该方法由发布事件的微服务使用。
 
 `Subscribe` 方法（你可能有多个实现，具体取决于参数）由要接收事件的微服务使用。 此方法具有两个参数。 第一个是要订阅的集成事件 (`IntegrationEvent`)。 第二个参数是名为 `IIntegrationEventHandler<T>` 的集成事件处理程序（或回调方法），用于在接收者微服务获得集成事件消息时执行。
+
+## <a name="additional-resources"></a>其他资源
+
+一些生产就绪型消息传输解决方案：
+
+- **Azure 服务总线** \
+  <https://docs.microsoft.com/azure/service-bus-messaging/>
+  
+- **NServiceBus** \
+  <https://particular.net/nservicebus>
+  
+- **MassTransit** \
+  <https://masstransit-project.com/>
 
 > [!div class="step-by-step"]
 > [上一页](database-server-container.md)

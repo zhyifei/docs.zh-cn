@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 94d435d8f50683c24e7ca28100fbf5abf0fdcc19
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 33583f430e5af2f3fa7027233febd9ec61f85a3f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204783"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802448"
 ---
 # <a name="isolated-storage"></a>独立存储
 <a name="top"></a> 对于桌面应用，独立存储是一种数据存储机制，它在代码与保存的数据之间定义了标准化的关联方式，从而提供隔离性和安全性。 同时，标准化也提供了其他好处。 管理员可以使用旨在操作独立存储的工具来配置文件存储空间、设置安全策略及删除未使用的数据。 通过独立存储，代码不再需要使用唯一的路径来指定文件系统中的安全位置，同时可以保护数据免遭只具有独立存储访问权限的其他应用程序的损坏。 不再需要指示应用程序的存储区域位置的硬编码信息。
@@ -118,7 +118,7 @@ ms.locfileid: "74204783"
 |Windows 2000、Windows XP、Windows Server 2003（从 Windows NT 4.0 升级）|支持漫游的存储区 =<br /><br /> \<SYSTEMROOT>\Profiles\\<用户\>\Application Data<br /><br /> 非漫游存储区 =<br /><br /> \<SYSTEMROOT>\Profiles\\<用户\>\Local Settings\Application Data|
 |Windows 2000 - 全新安装（和从 Windows 98 及 Windows NT 3.51 升级）|支持漫游的存储区 =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<用户\>\Application Data<br /><br /> 非漫游存储区 =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<用户\>\Local Settings\Application Data|
 |Windows XP、Windows Server 2003 - 全新安装（和从 Windows 2000 及 Windows 98 升级）|支持漫游的存储区 =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<用户\>\Application Data<br /><br /> 非漫游存储区 =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<用户\>\Local Settings\Application Data|
-|[!INCLUDE[win8](../../../includes/win8-md.md)]、Windows 7、Windows Server 2008、Windows Vista|支持漫游的存储区 =<br /><br /> \<SYSTEMDRIVE>\Users\\<用户\>\AppData\Roaming<br /><br /> 非漫游存储区 =<br /><br /> \<SYSTEMDRIVE>\Users\\<用户\>\AppData\Local|
+|Windows 8、Windows 7、Windows Server 2008、Windows Vista|支持漫游的存储区 =<br /><br /> \<SYSTEMDRIVE>\Users\\<用户\>\AppData\Roaming<br /><br /> 非漫游存储区 =<br /><br /> \<SYSTEMDRIVE>\Users\\<用户\>\AppData\Local|
 
 <a name="isolated_storage_tasks"></a>
 

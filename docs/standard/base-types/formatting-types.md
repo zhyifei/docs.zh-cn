@@ -25,12 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: e362ad75fd9989cc87751286f83918d340a58820
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 20aa7ecd354ef1a8982ae75eda87275c80cdaaf6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141482"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802461"
 ---
 # <a name="format-types-in-net"></a>.NET 中的格式类型
 
@@ -85,7 +85,7 @@ ms.locfileid: "73141482"
 [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]
 
 > [!WARNING]
-> 从 [!INCLUDE[win81](../../../includes/win81-md.md)] 开始，Windows 运行时包括了具有单个方法 ([IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A)) 的 <xref:Windows.Foundation.IStringable> 接口，用于提供默认格式支持。 但是，我们建议托管类型不实现 `IStringable` 接口。 有关详细信息，请参阅 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 参考页上的“Windows 运行时和 `IStringable` 接口”部分。
+> 自 Windows 8.1 起，Windows 运行时包括具有单个方法 [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A) 的 <xref:Windows.Foundation.IStringable> 接口，用于提供默认格式支持。 但是，我们建议托管类型不实现 `IStringable` 接口。 有关详细信息，请参阅 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 参考页上的“Windows 运行时和 `IStringable` 接口”部分。
 
 由于除接口以外的所有类型都派生自 <xref:System.Object>，因此会向自定义类或结构自动提供此功能。 但是，默认的 `ToString` 方法提供的功能限于：尽管它标识类型，但无法提供有关类型实例的任何信息。 若要提供可提供该对象相关信息的对象的字符串表示形式，必须重写 `ToString` 方法。
 

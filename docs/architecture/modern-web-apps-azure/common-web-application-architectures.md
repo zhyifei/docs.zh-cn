@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 了�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: b376f8b38749f242f4e78a10808532989e0ac834
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6a4e971c1cb19a12710ad7893378a49758b4016e
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972136"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884236"
 ---
 # <a name="common-web-application-architectures"></a>常用 Web 应用程序体系结构
 
@@ -302,6 +302,8 @@ ENTRYPOINT ["dotnet", "Web.dll"]
   <https://github.com/ardalis/cleanarchitecture>
 - **构建微服务电子书**  
   <https://aka.ms/MicroservicesEbook>
+- **DDD（域驱动设计）**  
+  <https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/>
 
 >[!div class="step-by-step"]
 >[上一页](architectural-principles.md)

@@ -2,12 +2,12 @@
 title: 使用 RabbitMQ 实现用于开发或测试环境的事件总线
 description: 容器化 .NET 应用程序的 .NET 微服务架构 | 使用 RabbitMQ 实现用于开发或测试环境的集成事件的事件总线消息传递。
 ms.date: 10/02/2018
-ms.openlocfilehash: 211348caec3c101435fcdd99bd96fd8e17a6456b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ba1cea9384893955ae0743ac8d6a34c350224cd5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739509"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711201"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>使用 RabbitMQ 实现用于开发或测试环境的事件总线
 
@@ -108,6 +108,20 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 订阅方法接受一个 IIntegrationEventHandler 对象，该对象相当于当前微服务中的回调方法，以及其相关的 IntegrationEvent 对象。 然后，代码将该事件处理程序添加到事件处理程序列表，每个客户端微服务的每个集成事件类型都可具有事件处理程序。 如果客户端代码尚未订阅事件，该代码将为事件类型创建一个通道，以便在从任何其他服务中发布事件时，它可以从 RabbitMQ 以推送方式接收事件。
 
+如上所述，在 eShopOnContainers 中实现的事件总线仅用于教育目的，因为它只处理主要场景，尚不可用于生产环境。
+
+对于生产场景，请查看下面 RabbitMQ 特定的附加资源，以及[在微服务器之间实现基于事件的通信](./integration-event-based-microservice-communications.md#additional-resources)部分。
+
+## <a name="additional-resources"></a>其他资源
+
+生产就绪型解决方案，内附对 RabbitMQ 的支持。
+
+- **EasyNetQ** - 为 RabbitMQ 打开源 .NET API 客户端
+  <http://easynetq.com/>
+
+- **MassTransit** \
+  <https://masstransit-project.com/>
+  
 >[!div class="step-by-step"]
 >[上一页](integration-event-based-microservice-communications.md)
 >[下一页](subscribe-events.md)
