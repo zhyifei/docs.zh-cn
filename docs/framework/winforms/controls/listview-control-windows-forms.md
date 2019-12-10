@@ -11,77 +11,71 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: 856d7eb88459b6be5233234776b0e31077ab37fe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a5f20ec34a1b4b41ec1aee667b5d4bfb0c3eebb1
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647132"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960357"
 ---
-# <a name="listview-control-windows-forms"></a><span data-ttu-id="442bf-102">ListView 控件（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="442bf-102">ListView Control (Windows Forms)</span></span>
-<span data-ttu-id="442bf-103">Windows 窗体 `ListView` 控件显示带图标的项列表。</span><span class="sxs-lookup"><span data-stu-id="442bf-103">The Windows Forms `ListView` control displays a list of items with icons.</span></span> <span data-ttu-id="442bf-104">你可以使用列表视图创建类似 Windows 资源管理器右窗格的用户界面。</span><span class="sxs-lookup"><span data-stu-id="442bf-104">You can use a list view to create a user interface like the right pane of Windows Explorer.</span></span>  
+# <a name="listview-control-windows-forms"></a><span data-ttu-id="eacee-102">ListView 控件（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="eacee-102">ListView Control (Windows Forms)</span></span>
+<span data-ttu-id="eacee-103">Windows 窗体 `ListView` 控件显示带图标的项列表。</span><span class="sxs-lookup"><span data-stu-id="eacee-103">The Windows Forms `ListView` control displays a list of items with icons.</span></span> <span data-ttu-id="eacee-104">你可以使用列表视图创建类似 Windows 资源管理器右窗格的用户界面。</span><span class="sxs-lookup"><span data-stu-id="eacee-104">You can use a list view to create a user interface like the right pane of Windows Explorer.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="442bf-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="442bf-105">In This Section</span></span>  
- [<span data-ttu-id="442bf-106">ListView 控件概述</span><span class="sxs-lookup"><span data-stu-id="442bf-106">ListView Control Overview</span></span>](listview-control-overview-windows-forms.md)  
- <span data-ttu-id="442bf-107">描述此控件及其主要功能和属性。</span><span class="sxs-lookup"><span data-stu-id="442bf-107">Describes this control and its key features and properties.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="eacee-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="eacee-105">In This Section</span></span>  
+ [<span data-ttu-id="eacee-106">ListView 控件概述</span><span class="sxs-lookup"><span data-stu-id="eacee-106">ListView Control Overview</span></span>](listview-control-overview-windows-forms.md)  
+ <span data-ttu-id="eacee-107">描述此控件及其主要功能和属性。</span><span class="sxs-lookup"><span data-stu-id="eacee-107">Describes this control and its key features and properties.</span></span>  
   
- [<span data-ttu-id="442bf-108">如何：添加和删除使用 Windows 窗体 ListView 控件的项</span><span class="sxs-lookup"><span data-stu-id="442bf-108">How to: Add and Remove Items with the Windows Forms ListView Control</span></span>](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
- <span data-ttu-id="442bf-109">描述如何从列表视图中添加或移除项。</span><span class="sxs-lookup"><span data-stu-id="442bf-109">Describes how to add or remove items from a list view.</span></span>  
+ [<span data-ttu-id="eacee-108">如何：使用 Windows 窗体 ListView 控件添加和删除项</span><span class="sxs-lookup"><span data-stu-id="eacee-108">How to: Add and Remove Items with the Windows Forms ListView Control</span></span>](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
+ <span data-ttu-id="eacee-109">描述如何从列表视图中添加或移除项。</span><span class="sxs-lookup"><span data-stu-id="eacee-109">Describes how to add or remove items from a list view.</span></span>  
   
- [<span data-ttu-id="442bf-110">如何：将列添加到 Windows 窗体 ListView 控件</span><span class="sxs-lookup"><span data-stu-id="442bf-110">How to: Add Columns to the Windows Forms ListView Control</span></span>](how-to-add-columns-to-the-windows-forms-listview-control.md)  
- <span data-ttu-id="442bf-111">描述如何创建列，以显示每个列表项的相关信息。</span><span class="sxs-lookup"><span data-stu-id="442bf-111">Describes how to create columns in order to display information about each list item.</span></span>  
+ [<span data-ttu-id="eacee-110">如何：向 Windows 窗体 ListView 控件添加列</span><span class="sxs-lookup"><span data-stu-id="eacee-110">How to: Add Columns to the Windows Forms ListView Control</span></span>](how-to-add-columns-to-the-windows-forms-listview-control.md)  
+ <span data-ttu-id="eacee-111">描述如何创建列，以显示每个列表项的相关信息。</span><span class="sxs-lookup"><span data-stu-id="eacee-111">Describes how to create columns in order to display information about each list item.</span></span>  
   
- [<span data-ttu-id="442bf-112">如何：Windows 窗体 ListView 控件中显示图标</span><span class="sxs-lookup"><span data-stu-id="442bf-112">How to: Display Icons for the Windows Forms ListView Control</span></span>](how-to-display-icons-for-the-windows-forms-listview-control.md)  
- <span data-ttu-id="442bf-113">描述如何将列表视图与用于显示大图标或小图标的适当图像列表相关联。</span><span class="sxs-lookup"><span data-stu-id="442bf-113">Describes how to associate a list view with an appropriate image list for displaying large or small icons.</span></span>  
+ [<span data-ttu-id="eacee-112">如何：显示 Windows 窗体 ListView 控件的图标</span><span class="sxs-lookup"><span data-stu-id="eacee-112">How to: Display Icons for the Windows Forms ListView Control</span></span>](how-to-display-icons-for-the-windows-forms-listview-control.md)  
+ <span data-ttu-id="eacee-113">描述如何将列表视图与用于显示大图标或小图标的适当图像列表相关联。</span><span class="sxs-lookup"><span data-stu-id="eacee-113">Describes how to associate a list view with an appropriate image list for displaying large or small icons.</span></span>  
   
- [<span data-ttu-id="442bf-114">如何：在使用 Windows 窗体 ListView 控件的列中显示子项</span><span class="sxs-lookup"><span data-stu-id="442bf-114">How to: Display Subitems in Columns with the Windows Forms ListView Control</span></span>](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)  
- <span data-ttu-id="442bf-115">描述如何在列中显示每个列表项的相关信息。</span><span class="sxs-lookup"><span data-stu-id="442bf-115">Describes how to display information about each list item in columns.</span></span>  
+ [<span data-ttu-id="eacee-114">如何：使用 Windows 窗体 ListView 控件在列中显示子项</span><span class="sxs-lookup"><span data-stu-id="eacee-114">How to: Display Subitems in Columns with the Windows Forms ListView Control</span></span>](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)  
+ <span data-ttu-id="eacee-115">描述如何在列中显示每个列表项的相关信息。</span><span class="sxs-lookup"><span data-stu-id="eacee-115">Describes how to display information about each list item in columns.</span></span>  
   
- [<span data-ttu-id="442bf-116">如何：Windows 窗体 ListView 控件中选择一项</span><span class="sxs-lookup"><span data-stu-id="442bf-116">How to: Select an Item in the Windows Forms ListView Control</span></span>](how-to-select-an-item-in-the-windows-forms-listview-control.md)  
- <span data-ttu-id="442bf-117">描述如何以编程方式选择项。</span><span class="sxs-lookup"><span data-stu-id="442bf-117">Describes how to programmatically select an item.</span></span>  
+ [<span data-ttu-id="eacee-116">如何：选择 Windows 窗体 ListView 控件中的项</span><span class="sxs-lookup"><span data-stu-id="eacee-116">How to: Select an Item in the Windows Forms ListView Control</span></span>](how-to-select-an-item-in-the-windows-forms-listview-control.md)  
+ <span data-ttu-id="eacee-117">描述如何以编程方式选择项。</span><span class="sxs-lookup"><span data-stu-id="eacee-117">Describes how to programmatically select an item.</span></span>  
   
- [<span data-ttu-id="442bf-118">如何：Windows 窗体 ListView 控件中的项进行分组</span><span class="sxs-lookup"><span data-stu-id="442bf-118">How to: Group Items in a Windows Forms ListView Control</span></span>](how-to-group-items-in-a-windows-forms-listview-control.md)  
- <span data-ttu-id="442bf-119">描述如何创建按分类顺序显示的组以及如何将项分配给每个组。</span><span class="sxs-lookup"><span data-stu-id="442bf-119">Describes how to create groups for categorized display and how to assign items to each group.</span></span>  
+ [<span data-ttu-id="eacee-118">如何：在 Windows 窗体 ListView 控件中对项进行分组</span><span class="sxs-lookup"><span data-stu-id="eacee-118">How to: Group Items in a Windows Forms ListView Control</span></span>](how-to-group-items-in-a-windows-forms-listview-control.md)  
+ <span data-ttu-id="eacee-119">描述如何创建按分类顺序显示的组以及如何将项分配给每个组。</span><span class="sxs-lookup"><span data-stu-id="eacee-119">Describes how to create groups for categorized display and how to assign items to each group.</span></span>  
   
- <span data-ttu-id="442bf-120">此功能仅适用于 [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="442bf-120">This feature is available only for [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].</span></span>  
+ [<span data-ttu-id="eacee-120">如何：在 Windows 窗体 ListView 控件中启用平铺视图</span><span class="sxs-lookup"><span data-stu-id="eacee-120">How to: Enable Tile View in a Windows Forms ListView Control</span></span>](how-to-enable-tile-view-in-a-windows-forms-listview-control.md)  
+ <span data-ttu-id="eacee-121">描述如何将项显示为图块，其中每个图块由一个大图标和多行文本组成。</span><span class="sxs-lookup"><span data-stu-id="eacee-121">Describes how to display items as tiles, each of which is comprised of a large icon and multiple lines of text.</span></span>  
   
- [<span data-ttu-id="442bf-121">如何：启用 Windows 窗体 ListView 控件中的磁贴视图</span><span class="sxs-lookup"><span data-stu-id="442bf-121">How to: Enable Tile View in a Windows Forms ListView Control</span></span>](how-to-enable-tile-view-in-a-windows-forms-listview-control.md)  
- <span data-ttu-id="442bf-122">描述如何将项显示为图块，其中每个图块由一个大图标和多行文本组成。</span><span class="sxs-lookup"><span data-stu-id="442bf-122">Describes how to display items as tiles, each of which is comprised of a large icon and multiple lines of text.</span></span>  
+ [<span data-ttu-id="eacee-122">如何：在 Windows 窗体 ListView 控件中显示插入标记</span><span class="sxs-lookup"><span data-stu-id="eacee-122">How to: Display an Insertion Mark in a Windows Forms ListView Control</span></span>](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)  
+ <span data-ttu-id="eacee-123">描述如何实现拖放操作的用户反馈，反馈中用插入标记指示每个鼠标指针位置的放置位置。</span><span class="sxs-lookup"><span data-stu-id="eacee-123">Describes how to implement user-feedback for drag-and-drop operations in which an insertion mark indicates the drop location for each mouse-pointer position.</span></span>  
   
- <span data-ttu-id="442bf-123">此功能仅适用于 [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="442bf-123">This feature is available only for [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].</span></span>  
+ [<span data-ttu-id="eacee-124">如何：向 ListView 控件添加搜索功能</span><span class="sxs-lookup"><span data-stu-id="eacee-124">How to: Add Search Capabilities to a ListView Control</span></span>](how-to-add-search-capabilities-to-a-listview-control.md)  
+ <span data-ttu-id="eacee-125">介绍如何以编程方式使用文本搜索或屏幕坐标查找项。</span><span class="sxs-lookup"><span data-stu-id="eacee-125">Describes how to programmatically find an item using either text search or screen coordinates.</span></span>  
   
- [<span data-ttu-id="442bf-124">如何：Windows 窗体 ListView 控件中显示插入标记</span><span class="sxs-lookup"><span data-stu-id="442bf-124">How to: Display an Insertion Mark in a Windows Forms ListView Control</span></span>](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)  
- <span data-ttu-id="442bf-125">描述如何实现拖放操作的用户反馈，反馈中用插入标记指示每个鼠标指针位置的放置位置。</span><span class="sxs-lookup"><span data-stu-id="442bf-125">Describes how to implement user-feedback for drag-and-drop operations in which an insertion mark indicates the drop location for each mouse-pointer position.</span></span>  
+- [<span data-ttu-id="eacee-126">如何：使用设计器在 Windows 窗体 ListView 控件中启用平铺视图</span><span class="sxs-lookup"><span data-stu-id="eacee-126">How to: Enable Tile View in a Windows Forms ListView Control Using the Designer</span></span>](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
   
- <span data-ttu-id="442bf-126">此功能仅适用于 [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="442bf-126">This feature is available only for [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].</span></span>  
+- [<span data-ttu-id="eacee-127">如何：使用设计器用 Windows 窗体 ListView 控件添加和删除项</span><span class="sxs-lookup"><span data-stu-id="eacee-127">How to: Add and Remove Items with the Windows Forms ListView Control Using the Designer</span></span>](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
   
- [<span data-ttu-id="442bf-127">如何：向 ListView 控件添加搜索功能</span><span class="sxs-lookup"><span data-stu-id="442bf-127">How to: Add Search Capabilities to a ListView Control</span></span>](how-to-add-search-capabilities-to-a-listview-control.md)  
- <span data-ttu-id="442bf-128">介绍如何以编程方式使用文本搜索或屏幕坐标查找项。</span><span class="sxs-lookup"><span data-stu-id="442bf-128">Describes how to programmatically find an item using either text search or screen coordinates.</span></span>  
+- [<span data-ttu-id="eacee-128">如何：使用设计器向 Windows 窗体 ListView 控件添加列</span><span class="sxs-lookup"><span data-stu-id="eacee-128">How to: Add Columns to the Windows Forms ListView Control Using the Designer</span></span>](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
   
-- [<span data-ttu-id="442bf-129">如何：启用使用设计器的 Windows 窗体 ListView 控件中的磁贴视图</span><span class="sxs-lookup"><span data-stu-id="442bf-129">How to: Enable Tile View in a Windows Forms ListView Control Using the Designer</span></span>](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
+- [<span data-ttu-id="eacee-129">如何：使用设计器在 Windows 窗体 ListView 控件中对项进行分组</span><span class="sxs-lookup"><span data-stu-id="eacee-129">How to: Group Items in a Windows Forms ListView Control Using the Designer</span></span>](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
   
-- [<span data-ttu-id="442bf-130">如何：添加和删除项与使用设计器在 Windows 窗体 ListView 控件</span><span class="sxs-lookup"><span data-stu-id="442bf-130">How to: Add and Remove Items with the Windows Forms ListView Control Using the Designer</span></span>](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
+- [<span data-ttu-id="eacee-130">演练：使用设计器创建带有 ListView 和 TreeView 控件的资源管理器样式界面</span><span class="sxs-lookup"><span data-stu-id="eacee-130">Walkthrough: Creating an Explorer Style Interface with the ListView and TreeView Controls Using the Designer</span></span>](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
-- [<span data-ttu-id="442bf-131">如何：将列添加到使用设计器在 Windows 窗体 ListView 控件</span><span class="sxs-lookup"><span data-stu-id="442bf-131">How to: Add Columns to the Windows Forms ListView Control Using the Designer</span></span>](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
+## <a name="reference"></a><span data-ttu-id="eacee-131">参考</span><span class="sxs-lookup"><span data-stu-id="eacee-131">Reference</span></span>  
+ <span data-ttu-id="eacee-132"><xref:System.Windows.Forms.ListView> 类</span><span class="sxs-lookup"><span data-stu-id="eacee-132"><xref:System.Windows.Forms.ListView> class</span></span>  
+ <span data-ttu-id="eacee-133">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="eacee-133">Describes this class and has links to all its members.</span></span>  
   
-- [<span data-ttu-id="442bf-132">如何：使用设计器的 Windows 窗体 ListView 控件中的项进行分组</span><span class="sxs-lookup"><span data-stu-id="442bf-132">How to: Group Items in a Windows Forms ListView Control Using the Designer</span></span>](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
+## <a name="related-sections"></a><span data-ttu-id="eacee-134">相关章节</span><span class="sxs-lookup"><span data-stu-id="eacee-134">Related Sections</span></span>  
+ [<span data-ttu-id="eacee-135">如何：向 TreeView 或 ListView 控件（Windows 窗体）添加自定义信息</span><span class="sxs-lookup"><span data-stu-id="eacee-135">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+ <span data-ttu-id="eacee-136">描述如何继承列表视图中的项或树视图中的节点，以添加所需的任何字段、方法或构造函数。</span><span class="sxs-lookup"><span data-stu-id="eacee-136">Describes how to inherit from an item in a list view or a node in a tree view in order to add any fields, methods, or constructors you need.</span></span>  
   
-- [<span data-ttu-id="442bf-133">演练：创建带有 ListView 和 TreeView 控件使用设计器的资源管理器样式界面</span><span class="sxs-lookup"><span data-stu-id="442bf-133">Walkthrough: Creating an Explorer Style Interface with the ListView and TreeView Controls Using the Designer</span></span>](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
+ [<span data-ttu-id="eacee-137">ImageList 组件</span><span class="sxs-lookup"><span data-stu-id="eacee-137">ImageList Component</span></span>](imagelist-component-windows-forms.md)  
+ <span data-ttu-id="eacee-138">说明图像列表是什么，以及其主要功能和属性。</span><span class="sxs-lookup"><span data-stu-id="eacee-138">Explains what an image list is and its key features and properties.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="442bf-134">参考</span><span class="sxs-lookup"><span data-stu-id="442bf-134">Reference</span></span>  
- <span data-ttu-id="442bf-135"><xref:System.Windows.Forms.ListView> 类</span><span class="sxs-lookup"><span data-stu-id="442bf-135"><xref:System.Windows.Forms.ListView> class</span></span>  
- <span data-ttu-id="442bf-136">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="442bf-136">Describes this class and has links to all its members.</span></span>  
+ [<span data-ttu-id="eacee-139">如何：使用 Windows 窗体创建多窗格用户界面</span><span class="sxs-lookup"><span data-stu-id="eacee-139">How to: Create a Multipane User Interface with Windows Forms</span></span>](how-to-create-a-multipane-user-interface-with-windows-forms.md)  
+ <span data-ttu-id="eacee-140">提供具有多个窗格的 Windows 窗体的布局说明。</span><span class="sxs-lookup"><span data-stu-id="eacee-140">Gives instructions for laying out a Windows Form with multiple panes.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="442bf-137">相关章节</span><span class="sxs-lookup"><span data-stu-id="442bf-137">Related Sections</span></span>  
- [<span data-ttu-id="442bf-138">如何：将自定义信息添加到 TreeView 或 ListView 控件 （Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="442bf-138">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
- <span data-ttu-id="442bf-139">描述如何继承列表视图中的项或树视图中的节点，以添加所需的任何字段、方法或构造函数。</span><span class="sxs-lookup"><span data-stu-id="442bf-139">Describes how to inherit from an item in a list view or a node in a tree view in order to add any fields, methods, or constructors you need.</span></span>  
-  
- [<span data-ttu-id="442bf-140">ImageList 组件</span><span class="sxs-lookup"><span data-stu-id="442bf-140">ImageList Component</span></span>](imagelist-component-windows-forms.md)  
- <span data-ttu-id="442bf-141">说明图像列表是什么，以及其主要功能和属性。</span><span class="sxs-lookup"><span data-stu-id="442bf-141">Explains what an image list is and its key features and properties.</span></span>  
-  
- [<span data-ttu-id="442bf-142">如何：用 Windows 窗体创建多窗格用户界面</span><span class="sxs-lookup"><span data-stu-id="442bf-142">How to: Create a Multipane User Interface with Windows Forms</span></span>](how-to-create-a-multipane-user-interface-with-windows-forms.md)  
- <span data-ttu-id="442bf-143">提供具有多个窗格的 Windows 窗体的布局说明。</span><span class="sxs-lookup"><span data-stu-id="442bf-143">Gives instructions for laying out a Windows Form with multiple panes.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="442bf-144">请参阅</span><span class="sxs-lookup"><span data-stu-id="442bf-144">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eacee-141">另请参阅</span><span class="sxs-lookup"><span data-stu-id="eacee-141">See also</span></span>
 
-- [<span data-ttu-id="442bf-145">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="442bf-145">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+- [<span data-ttu-id="eacee-142">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="eacee-142">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
