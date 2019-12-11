@@ -4,16 +4,16 @@ description: 本教程介绍如何从命令行组织和测试 .NET Core 项目�
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: d93ba5f41f1e7b5818790d0853bd219466b317ee
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 38017a788a8e43601f49a98230cb4d96e0390061
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117376"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884210"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>使用 .NET Core 命令行组织和测试项目
 
-本教程遵循[通过命令行开始在 Windows/Linux/macOS 上使用 .NET Core](using-with-xplat-cli.md)，不只是介绍了如何创建简单的控制台应用程序，还介绍了如何开发结构清晰的高级应用程序。 在演示如何使用文件夹来组织代码后，本教程还将说明如何使用 [xUnit](https://xunit.github.io/) 测试框架扩展控制台应用程序。
+本教程遵循[通过命令行开始在 Windows/Linux/macOS 上使用 .NET Core](cli-create-console-app.md)，不只是介绍了如何创建简单的控制台应用程序，还介绍了如何开发结构清晰的高级应用程序。 在演示如何使用文件夹来组织代码后，本教程还将说明如何使用 [xUnit](https://xunit.github.io/) 测试框架扩展控制台应用程序。
 
 ## <a name="using-folders-to-organize-code"></a>使用文件夹组织代码
 

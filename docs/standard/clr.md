@@ -16,12 +16,12 @@ helpviewer_keywords:
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
-ms.openlocfilehash: c866e3d1a4de31361843f5c071510fd18247cb39
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6f9ad8aafc37039b55ae3bf6eb743e07ad8e2235
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132815"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884405"
 ---
 # <a name="common-language-runtime-clr-overview"></a>公共语言运行时 (CLR) 概述
 
@@ -62,20 +62,7 @@ ms.locfileid: "73132815"
 
 ## <a name="clr-versions"></a>CLR 版本
 
-.NET Framework 的版本号无需对应于它所包含的 CLR 的版本号。 下表演示了两个版本号关联的方式：
-
-|.NET Framework 版本|包括 CLR 版本|
-|----------------------------|--------------------------|
-|1.0|1.0|
-|1.1|1.1|
-|2.0|2.0|
-|3.0|2.0|
-|3.5|2.0|
-|4|4|
-|4.5（包括 4.5.1 和 4.5.2）|4|
-|4.6（包括 4.6.1 和 4.6.2）|4|
-|4.7（包括 4.7.1 和 4.7.2）|4|
-|4.8|4|
+.NET Framework 版本号并非一定要与其包含的 CLR 的版本号相对应。 有关 .NET Framework 版本及其相应 CLR 版本的列表，请参阅 [.NET Framework 版本及依赖项](../framework/migration-guide/versions-and-dependencies.md)。 .NET Core 版本具有一个产品版本，即没有单独的 CLR 版本。 有关 .NET Core 版本的列表，请参阅[下载 .NET Core](https://dotnet.microsoft.com/download/dotnet-core)。
 
 ## <a name="related-topics"></a>相关主题
 
@@ -85,7 +72,3 @@ ms.locfileid: "73132815"
 |[自动内存管理](automatic-memory-management.md)|描述垃圾回收器如何分配和释放内存。|
 |[.NET Framework 概述](../framework/get-started/overview.md)|描述关键的 .NET Framework 概念，例如通用类型系统、跨语言互操作性、托管执行、应用程序域和程序集。|
 |[常规类型系统](./base-types/common-type-system.md)|描述在运行时中如何声明、使用和管理类型以支持跨语言集成。|
-
-## <a name="see-also"></a>请参阅
-
-- [版本和依赖关系](../framework/migration-guide/versions-and-dependencies.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: a7a11029c4e896b0486311bc3caf42fab53d1ea6
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: adb4848e844ff091c45ec9a8a2e6d36f01c3cf91
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802100"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960148"
 ---
 # <a name="graphics-rendering-registry-settings"></a>图形呈现注册表设置
 本主题概述了影响 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 图形呈现注册表设置。  
@@ -24,7 +24,7 @@ ms.locfileid: "74802100"
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>什么是 XPDM 和 WDDM？  
- 某些图形呈现注册表设置具有不同的默认值，具体取决于视频卡使用的是 XPDM 还是 WDDM 驱动程序。 XPDM 是 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 显示驱动程序模式，WDDM 是 Windows 显示驱动程序模型。 WDDM 在运行 Windows Vista 和 Windows 7 的计算机上可用。 XPDM 在运行 Windows Vista、[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]和 [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]的计算机上可用。 有关 WDDM 的详细信息，请参阅 [Windows Vista 显示驱动程序模式设计指南](https://go.microsoft.com/fwlink/?LinkId=178394)。  
+ 某些图形呈现注册表设置具有不同的默认值，具体取决于视频卡使用的是 XPDM 还是 WDDM 驱动程序。 XPDM 是 Microsoft Windows XP 显示驱动程序模型，而 WDDM 是 Windows 显示器驱动程序模型。 WDDM 在运行 Windows Vista 和 Windows 7 的计算机上可用。 在运行 Windows Vista、Microsoft Windows XP 和 [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]的计算机上，XPDM 可用。 有关 WDDM 的详细信息，请参阅 [Windows Vista 显示驱动程序模式设计指南](https://go.microsoft.com/fwlink/?LinkId=178394)。  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>注册表设置  
@@ -57,7 +57,7 @@ ms.locfileid: "74802100"
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- "**最大多级采样值**" 使您可以调整三维内容的最大抗锯齿量。 使用此级别可禁用 Windows Vista 中的3-d 消除锯齿功能，或在 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]中启用它。  
+ "**最大多级采样值**" 使您可以调整三维内容的最大抗锯齿量。 使用此级别可禁用 Windows Vista 中的三维抗锯齿功能。  
   
  “最大多重采样值”是一个 DWORD 值，范围为从 0 到 16。 如果值为 0，则指定应禁用 3-D 内容的多重采样抗锯齿；如果值为 16，将尝试设置最多 16 倍多重采样抗锯齿（如果受视频卡支持）。 请注意，在使用 XPDM 驱动程序的计算机上设置此注册表项值将导致应用程序使用大量附加视频内存，降低三维呈现的性能，并有可能引入呈现错误和稳定性方面.  
   

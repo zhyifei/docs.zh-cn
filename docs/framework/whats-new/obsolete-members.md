@@ -7,12 +7,12 @@ helpviewer_keywords:
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: 2231552f9c3353890963a4ad5388194036fa27bf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 063d7b5cfddace89efa636327c71a214ee01fdd0
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134104"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802721"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework 中的过时成员
 
@@ -646,8 +646,8 @@ ms.locfileid: "73134104"
 |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetConfig%2A>|建议的替代项为 System.Web.dll 中的 <xref:System.Web.HttpContext.GetSection%2A?displayProperty=nameWithType>。|
 |<xref:System.Web.HttpUtility?displayProperty=nameWithType>|<xref:System.Web.HttpUtility.UrlEncodeUnicode%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 此方法生成的输出不\-符合\-标准，并存在互操作性问题。 首选替代项为 <xref:System.Web.HttpUtility.UrlEncode%28System.String%29>。|
 |<xref:System.Web.HttpUtility?displayProperty=nameWithType>|<xref:System.Web.HttpUtility.UrlEncodeUnicodeToBytes%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 此方法生成的输出不\-符合\-标准，并存在互操作性问题。 首选替代项为 <xref:System.Web.HttpUtility.UrlEncodeToBytes%28System.String%29>。|
-|<xref:System.Web.Configuration.AuthenticationMode?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationMode.Passport>|此字段已过时。 Passport 身份验证产品不再受支持，并且已由 [Microsoft 帐户](https://go.microsoft.com/fwlink/?LinkId=733413)取代。|
-|<xref:System.Web.Configuration.AuthenticationSection?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationSection.Passport%2A>|此属性已过时。 Passport 身份验证产品不再受支持，并且已由 [Microsoft 帐户](https://go.microsoft.com/fwlink/?LinkId=733413)取代。|
+|<xref:System.Web.Configuration.AuthenticationMode?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationMode.Passport>|此字段已过时。 Passport 身份验证产品不再受支持，并且已由 [Microsoft 帐户](https://account.microsoft.com/account/Account?destrt=home-index)取代。|
+|<xref:System.Web.Configuration.AuthenticationSection?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationSection.Passport%2A>|此属性已过时。 Passport 身份验证产品不再受支持，并且已由 [Microsoft 帐户](https://account.microsoft.com/account/Account?destrt=home-index)取代。|
 |<xref:System.Web.Configuration.HttpCapabilitiesBase?displayProperty=nameWithType>|<xref:System.Web.Configuration.HttpCapabilitiesBase.JavaScript%2A>|建议的替代项为 <xref:System.Web.Configuration.HttpCapabilitiesBase.EcmaScriptVersion%2A?displayProperty=nameWithType> 属性。 <xref:System.Version.Major%2A?displayProperty=nameWithType> 版本值大于或等于 1 暗示支持 JavaScript。|
 |<xref:System.Web.Configuration.SystemWebSectionGroup?displayProperty=nameWithType>|<xref:System.Web.Configuration.SystemWebSectionGroup.MobileControls%2A>|System.Web.Mobile.dll 已过时。|
 |<xref:System.Web.Routing.UrlRoutingModule?displayProperty=nameWithType>|<xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A>|此方法已过时。 重写 <xref:System.Web.Routing.UrlRoutingModule.Init%2A> 方法以使用 <xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A> 事件。|

@@ -2,12 +2,12 @@
 title: 生成适用于云的可复原服务。 在云中处理暂时性故障
 description: 通过 Azure 云和 Windows 容器现代化现有 .NET 应用程序 | 生成适用于云的可复原服务。 在云中处理暂时性故障
 ms.date: 04/30/2018
-ms.openlocfilehash: e6fae8140b55cb0308dca9f4b77e961501b41f8f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e516dc675ceb8def25c6d676bced0ea7f253b2d5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73739390"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711249"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>生成适用于云的可复原服务：在云中处理暂时性故障
 
@@ -27,7 +27,7 @@ ms.locfileid: "73739390"
 
 如图 4-9 中所示的可复原应用程序应该实现“以指数回退方式重试”之类的技术，使应用程序有机会处理资源的暂时性故障。 你还应在应用程序中使用“断路器”。 当实际上是长期故障时，断路器会阻止该应用程序尝试访问该资源。 通过使用断路器，应用程序可避免造成自身的拒绝服务。
 
-![通过以指数回退方式重试处理的部分故障的关系图。](./media/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud/retry-partial-failures.png)
+![通过以指数回退方式重试处理的部分故障的关系图。](./media/retry-partial-failures.png)
 
 **图 4-9.** 。 通过以指数回退方式重试处理的部分故障
 

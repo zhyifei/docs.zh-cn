@@ -20,9 +20,11 @@ ms.locfileid: "73739656"
 ---
 # <a name="-and--operators-c-reference"></a>?? 和 ??= 运算符（C# 参考）
 
+
 如果空接合运算符 `??` 左侧的操作数的值不为 `null`，则运算符返回该侧操作数的值；否则，它会对右侧操作数求值并返回其结果。 如果左侧操作数的求值结果为非 null，则 `??` 运算符不会对右操作数求值。
 
 C# 8.0 及更高版本中可使用空合并赋值运算符 `??=`，该运算符仅在左侧操作数的求值结果为 `null` 时，才将其右侧操作数的值赋值给左操作数。如果左操作数的求值结果为非 null，则 `??=` 运算符不会对右操作数求值。
+
 
 [!code-csharp[null-coalescing assignment](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#Assignment)]
 

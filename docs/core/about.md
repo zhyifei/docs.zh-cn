@@ -2,12 +2,12 @@
 title: 关于 .NET Core
 description: 了解 .NET Core。
 ms.date: 09/17/2019
-ms.openlocfilehash: 4fe16475e18eb88e88fb33d30508f9ef5c9f2cd5
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 22530e861f6a13a6930b2fb35c91b4f7a95a17c7
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552244"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801952"
 ---
 # <a name="about-net-core"></a>关于 .NET Core
 
@@ -40,7 +40,7 @@ ms.locfileid: "74552244"
 - 集合，例如 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>。
 - 实用程序类型，例如 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 和 <xref:System.IO.FileStream?displayProperty=nameWithType>。
 - 数据类型，例如 <xref:System.Data.DataSet?displayProperty=nameWithType> 和 [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/)。
-- 高性能类型，例如 <xref:System.Numerics.Vector?displayProperty=nameWithType> 和 [Pipelines](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/)。
+- 高性能类型，例如 <xref:System.Numerics.Vector?displayProperty=nameWithType> 和 [Pipelines](../standard/io/pipelines.md)。
 
 .NET Core 通过实现 [.NET Standard](../standard/net-standard.md) 规范提供 .NET Framework 和 Mono API 的兼容性。
 
@@ -56,7 +56,7 @@ ms.locfileid: "74552244"
 
 .NET Core 包括以下部分：
 
-- [.NET Core 运行时](https://github.com/dotnet/coreclr)：提供类型系统、程序集加载、垃圾回收器、本机互操作和其他基本服务。 [.NET Core 框架库](https://github.com/dotnet/corefx)：提供基元数据类型、应用编写类型和基本实用程序。
+- [.NET Core 运行时](https://github.com/dotnet/runtime/tree/master/src/coreclr)：提供类型系统、程序集加载、垃圾回收器、本机互操作和其他基本服务。 [.NET Core 框架库](https://github.com/dotnet/runtime/tree/master/src/libraries)：提供基元数据类型、应用编写类型和基本实用程序。
 - [ASP.NET 运行时](https://github.com/aspnet/home)：提供一个框架来生成基于云且连接到 Internet 的新式应用程序，例如 Web 应用、IoT 应用和移动后端。
 - [.NET Core CLI 工具](https://github.com/dotnet/cli)和语言编译器（[Roslyn](https://github.com/dotnet/roslyn) 和 [F#](https://github.com/microsoft/visualfsharp)）：提供 .NET Core 开发人员体验。
 - [dotnet 工具](https://github.com/dotnet/core-setup)：用于启动 .NET Core 应用和 CLI 工具。 它选择运行时并托管运行时，提供程序集加载策略并启动应用和工具。
@@ -79,17 +79,17 @@ ms.locfileid: "74552244"
 
 人们经常会问，为支持多个操作系统应如何实现 .NET Core。 他们还会问是否存在单独的实现，或是否使用 [conditional compilation](https://en.wikipedia.org/wiki/Conditional_compilation)（条件编译）。 这两者都在用，但强烈偏向条件编译。
 
-可以在下面的图表看出大多数 [CoreFX](https://github.com/dotnet/corefx) 都是与平台无关的代码，该代码可在所有平台共享。 不限平台的代码可实现为在所有平台上使用的单个可移植程序集。
+可以在下面的图表看出大多数 [.NET Core 库](https://github.com/dotnet/runtime/tree/master/src/libraries)都是与平台无关的代码，该代码可在所有平台共享。 不限平台的代码可实现为在所有平台上使用的单个可移植程序集。
 
 ![CoreFX：每个平台的代码行数](../images/corefx-platforms-loc.png)
 
-Windows 和 Unix 实现大小相似。 Windows 的实现范围更广，这是因为 CoreFX 会实现某些仅适用于 Windows 的功能（如 [Microsoft.Win32.Registry](https://github.com/dotnet/corefx/tree/master/src/Microsoft.Win32.Registry)），但尚未实现很多仅适用于 Unix 的概念。 你还将发现大多数 Linux 和 macOS 实现都跨 Unix 实现共享，而特定于 Linux 和 macOS 的实现大小大致相同。
+Windows 和 Unix 实现大小相似。 Windows 的实现范围更广，这是因为 .NET Core 库会实现某些仅适用于 Windows 的功能（如 [Microsoft.Win32.Registry](https://github.com/dotnet/runtime/tree/master/src/libraries/Microsoft.Win32.Registry)），但尚未实现很多仅适用于 Unix 的概念。 你还将发现大多数 Linux 和 macOS 实现都跨 Unix 实现共享，而特定于 Linux 和 macOS 的实现大小大致相同。
 
 .NET Core 中既存在平台特定的库，也存在与平台无关的库。 可以查看几个示例中的模式：
 
-- [CoreCLR](https://github.com/dotnet/coreclr) 是特定于平台的。 它建立在内存管理器和线程计划程序等操作系统子系统的基础上。
-- 考虑到每个 OS 上的存储和加密 API 都有所不同，[System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) 和 [System.Security.Cryptography.Algorithms](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms) 是特定于平台的。
-- 考虑到它们是通过数据结构创建和操作，[System.Collections](https://github.com/dotnet/corefx/tree/master/src/System.Collections) 和 [System.Linq](https://github.com/dotnet/corefx/tree/master/src/System.Linq) 是与平台无关的。
+- [CoreCLR](https://github.com/dotnet/runtime/tree/master/src/coreclr) 是特定于平台的。 它建立在内存管理器和线程计划程序等操作系统子系统的基础上。
+- 考虑到每个 OS 上的存储和加密 API 都有所不同，[System.IO](https://github.com/dotnet/runtime/tree/master/src/libraries/System.IO) 和 [System.Security.Cryptography.Algorithms](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Security.Cryptography.Algorithms) 是特定于平台的。
+- 考虑到它们是通过数据结构创建和操作，[System.Collections](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Collections) 和 [System.Linq](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Linq) 是与平台无关的。
 
 ## <a name="comparisons-to-other-net-implementations"></a>与其他 .NET 实现比较
 

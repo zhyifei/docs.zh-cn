@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: cb0aca3b527c16a7abf984952795a673948775dd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 636aa76a17a887aefe51b7e7858099c541dbb21f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104644"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801835"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe（签名工具）
 签名工具是一个命令行工具，用于对文件进行数字签名，以及验证文件和时间戳文件中的签名。  
@@ -126,7 +126,7 @@ signtool [command] [options] [file_name | ...]
 |`/ds` Index |验证指定位置的签名。|  
 |`/hash` (`SHA1`&#124;`SHA256`)|指定在目录中搜索文件时要使用的可选哈希算法。|  
 |`/kp`|指定应使用内核模式驱动程序签名策略执行验证。|  
-|`/ms`|使用多个验证语义。 这是 [!INCLUDE[win8](../../../includes/win8-md.md)] 和更高版本上的 [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) 调用的默认行为。|  
+|`/ms`|使用多个验证语义。 这是 Windows 8 和更高版本上的 [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) 调用的默认行为。|  
 |`/o` Version |按操作系统版本验证文件。 版本具有以下格式  ：PlatformID：VerMajor.VerMinor.BuildNumber     。 PlatformID 表示 <xref:System.PlatformID> 枚举成员的基础值  。 **重要提示：** 建议使用 `/o` 开关。 如果未指定 `/o`，SignTool.exe 可能会返回意外的结果。 例如，如果你未将 `/o` 开关包含在内，则能在旧版操作系统上正确验证的系统目录可能在新版操作系统上无法正确验证。|  
 |`/p7`|验证 PKCS #7 文件。 无现有策略用于 PKCS #7 验证。 该签名处于选中状态，并为签名证书生成了链。|  
 |`/pa`|指定应使用默认认证码验证策略。 如果未指定 `/pa` 选项，签名工具将使用 Windows 驱动程序验证策略。 此选项不能与 `catdb` 选项一起使用。|  

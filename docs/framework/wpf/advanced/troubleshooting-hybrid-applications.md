@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: f3cddcd6cd90e7e43ea6af67725e709673f7650f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 46d8f00f9328e9c0a4df596b709195ae42d651bf
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978343"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960128"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>混合应用程序疑难解答
 <a name="introduction"></a>本主题列出了在创作同时使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]技术的混合应用程序时可能发生的一些常见问题。  
@@ -44,7 +44,7 @@ ms.locfileid: "73978343"
  不支持在 <xref:System.Windows.Forms.Integration.ElementHost> 控件内嵌套 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素。 也不支持在 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素中嵌套 <xref:System.Windows.Forms.Integration.ElementHost> 控件。  
   
 <a name="focus"></a>   
-## <a name="focus"></a>焦点  
+## <a name="focus"></a>专注  
  焦点在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]中的工作方式是不同的，这意味着混合应用程序中可能发生焦点问题。 例如，如果焦点位于 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素内，并且最小化和还原页面或显示模式对话框，则 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素中的焦点可能会丢失。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素仍具有焦点，但它内部的控件可能不具有焦点。  
   
  焦点还会影响数据验证。 验证在 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素中有效，但当您从 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素中或在两个不同的 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素之间切换时，它不起作用。  
@@ -86,7 +86,7 @@ ms.locfileid: "73978343"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>启用视觉样式  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件上的 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 视觉样式可能未启用。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 应用程序的模板中调用 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 方法。 尽管默认情况下不会调用此方法，但如果你使用 Visual Studio 创建项目，则当 Comctl32.dll 版本6.0 可用时，你将获得控件 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 视觉样式。 在线程上创建句柄之前，必须先调用 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 方法。 有关详细信息，请参阅[如何：在混合应用程序中启用视觉样式](how-to-enable-visual-styles-in-a-hybrid-application.md)。  
+ 可能未启用 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件上的 Microsoft Windows XP 视觉样式。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 应用程序的模板中调用 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 方法。 尽管默认情况下不会调用此方法，但如果你使用 Visual Studio 创建项目，你将获得适用于控件的 Microsoft Windows XP 视觉样式（如果版本6.0 的 Comctl32.dll）。 在线程上创建句柄之前，必须先调用 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 方法。 有关详细信息，请参阅[如何：在混合应用程序中启用视觉样式](how-to-enable-visual-styles-in-a-hybrid-application.md)。  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>授权控件  
@@ -112,7 +112,7 @@ ms.locfileid: "73978343"
 ## <a name="elementhost-and-ime"></a>ElementHost 和 IME  
  <xref:System.Windows.Forms.Integration.ElementHost> 中承载的 WPF 控件当前不支持 <xref:System.Windows.Forms.Control.ImeMode%2A> 属性。 所承载的控件将忽略对 <xref:System.Windows.Forms.Control.ImeMode%2A> 所做的更改。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

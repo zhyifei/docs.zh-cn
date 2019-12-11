@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 9fac74aacf6b902a25438151db247a1a4aee1f4c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 52f89df8d7f28f0e00c3becd9005b46e52b5532c
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802474"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960201"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>如何：在代码中模拟鼠标和键盘事件
 
@@ -72,7 +72,7 @@ Windows 窗体提供多个选项，用于以编程方式模拟鼠标和键盘输
 1. 激活将接收击键的应用程序窗口，然后调用 <xref:System.Windows.Forms.SendKeys.Send%2A> 或 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 方法。 由于托管的方法均不会激活其他应用程序，所以必须使用本机 Windows 方法将焦点强制设置到其他应用程序上。 下面的代码示例使用平台调用来调用 `FindWindow` 和 `SetForegroundWindow` 方法以激活计算器应用程序窗口，然后调用 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 向计算器应用程序发出一系列计算。
 
     > [!NOTE]
-    > 可查找计算器应用程序的 `FindWindow` 调用的正确参数因 Windows 版本而异。  下面的代码查找 Windows 7 上的计算器应用程序。 在 [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]上，将第一个参数更改为“SciCalc”。 可使用 Spy++ 工具（Visual Studio 附带）确定正确的参数。
+    > 可查找计算器应用程序的 `FindWindow` 调用的正确参数因 Windows 版本而异。  下面的代码查找 Windows 7 上的计算器应用程序。 在 Windows Vista 上，将第一个参数更改为 "SciCalc"。 可使用 Spy++ 工具（Visual Studio 附带）确定正确的参数。
 
     [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
     [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]
