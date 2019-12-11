@@ -64,5 +64,7 @@
           href: how-to-use-named-pipes-for-network-interprocess-communication.md
     - name: 管道
       href: pipelines.md
+    - name: 使用缓冲区
+      href: buffers.md
     - name: 内存映射文件
       href: memory-mapped-files.md
