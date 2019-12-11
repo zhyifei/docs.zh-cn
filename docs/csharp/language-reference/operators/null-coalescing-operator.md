@@ -20,19 +20,19 @@ ms.locfileid: "73739656"
 ---
 # <a name="-and--operators-c-reference"></a>?? 和 ??= 运算符（C# 参考）
 
-如果左操作数的值不为 `null`，则 null 合并运算符 `??` 返回该值；否则，它会对右操作数求值并返回其结果。 如果左操作数的求值结果为非 null，则 `??` 运算符不会对右操作数求值。
+如果空接合运算符 `??` 左侧的操作数的值不为 `null`，则运算符返回该侧操作数的值；否则，它会对右侧操作数求值并返回其结果。 如果左侧操作数的求值结果为非 null，则 `??` 运算符不会对右操作数求值。
 
-在 C# 8.0 及更高版本中，只有在左操作数的求值结果为 `null` 时，null 合并赋值运算符 `??=` 才将其右操作数的值赋值给左操作数。 如果左操作数的求值结果为非 null，则 `??=` 运算符不会对右操作数求值。
+C# 8.0 及更高版本中可使用空合并赋值运算符 `??=`，该运算符仅在左侧操作数的求值结果为 `null` 时，才将其右侧操作数的值赋值给左操作数。如果左操作数的求值结果为非 null，则 `??=` 运算符不会对右操作数求值。
 
 [!code-csharp[null-coalescing assignment](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#Assignment)]
 
-`??=` 运算符的左操作数必须是变量、[属性](../../programming-guide/classes-and-structs/properties.md)、[索引器](../../programming-guide/indexers/index.md)元素。
+`??=` 运算符的左操作数必须是变量、[属性](../../programming-guide/classes-and-structs/properties.md)或[索引器](../../programming-guide/indexers/index.md)元素。
 
 在 C# 7.3 及更早版本中，`??` 运算符左操作数的类型必须是[引用类型](../keywords/reference-types.md)或[可以为 null 的值类型](../builtin-types/nullable-value-types.md)。 从 C# 8.0 版本开始，该要求替换为以下内容：`??` 和 `??=` 运算符的左操作数的类型必须是可以为 null 的值类型。 特别是从 C# 8.0 开始，可以使用具有无约束类型参数的 null 合并运算符：
 
 [!code-csharp[unconstrained type parameter](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#UnconstrainedType)]
 
-null 合并运算符是右结合运算符。 这样的表达式
+null 合并运算符是右结合运算符。 也就是说，是窗体的表达式
 
 ```csharp
 a ?? b ?? c
