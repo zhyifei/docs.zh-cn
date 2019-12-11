@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9b8d28f7f5508b4ba7c46306b5e78aa3d53d95e0
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 9e95db8a1530fabd30b5344c87728b9210c0ad69
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71263334"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802842"
 ---
 | .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]              | [1.6]              | [2.0]               | [2.1] |
 |----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|---------------------
@@ -17,7 +17,7 @@ ms.locfileid: "71263334"
 | 通用 Windows 平台 | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0.16299         | 10.0.16299         | 10.0.16299          | 待定 |
 | Unity                      | 2018 年 1 月 | 2018 年 1 月 | 2018 年 1 月| 2018 年 1 月| 2018 年 1 月| 2018 年 1 月             |  2018 年 1 月            | 2018 年 1 月              | 待定 |
 
-<sup>1 针对 .NET framework 列出的版本适用于 .NET Core 2.0 SDK 和更高版本的工具。旧版本对 .NET Standard 1.5 及更高版本使用了不同映射。如果无法升级到 Visual Studio 2017，可[下载适用于 Visual Studio 2015 的 .NET Core 工具](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)。</sup>
+<sup>1 针对 .NET framework 列出的版本适用于 .NET Core 2.0 SDK 和更高版本的工具。旧版本对 .NET Standard 1.5 及更高版本使用了不同映射。如果无法升级到 Visual Studio 2017 或更高版本，可[下载适用于 Visual Studio 2015 的 .NET Core 工具](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)。</sup>
 
 <sup>2 此处所列的版本表示 NuGet 用于确定给定 .NET Standard 库是否适用的规则。虽然 NuGet 将 .NET Framework 4.6.1 视为支持 .NET Standard 1.5 到 2.0，但使用为从 .NET Framework 4.6.1 项目构建的 .NET Standard 库存在一系列问题。对于需要使用此类库的 .NET Framework 项目，建议将项目升级到面向 .NET Framework 4.7.2 或更高版本。</sup>
 

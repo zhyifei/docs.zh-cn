@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 3e87ba8c9442c4bba24e4e569cd20bdbdc76f6ec
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 62777356dae6e2dce9753b832f08ab2fa2cb5881
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457991"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801884"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 部署指南（针对开发人员）
 本主题为想要随自己的应用一起安装任何 .NET Framework 版本（从 .NET Framework 4.5 到 [!INCLUDE[net_current](../../../includes/net-current-version.md)]）的开发人员提供了相关信息。
@@ -51,7 +51,7 @@ ms.locfileid: "73457991"
 
 - 你必须拥有管理员特权才能安装 .NET Framework 4.5 及其单点版本。
 
-- [!INCLUDE[win8](../../../includes/win8-md.md)] 和 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 中已经包括 .NET Framework 4.5，因此你不必在这些操作系统上随你的应用一起部署此组件。 同样，[!INCLUDE[win81](../../../includes/win81-md.md)] 和 Windows Server 2012 R2 中也已包括 .NET Framework 4.5.1。 .NET Framework 4.5.2 不包含在任何操作系统中。 .NET Framework 4.6 包括在 Windows 10 中，.NET Framework 4.6.1 包括在 Windows 10 11 月更新中，而 .NET Framework 4.6.2 包括在 Windows 10 周年更新中。  .NET Framework 4.7 包含在 Windows 10 创意者更新中，.NET Framework 4.7.1 包含在 Windows 10 Fall Creators Update 中，.NET Framework 4.7.2 包含在 Windows 10 2018 年 10 月更新和 Windows 10 2018 年 4 月更新中。 .NET Framework 4.8 包含在 Windows 10 2019 年 5 月更新中。 有关硬件和软件要求的完整列表，请参阅[系统要求](../get-started/system-requirements.md)。
+- Windows 8 和 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 中已经包括 .NET Framework 4.5，因此你不必在这些操作系统上随你的应用一起部署此组件。 同样，Windows 8.1 和 Windows Server 2012 R2 中也已包括 .NET Framework 4.5.1。 .NET Framework 4.5.2 不包含在任何操作系统中。 .NET Framework 4.6 包括在 Windows 10 中，.NET Framework 4.6.1 包括在 Windows 10 11 月更新中，而 .NET Framework 4.6.2 包括在 Windows 10 周年更新中。  .NET Framework 4.7 包含在 Windows 10 创意者更新中，.NET Framework 4.7.1 包含在 Windows 10 Fall Creators Update 中，.NET Framework 4.7.2 包含在 Windows 10 2018 年 10 月更新和 Windows 10 2018 年 4 月更新中。 .NET Framework 4.8 包含在 Windows 10 2019 年 5 月更新中。 有关硬件和软件要求的完整列表，请参阅[系统要求](../get-started/system-requirements.md)。
 
 - 从 .NET Framework 4.5 开始，你的用户可以在安装过程中查看运行中 .NET Framework 应用的列表并轻松关闭这些应用。 这可能有助于避免系统因安装 .NET Framework 而重新启动。 参见 [减少系统重新启动](reducing-system-restarts.md)。
 
@@ -276,8 +276,8 @@ Windows Installer XML (WiX) 工具集通过 XML 源代码生成 Windows 安装�
 |在 Windows 10 上安装的 .NET Framework 4.6|393295|
 |在除 Windows 10 之外的所有操作系统版本上安装的 .NET Framework 4.6|393297|
 |.NET Framework 4.5.2|379893|
-|使用 [!INCLUDE[win81](../../../includes/win81-md.md)] 或 Windows Server 2012 R2 安装的 .NET Framework 4.5.1|378675|
-|在 [!INCLUDE[win8](../../../includes/win8-md.md)]、Windows 7 上安装的 .NET Framework 4.5.1|378758|
+|使用 Windows 8.1 或 Windows Server 2012 R2 安装的 .NET Framework 4.5.1|378675|
+|在 Windows 8 和 Windows 7 上安装的 .NET Framework 4.5.1|378758|
 |.NET Framework 4.5|378389|
 
 ### <a name="detecting-the-language-packs"></a>检测语言包
@@ -368,7 +368,7 @@ Windows Installer XML (WiX) 工具集通过 XML 源代码生成 Windows 安装�
 
 ## <a name="uninstalling-the-net-framework"></a>卸载 .NET Framework
 
-从 [!INCLUDE[win8](../../../includes/win8-md.md)] 开始，你可以使用“控制面板”中的“打开或关闭 Windows 功能”  来卸载 .NET Framework 4.5 或其中一个单点版本。 在旧版本 Windows 中，你可以使用“控制面板”中的“添加或删除程序”  来卸载 .NET Framework 4.5 或其中一个单点版本。
+从 Windows 8 开始，你可以使用“控制面板”中的“打开或关闭 Windows 功能”  来卸载 .NET Framework 4.5 或其中一个单点版本。 在旧版本 Windows 中，你可以使用“控制面板”中的“添加或删除程序”  来卸载 .NET Framework 4.5 或其中一个单点版本。
 
 > [!IMPORTANT]
 > 对于 Windows 7 和更低版本的操作系统，卸载 .NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 或 4.8 不会还原 .NET Framework 4.5 文件，卸载 .NET Framework 4.5 不会还原 .NET Framework 4 文件。 如果要回到旧版本，你必须重新安装此版本及其任何更新。

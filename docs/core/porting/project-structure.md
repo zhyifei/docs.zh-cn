@@ -4,12 +4,12 @@ description: 帮助希望针对 .NET Framework 和 .NET Core 并行编译解决�
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 701aa64be8d6c712ef635411ad6c226a3c3ab8ed
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 789f50ffb61b80f590a24bc45693df895b3424f7
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522979"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801936"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>组织项目以支持 .NET Framework 和 .NET Core
 
@@ -24,12 +24,12 @@ ms.locfileid: "72522979"
   - 允许通过使用编译器指令为库中特定的 .NET Framework 版本编写代码。
 
   *不支持的方案：*
-  - 要求开发者使用 Visual Studio 2017 来打开现有项目。 若要支持 Visual Studio 的早期版本，建议[将项目文件保存在不同的文件夹中](#support-vs)。
+  - 要求开发者使用 Visual Studio 2017 或更高版本来打开现有项目。 若要支持 Visual Studio 的早期版本，建议[将项目文件保存在不同的文件夹中](#support-vs)。
 
 - <a name="support-vs"></a>[将现有项目和新的 .NET Core 项目分离](#keep-existing-projects-and-create-a-net-core-project) 
 
   *此方案的好处：*
-  - 继续支持现有项目的开发，而无需为没有安装 Visual Studio 2017 的开发人员/参与者进行升级。
+  - 支持没有安装 Visual Studio 2017 或更高版本的开发人员和参与者基于现有项目开发。
   - 减少现有项目中出现新 bug 的可能性，因为这些项目中不需要进行任何代码改动。
 
 ## <a name="example"></a>示例

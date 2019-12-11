@@ -2,12 +2,12 @@
 title: .NET Core 2.0 的新增功能
 description: 了解 .NET Core 的新增功能。
 ms.date: 08/13/2017
-ms.openlocfilehash: fcac4255e7370f31ea6c26771fdd7d341bafe38b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 115b3adc72b6798c6a7bac9cc18044a8822808a6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100843"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801889"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0 的新增功能
 
@@ -136,7 +136,7 @@ Visual Studio 2017 版本 15.3 和（在某些情况下）Visual Studio for Mac 
 
 修改代码时，Live Unit Testing 在后台自动运行任何受影响的单元测试，并在 Visual Studio 环境中实时显示结果和代码覆盖率。 .NET Core 2.0 现在支持 Live Unit Testing。 以前，Live Unit Testing 仅适用于 .NET Framework 应用程序。
 
-有关详细信息，请参阅[结合使用 Live Unit Testing 和 Visual Studio 2017](/visualstudio/test/live-unit-testing) 和 [Live Unit Testing FAQ](/visualstudio/test/live-unit-testing-faq)。
+有关详细信息，请参阅[使用 Visual Studio 执行 Live Unit Testing](/visualstudio/test/live-unit-testing) 和 [Live Unit Testing 常见问题解答](/visualstudio/test/live-unit-testing-faq)。
 
 ### <a name="better-support-for-multiple-target-frameworks"></a>更好地支持多个目标框架
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: f2c22f13f74698b8cbd1474b331d65dcedfa4889
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d171a1aafe2d7e69dfbc9b16577b2d56672fdd3f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114566"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802204"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 系统要求
 
@@ -62,8 +62,8 @@ ms.locfileid: "73114566"
 | Windows 10 周年更新 | 32 位和 64 位 | .NET Framework 4.6.2 |.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8  |
 | Windows 10 November Update | 32 位和 64 位 | .NET Framework 4.6.1 | .NET Framework 4.6.2 |
 | Windows 10 | 32 位和 64 位 | .NET Framework 4.6 | .NET Framework 4.6.1 <br/><br/> .NET Framework 4.6.2 |
-| [!INCLUDE[win81](../../../includes/win81-md.md)] | 32 位、64 位和 ARM | .NET Framework 4.5.1 | .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
-| [!INCLUDE[win8](../../../includes/win8-md.md)] | 32 位、64 位和 ARM | .NET Framework 4.5 | .NET Framework 4.5.1<br /><br />.NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1 |
+| Windows 8.1 | 32 位、64 位和 ARM | .NET Framework 4.5.1 | .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows 8 | 32 位、64 位和 ARM | .NET Framework 4.5 | .NET Framework 4.5.1<br /><br />.NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1 |
 | Windows 7 SP1|32 位和 64 位 | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
 | Windows Vista SP2|32 位和 64 位 | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6 |
 | Windows XP |32 位和 64 位 | -- | .NET Framework 4 |
@@ -76,7 +76,7 @@ ms.locfileid: "73114566"
 
 - .NET Framework 4 还支持 IA64 平台。
 
-- 对于所有平台，我们都建议升级到最新的 Windows Service Pack 并安装 [Windows Update 网站](https://go.microsoft.com/fwlink/?LinkId=168461)上提供的关键更新，从而确保实现最佳兼容性和安全性。
+- 对于所有平台，我们都建议升级到最新的 Windows Service Pack 并安装 [Windows 更新](https://support.microsoft.com/help/12373/windows-update-faq)上提供的关键更新，从而确保实现最佳兼容性和安全性。
 
 - 在 64 位操作系统上，.NET Framework 支持 WOW64（在 64 位计算机上进行 32 位处理）和本机 64 位处理。
 
@@ -104,7 +104,7 @@ ms.locfileid: "73114566"
 
 - 在 Windows Server 2008 SP2 上，.NET Framework 在服务器核心角色中不受支持。
 
-- 对于所有平台，我们都建议升级到最新的 Windows Service Pack 并安装 [Windows Update 网站](https://go.microsoft.com/fwlink/?LinkId=168461)上提供的关键更新，从而确保实现最佳兼容性和安全性。 某些操作系统上可能需要安装最新的 Windows Service Pack。
+- 对于所有平台，我们都建议升级到最新的 Windows Service Pack 和 [Windows 更新](https://support.microsoft.com/help/12373/windows-update-faq)上提供的关键更新，从而确保实现最佳兼容性和安全性。 某些操作系统上可能需要安装最新的 Windows Service Pack。
 
 - 在 64 位操作系统上，.NET Framework 支持 WOW64（在 64 位计算机上进行 32 位处理）和本机 64 位处理。
 

@@ -3,12 +3,12 @@ title: 教程：编写第一个分析器和代码修补程序
 description: 本教程提供了有关使用 .NET 编译器 SDK (Roslyn API) 生成分析器和代码修补程序的分步说明。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: d6645a2a6e83f68c1959c255756393c9251dc1ba
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 7bd0fda9fb717a48c09aafde47f9b7f4f360c357
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105759"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837046"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>教程：编写第一个分析器和代码修补程序
 
@@ -427,7 +427,7 @@ foreach (var variable in localDeclaration.Declaration.Variables)
 
 [!code-csharp[Mismatched types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
 
-此外，无法正确处理引用类型。 允许用于引用类型的唯一常量值为 `null`， <xref:System.String?displayProperty=nameWIthType> 这种情况除外，后者允许字符串。 换而言之，`const string s = "abc"` 是合法的，但 `const object s = "abc"` 不是。 此代码片段验证以下条件：
+此外，无法正确处理引用类型。 允许用于引用类型的唯一常量值为 `null`， <xref:System.String?displayProperty=nameWithType> 这种情况除外，后者允许字符串。 换而言之，`const string s = "abc"` 是合法的，但 `const object s = "abc"` 不是。 此代码片段验证以下条件：
 
 [!code-csharp[Reference types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsntString "When the variable type is a reference type other than string, there's no diagnostic")]
 

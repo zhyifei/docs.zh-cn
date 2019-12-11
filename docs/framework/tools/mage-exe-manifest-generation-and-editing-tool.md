@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: aa2ad9222460f8732397f8b1c72e36085bbe4a21
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3752ac7108a9fcd55b61b32b889a717ef7c0faff
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449418"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714478"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe（清单生成和编辑工具）
 
@@ -139,9 +139,9 @@ Visual Studio 2017 包括 4.6.1 版 Mage.exe  。 使用此版本的 Mage.exe  �
 ||添加程序集|不支持|确定|
 ||删除程序集|不支持|确定|
 
- Mage.exe 创建以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]为目标的新清单。 面向 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 的 ClickOnce 应用程序可同时在 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 和完整版的 .NET Framework 4 上运行。 如果你的应用程序面向完整版的 .NET Framework 4 并且不能在 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]上运行，请通过使用文本编辑器并对清单重新签名来删除客户端 `<framework>` 元素。
+ Mage.exe 创建以 .NET Framework 4 Client Profile 为目标的新清单。 以 .NET Framework 4 Client Profile 为目标的 ClickOnce 应用程序可同时在 .NET Framework 4 Client Profile 和完整版的 .NET Framework 4 上运行。 如果你的应用程序面向完整版的 .NET Framework 4 并且不能在 .NET Framework 4 Client Profile 上运行，请通过使用文本编辑器并对清单重新签名来删除客户端 `<framework>` 元素。
 
-下面是一个面向 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 的示例 `<framework>` 元素：
+下面是一个面向 .NET Framework 4 Client Profile 的示例 `<framework>` 元素：
 
 ```xml
 <framework targetVersion="4.0" profile="client" supportedRuntime="4.0.20506" />

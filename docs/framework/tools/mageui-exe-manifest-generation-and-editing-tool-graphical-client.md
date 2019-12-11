@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 99f522181232d16b9913ba3c55f34274b75d8966
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7d09e1283be8ec75df89957e91f0d8411c125b3b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449411"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714462"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe（图形化客户端中的清单生成和编辑工具）
 
-除了使用基于 Windows 的用户界面 (UI) 之外，MageUI.exe 与命令行工具 Mage.exe 支持的功能完全相同。 使用此工具，你可以对部署清单和应用程序清单执行创建、编辑和签名操作。 用 MageUI.exe 创建的新清单以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 为目标。 早期版本的 MageUI.exe 应用于以 .NET Framework 的早期版本为目标。 在清单中添加或删除程序集时或重新对现有清单签名时，MageUI.exe 不会将清单更新为以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 为目标。 有关详细信息，请参阅 [Mage.exe（清单生成和编辑工具）](mage-exe-manifest-generation-and-editing-tool.md)。
+除了使用基于 Windows 的用户界面 (UI) 之外，MageUI.exe 与命令行工具 Mage.exe 支持的功能完全相同。 使用此工具，你可以对部署清单和应用程序清单执行创建、编辑和签名操作。 用 MageUI.exe 创建的新清单以 .NET Framework 4 Client Profile 为目标。 早期版本的 MageUI.exe 应用于以 .NET Framework 的早期版本为目标。 在清单中添加或删除程序集时或重新对现有清单签名时，MageUI.exe 不会将清单更新为以 .NET Framework 4 Client Profile 为目标。 有关详细信息，请参阅 [Mage.exe（清单生成和编辑工具）](mage-exe-manifest-generation-and-editing-tool.md)。
 
  此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。
 
