@@ -15,7 +15,7 @@ ms.locfileid: "73739831"
 
 <span data-ttu-id="cc630-105">本节重点介绍在需要降低子系统复杂性时实现的更高级的微服务，或按不断变化的业务规则派生自域专家知识的微服务。</span><span class="sxs-lookup"><span data-stu-id="cc630-105">This section focuses on more advanced microservices that you implement when you need to tackle complex subsystems, or microservices derived from the knowledge of domain experts with ever-changing business rules.</span></span> <span data-ttu-id="cc630-106">本节中使用的体系结构模式基于域驱动的设计 (DDD) 以及命令和查询责任分离 (CQRS) 方法，如图 7-1 中所示。</span><span class="sxs-lookup"><span data-stu-id="cc630-106">The architecture patterns used in this section are based on domain-driven design (DDD) and Command and Query Responsibility Segregation (CQRS) approaches, as illustrated in Figure 7-1.</span></span>
 
-<span data-ttu-id="cc630-107">:::image type="complex" source="./media/index/internal-versus-external-architecture.png" alt-text="比较外部和内部体系结构模式的关系图。":::</span><span class="sxs-lookup"><span data-stu-id="cc630-107">:::image type="complex" source="./media/index/internal-versus-external-architecture.png" alt-text="Diagram comparing external and internal architecture patterns.":::</span></span>
+:::image type="complex" source="./media/index/internal-versus-external-architecture.png" alt-text="比较外部和内部体系结构模式的关系图。":::
 <span data-ttu-id="cc630-108">外部体系结构（微服务模式、API 网关、弹性通信、发布/订阅等）和内部体系结构（数据驱动/CRUD、DDD 模式、依赖关系注入、多个库等）之间的区别。</span><span class="sxs-lookup"><span data-stu-id="cc630-108">Difference between external architecture: microservice patterns, API gateways, resilient communications, pub/sub, etc., and internal architecture: data driven/CRUD, DDD patterns, dependency injection, multiple libraries, etc.</span></span>
 :::image-end:::
 
