@@ -16,13 +16,13 @@ ms.locfileid: "74346706"
 
 *对象*结合了可以视为一个单元的代码和数据。 对象可以是应用程序的一部分（如控件或窗体）， 也可以是整个应用程序。
 
-When you create an application in Visual Basic, you constantly work with objects. You can use objects provided by Visual Basic, such as controls, forms, and data access objects. You can also use objects from other applications within your Visual Basic application. 甚至可以创建你自己的对象，并为它们定义附加属性和方法。 对象类似于程序的预制构建基块，可方便你编写一次代码片段，然后不断重用它。
+在 Visual Basic 中创建应用程序时，会不断地处理对象。 您可以使用 Visual Basic 提供的对象，例如控件、窗体和数据访问对象。 你还可以使用 Visual Basic 应用程序中的其他应用程序的对象。 甚至可以创建你自己的对象，并为它们定义附加属性和方法。 对象类似于程序的预制构建基块，可方便你编写一次代码片段，然后不断重用它。
 
 此主题详细介绍了对象。
 
 ## <a name="objects-and-classes"></a>对象和类
 
-Each object in Visual Basic is defined by a *class*. 类描述了对象的变量、属性、过程和事件。 对象是类实例；定义类之后，便可以根据需要创建任意多个对象。
+Visual Basic 中的每个对象都由一个*类*定义。 类描述了对象的变量、属性、过程和事件。 对象是类实例；定义类之后，便可以根据需要创建任意多个对象。
 
 想想饼干切模和饼干，即可理解对象与其类之间的关系。 饼干切模是类。 它定义了每个饼干的特征，例如大小和形状。 类用于创建对象。 对象是饼干。
 
@@ -108,7 +108,7 @@ warningLabel.ForeColor = System.Drawing.Color.Red
 
 ### <a name="methods"></a>方法
 
-“方法”是对象可以执行的操作。 例如，<xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A> 是 <xref:System.Windows.Forms.ComboBox> 对象的方法，该对象将新条目添加到组合框。
+*方法*是对象可以执行的操作。 例如，<xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A> 是 <xref:System.Windows.Forms.ComboBox> 对象的方法，该对象将新条目添加到组合框。
 
 下面的示例演示 <xref:System.Windows.Forms.Timer> 对象的 <xref:System.Windows.Forms.Timer.Start%2A> 用法。
 
@@ -121,7 +121,7 @@ safetyTimer.Start()
 
 有关详细信息，请参阅[过程](../../../../visual-basic/programming-guide/language-features/procedures/index.md)。
 
-### <a name="events"></a>事件
+### <a name="events"></a>Events
 
 事件是由对象识别的操作（如单击鼠标或按某个键），可以编写代码来响应这些操作。 事件可能是由用户操作或程序代码生成，也可能是由系统生成。 提示事件发生的代码可以说是负责*引发*事件，而响应事件的代码则可以说是负责*处理*事件。
 
@@ -176,7 +176,7 @@ safetyTimer.Start()
 
 使用对象，只需声明变量和过程一次，即可根据需要随时重用它们。 例如，如果要向应用程序添加拼写检查，可以定义所有变量和支持函数，以提供拼写检查功能。 如果将拼写检查创建为类，可以添加对已编译程序集的引用，从而在其他应用程序中重用此类。 更好的是，可以使用别人已经开发的拼写检查类，从而减少自己的工作量。
 
-The .NET Framework provides many examples of components that are available for use. 下面的示例使用 <xref:System> 命名空间中的 <xref:System.TimeZone> 类。 <xref:System.TimeZone> 提供的成员可检索当前计算机系统的时区信息。
+.NET Framework 提供了许多可供使用的组件示例。 下面的示例使用 <xref:System> 命名空间中的 <xref:System.TimeZone> 类。 <xref:System.TimeZone> 提供的成员可检索当前计算机系统的时区信息。
 
 ```vb
 Public Sub examineTimeZone()
@@ -249,14 +249,14 @@ End Sub
 
 #### <a name="collections"></a>集合
 
-一种特殊类型的对象包含关系用*集合*来表示。 集合是一组可以枚举的类似对象。 Visual Basic supports a specific syntax in the [For Each...Next Statement](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) that allows you to iterate through the items of a collection. 此外，借助集合，通常还可以使用 <xref:Microsoft.VisualBasic.Collection.Item%2A> 根据索引检索元素，或通过将元素与唯一字符串相关联进行检索。 集合比数组更易于使用，因为无需使用索引，即可添加或删除项。 鉴于它的易用性，集合通常用于存储窗体和控件。
+一种特殊类型的对象包含关系用*集合*来表示。 集合是一组可以枚举的类似对象。 Visual Basic 支持中的特定语法[.。。](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)允许您循环访问集合中的项的下一条语句。 此外，借助集合，通常还可以使用 <xref:Microsoft.VisualBasic.Collection.Item%2A> 根据索引检索元素，或通过将元素与唯一字符串相关联进行检索。 集合比数组更易于使用，因为无需使用索引，即可添加或删除项。 鉴于它的易用性，集合通常用于存储窗体和控件。
 
 ## <a name="related-topics"></a>相关主题
 
-[Walkthrough: Defining Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)\
+[演练：定义类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)\
 分步说明了如何创建类。
 
-[Overloaded Properties and Methods](../../../../visual-basic/programming-guide/language-features/objects-and-classes/overloaded-properties-and-methods.md)\
+[重载属性和方法](../../../../visual-basic/programming-guide/language-features/objects-and-classes/overloaded-properties-and-methods.md)\
 重载属性和方法
 
 [继承的基础知识](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)\
@@ -271,5 +271,5 @@ End Sub
 [对象初始值设定项：命名类型和匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)\
 介绍了对象初始值设定项，用于通过一个表达式创建已命名和匿名类型的实例。
 
-[How to: Infer Property Names and Types in Anonymous Type Declarations](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\
+[如何：](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\ 中推断匿名类型声明中的属性名称和类型
 介绍了如何推断匿名类型声明中的属性名称和类型。 收录了推理成功和失败的示例。

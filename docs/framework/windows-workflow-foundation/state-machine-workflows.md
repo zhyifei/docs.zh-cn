@@ -21,7 +21,7 @@ ms.locfileid: "74710914"
   
 - <xref:System.Activities.Statements.Transition>  
   
- 为了创建状态机工作流，需要将状态将添加到 <xref:System.Activities.Statements.StateMachine> 活动中，并且使用转换控制各状态之间的流。 以下屏幕截图，从[入门教程](getting-started-tutorial.md)步骤[如何：创建状态机工作流](how-to-create-a-state-machine-workflow.md)中，显示具有三种状态和三个转换的状态机工作流。 **Initialize Target**是初始状态，表示工作流中的第一个状态。 这由从**开始**节点指向它的行指定。 工作流中的最终状态名为**FinalState**，表示工作流的完成点。  
+ 为了创建状态机工作流，需要将状态将添加到 <xref:System.Activities.Statements.StateMachine> 活动中，并且使用转换控制各状态之间的流。 下面是[入门教程](getting-started-tutorial.md)步骤的屏幕截图 [操作方法：](how-to-create-a-state-machine-workflow.md)创建状态机工作流，显示具有三种状态和三个转换的状态机工作流。 **Initialize Target**是初始状态，表示工作流中的第一个状态。 这由从**开始**节点指向它的行指定。 工作流中的最终状态名为**FinalState**，表示工作流的完成点。  
   
  ![显示已完成状态机工作流的插图。](./media/state-machine-workflows/complete-state-machine-workflow.jpg)  
   
@@ -59,12 +59,12 @@ ms.locfileid: "74710914"
 > [!NOTE]
 > 注意，如果转换的 <xref:System.Activities.Statements.Transition.Condition%2A> 计算结果为 `False`（或所有共享触发转换条件的计算结果均为 `False`），转换将不发生，并且此状态下的所有转换的所有触发将被重新计划。  
   
- 有关创建状态机工作流的详细信息，请参阅[如何：创建状态机工作流](how-to-create-a-state-machine-workflow.md)、 [StateMachine 活动设计器](/visualstudio/workflow-designer/statemachine-activity-designer)、[状态活动设计器](/visualstudio/workflow-designer/state-activity-designer)、 [FinalState 活动设计](/visualstudio/workflow-designer/finalstate-activity-designer)器和[转换活动设计器](/visualstudio/workflow-designer/transition-activity-designer)。  
+ 有关创建状态机工作流的详细信息，请参阅 [如何：创建状态机工作流](how-to-create-a-state-machine-workflow.md)、 [StateMachine 活动设计器](/visualstudio/workflow-designer/statemachine-activity-designer)、[状态活动设计](/visualstudio/workflow-designer/state-activity-designer)器、 [FinalState 活动](/visualstudio/workflow-designer/finalstate-activity-designer)设计器和[转换活动设计器](/visualstudio/workflow-designer/transition-activity-designer)。  
   
 ## <a name="state-machine-terminology"></a>状态机术语  
  本节定义本主题中使用的状态机词汇。  
   
- State  
+ 状态  
  构成状态机的基本单位。 状态机在任何特定时间都可处于某一状态。  
   
  进入操作  
@@ -100,7 +100,7 @@ ms.locfileid: "74710914"
  最终状态  
  表示状态机完成的一种状态。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [如何：创建状态机工作流](how-to-create-a-state-machine-workflow.md)
 - [StateMachine 活动设计器](/visualstudio/workflow-designer/statemachine-activity-designer)
