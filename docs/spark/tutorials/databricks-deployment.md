@@ -4,12 +4,12 @@ description: 了解如何将 .NET for Apache Spark 应用程序部署到 Databri
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e79b4c5bf38416cf45776488559bd0b2d5582361
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: dfd33e83c04428b7a6a72e4992c40f00982b1958
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716470"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960461"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>教程：将 .NET for Apache Spark 应用程序部署到 Databricks
 
@@ -130,7 +130,7 @@ Databricks CLI 安装完毕之后，接下来需要设置身份验证详细信�
 
    ```console
    cd mySparkApp
-   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x6
+   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
    ```
 
    **在 Linux 上：**
