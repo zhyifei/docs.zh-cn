@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 5ead3d1ac37b3c7ee50f18a81530720205678de2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0ce7182af33a795188d01ac457b9d45b8ad305dd
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122008"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960385"
 ---
 # <a name="managed-execution-process"></a>托管执行过程
 <a name="introduction"></a> 托管的执行过程包括以下步骤，在本主题后面将对此进行详细讨论：  
@@ -95,7 +95,7 @@ ms.locfileid: "73122008"
   
  在执行期间，托管代码接收服务，如垃圾收集、安全性、与非托管代码的互操作性、跨语言调试支持以及增强的部署和版本控制支持。  
   
- 在 Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] 和 [!INCLUDE[windowsver](../../includes/windowsver-md.md)]中，操作系统加载程序通过检查 COFF 标头中的一个位检查托管模块。 所设置的位表示托管模块。 如果加载程序检测到托管模块，它将加载 mscoree.dll， `_CorValidateImage` 并且 `_CorImageUnloading` 在加载和卸载托管模块映像时通知加载程序。 `_CorValidateImage` 执行以下操作：  
+ 在 Microsoft Windows Vista 中，操作系统加载程序通过检查 COFF 标头中的一个位检查托管模块。 所设置的位表示托管模块。 如果加载程序检测到托管模块，它将加载 mscoree.dll， `_CorValidateImage` 并且 `_CorImageUnloading` 在加载和卸载托管模块映像时通知加载程序。 `_CorValidateImage` 执行以下操作：  
   
 1. 确保代码是有效的托管代码。  
   

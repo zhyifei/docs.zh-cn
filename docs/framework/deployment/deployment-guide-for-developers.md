@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 62777356dae6e2dce9753b832f08ab2fa2cb5881
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 1b7fccc673f82986a53dcb3dfcb68e8575b99dfd
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801884"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960000"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 部署指南（针对开发人员）
 本主题为想要随自己的应用一起安装任何 .NET Framework 版本（从 .NET Framework 4.5 到 [!INCLUDE[net_current](../../../includes/net-current-version.md)]）的开发人员提供了相关信息。
@@ -51,7 +51,7 @@ ms.locfileid: "74801884"
 
 - 你必须拥有管理员特权才能安装 .NET Framework 4.5 及其单点版本。
 
-- Windows 8 和 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 中已经包括 .NET Framework 4.5，因此你不必在这些操作系统上随你的应用一起部署此组件。 同样，Windows 8.1 和 Windows Server 2012 R2 中也已包括 .NET Framework 4.5.1。 .NET Framework 4.5.2 不包含在任何操作系统中。 .NET Framework 4.6 包括在 Windows 10 中，.NET Framework 4.6.1 包括在 Windows 10 11 月更新中，而 .NET Framework 4.6.2 包括在 Windows 10 周年更新中。  .NET Framework 4.7 包含在 Windows 10 创意者更新中，.NET Framework 4.7.1 包含在 Windows 10 Fall Creators Update 中，.NET Framework 4.7.2 包含在 Windows 10 2018 年 10 月更新和 Windows 10 2018 年 4 月更新中。 .NET Framework 4.8 包含在 Windows 10 2019 年 5 月更新中。 有关硬件和软件要求的完整列表，请参阅[系统要求](../get-started/system-requirements.md)。
+- Windows 8 和 Windows Server 2012 中已经包括 .NET Framework 4.5，因此你不必在这些操作系统上随你的应用一起部署此组件。 同样，Windows 8.1 和 Windows Server 2012 R2 中也已包括 .NET Framework 4.5.1。 .NET Framework 4.5.2 不包含在任何操作系统中。 .NET Framework 4.6 包括在 Windows 10 中，.NET Framework 4.6.1 包括在 Windows 10 11 月更新中，而 .NET Framework 4.6.2 包括在 Windows 10 周年更新中。  .NET Framework 4.7 包含在 Windows 10 创意者更新中，.NET Framework 4.7.1 包含在 Windows 10 Fall Creators Update 中，.NET Framework 4.7.2 包含在 Windows 10 2018 年 10 月更新和 Windows 10 2018 年 4 月更新中。 .NET Framework 4.8 包含在 Windows 10 2019 年 5 月更新中。 有关硬件和软件要求的完整列表，请参阅[系统要求](../get-started/system-requirements.md)。
 
 - 从 .NET Framework 4.5 开始，你的用户可以在安装过程中查看运行中 .NET Framework 应用的列表并轻松关闭这些应用。 这可能有助于避免系统因安装 .NET Framework 而重新启动。 参见 [减少系统重新启动](reducing-system-restarts.md)。
 

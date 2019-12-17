@@ -12,12 +12,12 @@ helpviewer_keywords:
 - dates [.NET Framework], milliseconds
 - milliseconds [.NET Framework]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-ms.openlocfilehash: 01a34289b4845048438a3d3fd9263d1dcd1028c1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 36d99753503d9ba4b1bde4143c86ba184674e53e
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138850"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960406"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>如何：显示日期和时间值中的毫秒
 默认日期和时间格式设置方法（如 <xref:System.DateTime.ToString?displayProperty=nameWithType>）包含时间值的小时、分钟和秒部分，但不包含毫秒部分。 本主题说明如何在格式化日期和时间字符串中包含日期和时间的毫秒部分。  
@@ -47,7 +47,7 @@ ms.locfileid: "73138850"
  [!code-vb[Formatting.HowTo.Millisecond#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.Millisecond/vb/Millisecond.vb#3)]  
   
 > [!NOTE]
-> 可以显示秒的非常小的小数单位，如万分之几秒或十万分之几秒。 但是，这些值可能没有意义。 日期和时间值的精度取决于系统时钟的分辨率。 在 Windows NT 3.5 及更高版本和 [!INCLUDE[windowsver](../../../includes/windowsver-md.md)] 操作系统上，时钟精度大约为 10-15 毫秒。  
+> 可以显示秒的非常小的小数单位，如万分之几秒或十万分之几秒。 但是，这些值可能没有意义。 日期和时间值的精度取决于系统时钟的分辨率。 在 Windows NT 3.5 和更高版本以及 Windows Vista 操作系统上，时钟的分辨率大约为 10-15 毫秒。  
   
 ## <a name="see-also"></a>请参阅
 

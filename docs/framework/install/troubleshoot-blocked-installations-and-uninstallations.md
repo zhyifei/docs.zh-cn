@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, troubleshooting blocked installations
 - blocked .NET Framework installations, troubleshooting
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
-ms.openlocfilehash: d0f3d857a90aca763121595151a2193125b47c6c
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: df7eaf971f3a54057758dc7d974ae00cd4797ad7
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975630"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960023"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>安装和卸载 .NET Framework 受阻疑难解答
 
@@ -48,7 +48,7 @@ ms.locfileid: "73975630"
 |此操作系统已包含 .NET Framework 4.5.x/4.6.x/4.7.x/4.8。 无需安装 .NET Framework 4.5.x/4.6.x/4.7.x/4.8 可再发行组件。|不执行任何操作。<br /><br /> 要确定系统上安装了哪些版本的 .NET Framework，请参阅[如何：确定已安装的 .NET Framework 版本](../migration-guide/how-to-determine-which-versions-are-installed.md)。 请参阅[系统需求](../get-started/system-requirements.md)以了解受支持的操作系统。|  
 |此操作系统不支持 .NET Framework 4.5.x/4.6.x/4.7.x/4.8。|请参阅[系统需求](../get-started/system-requirements.md)以了解受支持的操作系统。<br /><br /> Windows 7 上安装 .NET Framework 失败时，此消息通常会指示未安装 Windows 7 SP1。 在 Windows 7 系统上，.NET Framework 要求安装 Windows 7 SP1。 如果你使用的是 Windows 7 系统，但尚未安装 Service Pack 1，则需要先安装 SP1，然后才能安装 .NET Framework。 有关安装 Windows 7 SP1 的信息，请参阅[了解如何安装 Windows 7 Service Pack 1 (SP1)](https://windows.microsoft.com/windows7/install-windows-7-service-pack-1)。|  
 |你的计算机当前正在运行 Windows Server 2008 操作系统的服务器核心安装。 .NET Framework 4.5.x 需要完整版本的操作系统或 Server Core 2008 R2 SP1。 请安装完整版的 Windows Server 2008 SP2、Windows Server 2008 R2 SP1 或 Server Core 2008 R2 SP1，然后重新运行 .NET Framework 4.5.x 安装程序。|.NET Framework 在带有 Windows Server 2008 R2 SP1 或更高版本的服务器核心角色中受支持。 请参阅[系统需求](../get-started/system-requirements.md)。|  
-|.NET Framework 4.5.x 已包含在此操作系统中，但当前处于关闭状态（仅限 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]）。| 使用“控制面板”中的“打开或关闭 Windows 功能”，以打开 .NET Framework 4.5.x   。 |  
+|.NET Framework 4.5.x 已包含在此操作系统中，但当前处于关闭状态（仅限 Windows Server 2012）。| 使用“控制面板”中的“打开或关闭 Windows 功能”，以打开 .NET Framework 4.5.x   。 |  
 |此安装程序要求使用 x86 计算机。 不能在 x64 或 IA64 计算机上安装此程序。|请参阅[系统需求](../get-started/system-requirements.md)。|  
 |此安装程序要求使用 x64 或 x86 计算机。 不能在 IA64 计算机上安装此程序。|请参阅[系统需求](../get-started/system-requirements.md)。|  
 
