@@ -293,7 +293,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 >   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
 > - ASP.NET Core 中的集成测试   \
 >   <https://docs.microsoft.com/aspnet/core/test/integration-tests>
-> - ASP.NET Community Standup - 2018 年 5 月 15 日 - 使用 Javier C. Nelson 进行 MVC 测试 - YouTube 视频 \ 
+> - **ASP.NET Community Standup - 2018 年 5 月 15 日 - 使用 Javier C. Nelson 进行 MVC 测试 - YouTube 视频** \
 >   <https://www.youtube.com/watch?v=wtOE-xmFJkw&list=PL1rZQsJPBU2StolNg0aqvQswETPcYnNKL&index=5>
 
 >[!div class="step-by-step"]
