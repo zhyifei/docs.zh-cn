@@ -91,7 +91,7 @@ ms.locfileid: "74567716"
 
 - **✔️ 扩展非 [成员的可见性](../../csharp/language-reference/keywords/sealed.md)**
 
-- **✔️ 向不包含任何可访问的（公共或受保护的）构造函数或为 [sealed](../../csharp/language-reference/keywords/sealed.md) 类型的公共类型添加抽象成员 **
+- **✔️向不包含任何可访问的（公共或受保护的）构造函数或为 [sealed](../../csharp/language-reference/keywords/sealed.md) 类型的公共类型添加抽象成员** 
 
   但不允许向包含可访问的（公共或受保护的）构造函数且非 `sealed` 类型的类型添加抽象成员。
 
@@ -164,7 +164,7 @@ ms.locfileid: "74567716"
 
   [抽象成员](../../csharp/language-reference/keywords/virtual.md)提供可以由派生类重写的方法实现。  [抽象成员](../../csharp/language-reference/keywords/abstract.md)不提供任何实现，且必须重写。 
 
-- **❌ 向包含可访问的（公共或受保护的）构造函数且非 [sealed](../../csharp/language-reference/keywords/sealed.md) 类型的公共类型添加抽象成员**
+- **❌向包含可访问的（公共或受保护的）构造函数且非 [sealed](../../csharp/language-reference/keywords/sealed.md) 类型的公共类型添加抽象成员**
 
 - **❌ 从成员添加或删除 [static](../../csharp/language-reference/keywords/static.md) 关键字**
 
@@ -262,9 +262,9 @@ ms.locfileid: "74567716"
 
 ### <a name="attributes"></a>特性
 
-- **✔️ 更改不可观测的属性的值 **
+- **✔️更改不可观测的属性的值** 
 
-- **❌ 更改可观测的属性的值 **
+- **❌更改可观测的属性的值** 
 
 - ❓ 删除属性 
 

@@ -116,7 +116,7 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 生产就绪型解决方案，内附对 RabbitMQ 的支持。
 
-- **EasyNetQ** - 为 RabbitMQ 打开源 .NET API 客户端
+- **EasyNetQ** - 为 RabbitMQ 打开源 .NET API 客户端 \
   <http://easynetq.com/>
 
 - **MassTransit** \

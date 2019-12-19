@@ -94,7 +94,7 @@ ML.NET 提供了各种执行图像分类的方式。 本教程使用图像分类
 ### <a name="prepare-and-understand-the-data"></a>准备和了解数据
 
 > [!NOTE]
-> 本教程的数据集来自由 Maguire, Marc、Dorafshan, Sattar 和 Thomas, Robert J. 共同撰写的“SDNET2018：机器学习应用程序的混凝土裂缝图像数据集”(2018)。 浏览所有数据集。 论文 48。 https://digitalcommons.usu.edu/all_datasets/48
+> 本教程的数据集来自由 Maguire, Marc、Dorafshan, Sattar 和 Thomas, Robert J. 共同撰写的“SDNET2018：机器学习应用程序的混凝土裂缝图像数据集”(2018)。 浏览所有数据集。 论文 48。 [https://digitalcommons.usu.edu/all_datasets/48](https://digitalcommons.usu.edu/all_datasets/48 )
 
 SDNET2018 是一个图像数据集，其中包含有裂缝和无裂缝混凝土结构（桥面、墙壁和人行道）的注释。
 
