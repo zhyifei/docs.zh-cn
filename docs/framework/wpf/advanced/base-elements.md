@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 55034aa5-3c1d-442a-8293-f4692d8ea6ae
-ms.openlocfilehash: a1f7105ee6590314eb2ebbfa52b511f55f83dc05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0d3c5198c6c4146cf92201b08781041043c4a72
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926403"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73453595"
 ---
 # <a name="base-elements"></a>基元素
-四个关键类<xref:System.Windows.UIElement>， <xref:System.Windows.ContentElement>， <xref:System.Windows.FrameworkElement>，和<xref:System.Windows.FrameworkContentElement>-实现的大部分可用在 WPF 编程中的常见元素功能。 这四个类作为基元素类引用到此 SDK 中。  
+四个关键类--<xref:System.Windows.UIElement>、<xref:System.Windows.ContentElement>、<xref:System.Windows.FrameworkElement>和 <xref:System.Windows.FrameworkContentElement>，实现 WPF 编程中可用的大量公共元素功能。 在此 SDK 中，这四个类作为基元素类引用。  
   
 ## <a name="in-this-section"></a>本节内容  
  [基元素概述](base-elements-overview.md)  
@@ -22,7 +22,7 @@ ms.locfileid: "61926403"
  [对齐、边距和填充概述](alignment-margins-and-padding-overview.md)  
  [帮助主题](base-elements-how-to-topics.md)  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.ContentElement>  
@@ -39,5 +39,5 @@ ms.locfileid: "61926403"
   [事件](events-wpf.md)  
   [输入](input-wpf.md)  
   [资源](resources-wpf.md)  
-  [样式设置和模板化](../controls/styling-and-templating.md)  
+  [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   [线程模型](threading-model.md)

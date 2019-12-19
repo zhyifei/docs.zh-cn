@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization [WPF]
 - tree [WPF]
 ms.assetid: 8f57e879-180b-421f-b3d0-ac007ff2ce80
-ms.openlocfilehash: 4c178213e08add247311f0b71517ed292bd6658a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afddaab6a7f5e9ef445da48d013ace59b84611cd
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962431"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460469"
 ---
 # <a name="element-tree-and-serialization"></a>元素树和序列化
 WPF 编程元素彼此之间通常以某种形式的树关系存在。 例如，XAML 中创建的应用程序 UI 可概念化为一个对象树。 可进一步将元素树分为两个离散但有时会并行的树：逻辑树和可视化树。 WPF 中的序列化涉及保存这两个树和应用程序的状态并将状态写入文件（可能以 XAML 形式）。  
@@ -24,7 +24,7 @@ WPF 编程元素彼此之间通常以某种形式的树关系存在。 例如，
  [不在对象树中的对象元素的初始化](initialization-for-object-elements-not-in-an-object-tree.md)  
  [帮助主题](element-tree-and-serialization-how-to-topics.md)  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Windows.Markup>  
   
  <xref:System.Windows.LogicalTreeHelper>  
@@ -39,5 +39,5 @@ WPF 编程元素彼此之间通常以某种形式的树关系存在。 例如，
   [事件](events-wpf.md)  
   [输入](input-wpf.md)  
   [资源](resources-wpf.md)  
-  [样式设置和模板化](../controls/styling-and-templating.md)  
+  [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   [线程模型](threading-model.md)

@@ -16,11 +16,11 @@ ms.locfileid: "74350228"
 |---|---|---|---|  
 |[AddHandler](addhandler-statement.md)|[Call](call-statement.md)|[类](class-statement.md)|[Const](const-statement.md)|  
 |[Continue](continue-statement.md)|[Declare](declare-statement.md)|[Delegate](delegate-statement.md)|[Dim](dim-statement.md)|  
-|[Do...Loop](do-loop-statement.md)|[Else](else-statement.md)|[End](end-statement.md)|[End \<keyword>](end-keyword-statement.md)|  
+|[Do .。。圈](do-loop-statement.md)|[Else](else-statement.md)|[End](end-statement.md)|[End \<keyword>](end-keyword-statement.md)|  
 |[Enum](enum-statement.md)|[Erase](erase-statement.md)|[错误](error-statement.md)|[Event](event-statement.md)|  
 |[退出](exit-statement.md)||||  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [F-P 语句](f-p-statements.md)
 - [Q-Z 语句](q-z-statements.md)

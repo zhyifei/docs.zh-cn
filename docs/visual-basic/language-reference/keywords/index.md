@@ -32,33 +32,33 @@ ms.locfileid: "74338780"
 |---|---|---|---|
 |[AddHandler](../statements/addhandler-statement.md)|[AddressOf](../operators/addressof-operator.md)|[Alias](../statements/alias-clause.md)|[And](../operators/and-operator.md)|  
 |[AndAlso](../operators/andalso-operator.md)|[As](../statements/as-clause.md)|[布尔值](../data-types/boolean-data-type.md)|[ByRef](../modifiers/byref.md)|  
-|[Byte](../data-types/byte-data-type.md)|[ByVal](../modifiers/byval.md)|[Call](../statements/call-statement.md)|[Case](../statements/select-case-statement.md)|  
+|[Byte](../data-types/byte-data-type.md)|[ParamArray](../modifiers/byval.md)|[Call](../statements/call-statement.md)|[Case](../statements/select-case-statement.md)|  
 |[Catch](../statements/try-catch-finally-statement.md)|[CBool](../functions/type-conversion-functions.md)|[CByte](../functions/type-conversion-functions.md)|[CChar](../functions/type-conversion-functions.md)|  
 |[CDate](../functions/type-conversion-functions.md)|[CDbl](../functions/type-conversion-functions.md)|[CDec](../functions/type-conversion-functions.md)|[Char](../data-types/char-data-type.md)|  
 |[CInt](../functions/type-conversion-functions.md)|[Class Constraint](../statements/type-list.md)|[Class 语句](../statements/class-statement.md)|[CLng](../functions/type-conversion-functions.md)|  
 |[CObj](../functions/type-conversion-functions.md)|[Const](../statements/const-statement.md)|[Continue](../statements/continue-statement.md)|[CSByte](../functions/type-conversion-functions.md)|  
 |[CShort](../functions/type-conversion-functions.md)|[CSng](../functions/type-conversion-functions.md)|[CStr](../functions/type-conversion-functions.md)|[CType](../functions/type-conversion-functions.md)|  
 |[CUInt](../functions/type-conversion-functions.md)|[CULng](../functions/type-conversion-functions.md)|[CUShort](../functions/type-conversion-functions.md)|[Date](../data-types/date-data-type.md)|  
-|[小数](../data-types/decimal-data-type.md)|[Declare](../statements/declare-statement.md)|[默认](../modifiers/default.md)|[Delegate](../statements/delegate-statement.md)|  
+|[小数](../data-types/decimal-data-type.md)|[Declare](../statements/declare-statement.md)|[Default](../modifiers/default.md)|[Delegate](../statements/delegate-statement.md)|  
 |[Dim](../statements/dim-statement.md)|[DirectCast](../operators/directcast-operator.md)|[Do](../statements/do-loop-statement.md)|[双精度](../data-types/double-data-type.md)|  
 |[Each](../statements/for-each-next-statement.md)|[Else](../statements/else-statement.md)|[ElseIf](../statements/if-then-else-statement.md)|[End 语句](../statements/end-statement.md)|  
 |[End \<keyword>](../statements/end-keyword-statement.md)|`EndIf`|[Enum](../statements/enum-statement.md)|[Erase](../statements/erase-statement.md)|  
 |[错误](../statements/on-error-statement.md)|[Event](../statements/event-statement.md)|[退出](../statements/exit-statement.md)|[False](../data-types/boolean-data-type.md)|  
 |[Finally](../statements/try-catch-finally-statement.md)|[For (in For…Next)](../statements/for-next-statement.md)|[For Each…Next](../statements/for-each-next-statement.md)|[Friend](../modifiers/friend.md)|  
 |[Function](../statements/function-statement.md)|[Get](../statements/get-statement.md)|[GetType](../operators/gettype-operator.md)|[GetXMLNamespace](../operators/getxmlnamespace-operator.md)|  
-|[Global](../../../visual-basic/programming-guide/program-structure/namespaces.md)|`GoSub`|[GoTo](../statements/goto-statement.md)|[Handles](../statements/handles-clause.md)|  
+|[Global](../../../visual-basic/programming-guide/program-structure/namespaces.md)|`GoSub`|[GoTo](../statements/goto-statement.md)|[!](../statements/handles-clause.md)|  
 |[如果](../statements/if-then-else-statement.md)|[If()](../operators/if-operator.md)|[Implements](../statements/implements-clause.md)|[Implements 语句](../statements/implements-statement.md)|  
 |[Imports (.NET Namespace and Type)](../statements/imports-statement-net-namespace-and-type.md)|[Imports (XML Namespace)](../statements/imports-statement-xml-namespace.md)|[In](../statements/in-clause.md)|[In（泛型修饰符）](../modifiers/in-generic-modifier.md)|  
 |[Inherits](../statements/inherits-statement.md)|[Integer](../data-types/integer-data-type.md)|[Interface](../statements/interface-statement.md)|[Is](../operators/is-operator.md)|  
 |[IsNot](../operators/isnot-operator.md)|[Let](../queries/let-clause.md)|[Lib](../statements/declare-statement.md)|[Like](../operators/like-operator.md)|  
 |[Long](../data-types/long-data-type.md)|[Loop](../statements/do-loop-statement.md)|[Me](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Mod](../operators/mod-operator.md)|  
-|[模块](../modifiers/module-keyword.md)|[Module 语句](../statements/module-statement.md)|[MustInherit](../modifiers/mustinherit.md)|[MustOverride](../modifiers/mustoverride.md)|  
-|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[NameOf](../operators/nameof.md)|[命名空间](../statements/namespace-statement.md)|
-|[Narrowing](../modifiers/narrowing.md)|[New Constraint](../statements/type-list.md)|[New 运算符](../operators/new-operator.md)|[下一页](../statements/for-next-statement.md)|
+|[模块](../modifiers/module-keyword.md)|[Module 语句](../statements/module-statement.md)|[MustInherit](../modifiers/mustinherit.md)|[MyBase](../modifiers/mustoverride.md)|  
+|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[NameOf](../operators/nameof.md)|[Namespace](../statements/namespace-statement.md)|
+|[Narrowing](../modifiers/narrowing.md)|[New Constraint](../statements/type-list.md)|[New 运算符](../operators/new-operator.md)|[下一部分](../statements/for-next-statement.md)|
 |[Next (in Resume)](../statements/resume-statement.md)|[Not](../operators/not-operator.md)|[Nothing](../nothing.md)|[NotInheritable](../modifiers/notinheritable.md)|
 |[NotOverridable](../modifiers/notoverridable.md)|[对象](../data-types/object-data-type.md)|[Of](../statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|
-|[“运算符”](../statements/operator-statement.md)|[选项](../statements/option-keyword-statement.md)|[Optional](../modifiers/optional.md)|[Or](../operators/or-operator.md)|
-|[OrElse](../operators/orelse-operator.md)|[Out（泛型修饰符）](../modifiers/out-generic-modifier.md)|[重载](../modifiers/overloads.md)|[Overridable](../modifiers/overridable.md)|
+|[Operator](../statements/operator-statement.md)|[选项](../statements/option-keyword-statement.md)|[Optional](../modifiers/optional.md)|[Or](../operators/or-operator.md)|
+|[OrElse](../operators/orelse-operator.md)|[Out（泛型修饰符）](../modifiers/out-generic-modifier.md)|[Overloads](../modifiers/overloads.md)|[Overrides](../modifiers/overridable.md)|
 |[Overrides](../modifiers/overrides.md)|[ParamArray](../modifiers/paramarray.md)|[Partial](../modifiers/partial.md)|[Private](../modifiers/private.md)|
 |[Property](../statements/property-statement.md)|[Protected](../modifiers/protected.md)|[Public](../modifiers/public.md)|[RaiseEvent](../statements/raiseevent-statement.md)|
 |[ReadOnly](../modifiers/readonly.md)|[ReDim](../statements/redim-statement.md)|[REM](../statements/rem-statement.md)|[RemoveHandler](../statements/removehandler-statement.md)|
@@ -88,7 +88,7 @@ ms.locfileid: "74338780"
 
 |||||  
 |---|---|---|---|  
-|[Aggregate](../queries/aggregate-clause.md)|[Ansi](../modifiers/ansi.md)|[Assembly](../modifiers/assembly.md)|[Async](../modifiers/async.md)|  
+|[Aggregate](../queries/aggregate-clause.md)|[Ansi](../modifiers/ansi.md)|[程序集](../modifiers/assembly.md)|[Async](../modifiers/async.md)|  
 |[Auto](../modifiers/auto.md)|[Await](../operators/await-operator.md)|[Binary](../statements/option-compare-statement.md)|[Compare](../statements/option-compare-statement.md)|  
 |[自定义](../statements/event-statement.md)|[Distinct](../queries/distinct-clause.md)|[Equals](../queries/equals-clause.md)|[Explicit](../statements/option-explicit-statement.md)|  
 |[From](../queries/from-clause.md)|[Group By](../queries/group-by-clause.md)|[Group Join](../queries/group-join-clause.md)|[Into](../statements/into-clause.md)|  
@@ -101,13 +101,13 @@ ms.locfileid: "74338780"
   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|描述|  
+|职务|说明|  
 |-----------|-----------------|  
 |[数组摘要](arrays-summary.md)|列出了用于创建、定义和使用数组的语言元素。|  
 |[集合对象摘要](collection-object-summary.md)|列出了用于集合的语言元素。|  
 |[控件流摘要](control-flow-summary.md)|列出了用于循环和控制过程流的语句。|  
 |[转换摘要](conversion-summary.md)|列出了用于转换数字、日期、时间和字符串的函数。|  
-|[数据类型摘要](data-types-summary.md)|列出了数据类型。 此外，还列出了用于转换和验证数据类型的函数。|  
+|[Data Types Summary](data-types-summary.md)|列出了数据类型。 此外，还列出了用于转换和验证数据类型的函数。|  
 |[日期和时间摘要](dates-and-times-summary.md)|列出了用于日期和时间的语言元素。|  
 |[声明和常量摘要](declarations-and-constants-summary.md)|列出了用于声明变量、常量、类、模块和其他编程元素的语句。 此外，还列出了用于获取对象信息、处理事件并实现继承的语言元素。|  
 |[目录和文件摘要](directories-and-files-summary.md)|列出了用于控制文件系统和处理文件的函数。|  
@@ -121,6 +121,6 @@ ms.locfileid: "74338780"
 |[注册表摘要](registry-summary.md)|列出了用于读取、保存和删除程序设置的函数。|  
 |[字符串操作摘要](string-manipulation-summary.md)|列出了用于操控字符串的函数。|  
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 运行库成员](../runtime-library-members.md)

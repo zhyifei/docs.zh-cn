@@ -7,16 +7,16 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 33b40ddbb0c959332f7d95ffa0f1633b910bcb33
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: cea6809ebf9a4ae516d59bd99bf8126d2e874788
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672016"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459565"
 ---
 # <a name="xaml-in-wpf"></a>WPF 中的 XAML
 
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]是用于声明性应用程序编程的标记语言。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]实现 XAML 处理器实现并提供 XAML 语言支持。 实现[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]这些类型, 以便它们可以为 XAML 表示形式提供所需的类型支持。 通常, 可以在 XAML 标记中创建大多数[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序 UI。  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 是一种用于声明性应用程序编程的标记语言。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 实现 XAML 处理器实现并提供 XAML 语言支持。 实现 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 类型，以便它们可以为 XAML 表示形式提供所需的类型支持。 通常，你可以在 XAML 标记中创建大多数 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序 UI。  
   
 ## <a name="in-this-section"></a>本节内容  
 
@@ -31,9 +31,9 @@ ms.locfileid: "68672016"
 [XAML 中的空白处理](../../xaml-services/whitespace-processing-in-xaml.md)  
 [TypeConverter 和 XAML](typeconverters-and-xaml.md)  
 [XML 字符实体和 XAML](../../xaml-services/xml-character-entities-and-xaml.md)  
-[XAML 命名空间 (x:)语言功能](../../xaml-services/xaml-namespace-x-language-features.md)  
+[XAML 命名空间 (x:) 语言功能](../../xaml-services/xaml-namespace-x-language-features.md)  
 [WPF XAML 扩展](wpf-xaml-extensions.md)  
-[标记兼容性 (mc:)语言功能](markup-compatibility-mc-language-features.md)  
+[标记兼容 (mc:) 语言功能](markup-compatibility-mc-language-features.md)  
   
 ## <a name="related-sections"></a>相关章节  
 
@@ -44,5 +44,5 @@ ms.locfileid: "68672016"
 [事件](events-wpf.md)  
 [输入](input-wpf.md)  
 [资源](resources-wpf.md)  
-[样式设置和模板化](../controls/styling-and-templating.md)  
+[样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
 [线程模型](threading-model.md)

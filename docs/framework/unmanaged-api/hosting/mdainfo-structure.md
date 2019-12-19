@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: fb8c14f7-d461-43d1-8b47-adb6723b9b93
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 198141545119976cb9107bc9c09b913572e266ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a2f513d40d722f1b0aad823ac7c0d93bda5615f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781123"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123261"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo 结构
-详细介绍`Event_MDAFired`触发托管调试助手 (MDA) 创建的事件。  
+提供有关 `Event_MDAFired` 事件的详细信息，该事件可触发托管调试助手（MDA）的创建。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,34 +33,34 @@ typedef struct _MDAInfo {
 } MDAInfo;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|`lpMDACaption`|当前的 MDA 的标题。 标题描述触发失败的`Event_MDAFired`事件。|  
-|`lpMDAMessage`|提供当前 MDA 的输出消息。|  
+|`lpMDACaption`|当前 MDA 的标题。 标题描述触发 `Event_MDAFired` 事件的故障类型。|  
+|`lpMDAMessage`|当前 MDA 提供的输出消息。|  
   
 ## <a name="remarks"></a>备注  
- 托管调试助手 (Mda) 是在运行时执行引擎中的调试辅助程序可与公共语言运行时 (CLR) 来执行任务，例如标识无效的条件结合或转储有关状态的其他信息引擎。 Mda 会生成有关则很难捕获的事件的 XML 消息。 它们将用于调试托管和非托管代码之间的转换非常有用。  
+ 托管调试助手（Mda）是调试辅助工具，可与公共语言运行时（CLR）结合使用来执行任务，例如，在运行时执行引擎中标识无效条件或转储有关的状态的其他信息搜索引擎优化. Mda 生成的 XML 消息与其他难以捕获的事件有关。 它们对于调试托管代码和非托管代码之间的转换特别有用。  
   
- 在运行时激发的事件触发创建 MDA 时采用以下步骤：  
+ 触发创建 MDA 的事件时，运行时将执行以下步骤：  
   
-- 如果主机尚未注册[IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)实例通过调用[iclroneventmanager:: Registeractiononevent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md)接收通知`Event_MDAFired`事件，在运行时将继续进行其默认情况下，非托管的行为。  
+- 如果主机尚未通过调用 [ICLROnEventManager::RegisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) 来注册 [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) `Event_MDAFired` 事件的通知，则运行时将继续默认的非托管行为。  
   
-- 如果主机已注册此事件的处理程序，运行时检查是否将调试程序附加到进程。 如果是，运行时将进入调试器。 当调试器会继续时，它调用到主机。 如果没有调试器已附加，则运行时调用`IActionOnCLREvent::OnEvent`，并将传递指向的指针`MDAInfo`实例作为`data`参数。  
+- 如果主机注册了此事件的处理程序，则运行时将进行检查以确定调试器是否已附加到进程。 如果为，则运行时会中断调试器。 调试器继续时，它会调入宿主。 如果未附加任何调试器，则运行时将调用 `IActionOnCLREvent::OnEvent`，并将一个指针作为 `data` 参数传递到 `MDAInfo` 实例。  
   
- 主机可以激活 Mda，MDA 激活时收到通知。 这会在主机重写默认行为并中止引发事件，以防止损坏进程状态的托管的线程的机会。 有关使用 Mda 的详细信息，请参阅[使用托管调试助手诊断错误](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)。  
+ 宿主可以选择激活 mda，并在激活 MDA 时获得通知。 这使宿主有机会覆盖默认行为，并中止引发事件的托管线程，以防止其损坏进程状态。 有关使用 Mda 的详细信息，请参阅[使用托管调试助手诊断错误](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** MSCorEE.idl  
+ **标头：** Mscoree.dll  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **库：** 作为资源包括在 MSCorEE.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [承载结构](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
 - [使用托管调试助手诊断错误](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
