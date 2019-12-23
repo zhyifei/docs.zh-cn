@@ -1,0 +1,111 @@
+### YamlMime:Landing
+title: C# 文档
+summary: 了解如何在 .NET 平台上使用 C# 编程语言编写任何应用程序。
+metadata:
+  title: C# 文档 - 入门、教程、参考。
+  description: 了解 C# 编程 - 面向新手开发人员、刚开始接触 C# 的开发人员、以及经验丰富的 C# / .NET 开发人员
+  ms.topic: landing-page
+  ms.date: 11/19/2019
+  ms.openlocfilehash: fa778c4610dbfe8320d488098b5bfd39de8e4705
+  ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "75303416"
+landingContent:
+- title: 了解如何使用 C# 编程
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: 在线交互式 Hello World
+      url: tutorials/intro-to-csharp/hello-world.yml
+    - text: C# 中的数学和数字
+      url: tutorials/intro-to-csharp/numbers-in-csharp.yml
+    - text: 介绍性教程
+      url: tutorials/intro-to-csharp/index.md
+    - text: 使用 Visual Studio 创建 C# 应用
+      url: https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-console
+  - linkListType: video
+    links:
+    - text: 什么是 C#？
+      url: https://channel9.msdn.com/Series/CSharp-101/What-is-C/player
+    - text: C# 101 视频系列
+      url: https://aka.ms/dotnet3-csharp
+  - linkListType: download
+    links:
+    - text: 下载 .NET Core SDK
+      url: https://dotnet.microsoft.com/download
+- title: C# 基础知识
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: C# 教程
+      url: tour-of-csharp/index.md
+    - text: C# 程序内部探究
+      url: programming-guide/inside-a-program/index.md
+    - text: Main() 和命令行参数
+      url: programming-guide/main-and-command-args/index.md
+  - linkListType: concept
+    links:
+    - text: C# 和 .NET 类型系统
+      url: programming-guide/types/index.md
+    - text: 语言集成查询 (LINQ)
+      url: linq/index.md
+    - text: async 和 await
+      url: programming-guide/concepts/async/index.md
+  - linkListType: tutorial
+    links:
+    - text: 面向对象的继承
+      url: tutorials/inheritance.md
+    - text: 使用 LINQ 查询数据
+      url: tutorials/working-with-linq.md
+    - text: 使用字符串内插设置文本格式
+      url: tutorials/string-interpolation.md
+    - text: 浏览所有教程
+      url: tutorials/index.md
+- title: C# 8.0 中的新增功能
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: C# 8.0 中的新增功能
+      url: whats-new/csharp-8.md
+  - linkListType: overview
+    links:
+    - text: 模式匹配
+      url: pattern-matching.md
+    - text: 可为空引用类型
+      url: nullable-references.md
+  - linkListType: concept
+    links:
+    - text: 批注 API 的为 Null 性
+      url: nullable-attributes.md
+  - linkListType: tutorial
+    links:
+    - text: 使用并生成异步流
+      url: tutorials/generate-consume-asynchronous-stream.md
+    - text: 使用可为空引用类型进行开发
+      url: tutorials/nullable-reference-types.md
+    - text: 使用可为空引用类型升级现有代码
+      url: tutorials/upgrade-to-nullable-references.md
+    - text: 使用模式匹配获得更多富于表现力的算法
+      url: tutorials/pattern-matching.md
+    - text: 具有默认接口成员的安全版本接口
+      url: tutorials/default-interface-methods-versions.md
+    - text: 混合默认接口成员功能
+      url: tutorials/mixins-with-default-interface-methods.md
+    - text: 使用范围和索引处理子集
+      url: tutorials/ranges-indexes.md
+- title: C# 语言参考
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: 语言参考
+      url: language-reference/index.md
+    - text: C# 关键字
+      url: language-reference/keywords/index.md
+    - text: C# 运算符
+      url: language-reference/operators/index.md
+    - text: 配置语言版本
+      url: language-reference/configure-language-version.md
+    - text: C# 语言规范
+      url: ../../_csharplang/spec/introduction.md
