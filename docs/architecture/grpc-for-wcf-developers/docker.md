@@ -29,7 +29,7 @@ Microsoft 提供了一系列用于构建和运行 .NET Core 应用程序的基�
 
 | 图像标记 | Linux | 注释 |
 | --------- | ----- | ----- |
-| 3.0-buster、3。0 | Debian 10 | 如果未指定操作系统变体，则为默认映像。 |
+| 3.0-buster、3.0 | Debian 10 | 如果未指定操作系统变体，则为默认映像。 |
 | 3.0-alpine | Alpine 3。9 | Alpine 基本映像比 Debian 或 Ubuntu 映像小得多。 |
 | 3.0-disco | Ubuntu 19.04 | |
 | 3.0-bionic | Ubuntu 18.04 | |

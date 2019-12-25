@@ -44,7 +44,7 @@ HRESULT SwitchOutLogicalThreadState(
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** 1.0、1。1  
+ **.NET Framework 版本：** 1.0、1.1  
   
 ## <a name="see-also"></a>请参阅
 

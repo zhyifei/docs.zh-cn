@@ -42,4 +42,4 @@ public void raise__WritingCompleted (object value0,
 
 **程序集：** System. 打印（在 system.web 中）
 
-**.NET Framework 版本：** 3。0
+**.NET Framework 版本：** 3.0
