@@ -50,7 +50,7 @@ ms.locfileid: "70168920"
   
 ## <a name="remarks"></a>备注  
   
-## <a name="net-framework-version-20"></a>.NET Framework 版本2。0  
+## <a name="net-framework-version-20"></a>.NET Framework 版本2.0  
  System codedom > 元素包含计算机上安装的语言提供程序的编译器配置设置<xref:Microsoft.CSharp.CSharpCodeProvider> , 以及随 .NET Framework 安装的默认提供程序, 如和[ \<](system-codedom-element.md)<xref:Microsoft.VisualBasic.VBCodeProvider>. 编译器 > 元素包含零个或多个[ \<编译器 >](compiler-element.md)元素。 [ \<](compilers-element.md) 每个[ \<编译器 >](compiler-element.md)元素指定特定语言提供程序的编译器配置特性。  
   
  开发人员和编译器供应商可将配置设置添加到计算机配置文件 (machine.config) 中以实现<xref:System.CodeDom.Compiler.CodeDomProvider>新的实现。 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>使用方法以编程方式枚举计算机上编译器配置设置标识的默认语言提供程序和语言提供程序。  
@@ -58,7 +58,7 @@ ms.locfileid: "70168920"
 > [!NOTE]
 > 在 .NET Framework 版本1.0 和1.1 中, .NET Framework 提供的默认语言提供程序在[ \<编译器 >](compilers-element.md)元素中标识。 在 .NET Framework 版本2.0 中, 没有在[ \<编译器 >](compilers-element.md)元素中标识默认语言提供程序, 但可以使用<xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A>方法进行枚举。  
   
-## <a name="net-framework-versions-10-and-11"></a>.NET Framework 版本1.0 和1。1  
+## <a name="net-framework-versions-10-and-11"></a>.NET Framework 版本1.0 和1.1  
  System.object > 元素包含计算机上的语言提供程序的编译器配置设置。 [ \<](system-codedom-element.md) 编译器 > 元素包含零个或多个[ \<编译器 >](compiler-element.md)元素。 [ \<](compilers-element.md) 每个[ \<编译器 >](compiler-element.md)元素指定特定语言提供程序的编译器配置特性。  
   
  .NET Framework 在计算机配置文件 (Machine.config) 中定义初始编译器设置。 开发人员和编译器供应商可以添加新 <xref:System.CodeDom.Compiler.CodeDomProvider> 实现的配置设置。 使用 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 方法，以编程方式枚举计算机上的语言提供程序和编译器配置设置。  

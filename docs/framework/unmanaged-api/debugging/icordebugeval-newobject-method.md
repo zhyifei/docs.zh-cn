@@ -54,7 +54,7 @@ HRESULT NewObject (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** 1.1、1。0  
+ **.NET Framework 版本：** 1.1、1.0  
   
 ## <a name="see-also"></a>请参阅
 
