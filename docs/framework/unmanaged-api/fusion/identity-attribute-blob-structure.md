@@ -231,7 +231,7 @@ Exit:
   
  PublicKeyToken = b77a5c561934e089  
   
- Version = 2.0.0。0  
+ Version = 2.0.0.0  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  

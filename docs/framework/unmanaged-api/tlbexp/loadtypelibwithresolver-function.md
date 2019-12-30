@@ -89,7 +89,7 @@ HRESULT LoadTypeLibWithResolver(
   
  **库：** TlbRef  
   
- **.NET Framework 版本：** 3.5、3.0、2。0  
+ **.NET Framework 版本：** 3.5、3.0、2.0  
   
 ## <a name="see-also"></a>请参阅
 

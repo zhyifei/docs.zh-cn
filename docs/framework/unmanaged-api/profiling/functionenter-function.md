@@ -59,7 +59,7 @@ void __stdcall FunctionEnter (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** 1.1、1。0  
+ **.NET Framework 版本：** 1.1、1.0  
   
 ## <a name="see-also"></a>另请参阅
 

@@ -51,7 +51,7 @@ HRESULT GetNameFromToken (
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** 1。0  
+ **.NET Framework 版本：** 1.0  
   
 ## <a name="see-also"></a>另请参阅
 
