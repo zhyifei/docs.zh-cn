@@ -113,7 +113,7 @@ public abstract class Entity
 
 存储库本身（包含 EF Core 代码或其他任何基础结构依赖项和代码（Linq、SQL 等）不能在域模型内实现，存储库应仅实现你在域模型中定义的接口。
 
-这种做法（在域模型层中放置存储库接口）的相关模式是分隔接口模式。 正如 Martin Fowler [所述](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)，“使用分隔接口模式在一个包中定义接口，但在另一个包中实现它。 这样一来，依赖接口的客户端可以完全不关注实现。”
+这种做法（在域模型层中放置存储库接口）的相关模式是分隔接口模式。正如 Martin Fowler [所述](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)：“使用分隔接口模式在一个包中定义接口，但在另一个包中实现它。 这样一来，需依赖于该接口的客户端可以完全不关注实现。”
 
 通过遵循分隔接口模式，应用程序层（在此情况下是微服务的 Web API 项目）可具有在域模型中定义的要求的依赖项，但没有基础结构/持久性层的直接依赖项。 此外，可以使用依赖项注入隔离实现，可在使用存储库的基础结构/持久性层中实现这一点。
 
