@@ -13,7 +13,7 @@ ms.locfileid: "53170608"
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名称
 
 `dotnet remove reference` - 删除“项目到项目”引用。
 

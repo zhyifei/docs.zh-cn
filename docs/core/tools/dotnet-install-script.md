@@ -11,7 +11,7 @@ ms.locfileid: "70849575"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 脚本引用
 
-## <a name="name"></a>name
+## <a name="name"></a>名称
 
 `dotnet-install.ps1` | `dotnet-install.sh` - 用于安装 .NET Core CLI 工具和共享运行时的脚本。
 

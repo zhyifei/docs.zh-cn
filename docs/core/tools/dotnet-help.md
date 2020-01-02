@@ -17,7 +17,7 @@ ms.locfileid: "71117716"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>名称
 
 `dotnet help` - 显示指定命令更详细的在线文档。
 

@@ -13,7 +13,7 @@ ms.locfileid: "71117610"
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名称
 
 `dotnet publish` - 将应用程序及其依赖项打包到文件夹以部署到托管系统。
 

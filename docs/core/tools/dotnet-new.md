@@ -13,7 +13,7 @@ ms.locfileid: "73420481"
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名称
 
 `dotnet new` - 根据指定的模板，创建新的项目、配置文件或解决方案。
 

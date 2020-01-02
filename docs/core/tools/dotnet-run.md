@@ -17,7 +17,7 @@ ms.locfileid: "73454774"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>名称
 
 `dotnet run` - 无需任何显式编译或启动命令即可运行源代码。
 

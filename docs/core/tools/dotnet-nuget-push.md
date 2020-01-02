@@ -18,7 +18,7 @@ ms.locfileid: "74835514"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>名称
 
 `dotnet nuget push` - 将包推送到服务器，并将其发布。
 

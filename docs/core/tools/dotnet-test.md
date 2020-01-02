@@ -13,7 +13,7 @@ ms.locfileid: "71182511"
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名称
 
 `dotnet test` - 用于执行单元测试的 .NET 测试驱动程序。
 

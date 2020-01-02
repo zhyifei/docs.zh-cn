@@ -13,7 +13,7 @@ ms.locfileid: "71117507"
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名称
 
 `dotnet` - 一款管理 .NET 源代码和二进制文件的工具。
 
