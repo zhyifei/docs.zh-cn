@@ -13,7 +13,7 @@ ms.locfileid: "71117728"
 
 [!INCLUDE [topic-appliesto-net-core-22plus](../../../includes/topic-appliesto-net-core-22plus.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名称
 
 `dotnet list package` - 列出项目或解决方案的包引用。
 

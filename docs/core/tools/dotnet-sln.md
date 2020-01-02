@@ -17,7 +17,7 @@ ms.locfileid: "73191819"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>名称
 
 `dotnet sln` - 修改 .NET Core 解决方案文件。
 

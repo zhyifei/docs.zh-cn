@@ -17,7 +17,7 @@ ms.locfileid: "71117741"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>名称
 
 `dotnet clean` - 清除项目输出。
 
@@ -33,7 +33,7 @@ dotnet clean [-h|--help]
 
 `dotnet clean` 命令可清除上一个生成的输出。 它以 [MSBuild 目标](/visualstudio/msbuild/msbuild-targets) 的形式实现，以便在运行命令时对项目进行评估。 只会清除在生成过程中创建的输出。 中间 (*obj*) 和最终输出 (*bin*) 文件夹都会被清除。
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>清理对象
 
 `PROJECT | SOLUTION`
 

@@ -17,7 +17,7 @@ ms.locfileid: "73100820"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>名称
 
 `dotnet add reference` - 添加项目到项目 (P2P) 引用。
 

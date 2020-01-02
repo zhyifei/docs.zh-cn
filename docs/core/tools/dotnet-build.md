@@ -17,7 +17,7 @@ ms.locfileid: "73454216"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>名称
 
 `dotnet build` - 生成项目及其所有依赖项。
 

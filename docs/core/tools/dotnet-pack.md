@@ -17,7 +17,7 @@ ms.locfileid: "71117646"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>名称
 
 `dotnet pack` - 将代码打包到 NuGet 包。
 

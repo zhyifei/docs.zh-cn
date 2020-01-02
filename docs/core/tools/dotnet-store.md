@@ -15,7 +15,7 @@ ms.locfileid: "54606746"
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名称
 
 `dotnet store` - 将指定的程序集存储到[运行时包存储区](../deploying/runtime-store.md)。
 

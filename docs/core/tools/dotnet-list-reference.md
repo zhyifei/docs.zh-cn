@@ -17,7 +17,7 @@ ms.locfileid: "71117676"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>名称
 
 `dotnet list reference` - 列出项目到项目引用。
 

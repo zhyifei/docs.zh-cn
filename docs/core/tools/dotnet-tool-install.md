@@ -13,7 +13,7 @@ ms.locfileid: "71117471"
 
 [!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名称
 
 `dotnet tool install` - 在计算机上安装指定的 [.NET Core 全局工具](global-tools.md)。
 

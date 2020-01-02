@@ -13,7 +13,7 @@ ms.locfileid: "72275748"
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名称
 
 `dotnet restore` - 恢复项目的依赖项和工具。
 

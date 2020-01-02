@@ -13,7 +13,7 @@ ms.locfileid: "65632437"
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名称
 
 `dotnet remove package` - 从项目文件删除包引用。
 

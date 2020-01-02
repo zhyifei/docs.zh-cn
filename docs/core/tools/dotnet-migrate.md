@@ -13,7 +13,7 @@ ms.locfileid: "71117685"
 
 **本文适用于：✓** .NET Core 1.x SDK ✓ .NET Core 2.x SDK 
 
-## <a name="name"></a>name
+## <a name="name"></a>名称
 
 `dotnet migrate` - 将预览版 2 .NET Core 项目迁移到 .NET Core SDK 样式的项目中。
 

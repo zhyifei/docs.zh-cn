@@ -18,7 +18,7 @@ ms.locfileid: "74087410"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>名称
 
 `dotnet nuget locals` -清除或列出本地 NuGet 资源。
 
