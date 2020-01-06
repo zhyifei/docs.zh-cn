@@ -57,7 +57,7 @@
     - name: 非托管 API 参考
       href: unmanaged-api/
     - name: XAML 服务
-      href: xaml-services/
+      href: ../desktop-wpf/xaml-services/
 - name: 工具
   href: tools/
 - name: 其他类库和 API

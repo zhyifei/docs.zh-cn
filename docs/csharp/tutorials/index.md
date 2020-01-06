@@ -2,12 +2,12 @@
 title: C# 教程
 description: 查看这些 C# 教程，了解生成 C# 程序的方式以及 C# 语言功能。
 ms.date: 10/25/2018
-ms.openlocfilehash: 3f3ca31c0fdeb5d7c60b25c4b45399569cc919b4
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8adbec3311c7a0e88475734312ecc3621042c3f3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417101"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346800"
 ---
 # <a name="c-tutorials"></a>C# 教程
 
@@ -19,7 +19,7 @@ ms.locfileid: "73417101"
 
 头几个课程通过小篇幅的代码片段介绍了 C# 概念。 读者将了解 C# 语法的基础知识，以及如何使用字符串、数字和布尔值等数据类型。 全都是交互式课程，读者可以在几分钟内编写并运行代码。 无需事先了解编程或 C# 语言，即可学习头几个课程。
 
-## <a name="hello-worldintro-to-csharphello-worldyml"></a>[Hello world](intro-to-csharp/hello-world.yml)
+## <a name="hello-worldintro-to-csharphello-worldyml"></a>[Hello World](intro-to-csharp/hello-world.yml)
 
 在 [Hello world](intro-to-csharp/hello-world.yml) 教程中，你将创建最基本的 C# 程序。 读者将探索 `string` 类型以及如何使用文本。
 

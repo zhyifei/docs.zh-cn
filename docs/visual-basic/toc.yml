@@ -5,8 +5,6 @@
 - name: 开始操作
   href: getting-started/index.md
   items:
-    - name: Visual Studio 中 Visual Basic 的重大更改
-      href: getting-started/breaking-changes-in-visual-studio.md
     - name: 为 Visual Basic 程序员提供的附加资源
       href: getting-started/additional-resources.md
 - name: 开发应用程序
@@ -401,7 +399,7 @@
           href: language-reference/modifiers/notinheritable.md
         - name: NotOverridable
           href: language-reference/modifiers/notoverridable.md
-        - name: Optional
+        - name: 可选
           href: language-reference/modifiers/optional.md
         - name: Out（泛型修饰符）
           href: language-reference/modifiers/out-generic-modifier.md
