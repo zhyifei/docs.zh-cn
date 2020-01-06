@@ -2,12 +2,12 @@
 title: Azure 中的数据存储
 description: 构建适用于 Azure 的云本机 .NET 应用 |Azure 中的数据存储
 ms.date: 06/30/2019
-ms.openlocfilehash: 1a86cecf005c6dbdfda5cf4cacfafaad4711c076
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5ba05f53faf65334f6269af8ae2c54d81e6b0779
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841893"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337456"
 ---
 # <a name="data-storage-in-azure"></a>Azure 中的数据存储
 
@@ -63,7 +63,7 @@ Azure SQL 数据库包括[内置的监视和智能优化](https://docs.microsoft
 
 - 在几秒内根据需要进行[缩放](https://docs.microsoft.com/azure/mysql/concepts-high-availability)。
 
-- 保护以保护静态和动态敏感数据。
+- 保护静态和动态敏感数据的安全。
 
 - [自动备份](https://docs.microsoft.com/azure/mysql/concepts-backup)和[时间点还原](https://docs.microsoft.com/azure/mysql/concepts-backup)最多35天。
 
@@ -131,9 +131,9 @@ Cosmos DB 中的[多主机](https://docs.microsoft.com/azure/cosmos-db/how-to-mu
 
 - 无限制弹性写入和读取可伸缩性。
 
-- 99.999 读写所有世界各地的可用性。
+- 在全球 99.999% 的读写可用性。
 
-- 有保证的读取和写入在99% 百分位的时间不到10毫秒。
+- 在 99% 的时间内，在 10 毫秒内为读写提供服务。
 
 在内部，Cosmos DB 处理具有一致性级别保证和财务支持的服务级别协议的区域之间的数据复制。
 
@@ -141,7 +141,7 @@ Cosmos DB 中的[多主机](https://docs.microsoft.com/azure/cosmos-db/how-to-mu
 
 ### <a name="multi-model-support"></a>多模型支持
 
-Cosmos DB 是一种*多模型数据平台*，可让你使用多种受支持的 NoSQL 模型与数据进行交互，包括文档、键/值对、宽列和图形表示。 在内部，数据以由基元数据类型（包括字符串、布尔和数字）组成的简单[结构](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/using-structs)格式存储。 对于每个请求，数据库引擎将数据转换为所选的模型表示形式。 可以从基于 SQL 的 Cosmos DB 专有 API 或图5-14 中所示的任何[兼容性 api](https://www.wikiwand.com/en/Cosmos_DB)中进行选择。
+Cosmos DB 是一种*多模型数据平台*，可让你使用多种受支持的 NoSQL 模型（包括文档、键值对、宽列和图形表示形式）与数据进行交互。 在内部，数据以由基元数据类型（包括字符串、布尔值和数字）组成的简单[结构](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/using-structs)格式存储。 对于每个请求，数据库引擎将数据转换为所选的模型表示形式。 可以从基于 SQL 的 Cosmos DB 专有 API 或图5-14 中所示的任何[兼容性 api](https://www.wikiwand.com/en/Cosmos_DB)中进行选择。
 
 ![Cosmos DB 提供程序](./media/cosmos-db-providers.png)
 

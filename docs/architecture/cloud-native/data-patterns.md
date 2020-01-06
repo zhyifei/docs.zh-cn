@@ -2,12 +2,12 @@
 title: 云本机数据模式
 description: 构建适用于 Azure 的云本机 .NET 应用 |云本机数据模式
 ms.date: 06/30/2019
-ms.openlocfilehash: 0d251f3046fcd3f3a2f5d856a123a35d3f7ecff2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9e90409b0b633796b452cfcfecb3896e79002d4d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841821"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337427"
 ---
 # <a name="cloud-native-data-patterns"></a>云本机数据模式
 
@@ -55,7 +55,7 @@ ms.locfileid: "73841821"
 
 使用此方法时，有了系统中的重复数据。 在云本机系统中，重复数据不会被视为[反模式](https://en.wikipedia.org/wiki/Anti-pattern)，并且通常在云本机系统中实现。 但是，其中一个系统可以是任何数据集的所有者，并且你需要为记录系统实现一种同步机制，以便在每次更改其基础数据时更新所有关联的读取模型。
 
-## <a name="transactional-support"></a>事务性支持
+## <a name="transactional-support"></a>事务支持
 
 尽管跨微服务的查询有挑战性，但跨微服务实现事务可能会很复杂。 在驻留在不同微服务中的数据源之间维护数据一致性的固有挑战不能 understated。 图5-8 显示了问题。
 
@@ -63,7 +63,7 @@ ms.locfileid: "73841821"
 
 **图 5-8**。 跨微服务实现事务
 
-请注意上图中的第五个独立微服务如何参与分布式*创建订单*交易。 但是，五个单独微服务中每一个的事务必须成功，否则必须中止并回滚操作。 虽然内置事务支持在每个微服务中均可用，但不支持跨所有五项服务的分布式事务。
+请注意上图中的第五个独立微服务如何参与分布式*创建订单*交易。 但是，五个单独微服务中的每一个都必须成功，否则必须中止并回滚操作。 虽然内置事务支持在每个微服务中均可用，但不支持跨所有五项服务的分布式事务。
 
 由于事务支持对于此操作至关重要，使每个微服务中的数据保持一致，因此必须以编程方式构造分布式事务。
 

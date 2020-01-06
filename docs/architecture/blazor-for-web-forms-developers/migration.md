@@ -4,12 +4,12 @@ description: 了解如何将现有的 ASP.NET Web 窗体应用迁移到 Blazor�
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: b6604e000eaf79bcd8da15d72a3d85713c620851
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 52f463c66c2980d59a93f3210b3cfd825bec33da
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73842037"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337455"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>从 ASP.NET Web 窗体迁移到 Blazor
 
@@ -653,4 +653,4 @@ ASP.NET Core 中的许多操作都是异步的，因此可以更轻松地不加�
 此时，你已了解将 Web 窗体项目移动到 Blazor 所需的许多示例。 有关完整示例，请参阅[eShopOnBlazor](https://github.com/dotnet-architecture/eShopOnBlazor)项目。
 
 >[!div class="step-by-step"]
->[上一部分](security-authentication-authorization.md)
+>[上一篇](security-authentication-authorization.md)

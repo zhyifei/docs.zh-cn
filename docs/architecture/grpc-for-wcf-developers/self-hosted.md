@@ -2,12 +2,12 @@
 title: 自承载 gRPC 应用程序-WCF 开发人员 gRPC
 description: 将 ASP.NET Core gRPC 应用程序部署为自承载服务。
 ms.date: 09/02/2019
-ms.openlocfilehash: 59f6275dbf85442bca3a98a1521597ef40e9675b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 00b4ad50eae629b5b36a890d1eecf7119386c74c
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967216"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545064"
 ---
 # <a name="self-hosted-grpc-applications"></a>自承载的 gRPC 应用程序
 
@@ -34,7 +34,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 现在，在 Visual Studio 中发布应用程序，方法是右键单击该项目，然后从上下文菜单中选择 "*发布*"，或者从 ".NET Core CLI"。
 
-发布 .NET Core 应用程序时，可以选择创建*依赖框架*的部署或*独立*部署。 依赖于框架的部署要求在运行的主机上安装 .NET Core 共享运行时。 自包含的部署是使用 .NET Core 运行时和框架的完整副本发布的，可以在任何主机上运行。 有关详细信息，包括每种方法的优点和缺点，请参阅[.Net Core 应用程序部署](https://docs.microsoft.com/dotnet/core/deploying/)文档。
+发布 .NET Core 应用程序时，可以选择创建*依赖框架*的部署或*独立*部署。 依赖于框架的部署要求在运行的主机上安装 .NET Core 共享运行时。 自包含的部署是使用 .NET Core 运行时和框架的完整副本发布的，可以在任何主机上运行。 有关详细信息，包括每种方法的优点和缺点，请参阅[.Net Core 应用程序部署](../../core/deploying/index.md)文档。
 
 若要发布不需要在主机上安装 .NET Core 3.0 运行时的应用程序的自包含生成，请使用 `-r` （或 `--runtime`）标志来指定要包含在应用程序中的运行时。
 
@@ -77,7 +77,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 > [!NOTE]
 > 如果应用程序未作为 Linux 服务运行，则 `UseSystemd` 方法不执行任何操作。
 
-现在，通过右键单击项目，然后从上下文菜单中选择 "*发布*"，或者使用以下命令从 .NET Core CLI 中发布应用程序（依赖于框架的应用程序，或自包含的相关 Linux 运行时，例如 `linux-x64`）。
+现在，通过右键单击项目，然后从上下文菜单中选择 "*发布*"，或者使用以下命令从 .NET Core CLI 中发布应用程序（依赖于框架的应用程序或独立的 Linux 运行时独立的应用程序，例如 `linux-x64`）。
 
 ```console
 dotnet publish -c Release -r linux-x64 -o ./publish
@@ -150,7 +150,7 @@ sudo journalctl -u myapp
 
 在生产环境中运行 gRPC 应用程序时，应使用来自受信任的证书颁发机构（CA）的 TLS 证书。 此 CA 可以是公共 CA，也可以是组织的内部 ca。
 
-在 Windows 主机上，可以使用[X509Store 类](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509store?view=netcore-3.0)从安全的[证书存储区](https://docs.microsoft.com/windows/win32/seccrypto/managing-certificates-with-certificate-stores)中加载证书。 `X509Store` 类还可与某些 Linux 主机上的 OpenSSL 密钥存储一起使用。
+在 Windows 主机上，可以使用 <xref:System.Security.Cryptography.X509Certificates.X509Store> 类从安全的[证书存储区](/windows/win32/seccrypto/managing-certificates-with-certificate-stores)中加载证书。 `X509Store` 类还可与某些 Linux 主机上的 OpenSSL 密钥存储一起使用。
 
 还可以使用[X509Certificate2 构造函数](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0)之一创建证书，无论是从文件（例如，受强密码保护的 `.pfx` 文件），还是从安全存储服务（如[Azure Key Vault](https://azure.microsoft.com/services/key-vault/)）检索到的二进制数据。
 

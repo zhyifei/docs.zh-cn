@@ -2,12 +2,12 @@
 title: Azure 平台复原
 description: 构建适用于 Azure 的云本机 .NET 应用 |Azure 的云基础结构复原
 ms.date: 06/30/2019
-ms.openlocfilehash: 02d661952c860da25442b0fa9fed0d5f93abe023
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 8b33c1cec1633c9fb25ae2b02e51f8be01c22941
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "73841257"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337380"
 ---
 # <a name="azure-platform-resiliency"></a>Azure 平台复原
 
@@ -26,11 +26,11 @@ ms.locfileid: "73841257"
 
 故障的影响范围有所不同。 硬件故障（例如磁盘故障）可能会影响群集中的单个节点。 网络交换机故障可能会影响整个服务器机架。 不太常见的故障（例如断电）可能会中断整个数据中心。 很少会出现整个区域不可用的情况。
 
-[冗余](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy)是提供应用程序复原能力的一种方法。 所需的确切冗余级别取决于你的业务需求，并将影响系统的成本和复杂性。 例如，多区域部署比单区域部署更昂贵且更复杂。 你将需要操作过程来管理故障转移和故障回复。 对于某些业务方案，而不是其他业务方案，可能会增加额外的成本和复杂性。
+[冗余](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy)是提供应用程序复原能力的一种方法。 所需的确切冗余级别取决于你的业务需求，并将影响系统的成本和复杂性。 例如，多区域部署比单区域部署更昂贵且更复杂。 你将需要操作过程来管理故障转移和故障回复。 可能为一些业务方案（而不是其他方案）考虑额外的成本和复杂性。
 
 若要构建冗余，需要确定应用程序中的关键路径，然后确定路径中每个点是否有冗余？ 如果子系统应失败，应用程序是否会故障转移到其他内容？ 最后，你需要清楚地了解内置于 Azure 云平台的功能，你可以利用这些功能满足你的冗余要求。 下面是用于构建冗余的建议：
 
-- *部署多个服务实例。* 如果你的应用程序依赖于服务的单个实例，则会创建单一故障点。 预配多个实例可以提高复原能力和可伸缩性。 在 Azure Kubernetes 服务中托管时，可以通过声明方式在 Kubernetes 清单文件中配置冗余实例（副本集）。 可以通过编程方式、在门户中或通过自动缩放功能（稍后将对此进行讨论）对副本计数值进行管理。
+- *部署服务的多个实例。* 如果应用程序依赖于服务的单个实例，则会造成单一故障点。 预配多个实例能够提高复原能力和可伸缩性。 在 Azure Kubernetes 服务中托管时，可以通过声明方式在 Kubernetes 清单文件中配置冗余实例（副本集）。 可以通过编程方式、在门户中或通过自动缩放功能（稍后将对此进行讨论）对副本计数值进行管理。
 
 - *利用负载均衡器。* 负载平衡将应用程序的请求分发到正常服务实例，并自动从旋转中删除不正常的实例。 部署到 Kubernetes 时，可以在 "服务" 部分的 Kubernetes 清单文件中指定负载平衡。
 
@@ -78,7 +78,7 @@ ms.locfileid: "73841257"
 
 - *Azure Redis 缓存。* Redis Stackexchange.redis 客户端使用连接管理器类，其中包含尝试失败时的重试次数。 重试次数、特定的重试策略和等待时间都是可配置的。
 
-- *Azure 服务总线。* 服务总线客户端公开[RetryPolicy 类，该类](xref:Microsoft.ServiceBus.RetryPolicy)可以使用后向后间隔、重试次数和 <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer>来配置，该操作指定操作可采用的最长时间。 默认策略为9次最大重试次数，两次尝试之间的回退时间间隔为30秒。
+- *Azure 服务总线。* 服务总线客户端公开[RetryPolicy 类，该类](xref:Microsoft.ServiceBus.RetryPolicy)可以使用后向后间隔、重试次数和 <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer%2A>来配置，该操作指定操作可采用的最长时间。 默认策略为9次最大重试次数，两次尝试之间的回退时间间隔为30秒。
 
 - *Azure SQL 数据库。* 使用[Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)库时，将提供重试支持。
 

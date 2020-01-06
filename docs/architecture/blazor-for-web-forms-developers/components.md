@@ -4,12 +4,12 @@ description: 了解如何使用 Blazor 生成可重复使用的 UI 组件，以�
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 79919b183a4eb759f0b27c97500ee71c9378770b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5e5ca128bea2e77d795cede17df73963d9b49a48
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841959"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337403"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>使用 Blazor 生成可重复使用的 UI 组件
 
@@ -77,7 +77,7 @@ Razor 指令以 `@` 字符开始，通常在文件开头的新行的开头使用
 
 下表汇总了 Blazor 中使用的各种 Razor 指令及其等效的 ASP.NET Web 窗体（如果存在）。
 
-|Directive    |说明|示例|Web 窗体等效项|
+|Directive    |描述|示例|Web 窗体等效项|
 |-------------|-----------|-------|--------------------|
 |`@attribute` |向组件添加类级别属性|`@attribute [Authorize]`|无|
 |`@code`      |将类成员添加到组件|`@code { ... }`|`<script runat="server">...</script>`|
@@ -98,7 +98,7 @@ Razor 组件还广泛使用元素上的*指令属性*，以控制如何编译组
 
 下表总结了 Blazor 中使用的 Razor 指令的各种属性。
 
-|属性    |说明|示例|
+|属性    |描述|示例|
 |-------------|-----------|-------|
 |`@attributes`|呈现特性字典|`<input @attributes="ExtraAttributes" />`|
 |`@bind`      |创建双向数据绑定    |`<input @bind="username" @bind:event="oninput" />`|
@@ -115,7 +115,7 @@ Blazor （`@onclick`、`@bind`、`@ref`等）使用的各种指令属性将在�
 |指令                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |代码块                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
 |表达式<br>（HTML 编码）|`<%: %>`            |`<%:DateTime.Now %>` |隐式： `@`<br>显式： `@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
-|注释                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
+|Comments                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
 |数据绑定                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
 
 若要将成员添加到 Razor 组件类，请使用 `@code` 指令。 此方法类似于在 ASP.NET Web 窗体用户控件或页面中使用 `<script runat="server">...</script>` 块。
@@ -131,7 +131,7 @@ Blazor （`@onclick`、`@bind`、`@ref`等）使用的各种指令属性将在�
 }
 ```
 
-由于 Razor 基于C#，因此它必须从C#项目（ *.csproj*）中进行编译。 不能从 VB 项目（ *. .vbproj*）编译*razor*文件。 你仍可以从 Blazor 项目引用 VB 项目。 相反的情况也是如此。
+由于 Razor 基于C#，因此它必须从C#项目（ *.csproj*）中进行编译。 不能从 Visual Basic 项目（ *. .vbproj*）编译*razor*文件。 你仍可以从 Blazor 项目引用 Visual Basic 项目。 相反的情况也是如此。
 
 有关完整 Razor 语法引用，请参阅[ASP.NET Core 的 Razor 语法参考](/aspnet/core/mvc/views/razor)。
 

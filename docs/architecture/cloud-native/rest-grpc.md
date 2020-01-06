@@ -3,12 +3,12 @@ title: REST 和 gRPC
 description: 了解 gRPC，它在云本机应用程序中的作用，以及它与 HTTP REST 有何不同
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: 80960a9042b1514fb78e7a8c993a1854067407e8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c77343e7a594d34cbd2c00ce11281bd6bf4000c1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73842049"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337076"
 ---
 # <a name="rest-and-grpc"></a>REST 和 gRPC
 
@@ -26,7 +26,7 @@ gRPC 是一种轻型且高性能的新式 RPC 框架。 它使用 HTTP/2 作为�
 - 虽然 HTTP 1.1 限制为一次处理一个往返请求/响应，但 HTTP/2 支持多路复用或通过同一连接的多个并行请求。
 - HTTP/2 支持全双工或双向通信，客户端和服务器都可同时进行通信。 当服务器发送回响应数据时，客户端可以上载请求数据。
 - 流内置于 HTTP/2 中，这意味着请求和响应可以异步流式传输大型数据集。
-- 结合 gRPC 和 HTTP/2，性能会大幅增加。 在[Windows Communication Foundation （WCF）](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf)行话中，gRPC 性能达到并超出[wcf-nettcp 绑定](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8)的速度和效率。 但是，与 Wcf-nettcp 不同，gRPC 不会限制为 Microsoft 语言C# ，如或 VB.NET。
+- 结合 gRPC 和 HTTP/2，性能会大幅增加。 在[Windows Communication Foundation （WCF）](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf)行话中，gRPC 性能达到并超出[wcf-nettcp 绑定](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8)的速度和效率。 但是，与 Wcf-nettcp 不同，gRPC 不会限制为 Microsoft 语言C# ，如或 Visual Basic。
 
 跨最常用平台（包括 Java、 C#、Golang 和 NodeJS）支持 gRPC。
 

@@ -3,12 +3,12 @@ title: 云本机的候选应用
 description: 了解哪些类型的应用程序受益于云本机方法
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 328af4081d830cf1a7959a37c2155090ec4da3ff
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2087ef0c327a82419be95552293d1b56742b73c7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968300"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337439"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>云本机的候选应用
 
@@ -40,7 +40,7 @@ ms.locfileid: "73968300"
 
 **图 1-10**。 迁移旧工作负荷的策略
 
-不关键的单一应用在很大程度上得益于快速迁移（[云基础结构就绪](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas)）迁移。 此处，本地工作负荷重新承载基于云的 VM，无需更改。 此方法使用[IaaS （基础结构即服务）模型](https://azure.microsoft.com/overview/what-is-iaas/)。 Azure 包含多个工具，如（[Azure Migrate](https://aka.ms/azuremigrate)、 [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)和[Azure 数据库迁移服务](https://azure.microsoft.com/campaigns/database-migration/)），以便更轻松地进行此类迁移。 尽管此策略可能会节省成本，但这种应用程序通常不会构建为解锁和利用云计算的好处。
+不关键的单一应用在很大程度上得益于快速迁移（[云基础结构就绪](../modernize-with-azure-containers/lift-and-shift-existing-apps-azure-iaas.md)）迁移。 此处，本地工作负荷重新承载基于云的 VM，无需更改。 此方法使用[IaaS （基础结构即服务）模型](https://azure.microsoft.com/overview/what-is-iaas/)。 Azure 包含多个工具，如（[Azure Migrate](https://aka.ms/azuremigrate)、 [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)和[Azure 数据库迁移服务](https://azure.microsoft.com/campaigns/database-migration/)），以便更轻松地进行此类迁移。 尽管此策略可能会节省成本，但这种应用程序通常不会构建为解锁和利用云计算的好处。
 
 对业务至关重要的单一应用程序通常受益于改进的提升（*云优化*）迁移。 此方法包括启用关键云服务的部署优化，无需更改应用程序的核心体系结构。 例如，你可能会[容器化](https://docs.microsoft.com/virtualization/windowscontainers/about/)该应用程序并将其部署到容器 orchestrator，如[Azure Kubernetes Services](https://azure.microsoft.com/services/kubernetes-service/)，如本书稍后部分所述。 一旦进入云中，应用程序就可以使用其他云服务，例如数据库、消息队列、监视和分布式缓存。
 
@@ -70,7 +70,7 @@ ms.locfileid: "73968300"
 
 随着简介，我们现在深入了解云本机。
 
-### <a name="references"></a>参考
+### <a name="references"></a>引用
 
 - [云本机计算基础](https://www.cncf.io/)
 

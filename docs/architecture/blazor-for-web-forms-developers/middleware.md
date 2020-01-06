@@ -4,18 +4,18 @@ description: 了解如何处理模块、处理程序和中间件的 HTTP 请求�
 author: danroth27
 ms.author: daroth
 ms.date: 10/11/2019
-ms.openlocfilehash: b0be6109b9226bddbb9cbe4cebf114fd2b2a6114
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 3ecc109c54f88b5b06a1474f7c6e262d426a78a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "73841203"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337477"
 ---
 # <a name="modules-handlers-and-middleware"></a>模块、处理程序和中间件
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-ASP.NET Core 应用基于一系列中间件构建。 中间件是一些处理程序，它们排列在管道中以处理请求和响应。 在 Web 窗体应用程序中，HTTP 处理程序和模块解决了类似的问题。 在 ASP.NET Core 中，模块、处理程序、 *Global.asax.cs*和应用程序生命周期替换为中间件。 在本章中，你将了解 Blazor 应用上下文中的中间件。
+ASP.NET Core 应用基于一系列*中间件*构建。 中间件是排列到管道中的处理程序，用于处理请求和响应。 在 Web 窗体应用程序中，HTTP 处理程序和模块解决了类似的问题。 在 ASP.NET Core 中，模块、处理程序、 *Global.asax.cs*和应用程序生命周期替换为中间件。 在本章中，你将了解 Blazor 应用上下文中的中间件。
 
 ## <a name="overview"></a>概述
 
@@ -35,7 +35,7 @@ ASP.NET 4.x 包含许多模块。 同样，ASP.NET Core 还提供了许多中间
 
 下表列出了 ASP.NET Core 中的替换中间件和组件。
 
-|模块                 |ASP.NET 4.x 模块           |ASP.NET Core 选项|
+|Module                 |ASP.NET 4.x 模块           |ASP.NET Core 选项|
 |-----------------------|-----------------------------|-------------------|
 |HTTP 错误            |`CustomErrorModule`          |[状态代码页中间件](/aspnet/core/fundamentals/error-handling#usestatuscodepages)|
 |默认文档       |`DefaultDocumentModule`      |[默认文件中间件](/aspnet/core/fundamentals/static-files#serve-a-default-document)|
