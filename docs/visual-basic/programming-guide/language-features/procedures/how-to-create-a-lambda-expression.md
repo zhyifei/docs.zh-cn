@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: bb0bdb3c10a7df2ca954fbdb9382a25bf805068d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1c65841e4c124252cfa41bcd4d0c305a426687ee
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349746"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632345"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>如何：创建 Lambda 表达式 (Visual Basic)
 *Lambda 表达式*是没有名称的函数或子例程。 如果委托类型有效，可以使用 lambda 表达式。  
@@ -65,7 +65,7 @@ ms.locfileid: "74349746"
   
      `Dim add1 = Function`   `(index As Integer)`  
   
-3. 按 Enter。 `End Function` 语句会自动添加。  
+3. 按 ENTER 键。 `End Function` 语句会自动添加。  
   
 4. 在函数的主体中，添加以下代码以创建表达式并返回值。 不要使用 `As` 子句来指定返回类型。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "74349746"
   
      `Dim add1 = Sub`  `(msg As String)`  
   
-3. 按 Enter。 `End Sub` 语句会自动添加。  
+3. 按 ENTER 键。 `End Sub` 语句会自动添加。  
   
 4. 在函数的主体中，添加以下代码，以便在调用子例程时执行。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "74349746"
   
  [!code-vb[VbVbalrLambdas#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class4.vb#10)]  
   
- 前面的示例等效于以下代码，该代码以 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 语法编写：  
+ 前面的示例等效于以下代码，该代码是用语言集成查询（LINQ）语法编写的：  
   
  [!code-vb[VbVbalrLambdas#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class5.vb#11)]  
   
