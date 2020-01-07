@@ -17,21 +17,21 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: a31dc2c5431c8201607462e8bdef4b8bae0fb41d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d966116db09c2baef7deabf5d01138e8445098be
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460912"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636258"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 应用程序资源、内容和数据文件
 Microsoft Windows 应用程序通常依赖于包含不可执行的数据的文件，例如 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、图像、视频和音频。 Windows Presentation Foundation （WPF）为配置、标识和使用这些类型的数据文件（称为应用程序数据文件）提供特殊支持。 这种支持主要针对一组特定的应用程序数据文件类型，包括：  
   
-- **资源文件**：编译为可执行文件或库 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 程序集的数据文件。  
+- **资源文件**：编译为可执行文件或库 WPF 程序集的数据文件。  
   
-- **内容文件**：与可执行文件显式关联的独立数据文件 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 程序集。  
+- **内容文件**：独立的数据文件，与可执行的 WPF 程序集具有显式关联。  
   
-- **源站点文件**：与可执行文件不关联的独立数据文件 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 程序集。  
+- **源站点文件**：与可执行 WPF 程序集没有关联的独立数据文件。  
   
  这三种类型的文件之间的一个重要区别是：资源文件和内容文件在生成时即为程序集所知；程序集明确知道它们的存在。 但对于源站点文件，程序集可能根本不知道它们，或者通过包统一资源标识符（URI）引用隐式了解;对于后一种情况，不能保证引用的源站点文件确实存在。  
   
@@ -55,7 +55,7 @@ Microsoft Windows 应用程序通常依赖于包含不可执行的数据的文�
 > 本节中所述的资源文件不同于[XAML 资源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)中所述的资源文件，与[管理应用程序资源（.net）](/visualstudio/ide/managing-application-resources-dotnet)中所述的嵌入或链接的资源不同。  
   
 ### <a name="configuring-resource-files"></a>配置资源文件  
- 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中，资源文件是作为 `Resource` 项包含在 Microsoft 生成引擎（MSBuild）项目中的文件。  
+ 在 WPF 中，资源文件是作为 `Resource` 项包含在 Microsoft 生成引擎（MSBuild）项目中的文件。  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -80,7 +80,7 @@ Microsoft Windows 应用程序通常依赖于包含不可执行的数据的文�
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadapageresourcefilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadapageresourcefilemanuallycode)]  
   
- 当调用 <xref:System.Windows.Application.GetResourceStream%2A> 使你能够访问 <xref:System.IO.Stream>时，需要执行其他工作，将其转换为你要将其设置到的属性的类型。 相反，您可以让 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 通过使用代码将资源文件直接加载到类型的属性中来打开和转换 <xref:System.IO.Stream>。  
+ 当调用 <xref:System.Windows.Application.GetResourceStream%2A> 使你能够访问 <xref:System.IO.Stream>时，需要执行其他工作，将其转换为你要将其设置到的属性的类型。 相反，你可以让 WPF 通过使用代码将资源文件直接加载到类型的属性中来处理 <xref:System.IO.Stream> 的打开和转换。  
   
  下面的示例演示如何使用代码将 <xref:System.Windows.Controls.Page> 直接加载到 <xref:System.Windows.Controls.Frame> （`pageFrame`）。  
   
@@ -92,7 +92,7 @@ Microsoft Windows 应用程序通常依赖于包含不可执行的数据的文�
  [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml#loadpageresourcefilefromxaml)]  
   
 ### <a name="application-code-files-as-resource-files"></a>作为资源文件的应用程序代码文件  
- 使用包 Uri 可以引用一组特殊的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序代码文件，包括 windows、页面、流文档和资源字典。 例如，你可以使用一个包 URI 设置 <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> 属性，该 URL 引用在应用程序启动时要加载的窗口或页面。  
+ 使用包 Uri 可以引用一组特殊的 WPF 应用程序代码文件，包括 windows、页面、流文档和资源字典。 例如，你可以使用一个包 URI 设置 <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> 属性，该 URL 引用在应用程序启动时要加载的窗口或页面。  
   
  [!code-xaml[WPFAssemblyResourcesSnippets#SetApplicationStartupURI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/App.xaml#setapplicationstartupuri)]  
   
@@ -160,7 +160,7 @@ Microsoft Windows 应用程序通常依赖于包含不可执行的数据的文�
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadapagecontentfilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadapagecontentfilemanuallycode)]  
   
- 当调用 <xref:System.Windows.Application.GetContentStream%2A> 使你能够访问 <xref:System.IO.Stream>时，需要执行其他工作，将其转换为你要将其设置到的属性的类型。 相反，您可以让 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 通过使用代码将资源文件直接加载到类型的属性中来打开和转换 <xref:System.IO.Stream>。  
+ 当调用 <xref:System.Windows.Application.GetContentStream%2A> 使你能够访问 <xref:System.IO.Stream>时，需要执行其他工作，将其转换为你要将其设置到的属性的类型。 相反，你可以让 WPF 通过使用代码将资源文件直接加载到类型的属性中来处理 <xref:System.IO.Stream> 的打开和转换。  
   
  下面的示例演示如何使用代码将 <xref:System.Windows.Controls.Page> 直接加载到 <xref:System.Windows.Controls.Frame> （`pageFrame`）。  
   
@@ -173,7 +173,7 @@ Microsoft Windows 应用程序通常依赖于包含不可执行的数据的文�
   
 <a name="Site_of_Origin_Files"></a>   
 ## <a name="site-of-origin-files"></a>源站点文件  
- 资源文件与一起分发的程序集具有显式关系，如 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 所定义。 但是，有些情况下可能需要在程序集和应用程序数据文件之间建立隐式关系或不存在的关系，这些情况包括：  
+ 资源文件与一起分发的程序集具有显式关系，如 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>所定义。 但是，有些情况下可能需要在程序集和应用程序数据文件之间建立隐式关系或不存在的关系，这些情况包括：  
   
 - 文件在编译时不存在。  
   
@@ -195,7 +195,7 @@ Microsoft Windows 应用程序通常依赖于包含不可执行的数据的文�
 > 源站点文件不与客户端计算机上的 XAML 浏览器应用程序（XBAP）缓存，而内容文件为。 因此，只有在专门请求下载源站点文件时，才会下载它们。 如果 XAML 浏览器应用程序（XBAP）应用程序包含大型媒体文件，则将其配置为源站点文件意味着初始应用程序的启动速度要快得多，并且仅按需下载这些文件。  
   
 ### <a name="configuring-site-of-origin-files"></a>配置源站点文件  
- 如果源站点文件在编译时不存在或未知，则需要使用传统的部署机制来确保在运行时可以使用所需的文件，包括使用 `XCopy` 命令行程序或 Microsoft WindowsInstaller.  
+ 如果源站点文件在编译时不存在或未知，则需要使用传统的部署机制来确保在运行时可以使用所需的文件，包括使用 `XCopy` 命令行程序或 Microsoft Windows Installer。  
   
  如果你在编译时知道想要位于源站点的文件，但仍希望避免显式依赖项，则可以将这些文件作为 `None` 项添加到 MSBuild 项目。 与内容文件一样，需要设置 MSBuild `CopyToOutputDirectory` 特性，以指定将源站点文件复制到相对于生成的程序集的位置，方法是指定 `Always` 值或 `PreserveNewest` 值。  
   
@@ -222,7 +222,7 @@ Microsoft Windows 应用程序通常依赖于包含不可执行的数据的文�
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadapagesoofilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadapagesoofilemanuallycode)]  
   
- 当调用 <xref:System.Windows.Application.GetRemoteStream%2A> 使你能够访问 <xref:System.IO.Stream>时，需要执行其他工作，将其转换为你要将其设置到的属性的类型。 相反，您可以让 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 通过使用代码将资源文件直接加载到类型的属性中来打开和转换 <xref:System.IO.Stream>。  
+ 当调用 <xref:System.Windows.Application.GetRemoteStream%2A> 使你能够访问 <xref:System.IO.Stream>时，需要执行其他工作，将其转换为你要将其设置到的属性的类型。 相反，你可以让 WPF 通过使用代码将资源文件直接加载到类型的属性中来处理 <xref:System.IO.Stream> 的打开和转换。  
   
  下面的示例演示如何使用代码将 <xref:System.Windows.Controls.Page> 直接加载到 <xref:System.Windows.Controls.Frame> （`pageFrame`）。  
   
@@ -237,6 +237,6 @@ Microsoft Windows 应用程序通常依赖于包含不可执行的数据的文�
 ## <a name="rebuilding-after-changing-build-type"></a>更改生成类型后重新生成  
  在更改应用程序数据文件的生成类型后，需要重新生成整个应用程序以确保应用这些更改。 如果只生成应用程序，则不会应用更改。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WPF 中的 Pack URI](pack-uris-in-wpf.md)

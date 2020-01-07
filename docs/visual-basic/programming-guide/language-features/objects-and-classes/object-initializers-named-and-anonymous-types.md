@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 20e46d7ecc206abb28240075d9ec5f764ab78d01
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e6ffc649d7eb841c2d009b0ec1237975f46e2d2d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346135"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636804"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>对象初始值设定项：命名类型和匿名类型 (Visual Basic)
 使用对象初始值设定项，您可以通过使用单个表达式来指定复杂对象的属性。 它们可用于创建命名类型和匿名类型的实例。  
@@ -105,7 +105,7 @@ ms.locfileid: "74346135"
   
  由于类型名称不可用，因此不能使用 `As` 子句声明 `cust13`。 必须推断其类型。 如果不使用后期绑定，则这会将匿名类型限制为本地变量。  
   
- 匿名类型为 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询提供关键支持。 有关在查询中使用匿名类型的详细信息，请参阅 Visual Basic 中的[匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)和[LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)。  
+ 匿名类型为 LINQ 查询提供关键支持。 有关在查询中使用匿名类型的详细信息，请参阅 Visual Basic 中的[匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)和[LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)。  
   
 ### <a name="remarks-about-anonymous-types"></a>有关匿名类型的备注  
   

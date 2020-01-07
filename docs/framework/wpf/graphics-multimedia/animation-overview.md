@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 870fc1d1f02dca7d4488a27385fcfeaec8098ced
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f0f55c948d10c61ebab57f47e3461531ccf5f610
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039179"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559711"
 ---
 # <a name="animation-overview"></a>动画概述
 
@@ -201,7 +201,7 @@ ms.locfileid: "73039179"
 
 由于动画生成属性值，因此不同的属性类型具有不同的动画类型。 若要对采用 <xref:System.Double>的属性（如元素的 <xref:System.Windows.FrameworkElement.Width%2A> 属性）进行动画处理，请使用生成 <xref:System.Double> 值的动画。 若要对采用 <xref:System.Windows.Point>的属性进行动画处理，请使用生成 <xref:System.Windows.Point> 值的动画等。 由于有许多不同的属性类型，因此 <xref:System.Windows.Media.Animation> 命名空间中有几个动画类。 幸运的是，它们都遵循严格的命名约定，因此可以轻松地区分它们：
 
-- \<*类型*> 动画
+- \<*类型*>Animation
 
   这些动画称为“From/To/By”或“基本”动画，它们在起始值和目标值之间进行动画处理，或者通过将偏移量值与其起始值相加来进行动画处理。
 
@@ -213,17 +213,17 @@ ms.locfileid: "73039179"
 
   此概述中的示例使用这些动画，因为这些动画使用起来最简单。 From/to/By 动画在 From/To/By 动画概述中进行了详细说明。
 
-- \<*类型*> AnimationUsingKeyFrames
+- \<*类型*>AnimationUsingKeyFrames
 
   关键帧动画的功能比“From/To/By”动画的功能更强大，因为可以指定任意多个目标值，甚至可以控制它们的插值方法。 某些类型只能用关键帧动画进行动画处理。 关键帧动画[概述](key-frame-animations-overview.md)中详细描述了关键帧动画。
 
-- \<*Type*>AnimationUsingPath
+- \<*类型*>AnimationUsingPath
 
   路径动画支持使用几何路径来生成动画值。
 
-- \<*Type*>AnimationBase
+- \<*类型*>AnimationBase
 
-  一个抽象类，它在实现它时将 \<*类型*> 值进行动画处理。 此类用作 \<*类型*> 动画和 \<*类型*> AnimationUsingKeyFrames 类的基类。 只有在想要创建自己的自定义动画时，才需要直接处理这些类。 否则，请使用 \<*类型*> 动画或关键帧\<*类型*> 动画。
+  在实现时对 \<*类型*> 值进行动画处理的抽象类。 此类用作 \<*类型*>Animation 和 \<*类型*>AnimationUsingKeyFrames 类的基类。 只有在想要创建自己的自定义动画时，才需要直接处理这些类。 否则，请使用\<*类型*>Animation 或 KeyFrame\<*类型*>Animation。
 
 在大多数情况下，您需要使用 \<*类型*> 动画类，如 <xref:System.Windows.Media.Animation.DoubleAnimation> 和 <xref:System.Windows.Media.Animation.ColorAnimation>。
 
@@ -248,13 +248,13 @@ ms.locfileid: "73039179"
 
 #### <a name="the-duration-property"></a>Duration 属性
 
-如前文所述，时间线表示一个时间段。 该时间段的长度由时间线的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 确定，通常使用 <xref:System.Windows.Duration.TimeSpan%2A> 值来指定该时间线。 当时间线达到其持续时间的终点时，表示时间线完成了一次迭代。
+如前文所述，时间线表示时间段。 该时间段的长度由时间线的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 确定，通常使用 <xref:System.Windows.Duration.TimeSpan%2A> 值来指定该时间线。 当时间线达到其持续时间的终点时，表示时间线完成了一次迭代。
 
 动画使用其 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 属性来确定其当前值。 如果没有为动画指定 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 值，则使用默认值1秒。
 
 下面的语法演示了 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 属性的 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 特性语法的简化版本。
 
-*小时* `:` *分钟* `:` *秒*
+*小时*`:`*分钟*`:`*秒*
 
 下表显示了几个 <xref:System.Windows.Duration> 设置及其结果值。
 
@@ -292,7 +292,7 @@ ms.locfileid: "73039179"
 
 - 若要将 <xref:System.Windows.FrameworkElement> 动画目标，请通过设置其 <xref:System.Windows.FrameworkElement.Name%2A> 属性为其指定一个名称。 在代码中，还必须使用 <xref:System.Windows.FrameworkElement.RegisterName%2A> 方法将元素名称注册到它所属的页面。
 
-- 若要使 <xref:System.Windows.Freezable> 对象成为 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]中的动画目标，请使用[X：Name 指令](../../xaml-services/x-name-directive.md)为其分配名称。 在代码中，只需使用 <xref:System.Windows.FrameworkElement.RegisterName%2A> 方法将对象注册到它所属的页面。
+- 若要使 <xref:System.Windows.Freezable> 对象成为 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]中的动画目标，请使用[X：Name 指令](../../../desktop-wpf/xaml-services/xname-directive.md)为其分配名称。 在代码中，只需使用 <xref:System.Windows.FrameworkElement.RegisterName%2A> 方法将对象注册到它所属的页面。
 
 下面的部分提供了在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 和代码中命名元素的示例。 有关命名和设定目标的更多详细信息，请参阅[情节提要概述](storyboards-overview.md)。
 
@@ -367,7 +367,7 @@ ms.locfileid: "73039179"
 
 ## <a name="related-topics"></a>相关主题
 
-|职务|说明|
+|职务|描述|
 |-----------|-----------------|
 |[动画和计时系统概述](animation-and-timing-system-overview.md)|介绍计时系统如何使用 <xref:System.Windows.Media.Animation.Timeline> 和 <xref:System.Windows.Media.Animation.Clock> 类，这允许您创建动画。|
 |[动画提示和技巧](animation-tips-and-tricks.md)|列出用于解决与动画有关的问题（如性能）的有用提示。|
@@ -387,7 +387,7 @@ ms.locfileid: "73039179"
 
 <a name="reference"></a>
 
-## <a name="reference"></a>参考
+## <a name="reference"></a>引用
 
 - <xref:System.Windows.Media.Animation.Timeline>
 
