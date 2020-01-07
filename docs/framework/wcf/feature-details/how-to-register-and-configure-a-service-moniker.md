@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 47e11ff2bc5b1c3eca152ba1fa429b5785c2f01b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a73f6333a91cd8018fe8e0c34d44db87938b8058
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976129"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347093"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>如何：注册和配置服务标记
 在使用具有类型协定的 COM 应用程序中使用 Windows Communication Foundation （WCF）服务名字对象之前，必须使用 COM 注册所需的属性化类型，并使用所需的绑定配置 COM 应用程序和名字对象configuration.  
@@ -87,7 +87,7 @@ ms.locfileid: "73976129"
     > [!NOTE]
     > ：如果标记格式不正确，或者服务不可用，则对 `GetObject` 的调用会返回一个“语法无效”错误。 如果您收到此错误，请确保所使用的标记正确无误且服务可用。  
   
-     尽管此主题重点介绍通过 VB 6.0 代码使用服务标记，你还是可以通过其他语言使用服务标记。 当通过 C++ 代码使用标记时，应使用“no_namespace named_guids raw_interfaces_only”导入 Svcutil.exe 生成的程序集，如下面的代码中所示。  
+     尽管本主题重点介绍如何将服务名字对象用于 Visual Basic 6.0 代码，但你可以使用其他语言的服务名字对象。 当通过 C++ 代码使用标记时，应使用“no_namespace named_guids raw_interfaces_only”导入 Svcutil.exe 生成的程序集，如下面的代码中所示。  
   
     ```cpp
     #import "ComTestProxy.tlb" no_namespace named_guids  
@@ -95,6 +95,6 @@ ms.locfileid: "73976129"
   
      这会修改导入的接口定义，以便所有方法均会返回一个 `HResult`。 其他任何返回值都将转换为 out 参数。 方法的总体执行情况保持不变。 这将允许您确定在代理上调用方法时出现异常的原因。 仅可通过 C++ 代码来使用此功能。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

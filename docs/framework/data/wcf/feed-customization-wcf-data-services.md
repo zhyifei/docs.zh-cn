@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 08df16be9df6d55ab9f1426e205e56d9609ce72e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: f34ee198ba49a168ed8b56785bea68beee2eb214
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569225"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348127"
 ---
 # <a name="feed-customization-wcf-data-services"></a>源自定义（WCF 数据服务）
-WCF 数据服务使用 Open Data Protocol （OData）将数据公开为源。 OData 支持用于数据馈送的 Atom 和 JavaScript 对象表示法（JSON）格式。 使用 Atom 馈送时，OData 提供一种标准方法，用于将数据（如实体和关系）序列化为可包含在 HTTP 消息正文中的 XML 格式。 OData 定义实体中包含的数据与 Atom 元素之间的默认实体属性映射。 有关详细信息，请参阅[OData： Atom 格式](https://go.microsoft.com/fwlink/?LinkID=185794)。  
+WCF 数据服务使用 Open Data Protocol （OData）将数据公开为源。 OData 支持用于数据馈送的 Atom 和 JavaScript 对象表示法（JSON）格式。 使用 Atom 馈送时，OData 提供一种标准方法，用于将数据（如实体和关系）序列化为可包含在 HTTP 消息正文中的 XML 格式。 OData 定义实体中包含的数据与 Atom 元素之间的默认实体属性映射。 有关详细信息，请参阅[OData： Atom 格式](https://www.odata.org/documentation/odata-version-2-0/atom-format/)。  
   
  您的应用程序方案可能要求以自定义方式而非标准源格式序列化数据服务返回的属性数据。 使用 OData，你可以在数据馈送中自定义序列化，以便可以将实体的属性映射到某个条目的未使用的元素和属性，或者映射到源中条目的自定义元素。  
   
@@ -31,7 +31,7 @@ WCF 数据服务使用 Open Data Protocol （OData）将数据公开为源。 OD
 > 定义自定义源时，必须保证已定义自定义映射的所有实体属性都包含在投影中。 如果投影中不包含某个已映射的实体属性，则可能会丢失数据。 有关详细信息，请参阅[查询投影](query-projections-wcf-data-services.md)。  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>使用实体框架提供程序自定义源  
- 在 .edmx 文件中，用于实体框架提供程序的数据模型以 XML 格式表示。 在这种情况下，用于定义自定义源的特性将会添加到表示数据模型中的实体类型和属性的 `EntityType` 和 `Property` 元素中。 [\[MC\]：概念架构定义文件格式](https://go.microsoft.com/fwlink/?LinkId=159072)（实体框架提供程序用于定义数据模型的格式）中未定义这些源自定义属性。 因此，必须在某个特定的架构命名空间中声明源自定义特性，此架构命名空间应按 `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"` 格式定义。 以下 XML 片段显示应用于 `Property` 实体类型的 `Products` 元素的源自定义特性，这些特性定义 `ProductName`、`ReorderLevel` 和 `UnitsInStock` 属性。  
+ 在 .edmx 文件中，用于实体框架提供程序的数据模型以 XML 格式表示。 在这种情况下，用于定义自定义源的特性将会添加到表示数据模型中的实体类型和属性的 `EntityType` 和 `Property` 元素中。 [\[MC\]：概念架构定义文件格式](https://docs.microsoft.com/openspecs/windows_protocols/mc-csdl/c03ad8c3-e8b7-4306-af96-a9e52bb3df12)（实体框架提供程序用于定义数据模型的格式）中未定义这些源自定义属性。 因此，必须在某个特定的架构命名空间中声明源自定义特性，此架构命名空间应按 `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"` 格式定义。 以下 XML 片段显示应用于 `Property` 实体类型的 `Products` 元素的源自定义特性，这些特性定义 `ProductName`、`ReorderLevel` 和 `UnitsInStock` 属性。  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/northwind.csdl#edmfeedattributes)]  
   

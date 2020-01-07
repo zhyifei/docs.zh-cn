@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 05a39388e8aa9681af60cf86a3df8346d744b69e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 293537ad33c8e751d49d820fc57ea525e68bc203
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345314"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347768"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic 中的生存期
 已声明元素的*生存期*是可供使用的时间段。 变量是具有生存期的唯一元素。 出于此目的，编译器将过程参数和函数返回视为变量的特殊情况。 变量的生存期表示它可以包含一个值的时间段。 它的值可以在其生存期内更改，但它始终保存某些值。  
@@ -54,21 +54,21 @@ ms.locfileid: "74345314"
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>说明  
+### <a name="description"></a>描述  
  下面的示例使用[Static](../../../../visual-basic/language-reference/modifiers/static.md)关键字声明一个变量。 （请注意，当[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)使用修饰符（如 `Static`）时，不需要 `Dim` 关键字。）  
   
 ### <a name="code"></a>代码  
  [!code-vb[VbVbalrKeywords#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#13)]  
   
-### <a name="comments"></a>注释  
+### <a name="comments"></a>Comments  
  在前面的示例中，变量在 `runningTotal` 返回到调用代码后仍然存在 `applesSold`。 下次调用 `runningTotal` 时，`applesSold` 将保留其以前计算的值。  
   
  如果在未使用 `Static`的情况下声明 `applesSold`，则不会在对 `runningTotal`的调用之间保留以前的累计值。 下次调用 `runningTotal` 时，`applesSold` 将被重新创建并初始化为0，`runningTotal` 只返回与调用该值相同的值。  
   
-### <a name="compiling-the-code"></a>编译代码  
+### <a name="compile-the-code"></a>编译代码  
  您可以将静态局部变量的值初始化为其声明的一部分。 如果声明要 `Static`的数组，则可以初始化其秩（维数）、每个维度的长度以及各个元素的值。  
   
-### <a name="security"></a>安全  
+### <a name="security"></a>安全性  
  在前面的示例中，可以通过在模块级别声明 `applesSold` 来生成相同的生存期。 但是，如果您以这种方式更改了变量的作用域，则该过程将不再具有对它的独占访问权限。 由于其他过程可以访问 `applesSold` 和更改其值，因此，运行总计可能不可靠，并且代码可能更难以维护。  
   
 ## <a name="see-also"></a>另请参阅

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: fec23439236fccb23964c0feb22691a973c787b1
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 62b218a7259d824930a2eb2c7f810b480034e2b6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838086"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338022"
 ---
 # <a name="auditing-security-events"></a>审核安全事件
 用 Windows Communication Foundation （WCF）创建的应用程序可以通过审核功能记录安全事件（成功和/或失败）。 这些事件被写入 Windows 系统事件日志，并且可以使用事件查看器进行检查。  
@@ -73,7 +73,7 @@ ms.locfileid: "74838086"
 </configuration>  
 ```  
   
- 如果启用了审核但未指定 `auditLogLocation`，则对于支持写入 Security 日志的平台来说，默认日志名称为“Security”日志；否则为“Application”日志。 只有 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 Windows Vista 操作系统才支持写入安全日志。 有关详细信息，请参阅本主题后面的 "操作系统" 部分。  
+ 如果启用了审核但未指定 `auditLogLocation`，则对于支持写入 Security 日志的平台来说，默认日志名称为“Security”日志；否则为“Application”日志。 只有 Windows Server 2003 和 Windows Vista 操作系统才支持写入安全日志。 有关详细信息，请参阅本主题后面的 "操作系统" 部分。  
   
 ## <a name="security-considerations"></a>需要考虑的安全性因素  
  如果恶意用户了解到审核功能处于启用状态，攻击者可能会发送将导致写入审核项的无效消息。 如果以这种方式填充审核日志，则审核系统会出现故障。 为了缓解此问题，请将 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 属性设置为 `true`，然后使用事件查看器的属性来控制审核行为。 有关详细信息，请参阅有关使用 Windows XP 中的事件查看器查看和管理事件日志的 Microsoft 支持部门文章，请参阅[如何在 WINDOWS xp 中的事件查看器查看和管理事件日志](https://go.microsoft.com/fwlink/?LinkId=89150)。  
@@ -88,7 +88,7 @@ ms.locfileid: "74838086"
 |System|Application 日志|Security 日志|  
 |------------|---------------------|------------------|  
 |[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 或更高版本|支持|不支持|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] 和 Windows Vista|支持|线程上下文必须具有 `SeAuditPrivilege`|  
+|Windows Server 2003 SP1 和 Windows Vista|支持|线程上下文必须具有 `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>其他因素  
  除操作系统以外，下表描述了其他用于控制是否启用日志记录的设置。  

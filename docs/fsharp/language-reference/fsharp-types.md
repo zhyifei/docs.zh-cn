@@ -1,13 +1,13 @@
 ---
-title: F# 类型
+title: 类型
 description: 了解中F#使用的类型以及如何F#命名和描述类型。
 ms.date: 05/16/2016
-ms.openlocfilehash: 8f2526dce46d53a92c01c9347e1ed97681a45ecc
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 70d79525318c8d2eb0711d6a1b50be1ac0cf0226
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425308"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348219"
 ---
 # <a name="f-types"></a>F# 类型
 
@@ -33,23 +33,23 @@ F#提供了一些有用的集合类型，这些类型在设计时需要考虑函
 
 下表显示了类型的类型语法F#的各个方面。
 
-|键入|类型语法|示例|
+|类型|类型语法|示例|
 |----|-----------|--------|
-|基元类型|*类型名称*|`int`<br /><br />`float`<br /><br />`string`|
-|聚合类型（类、结构、联合、记录、枚举等）|*类型名称*|`System.DateTime`<br /><br />`Color`|
-|类型缩写|*类型缩写-名称*|`bigint`|
-|完全限定类型|*命名空间。类型名称*<br /><br />或<br /><br />*模块. 类型名称*<br /><br />或<br /><br />*命名空间. 类型名称*|`System.IO.StreamWriter`|
-|array|*类型名称*[] 或<br /><br />*类型名称*数组|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
-|二维数组|*类型名称*[，]|`int[,]`<br /><br />`float[,]`|
-|三维数组|*类型名称*[，，]|`float[,,]`|
+|基元类型|*type-name*|`int`<br /><br />`float`<br /><br />`string`|
+|聚合类型（类、结构、联合、记录、枚举等）|*type-name*|`System.DateTime`<br /><br />`Color`|
+|类型缩写|*type-abbreviation-name*|`bigint`|
+|完全限定类型|*namespaces.type-name*<br /><br />或<br /><br />*modules.type-name*<br /><br />或<br /><br />*namespaces.modules.type-name*|`System.IO.StreamWriter`|
+|数组|*类型名称*[] 或<br /><br />*类型名称*数组|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
+|二维数组|*type-name*[,]|`int[,]`<br /><br />`float[,]`|
+|三维数组|*type-name*[,,]|`float[,,]`|
 |tuple|*类型-name1* &#42; *类型-name2* 。|例如，`(1,'b',3)` 具有类型 `int * char * int`|
-|Generic Type — 泛型类型|*类型参数* *泛型类型名称*<br /><br />或<br /><br />*泛型类型名称*&lt;*类型参数-列表*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
-|构造类型（提供了特定类型参数的泛型类型）|*类型参数* *泛型类型名称*<br /><br />或<br /><br />*泛型类型名称*&lt;*类型参数列表*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
-|具有单个参数的函数类型|*参数-type1* -&gt;*返回类型*|一个函数，它采用 `int` 并返回 `string` 具有类型 `int -> string`|
+|Generic Type — 泛型类型|*类型参数* *泛型类型名称*<br /><br />或<br /><br />*generic-type-name*&lt;*type-parameter-list*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
+|构造类型（提供了特定类型参数的泛型类型）|*类型实参* *泛型类型名称*<br /><br />或<br /><br />*generic-type-name*&lt;*type-argument-list*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
+|具有单个参数的函数类型|*parameter-type1* -&gt; *return-type*|一个函数，它采用 `int` 并返回 `string` 具有类型 `int -> string`|
 |具有多个参数的函数类型|*参数-type1* -&gt; *type2* -&gt; ...-&gt;*返回类型*|采用 `int` 和 `float` 并返回 `string` 类型的函数 `int -> float -> string`|
 |高阶函数作为参数|（*函数类型*）|`List.map` 具有类型 `('a -> 'b) -> 'a list -> 'b list`|
-|委托|*函数类型*的委托|`delegate of unit -> int`|
-|灵活类型|#*类型-名称*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
+|委派|*函数类型*的委托|`delegate of unit -> int`|
+|灵活类型|#*type-name*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 
 ## <a name="related-topics"></a>相关主题
 

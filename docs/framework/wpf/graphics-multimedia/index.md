@@ -12,12 +12,12 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: 150b742c2195c07abf2b2823871627b0ba827580
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: f9d27ce50376c3a494a546a23cd5d7409b4c475a
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919992"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636614"
 ---
 # <a name="graphics-and-multimedia"></a>图形和多媒体
 
@@ -59,11 +59,11 @@ WPF 引入了对高质量 2-D 图形的支持。 功能包括画笔、几何、�
 
 ### <a name="2-d-shapes"></a>二维形状
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供了一种常用矢量绘制的二维形状（如矩形和椭圆）的库，如下图所示。
+WPF 提供了一个库，其中列出了常用矢量绘制的二维形状（如矩形和椭圆），如下图所示。
 
 ![显示省略号和矩形的关系图。](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
-这些内部 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 形状不仅仅是形状：它们是可编程的元素，用于实现常见控件的许多预期功能，包括键盘和鼠标输入。 下面的示例演示如何处理通过单击 <xref:System.Windows.Shapes.Ellipse> 元素引发的 <xref:System.Windows.UIElement.MouseUp> 事件。
+这些内部的 WPF 形状并不只是形状：它们是用于实现大多数常见控件（包括键盘和鼠标输入）的许多功能的可编程元素。 下面的示例演示如何处理通过单击 <xref:System.Windows.Shapes.Ellipse> 元素引发的 <xref:System.Windows.UIElement.MouseUp> 事件。
 
 ```xaml
 <Window
@@ -101,7 +101,7 @@ End Class
 
 ### <a name="2-d-geometries"></a>二维几何图形
 
-如果 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供的二维形状还不够，则可以使用几何图形和路径的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支持来创建自己的。 下图显示如何使用几何创建形状作为图形画笔和剪裁其他 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 元素。
+如果 WPF 提供的二维形状不能满足需要，则可以使用几何图形和路径的 WPF 支持创建自己的形状。 下图显示了如何使用几何图形来创建形状、作为绘图画笔以及剪辑其他 WPF 元素。
 
 ![显示如何使用几何图形来创建形状的屏幕截图。](./media/index/use-geometries-create-shapes.png)
 
@@ -109,7 +109,7 @@ End Class
 
 ### <a name="2-d-effects"></a>二维效果
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供了一种二维类库，可用于创建各种效果。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的二维渲染功能提供了绘制具有渐变、位图、绘图和视频的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素的功能;并使用旋转、缩放和倾斜来处理它们。 下图演提供了可使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 画笔实现的许多效果的示例。
+WPF 提供了一个二维类库，您可以使用它来创建各种效果。 WPF 的二维呈现功能提供了绘制具有渐变、位图、绘图和视频的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素的功能;并使用旋转、缩放和倾斜来处理它们。 下图提供了可通过使用 WPF 画笔实现的多种效果的示例。
 
 ![显示不同 WPF 画笔和画图元素的插图。](./media/index/brushes-paint-elements.png)
 
@@ -119,7 +119,7 @@ End Class
 
 ## <a name="3-d-rendering"></a>三维呈现
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供一组3-d 渲染功能，这些功能与 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的二维图形支持相集成，使你能够创建更激动人心的布局、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]和数据可视化。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使你能够将二维图像呈现到三维形状的图面上，如下图所示。
+WPF 提供一组三维呈现功能，这些功能与 WPF 中的二维图形支持集成，以便你能够创建更激动人心的布局、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]和数据可视化。 在一种极端情况下，WPF 允许您将二维图像呈现到三维形状的图面上，如下图所示。
 
 ![显示具有不同纹理的三维形状的示例屏幕截图。](./media/index/visual-three-dimensional-shape.png)
 
@@ -129,7 +129,7 @@ End Class
 
 ## <a name="animation"></a>动画
 
-使用动画，可以让控件和元素变大、抖动、旋转和淡出，并创建有趣的转换等。 由于 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支持对大多数属性进行动画处理，因此，不仅可以对大多数 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 对象进行动画处理，还可以使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 对创建的自定义对象进行动画处理。
+使用动画，可以让控件和元素变大、抖动、旋转和淡出，并创建有趣的转换等。 因为 WPF 使你可以对大多数属性进行动画处理，因此，你不仅可以对大多数 WPF 对象进行动画处理，还可以使用 WPF 对你创建的自定义对象进行动画处理。
 
 ![动画处理多维数据集的屏幕截图。](./media/index/animate-custom-objects.png)
 
@@ -143,7 +143,7 @@ End Class
 
 ### <a name="images"></a>图像
 
-图像（包括图标、背景甚至动画部分）是大部分应用程序的核心部分。 由于经常需要使用图像，因此 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 公开以各种方式处理它们的功能。 下图显示其中一种方法。
+图像（包括图标、背景甚至动画部分）是大部分应用程序的核心部分。 由于你经常需要使用图像，因此 WPF 公开了以各种方式使用它们的功能。 下图显示其中一种方法。
 
 ![样式设置示例屏幕截图](../controls/./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
 
@@ -151,7 +151,7 @@ End Class
 
 ### <a name="video-and-audio"></a>视频和音频
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的图形功能的核心功能是为处理多媒体（包括视频和音频）提供本机支持。 以下示例介绍如何将媒体播放器插入到应用程序中。
+WPF 图形功能的核心功能是为使用多媒体提供本机支持，其中包括视频和音频。 以下示例介绍如何将媒体播放器插入到应用程序中。
 
 ```xaml
 <MediaElement Source="media\numbers.wmv" Width="450" Height="250" />

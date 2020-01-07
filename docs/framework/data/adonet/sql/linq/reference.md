@@ -1,15 +1,15 @@
 ---
-title: 参考
+title: 引用
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 3c33613c3b20020248b0ba6bb9e17266edc07bae
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 287aca605ddb80d32cdbad38181244bb57fb8337
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792831"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634271"
 ---
-# <a name="reference"></a>参考
+# <a name="reference"></a>引用
 本节提供针对 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 开发人员的参考信息。  
   
  还鼓励你搜索特定问题的 Microsoft Docs，尤其是参加[LINQ 论坛](https://go.microsoft.com/fwlink/?LinkId=76488)，你可以在其中与专家详细讨论更复杂的主题。 此外，你还可以学习详细介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技术并包含 Visual Basic 和 C# 代码示例的白皮书。 有关详细信息，请参阅[LINQ to SQL：用于关系数据的 .Net 语言集成查询](https://go.microsoft.com/fwlink/?LinkId=93205)。  
@@ -31,7 +31,7 @@ ms.locfileid: "70792831"
  提供有关 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的常见问题解答。  
   
  [SQL Server Compact 与 LINQ to SQL](sql-server-compact-and-linq-to-sql.md)  
- 介绍 SQL Server Compact 3.5 与应用程序中 SQL Server [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]的不同之处。  
+ 描述 SQL Server Compact 3.5 与 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序中 SQL Server 的不同之处。  
   
  [标准查询运算符转换](standard-query-operator-translation.md)  
  介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何将标准查询运算符转换为 SQL 命令。  
@@ -42,7 +42,7 @@ ms.locfileid: "70792831"
   
  [语言集成查询 (LINQ) - C#](../../../../../csharp/programming-guide/concepts/linq/index.md)  
  [语言集成查询 (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
- 提供主题的[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]门户。  
+ 提供 LINQ 主题的门户。  
   
  [LinqDataSource Web 服务器控件概述](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
- 描述<xref:System.Web.UI.WebControls.LinqDataSource>控件如何通过 ASP.NET [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]数据源控件体系结构向 Web 开发人员公开。
+ 介绍 <xref:System.Web.UI.WebControls.LinqDataSource> 控件如何通过 ASP.NET 数据源控件体系结构向 Web 开发人员公开 LINQ。

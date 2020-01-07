@@ -13,12 +13,12 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 04e0e3c613b194ac85241d50d3bc5fd5dc0b6e54
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 8198359e2c54c4ed098703fbcc070f7469b3362a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977330"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344657"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>System.Text.Json 中的 DateTime 和 DateTimeOffset 支持
 
@@ -74,7 +74,7 @@ ms.locfileid: "73977330"
 
 如果无法确定输入 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 文本表示形式的格式，则可以在转换器读取逻辑中使用 `DateTime(Offset).Parse` 方法。 这允许使用。NET 对分析各种 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 文本格式的广泛支持，包括非 ISO 8601 字符串和不符合扩展 ISO 8601-1:2019 配置文件的 ISO 8601 格式。 与使用序列化程序的本机实现相比，此方法的性能大大降低。
 
-对于序列化，可以在转换器写入逻辑中使用 `DateTime(Offset).ToString` 方法。 这允许您使用任何[标准日期和时间格式](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings)以及[自定义日期和时间格式](https://docs.microsoft.com/dotnet/standard/base-types/custom-date-and-time-format-strings)编写 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值。
+对于序列化，可以在转换器写入逻辑中使用 `DateTime(Offset).ToString` 方法。 这允许您使用任何[标准日期和时间格式](../base-types/standard-date-and-time-format-strings.md)以及[自定义日期和时间格式](../base-types/custom-date-and-time-format-strings.md)编写 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值。
 与使用序列化程序的本机实现相比，这种性能也明显降低。
 
 [!code-csharp[example-showing-datetime-parse](~/samples/snippets/standard/datetime/json/csharp/datetime-converter-examples/example1/Program.cs)]
@@ -85,9 +85,9 @@ ms.locfileid: "73977330"
 
 #### <a name="using-xrefsystembufferstextutf8parser-and-xrefsystembufferstextutf8formatter"></a>使用 <xref:System.Buffers.Text.Utf8Parser> 和 <xref:System.Buffers.Text.Utf8Formatter>
 
-如果输入 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 文本表示形式符合 "R"、"l"、"O"、"G" 标准日期和时间格式字符串中的一个或 "G"[标准日期和时间格式字符串](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings)，或者需要根据这些格式中的一种进行写入，则可以在转换器逻辑中使用快速的基于 utf-8 的分析和格式设置方法。 这比使用 `DateTime(Offset).Parse` 和 `DateTime(Offset).ToString`快得多。
+如果输入 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 文本表示形式符合 "R"、"l"、"O"、"G" 标准日期和时间格式字符串中的一个或 "G"[标准日期和时间格式字符串](../base-types/standard-date-and-time-format-strings.md)，或者需要根据这些格式中的一种进行写入，则可以在转换器逻辑中使用快速的基于 utf-8 的分析和格式设置方法。 这比使用 `DateTime(Offset).Parse` 和 `DateTime(Offset).ToString`快得多。
 
-此示例演示一个自定义转换器，该转换器根据["R" 标准格式](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings#the-rfc1123-r-r-format-specifier)对 <xref:System.DateTime> 值进行序列化和反序列化：
+此示例演示一个自定义转换器，该转换器根据["R" 标准格式](../base-types/standard-date-and-time-format-strings.md#the-rfc1123-r-r-format-specifier)对 <xref:System.DateTime> 值进行序列化和反序列化：
 
 [!code-csharp[example-showing-utf8-parser-and-formatter](~/samples/snippets/standard/datetime/json/csharp/datetime-converter-examples/example2/Program.cs)]
 
@@ -103,7 +103,7 @@ ms.locfileid: "73977330"
 
 ### <a name="when-writing-with-xrefsystemtextjsonutf8jsonwriter"></a>写入时 <xref:System.Text.Json.Utf8JsonWriter>
 
-如果要使用 <xref:System.Text.Json.Utf8JsonWriter>编写自定义 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 文本表示形式，则可以将自定义表示形式设置为 <xref:System.String>、`ReadOnlySpan<Byte>`、`ReadOnlySpan<Char>`或 <xref:System.Text.Json.JsonEncodedText>，然后将其传递给相应的[WriteStringValue](https://docs.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter.writestringvalue?view=netcore-3.0)或[Utf8JsonWriter](https://docs.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter.writestring?view=netcore-3.0)方法。
+如果要使用 <xref:System.Text.Json.Utf8JsonWriter>编写自定义 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 文本表示形式，则可以将自定义表示形式设置为 <xref:System.String>、`ReadOnlySpan<Byte>`、`ReadOnlySpan<Char>`或 <xref:System.Text.Json.JsonEncodedText>，然后将其传递给相应的 <xref:System.Text.Json.Utf8JsonWriter.WriteStringValue%2A?displayProperty=nameWithType> 或 <xref:System.Text.Json.Utf8JsonWriter.WriteString%2A?displayProperty=nameWithType> 方法。
 
 下面的示例演示如何使用 <xref:System.DateTime.ToString(System.String,System.IFormatProvider)>创建自定义 <xref:System.DateTime> 格式，然后使用 <xref:System.Text.Json.Utf8JsonWriter.WriteStringValue(System.String)> 方法编写该格式：
 
@@ -126,8 +126,8 @@ ms.locfileid: "73977330"
 | 组件       | 格式                      | 描述                                                                     |
 |-----------------|-----------------------------|---------------------------------------------------------------------------------|
 | 年            | “yyyy”                      | 0001-9999                                                                       |
-| 月份           | “MM”                        | 01-12                                                                           |
-| 天             | “dd”                        | 01-28、01-29、01-30、01-31 （基于月份/年份）                                  |
+| 月           | “MM”                        | 01-12                                                                           |
+| 日             | “dd”                        | 01-28、01-29、01-30、01-31 （基于月份/年份）                                  |
 | 小时            | “HH”                        | 00-23                                                                           |
 | 分钟          | “mm”                        | 00-59                                                                           |
 | 秒          | “ss”                        | 00-59                                                                           |
@@ -149,7 +149,7 @@ ms.locfileid: "73977330"
     1. "yyyy'-'mm'-'dd't'hh-YYYY'-'MM'-'DD'T'HH-Yyyy'-'mm'-'dd't'hh"： "MM"
 
 3. "" 完整日期 "不是" "部分时间" "
-    1. "yyyy'-'mm'-'dd't'hh-YYYY'-'MM'-'DD'T'HH-Yyyy'-'mm'-'dd't'hh"： "MM"： "ss" （可[排序（"s"）格式说明符](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings#the-sortable-s-format-specifier)）
+    1. "yyyy'-'mm'-'dd't'hh-YYYY'-'MM'-'DD'T'HH-Yyyy'-'mm'-'dd't'hh"： "MM"： "ss" （可[排序（"s"）格式说明符](../base-types/standard-date-and-time-format-strings.md#the-sortable-s-format-specifier)）
     2. "yyyy'-'mm'-'dd't'hh-YYYY'-'MM'-'DD'T'HH-Yyyy'-'mm'-'dd't'hh"： "MM"： "ss"。FFFFFFF
 
 4. "" 完整日期 "不是" "，时间小时" "：" "分钟" "时间偏移" "
@@ -174,7 +174,7 @@ ms.locfileid: "73977330"
 为格式化定义了下列粒度级别：
 
 1. "" 完整日期 "不是" "部分时间" "
-    1. "yyyy'-'mm'-'dd't'hh-YYYY'-'MM'-'DD'T'HH-Yyyy'-'mm'-'dd't'hh"： "MM"： "ss" （可[排序（"s"）格式说明符](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings#the-sortable-s-format-specifier)）
+    1. "yyyy'-'mm'-'dd't'hh-YYYY'-'MM'-'DD'T'HH-Yyyy'-'mm'-'dd't'hh"： "MM"： "ss" （可[排序（"s"）格式说明符](../base-types/standard-date-and-time-format-strings.md#the-sortable-s-format-specifier)）
 
         用于设置不包含秒的小数部分和不含偏移信息的 <xref:System.DateTime> 的格式。
 

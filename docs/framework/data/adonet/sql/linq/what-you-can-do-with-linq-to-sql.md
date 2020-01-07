@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
-ms.openlocfilehash: 8baf361ba66ba33927121ae20edcc6c12964c21c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e84047843aff4044c75ba1b971a9e2f061e2e8d6
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792090"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75633996"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>使用 LINQ to SQL 可执行的操作
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持您作为 SQL 开发人员所期望的所有关键功能。 您可以查询表中的信息、在表中插入信息以及更新和删除表中的信息。  
   
 ## <a name="selecting"></a>选择  
- 通过在您自己的编程语言中编写*查询，然后执行此查询以检索结果，即可以实现选择（投影*[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] ）。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 自行将所有必要操作转换为您所熟悉的必要 SQL 操作。 有关详细信息，请参阅 [LINQ to SQL](index.md)。  
+ 选择（*投影*）只需编写您自己的编程语言的 LINQ 查询，然后执行该查询以检索结果即可实现。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 自行将所有必要操作转换为您所熟悉的必要 SQL 操作。 有关详细信息，请参阅 [LINQ to SQL](index.md)。  
   
  在下面的示例中，检索来自伦敦的客户的公司名称并将其显示在控制台窗口中。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "70792090"
  [!code-csharp[DLinqGettingStarted#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqGettingStarted/cs/Program.cs#2)]
  [!code-vb[DLinqGettingStarted#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#2)]  
   
-## <a name="updating"></a>Updating  
+## <a name="updating"></a>正在更新…  
  若要 `Update` 某一数据库项，首先要检索该项，然后直接在对象模型中编辑它。 在修改了该对象之后，请对 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 调用 <xref:System.Data.Linq.DataContext> 以更新数据库。  
   
  在下面的示例中，检索来自伦敦的所有客户。 然后将其所在城市的名称从“London”更改为“London - Metro”。 最后，调用 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 以将所做的更改发送至数据库。  
@@ -43,14 +43,14 @@ ms.locfileid: "70792090"
  若要 `Delete` 某一项，请从其所属集合中移除该项，然后对 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 调用 <xref:System.Data.Linq.DataContext> 以提交所做的更改。  
   
 > [!NOTE]
-> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 无法识别级联删除操作。 如果要删除表中具有约束的行，请参阅[如何：删除数据库](how-to-delete-rows-from-the-database.md)中的行。  
+> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 无法识别级联删除操作。 如果要删除表中具有约束的行，请参阅[如何：从数据库中删除行](how-to-delete-rows-from-the-database.md)。  
   
  在下面的示例中，从数据库中检索 `CustomerID` 为 `98128` 的客户。 然后，在确认检索到客户行之后，调用 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> 以将该对象从集合中移除。 最后，调用 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 以将删除内容转发至数据库。  
   
  [!code-csharp[DLinqGettingStarted#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqGettingStarted/cs/Program.cs#4)]
  [!code-vb[DLinqGettingStarted#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#4)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [编程指南](programming-guide.md)
 - [LINQ to SQL 对象模型](the-linq-to-sql-object-model.md)

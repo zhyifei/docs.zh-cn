@@ -17,19 +17,19 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 9c237c06de1388de4c1fe6a6edb3fb5b52522d1f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b2fd923de165c0926e6f812764c71127b7c27691
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424626"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636232"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 安全策略 - 平台安全性
-虽然 Windows Presentation Foundation （WPF）提供各种安全服务，但它还利用基础平台（包括操作系统、CLR 和 Internet Explorer）的安全功能。 这些层组合在一起旨在提供 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 强大且深层防御的安全模型，尝试避免任何单点故障，如下图所示：  
+虽然 Windows Presentation Foundation （WPF）提供各种安全服务，但它还利用基础平台（包括操作系统、CLR 和 Internet Explorer）的安全功能。 这些层组合在一起为 WPF 提供强大的深层防御安全模型，尝试避免任何单点故障，如下图所示：  
   
  ![显示 WPF 安全模型的关系图。](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
   
- 本主题的其余部分主要讨论与 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 相关的各个层。  
+ 本主题的其余部分将讨论专门适用于 WPF 的每个层中的功能。  
 
 ## <a name="operating-system-security"></a>操作系统安全  
 Windows 的核心提供了几种安全功能，这些功能构成了所有 Windows 应用程序（包括用 WPF 构建的应用程序）的安全基础。 本主题讨论了对 WPF 重要的这些安全功能的广度，以及 WPF 如何与它们集成以提供进一步的深层防御。  
@@ -42,13 +42,13 @@ Windows 的核心提供了几种安全功能，这些功能构成了所有 Windo
 - Microsoft Windows 更新。  
   
 #### <a name="gs-compilation"></a>/GS 编译  
- [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] 通过重新编译许多核心系统库（包括所有 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 依赖项（如 CLR）来提供保护，以帮助缓解缓冲区溢出。 通过使用/GS 形参和 C/C++ 命令行编译器可实现这一点。 虽然应显式避免缓冲区溢出，但 /GS 编译针对由它们无意或恶意创建的潜在漏洞提供了深层防御示例。  
+ [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] 通过重新编译许多核心系统库（包括所有 WPF 依赖项（如 CLR）来提供保护，以帮助缓解缓冲区溢出。 通过使用/GS 形参和 C/C++ 命令行编译器可实现这一点。 虽然应显式避免缓冲区溢出，但 /GS 编译针对由它们无意或恶意创建的潜在漏洞提供了深层防御示例。  
   
  以前，缓冲区溢出已导致出现了许多影响较大的安全漏洞。 当攻击者利用代码漏洞时就会发生缓冲区溢出，代码漏洞可让注入的恶意代码通过缓冲区边界写入。 从而让攻击者可以通过重写导致执行攻击者代码的函数返回地址执行代码进程。 结果，恶意代码可以执行具有截获进程相同特权的任意代码。  
   
  在高级别上，-GS 编译器标志通过注入特殊安全 cookie 来保护具有本地字符串缓冲区的函数的返回地址，从而防止某些潜在的缓冲区溢出。 函数返回后，安全 cookie 将与其上一个值进行比较。 如果值已更改，可能已发生缓冲区溢出，并且该进程已停止并显示错误条件。 停止的进程将阻止执行潜在的恶意代码。 有关更多详细信息，请参阅[-GS （缓冲区安全检查）](/cpp/build/reference/gs-buffer-security-check) 。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 已使用/GS 标志进行编译，旨在对 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序增加另一层防御。  
+ WPF 用/GS 标志进行编译，以便向 WPF 应用程序添加另一层防御。  
   
 ### <a name="windows-vista"></a>Windows Vista  
 Windows Vista 上的 WPF 用户将受益于操作系统的附加安全增强功能，其中包括 "最小特权用户访问权限"、代码完整性检查和特权隔离。  
@@ -68,7 +68,7 @@ Windows Vista 上的 WPF 用户将受益于操作系统的附加安全增强功�
  Windows Vista 合并了更深入的代码完整性检查，以帮助防止恶意代码在负载/运行时注入到系统文件或内核中。 这超出了系统文件保护。  
    
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>浏览器承载的应用程序的受限权限进程  
- 浏览器承载的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序在 Internet 区域沙箱内执行。 与 Microsoft Internet Explorer [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 集成将此保护扩展到其他支持。  
+ 浏览器承载的 WPF 应用程序在 Internet 区域沙箱内执行。 与 Microsoft Internet Explorer 的 WPF 集成扩展了此保护，并提供了更多支持。  
   
  由于 XAML 浏览器应用程序（Xbap）通常由 Internet 区域权限集进行沙盒处理，因此，删除这些权限不会损害 XAML 浏览器应用程序（Xbap）的兼容性。 反而会创建一个附加的深层防御层；如果经过沙箱处理的应用程序能够利用其他层截获此进程，该进程将仍然只有有限特权。  
   
@@ -92,12 +92,12 @@ Windows Vista 上的 WPF 用户将受益于操作系统的附加安全增强功�
   
  不允许不符合验证规则的托管代码执行，除非它被视为受信任代码。  
   
- 可验证代码的优点是 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 在 .NET Framework 上构建的主要原因。 从使用验证代码而言，利用潜在漏洞的可能性明显降低。  
+ 可验证代码的优点是 WPF 在 .NET Framework 上构建的主要原因。 从使用验证代码而言，利用潜在漏洞的可能性明显降低。  
   
 ### <a name="code-access-security"></a>代码访问安全性  
- 客户端计算机公开了托管应用程序可以访问的各种资源，包括文件系统、注册表、打印服务、用户界面、反射和环境变量。 在托管应用程序可以访问客户端计算机上的任何资源之前，它必须具有 .NET Framework 的权限。 CA 中的权限是 <xref:System.Security.CodeAccessPermission> 的子类;CA 为托管应用程序可以访问的每个资源实现一个子类。  
+ 客户端计算机公开了托管应用程序可以访问的各种资源，包括文件系统、注册表、打印服务、用户界面、反射和环境变量。 在托管应用程序可以访问客户端计算机上的任何资源之前，它必须具有 .NET Framework 的权限。 CA 中的权限是 <xref:System.Security.CodeAccessPermission>的子类;CA 为托管应用程序可以访问的每个资源实现一个子类。  
   
- CA 在开始执行时授予托管应用程序的权限集称为权限集，由应用程序提供的证据确定。 对于 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序，提供的证据为从中启动应用程序的位置或区域。 CA 标识以下区域：  
+ CA 在开始执行时授予托管应用程序的权限集称为权限集，由应用程序提供的证据确定。 对于 WPF 应用程序，提供的证据为从中启动应用程序的位置或区域。 CA 标识以下区域：  
   
 - **我的电脑**。 从客户端计算机（完全受信任）上启动的应用程序。  
   
@@ -123,14 +123,14 @@ Windows Vista 上的 WPF 用户将受益于操作系统的附加安全增强功�
   
  ![显示 CAS 权限集的关系图。](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
- Internet 区域安全沙盒的限制同样适用于 XBAP 从系统库导入的任何代码，包括 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]。 这可确保代码的每一位都是锁定的，即便 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 也是如此。 遗憾的是，为了能够执行，XBAP 需要执行需要比 Internet 区域安全沙盒启用的权限更多的功能。  
+ Internet 区域安全沙盒的限制同样适用于 XBAP 从系统库导入的任何代码，包括 WPF。 这可确保代码的每个位都被锁定，甚至是 WPF。 遗憾的是，为了能够执行，XBAP 需要执行需要比 Internet 区域安全沙盒启用的权限更多的功能。  
   
  请考虑包含以下页面的 XBAP 应用程序：  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- 若要执行此 XBAP，基础 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 代码必须执行比可用于调用 XBAP 的功能更多的功能，包括：  
+ 若要执行此 XBAP，基础 WPF 代码必须执行比可用于调用 XBAP 的功能更多的功能，包括：  
   
 - 创建用于呈现的窗口句柄（HWND）  
   
@@ -140,28 +140,28 @@ Windows Vista 上的 WPF 用户将受益于操作系统的附加安全增强功�
   
  从安全角度而言，允许从沙盒应用程序直接访问上述任何操作将会导致灾难性后果。  
   
- 而 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 通过允许代表沙盒应用程序使用提升的特权来执行这些操作可解决这种情况。 尽管所有 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 操作都是根据 XBAP 的应用程序域的有限 Internet 区域安全权限检查的，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] （与其他系统库一样）被授予了包括所有可能权限的权限集。
+ 幸运的是，WPF 通过允许这些操作以提升的权限在代表沙盒应用程序的情况下执行来适用于这种情况。 尽管所有 WPF 操作都是针对 XBAP 的应用程序域的有限 Internet 区域安全权限检查的，但 WPF （与其他系统库一样）的权限集被授予了包括所有可能权限的权限集。
   
- 这就要求 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 接收提升的特权，同时阻止这些特权由宿主应用程序域的 Internet 区域权限集管理。  
+ 这要求 WPF 接收提升的特权，同时阻止由主机应用程序域的 Internet 区域权限集来控制这些权限。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 使用权限的**Assert**方法来实现此功能。 以下代码演示了这种方法。  
+ WPF 使用权限的**Assert**方法来实现此功能。 以下代码演示了这种方法。  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- **断言**实质上是防止 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 所需的无限制权限受到 XBAP 的 Internet 区域权限限制。  
+ **断言**实质上是防止 WPF 要求的无限制权限受到 XBAP 的 Internet 区域权限限制。  
   
- 从平台的角度来看，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 负责正确使用**Assert** ;**断言**的使用不当可能导致恶意代码提升特权。 因此，只需在需要时调用**断言**，并确保沙盒限制保持不变，这一点非常重要。 例如，禁止沙盒代码打开任意文件，但允许其使用字体。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 使沙盒应用程序能够通过调用**Assert**来使用字体功能，并使 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 可以代表经过沙箱处理的应用程序读取已知包含这些字体的文件。  
+ 从平台的角度来看，WPF 负责正确使用**Assert** ;**断言**的使用不当可能导致恶意代码提升特权。 因此，只需在需要时调用**断言**，并确保沙盒限制保持不变，这一点非常重要。 例如，禁止沙盒代码打开任意文件，但允许其使用字体。 WPF 使沙盒应用程序可以通过调用**Assert**来使用字体功能，wpf 使用它可以代表沙盒应用程序读取已知包含这些字体的文件。  
   
 ### <a name="clickonce-deployment"></a>ClickOnce 部署  
- ClickOnce 是一种全面的部署技术，随 .NET Framework 提供，并与 Visual Studio 集成（有关详细信息，请参阅[ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)）。 独立 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序可使用 ClickOnce 进行部署，而浏览器承载的应用程序必须使用 ClickOnce 进行部署。  
+ ClickOnce 是一种全面的部署技术，随 .NET Framework 提供，并与 Visual Studio 集成（有关详细信息，请参阅[ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)）。 独立 WPF 应用程序可使用 ClickOnce 进行部署，而浏览器承载的应用程序必须使用 ClickOnce 进行部署。  
   
  使用 ClickOnce 部署的应用程序在代码访问安全性（CAS）上给予了附加的安全层;实质上，ClickOnce 部署的应用程序会请求所需的权限。 如果它们不超过在其中部署应用程序的区域的权限集，几乎仅授予它们这些权限。 通过将权限集减少到仅需要的权限集，即使它们小于启动区域的权限集提供的权限集，应用程序有权访问的资源数也会降至最低。 因此，如果截获到应用程序，将可以降低对客户端计算机的潜在损坏几率。  
   
 ### <a name="security-critical-methodology"></a>安全-关键方法  
- 使用权限启用用于 XBAP 应用程序的 Internet 区域沙盒的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 代码必须保持最高的安全审核和控制度。 为了满足此要求，.NET Framework 为管理提升特权的代码提供了新支持。 具体而言，CLR 使你能够识别提升特权的代码并将其标记为 <xref:System.Security.SecurityCriticalAttribute>;任何未标记为 <xref:System.Security.SecurityCriticalAttribute> 的代码都将使用此方法变得*透明*。 反之，禁止未标有 <xref:System.Security.SecurityCriticalAttribute> 的托管代码提升特权。  
+ 使用权限启用用于 XBAP 应用程序的 Internet 区域沙盒的 WPF 代码必须保持最高的安全审核和控制度。 为了满足此要求，.NET Framework 为管理提升特权的代码提供了新支持。 具体而言，CLR 使你能够识别提升特权的代码并将其标记为 <xref:System.Security.SecurityCriticalAttribute>;任何未标记为 <xref:System.Security.SecurityCriticalAttribute> 的代码都将使用此方法变得*透明*。 反之，禁止未标有 <xref:System.Security.SecurityCriticalAttribute> 的托管代码提升特权。  
   
- 安全关键方法允许将提升特权的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 代码组织到*安全关键内核*中，并使其变得透明。 隔离安全关键代码可使 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 工程团队将附加的安全分析和源控制重点放在高于标准安全实践的安全关键内核上（请参阅[WPF 安全策略-安全性工程](wpf-security-strategy-security-engineering.md)）。  
+ 安全关键方法允许将提升特权的 WPF 代码的组织转换为*安全关键内核*，并使剩余部分透明。 隔离安全关键代码可使 WPF 工程团队将附加的安全分析和源控制重点放在安全关键内核之上，而不是标准安全实践（请参阅[WPF 安全策略-安全工程](wpf-security-strategy-security-engineering.md)）。  
   
  请注意，.NET Framework 允许受信任的代码通过允许开发人员编写标记为 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> （APTCA）并部署到用户的全局程序集缓存（GAC）的托管程序集来扩展 XBAP Internet 区域沙盒。 将程序集标记为 APTCA 是高度敏感的安全操作，因为它允许任何代码调用该程序集，包括来自 Internet 的恶意代码。 执行此操作时，要特别注意并且必须采用最佳做法，用户必须选择信任该软件才能完成安装。  
   
@@ -182,13 +182,13 @@ Windows Vista 上的 WPF 用户将受益于操作系统的附加安全增强功�
   
  相同的用户启动逻辑也适用于**打开**/**保存**安全提示。 始终在信息栏下捕获 ActiveX 安装对话框，除非它们表示从以前安装的控件进行升级。 这些度量值组合在一起，可提供用户更安全、更可控的用户体验，因为诱导他们安装不需要的软件或恶意软件的站点受到了保护。  
   
- 这些功能还可保护使用 IE6 SP2 浏览网站的客户，使他们能够下载和安装 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序。 具体来说，这是因为 IE6 SP2 提供了更好的用户体验，可减少用户安装恶意应用程序或狡猾应用程序的可能性，而不管使用哪种技术来构建应用程序，包括 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 通过使用 ClickOnce 增加了这些保护，以便通过 Internet 下载其应用程序。 由于 XAML 浏览器应用程序（Xbap）在 Internet 区域安全沙盒中执行，因此可以无缝地启动它们。 另一方面，独立的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序需要完全信任才能执行。 对于这些应用程序，ClickOnce 将在启动过程中显示一个安全对话框，以通知使用应用程序的其他安全要求。 但是，必须由用户启动，必须由用户启动的逻辑进行管理并且可以取消。  
+ 这些功能还可保护使用 IE6 SP2 浏览网站的客户，使他们能够下载和安装 WPF 应用程序。 具体来说，这是因为 IE6 SP2 提供了更好的用户体验，可减少用户安装恶意或狡猾应用程序的可能性，而不考虑使用哪种技术来构建应用程序（包括 WPF）。 WPF 通过使用 ClickOnce 增加了这些保护，以便通过 Internet 下载其应用程序。 由于 XAML 浏览器应用程序（Xbap）在 Internet 区域安全沙盒中执行，因此可以无缝地启动它们。 另一方面，独立的 WPF 应用程序需要完全信任才能执行。 对于这些应用程序，ClickOnce 将在启动过程中显示一个安全对话框，以通知使用应用程序的其他安全要求。 但是，必须由用户启动，必须由用户启动的逻辑进行管理并且可以取消。  
   
  Internet Explorer 7 结合并扩展了 IE6 SP2 的安全功能，作为对安全性的不断承诺的一部分。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [代码访问安全性](../misc/code-access-security.md)
-- [Security](security-wpf.md)
+- [安全](security-wpf.md)
 - [WPF 部分信任安全](wpf-partial-trust-security.md)
 - [WPF 安全策略 - 安全工程](wpf-security-strategy-security-engineering.md)

@@ -2,12 +2,12 @@
 title: 死信队列
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 244920eb9a0cdb33f4d5d83b939fe1166f4f5fcd
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: d493aba9a3f7a51824243fe8d06441ab563b2261
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837904"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344528"
 ---
 # <a name="dead-letter-queues"></a>死信队列
 本示例演示如何处理传递失败的消息。 它基于[事务性 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例。 本示例使用 `netMsmqBinding` 绑定。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。
@@ -16,7 +16,7 @@ ms.locfileid: "74837904"
 > 本主题的最后介绍了此示例的设置过程和生成说明。
 
 > [!NOTE]
-> 此示例演示仅适用于 Windows Vista 的每个应用程序死信队列。 可以修改此示例以使用 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上针对 MSMQ 3.0 的默认系统范围队列。
+> 此示例演示仅适用于 Windows Vista 的每个应用程序死信队列。 可以修改此示例以在 Windows Server 2003 上使用 MSMQ 3.0 的默认系统范围队列，并 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。
 
  在排队通信中，客户端使用队列与服务进行通信。 更确切地说，客户端向队列发送消息。 服务从队列接收消息。 因此不必同时运行服务和客户端便可使用队列进行通信。
 
@@ -318,7 +318,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
     2. 展开 "**功能**" 选项卡。
 
-    3. 右键单击 "**专用消息队列**"，然后选择 "**新建** **专用队列**"。
+    3. 右键单击 "**专用消息队列**"，然后选择 "**新建****专用队列**"。
 
     4. 选中 "**事务性**" 框。
 

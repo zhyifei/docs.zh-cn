@@ -2,12 +2,12 @@
 title: 如何：从 XmlReader 流式处理 XML 片段
 ms.date: 07/20/2015
 ms.assetid: f67ce598-4a12-4dcb-9a07-24deca02a111
-ms.openlocfilehash: abefc8c6e75ae41c47135a2e89cdb3be6a8e5cd6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 42d3edb390035d20f506388974000aa204312109
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346227"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636791"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>如何：从 XmlReader 流式处理 XML 片段（Visual Basic）
 如果必须处理很大的 XML 文件，将整个 XML 树加载到内存可能不可行。 本主题演示如何使用 <xref:System.Xml.XmlReader> 对片段进行流式处理。  
@@ -23,7 +23,7 @@ ms.locfileid: "74346227"
  主题[如何：执行大型 Xml 文档的流式转换（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md)包含一个使用 LINQ to XML 转换极大的 xml 文档的示例，同时保持较小的内存需求量。  
   
 ## <a name="example"></a>示例  
- 本示例创建一个自定义轴方法。 可以通过使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询来查询该方法。 自定义轴方法 `StreamRootChildDoc` 是一个专门设计的方法，用于读取具有重复 `Child` 元素的文档。  
+ 本示例创建一个自定义轴方法。 您可以使用 LINQ 查询对其进行查询。 自定义轴方法 `StreamRootChildDoc` 是一个专门设计的方法，用于读取具有重复 `Child` 元素的文档。  
   
 ```vb  
 Module Module1  
