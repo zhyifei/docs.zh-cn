@@ -2,12 +2,12 @@
 title: 不支持的方案
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 67a4e64208e00f9124b3cdc53d743c060274dac2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 87c0d9984fe823eae0e3cc281ebda55bc33a541e
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837969"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544793"
 ---
 # <a name="unsupported-scenarios"></a>不支持的方案
 由于各种原因，Windows Communication Foundation （WCF）不支持某些特定的安全方案。 例如，[!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 不实现 SSPI 或 Kerberos 身份验证协议，因此 WCF 不支持在该平台上使用 Windows 身份验证运行服务。 在 Windows XP Home Edition 下运行 WCF 时，支持其他身份验证机制，例如用户名/密码和 HTTP/HTTPS 集成身份验证。  
@@ -62,7 +62,7 @@ ms.locfileid: "74837969"
  与 FIPS 兼容的 AES 加密无法在标识级模拟下以双工回调模式工作。  
   
 ### <a name="cngksp-certificates"></a>CNG/KSP 证书  
- *加密 API：下一代（CNG）* 是 CryptoAPI 的长期替换。 此 API 适用于 Windows Vista 上的非托管代码、[!INCLUDE[lserver](../../../../includes/lserver-md.md)] 和更高版本的 Windows 版本。  
+ *加密 API：下一代（CNG）* 是 CryptoAPI 的长期替换。 此 API 在 Windows Vista、Windows Server 2008 和更高版本的 windows 版本上的非托管代码中提供。  
   
  .NET Framework 4.6.1 和更早版本不支持这些证书，因为它们使用旧 CryptoAPI 来处理 CNG/KSP 证书。 将这些证书用于 .NET Framework 4.6.1 和早期版本将导致异常。  
   

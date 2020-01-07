@@ -2,12 +2,12 @@
 title: 对 COM 客户端使用 WCF 标记
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: bcac9e344e2d981f9f165480cb84ac37c99fa5b0
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 281921bf42910086b874194cb2d8b56fbf71e671
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837774"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544703"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>对 COM 客户端使用 WCF 标记
 此示例演示如何使用 Windows Communication Foundation （WCF）服务名字对象将 Web 服务集成到基于 COM 的开发环境中，例如 Microsoft Office Visual Basic for Applications （Office VBA）或 Visual Basic 6.0。 本示例由 Windows 脚本宿主客户端 (.vbs)、客户端支持库 (.dll) 和 Internet 信息服务 (IIS) 承载的服务库 (.dll) 组成。 该服务是一个计算器服务，COM 客户端将对服务调用数学运算（加、减、乘和除）。 客户端活动显示在消息框窗口中。  
@@ -191,7 +191,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
 3. 在 Visual Studio 开发人员命令提示中，打开语言特定文件夹下的 \client\bin 文件夹。  
   
     > [!NOTE]
-    > 如果使用的是 Windows Vista、[!INCLUDE[lserver](../../../../includes/lserver-md.md)]、Windows 7 或 Windows Server 2008 R2，请确保使用管理员权限运行命令提示符。  
+    > 如果使用的是 Windows Vista、Windows Server 2008、Windows 7 或 Windows Server 2008 R2，请确保使用管理员权限运行命令提示符。  
   
 4. 键入以将 dll 导出到 tlb 文件 `tlbexp.exe client.dll /out:CalcProxy.tlb`。 预期会出现“Type library exporter warning”（类型库导出程序警告），但由于不需要泛型类型，因此这不是问题。  
   
@@ -221,7 +221,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 6. 将 \client\bin\ 文件夹（在语言特定文件夹内）中的 Client.dll 库复制到客户端计算机上的一个目录中。  
   
-7. 在命令提示符下，定位到客户端计算机上的目标目录。 如果使用的是 Windows Vista 或 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]，请确保以管理员身份运行命令提示符。  
+7. 在命令提示符下，定位到客户端计算机上的目标目录。 如果使用的是 Windows Vista 或 Windows Server 2008，请确保以管理员身份运行命令提示符。  
   
 8. 键入以将 dll 导出到 tlb 文件 `tlbexp.exe client.dll /out:CalcProxy.tlb`。 预期会出现“Type library exporter warning”（类型库导出程序警告），但由于不需要泛型类型，因此这不是问题。  
   

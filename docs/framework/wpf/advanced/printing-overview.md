@@ -15,23 +15,23 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 5204165370459466b1258897e72c488ab7e7fadb
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 22d363fde369bc7e84a9354d27f57af356f30ebb
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975768"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636453"
 ---
 # <a name="printing-overview"></a>打印概述
 使用 Microsoft .NET 框架，使用 Windows Presentation Foundation （WPF）的应用程序开发人员具有丰富的一组新的打印和打印系统管理 Api。 在 Windows Vista 中，某些打印系统增强功能还可供开发人员使用非托管代码创建 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 应用程序和开发人员使用。 这一新功能的核心是新的 XML 纸张规范（XPS）文件格式和 XPS 打印路径。  
   
- 本主题包含以下各节。  
+ 本主题包含以下各节：  
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>关于 XPS  
  XPS 是一种电子文档格式，是一种假脱机文件格式和页面描述语言。 它是一种开放文档格式，它使用 XML、开放式打包约定（OPC）和其他行业标准来创建跨平台文档。 XPS 简化了创建、共享、打印、查看和存档数字文档的过程。 有关 XPS 的其他信息，请参阅[Xps 文档](/windows/desktop/printdocs/documents)。  
   
- 以[编程方式打印 Xps 文件](how-to-programmatically-print-xps-files.md)中演示了使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 打印基于 XPS 的内容的几种方法。 在查看本主题中的内容时，参考这些示例会很有帮助。 （非托管代码开发人员应查看[MXDC_ESCAPE 函数](/windows/desktop/printdocs/mxdc-escape)的文档。 Windows 窗体开发人员必须使用 <xref:System.Drawing.Printing> 命名空间中的 API，该命名空间不支持完整的 XPS 打印路径，但支持混合的 GDI 到 XPS 打印路径。 请参阅下面的**打印路径体系结构**。）  
+ 以[编程方式打印 Xps 文件](how-to-programmatically-print-xps-files.md)中演示了使用 WPF 打印基于 XPS 的内容的几种方法。 在查看本主题中的内容时，参考这些示例会很有帮助。 （非托管代码开发人员应查看[MXDC_ESCAPE 函数](/windows/desktop/printdocs/mxdc-escape)的文档。 Windows 窗体开发人员必须使用 <xref:System.Drawing.Printing> 命名空间中的 API，该命名空间不支持完整的 XPS 打印路径，但支持混合的 GDI 到 XPS 打印路径。 请参阅下面的**打印路径体系结构**。）  
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>XPS 打印路径  
@@ -57,19 +57,19 @@ ms.locfileid: "73975768"
   
 - 打印架构。 公共架构将定期进行更新，并可以实现设备功能的迅速扩展。 （请参阅下面的 **PrintTicket 和 PrintCapabilities**。）  
   
-- 可扩展筛选器管道。 XPS 打印机驱动程序（XPSDrv）筛选器管道设计用于启用 XPS 文档的直接和可缩放打印。 有关详细信息，请参阅[XPSDrv 打印机驱动程序](/windows-hardware/drivers/print/xpsdrv-printer-drivers)。 
+- 可扩展筛选器管道。 XPS 打印机驱动程序（XPSDrv）筛选器管道设计用于启用 XPS 文档的直接和可缩放打印。 有关详细信息，请参阅 [XPSDrv 打印机驱动程序](/windows-hardware/drivers/print/xpsdrv-printer-drivers)。 
   
 ### <a name="print-path-architecture"></a>打印路径体系结构  
  尽管 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 和 .NET Framework 应用程序都支持 XPS，[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 和 Windows 窗体应用程序使用 GDI 进行 XPS 转换，以便为 XPS 打印机驱动程序（XPSDrv）创建 XPS 格式的内容。 这些应用程序不是使用 XPS 打印路径所必需的，并且可以继续使用基于增强型图元文件（EMF）的打印。 但是，大多数 XPS 功能和增强功能仅适用于面向 XPS 打印路径的应用程序。  
   
- 若要通过 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 和 Windows 窗体应用程序启用基于 XPSDrv 的打印机，XPS 打印机驱动程序（XPSDrv）支持将 GDI 转换为 XPS 格式。 XPSDrv 模型还提供了用于 XPS 到 GDI 格式的转换器，以便 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 应用程序可以打印 XPS 文档。 对于 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序，每当写入操作的目标打印队列没有 XPSDrv 驱动程序时，将由 <xref:System.Windows.Xps.XpsDocumentWriter> 类的 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 和 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 方法自动完成 XPS 到 GDI 格式的转换。 （Windows 窗体应用程序不能打印 XPS 文档。）  
+ 若要通过 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 和 Windows 窗体应用程序启用基于 XPSDrv 的打印机，XPS 打印机驱动程序（XPSDrv）支持将 GDI 转换为 XPS 格式。 XPSDrv 模型还提供了用于 XPS 到 GDI 格式的转换器，以便 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 应用程序可以打印 XPS 文档。 对于 WPF 应用程序，每当写入操作的目标打印队列没有 XPSDrv 驱动程序时，将由 <xref:System.Windows.Xps.XpsDocumentWriter> 类的 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 和 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 方法自动完成 XPS 到 GDI 格式的转换。 （Windows 窗体应用程序不能打印 XPS 文档。）  
   
  下图描述了打印子系统，并定义了 Microsoft 提供的部分以及由软件和硬件供应商定义的部分：  
   
  ![屏幕截图显示了 XPS 打印系统。](./media/printing-overview/xml-paper-specification-print-system.png)  
   
 ### <a name="basic-xps-printing"></a>基本 XPS 打印  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 同时定义基本和高级 API。 对于不需要广泛的打印自定义或访问完整的 XPS 功能集的那些应用程序，可以使用基本打印支持。 基本打印支持通过一个打印对话框控件公开，该控件要求最低的配置，并采用熟悉的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 使用此简化的打印模型可以获得多种 XPS 功能。  
+ WPF 定义基本和高级 API。 对于不需要广泛的打印自定义或访问完整的 XPS 功能集的那些应用程序，可以使用基本打印支持。 基本打印支持通过一个打印对话框控件公开，该控件要求最低的配置，并采用熟悉的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 使用此简化的打印模型可以获得多种 XPS 功能。  
   
 #### <a name="printdialog"></a>PrintDialog  
  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> 控件为 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]、配置和 XPS 作业提交提供单一入口点。 若要了解如何实例化和使用该控件，请参阅[调用打印对话框](how-to-invoke-a-print-dialog.md)。  
@@ -106,7 +106,7 @@ ms.locfileid: "73975768"
   
 <a name="GDI_Print_Path_intro"></a>   
 ## <a name="gdi-print-path"></a>GDI 打印路径  
- 尽管 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序以本机方式支持 XPS 打印路径，[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 和 Windows 窗体应用程序也可以利用某些 XPS 功能。 XPS 打印机驱动程序（XPSDrv）可以将基于 GDI 的输出转换为 XPS 格式。 对于高级方案，支持使用[MICROSOFT XPS 文档转换器（MXDC）](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)对内容进行自定义转换。 同样，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序还可以通过调用 <xref:System.Windows.Xps.XpsDocumentWriter> 类的一个 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 或 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 方法，并指定非 XpsDrv 打印机作为目标打印队列来输出到 GDI 打印路径。  
+ 虽然 WPF 应用程序以本机方式支持 XPS 打印路径，但 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 和 Windows 窗体应用程序也可以利用某些 XPS 功能。 XPS 打印机驱动程序（XPSDrv）可以将基于 GDI 的输出转换为 XPS 格式。 对于高级方案，支持使用[MICROSOFT XPS 文档转换器（MXDC）](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)对内容进行自定义转换。 同样，WPF 应用程序还可以通过调用 <xref:System.Windows.Xps.XpsDocumentWriter> 类的 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 或 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 方法之一，并指定非 XpsDrv 打印机作为目标打印队列来输出到 GDI 打印路径。  
 
 对于不需要 XPS 功能或支持的应用程序，当前的 GDI 打印路径保持不变。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "73975768"
   
 - **ZIP 压缩**。 所有 XPS 文档均使用 ZIP 压缩。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Controls.PrintDialog>
 - <xref:System.Windows.Xps.XpsDocumentWriter>

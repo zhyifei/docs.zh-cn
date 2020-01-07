@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WPF [WPF], getting started
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
-ms.custom: vs-dotnet
+ms.custom: mvc,vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d45932f6a8822ec2aaa40cd52431d9981ab8fa1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7b5f74448ffce448740937c06a476a29c8659879
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453758"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336812"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>教程：在 Visual Studio 2019 中创建第一个 WPF 应用程序
 
@@ -41,7 +41,7 @@ ms.locfileid: "73453758"
 >
 > 您可以使用此页顶部的语言选择器来C#切换与 Visual Basic 的示例代码的代码语言。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 - 安装了 **.net 桌面开发**工作负载的[Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 。
 
@@ -51,7 +51,7 @@ ms.locfileid: "73453758"
 
 第一步是创建应用程序基础结构，其中包括应用程序定义、两页和映像。
 
-1. 在 Visual Basic 或名为C# **`ExpenseIt`** 的视觉对象中创建新的 WPF 应用程序项目：
+1. 在 Visual Basic 或 Visual C# 名为创建新的 WPF 应用程序项目 **`ExpenseIt`** :
 
    1. 打开 Visual Studio，然后在 "**入门**" 菜单下选择 "**创建新项目**"。
 
@@ -61,11 +61,11 @@ ms.locfileid: "73453758"
       
    3. 选择 " **WPF 应用（.NET Framework）** " 模板，然后选择 "**下一步**"。 
      
-      !["新建项目" 对话框](./media/walkthrough-my-first-wpf-desktop-application/create-new-project-dialog.png)
+      ![“创建新项目”对话框](./media/walkthrough-my-first-wpf-desktop-application/create-new-project-dialog.png)
     
       此时将打开 "**配置新项目**" 对话框。
 
-   4. 输入项目名称 **`ExpenseIt`** ，然后选择 "**创建**"。
+   4. 输入项目名称 **`ExpenseIt`** ，然后选择**创建**。
 
       !["配置新项目" 对话框](./media/walkthrough-my-first-wpf-desktop-application/configure-new-project-dialog.png)
 
@@ -83,7 +83,7 @@ ms.locfileid: "73453758"
 
     [!code-xaml[ExpenseIt#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/App.xaml#1)]
 
-3. 打开*mainwindow.xaml*。
+3. 打开 MainWindow.xaml。
 
     此 XAML 文件是应用程序的主窗口，并显示在页中创建的内容。 <xref:System.Windows.Window> 类定义窗口的属性，例如其标题、大小或图标，并处理事件（如关闭或隐藏）。
 
@@ -129,11 +129,11 @@ ms.locfileid: "73453758"
 
 本部分将向应用程序添加两个页面和一个图像。
 
-1. 向项目添加一个新页面，并将其命名为 *`ExpenseItHome.xaml`* ：
+1. 将新页面添加到项目中，并将其命名 *`ExpenseItHome.xaml`* :
 
-   1. 在**解决方案资源管理器**中，右键单击 **`ExpenseIt`** 项目节点，然后选择 "**添加** > "**页**。
+   1. 在中**解决方案资源管理器**，右键单击 **`ExpenseIt`** 项目节点，然后选择**添加** > **页**。
 
-   1. 在 "**添加新项**" 对话框中，已选择 "**页（WPF）** 模板"。 输入名称 **`ExpenseItHome`** ，然后选择 "**添加**"。
+   1. 在 "**添加新项**" 对话框中，已选择 "**页（WPF）** 模板"。 输入的名称 **`ExpenseItHome`** ，然后选择**添加**。
 
     此页是应用程序启动时显示的第一页。 它将显示要从中进行选择的人员的列表，以便为显示费用报表。
 
@@ -151,17 +151,17 @@ ms.locfileid: "73453758"
 
     [!code-xaml[ExpenseIt#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml#6)]
 
-1. 打开*mainwindow.xaml*。
+1. 打开 MainWindow.xaml。
 
 1. 向 <xref:System.Windows.Navigation.NavigationWindow> 元素添加 <xref:System.Windows.Navigation.NavigationWindow.Source%2A> 属性，并将其设置为 "`ExpenseItHome.xaml`"。
 
-    这会将 *`ExpenseItHome.xaml`* 设置为应用程序启动时第一个打开的页。 
+    这将设置 *`ExpenseItHome.xaml`* 的第一页时打开应用程序启动。 
 
     Visual Basic 中的示例 XAML：
 
     [!code-xaml[ExpenseIt#7_A](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml#7_a)]
 
-    在中C#：
+    和 C# 中：
 
     [!code-xaml[ExpenseIt#7](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/MainWindow.xaml#7)]
 
@@ -172,11 +172,11 @@ ms.locfileid: "73453758"
 
 1. 向项目中添加另一个新的 WPF 页，并将其命名为*expensereportpage.xaml*：：
 
-   1. 在**解决方案资源管理器**中，右键单击 **`ExpenseIt`** 项目节点，然后选择 "**添加** > "**页**。
+   1. 在中**解决方案资源管理器**，右键单击 **`ExpenseIt`** 项目节点，然后选择**添加** > **页**。
 
    1. 在 "**添加新项**" 对话框中，选择 "**页（WPF）** " 模板。 输入名称**expensereportpage.xaml**，然后选择 "**添加**"。
 
-    此页将显示 " **`ExpenseItHome`** " 页上所选人员的费用报表。
+    此页会显示费用报表上选择的人员 **`ExpenseItHome`** 页。
 
 1. 打开 *ExpenseReportPage.xaml*。
 
@@ -196,7 +196,7 @@ ms.locfileid: "73453758"
 
     创建新的页面文件时，Visual Studio 会自动创建其*代码隐藏*文件。 这些代码隐藏文件处理响应用户输入的逻辑。
 
-    你的代码应类似于以下 **`ExpenseItHome`** ：
+    你的代码应如以下所示 **`ExpenseItHome`** :
 
     [!code-csharp[ExpenseIt#2_5](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml.cs#2_5)]
 
@@ -240,9 +240,9 @@ ms.locfileid: "73453758"
 > [!TIP]
 > 有关 <xref:System.Windows.Controls.Panel> 元素的详细信息，请参阅[面板概述](../controls/panels-overview.md)。 有关布局的详细信息，请参阅[布局](../advanced/layout.md)。
 
-在本部分中，通过将列和行定义添加到 *`ExpenseItHome.xaml`* 中的 <xref:System.Windows.Controls.Grid> 来创建包含三行和10像素边距的单列表。
+在本部分中，您创建的单列的表具有三个行和 10 像素边距通过添加到的列和行定义<xref:System.Windows.Controls.Grid>中 *`ExpenseItHome.xaml`* 。
 
-1. 在 *`ExpenseItHome.xaml`* 中，将 <xref:System.Windows.Controls.Grid> 元素上的 <xref:System.Windows.FrameworkElement.Margin%2A> 属性设置为 "10，0，10，10"，这对应于 "左"、"上"、"右" 和 "下" 边距：
+1. 在中 *`ExpenseItHome.xaml`* ，将<xref:System.Windows.FrameworkElement.Margin%2A>属性上的<xref:System.Windows.Controls.Grid>"10,0,10,10"，对应于左侧、 顶部、 右侧和底部边距的元素：
 
    ```xaml
    <Grid Margin="10,0,10,10">
@@ -267,7 +267,7 @@ ms.locfileid: "73453758"
 
 在本部分中，你将更新主页 UI 以显示人员列表，你可以在其中选择一个人员来显示其费用报表。 控件是允许用户与应用程序交互的 UI 对象。 有关详细信息，请参阅 [控件](../controls/index.md)。
 
-若要创建此 UI，你需要将以下元素添加到 *`ExpenseItHome.xaml`* ：
+若要创建此 UI，将添加到以下元素 *`ExpenseItHome.xaml`* :
 
 - 一个 <xref:System.Windows.Controls.ListBox> （适用于用户列表）。
 - <xref:System.Windows.Controls.Label> （对于列表标头）。
@@ -282,7 +282,7 @@ ms.locfileid: "73453758"
    > [!TIP]
    > 还可以通过将控件从 "**工具箱**" 窗口拖到设计窗口，然后在 "**属性**" 窗口中设置其属性来创建控件。
 
-2. 生成并运行应用程序。
+2. 构建并运行应用程序。
 
     下图显示了您创建的控件：
 
@@ -292,7 +292,7 @@ ms.locfileid: "73453758"
 
 在本部分中，将使用图像和页面标题更新主页 UI。
 
-1. 在 *`ExpenseItHome.xaml`* 中，将另一列添加到 <xref:System.Windows.Controls.Grid.ColumnDefinitions%2A>，固定 <xref:System.Windows.Controls.ColumnDefinition.Width%2A> 为230像素：
+1. 在中 *`ExpenseItHome.xaml`* ，添加到另一个列<xref:System.Windows.Controls.Grid.ColumnDefinitions%2A>具有固定<xref:System.Windows.Controls.ColumnDefinition.Width%2A>为 230 像素：
 
     [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=52-55)]
 
@@ -316,7 +316,7 @@ ms.locfileid: "73453758"
 
     [!code-xaml[ExpenseIt#13](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt5/ExpenseItHome.xaml#13)]
 
-7. 生成并运行应用程序。
+7. 构建并运行应用程序。
 
 下图显示刚刚添加的内容的结果：
 
@@ -324,7 +324,7 @@ ms.locfileid: "73453758"
 
 ## <a name="add-code-to-handle-events"></a>添加代码以处理事件
 
-1. 在 *`ExpenseItHome.xaml`* 中，将 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件处理程序添加到 <xref:System.Windows.Controls.Button> 元素。 有关详细信息，请参阅[如何：创建简单的事件处理程序](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100))。
+1. 在中 *`ExpenseItHome.xaml`* ，添加<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件处理程序<xref:System.Windows.Controls.Button>元素。 有关详细信息，请参阅[如何：创建简单的事件处理程序](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100))。
 
     [!code-xaml[ExpenseIt#15](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
@@ -337,7 +337,7 @@ ms.locfileid: "73453758"
 
 ## <a name="create-the-ui-for-expensereportpage"></a>创建 Expensereportpage.xaml 的 UI
 
-*Expensereportpage.xaml*显示 **`ExpenseItHome`** 页面上所选人员的费用报表。 在本部分中，你将为**expensereportpage.xaml**创建 UI。 还将向各种 UI 元素添加背景色和填充颜色。
+*ExpenseReportPage.xaml*选择的人员显示费用报表 **`ExpenseItHome`** 页。 在本部分中，你将为**expensereportpage.xaml**创建 UI。 还将向各种 UI 元素添加背景色和填充颜色。
 
 1. 打开 *ExpenseReportPage.xaml*。
 
@@ -345,9 +345,9 @@ ms.locfileid: "73453758"
 
     [!code-xaml[ExpenseIt#17](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseReportPage.xaml#17)]
 
-    此 UI 与 *`ExpenseItHome.xaml`* 类似，只不过报表数据显示在 <xref:System.Windows.Controls.DataGrid>中。
+    此用户界面是类似于 *`ExpenseItHome.xaml`* ，但报表数据显示在<xref:System.Windows.Controls.DataGrid>。
 
-3. 生成并运行应用程序。
+3. 构建并运行应用程序。
 
 4. 选择 "**视图**" 按钮。
 
@@ -383,7 +383,7 @@ ms.locfileid: "73453758"
 
     请注意，样式是 <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType> 属性元素的资源和子级。 在此位置中，这些样式将应用到应用程序中的所有元素。 有关在 .NET 应用中使用资源的示例，请参阅[使用应用程序资源](../advanced/how-to-use-application-resources.md)。
 
-3. 在 *`ExpenseItHome.xaml`* 中，将 <xref:System.Windows.Controls.Grid> 元素之间的所有内容替换为以下 XAML：
+3. 在中 *`ExpenseItHome.xaml`* ，将为之间的所有内容<xref:System.Windows.Controls.Grid>具有以下 XAML 元素：
 
     [!code-xaml[ExpenseIt#19](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt7/ExpenseItHome.xaml#19)]
 
@@ -397,7 +397,7 @@ ms.locfileid: "73453758"
 
     此 XAML 将样式添加到 <xref:System.Windows.Controls.Label> 和 <xref:System.Windows.Controls.Border> 元素。
 
-6. 生成并运行应用程序。 窗口外观与以前相同。
+6. 构建并运行应用程序。 窗口外观与以前相同。
 
     ![与上一节中的外观相同的 ExpenseIt 示例屏幕快照。](./media/walkthrough-my-first-wpf-desktop-application/create-application-ui.png)
 
@@ -407,7 +407,7 @@ ms.locfileid: "73453758"
 
 在本部分中，将创建绑定到各种控件的 XML 数据。
 
-1. 在 *`ExpenseItHome.xaml`* 中，在打开 <xref:System.Windows.Controls.Grid> 元素的后面，添加以下 XAML 以创建包含每个用户的数据的 <xref:System.Windows.Data.XmlDataProvider>：
+1. 在中 *`ExpenseItHome.xaml`* ，打开之后<xref:System.Windows.Controls.Grid>元素中，添加以下 XAML 以创建<xref:System.Windows.Data.XmlDataProvider>包含数据的每个用户：
 
     [!code-xaml[ExpenseIt#23](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml?range=13,16-40,49)]
 
@@ -427,7 +427,7 @@ ms.locfileid: "73453758"
 
 ## <a name="connect-data-to-controls"></a>将数据连接到控件
 
-接下来，您将添加代码以检索在 **`ExpenseItHome`** 页上选择的名称，并将其传递给**expensereportpage.xaml**的构造函数。 **Expensereportpage.xaml**用传递的项设置其数据上下文，这是在*expensereportpage.xaml*中定义的控件绑定到的内容。
+接下来，将添加代码以检索名称上所选 **`ExpenseItHome`** 页上，并将其传递给构造函数的**ExpenseReportPage**。 **Expensereportpage.xaml**用传递的项设置其数据上下文，这是在*expensereportpage.xaml*中定义的控件绑定到的内容。
 
 1. 打开 *ExpenseReportPage.xaml.vb* 或 *ExpenseReportPage.xaml.cs*。
 
@@ -461,7 +461,7 @@ ms.locfileid: "73453758"
 
     [!code-xaml[ExpenseIt#32](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#32)]
 
-5. 生成并运行应用程序。
+5. 构建并运行应用程序。
 
 6. 选择一个用户，然后选择 "**查看**" 按钮。
 
@@ -473,7 +473,7 @@ ms.locfileid: "73453758"
 > 此示例演示了 WPF 的特定功能，并且不遵循安全性、本地化和辅助功能等功能的所有最佳实践。 有关 WPF 和 .NET 应用开发最佳做法的全面介绍，请参阅以下主题：
 >
 > - [辅助功能](../../ui-automation/accessibility-best-practices.md)
-> - [Security](../security-wpf.md)
+> - [安全](../security-wpf.md)
 > - [WPF 全球化和本地化](../advanced/wpf-globalization-and-localization-overview.md)
 > - [WPF 性能](../advanced/optimizing-wpf-application-performance.md)
 
@@ -483,7 +483,7 @@ ms.locfileid: "73453758"
 
 - [WPF 体系结构](../advanced/wpf-architecture.md)
 - [XAML 概述 (WPF)](../advanced/xaml-overview-wpf.md)
-- [依赖项属性概述](../advanced/dependency-properties-overview.md)
+- [依赖属性概述](../advanced/dependency-properties-overview.md)
 - [布局](../advanced/layout.md)
 
 有关创建应用程序的详细信息，请参阅以下主题：
@@ -494,7 +494,7 @@ ms.locfileid: "73453758"
 - [图形和多媒体](../graphics-multimedia/index.md)
 - [WPF 中的文档](../advanced/documents-in-wpf.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [面板概述](../controls/panels-overview.md)
 - [数据模板化概述](../data/data-templating-overview.md)

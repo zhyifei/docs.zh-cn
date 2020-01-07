@@ -2,12 +2,12 @@
 title: 工作流服务注册工具 (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: cf5ea345c900dec0e4859d81fcb272c1ba3d3df6
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 182bef75bff1785905d77d3bc497e0701e297912
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837748"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346592"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>工作流服务注册工具 (WFServicesReg.exe)
 工作流服务注册工具 (WFServicesReg.exe) 是一个独立的工具，可用于添加、移除或修复 Windows Workflow Foundation (WF) 服务的配置元素。  
@@ -56,7 +56,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  该工具还在 IIS 元数据库中注册 .xoml 和 .rules 脚本映射和处理程序。  
   
- 在 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 机（IIS 5.1 和 IIS 6.0）上，注册了一组 xoml 和. 规则脚本映射。  
+ 在 Windows Server 2003 和 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 机（IIS 5.1 和 IIS 6.0）上，注册了一组 xoml 和. 规则脚本映射。  
   
  在 64 位计算机上，如果启用 `Enable32BitAppOnWin64` 开关，则该工具注册 WOW 模式脚本映射；如果禁用 `Enable32BitAppOnWin64` 开关，则该工具注册本机 64 位模式脚本映射。  
   
@@ -70,17 +70,17 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="usage-scenarios"></a>使用方案  
   
 ### <a name="installing-iis-after-net-framework-35-is-installed"></a>安装 .NET Framework 3.5 之后安装 IIS  
- 在 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 计算机上，在安装 IIS 之前，.NET Framework 3.5。 由于 IIS 元数据库不可用，.NET Framework 3.5 的安装成功，无需安装 xoml 和。  
+ 在 Windows Server 2003 计算机上，在安装 IIS 之前会安装 .NET Framework 3.5。 由于 IIS 元数据库不可用，.NET Framework 3.5 的安装成功，无需安装 xoml 和。  
   
  安装 IIS 后，可以使用具有 `/c` 开关的 WFServicesReg.exe 工具来安装这些特定的脚本映射。  
   
 ### <a name="repairing-the-scriptmaps"></a>修复脚本映射  
   
 #### <a name="scriptmap-deleted-under-web-sites-node"></a>删除了网站节点下的脚本映射  
- 在 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 计算机上，从网站节点中意外删除了 .xoml 或 .rules。 通过运行具有 `/c` 开关的 WFServicesReg.exe 工具可以修复这个问题。  
+ 在 Windows Server 2003 计算机上，将从 "网站" 节点中意外删除 xoml 或。 通过运行具有 `/c` 开关的 WFServicesReg.exe 工具可以修复这个问题。  
   
 #### <a name="scriptmap-deleted-under-a-particular-web-site"></a>删除了特定网站下的脚本映射  
- 在 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 计算机上，从特定网站（如默认网站）而不是网站节点中意外删除了 .xoml 或 .rules。  
+ 在 Windows Server 2003 计算机上，. xoml 或。从特定网站（例如，默认网站）意外删除规则，而不是从 "网站" 节点中删除。  
   
  若要修复特定网站的已删除处理程序，您应运行 "Wfservicesreg.exe/r" 以从所有网站中删除处理程序，然后运行 "Wfservicesreg.exe/c" 为所有网站创建适当的处理程序。  
   

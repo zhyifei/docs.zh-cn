@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-ms.openlocfilehash: f6ffed3d9f0bf5e3dc5698d51276eb1db276993c
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: f1a24e34375e98d4bfb48c1e2fd84290e08f6eea
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837488"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544758"
 ---
 # <a name="analytic-tracing-overview"></a>分析跟踪概述
 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] 中的分析跟踪是基于 Windows 事件跟踪 (ETW) 的高性能、低详细级别的跟踪功能。 ETW 在内核级别运行，极大地减少了跟踪操作的开销。 它有效缓冲用户模式和内核模式的事件，并允许动态启用日志记录，而无需重新启动服务。 发出并接收跟踪数据之后，即可在事件日志中获取这些数据。  
   
  有关 ETW 的详细信息，请参阅[通过 Etw 改善调试和性能优化](https://go.microsoft.com/fwlink/?LinkId=164781)。  
   
- 除了使用 Windows 系统、安全性和应用程序事件日志分析应用程序外，Windows Vista 和 [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] 还在应用程序和服务日志顶级节点下引入了其他日志。 这些新日志的用途在于存储特定应用程序或特定组件的事件，而不是存储具有系统范围影响的全局事件（如“安全性”事件日志可能记录的事件类型）。 [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] 将 WCF 跟踪事件、WCF 消息日志和 [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] 跟踪记录的日志记录统一和关联到应用程序和服务日志。  
+ 除了使用 Windows 系统、安全性和应用程序事件日志分析应用程序外，Windows Vista 和 Windows Server 2008 还在 "应用程序和服务日志" 顶级节点下引入了其他日志。 这些新日志的用途在于存储特定应用程序或特定组件的事件，而不是存储具有系统范围影响的全局事件（如“安全性”事件日志可能记录的事件类型）。 [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] 将 WCF 跟踪事件、WCF 消息日志和 [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] 跟踪记录的日志记录统一和关联到应用程序和服务日志。  
   
 ## <a name="concepts-and-capabilities"></a>概念和功能  
  以下概念和功能适用于 WCF 分析跟踪。  

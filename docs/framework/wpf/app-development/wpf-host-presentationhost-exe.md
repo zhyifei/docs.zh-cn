@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: 981e518a55f179c2fbf44534783c80fb230e4ecf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 64ba1261134184f22e9faf157ca70e3471e3b3cb
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421128"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636245"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF 主机 (PresentationHost.exe)
-Windows Presentation Foundation （WPF）宿主（Presentationhost.exe）是一种应用程序，它使 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序可以在兼容的浏览器（包括 Microsoft Internet Explorer 6 及更高版本）中承载。 默认情况下，Windows Presentation Foundation （WPF）主机注册为浏览器承载的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 内容的 shell 和 MIME 处理程序，其中包括：  
+Windows Presentation Foundation （WPF）宿主（Presentationhost.exe）是一种允许在兼容的浏览器（包括 Microsoft Internet Explorer 6 及更高版本）中承载 WPF 应用程序的应用程序。 默认情况下，Windows Presentation Foundation （WPF）主机注册为浏览器承载的 WPF 内容的 shell 和 MIME 处理程序，其中包括：  
   
 - 松散（未编译）[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件 (.xaml)。  
   
@@ -29,7 +29,7 @@ Windows Presentation Foundation （WPF）宿主（Presentationhost.exe）是一�
   
  本主题介绍了可以与 PresentationHost.exe 一起使用的命令行参数。  
   
-## <a name="usage"></a>用法  
+## <a name="usage"></a>用量  
  `PresentationHost.exe [parameters] uri|filename`  
   
 ## <a name="parameters"></a>参数  
@@ -40,7 +40,7 @@ Windows Presentation Foundation （WPF）宿主（Presentationhost.exe）是一�
 |-debug|激活应用程序时，不要从存储中提交或运行它。 此参数仅在激活本地文件时才起作用。|  
 |-debugSecurityZoneURL \<url>|与 URL 值一起使用，以指示 Presentationhost.exe 应该调试应用程序，就像它是从指定的 URL 部署的一样。 此参数可确定部署区域和源站点。|  
 |-embedding|OLE 的必需参数。 如果已指定 `-event` 或 `-debug` 参数，则无需指定 `-embedding` 参数，因为该参数已在内部设置。|  
-|-event \<eventname>|打开具有此名称的事件，并在 PresentationHost.exe 初始化并准备好承载 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 内容时向该事件发出信号。 如果打开事件时发生错误（例如该事件尚未创建），则 PresentationHost.exe 将终止。|  
+|-event \<eventname>|用此名称打开事件，并在 Presentationhost.exe 初始化并准备好承载 WPF 内容时发出信号。 如果打开事件时发生错误（例如该事件尚未创建），则 PresentationHost.exe 将终止。|  
 |-launchApplication \<url>|从指定的 URL 启动独立的 ClickOnce 应用程序。 应用与 .NET 应用程序有关的 Internet Explorer 和 WinINet 安全策略。|  
   
 ## <a name="scenarios"></a>方案  
@@ -57,6 +57,6 @@ Windows Presentation Foundation （WPF）宿主（Presentationhost.exe）是一�
 ### <a name="visual-studio-debugging-in-zone"></a>在区域中进行 Visual Studio 调试  
  `PresentationHost.exe -debug -debugSecurityZoneURL http://www.example.com c:\folderpath\example.xbap`  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Security](../security-wpf.md)
+- [安全](../security-wpf.md)
