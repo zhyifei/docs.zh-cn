@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: fb7ad54f61d9dcfe94379aef14930a0395da5291
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: a4d3b808aee14d5d2f29053b0c60798f9f626e8c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424591"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636323"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 浏览器应用程序概述
 <a name="introduction"></a>XAML 浏览器应用程序（Xbap）结合了 Web 应用程序和丰富客户端应用程序的功能。 与 Web 应用程序类似，可以将 XBAP 部署到 Web 服务器并从 Internet Explorer 或 Firefox 启动。 与胖客户端应用程序一样，Xbap 可以利用 WPF 的功能。 开发 XBAP 也与开发丰富客户端类似。 本主题提供简单、高级的 XBAP 开发简介，并介绍 XBAP 开发与标准的丰富客户端开发的不同之处。
@@ -45,13 +45,13 @@ ms.locfileid: "73424591"
 ## <a name="deploying-an-xbap"></a>部署 XBAP
  生成 XBAP 时，输出将包括以下三个文件：
 
-|文件|描述|
+|File|描述|
 |----------|-----------------|
 |可执行文件 (.exe)|此文件包含已编译的代码且具有 .exe 扩展名。|
 |应用程序清单 (.manifest)|此文件包含与应用程序关联的元数据且具有 .manifest 扩展名。|
 |部署清单 (.xbap)|此文件包含 ClickOnce 用于部署应用程序并具有 xbap 扩展名的信息。|
 
- 将 Xbap 部署到 Web 服务器，例如 Microsoft Internet Information Services （IIS）5.0 或更高版本。 无需在 Web 服务器上安装 .NET Framework，但必须注册 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 多用途 Internet 邮件扩展（MIME）类型和文件扩展名。 有关详细信息，请参阅[配置 IIS 5.0 和 IIS 6.0 以部署 WPF 应用程序](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)。
+ 将 Xbap 部署到 Web 服务器，例如 Microsoft Internet Information Services （IIS）5.0 或更高版本。 无需在 Web 服务器上安装 .NET Framework，但必须注册 WPF 多用途 Internet 邮件扩展（MIME）类型和文件扩展名。 有关详细信息，请参阅[配置 IIS 5.0 和 IIS 6.0 以部署 WPF 应用程序](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)。
 
  若要将 XBAP 准备好进行部署，请将 .exe 和关联的清单复制到 Web 服务器。 创建包含超链接的 HTML 页以打开部署清单，即扩展名为 .xbap 的文件。 当用户单击到 xbap 文件的链接时，ClickOnce 会自动处理下载和启动应用程序的机制。 下面的代码示例显示包含指向 XBAP 的超链接的 HTML 页面。
 
@@ -117,7 +117,7 @@ ms.locfileid: "73424591"
 
 7. 在“安全性”下面的“设置”列表中，选中“允许活动内容在我的计算机上的文件中运行”复选框。
 
-8. 单击“确定”。
+8. 单击" **确定**"。
 
      重启 Internet Explorer 后更改才会生效。
 
@@ -168,7 +168,7 @@ ms.locfileid: "73424591"
 
 |安全区域|行为|获取完全信任|
 |-------------------|--------------|------------------------|
-|本地计算机|自动完全信任|无需执行任何操作。|
+|本地计算机|自动完全信任|无需任何操作。|
 |Intranet 和受信任的站点|提示完全信任|使用证书对 XBAP 进行签名，以便用户在提示中看到源。|
 |Internet|失败，并显示“未授予信任”|使用证书对 XBAP 进行签名。|
 
@@ -185,7 +185,7 @@ ms.locfileid: "73424591"
 
  此外，改进后的 ClickOnce 下载顺序并发性将开始时间提高了10%。 ClickOnce 下载并验证清单后，将启动应用程序下载，并开始更新进度栏。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [将 Visual Studio 配置为通过调试 XAML 浏览器应用程序来调用 Web 服务](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
 - [部署 WPF 应用程序](deploying-a-wpf-application-wpf.md)

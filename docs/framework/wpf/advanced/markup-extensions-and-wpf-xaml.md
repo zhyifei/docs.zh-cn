@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: 7ba2beae4ef8176764a5caaff609c365f283e285
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a9e0657aa9f9dd4de0ff3f8788c686bf1535b1ad
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459824"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559789"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>标记扩展和 WPF XAML
 本主题介绍 XAML 的标记扩展概念，包括其语法规则、用途以及作为其基础的类对象模型。 标记扩展是 XAML 语言以及 XAML 服务的 .NET 实现的常规功能。 本主题专门详细讨论用于 WPF XAML 的标记扩展。  
@@ -41,13 +41,13 @@ ms.locfileid: "73459824"
 ## <a name="xaml-defined-markup-extensions"></a>XAML 定义的标记扩展  
  存在这么几种标记扩展，它们并非特定于 XAML 的 WPF 实现，而是语言形式的 XAML 的内部函数或功能的实现。 这些标记扩展在 System.Xaml 程序集中作为常规 .NET Framework XAML 服务的一部分而实现，并且位于 XAML 语言 XAML 命名空间内。 就常见标记用法而言，这些标记扩展通常可由用法中的 `x:` 前缀标识。 <xref:System.Windows.Markup.MarkupExtension> 基类（也在 system.exception 中定义）提供了所有标记扩展应使用的模式，以便在 XAML 读取器和 XAML 编写器（包括在 WPF XAML 中）中受支持。  
   
-- `x:Type` 为命名类型提供 <xref:System.Type> 对象。 此扩展最常用于样式和模板。 有关详细信息，请参阅 [x:Type 标记扩展](../../xaml-services/x-type-markup-extension.md)。  
+- `x:Type` 为命名类型提供 <xref:System.Type> 对象。 此扩展最常用于样式和模板。 有关详细信息，请参阅 [x:Type 标记扩展](../../../desktop-wpf/xaml-services/xtype-markup-extension.md)。  
   
-- `x:Static` 生成静态值。 这些值来自于值类型代码实体，它们不直接是目标属性值的类型，但可以计算为该类型。 有关详细信息，请参阅 [x:Static 标记扩展](../../xaml-services/x-static-markup-extension.md)。  
+- `x:Static` 生成静态值。 这些值来自于值类型代码实体，它们不直接是目标属性值的类型，但可以计算为该类型。 有关详细信息，请参阅 [x:Static 标记扩展](../../../desktop-wpf/xaml-services/xstatic-markup-extension.md)。  
   
-- `x:Null` 将 `null` 指定为属性的值，可用于特性或属性元素值。 有关详细信息，请参阅 [x:Null 标记扩展](../../xaml-services/x-null-markup-extension.md)。  
+- `x:Null` 将 `null` 指定为属性的值，可用于特性或属性元素值。 有关详细信息，请参阅 [x:Null 标记扩展](../../../desktop-wpf/xaml-services/xnull-markup-extension.md)。  
   
-- 在特意不使用 WPF 基元素和控件模型提供的集合支持的情况下，`x:Array` 为 XAML 语法中常规数组的创建提供支持。 有关详细信息，请参阅 [x:Array 标记扩展](../../xaml-services/x-array-markup-extension.md)。  
+- 在特意不使用 WPF 基元素和控件模型提供的集合支持的情况下，`x:Array` 为 XAML 语法中常规数组的创建提供支持。 有关详细信息，请参阅 [x:Array 标记扩展](../../../desktop-wpf/xaml-services/xarray-markup-extension.md)。  
   
 > [!NOTE]
 > `x:` 前缀在 XAML 文件或生成的根元素中用于 XAML 语言内部函数的典型 XAML 命名空间映射。 例如，用于 WPF 应用程序的 Visual Studio 模板使用此 `x:` 映射启动 XAML 文件。 可以在自己的 XAML 命名空间映射中选择不同的前缀标记，但本文档将采用默认的 `x:` 映射，并通过它来标识属于 XAML 语言的 XAML 命名空间已定义部分的那些实体，这与 WPF 默认命名空间或与特定框架不相关的其他 XAML 命名空间相反。  
@@ -74,7 +74,7 @@ ms.locfileid: "73459824"
 ## <a name="extension-classes"></a>\*扩展类  
  对于常规 XAML 语言和特定于 WPF 的标记扩展，每个标记扩展的行为通过从 <xref:System.Windows.Markup.MarkupExtension>派生的 `*Extension` 类标识为 XAML 处理器，并提供 <xref:System.Windows.Markup.StaticExtension.ProvideValue%2A> 方法的实现。 每个扩展上的此方法都会提供在计算标记扩展时返回的对象。 通常会基于传递给标记扩展的各个字符串标记来计算返回的对象。  
   
- 例如，<xref:System.Windows.StaticResourceExtension> 类提供实际资源查找的表面实现，以便其 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> 实现返回所请求的对象，并将该特定实现的输入作为用于查找资源的 `x:Key`。 如果使用的是现有标记扩展，则其大部分实现详细信息都无关紧要。  
+ 例如，<xref:System.Windows.StaticResourceExtension> 类提供实际资源查找的表面实现，以便其 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> 实现返回所请求的对象，并将该特定实现的输入作为用于按其 `x:Key`查找资源的字符串。 如果使用的是现有标记扩展，则其大部分实现详细信息都无关紧要。  
   
  有些标记扩展不使用字符串标记参数。 这是因为它们返回静态值或一致的值，或者因为应返回何值的上下文可通过经 `serviceProvider` 参数传递的服务之一提供。  
   
@@ -92,13 +92,13 @@ ms.locfileid: "73459824"
   
 - 如果单个分隔标记包含等号，则 XAML 处理器首先调用标记扩展的无参数构造函数。 之后，每个“名称=值”对会解释为标记扩展上存在的属性名称以及赋给该属性的值。  
   
-- 如果标记扩展中的构造函数行为与属性设置行为之间存在并行结果，则使用哪个行为都无关紧要。 较常见的用法是将“属性`=`值”对用于具有多个可设置属性的标记扩展，因为这可使标记意图性更强，并减少意外转置构造函数参数的可能性。 （如果指定属性 = 值对，则这些属性可能为任意顺序。）此外，无法保证标记扩展提供了一个构造函数参数，该参数可设置其每个可设置属性。 例如，<xref:System.Windows.Data.Binding> 是一个标记扩展，其中许多属性都可以通过*属性*`=`*值*窗体中的扩展进行设置，但 <xref:System.Windows.Data.Binding> 只支持两个构造函数：一个无参数的构造函数，另一个设置初始路径。  
+- 如果标记扩展中的构造函数行为与属性设置行为之间存在并行结果，则使用哪个行为都无关紧要。 较常见的用法是将“属性`=`值”对用于具有多个可设置属性的标记扩展，因为这可使标记意图性更强，并减少意外转置构造函数参数的可能性。 （如果指定属性 = 值对，则这些属性可能为任意顺序。）此外，无法保证标记扩展提供了一个构造函数参数，该参数可设置其每个可设置属性。 例如，<xref:System.Windows.Data.Binding> 是一个标记扩展，可通过*属性*`=`*值*窗体中的扩展设置多个属性，但 <xref:System.Windows.Data.Binding> 只支持两个构造函数：一个无参数的构造函数和一个设置初始路径的构造函数。  
   
 - 文本逗号在未转义的情况下无法传递给标记扩展。  
   
 <a name="EscapeSequences"></a>   
 ## <a name="escape-sequences-and-markup-extensions"></a>转义序列和标记扩展  
- XAML 处理器中的特性处理使用大括号作为标记扩展序列的指示符。 必要时，也可以使用后跟文本大括号的空大括号对输入转义序列，来生成文本大括号字符特性值。 请参阅[{} 转义序列标记扩展](../../xaml-services/escape-sequence-markup-extension.md)。  
+ XAML 处理器中的特性处理使用大括号作为标记扩展序列的指示符。 必要时，也可以使用后跟文本大括号的空大括号对输入转义序列，来生成文本大括号字符特性值。 请参阅[{} 转义序列标记扩展](../../../desktop-wpf/xaml-services/escape-sequence-markup-extension.md)。  
   
 <a name="Nesting"></a>   
 ## <a name="nesting-markup-extensions-in-xaml-usage"></a>XAML 中的嵌套标记扩展用法  
@@ -114,14 +114,14 @@ ms.locfileid: "73459824"
 ## <a name="markup-extensions-and-property-element-syntax"></a>标记扩展和属性元素语法  
  当用作填写属性元素值的对象元素时，标记扩展类在外观上与可用在 XAML 中的基于典型类型的对象元素没有区别。 典型对象元素与标记扩展之间的实际差异是，标记扩展要么计算为类型化值，要么延迟为表达式。 因此，标记扩展的属性值的任何可能类型错误的机制都将是不同的，这与在其他编程模型中处理后期绑定属性的方式类似。 普通对象元素将针对分析 XAML 时它设置的目标属性进行类型匹配计算。  
   
- 当用在对象元素语法中以填充属性元素时，大多数标记扩展都不会包含任何内容或深层属性元素语法。 这样你便可以关闭对象元素标记，而不提供任何子元素。 不论何时 XAML 处理器遇到任何对象元素，都会调用该类的构造函数来实例化从已分析元素创建的对象。 标记扩展类没有区别：如果希望标记扩展可用于对象元素语法，则必须提供无参数的构造函数。 有些现有标记扩展具有至少一个必需的属性值，必须指定该属性值才能使实例化生效。 如果是这样，该属性值通常会作为对象元素上的属性特性而给出。 在 [XAML 命名空间 (x:) 语言功能](../../xaml-services/xaml-namespace-x-language-features.md)和 [WPF XAML 扩展](wpf-xaml-extensions.md)参考页中，会指出具有必需属性的标记扩展（以及必需属性的名称）。 参考页还将指出特定标记扩展是否禁止使用对象元素语法或特性语法。 需要注意 [x:Array 标记扩展](../../xaml-services/x-array-markup-extension.md)，它无法支持特性语法，因为该数组的内容必须在标记内作为内容指定。 数组内容的处理方式与常规对象一样，因此特性可以没有默认的类型转换器。 此外，[x:Array 标记扩展](../../xaml-services/x-array-markup-extension.md)需要 `type` 参数。  
+ 当用在对象元素语法中以填充属性元素时，大多数标记扩展都不会包含任何内容或深层属性元素语法。 这样你便可以关闭对象元素标记，而不提供任何子元素。 不论何时 XAML 处理器遇到任何对象元素，都会调用该类的构造函数来实例化从已分析元素创建的对象。 标记扩展类没有区别：如果希望标记扩展可用于对象元素语法，则必须提供无参数的构造函数。 有些现有标记扩展具有至少一个必需的属性值，必须指定该属性值才能使实例化生效。 如果是这样，该属性值通常会作为对象元素上的属性特性而给出。 在 [XAML 命名空间 (x:) 语言功能](../../../desktop-wpf/xaml-services/namespace-language-features.md)和 [WPF XAML 扩展](wpf-xaml-extensions.md)参考页中，会指出具有必需属性的标记扩展（以及必需属性的名称）。 参考页还将指出特定标记扩展是否禁止使用对象元素语法或特性语法。 需要注意 [x:Array 标记扩展](../../../desktop-wpf/xaml-services/xarray-markup-extension.md)，它无法支持特性语法，因为该数组的内容必须在标记内作为内容指定。 数组内容的处理方式与常规对象一样，因此特性可以没有默认的类型转换器。 此外，[x:Array 标记扩展](../../../desktop-wpf/xaml-services/xarray-markup-extension.md)需要 `type` 参数。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XAML 概述 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [XAML 命名空间 (x:) 语言功能](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML 命名空间 (x:) 语言功能](../../../desktop-wpf/xaml-services/namespace-language-features.md)
 - [WPF XAML 扩展](wpf-xaml-extensions.md)
 - [StaticResource 标记扩展](staticresource-markup-extension.md)
 - [绑定标记扩展](binding-markup-extension.md)
 - [DynamicResource 标记扩展](dynamicresource-markup-extension.md)
-- [x:Type 标记扩展](../../xaml-services/x-type-markup-extension.md)
+- [x:Type 标记扩展](../../../desktop-wpf/xaml-services/xtype-markup-extension.md)

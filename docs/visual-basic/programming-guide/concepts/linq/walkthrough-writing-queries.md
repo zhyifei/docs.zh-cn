@@ -7,18 +7,18 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 6a9f229697ce3d6328c6fb09d18d4cc2627eab10
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6d2e472cc996c42aa091ed95c6954d0879c98372
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351020"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636752"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>演练：用 Visual Basic 编写查询
 
-本演练演示如何使用 Visual Basic 语言功能编写 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 查询表达式。 本演练演示如何对学生对象列表创建查询，如何运行查询，以及如何修改查询。 查询包含多个功能，包括对象初始值设定项、本地类型推理和匿名类型。
+本演练演示如何使用 Visual Basic 语言功能编写语言集成查询（LINQ）查询表达式。 本演练演示如何对学生对象列表创建查询，如何运行查询，以及如何修改查询。 查询包含多个功能，包括对象初始值设定项、本地类型推理和匿名类型。
 
-完成本演练后，你将准备好进入你感兴趣的特定 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供程序的示例和文档。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供程序包括 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]、LINQ to DataSet 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。
+完成本演练后，你将准备好进入你感兴趣的特定 LINQ 提供程序的示例和文档。 LINQ 提供程序包括 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]、LINQ to DataSet 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。
 
 ## <a name="create-a-project"></a>创建项目
 
@@ -133,13 +133,13 @@ ms.locfileid: "74351020"
 
 ## <a name="additional-examples"></a>其他示例
 
-现在，你已了解基础知识，以下是说明 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询的灵活性和强大功能的其他示例列表。 每个示例前面都有其作用的简短说明。 将鼠标指针停留在每个查询的查询结果变量上，以查看推断出的类型。 使用 `For Each` 循环来生成结果。
+现在，你已了解基础知识，以下是说明 LINQ 查询的灵活性和强大功能的其他示例列表。 每个示例前面都有其作用的简短说明。 将鼠标指针停留在每个查询的查询结果变量上，以查看推断出的类型。 使用 `For Each` 循环来生成结果。
 
 [!code-vb[VbLINQWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#7)]
 
 ## <a name="additional-information"></a>其他信息
 
-熟悉了使用查询的基本概念后，就可以阅读感兴趣的特定类型的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供程序的文档和示例：
+熟悉使用查询的基本概念后，便可以阅读感兴趣的特定类型 LINQ 提供程序的文档和示例：
 
 - [LINQ to Objects](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 

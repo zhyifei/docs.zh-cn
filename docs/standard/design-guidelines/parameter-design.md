@@ -10,17 +10,18 @@ helpviewer_keywords:
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
 author: KrzysztofCwalina
-ms.openlocfilehash: 28b00f5911bb47536ec44b96f284e47b6c671149
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
-ms.translationtype: MT
+ms.openlocfilehash: 93554594b49b742a6a5e8461b6b16046701ec07c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353739"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347854"
 ---
 # <a name="parameter-design"></a>参数设计
+
 本部分提供了有关参数设计的广泛准则，包括用于检查参数的准则。 此外，还应参考[命名参数](../../../docs/standard/design-guidelines/naming-parameters.md)中介绍的准则。  
   
- **✓ 务必**使用可提供成员所需功能的最少的派生参数类型。  
+ **✓ DO** 使用至少派生的参数提供的类型的成员所需的功能。  
   
  例如，假设想要设计一个枚举集合并将每个项输出到控制台的的方法。 此类方法应使用 <xref:System.Collections.IEnumerable> 作为参数，而不应使用 <xref:System.Collections.ArrayList> 或 <xref:System.Collections.IList>。  
   
@@ -40,8 +41,8 @@ ms.locfileid: "71353739"
   
  这更好地传达了方法之间的关系。  
   
-### <a name="choosing-between-enum-and-boolean-parameters"></a>在枚举和布尔形参之间进行选择  
- **✓ 务必**使用枚举，如果成员有两个或多个布尔参数的话。  
+### <a name="choose-between-enum-and-boolean-parameters"></a>选择枚举参数和布尔参数  
+ **✓ DO** 如果成员本来两个或多个布尔参数，请使用枚举。  
   
  **X 切忌**使用布尔值，除非绝对确定永远不需要两个以上的值。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "71353739"
   
  **✓ 考虑**使用布尔值作为构造函数参数，这些参数是真正的双状态值，仅用于初始化布尔属性。  
   
-### <a name="validating-arguments"></a>验证实参  
+### <a name="validate-arguments"></a>验证参数  
  **✓ 务必**验证传递到公共、受保护或显式实现的成员的实参。 如果验证失败，将引发 <xref:System.ArgumentException?displayProperty=nameWithType> 或其一个子类。  
   
  请注意，实际验证不一定必须在公共成员或受保护成员本身中进行。 它可能发生在某些私有或内部例程的较低级别。 重点是暴露给最终用户的整个上层区域会检查参数。  
@@ -60,16 +61,16 @@ ms.locfileid: "71353739"
   
  不要假设枚举实参将在枚举定义的范围内。 CLR 允许将任何整数值转换为枚举值，即使该值未在枚举中定义。  
   
- **X 切忌**将 <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> 用于枚举范围检查。  
+ **X DO NOT** 使用<xref:System.Enum.IsDefined%2A?displayProperty=nameWithType>枚举范围检查。  
   
  **✓ 务必**注意，可变实参在验证后可能已更改。  
   
  如果该成员对安全性敏感，则建议生成一个副本，然后验证并处理该实参。  
   
-### <a name="parameter-passing"></a>参数传递  
+### <a name="pass-parameters"></a>传递参数  
  从框架设计者的角度来看，有三组主要形参：传值形参、`ref` 形参和 `out` 形参。  
   
- 当实参通过传值形参传递时，该成员将接收传入的实际实参的副本。 如果实参是值类型，则将实参的副本放在栈上。 如果实参是引用类型，则将引用的副本放在栈上。 最常用的 CLR 语言，如 C#，VB.NET 和 C++，默认按值传递形参。  
+ 当实参通过传值形参传递时，该成员将接收传入的实际实参的副本。 如果实参是值类型，则将实参的副本放在栈上。 如果实参是引用类型，则将引用的副本放在栈上。 最常用的 CLR 语言（例如C#Visual Basic 和C++）默认为通过值传递参数。  
   
  当实参通过 `ref` 形参传递时，成员接收对传入的实际实参的引用。 如果实参是值类型，则将实参的引用放在栈上。 如果实参是引用类型，则将引用的引用放在栈上。 `Ref` 形参可用于允许成员修改调用方传递的实参。  
   
@@ -83,7 +84,7 @@ ms.locfileid: "71353739"
   
  该规则有一些有限的例外情况，例如可用于交换引用的方法。  
   
-### <a name="members-with-variable-number-of-parameters"></a>具有可变形参数量的成员  
+### <a name="members-with-variable-number-of-parameters"></a>参数数目可变的成员  
  可以通过提供数组形参来表示使用可变数量实参的成员。 例如，<xref:System.String> 提供了以下方法：  
   
 ```csharp  
@@ -116,17 +117,17 @@ public class String {
   
  例如，具有字节数组形参的成员几乎不会通过传递单个字节来调用。 因此，.NET Framework 中的字节数组形参不使用 params 关键字。  
   
- **X 切忌**使用 params 数组，如果采用 params 数组形参的成员修改了数组。  
+ **X DO NOT** 使用 params 数组，如果采用 params 数组参数的成员来修改数组。  
   
  由于许多编译器将成员的实参转换为调用站点的临时数组，因此该数组可能是临时对象，所以对数组的任何修改都将丢失。  
   
- **✓ 考虑**在简单的重载中使用 params 关键字，即使更复杂的重载不能使用它。  
+ **✓ CONSIDER** 使用在简单的重载中，params 关键字，即使更复杂的重载不能使用它。  
   
  问问自己用户是否会重视在一个重载中使用 params 数组，即使它不在所有重载中。  
   
- **✓ 务必**尝试对形参进行排序，以使其可以使用 params 关键字。  
+ **✓ DO** 尝试顺序参数，以使其可以使用 params 关键字。  
   
- **✓ 考虑**在性能极其敏感的 API 中为具有少量实参的调用提供特殊的重载和代码路径。  
+ **✓ CONSIDER** 使用少量的极性能敏感的 Api 中的自变量调用提供特殊的重载和代码路径。  
   
  这样在使用少量实参调用 API 时可以避免创建数组对象。 通过采用数组形参的单数形式，并添加数字后缀来形成形参的名称。  
   
@@ -136,7 +137,7 @@ public class String {
   
  应该在处理之前验证数组是否为 null。  
   
- **X 切忌**使用 `varargs` 方法，也称为省略号。  
+ **X DO NOT** 使用`varargs`方法，也称为旁边的省略号。  
   
  某些 CLR 语言，如 C++ ，支持传递变量形参列表的替代约定，称为 `varargs` 方法。 该约定不应在框架中使用，因为它不符合CLS。  
   
@@ -147,15 +148,15 @@ public class String {
   
  **X 避免**对指针实参进行高开销的实参检查。  
   
- **✓ 务必**在设计带指针的成员时，遵循常见的指针相关约定。  
+ **✓ DO** 设计具有使用指针的成员时遵循指针相关的常见约定。  
   
  例如，不需要传递起始索引，因为可以使用简单的指针算法来完成相同的结果。  
   
- *部分版权 © 2005，2009 Microsoft Corporation。保留所有权利。*  
+ *部分©2005，2009 Microsoft Corporation。保留所有权利。*  
   
- *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
+ *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [成员设计准则](../../../docs/standard/design-guidelines/member.md)
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)

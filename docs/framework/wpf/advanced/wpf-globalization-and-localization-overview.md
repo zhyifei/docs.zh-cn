@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: b8777e1402bef1708136a5f81a641beb8c761905
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: c2b78b990969fb5bc9814ebda8ffcf38efa458b1
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740706"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559919"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和本地化概述
 
@@ -42,7 +42,7 @@ ms.locfileid: "73740706"
 
 - 启用 <xref:System.Windows.Controls.TextBlock> 上的 <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> 以避免剪辑。
 
-- 设置 `xml:lang` 特性。 此属性描述特定元素及其子元素的区域性。 此属性的值更改 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中多个功能的行为。 例如，它可以更改断字、拼写检查、数字替换、复杂脚本成型和字体回退的行为。 有关[在 XAML 中设置 xml： Lang 处理](../../xaml-services/xml-lang-handling-in-xaml.md)的详细信息，请参阅适用于[WPF 的全球化](globalization-for-wpf.md)。
+- 设置 `xml:lang` 特性。 此属性描述特定元素及其子元素的区域性。 此属性的值更改 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中多个功能的行为。 例如，它可以更改断字、拼写检查、数字替换、复杂脚本成型和字体回退的行为。 有关[在 XAML 中设置 xml： Lang 处理](../../../desktop-wpf/xaml-services/xml-language-handling.md)的详细信息，请参阅适用于[WPF 的全球化](globalization-for-wpf.md)。
 
 - 创建自定义的复合字体，以更好地控制用于不同语言的字体。 默认情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用 Windows\Fonts 目录中的 GlobalUserInterface 字体。
 
@@ -144,11 +144,11 @@ ms.locfileid: "73740706"
 
 请注意，此示例使用 <xref:System.Windows.Controls.Grid>的共享大小调整功能。 最后三列通过将其放在同一 <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>中来利用这一点。 正如属性名称所示，此属性允许不同的列采用相同大小。 因此，当 "浏览 ..."已本地化为较长的字符串 "Durchsuchen ... ..."，所有按钮的宽度都将增加，而不是使用较小的 "确定" 按钮和不成比例的 "Durchsuchen ... ..."鼠标.
 
-**xml： lang**
+**xml:lang**
 
 `xml:lang="en-US"`
 
-请注意， [XAML 中的 xml： Lang 处理](../../xaml-services/xml-lang-handling-in-xaml.md)置于 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的根元素中。 此属性描述给定元素及其子元素的区域性。 此值由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的多个功能使用，并且应在本地化过程中相应地进行更改。 此值会更改在断字以及对字词进行拼写检查时所使用的字典。 它还会影响数字的显示以及字体回退系统选择所用字体的方式。 最后，该属性会影响数值的显示方式，形成在复杂脚本中编写文本的方式。 默认值为“en-US”。
+请注意， [XAML 中的 xml： Lang 处理](../../../desktop-wpf/xaml-services/xml-language-handling.md)置于 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的根元素中。 此属性描述给定元素及其子元素的区域性。 此值由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的多个功能使用，并且应在本地化过程中相应地进行更改。 此值会更改在断字以及对字词进行拼写检查时所使用的字典。 它还会影响数字的显示以及字体回退系统选择所用字体的方式。 最后，该属性会影响数值的显示方式，形成在复杂脚本中编写文本的方式。 默认值为“en-US”。
 
 **生成附属资源程序集**
 
@@ -178,27 +178,27 @@ ms.locfileid: "73740706"
 
 使用你喜欢的支持 Unicode 的 CSV 编辑器来编辑此文件。 筛选掉本地化类别为“None”的所有项。 应看到下面的项：
 
-|资源键|本地化类别|“值”|
+|资源键|本地化类别|{2&gt;值&lt;2}|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|Button|确定|
 |Button_2:System.Windows.Controls.Button.$Content|Button|取消|
 |Button_3:System.Windows.Controls.Button.$Content|Button|浏览...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|组合框||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Windows 将根据您所输入的名称，为您打开相应的程序、文件夹、文档或 Internet 资源。|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|打开:|
-|Window_1:System.Windows.Window.Title|Title|运行|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|文本|Windows 将根据您所输入的名称，为您打开相应的程序、文件夹、文档或 Internet 资源。|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|文本|打开:|
+|Window_1:System.Windows.Window.Title|职务|运行|
 
 将该应用程序本地化为德语版本需要进行下面的翻译：
 
-|资源键|本地化类别|“值”|
+|资源键|本地化类别|{2&gt;值&lt;2}|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|Button|确定|
 |Button_2:System.Windows.Controls.Button.$Content|Button|Abbrechen|
 |Button_3:System.Windows.Controls.Button.$Content|Button|Durchsuchen…|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|组合框||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|Öffnen:|
-|Window_1:System.Windows.Window.Title|Title|运行|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|文本|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|文本|打开：|
+|Window_1:System.Windows.Window.Title|职务|运行|
 
 **生成**
 
@@ -265,11 +265,11 @@ Microsoft 沙特阿拉伯网站的这个实体模型说明了针对从右向左�
 
 [!code-xaml[GlobalizationHomepage#LocalizationComment](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationHomepage/CS/Homepage.xaml#localizationcomment)]
 
-此注释与 TextBlock_1's 内容相关联，在 LocBaml 工具的情况下（请参阅[本地化应用程序](how-to-localize-an-application.md)），可以在输出 .csv 文件的 TextBlock_1 行的第6列中看到该注释：
+此注释将与 TextBlock_1 的内容相关联，并在 LocBaml 工具（请参阅[本地化应用程序](how-to-localize-an-application.md)）的情况下，可在输出 .csv 文件中 TextBlock_1 行的第6列中查看：
 
-|资源键|类别|可读性|可修改性|注释|“值”|
+|资源键|类别|可读性|可修改性|备注|{2&gt;值&lt;2}|
 |-|-|-|-|-|-|
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|true|true|此字符用作装饰性规则。|&#124;|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|文本|true|true|此字符用作装饰性规则。|&#124;|
 
 使用下面的语法可以将注释放置在任何元素的内容或属性上：
 
@@ -285,7 +285,7 @@ Microsoft 沙特阿拉伯网站的这个实体模型说明了针对从右向左�
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]
 
-还可以通过代码覆盖 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的默认本地化特性，以便为自定义控件正确设置正确的默认值。 例如:
+还可以通过代码覆盖 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的默认本地化特性，以便为自定义控件正确设置正确的默认值。 例如：
 
 ```csharp
 [Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]

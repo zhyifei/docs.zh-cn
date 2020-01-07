@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 9a3d579019db4d2b59a0252dbe63b4a6a0468849
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5625b63f2a2162f8f188476bfd61bde4c717f1dd
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458300"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559854"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic 和 WPF 事件处理
 具体而言，对于 Microsoft Visual Basic .NET 语言，你可以使用特定于语言的 `Handles` 关键字将事件处理程序与实例关联，而不是将事件处理程序附加到特性或使用 <xref:System.Windows.UIElement.AddHandler%2A> 方法。 但是，用于将处理程序附加到实例的 `Handles` 技术存在一些限制，因为 `Handles` 语法不支持 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件系统的某些特定路由事件功能。  
   
 ## <a name="using-handles-in-a-wpf-application"></a>在 WPF 应用程序中使用“Handles”  
- 通过 `Handles` 连接到实例和事件的事件处理程序必须全部在实例的分部类声明中定义，此要求也适用于通过元素上的特性值进行分配的事件处理程序。 只能为页面上具有 <xref:System.Windows.FrameworkContentElement.Name%2A> 属性值（或声明了[X：Name 指令](../../xaml-services/x-name-directive.md)）的元素指定 `Handles`。 这是因为 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的 <xref:System.Windows.FrameworkContentElement.Name%2A> 会创建支持实例所必需的实例引用。 `Handles` 语法要求的*事件*引用格式。 唯一可用于没有 <xref:System.Windows.FrameworkContentElement.Name%2A> 引用的 `Handles` 元素是用于定义分部类的根元素实例。  
+ 通过 `Handles` 连接到实例和事件的事件处理程序必须全部在实例的分部类声明中定义，此要求也适用于通过元素上的特性值进行分配的事件处理程序。 只能为页面上具有 <xref:System.Windows.FrameworkContentElement.Name%2A> 属性值（或声明了[X：Name 指令](../../../desktop-wpf/xaml-services/xname-directive.md)）的元素指定 `Handles`。 这是因为 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的 <xref:System.Windows.FrameworkContentElement.Name%2A> 会创建支持实例所必需的实例引用。 `Handles` 语法要求的*事件*引用格式。 唯一可用于没有 <xref:System.Windows.FrameworkContentElement.Name%2A> 引用的 `Handles` 元素是用于定义分部类的根元素实例。  
   
  可以通过使用逗号分隔 `Handles` 后面的 Instance.Event 引用，向多个元素分配相同的处理程序。  
   
@@ -37,12 +37,12 @@ ms.locfileid: "73458300"
 > 在 XAML 中为同一事件指定事件处理程序时，请不要在 Visual Basic 代码中使用 `Handles` 语法。 在这种情况下，将调用事件处理程序两次。  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>WPF 如何实现“Handles”功能  
- 编译 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 页面时，中间文件声明 `Friend` `WithEvents` 引用页面上具有 <xref:System.Windows.FrameworkContentElement.Name%2A> 属性集（或声明了[X：Name 指令](../../xaml-services/x-name-directive.md)）的每个元素。 每个命名实例都可能是可通过 `Handles` 分配给处理程序的元素。  
+ `Friend` `WithEvents` <xref:System.Windows.FrameworkContentElement.Name%2A> 编译页面时, 中间文件声明对页面上设置了属性 (或声明了 [x:Name](../../../desktop-wpf/xaml-services/xname-directive.md) 指令) 的每个元素的引用。 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 每个命名实例都可能是可通过 `Handles` 分配给处理程序的元素。  
   
 > [!NOTE]
 > 在 Visual Studio 中，IntelliSense 可向你显示哪些元素可用于页面中 `Handles` 引用。 但是，这可能需要执行一个编译传递，以便中间文件可以填充所有 `Friends` 引用。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.UIElement.AddHandler%2A>
 - [将路由事件标记为“已处理”和“类处理”](marking-routed-events-as-handled-and-class-handling.md)

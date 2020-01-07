@@ -2,12 +2,12 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: dd3dd026749ccc299cd922b79dcae8ccbcc722d8
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3c7da8d5a473b801da8c48d1cb1504b95cc6c769
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968830"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342135"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 将用于生成服务主机的工厂与要承载的服务以及访问或编译 .svc 文件中提供的宿主代码所需的其他编程方面相关联。  
@@ -35,8 +35,8 @@ CodeBehind = "CodeBehind"
 #### <a name="debug"></a>调试  
  指示是否应用调试符号编译 Windows Communication Foundation （WCF）服务。 `true` 如果 WCF 服务应用调试符号编译，则为; 否则为。否则，`false`。  
   
-#### <a name="language"></a>语言  
- 指定编译文件 (.svc) 中的所有内联代码时使用的语言。 这些值可以表示 .NET 支持的任何语言，包括 C#、VB 和 JS，这三项分别表示 C#、Visual Basic .NET 和 JScript .NET。 此属性是可选的。  
+#### <a name="language"></a>Language  
+ 指定编译文件 (.svc) 中的所有内联代码时使用的语言。 值可以表示任意。NET 支持的语言，包括 `C#`、`VB`和 `JS`，分别引用C#、Visual Basic 和 JScript .net。 此属性是可选的。  
   
 #### <a name="codebehind"></a>CodeBehind  
  当实现 XML Web services 的类未驻留在相同的文件中，且尚未编译成程序集并放置在 \Bin 目录中时，指定实现 XML Web services 的源文件。  
@@ -67,6 +67,6 @@ Factory="WebScriptServiceHostFactory"
 %>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [自定义服务主机](../../../wcf/samples/custom-service-host.md)

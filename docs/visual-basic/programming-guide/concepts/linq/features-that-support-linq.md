@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: e81d0434aa60e0c7b316b72fb78ebfe2a3782cbb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 57c0566f9a76715e48b20f2e6493aa1a506c64be
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353518"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636856"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>支持 LINQ 的 Visual Basic 功能
-名称 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 指的是 Visual Basic 中的技术，该技术在语言中直接支持查询语法和其他语言构造。 使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，无需学习新语言即可针对外部数据源进行查询。 您可以使用 Visual Basic 对关系数据库、XML 存储或对象中的数据进行查询。 这种将查询功能集成到语言中可实现语法错误和类型安全的编译时检查。 此集成还确保你已了解在 Visual Basic 中编写丰富的可变查询所必须了解的大部分内容。  
+名称语言集成查询（LINQ）指的是 Visual Basic 中的技术，该技术在语言中直接支持查询语法和其他语言构造。 使用 LINQ，无需学习新语言即可针对外部数据源进行查询。 您可以使用 Visual Basic 对关系数据库、XML 存储或对象中的数据进行查询。 这种将查询功能集成到语言中可实现语法错误和类型安全的编译时检查。 此集成还确保你已了解在 Visual Basic 中编写丰富的可变查询所必须了解的大部分内容。  
   
  以下部分介绍支持 LINQ 的语言构造，以使你能够开始阅读介绍性文档、代码示例和示例应用程序。 您还可以单击链接以查找有关语言功能如何集成以实现语言集成查询的更详细说明。 [演练：在 Visual Basic 中编写查询](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)是一种很好的起点。  
   
@@ -55,8 +55,8 @@ ms.locfileid: "74353518"
   
  有关详细信息，请参阅[匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
   
-## <a name="extension-methods"></a>扩展方法  
- 使用扩展方法，可以将方法添加到定义之外的数据类型或接口。 利用此功能，您可以将新方法添加到现有类型，而无需实际修改类型。 标准查询运算符本身就是一组扩展方法，这些方法为实现 <xref:System.Collections.Generic.IEnumerable%601>的任何类型提供 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询功能。 <xref:System.Collections.Generic.IEnumerable%601> 的其他扩展包括 <xref:System.Linq.Enumerable.Count%2A>、<xref:System.Linq.Enumerable.Union%2A>和 <xref:System.Linq.Enumerable.Intersect%2A>。  
+## <a name="extension-methods"></a>擴充方法  
+ 使用扩展方法，可以将方法添加到定义之外的数据类型或接口。 利用此功能，您可以将新方法添加到现有类型，而无需实际修改类型。 标准查询运算符本身就是一组扩展方法，这些方法为实现 <xref:System.Collections.Generic.IEnumerable%601>的任何类型提供 LINQ 查询功能。 <xref:System.Collections.Generic.IEnumerable%601> 的其他扩展包括 <xref:System.Linq.Enumerable.Count%2A>、<xref:System.Linq.Enumerable.Union%2A>和 <xref:System.Linq.Enumerable.Intersect%2A>。  
   
  以下扩展方法将打印方法添加到 <xref:System.String> 类。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "74353518"
   
  [!code-vb[VbLINQVbFeatures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#7)]  
   
- 有关详细信息，请参阅[扩展方法](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)  
+ 有关详细信息，请参阅[扩展方法](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)。  
   
 ## <a name="lambda-expressions"></a>Lambda 表达式  
  Lambda 表达式是没有名称的函数，用于计算并返回单个值。 与命名函数不同，可以同时定义和执行 lambda 表达式。 下面的示例显示4。  
@@ -77,7 +77,7 @@ ms.locfileid: "74353518"
   
  [!code-vb[VbLINQVbFeatures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#12)]  
   
- 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]中，lambda 表达式采用许多标准查询运算符。 编译器创建 lambda 表达式来捕获基本查询方法（例如 `Where`、`Select`、`Order By`、`Take While`等）中定义的计算。  
+ 在 LINQ 中，lambda 表达式采用许多标准查询运算符。 编译器创建 lambda 表达式来捕获基本查询方法（例如 `Where`、`Select`、`Order By`、`Take While`等）中定义的计算。  
   
  例如，以下代码定义一个查询，该查询从学生列表返回所有高级学生。  
   

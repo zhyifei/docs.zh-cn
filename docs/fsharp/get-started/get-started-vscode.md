@@ -2,12 +2,12 @@
 title: Visual Studio Code 中的 F# 入门
 description: 了解如何与 Visual Studio Code F#和 ionide 入门插件套件一起使用。
 ms.date: 12/23/2018
-ms.openlocfilehash: 2802438144eb2352c3abeeccfc126b16c6a87d8f
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 91265303c2954387df0f500940c9af68b3c97dac
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204910"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559659"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code 中的 F# 入门
 
@@ -20,7 +20,7 @@ ms.locfileid: "74204910"
 若要创建新F#项目，请打开命令行并使用 .NET Core CLI 创建新项目：
 
 ```dotnetcli
-dotnet new console -lang F# -o FirstIonideProject
+dotnet new console -lang "F#" -o FirstIonideProject
 ```
 
 完成后，将目录更改为该项目并打开 Visual Studio Code：
@@ -42,7 +42,7 @@ code .
 
 目前这是必需的，因为在基于 .NET Framework 的脚本中，某些旧行为不能用于 .NET Core 脚本，Ionide 入门目前正在努力实现这种向后兼容性。 未来，.NET Core 脚本将成为默认值。
 
-### <a name="write-your-first-script"></a>编写您的第一个脚本
+### <a name="write-your-first-script"></a>编写你的第一个脚本
 
 将 Visual Studio Code 配置为使用 .NET Core 脚本后，请导航到 Visual Studio Code 中的资源管理器视图，并创建新文件。 将其命名为*MyFirstScript. .fsx*。
 
@@ -68,7 +68,7 @@ code .
 toPigLatin "banana";;
 ```
 
-你应看到以下结果：
+应该会看到以下结果：
 
 ```fsharp
 val it : string = "ananabay"
@@ -80,7 +80,7 @@ val it : string = "ananabay"
 toPigLatin "apple";;
 ```
 
-你应看到以下结果：
+应该会看到以下结果：
 
 ```fsharp
 val it : string = "appleyay"
@@ -133,7 +133,7 @@ val toPigLatin : word:string -> string
 
 接下来，创建一个名为 `PigLatin` 的新[`module`](../language-reference/modules.md) ，并将前面创建的 `toPigLatin` 函数复制到其中：
 
-[!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/pig-latin.fs#L1-L14)]
+[!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/pig-latin.fs#L3-L14)]
 
 此模块应位于 `main` 函数的上方和 `open System` 声明的下方。 声明的顺序很重要F#，因此在文件中调用函数之前，需要先定义函数。
 
@@ -151,7 +151,7 @@ let main argv =
 
 现在，你可以从命令行运行控制台应用：
 
-```console
+```dotnetcli
 dotnet run apple banana
 ```
 
@@ -164,7 +164,7 @@ dotnet run apple banana
 1. 若要获取 Ionide 入门的代码编辑功能，需要F#将文件保存到磁盘，并保存在 Visual Studio Code 工作区中打开的文件夹内。
 1. 如果已对系统进行了更改或安装了 Visual Studio Code 的 Ionide 入门必备组件，请 Visual Studio Code 重新启动。
 1. 如果项目目录中包含无效字符，则 Ionide 入门可能不起作用。  如果出现这种情况，请重命名项目目录。
-1. 如果 Ionide 入门命令均不起作用，请检查你的[Visual Studio Code 键绑定](https://code.visualstudio.com/docs/customization/keybindings#_customizing-shortcuts)，以确定你是否会意外地替代它们。
+1. 如果所有 Ionide 入门命令都不起作用，请检查[Visual Studio Code 键绑定](https://code.visualstudio.com/docs/getstarted/keybindings#_advanced-customization)，以确定是否会意外地替代它们。
 1. 如果计算机上的 Ionide 入门中断，并且上述任何内容都不能解决问题，请尝试删除计算机上的 `ionide-fsharp` 目录，并重新安装插件套件。
 1. 如果未能加载项目（ F#解决方案资源管理器将显示这种情况），请右键单击该项目，然后单击 "**查看详细信息**" 以获取更多诊断信息。
 

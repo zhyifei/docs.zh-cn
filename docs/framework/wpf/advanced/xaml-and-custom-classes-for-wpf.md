@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: b573137b8d96565776d4b31f7ae8e5cc0b203a21
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: aa2dd7a5c30894f85ed1d4aae0228b76ece3c005
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459456"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559867"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>XAML 及 WPF 的自定义类
 在公共语言运行时（CLR）框架中实现的 XAML 支持使用任何公共语言运行时（CLR）语言定义自定义类或结构，然后使用 XAML 标记访问该类。 通常通过将自定义类型映射到 XAML 命名空间前缀，可在同一标记文件中混合使用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 定义类型和自定义类型。 本主题讨论将自定义类用作 XAML 元素必须满足的要求。  
@@ -57,7 +57,7 @@ ms.locfileid: "73459456"
  允许使用属性语法的属性的示例，但不允许通过 XAML 使用包含对象元素的属性元素语法，这是采用 <xref:System.Windows.Input.Cursor> 类型的各种属性。 <xref:System.Windows.Input.Cursor> 类具有专用的类型转换器 <xref:System.Windows.Input.CursorConverter>，但不公开无参数构造函数，因此，<xref:System.Windows.FrameworkElement.Cursor%2A> 属性只能通过特性语法设置，即使实际的 <xref:System.Windows.Input.Cursor> 类型为引用类型。  
   
 ### <a name="per-property-type-converters"></a>按属性类型转换器  
- 或者，属性本身可能声明属性级别的类型转换器。 这将启用 "微型语言"，它通过将属性的传入字符串值作为基于适当类型的 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> 操作的输入处理，来实例化内联属性类型的对象。 此操作的目的通常是提供方便的访问器，且这不是在 XAML 中启用属性设置的唯一方式。 但是，也可以将类型转换器用于要使用不提供无参数构造函数或特性化类型转换器的现有 CLR 类型的特性。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API 中的示例是采用 <xref:System.Globalization.CultureInfo> 类型的某些属性。 在这种情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用现有 Microsoft .NET Framework <xref:System.Globalization.CultureInfo> 类型来更好地解决在早期版本的框架中使用的兼容性和迁移方案，但 <xref:System.Globalization.CultureInfo> 类型不支持所需的构造函数或直接作为 XAML 属性值使用的类型级类型转换。  
+ 或者，属性本身可能声明属性级别的类型转换器。 这将启用 "微型语言"，它通过将属性的传入字符串值作为基于适当类型的 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> 操作的输入处理，来实例化内联属性类型的对象。 此操作的目的通常是提供方便的访问器，且这不是在 XAML 中启用属性设置的唯一方式。 但是，也可以将类型转换器用于要使用不提供无参数构造函数或特性化类型转换器的现有 CLR 类型的特性。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API 中的示例是采用 <xref:System.Globalization.CultureInfo> 类型的某些属性。 在这种情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用现有 Microsoft .NET Framework <xref:System.Globalization.CultureInfo> 类型来更好地解决在早期版本的框架中使用的兼容性和迁移方案，但 <xref:System.Globalization.CultureInfo> 类型不支持作为 XAML 属性值直接使用所需的构造函数或类型级别类型转换。  
   
  每当公开具有 XAML 用法的属性时，特别是对于控件作者，应特别考虑使用依赖属性支持此属性。 如果使用 XAML 处理器的现有 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 实现，则更是如此，因为可以通过使用 <xref:System.Windows.DependencyProperty> 支持来提高性能。 依赖属性将对用户针对 XAML 可访问属性所需的属性公开属性系统功能。 这包括动画、数据绑定和样式支持等功能。 有关详细信息，请参阅[自定义依赖属性](custom-dependency-properties.md)和 [XAML 加载和依赖属性](xaml-loading-and-dependency-properties.md)。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "73459456"
   
 - 无需在对象元素语法中指定作为集合对象的对象。 无论何时在采用集合类型的 XAML 中指定属性，该集合类型的状态总是隐式。  
   
-- 标记中集合属性的子元素经处理后变成集合的成员。 对集合成员的代码访问通常通过列表/字典方法（例如 `Add`）或通过索引器执行。 但是，XAML 语法不支持方法和索引器（例外：XAML 2009 可支持这些方法，但使用 XAML 2009 会限制可能的 WPF 用法；请参阅 [XAML 2009 语言功能](../../xaml-services/xaml-2009-language-features.md)）。 对生成元素树而言，集合显然是非常常见的要求，并且你需要某种方法来填充声明 XAML 中的这些集合。 因此，通过将集合属性的子元素添加到作为集合属性类型值的集合中来对其进行处理。  
+- 标记中集合属性的子元素经处理后变成集合的成员。 对集合成员的代码访问通常通过列表/字典方法（例如 `Add`）或通过索引器执行。 但是，XAML 语法不支持方法和索引器（例外：XAML 2009 可支持这些方法，但使用 XAML 2009 会限制可能的 WPF 用法；请参阅 [XAML 2009 语言功能](../../../desktop-wpf/xaml-services/xaml-2009-language-features.md)）。 对生成元素树而言，集合显然是非常常见的要求，并且你需要某种方法来填充声明 XAML 中的这些集合。 因此，通过将集合属性的子元素添加到作为集合属性类型值的集合中来对其进行处理。  
   
  .NET Framework XAML 服务实现和 WPF XAML 处理器将以下定义用于组成集合属性的项。 属性的属性类型必须实现以下项之一：  
   
@@ -85,7 +85,7 @@ ms.locfileid: "73459456"
   
 - 实现 <xref:System.Collections.IDictionary> 或泛型等效项（<xref:System.Collections.Generic.IDictionary%602>）。  
   
-- 派生自 <xref:System.Array> （有关 XAML 中数组的详细信息，请参阅[X:Array 标记扩展](../../xaml-services/x-array-markup-extension.md)。）  
+- 派生自 <xref:System.Array> （有关 XAML 中数组的详细信息，请参阅[X:Array 标记扩展](../../../desktop-wpf/xaml-services/xarray-markup-extension.md)。）  
   
 - 实现 <xref:System.Windows.Markup.IAddChild> （由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]定义的接口）。  
   
@@ -104,13 +104,13 @@ ms.locfileid: "73459456"
   
  可将集合属性指定为 XAML 内容属性。 这产生一种属性的用法，通过此用法，对象元素可具有一个或多个子元素，不干扰集合对象元素或属性元素标记。 这些元素被视为 XAML 内容属性的值，并添加到支持集合实例中。  
   
- 一些现有 XAML 内容属性使用 `Object` 的属性类型。 这将启用 XAML 内容属性，该属性可以采用 <xref:System.String> 的基元值以及采用单个引用对象值。 如果按照此模型，类型负责类型确定以及处理可能的类型。 <xref:System.Object> 内容类型的典型原因是支持将对象内容添加为字符串（接收默认的演示处理）的简单方法，或添加指定非默认演示文稿的对象内容的高级方法。其他数据。  
+ 一些现有 XAML 内容属性使用 `Object` 的属性类型。 这将启用 XAML 内容属性，该属性可以采用 <xref:System.String> 的基元值以及采用单个引用对象值。 如果按照此模型，类型负责类型确定以及处理可能的类型。 <xref:System.Object> 内容类型的典型原因是支持将对象内容添加为字符串（接收默认的演示处理）的简单方法，或添加对象内容（用于指定非默认呈现或其他数据）的高级方法。  
   
 <a name="Serializing"></a>   
 ## <a name="serializing-xaml"></a>序列化 XAML  
  某些情况下（例如对于控件作者），可能还需要确保任何可在 XAML 中实例化的对象演示文稿也可被序列化到等效的 XAML 标记。 本主题中未介绍序列化要求。 请参阅[控件创作概述](../controls/control-authoring-overview.md)和[元素树和序列化](element-tree-and-serialization.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XAML 概述 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [自定义依赖属性](custom-dependency-properties.md)
