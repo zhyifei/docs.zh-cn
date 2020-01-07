@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 87d5ff67a9e95c5ec5385802d09d667ee8b6e0f9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3bc31391d30b0724a480152aa7f1d0dc93380b8c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740675"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636401"
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows 概述
-用户通过 Windows 与 Windows Presentation Foundation （WPF）独立应用程序交互。 窗口的主要用途是托管使数据可视化并使用户能够与数据交互的内容。 独立 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序通过使用 <xref:System.Windows.Window> 类提供其自己的窗口。 本主题介绍了 <xref:System.Windows.Window>，然后介绍在独立应用程序中创建和管理 windows 的基本原理。  
+用户通过 Windows 与 Windows Presentation Foundation （WPF）独立应用程序交互。 窗口的主要用途是托管使数据可视化并使用户能够与数据交互的内容。 独立 WPF 应用程序通过使用 <xref:System.Windows.Window> 类提供自己的窗口。 本主题介绍了 <xref:System.Windows.Window>，然后介绍在独立应用程序中创建和管理 windows 的基本原理。  
   
 > [!NOTE]
-> Browser 寄宿 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序（包括 XAML 浏览器应用程序（Xbap）和松散 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 页面）不提供其自己的窗口。 而是托管在 Windows Internet Explorer 提供的 windows 中。 请参阅[WPF XAML 浏览器应用程序概述](wpf-xaml-browser-applications-overview.md)。  
+> 浏览器承载的 WPF 应用程序（包括 XAML 浏览器应用程序（Xbap）和松散 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 页面）不提供其自己的窗口。 而是托管在 Windows Internet Explorer 提供的 windows 中。 请参阅[WPF XAML 浏览器应用程序概述](wpf-xaml-browser-applications-overview.md)。  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>窗口类  
@@ -49,7 +49,7 @@ ms.locfileid: "73740675"
   
  窗口分为两个区域：非工作区和工作区。  
   
- 窗口的*非工作区*是通过 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 实现的，其中包括大多数窗口所共有的窗口部分，包括以下各项：  
+ 窗口的*非工作区*是由 WPF 实现的，包括大多数窗口所共有的窗口部分，其中包括：  
   
 - 边框。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73740675"
   
  窗口的*工作区*是窗口非工作区内的区域，开发人员使用它来添加特定于应用程序的内容，例如菜单栏、工具栏和控件。  
   
- 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中，窗口由用于执行以下操作的 <xref:System.Windows.Window> 类进行封装：  
+ 在 WPF 中，窗口由用于执行以下操作的 <xref:System.Windows.Window> 类封装：  
   
 - 显示窗口。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "73740675"
   
 <a name="DefiningAWindow"></a>   
 ## <a name="implementing-a-window"></a>实现窗口  
- 典型窗口的实现同时包含外观和行为，其中*外观*定义了窗口对用户和*行为*的外观，定义了窗口与用户交互的方式。 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中，可以使用代码或 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 标记实现窗口的外观和行为。  
+ 典型窗口的实现同时包含外观和行为，其中*外观*定义了窗口对用户和*行为*的外观，定义了窗口与用户交互的方式。 在 WPF 中，可以使用代码或 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 标记实现窗口的外观和行为。  
   
  但一般情况下，窗口的外观是使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 标记实现的，其行为是使用代码隐藏实现的，如下面的示例中所示。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "73740675"
 </Project>  
 ```  
   
- 有关生成 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的信息，请参阅[生成 WPF 应用程序](building-a-wpf-application-wpf.md)。  
+ 有关生成 WPF 应用程序的信息，请参阅[生成 Wpf 应用程序](building-a-wpf-application-wpf.md)。  
   
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>窗口生存期  
@@ -293,7 +293,7 @@ ms.locfileid: "73740675"
   
  你还可以通过将 <xref:System.Windows.Window.WindowStartupLocation%2A> 属性设置为以下 <xref:System.Windows.WindowStartupLocation> 枚举值之一，指定 <xref:System.Windows.Window> 首次显示的位置：  
   
-- <xref:System.Windows.WindowStartupLocation.CenterOwner>（默认值）  
+- <xref:System.Windows.WindowStartupLocation.CenterOwner>（默认）  
   
 - <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
@@ -325,13 +325,13 @@ ms.locfileid: "73740675"
   
  如果希望窗口的宽度和高度与窗口内容大小相适应，可以使用 "<xref:System.Windows.Window.SizeToContent%2A>" 属性，该属性具有以下各值：  
   
-- <xref:System.Windows.SizeToContent.Manual> 不起作用（默认值）。  
+- <xref:System.Windows.SizeToContent.Manual>。 不起作用（默认值）。  
   
-- <xref:System.Windows.SizeToContent.Width> 适应内容宽度，其效果与将 <xref:System.Windows.FrameworkElement.MinWidth%2A> 和 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 设置为内容的宽度相同。  
+- <xref:System.Windows.SizeToContent.Width>。 适应内容宽度，其效果与将 <xref:System.Windows.FrameworkElement.MinWidth%2A> 和 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 设置为内容的宽度相同。  
   
-- <xref:System.Windows.SizeToContent.Height> 适应内容高度，其效果与将 <xref:System.Windows.FrameworkElement.MinHeight%2A> 和 <xref:System.Windows.FrameworkElement.MaxHeight%2A> 设置为内容的高度相同。  
+- <xref:System.Windows.SizeToContent.Height>。 适应内容高度，其效果与将 <xref:System.Windows.FrameworkElement.MinHeight%2A> 和 <xref:System.Windows.FrameworkElement.MaxHeight%2A> 设置为内容的高度相同。  
   
-- <xref:System.Windows.SizeToContent.WidthAndHeight> 适应内容宽度和高度，其效果与将 <xref:System.Windows.FrameworkElement.MinHeight%2A> 和 <xref:System.Windows.FrameworkElement.MaxHeight%2A> 设置为内容的高度相同，同时将 <xref:System.Windows.FrameworkElement.MinWidth%2A> 和 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 设置为内容的宽度。  
+- <xref:System.Windows.SizeToContent.WidthAndHeight>。 适应内容宽度和高度，其效果与将 <xref:System.Windows.FrameworkElement.MinHeight%2A> 和 <xref:System.Windows.FrameworkElement.MaxHeight%2A> 设置为内容的高度相同，同时将 <xref:System.Windows.FrameworkElement.MinWidth%2A> 和 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 设置为内容的宽度。  
   
  以下示例显示了一个窗口，它在第一次显示时即自动调整垂直方向和水平方向上的大小以适应内容。  
   
@@ -381,7 +381,7 @@ ms.locfileid: "73740675"
   
  可以通过设置其 <xref:System.Windows.Window.WindowState%2A> 属性来配置窗口的状态，此属性可以具有以下 <xref:System.Windows.WindowState> 枚举值之一：  
   
-- <xref:System.Windows.WindowState.Normal>（默认值）  
+- <xref:System.Windows.WindowState.Normal>（默认）  
   
 - <xref:System.Windows.WindowState.Maximized>  
   
@@ -401,7 +401,7 @@ ms.locfileid: "73740675"
 
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>重设大小模式  
- 根据 <xref:System.Windows.Window.WindowStyle%2A> 属性，可以控制用户如何（以及是否）调整窗口的大小。 窗口样式的选择会影响用户是否可以通过使用鼠标拖动边框来调整窗口的大小，无论是在非工作区显示 "**最小化**"、"**最大化**" 和 "重**设大小**" 按钮，能够.  
+ 根据 <xref:System.Windows.Window.WindowStyle%2A> 属性，可以控制用户如何（以及是否）调整窗口的大小。 窗口样式的选择会影响用户是否可以通过使用鼠标拖动边框来调整窗口的大小，无论是否在非工作区显示 "**最小化**"、"**最大化**" 和 "**调整大小**" 按钮，以及它们是否已启用。  
   
  可以通过设置 "<xref:System.Windows.Window.ResizeMode%2A>" 属性来配置窗口调整大小的方式，可以是以下 <xref:System.Windows.ResizeMode> 枚举值之一：  
   
@@ -409,7 +409,7 @@ ms.locfileid: "73740675"
   
 - <xref:System.Windows.ResizeMode.CanMinimize>  
   
-- <xref:System.Windows.ResizeMode.CanResize>（默认值）  
+- <xref:System.Windows.ResizeMode.CanResize>（默认）  
   
 - <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
@@ -427,7 +427,7 @@ ms.locfileid: "73740675"
   
 - <xref:System.Windows.WindowStyle.None>  
   
-- <xref:System.Windows.WindowStyle.SingleBorderWindow>（默认值）  
+- <xref:System.Windows.WindowStyle.SingleBorderWindow>（默认）  
   
 - <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   
@@ -466,7 +466,7 @@ ms.locfileid: "73740675"
  [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
   
 <a name="SecurityConsiderations"></a>   
-## <a name="security-considerations"></a>安全注意事项  
+## <a name="security-considerations"></a>需要考虑的安全性因素  
  <xref:System.Windows.Window> 需要实例化 `UnmanagedCode` 安全权限。 对于从本地计算机安装并启动的应用程序，此权限在授予应用程序的权限集中。  
   
  但是，这超出了向使用 ClickOnce 从 Internet 或本地 intranet 区域启动的应用程序授予的权限集。 因此，用户将收到 ClickOnce 安全警告，需要将应用程序的权限集提升到完全信任。  
@@ -479,7 +479,7 @@ ms.locfileid: "73740675"
   
  对话框是通常用来收集用户信息以完成某项功能的窗口。 例如，当用户要打开文件时，应用程序通常会显示 "**打开文件**" 对话框以获取用户的文件名。 有关详细信息，请参阅[对话框概述](dialog-boxes-overview.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>

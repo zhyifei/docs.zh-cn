@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: b96c68c06099db2f396d16772cfaa8aee37390fe
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7071aaf88346ee217226632501ebd6c82cfc1cb8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838008"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346762"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>如何：审核 Windows Communication Foundation 安全事件
 Windows Communication Foundation （WCF）允许您将安全事件记录到 Windows 事件日志，可以使用 Windows 事件查看器进行查看。 本主题说明如何设置应用程序以使其记录安全事件。 有关 WCF 审核的详细信息，请参阅[审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
@@ -24,7 +24,7 @@ Windows Communication Foundation （WCF）允许您将安全事件记录到 Wind
      [!code-csharp[AuditingSecurityEvents#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#2)]
      [!code-vb[AuditingSecurityEvents#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#2)]  
   
-     <xref:System.ServiceModel.AuditLogLocation> 枚举有三个值： `Application`、`Security`或 `Default`。 该值指定在事件查看器中可见的日志之一：安全日志或应用程序日志。 如果您使用 `Default` 值，则实际的日志将取决于运行应用程序的操作系统。 如果启用审核，但未指定日志位置，则对于支持写入安全日志的平台，默认值为 `Security` 日志；对于其他平台，则写入 `Application` 日志。 默认情况下，只有 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 Windows Vista 支持写入安全日志。  
+     <xref:System.ServiceModel.AuditLogLocation> 枚举有三个值： `Application`、`Security`或 `Default`。 该值指定在事件查看器中可见的日志之一：安全日志或应用程序日志。 如果您使用 `Default` 值，则实际的日志将取决于运行应用程序的操作系统。 如果启用审核，但未指定日志位置，则对于支持写入安全日志的平台，默认值为 `Security` 日志；对于其他平台，则写入 `Application` 日志。 默认情况下，只有 Windows Server 2003 和 Windows Vista 支持写入安全日志。  
   
 2. 设置要审核的事件的类型。 您可以同时审核服务级事件或消息级授权事件。 为此，请将 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A> 属性或 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A> 属性设置为 <xref:System.ServiceModel.AuditLevel> 枚举值之一，如下面的代码所示。  
   

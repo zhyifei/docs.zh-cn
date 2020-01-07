@@ -5,12 +5,12 @@ helpviewer_keywords:
 - examples [Visual Basic], arrays
 - examples [Visual Basic], Char data type
 ms.assetid: 69f94e85-d57c-4ccc-a62a-426e829f5c5e
-ms.openlocfilehash: 03138a851afc55f735cc66edeb345817428a0452
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bf37ceba901e712df10ad4b39f9ad74194843136
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344390"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346774"
 ---
 # <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>如何：从 Char 值的数组创建字符串 (Visual Basic)
 此示例从单个字符创建字符串 "abcd"。  
@@ -18,7 +18,7 @@ ms.locfileid: "74344390"
 ## <a name="example"></a>示例  
  [!code-vb[VbVbalrStrings#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#61)]  
   
-## <a name="compiling-the-code"></a>编译代码  
+## <a name="compile-the-code"></a>编译代码  
  此方法没有特殊要求。  
   
  语法 `"a"c`，其中单个 `c` 跟在引号中的单个字符，用于创建字符文本。  

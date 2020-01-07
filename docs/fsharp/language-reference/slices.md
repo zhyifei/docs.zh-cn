@@ -1,17 +1,17 @@
 ---
-title: 切片（F#）
+title: 切片
 description: 了解如何使用现有F#数据类型的切片，以及如何为其他数据类型定义自己的切片。
-ms.date: 01/22/2019
-ms.openlocfilehash: 2f7b87cda87aad1fdac05b4e14b16f454f8c0461
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 12/23/2019
+ms.openlocfilehash: 3911139c7ce656043817eb23d30f3686555b6efe
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733375"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545103"
 ---
 # <a name="slices"></a>切片
 
-在F#中，切片是数据类型的子集。 为了能够从数据类型中获取切片，数据类型必须定义 `GetSlice` 方法或在范围内的[类型扩展](type-extensions.md)中。 本文介绍如何从现有F#类型获取切片以及如何定义切片。
+在F#中，切片是在其定义或范围内[类型扩展](type-extensions.md)中具有 `GetSlice` 方法的任何数据类型的子集。 它最常用于F#数组和列表。 本文介绍如何从现有F#类型获取切片，以及如何定义自己的切片。
 
 切片与[索引器](./members/indexed-properties.md)相似，但它不是从基础数据结构产生单个值，而是生成多个值。
 
@@ -89,7 +89,7 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-F#核心库未定义三维数组`GetSlice`。 如果要对其他维度的数组或其他数组进行切片，则必须自行定义 `GetSlice` 成员。
+F#核心库当前没有为三维数组定义 `GetSlice`。 如果要对三维数组或其他维度的其他数组进行切片，请自行定义 `GetSlice` 成员。
 
 ## <a name="defining-slices-for-other-data-structures"></a>为其他数据结构定义切片
 
@@ -142,6 +142,17 @@ printSpan sp.[0..3] // [|1; 2; 3|]
 printSpan sp.[1..2] // |2; 3|]
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="built-in-f-slices-are-end-inclusive"></a>内置F#切片包含结尾
+
+中F#的所有内部切片都是结尾的;也就是说，切片中包括上限。 对于具有起始索引 `x` 和结束索引 `y`的给定切片，生成的切片将包含*yth*值。
+
+```fsharp
+// Define a new list
+let xs = [1 .. 10]
+
+printfn "%A" xs.[2..5] // Includes the 5th index
+```
+
+## <a name="see-also"></a>另请参阅
 
 - [索引属性](./members/indexed-properties.md)

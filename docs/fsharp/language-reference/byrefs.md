@@ -2,12 +2,12 @@
 title: Byref
 description: 了解用于低级别编程的中F#的 byref 和 byref 类型（如）。
 ms.date: 11/04/2019
-ms.openlocfilehash: 2c46cea2329b6817dd753e67c6702fb163ce2193
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a6d3d69c4a163be9ecef7e33c284c4a73e800405
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976819"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545131"
 ---
 # <a name="byrefs"></a>Byref
 
@@ -104,7 +104,7 @@ let f (x: inref<SomeStruct>) = x.SomeField
 
 ### <a name="outref-semantics"></a>Outref 语义
 
-`outref<'T>` 的目的是指示只应从读取指针。 意外，`outref<'T>` 允许读取基础值，而不考虑其名称。 这是为了实现兼容性。 在语义上，`outref<'T>` 与 `byref<'T>`没有区别。
+`outref<'T>` 的目的是指示只应将指针写入。 意外，`outref<'T>` 允许读取基础值，而不考虑其名称。 这是为了实现兼容性。 在语义上，`outref<'T>` 与 `byref<'T>`没有区别。
 
 ### <a name="interop-with-c"></a>与 C\# 互操作
 
@@ -134,7 +134,7 @@ C#除 `ref` 返回外，还支持 `in ref` 和 `out ref` 关键字。 下表显�
 2. 结构类型上没有可变字段的 `this` 指针。
 3. 派生自另一个 `inref<_>` 指针的内存位置的地址。
 
-当执行 `inref` 的隐式地址时，具有类型 `SomeType` 的参数的重载优先于具有类型 `inref<SomeType>`的参数的重载。 例如:
+当执行 `inref` 的隐式地址时，具有类型 `SomeType` 的参数的重载优先于具有类型 `inref<SomeType>`的参数的重载。 例如：
 
 ```fsharp
 type C() =
@@ -152,7 +152,7 @@ let v2 =  C.M2(res, 4)
 
 ## <a name="byref-like-structs"></a>类似 Byref 的结构
 
-除了 `byref`/`inref`/`outref` 三个，还可以定义自己的结构，该结构可以遵循与 `byref`类似的语义。 这是通过 <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> 属性完成的：
+除了 `byref`/`inref`/`outref` 三个，还可以定义自己的结构，该结构可以遵循与 `byref`类似的语义。 此操作通过 <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> 属性实现：
 
 ```fsharp
 open System
@@ -179,7 +179,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 ## <a name="byref-returns"></a>Byref 返回
 
-可以生成和F#使用来自函数或成员的 Byref 返回。 使用返回 `byref`方法时，会隐式取消引用该值。 例如:
+可以生成和F#使用来自函数或成员的 Byref 返回。 使用返回 `byref`方法时，会隐式取消引用该值。 例如：
 
 ```fsharp
 let safeSum(bytes: Span<byte>) =
