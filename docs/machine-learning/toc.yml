@@ -46,7 +46,7 @@
         - name: 预测价格（模型生成器和回归）
           href: tutorials/predict-prices-with-model-builder.md
         - name: 使用 ML.NET CLI 分析情绪
-          href: tutorials/mlnet-cli.md
+          href: tutorials/sentiment-analysis-cli.md
         - name: 分析 Razor Pages 中的情绪（模型生成器和二进制分类器）
           href: tutorials/sentiment-analysis-model-builder.md
         - name: 对运行状况冲突分类（模型生成器和多类别分类）
@@ -57,13 +57,13 @@
           href: how-to-guides/matchup-app-infer-net.md
 - name: 概念
   items:
-    - name: ML.NET 任务（模型类型）
+    - name: ML.NET 任务
       href: resources/tasks.md
     - name: 算法
       href: how-to-choose-an-ml-net-algorithm.md
     - name: 数据转换
       href: resources/transforms.md
-    - name: 度量
+    - name: 模型评估指标
       href: resources/metrics.md
     - name: 提高模型准确性
       href: resources/improve-machine-learning-model-ml-net.md
