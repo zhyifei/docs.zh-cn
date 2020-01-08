@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 8807125bd61c71217ca96f3b5a38148ed100073b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1f4462f617eb81d30f893b52bdc674e1eee8961c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794375"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634763"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>单表查询 (LINQ to DataSet)
-[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]查询可用于实现<xref:System.Collections.Generic.IEnumerable%601>接口<xref:System.Linq.IQueryable%601>或接口的数据源。 <xref:System.Data.DataTable> 类不实现任何一个接口，所以如果要使用 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> 作为<xref:System.Data.DataTable> 查询的 `From` 子句中的源，则必须调用 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 方法。  
+语言集成查询（LINQ）查询适用于实现 <xref:System.Collections.Generic.IEnumerable%601> 接口或 <xref:System.Linq.IQueryable%601> 接口的数据源。 <xref:System.Data.DataTable> 类不实现任何一个接口，因此，如果要使用 <xref:System.Data.DataTable> 作为 LINQ 查询的 `From` 子句中的源，则必须调用 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> 方法。  
   
  下面的示例获取 SalesOrderHeader 表中的所有联机订单并将订单 ID、订单日期和订单编号输出到控制台。  
   
  [!code-csharp[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]  
  [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)] 
   
- 本地变量查询使用查询表达式进行初始化，该表达式通过应用标准查询运算符中的一个或多个查询运算符来对一个或多个信息源进行操作，如果是 LINQ to DataSet，则使用特定于<xref:System.Data.DataSet>类。 前面示例中的查询表达式使用两个标准查询运算符：`Where` 和 `Select`。  
+ 本地变量查询使用查询表达式进行初始化，该表达式通过应用标准查询运算符中的一个或多个查询运算符，或者在 <xref:System.Data.DataSet> 类特定于 LINQ to DataSet 的运算符的情况下，对一个或多个信息源进行运算。 前面示例中的查询表达式使用两个标准查询运算符：`Where` 和 `Select`。  
   
  `Where` 子句基于条件筛选序列，在本例中，`OnlineOrderFlag` 设置为 `true`。 `Select` 运算符分配并返回一个可枚举对象，该对象可捕获传递给运算符的参数。 在上面的示例中，创建了一个具有三个属性的匿名类型：`SalesOrderID`、`OrderDate` 和 `SalesOrderNumber`。 这三个属性的值设置为 `SalesOrderID` 表中的 `OrderDate`、`SalesOrderNumber` 和 `SalesOrderHeader` 列值。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "70794375"
   
  请注意，`T` 方法和 <xref:System.Data.DataRowExtensions.Field%2A> 方法的泛型参数 <xref:System.Data.DataRowExtensions.SetField%2A> 中指定的数据类型必须与基础值的类型相匹配，否则将引发 <xref:System.InvalidCastException>。 指定的列名称也必须与 <xref:System.Data.DataSet> 中的列名称相匹配，否则将引发 <xref:System.ArgumentException>。 在这两种情况下，异常都是在执行查询期间的运行时数据枚举时引发的。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [跨表查询](cross-table-queries-linq-to-dataset.md)
 - [查询类型化数据集](querying-typed-datasets.md)

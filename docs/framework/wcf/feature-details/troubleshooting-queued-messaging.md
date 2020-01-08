@@ -2,12 +2,12 @@
 title: 排队消息处理疑难解答
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 2999d1ab4129c72c231b6dc80480d8bfef5186fa
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ed114cc9a37fff549e8bfc874765252fd18893a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837306"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345587"
 ---
 # <a name="troubleshooting-queued-messaging"></a>排队消息处理疑难解答
 
@@ -25,7 +25,7 @@ ms.locfileid: "74837306"
 
 **问：** 是否必须升级 MSMQ 才能使用 <xref:System.ServiceModel.NetMsmqBinding> 和 `MsmqIntegration` 绑定？
 
-**答：** 否。 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 中，这两种绑定都可以与 MSMQ 3.0 一起使用。 升级到 Windows Vista 中的 MSMQ 4.0 时，绑定的某些功能将变为可用。
+**答：** 否。 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 Windows Server 2003 上，这两种绑定都适用于 MSMQ 3.0。 升级到 Windows Vista 中的 MSMQ 4.0 时，绑定的某些功能将变为可用。
 
 **问：** <xref:System.ServiceModel.NetMsmqBinding> 和 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 绑定的哪些功能在 MSMQ 4.0 中可用，但在 MSMQ 3.0 中不可用？
 
@@ -89,7 +89,7 @@ ms.locfileid: "74837306"
 
 **问：** 我的服务在 SvcHost 上抛出。打开并出现消息 "调用 svchost.open 时无法满足 EndpointListener 要求"。 为什么?
 
-A. 请检查您的服务协定。 您可能忘记了在所有服务操作上放置 "IsOneWay =`true`"。 队列仅支持单向服务操作。
+答： 请检查您的服务协定。 您可能忘记了在所有服务操作上放置 "IsOneWay =`true`"。 队列仅支持单向服务操作。
 
 **问：** 队列中有消息，但未调用任何服务操作。 有什么问题？
 

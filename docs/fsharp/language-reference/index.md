@@ -1,13 +1,13 @@
 ---
-title: F# 语言参考
+title: 语言参考
 description: 从此F#引用中查找语言标记、概念、类型、表达式和编译器支持的构造主题的语言功能信息。
 ms.date: 05/16/2016
-ms.openlocfilehash: bd9894176fa736b9eed939d72972e676e2bd2671
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d557cc71b34eb7c005eaeb904b01a38b506639fe
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552897"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348194"
 ---
 # <a name="f-language-reference"></a>F# 语言参考
 

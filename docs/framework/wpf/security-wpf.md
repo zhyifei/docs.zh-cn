@@ -13,19 +13,19 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 75e6c7b4886bd490c462e9128eca7ec13f233824
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 612b99354310c18030cefce4e6f02fab8ed20f83
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837293"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636765"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
-<a name="introduction"></a>开发 Windows Presentation Foundation （WPF）独立应用程序和浏览器托管应用程序时，必须考虑安全模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 独立的应用程序使用无限制权限（CA**FullTrust**权限集）执行，不管是使用 Windows Installer （.msi）、XCopy 还是 ClickOnce 部署的。 不支持使用 ClickOnce 部署部分信任的独立 WPF 应用程序。 不过，完全信任的主机应用程序可以使用 .NET Framework 外接程序模型创建部分信任 <xref:System.AppDomain>。 有关详细信息，请参阅[WPF 外接程序概述](./app-development/wpf-add-ins-overview.md)。  
+<a name="introduction"></a>开发 Windows Presentation Foundation （WPF）独立应用程序和浏览器托管应用程序时，必须考虑安全模型。 无论是使用 Windows Installer （.msi）、XCopy 还是 ClickOnce 部署的，WPF 独立应用程序都以无限制权限（CA**FullTrust**权限集）执行。 不支持使用 ClickOnce 部署部分信任的独立 WPF 应用程序。 不过，完全信任的主机应用程序可以使用 .NET Framework 外接程序模型创建部分信任 <xref:System.AppDomain>。 有关详细信息，请参阅[WPF 外接程序概述](./app-development/wpf-add-ins-overview.md)。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 浏览器承载的应用程序由 Windows Internet Explorer 或 Firefox 承载，可以是 XAML 浏览器应用程序（Xbap）或松散 [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] 文档有关详细信息，请参阅[WPF XAML 浏览器应用程序概述](./app-development/wpf-xaml-browser-applications-overview.md)。  
+ WPF 浏览器承载的应用程序由 Windows Internet Explorer 或 Firefox 承载，可以是 XAML 浏览器应用程序（Xbap）或松散 [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] 文档。有关详细信息，请参阅[WPF XAML 浏览器应用程序概述](./app-development/wpf-xaml-browser-applications-overview.md)。  
   
- 默认情况下，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 浏览器承载的应用程序在部分信任的安全沙箱中执行，该沙箱仅限默认的 CAS**Internet**区域权限集。 这会有效地将 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 浏览器承载的应用程序与客户端计算机隔离，就像需要隔离典型 Web 应用程序一样。 XBAP 最高可以将权限提升到“完全信任”，具体取决于部署 URL 的安全区域和客户端的安全配置。 有关详细信息，请参阅 [WPF 部分信任安全性](wpf-partial-trust-security.md)。  
+ WPF 浏览器承载的应用程序在默认情况下在部分信任的安全沙盒中执行，该沙箱仅限默认的 CAS**Internet**区域权限集。 这会有效地将 WPF 浏览器承载的应用程序与客户端计算机隔离开来，就像需要隔离典型 Web 应用程序一样。 XBAP 最高可以将权限提升到“完全信任”，具体取决于部署 URL 的安全区域和客户端的安全配置。 有关详细信息，请参阅 [WPF 部分信任安全性](wpf-partial-trust-security.md)。  
   
  本主题讨论 Windows Presentation Foundation （WPF）独立应用程序和浏览器承载的应用程序的安全模型。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "74837293"
   
 <a name="SafeTopLevelNavigation"></a>   
 ## <a name="safe-navigation"></a>安全导航  
- 对于 Xbap，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 区分两种类型的导航：应用程序和浏览器。  
+ 对于 Xbap，WPF 区分两种类型的导航：应用程序和浏览器。  
   
  应用程序导航是指在浏览器托管的应用程序内的内容项之间进行导航。 浏览器导航是指可更改浏览器自身的内容和位置 URL 的导航。 应用程序导航（通常为 XAML）与浏览器导航（通常为 HTML）之间的关系如下图所示：
   
@@ -220,7 +220,7 @@ ms.locfileid: "74837293"
   
  但是，APTCA 程序集在安装到 GAC 后可能会出现安全漏洞。 一旦发现安全漏洞，程序集发布者可以生成安全更新来修复现有安装上的问题，还可以阻止问题发现后进行的安装操作。 其中一个更新选项是卸载程序集，即使这可能中断使用该程序集的其他完全受信任的客户端应用程序。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 提供了一种机制，可在不卸载 APTCA 程序集的情况下为部分受信任的 Xbap 禁用 APTCA 程序集。  
+ WPF 提供了一种机制，通过该机制，无需卸载 APTCA 程序集即可为部分受信任的 Xbap 禁用 APTCA 程序集。  
   
  若要禁用 APTCA 程序集，必须创建一个特殊的注册表项：  
   
@@ -262,14 +262,14 @@ ms.locfileid: "74837293"
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>用于开发可提高安全性的 WPF 应用程序的资源  
- 下面是一些其他资源，可帮助开发 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 提高安全性的应用程序：  
+ 下面是一些其他资源，可帮助开发可提高安全性的 WPF 应用程序：  
   
 |区域|资源|  
 |----------|--------------|  
 |托管代码|[应用程序的模式和实践安全指南](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))|  
 |CAS|[代码访问安全性](../misc/code-access-security.md)|  
 |ClickOnce|[ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)|  
-|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 部分信任安全](wpf-partial-trust-security.md)|  
+|WPF|[WPF 部分信任安全](wpf-partial-trust-security.md)|  
   
 ## <a name="see-also"></a>另请参阅
 

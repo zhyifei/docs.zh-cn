@@ -6,12 +6,12 @@ helpviewer_keywords:
 - buttons [WPF]
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
-ms.openlocfilehash: a3990a7dc446c264e0865e15dadcdaf3ba0a0ff6
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 0f881c19516eb42a71e6cd91d612caf8f5cf7b5e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460059"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636179"
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>演练：创建自定义的动画按钮
 顾名思义，Windows Presentation Foundation （WPF）非常适合为客户提供丰富的演示体验。 这些演练说明了如何自定义按钮的外观和行为（包括动画）。 此自定义通过使用样式和模板来完成，因此你可以轻松地将此自定义按钮应用于应用程序中的任何按钮。 下图显示了您将创建的自定义按钮。
@@ -28,8 +28,8 @@ ms.locfileid: "73460059"
 ## <a name="related-sections"></a>相关章节
  [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)介绍如何使用样式和模板来确定控件的外观和行为。
 
- [动画概述](../graphics-multimedia/animation-overview.md)介绍如何使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 动画和计时系统对对象进行动画处理。
+ [动画概述](../graphics-multimedia/animation-overview.md)介绍如何使用 WPF 动画和计时系统对对象进行动画处理。
 
  [用纯色和渐变进行绘制概述](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)介绍如何使用画笔对象绘制纯色、线性渐变和径向梯度。
 
- [位图效果概述](../graphics-multimedia/bitmap-effects-overview.md)介绍 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支持的位图效果，并说明如何应用它们。
+ [位图效果概述](../graphics-multimedia/bitmap-effects-overview.md)描述 WPF 支持的位图效果，并说明如何应用它们。

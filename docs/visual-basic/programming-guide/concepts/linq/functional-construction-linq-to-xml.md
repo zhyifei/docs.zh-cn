@@ -2,12 +2,12 @@
 title: 功能构造 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: feac4273-39ab-43ae-bab7-4059c807a785
-ms.openlocfilehash: 6366c7781372d34e15d62f81a5ceae8ff4ccda2e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a51360d6c8d44770c462afb728a1fb78d3e2cd42
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353465"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636843"
 ---
 # <a name="functional-construction-linq-to-xml-visual-basic"></a>函数构造（LINQ to XML）（Visual Basic）
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 为创建 XML 元素提供了一种称为“函数构造”的有效方式。 函数构造是指在单个语句中创建 XML 树的能力。  
@@ -18,11 +18,11 @@ ms.locfileid: "74353465"
   
 - <xref:System.Xml.Linq.XElement> 函数采用类型为 `params` 的 <xref:System.Object> 数组，因此可以向该构造函数传递任意数目的对象。 这使您可以创建具有复杂内容的元素。  
   
-- 如果对象实现 <xref:System.Collections.Generic.IEnumerable%601>，则枚举对象中的集合，并添加集合中的所有项。 如果集合包含 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 对象，则单独添加集合中的每一项。 这一功能很重要，因为它允许您将 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询的结果传递给构造函数。  
+- 如果对象实现 <xref:System.Collections.Generic.IEnumerable%601>，则枚举对象中的集合，并添加集合中的所有项。 如果集合包含 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 对象，则单独添加集合中的每一项。 这一点很重要，因为它允许将 LINQ 查询的结果传递给构造函数。  
   
  以下是一个实例：  
   
- 这些功能使您可以使用 XML 文本编写代码来创建 XML 树，还可以编写在创建 XML 树时使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询结果的代码：  
+ 这些功能使您可以使用 XML 文本编写代码来创建 XML 树，还可以编写在创建 XML 树时使用 LINQ 查询结果的代码：  
   
 ```vb  
 Dim srcTree As XElement = _  

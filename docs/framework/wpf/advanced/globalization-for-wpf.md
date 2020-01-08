@@ -7,15 +7,15 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 1d6430ba5969d8a05db47baf9521d2409e596c23
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 769afe4d301a7b0fafd26018255f98b6faa29887
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740866"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559430"
 ---
 # <a name="globalization-for-wpf"></a>WPF 的全球化
-本主题介绍编写全局市场 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序时应注意的问题。 在 <xref:System.Globalization> 命名空间的 .NET 中定义全球化编程元素。
+本主题介绍编写全局市场 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序时应注意的问题。 全球化编程元素在 <xref:System.Globalization> 命名空间的 .NET 中定义。
 
 <a name="xaml_globalization"></a>
 ## <a name="xaml-globalization"></a>XAML 全球化
@@ -36,7 +36,7 @@ ms.locfileid: "73740866"
 ```
 
 <a name="encoding"></a>
-### <a name="encoding"></a>编码
+### <a name="encoding"></a>Encoding
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 支持的编码为 ASCII、Unicode UTF-16 和 UTF-8。 编码语句位于 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文档的开头。 如果不存在编码特性，并且没有任何字节顺序，则分析器默认为 UTF-8。 UTF-8 和 UTF-16 都是首选编码。 不支持 UTF-7。 下面的示例演示如何在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件中指定 UTF-8 编码。
 
 ```xaml
@@ -45,7 +45,7 @@ ms.locfileid: "73740866"
 
 <a name="lang_attrib"></a>
 ### <a name="language-attribute"></a>语言特性
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 使用[xml： lang](../../xaml-services/xml-lang-handling-in-xaml.md)表示元素的 language 特性。  若要利用 <xref:System.Globalization.CultureInfo> 类，language 特性值需要是由 <xref:System.Globalization.CultureInfo>预定义的区域性名称之一。 [xml:lang](../../xaml-services/xml-lang-handling-in-xaml.md) 在元素树中可继承（可按 XML 规则继承，但并不一定这样继承，因为存在依赖属性继承）；在未明确赋值的情况下，其默认值为空字符串。
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 使用[xml： lang](../../../desktop-wpf/xaml-services/xml-language-handling.md)表示元素的 language 特性。  若要利用 <xref:System.Globalization.CultureInfo> 类，language 特性值需要是由 <xref:System.Globalization.CultureInfo>预定义的区域性名称之一。 [xml:lang](../../../desktop-wpf/xaml-services/xml-language-handling.md) 在元素树中可继承（可按 XML 规则继承，但并不一定这样继承，因为存在依赖属性继承）；在未明确赋值的情况下，其默认值为空字符串。
 
  语言特性对指定方言非常有用。 例如，法语在法国、魁北克、比利时和瑞士的拼写、词汇和发音各不相同。 同时，中文、日语和朝鲜语使用 Unicode 共享码位，但表意形状不同，它们使用完全不同的字体。
 
@@ -171,13 +171,13 @@ ms.locfileid: "73740866"
 ## <a name="using-clickonce-with-localized-applications"></a>在本地化的应用程序中使用 ClickOnce
  ClickOnce 是 Visual Studio 2005 附带的一种新的 Windows 窗体部署技术。 通过该技术可安装应用程序和升级 Web 应用程序。 对使用 ClickOnce 部署的应用程序进行本地化后，只能在本地化的区域性中查看该应用程序。 例如，如果已部署的应用程序本地化为日语，则只能在日语版 Microsoft Windows 上查看该应用程序。 这会带来一个问题，因为它是日语用户运行英语版本的 Windows 的常见方案。
 
- 此问题的解决方案是设置非特定语言回退特性。 应用程序开发人员可选择从主程序集中删除资源，并指定可在特定区域性对应的附属程序集中找到该资源。 若要控制此过程，请使用 <xref:System.Resources.NeutralResourcesLanguageAttribute>。 <xref:System.Resources.NeutralResourcesLanguageAttribute> 类的构造函数具有两个签名，一个签名采用 <xref:System.Resources.UltimateResourceFallbackLocation> 参数来指定 <xref:System.Resources.ResourceManager> 应提取回退资源的位置：主程序集或附属程序集。 下面的示例演示如何使用此特性。 对于最终回退位置，代码会导致 <xref:System.Resources.ResourceManager> 查找当前正在执行的程序集的目录的 "de" 子目录中的资源。
+ 此问题的解决方案是设置非特定语言回退特性。 应用程序开发人员可选择从主程序集中删除资源，并指定可在特定区域性对应的附属程序集中找到该资源。 若要控制此过程，请使用 <xref:System.Resources.NeutralResourcesLanguageAttribute>。 <xref:System.Resources.NeutralResourcesLanguageAttribute> 类的构造函数具有两个签名，一个签名采用 <xref:System.Resources.UltimateResourceFallbackLocation> 参数来指定 <xref:System.Resources.ResourceManager> 应提取回退资源的位置：主程序集或附属程序集。 下面的示例演示如何使用此特性。 对于最终回退位置，代码会使 <xref:System.Resources.ResourceManager> 在当前正在执行的程序集的目录的 "de" 子目录中查找资源。
 
 ```csharp
 [assembly: NeutralResourcesLanguageAttribute(
     "de" , UltimateResourceFallbackLocation.Satellite)]
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WPF 全球化和本地化概述](wpf-globalization-and-localization-overview.md)

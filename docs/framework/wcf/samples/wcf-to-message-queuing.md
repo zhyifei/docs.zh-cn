@@ -2,14 +2,15 @@
 title: Windows Communication Foundation 到消息队列
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: 1cbc1251a8e4eaaaf4b47357851dd681ae326f25
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2e37a6efac6b979645b2dbb338b64f698b3b97e0
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715059"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344617"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation 到消息队列
+
 此示例演示 Windows Communication Foundation （WCF）应用程序如何将消息发送到消息队列（MSMQ）应用程序。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。 服务和客户端不需要同时运行。
 
  服务从队列接收消息并处理订单。 服务创建一个事务性队列，并为收到的消息设置消息处理程序，如下面的示例代码所示。
@@ -130,49 +131,49 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
  运行示例时，客户端和服务活动将显示在服务和客户端控制台窗口中。 您可以看到服务从客户端接收消息。 在每个控制台窗口中按 Enter 可以关闭服务和客户端。 请注意：由于正在使用队列，因此不必同时启动和运行客户端和服务。 例如，可以先运行客户端，再将其关闭，然后启动服务，这样服务仍然会收到客户端的消息。
 
 > [!NOTE]
-> 此示例要求安装 Message Queuing（消息队列）。 请参阅[消息队列](https://go.microsoft.com/fwlink/?LinkId=94968)中的安装说明。  
-  
-### <a name="to-setup-build-and-run-the-sample"></a>设置、生成和运行示例  
-  
-1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
-  
-2. 如果先运行服务，则它将检查以确保队列存在。 如果队列不存在，则服务将创建一个队列。 可以先运行服务以创建队列或通过 MSMQ 队列管理器创建一个队列。 执行下面的步骤来在 Windows 2008 中创建队列。  
-  
-    1. 在 Visual Studio 2012 中打开服务器管理器。  
-  
-    2. 展开 "**功能**" 选项卡。  
-  
-    3. 右键单击 "**专用消息队列**"，然后选择 "**新建** **专用队列**"。  
-  
-    4. 选中 "**事务性**" 框。  
-  
-    5. 输入 `ServiceModelSamplesTransacted` 作为新队列的名称。  
-  
-3. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
-  
-4. 若要在单计算机配置中运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
-  
-### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
-  
-1. 将 \service\bin\ 文件夹（在语言特定文件夹内）中的服务程序文件复制到服务计算机上。  
-  
-2. 将 \client\bin\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。  
-  
-3. 在 Client.exe.config 文件中，更改客户端终结点地址以指定服务计算机名称，而不是使用“.”。  
-  
-4. 在服务计算机上，在命令提示符下启动 Service.exe。  
-  
-5. 在客户端计算机上，在命令提示符下启动 Client.exe。  
-  
+> 此示例要求安装 Message Queuing（消息队列）。 请参阅[消息队列](https://go.microsoft.com/fwlink/?LinkId=94968)中的安装说明。
+
+## <a name="set-up-build-and-run-the-sample"></a>设置、生成和运行示例
+
+1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+
+2. 如果先运行服务，则它将检查以确保队列存在。 如果队列不存在，则服务将创建一个队列。 可以先运行服务以创建队列或通过 MSMQ 队列管理器创建一个队列。 执行下面的步骤来在 Windows 2008 中创建队列。
+
+    1. 在 Visual Studio 2012 中打开服务器管理器。
+
+    2. 展开 "**功能**" 选项卡。
+
+    3. 右键单击 "**专用消息队列**"，然后选择 "**新建** > **专用队列**"。
+
+    4. 选中 "**事务性**" 框。
+
+    5. 输入 `ServiceModelSamplesTransacted` 作为新队列的名称。
+
+3. 若要生成C#或 Visual Basic 版本的解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
+
+4. 若要在单计算机配置中运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
+
+## <a name="run-the-sample-across-computers"></a>跨计算机运行示例
+
+1. 将 \service\bin\ 文件夹（在语言特定文件夹内）中的服务程序文件复制到服务计算机上。
+
+2. 将 \client\bin\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。
+
+3. 在 Client.exe.config 文件中，更改客户端终结点地址以指定服务计算机名称，而不是使用“.”。
+
+4. 在服务计算机上，在命令提示符下启动 Service.exe。
+
+5. 在客户端计算机上，在命令提示符下启动 Client.exe。
+
 > [!IMPORTANT]
-> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
->   
-> `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
->   
-> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`  
-  
+> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`
+
 ## <a name="see-also"></a>另请参阅
 
 - [如何：与 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)

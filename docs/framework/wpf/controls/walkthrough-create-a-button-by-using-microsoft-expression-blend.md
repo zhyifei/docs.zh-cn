@@ -6,16 +6,16 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: e1fdc3ef51e8658e07bc555238229bed9116e165
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 10d049288cf560dadedf7bc5e624deb7c42aae81
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460098"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636167"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>演练：使用 Microsoft Expression Blend 创建按钮
 
-本演练逐步介绍如何使用 Microsoft Expression Blend 创建 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 自定义按钮。
+本演练逐步介绍如何使用 Microsoft Expression Blend 创建 WPF 自定义按钮。
 
 > [!IMPORTANT]
 > Microsoft Expression Blend 的工作方式是生成 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，然后将编译这些来生成可执行程序。 如果你希望直接使用 XAML，则还有另一个演练，它使用 XAML 和 Visual Studio （而不是 Blend）创建与此应用程序相同的应用程序。 有关详细信息，请参阅[使用 XAML 创建按钮](walkthrough-create-a-button-by-using-xaml.md)。
@@ -40,7 +40,7 @@ ms.locfileid: "73460098"
 
 5. 将项目命名为 `CustomButton`，然后按 **"确定"** 。
 
-此时，您有一个空白 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 项目。 可以按 F5 运行该应用程序。 正如您所料，应用程序只包含一个空白窗口。 接下来，创建一个圆角矩形，并将其转换为按钮。
+此时，您有一个空白 WPF 项目。 可以按 F5 运行该应用程序。 正如您所料，应用程序只包含一个空白窗口。 接下来，创建一个圆角矩形，并将其转换为按钮。
 
 ### <a name="to-convert-a-rectangle-to-a-button"></a>将矩形转换为按钮
 
@@ -208,7 +208,7 @@ ms.locfileid: "73460098"
 
     ![如何缩小按钮](./media/custom-button-blend-sizetransform.png)
 
-    按 F5 运行该应用程序。 将鼠标指针移到按钮上。 请注意，玻璃层会在按钮上缩小。
+    按“F5”运行应用程序。 将鼠标指针移到按钮上。 请注意，玻璃层会在按钮上缩小。
 
 5. **创建另一个事件触发器并将不同的动画与之关联：** 让我们再添加一个动画。 使用类似的过程来创建上一个事件触发器动画：
 
@@ -222,11 +222,11 @@ ms.locfileid: "73460098"
 
     4. 突出显示处于0.3 秒的关键帧后，将**旋转变换角度**设置为360度。
 
-        ![如何创建旋转变换](./media/custom-button-blend-rotatetransform.gif)
+        ![如何创建旋转转换](./media/custom-button-blend-rotatetransform.gif)
 
-    5. 按 F5 运行该应用程序。 单击按钮。 请注意，玻璃层会旋转。
+    5. 按“F5”运行应用程序。 单击该按钮。 请注意，玻璃层会旋转。
 
-## <a name="conclusion"></a>结论
+## <a name="conclusion"></a>结束语
 
 已完成自定义按钮。 使用应用于应用程序中所有按钮的按钮模板执行此操作。 如果你退出模板编辑模式（请参阅下图）并创建更多按钮，你将看到它们的外观和行为类似于自定义按钮，而不像 "默认" 按钮。
 
@@ -234,7 +234,7 @@ ms.locfileid: "73460098"
 
 ![使用同一模板的多个按钮](./media/custom-button-blend-createmultiplebuttons.png)
 
-按 F5 运行该应用程序。 单击按钮，并注意它们的行为方式如何。
+按“F5”运行应用程序。 单击按钮，并注意它们的行为方式如何。
 
 请记住，在自定义模板时，可以将**innerRectangle**的 <xref:System.Windows.Shapes.Shape.Fill%2A> 属性和 <xref:System.Windows.Shapes.Shape.Stroke%2A> 属性**outerRectangle**设置为模板背景（{TemplateBinding background}）。 因此，在设置各个按钮的背景色时，设置的背景将用于各自的属性。 立即尝试更改背景。 在下图中，使用了不同的渐变。 因此，尽管模板对控件（如按钮）的整体自定义很有用，但仍可以修改具有模板的控件，使其看起来彼此不同。
 
@@ -252,7 +252,7 @@ ms.locfileid: "73460098"
 
 - 其他：创建渐变、添加 BitmapEffects、使用转换，并设置对象的基本属性。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 XAML 创建按钮](walkthrough-create-a-button-by-using-xaml.md)
 - [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

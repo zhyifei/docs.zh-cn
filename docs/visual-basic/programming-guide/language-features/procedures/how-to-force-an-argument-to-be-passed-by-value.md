@@ -14,12 +14,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 8261d126f988bdcf05b4a2af3106b38717e46bc8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 047738a2cbadc6b7d72f41aade22bbeff16d1bac
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344519"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347584"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>如何：强制通过值传递参数 (Visual Basic)
 过程声明确定传递机制。 如果参数声明为[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，则 Visual Basic 要求按引用传递相应的参数。 这使过程可以更改调用代码中参数的基础编程元素的值。 如果要针对此类更改保护基础元素，则可以通过将参数名称括在括号中来覆盖过程调用中的 `ByRef` 传递机制。 除了在调用中包含参数列表的括号外，还需要用到这些括号。  
@@ -41,7 +41,7 @@ ms.locfileid: "74344519"
   
  当 `str` 用参数列表中的额外括号括起来时，`setNewString` 过程无法在调用代码中更改其值，`MsgBox` 将显示 "如果传递了 ByVal，则无法替换"。 如果 `str` 未括在额外的括号中，则过程可以更改它，并且 `MsgBox` 显示 "这是 inString 自变量的新值"。  
   
-## <a name="compiling-the-code"></a>编译代码  
+## <a name="compile-the-code"></a>编译代码  
  通过引用传递变量时，必须使用 `ByRef` 关键字来指定此机制。  
   
  Visual Basic 中的默认值是按值传递参数。 但是，将[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)关键字用于每个声明的参数是一种好的编程做法。 这使代码更易于阅读。  

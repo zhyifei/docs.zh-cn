@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: f9176e61915b6c5cc05f120eade69a6d19cc4e6a
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 17c8982a66960626a5d049fa2da90f5f2d995d14
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740782"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559763"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 语法
 
@@ -192,13 +192,13 @@ ms.locfileid: "73740782"
 
 `propertyName2` 必须为依赖属性的名称，该属性存在于作为 `propertyName` 值的对象中。 换句话说，`propertyName2` 必须作为 `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>的类型的依赖项属性存在。
 
-因为应用了样式和模板，所以间接设定动画的目标是必要的。 若要以动画为目标，需要对目标对象具有 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>，且该名称是由[x：Name](../../xaml-services/x-name-directive.md)或 <xref:System.Windows.FrameworkElement.Name%2A>建立的。 虽然模板和样式元素也可以有名称，但这些名称仅在样式和模板的命名范围内有效。 （如果模板和样式与应用程序标记共享命名范围，则名称不唯一。 样式和模板按字面方式在实例之间共享，并且将保持重复的名称。）因此，如果您想要对某个元素的单个属性进行动画处理，则需要从样式或模板开始，而不是从样式模板开始，然后以样式或模板可视化树为目标，以到达属性要进行动画处理。
+因为应用了样式和模板，所以间接设定动画的目标是必要的。 若要以动画为目标，需要对目标对象具有 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>，且该名称是由[x：Name](../../../desktop-wpf/xaml-services/xname-directive.md)或 <xref:System.Windows.FrameworkElement.Name%2A>建立的。 虽然模板和样式元素也可以有名称，但这些名称仅在样式和模板的命名范围内有效。 （如果模板和样式与应用程序标记共享命名范围，则名称不唯一。 样式和模板按字面方式在实例之间共享，并且将保持重复的名称。）因此，如果您想要对某个元素的单个属性进行动画处理，则需要从样式或模板开始，而不是从样式模板开始，然后以样式或模板可视化树为目标，以到达属性要进行动画处理。
 
 例如，<xref:System.Windows.Controls.Panel> 的 <xref:System.Windows.Controls.Panel.Background%2A> 属性是来自主题模板的完整 <xref:System.Windows.Media.Brush> （实际上是 <xref:System.Windows.Media.SolidColorBrush>）。 若要完全对 <xref:System.Windows.Media.Brush> 进行动画处理，需要 BrushAnimation （可能每个 <xref:System.Windows.Media.Brush> 类型都有一个），并且没有此类类型。 若要对画笔进行动画处理，请改为对特定 <xref:System.Windows.Media.Brush> 类型的属性进行动画处理。 需要从 <xref:System.Windows.Media.SolidColorBrush> 到 <xref:System.Windows.Media.SolidColorBrush.Color%2A>，以便在其中应用 <xref:System.Windows.Media.Animation.ColorAnimation>。 本示例的属性路径是 `Background.Color`。
 
 <a name="attachedanim"></a>
 
-### <a name="attached-properties"></a>附加属性
+### <a name="attached-properties"></a>附加屬性
 
 ```xml
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>
@@ -224,8 +224,8 @@ ms.locfileid: "73740782"
 
 通常，<xref:System.Windows.PropertyPath> 旨在使用两个不同的构造函数，一个用于绑定使用情况和最简单的动画用法，另一个用于复杂动画用法。 将 <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> 签名用于绑定用法，其中，对象是一个字符串。 为单步动画路径（其中对象是一个 <xref:System.Windows.DependencyProperty>）使用 <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> 签名。 对复杂动画使用 <xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29> 签名。 后一种构造函数使用第一个参数的令牌字符串，以及在该令牌字符串中填充位置的对象的数组，以定义属性路径关系。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.PropertyPath>
 - [数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)
-- [演示图板概述](../graphics-multimedia/storyboards-overview.md)
+- [情节提要概述](../graphics-multimedia/storyboards-overview.md)

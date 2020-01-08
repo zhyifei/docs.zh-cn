@@ -2,23 +2,23 @@
 title: 查询 XML 树
 ms.date: 07/20/2015
 ms.assetid: 2e35c1ab-08c8-4378-9ca8-8ff344756eda
-ms.openlocfilehash: c8103820a231ba0fb5e8e7c15b7a2b9e7c996e65
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 643b19a0cfcd2a81c6f685de65979f83ca32d918
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346569"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636895"
 ---
 # <a name="querying-xml-trees-visual-basic"></a>查询 XML 树 (Visual Basic)
 本节提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询的示例。  
   
- 有关编写 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询的详细信息，请参阅[Visual Basic 中的 LINQ 入门](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)。  
+ 有关编写 LINQ 查询的详细信息，请参阅[Visual Basic 中的入门 WITH LINQ](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)。  
   
  在实例化 XML 树之后，编写查询是从 XML 树中提取数据的最有效方法。 另外，通过与函数构造相结合的查询，可以生成新的 XML 文档，该文档具有与原始文档不同的形状。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|说明|  
+|主题|描述|  
 |-----------|-----------------|  
 |[基本查询（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)|提供查询 XML 树的常见示例。|  
 |[投影和转换（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)|提供从 XML 树进行投影以及转换 XML 树的常见示例。|  

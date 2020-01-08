@@ -7,18 +7,18 @@ helpviewer_keywords:
 - RelativeSource markup extensions [WPF]
 - XAML [WPF], RelativeSource markup extension
 ms.assetid: 26be4721-49b5-4717-a92e-7d54ad0d3a81
-ms.openlocfilehash: 28f3aa500014b768bd07723511613a42df8689aa
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 15fdc9d093bb3efb4ea4cef5d4cdfa8474042f12
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458770"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559740"
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource MarkupExtension
 
 指定要在[绑定标记扩展](binding-markup-extension.md)中使用的 <xref:System.Windows.Data.RelativeSource> 绑定源的属性，或设置在 XAML 中建立的 <xref:System.Windows.Data.Binding> 元素的 <xref:System.Windows.Data.Binding.RelativeSource%2A> 属性。
 
-## <a name="xaml-attribute-usage"></a>XAML 属性用法
+## <a name="xaml-attribute-usage"></a>XAML 特性用法
 
 ```xml
 <Binding RelativeSource="{RelativeSource modeEnumValue}" .../>
@@ -58,7 +58,7 @@ ms.locfileid: "73458770"
 
 |||
 |-|-|
-|`modeEnumValue`|以下项之一：<br /><br /> -字符串标记 `Self`;对应于 <xref:System.Windows.Data.RelativeSource.Mode%2A> 属性设置为 <xref:System.Windows.Data.RelativeSourceMode.Self>创建的 <xref:System.Windows.Data.RelativeSource>。<br />-字符串标记 `TemplatedParent`;对应于 <xref:System.Windows.Data.RelativeSource.Mode%2A> 属性设置为 <xref:System.Windows.Data.RelativeSourceMode.TemplatedParent>创建的 <xref:System.Windows.Data.RelativeSource>。<br />-字符串标记 `PreviousData`;对应于 <xref:System.Windows.Data.RelativeSource.Mode%2A> 属性设置为 <xref:System.Windows.Data.RelativeSourceMode.PreviousData>创建的 <xref:System.Windows.Data.RelativeSource>。<br />-有关 `FindAncestor` 模式的信息，请参阅下文。|
+|`modeEnumValue`|下列情况之一：<br /><br /> -字符串标记 `Self`;对应于 <xref:System.Windows.Data.RelativeSource.Mode%2A> 属性设置为 <xref:System.Windows.Data.RelativeSourceMode.Self>创建的 <xref:System.Windows.Data.RelativeSource>。<br />-字符串标记 `TemplatedParent`;对应于 <xref:System.Windows.Data.RelativeSource.Mode%2A> 属性设置为 <xref:System.Windows.Data.RelativeSourceMode.TemplatedParent>创建的 <xref:System.Windows.Data.RelativeSource>。<br />-字符串标记 `PreviousData`;对应于 <xref:System.Windows.Data.RelativeSource.Mode%2A> 属性设置为 <xref:System.Windows.Data.RelativeSourceMode.PreviousData>创建的 <xref:System.Windows.Data.RelativeSource>。<br />-有关 `FindAncestor` 模式的信息，请参阅下文。|
 |`FindAncestor`|字符串标记 `FindAncestor`。 使用此标记可输入一个模式，以便 `RelativeSource` 指定上级类型和可选的上级级别。 它对应于通过将 <xref:System.Windows.Data.RelativeSource> 属性设置为 <xref:System.Windows.Data.RelativeSource.Mode%2A> 而创建的 <xref:System.Windows.Data.RelativeSourceMode.FindAncestor>。|
 |`typeName`|对于 `FindAncestor` 模式是必需的。 类型的名称，用于填充 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 属性。|
 |`intLevel`|对于 `FindAncestor` 模式是可选的。 上级级别（在逻辑树中向父级方向计算）。|
@@ -69,13 +69,13 @@ ms.locfileid: "73458770"
 
 `{RelativeSource FindAncestor}` 主要用于控件模板或可预测的自包含 UI 组合，适用于控件始终应位于特定上级类型的可视化树中的情况。 例如，项控件的项可能使用 `FindAncestor` 用法绑定到其项控件父级/祖先级。 或者，属于模板中控件组合一部分的元素可使用 `FindAncestor` 绑定到同一组合结构中的父元素。
 
-在 XAML 语法章节显示的 `FindAncestor` 模式的对象元素语法中，第二个对象元素语法专门用于 `FindAncestor` 模式。 `FindAncestor` 模式需要 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 值。 必须将 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 设置为一个属性，该属性使用对要查找的上级类型的[X:Type 标记扩展](../../xaml-services/x-type-markup-extension.md)引用。 当在运行时处理绑定请求时，将会用到 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 值。
+在 XAML 语法章节显示的 `FindAncestor` 模式的对象元素语法中，第二个对象元素语法专门用于 `FindAncestor` 模式。 `FindAncestor` 模式需要 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 值。 必须将 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 设置为一个属性，该属性使用对要查找的上级类型的[X:Type 标记扩展](../../../desktop-wpf/xaml-services/xtype-markup-extension.md)引用。 当在运行时处理绑定请求时，将会用到 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 值。
 
 对于 `FindAncestor` 模式，当元素树中可能存在多个该类型的上级时，可以使用可选属性 <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A> 帮助消除上级查找的歧义。
 
 有关如何使用 `FindAncestor` 模式的详细信息，请参阅 <xref:System.Windows.Data.RelativeSource>。
 
-如果实例的一个属性应依赖于同一个实例的另一个属性的值，并且这两个属性之间已存在常规依赖属性关系（如强制），则 `{RelativeSource Self}` 适用于这种情况。 尽管对象很少存在两个属性，以便这些值按原义相同（并且类型相同），但也可以将 `Converter` 参数应用到已 `{RelativeSource Self}`的绑定，并使用转换器在源和目标之间进行转换各种. `{RelativeSource Self}` 的另一种情况是作为 <xref:System.Windows.MultiDataTrigger>的一部分。
+如果实例的一个属性应依赖于同一个实例的另一个属性的值，并且这两个属性之间已存在常规依赖属性关系（如强制），则 `{RelativeSource Self}` 适用于这种情况。 尽管对象很少存在两个属性，以便这些值按原义相同（并且类型相同），但也可以将 `Converter` 参数应用到具有 `{RelativeSource Self}`的绑定，并使用转换器在源和目标类型之间进行转换。 `{RelativeSource Self}` 的另一种情况是作为 <xref:System.Windows.MultiDataTrigger>的一部分。
 
 例如，以下 XAML 定义了一个 <xref:System.Windows.Shapes.Rectangle> 元素，以便无论为 <xref:System.Windows.FrameworkElement.Width%2A> 输入什么值，都确保 <xref:System.Windows.Shapes.Rectangle> 始终是一个方形：`<Rectangle Width="200" Height="{Binding RelativeSource={RelativeSource Self}, Path=Width}" .../>`
 
@@ -109,7 +109,7 @@ ms.locfileid: "73458770"
 
 `RelativeSource` 是标记扩展。 当要求转义特性值应为非文本值或非处理程序名称时，通常会实现标记扩展，相对于只在某些类型或属性上放置类型转换器而言，此需求更具有全局性。 XAML 中的所有标记扩展在其特性语法中使用 `{` 和 `}` 字符，这是 XAML 处理器识别标记扩展必须处理特性的约定。 有关详细信息，请参阅[标记扩展和 WPF XAML](markup-extensions-and-wpf-xaml.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Data.Binding>
 - [样式设置和模板化](../controls/styling-and-templating.md)
@@ -117,4 +117,4 @@ ms.locfileid: "73458770"
 - [标记扩展和 WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)
 - [绑定声明概述](../data/binding-declarations-overview.md)
-- [x:Type 标记扩展](../../xaml-services/x-type-markup-extension.md)
+- [x:Type 标记扩展](../../../desktop-wpf/xaml-services/xtype-markup-extension.md)

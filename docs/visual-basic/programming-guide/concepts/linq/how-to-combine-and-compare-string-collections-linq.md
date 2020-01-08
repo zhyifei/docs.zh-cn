@@ -2,18 +2,18 @@
 title: 如何：组合和比较字符串集合 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: e9bc8a5f88585bd8625633c54796a1c658c7a7af
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2df5db16e51e8f9de8a8e3506eb1f7b737065a14
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348429"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337560"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>如何：合并和比较字符串集合（LINQ）（Visual Basic）
 
 此示例演示如何合并包含文本行的文件，并对结果排序。 具体而言，此示例演示如何对两组文本行执行简单的串联、联合和交集。
 
-### <a name="to-set-up-the-project-and-the-text-files"></a>设置项目和文本文件
+## <a name="set-up-the-project-and-the-text-files"></a>设置项目和文本文件
 
 1. 将下面的姓名复制到名为 names1.txt 的文本文件，然后将此文件保存到项目文件夹：
 
@@ -163,9 +163,9 @@ End Class
 ' 2 total names in list
 ```
 
-## <a name="compiling-the-code"></a>编译代码
+## <a name="compile-the-code"></a>编译代码
 
-使用 VB.NET 命名空间的 `Imports` 语句创建一个控制台应用程序项目。
+创建 Visual Basic 的控制台应用程序项目。 为 System.web 命名空间添加 `Imports` 语句。
 
 ## <a name="see-also"></a>另请参阅
 

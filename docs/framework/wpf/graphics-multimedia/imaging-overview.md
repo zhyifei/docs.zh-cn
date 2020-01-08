@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: b60f2871062a12d3bee91a9c6d9883222b3034f4
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a4151ff610c67ac762f0096c6a136f4475317782
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733576"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636635"
 ---
 # <a name="imaging-overview"></a>图像处理概述
 本主题介绍 Microsoft Windows Presentation Foundation 映像组件。 WPF 映像使开发人员能够显示、转换和格式化图像。  
@@ -48,7 +48,7 @@ ms.locfileid: "73733576"
   
 - 对文件内的专用元数据的支持。  
   
-- 托管组件利用非托管基础结构提供图像与其他 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 功能（如 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]、动画和图形）的无缝集成。 托管组件还受益于 Windows Presentation Foundation （WPF）映像编解码器扩展性模型，该模型可在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序中自动识别新图像格式。  
+- 托管组件利用非托管的基础结构来提供图像与其他 WPF 功能（如 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]、动画和图形）的无缝集成。 托管组件还受益于 Windows Presentation Foundation （WPF）图像编解码器扩展性模型，该模型允许在 WPF 应用程序中自动识别新图像格式。  
   
  大多数托管 WPF 图像处理 API 位于 <xref:System.Windows.Media.Imaging?displayProperty=nameWithType> 命名空间中，但有几种重要类型，如 <xref:System.Windows.Media.ImageBrush> 和 <xref:System.Windows.Media.ImageDrawing> 驻留在 <xref:System.Windows.Media?displayProperty=nameWithType> 命名空间中，<xref:System.Windows.Controls.Image> 位于 <xref:System.Windows.Controls?displayProperty=nameWithType> 命名空间中。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "73733576"
 
  编解码器用于对特定媒体格式进行解码或编码。 WPF 映像包含用于 BMP、JPEG、PNG、TIFF、Windows Media 照片、GIF 和图标图像格式的编解码器。 利用上述每个编解码器，应用程序可以对其各自的图像格式进行解码（ICON 除外）和编码。  
   
- <xref:System.Windows.Media.Imaging.BitmapSource> 是用于对图像进行解码和编码的重要类。 它是 WPF 图像处理管道的基本构建基块，表示特定大小和分辨率的单个恒定像素集。 <xref:System.Windows.Media.Imaging.BitmapSource> 可以是多帧图像的单个帧，也可以是在 <xref:System.Windows.Media.Imaging.BitmapSource>上执行的转换的结果。 它是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 图像（如 <xref:System.Windows.Media.Imaging.BitmapFrame>）中所使用的许多主类的父级。  
+ <xref:System.Windows.Media.Imaging.BitmapSource> 是用于对图像进行解码和编码的重要类。 它是 WPF 图像处理管道的基本构建基块，表示特定大小和分辨率的单个恒定像素集。 <xref:System.Windows.Media.Imaging.BitmapSource> 可以是多帧图像的单个帧，也可以是在 <xref:System.Windows.Media.Imaging.BitmapSource>上执行的转换的结果。 它是 WPF 映像中使用的许多主类（如 <xref:System.Windows.Media.Imaging.BitmapFrame>）的父级。  
   
  <xref:System.Windows.Media.Imaging.BitmapFrame> 用于存储图像格式的实际位图数据。 许多图像格式仅支持单个 <xref:System.Windows.Media.Imaging.BitmapFrame>，但 GIF 和 TIFF 等格式支持每个图像多个帧。 帧由解码器用作输入数据，并传递到编码器以创建图像文件。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "73733576"
  [!code-vb[BitmapFrameExample#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#10)]  
   
 ### <a name="image-format-decoding"></a>图像格式解码  
- 图像解码是指将某种图像格式转换为可以由系统使用的图像数据。 然后，此图像数据可以用于显示、处理或编码为其他格式。 根据图像格式选择解码器。 自动选择编解码器，除非指定了特定解码器。 [在 WPF 中显示图像](#_displayingimages)一节中的示例演示了自动解码。 使用非托管 WPF 映像接口开发并向系统注册的自定义格式解码器将自动参与解码器选择。 这将使得自定义格式可以自动显示在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序中。  
+ 图像解码是指将某种图像格式转换为可以由系统使用的图像数据。 然后，此图像数据可以用于显示、处理或编码为其他格式。 根据图像格式选择解码器。 自动选择编解码器，除非指定了特定解码器。 [在 WPF 中显示图像](#_displayingimages)一节中的示例演示了自动解码。 使用非托管 WPF 映像接口开发并向系统注册的自定义格式解码器将自动参与解码器选择。 这允许在 WPF 应用程序中自动显示自定义格式。  
   
  下面的示例演示如何使用位图解码器来解码 BMP 格式的图像。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "73733576"
   
  许多示例使用 <xref:System.Windows.Media.Imaging.BitmapImage> 对象来引用映像文件。 <xref:System.Windows.Media.Imaging.BitmapImage> 是一种专用 <xref:System.Windows.Media.Imaging.BitmapSource>，针对 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 加载进行了优化，并且是一种将图像作为 <xref:System.Windows.Controls.Image> 控件的 <xref:System.Windows.Controls.Image.Source%2A> 进行显示的简单方式。  
   
- 以下示例演示如何使用代码呈现宽度为 200 像素的图像。  
+ 下面的示例演示如何使用代码呈现宽为 200 像素的图像。  
   
 > [!NOTE]
 > <xref:System.Windows.Media.Imaging.BitmapImage> 实现 <xref:System.ComponentModel.ISupportInitialize> 接口，以优化多个属性的初始化。 只能在对象初始化过程中进行属性更改。 调用 <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A>，通知初始化已开始，并 <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> 通知初始化已完成。 初始化后，将忽略所做的属性更改。  
@@ -106,7 +106,7 @@ ms.locfileid: "73733576"
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
 #### <a name="rotating-converting-and-cropping-images"></a>旋转、转换和剪切图像  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用户能够通过使用 <xref:System.Windows.Media.Imaging.BitmapImage> 的属性或通过使用其他 <xref:System.Windows.Media.Imaging.BitmapSource> 对象（如 <xref:System.Windows.Media.Imaging.CroppedBitmap> 或 <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>）来转换图像。 上述图像转换可以缩放或旋转图像、更改图像的像素格式或剪切图像。  
+ WPF 使用户能够通过使用 <xref:System.Windows.Media.Imaging.BitmapImage> 的属性或通过使用其他 <xref:System.Windows.Media.Imaging.BitmapSource> 对象（如 <xref:System.Windows.Media.Imaging.CroppedBitmap> 或 <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>）来转换图像。 上述图像转换可以缩放或旋转图像、更改图像的像素格式或剪切图像。  
   
  使用 <xref:System.Windows.Media.Imaging.BitmapImage>的 <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> 属性执行图像旋转。 只能以 90 度为增量进行旋转。 在以下示例中，图像旋转了 90 度。  
   
@@ -181,14 +181,14 @@ ms.locfileid: "73733576"
   
 <a name="_extensibility"></a>   
 ## <a name="codec-extensibility"></a>编解码器扩展性  
- WPF 映像的核心功能是用于新映像编解码器的扩展性模型。 通过这些非托管的接口，编解码器开发人员可以将编解码器与 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 集成，这样 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序就可以自动使用新的图像格式。  
+ WPF 映像的核心功能是用于新映像编解码器的扩展性模型。 这些非托管接口使编解码器开发人员能够将编解码器与 WPF 集成，因此，WPF 应用程序可以自动使用新的图像格式。  
   
  有关扩展性 API 的示例，请参阅[Win32 示例编解码器](https://go.microsoft.com/fwlink/?LinkID=160052)。 此示例演示如何为自定义图像格式创建解码器和编码器。  
   
 > [!NOTE]
 > 编解码器必须进行数字签名，系统才能够识别它。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Media.Imaging.BitmapSource>
 - <xref:System.Windows.Media.Imaging.BitmapImage>

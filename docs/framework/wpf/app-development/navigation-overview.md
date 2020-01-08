@@ -24,25 +24,25 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: a0916a2957eab6ae340fe914395eda44860da3b7
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 8afda2a314bd04e91c6686fb254a1bd9e773913d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733736"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636284"
 ---
 # <a name="navigation-overview"></a>导航概述
 
-Windows Presentation Foundation （WPF）支持可在两种类型的应用程序中使用的浏览器样式的导航：独立应用程序和 XAML 浏览器应用程序（Xbap）。 若要打包内容以便导航，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供 <xref:System.Windows.Controls.Page> 类。 您可以通过使用 <xref:System.Windows.Documents.Hyperlink> 或以编程方式从一个 <xref:System.Windows.Controls.Page> 导航到另一个，方法是使用 <xref:System.Windows.Navigation.NavigationService>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用日志记住从其导航和导航回它们的页。
+Windows Presentation Foundation （WPF）支持可在两种类型的应用程序中使用的浏览器样式的导航：独立应用程序和 XAML 浏览器应用程序（Xbap）。 为了打包导航内容，WPF 提供了 <xref:System.Windows.Controls.Page> 类。 您可以通过使用 <xref:System.Windows.Documents.Hyperlink>或以编程方式从一个 <xref:System.Windows.Controls.Page> 导航到另一个，方法是使用 <xref:System.Windows.Navigation.NavigationService>。 WPF 使用日记来记住已从导航的页面，并向后导航到它们。
 
-<xref:System.Windows.Controls.Page>、<xref:System.Windows.Documents.Hyperlink>、<xref:System.Windows.Navigation.NavigationService>和日志构成了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供的导航支持的核心。 本概述首先详细探讨这些功能，然后介绍高级导航支持，其中包括导航到松散 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 文件、HTML 文件和对象。
+<xref:System.Windows.Controls.Page>、<xref:System.Windows.Documents.Hyperlink>、<xref:System.Windows.Navigation.NavigationService>和日记本构成了由 WPF 提供的导航支持的核心。 本概述首先详细探讨这些功能，然后介绍高级导航支持，其中包括导航到松散 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 文件、HTML 文件和对象。
 
 > [!NOTE]
-> 在本主题中，术语 "浏览器" 只引用可以承载 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的浏览器，当前包括 Microsoft Internet Explorer 和 Firefox。 只有特定的浏览器支持特定 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 功能的情况下，浏览器版本被称为。
+> 在本主题中，术语 "浏览器" 只引用可以承载 WPF 应用程序的浏览器，当前包括 Microsoft Internet Explorer 和 Firefox。 只有特定的浏览器支持特定 WPF 功能的情况下，浏览器版本被引用。
 
 ## <a name="navigation-in-wpf-applications"></a>WPF 应用程序中的导航
 
-本主题概述了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中的关键导航功能。 这些功能适用于独立应用程序和 Xbap，不过，本主题在 XBAP 的上下文中提供了这些功能。
+本主题提供有关 WPF 中的主要导航功能的概述。 这些功能适用于独立应用程序和 Xbap，不过，本主题在 XBAP 的上下文中提供了这些功能。
 
 > [!NOTE]
 > 本主题不讨论如何生成和部署 Xbap。 有关 Xbap 的详细信息，请参阅[WPF XAML 浏览器应用程序概述](wpf-xaml-browser-applications-overview.md)。
@@ -79,13 +79,13 @@ Windows Presentation Foundation （WPF）支持可在两种类型的应用程序
 
 ### <a name="implementing-a-page"></a>实现页
 
-在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中，可以导航到多个内容类型，其中包括 .NET Framework 对象、自定义对象、枚举值、用户控件、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件和 HTML 文件。 不过，您会发现打包内容最常见和最方便的方法是使用 <xref:System.Windows.Controls.Page>。 此外，<xref:System.Windows.Controls.Page> 还实现了特定于导航的功能，以增强其外观并简化开发。
+在 WPF 中，可以导航到多个内容类型，其中包括 .NET Framework 对象、自定义对象、枚举值、用户控件、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件和 HTML 文件。 不过，您会发现打包内容最常见和最方便的方法是使用 <xref:System.Windows.Controls.Page>。 此外，<xref:System.Windows.Controls.Page> 还实现了特定于导航的功能，以增强其外观并简化开发。
 
 使用 <xref:System.Windows.Controls.Page>，可以通过使用如下所示的标记以声明方式实现 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 内容的可导航页面。
 
 [!code-xaml[NavigationOverviewSnippets#Page1XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page1.xaml#page1xaml)]
 
-在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 标记中实现的 <xref:System.Windows.Controls.Page> 的根元素 `Page` 为，并且需要 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]XML 命名空间声明。 `Page` 元素包含要导航并显示的内容。 可以通过设置 `Page.Content` 属性元素来添加内容，如以下标记所示。
+在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 标记中实现的 <xref:System.Windows.Controls.Page> 的根元素 `Page` 为，并且需要 WPF XML 命名空间声明。 `Page` 元素包含要导航并显示的内容。 可以通过设置 `Page.Content` 属性元素来添加内容，如以下标记所示。
 
 [!code-xaml[NavigationOverviewSnippets#Page2XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page2.xaml#page2xaml)]
 
@@ -121,9 +121,9 @@ Windows Presentation Foundation （WPF）支持可在两种类型的应用程序
 
 ### <a name="configuring-a-start-page"></a>配置起始页
 
-Xbap 需要在浏览器中托管一定数量的应用程序基础结构。 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中，<xref:System.Windows.Application> 类是建立所需的应用程序基础结构的应用程序定义的一部分（请参阅[应用程序管理概述](application-management-overview.md)）。
+Xbap 需要在浏览器中托管一定数量的应用程序基础结构。 在 WPF 中，<xref:System.Windows.Application> 类是建立所需的应用程序基础结构的应用程序定义的一部分（请参阅[应用程序管理概述](application-management-overview.md)）。
 
-通常使用标记和代码隐藏来实现应用程序定义，并将标记文件配置为 MSBuild `ApplicationDefinition` 项。 下面是 XBAP 的应用程序定义。
+通常使用标记和代码隐藏来实现应用程序定义，并将标记文件配置为 MSBuild`ApplicationDefinition` 项。 下面是 XBAP 的应用程序定义。
 
 [!code-xaml[XBAPAppDefSnippets#XBAPApplicationDefinitionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/App.xaml#xbapapplicationdefinitionmarkup)]
 
@@ -190,7 +190,7 @@ XBAP 可以使用其应用程序定义来指定开始 <xref:System.Windows.Contr
 
 ### <a name="fragment-navigation"></a>片段导航
 
-*片段导航*是指在当前 <xref:System.Windows.Controls.Page> 或其他 <xref:System.Windows.Controls.Page> 中导航到内容片段。 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中，内容片段是已命名元素包含的内容。 命名元素是具有其 `Name` 属性集的元素。 下面的标记显示了一个包含内容片段的命名 `TextBlock` 元素。
+*片段导航*是指在当前 <xref:System.Windows.Controls.Page> 或其他 <xref:System.Windows.Controls.Page>中导航到内容片段。 在 WPF 中，内容片段是已命名元素包含的内容。 命名元素是具有其 `Name` 属性集的元素。 下面的标记显示了一个包含内容片段的命名 `TextBlock` 元素。
 
 [!code-xaml[NavigationOverviewSnippets#PageWithContentFragmentsMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithFragments.xaml#pagewithcontentfragmentsmarkup1)]
 [!code-xaml[NavigationOverviewSnippets#PageWithContentFragmentsMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithFragments.xaml#pagewithcontentfragmentsmarkup2)]
@@ -215,7 +215,7 @@ XBAP 可以使用其应用程序定义来指定开始 <xref:System.Windows.Contr
 [!code-xaml[NavigationOverviewSnippets#PageThatNavigatesXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageThatNavigatesToFragment.xaml#pagethatnavigatesxaml3)]
 
 > [!NOTE]
-> 本部分介绍 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中的默认片段导航实现。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 还允许实现自己的片段导航方案，在此方案中，需要处理 <xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType> 事件。
+> 本部分介绍 WPF 中的默认片段导航实现。 WPF 还允许实现自己的片段导航方案，该方案在某种程度上需要处理 <xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType> 事件。
 
 > [!IMPORTANT]
 > 仅当可以通过 HTTP 浏览这些页面时，才能导航到松散 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面（仅限标记 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件，并将 `Page` 作为根元素）。
@@ -226,18 +226,18 @@ XBAP 可以使用其应用程序定义来指定开始 <xref:System.Windows.Contr
 
 ### <a name="navigation-service"></a>导航服务
 
-虽然 <xref:System.Windows.Documents.Hyperlink> 允许用户启动到特定 <xref:System.Windows.Controls.Page> 的导航，但查找和下载页面的工作由 <xref:System.Windows.Navigation.NavigationService> 类来执行。 实质上，<xref:System.Windows.Navigation.NavigationService> 提供代表客户端代码处理导航请求的功能，如 <xref:System.Windows.Documents.Hyperlink>。 此外，<xref:System.Windows.Navigation.NavigationService> 还实现了对跟踪和影响导航请求的更高级别的支持。
+虽然 <xref:System.Windows.Documents.Hyperlink> 允许用户启动到特定 <xref:System.Windows.Controls.Page>的导航，但查找和下载页面的工作由 <xref:System.Windows.Navigation.NavigationService> 类来执行。 实质上，<xref:System.Windows.Navigation.NavigationService> 提供代表客户端代码处理导航请求的功能，如 <xref:System.Windows.Documents.Hyperlink>。 此外，<xref:System.Windows.Navigation.NavigationService> 还实现了对跟踪和影响导航请求的更高级别的支持。
 
-单击 <xref:System.Windows.Documents.Hyperlink> 时，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 会调用 <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType>，以便在指定的 pack URI 处查找并下载 <xref:System.Windows.Controls.Page>。 下载的 <xref:System.Windows.Controls.Page> 将转换为对象树，该树的根对象是已下载 <xref:System.Windows.Controls.Page> 的实例。 对根 <xref:System.Windows.Controls.Page> 对象的引用存储在 <xref:System.Windows.Navigation.NavigationService.Content%2A?displayProperty=nameWithType> 属性中。 导航到的内容的 pack URI 存储在 <xref:System.Windows.Navigation.NavigationService.Source%2A?displayProperty=nameWithType> 属性中，而 <xref:System.Windows.Navigation.NavigationService.CurrentSource%2A?displayProperty=nameWithType> 存储导航到的最后一页的包 URI。
+当单击 <xref:System.Windows.Documents.Hyperlink> 时，WPF 将调用 <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> 以在指定的包 URI 上查找并下载 <xref:System.Windows.Controls.Page>。 下载的 <xref:System.Windows.Controls.Page> 将转换为对象树，该树的根对象是已下载 <xref:System.Windows.Controls.Page>的实例。 对根 <xref:System.Windows.Controls.Page> 对象的引用存储在 <xref:System.Windows.Navigation.NavigationService.Content%2A?displayProperty=nameWithType> 属性中。 导航到的内容的 pack URI 存储在 <xref:System.Windows.Navigation.NavigationService.Source%2A?displayProperty=nameWithType> 属性中，而 <xref:System.Windows.Navigation.NavigationService.CurrentSource%2A?displayProperty=nameWithType> 存储导航到的最后一页的包 URI。
 
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序可能有多个当前处于活动状态的 <xref:System.Windows.Navigation.NavigationService>。 有关详细信息，请参阅本主题后面的[导航宿主](#Navigation_Hosts)。
+> WPF 应用程序可以有多个当前处于活动状态的 <xref:System.Windows.Navigation.NavigationService>。 有关详细信息，请参阅本主题后面的[导航宿主](#Navigation_Hosts)。
 
 <a name="Programmatic_Navigation_with_the_Navigation_Service"></a>
 
 ### <a name="programmatic-navigation-with-the-navigation-service"></a>使用导航服务以编程方式导航
 
-如果使用 <xref:System.Windows.Documents.Hyperlink> 在标记中以声明方式实现了导航，则不需要了解 <xref:System.Windows.Navigation.NavigationService>，因为 <xref:System.Windows.Documents.Hyperlink> 会代表你使用 <xref:System.Windows.Navigation.NavigationService>。 这意味着，只要 <xref:System.Windows.Documents.Hyperlink> 的直接或间接父级是导航宿主（请参阅[导航](#Navigation_Hosts)宿主），<xref:System.Windows.Documents.Hyperlink> 将能够查找和使用导航宿主的导航服务来处理导航请求。
+如果使用 <xref:System.Windows.Documents.Hyperlink>在标记中以声明方式实现了导航，则不需要了解 <xref:System.Windows.Navigation.NavigationService>，因为 <xref:System.Windows.Documents.Hyperlink> 会代表你使用 <xref:System.Windows.Navigation.NavigationService>。 这意味着，只要 <xref:System.Windows.Documents.Hyperlink> 的直接或间接父级是导航宿主（请参阅[导航](#Navigation_Hosts)宿主），<xref:System.Windows.Documents.Hyperlink> 将能够查找和使用导航宿主的导航服务来处理导航请求。
 
 但是，在某些情况下，你需要直接使用 <xref:System.Windows.Navigation.NavigationService>，其中包括：
 
@@ -247,11 +247,11 @@ XBAP 可以使用其应用程序定义来指定开始 <xref:System.Windows.Contr
 
 - 需要导航到的 <xref:System.Windows.Controls.Page> 只能在运行时确定。
 
-在这些情况下，需要通过调用 <xref:System.Windows.Navigation.NavigationService> 对象的 <xref:System.Windows.Navigation.NavigationService.Navigate%2A> 方法来编写代码以编程方式启动导航。 这需要获取对 <xref:System.Windows.Navigation.NavigationService> 的引用。
+在这些情况下，需要通过调用 <xref:System.Windows.Navigation.NavigationService> 对象的 <xref:System.Windows.Navigation.NavigationService.Navigate%2A> 方法来编写代码以编程方式启动导航。 这需要获取对 <xref:System.Windows.Navigation.NavigationService>的引用。
 
 #### <a name="getting-a-reference-to-the-navigationservice"></a>获取对 NavigationService 的引用
 
-出于[导航宿主](#Navigation_Hosts)部分所述的原因，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序可以有多个 <xref:System.Windows.Navigation.NavigationService>。 这意味着，你的代码需要一种方法来查找 <xref:System.Windows.Navigation.NavigationService>，这通常是导航到当前 <xref:System.Windows.Controls.Page> 的 <xref:System.Windows.Navigation.NavigationService>。 可以通过调用 `static`<xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A?displayProperty=nameWithType> 方法来获取对 <xref:System.Windows.Navigation.NavigationService> 的引用。 若要获取导航到特定 <xref:System.Windows.Controls.Page>的 <xref:System.Windows.Navigation.NavigationService>，请将对该 <xref:System.Windows.Controls.Page> 的引用作为 <xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A> 方法的参数进行传递。 下面的代码演示如何获取当前 <xref:System.Windows.Controls.Page> 的 <xref:System.Windows.Navigation.NavigationService>。
+出于[导航宿主](#Navigation_Hosts)部分所述的原因，WPF 应用程序可以有多个 <xref:System.Windows.Navigation.NavigationService>。 这意味着，你的代码需要一种方法来查找 <xref:System.Windows.Navigation.NavigationService>，这通常是导航到当前 <xref:System.Windows.Controls.Page>的 <xref:System.Windows.Navigation.NavigationService>。 可以通过调用 `static`<xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A?displayProperty=nameWithType> 方法来获取对 <xref:System.Windows.Navigation.NavigationService> 的引用。 若要获取导航到特定 <xref:System.Windows.Controls.Page>的 <xref:System.Windows.Navigation.NavigationService>，请将对该 <xref:System.Windows.Controls.Page> 的引用作为 <xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A> 方法的参数进行传递。 下面的代码演示如何获取当前 <xref:System.Windows.Controls.Page>的 <xref:System.Windows.Navigation.NavigationService>。
 
 [!code-csharp[NavigationOverviewSnippets#GetNSCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/GetNSPage.xaml.cs#getnscodebehind1)]
 [!code-csharp[NavigationOverviewSnippets#GetNSCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/GetNSPage.xaml.cs#getnscodebehind2)]
@@ -295,7 +295,7 @@ XBAP 可以使用其应用程序定义来指定开始 <xref:System.Windows.Contr
 
 #### <a name="refreshing-the-current-page"></a>刷新当前页
 
-如果 <xref:System.Windows.Controls.Page> 的 pack URI 与存储在 <xref:System.Windows.Navigation.NavigationService.Source%2A?displayProperty=nameWithType> 属性中的 pack URI 相同，则不会下载该。 若要强制 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 再次下载当前页，可以调用 <xref:System.Windows.Navigation.NavigationService.Refresh%2A?displayProperty=nameWithType> 方法，如以下示例中所示。
+如果 <xref:System.Windows.Controls.Page> 的 pack URI 与存储在 <xref:System.Windows.Navigation.NavigationService.Source%2A?displayProperty=nameWithType> 属性中的 pack URI 相同，则不会下载该。 若要强制 WPF 再次下载当前页，可以调用 <xref:System.Windows.Navigation.NavigationService.Refresh%2A?displayProperty=nameWithType> 方法，如以下示例中所示。
 
 [!code-xaml[NavigationOverviewSnippets#NSRefreshNavigationPageXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NSRefreshNavigationPage.xaml#nsrefreshnavigationpagexaml1)]
 
@@ -308,21 +308,21 @@ XBAP 可以使用其应用程序定义来指定开始 <xref:System.Windows.Contr
 
 ### <a name="navigation-lifetime"></a>导航生存期
 
-如你所见，有很多方法初始化导航。 当启动导航时，导航正在进行时，可以使用 <xref:System.Windows.Navigation.NavigationService> 实现的以下事件跟踪和影响导航：
+如你所见，有很多方法初始化导航。 当启动导航时，导航正在进行时，可以使用 <xref:System.Windows.Navigation.NavigationService>实现的以下事件跟踪和影响导航：
 
-- <xref:System.Windows.Navigation.NavigationService.Navigating> 请求新导航时发生。 可用于取消导航。
+- <xref:System.Windows.Navigation.NavigationService.Navigating>。 请求新导航时发生。 可用于取消导航。
 
-- <xref:System.Windows.Navigation.NavigationService.NavigationProgress> 在下载过程中定期发生，用于提供定位进度信息。
+- <xref:System.Windows.Navigation.NavigationService.NavigationProgress>。 在下载过程中定期发生，用于提供定位进度信息。
 
-- <xref:System.Windows.Navigation.NavigationService.Navigated> 已定位并下载页时发生。
+- <xref:System.Windows.Navigation.NavigationService.Navigated>。 已定位并下载页时发生。
 
-- <xref:System.Windows.Navigation.NavigationService.NavigationStopped> 当导航停止时发生（通过调用 <xref:System.Windows.Navigation.NavigationService.StopLoading%2A>），或在当前导航正在进行时请求新的导航时发生。
+- <xref:System.Windows.Navigation.NavigationService.NavigationStopped>。 当导航停止时发生（通过调用 <xref:System.Windows.Navigation.NavigationService.StopLoading%2A>），或在当前导航正在进行时请求新的导航时发生。
 
-- <xref:System.Windows.Navigation.NavigationService.NavigationFailed> 在导航到所需内容的同时遇到错误时发生。
+- <xref:System.Windows.Navigation.NavigationService.NavigationFailed>。 在导航到所需内容的同时遇到错误时发生。
 
-- <xref:System.Windows.Navigation.NavigationService.LoadCompleted> 导航到的内容已加载和分析，并开始呈现时发生。
+- <xref:System.Windows.Navigation.NavigationService.LoadCompleted>。 导航到的内容已加载和分析，并开始呈现时发生。
 
-- <xref:System.Windows.Navigation.NavigationService.FragmentNavigation> 导航到内容片段开始时发生，具体如何发生如下所述：
+- <xref:System.Windows.Navigation.NavigationService.FragmentNavigation>。 导航到内容片段开始时发生，具体如何发生如下所述：
 
   - 立即，如果所需片段位于当前内容中。
 
@@ -357,13 +357,13 @@ XBAP 可以使用其应用程序定义来指定开始 <xref:System.Windows.Contr
 [!code-csharp[NavigationOverviewSnippets#CancelNavigationPageCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/CancelNavigationPage.xaml.cs#cancelnavigationpagecodebehind)]
 [!code-vb[NavigationOverviewSnippets#CancelNavigationPageCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/CancelNavigationPage.xaml.vb#cancelnavigationpagecodebehind)]
 
-如果使用 <xref:System.Windows.Controls.Page> 中的导航事件注册处理程序，如前面的示例所示，还必须取消注册事件处理程序。 否则，可能会对 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 导航如何记住使用日志 <xref:System.Windows.Controls.Page> 导航的相关副作用。
+如果使用 <xref:System.Windows.Controls.Page>中的导航事件注册处理程序，如前面的示例所示，还必须取消注册事件处理程序。 否则，可能会对 WPF 导航如何记住使用日志 <xref:System.Windows.Controls.Page> 导航的相关副作用。
 
 <a name="NavigationHistory"></a>
 
 ### <a name="remembering-navigation-with-the-journal"></a>使用日志记住导航
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用两个堆栈来记住导航过的页：后退堆栈和前进堆栈。 从当前 <xref:System.Windows.Controls.Page> 导航到新 <xref:System.Windows.Controls.Page> 或转发到现有 <xref:System.Windows.Controls.Page> 时，当前 <xref:System.Windows.Controls.Page> 将添加到*back 堆栈*中。 当您从当前 <xref:System.Windows.Controls.Page> 导航回到之前的 <xref:System.Windows.Controls.Page> 时，当前 <xref:System.Windows.Controls.Page> 将添加到*前进堆栈*中。 后退堆栈、前进堆栈和管理它们的功能统称为日志。 后端堆栈中的每一项和转发堆栈是 <xref:System.Windows.Navigation.JournalEntry> 类的实例，并且称为*日记条目*。
+WPF 使用两个堆栈来记住您从其导航的页面：后退堆栈和前进堆栈。 从当前 <xref:System.Windows.Controls.Page> 导航到新 <xref:System.Windows.Controls.Page> 或转发到现有 <xref:System.Windows.Controls.Page>时，当前 <xref:System.Windows.Controls.Page> 将添加到*back 堆栈*中。 当您从当前 <xref:System.Windows.Controls.Page> 导航回到之前的 <xref:System.Windows.Controls.Page>时，当前 <xref:System.Windows.Controls.Page> 将添加到*前进堆栈*中。 后退堆栈、前进堆栈和管理它们的功能统称为日志。 后端堆栈中的每一项和转发堆栈是 <xref:System.Windows.Navigation.JournalEntry> 类的实例，并且称为*日记条目*。
 
 #### <a name="navigating-the-journal-from-internet-explorer"></a>从 Internet Explorer 导航日志
 
@@ -371,20 +371,20 @@ XBAP 可以使用其应用程序定义来指定开始 <xref:System.Windows.Contr
 
 ![后退和前进按钮](./media/navigation-overview/back-and-forward-navigation.png "用 "后退" 和 "前进" 按钮导航。")
 
-对于由 Internet Explorer 承载的 Xbap，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 将日记本集成到 Internet Explorer 的导航 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 这允许用户使用 Internet Explorer 中的 "**后退**"、"**前进**" 和 "**最新页**" 按钮在 XBAP 中导航页面。
+对于由 Internet Explorer 承载的 Xbap，WPF 将日记本集成到 Internet Explorer 的导航 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 这允许用户使用 Internet Explorer 中的 "**后退**"、"**前进**" 和 "**最新页**" 按钮在 XBAP 中导航页面。
 
 > [!IMPORTANT]
 > 在 Internet Explorer 中，当用户离开并返回到 XBAP 时，仅将未保持活动状态的页的日记条目保留在日志中。 有关保持页处于活动状态的讨论，请参阅本主题后面的[页生存期和日志](#PageLifetime)。
 
-默认情况下，Internet Explorer 的 "**最近使用的页面**" 列表中显示的每个 <xref:System.Windows.Controls.Page> 的文本都是 <xref:System.Windows.Controls.Page> 的 URI。 很多情况下这对用户并没有什么特殊的意义。 幸运的是，可以使用以下选项更改文本：
+默认情况下，Internet Explorer 的 "**最近使用的页面**" 列表中显示的每个 <xref:System.Windows.Controls.Page> 的文本都是 <xref:System.Windows.Controls.Page>的 URI。 很多情况下这对用户并没有什么特殊的意义。 幸运的是，可以使用以下选项更改文本：
 
 1. 附加 `JournalEntry.Name` 特性值。
 
 2. `Page.Title` 特性值。
 
-3. 当前 <xref:System.Windows.Controls.Page> 的 `Page.WindowTitle` 属性值和 URI。
+3. 当前 <xref:System.Windows.Controls.Page>的 `Page.WindowTitle` 属性值和 URI。
 
-4. 当前 <xref:System.Windows.Controls.Page> 的 URI。 (默认)
+4. 当前 <xref:System.Windows.Controls.Page>的 URI。 (默认)
 
 选项列出的顺序和查找文本的优先级顺序一致。 例如，如果设置了 `JournalEntry.Name`，则将忽略其他值。
 
@@ -400,9 +400,9 @@ XBAP 可以使用其应用程序定义来指定开始 <xref:System.Windows.Contr
 
 #### <a name="navigating-the-journal-using-wpf"></a>使用 WPF 导航日志
 
-尽管用户可以使用 Internet Explorer 中的 "**后退**"、"**前进**" 和 "**最新" 页**导航日记，但你也可以使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供的声明性和编程机制来导航日志。 这样做的一个原因是在页面中提供自定义导航 Ui。
+尽管用户可以使用 Internet Explorer 中的 "**后退**"、"**前进**" 和 "**最新" 页**导航日记，但也可以使用 WPF 提供的声明性和编程机制导航日志。 这样做的一个原因是在页面中提供自定义导航 Ui。
 
-可以通过使用 <xref:System.Windows.Input.NavigationCommands> 公开的导航命令以声明方式添加日记本导航支持。 下面的示例演示如何使用 `BrowseBack` 的导航命令。
+可以通过使用 <xref:System.Windows.Input.NavigationCommands>公开的导航命令以声明方式添加日记本导航支持。 下面的示例演示如何使用 `BrowseBack` 的导航命令。
 
 [!code-xaml[NavigationOverviewSnippets#NavigationCommandsPageXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NavigationCommandsPage.xaml#navigationcommandspagexaml1)]
 [!code-xaml[NavigationOverviewSnippets#NavigationCommandsPageXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NavigationCommandsPage.xaml#navigationcommandspagexaml2)]
@@ -427,13 +427,13 @@ XBAP 可以使用其应用程序定义来指定开始 <xref:System.Windows.Contr
 
 请考虑 XBAP，其中包含多个包含丰富内容的页，包括图形、动画和媒体。 这类页的内存占用量可能相当大，尤其是使用视频和音频媒体的时候。 假设该日记 "记住" 已导航到的页面，则此类 XBAP 会迅速消耗大量内存。
 
-出于此原因，日记的默认行为是在每个日记条目中存储 <xref:System.Windows.Controls.Page> 元数据，而不是对 <xref:System.Windows.Controls.Page> 对象的引用。 导航到某个日志条目时，其 <xref:System.Windows.Controls.Page> 的元数据用于创建指定 <xref:System.Windows.Controls.Page> 的新实例。 因此，所导航的每个 <xref:System.Windows.Controls.Page> 都有如下图所示的生存期。
+出于此原因，日记的默认行为是在每个日记条目中存储 <xref:System.Windows.Controls.Page> 元数据，而不是对 <xref:System.Windows.Controls.Page> 对象的引用。 导航到某个日志条目时，其 <xref:System.Windows.Controls.Page> 的元数据用于创建指定 <xref:System.Windows.Controls.Page>的新实例。 因此，所导航的每个 <xref:System.Windows.Controls.Page> 都有如下图所示的生存期。
 
 ![页生存期](./media/navigation-overview/navigated-page-lifetime.png "这会显示导航页面时的生存期。")
 
 尽管使用默认日记行为可以节省内存消耗，但每页呈现性能可能会降低;呈现 <xref:System.Windows.Controls.Page> 可能会很耗时，尤其是在有大量内容时。 如果需要在日记中保留 <xref:System.Windows.Controls.Page> 实例，可以通过两种方法进行操作。 首先，可以通过调用 <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> 方法以编程方式导航到 <xref:System.Windows.Controls.Page> 的对象。
 
-其次，可以通过将 <xref:System.Windows.Controls.Page.KeepAlive%2A> 属性设置为 `true` （默认值为 `false`），指定 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 保留日记本中 <xref:System.Windows.Controls.Page> 的实例。 如以下示例中所示，可以在标记中以声明方式设置 <xref:System.Windows.Controls.Page.KeepAlive%2A>。
+其次，通过将 <xref:System.Windows.Controls.Page.KeepAlive%2A> 属性设置为 `true` （默认值为 `false`），可以指定 WPF 保留日志中 <xref:System.Windows.Controls.Page> 的实例。 如以下示例中所示，可以在标记中以声明方式设置 <xref:System.Windows.Controls.Page.KeepAlive%2A>。
 
 [!code-xaml[NavigationOverviewSnippets#KeepAlivePageXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/KeepAlivePage.xaml#keepalivepagexaml)]
 
@@ -455,7 +455,7 @@ XBAP 可以使用其应用程序定义来指定开始 <xref:System.Windows.Contr
 
 ### <a name="retaining-content-state-with-navigation-history"></a>保留导航历史记录的内容状态
 
-如果 <xref:System.Windows.Controls.Page> 未保持活动状态，并且它具有收集用户数据的控件，则当用户离开并返回到 <xref:System.Windows.Controls.Page> 时，数据会怎样？ 从用户体验角度，用户应该会希望看到他们以前输入的数据。 遗憾的是，由于每个导航都创建了 <xref:System.Windows.Controls.Page> 的新实例，因此收集数据的控件是重新实例化的，数据将丢失。
+如果 <xref:System.Windows.Controls.Page> 未保持活动状态，并且它具有收集用户数据的控件，则当用户离开并返回到 <xref:System.Windows.Controls.Page>时，数据会怎样？ 从用户体验角度，用户应该会希望看到他们以前输入的数据。 遗憾的是，由于每个导航都创建了 <xref:System.Windows.Controls.Page> 的新实例，因此收集数据的控件是重新实例化的，数据将丢失。
 
 幸运的是，日记本提供对在 <xref:System.Windows.Controls.Page> 导航（包括控制数据）之间记录数据的支持。 具体而言，每个 <xref:System.Windows.Controls.Page> 的日记条目都充当关联 <xref:System.Windows.Controls.Page> 状态的临时容器。 以下步骤概述了从导航 <xref:System.Windows.Controls.Page> 时使用此支持的方式：
 
@@ -469,11 +469,11 @@ XBAP 可以使用其应用程序定义来指定开始 <xref:System.Windows.Contr
 
 1. <xref:System.Windows.Controls.Page> （back 堆栈顶部的日记条目）实例化。
 
-2. 将用与 <xref:System.Windows.Controls.Page> 的日记条目一起存储的状态刷新 <xref:System.Windows.Controls.Page>。
+2. 将用与 <xref:System.Windows.Controls.Page>的日记条目一起存储的状态刷新 <xref:System.Windows.Controls.Page>。
 
 3. 向后导航到 <xref:System.Windows.Controls.Page>。
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 在 <xref:System.Windows.Controls.Page>上使用以下控件时，将自动使用此支持：
+当在 <xref:System.Windows.Controls.Page>上使用以下控件时，WPF 将自动使用此支持：
 
 - <xref:System.Windows.Controls.CheckBox>
 
@@ -517,23 +517,23 @@ XBAP 可以使用其应用程序定义来指定开始 <xref:System.Windows.Contr
 
 ### <a name="cookies"></a>Cookie
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序可以存储数据的另一种方法是使用 <xref:System.Windows.Application.SetCookie%2A> 和 <xref:System.Windows.Application.GetCookie%2A> 方法创建、更新和删除 cookie。 可以在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中创建的 cookie 与其他类型的 Web 应用程序使用的 cookie 相同;cookie 是由应用程序在客户端计算机上或跨应用程序会话存储的任意数据块。 Cookie 数据通常采用以下格式的名称/值对的形式。
+WPF 应用程序可以存储数据的另一种方式是使用 cookie，这些 cookie 是使用 <xref:System.Windows.Application.SetCookie%2A> 和 <xref:System.Windows.Application.GetCookie%2A> 方法创建、更新和删除的。 可以在 WPF 中创建的 cookie 与其他类型的 Web 应用程序使用的 cookie 相同;cookie 是由应用程序在客户端计算机上或跨应用程序会话存储的任意数据块。 Cookie 数据通常采用以下格式的名称/值对的形式。
 
-*Name* `=` *Value*
+*名称*`=`*值*
 
 在将数据传递到 <xref:System.Windows.Application.SetCookie%2A>时，还应为其设置 cookie 的位置 <xref:System.Uri>，在内存中创建一个 cookie，并且该 cookie 仅适用于当前应用程序会话的持续时间。 这种类型的 cookie 称为*会话 cookie*。
 
 要跨应用程序会话存储 cookie，必须使用以下格式将到期日期添加到 cookie。
 
-*NAME* `=` *VALUE* `; expires=DAY, DD-MMM-YYYY HH:MM:SS GMT`
+*名称*`=`*值*`; expires=DAY, DD-MMM-YYYY HH:MM:SS GMT`
 
 在 cookie 过期之前，具有到期日期的 cookie 存储在当前的 Windows 安装程序的临时 Internet Files 文件夹中。 此类 cookie 称为*永久性 cookie* ，因为它在应用程序会话之间保持不变。
 
 您可以通过调用 <xref:System.Windows.Application.GetCookie%2A> 方法来检索会话和永久性 cookie，同时传递用 <xref:System.Windows.Application.SetCookie%2A> 方法设置 cookie 的位置 <xref:System.Uri>。
 
-下面是在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中支持 cookie 的一些方式：
+下面是在 WPF 中支持 cookie 的一些方法：
 
-- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 独立的应用程序和 Xbap 可以创建和管理 cookie。
+- WPF 独立应用程序和 Xbap 可以创建和管理 cookie。
 
 - 可以从浏览器访问 XBAP 创建的 cookie。
 
@@ -545,17 +545,17 @@ XBAP 可以使用其应用程序定义来指定开始 <xref:System.Windows.Contr
 
 - 在 IFRAME 中承载的顶级 Xbap 和 Xbap 都可以访问 cookie。
 
-- 对于所有受支持的浏览器，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的 Cookie 支持都是相同的。
+- WPF 中的 Cookie 支持对于所有受支持的浏览器都是相同的。
 
-- 在 Internet Explorer 中，与 cookie 相关的 P3P 策略 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，特别是对于第一方和第三方 Xbap。
+- 在 Internet Explorer 中，与 cookie 相关的 P3P 策略由 WPF 提供，特别是对于第一方和第三方 Xbap。
 
 <a name="Structured_Navigation"></a>
 
 ### <a name="structured-navigation"></a>结构化导航
 
-如果需要将数据从一个 <xref:System.Windows.Controls.Page> 传递到另一个，则可以将数据作为参数传递给 <xref:System.Windows.Controls.Page> 的非参数构造函数。 请注意，如果使用此方法，则必须保持 <xref:System.Windows.Controls.Page> 活动状态;否则，下一次导航到 <xref:System.Windows.Controls.Page>时，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用无参数构造函数重新实例化 <xref:System.Windows.Controls.Page>。
+如果需要将数据从一个 <xref:System.Windows.Controls.Page> 传递到另一个，则可以将数据作为参数传递给 <xref:System.Windows.Controls.Page>的非参数构造函数。 请注意，如果使用此方法，则必须保持 <xref:System.Windows.Controls.Page> 活动状态;否则，下一次导航到 <xref:System.Windows.Controls.Page>时，WPF 将使用无参数构造函数重新实例化 <xref:System.Windows.Controls.Page>。
 
-或者，您的 <xref:System.Windows.Controls.Page> 可以实现用需要传递的数据设置的属性。 但是，当 <xref:System.Windows.Controls.Page> 需要将数据传递回导航到该数据的 <xref:System.Windows.Controls.Page> 时，这会变得棘手。 问题在于，导航不会以本机方式支持用于确保在从其导航后将返回到 <xref:System.Windows.Controls.Page> 的机制。 实质上，导航不支持调用/返回语义。 为了解决此问题，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供了 <xref:System.Windows.Navigation.PageFunction%601> 类，可用于确保以可预测和结构化方式返回 <xref:System.Windows.Controls.Page>。 有关详细信息，请参阅[结构化导航概述](structured-navigation-overview.md)。
+或者，您的 <xref:System.Windows.Controls.Page> 可以实现用需要传递的数据设置的属性。 但是，当 <xref:System.Windows.Controls.Page> 需要将数据传递回导航到该数据的 <xref:System.Windows.Controls.Page> 时，这会变得棘手。 问题在于，导航不会以本机方式支持用于确保在从其导航后将返回到 <xref:System.Windows.Controls.Page> 的机制。 实质上，导航不支持调用/返回语义。 为了解决此问题，WPF 提供了 <xref:System.Windows.Navigation.PageFunction%601> 类，可用于确保 <xref:System.Windows.Controls.Page> 以可预测的结构化方式返回到。 有关详细信息，请参阅[结构化导航概述](structured-navigation-overview.md)。
 
 <a name="The_NavigationWindow_Class"></a>
 
@@ -571,7 +571,7 @@ XBAP 可以使用其应用程序定义来指定开始 <xref:System.Windows.Contr
 
 若要将浏览器样式的导航并入独立应用程序，可以使用 <xref:System.Windows.Navigation.NavigationWindow> 类。 <xref:System.Windows.Navigation.NavigationWindow> 派生自 <xref:System.Windows.Window>，并将其与 Xbap 提供的导航的支持相同。 你可以使用 "<xref:System.Windows.Navigation.NavigationWindow>" 作为独立应用程序的主窗口，也可以作为辅助窗口（如对话框）使用。
 
-若要实现 <xref:System.Windows.Navigation.NavigationWindow>，与 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] （<xref:System.Windows.Window>、<xref:System.Windows.Controls.Page>等）中的大多数顶级类一样，你可以使用标记和代码隐藏的组合。 这在下面的示例中显示。
+若要实现 <xref:System.Windows.Navigation.NavigationWindow>（如 WPF 中大多数顶级类（<xref:System.Windows.Window>、<xref:System.Windows.Controls.Page>等），请使用标记和代码隐藏的组合。 这在下面的示例中显示。
 
 [!code-xaml[IntroToNavNavigationWindowSnippets#NavigationWindowMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/MainWindow.xaml#navigationwindowmarkup)]
 
@@ -612,7 +612,7 @@ XBAP 可以使用其应用程序定义来指定开始 <xref:System.Windows.Contr
 
 如果页面提供其自己的日记导航支持和 UI，则可以通过将 "<xref:System.Windows.Navigation.NavigationWindow.ShowsNavigationUI%2A>" 属性的值设置为 "`false`" 来隐藏 <xref:System.Windows.Navigation.NavigationWindow> 显示的 "**后退**" 和 "**前进**" 按钮。
 
-此外，还可以使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的自定义支持来替换 <xref:System.Windows.Navigation.NavigationWindow> 本身的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。
+此外，还可以使用 WPF 中的自定义支持来替换 <xref:System.Windows.Navigation.NavigationWindow> 本身的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。
 
 <a name="Frame_in_Standalone_Applications"></a>
 
@@ -630,9 +630,9 @@ XBAP 可以使用其应用程序定义来指定开始 <xref:System.Windows.Contr
 
 ![在多个页面之间导航的帧](./media/navigation-overview/frame-navigation-between-multiple-pages.png "这会显示多个页面之间的帧导航。")
 
-您不仅必须在 <xref:System.Windows.Controls.Page> 的内容中使用 <xref:System.Windows.Controls.Frame>。 在 <xref:System.Windows.Window> 的内容中托管 <xref:System.Windows.Controls.Frame> 也很常见。
+您不仅必须在 <xref:System.Windows.Controls.Page>的内容中使用 <xref:System.Windows.Controls.Frame>。 在 <xref:System.Windows.Window>的内容中托管 <xref:System.Windows.Controls.Frame> 也很常见。
 
-默认情况下，<xref:System.Windows.Controls.Frame> 仅在没有其他日志时使用自己的日记。 如果 <xref:System.Windows.Controls.Frame> 是托管在 <xref:System.Windows.Navigation.NavigationWindow> 或 XBAP 内的内容的一部分，<xref:System.Windows.Controls.Frame> 将使用属于 <xref:System.Windows.Navigation.NavigationWindow> 或 XBAP 的日志。 但有时候，<xref:System.Windows.Controls.Frame> 可能需要负责自己的日记。 这样做的一个原因是允许在由 <xref:System.Windows.Controls.Frame> 承载的页面内进行日志导航。 这由下图说明。
+默认情况下，<xref:System.Windows.Controls.Frame> 仅在没有其他日志时使用自己的日记。 如果 <xref:System.Windows.Controls.Frame> 是托管在 <xref:System.Windows.Navigation.NavigationWindow> 或 XBAP 内的内容的一部分，<xref:System.Windows.Controls.Frame> 将使用属于 <xref:System.Windows.Navigation.NavigationWindow> 或 XBAP 的日志。 但有时候，<xref:System.Windows.Controls.Frame> 可能需要负责自己的日记。 这样做的一个原因是允许在由 <xref:System.Windows.Controls.Frame>承载的页面内进行日志导航。 这由下图说明。
 
 ![框架和页面图](./media/navigation-overview/journal-navigation-within-pages-hosted-by-a-frame.png "这会在框架托管的页中显示日志导航。")
 
@@ -681,7 +681,7 @@ XBAP 可以使用其应用程序定义来指定开始 <xref:System.Windows.Contr
 
 ## <a name="navigating-to-content-other-than-xaml-pages"></a>导航到非 XAML 页内容
 
-在本主题中，<xref:System.Windows.Controls.Page> 和 pack Xbap 已用于演示 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的各种导航功能。 但是，编译到应用程序中的 <xref:System.Windows.Controls.Page> 不是唯一可以导航到的内容类型，pack Xbap 不是标识内容的唯一方法。
+在本主题中，<xref:System.Windows.Controls.Page> 和 pack Xbap 已用于演示 WPF 的各种导航功能。 但是，编译到应用程序中的 <xref:System.Windows.Controls.Page> 不是唯一可以导航到的内容类型，pack Xbap 不是标识内容的唯一方法。
 
 如本部分所示，还可以导航到松散 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件、HTML 文件和对象。
 
@@ -736,7 +736,7 @@ XBAP 可以使用其应用程序定义来指定开始 <xref:System.Windows.Contr
 
 <xref:System.Windows.Controls.WebBrowser> 控件支持 HTML 文档托管、导航和脚本/托管代码互操作性。 有关 <xref:System.Windows.Controls.WebBrowser> 控件的详细信息，请参阅 <xref:System.Windows.Controls.WebBrowser>。
 
-与 <xref:System.Windows.Controls.Frame> 一样，使用 <xref:System.Windows.Controls.WebBrowser> 导航到 HTML 需要特殊权限。 例如，在部分信任的应用程序中，你只能导航到位于源站点的 HTML。 有关详细信息，请参阅 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。
+与 <xref:System.Windows.Controls.Frame>一样，使用 <xref:System.Windows.Controls.WebBrowser> 导航到 HTML 需要特殊权限。 例如，在部分信任的应用程序中，你只能导航到位于源站点的 HTML。 有关详细信息，请参阅 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。
 
 <a name="Navigating_to_Objects"></a>
 
@@ -762,7 +762,7 @@ XBAP 可以使用其应用程序定义来指定开始 <xref:System.Windows.Contr
 
 ![导航到类的页面](./media/navigation-overview/page-navigates-to-an-object.png "这是一个导航到对象的页面的示例。")
 
-从此图可以看出，没有显示任何有用信息。 事实上，显示的值是**Person**对象的 `ToString` 方法的返回值;默认情况下，这是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 可以用来表示您的对象的唯一值。 您可以重写 `ToString` 方法以返回更有意义的信息，尽管它仍只是一个字符串值。 使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的演示功能的一种方法是使用数据模板。 您可以实现一个数据模板，该模板 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 可以与特定类型的对象相关联。 下面的代码显示 `Person` 对象的数据模板。
+从此图可以看出，没有显示任何有用信息。 事实上，显示的值是**Person**对象的 `ToString` 方法的返回值;默认情况下，这是 WPF 可用于表示对象的唯一值。 您可以重写 `ToString` 方法以返回更有意义的信息，尽管它仍只是一个字符串值。 使用 WPF 的演示功能的一种方法是使用数据模板。 可以实现 WPF 可以与特定类型的对象关联的数据模板。 下面的代码显示 `Person` 对象的数据模板。
 
 [!code-xaml[NavigateToObjectSnippets#DataTemplateMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigateToObjectSnippets/CSharp/App.xaml#datatemplatemarkup)]
 
@@ -776,11 +776,11 @@ XBAP 可以使用其应用程序定义来指定开始 <xref:System.Windows.Contr
 
 <a name="Security"></a>
 
-## <a name="security"></a>安全
+## <a name="security"></a>安全性
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 导航支持，允许跨 Internet 导航到 Xbap，并允许应用程序托管第三方内容。 为了保护应用程序和用户免受有害行为的影响，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供了在[安全](../security-wpf.md)和[WPF 部分信任安全性](../wpf-partial-trust-security.md)中讨论的各种安全功能。
+WPF 导航支持允许跨 Internet 导航到 Xbap，并允许应用程序托管第三方内容。 为了保护应用程序和用户免受有害行为的影响，WPF 提供了在[安全](../security-wpf.md)和[WPF 部分信任安全性](../wpf-partial-trust-security.md)中讨论的各种安全功能。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Application.SetCookie%2A>
 - <xref:System.Windows.Application.GetCookie%2A>

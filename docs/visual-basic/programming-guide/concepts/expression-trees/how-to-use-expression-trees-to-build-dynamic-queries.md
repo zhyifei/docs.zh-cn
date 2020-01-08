@@ -2,12 +2,12 @@
 title: 如何：使用表达式树来生成动态查询
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: bf15880c1988ac5639dd80ba56d330372dc3803b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 616aa3eba1e07a92983bb5d2048a9dbae936e77c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344720"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346055"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>如何：使用表达式树生成动态查询（Visual Basic）
 
@@ -23,7 +23,7 @@ ms.locfileid: "74344720"
 
 `companies.Where(Function(company) company.ToLower() = "coho winery" OrElse company.Length > 16).OrderBy(Function(company) company)`
 
-<xref:System.Linq.Expressions> 命名空间中的工厂方法用于创建表达式树，这些表达式树表示构成总体查询的表达式。 表示标准查询运算符方法调用的表达式将引用这些方法的 <xref:System.Linq.Queryable> 实现。 最终的表达式树将传递给 <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> 数据源的提供程序的 `IQueryable` 实现，以创建 `IQueryable` 类型的可执行查询。 通过枚举该查询变量获得结果。
+<xref:System.Linq.Expressions> 命名空间中的工厂方法用于创建表达式树，这些表达式树表示构成总体查询的表达式。 表示标准查询运算符方法调用的表达式将引用这些方法的 <xref:System.Linq.Queryable> 实现。 最终的表达式树将传递给 `IQueryable` 数据源的提供程序的 <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> 实现，以创建 `IQueryable` 类型的可执行查询。 通过枚举该查询变量获得结果。
 
 ```vb
 ' Add an Imports statement for System.Linq.Expressions.
@@ -101,7 +101,7 @@ Next
 
 此代码在传递到 `Queryable.Where` 方法的谓词中使用固定数量的表达式。 但是，可以编写一个视用户输入而定来合并可变数量谓词表达式的应用程序。 视用户输入而定，也可以更改在查询中调用的标准查询运算符。
 
-## <a name="compiling-the-code"></a>编译代码
+## <a name="compile-the-code"></a>编译代码
 
 - 创建新的**控制台应用程序**项目。
 

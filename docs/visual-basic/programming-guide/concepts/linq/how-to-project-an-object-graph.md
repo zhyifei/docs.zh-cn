@@ -2,18 +2,18 @@
 title: 如何：投影对象图
 ms.date: 07/20/2015
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
-ms.openlocfilehash: 68b58226dbf30f82709a39e96bef0f8cce95d0ec
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 71d41b515983e19f90e163f76ca400248d3cc848
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347765"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636674"
 ---
 # <a name="how-to-project-an-object-graph-visual-basic"></a>如何：投影对象图（Visual Basic）
 本主题演示如何从 XML 投影或填充对象图。  
   
 ## <a name="example"></a>示例  
- 下面的代码用`Address`示例 XML 文件：典型采购订单 (LINQ to XML)`PurchaseOrder` XML 文档中的 `PurchaseOrderItem`、[ 和 ](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) 类填充对象图。  
+ 下面的代码用[示例 XML 文件：典型采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML 文档中的 `Address`、`PurchaseOrder` 和 `PurchaseOrderItem` 类填充对象图。  
   
 ```vb  
 Class Address  
@@ -296,7 +296,7 @@ Sub Main()
 End Sub  
 ```  
   
- 在此示例中，[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询的结果以 <xref:System.Collections.Generic.IEnumerable%601> 的 `PurchaseOrderItem` 形式返回。 `PurchaseOrder` 类中各项的类型都是 <xref:System.Collections.Generic.IEnumerable%601> 的 `PurchaseOrderItem`。 该代码使用 <xref:System.Linq.Enumerable.ToList%2A> 扩展方法，根据查询结果来创建 <xref:System.Collections.Generic.List%601> 集合。  
+ 在此示例中，LINQ 查询的结果作为 `PurchaseOrderItem`<xref:System.Collections.Generic.IEnumerable%601> 返回。 `PurchaseOrder` 类中各项的类型都是 <xref:System.Collections.Generic.IEnumerable%601> 的 `PurchaseOrderItem`。 该代码使用 <xref:System.Linq.Enumerable.ToList%2A> 扩展方法，根据查询结果来创建 <xref:System.Collections.Generic.List%601> 集合。  
   
  此示例产生以下输出：  
   

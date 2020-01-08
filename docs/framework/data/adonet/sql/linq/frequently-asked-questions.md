@@ -5,16 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: ed9149eb5b88d648c02863e0fb0101e5503e1c73
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3cc879e97438138554f1d39cf588e01bfbba28a6
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782141"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634693"
 ---
 # <a name="frequently-asked-questions"></a>常见问题
 
-以下各节解答了您在实现 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 时可能遇到的一些常见问题。
+以下各节介绍了实现 LINQ 时可能会遇到的一些常见问题。
 
 其他问题在[疑难解答](troubleshooting.md)中得到了解决。
 
@@ -30,7 +30,7 @@ ms.locfileid: "70782141"
 
 答： 请确保您调用了 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 来将结果保存到数据库。
 
-## <a name="database-connection-open-how-long"></a>数据库连接：打开多长时间？
+## <a name="database-connection-open-how-long"></a>数据库连接：可以打开多长时间？
 
 问： 我的数据库连接可以保持打开状态多长时间？
 
@@ -114,7 +114,7 @@ end
 
 ## <a name="serialization-errors"></a>序列化错误
 
-问： 当我尝试序列化时，出现以下错误："Type ' ChangeTracker + StandardChangeTracker ' ..."未标记为可序列化。 "
+问： 当我尝试序列化时，出现以下错误： "Type ' ChangeTracker + StandardChangeTracker ' .。。未标记为可序列化。 "
 
 答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的代码生成支持 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化， 而不支持 <xref:System.Xml.Serialization.XmlSerializer> 或 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>。 有关详细信息，请参阅[序列化](serialization.md)。
 
@@ -128,7 +128,7 @@ end
 
 问： 我的一个数据库表具有一个默认为 SQL `DateCreated` 的 `Getdate()` 列。 在我试图使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 插入新记录时，该值会设置为 `NULL`。 我希望其设置为数据库默认值。
 
-答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会自动为标识（自动增加）和 rowguidcol（数据库生成的 GUID）以及时间戳列处理这种情况。 在其他情况下，应手动设置<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = `true`和<xref:System.Data.Linq.Mapping.AutoSync.Always> 属性。<xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>
+答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会自动为标识（自动增加）和 rowguidcol（数据库生成的 GUID）以及时间戳列处理这种情况。 在其他情况下，应手动设置 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>=`true` 并 <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>=<xref:System.Data.Linq.Mapping.AutoSync.Always>/<xref:System.Data.Linq.Mapping.AutoSync.OnInsert>/属性。
 
 ## <a name="multiple-dataloadoptions"></a>多个 DataLoadOptions
 
@@ -152,7 +152,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 
 问： 将表拖出 SQL Server Compact 3.5 数据库时出错。
 
-答： 对象关系设计器不支持 SQL Server Compact 3.5，尽管[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]运行时这样做。 在这种情况下，必须创建您自己的实体类并添加合适的属性。
+答： 对象关系设计器不支持 SQL Server Compact 3.5，不过 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 运行时也是如此。 在这种情况下，必须创建您自己的实体类并添加合适的属性。
 
 ## <a name="errors-in-inheritance-relationships"></a>继承关系中的错误
 
@@ -164,7 +164,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 
 问： 是否有公共提供程序模型可用？
 
-答： 没有任何公共提供程序模型可用。 目前仅[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支持 SQL Server 和 SQL Server Compact 3.5。
+答： 没有任何公共提供程序模型可用。 目前 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 仅支持 SQL Server 和 SQL Server Compact 3.5。
 
 ## <a name="sql-injection-attacks"></a>SQL 注入式攻击
 
@@ -191,9 +191,9 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 
 问： System.Data.Linq 是否标记为供部分受信任的代码使用？
 
-答： 是的，system.web 程序集位于用<xref:System.Security.AllowPartiallyTrustedCallersAttribute>特性标记的 .NET Framework 程序集中。 如果没有此标记，.NET Framework 中的程序集将仅供完全受信任的代码使用。
+答： 是的，System.web 程序集位于用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性标记的 .NET Framework 程序集中。 如果没有此标记，.NET Framework 中的程序集将仅供完全受信任的代码使用。
 
-中[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]用于允许部分受信任的调用方的主要方案是[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]允许从 Web 应用程序（其中的*信任*配置为 Medium）访问程序集。
+允许部分受信任的调用方 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的主要方案是允许从 Web 应用程序访问 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 程序集，其中的*信任*配置为 Medium。
 
 ## <a name="mapping-data-from-multiple-tables"></a>映射来自多个表的数据
 
@@ -202,7 +202,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 答： 您可以在数据库中创建一个视图并将实体映射到该视图。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会为视图生成 SQL，与它为表生成 SQL 相同。
 
 > [!NOTE]
-> 这种情况下的视图用法有一些限制。 当基础视图支持在 <xref:System.Data.Linq.Table%601> 上执行的操作时，此方法最为安全。 只有您知道要执行的操作。 例如，大多数应用程序都是只读的，而另一个就前往数字`Create`仅通过对视图使用存储过程来执行/ / `Update` `Delete`操作。
+> 这种情况下的视图用法有一些限制。 当基础视图支持在 <xref:System.Data.Linq.Table%601> 上执行的操作时，此方法最为安全。 只有您知道要执行的操作。 例如，大多数应用程序都是只读的，而另一个就前往数字 `Create`仅通过对视图使用存储过程来 /`Update`/`Delete` 操作。
 
 ## <a name="connection-pooling"></a>连接池
 
@@ -216,7 +216,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 
 问： 我使用 <xref:System.Data.Linq.DataContext> 的一个实例存储数据库中的值。 但是，相同数据库上的另一个 <xref:System.Data.Linq.DataContext> 未反映更新的值。 第二个 <xref:System.Data.Linq.DataContext> 实例似乎返回缓存的值。
 
-答： 此行为是有意安排的。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会继续返回您在第一个实例中看到的相同实例/值。 在进行更新时使用开放式并发。 原始数据用于检查当前数据库状态，以确定该数据实际上仍未更改。 如果该数据已更改，则会发生冲突，您的应用程序必须解决该冲突。 您的应用程序可以选择将原始状态重置为当前数据库状态并尝试再次更新。 有关详细信息，请参阅[如何：管理更改冲突](how-to-manage-change-conflicts.md)。
+答： 此行为是设计使然。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会继续返回您在第一个实例中看到的相同实例/值。 在进行更新时使用开放式并发。 原始数据用于检查当前数据库状态，以确定该数据实际上仍未更改。 如果该数据已更改，则会发生冲突，您的应用程序必须解决该冲突。 您的应用程序可以选择将原始状态重置为当前数据库状态并尝试再次更新。 有关详细信息，请参阅[如何：管理更改冲突](how-to-manage-change-conflicts.md)。
 
 您也可以将 <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> 设置为 false，这样可以关闭缓存和更改跟踪。 然后便可以在每次查询时检索最新值。
 
@@ -226,7 +226,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 
 答： 只读模式关闭了上下文跟踪更改的功能。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [引用](reference.md)
 - [疑难解答](troubleshooting.md)

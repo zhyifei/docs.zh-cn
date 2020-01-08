@@ -2,12 +2,12 @@
 title: MSMQ 激活
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: be33e3d9377c30058c7a2ee06543c11f10251ebd
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2afcfbee69f8257e4ed0b1c352ef29e4af9ddb84
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714776"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544714"
 ---
 # <a name="msmq-activation"></a>MSMQ 激活
 
@@ -19,13 +19,13 @@ ms.locfileid: "74714776"
 > [!NOTE]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：
 >
-> \<安装驱动器 >： \ WF_WCF_Samples
+> \<InstallDrive>:\WF_WCF_Samples
 >
 > 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （WCF）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WCF 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
 >
-> \<安装驱动器 >： \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation。
+> \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
 
-Windows 进程激活服务 (WAS) 是 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 新增的进程激活机制，它向使用非 HTTP 协议的应用程序提供了类似 IIS 的功能，这些功能以前只对基于 HTTP 的应用程序可用。 Windows Communication Foundation （WCF）使用侦听器适配器接口传递通过 WCF 支持的非 HTTP 协议（如 TCP、命名管道和 MSMQ）接收的激活请求。 用于通过非 HTTP 协议接收请求的功能由 SMSvcHost.exe 中运行的托管 Windows 服务承载。
+Windows 进程激活服务（WAS）是 Windows Server 2008 的新进程激活机制，它提供了类似 IIS 的功能，这些功能以前仅对使用非 HTTP 协议的应用程序可用。 Windows Communication Foundation （WCF）使用侦听器适配器接口传递通过 WCF 支持的非 HTTP 协议（如 TCP、命名管道和 MSMQ）接收的激活请求。 用于通过非 HTTP 协议接收请求的功能由 SMSvcHost.exe 中运行的托管 Windows 服务承载。
 
 Net.Msmq Listener Adapter 服务 (NetMsmqActivator) 根据队列中的消息激活排队的应用程序。
 
@@ -269,7 +269,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
         此命令允许使用 `http://localhost/servicemodelsamples` 和 `net.msmq://localhost/servicemodelsamples`访问/servicemodelsamples 应用程序。
 
-7. 如果您以前没有进行此操作，应确保启用 MSMQ 激活服务。 从 "**开始**" 菜单中，单击 "**运行**"，然后键入 `Services.msc`。 在服务列表中搜索**Net.tcp 侦听器适配器**。 右键单击并选择 "**属性**"。 将 "**启动类型**" 设置为 "**自动**"，单击 "**应用**"，然后单击 "**开始**" 按钮。 此步骤只能在第一次使用 Net.Msmq Listener Adapter 服务之前操作一次。
+7. 如果您以前没有进行此操作，应确保启用 MSMQ 激活服务。 从 "**开始**" 菜单中，单击 "**运行**"，然后键入 `Services.msc`。 在服务列表中搜索**Net.tcp 侦听器适配器**。 右键单击并选择 **“属性”** 。 将 "**启动类型**" 设置为 "**自动**"，单击 "**应用**"，然后单击 "**开始**" 按钮。 此步骤只能在第一次使用 Net.Msmq Listener Adapter 服务之前操作一次。
 
 8. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。 此外，在客户端上更改用于提交采购订单的代码，使其在提交采购订单时在队列的 URI 中反映计算机名。 使用以下代码：
 

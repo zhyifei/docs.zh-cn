@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: 83e96e271f6613aa325d59a0ca2fce9fc69fe059
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e8ed9a6356b7177b2c029a9280d0790a93676653
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350492"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347596"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>如何：定义一个过程的多个版本 (Visual Basic)
 您*可以通过使用*相同的名称，但对于每个版本使用不同的参数列表，在多个版本中定义过程。 重载的目的是定义过程中的多个紧密相关的版本，而不必按名称对其进行区分。  
@@ -39,7 +39,7 @@ ms.locfileid: "74350492"
   
  有关如何调用 `post` 过程的这些版本的信息，请参阅[如何：调用重载过程](./how-to-call-an-overloaded-procedure.md)。  
   
-## <a name="compiling-the-code"></a>编译代码  
+## <a name="compile-the-code"></a>编译代码  
  请确保每个重载版本都具有相同的过程名称，但参数列表不同。  
   
 ## <a name="see-also"></a>另请参阅

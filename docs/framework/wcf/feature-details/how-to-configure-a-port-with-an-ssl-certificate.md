@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: d2fe9a73f79408db08ef48d380940fcf6bb831c0
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: d56da60f174933af789a6abd7d8aa90f3f29d9c1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837995"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344627"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>如何：使用 SSL 证书配置端口
 使用 <xref:System.ServiceModel.WSHttpBinding> 类创建使用传输安全的自承载 Windows Communication Foundation （WCF）服务时，还必须使用 x.509 证书配置端口。 如果不是在创建自承载服务，可以在 Internet 信息服务 (IIS) 上承载服务。 有关详细信息，请参阅[HTTP 传输安全](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
   
  若要配置端口，使用的工具取决于计算机运行的操作系统。  
   
- 如果运行的是 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，则使用 HttpCfg.exe 工具。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 中已安装该工具。 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]中，可以在[WINDOWS XP Service Pack 2 支持工具](https://go.microsoft.com/fwlink/?LinkId=88606)中下载该工具。 有关详细信息，请参阅[Httpcfg.exe 概述](https://go.microsoft.com/fwlink/?LinkId=88605)。 [Windows 支持工具文档](https://go.microsoft.com/fwlink/?LinkId=94840)说明了 httpcfg.exe 工具的语法。  
+ 如果运行的是 Windows Server 2003 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，请使用 Httpcfg.exe 工具。 对于 Windows Server 2003，安装了此工具。 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]中，可以在[WINDOWS XP Service Pack 2 支持工具](https://go.microsoft.com/fwlink/?LinkId=88606)中下载该工具。 有关详细信息，请参阅[Httpcfg.exe 概述](https://go.microsoft.com/fwlink/?LinkId=88605)。 [Windows 支持工具文档](https://go.microsoft.com/fwlink/?LinkId=94840)说明了 httpcfg.exe 工具的语法。  
   
  如果运行的是 Windows Vista，请使用已安装的 Netsh 工具。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "74837995"
   
 ### <a name="to-determine-how-ports-are-configured"></a>确定如何配置端口  
   
-1. 在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]中，使用 Httpcfg.exe 工具查看当前端口配置，使用**查询**和**ssl**开关，如以下示例中所示。  
+1. 在 Windows Server 2003 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]中，使用 Httpcfg.exe 工具查看当前端口配置，使用**查询**和**ssl**开关，如以下示例中所示。  
   
     ```console
     httpcfg query ssl  
@@ -65,7 +65,7 @@ ms.locfileid: "74837995"
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number"></a>将 SSL 证书绑定至端口号  
   
-1. 在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中，对安全套接字层 (SSL) 存储区使用 HttpCfg.exe 工具的“set”命令将证书绑定至端口号。 该工具使用指纹识别证书，如下面的示例所示。  
+1. 在 Windows Server 2003 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]中，使用安全套接字层（SSL）存储区上 "设置" 模式下的 Httpcfg.exe 工具将证书绑定到端口号。 该工具使用指纹识别证书，如下面的示例所示。  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
@@ -89,7 +89,7 @@ ms.locfileid: "74837995"
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>将 SSL 证书绑定至端口号并支持客户端证书  
   
-1. 在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中，若要支持在传输层使用 X.509 证书进行身份验证的客户端，请按照前面的步骤进行操作，但要向 HttpCfg.exe 另外传递一个命令行参数，如下面的示例所示。  
+1. 在 Windows Server 2003 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]中，若要支持在传输层使用 x.509 证书进行身份验证的客户端，请按照前面的过程进行操作，但将其他命令行参数传递给 Httpcfg.exe，如以下示例中所示。  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
@@ -111,7 +111,7 @@ ms.locfileid: "74837995"
     httpcfg query ssl>myMachinePorts.txt  
     ```
   
-2. 在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]中，将 Httpcfg.exe 工具与**delete**和**ssl**关键字一起使用。 使用 **-i**开关指定 `IP`：`port` 号，并使用 **-h**开关指定指纹。  
+2. 在 Windows Server 2003 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]中，将 Httpcfg.exe 工具与**delete**和**ssl**关键字一起使用。 使用 **-i**开关指定 `IP`：`port` 号，并使用 **-h**开关指定指纹。  
   
     ```console  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  

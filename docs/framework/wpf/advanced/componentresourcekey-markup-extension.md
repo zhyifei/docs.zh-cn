@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 85e6862d59284df1b51bf5ea7fbba786fe0492d7
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2ccc4f3154996a4e442a4092833f5c9ed9c8938a
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458968"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559456"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey 标记扩展
 定义和引用从外部程序集加载的资源的键。 这使得资源查找可以在程序集中指定目标类型，而不是在程序集或类中指定显式资源字典。  
@@ -47,7 +47,7 @@ ms.locfileid: "73458968"
 |||  
 |-|-|  
 |`targetTypeName`|在资源程序集中定义的公共公共语言运行时（CLR）类型的名称。|  
-|`targetID`|资源的键。 查找资源时，`targetID` 将类似于资源的 " [x：Key" 指令](../../xaml-services/x-key-directive.md)。|  
+|`targetID`|资源的键。 查找资源时，`targetID` 将类似于资源的 " [x：Key" 指令](../../../desktop-wpf/xaml-services/xkey-directive.md)。|  
   
 ## <a name="remarks"></a>备注  
  如以上用法中所示，在以下两个位置找到了 {`ComponentResourceKey`} 标记扩展用法：  
@@ -66,7 +66,7 @@ ms.locfileid: "73458968"
   
  所示的压缩语法依赖于标记扩展的 <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> 构造函数签名和位置参数用法。 `targetTypeName` 和 `targetID` 的给定顺序非常重要。 详细语法依赖于 <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> 无参数的构造函数，然后以与 object 元素上的 true 特性语法类似的方式设置 <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> 和 <xref:System.Windows.ComponentResourceKey.ResourceId%2A>。 在详细语法中，设置属性的顺序并不重要。 主题[标记扩展和 WPF XAML](markup-extensions-and-wpf-xaml.md)中更详细地介绍了这两种备选方法（简洁和详细）的关系和机制。  
   
- 从技术上说，`targetID` 的值可以是任何对象，不一定是字符串。 不过，WPF 最常见的用法是将 `targetID` 值与字符串形式的窗体进行对齐，并在[XamlName 语法](../../xaml-services/xamlname-grammar.md)中使用此类字符串。  
+ 从技术上说，`targetID` 的值可以是任何对象，不一定是字符串。 不过，WPF 最常见的用法是将 `targetID` 值与字符串形式的窗体进行对齐，并在[XamlName 语法](../../../desktop-wpf/xaml-services/xamlname-grammar.md)中使用此类字符串。  
   
  `ComponentResourceKey` 可以在对象元素语法中使用。 在这种情况下，需要指定 "<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>" 和 "<xref:System.Windows.ComponentResourceKey.ResourceId%2A>" 属性的值才能正确地初始化扩展。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "73458968"
   
  `ComponentResourceKey` 是标记扩展。 当要求转义特性值应为非文本值或非处理程序名称时，通常会实现标记扩展，相对于只在某些类型或属性上放置类型转换器而言，此需求更具有全局性。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的所有标记扩展在其特性语法中都使用 { 和 } 字符，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器通过这一约定确认标记扩展必须处理该特性。 有关详细信息，请参阅[标记扩展和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.ComponentResourceKey>
 - <xref:System.Windows.Controls.ControlTemplate>

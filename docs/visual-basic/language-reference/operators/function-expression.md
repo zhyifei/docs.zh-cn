@@ -6,12 +6,12 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: d14d7c9bc701b5e06c51202c07c3b79832aba7cc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 454c4e3d926640934a8edc4fcb16e4308a89dd50
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331079"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632332"
 ---
 # <a name="function-expression-visual-basic"></a>函数表达式 (Visual Basic)
 声明定义函数 lambda 表达式的参数和代码。  
@@ -31,14 +31,14 @@ End Function
 |术语|Definition|  
 |---|---|  
 |`parameterlist`|可选。 表示此过程参数的局部变量名称的列表。 即使此列表为空，也必须存在括号。 请参阅[参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
-|`expression`|必需。 单个表达式。 表达式的类型为函数的返回类型。|  
-|`statements`|必需。 使用 `Return` 语句返回值的语句列表。 （请参见[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)。）返回的值的类型为函数的返回类型。|  
+|`expression`|必须的。 单个表达式。 表达式的类型为函数的返回类型。|  
+|`statements`|必须的。 使用 `Return` 语句返回值的语句列表。 （请参见[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)。）返回的值的类型为函数的返回类型。|  
   
 ## <a name="remarks"></a>备注  
  *Lambda 表达式*是没有名称的函数，用于计算并返回值。 可以在可以使用委托类型的任何位置使用 lambda 表达式，但不能使用作为 `RemoveHandler`的参数。 有关委托的详细信息以及对委托使用 lambda 表达式的详细信息，请参阅[委托语句](../../../visual-basic/language-reference/statements/delegate-statement.md)和[宽松委托转换](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。  
   
 ## <a name="lambda-expression-syntax"></a>Lambda 表达式语法  
- Lambda 表达式的语法与标准函数的语法类似。 不同之处如下：  
+ Lambda 表达式的语法与标准函数的语法类似。 不同之处如下所示：  
   
 - Lambda 表达式没有名称。  
   
@@ -72,7 +72,7 @@ End Function
  [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>示例  
- Lambda 表达式在 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]中采用了许多查询运算符，可以在基于方法的查询中显式使用。 下面的示例演示一个典型 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询，然后将查询转换为方法格式。  
+ Lambda 表达式在语言集成查询（LINQ）中采用多个查询运算符，可以在基于方法的查询中显式使用。 下面的示例演示一个典型的 LINQ 查询，然后将查询转换为方法格式。  
   
 ```vb  
 Dim londonCusts = From cust In db.Customers  

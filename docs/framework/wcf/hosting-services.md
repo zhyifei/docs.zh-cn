@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: b914d5d9f578c5ce13dfc1c520f1b26f8af1fa76
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: b7e66d1e682ac3e85c24121f4769ebe95f1fc11d
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837917"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544687"
 ---
 # <a name="hosting-services"></a>托管服务
 
@@ -30,12 +30,12 @@ WCF 提供了一个统一的编程模型，用于生成面向服务的应用程�
  此宿主选项包括注册作为托管 Windows 服务（以前称为 NT 服务）承载 WCF 服务的应用程序域（AppDomain），以便服务的进程生存期由的服务控制管理器（SCM）控制Windows 服务。 与自承载选项一样，此类型的宿主环境要求作为应用程序的一部分编写某些宿主代码。 通过使服务从 <xref:System.ServiceProcess.ServiceBase> 类以及从 WCF 服务协定接口继承，将该服务同时实现为 Windows 服务和 WCF 服务。 然后创建 <xref:System.ServiceModel.ServiceHost> ，在被重写的 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 方法内打开它并在被重写的 <xref:System.ServiceProcess.ServiceBase.OnStop> 方法内关闭它。 还必须实现从 <xref:System.Configuration.Install.Installer> 继承的安装程序类，以允许 Installutil.exe 工具将程序安装为 Windows 服务。 有关详细信息，请参阅[如何：在托管 Windows 服务中承载 WCF 服务](./feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)。 托管 Windows 服务宿主选项启用的方案是在非消息激活的安全环境中，在 IIS 外部承载的长时间运行的 WCF 服务。 服务的生存期改由操作系统控制。 此宿主选项在 Windows 的所有版本中都是可用的。
 
 ### <a name="internet-information-services-iis"></a>Internet Information Services (IIS)
- IIS 托管选项与 ASP.NET 集成，并使用这些技术提供的功能，如进程回收、空闲关闭、进程运行状况监视和基于消息的激活。 在 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 操作系统上，这是作为必须高度可用且高度可伸缩的 Web 服务应用程序宿主的首选解决方案。 IIS 还提供了客户期望企业级服务器产品具有的集成可管理性。 此宿主选项要求正确配置 IIS，但不需要编写任何承载代码作为应用程序的一部分。 有关如何为 WCF 服务配置 IIS 托管的详细信息，请参阅[如何：在 iis 中承载 Wcf 服务](./feature-details/how-to-host-a-wcf-service-in-iis.md)。
+ IIS 托管选项与 ASP.NET 集成，并使用这些技术提供的功能，如进程回收、空闲关闭、进程运行状况监视和基于消息的激活。 在 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 和 Windows Server 2003 操作系统上，这是用于托管必须高度可用且高度可缩放的 Web 服务应用程序的首选解决方案。 IIS 还提供了客户期望企业级服务器产品具有的集成可管理性。 此宿主选项要求正确配置 IIS，但不需要编写任何承载代码作为应用程序的一部分。 有关如何为 WCF 服务配置 IIS 托管的详细信息，请参阅[如何：在 iis 中承载 Wcf 服务](./feature-details/how-to-host-a-wcf-service-in-iis.md)。
 
- 请注意，以 IIS 为宿主的服务只能使用 HTTP 传输。 它在 IIS 5.1 中的实现在 [!INCLUDE[wxp](../../../includes/wxp-md.md)]中引入了一些限制。 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 上的 IIS 5.1 为 WCF 服务提供的基于消息的激活会阻止同一计算机上任何其他自承载的 WCF 服务使用端口80进行通信。 在 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]上，WCF 服务可以在与其他应用6.0 程序相同的 AppDomain/应用程序池/工作进程中运行。 但是，因为 WCF 和 IIS 6.0 都使用内核模式 HTTP 堆栈（http.sys），所以 IIS 6.0 可以与在同一台计算机上运行的其他自承载 WCF 服务共享端口80，这与 IIS 5.1 不同。
+ 请注意，以 IIS 为宿主的服务只能使用 HTTP 传输。 它在 IIS 5.1 中的实现在 [!INCLUDE[wxp](../../../includes/wxp-md.md)]中引入了一些限制。 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 上的 IIS 5.1 为 WCF 服务提供的基于消息的激活会阻止同一计算机上任何其他自承载的 WCF 服务使用端口80进行通信。 当 Windows Server 2003 上的 IIS 6.0 承载时，WCF 服务可以在与其他应用程序相同的 AppDomain/应用程序池/工作进程中运行。 但是，因为 WCF 和 IIS 6.0 都使用内核模式 HTTP 堆栈（http.sys），所以 IIS 6.0 可以与在同一台计算机上运行的其他自承载 WCF 服务共享端口80，这与 IIS 5.1 不同。
 
 ### <a name="windows-process-activation-service-was"></a>Windows 进程激活服务 (WAS)
- Windows 进程激活服务（WAS）是适用于 Windows Vista 上的 [!INCLUDE[lserver](../../../includes/lserver-md.md)] 的新进程激活机制。 它保留了熟悉的 IIS 6.0 进程模型（应用程序池和基于消息的进程激活）和承载功能（如快速故障保护、运行状况监视和回收），但它会从激活中删除对 HTTP 的依赖关系种. IIS 7.0 使用 WAS 通过 HTTP 完成基于消息的激活。 另外，还可以将其他 WCF 组件插入到中，以基于 WCF 支持的其他协议（如 TCP、MSMQ 和命名管道）提供基于消息的激活。 这样，使用通信协议的应用程序就可以使用 IIS 功能（如进程回收、快速失败保护）和仅对基于 HTTP 的应用程序可用的通用配置系统。
+ Windows 进程激活服务（WAS）是 windows Vista 上也提供的 Windows Server 2008 的新进程激活机制。 它保留了熟悉的 IIS 6.0 进程模型（应用程序池和基于消息的进程激活）和承载功能（如快速故障保护、运行状况监视和回收），但它会从激活中删除对 HTTP 的依赖关系种. IIS 7.0 使用 WAS 通过 HTTP 完成基于消息的激活。 另外，还可以将其他 WCF 组件插入到中，以基于 WCF 支持的其他协议（如 TCP、MSMQ 和命名管道）提供基于消息的激活。 这样，使用通信协议的应用程序就可以使用 IIS 功能（如进程回收、快速失败保护）和仅对基于 HTTP 的应用程序可用的通用配置系统。
 
  此承载选项要求正确配置 WAS，但不需要编写任何承载代码作为应用程序的一部分。 有关如何配置 WAS 托管的详细信息，请参阅[如何：在 WAS 中承载 WCF 服务](./feature-details/how-to-host-a-wcf-service-in-was.md)。
 
@@ -46,7 +46,7 @@ WCF 提供了一个统一的编程模型，用于生成面向服务的应用程�
 |-------------------------|----------------------|----------------------------------|
 |托管应用程序（“自承载”）|-开发期间使用的控制台应用程序。<br />-丰富的 WinForm 和 WPF 客户端应用程序访问服务。|可伸缩.<br />-易于部署。<br />-不是服务的企业解决方案。|
 |Windows 服务（以前称为 NT 服务）|-在 IIS 外部承载的长时间运行的 WCF 服务。|-由操作系统控制的服务进程生存期，未激活消息。<br />-受 Windows 的所有版本支持。<br />-安全环境。|
-|IIS 5.1、IIS 6.0|-使用 HTTP 协议在 Internet 上并行运行 WCF 服务和 ASP.NET 内容。|-进程回收。<br />-空闲关机。<br />-进程运行状况监视。<br />-基于消息的激活。<br />-仅限 HTTP。|
+|IIS 5.1、IIS 6。0|-使用 HTTP 协议在 Internet 上并行运行 WCF 服务和 ASP.NET 内容。|-进程回收。<br />-空闲关机。<br />-进程运行状况监视。<br />-基于消息的激活。<br />-仅限 HTTP。|
 |Windows 进程激活服务 (WAS)|-在未使用各种传输协议在 Internet 上安装 IIS 的情况下运行 WCF 服务。|-不需要 IIS。<br />-进程回收。<br />-空闲关机。<br />-进程运行状况监视。<br />-基于消息的激活。<br />-适用于 HTTP、TCP、命名管道和 MSMQ。|
 |IIS 7.0|-运行包含 ASP.NET 内容的 WCF 服务。<br />-使用各种传输协议在 Internet 上运行 WCF 服务。|-是有益的。<br />-与 ASP.NET 和 IIS 内容集成。|
 
@@ -54,11 +54,11 @@ WCF 提供了一个统一的编程模型，用于生成面向服务的应用程�
 
 |宿主环境|平台可用性|支持的传输|进程和 AppDomain 回收|
 |-------------------------|---------------------------|--------------------------|-------------------------------------|
-|托管应用程序（“自承载”）|[!INCLUDE[wxp](../../../includes/wxp-md.md)]、[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]、Windows Vista、<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP；<br /><br /> net.tcp；<br /><br /> net.pipe；<br /><br /> net.msmq|否|
-|Windows 服务（以前称为 NT 服务）|[!INCLUDE[wxp](../../../includes/wxp-md.md)]、[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]、Windows Vista、<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP；<br /><br /> net.tcp；<br /><br /> net.pipe；<br /><br /> net.msmq|否|
+|托管应用程序（“自承载”）|[!INCLUDE[wxp](../../../includes/wxp-md.md)]、Windows Server 2003、Windows Vista、<br /><br /> Windows Server 2008|HTTP；<br /><br /> net.tcp；<br /><br /> net.pipe；<br /><br /> net.msmq|否|
+|Windows 服务（以前称为 NT 服务）|[!INCLUDE[wxp](../../../includes/wxp-md.md)]、Windows Server 2003、Windows Vista、<br /><br /> Windows Server 2008|HTTP；<br /><br /> net.tcp；<br /><br /> net.pipe；<br /><br /> net.msmq|否|
 |IIS 5.1|[!INCLUDE[wxp](../../../includes/wxp-md.md)]|HTTP|是|
-|IIS 6.0|[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]|HTTP|是|
-|Windows 进程激活服务 (WAS)|Windows Vista，[!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP；<br /><br /> net.tcp；<br /><br /> net.pipe；<br /><br /> net.msmq|是|
+|IIS 6.0|Windows Server 2003|HTTP|是|
+|Windows 进程激活服务 (WAS)|Windows Vista 和 Windows Server 2008|HTTP；<br /><br /> net.tcp；<br /><br /> net.pipe；<br /><br /> net.msmq|是|
 
  值得注意的是，从不受信任的主机运行服务或任何扩展会危害安全。 另请注意，通过模拟打开 <xref:System.ServiceModel.ServiceHost> 时，应用程序必须确保未注销用户，例如通过缓存用户的 <xref:System.Security.Principal.WindowsIdentity> 。
 

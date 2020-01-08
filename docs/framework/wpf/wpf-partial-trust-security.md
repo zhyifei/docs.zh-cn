@@ -15,17 +15,17 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 907c1f02e07c60ac38c8e09e94fc96ae2573e97c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ce9341a45b43c4af4543cf473597c273c33701fc
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455315"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636544"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信任安全
-<a name="introduction"></a>一般情况下，应该限制 Internet 应用程序直接访问关键系统资源，防止恶意损坏。 默认情况下，HTML 和客户端脚本语言不能访问关键系统资源。 由于可以从浏览器启动 Windows Presentation Foundation （WPF）浏览器承载的应用程序，因此它们应符合一组类似的限制。 若要强制实施这些限制，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 依赖于代码访问安全性（CAS）和 ClickOnce （请参阅[WPF 安全策略-平台安全性](wpf-security-strategy-platform-security.md)）。 默认情况下，浏览器承载的应用程序请求 Internet 区域 CA 权限集，不管它们是从 Internet、本地 intranet 还是本地计算机启动。 如果应用程序的运行权限小于完整权限集，则说明该应用程序正在部分信任环境下运行。  
+<a name="introduction"></a>一般情况下，应该限制 Internet 应用程序直接访问关键系统资源，防止恶意损坏。 默认情况下，HTML 和客户端脚本语言不能访问关键系统资源。 由于可以从浏览器启动 Windows Presentation Foundation （WPF）浏览器承载的应用程序，因此它们应符合一组类似的限制。 若要强制实施这些限制，WPF 依赖于代码访问安全性（CAS）和 ClickOnce （请参阅[Wpf 安全策略-平台安全性](wpf-security-strategy-platform-security.md)）。 默认情况下，浏览器承载的应用程序请求 Internet 区域 CA 权限集，不管它们是从 Internet、本地 intranet 还是本地计算机启动。 如果应用程序的运行权限小于完整权限集，则说明该应用程序正在部分信任环境下运行。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 提供了广泛的支持，确保尽可能多的功能可以在部分信任环境中安全地使用，还可以与 CA 一起为部分信任编程提供附加支持。  
+ WPF 提供了广泛的支持，以确保在部分信任环境中可以安全地使用尽可能多的功能，并与 CA 一起为部分信任编程提供附加支持。  
   
  本主题包含以下各节：  
   
@@ -43,14 +43,14 @@ ms.locfileid: "73455315"
   
 |功能区域|功能|  
 |------------------|-------------|  
-|常规|浏览器窗口<br /><br /> 源站点访问<br /><br /> IsolatedStorage（512KB 限制）<br /><br /> UIAutomation 提供程序<br /><br /> 命令<br /><br /> 输入法编辑器 (IME)<br /><br /> 触笔和墨迹<br /><br /> 使用鼠标捕获和移动事件模拟的拖/放<br /><br /> OpenFileDialog<br /><br /> XAML 反序列化（通过 XamlReader.Load）|  
-|Web 集成|浏览器下载对话框<br /><br /> 顶级用户启动的导航<br /><br /> mailto:links<br /><br /> 统一资源标识符参数<br /><br /> HTTPWebRequest<br /><br /> IFRAME 中托管的 WPF 内容<br /><br /> 使用框架托管同一站点 HTML 页<br /><br /> 使用 WebBrowser 托管同一站点 HTML 页<br /><br /> Web 服务 (ASMX)<br /><br /> Web 服务（使用 Windows Communication Foundation）<br /><br /> “脚本”<br /><br /> 文档对象模型|  
+|“常规”|浏览器窗口<br /><br /> 源站点访问<br /><br /> IsolatedStorage（512KB 限制）<br /><br /> UIAutomation 提供程序<br /><br /> 命令<br /><br /> 输入法编辑器 (IME)<br /><br /> 触笔和墨迹<br /><br /> 使用鼠标捕获和移动事件模拟的拖/放<br /><br /> OpenFileDialog<br /><br /> XAML 反序列化（通过 XamlReader.Load）|  
+|Web 集成|浏览器下载对话框<br /><br /> 顶级用户启动的导航<br /><br /> mailto:links<br /><br /> 统一资源标识符参数<br /><br /> HTTPWebRequest<br /><br /> IFRAME 中托管的 WPF 内容<br /><br /> 使用框架托管同一站点 HTML 页<br /><br /> 使用 WebBrowser 托管同一站点 HTML 页<br /><br /> Web 服务 (ASMX)<br /><br /> Web 服务（使用 Windows Communication Foundation）<br /><br /> 脚本功能<br /><br /> 文档对象模型|  
 |视觉对象|2D 和 3D<br /><br /> 动画<br /><br /> 媒体（源站点和跨域）<br /><br /> 图像处理/音频/视频|  
 |阅读|流文档<br /><br /> XPS 文档<br /><br /> 嵌入式字体与系统字体<br /><br /> CFF 字体与 TrueType 字体|  
 |编辑|拼写检查<br /><br /> RichTextBox<br /><br /> 纯文本和墨迹剪贴板支持<br /><br /> 用户启动的粘贴<br /><br /> 复制选定内容|  
 |控件|常规控件|  
   
- 此表包含高级别的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 功能。 有关更多详细信息，Windows SDK 记录 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]中每个成员所需的权限。 此外，以下功能含有部分信任执行的相关详细信息，其中包括特殊注意事项。  
+ 此表包含高级别的 WPF 功能。 有关更多详细信息，Windows SDK 记录 WPF 中每个成员所需的权限。 此外，以下功能含有部分信任执行的相关详细信息，其中包括特殊注意事项。  
   
 - [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] （请参阅[XAML 概述（WPF）](../../desktop-wpf/fundamentals/xaml.md)）。  
   
@@ -66,13 +66,13 @@ ms.locfileid: "73455315"
   
 - "打开文件" 对话框（请参阅 <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>）。  
   
- 下表概述了在 Internet 区域权限集限制内不能安全运行的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 功能。  
+ 下表概述了在 Internet 区域权限集限制内不能安全运行的 WPF 功能。  
   
  表 2：在部分信任环境中不安全的 WPF 功能  
   
 |功能区域|功能|  
 |------------------|-------------|  
-|常规|窗口（应用程序定义的窗口和对话框）<br /><br /> SaveFileDialog<br /><br /> 文件系统<br /><br /> 注册表访问<br /><br /> 拖放<br /><br /> XAML 序列化（通过 XamlWriter.Save）<br /><br /> UIAutomation 客户端<br /><br /> 源窗口访问 (HwndHost)<br /><br /> 完全语音支持<br /><br /> Windows 窗体互操作性|  
+|“常规”|窗口（应用程序定义的窗口和对话框）<br /><br /> SaveFileDialog<br /><br /> 文件系统<br /><br /> 注册表访问<br /><br /> 拖放<br /><br /> XAML 序列化（通过 XamlWriter.Save）<br /><br /> UIAutomation 客户端<br /><br /> 源窗口访问 (HwndHost)<br /><br /> 完全语音支持<br /><br /> Windows 窗体互操作性|  
 |视觉对象|位图效果<br /><br /> 图像编码|  
 |编辑|RTF 格式剪贴板<br /><br /> 完全 XAML 支持|  
   
@@ -82,14 +82,14 @@ ms.locfileid: "73455315"
   
 |安全区域|行为|获取完全信任|  
 |-------------------|--------------|------------------------|  
-|本地计算机|自动完全信任|无需执行任何操作。|  
+|本地计算机|自动完全信任|无需任何操作。|  
 |Intranet 和受信任的站点|提示完全信任|使用证书对 XBAP 进行签名，以便用户在提示中看到源。|  
 |Internet|失败，并显示“未授予信任”|使用证书对 XBAP 进行签名。|  
   
 > [!NOTE]
 > 上表中描述的行为针对不遵循 ClickOnce 受信任部署模型的完全信任 XBAP。  
   
- 通常，超出允许权限的代码可能是在独立应用程序和浏览器托管的应用程序之间共享的公用代码。 CA 和 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 提供多种方法来管理这种情况。  
+ 通常，超出允许权限的代码可能是在独立应用程序和浏览器托管的应用程序之间共享的公用代码。 CAS 和 WPF 提供了几种管理此方案的方法。  
   
 <a name="Detecting_Permissions_using_CAS"></a>   
 ### <a name="detecting-permissions-using-cas"></a>使用 CAS 检测权限  
@@ -123,27 +123,27 @@ ms.locfileid: "73455315"
 > <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A> 仅区分应用程序是否在浏览器中运行，而不区分应用程序运行时使用的权限集。  
   
 <a name="Managing_Permissions"></a>   
-## <a name="managing-permissions"></a>管理权限  
+## <a name="managing-permissions"></a>Managing Permissions（管理权限）  
  默认情况下，Xbap 以部分信任的方式运行（默认 Internet 区域权限集）。 但是，根据应用程序的要求，可以更改默认的权限集。 例如，如果从本地 intranet 启动 Xbap，它可以利用增加的权限集，如下表所示。  
   
  表 3：LocalIntranet 和 Internet 权限  
   
-|权限|特性|LocalIntranet|Internet|  
+|权限|属性|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
-|DNS|访问 DNS 服务器|是|No|  
-|环境变量|读取|是|No|  
-|文件对话框|打开|是|是|  
-|文件对话框|不受限制|是|No|  
-|独立存储|按用户隔离程序集|是|No|  
+|DNS|访问 DNS 服务器|是|否|  
+|环境变量|读取|是|否|  
+|文件对话框|Open|是|是|  
+|文件对话框|无限制|是|否|  
+|独立存储|按用户隔离程序集|是|否|  
 |独立存储|未知隔离|是|是|  
-|独立存储|无限制用户配额|是|No|  
+|独立存储|无限制用户配额|是|否|  
 |媒体|安全音频、视频和图像|是|是|  
-|打印|默认打印|是|No|  
-|打印|安全打印|是|是|  
-|映像|发出|是|No|  
-|安全|托管代码执行|是|是|  
-|安全|声明授予的权限|是|No|  
-|用户界面|不受限制|是|No|  
+|正在打印|默认打印|是|否|  
+|正在打印|安全打印|是|是|  
+|映像|发出|是|否|  
+|安全性|托管代码执行|是|是|  
+|安全性|声明授予的权限|是|否|  
+|用户界面|无限制|是|否|  
 |用户界面|安全顶级窗口|是|是|  
 |用户界面|自己的剪贴板|是|是|  
 |Web 浏览器|HTML 中的安全框架导航|是|是|  
@@ -163,8 +163,8 @@ ms.locfileid: "73455315"
   
  或者，可以使用 ClickOnce 受信任部署模型从任何安全区域中进行完全信任部署。 有关详细信息，请参阅[受信任的应用程序部署概述](/visualstudio/deployment/trusted-application-deployment-overview)和[安全性](security-wpf.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Security](security-wpf.md)
+- [安全](security-wpf.md)
 - [WPF 安全策略 - 平台安全性](wpf-security-strategy-platform-security.md)
 - [WPF 安全策略 - 安全工程](wpf-security-strategy-security-engineering.md)

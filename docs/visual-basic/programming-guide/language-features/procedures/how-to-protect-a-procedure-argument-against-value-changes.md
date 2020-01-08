@@ -1,5 +1,5 @@
 ---
-title: 如何：防止过程自变量的值被更改
+title: 如何：防止过程参数的值被更改
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-ms.openlocfilehash: 36092eb597b5b20e1da42cd9d15ab8633636cfb1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 75c718c83f36e2f0b2c4cfb5504c2d740eaa3520
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344863"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347903"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>如何：防止过程自变量的值被更改 (Visual Basic)
 如果过程将参数声明为[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，Visual Basic 将为过程代码提供对调用代码中参数的基础编程元素的直接引用。 这允许过程更改调用代码中参数的基础值。 在某些情况下，调用代码可能需要防止这种更改。  
@@ -39,7 +39,7 @@ ms.locfileid: "74344863"
   
  第二个 `MsgBox` 调用显示 "replace （n）：11，21，31，41" 之后的。 由于 `n` 传递 `ByVal`，`replace` 无法通过向其分配新数组来修改调用代码中的变量 `n`。 如果 `replace` 创建新的数组实例 `k` 并将其分配给本地变量 `a`，则它将失去调用代码传入的 `n` 的引用。 当它更改 `a`的成员时，只会影响本地数组 `k`。 因此，`replace` 不会在调用代码中递增数组 `n` 的值。  
   
-## <a name="compiling-the-code"></a>编译代码  
+## <a name="compile-the-code"></a>编译代码  
  Visual Basic 中的默认值是按值传递参数。 但是，将[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)关键字用于每个声明的参数是一种好的编程做法。 这使代码更易于阅读。  
   
 ## <a name="see-also"></a>另请参阅

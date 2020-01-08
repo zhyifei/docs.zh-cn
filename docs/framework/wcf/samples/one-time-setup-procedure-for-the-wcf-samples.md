@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 示例的一次性安装过程
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 95bba89546e6667cc36fa06a0090aa8e9570fc7e
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: b0f452ba7aabcaa5ea995acba1873029c67f0f5d
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960135"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544663"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 示例的一次性安装过程
 
@@ -63,7 +63,7 @@ ms.locfileid: "74960135"
     > [!NOTE]
     > 如果未完成此步骤，IIS 承载的所有示例都将在生成时失败。 确保正确设置权限，或者同时以管理员身份运行 SDK 命令提示和 Visual Studio 命令提示 (2012)。
 
-11. 在计算机上创建一个 C:\logs 目录；某些示例可能需要此目录。 确保向合适的帐户授予了对此文件夹的写访问权限。 对于 Windows 7、Windows Vista 和 Windows Server 2008 R2，此帐户为**Network Service**。 对于 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]，该帐户为 NT Authority\Network Service。 对于 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，该帐户为 ASPNET。
+11. 在计算机上创建一个 C:\logs 目录；某些示例可能需要此目录。 确保向合适的帐户授予了对此文件夹的写访问权限。 对于 Windows 7、Windows Vista 和 Windows Server 2008 R2，此帐户为**Network Service**。 对于 Windows Server 2008，该帐户为 NT Authority\Network Service。 对于 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 Windows Server 2003，帐户为 ASPNET。
 
 12. 运行 Setupcerttool.bat 文件。 此文件位于 \<InstallPath > \ WF_WCF_Samples \WCF\Setup\ 文件夹中。  此脚本将执行以下任务：
 
