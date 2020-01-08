@@ -7,30 +7,30 @@ helpviewer_keywords:
 - localization [WPF], features
 - globalization [WPF], features
 ms.assetid: c4b484fb-bc90-4186-a08d-f081e7109cad
-ms.openlocfilehash: a2ab04f40a3299bc0cd5a17c0f31e4f4ee0433ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98368a54fad095337038236d7bfdc2123edb6be2
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010288"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559404"
 ---
-# <a name="globalization-and-localization-how-to-topics"></a><span data-ttu-id="c0ca5-102">全球化和本地化帮助主题</span><span class="sxs-lookup"><span data-stu-id="c0ca5-102">Globalization and Localization How-to Topics</span></span>
-<span data-ttu-id="c0ca5-103">在本部分中的主题介绍如何开发全球通用应用程序。</span><span class="sxs-lookup"><span data-stu-id="c0ca5-103">The topics in this section describe how to develop world-ready applications.</span></span>  
+# <a name="globalization-and-localization-how-to-topics"></a><span data-ttu-id="fe311-102">全球化和本地化帮助主题</span><span class="sxs-lookup"><span data-stu-id="fe311-102">Globalization and Localization How-to Topics</span></span>
+<span data-ttu-id="fe311-103">本节中的主题介绍如何开发全球通用的应用程序。</span><span class="sxs-lookup"><span data-stu-id="fe311-103">The topics in this section describe how to develop world-ready applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c0ca5-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="c0ca5-104">In This Section</span></span>  
- [<span data-ttu-id="c0ca5-105">对应用程序进行本地化</span><span class="sxs-lookup"><span data-stu-id="c0ca5-105">Localize an Application</span></span>](how-to-localize-an-application.md)  
- [<span data-ttu-id="c0ca5-106">使用自动布局创建按钮</span><span class="sxs-lookup"><span data-stu-id="c0ca5-106">Use Automatic Layout to Create a Button</span></span>](how-to-use-automatic-layout-to-create-a-button.md)  
- [<span data-ttu-id="c0ca5-107">使用网格进行自动布局</span><span class="sxs-lookup"><span data-stu-id="c0ca5-107">Use a Grid for Automatic Layout</span></span>](how-to-use-a-grid-for-automatic-layout.md)  
- [<span data-ttu-id="c0ca5-108">使用 ResourceDictionary 管理可本地化的字符串资源</span><span class="sxs-lookup"><span data-stu-id="c0ca5-108">Use a ResourceDictionary to Manage Localizable String Resources</span></span>](how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
- [<span data-ttu-id="c0ca5-109">在可本地化的应用程序中使用资源</span><span class="sxs-lookup"><span data-stu-id="c0ca5-109">Use Resources in Localizable Applications</span></span>](how-to-use-resources-in-localizable-applications.md)  
+## <a name="in-this-section"></a><span data-ttu-id="fe311-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="fe311-104">In This Section</span></span>  
+ [<span data-ttu-id="fe311-105">对应用程序进行本地化</span><span class="sxs-lookup"><span data-stu-id="fe311-105">Localize an Application</span></span>](how-to-localize-an-application.md)  
+ [<span data-ttu-id="fe311-106">使用自动布局创建按钮</span><span class="sxs-lookup"><span data-stu-id="fe311-106">Use Automatic Layout to Create a Button</span></span>](how-to-use-automatic-layout-to-create-a-button.md)  
+ [<span data-ttu-id="fe311-107">使用网格进行自动布局</span><span class="sxs-lookup"><span data-stu-id="fe311-107">Use a Grid for Automatic Layout</span></span>](how-to-use-a-grid-for-automatic-layout.md)  
+ [<span data-ttu-id="fe311-108">使用 ResourceDictionary 管理可本地化的字符串资源</span><span class="sxs-lookup"><span data-stu-id="fe311-108">Use a ResourceDictionary to Manage Localizable String Resources</span></span>](how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
+ [<span data-ttu-id="fe311-109">在可本地化的应用程序中使用资源</span><span class="sxs-lookup"><span data-stu-id="fe311-109">Use Resources in Localizable Applications</span></span>](how-to-use-resources-in-localizable-applications.md)  
   
-## <a name="reference"></a><span data-ttu-id="c0ca5-110">参考</span><span class="sxs-lookup"><span data-stu-id="c0ca5-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="fe311-110">引用</span><span class="sxs-lookup"><span data-stu-id="fe311-110">Reference</span></span>  
  <xref:System.Globalization>  
   
  <xref:System.Windows.FrameworkElement.FlowDirection%2A>  
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [<span data-ttu-id="c0ca5-111">XAML 中 xml:lang 的处理</span><span class="sxs-lookup"><span data-stu-id="c0ca5-111">xml:lang Handling in XAML</span></span>](../../xaml-services/xml-lang-handling-in-xaml.md)  
+ [<span data-ttu-id="fe311-111">XAML 中 xml:lang 的处理</span><span class="sxs-lookup"><span data-stu-id="fe311-111">xml:lang Handling in XAML</span></span>](../../../desktop-wpf/xaml-services/xml-language-handling.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="c0ca5-112">相关章节</span><span class="sxs-lookup"><span data-stu-id="c0ca5-112">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="fe311-112">相关章节</span><span class="sxs-lookup"><span data-stu-id="fe311-112">Related Sections</span></span>

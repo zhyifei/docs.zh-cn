@@ -10,27 +10,27 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: ae4d7f23729f5bd39558902a58d33c6c45572d85
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a702456895cfdbd44a58059befefb69deee5afa3
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977010"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636193"
 ---
-# <a name="extend-glass-frame-into-a-wpf-application"></a><span data-ttu-id="281d4-102">将玻璃框扩展到 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="281d4-102">Extend Glass Frame Into a WPF Application</span></span>
+# <a name="extend-glass-frame-into-a-wpf-application"></a><span data-ttu-id="0b306-102">将玻璃框扩展到 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="0b306-102">Extend Glass Frame Into a WPF Application</span></span>
 
-<span data-ttu-id="281d4-103">本主题演示如何将 Windows Vista 玻璃框架扩展到 Windows Presentation Foundation （WPF）应用程序的工作区。</span><span class="sxs-lookup"><span data-stu-id="281d4-103">This topic demonstrates how to extend the Windows Vista glass frame into the client area of a Windows Presentation Foundation (WPF) application.</span></span>
+<span data-ttu-id="0b306-103">本主题演示如何将 Windows Vista 玻璃框架扩展到 Windows Presentation Foundation （WPF）应用程序的工作区。</span><span class="sxs-lookup"><span data-stu-id="0b306-103">This topic demonstrates how to extend the Windows Vista glass frame into the client area of a Windows Presentation Foundation (WPF) application.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="281d4-104">此示例仅适用于运行启用了玻璃的桌面窗口管理器（DWM）的 Windows Vista 计算机。</span><span class="sxs-lookup"><span data-stu-id="281d4-104">This example will only work on a Windows Vista machine running the Desktop Window Manager (DWM) with glass enabled.</span></span> <span data-ttu-id="281d4-105">Windows Vista Home Basic 版本不支持透明玻璃效果。</span><span class="sxs-lookup"><span data-stu-id="281d4-105">Windows Vista Home Basic edition does not support the transparent glass effect.</span></span> <span data-ttu-id="281d4-106">通常会在其他版本的 Windows Vista 上呈现透明玻璃效果的区域呈现为不透明。</span><span class="sxs-lookup"><span data-stu-id="281d4-106">Areas that would typically render with the transparent glass effect on other editions of Windows Vista are rendered opaque.</span></span>
+> <span data-ttu-id="0b306-104">此示例仅适用于运行启用了玻璃的桌面窗口管理器（DWM）的 Windows Vista 计算机。</span><span class="sxs-lookup"><span data-stu-id="0b306-104">This example will only work on a Windows Vista machine running the Desktop Window Manager (DWM) with glass enabled.</span></span> <span data-ttu-id="0b306-105">Windows Vista Home Basic 版本不支持透明玻璃效果。</span><span class="sxs-lookup"><span data-stu-id="0b306-105">Windows Vista Home Basic edition does not support the transparent glass effect.</span></span> <span data-ttu-id="0b306-106">通常会在其他版本的 Windows Vista 上呈现透明玻璃效果的区域呈现为不透明。</span><span class="sxs-lookup"><span data-stu-id="0b306-106">Areas that would typically render with the transparent glass effect on other editions of Windows Vista are rendered opaque.</span></span>
 
-## <a name="example"></a><span data-ttu-id="281d4-107">示例</span><span class="sxs-lookup"><span data-stu-id="281d4-107">Example</span></span>
+## <a name="example"></a><span data-ttu-id="0b306-107">示例</span><span class="sxs-lookup"><span data-stu-id="0b306-107">Example</span></span>
 
-<span data-ttu-id="281d4-108">下图说明了扩展到 Internet Explorer 7 的地址栏中的玻璃框：</span><span class="sxs-lookup"><span data-stu-id="281d4-108">The following image illustrates the glass frame extended into the address bar of Internet Explorer 7:</span></span>
+<span data-ttu-id="0b306-108">下图说明了扩展到 Internet Explorer 7 的地址栏中的玻璃框：</span><span class="sxs-lookup"><span data-stu-id="0b306-108">The following image illustrates the glass frame extended into the address bar of Internet Explorer 7:</span></span>
 
 ![显示在 IE7 地址栏后扩展的玻璃帧的屏幕截图。](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-<span data-ttu-id="281d4-110">若要在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序上扩展玻璃帧，需要访问非托管 API。</span><span class="sxs-lookup"><span data-stu-id="281d4-110">To extend the glass frame on a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application, access to unmanaged API is needed.</span></span> <span data-ttu-id="281d4-111">下面的代码示例为两个 API 执行平台调用（pinvoke），以将框架扩展到工作区。</span><span class="sxs-lookup"><span data-stu-id="281d4-111">The following code example does a Platform Invoke (pinvoke) for the two API needed to extend the frame into the client area.</span></span> <span data-ttu-id="281d4-112">其中每个 API 在名为**NonClientRegionAPI**的类中声明。</span><span class="sxs-lookup"><span data-stu-id="281d4-112">Each of these API are declared in a class called **NonClientRegionAPI**.</span></span>
+<span data-ttu-id="0b306-110">若要在 WPF 应用程序上扩展玻璃帧，需要访问非托管 API。</span><span class="sxs-lookup"><span data-stu-id="0b306-110">To extend the glass frame on a WPF application, access to unmanaged API is needed.</span></span> <span data-ttu-id="0b306-111">下面的代码示例为两个 API 执行平台调用（pinvoke），以将框架扩展到工作区。</span><span class="sxs-lookup"><span data-stu-id="0b306-111">The following code example does a Platform Invoke (pinvoke) for the two API needed to extend the frame into the client area.</span></span> <span data-ttu-id="0b306-112">其中每个 API 在名为**NonClientRegionAPI**的类中声明。</span><span class="sxs-lookup"><span data-stu-id="0b306-112">Each of these API are declared in a class called **NonClientRegionAPI**.</span></span>
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]
@@ -62,11 +62,11 @@ Public Shared Function DwmExtendFrameIntoClientArea(ByVal hwnd As IntPtr, ByRef 
 End Function
 ```
 
-<span data-ttu-id="281d4-113">[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) 是将框扩展到工作区的 DWM 函数。</span><span class="sxs-lookup"><span data-stu-id="281d4-113">[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) is the DWM function that extends the frame into the client area.</span></span> <span data-ttu-id="281d4-114">它采用两个参数：一个窗口句柄和一个 [MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) 结构。</span><span class="sxs-lookup"><span data-stu-id="281d4-114">It takes two parameters; a window handle and a [MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) structure.</span></span> <span data-ttu-id="281d4-115">[MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) 用于告知 DWM 应向工作区扩展多少额外框。</span><span class="sxs-lookup"><span data-stu-id="281d4-115">[MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) is used to tell the DWM how much extra the frame should be extended into the client area.</span></span>
+<span data-ttu-id="0b306-113">[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) 是将框扩展到工作区的 DWM 函数。</span><span class="sxs-lookup"><span data-stu-id="0b306-113">[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) is the DWM function that extends the frame into the client area.</span></span> <span data-ttu-id="0b306-114">它采用两个参数：一个窗口句柄和一个 [MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) 结构。</span><span class="sxs-lookup"><span data-stu-id="0b306-114">It takes two parameters; a window handle and a [MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) structure.</span></span> <span data-ttu-id="0b306-115">[MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) 用于告知 DWM 应向工作区扩展多少额外框。</span><span class="sxs-lookup"><span data-stu-id="0b306-115">[MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) is used to tell the DWM how much extra the frame should be extended into the client area.</span></span>
 
-## <a name="example"></a><span data-ttu-id="281d4-116">示例</span><span class="sxs-lookup"><span data-stu-id="281d4-116">Example</span></span>
+## <a name="example"></a><span data-ttu-id="0b306-116">示例</span><span class="sxs-lookup"><span data-stu-id="0b306-116">Example</span></span>
 
-<span data-ttu-id="281d4-117">若要使用 [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) 函数，必须获取窗口句柄。</span><span class="sxs-lookup"><span data-stu-id="281d4-117">To use the [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) function, a window handle must be obtained.</span></span> <span data-ttu-id="281d4-118">在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中，可以从 <xref:System.Windows.Interop.HwndSource>的 <xref:System.Windows.Interop.HwndSource.Handle%2A> 属性中获取窗口句柄。</span><span class="sxs-lookup"><span data-stu-id="281d4-118">In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], the window handle can be obtained from the <xref:System.Windows.Interop.HwndSource.Handle%2A> property of an <xref:System.Windows.Interop.HwndSource>.</span></span> <span data-ttu-id="281d4-119">在下面的示例中，框架扩展到窗口的 <xref:System.Windows.FrameworkElement.Loaded> 事件的工作区中。</span><span class="sxs-lookup"><span data-stu-id="281d4-119">In the following example, the frame is extended into the client area on the <xref:System.Windows.FrameworkElement.Loaded> event of the window.</span></span>
+<span data-ttu-id="0b306-117">若要使用 [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) 函数，必须获取窗口句柄。</span><span class="sxs-lookup"><span data-stu-id="0b306-117">To use the [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) function, a window handle must be obtained.</span></span> <span data-ttu-id="0b306-118">在 WPF 中，可以从 <xref:System.Windows.Interop.HwndSource>的 <xref:System.Windows.Interop.HwndSource.Handle%2A> 属性获取窗口句柄。</span><span class="sxs-lookup"><span data-stu-id="0b306-118">In WPF, the window handle can be obtained from the <xref:System.Windows.Interop.HwndSource.Handle%2A> property of an <xref:System.Windows.Interop.HwndSource>.</span></span> <span data-ttu-id="0b306-119">在下面的示例中，框架扩展到窗口的 <xref:System.Windows.FrameworkElement.Loaded> 事件的工作区中。</span><span class="sxs-lookup"><span data-stu-id="0b306-119">In the following example, the frame is extended into the client area on the <xref:System.Windows.FrameworkElement.Loaded> event of the window.</span></span>
 
 ```csharp
 void OnLoaded(object sender, RoutedEventArgs e)
@@ -109,9 +109,9 @@ void OnLoaded(object sender, RoutedEventArgs e)
 }
 ```
 
-## <a name="example"></a><span data-ttu-id="281d4-120">示例</span><span class="sxs-lookup"><span data-stu-id="281d4-120">Example</span></span>
+## <a name="example"></a><span data-ttu-id="0b306-120">示例</span><span class="sxs-lookup"><span data-stu-id="0b306-120">Example</span></span>
 
-<span data-ttu-id="281d4-121">以下示例演示一个简单的窗口，在该窗口中框扩展到工作区。</span><span class="sxs-lookup"><span data-stu-id="281d4-121">The following example shows a simple window in which the frame is extended into the client area.</span></span> <span data-ttu-id="281d4-122">框架在包含两个 <xref:System.Windows.Controls.TextBox> 对象的上边框的上方扩展。</span><span class="sxs-lookup"><span data-stu-id="281d4-122">The frame is extended behind the top border that contains the two <xref:System.Windows.Controls.TextBox> objects.</span></span>
+<span data-ttu-id="0b306-121">以下示例演示一个简单的窗口，在该窗口中框扩展到工作区。</span><span class="sxs-lookup"><span data-stu-id="0b306-121">The following example shows a simple window in which the frame is extended into the client area.</span></span> <span data-ttu-id="0b306-122">框架在包含两个 <xref:System.Windows.Controls.TextBox> 对象的上边框的上方扩展。</span><span class="sxs-lookup"><span data-stu-id="0b306-122">The frame is extended behind the top border that contains the two <xref:System.Windows.Controls.TextBox> objects.</span></span>
 
 ```xaml
 <Window x:Class="SDKSample.Window1"
@@ -145,12 +145,12 @@ void OnLoaded(object sender, RoutedEventArgs e)
 </Window>
 ```
 
-<span data-ttu-id="281d4-123">下图说明扩展到 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序中的玻璃帧：</span><span class="sxs-lookup"><span data-stu-id="281d4-123">The following image illustrates the glass frame extended into a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application:</span></span>
+<span data-ttu-id="0b306-123">下图说明扩展到 WPF 应用程序中的玻璃帧：</span><span class="sxs-lookup"><span data-stu-id="0b306-123">The following image illustrates the glass frame extended into a WPF application:</span></span>
 
 ![显示扩展到 WPF 应用程序中的玻璃框的屏幕截图。](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
-## <a name="see-also"></a><span data-ttu-id="281d4-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="281d4-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b306-125">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0b306-125">See also</span></span>
 
-- [<span data-ttu-id="281d4-126">桌面窗口管理器概述</span><span class="sxs-lookup"><span data-stu-id="281d4-126">Desktop Window Manager Overview</span></span>](/windows/desktop/dwm/dwm-overview)
-- [<span data-ttu-id="281d4-127">桌面窗口管理器模糊概述</span><span class="sxs-lookup"><span data-stu-id="281d4-127">Desktop Window Manager Blur Overview</span></span>](/windows/desktop/dwm/blur-ovw)
-- [<span data-ttu-id="281d4-128">DwmExtendFrameIntoClientArea</span><span class="sxs-lookup"><span data-stu-id="281d4-128">DwmExtendFrameIntoClientArea</span></span>](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)
+- [<span data-ttu-id="0b306-126">桌面窗口管理器概述</span><span class="sxs-lookup"><span data-stu-id="0b306-126">Desktop Window Manager Overview</span></span>](/windows/desktop/dwm/dwm-overview)
+- [<span data-ttu-id="0b306-127">桌面窗口管理器模糊概述</span><span class="sxs-lookup"><span data-stu-id="0b306-127">Desktop Window Manager Blur Overview</span></span>](/windows/desktop/dwm/blur-ovw)
+- [<span data-ttu-id="0b306-128">DwmExtendFrameIntoClientArea</span><span class="sxs-lookup"><span data-stu-id="0b306-128">DwmExtendFrameIntoClientArea</span></span>](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)
