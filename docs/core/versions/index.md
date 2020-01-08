@@ -3,13 +3,12 @@ title: 如何对 .NET Core 运行时和 SDK 进行版本控制
 description: 本文介绍了 .NET Core SDK 和运行时的版本控制方式（类似于语义版本控制）。
 author: bleroy
 ms.date: 07/26/2018
-ms.custom: seodec18
-ms.openlocfilehash: cc3a834fdb6347f2cfd93b2c8daeae5bcc222575
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5096ec0e4e60569b774711d95f4a69e4f8d2d2cc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342916"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713965"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 的版本控制方式概述
 

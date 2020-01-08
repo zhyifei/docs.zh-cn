@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4c7ffa98aec115db2d8c9a40e977f8cb7d33441a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 30660c2fb89fd3738abb05122a5daf175677265c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962984"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711241"
 ---
 # <a name="thread-safe-collections"></a>线程安全集合
 .NET Framework 4 引入了 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间，其中包含多个线程安全且可缩放的集合类。 多个线程可以安全高效地从这些集合添加或删除项，而无需在用户代码中进行其他同步。 编写新代码时，只要将多个线程同时写入到集合时，就使用并发集合类。 如果仅从共享集合进行读取，则可使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间中的类。 建议不要使用 1.0 集合类，除非需要定位 .NET Framework 1.1 或更低版本运行时。  
@@ -34,7 +32,7 @@ ms.locfileid: "69962984"
   
  下表列出了 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间中的集合类型。  
   
-|类型|说明|  
+|类型|描述|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601>|为实现 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> 的所有类型提供限制和阻止功能。 有关详细信息，请参阅 [BlockingCollection 概述](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)。|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602>|键值对字典的线程安全实现。|  
@@ -45,7 +43,7 @@ ms.locfileid: "69962984"
   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|说明|  
+|Title|描述|  
 |-----------|-----------------|  
 |[BlockingCollection 概述](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|描述 <xref:System.Collections.Concurrent.BlockingCollection%601> 类型提供的功能。|  
 |[如何：在 ConcurrentDictionary 中添加和移除项](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|描述如何从 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 添加和删除元素|  

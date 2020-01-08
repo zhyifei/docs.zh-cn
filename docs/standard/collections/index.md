@@ -10,14 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bb231df9ed33b89fa15cde998379b2964cf32ff9
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 9b868bd5ed77788cd9b44c11623ae38eba58153c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204774"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711358"
 ---
 # <a name="collections-and-data-structures"></a>集合和数据结构
 类似的数据在作为集合而存储和操作时通常可以得到更高效地处理。 可使用 <xref:System.Array?displayProperty=nameWithType> 类或 <xref:System.Collections>、<xref:System.Collections.Generic>、 <xref:System.Collections.Concurrent> 和 System.Collections.Immutable 命令空间中的类来添加、移除和修改集合中的单个元素或一系列元素。  
@@ -74,7 +72,7 @@ ms.locfileid: "74204774"
 <a name="BKMK_RelatedTopics"></a>   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|说明|  
+|Title|描述|  
 |-----------|-----------------|  
 |[选择集合类](../../../docs/standard/collections/selecting-a-collection-class.md)|描述不同的集合并帮助你为你的方案选择一个集合。|  
 |[常用的集合类型](../../../docs/standard/collections/commonly-used-collection-types.md)|描述诸如 <xref:System.Array?displayProperty=nameWithType>、<xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 等常用泛型和非泛型集合类型。|  

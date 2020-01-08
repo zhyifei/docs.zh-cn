@@ -4,16 +4,16 @@ description: .NET Core 是一种高性能的模块化 .NET 实现，用于创建
 author: richlander
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 80a3b12972e24c3022ac2aa14406aa60635815a3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3db98d21a7cdc80d8a98b23782a81ffa37520937
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341356"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740746"
 ---
 # <a name="net-core-guide"></a>.NET Core 指南
 
-[.NET Core](about.md) 是[开放源代码](https://github.com/dotnet/coreclr/blob/master/LICENSE.TXT)通用开发平台，由 Microsoft 和 .NET 社区在 [GitHub](https://github.com/dotnet/core) 上共同维护。 它跨平台（支持 Windows、macOS 和 Linux），并且可用于生成设备、云和 IoT 应用程序。
+[.NET Core](about.md) 是[开放源代码](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)通用开发平台，由 Microsoft 和 .NET 社区在 [GitHub](https://github.com/dotnet/core) 上共同维护。 它跨平台（支持 Windows、macOS 和 Linux），并且可用于生成设备、云和 IoT 应用程序。
 
 请参阅[关于 .NET Core](about.md)，详细了解 .NET Core，包括它的特征、支持的语言和框架以及关键 API。
 

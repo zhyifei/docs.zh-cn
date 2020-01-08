@@ -3,14 +3,12 @@ title: XML 文档和数据
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 60614a95e4091b4d7bd9ae3a71e2ddeca53e29ba
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e0c3f3e99b06b65caf79d87a7831369f6fb33b08
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424857"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710786"
 ---
 # <a name="xml-documents-and-data"></a>XML 文档和数据
 
@@ -28,7 +26,7 @@ ms.locfileid: "73424857"
 
 若要查看完整的列表，请在 [.NET API 浏览器](https://docs.microsoft.com/dotnet/api/?term=system.xml)上搜索“System.Xml”。
 
-这些命名空间中的类支持万维网联合会 (W3C) 建议。 例如:
+这些命名空间中的类支持万维网联合会 (W3C) 建议。 例如：
 
 - <xref:System.Xml.XmlDocument?displayProperty=nameWithType> 类可实现 [W3C 文档对象模型 (DOM) 级别 1 核心](https://www.w3.org/TR/REC-DOM-Level-1/)和 [DOM 级别 2 核心](https://www.w3.org/TR/DOM-Level-2-Core/)建议。
 

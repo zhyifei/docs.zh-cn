@@ -1,17 +1,16 @@
 ---
 title: 字符串 - C# 编程指南
-ms.custom: seodec18
 ms.date: 06/27/2019
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 46820fe4137f5080b956cd1345d3e95c2e06f9ca
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: dd76450c2a6a1726d630285f652d252c5f66183f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635075"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711904"
 ---
 # <a name="strings-c-programming-guide"></a>字符串（C# 编程指南）
 字符串是值为文本的 <xref:System.String> 类型对象。 文本在内部存储为 <xref:System.Char> 对象的依序只读集合。 在 C# 字符串末尾没有 null 终止字符；因此，一个 C# 字符串可以包含任何数量的嵌入的 null 字符 ('\0')。 字符串的 <xref:System.String.Length%2A> 属性表示其包含的 `Char` 对象数量，而非 Unicode 字符数。 若要访问字符串中的各个 Unicode 码位，请使用 <xref:System.Globalization.StringInfo> 对象。  

@@ -1,6 +1,5 @@
 ---
 title: 类和结构 - C# 编程指南
-ms.custom: seodec18
 description: 介绍了如何在 C# 中使用类和结构。
 ms.date: 01/17/2016
 helpviewer_keywords:
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: c0b7e52cbbf0b49dee3598239f96e113ba929a80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 301ba292010470208e92a225c1014bcb50497106
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922259"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714825"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>类和结构（C# 编程指南）
 类和结构是 .NET Framework 通用类型系统的两种基本构造。 每种本质上都是一种数据结构，其中封装了同属一个逻辑单元的一组数据和行为。 数据和行为是类或结构的*成员*，包括方法、属性和事件等（此主题稍后将具体列举）。  

@@ -2,13 +2,12 @@
 title: .NET Core 命令行接口 (CLI) 工具
 description: 概述了 .NET Core 命令行接口 (CLI) 工具和功能。
 ms.date: 08/14/2017
-ms.custom: seodec18
-ms.openlocfilehash: 4ff5cfd6c5a70c92387911ab87ddea5cee80275e
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: b3bffb47ff973bd0da90e3f943e817756e563138
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117386"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714141"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令行接口 (CLI) 工具
 
@@ -128,7 +127,7 @@ dotnet /build_output/my_app.dll
 
 若要运行依赖于框架的应用，请在驱动程序后指定应用，例如，`dotnet /path/to/my_app.dll`。 从应用的 DLL 驻留的文件夹执行命令时，只需执行 `dotnet my_app.dll` 即可。 如果要使用特定版本的 .NET Core 运行时，请使用 `--fx-version <VERSION>` 选项（请参阅 [dotnet 命令](dotnet.md)参考）。
 
-为驱动程序提供命令时，`dotnet.exe` 启动 CLI 命令执行过程。 例如:
+为驱动程序提供命令时，`dotnet.exe` 启动 CLI 命令执行过程。 例如：
 
 ```dotnetcli
 dotnet build

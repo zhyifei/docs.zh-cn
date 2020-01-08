@@ -2,13 +2,12 @@
 title: .NET Core 应用程序部署
 description: 了解有关部署 .NET Core 应用程序的方式。
 ms.date: 12/03/2018
-ms.custom: seodec18
-ms.openlocfilehash: fd15d41065b0a6ecb1a0bf04a0f0ab292a0a5fb7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 41c5285f2a9ddf38e4be7326bd5cba1c58370fe7
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089198"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740819"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core 应用程序部署
 
@@ -64,7 +63,7 @@ FDD 和 SCD 部署使用单独的主机可执行文件，使你可以使用发�
 
 - 部署包相对较大，因为需要将 .NET Core 和应用及其第三方依赖项包括在内。
 
-  从.NET Core 2.0 开始，可以通过使用 .NET Core [*全球化固定模式*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)在 Linux 系统上减少大约 28 MB 的部署大小。 通常，Linux 上的 .NET Core 依赖于 [ICU 库](http://icu-project.org)来实现全球化支持。 在固定模式下，库不包含在部署中，并且所有区域性的行为均类似于[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)。
+  从.NET Core 2.0 开始，可以通过使用 .NET Core [*全球化固定模式*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)在 Linux 系统上减少大约 28 MB 的部署大小。 通常，Linux 上的 .NET Core 依赖于 [ICU 库](http://icu-project.org)来实现全球化支持。 在固定模式下，库不包含在部署中，并且所有区域性的行为均类似于[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)。
 
 - 向系统部署大量独立的 .NET Core 应用可能会使用大量磁盘空间，因为每个应用都会复制 .NET Core 文件。
 

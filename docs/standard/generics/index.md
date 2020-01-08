@@ -26,14 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0eb88b8f46d425ae840c2bf8ed8eb479971d1cbc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: f04b6fcd1641a53efe75d38ab7122967bff6a58d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974664"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708366"
 ---
 # <a name="generics-in-net"></a>.NET 中的泛型
 
@@ -63,7 +61,7 @@ ms.locfileid: "73974664"
   
 - *泛型类型实参* 是被泛型类型形参所替代的任何类型。  
   
-- 一般术语 *泛型类型* 包括构造类型和泛型类型定义。  
+- 常见术语*泛型类型*包括构造类型和泛型类型定义。  
   
 - 借助泛型类型参数的*协变*和*逆变*，可以使用类型自变量的派生程度比目标构造类型更高（协变）或更低（逆变）的构造泛型类型。 协变和逆变统称为“变体”  。 有关详细信息，请参阅[协变和逆变](../../../docs/standard/generics/covariance-and-contravariance.md)。  
   
@@ -133,7 +131,7 @@ ms.locfileid: "73974664"
 
 ## <a name="related-topics"></a>相关主题  
   
-|Title|说明|  
+|Title|描述|  
 |-----------|-----------------|  
 |[.NET 中的泛型集合](../../../docs/standard/generics/collections.md)|介绍了 .NET 中的泛型集合类和其他泛型类型。|  
 |[用于控制数组和列表的泛型委托](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|描述用于转换、搜索谓词以及要对数组或集合中的元素执行的操作的泛型委托。|  
@@ -142,7 +140,7 @@ ms.locfileid: "73974664"
 |[常用的集合类型](../../../docs/standard/collections/commonly-used-collection-types.md)|总结了 .NET 中集合类型（包括泛型类型）的特征和使用方案。|  
 |[何时使用泛型集合](../../../docs/standard/collections/when-to-use-generic-collections.md)|描述用于确定何时使用泛型集合类型的一般规则。|  
 |[如何：使用反射发出定义泛型类型](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|解释如何生成包括泛型类型和方法的动态程序集。|  
-|[Visual Basic 中的泛型类型](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|为 Visual Basic 用户描述泛型功能，包括有关使用和定义泛型类型的帮助主题。|  
+|[Generic Types in Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|为 Visual Basic 用户描述泛型功能，包括有关使用和定义泛型类型的帮助主题。|  
 |[泛型介绍](../../csharp/programming-guide/generics/index.md)|为 C# 用户概述定义和使用泛型类型。|  
 |[Visual C++ 中的泛型概述](/cpp/windows/overview-of-generics-in-visual-cpp)|为 C++ 用户描述泛型功能，包括泛型和模板之间的差异。|  
 

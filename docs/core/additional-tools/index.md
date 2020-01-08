@@ -3,13 +3,13 @@ title: 其他 CLI 工具
 description: 概述了可安装的支持和扩展 .NET Core 功能的其他工具。
 author: mlacouture
 ms.date: 12/02/2019
-ms.custom: mvc, seodec18
-ms.openlocfilehash: 39c2dd6de8e9a8faad0ab19bd162f09abf6801eb
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.custom: mvc
+ms.openlocfilehash: 1f066523a24d4e1fd7aaaa5a19e8d6c9d72d35af
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344121"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714539"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core 附加工具概述
 

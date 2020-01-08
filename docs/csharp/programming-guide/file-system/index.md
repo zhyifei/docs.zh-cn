@@ -1,18 +1,17 @@
 ---
 title: 文件系统和注册表 - C# 编程指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file system [C#]
 - registry [C#]
 - files [C#]
 ms.assetid: 0f2511cf-2b02-4b41-b001-b1754677c38f
-ms.openlocfilehash: 3e78d49881a4def5fe9c70ecfe890c8ffee811e8
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 2540c816a102a7f11f1f103b993194cccf0f4688
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635296"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75704516"
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>文件系统和注册表（C# 编程指南）
 下面各主题介绍了如何使用 C# 和 .NET Framework 对文件、文件夹和注册表执行各种基本操作。  

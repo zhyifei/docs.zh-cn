@@ -1,6 +1,5 @@
 ---
 title: 索引器 - C# 编程指南
-ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
 - cs.indexers
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 02dc8c21b86438c801fb151d9f02a223b60d6197
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c00f506a682ec5d9805537b80159fd41d2174b67
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423237"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75702943"
 ---
 # <a name="indexers-c-programming-guide"></a>索引器（C# 编程指南）
 
@@ -34,7 +33,7 @@ ms.locfileid: "73423237"
 
 请注意，`=>` 引入了表达式主体，并未使用 `get` 关键字。 
 
-自 C# 7.0 起，get 和 set 访问器均可作为表达式主体成员实现。 在这种情况下，必须使用 `get` 和 `set` 关键字。 例如:
+自 C# 7.0 起，get 和 set 访问器均可作为表达式主体成员实现。 在这种情况下，必须使用 `get` 和 `set` 关键字。 例如：
 
 [!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   
