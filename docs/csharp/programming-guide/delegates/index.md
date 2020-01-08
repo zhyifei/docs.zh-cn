@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: a0c5592f2f4cca8173f9b777f2c3f14fe468feac
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ca660e6485c492ea7883503be4a98e1b7000427a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423304"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346366"
 ---
 # <a name="delegates-c-programming-guide"></a>委托（C# 编程指南）
 [委托](../../language-reference/builtin-types/reference-types.md)是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实例与任何具有兼容签名和返回类型的方法相关联。 你可以通过委托实例调用方法。  
@@ -52,9 +52,9 @@ ms.locfileid: "73423304"
   
 - [使用委托中的变体](../concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
-- [如何：合并委托（多播委托）](./how-to-combine-delegates-multicast-delegates.md)  
+- [如何合并委托（多播委托）](./how-to-combine-delegates-multicast-delegates.md)  
   
-- [如何：声明、实例化和使用委托](./how-to-declare-instantiate-and-use-a-delegate.md)  
+- [如何声明、实例化和使用委托](./how-to-declare-instantiate-and-use-a-delegate.md)
 
 ## <a name="c-language-specification"></a>C# 语言规范  
 

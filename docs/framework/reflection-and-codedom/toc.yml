@@ -1,7 +1,7 @@
 - name: 动态编程
   href: index.md
   items:
-    - name: 映像
+    - name: 反射
       href: reflection.md
       items:
         - name: 查看类型信息
@@ -44,13 +44,14 @@
     - name: 动态语言运行时概述
       href: dynamic-language-runtime-overview.md
     - name: 动态源代码生成和编译
-      href: dynamic-source-code-generation-and-compilation.md
       items:
-        - name: 使用 CodeDom
+        - name: 概述
+          href: dynamic-source-code-generation-and-compilation.md
+        - name: 使用 CodeDOM
           href: using-the-codedom.md
-        - name: 在 CodeDOM 图中生成和编译源代码
+        - name: 根据 CodeDOM 图生成和编译源代码
           href: generating-and-compiling-source-code-from-a-codedom-graph.md
-        - name: 如何：使用 CodeDOM 创建 XML 文档文件
+        - name: 使用 CodeDOM 创建 XML 文档文件
           href: how-to-create-an-xml-documentation-file-using-codedom.md
-        - name: 如何：使用 CodeDOM 创建类
+        - name: 使用 CodeDOM 创建类
           href: how-to-create-a-class-using-codedom.md

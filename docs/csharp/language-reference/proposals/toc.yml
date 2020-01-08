@@ -78,3 +78,5 @@
           href: ../../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
         - name: 只读实例成员
           href: ../../../../_csharplang/proposals/csharp-8.0/readonly-instance-members.md
+        - name: 嵌套 stackalloc
+          href: ../../../../_csharplang/proposals/csharp-8.0/nested-stackalloc.md

@@ -1,28 +1,33 @@
 ---
-title: .NET Core 附加 CLI 工具
+title: 其他 CLI 工具
 description: 概述了可安装的支持和扩展 .NET Core 功能的其他工具。
 author: mlacouture
-ms.date: 11/27/2018
+ms.date: 12/02/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: c885d6f6b0417a80dd6e26afe9572766738c5b4b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 39c2dd6de8e9a8faad0ab19bd162f09abf6801eb
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771972"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344121"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core 附加工具概述
 
 本节除了 [.NET Core 命令行接口 (CLI)](../tools/index.md) 工具外，还编译了可支持和扩展 .NET Core 功能的工具列表。
 
+## <a name="net-core-uninstall-tooluninstall-toolmd"></a>[.NET Core 卸载工具](uninstall-tool.md)
+
+使用 [.NET Core 卸载工具](https://dotnet.microsoft.com/download/dotnet-core/uninstall-tool) (`dotnet-core-uninstall`)，可清理系统上的 .NET Core SDK 和运行时，以便仅保留指定的版本。 可使用选项集合来指定要卸载的版本。
+
 ## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[WCF Web 服务引用工具](wcf-web-service-reference-guide.md)
 
-WCF (Windows Communication Foundation) Web 服务引用是一个 Visual Studio 连接服务提供程序，首次推出是在 [Visual Studio 2017 版本 15.5](/visualstudio/releasenotes/vs2017-relnotes-v15.5#WCFTools) 中。 此工具可从网络位置上的当前解决方案中的 Web 服务中或从 WSDL 文件中检索元数据，并生成与 .NET Core 兼容的源文件，此文件通过可用于访问 Web 服务操作的方法定义了 WCF 代理类。
+WCF (Windows Communication Foundation) Web 服务引用是一个 Visual Studio 连接服务提供程序，首次推出是在 [Visual Studio 2017 版本 15.5](/visualstudio/releasenotes/vs2017-relnotes-v15.5#WCFTools) 中。 此工具可从网络位置上当前解决方案的 Web 服务中，或从 WSDL 文件中检索元数据。 还可生成与 .NET Core 兼容的源文件并使用可用于访问 Web 服务操作的方法定义 WCF 代理类。
 
 ## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[WCF dotnet-svcutil 工具](dotnet-svcutil-guide.md)
 
-WCF (Windows Communication Foundation) dotnet-svcutil 工具是一种 .NET Core CLI 工具，此工具从网络位置上的 Web 服务中或从 WSDL 文件中检索元数据，并生成与 .NET Core 兼容的源文件，此文件通过可用于访问 Web 服务操作的方法定义了 WCF 代理类。
-dotnet-svcutil 工具是 [WCF Web 服务引用](wcf-web-service-reference-guide.md) Visual Studio 连接服务提供程序（随 Visual Studio 2017 版本 15.5 首次推出）的替代选项   。 dotnet-svcutil  工具作为一种 .NET Core CLI 工具，可跨平台地用于 Linux、macOS 和 Windows。
+WCF (Windows Communication Foundation) dotnet-svcutil.exe 工具是一种 .NET Core CLI 工具，可从网络位置上的 Web 服务中或从 WSDL 文件中检索元数据。 还可生成与 .NET Core 兼容的源文件并使用可用于访问 Web 服务操作的方法定义 WCF 代理类。
+
+dotnet-svcutil 工具是 [WCF Web 服务引用](wcf-web-service-reference-guide.md) Visual Studio 连接服务提供程序（随 Visual Studio 2017 版本 15.5 首次推出）的替代选项   。 dotnet-svcutil 工具作为一种 .NET Core CLI 工具，可跨平台用于 Linux、macOS 和 Windows  。
 
 ## <a name="wcf-dotnet-svcutilxmlserializer-tooldotnet-svcutilxmlserializer-guidemd"></a>[WCF dotnet-svcutil.xmlserializer 工具](dotnet-svcutil.xmlserializer-guide.md)
 

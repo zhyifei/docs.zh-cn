@@ -6,30 +6,30 @@ helpviewer_keywords:
 - getting started, Visual C#
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 7ea84f9bb815b7080625508bd28364bc75255afe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6255720ad5a23bdee7fe46a6c4b9c76f045b2d06
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099957"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342780"
 ---
 # <a name="get-started-with-c"></a>C\# 入门
 
-此部分包含简短的教程，可帮助你快速生成 C# .NET Core 应用程序。 可阅读 Visual Studio 2017 和 Visual Studio Code 的入门主题。 这些文章假定你具有一些编程体验。 如果不熟悉编程，请尝试我们的交互式教程 [C# 简介](../tutorials/intro-to-csharp/index.md)。
+此部分包含简短的教程，可帮助你快速生成 C# .NET Core 应用程序。 其中包括有关 Visual Studio 和 Visual Studio Code 的入门主题。 这些文章假定你具有一些编程体验。 如果不熟悉编程，请尝试我们的交互式教程 [C# 简介](../tutorials/intro-to-csharp/index.md)。
 
 具体包含以下主题：
 
-- [C# 语言和 .NET Framework 介绍](introduction-to-the-csharp-language-and-the-net-framework.md)
+- [C# 语言和 .NET Framework 简介](introduction-to-the-csharp-language-and-the-net-framework.md)
 
      概述了 C# 语言和 .NET。
 
-- [使用 Visual Studio 2017 生成 C# .NET Core Hello World 应用程序](../../core/tutorials/with-visual-studio.md)
+- [在 Visual Studio 中使用 .NET Core 创建 C# Hello World 应用程序](../../core/tutorials/with-visual-studio.md)
 
    Visual Studio 使你能够在适用于 Windows 或 Mac 的集成开发环境中执行应用程序的代码编写、编译、运行、调试、分析和发布。
 
    此主题介绍了如何创建并运行简单的 Hello World 应用程序，然后将其修改为更具交互性的 Hello World 应用程序。 完成应用程序生成和运行后，还可以了解如何[调试](../../core/tutorials/debugging-with-visual-studio.md)和[发布](../../core/tutorials/publishing-with-visual-studio.md)应用程序，使其能够在 .NET Code 支持的任意平台上运行。
 
-- [使用 Visual Studio 2017 生成 C# .NET Core 类库](../../core/tutorials/library-with-visual-studio.md)
+- [在 Visual Studio 中使用 C# 和 .NET Standard 生成类库](../../core/tutorials/library-with-visual-studio.md)
 
    使用类库，可以定义能够从另一应用程序调用的类型和类型成员。 此主题介绍了如何创建类库，其中包含一个用于确定字符串是否以大写字母开头的方法。 生成完类库后，便可以开发[单元测试](../../core/tutorials/testing-library-with-visual-studio.md)来确保类库按预期运行，然后就是使其可供[要使用它的应用程序](../../core/tutorials/consuming-library-with-visual-studio.md)使用。
 

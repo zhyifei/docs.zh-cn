@@ -3,14 +3,14 @@ title: 诊断工具概述 - .NET Core
 description: 概述用于 .NET Core 应用程序的工具和技术。
 author: sdmaclea
 ms.author: stmaclea
-ms.date: 10/14/2019
+ms.date: 12/17/2019
 ms.topic: overview
-ms.openlocfilehash: c0a45a1bfe866ad42890db576b5dd5098b1dbc3d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 20374c53769bf19901b042e0909175718665b523
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318344"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341482"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core 中提供哪些诊断工具？
 
@@ -43,3 +43,9 @@ ms.locfileid: "72318344"
 ### <a name="dotnet-trace"></a>dotnet-trace
 
 分析数据通过 .NET Core 中的 `EventPipe` 公开。 通过 [dotnet-trace](dotnet-trace.md) 工具，可以使用来自应用的有意思的分析数据，这些数据可帮助你分析应用运行缓慢的根本原因。
+
+## <a name="net-core-diagnostics-tutorials"></a>.NET Core 诊断教程
+
+### <a name="debug-a-memory-leak"></a>调试内存泄露
+
+[教程：调试内存泄漏](debug-memory-leak.md)演示了如何查找内存泄漏。 [dotnet-counters](dotnet-counters.md) 工具用于确认泄露，[dotnet-dump](dotnet-dump.md) 工具用于诊断泄露。

@@ -4,12 +4,12 @@ description: 本文介绍了 .NET Core SDK 和运行时的版本控制方式（�
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: b8cfb2d40b1ae88ef03daca6c31b283256bc6f26
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: cc3a834fdb6347f2cfd93b2c8daeae5bcc222575
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179958"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342916"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 的版本控制方式概述
 
@@ -32,7 +32,7 @@ SDK 版本号的第三个位置同时传达次要编号和修补程序编号。 
 | 运行时和 SDK 修补程序 | 2.2.1             | 2.2.102           |
 | SDK 功能更改    | 2.2.1             | 2.2.200           |
 
-(\*) 此图表以未来的 2.2 .NET Core 运行时示例，因为历史项目 .NET Core 2.1 的第一个 SDK 是 2.1.300。 有关详细信息，请参阅 [.NET Core 版本选择](selection.md)页。
+(\*) 这个图表以 2.2 .NET Core 运行时为例，因为一个历史项目表明 .NET Core 2.1 的第一个 SDK 是 2.1.300。 有关详细信息，请参阅 [.NET Core 版本选择](selection.md)页。
 
 注意：
 

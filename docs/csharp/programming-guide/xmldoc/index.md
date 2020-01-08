@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-ms.openlocfilehash: 6405b094ccc50499bfeb4db4522f0ec9b01f68ad
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 08357017a29f05c11e316e037497b1ee24d06eff
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523478"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634971"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML 文档注释（C# 编程指南）
 在 Visual C# 中，你可以通过以下方式为代码创建文档：将特殊注释字段中的 XML 元素包含在源代码中注释引用的代码块的前面，例如：  
@@ -44,7 +44,7 @@ public class MyClass {}
   
 - [文档标记分隔符](./delimiters-for-documentation-tags.md)  
   
-- [如何：使用 XML 文档功能](./how-to-use-the-xml-documentation-features.md)  
+- [如何使用 XML 文档功能](./how-to-use-the-xml-documentation-features.md)
   
 ## <a name="related-sections"></a>相关章节  
  有关详细信息，请参见:  

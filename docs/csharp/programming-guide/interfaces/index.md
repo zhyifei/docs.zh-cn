@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 77326b37baebc3ade12336b1b3735ed1da497afc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d03917353a9e6879ccb3b368d7d190aeeacb702c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120159"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635231"
 ---
 # <a name="interfaces-c-programming-guide"></a>接口（C# 编程指南）
 
@@ -62,17 +62,17 @@ ms.locfileid: "73120159"
 [显式接口实现](explicit-interface-implementation.md)  
  说明如何创建特定于接口的类成员。  
   
- [如何：显式实现接口成员](how-to-explicitly-implement-interface-members.md)  
+ [如何显式实现接口成员](how-to-explicitly-implement-interface-members.md)  
  提供有关如何显式实现接口的成员的示例。  
   
- [如何：显式实现两个接口的成员](how-to-explicitly-implement-members-of-two-interfaces.md)  
+ [如何显式实现两个接口的成员](how-to-explicitly-implement-members-of-two-interfaces.md)  
  提供有关如何使用继承显式实现接口的成员的示例。  
   
 ## <a name="BKMK_RelatedSections"></a>相关部分
 
 - [接口属性](../classes-and-structs/interface-properties.md)  
 - [接口中的索引器](../indexers/indexers-in-interfaces.md)  
-- [如何：实现接口事件](../events/how-to-implement-interface-events.md)  
+- [如何实现接口事件](../events/how-to-implement-interface-events.md)
 - [类和结构](../classes-and-structs/index.md)  
 - [继承](../classes-and-structs/inheritance.md)  
 - [方法](../classes-and-structs/methods.md)  

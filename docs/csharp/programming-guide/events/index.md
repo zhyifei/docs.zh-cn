@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: d70ec5784d56bad60fbc33ae0b992de1bebfce38
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 84a7eba7bf71f5ef5a0f46eb5863952e1af37c86
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417959"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635426"
 ---
 # <a name="events-c-programming-guide"></a>事件（C# 编程指南）
 [类](../../language-reference/keywords/class.md) 或对象可以通过事件向其他类或对象通知发生的相关事情。 发送（或引发  ）事件的类称为“发布者”  ，接收（或处理  ）事件的类称为“订阅者”  。  
   
- 在典型的 C# Windows 窗体或 Web 应用程序中，可订阅由按钮和列表框等控件引发的事件。 可以使用 Visual C# 集成开发环境 (IDE) 来浏览控件发布的事件，并选择想要处理的事件。 借助 IDE，可轻松自动添加空白事件处理程序方法以及要订阅该事件的代码。 有关更多信息，请参阅[如何：订阅和取消订阅事件](./how-to-subscribe-to-and-unsubscribe-from-events.md)。  
+在典型的 C# Windows 窗体或 Web 应用程序中，可订阅由按钮和列表框等控件引发的事件。 可以使用 Visual C# 集成开发环境 (IDE) 来浏览控件发布的事件，并选择想要处理的事件。 借助 IDE，可轻松自动添加空白事件处理程序方法以及要订阅该事件的代码。 有关详细信息，请参阅[如何订阅和取消订阅事件](./how-to-subscribe-to-and-unsubscribe-from-events.md)。
   
 ## <a name="events-overview"></a>事件概述  
  事件具有以下属性：  
@@ -35,18 +35,18 @@ ms.locfileid: "73417959"
 - 在 .NET Framework 类库中，事件基于 <xref:System.EventHandler> 委托和 <xref:System.EventArgs> 基类。  
   
 ## <a name="related-sections"></a>相关章节  
- 有关详细信息，请参阅：  
+ 有关详细信息，请参见:  
   
-- [如何：订阅和取消订阅事件](./how-to-subscribe-to-and-unsubscribe-from-events.md)  
-  
-- [如何：发布符合 .NET Framework 准则的事件](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
-  
-- [如何：在派生类中抛出基类事件](./how-to-raise-base-class-events-in-derived-classes.md)  
-  
-- [如何：实现接口事件](./how-to-implement-interface-events.md)  
-  
-- [如何：实现自定义事件访问器](./how-to-implement-custom-event-accessors.md)  
-  
+- [如何订阅和取消订阅事件](./how-to-subscribe-to-and-unsubscribe-from-events.md)
+
+- [如何发布符合 .NET Framework 准则的事件](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+
+- [如何在派生类中引发基类事件](./how-to-raise-base-class-events-in-derived-classes.md)
+
+- [如何实现接口事件](./how-to-implement-interface-events.md)
+
+- [如何实现自定义事件访问器](./how-to-implement-custom-event-accessors.md)
+
 ## <a name="c-language-specification"></a>C# 语言规范  
 
 有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的[事件](~/_csharplang/spec/classes.md#events)。 该语言规范是 C# 语法和用法的权威资料。

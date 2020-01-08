@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 27560449daa18741a53e3affa33e08afa40d006a
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: bf520c57f5578f82a0d00e4c7db40e43b308eddf
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552499"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345667"
 ---
 # <a name="types-c-programming-guide"></a>类型（C# 编程指南）
 
@@ -68,7 +68,7 @@ C# 提供了一组标准的内置数值类型来表示整数、浮点值、布�
 
 ## <a name="custom-types"></a>自定义类型
 
-可以使用[结构](../../language-reference/keywords/struct.md)、[类](../../language-reference/keywords/class.md)、[接口](../../language-reference/keywords/interface.md)，和[枚举](../../language-reference/keywords/enum.md)构造创建你自己的自定义类型。 .NET 类库本身就是 Microsoft 提供的一组自定义类型，以供你在自己的应用程序中使用。 默认情况下，类库中最常用的类型在任何 C# 程序中均可用。 对于其他类型，只有在显式添加对定义这些类型的程序集的项目引用时才可用。 编译器引用程序集之后，你可以声明在源代码的此程序集中声明的类型的变量（和常量）。 有关详细信息，请参阅 [.NET 类库](../../../standard/class-library-overview.md)。
+可以使用[结构](../../language-reference/keywords/struct.md)、[类](../../language-reference/keywords/class.md)、[接口](../../language-reference/keywords/interface.md)，和[枚举](../../language-reference/builtin-types/enum.md)构造创建你自己的自定义类型。 .NET 类库本身就是 Microsoft 提供的一组自定义类型，以供你在自己的应用程序中使用。 默认情况下，类库中最常用的类型在任何 C# 程序中均可用。 对于其他类型，只有在显式添加对定义这些类型的程序集的项目引用时才可用。 编译器引用程序集之后，你可以声明在源代码的此程序集中声明的类型的变量（和常量）。 有关详细信息，请参阅 [.NET 类库](../../../standard/class-library-overview.md)。
 
 ## <a name="the-common-type-system"></a>通用类型系统
 
@@ -91,7 +91,7 @@ C# 提供了一组标准的内置数值类型来表示整数、浮点值、布�
 
 值类型派生自<xref:System.ValueType?displayProperty=nameWithType>（派生自 <xref:System.Object?displayProperty=nameWithType>）。 派生自 <xref:System.ValueType?displayProperty=nameWithType> 的类型在 CLR 中具有特殊行为。 值类型变量直接包含它们的值，这意味着在声明变量的任何上下文中内联分配内存。 对于值类型变量，没有单独的堆分配或垃圾回收开销。
 
-值类型分为两类：[结构](../../language-reference/keywords/struct.md)和[枚举](../../language-reference/keywords/enum.md)。
+值类型分为两类：[结构](../../language-reference/keywords/struct.md)和[枚举](../../language-reference/builtin-types/enum.md)。
 
 内置数值类型是结构，包含可以访问的属性和方法：
 
@@ -116,13 +116,13 @@ char c = 'Z';
 
 有关结构的详细信息，请参阅[结构](../classes-and-structs/structs.md)。 有关 .NET 中的值类型的详细信息，请参阅[值类型](../../language-reference/keywords/value-types.md)。
 
-另一种值类型是[枚举](../../language-reference/keywords/enum.md)。 枚举定义的是一组已命名的整型常量。 例如，.NET 类库中的 <xref:System.IO.FileMode?displayProperty=nameWithType> 枚举包含一组已命名的常量整数，用于指定打开文件应采用的方式。 下面的示例展示了具体定义：
+另一种值类型是[枚举](../../language-reference/builtin-types/enum.md)。 枚举定义的是一组已命名的整型常量。 例如，.NET 类库中的 <xref:System.IO.FileMode?displayProperty=nameWithType> 枚举包含一组已命名的常量整数，用于指定打开文件应采用的方式。 下面的示例展示了具体定义：
 
 [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]
 
 `System.IO.FileMode.Create` 常量的值为 2。 不过，名称对于阅读源代码的人来说更有意义，因此，最好使用枚举，而不是常量数字文本。 有关详细信息，请参阅 <xref:System.IO.FileMode?displayProperty=nameWithType>。
 
-所有枚举从 <xref:System.Enum?displayProperty=nameWithType>（继承自 <xref:System.ValueType?displayProperty=nameWithType>）继承。 适用于结构的所有规则也适用于枚举。 有关枚举的详细信息，请参阅[枚举类型](../enumeration-types.md)。
+所有枚举从 <xref:System.Enum?displayProperty=nameWithType>（继承自 <xref:System.ValueType?displayProperty=nameWithType>）继承。 适用于结构的所有规则也适用于枚举。 有关枚举的详细信息，请参阅[枚举类型](../../language-reference/builtin-types/enum.md)。
 
 ### <a name="reference-types"></a>引用类型
 

@@ -2,26 +2,26 @@
 title: 操作指南（C# 指南）
 description: 快速提示及重点短代码示例集合
 ms.date: 12/20/2017
-ms.openlocfilehash: 855ea90d22174c2b7c0b53a526c47a5edbe5496d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e6cb657726b82a1710bbcd596fe48037b5c26352
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736889"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75339220"
 ---
 # <a name="how-to-c"></a>操作指南 (C#)
 
-在 C# 指南中的操作指南部分快速了解常见问题的答案。 在某些情况下，可能会在多个部分列出相关文章。 我们希望用户可从多个搜索路径找到操作指南。
+在《C# 指南》中的“操作指南”部分，你可快速了解常见问题的答案。 在某些情况下，可能会在多个部分列出相关文章。 我们希望用户可从多个搜索路径找到操作指南。
 
 ## <a name="general-c-concepts"></a>C# 一般概念
 
-此处介绍了 C# 开发者在实践中常会用到的几个提示和技巧。
+此处介绍了 C# 开发者在实践中经常会用到的几个提示和技巧：
 
 - [使用对象初始值设定项初始化对象](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md)。
 - [了解向方法传递结构和传递类的区别](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)。
 - [使用运算符重载](../language-reference/operators/operator-overloading.md)。
 - [实现和调用自定义扩展方法](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)。
-- 即使是 C# 程序员也可能需要[使用 VB `My` 命名空间](../programming-guide/namespaces/how-to-use-the-my-namespace.md)。
+- 即使是 C# 程序员，也可能需要[使用 Visual Basic `My` 命名空间](../programming-guide/namespaces/how-to-use-the-my-namespace.md)。
 - [使用扩展方法创建新 `enum` 类型方法](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。
 
 ### <a name="class-and-struct-members"></a>类和结构成员

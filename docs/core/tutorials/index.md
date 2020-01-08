@@ -5,39 +5,38 @@ author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: 1355b3b0fa72a13263229848b3de2c6b9ccb3392
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.openlocfilehash: b4d3f23f457e913f62d508d9b0f57168bc101786
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884197"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343335"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>通过探讨这些教程来学习 .NET Core 和 .NET Core SDK 工具
 
 以下教程可用于了解 .NET Core。
 
-## <a name="building-applications-with-visual-studio-2017"></a>使用 Visual Studio 2017 生成应用程序
+## <a name="create-applications-with-visual-studio"></a>使用 Visual Studio 创建应用程序
 
-- [生成 C# Hello World 应用程序](with-visual-studio.md)
-- [调试 C# Hello World 应用程序](debugging-with-visual-studio.md)
-- [发布 C# Hello World 应用程序](publishing-with-visual-studio.md)
-- [生成 C# 类库](library-with-visual-studio.md)
-- [使用 Visual Basic 生成类库](vb-library-with-visual-studio.md)
+- [创建 Hello World 控制台应用程序](with-visual-studio.md)
+- [调试 Hello World 应用程序](debugging-with-visual-studio.md)
+- [发布 Hello World 应用程序](publishing-with-visual-studio.md)
+- [生成类库](library-with-visual-studio.md)
 - [测试类库](testing-library-with-visual-studio.md)
 - [使用类库](consuming-library-with-visual-studio.md)
 - [Azure Cosmos DB：SQL API 和 .NET Core 入门](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
-## <a name="building-applications-with-visual-studio-code"></a>使用 Visual Studio Code 生成应用程序
+## <a name="build-applications-with-visual-studio-code"></a>使用 Visual Studio Code 生成应用程序
 
 - [C# 和 Visual Studio Code 入门](with-visual-studio-code.md)
 - [macOS 上的 .NET Core 入门](using-on-macos.md)
 
-## <a name="building-applications-with-visual-studio-for-mac"></a>使用 Visual Studio for Mac 构建应用程序
+## <a name="build-applications-with-visual-studio-for-mac"></a>使用 Visual Studio for Mac 生成应用程序
 
 - [借助 Visual Studio for Mac 在 macOS 上开始使用 .NET Core](using-on-mac-vs.md)
 - [使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案](using-on-mac-vs-full-solution.md)
 
-## <a name="building-applications-with-the-net-core-cli-tools"></a>使用 .NET Core CLI 工具生成应用程序
+## <a name="build-applications-with-the-net-core-cli-tools"></a>使用 .NET Core CLI 工具生成应用程序
 
 - [使用 .NET Core CLI 工具在 Windows/Linux/macOS 上开始使用 .NET Core](cli-create-console-app.md)
 - [使用 .NET Core CLI 工具组织和测试项目](testing-with-cli.md)

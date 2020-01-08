@@ -1,15 +1,15 @@
 ---
 title: .NET Core 指南
-description: .NET Core 是一种用于创建 Windows、Linux 和 Mac 应用的模块式高性能的 .NET 实现。 了解 .NET Core 以开始使用。
+description: .NET Core 是一种高性能的模块化 .NET 实现，用于创建 Windows、Linux 和 macOS 应用。 了解 .NET Core 以开始使用。
 author: richlander
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: b2622dba53d64c9dcf58e852d57de117fe79eb2e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 80a3b12972e24c3022ac2aa14406aa60635815a3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837007"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341356"
 ---
 # <a name="net-core-guide"></a>.NET Core 指南
 
@@ -27,11 +27,11 @@ ms.locfileid: "74837007"
 
 ## <a name="net-core-31"></a>.NET Core 3.1
 
-最新版是 .NET Core 3.1。 其中包含对 .NET Core 3.0 的细微改进。 不过，.NET Core 3.1 是一个长期受支持的版本。 有关 .NET Core 3.1 版本的详细信息，请参阅 [.NET Core 3.1 的新增功能](./whats-new/dotnet-core-3-1.md)。
+最新版是 .NET Core 3.1。 3.1 版在 .NET Core 3.0 版的基础上进行了少许改进，但 .NET Core 3.1 版是[长期支持的版本](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。 有关 .NET Core 3.1 版本的详细信息，请参阅 [.NET Core 3.1 的新增功能](./whats-new/dotnet-core-3-1.md)。
 
 ## <a name="create-your-first-application"></a>创建首个应用程序
 
-安装 .NET Core SDK 后，打开命令提示符。 键入以下 `dotnet` 命令以创建并运行 C# 应用程序：
+安装 .NET Core SDK 后，打开命令提示符。 输入以下 `dotnet` 命令，创建并运行 C# 应用程序：
 
 ```dotnetcli
 dotnet new console

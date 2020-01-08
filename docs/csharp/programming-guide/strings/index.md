@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: c6e29781f566fac0fd1219ac842a4838d631afb6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 46820fe4137f5080b956cd1345d3e95c2e06f9ca
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969720"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635075"
 ---
 # <a name="strings-c-programming-guide"></a>字符串（C# 编程指南）
 字符串是值为文本的 <xref:System.String> 类型对象。 文本在内部存储为 <xref:System.Char> 对象的依序只读集合。 在 C# 字符串末尾没有 null 终止字符；因此，一个 C# 字符串可以包含任何数量的嵌入的 null 字符 ('\0')。 字符串的 <xref:System.String.Length%2A> 属性表示其包含的 `Char` 对象数量，而非 Unicode 字符数。 若要访问字符串中的各个 Unicode 码位，请使用 <xref:System.Globalization.StringInfo> 对象。  
@@ -125,11 +125,11 @@ string s = String.Empty;
  [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>字符串、扩展方法和 LINQ  
- 由于 <xref:System.String> 类型实现 <xref:System.Collections.Generic.IEnumerable%601>，因此可以对字符串使用 <xref:System.Linq.Enumerable> 类中定义的扩展方法。 为了避免视觉干扰，这些方法已从 <xref:System.String> 类型的 IntelliSense 中排除，但它们仍然可用。 此外，还可以使用字符串上的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式。 有关详细信息，请参阅 [LINQ 和字符串](../concepts/linq/linq-and-strings.md)。  
+ 由于 <xref:System.String> 类型实现 <xref:System.Collections.Generic.IEnumerable%601>，因此可以对字符串使用 <xref:System.Linq.Enumerable> 类中定义的扩展方法。 为了避免视觉干扰，这些方法已从 <xref:System.String> 类型的 IntelliSense 中排除，但它们仍然可用。 还可以使用字符串上的 LINQ 查询表达式。 有关详细信息，请参阅 [LINQ 和字符串](../concepts/linq/linq-and-strings.md)。  
   
 ## <a name="related-topics"></a>相关主题  
   
-|主题|说明|  
+|主题|描述|  
 |-----------|-----------------|  
 |[如何修改字符串内容](../../how-to/modify-string-contents.md)|阐明转换字符串并修改字符串内容的方法。|  
 |[如何比较字符串](../../how-to/compare-strings.md)|演示如何对字符串执行序号和特定于区域性的比较。|  

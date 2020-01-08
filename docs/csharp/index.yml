@@ -6,12 +6,12 @@ metadata:
   description: 了解 C# 编程 - 面向新手开发人员、刚开始接触 C# 的开发人员、以及经验丰富的 C# / .NET 开发人员
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: fa778c4610dbfe8320d488098b5bfd39de8e4705
-  ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+  ms.openlocfilehash: 2bec49d0832a7d00d0fea247166a9ec073f37e11
+  ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "75303416"
+  ms.lasthandoff: 12/25/2019
+  ms.locfileid: "75339160"
 landingContent:
 - title: 了解如何使用 C# 编程
   linkLists:
@@ -95,6 +95,10 @@ landingContent:
       url: tutorials/mixins-with-default-interface-methods.md
     - text: 使用范围和索引处理子集
       url: tutorials/ranges-indexes.md
+  - linkListType: reference
+    links:
+    - text: C# 编译器中的重大更改
+      url: whats-new/breaking-changes.md
 - title: C# 语言参考
   linkLists:
   - linkListType: reference
