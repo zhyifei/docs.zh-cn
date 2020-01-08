@@ -6,12 +6,12 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: 9f9b89e2fea0bd69cba6d50fa1d1fb9cc3927685
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b3778a170759f685db78e7dcde219138196f9eca
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348615"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344199"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>如何：确定对象变量引用的类型 (Visual Basic)
 
@@ -46,11 +46,11 @@ ms.locfileid: "74348615"
     End If
     ```
 
-    如果对象的运行时类型与指定的类型兼容，则 `TypeOf`...`Is` 表达式返回 `True`。
+    `TypeOf`...如果对象的运行时类型与指定的类型兼容, 则表达式返回`True`。 `Is`
 
     兼容性的条件取决于指定的类型是类、结构还是接口。 通常，如果对象的类型与、继承自或实现指定的类型，则类型是兼容的。 有关详细信息，请参阅[TypeOf 运算符](../../../../visual-basic/language-reference/operators/typeof-operator.md)。
 
-## <a name="compiling-the-code"></a>编译代码
+## <a name="compile-the-code"></a>编译代码
 
 请注意，指定的类型不能为变量或表达式。 它必须是已定义类型的名称，如类、结构或接口。 这包括内部类型（如 `Integer` 和 `String`）。
 
@@ -62,4 +62,4 @@ ms.locfileid: "74348615"
 - <xref:System.TypeCode>
 - [对象变量](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [对象变量值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)

@@ -2,12 +2,12 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 0ee11b67dcd9c7251df17dc7523dc20765e157c5
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 1e0290a4df688d39f84086dc4c1b41712f81076a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716695"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345146"
 ---
 # <a name="srmp"></a>SRMP
 本示例演示如何使用 HTTP 上的消息队列 (MSMQ) 来执行事务处理排队通信。  
@@ -28,7 +28,7 @@ ms.locfileid: "74716695"
   
 5. 如果想要确保使用 HTTP 进行通信，则可以启用 MSMQ 以便在加强模式中运行。 这可确保任何消息都不能使用任何非 HTTP 传输到达计算机上承载的任何队列。  
   
-6. 选择 MSMQ 以在加强模式中运行后，如果系统为 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，计算机需要重新启动。  
+6. 选择 MSMQ 在强制模式下运行后，计算机需要在 Windows Server 2003 上重新启动。  
   
 7. 运行服务。  
   

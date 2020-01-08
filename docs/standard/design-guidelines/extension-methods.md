@@ -1,17 +1,17 @@
 ---
-title: 扩展方法
+title: 擴充方法
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: KrzysztofCwalina
-ms.openlocfilehash: 1835f84a5126ef07adbe119089d2d943ffda18cd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: ad78bae2dc7a3000b67224da6f1a8c578053087f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615276"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347032"
 ---
-# <a name="extension-methods"></a>扩展方法
+# <a name="extension-methods"></a>擴充方法
 扩展方法是一种语言特性，允许使用实例方法调用语法来调用静态方法。 这些方法必须至少使用一个参数，该参数表示方法要操作的实例。  
   
  定义此类扩展方法的类称“sponsor”类，必须将其声明为静态。 要使用扩展方法，必须导入定义 sponsor 类的命名空间。  
@@ -28,11 +28,11 @@ ms.locfileid: "64615276"
   
  **X 避免**在 <xref:System.Object?displayProperty=nameWithType> 上定义扩展方法。  
   
- VB 用户将无法使用扩展方法语法在对象引用上调用此类方法。 VB 不支持调用这样的方法，因为在 VB 中，将引用声明为 Object 会强制对方法的所有方法调用进行延迟绑定（在运行时确定调用的实际成员），而在编译时确定对扩展方法的绑定（早期绑定）。  
+ Visual Basic 用户将无法使用扩展方法语法对对象引用调用此类方法。 Visual Basic 不支持调用此类方法，因为在 Visual Basic 中，将引用声明为对象将强制其上的所有方法调用都是后期绑定的（在运行时确定调用的实际成员），而扩展方法的绑定则在编译时（早期绑定）。  
   
  请注意，该准则适用于存在相同绑定行为的其他语言，或者不支持扩展方法的其他语言。  
   
- **X 切忌**将扩展方法放在与扩展类型相同的命名空间中，除非它用于向接口添加方法或用于依赖关系管理。  
+ **X DO NOT** 置于扩展的类型相同的命名空间的扩展方法，除非它是为添加到接口的方法或依赖关系管理。  
   
  **X 避免**定义两个或多个具有相同签名的扩展方法，即使它们位于不同的命空间中。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "64615276"
   
  **X 避免**对专用于扩展方法的命名空间进行通用命名（例如，“扩展”）。 而是使用描述性名称（例如，“路由”）。  
   
- *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
+ *部分©2005，2009 Microsoft Corporation。保留所有权利。*  
   
- *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
+ *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [成员设计准则](../../../docs/standard/design-guidelines/member.md)
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)

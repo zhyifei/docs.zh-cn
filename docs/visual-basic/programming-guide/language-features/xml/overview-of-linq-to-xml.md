@@ -5,17 +5,17 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], about LINQ to XML
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
-ms.openlocfilehash: 80d94ecb7dcc196ad831be7418bfecc785015cf9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0d804a00eca1910a5415859b1ed3a18ad2f8e9d2
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346237"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636219"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Visual Basic 中的 LINQ to XML 概述
 Visual Basic 通过 XML 文本和 XML 轴属性为 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供支持。 这使你可以使用熟悉的方便语法在 Visual Basic 代码中处理 XML。 使用*xml 文本*可以将 xml 直接包含在代码中。 利用*xml 轴属性*，您可以访问 xml 文本的子节点、子代节点和属性。 有关详细信息，请参阅[Xml 文本概述](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)和[访问 VISUAL BASIC 中的 xml](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)。  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 是一种专门用于利用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]的内存中 XML 编程 API。 尽管可以直接调用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Api，但只有 Visual Basic 才能声明 XML 文本和直接访问 XML 轴属性。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 是一种内存中 XML 编程 API，专门用于利用语言集成查询（LINQ）。 尽管可以直接调用 LINQ Api，但只有 Visual Basic 允许你声明 XML 文本和直接访问 XML 轴属性。  
   
 > [!NOTE]
 > ASP.NET 页面中的声明性代码不支持 XML 文本和 XML 轴属性。 若要使用 Visual Basic XML 功能，请将代码放在 ASP.NET 应用程序的代码隐藏页中。  
@@ -23,14 +23,14 @@ Visual Basic 通过 XML 文本和 XML 轴属性为 [!INCLUDE[sqltecxlinq](~/incl
  [播放按钮](./media/overview-of-linq-to-xml/play-video-icon-example.gif)有关相关的视频演示，请参阅[如何开始使用 LINQ to XML？](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml)和[如何使用 LINQ to XML 创建 Excel 电子表格？](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml)。   
   
 ## <a name="creating-xml"></a>创建 XML  
- 可以通过两种方式在 Visual Basic 中创建 XML 树。 可以直接在代码中声明 XML 文本，也可以使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Api 来创建树。 这两个进程都使代码可以反映 XML 树的最终结构。 例如，下面的代码示例创建一个 XML 元素：  
+ 可以通过两种方式在 Visual Basic 中创建 XML 树。 你可以直接在代码中声明 XML 文本，或者可以使用 LINQ Api 创建树。 这两个进程都使代码可以反映 XML 树的最终结构。 例如，下面的代码示例创建一个 XML 元素：  
   
  [!code-vb[VbXmlSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
  有关详细信息，请参阅[在 Visual Basic 中创建 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)。  
   
 ## <a name="accessing-and-navigating-xml"></a>访问和导航 XML  
- Visual Basic 提供了用于访问和导航 XML 结构的 XML 轴属性。 这些属性使你可以通过指定 XML 子元素名称来访问 XML 元素和特性。 或者，您可以显式调用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 方法来导航和查找元素和属性。 例如，下面的代码示例使用 XML 轴属性来引用 XML 元素的特性和子元素。 此代码示例使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询来检索子元素，并将其输出为 XML 元素，从而有效地执行转换。  
+ Visual Basic 提供了用于访问和导航 XML 结构的 XML 轴属性。 这些属性使你可以通过指定 XML 子元素名称来访问 XML 元素和特性。 或者，你可以显式调用用于导航和查找元素和属性的 LINQ 方法。 例如，下面的代码示例使用 XML 轴属性来引用 XML 元素的特性和子元素。 此代码示例使用 LINQ 查询来检索子元素，并将其输出为 XML 元素，从而有效地执行转换。  
   
  [!code-vb[VbXmlSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
   

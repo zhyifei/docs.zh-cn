@@ -8,17 +8,17 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: a04e1569f77fed73a480fda3d63cabf6dbc30664
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f8b05f314be84e6104f1a9c7fe2edfdf826e51da
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460519"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559443"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource 标记扩展
 通过将值推迟为对已定义资源的引用来为任何 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 属性特性提供一个值。 该资源的查找行为类似于运行时查找。  
   
-## <a name="xaml-attribute-usage"></a>XAML 属性用法  
+## <a name="xaml-attribute-usage"></a>XAML 特性用法  
   
 ```xml  
 <object property="{DynamicResource key}" .../>  
@@ -38,7 +38,7 @@ ms.locfileid: "73460519"
   
 |||  
 |-|-|  
-|`key`|所请求资源的密钥。 如果在标记中创建了资源，则此密钥最初由[X：Key 指令](../../xaml-services/x-key-directive.md)分配，或在调用 <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> 时作为 `key` 参数提供（如果资源是在代码中创建的）。|  
+|`key`|所请求资源的密钥。 如果在标记中创建了资源，则此密钥最初由[X：Key 指令](../../../desktop-wpf/xaml-services/xkey-directive.md)分配，或在调用 <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> 时作为 `key` 参数提供（如果资源是在代码中创建的）。|  
   
 ## <a name="remarks"></a>备注  
  `DynamicResource` 将在初始编译期间创建一个临时表达式，因而延迟对资源的查找，直到实际需要请求的资源值才能构造对象。 这可能在加载 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面之后。 将基于从当前页范围开始的所有活动资源字典的键搜索来找到资源值，并将其替换为编译中的占位符表达式。  
@@ -48,9 +48,9 @@ ms.locfileid: "73460519"
   
  某些资源访问方案特别适用于 `DynamicResource` 而不是[StaticResource 标记扩展](staticresource-markup-extension.md)。 请参阅[XAML 资源](xaml-resources.md)，以了解有关 `DynamicResource` 和 `StaticResource`相对的优点和性能影响的讨论。  
   
- 指定的 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 应对应于在页面、应用程序、可用控件主题和外部资源或系统资源的某个级别由[X：Key 指令](../../xaml-services/x-key-directive.md)确定的现有资源，以及资源查找将在顺序。 有关静态和动态资源的资源查找的详细信息，请参阅[XAML 资源](xaml-resources.md)。  
+ 指定的 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 应对应于页面、应用程序、可用控件主题和外部资源或系统资源的某个级别由[X：Key 指令](../../../desktop-wpf/xaml-services/xkey-directive.md)确定的现有资源，并按该顺序进行资源查找。 有关静态和动态资源的资源查找的详细信息，请参阅[XAML 资源](xaml-resources.md)。  
   
- 资源键可以是[XamlName 语法](../../xaml-services/xamlname-grammar.md)中定义的任何字符串。 资源键还可以是其他对象类型，如 <xref:System.Type>。 <xref:System.Type> 的关键是主题如何对控件进行样式设计的基础。 有关详细信息，请参阅[控件创作概述](../controls/control-authoring-overview.md)。  
+ 资源键可以是[XamlName 语法](../../../desktop-wpf/xaml-services/xamlname-grammar.md)中定义的任何字符串。 资源键还可以是其他对象类型，如 <xref:System.Type>。 <xref:System.Type> 的关键是主题如何对控件进行样式设计的基础。 有关详细信息，请参阅[控件创作概述](../controls/control-authoring-overview.md)。  
   
  用于查找资源值的 Api （如 <xref:System.Windows.FrameworkElement.FindResource%2A>）遵循 `DynamicResource`所使用的相同资源查找逻辑。  
   
@@ -72,11 +72,11 @@ ms.locfileid: "73460519"
   
  `DynamicResource` 是标记扩展。 当要求转义特性值应为非文本值或非处理程序名称时，通常会实现标记扩展，相对于只在某些类型或属性上放置类型转换器而言，此需求更具有全局性。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的所有标记扩展在其特性语法中都使用 { 和 } 字符，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器通过这一约定确认标记扩展必须处理该特性。 有关详细信息，请参阅[标记扩展和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XAML 资源](xaml-resources.md)
 - [资源和代码](resources-and-code.md)
-- [x:Key 指令](../../xaml-services/x-key-directive.md)
+- [x:Key 指令](../../../desktop-wpf/xaml-services/xkey-directive.md)
 - [XAML 概述 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [标记扩展和 WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [StaticResource 标记扩展](staticresource-markup-extension.md)

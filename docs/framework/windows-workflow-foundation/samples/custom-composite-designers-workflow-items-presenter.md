@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 542440d6bf9d6809abee1ec37c85c44ce72fd132
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 081dce85946fab85cff474508c46770c762b9e76
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715161"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338728"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>自定义复合设计器 — 工作流项演示器
 
@@ -24,11 +24,13 @@ ms.locfileid: "74715161"
 
 - 在重新承载的应用程序中重写默认设计器。
 
-### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
+## <a name="set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1. 在 Visual Studio 2010 中打开适用于C#或的 usingworkflowitemspresenter.sln 示例解决方案。
+1. 在 Visual Studio 2010 中，为 Visual Basic C#打开或的 usingworkflowitemspresenter.sln 示例解决方案。
 
-2. 生成和运行解决方案。 重写承载的工作流设计器应用程序应会打开，并且您可以将活动拖动到画布上。
+2. 生成和运行解决方案。
+
+   此时将打开一个重新承载工作流设计器应用程序，你可以将活动拖动到画布上。
 
 ## <a name="sample-highlights"></a>示例重点
 

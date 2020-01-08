@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: e562c0f5ec01380c792b4dc064554171cfb007e7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: deac87ca4690990a4d00f63d0ea9b843c3f9a9c4
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74339961"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344478"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>如何：更改过程参数的值 (Visual Basic)
 调用过程时，提供的每个参数都对应于在过程中定义的参数之一。 在某些情况下，过程代码可以更改调用代码中的参数的基础值。 在其他情况下，该过程只能更改其参数的本地副本。  
@@ -48,7 +48,7 @@ ms.locfileid: "74339961"
   
 1. 在过程声明中，为对应于参数的参数指定[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 。  
   
-     \- 或 -  
+     或  
   
      在调用代码中，将参数括在参数列表的括号中。 这会强制 Visual Basic 按值传递参数，即使相应的参数指定 `ByRef`也是如此。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "74339961"
   
  您可以防止过程在调用代码中修改变量本身。 请参阅[如何：针对值更改保护过程参数](./how-to-protect-a-procedure-argument-against-value-changes.md)。  
   
-## <a name="compiling-the-code"></a>编译代码  
+## <a name="compile-the-code"></a>编译代码  
  通过引用传递变量时，必须使用 `ByRef` 关键字来指定此机制。  
   
  Visual Basic 中的默认值是按值传递参数。 但是，将[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)关键字用于每个声明的参数是一种好的编程做法。 这使代码更易于阅读。  

@@ -2,12 +2,12 @@
 title: 防火墙说明
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 3c94f0edbb244b6c378cc32f05c34fd029d253ff
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: e2c4dd8e784599a5e110e7454d9d0e709cbc5776
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837839"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544775"
 ---
 # <a name="firewall-instructions"></a>防火墙说明
 你必须在防火墙中启用多个端口或程序，以便 Windows Communication Foundation （WCF）示例可以正常工作。 其中许多示例使用范围 8000-8003 中的端口和端口 9000 进行通信。 防火墙默认情况下会打开，阻止对这些端口进行访问。 若要针对这些示例启用防火墙，请完成以下过程之一，具体情况取决于您的需求和安全环境：  
@@ -36,7 +36,7 @@ ms.locfileid: "74837839"
   
     - 在 Windows 7 或 Windows Server 2008 r2 上，单击 "**允许程序或功能通过 Windows 防火墙**"。 单击 "**更改设置**"，"允许**其他程序 ...** "。  
   
-    - 在 Windows Vista 或 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]上，单击 "**允许程序通过 Windows 防火墙**"。  
+    - 在 Windows Vista 或 Windows Server 2008 上，单击 "**允许程序通过 Windows 防火墙**"。  
   
 4. 在 "**例外**" 选项卡上，单击 "**添加程序**"。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "74837839"
   
     10. 单击 "**出站规则**"，然后重复步骤 c 到 h。  
   
-3. 在 Windows Vista 或 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]上，请执行以下步骤。  
+3. 在 Windows Vista 或 Windows Server 2008 上，请执行以下步骤。  
   
     1. 单击“允许程序通过 Windows 防火墙”。  
   

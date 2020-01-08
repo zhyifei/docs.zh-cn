@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 41cbe57f1e3711bb4e18b2b4da28c26ebbd2bc60
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5958793015d409678b67cdc7eedcb4289f5e885c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005702"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636206"
 ---
 # <a name="controls-by-category"></a>按类别分类的控件
 Windows Presentation Foundation （WPF）控件可以逻辑分组为多个类别。 可以使用这些类别来为方案选择适当的控件，从而有助于查看具有相同用法模式或功能的控件。  
@@ -140,7 +140,7 @@ Windows Presentation Foundation （WPF）控件可以逻辑分组为多个类别
 - <xref:System.Windows.Controls.ToolTip>  
   
 ## <a name="documents"></a>文档  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 包含几个用于查看文档的专用控件。 这些控件基于目标用户方案优化阅读体验。  
+ WPF 包含用于查看文档的多个专用控件。 这些控件基于目标用户方案优化阅读体验。  
   
 - <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -162,7 +162,7 @@ Windows Presentation Foundation （WPF）控件可以逻辑分组为多个类别
 - <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="media"></a>媒体  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 不仅包括大多数常见图像格式的 [codecs]，而且还包括对承载音频和视频内容的集成支持。  
+ WPF 包含集成的支持，用于承载音频和视频内容，同时还包括适用于最常用图像格式的 [编解码器]。  
   
 - <xref:System.Windows.Controls.Image>  
   

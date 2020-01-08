@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 09c3c57f3ac1009416a5c67b37c035fe30cd5b5e
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5e8c27d017ed4bf8a7dcc2dda18877c9ed8dba69
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425329"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636336"
 ---
 # <a name="structured-navigation-overview"></a>结构化导航概述
 
@@ -135,7 +135,7 @@ ms.locfileid: "73425329"
 
   - 检索和使用存储在 <xref:System.Windows.Application.Properties%2A>中的参数。
 
-但是，你不久就会看到，你仍然需要使用代码来实例化并导航到被调用页，以收集被调用页返回的数据。 出于此原因，<xref:System.Windows.Navigation.PageFunction%601> 需要保持活动状态;否则，下一次导航到 <xref:System.Windows.Navigation.PageFunction%601>时，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用无参数构造函数实例化 <xref:System.Windows.Navigation.PageFunction%601>。
+但是，你不久就会看到，你仍然需要使用代码来实例化并导航到被调用页，以收集被调用页返回的数据。 出于此原因，<xref:System.Windows.Navigation.PageFunction%601> 需要保持活动状态;否则，下一次导航到 <xref:System.Windows.Navigation.PageFunction%601>时，WPF 将使用无参数构造函数实例化 <xref:System.Windows.Navigation.PageFunction%601>。
 
 但是，在被调用页返回前，需要返回可以由调用页检索的数据。
 
@@ -179,7 +179,7 @@ ms.locfileid: "73425329"
 
 在其他情况下，应用程序可能具有依赖于结构化导航来有效操作的复杂导航拓扑。 有关详细信息，请参阅[导航拓扑概述](navigation-topologies-overview.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Navigation.PageFunction%601>
 - <xref:System.Windows.Navigation.NavigationService>

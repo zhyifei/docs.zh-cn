@@ -2,12 +2,12 @@
 title: 病毒消息处理
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 3eba16097648bee1ea80cf62ab3bca900ddf6280
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ff1eaec99308b06250722b290b7005ac21731570
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837345"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337650"
 ---
 # <a name="poison-message-handling"></a>病毒消息处理
 *病毒消息*是超过应用程序的最大传递尝试次数的消息。 当基于队列的应用程序由于错误而无法处理消息时，可能会引起这种情况。 为符合可靠性要求，排队的应用程序是在事务中接收消息的。 中止已接收某个排队消息的事务时，该消息仍会保留在队列中，这样当开始一个新事务时，将对该消息重试操作。 如果导致事务中止的问题未得到更正，则直到超出最大传递尝试次数并导致产生病毒消息时，接收应用程序才会中断接收和中止同一消息的循环。  
@@ -21,7 +21,7 @@ ms.locfileid: "74837345"
   
 - `ReceiveRetryCount`。 一个整数值，指示将某个消息从应用程序队列传递到应用程序的最大重试次数。 默认值为“5”。 对于立即重试就可以修复问题（如数据库出现临时死锁）的情况，这个数值已足够了。  
   
-- `MaxRetryCycles`。 一个整数值，指示最大重试周期数。 一个重试周期包括将消息从应用程序队列传送到重试子队列，在经过可配置的延迟后，从重试子队列将消息传送回应用程序队列以便重新尝试传递。 默认值为 2。 在 Windows Vista 上，消息的最大尝试次数为（`ReceiveRetryCount` + 1） * （`MaxRetryCycles` + 1）次。 对于 `MaxRetryCycles` 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，将忽略 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
+- `MaxRetryCycles`。 一个整数值，指示最大重试周期数。 一个重试周期包括将消息从应用程序队列传送到重试子队列，在经过可配置的延迟后，从重试子队列将消息传送回应用程序队列以便重新尝试传递。 默认值为 2。 在 Windows Vista 上，消息的最大尝试次数为（`ReceiveRetryCount` + 1） * （`MaxRetryCycles` + 1）次。 Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]上的 `MaxRetryCycles` 将被忽略。  
   
 - `RetryCycleDelay`。 重试周期之间的时间延迟。 默认值为 30 分钟。 `MaxRetryCycles` 和 `RetryCycleDelay` 共同提供一个机制，用于解决周期性延迟之后重试可修复问题的问题。 例如，这种机制可以处理 SQL Server 挂起的事务提交中锁定的行集。  
   
@@ -39,12 +39,12 @@ ms.locfileid: "74837345"
   
 - （（ReceiveRetryCount + 1） * （MaxRetryCycles + 1））。  
   
-- 对于 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，请用 (ReceiveRetryCount + 1) 计算。  
+- （ReceiveRetryCount + 1）在 Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]上。  
   
 > [!NOTE]
 > 对于成功传递的消息，不会再重试传递。  
   
- 为了跟踪尝试读取消息的次数，Windows Vista 维护持久消息属性，该属性对中止次数进行计数，并使用移动计数属性对消息在应用程序队列和子队列之间移动的次数进行计数。 WCF 通道使用它们来计算接收重试计数和重试周期计数。 在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]上，WCF 通道在内存中维护中止计数，并在应用程序失败时进行重置。 而且，WCF 信道随时可以在内存中保留最多256消息的中止计数。 如果读取了第 257 条消息，则时间最早的消息中止计数会被重置。  
+ 为了跟踪尝试读取消息的次数，Windows Vista 维护持久消息属性，该属性对中止次数进行计数，并使用移动计数属性对消息在应用程序队列和子队列之间移动的次数进行计数。 WCF 通道使用它们来计算接收重试计数和重试周期计数。 在 Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]上，WCF 通道在内存中维护中止计数，如果应用程序失败，则会重置。 而且，WCF 信道随时可以在内存中保留最多256消息的中止计数。 如果读取了第 257 条消息，则时间最早的消息中止计数会被重置。  
   
  中止计数和移动计数属性均可用于通过操作上下文进行的服务操作。 下面的代码示例演示如何访问上述两个属性。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "74837345"
   
  应用程序可能要求对病毒消息能进行某种自动处理，也就是将病毒消息移动至病毒消息队列，以便服务可以访问队列中的其他消息。 唯一需要使用错误处理程序机制来侦听病毒消息异常情况的情形是 <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> 设置被设置为 <xref:System.ServiceModel.ReceiveErrorHandling.Fault> 时。 Message Queuing 3.0 的病毒消息示例阐释了这一行为。 下面说明了处理病毒消息应执行的步骤，包括最佳方案：  
   
-1. 确保您的病毒消息设置可以反映您的应用程序需求。 使用这些设置时，请确保了解 Windows Vista 上的消息队列功能之间的差异，[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
+1. 确保您的病毒消息设置可以反映您的应用程序需求。 使用这些设置时，请确保了解 Windows Vista、Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]上的消息队列功能之间的差异。  
   
 2. 如果需要，请实现 `IErrorHandler` 以处理病毒消息错误。 由于将 `ReceiveErrorHandling` 设置为 `Fault` 需要一个手动机制以便将病毒消息移出队列或更正外部相关问题，因此当 `IErrorHandler` 设置为 `ReceiveErrorHandling` 时，该机制的典型用法就是实现 `Fault`，如下面的代码中所示。  
   
@@ -95,13 +95,13 @@ ms.locfileid: "74837345"
  只要有消息放入病毒消息队列中，病毒消息处理就不会结束。 还必须读取和处理病毒消息队列中的消息。 当从最终病毒子队列读取消息时，可以使用病毒消息处理设置的子集。 适用的设置有 `ReceiveRetryCount` 和 `ReceiveErrorHandling`。 您可以将 `ReceiveErrorHandling` 设置为“删除”、“拒绝”或“错误”。 如果 `MaxRetryCycles` 设置为“移动”，`ReceiveErrorHandling` 将被忽略并引发异常。  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Windows Vista、Windows Server 2003 和 Windows XP 之间的差异  
- 如上所述，并非所有病毒消息处理设置均适用于 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]、[!INCLUDE[wxp](../../../../includes/wxp-md.md)]和 Windows Vista 上的消息队列之间的下列主要差别与病毒消息处理有关：  
+ 如前文所述，并非所有病毒消息处理设置都适用于 Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。 Windows Server 2003、[!INCLUDE[wxp](../../../../includes/wxp-md.md)]和 Windows Vista 上的消息队列之间的下列主要差别与病毒消息处理有关：  
   
-- Windows Vista 中的消息队列支持子队列，而 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 不支持子队列。 子队列用于病毒消息处理。 重试队列和病毒队列是应用程序队列的子队列，是基于病毒消息处理设置创建的。 `MaxRetryCycles` 用于指示要创建的重试子队列的数量。 因此，当在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上运行时，`MaxRetryCycles` 会被忽略，并且不允许 `ReceiveErrorHandling.Move`。  
+- Windows Vista 中的消息队列支持子队列，而 Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 不支持子队列。 子队列用于病毒消息处理。 重试队列和病毒队列是应用程序队列的子队列，是基于病毒消息处理设置创建的。 `MaxRetryCycles` 用于指示要创建的重试子队列的数量。 因此，当在 Windows Server 2003 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]上运行时，将忽略 `MaxRetryCycles` 并不允许 `ReceiveErrorHandling.Move`。  
   
-- Windows Vista 中的消息队列支持否定确认，同时 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。 来自接收队列管理器的否定确认会致使发送队列管理器将被拒绝的消息放入死信队列。 因此，在 `ReceiveErrorHandling.Reject` 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 中不允许 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
+- Windows Vista 中的消息队列支持否定确认，而 Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 则不支持。 来自接收队列管理器的否定确认会致使发送队列管理器将被拒绝的消息放入死信队列。 因此，Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]不允许 `ReceiveErrorHandling.Reject`。  
   
-- Windows Vista 中的消息队列支持一个消息属性，该属性保留尝试消息传递的次数。 此中止计数属性在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中不可用。 WCF 在内存中维护中止计数，因此当在场中的多个 WCF 服务读取同一条消息时，此属性可能不包含准确值。  
+- Windows Vista 中的消息队列支持一个消息属性，该属性保留尝试消息传递的次数。 此中止计数属性在 Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]上不可用。 WCF 在内存中维护中止计数，因此当在场中的多个 WCF 服务读取同一条消息时，此属性可能不包含准确值。  
   
 ## <a name="see-also"></a>另请参阅
 

@@ -2,12 +2,12 @@
 title: 如何：查找两个列表之间的差集 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-ms.openlocfilehash: cd33c08416cce5afb6cf7507335f753160b8c6ff
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 42c5b5ee8a6af1323cb5eee12694fb94063eb877
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344586"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347513"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>如何：查找两个列表之间的差集（LINQ）（Visual Basic）
 此示例演示如何使用 LINQ 对两个字符串列表进行比较，并输出那些位于 names1.txt 中但不在 names2.txt 中的行。  
@@ -53,8 +53,8 @@ End Class
   
  Visual Basic 中的某些类型的查询操作（如 <xref:System.Linq.Enumerable.Except%2A>、<xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Union%2A>和 <xref:System.Linq.Enumerable.Concat%2A>）只能用基于方法的语法表示。  
   
-## <a name="compiling-the-code"></a>编译代码  
-使用 VB.NET 命名空间的 `Imports` 语句创建一个控制台应用程序项目。
+## <a name="compile-the-code"></a>编译代码  
+使用 System. Linq 命名空间的 `Imports` 语句创建 Visual Basic 的控制台应用程序项目。
   
 ## <a name="see-also"></a>另请参阅
 

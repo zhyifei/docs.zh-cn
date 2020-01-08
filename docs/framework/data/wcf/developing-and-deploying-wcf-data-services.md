@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: d6d0f6f357feba903e8345fc45251c146c5406db
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d3a3539904c5d8b5db23b99ca6128bf5860a1917
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975319"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346113"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>开发和部署 WCF 数据服务
 
@@ -70,7 +70,7 @@ ms.locfileid: "73975319"
 
 3. **Microsoft Azure 开发环境**
 
-     Windows Azure Tools for Visual Studio 包含一组集成的工具，用于在 Visual Studio 中开发 Microsoft Azure 服务。 使用这些工具，可以开发可部署到 Microsoft Azure 的数据服务，并且可以在部署之前在本地计算机上测试数据服务。 使用 Visual Studio 开发在 Windows Azure 平台上运行的数据服务时，请使用这些工具。 你可以从[Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkID=201848)下载 Windows Azure Tools For Visual Studio。 有关开发在 Microsoft Azure 上运行的数据服务的详细信息，请参阅文章在[Windows azure 中部署 OData 服务](https://go.microsoft.com/fwlink/?LinkId=201847)。
+     Windows Azure Tools for Visual Studio 包含一组集成的工具，用于在 Visual Studio 中开发 Microsoft Azure 服务。 使用这些工具，可以开发可部署到 Microsoft Azure 的数据服务，并且可以在部署之前在本地计算机上测试数据服务。 使用 Visual Studio 开发在 Windows Azure 平台上运行的数据服务时，请使用这些工具。 你可以从[Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkID=201848)下载 Windows Azure Tools For Visual Studio。 有关开发在 Microsoft Azure 上运行的数据服务的详细信息，请参阅文章在[Windows azure 中部署 OData 服务](https://blogs.msdn.microsoft.com/astoriateam/2010/07/20/deploying-an-odata-service-in-windows-azure/)。
 
 ### <a name="development-tips"></a>开发提示
 
@@ -80,7 +80,7 @@ ms.locfileid: "73975319"
 
 - HTTP 检查程序在调试数据服务时会非常有帮助，通过它可以检查请求和响应消息的内容。 可以使用任何可显示原始数据包的网络数据包分析器检查发向数据服务的 HTTP 请求和来自数据服务的响应。
 
-- 调试数据服务时，您可能需要从数据服务获取与常规操作过程中的错误有关的详细信息。 通过将 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 中的 <xref:System.Data.Services.DataServiceConfiguration> 属性设置为 `true` 并将数据服务类的 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 特性的 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 属性设置为 `true`，可以从数据服务获取其他错误信息。 有关详细信息，请参阅[调试后 WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=201868)。 你还可以在 WCF 中启用跟踪，以查看 HTTP 消息层中出现的异常。 有关更多信息，请参见 [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md)。
+- 调试数据服务时，您可能需要从数据服务获取与常规操作过程中的错误有关的详细信息。 通过将 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 中的 <xref:System.Data.Services.DataServiceConfiguration> 属性设置为 `true` 并将数据服务类的 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 特性的 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 属性设置为 `true`，可以从数据服务获取其他错误信息。 有关详细信息，请参阅[调试后 WCF 数据服务](https://blogs.msdn.microsoft.com/phaniraj/?m=20086)。 你还可以在 WCF 中启用跟踪，以查看 HTTP 消息层中出现的异常。 有关更多信息，请参见 [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md)。
 
 - 数据服务通常开发为 ASP.NET 应用程序项目，但也可以在 Visual Studio 中将数据服务创建为 ASP.NET 网站项目。 有关这两种类型的项目之间的差异的信息，请参阅[Web 应用程序项目与 Visual Studio 中](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110))的网站项目。
 
@@ -115,7 +115,7 @@ WCF 数据服务在选择承载数据服务的过程方面很灵活。 可以使
 
 - **Microsoft Azure**
 
-     您可以使用 Microsoft Azure Tools for Visual Studio 将数据服务部署到 Microsoft Azure。 你可以从[Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkID=201848)下载 Windows Azure Tools For Visual Studio。 有关将数据服务部署到 Microsoft Azure 的详细信息，请参阅文章[在 Windows azure 中部署 OData 服务](https://go.microsoft.com/fwlink/?LinkId=201847)。
+     您可以使用 Microsoft Azure Tools for Visual Studio 将数据服务部署到 Microsoft Azure。 你可以从[Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkID=201848)下载 Windows Azure Tools For Visual Studio。 有关将数据服务部署到 Microsoft Azure 的详细信息，请参阅文章[在 Windows azure 中部署 OData 服务](https://blogs.msdn.microsoft.com/astoriateam/2010/07/20/deploying-an-odata-service-in-windows-azure/)。
 
 ### <a name="deployment-considerations"></a>部署注意事项
 
@@ -123,9 +123,9 @@ WCF 数据服务在选择承载数据服务的过程方面很灵活。 可以使
 
 - 当你部署使用实体框架提供程序访问 SQL Server 数据库的数据服务时，你可能还需要传播数据结构和/或数据。 Visual Studio 可以自动创建脚本（.sql 文件）来在目标数据库中执行此操作，并且这些脚本可以包含在 ASP.NET 应用程序的 Web 部署包中。 有关详细信息，请参阅[如何：使用 Web 应用程序项目部署数据库](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))。 对于 ASP.NET 网站，可以使用 Visual Studio 中的 "**数据库发布向导**" 来执行此操作。 有关详细信息，请参阅[发布 SQL 数据库](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))。
 
-- 由于 WCF 数据服务包含基本 WCF 实现，因此你可以使用 Windows Server AppFabric 来监视部署到在 Windows Server 上运行的 IIS 的数据服务。 有关使用 Windows Server AppFabric 监视数据服务的详细信息，请参阅[使用 Windows Server appfabric 进行跟踪后 WCF 数据服务](https://go.microsoft.com/fwlink/?LinkID=202005)。
+- 由于 WCF 数据服务包含基本 WCF 实现，因此你可以使用 Windows Server AppFabric 来监视部署到在 Windows Server 上运行的 IIS 的数据服务。 有关使用 Windows Server AppFabric 监视数据服务的详细信息，请参阅[使用 Windows Server appfabric 进行跟踪后 WCF 数据服务](https://blogs.msdn.microsoft.com/rjacobs/2010/06/09/tracking-wcf-data-services-with-windows-server-appfabric/)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [承载数据服务](hosting-the-data-service-wcf-data-services.md)
 - [确保 WCF Data Services 的安全](securing-wcf-data-services.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-ms.openlocfilehash: 3e8d3ec46362751ea8bbfe5120e35a050d0e7a6c
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 5191f3d03facaafc64f6df494ff90cd0ce1c1988
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569366"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346182"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>异步操作（WCF 数据服务）
 与内部网络中运行的应用程序相比，Web 应用程序必须适应客户端与服务器之间更长时间的延迟。 若要优化应用程序的性能和用户体验，我们建议在通过 Web 访问 WCF 数据服务服务器时，使用 <xref:System.Data.Services.Client.DataServiceContext> 和 <xref:System.Data.Services.Client.DataServiceQuery%601> 类的异步方法。  
@@ -21,7 +21,7 @@ ms.locfileid: "74569366"
  您可以通过对 <xref:System.Data.Services.Client.DataServiceContext> 使用一对方法并分别以*Begin*和*End*开头 <xref:System.Data.Services.Client.DataServiceQuery%601> 类来执行异步操作。 *Begin*方法在操作完成时注册服务调用的委托。 应在注册的委托中调用*End*方法，以处理已完成操作的回调。 在调用*End*方法以完成异步操作时，必须从用于开始操作的相同 <xref:System.Data.Services.Client.DataServiceQuery%601> 或 <xref:System.Data.Services.Client.DataServiceContext> 实例中执行此操作。 每个*Begin*方法都使用 `state` 参数，该参数可将状态对象传递给回调。 此状态对象是从随回调提供的 <xref:System.IAsyncResult> 中检索的，用于调用相应的*结束*方法以完成异步操作。 例如，如果在对 <xref:System.Data.Services.Client.DataServiceQuery%601> 实例调用 `state` 方法时提供该实例作为 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 参数，那么 <xref:System.Data.Services.Client.DataServiceQuery%601> 将返回同一个 <xref:System.IAsyncResult> 实例。 随后将使用 <xref:System.Data.Services.Client.DataServiceQuery%601> 的这个实例调用 <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> 方法以完成查询操作。 有关详细信息，请参阅[如何：执行异步数据服务查询](how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)。  
   
 > [!NOTE]
-> .NET Framework for Silverlight 中提供的客户端库仅支持异步操作。 有关详细信息，请参阅[WCF 数据服务（Silverlight）](https://go.microsoft.com/fwlink/?LinkID=143149)。  
+> .NET Framework for Silverlight 中提供的客户端库仅支持异步操作。 有关详细信息，请参阅[WCF 数据服务（Silverlight）](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))。  
   
  .NET Framework 客户端库支持下列异步操作：  
   

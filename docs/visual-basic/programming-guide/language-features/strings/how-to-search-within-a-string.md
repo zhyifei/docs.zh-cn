@@ -1,17 +1,17 @@
 ---
-title: 如何：在字符串 Visual Basic 中搜索
+title: 如何：在字符串内搜索
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], finding
 - strings [Visual Basic], searching
 - examples [Visual Basic], strings
 ms.assetid: ae4c79e0-08ea-489f-bdb2-5eb6d355f284
-ms.openlocfilehash: fe9e50dc5458fdf8546094e5f41c2f001f1d2791
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 655f746e4e496e1935afcd2a9f9fe36d9e3a2564
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700063"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348424"
 ---
 # <a name="how-to-search-within-a-string-visual-basic"></a>如何：在字符串中搜索（Visual Basic）
 

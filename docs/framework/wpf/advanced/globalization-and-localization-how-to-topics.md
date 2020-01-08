@@ -7,15 +7,15 @@ helpviewer_keywords:
 - localization [WPF], features
 - globalization [WPF], features
 ms.assetid: c4b484fb-bc90-4186-a08d-f081e7109cad
-ms.openlocfilehash: a2ab04f40a3299bc0cd5a17c0f31e4f4ee0433ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98368a54fad095337038236d7bfdc2123edb6be2
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010288"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559404"
 ---
 # <a name="globalization-and-localization-how-to-topics"></a>全球化和本地化帮助主题
-在本部分中的主题介绍如何开发全球通用应用程序。  
+本节中的主题介绍如何开发全球通用的应用程序。  
   
 ## <a name="in-this-section"></a>本节内容  
  [对应用程序进行本地化](how-to-localize-an-application.md)  
@@ -24,13 +24,13 @@ ms.locfileid: "62010288"
  [使用 ResourceDictionary 管理可本地化的字符串资源](how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
  [在可本地化的应用程序中使用资源](how-to-use-resources-in-localizable-applications.md)  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Globalization>  
   
  <xref:System.Windows.FrameworkElement.FlowDirection%2A>  
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [XAML 中 xml:lang 的处理](../../xaml-services/xml-lang-handling-in-xaml.md)  
+ [XAML 中 xml:lang 的处理](../../../desktop-wpf/xaml-services/xml-language-handling.md)  
   
 ## <a name="related-sections"></a>相关章节

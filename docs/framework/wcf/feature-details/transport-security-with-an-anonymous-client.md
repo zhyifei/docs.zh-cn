@@ -1,40 +1,40 @@
 ---
-title: 使用匿名客户端的 WCF 传输安全性
+title: 匿名客户端的传输安全
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-ms.openlocfilehash: aac3b2ac6cfcca137bddaefafd290e744ee991eb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c3e44c87dfa70ac3a7acc5a83ac596efc22b6155
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637441"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344757"
 ---
-# <a name="transport-security-with-an-anonymous-client"></a>匿名客户端使用的传输安全性
+# <a name="transport-security-with-an-anonymous-client"></a>匿名客户端的传输安全
 
-此 Windows Communication Foundation (WCF) 方案中使用传输安全 (HTTPS) 确保保密性和完整性。 必须使用安全套接字层 (SSL) 证书对服务器进行身份验证，并且客户端必须信任服务器的证书。 客户端不通过任何机制进行身份验证，因此是匿名的。
+此 Windows Communication Foundation （WCF）方案使用传输安全（HTTPS）来确保机密性和完整性。 必须使用安全套接字层 (SSL) 证书对服务器进行身份验证，并且客户端必须信任服务器的证书。 客户端不通过任何机制进行身份验证，因此是匿名的。
 
-示例应用程序，请参阅[WS 传输安全性](../samples/ws-transport-security.md)。 有关传输安全性的详细信息，请参阅[传输安全概述](transport-security-overview.md)。
+有关示例应用程序，请参阅[WS 传输安全性](../samples/ws-transport-security.md)。 有关传输安全的详细信息，请参阅[传输安全概述](transport-security-overview.md)。
 
-有关与服务使用的证书的详细信息，请参阅[Working with Certificates](working-with-certificates.md)和[如何：使用 SSL 证书配置端口](how-to-configure-a-port-with-an-ssl-certificate.md)。
+有关将证书用于服务的详细信息，请参阅使用[证书](working-with-certificates.md)和[如何：使用 SSL 证书配置端口](how-to-configure-a-port-with-an-ssl-certificate.md)。
 
-![对匿名客户端使用传输安全性](./media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif)
+![使用匿名客户端的传输安全](./media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif)
 
 |特征|描述|
 |--------------------|-----------------|
-|安全模式|传输|
+|安全模式|Transport|
 |互操作性|与现有 Web 服务和客户端|
-|身份验证（服务器）<br /><br /> 身份验证（客户端）|是<br /><br /> 应用程序级别 （无 WCF 支持）|
+|身份验证（服务器）<br /><br /> 身份验证（客户端）|是<br /><br /> 应用程序级别（无 WCF 支持）|
 |完整性|是|
 |保密性|是|
-|传输|HTTPS|
+|Transport|HTTPS|
 |绑定|<xref:System.ServiceModel.WSHttpBinding>|
 
 ## <a name="service"></a>服务
 
-下面的代码和配置应独立运行。 执行下列操作之一：
+下面的代码和配置应独立运行。 执行以下操作之一：
 
 - 使用代码（而不使用配置）创建独立服务。
 
@@ -78,9 +78,9 @@ ms.locfileid: "65637441"
 </configuration>
 ```
 
-## <a name="client"></a>客户端
+## <a name="client"></a>Client
 
-下面的代码和配置应独立运行。 执行下列操作之一：
+下面的代码和配置应独立运行。 执行以下操作之一：
 
 - 使用代码（和客户端代码）创建独立客户端。
 
@@ -121,7 +121,7 @@ ms.locfileid: "65637441"
 </configuration>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安全性概述](security-overview.md)
 - [WS 传输安全性](../samples/ws-transport-security.md)

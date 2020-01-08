@@ -1,15 +1,15 @@
 ---
-title: FindPrivateKey 示例-WCF
+title: FindPrivateKey 示例
 ms.date: 12/04/2017
 helpviewer_keywords:
 - FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
-ms.openlocfilehash: 4ba4316489c1494da9421bea5c513e44c6eb50a7
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0ed1e5e81a5d2f7f3586e5dce306e8244b5ebd48
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989876"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346017"
 ---
 # <a name="findprivatekey-sample"></a>FindPrivateKey 示例
 
@@ -46,13 +46,13 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
 若要下载此项目，请访问[.NET Framework 4 Windows Communication Foundation （WCF）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)。
 
-1. 打开文件资源管理器并导航到安装示例的目录位置下的*WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS*文件夹。
+1. 打开文件资源管理器并导航到安装示例的目录位置下的*WF_WCF_Samples \wcf\setup\findprivatekey\cs* "文件夹。
 
 2. 双击 .sln 文件图标，在 Visual Studio 中打开该文件。
 
 3. 在 "**生成**" 菜单中，选择 "**重新生成解决方案**"。
 
-4. 生成解决方案将生成文件：FindPrivateKey。
+4. 生成解决方案将生成如下文件：FindPrivateKey.exe。
 
 ## <a name="conventionscommand-line-entries"></a>约定-命令行条目
 
@@ -62,9 +62,9 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
  "*选项 1* &#124; *选项 2*" 表示在选项集之间选择。
 
- "\<*value*>" 表示要输入的参数值。
+ "\<*值*>" 表示要输入的参数值。
 
-## <a name="usage"></a>用法
+## <a name="usage"></a>用量
 
 ```console
 FindPrivateKey <storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]

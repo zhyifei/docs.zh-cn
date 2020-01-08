@@ -7,17 +7,17 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: e5d2465d145f4059600121c6cef30bb2c74a8c1c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4eaa9399ca0038e3142886abf2161266f8c77782
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346190"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636076"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>XML 文本概述 (Visual Basic)
 *Xml 文本*允许将 xml 直接合并到 Visual Basic 代码。 XML 文本语法表示 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 对象，它类似于 XML 1.0 语法。 这样可以更轻松地以编程方式创建 XML 元素和文档，因为你的代码具有与最终 XML 相同的结构。  
   
- Visual Basic 将 XML 文本编译到 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 对象中。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供了一种用于创建和操作 XML 的简单对象模型，此模型很好地与 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]集成。 有关详细信息，请参阅 <xref:System.Xml.Linq.XElement>。  
+ Visual Basic 将 XML 文本编译到 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 对象中。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供了一个用于创建和操作 XML 的简单对象模型，此模型可与语言集成查询（LINQ）完美集成。 有关更多信息，请参见<xref:System.Xml.Linq.XElement>。  
   
  您可以在 XML 文本中嵌入 Visual Basic 表达式。 在运行时，应用程序将为每个文本创建一个 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 对象，并合并嵌入式表达式的值。 这使您可以在 XML 文本中指定动态内容。 有关详细信息，请参阅[XML 中的嵌入式表达式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "74346190"
 > [!NOTE]
 > Visual Basic 中的 XML 文本语法与 XML 1.0 规范中的语法不完全相同。 有关详细信息，请参阅[Xml 文本和 xml 1.0 规范](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)。  
   
-## <a name="line-continuation"></a>行继续符  
+## <a name="line-continuation"></a>续行符  
  XML 文本可以跨多行，而无需使用行继续符（空格-下划线-enter 序列）。 这样就可以更轻松地在代码中将 XML 文本与 XML 文档进行比较。  
   
  编译器将行继续符视为 XML 文本的一部分。 因此，只有在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 对象中时，才应使用空格-下划线-enter 序列。  

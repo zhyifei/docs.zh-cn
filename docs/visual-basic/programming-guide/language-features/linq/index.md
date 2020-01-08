@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
-ms.openlocfilehash: ea6754d9d93a7d400ac3494b01b850374e9ec02d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 50d6c9ffb484dfbc6d33ed1a3e9a1f03f240990b
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354178"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636531"
 ---
 # <a name="linq-in-visual-basic"></a>Visual Basic 中的 LINQ
-此部分收录了有助于你了解和使用 Visual Basic 和 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 的概述、示例和背景信息。  
+本部分包含可帮助您了解和使用 Visual Basic 和语言集成查询（LINQ）的概述、示例和背景信息。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- 介绍了 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供程序、运算符、查询结构和语言功能。  
+ 介绍 LINQ 提供程序、运算符、查询结构和语言功能。  
   
  [如何：查询数据库](../../../../visual-basic/programming-guide/language-features/linq/how-to-query-a-database-by-using-linq.md)  
  通过示例展示了如何连接 SQL Server 数据库，并使用 LINQ 执行查询。  

@@ -2,22 +2,22 @@
 title: WS-AtomicTransaction 配置 MMC 管理单元
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 04380a2a30aba85efb98ee8f9e24d0a6223a18a3
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 04f9a014c3cb3ffd127ccc82fdda731e20136c52
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320331"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544642"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction 配置 MMC 管理单元
 WS-AtomicTransaction 配置 MMC 管理单元用于在本地计算机和远程计算机上配置一部分 WS-AtomicTransaction 设置。  
   
 ## <a name="remarks"></a>备注  
- 如果运行 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 或 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]，则可以通过导航到 **"控制面板"/"管理工具"/"组件服务**"，右键单击 "**我的电脑**"，然后选择 "**属性**" 来找到 MMC 管理单元。 这与可在其中配置 MSDTC 的位置相同。 可用于配置的选项分组在 " **ws-at** " 选项卡下。  
+ 如果运行 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 或 Windows Server 2003，则可以通过导航到 **"控制面板"/"管理工具"/"组件服务**"，右键单击 "**我的电脑**"，然后选择 "**属性**" 来找到 MMC 管理单元。 这与可在其中配置 MSDTC 的位置相同。 可用于配置的选项分组在 " **ws-at** " 选项卡下。  
   
- 如果运行的是 Windows Vista 或 [!INCLUDE[lserver](../../../includes/lserver-md.md)]，则可以通过单击 "**开始**" 按钮，然后在 "**搜索**" 框中键入 `dcomcnfg.exe` 来找到 MMC 管理单元。 打开 MMC 时，导航到 "我的**Computer\Distributed Transaction 处理协调器 DTC** " 节点，右键单击并选择 "**属性**"。 可用于配置的选项分组在 " **ws-at** " 选项卡下。  
+ 如果运行的是 Windows Vista 或 Windows Server 2008，则可以通过单击 "**开始**" 按钮，并在 "**搜索**" 框中键入 `dcomcnfg.exe` 来找到 MMC 管理单元。 打开 MMC 时，导航到 "我的**Computer\Distributed Transaction 处理协调器 DTC** " 节点，右键单击并选择 "**属性**"。 可用于配置的选项分组在 " **ws-at** " 选项卡下。  
   
- 使用前面的步骤来启动用于配置本地计算机的管理单元。 如果要配置远程计算机，则应在 **"控制面板"/"管理工具"/"组件服务/** " 中找到远程计算机的名称，然后在运行 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 或 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 时执行类似的步骤。 如果你运行的是 Windows Vista 或 [!INCLUDE[lserver](../../../includes/lserver-md.md)]，请在 Vista 和 [!INCLUDE[lserver](../../../includes/lserver-md.md)] 中执行前面的步骤，但使用远程计算机的节点下的**Distributed Transaction 处理协调器 DTC**节点。  
+ 使用前面的步骤来启动用于配置本地计算机的管理单元。 如果要配置远程计算机，则应在 **"控制面板"/"管理工具"/"组件服务/** " 中找到远程计算机的名称，然后在运行 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 或 Windows Server 2003 时执行类似的步骤。 如果你运行的是 Windows Vista 或 Windows Server 2008，请针对 Vista 和 Windows Server 2008 执行前面的步骤，但使用远程计算机的节点下的**Distributed Transaction 处理协调器 DTC**节点。  
   
  若要使用工具提供的用户界面，您必须注册 WsatUI.dll 文件，该文件位于以下路径中：  
   
@@ -63,7 +63,7 @@ regasm.exe /codebase WsatUI.dll
   
  **授权帐户**  
   
- 单击 "**选择**" 按钮调用 Windows 访问控制列表编辑器，您可以在其中指定可参与 WS 原子事务的用户或组，方法是选中 "**参与** **" 或 "** **拒绝**" 框。权限组。  
+ 单击 "**选择**" 按钮调用 Windows 访问控制列表编辑器，您可以在其中通过选中 "**参与**" 权限组中的 "**允许**" 或 "**拒绝**" 框，指定可参与 WS 原子事务的用户或组。  
   
  **授权的证书**  
   
@@ -86,7 +86,7 @@ regasm.exe /codebase WsatUI.dll
   
  有关跟踪和日志记录的详细信息，请参阅[管理和诊断](./diagnostics/index.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [配置 WS-Atomic 事务支持](./feature-details/configuring-ws-atomic-transaction-support.md)
 - [WS-AtomicTransaction 配置实用工具 (wsatConfig.exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

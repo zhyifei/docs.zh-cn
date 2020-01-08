@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 80878c18143eaa603e624c8be63f11af91cfcfb6
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 6d6ce6ace41894672d285ff8f0733c1b9d52562c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569301"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346142"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>配置数据服务（WCF 数据服务）
 通过 WCF 数据服务，您可以创建公开 Open Data Protocol （OData）源的数据服务。 这些源中的数据可以来自各种数据源。 WCF 数据服务使用数据提供程序将此数据作为 OData 源公开。 这些提供程序包括实体框架提供程序、反射提供程序和一组自定义数据服务提供程序接口。 提供程序实现为服务定义数据模型。 有关详细信息，请参阅[数据服务提供程序](data-services-providers-wcf-data-services.md)。  
@@ -29,15 +29,15 @@ ms.locfileid: "74569301"
   
 |成员|行为|  
 |------------|--------------|  
-|<xref:System.Data.Services.DataServiceBehavior.AcceptCountRequests%2A>|用于禁用通过使用 `$count` 路径段和 `$inlinecount` 查询选项提交给数据服务的计数请求。 有关详细信息，请参阅[OData： URI 约定](https://go.microsoft.com/fwlink/?LinkId=185564)。|  
-|<xref:System.Data.Services.DataServiceBehavior.AcceptProjectionRequests%2A>|用于在通过使用 `$select` 查询选项提交给数据服务的请求中禁用数据投影支持。 有关详细信息，请参阅[OData： URI 约定](https://go.microsoft.com/fwlink/?LinkId=185564)。|  
+|<xref:System.Data.Services.DataServiceBehavior.AcceptCountRequests%2A>|用于禁用通过使用 `$count` 路径段和 `$inlinecount` 查询选项提交给数据服务的计数请求。 有关详细信息，请参阅[OData： URI 约定](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)。|  
+|<xref:System.Data.Services.DataServiceBehavior.AcceptProjectionRequests%2A>|用于在通过使用 `$select` 查询选项提交给数据服务的请求中禁用数据投影支持。 有关详细信息，请参阅[OData： URI 约定](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)。|  
 |<xref:System.Data.Services.DataServiceConfiguration.EnableTypeAccess%2A>|用于在通过使用 <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> 接口所定义的动态元数据提供程序的元数据中公开数据类型。|  
 |<xref:System.Data.Services.DataServiceConfiguration.EnableTypeConversion%2A>|用于指定数据服务运行时是否应将负载中包含的类型转换为请求中指定的实际属性类型。|  
 |<xref:System.Data.Services.DataServiceBehavior.InvokeInterceptorsOnLinkDelete%2A>|用于指定在删除两个实体之间的关系链接时是否对相关实体调用注册的变更侦听器。|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxBatchCount%2A>|用于限制单个批处理中允许的变更集和查询操作的数量。 有关详细信息，请参阅[OData：批处理](https://go.microsoft.com/fwlink/?LinkId=185602)和[批处理操作](batching-operations-wcf-data-services.md)。|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxBatchCount%2A>|用于限制单个批处理中允许的变更集和查询操作的数量。 有关详细信息，请参阅[OData：批处理](https://www.odata.org/documentation/odata-version-2-0/batch-processing/)和[批处理操作](batching-operations-wcf-data-services.md)。|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxChangesetCount%2A>|用于限制单个变更集中可包含的变更的数量。 有关详细信息，请参阅[如何：启用数据服务结果分页](how-to-enable-paging-of-data-service-results-wcf-data-services.md)。|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|用于限制响应的大小，方法是使用 `$expand` 查询运算符限制单个请求中可包含的相关实体的数量。 有关详细信息，请参阅[OData： URI 约定](https://go.microsoft.com/fwlink/?LinkId=185564)和[加载延迟的内容](loading-deferred-content-wcf-data-services.md)。|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|用于限制响应的大小，方法是使用 `$expand` 查询运算符限制单个请求中可包含的相关实体的图深度。 有关详细信息，请参阅[OData： URI 约定](https://go.microsoft.com/fwlink/?LinkId=185564)和[加载延迟的内容](loading-deferred-content-wcf-data-services.md)。|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|用于限制响应的大小，方法是使用 `$expand` 查询运算符限制单个请求中可包含的相关实体的数量。 有关详细信息，请参阅[OData： URI 约定](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)和[加载延迟的内容](loading-deferred-content-wcf-data-services.md)。|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|用于限制响应的大小，方法是使用 `$expand` 查询运算符限制单个请求中可包含的相关实体的图深度。 有关详细信息，请参阅[OData： URI 约定](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)和[加载延迟的内容](loading-deferred-content-wcf-data-services.md)。|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxObjectCountOnInsert%2A>|用于限制要插入的（即单个 POST 请求中可包含的）实体数量。|  
 |<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|定义数据服务所使用的 Atom 协议的版本。 如果 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> 的值设置为小于 <xref:System.Data.Services.Common.DataServiceProtocolVersion>的最大值的值，则 WCF 数据服务的最新功能对于访问数据服务的客户端不可用。 有关详细信息，请参阅[数据服务版本控制](data-service-versioning-wcf-data-services.md)。|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxResultsPerCollection%2A>|用于限制响应的大小，方法是限制以数据馈送形式返回的每个实体集中实体的数量。|  
@@ -54,7 +54,7 @@ ms.locfileid: "74569301"
 |路径/操作|`GET`|`DELETE`|`MERGE`|`POST`|`PUT`|  
 |------------------|-----------|--------------|-------------|------------|-----------|  
 |`/Customers`|<xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支持|不支持|<xref:System.Data.Services.EntitySetRights.WriteAppend>|不支持|  
-|`/Customers('ALFKI')`|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteDelete>|<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteMerge>|不可用|<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
+|`/Customers('ALFKI')`|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteDelete>|<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteMerge>|无|<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
 |`/Customers('ALFKI')/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 和<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支持|不支持|`Customers`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteMerge> 或 <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> 和<br /><br /> `Orders` `:` 和 <xref:System.Data.Services.EntitySetRights.WriteAppend>|不支持|  
 |`/Customers('ALFKI')/Orders(10643)`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 和<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 和<br /><br /> `Orders`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteDelete>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 和<br /><br /> `Orders`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteMerge>|不支持|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 和<br /><br /> `Orders`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
 |`/Orders(10643)/Customer`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 和<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteDelete><br /><br /> 和<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteMerge>；<br /><br /> 和<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend><br /><br /> 和<br /><br /> `Orders`：<xref:System.Data.Services.EntitySetRights.WriteAppend> 和 <xref:System.Data.Services.EntitySetRights.ReadSingle>|不支持|  

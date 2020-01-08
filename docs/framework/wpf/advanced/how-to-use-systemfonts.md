@@ -9,12 +9,12 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-ms.openlocfilehash: 63ba7a6fb1c8776cc35c0e6f07a6b78f5b3d93d0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 157565ceb9057049aef8b2bf274847d58c6b8dc8
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459511"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559958"
 ---
 # <a name="how-to-use-systemfonts"></a>如何：使用 SystemFonts
 此示例演示如何使用 <xref:System.Windows.SystemFonts> 类的静态资源来样式或自定义按钮。  
@@ -36,13 +36,13 @@ ms.locfileid: "73459511"
  [!code-csharp[SystemRes_snip#FontResourcesCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#fontresourcescode)]
  [!code-vb[SystemRes_snip#FontResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#fontresourcescode)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.SystemFonts>
 - [使用系统画笔绘制区域](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [使用 SystemParameters](how-to-use-systemparameters.md)
 - [使用系统字体键](how-to-use-system-fonts-keys.md)
 - [帮助主题](resources-how-to-topics.md)
-- [x:Static 标记扩展](../../xaml-services/x-static-markup-extension.md)
+- [x:Static 标记扩展](../../../desktop-wpf/xaml-services/xstatic-markup-extension.md)
 - [XAML 资源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [DynamicResource 标记扩展](dynamicresource-markup-extension.md)

@@ -11,29 +11,29 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 8c201abef924766d52b1adb084970a24ebea2b50
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e839271ac254a5e96f8c99f59397016fb99540aa
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350567"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636908"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>查询操作中的类型关系 (Visual Basic)
 
-[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 查询操作中使用的变量是强类型化的，并且必须彼此兼容。 强类型化在数据源、查询本身和查询执行中使用。 下图标识用于描述 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询的术语。 有关查询各个部分的详细信息，请参阅[基本查询操作（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。
+在语言集成查询（LINQ）查询操作中使用的变量是强类型化的，并且必须彼此兼容。 强类型化在数据源、查询本身和查询执行中使用。 下图标识用于描述 LINQ 查询的术语。 有关查询各个部分的详细信息，请参阅[基本查询操作（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。
 
 ![显示突出显示了元素的伪代码查询的屏幕截图。](./media/type-relationships-in-query-operations/linq-query-description-terms.png)
 
 查询中范围变量的类型必须与数据源中的元素类型兼容。 查询变量的类型必须与 `Select` 子句中定义的序列元素兼容。 最后，序列元素的类型还必须与用于执行查询的 `For Each` 语句中使用的循环控制变量的类型兼容。 这种强类型化有助于在编译时标识错误的类型。
 
-通过实现局部类型推理（也称为*隐式*类型），Visual Basic 使强类型化变得非常方便。 在上一示例中使用该功能，您将看到它在整个 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 示例和文档中使用。 在 Visual Basic 中，仅通过使用不带 `As` 子句的 `Dim` 语句来完成本地类型推断。 在下面的示例中，`city` 强类型化为字符串。
+通过实现局部类型推理（也称为*隐式*类型），Visual Basic 使强类型化变得非常方便。 上一示例中使用了该功能，您将看到它在整个 LINQ 示例和文档中使用。 在 Visual Basic 中，仅通过使用不带 `As` 子句的 `Dim` 语句来完成本地类型推断。 在下面的示例中，`city` 强类型化为字符串。
 
 [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]
 
 > [!NOTE]
 > 仅当 `Option Infer` 设置为 `On`时，本地类型推理才有效。 有关详细信息，请参阅[Option 推理语句](../../../../visual-basic/language-reference/statements/option-infer-statement.md)。
 
-但是，即使在查询中使用局部类型推理，数据源、查询变量和查询执行循环中的变量也存在相同的类型关系。 编写 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询或使用文档中的示例和代码示例时，基本了解这些类型关系非常有用。
+但是，即使在查询中使用局部类型推理，数据源、查询变量和查询执行循环中的变量也存在相同的类型关系。 编写 LINQ 查询或使用文档中的示例和代码示例时，基本了解这些类型关系非常有用。
 
 对于与从数据源返回的类型不匹配的范围变量，可能需要指定显式类型。 您可以使用 `As` 子句指定范围变量的类型。 但是，如果转换是[收缩转换](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)并且 `Option Strict` 设置为 `On`，这会导致错误。 因此，建议您对从数据源检索的值执行转换。 您可以使用 <xref:System.Linq.Enumerable.Cast%2A> 方法将数据源中的值转换为显式范围变量类型。 还可以将 `Select` 子句中选择的值强制转换为与范围变量的类型不同的显式类型。 下面的代码演示了这些要点。
 
@@ -41,7 +41,7 @@ ms.locfileid: "74350567"
 
 ## <a name="queries-that-return-entire-elements-of-the-source-data"></a>返回源数据的整个元素的查询
 
-下面的示例演示一个 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询操作，该操作返回从源数据中选择的一系列元素。 `names`源包含一个字符串数组，并且查询输出是一个序列，其中包含以字母 M 开头的字符串。
+下面的示例演示一个 LINQ 查询操作，该操作返回从源数据中选择的一系列元素。 `names`源包含一个字符串数组，并且查询输出是一个序列，其中包含以字母 M 开头的字符串。
 
 [!code-vb[VbLINQTypeRels#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#2)]
 

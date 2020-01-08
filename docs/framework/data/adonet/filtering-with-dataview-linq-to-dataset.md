@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: 9cbd3d52c0e751097a937fa8781171c8c2a0058f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 426e8c43f0ff8af94ab56230cf002637f351cd75
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795043"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634854"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>使用 DataView 进行筛选 (LINQ to DataSet)
-使用特定条件筛选数据，然后通过 UI 控件在客户端中表示该数据的能力是数据绑定的一个重要特征。 <xref:System.Data.DataView> 提供多种方式来筛选数据并返回满足指定筛选条件的数据行子集。 除了基于字符串的筛选功能<xref:System.Data.DataView>外，还可以使用[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]表达式来筛选筛选条件。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]表达式允许执行比基于字符串的筛选更复杂、功能更强大的筛选操作。  
+使用特定条件筛选数据，然后通过 UI 控件在客户端中表示该数据的能力是数据绑定的一个重要特征。 <xref:System.Data.DataView> 提供多种方式来筛选数据并返回满足指定筛选条件的数据行子集。 除了基于字符串的筛选功能以外，<xref:System.Data.DataView> 还提供将 LINQ 表达式用于筛选条件的功能。 LINQ 表达式允许执行比基于字符串的筛选更复杂而功能更强大的筛选操作。  
   
  使用 <xref:System.Data.DataView> 筛选数据有两种方式：  
   
-- 使用 Where 子句从 LINQ to DataSet 查询创建。 <xref:System.Data.DataView>  
+- 使用 Where 子句从 LINQ to DataSet 查询创建 <xref:System.Data.DataView>。  
   
 - 使用 <xref:System.Data.DataView> 现有的基于字符串的筛选功能。  
   
 ## <a name="creating-dataview-from-a-query-with-filtering-information"></a>通过具有筛选信息的查询创建 DataView  
- 可以通过 LINQ to DataSet 查询来创建对象。<xref:System.Data.DataView> 如果该查询包含一个 `Where` 子句，则会使用查询中的筛选信息创建 <xref:System.Data.DataView>。 `Where` 子句中的表达式用于确定哪些数据行将包括在 <xref:System.Data.DataView> 中并作为筛选器的基础。  
+ 可以从 LINQ to DataSet 查询创建 <xref:System.Data.DataView> 对象。 如果该查询包含一个 `Where` 子句，则会使用查询中的筛选信息创建 <xref:System.Data.DataView>。 `Where` 子句中的表达式用于确定哪些数据行将包括在 <xref:System.Data.DataView> 中并作为筛选器的基础。  
   
  基于表达式的筛选器具有比基于字符串的简单筛选器更强大、更复杂的筛选功能。 基于字符串的筛选器和基于表达式的筛选器是互相排斥的。 如果在通过查询创建 <xref:System.Data.DataView.RowFilter%2A> 后设置基于字符串的 <xref:System.Data.DataView>，则会清除从查询推断的基于表达式的筛选器。  
   
@@ -59,19 +59,19 @@ ms.locfileid: "70795043"
  [!code-vb[DP DataView Samples#SoundEx](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#soundex)]  
   
 ## <a name="using-the-rowfilter-property"></a>使用 RowFilter 属性  
- 现有的基于字符串的筛选功能<xref:System.Data.DataView>仍适用于 LINQ to DataSet 上下文。 有关基于<xref:System.Data.DataView.RowFilter%2A>字符串的筛选的详细信息，请参阅对[数据进行排序和筛选](./dataset-datatable-dataview/sorting-and-filtering-data.md)。  
+ <xref:System.Data.DataView> 的现有基于字符串的筛选功能仍可在 LINQ to DataSet 上下文中工作。 有关基于字符串的 <xref:System.Data.DataView.RowFilter%2A> 筛选的详细信息，请参阅对[数据进行排序和筛选](./dataset-datatable-dataview/sorting-and-filtering-data.md)。  
   
  下面的示例从 Contact 表创建 <xref:System.Data.DataView>，然后设置 <xref:System.Data.DataView.RowFilter%2A> 属性以返回联系人的姓氏为“Zhu”的行：  
   
  [!code-csharp[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvrowfilter)]
  [!code-vb[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvrowfilter)]  
   
- 在从或 LINQ to DataSet 查询创建后<xref:System.Data.DataView.RowFilter%2A> ，可以使用属性根据行的列值指定行的子集。 <xref:System.Data.DataTable> <xref:System.Data.DataView> 基于字符串的筛选器和基于表达式的筛选器是互相排斥的。 <xref:System.Data.DataView.RowFilter%2A>设置属性将清除从 LINQ to DataSet 查询推断的筛选表达式，并且不能重置筛选器表达式。  
+ 从 <xref:System.Data.DataTable> 或 LINQ to DataSet 查询创建 <xref:System.Data.DataView> 后，可以使用 <xref:System.Data.DataView.RowFilter%2A> 属性根据行的列值指定行的子集。 基于字符串的筛选器和基于表达式的筛选器是互相排斥的。 设置 <xref:System.Data.DataView.RowFilter%2A> 属性将清除从 LINQ to DataSet 查询推断的筛选表达式，并且不能重置筛选器表达式。  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromquerywheresetrowfilter)]
  [!code-vb[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywheresetrowfilter)]  
   
- 如果要返回特定数据查询的结果而不是提供数据子集的动态视图，则可以使用 <xref:System.Data.DataView.Find%2A> 的 <xref:System.Data.DataView.FindRows%2A> 或 <xref:System.Data.DataView> 方法，而不设置 <xref:System.Data.DataView.RowFilter%2A> 属性。 <xref:System.Data.DataView.RowFilter%2A> 属性最适合用于用绑定控件显示筛选结果的数据绑定应用程序。 设置 <xref:System.Data.DataView.RowFilter%2A> 属性会重新生成数据的索引，从而增加应用程序的系统开销并降低性能。 <xref:System.Data.DataView.Find%2A> 和 <xref:System.Data.DataView.FindRows%2A> 方法使用当前索引，而不要求重新生成索引。 如果只想调用 <xref:System.Data.DataView.Find%2A> 或 <xref:System.Data.DataView.FindRows%2A> 一次，则应使用现有的 <xref:System.Data.DataView>。 如果想要调用 <xref:System.Data.DataView.Find%2A> 或 <xref:System.Data.DataView.FindRows%2A> 多次，则应该创建一个新的 <xref:System.Data.DataView> 以便对想要搜索的列重新生成索引，然后调用 <xref:System.Data.DataView.Find%2A> 或 <xref:System.Data.DataView.FindRows%2A> 方法。 <xref:System.Data.DataView.Find%2A>有关和方法的详细信息， <xref:System.Data.DataView.FindRows%2A>请参阅[查找行](./dataset-datatable-dataview/finding-rows.md)和[DataView 性能](dataview-performance.md)。  
+ 如果要返回特定数据查询的结果而不是提供数据子集的动态视图，则可以使用 <xref:System.Data.DataView.Find%2A> 的 <xref:System.Data.DataView.FindRows%2A> 或 <xref:System.Data.DataView> 方法，而不设置 <xref:System.Data.DataView.RowFilter%2A> 属性。 <xref:System.Data.DataView.RowFilter%2A> 属性最适合用于用绑定控件显示筛选结果的数据绑定应用程序。 设置 <xref:System.Data.DataView.RowFilter%2A> 属性会重新生成数据的索引，从而增加应用程序的系统开销并降低性能。 <xref:System.Data.DataView.Find%2A> 和 <xref:System.Data.DataView.FindRows%2A> 方法使用当前索引，而不要求重新生成索引。 如果只想调用 <xref:System.Data.DataView.Find%2A> 或 <xref:System.Data.DataView.FindRows%2A> 一次，则应使用现有的 <xref:System.Data.DataView>。 如果想要调用 <xref:System.Data.DataView.Find%2A> 或 <xref:System.Data.DataView.FindRows%2A> 多次，则应该创建一个新的 <xref:System.Data.DataView> 以便对想要搜索的列重新生成索引，然后调用 <xref:System.Data.DataView.Find%2A> 或 <xref:System.Data.DataView.FindRows%2A> 方法。 有关 <xref:System.Data.DataView.Find%2A> 和 <xref:System.Data.DataView.FindRows%2A> 方法的详细信息，请参阅[查找行](./dataset-datatable-dataview/finding-rows.md)和[DataView 性能](dataview-performance.md)。  
   
 ## <a name="clearing-the-filter"></a>清除筛选器  
  使用 <xref:System.Data.DataView> 属性设置筛选之后，可以清除 <xref:System.Data.DataView.RowFilter%2A> 上的筛选器。 <xref:System.Data.DataView> 上的筛选器可以采用两种不同的方式清除：  
@@ -92,7 +92,7 @@ ms.locfileid: "70795043"
  [!code-csharp[DP DataView Samples#LDVClearRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvclearrowfilter)]
  [!code-vb[DP DataView Samples#LDVClearRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearrowfilter)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据绑定和 LINQ to DataSet](data-binding-and-linq-to-dataset.md)
 - [使用 DataView 进行排序](sorting-with-dataview-linq-to-dataset.md)

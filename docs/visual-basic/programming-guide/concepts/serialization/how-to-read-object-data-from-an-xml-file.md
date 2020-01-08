@@ -2,12 +2,12 @@
 title: 如何：从 XML 文件中读取对象数据
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
-ms.openlocfilehash: c997af4729a24a6b5bd5b22d0153860cff3282d7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: efd5fb72487c92bcccf1fc797106f93c0d2a39fc
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346427"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345991"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>如何：从 XML 文件读取对象数据（Visual Basic）
 本示例使用 <xref:System.Xml.Serialization.XmlSerializer> 类读取之前写入 XML 文件的对象数据。  
@@ -29,7 +29,7 @@ Public Sub ReadXML()
 End Sub  
 ```  
   
-## <a name="compiling-the-code"></a>编译代码  
+## <a name="compile-the-code"></a>编译代码  
  将文件名称“c:\temp\SerializationOverview.xml”替换为包含序列化数据的文件的名称。 有关序列化数据的详细信息，请参阅[如何：将对象数据写入 XML 文件（Visual Basic）](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)。  
   
  类必须有一个公共的无参数构造函数。  

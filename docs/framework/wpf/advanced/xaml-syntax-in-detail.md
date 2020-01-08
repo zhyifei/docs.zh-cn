@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 10bd924664a469be26174fadf3892ee56aa33856
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 2c6a8662236b614545e7fb8545b7b60e1b08b6bd
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740641"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559828"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 语法详述
 本主题定义用于描述 XAML 语法元素的术语。 在本文档的其余部分中经常使用这些术语，这两个术语分别适用于 WPF 文档，适用于使用 XAML 的其他框架或由 system.exception 级别的 XAML 语言支持启用的基本 XAML 概念。 本主题概述了在主题[XAML 概述（WPF）](../../../desktop-wpf/fundamentals/xaml.md)中引入的基本术语。  
@@ -86,7 +86,7 @@ ms.locfileid: "73740641"
  特性语法是 XAML 标记语法，它通过在现有对象元素上声明特性来设置属性的值。 特性名称必须与支持相关对象元素的类的属性的 CLR 成员名称匹配。 特性名称后跟赋值运算符（=）。 属性值必须是括在引号内的字符串。  
   
 > [!NOTE]
-> 可以使用交替引号将文本引号置于特性中。 例如，可以将单引号用作一种声明其中包含双引号字符的字符串。 无论使用单引号还是双引号，都应使用匹配对来打开和关闭属性值字符串。 还提供了一些转义序列或其他技术，可用于解决任何特定 XAML 语法施加的字符限制。 请参阅[XML 字符实体和 XAML](../../xaml-services/xml-character-entities-and-xaml.md)。  
+> 可以使用交替引号将文本引号置于特性中。 例如，可以将单引号用作一种声明其中包含双引号字符的字符串。 无论使用单引号还是双引号，都应使用匹配对来打开和关闭属性值字符串。 还提供了一些转义序列或其他技术，可用于解决任何特定 XAML 语法施加的字符限制。 请参阅[XML 字符实体和 XAML](../../../desktop-wpf/xaml-services/xml-character-entities.md)。  
   
  为了通过属性语法进行设置，属性必须是公共的，并且必须是可写的。 后备类型系统中的属性的值必须是值类型，或者必须是 XAML 处理器在访问相关支持类型时可以实例化或引用的引用类型。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "73740641"
   
 1. 如果 XAML 处理器遇到大括号，或派生自 <xref:System.Windows.Markup.MarkupExtension>的对象元素，则首先计算引用的标记扩展，而不是将值作为字符串进行处理，而由标记扩展返回的对象将用作值。 在许多情况下，由标记扩展返回的对象将是对现有对象的引用，或将计算延迟到运行时的表达式，而不是新实例化的对象。  
   
-2. 如果该属性是使用特性化的 <xref:System.ComponentModel.TypeConverter>声明的，或者该属性的值类型是使用特性化的 <xref:System.ComponentModel.TypeConverter>进行声明的，则该特性的字符串值将作为转换输入提交给类型转换器，转换器将返回一个新的对象实例.  
+2. 如果该属性是使用特性化的 <xref:System.ComponentModel.TypeConverter>进行声明的，或者该属性的值类型是使用特性化的 <xref:System.ComponentModel.TypeConverter>进行声明的，则该特性的字符串值将作为转换输入提交给类型转换器，转换器将返回一个新的对象实例。  
   
 3. 如果没有 <xref:System.ComponentModel.TypeConverter>，则尝试直接转换为属性类型。 此最终级别是 XAML 语言基元类型之间的分析器本机值的直接转换，或者是对枚举中的命名常量名称的检查（分析器然后访问匹配的值）。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "73740641"
   
  [!code-xaml[XAMLOvwSupport#ContextMenu](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#contextmenu)]  
   
- 如果指定的属性类型是基元值类型（如 <xref:System.String>）或枚举（其中指定了名称），则属性元素内的值还可以作为内部文本提供。 这两种用法有点罕见，因为这两种情况下也可以使用更简单的特性语法。 用字符串填充属性元素的一个方案是：对于不是 XAML 内容属性但仍用于表示 UI 文本的属性，并且需要在该 UI 文本中显示换行符等特定空白元素。 特性语法不能保留换行符，但只要有效的空白保留处于活动状态（有关详细信息，请参阅[XAML 中的空白处理](../../xaml-services/whitespace-processing-in-xaml.md)），属性元素语法就可以。 另一种情况是，可以将[X：Uid 指令](../../xaml-services/x-uid-directive.md)应用于属性元素，从而将中的值标记为应在 WPF 输出 BAML 或其他技术中本地化的值。  
+ 如果指定的属性类型是基元值类型（如 <xref:System.String>）或枚举（其中指定了名称），则属性元素内的值还可以作为内部文本提供。 这两种用法有点罕见，因为这两种情况下也可以使用更简单的特性语法。 用字符串填充属性元素的一个方案是：对于不是 XAML 内容属性但仍用于表示 UI 文本的属性，并且需要在该 UI 文本中显示换行符等特定空白元素。 特性语法不能保留换行符，但只要有效的空白保留处于活动状态（有关详细信息，请参阅[XAML 中的空白处理](../../../desktop-wpf/xaml-services/white-space-processing.md)），属性元素语法就可以。 另一种情况是，可以将[X：Uid 指令](../../../desktop-wpf/xaml-services/xuid-directive.md)应用于属性元素，从而将中的值标记为应在 WPF 输出 BAML 或其他技术中本地化的值。  
   
  属性元素不在 WPF 逻辑树中表示。 Property 元素只是用于设置属性的特殊语法，而不是具有支持它的实例或对象的元素。 （有关逻辑树概念的详细信息，请参阅[WPF 中的树](trees-in-wpf.md)。）  
   
@@ -158,7 +158,7 @@ ms.locfileid: "73740641"
   
 - 类型实现 <xref:System.Collections.IDictionary>。  
   
-- 类型派生自 <xref:System.Array> （有关 XAML 中数组的详细信息，请参阅[X:Array 标记扩展](../../xaml-services/x-array-markup-extension.md)。）  
+- 类型派生自 <xref:System.Array> （有关 XAML 中数组的详细信息，请参阅[X:Array 标记扩展](../../../desktop-wpf/xaml-services/xarray-markup-extension.md)。）  
   
  如果属性的类型是集合，则不需要在标记中将推断的集合类型指定为对象元素。 相反，旨在成为集合中的项的元素被指定为属性元素的一个或多个子元素。 在加载过程中，将每个此类项计算为一个对象，并通过调用隐含集合的 `Add` 方法将其添加到集合中。 例如，<xref:System.Windows.Style> 的 <xref:System.Windows.Style.Triggers%2A> 属性采用专用集合类型 <xref:System.Windows.TriggerCollection>实现 <xref:System.Collections.IList>。 不需要实例化标记中的 <xref:System.Windows.TriggerCollection> 对象元素。 相反，你可以将一个或多个 <xref:System.Windows.Trigger> 项指定为 `Style.Triggers` 属性元素中的元素，其中 <xref:System.Windows.Trigger> （或派生类）是需要作为强类型和隐式 <xref:System.Windows.TriggerCollection>的项类型的类型。  
   
@@ -242,7 +242,7 @@ ms.locfileid: "73740641"
   
 <a name="xaml_namespaces"></a>   
 ## <a name="xaml-namespaces"></a>XAML 命名空间  
- 上述语法示例均未指定默认 XAML 命名空间之外的 XAML 命名空间。 在典型的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序中，默认的 XAML 命名空间指定为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 命名空间。 可以指定除默认 XAML 命名空间之外的 XAML 命名空间，并且仍使用类似的语法。 但然后，在默认 XAML 命名空间内无法访问的类的任何位置，该类名前面必须带有 XAML 命名空间的前缀，才能映射到相应的 CLR 命名空间。 例如，`<custom:Example/>` 是用于实例化 `Example` 类的实例的对象元素语法，其中包含该类的 CLR 命名空间（也可能是包含支持类型的外部程序集信息）以前映射到 `custom`作为.  
+ 上述语法示例均未指定默认 XAML 命名空间之外的 XAML 命名空间。 在典型的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序中，默认的 XAML 命名空间指定为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 命名空间。 可以指定除默认 XAML 命名空间之外的 XAML 命名空间，并且仍使用类似的语法。 但然后，在默认 XAML 命名空间内无法访问的类的任何位置，该类名前面必须带有 XAML 命名空间的前缀，才能映射到相应的 CLR 命名空间。 例如，`<custom:Example/>` 是用于实例化 `Example` 类的实例的对象元素语法，其中包含该类的 CLR 命名空间（也可能是包含支持类型的外部程序集信息）以前映射到 `custom` 前缀。  
   
  有关 XAML 命名空间的详细信息，请参阅[WPF xaml 的 Xaml 命名空间和命名空间映射](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   
@@ -254,12 +254,12 @@ ms.locfileid: "73740641"
   
  `<Button Style="{StaticResource MyStyle}">My button</Button>`  
   
- 此处 `StaticResource` 标识提供标记扩展实现的 <xref:System.Windows.StaticResourceExtension> 类。 下一个字符串 `MyStyle` 用作非默认 <xref:System.Windows.StaticResourceExtension> 构造函数的输入，其中，从扩展字符串中获取的参数声明所请求的 <xref:System.Windows.ResourceKey>。 `MyStyle` 应为定义为资源的 <xref:System.Windows.Style> 的 " [x：Key](../../xaml-services/x-key-directive.md) " 值。 [StaticResource 标记扩展](staticresource-markup-extension.md)用法请求资源用于在加载时通过静态资源查找逻辑提供 <xref:System.Windows.Style> 属性值。  
+ 此处 `StaticResource` 标识提供标记扩展实现的 <xref:System.Windows.StaticResourceExtension> 类。 下一个字符串 `MyStyle` 用作非默认 <xref:System.Windows.StaticResourceExtension> 构造函数的输入，其中，从扩展字符串中获取的参数声明所请求的 <xref:System.Windows.ResourceKey>。 `MyStyle` 应为定义为资源的 <xref:System.Windows.Style> 的 " [x：Key](../../../desktop-wpf/xaml-services/xkey-directive.md) " 值。 [StaticResource 标记扩展](staticresource-markup-extension.md)用法请求资源用于在加载时通过静态资源查找逻辑提供 <xref:System.Windows.Style> 属性值。  
   
- 有关标记扩展的详细信息，请参阅[标记扩展和 WPF XAML](markup-extensions-and-wpf-xaml.md)。 有关在常规 .NET XAML 实现中启用的标记扩展和其他 XAML 编程功能的引用，请参阅[XAML 命名空间（x：）语言功能](../../xaml-services/xaml-namespace-x-language-features.md)。 有关特定于 WPF 的标记扩展，请参阅[WPF XAML 扩展](wpf-xaml-extensions.md)。  
+ 有关标记扩展的详细信息，请参阅[标记扩展和 WPF XAML](markup-extensions-and-wpf-xaml.md)。 有关在常规 .NET XAML 实现中启用的标记扩展和其他 XAML 编程功能的引用，请参阅[XAML 命名空间（x：）语言功能](../../../desktop-wpf/xaml-services/namespace-language-features.md)。 有关特定于 WPF 的标记扩展，请参阅[WPF XAML 扩展](wpf-xaml-extensions.md)。  
   
 <a name="attached_properties"></a>   
-## <a name="attached-properties"></a>附加属性  
+## <a name="attached-properties"></a>附加屬性  
  附加属性是 XAML 中引入的一种编程概念，其中属性可由特定类型拥有和定义，但设置为任意元素上的特性或属性元素。 附加属性的主要方案是允许标记结构中的子元素向父元素报告信息，而无需跨所有元素广泛共享对象模型。 相反，附加属性可由父元素用来向子元素报告信息。 有关附加属性以及如何创建您自己的附加属性的详细信息，请参阅[附加属性概述](attached-properties-overview.md)。  
   
  附加属性使用的语法在表面上类似于属性元素语法，因为你还需要指定*typeName*。*propertyName*组合。 有两个重要的差异：  
@@ -289,7 +289,7 @@ ms.locfileid: "73740641"
  以下各节介绍 XAML 处理器在技术上受支持的 XAML 用法，但产生的详细程度或其他美观问题会影响在开发包含 XAML 源的应用程序时可读取的 XAML 文件。  
   
 ### <a name="optional-property-element-usages"></a>可选属性元素用法  
- 可选属性元素用法包括显式写出 XAML 处理器认为隐式的元素内容属性。 例如，在声明 <xref:System.Windows.Controls.Menu>的内容时，可以选择将 <xref:System.Windows.Controls.Menu> 的 <xref:System.Windows.Controls.ItemsControl.Items%2A> 集合显式声明为 `<Menu.Items>` 属性元素标记，并将每个 <xref:System.Windows.Controls.MenuItem> 放置在 `<Menu.Items>`，而不是使用隐式 XAML 处理器行为，<xref:System.Windows.Controls.Menu> 的所有子元素必须是 <xref:System.Windows.Controls.MenuItem> 并置于 <xref:System.Windows.Controls.ItemsControl.Items%2A> 集合中。 有时，可选用法可帮助以直观方式阐明标记中所表示的对象结构。 或者有时，显式属性元素使用可以避免在技术上正常运行的标记，但在视觉上混乱，如属性值中的嵌套标记扩展。  
+ 可选属性元素用法包括显式写出 XAML 处理器认为隐式的元素内容属性。 例如，在声明 <xref:System.Windows.Controls.Menu>的内容时，可以选择将 <xref:System.Windows.Controls.Menu> 的 <xref:System.Windows.Controls.ItemsControl.Items%2A> 集合显式声明为 `<Menu.Items>` 属性元素标记，并将每个 <xref:System.Windows.Controls.MenuItem> 放置在 `<Menu.Items>`中，而不是使用隐式 XAML 处理器行为，<xref:System.Windows.Controls.Menu> 的所有子元素都必须是 <xref:System.Windows.Controls.MenuItem> 并置于 <xref:System.Windows.Controls.ItemsControl.Items%2A> 集合中。 有时，可选用法可帮助以直观方式阐明标记中所表示的对象结构。 或者有时，显式属性元素使用可以避免在技术上正常运行的标记，但在视觉上混乱，如属性值中的嵌套标记扩展。  
   
 ### <a name="full-typenamemembername-qualified-attributes"></a>完整的 typeName 成员限定属性  
  *TypeName*。属性的*成员名称*格式实际上比路由事件事例更通用。 但在其他情况下，该窗体是多余的，如果仅出于标记样式和可读性的原因，应避免这样做。 在下面的示例中，对 <xref:System.Windows.Controls.Control.Background%2A> 属性的三个引用都完全等效：  
@@ -313,10 +313,10 @@ ms.locfileid: "73740641"
   
  但就像*类型名称*一样。属性的*成员名称*形式*b*。*成员名称*在标记中的样式不佳，你应避免这样做。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XAML 概述 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [XAML 命名空间 (x:) 语言功能](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML 命名空间 (x:) 语言功能](../../../desktop-wpf/xaml-services/namespace-language-features.md)
 - [WPF XAML 扩展](wpf-xaml-extensions.md)
 - [依赖项属性概述](dependency-properties-overview.md)
 - [TypeConverter 和 XAML](typeconverters-and-xaml.md)

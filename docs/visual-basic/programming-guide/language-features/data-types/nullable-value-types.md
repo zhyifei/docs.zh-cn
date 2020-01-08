@@ -1,5 +1,5 @@
 ---
-title: 可以为 null 的值类型-Visual Basic
+title: 可以为 Null 的值类型
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Nullable
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 1fb8f8d1657b8eab6b15858c2a6607cbde82e542
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 0d259e11a969f4eb7e64626a4adf498db06ece06
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732932"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347836"
 ---
 # <a name="nullable-value-types-visual-basic"></a>可以为 Null 的值类型 (Visual Basic)
 
@@ -66,7 +66,7 @@ ms.locfileid: "73732932"
 
 在布尔表达式中使用可以为 null 的 `Boolean` 变量时，结果可以是 `True`、`False`或 `Nothing`。 下面是 `And` 和 `Or`的事实数据表。 因为 `b1` 和 `b2` 现在具有三个可能的值，所以有九个计算组合。
 
-|B1|b2|b1 和 b2|b1 或 b2|
+|b1|b2|b1 和 b2|b1 或 b2|
 |--------|--------|---------------|--------------|
 |`Nothing`|`Nothing`|`Nothing`|`Nothing`|
 |`Nothing`|`True`|`Nothing`|`True`|
@@ -105,7 +105,7 @@ ms.locfileid: "73732932"
 
 数据库是使用可以为 null 的类型的最重要的地方之一。 并非所有数据库对象当前都支持可以为 null 的类型，但设计器生成的表适配器则执行此操作。 请参阅[对可以为 null 的类型的 TableAdapter 支持](/visualstudio/data-tools/fill-datasets-by-using-tableadapters#tableadapter-support-for-nullable-types)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>

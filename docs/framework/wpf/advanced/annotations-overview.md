@@ -9,17 +9,17 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: dc9c4125f9ac3c44be41efe92b9e495599e5c130
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: b82c7e7300ebc295ca06d565c2fb5f6f2b28e92c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004043"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636505"
 ---
 # <a name="annotations-overview"></a>批注概述
 在纸质文档上编写说明或注释毫不稀奇，我们几乎认为这是理所当然的。 这些说明或注释就是“批注”，我们将其添加到文档，用于标注信息或突出显示兴趣项以供日后参考。 虽然在打印文档上编写注释很简单也很平常，但是就算在所有电子文档上添加个人注释，功能上却通常有很多限制。  
   
- 本主题介绍了几种常见类型的批注，特别是粘滞便笺和突出显示内容，并说明了 Microsoft 批注框架如何通过 Windows Presentation Foundation 在应用程序中帮助这些类型的批注）文档查看控件。  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支持批注的文档查看控件包括 <xref:System.Windows.Controls.FlowDocumentReader> 和 <xref:System.Windows.Controls.FlowDocumentScrollViewer>，以及从 <xref:System.Windows.Controls.Primitives.DocumentViewerBase> 派生的控件，例如 <xref:System.Windows.Controls.DocumentViewer> 和 <xref:System.Windows.Controls.FlowDocumentPageViewer>。  
+ 本主题介绍了几种常见类型的批注，特别是粘滞便笺和突出显示内容，并说明了 Microsoft 批注框架如何通过 Windows Presentation Foundation 在应用程序中帮助这些类型的批注）文档查看控件。  支持批注的 WPF 文档查看控件包括 <xref:System.Windows.Controls.FlowDocumentReader> 和 <xref:System.Windows.Controls.FlowDocumentScrollViewer>，以及从 <xref:System.Windows.Controls.Primitives.DocumentViewerBase> 派生的控件，如 <xref:System.Windows.Controls.DocumentViewer> 和 <xref:System.Windows.Controls.FlowDocumentPageViewer>。  
 
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>便笺  
@@ -27,7 +27,7 @@ ms.locfileid: "72004043"
   
  下图显示了突出显示、文本便笺以及墨迹便笺批注的一些示例。  
   
- ![突出显示、 文本和墨迹便笺批注.](./media/caf-stickynote.jpg "CAF_StickyNote")  
+ ![突出显示、文本和墨迹便笺批注。](./media/caf-stickynote.jpg "CAF_StickyNote")  
   
  下面的示例演示了可用于在应用程序中启用批注支持的方法。  
   
@@ -35,8 +35,8 @@ ms.locfileid: "72004043"
  [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
   
 <a name="caf1_type_callouts"></a>   
-## <a name="highlights"></a>亮点  
- 当人们在纸质文档上作标记时，往往使用创造性的方法来突出显示兴趣项，例如对于句子中的某些字词，加下划线、高亮显示、圈出，或者将在空白的地方绘制标记或符号。  Microsoft 批注框架中的突出显示批注提供了类似的功能，用于标记 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 文档查看控件中显示的信息。  
+## <a name="highlights"></a>产品亮点  
+ 当人们在纸质文档上作标记时，往往使用创造性的方法来突出显示兴趣项，例如对于句子中的某些字词，加下划线、高亮显示、圈出，或者将在空白的地方绘制标记或符号。  Microsoft 批注框架中的突出显示批注提供了一个类似的功能，用于标记 WPF 文档查看控件中显示的信息。  
   
  下图演示了一个突出显示批注的示例。  
   

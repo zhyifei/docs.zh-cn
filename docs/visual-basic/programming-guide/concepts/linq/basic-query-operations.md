@@ -15,15 +15,15 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: e9a646d60bb22507f4c6bcbcdf9222fd0ed18f02
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b9216dba23f49e4d9fd99687e38f5c13addde8fb
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345750"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636869"
 ---
 # <a name="basic-query-operations-visual-basic"></a>基本查询操作 (Visual Basic)
-本主题简要介绍了 Visual Basic 中的 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 表达式，以及在查询中执行的一些典型操作。 有关更多信息，请参见下列主题：  
+本主题简要介绍了 Visual Basic 中的语言集成查询（LINQ）表达式，以及在查询中执行的一些典型操作。 有关更多信息，请参见下列主题：  
   
  [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "74345750"
  [演练：在 Visual Basic 中编写查询](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
   
 ## <a name="specifying-the-data-source-from"></a>指定数据源（从）  
- 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询中，第一步是指定要查询的数据源。 因此，查询中的 `From` 子句始终是第一个。 查询运算符根据源的类型选择并生成结果。  
+ 在 LINQ 查询中，第一步是指定要查询的数据源。 因此，查询中的 `From` 子句始终是第一个。 查询运算符根据源的类型选择并生成结果。  
   
  [!code-vb[VbLINQBasicOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#1)]  
   
@@ -87,7 +87,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
      [!code-vb[VbLINQBasicOps#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#6)]  
   
-     \- 或 -  
+     或  
   
 - 定义包含要包含在结果中的特定字段的命名类型，并在 `Select` 子句中创建和初始化该类型的实例。 仅在以下情况下使用此选项：必须在返回的集合之外使用各个结果，或者必须在方法调用中将它们作为参数传递。 以下示例中 `londonCusts5` 的类型为 IEnumerable （of NamePhone）。  
   
@@ -124,7 +124,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Garcia、Hugo  
   
- Garcia、Debra  
+ Garcia, Debra  
   
  Tucker、Lance  
   

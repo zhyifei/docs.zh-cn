@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: 047d566c13f03803d2e5c3bc6cce0db56df4a3f0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 94f12b4cc6cb35864fefbb3b5bb1378bec5e974c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345839"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347568"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>如何：重载参数数量不确定的过程 (Visual Basic)
 如果过程具有[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)参数，则不能为参数数组定义采用一维数组的重载版本。 有关详细信息，请参阅[重载过程](./considerations-in-overloading-procedures.md)中的注意事项中的 "ParamArray 参数的隐式重载"。  
@@ -47,7 +47,7 @@ ms.locfileid: "74345839"
   
  重载版本中的代码无需测试调用代码是否为 `ParamArray` 参数提供了一个或多个值，如果有，则不需要测试。 Visual Basic 将控制传递到与调用参数列表匹配的版本。  
   
-## <a name="compiling-the-code"></a>编译代码  
+## <a name="compile-the-code"></a>编译代码  
  由于带有 `ParamArray` 参数的过程等效于一组重载版本，因此不能使用与任何这些隐式重载对应的参数列表重载此类过程。 有关详细信息，请参阅[重载过程中的注意事项](./considerations-in-overloading-procedures.md)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  

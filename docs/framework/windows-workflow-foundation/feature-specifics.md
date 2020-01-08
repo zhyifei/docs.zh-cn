@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 功能详细信息
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 869d6108edaa7f32101b6fe8d077e4eba7eef6b5
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: c534575fcf70035bc728642dbb65b05db1fd4686
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802591"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345105"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 功能详细信息
 
@@ -189,7 +189,7 @@ WCF 配置架构很复杂，并为用户提供很多难以查找功能的用户�
 
 ## <a name="procedural-activities-sequence-if-foreach-switch-assign-dowhile-while"></a>过程活动（Sequence、If、ForEach、Switch、Assign、DoWhile 和 While）
 
-过程活动提供了一种机制，该机制使用程序员熟悉的概念为顺序控制流建模。 这些活动会启用传统结构化编程语言构造，并在适当时提供采用公共过程语言（如 C#/VB）的语言奇偶校验。
+过程活动提供了一种机制，该机制使用程序员熟悉的概念为顺序控制流建模。 这些活动启用传统的结构化编程语言构造，并在适当的情况下使用常见过程语言（ C#如和 Visual Basic）提供语言奇偶校验。
 
 ### <a name="getting-started"></a>入门
 
@@ -231,7 +231,7 @@ WCF 配置架构很复杂，并为用户提供很多难以查找功能的用户�
 
 ## <a name="error-handling-activities"></a>错误处理活动
 
-<xref:System.Activities.Statements.TryCatch> 活动提供了一种机制，用于捕获在执行一组包含的活动的过程中发生的异常（类似于 C#/VB 中的 Try/Catch 构造）。 <xref:System.Activities.Statements.TryCatch> 提供了工作流级别的异常处理。 在引发未处理的异常时，系统将终止工作流，并且不会执行 Finally 块。 此行为与 C# 一致。
+<xref:System.Activities.Statements.TryCatch> 活动提供一种机制，用于捕获在执行一组包含的活动的过程中发生的异常（类似于和 Visual Basic 中C#的 Try/Catch 构造）。 <xref:System.Activities.Statements.TryCatch> 提供了工作流级别的异常处理。 在引发未处理的异常时，系统将终止工作流，并且不会执行 Finally 块。 此行为与 C# 一致。
 
 ### <a name="getting-started"></a>入门
 

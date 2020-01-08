@@ -1,13 +1,13 @@
 ---
-title: 设置 Use 和 Style 属性-WCF 示例
+title: 设置 Use 和 Style 属性示例
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-ms.openlocfilehash: f92b25144759692c54aa7a1730a9bb85cab4f15f
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 36111aa05680fb8b369cde6b42d22c9c3b8474ad
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714429"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345136"
 ---
 # <a name="setting-the-use-and-style-properties"></a>设置 Use 和 Style 属性
 
@@ -74,7 +74,7 @@ public interface IUseAndStyleCalculator
 }
 ```
 
-若要查看不同的 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> 和 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> 设置之间的差异，请在服务中修改这些设置、重新生成客户端、运行示例并用服务跟踪查看器工具检查 c:\logs\message.logs 文件。 还可以通过查看 `http://localhost/ServiceModelSamples/service.svc?wsdl`来观察对元数据的影响。 服务的元数据通常分为多页。 主 wsdl 页面包含 WSDL 绑定，但查看 `http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0` 以观察消息定义。
+若要查看不同的 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> 和 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> 设置之间的差异，请在服务中修改这些设置、重新生成客户端、运行示例并用服务跟踪查看器工具检查 c:\logs\message.logs 文件。 此外通过查看观察对元数据的影响 `http://localhost/ServiceModelSamples/service.svc?wsdl` 。 服务的元数据通常分为多页。 Wsdl 主页包含 WSDL 绑定，但查看 `http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0` 可观察到消息定义。
 
 ## <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 

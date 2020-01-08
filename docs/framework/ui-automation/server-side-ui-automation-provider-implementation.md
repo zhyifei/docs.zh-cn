@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 35754d49bf223e7afcdec32e8b24cfb749f48aa6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25f22d5e8caacc69643f6d79e109ebaa94159d80
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446847"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632306"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>服务器端 UI 自动化提供程序的实现
 
@@ -20,11 +20,11 @@ ms.locfileid: "74446847"
 
 本部分将介绍如何实现自定义控件的服务器端 UI 自动化提供程序。
 
-Windows Presentation Foundation （WPF）元素和非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素（例如为 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]而设计的元素）的实现在本质上是不同的。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素通过从 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 派生的类提供对 <xref:System.Windows.Automation.Peers.AutomationPeer>的支持。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素通过提供程序接口的实现提供支持。
+Windows Presentation Foundation （WPF）元素和非 WPF 元素（例如为 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]设计的元素）的实现在本质上是不同的。 WPF 元素通过从 <xref:System.Windows.Automation.Peers.AutomationPeer>派生的类为 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供支持。 非 WPF 元素通过提供程序接口的实现提供支持。
 
 <a name="Security_Considerations"></a>
 
-## <a name="security-considerations"></a>安全注意事项
+## <a name="security-considerations"></a>需要考虑的安全性因素
 
 应编写提供程序，使它们能够在部分信任环境中的工作。 因为 UIAutomationClient.dll 未配置为在部分信任下运行，所以提供程序代码不应引用该程序集。 如果情况如此，则代码可以在完全信任环境中运行，但无法在部分信任环境中运行。
 
@@ -40,7 +40,7 @@ Windows Presentation Foundation （WPF）元素和非[!INCLUDE[TLA2#tla_wpf](../
 
 ## <a name="provider-implementation-by-non-wpf-elements"></a>通过非 WPF 元素实现的提供程序实现
 
-不属于 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 框架但以托管代码（大多数情况下为 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 控件）编写的自定义控件，通过实现接口对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供支持。 每个元素必须实现至少一个下一部分中第一个表中列出的接口。 此外，如果该元素支持一个或多个控件模式，它必须实现每个控件模式的相应接口。
+不属于 WPF 框架但以托管代码（大多数情况下为 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 控件）编写的自定义控件，通过实现接口为 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供支持。 每个元素必须实现至少一个下一部分中第一个表中列出的接口。 此外，如果该元素支持一个或多个控件模式，它必须实现每个控件模式的相应接口。
 
 你的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供程序项目必须引用以下程序集：
 
@@ -56,7 +56,7 @@ Windows Presentation Foundation （WPF）元素和非[!INCLUDE[TLA2#tla_wpf](../
 
 每个 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供程序必须实现以下的一个接口。
 
-|接口|说明|
+|界面|描述|
 |---------------|-----------------|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>|为承载在窗口中的简单控件提供功能，包括支持控件模式和属性。|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|继承自 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>。 为复杂控件中的元素添加功能，包括在片段中导航，设置焦点并返回该元素的边框。|
@@ -64,7 +64,7 @@ Windows Presentation Foundation （WPF）元素和非[!INCLUDE[TLA2#tla_wpf](../
 
 以下接口可提供额外的功能，但并不需要实现。
 
-|接口|说明|
+|界面|描述|
 |---------------|-----------------|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|启用提供程序跟踪事件请求。|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride>|启用对片段的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树内的基于窗口的元素的重定位。|
@@ -115,7 +115,7 @@ Windows Presentation Foundation （WPF）元素和非[!INCLUDE[TLA2#tla_wpf](../
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>
 
 > [!NOTE]
-> 承载在窗口的简单元素或片段根的 <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> 是从窗口中获取的；但是，根下的片段元素（如列表框中的列表项）必须提供自己的标识符。 有关详细信息，请参阅 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>。
+> 承载在窗口的简单元素或片段根的 <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> 是从窗口中获取的；但是，根下的片段元素（如列表框中的列表项）必须提供自己的标识符。 有关更多信息，请参见<xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>。
 >
 > 应为承载在 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> 控件中的提供程序返回 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 。 在这种情况下，默认的窗口提供程序可能无法检索正确值。
 >
@@ -129,7 +129,7 @@ Windows Presentation Foundation （WPF）元素和非[!INCLUDE[TLA2#tla_wpf](../
 
 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供程序应引发事件以通知客户端应用程序有关 UI 状态的变化。 以下方法用于引发事件。
 
-|方法|说明|
+|方法|描述|
 |------------|-----------------|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationEvent%2A>|引发各种事件，包括由控件模式触发的事件。|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性更改时引发事件。|
@@ -139,7 +139,7 @@ Windows Presentation Foundation （WPF）元素和非[!INCLUDE[TLA2#tla_wpf](../
 
 若要优化性能，提供程序可以有选择地引发事件，或者，如果没有注册任何接收事件的客户端应用程序，则不引发任何事件。 以下方法用于进行优化。
 
-|方法|说明|
+|方法|描述|
 |------------|-----------------|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A>|此静态属性指定是否存在已订阅 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件的客户端应用程序。|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|提供程序在片段根上对此接口的实现使其能够在当客户端在片段上注册和注销事件处理程序时接收到通知。|

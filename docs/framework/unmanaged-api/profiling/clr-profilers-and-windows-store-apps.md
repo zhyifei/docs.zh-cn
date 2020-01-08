@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: da5942f9a2138a536d158f75a6977d20bf31b41c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a3e60f715c4c61e671980e4f36813e864469d28e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140383"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344773"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 探查器和 Windows 应用商店应用
 
@@ -25,7 +25,7 @@ ms.locfileid: "73140383"
 
 ## <a name="introduction"></a>简介
 
-如果您在介绍的段落之后进行了介绍，那么您就会熟悉 CLR 分析 API。 你已经编写了一个适合托管桌面应用程序的诊断工具。 现在，您想知道如何使用托管的 Windows 应用商店应用程序。 也许您已经尝试过此工作，并发现它并不是一个简单的任务。 事实上，对于所有工具开发人员而言，可能不会有很多注意事项。 例如:
+如果您在介绍的段落之后进行了介绍，那么您就会熟悉 CLR 分析 API。 你已经编写了一个适合托管桌面应用程序的诊断工具。 现在，您想知道如何使用托管的 Windows 应用商店应用程序。 也许您已经尝试过此工作，并发现它并不是一个简单的任务。 事实上，对于所有工具开发人员而言，可能不会有很多注意事项。 例如：
 
 - Windows 应用商店应用在权限严重降低的上下文中运行。
 
@@ -53,7 +53,7 @@ ms.locfileid: "73140383"
 
 **探查器 DLL**
 
-这是加载到正在分析的应用程序的进程空间中的组件。 此组件（也称为探查器 "agent"）实现[ICorProfilerCallback](icorprofilercallback-interface.md)[ICorProfilerCallback 接口](icorprofilercallback-interface.md)（2，3等）接口，并使用[ICorProfilerInfo](icorprofilerinfo-interface.md)（2，3，等等）接口收集有关经过分析的应用程序并可能修改应用程序行为的各个方面。
+这是加载到正在分析的应用程序的进程空间中的组件。 此组件（也称为探查器 "agent"）实现[ICorProfilerCallback](icorprofilercallback-interface.md)[ICorProfilerCallback 接口](icorprofilercallback-interface.md)（2，3，等等）接口，并使用[ICorProfilerInfo](icorprofilerinfo-interface.md)（2，3，等等）接口收集有关分析的应用程序的数据，并可能修改应用程序行为的各个方面。
 
 **探查器 UI**
 
@@ -112,7 +112,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
 
 ### <a name="startup-load"></a>启动负载
 
-通常，在桌面应用程序中，探查器 UI 通过初始化包含所需 CLR 分析 API 环境变量（即，`COR_PROFILER`、`COR_ENABLE_PROFILING`和 `COR_PROFILER_PATH`）的环境块，然后创建新的用该环境块处理。 这同样适用于 Windows 应用商店应用，但机制有所不同。
+通常情况下，在桌面应用程序中，探查器 UI 会通过初始化包含所需 CLR 分析 API 环境变量（即，`COR_PROFILER`、`COR_ENABLE_PROFILING`和 `COR_PROFILER_PATH`）的环境块，并使用该环境块创建新进程来提示探查器 DLL 的启动负载。 这同样适用于 Windows 应用商店应用，但机制有所不同。
 
 **请勿运行提升**
 
@@ -302,7 +302,7 @@ tempDir = appData.TemporaryFolder.Path;
 
 如果需要探查器 UI 与探查器 DLL 之间的简单信号语义，可以在 Windows 应用商店应用程序和桌面应用程序中使用事件。
 
-在探查器 DLL 中，只需调用[CreateEventEx](/windows/desktop/api/synchapi/nf-synchapi-createeventexa)函数，就可以使用您喜欢的任何名称创建命名事件。 例如:
+在探查器 DLL 中，只需调用[CreateEventEx](/windows/desktop/api/synchapi/nf-synchapi-createeventexa)函数，就可以使用您喜欢的任何名称创建命名事件。 例如：
 
 ```cpp
 // Profiler DLL in Windows Store app (C++).
@@ -342,7 +342,7 @@ GetAppContainerFolderPath(acSid, out acDir);
 
 ### <a name="managed-and-non-managed-winmds"></a>托管和非托管 Winmd
 
-如果开发人员使用 Visual Studio 创建新的 Windows 运行时组件项目，则该项目的生成将生成一个 WinMD 文件，该文件描述开发人员创作的元数据（类、接口等的类型说明）。 如果此项目是用C#或 VB 编写的托管语言项目，同一 WinMD 文件也包含这些类型的实现（意味着它包含从开发人员的源代码中编译的所有 IL）。 此类文件称为托管 WinMD 文件。 它们非常有趣，因为它们既包含 Windows 运行时元数据，也包含基础实现。
+如果开发人员使用 Visual Studio 创建新的 Windows 运行时组件项目，则该项目的生成将生成一个 WinMD 文件，该文件描述开发人员创作的元数据（类、接口等的类型说明）。 如果此项目是以C#或 Visual Basic 编写的托管语言项目，同一 WinMD 文件也包含这些类型的实现（意味着它包含从开发人员的源代码中编译的所有 IL）。 此类文件称为托管 WinMD 文件。 它们非常有趣，因为它们既包含 Windows 运行时元数据，也包含基础实现。
 
 与此相反，如果开发人员为C++创建 Windows 运行时组件项目，则该项目的生成将生成一个仅包含元数据的 WinMD 文件，并且该实现将编译为单独的本机 DLL。 同样，在 Windows SDK 中附带的 WinMD 文件仅包含元数据，并将实现编译为 Windows 附带的单独本机 Dll。
 
@@ -364,7 +364,7 @@ WinMD 文件（如常规模块）包含可通过[元数据 api](../../../../docs
 
 ### <a name="modifying-metadata-from-winmds"></a>修改 Winmd 中的元数据
 
-不支持修改 Winmd 中的元数据。 如果为 WinMD 文件调用[ICorProfilerInfo：： GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)方法并在 `dwOpenFlags` 参数中指定[ofWrite](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) ，或者要求提供可写的元数据接口（如[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)），则[GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)将会失败。 这对于 IL 重写探查器尤其重要，后者需要修改元数据以支持其检测（例如，添加引用或新方法）。 因此，你应该首先检查[COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) （如前一部分中所述），并避免要求此类模块上有可写的元数据接口。
+不支持修改 Winmd 中的元数据。 如果为 WinMD 文件调用[ICorProfilerInfo：： GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)方法并在 `dwOpenFlags` 参数中指定[ofWrite](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) ，或者要求提供可写的元数据接口（如[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)），则[GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)将会失败。 这对于 IL 重写探查器尤其重要，后者需要修改元数据以支持其检测（例如，添加引用或新方法）。 因此，你应该首先检查[COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) （如前一部分中所述），并避免在此类模块上请求可写的元数据接口。
 
 ### <a name="resolving-assembly-references-with-winmds"></a>用 Winmd 解析程序集引用
 
@@ -378,11 +378,11 @@ WinMD 文件（如常规模块）包含可通过[元数据 api](../../../../docs
 
 进行内存分析时，探查器 DLL 通常会创建一个单独的线程来调用[ForceGC 方法](icorprofilerinfo-forcegc-method.md)方法。 这不是什么新内容。 但可能会令人吃惊的是，在 Windows 应用商店应用程序中执行垃圾回收的操作可能会将线程转换为托管线程（例如，将为该线程创建分析 API ThreadID）。
 
-若要理解这一点，请务必了解 CLR 分析 API 定义的同步和异步调用之间的差异。 请注意，这与 Windows 应用商店应用程序中异步调用的概念非常不同。 有关详细信息，请参阅博客文章[CORPROF_E_UNSUPPORTED_CALL_SEQUENCE 的原因](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/)。
+若要理解这一点，请务必了解 CLR 分析 API 定义的同步和异步调用之间的差异。 请注意，这与 Windows 应用商店应用程序中异步调用的概念非常不同。 有关详细信息，请参阅博客文章[CORPROF_E_UNSUPPORTED_CALL_SEQUENCE 原因](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/)。
 
 相关的一点是，在探查器创建的线程上进行的调用始终被视为同步调用，即使这些调用是从某个探查器 DLL 的[ICorProfilerCallback](icorprofilercallback-interface.md)方法的实现之外进行的。 至少，这种情况下也是如此。 由于调用了[ForceGC 方法](icorprofilerinfo-forcegc-method.md)，CLR 已将探查器的线程转换为托管线程，该线程不再被视为探查器的线程。 因此，CLR 强制实施更严格的定义，该定义对该线程来说是同步的（也就是说，调用必须从探查器 DLL 的[ICorProfilerCallback](icorprofilercallback-interface.md)方法之一开始，才能作为同步。
 
-这在实践中是什么意思？ 大多数[ICorProfilerInfo](icorprofilerinfo-interface.md)方法只是以同步方式调用，并且会立即失败。 因此，如果探查器 DLL 对通常在探查器创建的线程上（例如， [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md)、 [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)或[RequestRevert](icorprofilerinfo4-requestrevert-method.md)）进行的其他调用重用了[ForceGC 方法](icorprofilerinfo-forcegc-method.md)线程，则会遇到问题. 在从托管线程调用时，甚至异步安全函数（如[DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) ）都有特殊的规则。 （有关详细信息，请参阅博客文章[探查器堆栈遍历：基本信息和](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/)更高版本。）
+这实际意味着什么？ 大多数[ICorProfilerInfo](icorprofilerinfo-interface.md)方法只是以同步方式调用，并且会立即失败。 因此，如果探查器 DLL 对通常在探查器创建的线程上（例如， [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md)、 [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)或[RequestRevert](icorprofilerinfo4-requestrevert-method.md)）进行的其他调用重用了[ForceGC 方法](icorprofilerinfo-forcegc-method.md)线程，则会遇到问题。 在从托管线程调用时，甚至异步安全函数（如[DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) ）都有特殊的规则。 （有关详细信息，请参阅博客文章[探查器堆栈遍历：基本信息和](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/)更高版本。）
 
 因此，建议使用探查器 DLL 创建的任何线程来调用[ForceGC 方法](icorprofilerinfo-forcegc-method.md)，*只*应使用它来触发 GC，然后响应 gc 回调。 它不应调入分析 API 来执行其他任务，如堆栈采样或分离。
 
@@ -392,7 +392,7 @@ WinMD 文件（如常规模块）包含可通过[元数据 api](../../../../docs
 
 但是，托管的 XAML Windows 应用商店应用现在会大量使用依赖句柄。 具体而言，CLR 使用它们来帮助管理托管对象和非托管 Windows 运行时对象之间的引用周期。 这意味着，与以往相比，要通知这些从属句柄的内存探查器比以往更重要，这样，就可以与堆图中的其余边缘一起可视化。 探查器 DLL 应将[RootReferences2](icorprofilercallback2-rootreferences2-method.md)、 [ObjectReferences](icorprofilercallback-objectreferences-method.md)和[ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md)一起使用，以形成堆关系图的完整视图。
 
-## <a name="conclusion"></a>结论
+## <a name="conclusion"></a>结束语
 
 可以使用 CLR 分析 API 来分析 Windows 应用商店应用内运行的托管代码。 事实上，你可以获取正在开发的现有探查器，并进行一些具体的更改，使其面向 Windows 应用商店应用。 探查器 UI 应使用新的 Api 在调试模式下激活 Windows 应用商店应用。 请确保探查器 DLL 仅使用适用于 Windows 应用商店应用的 Api。 探查器 DLL 和探查器 UI 之间的通信机制应该在编写时考虑到 Windows 应用商店应用程序 API 限制，并了解 Windows 应用商店应用程序的受限权限。 探查器 DLL 应知道 CLR 如何处理 Winmd，以及垃圾回收器的行为与托管线程的行为是不同的。
 

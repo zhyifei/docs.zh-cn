@@ -2,12 +2,12 @@
 title: 类型扩展
 description: 了解如何F#通过类型扩展将新成员添加到之前定义的对象类型。
 ms.date: 11/04/2019
-ms.openlocfilehash: d26d7b2b507f04e9cb68ade4c0409403643f74ba
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3e2c6971156bd562ed5d5428e6b7ffdc520c4cf5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978250"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341572"
 ---
 # <a name="type-extensions"></a>类型扩展
 
@@ -78,7 +78,7 @@ type Variant with
 
 可选类型扩展是在要扩展的类型的原始模块、命名空间或程序集的外部显示的扩展。
 
-可选类型扩展对于扩展你自己尚未定义的类型很有用。 例如:
+可选类型扩展对于扩展你自己尚未定义的类型很有用。 例如：
 
 ```fsharp
 module Extensions
@@ -98,13 +98,13 @@ type IEnumerable<'T> with
 
 可选扩展成员将编译为静态成员，其对象实例将被隐式传递为第一个参数。 但是，它们的作用就像是实例成员或静态成员的声明方式。
 
-可选扩展成员也不适用于C#或 VB 使用者。 它们只能在其他F#代码中使用。
+可选扩展成员也不适用于C#或 Visual Basic 使用者。 它们只能在其他F#代码中使用。
 
 ## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>内部和可选类型扩展的泛型限制
 
 可以在类型变量受到约束的泛型类型上声明类型扩展。 要求是扩展声明的约束与声明类型的约束匹配。
 
-但是，即使在声明的类型和类型扩展之间进行了匹配，约束仍有可能由扩展成员的主体推断，该扩展成员在类型参数上施加不同于声明类型的要求。 例如:
+但是，即使在声明的类型和类型扩展之间进行了匹配，约束仍有可能由扩展成员的主体推断，该扩展成员在类型参数上施加不同于声明类型的要求。 例如：
 
 ```fsharp
 open System.Collections.Generic
@@ -128,7 +128,7 @@ type IEnumerable<'T> with
 
 最后，扩展方法（有时称为 "C#样式扩展成员"）可以作为类的F#静态成员方法在中声明。
 
-当您希望在将约束类型变量的泛型类型上定义扩展时，扩展方法非常有用。 例如:
+当您希望在将约束类型变量的泛型类型上定义扩展时，扩展方法非常有用。 例如：
 
 ```fsharp
 namespace Extensions
@@ -149,7 +149,7 @@ type IEnumerableExtensions() =
 
 - 可访问的任何类型都可以进行扩展。
 - 内部和可选类型扩展可以定义_任何_成员类型，而不仅仅是方法。 例如，也可以扩展属性。
-- [语法](type-extensions.md#syntax)中的 `self-identifier` 标记表示正在调用的类型的实例，就像普通成员一样。
+- [语法](type-extensions.md#syntax)中的`self-identifier`标记表示正在调用的类型的实例, 就像普通成员一样。
 - 扩展成员可以是静态成员或实例成员。
 - 类型扩展上的类型变量必须与声明类型的约束匹配。
 
@@ -166,7 +166,7 @@ type IEnumerableExtensions() =
 
 最后，如果一种类型存在多个内部类型扩展，则所有成员都必须是唯一的。 对于可选类型扩展，不同类型扩展中具有相同类型的成员可以具有相同的名称。 仅当客户端代码打开两个不同的作用域定义相同的成员名称时，才会发生多义性错误。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [F# 语言参考](index.md)
 - [成员](./members/index.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: bc2338191bbf6922f56c833ebf115c5b21d92b00
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 1b8a00c7716a60daec4e4f6af6ae8e3a7a45e943
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569316"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346178"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>调用服务操作（WCF 数据服务）
 Open Data Protocol （OData）定义数据服务的服务操作。 WCF 数据服务使你能够将此类操作定义为数据服务中的方法。 与其他数据服务资源一样，这些服务操作也通过 URI 进行寻址。 服务操作可以返回实体类型的集合、单个实体类型实例的集合和基元类型（如整数和字符串）的集合。 服务操作还可以返回 `null`（在 Visual Basic 中为 `Nothing`）。 WCF 数据服务客户端库可用于访问支持 HTTP GET 请求的服务操作。 这些种类的服务操作定义为应用了 <xref:System.ServiceModel.Web.WebGetAttribute> 的方法。 有关详细信息，请参阅[服务操作](service-operations-wcf-data-services.md)。  
@@ -32,7 +32,7 @@ Open Data Protocol （OData）定义数据服务的服务操作。 WCF 数据服
   
 - 您不能使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 调用这样的 GET 服务操作：它返回实体或基元类型的单个结果，或需要多个输入参数。 必须调用 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 方法。  
   
-- 请考虑对强类型 <xref:System.Data.Services.Client.DataServiceContext> 分部类创建扩展方法，该分部类通过工具生成，使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 或 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 方法来调用服务操作。 这样您就可以直接从上下文调用服务操作。 有关详细信息，请参阅博客文章[服务操作和 WCF 数据服务客户端](https://go.microsoft.com/fwlink/?LinkId=215668)。  
+- 请考虑对强类型 <xref:System.Data.Services.Client.DataServiceContext> 分部类创建扩展方法，该分部类通过工具生成，使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 或 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 方法来调用服务操作。 这样您就可以直接从上下文调用服务操作。 有关详细信息，请参阅博客文章[服务操作和 WCF 数据服务客户端](https://blogs.msdn.microsoft.com/astoriateam/2010/05/26/service-operations-and-the-wcf-data-services-client/)。  
   
 - 使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 调用服务操作时，客户端库会通过对保留字符执行百分号编码（如与号（&））并在字符串中转义单引号，来自动转义提供给 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 的字符。 但是，当您调用某一*Execute*方法来调用服务操作时，您必须记得对任何用户提供的字符串值执行这种转义。 URI 中的单引号转义为单引号对。  
   

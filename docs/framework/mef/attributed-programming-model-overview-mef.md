@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MEF, attributed programming model
 - attributed programming model [MEF]
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
-ms.openlocfilehash: 63fb3d627364810fac5ddb0bfd3adc3c0421c9cc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c6b1093d2e821a55cc5513b077a270748a780b71
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126387"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347627"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>特性化编程模型概述 (MEF)
 
@@ -789,7 +789,7 @@ public class MyAttribute : ExportAttribute
 }
 ```
 
-此类定义一个名为 `MyAttribute` 的自定义特性，具有协定类型 `IMyData` 和某些名为 `MyMetadata`的元数据。 用 `MetadataAttribute` 特性标记的类中的所有属性都将被视为自定义特性中定义的元数据。 下面两个声明等效。
+此类定义一个名为 `MyAttribute` 的自定义特性，具有协定类型 `IMyAddin` 和某些名为 `MyMetadata`的元数据。 用 `MetadataAttribute` 特性标记的类中的所有属性都将被视为自定义特性中定义的元数据。 下面两个声明等效。
 
 ```vb
 <Export(GetType(IMyAddin))>
@@ -980,7 +980,7 @@ public class PartSeven
 
 `IPartImportsSatisfiedNotification` 包含一个名为 `OnImportsSatisfied`的方法。 当组合已完成并且部件的导入可供使用时，组合窗口将对实现接口的任何部件调用此方法。 部件是组合引擎创建，用于满足其他部件的导入。 在设置好部件的导入之前，你无法执行任何依赖于部件构造函数中的导入值或对这些值进行操作的初始化，除非已通过使用 `ImportingConstructor` 特性将这些指定为必备。 此方法通常为首选方法，但在某些情况下，构造函数注入可能不可用。 在这些情况下，可以在 `OnImportsSatisfied`中执行初始化，并且部件应实现 `IPartImportsSatisfiedNotification`。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [第 9 频道视频：使用 Managed Extensibility Framework 打开应用程序](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)
 - [第 9 频道视频：Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

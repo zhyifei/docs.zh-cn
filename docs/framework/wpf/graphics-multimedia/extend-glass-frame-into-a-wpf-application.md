@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: ae4d7f23729f5bd39558902a58d33c6c45572d85
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a702456895cfdbd44a58059befefb69deee5afa3
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977010"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636193"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>将玻璃框扩展到 WPF 应用程序
 
@@ -30,7 +30,7 @@ ms.locfileid: "73977010"
 
 ![显示在 IE7 地址栏后扩展的玻璃帧的屏幕截图。](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-若要在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序上扩展玻璃帧，需要访问非托管 API。 下面的代码示例为两个 API 执行平台调用（pinvoke），以将框架扩展到工作区。 其中每个 API 在名为**NonClientRegionAPI**的类中声明。
+若要在 WPF 应用程序上扩展玻璃帧，需要访问非托管 API。 下面的代码示例为两个 API 执行平台调用（pinvoke），以将框架扩展到工作区。 其中每个 API 在名为**NonClientRegionAPI**的类中声明。
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]
@@ -66,7 +66,7 @@ End Function
 
 ## <a name="example"></a>示例
 
-若要使用 [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) 函数，必须获取窗口句柄。 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中，可以从 <xref:System.Windows.Interop.HwndSource>的 <xref:System.Windows.Interop.HwndSource.Handle%2A> 属性中获取窗口句柄。 在下面的示例中，框架扩展到窗口的 <xref:System.Windows.FrameworkElement.Loaded> 事件的工作区中。
+若要使用 [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) 函数，必须获取窗口句柄。 在 WPF 中，可以从 <xref:System.Windows.Interop.HwndSource>的 <xref:System.Windows.Interop.HwndSource.Handle%2A> 属性获取窗口句柄。 在下面的示例中，框架扩展到窗口的 <xref:System.Windows.FrameworkElement.Loaded> 事件的工作区中。
 
 ```csharp
 void OnLoaded(object sender, RoutedEventArgs e)
@@ -145,11 +145,11 @@ void OnLoaded(object sender, RoutedEventArgs e)
 </Window>
 ```
 
-下图说明扩展到 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序中的玻璃帧：
+下图说明扩展到 WPF 应用程序中的玻璃帧：
 
 ![显示扩展到 WPF 应用程序中的玻璃框的屏幕截图。](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [桌面窗口管理器概述](/windows/desktop/dwm/dwm-overview)
 - [桌面窗口管理器模糊概述](/windows/desktop/dwm/blur-ovw)

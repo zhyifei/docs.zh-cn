@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: d45aca8b137f56cf058b63b9286504259c0005eb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 589b0b362cc25fd10e2780fd541cf9f7cfb546a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346706"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344639"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic 中的对象和类
 
@@ -239,7 +239,7 @@ End Sub
 
 派生类继承基类的成员，因此随着类层次结构的不断深入，复杂性也随之增加。 有关详细信息，请参阅[继承基础知识](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)。
 
-### <a name="compiling-the-code"></a>编译代码
+### <a name="compile-the-code"></a>编译代码
 
 请确保编译器可以访问要从中派生新类的类。 也就是说，完全限定其名称（如上面的示例所示），或在 [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)中标识其命名空间。 如果类在不同的项目中，可能需要添加对相应项目的引用。 有关详细信息，请参阅[管理项目中的引用](/visualstudio/ide/managing-references-in-a-project)。
 
@@ -271,5 +271,5 @@ End Sub
 [对象初始值设定项：命名类型和匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)\
 介绍了对象初始值设定项，用于通过一个表达式创建已命名和匿名类型的实例。
 
-[如何：](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\ 中推断匿名类型声明中的属性名称和类型
+[如何：推断匿名类型声明中的属性名称和类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\
 介绍了如何推断匿名类型声明中的属性名称和类型。 收录了推理成功和失败的示例。

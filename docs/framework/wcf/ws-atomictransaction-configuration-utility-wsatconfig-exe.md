@@ -2,12 +2,12 @@
 title: WS-AtomicTransaction 配置实用工具 (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: 429e11cdafc154b6913ab9de76dabe9c5b81d924
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: c57d0266102c5ad79657e875cb0107a2c11cabca
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837709"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337601"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>WS-AtomicTransaction 配置实用工具 (wsatConfig.exe)
 WS-AtomicTransaction 配置实用工具用于配置基本的 WS-AtomicTransaction 支持设置。  
@@ -25,7 +25,7 @@ wsatConfig [Options]
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe  
   
- 如果运行的是 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 或 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]，您必须在运行 WsatConfig.exe 之前下载更新。 有关此更新的详细信息，请参阅[Windows Communication Foundation 更新（KB912817）](https://www.microsoft.com/download/details.aspx?id=21520)。  
+ 如果运行 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 或 Windows Server 2003，则必须在运行 Wsatconfig.exe 之前下载更新。 有关此更新的详细信息，请参阅[Windows Communication Foundation 更新（KB912817）](https://www.microsoft.com/download/details.aspx?id=21520)。  
   
  下表显示了可用于 WS-AtomicTransaction 配置实用工具 (wsatConfig.exe) 的选项。  
   

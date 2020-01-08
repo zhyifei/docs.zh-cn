@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8fe0eadf-297b-487c-8d4b-7816753c2883
-ms.openlocfilehash: 30a782f5e37e867c7a0e4dfd800f4b2c2836d070
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fbd642fb3da6d664df9076b8d7576865d516727e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784937"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634893"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>比较 DataRow (LINQ to DataSet)
-[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 定义多种用于比较源元素的集合运算符以查看它们是否相等。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 提供下面的集合运算符：  
+语言集成查询（LINQ）定义了各种集运算符来比较源元素，以确定它们是否相等。 LINQ 提供以下集运算符：  
   
 - <xref:System.Linq.Enumerable.Distinct%2A>  
   
@@ -23,7 +23,7 @@ ms.locfileid: "70784937"
   
 - <xref:System.Linq.Enumerable.Except%2A>  
   
- 这些运算符通过对每个元素集合调用 <xref:System.Collections.Generic.IEqualityComparer%601.GetHashCode%2A> 和 <xref:System.Collections.Generic.IEqualityComparer%601.Equals%2A> 方法来比较源元素。 对于 <xref:System.Data.DataRow>，这些运算符执行引用比较，在对表格格式数据执行集合操作的情况下，这通常不是理想的行为。 对于集合运算，通常需要确定元素值而不是元素引用是否相等。 因此， <xref:System.Data.DataRowComparer>类已添加到 LINQ to DataSet。 此类可用于比较行值。  
+ 这些运算符通过对每个元素集合调用 <xref:System.Collections.Generic.IEqualityComparer%601.GetHashCode%2A> 和 <xref:System.Collections.Generic.IEqualityComparer%601.Equals%2A> 方法来比较源元素。 对于 <xref:System.Data.DataRow>，这些运算符执行引用比较，在对表格格式数据执行集合操作的情况下，这通常不是理想的行为。 对于集合运算，通常需要确定元素值而不是元素引用是否相等。 因此，<xref:System.Data.DataRowComparer> 类已添加到 LINQ to DataSet 中。 此类可用于比较行值。  
   
  <xref:System.Data.DataRowComparer> 类包含 <xref:System.Data.DataRow> 的值比较实现，所以此类可用于设置集合操作，例如 <xref:System.Linq.Enumerable.Distinct%2A>。 此类不能直接实例化，而必须使用 <xref:System.Data.DataRowComparer.Default%2A> 属性返回 <xref:System.Data.DataRowComparer%601> 的实例。 然后调用 <xref:System.Data.DataRowComparer%601.Equals%2A> 方法并作为输入参数传入要进行比较的两个 <xref:System.Data.DataRow> 对象。 如果两个 <xref:System.Data.DataRowComparer%601.Equals%2A> 对象中排序的列值集合相等，则 `true` 方法返回 <xref:System.Data.DataRow>，否则返回 `false`。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "70784937"
   
  [!code-vb[DP LINQ to DataSet Examples#CompareDifferentRows](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#comparedifferentrows)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Data.DataRowComparer>
 - [将数据加载到数据集中](loading-data-into-a-dataset.md)

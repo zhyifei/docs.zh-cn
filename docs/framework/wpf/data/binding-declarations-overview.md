@@ -12,12 +12,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: bc3a139db80066c9cad5199c7734fe66a8639400
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8fea61c463928ee69ef5dd0dfbf107f89c5384ff
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460026"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544465"
 ---
 # <a name="binding-declarations-overview"></a>绑定声明概述
 
@@ -25,7 +25,7 @@ ms.locfileid: "73460026"
 
 <a name="Prereq"></a>
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 在阅读本主题之前，请务必熟悉标记扩展的概念和使用。 有关标记扩展的详细信息，请参阅[标记扩展和 WPF XAML](../advanced/markup-extensions-and-wpf-xaml.md)。
 
@@ -110,9 +110,9 @@ ms.locfileid: "73460026"
 
 - 如果在 XAML 中设置 <xref:System.Windows.Data.Binding.Path%2A>，还需要对 XML 语言定义的特殊字符进行转义（使用 XML 实体）：
 
-  - 使用 `&` 对字符“&”进行转义。
+  - 使用 `&amp;` 对字符“&”进行转义。
 
-  - 使用 `>` 对结束标记“>”进行转义。
+  - 使用 `&gt;` 对结束标记“>”进行转义。
 
 - 此外，如果在属性中使用标记扩展语法描述整个绑定，需要（使用反斜杠 \\）对 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 标记扩展分析器专用的字符进行转义：
 
@@ -140,7 +140,7 @@ ms.locfileid: "73460026"
 
 - <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> 和 <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> 的默认 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 值也不同，具体取决于绑定的依赖项属性。 大多数依赖属性的默认值为 <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>，而 <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> 属性的默认值为 <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)
 - [帮助主题](data-binding-how-to-topics.md)

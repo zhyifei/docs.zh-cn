@@ -1,13 +1,13 @@
 ---
-title: 中的异步编程F#
+title: 异步编程
 description: 了解如何F#基于从核心函数编程概念派生的语言级编程模型，为异步提供干净支持。
 ms.date: 12/17/2018
-ms.openlocfilehash: 583b0f5154e6ad8875b21503cfb78f70a069ff7b
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 471566befd69f330fb9254dbd57b19569d9f9ad3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837098"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344658"
 ---
 # <a name="async-programming-in-f"></a>F 中的异步编程\#
 
@@ -16,7 +16,7 @@ ms.locfileid: "74837098"
 - 提供可为大量并发传入请求提供服务的服务器进程，同时最大限度地减少在请求处理过程中所占用的系统资源，等待来自该进程外部的系统或服务的输入
 - 在并发后台工作的同时维护响应式 UI 或主线程
 
-尽管后台工作通常涉及多个线程的使用率，但请务必分别考虑异步和多线程的概念。 事实上，它们是单独的问题，而另一个则不是。 本文后面的内容将更详细地介绍这一点。
+尽管后台工作通常涉及多个线程的使用率，但请务必分别考虑异步和多线程的概念。 事实上，它们是单独的问题，而另一个则不是。 本文后面的内容对此进行了详细介绍。
 
 ## <a name="asynchrony-defined"></a>已定义异步
 
@@ -69,13 +69,13 @@ let main argv =
     0
 ```
 
-在此示例中，`printTotalFileBytes` 函数的类型为 `string -> Async<unit>`。 调用函数实际上不会执行异步计算。 相反，它会返回一个 `Async<unit>`，它充当要异步执行的工作的 * 规范。 它将在其正文中调用 `Async.AwaitTask`，这会在调用时将 <xref:System.IO.File.WriteAllBytesAsync%2A> 的结果转换为适当的类型。
+在此示例中，`printTotalFileBytes` 函数的类型为 `string -> Async<unit>`。 调用函数实际上不会执行异步计算。 相反，它会返回一个 `Async<unit>`，它充当要异步执行的工作的*规范*。 它在其正文中调用 `Async.AwaitTask`，这会将 <xref:System.IO.File.WriteAllBytesAsync%2A> 的结果转换为适当的类型。
 
 另一个重要的行是对 `Async.RunSynchronously`的调用。 这是要实际执行F#异步计算时需要调用的异步模块启动函数之一。
 
-这与 `async` 编程的C#/VB 样式是根本差异。 在F#中，可以将异步计算视为**冷任务**。 它们必须显式启动才能实际执行。 这有一些优点，因为它允许你比在/VB. 中C#更轻松地组合和序列化异步工作
+这是与 `async` 编程的C#/Visual 基本样式的根本差异。 在F#中，可以将异步计算视为**冷任务**。 它们必须显式启动才能实际执行。 这有一些优点，因为它可让你更轻松 Visual Basic 地C#组合和序列化异步工作。
 
-## <a name="combining-asynchronous-computations"></a>组合异步计算
+## <a name="combine-asynchronous-computations"></a>合并异步计算
 
 下面是通过组合计算在上一个示例中生成的示例：
 
@@ -110,7 +110,7 @@ let main argv =
 
 运行此程序时，`printTotalFileBytes` 会并行运行每个命令行参数。 由于异步计算独立于程序流执行，因此它们不会打印其信息并完成执行。 将并行计划计算，但不保证其执行顺序。
 
-## <a name="sequencing-asynchronous-computations"></a>序列化异步计算
+## <a name="sequence-asynchronous-computations"></a>序列异步计算
 
 由于 `Async<'T>` 是一种规范，而不是已运行的任务，因此你可以轻松地执行更复杂的转换。 下面是一个示例，该示例对一组异步计算进行排序，以便它们逐个执行。
 
@@ -162,7 +162,7 @@ computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
 
 ### <a name="asyncstartimmediate"></a>StartImmediate
 
-从当前操作系统线程开始立即运行异步计算。 如果需要在计算过程中在调用线程上更新某些内容，这会很有帮助。 例如，如果异步计算必须更新 UI （如更新进度栏），则应使用 `Async.StartImmediate`。
+运行异步计算，在当前操作系统线程上立即启动。 如果需要在计算过程中在调用线程上更新某些内容，这会很有帮助。 例如，如果异步计算必须更新 UI （如更新进度栏），则应使用 `Async.StartImmediate`。
 
 签名：
 
@@ -273,7 +273,7 @@ computation: Async<'T> -> Async<Choice<'T, exn>>
 
 ### <a name="asyncignore"></a>Async。 Ignore
 
-创建一个运行给定计算并忽略其结果的异步计算。
+创建一个异步计算，该异步计算将运行给定的计算并忽略其结果。
 
 签名：
 
@@ -330,7 +330,7 @@ computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 - 通过 `Async.Start` 开始的计算引发的异常不会传播到调用方。 调用堆栈将被完全展开。
 - 使用 `Async.Start` 启动的任何 effectful 工作（例如调用 `printfn`）都不会导致在程序执行的主线程上发生效果。
 
-## <a name="interoperating-with-net"></a>与 .NET 互操作
+## <a name="interoperate-with-net"></a>与 .NET 交互
 
 你可以使用 .NET 库或C#使用[async/await](../../../standard/async.md)样式异步编程的基本代码。 由于C#大多数 .net 库使用 <xref:System.Threading.Tasks.Task%601>，并 <xref:System.Threading.Tasks.Task> 类型作为其核心抽象，而不是 `Async<'T>`，因此必须将这两种方法之间的边界跨越异步。
 
@@ -371,7 +371,7 @@ module Async =
 
 已存在接受作为输入的 <xref:System.Threading.Tasks.Task> 的 `Async.AwaitTask`。 使用此函数和先前定义的 `startTaskFromAsyncUnit` 函数，可以从F#异步计算启动和等待 <xref:System.Threading.Tasks.Task> 类型。
 
-## <a name="relationship-to-multithreading"></a>与多线程的关系
+## <a name="relationship-to-multi-threading"></a>与多线程的关系
 
 尽管本文介绍了线程处理，但要记住以下两个重要事项：
 

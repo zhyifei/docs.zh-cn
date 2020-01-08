@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: bf673195f06475daf8341fd17cd701b84a970b39
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 48536d8fba3f86c2883e48cd4e5cf9a3a8752fcd
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740662"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636310"
 ---
 # <a name="building-a-wpf-application-wpf"></a>生成 WPF 应用程序 (WPF)
 
-Windows Presentation Foundation （WPF）应用程序可以生成为 .NET Framework 可执行文件（.exe）、库（.dll）或这两种类型的程序集的组合。 本主题将介绍如何生成 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序，并对生成过程中的各个关键步骤进行说明。
+Windows Presentation Foundation （WPF）应用程序可以生成为 .NET Framework 可执行文件（.exe）、库（.dll）或这两种类型的程序集的组合。 本主题介绍如何构建 WPF 应用程序，并介绍生成过程中的关键步骤。
 
 <a name="Building_a_WPF_Application_using_Command_Line"></a>
 
@@ -28,13 +28,13 @@ WPF 应用程序可通过以下方式编译：
 
 - Microsoft 生成引擎 (MSBuild)。 除了代码和 XAML 文件之外，应用程序还必须包含一个 MSBuild 项目文件。 有关详细信息，请参阅“MSBuild”。
 
-- Visual Studio。 Visual Studio 是一个集成式开发环境，可编译使用 MSBuild 生成的 WPF 应用程序，并包含可用于创建 UI 的可视化设计器。 有关详细信息，请参阅[使用 Visual Studio 编写和管理代码](/visualstudio/ide/index-writing-code)和[在 Visual STUDIO 中设计 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)。
+- 。 Visual Studio 是一个集成式开发环境，可编译使用 MSBuild 生成的 WPF 应用程序，并包含可用于创建 UI 的可视化设计器。 有关详细信息，请参阅[使用 Visual Studio 编写和管理代码](/visualstudio/ide/index-writing-code)和[在 Visual STUDIO 中设计 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)。
 
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>
 
 ## <a name="wpf-build-pipeline"></a>WPF 生成管道
 
-在生成 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 项目时，会组合调用特定于语言的目标和特定于 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的目标。 执行这些目标的进程被称为生成管道，相关的关键步骤已显示在下图中。
+生成 WPF 项目时，将调用语言特定目标和特定于 WPF 的目标的组合。 执行这些目标的进程被称为生成管道，相关的关键步骤已显示在下图中。
 
 ![WPF 生成过程](./media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")
 
@@ -48,7 +48,7 @@ WPF 应用程序可通过以下方式编译：
 
 - Windows SDK 的目录。
 
-- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 引用程序集的位置。
+- WPF 引用程序集的位置。
 
 - 程序集搜索路径的属性。
 
@@ -58,7 +58,7 @@ MSBuild 在其中搜索程序集的第一个位置是引用程序集目录（%Pr
 
 ### <a name="resolving-references"></a>解析引用
 
-生成进程会查找并绑定生成应用程序项目所需的程序集。 这个逻辑包含在 `ResolveAssemblyReference` 任务中。 在项目文件中声明为 `Reference` 的所有程序集会连同有关搜索路径的信息以及系统上已安装的程序集的元数据一并提供给任务。 该任务会查找程序集，并使用已安装的程序集的元数据来筛选出那些无需显示在输出清单中的核心 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 程序集。 这么做可以避免 ClickOnce 清单中出现冗余信息。 例如，由于 PresentationFramework 可能被视为在上构建的应用程序和 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的代表，并且由于所有 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 程序集均存在于安装了 .NET Framework 的每台计算机上的同一位置，因此无需在清单中包含所有 .NET Framework 引用程序集的所有信息。
+生成进程会查找并绑定生成应用程序项目所需的程序集。 这个逻辑包含在 `ResolveAssemblyReference` 任务中。 在项目文件中声明为 `Reference` 的所有程序集会连同有关搜索路径的信息以及系统上已安装的程序集的元数据一并提供给任务。 该任务将查找程序集，并使用已安装的程序集的元数据来筛选出那些不需要显示在输出清单中的核心 WPF 程序集。 这么做可以避免 ClickOnce 清单中出现冗余信息。 例如，由于 PresentationFramework 可被视为在和 WPF 上构建的应用程序的代表，并且由于在安装了 .NET Framework 的每台计算机上的同一位置都存在所有 WPF 程序集，因此无需包括所有有关清单中所有 .NET Framework 引用程序集的信息。
 
 <a name="Markup_Compilation___Pass_1"></a>
 
@@ -142,13 +142,13 @@ End Sub
 
 这些清单文件始终为 Xbap 创建。 对于已安装的应用程序，这些文件不会创建，除非在项目文件中为 `GenerateManifests` 属性指定值 `true`。
 
-Xbap 在分配给典型 Internet 区域应用程序的权限之上或更高的其他两个权限： <xref:System.Security.Permissions.WebBrowserPermission> 和 <xref:System.Security.Permissions.MediaPermission>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 生成系统会在应用程序清单中声明这些权限。
+Xbap 在分配给典型 Internet 区域应用程序的权限之上或更高的其他两个权限： <xref:System.Security.Permissions.WebBrowserPermission> 和 <xref:System.Security.Permissions.MediaPermission>。 WPF 生成系统会在应用程序清单中声明这些权限。
 
 <a name="Incremental_Build_Support"></a>
 
 ## <a name="incremental-build-support"></a>增量生成支持
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 生成系统可以为增量生成提供支持。 该系统能以非常智能化的方式来检测对标记或代码所做的各种更改，而且只会编译那些受到更改操作影响的项目。 增量生成机制会使用以下文件：
+WPF 生成系统为增量生成提供支持。 该系统能以非常智能化的方式来检测对标记或代码所做的各种更改，而且只会编译那些受到更改操作影响的项目。 增量生成机制会使用以下文件：
 
 - $(*AssemblyName*)_MarkupCompiler.Cache 文件，用于维护当前的编译器状态。
 
@@ -186,7 +186,7 @@ Xbap 在分配给典型 Internet 区域应用程序的权限之上或更高的�
 
 - 不会重新编译任何内容（如果项目未发生任何变化）。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [部署 WPF 应用程序](deploying-a-wpf-application-wpf.md)
 - [WPF MSBuild 参考](/visualstudio/msbuild/wpf-msbuild-reference)

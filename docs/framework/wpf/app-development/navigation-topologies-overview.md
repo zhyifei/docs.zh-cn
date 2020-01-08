@@ -9,18 +9,18 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: 5d9b09085ed8057f53cae9f9177682b01e698f6d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5679bac06b87b3c4e50cbc4a238d7daf3e33a564
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580711"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636271"
 ---
 # <a name="navigation-topologies-overview"></a>导航拓扑概述
-<a name="introduction"></a>本概述介绍了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的导航拓扑。 三个常见导航拓扑及示例将在随后讨论。  
+<a name="introduction"></a>本概述介绍 WPF 中的导航拓扑。 三个常见导航拓扑及示例将在随后讨论。  
   
 > [!NOTE]
-> 阅读本主题之前，你应该熟悉使用页面函数 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的结构化导航的概念。 有关这两个主题的详细信息，请参阅[结构化导航概述](structured-navigation-overview.md)。  
+> 在阅读本主题之前，你应该熟悉使用页面功能的 WPF 中的结构化导航的概念。 有关这两个主题的详细信息，请参阅[结构化导航概述](structured-navigation-overview.md)。  
   
  本主题包含以下各节：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "72580711"
   
 <a name="Navigation_Topologies"></a>   
 ## <a name="navigation-topologies"></a>导航拓扑  
- 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中，导航通常由页面（<xref:System.Windows.Controls.Page>）组成，其中包含可在单击时导航到其他页面的超链接（<xref:System.Windows.Documents.Hyperlink>）。 导航到的页面由统一资源标识符（Uri）标识（请参阅[WPF 中的 Pack uri](pack-uris-in-wpf.md)）。 请看下面的简单示例，其中显示了页面、超链接和统一资源标识符（Uri）：  
+ 在 WPF 中，导航通常由页面（<xref:System.Windows.Controls.Page>）组成，其中包含在单击时导航到其他页面的超链接（<xref:System.Windows.Documents.Hyperlink>）。 导航到的页面由统一资源标识符（Uri）标识（请参阅[WPF 中的 Pack uri](pack-uris-in-wpf.md)）。 请看下面的简单示例，其中显示了页面、超链接和统一资源标识符（Uri）：  
   
  [!code-xaml[NavigationTopologiesOverviewSnippets#Page1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page1.xaml#page1)]  
   
@@ -66,7 +66,7 @@ ms.locfileid: "72580711"
   
  在固定线性拓扑中导航的典型行为包括以下内容：  
   
-- 从调用页导航到启动程序页，启动程序页初始化向导并导航到第一个向导页。 不需要启动程序页（[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] <xref:System.Windows.Navigation.PageFunction%601>），因为调用页可以直接调用第一个向导页。 但是，使用启动程序页可以简化向导初始化，特别是初始化较复杂时。  
+- 从调用页导航到启动程序页，启动程序页初始化向导并导航到第一个向导页。 不需要启动程序页（[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]<xref:System.Windows.Navigation.PageFunction%601>），因为调用页可以直接调用第一个向导页。 但是，使用启动程序页可以简化向导初始化，特别是初始化较复杂时。  
   
 - 用户可以使用“后退”和“前进”按钮（或超链接）在不同的页面之间导航。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "72580711"
   
  即使固定分层结构中的页导航序列在运行时确定，用户体验仍会与固定线性拓扑的用户体验相同：  
   
-- 从调用页导航到启动程序页，启动程序页初始化向导并导航到第一个向导页。 不需要启动程序页（[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] <xref:System.Windows.Navigation.PageFunction%601>），因为调用页可以直接调用第一个向导页。 但是，使用启动程序页可以简化向导初始化，特别是初始化较复杂时。  
+- 从调用页导航到启动程序页，启动程序页初始化向导并导航到第一个向导页。 不需要启动程序页（[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]<xref:System.Windows.Navigation.PageFunction%601>），因为调用页可以直接调用第一个向导页。 但是，使用启动程序页可以简化向导初始化，特别是初始化较复杂时。  
   
 - 用户可以使用“后退”和“前进”按钮（或超链接）在不同的页面之间导航。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "72580711"
   
  该导航序列称为动态生成的拓扑。 对于用户而言，与其他导航拓扑一样，用户体验与以前拓扑的用户体验相同：  
   
-- 从调用页导航到启动程序页，启动程序页初始化向导并导航到第一个向导页。 不需要启动程序页（[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] <xref:System.Windows.Navigation.PageFunction%601>），因为调用页可以直接调用第一个向导页。 但是，使用启动程序页可以简化向导初始化，特别是初始化较复杂时。  
+- 从调用页导航到启动程序页，启动程序页初始化向导并导航到第一个向导页。 不需要启动程序页（[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]<xref:System.Windows.Navigation.PageFunction%601>），因为调用页可以直接调用第一个向导页。 但是，使用启动程序页可以简化向导初始化，特别是初始化较复杂时。  
   
 - 用户可以使用“后退”和“前进”按钮（或超链接）在不同的页面之间导航。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "72580711"
   
 - 向导完成（接受或取消）后，向导所包含的页便会从日志中删除。 这使得每个向导实例都保持独立，从而避免潜在的数据反常或状态异常。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Controls.Page>
 - <xref:System.Windows.Navigation.PageFunction%601>

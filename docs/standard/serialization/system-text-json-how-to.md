@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 3d3dc0011562e25854938aff857f2832a5978b49
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.openlocfilehash: 32c78cc48dcd3d9f2c6e1d338bdbdd359f69879f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283332"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344507"
 ---
 # <a name="how-to-serialize-and-deserialize-json-in-net"></a>如何在 .NET 中对 JSON 进行序列化和反序列化
 
@@ -184,7 +184,7 @@ using System.Text.Json.Serialization;
 
 ## <a name="customize-json-names-and-values"></a>自定义 JSON 名称和值
 
-默认情况下，JSON 输出中的属性名称和字典键不变，包括大小写。 枚举值表示为数值。 本部分介绍如何执行以下操作：
+默认情况下，JSON 输出中的属性名称和字典键不变，包括大小写。 枚举值表示为数值。 本部分介绍如何：
 
 * [自定义各个属性名称](#customize-individual-property-names)
 * [将所有属性名称转换为 camel 大小写](#use-camel-case-for-all-json-property-names)
@@ -377,11 +377,11 @@ JSON 属性命名策略：
 
 下面是一个示例对象，用于序列化和 JSON 输出：
 
-|属性 |值  |
+|Property |{2&gt;值&lt;2}  |
 |---------|---------|
 | 日期    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureCelsius| 25 |
-| 摘要| Null|
+| 摘要| null|
 
 ```json
 {
@@ -460,7 +460,7 @@ JSON 属性命名策略：
 
 ## <a name="serialize-properties-of-derived-classes"></a>序列化派生类的属性
 
-在编译时指定要序列化的类型时，不支持多态序列化。 例如，假设您有一个 `WeatherForecast` 类和一个派生类 `WeatherForecastWithWind`：
+在编译时指定要序列化的类型时，不支持多态序列化。 例如，假设您有一个 `WeatherForecast` 类和一个派生类 `WeatherForecastDerived`：
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
@@ -470,7 +470,7 @@ JSON 属性命名策略：
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeDefault)]
 
-在这种情况下，即使 `weatherForecast` 对象实际上是 `WeatherForecastWithWind` 对象，也不会对 `WindSpeed` 属性进行序列化。 仅序列化基类属性：
+在这种情况下，即使 `weatherForecast` 对象实际上是 `WeatherForecastDerived` 对象，也不会对 `WindSpeed` 属性进行序列化。 仅序列化基类属性：
 
 ```json
 {
@@ -571,7 +571,7 @@ JSON 属性命名策略：
 
 反序列化前面显示的此示例类型的 JSON 时，额外的数据将成为 `ExtensionData` 属性的键值对：
 
-|属性 |值  |注意  |
+|Property |{2&gt;值&lt;2}  |注释  |
 |---------|---------|---------|
 | 日期    | 8/1/2019 12:00:00 AM-07:00||
 | TemperatureCelsius| 0 | 区分大小写不匹配（`temperatureCelsius` 在 JSON 中），因此未设置属性。 |
