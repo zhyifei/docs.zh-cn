@@ -4,12 +4,12 @@ description: 了解如何使用 Blazor 生成可重复使用的 UI 组件，以�
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 5e5ca128bea2e77d795cede17df73963d9b49a48
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b34bdf61a425807030cf7648df245cc7a01c95de
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337403"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705725"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>使用 Blazor 生成可重复使用的 UI 组件
 
@@ -269,7 +269,7 @@ public partial class Counter : System.Web.UI.UserControl
 处理事件后，将呈现组件以考虑任何组件状态更改。 对于异步事件处理程序，该组件将在处理程序执行完成后立即呈现。 异步 `Task` 完成后，会*再次*呈现该组件。 此异步执行模式提供了在异步 `Task` 仍在进行时呈现一些适当 UI 的机会。
 
 ```razor
-<button @onclick="Get message">Get message</button>
+<button @onclick="ShowMessage">Get message</button>
 
 @if (showMessage)
 {
