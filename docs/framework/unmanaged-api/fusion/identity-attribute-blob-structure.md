@@ -23,10 +23,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73108012"
 ---
-# <a name="identity_attribute_blob-structure"></a><span data-ttu-id="8725a-102">IDENTITY_ATTRIBUTE_BLOB 结构</span><span class="sxs-lookup"><span data-stu-id="8725a-102">IDENTITY_ATTRIBUTE_BLOB Structure</span></span>
-<span data-ttu-id="8725a-103">包含有关程序集中单个属性的信息，由三个 `DWORD`组成。</span><span class="sxs-lookup"><span data-stu-id="8725a-103">Contains information about a single attribute in an assembly, and consists of three `DWORD`s.</span></span> <span data-ttu-id="8725a-104">每个 `DWORD` 都是由[IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)接口的 `CurrentIntoBuffer` 方法生成的字符缓冲区的偏移量。</span><span class="sxs-lookup"><span data-stu-id="8725a-104">Each `DWORD` is an offset into a character buffer produced by the `CurrentIntoBuffer` method of the [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) interface</span></span>  
+# <a name="identity_attribute_blob-structure"></a><span data-ttu-id="24d9a-102">IDENTITY_ATTRIBUTE_BLOB 结构</span><span class="sxs-lookup"><span data-stu-id="24d9a-102">IDENTITY_ATTRIBUTE_BLOB Structure</span></span>
+<span data-ttu-id="24d9a-103">包含有关程序集中单个属性的信息，由三个 `DWORD`组成。</span><span class="sxs-lookup"><span data-stu-id="24d9a-103">Contains information about a single attribute in an assembly, and consists of three `DWORD`s.</span></span> <span data-ttu-id="24d9a-104">每个 `DWORD` 都是由[IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)接口的 `CurrentIntoBuffer` 方法生成的字符缓冲区的偏移量。</span><span class="sxs-lookup"><span data-stu-id="24d9a-104">Each `DWORD` is an offset into a character buffer produced by the `CurrentIntoBuffer` method of the [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) interface</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8725a-105">语法</span><span class="sxs-lookup"><span data-stu-id="8725a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="24d9a-105">语法</span><span class="sxs-lookup"><span data-stu-id="24d9a-105">Syntax</span></span>  
   
 ```cpp  
 typedef struct _IDENTITY_ATTRIBUTE_BLOB {  
@@ -36,24 +36,24 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 }   IDENTITY_ATTRIBUTE_BLOB;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="8725a-106">Members</span><span class="sxs-lookup"><span data-stu-id="8725a-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="24d9a-106">Members</span><span class="sxs-lookup"><span data-stu-id="24d9a-106">Members</span></span>  
   
-|<span data-ttu-id="8725a-107">成员</span><span class="sxs-lookup"><span data-stu-id="8725a-107">Member</span></span>|<span data-ttu-id="8725a-108">描述</span><span class="sxs-lookup"><span data-stu-id="8725a-108">Description</span></span>|  
+|<span data-ttu-id="24d9a-107">成员</span><span class="sxs-lookup"><span data-stu-id="24d9a-107">Member</span></span>|<span data-ttu-id="24d9a-108">描述</span><span class="sxs-lookup"><span data-stu-id="24d9a-108">Description</span></span>|  
 |------------|-----------------|  
-|`ofsNamespace`|<span data-ttu-id="8725a-109">字符缓冲区中的第一个偏移量。</span><span class="sxs-lookup"><span data-stu-id="8725a-109">The first offset into the character buffer.</span></span> <span data-ttu-id="8725a-110">此偏移量后面不是属性的命名空间，而是一系列空字符。</span><span class="sxs-lookup"><span data-stu-id="8725a-110">This offset is not followed by the attribute's namespace, but by a series of null characters.</span></span> <span data-ttu-id="8725a-111">因此，不使用此方法。</span><span class="sxs-lookup"><span data-stu-id="8725a-111">Therefore, it is not used.</span></span>|  
-|`ofsName`|<span data-ttu-id="8725a-112">字符缓冲区中的第二个偏移量。</span><span class="sxs-lookup"><span data-stu-id="8725a-112">The second offset into the character buffer.</span></span> <span data-ttu-id="8725a-113">此位置标记属性名称的开头。</span><span class="sxs-lookup"><span data-stu-id="8725a-113">This location marks the start of the attribute's name.</span></span>|  
-|`ofsValue`|<span data-ttu-id="8725a-114">字符缓冲区中的第三个偏移量。</span><span class="sxs-lookup"><span data-stu-id="8725a-114">The third offset into the character buffer.</span></span> <span data-ttu-id="8725a-115">此位置标记属性值的开头。</span><span class="sxs-lookup"><span data-stu-id="8725a-115">This location marks the start of the attribute's value.</span></span>|  
+|`ofsNamespace`|<span data-ttu-id="24d9a-109">字符缓冲区中的第一个偏移量。</span><span class="sxs-lookup"><span data-stu-id="24d9a-109">The first offset into the character buffer.</span></span> <span data-ttu-id="24d9a-110">此偏移量后面不是属性的命名空间，而是一系列空字符。</span><span class="sxs-lookup"><span data-stu-id="24d9a-110">This offset is not followed by the attribute's namespace, but by a series of null characters.</span></span> <span data-ttu-id="24d9a-111">因此，不使用此方法。</span><span class="sxs-lookup"><span data-stu-id="24d9a-111">Therefore, it is not used.</span></span>|  
+|`ofsName`|<span data-ttu-id="24d9a-112">字符缓冲区中的第二个偏移量。</span><span class="sxs-lookup"><span data-stu-id="24d9a-112">The second offset into the character buffer.</span></span> <span data-ttu-id="24d9a-113">此位置标记属性名称的开头。</span><span class="sxs-lookup"><span data-stu-id="24d9a-113">This location marks the start of the attribute's name.</span></span>|  
+|`ofsValue`|<span data-ttu-id="24d9a-114">字符缓冲区中的第三个偏移量。</span><span class="sxs-lookup"><span data-stu-id="24d9a-114">The third offset into the character buffer.</span></span> <span data-ttu-id="24d9a-115">此位置标记属性值的开头。</span><span class="sxs-lookup"><span data-stu-id="24d9a-115">This location marks the start of the attribute's value.</span></span>|  
   
-## <a name="sample"></a><span data-ttu-id="8725a-116">示例</span><span class="sxs-lookup"><span data-stu-id="8725a-116">Sample</span></span>  
- <span data-ttu-id="8725a-117">下面的示例演示了几个基本步骤，这些步骤最终会生成 `IDENTITY_ATTRIBUTE_BLOB` 结构：</span><span class="sxs-lookup"><span data-stu-id="8725a-117">The following example illustrates several basic steps, which eventually result in a populated `IDENTITY_ATTRIBUTE_BLOB` structure:</span></span>  
+## <a name="sample"></a><span data-ttu-id="24d9a-116">示例</span><span class="sxs-lookup"><span data-stu-id="24d9a-116">Sample</span></span>  
+ <span data-ttu-id="24d9a-117">下面的示例演示了几个基本步骤，这些步骤最终会生成 `IDENTITY_ATTRIBUTE_BLOB` 结构：</span><span class="sxs-lookup"><span data-stu-id="24d9a-117">The following example illustrates several basic steps, which eventually result in a populated `IDENTITY_ATTRIBUTE_BLOB` structure:</span></span>  
   
-1. <span data-ttu-id="8725a-118">获取程序集的[IReferenceIdentity](ireferenceidentity-interface.md) 。</span><span class="sxs-lookup"><span data-stu-id="8725a-118">Obtain an [IReferenceIdentity](ireferenceidentity-interface.md) for the assembly.</span></span>  
+1. <span data-ttu-id="24d9a-118">获取程序集的[IReferenceIdentity](ireferenceidentity-interface.md) 。</span><span class="sxs-lookup"><span data-stu-id="24d9a-118">Obtain an [IReferenceIdentity](ireferenceidentity-interface.md) for the assembly.</span></span>  
   
-2. <span data-ttu-id="8725a-119">调用 `IReferenceIdentity::EnumAttributes` 方法，并获取[IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="8725a-119">Call the `IReferenceIdentity::EnumAttributes` method, and obtain an [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md).</span></span>  
+2. <span data-ttu-id="24d9a-119">调用 `IReferenceIdentity::EnumAttributes` 方法，并获取[IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="24d9a-119">Call the `IReferenceIdentity::EnumAttributes` method, and obtain an [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md).</span></span>  
   
-3. <span data-ttu-id="8725a-120">创建一个字符缓冲区，并将其转换为 `IDENTITY_ATTRIBUTE_BLOB` 结构。</span><span class="sxs-lookup"><span data-stu-id="8725a-120">Create a character buffer, and cast it as an `IDENTITY_ATTRIBUTE_BLOB` structure.</span></span>  
+3. <span data-ttu-id="24d9a-120">创建一个字符缓冲区，并将其转换为 `IDENTITY_ATTRIBUTE_BLOB` 结构。</span><span class="sxs-lookup"><span data-stu-id="24d9a-120">Create a character buffer, and cast it as an `IDENTITY_ATTRIBUTE_BLOB` structure.</span></span>  
   
-4. <span data-ttu-id="8725a-121">调用 `IEnumIDENTITY_ATTRIBUTE` 接口的 `CurrentIntoBuffer` 方法。</span><span class="sxs-lookup"><span data-stu-id="8725a-121">Call the `CurrentIntoBuffer` method of the `IEnumIDENTITY_ATTRIBUTE` interface.</span></span> <span data-ttu-id="8725a-122">此方法会将属性 `Namespace`、`Name`和 `Value` 复制到字符缓冲区。</span><span class="sxs-lookup"><span data-stu-id="8725a-122">This method copies the attributes `Namespace`, `Name`, and `Value` into the character buffer.</span></span> <span data-ttu-id="8725a-123">这三个字符串的偏移量在 `IDENTITY_ATTRIBUTE_BLOB` 结构中将变为可用。</span><span class="sxs-lookup"><span data-stu-id="8725a-123">The three offsets to those strings will become available in the `IDENTITY_ATTRIBUTE_BLOB` structure.</span></span>  
+4. <span data-ttu-id="24d9a-121">调用 `IEnumIDENTITY_ATTRIBUTE` 接口的 `CurrentIntoBuffer` 方法。</span><span class="sxs-lookup"><span data-stu-id="24d9a-121">Call the `CurrentIntoBuffer` method of the `IEnumIDENTITY_ATTRIBUTE` interface.</span></span> <span data-ttu-id="24d9a-122">此方法会将属性 `Namespace`、`Name`和 `Value` 复制到字符缓冲区。</span><span class="sxs-lookup"><span data-stu-id="24d9a-122">This method copies the attributes `Namespace`, `Name`, and `Value` into the character buffer.</span></span> <span data-ttu-id="24d9a-123">这三个字符串的偏移量在 `IDENTITY_ATTRIBUTE_BLOB` 结构中将变为可用。</span><span class="sxs-lookup"><span data-stu-id="24d9a-123">The three offsets to those strings will become available in the `IDENTITY_ATTRIBUTE_BLOB` structure.</span></span>  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -219,30 +219,30 @@ Exit:
 }  
 ```  
   
-### <a name="to-run-the-sample"></a><span data-ttu-id="8725a-124">运行示例</span><span class="sxs-lookup"><span data-stu-id="8725a-124">To run the sample</span></span>  
- <span data-ttu-id="8725a-125">C：\\> EnumAssemblyAttributes C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll</span><span class="sxs-lookup"><span data-stu-id="8725a-125">C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll</span></span>  
+### <a name="to-run-the-sample"></a><span data-ttu-id="24d9a-124">运行示例</span><span class="sxs-lookup"><span data-stu-id="24d9a-124">To run the sample</span></span>  
+ <span data-ttu-id="24d9a-125">C：\\> EnumAssemblyAttributes C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll</span><span class="sxs-lookup"><span data-stu-id="24d9a-125">C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll</span></span>  
   
-### <a name="sample-output"></a><span data-ttu-id="8725a-126">示例输出</span><span class="sxs-lookup"><span data-stu-id="8725a-126">Sample output</span></span>  
- <span data-ttu-id="8725a-127">Culture = 非特定</span><span class="sxs-lookup"><span data-stu-id="8725a-127">Culture = neutral</span></span>  
+### <a name="sample-output"></a><span data-ttu-id="24d9a-126">示例输出</span><span class="sxs-lookup"><span data-stu-id="24d9a-126">Sample output</span></span>  
+ <span data-ttu-id="24d9a-127">Culture = 非特定</span><span class="sxs-lookup"><span data-stu-id="24d9a-127">Culture = neutral</span></span>  
   
- <span data-ttu-id="8725a-128">名称 = 系统</span><span class="sxs-lookup"><span data-stu-id="8725a-128">name = System</span></span>  
+ <span data-ttu-id="24d9a-128">名称 = 系统</span><span class="sxs-lookup"><span data-stu-id="24d9a-128">name = System</span></span>  
   
- <span data-ttu-id="8725a-129">processorArchitecture = MSIL</span><span class="sxs-lookup"><span data-stu-id="8725a-129">processorArchitecture = MSIL</span></span>  
+ <span data-ttu-id="24d9a-129">processorArchitecture = MSIL</span><span class="sxs-lookup"><span data-stu-id="24d9a-129">processorArchitecture = MSIL</span></span>  
   
- <span data-ttu-id="8725a-130">PublicKeyToken = b77a5c561934e089</span><span class="sxs-lookup"><span data-stu-id="8725a-130">PublicKeyToken = b77a5c561934e089</span></span>  
+ <span data-ttu-id="24d9a-130">PublicKeyToken = b77a5c561934e089</span><span class="sxs-lookup"><span data-stu-id="24d9a-130">PublicKeyToken = b77a5c561934e089</span></span>  
   
- <span data-ttu-id="8725a-131">Version = 2.0.0。0</span><span class="sxs-lookup"><span data-stu-id="8725a-131">Version = 2.0.0.0</span></span>  
+ <span data-ttu-id="24d9a-131">Version = 2.0.0.0</span><span class="sxs-lookup"><span data-stu-id="24d9a-131">Version = 2.0.0.0</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8725a-132">要求</span><span class="sxs-lookup"><span data-stu-id="8725a-132">Requirements</span></span>  
- <span data-ttu-id="8725a-133">**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8725a-133">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="24d9a-132">要求</span><span class="sxs-lookup"><span data-stu-id="24d9a-132">Requirements</span></span>  
+ <span data-ttu-id="24d9a-133">**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="24d9a-133">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8725a-134">**标头：** 隔离。h</span><span class="sxs-lookup"><span data-stu-id="8725a-134">**Header:** Isolation.h</span></span>  
+ <span data-ttu-id="24d9a-134">**标头：** 隔离。h</span><span class="sxs-lookup"><span data-stu-id="24d9a-134">**Header:** Isolation.h</span></span>  
   
- <span data-ttu-id="8725a-135">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8725a-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="24d9a-135">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="24d9a-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8725a-136">请参阅</span><span class="sxs-lookup"><span data-stu-id="8725a-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="24d9a-136">请参阅</span><span class="sxs-lookup"><span data-stu-id="24d9a-136">See also</span></span>
 
-- [<span data-ttu-id="8725a-137">IReferenceIdentity 接口</span><span class="sxs-lookup"><span data-stu-id="8725a-137">IReferenceIdentity Interface</span></span>](ireferenceidentity-interface.md)
-- [<span data-ttu-id="8725a-138">IEnumIDENTITY_ATTRIBUTE 接口</span><span class="sxs-lookup"><span data-stu-id="8725a-138">IEnumIDENTITY_ATTRIBUTE Interface</span></span>](ienumidentity-attribute-interface.md)
-- [<span data-ttu-id="8725a-139">IDENTITY_ATTRIBUTE 结构</span><span class="sxs-lookup"><span data-stu-id="8725a-139">IDENTITY_ATTRIBUTE Structure</span></span>](identity-attribute-structure.md)
-- [<span data-ttu-id="8725a-140">合成结构</span><span class="sxs-lookup"><span data-stu-id="8725a-140">Fusion Structures</span></span>](fusion-structures.md)
+- [<span data-ttu-id="24d9a-137">IReferenceIdentity 接口</span><span class="sxs-lookup"><span data-stu-id="24d9a-137">IReferenceIdentity Interface</span></span>](ireferenceidentity-interface.md)
+- [<span data-ttu-id="24d9a-138">IEnumIDENTITY_ATTRIBUTE 接口</span><span class="sxs-lookup"><span data-stu-id="24d9a-138">IEnumIDENTITY_ATTRIBUTE Interface</span></span>](ienumidentity-attribute-interface.md)
+- [<span data-ttu-id="24d9a-139">IDENTITY_ATTRIBUTE 结构</span><span class="sxs-lookup"><span data-stu-id="24d9a-139">IDENTITY_ATTRIBUTE Structure</span></span>](identity-attribute-structure.md)
+- [<span data-ttu-id="24d9a-140">合成结构</span><span class="sxs-lookup"><span data-stu-id="24d9a-140">Fusion Structures</span></span>](fusion-structures.md)
