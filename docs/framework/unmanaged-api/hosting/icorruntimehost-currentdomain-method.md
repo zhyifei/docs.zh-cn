@@ -22,10 +22,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73139605"
 ---
-# <a name="icorruntimehostcurrentdomain-method"></a><span data-ttu-id="929e3-102">ICorRuntimeHost::CurrentDomain 方法</span><span class="sxs-lookup"><span data-stu-id="929e3-102">ICorRuntimeHost::CurrentDomain Method</span></span>
-<span data-ttu-id="929e3-103">获取 <xref:System.AppDomain?displayProperty=nameWithType> 类型的接口指针，该指针表示当前线程上加载的域。</span><span class="sxs-lookup"><span data-stu-id="929e3-103">Gets an interface pointer of type <xref:System.AppDomain?displayProperty=nameWithType> that represents the domain loaded on the current thread.</span></span>  
+# <a name="icorruntimehostcurrentdomain-method"></a><span data-ttu-id="75cc2-102">ICorRuntimeHost::CurrentDomain 方法</span><span class="sxs-lookup"><span data-stu-id="75cc2-102">ICorRuntimeHost::CurrentDomain Method</span></span>
+<span data-ttu-id="75cc2-103">获取 <xref:System.AppDomain?displayProperty=nameWithType> 类型的接口指针，该指针表示当前线程上加载的域。</span><span class="sxs-lookup"><span data-stu-id="75cc2-103">Gets an interface pointer of type <xref:System.AppDomain?displayProperty=nameWithType> that represents the domain loaded on the current thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="929e3-104">语法</span><span class="sxs-lookup"><span data-stu-id="929e3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="75cc2-104">语法</span><span class="sxs-lookup"><span data-stu-id="75cc2-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CurrentDomain (  
@@ -33,30 +33,30 @@ HRESULT CurrentDomain (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="929e3-105">参数</span><span class="sxs-lookup"><span data-stu-id="929e3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="75cc2-105">参数</span><span class="sxs-lookup"><span data-stu-id="75cc2-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="929e3-106">弄类型 <xref:System.AppDomain?displayProperty=nameWithType> 的指针，表示线程的当前应用程序域。</span><span class="sxs-lookup"><span data-stu-id="929e3-106">[out] A pointer of type <xref:System.AppDomain?displayProperty=nameWithType> that represents the thread's current application domain.</span></span> <span data-ttu-id="929e3-107">此指针 `IUnknown`类型化，因此调用方通常应调用 `QueryInterface` 以获取 <xref:System._AppDomain>类型的指针。</span><span class="sxs-lookup"><span data-stu-id="929e3-107">This pointer is typed `IUnknown`, so callers should generally call `QueryInterface` to obtain a pointer of type <xref:System._AppDomain>.</span></span>  
+ <span data-ttu-id="75cc2-106">弄类型 <xref:System.AppDomain?displayProperty=nameWithType> 的指针，表示线程的当前应用程序域。</span><span class="sxs-lookup"><span data-stu-id="75cc2-106">[out] A pointer of type <xref:System.AppDomain?displayProperty=nameWithType> that represents the thread's current application domain.</span></span> <span data-ttu-id="75cc2-107">此指针 `IUnknown`类型化，因此调用方通常应调用 `QueryInterface` 以获取 <xref:System._AppDomain>类型的指针。</span><span class="sxs-lookup"><span data-stu-id="75cc2-107">This pointer is typed `IUnknown`, so callers should generally call `QueryInterface` to obtain a pointer of type <xref:System._AppDomain>.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="929e3-108">返回值</span><span class="sxs-lookup"><span data-stu-id="929e3-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="75cc2-108">返回值</span><span class="sxs-lookup"><span data-stu-id="75cc2-108">Return Value</span></span>  
   
-|<span data-ttu-id="929e3-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="929e3-109">HRESULT</span></span>|<span data-ttu-id="929e3-110">描述</span><span class="sxs-lookup"><span data-stu-id="929e3-110">Description</span></span>|  
+|<span data-ttu-id="75cc2-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="75cc2-109">HRESULT</span></span>|<span data-ttu-id="75cc2-110">描述</span><span class="sxs-lookup"><span data-stu-id="75cc2-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="929e3-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="929e3-111">S_OK</span></span>|<span data-ttu-id="929e3-112">操作成功。</span><span class="sxs-lookup"><span data-stu-id="929e3-112">The operation was successful.</span></span>|  
-|<span data-ttu-id="929e3-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="929e3-113">S_FALSE</span></span>|<span data-ttu-id="929e3-114">操作未能完成。</span><span class="sxs-lookup"><span data-stu-id="929e3-114">The operation failed to complete.</span></span>|  
-|<span data-ttu-id="929e3-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="929e3-115">E_FAIL</span></span>|<span data-ttu-id="929e3-116">发生了未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="929e3-116">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="929e3-117">如果某个方法返回 E_FAIL，则公共语言运行时（CLR）在该过程中将不再可用。</span><span class="sxs-lookup"><span data-stu-id="929e3-117">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="929e3-118">对任何托管 Api 的后续调用都将返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="929e3-118">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="929e3-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="929e3-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="929e3-120">CLR 未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="929e3-120">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="75cc2-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="75cc2-111">S_OK</span></span>|<span data-ttu-id="75cc2-112">操作成功。</span><span class="sxs-lookup"><span data-stu-id="75cc2-112">The operation was successful.</span></span>|  
+|<span data-ttu-id="75cc2-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="75cc2-113">S_FALSE</span></span>|<span data-ttu-id="75cc2-114">操作未能完成。</span><span class="sxs-lookup"><span data-stu-id="75cc2-114">The operation failed to complete.</span></span>|  
+|<span data-ttu-id="75cc2-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="75cc2-115">E_FAIL</span></span>|<span data-ttu-id="75cc2-116">发生了未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="75cc2-116">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="75cc2-117">如果某个方法返回 E_FAIL，则公共语言运行时（CLR）在该过程中将不再可用。</span><span class="sxs-lookup"><span data-stu-id="75cc2-117">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="75cc2-118">对任何托管 Api 的后续调用都将返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="75cc2-118">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="75cc2-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="75cc2-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="75cc2-120">CLR 未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="75cc2-120">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="929e3-121">要求</span><span class="sxs-lookup"><span data-stu-id="929e3-121">Requirements</span></span>  
- <span data-ttu-id="929e3-122">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="929e3-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="75cc2-121">要求</span><span class="sxs-lookup"><span data-stu-id="75cc2-121">Requirements</span></span>  
+ <span data-ttu-id="75cc2-122">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="75cc2-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="929e3-123">**标头：** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="929e3-123">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="75cc2-123">**标头：** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="75cc2-123">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="929e3-124">**库：** 作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="929e3-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="75cc2-124">**库：** 作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="75cc2-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="929e3-125">**.NET Framework 版本：** 1.0、1。1</span><span class="sxs-lookup"><span data-stu-id="929e3-125">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="75cc2-125">**.NET Framework 版本：** 1.0、1.1</span><span class="sxs-lookup"><span data-stu-id="75cc2-125">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="929e3-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="929e3-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="75cc2-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="75cc2-126">See also</span></span>
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
-- [<span data-ttu-id="929e3-127">ICorRuntimeHost 接口</span><span class="sxs-lookup"><span data-stu-id="929e3-127">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="75cc2-127">ICorRuntimeHost 接口</span><span class="sxs-lookup"><span data-stu-id="75cc2-127">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
