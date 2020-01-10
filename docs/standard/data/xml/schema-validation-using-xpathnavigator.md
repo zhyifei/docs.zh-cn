@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81fa0e41-d9c9-46f0-b22b-50da839c77f5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0199efb172466305af22c4ade7c47115a5cefd8f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: bfcbf7306e896af54808c49e25f95d0631f5bcc0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939609"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710201"
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>使用 XPathNavigator 验证架构
 使用 <xref:System.Xml.XmlDocument> 类，可以通过两种方式验证 <xref:System.Xml.XmlDocument> 对象中包含的 XML 内容。 第一种方式是使用验证 <xref:System.Xml.XmlReader> 对象验证 XML 内容，第二种方式是使用 <xref:System.Xml.XmlDocument.Validate%2A> 类的 <xref:System.Xml.XmlDocument> 方法。 还可以使用 <xref:System.Xml.XPath.XPathDocument> 类对 XML 内容执行只读验证。  
@@ -359,7 +357,7 @@ class ValidatingReaderExample
   
  若要详细了解只读和可编辑 <xref:System.Xml.XPath.XPathNavigator> 对象，请参阅[使用 XPathDocument 和 XmlDocument 读取 XML 数据](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)主题。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

@@ -10,13 +10,12 @@ helpviewer_keywords:
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
-ms.author: mairaw
-ms.openlocfilehash: 4a061b3128f8d0952f800be7173203b62f89c672
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 34ba6cb658a52b647c6fbf9a4161d046f31cd73e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639110"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705816"
 ---
 # <a name="binary-serialization"></a>二进制序列化
 
@@ -323,7 +322,7 @@ ms.locfileid: "65639110"
 - <xref:System.UnauthorizedAccessException?displayProperty=nameWithType> （适用于.NET Core 2.0.4 和更高版本）
 - <xref:System.Uri?displayProperty=nameWithType>
 - <xref:System.UriFormatException?displayProperty=nameWithType> （适用于.NET Core 2.0.4 和更高版本）
-- <xref:System.ValueTuple?displayProperty=nameWithType> （不能序列化在.NET Framework 4.7 和更早版本）
+- <xref:System.ValueTuple?displayProperty=nameWithType> （.NET Framework 4.7 及更早版本中不可序列化）
 - <xref:System.ValueType?displayProperty=nameWithType>
 - <xref:System.Version?displayProperty=nameWithType>
 - <xref:System.WeakReference%601?displayProperty=nameWithType>
@@ -344,7 +343,7 @@ ms.locfileid: "65639110"
 - [基本序列化](../../../docs/standard/serialization/basic-serialization.md)\
 描述如何使用二进制格式化程序和 SOAP 格式化程序来序列化对象。
 
-- [选择性的序列化](../../../docs/standard/serialization/selective-serialization.md)\
+- [选择性序列化](../../../docs/standard/serialization/selective-serialization.md)\
 描述如何防止序列化某些类成员。
 
 - [自定义序列化](../../../docs/standard/serialization/custom-serialization.md)\
@@ -359,7 +358,7 @@ ms.locfileid: "65639110"
 - [序列化准则](../../../docs/standard/serialization/serialization-guidelines.md)\
 提供一些通用准则，用于确定何时序列化对象。
 
-## <a name="reference"></a>参考
+## <a name="reference"></a>引用
 
 - <xref:System.Runtime.Serialization>\
 包含可用于序列化和反序列化对象的类。
@@ -372,8 +371,8 @@ ms.locfileid: "65639110"
 - [安全和序列化](../../../docs/framework/misc/security-and-serialization.md)\
 描述写入执行序列化的代码时需要遵循的安全编码原则。
 
-- [.NET 远程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
+- [.Net 远程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
 描述 .NET Framework 中为远程通信提供的多种通信方法。
 
-- [使用 ASP.NET 和 XML Web 服务客户端创建的 XML Web Services](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
+- [使用 ASP.NET 和 Xml Web Services 客户端创建的 Xml Web Services](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
 提供一些主题，描述并解释如何对使用 ASP.NET 创建的 XML Web services 进行编程。

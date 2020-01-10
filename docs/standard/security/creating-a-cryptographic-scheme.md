@@ -6,14 +6,12 @@ helpviewer_keywords:
 - encryption [.NET Framework], creating cryptographic schemes
 - cryptography [.NET Framework], creating cryptographic schemes
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3ef3741ef5cec720c2fb285c9aa60d610acc0be9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00fff5f346633a9682d75cf6a3be7e8e7d5db7e8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909384"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706287"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>创建加密方案
 可结合使用 .NET Framework 的加密组件来创建不同的方案，以加密和解密数据。  
@@ -32,6 +30,6 @@ ms.locfileid: "61909384"
   
  创建加密方案是一项重要任务。
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

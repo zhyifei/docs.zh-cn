@@ -8,14 +8,12 @@ helpviewer_keywords:
 - writing reliable code
 - code, reliability
 ms.assetid: 294aa306-0afe-4cbe-b397-86ba9f1860f8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: acb84c6617cdffabfe276895f81e7df2b04bb8bb
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2d6601c4cbad32f768ff16301307083f35d986a0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046240"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715967"
 ---
 # <a name="reliability"></a>可靠性
 在服务器环境（如 SQL Server）中执行的代码防止发生异步异常，这一点非常重要。 文本所讨论的可靠性并不是针对 SQL Server 而言，而是针对为在 .NET Framework 版本 2.0 环境中执行的任何主机编写可靠代码而言。 SQL Server 是第一个广泛使用版本 2.0 的新可靠性功能的服务，所以将其作为示例。  
@@ -32,7 +30,7 @@ ms.locfileid: "71046240"
  [Constrained Execution Regions](constrained-execution-regions.md)（受约束的执行区域）  
  介绍受约束的执行区域 (CER) 的功能和行为。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Security.Permissions.HostProtectionAttribute>  
   
  <xref:System.Security.Permissions.HostProtectionResource>

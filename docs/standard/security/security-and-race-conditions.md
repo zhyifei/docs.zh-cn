@@ -11,20 +11,18 @@ helpviewer_keywords:
 - secure coding, race conditions
 - code security, race conditions
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 57ceaedc7c38ae70a0db5a7fd584a765a7474aff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8980122acdd069bc840aa09129483a1cb9a379fd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933804"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705868"
 ---
 # <a name="security-and-race-conditions"></a>安全和争用条件
-需要关注的另一个方面是争用条件被利用的安全漏洞的可能性。 有几种方法可能是在其中。 遵循的子主题概述了一些开发人员必须避免的主要缺陷。  
+还有一个需要注意的问题是争用情况可能会导致安全漏洞。 可以通过多种方式来执行此操作。 以下子主题概述了开发人员必须避免的一些主要缺陷。  
   
 ## <a name="race-conditions-in-the-dispose-method"></a>Dispose 方法中的争用条件  
- 如果类的**释放**方法 (有关详细信息，请参阅[垃圾回收](../../../docs/standard/garbage-collection/index.md)) 不是同步，就可以清理代码内的**释放**可以运行多个一次，如下面的示例中所示。  
+ 如果类的**Dispose**方法（有关详细信息，请参阅[垃圾回收](../../../docs/standard/garbage-collection/index.md)）未同步，则可能会多次运行**Dispose**中的清理代码，如下面的示例中所示。  
   
 ```vb  
 Sub Dispose()  
@@ -46,13 +44,13 @@ void Dispose()
 }  
 ```  
   
- 因为这**Dispose**未同步实现，则很可能`Cleanup`调用的第一个线程，然后之前第二个线程`_myObj`设置为**null**。 这是否是安全问题上会发生什么情况取决于时`Cleanup`代码运行。 未同步的主要问题**Dispose**实现涉及的资源句柄，例如文件使用。 处置不当可能会导致错误的句柄使用，这通常会导致安全漏洞。  
+ 由于此**Dispose**实现不同步，因此，在将 `_myObj` 设置为**null**之前，`Cleanup` 首先由一个线程调用，然后再调用另一个线程。 这是否是一个安全问题取决于运行 `Cleanup` 代码时会发生的情况。 不同步**Dispose**实现的主要问题涉及使用资源句柄（如文件）。 不当处置可能会导致使用错误的句柄，这通常会导致安全漏洞。  
   
-## <a name="race-conditions-in-constructors"></a>在构造函数中的争用条件  
- 在某些应用程序，可能会使其他线程来访问类成员之前已完全运行其类构造函数。 应检查所有的类构造函数，以确保如果这应是，或根据需要同步线程没有任何安全问题。  
+## <a name="race-conditions-in-constructors"></a>构造函数中的争用条件  
+ 在某些应用程序中，其他线程可能在其类构造函数完全运行之前访问类成员。 应查看所有类构造函数，以确保在发生这种情况时不会出现安全问题，如有必要，还应同步线程。  
   
-## <a name="race-conditions-with-cached-objects"></a>使用缓存的对象的争用条件  
- 缓存安全信息或使用代码访问安全性的代码[Assert](../../../docs/framework/misc/using-the-assert-method.md)操作还可能易受攻击如果类的其他部分未正确同步，如下面的示例中所示。  
+## <a name="race-conditions-with-cached-objects"></a>带有缓存对象的争用条件  
+ 如果类的其他部分未进行适当同步，则缓存安全信息或使用代码访问安全[断言](../../../docs/framework/misc/using-the-assert-method.md)操作的代码也可能易受到争用条件的影响，如以下示例中所示。  
   
 ```vb  
 Sub SomeSecureFunction()  
@@ -97,13 +95,13 @@ void DoOtherWork()
 }  
 ```  
   
- 如果有其他路径`DoOtherWork`，可以使用同一个对象从其他线程调用时，不受信任调用方可以绕过请求。  
+ 如果有可从具有相同对象的另一个线程调用的其他路径 `DoOtherWork`，则不受信任的调用方可以按需求。  
   
- 如果您的代码缓存安全信息，请确保此漏洞查看它。  
+ 如果你的代码缓存安全信息，请确保查看此漏洞。  
   
 ## <a name="race-conditions-in-finalizers"></a>终结器中的争用条件  
- 也可以引用静态或非托管资源，然后可以在其终结器释放的对象中出现争用条件。 如果多个对象共享的资源的类的终结器中操作，这些对象必须同步对该资源的所有访问。  
+ 争用条件也可能出现在引用静态或非托管资源的对象中，该对象随后会在其终结器中释放。 如果多个对象共享在类的终结器中操作的资源，则这些对象必须同步对该资源的所有访问。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)

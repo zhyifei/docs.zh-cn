@@ -10,14 +10,12 @@ helpviewer_keywords:
 - security [.NET Framework], impersonating Windows accounts
 - impersonating Windows accounts
 ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 97b15ea2202ca410dd517db63a7145d27f62bb48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14b01ec3ac800abd795e87b641a442df100f102b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018588"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706014"
 ---
 # <a name="impersonating-and-reverting"></a>模拟与恢复
 有时可能需要获取 Windows 帐户标记来模拟 Windows 帐户。 例如，基于 ASP.NET 的应用程序可能需要在不同时间代表多个用户进行工作。 应用程序可以从 Internet 信息服务 (IIS) 接受一个表示管理员的标记，模拟该用户，执行一项操作，然后还原到以前的身份。 然后，可以从 IIS 接受一个表示拥有较少权限的用户的标记，执行某项操作，并再次还原。  
@@ -56,11 +54,11 @@ ms.locfileid: "62018588"
     myImpersonation.Undo()  
     ```  
   
- 如果受信任的代码具有已附加<xref:System.Security.Principal.WindowsPrincipal>对象传递给线程，您可以调用实例方法**Impersonate**，不采用帐户标记。 请注意，仅当线程上的 **WindowsPrincipal** 对象所表示的用户不是当前正在执行进程的用户时，此操作才有用。 例如，如果在使用 ASP.NET 时打开 Windows 身份验证并关闭模拟，则可能遇到此情形。 这时，进程在 Internet Information Services (IIS) 中配置的帐户下运行，而当前主体表示正在访问页面的 Windows 用户。  
+ 如果受信任的代码已将 <xref:System.Security.Principal.WindowsPrincipal> 对象附加到线程，则可调用不采用帐户标记的实例方法**模拟**。 请注意，仅当线程上的 **WindowsPrincipal** 对象所表示的用户不是当前正在执行进程的用户时，此操作才有用。 例如，如果在使用 ASP.NET 时打开 Windows 身份验证并关闭模拟，则可能遇到此情形。 这时，进程在 Internet Information Services (IIS) 中配置的帐户下运行，而当前主体表示正在访问页面的 Windows 用户。  
   
- 请注意，两者**Impersonate**也不**撤消**更改**主体**对象 (<xref:System.Security.Principal.IPrincipal>) 与当前调用上下文关联。 相反，模拟和还原会更改与当前操作系统进程关联的标记。  
+ 请注意，"**模拟**" 和 "**撤消**" 都不会更改与当前调用上下文关联的**主体**对象（<xref:System.Security.Principal.IPrincipal>）。 相反，模拟和还原会更改与当前操作系统进程关联的标记。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Security.Principal.WindowsIdentity>
 - <xref:System.Security.Principal.WindowsImpersonationContext>

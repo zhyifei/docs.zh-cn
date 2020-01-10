@@ -1,19 +1,17 @@
 ---
 title: 如何使用C# -.NET 对 JSON 进行序列化和反序列化
-author: tdykstra
-ms.author: tdykstra
 ms.date: 09/16/2019
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 32c78cc48dcd3d9f2c6e1d338bdbdd359f69879f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: a9c690e736a08c729a4099d5e7a519ed17ec282c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344507"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705790"
 ---
 # <a name="how-to-serialize-and-deserialize-json-in-net"></a>如何在 .NET 中对 JSON 进行序列化和反序列化
 

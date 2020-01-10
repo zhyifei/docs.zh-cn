@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, application domain monitoring events
 - application domain monitoring events [.NET Framework]
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e1c2a38be6f2c15a118b35925570119b474f096
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 0e453b2bafffd9e07a1bdddd97282c5b97f5483d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040569"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716217"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>应用程序域资源监视 (ARM) ETW 事件
 
@@ -24,14 +22,14 @@ ms.locfileid: "73040569"
 
 下表显示了关键字和级别。 有关详细信息，请参阅[CLR ETW 关键字和级别](clr-etw-keywords-and-levels.md)。
 
-|引发事件的关键字|层次|
+|引发事件的关键字|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|信息性 (4)|
 |`ThreadingKeyword` (0x10000)|信息性 (4)|
 
 下表显示了事件信息：
 
-|Event — 事件|事件 ID|在发生以下情况时引发|
+|Event|事件 ID|在发生以下情况时引发|
 |-----------|--------------|-----------------|
 |`ThreadCreated`|85|已为应用程序域创建了一个线程。|
 
@@ -50,13 +48,13 @@ ms.locfileid: "73040569"
 
 下表显示了关键字和级别：
 
-|引发事件的关键字|层次|
+|引发事件的关键字|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|信息性 (4)|
 
 下表显示了事件信息：
 
-|Event — 事件|事件 ID|在发生以下情况时引发|
+|Event|事件 ID|在发生以下情况时引发|
 |-----------|--------------|-----------------|
 |`AppDomainMemAllocated`|83|应用程序域中分配每 4 MB 的内存（大约）。|
 
@@ -72,13 +70,13 @@ ms.locfileid: "73040569"
 
 下表显示了关键字和级别：
 
-|引发事件的关键字|层次|
+|引发事件的关键字|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|信息性 (4)|
 
 下表显示了事件信息：
 
-|Event — 事件|事件 ID|在发生以下情况时引发|
+|Event|事件 ID|在发生以下情况时引发|
 |-----------|--------------|-----------------|
 |`AppDomainMemSurvived`|84|每个垃圾回收已结束。|
 
@@ -95,14 +93,14 @@ ms.locfileid: "73040569"
 
 下表显示了关键字和级别：
 
-|引发事件的关键字|层次|
+|引发事件的关键字|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|信息性 (4)|
 |`ThreadingKeyword` (0x10000)|信息性 (4)|
 
 下表显示了事件信息：
 
-|Event — 事件|事件 ID|在发生以下情况时引发|
+|Event|事件 ID|在发生以下情况时引发|
 |-----------|--------------|-----------------|
 |`ThreadAppDomainEnter`|87|线程进入应用程序域。|
 
@@ -118,14 +116,14 @@ ms.locfileid: "73040569"
 
 下表显示了关键字和级别：
 
-|引发事件的关键字|层次|
+|引发事件的关键字|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|信息性 (4)|
 |`ThreadingKeyword` (0x10000)|信息性 (4)|
 
 下表显示了事件信息：
 
-|Event — 事件|事件 ID|在发生以下情况时引发|
+|Event|事件 ID|在发生以下情况时引发|
 |-----------|--------------|-----------------|
 |`ThreadTerminated`|86|线程终止。|
 
@@ -137,6 +135,6 @@ ms.locfileid: "73040569"
 |AppDomainID|win:UInt64|应用程序域标识符。|
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [CLR ETW 事件](clr-etw-events.md)

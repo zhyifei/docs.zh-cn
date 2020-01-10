@@ -3,19 +3,17 @@ title: 推断简单类型的规则
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 15e7692abfe06ec9e9f91a3b229bf99971eaecc1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 17429e77f7764873e607a8feaa62da1cc6e014a4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550495"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710227"
 ---
 # <a name="rules-for-inferring-simple-types"></a>推断简单类型的规则
 描述 <xref:System.Xml.Schema.XmlSchemaInference> 类如何推断属性和元素的数据类型。  
   
- <xref:System.Xml.Schema.XmlSchemaInference> 类将属性和元素的数据类型推断为简单类型。 本节描述可能的推断类型、如何将多个不同的值对帐为单个类型以及如何处理架构定义 `xsi` 属性。  
+ <xref:System.Xml.Schema.XmlSchemaInference> 类将属性和元素的数据类型推断为简单类型。 本节描述可能的推断类型、如何将多个不同的值协调为单个类型以及如何处理架构定义 `xsi` 属性。  
   
 ## <a name="inferred-types"></a>推断类型  
  <xref:System.Xml.Schema.XmlSchemaInference> 类将元素和属性值推断为简单类型，并在生成的架构中包含类型属性。 所有推断类型都是简单类型。 生成的架构中不包括任何基类型或方面。  
@@ -24,7 +22,7 @@ ms.locfileid: "54550495"
   
  下表列出生成的架构中可能包含的推断类型。  
   
-|简单类型|说明|  
+|简单类型|描述|  
 |-----------------|-----------------|  
 |boolean|true、false、0、1.|  
 |byte|范围在 –128 到 127 之间的整数。|  
@@ -37,14 +35,14 @@ ms.locfileid: "54550495"
 |unsignedLong|范围在 0 到 18446744073709551615 之间的整数。|  
 |整数|可能使用“-”前缀的有穷位数字。|  
 |decimal|精度为 0 到 28 位的数值。|  
-|float|可以依次后接“E”或“e”和表示指数的整数值的十进制数。 十进制值的范围可以在 -16777216 到 16777216 之间。 指数值的范围可以在 -149 到 104 之间。<br /><br /> float 允许表示无穷值和非数值的特殊值。 特殊的浮点型值有：0、-0、INF、-INF、NaN。|  
-|double|与 float 相同，只是十进制值的范围可以在 -9007199254740992 到 9007199254740992 之间，指数值的范围可以在 –1075 到 970 之间。<br /><br /> double 允许表示无穷值和非数值的特殊值。 特殊的浮点型值有：0、-0、INF、-INF、NaN。|  
-|持续时间|W3C duration 格式。|  
+|浮动|可以依次后接“E”或“e”和表示指数的整数值的十进制数。 十进制值的范围可以在 -16777216 到 16777216 之间。 指数值的范围可以在 -149 到 104 之间。<br /><br /> float 允许表示无穷值和非数值的特殊值。 特殊的浮点型值有：0、-0、INF、-INF、NaN。|  
+|双线|与 float 相同，只是十进制值的范围可以在 -9007199254740992 到 9007199254740992 之间，指数值的范围可以在 –1075 到 970 之间。<br /><br /> double 允许表示无穷值和非数值的特殊值。 特殊的浮点型值有：0、-0、INF、-INF、NaN。|  
+|duration|W3C duration 格式。|  
 |dateTime|W3C dateTime 格式。|  
-|时间|W3C time 格式。|  
-|date|年份值限制在 0001 到 9999 之间。|  
+|time|W3C time 格式。|  
+|日期|年份值限制在 0001 到 9999 之间。|  
 |gYearMonth|W3C 公历月份和年份的格式。|  
-|字符串|一个或多个 Unicode 字符。|  
+|string|一个或多个 Unicode 字符。|  
   
 ## <a name="type-promotion"></a>类型提升  
  <xref:System.Xml.Schema.XmlSchemaInference> 类一次检查一个属性和元素的值。 在遇到值时，将推断限制性最强的无符号类型。 如果已推断了某个属性或元素的类型，在遇到与当前推断类型不匹配的新值时，推断类型将提升为新类型，以便适用于当前推断类型和新值。 <xref:System.Xml.Schema.XmlSchemaInference> 类在提升推断类型时会考虑以前的值。  
@@ -69,14 +67,14 @@ ms.locfileid: "54550495"
 
 在架构引用过程中忽略下列架构定义属性。  
   
-|特性|说明|  
+|属性|描述|  
 |---------------|-----------------|  
 |`xsi:type`|如果遇到指定了 `xsi:type` 类型的元素，将忽略 `xsi:type`。|  
 |`xsi:nil`|如果遇到具有 `xsi:nil` 属性的元素，推断架构中的元素声明的值将为 `nillable="true"`。 `xsi:nil` 属性设置为 `true` 的元素不能包含子元素。|  
 |`xsi:schemaLocation`|如果遇到 `xsi:schemaLocation`，将忽略。|  
 |`xsi:noNamespaceSchemaLocation`|如果遇到 `xsi:noNamespaceSchemaLocation`，将忽略。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 架构对象模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
 - [从 XML 文档推断架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)

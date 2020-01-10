@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fd29d07b6253cb8c177cc1e8854435ce0079b520
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4937afe8bb23be58b72d082cd5ba200b4948ab4d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974919"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715987"
 ---
 # <a name="method-etw-events"></a>方法 ETW 事件
 
@@ -26,7 +24,7 @@ ms.locfileid: "73974919"
 
 下表显示了关键字和级别。 有关详细信息，请参阅[CLR ETW 关键字和级别](clr-etw-keywords-and-levels.md)。
 
-|引发事件的关键字|层次|
+|引发事件的关键字|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) 运行时提供程序|信息性 (4)|
 |`NGenKeyword` (0x20) 运行时提供程序|信息性 (4)|
@@ -35,7 +33,7 @@ ms.locfileid: "73974919"
 
 下表显示了事件信息：
 
-|Event — 事件|事件 ID|描述|
+|Event|事件 ID|描述|
 |-----------|--------------|-----------------|
 |`MethodLoad_V1`|136|在实时加载（JIT 加载）方法或者加载 NGEN 映像时引发。 动态和泛型方法不使用此版本进行方法加载。 JIT 帮助器从不使用此版本。|
 |`MethodUnLoad_V1`|137|在卸载模块或销毁应用程序域时引发。 动态方法从不使用此版本进行方法卸载。|
@@ -60,7 +58,7 @@ ms.locfileid: "73974919"
 
 下表显示了关键字和级别：
 
-|引发事件的关键字|层次|
+|引发事件的关键字|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementRundownKeyword` (0x800) 断开提供程序|信息性 (4)|
 |`JitRundownKeyword` (0x10) 断开提供程序|信息性 (4)|
@@ -68,7 +66,7 @@ ms.locfileid: "73974919"
 
 下表显示了事件信息：
 
-|Event — 事件|事件 ID|描述|
+|Event|事件 ID|描述|
 |-----------|--------------|----------------|
 |`DCStartInit_V1`|147|启动断开期间枚举开始之前发送。|
 |`DCStartComplete_V1`|145|启动断开期间枚举结束时发送。|
@@ -85,7 +83,7 @@ ms.locfileid: "73974919"
 
 下表显示了关键字和级别：
 
-|引发事件的关键字|层次|
+|引发事件的关键字|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) 运行时提供程序|详细级别 (5)|
 |`NGenKeyword` (0x20) 运行时提供程序|详细级别 (5)|
@@ -94,7 +92,7 @@ ms.locfileid: "73974919"
 
 下表显示了事件信息：
 
-|Event — 事件|事件 ID|描述|
+|Event|事件 ID|描述|
 |-----------|--------------|-----------------|
 |`MethodLoadVerbose_V1`|143|当方法为 JIT 加载的或加载 NGEN 映像时引发。 动态和泛型方法始终使用此版本进行方法加载。 JIT 帮助器始终使用此版本。|
 |`MethodUnLoadVerbose_V1`|144|在销毁动态方法、卸载模块或销毁应用程序域时引发。 动态方法始终使用此版本进行方法卸载。|
@@ -120,7 +118,7 @@ ms.locfileid: "73974919"
 
 下表显示了关键字和级别：
 
-|引发事件的关键字|层次|
+|引发事件的关键字|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) 运行时提供程序|详细级别 (5)|
 |`NGenKeyword` (0x20) 运行时提供程序|详细级别 (5)|
@@ -129,7 +127,7 @@ ms.locfileid: "73974919"
 
 下表显示了事件信息：
 
-|Event — 事件|事件 ID|描述|
+|Event|事件 ID|描述|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted`|145|在方法由 JIT 编译时引发。|
 
@@ -146,6 +144,6 @@ ms.locfileid: "73974919"
 |MethodSignature|win:UnicodeString|方法的签名（以逗号分隔的类型名称列表）。|
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [CLR ETW 事件](clr-etw-events.md)

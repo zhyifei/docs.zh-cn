@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e9445f16b6470b1d2066fcae749b1623ec5e11ac
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 79a3390933256ed862d35c90db0aab2177cdfc41
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138944"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711007"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>为 DOM 中的元素创建新属性
 
@@ -126,6 +124,6 @@ doc.DocumentElement.SetAttributeNode(attr);
 
 属性节点的值成为它的子节点。 只有两种类型的有效子节点： **XmlText**节点和**XmlEntityReference**节点。 这些之所以是子节点是因为，FirstChild 和 LastChild 等方法按子节点处理它们。 当试图移除属性或属性子节点时，属性这种具有子节点的特性很重要。 有关详细信息，请参阅[删除 DOM 中元素节点的属性](removing-attributes-from-an-element-node-in-the-dom.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 文档对象模型 (DOM)](xml-document-object-model-dom.md)

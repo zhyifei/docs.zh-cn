@@ -12,17 +12,15 @@ helpviewer_keywords:
 - host protection attributes
 - HostProtectionAttribute class, reliability
 ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aafd494a2330609f68295588cf649bc4666f4cfe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 88fa360664627e9f535a6daaaf6f29df01b64a62
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614882"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715925"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>SQL Server 编程和宿主保护特性
-在 SQL Server 主机中加载和执行托管代码需要满足主机对代码访问安全性和主机资源保护的要求。  代码访问安全性要求由三个 SQL Server 权限集之一指定：SAFE、 EXTERNAL-ACCESS 或 UNSAFE。 在 SAFE 或 EXTERNAL-ACCESS 权限集内执行的代码必须避免某些类型或应用了 <xref:System.Security.Permissions.HostProtectionAttribute> 属性的成员。 <xref:System.Security.Permissions.HostProtectionAttribute> 不是可靠性保证的安全权限，因为它标识主机可能禁止的特定代码结构（类型或方法）。  使用 <xref:System.Security.Permissions.HostProtectionAttribute> 可执行有助于保护主机稳定性的编程模型。  
+在 SQL Server 主机中加载和执行托管代码需要满足主机对代码访问安全性和主机资源保护的要求。  代码访问安全性要求由三个 SQL Server 权限集（SAFE、EXTERNAL-ACCESS 或 UNSAFE）其中之一指定。 在 SAFE 或 EXTERNAL-ACCESS 权限集内执行的代码必须避免某些类型或应用了 <xref:System.Security.Permissions.HostProtectionAttribute> 属性的成员。 <xref:System.Security.Permissions.HostProtectionAttribute> 不是可靠性保证的安全权限，因为它标识主机可能禁止的特定代码结构（类型或方法）。  使用 <xref:System.Security.Permissions.HostProtectionAttribute> 可执行有助于保护主机稳定性的编程模型。  
   
 ## <a name="host-protection-attributes"></a>主机保护属性  
  主机保护属性识别不符合主机编程模型的类型或成员，并表示以下级别的可靠性威胁：  
@@ -53,11 +51,11 @@ ms.locfileid: "64614882"
 |`System.Windows.Forms`|<xref:System.Windows.Forms.AutoCompleteStringCollection.SyncRoot%2A?displayProperty=nameWithType> 属性|  
   
 ## <a name="sql-server-permission-sets"></a>SQL Server 权限集  
- SQL Server 能让用户指定部署到数据库的代码可靠性要求。 当程序集上传到数据库时，程序集的作者可以指定三个权限集之一该程序集：SAFE、 EXTERNAL-ACCESS 或 UNSAFE。  
+ SQL Server 能让用户指定部署到数据库的代码可靠性要求。 将程序集上传到数据库中时，程序集创建者可为该程序集指定三个权限集（SAFE、EXTERNAL-ACCESS 或 UNSAFE）其中之一。  
   
 |权限集|SAFE|EXTERNAL-ACCESS|UNSAFE|  
 |--------------------|----------|----------------------|------------|  
-|代码访问安全性|仅执行|执行+访问外部资源|不受限制|  
+|代码访问安全性|仅执行|执行+访问外部资源|无限制|  
 |编程模型限制|是|是|无限制|  
 |可验证性要求|是|是|否|  
 |调用本机代码的能力|否|否|是|  
@@ -75,7 +73,7 @@ ms.locfileid: "64614882"
   
  考虑到这些因素，SQL Server 不允许使用静态变量和静态数据成员。 对于 SAFE 和 EXTERNAL-ACCESS 程序集，SQL Server 将在 CREATE ASSEMBLY 时间检查程序集的元数据，如果发现使用静态数据成员和变量，则无法创建此类程序集。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Security.Permissions.HostProtectionAttribute>
 - <xref:System.Security.Permissions.HostProtectionResource>

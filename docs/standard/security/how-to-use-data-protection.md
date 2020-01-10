@@ -16,14 +16,12 @@ helpviewer_keywords:
 - decryption
 - data [.NET Framework], encryption
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1dc8c75d3c8c91d974388779528deff16453d852
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0efd677f11189b28b8efc184c04b30a047ab942b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602541"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706027"
 ---
 # <a name="how-to-use-data-protection"></a>如何：使用数据保护
 .NET Framework 提供对数据保护 API (DPAPI) 的访问，这允许你使用来自当前用户帐户或计算机的信息对数据进行加密。  当使用 DPAPI 时，你会使显式生成和存储加密密钥的困难问题得到缓解。  
@@ -66,7 +64,7 @@ ms.locfileid: "64602541"
   
 - 包括 <xref:System>、<xref:System.IO>、<xref:System.Security.Cryptography> 和 <xref:System.Text> 命名空间。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Security.Cryptography.ProtectedMemory>
 - <xref:System.Security.Cryptography.ProtectedData>

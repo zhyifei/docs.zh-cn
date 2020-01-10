@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, CLR providers
 - CLR ETW providers
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 93a0271c521de6e390e323d92e93a5e7bf94444f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dbdd4ad862ae300c330dc56a82fcd65b866855b6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046738"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716182"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW 提供程序
 公共语言运行时 (CLR) 具有两个提供程序：运行时提供程序和断开提供程序。  
@@ -37,7 +35,7 @@ ms.locfileid: "71046738"
   
  通常情况下，ETW 日志记录在进程启动前启用，在进程退出后关闭。 但是，如果在执行进程的过程中打开 ETW 日志记录功能，则需要有关进程的其他信息。 例如，对于符号解析，必须记录在启用日志记录功能前已经加载的方法的方法事件。  
   
- `DCStart` 和 `DCEnd` 事件捕获进程在数据收集开始和停止时的状态。 （状态是指高级别的信息，包括已实时 (JIT) 编译的方法和已加载的程序集。）这两个事件可以提供有关进程中已执行的操作的信息，例如，哪些方法已经过 JIT 编译等。  
+ `DCStart` 和 `DCEnd` 事件捕获进程在数据收集开始和停止时的状态。 （状态指的是高级别的信息，包括已实时（JIT）编译的方法和已加载的程序集。这两个事件可以提供有关进程中已发生的事件的信息;例如，JIT 编译了哪些方法，等等。  
   
  在使用断开提供程序时只引发名称中包含 `DC`、`DCStart`、`DCEnd` 或 `DCInit` 的事件。 此外，仅在使用断开提供程序时才引发这些事件。  
   
@@ -91,6 +89,6 @@ ms.locfileid: "71046738"
   
  使用工具可以执行步骤 2 和步骤 3（开始断开会话然后终止分析），而不是在用户请求停止分析后立即关闭分析。 还可以执行步骤 4。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [公共语言运行时中的 ETW 事件](etw-events-in-the-common-language-runtime.md)

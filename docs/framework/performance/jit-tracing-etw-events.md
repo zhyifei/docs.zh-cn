@@ -5,14 +5,12 @@ helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4daa0fc0d689815e3a2c65df09c6c046d06a25c4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 37bfd09516589f3422ee005233e576b110ef1288
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975502"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716009"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT 跟踪 ETW 事件
 这些事件可收集有关实时 (JIT) 内联和 JIT 尾调用成功或失败的信息。
@@ -22,13 +20,13 @@ ms.locfileid: "73975502"
 ### <a name="methodjitinliningfailed-event"></a>MethodJitInliningFailed 事件
  下表显示了关键字和级别。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)。）  
   
-|引发事件的关键字|层次|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|详细级别 (5)|  
   
  下表显示了事件信息。  
   
-|Event — 事件|事件 ID|在发生以下情况时引发|  
+|Event|事件 ID|在发生以下情况时引发|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningFailed`|186|JIT 内联失败。|  
   
@@ -52,13 +50,13 @@ ms.locfileid: "73975502"
 ### <a name="methodjitinliningsucceeded-event"></a>MethodJitInliningSucceeded 事件  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|层次|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|详细级别 (5)|  
   
  下表显示了事件信息。  
   
-|Event — 事件|事件 ID|在发生以下情况时引发|  
+|Event|事件 ID|在发生以下情况时引发|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningSucceeded`|185|方法内联成功。|  
   
@@ -82,13 +80,13 @@ ms.locfileid: "73975502"
 ### <a name="methodjittailcallfailed-event"></a>MethodJITTailCallFailed 事件  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|层次|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|详细级别 (5)|  
   
  下表显示了事件信息。  
   
-|Event — 事件|事件 ID|在发生以下情况时引发|  
+|Event|事件 ID|在发生以下情况时引发|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallFailed`|189|方法尾调用失败。|  
   
@@ -112,13 +110,13 @@ ms.locfileid: "73975502"
 ### <a name="methodjittailcallsucceeded-event"></a>MethodJITTailCallSucceeded 事件  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|层次|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|详细级别 (5)|  
   
  下表显示了事件信息。  
   
-|Event — 事件|事件 ID|在发生以下情况时引发|  
+|Event|事件 ID|在发生以下情况时引发|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallSucceeded`|188|方法尾调用成功。|  
   
@@ -139,6 +137,6 @@ ms.locfileid: "73975502"
 |TailCallType|win:UnicodeString|尾调用的类型。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [CLR ETW 事件](clr-etw-events.md)

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - stack event [.NET Framework]
 - ETW, stack event (CLR)
 ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5dc23f5105b589d5b74c9ea6b7f40b84c2b04e6a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f3014a04ba7cacbe37b6706e2919ffd7de19aa65
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046156"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715911"
 ---
 # <a name="stack-etw-event"></a>堆栈 ETW 事件
 堆栈事件应与其他事件结合使用，在引发事件后生成堆栈跟踪。 启用运行时提供程序时，记录该事件。 这是一个发生频率非常高的事件，因为每当引发另一个运行时事件时，都将引发此事件。 因此，我们建议谨慎使用此事件。  
@@ -39,6 +37,6 @@ ms.locfileid: "71046156"
 |FrameCount|win:UInt32|堆栈跟踪中的帧数。|  
 |堆栈|win:Pointer|指令指针的列|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [CLR ETW 事件](clr-etw-events.md)

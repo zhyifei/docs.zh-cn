@@ -3,14 +3,12 @@ title: 在 DOM 中创建新节点
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 59ac88b2e7c6b3ecd4d06c0183a2f8a7f4a9e2d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f48990286405baee347becef87d0511cd42e9e77
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590254"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710994"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>在 DOM 中创建新节点
 <xref:System.Xml.XmlDocument> 为所有节点类型提供了 create 方法。 为该方法提供名称（需要时）以及那些具有内容的节点（如文本节点）的内容或其他参数，这样便可创建节点。 下面的方法需要填充名称和几个其他参数以创建相应的节点。  
@@ -46,11 +44,11 @@ ms.locfileid: "64590254"
 |方法|节点位置|  
 |------------|--------------------|  
 |<xref:System.Xml.XmlNode.InsertBefore%2A>|插入到引用节点之前。 例如，在位置 5 插入新节点：<br /><br /> `Dim refChild As XmlNode = node.ChildNodes(4) 'The reference is zero-based.node.InsertBefore(newChild, refChild);`<br /><br /> `XmlNode refChild = node.ChildNodes[4]; //The reference is zero-based. node.InsertBefore(newChild, refChild);`<br /><br /> 有关更多信息，请参见 <xref:System.Xml.XmlNode.InsertBefore%2A> 方法。|  
-|<xref:System.Xml.XmlNode.InsertAfter%2A>|插入到引用节点之后。 例如:<br /><br /> `node.InsertAfter(newChild, refChild)`<br /><br /> `node.InsertAfter(newChild, refChild);`<br /><br /> 有关更多信息，请参见 <xref:System.Xml.XmlNode.InsertAfter%2A> 方法。|  
+|<xref:System.Xml.XmlNode.InsertAfter%2A>|插入到引用节点之后。 例如：<br /><br /> `node.InsertAfter(newChild, refChild)`<br /><br /> `node.InsertAfter(newChild, refChild);`<br /><br /> 有关更多信息，请参见 <xref:System.Xml.XmlNode.InsertAfter%2A> 方法。|  
 |<xref:System.Xml.XmlNode.AppendChild%2A>|将节点添加到给定节点的子节点列表的末尾。 如果所添加的节点是 <xref:System.Xml.XmlDocumentFragment>，则会将文档片段的全部内容移至该节点的子列表中。 有关更多信息，请参见 <xref:System.Xml.XmlNode.AppendChild%2A> 方法。|  
 |<xref:System.Xml.XmlNode.PrependChild%2A>|将节点添加到给定节点的子节点列表的开头。 如果所添加的节点是 <xref:System.Xml.XmlDocumentFragment>，则会将文档片段的全部内容移至该节点的子列表中。 有关更多信息，请参见 <xref:System.Xml.XmlNode.PrependChild%2A> 方法。|  
 |<xref:System.Xml.XmlAttributeCollection.Append%2A>|将 <xref:System.Xml.XmlAttribute> 节点追加到与元素关联的属性集合的末尾。 有关更多信息，请参见 <xref:System.Xml.XmlAttributeCollection.Append%2A> 方法。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

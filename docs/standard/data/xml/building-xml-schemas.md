@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e8c8e1b0d9a79ff22f3194e86cd580f3a7e199b2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c921331b00fe137d4ad52d62951e8c161768dfae
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962030"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711137"
 ---
 # <a name="building-xml-schemas"></a>生成 XML 架构
 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空间中的类映射到万维网联合会 (W3C) XML 架构建议中定义的结构，可以用于在内存中生成 XML 架构。  
@@ -88,7 +86,7 @@ ms.locfileid: "69962030"
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 架构对象模型概述](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [读取和编写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)

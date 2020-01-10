@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e76e0f35dd95c34d3a6fc81c2f6f3504591387cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: cc412042e69a43bbecec9dbe68618e2d307ca793
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306297"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709694"
 ---
 # <a name="xslt-parameters"></a>XSLT 参数
 使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法将 XSLT 参数添加到 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>。 此时，限定名和命名空间 URI 与参数对象关联。  
@@ -68,6 +66,6 @@ ms.locfileid: "59306297"
 </order>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)

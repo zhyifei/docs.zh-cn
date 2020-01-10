@@ -3,14 +3,12 @@ title: 使用 XML 架构
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: bbbcc70c-bf9a-4f6a-af72-1bab5384a187
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 83fddd00f44b184fa066f6c47b90b01fac7ef7bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0fd7313e800024ebb7e3563cb4323c5780cbf1c3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570648"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710006"
 ---
 # <a name="working-with-xml-schemas"></a>使用 XML 架构
 要定义 XML 文档的结构及其元素关系、数据类型和内容约束，请使用文档类型定义 (DTD) 或 XML 架构定义语言 (XSD) 架构。 尽管 XML 文档如果符合万维网联合会 (W3C) 可扩展标记语言 (XML) 1.0 建议定义的所有语法要求，就被认为格式正确，但是，除非其格式正确并且符合其 DTD 或架构定义的约束，否则，不会认为该文档有效。 因此，尽管所有有效 XML 文档的格式都是正确的，但是并非所有格式正确的 XML 文档都有效。  
@@ -30,7 +28,7 @@ ms.locfileid: "33570648"
  [推断 XML 架构](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
  讨论如何使用 <xref:System.Xml.Schema.XmlSchemaInference> 类从 XML 文档的结构推断 XSD 架构。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Xml.Schema.XmlSchemaSet> &#124; <xref:System.Xml.Schema.XmlSchemaInference> &#124; <xref:System.Xml.XmlReader>  
   
 ## <a name="related-sections"></a>相关章节  

@@ -2,12 +2,12 @@
 title: 4\.5 中F#的新增功能- F#指南
 description: 获取4.5 中F#提供的新功能的概述。
 ms.date: 11/27/2019
-ms.openlocfilehash: 780b33a564432aae5ec99c70ff8620988b553fd1
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: b699165125d345ad783b24da8a0a994cba72d4ba
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74644156"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715691"
 ---
 # <a name="whats-new-in-f-45"></a>4\.5 中F#的新增功能
 
@@ -77,7 +77,7 @@ type S(count1: int, count2: int) =
     member x.Count2 = count2
 ```
 
-这不允许您在结构中声明可变成员，并在从程序集F#使用C#时发出允许和将其视为只读的元数据。 若要了解详细信息，请参阅[ReadOnly 结构](../language-reference/structures.md#readonly-structs)
+这不允许您在结构中声明可变成员，并在从程序集F#使用C#时发出允许和将其视为只读的元数据。 若要了解详细信息，请参阅[ReadOnly 结构](../language-reference/structures.md#readonly-structs)。
 
 ## <a name="void-pointers"></a>Void 指针
 

@@ -3,17 +3,15 @@ title: 使用 XPathNavigator 的属性和命名空间节点定位
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4188896fb36d8535f86b245c3b1942f5a058da9b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 6809a2a47a9ca25a16a9be75a0a8a8b03f98a21d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936838"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711150"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>使用 XPathNavigator 的属性和命名空间节点定位
-<xref:System.Xml.XPath.XPathNavigator> 类提供两组导航方法，第一组如[使用 XPathNavigator 的节点集定位](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)主题中所述，用于浏览 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中的节点集  。 第二组如本主题中所述，用于浏览 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中的属性和命名空间节点  。  
+<xref:System.Xml.XPath.XPathNavigator> 类提供两组导航方法，第一组如[使用 XPathNavigator 的节点集定位](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)主题中所述，用于浏览 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中的节点集。 第二组如本主题中所述，用于浏览 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中的属性和命名空间节点。  
   
 ## <a name="attribute-node-navigation"></a>浏览属性节点  
  属性是元素的属性，不是元素的子级。 这一区别很重要，因为用来浏览同级节点、父节点和子节点的 <xref:System.Xml.XPath.XPathNavigator> 类的方法不同。  
@@ -96,7 +94,7 @@ ms.locfileid: "69936838"
 > [!NOTE]
 > <xref:System.Xml.XPath.XPathNavigator> 类以相反的文档顺序返回命名空间节点。 因此，<xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 实质上移到当前在范围内的最后一个命名空间节点。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

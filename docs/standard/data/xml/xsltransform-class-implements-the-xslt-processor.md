@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8cc3eb3e3f147d8ed15587946af743c96739a9b1
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 73a432db9a3fcb6587184e27e6dfe9ba49010e92
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956856"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709603"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>XslTransform 类实现 XSLT 处理器
 
@@ -82,7 +80,7 @@ public void Load(XPathNavigator, XmlResolver, Evidence);
 
 若要了解安全级别和证据及其对 `document()` 函数的影响，请参阅[解析外部 XSLT 样式表和文档](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md)。
 
-可以给样式表提供许多输入参数。 样式表也可以调用扩展对象上的函数。 参数和扩展对象都是使用 <xref:System.Xml.Xsl.XsltArgumentList> 类提供给样式表的。 有关 <xref:System.Xml.Xsl.XsltArgumentList> 的详细信息，请参阅<xref:System.Xml.Xsl.XsltArgumentList>。
+可以给样式表提供许多输入参数。 样式表也可以调用扩展对象上的函数。 参数和扩展对象都是使用 <xref:System.Xml.Xsl.XsltArgumentList> 类提供给样式表的。 有关 <xref:System.Xml.Xsl.XsltArgumentList>的详细信息，请参阅 <xref:System.Xml.Xsl.XsltArgumentList>。
 
 ## <a name="recommended-secure-use-of-xsltransform-class"></a>XslTransform 类建议的安全用法
 
@@ -180,7 +178,7 @@ Console.WriteLine("Passing " + tmpDoc.OuterXml + " to print_root.xsl");
 xslt.Transform(tmpDoc, null, Console.Out, null);
 ```
 
-该示例使用 print_root 和文件作为输入，并将以下内容输出到控制台：
+该示例使用类库 .xml 和 print_root .xsl 文件作为输入，并将以下内容输出到控制台：
 
 ```console
 Passing <book genre="novel" ISBN="1-861001-57-5"><title>Pride And Prejudice</title></book> to print_root.xsl
@@ -237,7 +235,7 @@ print_root.xsl
 
 <xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> 属性在 .NET Framework 1.1 版中已过时。 应改用接受 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 对象的新 <xref:System.Xml.XmlResolver> 重载。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.Xsl.XslTransform>
 - [XslTransform 类的 XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - secure coding, state data
 - state data security
 ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 85a12fb52efe32083d21b9aad50f2d9c1d6f0785
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c30bd2fe9e1ed371be2db60739d3b329fea788c7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602506"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705894"
 ---
 # <a name="securing-state-data"></a>保护状态数据
 处理敏感数据或做出任何种类的安全决策的应用程序需要将相关数据保持在自己的控制之下，而不允许其他可能的恶意代码直接访问这些数据。 保护内存中的数据的最好方法就是，将数据声明为私有或内部（范围限定为相同的程序集内）变量。 然而，即使这些数据受到访问权制约，你也应当注意：  
@@ -28,6 +26,6 @@ ms.locfileid: "64602506"
   
  千万不要让你自己的任何方法或属性在无意中公开这些值。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)

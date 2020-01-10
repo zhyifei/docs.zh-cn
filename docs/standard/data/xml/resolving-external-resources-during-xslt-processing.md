@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0bcd45a97ab0f0b0ac462d50c18fb68f9d7bd386
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 58407d5f0c6e602af15f5b19b9a19cc6379b9af7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590030"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710279"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a>在 XSLT 处理期间解析外部资源
 XSLT 转换过程中会有几个场合需要解析外部资源。  
@@ -23,8 +21,8 @@ XSLT 转换过程中会有几个场合需要解析外部资源。
   
 |XSLT 任务|XmlResolver 的用途|  
 |---------------|--------------------------------------|  
-|编译样式表。|解析样式表的 URI。<br /><br /> －和－<br /><br /> 解析任何 `xsl:import` 或 `xsl:include` 元素中的 URI 引用。|  
-|执行样式表。|解析上下文文档的 URI。<br /><br /> －和－<br /><br /> 解析任何 XSLT `document()` 函数中的 URI 引用。|  
+|编译样式表。|解析样式表的 URI。<br /><br /> 和<br /><br /> 解析任何 `xsl:import` 或 `xsl:include` 元素中的 URI 引用。|  
+|执行样式表。|解析上下文文档的 URI。<br /><br /> 和<br /><br /> 解析任何 XSLT `document()` 函数中的 URI 引用。|  
   
  <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 和 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法包括使用 <xref:System.Xml.XmlResolver> 对象作为一个参数的重载。 如果未指定 <xref:System.Xml.XmlResolver>，将使用没有用户凭据的默认 <xref:System.Xml.XmlUrlResolver>。  
   
@@ -44,7 +42,7 @@ XSLT 转换过程中会有几个场合需要解析外部资源。
  [!code-csharp[XslCompiledTransform.Load#11](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Load/CS/Xslt_Load_v2.cs#11)]
  [!code-vb[XslCompiledTransform.Load#11](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Load/VB/Xslt_Load_v2.vb#11)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
 - <xref:System.Xml.Xsl.XsltSettings>

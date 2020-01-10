@@ -5,14 +5,12 @@ helpviewer_keywords:
 - .NET Framework ETW events
 - ETW events in the .NET Framework
 ms.assetid: d186276f-6afb-4dfd-bf3c-4251edc2c299
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f810b4424574f016f13dc5fa46f785d866dda53e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 93add45f0684b69a66f643499da61f9054ec7b37
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046574"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716076"
 ---
 # <a name="etw-events-in-the-net-framework"></a>ETW Events in the .NET Framework
 Windows 事件跟踪 (ETW) 是 Windows 操作系统提供的高性能、低开销的可缩放跟踪系统。 它可补充 .NET Framework 所提供的分析和调试支持，可用于排除各种问题。  
@@ -26,7 +24,7 @@ Windows 事件跟踪 (ETW) 是 Windows 操作系统提供的高性能、低开�
  [公共语言运行时中的 ETW 事件](etw-events-in-the-common-language-runtime.md)  
  介绍 CLR ETW 事件如何补充公共语言运行时所提供的分析和调试支持。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [CLR ETW 事件](clr-etw-events.md)
 - [任务并行库 (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)

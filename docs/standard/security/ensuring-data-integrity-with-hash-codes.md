@@ -14,14 +14,12 @@ helpviewer_keywords:
 - encryption [.NET Framework], hash
 - hash
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 995f54e81a48fb3f809d99981ad135974544eb28
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 98bdce59ccbbb3b1d00ea5521169214c2bd7a10b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353165"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706196"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>使用哈希代码确保数据完整性
 哈希值是用于唯一标识数据的固定长度的数字值。 哈希值以小得多的数字值表示大量数据，因此与数字签名配合使用。 对哈希值进行签名比对较大的值进行签名更为高效。 对于验证通过不安全通道发送的数据的完整性，哈希值也很有用。 当被发送出去确定数据是否已更改时，将接收数据的哈希值与数据的哈希值相比较。  
@@ -31,7 +29,7 @@ ms.locfileid: "71353165"
 ## <a name="generating-a-hash"></a>生成哈希  
  托管哈希类可以对字节数组或托管流对象进行哈希处理。 以下示例使用 SHA1 哈希算法为字符串创建哈希值。 该示例使用 <xref:System.Text.UnicodeEncoding> 类将字符串转换为通过使用 <xref:System.Security.Cryptography.SHA1Managed> 类进行哈希处理的字节数组。 然后向控制台显示哈希值。  
 
- 由于 SHA1 出现冲突, Microsoft 建议 SHA256 或更好。
+ 由于 SHA1 出现冲突，Microsoft 建议 SHA256 或更好。
   
  [!code-csharp[GeneratingAHash#1](../../../samples/snippets/csharp/VS_Snippets_CLR/generatingahash/cs/program.cs#1)]
  [!code-vb[GeneratingAHash#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/generatingahash/vb/program.vb#1)]  
@@ -60,6 +58,6 @@ The hash codes match.
 The hash codes do not match.  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

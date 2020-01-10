@@ -3,14 +3,12 @@ title: 使用 XPathNavigator 选择、计算和匹配 XML 数据
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 46e059f8-4dc8-4185-9236-784be95228ed
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 03c7d3f777aa903bf75a62830b3f337ae37ce437
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 1a76edf22483c0df8871badcb5e162dd3e66001f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669221"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710136"
 ---
 # <a name="selecting-evaluating-and-matching-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 选择、计算和匹配 XML 数据
 <xref:System.Xml.XPath.XPathNavigator> 类提供的方法可以使用 XPath 查询在 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中选择节点，计算和检查 XPath 表达式的结果，并确定 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中的节点是否与给定的 XPath 表达式匹配。 这些和其他一些与在 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中选择、计算和匹配节点有关的概念在下面的主题中介绍。  
@@ -34,7 +32,7 @@ ms.locfileid: "54669221"
  [已编译的 XPath 表达式](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)  
  介绍表示已编译的 XPath 查询的 <xref:System.Xml.XPath.XPathExpression> 类。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

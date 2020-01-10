@@ -10,14 +10,12 @@ helpviewer_keywords:
 - cryptography [NET Framework], cryptographic application example
 - cryptography [NET Framework], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ee6dafa8578c59d23908bf0e184091bb4ceaeb45
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 6e2d9b8bebdfd2ea5d5507cc73d444fa8bf785fb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895284"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705829"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>演练：创建加密应用程序
 本演练演示如何对内容进行加密和解密。 下面的代码示例是特为 Windows 窗体应用程序设计的。 此应用程序不演示实际方案，例如使用智能卡。 而演示加密和解密的基础知识。  
@@ -45,7 +43,7 @@ ms.locfileid: "70895284"
 |导入公钥|将密钥从 XML 文件加载到密钥容器中。|  
 |测试应用程序|列出用于测试此应用程序的步骤。|  
   
-## <a name="prerequisites"></a>系统必备  
+## <a name="prerequisites"></a>先决条件  
  你需要以下组件来完成本演练：  
   
 - 对 <xref:System.IO> 和 <xref:System.Security.Cryptography> 命名空间的引用。  
@@ -53,7 +51,7 @@ ms.locfileid: "70895284"
 ## <a name="creating-a-windows-forms-application"></a>创建 Windows 窗体应用程序  
  本演练中的大多数代码示例均设计为按钮控件的事件处理程序。 下表列出了示例应用程序所需的控件及其匹配代码示例所需的名称。  
   
-|控件|name|文本属性（根据需要）|  
+|控件|Name|文本属性（根据需要）|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|加密文件|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|解密文件|  
@@ -82,7 +80,7 @@ ms.locfileid: "70895284"
  [!code-vb[CryptoWalkThru#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#2)]  
   
 ## <a name="encrypting-a-file"></a>加密文件  
- 此任务涉及两种方法： `Encrypt File`按钮（`buttonEncryptFile_Click`）和`EncryptFile`方法的事件处理程序方法。 第一种方法显示一个用于选择文件的对话框，并将文件名传递给第二种方法，后者将执行加密。  
+ 此任务涉及两种方法： "`Encrypt File`" 按钮的事件处理程序方法（"`buttonEncryptFile_Click`"）和 `EncryptFile` 方法。 第一种方法显示一个用于选择文件的对话框，并将文件名传递给第二种方法，后者将执行加密。  
   
  加密的内容、密钥和 IV 全都保存到一个 <xref:System.IO.FileStream> 中，这被称为加密包。  
   
@@ -210,6 +208,6 @@ ms.locfileid: "70895284"
   
 2. 单击 `Decrypt File` 按钮，然后选择刚刚加密的文件。 这将会成功，因为你具有用于解密的完整密钥对。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

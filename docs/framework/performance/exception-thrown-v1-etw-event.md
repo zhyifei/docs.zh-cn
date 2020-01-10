@@ -5,33 +5,31 @@ helpviewer_keywords:
 - ExceptionThrown_V1 event [.NET Framework]
 - ETW, ExceptionThrown_V1 event (CLR)
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3f0e968053c87319bf90bf3de0f21d750ec899ab
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 80faf6e607755ee79c7ec17f2d7d3d5bdce822b7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447628"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716055"
 ---
 # <a name="exception-thrown_v1-etw-event"></a>异常 Thrown_V1 ETW 事件
 该事件捕获有关引发的异常的信息。  
   
  下表显示了引发事件的关键字以及事件的级别。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)。）  
   
-|引发事件的关键字|层次|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`ExceptionKeyword` (0x8000)|警告 (2)|  
   
  下表显示了事件信息。  
   
-|事件|事件 ID|在发生以下情况时引发|  
+|Event|事件 ID|在发生以下情况时引发|  
 |-----------|--------------|-----------------|  
 |`ExceptionThrown_V1`|80|引发托管异常。|  
   
  下表显示了事件数据。  
   
-|字段名称|数据类型|说明|  
+|字段名|数据类型|描述|  
 |----------------|---------------|-----------------|  
 |异常类型|win:UnicodeString|异常的类型，例如，`System.NullReferenceException`。|  
 |异常消息|win:UnicodeString|实际的异常消息。|  

@@ -3,14 +3,12 @@ title: 推断架构节点类型和结构的规则
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6c68cd98b496143e6b964383f8fa0c3af5d2c87d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 6d66384dea7018bcc3b2dd8fde96f4fa2653f8e8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939646"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710240"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>推断架构节点类型和结构的规则
 本主题介绍架构推断过程如何将 XML 文档中的节点类型转换为 XML 架构定义语言 (XSD) 结构。  
@@ -44,7 +42,7 @@ ms.locfileid: "69939646"
   
  若要详细了解架构推理进程，请参阅[从 XML 文档推理架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
-|XML|架构|  
+|XML|Schema|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<root>text</root>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="root" type="xs:string" />`<br /><br /> `</xs:schema>`|  
   
@@ -53,7 +51,7 @@ ms.locfileid: "69939646"
   
  若要详细了解架构推理进程，请参阅[从 XML 文档推理架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
-|XML|架构|  
+|XML|Schema|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<empty/>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="empty" />`<br /><br /> `</xs:schema>`|  
   
@@ -62,7 +60,7 @@ ms.locfileid: "69939646"
   
  若要详细了解架构推理进程，请参阅[从 XML 文档推理架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
-|XML|架构|  
+|XML|Schema|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<empty attribute1="text"/>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="empty">`<br /><br /> `<xs:complexType>`<br /><br /> `<xs:attribute name="attribute1" type="xs:string" use="required" />`<br /><br /> `</xs:complexType>`<br /><br /> `</xs:element>`<br /><br /> `</xs:schema>`|  
   
@@ -71,7 +69,7 @@ ms.locfileid: "69939646"
   
  若要详细了解架构推理进程，请参阅[从 XML 文档推理架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
-|XML|架构|  
+|XML|Schema|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<root attribute1="text">value</root>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="root">`<br /><br /> `<xs:complexType>`<br /><br /> `<xs:simpleContent>`<br /><br /> `<xs:extension base="xs:string">`<br /><br /> `<xs:attribute name="attribute1" type="xs:string" use="required" />`<br /><br /> `</xs:extension>`<br /><br /> `</xs:simpleContent>`<br /><br /> `</xs:complexType>`<br /><br /> `</xs:element>`<br /><br /> `</xs:schema>`|  
   
@@ -83,7 +81,7 @@ ms.locfileid: "69939646"
   
  若要详细了解架构推理进程，请参阅[从 XML 文档推理架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
-|XML|架构|  
+|XML|Schema|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<root>`<br /><br /> `<subElement/>`<br /><br /> `</root>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="root">`<br /><br /> `<xs:complexType>`<br /><br /> `<xs:sequence>`<br /><br /> `<xs:element name="subElement" />`<br /><br /> `</xs:sequence>`<br /><br /> `</xs:complexType>`<br /><br /> `</xs:element>`<br /><br /> `</xs:schema>`|  
   
@@ -95,7 +93,7 @@ ms.locfileid: "69939646"
   
  若要详细了解架构推理进程，请参阅[从 XML 文档推理架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
-|XML|架构|  
+|XML|Schema|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<root attribute1="text">`<br /><br /> `<subElement1/>`<br /><br /> `<subElement2/>`<br /><br /> `</root>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="root">`<br /><br /> `<xs:complexType>`<br /><br /> `<xs:sequence>`<br /><br /> `<xs:element name="subElement1" />`<br /><br /> `<xs:element name="subElement2" />`<br /><br /> `</xs:sequence>`<br /><br /> `<xs:attribute name="attribute1" type="xs:string" use="required" />`<br /><br /> `</xs:complexType>`<br /><br /> `</xs:element>`<br /><br /> `</xs:schema>`|  
   
@@ -107,7 +105,7 @@ ms.locfileid: "69939646"
   
  若要详细了解架构推理进程，请参阅[从 XML 文档推理架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
-|XML|架构|  
+|XML|Schema|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<root>`<br /><br /> `<subElement1/>`<br /><br /> `<subElement2/>`<br /><br /> `<subElement1/>`<br /><br /> `</root>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="root">`<br /><br /> `<xs:complexType>`<br /><br /> `<xs:sequence>`<br /><br /> `<xs:choice maxOccurs="unbounded">`<br /><br /> `<xs:element name="subElement1" />`<br /><br /> `<xs:element name="subElement2" />`<br /><br /> `</xs:choice>`<br /><br /> `</xs:sequence>`<br /><br /> `</xs:complexType>`<br /><br /> `</xs:element>`<br /><br /> `</xs:schema>`|  
   
@@ -119,7 +117,7 @@ ms.locfileid: "69939646"
   
  若要详细了解架构推理进程，请参阅[从 XML 文档推理架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
-|XML|架构|  
+|XML|Schema|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<root attribute1="text">`<br /><br /> `<subElement1/>`<br /><br /> `<subElement2/>`<br /><br /> `<subElement1/>`<br /><br /> `</root>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="root">`<br /><br /> `<xs:complexType>`<br /><br /> `<xs:sequence>`<br /><br /> `<xs:choice maxOccurs="unbounded">`<br /><br /> `<xs:element name="subElement1" />`<br /><br /> `<xs:element name="subElement2" />`<br /><br /> `</xs:choice>`<br /><br /> `</xs:sequence>`<br /><br /> `<xs:attribute name="attribute1" type="xs:string" use="required" />`<br /><br /> `</xs:complexType>`<br /><br /> `</xs:element>`<br /><br /> `</xs:schema>`|  
   
@@ -138,7 +136,7 @@ ms.locfileid: "69939646"
 |节点类型|转换|  
 |---------------|-----------------|  
 |处理指令|已忽略。|  
-|注释|已忽略。|  
+|备注|已忽略。|  
 |实体引用|<xref:System.Xml.Schema.XmlSchemaInference> 类不处理实体引用。 如果 XML 文档包含实体引用，需要使用可以展开实体的读取器。 例如，可以将 <xref:System.Xml.XmlTextReader> 属性设置为 <xref:System.Xml.XmlTextReader.EntityHandling%2A> 的 <xref:System.Xml.EntityHandling.ExpandEntities> 作为参数传递。 如果遇到实体引用，并且读取器没有展开实体，将引发异常。|  
 |CDATA|XML 文档中的任何 `<![CDATA[ … ]]` 节均将推断为 `xs:string`。|  
 |文档类型|已忽略。|  
@@ -146,7 +144,7 @@ ms.locfileid: "69939646"
   
  若要详细了解架构推理进程，请参阅[从 XML 文档推理架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
 - [XML 架构对象模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)

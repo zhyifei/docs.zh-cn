@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fb6e3677d79f3131432c3daebeee4d166b5450b2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: b4675765849299050eb6cddeaaa497bc6cdc620a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916660"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711098"
 ---
 # <a name="compiled-xpath-expressions"></a>已编译的 XPath 表达式
 <xref:System.Xml.XPath.XPathExpression> 对象表示从 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 类的静态 <xref:System.Xml.XPath.XPathExpression> 方法或 <xref:System.Xml.XPath.XPathNavigator.Compile%2A> 类的 <xref:System.Xml.XPath.XPathNavigator> 方法返回的已编译 XPath 查询。  
@@ -37,7 +35,7 @@ ms.locfileid: "69916660"
   
  下表介绍每种 W3C XPath 返回类型、其等效的 Microsoft .NET Framework 类型以及 <xref:System.Xml.XPath.XPathExpression> 对象基于其返回类型也许可以用于的方法。  
   
-|W3C XPath 返回类型|等效的 .NET Framework 类型|说明|方法|  
+|W3C XPath 返回类型|等效的 .NET Framework 类型|描述|方法|  
 |---------------------------|------------------------------------|-----------------|-------------|  
 |`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|未排序的节点集合，按照文档顺序创建，没有重复。|<xref:System.Xml.XPath.XPathNavigator.Select%2A> 或 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
 |`Boolean`|<xref:System.Boolean>|`true` 或 `false` 值。|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 或<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
@@ -119,7 +117,7 @@ Console.WriteLine(nodes.Current.Value);
   
  若要详细了解 <xref:System.Xml.XPath.XPathNavigator> 类的节点集导航方法，请参阅[使用 XPathNavigator 的节点集定位](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

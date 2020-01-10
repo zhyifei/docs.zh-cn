@@ -3,19 +3,17 @@ title: XML 文档对象模型 (DOM) 层次结构
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 9d187d4f-c76e-4223-a670-cc290783ce47
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 79078b16f0d56c40a3dcfeabaaed9b5cbb7753a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 1193d7631816fe9fbf7aa1984d79ef8e61d5da80
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589828"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709967"
 ---
 # <a name="xml-document-object-model-dom-hierarchy"></a>XML 文档对象模型 (DOM) 层次结构
 下图显示了 XML 文档对象模型 (DOM) 的类层次结构，其中万维网联合会 (W3C) 名称用括号括起来，另外还有相关的类名。  
   
- ![XML 文档对象模型 &#40;DOM&#41; 层次结构](../../../../docs/standard/data/xml/media/dom-class-hierarchy.gif "Dom_class_hierarchy")  
+ ![XML 文档对象模型&#40;DOM&#41;层次结构](../../../../docs/standard/data/xml/media/dom-class-hierarchy.gif "Dom_class_hierarchy")  
 XML 文档对象模型 (DOM) 层次结构  
   
  下列类不继承自 XmlNode：  
@@ -38,6 +36,6 @@ XML 文档对象模型 (DOM) 层次结构
   
  XmlLinkedNode 类继承自 XmlNode。 它用于重写 XmlNode 中的两个方法：PreviousSibling 和 NextSibling 方法。 然后，这些重写方法由包含上一个和下一个同级的类 XmlCharacterData、XmlDeclaration、XmlDocumentType、XmlElement、XmlEntityReference 和 XmlProcessingInstruction 继承和使用。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

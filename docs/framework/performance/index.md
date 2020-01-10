@@ -5,14 +5,12 @@ helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b3f3d035ebf6472788e2c7d6e11cb1a39708367b
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ccff2318355ae2d5b606ee283d45d05afd35310d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800326"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716048"
 ---
 # <a name="net-framework-performance"></a>.NET Framework 性能
 如果想要创建一个具有卓越性能的应用，你应该像设计应用的任何其他功能一样设计和规划性能。 你可以使用由 Microsoft 所提供的用于测量你的应用性能的工具，并对内存使用、代码吞吐量和响应能力进行改进（如果需要）。 本主题列出了 Microsoft 提供的性能分析工具，并提供了介绍应用开发特定领域性能的其他主题的链接。  

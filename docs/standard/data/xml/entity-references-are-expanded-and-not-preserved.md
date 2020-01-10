@@ -3,14 +3,12 @@ title: 扩展但不保留实体引用
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7a55aa71ff3976241b96dd12baef06a9a13ef9dd
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: HT
+ms.openlocfilehash: ae3db77d7659b7e1d36a9bccf7143f52c536dbbf
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45998417"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710929"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>扩展但不保留实体引用
 如果实体引用进行扩展且替换为它表示的文本，将不创建 XmlEntityReference 节点。 相反，将分析实体声明，并复制通过声明内容创建的节点以取代 XmlEntityReference。 因此，`&publisher;` 示例不保存 `&publisher;`，而是创建 XmlText 节点。  
@@ -30,7 +28,7 @@ ms.locfileid: "45998417"
   
  XmlText：Microsoft Press  
   
- 如果在 DOM 中扩展实体引用（这是默认方法），则结构包含此类型树：  
+ 如果在 DOM 中展开实体引用（这是默认方法），则结构包含此类型树：  
   
  XmlElement：发布者  
   
@@ -40,6 +38,6 @@ ms.locfileid: "45998417"
   
  如果使用无法解析实体的读取器，Load 方法在遇到实体引用时抛出异常。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

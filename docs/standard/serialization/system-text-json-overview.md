@@ -1,20 +1,17 @@
 ---
 title: 使用C# -.NET 对 JSON 进行序列化和反序列化
-author: tdykstra
-ms.author: tdykstra
 ms.date: 09/16/2019
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: b43c3f6fd8ca56aaa99fffd40317920ee7600a2c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 6561d5e1580e1170369622ebc7bb330ff4e0964f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802708"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705777"
 ---
 # <a name="json-serialization-in-net---overview"></a>.NET 中的 JSON 序列化-概述
 
@@ -30,7 +27,7 @@ ms.locfileid: "74802708"
 * 对于其他目标框架，请安装[System.object](https://www.nuget.org/packages/System.Text.Json) NuGet 包。 包支持：
   * .NET Standard 2.0 及更高版本
   * .NET Framework 4.6.1 和更高版本
-  * .NET Core 2.0、2.1 和2.2
+  * .NET Core 2.0、2.1 和2。2
 
 ## <a name="additional-resources"></a>其他资源
 

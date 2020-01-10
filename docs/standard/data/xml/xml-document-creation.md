@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 877e9c62-b082-4bfb-bc5b-f47297eb30ef
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b76140fb7d79b1e191c0451cd7556963130d224a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: HT
+ms.openlocfilehash: a12555a02b45a964ff7efcbe00e0d2cb8637474a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45646176"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709980"
 ---
 # <a name="xml-document-creation"></a>创建 XML 文档
 有两种创建 XML 文档的方法。 一种方法是，创建不含参数的 XmlDocument。 另一种方法是，创建 XmlDocument，并向它传递 XmlNameTable 参数。 下面的示例展示了如何不使用任何参数新建空 XmlDocument。  
@@ -30,6 +28,6 @@ XmlDocument doc = new XmlDocument();
   
  有一个类名为 XmlNameTable。 此类是原子化字符串对象的表。 该表使 XML 分析器可以高效地对 XML 文档中所有重复的元素和属性的名称使用相同的字符串对象。 XmlNameTable 在文档创建（如上所示）时自动创建，并在文档加载时加载属性名和元素名称。 如果已有包含名称表的文档，且这些名称在另一个文档中很有用，可以使用需要使用 XmlNameTable 参数的 Load 方法新建文档。 使用此方法创建文档时，它使用现有 XmlNameTable，其中包含已从其他文档加载到其中的所有属性和元素。 它可用于有效地比较元素和属性的名称。 若要详细了解 XmlNameTable，请参阅[使用 XmlNameTable 比较对象](../../../../docs/standard/data/xml/object-comparison-using-xmlnametable.md)。 有关参考，请参阅 <xref:System.Xml.XmlNameTable>。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

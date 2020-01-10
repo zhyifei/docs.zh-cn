@@ -6,21 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 31f277d11cba8191c326d56f017b8acc6503c6b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ac7e1b68f3f43a0c84c7330666825207e5b90004
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968717"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711046"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>将字符串转换为 .NET Framework 数据类型
-若要将字符串转换为 .NET Framework 数据类型，请使用满足应用要求的 XmlConvert  方法。 有关 XmlConvert  类提供的所有转换方法的列表，请参阅 <xref:System.Xml.XmlConvert>。  
+若要将字符串转换为 .NET Framework 数据类型，请使用满足应用要求的 XmlConvert 方法。 有关 XmlConvert 类提供的所有转换方法的列表，请参阅 <xref:System.Xml.XmlConvert>。  
   
- 从 ToString  方法返回的字符串是传入数据的字符串版本。 此外，还有若干 .NET Framework 类型仍使用 XmlConvert  类进行转换，但它们不使用 System.Convert  类中的方法。 XmlConvert  类遵循 XML 架构 (XSD) 数据类型规范，并有 XMLConvert  可以映射到的数据类型。  
+ 从 ToString 方法返回的字符串是传入数据的字符串版本。 此外，还有若干 .NET Framework 类型仍使用 XmlConvert 类进行转换，但它们不使用 System.Convert 类中的方法。 XmlConvert 类遵循 XML 架构 (XSD) 数据类型规范，并有 XMLConvert 可以映射到的数据类型。  
   
- 下表列出了 .NET Framework 数据类型和使用 XML 架构 (XSD) 数据类型映射返回的字符串类型。 不能使用 System.Convert  处理这些 .NET Framework 类型。  
+ 下表列出了 .NET Framework 数据类型和使用 XML 架构 (XSD) 数据类型映射返回的字符串类型。 不能使用 System.Convert 处理这些 .NET Framework 类型。  
   
 |.NET Framework 类型|返回的字符串|  
 |-------------------------|---------------------|  
@@ -33,9 +31,9 @@ ms.locfileid: "69968717"
 |Timespan|格式是 PnYnMnTnHnMnS，例如 `P2Y10M15DT10H30M20S` 表示长 2 年 10 个月 15 天 10 小时 30 分钟 20 秒的持续时间。|  
   
 > [!NOTE]
-> 如果使用 ToString  方法将表中所列的任何 .NET Framework 类型转换为字符串，返回的字符串不是基类型，而是 XML 架构 (XSD) 字符串类型。  
+> 如果使用 ToString 方法将表中所列的任何 .NET Framework 类型转换为字符串，返回的字符串不是基类型，而是 XML 架构 (XSD) 字符串类型。  
   
- DateTime  和 Timespan  值类型的区别在于，DateTime  表示时间上的某个时刻，而 TimeSpan  则表示时间间隔。 XML 架构 (XSD) 数据类型规范中指定了 DateTime  和 Timespan  格式。 例如:  
+ DateTime 和 Timespan 值类型的区别在于，DateTime 表示时间上的某个时刻，而 TimeSpan 则表示时间间隔。 XML 架构 (XSD) 数据类型规范中指定了 DateTime 和 Timespan 格式。 例如：  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
@@ -71,10 +69,10 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
  `<Number>200</Number>`  
   
- 不过，如果将字符串转换为 Boolean  、Single  或 Double  ，返回的 .NET Framework 类型与使用 System.Convert  类返回的类型不同。  
+ 不过，如果将字符串转换为 Boolean、Single 或 Double，返回的 .NET Framework 类型与使用 System.Convert 类返回的类型不同。  
   
 ## <a name="string-to-boolean"></a>将字符串转换为 Boolean  
- 下表列出了使用 ToBoolean  方法将字符串转换为 Boolean  时，针对给定输入字符串生成的类型。  
+ 下表列出了使用 ToBoolean 方法将字符串转换为 Boolean 时，针对给定输入字符串生成的类型。  
   
 |有效的字符串输入参数|.NET Framework 输出类型|  
 |----------------------------------|--------------------------------|  
@@ -92,7 +90,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
 <Boolean>1</Boolean>   
 ```  
   
- 两者均可通过下列代码理解，其中 bvalue  为 System.Boolean.True  ：  
+ 两者均可通过下列代码理解，其中 bvalue 为 System.Boolean.True：  
   
 ```vb  
 Dim bvalue As Boolean = _  
@@ -106,7 +104,7 @@ Console.WriteLine(bvalue);
 ```  
   
 ## <a name="string-to-single"></a>将字符串转换为 Single  
- 下表列出了使用 ToSingle  方法将字符串转换为 Single  时，针对给定输入字符串生成的类型。  
+ 下表列出了使用 ToSingle 方法将字符串转换为 Single 时，针对给定输入字符串生成的类型。  
   
 |有效的字符串输入参数|.NET Framework 输出类型|  
 |----------------------------------|--------------------------------|  
@@ -114,7 +112,7 @@ Console.WriteLine(bvalue);
 |“-INF”|Single.NegativeInfinity|  
   
 ## <a name="string-to-double"></a>将字符串转换为 Double  
- 下表列出了使用 ToDouble  方法将字符串转换为 Single  时，针对给定输入字符串生成的类型。  
+ 下表列出了使用 ToDouble 方法将字符串转换为 Single 时，针对给定输入字符串生成的类型。  
   
 |有效的字符串输入参数|.NET Framework 输出类型|  
 |----------------------------------|--------------------------------|  
@@ -133,7 +131,7 @@ Double value = Double.PositiveInfinity;
 writer.WriteElementString("Infinity", XmlConvert.ToString(value));  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 数据类型转换](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
 - [将 .NET Framework 类型转换为字符串](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

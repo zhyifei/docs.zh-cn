@@ -6,14 +6,12 @@ helpviewer_keywords:
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 951941af2568e72fe093860801bd2595b3037e41
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3763e93ff3a14819f59102a01cf3285e85afd12d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428165"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716202"
 ---
 # <a name="clr-etw-events"></a>CLR ETW 事件
 本部分的主题介绍 Windows (ETW) 事件的事件跟踪。 每个事件都有关联的关键字和级别，详见 [CLR ETW 关键字和级别](clr-etw-keywords-and-levels.md)主题。 CLR 有两个事件提供程序：  
@@ -63,7 +61,7 @@ ms.locfileid: "74428165"
   
 ## <a name="see-also"></a>另请参阅
 
-- [利用 ETW 改善调试和性能优化](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
+- [使用 ETW 改善调试和性能优化](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
 - [Windows 性能博客](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
 - [控制 .NET Framework 日志记录](controlling-logging.md)
 - [CLR ETW 提供程序](clr-etw-providers.md)
