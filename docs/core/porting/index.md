@@ -3,17 +3,16 @@ title: 从 .NET Framework 移植到 .NET Core
 description: 了解移植过程以及发现在将 .NET Framework 项目移植到 .NET Core 时可能有用的工具。
 author: cartermp
 ms.date: 10/22/2019
-ms.custom: seodec18
-ms.openlocfilehash: 89f00e5c6ce7f3cea7a3135c9b2856c54a70da40
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 3dbd4a1f608d71f28fa507da2e11fc41226664c7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038521"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714342"
 ---
 # <a name="overview-of-the-porting-process-from-net-framework-to-net-core"></a>从 .NET Framework 移植到 .NET Core 的过程概述
 
-你可能有些代码当前正在 .NET Framework 上运行，但你想将这些代码移植到 .NET Core。 本文将提供：
+你可能有些代码当前正在 .NET Framework 上运行，但你想将这些代码移植到 .NET Core。 本文提供以下内容：
 
 * 移植过程概述。
 * 在将代码移植到 .NET Core 时，可能会发现一系列有用的工具。
@@ -46,7 +45,7 @@ ms.locfileid: "73038521"
 
    由于移植到 .NET Core 对代码库来说是很大的更改，因此强烈建议移植测试代码，以便在移植代码时可以进行测试。 MSTest、xUnit 和 NUnit 都适用于 .NET Core。
 
-此外，在某个操作中，可以尝试使用 [dotnet try-convert](https://github.com/dotnet/try-convert) 工具将较小的解决方案或单个项目移植到 .NET Core 项目文件格式。 不能保证 `dotnet try-convert` 适用于所有项目，而且它可能会导致所依赖的行为发生细微变化。 应将它用作一个起点  ，以自动化可自动执行的基本操作。 作为用于迁移项目的一种解决方案，它并不是万无一失的。
+此外，在某个操作中，可以尝试使用 [dotnet try-convert](https://github.com/dotnet/try-convert) 工具将较小的解决方案或单个项目移植到 .NET Core 项目文件格式。 不能保证 `dotnet try-convert` 适用于所有项目，而且它可能会导致所依赖的行为发生细微变化。 应将它用作一个起点，以自动化可自动执行的基本操作。 作为用于迁移项目的一种解决方案，它并不是万无一失的。
 
 >[!div class="step-by-step"]
 >[下一页](net-framework-tech-unavailable.md)

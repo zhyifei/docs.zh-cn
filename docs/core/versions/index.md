@@ -1,14 +1,13 @@
 ---
 title: 如何对 .NET Core 运行时和 SDK 进行版本控制
 description: 本文介绍了 .NET Core SDK 和运行时的版本控制方式（类似于语义版本控制）。
-author: bleroy
 ms.date: 07/26/2018
-ms.openlocfilehash: 5096ec0e4e60569b774711d95f4a69e4f8d2d2cc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c85a2112b439768068663688947960ac814de824
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713965"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777319"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 的版本控制方式概述
 
@@ -24,7 +23,7 @@ ms.locfileid: "75713965"
 
 SDK 版本号的第三个位置同时传达次要编号和修补程序编号。 次要版本乘以 100。 次要版本 1，修补程序版本 2 将表示为 102。 最后两位数代表修补程序号。 例如，.NET Core 2.2 可能会创建如下表所示的版本：
 
-| 更改                | .NET Core 运行时 | .NET Core SDK (*) |
+| 更改                | .NET Core 运行时 | .NET Core SDK (\*) |
 |-----------------------|-------------------|-------------------|
 | 初始版本       | 2.2.0             | 2.2.100           |
 | SDK 修补程序             | 2.2.0             | 2.2.101           |

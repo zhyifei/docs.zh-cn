@@ -3,13 +3,12 @@ title: 从源生成 .NET Core
 description: 了解如何从源代码生成 .NET Core 和 .NET Core CLI。
 author: bleroy
 ms.date: 06/28/2017
-ms.custom: seodec18
-ms.openlocfilehash: dcd7c909325eec5a79db74098d7ac880000eafa1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: fe5431667d861d830c2ec56252e6e3e2ca08a866
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105387"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740915"
 ---
 # <a name="build-net-core-from-source"></a>从源生成 .NET Core
 
@@ -18,7 +17,7 @@ ms.locfileid: "70105387"
 
 ## <a name="build-the-clr-from-source"></a>从源生成 CLR
 
-有关 .NET CoreCLR 的源代码，可以访问 GitHub 上的 [dotnet/coreclr](https://github.com/dotnet/coreclr/) 存储库。
+有关 .NET CoreCLR 的源代码，可以访问 GitHub 上的 [dotnet/runtime](https://github.com/dotnet/runtime/) 存储库。
 
 生成目前依赖于以下系统必备组件：
 
@@ -27,7 +26,7 @@ ms.locfileid: "70105387"
 - [Python](https://www.python.org/)
 - C++ 编译器。
 
-安装完这些必备组件后，可以 [dotnet/coreclr](https://github.com/dotnet/coreclr/) 存储库为基础，调用生成脚本（Windows 中的 `build.cmd`，或 Linux 和 macOS 中的 `build.sh`）生成 CLR。
+安装完这些必备组件后，可以 [dotnet/runtime](https://github.com/dotnet/runtime/) 存储库为基础，调用生成脚本（Windows 中的 `build.cmd`，或 Linux 和 macOS 中的 `build.sh`）生成 CLR。
 
 组件的安装因操作系统 (OS) 而异。 请参阅特定 OS 的生成说明：
 
@@ -72,13 +71,13 @@ bin\Log  目录包含生成期间生成的日志文件（生成失败时这些�
 可通过两种基本方法使用新的运行时：
 
  1. 使用 dotnet.exe 和 NuGet 撰写应用程序  。
-    请参阅[使用生成](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingYourBuild.md)了解如何通过使用刚创建的 NuGet 包和“dotnet”命令行接口 (CLI) 来创建使用你的新运行时的程序。 非运行时开发人员常通过此方法使用你的新运行时。
+    请参阅[使用生成](https://github.com/dotnet/runtime/blob/master/docs/workflow/testing/using-your-build.md)了解如何通过使用刚创建的 NuGet 包和“dotnet”命令行接口 (CLI) 来创建使用你的新运行时的程序。 非运行时开发人员常通过此方法使用你的新运行时。
 
  2. 使用 corerun.exe 运行通过未打包的 DLL 运行应用程序  。
     此存储库还定义了一个名为 corerun.exe 的简单主机，它与 NuGet 没有任何依赖关系。
     需要告诉主机在何处获取实际使用的所需 DLL，且必须手动将它们聚集在一起。
-    [dotnet/coreclr 存储库](https://github.com/dotnet/coreclr)中的所有测试都使用这种方式，可用于快速本地“编辑-编译-调试”循环（如初步单元测试）。
-    有关使用此方法的详细信息，请参阅[使用 CoreRun.exe 执行 .NET Core 应用](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingCoreRun.md)。
+    [dotnet/runtime](https://github.com/dotnet/runtime) 存储库中的所有测试都使用这种方式，可用于快速进行本地“编辑-编译-调试”循环（如初步单元测试）。
+    有关使用此方法的详细信息，请参阅[使用 CoreRun.exe 执行 .NET Core 应用](https://github.com/dotnet/runtime/blob/master/docs/workflow/testing/using-corerun.md)。
 
 ## <a name="build-the-cli-from-source"></a>从源生成 CLI
 
@@ -99,8 +98,8 @@ bin\Log  目录包含生成期间生成的日志文件（生成失败时这些�
 
 使用 artifacts/{os}-{arch}/stage2  中的 `dotnet` 可执行文件来试用新生成的 CLI。 如果想在从当前控制台调用 `dotnet` 时使用生成输出，也可以将 artifacts/{os}-{arch}/stage2  添加到 PATH。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-- [.NET Core 公共语言运行时 (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
+- [.NET 运行时](https://github.com/dotnet/runtime/blob/master/README.md)
 - [.NET Core CLI 开发人员指南](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
 - [.NET Core 分发打包](./distribution-packaging.md)

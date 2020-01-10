@@ -1,17 +1,16 @@
 ---
 title: 接口 - C# 编程指南
-ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: d03917353a9e6879ccb3b368d7d190aeeacb702c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 3187b8b94c6e46ec13312fc31ac1ed9852199d6b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635231"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714613"
 ---
 # <a name="interfaces-c-programming-guide"></a>接口（C# 编程指南）
 
@@ -54,7 +53,7 @@ ms.locfileid: "75635231"
 - 接口类似于只有抽象成员的抽象基类。 实现接口的任何类或结构都必须实现其所有成员。
 - 接口无法直接进行实例化。 其成员由实现接口的任何类或结构来实现。
 - 接口可以包含事件、索引器、方法和属性。
-- 接口不包含方法的实现。
+- 接口不含方法的实现（在 C# 8.0 中，接口可以具有[方法的默认实现](../../whats-new/csharp-8.md#default-interface-methods)）。
 - 一个类或结构可以实现多个接口。 一个类可以继承一个基类，还可实现一个或多个接口。
 
 ## <a name="in-this-section"></a>本节内容

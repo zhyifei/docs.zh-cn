@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 82a2c1780c6e0e1d94a206b9b959d8e1944fd0a9
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 4c5c7ffcab118978baf1b2f7602f39291452d1e6
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802325"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740409"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新增功能
 
@@ -102,7 +102,7 @@ ms.locfileid: "74802325"
 
 可通过两种方式公开运行状况终结点并发布 WCF 服务运行状况信息：
 
-- 通过代码。 例如:
+- 通过代码。 例如：
 
   ```csharp
   ServiceHost host = new ServiceHost(typeof(Service1),
@@ -124,7 +124,7 @@ ms.locfileid: "74802325"
   host.Description.Behaviors.Add(healthBehavior)
   ```
 
-- 通过使用配置文件。 例如:
+- 通过使用配置文件。 例如：
 
   ```xml
   <behaviors>
@@ -136,7 +136,7 @@ ms.locfileid: "74802325"
   </behaviors>
   ```
 
-可以使用查询参数（例如，`OnServiceFailure`、`OnDispatcherFailure`、`OnListenerFailure`、`OnThrottlePercentExceeded`）查询服务的运行状况状态，并且可以为每个查询参数指定 HTTP 响应代码。 如果省略了查询参数的 HTTP 响应代码，则默认使用 503 HTTP 响应代码。 例如:
+可以使用查询参数（例如，`OnServiceFailure`、`OnDispatcherFailure`、`OnListenerFailure`、`OnThrottlePercentExceeded`）查询服务的运行状况状态，并且可以为每个查询参数指定 HTTP 响应代码。 如果省略了查询参数的 HTTP 响应代码，则默认使用 503 HTTP 响应代码。 例如：
 
 - OnServiceFailure：`https://contoso:81/Service1?health&OnServiceFailure=450`
 
@@ -252,7 +252,7 @@ Using rsa = RSA.Create(rsaParameters)
 End Using
 ```
 
-<xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType> 和 <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> 方法允许生成具有特定密钥大小的 <xref:System.Security.Cryptography.DSA> 或 <xref:System.Security.Cryptography.RSA> 密钥。 例如:
+<xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType> 和 <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> 方法允许生成具有特定密钥大小的 <xref:System.Security.Cryptography.DSA> 或 <xref:System.Security.Cryptography.RSA> 密钥。 例如：
 
 ```csharp
 using (DSA dsa = DSA.Create(2048))
@@ -467,7 +467,7 @@ NET Framework 4.7.2 为基于 enclave 的 Always Encrypted 添加支持。 Alway
 
 - <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters>，提供 SQL Server 所使用的认证参数，以获取执行特定认证协议所需的信息。
 
-抽象 <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> 类提供了 enclave 提供程序的功能，应用程序配置文件随后会指定该类的具体实现。 例如:
+抽象 <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> 类提供了 enclave 提供程序的功能，应用程序配置文件随后会指定该类的具体实现。 例如：
 
 ```xml
 <configuration>
@@ -650,7 +650,7 @@ ASP.NET 处理包括 23 个事件的预定义管道中的请求。 ASP.NET 执�
 
 **ASP.NET 窗体身份验证凭据的 SHA-2 哈希选项**
 
-在 .NET Framework 4.7 及其早期版本中，ASP.NET 允许开发者使用 MD5 或 SHA1 在配置文件中存储用户凭据和哈希密码。 从 .NET Framework 4.7.1 开始，ASP.NET 还支持新的安全 SHA-2 哈希选项（如 SHA256、SHA384 和 SHA512）。 SHA1 保留默认值，非默认哈希算法可以在 Web 配置文件中定义。 例如:
+在 .NET Framework 4.7 及其早期版本中，ASP.NET 允许开发者使用 MD5 或 SHA1 在配置文件中存储用户凭据和哈希密码。 从 .NET Framework 4.7.1 开始，ASP.NET 还支持新的安全 SHA-2 哈希选项（如 SHA256、SHA384 和 SHA512）。 SHA1 保留默认值，非默认哈希算法可以在 Web 配置文件中定义。 例如：
 
 ```xml
 <system.web>
@@ -841,7 +841,7 @@ End Class
 
 然后可以创建一个资源文件 DataAnnotation.Localization.fr.resx，它的键为错误消息字符串，值为本地化的错误消息。 该文件必须位于 `App.LocalResources` 文件夹中。 例如，下面列出了键以及它在本地化法语 (fr) 错误消息中的值：
 
-| name                                 | 值                                     |
+| “属性”                                 | “值”                                     |
 | ------------------------------------ | ----------------------------------------- |
 | 分级必须介于 1 和 10 之间。 | La note doit être comprise entre 1 et 10. |
 
@@ -955,7 +955,7 @@ End Function
 
 为了在 .NET Framework 4.6.2 中解决这一问题，已向 <xref:System.Security.Cryptography.ECDiffieHellman> 基类添加以下三种方法，以便更明确地表示这些 KDF 例程及其输入：
 
-|ECDiffieHellman 方法|说明|
+|ECDiffieHellman 方法|描述|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|使用下面的公式派生密钥材料<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> 其中 *x* 是 EC Diffie-Hellman 算法的计算结果。|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|使用下面的公式派生密钥材料<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> 其中 *x* 是 EC Diffie-Hellman 算法的计算结果。|
@@ -965,7 +965,7 @@ End Function
 
 Windows 加密库 (CNG) 现已开始支持存储持久化对称密钥和使用硬件存储的对称密钥。开发者可通过 .NET Framework 4.6.2 使用此功能。  因为密钥名和密钥提供程序的概念是特定于实现的，所以使用此功能要求使用具体实现类型（而不是首选出厂方法）的构造函数（例如，调用 `Aes.Create`）。
 
-持久化密钥对称加密支持因 AES (<xref:System.Security.Cryptography.AesCng>) 和 3DES (<xref:System.Security.Cryptography.TripleDESCng>) 算法存在。 例如:
+持久化密钥对称加密支持因 AES (<xref:System.Security.Cryptography.AesCng>) 和 3DES (<xref:System.Security.Cryptography.TripleDESCng>) 算法存在。 例如：
 
 ```csharp
 public static byte[] EncryptDataWithPersistedKey(byte[] data, byte[] iv)
@@ -1755,7 +1755,7 @@ WPF 包括一个 [NuGet 包](https://www.nuget.org/packages/Microsoft.Wpf.Intero
 
 - **开放源代码 .NET Framework 包**
 
-  .NET Core 包（如不可变集合）、[SIMD API](https://www.nuget.org/packages/Microsoft.Bcl.Simd) 以及网络 API（如在 <xref:System.Net.Http> 命名空间中找到的网络 API）现在都可在 [GitHub](https://github.com/) 上用作开放源代码程序包。 若要访问代码，请参阅 [GitHub 上的 CoreFx](https://github.com/dotnet/corefx)。 有关详细信息以及如何参与这些包，请参阅 [.NET Core 和开放源代码](../get-started/net-core-and-open-source.md)、[GitHub 上的 .NET 主页](https://github.com/dotnet/home)。
+  .NET Core 包（如不可变集合）、[SIMD API](https://www.nuget.org/packages/Microsoft.Bcl.Simd) 以及网络 API（如在 <xref:System.Net.Http> 命名空间中找到的网络 API）现在都可在 [GitHub](https://github.com/) 上用作开放源代码程序包。 要访问代码，请参阅 [GitHub 上的 .NET](https://github.com/dotnet/runtime)。 有关详细信息以及如何参与这些包，请参阅 [.NET Core 和开放源代码](../get-started/net-core-and-open-source.md)、[GitHub 上的 .NET 主页](https://github.com/dotnet/home)。
 
 <a name="v452" />
 
@@ -1790,7 +1790,7 @@ WPF 包括一个 [NuGet 包](https://www.nuget.org/packages/Microsoft.Wpf.Intero
 
   - 使用 <xref:System.Transactions.IPromotableSinglePhaseNotification> 替换 <xref:System.Transactions.ISinglePhaseNotification>，它是支持单阶段提交的持久性登记。
 
-  此操作可以在相同的应用域内执行，而且不需要任何用于与 MSDTC 交互的额外非托管代码即可执行提升。 仅当存在从 <xref:System.Transactions?displayProperty=nameWithType> 对由可提升登记实现的 <xref:System.Transactions.IPromotableSinglePhaseNotification> `Promote` 方法进行的未处理调用时，才可调用新方法。
+  此操作可以在相同的应用域内执行，而且不需要任何用于与 MSDTC 交互的额外非托管代码即可执行提升。 仅当存在从 <xref:System.Transactions?displayProperty=nameWithType> 对由可提升登记实现的 <xref:System.Transactions.IPromotableSinglePhaseNotification>`Promote` 方法进行的未处理调用时，才可调用新方法。
 
 - **分析改进。** 以下新的非托管分析 API 提供更强大的分析功能：
 

@@ -1,15 +1,13 @@
 ---
 title: 开放源代码 .NET 库指南
 description: 有关创建高质量的 .NET 库的开发人员最佳做法建议。
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: eff6c822757af6fb85622e88714accd40c32bcf5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: c1e1c302eede86fd5555a8e84630e216e96f1ce7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928966"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706447"
 ---
 # <a name="open-source-library-guidance"></a>开放源代码库指南
 
@@ -32,7 +30,7 @@ ms.locfileid: "70928966"
 
 每篇文章介绍四种类型的建议：“请执行”  、“请考虑”、  、“请避免”、  和“请勿”  。 建议类型表示了应遵循的程度。
 
-应始终遵循“请执行”  建议。 例如:
+应始终遵循“请执行”  建议。 例如：
 
 ✔️请通过 NuGet 包分发库  。
 
@@ -42,11 +40,11 @@ ms.locfileid: "70928966"
 
 “请避免”  建议是指在一般情况下不应执行的操作，但有时也可以打破规则：
 
-❌请避免使用需要确切版本的 NuGet 包引用  。
+**请避免** 使用需要确切版本的 NuGet 包引用。
 
 最后，“请勿”  建议是指在大多数情况下不得执行的操作：
 
-❌请勿发布库的强名称或非强名称版本  。 例如，`Contoso.Api` 和 `Contoso.Api.StrongNamed`。
+**请勿** 发布库的强名称或非强名称版本。 例如，`Contoso.Api` 和 `Contoso.Api.StrongNamed`。
 
 >[!div class="step-by-step"]
 >[下一页](get-started.md)

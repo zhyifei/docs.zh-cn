@@ -9,14 +9,12 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 04cbfb8d41135b57c3e090959e041f95fcda2840
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975683"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716465"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>部署 .NET Framework 和应用程序
 
@@ -160,12 +158,12 @@ ms.locfileid: "73975683"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[运行时如何定位程序集](how-the-runtime-locates-assemblies.md)|描述公共语言运行时如何确定将用于满足绑定请求的程序集类型。|
 |[适用于程序集加载的最佳做法](best-practices-for-assembly-loading.md)|讨论避免类型标识问题的方法，从而避免发生 <xref:System.InvalidCastException><xref:System.MissingMethodException> 和其他错误。|
 |[在 .NET Framework 4.5 安装期间减少系统重新启动次数](reducing-system-restarts.md)|描述在任何可能的情况下可以阻止重启的 Restart Manager，并说明安装 .NET Framework 的应用程序如何利用它。|
-|[面向管理员的部署指南](guide-for-administrators.md)|说明系统管理员如何通过系统中心配置管理器 (SCCM) 跨网络部署 .NET Framework 及其系统依赖项。|
+|[面向管理员的部署指南](guide-for-administrators.md)|说明系统管理员如何通过 Microsoft Endpoint Configuration Manager 跨网络部署 .NET Framework 及其系统依赖项。|
 |[面向开发人员的部署指南](deployment-guide-for-developers.md)|说明开发人员如何在其计算机的应用程序中安装 .NET Framework。|
 |[部署应用程序、服务和组件](/visualstudio/deployment/deploying-applications-services-and-components)|讨论 Visual Studio 中的部署选项，包括使用 ClickOnce 和 Windows Installer 技术发布应用程序的说明。|
 |[发布 ClickOnce 应用程序](/visualstudio/deployment/publishing-clickonce-applications)|描述打包 Windows 窗体应用程序以及使用 ClickOnce 将其部署到连网的客户端计算机上的方法。|

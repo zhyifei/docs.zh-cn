@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: cea6809ebf9a4ae516d59bd99bf8126d2e874788
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: b43da2723fb618bc44a14e8102c8d59e6ecc0c11
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459565"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559841"
 ---
 # <a name="xaml-in-wpf"></a>WPF 中的 XAML
 
@@ -28,12 +28,12 @@ ms.locfileid: "73459565"
 [WPF XAML 的 XAML 命名空间和命名空间映射](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
 [WPF XAML 名称范围](wpf-xaml-namescopes.md)  
 [嵌入式样式和模板](inline-styles-and-templates.md)  
-[XAML 中的空白处理](../../xaml-services/whitespace-processing-in-xaml.md)  
+[XAML 中的空白处理](../../../desktop-wpf/xaml-services/white-space-processing.md)  
 [TypeConverter 和 XAML](typeconverters-and-xaml.md)  
-[XML 字符实体和 XAML](../../xaml-services/xml-character-entities-and-xaml.md)  
-[XAML 命名空间 (x:) 语言功能](../../xaml-services/xaml-namespace-x-language-features.md)  
+[XML 字符实体和 XAML](../../../desktop-wpf/xaml-services/xml-character-entities.md)  
+[XAML 命名空间（x：）语言功能](../../../desktop-wpf/xaml-services/namespace-language-features.md)  
 [WPF XAML 扩展](wpf-xaml-extensions.md)  
-[标记兼容 (mc:) 语言功能](markup-compatibility-mc-language-features.md)  
+[标记兼容性（mc：）语言功能](markup-compatibility-mc-language-features.md)  
   
 ## <a name="related-sections"></a>相关章节  
 

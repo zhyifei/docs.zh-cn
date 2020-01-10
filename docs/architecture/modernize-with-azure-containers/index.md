@@ -2,12 +2,12 @@
 title: 通过 Azure 云和 Windows 容器现代化现有 .NET 应用程序（第 2 版）
 description: 阅读此电子书，了解如何将现有应用程序直接迁移到 Azure 云和 Windows 容器以实现现代化。
 ms.date: 04/28/2018
-ms.openlocfilehash: 67b1c7743697832684e96225e3d365da625ce6a3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: fa20e606c9a1364fbdf8c9a58c8703420d9e65a9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73089768"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714572"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>通过 Azure 云和 Windows 容器现代化现有 .NET 应用程序（第 2 版）
 
@@ -25,7 +25,7 @@ Redmond, Washington 98052-6399
 
 本书以电子书 (e-book) 形式免费提供，可通过 Microsoft 的多个通道获得，如 <https://dot.net/architecture>。
 
-若要了解本书的相关问题，请发送电子邮件至 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
+若要了解本书的相关问题，请发送电子邮件至 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)。
 
 本书“按原样”提供，表达作者的观点和看法。 本书中表达的观点、看法和信息（包括 URL 和其他 Internet 网站引用）如有更改，恕不另行通知。
 
@@ -199,7 +199,7 @@ GitHub 上的 [EShopModernizing](https://github.com/dotnet-architecture/eShopMod
 
 ## <a name="send-your-feedback"></a>提供你的反馈
 
-我们创作本指南，是为了帮助你了解改进和现代化现有 .NET Web 应用程序的选项。 本指南以及相关示例应用程序不断更新。 我们欢迎反馈！ 如有关于本指南的改进建议，请将其发送到 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)。
+我们创作本指南，是为了帮助你了解改进和现代化现有 .NET Web 应用程序的选项。 本指南以及相关示例应用程序不断更新。 欢迎提供反馈意见！ 如有关于本指南的改进建议，请将其发送到 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)。
 
 >[!div class="step-by-step"]
 >[下一页](lift-and-shift-existing-apps-azure-iaas.md) <!-- Next Chapter -->
