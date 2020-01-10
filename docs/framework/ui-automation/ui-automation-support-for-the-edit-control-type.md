@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Edit control type
 - UI Automation, Edit control type
 ms.assetid: 6db9d231-c0a0-4e17-910e-ac80357f774f
-ms.openlocfilehash: 500dc450ad171ed50316c8e08d62258d745049cb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f51e55a8a87ad1112c1b752568220611b9bf70e8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448458"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741663"
 ---
 # <a name="ui-automation-support-for-the-edit-control-type"></a>对 Edit 控件类型的 UI 自动化支持
 
@@ -22,7 +22,7 @@ ms.locfileid: "74448458"
 
 Edit 控件使用户能够查看和编辑简单文本行，无需丰富的格式设置支持。
 
-以下几节定义了 Edit 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有 Edit 控件，无论控件是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。
+以下几节定义了 Edit 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有编辑控件（无论 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32 或 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]）。
 
 <a name="Required_UI_Automation_Tree_Structure"></a>
 
@@ -32,7 +32,7 @@ Edit 控件使用户能够查看和编辑简单文本行，无需丰富的格式
 
 |控件视图|内容视图|
 |------------------|------------------|
-|编辑|编辑|
+|Edit|Edit|
 
 实现 Edit 控件类型的控件在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图中始终有零个滚动条，因为它是单行控件。 在某些布局方案中，单个文本行可能会换行。 Edit 控件类型最适用于保留少量的可编辑或可选文本。
 
@@ -42,7 +42,7 @@ Edit 控件使用户能够查看和编辑简单文本行，无需丰富的格式
 
 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与编辑控件尤其相关。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅 [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)。
 
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|值|注意|
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|{2&gt;值&lt;2}|注释|
 |------------------------------------------------------------------------------------|-----------|-----------|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|
@@ -50,7 +50,7 @@ Edit 控件使用户能够查看和编辑简单文本行，无需丰富的格式
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|请参阅注释。|如果该控件可以接收键盘焦点，则它必须支持此属性。|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|请参阅注释。|编辑控件的名称通常是从静态文本标签生成的。 如果没有静态文本标签，则 `Name` 的属性值必须由应用程序开发人员分配。 `Name` 属性决不应包含编辑控件的文本内容。|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|请参阅注释。|如果存在与控件关联的静态文本标签，则该属性必须公开对该控件的引用。 如果文本控件是另一个控件的子组件，则该文本控件没有 `LabeledBy` 属性集。|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|编辑|此值对于所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 框架均相同。|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Edit|此值对于所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 框架均相同。|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|“编辑”|与 Edit 控件类型相对应的本地化字符串。|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|编辑控件始终包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的内容视图中。|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|编辑控件始终包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图中。|
@@ -62,7 +62,7 @@ Edit 控件使用户能够查看和编辑简单文本行，无需丰富的格式
 
 下表列出需要由所有编辑控件支持的控件模式。 有关控件模式的详细信息，请参阅 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)。
 
-|控件模式/控件模式属性|支持/值|注意|
+|控件模式/控件模式属性|支持/值|注释|
 |-----------------------------------------------|--------------------|-----------|
 |<xref:System.Windows.Automation.Provider.ITextProvider>|视情况而定|编辑控件应支持 Text 控件模式，因为详细的文本信息应始终可供客户端使用。|
 |<xref:System.Windows.Automation.Provider.IValueProvider>|视情况而定|采用字符串的所有编辑控件都必须公开 Value 模式。|
@@ -81,7 +81,7 @@ Edit 控件使用户能够查看和编辑简单文本行，无需丰富的格式
 
 下表列出需要由所有编辑控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [UI Automation Events Overview](ui-automation-events-overview.md)。
 
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|注意|
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|注释|
 |---------------------------------------------------------------------------------|-------------|-----------|
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|必需|无|
 |<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|必需|无|
@@ -91,12 +91,12 @@ Edit 控件使用户能够查看和编辑简单文本行，无需丰富的格式
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性更改事件。|必需|无|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 属性更改事件。|必需|无|
 |<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 属性更改事件。|视情况而定|无|
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 属性更改事件。|从不|无|
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 属性更改事件。|从不|无|
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 属性更改事件。|从不|无|
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 属性更改事件。|从不|无|
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 属性更改事件。|从不|无|
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 属性更改事件。|从不|无|
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 属性更改事件。|Never|无|
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 属性更改事件。|Never|无|
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 属性更改事件。|Never|无|
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 属性更改事件。|Never|无|
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 属性更改事件。|Never|无|
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 属性更改事件。|Never|无|
 |<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> 属性更改事件。|视情况而定|如果该控件支持 Range Value 控件模式，它必须支持此事件。|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必需|无|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必需|无|

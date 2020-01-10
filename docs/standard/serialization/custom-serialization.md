@@ -17,12 +17,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: bd0010ccd3c7f6b2f4433fe8ce234bc806754260
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 60fdc0317975d94433401e3214953b77d0970f60
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916244"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741059"
 ---
 # <a name="custom-serialization"></a>自定义序列化
 自定义序列化是控制类型的序列化和反序列化的过程。 通过控制序列化，可以确保序列化兼容性。换而言之，在不中断类型核心功能的情况下，可在类型的不同版本之间序列化和反序列化。 例如，在类型的第一个版本中，可能只有两个字段。 在类型的下一个版本中，添加了其他几个字段。 但是，第二个版本的应用程序必须可对这两种类型进行序列化和反序列化。 以下各节说明如何控制序列化。
@@ -177,9 +177,9 @@ End Class
   
  不要忘记在反序列化构造函数中调用基类。 如果没有完成此操作，决不会调用基类上的构造函数，也不会在反序列化之后完全构造该对象。  
   
- 对象是从内到外重新构造的；在反序列化期间调用方法时，可能会产生非预期的副作用，原因是调用的方法引用的可能是执行调用时尚未反序列化的对象引用。 如果正在被反序列化的类实现 <xref:System.Runtime.Serialization.IDeserializationCallback>，则反序列化整个对象图后，将会自动调用 <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization*> 方法。 此时，便已完全还原引用的所有子对象。 哈希表是类的典型示例，在不使用事件侦听器的情况下，很难对哈希表进行反序列化。 虽然在反序列化期间易于检索键和值对，但是，将这些对象重新添加到哈希表时，可能会引起问题，原因是不能保证派生自哈希表的类已被反序列化。 因此，不建议在这个阶段对哈希表调用方法。  
+ 对象是从内到外重新构造的；在反序列化期间调用方法时，可能会产生非预期的副作用，原因是调用的方法引用的可能是执行调用时尚未反序列化的对象引用。 如果正在被反序列化的类实现 <xref:System.Runtime.Serialization.IDeserializationCallback>，则反序列化整个对象图后，将会自动调用 <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization%2A> 方法。 此时，便已完全还原引用的所有子对象。 哈希表是类的典型示例，在不使用事件侦听器的情况下，很难对哈希表进行反序列化。 虽然在反序列化期间易于检索键和值对，但是，将这些对象重新添加到哈希表时，可能会引起问题，原因是不能保证派生自哈希表的类已被反序列化。 因此，不建议在这个阶段对哈希表调用方法。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [二进制序列化](binary-serialization.md)
 - [XML 和 SOAP 序列化](xml-and-soap-serialization.md)

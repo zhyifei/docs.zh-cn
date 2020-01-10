@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToolTip control type
 - control types, ToolTip
 ms.assetid: c3779d78-3164-43ae-8dae-bfaeafffdd65
-ms.openlocfilehash: b38a5e4cacb31d26a4a328070946f546fee47e54
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 7f96143edcd24b6daa7a86723493b5d09727d040
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801721"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741105"
 ---
 # <a name="ui-automation-support-for-the-tooltip-control-type"></a>对 ToolTip 控件类型的 UI 自动化支持
 > [!NOTE]
@@ -21,11 +21,11 @@ ms.locfileid: "74801721"
   
  工具提示控件是包含文本的弹出窗口。  
   
- 以下各部分定义 ToolTip 控件类型的必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有工具提示控件，无论是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]或 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
+ 以下各部分定义 ToolTip 控件类型的必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有工具提示控件，无论是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32 还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>必需的 UI 自动化树结构  
- 下表介绍与工具提示控件有关的控件视图和 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的内容视图并介绍可被包含在每个视图中的内容。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Properties Overview](ui-automation-tree-overview.md)。  
+ 下表介绍与工具提示控件有关的控件视图和 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的内容视图并介绍可被包含在每个视图中的内容。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Tree Overview](ui-automation-tree-overview.md)。  
   
 |控件视图|内容视图|  
 |------------------|------------------|  
@@ -65,7 +65,7 @@ ms.locfileid: "74801721"
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
  当工具提示控件出现在屏幕上时，它们必须引发 `ToolTipOpenedEvent` 。 该事件将包括对工具提示自身的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 元素的引用。  
   
- 下表列出需要由所有工具提示控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](ui-automation-events-overview.md)。  
+ 下表列出需要由所有工具提示控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [UI Automation Events Overview](ui-automation-events-overview.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|注释|  
 |---------------------------------------------------------------------------------|-------------|-----------|  

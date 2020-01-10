@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 04e6c6fb5dd903e0f52a29bb2c0739d899ce2bb1
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 382facef15e79c4ce49fdedaeb1a072b7591e4a0
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636349"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740213"
 ---
 # <a name="wpf-architecture"></a>WPF 体系结构
 本主题提供 Windows Presentation Foundation （WPF）类层次结构的指导教程。 它涵盖了 WPF 的大部分主要子系统，并描述了它们的交互方式。 它还详细介绍了 WPF 架构师所做的一些选择。  
@@ -38,7 +38,7 @@ ms.locfileid: "75636349"
   
 <a name="System_Threading_DispatcherObject"></a>   
 ## <a name="systemthreadingdispatcherobject"></a>System.Threading.DispatcherObject  
- WPF 中的大多数对象都派生自 <xref:System.Windows.Threading.DispatcherObject>，后者提供了用于处理并发和线程处理的基本构造。 WPF 基于调度程序实现的消息传递系统。 这非常类似于熟悉的 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 消息泵;事实上，WPF 调度程序使用 User32 消息执行跨线程调用。  
+ WPF 中的大多数对象都派生自 <xref:System.Windows.Threading.DispatcherObject>，后者提供了用于处理并发和线程处理的基本构造。 WPF 基于调度程序实现的消息传递系统。 这非常类似于熟悉的 Win32 消息泵;事实上，WPF 调度程序使用 User32 消息执行跨线程调用。  
   
  在 WPF 中讨论并发时，有两个核心概念需要了解，即调度程序和线程关联。  
   

@@ -6,24 +6,24 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: b7e378d79109d33859a38ea398cffd2193044abd
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 22966c8ed80be99497e7d05b56455c3057fdd81a
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800197"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741413"
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI 自动化 TextPattern 概述
 
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。
 
-本概述介绍如何使用 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 公开文本内容，其中包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支持的平台中的文本控件的格式和样式特性。 这些控件包括但不限于 Microsoft .NET 框架 <xref:System.Windows.Controls.TextBox> 和 <xref:System.Windows.Controls.RichTextBox> 以及其 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 等效项。
+本概述介绍如何使用 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 公开文本内容，其中包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支持的平台中的文本控件的格式和样式特性。 这些控件包括但不限于 Microsoft .NET 框架 <xref:System.Windows.Controls.TextBox> 和 <xref:System.Windows.Controls.RichTextBox> 以及其 Win32 等效项。
 
 控件文本内容的功能通过使用 <xref:System.Windows.Automation.TextPattern> 控件模式完成，该控件模式表示作为文本流的文本容器的内容。 与之相反， <xref:System.Windows.Automation.TextPattern> 需要 <xref:System.Windows.Automation.Text.TextPatternRange> 的支持，以公开格式和样式特性。 <xref:System.Windows.Automation.Text.TextPatternRange> 通过采用一系列 <xref:System.Windows.Automation.TextPattern> 和 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 终结点表示文本容器中连续或多个不连续的的文本段来支持 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 。 <xref:System.Windows.Automation.Text.TextPatternRange> 支持功能包括选择、比较、检索和遍历。
 
 > [!NOTE]
-> <xref:System.Windows.Automation.TextPattern> 类不提供插入或修改文本的方法。 但是，具体取决于该控件，这可以通过 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> 或直接键盘输入得到解决。 有关示例，请参见 [TextPattern Insert Text Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText) 。
+> <xref:System.Windows.Automation.TextPattern> 类不提供插入或修改文本的方法。 但是，这可能是由 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> 或通过直接键盘输入来完成的。 有关示例，请参见 [TextPattern Insert Text Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText) 。
 
 本概述中所述的功能对辅助技术供应商及其最终用户至关重要。 辅助技术可以使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 为用户收集完整的文本格式信息，并通过 <xref:System.Windows.Automation.Text.TextUnit> （字符、单词、行或段落）提供编程方式导航和文本选择。
 
@@ -57,7 +57,7 @@ Text 控件是表示屏幕上一段文本的基本元素。
 > [!NOTE]
 > 在某些布局方案中，单个文本行可能会换行。
 
-### <a name="document"></a>Document
+### <a name="document"></a>文档
 
 文档控件能让用户导航并从多个页面的文本上获取的信息。
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Button control type
 - Button control type
 ms.assetid: 057c983a-da83-4c50-86c7-26fe381076a6
-ms.openlocfilehash: d9eef575efb5309fe3df20e2f0ab3e0347105e55
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5087e02db3a5a44ab2e2b97523e793e397a0a914
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441210"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741290"
 ---
 # <a name="ui-automation-support-for-the-button-control-type"></a>对 Button 控件类型的 UI 自动化支持
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74441210"
   
  按钮是用户与之交互来执行某些操作一个对象，如对话框上的“确定” 和“取消” 按钮。 按钮控件是一个用于公开的简单控件，因为它映射到用户想要完成的单个命令。  
   
- 以下几节定义了 Button 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有按钮控件，无论控件是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
+ 以下几节定义了 Button 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有按钮控件，不管 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32 或 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>必需的 UI 自动化树结构  
@@ -29,19 +29,19 @@ ms.locfileid: "74441210"
   
 |控件视图|内容视图|  
 |------------------|------------------|  
-|按钮<br /><br /> -Image （0个或多个）<br />-Text （0个或多个）|按钮|  
+|Button<br /><br /> -Image （0个或多个）<br />-Text （0个或多个）|Button|  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必需的 UI 自动化属性  
  下表列出了其值或定义与实现 Button 控件类型的控件（如按钮控件）尤其相关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅 [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|值|注意|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|{2&gt;值&lt;2}|注释|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>|请参阅注释。|Button 控件通常必须支持快捷键，使最终用户能够快速从键盘执行其所代表的操作。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|请参阅注释。|如果存在边界矩形，则受支持。 如果边界矩形中存在无法单击的点，而你要执行专门的命中测试，则重写并提供可单击的点。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|按钮|此值对于所有 UI 框架均相同。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Button|此值对于所有 UI 框架均相同。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|请参阅注释。|帮助文本可以指示激活按钮的最终结果将是什么。 这通常是通过 ToolTip 展示的相同类型的信息。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Button 控件必须始终为内容。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Button 控件必须始终为控件。|  
@@ -54,7 +54,7 @@ ms.locfileid: "74441210"
 ## <a name="required-ui-automation-control-patterns"></a>必需的 UI 自动化控件模式  
  下表列出需要由所有按钮控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式。 有关控件模式的详细信息，请参阅 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)。  
   
-|控件模式|支持|注意|  
+|控件模式|支持|注释|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|请参阅注释。|所有按钮都应支持 Invoke 控件模式或 Toggle 控件模式。 按钮应用户请求执行命令时，支持调用。 此命令将映射到单个操作，例如剪切、复制、粘贴或删除。|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|请参阅注释。|所有按钮都应支持 Invoke 控件模式或 Toggle 控件模式。 如果按钮可以在最多三个状态之间循环，则支持切换。 这通常被视为特定功能的打开/关闭开关。|  
@@ -64,7 +64,7 @@ ms.locfileid: "74441210"
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
  下表列出需要由所有按钮控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [UI Automation Events Overview](ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|注意|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|注释|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必需|无|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。|必需|无|  

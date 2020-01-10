@@ -5,18 +5,18 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 314526c1164f70e6b261df1a6f11ddce2b5fa240
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: ed5e4f6ab23fe9ae77c94616a668da8accb46d4b
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960077"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741702"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>UI 自动化对标准控件的支持
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
- 本主题包含有关对为 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]和 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]框架所开发的应用程序中标准控件的 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 支持的信息。  
+ 本主题包含有关为 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]、Win32 和 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 框架开发的应用程序中的标准控件 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 支持的信息。  
   
 <a name="Windows_Presentation_Foundation_Controls"></a>   
 ## <a name="windows-presentation-foundation-controls"></a>Windows Presentation Foundation 控件  
@@ -24,7 +24,7 @@ ms.locfileid: "74960077"
   
 <a name="Win32_Controls"></a>   
 ## <a name="win32-controls"></a>Win32 控件  
- 大多数 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控件都通过 UIAutomationClientsideProviders.dll 中的客户端提供程序向 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 公开。 此程序集将自动注册，以用于 UI 自动化客户端应用程序。  
+ 大多数 Win32 控件都通过 Uiautomationclientsideproviders.dll 中的客户端提供程序公开 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]。 此程序集将自动注册，以用于 UI 自动化客户端应用程序。  
   
  仅为*对 comctrl32.dll*版本6中的控件提供完全支持。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "74960077"
 |Button|CheckBox|  
 |ComboBoxEx32|组合框|  
 |组合框|组合框|  
-|Edit|Document|  
+|Edit|文档|  
 |Edit|Edit|  
 |SysLink|超链接|  
 |Static|文本|  
@@ -56,14 +56,14 @@ ms.locfileid: "74960077"
 |#32768|MenuItem|  
 |msctls_progress32|进度条|  
 |RichEdit|Document。 请参阅注释。|  
-|RichEdit20A|Document|  
-|RichEdit20W|Document|  
-|RichEdit50W|Document|  
+|RichEdit20A|文档|  
+|RichEdit20W|文档|  
+|RichEdit50W|文档|  
 |ScrollBar|Slider|  
 |msctls_trackbar32|Slider|  
 |msctls_updown32|Spinner|  
 |msctls_statusbar32|StatusBar|  
-|SysTabControl32|选项卡|  
+|SysTabControl32|Tab|  
 |SysTabControl32|TabItem|  
 |ToolbarWindow32|ToolBar|  
 |ToolbarWindow32|MenuItem|  
@@ -73,7 +73,7 @@ ms.locfileid: "74960077"
 |ToolbarWindow32|Separator|  
 |tooltips_class32|工具提示|  
 |#32774|工具提示|  
-|ReBarWindow32|Toolbar|  
+|ReBarWindow32|ToolBar|  
 |SysTreeView32|树|  
 |SysTreeView32|TreeItem|  
   
@@ -96,7 +96,7 @@ ms.locfileid: "74960077"
 ## <a name="windows-forms-controls"></a>Windows 窗体控件  
  通过 Uiautomationclientsideproviders.dll 中的客户端提供程序 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 公开 Windows 窗体控件。 此程序集将自动注册，以用于 UI 自动化客户端应用程序。  
   
- 通常，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支持作为 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 公共控件的托管包装的 Windows 窗体控件。 支持以下控件。  
+ 通常，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支持作为 Win32 公共控件的托管包装 Windows 窗体控件。 支持以下控件。  
   
 |类名称|  
 |----------------|  
@@ -110,7 +110,7 @@ ms.locfileid: "74960077"
 |GroupBox|  
 |HscrollBar|  
 |ImageList|  
-|Label|  
+|标签|  
 |ListBox|  
 |ListView|  
 |MainMenu/ContextMenu|  
@@ -129,7 +129,7 @@ ms.locfileid: "74960077"
 |TabControl/TabPage|  
 |文本框|  
 |计时器|  
-|Toolbar|  
+|ToolBar|  
 |工具提示|  
 |TrackBar|  
 |TreeView|  
@@ -169,4 +169,4 @@ ms.locfileid: "74960077"
   
 ## <a name="see-also"></a>另请参阅
 
-- [UI 自动化控件类型](ui-automation-control-types.md)
+- [UI Automation Control Types](ui-automation-control-types.md)

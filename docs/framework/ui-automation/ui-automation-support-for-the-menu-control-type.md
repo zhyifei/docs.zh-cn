@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Menu control type
 - Menu control type
 ms.assetid: 016323cb-f800-4938-b77b-2eb25d646090
-ms.openlocfilehash: f09438d9941f2abb49cae8f7542efe84f44e81dc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 24b80aadf2f2d49be18609878751ddc38726a303
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446741"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741622"
 ---
 # <a name="ui-automation-support-for-the-menu-control-type"></a>对 Menu 控件类型的 UI 自动化支持
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74446741"
   
  使用菜单控件，可以对与命令和事件处理程序相关联的元素以分层方式进行组织。 在典型的 Microsoft Windows 应用程序中，菜单栏包含多个菜单按钮（如 "**文件**"、"**编辑**" 和 "**窗口**"），每个菜单按钮都显示一个菜单。 菜单包含一系列菜单项（如“新建”、“打开”和“关闭”），可以通过展开这些菜单项来显示额外的菜单项，或者通过单击它们来执行特定的操作。  
   
- 以下几节定义了 Menu 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有列表控件，无论控件是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
+ 以下几节定义了 Menu 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有列表控件，无论 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32 或 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>必需的 UI 自动化树结构  
@@ -37,7 +37,7 @@ ms.locfileid: "74446741"
 ## <a name="required-ui-automation-properties"></a>必需的 UI 自动化属性  
  下表列出了值或定义与 Menu 控件类型密切相关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅[客户端的 UI 自动化属性](ui-automation-properties-for-clients.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|值|注意|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|{2&gt;值&lt;2}|注释|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|不支持|菜单控件不要求设置 Name 属性。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|不使用典型的菜单控件来准备任何标签。|  
@@ -55,7 +55,7 @@ ms.locfileid: "74446741"
   
  下表列出需要由所有菜单控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [UI Automation Events Overview](ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持/值|注意|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持/值|注释|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.MenuOpenedEvent>|必需|无|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.MenuClosedEvent>|必需|无|  

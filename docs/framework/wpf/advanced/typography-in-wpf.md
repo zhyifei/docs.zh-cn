@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 0ba4e8ff639cdfbbec596da45a6e950fff921974
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 0c98d0e7363e7732f44f2edf238b9cb6d2bf11fb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740717"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740286"
 ---
 # <a name="typography-in-wpf"></a>WPF 中的版式
 本主题介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的主要版式功能。 这些功能包括改进的文本呈现质量和性能、OpenType 版式支持、增强的国际文本、增强的字体支持以及新的文本应用程序编程接口（Api）。  
@@ -33,7 +33,7 @@ ms.locfileid: "73740717"
   
  Pericles OpenType 字体包含其他一些标志符号，它们提供标准字形集的样式备用项。 以下文本显示样式备用字形。  
   
- ![使用 OpenType 样式备用字形的文本](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "使用 OpenType 样式备用字形的文本")  
+ ![使用 OpenType 样式备用字形的文本](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "使用 OpenType 样式备用标志符号的文本")  
   
  花体是使用精美修饰的装饰性字形，通常与书法相关。 以下文本显示 Pescadero 字体的标准和花体字形。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "73740717"
   
 - 字体行为与全局设置（如系统区域设置）无关。  
   
-- 分隔 <xref:System.Windows.FontWeight>、<xref:System.Windows.FontStretch>和 <xref:System.Windows.FontStyle> 类型以便定义 <xref:System.Windows.Media.FontFamily>。 因此其灵活性高于 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 编程（在这种编程环境中，使用斜体和粗体的布尔组合来定义字体系列）。  
+- 分隔 <xref:System.Windows.FontWeight>、<xref:System.Windows.FontStretch>和 <xref:System.Windows.FontStyle> 类型以便定义 <xref:System.Windows.Media.FontFamily>。 这比 Win32 编程提供了更大的灵活性，其中斜体和粗体的布尔组合用于定义字体系列。  
   
 - 在处理书写方向（横向与纵向）时不受字体名称的影响。  
   
@@ -142,13 +142,13 @@ ms.locfileid: "73740717"
 ### <a name="advanced-text-formatting"></a>高级文本格式设置  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文本 Api 的最高级别的功能，你可以通过使用 <xref:System.Windows.Media.TextFormatting.TextFormatter> 对象和 <xref:System.Windows.Media.TextFormatting> 命名空间中的其他类型来创建自定义文本布局。 利用 <xref:System.Windows.Media.TextFormatting.TextFormatter> 和关联的类，您可以实现自定义文本布局，该布局支持您自己定义的字符格式、段落样式、换行符规则和其他适用于国际文本的布局功能。 只有在极少数情况下才需要重写 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文本布局支持的默认实现。 但是，如果要创建文本编辑控件或应用程序，则可能需要非默认的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现。  
   
- 与传统的文本 API 不同，<xref:System.Windows.Media.TextFormatting.TextFormatter> 通过一组回调方法与文本布局客户端进行交互。 它要求客户端在 <xref:System.Windows.Media.TextFormatting.TextSource> 类的实现中提供这些方法。 下图说明了客户端应用程序和 <xref:System.Windows.Media.TextFormatting.TextFormatter> 之间的文本布局交互。  
+ 与传统的文本 API 不同，<xref:System.Windows.Media.TextFormatting.TextFormatter> 通过一组回调方法与文本布局客户端进行交互。 它要求客户端在 <xref:System.Windows.Media.TextFormatting.TextSource> 类的实现中提供这些方法。 下图说明了客户端应用程序和 <xref:System.Windows.Media.TextFormatting.TextFormatter>之间的文本布局交互。  
   
  ![文本布局客户端和 TextFormatter 示意图](./media/typography-in-wpf/text-layout-text-formatter-interaction.png)  
   
  有关创建自定义文本布局的详细信息，请参阅[高级文本格式设置](advanced-text-formatting.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Media.FormattedText>
 - <xref:System.Windows.Media.TextFormatting.TextFormatter>

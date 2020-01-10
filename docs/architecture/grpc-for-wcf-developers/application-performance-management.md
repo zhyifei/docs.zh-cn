@@ -2,12 +2,12 @@
 title: 应用程序性能管理-适用于 WCF 开发人员的 gRPC
 description: ASP.NET Core gRPC 应用程序的日志记录、指标和跟踪。
 ms.date: 09/02/2019
-ms.openlocfilehash: e8ec701af69e8ced674183ce0afa25547713c647
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 98da6c5391f021011e281a57e8f775709fa128ef
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711565"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740971"
 ---
 # <a name="application-performance-management"></a>应用程序性能管理
 
@@ -51,7 +51,7 @@ public class StockData : Stocks.StocksBase
 
 ## <a name="metrics-in-aspnet-core-grpc"></a>ASP.NET Core gRPC 中的指标
 
-.NET Core 运行时提供一组用于发出和观察指标的组件。 其中包括诸如 <xref:System.Diagnostics.Tracing.EventSource> 和 <xref:System.Diagnostics.Tracing.EventCounter> 类的 Api。 这些 Api 可以发出可由外部进程使用的基本数值数据，如[dotnet 全局工具](../../core/diagnostics/dotnet-counters.md)或 Windows 事件跟踪。 有关在自己的代码中使用 `EventCounter` 的详细信息，请参阅[EventCounter 简介](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md)。
+.NET Core 运行时提供一组用于发出和观察指标的组件。 其中包括诸如 <xref:System.Diagnostics.Tracing.EventSource> 和 <xref:System.Diagnostics.Tracing.EventCounter> 类的 Api。 这些 Api 可以发出可由外部进程使用的基本数值数据，如[dotnet 全局工具](../../core/diagnostics/dotnet-counters.md)或 Windows 事件跟踪。 有关在自己的代码中使用 `EventCounter` 的详细信息，请参阅[EventCounter 简介](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md)。
 
 对于更高级的指标和将指标数据写入到更广泛的数据存储区，可以尝试使用称为 "[应用指标](https://www.app-metrics.io)" 的开源项目。 此库套件提供了一组广泛的类型来检测你的代码。 它还提供了用于将指标写入不同类型目标的包，这些目标包括时间序列数据库（如 Prometheus 和 InfluxDB）和[Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)。 [AspNetCore](https://www.nuget.org/packages/App.Metrics.AspNetCore.Mvc/) NuGet 包甚至添加了一组综合的基本指标，这些指标是通过与 ASP.NET Core 框架的集成自动生成的。 项目网站提供了用于通过[Grafana](https://grafana.com/)可视化平台显示这些指标的[模板](https://www.app-metrics.io/samples/grafana/)。
 
@@ -62,7 +62,7 @@ public class StockData : Stocks.StocksBase
 | 度量值类型 | 描述 |
 | ----------- | ----------- |
 | 计数器     | 跟踪发生某些情况的频率，如请求和错误。 |
-| 衡量       | 记录随时间变化的单个值，如活动连接。 |
+| 仪表       | 记录随时间变化的单个值，如活动连接。 |
 | 直方图   | 度量跨任意限制的值的分布。 例如，直方图可以跟踪数据集的大小，计算包含 < 10 个记录的数量、包含的11-100 记录数、包含的101-1000 记录数以及包含的 > 1000 条记录的数量。 |
 | 计数       | 度量事件在不同时间范围内的发生速率。 |
 | 计时器       | 跟踪事件的持续时间以及事件发生的速率（以直方图形式存储）。 |
@@ -120,7 +120,7 @@ public class StockData : Stocks.StocksBase
 
 ### <a name="distributed-tracing-with-diagnosticsource"></a>`DiagnosticSource` 的分布式跟踪
 
-.NET Core 有一个内部模块，该模块适用于分布式跟踪和跨越： [DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide)。 除了提供一种在进程内生成和使用诊断的简单方法，`DiagnosticSource` 模块具有*活动*的概念。 活动实际上是分布式跟踪的实现或跟踪内的跨度。 模块的内部机制负责父子活动（包括分配标识符）。 有关使用 `Activity` 类型的详细信息，请参阅[GitHub 上的活动用户指南](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide)。
+.NET Core 有一个内部模块，该模块适用于分布式跟踪和跨越： [DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide)。 除了提供一种在进程内生成和使用诊断的简单方法，`DiagnosticSource` 模块具有*活动*的概念。 活动实际上是分布式跟踪的实现或跟踪内的跨度。 模块的内部机制负责父子活动（包括分配标识符）。 有关使用 `Activity` 类型的详细信息，请参阅[GitHub 上的活动用户指南](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide)。
 
 由于 `DiagnosticSource` 是核心框架的一部分，因此支持多个核心组件。 其中包括 <xref:System.Net.Http.HttpClient>、Entity Framework Core 和 ASP.NET Core，包括 gRPC 框架中的显式支持。 当 ASP.NET Core 收到请求时，它将检查与[W3C 跟踪上下文](https://www.w3.org/TR/trace-context)标准匹配的一对 HTTP 标头。 如果找到了标头，则将使用标头中的标识值和上下文启动活动。 如果未找到任何标头，则会启动一个活动，其中生成的标识值与标准格式匹配。 在此活动的生存期内，由框架或应用程序代码生成的任何诊断，都可以用 trace 和 span 标识符进行标记。 `HttpClient` 支持通过检查每个请求的当前活动并将跟踪标头自动添加到传出请求，进一步扩展此功能。
 
@@ -131,7 +131,7 @@ ASP.NET Core gRPC 客户端和服务器库包括对 `DiagnosticSource` 和 `Acti
 
 ### <a name="add-your-own-diagnosticsource-and-activity"></a>添加自己的 `DiagnosticSource` 和 `Activity`
 
-若要在应用程序代码中添加自己的诊断或创建显式范围，请参阅[DiagnosticSource 用户指南](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#instrumenting-with-diagnosticsourcediagnosticlistener)和[活动用户指南](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-usage)。
+若要在应用程序代码中添加自己的诊断或创建显式范围，请参阅[DiagnosticSource 用户指南](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#instrumenting-with-diagnosticsourcediagnosticlistener)和[活动用户指南](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-usage)。
 
 ### <a name="store-distributed-trace-data"></a>存储分布式跟踪数据
 

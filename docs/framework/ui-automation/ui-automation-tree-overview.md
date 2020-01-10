@@ -5,12 +5,12 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: d1edbb82e0d5d6a6275c09646fbf8e54b4ff90df
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: f541aab7ed5aae48b943ba5699366fe6a3f21a4c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800291"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741393"
 ---
 # <a name="ui-automation-tree-overview"></a>UI 自动化树概述
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "74800291"
   
 <a name="uiautomation_raw_view"></a>   
 ### <a name="raw-view"></a>原始视图  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的原始视图是 <xref:System.Windows.Automation.AutomationElement> 对象的完整树，该树的根元素是桌面。 原始视图完全遵循应用程序的本机编程结构，因此是最详细的可用视图。 原始视图还是其他树视图的生成基础。 由于原始视图取决于基础 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 框架，因此 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 按钮的原始视图将与 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 按钮的原始视图不同。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的原始视图是 <xref:System.Windows.Automation.AutomationElement> 对象的完整树，该树的根元素是桌面。 原始视图完全遵循应用程序的本机编程结构，因此是最详细的可用视图。 原始视图还是其他树视图的生成基础。 由于此视图依赖于基础 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 框架，因此 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 按钮的原始视图将具有不同于 Win32 按钮的原始视图。  
   
  原始视图是通过以下方法来获取的：在不指定属性的情况下搜索元素，或者使用 <xref:System.Windows.Automation.TreeWalker.RawViewWalker> 在树中导航。  
   

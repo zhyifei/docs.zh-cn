@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 43a67a8dd73931172a6fa729c054ad494b29134e
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: a07a9c9bf6b0bf1e2f8ce56653a90a3aad3c4b2f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800299"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741373"
 ---
 # <a name="use-the-automationid-property"></a>使用 AutomationID 属性
 > [!NOTE]
@@ -31,7 +31,7 @@ ms.locfileid: "74800299"
  已确定有三个主要的 UI 自动化客户端应用程序方案需要使用 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 才能在搜索元素时获得准确一致的结果。  
   
 > [!NOTE]
-> 控件视图中（除顶级应用程序窗口外）的所有 UI 自动化元素、派生自没有 ID 或 x:Uid 的<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 控件的 UI 自动化元素以及派生自没有控件 ID 的 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 控件的 UI 自动化元素都支持 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 。  
+> 除了顶级应用程序窗口外，控件视图中的所有 UI 自动化元素、派生自没有 ID 或 X：Uid 的 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 控件的 ui 自动化元素以及派生自没有控件 ID 的 Win32 控件的 UI 自动化元素都支持 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>。  
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>使用唯一且可发现的 AutomationID 在 UI 自动化树中查找特定元素  
   

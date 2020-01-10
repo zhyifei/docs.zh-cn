@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Radio Button control type
 - RadioButton control type
 ms.assetid: 87170464-7857-41f1-bcf7-bb41be31cb53
-ms.openlocfilehash: b5a64c987fd8d7816e2327e048b90ce20fa61c53
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 416d6d6b9d8e7fbd3b3bb5483ddd8dc22380166c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800313"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741560"
 ---
 # <a name="ui-automation-support-for-the-radiobutton-control-type"></a>对 RadioButton 控件类型的 UI 自动化支持
 > [!NOTE]
@@ -21,11 +21,11 @@ ms.locfileid: "74800313"
   
  单选按钮包含一个圆形按钮和应用程序定义的文本（标签）、一个图标或者一个表示用户可以通过选择按钮进行选择的位图。 应用程序通常使用分组框中的单选按钮，以允许用户从一组相关，但相互排斥的选项中进行选择。 例如，应用程序可能会提供一组单选按钮，用户可以从中选择一个客户端区域中所选文本的格式首选项。 用户可以通过选择相应的单选按钮来选择左对齐、右对齐或居中的格式。 通常情况下，用户一次只可以从一组单选按钮中选择一项。  
   
- 以下几节定义了 RadioButton 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有列表控件，无论控件是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
+ 以下几节定义了 RadioButton 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有列表控件，无论 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32 或 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>必需的 UI 自动化树结构  
- 下表描述了与单选按钮控件有关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图，以及每个视图中可包含的内容。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Properties Overview](ui-automation-tree-overview.md)。  
+ 下表描述了与单选按钮控件有关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图，以及每个视图中可包含的内容。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Tree Overview](ui-automation-tree-overview.md)。  
   
 |控件视图|内容视图|  
 |------------------|------------------|  
@@ -57,18 +57,18 @@ ms.locfileid: "74800313"
 |控件模式/控件模式属性|支持/值|注释|  
 |-----------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|是|所有单选按钮控件必须支持选择项模式才能使其被选。|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|请参阅注释。|`SelectionContainerProperty` 必须始终是已完成状态，以便 UI 自动化客户端可以确定特定上下文中还有什么其他的单选按钮关联到另一个按钮。  对于单选按钮的 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 版本，不支持此属性，因为无法从旧框架中获取此信息。|  
-|<xref:System.Windows.Automation.Provider.IToggleProvider>|从不|单选按钮设置完成之后将无法循环切换其状态。  单选按钮决不能支持此模式。|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|请参阅注释。|`SelectionContainerProperty` 必须始终是已完成状态，以便 UI 自动化客户端可以确定特定上下文中还有什么其他的单选按钮关联到另一个按钮。  对于该单选按钮的 Win32 版本，不支持此属性，因为无法从旧框架中获取此信息。|  
+|<xref:System.Windows.Automation.Provider.IToggleProvider>|Never|单选按钮设置完成之后将无法循环切换其状态。  单选按钮决不能支持此模式。|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
- 下表列出了需要由所有单选按钮控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](ui-automation-events-overview.md)。  
+ 下表列出了需要由所有单选按钮控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [UI Automation Events Overview](ui-automation-events-overview.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|注释|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|必需|无|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|必需|无|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 属性更改事件。|从不|无|  
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 属性更改事件。|Never|无|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。|必需|无|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 属性更改事件。|必需|无|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性更改事件。|必需|无|  

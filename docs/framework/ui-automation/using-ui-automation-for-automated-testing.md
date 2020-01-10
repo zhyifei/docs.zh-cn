@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 2da0f994e809ff0ea9cd3165cd788ac467a87aef
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 59c4076712823faa1602448653680a31b8cd8c69
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800783"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741080"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>使用 UI 自动化进行自动化测试
 > [!NOTE]
@@ -37,7 +37,7 @@ ms.locfileid: "74800783"
 > 对于其他辅助功能模型，开发人员必须直接从各个按钮、菜单或其他控件收集信息。 不便之处在于，每个控件类型都具有数十个次要变体。 也就是说，尽管某个按钮的十种变体全都以相同的方式工作且执行相同的功能，也必须将它们全部视为唯一控件。 无法知道这些控件在功能上是否相同。 所开发的控件模式可以表示这些常见的控件行为。 有关详细信息，请参阅 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)。  
   
 ### <a name="implementing-ui-automation"></a>实现 UI 自动化  
- 如前所述，如果没有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]提供的统一模型，则测试工具和开发人员必须了解特定于框架的信息才能公开该框架中控件的属性和行为。 由于在 Windows 操作系统中，在任何时候都可以有多个不同的 UI 框架，包括 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]、[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]和 Windows Presentation Foundation （WPF），因此，使用看似相似的控件测试多个应用程序可能是一项艰巨的任务。 例如，下表概述了检索与按钮控件相关联的名称（或文本）所需的框架特定属性名，并显示了单个等效的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性。  
+ 如前所述，如果没有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]提供的统一模型，则测试工具和开发人员必须了解特定于框架的信息才能公开该框架中控件的属性和行为。 由于在 Windows 操作系统（包括 Win32、[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]和 Windows Presentation Foundation （WPF））中可以随时存在多个不同的 UI 框架，因此使用看似相似的控件测试多个应用程序可能是一项艰巨的任务。 例如，下表概述了检索与按钮控件相关联的名称（或文本）所需的框架特定属性名，并显示了单个等效的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性。  
   
 |UI 自动化控件类型|UI 框架|特定于框架的属性|UI 自动化属性|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  
@@ -86,7 +86,7 @@ ms.locfileid: "74800783"
   
 |||  
 |-|-|  
-|添加 UI 自动化引用。|下面列出了 UI 自动化客户端所必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dll。<br /><br /> -Uiautomationclient.dll 提供对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 客户端 Api 的访问。<br />-UIAutomationClientSideProvider 提供自动 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控件的功能。 请参阅 [UI Automation Support for Standard Controls](ui-automation-support-for-standard-controls.md)。<br />-Uiautomationtypes.dll 提供对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中定义的特定类型的访问。|  
+|添加 UI 自动化引用。|下面列出了 UI 自动化客户端所必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dll。<br /><br /> -Uiautomationclient.dll 提供对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 客户端 Api 的访问。<br />-UIAutomationClientSideProvider 提供自动执行 Win32 控件的功能。 请参阅 [UI Automation Support for Standard Controls](ui-automation-support-for-standard-controls.md)。<br />-Uiautomationtypes.dll 提供对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中定义的特定类型的访问。|  
 |添加 <xref:System.Windows.Automation> 命名空间。|此命名空间包含 UI 自动化客户端使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的功能（文本处理除外）所需的一切内容。|  
 |添加 <xref:System.Windows.Automation.Text> 命名空间。|此命名空间包含 UI 自动化客户端使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 文本处理的功能所需的一切内容。|  
 |查找相关控件|自动测试脚本可以查找表示自动化树中相关控件的 UI 自动化元素。<br /><br /> 可使用多种方法来通过代码获取 UI 自动化元素。<br /><br /> -使用 <xref:System.Windows.Automation.Condition> 语句查询 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]。 这通常是使用中性语言 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 的位置。 **注意：** 可使用可对控件的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性进行列举的工具（如 cluster.exe）获取 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>。 <br /><br /> -使用 <xref:System.Windows.Automation.TreeWalker> 类遍历整个 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树或其中的一个子集。<br />-跟踪焦点。<br />-使用控件的 hWnd。<br />-使用屏幕位置，例如鼠标光标的位置。<br /><br /> 请参见 [Obtaining UI Automation Elements](obtaining-ui-automation-elements.md)|  

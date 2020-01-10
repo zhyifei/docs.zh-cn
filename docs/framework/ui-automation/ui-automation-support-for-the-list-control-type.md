@@ -6,12 +6,12 @@ helpviewer_keywords:
 - List control type
 - UI Automation, List control type
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
-ms.openlocfilehash: c5ea011651537aa5836eeebe217239234fec40ae
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d870452348f8837ec6773fc066ed52844f7acccd
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446730"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741606"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>对 List 控件类型的 UI 自动化支持
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74446730"
   
  List 控件类型提供一种方法来组织平面组或项组并允许用户选择一个或多个这些项。 List 控件类型对它可能包含哪些类型的子元素具有宽松的限制。 这使 UI 自动化提供程序可以支持选择容器中的已知元素。  
   
- 以下各节中的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 需求适用于实现 List 控件类型的所有控件，无论其为 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)][!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 或 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。 List 容器控件是实现 List 控件类型的控件示例。  
+ 以下各节中的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于实现 List 控件类型的所有控件，无论 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32 还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。 List 容器控件是实现 List 控件类型的控件示例。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>必需的 UI 自动化树结构  
@@ -54,7 +54,7 @@ ms.locfileid: "74446730"
 ## <a name="required-ui-automation-properties"></a>必需的 UI 自动化属性  
  下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与列表控件尤其相关。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅[客户端的 UI 自动化属性](ui-automation-properties-for-clients.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|值|注意|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|{2&gt;值&lt;2}|注释|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  
@@ -73,7 +73,7 @@ ms.locfileid: "74446730"
 ## <a name="required-ui-automation-control-patterns-and-properties"></a>必需的 UI 自动化控件模式和属性  
  下表列出需要由列表控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式。 有关控件模式的详细信息，请参阅 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)。  
   
-|控件模式/模式属性|支持/值|注意|  
+|控件模式/模式属性|支持/值|注释|  
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|必需|当选定状态维持在控件中包含的项之间时，支持对 List 控件类型的所有控件必须实现 `ISelectionProvider` 。 如果容器内的项不可选，则必须使用 Group 控件类型。|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|视情况而定|List 控件并不总是要求选择一个项。|  
@@ -81,13 +81,13 @@ ms.locfileid: "74446730"
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|视情况而定|如果容器中的项可滚动，则实现此控件模式。|  
 |<xref:System.Windows.Automation.Provider.IGridProvider>|视情况而定|当网格导航需要在项上以逐个项的方式可用，则实现此模式。|  
 |<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|视情况而定|如果该控件可以支持容器中的项的多个视图，则实现此控件模式。|  
-|<xref:System.Windows.Automation.Provider.ITableProvider>|从不|List 控件类型从不支持`ITableProvider` 。 如果控件应该支持此控件模式，该该控件应基于的数据网格控件类型。|  
+|<xref:System.Windows.Automation.Provider.ITableProvider>|Never|List 控件类型从不支持`ITableProvider` 。 如果控件应该支持此控件模式，该该控件应基于的数据网格控件类型。|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
  下表列出需要由所有文本控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [UI Automation Events Overview](ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持/值|注意|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持/值|注释|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|视情况而定|无|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|视情况而定|无|  

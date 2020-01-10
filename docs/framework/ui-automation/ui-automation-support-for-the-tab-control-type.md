@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Tab control type
 - control types, Tab
 ms.assetid: f8be2732-836d-4e4d-85e2-73aa39479bf4
-ms.openlocfilehash: 5816bf99b89d314f8e0e1ca7a6d30d1c839cb9ab
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 45a736d158c7b0cace19f6a47913bce428b8574c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800214"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741113"
 ---
 # <a name="ui-automation-support-for-the-tab-control-type"></a>对 Tab 控件类型的 UI 自动化支持
 > [!NOTE]
@@ -21,21 +21,21 @@ ms.locfileid: "74800214"
   
  选项卡控件类似于笔记本中的分隔条或文件柜中的标签。 通过使用选项卡控件，应用程序可以为窗口或对话框的相同区域定义多个页。  
   
- 以下几节定义了 Tab 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有选项卡控件，无论控件是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
+ 以下几节定义了 Tab 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有选项卡控件，无论 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32 还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>必需的 UI 自动化树结构  
- 下表描述了与选项卡控件有关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图，以及每个视图中可包含的内容。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Properties Overview](ui-automation-tree-overview.md)。  
+ 下表描述了与选项卡控件有关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图，以及每个视图中可包含的内容。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Tree Overview](ui-automation-tree-overview.md)。  
   
 |控件视图|内容视图|  
 |------------------|------------------|  
-|选项卡<br /><br /> <ul><li>TabItem（1 个或多个）</li><li>ScrollBar（0 个或 1 个）<br /><br /> <ul><li>Button（0 个或 2 个）</li></ul></li></ul>|选项卡<br /><br /> -TabItem （1个或多个）|  
+|Tab<br /><br /> <ul><li>TabItem（1 个或多个）</li><li>ScrollBar（0 个或 1 个）<br /><br /> <ul><li>Button（0 个或 2 个）</li></ul></li></ul>|Tab<br /><br /> -TabItem （1个或多个）|  
   
  选项卡控件具有基于 Tab Item 控件类型的子 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 元素。 在对选项卡项进行分组（如在 Microsoft Office 2007 应用程序中）时，Tab 控件类型也可以承载用于分组选项卡项的 Groups 控件类型，如下面的树结构所示。  
   
 |控件视图|内容视图|  
 |------------------|------------------|  
-|选项卡<br /><br /> <ul><li>TabItem（1 个或多个）</li><li>Group（0 个或多个）<br /><br /> <ul><li>TabItem（0 个或多个）</li></ul></li><li>ScrollBar（0 个或多个）<br /><br /> <ul><li>Button（0 个或 2 个）</li></ul></li></ul>|选项卡<br /><br /> <ul><li>TabItem（1 个或多个）</li><li>Group（0 个或多个）<br /><br /> <ul><li>TabItem（0 个或多个）</li></ul></li></ul>|  
+|Tab<br /><br /> <ul><li>TabItem（1 个或多个）</li><li>Group（0 个或多个）<br /><br /> <ul><li>TabItem（0 个或多个）</li></ul></li><li>ScrollBar（0 个或多个）<br /><br /> <ul><li>Button（0 个或 2 个）</li></ul></li></ul>|Tab<br /><br /> <ul><li>TabItem（1 个或多个）</li><li>Group（0 个或多个）<br /><br /> <ul><li>TabItem（0 个或多个）</li></ul></li></ul>|  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必需的 UI 自动化属性  
@@ -49,7 +49,7 @@ ms.locfileid: "74800214"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|请参阅注释。|选项卡控件几乎不需要 Name 属性。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|否|选项卡控件没有可单击的点。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|请参阅注释。|选项卡控件通常具有通过此属性公开的静态文本标签。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|选项卡|此值对于所有 UI 框架均相同。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Tab|此值对于所有 UI 框架均相同。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|“选项卡”|与 Tab 控件类型相对应的本地化字符串。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|True|Tab 控件类型必须能够接收键盘焦点。 通常， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 客户端将在选项卡控件上调用 SetFocus，它的一个项会将键盘焦点转交到选项卡控件。 某些选项卡容器可以接受焦点，但不会将焦点设置为它的一个项。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|选项卡控件始终包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的内容视图中。|  
@@ -69,7 +69,7 @@ ms.locfileid: "74800214"
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
- 下表列出需要由所有选项卡控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](ui-automation-events-overview.md)。  
+ 下表列出需要由所有选项卡控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [UI Automation Events Overview](ui-automation-events-overview.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|注释|  
 |---------------------------------------------------------------------------------|-------------|-----------|  

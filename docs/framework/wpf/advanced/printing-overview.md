@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 22d363fde369bc7e84a9354d27f57af356f30ebb
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 3f99b0e93e6b16ac66f6869c284c1119ddfc3751
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636453"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740302"
 ---
 # <a name="printing-overview"></a>打印概述
 使用 Microsoft .NET 框架，使用 Windows Presentation Foundation （WPF）的应用程序开发人员具有丰富的一组新的打印和打印系统管理 Api。 在 Windows Vista 中，某些打印系统增强功能还可供开发人员使用非托管代码创建 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 应用程序和开发人员使用。 这一新功能的核心是新的 XML 纸张规范（XPS）文件格式和 XPS 打印路径。  
@@ -47,7 +47,7 @@ ms.locfileid: "75636453"
   
 - 对高级颜色配置文件的本机支持（包括 32 位/通道 (bpc)、CMYK、已命名的颜色、n 墨迹）以及对透明和渐变的本机支持。  
   
-- 提高了 .NET Framework 和基于 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 的应用程序的打印性能。  
+- 提高了 .NET Framework 和基于 Win32 的应用程序的打印性能。  
   
 - 行业标准 XPS 格式。  
   
@@ -60,9 +60,9 @@ ms.locfileid: "75636453"
 - 可扩展筛选器管道。 XPS 打印机驱动程序（XPSDrv）筛选器管道设计用于启用 XPS 文档的直接和可缩放打印。 有关详细信息，请参阅 [XPSDrv 打印机驱动程序](/windows-hardware/drivers/print/xpsdrv-printer-drivers)。 
   
 ### <a name="print-path-architecture"></a>打印路径体系结构  
- 尽管 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 和 .NET Framework 应用程序都支持 XPS，[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 和 Windows 窗体应用程序使用 GDI 进行 XPS 转换，以便为 XPS 打印机驱动程序（XPSDrv）创建 XPS 格式的内容。 这些应用程序不是使用 XPS 打印路径所必需的，并且可以继续使用基于增强型图元文件（EMF）的打印。 但是，大多数 XPS 功能和增强功能仅适用于面向 XPS 打印路径的应用程序。  
+ 尽管 Win32 和 .NET Framework 应用程序都支持 XPS，但 Win32 和 Windows 窗体应用程序都使用 GDI 进行 XPS 转换，以便为 XPS 打印机驱动程序（XPSDrv）创建 XPS 格式的内容。 这些应用程序不是使用 XPS 打印路径所必需的，并且可以继续使用基于增强型图元文件（EMF）的打印。 但是，大多数 XPS 功能和增强功能仅适用于面向 XPS 打印路径的应用程序。  
   
- 若要通过 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 和 Windows 窗体应用程序启用基于 XPSDrv 的打印机，XPS 打印机驱动程序（XPSDrv）支持将 GDI 转换为 XPS 格式。 XPSDrv 模型还提供了用于 XPS 到 GDI 格式的转换器，以便 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 应用程序可以打印 XPS 文档。 对于 WPF 应用程序，每当写入操作的目标打印队列没有 XPSDrv 驱动程序时，将由 <xref:System.Windows.Xps.XpsDocumentWriter> 类的 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 和 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 方法自动完成 XPS 到 GDI 格式的转换。 （Windows 窗体应用程序不能打印 XPS 文档。）  
+ 为了使 Win32 和 Windows 窗体应用程序能够使用基于 XPSDrv 的打印机，XPS 打印机驱动程序（XPSDrv）支持将 GDI 转换为 XPS 格式。 XPSDrv 模型还提供了用于 XPS 到 GDI 格式的转换器，以便 Win32 应用程序可以打印 XPS 文档。 对于 WPF 应用程序，每当写入操作的目标打印队列没有 XPSDrv 驱动程序时，将由 <xref:System.Windows.Xps.XpsDocumentWriter> 类的 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 和 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 方法自动完成 XPS 到 GDI 格式的转换。 （Windows 窗体应用程序不能打印 XPS 文档。）  
   
  下图描述了打印子系统，并定义了 Microsoft 提供的部分以及由软件和硬件供应商定义的部分：  
   
@@ -106,7 +106,7 @@ ms.locfileid: "75636453"
   
 <a name="GDI_Print_Path_intro"></a>   
 ## <a name="gdi-print-path"></a>GDI 打印路径  
- 虽然 WPF 应用程序以本机方式支持 XPS 打印路径，但 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 和 Windows 窗体应用程序也可以利用某些 XPS 功能。 XPS 打印机驱动程序（XPSDrv）可以将基于 GDI 的输出转换为 XPS 格式。 对于高级方案，支持使用[MICROSOFT XPS 文档转换器（MXDC）](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)对内容进行自定义转换。 同样，WPF 应用程序还可以通过调用 <xref:System.Windows.Xps.XpsDocumentWriter> 类的 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 或 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 方法之一，并指定非 XpsDrv 打印机作为目标打印队列来输出到 GDI 打印路径。  
+ 虽然 WPF 应用程序以本机方式支持 XPS 打印路径，但 Win32 和 Windows 窗体应用程序也可以利用某些 XPS 功能。 XPS 打印机驱动程序（XPSDrv）可以将基于 GDI 的输出转换为 XPS 格式。 对于高级方案，支持使用[MICROSOFT XPS 文档转换器（MXDC）](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)对内容进行自定义转换。 同样，WPF 应用程序还可以通过调用 <xref:System.Windows.Xps.XpsDocumentWriter> 类的 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 或 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 方法之一，并指定非 XpsDrv 打印机作为目标打印队列来输出到 GDI 打印路径。  
 
 对于不需要 XPS 功能或支持的应用程序，当前的 GDI 打印路径保持不变。  
   

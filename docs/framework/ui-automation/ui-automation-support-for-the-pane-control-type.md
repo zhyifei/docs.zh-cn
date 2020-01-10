@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Pane control type
 - control types, Pane
 ms.assetid: 79761191-4449-4630-899c-9cbdb8867d3f
-ms.openlocfilehash: fcba014a1ff13204688ce176a5efcb5fecb58b8f
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 0a445d0631fe6a24d8e9b5cb21cd78f260465486
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800342"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741605"
 ---
 # <a name="ui-automation-support-for-the-pane-control-type"></a>对 Pane 控件类型的 UI 自动化支持
 > [!NOTE]
@@ -21,11 +21,11 @@ ms.locfileid: "74800342"
   
  窗格控件类型用于表示框架或文档窗口中的对象。 用户可以在窗格控件之间以及当前窗格的内容中进行导航，但不能在不同窗格的项之间导航。 因此，窗格控件表示低于窗口或文档，但高于单个控件的分组级别。 用户通过按 TAB、F6、或 CTRL + TAB 在窗格间导航，具体取决于上下文。 窗格控件类型没有要求特定的键盘导航。  
   
- 以下几节定义了窗格控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有列表控件，无论控件是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
+ 以下几节定义了窗格控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有列表控件，无论 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32 或 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>必需的 UI 自动化树结构  
- 下表描述了与窗格控件有关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图，以及每个视图中可包含的内容。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Properties Overview](ui-automation-tree-overview.md)。  
+ 下表描述了与窗格控件有关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图，以及每个视图中可包含的内容。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Tree Overview](ui-automation-tree-overview.md)。  
   
 |控件视图|内容视图|  
 |------------------|------------------|  
@@ -57,18 +57,18 @@ ms.locfileid: "74800342"
 |控件模式|支持|注释|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider>|视情况而定|如果窗格控件可以移动、调整大小或在屏幕上旋转，则实现此控件模式。|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider>|从不|如果你需要实现此控件模式，则你的控件应基于 <xref:System.Windows.Automation.ControlType.Window> 控件类型。|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider>|Never|如果你需要实现此控件模式，则你的控件应基于 <xref:System.Windows.Automation.ControlType.Window> 控件类型。|  
 |<xref:System.Windows.Automation.Provider.IDockProvider>|视情况而定|如果窗格控件可以停靠，则实现此控件模式。|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|视情况而定|如果窗格控件可以滚动，则实现此控件模式。|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
- 下表列出需要由所有窗格控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](ui-automation-events-overview.md)。  
+ 下表列出需要由所有窗格控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [UI Automation Events Overview](ui-automation-events-overview.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持/值|注释|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent>|从不|无|  
-|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowOpenedEvent>|从不|无|  
+|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent>|Never|无|  
+|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowOpenedEvent>|Never|无|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AsyncContentLoadedEvent>|必需|无|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。|必需|无|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 属性更改事件。|必需|无|  
@@ -79,7 +79,7 @@ ms.locfileid: "74800342"
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 属性更改事件。|视情况而定|无|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 属性更改事件。|视情况而定|无|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 属性更改事件。|视情况而定|无|  
-|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowVisualStateProperty> 属性更改事件。|从不|无|  
+|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowVisualStateProperty> 属性更改事件。|Never|无|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必需|无|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必需|无|  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 385ce8d263991361512371dcacff52fcf0bbe738
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 19fb15a6310eba19792d7bd0744c2ae87f47c6fa
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740947"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740420"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF 中的双向功能概述
 
@@ -38,7 +38,7 @@ ms.locfileid: "73740947"
 
 ![说明不同流方向的图形。](./media/bidirectional-features-in-wpf-overview/left-right-right-left.png)
 
-[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 树中的元素将从其容器继承 <xref:System.Windows.FrameworkElement.FlowDirection%2A>。 在下面的示例中，<xref:System.Windows.Controls.TextBlock> 在 <xref:System.Windows.Controls.Grid> 中，后者驻留在 <xref:System.Windows.Window> 中。 设置 <xref:System.Windows.Window> 的 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 意味着也将其设置为 <xref:System.Windows.Controls.Grid> 和 <xref:System.Windows.Controls.TextBlock>。
+[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 树中的元素将从其容器继承 <xref:System.Windows.FrameworkElement.FlowDirection%2A>。 在下面的示例中，<xref:System.Windows.Controls.TextBlock> 在 <xref:System.Windows.Controls.Grid>中，后者驻留在 <xref:System.Windows.Window>中。 设置 <xref:System.Windows.Window> 的 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 意味着也将其设置为 <xref:System.Windows.Controls.Grid> 和 <xref:System.Windows.Controls.TextBlock>。
 
 下面的示例演示如何设置 <xref:System.Windows.FrameworkElement.FlowDirection%2A>。
 
@@ -54,7 +54,7 @@ ms.locfileid: "73740947"
 
 ## <a name="flowdocument"></a>FlowDocument
 
-许多开发平台（如 HTML、[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 和 Java）都为双向内容开发提供特殊支持。 标记语言（如 HTML）向内容编写人员提供必要的标记，以在任何所需方向显示文本，例如 HTML 4.0 标记、以 "rtl" 或 "ltr" 作为值的 "dir"。 此标记类似于 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 属性，但 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 属性的工作方式更高级，可用于布局文本内容并可用于文本以外的内容。
+许多开发平台（如 HTML、Win32 和 Java）都为双向内容开发提供特殊支持。 标记语言（如 HTML）向内容编写人员提供必要的标记，以在任何所需方向显示文本，例如 HTML 4.0 标记、以 "rtl" 或 "ltr" 作为值的 "dir"。 此标记类似于 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 属性，但 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 属性的工作方式更高级，可用于布局文本内容并可用于文本以外的内容。
 
 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中，<xref:System.Windows.Documents.FlowDocument> 是一种通用的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素，它可以托管文本、表、图像和其他元素的组合。 以下各节中的示例均使用此元素。
 
@@ -64,7 +64,7 @@ ms.locfileid: "73740947"
 
 ![使用 Span 元素阐释的图形。](./media/bidirectional-features-in-wpf-overview/flow-direction-span-element.png "FlowDocument")
 
-因为文本是 <xref:System.Windows.FlowDirection.RightToLeft> 的，所以所有特殊字符（如 "\\"）都将文本从右到左的顺序分开。 这会导致链接不按正确的顺序显示，因此，若要解决此问题，必须嵌入文本以保持单独 <xref:System.Windows.Documents.Run> 流动 <xref:System.Windows.FlowDirection.LeftToRight>。 若要解决此问题，一种更好的方法是将不常使用的英语文本嵌入更大的阿拉伯语 <xref:System.Windows.Documents.Span>，而不是为每种语言都单独 <xref:System.Windows.Documents.Run>。
+因为文本是 <xref:System.Windows.FlowDirection.RightToLeft>的，所以所有特殊字符（如 "\\"）都将文本从右到左的顺序分开。 这会导致链接不按正确的顺序显示，因此，若要解决此问题，必须嵌入文本以保持单独 <xref:System.Windows.Documents.Run> 流动 <xref:System.Windows.FlowDirection.LeftToRight>。 若要解决此问题，一种更好的方法是将不常使用的英语文本嵌入更大的阿拉伯语 <xref:System.Windows.Documents.Span>，而不是为每种语言都单独 <xref:System.Windows.Documents.Run>。
 
 下图通过使用在 Span 元素中嵌入的 Run 元素说明了这一点：
 
@@ -78,7 +78,7 @@ ms.locfileid: "73740947"
 
 ## <a name="span-elements"></a>Span 元素
 
-<xref:System.Windows.Documents.Span> 元素作为具有不同流方向的文本之间的边界分隔符。  即使 <xref:System.Windows.Documents.Span> 具有相同流方向的元素也被视为具有不同的双向作用域，这意味着 <xref:System.Windows.Documents.Span> 元素在容器的 <xref:System.Windows.FlowDirection> 中排序，仅 <xref:System.Windows.Documents.Span> 元素中的内容遵循 <xref:System.Windows.FlowDirection> 的 <xref:System.Windows.Documents.Span>.
+<xref:System.Windows.Documents.Span> 元素作为具有不同流方向的文本之间的边界分隔符。  即使 <xref:System.Windows.Documents.Span> 具有相同流方向的元素也被视为具有不同的双向作用域，这意味着 <xref:System.Windows.Documents.Span> 元素在容器的 <xref:System.Windows.FlowDirection>中排序，只有 <xref:System.Windows.Documents.Span> 元素中的内容才遵循 <xref:System.Windows.FlowDirection> <xref:System.Windows.Documents.Span>。
 
 下图显示了多个 <xref:System.Windows.Controls.TextBlock> 元素的流方向。
 
@@ -88,7 +88,7 @@ ms.locfileid: "73740947"
 
 [!code-xaml[Span#Span](~/samples/snippets/csharp/VS_Snippets_Wpf/Span/CS/Window1.xaml#span)]
 
-在示例中的 <xref:System.Windows.Controls.TextBlock> 元素中，<xref:System.Windows.Documents.Span> 元素根据其父元素的 <xref:System.Windows.FlowDirection> 进行布局，而每个 <xref:System.Windows.Documents.Span> 元素中的文本将根据其自己的 <xref:System.Windows.FlowDirection> 流动。 这适用于拉丁语和阿拉伯语，也适用于任何其他语言。
+在示例中的 <xref:System.Windows.Controls.TextBlock> 元素中，<xref:System.Windows.Documents.Span> 元素根据其父元素的 <xref:System.Windows.FlowDirection> 进行布局，而每个 <xref:System.Windows.Documents.Span> 元素中的文本将根据其自己的 <xref:System.Windows.FlowDirection>流动。 这适用于拉丁语和阿拉伯语，也适用于任何其他语言。
 
 ### <a name="adding-xmllang"></a>添加 xml:lang
 
@@ -120,11 +120,11 @@ XAML 元素可以包含用于定义每个元素语言的 XML 特性（`xml:lang`
 
 将 <xref:System.Windows.FlowDirection> 设置为 "<xref:System.Windows.FlowDirection.RightToLeft>" 后，不仅 <xref:System.Windows.Controls.ToolBar> 按钮按从右到左的顺序排列，甚至 <xref:System.Windows.Media.LinearGradientBrush> popup 其偏移量（从右到左）。
 
-下图显示了 <xref:System.Windows.Media.LinearGradientBrush> 的校准。
+下图显示了 <xref:System.Windows.Media.LinearGradientBrush>的校准。
 
 ![显示具有从右到左渐变的工具栏的图形。](./media/bidirectional-features-in-wpf-overview/toolbar-right-left-gradient.png)
 
-下面的示例将绘制一个 <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.Controls.ToolBar>。 （若要将其从左到右绘制，请删除 <xref:System.Windows.Controls.ToolBar> 上的 <xref:System.Windows.FlowDirection> 属性。
+下面的示例将绘制一个 <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.Controls.ToolBar>。 （若要将其从左到右绘制，请删除 <xref:System.Windows.Controls.ToolBar>上的 <xref:System.Windows.FlowDirection> 属性。
 
 [!code-xaml[Gradient#Gradient](~/samples/snippets/csharp/VS_Snippets_Wpf/Gradient/CS/Window1.xaml#gradient)]
 
@@ -147,18 +147,18 @@ XAML 元素可以包含用于定义每个元素语言的 XML 特性（`xml:lang`
 下面的示例演示 <xref:System.Windows.Controls.Image> 无法从包含它的 <xref:System.Windows.Controls.StackPanel> 继承 <xref:System.Windows.FlowDirection>。
 
 > [!NOTE]
-> C：\ 上必须有一个名为**ms_logo**的文件运行此示例的驱动器。
+> C：\ 上必须有一个名为**ms_logo .jpg**的文件运行此示例的驱动器。
 
 [!code-xaml[Image#Image](~/samples/snippets/csharp/VS_Snippets_Wpf/Image/CS/Window1.xaml#image)]
 
 > [!NOTE]
-> 下载文件中包含一个**ms_logo**文件。 该代码假定 .jpg 文件不在项目中，而是位于 C:\ 驱动器中的某个位置。 必须将 .jpg 从项目文件复制到 C:\ 驱动器或更改代码才能在项目内查找该文件。 若要执行此更改 `Source="file://c:/ms_logo.jpg"` `Source="ms_logo.jpg"`。
+> 下载文件中包含**ms_logo .jpg**文件。 该代码假定 .jpg 文件不在项目中，而是位于 C:\ 驱动器中的某个位置。 必须将 .jpg 从项目文件复制到 C:\ 驱动器或更改代码才能在项目内查找该文件。 若要执行此更改 `Source="file://c:/ms_logo.jpg"` `Source="ms_logo.jpg"`。
 
 **Path**
 
-除了 <xref:System.Windows.Controls.Image> 之外，还 <xref:System.Windows.Shapes.Path> 另一个有趣的元素。 Path 是可用于绘制一系列连接的直线和曲线的对象。 它的行为方式类似于与 <xref:System.Windows.FlowDirection> 相关的 <xref:System.Windows.Controls.Image>;例如，<xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection> 是其 <xref:System.Windows.FlowDirection.LeftToRight> 的水平镜像。 但是，与 <xref:System.Windows.Controls.Image> 不同，<xref:System.Windows.Shapes.Path> 从容器继承其 <xref:System.Windows.FlowDirection>，而不需要显式指定它。
+除了 <xref:System.Windows.Controls.Image>之外，还 <xref:System.Windows.Shapes.Path>另一个有趣的元素。 Path 是可用于绘制一系列连接的直线和曲线的对象。 它的行为方式类似于与 <xref:System.Windows.FlowDirection>相关的 <xref:System.Windows.Controls.Image>;例如，<xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> 是其 <xref:System.Windows.FlowDirection.LeftToRight> 的水平镜像。 但是，与 <xref:System.Windows.Controls.Image>不同，<xref:System.Windows.Shapes.Path> 从容器继承其 <xref:System.Windows.FlowDirection>，而不需要显式指定它。
 
-下面的示例使用 3 条线绘制简单的箭头。 第一个箭头从 <xref:System.Windows.Controls.StackPanel> 中继承 <xref:System.Windows.FlowDirection.RightToLeft> flow 方向，使其起点和终点从右侧的根进行测量。 具有显式 <xref:System.Windows.FlowDirection.RightToLeft> 的第二个箭头 <xref:System.Windows.FlowDirection> 也会在右侧开始。 但第三个箭头的起始根位于左侧。 有关绘制的详细信息，请参阅 <xref:System.Windows.Media.LineGeometry> 和 <xref:System.Windows.Media.GeometryGroup>。
+下面的示例使用 3 条线绘制简单的箭头。 第一个箭头从 <xref:System.Windows.Controls.StackPanel> 中继承 <xref:System.Windows.FlowDirection.RightToLeft> flow 方向，使其起点和终点从右侧的根进行测量。 具有显式 <xref:System.Windows.FlowDirection.RightToLeft>的第二个箭头 <xref:System.Windows.FlowDirection> 也会在右侧开始。 但第三个箭头的起始根位于左侧。 有关绘制的详细信息，请参阅 <xref:System.Windows.Media.LineGeometry> 和 <xref:System.Windows.Media.GeometryGroup>。
 
 [!code-xaml[Paths#Paths](~/samples/snippets/csharp/VS_Snippets_Wpf/Paths/CS/Window1.xaml#paths)]
 
@@ -186,13 +186,13 @@ XAML 元素可以包含用于定义每个元素语言的 XML 特性（`xml:lang`
 
 - Override：数字区域性是 <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> 属性的。
 
-- Text：数字区域性是文本运行的区域性。 在标记中，这将是 `xml:lang`或其别名 `Language` 属性（<xref:System.Windows.FrameworkElement.Language%2A> 或 <xref:System.Windows.FrameworkContentElement.Language%2A>）。 此外，它是从 <xref:System.Windows.FrameworkContentElement> 派生的类的默认值。 此类包括 <xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>、<xref:System.Windows.Documents.Table?displayProperty=nameWithType> <xref:System.Windows.Documents.TableCell?displayProperty=nameWithType> 等。
+- Text：数字区域性是文本运行的区域性。 在标记中，这将是 `xml:lang`或其别名 `Language` 属性（<xref:System.Windows.FrameworkElement.Language%2A> 或 <xref:System.Windows.FrameworkContentElement.Language%2A>）。 此外，它是从 <xref:System.Windows.FrameworkContentElement>派生的类的默认值。 此类包括 <xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>、<xref:System.Windows.Documents.Table?displayProperty=nameWithType><xref:System.Windows.Documents.TableCell?displayProperty=nameWithType> 等。
 
 - User：数字区域性是当前线程的区域性。 此属性是 <xref:System.Windows.FrameworkElement> 的所有子类的默认属性，如 <xref:System.Windows.Controls.Page>、<xref:System.Windows.Window> 和 <xref:System.Windows.Controls.TextBlock>。
 
 **CultureOverride**：
 
-仅当 <xref:System.Windows.Media.NumberSubstitution.CultureSource%2A> 属性设置为 <xref:System.Windows.Media.NumberCultureSource.Override> 时才使用 <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> 属性，否则将忽略此属性。 该属性指定数字区域性。 默认值为 `null` 的值被解释为 en-us。
+仅当 <xref:System.Windows.Media.NumberSubstitution.CultureSource%2A> 属性设置为 <xref:System.Windows.Media.NumberCultureSource.Override> 时才使用 <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> 属性，否则将忽略此属性。 该属性指定数字区域性。 默认值为 `null`的值被解释为 en-us。
 
 **Substitution**：
 
@@ -206,7 +206,7 @@ XAML 元素可以包含用于定义每个元素语言的 XML 特性（`xml:lang`
 
 - <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>：使用由区域性的 <xref:System.Globalization.CultureInfo.NumberFormat%2A>指定的数字区域性的国家/地区来呈现数字。
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>：使用数字区域性的传统数字呈现数字。 对于大多数区域性，这与 <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational> 相同。 但 <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational> 会导致某些阿拉伯语区域性采用拉丁数字，而此值将导致所有阿拉伯区域性的阿拉伯数字。
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>：使用数字区域性的传统数字呈现数字。 对于大多数区域性，这与 <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>相同。 但 <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational> 会导致某些阿拉伯语区域性采用拉丁数字，而此值将导致所有阿拉伯区域性的阿拉伯数字。
 
 这些值对双向内容开发人员意味着什么？ 在大多数情况下，开发人员可能只需要定义每个文本 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素 <xref:System.Windows.FlowDirection> 和语言，例如 `Language="ar-SA"`，<xref:System.Windows.Media.NumberSubstitution> 逻辑负责根据正确的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]显示数字。 下面的示例演示在 Windows 的阿拉伯语版本中运行的 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序中使用阿拉伯和英文数字。
 
@@ -226,7 +226,7 @@ XAML 元素可以包含用于定义每个元素语言的 XML 特性（`xml:lang`
 
 首先，设置应用程序组件的 `NumberSubstitution.CultureSource="Text"`。 使用此设置可确保设置不是从 "User" 作为默认值的文本元素的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，如 <xref:System.Windows.Controls.TextBlock>。
 
-例如:
+例如：
 
 ```xaml
 <TextBlock
@@ -263,10 +263,10 @@ text1.Language = System.Windows.Markup.XmlLanguage.GetLanguage(System.Globalizat
 
 **使用 Substitution 属性**
 
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中数字替换的方式取决于文本元素的语言及其 <xref:System.Windows.FlowDirection>。 如果 <xref:System.Windows.FlowDirection> 从左到右，则会呈现欧洲数字。 但是，如果它前面有阿拉伯语文本，或将语言设置为 "ar" 并且 <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection>，则改为呈现阿拉伯数字。
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中数字替换的方式取决于文本元素的语言及其 <xref:System.Windows.FlowDirection>。 如果 <xref:System.Windows.FlowDirection> 从左到右，则会呈现欧洲数字。 但是，如果它前面有阿拉伯语文本，或将语言设置为 "ar" 并且 <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>，则改为呈现阿拉伯数字。
 
-但在某些情况下，建议创建统一的应用程序，例如适用于所有用户的欧洲数字。 或使用特定 <xref:System.Windows.Style> <xref:System.Windows.Documents.Table> 单元中的阿拉伯数字。 执行此操作的一种简单方法是使用 <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> 属性。
+但在某些情况下，建议创建统一的应用程序，例如适用于所有用户的欧洲数字。 或使用特定 <xref:System.Windows.Style><xref:System.Windows.Documents.Table> 单元中的阿拉伯数字。 执行此操作的一种简单方法是使用 <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> 属性。
 
-在下面的示例中，第一个 <xref:System.Windows.Controls.TextBlock> 没有设置 <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> 属性，因此算法会按预期显示阿拉伯数字。 但是，在第二个 <xref:System.Windows.Controls.TextBlock> 中，替换设置为 "欧洲" 覆盖阿拉伯数字的默认替换，并显示欧洲数字。
+在下面的示例中，第一个 <xref:System.Windows.Controls.TextBlock> 没有设置 <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> 属性，因此算法会按预期显示阿拉伯数字。 但是，在第二个 <xref:System.Windows.Controls.TextBlock>中，替换设置为 "欧洲" 覆盖阿拉伯数字的默认替换，并显示欧洲数字。
 
 [!code-xaml[Numbers3#Numbers3](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers3/CS/Window1.xaml#numbers3)]

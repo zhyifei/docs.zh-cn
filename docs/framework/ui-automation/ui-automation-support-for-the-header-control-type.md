@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Header control type
 - control types, Header
 ms.assetid: d2e48891-2dbe-409e-8655-2f753908e29b
-ms.openlocfilehash: 077083a375c7415d1e6b3f79cea4a0574c0f3257
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f6fae230b2acdae5dcd1b3c1f027c8c4ec63e90f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429856"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741647"
 ---
 # <a name="ui-automation-support-for-the-header-control-type"></a>对 Header 控件类型的 UI 自动化支持
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74429856"
   
  标头控件提供用于信息的行或列的标签的可视容器。  
   
- 以下几节定义了标头控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有标头控件，无论控件是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
+ 以下几节定义了标头控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有标头控件，无论 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32 还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>必需的 UI 自动化树结构  
@@ -29,7 +29,7 @@ ms.locfileid: "74429856"
   
 |控件视图|内容视图|  
 |------------------|------------------|  
-|标头<br /><br /> -HeaderItem （1个或多个）|无|  
+|Header<br /><br /> -HeaderItem （1个或多个）|无|  
   
  标头控件始终具有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图中的 1 个或多个子级。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "74429856"
 ## <a name="required-ui-automation-properties"></a>必需的 UI 自动化属性  
  下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与标头控件尤其相关。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅 [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|值|注意|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|{2&gt;值&lt;2}|注释|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  
@@ -47,7 +47,7 @@ ms.locfileid: "74429856"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|请参阅注释。|如果该控件可以接收键盘焦点，则它必须支持此属性。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|请参阅注释。|如果存在超过一个行标头或超过一个列标头，则该标头控件需要一个名称。 此名称标识标头内的信息。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`。|标头控件不具有静态标签。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|标头|此值对于所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 框架均相同。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Header|此值对于所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 框架均相同。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|“标头”|此值对于所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 框架均相同。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|水平|此属性的值公开标头控件的位置 - 无论它是一个行标头或是一个列标头。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|False|标头控件不包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的内容视图中。|  
@@ -57,7 +57,7 @@ ms.locfileid: "74429856"
 ## <a name="required-ui-automation-control-patterns"></a>必需的 UI 自动化控件模式  
  下表列出需要由所有标头控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式。 有关控件模式的详细信息，请参阅 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)。  
   
-|控件模式|支持|注意|  
+|控件模式|支持|注释|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider>|视情况而定|如果标头控件可以调整大小，则实现此控件模式。|  
   
@@ -65,7 +65,7 @@ ms.locfileid: "74429856"
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
  下表列出需要由所有标头控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [UI Automation Events Overview](ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|注意|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|注释|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> 属性更改事件。|必需|无|  
 |<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> 属性更改事件。|必需|无|  

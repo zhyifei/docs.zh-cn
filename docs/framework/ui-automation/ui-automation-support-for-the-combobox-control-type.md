@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Combo Box control type
 - ComboBox controls
 ms.assetid: bb321126-4770-41da-983a-67b7b89d45dd
-ms.openlocfilehash: eea5068fa5e5e9401a8197c1be9e14f8064b1aa4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6cdabc3b8d55f6f1b4568b513cbb812e043db689
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441097"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741687"
 ---
 # <a name="ui-automation-support-for-the-combobox-control-type"></a>对 ComboBox 控件类型的 UI 自动化支持
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74441097"
   
  组合框是与静态控件或编辑控件组合在一起的列表框，静态控件或编辑控件在组合框的列表框部分中显示了当前选定的项目。 控件的列表框部分要么将始终显示出来，要么只有当用户选择控件旁边的下拉箭头（下压按钮）时才会出现。 如果选择字段是一个编辑控件，则用户可以输入列表外的信息；否则，用户只能选择列表中的项目。  
   
- 以下几节定义了 ComboBox 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有组合框控件，无论控件是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
+ 以下几节定义了 ComboBox 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有组合框控件，无论 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32 还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>必需的 UI 自动化树结构  
@@ -37,7 +37,7 @@ ms.locfileid: "74441097"
 ## <a name="required-ui-automation-properties"></a>必需的 UI 自动化属性  
  下表列出了值或定义与组合框控件密切相关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅 [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|值|注意|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|{2&gt;值&lt;2}|注释|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  
@@ -55,18 +55,18 @@ ms.locfileid: "74441097"
 ## <a name="required-ui-automation-control-patterns"></a>必需的 UI 自动化控件模式  
  下表列出了需要由所有组合框控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式。 有关控件模式的详细信息，请参阅 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)。  
   
-|控件模式|支持|注意|  
+|控件模式|支持|注释|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|是|组合框控件必须始终包含下拉按钮才能成为组合框。|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|是|显示组合框中的当前选择。 将委托组合框下面的列表框提供此支持。|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|视情况而定|如果组合框能够接受任意文本值，则必须支持 Value 模式。 这种模式可以提供以编程方式设置组合框字符串内容的功能。 如果不支持 Value 模式，则表示用户必须从组合框子树内的列表项中进行选择。|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider>|从不|组合框上从不直接支持 Scroll 模式。 如果组合框内包括的列表框可以滚动，则支持此模式。 只有在屏幕上可以看到列表框时才支持此模式。|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider>|Never|组合框上从不直接支持 Scroll 模式。 如果组合框内包括的列表框可以滚动，则支持此模式。 只有在屏幕上可以看到列表框时才支持此模式。|  
   
 <a name="Required_Events"></a>   
 ## <a name="required-events"></a>必需事件  
  下表列出了需要由所有组合框控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [UI Automation Events Overview](ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|注意|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|注释|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必需|无|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。|必需|无|  

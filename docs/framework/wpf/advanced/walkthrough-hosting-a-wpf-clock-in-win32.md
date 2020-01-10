@@ -6,24 +6,24 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 42ed51a1a1ce59b6a3cc3319d86d3a7445403ce4
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 8d1f376a2c5b3f31407af0100d9a4417f7cff34e
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919746"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740242"
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>演练：在 Win32 中承载 WPF 时钟
 
-若要将 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 放置在 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 应用程序内，请使用 <xref:System.Windows.Interop.HwndSource>，它提供包含 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容的 HWND。 首先创建 <xref:System.Windows.Interop.HwndSource>，并为其提供类似于 CreateWindow 的参数。 然后，告诉 <xref:System.Windows.Interop.HwndSource> 所需的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容。 最后，获取 <xref:System.Windows.Interop.HwndSource>中的 HWND。 本演练演示了如何在重新实现 "操作系统**日期和时间属性**" 对话框的 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 应用程序中创建混合 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。
+若要将 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 放入 Win32 应用程序中，请使用 <xref:System.Windows.Interop.HwndSource>，它提供包含 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容的 HWND。 首先创建 <xref:System.Windows.Interop.HwndSource>，并为其提供类似于 CreateWindow 的参数。 然后，告诉 <xref:System.Windows.Interop.HwndSource> 所需的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容。 最后，获取 <xref:System.Windows.Interop.HwndSource>中的 HWND。 本演练演示如何在重新实现 "操作系统**日期和时间属性**" 对话框的 Win32 应用程序中创建混合 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 请参阅[WPF 和 Win32 互操作](wpf-and-win32-interoperation.md)。
 
 ## <a name="how-to-use-this-tutorial"></a>如何使用本教程
 
-本教程重点介绍生成互操作应用程序的重要步骤。 本教程通过示例[Win32 时钟互操作示例](https://go.microsoft.com/fwlink/?LinkID=160051)进行了支持，但该示例反射了最终产品。 本教程记录的步骤如下所示：你自己的现有 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 项目，可能是预先存在的项目，并将托管 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 添加到你的应用程序。 可以将最终产品与[Win32 时钟互操作示例](https://go.microsoft.com/fwlink/?LinkID=160051)进行比较。
+本教程重点介绍生成互操作应用程序的重要步骤。 本教程通过示例[Win32 时钟互操作示例](https://go.microsoft.com/fwlink/?LinkID=160051)进行了支持，但该示例反射了最终产品。 本教程介绍的步骤如下所示：从自己的现有 Win32 项目开始（可能是预先存在的项目），并向应用程序添加托管的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 可以将最终产品与[Win32 时钟互操作示例](https://go.microsoft.com/fwlink/?LinkID=160051)进行比较。
 
 ## <a name="a-walkthrough-of-windows-presentation-framework-inside-win32-hwndsource"></a>Win32 中的 Windows Presentation Framework 的演练 (HwndSource)
 
@@ -35,11 +35,11 @@ ms.locfileid: "72919746"
 
 !["重新创建日期和时间属性" 对话框](./media/walkthrough-hosting-a-wpf-clock-in-win32/recreated-date-time-properties-dialog.png)
 
-（您无需使用 Visual Studio 就 <xref:System.Windows.Interop.HwndSource>，也不需要使用C++编写[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]程序，但这是执行此操作的一种相当典型的方法，并且非常适合逐步教程说明）。
+（您无需使用 Visual Studio 就 <xref:System.Windows.Interop.HwndSource>，也不需要使用C++编写 Win32 程序，但这是执行此操作的一种相当典型的方法，并且非常适合逐步教程说明）。
 
 需要完成五个特定的子步骤，才能将 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 时钟添加到对话框中：
 
-1. 通过在 Visual Studio 中更改项目设置，使你的 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 项目可以调用托管代码（ **/clr**）。
+1. 通过在 Visual Studio 中更改项目设置，使 Win32 项目可以调用托管代码（ **/clr**）。
 
 2. 在单独的 DLL 中创建 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Page>。
 
@@ -47,11 +47,11 @@ ms.locfileid: "72919746"
 
 4. 使用 <xref:System.Windows.Interop.HwndSource.Handle%2A> 属性获取该 <xref:System.Windows.Controls.Page> 的 HWND。
 
-5. 使用 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 确定在较大的 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 应用程序中放置 HWND 的位置
+5. 使用 Win32 确定在较大的 Win32 应用程序中放置 HWND 的位置
 
 ## <a name="clr"></a>/clr
 
-第一步是将此非托管 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 项目转换为可以调用托管代码的项目。 使用/clr 编译器选项，它将链接到要使用的必要 Dll，并调整 Main 方法以便与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]一起使用。
+第一步是将此非托管 Win32 项目转换为可以调用托管代码的项目。 使用/clr 编译器选项，它将链接到要使用的必要 Dll，并调整 Main 方法以便与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]一起使用。
 
 若要允许在C++项目中使用托管代码：右键单击 "win32clock 项目"，然后选择 "**属性**"。 在 "**常规**" 属性页（默认值）上，将 "公共语言运行时支持" 更改为 `/clr`。
 
@@ -91,9 +91,9 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 
 接下来，创建一个定义 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Page>的 DLL。 通常最简单的方法是将 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Page> 创建为独立应用程序，并以这种方式编写和调试 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 部分。 完成后，可以通过右键单击项目，单击 "**属性**"，转到 "应用程序"，并将 "输出类型" 更改为 "Windows 类库"，将该项目转换为 DLL。
 
-然后，可以将 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dll 项目与 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 项目（一个包含两个项目的解决方案）相结合–右键单击解决方案，选择 " **Add\Existing 项目**"。
+然后，可以将 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dll 项目与 Win32 项目（一个包含两个项目的解决方案）结合在一起-右键单击解决方案，选择 " **Add\Existing 项目**"。
 
-若要从 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 项目中使用该 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dll，需要添加引用：
+若要从 Win32 项目使用该 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dll，需要添加引用：
 
 1. 右键单击 "win32clock 项目"，然后选择 "**引用 ...** "。
 
@@ -183,9 +183,9 @@ return (HWND) source->Handle.ToPointer();
 
 ## <a name="positioning-the-hwnd"></a>放置 Hwnd
 
-现在，你已具有包含 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 时钟的 HWND，你需要将该 HWND 置于 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 对话框内。 如果只知道放置 HWND 的位置，只需将该大小和位置传递到前面定义的 `GetHwnd` 函数。 但是，由于已使用资源文件来定义对话框，因此你不完全确定任何 HWND 的放置位置。 你可以使用 Visual Studio 对话框编辑器将 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 的静态控件放在希望时钟进入的位置（"在此处插入时钟"），并使用它来定位 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 时钟。
+现在，你已具有包含 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 时钟的 HWND，你需要将该 HWND 置于 Win32 对话框内。 如果只知道放置 HWND 的位置，只需将该大小和位置传递到前面定义的 `GetHwnd` 函数。 但是，由于已使用资源文件来定义对话框，因此你不完全确定任何 HWND 的放置位置。 你可以使用 Visual Studio 对话框编辑器将 Win32 静态控件放置在希望时钟进入的位置（"在此处插入时钟"），并使用它来定位 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 时钟。
 
-在其中处理 WM_INITDIALOG 的情况下，可以使用 `GetDlgItem` 来检索占位符 STATIC 的 HWND：
+在其中处理 WM_INITDIALOG 的情况下，使用 `GetDlgItem` 检索占位符 STATIC 的 HWND：
 
 ```cpp
 HWND placeholder = GetDlgItem(hDlg, IDC_CLOCK);
@@ -233,7 +233,7 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
 
 若要将最终结果与生成此屏幕截图的代码进行比较，请参阅[Win32 时钟互操作示例](https://go.microsoft.com/fwlink/?LinkID=160051)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Interop.HwndSource>
 - [WPF 和 Win32 互操作](wpf-and-win32-interoperation.md)

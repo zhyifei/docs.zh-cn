@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: 8de96aa3877b2ca414c87958dad480503f57ccb7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5c0c92f40ae60785f780cb573bb7faa77a31f273
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433938"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741779"
 ---
 # <a name="caching-in-ui-automation-clients"></a>在 UI 自动化客户端中缓存
 > [!NOTE]
@@ -20,7 +20,7 @@ ms.locfileid: "74433938"
   
  在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，缓存意味着预提取的数据。 然后，无需进一步的跨进程通信即可访问数据。 UI 自动化客户端应用程序通常使用缓存来批量检索属性和控件模式。 然后，根据需要从缓存中检索信息。 应用程序会定期更新缓存，通常使为了响应表明 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 中的内容发生更改的事件。  
   
- 使用带有服务器端 UI 自动化提供程序的 Windows Presentation Foundation （WPF）控件和自定义控件，缓存的优势最明显。 在访问客户端提供程序（如 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控件的默认提供程序）时，其优势稍小一些。  
+ 使用带有服务器端 UI 自动化提供程序的 Windows Presentation Foundation （WPF）控件和自定义控件，缓存的优势最明显。 访问客户端提供程序（如 Win32 控件的默认提供程序）的优点更小。  
   
  当应用程序激活 <xref:System.Windows.Automation.CacheRequest> ，然后使用任何返回 <xref:System.Windows.Automation.AutomationElement>的方法或属性时，就会进行缓存；例如， <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>和 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>。 <xref:System.Windows.Automation.TreeWalker> 类的方法例外；只有在将 <xref:System.Windows.Automation.CacheRequest> 指定为参数（例如， <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>）时，才会进行缓存。  
   
@@ -103,6 +103,6 @@ ms.locfileid: "74433938"
   
 ## <a name="see-also"></a>另请参阅
 
-- [UI Automation Events for Clients](ui-automation-events-for-clients.md)
+- [客户端的 UI 自动化事件](ui-automation-events-for-clients.md)
 - [在 UI 自动化中使用缓存](use-caching-in-ui-automation.md)
 - [FetchTimer 示例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

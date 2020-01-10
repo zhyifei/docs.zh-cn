@@ -9,12 +9,12 @@ helpviewer_keywords:
 - elements, finding for list items
 - UI Automation, finding elements for List items
 ms.assetid: c326ad2b-2144-4f64-ae4c-d850c74f95c5
-ms.openlocfilehash: 63181de26f7d8efda99d5b5d71b006cde44823a3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2474edf95bf598ba9284b5f6ac36a9e0af1317a1
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433550"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741751"
 ---
 # <a name="find-a-ui-automation-element-for-a-list-item"></a>查找列表项的 UI 自动化元素
 > [!NOTE]
@@ -25,11 +25,11 @@ ms.locfileid: "74433550"
 ## <a name="example"></a>示例  
  下面的示例演示了两种从列表中检索指定项的方式，一个使用 <xref:System.Windows.Automation.TreeWalker>，另一个使用 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>。  
   
- 第一种方法往往更快 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控件，但第二种方法更快 Windows Presentation Foundation （WPF）控件。  
+ 第一种方法往往更快，适用于 Win32 控件，但第二种方法更快 Windows Presentation Foundation （WPF）控件。  
   
  [!code-csharp[UIAClient_snip#184](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#184)]
  [!code-vb[UIAClient_snip#184](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#184)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [Obtaining UI Automation Elements](obtaining-ui-automation-elements.md)
+- [获取 UI 自动化元素](obtaining-ui-automation-elements.md)

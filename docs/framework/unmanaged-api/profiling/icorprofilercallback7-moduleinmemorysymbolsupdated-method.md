@@ -9,12 +9,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: f362a896-3247-4894-9727-e48dbbcd2c78
-ms.openlocfilehash: f6dd10d196ffd3a653584e1bc8d1a5643850bc33
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b9e404de96fa42509144904f5b2ff58e341578a9
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136608"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740442"
 ---
 # <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a>ICorProfilerCallback7：： ModuleInMemorySymbolsUpdated 方法
 [仅在 .NET Framework 4.6.1 及更高版本中受支持]  
@@ -39,9 +39,9 @@ HRESULT ModuleInMemorySymbolsUpdated(
 > [!NOTE]
 > 当前不会对通过 <xref:System.Reflection.Emit> Api 隐式创建或修改的符号引发此事件。  
   
- 即使在对托管 <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> 方法的重载之一的调用中提供了符号（包括 `rawSymbolStore` 参数以指定程序集的符号），运行时也不会实际将符号数据与模块相关联，直到发生了[ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)回调。 此事件提供稍后的机会来收集此类模块的符号。  
+ 即使在对托管 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法的重载之一的调用中预先提供了符号（包括 `rawSymbolStore` 参数以指定程序集的符号），运行时也可能不会实际将符号数据与模块相关联，直到[ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)回调发生之后。 此事件提供稍后的机会来收集此类模块的符号。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -50,7 +50,7 @@ HRESULT ModuleInMemorySymbolsUpdated(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ModuleLoadFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)
 - [SetEventMask2 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)

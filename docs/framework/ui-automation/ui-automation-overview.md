@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: a306bfe4b794409f7f64359daee7e18d34826921
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e3619214bcd8830e82c827680d08260e95dc2b36
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441441"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741712"
 ---
 # <a name="ui-automation-overview"></a>UI 自动化概述
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "74441441"
 > [!NOTE]
 > [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 不会启用由不同用户通过“Run as” 命令启动的进程之间的通信。  
   
- UI 自动化客户端应用程序可在保证其将在多个框架上运行的情况下进行编写。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心掩盖位于 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]各组成部分之下的框架中的任何差异。 例如在 `Content` 视图中， [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 按钮的 `Caption` 属性、 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 按钮的 `ALT` 属性、HTML 图像的 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>属性全部映射到单个属性， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 。  
+ UI 自动化客户端应用程序可在保证其将在多个框架上运行的情况下进行编写。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心掩盖位于 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]各组成部分之下的框架中的任何差异。 例如，"[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]" 按钮的 "`Content`" 属性、"Win32" 按钮的 `Caption` 属性和 HTML 图像的 "`ALT`" 属性都映射到 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>视图中的单个属性 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]。  
   
 UI 自动化在运行 .NET Framework 的受支持的 Windows 操作系统上提供了完整的功能（请参阅从 .NET Core 3.0 开始[.NET Framework 系统要求](../get-started/system-requirements.md)或 .net core 版本。  
   
@@ -34,7 +34,7 @@ UI 自动化在运行 .NET Framework 的受支持的 Windows 操作系统上提�
 ## <a name="providers-and-clients"></a>提供程序和客户端  
  如下表所示，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 具有四个主要组件。  
   
-|组件|说明|  
+|组件|描述|  
 |---------------|-----------------|  
 |提供程序 API （Uiautomationprovider.dll 和 Uiautomationtypes.dll）|一组接口定义，它们由 UI 自动化提供程序、提供关于 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 元素信息并响应编程输入的对象来实现。|  
 |客户端 API（UIAutomationClient.dll 和 UIAutomationTypes.dll）|一组托管代码的类型，它们使 UI 自动化客户端应用程序可以获取有关 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 的信息，并将输入发送到控件。|  
@@ -45,12 +45,12 @@ UI 自动化在运行 .NET Framework 的受支持的 Windows 操作系统上提�
   
 |节|行业专家|目标受众|  
 |-------------|--------------------|--------------|  
-|[UI 自动化基础知识](index.md)（本节）|对概念的广泛概述。|“全部”。|  
+|[UI 自动化基础知识](index.md)（本节）|对概念的广泛概述。|“All”。|  
 |[托管代码的 UI 自动化提供程序](ui-automation-providers-for-managed-code.md)|可帮助你使用提供程序 API 的概述和帮助主题。|控件开发人员。|  
 |[托管代码的 UI 自动化客户端](ui-automation-clients-for-managed-code.md)|可帮助你使用客户端 API 的概述和帮助主题。|客户端应用程序开发人员。|  
-|[UI 自动化控件模式](ui-automation-control-patterns.md)|有关提供程序应如何实现控件模式以及哪些功能可供客户端使用的信息。|“全部”。|  
-|[UI 自动化文本模式](ui-automation-text-pattern.md)|有关提供程序应如何实现 Text 控件模式以及哪些功能可供客户端使用的信息。|“全部”。|  
-|[UI Automation Control Types](ui-automation-control-types.md)|有关不同控件类型支持的属性和控件模式的信息。|“全部”。|  
+|[UI 自动化控件模式](ui-automation-control-patterns.md)|有关提供程序应如何实现控件模式以及哪些功能可供客户端使用的信息。|“All”。|  
+|[UI 自动化文本模式](ui-automation-text-pattern.md)|有关提供程序应如何实现 Text 控件模式以及哪些功能可供客户端使用的信息。|“All”。|  
+|[UI Automation Control Types](ui-automation-control-types.md)|有关不同控件类型支持的属性和控件模式的信息。|“All”。|  
   
  下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间、包含这些命名空间的 DLL 以及使用它们的受众。  
   

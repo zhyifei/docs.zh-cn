@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ae120311e7e58b34437de987e9f9a18e917043c0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72fa95bde0c41e913bdaa35da7fdcd34f81b3057
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974077"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740269"
 ---
 # <a name="threading-model"></a>线程处理模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 旨在帮助开发人员处理复杂的线程处理问题。 因此，大多数 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 开发人员无需编写使用多个线程的接口。 由于多线程程序既复杂又难以调试，因此当存在单线程解决方案时，应避免使用多线程程序。
@@ -203,7 +203,7 @@ ms.locfileid: "73974077"
  `handler2` 可能需要大量时间来处理此事件。 `handler2` 可能使用 <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> 开始一个嵌套消息循环，该循环在数小时内不会返回。 如果 `handler2` 在此消息循环完成时未将事件标记为 "已处理"，则事件将在树中向上传递，即使它非常旧。
 
 ### <a name="reentrancy-and-locking"></a>重新进入和锁定
- 公共语言运行时（CLR）的锁定机制的行为与可能不完全相同;请求锁时，可能会希望线程完全停止操作。 实际上，该线程将继续接收和处理高优先级的消息。 这样有助于防止死锁，并使接口最低限度地响应，但这样做有可能引入细微 bug。  大多数情况下，不需要了解有关此操作的任何信息，但在极少数情况下（通常涉及 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 窗口消息或 COM STA 组件），这一点很有价值。
+ 公共语言运行时（CLR）的锁定机制的行为与可能不完全相同;请求锁时，可能会希望线程完全停止操作。 实际上，该线程将继续接收和处理高优先级的消息。 这样有助于防止死锁，并使接口最低限度地响应，但这样做有可能引入细微 bug。  大多数情况下，您不需要了解有关此操作的任何信息，但在极少数情况下（通常涉及 Win32 窗口消息或 COM STA 组件），这一点很有价值。
 
  大多数接口都不是以线程安全为基础生成的，因为开发人员可以假定某个 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 绝不会被多个线程访问。 在这种情况下，单个线程可能会发生意外的环境更改，这会导致 <xref:System.Windows.Threading.DispatcherObject> 相互排除机制应该解决的这些不良影响。 请看下面的伪代码：
 
@@ -215,6 +215,6 @@ ms.locfileid: "73974077"
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的任务是避免意外的重入，而不重新引入内存泄漏，这就是我们不会在任何地方阻止重入的原因。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [具有长时间运行计算的单线程应用程序示例](https://go.microsoft.com/fwlink/?LinkID=160038)

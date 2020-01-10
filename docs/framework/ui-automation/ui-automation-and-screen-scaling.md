@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: ceab7db1f9eeb47ec020e220ec702af8181855e2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 645c44998812453008fc91d5cf4b8463c51bef9a
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442476"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741727"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI 自动化和屏幕缩放
 > [!NOTE]
@@ -58,14 +58,14 @@ ms.locfileid: "74442476"
   
  解决方法分两个部分。  
   
-1. 首先，使客户端应用程序可感知 dpi。 若要实现此目的，请在启动时调用 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 函数 `SetProcessDPIAware` 。 在托管代码中，以下声明使得此函数可用。  
+1. 首先，使客户端应用程序可感知 dpi。 为此，请在启动时调用 Win32 函数 `SetProcessDPIAware`。 在托管代码中，以下声明使得此函数可用。  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
      此函数使整个进程 dpi 感知，这意味着属于该进程的所有窗口都是无比例的。 例如，在[荧光笔示例](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)中，构成突出显示矩形的四个窗口位于从 UI 自动化获取的物理坐标上，而非逻辑坐标。 如果该示例不能识别 dpi，则会在桌面上的逻辑坐标处绘制突出显示，这将导致非 96 dpi 环境中出现不正确的位置。  
   
-2. 若要获取光标坐标，请调用 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 函数 `GetPhysicalCursorPos`。 下面的示例演示如何声明和使用此函数。  
+2. 若要获取光标坐标，请 `GetPhysicalCursorPos`调用 Win32 函数。 下面的示例演示如何声明和使用此函数。  
   
      [!code-csharp[UIAClient_snip#185](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#185)]
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  
@@ -73,7 +73,7 @@ ms.locfileid: "74442476"
 > [!CAUTION]
 > 请勿使用 <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>。 未定义此属性在扩展环境下客户端窗口以外的行为。  
   
- 如果你的应用程序使用非 dpi 感知的应用程序执行直接的跨进程通信，你可能会在逻辑和物理坐标之间转换，方法是使用 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 函数 `PhysicalToLogicalPoint` 和 `LogicalToPhysicalPoint`。  
+ 如果你的应用程序使用非 dpi 感知的应用程序执行直接的跨进程通信，你可能会在逻辑和物理坐标之间转换，`PhysicalToLogicalPoint` 和 `LogicalToPhysicalPoint`使用 Win32 函数。  
   
 ## <a name="see-also"></a>另请参阅
 

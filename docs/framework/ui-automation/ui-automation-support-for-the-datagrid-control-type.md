@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Data Grid
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
-ms.openlocfilehash: 8a991af5e8e48ce377acf1c1d8342d163d17c1e4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6302a1d3d27ba9a32242cac6232fe495e8e6b4b9
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441078"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741242"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>对 DataGrid 控件类型的 UI 自动化支持
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74441078"
   
  利用 DataGrid 控件类型，用户可以轻松地处理包含列中所显示元数据的项。 数据网格控件在行中显示项，在列中显示有关这些项的信息。 Microsoft Vista 资源管理器中的列表视图控件就是支持 DataGrid 控件类型的示例。  
   
- 以下几节定义了 DataGrid 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有数据网格控件，无论控件是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
+ 以下几节定义了 DataGrid 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有数据网格控件，无论 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32 还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
   
 ## <a name="required-ui-automation-tree-structure"></a>必需的 UI 自动化树结构  
  下表描述了与数据网格控件有关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图，以及每个视图中可包含的内容。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Tree Overview](ui-automation-tree-overview.md)。  
@@ -34,7 +34,7 @@ ms.locfileid: "74441078"
 ## <a name="required-ui-automation-properties"></a>必需的 UI 自动化属性  
  下表列出了值或定义与数据网格控件密切相关的属性。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅[客户端的 UI 自动化属性](ui-automation-properties-for-clients.md)。  
   
-|属性|值|注意|  
+|Property|{2&gt;值&lt;2}|注释|  
 |--------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  
@@ -50,7 +50,7 @@ ms.locfileid: "74441078"
 ## <a name="required-ui-automation-control-patterns"></a>必需的 UI 自动化控件模式  
  下表列出了需要由所有数据网格控件支持的控件模式。 有关控件模式的详细信息，请参阅 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)。  
   
-|控件模式|支持|注意|  
+|控件模式|支持|注释|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IGridProvider>|是|数据网格控件本身始终支持 Grid 控件模式，因为它包含的项具有放置在网格中的元数据。|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|视情况而定|是否能够滚动数据网格取决于内容以及滚动条是否存在。|  
@@ -71,7 +71,7 @@ ms.locfileid: "74441078"
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
  下表列出需要由所有数据网格控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [UI Automation Events Overview](ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|注意|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|注释|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必需|无|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。|必需|无|  
@@ -97,7 +97,7 @@ ms.locfileid: "74441078"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树 - 控件视图|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树 - 内容视图|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|<ul><li>DataGrid（Table、Grid、Selection）</li><li>标头<br /><br /> <ul><li>HeaderItem“名称”(Invoke)</li><li>HeaderItem“修改日期” (Invoke)</li><li>HeaderItem“大小” (Invoke)</li></ul></li><li>组 "Contoso" （TableItem、GridItem、SelectionItem、Table *、Grid\*）<br /><br /> <ul><li>DataItem "Accounts 应收 .doc" （SelectionItem、Invoke、TableItem\*、GridItem\*）</li><li>DataItem "Accounts SelectionItem" （TableItem\*，GridItem\*）</li></ul></li></ul>|<ul><li>DataGrid（Table、Grid、Selection）</li><li>组 "Contoso" （TableItem、GridItem、SelectionItem、Table *、Grid\*）<br /><br /> <ul><li>DataItem "Accounts 应收 .doc" （SelectionItem、Invoke、TableItem\*、GridItem\*）</li><li>DataItem "Accounts SelectionItem" （TableItem\*，GridItem\*）</li></ul></li></ul>|  
+|<ul><li>DataGrid（Table、Grid、Selection）</li><li>Header<br /><br /> <ul><li>HeaderItem“名称”(Invoke)</li><li>HeaderItem“修改日期” (Invoke)</li><li>HeaderItem“大小” (Invoke)</li></ul></li><li>组 "Contoso" （TableItem、GridItem、SelectionItem、Table *、Grid\*）<br /><br /> <ul><li>DataItem "Accounts 应收 .doc" （SelectionItem、Invoke、TableItem\*、GridItem\*）</li><li>DataItem "Accounts SelectionItem" （TableItem\*，GridItem\*）</li></ul></li></ul>|<ul><li>DataGrid（Table、Grid、Selection）</li><li>组 "Contoso" （TableItem、GridItem、SelectionItem、Table *、Grid\*）<br /><br /> <ul><li>DataItem "Accounts 应收 .doc" （SelectionItem、Invoke、TableItem\*、GridItem\*）</li><li>DataItem "Accounts SelectionItem" （TableItem\*，GridItem\*）</li></ul></li></ul>|  
   
  \* 上面的示例显示包含多个控件级别的 DataGrid。 Group（“Contoso”）控件包含两个 DataItem 控件（“Accounts Receivable.doc”和“Accounts Payable.doc”）。 DataGrid/GridItem 对不依赖于其他级别的对。 Group 下的 DataItem 控件还能以 ListItem 控件类型公开，使它们能够更清楚地呈现为可选择的对象，而不是简单的数据元素。 此示例不包括分组数据项的子元素。  
   
