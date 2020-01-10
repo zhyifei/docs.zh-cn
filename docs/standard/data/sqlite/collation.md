@@ -2,12 +2,12 @@
 title: Collation
 ms.date: 12/13/2019
 description: 了解如何创建自定义排序序列。
-ms.openlocfilehash: 0942ad4523a149ad74321cbe0f63021f53303579
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9cc574a75c8f5347dd9bb44e36af72e50afa57b4
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450284"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777391"
 ---
 # <a name="collation"></a>Collation
 
@@ -21,7 +21,7 @@ ms.locfileid: "75450284"
 
 ## <a name="custom-collation"></a>自定义排序规则
 
-您还可以定义自己的排序规则或使用 <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>覆盖内置的排序规则。 下面的示例演示如何重写 NOCASE 排序规则以支持 Unicode 字符。 GitHub 上提供了[完整的示例代码](https://github.com/dotnet/samples/blob/master/samples/snippets/standard/data/sqlite/CollationSample/Program.cs)。
+您还可以定义自己的排序规则或使用 <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>覆盖内置的排序规则。 下面的示例演示如何重写 NOCASE 排序规则以支持 Unicode 字符。 GitHub 上提供了[完整的示例代码](https://github.com/dotnet/samples/blob/master/snippets/standard/data/sqlite/CollationSample/Program.cs)。
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/CollationSample/Program.cs?name=snippet_Collation)]
 
