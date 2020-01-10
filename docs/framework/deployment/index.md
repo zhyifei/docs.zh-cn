@@ -9,170 +9,168 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 04cbfb8d41135b57c3e090959e041f95fcda2840
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975683"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716465"
 ---
-# <a name="deploying-the-net-framework-and-applications"></a><span data-ttu-id="a0efd-102">部署 .NET Framework 和应用程序</span><span class="sxs-lookup"><span data-stu-id="a0efd-102">Deploying the .NET Framework and Applications</span></span>
+# <a name="deploying-the-net-framework-and-applications"></a><span data-ttu-id="ac35a-102">部署 .NET Framework 和应用程序</span><span class="sxs-lookup"><span data-stu-id="ac35a-102">Deploying the .NET Framework and Applications</span></span>
 
-<span data-ttu-id="a0efd-103">本文有助于你开始部署应用程序的 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="a0efd-103">This article helps you get started deploying the .NET Framework with your application.</span></span> <span data-ttu-id="a0efd-104">大部分信息都是供开发人员、OEM 和企业管理人员使用的。</span><span class="sxs-lookup"><span data-stu-id="a0efd-104">Most of the information is intended for developers, OEMs, and enterprise administrators.</span></span> <span data-ttu-id="a0efd-105">想在其自己的计算机上安装 .NET Framework 的用户应阅读[安装 .NET Framework](../install/index.md)。</span><span class="sxs-lookup"><span data-stu-id="a0efd-105">Users who want to install the .NET Framework on their computers should read [Installing the .NET Framework](../install/index.md).</span></span>
+<span data-ttu-id="ac35a-103">本文有助于你开始部署应用程序的 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="ac35a-103">This article helps you get started deploying the .NET Framework with your application.</span></span> <span data-ttu-id="ac35a-104">大部分信息都是供开发人员、OEM 和企业管理人员使用的。</span><span class="sxs-lookup"><span data-stu-id="ac35a-104">Most of the information is intended for developers, OEMs, and enterprise administrators.</span></span> <span data-ttu-id="ac35a-105">想在其自己的计算机上安装 .NET Framework 的用户应阅读[安装 .NET Framework](../install/index.md)。</span><span class="sxs-lookup"><span data-stu-id="ac35a-105">Users who want to install the .NET Framework on their computers should read [Installing the .NET Framework](../install/index.md).</span></span>
 
-## <a name="key-deployment-resources"></a><span data-ttu-id="a0efd-106">关键部署资源</span><span class="sxs-lookup"><span data-stu-id="a0efd-106">Key Deployment Resources</span></span>
+## <a name="key-deployment-resources"></a><span data-ttu-id="ac35a-106">关键部署资源</span><span class="sxs-lookup"><span data-stu-id="ac35a-106">Key Deployment Resources</span></span>
 
-<span data-ttu-id="a0efd-107">使用以下指向启用 MSDN 主题的链接了解关于部署和维护 .NET Framework 的特定信息。</span><span class="sxs-lookup"><span data-stu-id="a0efd-107">Use the following links to other MSDN topics for specific information about deploying and servicing the .NET Framework.</span></span>
+<span data-ttu-id="ac35a-107">使用以下指向启用 MSDN 主题的链接了解关于部署和维护 .NET Framework 的特定信息。</span><span class="sxs-lookup"><span data-stu-id="ac35a-107">Use the following links to other MSDN topics for specific information about deploying and servicing the .NET Framework.</span></span>
 
-<span data-ttu-id="a0efd-108">**安装和部署**</span><span class="sxs-lookup"><span data-stu-id="a0efd-108">**Setup and deployment**</span></span>
+<span data-ttu-id="ac35a-108">**安装和部署**</span><span class="sxs-lookup"><span data-stu-id="ac35a-108">**Setup and deployment**</span></span>
 
-- <span data-ttu-id="a0efd-109">安装程序和部署的一般信息：</span><span class="sxs-lookup"><span data-stu-id="a0efd-109">General installer and deployment information:</span></span>
+- <span data-ttu-id="ac35a-109">安装程序和部署的一般信息：</span><span class="sxs-lookup"><span data-stu-id="ac35a-109">General installer and deployment information:</span></span>
 
-  - <span data-ttu-id="a0efd-110">安装程序选项：</span><span class="sxs-lookup"><span data-stu-id="a0efd-110">Installer options:</span></span>
+  - <span data-ttu-id="ac35a-110">安装程序选项：</span><span class="sxs-lookup"><span data-stu-id="ac35a-110">Installer options:</span></span>
 
-    - [<span data-ttu-id="a0efd-111">Web 安装程序</span><span class="sxs-lookup"><span data-stu-id="a0efd-111">Web installer</span></span>](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [<span data-ttu-id="ac35a-111">Web 安装程序</span><span class="sxs-lookup"><span data-stu-id="ac35a-111">Web installer</span></span>](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
-    - [<span data-ttu-id="a0efd-112">脱机安装程序</span><span class="sxs-lookup"><span data-stu-id="a0efd-112">Offline installer</span></span>](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [<span data-ttu-id="ac35a-112">脱机安装程序</span><span class="sxs-lookup"><span data-stu-id="ac35a-112">Offline installer</span></span>](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
-  - <span data-ttu-id="a0efd-113">安装模式：</span><span class="sxs-lookup"><span data-stu-id="a0efd-113">Installation modes:</span></span>
+  - <span data-ttu-id="ac35a-113">安装模式：</span><span class="sxs-lookup"><span data-stu-id="ac35a-113">Installation modes:</span></span>
 
-    - [<span data-ttu-id="a0efd-114">无提示安装</span><span class="sxs-lookup"><span data-stu-id="a0efd-114">Silent installation</span></span>](deployment-guide-for-developers.md#chaining_custom)
+    - [<span data-ttu-id="ac35a-114">无提示安装</span><span class="sxs-lookup"><span data-stu-id="ac35a-114">Silent installation</span></span>](deployment-guide-for-developers.md#chaining_custom)
 
-    - [<span data-ttu-id="a0efd-115">显示 UI</span><span class="sxs-lookup"><span data-stu-id="a0efd-115">Displaying a UI</span></span>](deployment-guide-for-developers.md#chaining_default)
+    - [<span data-ttu-id="ac35a-115">显示 UI</span><span class="sxs-lookup"><span data-stu-id="ac35a-115">Displaying a UI</span></span>](deployment-guide-for-developers.md#chaining_default)
 
-  - [<span data-ttu-id="a0efd-116">在 .NET Framework 4.5 安装期间减少系统重新启动次数</span><span class="sxs-lookup"><span data-stu-id="a0efd-116">Reducing system restarts during .NET Framework 4.5 installations</span></span>](reducing-system-restarts.md)
+  - [<span data-ttu-id="ac35a-116">在 .NET Framework 4.5 安装期间减少系统重新启动次数</span><span class="sxs-lookup"><span data-stu-id="ac35a-116">Reducing system restarts during .NET Framework 4.5 installations</span></span>](reducing-system-restarts.md)
 
-  - [<span data-ttu-id="a0efd-117">安装和卸载 .NET Framework 受阻疑难解答</span><span class="sxs-lookup"><span data-stu-id="a0efd-117">Troubleshoot blocked .NET Framework installations and uninstallations</span></span>](../install/troubleshoot-blocked-installations-and-uninstallations.md)
+  - [<span data-ttu-id="ac35a-117">安装和卸载 .NET Framework 受阻疑难解答</span><span class="sxs-lookup"><span data-stu-id="ac35a-117">Troubleshoot blocked .NET Framework installations and uninstallations</span></span>](../install/troubleshoot-blocked-installations-and-uninstallations.md)
 
-- <span data-ttu-id="a0efd-118">部署客户端应用程序中的 .NET Framework（适用于开发人员）：</span><span class="sxs-lookup"><span data-stu-id="a0efd-118">Deploying the .NET Framework with a client application (for developers):</span></span>
+- <span data-ttu-id="ac35a-118">部署客户端应用程序中的 .NET Framework（适用于开发人员）：</span><span class="sxs-lookup"><span data-stu-id="ac35a-118">Deploying the .NET Framework with a client application (for developers):</span></span>
 
-  - <span data-ttu-id="a0efd-119">在安装和部署项目中[使用 InstallShield](deployment-guide-for-developers.md#installshield-deployment)</span><span class="sxs-lookup"><span data-stu-id="a0efd-119">[Using InstallShield](deployment-guide-for-developers.md#installshield-deployment) in a setup and deployment project</span></span>
+  - <span data-ttu-id="ac35a-119">在安装和部署项目中[使用 InstallShield](deployment-guide-for-developers.md#installshield-deployment)</span><span class="sxs-lookup"><span data-stu-id="ac35a-119">[Using InstallShield](deployment-guide-for-developers.md#installshield-deployment) in a setup and deployment project</span></span>
 
-  - [<span data-ttu-id="a0efd-120">使用 Visual Studio ClickOnce 应用程序</span><span class="sxs-lookup"><span data-stu-id="a0efd-120">Using a Visual Studio ClickOnce application</span></span>](deployment-guide-for-developers.md#clickonce-deployment)
+  - [<span data-ttu-id="ac35a-120">使用 Visual Studio ClickOnce 应用程序</span><span class="sxs-lookup"><span data-stu-id="ac35a-120">Using a Visual Studio ClickOnce application</span></span>](deployment-guide-for-developers.md#clickonce-deployment)
 
-  - [<span data-ttu-id="a0efd-121">创建 WiX 安装包</span><span class="sxs-lookup"><span data-stu-id="a0efd-121">Creating a WiX installation package</span></span>](deployment-guide-for-developers.md#wix)
+  - [<span data-ttu-id="ac35a-121">创建 WiX 安装包</span><span class="sxs-lookup"><span data-stu-id="ac35a-121">Creating a WiX installation package</span></span>](deployment-guide-for-developers.md#wix)
 
-  - [<span data-ttu-id="a0efd-122">使用自定义安装程序</span><span class="sxs-lookup"><span data-stu-id="a0efd-122">Using a custom installer</span></span>](deployment-guide-for-developers.md#chaining)
+  - [<span data-ttu-id="ac35a-122">使用自定义安装程序</span><span class="sxs-lookup"><span data-stu-id="ac35a-122">Using a custom installer</span></span>](deployment-guide-for-developers.md#chaining)
 
-  - <span data-ttu-id="a0efd-123">适用于开发人员的[其他信息](deployment-guide-for-developers.md)</span><span class="sxs-lookup"><span data-stu-id="a0efd-123">[Additional information](deployment-guide-for-developers.md) for developers</span></span>
+  - <span data-ttu-id="ac35a-123">适用于开发人员的[其他信息](deployment-guide-for-developers.md)</span><span class="sxs-lookup"><span data-stu-id="ac35a-123">[Additional information](deployment-guide-for-developers.md) for developers</span></span>
 
-- <span data-ttu-id="a0efd-124">部署.NET Framework（适用于 OEM 和管理人员）：</span><span class="sxs-lookup"><span data-stu-id="a0efd-124">Deploying the .NET Framework (for OEMs and administrators):</span></span>
+- <span data-ttu-id="ac35a-124">部署.NET Framework（适用于 OEM 和管理人员）：</span><span class="sxs-lookup"><span data-stu-id="ac35a-124">Deploying the .NET Framework (for OEMs and administrators):</span></span>
 
-  - [<span data-ttu-id="a0efd-125">Windows 评估和部署工具包 (ADK)</span><span class="sxs-lookup"><span data-stu-id="a0efd-125">Windows Assessment and Deployment Kit (ADK)</span></span>](https://go.microsoft.com/fwlink/p/?LinkId=254976)
+  - [<span data-ttu-id="ac35a-125">Windows 评估和部署工具包 (ADK)</span><span class="sxs-lookup"><span data-stu-id="ac35a-125">Windows Assessment and Deployment Kit (ADK)</span></span>](https://go.microsoft.com/fwlink/p/?LinkId=254976)
 
-  - [<span data-ttu-id="a0efd-126">管理员指南</span><span class="sxs-lookup"><span data-stu-id="a0efd-126">Administrator's guide</span></span>](guide-for-administrators.md)
+  - [<span data-ttu-id="ac35a-126">管理员指南</span><span class="sxs-lookup"><span data-stu-id="ac35a-126">Administrator's guide</span></span>](guide-for-administrators.md)
 
-<span data-ttu-id="a0efd-127">**服务**</span><span class="sxs-lookup"><span data-stu-id="a0efd-127">**Servicing**</span></span>
+<span data-ttu-id="ac35a-127">**服务**</span><span class="sxs-lookup"><span data-stu-id="ac35a-127">**Servicing**</span></span>
 
-- <span data-ttu-id="a0efd-128">有关一般信息，请参阅 [.NET Framework 博客](https://devblogs.microsoft.com/dotnet/)。</span><span class="sxs-lookup"><span data-stu-id="a0efd-128">For general information, see the [.NET Framework blog](https://devblogs.microsoft.com/dotnet/).</span></span>
+- <span data-ttu-id="ac35a-128">有关一般信息，请参阅 [.NET Framework 博客](https://devblogs.microsoft.com/dotnet/)。</span><span class="sxs-lookup"><span data-stu-id="ac35a-128">For general information, see the [.NET Framework blog](https://devblogs.microsoft.com/dotnet/).</span></span>
 
-- [<span data-ttu-id="a0efd-129">检测版本</span><span class="sxs-lookup"><span data-stu-id="a0efd-129">Detecting versions</span></span>](../migration-guide/how-to-determine-which-versions-are-installed.md)
+- [<span data-ttu-id="ac35a-129">检测版本</span><span class="sxs-lookup"><span data-stu-id="ac35a-129">Detecting versions</span></span>](../migration-guide/how-to-determine-which-versions-are-installed.md)
 
-- [<span data-ttu-id="a0efd-130">检测服务包和更新</span><span class="sxs-lookup"><span data-stu-id="a0efd-130">Detecting service packs and updates</span></span>](../migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)
+- [<span data-ttu-id="ac35a-130">检测服务包和更新</span><span class="sxs-lookup"><span data-stu-id="ac35a-130">Detecting service packs and updates</span></span>](../migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)
 
-## <a name="features-that-simplify-deployment"></a><span data-ttu-id="a0efd-131">简化部署的功能</span><span class="sxs-lookup"><span data-stu-id="a0efd-131">Features That Simplify Deployment</span></span>
+## <a name="features-that-simplify-deployment"></a><span data-ttu-id="ac35a-131">简化部署的功能</span><span class="sxs-lookup"><span data-stu-id="ac35a-131">Features That Simplify Deployment</span></span>
 
-<span data-ttu-id="a0efd-132">.NET Framework 提供了大量基本功能，让部署应用程序变得更加容易：</span><span class="sxs-lookup"><span data-stu-id="a0efd-132">The .NET Framework provides a number of basic features that make it easier to deploy your applications:</span></span>
+<span data-ttu-id="ac35a-132">.NET Framework 提供了大量基本功能，让部署应用程序变得更加容易：</span><span class="sxs-lookup"><span data-stu-id="ac35a-132">The .NET Framework provides a number of basic features that make it easier to deploy your applications:</span></span>
 
-- <span data-ttu-id="a0efd-133">不产生影响的应用程序。</span><span class="sxs-lookup"><span data-stu-id="a0efd-133">No-impact applications.</span></span>
+- <span data-ttu-id="ac35a-133">不产生影响的应用程序。</span><span class="sxs-lookup"><span data-stu-id="ac35a-133">No-impact applications.</span></span>
 
-     <span data-ttu-id="a0efd-134">此功能提供应用程序隔离功能并消除 DLL 冲突。</span><span class="sxs-lookup"><span data-stu-id="a0efd-134">This feature provides application isolation and eliminates DLL conflicts.</span></span> <span data-ttu-id="a0efd-135">默认情况下，组件不会影响其他应用程序。</span><span class="sxs-lookup"><span data-stu-id="a0efd-135">By default, components do not affect other applications.</span></span>
+     <span data-ttu-id="ac35a-134">此功能提供应用程序隔离功能并消除 DLL 冲突。</span><span class="sxs-lookup"><span data-stu-id="ac35a-134">This feature provides application isolation and eliminates DLL conflicts.</span></span> <span data-ttu-id="ac35a-135">默认情况下，组件不会影响其他应用程序。</span><span class="sxs-lookup"><span data-stu-id="ac35a-135">By default, components do not affect other applications.</span></span>
 
-- <span data-ttu-id="a0efd-136">默认情况下的私有组件。</span><span class="sxs-lookup"><span data-stu-id="a0efd-136">Private components by default.</span></span>
+- <span data-ttu-id="ac35a-136">默认情况下的私有组件。</span><span class="sxs-lookup"><span data-stu-id="ac35a-136">Private components by default.</span></span>
 
-     <span data-ttu-id="a0efd-137">默认情况下，组件部署到应用程序目录，并且仅对包含的应用程序可见。</span><span class="sxs-lookup"><span data-stu-id="a0efd-137">By default, components are deployed to the application directory and are visible only to the containing application.</span></span>
+     <span data-ttu-id="ac35a-137">默认情况下，组件部署到应用程序目录，并且仅对包含的应用程序可见。</span><span class="sxs-lookup"><span data-stu-id="ac35a-137">By default, components are deployed to the application directory and are visible only to the containing application.</span></span>
 
-- <span data-ttu-id="a0efd-138">可控的代码共享。</span><span class="sxs-lookup"><span data-stu-id="a0efd-138">Controlled code sharing.</span></span>
+- <span data-ttu-id="ac35a-138">可控的代码共享。</span><span class="sxs-lookup"><span data-stu-id="ac35a-138">Controlled code sharing.</span></span>
 
-     <span data-ttu-id="a0efd-139">代码共享要求你显式提供代码以便进行共享而不是执行默认行为。</span><span class="sxs-lookup"><span data-stu-id="a0efd-139">Code sharing requires you to explicitly make code available for sharing instead of being the default behavior.</span></span>
+     <span data-ttu-id="ac35a-139">代码共享要求你显式提供代码以便进行共享而不是执行默认行为。</span><span class="sxs-lookup"><span data-stu-id="ac35a-139">Code sharing requires you to explicitly make code available for sharing instead of being the default behavior.</span></span>
 
-- <span data-ttu-id="a0efd-140">并行版本。</span><span class="sxs-lookup"><span data-stu-id="a0efd-140">Side-by-side versioning.</span></span>
+- <span data-ttu-id="ac35a-140">并行版本。</span><span class="sxs-lookup"><span data-stu-id="ac35a-140">Side-by-side versioning.</span></span>
 
-     <span data-ttu-id="a0efd-141">组件或应用程序的多个版本可以共存，你可以选择要使用的版本类型，公共语言运行时可以增强版本策略。</span><span class="sxs-lookup"><span data-stu-id="a0efd-141">Multiple versions of a component or application can coexist, you can choose which versions to use, and the common language runtime enforces versioning policy.</span></span>
+     <span data-ttu-id="ac35a-141">组件或应用程序的多个版本可以共存，你可以选择要使用的版本类型，公共语言运行时可以增强版本策略。</span><span class="sxs-lookup"><span data-stu-id="ac35a-141">Multiple versions of a component or application can coexist, you can choose which versions to use, and the common language runtime enforces versioning policy.</span></span>
 
-- <span data-ttu-id="a0efd-142">XCOPY 部署和复制。</span><span class="sxs-lookup"><span data-stu-id="a0efd-142">XCOPY deployment and replication.</span></span>
+- <span data-ttu-id="ac35a-142">XCOPY 部署和复制。</span><span class="sxs-lookup"><span data-stu-id="ac35a-142">XCOPY deployment and replication.</span></span>
 
-     <span data-ttu-id="a0efd-143">在没有注册表项或依赖项的情况下就可以部署自描述和自持有的组件和应用程序。</span><span class="sxs-lookup"><span data-stu-id="a0efd-143">Self-described and self-contained components and applications can be deployed without registry entries or dependencies.</span></span>
+     <span data-ttu-id="ac35a-143">在没有注册表项或依赖项的情况下就可以部署自描述和自持有的组件和应用程序。</span><span class="sxs-lookup"><span data-stu-id="ac35a-143">Self-described and self-contained components and applications can be deployed without registry entries or dependencies.</span></span>
 
-- <span data-ttu-id="a0efd-144">动态更新。</span><span class="sxs-lookup"><span data-stu-id="a0efd-144">On-the-fly updates.</span></span>
+- <span data-ttu-id="ac35a-144">动态更新。</span><span class="sxs-lookup"><span data-stu-id="ac35a-144">On-the-fly updates.</span></span>
 
-     <span data-ttu-id="a0efd-145">管理员可以使用宿主（例如，ASP.NET）更新程序 Dll，即使在远程计算机也可以。</span><span class="sxs-lookup"><span data-stu-id="a0efd-145">Administrators can use hosts, such as ASP.NET, to update program DLLs, even on remote computers.</span></span>
+     <span data-ttu-id="ac35a-145">管理员可以使用宿主（例如，ASP.NET）更新程序 Dll，即使在远程计算机也可以。</span><span class="sxs-lookup"><span data-stu-id="ac35a-145">Administrators can use hosts, such as ASP.NET, to update program DLLs, even on remote computers.</span></span>
 
-- <span data-ttu-id="a0efd-146">与 Windows 安装程序相集成。</span><span class="sxs-lookup"><span data-stu-id="a0efd-146">Integration with the Windows Installer.</span></span>
+- <span data-ttu-id="ac35a-146">与 Windows 安装程序相集成。</span><span class="sxs-lookup"><span data-stu-id="ac35a-146">Integration with the Windows Installer.</span></span>
 
-     <span data-ttu-id="a0efd-147">部署应用程序时，播发、发布、修复和按需安装都可用。</span><span class="sxs-lookup"><span data-stu-id="a0efd-147">Advertisement, publishing, repair, and install-on-demand are all available when deploying your application.</span></span>
+     <span data-ttu-id="ac35a-147">部署应用程序时，播发、发布、修复和按需安装都可用。</span><span class="sxs-lookup"><span data-stu-id="ac35a-147">Advertisement, publishing, repair, and install-on-demand are all available when deploying your application.</span></span>
 
-- <span data-ttu-id="a0efd-148">企业部署。</span><span class="sxs-lookup"><span data-stu-id="a0efd-148">Enterprise deployment.</span></span>
+- <span data-ttu-id="ac35a-148">企业部署。</span><span class="sxs-lookup"><span data-stu-id="ac35a-148">Enterprise deployment.</span></span>
 
-     <span data-ttu-id="a0efd-149">此功能提供了简单的软件分发，包括使用 Active Directory。</span><span class="sxs-lookup"><span data-stu-id="a0efd-149">This feature provides easy software distribution, including using Active Directory.</span></span>
+     <span data-ttu-id="ac35a-149">此功能提供了简单的软件分发，包括使用 Active Directory。</span><span class="sxs-lookup"><span data-stu-id="ac35a-149">This feature provides easy software distribution, including using Active Directory.</span></span>
 
-- <span data-ttu-id="a0efd-150">下载和缓存。</span><span class="sxs-lookup"><span data-stu-id="a0efd-150">Downloading and caching.</span></span>
+- <span data-ttu-id="ac35a-150">下载和缓存。</span><span class="sxs-lookup"><span data-stu-id="ac35a-150">Downloading and caching.</span></span>
 
-     <span data-ttu-id="a0efd-151">增量下载可使下载大小变得更小，并且组件可以相互隔离，使其只供部署影响较低的应用程序使用。</span><span class="sxs-lookup"><span data-stu-id="a0efd-151">Incremental downloads keep downloads smaller, and components can be isolated for use only by the application for low-impact deployment.</span></span>
+     <span data-ttu-id="ac35a-151">增量下载可使下载大小变得更小，并且组件可以相互隔离，使其只供部署影响较低的应用程序使用。</span><span class="sxs-lookup"><span data-stu-id="ac35a-151">Incremental downloads keep downloads smaller, and components can be isolated for use only by the application for low-impact deployment.</span></span>
 
-- <span data-ttu-id="a0efd-152">部分受信任代码。</span><span class="sxs-lookup"><span data-stu-id="a0efd-152">Partially trusted code.</span></span>
+- <span data-ttu-id="ac35a-152">部分受信任代码。</span><span class="sxs-lookup"><span data-stu-id="ac35a-152">Partially trusted code.</span></span>
 
-     <span data-ttu-id="a0efd-153">标识是基于代码而不是基于用户，并且不会出现任何证书对话框。</span><span class="sxs-lookup"><span data-stu-id="a0efd-153">Identity is based on the code instead of the user, and no certificate dialog boxes appear.</span></span>
+     <span data-ttu-id="ac35a-153">标识是基于代码而不是基于用户，并且不会出现任何证书对话框。</span><span class="sxs-lookup"><span data-stu-id="ac35a-153">Identity is based on the code instead of the user, and no certificate dialog boxes appear.</span></span>
 
-## <a name="packaging-and-distributing-net-framework-applications"></a><span data-ttu-id="a0efd-154">打包和分发 .NET Framework 应用程序</span><span class="sxs-lookup"><span data-stu-id="a0efd-154">Packaging and Distributing .NET Framework Applications</span></span>
+## <a name="packaging-and-distributing-net-framework-applications"></a><span data-ttu-id="ac35a-154">打包和分发 .NET Framework 应用程序</span><span class="sxs-lookup"><span data-stu-id="ac35a-154">Packaging and Distributing .NET Framework Applications</span></span>
 
-<span data-ttu-id="a0efd-155">文档中的其他章节介绍了打包和部署 .NET Framework 的部分信息。</span><span class="sxs-lookup"><span data-stu-id="a0efd-155">Some of the packaging and deployment information for the .NET Framework is described in other sections of the documentation.</span></span> <span data-ttu-id="a0efd-156">这些章节介绍了以下关于自描述单元的信息：[程序集](../../standard/assembly/index.md)（不需要注册表项）、[强名称程序集](../../standard/assembly/strong-named.md)（确保名称的唯一性和避免名称欺骗）和[程序集版本控制](../../standard/assembly/versioning.md)（可解决很多与 DLL 冲突相关的问题）。</span><span class="sxs-lookup"><span data-stu-id="a0efd-156">Those sections provide information about the self-describing units called [assemblies](../../standard/assembly/index.md), which require no registry entries, [strong-named assemblies](../../standard/assembly/strong-named.md), which ensure name uniqueness and prevent name spoofing, and [assembly versioning](../../standard/assembly/versioning.md), which addresses many of the problems associated with DLL conflicts.</span></span> <span data-ttu-id="a0efd-157">以下各节提供有关打包和分发.NET Framework 应用程序的信息。</span><span class="sxs-lookup"><span data-stu-id="a0efd-157">The following sections provide information about packaging and distributing .NET Framework applications.</span></span>
+<span data-ttu-id="ac35a-155">文档中的其他章节介绍了打包和部署 .NET Framework 的部分信息。</span><span class="sxs-lookup"><span data-stu-id="ac35a-155">Some of the packaging and deployment information for the .NET Framework is described in other sections of the documentation.</span></span> <span data-ttu-id="ac35a-156">这些章节介绍了以下关于自描述单元的信息：[程序集](../../standard/assembly/index.md)（不需要注册表项）、[强名称程序集](../../standard/assembly/strong-named.md)（确保名称的唯一性和避免名称欺骗）和[程序集版本控制](../../standard/assembly/versioning.md)（可解决很多与 DLL 冲突相关的问题）。</span><span class="sxs-lookup"><span data-stu-id="ac35a-156">Those sections provide information about the self-describing units called [assemblies](../../standard/assembly/index.md), which require no registry entries, [strong-named assemblies](../../standard/assembly/strong-named.md), which ensure name uniqueness and prevent name spoofing, and [assembly versioning](../../standard/assembly/versioning.md), which addresses many of the problems associated with DLL conflicts.</span></span> <span data-ttu-id="ac35a-157">以下各节提供有关打包和分发.NET Framework 应用程序的信息。</span><span class="sxs-lookup"><span data-stu-id="ac35a-157">The following sections provide information about packaging and distributing .NET Framework applications.</span></span>
 
-### <a name="packaging"></a><span data-ttu-id="a0efd-158">打包</span><span class="sxs-lookup"><span data-stu-id="a0efd-158">Packaging</span></span>
+### <a name="packaging"></a><span data-ttu-id="ac35a-158">打包</span><span class="sxs-lookup"><span data-stu-id="ac35a-158">Packaging</span></span>
 
-<span data-ttu-id="a0efd-159">.NET Framework 提供了用于打包应用程序的以下选项：</span><span class="sxs-lookup"><span data-stu-id="a0efd-159">The .NET Framework provides the following options for packaging applications:</span></span>
+<span data-ttu-id="ac35a-159">.NET Framework 提供了用于打包应用程序的以下选项：</span><span class="sxs-lookup"><span data-stu-id="ac35a-159">The .NET Framework provides the following options for packaging applications:</span></span>
 
-- <span data-ttu-id="a0efd-160">作为单个程序集或作为程序集的集合。</span><span class="sxs-lookup"><span data-stu-id="a0efd-160">As a single assembly or as a collection of assemblies.</span></span>
+- <span data-ttu-id="ac35a-160">作为单个程序集或作为程序集的集合。</span><span class="sxs-lookup"><span data-stu-id="ac35a-160">As a single assembly or as a collection of assemblies.</span></span>
 
-     <span data-ttu-id="a0efd-161">使用此选项，你只需使用创建的 .dll 或 .exe 文件即可。</span><span class="sxs-lookup"><span data-stu-id="a0efd-161">With this option, you simply use the .dll or .exe files as they were built.</span></span>
+     <span data-ttu-id="ac35a-161">使用此选项，你只需使用创建的 .dll 或 .exe 文件即可。</span><span class="sxs-lookup"><span data-stu-id="ac35a-161">With this option, you simply use the .dll or .exe files as they were built.</span></span>
 
-- <span data-ttu-id="a0efd-162">作为 cabinet (CAB) 文件。</span><span class="sxs-lookup"><span data-stu-id="a0efd-162">As cabinet (CAB) files.</span></span>
+- <span data-ttu-id="ac35a-162">作为 cabinet (CAB) 文件。</span><span class="sxs-lookup"><span data-stu-id="ac35a-162">As cabinet (CAB) files.</span></span>
 
-     <span data-ttu-id="a0efd-163">使用此选项，将文件压缩成 .cab 文件可使分发或下载耗时更少。</span><span class="sxs-lookup"><span data-stu-id="a0efd-163">With this option, you compress files into .cab files to make distribution or download less time consuming.</span></span>
+     <span data-ttu-id="ac35a-163">使用此选项，将文件压缩成 .cab 文件可使分发或下载耗时更少。</span><span class="sxs-lookup"><span data-stu-id="ac35a-163">With this option, you compress files into .cab files to make distribution or download less time consuming.</span></span>
 
-- <span data-ttu-id="a0efd-164">为 Windows Installer 程序包或其他安装程序格式。</span><span class="sxs-lookup"><span data-stu-id="a0efd-164">As a Windows Installer package or in other installer formats.</span></span>
+- <span data-ttu-id="ac35a-164">为 Windows Installer 程序包或其他安装程序格式。</span><span class="sxs-lookup"><span data-stu-id="ac35a-164">As a Windows Installer package or in other installer formats.</span></span>
 
-     <span data-ttu-id="a0efd-165">使用此选项，你可以创建用于 Windows Installer 的 .msi 文件或打包用于其他安装程序的应用程序。</span><span class="sxs-lookup"><span data-stu-id="a0efd-165">With this option, you create .msi files for use with the Windows Installer, or you package your application for use with some other installer.</span></span>
+     <span data-ttu-id="ac35a-165">使用此选项，你可以创建用于 Windows Installer 的 .msi 文件或打包用于其他安装程序的应用程序。</span><span class="sxs-lookup"><span data-stu-id="ac35a-165">With this option, you create .msi files for use with the Windows Installer, or you package your application for use with some other installer.</span></span>
 
-### <a name="distribution"></a><span data-ttu-id="a0efd-166">分布</span><span class="sxs-lookup"><span data-stu-id="a0efd-166">Distribution</span></span>
+### <a name="distribution"></a><span data-ttu-id="ac35a-166">分布</span><span class="sxs-lookup"><span data-stu-id="ac35a-166">Distribution</span></span>
 
-<span data-ttu-id="a0efd-167">.NET Framework 提供了用于分发应用程序的以下选项：</span><span class="sxs-lookup"><span data-stu-id="a0efd-167">The .NET Framework provides the following options for distributing applications:</span></span>
+<span data-ttu-id="ac35a-167">.NET Framework 提供了用于分发应用程序的以下选项：</span><span class="sxs-lookup"><span data-stu-id="ac35a-167">The .NET Framework provides the following options for distributing applications:</span></span>
 
-- <span data-ttu-id="a0efd-168">使用 XCOPY 或 FTP。</span><span class="sxs-lookup"><span data-stu-id="a0efd-168">Use XCOPY or FTP.</span></span>
+- <span data-ttu-id="ac35a-168">使用 XCOPY 或 FTP。</span><span class="sxs-lookup"><span data-stu-id="ac35a-168">Use XCOPY or FTP.</span></span>
 
-     <span data-ttu-id="a0efd-169">由于公共语言运行时应用程序是自描述的并且不需要注册表项，因此，你可以使用 XCOPY 或 FTP 只将应用程序复制到相应的目录。</span><span class="sxs-lookup"><span data-stu-id="a0efd-169">Because common language runtime applications are self-describing and require no registry entries, you can use XCOPY or FTP to simply copy the application to an appropriate directory.</span></span> <span data-ttu-id="a0efd-170">然后即可从该目录运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="a0efd-170">The application can then be run from that directory.</span></span>
+     <span data-ttu-id="ac35a-169">由于公共语言运行时应用程序是自描述的并且不需要注册表项，因此，你可以使用 XCOPY 或 FTP 只将应用程序复制到相应的目录。</span><span class="sxs-lookup"><span data-stu-id="ac35a-169">Because common language runtime applications are self-describing and require no registry entries, you can use XCOPY or FTP to simply copy the application to an appropriate directory.</span></span> <span data-ttu-id="ac35a-170">然后即可从该目录运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="ac35a-170">The application can then be run from that directory.</span></span>
 
-- <span data-ttu-id="a0efd-171">使用代码下载。</span><span class="sxs-lookup"><span data-stu-id="a0efd-171">Use code download.</span></span>
+- <span data-ttu-id="ac35a-171">使用代码下载。</span><span class="sxs-lookup"><span data-stu-id="ac35a-171">Use code download.</span></span>
 
-     <span data-ttu-id="a0efd-172">如果你要通过 Internet 或公司的 Intranet 分发应用程序，只需将代码下载到计算机并在下载位置运行应用程序即可。</span><span class="sxs-lookup"><span data-stu-id="a0efd-172">If you are distributing your application over the Internet or through a corporate intranet, you can simply download the code to a computer and run the application there.</span></span>
+     <span data-ttu-id="ac35a-172">如果你要通过 Internet 或公司的 Intranet 分发应用程序，只需将代码下载到计算机并在下载位置运行应用程序即可。</span><span class="sxs-lookup"><span data-stu-id="ac35a-172">If you are distributing your application over the Internet or through a corporate intranet, you can simply download the code to a computer and run the application there.</span></span>
 
-- <span data-ttu-id="a0efd-173">使用安装程序（例如 Windows Installer 2.0）。</span><span class="sxs-lookup"><span data-stu-id="a0efd-173">Use an installer program such as Windows Installer 2.0.</span></span>
+- <span data-ttu-id="ac35a-173">使用安装程序（例如 Windows Installer 2.0）。</span><span class="sxs-lookup"><span data-stu-id="ac35a-173">Use an installer program such as Windows Installer 2.0.</span></span>
 
-     <span data-ttu-id="a0efd-174">Windows Installer 2.0 可以安装、修复或删除全局程序集缓存和专用目录中的 .NET Framework 程序集。</span><span class="sxs-lookup"><span data-stu-id="a0efd-174">Windows Installer 2.0 can install, repair, or remove .NET Framework assemblies in the global assembly cache and in private directories.</span></span>
+     <span data-ttu-id="ac35a-174">Windows Installer 2.0 可以安装、修复或删除全局程序集缓存和专用目录中的 .NET Framework 程序集。</span><span class="sxs-lookup"><span data-stu-id="ac35a-174">Windows Installer 2.0 can install, repair, or remove .NET Framework assemblies in the global assembly cache and in private directories.</span></span>
 
-### <a name="installation-location"></a><span data-ttu-id="a0efd-175">安装位置</span><span class="sxs-lookup"><span data-stu-id="a0efd-175">Installation Location</span></span>
+### <a name="installation-location"></a><span data-ttu-id="ac35a-175">安装位置</span><span class="sxs-lookup"><span data-stu-id="ac35a-175">Installation Location</span></span>
 
-<span data-ttu-id="a0efd-176">要确定部署应用程序的程序集的位置，以便通过运行时找到它们，请参阅[运行时如何定位程序集](how-the-runtime-locates-assemblies.md)。</span><span class="sxs-lookup"><span data-stu-id="a0efd-176">To determine where to deploy your application's assemblies so they can be found by the runtime, see [How the Runtime Locates Assemblies](how-the-runtime-locates-assemblies.md).</span></span>
+<span data-ttu-id="ac35a-176">要确定部署应用程序的程序集的位置，以便通过运行时找到它们，请参阅[运行时如何定位程序集](how-the-runtime-locates-assemblies.md)。</span><span class="sxs-lookup"><span data-stu-id="ac35a-176">To determine where to deploy your application's assemblies so they can be found by the runtime, see [How the Runtime Locates Assemblies](how-the-runtime-locates-assemblies.md).</span></span>
 
-<span data-ttu-id="a0efd-177">安全注意事项也可能会影响你部署应用程序的方式。</span><span class="sxs-lookup"><span data-stu-id="a0efd-177">Security considerations can also affect how you deploy your application.</span></span> <span data-ttu-id="a0efd-178">根据代码所在的位置授予托管代码安全权限。</span><span class="sxs-lookup"><span data-stu-id="a0efd-178">Security permissions are granted to managed code according to where the code is located.</span></span> <span data-ttu-id="a0efd-179">将应用程序或组件部署到得不到信任的位置（例如 Internet），可限制应用程序或组件可以执行的操作。</span><span class="sxs-lookup"><span data-stu-id="a0efd-179">Deploying an application or component to a location where it receives little trust, such as the Internet, limits what the application or component can do.</span></span> <span data-ttu-id="a0efd-180">有关部署和安全注意事项的详细信息，请参阅[代码访问安全性基础知识](../misc/code-access-security-basics.md)。</span><span class="sxs-lookup"><span data-stu-id="a0efd-180">For more information about deployment and security considerations, see [Code Access Security Basics](../misc/code-access-security-basics.md).</span></span>
+<span data-ttu-id="ac35a-177">安全注意事项也可能会影响你部署应用程序的方式。</span><span class="sxs-lookup"><span data-stu-id="ac35a-177">Security considerations can also affect how you deploy your application.</span></span> <span data-ttu-id="ac35a-178">根据代码所在的位置授予托管代码安全权限。</span><span class="sxs-lookup"><span data-stu-id="ac35a-178">Security permissions are granted to managed code according to where the code is located.</span></span> <span data-ttu-id="ac35a-179">将应用程序或组件部署到得不到信任的位置（例如 Internet），可限制应用程序或组件可以执行的操作。</span><span class="sxs-lookup"><span data-stu-id="ac35a-179">Deploying an application or component to a location where it receives little trust, such as the Internet, limits what the application or component can do.</span></span> <span data-ttu-id="ac35a-180">有关部署和安全注意事项的详细信息，请参阅[代码访问安全性基础知识](../misc/code-access-security-basics.md)。</span><span class="sxs-lookup"><span data-stu-id="ac35a-180">For more information about deployment and security considerations, see [Code Access Security Basics](../misc/code-access-security-basics.md).</span></span>
 
-## <a name="related-topics"></a><span data-ttu-id="a0efd-181">相关主题</span><span class="sxs-lookup"><span data-stu-id="a0efd-181">Related Topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="ac35a-181">相关主题</span><span class="sxs-lookup"><span data-stu-id="ac35a-181">Related Topics</span></span>
 
-|<span data-ttu-id="a0efd-182">Title</span><span class="sxs-lookup"><span data-stu-id="a0efd-182">Title</span></span>|<span data-ttu-id="a0efd-183">说明</span><span class="sxs-lookup"><span data-stu-id="a0efd-183">Description</span></span>|
+|<span data-ttu-id="ac35a-182">Title</span><span class="sxs-lookup"><span data-stu-id="ac35a-182">Title</span></span>|<span data-ttu-id="ac35a-183">描述</span><span class="sxs-lookup"><span data-stu-id="ac35a-183">Description</span></span>|
 |-----------|-----------------|
-|[<span data-ttu-id="a0efd-184">运行时如何定位程序集</span><span class="sxs-lookup"><span data-stu-id="a0efd-184">How the Runtime Locates Assemblies</span></span>](how-the-runtime-locates-assemblies.md)|<span data-ttu-id="a0efd-185">描述公共语言运行时如何确定将用于满足绑定请求的程序集类型。</span><span class="sxs-lookup"><span data-stu-id="a0efd-185">Describes how the common language runtime determines which assembly to use to fulfill a binding request.</span></span>|
-|[<span data-ttu-id="a0efd-186">适用于程序集加载的最佳做法</span><span class="sxs-lookup"><span data-stu-id="a0efd-186">Best Practices for Assembly Loading</span></span>](best-practices-for-assembly-loading.md)|<span data-ttu-id="a0efd-187">讨论避免类型标识问题的方法，从而避免发生 <xref:System.InvalidCastException><xref:System.MissingMethodException> 和其他错误。</span><span class="sxs-lookup"><span data-stu-id="a0efd-187">Discusses ways to avoid problems of type identity that can lead to <xref:System.InvalidCastException>, <xref:System.MissingMethodException>, and other errors.</span></span>|
-|[<span data-ttu-id="a0efd-188">在 .NET Framework 4.5 安装期间减少系统重新启动次数</span><span class="sxs-lookup"><span data-stu-id="a0efd-188">Reducing System Restarts During .NET Framework 4.5 Installations</span></span>](reducing-system-restarts.md)|<span data-ttu-id="a0efd-189">描述在任何可能的情况下可以阻止重启的 Restart Manager，并说明安装 .NET Framework 的应用程序如何利用它。</span><span class="sxs-lookup"><span data-stu-id="a0efd-189">Describes the Restart Manager, which prevents reboots whenever possible, and explains how applications that install the .NET Framework can take advantage of it.</span></span>|
-|[<span data-ttu-id="a0efd-190">面向管理员的部署指南</span><span class="sxs-lookup"><span data-stu-id="a0efd-190">Deployment Guide for Administrators</span></span>](guide-for-administrators.md)|<span data-ttu-id="a0efd-191">说明系统管理员如何通过系统中心配置管理器 (SCCM) 跨网络部署 .NET Framework 及其系统依赖项。</span><span class="sxs-lookup"><span data-stu-id="a0efd-191">Explains how a system administrator can deploy the .NET Framework and its system dependencies across a network by using System Center Configuration Manager (SCCM).</span></span>|
-|[<span data-ttu-id="a0efd-192">面向开发人员的部署指南</span><span class="sxs-lookup"><span data-stu-id="a0efd-192">Deployment Guide for Developers</span></span>](deployment-guide-for-developers.md)|<span data-ttu-id="a0efd-193">说明开发人员如何在其计算机的应用程序中安装 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="a0efd-193">Explains how developers can install .NET Framework on their users' computers with their applications.</span></span>|
-|[<span data-ttu-id="a0efd-194">部署应用程序、服务和组件</span><span class="sxs-lookup"><span data-stu-id="a0efd-194">Deploying Applications, Services, and Components</span></span>](/visualstudio/deployment/deploying-applications-services-and-components)|<span data-ttu-id="a0efd-195">讨论 Visual Studio 中的部署选项，包括使用 ClickOnce 和 Windows Installer 技术发布应用程序的说明。</span><span class="sxs-lookup"><span data-stu-id="a0efd-195">Discusses deployment options in Visual Studio, including instructions for publishing an application using the ClickOnce and Windows Installer technologies.</span></span>|
-|[<span data-ttu-id="a0efd-196">发布 ClickOnce 应用程序</span><span class="sxs-lookup"><span data-stu-id="a0efd-196">Publishing ClickOnce Applications</span></span>](/visualstudio/deployment/publishing-clickonce-applications)|<span data-ttu-id="a0efd-197">描述打包 Windows 窗体应用程序以及使用 ClickOnce 将其部署到连网的客户端计算机上的方法。</span><span class="sxs-lookup"><span data-stu-id="a0efd-197">Describes how to package a Windows Forms application and deploy it with ClickOnce to client computers on a network.</span></span>|
-|[<span data-ttu-id="a0efd-198">打包和部署资源</span><span class="sxs-lookup"><span data-stu-id="a0efd-198">Packaging and Deploying Resources</span></span>](../resources/packaging-and-deploying-resources-in-desktop-apps.md)|<span data-ttu-id="a0efd-199">描述 .NET Framework 用于打包和部署资源的中心辐射模型，包括资源命名约定、后备进程和打包替代项。</span><span class="sxs-lookup"><span data-stu-id="a0efd-199">Describes the hub and spoke model that the .NET Framework uses to package and deploy resources; covers resource naming conventions, fallback process, and packaging alternatives.</span></span>|
-|[<span data-ttu-id="a0efd-200">部署互操作应用程序</span><span class="sxs-lookup"><span data-stu-id="a0efd-200">Deploying an Interop Application</span></span>](../interop/deploying-an-interop-application.md)|<span data-ttu-id="a0efd-201">说明如何传送和安装互操作应用程序，通常包括 .NET Framework 客户端程序集、表示区分 COM 类型库的一个或多个互操作程序集以及一个或多个已注册的 COM 组件。</span><span class="sxs-lookup"><span data-stu-id="a0efd-201">Explains how to ship and install interop applications, which typically include a .NET Framework client assembly, one or more interop assemblies representing distinct COM type libraries, and one or more registered COM components.</span></span>|
-|[<span data-ttu-id="a0efd-202">如何：获取 .NET Framework 4.5 安装程序的进度</span><span class="sxs-lookup"><span data-stu-id="a0efd-202">How to: Get Progress from the .NET Framework 4.5 Installer</span></span>](how-to-get-progress-from-the-dotnet-installer.md)|<span data-ttu-id="a0efd-203">描述如何在没有提示的情况下启动和跟踪 .NET Framework 安装进度，同时显示你自己的安装进度视图。</span><span class="sxs-lookup"><span data-stu-id="a0efd-203">Describes how to silently launch and track the .NET Framework setup process while showing your own view of the setup progress.</span></span>|
+|[<span data-ttu-id="ac35a-184">运行时如何定位程序集</span><span class="sxs-lookup"><span data-stu-id="ac35a-184">How the Runtime Locates Assemblies</span></span>](how-the-runtime-locates-assemblies.md)|<span data-ttu-id="ac35a-185">描述公共语言运行时如何确定将用于满足绑定请求的程序集类型。</span><span class="sxs-lookup"><span data-stu-id="ac35a-185">Describes how the common language runtime determines which assembly to use to fulfill a binding request.</span></span>|
+|[<span data-ttu-id="ac35a-186">适用于程序集加载的最佳做法</span><span class="sxs-lookup"><span data-stu-id="ac35a-186">Best Practices for Assembly Loading</span></span>](best-practices-for-assembly-loading.md)|<span data-ttu-id="ac35a-187">讨论避免类型标识问题的方法，从而避免发生 <xref:System.InvalidCastException><xref:System.MissingMethodException> 和其他错误。</span><span class="sxs-lookup"><span data-stu-id="ac35a-187">Discusses ways to avoid problems of type identity that can lead to <xref:System.InvalidCastException>, <xref:System.MissingMethodException>, and other errors.</span></span>|
+|[<span data-ttu-id="ac35a-188">在 .NET Framework 4.5 安装期间减少系统重新启动次数</span><span class="sxs-lookup"><span data-stu-id="ac35a-188">Reducing System Restarts During .NET Framework 4.5 Installations</span></span>](reducing-system-restarts.md)|<span data-ttu-id="ac35a-189">描述在任何可能的情况下可以阻止重启的 Restart Manager，并说明安装 .NET Framework 的应用程序如何利用它。</span><span class="sxs-lookup"><span data-stu-id="ac35a-189">Describes the Restart Manager, which prevents reboots whenever possible, and explains how applications that install the .NET Framework can take advantage of it.</span></span>|
+|[<span data-ttu-id="ac35a-190">面向管理员的部署指南</span><span class="sxs-lookup"><span data-stu-id="ac35a-190">Deployment Guide for Administrators</span></span>](guide-for-administrators.md)|<span data-ttu-id="ac35a-191">说明系统管理员如何通过 Microsoft Endpoint Configuration Manager 跨网络部署 .NET Framework 及其系统依赖项。</span><span class="sxs-lookup"><span data-stu-id="ac35a-191">Explains how a system administrator can deploy the .NET Framework and its system dependencies across a network by using Microsoft Endpoint Configuration Manager.</span></span>|
+|[<span data-ttu-id="ac35a-192">面向开发人员的部署指南</span><span class="sxs-lookup"><span data-stu-id="ac35a-192">Deployment Guide for Developers</span></span>](deployment-guide-for-developers.md)|<span data-ttu-id="ac35a-193">说明开发人员如何在其计算机的应用程序中安装 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="ac35a-193">Explains how developers can install .NET Framework on their users' computers with their applications.</span></span>|
+|[<span data-ttu-id="ac35a-194">部署应用程序、服务和组件</span><span class="sxs-lookup"><span data-stu-id="ac35a-194">Deploying Applications, Services, and Components</span></span>](/visualstudio/deployment/deploying-applications-services-and-components)|<span data-ttu-id="ac35a-195">讨论 Visual Studio 中的部署选项，包括使用 ClickOnce 和 Windows Installer 技术发布应用程序的说明。</span><span class="sxs-lookup"><span data-stu-id="ac35a-195">Discusses deployment options in Visual Studio, including instructions for publishing an application using the ClickOnce and Windows Installer technologies.</span></span>|
+|[<span data-ttu-id="ac35a-196">发布 ClickOnce 应用程序</span><span class="sxs-lookup"><span data-stu-id="ac35a-196">Publishing ClickOnce Applications</span></span>](/visualstudio/deployment/publishing-clickonce-applications)|<span data-ttu-id="ac35a-197">描述打包 Windows 窗体应用程序以及使用 ClickOnce 将其部署到连网的客户端计算机上的方法。</span><span class="sxs-lookup"><span data-stu-id="ac35a-197">Describes how to package a Windows Forms application and deploy it with ClickOnce to client computers on a network.</span></span>|
+|[<span data-ttu-id="ac35a-198">打包和部署资源</span><span class="sxs-lookup"><span data-stu-id="ac35a-198">Packaging and Deploying Resources</span></span>](../resources/packaging-and-deploying-resources-in-desktop-apps.md)|<span data-ttu-id="ac35a-199">描述 .NET Framework 用于打包和部署资源的中心辐射模型，包括资源命名约定、后备进程和打包替代项。</span><span class="sxs-lookup"><span data-stu-id="ac35a-199">Describes the hub and spoke model that the .NET Framework uses to package and deploy resources; covers resource naming conventions, fallback process, and packaging alternatives.</span></span>|
+|[<span data-ttu-id="ac35a-200">部署互操作应用程序</span><span class="sxs-lookup"><span data-stu-id="ac35a-200">Deploying an Interop Application</span></span>](../interop/deploying-an-interop-application.md)|<span data-ttu-id="ac35a-201">说明如何传送和安装互操作应用程序，通常包括 .NET Framework 客户端程序集、表示区分 COM 类型库的一个或多个互操作程序集以及一个或多个已注册的 COM 组件。</span><span class="sxs-lookup"><span data-stu-id="ac35a-201">Explains how to ship and install interop applications, which typically include a .NET Framework client assembly, one or more interop assemblies representing distinct COM type libraries, and one or more registered COM components.</span></span>|
+|[<span data-ttu-id="ac35a-202">如何：获取 .NET Framework 4.5 安装程序的进度</span><span class="sxs-lookup"><span data-stu-id="ac35a-202">How to: Get Progress from the .NET Framework 4.5 Installer</span></span>](how-to-get-progress-from-the-dotnet-installer.md)|<span data-ttu-id="ac35a-203">描述如何在没有提示的情况下启动和跟踪 .NET Framework 安装进度，同时显示你自己的安装进度视图。</span><span class="sxs-lookup"><span data-stu-id="ac35a-203">Describes how to silently launch and track the .NET Framework setup process while showing your own view of the setup progress.</span></span>|
 
-## <a name="see-also"></a><span data-ttu-id="a0efd-204">请参阅</span><span class="sxs-lookup"><span data-stu-id="a0efd-204">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ac35a-204">请参阅</span><span class="sxs-lookup"><span data-stu-id="ac35a-204">See also</span></span>
 
-- [<span data-ttu-id="a0efd-205">开发指南</span><span class="sxs-lookup"><span data-stu-id="a0efd-205">Development Guide</span></span>](../development-guide.md)
+- [<span data-ttu-id="ac35a-205">开发指南</span><span class="sxs-lookup"><span data-stu-id="ac35a-205">Development Guide</span></span>](../development-guide.md)
