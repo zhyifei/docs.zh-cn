@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 15a27c743f54a8ba6ea52edfde08731d8b439645
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 092dbb5227e5f9e0ae2a62656a300d2367bcf16b
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73735405"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634789"
 ---
 # <a name="queries-in-linq-to-dataset"></a>在 LINQ to DataSet 中查询
-查询是一种从数据源检索数据的表达式。 查询通常用专用查询语言表示，如用于关系数据库的 SQL 和用于 XML 的 XQuery。 因此，开发人员对于他们查询的每种类型的数据源或数据格式，都不得不学习一种新的查询语言。 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 提供了一种较为简单的一致模型，适用于各种数据源和格式的数据。 在 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 查询中，您始终使用编程对象。  
+查询是一种从数据源检索数据的表达式。 查询通常用专用查询语言表示，如用于关系数据库的 SQL 和用于 XML 的 XQuery。 因此，开发人员对于他们查询的每种类型的数据源或数据格式，都不得不学习一种新的查询语言。 语言集成查询 (LINQ) 为跨各种数据源和格式处理数据提供了一种更简单的、一致的模型。 在 LINQ 查询中，您始终可以使用编程对象。  
   
- 一个 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 查询操作包含三个操作：获取数据源、创建查询和执行查询。  
+ LINQ 查询操作包含三个操作：获得一个或多个数据源、创建查询并执行查询。  
   
- 实现 <xref:System.Collections.Generic.IEnumerable%601> 泛型接口的数据源可以通过 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 进行查询。 对 <xref:System.Data.DataTable> 调用 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> 将返回一个对象，该对象实现泛型 <xref:System.Collections.Generic.IEnumerable%601> 接口，该接口用作 LINQ to DataSet 查询的数据源。  
+ 可通过 LINQ 查询实现 <xref:System.Collections.Generic.IEnumerable%601> 泛型接口的数据源。 对 <xref:System.Data.DataTable> 调用 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> 将返回一个对象，该对象实现泛型 <xref:System.Collections.Generic.IEnumerable%601> 接口，该接口用作 LINQ to DataSet 查询的数据源。  
   
- 在查询中，您可以确切指定要从数据源检索哪些信息。 查询也可以指定返回信息之前信息的排序、分组和表现方式。 在 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 中，查询存储在变量中。 如果查询旨在返回一系列值，则查询变量本身也必须为可枚举类型。 此查询变量不执行任何操作，也不返回任何数据；它只存储查询信息。 创建查询后必须执行该查询以检索任何数据。  
+ 在查询中，您可以确切指定要从数据源检索哪些信息。 查询也可以指定返回信息之前信息的排序、分组和表现方式。 在 LINQ 中，查询存储在变量中。 如果查询旨在返回一系列值，则查询变量本身也必须为可枚举类型。 此查询变量不执行任何操作，也不返回任何数据；它只存储查询信息。 创建查询后必须执行该查询以检索任何数据。  
   
  在返回一系列值的查询中，查询变量本身从不保存查询结果，它只存储查询命令。 查询的执行将推迟到在 `foreach` 或 `For Each` 循环中循环访问查询变量之后进行。 这称为 "*延迟执行*";也就是说，在构造查询后，将执行查询。 这意味着您可以根据需要频繁地执行查询。 例如，当您的数据库由其他应用程序不断更新时，此功能将会很有用。 在您的应用程序中，您可以创建查询以检索最新信息并重复执行查询，每次返回更新的信息。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "73735405"
  [!code-vb[DP LINQ to DataSet Examples#SelectSimple1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectsimple1)]  
   
 ### <a name="method-based-query-syntax"></a>基于方法的查询语法  
- 表述 LINQ to DataSet 查询的另一种方法是使用基于方法的查询。 基于方法的查询语法是对 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 运算符方法的一系列直接方法调用，将 Lambda 表达式作为参数进行传递。 有关详细信息，请参阅 [Lambda 表达式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
+ 表述 LINQ to DataSet 查询的另一种方法是使用基于方法的查询。 基于方法的查询语法是一系列针对 LINQ 运算符方法的直接方法调用，同时将 lambda 表达式作为参数传递。 有关详细信息，请参阅 [Lambda 表达式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
   
  此示例使用 <xref:System.Linq.Enumerable.Select%2A> 返回 `Product` 中的所有行并显示产品名称。  
   
@@ -52,14 +52,14 @@ ms.locfileid: "73735405"
  [!code-csharp[DP LINQ to DataSet Examples#Composing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#composing)]
  [!code-vb[DP LINQ to DataSet Examples#Composing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#composing)]  
   
- 执行一个查询后，不会再编写其他查询，并且所有后续查询都将使用驻留在内存中的 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 运算符。 当在 `foreach` 或 `For Each` 语句中循环访问查询变量或通过调用可导致立即执行的 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 转换运算符之一时，查询将会开始执行。 这些运算符包括：<xref:System.Linq.Enumerable.ToList%2A>、<xref:System.Linq.Enumerable.ToArray%2A>、<xref:System.Linq.Enumerable.ToLookup%2A> 和 <xref:System.Linq.Enumerable.ToDictionary%2A>。  
+ 执行查询后，不能再编写其他查询，并且所有后续查询都将使用内存中 LINQ 运算符。 当你在 `foreach` 或 `For Each` 语句中循环访问查询变量或通过调用导致立即执行的某个 LINQ 转换运算符时，将会执行查询。 这些运算符包括：<xref:System.Linq.Enumerable.ToList%2A>、<xref:System.Linq.Enumerable.ToArray%2A>、<xref:System.Linq.Enumerable.ToLookup%2A> 和 <xref:System.Linq.Enumerable.ToDictionary%2A>。  
   
  在下面的示例中，第一个查询返回按定价排序的所有产品。 <xref:System.Linq.Enumerable.ToArray%2A> 方法用于强制立即执行查询：  
   
  [!code-csharp[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#toarray2)]
  [!code-vb[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#toarray2)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [编程指南](programming-guide-linq-to-dataset.md)
 - [查询数据集](querying-datasets-linq-to-dataset.md)
