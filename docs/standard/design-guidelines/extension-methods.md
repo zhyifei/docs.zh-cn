@@ -3,13 +3,12 @@ title: 擴充方法
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
-author: KrzysztofCwalina
-ms.openlocfilehash: ad78bae2dc7a3000b67224da6f1a8c578053087f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 2578fbacecd9fe790f72e828b455e8983b1298d3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347032"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709356"
 ---
 # <a name="extension-methods"></a>擴充方法
 扩展方法是一种语言特性，允许使用实例方法调用语法来调用静态方法。 这些方法必须至少使用一个参数，该参数表示方法要操作的实例。  

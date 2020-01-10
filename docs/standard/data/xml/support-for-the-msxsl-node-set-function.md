@@ -3,14 +3,12 @@ title: 对 msxsl:node-set() 函数的支持
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3670803ff20351fd9ff6892a0cef48b9caa70199
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: b9603f6c910e8e29309618c8e01e283c28ae2bff
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939526"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710123"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>对 msxsl:node-set() 函数的支持
 `msxsl:node-set` 函数使你能够将结果树片段转换成节点集。 生成的节点集总是包含单个节点并且是树的根节点。  
@@ -53,6 +51,6 @@ ms.locfileid: "69939526"
 <authors><author>Michael Howard</author><author>Michael Kay</author></authors>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

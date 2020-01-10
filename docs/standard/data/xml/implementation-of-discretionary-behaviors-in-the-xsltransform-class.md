@@ -3,14 +3,12 @@ title: XslTransform 类中任意行为的实现
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d0a6b3faff0208634e711b9d7908e3fd8dc640ae
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
-ms.translationtype: HT
+ms.openlocfilehash: b37cb0f4bf9a85053d70d549ae005c7d50a50bc0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170844"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710799"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>XslTransform 类中任意行为的实现
 
@@ -21,32 +19,32 @@ ms.locfileid: "67170844"
 
 因此，对 W3C 允许的每一种任意行为，下表列出了为 <xref:System.Xml.Xsl.XslTransform> 类的 .NET Framework 实现而实现的任意行为，并说明了此问题在 W3C XSLT 1.0 建议中的哪一节讨论。
 
-|问题|行为|节|
+|Problem|行为|节|
 |-------------|--------------|-------------|
-|文本节点同时与 `xsl:strip-space` 和 `xsl:preserve-space` 匹配。|恢复|3.4|
-|源节点与多个模板规则匹配。|恢复|5.5|
-|某个命名空间统一资源标识符 (URI) 声明为多个命名空间 URI 的别名，所有这些 URI 都具有相同的导入优先级。|恢复|7.1.1|
+|文本节点同时与 `xsl:strip-space` 和 `xsl:preserve-space` 匹配。|Recover|3.4|
+|源节点与多个模板规则匹配。|Recover|5.5|
+|某个命名空间统一资源标识符 (URI) 声明为多个命名空间 URI 的别名，所有这些 URI 都具有相同的导入优先级。|Recover|7.1.1|
 |从属性值模板生成的 `xsl:attribute` 和 `xsl:element` 中的名称属性不是有效的限定名 (QName)。|引发异常|7.1.2 和 7.1.3|
-|在一个元素节点已添加了子节点后向此元素添加属性。|恢复|7.1.3|
-|将属性添加到元素节点以外的任何内容中。|恢复|7.1.3|
-|`xsl:attribute` 元素的内容实例化不是文本节点。|恢复|7.1.3|
-|两个属性集具有相同的导入优先级和扩展名称。 两个属性集具有相同的属性，并且没有其他属性集包含导入优先级更高的同名公共属性。|恢复|7.1.4|
-|`xsl:processing-instruction` 名称属性不同时产生无冒号名称 (NCName) 和处理指令目标。|恢复|7.3|
-|实例化 `xsl:processing-instruction` 的内容创建了文本节点以外的节点。|恢复|7.3|
-|`xsl:processing-instruction` 内容的实例化结果中包含字符串“`?>`”。|恢复|7.3|
-|`xsl:comment` 内容的实例化结果中包含字符串“--”，或以“-”结尾。|恢复|7.4|
-|`xsl:comment` 内容的实例化结果创建了文本节点以外的节点。|恢复|7.4|
-|变量绑定元素内部的模板返回属性节点或命名空间节点。|恢复|11.2|
+|在一个元素节点已添加了子节点后向此元素添加属性。|Recover|7.1.3|
+|将属性添加到元素节点以外的任何内容中。|Recover|7.1.3|
+|`xsl:attribute` 元素的内容实例化不是文本节点。|Recover|7.1.3|
+|两个属性集具有相同的导入优先级和扩展名称。 两个属性集具有相同的属性，并且没有其他属性集包含导入优先级更高的同名公共属性。|Recover|7.1.4|
+|`xsl:processing-instruction` 名称属性不同时产生无冒号名称 (NCName) 和处理指令目标。|Recover|7.3|
+|实例化 `xsl:processing-instruction` 的内容创建了文本节点以外的节点。|Recover|7.3|
+|`xsl:processing-instruction` 内容的实例化结果中包含字符串“`?>`”。|Recover|7.3|
+|`xsl:comment` 内容的实例化结果中包含字符串“--”，或以“-”结尾。|Recover|7.4|
+|`xsl:comment` 内容的实例化结果创建了文本节点以外的节点。|Recover|7.4|
+|变量绑定元素内部的模板返回属性节点或命名空间节点。|Recover|11.2|
 |从传入文档函数的 URI 中检索资源时出错。|引发异常|12.1|
 |文档函数中的 URI 引用包含片断标识符，在处理段落标识符时出错。|引发异常|12.1|
-|`cdata-section-elements` 中有多个未命名为 `xls:output` 的同名属性，且这些属性具有相同的导入优先级。|恢复|16|
-|处理器不支持 `encoding` 元素的 `xsl:output` 属性中给出的字符编码值。|恢复|16.1|
+|`cdata-section-elements` 中有多个未命名为 `xls:output` 的同名属性，且这些属性具有相同的导入优先级。|Recover|16|
+|处理器不支持 `encoding` 元素的 `xsl:output` 属性中给出的字符编码值。|Recover|16.1|
 |`disable-output-escaping` 用于一个文本节点，而该文本节点用于在结果树中创建文本节点以外的内容。|`disable-output-escaping` 属性被忽略|16.4|
-|如果结果树片段包含启用了输出转义的文本节点，则将该结果树片断转换为数字或字符串。|忽略|16.4|
-|对不能以 XSLT 处理器用于输出的编码表示的字符禁用输出转义。|忽略|16.4|
-|向元素添加子级或添加属性后，向元素添加命名空间节点。|恢复|勘误表 e25|
-|`xsl:number` 为 NaN、无限大或小于 0.5。|恢复|勘误表 e24|
-|文档函数的第二个参数 node-set 为空，且 URI 引用是相对的。|恢复|勘误表 e14|
+|如果结果树片段包含启用了输出转义的文本节点，则将该结果树片断转换为数字或字符串。|已忽略|16.4|
+|对不能以 XSLT 处理器用于输出的编码表示的字符禁用输出转义。|已忽略|16.4|
+|向元素添加子级或添加属性后，向元素添加命名空间节点。|Recover|勘误表 e25|
+|`xsl:number` 为 NaN、无限大或小于 0.5。|Recover|勘误表 e24|
+|文档函数的第二个参数 node-set 为空，且 URI 引用是相对的。|Recover|勘误表 e14|
 
 可在 W3C [XSL 转换 (XSLT) 1.0 版规范勘误表](https://www.w3.org/1999/11/REC-xslt-19991116-errata/)中找到此勘误表的节。
 
@@ -56,7 +54,7 @@ ms.locfileid: "67170844"
 
 ## <a name="xslsort"></a>xsl:sort
 
-使用转换进行排序时，W3C XSLT 1.0 建议提供几点说明。 它们是：
+使用转换进行排序时，W3C XSLT 1.0 建议提供几点说明。 它们具有以下特点：
 
 - 两个 XSLT 处理器可能是一致的处理器，但仍可能以不同的方式排序。
 
@@ -68,18 +66,18 @@ ms.locfileid: "67170844"
 
 |数据类型|排序行为|
 |---------------|----------------------|
-|Text|数据通过公共语言运行库 (CLR) String.Compare 方法和区域设置进行排序。 当数据类型为“text”时，<xref:System.Xml.Xsl.XslTransform> 类的排序行为与 CLR 的字符串比较行为相同。|
-|数字|数值被视为 XML 路径语言 (XPath) 数字，并根据 W3C [XML 路径语言 (XPath) 1.0 版建议的 3.5 节](https://www.w3.org/TR/1999/REC-xpath-19991116/#numbers) 列出的详细信息进行排序。|
+|文本|数据通过公共语言运行库 (CLR) String.Compare 方法和区域设置进行排序。 当数据类型为“text”时，<xref:System.Xml.Xsl.XslTransform> 类的排序行为与 CLR 的字符串比较行为相同。|
+|Number|数值被视为 XML 路径语言 (XPath) 数字，并根据 W3C [XML 路径语言 (XPath) 1.0 版建议的 3.5 节](https://www.w3.org/TR/1999/REC-xpath-19991116/#numbers) 列出的详细信息进行排序。|
 
 ## <a name="optional-features-supported"></a>支持的可选功能
 
 下表显示 XSLT 处理器实现的可选功能，这些功能在 <xref:System.Xml.Xsl.XslTransform> 类中实现。
 
-|功能|引用位置|说明|
+|功能|引用位置|注释|
 |-------------|------------------------|-----------|
 |`disable-output-escaping` 和 `<xsl:text...>` 标记上的 `<xsl:value-of...>` 属性。|W3C XSLT 1.0 建议，<br /><br /> 16.4 节|当在 `disable-output-escaping`、`xsl:text` 或 `xsl:value-of` 元素中使用 `xsl:comment` 或 `xsl:processing-instruction` 元素时，忽略 `xsl:attribute` 属性。<br /><br /> 不支持包含文本的结果树片段和已转义的文本输出。<br /><br /> disable-output-escaping 属性在转换到 <xref:System.Xml.XmlReader> 或 <xref:System.Xml.XmlWriter> 对象时被忽略。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.Xsl.XslTransform>
 - [XslTransform 类实现 XSLT 处理器](xsltransform-class-implements-the-xslt-processor.md)

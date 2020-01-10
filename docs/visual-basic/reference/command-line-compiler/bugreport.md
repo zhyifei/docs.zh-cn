@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: 46d726332806f7d1f6e80dd7df31867051276b45
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 829c19d2bce40a850d98f4973b1a4e4de31d8ce1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002348"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716822"
 ---
 # <a name="-bugreport"></a>-bugreport
 创建一个文件，该文件可在您提交 bug 报告时使用。  
@@ -26,7 +26,7 @@ ms.locfileid: "72002348"
   
 |术语|Definition|  
 |---|---|  
-|`file`|必需。 将包含 bug 报告的文件的名称。 如果名称包含空格，请将文件名用引号（""）引起来。|  
+|`file`|必须的。 将包含 bug 报告的文件的名称。 如果名称包含空格，请将文件名用引号（""）引起来。|  
   
 ## <a name="remarks"></a>备注  
  将以下信息添加到 `file`：  
@@ -51,7 +51,7 @@ ms.locfileid: "72002348"
  如果此选项与 `-errorreport:prompt`、`-errorreport:queue`或 `-errorreport:send`一起使用，并且应用程序遇到内部编译器错误，则 `file` 中的信息将发送到 Microsoft Corporation。 该信息将帮助 Microsoft 工程师找出错误的原因，并帮助改进 Visual Basic 的下一版本。 默认情况下，不会向 Microsoft 发送任何信息。 但是，当你使用 `-errorreport:queue`（默认情况下已启用）编译应用程序时，应用程序将收集其错误报告。 然后，当计算机的管理员登录时，"错误报告系统" 会显示一个弹出窗口，使管理员能够将自登录后发生的任何错误报告转发给 Microsoft。  
   
 > [!NOTE]
-> `/bugreport` 选项在 Visual Studio 开发环境中不可用;仅当从命令行进行编译时，它才可用。  
+> `-bugreport` 选项在 Visual Studio 开发环境中不可用;仅当从命令行进行编译时，它才可用。  
   
 ## <a name="example"></a>示例  
  下面的示例将编译 `T2.vb`，并将所有 bug 报告信息放入 `Problem.txt`文件中。  

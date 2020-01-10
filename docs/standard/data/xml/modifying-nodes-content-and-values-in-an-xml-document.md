@@ -3,14 +3,12 @@ title: 修改 XML 文档中的节点、内容和值
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 976c34d72f9fcc89193658e50727a0ad365f2dd8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 4a53ba4fe16a3653b1be380da49e6b75cb347a28
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647889"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710669"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>修改 XML 文档中的节点、内容和值
 有多种方法可以修改文档中的节点和内容。 你可以：  
@@ -29,11 +27,11 @@ ms.locfileid: "64647889"
   
 |节点类型|更改的数据|  
 |---------------|------------------|  
-|特性|属性的值。|  
+|属性|属性的值。|  
 |CDATASection|CDATA 节的内容。|  
-|注释|注释的内容。|  
+|备注|注释的内容。|  
 |ProcessingInstruction|内容（不包括目标）。|  
-|Text|文本的内容。|  
+|文本|文本的内容。|  
 |XmlDeclaration|声明的内容，不包括 `<?xml` 和 `?>` 标记。|  
 |Whitespace|空白的值。 可以将该值设置为四个可识别的 XML 空白字符之一：空格、制表符、CR 或 LF。|  
 |SignificantWhitespace|有效空白的值。 可以将该值设置为四个可识别的 XML 空白字符之一：空格、制表符、CR 或 LF。|  
@@ -46,6 +44,6 @@ ms.locfileid: "64647889"
   
  向可编辑的节点中添加或从中移除只读子级是有效的。 然而，试图修改只读节点本身将引发 <xref:System.InvalidOperationException> 异常。 修改 <xref:System.Xml.XmlEntityReference> 节点的子级便属于这种情况。 该子级是只读的，因此无法修改。 任何修改它们的尝试都将引发 <xref:System.InvalidOperationException>。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

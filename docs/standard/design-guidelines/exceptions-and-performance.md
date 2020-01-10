@@ -9,13 +9,12 @@ helpviewer_keywords:
 - exceptions, performance
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-author: KrzysztofCwalina
-ms.openlocfilehash: 967692092186b81802a7ab635ea8fe4dbacd49ed
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e3a7fa0f284ebf028a18cae37c050d7ceda9bb79
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611513"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709382"
 ---
 # <a name="exceptions-and-performance"></a>异常和性能
 一个常见的与异常相关的问题是，如果异常用于通常会失败的代码，则实现的性能将变得不可接受。 这确实是一个问题。 当成员引发异常时，其性能可能会慢几个数量级。 但是，在严格遵守禁止使用错误代码的异常准则的同时，仍可能实现良好的性能。 本部分中描述了两种建议的模式。
@@ -72,11 +71,11 @@ public struct DateTime
 
  **✓ DO** 每个成员使用 Try 分析模式提供的异常引发的成员。
 
- *Portions © 2005, 2009 Microsoft Corporation 版权所有。保留所有权利。*
+ *部分©2005，2009 Microsoft Corporation。保留所有权利。*
 
- *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*
+ *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)
 - [异常的设计准则](../../../docs/standard/design-guidelines/exceptions.md)

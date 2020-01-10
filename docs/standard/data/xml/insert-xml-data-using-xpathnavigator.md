@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4ff9232272124c8706e64162d096eced8640c806
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 68c003467d837fe79d5e275968e47fa5dc3490cc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966958"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710721"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 插入 XML 数据
 <xref:System.Xml.XPath.XPathNavigator> 类提供一组方法用于在 XML 文档中插入同级节点、子节点和属性节点。 要使用这些方法，<xref:System.Xml.XPath.XPathNavigator> 对象必须可编辑，即其 <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 属性必须为 `true`。  
@@ -256,7 +254,7 @@ navigator.SetTypedValue(DateTime.Now);
   
  下表说明 <xref:System.Xml.XmlWriter> 类不支持的 <xref:System.Xml.XPath.XPathNavigator> 类方法。  
   
-|方法|说明|  
+|方法|描述|  
 |------------|-----------------|  
 |<xref:System.Xml.XmlWriter.WriteEntityRef%2A>|引发 <xref:System.NotSupportedException> 异常。|  
 |<xref:System.Xml.XmlWriter.WriteDocType%2A>|在根级别忽略，如果在 XML 文档中的任何其他级别调用，将引发 <xref:System.NotSupportedException> 异常。|  
@@ -330,7 +328,7 @@ document.Save("book.xml");
 ## <a name="saving-an-xml-document"></a>保存 XML 文档  
  使用 <xref:System.Xml.XmlDocument> 类的方法保存本主题中所述的方法对 <xref:System.Xml.XmlDocument> 对象的更改。 若要详细了解如何保存对 <xref:System.Xml.XmlDocument> 对象所做的更改，请参阅[保存和编写文档](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

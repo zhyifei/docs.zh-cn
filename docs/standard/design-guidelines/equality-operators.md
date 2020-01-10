@@ -9,20 +9,19 @@ helpviewer_keywords:
 - Equals method
 - == operator (equality) [.NET Framework]
 ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
-author: KrzysztofCwalina
-ms.openlocfilehash: ef1a0aff1ac59434d9d9a6f0371bf236f637050e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31a5ce18f4526b5e3b8411365dff812601de87ad
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960326"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709434"
 ---
 # <a name="equality-operators"></a>相等运算符
 本部分讨论了重载相等运算符并将 `operator==` 和 `operator!=` 引用为相等运算符。  
   
- **X 请勿**重载这两个相等运算符的任意一个。  
+ **X DO NOT** 重载相等运算符和不在其他之一。  
   
- **✓ 请确**保 <xref:System.Object.Equals%2A?displayProperty=nameWithType> 和相等运算符具有完全相同的语义和类似的性能特性。  
+ **✓ DO** 确保<xref:System.Object.Equals%2A?displayProperty=nameWithType>和相等运算符具有完全相同的语义和类似的性能特征。  
   
  这通常意味着，在重载相等运算符时需要替代 `Object.Equals`。  
   
@@ -42,13 +41,13 @@ ms.locfileid: "61960326"
   
  对于不可变的引用类型来说，此问题可得到缓解，因为不可变性使得引用等式和值等式之间的区别更难以被注意到。  
   
- **X 如果**实现速度明显慢于引用等式，请避免对引用类型重载等式运算符。  
+ **X AVOID** 重载相等运算符对引用类型，如果实现可能会显著慢于引用相等性的。  
   
- *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
+ *部分©2005，2009 Microsoft Corporation。保留所有权利。*  
   
- *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
+ *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)
 - [使用准则](../../../docs/standard/design-guidelines/usage-guidelines.md)

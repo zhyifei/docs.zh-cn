@@ -6,13 +6,12 @@ helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-author: KrzysztofCwalina
-ms.openlocfilehash: 6d4cc6615b7f7346e9c8fc2a7264025f318c8a3d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff38cfdc228fd1eae1ace734ed2688c62c66499a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785562"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709551"
 ---
 # <a name="attributes"></a>特性
 <xref:System.Attribute?displayProperty=nameWithType> 是用于定义自定义特性的基类。  
@@ -25,7 +24,7 @@ ms.locfileid: "61785562"
   
  应用该特性时不一定必须指定的属性称为可选属性（或可选参数）。 它们由可设置的属性表示。 编译器提供特殊语法，以在应用特性时设置这些属性。 例如， <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> 属性表示了一个可选参数。  
   
- **✓ 务必**使用后缀“Attribute”命名自定义特性类。  
+ **✓ DO** 命名自定义特性类带有后缀"属性"。  
   
  **✓ 务必**为自定义特性应用 <xref:System.AttributeUsageAttribute>。  
   
@@ -45,11 +44,11 @@ ms.locfileid: "61785562"
   
  **✓ 务必**尽可能密封自定义特性类。 这可使查找属性的速度更快。  
   
- *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
+ *部分©2005，2009 Microsoft Corporation。保留所有权利。*  
   
- *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
+ *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)
 - [使用准则](../../../docs/standard/design-guidelines/usage-guidelines.md)

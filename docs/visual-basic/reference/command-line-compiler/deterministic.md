@@ -5,12 +5,12 @@ helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-ms.openlocfilehash: 6a83b636dd83534788f3a38971e0fef2919314f5
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 9b611a72656bdd570eccec8a0585bf5ce6fa55f6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005631"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716795"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -44,13 +44,13 @@ ms.locfileid: "72005631"
   - 分析器可能使用的其他文件
 - 当前区域性（针对生成诊断和异常消息的语言）。
 - 在未指定编码情况下使用的默认编码（或当前代码页）。
-- 编译器搜索路径（例如，由`/lib` 或 `/recurse` 指定）上文件是否存在及其内容。
+- 编译器搜索路径（例如，由`-lib` 或 `-recurse` 指定）上文件是否存在及其内容。
 - 运行编译器的 CLR 平台。
 - `%LIBPATH%` 的值，该值会影响分析器的依赖项加载。
 
 当源公开可用时，可使用确定性编译来确定是否从可信源编译二进制内容。 它还可有效用于连续生成系统，确定是否需要执行依赖于二进制内容更改的生成步骤。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

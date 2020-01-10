@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-ms.openlocfilehash: 3da049b912d791f26814bb4b6cbb70998803726a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: a818fd46bd93682f0bede1d22b8cbc2ca6467a40
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005646"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716745"
 ---
 # <a name="-doc"></a>-doc
 将文档注释处理到一个 XML 文件中。  
@@ -30,7 +30,7 @@ ms.locfileid: "72005646"
   
 ## <a name="arguments"></a>参数  
   
-|术语|定义|  
+|术语|Definition|  
 |---|---|  
 |`+` &#124; `-`|可选。 指定 + 或仅 `-doc` 会导致编译器生成文档信息并将其置于 XML 文件中。 指定 `-` 相当于未指定 `-doc`，因此不会创建任何文档信息。|  
 |`file`|如果使用 `-doc:`，则是必需的。 指定输出 XML 文件（由编译的源代码文件中的注释填充）。 如果文件名包含空格，请用引号 (" ") 括住该名称。|  
@@ -46,18 +46,18 @@ ms.locfileid: "72005646"
   
  若要将生成的 XML 文件与 Visual Studio [IntelliSense](/visualstudio/ide/using-intellisense) 功能配合使用，请将 XML 文件的文件名设为与要支持的程序集相同的名称。 确保 XML 文件与程序集位于同一目录中，以便在 Visual Studio 项目中引用此程序集时，也可以找到 .xml 文件。 IntelliSense 不需要 XML 文档文件来处理项目内或项目引用的项目中的代码。  
   
- 除非使用 `/target:module` 进行编译，否则 XML 文件包含标记 `<assembly></assembly>`。 这些标记指定包含编译输出文件的程序集清单的文件的名称。  
+ 除非使用 `-target:module` 进行编译，否则 XML 文件包含标记 `<assembly></assembly>`。 这些标记指定包含编译输出文件的程序集清单的文件的名称。  
   
  有关从代码中的注释生成文档的方法，请参阅 [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)。  
   
 |在 Visual Studio 集成开发环境中设置 -doc|  
 |---|  
-|1.在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。 <br />2.单击“编译”选项卡。<br />3.在“生成 XML 文档文件”框中设置值。|  
+|1. 在**解决方案资源管理器**中选择了一个项目。 在“项目”菜单上，单击“属性”。 <br />2. 单击 "**编译**" 选项卡。<br />3. 在 "**生成 XML 文档文件**" 框中设置值。|  
   
 ## <a name="example"></a>示例  
  有关示例，请参阅[使用 XML 来记录代码](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [使用 XML 记录代码](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)

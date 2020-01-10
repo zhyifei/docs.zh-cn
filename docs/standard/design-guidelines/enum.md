@@ -9,13 +9,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-author: KrzysztofCwalina
-ms.openlocfilehash: e890ebbbeb04ca424b84c11791e5ce7fa55db72e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 130e9b4e7f8d7076d1dc3f21f51dc07a68799bbe
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663468"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709447"
 ---
 # <a name="enum-design"></a>枚举设计
 
@@ -25,29 +24,29 @@ ms.locfileid: "67663468"
 
 标志枚举旨在支持枚举值的按位运算。 标志枚举的一个常见示例是选项列表。
 
-✓ 务必将枚举用于强类型参数、属性和表示一组值集的返回值。 
+✓ 务必将枚举用于强类型参数、属性和表示一组值集的返回值。
 
-✓ 务必首选使用枚举而不是静态常量。 
+✓ 务必首选使用枚举而不是静态常量。
 
-X 切忌将枚举用于开放集（如操作系统版本、朋友的姓名等）。 
+X 切忌将枚举用于开放集（如操作系统版本、朋友的姓名等）。
 
-X 切忌提供供将来使用的保留枚举值。 
+X 切忌提供供将来使用的保留枚举值。
 
 在后面的阶段，可以随时向现有枚举添加值。 有关向枚举添加值的更多详细信息，请参阅[向枚举添加值](#add_value)。 保留值只会污染实际的值集，并往往会导致用户错误。
 
-X 避免公开暴露只有一个值的枚举。 
+**X AVOID** 公开使用只有一个值的枚举。
 
 确保 C API 未来可扩展性的常见做法是向方法签名添加保留参数。 这样的保留参数可以表示为具有单个默认值的枚举。 这不应该在托管 API 中完成。 方法重载允许在将来的版本中添加参数。
 
-**X 切忌**在枚举中包括 sentinel 值。
+**X DO NOT** 在枚举中包括 sentinel 值。
 
 虽然它们有时对框架开发人员很有帮助，但是 sentinel 值会给框架的用户造成混淆。 它们用于跟踪枚举的状态，而不是枚举表示的集合中的一个值。
 
-**✓ 务必**为简单枚举提供零值。
+**✓ DO** 提供简单枚举零的值。
 
 考虑将值称为“None”等类似名称。 如果此类值不适合此特定枚举，则应为该枚举的最常见默认值指定为零的基础值。
 
-**✓ 考虑**使用 <xref:System.Int32>（大多数编程语言中的默认值）作为枚举的基础类型，除非满足以下任何条件：
+**✓ CONSIDER** 使用<xref:System.Int32>（默认值在大多数编程语言） 作为枚举的基础类型除非以下任一条件成立：
 
 - 枚举是一个标志枚举，包含 32 个以上标志，或者将来可能有更多标志。
 
@@ -73,19 +72,19 @@ X 避免公开暴露只有一个值的枚举。
 
 ### <a name="designing-flag-enums"></a>设计标志枚举
 
-**✓ 务必**对标志枚举应用 <xref:System.FlagsAttribute?displayProperty=nameWithType>。 不要将此特性应用于简单枚举。
+**✓ DO** 应用<xref:System.FlagsAttribute?displayProperty=nameWithType>到标志枚举。 不要将此特性应用于简单枚举。
 
-**✓ 务必**对标志枚举值使用 2 的幂，以便可以使用按位 OR 运算自由组合它们。
+**✓ DO** 使用幂的两个用于标志枚举值，因此它们可以自由地组合使用按位或运算。
 
 **✓ 考虑**为常用的标志组合提供特殊的枚举值。
 
 按位运算是一种高级概念，简单任务应无需使用。 <xref:System.IO.FileAccess.ReadWrite> 就是这种特殊值的一个例子。
 
-**X 避免**创建某些值组合无效的标志枚举。
+**X AVOID** 创建标志枚举值的某些组合将无效。
 
 **X 避免**使用值为零的标志枚举，除非该值表示“已清除所有标志”，并按照下一指南的规定进行适当命名。
 
-✓ 务必将值为零的标志枚举命名为 `None`。  于标志枚举，该值必须始终表示“已清除所有标志”。
+**✓ DO** 命名的零值的标志枚举`None`。 于标志枚举，该值必须始终表示“已清除所有标志”。
 
 <a name="add_value"></a>
 
@@ -93,15 +92,15 @@ X 避免公开暴露只有一个值的枚举。
 
 你常常会发现，需要在已发布枚举后向其添加一个值。 从现有 API 返回新添加的值时，会存在潜在的应用程序兼容性问题，因为编写不当的应用程序可能无法正确处理新值。
 
-✓ 考虑将值添加到枚举，监管存在较低的兼容性风险。 
+✓ 考虑将值添加到枚举，监管存在较低的兼容性风险。
 
 如果已获得了有关向枚举添加值而引起的应用程序不兼容性问题的实际数据，请考虑添加可返回新值和旧值的新 API，并弃用旧 API，该旧 API 应会继续仅返回旧值。 这将确保现有的应用程序保持兼容。
 
-*部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*
+*部分©2005，2009 Microsoft Corporation。保留所有权利。*
 
-*经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*
+*在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [类型设计准则](../../../docs/standard/design-guidelines/type.md)
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)

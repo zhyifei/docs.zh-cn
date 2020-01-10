@@ -3,14 +3,12 @@ title: 转换中的节点集
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: ad034f0e-ff8b-4a71-9a4c-528c754263c4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fbcd9b93f63d48229c174b0f6518fd0150e98e18
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 2828b95f6a4050dd05b38e7ab6ef740ee4eb16b4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957031"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710552"
 ---
 # <a name="node-sets-in-transformations"></a>转换中的节点集
 节点集是从 XML 路径语言 (XPath) 表达式返回的四种基本数据类型之一。 节点集是按文档顺序创建的无重复节点的无序集合，可将其分配给样式表中的某个变量。  
@@ -74,7 +72,7 @@ History of Trenton Vol 3
 ******  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.XPath.XPathNodeIterator>
 - [XslTransform 类的 XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)

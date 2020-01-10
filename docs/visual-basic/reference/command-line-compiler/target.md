@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: bd79d95a18fb1935d97fff2d1b2c7767752b9765
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d186670489ada51fced67ff9adeb73b14909b664
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351721"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716685"
 ---
 # <a name="-target-visual-basic"></a>-target （Visual Basic）
 
@@ -29,7 +29,7 @@ ms.locfileid: "74351721"
 
 |**选项**|**行为**|
 |----------------|------------------|
-|`-target:exe`|使编译器创建可执行控制台应用程序。<br /><br /> 如果未指定 `-target` 选项，这是默认选项。 将使用 .exe 扩展名创建可执行文件。<br /><br /> 除非使用 `/out` 选项指定，否则输出文件名将采用包含 `Sub Main` 过程的输入文件的名称。<br /><br /> 编译到 .exe 文件中的源代码文件中只需要一个 `Sub Main` 过程。 使用 `-main` 编译器选项指定包含 `Sub Main` 过程的类。|
+|`-target:exe`|使编译器创建可执行控制台应用程序。<br /><br /> 如果未指定 `-target` 选项，这是默认选项。 将使用 .exe 扩展名创建可执行文件。<br /><br /> 除非使用 `-out` 选项指定，否则输出文件名将采用包含 `Sub Main` 过程的输入文件的名称。<br /><br /> 编译到 .exe 文件中的源代码文件中只需要一个 `Sub Main` 过程。 使用 `-main` 编译器选项指定包含 `Sub Main` 过程的类。|
 |`-target:library`|使编译器创建动态链接库（DLL）。<br /><br /> 使用 .dll 扩展名创建动态链接库文件。<br /><br /> 除非使用 `-out` 选项指定，否则输出文件名将采用第一个输入文件的名称。<br /><br /> 生成 DLL 时，不需要 `Sub Main` 过程。|
 |`-target:module`|使编译器生成可添加到程序集中的模块。<br /><br /> 使用扩展名 .netmodule 创建输出文件。<br /><br /> .NET 公共语言运行时无法加载不包含程序集的文件。 但是，可以使用 `-reference`将此类文件合并到程序集的程序集清单中。<br /><br /> 当某个模块中的代码引用另一个模块中的内部类型时，必须使用 `-reference`将两个模块都并入程序集清单中。<br /><br /> [-Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)选项从模块导入元数据。|
 |`-target:winexe`|使编译器创建可执行的基于 Windows 的应用程序。<br /><br /> 将使用 .exe 扩展名创建可执行文件。 基于 Windows 的应用程序是一种从 .NET Framework 类库或 Windows Api 提供用户界面的应用程序。<br /><br /> 除非使用 `-out` 选项指定，否则输出文件名将采用包含 `Sub Main` 过程的输入文件的名称。<br /><br /> 编译到 .exe 文件中的源代码文件中只需要一个 `Sub Main` 过程。 如果代码具有多个具有 `Sub Main` 过程的类，请使用 `-main` 编译器选项指定哪个类包含 `Sub Main` 过程|
@@ -44,7 +44,7 @@ ms.locfileid: "74351721"
 
 ### <a name="to-set--target-in-the-visual-studio-ide"></a>在 Visual Studio IDE 中设置目标
 
-1. 在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。
+1. 在 “解决方案资源管理器”中选择一个项目。 在“项目”菜单上，单击“属性”。
 
 2. 单击“应用程序” 选项卡。
 

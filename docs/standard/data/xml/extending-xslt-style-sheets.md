@@ -3,14 +3,12 @@ title: 扩展 XSLT 样式表
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: df4ba2bf-a99e-4d22-bbf3-04fc67669dbc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ff952df59dc8291b12df2b238052d4c40c834e2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 04f9788fe34ba74d0cf12fdd37adf46e85777192
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568818"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710864"
 ---
 # <a name="extending-xslt-style-sheets"></a>扩展 XSLT 样式表
 本节介绍扩展 XSLT 功能的不同方法。 可以使用 <xref:System.Xml.Xsl.XsltArgumentList> 类添加扩展对象或参数。 然后，可以从样式表中调用扩展对象或参数。 此外，还可以使用 `msxsl:script` 元素将脚本块嵌入样式表中。  

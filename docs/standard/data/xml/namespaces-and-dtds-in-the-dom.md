@@ -3,14 +3,12 @@ title: DOM 中的命名空间和 DTD
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a3a3ec957a55ff23dec728ccd31fe9e1f52ce78f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 22762e3a7003d9b28a53c7b500829aaa41924c6d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590210"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710591"
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>DOM 中的命名空间和 DTD
 文档类型定义 (DTD) 使命名空间支持变得很复杂。 例如，在下面的 XML 中，默认属性的名称中包含冒号。  
@@ -33,6 +31,6 @@ ms.locfileid: "64590210"
   
  Microsoft .NET Framework 中的 XML 实现第二个选项，以最大限度地提升 W3C 兼容性。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

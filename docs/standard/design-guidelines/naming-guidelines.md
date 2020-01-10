@@ -1,5 +1,5 @@
 ---
-title: 命名准则
+title: 命名规则
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - names [.NET Framework]
 - format naming guidelines [.NET Framework]
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
-author: KrzysztofCwalina
-ms.openlocfilehash: 4c7f411bdf538762de18873007c839f66911f96a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad98c0f3b02bdc81e6348493b4e0a02f9cb20ed4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757256"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709187"
 ---
-# <a name="naming-guidelines"></a>命名准则
+# <a name="naming-guidelines"></a>命名规则
 在框架开发中遵循一套一致的命名约定可极大地提升框架的可用性。 通过这种方式，框架便可供许多开发人员广泛用于各种不同的项目。 除了形式的一致性外，框架元素的名称必须易于理解，且须能够传达每个元素的功能。  
   
  本文的目的是提供一组一致的命名约定，用于生成便于开发人员理解和使用的名称。  
@@ -35,10 +34,10 @@ ms.locfileid: "61757256"
  [类型成员的名称](../../../docs/standard/design-guidelines/names-of-type-members.md)  
  [命名参数](../../../docs/standard/design-guidelines/naming-parameters.md)  
  [命名资源](../../../docs/standard/design-guidelines/naming-resources.md)  
- *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
+ *部分©2005，2009 Microsoft Corporation。保留所有权利。*  
   
- *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
+ *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: fd0875f09bf3ba7211ede500aa0da45f8b7cd2c7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5035466de4aa17c374824e1b0f02ed594731a9d3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344767"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716801"
 ---
 # <a name="-define-visual-basic"></a>-define （Visual Basic）
 定义条件编译器常数。  
@@ -35,7 +35,7 @@ ms.locfileid: "74344767"
   
 |术语|Definition|  
 |---|---|  
-|`symbol`|必需。 要定义的符号。|  
+|`symbol`|必须的。 要定义的符号。|  
 |`value`|可选。 指派给 `symbol` 的值。 如果 `value` 是字符串，则必须用反斜杠/引号序列（\\"）来括起来，而不是用引号引起来。 如果未指定值，则视为 True。|  
   
 ## <a name="remarks"></a>备注  
@@ -43,11 +43,11 @@ ms.locfileid: "74344767"
   
  可以将由此选项创建的符号同 `#If`...`Then`...`#Else` 指令一起使用，以对源文件进行条件编译。  
   
- `-d` 是 `-define`的缩写形式。  
+ `-d` 是 `-define` 的缩写形式。  
   
  通过使用逗号分隔符号定义，可以用 `-define` 定义多个符号。  
   
-|在 Visual Studio 集成开发环境中设置/定义|  
+|在 Visual Studio 集成开发环境中设置-定义|  
 |---|  
 |1. 在**解决方案资源管理器**中选择了一个项目。 在“项目”菜单上，单击“属性”。 <br />2. 单击 "**编译**" 选项卡。<br />3. 单击 "**高级**"。<br />4. 修改 "**自定义常量**" 框中的值。|  
   

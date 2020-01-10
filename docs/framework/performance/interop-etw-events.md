@@ -5,14 +5,12 @@ helpviewer_keywords:
 - interop events [.NET Framework]
 - ETW, interop events (CLR)
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5db68cdce0db4f8f4d85e9d1dd03720bf235d865
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 80fd1f7487dbe3925b875e728eaeddac86927ad4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974931"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716021"
 ---
 # <a name="interop-etw-events"></a>互操作 ETW 事件
 互操作事件捕获有关 Microsoft 中间语言 (MSIL) 存根生成和缓存的信息。  
@@ -21,13 +19,13 @@ ms.locfileid: "73974931"
 
 下表显示了关键字和级别。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)。）  
   
-|引发事件的关键字|层次|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`InteropKeyword` (0x2000)|信息性 (4)|  
   
  下表显示了事件信息。  
   
-|Event — 事件|事件 ID|在发生以下情况时引发|  
+|Event|事件 ID|在发生以下情况时引发|  
 |-----------|--------------|-----------------|  
 |`ILStubGenerated`|88|已生成 MSIL 存根。|  
   
@@ -51,13 +49,13 @@ ms.locfileid: "73974931"
 
 下表显示了关键字和级别。  
   
-|引发事件的关键字|层次|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`InteropKeyword` (0x2000)|信息性 (4)|  
   
  下表显示了事件信息。  
   
-|Event — 事件|事件 ID|在发生以下情况时引发|  
+|Event|事件 ID|在发生以下情况时引发|  
 |-----------|--------------|-----------------|  
 |`ILStubCacheHit`|89|已访问 MSIL 缓存。|  
   
@@ -73,6 +71,6 @@ ms.locfileid: "73974931"
 |ManagedInteropMethodName|win:UnicodeString|托管互操作方法的签名。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [CLR ETW 事件](clr-etw-events.md)

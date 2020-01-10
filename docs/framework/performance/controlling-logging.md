@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 924d209cd1177ffc1702ebe958c58bfc29c22c38
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 180cce516a1209711430429a46cb5b718b29f1d9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447685"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716107"
 ---
 # <a name="controlling-net-framework-logging"></a>控制 .NET Framework 日志记录
 
@@ -19,7 +17,7 @@ ms.locfileid: "74447685"
 
 - Windows 操作系统附带的 [Logman](/windows-server/administration/windows-commands/logman) 和 [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) 命令行工具。
 
-- [Windows 性能工具包](/windows-hardware/test/wpt/xperf-command-line-reference)中的 [Xperf](/windows-hardware/test/wpt/) 工具。 有关 Xperf 的详细信息，请参阅 [Windows 性能博客](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)。
+- [Windows 性能工具包](/windows-hardware/test/wpt/)中的 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 工具。 有关 Xperf 的详细信息，请参阅 [Windows 性能博客](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)。
 
 若要捕获 CLR 事件信息，必须在计算机上安装 CLR 提供程序。 若要确认该提供程序已安装，请在命令提示符处键入 `logman query providers`。 将显示提供程序的列表。 此列表应包含与 CLR 提供程序对应的项，如下所示。
 
@@ -57,7 +55,7 @@ Provider                                 GUID
 
     - `0x1CCBD` 指定将引发的事件的类别。
 
-    - `0x5` 设置日志记录级别（在本例中为 verbose （5））。
+    - `0x5` 设置记录的级别（在本例中为详细级别 (5)）。
 
     - `-ets` 参数指示 Logman 将命令发送给事件跟踪会话。
 

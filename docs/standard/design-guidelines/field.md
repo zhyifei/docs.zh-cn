@@ -7,13 +7,12 @@ helpviewer_keywords:
 - read-only fields
 - member design guidelines, fields
 ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
-author: KrzysztofCwalina
-ms.openlocfilehash: 3ab8fe279605c4795bb3a26557d0241b186b273a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d39c9b95d759902d6d523b028f3db8b8da954336
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026401"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709343"
 ---
 # <a name="field-design"></a>字段设计
 封装原则是面向对象的设计中最重要的概念之一。 该原则规定，存储在对象内的数据只能由该对象访问。  
@@ -22,7 +21,7 @@ ms.locfileid: "62026401"
   
  我们将常量和静态只读字段排除在了这一严格限制之外，因为根据定义，此类字段几乎从不需要更改。  
   
- X 请勿提供公共或受保护的实例字段。  
+ **X DO NOT** 提供公共或受保护的实例字段。  
   
  应提供用于访问字段而非使其成为公共或受保护字段的属性。  
   
@@ -38,11 +37,11 @@ ms.locfileid: "62026401"
   
  可变类型是具有可在实例化后修改的实例的类型。 例如，数组，大多数集合和流都是可变类型，但是 <xref:System.Int32?displayProperty=nameWithType>、<xref:System.Uri?displayProperty=nameWithType>、和 <xref:System.String?displayProperty=nameWithType> 都是不变的。 引用类型字段上的只读修饰符可防止存储在字段中的实例被替换，但它不会阻止通过调用更改实例的员来修改字段的实例数据。  
   
- *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
+ *部分©2005，2009 Microsoft Corporation。保留所有权利。*  
   
- *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
+ *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [成员设计准则](../../../docs/standard/design-guidelines/member.md)
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)

@@ -8,13 +8,12 @@ helpviewer_keywords:
 - member design guidelines, operators
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
-author: KrzysztofCwalina
-ms.openlocfilehash: 441dc2777cd8d221300c526b6b31a647af60ca71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4cea3c17de40a873d977223f36b6dcef4f2c2d78
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756853"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709135"
 ---
 # <a name="operator-overloads"></a>运算符重载
 运算符重载允许框架类型的外观类似内置语言基元。  
@@ -29,7 +28,7 @@ ms.locfileid: "61756853"
   
  **✓ 务必**在表示数字的结构中定义运算符重载（例如 <xref:System.Decimal?displayProperty=nameWithType> ）。  
   
- **X 切忌**在定义运算符重载时过于刻意。  
+ **X DO NOT** 过于刻意定义运算符重载时。  
   
  如果操作结果直观而明显，则运算符重载非常有用。 例如，能够从一个 <xref:System.DateTime> 中减去另一个 `DateTime`，并得到 <xref:System.TimeSpan>，这是有意义的。 但是，使用逻辑 union 运算符来合并两个数据库查询或使用 shift 运算符写入流则是不合适的。  
   
@@ -39,13 +38,13 @@ ms.locfileid: "61756853"
   
  例如，如果重载了 `operator==`，则还应该重载 `operator!=`。 同样，如果重载了 `operator<`，则还应该重载 `operator>`，以此类推。  
   
- **✓ 考虑**提供与每个重载运算符对应的具有友好名称的方法。  
+ **✓ CONSIDER** 提供的友好名称的对应到每个重载运算符的方法。  
   
  许多语言不支持运算符重载。 因此，建议重载运算符的类型包括具有适当的特定于域的名称的辅助方法，该方法提供等效功能。  
   
- 下表包含一系列运算符和相应的友好方法名称。  
+ 下表包含一个运算符列表和相应的友好方法名称。  
   
-|C# 运算符符号|元数据名称|友好名称|  
+|C#运算符符号|元数据名称|友好名称|  
 |-------------------------|-------------------|-------------------|  
 |`N/A`|`op_Implicit`|`To<TypeName>/From<TypeName>`|  
 |`N/A`|`op_Explicit`|`To<TypeName>/From<TypeName>`|  
@@ -92,7 +91,7 @@ ms.locfileid: "61756853"
 ### <a name="conversion-operators"></a>转换运算符  
  转换运算符是一元运算符，允许从一种类型转换为另一种类型。 必须在操作数或返回类型上将运算符定义为静态成员。 有两种类型的转换运算符：隐式和显式。  
   
- **X 切忌**提供转换运算符，如果最终用户未明确要求这种转换。  
+ **X DO NOT** 提供转换运算符，如果最终用户未明确要求这种转换。  
   
  **X 切忌**定义类型域外的转换运算符。  
   
@@ -108,11 +107,11 @@ ms.locfileid: "61756853"
   
  **✓ 务必**引发 <xref:System.InvalidCastException?displayProperty=nameWithType>，如果对转换运算符的调用会导致有损转换，并且运算符的协定不允许丢失数据的转换。  
   
- *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
+ *部分©2005，2009 Microsoft Corporation。保留所有权利。*  
   
- *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
+ *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [成员设计准则](../../../docs/standard/design-guidelines/member.md)
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)

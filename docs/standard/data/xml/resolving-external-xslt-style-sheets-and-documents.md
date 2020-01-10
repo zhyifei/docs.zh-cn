@@ -3,14 +3,12 @@ title: 解析外部 XSLT 样式表和文档
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 381b7c1eb091bafbcdc8ea842597c539c6be3a57
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 504519532d9a6988209cf04fd6b6196796f929f8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945636"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710292"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>解析外部 XSLT 样式表和文档
 转换过程中会有几个场合需要解析外部资源。  
@@ -43,7 +41,7 @@ ms.locfileid: "69945636"
   
  调用 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法时，将针对在加载时提供的证据来计算权限，并将权限集分配给整个转换过程。 如果 `document()` 函数尝试启动一个操作而该操作需要权限集中没有的权限，就会引发异常。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XslTransform 类的 XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
 - [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

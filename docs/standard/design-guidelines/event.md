@@ -10,20 +10,19 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-author: KrzysztofCwalina
-ms.openlocfilehash: 530c68ea5342263acd07f8dc8a8c8ce889652503
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 78d765a7af77b1e6a6ecd483677cea2d4c6b0d5b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026440"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709421"
 ---
 # <a name="event-design"></a>事件设计
-事件是最常用的回叫（允许框架调用用户代码的结构）。 其他回叫机制包括接受委托的成员、虚拟成员和基于接口的插件。来自可用性研究的数据表明，相比使用其他回叫机制，大多数开发人员更习惯使用事件。 事件能与 Visual Studio 和许多语言很好地集成。  
+事件是最常用的回叫（允许框架调用用户代码的结构）。 其他回调机制包括采用委托、虚拟成员和基于接口的插件的成员。可用性研究的数据表明，大多数开发人员比使用其他回调机制更喜欢使用事件. 事件能与 Visual Studio 和许多语言很好地集成。  
   
  值得注意的是，有两组事件：在系统状态发生变化之前引发的事件，称为事前事件，以及状态更改后引发的事件，称为事后事件。 事前事件的一个例子是 `Form.Closing`，它是在窗体关闭之前引发的。 事后事件的一个例子是 `Form.Closed`，它是在窗体关闭后引发的。  
   
- **✓ 务必** 对事件使用术语 “raise” 而不是 “fire” 或 “trigger”。  
+ **✓ DO** 使用术语"引发"事件而不是"激发"或"触发"。  
   
  **✓ 务必** 使用<xref:System.EventHandler%601?displayProperty=nameWithType>而不是手动创建新的委托以用作事件处理程序。  
   
@@ -37,7 +36,7 @@ ms.locfileid: "62026440"
   
  派生类可以选择在其重写中不调用方法的基本实现。 要做到这点，需要在方法中不包括使基类正常工作所需的任何处理过程。  
   
- **✓ 务必** 为引发事件的受保护方法采用一个参数。  
+ **✓ DO** 引发事件的受保护方法采用一个参数。  
   
  该参数应命名为 `e`，其类型应为事件参数类。  
   
@@ -58,7 +57,7 @@ ms.locfileid: "62026440"
   
  **✓ DO** 对于事件处理程序使用返回类型为 void。  
   
- 事件处理程序可以调用多个事件处理方法，可能在多个对象上。 如果允许事件处理方法返回一个值，则会为每个事件调用多个返回值。  
+ 事件处理程序可以调用多个事件处理方法（可能在多个对象上）。 如果允许事件处理方法返回值，则每个事件调用都有多个返回值。  
   
  **✓ DO** 使用`object`作为事件处理程序的第一个参数的类型和调用它`sender`。  
   
@@ -66,11 +65,11 @@ ms.locfileid: "62026440"
   
  **X DO NOT** 对事件处理程序的两个以上参数。  
   
- *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
+ *部分©2005，2009 Microsoft Corporation。保留所有权利。*  
   
- *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
+ *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [成员设计准则](../../../docs/standard/design-guidelines/member.md)
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)

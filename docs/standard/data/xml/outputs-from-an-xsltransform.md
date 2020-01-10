@@ -3,14 +3,12 @@ title: XslTransform 的输出
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0a6c2ea2fe2f02dc1897cb1348f4c2585b730036
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 178b1e949868d3af893cbcb6df63590053341a3e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924959"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710487"
 ---
 # <a name="outputs-from-an-xsltransform"></a>XslTransform 的输出
 样式表可以结合使用 `<xsl:output>` 语句和 `method` 属性来确定输出格式，下表说明了使用 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法写入输出并将输出格式声明为 <xref:System.IO.Stream> 或 <xref:System.IO.TextWriter> 时的输出格式。  
@@ -24,10 +22,10 @@ ms.locfileid: "69924959"
 |-----------------------------------------|-------------------|  
 |method="xml"|XML|  
 |method="html"|HTML|  
-|method="text"|Text|  
+|method="text"|文本|  
   
 > [!NOTE]
-> 注意：当 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法的输出为 <xref:System.Xml.XmlReader> 或 <xref:System.Xml.XmlWriter> 时，将忽略 `<xsl:output>` 语句。  
+> 注意：当 `<xsl:output>` 方法的输出为 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 或 <xref:System.Xml.XmlReader> 时，将忽略 <xref:System.Xml.XmlWriter> 语句。  
   
  如果 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法的输出为 <xref:System.IO.Stream> 或 <xref:System.IO.TextWriter>，将支持下列属性：  
   
@@ -35,7 +33,7 @@ ms.locfileid: "69924959"
   
 - omit-xml-declaration  
   
-- 独立  
+- standalone  
   
 - doctype-public  
   
@@ -57,6 +55,6 @@ ms.locfileid: "69924959"
 ## <a name="escaping-special-characters"></a>转义特殊字符  
  `<xsl:text disable-output-escaping>` 标记用于指示特殊字符是需要转义为 XML 形式（例如使用 `<&lt>` 替代 `"<"` 符号）还是保持现在的状态。 如果转换为 `disable-output-escaping` 或 <xref:System.Xml.XmlReader> 对象，将忽略 <xref:System.Xml.XmlWriter> 属性，对特殊字符没有影响。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

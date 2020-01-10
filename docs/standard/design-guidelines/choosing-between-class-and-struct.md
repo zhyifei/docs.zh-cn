@@ -12,13 +12,12 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-author: KrzysztofCwalina
-ms.openlocfilehash: 5041368ca1a440698c399c935ac72aba2002c3ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34ab2589364e244fed1c64c1703205fb4b0832e8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615265"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709512"
 ---
 # <a name="choosing-between-class-and-struct"></a>在类和结构之间选择
 每个框架设计者面临的基本设计决策之一是将类型设计为类（引用类型）还是结构（值类型）。 要做出合适的选择，深入理解引用类型和值类型的行为差异非常重要。  
@@ -35,11 +34,11 @@ ms.locfileid: "64615265"
   
  一般来说，框架中的大多数类型应该是类。 但是，在某些情况下，值类型的特征使得其更适合使用结构。  
   
- **✓ 考虑**如果类型的实例比较小并且通常生存期较短或者通常嵌入在其他对象中，则定义结构而不是类。  
+ **✓ CONSIDER** 定义而不是类结构，如果该类型的实例很小，通常生存期较短或嵌入其他对象。  
   
- **X 避免**定义一个结构，除非该类型具有所有以下特征：  
+ **X AVOID** 定义一个结构，除非该类型具有所有以下特征：  
   
-- 它逻辑上表示单个值，类似于基元类型（`int`， `double`，等等）。  
+- 它以逻辑方式表示单个值，类似于基元类型（`int`、`double`等）。  
   
 - 它的实例大小小于 16 字节。  
   
@@ -49,11 +48,11 @@ ms.locfileid: "64615265"
   
  在所有其他情况下，应将类型定义为类。  
   
- *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
+ *部分©2005，2009 Microsoft Corporation。保留所有权利。*  
   
- *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
+ *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [类型设计准则](../../../docs/standard/design-guidelines/type.md)
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)

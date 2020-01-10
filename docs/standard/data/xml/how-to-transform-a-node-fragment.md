@@ -1,21 +1,19 @@
 ---
-title: 如何：转换节点片段
+title: 如何：转换节点片断
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fabf7983a1887fb318bfb8d111b3911f4d90c545
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 56e9ef6031a5736acfa066ed6c068f954bd5af8d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345165"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710812"
 ---
-# <a name="how-to-transform-a-node-fragment"></a>如何：转换节点片段
+# <a name="how-to-transform-a-node-fragment"></a>如何：转换节点片断
 在转换 <xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathDocument> 对象中包含的数据时，XSLT 转换应用于整个文档。 换句话说，如果你传入文档根节点以外的一个节点，并不能防止转换进程访问已加载文档的所有节点。 若要转换节点片段，必须创建一个仅包含节点片段的独立对象，并将该对象传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。  
   
 ## <a name="procedures"></a>过程  
@@ -47,6 +45,6 @@ ms.locfileid: "59345165"
 ### <a name="output"></a>Output  
  书名为 The Confidence Man。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

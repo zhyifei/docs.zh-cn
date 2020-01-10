@@ -7,13 +7,12 @@ helpviewer_keywords:
 - type design guidelines, interfaces
 - class library design guidelines [.NET Framework], interfaces
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
-author: KrzysztofCwalina
-ms.openlocfilehash: 1f982aa37f92b7270725574d949989ca120297d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06b2e0d281314f3bd6346a7dbbd8bb56928fe58b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026362"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709291"
 ---
 # <a name="interface-design"></a>接口设计
 虽然大多数 API 最好使用类和结构进行建模，但有些情况下接口更合适或是唯一的选择。  
@@ -30,11 +29,11 @@ ms.locfileid: "62026362"
   
  如果需要将类标记为具有特定特征（标记），通常使用自定义特性而不是接口。  
   
- **✓ 务必**至少提供一种作为接口的实现的类型。  
+ **✓ DO** 提供至少一种类型的接口的实现。  
   
  此做法有助于验证接口的设计。 例如，<xref:System.Collections.Generic.List%601> 是 <xref:System.Collections.Generic.IList%601> 接口的实现。  
   
- **✓ 务必**为你定义的每个接口提供至少一个使用它的 API（将接口作为类型化为接口的参数或属性的方法）。  
+ **✓ DO** 提供使用你定义的每个接口的至少一个 API （采用作为参数或属性的接口的方法类型化为接口）。  
   
  此做法有助于验证接口设计。 例如，<xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> 使用 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 接口。  
   
@@ -44,11 +43,11 @@ ms.locfileid: "62026362"
   
  除了这些指南中描述的情况之外，一般情况下，应该在设计托管代码的可重用库时选择类而不是接口。  
   
- *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
+ *部分©2005，2009 Microsoft Corporation。保留所有权利。*  
   
- *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
+ *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [类型设计准则](../../../docs/standard/design-guidelines/type.md)
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)

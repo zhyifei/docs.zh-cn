@@ -3,14 +3,12 @@ title: 嵌入到文档中的样式表指令
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d79fb295-ebc7-438d-ba1b-05be7d534834
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 65987c5e29d593758b21259d6367202c882df2de
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: HT
+ms.openlocfilehash: 19e25ab7262bb006144eea71e74bd7454066b3f6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45742643"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710149"
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a>嵌入到文档中的样式表指令
 
@@ -37,6 +35,6 @@ ms.locfileid: "45742643"
 
 根据万维网联合会 (W3C) [将样式表与 XML 文档关联的 1.0 版建议](https://www.w3.org/TR/xml-stylesheet/)，将 XSLT 样式表与 XML 文档关联的处理指令是 `<?xml-stylesheet?>`（用短划线代替冒号）。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 文档对象模型 (DOM)](xml-document-object-model-dom.md)

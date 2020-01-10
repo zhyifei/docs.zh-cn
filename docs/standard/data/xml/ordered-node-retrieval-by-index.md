@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4e4847dd6bc05127799cb6d8424a8fdb63fbc0f7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 72e866e43b556d8534024a219d924b1f372ed073
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590063"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710513"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>按索引检索已排序节点
 万维网联合会 (W3C) XML 文档对象模型 (DOM) 还描述了 NodeList，它能够处理已排序节点列表（与 XmlNamedNodeMap 处理的未排序集相对）。 NodeList 在 Microsoft .NET Framework 中称为 XmlNodeList。 返回 XmlNodeList 的方法和属性包括：  
@@ -94,6 +92,6 @@ End While
   
  有关 XmlNodeList 中可用方法和属性的更多信息，请参见 <xref:System.Xml.XmlNodeList>。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

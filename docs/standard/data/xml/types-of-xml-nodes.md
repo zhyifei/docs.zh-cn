@@ -3,29 +3,27 @@ title: XML 节点类型
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 623583f16c23b55c16f648fedcd039ca36f73b1f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: HT
+ms.openlocfilehash: 83b8c09323e73a9b3ba7dea8d272d7d41d03add1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396885"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710084"
 ---
 # <a name="types-of-xml-nodes"></a>XML 节点类型
 当将 XML 文档作为节点树读入内存时，这些节点的节点类型在创建节点时确定。 XML 文档对象模型 (DOM) 具有多种节点类型，这些类型由万维网联合会 (W3C) 确定并在 1.1.1 节“The DOM Structure Model”中列出。 下表列出了节点类型、分配给该节点类型的对象以及每种节点类型的简短说明。  
   
 |DOM 节点类型|对象|描述|  
 |-------------------|------------|-----------------|  
-|Document|<xref:System.Xml.XmlDocument>|树中所有节点的容器。 它也称作文档根，文档根并非总是与根元素相同。|  
+|文档|<xref:System.Xml.XmlDocument>|树中所有节点的容器。 它也称作文档根，文档根并非总是与根元素相同。|  
 |DocumentFragment|<xref:System.Xml.XmlDocumentFragment>|包含一个或多个不带任何树结构的节点的临时袋。|  
 |DocumentType|<xref:System.Xml.XmlDocumentType>|表示 `<!DOCTYPE…>` 节点。|  
 |EntityReference|<xref:System.Xml.XmlEntityReference>|表示非扩展的实体引用文本。|  
 |元素|<xref:System.Xml.XmlElement>|表示元素节点。|  
 |Attr|<xref:System.Xml.XmlAttribute>|为元素的属性。|  
 |ProcessingInstruction|<xref:System.Xml.XmlProcessingInstruction>|为处理指令节点。|  
-|注释|<xref:System.Xml.XmlComment>|注释节点。|  
-|Text|<xref:System.Xml.XmlText>|属于某个元素或属性的文本。|  
+|备注|<xref:System.Xml.XmlComment>|注释节点。|  
+|文本|<xref:System.Xml.XmlText>|属于某个元素或属性的文本。|  
 |CDATASection|<xref:System.Xml.XmlCDataSection>|表示 CDATA。|  
 |实体|<xref:System.Xml.XmlEntity>|表示 XML 文档（来自内部文档类型定义 (DTD) 子集或来自外部 DTD 和参数实体）中的 `<!ENTITY…>` 声明。|  
 |Notation|<xref:System.Xml.XmlNotation>|表示 DTD 中声明的表示法。|  
@@ -46,6 +44,6 @@ ms.locfileid: "47396885"
   
  若要详细了解节点类型及对应的相当对象名称的对象层次结构，请参阅 [XML 文档对象模型 (DOM) 层次结构](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md)。 若要详细了解在节点树中创建的对象，请参阅[将对象层次结构映射到 XML 数据](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

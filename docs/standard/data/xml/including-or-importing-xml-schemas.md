@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 45f6b402ae01b7f762f8ef10dcfb0bc46f949db6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: d9a18876d8a5ba3067aa35c617b1e20fce0411f5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343566"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710773"
 ---
 # <a name="including-or-importing-xml-schemas"></a>包含或导入 XML 架构
 XML 架构可以包含 `<xs:import />`、`<xs:include />` 和 `<xs:redefine />` 元素。 这些架构元素引用其他 XML 架构，可以用于补充包括或导入这些架构的架构的结构。 <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 和 <xref:System.Xml.Schema.XmlSchemaRedefine> 类映射到架构对象模型 (SOM) API 中的这些元素。  
@@ -99,7 +97,7 @@ XML 架构可以包含 `<xs:import />`、`<xs:include />` 和 `<xs:redefine />` 
   
  若要详细了解 `<xs:import />`、`<xs:include />` 和 `<xs:redefine />` 元素以及 <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 和 <xref:System.Xml.Schema.XmlSchemaRedefine> 类，请参阅 [W3C XML 架构](https://www.w3.org/XML/Schema)和 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空间类参考文档。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 架构对象模型概述](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [读取和编写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)

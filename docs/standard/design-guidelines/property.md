@@ -6,36 +6,35 @@ helpviewer_keywords:
 - member design guidelines, properties
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
-author: KrzysztofCwalina
-ms.openlocfilehash: e4ed4fd39a9ebd63b9d5dbff38dc15647d65934f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d5cdbfdb38c7aebaca6cbcdeb63959ac12884e0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026299"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709122"
 ---
 # <a name="property-design"></a>属性设计
 虽然属性在技术上与方法非常相似，但它们的使用场景却截然不同。 属性应被视为聪明的字段。 它们兼具字段的调用语法和方法的灵活性。  
   
- **✓ 务必**创建 get-only 属性，如果调用方不能更改属性值的话。  
+ **✓ DO** 创建仅限 get 的属性，如果调用方应不能更改属性的值。  
   
  请记住，如果属性的类型是可变的引用类型，则即使属性为 get-only，也可以更改属性值。  
   
- **X 切忌**提供 set-only 属性，或其 setter 的可访问性比 getter 更广泛的属性。  
+ **X DO NOT** 仅属性的 setter 具有更广泛的可访问性比 getter 提供。  
   
  例如，不要使用具有公共 setter 和受保护的 getter 的属性。  
   
  如果无法提供属性 getter，请将该功能实现为方法。 考虑将方法名称以 `Set` 开始，在后面添加你对该属性的命名。 如，<xref:System.AppDomain> 有一个名为 `SetCachePath` 的方法，而不是一个名为 `CachePath` 的 set-only 属性。  
   
- **✓ 务必**为所有属性提供合理的默认值，确保默认值不会导致安全漏洞或严重低效的代码。  
+ **✓ DO** 提供的所有属性，确保，默认值不会导致安全漏洞或您对此低效代码的意义的默认值。  
   
- **✓ 务必**允许将属性按任何顺序设置，即使这会导致对象的临时无效状态。  
+ **✓ DO** 允许将属性按任何顺序设置，即使这会导致临时无效状态的对象。  
   
  在给定同一对象上的其他属性的值的情况下，一个属性的某些值可能是无效的，这是导致两个或多个属性相关联的一种常见况。 在这种情况下，无效状态导致的异常应该会推迟，直到对象实际将这些相关属性一起使用。  
   
  **✓ 务必**在属性 setter 引发异常时保留以前的值。  
   
- **X 避免**从属性 getter 引发异常。  
+ **X AVOID** 属性 getter 从引发异常。  
   
  属性 getter 应该是简单的操作，不应该有任何前置条件。 如果某个 getter 可能会引发异常，则应该将其重新设计为方法。 请注意，此规则不适用于索引器，因为我们确实会因验证参数而导致异常。  
   
@@ -48,21 +47,21 @@ ms.locfileid: "62026299"
   
  **✓ 考虑** 提供索引器上表示的项的集合的类型。  
   
- **X 避免** 使用索引与多个参数的属性。  
+ **X AVOID** 使用索引与多个参数的属性。  
   
- 如果设计需要多个参数，请重新考虑该属性是否真正代表逻辑集合的访问者。 如果不是，请改用方法。 考虑使用 `Get` 或 `Set` 开头的方法名称。  
+ 如果设计需要多个参数，请重新考虑该属性是否真正代表逻辑集合的访问者。 如果不是，请改用方法。 考虑使用 `Get` 或 `Set` 开头的方法名称  
   
- **X 避免** 具有以外的其他参数类型的索引器<xref:System.Int32?displayProperty=nameWithType>， <xref:System.Int64?displayProperty=nameWithType>， <xref:System.String?displayProperty=nameWithType>， <xref:System.Object?displayProperty=nameWithType>，或枚举。  
+ **X AVOID** 具有以外的其他参数类型的索引器<xref:System.Int32?displayProperty=nameWithType>， <xref:System.Int64?displayProperty=nameWithType>， <xref:System.String?displayProperty=nameWithType>， <xref:System.Object?displayProperty=nameWithType>，或枚举。  
   
  如果设计需要其他类型的参数，请仔细重新评估 API 是否真正代表逻辑集合的访问者。 如果不是，请使用方法。 考虑使用 `Get` 或 `Set` 开头的方法名称  
   
- **✓ 务必**使用名称 `Item` 的索引属性，除非有明显更好的名称（例如，请参阅 <xref:System.String.Chars%2A>属性`System.String`）。  
+ **✓ DO** 使用名称`Item`的索引属性，除非有显然更好的名称 (例如，请参阅<xref:System.String.Chars%2A>属性`System.String`)。  
   
  在 C# 中，索引器默认名称为 Item。 <xref:System.Runtime.CompilerServices.IndexerNameAttribute> 可用于自定义此名称。  
   
- **X 切忌**提供索引器和在语义上等效的方法。    
+ **X 切忌**提供索引器和在语义上等效的方法。  
   
- **X 切忌** 提供多个系列中一种类型的重载索引器。  
+ **X DO NOT** 提供多个系列中一种类型的重载索引器。  
   
  此准则由 C# 编译器强制执行。  
   
@@ -83,11 +82,11 @@ ms.locfileid: "62026299"
   
  如果属性值通过某种外力（通过调用对象上的方法以外的方式）发生更改。则引发事件向开发人员指示值正在更改并已更改。 一个典型示例是文本框控件的 `Text` 属性。 当用户在 `TextBox` 中键入文本时，属性值会自动更改。  
   
- *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
+ *部分©2005，2009 Microsoft Corporation。保留所有权利。*  
   
- *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
+ *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [成员设计准则](../../../docs/standard/design-guidelines/member.md)
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)

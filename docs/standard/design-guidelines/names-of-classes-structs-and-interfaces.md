@@ -12,13 +12,12 @@ helpviewer_keywords:
 - interfaces [.NET Framework], names
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
-author: KrzysztofCwalina
-ms.openlocfilehash: 2ecd708ccb8eb91270e8ef9c174b8d7e599a2629
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 96d9904af0106d797c9fc5199bda76da53874451
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353695"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709239"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>类、结构和接口的名称
 以下命名准则适用于常规类型命名。  
@@ -64,21 +63,21 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 }  
 ```  
   
- **✓ 考虑**在参数名称中体现出对该类型参数设置的约束。  
+ **✓ CONSIDER** ，该值指示约束放置在类型参数在参数名。  
   
  例如，被限制为 `ISession` 的参数可能名为 `TSession`。  
   
 ## <a name="names-of-common-types"></a>常见类型的名称  
  **✓ 务必**在命名从某些 .NET Framework 类型派生的类型或在实现某些 .NET Framework 类型时，遵循下表所述准则。  
   
-|基类型|派生/实现类型准则|  
+|Base Type|派生/实现类型准则|  
 |---------------|------------------------------------------|  
 |`System.Attribute`|**✓ 务必**为自定义属性类的名称添加后缀 "Attribute"。|  
 |`System.Delegate`|**✓ 务必**向事件中所用委托的名称中添加后缀 "EventHandler"。<br /><br /> **✓ 务必**在用作事件处理程序的委托以外的委托名称中添加后缀 "Callback"。<br /><br /> **X 不要**将后缀 "Delegate" 添加到委托。|  
 |`System.EventArgs`|**✓ 务必**添加后缀 "EventArgs"。|  
 |`System.Enum`|**X 不要**从此类派生；而是使用所用语言支持的关键字；例如，在 C# 中，使用关键字 `enum`。<br /><br /> **X 不要**添加后缀 "Enum" 或 "Flag"。|  
 |`System.Exception`|**✓ 务必**添加后缀 "Exception"。|  
-|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ 务必**添加后缀 "Dictionary"。 请注意，`IDictionary` 是一种特定类型的集合，但此准则优先于后面更宽泛的集合准则。|  
+|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO** 添加后缀"字典。" 请注意，`IDictionary` 是一种特定类型的集合，但此准则优先于后面更宽泛的集合准则。|  
 |`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|**✓ 务必**添加后缀 "Collection"。|  
 |`System.IO.Stream`|**✓ 务必**添加后缀 "Stream"。|  
 |`CodeAccessPermission IPermission`|**✓ 务必**添加后缀 "Permission"。|  
@@ -86,7 +85,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 ## <a name="naming-enumerations"></a>命名枚举  
  一般情况下，枚举类型（也称为枚举）的名称应遵循标准的类型命名规则（PascalCasing 等）。 但还有专用于枚举的其他准则。  
   
- **✓ 务必**为枚举使用单数形式的类型名称，除非枚举值是位域。  
+ **✓ DO** 使用枚举的单数形式的类型名称，除非其值是位域。  
   
  **✓ 务必**为值为位域的枚举使用复数形式的类型名称，这类枚举也称为标志枚举。  
   
@@ -96,11 +95,11 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  **X 不要**在枚举值名称中使用前缀（例如，对 ADO 枚举使用 "ad”，对富文本枚举使用 "rtf" 等）。  
   
- *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
+ *部分©2005，2009 Microsoft Corporation。保留所有权利。*  
   
- *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
+ *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)
 - [命名规则](../../../docs/standard/design-guidelines/naming-guidelines.md)

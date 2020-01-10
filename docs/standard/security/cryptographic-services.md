@@ -24,14 +24,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6f0e268995449bc27b93c92ac8654c09fca9cd14
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 66af8126ab61d37065b9a328d5e088ed7bf4cbef
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975829"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709200"
 ---
 # <a name="cryptographic-services"></a>加密服务
 
@@ -59,7 +57,7 @@ ms.locfileid: "73975829"
 
 若要实现这些目标，可以使用称为加密基元的算法和惯例的组合来创建加密方案。 下表列出了加密基元以及其用途。
 
-|加密基元|使用“管理”工作区中的“连接的管理组”|
+|加密基元|“使用”|
 |-----------------------------|---------|
 |私钥加密（对称加密）|在数据上执行转换，以防止其被第三方读取。 此类型的加密使用单个共享的密钥来加密和解密数据。|
 |公钥加密（非对称加密）|在数据上执行转换，以防止其被第三方读取。 此类型的加密使用公钥/私钥对来加密和解密数据。|
@@ -90,15 +88,15 @@ ms.locfileid: "73975829"
 
 - <xref:System.Security.Cryptography.AesManaged> （在 .NET Framework 3.5 中引入）。
 
-- <xref:System.Security.Cryptography.DESCryptoServiceProvider>
+- <xref:System.Security.Cryptography.DESCryptoServiceProvider>。
 
 - <xref:System.Security.Cryptography.HMACSHA1> （从技术上讲，这是一种密钥算法，因为它代表使用与密钥结合的加密哈希函数计算的消息验证代码。 请参阅本主题之后的 [哈希值](#hash-values)。）
 
-- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>
+- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>。
 
-- <xref:System.Security.Cryptography.RijndaelManaged>
+- <xref:System.Security.Cryptography.RijndaelManaged>。
 
-- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>
+- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>。
 
 ## <a name="public-key-encryption"></a>公钥加密
 
@@ -187,21 +185,21 @@ RSA 允许加密和签名，但 DSA 仅可用于签名，而 Diffie-Hellman 仅�
 
 .NET Framework 提供了以下实现哈希算法的类：
 
-- <xref:System.Security.Cryptography.HMACSHA1>
+- <xref:System.Security.Cryptography.HMACSHA1>。
 
-- <xref:System.Security.Cryptography.MACTripleDES>
+- <xref:System.Security.Cryptography.MACTripleDES>。
 
-- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>
+- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>。
 
-- <xref:System.Security.Cryptography.RIPEMD160>
+- <xref:System.Security.Cryptography.RIPEMD160>。
 
-- <xref:System.Security.Cryptography.SHA1Managed>
+- <xref:System.Security.Cryptography.SHA1Managed>。
 
-- <xref:System.Security.Cryptography.SHA256Managed>
+- <xref:System.Security.Cryptography.SHA256Managed>。
 
-- <xref:System.Security.Cryptography.SHA384Managed>
+- <xref:System.Security.Cryptography.SHA384Managed>。
 
-- <xref:System.Security.Cryptography.SHA512Managed>
+- <xref:System.Security.Cryptography.SHA512Managed>。
 
 - 所有安全哈希算法 (SHA)、消息摘要 5 (MD5) 和 ripemd-160 算法的 HMAC 变体。
 
@@ -270,7 +268,7 @@ RSA 允许加密和签名，但 DSA 仅可用于签名，而 Diffie-Hellman 仅�
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|描述|
+|职务|描述|
 |-----------|-----------------|
 |[加密模型](../../../docs/standard/security/cryptography-model.md)|介绍如何在基类库中实现加密。|
 |[演练：创建加密应用程序](../../../docs/standard/security/walkthrough-creating-a-cryptographic-application.md)|演示基本加密和解密任务。|

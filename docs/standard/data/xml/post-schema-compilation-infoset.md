@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7e7892289248c9651b529bcc68d7228b8babb28a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: HT
+ms.openlocfilehash: 016032b2b37ced5592edc18934ed183c475f5598
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083814"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710474"
 ---
 # <a name="post-schema-compilation-infoset"></a>后架构编译信息集
 [万维网联合会 (W3C) XML 架构建议](https://www.w3.org/XML/Schema)介绍了必须公开的架构验证前和架构编译后信息集。 XML 架构对象模型 (SOM) 在调用 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法之前或之后查看此信息集。  
@@ -23,7 +21,7 @@ ms.locfileid: "44083814"
   
  SOM 是表示前架构验证和后架构编译信息集的对象模型；该模型由 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空间中的类组成。 <xref:System.Xml.Schema> 命名空间中的类的所有读取和写入属性属于前架构验证信息集，而 <xref:System.Xml.Schema> 命名空间中的类的所有只读属性属于后架构编译信息集。 此规则不适用于下列属性，下列属性既是前架构验证信息集属性也是后架构编译信息集属性。  
   
-|类|属性|  
+|类|Property|  
 |-----------|--------------|  
 |<xref:System.Xml.Schema.XmlSchemaObject>|<xref:System.Xml.Schema.XmlSchemaObject.Parent%2A>|  
 |<xref:System.Xml.Schema.XmlSchema>|<xref:System.Xml.Schema.XmlSchema.AttributeFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.BlockDefault%2A>, <xref:System.Xml.Schema.XmlSchema.ElementFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.FinalDefault%2A>, <xref:System.Xml.Schema.XmlSchema.TargetNamespace%2A>|  
@@ -40,6 +38,6 @@ ms.locfileid: "44083814"
  [!code-csharp[PsciSample#1](../../../../samples/snippets/csharp/VS_Snippets_Data/PsciSample/CS/PsciSample.cs#1)]
  [!code-vb[PsciSample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/PsciSample/VB/PsciSample.vb#1)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 架构对象模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)

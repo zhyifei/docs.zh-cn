@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7e998526f3e5fcefdf6b776fb493cf9625e6c696
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 9fd8656594730f29d28cbfdd130d322bfc000614
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957149"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710825"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>如何：通过使用程序集执行 XSLT 转换
 XSLT 编译器 (xsltc.exe) 编译 XSLT 样式表并生成一个程序集。 可以将该程序集直接传递到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。  
@@ -173,7 +171,7 @@ XSLT 编译器 (xsltc.exe) 编译 XSLT 样式表并生成一个程序集。 可�
 xslt.Load(typeof(Transform));  
 ```  
   
-替换为  
+带  
   
 ```csharp 
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"));  
@@ -181,7 +179,7 @@ xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"));
   
 。 有关 Assembly. Load 方法的详细信息，请参阅 <xref:System.Reflection.Assembly.Load%2A>。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
 - [XSLT 编译器 (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)

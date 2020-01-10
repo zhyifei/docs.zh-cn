@@ -3,14 +3,12 @@ title: 使用 XPath 数据模型处理 XML 数据
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 67fbacd24b888b9c45072bcb34031f38adc118e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: f964864577cf08eb074bdfb9af7f7daf3ffb37b9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728393"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710435"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>使用 XPath 数据模型处理 XML 数据
 <xref:System.Xml?displayProperty=nameWithType> 命名空间使用 <xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathDocument> 类提供内存中 XML 文档、片断、节点或节点集的编程表示形式。  
@@ -35,7 +33,7 @@ ms.locfileid: "54728393"
  [使用 XPathNavigator 验证架构](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)  
  描述如何验证 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中包含的 XML 内容。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

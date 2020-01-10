@@ -5,14 +5,12 @@ helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a6928b5ac41a6af36dc7d5e7f5bb02074ba742e5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 73665915a70225c2b1da47c7b60347b089564884
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974593"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716031"
 ---
 # <a name="loader-etw-events"></a>加载程序 ETW 事件
 这些事件将收集与加载和卸载应用程序域、程序集和模块相关的信息。  
@@ -22,7 +20,7 @@ ms.locfileid: "73974593"
 ## <a name="application-domain-events"></a>应用程序域事件
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Event — 事件|层次|  
+|引发事件的关键字|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AppDomainLoad_V1` 和 `AppDomainUnLoad_V1`|信息性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|信息性 (4)|  
@@ -30,7 +28,7 @@ ms.locfileid: "73974593"
   
  下表显示了事件信息。  
   
-|Event — 事件|事件 ID|描述|  
+|Event|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`AppDomainLoad_V1` （为所有应用程序域记录）|156|每当在进程生存期内创建应用程序域时引发。|  
 |`AppDomainUnLoad_V1`|157|每当在进程生存期内销毁应用程序域时引发。|  
@@ -50,7 +48,7 @@ ms.locfileid: "73974593"
 ## <a name="clr-loader-assembly-events"></a>CLR 加载程序程序集事件  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Event — 事件|层次|  
+|引发事件的关键字|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AssemblyLoad` 和 `AssemblyUnload`|信息性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|信息性 (4)|  
@@ -58,7 +56,7 @@ ms.locfileid: "73974593"
   
  下表显示了事件信息。  
   
-|Event — 事件|事件 ID|描述|  
+|Event|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`AssemblyLoad_V1`|154|在加载程序集时引发。|  
 |`AssemblyUnload_V1`|155|在卸载程序集时引发。|  
@@ -79,7 +77,7 @@ ms.locfileid: "73974593"
 ## <a name="module-events"></a>模块事件
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Event — 事件|层次|  
+|引发事件的关键字|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`ModuleLoad_V2` 和 `ModuleUnload_V2`|信息性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|信息性 (4)|  
@@ -88,7 +86,7 @@ ms.locfileid: "73974593"
   
  下表显示了事件信息。  
   
-|Event — 事件|事件 ID|描述|  
+|Event|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`ModuleLoad_V2`|152|在进程的生存期内加载模块时引发。|  
 |`ModuleUnload_V2`|153|在进程的生存期内卸载模块时引发。|  
@@ -124,7 +122,7 @@ ms.locfileid: "73974593"
 ## <a name="clr-domain-module-events"></a>CLR 域模块事件
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Event — 事件|层次|  
+|引发事件的关键字|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|信息性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|信息性 (4)|  
@@ -132,7 +130,7 @@ ms.locfileid: "73974593"
   
  下表显示了事件信息。  
   
-|Event — 事件|事件 ID|描述|  
+|Event|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`DomainModuleLoad_V1`|151|在为应用程序域加载模块时引发。|  
 |`DomainModuleDCStart_V1`|151|在启动断开期间为应用程序域枚举加载的模块，并为所有应用程序域记录。|  
@@ -154,7 +152,7 @@ ms.locfileid: "73974593"
 ## <a name="module-range-events"></a>模块范围事件
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Event — 事件|层次|  
+|引发事件的关键字|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`PerfTrackKeyWord`)|`ModuleRange`|信息性 (4)|  
 |`PerfTrackKeyWord`|`ModuleRangeDCStart`|信息性 (4)|  
@@ -162,7 +160,7 @@ ms.locfileid: "73974593"
   
  下表显示了事件信息。  
   
-|Event — 事件|事件 ID|描述|  
+|Event|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`ModuleRange`|158|如果加载的本机映像生成器 (NGen) 映像已使用 IBC 进行优化，并且包含有关 NGen 映像热区的信息，则此事件存在。|  
 |`ModuleRangeDCStart`|160|`ModuleRange` 事件在断开开始时引发。|  
@@ -187,6 +185,6 @@ ms.locfileid: "73974593"
   
  在任何大于或等于 4 的 ETW 级别下引发模块范围事件，并将其归类为信息性事件。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [CLR ETW 事件](clr-etw-events.md)

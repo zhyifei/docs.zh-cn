@@ -8,13 +8,12 @@ helpviewer_keywords:
 - callback methods
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
-author: KrzysztofCwalina
-ms.openlocfilehash: 3609d6ac4847cb081740fd698869df4976f83f8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80c16e29f1d8a0653295ebc3cf25be6fb78b7dc9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960388"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709408"
 ---
 # <a name="events-and-callbacks"></a>事件和回调
 回调允许框架通过委托回调用户代码来实现可扩展性。 这些委托通常通过方法的参数传递给框架。  
@@ -29,21 +28,21 @@ ms.locfileid: "61960388"
   
  **X 避免** 性能敏感的 Api 中使用回调。  
   
- **✓ 务必** 使用新`Func<...>`， `Action<...>`，或`Expression<...>`而不是定义回调的 Api 时的自定义委托的类型。  
+ **✓ DO** 使用新`Func<...>`， `Action<...>`，或`Expression<...>`而不是定义回调的 Api 时的自定义委托的类型。  
   
- `Func<...>` 和`Action<...>`表示泛型委托。 `Expression<...>` 表示函数定义，可以编译并随后还调用在运行时，但可进行序列化和传递到远程进程。  
+ `Func<...>` 和 `Action<...>` 表示泛型委托。 `Expression<...>` 表示可以编译并随后在运行时调用的函数定义，但也可以进行序列化并将其传递到远程进程。  
   
  **✓ 务必** 测量和了解使用性能影响的`Expression<...>`，而不是使用`Func<...>`和`Action<...>`委托。  
   
- `Expression<...>` 类型是在逻辑上等同于大多数情况下`Func<...>`和`Action<...>`委托。 主要区别是，委托应将用于的本地进程方案;表达式适用于的情况下十分有益和无法计算表达式中的远程进程或计算机。  
+ 在大多数情况下，`Expression<...>` 类型在逻辑上等同于 `Func<...>` 和 `Action<...>` 委托。 它们之间的主要区别在于委托旨在用于本地处理方案;表达式适用于在远程进程或计算机中计算表达式的好处。  
   
- **✓ 务必** 了解，通过调用委托，正在执行任意代码，且无法具有安全、 正确性和兼容性影响。  
+ **✓ DO** 了解，通过调用委托，正在执行任意代码，且无法具有安全、 正确性和兼容性影响。  
   
- *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
+ *部分©2005，2009 Microsoft Corporation。保留所有权利。*  
   
- *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
+ *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [扩展性设计](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)
