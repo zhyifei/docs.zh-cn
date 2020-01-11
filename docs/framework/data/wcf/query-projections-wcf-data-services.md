@@ -10,16 +10,16 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 03fa40a895d322a8b5ad543f75424ef5b379672b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 764ea6a77ba267e691d48bc72d17c02f6b3c18ca
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568902"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900976"
 ---
 # <a name="query-projections-wcf-data-services"></a>查询投影（WCF 数据服务）
 
-投影在 Open Data Protocol （OData）中提供了一种机制，用于通过指定在响应中仅返回某个实体的某些属性来减少查询返回的源中的数据量。 有关详细信息，请参阅[OData：选择系统查询选项（$select）](https://go.microsoft.com/fwlink/?LinkId=186076)。
+投影在 Open Data Protocol （OData）中提供了一种机制，用于通过指定在响应中仅返回某个实体的某些属性来减少查询返回的源中的数据量。 有关详细信息，请参阅4.8 节。 在 URI 约定中选择系统查询选项（$select） [（OData 2.0 版）](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)。
 
 本主题介绍如何定义查询投影、实体和非实体类型的需求、对投影的结果进行更新、创建投影的类型，还列出一些投影的注意事项。
 

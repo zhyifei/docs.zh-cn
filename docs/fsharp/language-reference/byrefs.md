@@ -2,18 +2,18 @@
 title: Byref
 description: 了解用于低级别编程的中F#的 byref 和 byref 类型（如）。
 ms.date: 11/04/2019
-ms.openlocfilehash: a6d3d69c4a163be9ecef7e33c284c4a73e800405
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 5aaee1e4eac9ce0d7e9ba89a2ab5f745d31367a0
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545131"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901314"
 ---
 # <a name="byrefs"></a>Byref
 
 F#具有两个主要功能区域，用于处理低级别编程的空间：
 
-* `byref`/`inref`/`outref` 类型，这是托管指针。 它们对使用情况有限制，因此无法编译在运行时无效的程序。
+* `byref`/`inref`/`outref` 类型，这些类型是托管指针。 它们对使用情况有限制，因此无法编译在运行时无效的程序。
 * 类似于 `byref`的结构，它是具有类似语义和 `byref<'T>`编译时限制的[结构](structures.md)。 <xref:System.Span%601>一个示例。
 
 ## <a name="syntax"></a>语法
@@ -175,7 +175,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 最后一点对于F#管道样式编程至关重要，因为 `|>` 是参数化其输入类型的泛型函数。 此限制可能会在将来的 `|>` 中宽松，因为它是内联的，不会对其主体中的非内联泛型函数进行任何调用。
 
-尽管这些规则非常严格地限制使用，但它们会以安全的方式满足高性能计算的承诺。
+尽管这些规则对使用进行了严格的限制，但这样做可确保以安全的方式满足高性能计算的承诺。
 
 ## <a name="byref-returns"></a>Byref 返回
 

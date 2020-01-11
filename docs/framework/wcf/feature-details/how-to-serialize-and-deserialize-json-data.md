@@ -2,17 +2,17 @@
 title: 如何：使用 DataContractJsonSerializer
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: 354f0c58a83e07ff3180977311adf85ae306dd21
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3cf8cc52587a64e7273ab9e0de0b1751d00827cf
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976873"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901218"
 ---
 # <a name="how-to-use-datacontractjsonserializer"></a>如何使用 DataContractJsonSerializer
 
 > [!NOTE]
-> 本文介绍 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。 对于涉及对 JSON 进行序列化和反序列化的大多数方案，建议采用[system.web 命名空间](../../../standard/serialization/system-text-json-overview.md)中的工具。
+> 本文介绍 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。 对于涉及序列化和反序列化 JSON 的大多数方案，我们建议在[system.web 命名空间](../../../standard/serialization/system-text-json-overview.md)中提供 api。
 
 JSON（JavaScript 对象符号）是一种高效的数据编码格式，可用于在客户端浏览器和支持 AJAX 的 Web 服务之间快速交换少量数据。
 
@@ -139,6 +139,6 @@ public class TestDuplicateDataDerived : TestDuplicateDataBase
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET 中的 JSON 序列化](../../../standard/serialization/system-text-json-overview.md)

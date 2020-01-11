@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d0b44a2-5a14-44a2-9a0e-e8682fd4e106
 topic_type:
 - apiref
-ms.openlocfilehash: 43a5cd57a8eeaba70f1bb1ffb9cab5bb1a067914
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d98181e0d43206bfbf96182d7e4acf33da486348
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130956"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901175"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfilew-method"></a>ICLRStrongName::GetHashFromAssemblyFileW 方法
 生成由 Unicode 字符串指定的文件内容的哈希。  
@@ -54,9 +54,9 @@ HRESULT GetHashFromAssemblyFileW (
  弄返回 `pbHash`的大小（以字节为单位）。  
   
 ## <a name="return-value"></a>返回值  
- 如果方法已成功完成，则 `S_OK`;否则，表示失败的 HRESULT 值（请参阅列表的[常见 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
+ 如果方法已成功完成，则 `S_OK`;否则，表示失败的 HRESULT 值（请参阅列表的[常见 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MetaHost  
@@ -65,7 +65,7 @@ HRESULT GetHashFromAssemblyFileW (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [GetHashFromAssemblyFile 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
 - [ICLRStrongName 接口](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

@@ -2,12 +2,12 @@
 title: ADO.NET 限制
 ms.date: 12/13/2019
 description: 描述你可能会遇到的一些 ADO.NET 限制。
-ms.openlocfilehash: b58fd3a9ea324e9c17ad21479e53e45f5982db9d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 8664b73071fc859ed30080f549b05e7d6ed020f4
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450338"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901252"
 ---
 # <a name="adonet-limitations"></a>ADO.NET 限制
 
@@ -25,13 +25,13 @@ ADO.NET 提供许多抽象抽象的实现，但存在一些限制。
 
 Microsoft 尚不支持 System.object。 改为使用 ADO.NET 事务。 有关详细信息，请参阅[事务](transactions.md)。
 
-提供有关在问题[#13825](https://github.com/aspnet/EntityFrameworkCore/issues/13825)上缺少对 system.object 的支持的反馈。
+提供有关在问题[#13825](https://github.com/dotnet/efcore/issues/13825)上缺少对 system.object 的支持的反馈。
 
 ## <a name="data-adapters"></a>数据适配器
 
 `DbDataAdapter` 尚不是由 Microsoft。 这意味着，只能使用 ADO.NET `DataSet` 和 `DataTable` 来加载数据，而不能对其进行更新。
 
-使用问题[#13838](https://github.com/aspnet/EntityFrameworkCore/issues/13838)提供有关实现 `DbDataAdapter`的反馈。
+使用问题[#13838](https://github.com/dotnet/efcore/issues/13838)提供有关实现 `DbDataAdapter`的反馈。
 
 ## <a name="output-parameters"></a>输出参数
 

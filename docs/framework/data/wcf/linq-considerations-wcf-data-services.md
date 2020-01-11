@@ -9,12 +9,12 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 41f1d1f0ca04dff0faa9eb070882f845ef4827d2
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: f6ff9cf732e11bbf61eeb7e5cff3f1cba2b744e6
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568961"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900983"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ 注意事项（WCF 数据服务）
 本主题提供有关使用 WCF 数据服务的客户端时编写和执行 LINQ 查询的方式的信息，以及使用 LINQ 查询实现 Open Data Protocol （OData）的数据服务的限制。 有关对基于 OData 的数据服务编写和执行查询的详细信息，请参阅[查询数据服务](querying-the-data-service-wcf-data-services.md)。  
@@ -164,7 +164,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |分组运算符|所有分组运算符都不能用于 <xref:System.Data.Services.Client.DataServiceQuery%601>，其中包括：<br /><br /> -   <xref:System.Linq.Enumerable.GroupBy%2A><br />-   <xref:System.Linq.Enumerable.GroupJoin%2A><br /><br /> 分组运算符必须在客户端上执行。|  
 |聚合运算符|所有聚合运算符都不能用于 <xref:System.Data.Services.Client.DataServiceQuery%601>，其中包括：<br /><br /> -   <xref:System.Linq.Enumerable.Aggregate%2A><br />-   <xref:System.Linq.Enumerable.Average%2A><br />-   <xref:System.Linq.Enumerable.Count%2A><br />-   <xref:System.Linq.Enumerable.LongCount%2A><br />-   <xref:System.Linq.Enumerable.Max%2A><br />-   <xref:System.Linq.Enumerable.Min%2A><br />-   <xref:System.Linq.Enumerable.Sum%2A><br /><br /> 聚合运算符必须在客户端上执行或由服务操作封装。|  
 |分页运算符|以下分页运算符不能用于 <xref:System.Data.Services.Client.DataServiceQuery%601>：<br /><br /> -   <xref:System.Linq.Enumerable.ElementAt%2A><br />-   <xref:System.Linq.Enumerable.Last%2A><br />-   <xref:System.Linq.Enumerable.LastOrDefault%2A><br />-   <xref:System.Linq.Enumerable.SkipWhile%2A><br />-   <xref:System.Linq.Enumerable.TakeWhile%2A>**注意：** 对空序列执行的分页运算符将返回 null。|  
-|其他运算符|以下其他运算符不能用于 <xref:System.Data.Services.Client.DataServiceQuery%601>：<br /><br /> 1. <xref:System.Linq.Enumerable.Empty%2A><br />2. <xref:System.Linq.Enumerable.Range%2A><br />3. <xref:System.Linq.Enumerable.Repeat%2A><br />4. <xref:System.Linq.Enumerable.ToDictionary%2A><br />5. <xref:System.Linq.Enumerable.ToLookup%2A>|  
+|其他运算符|以下其他运算符不能用于 <xref:System.Data.Services.Client.DataServiceQuery%601>：<br /><br /> 1.  <xref:System.Linq.Enumerable.Empty%2A><br />2.  <xref:System.Linq.Enumerable.Range%2A><br />3.  <xref:System.Linq.Enumerable.Repeat%2A><br />4.  <xref:System.Linq.Enumerable.ToDictionary%2A><br />5.  <xref:System.Linq.Enumerable.ToLookup%2A>|  
   
 <a name="supportedExpressions"></a>   
 ## <a name="supported-expression-functions"></a>支持的表达式函数  
@@ -215,4 +215,4 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 - [查询数据服务](querying-the-data-service-wcf-data-services.md)
 - [查询投影](query-projections-wcf-data-services.md)
 - [对象具体化](object-materialization-wcf-data-services.md)
-- [OData： URI 约定](https://go.microsoft.com/fwlink/?LinkID=185564)
+- [OData： URI 约定](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)

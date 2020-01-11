@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 76d4f93a-5e25-4399-abcc-a1389549481d
 topic_type:
 - apiref
-ms.openlocfilehash: 7f6865c3d6dffa3b551d4e5e0636b1e386be8baa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 049324baec02fbb03c2db80391ade8a24920a15c
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134983"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901084"
 ---
 # <a name="iclrstrongnamestrongnamesignaturesize-method"></a>ICLRStrongName::StrongNameSignatureSize 方法
 返回强名称签名的大小。 此方法通常由编译器用来确定在创建延迟签名程序集时要在文件中保留多少空间。  
@@ -46,9 +46,9 @@ HRESULT StrongNameSignatureSize (
  中存储强名称签名所需的字节数。  
   
 ## <a name="return-value"></a>返回值  
- 如果方法已成功完成，则 `S_OK`;否则，表示失败的 HRESULT 值（请参阅列表的[常见 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
+ 如果方法已成功完成，则 `S_OK`;否则，表示失败的 HRESULT 值（请参阅列表的[常见 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MetaHost  
@@ -57,6 +57,6 @@ HRESULT StrongNameSignatureSize (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICLRStrongName 接口](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

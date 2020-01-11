@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-ms.openlocfilehash: 8812a98b0f28dd1336903dc34682f638a291f53b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a69fb861f7c2671a5c26245aa544ee99bcbdb56b
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110999"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901018"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess 方法
 在调试器的控制下启动进程及其主线程。  
@@ -61,7 +61,7 @@ HRESULT CreateProcess (
  中设置为 "`true`"，以指示调用进程中的每个可继承句柄由启动的进程继承，或 `false` 以指示不继承句柄。 继承句柄与原始句柄具有相同的值和访问权限。  
   
  `dwCreationFlags`  
- 中[Win32 进程创建标志](https://go.microsoft.com/fwlink/?linkid=69981)的按位组合，用于控制优先级类和已启动进程的行为。  
+ 中[Win32 进程创建标志](/windows/win32/procthread/process-creation-flags)的按位组合，用于控制优先级类和已启动进程的行为。  
   
  `lpEnvironment`  
  中指向新进程的环境块的指针。  
@@ -90,7 +90,7 @@ HRESULT CreateProcess (
   
  Win9x 和非 x86 平台（如基于 IA-64 和 AMD64 的平台）不支持互操作调试。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -99,6 +99,6 @@ HRESULT CreateProcess (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorDebug 接口](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
