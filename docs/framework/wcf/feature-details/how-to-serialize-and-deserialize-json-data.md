@@ -2,29 +2,29 @@
 title: 如何：使用 DataContractJsonSerializer
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: 354f0c58a83e07ff3180977311adf85ae306dd21
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3cf8cc52587a64e7273ab9e0de0b1751d00827cf
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976873"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901218"
 ---
-# <a name="how-to-use-datacontractjsonserializer"></a><span data-ttu-id="2fe46-102">如何使用 DataContractJsonSerializer</span><span class="sxs-lookup"><span data-stu-id="2fe46-102">How to use DataContractJsonSerializer</span></span>
+# <a name="how-to-use-datacontractjsonserializer"></a><span data-ttu-id="cf920-102">如何使用 DataContractJsonSerializer</span><span class="sxs-lookup"><span data-stu-id="cf920-102">How to use DataContractJsonSerializer</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="2fe46-103">本文介绍 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。</span><span class="sxs-lookup"><span data-stu-id="2fe46-103">This article is about <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span> <span data-ttu-id="2fe46-104">对于涉及对 JSON 进行序列化和反序列化的大多数方案，建议采用[system.web 命名空间](../../../standard/serialization/system-text-json-overview.md)中的工具。</span><span class="sxs-lookup"><span data-stu-id="2fe46-104">For most scenarios that involve serializing and deserializing JSON, we recommend the tools in the [System.Text.Json namespace](../../../standard/serialization/system-text-json-overview.md).</span></span>
+> <span data-ttu-id="cf920-103">本文介绍 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。</span><span class="sxs-lookup"><span data-stu-id="cf920-103">This article is about <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span> <span data-ttu-id="cf920-104">对于涉及序列化和反序列化 JSON 的大多数方案，我们建议在[system.web 命名空间](../../../standard/serialization/system-text-json-overview.md)中提供 api。</span><span class="sxs-lookup"><span data-stu-id="cf920-104">For most scenarios that involve serializing and deserializing JSON, we recommend the APIs in the [System.Text.Json namespace](../../../standard/serialization/system-text-json-overview.md).</span></span>
 
-<span data-ttu-id="2fe46-105">JSON（JavaScript 对象符号）是一种高效的数据编码格式，可用于在客户端浏览器和支持 AJAX 的 Web 服务之间快速交换少量数据。</span><span class="sxs-lookup"><span data-stu-id="2fe46-105">JSON (JavaScript Object Notation) is an efficient data encoding format that enables fast exchanges of small amounts of data between client browsers and AJAX-enabled Web services.</span></span>
+<span data-ttu-id="cf920-105">JSON（JavaScript 对象符号）是一种高效的数据编码格式，可用于在客户端浏览器和支持 AJAX 的 Web 服务之间快速交换少量数据。</span><span class="sxs-lookup"><span data-stu-id="cf920-105">JSON (JavaScript Object Notation) is an efficient data encoding format that enables fast exchanges of small amounts of data between client browsers and AJAX-enabled Web services.</span></span>
 
-<span data-ttu-id="2fe46-106">本文演示如何将 .NET 类型对象序列化为 JSON 编码数据，然后将 JSON 格式的数据反序列化为 .NET 类型的实例。</span><span class="sxs-lookup"><span data-stu-id="2fe46-106">This article demonstrates how to serialize .NET type objects into JSON-encoded data and then deserialize data in the JSON format back into instances of .NET types.</span></span> <span data-ttu-id="2fe46-107">此示例使用数据协定演示用户定义的 `Person` 类型的序列化和反序列化，并使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。</span><span class="sxs-lookup"><span data-stu-id="2fe46-107">This example uses a data contract to demonstrate serialization and deserialization of a user-defined `Person` type and uses <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span>
+<span data-ttu-id="cf920-106">本文演示如何将 .NET 类型对象序列化为 JSON 编码数据，然后将 JSON 格式的数据反序列化为 .NET 类型的实例。</span><span class="sxs-lookup"><span data-stu-id="cf920-106">This article demonstrates how to serialize .NET type objects into JSON-encoded data and then deserialize data in the JSON format back into instances of .NET types.</span></span> <span data-ttu-id="cf920-107">此示例使用数据协定演示用户定义的 `Person` 类型的序列化和反序列化，并使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。</span><span class="sxs-lookup"><span data-stu-id="cf920-107">This example uses a data contract to demonstrate serialization and deserialization of a user-defined `Person` type and uses <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span>
 
-<span data-ttu-id="2fe46-108">通常，当你在服务操作中使用在支持 AJAX 的终结点上公开的数据协定类型时，将 Windows Communication Foundation 自动处理 JSON 序列化和反序列化。</span><span class="sxs-lookup"><span data-stu-id="2fe46-108">Normally, JSON serialization and deserialization are handled automatically by Windows Communication Foundation (WCF) when you use data contract types in service operations that are exposed over AJAX-enabled endpoints.</span></span> <span data-ttu-id="2fe46-109">但是，在某些情况下，您可能需要直接处理 JSON 数据。</span><span class="sxs-lookup"><span data-stu-id="2fe46-109">However, in some cases you may need to work with JSON data directly.</span></span>
+<span data-ttu-id="cf920-108">通常，当你在服务操作中使用在支持 AJAX 的终结点上公开的数据协定类型时，将 Windows Communication Foundation 自动处理 JSON 序列化和反序列化。</span><span class="sxs-lookup"><span data-stu-id="cf920-108">Normally, JSON serialization and deserialization are handled automatically by Windows Communication Foundation (WCF) when you use data contract types in service operations that are exposed over AJAX-enabled endpoints.</span></span> <span data-ttu-id="cf920-109">但是，在某些情况下，您可能需要直接处理 JSON 数据。</span><span class="sxs-lookup"><span data-stu-id="cf920-109">However, in some cases you may need to work with JSON data directly.</span></span>
 
-<span data-ttu-id="2fe46-110">本文基于[DataContractJsonSerializer 示例](../samples/json-serialization.md)。</span><span class="sxs-lookup"><span data-stu-id="2fe46-110">This article is based on the [DataContractJsonSerializer sample](../samples/json-serialization.md).</span></span>
+<span data-ttu-id="cf920-110">本文基于[DataContractJsonSerializer 示例](../samples/json-serialization.md)。</span><span class="sxs-lookup"><span data-stu-id="cf920-110">This article is based on the [DataContractJsonSerializer sample](../samples/json-serialization.md).</span></span>
 
-## <a name="to-define-the-data-contract-for-a-person-type"></a><span data-ttu-id="2fe46-111">为 Person 类型定义数据协定</span><span class="sxs-lookup"><span data-stu-id="2fe46-111">To define the data contract for a Person type</span></span>
+## <a name="to-define-the-data-contract-for-a-person-type"></a><span data-ttu-id="cf920-111">为 Person 类型定义数据协定</span><span class="sxs-lookup"><span data-stu-id="cf920-111">To define the data contract for a Person type</span></span>
 
-1. <span data-ttu-id="2fe46-112">通过将 `Person` 附加到类并将 <xref:System.Runtime.Serialization.DataContractAttribute> 特性附加到要序列化的成员，为 <xref:System.Runtime.Serialization.DataMemberAttribute> 定义数据协定。</span><span class="sxs-lookup"><span data-stu-id="2fe46-112">Define the data contract for `Person` by attaching the <xref:System.Runtime.Serialization.DataContractAttribute> to the class and <xref:System.Runtime.Serialization.DataMemberAttribute> attribute to the members you want to serialize.</span></span> <span data-ttu-id="2fe46-113">有关数据协定的详细信息，请参阅[设计服务协定](../designing-service-contracts.md)。</span><span class="sxs-lookup"><span data-stu-id="2fe46-113">For more information about data contracts, see [Designing service contracts](../designing-service-contracts.md).</span></span>
+1. <span data-ttu-id="cf920-112">通过将 `Person` 附加到类并将 <xref:System.Runtime.Serialization.DataContractAttribute> 特性附加到要序列化的成员，为 <xref:System.Runtime.Serialization.DataMemberAttribute> 定义数据协定。</span><span class="sxs-lookup"><span data-stu-id="cf920-112">Define the data contract for `Person` by attaching the <xref:System.Runtime.Serialization.DataContractAttribute> to the class and <xref:System.Runtime.Serialization.DataMemberAttribute> attribute to the members you want to serialize.</span></span> <span data-ttu-id="cf920-113">有关数据协定的详细信息，请参阅[设计服务协定](../designing-service-contracts.md)。</span><span class="sxs-lookup"><span data-stu-id="cf920-113">For more information about data contracts, see [Designing service contracts](../designing-service-contracts.md).</span></span>
 
     ```csharp
     [DataContract]
@@ -38,12 +38,12 @@ ms.locfileid: "73976873"
     }
     ```
 
-## <a name="to-serialize-an-instance-of-type-person-to-json"></a><span data-ttu-id="2fe46-114">将 Person 类型的实例序列化为 JSON</span><span class="sxs-lookup"><span data-stu-id="2fe46-114">To serialize an instance of type Person to JSON</span></span>
+## <a name="to-serialize-an-instance-of-type-person-to-json"></a><span data-ttu-id="cf920-114">将 Person 类型的实例序列化为 JSON</span><span class="sxs-lookup"><span data-stu-id="cf920-114">To serialize an instance of type Person to JSON</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="2fe46-115">如果在服务器上的传出答复序列化过程中出现错误，或出于其他原因导致错误，则可能不会将其作为错误返回到客户端。</span><span class="sxs-lookup"><span data-stu-id="2fe46-115">If an error occurs during serialization of an outgoing reply on the server or for some other reason, it may not get returned to the client as a fault.</span></span>
+> <span data-ttu-id="cf920-115">如果在服务器上的传出答复序列化过程中出现错误，或出于其他原因导致错误，则可能不会将其作为错误返回到客户端。</span><span class="sxs-lookup"><span data-stu-id="cf920-115">If an error occurs during serialization of an outgoing reply on the server or for some other reason, it may not get returned to the client as a fault.</span></span>
 
-1. <span data-ttu-id="2fe46-116">创建 `Person` 类型的实例。</span><span class="sxs-lookup"><span data-stu-id="2fe46-116">Create an instance of the `Person` type.</span></span>
+1. <span data-ttu-id="cf920-116">创建 `Person` 类型的实例。</span><span class="sxs-lookup"><span data-stu-id="cf920-116">Create an instance of the `Person` type.</span></span>
 
     ```csharp
     var p = new Person();
@@ -51,20 +51,20 @@ ms.locfileid: "73976873"
     p.age = 42;
     ```
 
-2. <span data-ttu-id="2fe46-117">使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>将 `Person` 对象序列化到内存流。</span><span class="sxs-lookup"><span data-stu-id="2fe46-117">Serialize the `Person` object to a memory stream by using the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span>
+2. <span data-ttu-id="cf920-117">使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>将 `Person` 对象序列化到内存流。</span><span class="sxs-lookup"><span data-stu-id="cf920-117">Serialize the `Person` object to a memory stream by using the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span>
 
     ```csharp
     var stream1 = new MemoryStream();
     var ser = new DataContractJsonSerializer(typeof(Person));
     ```
 
-3. <span data-ttu-id="2fe46-118">使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> 方法将 JSON 数据写入到流中。</span><span class="sxs-lookup"><span data-stu-id="2fe46-118">Use the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> method to write JSON data to the stream.</span></span>
+3. <span data-ttu-id="cf920-118">使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> 方法将 JSON 数据写入到流中。</span><span class="sxs-lookup"><span data-stu-id="cf920-118">Use the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> method to write JSON data to the stream.</span></span>
 
     ```csharp
     ser.WriteObject(stream1, p);
     ```
 
-4. <span data-ttu-id="2fe46-119">显示 JSON 输出。</span><span class="sxs-lookup"><span data-stu-id="2fe46-119">Show the JSON output.</span></span>
+4. <span data-ttu-id="cf920-119">显示 JSON 输出。</span><span class="sxs-lookup"><span data-stu-id="cf920-119">Show the JSON output.</span></span>
 
     ```csharp
     stream1.Position = 0;
@@ -73,22 +73,22 @@ ms.locfileid: "73976873"
     Console.WriteLine(sr.ReadToEnd());
     ```
 
-## <a name="to-deserialize-an-instance-of-type-person-from-json"></a><span data-ttu-id="2fe46-120">从 JSON 反序列化 Person 类型的实例</span><span class="sxs-lookup"><span data-stu-id="2fe46-120">To deserialize an instance of type Person from JSON</span></span>
+## <a name="to-deserialize-an-instance-of-type-person-from-json"></a><span data-ttu-id="cf920-120">从 JSON 反序列化 Person 类型的实例</span><span class="sxs-lookup"><span data-stu-id="cf920-120">To deserialize an instance of type Person from JSON</span></span>
 
-1. <span data-ttu-id="2fe46-121">通过使用 `Person` 的 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> 方法，将 JSON 编码数据反序列化为一个新的 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 实例。</span><span class="sxs-lookup"><span data-stu-id="2fe46-121">Deserialize the JSON-encoded data into a new instance of `Person` by using the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> method of the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span>
+1. <span data-ttu-id="cf920-121">通过使用 `Person` 的 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> 方法，将 JSON 编码数据反序列化为一个新的 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 实例。</span><span class="sxs-lookup"><span data-stu-id="cf920-121">Deserialize the JSON-encoded data into a new instance of `Person` by using the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> method of the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span>
 
     ```csharp
     stream1.Position = 0;
     var p2 = (Person)ser.ReadObject(stream1);
     ```
 
-2. <span data-ttu-id="2fe46-122">显示结果。</span><span class="sxs-lookup"><span data-stu-id="2fe46-122">Show the results.</span></span>
+2. <span data-ttu-id="cf920-122">显示结果。</span><span class="sxs-lookup"><span data-stu-id="cf920-122">Show the results.</span></span>
 
     ```csharp
     Console.WriteLine($"Deserialized back, got name={p2.name}, age={p2.age}");
     ```
 
-## <a name="example"></a><span data-ttu-id="2fe46-123">示例</span><span class="sxs-lookup"><span data-stu-id="2fe46-123">Example</span></span>
+## <a name="example"></a><span data-ttu-id="cf920-123">示例</span><span class="sxs-lookup"><span data-stu-id="cf920-123">Example</span></span>
 
 ```csharp
 // Create a User object and serialize it to a JSON stream.
@@ -121,7 +121,7 @@ public static User ReadToObject(string json)
 ```
 
 > [!NOTE]
-> <span data-ttu-id="2fe46-124">对于包含多个具有相同名称的成员的数据协定，JSON 序列化程序将引发一个序列化异常，如以下示例代码中所示。</span><span class="sxs-lookup"><span data-stu-id="2fe46-124">The JSON serializer throws a serialization exception for data contracts that have multiple members with the same name, as shown in the following sample code.</span></span>
+> <span data-ttu-id="cf920-124">对于包含多个具有相同名称的成员的数据协定，JSON 序列化程序将引发一个序列化异常，如以下示例代码中所示。</span><span class="sxs-lookup"><span data-stu-id="cf920-124">The JSON serializer throws a serialization exception for data contracts that have multiple members with the same name, as shown in the following sample code.</span></span>
 
 ```csharp
 [DataContract]
@@ -139,6 +139,6 @@ public class TestDuplicateDataDerived : TestDuplicateDataBase
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="2fe46-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="2fe46-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cf920-125">另请参阅</span><span class="sxs-lookup"><span data-stu-id="cf920-125">See also</span></span>
 
-- [<span data-ttu-id="2fe46-126">.NET 中的 JSON 序列化</span><span class="sxs-lookup"><span data-stu-id="2fe46-126">JSON serialization in .NET</span></span>](../../../standard/serialization/system-text-json-overview.md)
+- [<span data-ttu-id="cf920-126">.NET 中的 JSON 序列化</span><span class="sxs-lookup"><span data-stu-id="cf920-126">JSON serialization in .NET</span></span>](../../../standard/serialization/system-text-json-overview.md)
