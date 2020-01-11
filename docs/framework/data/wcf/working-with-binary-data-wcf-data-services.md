@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 9a09908a2a998d5da739b28aefda3d5aecdc08e0
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: aa3e58d559121aaca401e7b851a4b4fd8e7753cd
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568740"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900844"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>处理二进制数据（WCF 数据服务）
 
@@ -26,7 +26,7 @@ ms.locfileid: "74568740"
 WCF 数据服务使用 OData 中定义的 HTTP 来实现二进制数据流式处理。 在此机制中，二进制数据被视为独立于实体（称为媒体链接项）的媒体资源。 有关详细信息，请参阅[流式处理提供程序](streaming-provider-wcf-data-services.md)。
 
 > [!TIP]
-> 有关如何创建 Windows Presentation Foundation （WPF）客户端应用程序（该应用程序从存储照片的 OData 服务下载二进制图像文件）的分步示例，请参阅文章[数据服务流提供程序系列-第2部分：从客户端访问媒体资源流](https://go.microsoft.com/fwlink/?LinkId=201637)。 若要下载博客文章中所述的 stream photo data service 的示例代码，请参阅 MSDN 代码库中的[流式处理照片数据服务示例](https://go.microsoft.com/fwlink/?LinkId=198988)。
+> 有关如何创建 Windows Presentation Foundation （WPF）客户端应用程序（该应用程序从存储照片的 OData 服务下载二进制图像文件）的分步示例，请参阅文章[数据服务流提供程序系列-第2部分：从客户端访问媒体资源流](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client)。 若要下载博客文章中所述的流照片数据服务的示例代码，请参阅 GitHub 中的[流式处理照片数据服务示例](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample)。
 
 ## <a name="entity-metadata"></a>实体元数据
 
@@ -34,14 +34,14 @@ WCF 数据服务使用 OData 中定义的 HTTP 来实现二进制数据流式处
 
 [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]
 
-本主题中的其余示例揭示了如何访问和更改媒体资源流。 有关如何使用 WCF 数据服务客户端库在 .NET Framework 客户端应用程序中使用媒体资源流的完整示例，请参阅[从客户端访问媒体资源流](https://go.microsoft.com/fwlink/?LinkID=201637)一文。
+本主题中的其余示例揭示了如何访问和更改媒体资源流。 有关如何使用 WCF 数据服务客户端库在 .NET Framework 客户端应用程序中使用媒体资源流的完整示例，请参阅[从客户端访问媒体资源流](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client)一文。
 
 ## <a name="accessing-the-binary-resource-stream"></a>访问二进制资源流
 
 WCF 数据服务客户端库提供了从基于 OData 的数据服务访问二进制资源流的方法。 下载媒体资源时，可以使用媒体资源的 URI，也可以获取一个包含媒体资源数据本身的二进制流。 还可以上载媒体资源数据作为一个二进制流。
 
 > [!TIP]
-> 有关如何创建 Windows Presentation Foundation （WPF）客户端应用程序（该应用程序从存储照片的 OData 服务下载二进制图像文件）的分步示例，请参阅文章[数据服务流提供程序系列-第2部分：从客户端访问媒体资源流](https://go.microsoft.com/fwlink/?LinkId=201637)。 若要下载博客文章中所述的 stream photo data service 的示例代码，请参阅 MSDN 代码库中的[流式处理照片数据服务示例](https://go.microsoft.com/fwlink/?LinkId=198988)。
+> 有关如何创建 Windows Presentation Foundation （WPF）客户端应用程序（该应用程序从存储照片的 OData 服务下载二进制图像文件）的分步示例，请参阅文章[数据服务流提供程序系列-第2部分：从客户端访问媒体资源流](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client)。 若要下载博客文章中所述的流照片数据服务的示例代码，请参阅 GitHub 中的[流式处理照片数据服务示例](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample)。
 
 ### <a name="getting-the-uri-of-the-binary-stream"></a>获取二进制流的 URI
 

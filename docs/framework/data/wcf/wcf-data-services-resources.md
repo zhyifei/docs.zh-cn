@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 5110cdf53953bebd1a5ccd2781afa5c57175ea54
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8b86944808aa7a35341f4fdafb3a92c6d9d127ec
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568758"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900857"
 ---
 # <a name="wcf-data-services-resources"></a>WCF 数据服务资源
 可在以下位置找到 WCF 数据服务的介绍性主题。 其中的许多主题还包含指向包含更多详细信息的相关主题的链接。  
@@ -29,34 +29,28 @@ ms.locfileid: "74568758"
 ## <a name="external-resources"></a>外部資源  
  以下外部资源提供了额外的信息和支持，用于创建公开和使用 OData 源的 WCF 数据服务应用程序。  
   
- [WCF 数据服务论坛](https://go.microsoft.com/fwlink/?LinkId=150512)  
+ [WCF 数据服务论坛](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataservices)  
  对 WCF 数据服务开发人员的数据编程支持。  
   
- [WCF Data Services Team Blog](https://go.microsoft.com/fwlink/?LinkId=150511)（WCF Data Services 团队博客）  
+ [WCF Data Services Team Blog](https://docs.microsoft.com/archive/blogs/astoriateam/)（WCF Data Services 团队博客）  
  包含 WCF 数据服务特性和功能的更新和讨论的博客。  
   
- [OData 网站](https://go.microsoft.com/fwlink/?LinkID=184554)  
+ [OData 网站](https://www.odata.org/)  
  有关 OData 的信息的主要来源。  
   
- [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248)  
+ [OData SDK-示例代码](https://www.odata.org/ecosystem/#sdk)  
  包含使您可以使用 OData 源的示例服务、示例和编程库。  
   
- [OData 博客](https://go.microsoft.com/fwlink/?LinkId=185868)  
+ [OData 博客](https://www.odata.org/blog/)  
  包含关于 OData 编程的讨论的博客。  
   
- [数据访问和存储开发人员中心](https://go.microsoft.com/fwlink/?LinkId=91903)  
- 用于查找有关使用数据的信息和资源的中心位置。  
-  
- [数据平台如何实现？视频： WCF 数据服务系列](https://go.microsoft.com/fwlink/?LinkId=124600)  
- 包含一组演示如何生成和访问数据服务的视频截屏。  
-  
- [概述： WCF 数据服务](https://go.microsoft.com/fwlink/?LinkID=131074)  
+ [概述： WCF 数据服务](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cc956153(v=msdn.10))  
  提供有关 WCF 数据服务的优势的更多高级信息的白皮书。  
   
- [使用 Microsoft WCF 数据服务](https://go.microsoft.com/fwlink/?LinkID=131075)  
+ [使用 Microsoft WCF 数据服务](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cc907912(v=msdn.10))  
  提供创建数据服务和在客户端应用程序中访问数据服务的其他信息和示例的白皮书。  
   
- 实体关系模型：通过 Peter Chen、马萨诸塞州技术，[对数据的统一视图进行建模](https://go.microsoft.com/fwlink/?LinkId=91909)  
+ 实体关系模型：通过 Peter Chen、马萨诸塞州技术，[对数据的统一视图进行建模](https://dl.acm.org/doi/10.1145/320434.320440)  
  描述由 WCF 数据服务实现的实体关系模型的基础。 该文撰写于 1976 年，是计算机领域中最常引用的论文之一。  
   
 ## <a name="see-also"></a>另请参阅

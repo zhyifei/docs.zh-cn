@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework 4, hosting interfaces
 - interfaces [.NET Framework hosting], version 4
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
-ms.openlocfilehash: aea88430d8f83234a1568bcaf433c2a75492e23a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8484b47549f83795778420048d610e2d1626d87b
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73195913"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899723"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>.NET Framework 4 和 4.5 中添加的 CLR 承载接口
 本节介绍了非托管主机可用于将 .NET Framework 4、.NET Framework 4.5 及更高版本中的公共语言运行时（CLR）集成到其应用程序中的接口。 这些接口为主机提供用于配置运行时并将其加载到进程中的方法。  
@@ -22,7 +22,7 @@ ms.locfileid: "73195913"
   
 - 它们不使用 COM 类型，如 `BSTR`、`SAFEARRAY`或 `VARIANT`。  
   
-- 没有使用[CoCreateInstance 函数](https://go.microsoft.com/fwlink/?LinkId=142894)的单元模型、聚合或注册表激活。  
+- 没有使用[CoCreateInstance 函数](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)的单元模型、聚合或注册表激活。  
   
 ## <a name="in-this-section"></a>本节内容  
  [ICLRAppDomainResourceMonitor 接口](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: a5793eae92ffdfa65872c93273bd7cfefdc6f674
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 1eb1267ae0b08d558d5afc41d03270917473a669
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568809"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900913"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>流提供程序（WCF 数据服务）
 
@@ -39,7 +39,7 @@ ms.locfileid: "74568809"
 
 5. 启用对服务器上或数据源中的二进制资源的访问。
 
-本主题中的示例基于示例流照片服务，该服务是发布[数据服务流提供程序系列：实现流提供程序（第1部分）](https://go.microsoft.com/fwlink/?LinkID=198989)的深入介绍。 MSDN 代码库上的 "[流式处理照片数据服务示例" 页](https://go.microsoft.com/fwlink/?LinkID=198988)上提供了此示例服务的源代码。
+本主题中的示例基于示例流照片服务，该服务是发布[数据服务流提供程序系列：实现流提供程序（第1部分）](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1)的深入介绍。 [GitHub](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample)上提供了流式处理照片数据服务示例的源代码。
 
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>在数据模型中定义媒体链接入口
 
@@ -53,7 +53,7 @@ ms.locfileid: "74568809"
 
 还必须将命名空间 `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` 添加到实体，或添加到定义数据模型的 .edmx 或 .csdl 文件的根目录中。
 
-有关使用实体框架提供程序并公开媒体资源的数据服务的示例，请参阅文章[数据服务流提供程序系列：实现流提供程序（第1部分）](https://go.microsoft.com/fwlink/?LinkID=198989)。
+有关使用实体框架提供程序并公开媒体资源的数据服务的示例，请参阅文章[数据服务流提供程序系列：实现流提供程序（第1部分）](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1)。
 
 **反射提供程序**
 

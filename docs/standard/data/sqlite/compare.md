@@ -2,12 +2,12 @@
 title: 与 System.object 的比较
 ms.date: 12/13/2019
 description: 描述了 Microsoft 数据库和 System.object 库之间的一些差异。
-ms.openlocfilehash: dee90c132b108f2c876c0d8becc1b02035a47b61
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 076bbc6f746cf9296c96ec73047397a21a3b2558
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450278"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900715"
 ---
 # <a name="comparison-to-systemdatasqlite"></a>与 System.object 的比较
 
@@ -63,15 +63,15 @@ connection.CreateFunction(
 
 ## <a name="authorization"></a>授权
 
-Node.js 没有任何 API 公开 SQLite 的授权回调。 使用问题[#13835](https://github.com/aspnet/EntityFrameworkCore/issues/13835)提供有关此功能的反馈。
+Node.js 没有任何 API 公开 SQLite 的授权回调。 使用问题[#13835](https://github.com/dotnet/efcore/issues/13835)提供有关此功能的反馈。
 
 ## <a name="data-change-notifications"></a>数据更改通知
 
-Node.js 没有任何 API 公开 SQLite 的数据更改通知。 使用问题[#13827](https://github.com/aspnet/EntityFrameworkCore/issues/13827)提供有关此功能的反馈。
+Node.js 没有任何 API 公开 SQLite 的数据更改通知。 使用问题[#13827](https://github.com/dotnet/efcore/issues/13827)提供有关此功能的反馈。
 
 ## <a name="virtual-table-modules"></a>虚拟表模块
 
-Node.js 没有用于创建虚拟表模块的任何 API。 使用问题[#13823](https://github.com/aspnet/EntityFrameworkCore/issues/13823)提供有关此功能的反馈。
+Node.js 没有用于创建虚拟表模块的任何 API。 使用问题[#13823](https://github.com/dotnet/efcore/issues/13823)提供有关此功能的反馈。
 
 ## <a name="see-also"></a>另请参阅
 

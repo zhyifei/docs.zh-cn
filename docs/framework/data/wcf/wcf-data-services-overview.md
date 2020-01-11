@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: b3feb2a22fc38c6a2d13d6802b94386d6f7841ac
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: a4121bb10de7bfe51c5fec6bc14a40ad4bdcdaf7
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568789"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900896"
 ---
 # <a name="wcf-data-services-overview"></a>WCF 数据服务概述
 WCF 数据服务可以通过使用 Open Data Protocol （OData）来创建和使用 Web 或 intranet 的数据服务。 OData 使你能够将数据公开为可通过 Uri 进行寻址的资源。 这样，您就可以通过使用具象状态传输 (REST)（可能为英文网页）的语义（尤其是标准 HTTP 谓词 GET、PUT、POST 和 DELETE）来访问和更改数据。 本主题概述 OData 定义的模式和实践，并概述 WCF 数据服务提供的工具，以利用基于 .NET Framework 的应用程序中的 OData。  
@@ -25,7 +25,7 @@ WCF 数据服务可以通过使用 Open Data Protocol （OData）来创建和使
 ## <a name="interoperable-data-access"></a>可互操作的数据访问  
  OData 基于标准 Internet 协议建立，使数据服务可与不使用 .NET Framework 的应用程序进行互操作。 由于可以使用标准 Uri 来处理数据，因此应用程序可以使用具象状态传输（REST）的语义来访问和更改数据，特别是 GET、PUT、POST 和 DELETE 的标准 HTTP 谓词。 这样您就可以从任何可分析和访问通过标准 HTTP 协议传输的数据的客户端访问这些服务。  
   
- OData 定义 Atom 发布协议（AtomPub）的一组扩展。 它支持采用多种数据格式的 HTTP 请求和响应，以适应各种客户端应用程序和平台。 OData 数据源可以表示 Atom、JavaScript 对象表示法（JSON）和纯 XML 格式的数据。 尽管 Atom 是默认格式，但源的格式会在 HTTP 请求的标头中指定。 有关详细信息，请参阅[odata： Atom 格式](https://go.microsoft.com/fwlink/?LinkID=185794)和[Odata： JSON 格式](https://go.microsoft.com/fwlink/?LinkID=185795)。  
+OData 定义 Atom 发布协议（AtomPub）的一组扩展。 它支持采用多种数据格式的 HTTP 请求和响应，以适应各种客户端应用程序和平台。 OData 数据源可以表示 Atom、JavaScript 对象表示法（JSON）和纯 XML 格式的数据。 尽管 Atom 是默认格式，但源的格式会在 HTTP 请求的标头中指定。 有关详细信息，请参阅[odata： Atom 格式](https://www.odata.org/documentation/odata-version-2-0/atom-format/)和[Odata： JSON 格式](https://www.odata.org/documentation/odata-version-2-0/json-format/)。  
   
  将数据作为 OData 源发布时，WCF 数据服务依赖于其他现有的 Internet 设备进行缓存和身份验证等操作。 为实现此目的，WCF 数据服务与现有的宿主应用程序和服务（如 ASP.NET、Windows Communication Foundation （WCF）和 Internet Information Services （IIS））集成。  
   
@@ -48,7 +48,7 @@ WCF 数据服务可以通过使用 Open Data Protocol （OData）来创建和使
   
  WCF 数据服务包含用于基于 .NET Framework 的客户端和基于 Silverlight 的客户端应用程序的客户端库。 通过这些客户端库，可以使用 .NET Framework 对象与数据服务进行交互。 它们还支持基于对象的查询和 LINQ 查询、加载相关对象、更改跟踪和标识解析。 有关详细信息，请参阅[WCF 数据服务客户端库](wcf-data-services-client-library.md)。  
   
- 除了 .NET Framework 和 Silverlight 附带的 OData 客户端库外，还有其他客户端库，使你能够在客户端应用程序中使用 OData 源，例如 PHP、AJAX 和 Java 应用程序。 有关详细信息，请参阅[ODATA SDK](https://go.microsoft.com/fwlink/?LinkID=185796)。  
+ 除了 .NET Framework 和 Silverlight 附带的 OData 客户端库外，还有其他客户端库，使你能够在客户端应用程序中使用 OData 源，例如 PHP、AJAX 和 Java 应用程序。 有关 OData SDK 的详细信息，请参阅[ODATA sdk-示例代码](https://www.odata.org/ecosystem/#sdk)。
   
 ## <a name="architecture-overview"></a>体系结构概述  
  下图演示了公开 OData 源并在支持 OData 的客户端库中使用这些源的 WCF 数据服务体系结构：  
@@ -62,4 +62,4 @@ WCF 数据服务可以通过使用 Open Data Protocol （OData）来创建和使
 - [定义 WCF Data Services](defining-wcf-data-services.md)
 - [访问数据服务资源（WCF 数据服务）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd728283(v=vs.100))
 - [WCF Data Services 客户端库](wcf-data-services-client-library.md)
-- [Representational State Transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)（表述性状态转移 (REST)）
+- [Representational State Transfer (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)（表述性状态转移 (REST)）
